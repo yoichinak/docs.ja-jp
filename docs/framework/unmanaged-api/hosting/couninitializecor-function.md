@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0845c4d493cb3c750931a0ae2ad92b628a255c0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e3ce0b9a40d5375f563662d73964d28724209dcd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985752"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758296"
 ---
 # <a name="couninitializecor-function"></a>CoUninitializeCor 関数
 `CoUninitializeCor` は互換性のために残されています。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 STDAPI_(void) CoUninitializeCor(void);  
 ```  
   

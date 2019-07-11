@@ -2,14 +2,14 @@
 title: .NET Framework から .NET Core にコードを移植する
 description: 移植プロセスを理解し、.NET Framework プロジェクトを .NET Core に移植する際に役立つツールを確認します。
 author: cartermp
-ms.date: 12/07/2018
+ms.date: 07/03/2019
 ms.custom: seodec18
-ms.openlocfilehash: 870320c8467237e87a2675ec5cfb57647026d8ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c408beb97290c41d2ab6944b9d1f68bbc5e946fb
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663233"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609248"
 ---
 # <a name="port-your-code-from-net-framework-to-net-core"></a>.NET Framework から .NET Core にコードを移植する
 
@@ -39,13 +39,13 @@ ms.locfileid: "61663233"
 
 移植プロセス中に使うと役立つツールを、次の一覧に示します。
 
-* .NET Portability Analyzer - [コマンドライン ツール](https://github.com/Microsoft/dotnet-apiport/releases)または [Visual Studio 拡張機能](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)。アセンブリごとの問題の内訳を含む、.NET Framework と .NET Core の間のコードの移植性に関するレポートを生成できるツール チェーンです。 詳細については、[.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md) に関するページをご覧ください。
-* .NET API アナライザー - さまざまなプラットフォームでの C# API の互換性リスクの可能性と、非推奨の API の呼び出しを検出する Roslyn アナライザーです。 詳細については、「[.NET API アナライザー](../../standard/analyzers/api-analyzer.md)」をご覧ください。
+* .NET Portability Analyzer - [コマンド ライン ツール](https://github.com/Microsoft/dotnet-apiport/releases)または [Visual Studio 拡張機能](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)。.NET Framework とターゲットの .NET Core プラットフォームの間のコードの移植性に関するレポートを生成できるツールです。 レポートには、ターゲットの .NET Core プラットフォームにない型と API のアセンブリごとの内訳が含まれています。 詳細については、[.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md) に関するページをご覧ください。 .NET Portability Analyzer ツールは不足している API の間のギャップを特定する助けになるため、移植を開始する前に実行することをお勧めします。
+* .NET API アナライザー - プラットフォームに <xref:System.PlatformNotSupportedException> をスローし、非推奨の API の呼び出しを検出し、さまざまなプラットフォームでの C# API の互換性リスクの可能性を検出する .NET Standard API を検出する Roslyn アナライザー。 詳細については、「[.NET API アナライザー](../../standard/analyzers/api-analyzer.md)」をご覧ください。 このアナライザーは .NET Core プロジェクトを作成した後、異なるプラットフォームでのランタイムの動作の違いを特定するために役立ちます。
 * Reverse Package Search - 型を検索し、その型を含むパッケージを検索するための[便利な Web サービス](https://packagesearch.azurewebsites.net)。
 
 さらに、[CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017) ツールを使って、小規模なソリューションや個々のプロジェクトを .NET Core プロジェクトのファイル形式に移植してみることが可能です。
 
-> [!WARNING] 
+> [!WARNING]
 > CsprojToVs2017 はサードパーティ製のツールです。 すべてのプロジェクトに対してこれが動作する保証はありません。また、依存している動作に微妙な変更が生じる可能性があります。 CsprojToVs2017 は、自動化できる基本的なことを自動化するための "_開始点_" として使う必要があります。 これは、プロジェクトのファイル形式の移行に対する保証されたソリューションではありません。
 
 >[!div class="step-by-step"]

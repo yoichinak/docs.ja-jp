@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: ef6f2662-323b-4534-aa82-6d1afb7b9309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 432de909e1b8166f6d8923889382d9408fb6c62d
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 5b064f0b1cec07f29058300041711285bde66697
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490262"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67748405"
 ---
 # <a name="iclrruntimeinfoisstarted-method"></a>ICLRRuntimeInfo::IsStarted メソッド
 ランタイムが開始されているかどうかを示します (つまり、かどうか、 [iclrruntimehost::start メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)が呼び出され、成功しました)。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT IsStarted(  
         [out] BOOL     *pbStarted,  
         [out] DWORD    *pdwStartupFlags);  

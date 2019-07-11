@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf21e1844ea99b231054f8350ddacb8bb707a94e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fc9d32f83b4b6384e28f012b9329ea18913a1218
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969872"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773149"
 ---
 # <a name="iclrdebugmanagerendconnection-method"></a>ICLRDebugManager::EndConnection メソッド
 タスクの一覧と、識別子とフレンドリ名の間の関連付けを削除します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EndConnection (  
     [in] CONNID dwConnectionId  
 );  
@@ -58,7 +58,7 @@ HRESULT EndConnection (
 >  タスクのセットごとに特定の順序では、これら 3 つのメソッドを呼び出す必要があります。 `BeginConnection` 新しい接続を確立するためが最初に呼び出されます。 `SetConnectionTasks` その接続に関連するタスクのセットを提供するが次に呼び出されます。 `EndConnection` タスク一覧と、識別子とフレンドリ名の間の関連付けを削除する最後に呼び出されます。ただし、異なる接続への呼び出しは入れ子にできます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

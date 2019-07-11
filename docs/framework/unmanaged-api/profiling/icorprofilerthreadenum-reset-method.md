@@ -17,24 +17,24 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b6ced5572a482977316048b150ce377cb566ee15
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 39446289f8197a14ab1d67ea2e80c16777e9bb56
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597289"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781108"
 ---
 # <a name="icorprofilerthreadenumreset-method"></a>ICorProfilerThreadEnum::Reset メソッド
 列挙子のカーソルをシーケンスの開始位置に移動します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Reset();  
 ```  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   

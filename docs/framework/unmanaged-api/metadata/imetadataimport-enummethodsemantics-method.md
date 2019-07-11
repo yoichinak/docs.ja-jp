@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 16cfa6df6251cd67860155cb8092e77a835eaaef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 715e53ae04532214d4011d4a40503b2ade5a014d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992421"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782071"
 ---
 # <a name="imetadataimportenummethodsemantics-method"></a>IMetaDataImport::EnumMethodSemantics メソッド
 指定したメソッドが関連付けられているプロパティおよびプロパティ変更イベントを列挙します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EnumMethodSemantics (  
    [in, out] HCORENUM    *phEnum,  
    [in]  mdMethodDef     mb,   
@@ -66,7 +66,7 @@ HRESULT EnumMethodSemantics (
  多くの共通言語ランタイム型を定義*プロパティ*`Changed`イベントと`On`*プロパティ*`Changed`それらのプロパティに関連するメソッド。 たとえば、<xref:System.Windows.Forms.Control?displayProperty=nameWithType>型を定義しますを<xref:System.Windows.Forms.Control.Font%2A>プロパティ、<xref:System.Windows.Forms.Control.FontChanged>イベント、および<xref:System.Windows.Forms.Control.OnFontChanged%2A>メソッド。 Set アクセサー メソッド、<xref:System.Windows.Forms.Control.Font%2A>プロパティ呼び出し<xref:System.Windows.Forms.Control.OnFontChanged%2A>メソッドを生成させる、<xref:System.Windows.Forms.Control.FontChanged>イベント。 呼び出しは`EnumMethodSemantics`の MethodDef を使用して<xref:System.Windows.Forms.Control.OnFontChanged%2A>への参照を取得する、<xref:System.Windows.Forms.Control.Font%2A>プロパティおよび<xref:System.Windows.Forms.Control.FontChanged>イベント。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

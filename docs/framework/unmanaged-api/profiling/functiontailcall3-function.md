@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 979b3401cbf13761bc5b58b4d8734dfa5e83ec49
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aec2304e00d5328fcf55adbf5521c08865c05c56
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586764"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763307"
 ---
 # <a name="functiontailcall3-function"></a>FunctionTailcall3 関数
 現在実行中の関数が別の関数の末尾呼び出しを実行しようとすることをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void __stdcall FunctionTailcall3 (FunctionOrRemappedID functionOrRemappedID);  
 ```  
   
@@ -52,7 +52,7 @@ void __stdcall FunctionTailcall3 (FunctionOrRemappedID functionOrRemappedID);
  `FunctionTailcall3`関数がマネージ コードを呼び出していない、または何らかの方法でマネージ メモリの割り当てが発生する必要があります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl  
   

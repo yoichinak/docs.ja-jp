@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db609bdee7975b6c067271f99529e2cf2240f720
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 50a18f435063b74b837dbfe9e4f1d986bb735039
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989028"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753347"
 ---
 # <a name="icordebugevalnewstring-method"></a>ICorDebugEval::NewString メソッド
 指定した内容を含む新しい文字列インスタンスを割り当てます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT NewString (  
     [in] LPCWSTR   string  
 );  
@@ -43,7 +43,7 @@ HRESULT NewString (
  文字列が現在のスレッドが実行されているアプリケーション ドメインで常に作成されます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

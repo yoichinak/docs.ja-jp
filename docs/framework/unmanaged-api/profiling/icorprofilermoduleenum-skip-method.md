@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 397e8afcc176bcd9733e83dc6425fe49f385931e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eecb2a5da9dddaccbab7fcc6d74af6e4c6bfb72c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598189"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775132"
 ---
 # <a name="icorprofilermoduleenumskip-method"></a>ICorProfilerModuleEnum::Skip メソッド
 指定した数の要素がスキップされるように、この列挙子のカーソルを現在の位置から進めます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Skip([in] ULONG celt);  
 ```  
   
@@ -49,7 +49,7 @@ HRESULT Skip([in] ULONG celt);
  この列挙子のカーソルの新しい位置は (現在の位置) +`celt`します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   

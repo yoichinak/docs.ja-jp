@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d246acbf314a83ca3f8113e9a2fb223ac0ebcafe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 44d3fee49ae74c69b49029208588f4894e250f78
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62040925"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775210"
 ---
 # <a name="icorprofilermoduleenumgetcount-method"></a>ICorProfilerModuleEnum::GetCount メソッド
 アプリケーションによって読み込まれたマネージド モジュールの数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetCount([out] ULONG * pcelt);  
 ```  
   
@@ -38,7 +38,7 @@ HRESULT GetCount([out] ULONG * pcelt);
  [out]コレクション内のランタイム モジュールの数。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   

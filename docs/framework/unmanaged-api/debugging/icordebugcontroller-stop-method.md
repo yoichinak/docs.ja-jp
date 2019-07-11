@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 724db8c5c8dbb5bf3ff8bc7202a60397180b7b38
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83bb52f7f2035605914e2fe72ce2daf78de5bc1e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61749067"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749907"
 ---
 # <a name="icordebugcontrollerstop-method"></a>ICorDebugController::Stop メソッド
 プロセスでマネージ コードを実行しているすべてのスレッドを協調停止を実行します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Stop (  
     [in] DWORD dwTimeoutIgnored  
 );  
@@ -48,7 +48,7 @@ HRESULT Stop (
  デバッガーでは、停止カウンターを保持します。 カウンターがゼロに時に、コント ローラーが再開されます。 呼び出しごとに`Stop`またはディスパッチされた各コールバックは、カウンターをインクリメントします。 呼び出しごとに`ICorDebugController::Continue`デクリメント カウンター。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

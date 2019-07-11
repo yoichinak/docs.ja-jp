@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 76e2ebbd47a5e36a722fce33ba67d7efb4db8675
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2a4305b94d785a764671a2d73f43facefd0da0e6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777768"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782369"
 ---
 # <a name="imetadataimportgetinterfaceimplprops-method"></a>IMetaDataImport::GetInterfaceImplProps メソッド
 メタデータ トークンへのポインターを取得、<xref:System.Type>指定されたメソッドを実装して、そのメソッドを宣言するインターフェイス。
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetInterfaceImplProps (  
    [in]  mdInterfaceImpl        iiImpl,  
    [out] mdTypeDef              *pClass,  
@@ -75,7 +75,7 @@ HRESULT GetInterfaceImplProps (
 `GetInterfaceImplProps` 行で指定したトークンに保持されている情報を返します、`iImpl`引数。 
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

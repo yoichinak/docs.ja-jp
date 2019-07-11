@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 66a8ba59d221bb3fa2e815a1cbcfa79c474666cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 39bc1316bb7d8e2aba3390499437aadf263dac07
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792731"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739850"
 ---
 # <a name="cordebugjitcompilerflags-enumeration"></a>CorDebugJITCompilerFlags 列挙型
 マネージド Just-In-Time (JIT) コンパイラの動作に影響を与える値が含まれます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum CorDebugJITCompilerFlags {  
   
     CORDEBUG_JIT_DEFAULT = 0x1,  
@@ -47,7 +47,7 @@ typedef enum CorDebugJITCompilerFlags {
 |`CORDEBUG_JIT_ENABLE_ENC`|コンパイラを追跡するコンパイルのデータの最適化を無効にしてエディット コンティニュのテクノロジを有効に指定します。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b80e0cc026ce80950c14436abb2e84548f9adb64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5e9e33e65b1cdeabe203c67ee4d4f259e2f7ac99
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903319"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770071"
 ---
 # <a name="icordebugthreadenumnext-method"></a>ICorDebugThreadEnum::Next メソッド
 列挙体の現在位置から指定した ICorDebugThread インスタンスの数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Next (  
     [in] ULONG celt,  
     [out, size_is(celt), length_is(*pceltFetched)]  
@@ -49,7 +49,7 @@ HRESULT Next (
  [out]数へのポインター`ICorDebugThread`インスタンスが実際に返されます。 この値は null になる場合`celt`は 1 つです。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

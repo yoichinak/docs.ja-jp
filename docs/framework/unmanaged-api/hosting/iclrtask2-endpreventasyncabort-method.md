@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60997717baf70e10366e7f0ba6a06daa1f35f8cd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36947eb33460fe3f15cf4ade1cad55cb5e77f1cc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763387"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770235"
 ---
 # <a name="iclrtask2endpreventasyncabort-method"></a>ICLRTask2::EndPreventAsyncAbort メソッド
 保留中のスレッドで発生するスレッドの中止要求を現在のスレッドの中止または新規作成できます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EndPreventAsyncAbort();  
 ```  
   
@@ -49,7 +49,7 @@ HRESULT EndPreventAsyncAbort();
  この機能によって公開される機能は、仮想マシン (VM) で内部的に使用されます。 これらのメソッドの誤用によっては、VM の未定義の動作があります。 たとえば、呼び出し`EndPreventAsyncAbort`最初に呼び出さず`BeginPreventAsyncAbort`VM がインクリメントしていたときに、カウンターを 0 に設定でした。 同様に、内部カウンターは、オーバーフローはチェックされません。 ホストと VM の両方でインクリメントされますので、その整数の制限を超えている場合、結果として得られる動作は指定されていません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

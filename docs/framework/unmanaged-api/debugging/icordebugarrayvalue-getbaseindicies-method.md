@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f24a1434f737e8281a0c68dd09d2e17b34371694
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f4ecb700a19a4e06f9f0056881fe3cdb9753aae
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786283"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737597"
 ---
 # <a name="icordebugarrayvaluegetbaseindicies-method"></a>ICorDebugArrayValue::GetBaseIndicies メソッド
 配列内の各次元のベース インデックスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetBaseIndicies (  
     [in] ULONG32          cdim,  
     [out, size_is(cdim), length_is(cdim)]   
@@ -45,7 +45,7 @@ HRESULT GetBaseIndicies (
  [out]このディメンションのベース インデックス (つまり、開始インデックス) は、それぞれの整数の配列`ICorDebugArrayValue`オブジェクト。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

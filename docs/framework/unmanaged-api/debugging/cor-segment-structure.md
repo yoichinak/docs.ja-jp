@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: faf1be65d308b223490f3ae67eed3d8a2b1688b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eef2d75a2c8a3445c7f8666fec5be9e4d089e3cb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609367"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740521"
 ---
 # <a name="corsegment-structure"></a>COR_SEGMENT 構造体
 マネージド ヒープのメモリ領域に関する情報が含まれます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct _COR_SEGMENT {  
     CORDB_ADDRESS start;            
     CORDB_ADDRESS end;              
@@ -52,7 +52,7 @@ typedef struct _COR_SEGMENT {
  `heap` フィールドは、報告されたヒープに対応するプロセッサ番号です。 ワークステーション ガベージ コレクターでは、ワークステーションにガベージ コレクション ヒープが 1 つしかないため、その値は常に 0 です。 サーバー ガベージ コレクターでは、その値はヒープがアタッチされているプロセッサに対応します。 ガベージ コレクターの実装の詳細が原因で、実際のプロセッサ数よりも、ガベージ コレクション ヒープが多かったり少なかったりする場合があります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

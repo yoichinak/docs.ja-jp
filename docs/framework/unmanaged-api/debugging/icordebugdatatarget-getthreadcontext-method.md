@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2db073f6bde3ded27f8e1aa41bfcb87e764745f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2047929c52dbb7b0d780a4ea0f180bae48a3ce79
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61748943"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750398"
 ---
 # <a name="icordebugdatatargetgetthreadcontext-method"></a>ICorDebugDataTarget::GetThreadContext メソッド
 指定したスレッドの現在のスレッド コンテキストを返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetThreadContext(  
        [in] DWORD dwThreadID,  
        [in] ULONG32 contextFlags,  
@@ -54,7 +54,7 @@ HRESULT GetThreadContext(
  Windows のプラットフォームで`pContext`必要があります、`CONTEXT`構造 (WinNT.h で定義されている) で指定されたコンピューターの種類に適した、 [icordebugdatatarget::getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)メソッド。 `contextFlags` として値が同じである必要があります、`ContextFlags`のフィールド、`CONTEXT`構造体。 `CONTEXT`構造は、プロセッサ固有。 詳細については、WinNT.h でファイルを参照してください。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

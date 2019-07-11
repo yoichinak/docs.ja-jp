@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a0b6f0550bad534379b562c3df9da9ab917f5270
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2a5461cc6a78347cdbe0d0b13f8111cb24c11006
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946345"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760048"
 ---
 # <a name="icordebuginternalframegetframetype-method"></a>ICorDebugInternalFrame::GetFrameType メソッド
 この内部フレームの種類を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetFrameType (  
     [out] CorDebugInternalFrameType  *pType  
 );  
@@ -43,7 +43,7 @@ HRESULT GetFrameType (
  内部フレームの種類には、STUBFRAME_NONE はできません。 デバッガーは適切に認識されていない内部フレームの種類を無視します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

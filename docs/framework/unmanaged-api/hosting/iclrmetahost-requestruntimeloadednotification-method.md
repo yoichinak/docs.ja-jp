@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 87afb19736a484d24bde56cc34854dcd26c6b53b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7e7c1de620979b387e969f4b8c9f17f493e7bcb8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755698"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776548"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>ICLRMetaHost::RequestRuntimeLoadedNotification メソッド
 共通言語ランタイム (CLR) バージョンが初めて読み込まれるが、開始していないときに呼び出されることが保証されるコールバック関数を提供します。 このメソッドは、 [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)関数。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT RequestRuntimeLoadedNotification (  
     [in] RuntimeLoadedCallbackFnPtr pCallbackFunction);  
 ```  
@@ -57,7 +57,7 @@ HRESULT RequestRuntimeLoadedNotification (
   
  コールバック関数では、次のプロトタイプを持ちます。  
   
-```  
+```cpp  
 typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(  
                      ICLRRuntimeInfo *pRuntimeInfo,  
                      CallbackThreadSetFnPtr pfnCallbackThreadSet,  
@@ -68,13 +68,13 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
   
 - `pfnCallbackThreadSet`:  
   
-    ```  
+    ```cpp  
     typedef HRESULT (__stdcall *CallbackThreadSetFnPtr)();  
     ```  
   
 - `pfnCallbackThreadUnset`:  
   
-    ```  
+    ```cpp  
     typedef HRESULT (__stdcall *CallbackThreadUnsetFnPtr)();  
     ```  
   
@@ -90,7 +90,7 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
 >  ホスト アプリケーションを呼び出してはならない`pfnCallbackThreadSet`と`pfnCallbackThreadUnset`の範囲外の`pCallbackFunction`パラメーター。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MetaHost.h  
   

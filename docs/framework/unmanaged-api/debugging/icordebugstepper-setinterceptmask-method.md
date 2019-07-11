@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 25a9d287e6520f1fc7826d85dfbcd8e9a6da22f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 37b644227a6085352bed682f0ddd7c3455b54895
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987637"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760705"
 ---
 # <a name="icordebugsteppersetinterceptmask-method"></a>ICorDebugStepper::SetInterceptMask メソッド
 ステップ インはコードの種類を指定する値を設定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetInterceptMask (  
     [in] CorDebugIntercept    mask  
 );  
@@ -45,7 +45,7 @@ HRESULT SetInterceptMask (
  `SetInterceptMask`メソッドがありますで予期しない相互作用[icordebugstepper::setunmappedstopmask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) (ユーザーの観点から)。 たとえば場合、のみ表示されます (は、非内部) クラスの初期化コードの部分にマッピング情報が不足していますと STOP_NO_MAPPING_INFO が設定されていない (を参照してください、 [icordebugstepper::setunmappedstopmask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md)メソッドとCorDebugUnmappedStop 列挙型)、ステッパ、ステップ オーバーはクラスの初期化します。 既定の INTERCEPT_NONE 値だけで、`CorDebugIntercept`列挙型が使用されます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

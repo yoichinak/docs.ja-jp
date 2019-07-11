@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3cc616246812bb9643388d8ad57cf84bc387b55e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: abd4bb00f5c1e703740462f1709407616ac8a8e8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797502"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778241"
 ---
 # <a name="isymunmanagedvariablegetsignature-method"></a>ISymUnmanagedVariable::GetSignature メソッド
 この変数のシグネチャを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetSignature(  
     [in]  ULONG32  cSig,  
     [out] ULONG32  *pcSig,  

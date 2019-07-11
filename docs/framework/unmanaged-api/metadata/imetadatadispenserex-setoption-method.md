@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9869efee18549c3d0c8b9ee9ca27cf31c1ccf452
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6916e6344fe5c112b216ca753c372fa73a4d5af5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050143"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777707"
 ---
 # <a name="imetadatadispenserexsetoption-method"></a>IMetaDataDispenserEx::SetOption メソッド
 現在のメタデータ スコープの指定した値に指定されたオプションを設定します。 オプションは、現在のメタデータ スコープへの呼び出しを処理する方法を制御します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetOption (  
     [in] REFGUID optionId,   
     [in] const VARIANT *pValue  
@@ -63,7 +63,7 @@ HRESULT SetOption (
 |MetaDataPreserveLocalRefs|定義にローカル参照の最適化を無効にします。|値の組み合わせを含める必要があります、 [CorLocalRefPreservation](../../../../docs/framework/unmanaged-api/metadata/corlocalrefpreservation-enumeration.md)列挙体。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

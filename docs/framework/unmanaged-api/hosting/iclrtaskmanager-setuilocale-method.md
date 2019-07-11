@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03c5c9d04567832951062fe1512a292f9b32a94b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 101bcac4ad25a0e1c0a5971aad639b0fb05378b6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763335"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779968"
 ---
 # <a name="iclrtaskmanagersetuilocale-method"></a>ICLRTaskManager::SetUILocale メソッド
 現在実行中のタスクでは、共通言語ランタイム (CLR) ユーザー インターフェイス (UI) のロケール、またはカルチャ、ホストを変更したことを通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetUILocale (  
     [in] LCID lcid  
 );  
@@ -54,7 +54,7 @@ HRESULT SetUILocale (
  `SetUILocale` ロケールの同期の任意の機構があればそれを実行するホストの機会を提供します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

@@ -2,15 +2,15 @@
 title: LINQ to SQL でのコード生成
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: 6565655cdb3222a8c9fa7e7759bac09d57ee269b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fbc70669b9c03b59468f4f6a67c1f73432883193
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903280"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743604"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>LINQ to SQL でのコード生成
-[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]または SQLMetal コマンド ライン ツールを使用することにより、データベースを表すコードを生成できます。 どちらの場合も、エンド ツー エンドのコード生成が次の 3 段階で行われます。  
+オブジェクト リレーショナル デザイナーまたは SQLMetal コマンド ライン ツールを使用して、データベースを表すコードを生成することができます。 どちらの場合も、エンド ツー エンドのコード生成が次の 3 段階で行われます。  
   
 1. *DBML Extractor*データベースからスキーマ情報を抽出し、XML 形式の DBML ファイルに情報を再アセンブルします。  
   
@@ -18,7 +18,7 @@ ms.locfileid: "61903280"
   
 3. 検証エラーが見つからない場合、ファイルはコード ジェネレーターに渡されます。  
   
- 詳しくは、「[SqlMetal.exe (コード生成ツール)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)」をご覧ください。 Visual Studio を使用している開発者が使用することも、[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]コードを生成します。 参照してください[LINQ to Visual Studio での SQL ツール](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)します。  
+ 詳しくは、「[SqlMetal.exe (コード生成ツール)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)」をご覧ください。 Visual Studio を使用している開発者は、オブジェクト リレーショナル デザイナーを使用してもコードを生成します。 参照してください[LINQ to Visual Studio での SQL ツール](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)します。  
   
 ## <a name="dbml-extractor"></a>DBML Extractor  
  DBML Extractor は、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]コンポーネントを入力としてのデータベースのメタデータを受け取り、DBML ファイルを出力として生成します。  

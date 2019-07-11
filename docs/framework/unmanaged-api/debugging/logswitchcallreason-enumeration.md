@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7eadb595eb62b4f1a9dcc888225cbb7454119c7c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 894f74f12de7ed0754dcca34eacb815efc33c766
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986545"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752571"
 ---
 # <a name="logswitchcallreason-enumeration"></a>LogSwitchCallReason 列挙型
 デバッグとトレースの切り替えで実行された操作を示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum LogSwitchCallReason {  
     SWITCH_CREATE,  
     SWITCH_MODIFY,  
@@ -45,7 +45,7 @@ typedef enum LogSwitchCallReason {
 |`SWITCH_DELETE`|デバッグとトレース スイッチが削除されました。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

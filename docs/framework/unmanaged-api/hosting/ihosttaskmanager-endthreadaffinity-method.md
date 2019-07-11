@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f94f365aa8c9221c64e9611deab3597e06ed862
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b50e08e6fe0db7d16c87d9acccf77e2b15094039
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789429"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749642"
 ---
 # <a name="ihosttaskmanagerendthreadaffinity-method"></a>IHostTaskManager::EndThreadAffinity メソッド
 マネージ コードのホストが終了する、現在のタスクを別のオペレーティング システム スレッドに移動できない期間以前の呼び出しに通知[ihosttaskmanager::beginthreadaffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md)します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EndThreadAffinity ();  
 ```  
   
@@ -49,7 +49,7 @@ HRESULT EndThreadAffinity ();
  CLR は、対応する呼び出し`BeginThreadAffinity`呼び出す前に、現在のタスクで`EndThreadAffinity`します。 このような対応する呼び出しがない場合、ホストの実装の[IHostTaskManager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md) E_UNEXPECTED を返し、何も操作する必要があります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

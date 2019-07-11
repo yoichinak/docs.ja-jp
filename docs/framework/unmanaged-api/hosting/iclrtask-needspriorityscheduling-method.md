@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91c7235fb8790783b05b217cad755d8eedc88971
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9503e5aeeb1b59c8e62cab20736ea6ab7d5f629f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763530"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758917"
 ---
 # <a name="iclrtaskneedspriorityscheduling-method"></a>ICLRTask::NeedsPriorityScheduling メソッド
 アウト切り替わるは、現在のタスクを再スケジューリングの優先度の高いとしてマーク済みである必要があるかどうかを示す値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT NeedsPriorityScheduling (  
     [out] BOOL *pbNeedsPriorityScheduling  
 );  
@@ -54,7 +54,7 @@ HRESULT NeedsPriorityScheduling (
  CLR がの値を設定するタスクがガベージ コレクターによって収集されるデータに近い状況、`pbNeedsPriorityScheduling`に`true`、優先度の高い再スケジューリングを示します。 これにより、ガベージ コレクションで遅延が発生する可能性を最小限に抑えることと、メモリ リソースの節約に協力するには、ホストと、ランタイムを有効にするため、すぐに、タスクのスケジュールを変更するホストできます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

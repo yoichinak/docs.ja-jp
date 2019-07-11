@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7846eeceeb4d59c4e9aae73c79172c89184396e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7f27955467436d562c6a9acc9d7f666427e4c85b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59123870"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770716"
 ---
 # <a name="imetadataimportcloseenum-method"></a>IMetaDataImport::CloseEnum メソッド
 指定したハンドルによって識別される列挙子を閉じます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void CloseEnum (  
    [in] HCORENUM hEnum  
 );  
@@ -43,7 +43,7 @@ void CloseEnum (
  指定されたハンドル`hEnum`以前から取得されます`Enum`*名前*呼び出し (たとえば、 [imetadataimport::enumtypedefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md))。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

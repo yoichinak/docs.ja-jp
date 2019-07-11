@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d34cb399ac0e8780c442eeb2e95cebfd0a22ca02
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4438b000a8ecf95949350d3665267276a1d959ec
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62040574"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746495"
 ---
 # <a name="getobjecttext-function"></a>GetObjectText 関数
 管理オブジェクト フォーマット (MOF) 構文では、オブジェクトのテキストのレンダリングを返します。
@@ -30,7 +30,7 @@ ms.locfileid: "62040574"
     
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetObjectText (
    [in] int                vFunc, 
    [in] IWbemClassObject*   ptr, 
@@ -78,7 +78,7 @@ HRESULT GetObjectText (
 `pstrObjectText` ポインターである必要があります、`null`ポインターが解放されないため、メソッド呼び出しの前に有効な文字列をポイントする必要がありますいない、関数が呼び出されると;。
 
 ## <a name="requirements"></a>必要条件  
-**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b3faffbf9dc85c563dac84fc2e4e4d849db5d42d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 893ec89be83cf68e9b87d4a57bc221feac9932cc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700762"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770844"
 ---
 # <a name="icorthreadpoolcorbindiocompletioncallback-method"></a>ICorThreadpool::CorBindIoCompletionCallback メソッド
 このメソッドは、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CorBindIoCompletionCallback (  
     [in] HANDLE                          fileHandle,  
     [in] LPOVERLAPPED_COMPLETION_ROUTINE callback  
@@ -37,7 +37,7 @@ HRESULT CorBindIoCompletionCallback (
 ```  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

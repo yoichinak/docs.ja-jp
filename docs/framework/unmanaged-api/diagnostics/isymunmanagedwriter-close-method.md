@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4d3497d3167715d3e8a04f10a6687260949e4a36
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fd7131c55f9c06a8fcfc0cad859c18e410169c78
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934057"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778199"
 ---
 # <a name="isymunmanagedwriterclose-method"></a>ISymUnmanagedWriter::Close メソッド
 シンボルをシンボル ストアにコミットした後は、シンボル ライターを閉じます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Close();  
 ```  
   

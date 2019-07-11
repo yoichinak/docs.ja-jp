@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04e562b41b3d835d66fb9b803ee7db1c7fb8537f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a6f1d76ef5cf36bcbab29a33647520663f822798
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662557"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770030"
 ---
 # <a name="corvalidateimage-function"></a>_CorValidateImage 関数
 マネージド モジュール イメージを検証し、それらが読み込まれると、オペレーティング システム ローダーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 STDAPI _CorValidateImage (   
    [in] PVOID* ImageBase,  
    [in] LPCWSTR FileName  
@@ -74,7 +74,7 @@ STDAPI _CorValidateImage (
  ローダーの呼び出し、 [_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md)を管理するときに関数モジュール イメージは読み込まれません。 ただし、この関数が任意のアクションを実行しません返すだけです。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

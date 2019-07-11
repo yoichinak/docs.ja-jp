@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c6d298c84b801b87832c56026b05f647cb5a9dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c6c2e741df594e265fdef51a602a9a4927733b7c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789832"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741866"
 ---
 # <a name="getresolutionscope-method"></a>GetResolutionScope メソッド
 指定された型のスコープを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetResolutionScope(  
     mdAssembly  AssemblyID,  
     mdToken     FileToken,  

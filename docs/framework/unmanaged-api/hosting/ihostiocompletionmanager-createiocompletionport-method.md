@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8cf7978af4081b84a361e0a96a6c9da7180cb217
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d50ea76c4d6448173002f720e1779233522ef499
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61951724"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736528"
 ---
 # <a name="ihostiocompletionmanagercreateiocompletionport-method"></a>IHostIoCompletionManager::CreateIoCompletionPort メソッド
 ホストが新しい I/O 完了ポートを作成することを要求します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CreateIoCompletionPort (  
     [out] HANDLE *phPort  
 );  
@@ -55,7 +55,7 @@ HRESULT CreateIoCompletionPort (
  CLR の呼び出し、`CreateIoCompletionPort`メソッドをホストで新しい I/O 完了ポートを作成するよう依頼します。 呼び出すことによってこのポートにバインドする I/O 操作、 [ihostiocompletionmanager::bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md)メソッド。 ホストの状態に報告、CLR を呼び出して[iclriocompletionmanager::oncomplete](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-oncomplete-method.md)します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

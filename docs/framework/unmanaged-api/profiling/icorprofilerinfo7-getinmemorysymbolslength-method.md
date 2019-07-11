@@ -11,12 +11,12 @@ api_type:
 ms.assetid: d62c4a4c-8a62-45aa-8f01-a8387cf36159
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 422fdfef6bea40e0f4bcc7447df8dba1eab2896e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 03c70b97e7af9fdc76c579c5940e2436232f6bc2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61919088"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67748655"
 ---
 # <a name="icorprofilerinfo7getinmemorysymbolslength-method"></a>ICorProfilerInfo7::GetInMemorySymbolsLength メソッド
 [.NET Framework 4.6.1 以降のバージョンでのみでサポート]  
@@ -25,7 +25,7 @@ ms.locfileid: "61919088"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetInMemorySymbolsLength(  
         [in] ModuleID moduleId,  
         [out] DWORD* pCountSymbolBytes  
@@ -51,7 +51,7 @@ HRESULT GetInMemorySymbolsLength(
 >  現在の実装は、Reflection.Emit をサポートしていません。 かどうか、モジュールは、Reflection.Emit を使用して作成された、メソッドを返します`CORPROF_E_MODULE_IS_DYNAMIC`します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   

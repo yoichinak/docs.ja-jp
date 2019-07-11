@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a340086be042c790ae7bf750759ff80f7c9eaf23
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 37041764ad37221ea80cefa12adfb214287d8248
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942442"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764006"
 ---
 # <a name="icordebugmodule3-interface"></a>ICorDebugModule3 インターフェイス
 動的モジュールのシンボル リーダーを作成します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 interface ICorDebugModule3 : IUnknown  
 {  
     HRESULT CreateReaderForInMemorySymbols  
@@ -52,7 +52,7 @@ interface ICorDebugModule3 : IUnknown
 >  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

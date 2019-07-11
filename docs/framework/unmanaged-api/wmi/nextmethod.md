@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b3667f7371131a4c1394ba5ca619d1f605c89ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4a730947b0c962d801975917cdf752136e7221c4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000182"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746479"
 ---
 # <a name="nextmethod-function"></a>NextMethod 関数
 呼び出しで開始する列挙体の次のメソッドを取得します。 [BeginMethodEnumeration](beginmethodenumeration.md)します。  
@@ -30,7 +30,7 @@ ms.locfileid: "62000182"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT NextMethod (
    [in] int                 vFunc, 
    [in] IWbemClassObject*   ptr, 
@@ -82,7 +82,7 @@ HRESULT NextMethod (
 C++ の例では、次を参照してください。、 [IWbemClassObject::NextMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod)メソッド。
 
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   

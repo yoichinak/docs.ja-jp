@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1d6c79be95ff80c8de9b07cb33be46a5f5db22b1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 459a24e2ed9b97a67dc0266231fdfc32a9c853a6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939803"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776648"
 ---
 # <a name="isymunmanageddocumenthasembeddedsource-method"></a>ISymUnmanagedDocument::HasEmbeddedSource メソッド
 返します`true`ドキュメントが、デバッグのシンボルに埋め込まれたソースを返しますそれ以外の場合、`false`します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT HasEmbeddedSource(  
    [out, retval]  BOOL  *pRetVal);  
 ```  

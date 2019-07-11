@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e2c9e981f431bb87df61a71389abf3d42a6a507
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b293a3e166bb2614b5d0b064485178f5a569db48
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986740"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774141"
 ---
 # <a name="icordebugvariablehomegetliverange-method"></a>IcorDebugVariableHome::GetLiveRange メソッド
 この変数はライブのネイティブの範囲を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetLiveRange(  
     [out] ULONG32* pStartOffset,  
     [out] ULONG32 *pEndOffset  
@@ -44,7 +44,7 @@ HRESULT GetLiveRange(
  [out]位置、変数が最後ライブ後すぐに論理オフセット。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

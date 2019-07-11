@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3174cf3b4f4f4ac4b2c8e69030357eb1e46cf3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2996acd9678557b08fcfa543ecc7648ed639b143
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771632"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67748343"
 ---
 # <a name="iclrruntimeinfosetdefaultstartupflags-method"></a>ICLRRuntimeInfo::SetDefaultStartupFlags メソッド
 スタートアップ フラグとランタイムの起動に使用されるホストの構成ファイルを設定します。 このメソッドの使用よりも優先されます、`startupFlags`パラメーター、 [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)と[CorBindToRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)関数。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetDefaultStartupFlags(  
            [in]  DWORD dwStartupFlags,  
            [in]  LPCWSTR pwzHostConfigFile);  
@@ -53,7 +53,7 @@ HRESULT SetDefaultStartupFlags(
  マルチ スレッドのホストには、このメソッドの呼び出しを同期する必要があります。 それ以外の場合、スレッド A が呼び出すことができます、`SetStartupFlags`スレッド B への呼び出しの完了後に、`SetStartupFlags`スレッド B が、ランタイムを開始する前にします。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MetaHost.h  
   

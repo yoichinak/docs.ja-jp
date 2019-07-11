@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c639204fa207774b0e362f1ba8fe71937494ae2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 973f975885bbbf5cbed74adef7b9f4f423c42583
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988990"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753657"
 ---
 # <a name="icordebugeval2newparameterizedarray-method"></a>ICorDebugEval2::NewParameterizedArray メソッド
 指定した要素型とディメンションの新しい配列を割り当てます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT NewParameterizedArray(  
     [in] ICorDebugType          *pElementType,  
     [in] ULONG32                rank,  
@@ -55,7 +55,7 @@ HRESULT NewParameterizedArray(
  配列の要素には、ジェネリック型のインスタンスを使用できます。 配列が常に、スレッドが現在実行されているアプリケーション ドメインで作成されます。 .NET Framework 2.0 の値で`rank`1 である必要があります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

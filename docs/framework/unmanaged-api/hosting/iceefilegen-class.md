@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb0e7a676fdbbe3cf04108266471833b28275b1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d6fb0b11c26ff65f74681d1e3bf7324bfb0e559d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985362"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766610"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen クラス
 ネイティブ ポータブル実行可能 (PE) ファイルを作成するための機能を提供します。 インターフェイスは、実行可能ファイルのコンパイル済み出力を生成するコンパイラで通常使用されます。  
@@ -33,7 +33,7 @@ ms.locfileid: "61985362"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 class ICeeFileGen {  
 public:  
     virtual HRESULT CreateCeeFile(HCEEFILE *ceeFile);  
@@ -237,7 +237,7 @@ public:
 ```  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** ICeeFileGen.h  
   

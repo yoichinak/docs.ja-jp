@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b94987631f7dbbe39e585a8ea2c2252b9427613
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6e157c758b472ea89e21c1ed1ba8c17693c20a3d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050169"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777798"
 ---
 # <a name="imetadatadispenseropenscope-method"></a>IMetaDataDispenser::OpenScope メソッド
 既存のディスク上ファイルを開き、そのメタデータをメモリにマップされます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT OpenScope (  
     [in]  LPCWSTR     szScope,   
     [in]  DWORD       dwOpenFlags,   
@@ -63,7 +63,7 @@ HRESULT OpenScope (
  .NET Framework version 2.0 でスコープが開かれた`dwOpenFlags`ofRead に設定が共有されなくなります。 共有するスコープを許可するのにには、ofReadOnly 値を使用します。 スコープを共有すると、「読み取り/書き込み」メタデータ インターフェイスを使用するクエリは失敗します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

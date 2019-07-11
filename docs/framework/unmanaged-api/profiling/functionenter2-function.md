@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d6e5b74e508f55ec8e94b09960e496ff21936228
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 413cde3d0977c1fd6897fc5bd6fa7a3fef00ac02
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586971"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763339"
 ---
 # <a name="functionenter2-function"></a>FunctionEnter2 関数
 コントロールは、関数に渡されると、フレームと関数の引数はスタックに関する情報を提供をプロファイラーに通知します。 この関数は、 [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md)関数。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void __stdcall FunctionEnter2 (  
     [in]  FunctionID                       funcId,   
     [in]  UINT_PTR                         clientData,   
@@ -70,7 +70,7 @@ void __stdcall FunctionEnter2 (
  また、`FunctionEnter2`関数を呼び出してはならないようにまたはマネージ コードにマネージ メモリの割り当て。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl  
   

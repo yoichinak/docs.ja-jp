@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cbcff46b1932f3293fba4fda922e78f3b9ac37b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 70b40095ffcfea37414b7de2a678ad8555423b12
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61914752"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778548"
 ---
 # <a name="asmdisplayflags-enumeration"></a>ASM_DISPLAY_FLAGS 列挙型
 バージョン、ビルド、カルチャ、署名、および表示名を持つはによって取得するアセンブリのことを示します、 [iassemblyname::getdisplayname](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getdisplayname-method.md)メソッド。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum {  
   
     ASM_DISPLAYF_VERSION                 = 0x01,  
@@ -55,7 +55,7 @@ typedef enum {
  `ASM_DISPLAYF_FULL` バージョンに加えられた変更の反映、 [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)オブジェクト。 返された値が変更可能なことを前提としてはいません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Fusion.h  
   

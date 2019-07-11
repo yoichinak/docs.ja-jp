@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b5015dc42497d269cdc2de944f14454558be6c07
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1f657957d42cef1421ab3aa19f297bd04b0cacd8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62042740"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781328"
 ---
 # <a name="imetadataimportcountenum-method"></a>IMetaDataImport::CountEnum メソッド
 指定された列挙子によって取得された列挙体の要素の数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CountEnum (  
    [in]  HCORENUM    hEnum,   
    [out] ULONG       *pulCount  
@@ -47,7 +47,7 @@ HRESULT CountEnum (
  指定されたハンドル`hEnum`以前から取得されます`Enum`*名前*呼び出し (たとえば、 [imetadataimport::enumtypedefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md))。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

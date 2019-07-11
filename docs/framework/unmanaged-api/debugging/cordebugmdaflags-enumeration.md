@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 732523935eec62bffbc15705bc93c97f14c90064
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bf9f7f3d3419efc9e1dc7d75fc7272432c0cf5d0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792718"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739696"
 ---
 # <a name="cordebugmdaflags-enumeration"></a>CorDebugMDAFlags 列挙型
 マネージド デバッグ アシスタント (MDA) が生成されるスレッドのステータスを指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum CorDebugMDAFlags {  
     MDA_FLAG_SLIP = 0x2  
 } CorDebugMDAFlags;  
@@ -44,7 +44,7 @@ typedef enum CorDebugMDAFlags {
  呼び出し履歴では、この MDA が最初に発生した場所記述されていない、ときに、スレッドが持つと見なされます*スリップ*します。 これは、異常終了時に無効な操作のスレッドの実行によってもたらさです。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

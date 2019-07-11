@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51104516008ffee0694c72733cb5f82b5ba6d8cf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 426420175a7d05f39859b9e217a888a8c01b6d63
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609458"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740502"
 ---
 # <a name="cortypeid-structure"></a>COR_TYPEID 構造体
 型識別子が含まれます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct COR_TYPEID{  
     UINT64 token1;  
     UINT64 token2;  
@@ -48,7 +48,7 @@ typedef struct COR_TYPEID{
  A`COR_TYPEID`オブジェクトが不透明にする対象としています。 個別のフィールドをアクセスまたは操作する必要があります。 として指定された識別子として唯一使用することは、`out`メソッドの呼び出しと、ことができるパラメーターは、追加情報を提供するその他のメソッドに渡される、します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

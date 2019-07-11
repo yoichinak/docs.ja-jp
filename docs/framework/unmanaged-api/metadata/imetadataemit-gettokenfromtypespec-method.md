@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09256deafdb42847f369664ec8c4bc96d72424d6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 85b0edc81a9a861a3eed6a7bc3ffc1ed1db37403
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62043124"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770736"
 ---
 # <a name="imetadataemitgettokenfromtypespec-method"></a>IMetaDataEmit::GetTokenFromTypeSpec メソッド
 指定したメタデータ シグネチャを持つ型のメタデータ トークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetTokenFromTypeSpec (   
     [in]  PCCOR_SIGNATURE       pvSig,   
     [in]  ULONG                 cbSig,   
@@ -48,7 +48,7 @@ HRESULT GetTokenFromTypeSpec (
  [out]`mdTypeSpec`に割り当てられたトークン。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

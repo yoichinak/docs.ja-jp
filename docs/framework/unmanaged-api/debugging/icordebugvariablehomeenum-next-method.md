@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be1ba87ae979911dd21647569725eafa2c80ffa6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 41aff94b8241f07c8646ecc52c06567fc262f703
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768811"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774921"
 ---
 # <a name="icordebugvariablehomeenumnext-method"></a>ICorDebugVariableHomeEnum::Next メソッド
 指定した数を取得[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)については、ローカル変数と関数の引数を格納するインスタンス。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Next(  
     [in] ULONG celt,  
     [out, size_is(celt), length_is(*pceltFetched)] ICorDebugVariableHome *homes[],  
@@ -59,7 +59,7 @@ HRESULT Next(
  [ICorDebugVariableHomeEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md)メソッドの最大値を取得する`celt`オブジェクトの列挙子の現在位置から始まります。 メソッドが戻るときに`pceltFetched`取得したオブジェクトの実際の数が含まれています。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

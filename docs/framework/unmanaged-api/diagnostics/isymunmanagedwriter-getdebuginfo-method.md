@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 41d96c6d2024dbc3cab669f2dba2f99faef89f4b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8737885015055994bff3f6066bccb551f19f74f4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701295"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777310"
 ---
 # <a name="isymunmanagedwritergetdebuginfo-method"></a>ISymUnmanagedWriter::GetDebugInfo メソッド
 コンパイラがポータブル実行可能 (PE) ファイル ヘッダーのデバッグ ディレクトリのエントリを書き込むために必要な情報を返します。 シンボル ライターを除くのすべてのフィールドは`TimeDateStamp`と`PointerToRawData`します。 (コンパイラは、これら 2 つのフィールドを適切に設定を行います)。  
@@ -31,7 +31,7 @@ ms.locfileid: "61701295"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetDebugInfo(  
     [in, out] IMAGE_DEBUG_DIRECTORY *pIDD,  
     [in]  DWORD cData,  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 28eb8124d201f474ac8029a4c2b8a908755d6f8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c455b5196ceafef924de59e9134b89ed62455520
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584673"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737226"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>IMetaDataEmit::SetClassLayout メソッド
 前回の呼び出しで定義されているクラスのフィールドのレイアウトが完了すると[DefineTypeDef メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetClassLayout (  
     [in]  mdTypeDef           td,   
     [in]  DWORD               dwPackSize,   
@@ -61,7 +61,7 @@ HRESULT SetClassLayout (
 - 明示的なレイアウト:各フィールドのオフセットを指定するか、クラスのサイズとパッキング サイズを指定します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 328462343669b3ea6bed2d86514ea348f6ae2b1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f5c28b7513ccfd0f1a645ed1cd6a3207a7cf0f4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789539"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749795"
 ---
 # <a name="ihosttaskmanagerbegindelayabort-method"></a>IHostTaskManager::BeginDelayAbort メソッド
 マネージ コードのホストが、現在のタスクを中止しない期間を入力することを通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT BeginDelayAbort ();  
 ```  
   
@@ -49,7 +49,7 @@ HRESULT BeginDelayAbort ();
  ホストは、まで、現在のタスクを中止する必要があります`EndDelayAbort`が呼び出されます。 別の呼び出しの場合`BeginDelayAbort`を呼び出さなくてもされる`EndDelayAbort`、ホストから E_UNEXPECTED を返す必要があります`BeginDelayAbort`とは何も操作。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

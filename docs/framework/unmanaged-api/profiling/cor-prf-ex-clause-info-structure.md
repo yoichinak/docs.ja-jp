@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 148ca261e717b9a54192a13c317fe385b98f4ccd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 85c0cc3880e4fc78d4badea329d62a6fced2a977
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651162"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781944"
 ---
 # <a name="corprfexclauseinfo-structure"></a>COR_PRF_EX_CLAUSE_INFO 構造体
 特定の例外句インスタンスおよび関連するフレームに関する情報を格納します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct COR_PRF_EX_CLAUSE_INFO {  
     COR_PRF_CLAUSE_TYPE clauseType;  
     UINT_PTR programCounter;  
@@ -64,7 +64,7 @@ typedef struct COR_PRF_EX_CLAUSE_INFO {
 - [ICorProfilerCallback::ExceptionSearchFilterLeave](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md)  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl  
   

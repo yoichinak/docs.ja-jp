@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c548ae7f8d605ff84da2046d057e436c8e95721
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12c571f478f15a0b72168977f12623be1c4a08a9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796579"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749162"
 ---
 # <a name="ihostthreadpoolmanagerqueueuserworkitem-method"></a>IHostThreadPoolManager::QueueUserWorkItem メソッド
 キューに入れ、実行するための関数をその関数によって使用されるデータを格納しているオブジェクトを指定します。 スレッドが利用可能になったら、関数を実行します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT QueueUserWorkItem (  
     [in] LPTHREAD_START_ROUTINE Function,  
     [in] PVOID Context,  
@@ -62,7 +62,7 @@ HRESULT QueueUserWorkItem (
  `QueueUserWorkItem` スレッド プールのワーカー スレッドに作業項目をキューに入れます。 その署名とパラメーターの型は、同じ名前を持つ、対応する Win32 関数のと同じです。 詳細については、Windows プラットフォームのドキュメントを参照してください。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

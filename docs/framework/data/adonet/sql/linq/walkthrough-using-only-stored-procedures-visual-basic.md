@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: 22db347afb45b981602d5a92516271f75b8e4359
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 270b0f2123a20787a8e75d40f56a675c55824243
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648680"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742573"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>チュートリアル: ストアド プロシージャのみの使用 (Visual Basic)
 このチュートリアルでは、ストアド プロシージャのみを使用してデータにアクセスする、基本の [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] シナリオ全体を示します。 この方法は、データ ストアへのアクセス方法を制限する目的で、データベース管理者によってよく使用されます。  
@@ -19,7 +19,7 @@ ms.locfileid: "64648680"
   
  このチュートリアルの目的は、Northwind サンプル データベース内のストアド プロシージャにマップされている 2 つのメソッドを使用します。CustOrdersDetail および CustOrderHist します。 マッピングは、Visual Basic ファイルを生成する SqlMetal コマンド ライン ツールを実行するときに発生します。 詳細については、このチュートリアルの「前提条件」を参照してください。  
   
- このチュートリアルは、[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]には依存しません。 Visual Studio を使用している開発者が使用することも、[!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]ストアド プロシージャの機能を実装します。 参照してください[LINQ to Visual Studio での SQL ツール](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)します。  
+ このチュートリアルは、オブジェクト リレーショナル デザイナーには依存しません。 Visual Studio を使用している開発者は、ストアド プロシージャの機能を実装するために、O/R デザイナーも使用できます。 参照してください[LINQ to Visual Studio での SQL ツール](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)します。  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -60,7 +60,7 @@ ms.locfileid: "64648680"
 ## <a name="creating-a-linq-to-sql-solution"></a>LINQ to SQL ソリューションを作成する  
  この最初のタスクでは、ビルドおよび実行するために必要な参照を含む Visual Studio ソリューションを作成、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]プロジェクト。  
   
-#### <a name="to-create-a-linq-to-sql-solution"></a>LINQ to SQL ソリューションを作成するには  
+### <a name="to-create-a-linq-to-sql-solution"></a>LINQ to SQL ソリューションを作成するには  
   
 1. Visual Studio で **[ファイル]** メニューの **[新しいプロジェクト]** をクリックします。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "64648680"
 ## <a name="adding-the-linq-to-sql-assembly-reference"></a>LINQ to SQL アセンブリ参照を追加する  
  標準の Windows フォーム アプリケーション テンプレートには、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] アセンブリは含まれていません。 次の手順に従って、アセンブリを自分で追加する必要があります。  
   
-#### <a name="to-add-systemdatalinqdll"></a>System.Data.Linq.dll を追加するには  
+### <a name="to-add-systemdatalinqdll"></a>System.Data.Linq.dll を追加するには  
   
 1. **ソリューション エクスプ ローラー**、] をクリックして **[すべてのファイル**します。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "64648680"
 ## <a name="adding-the-northwind-code-file-to-the-project"></a>プロジェクトに Northwind コード ファイルを追加する  
  この手順では、事前に SqlMetal ツールを使用して、Northwind サンプル データベースからコード ファイルを生成していることが前提となります。 詳細については、このチュートリアルの「前提条件」を参照してください。  
   
-#### <a name="to-add-the-northwind-code-file-to-the-project"></a>プロジェクトに Northwind コード ファイルを追加するには  
+### <a name="to-add-the-northwind-code-file-to-the-project"></a>プロジェクトに Northwind コード ファイルを追加するには  
   
 1. **[プロジェクト]** メニューの **[既存項目の追加]** をクリックします。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "64648680"
 ## <a name="creating-a-database-connection"></a>データベース接続を作成する  
  この手順では、Northwind サンプル データベースへの接続を定義します。 このチュートリアルでは、パスとして "c:\linqtest3\northwnd.mdf" を使用します。  
   
-#### <a name="to-create-the-database-connection"></a>データベース接続を作成するには  
+### <a name="to-create-the-database-connection"></a>データベース接続を作成するには  
   
 1. **ソリューション エクスプ ローラー**、右クリック**Form1.vb**、 をクリックし、**コードの表示**します。  
   
@@ -114,9 +114,9 @@ ms.locfileid: "64648680"
 ## <a name="setting-up-the-user-interface"></a>ユーザー インターフェイスを設定する  
  この手順では、ユーザーがストアド プロシージャを実行してデータベース内のデータにアクセスできるように、インターフェイスを作成します。 このチュートリアルで作成するアプリケーションでは、ユーザーはアプリケーションに埋め込まれているストアド プロシージャを使用してのみ、データベース内のデータにアクセスできます。  
   
-#### <a name="to-set-up-the-user-interface"></a>ユーザー インターフェイスを設定するには  
+### <a name="to-set-up-the-user-interface"></a>ユーザー インターフェイスを設定するには  
   
-1. 戻り値を Windows フォーム デザイナー (**form1.vb [デザイン]**)。  
+1. 戻り値を Windows フォーム デザイナー (**form1.vb [デザイン]** )。  
   
 2. **[表示]** メニューの **[ツールボックス]** をクリックします。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "64648680"
   
      すべてのテキストが表示されるように、ボタン コントロールの幅を広げます。  
   
-#### <a name="to-handle-button-clicks"></a>ボタン クリックを処理するには  
+### <a name="to-handle-button-clicks"></a>ボタン クリックを処理するには  
   
 1. ダブルクリック**Order Details**で**Form1**を作成する、`Button1`イベント ハンドラーと、コード エディターを開きます。  
   
@@ -158,7 +158,7 @@ ms.locfileid: "64648680"
 ## <a name="testing-the-application"></a>アプリケーションのテスト  
  次に、アプリケーションをテストします。 データ ストアに対する操作は、2 つのストアド プロシージャで実行できる処理に制限されることに注意してください。 つまり、入力した orderID に含まれている製品を返す処理と、入力した CustomerID の注文製品の履歴を返す処理のみを実行できます。  
   
-#### <a name="to-test-the-application"></a>アプリケーションをテストするには  
+### <a name="to-test-the-application"></a>アプリケーションをテストするには  
   
 1. F5 キーを押してデバッグを開始します。  
   

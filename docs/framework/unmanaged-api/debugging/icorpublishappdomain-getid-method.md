@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44a2038af5d6ef46ad7cc661603e99b2f3dd67a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1a557191c5649f2ed87cf4f4dfdb4167133e597
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986662"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774260"
 ---
 # <a name="icorpublishappdomaingetid-method"></a>ICorPublishAppDomain::GetID メソッド
 この一意識別子を取得します。 [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetID (  
     [out] ULONG32   *puId  
 );  
@@ -43,7 +43,7 @@ HRESULT GetID (
  識別子は、格納しているプロセスのスコープ内でのみ一意です。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorPub.idl, CorPub.h  
   

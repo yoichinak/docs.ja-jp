@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7e1498ec3ce1e5258546cec8d8f8172739af6d9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 31fad9e82d0b93360f92676f6357c136ae60634a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756144"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771127"
 ---
 # <a name="icorprofilerinfo2getfunctionfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs メソッド
 取得、`FunctionID`クラスを格納している、指定したメタデータ トークンを使用して関数のおよび`ClassID`のいずれかの値が引数を入力します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetFunctionFromTokenAndTypeArgs(  
     [in] ModuleID moduleID,  
     [in] mdMethodDef funcDef,  
@@ -66,7 +66,7 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
  一般の使用`GetFunctionFromTokenAndTypeArgs`をお勧めします。 プロファイラー イベントを特定の関数の場合、保存する必要があります、`ModuleID`と`mdMethodDef`その関数、および使用の[icorprofilerinfo 2::getfunctioninfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)を確認するかどうかを指定した`FunctionID`は必要な関数です。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   

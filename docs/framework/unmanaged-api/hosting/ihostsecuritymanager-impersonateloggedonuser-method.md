@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ebf9ad72f7a1b0dd7ac54afa104089182f122ef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c276fc560474ff41afd0e93173d87a76a17a1323
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984283"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781006"
 ---
 # <a name="ihostsecuritymanagerimpersonateloggedonuser-method"></a>IHostSecurityManager::ImpersonateLoggedOnUser メソッド
 要求の現在のユーザー id の資格情報を使用してコードを実行します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ImpersonateLoggedOnUser (  
     [in] HANDLE hToken  
 );  
@@ -56,7 +56,7 @@ HRESULT ImpersonateLoggedOnUser (
  `HANDLE`型は COM に準拠していない、つまり、そのサイズは、オペレーティング システムに固有およびカスタム マーシャ リングが必要です。 したがって、このトークンは、CLR とホスト間、プロセス内でのみ使用します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

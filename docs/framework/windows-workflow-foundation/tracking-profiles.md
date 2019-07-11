@@ -2,12 +2,12 @@
 title: 追跡プロファイル
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: c934ec9fd0524506577ab4457a2ec194d4d0cba7
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a643cf37bbb3e72baefb434249aa54b386060627
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589935"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660922"
 ---
 # <a name="tracking-profiles"></a>追跡プロファイル
 
@@ -112,199 +112,199 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery> - 前に説明した `Started` や `Completed` など、ワークフロー インスタンスのライフサイクルの変化を追跡するために使用します。 <xref:System.Activities.Tracking.WorkflowInstanceQuery> は、次の <xref:System.Activities.Tracking.TrackingRecord> オブジェクトの定期受信に使用されます。
 
-    - <xref:System.Activities.Tracking.WorkflowInstanceRecord>
+  - <xref:System.Activities.Tracking.WorkflowInstanceRecord>
 
-    - <xref:System.Activities.Tracking.WorkflowInstanceAbortedRecord>
+  - <xref:System.Activities.Tracking.WorkflowInstanceAbortedRecord>
 
-    - <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>
+  - <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>
 
-    - <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord>
+  - <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord>
 
-    - <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>
+  - <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>
 
-    定期受信可能な状態は、<xref:System.Activities.Tracking.WorkflowInstanceStates> クラスで指定します。
+  定期受信可能な状態は、<xref:System.Activities.Tracking.WorkflowInstanceStates> クラスで指定します。
 
-    `Started` を使用して <xref:System.Activities.Tracking.WorkflowInstanceQuery> インスタンス状態のワークフロー インスタンス レベルの追跡レコードを定期受信するために使用される構成またはコードを、次の例に示します。
+  `Started` を使用して <xref:System.Activities.Tracking.WorkflowInstanceQuery> インスタンス状態のワークフロー インスタンス レベルの追跡レコードを定期受信するために使用される構成またはコードを、次の例に示します。
 
-    ```xml
-    <workflowInstanceQueries>
-        <workflowInstanceQuery>
-          <states>
-            <state name="Started"/>
-          </states>
-        </workflowInstanceQuery>
-    </workflowInstanceQueries>
-    ```
+  ```xml
+  <workflowInstanceQueries>
+      <workflowInstanceQuery>
+        <states>
+          <state name="Started"/>
+        </states>
+      </workflowInstanceQuery>
+  </workflowInstanceQueries>
+  ```
 
-    ```csharp
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()
-    {
-        Name = "Sample Tracking Profile",
-        Queries =
-        {
-            new WorkflowInstanceQuery()
-            {
-                States = { WorkflowInstanceStates.Started}
-            }
-        }
-    };
-    ```
+  ```csharp
+  TrackingProfile sampleTrackingProfile = new TrackingProfile()
+  {
+      Name = "Sample Tracking Profile",
+      Queries =
+      {
+          new WorkflowInstanceQuery()
+          {
+              States = { WorkflowInstanceStates.Started}
+          }
+      }
+  };
+  ```
 
 - <xref:System.Activities.Tracking.ActivityStateQuery> - ワークフロー インスタンスを構成するアクティビティのライフ サイクルの変化を追跡するために使用します。 たとえば、ワークフロー インスタンス内で、「電子メールの送信」アクティビティが完了するたびの追跡する可能性があります。 このクエリは、<xref:System.Activities.Tracking.TrackingParticipant> が <xref:System.Activities.Tracking.ActivityStateRecord> オブジェクトを定期受信するのに必要です。 定期受信可能な状態は <xref:System.Activities.Tracking.ActivityStates> で指定します。
 
-    <xref:System.Activities.Tracking.ActivityStateQuery> アクティビティに `SendEmailActivity` を使用するアクティビティ状態の追跡レコードを定期受信するために使用される構成またはコードを、次の例に示します。
+  <xref:System.Activities.Tracking.ActivityStateQuery> アクティビティに `SendEmailActivity` を使用するアクティビティ状態の追跡レコードを定期受信するために使用される構成またはコードを、次の例に示します。
 
-    ```xml
-    <activityStateQueries>
-      <activityStateQuery activityName="SendEmailActivity">
-        <states>
-          <state name="Closed"/>
-        </states>
-      </activityStateQuery>
-    </activityStateQueries>
-    ```
+  ```xml
+  <activityStateQueries>
+    <activityStateQuery activityName="SendEmailActivity">
+      <states>
+        <state name="Closed"/>
+      </states>
+    </activityStateQuery>
+  </activityStateQueries>
+  ```
 
-    ```csharp
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()
-    {
-        Name = "Sample Tracking Profile",
-        Queries =
-        {
-            new ActivityStateQuery()
-            {
-                ActivityName = "SendEmailActivity",
-                States = { ActivityStates.Closed }
-            }
-        }
-    };
-    ```
+  ```csharp
+  TrackingProfile sampleTrackingProfile = new TrackingProfile()
+  {
+      Name = "Sample Tracking Profile",
+      Queries =
+      {
+          new ActivityStateQuery()
+          {
+              ActivityName = "SendEmailActivity",
+              States = { ActivityStates.Closed }
+          }
+      }
+  };
+  ```
 
-    > [!NOTE]
-    > 複数の activityStateQuery 要素が同じ名前である場合、最後の要素の状態のみが追跡プロファイルで使用されます。
+  > [!NOTE]
+  > 複数の activityStateQuery 要素が同じ名前である場合、最後の要素の状態のみが追跡プロファイルで使用されます。
 
 - <xref:System.Activities.Tracking.ActivityScheduledQuery> - このクエリを使用すると、親アクティビティによって実行がスケジュールされているアクティビティを追跡できます。 このクエリは、<xref:System.Activities.Tracking.TrackingParticipant> が <xref:System.Activities.Tracking.ActivityScheduledRecord> オブジェクトを定期受信するのに必要です。
 
-    `SendEmailActivity` を使用して、スケジュールされている <xref:System.Activities.Tracking.ActivityScheduledQuery> 子アクティビティに関連するレコードを定期受信するために使用される構成またはコードを、次の例に示します。
+  `SendEmailActivity` を使用して、スケジュールされている <xref:System.Activities.Tracking.ActivityScheduledQuery> 子アクティビティに関連するレコードを定期受信するために使用される構成またはコードを、次の例に示します。
 
-    ```xml
-    <activityScheduledQueries>
-      <activityScheduledQuery activityName="ProcessNotificationsActivity" childActivityName="SendEmailActivity" />
-     </activityScheduledQueries>
-    ```
+  ```xml
+  <activityScheduledQueries>
+    <activityScheduledQuery activityName="ProcessNotificationsActivity" childActivityName="SendEmailActivity" />
+  </activityScheduledQueries>
+  ```
 
-    ```csharp
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()
-    {
-        Name = "Sample Tracking Profile",
-        Queries =
-        {
-            new ActivityScheduledQuery()
-            {
-                ActivityName = "ProcessNotificationsActivity",
-                ChildActivityName = "SendEmailActivity"
-            }
-        }
-    };
-    ```
+  ```csharp
+  TrackingProfile sampleTrackingProfile = new TrackingProfile()
+  {
+      Name = "Sample Tracking Profile",
+      Queries =
+      {
+          new ActivityScheduledQuery()
+          {
+              ActivityName = "ProcessNotificationsActivity",
+              ChildActivityName = "SendEmailActivity"
+          }
+      }
+  };
+  ```
 
 - <xref:System.Activities.Tracking.FaultPropagationQuery> - アクティビティ内で発生したエラーの処理を追跡するために使用します。 このクエリは、<xref:System.Activities.Tracking.TrackingParticipant> が <xref:System.Activities.Tracking.FaultPropagationRecord> オブジェクトを定期受信するのに必要です。
 
-    <xref:System.Activities.Tracking.FaultPropagationQuery> を使用して、エラー伝達に関連するレコードを定期受信するために使用される構成またはコードを、次の例に示します。
+  <xref:System.Activities.Tracking.FaultPropagationQuery> を使用して、エラー伝達に関連するレコードを定期受信するために使用される構成またはコードを、次の例に示します。
 
-    ```xml
-    <faultPropagationQueries>
-      <faultPropagationQuery faultSourceActivityName="SendEmailActivity" faultHandlerActivityName="NotificationsFaultHandler" />
-    </faultPropagationQueries>
-    ```
+  ```xml
+  <faultPropagationQueries>
+    <faultPropagationQuery faultSourceActivityName="SendEmailActivity" faultHandlerActivityName="NotificationsFaultHandler" />
+  </faultPropagationQueries>
+  ```
 
-    ```csharp
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()
-    {
-        Name = "Sample Tracking Profile",
-        Queries =
-        {
-            new FaultPropagationQuery()
-            {
-                FaultSourceActivityName = "SendEmailActivity",
-                FaultHandlerActivityName = "NotificationsFaultHandler"
-            }
-        }
-    };
-    ```
+  ```csharp
+  TrackingProfile sampleTrackingProfile = new TrackingProfile()
+  {
+      Name = "Sample Tracking Profile",
+      Queries =
+      {
+          new FaultPropagationQuery()
+          {
+              FaultSourceActivityName = "SendEmailActivity",
+              FaultHandlerActivityName = "NotificationsFaultHandler"
+          }
+      }
+  };
+  ```
 
 - <xref:System.Activities.Tracking.CancelRequestedQuery> - 親アクティビティによって子アクティビティをキャンセルする要求を追跡するために使用されます。 このクエリは、<xref:System.Activities.Tracking.TrackingParticipant> が <xref:System.Activities.Tracking.CancelRequestedRecord> オブジェクトを定期受信するのに必要です。
 
-    構成とレコードを定期受信するためのコードに関連するアクティビティの取り消しを使用して<xref:System.Activities.Tracking.CancelRequestedQuery>次の例に示します。
+  構成とレコードを定期受信するためのコードに関連するアクティビティの取り消しを使用して<xref:System.Activities.Tracking.CancelRequestedQuery>次の例に示します。
 
-    ```xml
-    <cancelRequestedQueries>
-      <cancelRequestedQuery activityName="ProcessNotificationsActivity" childActivityName="SendEmailActivity" />
-    </cancelRequestedQueries>
-    ```
+  ```xml
+  <cancelRequestedQueries>
+    <cancelRequestedQuery activityName="ProcessNotificationsActivity" childActivityName="SendEmailActivity" />
+  </cancelRequestedQueries>
+  ```
 
-    ```csharp
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()
-    {
-        Name = "Sample Tracking Profile",
-        Queries =
-        {
-            new CancelRequestedQuery()
-            {
-                ActivityName = "ProcessNotificationsActivity",
-                ChildActivityName = "SendEmailActivity"
-            }
-        }
-    };
-    ```
+  ```csharp
+  TrackingProfile sampleTrackingProfile = new TrackingProfile()
+  {
+      Name = "Sample Tracking Profile",
+      Queries =
+      {
+          new CancelRequestedQuery()
+          {
+              ActivityName = "ProcessNotificationsActivity",
+              ChildActivityName = "SendEmailActivity"
+          }
+      }
+  };
+  ```
 
 - <xref:System.Activities.Tracking.CustomTrackingQuery> - コード アクティビティで定義するイベントを追跡するために使用します。 このクエリは、<xref:System.Activities.Tracking.TrackingParticipant> が <xref:System.Activities.Tracking.CustomTrackingRecord> オブジェクトを定期受信するのに必要です。
 
-    <xref:System.Activities.Tracking.CustomTrackingQuery> を使用して、カスタム追跡レコードに関連するレコードを定期受信するために使用される構成またはコードを、次の例に示します。
+  <xref:System.Activities.Tracking.CustomTrackingQuery> を使用して、カスタム追跡レコードに関連するレコードを定期受信するために使用される構成またはコードを、次の例に示します。
 
-    ```xml
-    <customTrackingQueries>
-      <customTrackingQuery name="EmailAddress" activityName="SendEmailActivity" />
-    </customTrackingQueries>
-    ```
+  ```xml
+  <customTrackingQueries>
+    <customTrackingQuery name="EmailAddress" activityName="SendEmailActivity" />
+  </customTrackingQueries>
+  ```
 
-    ```csharp
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()
-    {
-        Name = "Sample Tracking Profile",
-        Queries =
-        {
-            new CustomTrackingQuery()
-            {
-                Name = "EmailAddress",
-                ActivityName = "SendEmailActivity"
-            }
-        }
-    };
-    ```
+  ```csharp
+  TrackingProfile sampleTrackingProfile = new TrackingProfile()
+  {
+      Name = "Sample Tracking Profile",
+      Queries =
+      {
+          new CustomTrackingQuery()
+          {
+              Name = "EmailAddress",
+              ActivityName = "SendEmailActivity"
+          }
+      }
+  };
+  ```
 
 - <xref:System.Activities.Tracking.BookmarkResumptionQuery> - ワークフロー インスタンス内のブックマークの再開を追跡するために使用します。 このクエリは、<xref:System.Activities.Tracking.TrackingParticipant> が <xref:System.Activities.Tracking.BookmarkResumptionRecord> オブジェクトを定期受信するのに必要です。
 
-    <xref:System.Activities.Tracking.BookmarkResumptionQuery> を使用して、ブックマークの再開に関連するレコードを定期受信するために使用される構成またはコードを、次の例に示します。
+  <xref:System.Activities.Tracking.BookmarkResumptionQuery> を使用して、ブックマークの再開に関連するレコードを定期受信するために使用される構成またはコードを、次の例に示します。
 
-    ```xml
-    <bookmarkResumptionQueries>
-      <bookmarkResumptionQuery name="SentEmailBookmark" />
-    </bookmarkResumptionQueries>
-    ```
+  ```xml
+  <bookmarkResumptionQueries>
+    <bookmarkResumptionQuery name="SentEmailBookmark" />
+  </bookmarkResumptionQueries>
+  ```
 
-    ```csharp
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()
-    {
-        Name = "Sample Tracking Profile",
-        Queries =
-        {
-            new BookmarkResumptionQuery()
-            {
-                Name = "sentEmailBookmark"
-            }
-        }
-    };
-    ```
+  ```csharp
+  TrackingProfile sampleTrackingProfile = new TrackingProfile()
+  {
+      Name = "Sample Tracking Profile",
+      Queries =
+      {
+          new BookmarkResumptionQuery()
+          {
+              Name = "sentEmailBookmark"
+          }
+      }
+  };
+  ```
 
 ### <a name="annotations"></a>コメント
 
@@ -352,38 +352,38 @@ XML 構成ファイルとして構成されるプロファイルは、動作拡�
 
 - ワークフロー インスタンスのレコードとエラーを取得する追跡プロファイル
 
-```xml
-<trackingProfile name="Instance and Fault Records">
-  <workflow activityDefinitionId="*">
-    <workflowInstanceQueries>
-      <workflowInstanceQuery>
-        <states>
-          <state name="*" />
-        </states>
-      </workflowInstanceQuery>
-    </workflowInstanceQueries>
-    <activityStateQueries>
-      <activityStateQuery activityName="*">
-        <states>
-          <state name="Faulted"/>
-        </states>
-      </activityStateQuery>
-    </activityStateQueries>
-  </workflow>
-</trackingProfile>
-```
+  ```xml
+  <trackingProfile name="Instance and Fault Records">
+    <workflow activityDefinitionId="*">
+      <workflowInstanceQueries>
+        <workflowInstanceQuery>
+          <states>
+            <state name="*" />
+          </states>
+        </workflowInstanceQuery>
+      </workflowInstanceQueries>
+      <activityStateQueries>
+        <activityStateQuery activityName="*">
+          <states>
+            <state name="Faulted"/>
+          </states>
+        </activityStateQuery>
+      </activityStateQueries>
+    </workflow>
+  </trackingProfile>
+  ```
 
-1. すべてのカスタム追跡レコードを取得する追跡プロファイル
+- すべてのカスタム追跡レコードを取得する追跡プロファイル
 
-```xml
-<trackingProfile name="Instance_And_Custom_Records">
-  <workflow activityDefinitionId="*">
-    <customTrackingQueries>
-      <customTrackingQuery name="*" activityName="*" />
-    </customTrackingQueries>
-  </workflow>
-</trackingProfile>
-```
+  ```xml
+  <trackingProfile name="Instance_And_Custom_Records">
+    <workflow activityDefinitionId="*">
+      <customTrackingQueries>
+        <customTrackingQuery name="*" activityName="*" />
+      </customTrackingQueries>
+    </workflow>
+  </trackingProfile>
+  ```
 
 ## <a name="see-also"></a>関連項目
 

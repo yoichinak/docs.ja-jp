@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b819f1f02870a8a85a531d7d341cbaf488a1ccd6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 199c3ba5d5b9588db4c665070b4dec6266cefc2e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993669"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760348"
 ---
 # <a name="icordebugvariablehomegetslotindex-method"></a>ICorDebugVariableHome::GetSlotIndex メソッド
 ローカル変数のマネージ スロット インデックスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetSlotIndex(  
     [out] ULONG32 *pSlotIndex  
 );  
@@ -42,7 +42,7 @@ HRESULT GetSlotIndex(
 ## <a name="return-value"></a>戻り値  
  メソッドは、次の値を返します。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |`S_OK`|メソッドの呼び出しでのスロット インデックス値が返されました`pSlotIndex`します。|  
 |`E_FAIL`|現在[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)インスタンスは、関数の引数を表します。|  
@@ -51,7 +51,7 @@ HRESULT GetSlotIndex(
  スロット インデックスは、このローカル変数のメタデータの取得に使用できます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

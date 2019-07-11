@@ -4,12 +4,12 @@ description: このチュートリアルでは、Web サイトのコメントか
 ms.date: 05/13/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: a766d95c62fd3a89e3291e1ab803f5222fac46ea
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 833aeeb045ef1fd7bb0e6dbd2236bc3d9da2e8fc
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306179"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506152"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>チュートリアル: ML.NET の二項分類を使用して Web サイトのコメントのセンチメントを分析する
 
@@ -93,12 +93,16 @@ ms.locfileid: "67306179"
 |Wow...Loved this place.              |    1     |
 |Service was very prompt.              |    1     |
 
-`SentimentPrediction` はモデルのトレーニング後に使用される予測クラスです。 予測と共に `SentimentText` を表示するために `SentimentData` から継承されます。 `SentimentPrediction` には 1 つのブール値 (`Sentiment`) と `PredictedLabel` `ColumnName` 属性があります。 `Label` はモデルを作成してトレーニングするために使用され、モデルを評価するための分割されたテスト データセットでも使用されます。 `PredictedLabel` は予測と評価の際に使用されます。 評価には、トレーニング データ、予測値、およびモデルが使用されます。
+`SentimentPrediction` はモデルのトレーニング後に使用される予測クラスです。 `SentimentData` から継承されるため、入力 `SentimentText` を出力予測と共に表示することができます。 `Prediction` ブール値は、新しい入力 `SentimentText` が指定されたときにモデルで予測される値です。
 
-[MLContext クラス](xref:Microsoft.ML.MLContext)は、すべての ML.NET 操作の始点です。 `mlContext` を初期化することで、モデル作成ワークフローのオブジェクト間で共有できる新しい ML.NET 環境が作成されます。 これは Entity Framework における `DBContext` と概念的には同じです。
+出力クラス `SentimentPrediction` にはモデルによって計算されたその他の 2 つのプロパティが含まれています。1 つはモデルによって計算された生のスコアの `Score`、もう 1 つは肯定的センチメントを持つテキストの尤度に調整されたスコアの `Probability` です。
+
+このチュートリアルで最も重要なプロパティは `Prediction` です。
 
 ## <a name="load-the-data"></a>データを読み込む
 ML.NET 内のデータは、[IDataView クラス](xref:Microsoft.ML.IDataView)として表されます。 `IDataView` は、表形式のデータ (数値とテキスト) を表すための柔軟で効率的な方法です。 データはテキスト ファイルから、またはリアルタイムで (SQL データベースやログ ファイルなど) `IDataView` オブジェクトに読み込むことができます。
+
+[MLContext クラス](xref:Microsoft.ML.MLContext)は、すべての ML.NET 操作の始点です。 `mlContext` を初期化することで、モデル作成ワークフローのオブジェクト間で共有できる新しい ML.NET 環境が作成されます。 これは Entity Framework における `DBContext` と概念的には同じです。
 
 アプリを準備してからデータを読み込みます。
 

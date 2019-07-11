@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47fee26a0c4c25e4bff5bca94e5e26daaf98cccd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f4b51fe4510f4172227d9afd049eb6815790a165
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782487"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783088"
 ---
 # <a name="verifyclientkey-function"></a>VerifyClientKey 関数
 クライアント キーに適切なセキュリティが確実に含められます。  
@@ -30,7 +30,7 @@ ms.locfileid: "61782487"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 LONG VerifyClientKey(); 
 ```  
 
@@ -41,7 +41,7 @@ LONG VerifyClientKey();
 戻り値で定義されたゼロ以外のエラー コードは、関数が失敗した場合、 *WinError.h*します。
 
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** WMINet_Utils.def  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 08e4c395026a743323b40e5b1ace3db64e368078
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0b4074d9dab8ad46468930373ad44b0c72bd690
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967735"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763743"
 ---
 # <a name="ihostcrsttryenter-method"></a>IHostCrst::TryEnter メソッド
 現在によって表される、クリティカル セクションを入力しようとしています。 [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)インスタンス。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT TryEnter (  
     [in]  DWORD  option,  
     [out] BOOL   *pbSucceeded  
@@ -58,7 +58,7 @@ HRESULT TryEnter (
  `TryEnter` すぐに返しを呼び出し元のスレッドがクリティカル セクションを入力するかどうかを示します。 このメソッドは、Wind32 をミラー化`TryEnterCriticalSection`関数。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

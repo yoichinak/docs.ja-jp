@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f15ee906fb20cb60272cee3deffa68dbe852f689
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5de55d74741e9deb33be2f9adf15a970561664b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62042621"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779734"
 ---
 # <a name="imetadataimportenummethodswithname-method"></a>IMetaDataImport::EnumMethodsWithName メソッド
 指定された名前を持ち、指定された TypeDef トークンによって参照される型で定義されているメソッドを列挙します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EnumMethodsWithName (  
    [in, out] HCORENUM    *phEnum,  
    [in]  mdTypeDef       cl,  
@@ -70,7 +70,7 @@ HRESULT EnumMethodsWithName (
 |`S_FALSE`|トークンを列挙することはありません。 その場合は、`pcTokens`は 0 です。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

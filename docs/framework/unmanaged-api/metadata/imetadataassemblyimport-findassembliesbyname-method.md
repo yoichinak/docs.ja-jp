@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6b388dae0f109ff366f83c92de99b00b80bcc01a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 315d9aa6f7db51342e71ba3f8fcdc091f7707743
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905087"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777982"
 ---
 # <a name="imetadataassemblyimportfindassembliesbyname-method"></a>IMetaDataAssemblyImport::FindAssembliesByName メソッド
 指定したアセンブリの配列を取得します`szAssemblyName`パラメーター、参照を解決するための共通言語ランタイム (CLR) で採用されている標準の規則を使用します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT FindAssembliesByName (  
     [in]  LPCWSTR     szAppBase,   
     [in]  LPCWSTR     szPrivateBin,   
@@ -76,7 +76,7 @@ HRESULT FindAssembliesByName (
  `FindAssembliesByName` コンパイル時に参照アセンブリを検索しようとするコンパイラで通常使用されます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

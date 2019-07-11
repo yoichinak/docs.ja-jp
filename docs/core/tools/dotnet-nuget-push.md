@@ -2,17 +2,21 @@
 title: dotnet nuget push コマンド
 description: dotnet nuget push コマンドでは、パッケージをサーバーにプッシュして発行します。
 author: karann-msft
-ms.date: 12/04/2018
-ms.openlocfilehash: 7382cb93da3d7ed68f5731b3996c735c3f1461e4
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 4d5efa94c6a4494158aea447be98256d2a307cd6
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631709"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539128"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
+**このトピックの対象: ✓** .NET Core 1.x SDK 以降のバージョン
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>name
 
@@ -20,27 +24,15 @@ ms.locfileid: "65631709"
 
 ## <a name="synopsis"></a>構文
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```
 dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [--interactive] [-k|--api-key] [-n|--no-symbols]
     [--no-service-endpoint] [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
 dotnet nuget push [-h|--help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-```
-dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
-    [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
-dotnet nuget push [-h|--help]
-```
-
----
-
 ## <a name="description"></a>説明
 
-`dotnet nuget push` コマンドは、パッケージをサーバーにプッシュして発行します。 プッシュ コマンドでは、システムの NuGet 構成ファイル、または構成ファイルのチェーンで検出されたサーバーと資格情報の詳細を使用します。 構成ファイルの詳細については、「[Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior)」 (NuGet 動作を構成する) をご覧ください。 NuGet の既定の構成は、*%AppData%\NuGet\NuGet.config* (Windows) または *$HOME/.local/share* (Linux/macOS) を読み込み、次にドライブのルートから開始され、現在のディレクトリで終わる、任意の *nuget.config* または *.nuget\nuget.config* を読み込むことによって取得されます。
+`dotnet nuget push` コマンドは、パッケージをサーバーにプッシュして発行します。 プッシュ コマンドでは、システムの NuGet 構成ファイル、または構成ファイルのチェーンで検出されたサーバーと資格情報の詳細を使用します。 構成ファイルの詳細については、「[Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior)」 (NuGet 動作を構成する) をご覧ください。 NuGet の既定の構成は、 *%AppData%\NuGet\NuGet.config* (Windows) または *$HOME/.local/share* (Linux/macOS) を読み込み、次にドライブのルートから開始され、現在のディレクトリで終わる、任意の *nuget.config* または *.nuget\nuget.config* を読み込むことによって取得されます。
 
 ## <a name="arguments"></a>引数
 
@@ -49,8 +41,6 @@ dotnet nuget push [-h|--help]
   プッシュされるパッケージのファイル パスを指定します。
 
 ## <a name="options"></a>オプション
-
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 * **`-d|--disable-buffering`**
 
@@ -96,46 +86,6 @@ dotnet nuget push [-h|--help]
 
   秒単位でサーバーにプッシュする場合のタイムアウトを指定します。 既定値は 300 秒 (5 分) です。 0 (0 秒) を指定すると、既定値が適用されます。
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-* **`-d|--disable-buffering`**
-
-  メモリ使用量を削減するために、HTTP(S) サーバーにプッシュするときのバッファリングを無効にします。
-
-* **`--force-english-output`**
-
-  インバリアントの英語ベースのカルチャを使用して、アプリケーションの実行を強制します。
-
-* **`-h|--help`**
-
-  コマンドの短いヘルプを印刷します。
-
-* **`-k|--api-key <API_KEY>`**
-
-  サーバーの API キーです。
-
-* **`-n|--no-symbols`**
-
-  シンボルをプッシュしません (存在する場合でも)。
-
-* **`-s|--source <SOURCE>`**
-
-  サーバー URL を指定します。 `DefaultPushSource` 構成値が NuGet 構成ファイルに設定されない限り、このオプションは必須です。
-
-* **`-sk|--symbol-api-key <API_KEY>`**
-
-  シンボル サーバーの API キーです。
-
-* **`-ss|--symbol-source <SOURCE>`**
-
-  シンボル サーバーの URL を指定します。
-
-* **`-t|--timeout <TIMEOUT>`**
-
-  秒単位でサーバーにプッシュする場合のタイムアウトを指定します。 既定値は 300 秒 (5 分) です。 0 (0 秒) を指定すると、既定値が適用されます。
-
----
-
 ## <a name="examples"></a>使用例
 
 * API キーを指定して、既定のプッシュ ソースに *foo.nupkg* をプッシュします。
@@ -173,3 +123,7 @@ dotnet nuget push [-h|--help]
   ```console
   dotnet nuget push *.nupkg
   ```
+  
+  > [!NOTE]
+  > このコマンドがうまくいかない場合は、古いバージョンの SDK (.NET Core 2.1 SDK 以前のバージョン) に存在したバグが原因である可能性があります。
+  > これを解決するには、SDK のバージョンをアップグレードするか、代わりに次のコマンドを実行します: `dotnet nuget push **/*.nupkg`

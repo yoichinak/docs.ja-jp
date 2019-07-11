@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 48650a85a88f36cd51adb1bbec0436fb5d75ecfb
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: d47e250a35640d15bd494d99442271a070a1dd0a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690368"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781903"
 ---
 # <a name="corelementtype-enumeration1"></a>CorElementType Enumeration1
 
@@ -29,7 +29,7 @@ ms.locfileid: "66690368"
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 typedef enum CorElementType {
     ELEMENT_TYPE_END            = 0x0,
     ELEMENT_TYPE_VOID           = 0x1,

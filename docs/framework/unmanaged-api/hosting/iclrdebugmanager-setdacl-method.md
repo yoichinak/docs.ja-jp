@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: abe9a7b617e5fec0f25765dc5eb94d57ead1ffcc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8c5d35af072b773786a8be5ad7d1e71a21c38b2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984831"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773079"
 ---
 # <a name="iclrdebugmanagersetdacl-method"></a>ICLRDebugManager::SetDacl メソッド
 このメソッドは実装されていません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetDacl (  
     [in] PACL pacl  
 );  
@@ -46,7 +46,7 @@ HRESULT SetDacl (
 |E_NOTIMPL|メソッドが実装されていません。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 513fc93bdac71e2a3ba59ebb53fdde44f1659af5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f6f5cd47abd4c17021bc324898a096ff70a3db2e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651721"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739999"
 ---
 # <a name="cordebughandletype-enumeration"></a>CorDebugHandleType 列挙型
 ハンドル型を示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum CorDebugHandleType {  
     HANDLE_STRONG                  = 1,  
     HANDLE_WEAK_TRACK_RESURRECTION = 2  
@@ -43,7 +43,7 @@ typedef enum CorDebugHandleType {
 |`HANDLE_WEAK_TRACK_RESURRECTION`|ハンドルは、ガベージ コレクションで回収されてからオブジェクトを回避することできませんが、脆弱です。<br /><br /> オブジェクトを収集するときに、ハンドルは無効になります。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d7820b33dcfacae5ede5235607e40d95940fc474
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: da77d2eb848419c35e57ffacc8bf3d4580106fa5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771905"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764328"
 ---
 # <a name="createinstallreferenceenum-function"></a>CreateInstallReferenceEnum 関数
 ポインターを取得、 [IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md)指定したアセンブリへのアプリケーションの参照のリストを表すインスタンス。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CreateInstallReferenceEnum (  
     [out] IInstallReferenceEnum **ppRefEnum,  
     [in]  IAssemblyName         *pName,  
@@ -53,7 +53,7 @@ HRESULT CreateInstallReferenceEnum (
  [入力] 将来の機能拡張に備えて予約されています。 `pvReserved` null 参照である必要があります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Fusion.h  
   

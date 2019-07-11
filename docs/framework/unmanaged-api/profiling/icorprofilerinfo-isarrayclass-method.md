@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 350221ae205636cef82581f3fe11367006dd8b2b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5e00e7f39bc2f8c14db0676102a52089c7710bd6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968078"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772252"
 ---
 # <a name="icorprofilerinfoisarrayclass-method"></a>ICorProfilerInfo::IsArrayClass メソッド
 指定したクラスが、配列クラスであるかどうかを判断します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT IsArrayClass(  
     [in]  ClassID        classId,  
     [out] CorElementType *pBaseElemType,  
@@ -54,7 +54,7 @@ HRESULT IsArrayClass(
  指定したクラスが、配列クラスの場合、`IsArrayClass`メソッドは、S_OK HRESULT と null 以外の出力パラメーターに値を返します。 それ以外の場合、S_FALSE を返します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   

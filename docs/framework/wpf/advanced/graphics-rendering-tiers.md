@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: a0ed7bb48c0b8c81b44d4e321dec902ba68fc523
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 77694b2a86c91f3e6946ecd50f4765404750f37b
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64640858"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67664168"
 ---
 # <a name="graphics-rendering-tiers"></a>グラフィックスの描画層
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションを実行するデバイスのグラフィックス ハードウェア性能は描画層で決まります。  
@@ -56,7 +56,7 @@ ms.locfileid: "64640858"
   
 |機能|層 1|層 2|  
 |-------------|------------|------------|  
-|[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] のバージョン|9.0 以上が要求されます。|9.0 以上が要求されます。|  
+|[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] のバージョン|9\.0 以上が要求されます。|9\.0 以上が要求されます。|  
 |ビデオ RAM|60MB 以上が要求されます。|120MB 以上が要求されます。|  
 |ピクセル シェーダー|バージョン 2.0 以上が要求されます。|バージョン 2.0 以上が要求されます。|  
 |頂点シェーダー|要件はありません。|バージョン 2.0 以上が要求されます。|  
@@ -101,7 +101,7 @@ ms.locfileid: "64640858"
 |設定|説明|  
 |-------------|-----------------|  
 |**Disable Hardware Acceleration Option (ハードウェア高速化オプションを無効にする)**|ハードウェア高速化を有効にするかどうかを指定します。|  
-|**Maximum Multisample Value (最大マルチサンプル値)**|[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] コンテンツをアンチエイリアシングするためのマルチサンプリングの度合いを指定します。|  
+|**Maximum Multisample Value (最大マルチサンプル値)**|アンチエイリアシングの 3-D コンテンツのマルチ サンプリングの度合いを指定します。|  
 |**Required Video Driver Date Setting (ビデオ ドライバーの日付設定が必須)**|2004 年 11 月より前にリリースされたドライバーについて、ハードウェア高速化を無効にするかどうかを指定します。|  
 |**Use Reference Rasterizer Option (リファレンス ラスタライザー オプションを使用する)**|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] でリファレンス ラスタライザーを使用するかどうかを指定します。|  
   
@@ -110,7 +110,7 @@ ms.locfileid: "64640858"
 ### <a name="wpf-performance-profiling-tools"></a>WPF パフォーマンス プロファイリング データ  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] にはパフォーマンス プロファイリング ツールのセットがあります。アプリケーションの実行時動作を分析したり、適用できるパフォーマンス最適化の種類を決定したりできます。 次の表は、[!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)] ツール、WPF Performance Suite に含まれるパフォーマンス プロファイリング ツールをまとめたものです。  
   
-|ツール|説明|  
+|Tool|説明|  
 |----------|-----------------|  
 |Perforator|描画動作を分析します。|  
 |ビジュアル プロファイラー|ビジュアル ツリーの要素による [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] サービス (レイアウトやイベント処理など) の使用状況をプロファイルします。|  
@@ -122,7 +122,7 @@ ms.locfileid: "64640858"
   
  `~\Windows\System32`  
   
- [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 診断ツールを実行すると、メイン ウィンドウにタブ セットが表示されます。このタブ セットで [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 関連の情報を表示し、診断できます。 たとえば、**[システム]** タブにはコンピューターに関するシステム情報とコンピューターにインストールされている [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] のバージョンが表示されます。  
+ [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 診断ツールを実行すると、メイン ウィンドウにタブ セットが表示されます。このタブ セットで [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 関連の情報を表示し、診断できます。 たとえば、 **[システム]** タブにはコンピューターに関するシステム情報とコンピューターにインストールされている [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] のバージョンが表示されます。  
   
  ![スクリーン ショット:DirectX 診断ツール](./media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
 DirectX 診断ツールのメイン ウィンドウ  

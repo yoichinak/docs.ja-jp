@@ -19,19 +19,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a35f5ff62ca37337b7becb023f2328cbe05aea6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 301e6cc153f905bc5c15e1b526e6fb1a492a76d6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946134"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774445"
 ---
 # <a name="icoreclrdebugtargetenumprocesses-method"></a>ICoreClrDebugTarget::EnumProcesses メソッド
 リモート コンピューターで実行されているプロセスを列挙します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EnumProcesses (  
        [out]  DWORD*                  pcProcs,   
        [out]  CoreClrDebugProcInfo**  ppProcs  
@@ -59,7 +59,7 @@ HRESULT EnumProcesses (
  このメソッドによって割り当てられたメモリを解放する呼び出し、 [icoreclrdebugtarget::freememory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md)メソッド。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CoreClrRemoteDebuggingInterfaces.h  
   

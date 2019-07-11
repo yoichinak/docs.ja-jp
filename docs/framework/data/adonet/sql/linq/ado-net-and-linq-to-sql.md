@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
-ms.openlocfilehash: 4f2f9fa1cb1be421be57ae0671573150871ebd1d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 6a6e057b45c1305a889ce4ed915b437a29ab2794
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880469"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662067"
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET および LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ADO.NET のファミリのテクノロジの一部です。 ADO.NET プロバイダー モデルによって提供されるサービスに基づいています。 そのため組み合わせることができます[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]コードでは、既存の ADO.NET アプリケーションと、現在の ADO.NET ソリューションに移行する[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]します。 次の図は、この関係を高いレベルから見たものです。  
@@ -36,7 +36,7 @@ ms.locfileid: "65880469"
  [!code-csharp[DLinqAdoNet#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqAdoNet/cs/Program.cs#2)]
  [!code-vb[DLinqAdoNet#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#2)]  
   
- この方法は、すべてのデータベースに使用できるわけではありません。 たとえば、SqlClient 接続を [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] サーバーに使用する場合、この接続はシステム トランザクションに昇格できません。 代わりに、トランザクション スコープが使用されているときは、完全な分散トランザクションに自動的に参加します。  
+ この方法は、すべてのデータベースに使用できるわけではありません。 たとえば、SqlClient 接続は、SQL Server 2000 サーバーに対してうまく機能するとき、システム トランザクションを昇格できません。 代わりに、トランザクション スコープが使用されているときは、完全な分散トランザクションに自動的に参加します。  
   
 ## <a name="direct-sql-commands"></a>直接 SQL コマンド  
  ときには、クエリを実行したり変更内容を送信したりする <xref:System.Data.Linq.DataContext> 機能に不足があり、実行する必要がある特別なタスクを完了できないこともあります。 このような場合は、<xref:System.Data.Linq.DataContext.ExecuteQuery%2A> メソッドを使用して、SQL コマンドをデータベースに発行し、クエリ結果をオブジェクトに変換することができます。  

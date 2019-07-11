@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a4c77ade46d2401e2499a94504808efd94f79f93
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bdc1ef6490f250ebe93b0482adf244adfc0ffd56
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789793"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741789"
 ---
 # <a name="getwin32resblob-method"></a>GetWin32ResBlob メソッド
 Win32 リソースの blob を取得します。 アセンブリ オプションを設定した後、このメソッドを呼び出します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetWin32ResBlob(  
     mdAssembly    AssemblyID,  
     mdToken       FileToken,  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7939f7b1c0c725bb4e8c642bc38121dd755da5e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 535d94688d02a7315529d17fae555fba457bbb86
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785139"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737877"
 ---
 # <a name="icordebugappdomaingetname-method"></a>ICorDebugAppDomain::GetName メソッド
 アプリケーション ドメインの名前を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetName (  
     [in]  ULONG32           cchName,  
     [out] ULONG32           *pcchName,  
@@ -52,7 +52,7 @@ HRESULT GetName (
  デバッガーは、`GetName`メソッドを 1 回、名前に必要なバッファーのサイズを取得します。 デバッガーはバッファーを割り当てたし、メソッドを呼び出して、2 回バッファーを埋めます。 最初の呼び出しで、名前のサイズを取得すると呼びます*クエリ モード*します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

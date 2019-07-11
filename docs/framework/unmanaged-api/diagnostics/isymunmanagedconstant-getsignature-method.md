@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ab1282109d7241c2599f8ca029fc79e4a3135209
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d479e9f55cf7d7a13fef99f302bfd8d9d89d47f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939985"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776945"
 ---
 # <a name="isymunmanagedconstantgetsignature-method"></a>ISymUnmanagedConstant::GetSignature メソッド
 定数の署名を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetSignature(  
     [in]  ULONG32  cSig,  
     [out] ULONG32  *pcSig,  

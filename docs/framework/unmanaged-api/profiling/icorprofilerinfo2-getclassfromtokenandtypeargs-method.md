@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0d4d5ec9119cdcf89e507f133288f569e6fb37ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a88a6c19a5c8b45576dd6f632adf70f7ec2eed55
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000689"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751877"
 ---
 # <a name="icorprofilerinfo2getclassfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetClassFromTokenAndTypeArgs メソッド
 取得、`ClassID`指定したメタデータ トークンを使用して型の`ClassID`いずれかの値が引数を入力します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetClassFromTokenAndTypeArgs(  
     [in] ModuleID moduleID,  
     [in] mdTypeDef typeDef,  
@@ -62,7 +62,7 @@ HRESULT GetClassFromTokenAndTypeArgs(
  一般の使用`GetClassFromTokenAndTypeArgs`をお勧めします。 プロファイラー イベントは、特定の型の場合、保存する必要があります、`ModuleID`と`mdTypeDef`その種類、および使用の[icorprofilerinfo 2::getclassidinfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md)を確認するかどうかを指定した`ClassID`の目的の型。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   

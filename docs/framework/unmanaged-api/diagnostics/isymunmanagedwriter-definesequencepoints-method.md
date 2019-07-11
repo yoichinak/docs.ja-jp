@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 735b33ac1f049f8d4d3740239e7c34a6fa16dd32
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f07685351425a4685ac4a0c8e1b8e3c198b14187
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969170"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777302"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints メソッド
 現在のメソッド内のシーケンス ポイントのグループを定義します。 各開始行と開始列は、メソッド内のステートメントの先頭を定義します。 それぞれの終了行と列の終了は、メソッド内のステートメントの末尾を定義します。 配列は、オフセットの昇順に並べ替える必要があります。 オフセットは常に (バイト単位)、メソッドの先頭から測定されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT DefineSequencePoints(  
     [in] ISymUnmanagedDocumentWriter*  document,  
     [in] ULONG32 spCount,  

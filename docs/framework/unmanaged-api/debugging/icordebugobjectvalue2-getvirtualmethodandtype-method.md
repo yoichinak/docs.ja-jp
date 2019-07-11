@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 252a65c66764d60f5e307ba1eaad4ded34d9744d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bcbe9a701b91a063e19fec5aae9cc2687b1f279f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61965699"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766132"
 ---
 # <a name="icordebugobjectvalue2getvirtualmethodandtype-method"></a>ICorDebugObjectValue2::GetVirtualMethodAndType メソッド
 このメソッドはまだ実装されていません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetVirtualMethodAndType (  
     [in] mdMemberRef          memberRef,  
     [out] ICorDebugFunction   **ppFunction,  

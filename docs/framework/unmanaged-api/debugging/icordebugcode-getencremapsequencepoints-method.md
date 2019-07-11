@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 785defaa69609fc30852be9996531e6063586ceb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 422c5eab896833b2bab8daf0c854c05c252b9ee6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61750177"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747483"
 ---
 # <a name="icordebugcodegetencremapsequencepoints-method"></a>ICorDebugCode::GetEnCRemapSequencePoints メソッド
 .NET Framework の現在のバージョンでは、このメソッドは実装されていません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetEnCRemapSequencePoints(  
     [in] ULONG32 cMap,  
     [out] ULONG32 *pcMap,  

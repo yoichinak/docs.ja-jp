@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aab3b697a0bb2f58258816ce4f8133009b26f54a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb4e41f62f5f55969dadd47e80efc56e1c92c94f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62043408"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768268"
 ---
 # <a name="strongnamesignatureverificationex2-method"></a>StrongNameSignatureVerificationEx2 メソッド
 厳密な名前付きのアセンブリの署名を検証し、ECMA キーから実際のキーへのマッピングを提供します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT StrongNameSignatureVerificationEx (  
     [in]  LPCWSTR   wszFilePath,  
     [in]  BOOLEAN   fForceVerification,    [in]  BYTE      *pbEcmaPublicKey,  
@@ -58,7 +58,7 @@ HRESULT StrongNameSignatureVerificationEx (
  `S_OK` 検証が成功した場合それ以外の場合、エラーを示す HRESULT 値 (を参照してください[の共通 HRESULT 値](https://go.microsoft.com/fwlink/?LinkId=213878)一覧については)。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MetaHost.h  
   

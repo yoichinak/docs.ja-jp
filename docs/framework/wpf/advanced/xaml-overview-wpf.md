@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: f03d9481a2af3edebe83df5b1b725b7290d30d00
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: e0d277eb039c1fb1668f292d83ab9e7dbe4be70e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457542"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762327"
 ---
 # <a name="xaml-overview-wpf"></a>XAML の概要 (WPF)
 このトピックでは、XAML 言語の機能について説明し、記述する XAML を使用する方法を示して[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション。 このトピックでは XAML を具体的には説明によって実装される[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]します。 XAML 自体よりも大きく、言語の概念は、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]します。  
@@ -208,7 +208,7 @@ ms.locfileid: "66457542"
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML プロセッサの実装には、WPF のコア アセンブリの認識のインフラストラクチャが含まれています。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コア アセンブリがサポートする型を含めることが知られて、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]既定の XAML 名前空間へのマッピング。 これは、プロジェクトのビルドの一部である構成により可能にビルドされ、プロジェクト システム ファイルと、WPF します。 そのため、既定値として既定の XAML 名前空間を宣言する`xmlns`に由来する XAML 要素を参照するために必要なは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アセンブリ。  
   
 ### <a name="the-x-prefix"></a>X: プレフィックス  
- 前のルート要素例プレフィックス`x:`XAML 名前空間をマップするために使用された [!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)] 、これは XAML 言語をサポートする専用の XAML 名前空間を構築します。 これは、`x:`のプロジェクトのテンプレートで、例については、およびこのドキュメントでこの XAML 名前空間のマッピング プレフィックスで使用[!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]します。 XAML 言語の XAML 名前空間には、XAML で非常に頻繁に使用するいくつかのプログラミング構成要素が含まれます。 最も一般的なの一覧を次に`x:`を使用するプログラミング構成要素のプレフィックスします。  
+ 前のルート要素例プレフィックス`x:`XAML 名前空間をマップするために使用された [!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)] 、これは XAML 言語をサポートする専用の XAML 名前空間を構築します。 これは、`x:`のプロジェクトのテンプレートで、例については、およびこのドキュメントでこの XAML 名前空間のマッピング プレフィックスで使用[!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]します。 XAML 言語の XAML 名前空間には、XAML で非常に頻繁に使用するいくつかのプログラミング構成要素が含まれています。 最も一般的なの一覧を次に`x:`を使用するプログラミング構成要素のプレフィックスします。  
   
 - [X:key](../../xaml-services/x-key-directive.md):内の各リソースの一意のキーの設定、 <xref:System.Windows.ResourceDictionary> (またはその他のフレームワークのようなディクショナリの概念)。 `x:Key` 90% のアカウントではおそらく、`x:`使用法の一般的な WPF アプリケーションのマークアップに表示されます。  
   

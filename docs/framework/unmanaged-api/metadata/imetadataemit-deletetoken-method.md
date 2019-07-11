@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d85fb62936678f830ca7eaf26a97c36be5f23ac8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c734801fd5629d8ed6bf4bccd81cf6b6de246f4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050091"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777403"
 ---
 # <a name="imetadataemitdeletetoken-method"></a>IMetaDataEmit::DeleteToken メソッド
 現在のメタデータ スコープから指定したトークンを削除します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT DeleteToken (   
     [in]  mdToken     tkObj   
 );  
@@ -40,7 +40,7 @@ HRESULT DeleteToken (
  [in]削除するトークンです。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b36439dd6fb882bb41c38e953cb7b1c5f2b93d30
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 31caa87b1eaa48532ffb20b46c593242379c7ae8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62041380"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780344"
 ---
 # <a name="icorprofilerfunctioncontrolsetilinstrumentedcodemap-method"></a>ICorProfilerFunctionControl::SetILInstrumentedCodeMap メソッド
 指定した共通中間言語 (CIL) マップ エントリを使用して、指定される関数のコード マップを設定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetILInstrumentedCodeMap(  
     [in]   ULONG      cILMapEntries,  
     [in, size_is(cILMapEntries)] COR_IL_MAP rgILMapEntries[]);  
@@ -46,7 +46,7 @@ HRESULT SetILInstrumentedCodeMap(
  このメソッドを呼び出して、マッピングの設定を使用するマッピングを呼び出すことによって取得デバッガー [icordebugilcode 2::getinstrumentedilmap](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md)します。 またデバッガーは、スタック トレースおよび可変的な有効期間に対する IL オフセットを計算するときに、マッピングを内部で使用できます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   

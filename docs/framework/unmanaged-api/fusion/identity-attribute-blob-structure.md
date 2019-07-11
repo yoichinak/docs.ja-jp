@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 074cca51cee2b0227e1d124f1d40a2ffc31e3c85
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e478cb89821ce8666f1746e752e06d2caa3ad2bb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697356"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751594"
 ---
 # <a name="identityattributeblob-structure"></a>IDENTITY_ATTRIBUTE_BLOB 構造体
 アセンブリでは、1 つの属性に関する情報を格納および 3 つから成る`DWORD`秒。 各`DWORD`によって生成される文字バッファーへのオフセットです、`CurrentIntoBuffer`のメソッド、 [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)インターフェイス  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct _IDENTITY_ATTRIBUTE_BLOB {  
     DWORD  ofsNamespace;  
     DWORD  ofsName;  
@@ -57,7 +57,7 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
   
 4. 呼び出す、`CurrentIntoBuffer`のメソッド、`IEnumIDENTITY_ATTRIBUTE`インターフェイス。 このメソッドは、属性をコピー `Namespace`、 `Name`、および`Value`文字バッファーにします。 これらの文字列に 3 つのオフセットで使用可能になる、`IDENTITY_ATTRIBUTE_BLOB`構造体。  
   
-```  
+```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
   
 #include "stdafx.h"  
@@ -236,7 +236,7 @@ Exit:
  バージョン 2.0.0.0 を =  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Isolation.h  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a482c7a06efe888408206f2de569e0a8739b85b8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 77f72fb7eb7b0542dc9a3179811a78b189d6b3b0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777508"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778841"
 ---
 # <a name="imetadataimportgettypedefprops-method"></a>IMetaDataImport::GetTypeDefProps メソッド
 メタデータ情報を返します、<xref:System.Type>指定した TypeDef トークンによって表されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetTypeDefProps (  
    [in]  mdTypeDef   td,  
    [out] LPWSTR      szTypeDef,  
@@ -60,7 +60,7 @@ HRESULT GetTypeDefProps (
  [out]要求された型の基本型を表す TypeDef または TypeRef メタデータ トークン。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e281022cd7bc9b2095fdbd3964061b811ef60e0d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7b949961e854facf8414c81c47f995b2ac57af3f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949033"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755386"
 ---
 # <a name="icordebugprocesssetthreadcontext-method"></a>ICorDebugProcess::SetThreadContext メソッド
 このプロセスでは、特定のスレッドのコンテキストを設定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetThreadContext(  
     [in] DWORD threadID,  
     [in] ULONG32 contextSize,  
@@ -57,7 +57,7 @@ HRESULT SetThreadContext(
  このメソッドは、誤って使用すると、ランタイムを破壊できます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

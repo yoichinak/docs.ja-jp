@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c1cea8adcd12ecb3078e4469e6b018ed49064e0b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c2ea0bf215c0d2abfe9beb29d736f893073d3be8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723317"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739512"
 ---
 # <a name="cordebugunmappedstop-enumeration"></a>CorDebugUnmappedStop 列挙型
 ステッパによるコード実行の停止をトリガーする可能性のあるマップ解除したコードの型を指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum CorDebugUnmappedStop {  
     STOP_NONE               = 0x0,  
     STOP_PROLOG             = 0x01,  
@@ -56,7 +56,7 @@ typedef enum CorDebugUnmappedStop {
  使用して、 [icordebugstepper::setunmappedstopmask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md)ステッパを停止する、マップされていないコードを指定するフラグを設定します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

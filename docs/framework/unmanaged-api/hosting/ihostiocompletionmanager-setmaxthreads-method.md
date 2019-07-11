@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 345c7b88b6967773a185538943591383a686748c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ea09b9d66a288b0616870d971e5063bab83cda0a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796761"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780786"
 ---
 # <a name="ihostiocompletionmanagersetmaxthreads-method"></a>IHostIoCompletionManager::SetMaxThreads メソッド
 I/O 要求を処理するため、ホストに割り当てるスレッドの最大数を設定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetMaxThreads (  
     [in] DWORD dwMaxIoCompletionThreads  
 );  
@@ -55,7 +55,7 @@ HRESULT SetMaxThreads (
  `SetMaxThreads` CLR は、I/O ポート上でサービス要求に使用できるスレッドの最大数を設定する機会を提供します。 ホストの実装、パフォーマンス、スケーラビリティなどの理由から、スレッド プールのサイズを排他的に制御を必要があります。 このため、ホストする必要はありません実装`SetMaxThreads`します。 この場合、ホストは、このメソッドから E_NOTIMPL を返す必要があります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

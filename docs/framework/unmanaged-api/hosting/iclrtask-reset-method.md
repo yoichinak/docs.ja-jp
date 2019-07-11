@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13bf7342157de48e0183537afea2f2e53d1498dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3039855a58e6db6a403ab33c226b4b8b390668f7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763491"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758589"
 ---
 # <a name="iclrtaskreset-method"></a>ICLRTask::Reset メソッド
 ホストは、タスクを完了し、現在を再利用する CLR を有効に、共通言語ランタイム (CLR) を通知[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)を別のタスクを表すインスタンス。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Reset (  
     [in] BOOL fFull  
 );  
@@ -70,7 +70,7 @@ HRESULT Reset (
  このアプローチは、ホストにも再利用可能なワーカー タスクのプールがある場合に機能します。 ホストがのいずれかを破棄するときにその`IHostTask`インスタンス、破棄、対応する`ICLRTask`呼び出すことによって`ExitTask`。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

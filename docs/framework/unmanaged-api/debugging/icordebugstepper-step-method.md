@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 444390622ca68244661b91dc85814b05556b12a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d0f601c4b454b55edc5fa25eb2ee33d491009b9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994319"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760571"
 ---
 # <a name="icordebugstepperstep-method"></a>ICorDebugStepper::Step メソッド
 この icordebugstepper その格納のスレッドと、必要に応じてをシングル ステップ実行するスレッド内で呼び出される関数をシングル ステップ実行を続行します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Step (  
     [in] BOOL   bStepIn  
 );  
@@ -43,7 +43,7 @@ HRESULT Step (
  共通言語ランタイムがこのステッパのフレーム内に次のマネージ命令を実行するときに、手順を完了します。 場合`Step`は、ステッパに対して呼び出すと、マネージ コードのではない、スレッドがマネージ コードの次の命令が実行されたときに、手順は完了します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

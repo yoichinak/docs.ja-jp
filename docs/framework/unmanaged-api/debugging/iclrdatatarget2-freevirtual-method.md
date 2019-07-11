@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b30bd3e97af8d222f629c5b4f9f318a9b6379e78
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6d51c445d6f375f805253b9f640ab61ab3dccc58
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697960"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738486"
 ---
 # <a name="iclrdatatarget2freevirtual-method"></a>ICLRDataTarget2::FreeVirtual メソッド
 ターゲット プロセスのアドレス空間に割り当てられていたメモリを解放共通言語ランタイム (CLR) データ アクセス サービスによって呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT FreeVirtual(  
     [in] CLRDATA_ADDRESS addr,  
     [in] ULONG32 size,  
@@ -53,7 +53,7 @@ HRESULT FreeVirtual(
  このメソッドは、デバッグ アプリケーションの作成者によって実装されます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** ClrData.idl、ClrData.h  
   

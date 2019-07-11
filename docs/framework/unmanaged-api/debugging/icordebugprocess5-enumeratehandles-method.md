@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6552bde30bf3363f1a5a25788fba99e473975c7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 229717ba1d7f004dc1ed020eddb2929079aa9285
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616245"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767581"
 ---
 # <a name="icordebugprocess5enumeratehandles-method"></a>ICorDebugProcess5::EnumerateHandles メソッド
 プロセスでオブジェクト ハンドルの列挙子を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EnumerateHandles(     [in] CorGCReferenceType types,  
     [out] ICorDebugGCReferenceEnum **ppEnum);  
 ```  
@@ -53,7 +53,7 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
 - `CorHandleAll` (すべてのハンドル)。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

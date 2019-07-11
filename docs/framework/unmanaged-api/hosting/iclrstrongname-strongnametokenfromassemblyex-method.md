@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 203c8647366952b1d58799b97dfd53aea22859ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9fbac8263944ff0d009fcc7c5f6aecdc7faed089
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992798"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759177"
 ---
 # <a name="iclrstrongnamestrongnametokenfromassemblyex-method"></a>ICLRStrongName::StrongNameTokenFromAssemblyEx メソッド
 指定したアセンブリ ファイルから厳密な名前トークンを作成し、トークンが表す公開キーを返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT StrongNameTokenFromAssemblyEx (  
     [in]  LPCWSTR   wszFilePath,  
     [out] BYTE      **ppbStrongNameToken,  
@@ -64,7 +64,7 @@ HRESULT StrongNameTokenFromAssemblyEx (
  呼び出す必要があります、キーを取得し、トークンを作成、後に、 [iclrstrongname::strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)を割り当てられたメモリを解放するメソッド。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MetaHost.h  
   

@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 57163ccfcc6dff343a8bbc7d63564ae6b57b5ff6
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 96968de84182b74f7baa89d5dfc12a4797ade595
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490494"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779231"
 ---
 # <a name="createiceefilegen-function"></a>CreateICeeFileGen 関数
 作成、 [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md)オブジェクト。  
@@ -32,7 +32,7 @@ ms.locfileid: "66490494"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CreateICeeFileGen (  
     [out] ICeeFileGen  **ceeFileGen  
 );  

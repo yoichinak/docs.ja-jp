@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49f5ed8b24d81ba8f32a9fe0ad7488693718bde9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c488ca3a77f2c2b2a40c6143989cd86adf071787
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645670"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737433"
 ---
 # <a name="icordebugarrayvaluehasbaseindicies-method"></a>ICorDebugArrayValue::HasBaseIndicies メソッド
 この配列のディメンションに 0 以外のベース インデックスがあるかどうかを示す値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT HasBaseIndicies (  
     [out] BOOL    *pbHasBaseIndicies  
 );  
@@ -40,7 +40,7 @@ HRESULT HasBaseIndicies (
  [out]ブール値へのポインター`true`場合この 1 つまたは複数のディメンション`ICorDebugArrayValue`オブジェクトは、0 以外の基本のインデックスを持つ。 ブール値は、それ以外の場合、`false`します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

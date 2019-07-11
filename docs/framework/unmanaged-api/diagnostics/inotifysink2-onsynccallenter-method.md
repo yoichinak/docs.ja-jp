@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78aaa5d8031e7b554eee2a147d9940ff8d7f7e02
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5fc8b3e6432475468f1012313c95ddd2e22e026
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940388"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736266"
 ---
 # <a name="inotifysink2onsynccallenter-method"></a>INotifySink2::OnSyncCallEnter メソッド
 呼び出しを入力するときに呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT OnSyncCallEnter  
 (  
     [in]  CALL_ID   in_CallID,  

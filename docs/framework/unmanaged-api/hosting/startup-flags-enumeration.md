@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 05ff93f9dc7e875c9f84dd6d8d1f4be9b4f12653
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f254582d96b310c247778818fc0d5daaae0d911c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62043512"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737265"
 ---
 # <a name="startupflags-enumeration"></a>STARTUP_FLAGS 列挙型
 共通言語ランタイム (CLR: Common Language Runtime) の起動動作を示す値を含みます。 既定では、ガベージ コレクションは非同時実行で、基底クラス ライブラリだけがドメイン中立領域に読み込まれます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum {  
     STARTUP_CONCURRENT_GC                         = 0x1,  
     STARTUP_LOADER_OPTIMIZATION_MASK              = 0x3<<1,  
@@ -75,7 +75,7 @@ typedef enum {
 |`STARTUP_ARM`|アプリケーション ドメインのリソース監視が有効になっていることを指定します。 参照してください、<xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>プロパティと[ \<appDomainResourceMonitoring > 要素](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)します。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

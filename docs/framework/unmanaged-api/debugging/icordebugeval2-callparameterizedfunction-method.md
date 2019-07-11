@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cba4eb2b76d7057a5ed66a35342a79615cb8539f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2779cfaecfdd241b5317ac8b467222e045d48049
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934824"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753324"
 ---
 # <a name="icordebugeval2callparameterizedfunction-method"></a>ICorDebugEval2::CallParameterizedFunction メソッド
 コンス トラクターはクラス内にネストすることができますが、指定された、ICorDebugFunction への呼び出しを設定<xref:System.Type>パラメーター、または自体がかかる<xref:System.Type>パラメーター。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CallParameterizedFunction (  
     [in] ICorDebugFunction     *pFunction,  
     [in] ULONG32               nTypeArgs,  
@@ -63,7 +63,7 @@ HRESULT CallParameterizedFunction (
  関数の評価は、限られたシナリオでのみ実行できます。 場合`CallParameterizedFunction`または`ICorDebugEval::CallFunction`失敗した場合、返された HRESULT はエラーの最も一般的な考えられる理由を示します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

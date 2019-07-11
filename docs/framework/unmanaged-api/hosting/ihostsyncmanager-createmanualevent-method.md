@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ada9a3131ea3063239ab7897d0096f0accbd0f94
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1cfb57ba6f07437abfc8576ca4d5ff9cd0131d8b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697265"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753437"
 ---
 # <a name="ihostsyncmanagercreatemanualevent-method"></a>IHostSyncManager::CreateManualEvent メソッド
 手動リセット イベント オブジェクトを作成します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CreateManualEvent (  
     [in]  BOOL bInitialState,  
     [out] IHostManualEvent **ppEvent  
@@ -59,7 +59,7 @@ HRESULT CreateManualEvent (
  `CreateManualEvent` 作成、`IHostManualEvent`への呼び出しを必要とする手動リセット イベント オブジェクト、 [ihostmanualevent::reset](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-reset-method.md)メソッドを非シグナル状態に設定します。 `CreateManualEvent` Win32 をミラー化`CreateEvent`の値を持つ関数`true`の指定、`bManualReset`パラメーター。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

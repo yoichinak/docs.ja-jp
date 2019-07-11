@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ac37df58762dac4e3a6161361cafd8ea87e2657
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f056e4ae233e70223755c1961cd3ee5da68ec90
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645384"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745180"
 ---
 # <a name="icordebugbreakpointactivate-method"></a>ICorDebugBreakpoint::Activate メソッド
 このアクティブな状態を設定`ICorDebugBreakpoint`します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Activate (  
     [in] BOOL bActive  
 );  
@@ -40,7 +40,7 @@ HRESULT Activate (
  [in]この値に設定`true`; アクティブな状態を指定する場合は、この値に設定`false`。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

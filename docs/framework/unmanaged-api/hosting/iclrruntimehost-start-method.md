@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 608612f6a0f4395092e33ce75fdbd249f19ae4f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 03c969cbda8fdaf8fa418c2246f3d0937e622250
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771840"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765745"
 ---
 # <a name="iclrruntimehoststart-method"></a>ICLRRuntimeHost::Start メソッド
 プロセスには、共通言語ランタイム (CLR) を初期化します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Start();  
 ```  
   
@@ -48,7 +48,7 @@ HRESULT Start();
  多くのシナリオで必要はありませんを呼び出す`Start`ランタイムは自動的に初期化をマネージ コードを実行する最初の要求に応じてためです。 ただし、使用することができます、`Start`を正確にすると、ランタイムを初期化するように指定します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

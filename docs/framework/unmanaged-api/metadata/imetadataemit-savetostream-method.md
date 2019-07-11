@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f6b5582b96dfc83eed482def2c4c4abfeb33a4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 96b3b270fb12aa451d9026435dd3d2c4c196b09c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62042992"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782025"
 ---
 # <a name="imetadataemitsavetostream-method"></a>IMetaDataEmit::SaveToStream メソッド
 指定した現在のスコープ内のすべてのメタデータの保存`IStream`します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SaveToStream (   
     [in]  IStream     *pIStream,  
     [in]  DWORD       dwSaveFlags  
@@ -44,7 +44,7 @@ HRESULT SaveToStream (
  [in] 予約されています。 ゼロを指定してください。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8778edf9ac6e32d5dab3a53a6d9cc643a8df13b1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0fc65f5b55082970a0cd59a6850aaaa6779d0821
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994554"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766410"
 ---
 # <a name="icordebugobjectvaluegetfieldvalue-method"></a>ICorDebugObjectValue::GetFieldValue メソッド
 このオブジェクトの値の指定したクラスの指定したフィールドの値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetFieldValue (  
     [in]  ICorDebugClass     *pClass,  
     [in]  mdFieldDef         fieldDef,  
@@ -53,7 +53,7 @@ HRESULT GetFieldValue (
  `GetFieldValue`汎用オブジェクトおよびジェネリック クラスのメソッドは成功します。 たとえば場合、MyDictionary\<V > ディクショナリから継承\<文字列、V >、オブジェクトの値の種類 MyDictionary\<int32 > を渡して、`ICorDebugClass`ディクショナリのオブジェクト\<K, V > はディクショナリのフィールドを正常に取得\<string, int32 > です。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

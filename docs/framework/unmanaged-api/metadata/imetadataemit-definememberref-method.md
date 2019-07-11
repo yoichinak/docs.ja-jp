@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d5d386b1d3f95e703cc5d9ad1353ea6b84b5b455
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 38e4928ad0f3560698cbecab81a11630d67e4db2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62043221"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777615"
 ---
 # <a name="imetadataemitdefinememberref-method"></a>IMetaDataEmit::DefineMemberRef メソッド
 現在のスコープ外にあるモジュールのメンバーへの参照を定義し、その参照定義トークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT DefineMemberRef (   
     [in]  mdToken           tkImport,   
     [in]  LPCWSTR           szName,   
@@ -56,7 +56,7 @@ HRESULT DefineMemberRef (
  [out]`mdMemberRef`に割り当てられたトークン。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

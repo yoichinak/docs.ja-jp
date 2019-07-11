@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d10bb7033688efce9488078d2ef605e2a29382f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: abe0a0fc177c9ec89f4621e7defb5330c911034b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792654"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778609"
 ---
 # <a name="icorprofilerinfosetilfunctionbody-method"></a>ICorProfilerInfo::SetILFunctionBody メソッド
 指定したモジュール内の指定した関数の本体を置き換えます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetILFunctionBody(  
     [in] ModuleID    moduleId,  
     [in] mdMethodDef methodid,  
@@ -54,7 +54,7 @@ HRESULT SetILFunctionBody(
  使用して、 [icorprofilerinfo::getilfunctionbodyallocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md)バッファーとの互換性があることを確認する新しいメソッドの領域を割り当てるためのメソッド。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   

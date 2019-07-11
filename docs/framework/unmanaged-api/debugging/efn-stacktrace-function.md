@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0074584ee5baba358db5bf3b0f2cfdd9a3d8f1d9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 687fdd0735e6cb0f3a727c8a2da3cf33bffb6a39
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593536"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738985"
 ---
-# <a name="efnstacktrace-function"></a>_EFN_StackTrace 関数
+# <a name="efnstacktrace-function"></a>\_EFN\_StackTrace 関数
 マネージド スタック トレースのテキスト表現および `CONTEXT` レコードの配列 (アンマネージド コードとマネージド コードの間の各移行につき 1 つ) を提供します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CALLBACK _EFN_StackTrace(  
     [in]  PDEBUG_CLIENT  Client,  
     [out] WCHAR          wszTextOut[],  
@@ -95,7 +95,7 @@ HRESULT CALLBACK _EFN_StackTrace(
     ```  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** SOS_Stacktrace.h  
   

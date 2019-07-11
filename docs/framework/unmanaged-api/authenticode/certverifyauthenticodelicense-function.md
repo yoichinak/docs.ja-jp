@@ -10,19 +10,19 @@ api_type:
 ms.assetid: 00118de7-33c6-41c4-8e1f-5d5e35e0da83
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e06f69bf867b565edbab06dadb32e5377357e91f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cf7e997282351cc10dd6da1fc405366ea67c7307
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617706"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741098"
 ---
 # <a name="certverifyauthenticodelicense-function"></a>CertVerifyAuthenticodeLicense 関数
 Authenticode XrML ライセンスの有効性を検証します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CertVerifyAuthenticodeLicense (  
     [in]   PCRYPT_DATA_BLOB                   pLicenseBlob,  
     [in]   OPTIONAL DWORD                     dwFlags,  

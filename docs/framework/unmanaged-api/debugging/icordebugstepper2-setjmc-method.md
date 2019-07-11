@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 129bf04a097b2019b080f813bf049d41b501f8fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c6b53d23410dd310766dab44664c8cd865ee9ba
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663870"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771685"
 ---
 # <a name="icordebugstepper2setjmc-method"></a>ICorDebugStepper2::SetJMC メソッド
 この ICorDebugStepper のステップは、アプリケーションの開発者が作成したコードからのみかどうかを指定する値を設定します。 このプロセスは、マイ コード (のみ JMC) のデバッグとも呼ばれます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetJMC (  
     [in] BOOL    fIsJMCStepper  
 );  
@@ -40,7 +40,7 @@ HRESULT SetJMC (
  [in]設定`true`だけは、アプリケーションの開発者が作成した。 それ以外の場合、に設定するコードをステップ実行する`false`します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

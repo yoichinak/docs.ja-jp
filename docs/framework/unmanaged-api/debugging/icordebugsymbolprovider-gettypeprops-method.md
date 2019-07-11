@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 35ac4140-91ea-4c77-b1c4-1daf41986ca5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5f9867dbdc244ed22948dbe9a07a7ea06292d6a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 435a814d20e039c794f4f9eeb024d5afbfcd6dbd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994098"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771188"
 ---
 # <a name="icordebugsymbolprovidergettypeprops-method"></a>Icordebugsymbolprovider::gettypeprops メソッド
 Vtable の指定の相対仮想アドレス (RVA) における、ジェネリック パラメーターのシグネチャの数などの型のプロパティに関する情報を返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetTypeProps(  
    [in]  ULONG32 vtableRva,  
    [in]  ULONG32 cbSignature,  
@@ -45,7 +45,7 @@ HRESULT GetTypeProps(
 >  このメソッドは .NET ネイティブでのみ使用できます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

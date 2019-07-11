@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: faa6af54714f7f0b7ac91c7836673c163195d5f6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 198141545119976cb9107bc9c09b913572e266ce
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64656458"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781118"
 ---
 # <a name="mdainfo-structure"></a>MDAInfo 構造体
 詳細について説明します、 `Event_MDAFired` 、マネージ デバッグ アシスタント (MDA) の作成をトリガーするイベントです。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct _MDAInfo {  
     LPCWSTR  lpMDACaption;  
     LPCWSTR  lpMDAMessage  
@@ -54,7 +54,7 @@ typedef struct _MDAInfo {
  Mda をアクティブ化して、MDA がアクティブ化されたときに通知するホストを選択できます。 これにより、ホストは、既定の動作をオーバーライドして、プロセスの状態の破損を防ぐために、イベントを発生させたマネージ スレッドを中止できます。 詳細については、Mda を使用して、次を参照してください。[マネージ デバッグ アシスタントによるエラーの診断](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.idl  
   

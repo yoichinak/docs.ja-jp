@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0adc6ec1db3f12d1850bb6ff9a01d5b6cc5f90c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 84fd40dbecf9a866a4ec0889cbb62c475c063475
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940349"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736224"
 ---
 # <a name="inotifysink2onsynccallreturn-method"></a>INotifySink2::OnSyncCallReturn メソッド
 呼び出しが戻るときに呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT OnSyncCallReturn  
 (  
     [in]  CALL_ID   in_CallID,  

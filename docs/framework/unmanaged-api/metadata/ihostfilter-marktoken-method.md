@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f3214a21dda27fda01054e96400997b15d11f71b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f486ffd1206dd30fa29d3f07c8c5b738cc207db0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905425"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745870"
 ---
 # <a name="ihostfiltermarktoken-method"></a>IHostFilter::MarkToken メソッド
 指定したメタデータ トークンを処理することを示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT MarkToken (  
     [in]  mdToken         tk  
 );  
@@ -43,7 +43,7 @@ HRESULT MarkToken (
  通常、メタデータ スコープ内にある場合、処理するためのトークンが必要です。 `MarkToken`メソッドが使用してメタデータ エンジンに渡される、 [imetadataemit::sethandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md)メソッド。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

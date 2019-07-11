@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99bc65b0181a7c0ab7877273b3747ece91544f99
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ca510f30f0f38ae54eb83046b0e9d5541db882d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049259"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758691"
 ---
 # <a name="putmethod-function"></a>PutMethod 関数
 メソッドが作成されます。
@@ -30,7 +30,7 @@ ms.locfileid: "62049259"
     
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT PutMethod (
    [in] int                vFunc, 
    [in] IWbemClassObject*  ptr, 
@@ -94,7 +94,7 @@ HRESULT PutMethod (
 例については、次を参照してください。、 [IWbemClassObject::PutMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-putmethod)メソッド。
 
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   

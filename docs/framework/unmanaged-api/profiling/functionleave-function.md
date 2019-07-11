@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 412a01dc1dd498c2f55307958e5feec36a556b9c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 80d82e26fe54c5422d1140bba84830879f0b5c2d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586920"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781283"
 ---
 # <a name="functionleave-function"></a>FunctionLeave 関数
 関数が呼び出し元に戻ることをプロファイラーに通知します。  
@@ -31,7 +31,7 @@ ms.locfileid: "64586920"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void __stdcall FunctionLeave (  
     [in] FunctionID funcID  
 );  
@@ -55,7 +55,7 @@ void __stdcall FunctionLeave (
  また、`FunctionLeave`関数を呼び出してはならないようにまたはマネージ コードにマネージ メモリの割り当て。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl  
   

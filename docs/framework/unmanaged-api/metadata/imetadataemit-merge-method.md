@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 65dbfd526110be5b9b3348fb677fbde7301e4038
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 3fee3c0b82bec102d8e292a76d3df5a14d40ace8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424661"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757672"
 ---
 # <a name="imetadataemitmerge-method"></a>IMetaDataEmit::Merge メソッド
 指定されたインポートされたスコープをマージするスコープの一覧に追加します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Merge (   
     [in]  IMetaDataImport  *pImport,   
     [in]  IMapToken        *pHostMapToken,   

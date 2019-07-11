@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6feef7b1e1f09107cd2a57555df07bebec86effa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4434f5d0eaa45c9cfcbadb20b29564f0643a2dc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667029"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754436"
 ---
 # <a name="icordebugeval2newparameterizedobjectnoconstructor-method"></a>ICorDebugEval2::NewParameterizedObjectNoConstructor メソッド
 コンス トラクター メソッドを呼び出さずに、指定したクラスの新しい型のパラメーター化されたオブジェクトをインスタンス化します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT NewParameterizedObjectNoConstructor (  
     [in] ICorDebugClass        *pClass,  
     [in] ULONG32               nTypeArgs,  
@@ -51,7 +51,7 @@ HRESULT NewParameterizedObjectNoConstructor (
  `NewParameterizedObjectNoConstructor`メソッドには、型引数の数が正しくない場合は失敗または間違った型の引数の型が渡されます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

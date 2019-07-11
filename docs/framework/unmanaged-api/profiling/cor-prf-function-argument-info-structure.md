@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 293ad30ebf47ca8684d158b1ae1772ab245d7981
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 658b88349bedcbcefd0b97226c7bd1fa34f656c7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775090"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781923"
 ---
 # <a name="corprffunctionargumentinfo-structure"></a>COR_PRF_FUNCTION_ARGUMENT_INFO 構造体
 関数の引数を左から右方向で表します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {  
     ULONG numRanges;  
     ULONG totalArgumentSize;  
@@ -52,7 +52,7 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
  レジスタに格納されている引数は、構造を構築するメモリに書き込まれました。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl  
   

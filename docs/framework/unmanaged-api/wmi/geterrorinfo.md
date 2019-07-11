@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2df4b87016394d1998ef90abe2e3eeb911886ef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e33a18487da420eb3b317bb70e0ac9e68b4b8ad6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608971"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746539"
 ---
 # <a name="geterrorinfo-function"></a>GetErrorInfo 関数
 前の関数呼び出しからエラー情報が取得されます。  
@@ -30,7 +30,7 @@ ms.locfileid: "61608971"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 IErrorInfo* GetErrorInfo(); 
 ```  
 
@@ -43,7 +43,7 @@ IErrorInfo* GetErrorInfo();
 この関数の呼び出しをラップする、 [IComThreadingInfo::GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype)メソッド。
 
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** WMINet_Utils.def  
   

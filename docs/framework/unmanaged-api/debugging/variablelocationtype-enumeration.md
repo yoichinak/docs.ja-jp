@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 392254efcd099aca60e58b3cc0bc61ca85aa2c66
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2093466c78b039a06a01e2d850b88ff4543d0ab3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986519"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752463"
 ---
 # <a name="variablelocationtype-enumeration"></a>VariableLocationType 列挙型
 変数のネイティブの場所の種類を示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum VariableLocationType  
 {  
     VLT_REGISTER,               
@@ -49,7 +49,7 @@ typedef enum VariableLocationType
  メンバー、`VariableLocationType`列挙体は、によって返される、 [ICorDebugVariableHome::GetLocationType](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md)メソッド。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

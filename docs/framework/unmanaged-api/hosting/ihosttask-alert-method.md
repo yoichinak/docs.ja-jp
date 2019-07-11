@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c153e6ae8558eeab2efa99765405fb7c84632b01
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a5e3b82645456ffa574f63931abbf60a2194540
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992850"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764538"
 ---
 # <a name="ihosttaskalert-method"></a>IHostTask::Alert メソッド
 要求のホストが現在によって表されるタスクを wake [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)のインスタンスのため、タスクが中止されることができます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Alert ();  
 ```  
   
@@ -51,7 +51,7 @@ HRESULT Alert ();
 >  `Alert` ランタイムが渡されるタスクのみに影響を[WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) WAIT_ALERTABLE の値などのメソッドを[参加](../../../../docs/framework/unmanaged-api/hosting/ihosttask-join-method.md)します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

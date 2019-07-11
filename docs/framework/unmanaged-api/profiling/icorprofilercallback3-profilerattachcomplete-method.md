@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6a181ca2da8385107d63cd94ea832846c4211ad5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 26c9c85f22f9d8201214dc56f32718e055a97801
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650381"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779269"
 ---
 # <a name="icorprofilercallback3profilerattachcomplete-method"></a>ICorProfilerCallback3::ProfilerAttachComplete メソッド
 共通言語ランタイム (CLR)、プロファイラーが呼び出すことができますようになりましたことを示すためにメソッドを呼び出して、 [icorprofilerinfo 3::enumjitedfunctions](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enumjitedfunctions-method.md)と[icorprofilerinfo 3::enummodules](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enummodules-method.md)キャッチアップ メソッド。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ProfilerAttachComplete ();  
 ```  
   
@@ -43,7 +43,7 @@ HRESULT ProfilerAttachComplete ();
  CLR はこのコールバックからの戻り値を無視します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   

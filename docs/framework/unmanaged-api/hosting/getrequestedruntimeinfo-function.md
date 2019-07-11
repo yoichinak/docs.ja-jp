@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21b96d435bdb0265d31972edbd4038d0b8cd8d2b
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 62a6f6d6e73ce42c8c86d4e458322e5bd361f412
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490343"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778131"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>GetRequestedRuntimeInfo 関数
 アプリケーションによって要求された共通言語ランタイム (CLR) のバージョンとディレクトリ情報を取得します。  
@@ -31,7 +31,7 @@ ms.locfileid: "66490343"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetRequestedRuntimeInfo (  
     [in]  LPCWSTR  pExe,   
     [in]  LPCWSTR  pwszVersion,   

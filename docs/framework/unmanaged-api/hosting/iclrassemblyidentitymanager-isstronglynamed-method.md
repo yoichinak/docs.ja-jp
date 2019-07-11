@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 166583f690fc7ed80f80cf2cf5cd5b0348708cc3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9d201c3753a8e71ea3da0b0f4f8a3a47e5bcee2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970158"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773377"
 ---
 # <a name="iclrassemblyidentitymanagerisstronglynamed-method"></a>ICLRAssemblyIdentityManager::IsStronglyNamed メソッド
 指定したアセンブリが厳密な名前かどうかを示す値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 RESULT IsStronglyNamed (  
     [in]  LPCWSTR  pwzAssemblyIdentity,  
     [out] BOOL    *pbIsStronglyNamed  
@@ -55,7 +55,7 @@ RESULT IsStronglyNamed (
 |E_FAIL|不明な致命的なエラーが発生しました。 メソッドから E_FAIL が返された場合、CLR は、プロセス内で使用可能ではなくなりました。 メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7284975d717bdecc4127e09fe04163e8fd0d243
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 7b3e16ead437bf3ebec9fcae6131577fa03e1df9
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424764"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660682"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework の新機能
 
@@ -35,7 +35,8 @@ ms.locfileid: "67424764"
 この記事は、各新機能の包括的な情報を説明するものではありません。また、この内容は変更される可能性があります。 .NET Framework の概要については、「[.NET Framework の概要](../get-started/index.md)」をご覧ください。 サポートされているプラットフォームについては、「[.NET Framework システム要件](~/docs/framework/get-started/system-requirements.md)」を参照してください。 ダウンロード リンクとインストール手順については、「[.NET Framework のインストール](../install/guide-for-developers.md)」を参照してください。
 
 > [!NOTE]
-> また .NET Framework チームは、NuGet により OOB 機能をリリースすることによって、プラットフォーム サポートを拡張し、新しい機能 (変更できないコレクションや SIMD 対応ベクター型など) を提供しています。 詳細については、「[その他のクラス ライブラリと API](../additional-apis/index.md)」および[.NET Framework と OOB リリース](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)に関するページを参照してください。 .NET Framework 用の [NuGet パッケージの完全な一覧](https://www.nuget.org/profiles/dotnetframework)を参照してください。
+> また .NET Framework チームは、NuGet により OOB 機能をリリースすることによって、プラットフォーム サポートを拡張し、新しい機能 (変更できないコレクションや SIMD 対応ベクター型など) を提供しています。 詳細については、「[その他のクラス ライブラリと API](../additional-apis/index.md)」および[.NET Framework と OOB リリース](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)に関するページを参照してください。
+> .NET Framework 用の [NuGet パッケージの完全な一覧](https://www.nuget.org/profiles/dotnetframework)を参照してください。
 
 <a name="v48" />
 
@@ -114,18 +115,18 @@ ms.locfileid: "67424764"
   {
      healthBehavior = new ServiceHealthBehavior();
   }
-   host.Description.Behaviors.Add(healthBehavior);
+  host.Description.Behaviors.Add(healthBehavior);
   ```
 
   ```vb
   Dim host As New ServiceHost(GetType(Service1),
               New Uri("http://contoso:81/Service1"))
-  Dim healthBehavior As ServiceHealthBehavior = 
+  Dim healthBehavior As ServiceHealthBehavior =
      host.Description.Behaviors.Find(Of ServiceHealthBehavior)()
   If healthBehavior Is Nothing Then
      healthBehavior = New ServiceHealthBehavior()
   End If
-  host.Description.Behaviors.Add(healthBehavior) 
+  host.Description.Behaviors.Add(healthBehavior)
   ```
 
 - 構成ファイルの使用。 次に例を示します。
@@ -159,11 +160,11 @@ ms.locfileid: "67424764"
 
   応答をトリガーする割合 {1 – 100} とその HTTP 応答コード {200 – 599} を指定します。 この例では、次のように記述されています。
 
-    - 割合が 95 より大きい場合、500 HTTP 応答コードが返されます。
+  - 割合が 95 より大きい場合、500 HTTP 応答コードが返されます。
 
-    - 割合が 70 – 95 の場合は、350 が返されます。
+  - 割合が 70 – 95 の場合は、350 が返されます。
 
-    - それ以外の場合は、200 が返されます。
+  - それ以外の場合は、200 が返されます。
 
 サービスの正常性状態は、HTML (`https://contoso:81/Service1?health` のようなクエリ文字列を指定) または XML (`https://contoso:81/Service1?health&Xml` のようなクエリ文字列を指定) で表示できます。 `https://contoso:81/Service1?health&NoContent` のようなクエリ文字列では、空の HTML ページが返されます。
 
@@ -358,18 +359,18 @@ Windows API を使用した圧縮解除のサポートは .NET Framework 4.7.2 �
 
 - `TryGetValue` メソッドは、他のコレクション型で使用する try パターンを次の 2 つの型に拡張します。 これらのメソッドを以下に示します。
 
-   - [public bool HashSet\<T>.TryGetValue(T equalValue, out T actualValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
-   - [public bool SortedSet\<T>.TryGetValue(T equalValue, out T actualValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
+  - [public bool HashSet\<T>.TryGetValue(T equalValue, out T actualValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
+  - [public bool SortedSet\<T>.TryGetValue(T equalValue, out T actualValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
 
 - <xref:System.Collections.Generic.HashSet%601> 拡張メソッドは、コレクションを `Enumerable.To*` に変換します。
 
-   - [public static HashSet\<TSource> ToHashSet\<TSource>(this IEnumerable\<TSource> source)](xref:System.Linq.Enumerable.ToHashSet%2A)
-   - [public static HashSet\<TSource> ToHashSet\<TSource>(this IEnumerable\<TSource> source, IEqualityComparer\<TSource> comparer)](xref:System.Linq.Enumerable.ToHashSet%2A)
+  - [public static HashSet\<TSource> ToHashSet\<TSource>(this IEnumerable\<TSource> source)](xref:System.Linq.Enumerable.ToHashSet%2A)
+  - [public static HashSet\<TSource> ToHashSet\<TSource>(this IEnumerable\<TSource> source, IEqualityComparer\<TSource> comparer)](xref:System.Linq.Enumerable.ToHashSet%2A)
 
 - 新しい <xref:System.Collections.Generic.HashSet%601> コンストラクターを使用して、<xref:System.Collections.Generic.HashSet%601> のサイズが事前にわかっている場合に、コレクションの容量を設定できます。
 
-   - [public HashSet(int capacity)](xref:System.Collections.Generic.HashSet%601.%23ctor(System.Int32))
-   - [public HashSet(int capacity, IEqualityComparer\<T> comparer)](xref:System.Collections.Generic.HashSet%601.%23ctor(System.Int32,System.Collections.Generic.IEqualityComparer%7B%600%7D))
+  - [public HashSet(int capacity)](xref:System.Collections.Generic.HashSet%601.%23ctor(System.Int32))
+  - [public HashSet(int capacity, IEqualityComparer\<T> comparer)](xref:System.Collections.Generic.HashSet%601.%23ctor(System.Int32,System.Collections.Generic.IEqualityComparer%7B%600%7D))
 
 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> クラスには、<xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> および <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> メソッドの新しいオーバーロードが含まれています、これにより、ディクショナリから値を取得したり、またはそれが見つからない場合にそれを追加したり、値が既に存在する場合に、値をディクショナリに追加するか更新したりすることができます。
 
@@ -1381,11 +1382,11 @@ MSDTC 以外のトランザクション プロモーターが登録されると�
 
 - [ICorProfilerInfo7](../unmanaged-api/profiling/icorprofilerinfo7-interface.md) インターフェイス内の PDB へのアクセスのサポートが向上。
 
-   ASP.NET Core では、アセンブリがメモリ内で Roslyn によってコンパイルされることがよりいっそう一般的になっています。 プロファイル ツールを作成する開発者にとって、これは従来ディスクにシリアル化されていた PDB が存在しなくなる可能性があることを意味しています。 プロファイル ツールでは、多くの場合 PDB を使用して、コード カバレッジや 1 行単位のパフォーマンス分析などのタスクのソース行に、コードをマップし戻します。 [ICorProfilerInfo7](../unmanaged-api/profiling/icorprofilerinfo7-interface.md) インターフェイスは、メモリ内の PDB データにアクセスして、これらのプロファイル ツールを提供する 2 つの新しいメソッド、[ICorProfilerInfo7::GetInMemorySymbolsLength](../unmanaged-api/profiling/icorprofilerinfo7-getinmemorysymbolslength-method.md) と [ICorProfilerInfo7::ReadInMemorySymbols](../unmanaged-api/profiling/icorprofilerinfo7-readinmemorysymbols.md) を含むようになりました。これらの新しい API を使用すれば、プロファイラーでメモリ内の PDB の内容をバイト配列として取得してから、それを処理したり、ディスクにシリアル化したりできます。
+  ASP.NET Core では、アセンブリがメモリ内で Roslyn によってコンパイルされることがよりいっそう一般的になっています。 プロファイル ツールを作成する開発者にとって、これは従来ディスクにシリアル化されていた PDB が存在しなくなる可能性があることを意味しています。 プロファイル ツールでは、多くの場合 PDB を使用して、コード カバレッジや 1 行単位のパフォーマンス分析などのタスクのソース行に、コードをマップし戻します。 [ICorProfilerInfo7](../unmanaged-api/profiling/icorprofilerinfo7-interface.md) インターフェイスは、メモリ内の PDB データにアクセスして、これらのプロファイル ツールを提供する 2 つの新しいメソッド、[ICorProfilerInfo7::GetInMemorySymbolsLength](../unmanaged-api/profiling/icorprofilerinfo7-getinmemorysymbolslength-method.md) と [ICorProfilerInfo7::ReadInMemorySymbols](../unmanaged-api/profiling/icorprofilerinfo7-readinmemorysymbols.md) を含むようになりました。これらの新しい API を使用すれば、プロファイラーでメモリ内の PDB の内容をバイト配列として取得してから、それを処理したり、ディスクにシリアル化したりできます。
 
 - ICorProfiler インターフェイスを使用したインストルメンテーションの改善。
 
-   動的インストルメンテーションに `ICorProfiler` API ReJit 機能を使用しているプロファイラーで、いくつかのメタデータを変更できるようになりました。 従来、このようなツールでは、いつでも IL をインストルメント化できましたが、メタデータを変更できるのはモジュールを読み込む時だけでした。 IL はメタデータを参照するため、実行できるインストルメンテーションの種類が限られています。 モジュールの読み込み後のメタデータの編集のサブセットをサポートするために、[ICorProfilerInfo7::ApplyMetaData](../unmanaged-api/profiling/icorprofilerinfo7-applymetadata-method.md) メソッドを追加することで (特に新しい `AssemblyRef`、`TypeRef`、`TypeSpec`、`MemberRef`、`MemberSpec`、および `UserString` の各レコードを追加することで)、これらの制限の一部を解消しました。 この変更により、はるかに広範な実行時インストルメンテーションが可能になります。
+  動的インストルメンテーションに `ICorProfiler` API ReJit 機能を使用しているプロファイラーで、いくつかのメタデータを変更できるようになりました。 従来、このようなツールでは、いつでも IL をインストルメント化できましたが、メタデータを変更できるのはモジュールを読み込む時だけでした。 IL はメタデータを参照するため、実行できるインストルメンテーションの種類が限られています。 モジュールの読み込み後のメタデータの編集のサブセットをサポートするために、[ICorProfilerInfo7::ApplyMetaData](../unmanaged-api/profiling/icorprofilerinfo7-applymetadata-method.md) メソッドを追加することで (特に新しい `AssemblyRef`、`TypeRef`、`TypeSpec`、`MemberRef`、`MemberSpec`、および `UserString` の各レコードを追加することで)、これらの制限の一部を解消しました。 この変更により、はるかに広範な実行時インストルメンテーションが可能になります。
 
 <a name="NGEN461" />
 
@@ -1403,363 +1404,363 @@ NGen PDB を使用すれば、IL PDB に依存することなく、NGen で IL �
 
 - **ASP.NET Core**
 
-     .NET 2015 には、ASP.NET Core が含まれています。これは、最新のクラウド ベースのアプリを構築するのに効率的な .NET 実装です。 ASP.NET Core はモジュール形式であるため、ご利用のアプリケーションで必要な機能のみを含めることができます。 IIS でホストすることも、カスタムのプロセスでセルフホストすることもできます。さらに同じサーバー上のさまざまなバージョンの .NET Framework でアプリを実行することも可能です。 クラウド展開用に設計されている新たな環境構成システムが含まれています。
+  .NET 2015 には、ASP.NET Core が含まれています。これは、最新のクラウド ベースのアプリを構築するのに効率的な .NET 実装です。 ASP.NET Core はモジュール形式であるため、ご利用のアプリケーションで必要な機能のみを含めることができます。 IIS でホストすることも、カスタムのプロセスでセルフホストすることもできます。さらに同じサーバー上のさまざまなバージョンの .NET Framework でアプリを実行することも可能です。 クラウド展開用に設計されている新たな環境構成システムが含まれています。
 
-     MVC、Web API、および Web ページは、MVC 6 と呼ばれる 1 つのフレームワークに統合されています。 Visual Studio 2015 以降のツールで ASP.NET Core アプリをビルドします。 既存のアプリケーションは、この新しい .NET Framework で動作しますが、MVC 6 または SignalR 3 を使用するアプリをビルドするには Visual Studio 2015 以降のプロジェクト システムを使用する必要があります。
+  MVC、Web API、および Web ページは、MVC 6 と呼ばれる 1 つのフレームワークに統合されています。 Visual Studio 2015 以降のツールで ASP.NET Core アプリをビルドします。 既存のアプリケーションは、この新しい .NET Framework で動作しますが、MVC 6 または SignalR 3 を使用するアプリをビルドするには Visual Studio 2015 以降のプロジェクト システムを使用する必要があります。
 
-     詳細については、[ASP.NET Core](/aspnet/core/) に関するページを参照してください。
+  詳細については、[ASP.NET Core](/aspnet/core/) に関するページを参照してください。
 
 - **ASP.NET の更新プログラム**
 
-    - **非同期応答フラッシュ用のタスク ベース API**
+  - **非同期応答フラッシュ用のタスク ベース API**
 
-         ASP.NET で、非同期応答フラッシュ用の単純なタスク ベース API である <xref:System.Web.HttpResponse.FlushAsync%2A?displayProperty=nameWithType> が提供されるようになりました。これにより、言語の `async/await` サポートを使用して非同期的に応答をフラッシュできます。
+    ASP.NET で、非同期応答フラッシュ用の単純なタスク ベース API である <xref:System.Web.HttpResponse.FlushAsync%2A?displayProperty=nameWithType> が提供されるようになりました。これにより、言語の `async/await` サポートを使用して非同期的に応答をフラッシュできます。
 
-    - **モデル バインドによるタスクを返すメソッドのサポート**
+  - **モデル バインドによるタスクを返すメソッドのサポート**
 
-         .NET Framework 4.5 では、Web フォーム ページやユーザー コントロールでの CRUD ベースのデータ操作に対して拡張可能なコード中心のアプローチを可能にするモデル バインド機能が ASP.NET に追加されました。 このモデル バインド システムで、<xref:System.Threading.Tasks.Task> を返すモデル バインド メソッドがサポートされるようになりました。 この機能により、Web フォーム開発者は Entity Framework などの ORM の新しいバージョンを使用するときに、データ バインド システムのように簡単に非同期のスケーラビリティ上のメリットを得ることができます。
+    .NET Framework 4.5 では、Web フォーム ページやユーザー コントロールでの CRUD ベースのデータ操作に対して拡張可能なコード中心のアプローチを可能にするモデル バインド機能が ASP.NET に追加されました。 このモデル バインド システムで、<xref:System.Threading.Tasks.Task> を返すモデル バインド メソッドがサポートされるようになりました。 この機能により、Web フォーム開発者は Entity Framework などの ORM の新しいバージョンを使用するときに、データ バインド システムのように簡単に非同期のスケーラビリティ上のメリットを得ることができます。
 
-         非同期モデル バインドは、`aspnet:EnableAsyncModelBinding` 構成設定によって制御されます。
-
-        ```xml
-        <appSettings>
-           <add key=" aspnet:EnableAsyncModelBinding" value="true|false" />
-        </appSettings>
-        ```
-
-         .NET Framework 4.6 を対象とするアプリでは、既定で `true` になります。 .NET Framework 4.6 で実行され、.NET Framework の以前のバージョンを対象とするアプリでは、既定で `false` になります。 有効にするには、この構成設定を `true` に設定します。
-
-    - **HTTP/2 のサポート (Windows 10)**
-
-         [HTTP/2](https://www.wikipedia.org/wiki/HTTP/2) は HTTP プロトコルの新しいバージョンで、接続の使用状況が (クライアントとサーバー間のラウンド トリップ数の減少により) 大幅に改善されて、ユーザーが Web ページを読み込むときの遅延が軽減されています。  このプロトコルは単一のエクスペリエンスの一部として要求さる複数の成果物のために最適化されているので、HTTP/2 が最も役立つのは (サービスではなく) web ページです。 .NET Framework 4.6 では、HTTP/2 のサポートが ASP.NET に追加されました。 ネットワーク機能は複数のレイヤーで存在するので、HTTP/2 を有効にするために、Windows、IIS、および ASP.NET で新機能が必要とされていました。 ASP.NET で HTTP/2 を使用するには、Windows 10 を実行している必要があります。
-
-         HTTP/2 は、<xref:System.Net.Http.HttpClient?displayProperty=nameWithType> API を使用する Windows 10 ユニバーサル Windows プラットフォーム (UWP) アプリでもサポートされ、既定で有効になります。
-
-         ASP.NET アプリケーションで [PUSH_PROMISE](https://http2.github.io/http2-spec/#PUSH_PROMISE) 機能を使用する手段を提供するために、<xref:System.Web.HttpResponse.PushPromise%28System.String%29> と <xref:System.Web.HttpResponse.PushPromise%28System.String%2CSystem.String%2CSystem.Collections.Specialized.NameValueCollection%29> の 2 つのオーバーロードを持つ新しいメソッドが <xref:System.Web.HttpResponse> クラスに追加されました。
-
-        > [!NOTE]
-        > ASP.NET Core では HTTP/2 がサポートされますが、PUSH PROMISE 機能のサポートはまだ追加されていません。
-
-         ブラウザーと web サーバー (Windows 上の IIS) がすべての処理を実行します。 ユーザーの側で複雑な操作を実行する必要はありません。
-
-         [主要なブラウザーのほとんどは HTTP/2 をサポートしている](https://www.wikipedia.org/wiki/HTTP/2)ため、多くの場合、サーバーが HTTP/2 をサポートしていれば、ユーザーもそのメリットを得ることができます。
-
-    - **トークン バインディング プロトコルのサポート**
-
-         Microsoft と Google は、[トークン バインディング プロトコル](https://github.com/TokenBinding/Internet-Drafts)と呼ばれる、認証のための新しいアプローチに共同で取り組んできました。 この前提となっているのは、犯罪者が (ブラウザー キャッシュ内の) 認証トークンを盗用することで、本来ならパスワードや他の特別な情報でセキュリティ保護されているリソース (銀行口座など) にアクセスできる可能性がある、ということです。 新しいプロトコルは、この問題を軽減することを目指しています。
-
-         トークン バインディング プロトコルは、Windows 10 でブラウザーの機能として実装されます。 ASP.NET アプリは、認証トークンの正当性が検証されるように、このプロトコルに参加します。 クライアントとサーバーの実装は、プロトコルによって指定されるエンド ツー エンドの保護を確立します。
-
-    - **ランダムな文字列のハッシュ アルゴリズム**
-
-         .NET Framework 4.5 で、[ランダム化された文字列のハッシュ アルゴリズム](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)が導入されました。 しかし、ASP.NET の一部の機能は安定したハッシュ コードに依存していたため、この機能は ASP.NET ではサポートされませんでした。 .NET Framework 4.6 では、ランダムな文字列のハッシュ アルゴリズムがサポートされるようになりました。 この機能を有効にするには、`aspnet:UseRandomizedStringHashAlgorithm` 構成設定を使用します。
-
-        ```xml
-        <appSettings>
-           <add key="aspnet:UseRandomizedStringHashAlgorithm" value="true|false" />
-        </appSettings>
-        ```
-
-- **ADO.NET**
-
-     ADO .NET では、SQL Server 2016 Community Technology Preview 2 (CTP2) で使用できる Always Encrypted 機能がサポートされました。 SQL Server は、Always Encrypted 機能を使用して、暗号化されたデータに対して操作を実行できます。特に、サーバー上ではなく、ユーザーが信頼している環境内にアプリケーションと共に暗号化キーを保存できるようになりました。 Always Encrypted でユーザー データが保護されるので、DBA はプレーン テキスト データにアクセスできません。 データの暗号化と復号化は、ドライバー レベルで透過的に行われるので、既存のアプリケーションに対する変更が最小限に抑えられます。 詳細については、「[Always Encrypted (データベース エンジン)](/sql/relational-databases/security/encryption/always-encrypted-database-engine)」および「[Always Encrypted (クライアント開発)](/sql/relational-databases/security/encryption/always-encrypted-client-development)」を参照してください。
-
-- **マネージド コードの JIT コンパイラ (64 ビット)**
-
-     .NET Framework 4.6 の特徴の 1 つとして、新しいバージョンの 64 ビット JIT コンパイラ (RyuJIT というコードネームで呼ばれていたもの) があります。 この新しい 64 ビット コンパイラは、これまでの 64 ビット JIT コンパイラよりもパフォーマンスが大幅に向上しています。 新しい 64 ビット コンパイラは、.NET Framework 4.6 上で実行される 64 ビット プロセスで有効になります。 64 ビットまたは AnyCPU としてコンパイルされ、64 ビット オペレーティング システム上で実行されるアプリは、64 ビットで動作します。 新しいコンパイラへの移行をできる限り透過的に行うように注意を払いましたが、動作の変更が発生する可能性があります。 新しい JIT コンパイラの使用中に発生した問題については、直接お聞かせいただければと思います。 新しい 64 ビット JIT コンパイラに関連する可能性のある問題が発生した場合は、[Microsoft Connect](https://connect.microsoft.com/) にご連絡ください。
-
-     新しい 64 ビット JIT コンパイラには、ハードウェア SIMD アクセラレータ機能も含まれています。これを <xref:System.Numerics> 名前空間の SIMD 対応の型と組み合わせると、パフォーマンスが大幅に向上する可能性があります。
-
-- **アセンブリ ローダーの改善**
-
-     アセンブリ ローダーで、対応する NGEN イメージの読み込み後に IL アセンブリをアンロードすることにより、メモリがより効率的に使用されるようになりました。 この変更は、仮想メモリが減少するため、特に大規模な 32 ビット アプリ (Visual Studio など) で有益であり、物理メモリの節約にもなります。
-
-- **基本クラス ライブラリの変更点**
-
-     主なシナリオを利用できるようにするため、多くの新しい API が .NET Framework 4.6 に関連して追加されました。 変更点と追加点を以下に示します。
-
-    - **IReadOnlyCollection\<T> implementations**
-
-         追加のコレクション <xref:System.Collections.Generic.IReadOnlyCollection%601> (<xref:System.Collections.Generic.Queue%601>、<xref:System.Collections.Generic.Stack%601> など) が実装されています。
-
-    - **CultureInfo.CurrentCulture と CultureInfo.CurrentUICulture**
-
-         <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> プロパティと <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> プロパティが読み取り専用ではなく、読み取り/書き込み可能になりました。 新しい <xref:System.Globalization.CultureInfo> オブジェクトをこれらのプロパティに割り当てると、`Thread.CurrentThread.CurrentCulture` プロパティで現在定義されているスレッド カルチャと、`Thread.CurrentThread.CurrentUICulture` プロパティで現在定義されている UI スレッド カルチャも変更されます。
-
-    - **ガベージ コレクション (GC) の機能強化**
-
-         <xref:System.GC> クラスに <xref:System.GC.TryStartNoGCRegion%2A> メソッドと <xref:System.GC.EndNoGCRegion%2A> メソッドが含まれるようになりました。これらのメソッドを使用するとクリティカル パスの実行中にガベージ コレクションを不許可にできます。
-
-         <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%2CSystem.Boolean%29?displayProperty=nameWithType> メソッドの新しいオーバーロードを使用して、小さなオブジェクト ヒープと大きなオブジェクト ヒープの両方に関して、スイープして圧縮するのか、スイープのみを行うのかを制御できます。
-
-    - **SIMD が有効な型**
-
-         <xref:System.Numerics> 名前空間には、<xref:System.Numerics.Matrix3x2>、<xref:System.Numerics.Matrix4x4>、<xref:System.Numerics.Plane>、<xref:System.Numerics.Quaternion>、<xref:System.Numerics.Vector2>、<xref:System.Numerics.Vector3>、<xref:System.Numerics.Vector4> など、いくつかの SIMD 対応の型が含まれるようになりました。
-
-         新しい 64 ビット JIT コンパイラにはハードウェア SIMD アクセラレータ機能も含まれているため、新しい 64 ビット JIT コンパイラで SIMD 対応の型を使用すると、パフォーマンスが大幅に向上します。
-
-    - **暗号の更新**
-
-         <xref:System.Security.Cryptography?displayProperty=nameWithType> API は、[Windows CNG 暗号化 API](/windows/desktop/SecCNG/cng-reference) をサポートするために更新中です。 以前のバージョンの .NET Framework は、<xref:System.Security.Cryptography?displayProperty=nameWithType> の実装の基礎として、[それより前のバージョンの Windows 暗号化 API](/windows/desktop/SecCrypto/cryptography-portal) に完全に依存していました。 CNG API は特定のカテゴリのアプリにとって重要な[最新の暗号アルゴリズム](/windows/desktop/SecCNG/cng-features#suite-b-support)をサポートするものであるため、CNG API をサポートしてほしいというリクエストが寄せられていました。
-
-         .NET Framework 4.6 には、Windows CNG 暗号化 API をサポートするために、次の新しい機能強化が含まれています。
-
-        - 可能な場合に CAPI ベースの実装ではなく CNG ベースの実装を返す X509 証明書用の一連の拡張メソッド `System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)` および `System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)` (一部のスマート カードなどでは現在も CAPI が必要であり、API がフォールバックを処理します)。
-
-        - RSA アルゴリズムの CNG 実装を提供する <xref:System.Security.Cryptography.RSACng?displayProperty=nameWithType> クラス。
-
-        - 一般的な操作でキャストを不要にする RSA API の機能強化。 たとえば、以前のバージョンの .NET Framework で <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> オブジェクトを使用してデータを暗号化するには、次のようなコードが必要です。
-
-             [!code-csharp[WhatsNew.Casting#1](~/samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#1)]
-             [!code-vb[WhatsNew.Casting#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#1)]
-
-             .NET Framework 4.6 で新しい暗号化を使用するコードは、次のように書き換えてキャストを回避することができます。
-
-             [!code-csharp[WhatsNew.Casting#2](~/samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#2)]
-             [!code-vb[WhatsNew.Casting#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#2)]
-
-    - **日付および時間と UNIX 時間の変換のサポート**
-
-         日付値および時間値と UNIX 時間の変換をサポートするため、次の新しいメソッドが <xref:System.DateTimeOffset> 構造体に追加されました。
-
-        - <xref:System.DateTimeOffset.FromUnixTimeSeconds%2A?displayProperty=nameWithType>
-
-        - <xref:System.DateTimeOffset.FromUnixTimeMilliseconds%2A?displayProperty=nameWithType>
-
-        - <xref:System.DateTimeOffset.ToUnixTimeSeconds%2A?displayProperty=nameWithType>
-
-        - <xref:System.DateTimeOffset.ToUnixTimeMilliseconds%2A?displayProperty=nameWithType>
-
-    - **互換性スイッチ**
-
-         新しい <xref:System.AppContext> クラスは、ライブラリの作成者が統一された新機能のオプトアウト メカニズムをユーザーに提供できるようにする、新しい互換性機能を追加します。 これは、オプトアウト要求を伝達するために、コンポーネント間に疎結合のコントラクトを確立します。 通常、この機能は既存の機能が変更されるときに重要となります。 それに対して、新しい機能には暗黙のオプトインが既に存在しています。
-
-         <xref:System.AppContext> によって、ライブラリは互換性スイッチを定義して公開します。また、それらに依存するコードは、それらのスイッチを設定してライブラリの動作に影響を与えることができます。 ライブラリは、既定では新しい機能を提供し、スイッチが設定されている場合のみそれを変更する (つまり以前の機能を提供する) ことができます。
-
-         アプリケーション (またはライブラリ) は、依存するライブラリが定義したスイッチの値 (常に <xref:System.Boolean> 値) を宣言できます。 スイッチは常に暗黙的に `false` です。 スイッチを `true` に設定すると、それが有効になります。 スイッチを明示的に `false` に設定すると、新しい動作が提供されます。
-
-        ```csharp
-        AppContext.SetSwitch("Switch.AmazingLib.ThrowOnException", true);
-        ```
-
-        ```vb
-        AppContext.SetSwitch("Switch.AmazingLib.ThrowOnException", True)
-        ```
-
-         ライブラリは、コンシューマーがスイッチの値を宣言したことを確認してから、それを適切に実行する必要があります。
-
-        ```csharp
-        if (!AppContext.TryGetSwitch("Switch.AmazingLib.ThrowOnException", out shouldThrow))
-        {
-           // This is the case where the switch value was not set by the application.
-           // The library can choose to get the value of shouldThrow by other means.
-           // If no overrides nor default values are specified, the value should be 'false'.
-           // A false value implies the latest behavior.
-        }
-
-        // The library can use the value of shouldThrow to throw exceptions or not.
-        if (shouldThrow)
-        {
-           // old code
-        }
-        else 
-        {
-           // new code
-        }
-        ```
-
-        ```vb
-        If Not AppContext.TryGetSwitch("Switch.AmazingLib.ThrowOnException", shouldThrow) Then
-           ' This is the case where the switch value was not set by the application.
-           ' The library can choose to get the value of shouldThrow by other means.
-           ' If no overrides nor default values are specified, the value should be 'false'.
-           ' A false value implies the latest behavior.
-        End If
-
-        ' The library can use the value of shouldThrow to throw exceptions or not.
-        If shouldThrow Then
-           ' old code
-        Else 
-           ' new code
-        End If
-        ```
-
-         スイッチは、ライブラリによって公開される正式なコントラクトであるため、一貫性のある形式を使用することをお勧めします。 2 つの明確な形式を次に示します。
-
-        - *Switch*.*namespace*.*switchname*
-
-        - *Switch*.*library*.*switchname*
-
-    - **タスク ベースの非同期パターン (TAP) の変更点**
-
-         .NET Framework 4.6 をターゲットとするアプリの場合、<xref:System.Threading.Tasks.Task> および <xref:System.Threading.Tasks.Task%601> オブジェクトは、呼び出し元のスレッドのカルチャと UI カルチャを継承します。 以前のバージョンの .NET Framework をターゲットするとアプリまたは特定のバージョンの .NET Framework をターゲットとしないアプリの動作には影響を及ぼしません。 詳細については、<xref:System.Globalization.CultureInfo> クラスのトピックの「カルチャとタスク ベースの非同期の操作」セクションをご覧ください。
-
-         <xref:System.Threading.AsyncLocal%601?displayProperty=nameWithType> クラスを使用すると、`async` メソッドなど、特定の非同期制御フローに対してローカルなアンビエント データを表すことができます。 これは、スレッド間でデータを保持するために使用できます。 <xref:System.Threading.AsyncLocal%601.Value%2A?displayProperty=nameWithType> プロパティの明示的な変更やスレッドでのコンテキスト変換の発生などによってアンビエント データが変更されるたびに通知されるコールバック メソッドを定義することもできます。
-
-         タスク ベースの非同期パターン (TAP) に、特定の状態で完了したタスクを返す 3 つの便利なメソッド <xref:System.Threading.Tasks.Task.CompletedTask%2A?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Task.FromCanceled%2A?displayProperty=nameWithType>、および <xref:System.Threading.Tasks.Task.FromException%2A?displayProperty=nameWithType> が追加されました。
-
-         <xref:System.IO.Pipes.NamedPipeClientStream> クラスで、新しい <xref:System.IO.Pipes.NamedPipeClientStream.ConnectAsync%2A> メソッドによる非同期通信がサポートされるようになりました。 メソッドをオーバーライドします。
-
-    - **EventSource がイベント ログへの書き込みをサポート**
-
-         コンピューター上で作成された既存の ETW セッションに加えて、<xref:System.Diagnostics.Tracing.EventSource> クラスを使用して管理または操作メッセージをイベント ログに記録できるようになりました。 以前は、この機能のために Microsoft.Diagnostics.Tracing.EventSource NuGet パッケージを使用する必要がありました。 この機能は .NET Framework 4.6 に組み込まれました。
-
-         NuGet パッケージと .NET Framework 4.6 は、どちらも次の機能によって更新されています。
-
-        - **ダイナミック イベント**
-
-             イベント メソッドを作成せずに、実行時にイベントを定義できます。
-
-        - **リッチ ペイロード**
-
-             特別な属性が指定されたクラスや配列に加えて、プリミティブ型もペイロードとして渡すことができます。
-
-        - **アクティビティの追跡**
-
-             Start イベントと Stop イベントの間のイベントに、現在アクティブなすべてのアクティビティを表す ID が付けられます。
-
-         これらの機能をサポートするため、<xref:System.Diagnostics.Tracing.EventSource> クラスにオーバーロードされた <xref:System.Diagnostics.Tracing.EventSource.Write%2A> メソッドが追加されました。
-
-- **Windows Presentation Foundation (WPF)**
-
-    - **HDPI の強化**
-
-         .NET Framework 4.6 では、WPF での HDPI サポートが強化されました。 境界があるコントロールでのクリッピングの発生を減らすため、レイアウトの丸め処理が変更されました。 既定では、<xref:System.Runtime.Versioning.TargetFrameworkAttribute> が .NET 4.6 に設定されている場合にのみ、この機能が有効になります。  以前のバージョンの Framework を対象とするアプリケーションが .NET Framework 4.6 で実行される場合は、app.config ファイルの [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) セクションに次の行を追加することで、新しい動作を選択できます。
-
-        ```xml
-        <AppContextSwitchOverrides
-        value="Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness=false"
-        />
-        ```
-
-         異なる DPI 設定を持つ (マルチ DPI セットアップの) 複数のモニターにまたがる WPF ウィンドウは、ブラック アウト領域なしで完全にレンダリングされるようになりました。 この動作の選択を解除するには、app.config ファイルの `<appSettings>` セクションに次の行を追加して、この新しい動作を無効にします。
-
-        ```xml
-        <add key="EnableMultiMonitorDisplayClipping" value="true"/>
-        ```
-
-         DPI 設定に基づいて自動的に正しいカーソルを読み込む機能のサポートが <xref:System.Windows.Input.Cursor?displayProperty=nameWithType> に追加されました。
-
-    - **タッチの改善**
-
-         タッチで予期しない動作が発生するという、お客様から報告された [Connect](https://connect.microsoft.com/VisualStudio/feedback/details/903760/) の問題が .NET Framework 4.6 で対処されました。 Windows 8.1 以降では、Windows ストア アプリケーションと WPF アプリケーションのダブルタップのしきい値が同じになりました。
-
-    - **透過的な子ウィンドウのサポート**
-
-         .NET Framework 4.6 の WPF では、Windows 8.1 以降の透過的な子ウィンドウがサポートされます。 これにより、最上位レベルのウィンドウ内に四角形でない透過的な子ウィンドウを作成できます。 この機能を有効にするには、<xref:System.Windows.Interop.HwndSourceParameters.UsesPerPixelTransparency%2A?displayProperty=nameWithType> プロパティを `true` に設定します。
-
-- **Windows Communication Foundation (WCF)**
-
-    - **SSL のサポート**
-
-         WCF で、NetTcp をトランスポート セキュリティおよびクライアント認証と共に使用する場合に、SSL のバージョンとして SSL 3.0 および TLS 1.0 に加えて TLS 1.1 および TLS 1.2 がサポートされるようになりました。 使用するプロトコルを選択することも、安全性の低い古いプロトコルを無効化することもできるようになりました。 これを行うには、<xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A> プロパティを設定するか、または構成ファイルに以下を追加します。
-
-        ```xml
-        <netTcpBinding>
-           <binding>
-              <security mode= "None|Transport|Message|TransportWithMessageCredential" >
-                 <transport clientCredentialType="None|Windows|Certificate"
-                            protectionLevel="None|Sign|EncryptAndSign"
-                            sslProtocols="Ssl3|Tls1|Tls11|Tls12">
-                    </transport>
-              </security>
-           </binding>
-        </netTcpBinding>
-        ```
-
-    - **異なる HTTP 接続によるメッセージの送信**
-
-         WCF で、ユーザーが別の基になる HTTP 接続を使用して特定のメッセージを送信できるようになりました。 これには、2 つの方法があります。
-
-        - **接続グループ名プレフィックスの使用**
-
-             ユーザーは、WCF で接続グループ名のプレフィックスとして使用される文字列を指定できます。 異なるプレフィックスを持つ 2 つのメッセージは、別の基になる HTTP 接続を使用して送信されます。 プレフィックスを設定するには、メッセージの <xref:System.ServiceModel.Channels.Message.Properties%2A?displayProperty=nameWithType> プロパティにキー/値のペアを追加します。 キーは "HttpTransportConnectionGroupNamePrefix" で、値は使用するプレフィックスです。
-
-        - **異なるチャネル ファクトリの使用**
-
-             ユーザーは、異なるチャネル ファクトリによって作成されたチャネルを使用して送信されるメッセージで別の基になる HTTP 接続を使用する機能を有効にすることもできます。 この機能を有効にするには、ユーザーが次の `appSetting` を `true` に設定する必要があります。
-
-            ```xml
-            <appSettings>
-               <add key="wcf:httpTransportBinding:useUniqueConnectionPoolPerFactory" value="true" />
-            </appSettings>
-            ```
-
-- **Windows Workflow Foundation (WWF)**
-
-     順序不定の操作要求がタイムアウトする前に未処理の "非プロトコル" ブックマークが存在する場合に、ワークフロー サービスが要求を保持する秒数を指定できるようになりました。 "非プロトコル" ブックマークとは、未処理の Receive アクティビティに関連付けられていないブックマークです。 一部のアクティビティはその実装内で非プロトコル ブックマークを作成するため、必ずしも非プロトコル ブックマークの存在が明らかにわかるとは限りません。 例として State や Pick などがあります。 ステート マシンを使用して実装されたワークフロー サービスや、Pick アクティビティを含むワークフロー サービスがある場合は、非プロトコル ブックマークが存在する可能性が高くなります。 この間隔を指定するには、app.config ファイルの `appSettings` セクションに次のような行を追加します。
-
-    ```xml
-    <add key="microsoft:WorkflowServices:FilterResumeTimeoutInSeconds" value="60"/>
-    ```
-
-     既定値は 60 秒です。 `value` を 0 に設定すると、順序不定の要求はただちに拒否され、次のようなテキストを含むエラーが返されます。
-
-    ```
-    Operation 'Request3|{http://tempuri.org/}IService' on service instance with identifier '2b0667b6-09c8-4093-9d02-f6c67d534292' cannot be performed at this time. Please ensure that the operations are performed in the correct order and that the binding in use provides ordered delivery guarantees.
-    ```
-
-     これは、順序不定の操作メッセージを受信し、非プロトコル ブックマークが存在しない場合に受信するメッセージと同じです。
-
-     `FilterResumeTimeoutInSeconds` 要素の値がゼロ以外で、非プロトコル ブックマークが存在し、タイムアウト間隔が終了した場合、その操作は失敗し、タイムアウト メッセージが発生します。
-
-- **トランザクション**
-
-     <xref:System.Transactions.TransactionException> から派生した例外がスローされる原因となったトランザクションに、分散トランザクション識別子を含めることができるようになりました。 これを行うには、次のキーを app.config ファイルの `appSettings` セクションに追加します。
-
-    ```xml
-    <add key="Transactions:IncludeDistributedTransactionIdInExceptionMessage" value="true"/>
-    ```
-
-     既定値は `false` です。
-
-- **ネットワーク**
-
-    - **ソケットの再利用**
-
-         Windows 10 には、送信 TCP 接続のローカル ポートを再利用してコンピューターのリソースを効率的に使用する新しいスケーラビリティの高いネットワーク アルゴリズムが含まれています。 .NET Framework 4.6 では、この新しいアルゴリズムがサポートされ、.NET アプリで新しい動作を利用できます。 以前のバージョンの Windows では、人工的なコンカレント接続の制限 (通常は動的なポート範囲の既定のサイズである 16,384) があったため、負荷がかかったときにポートが使い尽くされ、サービスのスケーラビリティが制限されることがありました。
-
-         .NET Framework 4.6 では、ポートの再利用を有効にする次の 2 つの新しい API が追加され、コンカレント接続に対する 64K の制限が実質的になくなりました。
-
-        - <xref:System.Net.Sockets.SocketOptionName?displayProperty=nameWithType> 列挙型値。
-
-        - <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType> プロパティ。
-
-         既定では、`HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319` レジストリ キーの `HWRPortReuseOnSocketBind` の値が 0x1 に設定されないかぎり、<xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType> プロパティは `false` になります。 HTTP 接続でのローカル ポートの再利用を有効にするには、<xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType> プロパティを `true` に設定します。 これにより、<xref:System.Net.Http.HttpClient> および <xref:System.Net.HttpWebRequest> からの外向きのすべての TCP ソケット接続で Windows 10 の新しいソケット オプション [SO_REUSE_UNICASTPORT](/windows/desktop/WinSock/sol-socket-socket-options) が使用されるようになるため、ローカル ポートの再利用が可能になります。
-
-         ソケット専用のアプリケーションを作成する開発者は、<xref:System.Net.Sockets.Socket.SetSocketOption%2A?displayProperty=nameWithType> などのメソッドを呼び出すときに <xref:System.Net.Sockets.SocketOptionName?displayProperty=nameWithType> オプションを指定することにより、送信ソケットでバインド中にローカル ポートを再利用できるようになります。
-
-    - **国際ドメイン名と PunyCode のサポート**
-
-         <xref:System.Uri> クラスに新しいプロパティ <xref:System.Uri.IdnHost%2A> が追加され、国際ドメイン名と PunyCode のサポートが強化されました。
-
-- **Windows フォーム コントロールでのサイズ変更**
-
-     この機能が .NET Framework 4.6 にも拡張されました。<xref:System.Windows.Forms.DomainUpDown>、<xref:System.Windows.Forms.NumericUpDown>、<xref:System.Windows.Forms.DataGridViewComboBoxColumn>、<xref:System.Windows.Forms.DataGridViewColumn>、<xref:System.Windows.Forms.ToolStripSplitButton> 型、および <xref:System.Drawing.Design.UITypeEditor> を描画するときに使用する <xref:System.Drawing.Design.PaintValueEventArgs.Bounds%2A> プロパティで指定される四角形も含まれるようになりました。
-
-     これはオプトイン機能です。 この機能を有効にするには、アプリケーション構成 (app.config) ファイルで `EnableWindowsFormsHighDpiAutoResizing` 要素を `true` に設定します。
+    非同期モデル バインドは、`aspnet:EnableAsyncModelBinding` 構成設定によって制御されます。
 
     ```xml
     <appSettings>
-       <add key="EnableWindowsFormsHighDpiAutoResizing" value="true" />
+        <add key=" aspnet:EnableAsyncModelBinding" value="true|false" />
     </appSettings>
     ```
 
+    .NET Framework 4.6 を対象とするアプリでは、既定で `true` になります。 .NET Framework 4.6 で実行され、.NET Framework の以前のバージョンを対象とするアプリでは、既定で `false` になります。 有効にするには、この構成設定を `true` に設定します。
+
+  - **HTTP/2 のサポート (Windows 10)**
+
+    [HTTP/2](https://www.wikipedia.org/wiki/HTTP/2) は HTTP プロトコルの新しいバージョンで、接続の使用状況が (クライアントとサーバー間のラウンド トリップ数の減少により) 大幅に改善されて、ユーザーが Web ページを読み込むときの遅延が軽減されています。  このプロトコルは単一のエクスペリエンスの一部として要求さる複数の成果物のために最適化されているので、HTTP/2 が最も役立つのは (サービスではなく) web ページです。 .NET Framework 4.6 では、HTTP/2 のサポートが ASP.NET に追加されました。 ネットワーク機能は複数のレイヤーで存在するので、HTTP/2 を有効にするために、Windows、IIS、および ASP.NET で新機能が必要とされていました。 ASP.NET で HTTP/2 を使用するには、Windows 10 を実行している必要があります。
+
+    HTTP/2 は、<xref:System.Net.Http.HttpClient?displayProperty=nameWithType> API を使用する Windows 10 ユニバーサル Windows プラットフォーム (UWP) アプリでもサポートされ、既定で有効になります。
+
+    ASP.NET アプリケーションで [PUSH_PROMISE](https://http2.github.io/http2-spec/#PUSH_PROMISE) 機能を使用する手段を提供するために、<xref:System.Web.HttpResponse.PushPromise%28System.String%29> と <xref:System.Web.HttpResponse.PushPromise%28System.String%2CSystem.String%2CSystem.Collections.Specialized.NameValueCollection%29> の 2 つのオーバーロードを持つ新しいメソッドが <xref:System.Web.HttpResponse> クラスに追加されました。
+
+    > [!NOTE]
+    > ASP.NET Core では HTTP/2 がサポートされますが、PUSH PROMISE 機能のサポートはまだ追加されていません。
+
+    ブラウザーと web サーバー (Windows 上の IIS) がすべての処理を実行します。 ユーザーの側で複雑な操作を実行する必要はありません。
+
+    [主要なブラウザーのほとんどは HTTP/2 をサポートしている](https://www.wikipedia.org/wiki/HTTP/2)ため、多くの場合、サーバーが HTTP/2 をサポートしていれば、ユーザーもそのメリットを得ることができます。
+
+  - **トークン バインディング プロトコルのサポート**
+
+    Microsoft と Google は、[トークン バインディング プロトコル](https://github.com/TokenBinding/Internet-Drafts)と呼ばれる、認証のための新しいアプローチに共同で取り組んできました。 この前提となっているのは、犯罪者が (ブラウザー キャッシュ内の) 認証トークンを盗用することで、本来ならパスワードや他の特別な情報でセキュリティ保護されているリソース (銀行口座など) にアクセスできる可能性がある、ということです。 新しいプロトコルは、この問題を軽減することを目指しています。
+
+    トークン バインディング プロトコルは、Windows 10 でブラウザーの機能として実装されます。 ASP.NET アプリは、認証トークンの正当性が検証されるように、このプロトコルに参加します。 クライアントとサーバーの実装は、プロトコルによって指定されるエンド ツー エンドの保護を確立します。
+
+  - **ランダムな文字列のハッシュ アルゴリズム**
+
+    .NET Framework 4.5 で、[ランダム化された文字列のハッシュ アルゴリズム](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)が導入されました。 しかし、ASP.NET の一部の機能は安定したハッシュ コードに依存していたため、この機能は ASP.NET ではサポートされませんでした。 .NET Framework 4.6 では、ランダムな文字列のハッシュ アルゴリズムがサポートされるようになりました。 この機能を有効にするには、`aspnet:UseRandomizedStringHashAlgorithm` 構成設定を使用します。
+
+    ```xml
+    <appSettings>
+        <add key="aspnet:UseRandomizedStringHashAlgorithm" value="true|false" />
+    </appSettings>
+    ```
+
+- **ADO.NET**
+
+  ADO .NET では、SQL Server 2016 Community Technology Preview 2 (CTP2) で使用できる Always Encrypted 機能がサポートされました。 SQL Server は、Always Encrypted 機能を使用して、暗号化されたデータに対して操作を実行できます。特に、サーバー上ではなく、ユーザーが信頼している環境内にアプリケーションと共に暗号化キーを保存できるようになりました。 Always Encrypted でユーザー データが保護されるので、DBA はプレーン テキスト データにアクセスできません。 データの暗号化と復号化は、ドライバー レベルで透過的に行われるので、既存のアプリケーションに対する変更が最小限に抑えられます。 詳細については、「[Always Encrypted (データベース エンジン)](/sql/relational-databases/security/encryption/always-encrypted-database-engine)」および「[Always Encrypted (クライアント開発)](/sql/relational-databases/security/encryption/always-encrypted-client-development)」を参照してください。
+
+- **マネージド コードの JIT コンパイラ (64 ビット)**
+
+  .NET Framework 4.6 の特徴の 1 つとして、新しいバージョンの 64 ビット JIT コンパイラ (RyuJIT というコードネームで呼ばれていたもの) があります。 この新しい 64 ビット コンパイラは、これまでの 64 ビット JIT コンパイラよりもパフォーマンスが大幅に向上しています。 新しい 64 ビット コンパイラは、.NET Framework 4.6 上で実行される 64 ビット プロセスで有効になります。 64 ビットまたは AnyCPU としてコンパイルされ、64 ビット オペレーティング システム上で実行されるアプリは、64 ビットで動作します。 新しいコンパイラへの移行をできる限り透過的に行うように注意を払いましたが、動作の変更が発生する可能性があります。 新しい JIT コンパイラの使用中に発生した問題については、直接お聞かせいただければと思います。 新しい 64 ビット JIT コンパイラに関連する可能性のある問題が発生した場合は、[Microsoft Connect](https://connect.microsoft.com/) にご連絡ください。
+
+  新しい 64 ビット JIT コンパイラには、ハードウェア SIMD アクセラレータ機能も含まれています。これを <xref:System.Numerics> 名前空間の SIMD 対応の型と組み合わせると、パフォーマンスが大幅に向上する可能性があります。
+
+- **アセンブリ ローダーの改善**
+
+  アセンブリ ローダーで、対応する NGEN イメージの読み込み後に IL アセンブリをアンロードすることにより、メモリがより効率的に使用されるようになりました。 この変更は、仮想メモリが減少するため、特に大規模な 32 ビット アプリ (Visual Studio など) で有益であり、物理メモリの節約にもなります。
+
+- **基本クラス ライブラリの変更点**
+
+  主なシナリオを利用できるようにするため、多くの新しい API が .NET Framework 4.6 に関連して追加されました。 変更点と追加点を以下に示します。
+
+  - **IReadOnlyCollection\<T> implementations**
+
+    追加のコレクション <xref:System.Collections.Generic.IReadOnlyCollection%601> (<xref:System.Collections.Generic.Queue%601>、<xref:System.Collections.Generic.Stack%601> など) が実装されています。
+
+  - **CultureInfo.CurrentCulture と CultureInfo.CurrentUICulture**
+
+    <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> プロパティと <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> プロパティが読み取り専用ではなく、読み取り/書き込み可能になりました。 新しい <xref:System.Globalization.CultureInfo> オブジェクトをこれらのプロパティに割り当てると、`Thread.CurrentThread.CurrentCulture` プロパティで現在定義されているスレッド カルチャと、`Thread.CurrentThread.CurrentUICulture` プロパティで現在定義されている UI スレッド カルチャも変更されます。
+
+  - **ガベージ コレクション (GC) の機能強化**
+
+    <xref:System.GC> クラスに <xref:System.GC.TryStartNoGCRegion%2A> メソッドと <xref:System.GC.EndNoGCRegion%2A> メソッドが含まれるようになりました。これらのメソッドを使用するとクリティカル パスの実行中にガベージ コレクションを不許可にできます。
+
+    <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%2CSystem.Boolean%29?displayProperty=nameWithType> メソッドの新しいオーバーロードを使用して、小さなオブジェクト ヒープと大きなオブジェクト ヒープの両方に関して、スイープして圧縮するのか、スイープのみを行うのかを制御できます。
+
+  - **SIMD が有効な型**
+
+    <xref:System.Numerics> 名前空間には、<xref:System.Numerics.Matrix3x2>、<xref:System.Numerics.Matrix4x4>、<xref:System.Numerics.Plane>、<xref:System.Numerics.Quaternion>、<xref:System.Numerics.Vector2>、<xref:System.Numerics.Vector3>、<xref:System.Numerics.Vector4> など、いくつかの SIMD 対応の型が含まれるようになりました。
+
+    新しい 64 ビット JIT コンパイラにはハードウェア SIMD アクセラレータ機能も含まれているため、新しい 64 ビット JIT コンパイラで SIMD 対応の型を使用すると、パフォーマンスが大幅に向上します。
+
+  - **暗号の更新**
+
+    <xref:System.Security.Cryptography?displayProperty=nameWithType> API は、[Windows CNG 暗号化 API](/windows/desktop/SecCNG/cng-reference) をサポートするために更新中です。 以前のバージョンの .NET Framework は、<xref:System.Security.Cryptography?displayProperty=nameWithType> の実装の基礎として、[それより前のバージョンの Windows 暗号化 API](/windows/desktop/SecCrypto/cryptography-portal) に完全に依存していました。 CNG API は特定のカテゴリのアプリにとって重要な[最新の暗号アルゴリズム](/windows/desktop/SecCNG/cng-features#suite-b-support)をサポートするものであるため、CNG API をサポートしてほしいというリクエストが寄せられていました。
+
+    .NET Framework 4.6 には、Windows CNG 暗号化 API をサポートするために、次の新しい機能強化が含まれています。
+
+    - 可能な場合に CAPI ベースの実装ではなく CNG ベースの実装を返す X509 証明書用の一連の拡張メソッド `System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)` および `System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)` (一部のスマート カードなどでは現在も CAPI が必要であり、API がフォールバックを処理します)。
+
+    - RSA アルゴリズムの CNG 実装を提供する <xref:System.Security.Cryptography.RSACng?displayProperty=nameWithType> クラス。
+
+    - 一般的な操作でキャストを不要にする RSA API の機能強化。 たとえば、以前のバージョンの .NET Framework で <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> オブジェクトを使用してデータを暗号化するには、次のようなコードが必要です。
+
+      [!code-csharp[WhatsNew.Casting#1](~/samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#1)]
+      [!code-vb[WhatsNew.Casting#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#1)]
+
+      .NET Framework 4.6 で新しい暗号化を使用するコードは、次のように書き換えてキャストを回避することができます。
+
+      [!code-csharp[WhatsNew.Casting#2](~/samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#2)]
+      [!code-vb[WhatsNew.Casting#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#2)]
+
+  - **日付および時間と UNIX 時間の変換のサポート**
+
+    日付値および時間値と UNIX 時間の変換をサポートするため、次の新しいメソッドが <xref:System.DateTimeOffset> 構造体に追加されました。
+
+    - <xref:System.DateTimeOffset.FromUnixTimeSeconds%2A?displayProperty=nameWithType>
+
+    - <xref:System.DateTimeOffset.FromUnixTimeMilliseconds%2A?displayProperty=nameWithType>
+
+    - <xref:System.DateTimeOffset.ToUnixTimeSeconds%2A?displayProperty=nameWithType>
+
+    - <xref:System.DateTimeOffset.ToUnixTimeMilliseconds%2A?displayProperty=nameWithType>
+
+  - **互換性スイッチ**
+
+    新しい <xref:System.AppContext> クラスは、ライブラリの作成者が統一された新機能のオプトアウト メカニズムをユーザーに提供できるようにする、新しい互換性機能を追加します。 これは、オプトアウト要求を伝達するために、コンポーネント間に疎結合のコントラクトを確立します。 通常、この機能は既存の機能が変更されるときに重要となります。 それに対して、新しい機能には暗黙のオプトインが既に存在しています。
+
+    <xref:System.AppContext> によって、ライブラリは互換性スイッチを定義して公開します。また、それらに依存するコードは、それらのスイッチを設定してライブラリの動作に影響を与えることができます。 ライブラリは、既定では新しい機能を提供し、スイッチが設定されている場合のみそれを変更する (つまり以前の機能を提供する) ことができます。
+
+    アプリケーション (またはライブラリ) は、依存するライブラリが定義したスイッチの値 (常に <xref:System.Boolean> 値) を宣言できます。 スイッチは常に暗黙的に `false` です。 スイッチを `true` に設定すると、それが有効になります。 スイッチを明示的に `false` に設定すると、新しい動作が提供されます。
+
+    ```csharp
+    AppContext.SetSwitch("Switch.AmazingLib.ThrowOnException", true);
+    ```
+
+    ```vb
+    AppContext.SetSwitch("Switch.AmazingLib.ThrowOnException", True)
+    ```
+
+    ライブラリは、コンシューマーがスイッチの値を宣言したことを確認してから、それを適切に実行する必要があります。
+
+    ```csharp
+    if (!AppContext.TryGetSwitch("Switch.AmazingLib.ThrowOnException", out shouldThrow))
+    {
+        // This is the case where the switch value was not set by the application.
+        // The library can choose to get the value of shouldThrow by other means.
+        // If no overrides nor default values are specified, the value should be 'false'.
+        // A false value implies the latest behavior.
+    }
+
+    // The library can use the value of shouldThrow to throw exceptions or not.
+    if (shouldThrow)
+    {
+        // old code
+    }
+    else
+    {
+        // new code
+    }
+    ```
+
+    ```vb
+    If Not AppContext.TryGetSwitch("Switch.AmazingLib.ThrowOnException", shouldThrow) Then
+        ' This is the case where the switch value was not set by the application.
+        ' The library can choose to get the value of shouldThrow by other means.
+        ' If no overrides nor default values are specified, the value should be 'false'.
+        ' A false value implies the latest behavior.
+    End If
+
+    ' The library can use the value of shouldThrow to throw exceptions or not.
+    If shouldThrow Then
+        ' old code
+    Else
+        ' new code
+    End If
+    ```
+
+    スイッチは、ライブラリによって公開される正式なコントラクトであるため、一貫性のある形式を使用することをお勧めします。 2 つの明確な形式を次に示します。
+
+    - *Switch*.*namespace*.*switchname*
+
+    - *Switch*.*library*.*switchname*
+
+  - **タスク ベースの非同期パターン (TAP) の変更点**
+
+    .NET Framework 4.6 をターゲットとするアプリの場合、<xref:System.Threading.Tasks.Task> および <xref:System.Threading.Tasks.Task%601> オブジェクトは、呼び出し元のスレッドのカルチャと UI カルチャを継承します。 以前のバージョンの .NET Framework をターゲットするとアプリまたは特定のバージョンの .NET Framework をターゲットとしないアプリの動作には影響を及ぼしません。 詳細については、<xref:System.Globalization.CultureInfo> クラスのトピックの「カルチャとタスク ベースの非同期の操作」セクションをご覧ください。
+
+    <xref:System.Threading.AsyncLocal%601?displayProperty=nameWithType> クラスを使用すると、`async` メソッドなど、特定の非同期制御フローに対してローカルなアンビエント データを表すことができます。 これは、スレッド間でデータを保持するために使用できます。 <xref:System.Threading.AsyncLocal%601.Value%2A?displayProperty=nameWithType> プロパティの明示的な変更やスレッドでのコンテキスト変換の発生などによってアンビエント データが変更されるたびに通知されるコールバック メソッドを定義することもできます。
+
+    タスク ベースの非同期パターン (TAP) に、特定の状態で完了したタスクを返す 3 つの便利なメソッド <xref:System.Threading.Tasks.Task.CompletedTask%2A?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Task.FromCanceled%2A?displayProperty=nameWithType>、および <xref:System.Threading.Tasks.Task.FromException%2A?displayProperty=nameWithType> が追加されました。
+
+    <xref:System.IO.Pipes.NamedPipeClientStream> クラスで、新しい <xref:System.IO.Pipes.NamedPipeClientStream.ConnectAsync%2A> メソッドによる非同期通信がサポートされるようになりました。 メソッドをオーバーライドします。
+
+  - **EventSource がイベント ログへの書き込みをサポート**
+
+    コンピューター上で作成された既存の ETW セッションに加えて、<xref:System.Diagnostics.Tracing.EventSource> クラスを使用して管理または操作メッセージをイベント ログに記録できるようになりました。 以前は、この機能のために Microsoft.Diagnostics.Tracing.EventSource NuGet パッケージを使用する必要がありました。 この機能は .NET Framework 4.6 に組み込まれました。
+
+    NuGet パッケージと .NET Framework 4.6 は、どちらも次の機能によって更新されています。
+
+    - **ダイナミック イベント**
+
+      イベント メソッドを作成せずに、実行時にイベントを定義できます。
+
+    - **リッチ ペイロード**
+
+      特別な属性が指定されたクラスや配列に加えて、プリミティブ型もペイロードとして渡すことができます。
+
+    - **アクティビティの追跡**
+
+      Start イベントと Stop イベントの間のイベントに、現在アクティブなすべてのアクティビティを表す ID が付けられます。
+
+    これらの機能をサポートするため、<xref:System.Diagnostics.Tracing.EventSource> クラスにオーバーロードされた <xref:System.Diagnostics.Tracing.EventSource.Write%2A> メソッドが追加されました。
+
+- **Windows Presentation Foundation (WPF)**
+
+  - **HDPI の強化**
+
+    .NET Framework 4.6 では、WPF での HDPI サポートが強化されました。 境界があるコントロールでのクリッピングの発生を減らすため、レイアウトの丸め処理が変更されました。 既定では、<xref:System.Runtime.Versioning.TargetFrameworkAttribute> が .NET 4.6 に設定されている場合にのみ、この機能が有効になります。  以前のバージョンの Framework を対象とするアプリケーションが .NET Framework 4.6 で実行される場合は、app.config ファイルの [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) セクションに次の行を追加することで、新しい動作を選択できます。
+
+    ```xml
+    <AppContextSwitchOverrides
+    value="Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness=false"
+    />
+    ```
+
+    異なる DPI 設定を持つ (マルチ DPI セットアップの) 複数のモニターにまたがる WPF ウィンドウは、ブラック アウト領域なしで完全にレンダリングされるようになりました。 この動作の選択を解除するには、app.config ファイルの `<appSettings>` セクションに次の行を追加して、この新しい動作を無効にします。
+
+    ```xml
+    <add key="EnableMultiMonitorDisplayClipping" value="true"/>
+    ```
+
+    DPI 設定に基づいて自動的に正しいカーソルを読み込む機能のサポートが <xref:System.Windows.Input.Cursor?displayProperty=nameWithType> に追加されました。
+
+  - **タッチの改善**
+
+    タッチで予期しない動作が発生するという、お客様から報告された [Connect](https://connect.microsoft.com/VisualStudio/feedback/details/903760/) の問題が .NET Framework 4.6 で対処されました。 Windows 8.1 以降では、Windows ストア アプリケーションと WPF アプリケーションのダブルタップのしきい値が同じになりました。
+
+  - **透過的な子ウィンドウのサポート**
+
+    .NET Framework 4.6 の WPF では、Windows 8.1 以降の透過的な子ウィンドウがサポートされます。 これにより、最上位レベルのウィンドウ内に四角形でない透過的な子ウィンドウを作成できます。 この機能を有効にするには、<xref:System.Windows.Interop.HwndSourceParameters.UsesPerPixelTransparency%2A?displayProperty=nameWithType> プロパティを `true` に設定します。
+
+- **Windows Communication Foundation (WCF)**
+
+  - **SSL のサポート**
+
+    WCF で、NetTcp をトランスポート セキュリティおよびクライアント認証と共に使用する場合に、SSL のバージョンとして SSL 3.0 および TLS 1.0 に加えて TLS 1.1 および TLS 1.2 がサポートされるようになりました。 使用するプロトコルを選択することも、安全性の低い古いプロトコルを無効化することもできるようになりました。 これを行うには、<xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A> プロパティを設定するか、または構成ファイルに以下を追加します。
+
+    ```xml
+    <netTcpBinding>
+        <binding>
+          <security mode= "None|Transport|Message|TransportWithMessageCredential" >
+              <transport clientCredentialType="None|Windows|Certificate"
+                        protectionLevel="None|Sign|EncryptAndSign"
+                        sslProtocols="Ssl3|Tls1|Tls11|Tls12">
+                </transport>
+          </security>
+        </binding>
+    </netTcpBinding>
+    ```
+
+  - **異なる HTTP 接続によるメッセージの送信**
+
+    WCF で、ユーザーが別の基になる HTTP 接続を使用して特定のメッセージを送信できるようになりました。 これには、2 つの方法があります。
+
+    - **接続グループ名プレフィックスの使用**
+
+      ユーザーは、WCF で接続グループ名のプレフィックスとして使用される文字列を指定できます。 異なるプレフィックスを持つ 2 つのメッセージは、別の基になる HTTP 接続を使用して送信されます。 プレフィックスを設定するには、メッセージの <xref:System.ServiceModel.Channels.Message.Properties%2A?displayProperty=nameWithType> プロパティにキー/値のペアを追加します。 キーは "HttpTransportConnectionGroupNamePrefix" で、値は使用するプレフィックスです。
+
+    - **異なるチャネル ファクトリの使用**
+
+      ユーザーは、異なるチャネル ファクトリによって作成されたチャネルを使用して送信されるメッセージで別の基になる HTTP 接続を使用する機能を有効にすることもできます。 この機能を有効にするには、ユーザーが次の `appSetting` を `true` に設定する必要があります。
+
+      ```xml
+      <appSettings>
+          <add key="wcf:httpTransportBinding:useUniqueConnectionPoolPerFactory" value="true" />
+      </appSettings>
+      ```
+
+- **Windows Workflow Foundation (WWF)**
+
+  順序不定の操作要求がタイムアウトする前に未処理の "非プロトコル" ブックマークが存在する場合に、ワークフロー サービスが要求を保持する秒数を指定できるようになりました。 "非プロトコル" ブックマークとは、未処理の Receive アクティビティに関連付けられていないブックマークです。 一部のアクティビティはその実装内で非プロトコル ブックマークを作成するため、必ずしも非プロトコル ブックマークの存在が明らかにわかるとは限りません。 例として State や Pick などがあります。 ステート マシンを使用して実装されたワークフロー サービスや、Pick アクティビティを含むワークフロー サービスがある場合は、非プロトコル ブックマークが存在する可能性が高くなります。 この間隔を指定するには、app.config ファイルの `appSettings` セクションに次のような行を追加します。
+
+  ```xml
+  <add key="microsoft:WorkflowServices:FilterResumeTimeoutInSeconds" value="60"/>
+  ```
+
+  既定値は 60 秒です。 `value` を 0 に設定すると、順序不定の要求はただちに拒否され、次のようなテキストを含むエラーが返されます。
+
+  ```
+  Operation 'Request3|{http://tempuri.org/}IService' on service instance with identifier '2b0667b6-09c8-4093-9d02-f6c67d534292' cannot be performed at this time. Please ensure that the operations are performed in the correct order and that the binding in use provides ordered delivery guarantees.
+  ```
+
+  これは、順序不定の操作メッセージを受信し、非プロトコル ブックマークが存在しない場合に受信するメッセージと同じです。
+
+  `FilterResumeTimeoutInSeconds` 要素の値がゼロ以外で、非プロトコル ブックマークが存在し、タイムアウト間隔が終了した場合、その操作は失敗し、タイムアウト メッセージが発生します。
+
+- **トランザクション**
+
+  <xref:System.Transactions.TransactionException> から派生した例外がスローされる原因となったトランザクションに、分散トランザクション識別子を含めることができるようになりました。 これを行うには、次のキーを app.config ファイルの `appSettings` セクションに追加します。
+
+  ```xml
+  <add key="Transactions:IncludeDistributedTransactionIdInExceptionMessage" value="true"/>
+  ```
+
+  既定値は `false` です。
+
+- **ネットワーク**
+
+  - **ソケットの再利用**
+
+    Windows 10 には、送信 TCP 接続のローカル ポートを再利用してコンピューターのリソースを効率的に使用する新しいスケーラビリティの高いネットワーク アルゴリズムが含まれています。 .NET Framework 4.6 では、この新しいアルゴリズムがサポートされ、.NET アプリで新しい動作を利用できます。 以前のバージョンの Windows では、人工的なコンカレント接続の制限 (通常は動的なポート範囲の既定のサイズである 16,384) があったため、負荷がかかったときにポートが使い尽くされ、サービスのスケーラビリティが制限されることがありました。
+
+    .NET Framework 4.6 では、ポートの再利用を有効にする次の 2 つの新しい API が追加され、コンカレント接続に対する 64K の制限が実質的になくなりました。
+
+    - <xref:System.Net.Sockets.SocketOptionName?displayProperty=nameWithType> 列挙型値。
+
+    - <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType> プロパティ。
+
+    既定では、`HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319` レジストリ キーの `HWRPortReuseOnSocketBind` の値が 0x1 に設定されないかぎり、<xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType> プロパティは `false` になります。 HTTP 接続でのローカル ポートの再利用を有効にするには、<xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType> プロパティを `true` に設定します。 これにより、<xref:System.Net.Http.HttpClient> および <xref:System.Net.HttpWebRequest> からの外向きのすべての TCP ソケット接続で Windows 10 の新しいソケット オプション [SO_REUSE_UNICASTPORT](/windows/desktop/WinSock/sol-socket-socket-options) が使用されるようになるため、ローカル ポートの再利用が可能になります。
+
+    ソケット専用のアプリケーションを作成する開発者は、<xref:System.Net.Sockets.Socket.SetSocketOption%2A?displayProperty=nameWithType> などのメソッドを呼び出すときに <xref:System.Net.Sockets.SocketOptionName?displayProperty=nameWithType> オプションを指定することにより、送信ソケットでバインド中にローカル ポートを再利用できるようになります。
+
+  - **国際ドメイン名と PunyCode のサポート**
+
+    <xref:System.Uri> クラスに新しいプロパティ <xref:System.Uri.IdnHost%2A> が追加され、国際ドメイン名と PunyCode のサポートが強化されました。
+
+- **Windows フォーム コントロールでのサイズ変更**
+
+  この機能が .NET Framework 4.6 にも拡張されました。<xref:System.Windows.Forms.DomainUpDown>、<xref:System.Windows.Forms.NumericUpDown>、<xref:System.Windows.Forms.DataGridViewComboBoxColumn>、<xref:System.Windows.Forms.DataGridViewColumn>、<xref:System.Windows.Forms.ToolStripSplitButton> 型、および <xref:System.Drawing.Design.UITypeEditor> を描画するときに使用する <xref:System.Drawing.Design.PaintValueEventArgs.Bounds%2A> プロパティで指定される四角形も含まれるようになりました。
+
+  これはオプトイン機能です。 この機能を有効にするには、アプリケーション構成 (app.config) ファイルで `EnableWindowsFormsHighDpiAutoResizing` 要素を `true` に設定します。
+
+  ```xml
+  <appSettings>
+      <add key="EnableWindowsFormsHighDpiAutoResizing" value="true" />
+  </appSettings>
+  ```
+
 - **コード ページのエンコーディングのサポート**
 
-     .NET Core は、本来 Unicode エンコードをサポートし、既定ではコード ページ エンコーディングに関するサポートは限定的です。 <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> メソッドを使用してコード ページ エンコードを登録することで、.NET Framework では利用できるものの .NET Core ではサポートされていないコード ページ エンコードのサポートを追加できます。 詳細については、<xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType> を参照してください。
+  .NET Core は、本来 Unicode エンコードをサポートし、既定ではコード ページ エンコーディングに関するサポートは限定的です。 <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> メソッドを使用してコード ページ エンコードを登録することで、.NET Framework では利用できるものの .NET Core ではサポートされていないコード ページ エンコードのサポートを追加できます。 詳細については、<xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType> を参照してください。
 
 - **.NET ネイティブ**
 
-     .NET Core をターゲットとし、C# または Visual Basic で作成されている Windows 10 用の Windows アプリは、IL ではなくネイティブ コードにアプリをコンパイルする新しい技術を活用できます。 これで、起動時間と実行時間がより速いアプリを生成できます。 詳しくは、「[.NET ネイティブによるアプリのコンパイル](../net-native/index.md)」をご覧ください。 JIT コンパイルと NGEN による結果の違い、およびコードにおけるその影響の概要については、「[.NET ネイティブとコンパイル](../net-native/net-native-and-compilation.md)」をご覧ください。
+  .NET Core をターゲットとし、C# または Visual Basic で作成されている Windows 10 用の Windows アプリは、IL ではなくネイティブ コードにアプリをコンパイルする新しい技術を活用できます。 これで、起動時間と実行時間がより速いアプリを生成できます。 詳しくは、「[.NET ネイティブによるアプリのコンパイル](../net-native/index.md)」をご覧ください。 JIT コンパイルと NGEN による結果の違い、およびコードにおけるその影響の概要については、「[.NET ネイティブとコンパイル](../net-native/net-native-and-compilation.md)」をご覧ください。
 
-     ご利用のアプリは、Visual Studio 2015 以降でコンパイルするときに、既定でネイティブ コードにコンパイルされます。 詳しくは、「[.NET ネイティブの概要](../net-native/getting-started-with-net-native.md)」をご覧ください。
+  ご利用のアプリは、Visual Studio 2015 以降でコンパイルするときに、既定でネイティブ コードにコンパイルされます。 詳しくは、「[.NET ネイティブの概要](../net-native/getting-started-with-net-native.md)」をご覧ください。
 
-     .NET ネイティブ アプリのデバッグをサポートするため、アンマネージ デバッグ APIに対して数多くの新しいインターフェイスと列挙型が追加されました。 詳しくは、「[デバッグ (アンマネージ API リファレンス)](../unmanaged-api/debugging/index.md)」をご覧ください。
+  .NET ネイティブ アプリのデバッグをサポートするため、アンマネージ デバッグ APIに対して数多くの新しいインターフェイスと列挙型が追加されました。 詳しくは、「[デバッグ (アンマネージ API リファレンス)](../unmanaged-api/debugging/index.md)」をご覧ください。
 
 - **オープン ソースの .NET Framework パッケージ**
 
-     .NET Core のパッケージ (変更できないコレクションなど)、[SIMD API](https://go.microsoft.com/fwlink/?LinkID=518639)、およびネットワーク API (<xref:System.Net.Http> 名前空間に含まれるものなど) は、[GitHub](https://github.com/) でオープン ソース パッケージとして入手できるようになりました。 このコードにアクセスするには、[GitHub で CoreFx](https://github.com/dotnet/corefx) を参照してください。 これらのパッケージの詳細、および投稿方法については、「[.NET Core とオープン ソース](../get-started/net-core-and-open-source.md)」および [GitHub の .NET ホーム ページ](https://github.com/dotnet/home)を参照してください。
+  .NET Core のパッケージ (変更できないコレクションなど)、[SIMD API](https://go.microsoft.com/fwlink/?LinkID=518639)、およびネットワーク API (<xref:System.Net.Http> 名前空間に含まれるものなど) は、[GitHub](https://github.com/) でオープン ソース パッケージとして入手できるようになりました。 このコードにアクセスするには、[GitHub で CoreFx](https://github.com/dotnet/corefx) を参照してください。 これらのパッケージの詳細、および投稿方法については、「[.NET Core とオープン ソース](../get-started/net-core-and-open-source.md)」および [GitHub の .NET ホーム ページ](https://github.com/dotnet/home)を参照してください。
 
 <a name="v452" />
 
@@ -1767,78 +1768,78 @@ NGen PDB を使用すれば、IL PDB に依存することなく、NGen で IL �
 
 - **ASP.NET アプリ用の新しい API。** 新しい <xref:System.Web.HttpResponse.AddOnSendingHeaders%2A?displayProperty=nameWithType> メソッドと <xref:System.Web.HttpResponseBase.AddOnSendingHeaders%2A?displayProperty=nameWithType> メソッドにより、応答がクライアント アプリにフラッシュされる際の、応答ヘッダーと状態コードを確認および変更できます。 <xref:System.Web.HttpApplication.PreSendRequestHeaders> イベントや <xref:System.Web.HttpApplication.PreSendRequestContent> イベントの代わりに、より効率的で信頼性の高いこれらのメソッドの使用を検討してください。
 
-     <xref:System.Web.Hosting.HostingEnvironment.QueueBackgroundWorkItem%2A?displayProperty=nameWithType> メソッドにより、小さなバックグラウンド作業項目をスケジュールできます。 ASP.NET はこれらの項目を追跡し、すべてのバックグラウンド作業項目が完了するまで IIS が突然ワーカー プロセスを終了しないようにします。 このメソッドは、ASP.NET マネージド アプリ ドメインの外部で呼び出すことはできません。
+  <xref:System.Web.Hosting.HostingEnvironment.QueueBackgroundWorkItem%2A?displayProperty=nameWithType> メソッドにより、小さなバックグラウンド作業項目をスケジュールできます。 ASP.NET はこれらの項目を追跡し、すべてのバックグラウンド作業項目が完了するまで IIS が突然ワーカー プロセスを終了しないようにします。 このメソッドは、ASP.NET マネージド アプリ ドメインの外部で呼び出すことはできません。
 
-     新しい <xref:System.Web.HttpResponse.HeadersWritten?displayProperty=nameWithType> プロパティと <xref:System.Web.HttpResponseBase.HeadersWritten?displayProperty=nameWithType> プロパティは、応答ヘッダーが書き込まれたかどうかを示すブール値を返します。 これらのプロパティを使用して、<xref:System.Web.HttpResponse.StatusCode%2A?displayProperty=nameWithType> (ヘッダーが書き込まれた場合に例外をスローする) などの API への呼び出しが成功することを確認できます。
+  新しい <xref:System.Web.HttpResponse.HeadersWritten?displayProperty=nameWithType> プロパティと <xref:System.Web.HttpResponseBase.HeadersWritten?displayProperty=nameWithType> プロパティは、応答ヘッダーが書き込まれたかどうかを示すブール値を返します。 これらのプロパティを使用して、<xref:System.Web.HttpResponse.StatusCode%2A?displayProperty=nameWithType> (ヘッダーが書き込まれた場合に例外をスローする) などの API への呼び出しが成功することを確認できます。
 
 - **Windows フォーム コントロールでのサイズ変更** この機能が拡張されました。 これにより、システム DPI 設定を使用して、次の追加コントロールのコンポーネント (例: コンボ ボックスのドロップダウン矢印) をサイズ変更できます。
 
-    - <xref:System.Windows.Forms.ComboBox>
-    - <xref:System.Windows.Forms.ToolStripComboBox>
-    - <xref:System.Windows.Forms.ToolStripMenuItem>
-    - <xref:System.Windows.Forms.Cursor>
-    - <xref:System.Windows.Forms.DataGridView>
-    - <xref:System.Windows.Forms.DataGridViewComboBoxColumn>
+  - <xref:System.Windows.Forms.ComboBox>
+  - <xref:System.Windows.Forms.ToolStripComboBox>
+  - <xref:System.Windows.Forms.ToolStripMenuItem>
+  - <xref:System.Windows.Forms.Cursor>
+  - <xref:System.Windows.Forms.DataGridView>
+  - <xref:System.Windows.Forms.DataGridViewComboBoxColumn>
 
-     これはオプトイン機能です。 この機能を有効にするには、アプリケーション構成 (app.config) ファイルで `EnableWindowsFormsHighDpiAutoResizing` 要素を `true` に設定します。
+  これはオプトイン機能です。 この機能を有効にするには、アプリケーション構成 (app.config) ファイルで `EnableWindowsFormsHighDpiAutoResizing` 要素を `true` に設定します。
 
-    ```xml
-    <appSettings>
-       <add key="EnableWindowsFormsHighDpiAutoResizing" value="true" />
-    </appSettings>
-    ```
+  ```xml
+  <appSettings>
+      <add key="EnableWindowsFormsHighDpiAutoResizing" value="true" />
+  </appSettings>
+  ```
 
 - **新しいワークフロー機能。** <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> メソッドを使用している (および、結果として <xref:System.Transactions.IPromotableSinglePhaseNotification> インターフェイスを実装している) リソース マネージャーは、新しい <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=nameWithType> メソッドを使用して、次の事柄を要求できます。
 
-    - トランザクションを Microsoft 分散トランザクション コーディネーター (MSDTC) トランザクションに昇格する。
+  - トランザクションを Microsoft 分散トランザクション コーディネーター (MSDTC) トランザクションに昇格する。
 
-    - <xref:System.Transactions.IPromotableSinglePhaseNotification> を <xref:System.Transactions.ISinglePhaseNotification> (単一フェーズのコミットをサポートする永続的登録リスト) に置き換えます。
+  - <xref:System.Transactions.IPromotableSinglePhaseNotification> を <xref:System.Transactions.ISinglePhaseNotification> (単一フェーズのコミットをサポートする永続的登録リスト) に置き換えます。
 
-     これは同じアプリ ドメイン内で実行でき、MSDTC とやり取りして昇格を実行するためにアンマネージ コードを追加する必要はありません。 <xref:System.Transactions?displayProperty=nameWithType> から昇格可能な登録リストにより実装された <xref:System.Transactions.IPromotableSinglePhaseNotification>`Promote` メソッドへの未処理の呼び出しがある場合のみ、この新しいメソッドを呼び出すことができます。
+  これは同じアプリ ドメイン内で実行でき、MSDTC とやり取りして昇格を実行するためにアンマネージ コードを追加する必要はありません。 <xref:System.Transactions?displayProperty=nameWithType> から昇格可能な登録リストにより実装された <xref:System.Transactions.IPromotableSinglePhaseNotification>`Promote` メソッドへの未処理の呼び出しがある場合のみ、この新しいメソッドを呼び出すことができます。
 
 - **プロファイリングの機能強化。** 次の新しいアンマネージ プロファイリング API により、さらに信頼性の高いプロファイリングを提供します。
 
-    - [COR_PRF_ASSEMBLY_REFERENCE_INFO 構造体](../unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)
-    - [COR_PRF_HIGH_MONITOR 列挙型](../unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)
-    - [GetAssemblyReferences メソッド](../unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md)
-    - [GetEventMask2 メソッド](../unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md)
-    - [SetEventMask2 メソッド](../unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)
-    - [AddAssemblyReference メソッド](../unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-addassemblyreference-method.md)
+  - [COR_PRF_ASSEMBLY_REFERENCE_INFO 構造体](../unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)
+  - [COR_PRF_HIGH_MONITOR 列挙型](../unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)
+  - [GetAssemblyReferences メソッド](../unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md)
+  - [GetEventMask2 メソッド](../unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md)
+  - [SetEventMask2 メソッド](../unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)
+  - [AddAssemblyReference メソッド](../unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-addassemblyreference-method.md)
 
-     以前の `ICorProfiler` の実装は、依存アセンブリの遅延読み込みをサポートしていました。 新しいプロファイリング API では、プロファイラーにより挿入される依存アセンブリを、アプリの完全な初期化後に読み込むのではなく、すぐに読み込む必要があります。 この変更は、既存の `ICorProfiler` API のユーザーには影響しません。
+  以前の `ICorProfiler` の実装は、依存アセンブリの遅延読み込みをサポートしていました。 新しいプロファイリング API では、プロファイラーにより挿入される依存アセンブリを、アプリの完全な初期化後に読み込むのではなく、すぐに読み込む必要があります。 この変更は、既存の `ICorProfiler` API のユーザーには影響しません。
 
 - **デバッグの機能強化。** 次の新しいアンマネージド デバッグ API により、プロファイラーとの統合性が向上しました。 これにより、ダンプのデバッグ時にコンパイラ ReJIT 要求により作成されたローカル変数やコードだけでなく、プロファイラーにより挿入されたメタデータにアクセスできます。
 
-    - [SetWriteableMetadataUpdateMode メソッド](../unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md)
-    - [EnumerateLocalVariablesEx メソッド](../unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md)
-    - [GetLocalVariableEx メソッド](../unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md)
-    - [GetCodeEx メソッド](../unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md)
-    - [GetActiveReJitRequestILCode メソッド](../unmanaged-api/debugging/icordebugfunction3-getactiverejitrequestilcode-method.md)
-    - [GetInstrumentedILMap メソッド](../unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md)
+  - [SetWriteableMetadataUpdateMode メソッド](../unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md)
+  - [EnumerateLocalVariablesEx メソッド](../unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md)
+  - [GetLocalVariableEx メソッド](../unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md)
+  - [GetCodeEx メソッド](../unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md)
+  - [GetActiveReJitRequestILCode メソッド](../unmanaged-api/debugging/icordebugfunction3-getactiverejitrequestilcode-method.md)
+  - [GetInstrumentedILMap メソッド](../unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md)
 
 - **イベント トレーシングの変更。** .NET Framework 4.5.2 では、より大きなサーフェイス領域において、アウトプロセスの Windows イベント トレーシング (ETW) に基づくアクティビティ トレーシングができるようになりました。 これにより、アドバンスト パワー マネージメント (APM) ベンダーは、スレッドを越えた個々の要求とアクティビティのコストを正確に追跡する軽量ツールを提供できます。  これらのイベントは、ETW コントローラーで有効にされた場合にのみ発生します。したがって、変更は以前に記述された ETW コードや ETW が無効な状態で実行されるコードには影響しません。
 
 - **トランザクションの昇格と永続参加リストへの変換**
 
-     <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=nameWithType> は、.NET Framework 4.5.2 および 4.6 に追加された新しい API です。
+  <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=nameWithType> は、.NET Framework 4.5.2 および 4.6 に追加された新しい API です。
 
-    ```csharp
-    [System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name = "FullTrust")]
-    public Enlistment PromoteAndEnlistDurable(Guid resourceManagerIdentifier,
-                                              IPromotableSinglePhaseNotification promotableNotification,
-                                              ISinglePhaseNotification enlistmentNotification,
-                                              EnlistmentOptions enlistmentOptions)
-    ```
+  ```csharp
+  [System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name = "FullTrust")]
+  public Enlistment PromoteAndEnlistDurable(Guid resourceManagerIdentifier,
+                                            IPromotableSinglePhaseNotification promotableNotification,
+                                            ISinglePhaseNotification enlistmentNotification,
+                                            EnlistmentOptions enlistmentOptions)
+  ```
 
-    ```vb
-    <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name:="FullTrust")>
-    public Function PromoteAndEnlistDurable(resourceManagerIdentifier As Guid,
-                                            promotableNotification As IPromotableSinglePhaseNotification,
-                                            enlistmentNotification As ISinglePhaseNotification,
-                                            enlistmentOptions As EnlistmentOptions) As Enlistment
-    ```
+  ```vb
+  <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name:="FullTrust")>
+  public Function PromoteAndEnlistDurable(resourceManagerIdentifier As Guid,
+                                          promotableNotification As IPromotableSinglePhaseNotification,
+                                          enlistmentNotification As ISinglePhaseNotification,
+                                          enlistmentOptions As EnlistmentOptions) As Enlistment
+  ```
 
-     このメソッドは、以前に <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> メソッドへの応答として <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> によって作成された参加リストで使用できます。 これは、`System.Transactions` に対して、トランザクションを MSDTC トランザクションに昇格させ、昇格可能参加リストを永続参加リストに "変換" するように要求します。 このメソッドが正常に完了すると、<xref:System.Transactions.IPromotableSinglePhaseNotification> インターフェイスが `System.Transactions` から参照されなくなり、その後の通知は指定された <xref:System.Transactions.ISinglePhaseNotification> インターフェイスに到着します。 問題の参加リストは、永続参加リストとして機能し、トランザクションのログ記録と復旧をサポートする必要があります。 詳細については、<xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType> を参照してください。 さらに、この参加リストは <xref:System.Transactions.ISinglePhaseNotification> もサポートする必要があります。  このメソッドは、<xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> の呼び出しの処理中に*のみ*呼び出すことができます。 そうでない場合は、<xref:System.Transactions.TransactionException> 例外がスローされます。
+  このメソッドは、以前に <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> メソッドへの応答として <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> によって作成された参加リストで使用できます。 これは、`System.Transactions` に対して、トランザクションを MSDTC トランザクションに昇格させ、昇格可能参加リストを永続参加リストに "変換" するように要求します。 このメソッドが正常に完了すると、<xref:System.Transactions.IPromotableSinglePhaseNotification> インターフェイスが `System.Transactions` から参照されなくなり、その後の通知は指定された <xref:System.Transactions.ISinglePhaseNotification> インターフェイスに到着します。 問題の参加リストは、永続参加リストとして機能し、トランザクションのログ記録と復旧をサポートする必要があります。 詳細については、<xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType> を参照してください。 さらに、この参加リストは <xref:System.Transactions.ISinglePhaseNotification> もサポートする必要があります。  このメソッドは、<xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> の呼び出しの処理中に*のみ*呼び出すことができます。 そうでない場合は、<xref:System.Transactions.TransactionException> 例外がスローされます。
 
 <a name="v451" />
 
@@ -1848,15 +1849,15 @@ NGen PDB を使用すれば、IL PDB に依存することなく、NGen で IL �
 
 - [Visual Studio 2013 更新プログラム 2](https://go.microsoft.com/fwlink/p/?LinkId=393658) には、次のシナリオをサポートするポータブル クラス ライブラリ テンプレートの更新が含まれています。
 
-    - Windows 8.1、Windows Phone 8.1、および Windows Phone Silverlight 8.1 を対象とするポータブル ライブラリで Windows ランタイム API を使用できます。
+  - Windows 8.1、Windows Phone 8.1、および Windows Phone Silverlight 8.1 を対象とするポータブル ライブラリで Windows ランタイム API を使用できます。
 
-    - Windows 8.1 または Windows Phone 8.1 を対象とする場合、ポータブル ライブラリに XAML (Windows.UI.XAML 型) を含めることができます。 次の XAML テンプレートがサポートされています: 空白のページ、リソース ディクショナリ、テンプレート コントロール、およびユーザー コントロール。
+  - Windows 8.1 または Windows Phone 8.1 を対象とする場合、ポータブル ライブラリに XAML (Windows.UI.XAML 型) を含めることができます。 次の XAML テンプレートがサポートされています: 空白のページ、リソース ディクショナリ、テンプレート コントロール、およびユーザー コントロール。
 
-    - Windows 8.1 および Windows Phone 8.1 を対象とするストア アプリで使用するためにポータブル Windows ラインタイム コンポーネント (.winmd ファイル) を作成できます。
+  - Windows 8.1 および Windows Phone 8.1 を対象とするストア アプリで使用するためにポータブル Windows ラインタイム コンポーネント (.winmd ファイル) を作成できます。
 
-    - ポータブル クラス ライブラリのような Windows ストアまたは Windows Phone ストア クラス ライブラリを再ターゲットできます。
+  - ポータブル クラス ライブラリのような Windows ストアまたは Windows Phone ストア クラス ライブラリを再ターゲットできます。
 
-     これらの変更の詳細については、[ポータブル クラス ライブラリ](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)に関するページを参照してください。
+  これらの変更の詳細については、[ポータブル クラス ライブラリ](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)に関するページを参照してください。
 
 - .NET Framework のコンテンツ セットには、Windows アプリをビルドして配置するためのプリコンパイル テクノロジである .NET Native のドキュメントが含まれます。 .NET Native は、中間言語 (IL) ではなくネイティブ コードへアプリを直接コンパイルすることにより、パフォーマンスを向上させます。 詳しくは、「[.NET ネイティブによるアプリのコンパイル](../net-native/index.md)」をご覧ください。
 
@@ -1876,17 +1877,17 @@ Windows フォームの機能強化には次が含まれます。
 
 - Windows フォーム コントロールでのサイズ変更。 アプリのアプリケーション構成ファイル (app.config) 内のエントリで有効にすることにより、システム DIP 設定を使用してコントロールのコンポーネント (例: プロパティ グリッドに表示されるアイコン) をサイズ変更できます。 現在、この機能は次の Windows フォーム コントロールでサポートされています。
 
-    - <xref:System.Windows.Forms.PropertyGrid>
-    - <xref:System.Windows.Forms.TreeView>
-    - <xref:System.Windows.Forms.DataGridView> の一部 (サポートされている追加コントロールについては、「[4.5.2 の新機能](#v452)」を参照してください)
+  - <xref:System.Windows.Forms.PropertyGrid>
+  - <xref:System.Windows.Forms.TreeView>
+  - <xref:System.Windows.Forms.DataGridView> の一部 (サポートされている追加コントロールについては、「[4.5.2 の新機能](#v452)」を参照してください)
 
-     この機能を有効にするには、構成ファイル (app.config) に新しい \<appSettings> 要素を追加し、`EnableWindowsFormsHighDpiAutoResizing` 要素を `true` に設定します。
+  この機能を有効にするには、構成ファイル (app.config) に新しい \<appSettings> 要素を追加し、`EnableWindowsFormsHighDpiAutoResizing` 要素を `true` に設定します。
 
-    ```xml
-    <appSettings>
-       <add key="EnableWindowsFormsHighDpiAutoResizing" value="true" />
-    </appSettings>
-    ```
+  ```xml
+  <appSettings>
+      <add key="EnableWindowsFormsHighDpiAutoResizing" value="true" />
+  </appSettings>
+  ```
 
 Visual Studio 2013 で .NET Framework アプリをデバッグするときの改善点は次のとおりです。
 
@@ -2072,29 +2073,29 @@ ASP.NET 4.5 および 4.5.1 では、Web フォーム モデルのバインデ�
 
 - 最初に .NET Framework 4.0.1 ([.NET Framework 4 Platform Update 1](https://go.microsoft.com/fwlink/?LinkID=215092)) の一部として導入された、ステート マシンのワークフロー。 この更新プログラムには、開発者がステート マシン ワークフローを作成できるようにする新しいクラスとアクティビティが複数含まれていました。 .NET Framework 4.5 では、これらのクラスとアクティビティが、次を含むように更新されました。
 
-    - 状態でブレークポイントを設定する機能。
+  - 状態でブレークポイントを設定する機能。
 
-    - ワークフロー デザイナーで遷移をコピーして貼り付ける機能。
+  - ワークフロー デザイナーで遷移をコピーして貼り付ける機能。
 
-    - 共有されるトリガーの遷移作成のデザイナー サポート。
+  - 共有されるトリガーの遷移作成のデザイナー サポート。
 
-    - <xref:System.Activities.Statements.StateMachine>、 <xref:System.Activities.Statements.State>、および <xref:System.Activities.Statements.Transition> などのようにステート マシン ワークフローを作成する機能。
+  - <xref:System.Activities.Statements.StateMachine>、 <xref:System.Activities.Statements.State>、および <xref:System.Activities.Statements.Transition> などのようにステート マシン ワークフローを作成する機能。
 
 - 次のようなワークフロー デザイナーの機能が強化されました。
 
-    - **[クイック検索]** や **[フォルダーを指定して検索]** など、Visual Studio で強化されたワークフロー検索機能。
+  - **[クイック検索]** や **[フォルダーを指定して検索]** など、Visual Studio で強化されたワークフロー検索機能。
 
-    - 2 番目の子アクティビティがコンテナー アクティビティに追加されたときに、自動的にシーケンス アクティビティを作成し、両方のアクティビティをシーケンス アクティビティに含める機能。
+  - 2 番目の子アクティビティがコンテナー アクティビティに追加されたときに、自動的にシーケンス アクティビティを作成し、両方のアクティビティをシーケンス アクティビティに含める機能。
 
-    - スクロール バーを使用せずに変更されるワークフローの表示部分を変更できるようにするパン サポート。
+  - スクロール バーを使用せずに変更されるワークフローの表示部分を変更できるようにするパン サポート。
 
-    - ツリー スタイルのアウトライン ビューでワークフローのコンポーネントを表示し、 **[ドキュメント アウトライン]** ビューでコンポーネントを選択できるようにする新しい **[ドキュメント アウトライン]** ビュー。
+  - ツリー スタイルのアウトライン ビューでワークフローのコンポーネントを表示し、 **[ドキュメント アウトライン]** ビューでコンポーネントを選択できるようにする新しい **[ドキュメント アウトライン]** ビュー。
 
-    - アクティビティに注釈を追加できる機能。
+  - アクティビティに注釈を追加できる機能。
 
-    - ワークフロー デザイナーでアクティビティ デリゲートを定義および使用する機能。
+  - ワークフロー デザイナーでアクティビティ デリゲートを定義および使用する機能。
 
-    - ステート マシンのアクティビティと遷移、およびフローチャート ワークフローの自動接続と自動挿入。
+  - ステート マシンのアクティビティと遷移、およびフローチャート ワークフローの自動接続と自動挿入。
 
 - ワークフローのビュー状態情報を XAML ファイルの 1 つの要素に保管して、ビュー状態情報を簡単に見つけ、編集できるようにします。
 
@@ -2102,21 +2103,21 @@ ASP.NET 4.5 および 4.5.1 では、Web フォーム モデルのバインデ�
 
 - C# 式のサポート:
 
-    - Visual Basic を使用するワークフロー プロジェクトは、Visual Basic 式を使用し、C# ワークフロー プロジェクトは C# 式を使用します。
+  - Visual Basic を使用するワークフロー プロジェクトは、Visual Basic 式を使用し、C# ワークフロー プロジェクトは C# 式を使用します。
 
-    - Visual Studio 2010 で作成され、Visual Basic 式が使用されている C# ワークフロー プロジェクトは、C# 式を使用する C# ワークフロー プロジェクトと互換性があります。
+  - Visual Studio 2010 で作成され、Visual Basic 式が使用されている C# ワークフロー プロジェクトは、C# 式を使用する C# ワークフロー プロジェクトと互換性があります。
 
 - バージョン管理機能の強化
 
-    - 永続化されたワークフロー インスタンスとワークフロー定義間のマッピングを提供する新しい <xref:System.Activities.WorkflowIdentity> クラス。
+  - 永続化されたワークフロー インスタンスとワークフロー定義間のマッピングを提供する新しい <xref:System.Activities.WorkflowIdentity> クラス。
 
-    - <xref:System.ServiceModel.Activities.WorkflowServiceHost> を含む同じホスト内の複数のワークフローのバージョンの並列実行。
+  - <xref:System.ServiceModel.Activities.WorkflowServiceHost> を含む同じホスト内の複数のワークフローのバージョンの並列実行。
 
-    - 動的更新プログラムで、永続化されたワークフロー インスタンスの定義を変更する機能。
+  - 動的更新プログラムで、永続化されたワークフロー インスタンスの定義を変更する機能。
 
 - 既存のサービス コントラクトに合わせて自動的にアクティビティを生成するサポートが提供されるコントラクト優先のワークフロー サービス開発。
 
- 詳細については、「[.NET 4.5 での Windows Workflow Foundation の新機能](https://go.microsoft.com/fwlink/?LinkId=228176)」を参照してください。
+詳細については、「[.NET 4.5 での Windows Workflow Foundation の新機能](https://go.microsoft.com/fwlink/?LinkId=228176)」を参照してください。
 
 <a name="tailored" />
 

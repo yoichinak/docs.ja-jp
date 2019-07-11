@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 056d1ac0ffd3ad7fa7cb1f86ae13331ac38b3eff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ff6bde5009e834bfca156fe4d3ad16da53ded85
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775649"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742383"
 ---
 # <a name="addfile-method"></a>AddFile メソッド
 アセンブリには、ファイルを追加します。 非バインド モジュールの作成にも使用できます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT AddFile(  
     mdAssembly      AssemblyID,  
     LPCWSTR         pszFilename,  

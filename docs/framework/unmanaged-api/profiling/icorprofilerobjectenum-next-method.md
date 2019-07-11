@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 221752b537cd3a890ad646290a64a7022692f625
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c938c7c51c867d8e8d8d23390a3c16a23084fbc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597259"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775008"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a>ICorProfilerObjectEnum::Next メソッド
 列挙子の現在の位置から、オブジェクトのシーケンシャル コレクションから指定した数の隣接するオブジェクトを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Next (  
     [in] ULONG                    celt,  
     [out, size_is(celt), length_is(*pceltFetched)]    
@@ -49,7 +49,7 @@ HRESULT Next (
  [out] `objects` 配列で実際に返されるモジュールの数へのポインター。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   

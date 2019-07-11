@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ff2ddb1e98f3455c6915acf8149f528176228425
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 81fcc99a739d5e673d1d01d5efb801ba4930bdee
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765467"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752548"
 ---
 # <a name="pfnclrdatacreateinstance-function-pointer"></a>PFN_CLRDataCreateInstance 関数ポインター
 指定したターゲット項目のインターフェイス オブジェクトを作成する関数へのポインター。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef HRESULT (STDAPICALLTYPE* PFN_CLRDataCreateInstance) (  
     [in]  REFIID           iid,  
     [in]  ICLRDataTarget  *target,  
@@ -50,7 +50,7 @@ typedef HRESULT (STDAPICALLTYPE* PFN_CLRDataCreateInstance) (
  `ICLRDataTarget`オブジェクトがデバッグ アプリケーションの作成者によって実装されます。 実装は、表されるターゲット項目の種類によって異なります。 ターゲット項目には、プロセス、メモリ ダンプ、リモート コンピューター、およびなどがあります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** ClrData.idl  
   

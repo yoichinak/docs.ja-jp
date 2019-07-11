@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e201b9a350c030da59e2b6ed27f84f570c8e621
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61f4e057a487462feb385ca0e3ca977fdd165f56
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698383"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739096"
 ---
-# <a name="efngetmanagedexcepstack-function"></a>_EFN_GetManagedExcepStack 関数
+# <a name="efngetmanagedexcepstack-function"></a>\_EFN\_GetManagedExcepStack 関数
 指定したマネージド例外オブジェクトのアドレスに応じて、中に含まれているスタック トレースの文字列バージョンを返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT _EFN_GetManagedExcepStack(  
     [in]  PDEBUG_CLIENT Client,  
     [in]  ULONG64       StackObjAddr,  
@@ -54,7 +54,7 @@ HRESULT _EFN_GetManagedExcepStack(
  ないマネージ コードのスレッドで現在のコンテキストの場合、関数は、0xa0 の施設の値と 0x1000 のエラー コードをマネージを返します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** SOS_Stacktrace.h  
   

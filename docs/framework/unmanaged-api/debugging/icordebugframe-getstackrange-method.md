@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 43532888d181adcb7a7e3760f2a5e3d8f664a35c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c9f58e66286f5e3e169507efd2f87ce10e9d323b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995814"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754856"
 ---
 # <a name="icordebugframegetstackrange-method"></a>ICorDebugFrame::GetStackRange メソッド
 このスタック フレームの絶対アドレスの範囲を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetStackRange (  
     [out] CORDB_ADDRESS      *pStart,   
     [out] CORDB_ADDRESS      *pEnd  
@@ -47,7 +47,7 @@ HRESULT GetStackRange (
  スタックのアドレス範囲は、複数のデバッグ エンジンから収集されたスタック トレースをつなぎ合わせた適しています。 数値の範囲には、スタック フレームの内容に関する情報は含まれません。 スタック フレームの場所の比較だけに有効になります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

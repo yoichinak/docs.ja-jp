@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83dec9b6ed3b1e538e0f1b7d13a33b8bdbc1cf54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fcf32c4b27324ccc54eabbb248e8c9906cf693b6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777729"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782359"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps メソッド
 名前、バイナリ シグネチャ、および相対仮想アドレスを含む、指定したメンバーの定義のメタデータに格納されている情報の取得、<xref:System.Type>指定したメタデータ トークンによって参照されるメンバー。 これは単純なヘルパー メソッド: 場合*mb*は、MethodDef **GetMethodProps**が呼び出されます場合*mb*は、の FieldDef **GetFieldProps** 。呼び出されます。 他の方法の詳細を参照してください。 
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetMemberProps (  
    [in]  mdToken           mb,   
    [out] mdTypeDef         *pClass,  
@@ -88,7 +88,7 @@ HRESULT GetMemberProps (
  [out]サイズの文字で`ppValue`、または場合は 0`ppValue`文字列を保持しません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

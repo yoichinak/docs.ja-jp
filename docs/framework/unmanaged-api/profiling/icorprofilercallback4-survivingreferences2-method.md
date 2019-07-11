@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad96224daf79b17d3902217af061173580f1478a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: beb260030914de211d227342e497daa3db287c9e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597200"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758078"
 ---
 # <a name="icorprofilercallback4survivingreferences2-method"></a>ICorProfilerCallback4::SurvivingReferences2 メソッド
 非圧縮ガベージ コレクションを実行した後の、ヒープ内のオブジェクトのレイアウトを報告します。 このメソッドは、プロファイラーが実装されている場合に呼び出されますが、 [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)インターフェイス。 このコールバックが置き換えられます、 [icorprofilercallback 2::survivingreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md)メソッド、ULONG で表現できる内容を超える長さのオブジェクトの大きい範囲を報告できるためです。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SurvivingReferences2(  
     [in] ULONG  cSurvivingObjectIDRanges,  
     [in, size_is(cSurvivingObjectIDRanges)] ObjectID  
@@ -70,7 +70,7 @@ HRESULT SurvivingReferences2(
  プロファイラーでは、どちらも実装している場合、 [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)と[ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) 、インターフェイス、`SurvivingReferences2`メソッドは、前に呼び出されます、 [ICorProfilerCallback2:。SurvivingReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md)メソッドが場合にのみ、`SurvivingReferences2`正常に返されます。 プロファイラーは HRESULT を返すことがあり、これは `SurvivingReferences2` メソッドの失敗を示し、2 番目のメソッドが呼び出されません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   

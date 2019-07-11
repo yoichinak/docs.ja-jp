@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0d1b28eadc9f09abff799f99d1d6012c98b1d3dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec2c357cd56670f4f2deed8023bed7842a7f4ed7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789845"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741874"
 ---
 # <a name="getpublickeytoken-method"></a>GetPublicKeyToken メソッド
 指定したキー ファイルまたはキー コンテナーの公開キー トークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetPublicKeyToken(  
     LPCWSTR pszKeyFile,  
     LPCWSTR pszKeyContainer,  

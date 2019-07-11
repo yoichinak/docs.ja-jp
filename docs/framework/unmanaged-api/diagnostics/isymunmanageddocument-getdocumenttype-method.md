@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7694c9b736700466ac1299b9632440e133109288
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ae3575b759d8b6191f0b5e5cd557a6f6e56323fc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939894"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776738"
 ---
 # <a name="isymunmanageddocumentgetdocumenttype-method"></a>ISymUnmanagedDocument::GetDocumentType メソッド
 このドキュメントのドキュメントの種類を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetDocumentType(  
     [out, retval] GUID*  pRetVal);  
 ```  

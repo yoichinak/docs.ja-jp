@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 839b765c-3e41-44ce-bf1b-dc10453db18e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e7df65c28fad6fa79ec7a18d8511955330b2817
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a1abb7efe0f30ff14d51f9486d6d5b04d2faa053
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049350"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773750"
 ---
 # <a name="strongnamesignaturegeneration-function"></a>StrongNameSignatureGeneration 関数
 指定したアセンブリに対して厳密な名前の署名が生成されます。  
@@ -29,7 +29,7 @@ ms.locfileid: "62049350"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 BOOLEAN StrongNameSignatureGeneration (   
     [in]  LPCWSTR   wszFilePath,  
     [in]  LPCWSTR   wszKeyContainer,  
@@ -78,7 +78,7 @@ BOOLEAN StrongNameSignatureGeneration (
  場合、`StrongNameSignatureGeneration`関数が正常に完了、呼び出すしていない、 [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)最後に生成されたエラーを取得します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** StrongName.h  
   

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a95008d98436161ac919ef307273bc797519f15
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3490477f30cd1c0badaa9cfd71433a5bf9d7a99
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698344"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738997"
 ---
-# <a name="efngetmanagedobjectname-function"></a>_EFN_GetManagedObjectName 関数
+# <a name="efngetmanagedobjectname-function"></a>\_EFN\_GetManagedObjectName 関数
 指定されたマネージ オブジェクトへのポインターを使用して型の名前を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT _EFN_GetManagedObjectName(  
     [in]  PDEBUG_CLIENT  Client,  
     [in]  ULONG64        objAddr,  
@@ -54,7 +54,7 @@ HRESULT _EFN_GetManagedObjectName(
  ないマネージ コードのスレッドで現在のコンテキストの場合、関数は、0xa0 の施設の値と 0x1000 のエラー コードをマネージを返します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** SOS_Stacktrace.h  
   

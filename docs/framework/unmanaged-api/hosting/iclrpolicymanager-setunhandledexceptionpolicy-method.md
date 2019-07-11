@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f988084310b920907bb7f212e7d40ca0d1c91db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab00ccd85481f1c6d37e1132e0ecab5e0e86be90
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638542"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768875"
 ---
 # <a name="iclrpolicymanagersetunhandledexceptionpolicy-method"></a>ICLRPolicyManager::SetUnhandledExceptionPolicy メソッド
 ハンドルされない例外が発生したときに、共通言語ランタイム (CLR) の動作を指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetUnhandledExceptionPolicy (  
     [in] EClrUnhandledExceptionPolicy policy  
 );  
@@ -54,7 +54,7 @@ HRESULT SetUnhandledExceptionPolicy (
  既定では、CLR は、すべてのハンドルされない例外、最後のハンドラーであり、その既定の動作はプロセスを破棄です。 ホストは設定してこの動作を変更することができます、 `policy` eHostDeterminedPolicy する値。 CLR の以前のバージョンと同じように、この値により、独自の既定の動作を実装するためにホストします。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

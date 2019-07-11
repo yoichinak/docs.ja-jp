@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 032c1e3dcfe50cd30953ca581ff9f0d83b78518d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 64de770676cdd02375e854acb8af7feecb28dfeb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995866"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754113"
 ---
 # <a name="icordebugframegetchain-method"></a>ICorDebugFrame::GetChain メソッド
 このフレームの一部であるチェーンにポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetChain (  
     [out] ICorDebugChain     **ppChain  
 );  
@@ -40,7 +40,7 @@ HRESULT GetChain (
  [out]このフレームを含むチェーンを表す ICorDebugChain オブジェクトのアドレスへのポインター。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 156c16f73916d2b4efa1c1b3541a772fb43dd470
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f50e5fcee3705e05aeed820cf736613c12b00e50
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988768"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754874"
 ---
 # <a name="icordebugframegetfunctiontoken-method"></a>ICorDebugFrame::GetFunctionToken メソッド
 このスタック フレームに関連付けられているコードを含む関数のメタデータ トークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetFunctionToken (  
     [out] mdMethodDef        *pToken  
 );  
@@ -40,7 +40,7 @@ HRESULT GetFunctionToken (
  [out]ポインター、`mdMethodDef`関数のメタデータを参照するトークン。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

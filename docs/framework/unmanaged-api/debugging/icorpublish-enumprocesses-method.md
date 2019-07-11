@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb4096b0ae083e0b6c0598ea18cc8b33c2fdfe3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1804a14c1197148afbffb5ec2cb4f29cb9ff019e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993604"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774558"
 ---
 # <a name="icorpublishenumprocesses-method"></a>ICorPublish::EnumProcesses メソッド
 このコンピューターで実行されている管理対象プロセスの列挙子を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EnumProcesses (  
     [in] COR_PUB_ENUMPROCESS       Type,  
     [out] ICorPublishProcessEnum   **ppIEnum  
@@ -49,7 +49,7 @@ HRESULT EnumProcesses (
  `EnumProcesses`このメソッドを複数回呼び出すことが[ICorPublish](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)プロセスの新しい最新の状態のコレクションを作成するインスタンス。 後続の呼び出しの既存のコレクションを受けませんが、`EnumProcesses`メソッド。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorPub.idl, CorPub.h  
   

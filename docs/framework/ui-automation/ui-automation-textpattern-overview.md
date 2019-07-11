@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
-ms.openlocfilehash: d35e5b5127f335eac04caa8ee95749f45cb870bf
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: c7b30a854667a122ff30ec4a8e4855902489087f
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674004"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660776"
 ---
 # <a name="ui-automation-textpattern-overview"></a>UI オートメーション TextPattern の概要
 
@@ -41,7 +41,7 @@ ms.locfileid: "57674004"
 
 ## <a name="control-types"></a>コントロールの種類
 
-#### <a name="text"></a>テキスト
+### <a name="text"></a>テキスト
 
 テキスト コントロールは、画面上のテキストの一部を表す基本要素です。
 
@@ -50,14 +50,14 @@ ms.locfileid: "57674004"
 > [!NOTE]
 > テキスト コントロールは、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコンテンツ ビューに表示されないことがあります (「 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)」をご覧ください)。 これは、テキスト コントロールが別のコントロールの Name プロパティを通じて表示されることがよくあるためです。 たとえば、エディット コントロールのラベルに使用するテキストは、エディット コントロールの Name プロパティを通じて公開されます。 エディット コントロールが [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコンテンツ ビューに存在するので、テキスト要素自体は [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーの対象のビューに存在する必要はありません。 コンテンツ ビューに表示されるテキストは、冗長な情報ではないテキストのみです。 これにより、支援テクノロジは、ユーザーが必要とする情報のみをすばやくフィルター処理できるようになります。
 
-#### <a name="edit"></a>編集
+### <a name="edit"></a>編集
 
 エディット コントロールを使用すると、ユーザーは 1 行のテキストを表示および編集できます。
 
 > [!NOTE]
 > 1 行のテキストは、特定のレイアウトのシナリオでは折り返すことができます。
 
-#### <a name="document"></a>ドキュメント
+### <a name="document"></a>ドキュメント
 
 ドキュメント コントロールを使用すると、ユーザーは複数のページのテキストに移動して、そこから情報を取得できます。
 
@@ -93,8 +93,10 @@ ms.locfileid: "57674004"
 |`System.Windows.Automation.TextPatternIdentifiers Class`|テキスト プロバイダーの識別子として使用される値が含まれています ( <xref:System.Windows.Automation.TextPatternIdentifiers>を参照してください)。|
 
 <a name="Security"></a>
+
 ## <a name="security"></a>セキュリティ
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]アーキテクチャは、セキュリティを考慮して設計されました (を参照してください[UI Automation Security Overview](../../../docs/framework/ui-automation/ui-automation-security-overview.md))。 ただし、この概要で説明する TextPattern クラスにはいくつか特定のセキュリティの考慮事項が必要です。
+
+[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]アーキテクチャは、セキュリティを考慮して設計されました (を参照してください[UI Automation Security Overview](../../../docs/framework/ui-automation/ui-automation-security-overview.md))。 ただし、この概要で説明する TextPattern クラスにはいくつか特定のセキュリティの考慮事項が必要です。
 
 - [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] テキスト プロバイダーは、読み取り専用のインターフェイスを提供しますが、コントロールにある既存のテキストを変更する機能はありません。
 
@@ -104,9 +106,9 @@ ms.locfileid: "57674004"
 
 - [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] のセキュリティにおける最も重要な変更の 1 つは、「セキュリティで保護された入力」と広く言われるものです。これは、最小特権 (または制限付き) ユーザー アカウント (LUA) と UI 特権レベルの分離 (UIPI) などのテクノロジを包含しています。
 
-    - UIPI は、プログラムが他のより「特権が高い」プログラムを制御または監視できないようにすることで、ユーザー入力になりすましたプロセス間のウィンドウ メッセージ攻撃を防ぎます。
+  - UIPI は、プログラムが他のより「特権が高い」プログラムを制御または監視できないようにすることで、ユーザー入力になりすましたプロセス間のウィンドウ メッセージ攻撃を防ぎます。
 
-    - LUA は、管理者グループのユーザーが実行しているアプリケーションの特権に制限を設定します。 アプリケーションには必ずしも管理者特権は必要なく、代わりに必要最小限の特権で実行します。 その結果、LUA シナリオに制限が適用される可能性があります。 最も顕著な文字列の切り捨て (TextPattern 文字列など) では、管理者レベルのアプリケーションから取得される文字列のサイズを制限する必要があることがあります。そうすることで、これらのアプリケーションは、アプリケーションを無効にするポイントまで強制的にメモリを割り当てられずに済みます。
+  - LUA は、管理者グループのユーザーが実行しているアプリケーションの特権に制限を設定します。 アプリケーションには必ずしも管理者特権は必要なく、代わりに必要最小限の特権で実行します。 その結果、LUA シナリオに制限が適用される可能性があります。 最も顕著な文字列の切り捨て (TextPattern 文字列など) では、管理者レベルのアプリケーションから取得される文字列のサイズを制限する必要があることがあります。そうすることで、これらのアプリケーションは、アプリケーションを無効にするポイントまで強制的にメモリを割り当てられずに済みます。
 
 <a name="Performance"></a>
 
@@ -120,19 +122,25 @@ TextPattern はその機能のほとんどでプロセス間の呼び出しに�
 
 ## <a name="textpattern-terminology"></a>TextPattern 用語集
 
-**属性**テキスト範囲の書式設定特性 (たとえば、<xref:System.Windows.Automation.TextPattern.IsItalicAttribute>または<xref:System.Windows.Automation.TextPattern.FontNameAttribute>)。
+**属性**\
+テキスト範囲の書式設定特性 ( <xref:System.Windows.Automation.TextPattern.IsItalicAttribute> または <xref:System.Windows.Automation.TextPattern.FontNameAttribute>など)。
 
-**低次元テキスト範囲**低次元テキスト範囲は空または 0 文字のテキストの範囲です。 TextPattern コントロール パターンの目的から、テキスト挿入ポイント (またはシステム キャレット) は低次元テキスト範囲と見なされます。 テキストが選択されていない場合、 <xref:System.Windows.Automation.TextPattern.GetSelection%2A> は、テキスト挿入ポイントで低次元テキスト範囲を返し、 <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> は、開始エンドポイントとして低次元テキスト範囲を返します。 テキスト プロバイダーで指定された条件に一致するテキスト範囲が見つからない場合、<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> および <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> は低次元テキスト範囲を返す可能性があります。 この低次元テキスト範囲は、テキスト プロバイダー内の開始エンドポイントとして使用できます。 <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A> <xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A> null 参照を返します (`Nothing` Microsoft Visual Basic .net) を検出した範囲低次元テキスト範囲と混同しないようにします。
+**低次元テキスト範囲**\
+低次元テキスト範囲は、空または 0 文字のテキスト範囲です。 TextPattern コントロール パターンの目的から、テキスト挿入ポイント (またはシステム キャレット) は低次元テキスト範囲と見なされます。 テキストが選択されていない場合、 <xref:System.Windows.Automation.TextPattern.GetSelection%2A> は、テキスト挿入ポイントで低次元テキスト範囲を返し、 <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> は、開始エンドポイントとして低次元テキスト範囲を返します。 テキスト プロバイダーで指定された条件に一致するテキスト範囲が見つからない場合、<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> および <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> は低次元テキスト範囲を返す可能性があります。 この低次元テキスト範囲は、テキスト プロバイダー内の開始エンドポイントとして使用できます。 <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A> <xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A> null 参照を返します (`Nothing` Microsoft Visual Basic .net) を検出した範囲低次元テキスト範囲と混同しないようにします。
 
-**埋め込みオブジェクト**内の埋め込みオブジェクトの 2 種類があります、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]テキスト モデル。 これらは、ハイパーリンクやテーブルなどのテキスト ベースのコンテンツ要素、およびイメージとボタンなどのコントロール要素で構成しています。 詳しくは、「 [Access Embedded Objects Using UI Automation](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)」をご覧ください。
+**埋め込みオブジェクト**\
+[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] テキスト モデルには、2 種類の埋め込みオブジェクトがあります。 これらは、ハイパーリンクやテーブルなどのテキスト ベースのコンテンツ要素、およびイメージとボタンなどのコントロール要素で構成しています。 詳しくは、「 [Access Embedded Objects Using UI Automation](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)」をご覧ください。
 
-**エンドポイント**絶対<xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start>または<xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End>テキスト コンテナー内のテキスト範囲のポイント。
+**エンドポイント**\
+テキスト コンテナー内のテキスト範囲の <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> または <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> の絶対ポイント。
 
 ![TextPatternRangeEndpoints&#40;の先頭し、末尾&#41;します。](../../../docs/framework/ui-automation/media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints")次は、始点と終点のセットを示します。
 
-**TextRange**の始点と終点、関連付けられているすべての属性と機能を含むテキスト コンテナー内のテキストの範囲を表したものです。
+**TextRange**\
+関連するすべての属性と機能を含むテキスト コンテナーの始点と終点で、テキストの範囲を表したもの。
 
-<xref:System.Windows.Automation.Text.TextUnit> テキスト範囲の論理セグメントを介して移動するために使用されるテキスト (文字、単語、行、または段落) の定義済みの単位。
+<xref:System.Windows.Automation.Text.TextUnit>\
+テキストの範囲の論理セグメントを介して移動するために使用するテキストの定義済みの単位 (文字、単語、行、または段落) 。
 
 ## <a name="see-also"></a>関連項目
 

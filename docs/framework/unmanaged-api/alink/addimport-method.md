@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bbe8a43f44d59249abc713c95fce31f1fb9a5993
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 31dec878c92e2e2196ab2d586a78578b7244a41a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775636"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742240"
 ---
 # <a name="addimport-method"></a>AddImport メソッド
 アセンブリにインポートを追加します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT AddImport(  
     mdAssembly      AssemblyID,  
     mdToken         ImportToken,  

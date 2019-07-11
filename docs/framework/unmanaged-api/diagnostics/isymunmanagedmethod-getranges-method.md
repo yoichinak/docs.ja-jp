@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 94ca1db2bf85f42117f686a8cb483907003927c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef5a98d510eee8942a2cad0525b6902e3e4eaa52
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939595"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769388"
 ---
 # <a name="isymunmanagedmethodgetranges-method"></a>ISymUnmanagedMethod::GetRanges メソッド
 指定されたドキュメント内の位置には、Microsoft intermediate language (MSIL をこのメソッド内の位置に含まれる) の範囲に先頭と末尾オフセットのペアの対応する配列を返します。 配列は整数の配列であり [開始、終了、開始、終了] の形式です。 範囲のペアの数は、2 で割った値の配列の長さです。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetRanges(  
     [in]  ISymUnmanagedDocument* document,  
     [in]  ULONG32                line,  

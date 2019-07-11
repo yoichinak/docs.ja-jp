@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed13f78d5a1f6d54b12c86613715f4878a521bfa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fdf3998d7430348cb71af8e7dd75cf2203d380ce
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993968"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769035"
 ---
 # <a name="icordebugthread2getactivefunctions-method"></a>ICorDebugThread2::GetActiveFunctions メソッド
 このスレッドのフレームのそれぞれに、アクティブな関数についての情報を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetActiveFunctions (  
     [in]   ULONG32             cFunctions,  
     [out]  ULONG32             *pcFunctions,  
@@ -56,7 +56,7 @@ HRESULT GetActiveFunctions (
  `GetActiveFunctions`メソッドは、最適化として、スタック トレース内のフレームから同じ情報の取得をありありました ICorDebugILFrame オブジェクトに完全なスタック トレース フレームのみが含まれています。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

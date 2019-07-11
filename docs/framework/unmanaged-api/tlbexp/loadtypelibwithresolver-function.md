@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51d7cd273aa7a8799a1aac90d828ec81a7670906
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5d2f5ad2afb2e73acead82369782f142aa10aac3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603264"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782704"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver 関数
 タイプ ライブラリを読み込み、指定された使用[ITypeLibResolver インターフェイス](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)任意の内部で参照されるタイプ ライブラリを解決します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT LoadTypeLibWithResolver(  
     [in]  LPCOLESTR           szFile,  
     [in]  REGKIND             regkind,  
@@ -85,7 +85,7 @@ HRESULT LoadTypeLibWithResolver(
  呼び出す場合`LoadTypeLibWithResolver`を直接指定する必要あります独自[ITypeLibResolver インターフェイス](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)実装します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** TlbRef.h  
   

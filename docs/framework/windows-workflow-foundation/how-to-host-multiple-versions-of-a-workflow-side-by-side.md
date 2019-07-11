@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 061a8c7b73903b763de27e614e9b3067777afe58
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 85792aea8a72ffc0c9b579473332756c6ca3bb47
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64756029"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663838"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>方法: ワークフローの複数のバージョンを同時にホストする
 
@@ -27,11 +27,11 @@ ms.locfileid: "64756029"
 
 - [ワークフローを更新するには](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)
 
-    - [ステート マシン ワークフローを更新するには](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)
+  - [ステート マシン ワークフローを更新するには](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)
 
-    - [フローチャート ワークフローを更新するには](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)
+  - [フローチャート ワークフローを更新するには](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)
 
-    - [シーケンシャル ワークフローを更新するには](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)
+  - [シーケンシャル ワークフローを更新するには](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)
 
 - [ワークフローの以前のバージョンを含める WorkflowVersionMap を更新します。](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)
 
@@ -68,7 +68,7 @@ ms.locfileid: "64756029"
 
 ### <a name="BKMK_UpdateWorkflows"></a> ワークフローを更新するには
 
- ここでは、ワークフロー定義が更新されます。 ユーザーの推定値についてフィードバックを返す 2 つの `WriteLine` アクティビティが更新され、新しい `WriteLine` アクティビティが追加されます。新しいアクティビティは、数値が推定されるとゲームに関する追加情報を提供します。
+ここでは、ワークフロー定義が更新されます。 ユーザーの推定値についてフィードバックを返す 2 つの `WriteLine` アクティビティが更新され、新しい `WriteLine` アクティビティが追加されます。新しいアクティビティは、数値が推定されるとゲームに関する追加情報を提供します。
 
 #### <a name="BKMK_UpdateStateMachine"></a> ステート マシン ワークフローを更新するには
 

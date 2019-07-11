@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b05f5a3f29c7b72ed83c1456175f68ef9b986e3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 59328c8b7e86694610de20ade72a98a4280b439d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987189"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762622"
 ---
 # <a name="icordebugthreadgetactivechain-method"></a>ICorDebugThread::GetActiveChain メソッド
 ICorDebugThread オブジェクトでアクティブな (最新) スタック チェーンへのインターフェイス ポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetActiveChain (  
     [out] ICorDebugChain **ppChain  
 );  
@@ -43,7 +43,7 @@ HRESULT GetActiveChain (
  `ppChain`パラメーターが現在アクティブなスタック チェーンがない場合は null です。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b63b283a28ed27a70698c45bdc87d63fef0daf8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 88b7b2093ecb2c601e57eca32e25c21e91641281
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61696939"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753475"
 ---
 # <a name="ihostsyncmanagercreatecrst-method"></a>IHostSyncManager::CreateCrst メソッド
 同期のためのクリティカル セクション オブジェクトを作成します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CreateCrst (  
     [out] IHostCrst** ppCrst  
 );  
@@ -55,7 +55,7 @@ HRESULT CreateCrst (
  クリティカル セクション オブジェクトは、クリティカル セクションを 1 つのプロセスのスレッドでのみ使用できますが、ミュー テックス オブジェクトによって提供されるような同期を提供します。 `CreateCrst` Win32 をミラー化`InitializeCriticalSection`関数。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

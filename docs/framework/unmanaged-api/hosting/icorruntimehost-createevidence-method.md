@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca54f779d257314b843838d90ca9996f1eb3237b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e3b17ca32051cd5fc0673ef26124b855a66f9785
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936904"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779983"
 ---
 # <a name="icorruntimehostcreateevidence-method"></a>ICorRuntimeHost::CreateEvidence メソッド
 型のインターフェイス ポインターを取得<xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>、ホストに渡すセキュリティ証拠を作成することができます、 [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md)または[CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md)メソッド。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CreateEvidence (  
     [out] IUnknown** pEvidence  
 );  
@@ -52,7 +52,7 @@ HRESULT CreateEvidence (
  このメソッドは、ネイティブ コードから設定することはできません、空のコレクションを返します。 使用する必要があります、<xref:System.Security.Policy.Evidence>メソッド代わりにします。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

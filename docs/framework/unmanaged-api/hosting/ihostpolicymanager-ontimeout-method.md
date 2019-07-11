@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad1a9bc6b2e5c84f15cf0cf706504f18341f8584
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 75e6ff3b2b7c8f4b8611630092203aace0ce3136
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984348"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781016"
 ---
 # <a name="ihostpolicymanagerontimeout-method"></a>IHostPolicyManager::OnTimeout メソッド
 共通言語ランタイム (CLR) はへの呼び出しで指定されたアクションを実行するホストに通知します、 [iclrpolicymanager::setactionontimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactionontimeout-method.md)タイムアウトへの応答方法。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT OnTimeout (  
     [in] EClrOperation  operation,   
     [in] EPolicyAction  action  
@@ -55,7 +55,7 @@ HRESULT OnTimeout (
 |E_FAIL|不明な致命的なエラーが発生しました。 メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。 メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

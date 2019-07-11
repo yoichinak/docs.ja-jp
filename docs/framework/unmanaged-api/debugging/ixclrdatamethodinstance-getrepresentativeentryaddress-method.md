@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 6f204e2ed9cb1409d53432355467bb11946f8809
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c79e916a06e796fc87b57eb949cccda77b8a9bd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775533"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744665"
 ---
 # <a name="ixclrdatamethodinstancegetrepresentativeentryaddress-method"></a>IXCLRDataMethodInstance::GetRepresentativeEntryAddress メソッド
 
@@ -30,7 +30,7 @@ ms.locfileid: "61775533"
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 HRESULT GetRepresentativeEntryAddress(
     [out] CLRDATA_ADDRESS* addr
 );
@@ -47,7 +47,7 @@ HRESULT GetRepresentativeEntryAddress(
 
 ## <a name="requirements"></a>必要条件
 
-**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
 **ヘッダー:** なし  
 **ライブラリ:** なし  
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  

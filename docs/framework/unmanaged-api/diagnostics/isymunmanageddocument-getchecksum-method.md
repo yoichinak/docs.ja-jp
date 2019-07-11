@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a60bf279c143559e7410d8dfd8213d3da1d05a6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b34f985f199542612bcdb9b30ebae28649438e1b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939907"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776768"
 ---
 # <a name="isymunmanageddocumentgetchecksum-method"></a>ISymUnmanagedDocument::GetCheckSum メソッド
 チェックサムを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetCheckSum(  
     [in]  ULONG32  cData,  
     [out] ULONG32  *pcData,  

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a1b189b79a02f04b7f795ff2524441f12b053cec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 45089d1b64264e000c07603808f0c5fb1263b042
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984634"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776574"
 ---
 # <a name="iclrmetahost-interface"></a>ICLRMetaHost インターフェイス
 そのバージョン番号に基づく共通言語ランタイム (CLR) の特定のバージョンを返す、インストールされている Clr のすべてを一覧表示、指定されたプロセスに読み込まれるすべてのランタイムの一覧で、アセンブリをコンパイル、プロセスを終了するために使用する CLR のバージョンを検出するメソッドを提供します。ランタイムがクリーン シャット ダウンとクエリのレガシ API バインドします。  
@@ -41,14 +41,14 @@ ms.locfileid: "61984634"
 ## <a name="remarks"></a>Remarks  
  このインターフェイスのインスタンスを取得する唯一の方法は、呼び出すことによって、 [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)関数の次のようにします。  
   
-```  
+```cpp  
 ICLRMetaHost *pMetaHost = NULL;  
 HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHost,  
                    IID_ICLRMetaHost, (LPVOID*)&pMetaHost);  
 ```  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MetaHost.h  
   

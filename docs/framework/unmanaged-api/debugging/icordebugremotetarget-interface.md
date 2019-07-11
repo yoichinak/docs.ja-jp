@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae31506d4ba34bf262f49bc2321c6cfcd30f1b60
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4e2e6a4624403dcab30bdb7b6d3af0226204cac0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782695"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744644"
 ---
 # <a name="icordebugremotetarget-interface"></a>ICorDebugRemoteTarget インターフェイス
 開発者が共通言語ランタイム (CLR: Common Language Runtime) 環境で Silverlight ベース アプリケーションをデバッグできるようにするメソッドを提供します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 interface ICorDebugRemoteTarget  : IUnknown  
 {  
     HRESULT GetHostName (  
@@ -51,7 +51,7 @@ interface ICorDebugRemoteTarget  : IUnknown
  Windows 95、Windows 98、Windows ME、または x86 以外のプラットフォーム (IA-64、AMD64 など) では、混合モード (つまり、マネージド コードとネイティブ コード) デバッグはサポートされていません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl  
   

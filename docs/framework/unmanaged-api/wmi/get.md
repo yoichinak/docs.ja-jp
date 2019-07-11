@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8a1942f903b1c7c15e58077e35b6a72a86a9419
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c1f838c26d45c0f3cfbd50ac0ce02d234b82ddae
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636526"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746658"
 ---
 # <a name="get-function"></a>Get 関数
 
@@ -31,7 +31,7 @@ ms.locfileid: "65636526"
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 HRESULT Get (
    [in] int               vFunc, 
    [in] IWbemClassObject* ptr, 
@@ -94,7 +94,7 @@ HRESULT Get (
 
 ## <a name="requirements"></a>必要条件
 
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
 
  **ヘッダー:** WMINet_Utils.idl
 

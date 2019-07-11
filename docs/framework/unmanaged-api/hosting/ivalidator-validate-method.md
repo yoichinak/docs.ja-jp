@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1fba06360a0c31e0a7fa3e61de9793bad14650fa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 840a3779ca5692787c2c352db60a29d6a4d4ba4f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765298"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768593"
 ---
 # <a name="ivalidatorvalidate-method"></a>IValidator::Validate メソッド
 指定したポータブル実行可能 (PE) または Microsoft intermediate language (MSIL) ファイルを検証します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Validate (  
     [in] IVEHandler            *veh,  
     [in] IUnknown              *pAppDomain,  
@@ -68,7 +68,7 @@ HRESULT Validate (
  [in]検証するファイルのバイト単位のサイズ。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** IValidator.idl, IValidator.h  
   

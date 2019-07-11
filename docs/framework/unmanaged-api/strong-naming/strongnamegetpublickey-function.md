@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0e38a85b688d66e9f44bd8026bb4c9e141a6eb7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f6e9e5c199ad437290d7bf19d65b5f29a0abed5e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000338"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780111"
 ---
 # <a name="strongnamegetpublickey-function"></a>StrongNameGetPublicKey 関数
 秘密/公開キーの組から公開キーが取得されます。 暗号化サービス プロバイダー (CSP) 内のキー コンテナー名、またはバイトの生のコレクションとして、キーのペアを指定できます。  
@@ -31,7 +31,7 @@ ms.locfileid: "62000338"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 BOOLEAN StrongNameGetPublicKey (   
     [in]  LPCWSTR   szKeyContainer,  
     [in]  BYTE      *pbKeyBlob,  
@@ -70,7 +70,7 @@ BOOLEAN StrongNameGetPublicKey (
  場合、`StrongNameGetPublicKey`関数が正常に完了、呼び出すしていない、 [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)最後に生成されたエラーを取得します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** StrongName.h  
   

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0fc3329d8b6d49c2924c991e4d606a437eff9d2d
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: b6916c223aee615fad0bb9e5a47691122db41c98
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268009"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752058"
 ---
 # <a name="corprfmonitor-enumeration"></a>COR_PRF_MONITOR 列挙型
 プロファイラーがサブスクライブしようとする動作、機能、またはイベントの指定で使用する値を含めます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum {  
     COR_PRF_MONITOR_NONE                = 0x00000000,  
     COR_PRF_MONITOR_FUNCTION_UNLOADS    = 0x00000001,  
@@ -153,8 +153,8 @@ typedef enum {
 |`COR_PRF_ENABLE_FRAME_INFO`|正確な取得できるように`ClassID`ジェネリック関数を呼び出して、 [GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)メソッドを`COR_PRF_FRAME_INFO`によって返される値、 [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)コールバック。|  
 |`COR_PRF_ENABLE_FUNCTION_ARGS`|により引数のトレースを使用して、 [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)コールバックまたは[FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)コールバックと[GetFunctionEnter3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md)メソッド。|  
 |`COR_PRF_ENABLE_FUNCTION_RETVAL`|戻り値を使用してトレースを有効、 [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)コールバックまたは[FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)コールバックと[GetFunctionLeave3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md)メソッド。|  
-|`COR_PRF_ENABLE_INPROC_DEBUGGING`|非推奨。<br /><br /> プロセス中のデバッグはサポートされていません。 このフラグは無効です。|  
-|`COR_PRF_ENABLE_JIT_MAPS`|非推奨。<br /><br /> により、プロファイラーを使用して IL からネイティブへのマップを取得する[GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)します。 .NET Framework 2.0 以降、ランタイムは常に IL-to-native マップを追跡するため、このフラグは常に設定されていると見なされます。|  
+|`COR_PRF_ENABLE_INPROC_DEBUGGING`|使用しないでください。<br /><br /> プロセス中のデバッグはサポートされていません。 このフラグは無効です。|  
+|`COR_PRF_ENABLE_JIT_MAPS`|使用しないでください。<br /><br /> により、プロファイラーを使用して IL からネイティブへのマップを取得する[GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)します。 .NET Framework 2.0 以降、ランタイムは常に IL-to-native マップを追跡するため、このフラグは常に設定されていると見なされます。|  
 |`COR_PRF_ENABLE_OBJECT_ALLOCATED`|プロファイラーがオブジェクトの割り当て通知を必要とする可能性があることをランタイムに通知します。 このフラグは、初期化中に設定する必要があります。 これにより、プロファイラーを使用して、その後、`COR_PRF_MONITOR_OBJECT_ALLOCATED`フラグを受け取る[ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md)コールバック。|  
 |`COR_PRF_ENABLE_REJIT`|呼び出しを有効に、 [RequestReJIT](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-requestrejit-method.md)と[RequestRevert](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-requestrevert-method.md)メソッド。 プロファイラーは起動時にこのフラグを設定する必要があります。  プロファイラーがこのフラグを設定する場合は、`COR_PRF_DISABLE_ALL_NGEN_IMAGES` も指定する必要があります。|  
 |`COR_PRF_ENABLE_STACK_SNAPSHOT`|呼び出しを有効に、 [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)メソッド。|  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0625dc72d44485dbb69b42cba5387085d1862bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bc0fc18e31b89b22ffd30d99a8b079ed7b87fa1b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986532"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752504"
 ---
 # <a name="stacktracesimplecontext-structure"></a>StackTrace_SimpleContext 構造体
 完全な `CONTEXT` 構造の代わりに使用できる単純なコンテキストを提供します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 struct StackTrace_SimpleContext  
 {  
     ULONG64 StackOffset;       // ESP on x86  
@@ -50,7 +50,7 @@ struct StackTrace_SimpleContext
  使用できます必要に応じてスタック トレース関数は、通常、アドレス、フレームのオフセット、およびスタック アドレスのみを返す必要があります、ため、`SimpleContext`構造ではなく、大規模な`CONTEXT`構造体。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** SOS_Stacktrace.h  
   

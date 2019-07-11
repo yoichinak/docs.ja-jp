@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31ff2c62810061cd8b774e934167a5ee3acf040c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 177bd67e9f177296cf436e3c2537b95b30e34e87
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645078"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766883"
 ---
 # <a name="imetadatavalidatevalidatorinit-method"></a>IMetaDataValidate::ValidatorInit メソッド
 現在のメタデータ スコープ内にあるモジュールの種類を指定するフラグを設定し、指定されたコールバック メソッドを検証エラー用に登録します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ValidatorInit (  
    [in] DWORD       dwModuleType,  
    [in] IUnknown    *pUnk  
@@ -44,7 +44,7 @@ HRESULT ValidatorInit (
  [in]ポインター、 [IUnknown](/cpp/atl/iunknown)検証エラーのコールバックで関数として機能するインスタンス。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

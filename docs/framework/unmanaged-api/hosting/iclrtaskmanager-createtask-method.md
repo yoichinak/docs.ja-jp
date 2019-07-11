@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8833daa9cd385a1a76c5b706f15a76bb15139b84
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 804a295cf74067eb23ed8e8c860252a1f2fcf5d5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763439"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770192"
 ---
 # <a name="iclrtaskmanagercreatetask-method"></a>ICLRTaskManager::CreateTask メソッド
 共通言語ランタイム (CLR) が新しいタスクを作成することを明示的に要求します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CreateTask (  
     [out] ICLRTask **pTask  
 );  
@@ -60,7 +60,7 @@ HRESULT CreateTask (
 >  新しいタスクが中断状態に返され、ホストを明示的に呼び出すまで、中断されたまま[ihosttask::start](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md)します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

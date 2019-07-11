@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ac3165ab17eb1b4bc55a4bee4d2d2b467f8aefe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 58f148eb4c3206ba12eed41df670846d7beab77a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987403"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771639"
 ---
 # <a name="icordebugstepperenumnext-method"></a>ICorDebugStepperEnum::Next メソッド
 現在の位置から始まり、列挙体から ICorDebugStepper インスタンスの指定した数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Next(  
     [in] ULONG  celt,  
     [out, size_is(celt), length_is(*pceltFetched)]  
@@ -49,7 +49,7 @@ HRESULT Next(
  [out]数へのポインター`ICorDebugStepper`インスタンスが実際に返されます。 この値は null になる場合`celt`は 1 つです。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

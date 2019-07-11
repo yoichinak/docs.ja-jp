@@ -12,12 +12,12 @@ helpviewer_keywords:
 - inference [Visual Basic]
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
-ms.openlocfilehash: e6214938262b987a1bae4a9ca1d5c945f8b7fe6e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 786466cb0b94a96e629a1f173388ed7d40be7256
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052587"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661916"
 ---
 # <a name="local-type-inference-visual-basic"></a>ローカル型の推論 (Visual Basic)
 Visual Basic コンパイラを使用して*型推論*なしで宣言されたローカル変数のデータの種類を決定する、`As`句。 コンパイラでは、初期化式の型から変数の型を推測します。 これにより、次の例に示すように、型を明示的に指定せず変数を宣言することができます。 宣言では、結果として両方`num1`と`num2`整数として厳密に型指定します。  
@@ -65,7 +65,7 @@ Visual Basic コンパイラを使用して*型推論*なしで宣言された�
   
  `Option Infer Off`  
   
- 値を指定しない場合`Option Infer`コンパイラの既定値は、コードで、`Option Infer On`します。 アップグレードされたプロジェクトの[!INCLUDE[vb_orcas_long](~/includes/vb-orcas-long-md.md)]コンパイラの既定値は、前に、または`Option Infer Off`します。  
+ 値を指定しない場合`Option Infer`コンパイラの既定値は、コードで、`Option Infer On`します。 
   
  ファイルの `Option Infer` に設定した値が IDE またはコマンド ラインに設定した値と競合した場合は、ファイルの値が優先されます。  
   

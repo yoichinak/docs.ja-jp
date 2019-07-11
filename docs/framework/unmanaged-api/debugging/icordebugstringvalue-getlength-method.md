@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b168673e76beddd8ae0479b8daae009c5f057b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b13fe65f892a222abb126aa9237b802507738b7f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987377"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771609"
 ---
 # <a name="icordebugstringvaluegetlength-method"></a>ICorDebugStringValue::GetLength メソッド
 この ICorDebugStringValue によって参照される文字列の文字数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetLength (  
     [out] ULONG32   *pcchString  
 );  
@@ -40,7 +40,7 @@ HRESULT GetLength (
  [out]これによって参照される文字列の長さを指定する値へのポインター`ICorDebugStringValue`オブジェクト。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

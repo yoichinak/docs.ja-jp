@@ -14,12 +14,12 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: 258adc45fc6874cca5829479eef1196ebea1e300
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 41355dbadd566648b45d825cdd6515bfc6d411aa
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347973"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610035"
 ---
 # <a name="-and--operators-c-reference"></a>+ および += 演算子 (C# リファレンス)
 
@@ -71,7 +71,7 @@ x = x + y
 
 ## <a name="operator-overloadability"></a>演算子のオーバーロード可/不可
 
-ユーザー定義型は `+` 演算子を[オーバーロード](../keywords/operator.md)できます。 2 項 `+` 演算子をオーバーロードすると、`+=` 演算子も暗黙的にオーバーロードされます。 ユーザー定義型では、`+=` 演算子を明示的にオーバーロードできません。
+ユーザー定義型は `+` 演算子を[オーバーロード](operator-overloading.md)できます。 2 項 `+` 演算子をオーバーロードすると、`+=` 演算子も暗黙的にオーバーロードされます。 ユーザー定義型では、`+=` 演算子を明示的にオーバーロードできません。
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 

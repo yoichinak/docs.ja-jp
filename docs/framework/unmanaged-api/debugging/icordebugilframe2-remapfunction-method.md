@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fbec4a4ba05a7e6d50f9740582415219eafb1e57
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bdcc2eccbb24a92643415db8e5d267033ac1ca0a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621464"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758750"
 ---
 # <a name="icordebugilframe2remapfunction-method"></a>ICorDebugILFrame2::RemapFunction メソッド
 新しい Microsoft intermediate language (MSIL) オフセットを指定することで編集された関数を再マップします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT RemapFunction (  
     [in] ULONG32      newILOffset  
 );  
@@ -54,7 +54,7 @@ HRESULT RemapFunction (
 - コードの実行のための停止中に、 [icordebugmanagedcallback::editandcontinueremap](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md)このフレームのイベント。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

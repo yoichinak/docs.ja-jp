@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 76100116f2ca3a9b9a99477ca2352d5fa1335ab2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4cfdaeb1bc298c10cbae01c946ffb867cef21d17
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645683"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737551"
 ---
 # <a name="icordebugarrayvaluegetelementatposition-method"></a>ICorDebugArrayValue::GetElementAtPosition メソッド
 0 から始まる 1 次元の配列として、配列を扱う方法の指定された位置に要素を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetElementAtPosition (  
     [in]  ULONG32          nPosition,  
     [out] ICorDebugValue   **ppValue  
@@ -47,7 +47,7 @@ HRESULT GetElementAtPosition (
  多次元配列のレイアウトでは、C++ スタイルの配列のレイアウトに従います。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

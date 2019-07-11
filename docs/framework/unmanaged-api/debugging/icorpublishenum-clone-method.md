@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0ce1d8c0074f62d35e16465b368269e233a713b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d672cf2375a5354c48608b3e4156867ba406992a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993526"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765017"
 ---
 # <a name="icorpublishenumclone-method"></a>ICorPublishEnum::Clone メソッド
 このコピーを作成します[ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Clone (  
     [out] ICorPublishEnum   **ppEnum  
 );  
@@ -40,7 +40,7 @@ HRESULT Clone (
  [out]アドレスへのポインター、`ICorPublishEnum`オブジェクトのこのコピーである`ICorPublishEnum`オブジェクト。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorPub.idl, CorPub.h  
   

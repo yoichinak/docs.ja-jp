@@ -9,15 +9,15 @@ helpviewer_keywords:
 - clipping regions defined [WPF]
 - hit-test objects [WPF]
 ms.assetid: 47ad531d-a4da-4e99-b12e-1de710c32493
-ms.openlocfilehash: 57e32d3e56c3f319f7ee8aa58020d37e46a6454d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e98575b2569ebc20a5421de54bc13fb14cb3cdac
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762265"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663142"
 ---
 # <a name="geometries"></a>ジオメトリ
-<xref:System.Windows.Media.Geometry> 表示するために使用される、汎用的なクラスは、[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]グラフィックス、ヒット テスト オブジェクト、およびクリッピング領域を定義  
+<xref:System.Windows.Media.Geometry> 汎用的なクラスで、2 D グラフィックスのレンダリング、ヒット テスト オブジェクト、およびクリッピング領域を定義するために使用  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [パス マークアップ構文](path-markup-syntax.md)  

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - Video How tos, Visual Basic
 ms.assetid: 0f53a553-efd6-466d-80bf-6b679e5cd174
-ms.openlocfilehash: 775c40cbb62272f913297d5a58914a0c82c5a7d7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 850e20fe8b5b6bfd392c80c87950a81a1a8a5c24
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780836"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755202"
 ---
 # <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>方法: オブジェクト初期化子 (Visual Basic) を使用してオブジェクトを宣言します。
 オブジェクト初期化子を使用すると、宣言および 1 つのステートメント内のクラスのインスタンスをインスタンス化できます。 さらに、パラメーター化されたコンス トラクターを呼び出さずに、同時インスタンスの 1 つまたは複数のメンバーを初期化できます。  
   
- 名前付きの型のインスタンスを作成する、オブジェクト初期化子を使用すると、指定した順序で指定されたメンバーの初期化後に、クラスの既定のコンス トラクターが呼び出されます。  
+ 名前付きの型のインスタンスを作成する、オブジェクト初期化子を使用すると、指定した順序で指定されたメンバーの初期化後に、クラスのパラメーターなしのコンス トラクターが呼び出されます。  
   
  インスタンスを作成する方法は、次の手順を`Student`3 つの異なる方法でクラス。 クラスには、名、姓、名、およびその他のクラスの年プロパティがあります。 新しいインスタンスを作成、3 つの宣言の各`Student`、プロパティを持つ`First`プロパティ「マイケル ・」に設定`Last`「tucker です」に設定され、その他のすべてのメンバーが既定値に設定します。 手順では、各宣言の結果は、次の例は、オブジェクト初期化子を使用しないのと同じです。  
   

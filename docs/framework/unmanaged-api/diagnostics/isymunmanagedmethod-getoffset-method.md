@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a42dc624d4de9cddebad287f6d90590f96b30272
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 62fa0969044504905d5c835f74873dc6f46cafa8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939660"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769442"
 ---
 # <a name="isymunmanagedmethodgetoffset-method"></a>ISymUnmanagedMethod::GetOffset メソッド
 ドキュメント内の位置を指定するには、対応するこのメソッド内のオフセットを返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetOffset(  
     [in]  ISymUnmanagedDocument*  document,  
     [in]  ULONG32                 line,  

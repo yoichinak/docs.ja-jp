@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a1da93ea073d6ae9f2e79f251014b2db5282a22c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f4f9ea741e545cc424dff450325c3f8d271c8554
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763790"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755578"
 ---
 # <a name="icordebugfunctionbreakpointgetfunction-method"></a>ICorDebugFunctionBreakpoint::GetFunction メソッド
 ブレークポイントが設定されている関数を参照する、ICorDebugFunction にインターフェイス ポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetFunction (  
     [out] ICorDebugFunction  **ppFunction  
 );  
@@ -40,7 +40,7 @@ HRESULT GetFunction (
  [out]ブレークポイントが設定されている関数のアドレスへのポインター。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

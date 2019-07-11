@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29c5f96bab374d6e2d43424370bff2a4a2ab6df3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ee3a0c27d350dec8e9f3e9448174d978c7d50e81
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986584"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775691"
 ---
 # <a name="icorpublishprocessismanaged-method"></a>ICorPublishProcess::IsManaged メソッド
 これによって、プロセスが参照されるかどうかを示す値を取得します[ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)コード管理されていることがわかっています。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT IsManaged (  
     [out] BOOL   *pbManaged  
 );  
@@ -43,7 +43,7 @@ HRESULT IsManaged (
  現在のバージョン以降`ICorPublishProcess`がマネージ コード、プロセスにのみアクセスできるように`IsManaged`は常に返します`true`します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorPub.idl, CorPub.h  
   

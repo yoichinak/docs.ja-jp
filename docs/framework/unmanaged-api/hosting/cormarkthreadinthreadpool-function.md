@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0200ad36490efc546daebfa93904676b0af7684
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 3da22faa5e8863275cdfa8d03b980a5cbb55e87d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490531"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758349"
 ---
 # <a name="cormarkthreadinthreadpool-function"></a>CorMarkThreadInThreadPool 関数
 現在実行されているスレッド プールのスレッドに、マネージド コードの実行のマークを付けます。 .NET Framework Version 2.0 以降では、この関数に効力はありません。 必ずしも必要はありませんが、この関数はコードから削除できます。 この関数は、.NET Framework 4 では非推奨とされます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void CorMarkThreadInThreadPool ();  
 ```  
   

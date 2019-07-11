@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1036d6080bf17eea288724c7980ce53dfa2121f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 994f6668de3040cc9f2381356d6db06c18c9e984
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905672"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745885"
 ---
 # <a name="iceegentruncatesection-method"></a>ICeeGen::TruncateSection メソッド
 指定された長さでは、指定したコードのセクションを切り捨てます。  
@@ -31,7 +31,7 @@ ms.locfileid: "61905672"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT TruncateSection (  
     [in]  HCEESECTION     section,  
     [in]  ULONG           len  
@@ -49,7 +49,7 @@ HRESULT TruncateSection (
  呼び出す`TruncateSection`別の方法で処理されない特別なセクションの要件がある場合にのみです。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

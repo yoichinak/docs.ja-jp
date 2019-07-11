@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73a4a8a2fc737bbf4b49ca859f0549ca7efd54a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a839eb2edd36dc726c819a819fd4d427fbaea40
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701282"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740998"
 ---
 # <a name="clrdatacreateinstance-function"></a>CLRDataCreateInstance 関数
 指定したターゲット項目のインターフェイス オブジェクトを作成します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CLRDataCreateInstance (  
     [in]  REFIID           iid,   
     [in]  ICLRDataTarget  *target,   
@@ -51,7 +51,7 @@ HRESULT CLRDataCreateInstance (
  `ICLRDataTarget`オブジェクトがデバッグ アプリケーションの作成者によって実装されます。 実装は、表されるターゲット項目の種類によって異なります。 ターゲット項目には、プロセス、メモリ ダンプ、リモート コンピューター、およびなどがあります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** ClrData.idl  
   

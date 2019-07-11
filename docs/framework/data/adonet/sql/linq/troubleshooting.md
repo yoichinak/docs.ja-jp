@@ -2,12 +2,12 @@
 title: トラブルシューティング
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: 8b34336871d599b72e548e2db90487c17377ba66
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 697432dce5f7698a8b4eabde3586bb4f77fd62de
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307204"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742752"
 ---
 # <a name="troubleshooting"></a>トラブルシューティング
 ここでは、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] アプリケーションで発生する可能性のある問題をいくつか示し、そうした問題を回避または影響を軽減するための提案を示します。  
@@ -26,7 +26,7 @@ ms.locfileid: "67307204"
  入力ファイル名を指定するには、その名前をコマンド ラインに入力ファイルとして追加します。 ( **/conn** オプションを使用して) 接続文字列にファイル名を含める操作は、サポートされていません。 詳しくは、「[SqlMetal.exe (コード生成ツール)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)」をご覧ください。  
   
 ## <a name="class-library-projects"></a>クラス ライブラリ プロジェクト  
- [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]は、プロジェクトの `app.config` ファイルの中に接続文字列を作成します。 クラス ライブラリ プロジェクトでは `app.config` ファイルが使用されません。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、デザイン時のファイルで提供される接続文字列を使用します。 `app.config` 内の値を変更しても、アプリケーションの接続先データベースは変更されません。  
+ オブジェクト リレーショナル デザイナー内の接続文字列を作成し、`app.config`プロジェクトのファイル。 クラス ライブラリ プロジェクトでは `app.config` ファイルが使用されません。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、デザイン時のファイルで提供される接続文字列を使用します。 `app.config` 内の値を変更しても、アプリケーションの接続先データベースは変更されません。  
   
 ## <a name="cascade-delete"></a>連鎖削除  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は連鎖削除操作をサポートせず、認識もしません。 制約を持つテーブルの行を削除するには、次のいずれかを行う必要があります。  
@@ -57,7 +57,7 @@ ms.locfileid: "67307204"
 ## <a name="skip-and-take-exceptions-in-sql-server-2000"></a>SQL Server 2000 の Skip 例外と Take 例外  
  SQL Server 2000 データベースに対して <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A> または <xref:System.Linq.Queryable.Take%2A> を使用する際には、ID メンバー (<xref:System.Linq.Queryable.Skip%2A>) を使用する必要があります。 クエリは、(結合ではなく) 1 つのテーブルに対して実行されるか、<xref:System.Linq.Queryable.Distinct%2A>、<xref:System.Linq.Queryable.Except%2A>、<xref:System.Linq.Queryable.Intersect%2A>、または <xref:System.Linq.Queryable.Union%2A> 操作である必要があります。さらに、クエリに <xref:System.Linq.Queryable.Concat%2A> 操作を含めることはできません。 詳細については、「SQL Server 2000 のサポート」セクションを参照してください。[標準クエリ演算子の変換](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)します。  
   
- この要件は [!INCLUDE[sqprsqlong](../../../../../../includes/sqprsqlong-md.md)] には適用されません。  
+ この要件は、SQL Server 2005 には適用されません。  
   
 ## <a name="groupby-invalidoperationexception"></a>GroupBy InvalidOperationException  
  この例外は、たとえば <xref:System.Linq.Enumerable.GroupBy%2A> のように、`boolean` 式でグループ分けする `group x by (Phone==@phone)` クエリ内の列値が null である場合にスローされます。 式が `boolean` であるため、キーは `boolean` `nullable` ではなく、`boolean` と推論されます。 変換された比較で null が生成される場合、`nullable` `boolean` を `boolean` に割り当てようとして、例外がスローされます。  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b2244ec1be6fc0e5e19fac5adc7ecb38d68a0af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b8b871377db6da95a3d824461671241d7b163f5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987988"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746257"
 ---
 # <a name="icordebugnativeframegetlocalmemoryregistervalue-method"></a>ICorDebugNativeFrame::GetLocalMemoryRegisterValue メソッド
 引数またはうち下位ワードと上位ワードそれぞれで格納されるメモリの場所と指定されたレジスタ、このネイティブ フレームに、ローカル変数の値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetLocalMemoryRegisterValue (  
     [in] CORDB_ADDRESS      highWordAddress,  
     [in] CorDebugRegister   lowWordRegister,  
@@ -56,7 +56,7 @@ HRESULT GetLocalMemoryRegisterValue (
  [out]指定した登録とメモリの場所に格納されている取得した値を表す"ICorDebugValue"オブジェクトのアドレスへのポインター。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

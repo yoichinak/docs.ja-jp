@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5df5bed730211676acc4770c91cc6551bde0179b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6d78208c180638e9048ae39664b8ce8f57be90da
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645335"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745164"
 ---
 # <a name="icordebugbreakpointisactive-method"></a>ICorDebugBreakpoint::IsActive メソッド
 示す値を取得するかどうかこの`ICorDebugBreakpoint`がアクティブです。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT IsActive (  
     [out] BOOL *pbActive  
 );  
@@ -40,7 +40,7 @@ HRESULT IsActive (
  [out]`true`このブレークポイントがアクティブな。 それ以外の場合`false`します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 679afd7b1053043a7cc43304a544a516024a4696
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 78a99132b1d4e0c61041bba3fe064c61c4722f19
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663789"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775671"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegeneration-method"></a>ICLRStrongName::StrongNameSignatureGeneration メソッド
 指定したアセンブリに対して厳密な名前の署名が生成されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT StrongNameSignatureGeneration (   
     [in]  LPCWSTR   wszFilePath,  
     [in]  LPCWSTR   wszKeyContainer,  
@@ -76,7 +76,7 @@ HRESULT StrongNameSignatureGeneration (
  署名は、ファイルに直接格納または呼び出し元に返されます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MetaHost.h  
   

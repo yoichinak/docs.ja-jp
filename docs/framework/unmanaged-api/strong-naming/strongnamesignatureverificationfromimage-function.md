@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9eef4e1b1c9c82d8576c01dd124ee9ac68c2583
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df2eb9d454f2037ef5f2a09d1309d52a8365e715
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610040"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782683"
 ---
 # <a name="strongnamesignatureverificationfromimage-function"></a>StrongNameSignatureVerificationFromImage 関数
 メモリに既にマップされているアセンブリが、関連付けられている公開キーに対して有効であるかどうかが確認されます。  
@@ -30,7 +30,7 @@ ms.locfileid: "64610040"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 BOOLEAN StrongNameSignatureVerificationFromImage (  
     [in]  BYTE    *pbBase,  
     [in]  DWORD   dwLength,  
@@ -73,7 +73,7 @@ BOOLEAN StrongNameSignatureVerificationFromImage (
  場合、`StrongNameSignatureVerificationFromImage`関数が正常に完了、呼び出すしていない、 [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)最後に生成されたエラーを取得します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** StrongName.h  
   

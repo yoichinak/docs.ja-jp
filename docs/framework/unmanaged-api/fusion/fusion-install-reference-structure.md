@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 611b4a543a1de7c6163ec45ff7f17d07726569ba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec18d5d5a6574cb0e08a6c4d6eaedcbcbf6886cd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936488"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759364"
 ---
 # <a name="fusioninstallreference-structure"></a>FUSION_INSTALL_REFERENCE 構造体
 アプリケーションがグローバル アセンブリ キャッシュにアプリケーションがインストールされているアセンブリに参照を表します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct _FUSION_INSTALL_REFERENCE_ {  
     DWORD    cbSize,  
     DWORD    dwFlags,  
@@ -49,7 +49,7 @@ typedef struct _FUSION_INSTALL_REFERENCE_ {
 |`szNonCanonicalData`|参照を追加するエンティティのみが認識する文字列。 グローバル アセンブリ キャッシュでは、この文字列が格納されますが、使用しません。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Fusion.h  
   

@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: e7733bd3-68da-47f9-82ef-477db5f2e32d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0f4a1de47670c59f2794feecd0be301a68b8724
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 15269646e967d3b260b305db5999a7b5e63be33b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613796"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736429"
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a>ICorDebugProcess6::EnableVirtualModuleSplitting メソッド
 仮想モジュール分割を有効または無効にします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EnableVirtualModuleSplitting(  
    BOOL enableSplitting  
 );  
@@ -104,7 +104,7 @@ HRESULT EnableVirtualModuleSplitting(
 |[Icordebugcode::getcode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getcode-method.md) (IL コードのみを参照する) とき|マージ前のアセンブリ イメージ内で有効な IL を返します。 具体的には、参照先の型が IL を含む仮想モジュールで定義されていない場合、インライン メタデータ トークンは正確に TypeRef または MemberRef トークンになります。 これらの TypeRef または MemberRef トークンで検索できる、 [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)の対応する仮想 ICorDebugModule オブジェクトのオブジェクト。|マージ後のアセンブリ イメージ内の IL を返します。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

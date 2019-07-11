@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c109bab2ecd14e2b698a9b24dace56e986ad5e58
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: af933be9edc0d0fe7249f33800fe259ddc779aeb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593517"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738318"
 ---
 # <a name="icordebugcanlaunchorattach-method"></a>ICorDebug::CanLaunchOrAttach メソッド
 現在コンピューターとランタイムの構成のコンテキスト内で、新しいプロセスの起動または指定した既存のプロセスにアタッチを実行するかどうかを示す HRESULT を返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CanLaunchOrAttach (  
     [in] DWORD      dwProcessId,  
     [in] BOOL       win32DebuggingEnabled  
@@ -60,7 +60,7 @@ HRESULT CanLaunchOrAttach (
  デバッグを有効に Win32 を使用して起動する Win32 デバッグを有効にアタッチまたは渡す場合`true`の`win32DebuggingEnabled`します。 によって返される HRESULT`CanLaunchOrAttach`このオプションを使用する場合に異なる場合があります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

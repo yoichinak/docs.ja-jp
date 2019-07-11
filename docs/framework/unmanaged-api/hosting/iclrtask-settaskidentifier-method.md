@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: abd8848ed54b26b66090e4865f9c3a0e5c4d20db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9fe678dbf47141c31fb0870f1364983bc2ad69fc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763504"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770409"
 ---
 # <a name="iclrtasksettaskidentifier-method"></a>ICLRTask::SetTaskIdentifier メソッド
 共通言語ランタイム (CLR) に指定した id 値を現在によって表されるタスクに関連付けるように指示します[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)インスタンス。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetTaskIdentifier (  
     [in] DWORD Asked  
 );  
@@ -54,7 +54,7 @@ HRESULT SetTaskIdentifier (
  ホストは、CLR とデバッグ環境でホストと統合できるように、タスクの識別子を関連付けることができます。 識別子には、CLR の意味はありません。 CLR に渡すデバッガー アプリケーション。 デバッガーでは、この識別子を使用して、ホストの呼び出し履歴と CLR の呼び出し履歴を関連付けるでき、統合デバッガーのユーザー インターフェイスで表示したときに、それぞれのトレース情報を有効にすることができます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

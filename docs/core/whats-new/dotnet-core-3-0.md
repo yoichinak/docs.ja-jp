@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 06/14/2019
-ms.openlocfilehash: bb100ea064585235768ecb46781eb830c7dae0c6
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: a808a35876df8d2f6cee3c240c606b7bd979e9ee
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401959"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539276"
 ---
 # <a name="whats-new-in-net-core-30-preview-6"></a>.NET Core 3.0 (Preview 6) の新機能
 
@@ -107,6 +107,15 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 単一ファイルの実行可能ファイルを発行するには、プロジェクト内またはコマンド ラインで `dotnet publish` コマンドを使用して `PublishSingleFile` を設定します。
 
+```xml
+<PropertyGroup>
+  <RuntimeIdentifier>win10-x64</RuntimeIdentifier>
+  <PublishSingleFile>true</PublishSingleFile>
+</PropertyGroup>
+```
+
+または
+
 ```console
 dotnet publish -r win10-x64 /p:PublishSingleFile=true
 ```
@@ -121,7 +130,7 @@ dotnet publish -r win10-x64 /p:PublishSingleFile=true
 
 .NET Core には、[IL リンカー](https://github.com/mono/linker) ツールを使ってアプリの IL をスキャンする設定が含まれるようになっています。 このツールでは、必要なコードが検出された後、使われていないライブラリがトリミングされます。 このツールを使うと、一部のアプリの展開サイズを大幅に削減できます。
 
-このツールを有効にするには、プロジェクトで `<PublishTrimmed>` を設定し、自己完結型アプリを発行します。
+このツールを有効にするには、プロジェクトで `<PublishTrimmed>` 設定を追加し、自己完結型アプリを発行します。
 
 ```xml
 <PropertyGroup>

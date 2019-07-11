@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8bde206d56bc7e8c930e1e428512232caccfb940
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 124921f2f99ca4d8da88cc3713624383e225a26f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586845"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781266"
 ---
 # <a name="functionleave2-function"></a>FunctionLeave2 関数
 プロファイラーに通知関数が呼び出し元に戻るには、し、スタック フレームと関数の戻り値に関する情報を提供します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void __stdcall FunctionLeave2 (  
     [in]  FunctionID                        funcId,  
     [in]  UINT_PTR                          clientData,  
@@ -70,7 +70,7 @@ void __stdcall FunctionLeave2 (
  また、`FunctionLeave2`関数を呼び出してはならないようにまたはマネージ コードにマネージ メモリの割り当て。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl  
   

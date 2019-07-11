@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 05d9eef36885aee05d88f7da994c8b168c3221b3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7d1ca8ea9d00de8a07c67977cf108c50268802e6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996308"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739361"
 ---
 # <a name="corpubpublish-coclass"></a>CorpubPublish コクラス
 アプリケーション ドメインとプロセスに関する情報を発行するためのインターフェイスを提供します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 coclass CorpubPublish {  
     [default] interface ICorPublish;  
     interface           ICorPublishProcess;  
@@ -52,7 +52,7 @@ coclass CorpubPublish {
  発行の一般的なシナリオでは、開発者は、アプリケーション ドメイン内のコンピューターで実行されているマネージ コードをデバッグする必要があります。 ホスティング環境では、プロセス内で 1 つ以上のアプリケーション ドメインが実行されている可能性があります。 開発者は、グラフィカル ユーザー インターフェイスまたはその他の手段を使用して、すべてのコンピューターで実行されているプロセスの一覧を表示して、特定のプロセスを選択したいです。 一覧には、すべてのマネージ コードを実行しているプロセス内でアプリケーション ドメインを含める必要があります。 開発者は特定のアプリケーション ドメインを識別し、そのドメインにデバッガーをアタッチします。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorPub.idl  
   

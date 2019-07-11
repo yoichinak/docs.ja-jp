@@ -18,18 +18,18 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 7d8ee9be8f399bca0aace61d344b19094c9518b0
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 0cd0a06dc919ecf11f1a3d343fe8ff023a5f8524
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401465"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609913"
 ---
 # <a name="c-operators-c-reference"></a>C# 演算子 (C# リファレンス)
 
 C# は組み込み型でサポートされている定義済みの演算子を多数提供します。 たとえば、[算術演算子](arithmetic-operators.md)は組み込み数値型のオペランドの算術演算を実行し、[ブール論理演算子](boolean-logical-operators.md)は [bool](../keywords/bool.md) オペランドの論理演算を実行します。
 
-ユーザー定義型は、その型のオペランドに対応する動作を定義する特定の演算子をオーバーロードできます。 詳細については、[operator](../keywords/operator.md) キーワードの記事を参照してください。
+ユーザー定義型は、その型のオペランドに対応する動作を定義する特定の演算子をオーバーロードできます。 詳細については、「[演算子のオーバーロード](operator-overloading.md)」を参照してください。
 
 次のセクションは、C# の演算子を優先順位の高い順に示しています。 各セクションの演算子の優先順位は同じです。
 
@@ -223,4 +223,3 @@ C# は組み込み型でサポートされている定義済みの演算子を�
 
 - [C# リファレンス](../index.md)
 - [演算子](../../programming-guide/statements-expressions-operators/operators.md)
-- [オーバーロード可能な演算子](../../programming-guide/statements-expressions-operators/overloadable-operators.md)

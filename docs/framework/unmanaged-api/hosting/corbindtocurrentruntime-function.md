@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ad977d4d423622ca364f764f91066dff51c5227
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 505bba3bb5d08c13e29543c20df2daaebc863d12
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490612"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768006"
 ---
 # <a name="corbindtocurrentruntime-function"></a>CorBindToCurrentRuntime 関数
 XML ファイルに格納されているバージョン情報を使用して、共通言語ランタイム (CLR: Common Language Runtime) をプロセスに読み込みます。 XML ファイルの形式は、標準的なアプリケーションの構成ファイルの後にモデル化されます。 構成ファイルの詳細については、「[構成ファイル スキーマ](../../../../docs/framework/configure-apps/file-schema/index.md)」を参照してください。  
@@ -31,7 +31,7 @@ XML ファイルに格納されているバージョン情報を使用して、�
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CorBindToCurrentRuntime (  
     [in]  LPCWSTR   pwszFileName,  
     [in]  REFCLSID  rclsid,  

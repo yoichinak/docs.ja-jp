@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 682d6684b6c86485530b9e5283d843f3b2eb7e46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 052c467f5570119cd08b4719c768d178dd52aba2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995996"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752210"
 ---
 # <a name="icordebugevalabort-method"></a>ICorDebugEval::Abort メソッド
 この ICorDebugEval オブジェクトが現在実行して、計算を中止します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Abort ();  
 ```  
   
@@ -37,7 +37,7 @@ HRESULT Abort ();
  評価が入れ子になっており、最新のものでない場合、`Abort`メソッドが失敗する可能性があります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

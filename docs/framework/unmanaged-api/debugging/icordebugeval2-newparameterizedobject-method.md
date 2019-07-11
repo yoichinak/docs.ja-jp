@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c35baaee13782566c64dd8447c6a034f699b5cd0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aae5f4c79acd6f92d42c2890ba64fa66e1b4bfbe
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667003"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753594"
 ---
 # <a name="icordebugeval2newparameterizedobject-method"></a>ICorDebugEval2::NewParameterizedObject メソッド
 新しいパラメーター化された型のオブジェクトをインスタンス化して、オブジェクトのコンス トラクター メソッドを呼び出します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT NewParameterizedObject (  
     [in] ICorDebugFunction     *pConstructor,  
     [in] ULONG32               nTypeArgs,  
@@ -59,7 +59,7 @@ HRESULT NewParameterizedObject (
  オブジェクトのコンス トラクターがかかる場合があります<xref:System.Type>パラメーター。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

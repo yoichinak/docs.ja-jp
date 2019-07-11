@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8fc26ad9b25ad243bf868d6ef3155360509e6483
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: be8f4e396171f3e56b5b93969d3960b7aaea142e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049584"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780649"
 ---
 # <a name="icorprofilerinfogethandlefromthread-method"></a>ICorProfilerInfo::GetHandleFromThread メソッド
 Win32 スレッドのハンドル、スレッドの ID にマップします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetHandleFromThread(  
     [in]  ThreadID threadId,  
     [out] HANDLE  *phThread);  
@@ -46,7 +46,7 @@ HRESULT GetHandleFromThread(
  プロファイラーは、Win32 を呼び出す必要があります`DuplicateHandle`関数を使用する前に、ハンドル。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   

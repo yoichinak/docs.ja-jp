@@ -2,12 +2,12 @@
 title: 'チュートリアル: ストアド プロシージャのみを使用する (C#)'
 ms.date: 03/30/2017
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-ms.openlocfilehash: f4c34252f7d92985dac94663c85d3cca0dc58ab3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f16cbdc1d22e7ec08237c0f13db9499ee2f9194f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655123"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742562"
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a>チュートリアル: ストアド プロシージャのみを使用する (C#)
 このチュートリアルでは、ストアド プロシージャを実行することでのみデータにアクセスする、基本的な [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] シナリオ全体を示します。 この方法は、データ ストアへのアクセス方法を制限する目的で、データベース管理者によってよく使用されます。  
@@ -17,7 +17,7 @@ ms.locfileid: "64655123"
   
  このチュートリアルの目的は、Northwind サンプル データベース内のストアド プロシージャにマップされている 2 つのメソッドを使用します。CustOrdersDetail および CustOrderHist します。 このマップは、SqlMetal コマンド ライン ツールを実行して C# ファイルを生成したときに作成されます。 詳細については、このチュートリアルの「前提条件」を参照してください。  
   
- このチュートリアルは、[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]には依存しません。 Visual Studio を使用している開発者が使用することも、[!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]ストアド プロシージャの機能を実装します。 参照してください[LINQ to Visual Studio での SQL ツール](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)します。  
+ このチュートリアルは、オブジェクト リレーショナル デザイナーには依存しません。 Visual Studio を使用している開発者は、ストアド プロシージャの機能を実装するために、O/R デザイナーも使用できます。 参照してください[LINQ to Visual Studio での SQL ツール](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)します。  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -112,7 +112,7 @@ ms.locfileid: "64655123"
   
 #### <a name="to-set-up-the-user-interface"></a>ユーザー インターフェイスを設定するには  
   
-1. 戻り値を Windows フォーム デザイナー (**form1.cs [デザイン]**)。  
+1. 戻り値を Windows フォーム デザイナー (**form1.cs [デザイン]** )。  
   
 2. **[表示]** メニューの **[ツールボックス]** をクリックします。  
   

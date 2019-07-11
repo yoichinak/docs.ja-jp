@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f0a9b9c149c86b4d9121275aa858dfdc0cdbac7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a5039117c649943a1f05a91ecccf22eb4230e5e7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905919"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776376"
 ---
 # <a name="assemblymetadata-structure"></a>ASSEMBLYMETADATA 構造体
 そのバージョンとそのロケール、プロセッサ、およびオペレーティング システムのサポートのレベルを含む、参照先アセンブリに関する情報が含まれています。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct {  
     USHORT  usMajorVersion;  
     USHORT  usMinorVersion;  
@@ -51,7 +51,7 @@ typedef struct {
 |`usMinorVersion`|参照アセンブリのマイナー バージョン番号。 この値は、0 にすることはできません。 場合のすべてのビット`usMinorVersion`マイナー バージョンが指定されていない、設定されます。|  
 |`usBuildNumber`|参照アセンブリのビルド番号。 この値は、0 にすることはできません。 場合のすべてのビット`usBuildNumber`は設定されて、ビルド番号が指定されていません。|  
 |`usRevisionNumber`|参照アセンブリのリビジョン番号。 この値は、0 にすることはできません。 場合のすべてのビット`usRevisionNumber`は設定されて、リビジョン番号が指定されていません。|  
-|`szLocale`|参照先アセンブリによってサポートされるロケールを指定する、セミコロンで区切られた、RFC1766 仕様に準拠しているロケール名の一覧。 Null 値には、ロケールに依存しないことを示します。 **注:**.NET framework バージョン 1.0 は、複数のロケールを指定することはできません。|  
+|`szLocale`|参照先アセンブリによってサポートされるロケールを指定する、セミコロンで区切られた、RFC1766 仕様に準拠しているロケール名の一覧。 Null 値には、ロケールに依存しないことを示します。 **注:** .NET framework バージョン 1.0 は、複数のロケールを指定することはできません。|  
 |`cbLocale`|ワイド文字単位サイズ`szLocale`します。|  
 |`rdwProcessor`|参照アセンブリでサポートされているプロセッサの種類について、Winnt.h で定義されている、識別子の配列。 NULL 値では、プロセッサの独立性を示します。|  
 |`ulProcessor`|長さ、`rdwProcessor`配列。|  
@@ -59,7 +59,7 @@ typedef struct {
 |`ulOS`|長さ、`rOS`配列。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 89a2424548bb577e3580d6eaa72f61e5cf9ccc7d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2e63cf698e41e70084c9b71bdf58d7ac60723d53
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991810"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782790"
 ---
 # <a name="icorprofilerinfogetmodulemetadata-method"></a>ICorProfilerInfo::GetModuleMetaData メソッド
 指定したモジュールにマップされるメタデータ インターフェイス インスタンスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetModuleMetaData(  
     [in]  ModuleID moduleId,  
     [in]  DWORD    dwOpenFlags,  
@@ -56,7 +56,7 @@ HRESULT GetModuleMetaData(
  メタデータを所有している (リソース モジュール) などの一部のモジュールはありません。 その場合、`GetModuleMetaData`は S_FALSE とで null 値の HRESULT 値を返します *`ppOut`します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   

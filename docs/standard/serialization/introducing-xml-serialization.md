@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: 491819c52c5bb1e7767e41fce7e56d8f95d10286
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1d91306c9cc9788046d19cc5de9e4712cdaa7e8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933693"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772548"
 ---
 # <a name="introducing-xml-serialization"></a>XML シリアル化の概要
 
@@ -133,7 +133,7 @@ XML シリアル化のもう 1 つの利点は、生成される XML ストリ�
 
 - シリアル化できるのは、パブリック プロパティとパブリック フィールドのみです。 プロパティにパブリック アクセサー (get メソッドおよび set メソッド) が存在する必要があります。 非パブリック データをシリアル化する必要がある場合は、XML シリアル化ではなく <xref:System.Runtime.Serialization.DataContractSerializer> クラスを使用します。
 
-- クラスを **XmlSerializer** でシリアル化するには、そのクラスが既定のコンストラクターを持つ必要があります。
+- クラスにはシリアル化するパラメーターなしのコンス トラクターが必要**XmlSerializer**します。
 
 - メソッドはシリアル化できません。
 

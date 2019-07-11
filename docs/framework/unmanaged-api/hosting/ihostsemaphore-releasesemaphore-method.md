@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24ec56345a5b48540d2451769f739a236a85e47b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e977133d722edc7d090d07cd117ee282a8d29cb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61696627"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753580"
 ---
 # <a name="ihostsemaphorereleasesemaphore-method"></a>IHostSemaphore::ReleaseSemaphore メソッド
 現在のカウントを増やします[IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)インスタンスを指定の量。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ReleaseSemaphore (  
     [in]  LONG  lReleaseCount,  
     [out] LONG  *lpPreviousCount  
@@ -58,7 +58,7 @@ HRESULT ReleaseSemaphore (
  CLR は通常、呼び出し`ReleaseSemaphore`にホストの 1 の値を渡すこと、リソースを使用して完了したことを通知する、`lReleaseCount`パラメーター。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

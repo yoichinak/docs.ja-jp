@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f65c2f74ec5efda027d90b3ffda9a5da5c239122
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 5786f24f6543d4d262dd8a6389132aba02f9aacc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025718"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779202"
 ---
 # <a name="cortypeattr-enumeration"></a>CorTypeAttr 列挙型
 メタデータ型を示す値が格納されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum CorTypeAttr {  
   
     tdVisibilityMask        =   0x00000007,  

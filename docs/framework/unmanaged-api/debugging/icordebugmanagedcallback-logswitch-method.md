@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a011485453999b9d764716356eebb2a5462f7bb9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d7432771a7d8eee9cea10f883dd3bd91f5ffb74
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988144"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761391"
 ---
 # <a name="icordebugmanagedcallbacklogswitch-method"></a>ICorDebugManagedCallback::LogSwitch メソッド
 共通言語ランタイム (CLR) によって管理されるスレッドがメソッドを呼び出すことをデバッガーに通知、<xref:System.Diagnostics.Switch>クラスを作成、変更、またはデバッグとトレース スイッチを削除します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT LogSwitch (  
     [in] ICorDebugAppDomain  *pAppDomain,  
     [in] ICorDebugThread     *pThread,  
@@ -59,7 +59,7 @@ HRESULT LogSwitch (
  [in]デバッグとトレース スイッチの親の名前へのポインター。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

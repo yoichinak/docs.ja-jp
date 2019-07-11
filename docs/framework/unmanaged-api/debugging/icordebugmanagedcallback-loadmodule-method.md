@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cfca06c656f3274f4c5ddb06373a0296dc5e6905
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dde8971f9f08cc9e0930f6ea133d9a06b22e4c96
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995190"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761410"
 ---
 # <a name="icordebugmanagedcallbackloadmodule-method"></a>ICorDebugManagedCallback::LoadModule メソッド
 共通言語ランタイム (CLR) モジュールが正常に読み込まれたことをデバッガーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT LoadModule (  
     [in] ICorDebugAppDomain *pAppDomain,  
     [in] ICorDebugModule    *pModule  
@@ -47,7 +47,7 @@ HRESULT LoadModule (
  `LoadModule`コールバックは、モジュールのメタデータを調べて、ジャストイン タイム (JIT) コンパイラ フラグを設定または有効化またはクラス、モジュールのコールバックの読み込みを無効にする適切な時間を提供します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

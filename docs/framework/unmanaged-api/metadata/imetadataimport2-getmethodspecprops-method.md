@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c35212e7d261a5b385823fdaa345f6fbd638571c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f7700236efe7b031866867f5ed859ba71683a8a6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61959576"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782293"
 ---
 # <a name="imetadataimport2getmethodspecprops-method"></a>IMetaDataImport2::GetMethodSpecProps メソッド
 指定した MethodSpec によって参照されるメソッドのメタデータ署名のトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetMethodSpecProps (  
    [in]  mdMethodSpec     mi,  
    [out] mdToken          *tkParent,  
@@ -52,7 +52,7 @@ HRESULT GetMethodSpecProps (
  [out]サイズ (バイト単位) の`ppvSigBlob`します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8c2d1aee741ac54e861f7068d883731745ca7788
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fc7b6d1a27faf7bde46305f9c98d98351e6261b6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584304"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782273"
 ---
 # <a name="icorprofilerinfo2getrvastaticaddress-method"></a>ICorProfilerInfo2::GetRVAStaticAddress メソッド
 指定された相対仮想アドレス (RVA) の静的フィールドのアドレスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetRVAStaticAddress(  
     [in] ClassID classId,  
     [in] mdFieldDef fieldToken,  
@@ -56,7 +56,7 @@ HRESULT GetRVAStaticAddress(
  クラスのクラスのコンス トラクターが完了したら、前に`GetRVAStaticAddress`は既に初期化することがいくつかの静的フィールドと、ガベージ コレクション オブジェクトをルートすることがありますが、すべての静的フィールドの CORPROF_E_DATAINCOMPLETE を返します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   

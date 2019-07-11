@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: faac5adccecdd0aeecede3b4f50a4db554e3d162
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2022fcbbaaa419048203ecbacfb294160cab5752
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796865"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779747"
 ---
 # <a name="ihostiocompletionmanagergetminthreads-method"></a>IHostIoCompletionManager::GetMinThreads メソッド
 I/O 要求を処理するため、ホストが提供するスレッドの最小数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetMinThreads (  
     [out] DWORD *pdwMinIOCompletionThreads  
 );  
@@ -55,7 +55,7 @@ HRESULT GetMinThreads (
  ホストの実装、パフォーマンス、スケーラビリティなどの理由から、サービスの I/O 要求に割り当てられているスレッドの数を排他的に制御を必要があります。 このため、ホストする必要はありません実装`GetMinThreads`します。 この場合、ホストは、このメソッドから E_NOTIMPL を返す必要があります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

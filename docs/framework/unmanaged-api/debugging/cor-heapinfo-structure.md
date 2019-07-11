@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 23bda470b8b5812b567081ba268ad503ac39ecaa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3dd233643bd18b60b7d6176c34ee57e4061daf7c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609484"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740653"
 ---
 # <a name="corheapinfo-structure"></a>COR_HEAPINFO 構造体
 列挙可能かどうかなど、ガベージ コレクション ヒープに関する情報が提供されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct _COR_HEAPINFO {  
     BOOL areGCStructuresValid;   
     DWORD pointerSize;   
@@ -54,7 +54,7 @@ typedef struct _COR_HEAPINFO {
  ガベージ コレクション ヒープ上のオブジェクトを列挙するには、前に常にオンにしてください、`areGCStructuresValid`フィールドをヒープが列挙可能な状態であることを確認します。 詳細については、次を参照してください。、 [icordebugprocess 5::getgcheapinformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md)メソッド。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

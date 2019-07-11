@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5760287e01257e3f0fc99a18ba20f2f2a1b2b3af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3aa76b88d89e83c400b3f372d846c1a31add255
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988157"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761481"
 ---
 # <a name="icordebugmanagedcallbackloadassembly-method"></a>ICorDebugManagedCallback::LoadAssembly メソッド
 共通言語ランタイム (CLR) アセンブリが正常にアンロードされたことをデバッガーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT LoadAssembly (  
     [in] ICorDebugAppDomain *pAppDomain,  
     [in] ICorDebugAssembly  *pAssembly  
@@ -44,7 +44,7 @@ HRESULT LoadAssembly (
  [in]アセンブリを表す ICorDebugAssembly オブジェクトへのポインター。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

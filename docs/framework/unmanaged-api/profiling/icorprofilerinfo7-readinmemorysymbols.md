@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 1745a0b9-8332-4777-a670-b549bff3b901
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3df5324e23ebeded38f3aa9843f81701f7fd333
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: 2a878ccf94fb4f6d67daa3a4dd42fcf98faf34a6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251049"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67748643"
 ---
 # <a name="icorprofilerinfo7readinmemorysymbols"></a>ICorProfilerInfo7::ReadInMemorySymbols
 [.NET Framework 4.6.1 以降のバージョンでのみでサポート]  
@@ -26,7 +26,7 @@ ms.locfileid: "66251049"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ReadInMemorySymbols(  
         [in] ModuleID moduleId,  
         [in] DWORD symbolsReadOffset,  
@@ -64,7 +64,7 @@ HRESULT ReadInMemorySymbols(
 >  現在の実装は、Reflection.Emit をサポートしていません。 かどうか、モジュールは、Reflection.Emit を使用して作成された、メソッドを返します`CORPROF_E_MODULE_IS_DYNAMIC`します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   

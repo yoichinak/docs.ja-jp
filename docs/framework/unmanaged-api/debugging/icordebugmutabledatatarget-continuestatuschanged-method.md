@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 5a66d3f4-dd16-4d62-9dcc-0eab7041d894
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 52b5c63f35732655834768eb5b914406203d423c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f43e98530fcd6d11b7c76295a92d42baceddcd6e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61927362"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764622"
 ---
 # <a name="icordebugmutabledatatargetcontinuestatuschanged-method"></a>ICorDebugMutableDataTarget::ContinueStatusChanged メソッド
 指定されたスレッド上の未処理のデバッグ イベントの継続状態を変更します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ContinueStatusChanged(  
    [in] DWORD dwThreadId,  
    [in] CORDB_CONTINUE_STATUS continueStatus);  
@@ -33,7 +33,7 @@ HRESULT ContinueStatusChanged(
  デバッガーは、通常の方法とは異なることがある方法で現在のデバッグ イベントを処理するように要求する ICorDebug メソッドを呼び出すときに、`ContinueStatusChanged` メソッドを呼び出します。 たとえば、未処理の例外が発生して、デバッガーが例外をキャンセルする操作 ([ICorDebugILFrame::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md) または `FuncEval` など) を要求する場合、この API は例外のキャンセルを要求するために使用されます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

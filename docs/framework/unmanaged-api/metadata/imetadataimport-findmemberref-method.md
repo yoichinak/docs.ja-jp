@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: abbd35fe390cc09951b762a5fd671d2d34a57c6c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0d446e2b78f41d43aa70f429e23f1f4be22fd799
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777885"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782504"
 ---
 # <a name="imetadataimportfindmemberref-method"></a>IMetaDataImport::FindMemberRef メソッド
 メンバーの MemberRef トークンへのポインターの参照を取得しますが、指定したで囲まれた<xref:System.Type>指定した名前とメタデータ シグネチャを持つとします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT FindMemberRef (  
    [in]  mdTypeRef          td,  
    [in]  LPCWSTR            szName,   
@@ -63,7 +63,7 @@ HRESULT FindMemberRef (
  `FindMemberRef` クラスまたはインターフェイス内で直接定義されたメンバーの参照のみを検索します。継承されたメンバーの参照が見つかりません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

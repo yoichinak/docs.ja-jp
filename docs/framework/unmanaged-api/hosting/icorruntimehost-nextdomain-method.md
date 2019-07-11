@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c3ff0c91713a6bb7449791bae6a754c43659335
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bf19d322d8e4d0d05993d22b2aa7e46bda7b5a1d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700168"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780075"
 ---
 # <a name="icorruntimehostnextdomain-method"></a>ICorRuntimeHost::NextDomain メソッド
 列挙体で、次のドメインへのインターフェイス ポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT NextDomain (  
     [in] HCORENUM hEnum,  
     [out] void** pAppDomain  
@@ -53,7 +53,7 @@ HRESULT NextDomain (
 |HOST_E_CLRNOTAVAILABLE|プロセスに CLR が読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

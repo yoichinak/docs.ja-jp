@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 21e147860c6859ea23409de31fed972c4f2bb432
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 955a2b63c457342d6aa31755ce42e989cc791e5c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940076"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776843"
 ---
 # <a name="isymunmanagedbindergetreaderfromstream-method"></a>ISymUnmanagedBinder::GetReaderFromStream メソッド
 メタデータ インターフェイスとシンボル ストアを格納しているストリームでは、指定されたを返します、正しい[ISymUnmanagedReader](isymunmanagedreader-interface.md)構造は、デバッグを読み取ることが特定のシンボル ストアからシンボルします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetReaderFromStream(  
     [in]  IUnknown  *importer,  
     [in]  IStream   *pstream,  

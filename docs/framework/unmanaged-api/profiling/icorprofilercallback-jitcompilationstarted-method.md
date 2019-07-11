@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b75eebd8d9bf439a0317521a61c06ece3745be0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a5ba90ce4523fcc55fca3f84a78fa4cfeb6a93f0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787921"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782825"
 ---
 # <a name="icorprofilercallbackjitcompilationstarted-method"></a>ICorProfilerCallback::JITCompilationStarted メソッド
 ジャストイン タイム (JIT) コンパイラが関数のコンパイルを開始されたことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT JITCompilationStarted(  
     [in] FunctionID functionId,  
     [in] BOOL       fIsSafeToBlock);  
@@ -50,7 +50,7 @@ HRESULT JITCompilationStarted(
  プロファイラーは、場合、2 つのスレッドではコールバックを行う同時に JIT コールバックのシーケンスをサポートする必要があります。 たとえば、スレッド A が呼び出す`JITCompilationStarted`します。 ただし、スレッド A 呼び出しの前に`JITCompilationFinished`、スレッド B 呼び出し[icorprofilercallback::exceptionsearchfunctionenter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md)スレッド A にから関数の ID を持つ`JITCompilationStarted`コールバック。 関数の ID がまだされないこと有効が表示されるためへの呼び出し`JITCompilationFinished`プロファイラーがまだ受信したされません。 ただし、このような場合は、関数の ID は有効です。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   

@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 5e3a6714489e2051a09b5855ab9f911ef2f57450
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: adfd563e19389642ac0ed0a3cef4aae8a32fa466
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632283"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767190"
 ---
 # <a name="icordebugprocess4processstatechanged-method"></a>ICorDebugProcess4::ProcessStateChanged メソッド
 
@@ -28,7 +28,7 @@ ms.locfileid: "65632283"
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 HRESULT ProcessStateChanged(
     [in] CorDebugStateChange change
 );
@@ -45,7 +45,7 @@ HRESULT ProcessStateChanged(
 
 ## <a name="requirements"></a>必要条件
 
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
 
  **ヘッダー:** なし
 

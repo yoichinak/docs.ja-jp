@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 543cc63b3e2188c11a6a8bf1eaa846461375be99
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 956abe8ddf8075b7b8f8c057db0aa7187982e1d5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597272"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782611"
 ---
 # <a name="qualifiersetdelete-function"></a>QualifierSet_Delete 関数
 名前によって指定した修飾子が削除されます。  
@@ -30,7 +30,7 @@ ms.locfileid: "61597272"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT QualifierSet_Delete (
    [in] int                  vFunc, 
    [in] IWbemQualifierSet*   ptr, 
@@ -68,7 +68,7 @@ HRESULT QualifierSet_Delete (
 修飾子の伝達の規則により、特定の修飾子可能性があります別のオブジェクトから継承されだけでは、現在のクラスまたはインスタンスでオーバーライドされます。 ここで、`QualifierSet_Delete`メソッドは、元の継承された値に、修飾子をリセットします。 関数は、この場合、状態コードを返します`WBEM_S_RESET_TO_DEFAULT`します。
 
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   

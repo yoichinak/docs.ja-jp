@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf23a8f1893aa0f992d554d3c7533c3dc42f4e95
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92366190c769344b41923cbb25ed4b04afceaae9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985895"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778663"
 ---
 # <a name="getcachepath-function"></a>GetCachePath 関数
 指定したフラグを使用して、キャッシュされたアセンブリへのパスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetCachePath (  
     [in]      ASM_CACHE_FLAGS  dwCacheFlags,  
     [in]      LPWSTR           pwzCachePath,  
@@ -49,7 +49,7 @@ HRESULT GetCachePath (
  [入力、出力]要求の最大長の`pwzCachePath`、関数が戻るとき、実際の長さと`pwzCachePath`します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Fusion.h  
   

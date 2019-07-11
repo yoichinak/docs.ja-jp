@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8d99f4f0615e7d25991b37030b7cb609985192f
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: a0f7989765dcec4c405d168d5fa3d082bc30512f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910664"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779834"
 ---
 # <a name="iclrpolicymanagersetactionontimeout-method"></a>ICLRPolicyManager::SetActionOnTimeout メソッド
 共通言語ランタイム (CLR) が、指定された操作がタイムアウトしたときに実行するポリシー アクションを指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetActionOnTimeout (  
     [in] EClrOperation operation,  
     [in] EPolicyAction action  
@@ -75,7 +75,7 @@ HRESULT SetActionOnTimeout (
 |OPR_ProcessExit|-eExitProcess<br />-eFastExitProcess<br />-   eRudeExitProcess<br />-   eDisableRuntime|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

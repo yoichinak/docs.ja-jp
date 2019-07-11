@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b494b8b776f4cb0eb534233c5a03ab2d34a698ef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 993848711f41c9e03b969a3c611982a5c8bc860d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790041"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742220"
 ---
 # <a name="createalink-function"></a>CreateALink 関数
 アセンブリ リンカーのインスタンスを作成し、指定したインターフェイスへのポインターを設定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CreateALink (  
    REFIID riid,  
    IUnknown **ppInterface  

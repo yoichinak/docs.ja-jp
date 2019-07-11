@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: bd2efcd28a8349ef07873adb5eaa69784e61d482
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 361a6669d5d638bbb39bc646607cce212bbb3bfa
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585939"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504031"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 言語と .NET Framework の概要
 
@@ -54,7 +54,7 @@ C# は、タイプ セーフで洗練されたオブジェクト指向言語で�
 
  C# プログラムは、.NET Framework で実行されます。これは、共通言語ランタイム (CLR: Common Language Runtime) と呼ばれる仮想実行システムや統合的なクラス ライブラリを備えた Windows の統合コンポーネントです。 CLR は、共通言語基盤 (CLI: Common Language Infrastructure) をサポートする Microsoft のシステムです。CLI は、複数の言語やライブラリをシームレスに連携する実行環境と開発環境を構築するための、基本的な国際規格です。  
   
- C# で記述したソース コードは、CLI 仕様に準拠する中間言語 (IL) にコンパイルされます。 IL コードおよびリソース (ビットマップや文字列など) は、アセンブリと呼ばれる実行可能ファイルのあるディスクに保存されます。アセンブリの拡張子は、一般的に .exe か .dll です。 アセンブリに含まれるマニフェストには、アセンブリの種類、バージョン、カルチャ、およびセキュリティ要件に関する情報が規定されています。  
+ C# で記述したソース コードは、CLI 仕様に準拠する[中間言語 (IL)](../../standard/managed-code.md) にコンパイルされます。 IL コードおよびリソース (ビットマップや文字列など) は、アセンブリと呼ばれる実行可能ファイルのあるディスクに保存されます。アセンブリの拡張子は、一般的に .exe か .dll です。 アセンブリに含まれるマニフェストには、アセンブリの種類、バージョン、カルチャ、およびセキュリティ要件に関する情報が規定されています。  
   
  C# プログラムを実行すると、アセンブリが CLR に読み込まれ、マニフェストの情報に基づいてさまざまな処理が実行されます。 このとき、セキュリティ要件に一致すると、CLR で Just-In-Time (JIT) コンパイルが実行され、IL コードはネイティブのマシン語命令に変換されます。 CLR には、自動的なガベージ コレクション、例外処理、およびリソース管理に関するサービスも用意されています。 CLR で実行されるコードは、"マネージド コード" と呼ばれることがあります。反対に、特定のシステムを対象にしたネイティブのマシン語にコンパイルされたコードは、"アンマネージド コード" と呼ばれることがあります。 C# ソース コード ファイル、.NET Framework クラス ライブラリ、アセンブリ、および CLR について、コンパイル時間と実行時間の関係を次の図に示します。  
   

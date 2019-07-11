@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a19762cbec91871d7af617957896e4ee34944fba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b7be346f1c92c877932957787b0747515c144752
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949072"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741537"
 ---
 # <a name="setassemblyfile-method"></a>SetAssemblyFile メソッド
 ビルドするアセンブリの名前を割り当てます。 非バインド モジュールを生成するときに使用しないでください。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetAssemblyFile(  
     LPCWSTR pszFilename,  
     IMetaDataEmit* pEmitter,  

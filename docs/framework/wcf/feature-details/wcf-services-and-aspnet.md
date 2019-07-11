@@ -2,12 +2,12 @@
 title: WCF サービスと ASP.NET
 ms.date: 03/30/2017
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
-ms.openlocfilehash: ef772a360ea53c2b5f177ed88ad14c4a1e1277ef
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d42787492b00b8e0a5a732d641947fec61b5ff96
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637554"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663682"
 ---
 # <a name="wcf-services-and-aspnet"></a>WCF サービスと ASP.NET
 
@@ -29,15 +29,15 @@ ASP.NET HTTP ランタイムは、ASP.NET 要求の処理が場合でも、同�
 
 - 同じ AppDomain 内では、HTTP ランタイムによって実装される機能は、WCF ではなく、ASP.NET コンテンツに適用されます。 ASP.NET アプリケーション プラットフォームの多くの HTTP 固有の機能は、ASP.NET コンテンツが含まれている AppDomain 内でホストされる WCF サービスには適用されません。 このような機能の例を次に示します。
 
-    - HttpContext:<xref:System.Web.HttpContext.Current%2A>は常に`null`WCF サービス内からアクセスする場合。 代わりに、<xref:System.ServiceModel.Channels.RequestContext> を使用してください。
+  - HttpContext:<xref:System.Web.HttpContext.Current%2A>は常に`null`WCF サービス内からアクセスする場合。 代わりに、<xref:System.ServiceModel.Channels.RequestContext> を使用してください。
 
-    - ファイル ベースの承認:WCF のセキュリティ モデルは、サービス要求が承認されているかどうかを決定する際に、サービスの .svc ファイルに適用されるアクセス制御リスト (ACL) にはできません。
+  - ファイル ベースの承認:WCF のセキュリティ モデルは、サービス要求が承認されているかどうかを決定する際に、サービスの .svc ファイルに適用されるアクセス制御リスト (ACL) にはできません。
 
-    - 構成ベースの URL 承認:同様に、WCF のセキュリティ モデルが System.Web ので指定された、URL ベースの承認規則に従っていない\<authorization > 構成要素。 サービスは、ASP で保護された URL 空間に存在する場合、WCF 要求のこれらの設定は無視されます。NET の URL 承認規則。
+  - 構成ベースの URL 承認:同様に、WCF のセキュリティ モデルが System.Web ので指定された、URL ベースの承認規則に従っていない\<authorization > 構成要素。 サービスは、ASP で保護された URL 空間に存在する場合、WCF 要求のこれらの設定は無視されます。NET の URL 承認規則。
 
-    - HttpModule の拡張機能:WCF のホスティング インフラストラクチャは、WCF をインターセプト要求、<xref:System.Web.HttpApplication.PostAuthenticateRequest>イベントが発生し、処理は ASP.NET HTTP パイプラインに返されません。 パイプラインの後の段階で要求をインターセプトに設計されたモジュールは、WCF 要求を途中受信できません。
+  - HttpModule の拡張機能:WCF のホスティング インフラストラクチャは、WCF をインターセプト要求、<xref:System.Web.HttpApplication.PostAuthenticateRequest>イベントが発生し、処理は ASP.NET HTTP パイプラインに返されません。 パイプラインの後の段階で要求をインターセプトに設計されたモジュールは、WCF 要求を途中受信できません。
 
-    - ASP.NET impersonation:既定では、WCF に対する要求は常に実行、IIS のプロセス id、System.Web を使用した偽装を有効にする ASP.NET が設定されている場合でも\<identity impersonate ="true"/> 構成オプション。
+  - ASP.NET impersonation:既定では、WCF に対する要求は常に実行、IIS のプロセス id、System.Web を使用した偽装を有効にする ASP.NET が設定されている場合でも\<identity impersonate ="true"/> 構成オプション。
 
 これらの制限は、IIS アプリケーションでホストされる WCF サービスにのみ適用されます。 WCF の存在によっては、ASP.NET コンテンツの動作は影響はありません。
 
@@ -89,7 +89,7 @@ public class CalculatorService : ICalculatorSession
 
 アプリケーション全体を互換モードにしたとき、個々のサービスのサポート レベルがどうなるかを表に示します。
 
-|アプリケーション全体の互換モード設定|AspNetCompatibilityRequirementsMode <br /><br /> 設定|実際の動作|
+|アプリケーション全体の互換モード設定|AspNetCompatibilityRequirementsMode<br /><br /> 設定|実際の動作|
 |--------------------------------------------------|---------------------------------------------------------|---------------------|
 |aspNetCompatibilityEnabled ="`true`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>|サービスは正常に動作します。|
 |aspNetCompatibilityEnabled ="`true`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>|サービスは正常に動作します。|

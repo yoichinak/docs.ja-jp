@@ -2,16 +2,22 @@
 title: グラフィックスとマルチメディア
 ms.date: 03/30/2017
 dev_langs:
-  - csharp
-  - vb
+- csharp
+- vb
 helpviewer_keywords:
-  - 'media [WPF], features'
-  - 'video effects [WPF]'
-  - 'sound effects [WPF]'
-  - 'animation [WPF], features'
-  - 'graphics features [WPF]'
-  - 'transition effects [WPF]'
+- media [WPF], features
+- video effects [WPF]
+- sound effects [WPF]
+- animation [WPF], features
+- graphics features [WPF]
+- transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
+ms.openlocfilehash: a770bcbbc8ac553c55e9dda5097abec8790182e5
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663729"
 ---
 # <a name="graphics-and-multimedia"></a>グラフィックスとマルチメディア
 
@@ -53,7 +59,7 @@ WPF では、高品質な 2-D グラフィックがサポートされます。 �
 
 ### <a name="2-d-shapes"></a>2-D 図形
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] には、次の図に示す四角形や楕円のような、一般的に使用されるベクター描画の [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 図形のライブラリが用意されています。
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 一般的に使用される、ベクター描画による 2-d 図形、四角形や楕円で、次の図などのライブラリを提供します。
 
 ![ダイアグラムが表示された楕円と四角形。](./media/index/two-deminsional-shapes-ellipses-rectangles.png)
 
@@ -95,7 +101,7 @@ End Class
 
 ### <a name="2-d-geometries"></a>2-D ジオメトリ
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] で提供される [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 図形では不十分な場合は、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] のジオメトリとパスのサポートを利用して独自に作成できます。 ジオメトリを使用して図形を描画ブラシとして作成し、他の [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 要素をクリップする方法を次の図に示します。
+ときに、2-d 図形[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供では不十分ですが、使用することができます[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]ジオメトリと、独自に作成するパスをサポートします。 ジオメトリを使用して図形を描画ブラシとして作成し、他の [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 要素をクリップする方法を次の図に示します。
 
 ![ジオメトリを使用して図形を作成する方法を示すスクリーン ショット。](./media/index/use-geometries-create-shapes.png)
 
@@ -103,7 +109,7 @@ End Class
 
 ### <a name="2-d-effects"></a>2-D 効果
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] には、さまざまな効果の作成に使用できる [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] クラスのライブラリが用意されています。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] の [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] レンダリング機能を使用すると、グラデーション、ビットマップ、描画、ビデオを持つ [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 要素を塗りつぶすことができます。また、回転、拡大縮小、傾斜を使用してそれらの要素を操作できます。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ブラシを使用して実現できる多くの効果の例を次の図に示します。
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] さまざまな効果を作成する際に 2-d クラスのライブラリを提供します。 2 D レンダリング能力[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]を描画する機能を提供します[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]をグラデーション、ビットマップ、描画、およびビデオ; を持つ要素と回転を使用してそれらを操作するスケーリング、および傾斜します。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ブラシを使用して実現できる多くの効果の例を次の図に示します。
 
 ![さまざまな WPF のブラシと描画要素を示す図。](./media/index/brushes-paint-elements.png)
 
@@ -113,7 +119,7 @@ End Class
 
 ## <a name="3-d-rendering"></a>3-D レンダリング
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] には、さらに魅力的なレイアウト、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]、データの視覚化を実現するために [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] の [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] グラフィックス サポートと統合された一連の [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] レンダリング機能が用意されています。 たとえば、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] では、次の図に示すように [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] イメージを [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 図形のサーフェイスにレンダリングできます。
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 2 D グラフィックス サポートと統合される 3-D レンダリング機能のセットを提供します[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]より魅力的なレイアウトを作成するための順序で[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]データの視覚化。 スペクトルの一方の end [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 3-D 図形は、次の図の表面に、2 D 画像を表示することができます。
 
 ![異なるテクスチャ、3-D 図形を示すサンプルのスクリーン ショット。](./media/index/visual-three-dimensional-shape.png)
 

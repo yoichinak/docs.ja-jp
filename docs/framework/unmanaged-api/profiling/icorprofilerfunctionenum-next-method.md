@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 62e70a2fe421651aac9a4921ca885c53c864c4f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0d51f26e6d3fa2c37e1588d255f04578dce5bc24
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991953"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780286"
 ---
 # <a name="icorprofilerfunctionenumnext-method"></a>ICorProfilerFunctionEnum::Next メソッド
 関数のシーケンシャル コレクションから、列挙子の現在の位置以降にある、指定した数の隣接する関数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Next([in]  ULONG      celt,  
              [out, size_is(celt), length_is(*pceltFetched)]  
                     COR_PRF_FUNCTION ids[],  
@@ -55,7 +55,7 @@ HRESULT Next([in]  ULONG      celt,
 |S_FALSE|`celt` よりも少ない数の要素が返されました。これは、列挙が完了したことを示します。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ca176be93b92e44228d9b4063e87a62263e83e04
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 03b7ca218318df517832d198e72d4f79d30827b8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782507"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779238"
 ---
 # <a name="icorprofilercallback4getrejitparameters-method"></a>ICorProfilerCallback4::GetReJITParameters メソッド
 新しい再コンパイルされたメソッド本体の代替コード生成フラグを設定するコード プロファイラーを使用できます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetReJITParameters(     [in] ModuleID moduleId,     [in] mdMethodDef methodId,     [in] ICorProfilerFunctionControl *pFunctionControl);  
 ```  
   
@@ -47,7 +47,7 @@ HRESULT GetReJITParameters(     [in] ModuleID moduleId,     [in] mdMethodDef met
  CLR の問題、`GetReJITParameters`コールバック、プロファイラーは、特定のメソッドを再コンパイルのパラメーターを指定できるようにします。 `GetReJITParameters`関数ごとのコールバックは、1 回だけ発行されます。 プロファイラーによって指定されたパラメーターは、その関数のすべてのインスタンスに適用されます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   

@@ -6,12 +6,12 @@ ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 58e79cf0b017d65644f25250d05d252b5635c21e
-ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
+ms.openlocfilehash: 06085091a13ad76dcd554cfe637bcc151bbb8476
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67152005"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610178"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>ML.NET の概要とそのしくみ
 
@@ -164,16 +164,19 @@ ML.NET モデルは、予測される出力に到達するために入力デー�
 ML.NET アプリケーションは <xref:Microsoft.ML.MLContext> オブジェクトから始まります。 このシングルトン オブジェクトには**カタログ**が含まれます。 カタログは、データの読み込みと保存、変換、トレーナー、およびモデル運用コンポーネントのためのファクトリです。 各カタログ オブジェクトには、さまざまな種類のコンポーネントを作成するメソッドがあります。
 
 ||||
-|-|-|-|
-|データの読み込みと保存||<xref:Microsoft.ML.DataOperationsCatalog>|
-|データ準備||<xref:Microsoft.ML.TransformsCatalog>|
-|トレーニングのアルゴリズム|二項分類|<xref:Microsoft.ML.BinaryClassificationCatalog>|
-||多クラス分類|<xref:Microsoft.ML.MulticlassClassificationCatalog>|
-||異常検出|<xref:Microsoft.ML.AnomalyDetectionCatalog>|
-||ランキング|<xref:Microsoft.ML.RankingCatalog>|
-||回帰|<xref:Microsoft.ML.RegressionCatalog>|
-||推奨事項|<xref:Microsoft.ML.RecommendationCatalog>|
-|モデルの使用法 ||<xref:Microsoft.ML.ModelOperationsCatalog>|
+|-|-|-|-|
+|データの読み込みと保存||<xref:Microsoft.ML.DataOperationsCatalog>||
+|データ準備||<xref:Microsoft.ML.TransformsCatalog>||
+|トレーニングのアルゴリズム|二項分類|<xref:Microsoft.ML.BinaryClassificationCatalog>||
+||多クラス分類|<xref:Microsoft.ML.MulticlassClassificationCatalog>||
+||異常検出|<xref:Microsoft.ML.AnomalyDetectionCatalog>||
+||クラスタリング|<xref:Microsoft.ML.ClusteringCatalog>||
+||予測|<xref:Microsoft.ML.Forecasting>||
+||ランキング|<xref:Microsoft.ML.RankingCatalog>||
+||回帰|<xref:Microsoft.ML.RegressionCatalog>||
+||推奨事項|<xref:Microsoft.ML.RecommendationCatalog>|Microsoft.ML.Recommender を追加する|
+||TimeSeries|<xref:Microsoft.ML.TimeSeriesCatalog>|Microsoft.ML.TimeSeries を追加する|
+|モデルの使用法 ||<xref:Microsoft.ML.ModelOperationsCatalog>||
 
 上記の各カテゴリの作成方法に移動できます。 Visual Studio を使用すると、IntelliSense を介してカタログが表示されます。
 

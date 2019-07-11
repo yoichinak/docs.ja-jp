@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd5e30d08e667dcd5a8be1f9502462f28290068e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad62b267eb0c49ff8fbefeb45b523c21edc705fe
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987741"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766048"
 ---
 # <a name="icordebugprocessgethelperthreadid-method"></a>ICorDebugProcess::GetHelperThreadID メソッド
 デバッガーの内部ヘルパーのスレッドのオペレーティング システム (OS) のスレッド ID を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetHelperThreadID (  
     [out] DWORD *pThreadID  
 );  
@@ -47,7 +47,7 @@ HRESULT GetHelperThreadID (
  なければ、デバッガーのヘルパーのスレッドのスレッド ID すべてアンマネージ[icordebugmanagedcallback::createthread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md)イベント、ため、デバッガー ヘルパー スレッドのスレッド ID を特定し、ユーザーから非表示にすることができます。 アンマネージの中にヘルパー スレッドとして識別されるスレッド`ICorDebugManagedCallback::CreateThread`イベントではマネージ ユーザー コードは実行されません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl します。 CorDebug.h  
   

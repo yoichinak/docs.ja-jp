@@ -4,12 +4,12 @@ description: 転移学習と ML.NET を使用して画像分類 TensorFlow モ�
 ms.date: 06/12/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 62a926795ce34a8c1639f1d42ebbb34b53dc67ad
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 9344d0757e140995dfd9ce7d1a355910a81c6d31
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401735"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539847"
 ---
 # <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>チュートリアル: 転移学習と ML.NET を使用して TensorFlow 画像分類子を再トレーニングする
 
@@ -31,11 +31,11 @@ ms.locfileid: "67401735"
 
 このサンプルは、トレーニング済みのモデルを再利用して少量のトレーニング データで画像を分類することによって、ML.NET を使用して画像分類器を構築するコンソール アプリケーションです。
 
-このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TransferLearningTF) リポジトリで確認できます。
+このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TransferLearningTF) リポジトリで確認できます。 既定では、このチュートリアルの .NET プロジェクトの構成は .NET Core 2.2 を対象としています。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-* [Visual Studio 2017 15.6 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)が ".NET Core クロスプラット フォーム開発" とともにインストールされていること。
+* [Visual Studio 2017 15.6 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)が ".NET Core クロスプラット フォーム開発" とともにインストールされていること。 
 
 * Microsoft.ML 1.0.0 Nuget パッケージ
 * Microsoft.ML.ImageAnalytics 1.0.0 Nuget パッケージ

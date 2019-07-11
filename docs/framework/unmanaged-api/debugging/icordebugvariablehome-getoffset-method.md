@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 864cb893511bceabd61ce0064065b3866ce01dfe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0fdab81d499fe1508493cb0bf05a1787974a9d01
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986753"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774527"
 ---
 # <a name="icordebugvariablehomegetoffset-method"></a>ICorDebugVariableHome::GetOffset メソッド
 変数のベース レジスタからのオフセットを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetOffset(  
     [out] LONG *pOffset  
 );  
@@ -42,13 +42,13 @@ HRESULT GetOffset(
 ## <a name="return-value"></a>戻り値  
  メソッドは、次の値を返します。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |`S_OK`|変数は、レジスタの相対メモリの場所には。|  
 |`E_FAIL`|変数は、レジスタの相対メモリの場所ではありません。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

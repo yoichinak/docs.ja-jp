@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ea6ce91e0651e09fb908d8b8b35811349ac8845
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fa6d563873045b4b5b427f06f0caa5420d31590b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986038"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777213"
 ---
 # <a name="isymunmanagedwriteropenscope-method"></a>ISymUnmanagedWriter::OpenScope メソッド
 現在のメソッドの構文の新しいスコープを開きます。 スコープは、新しい現在のスコープになり、スコープのスタックにプッシュされます。 スコープは、階層を形成する必要があります。 兄弟は、重複は許可されません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT OpenScope(  
     [in] ULONG32 startOffset,  
     [out, retval] ULONG32* pRetVal);  

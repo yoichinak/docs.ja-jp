@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 891423661f45a1167d53385e6e0306fb09487278
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6140ecda1d12c26e1936daee4eaad11cbd9b6ba4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000416"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781231"
 ---
 # <a name="stacksnapshotcallback-function"></a>StackSnapshotCallback 関数
 によって開始されるスタック ウォーク中にスタックの各マネージ フレームとフレームの非管理対象の各実行に関する情報を使用してプロファイラーを提供、 [icorprofilerinfo 2::dostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)メソッド。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT __stdcall StackSnapshotCallback (  
     [in] FunctionID funcId,  
     [in] UINT_PTR ip,  
@@ -66,7 +66,7 @@ HRESULT __stdcall StackSnapshotCallback (
  `ICorProfilerInfo2::DoStackSnapshot`メソッドの呼び出し、`StackSnapshotCallback`関数のマネージ フレームごとに 1 回または 1 回あたりアンマネージ フレームの実行。 場合`StackSnapshotCallback`呼びますプロファイラーの非管理対象のフレームの実行、レジスタのコンテキストを使用できます (によって参照される、`context`パラメーター)、独自のアンマネージ スタック ウォークを実行します。 この場合は、Win32`CONTEXT`構造体が最後にプッシュされたフレーム アンマネージ フレームの実行中の CPU の状態を表します。 ただし、Win32`CONTEXT`構造体には、すべてのレジスタの値が含まれています、フレーム ポインター レジスタ、スタック ポインター レジスタ、命令ポインター レジスタ、および (つまり、保持された) 不揮発性の値にのみ依存する必要があります整数レジスタします。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl  
   

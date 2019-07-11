@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: b6f7450b4f682ea5ac69fd1bab434b27451e58df
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d2ee9537df540936e0a5ec448e6aaddbbbc162b1
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586054"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610546"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (コード生成ツール)
 SqlMetal コマンドライン ツールは、.NET Framework の [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] コンポーネント用のコードとマッピングを生成します。 このトピックで後述するオプションを適用することにより、次のようなアクションを SqlMetal で実行できます。  
@@ -72,18 +72,18 @@ sqlmetal [options] [<input file>]
   
 |オプション|説明|  
 |------------|-----------------|  
-|**/language:** *\<language>*|ソース コードの言語を指定します。<br /><br /> Valid *\<language>*: vb, csharp.<br /><br /> 既定値:コード ファイル名の拡張子から派生します。|  
+|**/language:** *\<language>*|ソース コードの言語を指定します。<br /><br /> Valid *\<language>* : vb, csharp.<br /><br /> 既定値:コード ファイル名の拡張子から派生します。|  
 |**/namespace:** *\<name>*|生成されるコードの名前空間を指定します。 既定値は、名前空間なしです。|  
 |**/context:** *\<type>*|データ コンテキスト クラスの名前を指定します。 既定値:データベース名から派生します。|  
 |**/entitybase:** *\<type>*|生成されるコード内のエンティティ クラスの基本クラスを指定します。 既定値:エンティティの基本クラスなしです。|  
 |**/pluralize**|クラスとメンバーの名前を自動的に複数化または単数化します。<br /><br /> このオプションは、米国英語バージョンでのみ使用できます。|  
-|**/serialization:** *\<option>*|シリアル化可能なクラスを生成します。<br /><br /> 有効な *\<オプション>*:None と Unidirectional。 既定値:なし。<br /><br /> 詳細については、「[Serialization](../../../docs/framework/data/adonet/sql/linq/serialization.md)」 (シリアル化) を参照してください。|  
+|**/serialization:** *\<option>*|シリアル化可能なクラスを生成します。<br /><br /> 有効な *\<オプション>* :None と Unidirectional。 既定値:なし。<br /><br /> 詳細については、「[Serialization](../../../docs/framework/data/adonet/sql/linq/serialization.md)」 (シリアル化) を参照してください。|  
   
  **入力ファイル**  
   
 |オプション|説明|  
 |------------|-----------------|  
-|**\<入力ファイル>**|SQL Server Express .mdf ファイル、 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] .sdf ファイル、または .dbml 中間ファイルを指定します。|  
+|**\<入力ファイル>**|SQL Server Express .mdf ファイル、SQL Server Compact 3.5 .sdf ファイル、または .dbml 中間ファイルを指定します。|  
   
 ## <a name="remarks"></a>解説  
  SqlMetal の実際の機能には、次の 2 つの段階が含まれています。  
@@ -98,7 +98,7 @@ sqlmetal [options] [<input file>]
   
  **/server** を指定しない場合、 **localhost/sqlexpress** と見なされます。  
   
- 次の条件が少なくとも 1 つ満たされる場合、[!INCLUDE[sqprsqext](../../../includes/sqprsqext-md.md)] は例外をスローします。  
+ Microsoft SQL Server 2005 は、次の条件が少なくとも 1 つ満たされる場合に例外をスローします。  
   
 - 自身を呼び出すストアド プロシージャを SqlMetal が抽出しようとした。  
   

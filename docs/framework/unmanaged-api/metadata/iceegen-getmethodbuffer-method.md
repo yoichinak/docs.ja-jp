@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c0aea6185095a30aae9197c875aa9b9ac581d406
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 14ea8dab2c4258fe490ef362fd527d80bd8a0178
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62044968"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746106"
 ---
 # <a name="iceegengetmethodbuffer-method"></a>ICeeGen::GetMethodBuffer メソッド
 指定の相対仮想アドレスにあるメソッドの適切なサイズのバッファーを取得します。  
@@ -31,7 +31,7 @@ ms.locfileid: "62044968"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetMethodBuffer (  
     [in]  ULONG       RVA,  
     [out] UCHAR       **lpBuffer  
@@ -46,7 +46,7 @@ HRESULT GetMethodBuffer (
  [out]返されたバッファーへのポインター。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

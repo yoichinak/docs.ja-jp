@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb970d31fb5158adc7dbcbb7cc0175cc91c83c8c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de1646cdbc11369b43a821d8b762879d1df7ed2e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698045"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751533"
 ---
 # <a name="identityattribute-structure"></a>IDENTITY_ATTRIBUTE 構造体
 メタデータ属性について説明する[IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)インスタンス。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct _IDENTITY_ATTRIBUTE {  
     LPCWSTR  pszNamespace;  
     LPCWSTR  pszName;  
@@ -50,7 +50,7 @@ typedef struct _IDENTITY_ATTRIBUTE {
  インスタンス、`IDENTITY_ATTRIBUTE`構造のインスタンスに関連付け、 [IDENTITY_ATTRIBUTE_BLOB](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)構造体。 `IDENTITY_ATTRIBUTE`実際の文字列と、対応する構造に含まれる`IDENTITY_ATTRIBUTE_BLOB`構造で表示されている 3 つの文字列にオフセットを一覧表示、`IDENTITY_ATTRIBUTE`構造体。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Isolation.h  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb5820087001a207af0c2552f91b4c17f5f78ff7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7dd59c1e0e8b28c557910da3fd9c6489370cc62
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777658"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778954"
 ---
 # <a name="imetadataimportgetnestedclassprops-method"></a>IMetaDataImport::GetNestedClassProps メソッド
 親の TypeDef トークンを取得<xref:System.Type>入れ子にされた型を指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetNestedClassProps (  
    [in]   mdTypeDef      tdNestedClass,  
    [out]  mdTypeDef      *ptdEnclosingClass  
@@ -44,7 +44,7 @@ HRESULT GetNestedClassProps (
  [out]TypeDef トークンへのポインター、<xref:System.Type>を`tdNestedClass`で入れ子になっています。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

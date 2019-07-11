@@ -2,12 +2,12 @@
 title: Entity Framework 用 SqlClient
 ms.date: 03/30/2017
 ms.assetid: 9a5d6d39-d955-43a5-a5c2-931c239398f1
-ms.openlocfilehash: d81499961e7e47bba3b2594ddddd192c87a4a936
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8933a975c075407066bff97672f1b82f125bb47
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879120"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662105"
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>Entity Framework 用 SqlClient
 このセクションでは、.NET Framework Data Provider for SQL Server (SqlClient) について説明します。これによって、Microsoft SQL Server 上で Entity Framework が機能できるようになります。  
@@ -20,7 +20,7 @@ ms.locfileid: "61879120"
 ## <a name="providermanifesttoken-schema-attribute"></a>ProviderManifestToken スキーマ属性  
  `ProviderManifestToken` は、SSDL の`Schema` 要素の必須の属性です。 このトークンは、オフライン シナリオ用のプロバイダー マニフェストを読み込むために使用されます。 詳細については`ProviderManifestToken`属性は、「[スキーマ要素 (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl)します。  
   
- SqlClient は、異なるバージョンの SQL Server 用データ プロバイダーとして使用できます。 これらのバージョンでは機能が異なります。 たとえば、[!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)] では、`varchar(max)` で導入された `nvarchar(max)` 型および [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)] 型をサポートしていません。  
+ SqlClient は、異なるバージョンの SQL Server 用データ プロバイダーとして使用できます。 これらのバージョンでは機能が異なります。 たとえば、SQL Server 2000 はサポートされません`varchar(max)`と`nvarchar(max)`SQL Server 2005 で導入された型。  
   
  SqlClient は、SQL Server の各バージョンに対応する次のプロバイダー マニフェスト トークンを生成し、受け取ります。  
   

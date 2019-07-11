@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38b6785afae75888398f1c0d3d69be2ce21d67bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cbc0262062eddb363b0a00535a2d099100124b67
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993097"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67748080"
 ---
 # <a name="iclrstrongnamestrongnamegetblob-method"></a>ICLRStrongName::StrongNameGetBlob メソッド
 指定したアドレスにある実行可能ファイルのバイナリ表現が、指定したバッファーに入れられます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT StrongNameGetBlob (  
     [in]  LPCWSTR    wszFilePath,  
     [in]  BYTE       *pbBlob,  
@@ -52,7 +52,7 @@ HRESULT StrongNameGetBlob (
  `S_OK` メソッドが正常に完了した場合それ以外の場合、エラーを示す HRESULT 値 (を参照してください[の共通 HRESULT 値](https://go.microsoft.com/fwlink/?LinkId=213878)一覧については)。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MetaHost.h  
   

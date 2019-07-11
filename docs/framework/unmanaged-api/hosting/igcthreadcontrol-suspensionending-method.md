@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 90b0cba50129bc728089e41ece5a30697cfc3bc5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cc91ff0676fcec5d614f9d6fa4850eb2c81086b4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763205"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779498"
 ---
 # <a name="igcthreadcontrolsuspensionending-method"></a>IGCThreadControl::SuspensionEnding メソッド
 ランタイムがガベージ コレクションまたはその他の中断の後のスレッドを再開することをホストに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SuspensionEnding (  
     [in] DWORD Generation  
 );  
@@ -43,7 +43,7 @@ HRESULT SuspensionEnding (
  中にすべてのスレッドを再スケジュールしないで、`SuspensionEnding`コールバック。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

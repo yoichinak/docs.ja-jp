@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2db47f90e73922858013885e99e953ddcacbd450
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7750d50b772ff17cf9dcd05de2e2f34556714e4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763517"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770482"
 ---
 # <a name="iclrtaskrudeabort-method"></a>ICLRTask::RudeAbort メソッド
 共通言語ランタイム (CLR) が現在によって表されるタスクを中止するように指示します[ICLRTask インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)直ちに無条件でインスタンスします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT RudeAbort ();   
 ```  
   
@@ -48,7 +48,7 @@ HRESULT RudeAbort ();
  ホストは`RudeAbort`をすぐにタスクを中止します。 ファイナライザーおよび例外処理ルーチンが実行される保証はありません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

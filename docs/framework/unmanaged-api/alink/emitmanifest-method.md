@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 051b5f47db05301f3a3326a2cc4cc5cf5c8b1ec2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91dc4cb7d64d49d1e95c0c8eb79a29736559d842
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790001"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742086"
 ---
 # <a name="emitmanifest-method"></a>EmitManifest メソッド
 最終的なマニフェストを出力します。 その他のすべてのファイルをインポートし、すべてのオプションを設定した後、このメソッドを呼び出します。 非バインド モジュールのこのメソッドを呼び出さないでください。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EmitManifest(  
     mdAssembly   AssemblyID,  
     DWORD*       pdwReserveSize,  

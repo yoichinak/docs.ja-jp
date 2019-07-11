@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e4deaa3ab4b14fbd32d45841966cfac9e33b9f31
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f7d3325c8aee44849ff1fb7a6cc06a0ed7c2c6f8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987074"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769093"
 ---
 # <a name="icordebugthreadgetuserstate-method"></a>ICorDebugThread::GetUserState メソッド
 この ICorDebugThread の現在のユーザー状態を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetUserState (  
     [out] CorDebugUserState   *pState  
 );  
@@ -43,7 +43,7 @@ HRESULT GetUserState (
  スレッドのユーザーの状態は、デバッグ中にプログラムでチェックするときに、スレッドの状態です。 スレッドは、複数の状態ビットが設定があります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

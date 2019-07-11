@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0424d929f40da1faabd7456cdd85e39a59246d48
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1465a667763c12593c4bc89148d70f85371fcc67
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986610"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775557"
 ---
 # <a name="icorpublishenumgetcount-method"></a>ICorPublishEnum::GetCount メソッド
 列挙に含まれる項目の数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetCount (  
     [out] ULONG   *pcelt  
 );  
@@ -40,7 +40,7 @@ HRESULT GetCount (
  [out]列挙に含まれる項目数へのポインター。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorPub.idl, CorPub.h  
   

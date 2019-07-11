@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 878941f7af71fa5e3de8e38c4a68a66cb964983d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9e953fa129308527f63df8dd8c5061252f8be57b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993786"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772434"
 ---
 # <a name="icordebugtype2-interface"></a>ICorDebugType2 インターフェイス
 基本データ型または複合 (ユーザー定義) の型の型の識別子を取得する ICorDebugType インターフェイスを拡張します。  
@@ -41,7 +41,7 @@ ms.locfileid: "61993786"
 ## <a name="example"></a>例  
  次のコード フラグメントの使用を示しています、 [icordebugtype 2::gettypeid](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)メソッド。  
   
-```  
+```cpp  
 // (error checking omitted for brevity)  
 // given an ICorDebugType *pType  
   
@@ -55,7 +55,7 @@ pType2->GetTypeID(&id);
 ```  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

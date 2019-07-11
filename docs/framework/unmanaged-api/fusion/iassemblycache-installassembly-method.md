@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 953a3123b00280484dd71965c34119e8eeacaf47
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cd420f0f166b0b17e5fbaf08d6bedd6651188b1c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623771"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778739"
 ---
 # <a name="iassemblycacheinstallassembly-method"></a>IAssemblyCache::InstallAssembly メソッド
 指定したアセンブリをグローバル アセンブリ キャッシュにインストールします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT InstallAssembly (  
     [in] DWORD dwFlags,  
     [in] LPCWSTR pszManifestFilePath,  
@@ -52,7 +52,7 @@ HRESULT InstallAssembly (
  [in]A [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)インストール用のデータを含む構造体。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Fusion.h  
   

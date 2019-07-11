@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b14421bbe71b68ca677cf712512a7f10aa30583
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e1c986de068cd79ae3662c82ed24906d42bf2780
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763627"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759039"
 ---
 # <a name="iclrsyncmanagergetmonitorowner-method"></a>ICLRSyncManager::GetMonitorOwner メソッド
 取得、 [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)指定したクッキーで識別されるモニターを所有するインスタンス。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetMonitorOwner (  
     [in]  SIZE_T     cookie,  
     [out] IHostTask *ppOwnerHostTask  
@@ -63,7 +63,7 @@ HRESULT GetMonitorOwner (
  `GetMonitorOwner` 常にすぐを返し、呼び出しの後にいつでも呼び出すことができます`CreateMonitorEvent`します。 ホストは、タスクがイベントで待機するまで待機する必要はありません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab0e28bd21b66f370a1a1e82359fe474574fd7bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 860b87b09ee487f893a1bba2aaa34292c50ffcb7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987963"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764342"
 ---
 # <a name="icordebugmodule2applychanges-method"></a>ICorDebugModule2::ApplyChanges メソッド
 実行中のプロセスにメタデータの変更と Microsoft intermediate language (MSIL) コードの変更を適用します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ApplyChanges (  
     [in] ULONG                       cbMetadata,  
     [in, size_is(cbMetadata)] BYTE   pbMetadata[],  
@@ -65,7 +65,7 @@ HRESULT ApplyChanges (
  場合、`ApplyChanges`メソッドが失敗した場合は、デバッグ セッションが無効の状態と、再起動する必要があります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

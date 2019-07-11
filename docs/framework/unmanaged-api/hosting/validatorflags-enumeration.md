@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fa10ae1cf67339a6719210f3162f19ac648e8ee5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5f38231eb6a5911527c21ee3304fc77cfcf8e90
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942351"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776523"
 ---
 # <a name="validatorflags-enumeration"></a>ValidatorFlags 列挙型
 呼び出しで実行される検証の種類を示す値を含む、 [iclrvalidator::validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)メソッド。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 enum ValidatorFlags {  
     VALIDATOR_EXTRA_VERBOSE =       0x00000001,  
     VALIDATOR_SHOW_SOURCE_LINES =   0x00000002,  
@@ -49,7 +49,7 @@ enum ValidatorFlags {
 |`VALIDATOR_SHOW_SOURCE_LINES`|検証エラー メッセージが検証エラーを発生させるソース コードの行を含める必要がありますを指定します。 .NET Framework version 2.0 でこのフィールドの値が正しくありません。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** IValidator.idl, IValidator.h  
   

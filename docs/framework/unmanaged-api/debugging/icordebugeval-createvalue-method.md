@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c16f6d1334888fc389a7c39cf0a3865afca2085
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3ada3a06a2beb8f21c3e24665c0f1f8e7c48515f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934746"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752949"
 ---
 # <a name="icordebugevalcreatevalue-method"></a>ICorDebugEval::CreateValue メソッド
 0 または null の初期値を持つ指定した型の値を作成します。  
@@ -31,7 +31,7 @@ ms.locfileid: "61934746"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CreateValue (  
     [in] CorElementType     elementType,  
     [in] ICorDebugClass     *pElementClass,  
@@ -57,7 +57,7 @@ HRESULT CreateValue (
  場合の値`elementType`ELEMENT_TYPE_CLASS は、"ICorDebugReferenceValue"を取得する (で返される`ppValue`) null オブジェクト参照を表します。 このオブジェクトを使用して、オブジェクト参照のパラメーターを持つ関数の評価に null を渡すことができます。 設定することはできません、`ICorDebugValue`に何も常に null です。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

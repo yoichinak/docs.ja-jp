@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d9dda1fb38546138d52b5fe61754d5497e676c37
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91c80566ed284403ad559583a1e4f1025eb09985
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777417"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755319"
 ---
 # <a name="imetadataimport2getpekind-method"></a>IMetaDataImport2::GetPEKind メソッド
 取得ポータブル実行可能 (PE) でコードの性質を識別する値ファイルで、通常、DLL または EXE ファイルの現在のメタデータ スコープで定義されています。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetPEKind (  
    [out] DWORD *pdwPEKind,  
    [out] DWORD *pdwMachine  
@@ -46,14 +46,14 @@ HRESULT GetPEKind (
 ## <a name="remarks"></a>Remarks  
  によって参照される値、`pdwMachine`パラメーターは、次のいずれかを指定できます。  
   
-|[値]|コンピューターのアーキテクチャ|  
+|値|コンピューターのアーキテクチャ|  
 |-----------|--------------------------|  
 |IMAGE_FILE_MACHINE_I386<br /><br /> 0x014C|x86|  
 |IMAGE_FILE_MACHINE_IA64<br /><br /> 0x0200|Intel IPF|  
 |IMAGE_FILE_MACHINE_AMD64<br /><br /> 0x8664|X64|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
