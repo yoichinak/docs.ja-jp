@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b8f2ada73686dfbe5629e21cfc6468becbd4ccc5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 58293929b576493d3751f9ce30ba00cec92e180c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597363"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758168"
 ---
 # <a name="icorprofilercallback4rejitcompilationstarted-method"></a>ICorProfilerCallback4::ReJITCompilationStarted メソッド
 関数を再コンパイル、ジャストイン タイム (JIT) コンパイラが開始されたことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ReJITCompilationStarted(   
     [in] FunctionID functionId,  
     [in] ReJITID    rejitId,  
@@ -52,7 +52,7 @@ HRESULT ReJITCompilationStarted(
  プロファイラーは、場合、2 つのスレッドではコールバックを行う同時に JIT 再コンパイルのコールバックのシーケンスをサポートする必要があります。 たとえば、スレッド A が呼び出す`ReJITCompilationStarted`ただし、スレッド A 呼び出しの前に[ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md)、スレッド B 呼び出し[icorprofilercallback::exceptionsearchfunctionenter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md)関数の id。`ReJITCompilationStarted`スレッド A のコールバック関数の ID がまだされないこと有効が表示されるためへの呼び出し[ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md)プロファイラーがまだ受信したされません。 ただし、この場合、関数の ID は有効です。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   

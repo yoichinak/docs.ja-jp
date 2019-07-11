@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a01b4203145f6ffee4e3a11a3526f0b83e3dc741
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d500584afd608f79e41e932be259d29ae51db2db
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62042524"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781580"
 ---
 # <a name="imetadataimport2getversionstring-method"></a>IMetaDataImport2::GetVersionString メソッド
 アセンブリのビルドに使用されたランタイムのバージョン番号を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetVersionString (  
    [out] LPWSTR      pwzBuf,  
    [in]  DWORD       ccBufSize,  
@@ -51,7 +51,7 @@ HRESULT GetVersionString (
  `GetVersionString`メソッドは、現在のメタデータ スコープのビルドのバージョンを取得します。 スコープが保存されていないこと、ビルドのバージョンはありませんし、空の文字列が返されます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
