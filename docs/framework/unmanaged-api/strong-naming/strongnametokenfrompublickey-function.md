@@ -20,12 +20,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fbfd3ae32f4d3033894fdaf6b1bcc880c324e928
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 68be16c559431de871dc9ddb1963897b0927d49a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000286"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783165"
 ---
 # <a name="strongnametokenfrompublickey-function"></a>StrongNameTokenFromPublicKey 関数
 公開キーを表すトークンが取得されます。 厳密な名前トークンは、公開キーの短縮形です。  
@@ -34,7 +34,7 @@ ms.locfileid: "62000286"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 BOOLEANStrongNameTokenFromPublicKey (   
     [in]  BYTE    *pbPublicKeyBlob,  
     [in]  ULONG   cbPublicKeyBlob,  
@@ -65,7 +65,7 @@ BOOLEANStrongNameTokenFromPublicKey (
  場合、`StrongNameTokenFromPublicKey`関数が正常に完了、呼び出すしていない、 [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)最後に生成されたエラーを取得します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** StrongName.h  
   

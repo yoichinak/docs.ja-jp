@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7d51e21eab4ac1edc81b58171e5382ada170a57f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bc4963dcf686fe62f473aea1af86868df03718df
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946343"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768970"
 ---
 # <a name="icordebugthread2getconnectionid-method"></a>ICorDebugThread2::GetConnectionID メソッド
 この ICorDebugThread2 オブジェクトの接続識別子を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetConnectionID (  
     [out] CONNID *pdwConnectionId  
 );  
@@ -45,7 +45,7 @@ HRESULT GetConnectionID (
  このスレッドがの Microsoft SQL Server 2005 Analysis Services (SSAS)、インスタンスに接続されている場合、`CONNID`サーバー プロセス識別子 (SPID) にマップされます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

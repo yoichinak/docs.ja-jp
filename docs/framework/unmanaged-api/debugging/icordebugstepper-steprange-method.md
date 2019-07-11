@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b18474aeaa79224de5371df3ff0cac5ed9bf4ff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7e1ace501bf5de741ea110fe4d3bb4bc44843bf8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994285"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760526"
 ---
 # <a name="icordebugsteppersteprange-method"></a>ICorDebugStepper::StepRange メソッド
 Icordebugstepper シングル ステップ実行し、その格納のスレッドでは、指定した範囲の最後のタスクを超えるコードに達した場合に返されるを表示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT StepRange (  
     [in] BOOL     bStepIn,  
     [in, size_is(cRangeCount)] COR_DEBUG_STEP_RANGE ranges[],  
@@ -55,7 +55,7 @@ HRESULT StepRange (
  範囲では、メソッドの Microsoft intermediate language (MSIL) コードに対して相対的です。 呼び出す[icordebugstepper::setrangeil](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md)で`false`メソッドのネイティブ コードの基準とした範囲にします。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

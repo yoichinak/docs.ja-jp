@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 861f4c18f4c5151dc7215d300775928b88f018aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 18197f0c500a205a66bdda8a9401f31d4208ae67
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775207"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780433"
 ---
 # <a name="corprfclausetype-enumeration"></a>COR_PRF_CLAUSE_TYPE 列挙型
 コードが入った、または出た例外句のタイプを示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum {  
     COR_PRF_CLAUSE_NONE = 0,  
     COR_PRF_CLAUSE_FILTER = 1,  
@@ -47,7 +47,7 @@ typedef enum {
 |`COR_PRF_CLAUSE_FINALLY`|例外の句は、`finally`ステートメント。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   

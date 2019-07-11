@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cabe2f1ad5b586fed24c7317bb3a7b8407e09158
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a659e139040174a66043283ed4633d9c9d223ce8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782513"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774037"
 ---
 # <a name="icorprofilerinfo2getnotifiedexceptionclauseinfo-method"></a>ICorProfilerInfo2::GetNotifiedExceptionClauseInfo メソッド
 例外の句のネイティブのアドレスとフレームの情報を取得します (`catch`/`finally`/`filter`) を実行するのには、またはが実行されています。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetNotifiedExceptionClauseInfo(  
     [out] COR_PRF_EX_CLAUSE_INFO *pinfo);  
 ```  
@@ -44,7 +44,7 @@ HRESULT GetNotifiedExceptionClauseInfo(
  この呼び出しは、照合 Leave のコールバックを受け取るかではその句のままに通知を現在の句で入れ子になった例外がスローされるまでに、Enter コールバックのいずれかの後にいつでも実行できます。 スローされた例外をエスケープするためのことはできませんに注意してください、`filter`が常に休暇通知その場合、例外句。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   

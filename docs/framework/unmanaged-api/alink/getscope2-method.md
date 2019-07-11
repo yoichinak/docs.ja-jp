@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a3c6b9e1239dc1baed9428d4fe967eb8274a9304
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0c0abc63610f3f1ed6e8a556c44ee15edc1ea20b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789806"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741839"
 ---
 # <a name="getscope2-method"></a>GetScope2 メソッド
 インポート スコープを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetScope2(  
     mdAssembly AssemblyID,  
     mdToken FileToken,  

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 872164e2f48f1ef234b729b28aa9b1af1589c0fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1b519ea4062682a56b5b4e277de22b14799f65d0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608984"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783214"
 ---
 # <a name="getdemultiplexedstub-function"></a>GetDemultiplexedStub 関数
 Windows 管理から非同期呼び出しを受信する際にクライアントを支援するオブジェクト転送シンクが作成されます。
@@ -30,7 +30,7 @@ Windows 管理から非同期呼び出しを受信する際にクライアント
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetDemultiplexedStub (
    [in] IUnknown*    pObject, 
    [in] boolean      isLocal, 
@@ -56,7 +56,7 @@ HRESULT GetDemultiplexedStub (
 関数が失敗した場合、戻り値が 0 以外のエラー コードにします。 拡張エラー情報を取得する、 [GetErrorInfo](geterrorinfo.md)関数。
     
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   

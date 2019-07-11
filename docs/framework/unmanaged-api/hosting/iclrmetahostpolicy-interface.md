@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 426d77114d3deeff94c39e2f5fc1f2e56e753641
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 56a34a8f185ce600f4792cf05c3e95623b70ad6c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490278"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776540"
 ---
 # <a name="iclrmetahostpolicy-interface"></a>ICLRMetaHostPolicy インターフェイス
 提供、 [GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)メソッドで、ポリシーの条件に基づいて、共通言語ランタイム (CLR) インターフェイスへのポインターを返します、アセンブリ、バージョン、および構成ファイルを管理します。  
@@ -35,7 +35,7 @@ ms.locfileid: "66490278"
 ## <a name="remarks"></a>Remarks  
  このインターフェイスへの参照を呼び出して取得することができます、 [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)次のコードに示すように機能します。  
   
-```  
+```cpp  
 ICLRMetaHostPolicy *pMetaHostPolicy = NULL;  
 HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHostPolicy,  
                    IID_ICLRMetaHostPolicy, (LPVOID*)&pMetaHostPolicy);  

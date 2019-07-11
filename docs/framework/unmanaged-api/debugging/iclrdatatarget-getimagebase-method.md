@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e823911280f52e16c745c9c77fe17b49bd35dc0b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9dbb655d6ed0b9bd88c5eedf61a191401a805fb3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698285"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738755"
 ---
 # <a name="iclrdatatargetgetimagebase-method"></a>ICLRDataTarget::GetImageBase メソッド
 指定したイメージのメモリのベース アドレスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetImageBase (  
     [in, string] LPCWSTR    imagePath,  
     [out] CLRDATA_ADDRESS   *baseAddress  
@@ -47,7 +47,7 @@ HRESULT GetImageBase (
  イメージのファイル名では、可能性がありますか、パスがない可能性があります。 照合はパス全体で行われますパスが指定されている場合それ以外の場合、照合はファイル名でのみ行われます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** ClrData.idl、ClrData.h  
   

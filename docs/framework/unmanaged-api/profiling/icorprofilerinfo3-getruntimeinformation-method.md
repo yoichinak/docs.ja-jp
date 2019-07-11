@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a13e3e525c7f019e7dc49111b88ac374345830af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7087864d0305f0cdb0b4977f037cf5a7c4dee18d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000598"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783141"
 ---
 # <a name="icorprofilerinfo3getruntimeinformation-method"></a>ICorProfilerInfo3::GetRuntimeInformation メソッド
 プロファイリングされている共通言語ランタイム (CLR) のバージョンについて説明します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetRuntimeInformation(  
        [out] USHORT *pClrInstanceId,  
        [out] COR_PRF_RUNTIME_TYPE *pRuntimeType,  
@@ -75,7 +75,7 @@ HRESULT GetRuntimeInformation(
  任意のパラメーターに null を渡すことがあります。 ただし、 `pcchVersionString` null にすることはできませんしない限り、`szVersionString`も null です。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   

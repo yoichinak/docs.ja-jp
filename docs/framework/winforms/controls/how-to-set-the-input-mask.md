@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
-ms.openlocfilehash: dd156f9e5bf6519363f66ca61687f1e9f2bfc6ab
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ac747bf46c4dd1451e58615b1ec0311d75c899e8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630428"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760477"
 ---
 # <a name="how-to-set-the-input-mask"></a>方法: 定型入力を設定する
 マスクされたテキスト ボックス コントロールは、許可または拒否のユーザー入力の宣言の構文をサポートする強化されたテキスト ボックス コントロールです。 Mask プロパティを設定して、アプリケーションで任意のカスタム検証ロジックを記述することがなく、使用可能なユーザー入力を指定できます。 詳細については、の「解説」を参照してください、<xref:System.Windows.Forms.MaskedTextBox>クラス。  
@@ -19,7 +19,7 @@ ms.locfileid: "64630428"
 ## <a name="setting-the-mask-property-manually"></a>Mask プロパティを手動で設定  
  Mask プロパティをサポートする文字に精通する場合は、手動で入力することができます。 Mask プロパティをサポートする、文字の概要については、「解説」を参照してください、<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>プロパティ。  
   
-#### <a name="to-set-the-mask-property-manually"></a>Mask プロパティを手動で設定するには  
+### <a name="to-set-the-mask-property-manually"></a>Mask プロパティを手動で設定するには  
   
 1. **デザイン**ビューで、<xref:System.Windows.Forms.MaskedTextBox>します。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "64630428"
 ## <a name="using-the-input-mask-dialog-box"></a>[定型入力] ダイアログ ボックスを使用します。  
  [定型入力] ダイアログ ボックスでは、いくつか定義済みの入力マスクを提供します。 定義済みのマスクを変更または、独自のマスクを手動で入力することもできます。  
   
-#### <a name="to-open-the-input-mask-dialog-box"></a>定型入力 ダイアログ ボックスを開きます  
+### <a name="to-open-the-input-mask-dialog-box"></a>定型入力 ダイアログ ボックスを開きます  
   
 1. **デザイン**ビューで、<xref:System.Windows.Forms.MaskedTextBox>します。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "64630428"
   
      **定型入力** ダイアログ ボックスが表示されます。  
   
-#### <a name="to-use-the-input-mask-dialog-box"></a>定型入力 ダイアログ ボックスを使用するには  
+### <a name="to-use-the-input-mask-dialog-box"></a>定型入力 ダイアログ ボックスを使用するには  
   
 1. (省略可能)一覧で定義済みのマスクのいずれかをクリックします。  
   

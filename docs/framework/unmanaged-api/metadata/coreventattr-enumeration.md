@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a1a50c15071ea1e696e508c779309225c7e7bfa2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7562ec10b6822ae0ec1478cdb077578493ea0b7a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046021"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781879"
 ---
 # <a name="coreventattr-enumeration"></a>CorEventAttr 列挙型
 イベントのメタデータを記述する値が格納されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum CorEventAttr {  
   
     evSpecialName           =   0x0200,  
@@ -48,7 +48,7 @@ typedef enum CorEventAttr {
 |`evRTSpecialName`|イベント名のエンコーディングに共通言語ランタイムが確認する必要がありますを指定します。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorHdr.h  
   

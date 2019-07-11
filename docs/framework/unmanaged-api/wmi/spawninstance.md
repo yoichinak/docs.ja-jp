@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8056ef18089f56f1f9b6717d505fa3d058957541
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 97a3ab62cda82526a7ad8b8e5d985d9fce7d6f07
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782528"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783072"
 ---
 # <a name="spawninstance-function"></a>SpawnInstance 関数
 クラスの新しいインスタンスが作成されます。    
@@ -30,7 +30,7 @@ ms.locfileid: "61782528"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SpawnInstance (
    [in] int                  vFunc, 
    [in] IWbemClassObject*    ptr, 
@@ -56,11 +56,11 @@ HRESULT SpawnInstance (
 
 この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
 
-|定数  |値  |説明  |
+|定数  |Value  |説明  |
 |---------|---------|---------|
 | `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` 有効なクラス定義ではないと、新しいインスタンスを生成することはできません。 完了しないか、それが登録されていない Windows の管理を呼び出すことによって[PutClassWmi](putclasswmi.md)します。 |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 操作を完了するのに十分なメモリがあります。 |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` は `null`です。 |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` は `null` です。 |
 | `WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
   
 ## <a name="remarks"></a>Remarks
@@ -72,7 +72,7 @@ HRESULT SpawnInstance (
 返される新しいオブジェクト`ppNewClass`自動的に現在のオブジェクトのサブクラスになります。 この動作を上書きすることはできません。 サブクラス (派生クラス) を作成できる他の方法はありません。
 
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   

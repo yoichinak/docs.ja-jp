@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc36468a2016822e884ec3a36a23c75477a00a2d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1e7bbac17d9a9ae191a5ad6d69b52a806383562
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045384"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781609"
 ---
 # <a name="corsavesize-enumeration"></a>CorSaveSize 列挙型
 保存操作のサイズの照会で要求される精度のレベルを示す値が格納されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum CorSaveSize {  
     cssAccurate                = 0x0000,   
     cssQuick                   = 0x0001,   
@@ -45,7 +45,7 @@ typedef enum CorSaveSize {
 |`cssDiscardTransientCAs`|破棄できる型を削除することを指定します。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorHdr.h  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2436288e2f2f241cab15b16abf4df99c73caec25
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb3044927e0d9975ed9347cd4f4896b3b75d3e29
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789421"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749624"
 ---
 # <a name="ihosttaskmanagergetcurrenttask-method"></a>IHostTaskManager::GetCurrentTask メソッド
 この呼び出しが行われた元のオペレーティング システム スレッドで現在実行しているタスクには、インターフェイス ポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetCurrentTask (  
     [out] IHostTask **pTask  
 );  
@@ -55,7 +55,7 @@ HRESULT GetCurrentTask (
  ホストの設定もできます、`pTask`を開始しなかったタスクが CLR を入力するを防ぐために null パラメーター。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

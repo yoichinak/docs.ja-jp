@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e480c408c10eb9e135f260426750f7747e5d8ce5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c150f4bda901627fc21ed54926c3cf959bb829a3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62044773"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776304"
 ---
 # <a name="imetadataassemblyemitdefineassemblyref-method"></a>IMetaDataAssemblyEmit::DefineAssemblyRef メソッド
 このアセンブリが参照するアセンブリのメタデータを含む `AssemblyRef` 構造体を作成し、関連付けられたメタデータ トークンを返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT DefineAssemblyRef (  
     [in]  void                *pbPublicKeyOrToken,  
     [in]  ULONG               cbPublicKeyOrToken,  
@@ -56,7 +56,7 @@ HRESULT DefineAssemblyRef (
  [in]参照アセンブリのバージョン、プラットフォーム、ロケール情報を含む ASSEMBLYMETADATA インスタンス。  
   
  `pbHashValue`  
- [in]参照先のアセンブリに関連付けられたデータをハッシュします。 省略可能です。  
+ [in]参照先のアセンブリに関連付けられたデータをハッシュします。 任意。  
   
  `cbHashValue`  
  [in]バイト サイズ`pbHashValue`します。  
@@ -73,7 +73,7 @@ HRESULT DefineAssemblyRef (
  実行時に、参照先アセンブリの詳細については、"ビルド"と情報を表すことを示す値をアセンブリの競合回避モジュールに渡されます。 アセンブリ リゾルバーは、ポリシーを適用します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

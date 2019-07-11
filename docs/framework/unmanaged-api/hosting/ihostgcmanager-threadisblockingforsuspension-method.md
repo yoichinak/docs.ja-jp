@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 740f408b84dad67ee20c2508ae42a9569ed095f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c0c59d9f5abb200b17d3c46915e73fd3b9e9c8fd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993240"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780578"
 ---
 # <a name="ihostgcmanagerthreadisblockingforsuspension-method"></a>IHostGCManager::ThreadIsBlockingForSuspension メソッド
 メソッドの呼び出し元のスレッドは、ホストに通知のガベージ コレクションをブロックします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ThreadIsBlockingForSuspension ();  
 ```  
   
@@ -51,7 +51,7 @@ HRESULT ThreadIsBlockingForSuspension ();
 >  ホストは、タスクを再スケジュールへの呼び出し後にのみ`ThreadIsBlockingForSuspension`します。 ランタイム呼び出し後[SuspensionStarting](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionstarting-method.md)ホストのタスクを再スケジュールする必要があります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

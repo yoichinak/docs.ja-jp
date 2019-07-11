@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e9aaf7325b8e7e65aa98904513cc7efe94e35087
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 62682ca19b9f987370ca11d2bda63fba27f28474
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62041809"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783001"
 ---
 # <a name="icorprofilercallbackruntimesuspendaborted-method"></a>ICorProfilerCallback::RuntimeSuspendAborted メソッド
 ランタイムで発生しているランタイムの中断が中止されたことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT RuntimeSuspendAborted();  
 ```  
   
@@ -41,7 +41,7 @@ HRESULT RuntimeSuspendAborted();
  `RuntimeSuspendAborted`コールバックと同じスレッドで発生することが保証されます、`RuntimeSuspendStarted`コールバック。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   

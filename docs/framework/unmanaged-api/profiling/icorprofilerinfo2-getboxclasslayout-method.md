@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4dac7e38d1e767a3edeef932a0c0916daffe24b8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0d00c28862036c21c44f46c23fb09e947628dcf3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049571"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783047"
 ---
 # <a name="icorprofilerinfo2getboxclasslayout-method"></a>ICorProfilerInfo2::GetBoxClassLayout メソッド
 指定した値型の配置がボックス化されるときに場所に関する情報を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetBoxClassLayout(  
     [in] ClassID classId,  
     [out] ULONG32 *pBufferOffset);  
@@ -46,7 +46,7 @@ HRESULT GetBoxClassLayout(
  `pBufferOffset`値は、値の型のボックス内の場所です。 後`pBufferOffset`が適用されるオブジェクトの値を解釈するボックス化されたオブジェクトに値型のクラス レイアウトを使用できます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   

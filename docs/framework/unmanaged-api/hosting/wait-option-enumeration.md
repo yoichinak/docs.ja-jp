@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ac28f28d4d284ba26fadd46e53ebeb8e5b5f3cd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eda866c1a1f1f69f0d042ccfde3dfad293df9b37
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984153"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776510"
 ---
 # <a name="waitoption-enumeration"></a>WAIT_OPTION 列挙型
 ホストのアクションは、共通言語ランタイム (CLR) ブロックによって要求された操作を実行する必要がありますかを示す値が含まれています。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum {  
     WAIT_MSGPUMP       = 0x1,  
     WAIT_ALERTABLE     = 0x2,  
@@ -48,7 +48,7 @@ typedef enum {
  [Ihosttaskmanager::sleep](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-sleep-method.md)と[ihosttaskmanager::switchtotask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md)両方のメソッドは、この型のパラメーターを受け取ります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

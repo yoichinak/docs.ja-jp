@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 66d650adb39a9c7dade0936ec671ae5a8b4aeecd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 944c641c39ddef7add0e9f382dc7d35068668455
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045470"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781726"
 ---
 # <a name="cornativelinktype-enumeration"></a>CorNativeLinkType 列挙型
 ネイティブ コード内のリンクの種類を示す値を提供します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum   
 {  
     nltNone       = 1,  
@@ -52,7 +52,7 @@ typedef enum
 |`nltMaxValue`|使用しません。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

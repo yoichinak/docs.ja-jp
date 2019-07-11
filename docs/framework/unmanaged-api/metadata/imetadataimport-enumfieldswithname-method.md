@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cf624695136a9397937f05b28dec18493c8e12d7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 71a2c7a61d573c1e17d0e8fefcd34d60e05ed3c5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62042706"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780478"
 ---
 # <a name="imetadataimportenumfieldswithname-method"></a>IMetaDataImport::EnumFieldsWithName メソッド
 指定した名前を持つ指定した型の FieldDef トークンを列挙します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EnumFieldsWithName (  
    [in, out] HCORENUM    *phEnum,   
    [in]  mdTypeDef       cl,   
@@ -70,7 +70,7 @@ HRESULT EnumFieldsWithName (
 |`S_FALSE`|列挙するフィールドはありません。 その場合は、`pcTokens`は 0 です。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
