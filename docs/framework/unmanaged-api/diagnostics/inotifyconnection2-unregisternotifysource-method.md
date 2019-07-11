@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 742be1467d2f1e6eb7d8567ddf85f8e65ea4b8d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7b8a8c3dbfb7b9949811025846484ab233ed3741
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794330"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776626"
 ---
 # <a name="inotifyconnection2unregisternotifysource-method"></a>INotifyConnection2::UnregisterNotifySource メソッド
 接続から、指定された通知のソース オブジェクトを削除します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT UnregisterNotifySource  
 (  
     [in]  INotifySource2*  in_pNotifySource  

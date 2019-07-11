@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 57efd4f29ba7e28adf1af03030d7f83eb32c1c2b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3e48292d1b0bfaa990cca1b290f769d96938d433
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763673"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759018"
 ---
 # <a name="iclrtaskabort-method"></a>ICLRTask::Abort メソッド
 共通言語ランタイム (CLR) がタスクを中止する要求を現在[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)インスタンスが表す。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Abort ();  
 ```  
   
@@ -48,7 +48,7 @@ HRESULT Abort ();
  CLR の発生を<xref:System.Threading.ThreadAbortException>ホストを呼び出したときに`Abort`。 ファイナライザー、または例外処理機構を実行するなど、ユーザー コードを待つことがなく、例外情報が初期化された後すぐに返します。 呼び出す`Abort`のためです。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   
