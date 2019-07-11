@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 82abeb0ce3db075d794787bb1fcd5bc18321bef2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ae87dd4538a9a8e88591f498c0ce77b51bfa852
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906179"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781617"
 ---
 # <a name="correftodefcheck-enumeration"></a>CorRefToDefCheck 列挙型
 コードを最適化するために定義に変換される、参照先アイテムを制御するフラグを指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum CorRefToDefCheck {  
     MDRefToDefDefault           = 0x00000003,  
     MDRefToDefAll               = 0xffffffff,  
@@ -49,7 +49,7 @@ typedef enum CorRefToDefCheck {
 |`MDMemberRefToDef`|メンバーの参照のみが定義に変換されることを指定します。 つまり、メンバーの参照は、メソッドの定義またはフィールドの定義のいずれかに変換する必要があります。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorHdr.h  
   

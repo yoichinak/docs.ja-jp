@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6c715183d3ae04130b729a9680335d65959836a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 989d046bba1ba3170649e9d908a850bd1177fdd2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946732"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773833"
 ---
 # <a name="isframeworkassembly-function"></a>IsFrameworkAssembly 関数
 指定したアセンブリが管理されているかどうかを示す値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT IsFrameworkAssembly (  
     [in]  LPCWSTR pwzAssemblyReference,  
     [out] LPBOOL  pbIsFrameworkAssembly,  
@@ -58,7 +58,7 @@ HRESULT IsFrameworkAssembly (
  名前付きのアセンブリ、.NET Framework の一部でない場合、または場合、`pwzAssemblyReference`パラメーターは、アセンブリを指定していない`pbIsFrameworkAssembly`のブール値を含む`false`します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

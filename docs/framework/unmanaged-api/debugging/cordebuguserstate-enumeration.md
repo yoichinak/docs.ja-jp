@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c54b2af6e7a200db89bfd7335868a629d7a886fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 76fbbb3f924f610b604586dca78cab344217b544
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61724110"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739454"
 ---
 # <a name="cordebuguserstate-enumeration"></a>CorDebugUserState 列挙型
 スレッドのユーザーの状態を示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum CorDebugUserState {  
     USER_STOP_REQUESTED     =  0x01,  
     USER_SUSPEND_REQUESTED  =  0x02,  
@@ -44,7 +44,7 @@ typedef enum CorDebugUserState {
   
 ## <a name="members"></a>メンバー  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |`USER_STOP_REQUESTED`|スレッドの終了が要求されています。|  
 |`USER_SUSPEND_REQUESTED`|スレッドの中断が要求されています。|  
@@ -62,7 +62,7 @@ typedef enum CorDebugUserState {
  使用して、 [icordebugthread::getuserstate](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md)スレッドのユーザーの状態を取得します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
