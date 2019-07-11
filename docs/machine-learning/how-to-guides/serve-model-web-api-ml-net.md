@@ -46,7 +46,7 @@ ASP.NET Core Web API を使用して、事前トレーニング済みの ML.NET 
 ### <a name="add-model-to-aspnet-core-web-api-project"></a>モデルを ASP.NET Core Web API プロジェクトに追加する
 
 1. 事前トレーニング済みのモデルを *MLModels* ディレクトリにコピーします。
-1. ソリューション エクスプローラーで、モデルの zip ファイルを右クリックし、[プロパティ] を選択します。 [プロパティ] で [出力ディレクトリにコピー] の値を [新しい場合はコピーする] に変更します。
+2. ソリューション エクスプローラーで、モデルの zip ファイルを右クリックし、[プロパティ] を選択します。 [プロパティ] で [出力ディレクトリにコピー] の値を [新しい場合はコピーする] に変更します。
 
 ## <a name="create-data-models"></a>データモデルを作成する
 
@@ -102,7 +102,7 @@ ASP.NET Core Web API を使用して、事前トレーニング済みの ML.NET 
 
 ## <a name="register-predictionenginepool-for-use-in-the-application"></a>アプリケーションで使用する PredictionEnginePool を登録する
 
-1つの予測を行うのに [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) を使用します。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) を自身のアプリケーションで使用するには、必要に応じて生成しなければなりません。その場合、ベストプラクティスとして、依存関係を挿入することを検討します。
+1つの予測を行うのに [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) を使用します。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) をお使いのアプリケーションで使用するには、必要に応じて作成しなければなりません。その場合、ベストプラクティスとして、依存関係を挿入することを検討します。
 
 [ASP.NET Core での依存関係の挿入](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1)については、リンク先で提供されている詳しい情報を確認してください。
 
@@ -140,7 +140,7 @@ HTTP 要求の受信の処理をするために、コントローラーを作成
 
 1. ソリューション エクスプローラーで、*Controllers* ディレクトリを右クリックし、 **[追加] > [コントローラー]** の順に選択します。
 1. **[新しい項目の追加]** ダイアログ ボックスで、 **[空の API コントローラー]** を選択し、 **[追加]** を選択します。
-1. プロンプトで、 **[コントローラー名]** フィールドを*PredictController.cs* に変更します。 次に、[追加] を選択します。コードエディターで *PredictController.cs* ファイルが開きます。*PredictController.cs* の先頭に次の using ステートメントを追加します。
+3. プロンプトで、 **[コントローラー名]** フィールドを*PredictController.cs* に変更します。 次に、[追加] を選択します。コードエディターで *PredictController.cs* ファイルが開きます。*PredictController.cs* の先頭に次の using ステートメントを追加します。
 
     ```csharp
     using System;
@@ -178,14 +178,14 @@ HTTP 要求の受信の処理をするために、コントローラーを作成
     }
     ```
 
-このコードでは、`PredictionEnginePool` を依存関係の挿入によって取得してコントローラーのコンストラクターに渡すことで割り当ています。そして、`Predict` コントローラーの `Post` メソッドでは、`PredictionEnginePool` を使用して予測を行い、成功した場合はその結果をユーザーに返します。
+このコードでは、`PredictionEnginePool` を依存関係の挿入によって取得してコントローラーのコンストラクターに渡すことで割り当てています。そして、`Predict` コントローラーの `Post` メソッドでは、`PredictionEnginePool` を使用して予測を行い、成功した場合はその結果をユーザーに返します。
 
 ## <a name="test-web-api-locally"></a>Web API をローカルでテストする
 
 すべてが設定されたので、アプリケーションをテストしましょう。
 
 1. アプリケーションを実行します。
-1. PowerShell を開き、次のコードを入力します。PORT には、アプリケーションがリスニングしているポートを入力します。
+2. PowerShell を開き、次のコードを入力します。PORT には、アプリケーションがリスニングしているポートを入力します。
 
     ```powershell
     Invoke-RestMethod "https://localhost:<PORT>/api/predict" -Method Post -Body (@{Text="This was a very bad steak"} | ConvertTo-Json) -ContentType "application/json"
