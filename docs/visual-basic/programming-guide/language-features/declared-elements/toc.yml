@@ -1,7 +1,7 @@
 - name: 宣言された要素
   href: index.md
   items:
-    - name: Declared Element Names
+    - name: 宣言された要素の名前
       href: declared-element-names.md
     - name: 宣言された要素の特性
       href: declared-element-characteristics.md
@@ -20,7 +20,7 @@
           items:
             - name: '方法: 変数の可用性を制御する'
               href: how-to-control-the-availability-of-a-variable.md
-        - name: References to Declared Elements
+        - name: 宣言された要素の参照
           href: references-to-declared-elements.md
         - name: シャドウ
           href: shadowing.md
