@@ -214,12 +214,6 @@
               href: keywords/sizeof.md
             - name: nameof
               href: keywords/nameof.md
-        - name: 変換キーワード
-          items:
-            - name: explicit
-              href: keywords/explicit.md
-            - name: implicit
-              href: keywords/implicit.md
         - name: アクセス キーワード
           items:
             - name: base
@@ -317,6 +311,9 @@
         - name: 型テストおよび変換演算子
           href: operators/type-testing-and-conversion-operators.md
           displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), cast'
+        - name: ユーザー定義の変換演算子
+          href: operators/user-defined-conversion-operators.md
+          displayName: 'implicit, explicit'
         - name: ポインターに関連する演算子
           href: operators/pointer-related-operators.md
           displayName: '&, *, ->, [], +, -, ++, --, ==, !=, <, >, <=, >=, dereference, address-of, indirection'
