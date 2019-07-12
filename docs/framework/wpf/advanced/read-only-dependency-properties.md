@@ -5,12 +5,12 @@ helpviewer_keywords:
 - dependency properties [WPF], read-only
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
-ms.openlocfilehash: 327897d50bd23a739d015a4151459d9d4a6fc1a0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e74f7c2790a73211bcc8e6f13dcf2dfdc02e678b
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611780"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859978"
 ---
 # <a name="read-only-dependency-properties"></a>読み取り専用の依存関係プロパティ
 このトピックでは、既存の読み取り専用の依存関係プロパティ、カスタムの読み取り専用の依存関係プロパティを作成するシナリオと手法など、読み取り専用の依存関係プロパティについて説明します。  
@@ -37,7 +37,7 @@ ms.locfileid: "64611780"
   
 - 読み取り専用登録によって返されるオブジェクトは<xref:System.Windows.DependencyPropertyKey>なく<xref:System.Windows.DependencyProperty>します。 やはりこのフィールドをメンバーとして格納する必要がありますが、通常は、型のパブリック メンバーにはしません。  
   
- 読み取り専用の依存関係プロパティを補足するために使用するプライベートのフィールドまたは値はすべて、適当なロジックを使用して完全に書き込み可能にしてかまいません。 ただし、初期化で、またはランタイム ロジックの一部として、プロパティを設定する最も簡単な方法は、プロパティ システムを使用しないでプライベートなバッキング フィールドを直接設定するのではなく、プロパティ システムの [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] を使用する方法です。 具体的には、署名がある<xref:System.Windows.DependencyObject.SetValue%2A>型のパラメーターを受け入れる<xref:System.Windows.DependencyPropertyKey>します。 どのにアクセスを設定するか可能性がありますに影響はこの値、アプリケーション ロジック内で、プログラムで設定する方法と場所、<xref:System.Windows.DependencyPropertyKey>依存関係プロパティを最初に登録したときに作成します。 このロジックすべてをクラス内で処理する場合はプライベートにでき、アセンブリの他の部分から設定する必要がある場合は内部に設定します。 呼び出す方法の 1 つは、<xref:System.Windows.DependencyObject.SetValue%2A>ストアド プロパティの値が変更する必要があるクラスのインスタンスに通知する関連イベントのクラスのイベント ハンドラー内で。 別のアプローチがペアになっているを使用して、依存関係プロパティを結び、<xref:System.Windows.PropertyChangedCallback>と<xref:System.Windows.CoerceValueCallback>登録時にこれらのプロパティのメタデータの一部としてコールバック。  
+ 読み取り専用の依存関係プロパティを補足するために使用するプライベートのフィールドまたは値はすべて、適当なロジックを使用して完全に書き込み可能にしてかまいません。 ただし、プロパティを最初に、またはランタイム ロジックの一部として設定する最も簡単な方法は、プロパティ システムの Api ではなく、プロパティ システムの回避とプライベート バッキング フィールドを直接設定を使用します。 具体的には、署名がある<xref:System.Windows.DependencyObject.SetValue%2A>型のパラメーターを受け入れる<xref:System.Windows.DependencyPropertyKey>します。 どのにアクセスを設定するか可能性がありますに影響はこの値、アプリケーション ロジック内で、プログラムで設定する方法と場所、<xref:System.Windows.DependencyPropertyKey>依存関係プロパティを最初に登録したときに作成します。 このロジックすべてをクラス内で処理する場合はプライベートにでき、アセンブリの他の部分から設定する必要がある場合は内部に設定します。 呼び出す方法の 1 つは、<xref:System.Windows.DependencyObject.SetValue%2A>ストアド プロパティの値が変更する必要があるクラスのインスタンスに通知する関連イベントのクラスのイベント ハンドラー内で。 別のアプローチがペアになっているを使用して、依存関係プロパティを結び、<xref:System.Windows.PropertyChangedCallback>と<xref:System.Windows.CoerceValueCallback>登録時にこれらのプロパティのメタデータの一部としてコールバック。  
   
  <xref:System.Windows.DependencyPropertyKey>はプライベートでありは反映されません、コードの外部プロパティ システムによって、読み取り専用の依存関係プロパティがより読み取り/書き込み依存関係プロパティよりもセキュリティを設定します。 読み取り/書き込み依存関係プロパティの場合は、識別するフィールドは明示的または暗黙的にパブリックであり、したがってプロパティは広範に設定可能です。 詳細については、「[依存関係プロパティのセキュリティ](dependency-property-security.md)」を参照してください。  
   

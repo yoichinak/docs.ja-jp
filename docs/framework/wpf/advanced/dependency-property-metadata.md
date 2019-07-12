@@ -7,18 +7,18 @@ helpviewer_keywords:
 - metadata [WPF], for dependency properties
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
-ms.openlocfilehash: a4b2edce76bc5ab97e644ec8dbdf045931e87786
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 66628e8cc1e56bff2227721d6f6b3e511be7453e
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663430"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860059"
 ---
 # <a name="dependency-property-metadata"></a>依存関係プロパティのメタデータ
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] プロパティ システムには、リフレクションや一般的な [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 特性から得られる以上の詳細なプロパティ情報を提供するメタデータ報告システムがあります。 依存関係プロパティのメタデータは、依存関係プロパティを定義するクラスで個別に割り当てることも、依存関係プロパティを別のクラスに追加する際に変更することもできます。また、依存関係プロパティをその定義元の基本クラスから継承するすべての派生クラスで明確にオーバーライドすることもできます。  
 
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  このトピックでは、ユーザーが [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] クラスの既存の依存関係プロパティの使用という観点から依存関係プロパティを理解し、「[依存関係プロパティの概要](dependency-properties-overview.md)」トピックを通読していることを前提としています。 このトピックの例を理解するには、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] について理解し、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションの作成方法に精通している必要があります。  
   
 <a name="dp_metadata_contents"></a>   
@@ -44,7 +44,7 @@ ms.locfileid: "64663430"
 ## <a name="when-to-override-metadata-when-to-derive-a-class"></a>メタデータをオーバーライドする場合、クラスを派生する場合  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] プロパティ システムには、依存関係プロパティを完全に再実装することなく、依存関係プロパティの一部の特性を変更するための機能が用意されています。 これは、特定の型に存在する依存関係プロパティについて、そのプロパティ メタデータの別のインスタンスを構築することで実現されます。 既存の依存関係プロパティの大部分は仮想プロパティではありません。したがって、厳密には、継承クラスでの依存関係プロパティの "再実装" は、既存のメンバーをシャドウすることによってのみ実現されます。  
   
- 型の依存関係プロパティに対して有効にしようとしているシナリオが、既存の依存関係プロパティの特性の変更では実現できない場合、派生クラスを作成し、その派生クラスでカスタム依存関係プロパティを宣言することが必要になる場合があります。 カスタム依存関係プロパティは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] で定義されている依存関係プロパティとまったく同じように動作します。 カスタム依存関係プロパティの詳細については、「[カスタム依存関係プロパティ](custom-dependency-properties.md)」を参照してください。  
+ 型の依存関係プロパティに対して有効にしようとしているシナリオが、既存の依存関係プロパティの特性の変更では実現できない場合、派生クラスを作成し、その派生クラスでカスタム依存関係プロパティを宣言することが必要になる場合があります。 カスタム依存関係プロパティの動作によって定義された依存関係プロパティと同じ、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Api。 カスタム依存関係プロパティの詳細については、「[カスタム依存関係プロパティ](custom-dependency-properties.md)」を参照してください。  
   
  オーバーライドすることができない依存関係プロパティの代表的な特性の 1 つは、依存関係プロパティの値型です。 目的の動作にほぼ合致する依存関係プロパティを継承していても、その依存関係プロパティに別の型が必要な場合には、カスタム依存関係プロパティを実装し、型変換またはカスタム クラスのその他の実装を通じてプロパティをリンクする必要があります。 また、置き換えることはできません、既存<xref:System.Windows.ValidateValueCallback>で、登録フィールド自体とそのメタデータ内ではなく、このコールバックが存在するため、します。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "64663430"
 ### <a name="overriding-metadata"></a>メタデータのオーバーライド  
  メタデータのオーバーライドの主な目的は、型に存在する依存関係プロパティに適用される、メタデータから派生したさまざまな動作を変更できるようにすることです。 この理由については、「[メタデータ](#dp_metadata_contents)」セクションで詳しく説明します。 コード例を含む詳細については、「[方法 : 依存関係プロパティのメタデータをオーバーライドする](how-to-override-metadata-for-a-dependency-property.md)」を参照してください。  
   
- 登録の呼び出し中に依存関係プロパティのプロパティのメタデータを指定することができます (<xref:System.Windows.DependencyProperty.Register%2A>)。 ただし、多くの場合、その依存関係プロパティを継承するクラスに対して、型固有のメタデータを提供する必要があります。 呼び出すことによってこれを行う、<xref:System.Windows.DependencyProperty.OverrideMetadata%2A>メソッド。  例については、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]、<xref:System.Windows.FrameworkElement>クラスは、最初に登録する型、<xref:System.Windows.UIElement.Focusable%2A>依存関係プロパティ。 <xref:System.Windows.Controls.Control>クラスからの変更、独自の既定の初期値を提供する依存関係プロパティのメタデータをオーバーライドする`false`に`true`、それ以外の場合、元に再使用と<xref:System.Windows.UIElement.Focusable%2A>実装します。  
+ 登録の呼び出し中に依存関係プロパティのプロパティのメタデータを指定することができます (<xref:System.Windows.DependencyProperty.Register%2A>)。 ただし、多くの場合、その依存関係プロパティを継承するクラスに対して、型固有のメタデータを提供する必要があります。 呼び出すことによってこれを行う、<xref:System.Windows.DependencyProperty.OverrideMetadata%2A>メソッド。  例については、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Api、<xref:System.Windows.FrameworkElement>クラスは、最初に登録する型、<xref:System.Windows.UIElement.Focusable%2A>依存関係プロパティ。 <xref:System.Windows.Controls.Control>クラスからの変更、独自の既定の初期値を提供する依存関係プロパティのメタデータをオーバーライドする`false`に`true`、それ以外の場合、元に再使用と<xref:System.Windows.UIElement.Focusable%2A>実装します。  
   
  メタデータをオーバーライドすると、さまざまなメタデータ特性がマージされるか置き換えられます。  
   

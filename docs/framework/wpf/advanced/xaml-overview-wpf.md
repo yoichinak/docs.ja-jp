@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: e0d277eb039c1fb1668f292d83ab9e7dbe4be70e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a067be444624ecffd8ab150f20740814dd9ee341
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762327"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859965"
 ---
 # <a name="xaml-overview-wpf"></a>XAML の概要 (WPF)
 このトピックでは、XAML 言語の機能について説明し、記述する XAML を使用する方法を示して[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション。 このトピックでは XAML を具体的には説明によって実装される[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]します。 XAML 自体よりも大きく、言語の概念は、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]します。  
@@ -301,7 +301,7 @@ ms.locfileid: "67762327"
   
 <a name="base_classes_and_xaml"></a>   
 ## <a name="base-types-and-xaml"></a>基本型、および XAML  
- 基になる WPF XAML と XAML 名前空間に対応する型のコレクションである[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]に加えて XAML のマークアップ要素オブジェクト。 ただし、すべてのクラスは、要素にマップすることができます。 など、クラスを抽象化<xref:System.Windows.Controls.Primitives.ButtonBase>、における継承の特定の非抽象基本クラスを使用して、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]オブジェクト モデルです。 抽象ものも含めて、基底クラスは、その階層内のいくつかの基本クラスからメンバーを継承、具体的な XAML 要素ごとのため、XAML 開発することも重要です。 多くの場合、これらのメンバーには要素の属性として設定できるプロパティまたは処理できるイベントが含まれます。 <xref:System.Windows.FrameworkElement> 具体的なベースである[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]クラスの[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]WPF フレームワーク レベル。 設計時に[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]、さまざまな図形、パネル、デコレーターを使用するか、すべてのコントロール クラスから派生<xref:System.Windows.FrameworkElement>します。 関連する基本クラスでは、 <xref:System.Windows.FrameworkContentElement>、フロー レイアウトのプレゼンテーションのためも動作するドキュメント指向の要素のサポートを使用して[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]を意図的にミラー化、[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]で<xref:System.Windows.FrameworkElement>します。 要素レベルで属性の組み合わせと[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]は特定の XAML 要素とその基になる型に関係なく、ほとんどの具体的な XAML 要素で設定可能な共通のプロパティのセットを使用するオブジェクト モデルを提供します。  
+ 基になる WPF XAML と XAML 名前空間に対応する型のコレクションである[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]に加えて XAML のマークアップ要素オブジェクト。 ただし、すべてのクラスは、要素にマップすることができます。 など、クラスを抽象化<xref:System.Windows.Controls.Primitives.ButtonBase>、における継承の特定の非抽象基本クラスを使用して、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]オブジェクト モデルです。 抽象ものも含めて、基底クラスは、その階層内のいくつかの基本クラスからメンバーを継承、具体的な XAML 要素ごとのため、XAML 開発することも重要です。 多くの場合、これらのメンバーには要素の属性として設定できるプロパティまたは処理できるイベントが含まれます。 <xref:System.Windows.FrameworkElement> 具体的なベースである[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]クラスの[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]WPF フレームワーク レベル。 設計時に[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]、さまざまな図形、パネル、デコレーターを使用するか、すべてのコントロール クラスから派生<xref:System.Windows.FrameworkElement>します。 関連する基本クラスでは、 <xref:System.Windows.FrameworkContentElement>、意図的に Api には、ミラー化された Api を使用して、フロー レイアウトのプレゼンテーションについても動作するドキュメント指向の要素をサポートしている<xref:System.Windows.FrameworkElement>します。 要素レベルで属性の組み合わせと[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]は特定の XAML 要素とその基になる型に関係なく、ほとんどの具体的な XAML 要素で設定可能な共通のプロパティのセットを使用するオブジェクト モデルを提供します。  
   
 <a name="xaml_security"></a>   
 ## <a name="xaml-security"></a>XAML セキュリティ  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - value inheritance [WPF]
 - properties [WPF], value inheritance
 ms.assetid: d7c338f9-f2bf-48ed-832c-7be58ac390e4
-ms.openlocfilehash: 48543d2cfc11fc33dff6239cdfd7bfcd946e986a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c5547955a1d5d20938e3896406631da0fae0c5d
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61981917"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860040"
 ---
 # <a name="property-value-inheritance"></a>プロパティ値の継承
 プロパティ値の継承は、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] プロパティ システムの機能です。 プロパティ値の継承により、要素のツリー内の子要素は、親要素から特定のプロパティの値を取得できます。これは、最も近い親要素のいずれかに設定されているとおりにその値を継承することで行われます。 親要素もプロパティ値の継承を通じてその値を取得している場合があるため、システムはページ ルートまで再帰している可能性があります。 プロパティ値の継承は、プロパティ システムの既定の動作ではありません。あるプロパティに子要素でのプロパティ値の継承を実行させるには、そのプロパティに特定のメタデータを設定する必要があります。  
@@ -22,7 +22,7 @@ ms.locfileid: "61981917"
   
 <a name="Practical_Applications_of_Property_Value_Inheritance"></a>   
 ## <a name="practical-applications-of-property-value-inheritance"></a>プロパティ値の継承を実際の応用例  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] には、プロパティの継承が有効なプロパティがいくつか含まれています。 これらのプロパティの一般的なシナリオは次のとおりです。これらのプロパティは、ページごとに一度だけ設定するのが適していますが、いずれかの基本要素クラスのメンバーでもあるため、ほとんどの子要素にも存在することになります。 たとえば、<xref:System.Windows.FrameworkElement.FlowDirection%2A>プロパティ コントロールの方向のフロー コンテンツの表示し、ページ上に配置する必要があります。 通常、テキスト フローの概念は、すべての子要素で一貫して処理される必要があります。 要素ツリーのあるレベルにおいて、何らかの理由でユーザーまたは環境の操作によってフロー方向がリセットされた場合は、一般に要素全体でリセットする必要があります。 ときに、<xref:System.Windows.FrameworkElement.FlowDirection%2A>プロパティは、継承するようにした場合は、値を設定またはアプリケーション内の各ページの表示ニーズをすべて含む要素ツリーのレベルにリセット 1 回のみ必要があります。 初期既定値であっても、同様の方法で値を継承します。 プロパティ値の継承モデルでは、要素の値を個別にリセットすることもできます。これは、複数のフロー方向の混在を意図したまれなケースに対応するためです。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Api が有効になっているプロパティの継承を使用するいくつかのプロパティが含まれます。 これらのプロパティの一般的なシナリオは次のとおりです。これらのプロパティは、ページごとに一度だけ設定するのが適していますが、いずれかの基本要素クラスのメンバーでもあるため、ほとんどの子要素にも存在することになります。 たとえば、<xref:System.Windows.FrameworkElement.FlowDirection%2A>プロパティ コントロールの方向のフロー コンテンツの表示し、ページ上に配置する必要があります。 通常、テキスト フローの概念は、すべての子要素で一貫して処理される必要があります。 要素ツリーのあるレベルにおいて、何らかの理由でユーザーまたは環境の操作によってフロー方向がリセットされた場合は、一般に要素全体でリセットする必要があります。 ときに、<xref:System.Windows.FrameworkElement.FlowDirection%2A>プロパティは、継承するようにした場合は、値を設定またはアプリケーション内の各ページの表示ニーズをすべて含む要素ツリーのレベルにリセット 1 回のみ必要があります。 初期既定値であっても、同様の方法で値を継承します。 プロパティ値の継承モデルでは、要素の値を個別にリセットすることもできます。これは、複数のフロー方向の混在を意図したまれなケースに対応するためです。  
   
 <a name="Making_a_Custom_Property_Inheritable"></a>   
 ## <a name="making-a-custom-property-inheritable"></a>カスタム プロパティを継承可能にする  

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-ms.openlocfilehash: ef07e1acd250ceeb7c0e30f8a78dd8d7b196fdcd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4ed6dd33efd5fdc5e2c61df4173bec5cc2f0d807
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655536"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859694"
 ---
 # <a name="advanced-text-formatting"></a>テキストの高度な書式設定
-Windows Presentation Foundation (WPF) は、堅牢な一連の[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]アプリケーションでテキストを含めるためです。 レイアウトと[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)][!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]など<xref:System.Windows.Controls.TextBlock>、最も一般的な提供および一般的な要素を使用して、テキスト表示にします。 描画[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]など<xref:System.Windows.Media.GlyphRunDrawing>と<xref:System.Windows.Media.FormattedText>図面の書式設定されたテキストを含めるための手段を提供します。 高度なレベルでは、一番[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]拡張可能なテキストを書式設定テキスト プレゼンテーションでは、テキスト保管管理、テキスト ラン書式設定の管理、および埋め込みオブジェクト管理などのすべての側面を制御するエンジンを提供します。  
+Windows Presentation Foundation (WPF) は、テキストを含む、アプリケーションでの堅牢な Api のセットを提供します。 レイアウトと[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]Api など<xref:System.Windows.Controls.TextBlock>、最も一般的な提供および一般的な要素を使用して、テキスト表示にします。 などの Api を描画<xref:System.Windows.Media.GlyphRunDrawing>と<xref:System.Windows.Media.FormattedText>図面の書式設定されたテキストを含めるための手段を提供します。 高度なレベルでは、一番[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]拡張可能なテキストを書式設定テキスト プレゼンテーションでは、テキスト保管管理、テキスト ラン書式設定の管理、および埋め込みオブジェクト管理などのすべての側面を制御するエンジンを提供します。  
   
  このトピックでは、概要[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]テキストの書式設定します。 クライアント実装との使用に焦点を当てます、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]テキスト書式設定エンジンです。  
   
@@ -26,7 +26,7 @@ Windows Presentation Foundation (WPF) は、堅牢な一連の[!INCLUDE[TLA#tla_
 
 <a name="prereq"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このトピックより高いレベルに精通していることを前提としています。[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]テキスト表示に使用します。 ほとんどのユーザー シナリオでは、高度なテキストの書式設定も必要ありませんが[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]このトピックで説明します。 概要については、さまざまなテキスト[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]を参照してください[WPF のドキュメント](documents-in-wpf.md)します。  
+ このトピックでは、テキスト表示に使用されるより高レベル Api に精通していることを前提としています。 ほとんどのユーザー シナリオでは、高度なテキストのこのトピックで説明されている Api を書式設定は必要ありません。 別のテキストの Api の概要については、次を参照してください。 [WPF のドキュメント](documents-in-wpf.md)します。  
   
 <a name="section1"></a>   
 ## <a name="advanced-text-formatting"></a>テキストの高度な書式設定  

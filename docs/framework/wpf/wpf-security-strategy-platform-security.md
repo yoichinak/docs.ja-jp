@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 5b40302d93ce1bfc378b86210ed7bb54732d294b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d7b76365178c78d2b20b9541d5e52a605158a77
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756760"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859828"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF のセキュリティ方針 - プラットフォーム セキュリティ
 オペレーティング システムが含まれている、基になるプラットフォームのセキュリティ機能も活用のさまざまなセキュリティ サービスを提供しますが、Windows Presentation Foundation (WPF)、 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]、および[!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]します。 これらの層を組み合わせることで、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] に強力な多重防御のセキュリティ モデルが提供されます。このセキュリティ モデルでは、次の図に示すように、単一障害点の回避を試みます。  
@@ -196,11 +196,11 @@ ms.locfileid: "67756760"
   
 - 一部の Web サイトでの多数のセキュリティ ダイアログ。  
   
- 場合によっては、信頼できない Web サイトで [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] のインストールのなりすましをしたり、ユーザーがキャンセルしていても [!INCLUDE[TLA#tla_actx](../../../includes/tlasharptla-actx-md.md)] のインストールのダイアログ ボックスを繰り返し表示したりしてユーザーを騙そうとします。 これらの方法によって、大多数のユーザーが騙されて不適切な判断を行い、スパイウェア アプリケーションのインストールにつながる可能性があります。  
+ 場合によっては、信頼できない Web サイトはインストールのなりすまししてユーザーを試します[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]ユーザーがキャンセルしている場合でも、Microsoft ActiveX のインストール ダイアログ ボックスを繰り返し表示したりします。 これらの方法によって、大多数のユーザーが騙されて不適切な判断を行い、スパイウェア アプリケーションのインストールにつながる可能性があります。  
   
  [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] には、ユーザーによる開始の概念にまつわるこのような問題を軽減するいくつかの機能があります。 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] リンクやページ要素と呼ばれるアクションの前に、ユーザーがクリックしたときに検出*ユーザーによる開始*ページのスクリプトによって、同様のアクションが代わりにトリガーされたときに異なる処理とします。 たとえば、[!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)]が組み込まれています、**ポップアップ ブロック**ユーザーがページのポップアップを作成する前にボタンをクリックすると検出します。 これにより、[!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] は何の問題もないポップアップを許可する一方、ユーザーが要求も希望もしていないポップアップを防ぎます。 ブロックされたポップアップは、新しい トラップ**情報バー**ユーザーが手動でブロックをオーバーライドし、ポップアップ ウィンドウを表示することができます。  
   
- 同じユーザーによる開始のロジックにも適用**オープン**/**保存**セキュリティに関するメッセージ。 [!INCLUDE[TLA2#tla_actx](../../../includes/tla2sharptla-actx-md.md)] のインストールのダイアログ ボックスは、以前インストールされたコントロールからのアップグレードを表す場合を除いて、情報バーにトラップされます。 これらの対策を組み合わせると、より安全かつ制御されたユーザー エクスペリエンスがユーザーに提供されます。ユーザーを攻撃して不要または悪意のあるソフトウェアをインストールさせるサイトからユーザーが保護されるためです。  
+ 同じユーザーによる開始のロジックにも適用**オープン**/**保存**セキュリティに関するメッセージ。 ActiveX のインストール ダイアログ ボックスは、以前にインストールされたコントロールからのアップグレードを表している場合を除き、情報バーの下にトラップします。 これらの対策を組み合わせると、より安全かつ制御されたユーザー エクスペリエンスがユーザーに提供されます。ユーザーを攻撃して不要または悪意のあるソフトウェアをインストールさせるサイトからユーザーが保護されるためです。  
   
  これらの機能は、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションのダウンロードとインストールを行えるようにする Web サイトを閲覧するために [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] を使用するお客様も保護します。 特に [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] では、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] を含め、構築にどのテクノロジを使用したかに関係なく、悪意のあるまたは不正なアプリケーションをユーザーがインストールする機会を減らす上でユーザーエクスペリエンスの向上を提供しているからです。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] では、[!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] を使用してこのような保護を追加することで、インターネット経由でアプリケーションをダウンロードしやすくします。 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] はインターネット ゾーンのセキュリティ サンドボックス内で実行するので、シームレスに起動することができます。 一方、スタンドアロンの [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションでは、実行するには完全な信頼が必要になります。 これらのアプリケーションでは、起動プロセス中に [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] はセキュリティに関するダイアログ ボックスを表示して、アプリケーションの追加のセキュリティ要件を使用するよう通知します。 ただし、これはユーザーが開始する必要があり、ユーザーが開始したロジックによって制御されるとともに、キャンセルが可能です。  
   

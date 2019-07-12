@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: b83d9c972dbdadb721bae8b7d616c94a0c1c831f
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 020ea101ae38b9be854398a55ddd31e67b9fda35
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67804739"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859667"
 ---
 # <a name="documents-in-wpf"></a>WPF のドキュメント
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] の前の世代よりも簡単にアクセスおよび読み取りを行うことができるように設計されている、高品質なコンテンツの作成を可能にするさまざまなドキュメント機能を提供します。 拡張された機能と品質に加えて、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] は、ドキュメントの表示、パッケージ化、およびセキュリティの統合されたサービスも提供します。 ここでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のドキュメントの種類とドキュメントのパッケージ化の概要を説明します。  
@@ -59,7 +59,7 @@ ms.locfileid: "67804739"
   
 <a name="packaging"></a>   
 ## <a name="document-packaging"></a>ドキュメントのパッケージ化  
- <xref:System.IO.Packaging> [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]アプリケーション データ、ドキュメントのコンテンツ、および簡単にアクセスでき、移植性と簡単に配布できますが、単一のコンテナー内の関連リソースを整理する効率的な手段を提供します。 ZIP ファイルの例に示します、<xref:System.IO.Packaging.Package>できる 1 つの単位として複数のオブジェクトを保持する型。 パッケージ[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]既定<xref:System.IO.Packaging.ZipPackage>Open Packaging Conventions 標準を使用して、XML および ZIP ファイル アーキテクチャと設計の実装。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のパッケージ化 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] は、パッケージの作成、およびパッケージへのオブジェクトの格納とそれらのオブジェクトへのアクセスを簡単にします。 格納されているオブジェクト、<xref:System.IO.Packaging.Package>と呼ばれますが、 <xref:System.IO.Packaging.PackagePart> (「パーツ」)。 パッケージには、パーツの発行元を識別し、パッケージのコンテンツが変更されていないことを検証するのに使用できる署名されたデジタル証明書を含めることもできます。  パッケージを含めることも、<xref:System.IO.Packaging.PackageRelationship>をパッケージに追加または既存のパーツのコンテンツを実際に変更することがなく、特定の部分に関連付けられている追加の情報をできるようにする機能。  パッケージ サービスでは、[!INCLUDE[TLA#tla_rm](../../../../includes/tlasharptla-rm-md.md)] もサポートされます。  
+ <xref:System.IO.Packaging> Api は、アプリケーション データ、ドキュメントのコンテンツ、および簡単にアクセスでき、移植性と簡単に配布できますが、単一のコンテナー内の関連リソースを整理する効率的な手段を提供します。 ZIP ファイルの例に示します、<xref:System.IO.Packaging.Package>できる 1 つの単位として複数のオブジェクトを保持する型。 パッケージ化 Api は、既定値を提供<xref:System.IO.Packaging.ZipPackage>Open Packaging Conventions 標準を使用して、XML および ZIP ファイル アーキテクチャと設計の実装。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Api を使用してパッケージを作成して、格納する簡単なパッケージ化とそれらに含まれるオブジェクトにアクセスします。 格納されているオブジェクト、<xref:System.IO.Packaging.Package>と呼ばれますが、 <xref:System.IO.Packaging.PackagePart> (「パーツ」)。 パッケージには、パーツの発行元を識別し、パッケージのコンテンツが変更されていないことを検証するのに使用できる署名されたデジタル証明書を含めることもできます。  パッケージを含めることも、<xref:System.IO.Packaging.PackageRelationship>をパッケージに追加または既存のパーツのコンテンツを実際に変更することがなく、特定の部分に関連付けられている追加の情報をできるようにする機能。  パッケージ サービスでは、[!INCLUDE[TLA#tla_rm](../../../../includes/tlasharptla-rm-md.md)] もサポートされます。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] パッケージ アーキテクチャは、さまざまな重要な技術の基盤として機能します。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "67804739"
   
  パッケージ化 Api に基づいて、<xref:System.Windows.Xps.Packaging.XpsDocument>を格納するために設計されて[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]固定コンテンツ ドキュメント。 <xref:System.Windows.Xps.Packaging.XpsDocument>自己完結型のドキュメントに表示される、ビューアーで開くことができるは、 <xref:System.Windows.Controls.DocumentViewer> 、印刷スプールにルーティングまたはに直接出力の制御、 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-互換性のあるプリンターです。  
   
- 次のセクションでは、追加情報を提供する、<xref:System.IO.Packaging.Package>と<xref:System.Windows.Xps.Packaging.XpsDocument>[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]付属[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]します。  
+ 次のセクションでは、追加情報を提供する、<xref:System.IO.Packaging.Package>と<xref:System.Windows.Xps.Packaging.XpsDocument>で提供される Api[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]します。  
   
 <a name="packages"></a>   
 ### <a name="package-components"></a>パッケージ コンポーネント  

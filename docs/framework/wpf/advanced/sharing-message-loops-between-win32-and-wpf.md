@@ -7,12 +7,12 @@ helpviewer_keywords:
 - sharing message loops [WPF]
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
-ms.openlocfilehash: d2fe63ed4bdefc91e4847af799747219bd7b4a76
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 31efc6e514682502e91487565869285dad22cab0
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611728"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860019"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Win32 と WPF 間でのメッセージ ループの共有
 このトピックとの相互運用のメッセージ ループを実装する方法を説明します[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]、既存を使用していずれかのメッセージ ループ危険にさらされる<xref:System.Windows.Threading.Dispatcher>またはで個別のメッセージ ループを作成して、[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]の相互運用コード側。  
@@ -20,7 +20,7 @@ ms.locfileid: "64611728"
 ## <a name="componentdispatcher-and-the-message-loop"></a>ComponentDispatcher とメッセージ ループ  
  相互運用性とキーボード イベントのサポートの通常のシナリオは、実装する<xref:System.Windows.Interop.IKeyboardInputSink>、または既にを実装するクラスからサブクラスに<xref:System.Windows.Interop.IKeyboardInputSink>など<xref:System.Windows.Interop.HwndSource>または<xref:System.Windows.Interop.HwndHost>します。 しかし、キーボード シンクのサポートは、相互運用の境界を越えてメッセージを送受信するときにする必要がありますすべてのメッセージ ループの要件を解決していません。 アプリケーション メッセージ ループのアーキテクチャを形式化する[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供、<xref:System.Windows.Interop.ComponentDispatcher>クラスは、メッセージ ループを次の単純なプロトコルを定義します。  
   
- <xref:System.Windows.Interop.ComponentDispatcher> 静的クラスで公開されるいくつかのメンバーです。 各メソッドのスコープは暗黙的に呼び出し元のスレッドに関連付けられています。 メッセージ ループは、その中の一部を呼び出す必要があります[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)](として、次のセクションで定義) の重要な場面でします。  
+ <xref:System.Windows.Interop.ComponentDispatcher> 静的クラスで公開されるいくつかのメンバーです。 各メソッドのスコープは暗黙的に呼び出し元のスレッドに関連付けられています。 メッセージ ループを呼び出す必要がありますそれらの Api のいくつかの重要な場面で (ように、次のセクションで定義されます)。  
   
  <xref:System.Windows.Interop.ComponentDispatcher> (キーボード シンク) などの他のコンポーネントがリッスンできるイベントを提供します。 <xref:System.Windows.Threading.Dispatcher>クラスが呼び出す、すべての適切な<xref:System.Windows.Interop.ComponentDispatcher>適切なシーケンス内のメソッド。 コードが通話を担当は、独自のメッセージ ループを実装する場合<xref:System.Windows.Interop.ComponentDispatcher>同様の方法でメソッド。  
   

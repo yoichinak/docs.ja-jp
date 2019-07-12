@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability [WPF], Windows Forms
 - hybrid control [WPF interoperability]
 ms.assetid: 9e8aa6b6-112c-4579-98d1-c974917df499
-ms.openlocfilehash: 6b8fcfb6b2795b1b41b5292a3d2c61ecd017f173
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b2e0ee85a7edd07e7372b04c3a26a06416fb39d9
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662277"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859880"
 ---
 # <a name="wpf-and-windows-forms-interoperation"></a>WPF と Windows フォームの相互運用性
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]アプリケーション インターフェイスを作成するための 2 つの異なるアーキテクチャを提供します。 <xref:System.Windows.Forms.Integration?displayProperty=nameWithType>名前空間は、一般的な相互運用シナリオを有効にするクラスを提供します。 相互運用機能を実装する 2 つのキー クラスは<xref:System.Windows.Forms.Integration.WindowsFormsHost>と<xref:System.Windows.Forms.Integration.ElementHost>します。 このトピックでは、相互運用シナリオがサポートされているし、するシナリオはサポートされていませんがについて説明します。  
@@ -35,7 +35,7 @@ ms.locfileid: "64662277"
   
 - マスター/詳細フォームをホストすること、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]マスターと[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]詳細。  
   
-- 1 つまたは複数をホストできます[!INCLUDE[TLA2#tla_actx](../../../../includes/tla2sharptla-actx-md.md)]コントロール。  
+- 1 つ以上の ActiveX コントロールをホストできます。  
   
 - 1 つまたは複数の複合コントロールをホストできます。  
   

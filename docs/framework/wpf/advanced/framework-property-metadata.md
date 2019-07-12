@@ -5,15 +5,15 @@ helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-ms.openlocfilehash: f0385280cf01502a5b2786541c3d959fca24d239
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 81c1941ffd95afb01dcb6ebda2634832a91cd876
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912466"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859843"
 ---
 # <a name="framework-property-metadata"></a>フレームワーク プロパティ メタデータ
-フレームワーク プロパティ メタデータのオプションは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アーキテクチャの WPF フレームワーク レベルにあると見なされるオブジェクト要素のプロパティに対して報告されます。 一般に、WPF フレームワーク レベルが指定されている場合、レンダリング、データ バインディング、プロパティ システムの調整などの機能が、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のプレゼンテーション [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] と実行可能ファイルによって処理されます。 フレームワーク プロパティ メタデータがこれらのシステムによって照会されて、特定の要素プロパティに対する機能固有の特性が決まります。  
+フレームワーク プロパティ メタデータのオプションは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アーキテクチャの WPF フレームワーク レベルにあると見なされるオブジェクト要素のプロパティに対して報告されます。 WPF フレームワーク レベルの指定など、レンダリング、データ バインド、その機能は、一般に、プロパティ システムの調整がによって処理されると、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]プレゼンテーション Api および実行可能ファイルです。 フレームワーク プロパティ メタデータがこれらのシステムによって照会されて、特定の要素プロパティに対する機能固有の特性が決まります。  
 
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
@@ -32,7 +32,7 @@ ms.locfileid: "64912466"
     > [!NOTE]
     >  プロパティ値のコンテキストにおける "継承" という用語は、依存関係プロパティに固有の事項を意味します。つまり、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] プロパティ システムの WPF フレームワーク レベルの機能によって、実際の依存関係プロパティ値を子要素が親要素から継承できることを意味します。 派生型を通じたマネージド コードの型およびメンバーの継承とは直接関係はありません。 詳細については、「[プロパティ値の継承](property-value-inheritance.md)」を参照してください。  
   
-- データ バインディング特性 (<xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A>、 <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>)。 既定では、フレームワークの依存関係プロパティは、一方向のバインディング動作を持つデータ バインディングをサポートします。 必要がない場合はデータ バインディングを無効にできます (柔軟性と拡張性を目的とするため、既定の [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] にそのようなプロパティの例は多くありません)。 バインディングを個々 のコンポーネント間でのコントロールの動作を結び付けるプロパティの双方向の既定値を設定することがあります (<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A>例を示します) または双方向のバインディングがユーザーの一般的かつ期待されるシナリオ (<xref:System.Windows.Controls.TextBox.Text%2A>例を示します)。 データ バインディング関連のメタデータを変更した場合に影響を受けるのは既定値だけです。この既定値は、バインディングごとにいつでも変更できます。 バインディング モードおよびバインディング全般の詳細については、「[データ バインドの概要](../data/data-binding-overview.md)」を参照してください。  
+- データ バインディング特性 (<xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A>、 <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>)。 既定では、フレームワークの依存関係プロパティは、一方向のバインディング動作を持つデータ バインディングをサポートします。 一切のシナリオがない場合は、データ バインディングを無効にする場合があります (既定では、このようなプロパティの例の多くがないため、柔軟性と拡張性を意図している、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Api)。 バインディングを個々 のコンポーネント間でのコントロールの動作を結び付けるプロパティの双方向の既定値を設定することがあります (<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A>例を示します) または双方向のバインディングがユーザーの一般的かつ期待されるシナリオ (<xref:System.Windows.Controls.TextBox.Text%2A>例を示します)。 データ バインディング関連のメタデータを変更した場合に影響を受けるのは既定値だけです。この既定値は、バインディングごとにいつでも変更できます。 バインディング モードおよびバインディング全般の詳細については、「[データ バインドの概要](../data/data-binding-overview.md)」を参照してください。  
   
 - レポートのプロパティをジャーナリングをサポートするアプリケーションまたはサービスをジャーナリングするかどうか (<xref:System.Windows.FrameworkPropertyMetadata.Journal%2A>)。 一般的な要素に対しては、ジャーナリングは既定で有効になりませんが、特定のユーザー入力コントロールに対しては選択的に有効になります。 これは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のジャーナリングの実装を含む、ジャーナリング サービスによって読み取られるプロパティです。通常は、複数のナビゲーション ステップにわたって永続化する必要があるユーザー コントロール (一覧におけるユーザー選択など) に設定します。 ジャーナリングの詳細については、「[ナビゲーションの概要](../app-development/navigation-overview.md)」を参照してください。  
   
