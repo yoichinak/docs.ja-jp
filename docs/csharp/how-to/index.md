@@ -2,12 +2,12 @@
 title: 方法に関する記事 (C# ガイド)
 description: 簡単なヒントと、焦点を絞った短いコード サンプルのコレクション
 ms.date: 12/20/2017
-ms.openlocfilehash: 011e2a8208e647fb2df2ea2e949bfe2d2274eb37
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63410d687bd09f95a5ce7ce9304f2281b2f8d334
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744264"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859532"
 ---
 # <a name="how-to-c"></a>方法 (C#)
 
@@ -98,7 +98,6 @@ C# の開発者には常識といえるヒントやコツがいくつかあり�
 - [インターフェイスで宣言されたイベントを実装する](../programming-guide/events/how-to-implement-interface-events.md)。
 - [コードがイベントを発行するときに .NET Framework ガイドラインに準拠する](../programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)。
 - [派生クラスから基底クラスで定義されているイベントを発生させる](../programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)。
-- [ディクショナリにイベントのインスタンスを格納する](../programming-guide/events/how-to-use-a-dictionary-to-store-event-instances.md)。
 - [カスタム イベント アクセサーを実装する](../programming-guide/events/how-to-implement-custom-event-accessors.md)。
 
 ## <a name="linq-practices"></a>LINQ のプラクティス
