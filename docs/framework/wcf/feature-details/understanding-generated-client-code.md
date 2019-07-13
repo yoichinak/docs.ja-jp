@@ -5,30 +5,30 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3f6e4b0-1131-4c94-aa39-a197c5c2f2ca
-ms.openlocfilehash: 8a28b52d786793308d8609704b564b75f23d95d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dedfa55cb7be7eed396c897dedc6bf375c34436e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33501357"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626258"
 ---
 # <a name="understanding-generated-client-code"></a>生成されたクライアント コードの理解
-[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) は、クライアント アプリケーションの構築時に使用するクライアント コードとクライアント アプリケーション構成ファイルを生成します。 このトピックでは、標準サービス コントラクトのシナリオ向けに生成されたコード例について説明します。 生成されたコードを使用してクライアント アプリケーションの作成の詳細については、次を参照してください。 [WCF クライアントの概要](../../../../docs/framework/wcf/wcf-client-overview.md)です。  
+[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) は、クライアント アプリケーションの構築時に使用するクライアント コードとクライアント アプリケーション構成ファイルを生成します。 このトピックでは、標準サービス コントラクトのシナリオ向けに生成されたコード例について説明します。 生成されたコードを使用してクライアント アプリケーションの構築の詳細については、次を参照してください。 [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md)します。  
   
 ## <a name="overview"></a>概要  
- Visual Studio を使用して、プロジェクトの種類の Windows Communication Foundation (WCF) クライアントを生成する場合、通常必要はありません、生成されたクライアント コードを調べる。 同じサービスを実行する開発環境を使用していない場合は、Svcutil.exe のようなツールを使用してクライアント コードを生成し、そのコードでクライアント アプリケーションを開発します。  
+ Visual Studio を使用して、プロジェクトの種類の Windows Communication Foundation (WCF) クライアントを生成する場合、通常は、生成されたクライアント コードを確認する必要はありません。 同じサービスを実行する開発環境を使用していない場合は、Svcutil.exe のようなツールを使用してクライアント コードを生成し、そのコードでクライアント アプリケーションを開発します。  
   
  Svcutil.exe には、生成された型情報を変更する多くのオプションがあるため、ここですべてのシナリオを説明することはできません。 ここでは、生成されたコードの検索に関する標準的な作業の例を紹介します。  
   
--   サービス コントラクト インターフェイスの識別  
+- サービス コントラクト インターフェイスの識別  
   
--   WCF クライアント クラスを識別します。  
+- WCF クライアント クラスを識別します。  
   
--   データ型の識別  
+- データ型の識別  
   
--   双方向サービスのコールバック コントラクトの識別  
+- 双方向サービスのコールバック コントラクトの識別  
   
--   ヘルパーのサービス コントラクトのチャネル インターフェイスの識別  
+- ヘルパーのサービス コントラクトのチャネル インターフェイスの識別  
   
 ### <a name="finding-service-contract-interfaces"></a>サービス コントラクト インターフェイスの検索  
  サービス コントラクトをモデル化するインターフェイスを検索するには、<xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType> 属性でマークされたインターフェイスを検索します。 多くの場合、属性自体に設定された他の属性や明示的なプロパティが存在するため、この属性をすばやく読み取って見つけることは簡単ではありません。 サービス コントラクト インターフェイスとクライアント コントラクト インターフェイスは 2 つの別の種類だという点に注意してください。 次のコード例は、元のサービス コントラクトを示しています。  
@@ -39,14 +39,14 @@ ms.locfileid: "33501357"
   
  [!code-csharp[C_GeneratedCodeFiles#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#12)]  
   
- と共に生成されるサービス コントラクト インターフェイスを使用して、<xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType>サービス操作の呼び出しに使用する WCF チャネル オブジェクトを作成するクラス。 詳細については、次を参照してください。[する方法: ChannelFactory を使用して](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)です。  
+ と共に生成されるサービス コントラクト インターフェイスを使用して、<xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType>サービス操作の呼び出しに使用する WCF チャネル オブジェクトを作成するクラス。 詳細については、「[方法 :ChannelFactory を使用して、](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)します。  
   
 ### <a name="finding-wcf-client-classes"></a>WCF クライアント クラスの検索  
- 拡張機能の検索に使用するサービス コントラクトを実装する WCF クライアント クラスを見つけるには、 <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>、ここで、型パラメーターは、サービス コントラクトを以前にあるし、そのインターフェイスを拡張します。 次のコード例は、 <xref:System.ServiceModel.ClientBase%601> 型の `ISampleService`クラスを示しています。  
+ 拡張機能を使用するサービス コントラクトを実装する WCF クライアント クラスを検索する検索<xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>、場所、型パラメーターは、サービス コントラクトが以前したインターフェイスおよびそのインターフェイスを拡張します。 次のコード例は、 <xref:System.ServiceModel.ClientBase%601> 型の `ISampleService`クラスを示しています。  
   
  [!code-csharp[C_GeneratedCodeFiles#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#14)]  
   
- この WCF クライアント クラスを使用するには、新しいインスタンスを作成して実装されているメソッドを呼び出すことです。 これらのメソッドは、対応しているサービス操作を呼び出し、やり取りを行うように構成されています。 詳細については、次を参照してください。 [WCF クライアントの概要](../../../../docs/framework/wcf/wcf-client-overview.md)です。  
+ 新しいインスタンスを作成して、実装するメソッドを呼び出すことによってこの WCF クライアント クラスを使用することができます。 これらのメソッドは、対応しているサービス操作を呼び出し、やり取りを行うように構成されています。 詳細については、次を参照してください。 [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md)します。  
   
 > [!NOTE]
 >  SvcUtil.exe で WCF クライアント クラスが生成されるとき、 <xref:System.Diagnostics.DebuggerStepThroughAttribute> がクライアント クラスに追加されるため、デバッガーで WCF クライアント クラスをステップ実行できなくなります。  
@@ -60,10 +60,10 @@ ms.locfileid: "33501357"
   
  [!code-csharp[C_GeneratedCodeFiles#30](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#30)]  
   
- この場合、このデータ型は、クライアントの特定の例外 ( <xref:System.ServiceModel.FaultException%601> ) によりスローされる詳細な型です。詳細な型のパラメーターは、 `microsoft.wcf.documentation.SampleFault`です。 データ型の詳細については、次を参照してください。[サービス コントラクトのデータ転送を指定する](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)です。 クライアントでの例外処理の詳細については、次を参照してください。[送信と受信エラー](../../../../docs/framework/wcf/sending-and-receiving-faults.md)です。  
+ この場合、このデータ型は、クライアントの特定の例外 ( <xref:System.ServiceModel.FaultException%601> ) によりスローされる詳細な型です。詳細な型のパラメーターは、 `microsoft.wcf.documentation.SampleFault`です。 データの種類の詳細については、次を参照してください。 [Data Transfer in Service Contracts にを指定する](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)します。 クライアントでの例外の処理の詳細については、次を参照してください。 [Sending and Receiving Faults](../../../../docs/framework/wcf/sending-and-receiving-faults.md)します。  
   
 ### <a name="finding-callback-contracts-for-duplex-services"></a>双方向サービスのコールバック コントラクトの検索  
- コントラクト インターフェイスにより <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> プロパティの値が指定されているサービス コントラクトを検索すると、そのコントラクトには双方向コントラクトが指定されていることがわかります。 二重のコントラクトを使用した場合、クライアント アプリケーションは、コールバック コントラクトを実装するコールバック クラスを作成し、そのクラスのインスタンスを、サービスとの通信に使用する <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType> または <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType> に渡す必要があります。 双方向クライアントの詳細については、次を参照してください。[する方法: 双方向コントラクトでサービスをアクセス](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)です。  
+ コントラクト インターフェイスにより <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> プロパティの値が指定されているサービス コントラクトを検索すると、そのコントラクトには双方向コントラクトが指定されていることがわかります。 二重のコントラクトを使用した場合、クライアント アプリケーションは、コールバック コントラクトを実装するコールバック クラスを作成し、そのクラスのインスタンスを、サービスとの通信に使用する <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType> または <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType> に渡す必要があります。 双方向クライアントの詳細については、次を参照してください。[方法。双方向コントラクトでサービスへのアクセス](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)します。  
   
  次のコントラクトは、型 `SampleDuplexHelloCallback`のコールバック コントラクトを指定しています。  
   
@@ -80,5 +80,6 @@ ms.locfileid: "33501357"
   
  [!code-csharp[C_GeneratedCodeFiles#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#13)]  
   
-## <a name="see-also"></a>関連項目  
- [WCF クライアントの概要](../../../../docs/framework/wcf/wcf-client-overview.md)
+## <a name="see-also"></a>関連項目
+
+- [WCF クライアントの概要](../../../../docs/framework/wcf/wcf-client-overview.md)

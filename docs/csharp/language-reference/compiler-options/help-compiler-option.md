@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /help compiler option [C#]
 - -? compiler option [C#]
 ms.assetid: 8d53f6ba-5c3b-4183-976e-9c0f26fd3680
-ms.openlocfilehash: 0dea384092a738ebcf139a065431505247c02873
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d6759ec878f34ebd5031fb3465901412f8cbda05
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525988"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693825"
 ---
 # <a name="-help---c-compiler-options"></a>-help, -? (C# コンパイラ オプション)
 このオプションはコンパイラ オプションのリストと各オプションの簡単な説明を stdout に送信します。  
@@ -34,7 +34,7 @@ ms.locfileid: "43525988"
   
  このコンパイラ オプションは Visual Studio では使用できず、プログラムで変更することはできません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)  
+- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

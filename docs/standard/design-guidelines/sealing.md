@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sealed classes
 ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
 author: KrzysztofCwalina
-ms.openlocfilehash: fd1abdb4ff6f4850eea96bcfc3afbfe00a4ae56a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f25573c0fef29ef54dc04c5287757903429d89d4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127694"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615201"
 ---
 # <a name="sealing"></a>シール
 オブジェクト指向フレームワークの機能の 1 つは、開発者が拡張およびフレームワークの設計者によって予期しない方法でそれらをカスタマイズできます。 これは、両方の電源および拡張可能なデザインの危険性。 フレームワークを設計するときは、そのため、慎重に拡張機能の設計が必要なときに危険な場合は、機能拡張を制限して、非常に重要です。  
@@ -27,13 +27,13 @@ ms.locfileid: "53127694"
   
  クラスをシールする理由を以下に示します。  
   
--   クラスは、静的クラスです。 参照してください[静的クラスのデザイン](../../../docs/standard/design-guidelines/static-class.md)します。  
+- クラスは、静的クラスです。 参照してください[静的クラスのデザイン](../../../docs/standard/design-guidelines/static-class.md)します。  
   
--   クラスは、継承されたプロテクト メンバーのセキュリティに重要なシークレットを格納します。  
+- クラスは、継承されたプロテクト メンバーのセキュリティに重要なシークレットを格納します。  
   
--   クラスは、多くの仮想メンバーを継承し、それらを個別にシールのコストは封印されていないクラスを離れることのメリットを上回ります。 します。  
+- クラスは、多くの仮想メンバーを継承し、それらを個別にシールのコストは封印されていないクラスを離れることのメリットを上回ります。 します。  
   
--   クラスは、非常に高速なランタイム参照が必要な属性です。 Sealed 属性では、封印されていないものよりもわずかに高いパフォーマンス レベルがあります。 参照してください[属性](../../../docs/standard/design-guidelines/attributes.md)します。  
+- クラスは、非常に高速なランタイム参照が必要な属性です。 Sealed 属性では、封印されていないものよりもわずかに高いパフォーマンス レベルがあります。 参照してください[属性](../../../docs/standard/design-guidelines/attributes.md)します。  
   
  **X DO NOT** sealed 型でプロテクト メンバーまたは仮想メンバーを宣言します。  
   
@@ -49,6 +49,6 @@ ms.locfileid: "53127694"
   
 ## <a name="see-also"></a>関連項目
 
-- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)  
-- [機能拡張のデザイン](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)
+- [機能拡張のデザイン](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
 - [シールされていないクラス](../../../docs/standard/design-guidelines/unsealed-classes.md)

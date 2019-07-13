@@ -8,22 +8,22 @@ helpviewer_keywords:
 - ListView control [Windows Forms], about ListView control
 - list views
 ms.assetid: c9ef56c1-3bb1-4101-9f4e-e95e720f2756
-ms.openlocfilehash: ab2d0d9456f64f215ddbc0003833db1858f0ce1a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a60c415427a1be994f8081725f20e867dca66aa1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45744103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012803"
 ---
 # <a name="listview-control-overview-windows-forms"></a>ListView コントロールの概要 (Windows フォーム)
-Windows フォーム <xref:System.Windows.Forms.ListView> コントロールにはアイコン表示で項目の一覧が表示されます。 リスト ビューを使用すると、Windows エクスプローラーの右側のペインのようなユーザー インターフェイスを作成することができます。 コントロールが 4 つのビュー モード: LargeIcon、SmallIcon、リスト、および詳細。  
+Windows フォーム <xref:System.Windows.Forms.ListView> コントロールにはアイコン表示で項目の一覧が表示されます。 リスト ビューを使用すると、Windows エクスプローラーの右側のペインのようなユーザー インターフェイスを作成することができます。 コントロールでは、次の 4 つの表示モードがあります。LargeIcon、SmallIcon、リスト、および詳細。  
   
 ## <a name="what-you-can-do-with-the-listview-control"></a>ListView コントロールで行うことができます。  
   
 > [!NOTE]
->  追加の表示モード、タイルには、Windows XP と Windows Server 2003 オペレーティング システムのできるだけです。 詳細については、次を参照してください。[方法: Windows フォーム ListView コントロールに並べて表示ビューを有効にする](../../../../docs/framework/winforms/controls/how-to-enable-tile-view-in-a-windows-forms-listview-control.md)します。  
+>  追加の表示モード、タイルには、Windows XP と Windows Server 2003 オペレーティング システムのできるだけです。 詳細については、「[方法 :Windows で有効にする並べて表示ビュー フォーム ListView コントロール](how-to-enable-tile-view-in-a-windows-forms-listview-control.md)します。  
   
- LargeIcon モードは、項目のテキストの横にある大きいアイコンを表示します。項目は、コントロールが十分な大きさの場合に、複数の列に表示されます。 SmallIcon モードでは、小さいアイコンが表示される点を除いて同じです。 リスト モードでは、小さいアイコンが表示されますは、常に 1 つの列。 詳細モードでは、複数の列の項目が表示されます。 詳細については、次を参照してください。[方法: Windows フォーム ListView コントロールに列を追加](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)します。 表示モードはによって決定されます、<xref:System.Windows.Forms.ListView.View%2A>プロパティ。 イメージ リストのイメージ ビュー モードをすべて表示できます。 詳細については、次を参照してください。[方法: Windows フォーム ListView コントロールの表示アイコン](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md)します。  
+ LargeIcon モードは、項目のテキストの横にある大きいアイコンを表示します。項目は、コントロールが十分な大きさの場合に、複数の列に表示されます。 SmallIcon モードでは、小さいアイコンが表示される点を除いて同じです。 リスト モードでは、小さいアイコンが表示されますは、常に 1 つの列。 詳細モードでは、複数の列の項目が表示されます。 詳細については、「[方法: 列を Windows フォーム ListView コントロールを追加する](how-to-add-columns-to-the-windows-forms-listview-control.md)します。 表示モードはによって決定されます、<xref:System.Windows.Forms.ListView.View%2A>プロパティ。 イメージ リストのイメージ ビュー モードをすべて表示できます。 詳細については、「[方法: Windows フォーム ListView コントロール アイコンを表示](how-to-display-icons-for-the-windows-forms-listview-control.md)します。  
   
  次の表の一覧、<xref:System.Windows.Forms.ListView>メンバーと、ビューで有効です。  
   
@@ -45,18 +45,19 @@ Windows フォーム <xref:System.Windows.Forms.ListView> コントロールに�
   
  <xref:System.Windows.Forms.ListView.Activation%2A>プロパティは、アクションの種類、ユーザーは、リスト内の項目をアクティブにするため必要がありますを決定します。 オプションは<xref:System.Windows.Forms.ItemActivation.Standard>、 <xref:System.Windows.Forms.ItemActivation.OneClick>、と<xref:System.Windows.Forms.ItemActivation.TwoClick>。 <xref:System.Windows.Forms.ItemActivation.OneClick> アクティブ化では、1 回のクリック、項目をアクティブ化する必要があります。 <xref:System.Windows.Forms.ItemActivation.TwoClick> アクティブ化が、ユーザーをダブルクリックすると、アイテムをアクティブ化が必要です。1 回のクリックでは、項目のテキストの色を変更します。 <xref:System.Windows.Forms.ItemActivation.Standard> アクティブ化をダブルクリックすると、項目をアクティブ化ユーザーが必要ですが、項目の外観は変わりません。  
   
- <xref:System.Windows.Forms.ListView>コントロールもサポートしています、スタイルとその他の機能の使用可能なグループ化、並べて表示ビュー、および挿入マークを含む、Windows XP のプラットフォームで。 詳細については、次を参照してください。 [Windows XP の機能と Windows フォーム コントロール](https://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)します。  
+ <xref:System.Windows.Forms.ListView>コントロールもサポートしています、スタイルとその他の機能の使用可能なグループ化、並べて表示ビュー、および挿入マークを含む、Windows XP のプラットフォームで。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.ListView>  
- [ListView コントロール](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
- [方法: Windows フォーム ListView コントロールで項目を追加および削除する](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)  
- [方法: Windows フォーム ListView コントロールに列を追加する](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)  
- [方法: Windows フォーム ListView コントロールのアイコンを表示する](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md)  
- [方法: Windows フォーム ListView コントロールの列にサブ項目を表示する](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)  
- [方法: Windows フォーム ListView コントロール内の項目を選択する](../../../../docs/framework/winforms/controls/how-to-select-an-item-in-the-windows-forms-listview-control.md)  
- [方法: Windows フォーム ListView コントロールの項目をグループ化する](../../../../docs/framework/winforms/controls/how-to-group-items-in-a-windows-forms-listview-control.md)  
- [方法: Windows フォーム ListView コントロールに挿入マークを表示する](../../../../docs/framework/winforms/controls/how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)  
- [方法: ListView コントロールに検索機能を追加する](../../../../docs/framework/winforms/controls/how-to-add-search-capabilities-to-a-listview-control.md)  
- [方法: TreeView コントロールまたは ListView コントロール (Windows フォーム) にカスタム情報を追加する](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)  
- [方法: Windows フォームでマルチペイン ユーザー インターフェイスを作成する](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Forms.ListView>
+- [ListView コントロール](listview-control-windows-forms.md)
+- [方法: Windows フォーム ListView コントロールで項目追加および削除](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [方法: Windows フォーム ListView コントロールに列を追加します。](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [方法: Windows フォーム ListView コントロールのアイコンを表示します。](how-to-display-icons-for-the-windows-forms-listview-control.md)
+- [方法: Windows フォーム ListView コントロールでの列にサブ項目を表示](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
+- [方法: Windows フォーム ListView コントロールで項目を選択します。](how-to-select-an-item-in-the-windows-forms-listview-control.md)
+- [方法: Windows フォーム ListView コントロールに項目をグループ化](how-to-group-items-in-a-windows-forms-listview-control.md)
+- [方法: Windows フォーム ListView コントロールに挿入マークを表示します。](how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)
+- [方法: ListView コントロールに検索機能を追加します。](how-to-add-search-capabilities-to-a-listview-control.md)
+- [方法: TreeView コントロールまたは ListView コントロール (Windows フォーム) にカスタム情報を追加します。](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [方法: Windows フォームでマルチペイン ユーザー インターフェイスを作成します。](how-to-create-a-multipane-user-interface-with-windows-forms.md)

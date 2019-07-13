@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 371e958aca87c922c902d8efd945d94d611672d9
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 342af20b78ae996bb61c6b563ecf42137ee51022
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702882"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64629102"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>同期メソッドの非同期呼び出し
 
@@ -45,13 +45,13 @@ ms.locfileid: "46702882"
 
 このトピックのコード例では、 `BeginInvoke` と `EndInvoke` を使用して非同期呼び出しを行う 4 つの一般的な方法を示します。 `BeginInvoke` を呼び出した後、次の処理を行うことができます。
 
--   何か処理を実行した後、呼び出しが完了するまでブロックする `EndInvoke` を呼び出します。
+- 何か処理を実行した後、呼び出しが完了するまでブロックする `EndInvoke` を呼び出します。
 
--   <xref:System.Threading.WaitHandle> プロパティを使用して <xref:System.IAsyncResult.AsyncWaitHandle%2A?displayProperty=nameWithType> を取得し、その <xref:System.Threading.WaitHandle.WaitOne%2A> メソッドを使用して <xref:System.Threading.WaitHandle> が通知されるまで実行をブロックし、`EndInvoke` を呼び出します。
+- <xref:System.Threading.WaitHandle> プロパティを使用して <xref:System.IAsyncResult.AsyncWaitHandle%2A?displayProperty=nameWithType> を取得し、その <xref:System.Threading.WaitHandle.WaitOne%2A> メソッドを使用して <xref:System.Threading.WaitHandle> が通知されるまで実行をブロックし、 `EndInvoke`を呼び出します。
 
--   <xref:System.IAsyncResult> によって返される `BeginInvoke` をポーリングして非同期呼び出しが完了したかどうかを確認した後、 `EndInvoke`を呼び出します。
+- <xref:System.IAsyncResult> によって返される `BeginInvoke` をポーリングして非同期呼び出しが完了したかどうかを確認した後、 `EndInvoke`を呼び出します。
 
--   コールバック メソッドのデリゲートを `BeginInvoke` に渡します。 このメソッドは、非同期呼び出しが完了すると、 <xref:System.Threading.ThreadPool> スレッドで実行されます。 コールバック メソッドは `EndInvoke` を呼び出します。
+- コールバック メソッドのデリゲートを `BeginInvoke`に渡します。 このメソッドは、非同期呼び出しが完了すると、 <xref:System.Threading.ThreadPool> スレッドで実行されます。 コールバック メソッドは `EndInvoke`を呼び出します。
 
 > [!IMPORTANT]
 > どの手法を使用する場合でも、常に `EndInvoke` を呼び出して、非同期呼び出しを完了します。
@@ -81,7 +81,7 @@ ms.locfileid: "46702882"
  <xref:System.Threading.WaitHandle>を使用する場合は、非同期呼び出しの完了前または完了後、 `EndInvoke` を呼び出して結果を取得する前に、追加の処理を実行できます。
 
 > [!NOTE]
-> `EndInvoke` を呼び出す場合、待機ハンドルは自動的に閉じられません。 待機ハンドルへのすべての参照を解放すると、ガベージ コレクションが待機ハンドルをクリアするときにシステム リソースが解放されます。 待機ハンドルの使用が終了すると同時にシステム リソースを解放するには、<xref:System.Threading.WaitHandle.Close%2A?displayProperty=nameWithType> メソッドを呼び出して破棄します。 破棄可能なオブジェクトが明示的に破棄されると、ガベージ コレクションはより効率的に動作します。
+> `EndInvoke`を呼び出す場合、待機ハンドルは自動的に閉じられません。 待機ハンドルへのすべての参照を解放すると、ガベージ コレクションが待機ハンドルをクリアするときにシステム リソースが解放されます。 待機ハンドルの使用が終了すると同時にシステム リソースを解放するには、 <xref:System.Threading.WaitHandle.Close%2A?displayProperty=nameWithType> メソッドを呼び出して破棄します。 破棄可能なオブジェクトが明示的に破棄されると、ガベージ コレクションはより効率的に動作します。
 
  [!code-cpp[AsyncDelegateExamples#3](../../../samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/waithandle.cpp#3)]
  [!code-csharp[AsyncDelegateExamples#3](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/waithandle.cs#3)]
@@ -97,15 +97,15 @@ ms.locfileid: "46702882"
 ## <a name="executing-a-callback-method-when-an-asynchronous-call-completes"></a>非同期呼び出し完了時のコールバック メソッドの実行
  非同期呼び出しを開始したスレッドが結果を処理するスレッドである必要がない場合は、呼び出しが完了したときにコールバック メソッドを実行できます。 コールバック メソッドは <xref:System.Threading.ThreadPool> スレッドで実行されます。
 
- コールバック メソッドを使用するには、コールバック メソッドを表す `BeginInvoke` デリゲートを <xref:System.AsyncCallback> に渡す必要があります。 コールバック メソッドで使用される情報を含むオブジェクトを渡すこともできます。 コールバック メソッドでは、唯一のパラメーターである <xref:System.IAsyncResult>を <xref:System.Runtime.Remoting.Messaging.AsyncResult> オブジェクトにキャストします。 こうすると、<xref:System.Runtime.Remoting.Messaging.AsyncResult.AsyncDelegate%2A?displayProperty=nameWithType> プロパティを使用して、呼び出しを開始するために使用したデリゲートを取得し、`EndInvoke` を呼び出すことができるようになります。
+ コールバック メソッドを使用するには、コールバック メソッドを表す `BeginInvoke` デリゲートを <xref:System.AsyncCallback> に渡す必要があります。 コールバック メソッドで使用される情報を含むオブジェクトを渡すこともできます。 コールバック メソッドでは、唯一のパラメーターである <xref:System.IAsyncResult>を <xref:System.Runtime.Remoting.Messaging.AsyncResult> オブジェクトにキャストします。 こうすると、 <xref:System.Runtime.Remoting.Messaging.AsyncResult.AsyncDelegate%2A?displayProperty=nameWithType> プロパティを使用して、呼び出しを開始するために使用したデリゲートを取得し、 `EndInvoke`を呼び出すことができるようになります。
 
  例に関する注意事項
 
--   `TestMethod` の `threadId` パラメーターは `out` パラメーター (Visual Basic では [`<Out>` `ByRef`) であるため、その入力値が `TestMethod` で使用されることはありません。 `BeginInvoke` 呼び出しにはダミー変数が渡されます。 `threadId` パラメーターが `ref` パラメーター (Visual Basic では`ByRef` ) であった場合、 `BeginInvoke` と `EndInvoke`の両方に渡すことができるように、変数はクラス レベルのフィールドであることが必要です。
+- `TestMethod` の `threadId` パラメーターは `out` パラメーター (Visual Basic では [`<Out>` `ByRef`) であるため、その入力値が `TestMethod` で使用されることはありません。 `BeginInvoke` 呼び出しにはダミー変数が渡されます。 `threadId` パラメーターが `ref` パラメーター (Visual Basic では`ByRef` ) であった場合、 `BeginInvoke` と `EndInvoke`の両方に渡すことができるように、変数はクラス レベルのフィールドであることが必要です。
 
--   `BeginInvoke` に渡される状態情報は、コールバック メソッドが出力メッセージを書式指定するために使用する書式指定文字列です。 型 <xref:System.Object>として渡されるため、状態情報を使用するには適切な型にキャストする必要があります。
+- `BeginInvoke` に渡される状態情報は、コールバック メソッドが出力メッセージを書式指定するために使用する書式指定文字列です。 型 <xref:System.Object>として渡されるため、状態情報を使用するには適切な型にキャストする必要があります。
 
--   コールバックは <xref:System.Threading.ThreadPool> スレッドで作成されます。 <xref:System.Threading.ThreadPool> スレッドは、メイン スレッドが終了した場合はアプリケーションの実行を継続しないバックグラウンド スレッドであるため、例で使用するメイン スレッドは、コールバックが終了できるまでスリープする必要があります。
+- コールバックは <xref:System.Threading.ThreadPool> スレッドで作成されます。 <xref:System.Threading.ThreadPool> スレッドは、メイン スレッドが終了した場合はアプリケーションの実行を継続しないバックグラウンド スレッドであるため、例で使用するメイン スレッドは、コールバックが終了できるまでスリープする必要があります。
 
  [!code-cpp[AsyncDelegateExamples#5](../../../samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/callback.cpp#5)]
  [!code-csharp[AsyncDelegateExamples#5](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/callback.cs#5)]

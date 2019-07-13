@@ -1,15 +1,15 @@
 ---
-title: '方法: LINQ を使用して ArrayList をクエリする (C#)'
+title: '方法: LINQ を使用して ArrayList を照会する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 2bfb471c-6e9a-4e60-bd83-4a1778abde11
-ms.openlocfilehash: 7cf804bc86dc6f8378e62e01ba373bb82821de52
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9276ebe02858d7a7e295430b0125c590b9c2f308
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43740235"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651809"
 ---
-# <a name="how-to-query-an-arraylist-with-linq-c"></a>方法: LINQ を使用して ArrayList をクエリする (C#)
+# <a name="how-to-query-an-arraylist-with-linq-c"></a>方法: LINQ を使用して ArrayList を照会する (C#)
 LINQ を使用して <xref:System.Collections.ArrayList> などの非ジェネリックの <xref:System.Collections.IEnumerable> コレクションをクエリする場合、範囲変数の型を明示的に宣言して、オブジェクトの特定の型をコレクションに反映させる必要があります。 たとえば、`Student` オブジェクトの <xref:System.Collections.ArrayList> がある場合、[from 句](../../../../csharp/language-reference/keywords/from-clause.md)は次のようになります。  
   
 ```  
@@ -83,6 +83,6 @@ namespace NonGenericLINQ
 */  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)

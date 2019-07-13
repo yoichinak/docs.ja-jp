@@ -7,30 +7,30 @@ helpviewer_keywords:
 - browsing folders
 - directories [Windows Forms], browsing
 ms.assetid: d71a0c5e-898a-4eea-be74-93bdf50d1852
-ms.openlocfilehash: 211391d0d84beadf3dcca41f98c395bd89d07cc4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6359ea9683b9a418b7fe92dacc6140865dd01a11
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011334"
 ---
 # <a name="folderbrowserdialog-component-windows-forms"></a>FolderBrowserDialog コンポーネント (Windows フォーム)
-Windows フォーム`FolderBrowserDialog`コンポーネントが使用するユーザーが参照しフォルダーを選択または新規に作成インターフェイスを表示します。 補完することが、 [OpenFileDialog コンポーネント](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)参照してファイルを選択するに使用されるコンポーネントです。  
+Windows フォーム`FolderBrowserDialog`コンポーネントをユーザー参照しフォルダーを選択したり、新しく作成インターフェイスを表示します。 補完するには、 [OpenFileDialog コンポーネント](openfiledialog-component-windows-forms.md)コンポーネントで、参照やファイルを選択するために使用します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [FolderBrowserDialog コンポーネントの概要 (Windows フォーム)](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)  
- このコントロールの用途、主な機能、およびプロパティについて説明します。  
+ [FolderBrowserDialog コンポーネントの概要 (Windows フォーム)](folderbrowserdialog-component-overview-windows-forms.md)  
+ このコントロールについて、および主な機能とプロパティについて説明します。  
   
- [方法: Windows フォーム FolderBrowserDialog コンポーネントを使用してフォルダーを選択する](../../../../docs/framework/winforms/controls/how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)  
- プログラムでのダイアログ ボックスで、選択したフォルダーを抽出するだけでなく、コンポーネントの省略可能な他のプロパティの一部を操作する方法について説明します。  
+ [方法: Windows フォーム FolderBrowserDialog コンポーネントを含むフォルダーを選択します。](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)  
+ プログラムを使用 ダイアログ ボックスで選択したフォルダーを抽出するだけでなく、コンポーネントの他のオプションのプロパティの一部を操作する方法について説明します。  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Forms.FolderBrowserDialog>  
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
 ## <a name="related-sections"></a>関連項目  
- [Windows フォームのダイアログ ボックス](../../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)  
+ [Windows フォームのダイアログ ボックス](../dialog-boxes-in-windows-forms.md)  
  多くの場合、タブを表示するダイアログ ボックスのタスクの一覧を示します。  
   
- [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)  
  Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。

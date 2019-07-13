@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 202737692bae14ada229ee2c92a6630a3ed71344
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: fad8a73c41379cac7523db6266951b8abab26e27
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030075"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626293"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>方法: マネージ コード DCOM を WCF に移行する
 Windows Communication Foundation (WCF) は、分散コンポーネント オブジェクト モデル (DCOM) と比較して、分散環境でサーバーとクライアントの間でマネージド コードを呼び出すための、推奨されているセキュリティで保護された選択肢です。 この記事では、以下のシナリオで、DCOM から WCF にコードを移行する方法を示します。  
   
--   リモート サービスからクライアントに値渡しでオブジェクトを返す  
+- リモート サービスからクライアントに値渡しでオブジェクトを返す  
   
--   クライアントからリモート サービスに値渡しでオブジェクトを送信する  
+- クライアントからリモート サービスに値渡しでオブジェクトを送信する  
   
--   リモート サービスからクライアントに参照渡しでオブジェクトを返す  
+- リモート サービスからクライアントに参照渡しでオブジェクトを返す  
   
  セキュリティ上の理由で、WCF では、クライアントからサービスに参照渡しでオブジェクトを送信することはできません。 クライアントとサーバーの間で対話を必要とするシナリオは、WCF で双方向サービスを使用することによって実現できます。  双方向サービスの詳細については、「[双方向サービス](../../../docs/framework/wcf/feature-details/duplex-services.md)」を参照してください。  
   
@@ -325,9 +325,9 @@ public class SessionBoundFactory : ISessionBoundFactory
 ### <a name="step-3-configure-and-start-the-wcf-services"></a>手順 3: WCF サービスを構成して開始する  
  これらのサービスをホストするには、サーバーの構成ファイル (web.config) に以下を追加する必要があります。  
   
-1.  セッションフル オブジェクトのエンドポイントを示す `<client>` セクションを追加します。  このシナリオでは、サーバーもクライアントとして機能するので、それが有効となるように構成する必要があります。  
+1. セッションフル オブジェクトのエンドポイントを示す `<client>` セクションを追加します。  このシナリオでは、サーバーもクライアントとして機能するので、それが有効となるように構成する必要があります。  
   
-2.  `<services>` セクションで、ファクトリおよびセッションフル オブジェクトのサービス エンドポイントを宣言します。  これにより、クライアントは、サービス エンドポイントと通信すること、<xref:System.ServiceModel.EndpointAddress10> を取得すること、およびセッションフル チャネルを作成することが可能になります。  
+2. `<services>` セクションで、ファクトリおよびセッションフル オブジェクトのサービス エンドポイントを宣言します。  これにより、クライアントは、サービス エンドポイントと通信すること、<xref:System.ServiceModel.EndpointAddress10> を取得すること、およびセッションフル チャネルを作成することが可能になります。  
   
  これらの設定のある構成ファイルの例を次に示します。  
   
@@ -390,13 +390,13 @@ sessionBoundServiceHost.Open();
   
  サービスを呼び出すには、クライアントにコードを追加して、以下を実行するようにします。  
   
-1.  `ISessionBoundFactory` サービスへのチャネルを作成します。  
+1. `ISessionBoundFactory` サービスへのチャネルを作成します。  
   
-2.  チャネルを使用して `ISessionBoundFactory` サービスを呼び出し、<xref:System.ServiceModel.EndpointAddress10> オブジェクトを取得します。  
+2. チャネルを使用して `ISessionBoundFactory` サービスを呼び出し、<xref:System.ServiceModel.EndpointAddress10> オブジェクトを取得します。  
   
-3.  <xref:System.ServiceModel.EndpointAddress10> を使用してチャネルを作成し、セッションフル オブジェクトを取得します。  
+3. <xref:System.ServiceModel.EndpointAddress10> を使用してチャネルを作成し、セッションフル オブジェクトを取得します。  
   
-4.  `SetCurrentValue` および `GetCurrentValue` メソッドを呼び出して、複数の呼び出しの間で同じオブジェクト インスタンスが使用されることを示します。  
+4. `SetCurrentValue` および `GetCurrentValue` メソッドを呼び出して、複数の呼び出しの間で同じオブジェクト インスタンスが使用されることを示します。  
   
 ```csharp  
 ChannelFactory<ISessionBoundFactory> factory =  
@@ -421,8 +421,9 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
 }  
 ```  
   
-## <a name="see-also"></a>「  
- [基本的な WCF プログラミング](../../../docs/framework/wcf/basic-wcf-programming.md)  
- [サービスの設計と実装](../../../docs/framework/wcf/designing-and-implementing-services.md)  
- [クライアントを構築する](../../../docs/framework/wcf/building-clients.md)  
- [双方向サービス](../../../docs/framework/wcf/feature-details/duplex-services.md)
+## <a name="see-also"></a>関連項目
+
+- [基本的な WCF プログラミング](../../../docs/framework/wcf/basic-wcf-programming.md)
+- [サービスの設計と実装](../../../docs/framework/wcf/designing-and-implementing-services.md)
+- [クライアントを構築する](../../../docs/framework/wcf/building-clients.md)
+- [双方向サービス](../../../docs/framework/wcf/feature-details/duplex-services.md)

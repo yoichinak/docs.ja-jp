@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 095bd92921c9cd54d3a7d97ed07b35526b85c57f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: efbca8177c74fdee635b52294944df23e5aca24f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147684"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638789"
 ---
 # <a name="threads-and-threading"></a>スレッドおよびスレッド処理
 

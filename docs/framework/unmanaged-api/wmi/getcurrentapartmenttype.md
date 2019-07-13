@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4de85eb310de70dc8fd61f7c06abca95ec267f87
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 76c852ac81126895ea3a2e1b40473722c8445201
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522526"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746559"
 ---
 # <a name="getcurrentapartmenttype-function"></a>GetCurrentApartmentType 関数
 呼び出し元が実行されているアパートメントの種類が取得されます。   
@@ -30,7 +30,7 @@ ms.locfileid: "43522526"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetCurrentApartmentType (
    [in] int                   vFunc, 
    [in] IComThreadingInfo*    ptr, 
@@ -51,7 +51,6 @@ HRESULT GetCurrentApartmentType (
 
 ## <a name="return-value"></a>戻り値
 
-
 |定数  |値  |説明  |
 |---------|---------|---------|
 | `S_OK` | 0 | 関数が正常に完了しました。 |
@@ -61,12 +60,13 @@ HRESULT GetCurrentApartmentType (
 
 この関数の呼び出しをラップする、 [IComThreadingInfo::GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype)メソッド。
 
-## <a name="requirements"></a>要件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>関連項目  
-[WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+## <a name="see-also"></a>関連項目
+
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

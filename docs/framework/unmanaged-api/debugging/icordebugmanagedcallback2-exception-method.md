@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: faefff879142d66c4c596f1b30a25e349a4014b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fd707685dfff31644565db18e72dc153d25781f4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421802"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761076"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>ICorDebugManagedCallback2::Exception メソッド
 例外ハンドラーの検索が開始されたことをデバッガーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Exception (  
     [in] ICorDebugAppDomain   *pAppDomain,  
     [in] ICorDebugThread      *pThread,  
@@ -40,9 +40,9 @@ HRESULT Exception (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pAppDomain`  
- [in]ICorDebugAppDomain を表すオブジェクトを含む例外がスローされたスレッドのアプリケーション ドメインへのポインター。  
+ [in]例外がスローされたスレッドを格納しているアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。  
   
  `pThread`  
  [in]例外がスローされたスレッドを表す ICorDebugThread オブジェクトへのポインター。  
@@ -51,37 +51,38 @@ HRESULT Exception (
  [in]によって決定されたように、フレームを表す ICorDebugFrame オブジェクトへのポインター、`dwEventType`パラメーター。 詳細については、「解説」セクションの表を参照してください。  
   
  `nOffset`  
- [in]によって決定される、オフセットを指定する整数、`dwEventType`パラメーター。 詳細については、「解説」セクションの表を参照してください。  
+ [in]によって決定される単位のオフセットを指定する整数、`dwEventType`パラメーター。 詳細については、「解説」セクションの表を参照してください。  
   
  `dwEventType`  
- [in]この例外コールバックの型を指定する CorDebugExceptionCallbackType 列挙型の値です。  
+ [in]この例外コールバックの種類を指定する CorDebugExceptionCallbackType 列挙型の値。  
   
  `dwFlags`  
  [in]値、 [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md)例外に関する追加情報を指定する列挙体  
   
-## <a name="remarks"></a>コメント  
- `Exception`フェーズでは、検索、例外処理プロセスのさまざまな時点で呼び出されるコールバック。 つまり、呼び出すことができますを超える 1 回、例外のアンワインド中にします。  
+## <a name="remarks"></a>Remarks  
+ `Exception`例外処理プロセスの検索フェーズ中にさまざまな時点でコールバックが呼び出されます。 これは、呼び出すことができますよりも 1 回、例外のアンワインド中に。  
   
  によって参照される ICorDebugThread オブジェクトから処理される例外を取得できる、`pThread`パラメーター。  
   
- 特定のフレームとのオフセットによって決定されます、`dwEventType`次のようにパラメーター。  
+ 特定のフレームとのオフセットによって決定されます、`dwEventType`パラメーターとして次のとおりです。  
   
 |`dwEventType` の値|`pFrame` の値|`nOffset` の値|  
 |----------------------------|-----------------------|------------------------|  
-|DEBUG_EXCEPTION_FIRST_CHANCE|例外をスローしたフレームです。|フレーム内の命令ポインター。|  
-|DEBUG_EXCEPTION_USER_FIRST_CHANCE|スローされた例外の位置に最も近いユーザー コード フレーム。|フレーム内の命令ポインター。|  
-|DEBUG_EXCEPTION_CATCH_HANDLER_FOUND|Catch ハンドラーを含むフレーム。|Catch ハンドラーの最初の Microsoft intermediate language (MSIL) オフセットします。|  
+|DEBUG_EXCEPTION_FIRST_CHANCE|例外をスローしたフレーム。|フレーム内の命令ポインター。|  
+|DEBUG_EXCEPTION_USER_FIRST_CHANCE|スローされた例外のポイントに最も近いユーザー コード フレーム。|フレーム内の命令ポインター。|  
+|DEBUG_EXCEPTION_CATCH_HANDLER_FOUND|このフレームは、catch ハンドラーが含まれています。|Catch ハンドラーの先頭の Microsoft intermediate language (MSIL) オフセット。|  
 |DEBUG_EXCEPTION_UNHANDLED|NULL|定義されていません。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICorDebugManagedCallback2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)  
- [ICorDebugManagedCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [ICorDebugManagedCallback2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
+- [ICorDebugManagedCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

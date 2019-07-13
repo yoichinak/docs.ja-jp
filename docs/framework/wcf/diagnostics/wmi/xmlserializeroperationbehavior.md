@@ -2,12 +2,12 @@
 title: XmlSerializerOperationBehavior
 ms.date: 03/30/2017
 ms.assetid: 8911aa1b-e34b-4161-a3ae-7468d89a6861
-ms.openlocfilehash: 7c7b53ff8eb8b6bc3dd73e5dea6f4c6a5613ec56
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 38282577c2f759bff9927a8369349c689e26808a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61997031"
 ---
 # <a name="xmlserializeroperationbehavior"></a>XmlSerializerOperationBehavior
 XmlSerializerOperationBehavior  
@@ -31,14 +31,14 @@ class XmlSerializerOperationBehavior : Behavior
 ### <a name="style"></a>スタイル  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  SOAP メッセージのスタイルを定義します。  
   
-### <a name="use"></a>使用  
+### <a name="use"></a>用途  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  SOAP エンコード スタイルを指定します。  
   
@@ -46,7 +46,8 @@ class XmlSerializerOperationBehavior : Behavior
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
-|Namespace|root\ServiceModel で定義|  
+|名前空間|root\ServiceModel で定義|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>

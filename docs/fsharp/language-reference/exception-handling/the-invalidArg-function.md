@@ -2,12 +2,12 @@
 title: 例外:invalidArg 関数
 description: について説明しますが、どのようにF#'invalidArg' 関数に引数例外が生成されます。
 ms.date: 05/16/2016
-ms.openlocfilehash: 7fd8d48b80970dbbafc0c23a478b4ccf3490f3ee
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 1f0cbc9b7e805822544d6d54bc1fc69adf82967a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613337"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645497"
 ---
 # <a name="exceptions-the-invalidarg-function"></a>例外:invalidArg 関数
 
@@ -39,7 +39,7 @@ System.ArgumentException: Month parameter out of range.
 
 - [例外処理](index.md)
 - [例外の種類](exception-types.md)
-- [例外処理:`try...with`式](the-try-with-expression.md)
-- [例外処理:`try...finally`式](the-try-finally-expression.md)
+- [例外: `try...with`式](the-try-with-expression.md)
+- [例外: `try...finally`式](the-try-finally-expression.md)
 - [例外: `raise` 関数](the-raise-function.md)
-- [例外処理:`failwith`関数](the-failwith-function.md)
+- [例外: `failwith`関数](the-failwith-function.md)

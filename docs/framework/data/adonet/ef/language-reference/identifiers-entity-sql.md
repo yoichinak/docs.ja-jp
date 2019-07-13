@@ -2,12 +2,12 @@
 title: 識別子 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
-ms.openlocfilehash: 390c69dec6caed1ffe6faccb5893174d2c211a6b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e514a25dc754b788316cb18b53191e8f838587dd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528581"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64631579"
 ---
 # <a name="identifiers-entity-sql"></a>識別子 (Entity SQL)
 識別子はクエリ式の別名、変数参照、オブジェクトのプロパティ、関数などを表すために [!INCLUDE[esql](../../../../../../includes/esql-md.md)] で使用されます。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 識別子の 2 種類があります。 単純な識別子と引用符で囲まれた識別子。  
@@ -20,15 +20,15 @@ ms.locfileid: "43528581"
   
  ただし、次の文字を含めることはできません。  
   
--   改行  
+- 改行  
   
--   キャリッジ リターン  
+- キャリッジ リターン  
   
--   タブ  
+- タブ  
   
--   バックスペース  
+- バックスペース  
   
--   追加の角かっこ (識別子の境界を表す角かっこの中の角かっこ)  
+- 追加の角かっこ (識別子の境界を表す角かっこの中の角かっこ)  
   
  Unicode 文字を含めることはできます。  
   
@@ -53,13 +53,13 @@ ms.locfileid: "43528581"
 ## <a name="aliasing-rules"></a>別名の規則  
  内の別名を指定することをお勧めします。[!INCLUDE[esql](../../../../../../includes/esql-md.md)]必要に応じて、次のようにクエリ[!INCLUDE[esql](../../../../../../includes/esql-md.md)]を構築します。  
   
--   行コンストラクターのフィールド  
+- 行コンストラクターのフィールド  
   
--   クエリ式の FROM 句の項目  
+- クエリ式の FROM 句の項目  
   
--   クエリ式の SELECT 句の項目  
+- クエリ式の SELECT 句の項目  
   
--   クエリ式の GROUP BY 句の項目  
+- クエリ式の GROUP BY 句の項目  
   
 ### <a name="valid-aliases"></a>有効な別名  
  有効な別名[!INCLUDE[esql](../../../../../../includes/esql-md.md)]は任意の単純な識別子または引用符で囲まれた識別子。  
@@ -67,9 +67,9 @@ ms.locfileid: "43528581"
 ### <a name="alias-generation"></a>別名の生成  
  エイリアスが指定されていない場合、[!INCLUDE[esql](../../../../../../includes/esql-md.md)]クエリ式、[!INCLUDE[esql](../../../../../../includes/esql-md.md)]次の単純な規則に基づいて別名の生成を試みます。  
   
--   クエリ式 (別名が指定されていないクエリ式) が単純な識別子または引用符で囲まれた識別子の場合は、その識別子が別名として使用されます。 たとえば、`ROW(a, [b])` が `ROW(a AS a, [b] AS [b])` になります。  
+- クエリ式 (別名が指定されていないクエリ式) が単純な識別子または引用符で囲まれた識別子の場合は、その識別子が別名として使用されます。 たとえば、`ROW(a, [b])` が `ROW(a AS a, [b] AS [b])` になります。  
   
--   より複雑なクエリ式でも、最後の構成要素が単純な識別子であれば、その識別子が別名として使用されます。 たとえば、`ROW(a.a1, b.[b1])` が `ROW(a.a1 AS a1, b.[b1] AS [b1])` になります。  
+- より複雑なクエリ式でも、最後の構成要素が単純な識別子であれば、その識別子が別名として使用されます。 たとえば、`ROW(a.a1, b.[b1])` が `ROW(a.a1 AS a1, b.[b1] AS [b1])` になります。  
   
  後に使用する別名に対しては暗黙的な別名を使用しないことをお勧めします。 別名 (暗黙的な別名または明示的な別名) が同じスコープで競合していたり繰り返し使用されていたりするとコンパイル エラーが発生しますが、 暗黙的な別名は、同じ名前の明示的または暗黙的な別名があってもそのままコンパイルされます。  
   
@@ -107,11 +107,11 @@ SELECT 1 AS X, 2 AS X …
   
  スコープに関する追加の注意事項を以下に示します。  
   
--   選択リストでは、新しい名前が順番にスコープに導入されます。 右側の投影式では、左側で投影されている名前を参照できます。  
+- 選択リストでは、新しい名前が順番にスコープに導入されます。 右側の投影式では、左側で投影されている名前を参照できます。  
   
--   ORDER BY 句では、選択リストで指定されている名前 (別名) を参照できます。  
+- ORDER BY 句では、選択リストで指定されている名前 (別名) を参照できます。  
   
--   SELECT 式内の句が評価される順序によって、名前がスコープに導入される順序が決まります。 FROM 句が最初に評価され、WHERE 句、GROUP BY 句、HAVING 句、SELECT 句の順に続き、最後に ORDER BY 句が評価されます。  
+- SELECT 式内の句が評価される順序によって、名前がスコープに導入される順序が決まります。 FROM 句が最初に評価され、WHERE 句、GROUP BY 句、HAVING 句、SELECT 句の順に続き、最後に ORDER BY 句が評価されます。  
   
 ### <a name="aggregate-handling"></a>集計の処理  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 2 つの形式の集計をサポートしています: コレクション ベースの集計とグループ ベースの集計。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ではコレクションベースの集計を使用することをお勧めします。グループベースの集計は、SQL との互換性のためにサポートされています。  
@@ -120,7 +120,8 @@ SELECT 1 AS X, 2 AS X …
   
  `AVG(t.c) becomes AVG(group..(t.c))`  
   
-## <a name="see-also"></a>関連項目  
- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Entity SQL の概要](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
- [入力文字セット](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)
+## <a name="see-also"></a>関連項目
+
+- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Entity SQL の概要](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [入力文字セット](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)

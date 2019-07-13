@@ -16,18 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: de467c98dfa7ad3eac69502f2afe311b301e1ec5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4b09ccfdb33c9853ed97005461f2288f1e7e6fd1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781747"
 ---
 # <a name="cormethodsemanticsattr-enumeration"></a>CorMethodSemanticsAttr 列挙型
 メソッドとそれに関連付けられているプロパティまたはイベントとの関係を記述する値が格納されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum CorMethodSemanticsAttr {  
   
     msSetter    =   0x0001,  
@@ -44,19 +45,20 @@ typedef enum CorMethodSemanticsAttr {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`msSetter`|メソッドを指定する、`set`プロパティのアクセサー。|  
-|`msGetter`|メソッドを指定する、`get`プロパティのアクセサー。|  
-|`msOther`|メソッドが、プロパティまたはここで定義されているもの以外のイベントへのリレーションシップを持つことを指定します。|  
-|`msAddOn`|このメソッドは、イベント ハンドラー メソッドを追加指定します。|  
-|`msRemoveOn`|メソッドがイベント ハンドラー メソッドを削除することを指定します。|  
+|`msSetter`|メソッドを指定します、`set`プロパティのアクセサー。|  
+|`msGetter`|メソッドを指定します、`get`プロパティのアクセサー。|  
+|`msOther`|メソッドに、プロパティまたはここで定義されているもの以外のイベントへのリレーションシップを指定します。|  
+|`msAddOn`|メソッドがイベント ハンドラー メソッドを追加指定します。|  
+|`msRemoveOn`|メソッドがイベント ハンドラー メソッドを削除するを指定します。|  
 |`msFire`|メソッドがイベントを発生させることを指定します。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorHdr.h  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>関連項目
+
+- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

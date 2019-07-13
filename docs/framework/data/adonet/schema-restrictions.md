@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
-ms.openlocfilehash: 040ecd8a2ce223f89601de735b77ccc81638c7af
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: b5044d39d1dc5d2fa7d2ce691cdda7075fa0e32a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878411"
 ---
 # <a name="schema-restrictions"></a>スキーマの制限
 2 番目の省略可能なパラメーター、 **GetSchema**メソッドが返されるスキーマ情報の量を制限するために使用される制限事項、およびに渡される、 **GetSchema**文字列の配列としてメソッド. 配列での位置により、渡すことができる値が決定します。これは、制限の番号に相当します。  
@@ -139,7 +139,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |User_Name|@Name|name|1|  
   
-### <a name="databases"></a>Databases  
+### <a name="databases"></a>データベース  
   
 |制限の名前|パラメーター名|制限の既定値|制限の番号|  
 |----------------------|--------------------|-------------------------|------------------------|  
@@ -172,7 +172,7 @@ class Program
 |テーブル|@Table|TABLE_NAME|3|  
 |Column|@Column|COLUMN_NAME|4|  
   
-### <a name="views"></a>ビュー  
+### <a name="views"></a>Views  
   
 |制限の名前|パラメーター名|制限の既定値|制限の番号|  
 |----------------------|--------------------|-------------------------|------------------------|  
@@ -261,5 +261,6 @@ class Program
 |テーブル|@Table|TABLE_NAME|3|  
 |Column|@Column|COLUMN_NAME|4|  
   
-## <a name="see-also"></a>関連項目  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

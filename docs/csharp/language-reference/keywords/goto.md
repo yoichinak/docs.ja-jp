@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - goto keyword [C#]
 ms.assetid: 2c03c9c1-8119-44ef-b740-fb3d287a42fe
-ms.openlocfilehash: bfc997631cc147bf5718ec91a57e2995cead052f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 675893f02a0022b403d2afc018d24d6f826b8f75
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236766"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421806"
 ---
 # <a name="goto-c-reference"></a>goto (C# リファレンス)
 
@@ -41,8 +41,7 @@ ms.locfileid: "53236766"
 
 ## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../index.md)  
-- [C# プログラミング ガイド](../../programming-guide/index.md)  
-- [C# のキーワード](index.md)  
-- [goto ステートメント (C++)](/cpp/cpp/goto-statement-cpp)  
-- [ジャンプ ステートメント](jump-statements.md)  
+- [C# リファレンス](../index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# のキーワード](index.md)
+- [goto ステートメント (C++)](/cpp/cpp/goto-statement-cpp)

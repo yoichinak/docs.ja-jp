@@ -5,29 +5,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: 6b54f75afd52b5179693c5a92ebce2e8aa02f122
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d7d87a3e95cf66efb91b71f6ff3c7c9bb1fbb311
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765465"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662150"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities の既知の問題および注意点
-ここでは、[!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] クエリの既知の問題について説明します。  
+このセクションでは、linq to Entities クエリの既知の問題に関する情報を提供します。  
   
--   [LINQ クエリをキャッシュできないこと](#LINQQueriesThatAreNotCached)  
+- [LINQ クエリをキャッシュできないこと](#LINQQueriesThatAreNotCached)  
   
--   [失われた情報を順序付け](#OrderingInfoLost)  
+- [失われた情報を順序付け](#OrderingInfoLost)  
   
--   [符号なし整数がサポートされていません](#UnsignedIntsUnsupported)  
+- [符号なし整数がサポートされていません](#UnsignedIntsUnsupported)  
   
--   [型変換エラー](#TypeConversionErrors)  
+- [型変換エラー](#TypeConversionErrors)  
   
--   [参照元の非スカラー変数がサポートされていません](#RefNonScalarClosures)  
+- [参照元の非スカラー変数がサポートされていません](#RefNonScalarClosures)  
   
--   [入れ子になったクエリは、SQL Server 2000 で失敗する可能性があります。](#NestedQueriesSQL2000)  
+- [SQL Server 2000 で入れ子になったクエリが失敗します。](#NestedQueriesSQL2000)  
   
--   [匿名型に射影](#ProjectToAnonymousType)  
+- [匿名型に射影](#ProjectToAnonymousType)  
   
 <a name="LINQQueriesThatAreNotCached"></a>   
 ## <a name="linq-queries-that-cannot-be-cached"></a>キャッシュできない LINQ クエリ  
@@ -35,14 +35,14 @@ ms.locfileid: "32765465"
   
 <a name="OrderingInfoLost"></a>   
 ## <a name="ordering-information-lost"></a>失われた情報の収集の順序付け  
- 匿名型に列を投影すると、互換性レベルが "80" に設定された [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)] データベースに対して実行されるクエリの一部で順序付けが失われます。  この状況は、次の例に示すように、ORDER BY リストの列名がセレクターの列名と一致する場合に発生します。  
+ 匿名型に列を投影すると、順序付けは、互換性レベルが「80」に設定された SQL Server 2005 データベースに対して実行されるいくつかのクエリでは失われます。  この状況は、次の例に示すように、ORDER BY リストの列名がセレクターの列名と一致する場合に発生します。  
   
  [!code-csharp[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#sbudt543840)]
  [!code-vb[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt543840)]  
   
 <a name="UnsignedIntsUnsupported"></a>   
 ## <a name="unsigned-integers-not-supported"></a>サポートされていない符号なし整数  
- [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] によって符号なし整数がサポートされていないため、[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] クエリでの符号なし整数型の指定はサポートされていません。 符号なし整数を指定する場合、<xref:System.ArgumentException>次の例で示すようにクエリ式の変換中に例外がスローされます。 この例では、ID 48000 を持つ注文に対してクエリを実行します。  
+ LINQ to Entities クエリで、符号なし整数型の指定はサポートされていませんので、[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]は符号なし整数をサポートしていません。 符号なし整数を指定する場合、<xref:System.ArgumentException>次の例に示すように、クエリ式の変換中に例外がスローされます。 この例では、ID 48000 を持つ注文に対してクエリを実行します。  
   
  [!code-csharp[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#uintasqueryparam)]
  [!code-vb[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#uintasqueryparam)]  
@@ -79,5 +79,6 @@ ms.locfileid: "32765465"
  [!code-csharp[DP L2E Conceptual Examples#ProjToAnonType2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#projtoanontype2)]
  [!code-vb[DP L2E Conceptual Examples#ProjToAnonType2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#projtoanontype2)]  
   
-## <a name="see-also"></a>関連項目  
- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+## <a name="see-also"></a>関連項目
+
+- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)

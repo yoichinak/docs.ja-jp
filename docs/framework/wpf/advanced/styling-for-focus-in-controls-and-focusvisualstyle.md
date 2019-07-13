@@ -6,17 +6,16 @@ helpviewer_keywords:
 - focus [WPF], visual styling
 - styles [WPF], focus visual style
 ms.assetid: 786ac576-011b-4d72-913b-558deccb9b35
-ms.openlocfilehash: 07dd5f015624e934ceb4fd38f23f7e780d185dfc
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 745c2174c54ed072f91a6d5eb3b43d5385e96b90
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43744986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053375"
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>コントロールのフォーカスのスタイルと FocusVisualStyle
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] キーボード フォーカスを受け取るときに、コントロールの外観を変更するための 2 つの並列メカニズムを提供します。 最初のメカニズムは、プロパティなどのプロパティ set アクセス操作子を使用する<xref:System.Windows.UIElement.IsKeyboardFocused%2A>スタイルまたはコントロールに適用されているテンプレート内で。 2 つ目のメカニズムの値として別のスタイルを提供する、<xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>プロパティまたはその他の UI コントロールのビジュアル ツリーを変更するのではなく、コントロールの上に描画される装飾の個別のビジュアル ツリーを作成する「フォーカスのビジュアル スタイル」置換することで要素。 このトピックでは、これらのメカニズムが適切なシナリオについて説明します。  
-   
-  
+
 <a name="Purpose"></a>   
 ## <a name="the-purpose-of-focus-visual-style"></a>フォーカスのビジュアル スタイルの目的は、  
  フォーカス表示スタイルの機能は、UI 要素にキーボード ナビゲーションに基づく visual ユーザーからのフィードバックを導入するための一般的な「オブジェクト モデル」を提供します。 特定のテンプレート構成を知る必要も、コントロールに新しいテンプレートを適用することがなく可能です。  
@@ -25,7 +24,7 @@ ms.locfileid: "43744986"
   
 <a name="Default"></a>   
 ## <a name="default-focus-visual-style-behavior"></a>フォーカスの Visual スタイルの既定の動作  
- フォーカス表示スタイルは、キーボードでフォーカスのアクションが開始された場合にのみ機能します。 任意のマウス操作またはプログラムによるフォーカスの変更は、visual スタイルのフォーカス モードを無効にします。 フォーカス モードの違いの詳細については、次を参照してください。[フォーカスの概要](../../../../docs/framework/wpf/advanced/focus-overview.md)します。  
+ フォーカス表示スタイルは、キーボードでフォーカスのアクションが開始された場合にのみ機能します。 任意のマウス操作またはプログラムによるフォーカスの変更は、visual スタイルのフォーカス モードを無効にします。 フォーカス モードの違いの詳細については、次を参照してください。[フォーカスの概要](focus-overview.md)します。  
   
  コントロールのテーマには、テーマのすべてのコントロールのフォーカスの視覚スタイルになる既定フォーカス visual スタイルの動作が含まれます。 このテーマ スタイルは、静的なキーの値によって識別される<xref:System.Windows.SystemParameters.FocusVisualStyleKey%2A>します。 アプリケーション レベルで、独自のフォーカス表示スタイルを宣言するときに、このテーマから既定のスタイル動作を置き換えます。 また、全体のテーマを定義する場合に、全体のテーマの既定の動作のスタイルを定義するこれと同じキーを使用する必要があります。  
   
@@ -64,7 +63,7 @@ ms.locfileid: "43744986"
 ## <a name="alternatives-to-using-a-focus-visual-style"></a>フォーカスのビジュアル スタイルの使用に代わる方法  
  状況でフォーカスのビジュアル スタイルを使用して、適切でない 1 つのコントロールをスタイル設定はのみか、またはコントロール テンプレートをより細かく制御するためがあるその他の多くのアクセス可能なプロパティやビジュアルを作成できる手法フォーカスの変更に応答で動作します。  
   
- トリガー、setter、およびイベント setter がすべてで詳しく説明されている[スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)します。 ルーティング イベントの処理は、後ほど[ルーティング イベントの概要](../../../../docs/framework/wpf/advanced/routed-events-overview.md)します。  
+ トリガー、setter、およびイベント setter がすべてで詳しく説明されている[スタイルとテンプレート](../controls/styling-and-templating.md)します。 ルーティング イベントの処理は、後ほど[ルーティング イベントの概要](routed-events-overview.md)します。  
   
 ### <a name="iskeyboardfocused"></a>IsKeyboardFocused  
  キーボード フォーカスを具体的には関心がある場合、<xref:System.Windows.UIElement.IsKeyboardFocused%2A>プロパティの依存関係プロパティを使用できる<xref:System.Windows.Trigger>します。 スタイルまたはテンプレートのいずれかのプロパティ トリガーは、非常に具体的には、1 つのコントロールについては、他のコントロールのキーボード フォーカスの動作に一致する可能性がありますいない視覚的には、キーボード フォーカスの動作を定義するためのより適切な手法です。  
@@ -76,8 +75,9 @@ ms.locfileid: "43744986"
 ### <a name="other-focus-properties"></a>その他のフォーカス プロパティ  
  Setter の基本やをトリガーする必要がありますのフォーカスを変更するすべての考えられる原因を視覚的な動作を生成する場合は、<xref:System.Windows.UIElement.IsFocused%2A>依存関係プロパティでは、別の方法で、<xref:System.Windows.UIElement.GotFocus>または<xref:System.Windows.UIElement.LostFocus>に使用されるイベント、<xref:System.Windows.EventSetter>します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>  
- [スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [フォーカスの概要](../../../../docs/framework/wpf/advanced/focus-overview.md)  
- [入力の概要](../../../../docs/framework/wpf/advanced/input-overview.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>
+- [スタイルとテンプレート](../controls/styling-and-templating.md)
+- [フォーカスの概要](focus-overview.md)
+- [入力の概要](input-overview.md)

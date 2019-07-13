@@ -1,15 +1,15 @@
 ---
-title: WCF の &lt;bookmarkResumptionQuery&gt;
+title: <bookmarkResumptionQuery> WCF の
 ms.date: 03/30/2017
 ms.assetid: 755a34f0-87c9-4a1e-ae4d-0fb8a6fbdc0e
-ms.openlocfilehash: 6463404e17edff8eb1efe3f96e44b5b9997ffca3
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 38c87cefc49821b03d119299ef60e3fbbad21d7e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704389"
 ---
-# <a name="ltbookmarkresumptionquerygt-of-wcf"></a>WCF の &lt;bookmarkResumptionQuery&gt;
+# <a name="bookmarkresumptionquery-of-wcf"></a>\<bookmarkResumptionQuery > の WCF
 
 ワークフロー インスタンス内のブックマークの再開を追跡するために使用されるクエリを表します。 追跡参加要素がブックマーク再開レコードを定期受信するには、このクエリが必要です。  
   
@@ -20,8 +20,8 @@ ms.locfileid: "54147812"
 \<プロファイル >  
 \<trackingProfile>  
 \<ワークフロー >  
-\<bookmarkResumptionQueries >  
-\<bookmarkResumptionQuery >  
+\<bookmarkResumptionQueries>  
+\<bookmarkResumptionQuery>  
   
 ## <a name="syntax"></a>構文  
   

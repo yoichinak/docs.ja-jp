@@ -1,5 +1,5 @@
 ---
-title: GetPropertyOrigin 関数 (Unmnaged API リファレンス)
+title: GetPropertyOrigin 関数 (アンマネージ API リファレンス)
 description: GetPropertyOrigin 関数は、プロパティが宣言されているクラスを決定します。
 ms.date: 11/06/2017
 api_name:
@@ -16,41 +16,42 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86c512f25c40f201d818b6789c6410bfb095b878
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 542c4a01a9fd56587d51421709ffb990707f2ae0
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865271"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636792"
 ---
 # <a name="getpropertyorigin-function"></a>GetPropertyOrigin 関数
+
 プロパティを宣言しているクラスが特定されます。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a>構文  
-  
-```  
+
+## <a name="syntax"></a>構文
+
+```cpp
 HRESULT GetPropertyOrigin (
-   [in] int                 vFunc, 
-   [in] IWbemClassObject*   ptr, 
+   [in] int                 vFunc,
+   [in] IWbemClassObject*   ptr,
    [in] LPCWSTR             wszMethodName,
    [out] BSTR*              pstrClassName
-); 
-```  
+);
+```
 
 ## <a name="parameters"></a>パラメーター
 
-`vFunc`  
+`vFunc`\
 [in]このパラメーターは使用されません。
 
-`ptr`  
+`ptr`\
 [in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。
 
-`wszMethodName`  
-[in]所有するクラスが要求されているオブジェクトのプロパティの名前。 
+`wszMethodName`\
+[in]所有するクラスが要求されているオブジェクトのプロパティの名前。
 
-`pstrClassName`  
+`pstrClassName`\
 [out]プロパティを所有するクラスの名前を受け取ります。
 
 ## <a name="return-value"></a>戻り値
@@ -64,7 +65,7 @@ HRESULT GetPropertyOrigin (
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが無効です。 |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 操作を完了するのに十分なメモリがあります。 |
 |`WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
-  
+
 ## <a name="remarks"></a>Remarks
 
 この関数の呼び出しをラップする、 [IWbemClassObject::GetPropertyOrigin](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyorigin)メソッド。
@@ -73,12 +74,14 @@ HRESULT GetPropertyOrigin (
 
 `pstrClassName`パラメーターが有効なをポイントする必要がありますいない`BSTR`ため、これは、関数が呼び出される前に、`out`パラメーター。 この関数によって返された後に、ポインターが割り当て解除されません。
 
-## <a name="requirements"></a>要件  
-**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
-  
- **ヘッダー:** WMINet_Utils.idl  
-  
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
-## <a name="see-also"></a>関連項目  
-[WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+## <a name="requirements"></a>必要条件
+
+**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+
+**ヘッダー:** WMINet_Utils.idl
+
+**.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
+## <a name="see-also"></a>関連項目
+
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

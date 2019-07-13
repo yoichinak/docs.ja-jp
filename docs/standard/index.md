@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 05/02/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: cbe08d87e90d319c074e85d0157e62fe023cce8c
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 2db6d713d699a733f5c65d2170620eaccd8f0691
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752439"
 ---
 # <a name="net-guide"></a>.NET のガイド
 
@@ -29,7 +29,7 @@ ms.locfileid: "37105173"
 
 ## <a name="new-to-net-core"></a>.NET Core を初めて使う
 
-.NET Core を初めて使用する場合は、[「.NET Core の概要」](../core/get-started.md)を参照してください。
+.NET Core を初めて使用する場合は、[.NET Core の概要](../core/get-started.md) を参照してください。
 
 ## <a name="new-to-net-standard"></a>.NET Standard を初めて使う
 
@@ -49,12 +49,12 @@ ms.locfileid: "37105173"
 
 * [.NET アーキテクチャ コンポーネント](components.md)
 * [.NET Standard](net-standard.md)
-* [ネイティブ相互運用性](native-interop.md)
+* [ネイティブ相互運用性](native-interop/index.md)
 * [ガベージ コレクション](garbagecollection/index.md)
 * [.NET の基本型](base-types/index.md)
 * [コレクション](collections/index.md)
 * [日付、時刻、およびタイム ゾーン](datetime/index.md)
-* [非同期プログラミング](async.md)
+* [非同期の概要](async.md)
 
 さらに、.NET の主要な 3 つの言語については、各言語のガイドを参照してください。
 

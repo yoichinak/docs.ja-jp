@@ -2,12 +2,12 @@
 title: SELECT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
-ms.openlocfilehash: 93eea5d539e943c57ed7c6236caa854486ac238e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: af704d00800a72b4ab670781c5bb3adec93683cb
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505110"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489885"
 ---
 # <a name="select-entity-sql"></a>SELECT (Entity SQL)
 クエリで返される要素を指定します。  
@@ -32,7 +32,7 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
  1 つの項目のみを指定でき、row ラッパーを追加しません。  
   
  `topSubclause`  
- 有効な式の形式で、クエリから返される最初の結果の数を示す`top(expr)`します。  
+ `top(expr)`の形式で、クエリから返す最初の結果数を指定する有効な式。  
   
  LIMIT パラメーター、 [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)演算子では、結果セット内の最初の n 個のアイテムを選択することもできます。  
   
@@ -85,7 +85,7 @@ SELECT VALUE ROW(1 AS a, "abc" AS b) FROM C
 SELECT * FROM T1, T2  
 ```  
   
- 上の [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] クエリ式は次の方法で [!INCLUDE[esql](../../../../../../includes/esql-md.md)] で表現されます。  
+ 前の TRANSACT-SQL クエリ式がで表される[!INCLUDE[esql](../../../../../../includes/esql-md.md)]次のようにします。  
   
 ```  
 SELECT a1, a2 FROM T1 AS a1, T2 AS a2  
@@ -94,13 +94,14 @@ SELECT a1, a2 FROM T1 AS a1, T2 AS a2
 ## <a name="example"></a>例  
  次の Entity SQL クエリは、SELECT 演算子を使用して、クエリによって返される要素を指定します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
-1.  「 [StructuralType 結果を返すクエリの実行方法](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)」の手順に従います。  
+1. 」の手順に従って[方法。StructuralType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)します。  
   
-2.  次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。  
+2. 次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。  
   
  [!code-csharp[DP EntityServices Concepts 2#LESS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#less)]  
   
-## <a name="see-also"></a>関連項目  
- [クエリ式](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)  
- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)
+## <a name="see-also"></a>関連項目
+
+- [クエリ式](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
+- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)

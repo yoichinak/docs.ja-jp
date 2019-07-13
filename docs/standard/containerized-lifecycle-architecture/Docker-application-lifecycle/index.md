@@ -1,19 +1,17 @@
 ---
 title: Docker アプリケーションのライフ サイクルの概要
-description: Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル
-author: CESARDELATORRE
-ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: ea97631f1a5147129c8ac3b1a4b9fa18999d21b9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+description: コンテナー化されたアプリケーション開発の道のりはここから始めます。
+ms.date: 11/23/2018
+ms.openlocfilehash: 825226e0004af16deccfe1418596d91d6438b076
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147568"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "65644811"
 ---
 # <a name="introduction-tothe-docker-application-life-cycle"></a>Docker アプリケーションのライフ サイクルの概要
- 
-コンテナー化アプリケーションのライフ サイクルは、開発者と共に始まります。 開発者はコンテナーと Docker の実装を選択しました。これは、展開と IT 運用のあつれきがなくなり、最終的に、全員の機敏性が高まり、エンドツーエンドの生産性が向上し、迅速になるためです。
+
+*コンテナー化アプリケーションのライフサイクルは、開発者と共に始まる道のりです。開発者がコンテナーと Docker の実装を選択するのは、デプロイと IT 運用のあつれきがなくなり、最終的に、全員の機敏性が上がり、エンドツーエンドの生産性が向上し、迅速になるためです。*
 
 >[!div class="step-by-step"]
 >[前へ](../docker-containers-images-and-registries.md)

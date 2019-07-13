@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bd8a2d373b801bd8238d50eecb388ef511bc34bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 65f59d3df96f46ad65650183bdb6f631356a4d0b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446203"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775538"
 ---
 # <a name="imetadataimportenumfields-method"></a>IMetaDataImport::EnumFields メソッド
 指定した TypeDef トークンによって参照される型の FieldDef トークンを列挙します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EnumFields (   
    [in, out] HCORENUM    *phEnum,   
    [in]      mdTypeDef   cl,   
@@ -39,12 +39,12 @@ HRESULT EnumFields (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [入力、出力].列挙子へのポインター。  
+ [入力、出力]列挙子へのポインター。  
   
  `cl`  
- [in]その結果、フィールドが列挙するのには、クラスの TypeDef トークンです。  
+ [in]フィールドが列挙クラスの TypeDef トークンです。  
   
  `rFields`  
  [out]FieldDef トークンの一覧。  
@@ -53,24 +53,25 @@ HRESULT EnumFields (
  [in] `rFields` 配列の最大サイズ。  
   
  `pcTokens`  
- [out]実際に返される FieldDef トークン数`rFields`です。  
+ [out]実際に返される FieldDef トークン数`rFields`します。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
 |`S_OK`|`EnumFields` 正常に返されます。|  
-|`S_FALSE`|列挙するフィールドはありません。 その場合は、`pcTokens`ゼロです。|  
+|`S_FALSE`|列挙するフィールドはありません。 その場合は、`pcTokens`は 0 です。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

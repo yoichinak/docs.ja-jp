@@ -2,12 +2,12 @@
 title: '方法: 子孫要素を検索する (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: b318da39-bb8b-4c56-a019-e13b12b01831
-ms.openlocfilehash: df1b151948b7b11757f2f8f312fa1f0bba00673a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 99f5f552935d6169537ccfbadff2a21396828e47
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47078579"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486770"
 ---
 # <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a>方法: 子孫要素を検索する (XPath-LINQ to XML) (C#)
 このトピックでは、特定の名前を指定して子孫要素を取得する方法について説明します。  
@@ -17,7 +17,7 @@ ms.locfileid: "47078579"
 ## <a name="example"></a>例  
  この例では、`Name` という名前の子孫要素をすべて検索します。  
   
- この例では、「[サンプル XML ファイル: 複数の購買発注書 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)」の XML ドキュメントを使用します。  
+ この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:複数の購買発注書 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -48,7 +48,3 @@ Results are identical
 <Name>Jessica Arnold</Name>  
 <Name>Jessica Arnold</Name>  
 ```  
-  
-## <a name="see-also"></a>参照
-
-- [XPath ユーザー向けの LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

@@ -2,12 +2,12 @@
 title: '方法: 兄弟ノードを検索する (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: e2c73d10-a8ca-4e11-b5aa-d055de285874
-ms.openlocfilehash: e10b23c311e4e7debf228c01c898f3582e2ac8d4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: d225b30b8bfcae09c5824d974e194f8a06ddfc86
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865359"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485392"
 ---
 # <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>方法: 兄弟ノードを検索する (XPath-LINQ to XML) (C#)
 特定の名前を持つノードのすべての兄弟を検索する場合があります。 コンテキスト ノードも特定の名前を持つ場合は、結果のコレクションにコンテキスト ノードが含まれることがあります。  
@@ -19,7 +19,7 @@ ms.locfileid: "43865359"
 ## <a name="example"></a>例  
  この例では、最初に `Book` 要素を検索し、次に `Book` という名前の兄弟要素をすべて検索します。 結果のコレクションにはコンテキスト ノードが含まれます。  
   
- この例では、「[サンプル XML ファイル: 書籍 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)」の XML ドキュメントを使用します。  
+ この例では、XML ドキュメント、「[サンプル XML ファイル:書籍 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)」。  
   
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  
@@ -73,7 +73,3 @@ Results are identical
       of the world.</Description>  
 </Book>  
 ```  
-  
-## <a name="see-also"></a>参照
-
-- [XPath ユーザー向けの LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

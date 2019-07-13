@@ -1,15 +1,15 @@
 ---
-title: '&lt;certificate&gt; 要素'
+title: <certificate> 要素
 ms.date: 03/30/2017
 ms.assetid: 9b3d9233-ef35-477a-bf5d-efd1e80a52f4
-ms.openlocfilehash: f17cb5817b2a6912eebf1d4175665c09514de15e
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: eea8130911ca3780a6e4e753c17877e58c50b139
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704324"
 ---
-# <a name="ltcertificategt-element"></a>&lt;certificate&gt; 要素
+# <a name="certificate-element"></a>\<証明書 > 要素
 ピアツーピア クライアントのメッセージの署名と暗号化に使用する X.509 証明書を指定します。  
   
  \<system.ServiceModel >  
@@ -18,7 +18,7 @@ ms.locfileid: "54146473"
 \<behavior>  
 \<clientCredentials>  
 \<ピア >  
-\<証明書 >  
+\<証明書>  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,7 +38,7 @@ ms.locfileid: "54146473"
 |---------------|-----------------|  
 |`findValue`|X.509 証明書ストアで検索する値を含む文字列。 属性に格納されている型は、指定された `x509FindType` の要件を満たす必要があります。 既定値は空の文字列です。|  
 |`storeLocation`|クライアントがピアの証明書の検証に使用する X.509 証明書ストアの場所を指定します。 以下の値が有効です。<br /><br /> -LocalMachine: ローカル マシンに割り当てられている証明書ストア。<br />-CurrentUser: 現在のユーザーに割り当てられている証明書ストア。<br /><br /> 既定は LocalMachine です。|  
-|`storeName`|開く X.509 証明書ストアの名前を指定します。 以下の値が有効です。<br /><br /> -AddressBook:他のユーザーの証明書ストア。<br />-AuthRoot:サード パーティ証明機関 (Ca) 証明書ストア。<br />-[証明機関]:中間証明機関 (Ca) 証明書ストア。<br />-許可されていません。失効した証明書の証明書ストア。<br />-My:個人用証明書の証明書ストア。<br />ルート:信頼されたルート証明機関 (Ca) 証明書ストア。<br />-TrustedPeople:直接信頼されたユーザーやリソースの証明書ストア。<br />-TrustedPublisher:直接信頼された発行元の証明書ストア。<br /><br /> 既定値は My です。|  
+|`storeName`|開く X.509 証明書ストアの名前を指定します。 以下の値が有効です。<br /><br /> -AddressBook:他のユーザーの証明書ストア。<br />-   AuthRoot:サード パーティ証明機関 (Ca) 証明書ストア。<br />-[証明機関]:中間証明機関 (Ca) 証明書ストア。<br />-許可されていません。失効した証明書の証明書ストア。<br />-My:個人用証明書の証明書ストア。<br />ルート:信頼されたルート証明機関 (Ca) 証明書ストア。<br />-TrustedPeople:直接信頼されたユーザーやリソースの証明書ストア。<br />-TrustedPublisher:直接信頼された発行元の証明書ストア。<br /><br /> 既定値は My です。|  
 |`X509FindType`|実行する X.509 検索の種類を定義します。 以下の値が有効です。<br /><br /> -FindByThumbPrint<br />-   FindBySubjectName<br />-FindBySubjectDistinguishedName<br />-   FindByIssuerName<br />-FindByIssuerDistinguishedName<br />-   FindBySerialNumber<br />-   FindByTimeValid<br />-   FindByTimeNotYetValid<br />-   FindByTemplateName<br />-   FindByApplicationPolicy<br />-FindByCertificatePolicy<br />-FindByExtension<br />-   FindByKeyUsage<br />-   FindBySubjectKeyIdentifier<br /><br /> `findValue` 属性に格納されている型は、指定された `X509FindType` の要件を満たす必要があります。<br /><br /> 既定値は FindBySubjectDistinguishedName です。|  
   
 ### <a name="child-elements"></a>子要素  
@@ -74,13 +74,14 @@ ms.locfileid: "54146473"
 </behaviors>
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.PeerCredentialElement>  
- <xref:System.ServiceModel.Configuration.PeerCredentialElement.Certificate%2A>  
- <xref:System.ServiceModel.Configuration.X509PeerCertificateElement>  
- <xref:System.ServiceModel.Security.PeerCredential.Certificate%2A>  
- [証明書の使用](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [ピアツーピア ネットワーク](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
- [ピア チャネル メッセージの認証](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
- [ピア チャネル カスタム認証](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
- [セキュリティによるピア チャネル アプリケーションの保護](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Configuration.PeerCredentialElement>
+- <xref:System.ServiceModel.Configuration.PeerCredentialElement.Certificate%2A>
+- <xref:System.ServiceModel.Configuration.X509PeerCertificateElement>
+- <xref:System.ServiceModel.Security.PeerCredential.Certificate%2A>
+- [証明書の使用](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [ピアツーピア ネットワーク](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
+- [ピア チャネル メッセージの認証](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [ピア チャネル カスタム認証](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
+- [セキュリティによるピア チャネル アプリケーションの保護](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: c80d6598540700fdb8559497f10c66726c384519
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 91d76309fedb2a6f3d877a47f230fda74060107e
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239684"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59122890"
 ---
 # <a name="await-c-reference"></a>await (C# リファレンス)
 `await` 演算子は非同期メソッドのタスクに適用され、中断ポイントを挿入することで、メソッドの実行を、待機中のタスクが完了するまで中断します。 このタスクは、進行中の作業を表します。  
@@ -21,17 +21,16 @@ ms.locfileid: "53239684"
 `await` は、[async](../../../csharp/language-reference/keywords/async.md) キーワードによって変更された非同期メソッドでのみ使用できます。 このようなメソッド (`async` 修飾子を使用して定義され、通常 1 つ以上の `await` 式を含むメソッド) が、"*非同期メソッド*" と呼ばれます。  
   
 > [!NOTE]
->  `async` キーワードおよび `await` キーワードは、C# 5 で導入されました。 非同期プログラミングの概要については、「[Async および Await を使用した非同期プログラミング](../../../csharp/programming-guide/concepts/async/index.md)」をご覧ください。  
+> `async` キーワードおよび `await` キーワードは、C# 5 で導入されました。 非同期プログラミングの概要については、「[Async および Await を使用した非同期プログラミング](../../../csharp/programming-guide/concepts/async/index.md)」をご覧ください。  
   
-`await` 演算子を適用するタスクは、通常、[タスク ベースの非同期パターン](../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)を実装するメソッド呼び出しによって返されます。 たとえば、<xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、および `System.Threading.Tasks.ValueType<TResult>` オブジェクトを返すメソッドです。  
+`await` 演算子を適用するタスクは、通常、[タスク ベースの非同期パターン](../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)を実装するメソッド呼び出しによって返されます。 たとえば、<xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.ValueTask>、および <xref:System.Threading.Tasks.ValueTask%601> オブジェクトを返すメソッドです。  
 
-  
- 次の例では、<xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> メソッドは `Task<byte[]>` を返します。 これにより、タスクが完了したときに実際のバイト配列が生成されることが保証されます。 `await` 演算子は、<xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> メソッドの処理が完了するまで実行を中断します。 その間、コントロールは `GetPageSizeAsync` の呼び出し元に戻されます。 タスクの実行が終了すると、`await` 式はバイト配列に評価されます。  
+次の例では、<xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> メソッドは `Task<byte[]>` を返します。 これにより、タスクが完了したときに実際のバイト配列が生成されることが保証されます。 `await` 演算子は、<xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> メソッドの処理が完了するまで実行を中断します。 その間、コントロールは `GetPageSizeAsync` の呼び出し元に戻されます。 タスクの実行が終了すると、`await` 式はバイト配列に評価されます。  
 
 [!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await1.cs)]  
 
 > [!IMPORTANT]
->  完全な例については、「[チュートリアル: Async と Await を使用した Web へのアクセス](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)」をご覧ください。 Microsoft Web サイトの[開発者コード サンプル](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)からサンプルをダウンロードできます。 この例は AsyncWalkthrough_HttpClient プロジェクトにあります。  
+> 完全な例については、「[チュートリアル: Async と Await を使用した Web へのアクセス](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)」をご覧ください。 Microsoft Web サイトの[開発者コード サンプル](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)からサンプルをダウンロードできます。 この例は AsyncWalkthrough_HttpClient プロジェクトにあります。  
   
 前の例で示したように、`Task<TResult>` を返すメソッド呼び出しの結果に `await` を適用する場合、`await` 式の型は `TResult` です。 `Task` を返すメソッド呼び出しの結果に `await` が適用されている場合、`await` 式の型は `void` になります。 この違いを次の例に示します。  
   
@@ -68,7 +67,8 @@ TResult result = await AsyncMethodThatReturnsValueTaskTResult();
 
 前の例では、[`async` `Main` メソッド](../../programming-guide/main-and-command-args/index.md)をサポートしている C# 7.1 を使用しています。 以前の C# バージョンでは、<xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.Task%601> を返すアプリケーション エントリ ポイントがサポートされていないため、`async` 修飾子を `Main` メソッドに適用して、`GetPageLengthsAsync` メソッドの呼び出しを待機することはできません。 この場合、非同期操作が完了するのを `Main` メソッドが確実に待つようにするには、<xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> プロパティの値を取得します。 値を返さないタスクについては、<xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> メソッドを呼び出すことができます。 言語のバージョンを選択する方法については、「[C# 言語のバージョンの選択](../configure-language-version.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目  
-- [Async および Await を使用した非同期プログラミング](../../../csharp/programming-guide/concepts/async/index.md)   
-- [チュートリアル: Async と Await を使用した Web へのアクセス](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
+## <a name="see-also"></a>関連項目
+
+- [Async および Await を使用した非同期プログラミング](../../../csharp/programming-guide/concepts/async/index.md)
+- [チュートリアル: Async と Await を使用した Web へのアクセス](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [async](../../../csharp/language-reference/keywords/async.md)

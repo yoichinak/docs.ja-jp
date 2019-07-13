@@ -2,12 +2,12 @@
 title: '方法: 属性のコレクションを取得する (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: a49ee7a3-b2c2-4d49-9b5c-b7c6c41f4f13
-ms.openlocfilehash: e872d0fefa5ea3c25208bf5deab42b59b5b7d5b0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d561c3bbebbf57c88ccc9043449540bca06e33fb
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526934"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486352"
 ---
 # <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-c"></a>方法: 属性のコレクションを取得する (LINQ to XML) (C#)
 このトピックでは、<xref:System.Xml.Linq.XElement.Attributes%2A> メソッドについて説明します。 このメソッドは、要素の属性を取得します。  
@@ -36,6 +36,6 @@ Type="int"
 ConvertableTo="double"  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [LINQ to XML 軸 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [LINQ to XML 軸 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes-overview.md)

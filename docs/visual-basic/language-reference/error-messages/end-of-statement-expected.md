@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30205
 ms.assetid: 53c7f825-a737-4b76-a1fa-f67745b8bd40
-ms.openlocfilehash: 8df756009ebe3a0613ec47018d938151829214df
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1ce5c793a09df34ac17e70e3253e98108bf76fb8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803332"
 ---
 # <a name="end-of-statement-expected"></a>ステートメントの終わりを指定してください。
 ステートメントが構文的に完了するが、その他のプログラミング要素に依存してステートメントを終了する要素。 行終端記号は、すべてのステートメントの末尾にある必要があります。
@@ -23,10 +23,11 @@ ms.locfileid: "50198264"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには
   
-1.  2 つの異なるステートメントが同じ行に格納された誤ってかどうかを確認します。
+1. 2 つの異なるステートメントが同じ行に格納された誤ってかどうかを確認します。
   
-2.  ステートメントを終了要素の後に行終端記号を挿入します。
+2. ステートメントを終了要素の後に行終端記号を挿入します。
   
-## <a name="see-also"></a>関連項目  
- [方法 : コード内でステートメントを分割および連結する](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)  
- [ステートメント](../../../visual-basic/programming-guide/language-features/statements.md)
+## <a name="see-also"></a>関連項目
+
+- [方法: コード内でステートメントを分割および連結する](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+- [ステートメント](../../../visual-basic/programming-guide/language-features/statements.md)

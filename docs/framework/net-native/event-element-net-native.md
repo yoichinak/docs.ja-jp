@@ -1,17 +1,17 @@
 ---
-title: '&lt;Event&gt; 要素 (.NET ネイティブ)'
+title: <Event> 要素 (.NET ネイティブ)
 ms.date: 03/30/2017
 ms.assetid: e53b029c-9d6d-4c0a-9cdc-5cfca8a5ca47
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7ccf013398420dbeb7918f99baa922aa1bc89db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 89e8ddf9ea72db63c72bfb5393709b4c20de2a14
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868578"
 ---
-# <a name="lteventgt-element-net-native"></a>&lt;Event&gt; 要素 (.NET ネイティブ)
+# <a name="event-element-net-native"></a>\<イベント > 要素 (.NET ネイティブ)
 イベントにランタイム リフレクション ポリシーを適用します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,13 +35,13 @@ ms.locfileid: "33395555"
   
 ## <a name="name-attribute"></a>Name 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |*method_name*|イベントの名前です。 イベントの型は親 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) または [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 要素により定義されます。|  
   
 ## <a name="all-other-attributes"></a>その他すべての属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |*policy_setting*|イベントのこのポリシーの種類に適用する設定です。 指定できる値は、`Auto`、`Excluded`、`Included`、および `Required` です。 詳細については、「[ランタイム ディレクティブのポリシー設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)」を参照してください。|  
   
@@ -55,10 +55,11 @@ ms.locfileid: "33395555"
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|構築されたジェネリック型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  イベントのポリシーが明示的に定義されていない場合は、その親要素の実行時ポリシーを継承します。  
   
-## <a name="see-also"></a>関連項目  
- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [ランタイム ディレクティブ ポリシーの設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+## <a name="see-also"></a>関連項目
+
+- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [ランタイム ディレクティブ ポリシーの設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

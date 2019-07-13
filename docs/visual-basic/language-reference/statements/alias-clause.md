@@ -6,24 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - Alias keyword [Visual Basic]
 ms.assetid: 58c06b11-465d-4d87-906a-73200a3d7f19
-ms.openlocfilehash: 62b34f5860b35104b6a8caa82c359383999dd61b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84c8f39e632eebbe5382492669820910b38bc360
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33599175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053354"
 ---
 # <a name="alias-clause-visual-basic"></a>Alias 句 (Visual Basic)
-外部プロシージャが DLL の中で別の名前を持つことを示します。  
+外部プロシージャにその DLL 内の別の名前があることを示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `Alias`キーワードは、このコンテキストで使用できます。  
   
  [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
- 次の例で、 `Alias` advapi32.dll、内の関数の名前を指定するキーワードを使用`GetUserNameA`、その`getUserName`の代わりにこの例では使用できます。 関数`getUserName`sub で呼び出される`getUser`、現在のユーザーの名前が表示されます。  
+ 次の例では、 `Alias` advapi32.dll、内の関数の名前を指定するキーワードが使用される`GetUserNameA`、その`getUserName`の代わりにこの例では使用します。 関数`getUserName`sub で呼び出される`getUser`、現在のユーザーの名前が表示されます。  
   
- [!code-vb[VbVbalrStatements#15](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/alias-clause_1.vb)]  
+ [!code-vb[VbVbalrStatements#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#15)]  
   
-## <a name="see-also"></a>関連項目  
- [キーワード](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>関連項目
+
+- [キーワード](../../../visual-basic/language-reference/keywords/index.md)

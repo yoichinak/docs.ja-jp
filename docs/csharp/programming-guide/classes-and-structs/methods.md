@@ -6,12 +6,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: df2d7837217f4267f95ed73948a4eb479cc035c1
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: b97ce10cfb2e35beecf2c96acbac9c4ac8462c1d
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244415"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201164"
 ---
 # <a name="methods-c-programming-guide"></a>メソッド (C# プログラミング ガイド)
 メソッドは、一連のステートメントが含まれているコード ブロックです。 必要なメソッド引数を指定してプログラムからメソッドを呼び出すと、メソッド内のステートメントが実行されます。 C# では、実行されるすべての命令がメソッドのコンテキストで実行されます。 Main メソッドは、すべての C# アプリケーションのエントリ ポイントです。プログラムが開始されると、このメソッドが共通言語ランタイム (CLR) によって呼び出されます。  
@@ -27,17 +27,17 @@ ms.locfileid: "53244415"
   
  メソッド パラメーターはかっこで囲み、各パラメーターをコンマで区切ります。 かっこ内を空にすると、メソッドでパラメーターが不要なことを意味します。 このクラスには次の 4 つのメソッドが含まれています。  
   
- [!code-csharp[csProgGuideObjects#40](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_1.cs)]  
+ [!code-csharp[csProgGuideObjects#40](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#40)]  
   
 ## <a name="method-access"></a>メソッド アクセス  
  オブジェクトでメソッドを呼び出すのは、フィールドにアクセスするのと似ています。 オブジェクト名の後に、ピリオド、メソッド名、かっこを追加します。 引数はかっこの中に記述し、コンマで区切ります。 `Motorcycle` クラスのメソッドの呼び出し例を次に示します。  
   
- [!code-csharp[csProgGuideObjects#41](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_2.cs)]  
+ [!code-csharp[csProgGuideObjects#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#41)]  
   
 ## <a name="method-parameters-vs-arguments"></a>メソッド パラメーターと引数  
- メソッド定義には、必要なパラメーターの名前と型を指定します。 呼び出し元のコードからメソッドを呼び出すときに、各パラメーターに引数と呼ばれる具体的な値を指定します。 引数にはパラメーター型との互換性が必要ですが、呼び出し元のコードで引数名を使用する場合、引数名がメソッドで定義されるパラメーター名と同じである必要はありません。 例:  
+ メソッド定義には、必要なパラメーターの名前と型を指定します。 呼び出し元のコードからメソッドを呼び出すときに、各パラメーターに引数と呼ばれる具体的な値を指定します。 引数にはパラメーター型との互換性が必要ですが、呼び出し元のコードで引数名を使用する場合、引数名がメソッドで定義されるパラメーター名と同じである必要はありません。 次に例を示します。  
   
- [!code-csharp[csProgGuideObjects#74](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_3.cs)]  
+ [!code-csharp[csProgGuideObjects#74](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#74)]  
   
 ## <a name="passing-by-reference-vs-passing-by-value"></a>参照渡しと値渡し  
  既定では、値型がメソッドに渡されるときは、オブジェクト自体ではなく、そのコピーが渡されます。 したがって、引数に加えた変更は、呼び出し元のメソッドにある元のコピーには影響しません。 ref キーワードを使用すると、値型を参照によって引き渡すことができます。 詳細については、「[値型パラメーターの引き渡し](../../../csharp/programming-guide/classes-and-structs/passing-value-type-parameters.md)」を参照してください。 組み込みの値型の一覧については、「[値型の一覧表](../../../csharp/language-reference/keywords/value-types-table.md)」を参照してください。  
@@ -46,11 +46,11 @@ ms.locfileid: "53244415"
   
  `class` キーワードを使用して参照型を作成する例を次に示します。  
   
- [!code-csharp[csProgGuideObjects#42](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_4.cs)]  
+ [!code-csharp[csProgGuideObjects#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#42)]  
   
  この型に基づくオブジェクトをメソッドに渡す場合は、オブジェクトへの参照が渡されます。 次の例では、 `SampleRefType` 型のオブジェクトをメソッド `ModifyObject`に渡します。  
   
- [!code-csharp[csProgGuideObjects#75](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_5.cs)]  
+ [!code-csharp[csProgGuideObjects#75](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#75)]  
   
  この例は、基本的に前の例と同様に、引数を値でメソッドに渡しています。 しかし、参照型を使用しているため、結果は異なります。 `ModifyObject` のパラメーター `value` の `obj`フィールドで行われた変更によって、 `value` メソッドの引数 `rt`の `TestRefType` フィールドも変更されます。 `TestRefType` メソッドは出力として 33 を表示します。  
   
@@ -70,13 +70,13 @@ public ref double GetEstimatedDistance()
 
 また、 `return` キーワードは、メソッドの実行を中止します。 戻り値の型が `void`の場合、値を持たない `return` ステートメントは、メソッドの実行を中止するときに役立ちます。 `return` キーワードを使用しない場合、メソッドは、コード ブロックの最後に到達したときに実行を中止します。 戻り値の型が void 以外のメソッドで値を返すには、 `return` キーワードを使用する必要があります。 たとえば、次の 2 つのメソッドは、 `return` キーワードを使用して整数を返します。  
   
- [!code-csharp[csProgGuideObjects#44](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_6.cs)]  
+ [!code-csharp[csProgGuideObjects#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#44)]  
   
  メソッドから返された値を使用する場合、呼び出し元のメソッド内で同じ型の値を使用している場所では、メソッド呼び出し自体を値として使用できます。 戻り値は、変数に代入することもできます。 たとえば、次の 2 つのコードでは、同様の結果が得られます。  
   
- [!code-csharp[csProgGuideObjects#45](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_7.cs)]  
+ [!code-csharp[csProgGuideObjects#45](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#45)]  
   
- [!code-csharp[csProgGuideObjects#46](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_8.cs)]  
+ [!code-csharp[csProgGuideObjects#46](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#46)]  
   
  この場合、ローカル変数 `result`を使用して値を格納する手順はオプションです。 このローカル変数によってコードの読みやすさが向上することがあります。また、引数の元の値をメソッドのスコープ全体で保持する場合に必要になることがあります。  
 
@@ -124,7 +124,7 @@ public static void FillMatrix(int[,] matrix)
   
  `startButton_Click` メソッドは、戻り値の型が void の非同期メソッドの例です。 `DoSomethingAsync` が非同期メソッドであるため、 `DoSomethingAsync` を呼び出すタスクは、ステートメント `await DoSomethingAsync();`に示すように待機する必要があります。 `startButton_Click` メソッドでは `async` 式が使用されているため、 `await` 修飾子を使用して定義する必要があります。  
   
- [!code-csharp[csAsyncMethod#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_9.cs)]  
+ [!code-csharp[csAsyncMethod#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncmethod/cs/mainwindow.xaml.cs#2)]  
   
  非同期メソッドで [ref](../../../csharp/language-reference/keywords/ref.md) パラメーターまたは [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) パラメーターを宣言することはできませんが、これらのパラメーターを持つメソッドを呼び出すことはできます。  
   
@@ -156,16 +156,16 @@ public Customer this[long id] => store.LookupCustomer(id);
 ## <a name="c-language-specification"></a>C# 言語仕様  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [クラスと構造体](index.md)  
-- [アクセス修飾子](access-modifiers.md)  
-- [静的クラスと静的クラス メンバー](static-classes-and-static-class-members.md)  
-- [継承](inheritance.md)  
-- [抽象クラスとシール クラス、およびクラス メンバー](abstract-and-sealed-classes-and-class-members.md)  
-- [params](../../../csharp/language-reference/keywords/params.md)  
-- [return](../../../csharp/language-reference/keywords/return.md)  
-- [out](../../../csharp/language-reference/keywords/out.md)  
-- [ref](../../../csharp/language-reference/keywords/ref.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [クラスと構造体](index.md)
+- [アクセス修飾子](access-modifiers.md)
+- [静的クラスと静的クラス メンバー](static-classes-and-static-class-members.md)
+- [継承](inheritance.md)
+- [抽象クラスとシール クラス、およびクラス メンバー](abstract-and-sealed-classes-and-class-members.md)
+- [params](../../../csharp/language-reference/keywords/params.md)
+- [return](../../../csharp/language-reference/keywords/return.md)
+- [out](../../../csharp/language-reference/keywords/out.md)
+- [ref](../../../csharp/language-reference/keywords/ref.md)
 - [パラメーターの引き渡し](passing-parameters.md)

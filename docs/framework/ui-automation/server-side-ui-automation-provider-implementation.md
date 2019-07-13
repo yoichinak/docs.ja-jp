@@ -6,18 +6,16 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 270267fa961e2d9420364bc11992be9eff03866b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: f888923736d384af2c6d955a126bacacb16113af
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837391"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651148"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>サーバー側 UI オートメーション プロバイダーの実装
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]に関する最新情報については[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)をご覧ください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
  このセクションでは、カスタム コントロールのサーバー側 UI オートメーション プロバイダーを実装する方法について説明します。  
   
@@ -39,13 +37,12 @@ ms.locfileid: "48837391"
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロバイダー プロジェクトは、次のアセンブリを参照する必要があります。  
   
--   UIAutomationProviders.dll  
+- UIAutomationProviders.dll  
   
--   UIAutomationTypes.dll  
+- UIAutomationTypes.dll  
   
--   WindowsBase.dll  
-  
-  
+- WindowsBase.dll  
+
 <a name="Provider_Interfaces"></a>   
 ### <a name="provider-interfaces"></a>プロバイダーのインターフェイス  
  すべての [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロバイダーは、次のインターフェイスのいずれかを実装する必要があります。  
@@ -84,25 +81,25 @@ ms.locfileid: "48837391"
   
  HWND ベースのコントロールのプロバイダーは通常、次のプロパティを指定する必要はありません (フィールド値で識別されます)。  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.ProcessIdProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.ProcessIdProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.ClassNameProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.ClassNameProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.HasKeyboardFocusProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.HasKeyboardFocusProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.IsPasswordProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.IsPasswordProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty>  
   
 > [!NOTE]
 >  単純な要素またはウィンドウでホストされているフラグメント ルートの <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> は、ウィンドウから取得されます。ただし、ルートの下にあるフラグメント要素 (リスト ボックス内のリスト項目など) は独自の識別子を提供する必要があります。 詳細については、「 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>」を参照してください。  
@@ -151,13 +148,13 @@ ms.locfileid: "48837391"
   
  ポップアップ ウィンドウの親を変更するには:  
   
-1.  ポップアップ ウィンドウ用のプロバイダーを作成します。 これには、ポップアップ ウィンドウのクラスを事前に知っておく必要があります。  
+1. ポップアップ ウィンドウ用のプロバイダーを作成します。 これには、ポップアップ ウィンドウのクラスを事前に知っておく必要があります。  
   
-2.  そのポップアップ自体がコントロールであるかのように、ポップアップのすべてのプロパティとパターンを通常どおりに実装します。  
+2. そのポップアップ自体がコントロールであるかのように、ポップアップのすべてのプロパティとパターンを通常どおりに実装します。  
   
-3.  <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A> プロパティを実装し、 <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>から取得した値を返せるようにします。パラメーターは、ポップアップ ウィンドウのウィンドウ ハンドルです。  
+3. <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A> プロパティを実装し、 <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>から取得した値を返せるようにします。パラメーターは、ポップアップ ウィンドウのウィンドウ ハンドルです。  
   
-4.  ポップアップ ウィンドウとその親の <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.Navigate%2A> を実装し、論理上の親から論理上の子へのナビゲーションおよび子の兄弟間のナビゲーションが適切に処理されるようにします。  
+4. ポップアップ ウィンドウとその親の <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.Navigate%2A> を実装し、論理上の親から論理上の子へのナビゲーションおよび子の兄弟間のナビゲーションが適切に処理されるようにします。  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は、ポップアップ ウィンドウを検出すると、既定のナビゲーションがオーバーライドされていると認識し、デスクトップの子として検出されたポップアップ ウィンドウをスキップします。 代わりに、ノードはフラグメントによってのみ、到達可能になります。  
   
@@ -171,12 +168,11 @@ ms.locfileid: "48837391"
   
  これを実現するため、Rebar のフラグメント ルート プロバイダーは、バンドを表す子のセットを公開します。 各バンドには、プロパティとパターンを公開するプロバイダーが 1 つあります。 その <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>の実装で、バンド プロバイダーはコントロール HWND の既定のウィンドウ プロバイダーを返します。これを取得するには、コントロールのウィンドウ ハンドルを渡して <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>を呼び出します。 最後に、Rebar のフラグメント ルート プロバイダーは <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride> インターフェイスを実装し、その <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride.GetOverrideProviderForHwnd%2A> の実装で、指定した HWND に含まれるコントロールの適切なバンド プロバイダーを返します。  
   
-## <a name="see-also"></a>関連項目  
- [UI オートメーション プロバイダーの概要](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)  
- [サーバー側 UI オートメーション プロバイダーの公開](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)  
- [UI オートメーション プロバイダーからのプロパティの返却](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)  
- [UI オートメーション プロバイダーからのイベントの発生](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)  
- [UI オートメーション フラグメント プロバイダーでのナビゲーションの有効化](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)  
- [UI オートメーション プロバイダーでのコントロール パターンのサポート](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
- [単純なプロバイダーのサンプル](https://msdn.microsoft.com/library/c10a6255-e8dc-494b-a051-15111b47984a)  
- [フラグメント プロバイダーのサンプル](https://msdn.microsoft.com/library/778ef1bc-8610-4bc9-886e-aeff94a8a13e)
+## <a name="see-also"></a>関連項目
+
+- [UI オートメーション プロバイダーの概要](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
+- [サーバー側 UI オートメーション プロバイダーの公開](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)
+- [UI オートメーション プロバイダーからのプロパティの返却](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
+- [UI オートメーション プロバイダーからのイベントの発生](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
+- [UI オートメーション フラグメント プロバイダーでのナビゲーションの有効化](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)
+- [UI オートメーション プロバイダーでのコントロール パターンのサポート](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)

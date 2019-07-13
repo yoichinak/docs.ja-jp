@@ -6,24 +6,24 @@ helpviewer_keywords:
 - Visual Basic code, XML
 - XML [Visual Basic], manipulating
 ms.assetid: da32cffb-198d-41b1-9af3-260fe32e3b7d
-ms.openlocfilehash: 7fd111f5e885de3389b8f93002db22b48c4edd45
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 7ed045b79460b3f1b3178d6bc85de9358d61f116
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780529"
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>Visual Basic での XML の操作
 使用することができます*XML リテラル*文字列、ファイル、またはストリームなどの外部ソースから XML を読み込めません。 使用することができますし、 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 、XML を操作して、使用する[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]XML に対してクエリをします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [方法 : ファイル、文字列、またはストリームからの XML の読み込み](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  
+ [方法: ファイル、文字列、または Stream から XML を読み込む](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  
  XML を読み込む方法を示します、<xref:System.Xml.Linq.XDocument>または<xref:System.Xml.Linq.XElement>テキスト ファイル、文字列、またはストリームからのオブジェクト。  
   
- [方法 : LINQ を使用した XML の変換](../../../../visual-basic/programming-guide/language-features/xml/how-to-transform-xml-by-using-linq.md)  
+ [方法: LINQ を使用した XML を変換します。](../../../../visual-basic/programming-guide/language-features/xml/how-to-transform-xml-by-using-linq.md)  
  内容を変換する方法を示します、<xref:System.Xml.Linq.XDocument>を新しい XML ドキュメント オブジェクト。  
   
- [方法 : XML リテラルの変更](../../../../visual-basic/programming-guide/language-features/xml/how-to-modify-xml-literals.md)  
+ [方法: XML リテラルを変更します。](../../../../visual-basic/programming-guide/language-features/xml/how-to-modify-xml-literals.md)  
  要素、属性、および XML リテラルの値を変更する方法を示します。  
   
 ## <a name="related-sections"></a>関連項目  
@@ -42,7 +42,8 @@ ms.locfileid: "46562230"
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
  使用する方法を説明するセクションへのリンクを提供します。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Visual Basic でします。  
   
-## <a name="see-also"></a>関連項目  
- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+## <a name="see-also"></a>関連項目
+
+- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

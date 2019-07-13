@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: e6e7d9fe6764120e3d676b9d2cbd248e7491e504
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4e502b9917e6a99a8526a2314136841140309083
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152631"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64582821"
 ---
 # <a name="wcf-client-overview"></a>WCF クライアントの概要
 このセクションでは、クライアント アプリケーションの処理、構成、作成、および Windows Communication Foundation (WCF) クライアントを使用する方法、およびクライアント アプリケーションをセキュリティで保護する方法について説明します。  
@@ -20,25 +20,25 @@ ms.locfileid: "53152631"
 ## <a name="using-wcf-client-objects"></a>WCF クライアント オブジェクトの使用  
  クライアント アプリケーションでは、別のアプリケーションと通信する WCF クライアントを使用するマネージ アプリケーションです。 クライアントを作成するには、WCF サービスのアプリケーションには、次の手順が必要です。  
   
-1.  サービス エンドポイントのサービス コントラクト、バインディング、およびアドレス情報を取得します。  
+1. サービス エンドポイントのサービス コントラクト、バインディング、およびアドレス情報を取得します。  
   
-2.  その情報を使用して WCF クライアントを作成します。  
+2. その情報を使用して WCF クライアントを作成します。  
   
-3.  操作を呼び出します。  
+3. 操作を呼び出します。  
   
-4.  WCF クライアント オブジェクトを閉じます。  
+4. WCF クライアント オブジェクトを閉じます。  
   
  この後の各セクションでは、これらの手順について詳しく説明します。また、次の内容についても簡単に説明します。  
   
--   エラー処理  
+- エラー処理  
   
--   クライアントの構成とセキュリティ保護  
+- クライアントの構成とセキュリティ保護  
   
--   双方向サービスのコールバック オブジェクトの作成  
+- 双方向サービスのコールバック オブジェクトの作成  
   
--   サービスの非同期呼び出し  
+- サービスの非同期呼び出し  
   
--   クライアント チャネルを使用したサービスの呼び出し  
+- クライアント チャネルを使用したサービスの呼び出し  
   
 ## <a name="obtain-the-service-contract-bindings-and-addresses"></a>サービス コントラクト、バインディング、およびアドレスを取得する  
  WCF では、サービスとクライアントは、マネージ属性、インターフェイス、およびメソッドを使用してコントラクトをモデルします。 クライアント アプリケーションからサービスに接続するには、そのサービス コントラクトの型情報を取得する必要があります。 通常、これを行うを使用して、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)、サービスからメタデータをダウンロード、好みの言語でのマネージ ソース コード ファイルに変換し、クライアントを作成します。WCF クライアント オブジェクトを構成に使用できるアプリケーション構成ファイル。 呼び出す、WCF クライアント オブジェクトを作成する場合など、`MyCalculatorService`でそのサービスのメタデータが公開されていることがわかって`http://computerName/MyCalculatorService/Service.svc?wsdl`、次のコード例は、Svcutil.exe を使用して取得する方法を示していますその後、`ClientCode.vb`ファイル。マネージ コードでサービス コントラクトが含まれています。  
@@ -146,11 +146,11 @@ End Interface
   
  双方向サービスのクライアントでは、以下の処理を行う必要があります。  
   
--   コールバック コントラクト クラスを実装します。  
+- コールバック コントラクト クラスを実装します。  
   
--   コールバック コントラクト実装クラスのインスタンスを作成し、使用して作成する、 <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> WCF クライアント コンス トラクターに渡すオブジェクト。  
+- コールバック コントラクト実装クラスのインスタンスを作成し、使用して作成する、 <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> WCF クライアント コンス トラクターに渡すオブジェクト。  
   
--   操作を呼び出し、操作のコールバックを処理します。  
+- 操作を呼び出し、操作のコールバックを処理します。  
   
  双方向の WCF クライアント オブジェクトの関数などの対応する双方向コールバック サービスの構成など、コールバックをサポートするために必要な機能を公開する例外を使用します。  
   
@@ -166,11 +166,12 @@ End Interface
  [!code-csharp[S_DualHttp#134](../../../samples/snippets/csharp/VS_Snippets_CFX/s_dualhttp/cs/program.cs#134)]  
   
 ## <a name="calling-services-asynchronously"></a>サービスの非同期呼び出し  
- 操作の呼び出し方法は、クライアント開発者に完全に依存します。 これは、操作を構成するメッセージは、マネージ コードで表現するときに同期メソッドまたは非同期メソッドのどちらかにマップできるためです。 したがって、操作を非同期に呼び出すクライアントを作成する場合、Svcutil.exe の `/async` オプションを使用して非同期クライアント コードを生成できます。 詳細については、次を参照してください。[方法。サービス操作を非同期的に呼び出す](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)します。  
+ 操作の呼び出し方法は、クライアント開発者に完全に依存します。 これは、操作を構成するメッセージは、マネージ コードで表現するときに同期メソッドまたは非同期メソッドのどちらかにマップできるためです。 したがって、操作を非同期に呼び出すクライアントを作成する場合、Svcutil.exe の `/async` オプションを使用して非同期クライアント コードを生成できます。 詳細については、「[方法 :サービス操作を非同期的に呼び出す](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)します。  
   
 ## <a name="calling-services-using-wcf-client-channels"></a>WCF クライアント チャネルを使用したサービスの呼び出し  
  WCF クライアントの型を拡張<xref:System.ServiceModel.ClientBase%601>から派生した<xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>基になるチャネル システムを公開するインターフェイス。 ターゲットのサービス コントラクトと <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> クラスを使用して、サービスを呼び出すことができます。 詳細については、次を参照してください。 [WCF クライアント アーキテクチャ](../../../docs/framework/wcf/feature-details/client-architecture.md)します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  
- <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
+- <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>

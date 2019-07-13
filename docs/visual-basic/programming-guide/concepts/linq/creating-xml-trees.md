@@ -2,12 +2,12 @@
 title: XML ツリー (Visual Basic) の作成
 ms.date: 07/20/2015
 ms.assetid: e86ba12b-17de-4579-81bb-66322b84cfbe
-ms.openlocfilehash: 47f74669da62997ea08404dbddd8a4deba34bee3
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: f22dcb111b3c6da01fa60b3ea918b91cb89031b3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62028487"
 ---
 # <a name="creating-xml-trees-visual-basic"></a>XML ツリー (Visual Basic) の作成
 最も一般的な XML タスクの 1 つは、XML ツリーの構築です。 ここでは、XML ツリーを作成するいくつかの方法について説明します。  
@@ -20,9 +20,10 @@ ms.locfileid: "39244846"
 |[Visual Basic で XML リテラルの概要](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md)|Visual Basic で XML リテラルを使用してツリーを作成する簡単な説明を提供します。 このトピックでには、XML リテラルの Visual Basic のドキュメントへのリンクが含まれています。|  
 |[複製とアタッチ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/cloning-vs-attaching.md)|既存の XML ツリーからノードを追加する場合 (ノードは複製されてから追加されます) と親のないノードを追加する場合 (ノードは単に追加されます) の違いについて説明します。|  
 |[(Visual Basic) の XML の解析](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)|さまざまなソースの XML を解析する方法について説明します。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] は、XML の解析に使用する <xref:System.Xml.XmlReader> の上位に階層化されます。|  
-|[方法: XmlWriter (LINQ to XML) を使用して XML ツリーを設定する (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml.md)|<xref:System.Xml.XmlWriter> を使用して XML ツリーを設定する方法について説明します。|  
+|[方法: (LINQ to XML) を XmlWriter を使用して XML ツリーを設定する (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml.md)|<xref:System.Xml.XmlWriter> を使用して XML ツリーを設定する方法について説明します。|  
 |[方法: XSD (LINQ to XML) を使用して検証 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md)|XSD を使用して XML ツリーを検証する方法について説明します。|  
 |[XElement オブジェクトと XDocument オブジェクトの有効なコンテンツ](../../../../visual-basic/programming-guide/concepts/linq/valid-content-of-xelement-and-xdocument-objects.md)|コンストラクターやメソッドに渡すことができる有効な引数について説明します。これらのコンストラクターやメソッドは、コンテンツを要素やドキュメントに追加するためのものです。|  
   
-## <a name="see-also"></a>関連項目  
- [プログラミング ガイド (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>関連項目
+
+- [プログラミング ガイド (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

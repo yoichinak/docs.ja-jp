@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30812
 ms.assetid: 5091a250-be66-413b-98a3-2a9974c4d600
-ms.openlocfilehash: 6788a7908489591e266af6d141006f2aa2d0e6f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f501b518d5b3f2d48ced33885da2afd353c609e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33593917"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665675"
 ---
 # <a name="optional-parameters-must-specify-a-default-value"></a>省略可能な引数には、既定値を指定する必要があります。
 省略可能なパラメーターは、呼び出し元のプロシージャでパラメーターが指定されていない場合に使用できる既定値を指定する必要があります。  
@@ -21,7 +21,7 @@ ms.locfileid: "33593917"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   省略可能なパラメーターの既定値を指定します例えば：  
+- は省略可能なパラメーターの既定値を指定します例えば：  
   
     ```  
     Sub Proc1(ByVal X As Integer,   
@@ -30,5 +30,6 @@ ms.locfileid: "33593917"
     End Sub  
     ```  
   
-## <a name="see-also"></a>関連項目  
- [Optional](../../../visual-basic/language-reference/modifiers/optional.md)
+## <a name="see-also"></a>関連項目
+
+- [Optional](../../../visual-basic/language-reference/modifiers/optional.md)

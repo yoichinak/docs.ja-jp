@@ -11,12 +11,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: 7e48783c01a5b94f51f89d25f465f22358e7aa8f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 28bf939cb7da760400486c52bb07649826628c1c
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240023"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422586"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (C# リファレンス)
 
@@ -163,7 +163,7 @@ catch の詳細については、「[try-catch-finally](try-catch-finally.md)」
 
 例外処理を示すために、この例の `throw new Exception` 行のコメントを解除します。 タスクの `IsFaulted` プロパティが `True` に設定され、タスクの `Exception.InnerException` プロパティが例外に設定され、例外が `catch` ブロックでキャッチされます。
 
-`throw new OperationCancelledException` 行のコメントを解除して、非同期処理を取り消したときに何が起こるかを示します。 タスクの `IsCanceled` プロパティが `true` に設定され、例外が `catch` ブロックでキャッチされます。 この例に該当しない一部の条件では、タスクの `IsFaulted` プロパティが `true` に設定され、`IsCanceled` が `false` に設定されます。
+`throw new OperationCanceledException` 行のコメントを解除して、非同期処理を取り消したときに何が起こるかを示します。 タスクの `IsCanceled` プロパティが `true` に設定され、例外が `catch` ブロックでキャッチされます。 この例に該当しない一部の条件では、タスクの `IsFaulted` プロパティが `true` に設定され、`IsCanceled` が `false` に設定されます。
 
 [!code-csharp[csAsyncExceptions#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncexceptions/cs/class1.cs#2)]  
 
@@ -185,7 +185,6 @@ catch の詳細については、「[try-catch-finally](try-catch-finally.md)」
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
 - [try、throw、catch ステートメント (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)
-- [例外処理ステートメント](exception-handling-statements.md)
 - [throw](throw.md)
 - [try-finally](try-finally.md)
 - [方法: 例外を明示的にスローする](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

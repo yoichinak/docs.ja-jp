@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd4b7ffef9c0ba3aba54387245b2d5c9ec1ae906
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: dcf63000de549b42d92ba157a7e550ac605bbfcd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441757"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768381"
 ---
 # <a name="lpoverlappedcompletionroutine-function-pointer"></a>LPOVERLAPPED_COMPLETION_ROUTINE 関数ポインター
 デバイスに対する重複 I/O (非同期 I/O) が完了したときに、ホストに通知する関数を指します。  
   
- この関数ポインターが削除されて、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]です。  
+ この関数ポインターは、.NET Framework 4 では廃止されました。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef VOID (*LPOVERLAPPED_COMPLETION_ROUTINE) (  
     [in] DWORD  dwErrorCode,  
     [in] DWORD  dwNumberOfBytesTransfered,  
@@ -38,30 +38,30 @@ typedef VOID (*LPOVERLAPPED_COMPLETION_ROUTINE) (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `dwErrorCode`  
- [in]値は、デバイスが閉じられた場合に、エラー コードです。それ以外の場合、この値は 0 です。  
+ [in]デバイスが閉じられていない場合、エラー コードである値それ以外の場合、この値は 0 です。  
   
- デバイスを閉じる I/O デバイスが保留中のすべてをすぐに完了するとします。  
+ デバイスを閉じる、保留中のすべてのデバイスに I/O をすぐに完了するとします。  
   
  `dwNumberOfBytesTransfered`  
- [in]I/O 操作で転送されたバイト数。  
+ [in]I/O 操作によって転送されたバイト数。  
   
  `lpOverlapped`  
  [in]I/O 要求を完了するために使用する情報を格納する構造体へのポインター。  
   
-## <a name="remarks"></a>コメント  
- 関数`LPOVERLAPPED_COMPLETION_ROUTINE`ポイントはコールバック関数であり、ホスト アプリケーションの作成者によって実装する必要があります。 コールバック関数は、完了した I/O 要求を処理するホストを許可します。  
+## <a name="remarks"></a>Remarks  
+ 関数`LPOVERLAPPED_COMPLETION_ROUTINE`ポイントはコールバック関数であり、ホスト アプリケーションの作成者によって実装する必要があります。 コールバック関数では、ホストが完了した I/O 要求を処理できるようにします。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   
  **ライブラリ:** MSCorWks.dll  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- 
-  [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>関連項目
+
+- [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

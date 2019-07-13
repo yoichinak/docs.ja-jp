@@ -1,5 +1,5 @@
 ---
-title: '&lt;assemblyBinding&gt;要素&lt;構成&gt;'
+title: <assemblyBinding>appSettings&gt;の<configuration>add&gt;要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/assemblyBinding
@@ -7,21 +7,19 @@ helpviewer_keywords:
 - assemblyBinding Element
 - <assemblyBinding> Element
 ms.assetid: 6cc55983-b894-449b-8e26-b258e53939cd
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 5693b92ac35a357ff1f8643d0eb9ec2105acecb4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f5992a6085c32d37f56319cf8b2c361542c441e7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674832"
 ---
 # <a name="assemblybinding-element-for-configuration"></a>\<assemblyBinding > 要素の\<構成 >
 
 構成レベルでのアセンブリ バインディング ポリシーを指定します。
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;**\<assemblyBinding >**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp; **\<assemblyBinding >**
 
 ## <a name="syntax"></a>構文
 
@@ -41,13 +39,13 @@ ms.locfileid: "47193357"
 
 |     | 説明 |
 | --- | ----------- |
-| [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) | 共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。 |
+| [ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) | 共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。 |
 
 ## <a name="child-element"></a>子要素
 
 |     | 説明 |
 | --- | ----------- |
-| [**\<linkedConfiguration >**](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | インクルードする構成ファイルを指定します。 |
+| [ **\<linkedConfiguration>** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | インクルードする構成ファイルを指定します。 |
 
 ## <a name="remarks"></a>Remarks
 
@@ -70,4 +68,4 @@ ms.locfileid: "47193357"
 
 ## <a name="see-also"></a>関連項目
 
-[.NET Framework の構成ファイル スキーマ](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework の構成ファイル スキーマ](~/docs/framework/configure-apps/file-schema/index.md)

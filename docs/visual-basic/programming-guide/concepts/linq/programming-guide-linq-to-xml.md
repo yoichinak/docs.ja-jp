@@ -2,21 +2,20 @@
 title: プログラミング ガイド (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1f942bf-3404-4354-b4c5-4fe35e37a02b
-ms.openlocfilehash: 70c169cecc8ca4ede30216bc832a8518766cd1a5
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: cf8dbaf5991d1991267ad31125029298cffcfcd3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42929816"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592924"
 ---
 # <a name="programming-guide-linq-to-xml-visual-basic"></a>プログラミング ガイド (LINQ to XML) (Visual Basic)
 ここでは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用したプログラミングに関する概念と方法の情報について説明します。  
   
 ## <a name="who-should-read-this-documentation"></a>このドキュメントの対象読者  
- このドキュメントは、Visual Basic との基本的な側面を既に理解している開発者を対象と、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]します。  
+ このドキュメントは、Visual Basic と .NET Framework のいくつかの基本的な側面を既に理解している開発者を対象とします。  
   
- このドキュメントの目的は、多数の開発者が [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を簡単に使用できるようにすることです。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] によって、XML プログラミングが容易になります。 
-           を使用するために上級開発者になる必要はありません。  
+ このドキュメントの目的は、多数の開発者が [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を簡単に使用できるようにすることです。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] によって、XML プログラミングが容易になります。 を使用するために上級開発者になる必要はありません。  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] は、ジェネリック クラスに大きく依存しています。 そのため、ジェネリック型とクラスの使用を理解することが非常に重要です。 詳細については、次を参照してください。 [Visual Basic におけるジェネリック型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)します。  
   
@@ -35,6 +34,7 @@ ms.locfileid: "42929816"
 |[LINQ to XML のセキュリティ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-security.md)|LINQ to XML に関連するセキュリティの問題について説明し、セキュリティ上の脆弱性を改善するためのガイダンスを紹介します。|  
 |[サンプル XML ドキュメント (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)|このドキュメントの多数の例で使用されているサンプル XML ドキュメントが含まれています。|  
   
-## <a name="see-also"></a>関連項目  
- [はじめに (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
- [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)
+## <a name="see-also"></a>関連項目
+
+- [はじめに (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
+- [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)

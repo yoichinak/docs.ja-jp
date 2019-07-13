@@ -2,12 +2,12 @@
 title: Unit 型
 description: 値はありませんが必要なまたは必要なときに言語の構文で値が必要な場所、場所を保持するために F# 'unit' の型を使用する多くの場合について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: f1866ff12f36f4f8d3eaa1275551c42fc4ade216
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: d515e19489bfa7de6f17194fd74176cfa0bcd7c9
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611985"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645120"
 ---
 # <a name="unit-type"></a>Unit 型
 

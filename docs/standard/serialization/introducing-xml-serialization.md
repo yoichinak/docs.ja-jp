@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: e1625d2cdf0be4106a43b9d40aef97ea2b5c4ec4
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b1d91306c9cc9788046d19cc5de9e4712cdaa7e8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45999469"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772548"
 ---
 # <a name="introducing-xml-serialization"></a>XML シリアル化の概要
 
@@ -28,7 +28,7 @@ ms.locfileid: "45999469"
 > [!NOTE]
 > XML シリアル化では、メソッド、インデクサー、プライベート フィールド、または読み取り専用プロパティ (読み取り専用コレクションを除く) は変換されません。 オブジェクトのフィールドとプロパティをすべてシリアル化するには、パブリックとプライベートのいずれの場合も、XML シリアル化ではなく、<xref:System.Runtime.Serialization.DataContractSerializer> を使用します。
 
- XML シリアル化の中核となるクラスは <xref:System.Xml.Serialization.XmlSerializer> クラスです。このクラスの最も重要なメソッドは、**Serialize** メソッドと **Deserialize** メソッドです。 <xref:System.Xml.Serialization.XmlSerializer> は、C# ファイルを作成し、これを .dll ファイルにコンパイルすることによってシリアル化を行います。 .NET Framework 2.0 では、こうしたシリアル化アセンブリをあらかじめ生成してアプリケーションと共に配置し、起動時のパフォーマンスを向上させるため、[XML シリアライザー ジェネレーター ツール (Sgen.exe)](xml-serializer-generator-tool-sgen-exe.md) が用意されています。 によって生成される XML ストリーム、 **XmlSerializer** World Wide Web Consortium (W3C) に準拠して[XML スキーマ定義言語 (XSD) 1.0 勧告](https://www.w3.org/TR/xslt)します。 さらに、生成されるデータ型は、ドキュメント『XML Schema Part 2: Datatypes』に準拠します。
+ XML シリアル化の中核となるクラスは <xref:System.Xml.Serialization.XmlSerializer> クラスです。このクラスの最も重要なメソッドは、**Serialize** メソッドと **Deserialize** メソッドです。 <xref:System.Xml.Serialization.XmlSerializer> は、C# ファイルを作成し、これを .dll ファイルにコンパイルすることによってシリアル化を行います。 .NET Framework 2.0 では、こうしたシリアル化アセンブリをあらかじめ生成してアプリケーションと共に配置し、起動時のパフォーマンスを向上させるため、[XML シリアライザー ジェネレーター ツール (Sgen.exe)](xml-serializer-generator-tool-sgen-exe.md) が用意されています。 によって生成される XML ストリーム、 **XmlSerializer** World Wide Web Consortium (W3C) に準拠して[XML スキーマ定義言語 (XSD) 1.0 勧告](https://www.w3.org/TR/xslt)します。 生成されたデータ型は、ドキュメント 『 準拠している、さらに、"XML Schema Part 2。データ型。"
 
  オブジェクトのデータは、クラス、フィールド、プロパティ、プリミティブ型、配列などのプログラミング構成要素、および **XmlElement** オブジェクトまたは **XmlAttribute** オブジェクトの形で埋め込まれている XML を使用して記述されます。 属性で注釈を付けて独自のクラスを作成するか、または XML スキーマ定義ツールを使用して、既存の XML スキーマに基づいたクラスを生成できます。
 
@@ -36,9 +36,9 @@ ms.locfileid: "45999469"
 
  属性を使用して XML ストリームの XML 名前空間、要素名、属性名などを設定することで、**XmlSerializer** クラスによって生成される XML ストリームを制御できます。 これらの属性、および属性による XML シリアル化の制御方法については、「[属性を使用した XML シリアル化の制御](controlling-xml-serialization-using-attributes.md)」を参照してください。 また、生成される XML を制御するこれらの属性の一覧については、「[XML シリアル化を制御する属性](attributes-that-control-xml-serialization.md)」を参照してください。
 
- さらに、**XmlSerializer** クラスでは、オブジェクトをシリアル化し、エンコードされた SOAP XML ストリームを生成することができます。 このようにして生成される XML は、W3C のドキュメント『Simple Object Access Protocol (SOAP) 1.1』のセクション 5 に準拠します。 このプロセスの詳細については、「[方法 : オブジェクトを SOAP エンコード済み XML ストリームとしてシリアル化する](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)」を参照してください。 生成される XML を制御する属性の一覧については、「[エンコード済み SOAP シリアル化を制御する属性](attributes-that-control-encoded-soap-serialization.md)」を参照してください。
+ さらに、**XmlSerializer** クラスでは、オブジェクトをシリアル化し、エンコードされた SOAP XML ストリームを生成することができます。 このようにして生成される XML は、W3C のドキュメント『Simple Object Access Protocol (SOAP) 1.1』のセクション 5 に準拠します。 このプロセスの詳細については、次を参照してください。[方法。Serialize an Object as SOAP エンコード済み XML Stream](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)します。 生成される XML を制御する属性の一覧については、「[エンコード済み SOAP シリアル化を制御する属性](attributes-that-control-encoded-soap-serialization.md)」を参照してください。
 
- **XmlSerializer** クラスは、XML Web サービスによって作成され、XML Web サービスに渡される SOAP メッセージを生成します。 この SOAP メッセージを制御するには、XML Web サービス ファイル (.asmx) 内のクラス、戻り値、パラメーター、およびフィールドに属性を適用します。 XML Web サービスでは、リテラルまたはエンコード済みのいずれの SOAP スタイルも使用できるため、「XML シリアル化を制御する属性」と「エンコード済み SOAP シリアル化を制御する属性」の両方に示されている属性を使用できます。 XML Web サービスによって生成された XML を属性を使用して制御する方法については、「[XML Web サービスを使用した XML シリアル化](xml-serialization-with-xml-web-services.md)」を参照してください。 SOAP と XML Web サービスの詳細については、「[Customizing SOAP Messages](https://msdn.microsoft.com/en-us/subscriptions/index/dkwy2d72\(v=vs.71\).aspx)」 (SOAP メッセージのカスタマイズ) を参照してください。
+ **XmlSerializer** クラスは、XML Web サービスによって作成され、XML Web サービスに渡される SOAP メッセージを生成します。 この SOAP メッセージを制御するには、XML Web サービス ファイル (.asmx) 内のクラス、戻り値、パラメーター、およびフィールドに属性を適用します。 XML Web サービスでは、リテラルまたはエンコード済みのいずれの SOAP スタイルも使用できるため、「XML シリアル化を制御する属性」と「エンコード済み SOAP シリアル化を制御する属性」の両方に示されている属性を使用できます。 XML Web サービスによって生成された XML を属性を使用して制御する方法については、「[XML Web サービスを使用した XML シリアル化](xml-serialization-with-xml-web-services.md)」を参照してください。 SOAP と XML Web サービスの詳細については、次を参照してください。 [SOAP メッセージの書式設定をカスタマイズする](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100))します。
 
 ## <a name="security-considerations-for-xmlserializer-applications"></a>XmlSerializer アプリケーションのセキュリティに関する考慮事項
 
@@ -107,7 +107,7 @@ public class OrderForm
 
 - **DataSet** オブジェクト。
 
- オブジェクトのシリアル化と逆シリアル化の詳細については、「[方法 : オブジェクトをシリアル化する](how-to-serialize-an-object.md)」および「[方法 : オブジェクトを逆シリアル化する](how-to-deserialize-an-object.md)」を参照してください。
+ シリアル化またはオブジェクトを逆シリアル化の詳細については、次を参照してください。[方法。オブジェクトをシリアル化](how-to-serialize-an-object.md)と[方法。オブジェクトを逆シリアル化](how-to-deserialize-an-object.md)します。
 
 ## <a name="advantages-of-using-xml-serialization"></a>XML シリアル化を使用する利点
 
@@ -133,7 +133,7 @@ XML シリアル化のもう 1 つの利点は、生成される XML ストリ�
 
 - シリアル化できるのは、パブリック プロパティとパブリック フィールドのみです。 プロパティにパブリック アクセサー (get メソッドおよび set メソッド) が存在する必要があります。 非パブリック データをシリアル化する必要がある場合は、XML シリアル化ではなく <xref:System.Runtime.Serialization.DataContractSerializer> クラスを使用します。
 
-- クラスを **XmlSerializer** でシリアル化するには、そのクラスが既定のコンストラクターを持つ必要があります。
+- クラスにはシリアル化するパラメーターなしのコンス トラクターが必要**XmlSerializer**します。
 
 - メソッドはシリアル化できません。
 
@@ -147,7 +147,7 @@ XML シリアル化のもう 1 つの利点は、生成される XML ストリ�
 
 ## <a name="xsd-data-type-mapping"></a>XSD データ型のマッピング
 
-W3C のドキュメント 『 [XML Schema Part 2: datatypes 』](https://www.w3.org/TR/xmlschema-2/) XML スキーマ定義言語 (XSD) スキーマで許可されている単純なデータ型を指定します。 これらのデータ型の多く (**int**、**decimal** など) については、対応するデータ型が .NET Framework にあります。 ただし、**NMTOKEN** データ型など、.NET Framework には対応するものがない XML データ型もあります。 その場合、XML スキーマ定義ツール ([XML スキーマ定義ツール (Xsd.exe)](xml-schema-definition-tool-xsd-exe.md)) を使用してスキーマからクラスを生成すると、適切な属性が文字列型のメンバーに適用され、その **DataType** プロパティが XML データ型名に設定されます。 たとえば、XML データ型が **NMTOKEN** である "MyToken" という名前の要素がスキーマに含まれている場合、生成されるクラスには、次の例に示すようなメンバーが含まれます。
+W3C のドキュメント 『 [XML Schema Part 2。データ型](https://www.w3.org/TR/xmlschema-2/)XML スキーマ定義言語 (XSD) スキーマで許可されている単純なデータ型を指定します。 これらのデータ型の多く (**int**、**decimal** など) については、対応するデータ型が .NET Framework にあります。 ただし、**NMTOKEN** データ型など、.NET Framework には対応するものがない XML データ型もあります。 その場合、XML スキーマ定義ツール ([XML スキーマ定義ツール (Xsd.exe)](xml-schema-definition-tool-xsd-exe.md)) を使用してスキーマからクラスを生成すると、適切な属性が文字列型のメンバーに適用され、その **DataType** プロパティが XML データ型名に設定されます。 たとえば、XML データ型が **NMTOKEN** である "MyToken" という名前の要素がスキーマに含まれている場合、生成されるクラスには、次の例に示すようなメンバーが含まれます。
 
 ```vb
 <XmlElement(DataType:="NMTOKEN")> _
@@ -185,5 +185,5 @@ public string MyToken;
 - [シリアル化](index.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [XML シリアル化の例](examples-of-xml-serialization.md)
-- [方法 : オブジェクトをシリアル化する](how-to-serialize-an-object.md)
-- [方法 : オブジェクトを逆シリアル化する](how-to-deserialize-an-object.md)
+- [方法: オブジェクトをシリアル化します。](how-to-serialize-an-object.md)
+- [方法: オブジェクトを逆シリアル化します。](how-to-deserialize-an-object.md)

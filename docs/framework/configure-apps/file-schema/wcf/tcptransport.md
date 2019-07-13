@@ -1,15 +1,15 @@
 ---
-title: '&lt;tcpTransport&gt;'
+title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 21b63ab0b4546dc2f4d46c40b02c55fb639320f6
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 4b56da9abc4f7bf30601fec7d0c79f454124f41a
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151177"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423145"
 ---
-# <a name="lttcptransportgt"></a>&lt;tcpTransport&gt;
+# <a name="tcptransport"></a>\<tcpTransport>
 カスタム バインドのメッセージを転送するためにチャネルで使用できる TCP トランスポートを定義します。  
   
  \<system.serviceModel>  
@@ -38,7 +38,7 @@ ms.locfileid: "54151177"
   <connectionPoolSettings groupName="String"
                           idleTimeout="TimeSpan"
                           leaseTimeout="TimeSpan"
-                          maxOutboundConnectionsPerEndpopint="Integer" />
+                          maxOutboundConnectionsPerEndpoint="Integer" />
 </tcpTransport>
 ```  
   
@@ -49,7 +49,7 @@ ms.locfileid: "54151177"
   
 |属性|説明|  
 |---------------|-----------------|  
-|channelInitializationTimeout|チャネルの初期化に対して許容される時間制限を取得または設定します。  接続が切断されるまでのチャネルの初期化ステータスの最大時間 (秒単位)。 このクォータは、.Net メッセージ フレーム プロトコルを使用して TCP 接続が接続を認証するのに必要な時間を含みます。 クライアントは、サーバーが認証を実行するための十分な情報を得る前に初期データを送信する必要があります。 既定値は 30 秒です。|  
+|channelInitializationTimeout|チャネルの初期化に対して許容される時間制限を取得または設定します。  接続が切断されるまでのチャネルの初期化ステータスの最大時間 (秒単位)。 このクォータには、.NET メッセージ フレーム プロトコルを使用して自身を認証するための TCP 接続時間が含まれます。 クライアントは、サーバーが認証を実行するための十分な情報を得る前に初期データを送信する必要があります。 既定値は 30 秒です。|  
 |connectionBufferSize|クライアントまたサービスからネットワークでシリアル化されたメッセージのチャンクを転送するために使用されるバッファーのサイズを取得または設定します。|  
 |hostNameComparisonMode|URI で一致する場合にサービスに到達するためにホスト名を使用するかどうかを示す値を取得または設定します。|  
 |listenBacklog|Web サービスの保留可能なキュー内の接続要求の最大数。 `connectionLeaseTimeout` 属性は、クライアントが接続されるのを待つ時間を制限します。この時間が経過すると接続の例外をスローします。 これは、Web サービスに対して保留可能なキュー内の接続要求の最大数を制御するソケット レベルのプロパティです。 ListenBacklog が低すぎると、WCF は要求の受け入れを停止し、そのため、サーバーが既存のキューに置かれた接続の一部を認識するまで新しい接続を削除します。 既定値は 16 * プロセッサの数。|  
@@ -79,14 +79,15 @@ ms.locfileid: "54151177"
   
  `tcpTransport` 要素は、TCP トランスポート プロトコルを実装するカスタム バインディングを作成する場合の開始点となります。 このトランスポートは、WCF 間の通信用に最適化されています。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.TcpTransportElement>  
- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [トランスポート](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [トランスポートの選択](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [バインディング](../../../../../docs/framework/wcf/bindings.md)  
- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Configuration.TcpTransportElement>
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [トランスポート](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [トランスポートの選択](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [バインディング](../../../../../docs/framework/wcf/bindings.md)
+- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

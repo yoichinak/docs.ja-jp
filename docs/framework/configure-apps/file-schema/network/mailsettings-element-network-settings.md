@@ -1,5 +1,5 @@
 ---
-title: '&lt;mailSettings&gt;要素 (ネットワーク設定)'
+title: <mailSettings> 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#mailSettings
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - mailSettings element
 - <mailSettings> element
 ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
-ms.openlocfilehash: 5c7b4d8fae2774fe8e52718fbce91e4bc193c124
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 54fb68ab0bf8aa2665d70391350c626131ccb4bc
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674507"
 ---
-# <a name="ltmailsettingsgt-element-network-settings"></a>&lt;mailSettings&gt;要素 (ネットワーク設定)
+# <a name="mailsettings-element-network-settings"></a>\<mailSettings > 要素 (ネットワーク設定)
 電子メールの送信オプションを設定します。  
 
 \<configuration>  
@@ -26,7 +26,7 @@ ms.locfileid: "50198433"
   
 ```xml  
 <mailSettings>
-  <smtp> … </smtp>  
+  <smtp>...</smtp>  
 </mailSettings>
 ```  
   
@@ -40,7 +40,7 @@ ms.locfileid: "50198433"
   
 |属性|説明|  
 |---------------|-----------------|  
-|[\<smtp > 要素 (ネットワーク設定)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|簡易メール転送プロトコル オプションを構成します。|  
+|[\<smtp> 要素 (ネットワーク設定)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|簡易メール転送プロトコル オプションを構成します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -67,6 +67,7 @@ ms.locfileid: "50198433"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.Net.Mail.SmtpClient>  
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Net.Mail.SmtpClient>
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

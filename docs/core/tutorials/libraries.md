@@ -4,12 +4,12 @@ description: .NET Core CLI ツールを使用して .NET Core ライブラリを
 author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: f93c39d6225eef180634b238414fcda99750189f
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 9dd1d8477f8e34e79ff521463972e26a21ad1dfd
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169366"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212067"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>クロス プラットフォーム ツールによるライブラリの開発
 
@@ -58,9 +58,9 @@ ms.locfileid: "53169366"
     ```
 
 2. プロジェクト ファイルの `TargetFramework` ノードの値を変更することで、.NET Standard の下位または上位バージョンを使用することができます。
-    
+
     .NET Standard バージョンは下位互換性があります。 つまり、`netstandard1.0` ライブラリは、`netstandard1.1` プラットフォーム以降で実行されます。 ただし、上位互換性はないため、古い .NET Standard プラットフォームは新しいプラットフォームを参照できません。 つまり、`netstandard1.0` ライブラリは、`netstandard1.1` 以降をターゲットとするライブラリを参照できません。 API とプラットフォームを適切に組み合わせ、ニーズに対応できる Standard バージョンを選択してください。 現時点では `netstandard1.4` が推奨されます。
-    
+
 3. .NET Framework バージョン 4.0 以前をターゲットにする場合、または .NET Framework では利用できて .NET Standard では利用できない API (`System.Drawing` など) を使用する場合は、マルチターゲットの方法について次のセクションを参照してください。
 
 ## <a name="how-to-target-the-net-framework"></a>.NET Framework をターゲット設定する方法
@@ -131,7 +131,7 @@ ms.locfileid: "53169366"
 主な変更点が 3 つあります。
 
 1. `TargetFramework` ノードは `TargetFrameworks` で置き換えられ、3 つの TFM が内部に表現されています。
-1. 1 つの .NET Framework 参照を取り込む `net40 ` ターゲットの `<ItemGroup>` ノードがあります。
+1. 1 つの .NET Framework 参照を取り込む `net40` ターゲットの `<ItemGroup>` ノードがあります。
 1. .NET Framework の参照 2 に取り込む `net45` ターゲットの `<ItemGroup>` ノードがあります。
 
 ビルド システムは `#if` ディレクティブで使用される次のプリプロセッサ シンボルを認識します。
@@ -256,7 +256,7 @@ netstandard1.4/
    [!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
 1. `dotnet test` コマンドを実行して、xUnit が実行されることを確認します。 MSTest を使用する場合は、MSTest コンソール実行ツールが実行されることを確認します。
-    
+
 以上です。 コマンド ライン ツールを使用して、すべてのプラットフォームでライブラリをテストできるようになりました。 すべてをセットアップしてテストに進む場合、ライブラリのテストはとても単純です。
 
 1. ライブラリに変更を加えます。
@@ -321,7 +321,7 @@ dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp.fsproj
 プロジェクトを参照するには、.NET Core CLI を使用してプロジェクト参照を追加することをお勧めします。 **AwesomeLibrary.CSharp** と **AwesomeLibrary.FSharp** のプロジェクト ディレクトリから、次のコマンドを実行できます。
 
 ```console
-$ dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
+dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 ```
 
 **AwesomeLibrary.CSharp** と **AwesomeLibrary.FSharp** の両方のプロジェクト ファイルは、`ProjectReference` ターゲットとして **AwesomeLibrary.Core** を参照するようになります。  この参照を確認するには、プロジェクト ファイルに以下の行があることを確認します。

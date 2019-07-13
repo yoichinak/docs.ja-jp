@@ -1,5 +1,5 @@
 ---
-title: '&lt;追加&gt;要素&lt;リスナー&gt;の&lt;ソース&gt;'
+title: <add> の <listeners> の <source> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/add
@@ -8,23 +8,21 @@ helpviewer_keywords:
 - add element for <listeners> for <source>
 - <add> element for <listeners> for <source>
 ms.assetid: 4ce36ac1-81ef-48e8-b8b2-b5a5b0e2adcb
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: c0ab15f6eca8b20653530583016eb849273c4ce1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4d2952e29b09fcf9f81624317e30caf301a61a51
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701490"
 ---
-# <a name="ltaddgt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;追加&gt;要素&lt;リスナー&gt;の&lt;ソース&gt;
+# <a name="add-element-for-listeners-for-source"></a>\<追加 > 要素の\<リスナー > の\<ソース >
 トレース ソースの `Listeners` コレクションにリスナーを追加します。  
   
  \<configuration>  
-\<system.diagnostics >  
+\<system.diagnostics>  
 \<ソース >  
 \<ソース >  
-\<リスナー >  
+\<listeners>  
 \<add>  
   
 ## <a name="syntax"></a>構文  
@@ -120,8 +118,9 @@ ms.locfileid: "47216867"
 </configuration>   
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Diagnostics.TraceSource>  
- <xref:System.Diagnostics.TraceListener>  
- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [トレース リスナー](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Diagnostics.TraceSource>
+- <xref:System.Diagnostics.TraceListener>
+- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [トレース リスナー](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

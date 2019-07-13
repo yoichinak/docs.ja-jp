@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: e6c93a1bc31c041f36fca3704bca32012a2b42ac
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804425"
+---
 ### <a name="selector-selectionchanged-event-and-selectedvalue-property"></a>セレクター SelectionChanged イベントおよび SelectedValue プロパティ
 
 |   |   |
@@ -8,4 +16,3 @@
 |Version|4.7.1|
 |型|再ターゲット中|
 |影響を受ける API|<ul><li><xref:System.Windows.Controls.TabControl.SelectedContent?displayProperty=nameWithType></li><li><xref:System.Windows.Controls.Primitives.Selector.SelectionChanged?displayProperty=nameWithType></li></ul>|
-

@@ -1,67 +1,68 @@
 ---
-title: '方法 : 定型入力を設定する'
+title: '方法: 定型入力を設定する'
 ms.date: 03/30/2017
 f1_keywords:
 - net.ComponentModel.MaskPropertyEditor
 helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
-ms.openlocfilehash: 6f554c239e3444db5f6ac84f7994108ac70df0a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac747bf46c4dd1451e58615b1ec0311d75c899e8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537042"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760477"
 ---
-# <a name="how-to-set-the-input-mask"></a>方法 : 定型入力を設定する
-マスクされたテキスト ボックス コントロールは、承認または拒否するユーザー入力の宣言の構文をサポートする高度なテキスト ボックス コントロールです。 マスクのプロパティの設定によって、アプリケーションで任意のカスタム検証ロジックを記述することがなく、許容されるユーザー入力を指定できます。 詳細については、の「解説」セクションを参照してください、<xref:System.Windows.Forms.MaskedTextBox>クラスです。  
+# <a name="how-to-set-the-input-mask"></a>方法: 定型入力を設定する
+マスクされたテキスト ボックス コントロールは、許可または拒否のユーザー入力の宣言の構文をサポートする強化されたテキスト ボックス コントロールです。 Mask プロパティを設定して、アプリケーションで任意のカスタム検証ロジックを記述することがなく、使用可能なユーザー入力を指定できます。 詳細については、の「解説」を参照してください、<xref:System.Windows.Forms.MaskedTextBox>クラス。  
   
-## <a name="setting-the-mask-property-manually"></a>手動で、マスクのプロパティを設定  
- Mask プロパティをサポートする文字に精通場合は、手動で入力することができます。 概要については、マスクのプロパティをサポートする文字のの「解説」セクションを参照してください、<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>プロパティです。  
+## <a name="setting-the-mask-property-manually"></a>Mask プロパティを手動で設定  
+ Mask プロパティをサポートする文字に精通する場合は、手動で入力することができます。 Mask プロパティをサポートする、文字の概要については、「解説」を参照してください、<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>プロパティ。  
   
-#### <a name="to-set-the-mask-property-manually"></a>手動で、マスクのプロパティを設定するには  
+### <a name="to-set-the-mask-property-manually"></a>Mask プロパティを手動で設定するには  
   
-1.  **デザイン**ビューで、<xref:System.Windows.Forms.MaskedTextBox>です。  
+1. **デザイン**ビューで、<xref:System.Windows.Forms.MaskedTextBox>します。  
   
-2.  **プロパティ**ウィンドウで、検索、<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>プロパティです。  
+2. **プロパティ**ウィンドウで、検索、<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>プロパティ。  
   
-3.  設定するマスクを入力します。 たとえば、「`###`です。  
+3. 使用するマスクを入力します。 たとえば、「 `###`」と入力します。  
   
 ## <a name="using-the-input-mask-dialog-box"></a>[定型入力] ダイアログ ボックスを使用します。  
- [定型入力] ダイアログ ボックスでは、いくつかの定義済みの入力マスクを提供します。 定義済みのマスクを変更したり、独自のマスクを手動で入力できます。  
+ [定型入力] ダイアログ ボックスでは、いくつか定義済みの入力マスクを提供します。 定義済みのマスクを変更または、独自のマスクを手動で入力することもできます。  
   
-#### <a name="to-open-the-input-mask-dialog-box"></a>[定型入力] ダイアログ ボックスを開く  
+### <a name="to-open-the-input-mask-dialog-box"></a>定型入力 ダイアログ ボックスを開きます  
   
-1.  **デザイン**ビューで、<xref:System.Windows.Forms.MaskedTextBox>です。  
+1. **デザイン**ビューで、<xref:System.Windows.Forms.MaskedTextBox>します。  
   
-    1.  開くには、スマート タグをクリックして、 **MaskedTextBox タスク**パネルです。  
+    1. [スマート タグを開く] をクリックして、 **MaskedTextBox タスク**パネル。  
   
-    2.  をクリックして**マスクを設定する**です。  
+    2. クリックして**マスクを設定する**します。  
   
      \- または -  
   
-    1.  **プロパティ**ウィンドウで、<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>プロパティです。  
+    1. **プロパティ**ウィンドウで、<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>プロパティ。  
   
-    2.  プロパティ値 列にある省略記号ボタンをクリックします。  
+    2. プロパティの値列の省略記号ボタンをクリックします。  
   
      **定型入力** ダイアログ ボックスが表示されます。  
   
-#### <a name="to-use-the-input-mask-dialog-box"></a>[定型入力] ダイアログ ボックスを使用するには  
+### <a name="to-use-the-input-mask-dialog-box"></a>定型入力 ダイアログ ボックスを使用するには  
   
-1.  (省略可能)一覧で定義済みのマスクのいずれかをクリックします。  
+1. (省略可能)一覧で定義済みのマスクのいずれかをクリックします。  
   
-2.  (省略可能)定義済みのマスクを編集、**マスク**ボックス。  
+2. (省略可能)定義済みのマスクを編集、**マスク**ボックス。  
   
-3.  (省略可能)新しいマスクを入力、**マスク**ボックス。 定義済みのマスクのいずれかを使用する必要はありません。  
+3. (省略可能)新しいマスクを入力、**マスク**ボックス。 定義済みのマスクのいずれかを使用する必要はありません。  
   
     > [!NOTE]
-    >  [プレビュー] ボックスでユーザーに表示される文字が表示されます、<xref:System.Windows.Forms.MaskedTextBox>です。 これらの文字に役立つガイドをユーザーがデータを正しく入力します。  
+    >  [プレビュー] ボックスでユーザーに表示される文字の表示、<xref:System.Windows.Forms.MaskedTextBox>します。 これらの文字は、データを正しく入力するユーザーを支援するガイドです。  
   
-4.  オンまたはオフにして、**使用 ValidatingType**チェック ボックスをオンします。 **使用 ValidatingType**  チェック ボックスは、データ型は、ユーザーがデータ入力の検証に使用するかどうかを指定します。 詳細については、<xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> プロパティを参照してください。  
+4. オンまたはオフ、**使用 ValidatingType**チェック ボックスをオンします。 **使用 ValidatingType**  チェック ボックスは、ユーザーがデータ入力を検証するデータ型を使用するかどうかを指定します。 詳細については、<xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> プロパティを参照してください。  
   
-5.  **[OK]** をクリックします。  
+5. **[OK]** をクリックします。  
   
-     マスクは、入力、**マスク**プロパティに、**プロパティ**ウィンドウです。  
+     マスクを入力、**マスク**プロパティ、**プロパティ**ウィンドウ。  
   
-## <a name="see-also"></a>関連項目  
- [チュートリアル: MaskedTextBox コントロールの使用](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)
+## <a name="see-also"></a>関連項目
+
+- [チュートリアル: MaskedTextBox コントロールの操作](walkthrough-working-with-the-maskedtextbox-control.md)

@@ -2,12 +2,12 @@
 title: 追跡参加要素
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: e346e0df3417f6ac83854bd96d6e64dcf103ea93
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 6c42712300baa6d7e12b9a29d94c925caaad5141
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47086367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699806"
 ---
 # <a name="tracking-participants"></a>追跡参加要素
 追跡参加要素は、ワークフロー開発者が <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> オブジェクトにアクセスし、そのオブジェクトを処理する機能拡張ポイントです。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] には、追跡レコードを Event Tracing for Windows (ETW) イベントとして書き込む標準の追跡参加要素が含まれています。 これで要件が満たされない場合は、カスタムの追跡参加要素を作成することもできます。  
@@ -60,10 +60,10 @@ ms.locfileid: "47086367"
   
  次の図は、ETW 追跡参加要素を使用した追跡データ フローを示しています。 追跡データは、ETW セッションに到達すると、さまざまな方法でアクセスできます。 これらのイベントにアクセスする最も便利な方法の 1 つはイベント ビューアーを使用することです。イベント ビューアーは、アプリケーションやサービスのログを表示して追跡する Windows の一般的なツールです。  
   
- ![フローの追跡と ETW 追跡プロバイダーの](../../../docs/framework/windows-workflow-foundation/media/trackingdatathroughetwparticipant.gif "TrackingDatathroughETWParticipant")  
+ ![ETW 追跡プロバイダーを通じて追跡データのフロー。](./media/tracking-participants/tracking-data-event-tracing-windows-provider.gif)  
   
 ## <a name="tracking-participant-event-data"></a>追跡参加要素のイベント データ  
- 追跡参加要素は、追跡レコードごとに 1 つのイベントという形式で、ETW セッションに追跡イベント データをシリアル化します。  イベントは、100 ～ 199 までの範囲内の ID を使用して識別されます。 追跡イベントの定義については、追跡参加要素によって出力されたレコードを参照してください、[追跡イベントのリファレンス](../../../docs/framework/windows-workflow-foundation/tracking-events-reference.md)トピック。  
+ 追跡参加要素は、追跡レコードごとに 1 つのイベントという形式で、ETW セッションに追跡イベント データをシリアル化します。  イベントは、100 ～ 199 までの範囲内の ID を使用して識別されます。 追跡イベントの定義については、追跡参加要素によって出力されたレコードを参照してください、[追跡イベントのリファレンス](tracking-events-reference.md)トピック。  
   
  ETW イベントのサイズは、ETW バッファーのサイズまたは ETW イベントの最大ペイロードのいずれか小さいほうの値に制限されます。 イベントのサイズが ETW のどちらかの制限を超えると、イベントが切り捨てられ、任意の方法でその内容が削除されます。 変数、引数、注釈、およびカスタム データは選択的に削除されません。 切り捨てが発生する場合は、イベント サイズが ETW の制限を超える原因となった値にかかわらず、これらのすべてが切り捨てられます。  削除されたデータは、`<item>..<item>` で置き換えられます。  
   
@@ -81,13 +81,13 @@ ms.locfileid: "47086367"
   
 #### <a name="to-enable-viewing-the-tracking-records-in-event-viewer"></a>イベント ビューアーで追跡レコードの表示を有効にするには  
   
-1.  イベント ビューアー (EVENTVWR.EXE) を起動します。  
+1. イベント ビューアー (EVENTVWR.EXE) を起動します。  
   
-2.  選択**イベント ビューアー、アプリケーションとサービス ログ、Microsoft、Windows では、アプリケーション サーバー-アプリケーション**します。  
+2. 選択**イベント ビューアー、アプリケーションとサービス ログ、Microsoft、Windows では、アプリケーション サーバー-アプリケーション**します。  
   
-3.  右クリックし、いることを確認**ビュー、分析およびデバッグ ログ**が選択されています。 有効でない場合は、ログを選択するとログの横にチェック マークが表示されます。 これが表示されます、**分析**、 **Perf**、および**デバッグ**ログ。  
+3. 右クリックし、いることを確認**ビュー、分析およびデバッグ ログ**が選択されています。 有効でない場合は、ログを選択するとログの横にチェック マークが表示されます。 これが表示されます、**分析**、 **Perf**、および**デバッグ**ログ。  
   
-4.  右クリックし、**分析**ログに記録し、**ログの有効化**します。 ログは %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl ファイルに含まれます。  
+4. 右クリックし、**分析**ログに記録し、**ログの有効化**します。 ログは %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl ファイルに含まれます。  
   
 ## <a name="custom-tracking-participant"></a>カスタムの追跡参加要素  
  追跡参加要素 API では、ワークフロー ランタイムが出力する追跡レコードを処理するためのカスタム ロジックを含めることが可能なユーザー指定の追跡参加要素を使用して、追跡ランタイムを拡張できます。 カスタムの追跡参加要素を作成するためには、開発者が `Track` クラスの <xref:System.Activities.Tracking.TrackingParticipant> メソッドを実装する必要があります。 このメソッドは、ワークフロー ランタイムによって追跡レコードが出力されるときに呼び出されます。  
@@ -140,6 +140,7 @@ instance.Extensions.Add(new ConsoleTrackingParticipant());
             Console.ReadLine();  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Windows Server App Fabric の監視](https://go.microsoft.com/fwlink/?LinkId=201273)  
- [App Fabric でアプリケーションの監視](https://go.microsoft.com/fwlink/?LinkId=201275)
+## <a name="see-also"></a>関連項目
+
+- [Windows Server App Fabric の監視](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [App Fabric でアプリケーションの監視](https://go.microsoft.com/fwlink/?LinkId=201275)

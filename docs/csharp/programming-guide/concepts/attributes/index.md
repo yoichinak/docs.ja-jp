@@ -1,12 +1,12 @@
 ---
 title: 属性 (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: c33d93a4af91e0c61546e8d51ab470f2889c095c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 42a7035a9dae146ad7a303da41c83891e5e19ef8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44214148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61668615"
 ---
 # <a name="attributes-c"></a>属性 (C#)
 
@@ -123,9 +123,9 @@ C# でメソッド、メソッドのパラメーター、およびメソッド�
 - [共通属性 (C#)](common-attributes.md)  
 - [呼び出し元情報 (C#)](../caller-information.md)  
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../index.md)  
-- [リフレクション (C#)](../reflection.md)  
-- [属性](../../../../standard/attributes/index.md)  
-- [C# での属性の使用](../../../tutorials/attributes.md)  
+- [C# プログラミング ガイド](../../index.md)
+- [リフレクション (C#)](../reflection.md)
+- [属性](../../../../standard/attributes/index.md)
+- [C# での属性の使用](../../../tutorials/attributes.md)

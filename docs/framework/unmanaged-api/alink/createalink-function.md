@@ -17,34 +17,35 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e29c9c246649229900beba2fcc9ab482071ae46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 993848711f41c9e03b969a3c611982a5c8bc860d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400667"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742220"
 ---
 # <a name="createalink-function"></a>CreateALink 関数
-アセンブリ リンカーのインスタンスを作成し、指定されたインターフェイスへのポインターを設定します。  
+アセンブリ リンカーのインスタンスを作成し、指定したインターフェイスへのポインターを設定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CreateALink (  
    REFIID riid,  
    IUnknown **ppInterface  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
   
 |パラメーター|説明|  
 |---------------|-----------------|  
 |`riid`|アセンブリ リンカー インターフェイスの 1 つの物理名。|  
-|`ppInterface`|正常に終了へのポインターを格納する場所、`riid`インターフェイスです。|  
+|`ppInterface`|正常に完了へのポインターを格納する場所、`riid`インターフェイス。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ライブラリ**: alink.dll  
   
-## <a name="see-also"></a>関連項目  
- [Al.exe (アセンブリ リンカー)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a>関連項目
+
+- [Al.exe (アセンブリ リンカー)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b4c1d213c2ed87126fc5eb9995050e14f9214bd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 519ce34fc1f86220dfd0f3f7e19e3a50fba06087
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155341"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469451"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Blittable 型と非 Blittable 型
 ほとんどのデータ型の表現はマネージド メモリとアンマネージド メモリの両方で共通しているため、相互運用マーシャラーによる特別な処理は必要ありません。 これらの型は、マネージド コードとアンマネージド コード間での受け渡しの際に変換が必要でないため、*blittable 型*と呼ばれます。  
@@ -21,35 +21,35 @@ ms.locfileid: "53155341"
   
  <xref:System> 名前空間に属する次の型は blittable 型です。  
   
--   <xref:System.Byte?displayProperty=nameWithType>  
+- <xref:System.Byte?displayProperty=nameWithType>  
   
--   <xref:System.SByte?displayProperty=nameWithType>  
+- <xref:System.SByte?displayProperty=nameWithType>  
   
--   <xref:System.Int16?displayProperty=nameWithType>  
+- <xref:System.Int16?displayProperty=nameWithType>  
   
--   <xref:System.UInt16?displayProperty=nameWithType>  
+- <xref:System.UInt16?displayProperty=nameWithType>  
   
--   <xref:System.Int32?displayProperty=nameWithType>  
+- <xref:System.Int32?displayProperty=nameWithType>  
   
--   <xref:System.UInt32?displayProperty=nameWithType>  
+- <xref:System.UInt32?displayProperty=nameWithType>  
   
--   <xref:System.Int64?displayProperty=nameWithType>  
+- <xref:System.Int64?displayProperty=nameWithType>  
   
--   <xref:System.UInt64?displayProperty=nameWithType>  
+- <xref:System.UInt64?displayProperty=nameWithType>  
   
--   <xref:System.IntPtr?displayProperty=nameWithType>  
+- <xref:System.IntPtr?displayProperty=nameWithType>  
   
--   <xref:System.UIntPtr?displayProperty=nameWithType>  
+- <xref:System.UIntPtr?displayProperty=nameWithType>  
   
--   <xref:System.Single?displayProperty=nameWithType>  
+- <xref:System.Single?displayProperty=nameWithType>  
   
--   <xref:System.Double?displayProperty=nameWithType>  
+- <xref:System.Double?displayProperty=nameWithType>  
   
  次の複合型も blittable 型です。  
   
--   整数の配列など、blittable 型の 1 次元配列。 ただし、blittable 型の可変配列を含む型自体は blittable ではありません。  
+- 整数の配列など、blittable 型の 1 次元配列。 ただし、blittable 型の可変配列を含む型自体は blittable ではありません。  
   
--   blittable 型だけを含む、書式設定された値型 (および、それらが書式設定された型としてマーシャリングされる場合はクラス)。 書式設定された値型の詳細については、「[Default Marshaling for Value Types](https://msdn.microsoft.com/library/4d9a876c-e05a-40ba-bd85-bd22877f984a(v=vs.100))」(値型に対する既定のマーシャリング) を参照してください。  
+- blittable 型だけを含む、書式設定された値型 (および、それらが書式設定された型としてマーシャリングされる場合はクラス)。 書式設定された値型の詳細については、「[Default marshaling for value types](default-marshaling-behavior.md#default-marshaling-for-value-types)」(値型に対する既定のマーシャリング) を参照してください。  
   
  オブジェクト参照は blittable ではありません。 これには、単独では blittable なオブジェクトへの参照の配列も含まれます。 たとえば、blittable な構造体は定義できますが、それらの構造体への参照の配列を含む blittable 型は定義できません。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "53155341"
   
  一部のマネージド データ型は、アンマネージド環境では異なる表現が必要です。 これらの非 blittable データ型は、マーシャリングできる形式に変換する必要があります。 たとえば、マネージド文字列は、文字列オブジェクトに変換しないとマーシャリングできないので、非 blittable 型です。  
   
- <xref:System> 名前空間に属する非 blittable 型を次の表に示します。 [デリゲート](https://msdn.microsoft.com/library/d176ee76-f982-494b-b03d-92e4118896e2(v=vs.100))は静的メソッドまたはクラス インスタンスを参照するデータ構造体であり、これも非 blittable 型です。  
+ <xref:System> 名前空間に属する非 blittable 型を次の表に示します。 [デリゲート](default-marshaling-behavior.md#default-marshaling-for-delegates)は静的メソッドまたはクラス インスタンスを参照するデータ構造体であり、これも非 blittable 型です。  
   
 |非 blittable 型|説明|  
 |-------------------------|-----------------|  
@@ -71,7 +71,8 @@ ms.locfileid: "53155341"
 |[System.Valuetype](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0t2cwe11(v=vs.100))|固定メモリ レイアウトを持つ構造体に変換されます。|  
 |[System.Szarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|C スタイルの配列または `SAFEARRAY` に変換されます。|  
   
- クラス型とオブジェクト型は COM 相互運用でのみサポートされます。 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]、C#、および C++ の対応する型については、「[クラス ライブラリの概要](../../../docs/standard/class-library-overview.md)」を参照してください。  
+ クラス型とオブジェクト型は COM 相互運用でのみサポートされます。 Visual Basic、C#、および C++ の対応する型については、[クラス ライブラリの概要](../../../docs/standard/class-library-overview.md)に関する記事を参照してください。  
   
-## <a name="see-also"></a>参照  
- [既定のマーシャリング動作](../../../docs/framework/interop/default-marshaling-behavior.md)
+## <a name="see-also"></a>関連項目
+
+- [既定のマーシャリング動作](../../../docs/framework/interop/default-marshaling-behavior.md)

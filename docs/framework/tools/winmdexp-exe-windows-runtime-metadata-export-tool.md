@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44a21426bd4fea8bbb42801d59c6590f2ee0aee8
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 01cdcbb93fde0d2d2f1c800613d9709da0d695f6
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121390"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026004"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows ランタイム メタデータのエクスポート ツール)
-[!INCLUDE[wrt](../../../includes/wrt-md.md)] メタデータ エクスポート ツール (Winmdexp.exe) は、.NET Framework モジュールを、[!INCLUDE[wrt](../../../includes/wrt-md.md)] メタデータを含むファイルに変換します。 .NET Framework アセンブリと [!INCLUDE[wrt](../../../includes/wrt-md.md)] メタデータ ファイルは同じ物理形式を使用しますが、メタデータ テーブルの内容に違いがあります。つまり、.NET Framework アセンブリは、自動的に [!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネントとして使用できるわけではありません。 .NET Framework モジュールを [!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネントにするプロセスは、*エクスポート*と呼ばれます。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] と [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] では、生成される Windows メタデータ (.winmd) ファイルにメタデータと実装の両方が含まれます。  
+Windows ランタイム メタデータ エクスポート ツール (Winmdexp.exe) は、.NET Framework モジュールを、Windows メタデータを含むファイルに変換します。 .NET Framework アセンブリと Windows ランタイム メタデータ ファイルでは同じ物理形式が使用されますが、メタデータ テーブルの内容に違いがあります。つまり、NET Framework アセンブリは自動的に Windows ランタイム コンポーネントとして使用できるわけではありません。 .NET Framework モジュールを Windows ランタイム コンポーネントに変換するプロセスは、"*エクスポート*" と呼ばれます。 .NET Framework 4.5 と .NET Framework 4.5.1 では、結果として生成される Windows メタデータ (.winmd) ファイルにメタデータと実装の両方が含まれます。  
   
- Visual Studio 2013 または Visual Studio 2012 で、C# および Visual Basic の **Windows ストア**にある **[!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネント** テンプレートを使用する場合、コンパイラのターゲットは .winmdobj ファイルであり、後続のビルド ステップで Winmdexp.exe が呼び出され、.winmdobj ファイルが .winmd ファイルにエクスポートされます。 [!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネントをビルドする場合は、この方法をお勧めします。 Visual Studio による制御より細かくビルド プロセスを制御する場合は、Winmdexp.exe ファイルを直接使用します。  
+ Visual Studio 2013 または Visual Studio 2012 で、C# および Visual Basic の **Windows ストア**にある **Windows ランタイム コンポーネント** テンプレートを使用する場合、コンパイラのターゲットは .winmdobj ファイルであり、後続のビルド ステップで Winmdexp.exe が呼び出され、.winmdobj ファイルが .winmd ファイルにエクスポートされます。 Windows ランタイム コンポーネントをビルドする場合は、この方法をお勧めします。 Visual Studio による制御より細かくビルド プロセスを制御する場合は、Winmdexp.exe ファイルを直接使用します。  
   
- このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、開発者コマンド プロンプト (または、Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
+ このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
   
  コマンド プロンプトに次のように入力します。  
   
@@ -29,12 +29,12 @@ ms.locfileid: "49121390"
 winmdexp [options] winmdmodule  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
   
 |引数またはオプション|説明|  
 |------------------------|-----------------|  
 |`winmdmodule`|エクスポートするモジュール (.winmdobj) を指定します。 指定できるのは 1 つのモジュールのみです。 このモジュールを作成するには、`/target` ターゲットと共に `winmdobj` コンパイラ オプションを使用します。 「[/target:winmdobj (C# コンパイラ オプション)](~/docs/csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)」または「[/target (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/target.md)」を参照してください。|  
-|`/docfile:` `docfile`<br /><br /> `/d:` `docfile`|Winmdexp.exe が生成する出力 XML ドキュメント ファイルを指定します。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] では、出力ファイルは基本的に入力 XML ドキュメント ファイルと同じです。|  
+|`/docfile:` `docfile`<br /><br /> `/d:` `docfile`|Winmdexp.exe が生成する出力 XML ドキュメント ファイルを指定します。 .NET Framework 4.5 では、出力ファイルは基本的に入力 XML ドキュメント ファイルと同じです。|  
 |`/moduledoc:` `docfile`<br /><br /> `/md:` `docfile`|コンパイラが `winmdmodule` と共に生成した XML ドキュメント ファイルの名前を指定します。|  
 |`/modulepdb:` `symbolfile`<br /><br /> `/mp:` `symbolfile`|`winmdmodule` のシンボルを含むプログラム データベース (PDB) ファイルの名前を指定します。|  
 |`/nowarn:` `warning`|指定した警告番号が使用されなくなります。 *warning* の場合は、エラー コードの数字部分だけを先行ゼロなしで指定してください。|  
@@ -45,13 +45,14 @@ winmdexp [options] winmdmodule
 |`/warnaserror+`|すべての警告をエラーとして扱うよう指定しています。|  
 |**@** `responsefile`|オプション (および、必要に応じて `winmdmodule`) を含む応答 (.rsp) ファイルを指定します。 `responsefile` の各行に 1 つの引数またはオプションが含まれている必要があります。|  
   
-## <a name="remarks"></a>コメント  
- Winmdexp.exe は、任意の .NET Framework アセンブリを .winmd ファイルに変換するようには設計されていません。 `/target:winmdobj` オプションでコンパイルされるモジュールが必要で、追加の制限が適用されます。 この中で最も重要な制限は、アセンブリの API サーフェイスで公開されるすべての型は必ず [!INCLUDE[wrt](../../../includes/wrt-md.md)] 型であるということです。 詳細については、Windows デベロッパー センターの記事「[C# および Visual Basic での Windows ランタイム コンポーネントの作成](https://go.microsoft.com/fwlink/p/?LinkID=238313)」の「Windows ランタイム コンポーネントの宣言型」セクションを参照してください。  
+## <a name="remarks"></a>解説  
+ Winmdexp.exe は、任意の .NET Framework アセンブリを .winmd ファイルに変換するようには設計されていません。 `/target:winmdobj` オプションでコンパイルされるモジュールが必要で、追加の制限が適用されます。 この中で最も重要な制限は、アセンブリの API サーフェスで公開されるすべての型は必ず Windows ランタイム型であるということです。 詳細については、Windows デベロッパー センターの記事「[C# および Visual Basic での Windows ランタイム コンポーネントの作成](https://go.microsoft.com/fwlink/p/?LinkID=238313)」の「Windows ランタイム コンポーネントの宣言型」セクションを参照してください。  
   
- C# または Visual Basic で [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリまたは [!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネントを作成する場合は、[!INCLUDE[wrt](../../../includes/wrt-md.md)] でのプログラミングをより自然にするためのサポートが .NET Framework で提供されています。 これは、記事「[Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)」で解説されています。 プロセスでは、一般的に使用される [!INCLUDE[wrt](../../../includes/wrt-md.md)] 型が .NET Framework 型にマップされます。 Winmdexp.exe は、このプロセスを反転し、対応する [!INCLUDE[wrt](../../../includes/wrt-md.md)] 型を使用する API サーフェイスを生成します。 たとえば、<xref:System.Collections.Generic.IList%601> インターフェイスから構築された型は、[!INCLUDE[wrt](../../../includes/wrt-md.md)][IVector\<T>](https://go.microsoft.com/fwlink/p/?LinkId=251132) インターフェイスから構築された型にマップされます。  
+ C# または Visual Basic で [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリまたは Windows ランタイム コンポーネントを作成する場合は、Windows ランタイムでのプログラミングをより自然にするためのサポートが .NET Framework で提供されています。 これは、記事「[Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)」で解説されています。 プロセスでは、一般的に使用される Windows ランタイム型が .NET Framework 型にマップされます。 Winmdexp.exe では、このプロセスが反転され、対応する Windows ランタイム型を使用する API サーフェスが生成されます。 たとえば、<xref:System.Collections.Generic.IList%601> インターフェイスから構築された型は、Windows ランタイムの [IVector\<T>](https://go.microsoft.com/fwlink/p/?LinkId=251132) インターフェイスから構築された型にマップされます。  
   
-## <a name="see-also"></a>参照  
- [Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
- [C# および Visual Basic での Windows ランタイム コンポーネントの作成](https://go.microsoft.com/fwlink/p/?LinkID=238313)  
- [Winmdexp.exe のエラー メッセージ](../../../docs/framework/tools/winmdexp-exe-error-messages.md)  
- [ビルド ツール、配置ツール、および構成ツール (.NET Framework)](https://msdn.microsoft.com/library/b8c921be-6012-4181-b8d4-ab15813fc9a7)
+## <a name="see-also"></a>関連項目
+
+- [Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+- [C# および Visual Basic での Windows ランタイム コンポーネントの作成](https://go.microsoft.com/fwlink/p/?LinkID=238313)
+- [Winmdexp.exe のエラー メッセージ](../../../docs/framework/tools/winmdexp-exe-error-messages.md)
+- [ビルド ツール、配置ツール、および構成ツール (.NET Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd233108(v=vs.100))

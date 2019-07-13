@@ -4,12 +4,12 @@ description: .NET Core および ASP.NET Core のプレリリース版ツール�
 author: mairaw
 ms.author: mairaw
 ms.date: 03/08/2017
-ms.openlocfilehash: f5f4dd8f335d940d5c63baef73e83dd3d0eccf6e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ccdf897727ed52ccbed3e56b5a9a08cb45427d70
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47216618"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361964"
 ---
 # <a name="projectjson-and-visual-studio-2015-with-net-core"></a>project.json および Visual Studio 2015 における .NET Core
 
@@ -17,12 +17,9 @@ ms.locfileid: "47216618"
 
 3 月 7 日のアップデートよりも前のドキュメントのバージョンは、ドキュメント リポジトリの分岐に PDF ファイルで用意されています。
 
-## <a name="pdf-files"></a>PDF ファイル
+## <a name="pdf-documentation"></a>PDF ドキュメント
 
-以前のドキュメントの最適なソースは、次の PDF ファイルです。
-
-* [.NET Core - project.json および Visual Studio 2015 の PDF ](https://github.com/dotnet/docs/blob/project.json/net-core-project-json.pdf)
-* [ASP.NET Core - project.json および Visual Studio 2015 の PDF](https://github.com/aspnet/Docs/blob/master/aspnetcore/common/_static/aspnet-core-project-json.pdf)
+以前のドキュメントのうち、推奨されるソースは、[.NET Core の project.json および Visual Studio 2015 用の PDF](https://github.com/dotnet/docs/blob/project.json/net-core-project-json.pdf) です。
 
 ## <a name="documentation-repository-branch"></a>ドキュメント リポジトリの分岐
 

@@ -2,12 +2,12 @@
 title: トランスポート セキュリティを使用したメッセージのセキュリティ保護
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-ms.openlocfilehash: 660c3c002f1892a91a5c0eaefb2cc5c16bb460a3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6f93fa37c6f1d6a0d7396c7f9ea5e97b44d1dc92
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187755"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64603520"
 ---
 # <a name="securing-messages-using-transport-security"></a>トランスポート セキュリティを使用したメッセージのセキュリティ保護
 ここでは、キューに送信されるメッセージをセキュリティで保護するために使用できるメッセージ キュー (MSMQ) トランスポート セキュリティについて説明します。  
@@ -25,11 +25,11 @@ ms.locfileid: "50187755"
   
  <xref:System.ServiceModel.NetMsmqBinding> と <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> を使用するトランスポート セキュリティは、転送キューとターゲット キュー間を移動している MSMQ メッセージがセキュリティで保護される方法に影響します。この場合、"セキュリティで保護される" とは次のことを意味します。  
   
--   メッセージが改ざんされないように、メッセージに署名する。  
+- メッセージが改ざんされないように、メッセージに署名する。  
   
--   メッセージが読み取られたり、改ざんされたりしないしないように、メッセージを暗号化する。 これは推奨事項ですが、必須ではありません。  
+- メッセージが読み取られたり、改ざんされたりしないしないように、メッセージを暗号化する。 これは推奨事項ですが、必須ではありません。  
   
--   否認防止のため、ターゲット キュー マネージャーがメッセージの送信者を識別する。  
+- 否認防止のため、ターゲット キュー マネージャーがメッセージの送信者を識別する。  
   
  MSMQ では、認証とは別に、ターゲット キューがアクセス制御リスト (ACL: Access Control List) を持っており、これで、ターゲット キューにメッセージを送信するためのアクセス許可がクライアントに与えられているどうかをチェックします。 ターゲット キューからメッセージを受信するためのアクセス許可があるかどうかのチェックは、受信側のアプリケーションに対しても行われます。  
   
@@ -96,7 +96,8 @@ ms.locfileid: "50187755"
   
  サポートされるアルゴリズムは、`MD5`、`SHA1`、`SHA256`、および `SHA512` です。 既定値は `SHA1` です。  
   
-## <a name="see-also"></a>関連項目  
- [メッセージ キュー](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)  
- [セキュリティの概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- [サービスおよびクライアントのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>関連項目
+
+- [キューの概要](queues-overview.md)
+- [セキュリティの概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+- [サービスおよびクライアントのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

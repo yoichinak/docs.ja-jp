@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4ce7b90b417e0126337283ff16790f136cb16fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1492c6d72d68a95a79925d7789a710b5b5ed14b1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407689"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738707"
 ---
 # <a name="iclrdatatargetgetthreadcontext-method"></a>ICLRDataTarget::GetThreadContext メソッド
-ターゲット プロセスで特定のスレッドの現在の実行コンテキストを取得します。 このメソッドは、共通言語ランタイム データ アクセス サービスによって呼び出されます。  
+ターゲット プロセスの特定のスレッドの現在の実行コンテキストを取得します。 このメソッドは、共通言語ランタイム データ アクセス サービスによって呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetThreadContext (  
     [in] ULONG32            threadID,  
     [in] ULONG32            contextFlags,  
@@ -39,32 +39,33 @@ HRESULT GetThreadContext (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `threadID`  
  [in]ターゲット プロセス内のスレッドのオペレーティング システムの識別子です。  
   
  `contextFlags`  
- [in]返されるコンテキストのどの部分を指定するフラグ。 実装では、コンテキストには、少なくともそれらの部分を返します。  
+ [in]返されるコンテキストのどの部分を指定するフラグ。 実装では、コンテキストの少なくともこれらの部分を返します。  
   
  `contextSize`  
  [in]コンテキストのサイズ。  
   
  `context`  
- [out]コンテキストを格納するバッファーへのポインター。  
+ [out]コンテキストの配置先となるバッファーへのポインター。  
   
- 内のデータ、`context`バッファーは、Win32 の形式である必要があります`CONTEXT`構造体。 コンテキストはプロセッサ固有のレジスタのデータを指定するので、Win32 の定義`CONTEXT`構造は、プロセッサのアーキテクチャによって異なります。 Win32 の定義については、WinNT.h ヘッダー ファイルを参照してください`CONTEXT`構造体。  
+ 内のデータ、`context`バッファーは、Win32 の形式である必要があります`CONTEXT`構造体。 コンテキストはプロセッサ固有の登録データを指定するので、Win32 の定義`CONTEXT`構造は、プロセッサのアーキテクチャによって異なります。 Win32 の定義については、WinNT.h ヘッダー ファイルを参照してください`CONTEXT`構造体。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このメソッドは、デバッグ アプリケーションの作成者によって実装されます。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** ClrData.idl、ClrData.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICLRDataTarget インターフェイス](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [ICLRDataTarget インターフェイス](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - queries [Visual Basic]
 - LINQ, queries
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
-ms.openlocfilehash: abe54fe163919c6ad6b746d70baac2482e80b948
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 1ea49b16f70c0af87bbd3a8978fb10fe08d5ce6b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052145"
 ---
 # <a name="queries-visual-basic"></a>クエリ (Visual Basic)
 Visual Basic では、作成できます。 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 、コード内の式。  
@@ -58,6 +58,7 @@ Visual Basic では、作成できます。 [!INCLUDE[vbteclinqext](~/includes/v
  [Where 句](../../../visual-basic/language-reference/queries/where-clause.md)  
  について説明します、`Where`句は、クエリのフィルター処理条件を指定します。  
   
-## <a name="see-also"></a>関連項目  
- [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+## <a name="see-also"></a>関連項目
+
+- [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

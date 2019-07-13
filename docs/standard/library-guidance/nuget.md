@@ -3,13 +3,13 @@ title: NuGet および .NET ライブラリ
 description: .NET ライブラリ対応の NuGet によるパッケージ化のベスト プラクティスの推奨事項
 author: jamesnk
 ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: 4f33c9993d8eef4b18823d5c16f9f51c06afae88
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 01/15/2019
+ms.openlocfilehash: e08629adb8074fdfb73865d2dc156cbf6e46ab9c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614546"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198180"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -69,9 +69,9 @@ NuGet パッケージは、多数の[メタデータ プロパティ](/nuget/ref
 
 **✔️ 実行** 64 x 64 のパッケージ アイコン イメージを使用し、最善の表示結果を透明な背景にする。
 
-**✔️ 検討** [SourceLink](./sourcelink.md) を設定して、お使いのアセンブリと NuGet パッケージにソース管理のメタデータを追加する。
+**✔️ 検討** [ソース リンク](./sourcelink.md)を設定して、お使いのアセンブリと NuGet パッケージにソース管理のメタデータを追加する。
 
-> SourceLink によってメタデータの `RepositoryUrl` と `RepositoryType` が NuGet パッケージに自動的に追加されます。 また、SourceLink によって、パッケージの作成元のソース コードに関する情報が追加されます。 たとえば、Git リポジトリから作成されたパッケージでは、コミット ハッシュがメタデータとして追加されます。
+> ソース リンクによってメタデータの `RepositoryUrl` と `RepositoryType` が NuGet パッケージに自動的に追加されます。 また、ソース リンクによって、パッケージの作成元のソース コードに関する情報が追加されます。 たとえば、Git リポジトリから作成されたパッケージでは、コミット ハッシュがメタデータとして追加されます。
 
 ## <a name="pre-release-packages"></a>プレリリース パッケージ
 
@@ -98,6 +98,8 @@ NuGet.org は独自の[シンボル サーバー リポジトリ](/nuget/create-
 
 > [!IMPORTANT]
 > NuGet.org シンボル サーバーでは、SDK スタイルのプロジェクトで作成された新しい[ポータブル シンボル ファイル](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) (`*.pdb`) のみがサポートされます。
+>
+> .NET ライブラリのデバッグ時に NuGet.org シンボル サーバーを使用するには、開発者が Visual Studio 2017 15.9 以降を持っている必要があります。
 
 シンボル パッケージを作成する代わりに、主要 NuGet パッケージにシンボル ファイルを埋め込むという方法もあります。 主要 NuGet パッケージは大容量になりますが、シンボル ファイルを埋め込む場合、開発者は NuGet.org シンボル サーバーを設定する必要がないことを意味します。 SDK 形式のプロジェクトを使用して NuGet パッケージを構築している場合、`AllowedOutputExtensionsInPackageBuildOutputFolder` プロパティを設定してシンボル ファイルを埋め込むことができます。
 
@@ -110,11 +112,13 @@ NuGet.org は独自の[シンボル サーバー リポジトリ](/nuget/create-
 </Project>
 ```
 
-**✔️ 検討** 主要な NuGet パッケージにシンボル ファイルを埋め込む。
+シンボル ファイルを埋め込むことの短所は、SDK スタイルのプロジェクトでコンパイルした .NET ライブラリの場合、パッケージ サイズが約 30% 増えるということです。 パッケージ サイズが問題であれば、代わりにシンボル パッケージでシンボルを公開してください。
 
-> 主要 NuGet パッケージにシンボル ファイルを埋め込むと、初期設定で開発者に快適な操作性が与えられます。 IDE で NuGet シンボル サーバーを見つけ、構成し、シンボル ファイルを取得する必要がありません。
+**✔️ 検討** シンボルをシンボル パッケージ (`*.snupkg`) として NuGet.org に発行する
+
+> シンボル パッケージ (`*.snupkg`) は、メイン パッケージのサイズを肥大化させることなく、また NuGet パッケージをデバッグする予定のない人の復元パフォーマンスに影響を及ぼすことなく、オンデマンドの良好なデバッグ エクスペリエンスを開発者に提供します。
 >
-> シンボル ファイルを埋め込むことの短所は、SDK スタイルのプロジェクトでコンパイルした .NET ライブラリの場合、パッケージ サイズが約 30% 増えるということです。 パッケージ サイズが問題であれば、代わりにシンボル パッケージでシンボルを公開してください。
+> 注意点は、シンボル パッケージでは、その IDE 内で NuGet シンボル サーバーを見つけ、(1 回限りのセットアップとして) 構成し、シンボル ファイルを取得する必要があることです。 Visual Studio 2019 では、特別な構成なしに使用できるオプションの 1 つとして、NuGet.org シンボル サーバーを提供する予定です。 
 
 >[!div class="step-by-step"]
 >[前へ](strong-naming.md)

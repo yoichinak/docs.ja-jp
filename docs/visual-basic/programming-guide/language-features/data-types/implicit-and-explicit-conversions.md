@@ -20,12 +20,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], implicit
 - implicit data type conversions [Visual Basic]
 ms.assetid: 77de1659-af8a-492c-967e-e7ef60ccce66
-ms.openlocfilehash: 09d96b304ba3bcf2a9de2812ce37ae69dba73a41
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 82ff710629089cd14c7e982b4afa4301d0790811
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44185351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008255"
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>暗黙の型変換と明示的な型変換 (Visual Basic)
 *暗黙的な変換*ソース コードに特殊な構文は必要ありません。 次の例では、Visual Basic に暗黙的に変換の値`k`に割り当てる前に単精度浮動小数点値`q`します。  
@@ -60,7 +60,7 @@ k = CInt(q)
 |`CDate`|[Date データ型](../../../../visual-basic/language-reference/data-types/date-data-type.md)|`String`, `Object`|  
 |`CDbl`|[Double 型](../../../../visual-basic/language-reference/data-types/double-data-type.md)|任意の数値型 (など`Byte`、 `SByte`、および列挙型)、 `Boolean`、 `String`、 `Object`|  
 |`CDec`|[Decimal データ型](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)|任意の数値型 (など`Byte`、 `SByte`、および列挙型)、 `Boolean`、 `String`、 `Object`|  
-|`CInt`|[整数データ型](../../../../visual-basic/language-reference/data-types/integer-data-type.md)|任意の数値型 (など`Byte`、 `SByte`、および列挙型)、 `Boolean`、 `String`、 `Object`|  
+|`CInt`|[Integer データ型](../../../../visual-basic/language-reference/data-types/integer-data-type.md)|任意の数値型 (など`Byte`、 `SByte`、および列挙型)、 `Boolean`、 `String`、 `Object`|  
 |`CLng`|[Long データ型](../../../../visual-basic/language-reference/data-types/long-data-type.md)|任意の数値型 (など`Byte`、 `SByte`、および列挙型)、 `Boolean`、 `String`、 `Object`|  
 |`CObj`|[Object 型](../../../../visual-basic/language-reference/data-types/object-data-type.md)|任意の型|  
 |`CSByte`|[SByte データ型](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|任意の数値型 (など`Byte`型および列挙型)、 `Boolean`、 `String`、 `Object`|  
@@ -117,7 +117,7 @@ End If
  詳細と例では、次を参照してください。[配列変換](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)します。  
   
 ### <a name="types-defining-ctype"></a>CType を定義する型  
- 定義できます`CType`でクラスまたは定義した構造体。 これにより、クラスまたは構造体の型との間の値を変換することができます。 詳細と例では、次を参照してください。[方法: 変換演算子を定義](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)します。  
+ 定義できます`CType`でクラスまたは定義した構造体。 これにより、クラスまたは構造体の型との間の値を変換することができます。 詳細と例では、次を参照してください。[方法。変換演算子を定義](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)します。  
   
 > [!NOTE]
 >  変換キーワードで使用される値は変換先のデータ型に対して有効である必要があります。 またはエラーが発生します。 変換しようとした場合など、`Long`を`Integer`の値、`Long`の有効な範囲内である必要があります、`Integer`データ型。  
@@ -125,15 +125,16 @@ End If
 > [!CAUTION]
 >  指定する`CType`ソースの種類が変換先の型から派生していない場合は、実行時に別の失敗を 1 つのクラス型から変換します。 このようなエラーをスローする<xref:System.InvalidCastException>例外。  
   
- ただし、構造体またはクラスを定義すると、型の 1 つは、定義した場合`CType`の要件を満たしている場合に、その構造体またはクラスへの変換が成功する、`CType`します。 参照してください[方法: 変換演算子を定義](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)します。  
+ ただし、構造体またはクラスを定義すると、型の 1 つは、定義した場合`CType`の要件を満たしている場合に、その構造体またはクラスへの変換が成功する、`CType`します。 「[方法:変換演算子を定義](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)します。  
   
  呼ばれますが、明示的な変換を実行する*キャスト*式を指定のデータ型またはオブジェクト クラス。  
   
-## <a name="see-also"></a>関連項目  
- [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [文字列とその他の型との変換](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- [方法: オブジェクトを Visual Basic で別の型に変換](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- [構造体](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [データの種類](../../../../visual-basic/language-reference/data-types/index.md)  
- [データ型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [トラブルシューティング (データ型)](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+## <a name="see-also"></a>関連項目
+
+- [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [文字列とその他の型との変換](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
+- [方法: オブジェクトを Visual Basic で別の型に変換します。](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [構造体](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [データの種類](../../../../visual-basic/language-reference/data-types/index.md)
+- [データ型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [トラブルシューティング (データ型)](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)

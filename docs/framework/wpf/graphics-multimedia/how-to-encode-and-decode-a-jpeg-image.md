@@ -1,5 +1,5 @@
 ---
-title: '方法: エンコードおよびデコード JPEG イメージ'
+title: '方法: エンコードおよびデコードの JPEG 画像'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,28 +13,28 @@ helpviewer_keywords:
 - JPEG decoding [WPF]
 - JPEG encoding [WPF]
 ms.assetid: b8cfde37-9f68-4911-a05e-51d8d7bdec7b
-ms.openlocfilehash: 916eab63938100daf91e6c1a5af31648a99108d0
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 0f64ef8537f22ea996cbcf274885de1f3968267a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947512"
 ---
-# <a name="how-to-encode-and-decode-a-jpeg-image"></a>方法: エンコードおよびデコード JPEG イメージ
+# <a name="how-to-encode-and-decode-a-jpeg-image"></a>方法: エンコードおよびデコードの JPEG 画像
 
-次の例は、デコードし、固有の仕様を使用して、JPEG イメージのエンコード方法を示して<xref:System.Windows.Media.Imaging.JpegBitmapDecoder>と<xref:System.Windows.Media.Imaging.JpegBitmapEncoder>オブジェクト。  
+次の例は、デコード、および特定を使用して、JPEG イメージをエンコードする方法を示します<xref:System.Windows.Media.Imaging.JpegBitmapDecoder>と<xref:System.Windows.Media.Imaging.JpegBitmapEncoder>オブジェクト。  
   
-## <a name="example---decode-a-jpeg-image"></a>例 - JPEG イメージ デコード
+## <a name="example---decode-a-jpeg-image"></a>例: JPEG イメージのデコード
 
-この例では、JPEG 画像を使用して、デコード、<xref:System.Windows.Media.Imaging.JpegBitmapDecoder>から、<xref:System.IO.FileStream>です。  
+この例を使用して JPEG イメージをデコードする方法、<xref:System.Windows.Media.Imaging.JpegBitmapDecoder>から、<xref:System.IO.FileStream>します。  
   
 [!code-cpp[JpegBitmapDecoderEncoder#1](~/samples/snippets/cpp/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/CPP/jpegencoderdecoder.cpp#1)]
 [!code-csharp[JpegBitmapDecoderEncoder#1](~/samples/snippets/csharp/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/CSharp/JpegEncoderDecoder.cs#1)]
 [!code-vb[JpegBitmapDecoderEncoder#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/VB/JpegEncoderDecoder.vb#1)]  
   
-## <a name="example---encode-a-jpeg-image"></a>例 - エンコード JPEG イメージ
+## <a name="example---encode-a-jpeg-image"></a>例: JPEG イメージのエンコード
 
-この例では、エンコード、 <xref:System.Windows.Media.Imaging.BitmapSource> JPEG にイメージを使用して、<xref:System.Windows.Media.Imaging.JpegBitmapEncoder>です。  
+この例では、エンコード、<xref:System.Windows.Media.Imaging.BitmapSource>に JPEG イメージを使用して、 <xref:System.Windows.Media.Imaging.JpegBitmapEncoder>。  
   
 [!code-cpp[JpegBitmapDecoderEncoder#4](~/samples/snippets/cpp/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/CPP/jpegencoderdecoder.cpp#4)]
 [!code-csharp[JpegBitmapDecoderEncoder#4](~/samples/snippets/csharp/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/CSharp/JpegEncoderDecoder.cs#4)]
@@ -42,4 +42,4 @@ ms.locfileid: "37027968"
   
 ## <a name="see-also"></a>関連項目
 
-[イメージングの概要](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+- [イメージングの概要](imaging-overview.md)

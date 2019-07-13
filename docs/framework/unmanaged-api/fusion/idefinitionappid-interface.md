@@ -16,33 +16,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2735355097a1f3f581b3a4bc74f08d8f2ebf3bd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5bd705ef549de3a8018efe731ef8735ef7b6b915
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697239"
 ---
 # <a name="idefinitionappid-interface"></a>IDefinitionAppId インターフェイス
-現在のスコープで、アプリケーションを定義するコードの一意の識別子を表します。  
+現在のスコープ内でアプリケーションを定義するコードの一意の識別子を表します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|`IDefinitionAppId::get_Codebase`|このコードを表す書式設定された文字列を取得`IDefinitionAppId`オブジェクト。|  
-|`IDefinitionAppId::put_Codebase`|このコード設定`IDefinitionAppId`を指定したオブジェクトの書式設定された文字列値です。|  
-|`IDefinitionAppId::EnumAppPath`|インターフェイス ポインターを取得、 [IEnumDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/ienumdefinitionidentity-interface.md)を現在のアプリケーション パス内のアセンブリを含むオブジェクト。|  
-|`IDefinitionAppId::SetAppPath`|アセンブリの指定したによって参照される値を現在のスコープでアプリケーションのパスを設定[IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)オブジェクト。|  
-|`IDefinitionAppId::get_SubscriptionId`|このサブスクリプションのトークンの id の文字列形式へのポインターを取得`IDefinitionAppId`オブジェクト。|  
-|`IDefinitionAppId::put_SubscriptionId`|このサブスクリプションのトークンの識別子を設定`IDefinitionAppId`オブジェクトを指定した文字列値にします。|  
+|`IDefinitionAppId::get_Codebase`|このコードを表す書式設定された文字列を取得します。`IDefinitionAppId`オブジェクト。|  
+|`IDefinitionAppId::put_Codebase`|このコードを設定`IDefinitionAppId`を指定したオブジェクトの書式設定された文字列値。|  
+|`IDefinitionAppId::EnumAppPath`|インターフェイス ポインターを取得、 [IEnumDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/ienumdefinitionidentity-interface.md)現在のアプリケーション パス内のアセンブリを格納しているオブジェクト。|  
+|`IDefinitionAppId::SetAppPath`|指定したによって参照される値を現在のスコープ内のアセンブリのアプリケーション パスを設定[IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)オブジェクト。|  
+|`IDefinitionAppId::get_SubscriptionId`|このサブスクリプションのトークンの識別子の文字列表現にポインターを取得します。`IDefinitionAppId`オブジェクト。|  
+|`IDefinitionAppId::put_SubscriptionId`|このサブスクリプションのトークンの識別子を設定`IDefinitionAppId`オブジェクト指定した文字列値から。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Isolation.h  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [Fusion インターフェイス](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+## <a name="see-also"></a>関連項目
+
+- [Fusion インターフェイス](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)

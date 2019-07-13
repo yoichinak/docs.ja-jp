@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parse strings
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
-ms.openlocfilehash: b6170be2dbb3f11906bbaa6e5c3be3e48a976246
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a8cb3a62497379f60e9cc6dec3d342192361f865
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45746382"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603721"
 ---
 # <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>方法: String.Split を使用して文字列を解析する (C# ガイド)
 
@@ -50,8 +50,8 @@ ms.locfileid: "45746382"
 
 [GitHub リポジトリ](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)のコードを見て、これらのサンプルを試すことができます。 または、サンプルを [zip ファイルとして](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)ダウンロードすることができます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../programming-guide/index.md)  
-- [文字列](../programming-guide/strings/index.md)  
+- [C# プログラミング ガイド](../programming-guide/index.md)
+- [文字列](../programming-guide/strings/index.md)
 - [.NET の正規表現](../../standard/base-types/regular-expressions.md)

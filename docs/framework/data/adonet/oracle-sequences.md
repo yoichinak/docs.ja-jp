@@ -2,21 +2,21 @@
 title: Oracle シーケンス
 ms.date: 03/30/2017
 ms.assetid: 27cd371d-8252-414d-b5b2-5d31fa44b585
-ms.openlocfilehash: 4c1829cc3f9506b0317e6638fd2760a91c7d19d6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4ba7b750d48613b80eca0ef3c7c2da127977498d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520339"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64632343"
 ---
 # <a name="oracle-sequences"></a>Oracle シーケンス
 .NET Framework Data Provider for Oracle では、<xref:System.Data.OracleClient.OracleDataAdapter> を使用して挿入操作を実行した後、サーバーによって生成されたキー値 (Oracle シーケンス) を取得できます。  
   
  SQL Server および Oracle は、主キーとして指定できる自動増分列の作成をサポートします。 これらの値はテーブルに行を追加するとサーバーによって自動的に生成されます。 SQL Server では列の Identity プロパティを設定し、Oracle では Sequence を作成します。 SQL Server の自動増分列と Oracle シーケンスの違いは、次のとおりです。  
   
--   SQL Server では列を自動増分列として指定すると、新しい行を挿入するたびに SQL Server によって新しい列値が自動的に生成されます。  
+- SQL Server では列を自動増分列として指定すると、新しい行を挿入するたびに SQL Server によって新しい列値が自動的に生成されます。  
   
--   Oracle ではシーケンスを作成することによって、テーブルに新しい列値を生成します。ただし、シーケンスとテーブルまたはシーケンスと列の間に直接的な関係はありません。 Oracle シーケンスは、テーブルやストアド プロシージャと同様のオブジェクトです。  
+- Oracle ではシーケンスを作成することによって、テーブルに新しい列値を生成します。ただし、シーケンスとテーブルまたはシーケンスと列の間に直接的な関係はありません。 Oracle シーケンスは、テーブルやストアド プロシージャと同様のオブジェクトです。  
   
  Oracle データベースにシーケンスを作成する場合は、初期値と増分値を定義できます。 新しい行を送信する前に、新しい値のシーケンスを照会することもできます。 つまり、コードでデータベースに行を挿入する前に、新しい行のキー値を調べることができます。  
   
@@ -98,6 +98,7 @@ public void OracleSequence(String connectionString)
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Oracle および ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [Oracle および ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

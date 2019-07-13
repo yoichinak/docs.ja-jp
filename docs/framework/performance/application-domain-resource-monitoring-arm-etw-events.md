@@ -7,27 +7,27 @@ helpviewer_keywords:
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 47ab6e52278c77156e828869dd23575561879bff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac396e1a5b83f33068266553024c37ef436c150d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398184"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616631"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>アプリケーション ドメインのリソース監視 (ARM) ETW イベント
 <a name="top"></a> これらのイベントは、アプリケーション ドメインの状態に関する詳細な診断の情報を提供します。 これらのイベントを使用することもできますが、アプリケーション ドメインのリソース監視 (ARM) の機能を使用しても同じ情報を得られます。  
   
  このカテゴリは、次のイベントで構成されます。  
   
--   [ThreadCreated イベント](#threadcreated_event)  
+- [ThreadCreated イベント](#threadcreated_event)  
   
--   [AppDomainMemAllocated イベント](#appdomainmemallocated_event)  
+- [AppDomainMemAllocated イベント](#appdomainmemallocated_event)  
   
--   [AppDomainMemSurvived イベント](#appdomainmemsurvived_event)  
+- [AppDomainMemSurvived イベント](#appdomainmemsurvived_event)  
   
--   [ThreadAppDomainEnter イベント](#threadappdomainenter_event)  
+- [ThreadAppDomainEnter イベント](#threadappdomainenter_event)  
   
--   [ThreadTerminated イベント](#threadterminated_event)  
+- [ThreadTerminated イベント](#threadterminated_event)  
   
 <a name="threadcreated_event"></a>   
 ## <a name="threadcreated-event"></a>ThreadCreated イベント  
@@ -53,7 +53,7 @@ ms.locfileid: "33398184"
 |ThreadID|win:UInt64|作成されたスレッドの ID。|  
 |AppDomainID|win:UInt64|スレッドのアクティビティの報告対象のアプリケーション ドメインの識別子。|  
 |フラグ|win:UInt32|スレッドの作成フラグ|  
-|ManagedThreadIndex|win:UInt32|作成されたスレッドのマネージ インデックス。|  
+|ManagedThreadIndex|win:UInt32|作成されたスレッドのマネージド インデックス。|  
 |OSThreadID|win:UInt32|作成されたスレッドのオペレーティング システム ID。|  
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
@@ -103,7 +103,7 @@ ms.locfileid: "33398184"
 |----------------|---------------|-----------------|  
 |AppDomainID|win:UInt64|リソースの使用状況の報告対象のドメインの識別子。|  
 |Survived|win:UInt64|最後のコレクションの実行後に残され、このアプリケーション ドメインによって保持されることが判明しているバイト数。 この数は、完全なコレクションの後では正確で完全ですが、短期コレクションの後では完全ではない可能性があります。|  
-|ProcessSurvived|win:UInt64|最後のコレクション後に残った合計バイト数。 完全なコレクションの後では、この数はマネージ ヒープにライブで保持されるバイト数を表します。 短期コレクションの後では、この数は短期のジェネレーションにライブで保持されるバイト数を表します。|  
+|ProcessSurvived|win:UInt64|最後のコレクション後に残った合計バイト数。 完全なコレクションの後では、この数はマネージド ヒープにライブで保持されるバイト数を表します。 短期コレクションの後では、この数は短期のジェネレーションにライブで保持されるバイト数を表します。|  
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
  [ページのトップへ](#top)  
@@ -156,5 +156,6 @@ ms.locfileid: "33398184"
 |AppDomainID|win:UInt64|アプリケーション ドメインの識別子。|  
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
-## <a name="see-also"></a>関連項目  
- [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>関連項目
+
+- [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)

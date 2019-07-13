@@ -4,12 +4,12 @@ description: .NET でのサーバー アプリのビルド時に考慮する必�
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 01e7222ccd4a764f75481e58d4ac305daadfe1a8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3034f77fe8ee136011a523f6882ffa09ed2758d6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202238"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641157"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>サーバー アプリ用 .NET Core と .NET Framework の選択
 
@@ -52,7 +52,7 @@ ms.locfileid: "50202238"
 
 通常、コンテナーは、マイクロサービス アーキテクチャと組み合わせて使用されます。 コンテナーは、任意のアーキテクチャ パターンに従う Web アプリやサービスをコンテナー化するためにも使用できます。 Windows コンテナーで .NET Framework を使用できますが、モジュール方式で軽量である .NET Core はコンテナーに適しています。 コンテナーを作成して展開する場合、そのイメージのサイズは .NET Framework より .NET Core の方がはるかに小さくなります。 また、クロスプラットフォームであるため、Linux Docker コンテナーなどにサーバー アプリを展開することができます。
 
-Docker コンテナーは、オンプレミスの Linux または Windows インフラストラクチャ、または [Azure Container Service](https://azure.microsoft.com/services/container-service/) などのクラウド サービスでホストできます。 Azure Container Service は、コンテナーベースのアプリケーションの管理、調整、およびスケールをクラウドで行うことができます。
+Docker コンテナーは、オンプレミスの Linux または Windows インフラストラクチャ、または [Azure Kubernetes Service](https://azure.microsoft.com/services/kubernetes-service/) などのクラウド サービスでホストできます。 Azure Kubernetes Service は、コンテナーベースのアプリケーションの管理、調整、およびスケールをクラウドで行うことができます。
 
 ### <a name="a-need-for-high-performance-and-scalable-systems"></a>高パフォーマンスでスケーラブルなシステムの必要性
 
@@ -77,7 +77,7 @@ Docker コンテナーは、オンプレミスの Linux または Windows イン
 ライブラリは、短期間で .NET Standard を採用しています。 .NET Standard を使用すると、.NET Core を含め、すべての .NET 実装全体でコードを共有できます。 .NET Standard 2.0 を使用すれば、さらに簡単です。
 
 - API サーフェスがはるかに大きくなりました。 
-- .NET Framework 互換モードが導入されました。 この互換モードにより、.NET Standard/.NET Core プロジェクトは .NET Framework ライブラリを参照できます。 互換モードの詳細については、「[Announcing .NET Standard 2.0](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-standard-2-0/)」(.NET Standard 2.0 のお知らせ) を参照してください。
+- .NET Framework 互換モードが導入されました。 この互換モードにより、.NET Standard/.NET Core プロジェクトは .NET Framework ライブラリを参照できます。 互換モードの詳細については、「[Announcing .NET Standard 2.0](https://devblogs.microsoft.com/dotnet/announcing-net-standard-2-0/)」(.NET Standard 2.0 のお知らせ) を参照してください。
 
 そのため、ライブラリまたは NuGet パッケージが、.NET Standard/.NET Core で使用できないテクノロジを使用している場合にのみ、.NET Framework を使用する必要があります。
 
@@ -85,29 +85,29 @@ Docker コンテナーは、オンプレミスの Linux または Windows イン
 
 一部の .NET Framework テクノロジは .NET Core では使用できません。 その一部は、.NET Core の今後のリリースで使用できるようになる可能性があります。 それ以外は .NET Core の対象となる新しいアプリケーション パターンには適用されず、使用可能にならない可能性があります。 .NET Core にはない最も一般的なテクノロジを、以下のリストに示します。
 
-* ASP.NET Web フォーム アプリケーション: ASP.NET Web フォームは、.NET Framework でのみ使用できます。 ASP.NET Core は、ASP.NET Web フォームに使用できません。 ASP.NET Web フォームが .NET Core で使用できるようになる予定はありません。
+* ASP.NET Web フォーム アプリケーション:ASP.NET Web フォームは、.NET Framework でのみ使用できます。 ASP.NET Core は、ASP.NET Web フォームに使用できません。 ASP.NET Web フォームが .NET Core で使用できるようになる予定はありません。
 
-* ASP.NET Web ページ アプリケーション: ASP.NET Web ページは、ASP.NET Core に含まれていません。 
+* ASP.NET Web ページ アプリケーション:ASP.NET Web ページは、ASP.NET Core に含まれていません。 
 
 * WCF サービスの実装。 現在のところ、.NET Core から WCF サービスを利用する [WCF クライアント ライブラリ](https://github.com/dotnet/wcf)がある場合でも、WCF サーバーの実装は .NET Framework でのみ可能です。 このシナリオは .NET Core の現在の計画に含まれていませんが、将来に向けて検討中です。
 
-* ワークフローに関連するサービス: .Windows Workflow Foundation (WF)、ワークフロー サービス (1 つのサービスに WCF と WF) および WCF Data Services (旧称: "ADO.NET Data Services") は、NET Framework でのみ使用できます。  WF/WCF+WF/WCF Data Services を .NET Core に導入する予定はありません。
+* ワークフローに関連するサービス:.Windows Workflow Foundation (WF)、ワークフロー サービス (1 つのサービスに WCF と WF) および WCF Data Services (旧称: "ADO.NET Data Services") は、NET Framework でのみ使用できます。  WF/WCF+WF/WCF Data Services を .NET Core に導入する予定はありません。
 
-* 言語のサポート: Visual Basic と F# は現在 .NET Core でサポートされていますが、サポートされないプロジェクトの種類もあります。 サポートされるプロジェクト テンプレートの一覧については、[dotnet new のテンプレート オプション](../core/tools/dotnet-new.md#arguments)に関するセクションを参照してください。
+* 言語のサポート:Visual Basic と F# は現在 .NET Core でサポートされていますが、サポートされないプロジェクトの種類もあります。 サポートされるプロジェクト テンプレートの一覧については、[dotnet new のテンプレート オプション](../core/tools/dotnet-new.md#arguments)に関するセクションを参照してください。
 
 公式のロードマップに加え、.NET Core に移植される予定のフレームワークが他にもあります。 詳細な一覧については、[port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core) とマークされている CoreFX の論点を参照してください。 この一覧は、Microsoft がそれらのコンポーネントを .NET Core に導入する予定ではありません。 単に、コミュニティからの希望をまとめたものです。 `port-to-core` とマークされているいずれかのコンポーネントに関心がある場合は、GitHub のディスカッションに参加してください。 また、一覧に欠けている点があるとお考えの場合は、[CoreFX リポジトリ](https://github.com/dotnet/corefx/issues/new)に登録してください。
 
 ### <a name="a-need-to-use-a-platform-that-doesnt-support-net-core"></a>.NET Core をサポートしていないプラットフォームを使用する必要性
 
-Microsoft やサードパーティ製のプラットフォームの中には、.NET Core をサポートしないものもあります。 たとえば、Service Fabric のステートフル Reliable Services や Service Fabric Reliable Actors などのいくつかの Azure サービスでは .NET Framework が必要です。 他のいくつかのサービスでは、.NET Core ではまだ使用できない SDK が提供されます。 すべての Azure サービスでは .NET Core を使用しているために、これは過渡的な状況です。 その間、クライアント SDK の代わりに同等の REST API をいつでも使用できます。
+Microsoft やサードパーティ製のプラットフォームの中には、.NET Core をサポートしないものもあります。 一部の Azure サービスでは、.NET Core ではまだ使用できない SDK が提供されます。 すべての Azure サービスでは .NET Core を使用しているために、これは過渡的な状況です。 その間、クライアント SDK の代わりに同等の REST API をいつでも使用できます。
 
 ## <a name="see-also"></a>関連項目
 
-* [ASP.NET と ASP.NET Core の選択](/aspnet/core/choose-aspnet-framework)
-* [.NET Framework を対象とする ASP.NET Core](/aspnet/core#aspnet-core-targeting-net-framework)
-* [ターゲット フレームワーク](frameworks.md)
-* [.NET Core のガイド](../core/index.md)  
-* [.NET Framework から .NET Core への移植](../core/porting/index.md)  
-* [Docker 上の .NET Framework のガイド](../framework/docker/index.md)  
-* [.NET コンポーネントの概要](components.md)  
-* [.NET マイクロサービス:コンテナー化された .NET アプリケーションのアーキテクチャ](microservices-architecture/index.md)
+- [ASP.NET と ASP.NET Core の選択](/aspnet/core/choose-aspnet-framework)
+- [.NET Framework を対象とする ASP.NET Core](/aspnet/core#aspnet-core-targeting-net-framework)
+- [ターゲット フレームワーク](frameworks.md)
+- [.NET Core のガイド](../core/index.md)
+- [.NET Framework から .NET Core への移植](../core/porting/index.md)
+- [.NET および Docker の概要](../core/docker/intro-net-docker.md)
+- [.NET コンポーネントの概要](components.md)
+- [.NET マイクロサービス:コンテナー化された .NET アプリケーションのアーキテクチャ](microservices-architecture/index.md)

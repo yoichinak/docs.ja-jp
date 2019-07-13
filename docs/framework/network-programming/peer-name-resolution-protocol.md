@@ -2,12 +2,12 @@
 title: Peer Name Resolution Protocol
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-ms.openlocfilehash: f04b0b2e27c03ed477c6ceb10a5cbe41e1c7ce7c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9e20e23cf467bc87fd9984bdbc15d07dfed06798
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129158"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623013"
 ---
 # <a name="peer-name-resolution-protocol"></a>Peer Name Resolution Protocol
 ピアツーピア環境において、ピアは特定の名前解決システムを使用して、互いのネットワーク上の場所 (アドレス、プロトコル、およびポート) をその名前や他の識別子から解決します。 これまで、ドメイン ネーム システム (DNS) でのピア名の解決は、本質的に一時的な接続やその他の不具合によって複雑化していました。  
@@ -20,34 +20,35 @@ ms.locfileid: "53129158"
   
 ピア名解決プロトコルには次の特性があります。  
   
--   分散型で、ほぼすべてサーバーレス。 サーバーはブートストラップ プロセスのみに必要です。  
+- 分散型で、ほぼすべてサーバーレス。 サーバーはブートストラップ プロセスのみに必要です。  
   
--   第三者が関与しないセキュリティで保護された名前の公開。 DNS の名前公開とは異なり、PNRP では即時に名前を公開でき、金銭的コストがかかりません。  
+- 第三者が関与しないセキュリティで保護された名前の公開。 DNS の名前公開とは異なり、PNRP では即時に名前を公開でき、金銭的コストがかかりません。  
   
--   PNRP はリアルタイムで更新されるため、古いアドレスの解決が発生しません。  
+- PNRP はリアルタイムで更新されるため、古いアドレスの解決が発生しません。  
   
--   PNRP による名前の解決はコンピューター以外にも拡張でき、サービスの名前解決も可能です。  
+- PNRP による名前の解決はコンピューター以外にも拡張でき、サービスの名前解決も可能です。  
   
 ## <a name="the-systemnetpeertopeer-namespace"></a>System.Net.PeerToPeer 名前空間  
   
--   PNRP の機能は、.NET Framework Version 3.5 内で <xref:System.Net.PeerToPeer> 名前空間によって定義されます。 この機能は、使用可能な PNRP サービスにピア名を登録して解決するために使用できる型のセットを提供します。  
+- PNRP の機能は、.NET Framework Version 3.5 内で <xref:System.Net.PeerToPeer> 名前空間によって定義されます。 この機能は、使用可能な PNRP サービスにピア名を登録して解決するために使用できる型のセットを提供します。  
   
--   (<xref:System.ServiceModel.PeerResolvers> 名前空間で提供される型を使用して、PNRP とカスタム ピア リゾルバーを作成し、インスタンス化することができます。)  
+- (<xref:System.ServiceModel.PeerResolvers> 名前空間で提供される型を使用して、PNRP とカスタム ピア リゾルバーを作成し、インスタンス化することができます。)  
   
--   使用可能な PNRP サービスに名前を登録して解決するために使用する基本的な型は、次のとおりです。  
+- 使用可能な PNRP サービスに名前を登録して解決するために使用する基本的な型は、次のとおりです。  
   
--   <xref:System.Net.PeerToPeer.Cloud>: 使用可能な PNRP クラウドとそのスコープを説明する情報を定義します。  
+- <xref:System.Net.PeerToPeer.Cloud>:使用可能な PNRP クラウドとそのスコープを説明する情報を定義します。  
   
--   <xref:System.Net.PeerToPeer.PeerName>: クラウド内でピアを登録し、その後解決するために使用できるピア名を定義します。  
+- <xref:System.Net.PeerToPeer.PeerName>:クラウド内でピアを登録し、その後解決するために使用できるピア名を定義します。  
   
--   <xref:System.Net.PeerToPeer.PeerNameRecord>: ピアの登録情報を含む、PNRP クラウド内のレコードを定義します。この情報は、ピアに接続できるネットワーク エンドポイントを含みます。  
+- <xref:System.Net.PeerToPeer.PeerNameRecord>:ピアの登録情報を含む、PNRP クラウド内のレコードを定義します。この情報は、ピアに接続できるネットワーク エンドポイントを含みます。  
   
--   <xref:System.Net.PeerToPeer.PeerNameRegistration>: ピア名の登録を開始および停止するメソッドを含む、ピア名の登録プロセスを定義します。  
+- <xref:System.Net.PeerToPeer.PeerNameRegistration>:ピア名の登録を開始および停止するメソッドを含む、ピア名の登録プロセスを定義します。  
   
--   <xref:System.Net.PeerToPeer.PeerNameResolver>: 解決の同期および非同期のメソッドなど、ピア名をネットワーク エンドポイントに解決するためのプロセスを定義します。  
+- <xref:System.Net.PeerToPeer.PeerNameResolver>:解決の同期および非同期のメソッドなど、ピア名をネットワーク エンドポイントに解決するためのプロセスを定義します。  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.ServiceModel.PeerResolvers>  
-- <xref:System.Net.PeerToPeer>  
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.PeerResolvers>
+- <xref:System.Net.PeerToPeer>
 - [ネットワーク プログラミングのサンプル](../../../docs/framework/network-programming/network-programming-samples.md)
 - [PeerToPeer テクノロジのサンプル](https://go.microsoft.com/fwlink/?LinkID=179571)

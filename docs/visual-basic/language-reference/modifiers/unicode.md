@@ -9,23 +9,23 @@ helpviewer_keywords:
 - Unicode keyword [Visual Basic]
 - Unicode, marshaling strings
 ms.assetid: 0021d5ff-3209-444e-8497-420f3e6ee075
-ms.openlocfilehash: a61fd8e10c39569d92dd84180f678a1ff05a9310
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b3c9452f8d144fb18ea3efcb35b85caed80e8692
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778678"
 ---
 # <a name="unicode-visual-basic"></a>Unicode (Visual Basic)
-Visual Basic には、宣言されている外部プロシージャの名前に関係なく、Unicode の値にすべての文字列がマーシャ リングを指定します。  
+Visual Basic に宣言されている外部プロシージャの名前に関係なく Unicode 値にすべての文字列がマーシャ リングする必要がありますを指定します。  
   
- プロジェクト外で定義されたプロシージャを呼び出すときに、Visual Basic コンパイラには、プロシージャを正しく呼び出すために必要があります情報へのアクセスはありません。 この情報には、プロシージャが配置されている、それを識別する方法、その呼び出しシーケンスおよび戻り値の型が含まれます。 および使用する文字列の文字セットします。 [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)外部プロシージャへの参照を作成し、この必要な情報を提供します。  
+ プロジェクトの外部で定義されたプロシージャを呼び出すときに、Visual Basic コンパイラには、手順を正しく呼び出すために必要があります情報へのアクセスはありません。 この情報には、プロシージャがある場所は、識別方法、その呼び出し元のシーケンスおよび戻り値の型が含まれます。 して、使用する文字列の文字セットします。 [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)外部プロシージャへの参照を作成し、このために必要な情報を提供します。  
   
- `charsetmodifier`の一部、`Declare`ステートメントは、外部プロシージャの呼び出し中に文字列をマーシャ リングには、文字セットの情報を提供します。 Visual Basic が外部プロシージャ名を外部ファイルを検索する方法にも影響します。 `Unicode`修飾子は、Visual Basic がすべての文字列を Unicode 値のマーシャ リングする必要があり、検索中にその名前を変更することがなく、プロシージャを検索する必要がありますを指定します。  
+ `charsetmodifier`パーツ、`Declare`ステートメントが外部プロシージャの呼び出し中に文字列をマーシャ リングする、文字セット情報を提供します。 また、Visual Basic が外部プロシージャ名の外部のファイルを検索する方法も影響します。 `Unicode`修飾子は、Visual Basic を Unicode 値のすべての文字列をマーシャ リングする必要があり、検索中にその名前を変更することがなく、プロシージャを検索することを指定します。  
   
  文字セットに修飾子が指定されていない場合`Ansi`既定値です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `Unicode`修飾子は、このコンテキストで使用できます。  
   
  [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)  
@@ -33,7 +33,8 @@ Visual Basic には、宣言されている外部プロシージャの名前に�
 ## <a name="smart-device-developer-notes"></a>スマート デバイスの開発者向け注意事項  
  このキーワードはサポートされていません。  
   
-## <a name="see-also"></a>関連項目  
- [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)  
- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)  
- [キーワード](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>関連項目
+
+- [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)
+- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)
+- [キーワード](../../../visual-basic/language-reference/keywords/index.md)

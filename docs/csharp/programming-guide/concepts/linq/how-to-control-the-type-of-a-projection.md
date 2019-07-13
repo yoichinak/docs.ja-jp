@@ -2,12 +2,12 @@
 title: '方法: プロジェクションの型を制御する (C#)'
 ms.date: 07/20/2015
 ms.assetid: e4db6b7e-4cc9-4c8f-af85-94acf32aa348
-ms.openlocfilehash: 4aea9fd07ff2a128da9be0a17e5f70a25c9f3853
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 45f60934d6dcac5d2c0fa46409a773d8cdc8b6a2
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146564"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487441"
 ---
 # <a name="how-to-control-the-type-of-a-projection-c"></a>方法: プロジェクションの型を制御する (C#)
 射影は、1 つのデータのセットを取得し、フィルター処理し、その形式を変更し、その型も変更するプロセスです。 ほとんどのクエリ式は射影を実行します。 このセクション内のクエリ式は、ほとんどが <xref:System.Collections.Generic.IEnumerable%601> の <xref:System.Xml.Linq.XElement> に評価されますが、射影の型を制御して別の型のコレクションを作成することができます。 このトピックでは、その方法について説明します。  
@@ -15,7 +15,7 @@ ms.locfileid: "53146564"
 ## <a name="example"></a>例  
  次の例では、`Customer` という新しい型を定義します。 次に、クエリ式の `Customer` 句で新しい `Select` オブジェクトをインスタンス化します。 これによって、クエリ式の型が <xref:System.Collections.Generic.IEnumerable%601> の `Customer` になります。  
   
- この例では、「[サンプル XML ファイル: 顧客と注文 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)」の XML ドキュメントを使用します。  
+ この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:顧客と注文 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)」。  
   
 ```csharp  
 public class Customer  
@@ -69,7 +69,6 @@ LAZYK:Lazy K Kountry Store:John Steel
 LETSS:Let's Stop N Shop:Jaime Yorres  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- <xref:System.Linq.Enumerable.Select%2A>  
-- [プロジェクションと変換 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- <xref:System.Linq.Enumerable.Select%2A>

@@ -1,18 +1,18 @@
 ---
-title: '&lt;「解説」&gt; (Visual Basic)'
+title: <remarks> (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <remarks> XML tag
 - remarks XML tag
 ms.assetid: c6241773-a7ed-41c9-9a8b-9722a0c606a9
-ms.openlocfilehash: 97fca8758d9c21ac0b8f15bf9d5831750fbabe77
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: c5c088472ae09a416953d9c0829cad1cb48646b8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940817"
 ---
-# <a name="ltremarksgt-visual-basic"></a>&lt;「解説」&gt; (Visual Basic)
+# <a name="remarks-visual-basic"></a>\<remarks > (Visual Basic)
 メンバーの「解説」セクションをを指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -21,7 +21,7 @@ ms.locfileid: "43863034"
 <remarks>description</remarks>  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `description`  
  メンバーの説明。  
   
@@ -35,7 +35,8 @@ ms.locfileid: "43863034"
 ## <a name="example"></a>例  
  この例では、`<remarks>`何かを説明するタグ、`UpdateRecord`メソッドします。  
   
- [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/remarks_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>関連項目  
- [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>関連項目
+
+- [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)

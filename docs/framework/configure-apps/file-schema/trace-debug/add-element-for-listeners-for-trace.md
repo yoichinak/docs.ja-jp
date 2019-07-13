@@ -1,5 +1,5 @@
 ---
-title: '&lt;追加&gt;要素&lt;リスナー&gt;の&lt;トレース&gt;'
+title: <add> の <listeners> の <trace> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add
@@ -8,22 +8,20 @@ helpviewer_keywords:
 - <add> element for <listeners>
 - add element for <listeners>
 ms.assetid: 81e804a3-ef11-4d39-bbde-bfa012c179e2
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: fd8ddf5daec4ab7e4de636a2f14cf413aedaa99a
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: ba0ffc4f95b9af7fcd319068501ce0bb9714c2ad
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673974"
 ---
-# <a name="ltaddgt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;追加&gt;要素&lt;リスナー&gt;の&lt;トレース&gt;
+# <a name="add-element-for-listeners-for-trace"></a>\<追加 > 要素の\<リスナー > の\<トレース >
 リスナーを追加、**リスナー**コレクション。  
   
  \<configuration>  
-\<system.diagnostics >  
+\<system.diagnostics>  
 \<トレース >  
-\<リスナー >  
+\<listeners>  
 \<add>  
   
 ## <a name="syntax"></a>構文  
@@ -85,7 +83,7 @@ ms.locfileid: "48261434"
 |<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|ファイルの名前を<xref:System.Diagnostics.XmlWriterTraceListener>に書き込みます。|  
   
 ## <a name="example"></a>例  
- 次の例は、使用する方法を示します**\<追加 >** リスナーを追加する要素`MyListener`と`MyEventListener`を**リスナー**コレクション。 `MyListener` という名前のファイルを作成します。`MyListener.log`し、ファイルに出力を書き込みます。 `MyEventListener` イベント ログにエントリを作成します。  
+ 次の例は、使用する方法を示します **\<追加 >** リスナーを追加する要素`MyListener`と`MyEventListener`を**リスナー**コレクション。 `MyListener` という名前のファイルを作成します。`MyListener.log`し、ファイルに出力を書き込みます。 `MyEventListener` イベント ログにエントリを作成します。  
   
 ```xml  
 <configuration>  
@@ -103,11 +101,12 @@ ms.locfileid: "48261434"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Diagnostics.Trace>  
- <xref:System.Diagnostics.Debug>  
- <xref:System.Diagnostics.EventLogTraceListener>  
- <xref:System.Diagnostics.ConsoleTraceListener>  
- <xref:System.Diagnostics.TextWriterTraceListener>  
- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [トレース リスナー](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Diagnostics.Trace>
+- <xref:System.Diagnostics.Debug>
+- <xref:System.Diagnostics.EventLogTraceListener>
+- <xref:System.Diagnostics.ConsoleTraceListener>
+- <xref:System.Diagnostics.TextWriterTraceListener>
+- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [トレース リスナー](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

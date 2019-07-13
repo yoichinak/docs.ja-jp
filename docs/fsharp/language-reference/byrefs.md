@@ -2,12 +2,12 @@
 title: Byref
 description: Byref と F# での低レベルのプログラミングに使用される byref のような種類について説明します。
 ms.date: 09/02/2018
-ms.openlocfilehash: c45c061a1487c60c3361cd82a55357189754e29d
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: c0bad26672fbb9eb315eee1c3e275183ddeb9297
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703193"
 ---
 # <a name="byrefs"></a>Byref
 
@@ -56,9 +56,10 @@ open System
 
 let f (dt: inref<DateTime>) =
     printfn "Now: %s" (dt.ToString())
-
-let dt = DateTime.Now
-f &dt // Pass a pointer to 'dt'
+    
+let usage =
+    let dt = DateTime.Now
+    f &dt // Pass a pointer to 'dt'
 ```
 
 使用して、ポインターに書き込む、`outref<'T>`または`byref<'T>`へのポインターを取得する値を行う必要があります`mutable`します。
@@ -84,7 +85,7 @@ f &dt
 次のコードがあるとします。
 
 ```fsharp
-let f (x: inref<SomeStruct>) = s.SomeField
+let f (x: inref<SomeStruct>) = x.SomeField
 ```
 
 意味は次の意味としては。
@@ -105,9 +106,9 @@ let f (x: inref<SomeStruct>) = s.SomeField
 
 目的は、`outref<'T>`をからポインターを読み取るだけことを示すことです。 予期せず、`outref<'T>`名前とは異なり値の読み取り、基になることができます。 これは、互換性のため。 意味としては、`outref<'T>`は変わりません`byref<'T>`します。
 
-### <a name="interop-with-c"></a>C# との相互運用 #
+### <a name="interop-with-c"></a>C との相互運用\#
 
-C# のサポート、`in ref`と`out ref`に加えて、キーワード`ref`を返します。 次の表は、F# を解釈する方法と c# は出力を示しています。
+C# のサポート、`in ref`と`out ref`に加えて、キーワード`ref`を返します。 次の表は、F# を解釈する方法と C# は出力を示しています。
 
 |コンス トラクター (C#)|F#推論|
 |------------|---------|
@@ -133,7 +134,7 @@ C# のサポート、`in ref`と`out ref`に加えて、キーワード`ref`を�
 2. `this`変更可能なフィールドを持たない構造体の型のポインター。
 3. メモリの場所のアドレスが別の派生`inref<_>`ポインター。
 
-暗黙的なアドレスのとき、`inref`が行われている、型の引数とオーバー ロード`SomeType`型の引数とオーバー ロードに優先`inref<SomeType>`。 例:
+暗黙的なアドレスのとき、`inref`が行われている、型の引数とオーバー ロード`SomeType`型の引数とオーバー ロードに優先`inref<SomeType>`。 例えば:
 
 ```fsharp
 type C() =

@@ -1,18 +1,18 @@
 ---
-title: '&lt;summary&gt;(Visual Basic)'
+title: <summary> (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <summary> XML tag
 - summary XML tag
 ms.assetid: 861c847d-dd94-478a-aa23-bf4899cdc848
-ms.openlocfilehash: 5ef9b7a98503ff36174de4418ca7d599c365f5aa
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 0fbe07884f55b7e6f460929e54520de5f718e1af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940765"
 ---
-# <a name="ltsummarygt-visual-basic"></a>&lt;summary&gt;(Visual Basic)
+# <a name="summary-visual-basic"></a>\<概要 > (Visual Basic)
 メンバーの概要を指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -21,7 +21,7 @@ ms.locfileid: "46000480"
 <summary>description</summary>  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `description`  
  オブジェクトの概要。  
   
@@ -35,7 +35,8 @@ ms.locfileid: "46000480"
 ## <a name="example"></a>例  
  この例では、`<summary>`を記述するタグ、`ResetCounter`メソッドと`Counter`プロパティ。  
   
- [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/summary_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   
-## <a name="see-also"></a>関連項目  
- [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>関連項目
+
+- [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)

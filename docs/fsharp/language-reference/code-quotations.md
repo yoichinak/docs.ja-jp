@@ -2,12 +2,12 @@
 title: コード クォート
 description: 言語機能を生成し、プログラムで F# コード式を処理することができますが、F# コード クォートについて説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: aa8a17eb8f9837ca4023abc552a6aac063117e96
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 30fd5b575fa59d78c3e70c1a94cd921a6a655ace
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614299"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402129"
 ---
 # <a name="code-quotations"></a>コード クォート
 
@@ -39,9 +39,7 @@ A*式を引用符で囲まれた*F# 式では、プログラムの一部とし�
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet502.fs)]
 
-コード クォートを使用するには、インポート宣言を追加する必要があります (を使用して、`open`キーワード) を開く、 [Microsoft.FSharp.Quotations](https://msdn.microsoft.com/library/e9ce8a3a-e00c-4190-bad5-cce52ee089b2)名前空間。
-
-F# PowerPack は、評価し、F# の式オブジェクトの実行をサポートします。
+評価するF#引用符で囲んでが使用する必要があります、 [ F#引用符エバリュエーター](https://github.com/fsprojects/FSharp.Quotations.Evaluator)します。 評価して、実行のサポートを提供F#式オブジェクト。
 
 ## <a name="expr-type"></a>Expr 型
 
@@ -93,7 +91,7 @@ let f = fun (x:System.Int32) -> x + 10 in f 10
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet701.fs)]
 
-### <a name="output"></a>出力
+### <a name="output"></a>Output
 
 ```fsharp
 1 + Module1.add(2,Module1.add(3,4))

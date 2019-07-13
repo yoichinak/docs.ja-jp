@@ -1,14 +1,14 @@
 ---
 title: join 句の結果の順序指定 (C# での LINQ)
 description: C# で LINQ join 句の結果の順序を指定する方法について説明します。
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: a7458901-1201-4c25-b8d9-c04ca52e0eb9
-ms.openlocfilehash: 13cd6cb202cf67def17310db6d98e368ce837646
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f60000b83bf378dd8740b7255d421dd4335614c4
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516987"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857889"
 ---
 # <a name="order-the-results-of-a-join-clause"></a>join 句の結果の順序指定
 
@@ -22,6 +22,6 @@ ms.locfileid: "43516987"
 
 ## <a name="see-also"></a>関連項目
 
-- [統合言語クエリ (LINQ)](index.md)  
-- [orderby 句](../language-reference/keywords/orderby-clause.md)  
-- [join 句](../language-reference/keywords/join-clause.md)  
+- [統合言語クエリ (LINQ)](index.md)
+- [orderby 句](../language-reference/keywords/orderby-clause.md)
+- [join 句](../language-reference/keywords/join-clause.md)

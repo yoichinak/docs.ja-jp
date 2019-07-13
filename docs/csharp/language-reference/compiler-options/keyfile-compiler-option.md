@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -keyfile compiler option [C#]
 - keyfile compiler option [C#]
 ms.assetid: 0815f9de-ace4-4e98-b4c6-13c55dea40c2
-ms.openlocfilehash: 5e5ef095fbb982b0d37d7f44d4d57f27c20a72c1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3e11cbca004aedd7d4f992abf2f766de4f4f5935
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511900"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59344651"
 ---
 # <a name="-keyfile-c-compiler-options"></a>-keyfile (C# コンパイラ オプション)
 暗号化キーを格納するファイル名を指定します。  
@@ -30,7 +30,7 @@ ms.locfileid: "43511900"
 |----------|----------------|  
 |`file`|厳密な名前のキーを格納するファイルの名前。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  このオプションを指定すると、コンパイラは、指定したファイルからアセンブリ マニフェストに公開キーを挿入し、最終的なアセンブリに秘密キーで署名します。 キー ファイルを生成するには、コマンド ラインで「sn -k `file`」と入力します。  
   
  **-target:module** を指定してコンパイルした場合は、キー ファイルの名前がモジュールに保持され、[-addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md) でアセンブリをコンパイルすると作成されるアセンブリに組み込まれます。  
@@ -45,15 +45,15 @@ ms.locfileid: "43511900"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
   
-1.  プロジェクトの **[プロパティ]** ページを開きます。  
+1. プロジェクトの **[プロパティ]** ページを開きます。  
   
-2.  **[署名]** プロパティ ページをクリックします。  
+2. **[署名]** プロパティ ページをクリックします。  
   
-3.  **[厳密な名前のキー ファイルを選択してください]** プロパティを変更します。  
+3. **[厳密な名前のキー ファイルを選択してください]** プロパティを変更します。  
   
  このコンパイラ オプションには、プログラムで <xref:VSLangProj.ProjectProperties.AssemblyOriginatorKeyFile%2A> を使ってアクセスできます。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)  
+- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

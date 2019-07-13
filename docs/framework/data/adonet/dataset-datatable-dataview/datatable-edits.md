@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f08008a9-042e-4de9-94f3-4f0e502b1eb5
-ms.openlocfilehash: 1d9321a1db4f68195fb914f271fb98f904d2f963
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0300ceab16d9a94bd04468f7acd105e69d13e643
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43805807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879841"
 ---
 # <a name="datatable-edits"></a>DataTable の編集
 <xref:System.Data.DataRow> 内の列値を変更すると、その変更はすぐに行の現在の状態に反映されます。 <xref:System.Data.DataRowState>に設定されている、 **Modified**、され、変更が受け入れられますまたは拒否を使用して、<xref:System.Data.DataRow.AcceptChanges%2A>または<xref:System.Data.DataRow.RejectChanges%2A>のメソッド、 **DataRow**します。 **DataRow**を編集しているときに、行の状態を中断するのに使用できる 3 つのメソッドも提供されます。 これらのメソッドとは、<xref:System.Data.DataRow.BeginEdit%2A>、<xref:System.Data.DataRow.EndEdit%2A> および <xref:System.Data.DataRow.CancelEdit%2A> です。  
   
- 列の値を変更する場合、 **DataRow**を直接、 **DataRow**を使用して列の値を管理、**現在**、**既定**と**元**行のバージョン。 これらの行のバージョンだけでなく、 **BeginEdit**、 **EndEdit**、および**CancelEdit**メソッドを使用して、4 番目の行バージョン:**提案済み**します。 行のバージョンの詳細については、次を参照してください。[行の状態と行バージョン](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)します。  
+ 列の値を変更する場合、 **DataRow**を直接、 **DataRow**を使用して列の値を管理、**現在**、**既定**と**元**行のバージョン。 これらの行のバージョンだけでなく、 **BeginEdit**、 **EndEdit**、および**CancelEdit**メソッドを使用して、4 番目の行のバージョン。**提案された**します。 行のバージョンの詳細については、次を参照してください。[行の状態と行バージョン](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)します。  
   
  **提案済み**呼び出しによって開始編集操作中に行バージョンが存在する**BeginEdit**を使用するか終了して**EndEdit**または**CancelEdit**または呼び出すことによって**AcceptChanges**または**RejectChanges**します。  
   
@@ -86,10 +86,11 @@ protected static void OnColumnChanged(
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Data.DataRow>  
- <xref:System.Data.DataTable>  
- <xref:System.Data.DataRowVersion>  
- [DataTable 内のデータの操作](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
- [DataTable イベントの処理](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Data.DataRow>
+- <xref:System.Data.DataTable>
+- <xref:System.Data.DataRowVersion>
+- [DataTable 内のデータの操作](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [DataTable イベントの処理](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

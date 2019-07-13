@@ -8,12 +8,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], interfaces
 ms.assetid: a016bd18-6710-4358-9438-9f190a295392
 author: KrzysztofCwalina
-ms.openlocfilehash: a017b34ab410824e3ddac4365e5711840fb50031
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 1f982aa37f92b7270725574d949989ca120297d5
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026368"
 ---
 # <a name="interface-design"></a>インターフェイスのデザイン
 ほとんどの Api は、クラスと構造体を使用して最適なモデル化、インターフェイスがより適切なまたは唯一のオプションの場合は。  
@@ -50,5 +50,5 @@ ms.locfileid: "53148731"
   
 ## <a name="see-also"></a>関連項目
 
-- [型デザインのガイドライン](../../../docs/standard/design-guidelines/type.md)  
+- [型デザインのガイドライン](../../../docs/standard/design-guidelines/type.md)
 - [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)

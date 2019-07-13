@@ -7,25 +7,25 @@ helpviewer_keywords:
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 41a37fa34b9d75eb8cfc1bdcb55b237faf137cad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50ecb2aad84bd5b6c32f655b1dbbd34cf03a5b29
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396108"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624289"
 ---
 # <a name="thread-pool-etw-events"></a>スレッド プール ETW イベント
 <a name="top"></a> これらのイベントは、ワーカー スレッドと I/O スレッドに関する情報を収集します。  
   
  スレッド プール イベントには 2 つのグループがあります。  
   
--   [ワーカー スレッド プール イベント](#worker)は、アプリケーションがどのようにスレッド プールを使用するかに関する情報と、同時実行制御におけるワークロードの効果に関する情報を提供します。  
+- [ワーカー スレッド プール イベント](#worker)は、アプリケーションがどのようにスレッド プールを使用するかに関する情報と、コンカレンシー制御におけるワークロードの効果に関する情報を提供します。  
   
--   [I/O スレッド プール イベント](#io)は、スレッド プールで作成、無効化、無効化解除、または終了した I/O スレッドに関する情報を提供します。  
+- [I/O スレッド プール イベント](#io)は、スレッド プールで作成、無効化、無効化解除、または終了した I/O スレッドに関する情報を提供します。  
   
 <a name="worker"></a>   
 ## <a name="worker-thread-pool-events"></a>ワーカー スレッド プール イベント  
- これらのイベントは、ランタイムのワーカー スレッドのプールに関連付けられており、スレッド イベントに関する通知 (スレッドが作成されたり停止されたりした場合など) を提供します。 ワーカー スレッド プールは、スレッドの数が計測されたスループットに基づいて計算されるアダプティブ アルゴリズムを使用して、同時実行制御を実行します。 ワーカー スレッド プール イベントを使用すると、アプリケーションで使用されるスレッド プールの様子や特定のワークロードが同時実行制御に与える影響などを理解することができます。  
+ これらのイベントは、ランタイムのワーカー スレッドのプールに関連付けられており、スレッド イベントに関する通知 (スレッドが作成されたり停止されたりした場合など) を提供します。 ワーカー スレッド プールは、スレッドの数が計測されたスループットに基づいて計算されるアダプティブ アルゴリズムを使用して、コンカレンシー制御を実行します。 ワーカー スレッド プール イベントを使用すると、アプリケーションで使用されるスレッド プールの様子や特定のワークロードがコンカレンシー制御に与える影響などを理解することができます。  
   
 ### <a name="threadpoolworkerthreadstart-and-threadpoolworkerthreadstop"></a>ThreadPoolWorkerThreadStart および ThreadPoolWorkerThreadStop  
  次の表に、これらのイベントのキーワードとレベルを示します。 (詳細については、「 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)」を参照してください)。  
@@ -52,7 +52,7 @@ ms.locfileid: "33396108"
 |ClrInstanceID|Win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
 ### <a name="threadpoolworkerthreadadjustment"></a>ThreadPoolWorkerThreadAdjustment  
- これらのスレッド プール イベントは、スレッドの挿入 (同時実行制御) アルゴリズムの動作を理解したりデバッグしたりするための情報を提供します。 この情報は、ワーカー スレッド プールによって内部で使用されます。  
+ これらのスレッド プール イベントは、スレッドの挿入 (コンカレンシー制御) アルゴリズムの動作を理解したりデバッグしたりするための情報を提供します。 この情報は、ワーカー スレッド プールによって内部で使用されます。  
   
 #### <a name="threadpoolworkerthreadadjustmentsample"></a>ThreadPoolWorkerThreadAdjustmentSample  
  次の表に、キーワードとレベルを示します。  
@@ -65,7 +65,7 @@ ms.locfileid: "33396108"
   
 |イベント|イベント ID|説明|  
 |-----------|--------------|-----------------|  
-|`ThreadPoolWorkerThreadAdjustmentSample`|54|1 つのサンプルの情報のコレクションを参照します。つまり、特定の同時実行レベルの特定の時刻におけるスループットの測定値です。|  
+|`ThreadPoolWorkerThreadAdjustmentSample`|54|1 つのサンプルの情報のコレクションを参照します。つまり、特定のコンカレンシー レベルの特定の時刻におけるスループットの測定値です。|  
   
  次の表に、イベント データを示します。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "33396108"
   
 |イベント|イベント ID|説明|  
 |-----------|--------------|-----------------|  
-|`ThreadPoolWorkerThreadAdjustmentAdjustment`|55|スレッドの挿入 (山登り法) アルゴリズムが、同時実行レベルに変更があったと判断した場合に、コントロールの変更を記録します。|  
+|`ThreadPoolWorkerThreadAdjustmentAdjustment`|55|スレッドの挿入 (山登り法) アルゴリズムが、コンカレンシー レベルに変更があったと判断した場合に、コントロールの変更を記録します。|  
   
  次の表に、イベント データを示します。  
   
@@ -215,5 +215,6 @@ ms.locfileid: "33396108"
 |NumRetired|win:UInt64|提供終了になった I/O スレッドの数。|  
 |ClrInstanceID|Win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
-## <a name="see-also"></a>関連項目  
- [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>関連項目
+
+- [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)

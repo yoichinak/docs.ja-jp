@@ -1,5 +1,5 @@
 ---
-title: '&lt;プロキシ&gt;要素 (ネットワーク設定)'
+title: <proxy> 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/proxy
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-ms.openlocfilehash: 3a6d5b080c74fbd3f6ebca9882c1667951cfcb91
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8df9bbf2615776c2e023f03401785da95b2226eb
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674500"
 ---
-# <a name="ltproxygt-element-network-settings"></a>&lt;プロキシ&gt;要素 (ネットワーク設定)
+# <a name="proxy-element-network-settings"></a>\<proxy> 要素 (ネットワーク設定)
 プロキシ サーバーを定義します。  
   
  \<configuration>  
 \<system.net>  
-\<defaultProxy >  
-\<プロキシ >  
+\<defaultProxy>  
+\<proxy>  
   
 ## <a name="syntax"></a>構文  
   
@@ -90,6 +90,7 @@ ms.locfileid: "50183674"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

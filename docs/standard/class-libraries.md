@@ -6,22 +6,22 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: 8026ac821dfeed03127c894a5768a4c91b13beb3
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: c918883d8620513749826680f9f1b6d89ae87585
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207174"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664602"
 ---
 # <a name="net-class-libraries"></a>.NET クラス ライブラリ
 
-クラス ライブラリは、.NET の[共有ライブラリ](https://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries)の概念です。 クラス ライブラリを使用すると、役に立つ機能をモジュールとしてコンポーネント化して、複数のアプリケーションで使用することができます。 また、アプリケーションの起動時には不要または認識されない機能を読み込むための手段としても使用できます。 クラス ライブラリは、[.NET アセンブリ ファイルの形式](assembly-format.md)を使用して記述されます。
+クラス ライブラリは、.NET の[共有ライブラリ](https://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries)の概念です。 クラス ライブラリを使用すると、役に立つ機能をモジュールとしてコンポーネント化して、複数のアプリケーションで使用することができます。 また、アプリケーションの起動時には不要または認識されない機能を読み込むための手段としても使用できます。 クラス ライブラリは、[.NET アセンブリ ファイルの形式](assembly/file-format.md)を使用して記述されます。
 
 次の 3 種類のクラス ライブラリを使用できます。
 
-*   **プラットフォーム固有** クラス ライブラリは、特定のプラットフォーム (たとえば、.NET Framework、Xamarin iOS) のすべての API にアクセスできますが、そのプラットフォームを対象とするアプリケーションとライブラリでのみ使用できます。
-*   **ポータブル** クラス ライブラリは、API のサブセットへのアクセスがあり、複数のプラットフォームを対象とするアプリケーションとライブラリで使用できます。
-*   **.NET Standard** クラス ライブラリは、プラットフォーム固有のライブラリとポータブル ライブラリの概念を両方の長所を持つ 1 つのモデルに統合しています。
+* **プラットフォーム固有** クラス ライブラリは、特定のプラットフォーム (たとえば、.NET Framework、Xamarin iOS) のすべての API にアクセスできますが、そのプラットフォームを対象とするアプリケーションとライブラリでのみ使用できます。
+* **ポータブル** クラス ライブラリは、API のサブセットへのアクセスがあり、複数のプラットフォームを対象とするアプリケーションとライブラリで使用できます。
+* **.NET Standard** クラス ライブラリは、プラットフォーム固有のライブラリとポータブル ライブラリの概念を両方の長所を持つ 1 つのモデルに統合しています。
 
 ## <a name="platform-specific-class-libraries"></a>プラットフォーム固有のクラス ライブラリ
 

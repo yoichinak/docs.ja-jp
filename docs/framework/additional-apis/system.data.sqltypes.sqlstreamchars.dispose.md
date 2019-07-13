@@ -1,22 +1,23 @@
 ---
 title: SqlStreamChars.Dispose(Boolean) メソッド (System.Data.SqlTypes)
-author: douglaslMS
-ms.author: douglasl
+author: stevestein
+ms.author: sstein
 ms.date: 12/20/2018
-ms.technology:
-- dotnet-data
+ms.technology: dotnet-data
+topic_type:
+- apiref
 api_name:
 - System.Data.SqlTypes.SqlStreamChars.Dispose
 api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 3f2180d9a1893e651f174fff6d0f073df651e712
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 2cad6015c1c4d72300d8413b7accead12f79a0be
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152565"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634311"
 ---
 # <a name="sqlstreamcharsdisposeboolean-method"></a>SqlStreamChars.Dispose(Boolean) メソッド
 
@@ -29,7 +30,7 @@ protected virtual void Dispose (bool disposing);
 ## <a name="parameters"></a>パラメーター
 
 `disposing`\
-マネージ リソースとアンマネージ リソースの両方を解放する場合は `true`。アンマネージ リソースだけを解放する場合は `false`。
+マネージド リソースとアンマネージド リソースの両方を解放する場合は `true`。アンマネージド リソースだけを解放する場合は `false`。
 
 ## <a name="remarks"></a>Remarks
 

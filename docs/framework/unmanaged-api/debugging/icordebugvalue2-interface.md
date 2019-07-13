@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a2462d1de9f1b5f94f2581c1a06ca2987712fd7b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6718bbfdb1825b9f01698d76deec3fab16cb2ac6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993683"
 ---
 # <a name="icordebugvalue2-interface"></a>ICorDebugValue2 インターフェイス
 "ICorDebugType"オブジェクトのサポートを提供する"ICorDebugValue"インターフェイスを拡張します。  
@@ -30,23 +30,24 @@ ms.locfileid: "33421175"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetExactType メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md)|インターフェイス ポインターを取得、`ICorDebugType`を表すオブジェクト、<xref:System.Type>この値のです。|  
+|[GetExactType メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md)|インターフェイス ポインターを取得、`ICorDebugType`を表すオブジェクトを<xref:System.Type>のこの値。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
 >  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
-    
- [ICorDebugValue3 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [ICorDebugValue3 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)

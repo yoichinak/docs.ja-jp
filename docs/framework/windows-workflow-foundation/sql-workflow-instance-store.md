@@ -2,12 +2,12 @@
 title: SQL Workflow Instance Store
 ms.date: 03/30/2017
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
-ms.openlocfilehash: d35cf6e94b010291276b5a543df1038715a0d50c
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 7cdd852795283660b8077e14686ad7ce4af76673
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453019"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626205"
 ---
 # <a name="sql-workflow-instance-store"></a>SQL Workflow Instance Store
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] には SQL Workflow Instance Store が含まれます。これを使用すると、ワークフロー インスタンスに関する状態情報を SQL Server 2005 または SQL Server 2008 のデータベースに永続化できます。 この機能は主に <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> クラスの形式で実装されます。このクラスは永続化フレームワークの <xref:System.Runtime.DurableInstancing.InstanceStore> 抽象クラスから派生します。 SQL Workflow Instance Store 機能によって SQL 永続性プロバイダーを構成します。このプロバイダーは、ホストが永続化コマンドをストアに送信するときに使用する永続化 API の具象実装です。  
@@ -22,19 +22,20 @@ ms.locfileid: "49453019"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [SQL Workflow Instance Store のプロパティ](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md)  
+- [SQL Workflow Instance Store のプロパティ](properties-of-sql-workflow-instance-store.md)  
   
--   [ワークフローとワークフロー サービスの SQL 永続性を有効にする方法](../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
+- [方法: SQL 永続性ワークフローとワークフロー サービスを有効にします。](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
   
--   [インスタンスのアクティブ化処理](../../../docs/framework/windows-workflow-foundation/instance-activation.md)  
+- [インスタンスのアクティブ化処理](instance-activation.md)  
   
--   [クエリのサポート](../../../docs/framework/windows-workflow-foundation/support-for-queries.md)  
+- [クエリのサポート](support-for-queries.md)  
   
--   [ストア拡張](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)  
+- [ストア拡張](store-extensibility.md)  
   
--   [セキュリティ](../../../docs/framework/windows-workflow-foundation/security.md)  
+- [セキュリティ](security.md)  
   
--   [SQL Server 永続性データベース](../../../docs/framework/windows-workflow-foundation/sql-server-persistence-database.md)  
+- [SQL Server 永続性データベース](sql-server-persistence-database.md)  
   
-## <a name="see-also"></a>関連項目  
- [永続化のサンプル](https://go.microsoft.com/fwlink/?LinkID=177735)
+## <a name="see-also"></a>関連項目
+
+- [永続化のサンプル](https://go.microsoft.com/fwlink/?LinkID=177735)

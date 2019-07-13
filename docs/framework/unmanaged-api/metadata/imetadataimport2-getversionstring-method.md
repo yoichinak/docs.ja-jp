@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 112ddcf51a5637bb89df9479850c2a4a70d2e1d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d500584afd608f79e41e932be259d29ae51db2db
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448727"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781580"
 ---
 # <a name="imetadataimport2getversionstring-method"></a>IMetaDataImport2::GetVersionString メソッド
-アセンブリをビルドするために使用されたランタイムのバージョン番号を取得します。  
+アセンブリのビルドに使用されたランタイムのバージョン番号を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetVersionString (  
    [out] LPWSTR      pwzBuf,  
    [in]  DWORD       ccBufSize,  
@@ -37,7 +37,7 @@ HRESULT GetVersionString (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pwzBuf`  
  [out]バージョンを指定する文字列を格納する配列。  
   
@@ -45,20 +45,21 @@ HRESULT GetVersionString (
  [in]ワイド文字単位のサイズの`pwzBuf`配列。  
   
  `pccBufSize`  
- [out]Null 終端文字を含む、ワイド文字の数が返される、`pwzBuf`配列。  
+ [out]返される、null 終端文字を含め、ワイド文字の数、`pwzBuf`配列。  
   
-## <a name="remarks"></a>コメント  
- `GetVersionString`メソッドは、現在のメタデータ スコープのビルドのバージョンを取得します。 スコープが保存されていない場合ビルドのバージョンはありませんし、空の文字列が返されます。  
+## <a name="remarks"></a>Remarks  
+ `GetVersionString`メソッドは、現在のメタデータ スコープのビルドのバージョンを取得します。 スコープが保存されていないこと、ビルドのバージョンはありませんし、空の文字列が返されます。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
  **ライブラリ:** MsCorEE.dll にリソースとして使用  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

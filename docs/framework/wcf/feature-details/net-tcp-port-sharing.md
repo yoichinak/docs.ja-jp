@@ -5,14 +5,15 @@ helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-ms.openlocfilehash: 37c3d7580b48552b841823933958267cea815fab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d7f28c692c7eb3527a851c6456473afc20a9aeb
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402463"
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP ポート共有
-Windows Communication Foundation (WCF) は、高パフォーマンス通信用の新しい TCP ベースのネットワーク プロトコル (net.tcp://) を提供します。 WCF には、Net.TCP ポート共有サービスを複数のユーザー プロセスの間で共有する net.tcp ポートを有効にする、新しいシステム コンポーネントも導入されています。  
+Windows Communication Foundation (WCF) は、高パフォーマンス通信用の新しい TCP ベースのネットワーク プロトコル (net.tcp://) を提供します。 WCF には、新しいシステム コンポーネントでは、Net.TCP ポート共有サービスを複数のユーザー プロセスで共有できる net.tcp ポートをも導入されています。  
   
 ## <a name="background-and-motivation"></a>背景と動機  
  TCP/IP プロトコルの導入当初は、それを使用するアプリケーション プロトコルは少ししかありませんでした。 TCP/IP では、ポート番号を使用して一意の 16 ビットのポート番号を各アプリケーション プロトコルに割り当てることでアプリケーションが区別されました。 たとえば、現在 HTTP トラフィックは TCP ポート 80、SMTP は TCP ポート 25、FTP は TCP ポート 20 と 21 を使用するように標準化されています。 他のアプリケーションで TCP をトランスポートとして使用する場合は、規則により、または正式な標準化を通じて別の利用可能なポート番号を選択できます。  
@@ -21,34 +22,35 @@ Windows Communication Foundation (WCF) は、高パフォーマンス通信用�
   
  多くの異なる HTTP アプリケーションのトラフィックを 1 つの TCP ポートに多重化する HTTP.SYS モデルが、Windows プラットフォームで標準になってきました。 このモデルを使用すると、ファイアウォール管理者は共通の制御点を使用できるようになり、また、アプリケーション開発者はネットワークを利用できる新しいアプリケーションを構築する際に、展開コストを最小限にできます。  
   
- インターネット インフォメーション サービス (IIS) には、HTTP アプリケーション間でポートを共有する機能が以前からあります。 しかし、このインフラストラクチャが完全に一般化されたのは、[!INCLUDE[iis601](../../../../includes/iis601-md.md)] での HTTP.SYS (カーネル モードの HTTP プロトコル リスナー) の導入以降のことでした。 実際には、HTTP.SYS が、任意のユーザー プロセスで HTTP トラフィック専用の TCP ポートを共有することを許可します。 この機能により、多数の HTTP アプリケーションが同一の物理コンピューター上にそれぞれ別の独立したプロセスとして共存しながら、TCP ポート 80 でのトラフィックの送受信に必要なネットワーク インフラストラクチャを共有することができます。 Net.TCP ポート共有サービスは、net.tcp アプリケーションで同じ種類のポート共有を可能にします。  
+ インターネット インフォメーション サービス (IIS) には、HTTP アプリケーション間でポートを共有する機能が以前からあります。 ただし、HTTP の導入に伴いのみでした。IIS 6.0 ではこのインフラストラクチャが完全に一般化する SYS (カーネル モードの HTTP プロトコル リスナー) にします。 実際には、HTTP.SYS が、任意のユーザー プロセスで HTTP トラフィック専用の TCP ポートを共有することを許可します。 この機能により、多数の HTTP アプリケーションが同一の物理コンピューター上にそれぞれ別の独立したプロセスとして共存しながら、TCP ポート 80 でのトラフィックの送受信に必要なネットワーク インフラストラクチャを共有することができます。 Net.TCP ポート共有サービスは、net.tcp アプリケーションで同じ種類のポート共有を可能にします。  
   
 ## <a name="port-sharing-architecture"></a>ポート共有アーキテクチャ  
  WCF でポート共有アーキテクチャには、次の 3 つの主要なコンポーネントがあります。  
   
--   ワーカー プロセス : 共有ポートを使用して net.tcp:// で通信するすべてのプロセスです。  
+- ワーカー プロセス:共有ポートを使用して net.tcp:// で通信するプロセス。  
   
--   WCF TCP トランスポート: net.tcp:// protocol を実装します。  
+- WCF TCP トランスポート:Net.tcp:// protocol を実装します。  
   
--   Net.TCP ポート共有サービス : 多数のワーカー プロセスで 1 つの TCP ポートを共有できます。  
+- Net.TCP ポート共有サービス:同じ TCP ポートを共有する多くのワーカー プロセスを使用します。  
   
  Net.TCP ポート共有サービスは、net.tcp:// を通じて通信されるワーカー プロセスの代わりに net.tcp:// 接続を受け入れるユーザー モードの Windows サービスです。 ソケット接続が到着すると、ポート共有サービスは受信メッセージ ストリームを検査して送信先アドレスを取得します。 このアドレスを基にポート共有サービスは、最終的に処理されるアプリケーションにデータ ストリームをルーティングできます。  
   
- Net.tcp:// ポート共有を使用する WCF サービスが、WCF TCP トランスポート インフラストラクチャは直接開きません TCP ソケット アプリケーション プロセスにします。 その代わりにトランスポート インフラストラクチャは、サービスのベース アドレス URI (Uniform Resource Identifier) を Net.TCP ポート共有サービスに登録し、ポート共有サービスがトランスポート インフラストラクチャの代わりにメッセージをリッスンするまで待機します。  アプリケーション サービス宛てのメッセージが到着すると、そのメッセージはポート共有サービスによりディスパッチされます。  
+ Net.tcp:// ポート共有を使用する WCF サービスが、WCF TCP トランスポート インフラストラクチャは直接開きません TCP ソケット アプリケーション プロセスで。 その代わりにトランスポート インフラストラクチャは、サービスのベース アドレス URI (Uniform Resource Identifier) を Net.TCP ポート共有サービスに登録し、ポート共有サービスがトランスポート インフラストラクチャの代わりにメッセージをリッスンするまで待機します。  アプリケーション サービス宛てのメッセージが到着すると、そのメッセージはポート共有サービスによりディスパッチされます。  
   
 ## <a name="installing-port-sharing"></a>ポート共有のインストール  
- Net.TCP ポート共有サービスは、[!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] をサポートするすべてのオペレーティング システムで利用できますが、サービスは既定では有効にされていません。 セキュリティ予防措置として、管理者は Net.TCP ポート共有サービスを初めて使用する前に手動で有効にする必要があります。 Net.TCP ポート共有サービスでは、ポート共有サービスが所有するネットワーク ソケットのいくつかの特性を操作するための構成オプションが公開されます。 詳細については、次を参照してください。[する方法: Net.TCP ポート共有サービスを有効にする](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)です。  
+ Net.TCP ポート共有サービスは、WinFX をサポートするすべてのオペレーティング システムで使用できますが、既定では、サービスが有効になっていません。 セキュリティ予防措置として、管理者は Net.TCP ポート共有サービスを初めて使用する前に手動で有効にする必要があります。 Net.TCP ポート共有サービスでは、ポート共有サービスが所有するネットワーク ソケットのいくつかの特性を操作するための構成オプションが公開されます。 詳細については、「[方法 :Net.TCP ポート共有サービスを有効にする](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)します。  
   
 ## <a name="using-nettcp-port-sharing-in-an-application"></a>アプリケーションでの Net.tcp ポート共有の使用  
- WCF アプリケーションで net.tcp:// ポート共有を使用する最も簡単な方法を使用してサービスを公開する、<xref:System.ServiceModel.NetTcpBinding>を使用して Net.TCP ポート共有サービスを有効にし、<xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A>プロパティです。  
+ WCF アプリケーションで net.tcp:// ポート共有を使用する最も簡単な方法を使用してサービスを公開する、<xref:System.ServiceModel.NetTcpBinding>を使用して Net.TCP ポート共有サービスを有効にし、<xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A>プロパティ。  
   
- これを行う方法の詳細については、次を参照してください。[する方法: ポートの共有を使用する WCF サービスを構成する](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)です。  
+ この方法の詳細については、「[方法 : ポート共有を使用する WCF サービスを構成する](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)します。  
   
 ## <a name="security-implications-of-port-sharing"></a>ポート共有のセキュリティへの影響  
  Net.TCP ポート共有サービスは、アプリケーションとネットワークの間に、処理を行うための 1 つの層を提供しますが、アプリケーションでポート共有を使用する場合、アプリケーションがネットワークを直接リッスンしている場合と同様に、アプリケーションをセキュリティで保護する必要があります。 具体的には、ポート共有を使用するアプリケーションでは、そのアプリケーションが実行される際のプロセス特権を評価する必要があります。 組み込みの Network Service アカウントを使用してアプリケーションを実行することを検討します。このアカウントはネットワーク通信に必要な最小限のプロセス特権のセットを使用して実行されます。  
   
-## <a name="see-also"></a>関連項目  
- [Net.TCP ポート共有サービスを構成する](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)  
- [ホスティング](../../../../docs/framework/wcf/feature-details/hosting.md)  
- [方法 : ポート共有を使用するように WCF サービスを構成する](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)  
- [方法 : Net.TCP ポート共有サービスを有効にする](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)
+## <a name="see-also"></a>関連項目
+
+- [Net.TCP ポート共有サービスを構成する](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)
+- [ホスティング](../../../../docs/framework/wcf/feature-details/hosting.md)
+- [方法: ポート共有を使用する WCF サービスを構成します。](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)
+- [方法: Net.TCP ポート共有サービスを有効にします。](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)

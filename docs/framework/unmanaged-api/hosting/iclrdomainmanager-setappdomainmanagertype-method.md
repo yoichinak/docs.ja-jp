@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: ee91abb0-cb74-41dd-927b-e117fb8ffdf4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea10f9b7d23d8ca6a94d05cac6e586b434c000d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 28feddffff7dc5dba1860b3d2d1327a17bd08190
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435544"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772952"
 ---
 # <a name="iclrdomainmanagersetappdomainmanagertype-method"></a>ICLRDomainManager::SetAppDomainManagerType メソッド
-派生する型を指定、<xref:System.AppDomainManager?displayProperty=nameWithType>の既定のアプリケーション ドメインを初期化するために使用されるアプリケーション ドメイン マネージャーのクラスです。  
+派生した、型を指定します、<xref:System.AppDomainManager?displayProperty=nameWithType>の既定のアプリケーション ドメインを初期化するために使用されるアプリケーション ドメイン マネージャーのクラス。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetAppDomainManagerType(  
     [in] LPCWSTR wszAppDomainManagerAssembly,  
     [in] LPCWSTR wszAppDomainManagerType,  
@@ -35,9 +35,9 @@ HRESULT SetAppDomainManagerType(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `wszAppDomainManagerAssembly`  
- [in]アプリケーション ドメイン マネージャーの種類; を含むアセンブリの表示名例:"AdMgrExample、バージョン 1.0.0.0、Culture = neutral, PublicKeyToken = 6856bccf150f00b3 を ="。  
+ [in]アプリケーション ドメイン マネージャーの種類; を含むアセンブリの表示名例えば："AdMgrExample、バージョン 1.0.0.0、Culture = neutral, PublicKeyToken = = 6856bccf150f00b3"。  
   
  `wszAppDomainManagerType`  
  [in]名前空間を含む、アプリケーション ドメイン マネージャーの型名。  
@@ -51,26 +51,27 @@ HRESULT SetAppDomainManagerType(
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
-|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) が、プロセスに読み込まれていませんまたは CLR は、状態をマネージ コードを実行またはできないの呼び出しは正常に処理します。|  
+|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) は、プロセスに読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。|  
   
-## <a name="remarks"></a>コメント  
- 現在、のみ定義されている値を`dwInitializeDomainFlags`は`eInitializeNewDomainFlags_NoSecurityChanges`、これによりは、共通言語ランタイム (CLR) の実行中のセキュリティ設定をアプリケーション ドメイン マネージャーが変更はこと、<xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType>メソッドです。 これにより、条件付きのアセンブリの読み込みを最適化するために CLR <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) 属性です。 このアセンブリのセットの推移的閉包が大きい場合は、起動時間が大幅に向上をこれがあります。  
+## <a name="remarks"></a>Remarks  
+ 現時点では、のみ定義されている値の`dwInitializeDomainFlags`は`eInitializeNewDomainFlags_NoSecurityChanges`、共通言語ランタイム (CLR) を指示すると、アプリケーション ドメイン マネージャーが実行中のセキュリティ設定を変更しないこと、<xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType>メソッド。 これにより、条件付きのアセンブリの読み込みを最適化するために CLR <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) 属性。 これは、結果、この一連のアセンブリの推移閉包が大きい場合に、起動時間が大幅に向上。  
   
 > [!IMPORTANT]
->  ホストを指定する場合`eInitializeNewDomainFlags_NoSecurityChanges`アプリケーション ドメイン マネージャー、<xref:System.InvalidOperationException>が、アプリケーション ドメインのセキュリティを変更するあらゆる試みが行われた場合にスローされます。  
+>  ホストが指定されている場合`eInitializeNewDomainFlags_NoSecurityChanges`のアプリケーション ドメイン マネージャーに、<xref:System.InvalidOperationException>が、アプリケーション ドメインのセキュリティを変更する試行が行われた場合にスローされます。  
   
- 呼び出す、 [iclrcontrol::setappdomainmanagertype](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)はメソッドを呼び出すことと同じ`ICLRDomainManager::SetAppDomainManagerType`で`eInitializeNewDomainFlags_None`です。  
+ 呼び出す、 [iclrcontrol::setappdomainmanagertype](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)メソッドを呼び出すことは`ICLRDomainManager::SetAppDomainManagerType`で`eInitializeNewDomainFlags_None`します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MetaHost.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ホスティング](../../../../docs/framework/unmanaged-api/hosting/index.md)  
- [ICLRDomainManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-interface.md)  
- [EInitializeNewDomainFlags 列挙型](../../../../docs/framework/unmanaged-api/hosting/einitializenewdomainflags-enumeration.md)
+## <a name="see-also"></a>関連項目
+
+- [ホスティング](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRDomainManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-interface.md)
+- [EInitializeNewDomainFlags 列挙型](../../../../docs/framework/unmanaged-api/hosting/einitializenewdomainflags-enumeration.md)

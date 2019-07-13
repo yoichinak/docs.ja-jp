@@ -1,17 +1,17 @@
 ---
-title: '&lt;Method&gt; 要素 (.NET ネイティブ)'
+title: <Method> 要素 (.NET ネイティブ)
 ms.date: 03/30/2017
 ms.assetid: 348b49e5-589d-4eb2-a597-d6ff60ab52d1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e32b9a294f81208fe85a9e1de011daef0d1d5294
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9fdc4441a8a11df5427badfaea95edb0abe52bde
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61867113"
 ---
-# <a name="ltmethodgt-element-net-native"></a>&lt;Method&gt; 要素 (.NET ネイティブ)
+# <a name="method-element-net-native"></a>\<メソッド > 要素 (.NET ネイティブ)
 コンストラクターまたはメソッドにランタイム リフレクション ポリシーを適用します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,19 +37,19 @@ ms.locfileid: "33393339"
   
 ## <a name="name-attribute"></a>Name 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |*method_name*|メソッド名。 メソッドの型は、親の [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 要素または [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 要素により定義されます。|  
   
 ## <a name="signature-attribute"></a>シグネチャ属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |*method_signature*|メソッド シグネチャを形成するパラメーター型です。 複数のパラメーターは、`"System.String,System.Int32,System.Int32)"` のようにコンマで区切ります。 パラメーターの型名は完全修飾されている必要があります。|  
   
 ## <a name="all-other-attributes"></a>その他すべての属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |*policy_setting*|このポリシーの種類に適用する設定です。 指定できる値は、`Auto`、`Excluded`、`Included`、および `Required` です。 詳細については、「[ランタイム ディレクティブのポリシー設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)」を参照してください。|  
   
@@ -69,7 +69,7 @@ ms.locfileid: "33393339"
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|構築されたジェネリック型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  ジェネリック メソッドの `<Method>` 要素は、独自のポリシーを持たないインスタンス化すべてにそのポリシーを適用します。  
   
  `Signature` 属性を使用して、特定のメソッド オーバーロードのポリシーを指定できます。 そうしない場合、`Signature` 属性が存在しないと、メソッドのすべてのオーバーロードにランタイム ディレクティブが適用されます。  
@@ -145,8 +145,9 @@ ms.locfileid: "33393339"
 </Directives>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [ランタイム ディレクティブ ポリシーの設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
- [\<MethodInstantiation> 要素](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)
+## <a name="see-also"></a>関連項目
+
+- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [ランタイム ディレクティブ ポリシーの設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [\<MethodInstantiation> 要素](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)

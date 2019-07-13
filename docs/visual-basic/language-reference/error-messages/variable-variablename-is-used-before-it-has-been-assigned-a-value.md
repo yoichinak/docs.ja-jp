@@ -1,5 +1,5 @@
 ---
-title: 変数&#39; &lt;variablename&gt; &#39;は、値が割り当てられる前に使用
+title: 変数 '<variablename>' は、値が割り当てられる前に参照によって使用されています。
 ms.date: 07/20/2015
 f1_keywords:
 - vbc42104
@@ -7,31 +7,32 @@ f1_keywords:
 helpviewer_keywords:
 - BC42104
 ms.assetid: 6909aa0b-b4a1-46f5-a18c-ba3e565c1dd8
-ms.openlocfilehash: d314f952bd6e11adaac642ba63ed292f48cda805
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a2ba752b95933d146da090a58c416015db75e106
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33596920"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662673"
 ---
-# <a name="variable-39ltvariablenamegt39-is-used-before-it-has-been-assigned-a-value"></a>変数&#39; &lt;variablename&gt; &#39;は、値が割り当てられる前に使用
+# <a name="variable-variablename-is-used-before-it-has-been-assigned-a-value"></a>変数 '\<variablename >' は、値が割り当てられる前に使用
 変数 '\<variablename >' は、値が割り当てられる前に使用します。 結果として、実行時に null 参照の例外が発生する可能性があります。  
   
- アプリケーションが任意の値を割り当てる前に、変数を読み取るをコードに少なくとも 1 つの可能なパスがあります。  
+ アプリケーションでは、少なくとも 1 つのパスをそのコードを任意の値が割り当てられる前に変数を読み込むことがあります。  
   
- 変数に値が割り当てられていない場合、変数はそのデータ型の既定値を保持します。 参照データ型では、その既定値は[Nothing](../../../visual-basic/language-reference/nothing.md)です。 値が `Nothing` である参照変数を読み取ると、状況によって <xref:System.NullReferenceException> が発生する可能性があります。  
+ 変数に値が割り当てられていない場合、変数はそのデータ型の既定値を保持します。 参照データ型の場合、その既定値は [Nothing](../../../visual-basic/language-reference/nothing.md)です。 値が `Nothing` である参照変数を読み取ると、状況によって <xref:System.NullReferenceException> が発生する可能性があります。  
   
- 既定では、このメッセージは警告です。 警告を非表示や、警告をエラーとして扱う方法の詳細については、次を参照してください。 [Visual Basic での警告の構成](/visualstudio/ide/configuring-warnings-in-visual-basic)です。  
+ 既定では、このメッセージは警告です。 警告を非表示にする方法や、警告をエラーとして扱う方法の詳細については、「 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)」を参照してください。  
   
- **エラー ID:** bc42104 を生成します  
+ **エラー ID:** BC42104  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   制御フローのロジックを確認し、によって読み取られる任意のステートメントに制御が渡される前に、変数が有効な値を持つかどうかを確認します。  
+- 制御フローのロジックを確認し、によって読み取られる任意のステートメントに制御が渡される前に、変数が有効な値を持つかどうかを確認します。  
   
--   変数が常に有効な値を持つことを保証するために 1 つの方法では、その宣言の一部として初期化します。 「初期化」を参照してください[Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)です。  
+- 変数が常に有効な値を持つことを保証するために 1 つの方法では、その宣言の一部として初期化します。 「初期化」を参照してください[Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)  
- [変数宣言](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [変数のトラブルシューティング](../../../visual-basic/programming-guide/language-features/variables/troubleshooting-variables.md)
+## <a name="see-also"></a>関連項目
+
+- [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [変数宣言](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [変数のトラブルシューティング](../../../visual-basic/programming-guide/language-features/variables/troubleshooting-variables.md)

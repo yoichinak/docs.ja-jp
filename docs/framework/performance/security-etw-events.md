@@ -7,21 +7,21 @@ helpviewer_keywords:
 ms.assetid: 0ed69f73-5c01-4514-bd63-979c6e38d41d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e02274b63ddf7df42d26621791de0286df9655b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f2ea19c88ff8b854b09ed372b35bf8c45d994585
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395513"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583656"
 ---
 # <a name="security-etw-events"></a>セキュリティ ETW イベント
 <a name="top"></a> セキュリティ イベントは、厳密な名前の検証時と Authenticode の検証時に発生します。  
   
  このカテゴリは、次のイベントで構成されます。  
   
--   [StrongNameVerificationStart_V1 イベントと StrongNameVerificationStop_V1 イベント](#strongnameverificationstart_v1_and_strongnameverificationstop_v1_events)  
+- [StrongNameVerificationStart_V1 イベントと StrongNameVerificationStop_V1 イベント](#strongnameverificationstart_v1_and_strongnameverificationstop_v1_events)  
   
--   [AuthenticodeVerificationStart_V1 イベントと AuthenticodeVerificationStop_V1 イベント](#authenticodeverificationstart_v1_and_authenticodeverificationstop_v1_events)  
+- [AuthenticodeVerificationStart_V1 イベントと AuthenticodeVerificationStop_V1 イベント](#authenticodeverificationstart_v1_and_authenticodeverificationstop_v1_events)  
   
 <a name="strongnameverificationstart_v1_and_strongnameverificationstop_v1_events"></a>   
 ## <a name="strongnameverificationstartv1-and-strongnameverificationstopv1-events"></a>StrongNameVerificationStart_V1 イベントと StrongNameVerificationStop_V1 イベント  
@@ -73,5 +73,6 @@ ms.locfileid: "33395513"
 |ModulePath|win:UnicodeString|モジュール パス|  
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
-## <a name="see-also"></a>関連項目  
- [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>関連項目
+
+- [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)

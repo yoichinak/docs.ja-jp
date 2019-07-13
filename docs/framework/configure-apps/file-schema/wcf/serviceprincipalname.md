@@ -1,21 +1,21 @@
 ---
-title: '&lt;サービス プリンシパル名&gt;'
+title: <servicePrincipalName>
 ms.date: 03/30/2017
 ms.assetid: 3f3b85d3-20f2-4cd8-8a6a-ee18befbd165
-ms.openlocfilehash: a22a905744980d0b370023e6236734a9bb0d6357
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 75e95bcbaee229f19bdfdd119b548ed612f4ddaa
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758185"
 ---
-# <a name="ltserviceprincipalnamegt"></a>&lt;サービス プリンシパル名&gt;
+# <a name="serviceprincipalname"></a>\<servicePrincipalName>
 サービスの ID をサービス プリンシパル名 (SPN) により指定します。  
   
  SPN を設定する方法についての詳細については、次を参照してください。[サービス Id と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)します。  
   
  \<identity>  
-\<サービス プリンシパル名 >  
+\<servicePrincipalName>  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,10 +44,11 @@ ms.locfileid: "54150644"
 ## <a name="remarks"></a>Remarks  
  この id を持つエンドポイントに接続するセキュリティで保護された Windows Communication Foundation (WCF) クライアントは、エンドポイントの SSPI 認証を実行するときに SPN を使用します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.IdentityElement>  
- <xref:System.ServiceModel.EndpointAddress>  
- <xref:System.ServiceModel.EndpointAddress.Identity%2A>  
- <xref:System.ServiceModel.SpnEndpointIdentity>  
- [サービス ID と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Configuration.IdentityElement>
+- <xref:System.ServiceModel.EndpointAddress>
+- <xref:System.ServiceModel.EndpointAddress.Identity%2A>
+- <xref:System.ServiceModel.SpnEndpointIdentity>
+- [サービス ID と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)

@@ -1,15 +1,13 @@
 ---
 title: Seedwork (ドメイン モデルの再利用可能な基底クラスとインターフェイス)
 description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | Seedwork 概念を開始点として使用し、DDD 指向ドメイン モデルの実装を開始する。'
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 3804ac13580a967bc95617acbce86a3a0c8e7292
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: 298f79383e477df0cfeeaada5c4657a9274b3df3
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058543"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639493"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (ドメイン モデルの再利用可能な基底クラスとインターフェイス)
 
@@ -25,7 +23,7 @@ ms.locfileid: "54058543"
 
 ## <a name="the-custom-entity-base-class"></a>カスタム Entity 基底クラス
 
-次のコードは、Entity 基底クラスの例です。このクラスでは、任意のドメイン エンティティ (エンティティ ID、[等値演算子](~/docs/csharp/language-reference/operators/equality-comparison-operator.md)、エンティティごとのドメイン イベント リストなど) が同様の方法で使用できるコードを配置できます。
+次のコードは、Entity 基底クラスの例です。このクラスでは、任意のドメイン エンティティ (エンティティ ID、[等値演算子](~/docs/csharp/language-reference/operators/equality-operators.md)、エンティティごとのドメイン イベント リストなど) が同様の方法で使用できるコードを配置できます。
 
 ```csharp
 // COMPATIBLE WITH ENTITY FRAMEWORK CORE (1.1 and later)
@@ -140,7 +138,7 @@ public interface IRepository<T> where T : IAggregateRoot
 ## <a name="additional-resources"></a>その他の技術情報
 
 - **Martin Fowler。インターフェイスの分離。** \
-  [*https://www.martinfowler.com/eaaCatalog/separatedInterface.html*](https://www.martinfowler.com/eaaCatalog/separatedInterface.html)
+  <https://www.martinfowler.com/eaaCatalog/separatedInterface.html>
 
 >[!div class="step-by-step"]
 >[前へ](net-core-microservice-domain-model.md)

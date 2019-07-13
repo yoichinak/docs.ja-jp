@@ -9,17 +9,17 @@ helpviewer_keywords:
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d73c299231a588a5ae0b252dd2b5a0a834685f2d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 62064286fecc4736f39ad790f0fd7f0e6d84b149
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754272"
 ---
 # <a name="jitcompilationstart-mda"></a>jitCompilationStart MDA
 `jitCompilationStart` マネージド デバッグ アシスタント (MDA: Managed Debugging Assistant) が起動すると、Just-In-Time (JIT) コンパイラが関数のコンパイルを開始した時刻が報告されます。  
   
-## <a name="symptoms"></a>現象  
+## <a name="symptoms"></a>症状  
  mscorjit.dll がプロセスに読み込まれるため、既にネイティブの画像形式になっているプログラムで、ワーキング セット サイズが増えます。  
   
 ## <a name="cause"></a>原因  
@@ -157,7 +157,8 @@ namespace ns2
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [相互運用マーシャリング](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [相互運用マーシャリング](../../../docs/framework/interop/interop-marshaling.md)

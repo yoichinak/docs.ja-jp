@@ -2,12 +2,12 @@
 title: IdentityModel 例外
 ms.date: 03/30/2017
 ms.assetid: 4ef34497-8ff5-4621-b773-7731cc721231
-ms.openlocfilehash: ee0b5537a415e1ea53c653ae8e8485e94cc713fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4b8af2620b6179ce4cff59d7f9871377f06ffe5f
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474871"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486669"
 ---
 # <a name="identitymodel-exceptions"></a>IdentityModel 例外
 ここでは、IdentityModel によって生成されるすべての例外を示します。  
@@ -42,7 +42,7 @@ ms.locfileid: "33474871"
 |TraceCodeSecuritySessionClosedFaultReceived|クライアントのセキュリティ セッションでサーバーからセッション終了済みのフォールトを受信しました。|  
 |TraceCodeIssuanceTokenProviderRedirectApplied|IssuanceTokenProvider によってリダイレクト ヘッダーが適用されました。|  
 |TraceCodeSecuritySessionClosedFaultSendFailure|セキュリティ セッション終了済みのフォールトをクライアントに送信中にエラーが発生しました。|  
-|ValueMustBeZero|この引数の値は、0 にする必要があります。|  
+|ValueMustBeZero|この引数の値は 0 である必要があります。|  
 |SAMLUnableToResolveSignatureKey|SamlAssertion 署名で見つかった SecurityKeyIdentifier を解決できません。 指定された発行者の SamlAssertion 署名を検証できません。|  
 |X509IsNotInTrustedStore|指定された X.509 証明書は信頼されたユーザーのストアにありません。|  
 |SAMLElementNotRecognized|指定された要素はサポートされていません。|  
@@ -83,12 +83,12 @@ ms.locfileid: "33474871"
 |SspiWrapperEncryptDecryptAssert1|Sspiwrapper::encryptdecrypthelper&#124;'offset' が範囲外です。|  
 |SspiWrapperEncryptDecryptAssert2|Sspiwrapper::encryptdecrypthelper&#124;'size' が範囲外です。 SecurityTokenManagerCannotCreateAuthenticatorForRequirement=セキュリティ トークン マネージャーは、指定された要件に対応するトークン認証システムを作成できません。|  
 |UnableToCreateKeyedHashAlgorithm|指定された署名アルゴリズムの指定された値から KeyedHashAlgorithm を作成できません。|  
-|SAMLUnableToLoadAssertion|\<Saml:assertion > 要素が読み込みに失敗しました。|  
+|SAMLUnableToLoadAssertion|\<Saml:assertion > 要素を読み込めませんでした。|  
 |X509FindValueMismatchMulti|指定された X509FindType では、引数 findValue の型が 2 つの値のいずれかである必要があります。 引数 findValue は別の型です。|  
 |TraceCodeSecurityIdentityDeterminationSuccess|EndpointAddress の ID が特定されました。|  
 |UndefinedUseOfPrefixAtElement|この要素で使用される指定されたプレフィックスに定義済みの名前空間がありません。|  
 |TraceCodeSecuritySessionResponderOperationFailure|サーバーでセキュリティ セッションの操作に失敗しました。|  
-|CannotFindCert|StoreName、StoreLocation、FindType、FindValue という検索条件で検索しましたが、X.509 証明書が見つかりませんでした。|  
+|CannotFindCert|特定の検索条件を使用して X.509 証明書が見つかりません。StoreName、StoreLocation、FindType、FindValue します。|  
 |X509InvalidUsageTime|指定された X.509 証明書の使用時間が無効です。 使用時間が、必要な NotBefore の時刻から NotAfter の時刻までの範囲内にありません。|  
 |TraceCodeSecurityIdentityDeterminationFailure|EndpointAddress の ID を特定できません。|  
 |AsyncObjectAlreadyEnded|End メソッドはこの非同期の結果、オブジェクトで既に呼び出されています。|  
@@ -100,11 +100,11 @@ ms.locfileid: "33474871"
 |SAMLAssertionMissingMajorVersionAttributeOnRead|読み取り中の SamlAssertion の MajorVersion が指定されていないか、長さが 0 です。|  
 |SamlAttributeClaimRightShouldBePossessProperty|この SamlAttribute コンストラクターでは、クレームの権限に System.IdentityModel.Claims.Rights.PossessProperty という値が割り当てられていることが要求されます。|  
 |AuthorizationPolicyEvaluated|指定された ID を持つポリシーが評価されます。|  
-|SAMLUnableToLoadCondtions|\<Saml:conditions > 要素が読み込みに失敗しました。|  
+|SAMLUnableToLoadCondtions<!-- the misspelling here is deliberate. -->|\<Saml:conditions > 要素を読み込めませんでした。|  
 |AESKeyLengthNotSupported|指定されたビット キーはサポートされていません。 128、192、および 256 ビット キーのみサポートされます。|  
 |UserNameCannotBeEmpty|ユーザー名を空にすることはできません。|  
 |AlgorithmAndPublicKeyMisMatch|指定されたアルゴリズムと公開キーが適合しません。|  
-|SAMLUnableToLoadCondtion|\<Saml:conditions > 要素が読み込みに失敗しました。|  
+|SAMLUnableToLoadCondtion<!-- the misspelling here is deliberate. -->|\<Saml:conditions > 要素を読み込めませんでした。|  
 |SamlAssertionMissingSigningCredentials|SigningCredentials が SamlAssertion に設定されていません。 SamlAssertions には署名が必要です。続行するには、有効な SigningCredentials を SamlAssertion に設定してください。|  
 |SspiPayloadNotEncrypted|バイナリ データは SSPI セキュリティ コンテキストを使用して暗号化されていませんでした。|  
 |SAMLAuthorizationDecisionShouldHaveOneActionOnRead|読み取り中の SamlAuthorizationDecisionStatement には SamlAction がありません。|  
@@ -164,7 +164,7 @@ ms.locfileid: "33474871"
 |LengthOfArrayToConvertMustGreaterThanZero|整数に変換する配列の長さは、0 を超える値である必要があります。|  
 |InvalidAsyncResult|AsyncResult が無効です。|  
 |TraceCodeIssuanceTokenProviderRemovedCachedToken|IssuanceTokenProvider は期限切れのサービス トークンを削除しました。|  
-|IncorrectUserNameFormat|ユーザー名の形式が無効です。 ユーザー名の形式は、の形式である必要があります"ユーザー名 'または' ドメイン\\\username' です。|  
+|IncorrectUserNameFormat|ユーザー名の形式が無効です。 ユーザー名の形式は、の形式である必要があります"ユーザー名 'または' domain\\\username'。|  
 |TraceCodeExportSecurityChannelBindingEntry|セキュリティの ExportChannelBinding を開始しています。|  
 |UnsupportedInputTypeForTransform|指定された入力型は変換用にサポートされていません。|  
 |CannotFindDocumentRoot|ドキュメントのルートが見つかりません。|  
@@ -227,7 +227,7 @@ ms.locfileid: "33474871"
 |UnableToCreateSignatureDeformatterFromAsymmetricCrypto|指定された非対称暗号から、指定されたアルゴリズムの署名デフォーマッタを作成できません。|  
 |TraceCodeIdentityModelAsyncCallbackThrewException|非同期コールバックで例外がスローされました。|  
 |LengthMustBeGreaterThanZero|この引数の長さは、0 を超える値である必要があります。|  
-|FoundMultipleCerts|StoreName、StoreLocation、FindType、FindValue という検索条件で検索しましたが、複数の X.509 証明書が見つかりました。 より具体的な検索条件を指定してください。|  
+|FoundMultipleCerts|指定した検索条件を使用して複数の X.509 証明書を参照してください。StoreName, StoreLocation, FindType, FindValue. より具体的な検索条件を指定してください。|  
 |AtLeastOneTransformRequired|Transforms 要素には変換が少なくとも 1 つ必要です。|  
 |SAMLTokenNotSerialized|SamlAssertion を XML にシリアル化できませんでした。 詳細については、内部例外を参照してください。|  
 |TraceCodeSecurityBindingOutgoingMessageSecured|セキュリティ プロトコルは送信メッセージをセキュリティで保護しました。|  

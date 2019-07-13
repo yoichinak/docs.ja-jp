@@ -11,17 +11,17 @@ helpviewer_keywords:
 ms.assetid: b6ab2d48-6eee-4bab-97a3-046b3b0a5470
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 301d36820ed5ae1d6ba1cfd2961221095b02bea6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: defd7f90fcac8d1e98104796682058638c9bd799
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753687"
 ---
 # <a name="overlappedfreeerror-mda"></a>overlappedFreeError MDA
-オーバーラップされた操作が完了する前に <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=nameWithType> メソッドが呼び出されると、`overlappedFreeError` マネージ デバッグ アシスタント (MDA) がアクティブになります。  
+オーバーラップされた操作が完了する前に <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=nameWithType> メソッドが呼び出されると、`overlappedFreeError` マネージド デバッグ アシスタント (MDA) がアクティブになります。  
   
-## <a name="symptoms"></a>現象  
+## <a name="symptoms"></a>症状  
  アクセス違反またはガベージ コレクションされたヒープの破損。  
   
 ## <a name="cause"></a>原因  
@@ -50,7 +50,8 @@ ms.locfileid: "33386406"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [マネージ デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [相互運用マーシャリング](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [相互運用マーシャリング](../../../docs/framework/interop/interop-marshaling.md)

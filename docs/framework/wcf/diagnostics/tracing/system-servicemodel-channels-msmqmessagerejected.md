@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.MsmqMessageRejected
 ms.date: 03/30/2017
 ms.assetid: 9b7c10a7-2af6-44a2-8b1a-90bba0c7cf26
-ms.openlocfilehash: 0addf987eac62c750a3c418e1b1c431d3f9bc1b0
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4feeb1b57d79c7445d51f5d688b0a9f55e761542
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61997515"
 ---
 # <a name="systemservicemodelchannelsmsmqmessagerejected"></a>System.ServiceModel.Channels.MsmqMessageRejected
 MSMQ はメッセージを拒否しました。  
@@ -21,9 +21,10 @@ MSMQ はメッセージを拒否しました。
   
  参照してください[MQMarkMessageRejected](https://go.microsoft.com/fwlink/?LinkID=99548)拒否されたメッセージは MSMQ では意味の詳細についてはします。  
   
-## <a name="see-also"></a>関連項目  
- [トレース](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [トレースを使用したアプリケーションのトラブルシューティング](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [管理と診断](../../../../../docs/framework/wcf/diagnostics/index.md)  
- [有害メッセージ処理](https://go.microsoft.com/fwlink/?LinkID=99546)  
- [MQMarkMessageRejected](https://go.microsoft.com/fwlink/?LinkID=99548)
+## <a name="see-also"></a>関連項目
+
+- [トレース](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [トレースを使用したアプリケーションのトラブルシューティング](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [管理と診断](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [有害メッセージ処理](https://go.microsoft.com/fwlink/?LinkID=99546)
+- [MQMarkMessageRejected](https://go.microsoft.com/fwlink/?LinkID=99548)

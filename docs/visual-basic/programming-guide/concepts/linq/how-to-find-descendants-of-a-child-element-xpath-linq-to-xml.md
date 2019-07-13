@@ -1,15 +1,15 @@
 ---
-title: '方法: 子要素 (XPATH-LINQ to XML) の子孫を検索 (Visual Basic)'
+title: '方法: (XPATH-LINQ to XML) の子要素の子孫を検索 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a958af40-f754-4409-85f9-7746978d4cb3
-ms.openlocfilehash: c29e8badd757b41d765e7d68f7ecd45c8dea8a14
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 178729640898556244657e6e2917373825a4e51e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780514"
 ---
-# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a>方法: 子要素 (XPATH-LINQ to XML) の子孫を検索 (Visual Basic)
+# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a>方法: (XPATH-LINQ to XML) の子要素の子孫を検索 (Visual Basic)
 このトピックでは、特定の名前を持つ子要素の子孫要素を取得する方法について説明します。  
   
  XPath 式を次に示します。  
@@ -69,5 +69,6 @@ Results are identical
 This is the start of a sentence.  This is a second sentence.  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [LINQ to XML を XPath ユーザー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>関連項目
+
+- [LINQ to XML XPath ユーザー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

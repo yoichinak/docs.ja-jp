@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd5d35cb13bb55fc73e160089cbc1050cb3d5c0e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2ba9d7f8873d15a7cab2b9893feb8563dfc971b0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449219"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778763"
 ---
 # <a name="imetadataimport2enumgenericparamconstraints-method"></a>IMetaDataImport2::EnumGenericParamConstraints メソッド
 指定したトークンによって表されるジェネリック パラメーターに関連付けられているジェネリック パラメーターの制約の配列の列挙子を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EnumGenericParamConstraints (  
     [in, out] HCORENUM                *phEnum,  
     [in]  mdGenericParam              tk,  
@@ -39,38 +39,39 @@ HRESULT EnumGenericParamConstraints (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [入力、出力].列挙子へのポインター。  
+ [入力、出力]列挙子へのポインター。  
   
  `tk`  
- [in]  列挙されるまでの制約は、ジェネリック パラメーターを表すトークンです。  
+ [in]  ジェネリック パラメーターの制約が列挙を表すトークンです。  
   
  `rGenericParamConstraints`  
- [out]列挙するジェネリック パラメーターの制約の配列。  
+ [out]列挙するために、ジェネリック パラメーターの制約の配列。  
   
  `cMax`  
- [in]  配置するトークンの要求の最大数`rGenericParamConstraints`です。  
+ [in]  配置するトークンの要求の最大数`rGenericParamConstraints`します。  
   
  `pcGenericParamConstraints`  
- [out]トークンの数へのポインターに格納`rGenericParamConstraints`です。  
+ [out]トークンの数へのポインターに配置`rGenericParamConstraints`します。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
 |`S_OK`|`EnumGenericParameterConstraints` 正常に返されます。|  
-|`S_FALSE`|`phEnum` メンバーの要素がありません。 この場合、`pcGenericParameterConstraints`は 0 (ゼロ) に設定します。|  
+|`S_FALSE`|`phEnum` メンバーの要素がありません。 この場合、 `pcGenericParameterConstraints` 0 (ゼロ) に設定されます。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
  **ライブラリ:** MsCorEE.dll にリソースとして使用  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

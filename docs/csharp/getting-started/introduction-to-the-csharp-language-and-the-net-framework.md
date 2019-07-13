@@ -6,16 +6,16 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: ff0845f7d15a7b65cee755110d26a1e56a9b94af
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 361a6669d5d638bbb39bc646607cce212bbb3bfa
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153944"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504031"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 言語と .NET Framework の概要
 
-C# は、タイプ セーフで洗練されたオブジェクト指向言語です。C# を使用すると、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] で稼働する、安全で信頼性の高いさまざまなアプリケーションを構築できます。 C# を使用すると、Windows クライアント アプリケーション、XML Web サービス、分散コンポーネント、クライアント/サーバー アプリケーション、データベース アプリケーションなど、さまざまなアプリケーションを作成できます。 Visual C# には、高度なコード エディター、便利なユーザー インターフェイス デザイナー、統合デバッガーなど、C# 言語と [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] に基づいたアプリケーション開発をより簡単にする多数のツールが用意されています。  
+C# は、タイプ セーフで洗練されたオブジェクト指向言語です。C# を使用すると、.NET Framework で稼働する、安全で信頼性の高いさまざまなアプリケーションを構築できます。 C# を使用すると、Windows クライアント アプリケーション、XML Web サービス、分散コンポーネント、クライアント/サーバー アプリケーション、データベース アプリケーションなど、さまざまなアプリケーションを作成できます。 Visual C# には、高度なコード エディター、便利なユーザー インターフェイス デザイナー、統合デバッガーなど、C# 言語と .NET Framework に基づいたアプリケーション開発をより簡単にする多数のツールが用意されています。  
   
 > [!NOTE]
 > Visual C# のドキュメントは、基本的なプログラミング概念を理解している方を対象に書かれています。 初心者である場合、Web で入手できる Visual C# Express が参考になります。 C# に関する書籍や Web リソースを利用して、実践的なプログラミング スキルを身に付けることもできます。  
@@ -52,17 +52,17 @@ C# は、タイプ セーフで洗練されたオブジェクト指向言語で�
 
 ## <a name="net-framework-platform-architecture"></a>.NET Framework のプラットフォーム アーキテクチャ
 
- C# プログラムは、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] で実行されます。これは、共通言語ランタイム (CLR: Common Language Runtime) と呼ばれる仮想実行システムや統合的なクラス ライブラリを備えた Windows の統合コンポーネントです。 CLR は、共通言語基盤 (CLI: Common Language Infrastructure) をサポートする Microsoft のシステムです。CLI は、複数の言語やライブラリをシームレスに連携する実行環境と開発環境を構築するための、基本的な国際規格です。  
+ C# プログラムは、.NET Framework で実行されます。これは、共通言語ランタイム (CLR: Common Language Runtime) と呼ばれる仮想実行システムや統合的なクラス ライブラリを備えた Windows の統合コンポーネントです。 CLR は、共通言語基盤 (CLI: Common Language Infrastructure) をサポートする Microsoft のシステムです。CLI は、複数の言語やライブラリをシームレスに連携する実行環境と開発環境を構築するための、基本的な国際規格です。  
   
- C# で記述したソース コードは、CLI 仕様に準拠する中間言語 (IL) にコンパイルされます。 IL コードおよびリソース (ビットマップや文字列など) は、アセンブリと呼ばれる実行可能ファイルのあるディスクに保存されます。アセンブリの拡張子は、一般的に .exe か .dll です。 アセンブリに含まれるマニフェストには、アセンブリの種類、バージョン、カルチャ、およびセキュリティ要件に関する情報が規定されています。  
+ C# で記述したソース コードは、CLI 仕様に準拠する[中間言語 (IL)](../../standard/managed-code.md) にコンパイルされます。 IL コードおよびリソース (ビットマップや文字列など) は、アセンブリと呼ばれる実行可能ファイルのあるディスクに保存されます。アセンブリの拡張子は、一般的に .exe か .dll です。 アセンブリに含まれるマニフェストには、アセンブリの種類、バージョン、カルチャ、およびセキュリティ要件に関する情報が規定されています。  
   
  C# プログラムを実行すると、アセンブリが CLR に読み込まれ、マニフェストの情報に基づいてさまざまな処理が実行されます。 このとき、セキュリティ要件に一致すると、CLR で Just-In-Time (JIT) コンパイルが実行され、IL コードはネイティブのマシン語命令に変換されます。 CLR には、自動的なガベージ コレクション、例外処理、およびリソース管理に関するサービスも用意されています。 CLR で実行されるコードは、"マネージド コード" と呼ばれることがあります。反対に、特定のシステムを対象にしたネイティブのマシン語にコンパイルされたコードは、"アンマネージド コード" と呼ばれることがあります。 C# ソース コード ファイル、.NET Framework クラス ライブラリ、アセンブリ、および CLR について、コンパイル時間と実行時間の関係を次の図に示します。  
   
- ![ C&#35; ソース コードからマシン実行へ](../../csharp/getting-started/media/netarchitecture.png "NETarchitecture")  
+ ![C&#35; ソース コードからマシン実行へ](./media/introduction-to-the-csharp-language-and-the-net-framework/net-architecture-relationships.png)  
   
- 言語の相互運用性は、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] の主要機能です。 C# コンパイラで生成された IL コードは、共通型の仕様 (CTS: Common Type Specification) に準拠しています。このため、C# の IL コードは、Visual Basic、Visual C++ の .NET バージョンを始めとする、20 を超える CTS 準拠言語で生成されたコードと相互運用性があります。 1 つのアセンブリには、異なる .NET 言語で記述されたモジュールを複数含めることができます。また、同じ言語で記述されている場合と同様に、型を参照することもできます。  
+ 言語の相互運用性は、.NET Framework の主要機能です。 C# コンパイラで生成された IL コードは、共通型の仕様 (CTS: Common Type Specification) に準拠しています。このため、C# の IL コードは、Visual Basic、Visual C++ の .NET バージョンを始めとする、20 を超える CTS 準拠言語で生成されたコードと相互運用性があります。 1 つのアセンブリには、異なる .NET 言語で記述されたモジュールを複数含めることができます。また、同じ言語で記述されている場合と同様に、型を参照することもできます。  
   
- [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] には、実行時のサービス以外にも、4,000 クラスを超える多数のライブラリが用意されています。このライブラリは、ファイルの入出力、XML 解析のための文字列操作、Windows フォーム コントロールなど、役に立つさまざまな機能を備えた名前空間に構成されています。 C# アプリケーションでは、一般に、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] クラス ライブラリを広範囲に使用して、一般的な "配管工事" のような作業を処理しています。  
+ .NET Framework には、実行時のサービス以外にも、4,000 クラスを超える多数のライブラリが用意されています。このライブラリは、ファイルの入出力、XML 解析のための文字列操作、Windows フォーム コントロールなど、役に立つさまざまな機能を備えた名前空間に構成されています。 C# アプリケーションでは、一般に、.NET Framework クラス ライブラリを広範囲に使用して、一般的な "配管工事" のような作業を処理しています。  
   
  .NET Framework の詳細については、[Microsoft .NET Framework の概要](../../framework/get-started/overview.md)に関する記事を参照してください。  
   

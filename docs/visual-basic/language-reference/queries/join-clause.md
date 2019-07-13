@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-ms.openlocfilehash: b1551583079c66d1bf5f6963a42d5d24e518fff3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 21432b95b30ae38ac2cbc9e55b5a3066f0bef665
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945289"
 ---
 # <a name="join-clause-visual-basic"></a>Join 句 (Visual Basic)
 2 つのコレクションを単一のコレクションに結合します。 結合操作は、一致するキーに基づいて、使用して、`Equals`演算子。  
@@ -37,10 +37,10 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
  必須。 左側にあるで識別されるコレクションと結合するコレクション、`Join`演算子。 A`Join`句は、別の入れ子にすることができます`Join`句、または、`Group Join`句。  
   
  `joinClause`  
- 任意。 1 つ以上の追加`Join`句をさらに、クエリを絞り込みます。  
+ 省略可能です。 1 つ以上の追加`Join`句をさらに、クエリを絞り込みます。  
   
  `groupJoinClause`  
- 任意。 1 つ以上の追加`Group Join`句をさらに、クエリを絞り込みます。  
+ 省略可能です。 1 つ以上の追加`Group Join`句をさらに、クエリを絞り込みます。  
   
  `key1` `Equals` `key2`  
  必須。 結合するコレクションのキーを識別します。 使用する必要があります、`Equals`結合されているコレクションからキーを比較する演算子。 使用して、結合条件を組み合わせることができます、`And`演算子を複数のキーを識別します。 `key1` 左側にあるコレクションから必要があります、`Join`演算子。 `key2` 右側にあるコレクションから必要があります、`Join`演算子。  
@@ -59,12 +59,12 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
 ## <a name="example"></a>例  
  次のコード例では、自分の注文と顧客のリストを結合する暗黙の結合を実行します。  
   
- [!code-vb[VbSimpleQuerySamples#13](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/join-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#13)]  
   
 ## <a name="example"></a>例  
  次のコード例では、2 つのコレクションを結合を使用して、`Join`句。  
   
- [!code-vb[VbSimpleQuerySamples#12](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/join-clause_2.vb)]  
+ [!code-vb[VbSimpleQuerySamples#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples2.vb#12)]  
   
  この例には、次のような出力が生成されます。  
   
@@ -77,7 +77,7 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
 ## <a name="example"></a>例  
  次のコード例では、2 つのコレクションを結合を使用して、 `Join` 2 つのキー列と句。  
   
- [!code-vb[VbSimpleQuerySamples#17](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/join-clause_3.vb)]  
+ [!code-vb[VbSimpleQuerySamples#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples3.vb#17)]  
   
  例では、次のような出力が生成されます。  
   
@@ -87,10 +87,11 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
   
  `explorer (2424), File Explorer, Priority = 8`  
   
-## <a name="see-also"></a>関連項目  
- [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [クエリ](../../../visual-basic/language-reference/queries/index.md)  
- [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)  
- [From 句](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Group Join 句](../../../visual-basic/language-reference/queries/group-join-clause.md)  
- [WHERE 句](../../../visual-basic/language-reference/queries/where-clause.md)
+## <a name="see-also"></a>関連項目
+
+- [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [クエリ](../../../visual-basic/language-reference/queries/index.md)
+- [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From 句](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Group Join 句](../../../visual-basic/language-reference/queries/group-join-clause.md)
+- [Where 句](../../../visual-basic/language-reference/queries/where-clause.md)

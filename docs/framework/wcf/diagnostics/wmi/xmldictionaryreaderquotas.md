@@ -2,12 +2,12 @@
 title: XmlDictionaryReaderQuotas
 ms.date: 03/30/2017
 ms.assetid: 9b4ca8b4-0a89-4758-97ab-528a8ce18f07
-ms.openlocfilehash: 9bc519509b00383be333ac605688950d2709117c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f1c12a0a60397a84d4e9ff0241c4182b4511af5c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858430"
 ---
 # <a name="xmldictionaryreaderquotas"></a>XmlDictionaryReaderQuotas
 XmlDictionaryReaderQuotas  
@@ -70,8 +70,9 @@ class XmlDictionaryReaderQuotas
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
-|Namespace|root\ServiceModel で定義|  
+|名前空間|root\ServiceModel で定義|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Xml.XmlDictionaryReaderQuotas>  
- <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Xml.XmlDictionaryReaderQuotas>
+- <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>

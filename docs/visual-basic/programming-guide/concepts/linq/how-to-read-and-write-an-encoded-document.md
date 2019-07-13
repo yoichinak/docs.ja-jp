@@ -1,15 +1,15 @@
 ---
-title: '方法: 読み取りし、書き込みのエンコードされたドキュメント (Visual Basic)'
+title: '方法: 読み取りし、書き込みでエンコードされたドキュメント (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 159d868f-5ac8-40f2-95ca-07dd925f35c6
-ms.openlocfilehash: 6e768f26313da93076807f5fabe18a26333ebab8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7d558b8dea5f376b6ad77e2f4ac93a3f4663cbff
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008877"
 ---
-# <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a>方法: 読み取りし、書き込みのエンコードされたドキュメント (Visual Basic)
+# <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a>方法: 読み取りし、書き込みでエンコードされたドキュメント (Visual Basic)
 エンコードされた XML ドキュメントを作成するには、<xref:System.Xml.Linq.XDeclaration> を XML ツリーに追加し、エンコーディングを目的のコード ページ名に設定します。  
   
  <xref:System.Text.Encoding.WebName%2A> から返される値はすべて有効な値です。  
@@ -76,6 +76,7 @@ Encoded document:
 Encoding of loaded document is:utf-16  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>  
- [高度な LINQ to XML プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>
+- [高度な LINQ to XML プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

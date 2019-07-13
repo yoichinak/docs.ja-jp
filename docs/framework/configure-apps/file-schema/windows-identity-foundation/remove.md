@@ -1,16 +1,16 @@
 ---
-title: '&lt;remove&gt;'
+title: <remove>
 ms.date: 03/30/2017
 ms.assetid: 4058e2f1-7db4-4d1a-84dd-1b52836f2ae6
 author: BrucePerlerMS
-ms.openlocfilehash: 410fef1a43f9202d56c4957b1162c53ee056ae3f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 17c4d4289cf90b66d52986c054d4807ecff2b3d8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793888"
 ---
-# <a name="ltremovegt"></a>&lt;remove&gt;
+# <a name="remove"></a>\<remove>
 トークン ハンドラー コレクションから指定したセキュリティ トークン ハンドラーを削除します。  
   
  \<system.identityModel>  
@@ -38,7 +38,7 @@ ms.locfileid: "47198723"
   
 |属性|説明|  
 |---------------|-----------------|  
-|型|削除するトークン ハンドラーの CLR 型名。 詳細を指定する方法については、`type`属性は、「[カスタム型の参照](https://msdn.microsoft.com/library/7286d2e3-c63d-49fd-abdc-ce2705f22c24)します。 必須。|  
+|種類|削除するトークン ハンドラーの CLR 型名。 詳細を指定する方法については、`type`属性は、「[カスタム型の参照](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references)します。 必須。|  
   
 ### <a name="child-elements"></a>子要素  
  なし  

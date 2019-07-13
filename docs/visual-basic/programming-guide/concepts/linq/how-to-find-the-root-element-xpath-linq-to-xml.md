@@ -2,12 +2,12 @@
 title: '方法: ルート要素 (XPATH-LINQ to XML) を検索 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 72c3aed5-9522-4454-a876-2070aad13f2e
-ms.openlocfilehash: 112be85e8af8fbe31f62ef91db04de72a3793082
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0936300a51c697eaff5a1aeafff70e37b04a2a96
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780459"
 ---
 # <a name="how-to-find-the-root-element-xpath-linq-to-xml-visual-basic"></a>方法: ルート要素 (XPATH-LINQ to XML) を検索 (Visual Basic)
 このトピックでは、XPath および [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用してルート要素を取得する方法について説明します。  
@@ -19,7 +19,7 @@ ms.locfileid: "43483672"
 ## <a name="example"></a>例  
  この例では、ルート要素を検索します。  
   
- この例では、「[サンプル XML ファイル: 複数の購買発注書 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)」の XML ドキュメントを使用します。  
+ この例では、次の XML ドキュメントを使用します。「[サンプル XML ファイル:複数の購買発注書 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
   
 ```vb  
 Dim po As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -45,5 +45,6 @@ Results are identical
 PurchaseOrders  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [LINQ to XML XPath ユーザー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>関連項目
+
+- [LINQ to XML XPath ユーザー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

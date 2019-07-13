@@ -4,13 +4,13 @@ description: Windows XP に .NET Framework をインストールする方法に�
 ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
-ms.date: 04/10/2018
-ms.openlocfilehash: eb62bfe992e5b3774c4a8123eb9ca3f790eaf0b9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 04/18/2019
+ms.openlocfilehash: b246c75896d00ad2c91ded106682e8cdd817d9d1
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50192877"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052682"
 ---
 # <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a>Windows XP と Windows Server 2003 に .NET Framework をインストールする
 
@@ -21,7 +21,7 @@ ms.locfileid: "50192877"
 
 ![このアプリケーションを開始できませんでした。](./media/this-application-could-not-be-started.png)
 
-これらの手順は、必要な .NET Framework バージョンをインストールする場合に役立ちます。 [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) が最新バージョンです。 Windows XP と Windows Server 2003 ではサポートされていません。 [Windows 10 October 2018 Update](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update) と [Windows 10 April 2018 Update](https://www.microsoft.com/software-download/windows10) に含まれています。
+これらの手順は、必要な .NET Framework バージョンをインストールする場合に役立ちます。 [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) が最新バージョンです。 Windows XP と Windows Server 2003 ではサポートされていません。 [Windows 10 May 2019 Update](https://support.microsoft.com/help/4028685/windows-10-get-the-update) に付属しています。
 
 ## <a name="net-framework-403"></a>.NET Framework 4.0.3
 
@@ -39,6 +39,6 @@ Windows XP には [.NET Framework 3.5](https://go.microsoft.com/fwlink/?LinkID=2
 
 ## <a name="see-also"></a>関連項目
 
-[.NET Framework のダウンロード](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)   
-[.NET Framework のインストールおよびアンインストールのブロックのトラブルシューティング](troubleshoot-blocked-installations-and-uninstallations.md)   
-[開発者向けの .NET Framework のインストール](guide-for-developers.md)
+- [.NET Framework のダウンロード](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)
+- [.NET Framework のインストールおよびアンインストールのブロックのトラブルシューティング](troubleshoot-blocked-installations-and-uninstallations.md)
+- [開発者向けの .NET Framework のインストール](guide-for-developers.md)

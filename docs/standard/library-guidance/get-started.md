@@ -4,12 +4,12 @@ description: .NET ライブラリの構築を始めましょう。
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 05466de1469fc765570b8250301e8404cd5df173
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 980f0edcee07688935f6d08f3ce1ed812159695e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145726"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65640745"
 ---
 # <a name="get-started"></a>作業開始
 
@@ -29,9 +29,9 @@ NuGet.org で一般公開されているすべてのパッケージに推奨さ�
 
 NuGet により、.NET ライブラリの構築時に既存のパッケージが使いやすくなります。 NuGet の依存関係の一般的な競合原因と、その回避方法について説明します。
 
-### <a name="sourcelinksourcelinkmd"></a>[SourceLink](./sourcelink.md)
+### <a name="source-linksourcelinkmd"></a>[ソース リンク](./sourcelink.md)
 
-SourceLink は、.NET ライブラリのユーザーがデバッグ中にそのソース コードにステップ インできるようにする優れたツールです。 この記事では、SourceLink とは何かと、それを使用する理由の概要を示します。
+ソース リンクは、.NET ライブラリのユーザーがデバッグ中にそのソース コードにステップ インできるようにする優れたツールです。 この記事では、ソース リンクとは何かと、それを使用する理由の概要を示します。
 
 ### <a name="publishingpublish-nuget-packagemd"></a>[発行](./publish-nuget-package.md)
 

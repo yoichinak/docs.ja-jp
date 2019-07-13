@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc4d8fdc39153f227e8344ea1da52a0dba2688d0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd0611cc8a6d257192b389b023c4dcda8f1b7ec3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579341"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634421"
 ---
 # <a name="details-of-regular-expression-behavior"></a>正規表現の動作の詳細
 .NET Framework の正規表現エンジンはバックトラッキング型の正規表現マッチャーであり、Perl、Python、Emacs、および Tcl で使われているのと同じ従来型の非決定性有限オートマトン (NFA) エンジンを採用しています。 このエンジンは、awk、egrep、または lex に見られるような、より高速であるが制限が多い、純粋な正規表現決定性有限オートマトン (DFA) エンジンとは異なります。 また、標準化されているが低速な POSIX NFA とも異なります。 次のセクションでは、これら 3 種類の正規表現エンジンについて説明し、.NET Framework の正規表現が従来型 NFA エンジンを使って実装されている理由について説明します。  
@@ -38,7 +38,7 @@ ms.locfileid: "33579341"
   
  .NET Framework の正規表現エンジンのその他の機能は次のとおりです。  
   
--   最短一致の量指定子: `??`、`*?`、`+?`、`{`*n*`,`*m*`}?`。 これらの構成体は、バックトラッキング エンジンに対し、繰り返しの回数が最も少ない文字列を最初に検索するように指示します。 逆に、通常の最長一致の量指定子は、繰り返しの回数が最も多い文字列を最初に検索しようとします。 2 つの量指定子の動作の違いを次の例に示します。 正規表現は、数字で終わる文を照合し、キャプチャ グループはその数字を抽出します。 正規表現 `.+(\d+)\.` には最長一致の量指定子 `.+` が含まれます。これにより、正規表現エンジンは数字の最後の桁のみをキャプチャします。 対照的に、正規表現 `.+?(\d+)\.` には最短一致の量指定子 `.+?` が含まれます。これにより、正規表現エンジンは数字全体をキャプチャします。  
+- 最短一致の量指定子: `??`、`*?`、`+?`、`{`*n*`,`*m*`}?`。 これらの構成体は、バックトラッキング エンジンに対し、繰り返しの回数が最も少ない文字列を最初に検索するように指示します。 逆に、通常の最長一致の量指定子は、繰り返しの回数が最も多い文字列を最初に検索しようとします。 2 つの量指定子の動作の違いを次の例に示します。 正規表現は、数字で終わる文を照合し、キャプチャ グループはその数字を抽出します。 正規表現 `.+(\d+)\.` には最長一致の量指定子 `.+` が含まれます。これにより、正規表現エンジンは数字の最後の桁のみをキャプチャします。 対照的に、正規表現 `.+?(\d+)\.` には最短一致の量指定子 `.+?` が含まれます。これにより、正規表現エンジンは数字全体をキャプチャします。  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lazy1.cs#1)]
      [!code-vb[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lazy1.vb#1)]  
@@ -54,7 +54,7 @@ ms.locfileid: "33579341"
   
      最短一致の量指定子について詳しくは、「[限定子](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)」をご覧ください。  
   
--   肯定先読み: `(?=`*subexpression*`)`。 この機能により、バックトラッキング エンジンは部分式と一致する文字列を見つけた後で、テキスト内の同じ位置に戻ることができます。 同じ位置から開始する複数のパターンを確認してテキスト全体を検索する場合に便利です。 また、エンジンは、一致するテキストに部分文字列を含めずに、一致文字列の末尾に部分文字列が存在することを検証できます。 次の例では、肯定先読みを使用して、後に区切り記号が続かない文中の単語を抽出します。  
+- 肯定先読み: `(?=`*subexpression*`)`。 この機能により、バックトラッキング エンジンは部分式と一致する文字列を見つけた後で、テキスト内の同じ位置に戻ることができます。 同じ位置から開始する複数のパターンを確認してテキスト全体を検索する場合に便利です。 また、エンジンは、一致するテキストに部分文字列を含めずに、一致文字列の末尾に部分文字列が存在することを検証できます。 次の例では、肯定先読みを使用して、後に区切り記号が続かない文中の単語を抽出します。  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookahead1.cs#2)]
      [!code-vb[Conceptual.RegularExpressions.Design#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookahead1.vb#2)]  
@@ -70,7 +70,7 @@ ms.locfileid: "33579341"
   
      肯定先読みアサーションについて詳しくは、「[グループ化構成体](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)」をご覧ください。  
   
--   否定先読み: `(?!`*subexpression*`)`。 この機能により、部分式に一致する文字列が見つからなかった場合にのみ、表現に一致できるようになります。 ある文字列を除外する表現の方が、含める表現よりも単純になることが多いため、この機能は検索を簡略化する場合に特に力を発揮します。 たとえば、"non" で始まらない単語を表す表現を記述するのは簡単ではありません。 次の例では、否定先読みを使用してこれらを除外します。  
+- 否定先読み: `(?!`*subexpression*`)`。 この機能により、部分式に一致する文字列が見つからなかった場合にのみ、表現に一致できるようになります。 ある文字列を除外する表現の方が、含める表現よりも単純になることが多いため、この機能は検索を簡略化する場合に特に力を発揮します。 たとえば、"non" で始まらない単語を表す表現を記述するのは簡単ではありません。 次の例では、否定先読みを使用してこれらを除外します。  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookahead2.cs#3)]
      [!code-vb[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookahead2.vb#3)]  
@@ -86,7 +86,7 @@ ms.locfileid: "33579341"
   
      否定先読みアサーションについて詳しくは、「[グループ化構成体](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)」をご覧ください。  
   
--   条件付き評価: `(?(`*expression*`)`*yes*`|`*no*`)` および`(?(`*name*`)`*yes*`|`*no*`)`。ここで、*expression* は照合する部分式、*name* はキャプチャ グループの名前、*yes* は、*expression* が一致するか、または *name* が空でない有効なキャプチャ グループである場合に照合する文字列、*no* は、*expression* が一致しないか、または *name* が空でない有効なキャプチャ グループではない場合に照合する部分式です。 この機能により、エンジンは直前の部分式の一致結果またはゼロ幅アサーションの結果に従って、複数の代替パターンを使用した検索を実行できます。 そのため、より強力な前方参照が可能になります。たとえば、直前の部分式が一致したかどうかに基づいて部分式を照合できます。 次の例の正規表現は、パブリック使用と内部使用の両方を目的とした段落と一致します。 内部使用のみを目的とした段落は `<PRIVATE>` タグで始まります。 正規表現パターン `^(?<Pvt>\<PRIVATE\>\s)?(?(Pvt)((\w+\p{P}?\s)+)|((\w+\p{P}?\s)+))\r?$` は、条件付き評価を使用して、パブリック使用と内部使用を目的とした段落の内容を別のキャプチャ グループに代入します。 これらの段落は、異なる方法で処理できます。  
+- 条件付き評価: `(?(`*expression*`)`*yes*`|`*no*`)` および`(?(`*name*`)`*yes*`|`*no*`)`。ここで、*expression* は照合する部分式、*name* はキャプチャ グループの名前、*yes* は、*expression* が一致するか、または *name* が空でない有効なキャプチャ グループである場合に照合する文字列、*no* は、*expression* が一致しないか、または *name* が空でない有効なキャプチャ グループではない場合に照合する部分式です。 この機能により、エンジンは直前の部分式の一致結果またはゼロ幅アサーションの結果に従って、複数の代替パターンを使用した検索を実行できます。 そのため、より強力な前方参照が可能になります。たとえば、直前の部分式が一致したかどうかに基づいて部分式を照合できます。 次の例の正規表現は、パブリック使用と内部使用の両方を目的とした段落と一致します。 内部使用のみを目的とした段落は `<PRIVATE>` タグで始まります。 正規表現パターン `^(?<Pvt>\<PRIVATE\>\s)?(?(Pvt)((\w+\p{P}?\s)+)|((\w+\p{P}?\s)+))\r?$` は、条件付き評価を使用して、パブリック使用と内部使用を目的とした段落の内容を別のキャプチャ グループに代入します。 これらの段落は、異なる方法で処理できます。  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/conditional1.cs#4)]
      [!code-vb[Conceptual.RegularExpressions.Design#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/conditional1.vb#4)]  
@@ -103,9 +103,9 @@ ms.locfileid: "33579341"
   
      条件付き評価について詳しくは、「[代替構成体](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)」をご覧ください。  
   
--   グループ定義の均等化: `(?<`*name1*`-`*name2*`>` *subexpression*`)`。 この機能により、正規表現エンジンは、かっこや左右の角かっこなどの入れ子になった構成体を追跡できます。 例については、「[グループ化構成体](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)」をご覧ください。  
+- グループ定義の均等化: `(?<`*name1*`-`*name2*`>` *subexpression*`)`。 この機能により、正規表現エンジンは、かっこや左右の角かっこなどの入れ子になった構成体を追跡できます。 例については、「[グループ化構成体](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)」をご覧ください。  
   
--   非バックトラッキング部分式 (別名: 最長一致部分式): `(?>`*subexpression*`)`。 この機能により、バックトラッキング エンジンは、部分式と最初に一致した文字列だけを確実に検索できるようになります。この場合、表現は、部分式を含む表現とは関係ないように処理されます。 この構成体を使用しない場合は、より大きな表現によるバックトラッキング検索時に、部分式の動作が変化する可能性があります。 たとえば、正規表現 `(a+)\w` は 1 つ以上の "a" 文字を、一連の "a" 文字に続く単語文字と共に照合し、一連の "a" 文字を最初のキャプチャ グループに代入します。ただし、入力文字列の最後の文字も "a" の場合は、`\w` 言語要素によって照合され、キャプチャ グループには含められません。  
+- 非バックトラッキング部分式 (別名: 最長一致部分式): `(?>`*subexpression*`)`。 この機能により、バックトラッキング エンジンは、部分式と最初に一致した文字列だけを確実に検索できるようになります。この場合、表現は、部分式を含む表現とは関係ないように処理されます。 この構成体を使用しない場合は、より大きな表現によるバックトラッキング検索時に、部分式の動作が変化する可能性があります。 たとえば、正規表現 `(a+)\w` は 1 つ以上の "a" 文字を、一連の "a" 文字に続く単語文字と共に照合し、一連の "a" 文字を最初のキャプチャ グループに代入します。ただし、入力文字列の最後の文字も "a" の場合は、`\w` 言語要素によって照合され、キャプチャ グループには含められません。  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/nonbacktracking2.cs#7)]
      [!code-vb[Conceptual.RegularExpressions.Design#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/nonbacktracking2.vb#7)]  
@@ -117,14 +117,14 @@ ms.locfileid: "33579341"
   
      非バックトラッキング部分式について詳しくは、「[グループ化構成体](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)」をご覧ください。  
   
--   右から左への一致。<xref:System.Text.RegularExpressions.Regex> クラス コンストラクターまたは静的インスタンス一致メソッドに <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> オプションを設定すると指定されます。 この機能は、左から右ではなく右から左に向かって検索する場合や、パターンの左側ではなく右側で検索を開始した方が効果的な場合に便利です。 次の例に示すように、右から左への一致を使用すると、最長一致の量指定子の動作を変更できます。 この例では、数字で終わる文に対して 2 つの検索を実行します。 最長一致の量指定子 `+` を使用する左から右への検索では、文中の 6 桁の数字の 1 つと一致しますが、右から左への検索では 6 桁の数字すべてと一致します。 正規表現パターンの説明については、このセクションで前に示した最短一致の量指定子の例を参照してください。  
+- 右から左への一致。<xref:System.Text.RegularExpressions.Regex> クラス コンストラクターまたは静的インスタンス一致メソッドに <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> オプションを設定すると指定されます。 この機能は、左から右ではなく右から左に向かって検索する場合や、パターンの左側ではなく右側で検索を開始した方が効果的な場合に便利です。 次の例に示すように、右から左への一致を使用すると、最長一致の量指定子の動作を変更できます。 この例では、数字で終わる文に対して 2 つの検索を実行します。 最長一致の量指定子 `+` を使用する左から右への検索では、文中の 6 桁の数字の 1 つと一致しますが、右から左への検索では 6 桁の数字すべてと一致します。 正規表現パターンの説明については、このセクションで前に示した最短一致の量指定子の例を参照してください。  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/rtl1.cs#6)]
      [!code-vb[Conceptual.RegularExpressions.Design#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/rtl1.vb#6)]  
   
      右から左への一致の詳細については、「[正規表現のオプション](../../../docs/standard/base-types/regular-expression-options.md)」をご覧ください。  
   
--   肯定および否定後読み: 肯定後読みの場合は `(?<=`*subexpression*`)`、否定後読みの場合は `(?<!`*subexpression*`)`。 この機能は、このトピックで前に説明した先読みと同様です。 正規表現エンジンでは、完全な右から左への一致を実行できるため、正規表現では制限のない後読みが可能です。 肯定および否定後読みを使用して、入れ子になった部分式が外側の式のスーパーセットである場合に、入れ子の量指定子を回避することもできます。 そのような入れ子の量指定子を使用した正規表現は、多くの場合にパフォーマンスを低下させます。 たとえば、次の例では、文字列が英数字で始まって英数字で終わること、および文字列内の他の文字がより大きなサブセットの 1 つであることを検証します。 これはメール アドレスの検証に使用される正規表現の一部になります。詳しくは、「[方法: 文字列が有効な電子メール形式であるかどうかを検証する](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)」をご覧ください。  
+- 肯定および否定後読み: 肯定後読みの場合は `(?<=`*subexpression*`)`、否定後読みの場合は `(?<!`*subexpression*`)`。 この機能は、このトピックで前に説明した先読みと同様です。 正規表現エンジンでは、完全な右から左への一致を実行できるため、正規表現では制限のない後読みが可能です。 肯定および否定後読みを使用して、入れ子になった部分式が外側の式のスーパーセットである場合に、入れ子の量指定子を回避することもできます。 そのような入れ子の量指定子を使用した正規表現は、多くの場合にパフォーマンスを低下させます。 たとえば、次の例では、文字列が英数字で始まって英数字で終わること、および文字列内の他の文字がより大きなサブセットの 1 つであることを検証します。 電子メール アドレスの検証に使用される正規表現の一部になります。詳しくは、「[方法:文字列が有効な電子メール形式であるかどうかを検証する](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)」をご覧ください。  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookbehind1.cs#5)]
      [!code-vb[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookbehind1.vb#5)]  
@@ -135,7 +135,7 @@ ms.locfileid: "33579341"
     |-------------|-----------------|  
     |`^`|文字列の先頭から照合を開始します。|  
     |`[A-Z0-9]`|任意の数字または英数字と一致します。 (比較では、大文字と小文字を区別しません。)|  
-    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])*<code>|任意の単語文字の 0 回以上の繰り返し、または次の文字のいずれかと一致します: -、!、#、$、%、&、'、.、*、+、/、=、?、^、\`、{、}、&#124;、~。|  
+    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])*<code>|Match zero or more occurrences of any word character, or any of the following characters:  -, !, #, $, %, &, ', ., *, +, /, =, ?, ^, \`, {, }, &#124;, or ~.|  
     |`(?<=[A-Z0-9])`|前の文字を後読みします。これは数字または英数字である必要があります。 (比較では、大文字と小文字を区別しません。)|  
     |`$`|入力文字列の末尾で照合を終了します。|  
   
@@ -153,5 +153,5 @@ ms.locfileid: "33579341"
 |[正規表現の例](../../../docs/standard/base-types/regular-expression-examples.md)|一般的なアプリケーションで正規表現を使用するときのコード例を示します。|  
 |[正規表現言語 - クイック リファレンス](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|正規表現の定義に使用できる一連の文字、演算子、および構成体について説明します。|  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>関連項目  
  <xref:System.Text.RegularExpressions?displayProperty=nameWithType>

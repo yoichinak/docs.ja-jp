@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: aababd75-2335-43e3-ace8-4b7ae84191a8
-ms.openlocfilehash: 7d982b73332a2629ccd32c409e0de6fe1ce6eb98
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d773b6e49a9f3c2909b2479abdc498d4b059f660
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878112"
 ---
 # <a name="comparing-guid-and-uniqueidentifier-values"></a>GUID と uniqueidentifier 値の比較
 SQL Server のグローバル一意識別子 (GUID: Globally Unique Identifier) データ型は、16 バイトのバイナリ値を格納する `uniqueidentifier` データ型で表現されます。 GUID は、2 進数の値です。GUID は主に、多数のコンピューターが多数のサイトに存在するネットワーク内で、一意である必要のある識別子として使用されます。 GUID は、Transact-SQL NEWID 関数を呼び出すことにより生成され、世界中のコンピューターの中で一意であることが保証されています。 詳細については、次を参照してください。[一意識別子 (TRANSACT-SQL)](/sql/t-sql/data-types/uniqueidentifier-transact-sql)します。  
@@ -45,7 +45,7 @@ Sorted SqlGuids:
 1aaaaaaa-bbbb-cccc-dddd-3eeeeeeeeeee  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
 
-[SQL Server データ型と ADO.NET](sql-server-data-types.md)  
-[ADO.NET の概要](../ado-net-overview.md)  
+- [SQL Server データ型と ADO.NET](sql-server-data-types.md)
+- [ADO.NET の概要](../ado-net-overview.md)

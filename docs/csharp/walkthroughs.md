@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: ae29c8fbe8d5d87ccee4d6a43a3c9285f0c41ee1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 77ecab9738afd7ff5cfd4f8ef0cd0e49a302eb27
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131106"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025403"
 ---
 # <a name="c-walkthroughs"></a>C# チュートリアル
 チュートリアルでは、製品や特定の機能領域について学習を開始するのに適した一般的なシナリオについて詳細な手順を示します。  
@@ -24,7 +24,7 @@ ms.locfileid: "53131106"
  [async](../csharp/language-reference/keywords/async.md) と [await](../csharp/language-reference/keywords/await.md) を使用して非同期ソリューションを作成する方法を示します。  
   
  [Creating a Windows Runtime Component in C# or Visual Basic and Calling it from JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript) (C# および Visual Basic での Windows ランタイム コンポーネントの作成および JavaScript による呼び出し)  
- [!INCLUDE[wrt](~/includes/wrt-md.md)] 型を作成し、[!INCLUDE[wrt](~/includes/wrt-md.md)] コンポーネントにパッケージ化して、その後、JavaScript を使用して Windows 用に作成された [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] アプリからコンポーネントを呼び出す方法を示します。  
+ Windows ランタイム型を作成し、Windows ランタイム コンポーネントにパッケージ化した後、JavaScript を使用して Windows 用に作成された [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] アプリからコンポーネントを呼び出す方法を示します。  
   
  [Office のプログラミング (C# および Visual Basic)](../csharp/programming-guide/interop/walkthrough-office-programming.md)  
  C# および Visual Basic を使用して、Excel ブックや Word 文書を作成する方法を示します。  
@@ -69,7 +69,7 @@ ms.locfileid: "53131106"
  [配置のサンプルとチュートリアル](/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)  
  一般的な配置シナリオの詳細な例を示します。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../csharp/programming-guide/index.md)  
+- [C# プログラミング ガイド](../csharp/programming-guide/index.md)
 - [Visual Studio のサンプル](/visualstudio/ide/visual-studio-samples)

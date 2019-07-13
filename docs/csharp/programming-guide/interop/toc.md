@@ -1,7 +1,0 @@
-# [相互運用性](index.md)
-## [相互運用性の概要](interoperability-overview.md)
-## [方法: Visual C# の機能を使用して Office 相互運用オブジェクトにアクセスする](how-to-access-office-onterop-objects.md)
-## [方法: COM 相互運用機能を使用したプログラミングでインデックス付きプロパティを使用する](how-to-use-indexed-properties-in-com-interop-rogramming.md)
-## [方法: プラットフォーム呼び出しを使用して Wave ファイルを再生する](how-to-use-platform-invoke-to-play-a-wave-file.md)
-## [チュートリアル: Office のプログラミング (C# および Visual Basic)](walkthrough-office-programming.md)
-## [COM クラスの例](example-com-class.md)

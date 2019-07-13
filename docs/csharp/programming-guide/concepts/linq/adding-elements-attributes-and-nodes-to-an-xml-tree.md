@@ -2,12 +2,12 @@
 title: XML ツリーへの要素、属性、およびノードの追加
 ms.date: 07/20/2015
 ms.assetid: db911e4f-40aa-499a-9500-a9763bb6df56
-ms.openlocfilehash: 1ebc300d74f8dbf0ec746a14f19b5cf0c7ffa51b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fee03dd2ba0818778afb3447e8930a2c2567b067
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517060"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486240"
 ---
 # <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-c"></a>XML ツリーへの要素、属性、およびノードの追加
 コンテンツ (要素、属性、コメント、処理命令、テキスト、および CDATA) を既存の XML ツリーに追加できます。  
@@ -77,6 +77,3 @@ Console.WriteLine(xmlTree);
 </Root>  
 ```  
   
-## <a name="see-also"></a>参照
-
-- [XML ツリーの変更 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

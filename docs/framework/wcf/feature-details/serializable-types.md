@@ -2,12 +2,12 @@
 title: シリアル化可能な型
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
-ms.openlocfilehash: e54fd860ce757257253dad097a52e634dbb5d8bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0913d523e93505934b1cf231284e356baba5ded3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498281"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591674"
 ---
 # <a name="serializable-types"></a>シリアル化可能な型
 既定では、<xref:System.Runtime.Serialization.DataContractSerializer> は公開されている型をすべてシリアル化します。 その型の読み書き可能なパブリック プロパティおよびパブリック フィールドは、すべてシリアル化されます。  
@@ -17,30 +17,31 @@ ms.locfileid: "33498281"
 ## <a name="serialization-defaults"></a>シリアル化の既定  
  <xref:System.Runtime.Serialization.DataContractAttribute> 属性と <xref:System.Runtime.Serialization.DataMemberAttribute> 属性を適用して、型とメンバーのシリアル化を明示的に制御またはカスタマイズできます。 さらに、これらの属性をプライベート フィールドに適用することもできます。 ただし、これらの属性でマークされていない型もシリアル化および逆シリアル化されます。 次のルールと例外が適用されます。  
   
--   <xref:System.Runtime.Serialization.DataContractSerializer> は、新しく作成した型の既定のプロパティを使用して、属性のない型からデータ コントラクトを推論します。  
+- <xref:System.Runtime.Serialization.DataContractSerializer> は、新しく作成した型の既定のプロパティを使用して、属性のない型からデータ コントラクトを推論します。  
   
--   すべてのパブリック フィールドと、パブリック `get` メソッドおよび `set` メソッドを持つプロパティは、<xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> 属性をそのメンバーに適用しない限りシリアル化されます。  
+- すべてのパブリック フィールドと、パブリック `get` メソッドおよび `set` メソッドを持つプロパティは、<xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> 属性をそのメンバーに適用しない限りシリアル化されます。  
   
--   シリアル化のセマンティクスは <xref:System.Xml.Serialization.XmlSerializer> に似ています。  
+- シリアル化のセマンティクスは <xref:System.Xml.Serialization.XmlSerializer> に似ています。  
   
--   マークされていない型では、パラメーターのないコンストラクターを持つパブリック型のみがシリアル化されます。 このルールの例外として、<xref:System.Runtime.Serialization.ExtensionDataObject> インターフェイスとして使用される <xref:System.Runtime.Serialization.IExtensibleDataObject> があります。  
+- マークされていない型では、パラメーターのないコンストラクターを持つパブリック型のみがシリアル化されます。 このルールの例外として、<xref:System.Runtime.Serialization.ExtensionDataObject> インターフェイスとして使用される <xref:System.Runtime.Serialization.IExtensibleDataObject> があります。  
   
--   読み取り専用フィールド、`get` メソッドまたは `set` メソッドのないプロパティ、内部またはプライベート `set` メソッドまたは `get` メソッドのあるプロパティはシリアル化されません。 そのようなプロパティは無視され、例外はスローされません。ただし、取得専用のコレクションの場合は除きます。  
+- 読み取り専用フィールド、`get` メソッドまたは `set` メソッドのないプロパティ、内部またはプライベート `set` メソッドまたは `get` メソッドのあるプロパティはシリアル化されません。 そのようなプロパティは無視され、例外はスローされません。ただし、取得専用のコレクションの場合は除きます。  
   
--   <xref:System.Xml.Serialization.XmlSerializer> 属性 (`XmlElement`、`XmlAttribute`、`XmlIgnore`、`XmlInclude` など) は無視されます。  
+- <xref:System.Xml.Serialization.XmlSerializer> 属性 (`XmlElement`、`XmlAttribute`、`XmlIgnore`、`XmlInclude` など) は無視されます。  
   
--   <xref:System.Runtime.Serialization.DataContractAttribute> 属性を指定の型に適用しない場合は、シリアライザーは <xref:System.Runtime.Serialization.DataMemberAttribute> 属性が適用されるその型のすべてのメンバーを無視します。  
+- <xref:System.Runtime.Serialization.DataContractAttribute> 属性を指定の型に適用しない場合は、シリアライザーは <xref:System.Runtime.Serialization.DataMemberAttribute> 属性が適用されるその型のすべてのメンバーを無視します。  
   
--   <xref:System.Runtime.Serialization.DataContractSerializer.KnownTypes%2A> プロパティは <xref:System.Runtime.Serialization.DataContractAttribute> 属性でマークされていない型でサポートされます。 これには、マークされていない型での <xref:System.Runtime.Serialization.KnownTypeAttribute> 属性のサポートも含まれます。  
+- <xref:System.Runtime.Serialization.DataContractSerializer.KnownTypes%2A> プロパティは <xref:System.Runtime.Serialization.DataContractAttribute> 属性でマークされていない型でサポートされます。 これには、マークされていない型での <xref:System.Runtime.Serialization.KnownTypeAttribute> 属性のサポートも含まれます。  
   
--   パブリック メンバー、プロパティ、またはフィールドのシリアル化のプロセスを "取り消す" には、<xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> 属性をそのメンバーに適用します。  
+- パブリック メンバー、プロパティ、またはフィールドのシリアル化のプロセスを "取り消す" には、<xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> 属性をそのメンバーに適用します。  
   
 ## <a name="inheritance"></a>継承  
- マークされていない型 (<xref:System.Runtime.Serialization.DataContractAttribute> 属性のない型) は、この属性を持つ型から継承できます。ただし、その反対はできません。つまり、マークされていない型から属性を持つ型を継承することはできません。 このルールは、主に以前のバージョンの [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] で書かれたコードとの下位互換性を保つために適用されます。  
+ マークされていない型 (<xref:System.Runtime.Serialization.DataContractAttribute> 属性のない型) は、この属性を持つ型から継承できます。ただし、その反対はできません。つまり、マークされていない型から属性を持つ型を継承することはできません。 このルールは、以前のバージョンの .NET Framework で記述されたコードの旧バージョンとの互換性を確保するには、主に適用されます。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.DataMemberAttribute>  
- <xref:System.Xml.Serialization.XmlSerializer>  
- [データ コントラクト シリアライザーでサポートされる型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.DataMemberAttribute>
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [データ コントラクト シリアライザーでサポートされる型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 48838a90939899fc1e7e91cdb7bbe98019591416
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2d9124c90d09e2fa94a0eaa2ff8cd4e4ab15206f
+ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44210300"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67135669"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>コレクション内での比較と並べ替え
 <xref:System.Collections> クラスは、削除する要素を検索するか、キーと値のペアの値を返すかに関係なく、コレクションの管理に関連するほぼすべての処理において比較を実行します。  
@@ -30,11 +30,11 @@ ms.locfileid: "44210300"
 ## <a name="checking-for-equality"></a>等価性のチェック  
  `Contains`、 <xref:System.Collections.IList.IndexOf%2A>、 <xref:System.Collections.Generic.List%601.LastIndexOf%2A>、 `Remove` などのメソッドは、コレクション要素に対して等値比較子を使用します。 コレクションがジェネリックの場合、次のガイドラインに従ってアイテムの等価性が比較されます。  
   
--   T 型で <xref:System.IEquatable%601> ジェネリック インターフェイスが実装されている場合、等値比較子はそのインターフェイスの <xref:System.IEquatable%601.Equals%2A> メソッドです。  
+- T 型で <xref:System.IEquatable%601> ジェネリック インターフェイスが実装されている場合、等値比較子はそのインターフェイスの <xref:System.IEquatable%601.Equals%2A> メソッドです。  
   
--   T 型で <xref:System.IEquatable%601>が実装されていない場合、 <xref:System.Object.Equals%2A?displayProperty=nameWithType> が使用されます。  
+- T 型で <xref:System.IEquatable%601>が実装されていない場合、 <xref:System.Object.Equals%2A?displayProperty=nameWithType> が使用されます。  
   
- また、ディクショナリ コレクションの一部のコンストラクター オーバーロードでは、 <xref:System.Collections.Generic.IEqualityComparer%601> 実装が受け取られ、これを使用してキーの等価性が比較されます。 例については、 <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A?displayProperty=nameWithType> コンストラクターに関する説明を参照してください。  
+ また、ディクショナリ コレクションのコンストラクターの一部のオーバーロードでは、<xref:System.Collections.Generic.IEqualityComparer%601> の実装が受け付けられて、キーが等しいかどうかを比較するために使用されます。 例については、 <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A?displayProperty=nameWithType> コンストラクターに関する説明を参照してください。  
   
 <a name="BKMK_Determiningsortorder"></a>   
 ## <a name="determining-sort-order"></a>並べ替え順序の決定  
@@ -42,11 +42,11 @@ ms.locfileid: "44210300"
   
  既定の比較子は、比較される 1 つ以上のオブジェクトに依存して **IComparable** インターフェイスを実装します。 リスト コレクションの値として使用されるか、またはディクショナリ コレクションのキーとして使用されるすべてのクラスで、 **IComparable** を実装することをお勧めします。 ジェネリック コレクションの場合、等価比較は次の基準に従って決定されます。  
   
--   T 型で <xref:System.IComparable%601?displayProperty=nameWithType> ジェネリック インターフェイスが実装されている場合、既定の比較子はそのインターフェイスの <xref:System.IComparable%601.CompareTo%28%600%29?displayProperty=nameWithType> メソッドです。  
+- T 型で <xref:System.IComparable%601?displayProperty=nameWithType> ジェネリック インターフェイスが実装されている場合、既定の比較子はそのインターフェイスの <xref:System.IComparable%601.CompareTo%28%600%29?displayProperty=nameWithType> メソッドです。  
   
--   T 型で非ジェネリックの <xref:System.IComparable?displayProperty=nameWithType> インターフェイスが実装されている場合、既定の比較子はそのインターフェイスの <xref:System.IComparable.CompareTo%28System.Object%29?displayProperty=nameWithType> メソッドです。  
+- T 型で非ジェネリックの <xref:System.IComparable?displayProperty=nameWithType> インターフェイスが実装されている場合、既定の比較子はそのインターフェイスの <xref:System.IComparable.CompareTo%28System.Object%29?displayProperty=nameWithType> メソッドです。  
   
--   T 型でいずれのインターフェイスも実装されていない場合、既定の比較子は存在せず、比較子または比較デリゲートを明示的に指定する必要があります。  
+- T 型でいずれのインターフェイスも実装されていない場合、既定の比較子は存在せず、比較子または比較デリゲートを明示的に指定する必要があります。  
   
  明示的な比較を指定するために、一部のメソッドではパラメーターとして **IComparer** 実装を受け取ります。 たとえば、 <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> メソッドは <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 実装を受け取ります。  
   
@@ -61,8 +61,8 @@ ms.locfileid: "44210300"
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Collections.IComparer>  
-- <xref:System.IEquatable%601>  
-- <xref:System.Collections.Generic.IComparer%601>  
-- <xref:System.IComparable>  
+- <xref:System.Collections.IComparer>
+- <xref:System.IEquatable%601>
+- <xref:System.Collections.Generic.IComparer%601>
+- <xref:System.IComparable>
 - <xref:System.IComparable%601>

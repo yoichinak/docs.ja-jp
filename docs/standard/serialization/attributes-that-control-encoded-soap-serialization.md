@@ -8,18 +8,18 @@ helpviewer_keywords:
 - attributes [.NET Framework], XML serialization
 - serialization, attributes
 ms.assetid: 93ee258c-9c0f-4a08-897c-c10db7a00f91
-ms.openlocfilehash: 7b5a48003ff9bfb398c05c8d70a9076d49ad83d6
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2961d9abc6c32e78b5a61e8f2bbea5cfcf6677bd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794941"
 ---
 # <a name="attributes-that-control-encoded-soap-serialization"></a>エンコード済み SOAP シリアル化を制御する属性
 
 という名前の World Wide Web Consortium (W3C) ドキュメント[簡易オブジェクト アクセス プロトコル (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/) SOAP パラメーターのエンコード方法について説明する省略可能なセクション (セクション 5) が含まれています。 このセクション 5 の仕様に準拠するには、<xref:System.Xml.Serialization> 名前空間で指定されている特殊な属性セットを使用する必要があります。 これらの属性をクラスやクラスのメンバーに適宜適用し、<xref:System.Xml.Serialization.XmlSerializer> を使用して、クラスのインスタンスをシリアル化します。
 
-これらの属性、およびその適用対象と機能を次の表に示します。 これらの属性を使用する XML シリアル化の制御の詳細については、「[How to: Serialize an Object as a SOAP-Encoded XML Stream](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)」(方法 : オブジェクトを SOAP エンコード済み XML ストリームとしてシリアル化する) および「[How to: Override Encoded SOAP XML Serialization](how-to-override-encoded-soap-xml-serialization.md)」(方法 : SOAP エンコード済み XML シリアル化をオーバーライドする) を参照してください。
+これらの属性、およびその適用対象と機能を次の表に示します。 詳細については、XML シリアル化を制御するこれらの属性を使用して、次を参照してください。[方法。Serialize an Object as SOAP エンコード済み XML Stream](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)と[方法。SOAP エンコード済み XML シリアル化をオーバーライド](how-to-override-encoded-soap-xml-serialization.md)します。
 
 属性の詳細については、「[属性](../../../docs/standard/attributes/index.md)」を参照してください。
 
@@ -34,10 +34,10 @@ ms.locfileid: "46003244"
 
 ## <a name="see-also"></a>関連項目
 
-- [XML シリアル化および SOAP シリアル化](xml-and-soap-serialization.md)  
-- [方法 : オブジェクトを SOAP エンコード済み XML ストリームとしてシリアル化する](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
-- [方法 : SOAP エンコード済み XML シリアル化をオーバーライドする](how-to-override-encoded-soap-xml-serialization.md)  
-- [属性](../../../docs/standard/attributes/index.md)  
-- <xref:System.Xml.Serialization.XmlSerializer>  
-- [方法 : オブジェクトをシリアル化する](how-to-serialize-an-object.md)  
-- [方法 : オブジェクトを逆シリアル化する](how-to-deserialize-an-object.md)
+- [XML シリアル化および SOAP シリアル化](xml-and-soap-serialization.md)
+- [方法: SOAP エンコード済み XML Stream としてオブジェクトをシリアル化します。](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
+- [方法: SOAP エンコード済み XML シリアル化をオーバーライドします。](how-to-override-encoded-soap-xml-serialization.md)
+- [属性](../../../docs/standard/attributes/index.md)
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [方法: オブジェクトをシリアル化します。](how-to-serialize-an-object.md)
+- [方法: オブジェクトを逆シリアル化します。](how-to-deserialize-an-object.md)

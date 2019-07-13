@@ -4,12 +4,12 @@ ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 212cfb1e-cec4-4047-94a6-47209b387f6f
 author: KrzysztofCwalina
-ms.openlocfilehash: b577f42c98cb56fb367cb57a550cb094a8ef105e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 52d7a69a3f52c67ebff3f3db1daf0790e995913a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778769"
 ---
 # <a name="dependency-properties"></a>依存関係プロパティ
 依存関係プロパティ (DP) は、たとえば (フィールド) の型の変数に格納することではなく、プロパティ ストアにその値を格納する標準プロパティです。  
@@ -99,5 +99,5 @@ public class Grid {
   
 ## <a name="see-also"></a>関連項目
 
-- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)  
+- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)
 - [共通デザイン パターン](../../../docs/standard/design-guidelines/common-design-patterns.md)

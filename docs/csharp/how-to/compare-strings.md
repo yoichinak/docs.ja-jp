@@ -1,16 +1,16 @@
 ---
 title: '方法: 文字列を比較する - C# ガイド'
 description: 大文字小文字の区別およびカルチャ固有の順序を使用してまたは使用せずに文字列値を比較および並べ替える方法について説明します。
-ms.date: 03/20/2018
+ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 5b62dd37474dc0afb186c65d1f55f7ccaf7266ec
-ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
+ms.openlocfilehash: bce234ca3a86f057ec35e1c53d22169ee29b7b94
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53334835"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58759873"
 ---
 # <a name="how-to-compare-strings-in-c"></a>C\# で文字列を比較する方法
 
@@ -29,7 +29,13 @@ ms.locfileid: "53334835"
 
 ## <a name="default-ordinal-comparisons"></a>既定の序数の比較
 
-等価性をテストする最も一般的なメソッドである <xref:System.String.Equals%2A?displayProperty=nameWithType> と <xref:System.String.op_Equality%2A?displayProperty=nameWithType> は、大文字と小文字を区別して序数を比較します。 これらの結果を次の例に示します。
+最も一般的な演算である
+
+- <xref:System.String.CompareTo%2A?displayProperty=nameWithType>
+- <xref:System.String.Equals%2A?displayProperty=nameWithType>
+- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 
+
+では、序数の比較、大文字小文字の比較、現在のカルチャが使用されます。 これらの結果を次の例に示します。
 
 [!code-csharp-interactive[Comparing strings using an ordinal comparison](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#1)]
 
@@ -127,8 +133,8 @@ Windows では、言語的な比較から序数に基づく比較に変更した
 
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>  
-- <xref:System.StringComparer?displayProperty=nameWithType>  
-- [文字列](../programming-guide/strings/index.md)  
-- [文字列の比較](../../standard/base-types/comparing.md)  
+- <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>
+- <xref:System.StringComparer?displayProperty=nameWithType>
+- [文字列](../programming-guide/strings/index.md)
+- [文字列の比較](../../standard/base-types/comparing.md)
 - [アプリケーションのグローバライズとローカライズ](/visualstudio/ide/globalizing-and-localizing-applications)

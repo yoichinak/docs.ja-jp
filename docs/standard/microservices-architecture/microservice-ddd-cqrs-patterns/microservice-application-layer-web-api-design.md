@@ -1,15 +1,13 @@
 ---
 title: マイクロサービス アプリケーション レイヤーと Web API を設計する
 description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | アプリケーション レイヤーを設計するための SOLID の原則の概要。'
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: f31c712143a448e12350db1ed242da7561a7a286
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3c3b9f74e76e01deafa1f97de5d3250d57716014
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147497"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639503"
 ---
 # <a name="design-the-microservice-application-layer-and-web-api"></a>マイクロサービス アプリケーション レイヤーと Web API を設計する
 
@@ -38,14 +36,14 @@ SOLID の詳細を取り上げた別のガイドがあります。 そのため�
 #### <a name="additional-resources"></a>その他の技術情報
 
 - **SOLID: 基本的な OOP 原則** \
-  [*https://deviq.com/solid/*](https://deviq.com/solid/%20)
+  <https://deviq.com/solid/>
 
 - **制御の反転コンテナーと依存関係の挿入パターン** \
-  [*https://martinfowler.com/articles/injection.html*](https://martinfowler.com/articles/injection.html)
+  <https://martinfowler.com/articles/injection.html>
 
 - **Steve Smith。new は接着剤である** \
-  [*https://ardalis.com/new-is-glue*](https://ardalis.com/new-is-glue)
+  <https://ardalis.com/new-is-glue>
 
->[!div class="step-by-step"]
->[前へ](nosql-database-persistence-infrastructure.md)
->[次へ](microservice-application-layer-implementation-web-api.md)
+> [!div class="step-by-step"]
+> [前へ](nosql-database-persistence-infrastructure.md)
+> [次へ](microservice-application-layer-implementation-web-api.md)

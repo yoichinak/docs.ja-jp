@@ -26,37 +26,37 @@ helpviewer_keywords:
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d039e591e1f61a7be18dc224845f82b107d918f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 519b92cd24d75dd8e98fc28dbce3701c521a041d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45617935"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593523"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>.NET Framework における型変換
 <a name="top"></a> すべての値には関連付けられた型があり、その値に割り振られる容量、可能な値の範囲、使用できるメンバーなどの属性を定義しています。 多くの値は複数の型として表現できます。 たとえば、値 4 は整数または浮動小数点数として表現できます。 型変換を実行すると、変換元の型の値と等価な値が新しい型で作成されますが、それが元のオブジェクトと同一である (値が正確に一致する) とは限りません。  
   
  次の変換は、.NET Framework によって自動的にサポートされます。  
   
--   派生クラスから基底クラスへの変換。 これは、たとえば、任意のクラスまたは構造体のインスタンスを <xref:System.Object> インスタンスに変換できることを意味します。  この変換では、キャスト演算子または変換演算子は必要ありません。  
+- 派生クラスから基底クラスへの変換。 これは、たとえば、任意のクラスまたは構造体のインスタンスを <xref:System.Object> インスタンスに変換できることを意味します。  この変換では、キャスト演算子または変換演算子は必要ありません。  
   
--   基本クラスから元の派生クラスへの変換。 C# の場合、この変換ではキャスト演算子が必要です。 Visual Basic では、`Option Strict` がオンの場合、`CType` 演算子が必要です。  
+- 基本クラスから元の派生クラスへの変換。 C# の場合、この変換ではキャスト演算子が必要です。 Visual Basic では、`Option Strict` がオンの場合、`CType` 演算子が必要です。  
   
--   インターフェイスを実装する型から、そのインターフェイスを表すインターフェイス オブジェクトへの変換。 この変換では、キャスト演算子または変換演算子は必要ありません。  
+- インターフェイスを実装する型から、そのインターフェイスを表すインターフェイス オブジェクトへの変換。 この変換では、キャスト演算子または変換演算子は必要ありません。  
   
--   インターフェイス オブジェクトから、そのインターフェイスを実装する元の型への変換。  C# の場合、この変換ではキャスト演算子が必要です。 Visual Basic では、`Option Strict` がオンの場合、`CType` 演算子が必要です。  
+- インターフェイス オブジェクトから、そのインターフェイスを実装する元の型への変換。  C# の場合、この変換ではキャスト演算子が必要です。 Visual Basic では、`Option Strict` がオンの場合、`CType` 演算子が必要です。  
   
- これらの自動変換に加えて、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ではカスタムの型変換をサポートするいくつかの機能を提供しています。 次に例を示します。  
+ これらの自動変換に加えて、.NET Framework ではカスタムの型変換をサポートするいくつかの機能を提供しています。 次に例を示します。  
   
--   `Implicit` 演算子。型の間で使用できる拡大変換を定義します。 詳細については、「[Implicit 演算子を使用する暗黙的な変換](#implicit_conversion_with_the_implicit_operator)」を参照してください。  
+- `Implicit` 演算子。型の間で使用できる拡大変換を定義します。 詳細については、「[Implicit 演算子を使用する暗黙的な変換](#implicit_conversion_with_the_implicit_operator)」を参照してください。  
   
--   `Explicit` 演算子。型の間で使用できる縮小変換を定義します。 詳細については、「[Explicit 演算子を使用する明示的な変換](#explicit_conversion_with_the_explicit_operator)」を参照してください。  
+- `Explicit` 演算子。型の間で使用できる縮小変換を定義します。 詳細については、「[Explicit 演算子を使用する明示的な変換](#explicit_conversion_with_the_explicit_operator)」を参照してください。  
   
--   <xref:System.IConvertible> インターフェイス。 .NET Framework の各基本データ型への変換を定義します。 詳細については、「[IConvertible インターフェイス](#the_iconvertible_interface)」を参照してください。  
+- <xref:System.IConvertible> インターフェイス。 .NET Framework の各基本データ型への変換を定義します。 詳細については、「[IConvertible インターフェイス](#the_iconvertible_interface)」を参照してください。  
   
--   <xref:System.Convert> クラス。<xref:System.IConvertible> インターフェイスにメソッドを実装する一連のメソッドを提供します。 詳細については、「[Convert クラス](#Convert)」を参照してください。  
+- <xref:System.Convert> クラス。<xref:System.IConvertible> インターフェイスにメソッドを実装する一連のメソッドを提供します。 詳細については、「[Convert クラス](#Convert)」を参照してください。  
   
--   <xref:System.ComponentModel.TypeConverter> クラス。指定された型から他の型への変換をサポートするように拡張できる基本クラスです。 詳細については、「[TypeConverter クラス](#the_typeconverter_class)」を参照してください。  
+- <xref:System.ComponentModel.TypeConverter> クラス。指定された型から他の型への変換をサポートするように拡張できる基本クラスです。 詳細については、「[TypeConverter クラス](#the_typeconverter_class)」を参照してください。  
   
 <a name="implicit_conversion_with_the_implicit_operator"></a>   
 ## <a name="implicit-conversion-with-the-implicit-operator"></a>Implicit 演算子を使用する暗黙的な変換  
@@ -97,7 +97,7 @@ ms.locfileid: "45617935"
 |<xref:System.UInt32>|<xref:System.UInt32.MaxValue?displayProperty=nameWithType> が <xref:System.Int32.MaxValue?displayProperty=nameWithType> より大きくなっています。|  
 |<xref:System.UInt64>|<xref:System.UInt64.MaxValue?displayProperty=nameWithType> が <xref:System.Int32.MaxValue?displayProperty=nameWithType> より大きくなっています。|  
   
- このような縮小変換を処理するため、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] では、型で `Explicit` 演算子を定義できます。 これにより、個別の言語コンパイラで独自の構文を使用してこの演算子を実装するか、または <xref:System.Convert> クラスのメンバーを呼び出して変換を実行できます (<xref:System.Convert> クラスの詳細については、このトピックの下記の「[Convert クラス](#Convert)」を参照してください)。これらの範囲外の可能性がある整数値を <xref:System.Int32> 値に明示的に変換する処理を実行する言語機能の使用例を次に示します。  
+ このような縮小変換を処理するため、.NET Framework では、型で `Explicit` 演算子を定義できます。 これにより、個別の言語コンパイラで独自の構文を使用してこの演算子を実装するか、または <xref:System.Convert> クラスのメンバーを呼び出して変換を実行できます (<xref:System.Convert> クラスの詳細については、このトピックの下記の「[Convert クラス](#Convert)」を参照してください)。これらの範囲外の可能性がある整数値を <xref:System.Int32> 値に明示的に変換する処理を行う言語機能の使用例を次に示します。  
   
  [!code-csharp[Conceptual.Conversion#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/explicit1.cs#4)]
  [!code-vb[Conceptual.Conversion#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/explicit1.vb#4)]  
@@ -127,13 +127,13 @@ ms.locfileid: "45617935"
   
 <a name="the_iconvertible_interface"></a>   
 ## <a name="the-iconvertible-interface"></a>IConvertible インターフェイス  
- 任意の型から共通言語ランタイムの基本型への変換をサポートするため、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] には <xref:System.IConvertible> インターフェイスが用意されています。 実装する型には、次のメソッドが必要です。  
+ 任意の型から共通言語ランタイムの基本型への変換をサポートするため、.NET Framework には <xref:System.IConvertible> インターフェイスが用意されています。 実装する型には、次のメソッドが必要です。  
   
--   実装する型の <xref:System.TypeCode> を返すメソッド。  
+- 実装する型の <xref:System.TypeCode> を返すメソッド。  
   
--   実装する型を共通言語ランタイムの各基本型 (<xref:System.Boolean>、<xref:System.Byte>、<xref:System.DateTime>、<xref:System.Decimal>、<xref:System.Double> など) へ変換するメソッド。  
+- 実装する型を共通言語ランタイムの各基本型 (<xref:System.Boolean>、<xref:System.Byte>、<xref:System.DateTime>、<xref:System.Decimal>、<xref:System.Double> など) へ変換するメソッド。  
   
--   実装する型のインスタンスを他の特定の型へ変換する汎用的な変換メソッド。 サポートされていない変換では、<xref:System.InvalidCastException> をスローする必要があります。  
+- 実装する型のインスタンスを他の特定の型へ変換する汎用的な変換メソッド。 サポートされていない変換では、<xref:System.InvalidCastException> をスローする必要があります。  
   
  共通言語ランタイムの各基本型 (<xref:System.Boolean>、<xref:System.Byte>、<xref:System.Char>、<xref:System.DateTime>、<xref:System.Decimal>、<xref:System.Double>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.SByte>、<xref:System.Single>、<xref:System.String>、<xref:System.UInt16>、<xref:System.UInt32>、および <xref:System.UInt64>) と、<xref:System.DBNull> 型および <xref:System.Enum> 型には、<xref:System.IConvertible> インターフェイスが実装されます。 ただし、これらは明示的なインターフェイスの実装です。次の例に示すように、変換メソッドは、<xref:System.IConvertible> インターフェイス変数を介してのみ呼び出すことができます。 この例では、<xref:System.Int32> 値が対応する <xref:System.Char> 値に変換されます。  
   
@@ -143,9 +143,9 @@ ms.locfileid: "45617935"
  実装する型ではなく、そのインターフェイス上で変換メソッドを呼び出すという要件があるため、明示的なインターフェイスの実装の負荷は相対的に大きくなります。 代わりに、<xref:System.Convert> クラスの適切なメンバーを呼び出して共通言語ランタイムの基本型間の変換を行うことをお勧めします。 詳細については、次のセクションの「[Convert クラス](#Convert)」を参照してください。  
   
 > [!NOTE]
->  <xref:System.IConvertible> で提供される <xref:System.Convert> インターフェイスおよび [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] クラスに加えて、各言語独自の変換方法が提供されている場合もあります。 たとえば C# ではキャスト演算子が使用され、Visual Basic ではコンパイラで実装された `CType`、`CInt`、`DirectCast` などの変換関数が使用されます。  
+>  .NET Framework で提供される <xref:System.IConvertible> インターフェイスおよび <xref:System.Convert> クラスに加えて、各言語独自の変換方法が提供されている場合もあります。 たとえば C# ではキャスト演算子が使用され、Visual Basic ではコンパイラで実装された `CType`、`CInt`、`DirectCast` などの変換関数が使用されます。  
   
- 一般に、<xref:System.IConvertible> インターフェイスは、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] の基本型間の変換をサポートするために設計されています。 ただし、このインターフェイスをカスタム型に実装して、その型から他のカスタム型への変換をサポートすることもできます。 詳細については、このトピックの「[ChangeType メソッドを使用するカスタム変換](#ChangeType)」を参照してください。  
+ 一般に、<xref:System.IConvertible> インターフェイスは、.NET Framework の基本型間の変換をサポートするために設計されています。 ただし、このインターフェイスをカスタム型に実装して、その型から他のカスタム型への変換をサポートすることもできます。 詳細については、このトピックの「[ChangeType メソッドを使用するカスタム変換](#ChangeType)」を参照してください。  
   
  [ページのトップへ](#top)  
   
@@ -208,6 +208,6 @@ ms.locfileid: "45617935"
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Convert?displayProperty=nameWithType>  
-- <xref:System.IConvertible>  
+- <xref:System.Convert?displayProperty=nameWithType>
+- <xref:System.IConvertible>
 - [型変換の表](../../../docs/standard/base-types/conversion-tables.md)

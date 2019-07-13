@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9a6978f35b5ea9fb71f8e933dbc7a08b1c390ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bcbe9a701b91a063e19fec5aae9cc2687b1f279f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416502"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766132"
 ---
 # <a name="icordebugobjectvalue2getvirtualmethodandtype-method"></a>ICorDebugObjectValue2::GetVirtualMethodAndType メソッド
 このメソッドはまだ実装されていません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetVirtualMethodAndType (  
     [in] mdMemberRef          memberRef,  
     [out] ICorDebugFunction   **ppFunction,  
@@ -37,9 +37,7 @@ HRESULT GetVirtualMethodAndType (
 );  
 ```  
   
-## <a name="remarks"></a>コメント  
- 取得、最派生方法と、指定したメンバーの参照の型を表す"ICorDebugFunction"と"ICorDebugType"のインスタンスへのポインターのインターフェイスです。  
+## <a name="remarks"></a>Remarks  
+ 取得、最派生メソッドと、指定したメンバーの参照の型を表す"ICorDebugFunction"と"ICorDebugType"のインスタンスへのポインターをインターフェイスします。  
   
-## <a name="see-also"></a>関連項目  
-    
- 
+## <a name="see-also"></a>関連項目

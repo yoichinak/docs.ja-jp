@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a982082611760e4f901c427af25a0a49a4e243a1
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 788229053f5702b44c6ac351b59ad1c464e4e133
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580466"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633638"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>量指定子 (正規表現)
 量指定子は、一致と見なされるために入力中に存在する必要がある文字、グループ、または文字クラスの出現数を指定します。  次の表に、.NET でサポートされている量指定子の一覧を示します。  
@@ -49,7 +49,7 @@ ms.locfileid: "48580466"
 ### <a name="match-zero-or-more-times-"></a>0 回以上の繰り返しに一致: *  
  `*` 量指定子は、直前の要素の 0 回以上の繰り返しに一致します。 これは `{0,}` 量指定子と同じです。 `*` は最長一致の量指定子であり、最短一致でこれに対応するのは `*?` です。  
   
- 次の例は、この正規表現を示しています。 入力文字列の 9 個の数字のうち、5 個がパターンに一致し、4 個 (`95`、`929`、`9129`、および `9919`) が一致しません。  
+ 次の例は、この正規表現を示しています。 入力文字列の 9 個の数字のうち、5 個がパターンに一致し、4 個 (`95`、`929`、`9219`、および `9919`) が一致しません。  
   
  [!code-csharp[RegularExpressions.Quantifiers#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#1)]
  [!code-vb[RegularExpressions.Quantifiers#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#1)]  
@@ -228,11 +228,11 @@ ms.locfileid: "48580466"
 ## <a name="greedy-and-lazy-quantifiers"></a>最長一致と最短一致の量指定子  
  いくつかの量指定子には次の 2 つのバージョンがあります。  
   
--   最長一致バージョン。  
+- 最長一致バージョン。  
   
      最長一致の量指定子は、要素をできるだけ多く一致させようとします。  
   
--   最短一致バージョン。  
+- 最短一致バージョン。  
   
      最短一致の量指定子は、要素をできるだけ少なく一致させようとします。 最長一致の量指定子に `?` を追加するだけで最短一致の量指定子にすることができます。  
   
@@ -273,5 +273,5 @@ ms.locfileid: "48580466"
   
 ## <a name="see-also"></a>関連項目
 
-- [正規表現言語 - クイック リファレンス](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [正規表現言語 - クイック リファレンス](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [バックトラッキング](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)

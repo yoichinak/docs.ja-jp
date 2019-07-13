@@ -1,17 +1,17 @@
 ---
-title: '&lt;TypeInstantiation&gt; 要素 (.NET ネイティブ)'
+title: <TypeInstantiation> 要素 (.NET ネイティブ)
 ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5277b056c11de4c3e32d33c72bafc8f64ee17d05
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8ea167ae15e4d0035785d228f08779406e05e873
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154831"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052366"
 ---
-# <a name="lttypeinstantiationgt-element-net-native"></a>&lt;TypeInstantiation&gt; 要素 (.NET ネイティブ)
+# <a name="typeinstantiation-element-net-native"></a>\<TypeInstantiation > 要素 (.NET ネイティブ)
 構築されたジェネリック型にランタイム リフレクション ポリシーを適用します。  
   
 ## <a name="syntax"></a>構文  
@@ -39,7 +39,7 @@ ms.locfileid: "53154831"
 |属性|属性の型|説明|  
 |---------------|--------------------|-----------------|  
 |`Name`|全般|必須の属性です。 型名を指定します。|  
-|`Arguments`|全般|必須の属性です。 ジェネリック型の引数を指定します。 複数の引数が存在する場合は、コンマで区切られます。|  
+|`Arguments`|全般|必須の属性です。 ジェネリック型引数を指定します。 複数の引数が存在する場合は、コンマで区切られます。|  
 |`Activate`|リフレクション|省略可能な属性です。 コンストラクターへの実行時アクセスを制御して、インスタンスのアクティブ化を有効にします。|  
 |`Browse`|リフレクション|省略可能な属性です。 プログラム要素に関する情報の照会を制御しますが、実行時アクセスは有効にしません。|  
 |`Dynamic`|リフレクション|省略可能な属性です。 コンストラクター、メソッド、フィールド、プロパティ、およびイベントを含むすべての型のメンバーへの実行時アクセスを制御して、動的プログラミングを有効にします。|  
@@ -103,7 +103,7 @@ ms.locfileid: "53154831"
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  
   
- [!INCLUDE[net_native](../../../includes/net-native-md.md)] ツール チェーンでコンパイルされると、この例は <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType> メソッドを呼び出す行で [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 例外をスローします。 次の `<TypeInstantiation>` 要素をランタイム ディレクティブ ファイルに追加すると、この例外を排除して、必要なメタデータを提供できます。  
+ .NET ネイティブ ツール チェーンでコンパイルされる、例がスローされます、 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)を呼び出す行での例外、<xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType>メソッド。 次の `<TypeInstantiation>` 要素をランタイム ディレクティブ ファイルに追加すると、この例外を排除して、必要なメタデータを提供できます。  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -116,7 +116,8 @@ ms.locfileid: "53154831"
 </Directives>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [ランタイム ディレクティブ ポリシーの設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+## <a name="see-also"></a>関連項目
+
+- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [ランタイム ディレクティブ ポリシーの設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

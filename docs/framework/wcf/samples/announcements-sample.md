@@ -2,12 +2,12 @@
 title: アナウンスのサンプル
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
-ms.openlocfilehash: d03f22b7dd4d9886151e61a2a846f2dc64e661c3
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 895043976fd39ac0057c8dbc1c7daf0394393984
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002756"
 ---
 # <a name="announcements-sample"></a>アナウンスのサンプル
 このサンプルでは、探索機能のアナウンス機能を使用する方法を示します。 アナウンス機能を使用すると、サービスに関するメタデータを含むアナウンス メッセージをサービスから送信できます。 既定では、サービスが開始されたときに Hello アナウンスが送信され、サービスがシャットダウンされたときに Bye アナウンスが送信されます。 これらのアナウンスは、マルチキャストすることも、Point-to-Point 送信することもできます。 このサンプルは、2 つのプロジェクト (サービスとクライアント) で構成されます。  
@@ -68,15 +68,15 @@ static void OnOfflineEvent(object sender, AnnouncementEventArgs e)
   
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには  
   
-1.  このサンプルは、HTTP エンドポイントを使用して、このサンプルで、適切な URL Acl を実行する必要があります追加を参照してください[構成の HTTP および HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)詳細についてはします。 管理特権で次のコマンドを実行すると、適切な ACL が追加されます。 そのままではコマンドが動作しない場合は、代わりに、ドメインとユーザー名を引数に指定して実行してみてください。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. このサンプルは、HTTP エンドポイントを使用して、このサンプルで、適切な URL Acl を実行する必要があります追加を参照してください[構成の HTTP および HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)詳細についてはします。 管理特権で次のコマンドを実行すると、適切な ACL が追加されます。 そのままではコマンドが動作しない場合は、代わりに、ドメインとユーザー名を引数に指定して実行してみてください。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2.  ソリューションをビルドします。  
+2. ソリューションをビルドします。  
   
-3.  client.exe アプリケーションを実行します。  
+3. client.exe アプリケーションを実行します。  
   
-4.  service.exe アプリケーションを実行します。 クライアントは、オンライン アナウンスを受信します。  
+4. service.exe アプリケーションを実行します。 クライアントは、オンライン アナウンスを受信します。  
   
-5.  service.exe アプリケーションを終了します。 クライアントは、オフライン アナウンスを受信します。  
+5. service.exe アプリケーションを終了します。 クライアントは、オフライン アナウンスを受信します。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
@@ -86,5 +86,3 @@ static void OnOfflineEvent(object sender, AnnouncementEventArgs e)
 >  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Announcements`  
-  
-## <a name="see-also"></a>関連項目

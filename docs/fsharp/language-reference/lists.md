@@ -3,11 +3,11 @@ title: 表示内容
 description: についてF#、同じ型の要素の順序付けされた不変の系列を一覧表示します。
 ms.date: 05/16/2016
 ms.openlocfilehash: cc4e292280cca0dca37f69cf5a46ec2822d08d5c
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904125"
 ---
 # <a name="lists"></a>表示内容
 
@@ -62,7 +62,7 @@ F# のリストは変更できないため、変更操作を行うと、既存�
 
 リスト型では次のプロパティがサポートされています。
 
-|プロパティ|種類|説明|
+|プロパティ|型|説明|
 |--------|----|-----------|
 |[ヘッド](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740)|`'T`|1 番目の要素。|
 |[空](https://msdn.microsoft.com/library/44406ecb-1918-4d32-b32a-ca1f69840386)|`'T list`|該当する型の空のリストを返す静的プロパティ。|
@@ -236,13 +236,13 @@ Sum や average などの一般的な算術演算に組み込まれている、 
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet11.fs)]
 
-出力は `1.000000` になります。
+出力は `1.000000`になります。
 
 `List.averageBy` の使用方法を次のコードに示します。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet12.fs)]
 
-出力は `5.5` になります。
+出力は `5.5`になります。
 
 ### <a name="lists-and-tuples"></a>リストとタプル
 

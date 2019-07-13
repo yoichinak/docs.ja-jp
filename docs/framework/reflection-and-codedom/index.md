@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f78ec137-df0e-48c9-a7a0-5f6a1055f011
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e90857fcf02dbd0dd888b0658f3ab626bc5b11bd
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: a190e238992313e498e28217587029041f386040
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793108"
 ---
 # <a name="dynamic-programming-in-the-net-framework"></a>.NET Framework の動的プログラミング
 このセクションでは、.NET Framework での動的プログラミングについて説明します。  
@@ -32,5 +32,3 @@ ms.locfileid: "48025215"
   
 ## <a name="related-sections"></a>関連項目  
  [開発ガイド](../../../docs/framework/development-guide.md)  
-  
- [.NET Framework の高度な読み取り](https://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)

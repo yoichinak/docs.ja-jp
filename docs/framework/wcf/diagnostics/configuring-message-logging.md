@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: 80d852dd08e935d4c06e9b6d2e52b0a075849ef5
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 5b4da744151d8b667c0f944b1a0d51d1251bfae5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085155"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64652013"
 ---
 # <a name="configuring-message-logging"></a>メッセージ ログの構成
 ここでは、さまざまなシナリオでのメッセージ ログの構成方法を示します。  
@@ -83,11 +83,11 @@ ms.locfileid: "44085155"
 ### <a name="other-options"></a>その他のオプション  
  ログ レベルに加えて、次のオプションを指定することができます。  
   
--   全体メッセージの記録 (`logEntireMessage` 属性) : この値は、全体メッセージ (メッセージ ヘッダーと本文) を記録するかどうかを指定します。 既定値は、`false` で、ヘッダーだけ記録することを意味します。 この設定は、サービス メッセージ ログ レベルおよびトランスポート メッセージ ログ レベルに影響を与えます。  
+- メッセージ全体をログイン (`logEntireMessage`属性)。この値は、メッセージ全体 (メッセージ ヘッダーと本文) がログに記録するかどうかを指定します。 既定値は、`false` で、ヘッダーだけ記録することを意味します。 この設定は、サービス メッセージ ログ レベルおよびトランスポート メッセージ ログ レベルに影響を与えます。  
   
--   記録するメッセージの最大数 (`maxMessagesToLog` 属性) : この値は、記録するメッセージの最大数を指定します。 すべてのメッセージ (サービス メッセージ、トランスポート メッセージ、および不正メッセージ) が、このクォータに対してカウントされます。 クォータに達すると、トレースが出力され、それ以上メッセージは記録されません。 既定値は、10000 です。  
+- 記録するメッセージの最大数 (`maxMessagesToLog`属性)。この値は、記録するメッセージの最大数を指定します。 すべてのメッセージ (サービス メッセージ、トランスポート メッセージ、および不正メッセージ) が、このクォータに対してカウントされます。 クォータに達すると、トレースが出力され、それ以上メッセージは記録されません。 既定値は、10000 です。  
   
--   記録するメッセージの最大サイズ (`maxSizeOfMessageToLog` 属性) : この値は、記録するメッセージの最大サイズをバイト単位で指定します。 サイズ制限を超えたメッセージは記録されず、そのメッセージに対して何の処理も実行されません。 この設定は、すべてのトレース レベルに影響を与えます。 ServiceModel トレースがオンの場合は、最初の記録ポイントで警告レベル トレース (ServiceModelSend* または TransportReceive) が出力され、ユーザーに通知します。 サービス レベルとトランスポート レベルのメッセージの既定値は 256 K ですが、正しくないメッセージの既定値は 4 K です。  
+- 記録するメッセージの最大サイズ (`maxSizeOfMessageToLog`属性)。この値は、バイト単位で記録するメッセージの最大サイズを指定します。 サイズ制限を超えたメッセージは記録されず、そのメッセージに対して何の処理も実行されません。 この設定は、すべてのトレース レベルに影響を与えます。 ServiceModel トレースがオンの場合は、最初の記録ポイントで警告レベル トレース (ServiceModelSend* または TransportReceive) が出力され、ユーザーに通知します。 サービス レベルとトランスポート レベルのメッセージの既定値は 256 K ですが、正しくないメッセージの既定値は 4 K です。  
   
     > [!CAUTION]
     >  `maxSizeOfMessageToLog` と照合するために計算されるメッセージ サイズは、シリアル化される前のメモリ上でのメッセージ サイズです。 このサイズは、記録されるメッセージ文字列の実際の長さとは異なります。実際のサイズよりも大きい場合がほとんどです。 その結果、メッセージが記録されない場合があります。 `maxSizeOfMessageToLog` 属性をメッセージの見積もりサイズよりも 10% 大きく設定することによって、この現象を回避することができます。 また、不正メッセージを記録する場合は、メッセージ ログに使用する実際のディスク領域を、`maxSizeOfMessageToLog` で指定した値の最大 5 倍にすることができます。  
@@ -163,7 +163,8 @@ ms.locfileid: "44085155"
   
  `type` 属性は、型のアセンブリ修飾名に設定する必要があることに注意してください。  
   
-## <a name="see-also"></a>関連項目  
- [\<messageLogging >](../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)  
- [メッセージ ログ](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
- [トレースとメッセージ ログの推奨設定](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)
+## <a name="see-also"></a>関連項目
+
+- [\<messageLogging>](../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
+- [メッセージ ログ](../../../../docs/framework/wcf/diagnostics/message-logging.md)
+- [トレースとメッセージ ログの推奨設定](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)

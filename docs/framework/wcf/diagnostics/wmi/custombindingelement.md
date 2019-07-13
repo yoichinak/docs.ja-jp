@@ -2,12 +2,12 @@
 title: CustomBindingElement
 ms.date: 03/30/2017
 ms.assetid: df959dc5-1aef-4338-a123-6ff3e7bc37af
-ms.openlocfilehash: ff0d7d8d6c6cb180043a834a60ca58159ca84c58
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4609185857ffbce057c136d2c50a7b47aed341cf
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61963619"
 ---
 # <a name="custombindingelement"></a>CustomBindingElement
 CustomBindingElement  
@@ -34,11 +34,12 @@ class CustomBindingElement : BindingElement
   
  バインディングの構成名を格納する文字列です。 この値は、カスタム バインディングの識別文字列として機能するユーザー定義文字列です。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
-|Namespace|root\ServiceModel で定義|  
+|名前空間|root\ServiceModel で定義|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Channels.CustomBinding>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Channels.CustomBinding>

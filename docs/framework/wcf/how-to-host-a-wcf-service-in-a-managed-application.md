@@ -1,18 +1,18 @@
 ---
-title: '方法 : マネージド アプリケーションで WCF サービスをホストする'
+title: '方法: マネージド アプリケーションで WCF サービスをホストする'
 ms.date: 09/17/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5eb29db0-b6dc-4e77-8c68-0a62f79d743b
-ms.openlocfilehash: 131d99457427e0818f78076d987f550a99ad7cf0
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b6d1c9c38e2cc5f1b1b7b5538af0339987563de6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196852"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637578"
 ---
-# <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>方法: 管理対象アプリでの WCF サービス ホスト
+# <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>方法: 管理対象アプリでの WCF サービスをホストします。
 
 マネージド アプリケーションでサービスをホストするには、マネージド アプリケーション コード内にサービスのコードを埋め込み、サービスのエンドポイントをコードで強制的に定義するか、構成を使用して宣言により定義してから、または既定のエンドポイントを使用して、<xref:System.ServiceModel.ServiceHost> のインスタンスを作成します。
 
@@ -50,7 +50,7 @@ ms.locfileid: "47196852"
      [!code-vb[CFX_SelfHost4#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#2)]
 
     > [!NOTE]
-    > 定義し、サービス インターフェイスを実装する方法の詳細については、次を参照してください。[方法: サービス コントラクトを定義する](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)と[方法: サービス コントラクトを実装する](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)します。
+    > 定義して、サービス インターフェイスを実装する方法の詳細については、次を参照してください。[方法。サービス コントラクトを定義する](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)と[方法。サービス コントラクトを実装する](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)します。
 
 5. `Main` メソッドの上部で、サービスのベース アドレスで <xref:System.Uri> クラスのインスタンスを作成します。
 
@@ -67,7 +67,7 @@ ms.locfileid: "47196852"
 
 7. キーを押して**Ctrl**+**Shift**+**B**ソリューションをビルドします。
 
-## <a name="test-the-service"></a>サービスをテストします。
+## <a name="test-the-service"></a>サービスをテストする
 
 1. キーを押して**Ctrl**+**F5**サービスを実行します。
 
@@ -99,11 +99,11 @@ ms.locfileid: "47196852"
 - <xref:System.Uri>
 - <xref:System.Configuration.ConfigurationManager.AppSettings%2A>
 - <xref:System.Configuration.ConfigurationManager>
-- [方法 : IIS で WCF サービスをホストする](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [方法: IIS で WCF サービスをホストします。](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
 - [自己ホスト](../../../docs/framework/wcf/samples/self-host.md)
 - [ホスティング サービス](../../../docs/framework/wcf/hosting-services.md)
-- [方法: サービス コントラクトを定義する](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
-- [方法: サービス コントラクトを実装する](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
+- [方法: サービス コントラクトを定義します。](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
+- [方法: サービス コントラクトを実装します。](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
 - [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
 - [サービスとクライアントを構成するためのバインディングの使用](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [システム標準のバインディング](../../../docs/framework/wcf/system-provided-bindings.md)

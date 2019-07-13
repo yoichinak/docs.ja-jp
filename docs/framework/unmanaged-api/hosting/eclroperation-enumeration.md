@@ -16,18 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b18c89cee0c3f5088a9978e448a0d61de1b9848
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 01b000ed3d75ddb6a7882cb8f03ff2cec64fb9fe
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767879"
 ---
 # <a name="eclroperation-enumeration"></a>EClrOperation 列挙型
-一連のホストがポリシーのアクションを適用できる操作について説明します。  
+ホストがポリシーのアクションを適用できる操作のセットについて説明します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum {  
     OPR_ThreadAbort,  
     OPR_ThreadRudeAbortInNonCriticalRegion,  
@@ -43,35 +44,36 @@ typedef enum {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`OPR_AppDomainRudeUnload`|ホストは、ときに実行されるポリシーのアクションを指定できます、<xref:System.AppDomain>正常でない (rude) 方式でモジュールはアンロードされます。|  
-|`OPR_AppDomainUnload`|ホストは、ときに実行されるポリシーのアクションを指定できます、<xref:System.AppDomain>が読み込まれていません。|  
-|`OPR_FinalizerRun`|ホストは、ファイナライザーを実行するときのポリシーのアクションを指定できます。|  
-|`OPR_ProcessExit`|ホストは、ポリシー、プロセスが終了したときに実行されるアクションを指定できます。|  
+|`OPR_AppDomainRudeUnload`|ホストは、ときに実行するポリシーのアクションを指定できます、<xref:System.AppDomain>非グレースフル (ルード) 方式でモジュールはアンロードされます。|  
+|`OPR_AppDomainUnload`|ホストは、ときに実行するポリシーのアクションを指定できます、<xref:System.AppDomain>がアンロードされます。|  
+|`OPR_FinalizerRun`|ホストは、ファイナライザーを実行するときに実行されるポリシーのアクションを指定できます。|  
+|`OPR_ProcessExit`|ホストは、プロセスが終了したときに実行されるポリシーのアクションを指定できます。|  
 |`OPR_ThreadAbort`|ホストは、スレッドが中止されたときに実行されるポリシーのアクションを指定できます。|  
-|`OPR_ThreadRudeAbortInCriticalRegion`|ホストは、コードの重要な領域で rude スレッドの中断が発生したときに実行されるポリシーのアクションを指定できます。|  
-|`OPR_ThreadRudeAbortInNonCriticalRegion`|ホストは、重大でないコード領域で rude スレッドの中断が発生したときに実行されるポリシーのアクションを指定できます。|  
+|`OPR_ThreadRudeAbortInCriticalRegion`|ホストは、コードのクリティカル領域でルード スレッドの中止が発生したときに実行されるポリシーのアクションを指定できます。|  
+|`OPR_ThreadRudeAbortInNonCriticalRegion`|ホストは、重大でないコードの領域でルード スレッドの中止が発生したときに実行されるポリシーのアクションを指定できます。|  
   
-## <a name="remarks"></a>コメント  
- 共通言語ランタイム (CLR) の信頼性インフラストラクチャは、中止とリソース内のコードとコードの重要ではない領域で発生した重要な領域の割り当てエラーを区別します。 この区別は、ホストのコードに障害が発生した場所に応じて異なるポリシーを設定できるように設計されています。  
+## <a name="remarks"></a>Remarks  
+ 共通言語ランタイム (CLR) の信頼性インフラストラクチャは、中止とリソース内のコードとコードの非クリティカル領域で発生した重要な領域の割り当てエラーを区別します。 この区別は、ホスト コードに障害が発生した場所に応じて異なるポリシーを設定できるように設計されています。  
   
- A*コードの重要な領域*は、CLR がそのタスクの中止またはリソースが現在のタスクだけに影響するために、要求を完了に失敗を保証できない領域。 たとえば、タスクは、ロックが保持していると、メモリ割り当て要求の発行時に失敗を示す HRESULT を受け取る場合、にないの安定性を確保するには、そのタスクを中止するだけでは不十分、<xref:System.AppDomain>であるため、<xref:System.AppDomain>他を含めることがありますタスクが同じロックを待機します。 現在を破棄する可能性がありますタスクがタスクのその他の応答を停止 (ハング) に無期限にします。 このような場合は、全体にアンロードする機能、ホストする必要があります。<xref:System.AppDomain>リスクの潜在的なが不安定になるのではなくです。  
+ A*コードのクリティカル領域*は CLR がそのタスクを中止またはをリソースは、現在のタスクのみに影響を与えるは、要求を完了できない状態を保証できない領域。 たとえば、タスクは、ロックが保持するいると、メモリの割り当て要求時にエラーを示す HRESULT を受け取るはの安定性を確保するには、そのタスクを中止するだけでは不十分、<xref:System.AppDomain>ため、<xref:System.AppDomain>他を含めることができますタスクが同じロックを待っています。 現在を破棄するには、タスクにその他のタスク応答を停止することがあります。 このような場合は、全体をアンロードする機能、ホストする必要があります。<xref:System.AppDomain>リスクの潜在的なが不安定になるのではなく。  
   
- A*重大でないコード領域*、その一方で、CLR が、中断や障害の影響は、エラーが発生しているタスクのみれることを保証できる領域がします。  
+ A*コードの領域が重大でない*CLR が中断または障害の影響が、エラーが発生しているタスクだけことを保証できるリージョンは、その一方で、します。  
   
- CLR も区別正常かつ非正常 (rude) 中止します。 一般に、正常または適切な中止は、あらゆる努力 rude 中止がこのような保証を行いません中にタスクを中止する前に、例外処理ルーチンで、ファイナライザーを実行します。  
+ CLR は、グレースフルと非グレースフル (ルード) 中止間も区別します。 一般に、正常または適切な中止は、ルード中止はこのような保証をいたしません中にタスクを中止する前に、例外処理ルーチンとファイナライザーを実行するよう努力します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   
  **ライブラリ:** MSCorEE.dll  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [EClrFailure 列挙型](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)  
- [EPolicyAction 列挙型](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)  
- [ICLRPolicyManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)  
- [IHostPolicyManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)  
- [ホスティングの列挙型](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>関連項目
+
+- [EClrFailure 列挙型](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)
+- [EPolicyAction 列挙型](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)
+- [ICLRPolicyManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
+- [IHostPolicyManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)
+- [ホスティングの列挙型](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

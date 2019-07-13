@@ -1,32 +1,30 @@
 ---
-title: '&lt;追加&gt;要素&lt;namedCaches&gt;'
+title: <namedCaches> の <add> 要素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - add element for <namedCaches>
 - <add> element for <namedCaches>
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: b77ead51b4e064d223735ca52affdec434e5c818
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b0487ba5025557f07d9991f911cd71a677a04e2c
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198186"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423384"
 ---
-# <a name="ltaddgt-element-for-ltnamedcachesgt"></a>&lt;追加&gt;要素&lt;namedCaches&gt;
+# <a name="add-element-for-namedcaches"></a>\<namedCaches> の \<add> 要素
 追加、`namedCache`エントリを`namedCaches`メモリ キャッシュのコレクション。  
   
  \<system.runtime.caching>  
 \<memoryCache>  
-\<namedCaches >  
+\<namedCaches>  
 \<add>  
   
 ## <a name="syntax"></a>構文  
   
 ```xml  
 <namedCaches>  
-    <add name="default" />  
+    <add name="Default" />  
       <!-- child elements -->  
  </namedCaches>  
 ```  
@@ -67,7 +65,7 @@ ms.locfileid: "50198186"
   <system.runtime.caching>  
     <memoryCache>  
       <namedCaches>  
-          <add name="default"   
+          <add name="Default"   
                cacheMemoryLimitMegabytes="0"   
                physicalMemoryPercentage="0"  
                pollingInterval="00:02:00" />  
@@ -78,5 +76,6 @@ ms.locfileid: "50198186"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
+
 - [\<namedCaches > 要素 (キャッシュ設定)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

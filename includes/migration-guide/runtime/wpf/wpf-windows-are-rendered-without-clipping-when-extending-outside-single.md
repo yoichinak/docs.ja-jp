@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 3b7309347c643d89a28331c6ef3cac36085a969a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234196"
+---
 ### <a name="wpf-windows-are-rendered-without-clipping-when-extending-outside-a-single-monitor"></a>1 つのモニターの外部に拡張すると、クリッピングなしで WPF ウィンドウがレンダリングされる
 
 |   |   |
@@ -7,4 +15,3 @@
 |スコープ|マイナー|
 |Version|4.6|
 |型|ランタイム|
-

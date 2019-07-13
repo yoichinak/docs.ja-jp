@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-ms.openlocfilehash: 38ebe2d53bf2f22f6d28452dbc8763247382cc54
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bf5c603dfc6668f8378ba7997df543889b733482
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197165"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422439"
 ---
 # <a name="making-asynchronous-requests"></a>非同期要求を行う
 <xref:System.Net> クラスは、インターネット リソースへの非同期アクセスに .NET Framework の標準非同期プログラミング モデルを使用します。 <xref:System.Net.WebRequest> クラスの <xref:System.Net.WebRequest.BeginGetResponse%2A> および <xref:System.Net.WebRequest.EndGetResponse%2A> メソッドは、インターネット リソースの非同期要求の開始と完了を行います。  
@@ -32,15 +32,15 @@ ms.locfileid: "50197165"
   
  **ClientGetAsync** クラスは、インターネット リソースに対する非同期要求を実装し、結果の応答をコンソールに出力します。 次の一覧で説明するメソッドとプロパティがあります。  
   
--   `allDone` プロパティには、要求の完了を通知する <xref:System.Threading.ManualResetEvent> クラスのインスタンスが含まれています。  
+- `allDone` プロパティには、要求の完了を通知する <xref:System.Threading.ManualResetEvent> クラスのインスタンスが含まれています。  
   
--   `Main()` メソッドは、コマンド ラインを読み取り、指定されたインターネット リソースの要求を開始します。 **WebRequest** `wreq` および **RequestState** `rs` を作成し、**BeginGetResponse** を呼び出して要求の処理を開始し、`allDone.WaitOne()` メソッドを呼び出して、コールバックが完了するまでアプリケーションが終了しないようにします。 インターネット リソースから応答を読み取ると、`Main()` はその応答をコンソールに出力し、アプリケーションは終了します。  
+- `Main()` メソッドは、コマンド ラインを読み取り、指定されたインターネット リソースの要求を開始します。 **WebRequest** `wreq` および **RequestState** `rs` を作成し、**BeginGetResponse** を呼び出して要求の処理を開始し、`allDone.WaitOne()` メソッドを呼び出して、コールバックが完了するまでアプリケーションが終了しないようにします。 インターネット リソースから応答を読み取ると、`Main()` はその応答をコンソールに出力し、アプリケーションは終了します。  
   
--   `showusage()` メソッドは、コンソールにコマンド ライン例を出力します。 これは、コマンド ラインに URI が指定されていない場合に `Main()` から呼び出されます。  
+- `showusage()` メソッドは、コンソールにコマンド ライン例を出力します。 これは、コマンド ラインに URI が指定されていない場合に `Main()` から呼び出されます。  
   
--   `RespCallBack()` メソッドは、インターネット要求の非同期コールバック メソッドを実装します。 インターネット リソースからの応答を含む **WebResponse** インスタンスを作成し、応答ストリームを取得し、非同期にストリームからデータの読み取りを開始します。  
+- `RespCallBack()` メソッドは、インターネット要求の非同期コールバック メソッドを実装します。 インターネット リソースからの応答を含む **WebResponse** インスタンスを作成し、応答ストリームを取得し、非同期にストリームからデータの読み取りを開始します。  
   
--   `ReadCallBack()` メソッドは、応答ストリームを読み取るための非同期コールバック メソッドを実装します。 インターネット リソースから受信したデータを **RequestState** インスタンスの **ResponseData** プロパティに転送し、データが返されなくなるまで、応答ストリームの非同期読み取りを再び開始します。 すべてのデータが読み取られたら、`ReadCallBack()` は応答ストリームを終了し、`allDone.Set()` メソッドを呼び出して、応答全体が **ResponseData** 内にあることを示します。  
+- `ReadCallBack()` メソッドは、応答ストリームを読み取るための非同期コールバック メソッドを実装します。 インターネット リソースから受信したデータを **RequestState** インスタンスの **ResponseData** プロパティに転送し、データが返されなくなるまで、応答ストリームの非同期読み取りを再び開始します。 すべてのデータが読み取られたら、`ReadCallBack()` は応答ストリームを終了し、`allDone.Set()` メソッドを呼び出して、応答全体が **ResponseData** 内にあることを示します。  
   
     > [!NOTE]
     >  すべてのネットワーク ストリームが終了していることが重要です。 各要求と応答ストリームが終了していない場合、アプリケーションからサーバーへの接続が不足し、追加の要求を処理できなくなります。  
@@ -272,7 +272,7 @@ Class ClientGetAsync
        Dim resp As HttpWebResponse = _  
            CType(req.EndGetResponse(ar), HttpWebResponse)  
   
-       ' Start reading data from the respons stream.  
+       ' Start reading data from the response stream.  
        Dim ResponseStream As Stream = resp.GetResponseStream()  
   
        ' Store the reponse stream in RequestState to read  
@@ -334,5 +334,6 @@ Class ClientGetAsync
 End Class  
 ```  
   
-## <a name="see-also"></a>参照  
- [データの要求](../../../docs/framework/network-programming/requesting-data.md)
+## <a name="see-also"></a>関連項目
+
+- [データの要求](../../../docs/framework/network-programming/requesting-data.md)

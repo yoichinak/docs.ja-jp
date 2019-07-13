@@ -1,5 +1,5 @@
 ---
-title: '&lt;assemblyIdentity&gt;要素&lt;ランタイム&gt;'
+title: <runtime> の <assemblyIdentity> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/assemblyIdentity
@@ -9,23 +9,21 @@ helpviewer_keywords:
 - container tags, <assemblyIdentity> element
 - assemblyIdentity element
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: b32e0da554622eb84b5569b5a1db04447fdc2940
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: d5766b76f18dce441cb260887a753dcf64642a6f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674234"
 ---
-# <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a>&lt;assemblyIdentity&gt;要素&lt;ランタイム&gt;
+# <a name="assemblyidentity-element-for-runtime"></a>\<runtime> の \<assemblyIdentity> 要素
 アセンブリに関する識別情報が含まれています。  
   
  \<configuration>  
-\<ランタイム >  
+\<runtime>  
 \<assemblyBinding>  
-\<dependentAssembly >  
-\<assemblyIdentity >  
+\<dependentAssembly>  
+\<assemblyIdentity>  
   
 ## <a name="syntax"></a>構文  
   
@@ -121,7 +119,8 @@ culture="assembly culture"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>関連項目
+
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [アセンブリ バージョンのリダイレクト](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

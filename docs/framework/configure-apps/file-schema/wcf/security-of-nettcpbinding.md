@@ -1,15 +1,15 @@
 ---
-title: '&lt;netTcpBinding&gt; の &lt;security&gt;'
+title: <security> の <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 286cd191-4fd5-4c4e-a223-9c71cf7fdead
-ms.openlocfilehash: 7a457bdcdee797195ed6bdae8cd377296f914b52
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 3fd850862172ad2b9bd58cd01d332028ff76462a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670470"
 ---
-# <a name="ltsecuritygt-of-ltnettcpbindinggt"></a>&lt;netTcpBinding&gt; の &lt;security&gt;
+# <a name="security-of-nettcpbinding"></a>\<セキュリティ > の\<netTcpBinding >
 バインディングのセキュリティ設定を定義します。  
   
  \<system.ServiceModel >  
@@ -40,7 +40,7 @@ ms.locfileid: "54145173"
   
 ## <a name="mode-attribute"></a>mode 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |なし|セキュリティを無効にします。|  
 |Transport|トランスポート セキュリティは、TCP 経由の TLS または SPNaego を使用して提供されます。 サービスは、SSL 証明書を使用して設定する必要があります。 このモードでの保護レベルを制御できます。|  
@@ -67,13 +67,14 @@ ms.locfileid: "54145173"
   
  この構成要素によって、`netTcpBinding` のセキュリティ仕様が提供されます。 これは、コンピューター間通信に適した、安全で信頼できる最適化されたバインディングです。 既定では、このバインディングは、メッセージを配信するための TCP、メッセージの保護と認証を行うための Windows セキュリティ、信頼性を高めるための WS-ReliableMessaging、およびバイナリ メッセージのエンコーディングをサポートするランタイム通信スタックを生成します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.NetTcpSecurity>  
- <xref:System.ServiceModel.NetTcpBinding.Security%2A>  
- <xref:System.ServiceModel.Configuration.NetTcpBindingElement.Security%2A>  
- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>  
- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [バインディング](../../../../../docs/framework/wcf/bindings.md)  
- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.NetTcpSecurity>
+- <xref:System.ServiceModel.NetTcpBinding.Security%2A>
+- <xref:System.ServiceModel.Configuration.NetTcpBindingElement.Security%2A>
+- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>
+- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [バインディング](../../../../../docs/framework/wcf/bindings.md)
+- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

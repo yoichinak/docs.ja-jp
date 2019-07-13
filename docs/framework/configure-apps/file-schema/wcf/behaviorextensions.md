@@ -1,15 +1,15 @@
 ---
-title: '&lt;behaviorExtensions&gt;'
+title: <behaviorExtensions>
 ms.date: 03/30/2017
 ms.assetid: 59f2791a-c78f-40d7-aa80-0d9cd10135d9
-ms.openlocfilehash: 363b5862b4d7677acdf37595ae9c6eeb6c38efa2
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 81ce9bb0e55fe4570f8a21187d9df80ea22393fe
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673460"
 ---
-# <a name="ltbehaviorextensionsgt"></a>&lt;behaviorExtensions&gt;
+# <a name="behaviorextensions"></a>\<behaviorExtensions>
 動作の拡張により、ユーザーはユーザー定義の動作要素を作成できます。 これらの要素は、標準の Windows Communication Foundation (WCF) 動作要素と共に使用できます。 `behaviorExtensions` セクションでは、構成で使用できるように要素を定義します。 次の例は、一般的な動作拡張を示します。  
   
 ```xml  
@@ -51,6 +51,7 @@ ms.locfileid: "54145641"
   
  詳細については、次を参照してください。[ランタイムがアセンブリを検索する方法](https://go.microsoft.com/fwlink/?LinkId=95336)と<xref:System.AppDomain.TypeResolve>します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>  
- [動作を使用したランタイムの構成と拡張](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>
+- [動作を使用したランタイムの構成と拡張](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

@@ -1,27 +1,27 @@
 ---
-title: WCF の &lt;states&gt;、&lt;workflowInstanceQuery&gt;
+title: <states> WCF の <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: d17f7525-8035-4e9e-85a0-4cddae59f85d
-ms.openlocfilehash: d67f4143619b72826f8fef4adbf66ff8782e4a34
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: fad6f9c8871f79e4a1e26c893eed86ba168f6d01
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757951"
 ---
-# <a name="ltstatesgt-of-wcf-ltworkflowinstancequerygt"></a>WCF の &lt;states&gt;、&lt;workflowInstanceQuery&gt;
+# <a name="states-of-wcf-workflowinstancequery"></a>\<状態 > WCF の\<workflowInstanceQuery >
 
 追跡レコードが作成されたときの追跡ワークフロー インスタンスの定期受信済み状態のコレクションを表します。  
   
 追跡プロファイルのクエリの詳細については、次を参照してください[追跡プロファイル。](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
-\<system.serviceModel >\<追跡 >  
+\<system.serviceModel> \<tracking>  
 \<プロファイル >  
 \<trackingProfile>  
 \<ワークフロー >  
 \<workflowInstanceQueries>  
-\<workflowInstanceQuery >  
-\<状態 >  
+\<workflowInstanceQuery>  
+\<states>  
   
 ## <a name="syntax"></a>構文  
   
@@ -55,7 +55,7 @@ ms.locfileid: "54151440"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<状態 >](state-of-wcf-workflowinstancequery.md)|追跡レコードが作成されたときの追跡ワークフロー インスタンスの定期受信済み状態。|  
+|[\<states>](state-of-wcf-workflowinstancequery.md)|追跡レコードが作成されたときの追跡ワークフロー インスタンスの定期受信済み状態。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -72,14 +72,14 @@ ms.locfileid: "54151440"
 |状態|説明|  
 |-----------|-----------------|  
 |Aborted|ワークフロー インスタンスは中止されました。|  
-|Completed|ワークフロー インスタンスは完了しました。|  
+|完了|ワークフロー インスタンスは完了しました。|  
 |Deleted|ワークフロー インスタンスは削除されました。|  
 |Idle|ワークフロー インスタンスはアイドル状態です。|  
 |Persisted|ワークフロー インスタンスは永続化されました。|  
 |Resumed|ワークフロー インスタンスが再開されました。|  
-|Started|ワークフロー インスタンスが開始されました。|  
+|開始|ワークフロー インスタンスが開始されました。|  
 |UnhandledException|ワークフロー インスタンスで未処理の例外が発生しました。|  
-|アンロード|ワークフロー インスタンスはアンロードされました。|  
+|アンロードされました|ワークフロー インスタンスはアンロードされました。|  
 |Canceled|ワークフロー インスタンスは取り消されました。|  
 |Suspended|ワークフロー インスタンスが中断されています。|  
 |Terminated|ワークフロー インスタンスは終了しました。|  
@@ -99,10 +99,10 @@ ms.locfileid: "54151440"
 </workflowInstanceQueries>
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
 
-- <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>       
-- <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType>       
-- <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>       
-- [ワークフローの追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
+- [ワークフローの追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
 - [追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 10d22735-bd37-42c1-a2be-c1932f979a7d
-ms.openlocfilehash: 3a8e141d79a7f261cd969dc78a656a89ffc8bc30
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4a1b18f2c31bf8dad8cf32e2e5205cf3008e7b18
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196532"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59136046"
 ---
 # <a name="sockets"></a>ソケット
 <xref:System.Net.Sockets> 名前空間には、Windows ソケット インターフェイスのマネージド実装が含まれます。 <xref:System.Net> 名前空間のその他すべてのネットワーク アクセス クラスは、ソケットのこの実装の上に構築されます。  
@@ -29,7 +29,8 @@ ms.locfileid: "50196532"
   
  **Socket** クラスは、同期と非同期という 2 つの基本モードに対応しています。 同期モードの場合、ネットワーク操作 (<xref:System.Net.Sockets.Socket.Send%2A> や <xref:System.Net.Sockets.Socket.Receive%2A> など) を実行する関数の呼び出しは、操作の完了を待ってから、呼び出し元のプログラムにコントロールを返します。 非同期モードの場合、このような呼び出しはすぐに返されます。  
   
-## <a name="see-also"></a>参照  
- [方法: ソケットを作成する](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
-    
- [アプリケーション プロトコルの使用](../../../docs/framework/network-programming/using-application-protocols.md)
+## <a name="see-also"></a>関連項目
+
+- [方法: ソケットを作成する](../../../docs/framework/network-programming/how-to-create-a-socket.md)
+
+- [アプリケーション プロトコルの使用](../../../docs/framework/network-programming/using-application-protocols.md)

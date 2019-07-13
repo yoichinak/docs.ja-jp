@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dbaba00e029729fff5ad478a50134ff1e1858c0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7e0e877402daf27c375aedddf8922e919a546ae5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443457"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781174"
 ---
 # <a name="modulebindinfo-structure"></a>ModuleBindInfo 構造体
-参照されるモジュールとそれを含むアセンブリに関する詳細情報を提供します。  
+参照されるモジュールとそれを含んでいるアセンブリに関する詳細情報を提供します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct _ModuleBindInfo {  
     DWORD    dwAppDomainId;  
     LPCWSTR  lpAssemblyIdentity;  
@@ -40,25 +40,26 @@ typedef struct _ModuleBindInfo {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`dwAppDomainId`|一意の識別子、`IStream`への呼び出しによって返される、 [ihostassemblystore::providemodule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md)元となる参照されるモジュールが読み込まれるメソッド。|  
+|`dwAppDomainId`|一意の識別子、`IStream`への呼び出しによって返される、 [ihostassemblystore::providemodule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md)参照されるモジュールの読み込み元のメソッド。|  
 |`lpAssemblyIdentity`|参照されるモジュールを含むアセンブリの一意の識別子。|  
 |`lpModuleName`|参照されるモジュールの名前。|  
   
-## <a name="remarks"></a>コメント  
- `ModuleBindInfo` パラメーターとして渡される`IHostAssemblyStore::ProvideModule`です。 ホスト提供の一意識別子`dwAppDomainId`共通言語ランタイム (CLR) にします。 呼び出した後、 [ihostassemblystore::provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)ランタイム識別子を使用して決定メソッドが返されるかどうかの内容、`IStream`マップされています。 場合は、ランタイムは、ストリームを再割り当てするのではなく、既存のコピーを読み込みます。 ランタイムへの呼び出しから返されるストリームのルックアップ キーとしてこの識別子を使用するも、`IHostAssemblyStore::ProvideAssembly`メソッドです。 したがって、識別子は、アセンブリの要求だけモジュール同様の要求の一意である必要があります。  
+## <a name="remarks"></a>Remarks  
+ `ModuleBindInfo` パラメーターとして渡される`IHostAssemblyStore::ProvideModule`します。 ホスト提供の一意識別子`dwAppDomainId`共通言語ランタイム (CLR) にします。 呼び出しの後に、 [ihostassemblystore::provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)ランタイム識別子を使用して判断するメソッドが返されるかどうかの内容、`IStream`マップされています。 そうである場合、ランタイムは、ストリームを再マップするのではなく、既存のコピーを読み込みます。 ランタイムは、呼び出しから返されるストリームのルックアップ キーとしてこの識別子を使用することも、`IHostAssemblyStore::ProvideAssembly`メソッド。 そのため、識別子は、アセンブリの要求とモジュールの要求も一意である必要があります。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.idl  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ホスト構造体](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  
- [AssemblyBindInfo 構造体](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md)  
- [ICLRAssemblyIdentityManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  
- [ICLRAssemblyReferenceList インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  
- [IHostAssemblyManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [ホスト構造体](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [AssemblyBindInfo 構造体](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md)
+- [ICLRAssemblyIdentityManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [ICLRAssemblyReferenceList インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
+- [IHostAssemblyManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル : Visual C# による Windows フォーム コントロールからの継承'
+title: 'チュートリアル: Visual C# による Windows フォーム コントロールからの継承'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], custom controls
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
-ms.openlocfilehash: cad15b8fb89ec17e45b0f6cfed22f3109551fc2c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: dc9abbf520d3af79a2c64884adcdfa2f1066ce1b
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595725"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557996"
 ---
-# <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>チュートリアル : Visual C# による Windows フォーム コントロールからの継承 #
-[!INCLUDE[csprcslong](../../../../includes/csprcslong-md.md)] では、*継承*によって強力なカスタム コントロールを作成できます。 継承を使用すると、標準の Windows フォーム コントロールの固有の機能をすべて保持しながら、カスタム機能も組み込んだコントロールを作成できます。 このチュートリアルでは、`ValueButton` という単純な継承されたコントロールを作成します。 このボタンは、標準の Windows フォームから機能を継承<xref:System.Windows.Forms.Button>、制御し、という名前のカスタム プロパティを公開`ButtonValue`します。  
+# <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>チュートリアル: Visual C# による Windows フォーム コントロールからの継承\#
+ビジュアルを含むC#、によって強力なカスタム コントロールを作成する*継承*します。 継承を使用すると、標準の Windows フォーム コントロールの固有の機能をすべて保持しながら、カスタム機能も組み込んだコントロールを作成できます。 このチュートリアルでは、`ValueButton` という単純な継承されたコントロールを作成します。 このボタンは、標準の Windows フォームから機能を継承<xref:System.Windows.Forms.Button>、制御し、という名前のカスタム プロパティを公開`ButtonValue`します。  
   
 > [!NOTE]
 >  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
@@ -26,23 +26,23 @@ ms.locfileid: "45595725"
   
 #### <a name="to-create-the-valuebuttonlib-control-library-and-the-valuebutton-control"></a>ValueButtonLib コントロール ライブラリと ValueButton コントロールを作成するには  
   
-1.  **[ファイル]** メニューの **[新規作成]** をポイントし、**[プロジェクト]** をクリックして **[新しいプロジェクト]** ダイアログ ボックスを開きます。  
+1. **[ファイル]** メニューの **[新規作成]** をポイントし、**[プロジェクト]** をクリックして **[新しいプロジェクト]** ダイアログ ボックスを開きます。  
   
-2.  選択、 **Windows フォーム コントロール ライブラリ**Visual c# プロジェクト、および種類の一覧からプロジェクト テンプレート`ValueButtonLib`で、**名前**ボックス。  
+2. 選択、 **Windows フォーム コントロール ライブラリ**Visual c# プロジェクト、および種類の一覧からプロジェクト テンプレート`ValueButtonLib`で、**名前**ボックス。  
   
      プロジェクト名 `ValueButtonLib` は、既定でルート名前空間にも割り当てられます。 ルート名前空間は、アセンブリ内のコンポーネント名の修飾に使用されます。 たとえば、`ValueButton` という名前のコンポーネントが 2 つのアセンブリに含まれている場合、`ValueButtonLib.ValueButton` を使用して目的の `ValueButton` コンポーネントを指定できます。 詳細については、「[名前空間](../../../csharp/programming-guide/namespaces/index.md)」を参照してください。  
   
-3.  **ソリューション エクスプローラー**で、**[UserControl1.cs]** を右クリックし、ショートカット メニューの **[名前の変更]** をクリックします。 ファイル名を `ValueButton.cs` に変更します。 コード要素 "`UserControl1`" へのすべての参照の名前を変更するかどうかをたずねられたら、**[はい]** をクリックします。  
+3. **ソリューション エクスプローラー**で、**[UserControl1.cs]** を右クリックし、ショートカット メニューの **[名前の変更]** をクリックします。 ファイル名を `ValueButton.cs` に変更します。 コード要素 "`UserControl1`" へのすべての参照の名前を変更するかどうかをたずねられたら、**[はい]** をクリックします。  
   
-4.  **ソリューション エクスプローラー**で、**[ValueButton.cs]** を右クリックし、**[コードの表示]** をクリックします。  
+4. **ソリューション エクスプローラー**で、**[ValueButton.cs]** を右クリックし、**[コードの表示]** をクリックします。  
   
-5.  検索、`class`ステートメント行の`public partial class ValueButton`、このコントロールから継承する型を変更および<xref:System.Windows.Forms.UserControl>に<xref:System.Windows.Forms.Button>します。 これにより、継承されたコントロールのすべての機能を継承するように、<xref:System.Windows.Forms.Button>コントロール。  
+5. 検索、`class`ステートメント行の`public partial class ValueButton`、このコントロールから継承する型を変更および<xref:System.Windows.Forms.UserControl>に<xref:System.Windows.Forms.Button>します。 これにより、継承されたコントロールのすべての機能を継承するように、<xref:System.Windows.Forms.Button>コントロール。  
   
-6.  **ソリューション エクスプローラー**で、**[ValueButton.cs]** ノードを開いて、デザイナーによって生成されたコード ファイル (**ValueButton.Designer.cs**) を表示します。 このファイルを**コード エディター**で開きます。  
+6. **ソリューション エクスプローラー**で、**[ValueButton.cs]** ノードを開いて、デザイナーによって生成されたコード ファイル (**ValueButton.Designer.cs**) を表示します。 このファイルを**コード エディター**で開きます。  
   
-7.  検索、`InitializeComponent`メソッドと remove を割り当てる行、<xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>プロパティ。 このプロパティに存在しません、<xref:System.Windows.Forms.Button>コントロール。  
+7. 検索、`InitializeComponent`メソッドと remove を割り当てる行、<xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>プロパティ。 このプロパティに存在しません、<xref:System.Windows.Forms.Button>コントロール。  
   
-8.  **[ファイル]** メニューの **[すべて保存]** をクリックして、プロジェクトを保存します。  
+8. **[ファイル]** メニューの **[すべて保存]** をクリックして、プロジェクトを保存します。  
   
     > [!NOTE]
     >  ビジュアル デザイナーは使用できなくなっています。 <xref:System.Windows.Forms.Button>コントロールは独自の描画、デザイナーでは、その外観を変更することがないです。 ビジュアル表現は同じでなければから継承するクラスと (つまり、 <xref:System.Windows.Forms.Button>)、コードで変更しない限り、します。 UI 要素のないコンポーネントをデザイン サーフェイスに追加することは可能です。  
@@ -52,9 +52,9 @@ ms.locfileid: "45595725"
   
 #### <a name="to-add-the-value-property"></a>Value プロパティを追加するには  
   
-1.  **ソリューション エクスプローラー**で、**[ValueButton.cs]** を右クリックし、ショートカット メニューの **[コードの表示]** をクリックします。  
+1. **ソリューション エクスプローラー**で、**[ValueButton.cs]** を右クリックし、ショートカット メニューの **[コードの表示]** をクリックします。  
   
-2.  `class` ステートメントを見つけます。 `{` の直後に次のコードを入力します。  
+2. `class` ステートメントを見つけます。 `{` の直後に次のコードを入力します。  
   
     ```csharp  
     // Creates the private variable that will store the value of your   
@@ -78,50 +78,50 @@ ms.locfileid: "45595725"
   
      このコードでは、`ButtonValue` プロパティを格納し、取得するメソッドを設定しています。 `get` ステートメントは、返された値を `varValue` プライベート変数に格納されている値に設定します。`set` ステートメントは、`value` キーワードを使用してプライベート変数の値を設定します。  
   
-3.  **[ファイル]** メニューの **[すべて保存]** をクリックして、プロジェクトを保存します。  
+3. **[ファイル]** メニューの **[すべて保存]** をクリックして、プロジェクトを保存します。  
   
 ## <a name="testing-your-control"></a>コントロールのテスト  
  コントロールはスタンドアロン プロジェクトではないため、コンテナー内でホストする必要があります。 コントロールをテストするには、コントロールを実行するテスト プロジェクトを指定する必要があります。 また、コントロールをビルド (コンパイル) して、テスト プロジェクトからアクセスできるようにする必要があります。 このセクションでは、コントロールをビルドし、Windows フォームでテストします。  
   
 #### <a name="to-build-your-control"></a>コントロールをビルドするには  
   
-1.  **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。  
+1. **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。  
   
      コンパイル エラーも警告も発生せずに、ビルドが正常に完了します。  
   
 #### <a name="to-create-a-test-project"></a>テスト プロジェクトを作成するには  
   
-1.  **[ファイル]** メニューの **[追加]** をポイントし、**[新しいプロジェクト]** をクリックして **[新しいプロジェクトの追加]** ダイアログ ボックスを開きます。  
+1. **[ファイル]** メニューの **[追加]** をポイントし、**[新しいプロジェクト]** をクリックして **[新しいプロジェクトの追加]** ダイアログ ボックスを開きます。  
   
-2.  **[Visual C#]** ノードの下の **[Windows]** ノードを選択し、**[Windows フォーム アプリケーション]** をクリックします。  
+2. **[Visual C#]** ノードの下の **[Windows]** ノードを選択し、**[Windows フォーム アプリケーション]** をクリックします。  
   
-3.  **[名前]** ボックスに「`Test`」と入力します。  
+3. **[名前]** ボックスに「`Test`」と入力します。  
   
-4.  **ソリューション エクスプローラー**で、テスト プロジェクトの **[参照設定]** ノードを右クリックし、ショートカット メニューの **[参照の追加]** をクリックして **[参照の追加]** ダイアログ ボックスを表示します。  
+4. **ソリューション エクスプローラー**で、テスト プロジェクトの **[参照設定]** ノードを右クリックし、ショートカット メニューの **[参照の追加]** をクリックして **[参照の追加]** ダイアログ ボックスを表示します。  
   
-5.  **[プロジェクト]** というラベルのタブをクリックします。 **[プロジェクト名]** に `ValueButtonLib` プロジェクトが表示されます。 プロジェクトをダブルクリックして、テスト プロジェクトへの参照を追加します。  
+5. **[プロジェクト]** というラベルのタブをクリックします。 **[プロジェクト名]** に `ValueButtonLib` プロジェクトが表示されます。 プロジェクトをダブルクリックして、テスト プロジェクトへの参照を追加します。  
   
-6.  **ソリューション エクスプローラー**で、**[Test]** を右クリックし、**[ビルド]** をクリックします。  
+6. **ソリューション エクスプローラー**で、**[Test]** を右クリックし、**[ビルド]** をクリックします。  
   
 #### <a name="to-add-your-control-to-the-form"></a>コントロールをフォームに追加するには  
   
-1.  **ソリューション エクスプローラー**で、**[Form1.cs]** を右クリックし、ショートカット メニューの **[デザイナーの表示]** をクリックします。  
+1. **ソリューション エクスプローラー**で、**[Form1.cs]** を右クリックし、ショートカット メニューの **[デザイナーの表示]** をクリックします。  
   
-2.  **ツールボックス**の **[ValueButtonLib コンポーネント]** をクリックします。 **[ValueButton]** をダブルクリックします。  
+2. **ツールボックス**の **[ValueButtonLib コンポーネント]** をクリックします。 **[ValueButton]** をダブルクリックします。  
   
      **ValueButton** がフォームに表示されます。  
   
-3.  **[ValueButton]** を右クリックし、ショートカット メニューの **[プロパティ]** をクリックします。  
+3. **[ValueButton]** を右クリックし、ショートカット メニューの **[プロパティ]** をクリックします。  
   
-4.  **[プロパティ]** ウィンドウで、このコントロールのプロパティを調べます。 プロパティは、追加のプロパティである `ButtonValue` がある点を除き、標準ボタンで公開されるプロパティと同じです。  
+4. **[プロパティ]** ウィンドウで、このコントロールのプロパティを調べます。 プロパティは、追加のプロパティである `ButtonValue` がある点を除き、標準ボタンで公開されるプロパティと同じです。  
   
-5.  `ButtonValue` プロパティを `5` に設定します。  
+5. `ButtonValue` プロパティを `5`に設定します。  
   
-6.  **すべての Windows フォーム**のタブ、**ツールボックス**、ダブルクリック**ラベル**を追加する、<xref:System.Windows.Forms.Label>をフォームにコントロール。  
+6. **すべての Windows フォーム**のタブ、**ツールボックス**、ダブルクリック**ラベル**を追加する、<xref:System.Windows.Forms.Label>をフォームにコントロール。  
   
-7.  ラベルをフォームの中央に配置し直します。  
+7. ラベルをフォームの中央に配置し直します。  
   
-8.  `valueButton1` をダブルクリックします。  
+8. `valueButton1` をダブルクリックします。  
   
      **コード エディター**が開き、`valueButton1_Click` イベントが表示されます。  
   
@@ -141,8 +141,7 @@ ms.locfileid: "45595725"
   
      `label1` に数字の "5" が表示されます。これは、継承されたコントロールの `ButtonValue` プロパティが、`valueButton1_Click` メソッドによって `label1` に渡されたことを示しています。 このようにして、`ValueButton` コントロールは標準の Windows フォーム ボタンの機能をすべて継承しながら、追加のカスタム プロパティを公開します。  
   
-## <a name="see-also"></a>関連項目  
- [コンポーネントによるプログラミング](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)  
- [コンポーネント作成のチュートリアル](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)  
- [方法: [ツールボックス アイテムの選択] ダイアログ ボックスにコントロールを表示する](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
- [チュートリアル: Visual C# による複合コントロールの作成](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+## <a name="see-also"></a>関連項目
+
+- [方法: 内のコントロールを表示、ツールボックス項目 ダイアログ ボックスの選択](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [チュートリアル: ビジュアルを含む複合コントロールの作成C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)

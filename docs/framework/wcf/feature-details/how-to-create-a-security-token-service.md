@@ -1,5 +1,5 @@
 ---
-title: 操作方法：セキュリティ トークン サービスを作成します。
+title: '方法: セキュリティ トークン サービスを作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
-ms.openlocfilehash: 5926216135429d235593aaf77ee0d29b0bacd8fa
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 39c54c5d91c38e43fd7d0b1205537948e84a0782
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143910"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587530"
 ---
-# <a name="how-to-create-a-security-token-service"></a>操作方法：セキュリティ トークン サービスを作成します。
+# <a name="how-to-create-a-security-token-service"></a>方法: セキュリティ トークン サービスを作成する
 セキュリティ トークン サービスは、WS-Trust 仕様に定義されているプロトコルを実装します。 このプロトコルでは、セキュリティ トークンの発行、更新、キャンセル、および検証を行うためのメッセージ形式とメッセージ交換パターンが定義されています。 セキュリティ トークン サービスでは、これらの機能が 1 つ以上提供されます。 ここでは、最も一般的なシナリオであるトークンの発行の実装について説明します。  
   
 ## <a name="issuing-tokens"></a>トークンの発行  
@@ -24,61 +24,61 @@ ms.locfileid: "53143910"
 ### <a name="request-message-structure"></a>要求メッセージの構造  
  発行要求メッセージの構造は、通常、次の項目で構成されます。  
   
--   要求の値は、URI を入力する`http://schemas.xmlsoap.org/ws/2005/02/trust/Issue`します。
+- 要求の値は、URI を入力する`http://schemas.xmlsoap.org/ws/2005/02/trust/Issue`します。
   
--   "トークンの種類" URI。 この URI の値は、Security Assertions Markup Language (SAML) 1.1 トークンの `http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1` します。  
+- "トークンの種類" URI。 この URI の値は、Security Assertions Markup Language (SAML) 1.1 トークンの `http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1` します。  
   
--   発行済みトークンに関連付けられるキーのビット数を示すキー サイズの値。  
+- 発行済みトークンに関連付けられるキーのビット数を示すキー サイズの値。  
   
--   "キーの種類" URI。 対称キーは、この URI の値は `http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey` します。  
+- "キーの種類" URI。 対称キーは、この URI の値は `http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey` します。  
   
  さらに、2 つの項目が含まれている必要があります。  
   
--   クライアントによって提供されたキー マテリアル。  
+- クライアントによって提供されたキー マテリアル。  
   
--   発行済みトークンが使用されるターゲット サービスを示すスコープ情報。  
+- 発行済みトークンが使用されるターゲット サービスを示すスコープ情報。  
   
  セキュリティ トークン サービスは、発行応答メッセージを作成する際に、発行要求メッセージの情報を使用します。  
   
 ## <a name="response-message-structure"></a>応答メッセージの構造  
  発行応答メッセージの構造は、通常、次の項目で構成されます。  
   
--   発行済みセキュリティ トークン (例 : SAML 1.1 アサーション)。  
+- 発行済みセキュリティ トークン (例 : SAML 1.1 アサーション)。  
   
--   セキュリティ トークンに関連付けられた証明トークン。 対称キーでは、多くの場合、これは暗号化されたキー マテリアルです。  
+- セキュリティ トークンに関連付けられた証明トークン。 対称キーでは、多くの場合、これは暗号化されたキー マテリアルです。  
   
--   発行済みセキュリティ トークンへの参照。 通常、セキュリティ トークン サービスが返す参照は、2 とおりに使用できます。1 つは、クライアントによって送信された後続のメッセージ内に、発行済みトークンが存在する場合で、もう 1 つは、後続のメッセージ内にトークンが存在しない場合です。  
+- 発行済みセキュリティ トークンへの参照。 通常、セキュリティ トークン サービスが返す参照は、2 とおりに使用できます。1 つは、クライアントによって送信された後続のメッセージ内に、発行済みトークンが存在する場合で、もう 1 つは、後続のメッセージ内にトークンが存在しない場合です。  
   
  さらに、2 つの項目が含まれている必要があります。  
   
--   セキュリティ トークン サービスによって提供されたキー マテリアル。  
+- セキュリティ トークン サービスによって提供されたキー マテリアル。  
   
--   共有キーを計算するために必要なアルゴリズム。  
+- 共有キーを計算するために必要なアルゴリズム。  
   
--   発行済みトークンの有効期間情報。  
+- 発行済みトークンの有効期間情報。  
   
 ## <a name="processing-request-messages"></a>要求メッセージの処理  
  セキュリティ トークン サービスは、要求メッセージのさまざまな部分を検査し、要求を満たすトークンを発行できることを確認することによって発行要求を処理します。 セキュリティ トークン サービスは、発行するトークンを作成する前に次のことを確認する必要があります。  
   
--   要求が、実際に発行されるトークンに対する要求であること。  
+- 要求が、実際に発行されるトークンに対する要求であること。  
   
--   要求されたトークンの種類をセキュリティ トークン サービスがサポートしていること。  
+- 要求されたトークンの種類をセキュリティ トークン サービスがサポートしていること。  
   
--   要求を行う権限が要求者にあること。  
+- 要求を行う権限が要求者にあること。  
   
--   キー マテリアルに関する要求者の期待にセキュリティ トークン サービスが応えられること。  
+- キー マテリアルに関する要求者の期待にセキュリティ トークン サービスが応えられること。  
   
  トークンを作成する際には、トークンの署名に使用されるキーと共有キーの暗号化に使用されるキーの 2 つを決定することが重要です。 トークンに署名が必要なのは、クライアントがターゲット サービスにトークンを提示する際に、そのサービスが、そのトークンを発行したのが信頼されるセキュリティ トークン サービスであると判定できるようにするためです。 キー マテリアルは、ターゲット サービスが復号化できる方法で暗号化される必要があります。  
   
  SAML アサーションに署名する処理では、<xref:System.IdentityModel.Tokens.SigningCredentials> インスタンスを作成します。 このクラスのコンストラクターは、次のものを受け取ります  
   
--   SAML アサーションに署名するために使用する <xref:System.IdentityModel.Tokens.SecurityKey>。  
+- SAML アサーションに署名するために使用する <xref:System.IdentityModel.Tokens.SecurityKey>。  
   
--   使用する署名アルゴリズムを識別する文字列。  
+- 使用する署名アルゴリズムを識別する文字列。  
   
--   使用するダイジェスト アルゴリズムを識別する文字列。  
+- 使用するダイジェスト アルゴリズムを識別する文字列。  
   
--   アサーションの署名に使用されるキーを識別する <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier> (必要な場合)。  
+- アサーションの署名に使用されるキーを識別する <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier> (必要な場合)。  
   
  [!code-csharp[c_CreateSTS#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#1)]
  [!code-vb[c_CreateSTS#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#1)]  
@@ -123,12 +123,13 @@ ms.locfileid: "53143910"
 ## <a name="example"></a>例  
  セキュリティ トークン サービスの完全なコードは、次を参照してください。[フェデレーション サンプル](../../../../docs/framework/wcf/samples/federation-sample.md)します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.IdentityModel.Tokens.SigningCredentials>  
- <xref:System.IdentityModel.Tokens.SecurityKey>  
- <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier>  
- <xref:System.IdentityModel.Tokens.SamlSecurityToken>  
- <xref:System.IdentityModel.Tokens.SamlAssertion>  
- <xref:System.ServiceModel.Security.Tokens.BinarySecretSecurityToken>  
- <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>  
- [フェデレーション サンプル](../../../../docs/framework/wcf/samples/federation-sample.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.IdentityModel.Tokens.SigningCredentials>
+- <xref:System.IdentityModel.Tokens.SecurityKey>
+- <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier>
+- <xref:System.IdentityModel.Tokens.SamlSecurityToken>
+- <xref:System.IdentityModel.Tokens.SamlAssertion>
+- <xref:System.ServiceModel.Security.Tokens.BinarySecretSecurityToken>
+- <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>
+- [フェデレーション サンプル](../../../../docs/framework/wcf/samples/federation-sample.md)

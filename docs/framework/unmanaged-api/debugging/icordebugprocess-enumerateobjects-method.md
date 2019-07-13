@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d8d5f2123608af241095c966901bd227fa6152d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a837a43594413ce175f2d52e398440fb6dcb8560
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412218"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766094"
 ---
 # <a name="icordebugprocessenumerateobjects-method"></a>ICorDebugProcess::EnumerateObjects メソッド
 このメソッドは実装されていません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EnumerateObjects (  
     [out] ICorDebugObjectEnum **ppObjects  
 );  

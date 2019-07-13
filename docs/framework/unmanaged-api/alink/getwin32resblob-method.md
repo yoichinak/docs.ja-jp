@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f40b99c0a81bf0f2b622c7d23157dbb5736df1ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bdc1ef6490f250ebe93b0482adf244adfc0ffd56
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403293"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741789"
 ---
 # <a name="getwin32resblob-method"></a>GetWin32ResBlob メソッド
 Win32 リソースの blob を取得します。 アセンブリ オプションを設定した後、このメソッドを呼び出します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetWin32ResBlob(  
     mdAssembly    AssemblyID,  
     mdToken       FileToken,  
@@ -39,21 +39,21 @@ HRESULT GetWin32ResBlob(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- アセンブリの ID です。  
+ アセンブリの ID。  
   
  `FileToken`  
- Win32 バージョン リソースを構築するときに使用されるファイル名の取得に使用されるファイルのトークン  
+ Win32 バージョン リソースを作成するときに使用するファイル名を取得するために使用するファイル トークン  
   
  `fDll`  
- ファイルが DLL の場合、false は EXE の場合は TRUE です。  
+ ファイルは、DLL false EXE の場合は TRUE。  
   
  `pszIconFile`  
- リソースの blob に挿入する省略可能なアイコンです。  
+ リソースの blob に挿入するオプションのアイコン。  
   
  `ppResBlob`  
- リソースの blob を受信します。  
+ リソースの blob を受け取ります。  
   
  `pcbResBlob`  
  Blob のサイズを受け取ります。  
@@ -61,10 +61,11 @@ HRESULT GetWin32ResBlob(
 ## <a name="return-value"></a>戻り値  
  メソッドが成功した場合は、S_OK を返します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  Alink.h が必要です。  
   
-## <a name="see-also"></a>関連項目  
- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>関連項目
+
+- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

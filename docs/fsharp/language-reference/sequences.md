@@ -1,13 +1,13 @@
 ---
 title: シーケンス
 description: 大規模な順序付けられたデータのコレクションを持っていてもすべての要素を使用すると必ずしも期待しないときに、F# シーケンスを使用する方法について説明します。
-ms.date: 05/16/2016
-ms.openlocfilehash: a86d22c834b377d4e92cfa610cdd3b498dd86dfa
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 02/19/2019
+ms.openlocfilehash: a7791be5e8bd07d81fe9e890fc5896b181f0cb39
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770475"
 ---
 # <a name="sequences"></a>シーケンス
 
@@ -98,7 +98,7 @@ A*シーケンス式*シーケンスに評価される式を指定します。 �
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet13.fs)]
 
-[Seq.unfold](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21)状態を受け取り、シーケンスの後続の各要素を生成するためにそれを変換する計算関数からシーケンスを生成します。 状態は、値は、各要素の計算に使用し、各要素の計算を変更できます。 2 番目の引数`Seq.unfold`シーケンスを開始するために使用される初期値です。 `Seq.unfold` 返すことによって、シーケンスを終了することができます、状態のオプションの種類を使用して、`None`値。 次のコードは、シーケンスの 2 つの例を示しています。`seq1`と`fib`、によって生成される、`unfold`操作。 最初、 `seq1`、最大 100 の番号を持つ単純なシーケンスだけです。 次に、`fib`を使用して`unfold`フィボナッチ シーケンスを計算します。 フィボナッチ シーケンス内の各要素は、前の 2 つのフィボナッチ数の合計であるために、状態値は、前の 2 つの数値のシーケンスで構成される組になります。 初期値は`(1,1)`シーケンス内の最初の 2 つの数値。
+[Seq.unfold](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21)状態を受け取り、シーケンスの後続の各要素を生成するためにそれを変換する計算関数からシーケンスを生成します。 状態は、値は、各要素の計算に使用し、各要素の計算を変更できます。 2 番目の引数`Seq.unfold`シーケンスを開始するために使用される初期値です。 `Seq.unfold` 返すことによって、シーケンスを終了することができます、状態のオプションの種類を使用して、`None`値。 次のコードは、シーケンスの 2 つの例を示しています。`seq1`と`fib`、によって生成される、`unfold`操作。 まず、`seq1`は最大 20 の番号を持つ単純なシーケンスだけです。 次に、`fib`を使用して`unfold`フィボナッチ シーケンスを計算します。 フィボナッチ シーケンス内の各要素は、前の 2 つのフィボナッチ数の合計であるために、状態値は、前の 2 つの数値のシーケンスで構成される組になります。 初期値は`(1,1)`シーケンス内の最初の 2 つの数値。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet14.fs)]
 

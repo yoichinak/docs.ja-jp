@@ -1,5 +1,5 @@
 ---
-title: '&lt;ipv6&gt;要素 (ネットワーク設定)'
+title: <ipv6> 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/ipv6
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <ipv6> element
 - ipv6 element
 ms.assetid: 10b79aef-327b-4718-a892-e11f55e4d169
-ms.openlocfilehash: 5e1afdd372c2198c00bf8c02939d2167261b5d5c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b8969cecf8ffb2ef23522f193bb322b1170e6111
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705065"
 ---
-# <a name="ltipv6gt-element-network-settings"></a>&lt;ipv6&gt;要素 (ネットワーク設定)
+# <a name="ipv6-element-network-settings"></a>\<ipv6> 要素 (ネットワーク設定)
 により、インターネット プロトコル バージョン 6 (IPv6) の廃止されたメンバーからの応答、<xref:System.Net.Dns>クラス。  
   
  \<configuration>  
@@ -68,8 +68,9 @@ ms.locfileid: "50205140"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.Net?displayProperty=nameWithType>  
-- <xref:System.Net.Dns?displayProperty=nameWithType>  
-- <xref:System.Net.Sockets.Socket.OSSupportsIPv6%2A?displayProperty=nameWithType>  
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Net?displayProperty=nameWithType>
+- <xref:System.Net.Dns?displayProperty=nameWithType>
+- <xref:System.Net.Sockets.Socket.OSSupportsIPv6%2A?displayProperty=nameWithType>
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

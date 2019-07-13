@@ -8,12 +8,12 @@ helpviewer_keywords:
 - delaysign compiler option [C#]
 - /delaysign compiler option [C#]
 ms.assetid: bcb058eb-2933-4e7f-b356-5c941db4de75
-ms.openlocfilehash: 105f564d40799c1c006caf8b59d6199dbd8e9318
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1d49733531507fc80165e034fde1969305cfd2e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518331"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681730"
 ---
 # <a name="-delaysign-c-compiler-options"></a>-delaysign (C# コンパイラ オプション)
 
@@ -48,10 +48,10 @@ ms.locfileid: "43518331"
 1. プロジェクトの **[プロパティ]** ページを開きます。
 1. **[遅延署名のみ]** プロパティを変更します。
 
-このコンパイラ オプションをプログラムで設定する方法については、「<xref:VSLangProj80.ProjectProperties3.DelaySign%2A>」を参照してください。
+このコンパイラ オプションをプログラムで設定する方法については、「 <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>」をご覧ください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# の -publicsign オプション](publicsign-compiler-option.md)  
-- [C# コンパイラ オプション](index.md)  
+- [C# の -publicsign オプション](publicsign-compiler-option.md)
+- [C# コンパイラ オプション](index.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

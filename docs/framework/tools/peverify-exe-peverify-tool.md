@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 57c47fab98d7def3c3548769da091951819db1b1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e657b8e2a0a9dbe8db703ce97d41a3767191a26f
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50199683"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833865"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (PEVerify ツール)
 PEVerify ツールは、Microsoft Intermediate Language (MSIL) を生成する開発者 (コンパイラの作成者、スクリプト エンジンの開発者など) が、生成する MSIL コードと関連メタデータがタイプ セーフ要件を満たしているかどうかを確認する場合に役立ちます。 一部のコンパイラでは、特定の言語構成を使用しなかった場合にだけ、検査可能でタイプ セーフなコードが生成されます。 このようなコンパイラを使用している場合、生成したコードがタイプ セーフかどうかを確認する必要があると思う開発者もいるはずです。 そのような場合は、ファイルに対して PEVerify ツールを実行し、MSIL とメタデータを検査できます。  
   
- このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、開発者コマンド プロンプト (または、Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
+ このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
   
  コマンド プロンプトに次のように入力します。  
   
@@ -32,7 +32,7 @@ PEVerify ツールは、Microsoft Intermediate Language (MSIL) を生成する�
 peverify filename [options]  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
   
 |引数|説明|  
 |--------------|-----------------|  
@@ -56,12 +56,12 @@ peverify filename [options]
 |**/verbose**|.NET Framework Version 2.0 で、MSIL 検証メッセージに追加情報を表示します。|  
 |**/?**|このツールのコマンド構文とオプションを表示します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  共通言語ランタイムは、セキュリティ機構や分離機構の実施を簡単にするために、アプリケーション コードがタイプ セーフに実行されることに依存しています。 通常、[検査可能でタイプ セーフ](../../../docs/standard/security/key-security-concepts.md#type-safety-and-security)なコード以外のコードは実行できません。しかし、信頼できるが検査を実行できないコードを実行可能にするセキュリティ ポリシーを設定することはできます。  
   
- **/md** と **/il** のいずれのオプションも指定しない場合は、両方の種類の検査が実行されます。 まず、**/md** オプションによる検査が実行されます。 エラーが検出されない場合は、**/il** オプションによる検査が実行されます。 **/md** と **/il** の両方のオプションを指定した場合は、メタデータの検査でエラーが検出された場合でも、**/il** オプションによる検査が実行されます。 つまり、メタデータの検査でエラーが検出されないときは、**peverify** *filename* と **peverify** *filename* **/md** **/il** のいずれを指定しても同じ検査が実行されます。  
+ **/md** と **/il** のいずれのオプションも指定しない場合は、両方の種類の検査が実行されます。 まず、 **/md** オプションによる検査が実行されます。 エラーが検出されない場合は、 **/il** オプションによる検査が実行されます。 **/md** と **/il** の両方のオプションを指定した場合は、メタデータの検査でエラーが検出された場合でも、 **/il** オプションによる検査が実行されます。 つまり、メタデータの検査でエラーが検出されないときは、**peverify** *filename* と **peverify** *filename* **/md** **/il** のいずれを指定しても同じ検査が実行されます。  
   
- Peverify.exe は、データ フローの分析と、メタデータの有効性に関する多数の規則のリストに基づいて、MSIL に対する包括的な検査を実行します。 Peverify.exe によって実行される検査の詳細については、[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] の Tools Developers Guide フォルダー内にある Metadata Validation の仕様および MSIL Instruction Set の仕様を参照してください。  
+ Peverify.exe は、データ フローの分析と、メタデータの有効性に関する多数の規則のリストに基づいて、MSIL に対する包括的な検査を実行します。 Peverify.exe によって実行される検査の詳細については、Windows Software Development Kit (SDK) の Tools Developers Guide フォルダー内にある "Metadata Validation Specification" (メタデータ検証仕様) と "MSIL Instruction Set Specification" (MSIL 命令セット仕様) を参照してください。  
   
  .NET Framework Version 2.0 以降では、`byref`、`dup`、`ldsflda`、`ldflda`、`ldelema`、および `call` の各 MSIL 命令を使用して指定する検証可能な `unbox` 戻り値をサポートします。  
   
@@ -120,8 +120,9 @@ peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp
 0xABCD1234  
 ```  
   
-## <a name="see-also"></a>参照  
- [ツール](../../../docs/framework/tools/index.md)  
- [検証可能なタイプ セーフ コードの作成](../../../docs/framework/misc/code-access-security-basics.md#typesafe_code)  
- [タイプ セーフとセキュリティ](../../../docs/standard/security/key-security-concepts.md#type-safety-and-security)  
- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>関連項目
+
+- [ツール](../../../docs/framework/tools/index.md)
+- [検証可能なタイプ セーフ コードの作成](../../../docs/framework/misc/code-access-security-basics.md#typesafe_code)
+- [タイプ セーフとセキュリティ](../../../docs/standard/security/key-security-concepts.md#type-safety-and-security)
+- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

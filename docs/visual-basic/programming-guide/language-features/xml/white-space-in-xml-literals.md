@@ -5,12 +5,12 @@ helpviewer_keywords:
 - white space [XML in Visual Basic]
 - XML literals [Visual Basic], white space
 ms.assetid: dfe3a9ff-d69a-418e-a6b5-476f4ed84219
-ms.openlocfilehash: 60ee90c69aeda38f95107a6043801a4994972079
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 903928087d5ad9c51040ba6bf65639f44d8c7dd6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245160"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627436"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>XML リテラルでの空白文字 (Visual Basic)
 作成時に、Visual Basic コンパイラは XML リテラルの有意の空白文字だけが組み込まれて、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]オブジェクト。 余分な空白文字は組み込まれません。  
@@ -18,11 +18,11 @@ ms.locfileid: "39245160"
 ## <a name="significant-and-insignificant-white-space"></a>有意の空白文字  
  XML リテラルの空白文字は、のみの 3 つの領域には重要です。  
   
--   属性値に含まれる場合。  
+- 属性値に含まれる場合。  
   
--   要素のテキスト コンテンツの一部であるし、テキストには、その他の文字も含まれています。  
+- 要素のテキスト コンテンツの一部であるし、テキストには、その他の文字も含まれています。  
   
--   要素のテキスト コンテンツの埋め込み式に含まれる場合。  
+- 要素のテキスト コンテンツの埋め込み式に含まれる場合。  
   
  それ以外の場合、コンパイラとして意味のない空白文字を処理しでは、含まれません、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]リテラルのオブジェクト。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "39245160"
 ## <a name="examples"></a>使用例  
  次の例には、外部と内部の 2 つの XML 要素が含まれています。 両方の要素には、そのテキスト コンテンツ内の空白が含まれます。 空白と XML 要素のみが含まれているため、外側の要素内の空白は意味はありません。 空白文字とテキストが含まれているために、内部の要素内の空白は重要です。  
   
- [!code-vb[VbXMLSamples#29](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/white-space-in-xml-literals_1.vb)]  
+ [!code-vb[VbXMLSamples#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#29)]  
   
  実行すると、このコードは、次のテキストを表示します。  
   
@@ -46,5 +46,6 @@ ms.locfileid: "39245160"
 </outer>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Visual Basic での XML の作成](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+## <a name="see-also"></a>関連項目
+
+- [Visual Basic での XML の作成](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)

@@ -4,12 +4,12 @@ ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
 author: KrzysztofCwalina
-ms.openlocfilehash: 3e21251710a44764bd06fbce83f97288b6925bc2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f0ef8ab378fb3898f2d2e134f0b38668f6794ef3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650155"
 ---
 # <a name="serialization"></a>シリアル化
 シリアル化は、オブジェクトを簡単に永続化または転送できる形式に変換するプロセスです。 たとえば、オブジェクトをシリアル化、HTTP を使用して、移行先のマシンで逆シリアル化された、インターネット経由で転送できます。  
@@ -56,7 +56,7 @@ ms.locfileid: "53155107"
   
  シリアル化した型の将来のバージョンは、現在のバージョンの型に逆シリアル化でき、その逆も可能であることを念頭に置いてください。  
   
- データ メンバーもプライベートであり、内部ことはできません変更こと、名前、種類、または型の将来のバージョンでの順序も特別な注意はデータ コントラクト属性に明示的なパラメーターを使用してコントラクトを保持するために実行されない限り、理解しておいてください。  
+ データ メンバーもプライベートであり、内部ことはできません変更こと、名前、種類、または型の将来のバージョンでの順序も特別な注意はデータ コントラクト属性に明示的なパラメーターを使用してコントラクトを保持するために実行されない限り、理解しておいてください.  
   
  シリアル化できる型を変更する場合は、シリアル化の互換性をテストします。 新しいバージョンを古いバージョンに逆シリアル化したり、その逆も試してみてください。  
   
@@ -86,14 +86,16 @@ ms.locfileid: "53155107"
   
 ```csharp
 [Serializable]  
-public class Person : ISerializable {  
-    protected Person(SerializationInfo info, StreamingContext context) {  
-        ...  
+public class Person : ISerializable
+{  
+    protected Person(SerializationInfo info, StreamingContext context)
+    {  
+        // ...  
     }  
 }  
 ```
   
- **✓ DO** 実装、`ISerializable`メンバー明示的にします。  
+ **✓ DO** 実装、<xref:System.Runtime.Serialization.ISerializable>メンバー明示的にします。  
   
  **✓ DO** にリンク確認要求を適用<xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=nameWithType>実装します。 これにより、コアとランタイムのシリアライザーがあるメンバーへのアクセスのみ完全に信頼できます。  
   
@@ -103,5 +105,5 @@ public class Person : ISerializable {
   
 ## <a name="see-also"></a>関連項目
 
-- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)  
+- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)
 - [使用方法のガイドライン](../../../docs/standard/design-guidelines/usage-guidelines.md)

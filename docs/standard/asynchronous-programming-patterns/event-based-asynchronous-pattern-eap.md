@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be4935d74affa227386aa6c63dad13e7e2f7d3dd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 052773c615bcc4ddb5b735ae8164d44ed70bd935
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207457"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513491"
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a>イベント ベースの非同期パターン (EAP)
 
@@ -67,6 +67,6 @@ ms.locfileid: "47207457"
   
 ## <a name="see-also"></a>関連項目
 
-- [マネージド スレッド処理の実施](../threading/managed-threading-best-practices.md)  
-- [イベント](../events/index.md)  
+- [マネージド スレッド処理の実施](../threading/managed-threading-best-practices.md)
+- [イベント](../events/index.md)
 - [非同期プログラミングのデザイン パターン](index.md)

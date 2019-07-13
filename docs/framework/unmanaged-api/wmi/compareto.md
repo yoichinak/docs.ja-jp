@@ -16,43 +16,43 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bde25ae7455dd7fe35fe1a0a43bb2a6b560c0e3e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3566b9b8a3b4183f936c82c39c38dc5daa3aeae1
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208441"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636687"
 ---
 # <a name="compareto-function"></a>CompareTo 関数
-オブジェクトが、別の Windows 管理オブジェクトと比較されます。  
+
+オブジェクトが、別の Windows 管理オブジェクトと比較されます。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a>構文  
-  
-```
+
+## <a name="syntax"></a>構文
+
+```cpp
 HRESULT CompareTo (
-   [in] int               vFunc, 
-   [in] IWbemClassObject* ptr, 
+   [in] int               vFunc,
+   [in] IWbemClassObject* ptr,
    [in] LONG              flags,
-   [in] IWbemClassObject* pCompareTo 
-); 
-```  
+   [in] IWbemClassObject* pCompareTo
+);
+```
 
 ## <a name="parameters"></a>パラメーター
 
-`vFunc`  
+`vFunc`\
 [in]このパラメーターは使用されません。
 
-`ptr`  
+`ptr`\
 [in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。
 
-`flags`  
+`flags`\
 [in]比較検討するオブジェクトの特性を指定するフラグのビットごとの組み合わせ。 参照してください、[解説](#remarks)詳細についてはします。
 
-`pCompareTo`  
-
-[in]比較対象のオブジェクト。 `pcompareTo` 有効な[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス; することはできません`null`します。
+`pCompareTo`\
+[in]比較対象のオブジェクト。 `pCompareTo` 有効な[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス; することはできません`null`します。
 
 ## <a name="return-value"></a>戻り値
 
@@ -66,7 +66,7 @@ HRESULT CompareTo (
 | `WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
 | `WBEM_S_DIFFERENT` | 0x40003 | オブジェクトが異なるです。 |
 | `WBEM_S_SAME` | 0 | オブジェクトは、比較フラグに基づくものと同じです。 |
-  
+
 ## <a name="remarks"></a>Remarks
 
 この関数の呼び出しをラップする、 [IWbemClassObject::CompareTo](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-compareto)メソッド。
@@ -80,7 +80,7 @@ HRESULT CompareTo (
 | `WBEM_FLAG_IGNORE_DEFAULT_VALUES` | 4 | プロパティの既定値を無視します。 このフラグは、クラスの比較にのみ適用されます。 |
 | `WBEM_FLAG_IGNORE_FLAVOR` | 0x20 | 修飾子のフレーバーを無視します。 このフラグはまだ修飾子では考慮が反映規則などのフレーバーの区別は無視されます、制限を上書きします。 |
 | `WBEM_FLAG_IGNORE_CASE` | 0x10 | 文字列値の比較で大文字小文字は無視されます。 これには、文字列と修飾子の値の両方が適用されます。 プロパティと修飾子の名前の比較では、常にこのフラグが設定されているかに関係なく大文字小文字を区別します。 |
-| `WBEM_FLAG_IGNORE_CLASS` | 0x8 | 比較対象のオブジェクトが同じクラスのインスタンスであると仮定します。 そのため、このフラグは、インスタンスに関連する情報のみを比較します。 このフラグを使用すると、パフォーマンスを最適化できます。 同じクラスのオブジェクトがない場合、結果は未定義です。 |
+| `WBEM_FLAG_IGNORE_CLASS` | 0x8 | 比較対象のオブジェクトが、同じクラスのインスタンスであると仮定します。 そのため、このフラグは、インスタンスに関連する情報のみを比較します。 このフラグを使用すると、パフォーマンスを最適化できます。 同じクラスのオブジェクトがない場合、結果は未定義です。 |
 
 または、次のように 1 つの複合フラグを指定することができます。
 
@@ -88,12 +88,14 @@ HRESULT CompareTo (
 |---------|---------|---------|
 |`WBEM_COMPARISON_INCLUDE_ALL` | 0 | 比較のすべての機能を検討してください。 |
 
-## <a name="requirements"></a>要件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
-  
- **ヘッダー:** WMINet_Utils.idl  
-  
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
-## <a name="see-also"></a>関連項目  
-[WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+## <a name="requirements"></a>必要条件
+
+**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+
+**ヘッダー:** WMINet_Utils.idl
+
+**.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
+## <a name="see-also"></a>関連項目
+
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

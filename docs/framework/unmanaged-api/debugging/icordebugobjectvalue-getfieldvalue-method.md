@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 230666cefdadd56465fac35222500ad4b6da67e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0fc65f5b55082970a0cd59a6850aaaa6779d0821
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418309"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766410"
 ---
 # <a name="icordebugobjectvaluegetfieldvalue-method"></a>ICorDebugObjectValue::GetFieldValue メソッド
 このオブジェクトの値の指定したクラスの指定したフィールドの値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetFieldValue (  
     [in]  ICorDebugClass     *pClass,  
     [in]  mdFieldDef         fieldDef,  
@@ -37,7 +37,7 @@ HRESULT GetFieldValue (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pClass`  
  [in]フィールドの値を取得する対象のクラスを表す"ICorDebugClass"オブジェクトへのポインター。  
   
@@ -47,20 +47,18 @@ HRESULT GetFieldValue (
  `ppValue`  
  [out]指定したフィールドの値を表す"ICorDebugValue"オブジェクトへのポインター。  
   
-## <a name="remarks"></a>コメント  
- 指定された、クラス、`pClass`パラメーター、オブジェクトの値のクラスの階層では、あるフィールドは、そのクラスのフィールドをする必要があります。  
+## <a name="remarks"></a>Remarks  
+ 指定された、クラス、`pClass`パラメーターに、オブジェクトの値のクラスの階層にする必要があり、フィールドはそのクラスのフィールドである必要があります。  
   
- `GetFieldValue`汎用オブジェクトおよびジェネリック クラスのメソッドは成功します。 たとえば場合、MyDictionary\<V > ディクショナリから継承\<文字列、V > とオブジェクトの値型 MyDictionary\<int32 > を渡して、`ICorDebugClass`ディクショナリのオブジェクト\<K, V > はディクショナリのフィールドを正常に取得\<文字列、int32 > です。  
+ `GetFieldValue`汎用オブジェクトおよびジェネリック クラスのメソッドは成功します。 たとえば場合、MyDictionary\<V > ディクショナリから継承\<文字列、V >、オブジェクトの値の種類 MyDictionary\<int32 > を渡して、`ICorDebugClass`ディクショナリのオブジェクト\<K, V > はディクショナリのフィールドを正常に取得\<string, int32 > です。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
-    
- 
+## <a name="see-also"></a>関連項目

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 5b0f3cc4a090e3479489285631a8d13b8b134c56
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0bf9fe8124578ba9bd192e10d517e3b0df7e5982
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145661"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744256"
 ---
 # <a name="c-guide"></a>C# のガイド
 
@@ -35,7 +35,7 @@ C# ガイドにはいくつかのセクションがあります。 順番に読�
 * [開始するには](getting-started/index.md)
   * ここでは、好みのプラットフォームで C# 開発環境を使用するためにインストールする必要があるものについて説明します。 このセクションの各トピックで、サポートされているさまざまな環境で初めての C# プログラムを作成する方法を説明します。
 
-* [C# の概要に関するチュートリアル](tutorials/intro-to-csharp/index.md):
+* [C# の概要に関するチュートリアル](tutorials/intro-to-csharp/index.md)
   * C# の概要に関するチュートリアルには、開発を始めたばかりの方が Read Eval Print Loop (REPL) インターフェイスを使用してブラウザーで C# 言語を調べたり、学習したりできる対話型チュートリアルが用意されています。 対話型レッスンを終了した後、ご利用のコンピューターで同じレッスンを実習することにより、コーディング スキルを向上できます。
 
 * [チュートリアル](tutorials/index.md)
@@ -66,6 +66,6 @@ C# ガイドにはいくつかのセクションがあります。 順番に読�
 
 ## <a name="see-also"></a>関連項目
 
-* [Visual C# と Visual Basic の概要](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)  
-* [.NET のガイド](../standard/index.md)  
-* [C# のサンプル](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%23&f%5B0%5D.Text=C%23)  
+- [Visual C# と Visual Basic の概要](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- [.NET のガイド](../standard/index.md)
+- [C# のサンプル](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%23&f%5B0%5D.Text=C%23)

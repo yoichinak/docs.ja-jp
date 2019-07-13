@@ -18,31 +18,32 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7bb624c0ad3d74fa86c19233cbac303ffffc122c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7424c80d05c3ff538cb530b24276868680af1c3d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428017"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778496"
 ---
 # <a name="cleardownloadcache-function"></a>ClearDownloadCache 関数
-ダウンロードされたアセンブリのグローバル アセンブリ キャッシュをクリアします。  
+ダウンロードしたアセンブリのグローバル アセンブリ キャッシュをクリアします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ClearDownloadCache ();  
 ```  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Fusion.h  
   
- **ライブラリ:** Fusion.dll と Mscorwks.dll です。 Mscorwks.dll の代わりに Fusion.dll を使用して、正しいバージョンの .NET Framework を対象にすることを確認してください。  
+ **ライブラリ:** Fusion.dll と Mscorwks.dll します。 Mscorwks.dll のではなく Fusion.dll を使用して、正しいバージョンの .NET Framework を対象にすることを確認します。  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [Fusion グローバル静的関数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
- [グローバル アセンブリ キャッシュ](../../../../docs/framework/app-domains/gac.md)
+## <a name="see-also"></a>関連項目
+
+- [Fusion グローバル静的関数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [グローバル アセンブリ キャッシュ](../../../../docs/framework/app-domains/gac.md)

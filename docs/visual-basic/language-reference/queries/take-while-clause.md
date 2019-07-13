@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Take While clause [Visual Basic]
 - Take While statement [Visual Basic]
 ms.assetid: db8f9f2f-fc9f-4a6c-b0b8-1bf048147e11
-ms.openlocfilehash: 181cc641bb12329c898cc3bb226ea49f0836e979
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 080a106fc1deeb54165511ed03d7c7c5d2060f21
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945198"
 ---
 # <a name="take-while-clause-visual-basic"></a>Take While 句 (Visual Basic)
 指定された条件が `true` である限り、コレクションの要素を含むようにし、残りの要素をバイパスします。  
@@ -38,13 +38,14 @@ Take While expression
 ## <a name="example"></a>例  
  次のコード例では、`Take While`句を任意の注文数が、最初の顧客が見つかるまで結果を取得します。  
   
- [!code-vb[VbSimpleQuerySamples#2](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/take-while-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#2)]  
   
-## <a name="see-also"></a>関連項目  
- [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [クエリ](../../../visual-basic/language-reference/queries/index.md)  
- [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)  
- [From 句](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Take 句](../../../visual-basic/language-reference/queries/take-clause.md)  
- [Skip While 句](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
- [WHERE 句](../../../visual-basic/language-reference/queries/where-clause.md)
+## <a name="see-also"></a>関連項目
+
+- [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [クエリ](../../../visual-basic/language-reference/queries/index.md)
+- [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From 句](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Take 句](../../../visual-basic/language-reference/queries/take-clause.md)
+- [Skip While 句](../../../visual-basic/language-reference/queries/skip-while-clause.md)
+- [Where 句](../../../visual-basic/language-reference/queries/where-clause.md)

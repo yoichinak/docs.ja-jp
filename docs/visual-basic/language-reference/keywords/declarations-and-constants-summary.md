@@ -6,12 +6,12 @@ helpviewer_keywords:
 - declaring constants [Visual Basic], keywords
 - declarations [Visual Basic], Visual Basic language elements
 ms.assetid: 79d64f3e-941d-4d39-bc5b-79f225d5be6e
-ms.openlocfilehash: b7cb3c6c8671a6f172cd7d3b94870e313062eb80
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 00c789d01a55382254e1d90a13b9d8b0a23a81de
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802012"
 ---
 # <a name="declarations-and-constants-summary-visual-basic"></a>宣言と定数の概要 (Visual Basic)
 Visual Basic 言語のキーワードとランタイム ライブラリ メンバーを、目的と使用方法に応じて編成しました。  
@@ -26,8 +26,9 @@ Visual Basic 言語のキーワードとランタイム ライブラリ メン�
 |現在のオブジェクトの参照|[Me](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)|  
 |変数の明示的宣言を要求|[Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)、 [Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)|  
 |イベントの処理|[AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md)、[イベント](../../../visual-basic/language-reference/statements/event-statement.md)、 [RaiseEvent](../../../visual-basic/language-reference/statements/raiseevent-statement.md)、 [RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md)|  
-|継承の実装|[継承](../../../visual-basic/language-reference/statements/inherits-statement.md)、 [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)、 [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)、 [MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)、 [MyClass](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)、[新しい](../../../visual-basic/language-reference/operators/new-operator.md)、[NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)、 [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)、 [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)、 [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)、[オーバーライドします](../../../visual-basic/language-reference/modifiers/overrides.md)|  
+|継承の実装|[継承](../../../visual-basic/language-reference/statements/inherits-statement.md)、 [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)、 [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)、 [MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)、 [MyClass](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)、[新しい](../../../visual-basic/language-reference/operators/new-operator.md)、[NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)、 [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)、[オーバー ロード](../../../visual-basic/language-reference/modifiers/overloads.md)、[オーバーライド可能な](../../../visual-basic/language-reference/modifiers/overridable.md)、[よりも優先されます](../../../visual-basic/language-reference/modifiers/overrides.md)|  
   
-## <a name="see-also"></a>関連項目  
- [キーワード](../../../visual-basic/language-reference/keywords/index.md)  
- [Visual Basic ランタイム ライブラリのメンバー](../../../visual-basic/language-reference/runtime-library-members.md)
+## <a name="see-also"></a>関連項目
+
+- [キーワード](../../../visual-basic/language-reference/keywords/index.md)
+- [Visual Basic ランタイム ライブラリのメンバー](../../../visual-basic/language-reference/runtime-library-members.md)

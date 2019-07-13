@@ -1,18 +1,18 @@
 ---
-title: '方法: カスタム追跡参加要素を作成します。'
+title: '方法: カスタム追跡参加要素を作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-ms.openlocfilehash: 4afa3f46532e365760c0dd5a9e1880a82e5ae82b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 64320a8f4799e79f54348e5381ed2d8ed49d496b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945562"
 ---
-# <a name="how-to-create-a-custom-tracking-participant"></a>方法: カスタム追跡参加要素を作成します。
+# <a name="how-to-create-a-custom-tracking-participant"></a>方法: カスタム追跡参加要素を作成する
 ワークフロー追跡により、ワークフロー実行の状態が視覚的に示されます。 ワークフロー ランタイムによって、ワークフローのライフサイクル イベント、アクティビティのライフサイクル イベント、ブックマークの再開、およびエラーについて説明する追跡レコードが出力されます。 これらの追跡レコードは、追跡参加要素によって使用されます。 Windows Workflow Foundation (WF) には、追跡レコードを Event Tracing for Windows (ETW) イベントとして書き込む標準の追跡参加要素が含まれています。 これで要件が満たされない場合は、カスタムの追跡参加要素を作成することもできます。 チュートリアルのこの手順では、`WriteLine` アクティビティの出力をキャプチャするカスタム追跡参加要素と追跡プロファイルを作成して、ユーザーに表示できるようにする方法について説明します。  
   
 > [!NOTE]
@@ -20,9 +20,9 @@ ms.locfileid: "54150636"
   
 ## <a name="to-create-the-custom-tracking-participant"></a>カスタム追跡参加要素を作成するには  
   
-1.  右クリックして**NumberGuessWorkflowHost**で**ソリューション エクスプ ローラー**選択**追加**、**クラス**します。 型`StatusTrackingParticipant`に、**名前**ボックス、およびクリックして**追加**します。  
+1. 右クリックして**NumberGuessWorkflowHost**で**ソリューション エクスプ ローラー**選択**追加**、**クラス**します。 型`StatusTrackingParticipant`に、**名前**ボックス、およびクリックして**追加**します。  
   
-2.  次の `using` (または `Imports`) ステートメントを、他の `using` (または `Imports`) ステートメントを含むファイルの先頭に追加します。  
+2. 次の `using` (または `Imports`) ステートメントを、他の `using` (または `Imports`) ステートメントを含むファイルの先頭に追加します。  
   
     ```vb  
     Imports System.Activities.Tracking  
@@ -34,7 +34,7 @@ ms.locfileid: "54150636"
     using System.IO;  
     ```  
   
-3.  `StatusTrackingParticipant` クラスを変更して、`TrackingParticipant` から継承されるようにします。  
+3. `StatusTrackingParticipant` クラスを変更して、`TrackingParticipant` から継承されるようにします。  
   
     ```vb  
     Public Class StatusTrackingParticipant  
@@ -49,7 +49,7 @@ ms.locfileid: "54150636"
     }  
     ```  
   
-4.  次の `Track` メソッド オーバーライドを追加します。 追跡レコードには、いくつかの種類があります。 ここでは、アクティビティ追跡レコードに含まれる `WriteLine` アクティビティの出力に注目します。 `TrackingRecord` が `ActivityTrackingRecord` アクティビティの `WriteLine` である場合は、ワークフローの `Text` に基づいた名前の付いたファイルに `WriteLine` の `InstanceId` が追加されます。 このチュートリアルでは、ファイルはホスト アプリケーションの現在のフォルダーに保存されます。  
+4. 次の `Track` メソッド オーバーライドを追加します。 追跡レコードには、いくつかの種類があります。 ここでは、アクティビティ追跡レコードに含まれる `WriteLine` アクティビティの出力に注目します。 `TrackingRecord` が `ActivityTrackingRecord` アクティビティの `WriteLine` である場合は、ワークフローの `Text` に基づいた名前の付いたファイルに `WriteLine` の `InstanceId` が追加されます。 このチュートリアルでは、ファイルはホスト アプリケーションの現在のフォルダーに保存されます。  
   
     ```vb  
     Protected Overrides Sub Track(record As TrackingRecord, timeout As TimeSpan)  
@@ -96,9 +96,9 @@ ms.locfileid: "54150636"
   
 ## <a name="to-create-the-tracking-profile-and-register-the-tracking-participant"></a>追跡プロファイルを作成して追跡参加要素を登録するには  
   
-1.  右クリックして**WorkflowHostForm**で**ソリューション エクスプ ローラー**選択**コードの表示**します。  
+1. 右クリックして**WorkflowHostForm**で**ソリューション エクスプ ローラー**選択**コードの表示**します。  
   
-2.  次の `using` (または `Imports`) ステートメントを、他の `using` (または `Imports`) ステートメントを含むファイルの先頭に追加します。  
+2. 次の `using` (または `Imports`) ステートメントを、他の `using` (または `Imports`) ステートメントを含むファイルの先頭に追加します。  
   
     ```vb  
     Imports System.Activities.Tracking  
@@ -108,7 +108,7 @@ ms.locfileid: "54150636"
     using System.Activities.Tracking;  
     ```  
   
-3.  ワークフロー拡張機能に `ConfigureWorkflowApplication` を追加するコードの直後で、ワークフロー ライフサイクル ハンドラーの前に、`StringWriter` に次のコードを追加します。  
+3. ワークフロー拡張機能に `ConfigureWorkflowApplication` を追加するコードの直後で、ワークフロー ライフサイクル ハンドラーの前に、`StringWriter` に次のコードを追加します。  
   
     ```vb  
     'Add the custom tracking participant with a tracking profile  
@@ -217,9 +217,9 @@ ms.locfileid: "54150636"
   
 ## <a name="to-display-the-tracking-information"></a>追跡情報を表示するには  
   
-1.  右クリックして**WorkflowHostForm**で**ソリューション エクスプ ローラー**選択**コードの表示**します。  
+1. 右クリックして**WorkflowHostForm**で**ソリューション エクスプ ローラー**選択**コードの表示**します。  
   
-2.  `InstanceId_SelectedIndexChanged` ハンドラーで、ステータス ウィンドウをクリアするコードの直後に次のコードを追加します。  
+2. `InstanceId_SelectedIndexChanged` ハンドラーで、ステータス ウィンドウをクリアするコードの直後に次のコードを追加します。  
   
     ```vb  
     'If there is tracking data for this workflow, display it  
@@ -312,11 +312,11 @@ ms.locfileid: "54150636"
   
 ## <a name="to-build-and-run-the-application"></a>アプリケーションをビルドして実行するには  
   
-1.  Ctrl キーと Shift キーを押しながら B キーを押してアプリケーションをビルドします。  
+1. Ctrl キーと Shift キーを押しながら B キーを押してアプリケーションをビルドします。  
   
-2.  Ctrl キーを押しながら F5 キーを押してアプリケーションを起動します。  
+2. Ctrl キーを押しながら F5 キーを押してアプリケーションを起動します。  
   
-3.  推測ゲームとワークフローを開始、およびクリックしての種類の範囲を選択**新しいゲーム**します。 推定値を入力、**推測**ボックスし、をクリックして**移動**推定値を送信します。 ワークフローの状態がステータス ウィンドウに表示されます。 この出力は、`WriteLine` アクティビティからキャプチャされます。 いずれかから選択して、別のワークフローに切り替えて、**ワークフロー インスタンス Id**コンボ ボックスと、現在のワークフローの状態が削除されたことに注意してください。 以前のワークフローに戻して、次の例のように、状態が復元されることを確認します。  
+3. 推測ゲームとワークフローを開始、およびクリックしての種類の範囲を選択**新しいゲーム**します。 推定値を入力、**推測**ボックスし、をクリックして**移動**推定値を送信します。 ワークフローの状態がステータス ウィンドウに表示されます。 この出力は、`WriteLine` アクティビティからキャプチャされます。 いずれかから選択して、別のワークフローに切り替えて、**ワークフロー インスタンス Id**コンボ ボックスと、現在のワークフローの状態が削除されたことに注意してください。 以前のワークフローに戻して、次の例のように、状態が復元されることを確認します。  
   
     > [!NOTE]
     > 追跡が有効になる前に開始されたワークフローに切り替えた場合、状態は表示されません。 ただし、推定値を追加すると、この時点では追跡が有効になっているため、その状態が保存されます。  
@@ -328,11 +328,11 @@ ms.locfileid: "54150636"
     ```
     
     > [!NOTE]
-    > この情報は、乱数の範囲を決定する場合に役立ちますが、これまでに作成された推定値に関する情報を含んでいません。 この情報は、次の手順では[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)します。
+    > この情報は、乱数の範囲を決定する場合に役立ちますが、これまでに作成された推定値に関する情報を含んでいません。 この情報は、次の手順では[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)します。
 
     ワークフロー インスタンス ID を書き留め、ゲームを最後まで実行します。
   
-4.  Windows エクスプ ローラーを開きに移動し、 **numberguessworkflowhost \bin\debug**フォルダー (または**bin \release**プロジェクトの設定によって)。 プロジェクトの実行可能ファイルに加え、GUID ファイル名が付いたファイルがあることに注意します。 前の手順で完了したワークフローのワークフロー インスタンス ID に対応するファイルを特定してメモ帳で開きます。 追跡情報は、次のような情報が含まれています。  
+4. Windows エクスプ ローラーを開きに移動し、 **numberguessworkflowhost \bin\debug**フォルダー (または**bin \release**プロジェクトの設定によって)。 プロジェクトの実行可能ファイルに加え、GUID ファイル名が付いたファイルがあることに注意します。 前の手順で完了したワークフローのワークフロー インスタンス ID に対応するファイルを特定してメモ帳で開きます。 追跡情報は、次のような情報が含まれています。  
   
     ```output
     Please enter a number between 1 and 10
@@ -342,4 +342,4 @@ ms.locfileid: "54150636"
     Please enter a number between 1 and 10
     ```
 
-    この追跡データには、ユーザーの推定値だけでなく、ワークフローの最後の推定値に関する情報も含まれていません。 これは、追跡情報がワークフローからの `WriteLine` 出力のみで構成されており、表示される最後のメッセージがワークフロー完了後に `Completed` ハンドラーから表示されるためです。 チュートリアルの次の手順で[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)、既存の`WriteLine`アクティビティは、ユーザーの推定値と追加を表示する変更`WriteLine`最終的な結果を表示するアクティビティを追加します。 これらの変更が統合されると、[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)と同時に複数のバージョンのワークフローをホストする方法を示します。
+    この追跡データには、ユーザーの推定値だけでなく、ワークフローの最後の推定値に関する情報も含まれていません。 これは、追跡情報がワークフローからの `WriteLine` 出力のみで構成されており、表示される最後のメッセージがワークフロー完了後に `Completed` ハンドラーから表示されるためです。 チュートリアルの次の手順で[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)、既存の`WriteLine`アクティビティは、ユーザーの推定値と追加を表示する変更`WriteLine`最終的な結果を表示するアクティビティを追加します。 これらの変更が統合されると、[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)と同時に複数のバージョンのワークフローをホストする方法を示します。

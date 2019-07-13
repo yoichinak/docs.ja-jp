@@ -1,15 +1,15 @@
 ---
-title: '&lt;peerTransport&gt;'
+title: <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: c1a5013a-9dd4-4a27-b114-795b8b323177
-ms.openlocfilehash: 76c100c0ec793d6dc4e7e5385f9dcf4521d0039e
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 6765259f290047a4199a422b4ad0cced2ffee9ae
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783352"
 ---
-# <a name="ltpeertransportgt"></a>&lt;peerTransport&gt;
+# <a name="peertransport"></a>\<peerTransport >
 カスタム バインドのピア トランスポートを定義します。  
   
  \<system.serviceModel>  
@@ -39,7 +39,7 @@ ms.locfileid: "54151944"
 |---------------|-----------------|  
 |listenIpAddress|ピア ノードが TCP メッセージをリッスンする IP アドレスを指定する文字列です。 既定値は、`null` です。|  
 |maxBufferPoolSize|バッファー プールの最大サイズを指定する正の整数です。 既定値は 524288 です。<br /><br /> WCF の多くの部分でバッファーが使用されます。 使用するたびに毎回バッファーを作成および破壊すると負荷が高くなります。バッファーのガベージ コレクションも同様です。 バッファー プールを使用すると、バッファーをプールから取得して使用し、作業が終わったらプールに戻すことができます。 これで、バッファーの作成と破棄のオーバーヘッドを回避できます。|  
-|maxReceivedMessageSize|ヘッダーなどのメッセージの最大サイズ (バイト単位) を定義する正の整数。 受信側にとってメッセージが大きすぎると、メッセージの送信側は SOAP エラーを受け取ります。 メッセージは受信者によって破棄され、トレース ログにこのイベントのエントリが作成されます。 既定値は 65536 です。|  
+|maxReceivedMessageSize|ヘッダーなどのメッセージの最大サイズ (バイト単位) を定義する正の整数。 受信側にとってメッセージが大きすぎると、メッセージの送信側は SOAP エラーを受け取ります。 メッセージは受信者によってドロップされ、トレース ログにこのイベントのエントリが作成されます。 既定値は 65536 です。|  
 |ポート|このバインディングがピア チャネルの TCP メッセージを処理するネットワーク インターフェイス ポートを指定する整数です。 この値の有効値の範囲は <xref:System.Net.IPEndPoint.MinPort> ～ <xref:System.Net.IPEndPoint.MaxPort> です。 既定値は 0 です。|  
   
 ### <a name="child-elements"></a>子要素  
@@ -57,14 +57,15 @@ ms.locfileid: "54151944"
 ## <a name="remarks"></a>Remarks  
  このトランスポートは、要求/応答操作を含むコントラクトと共に使用することはできません。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.PeerTransportElement>  
- <xref:System.ServiceModel.Channels.PeerTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [トランスポート](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [トランスポートの選択](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [バインディング](../../../../../docs/framework/wcf/bindings.md)  
- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Configuration.PeerTransportElement>
+- <xref:System.ServiceModel.Channels.PeerTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [トランスポート](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [トランスポートの選択](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [バインディング](../../../../../docs/framework/wcf/bindings.md)
+- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

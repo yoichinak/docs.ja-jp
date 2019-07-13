@@ -7,22 +7,23 @@ helpviewer_keywords:
 - customizing controls [WPF]
 - controls [WPF], customization
 ms.assetid: a3d9930e-5597-470e-a636-dcf65eac500b
-ms.openlocfilehash: 938d95c97350a513873cf8f9c5791d66e7a17e72
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b70a6654e5c3722ad1ef1d926ee3a441d24d9e68
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017697"
 ---
 # <a name="control-customization"></a>コントロールのカスタマイズ
-このカテゴリにはさまざまな基本クラス、インターフェイス、およびその他の要素および完全に機能の作成に使用される概念[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]コントロール。  
+このカテゴリは、さまざまな基本クラス、インターフェイス、およびその他の要素および完全に機能の作成に使用される概念について説明します。[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]コントロール。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [コントロールの作成の概要](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
- [スタイルの設定が可能なコントロールを設計するためのガイドライン](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md)  
- [装飾](../../../../docs/framework/wpf/controls/adorners.md)  
- [コントロールのスタイルとテンプレート](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [WPF カスタム コントロールの UI オートメーション](../../../../docs/framework/wpf/controls/ui-automation-of-a-wpf-custom-control.md)  
+ [コントロールの作成の概要](control-authoring-overview.md)  
+ [スタイルの設定が可能なコントロールを設計するためのガイドライン](guidelines-for-designing-stylable-controls.md)  
+ [装飾](adorners.md)  
+ [コントロールのスタイルとテンプレート](control-styles-and-templates.md)  
+ [WPF カスタム コントロールの UI オートメーション](ui-automation-of-a-wpf-custom-control.md)  
   
-## <a name="see-also"></a>関連項目  
- [スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+## <a name="see-also"></a>関連項目
+
+- [スタイルとテンプレート](styling-and-templating.md)

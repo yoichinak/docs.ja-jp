@@ -1,207 +1,162 @@
 ---
-title: コマンド ライン インターフェイス (CLI) ツールを使用して .NET Core アプリを展開する
-description: コマンド ライン インターフェイス (CLI) ツールを使用して .NET Core アプリを展開する方法を説明します。
-author: rpetrusha
-ms.author: ronpet
-ms.date: 09/05/2018
+title: CLI を使用して .NET Core アプリを公開する
+description: .NET Core SDK のコマンド ライン インターフェイス (CLI) ツールを使用して .NET Core アプリを公開する方法を説明します。
+author: thraka
+ms.author: adegeo
+ms.date: 01/16/2019
 dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: 05460174e9b8472a2862c829cd58b72aec26b549
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a72e5e557cd3aa098b674bffd277e3cc6da99d33
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151097"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306067"
 ---
-# <a name="deploy-net-core-apps-with-command-line-interface-cli-tools"></a>コマンド ライン インターフェイス (CLI) ツールを使用して .NET Core アプリを展開する
+# <a name="publish-net-core-apps-with-the-cli"></a>CLI を使用して .NET Core アプリを公開する
 
-.NET Core アプリケーションは、アプリケーション バイナリは含むが対象のシステムに .NET Core バイナリが存在することに依存する*フレームワークに依存する展開*か、アプリケーションと .NET Core のバイナリの両方を含む*自己完結型の配置*のいずれかで展開できます。 概要については、「[.NET Core アプリケーション展開](index.md)」を参照してください。
+この記事では、コマンド ラインから .NET Core アプリケーションを公開する方法を示します。 .NET Core では、アプリケーションを公開する方法が 3 つ用意されています。 フレームワークに依存する展開では、ローカル環境にインストールされている .NET Core ランタイムを使用するクロス プラットフォームの .dll ファイルが生成されます。 フレームワークに依存する実行可能ファイルでは、ローカル環境にインストールされている .NET Core ランタイムを使用するプラットフォーム固有の実行可能ファイルが生成されます。 自己完結型の実行可能ファイルでは、プラットフォーム固有の実行可能ファイルが生成されて、.NET Core ランタイムのローカル コピーが組み込まれます。
 
-以降のセクションでは、次のような展開を作成するために [.NET Core コマンド ライン インターフェイス ツール](../tools/index.md)を使用する方法を説明します。
+これらの公開モードの概要については、「[.NET Core アプリケーションの展開](index.md)」をご覧ください。
 
-- フレームワークに依存する展開
-- サードパーティの依存関係を含む、フレームワークに依存する展開
-- 自己完結型の展開
-- サードパーティの依存関係を含む、自己完結型の展開
+CLI の使用方法について簡単にわかるヘルプをお探しですか。 次の表では、アプリの公開方法についての例を示します。 ターゲット フレームワークは、`-f <TFM>` パラメーターを使用するか、プロジェクト ファイルを編集して、指定することができます。 詳細については、「[公開の基礎](#publishing-basics)」をご覧ください。
 
-コマンド ラインを使用する場合は、任意のプログラム エディターを使用できます。 プログラム エディターが [Visual Studio Code](https://code.visualstudio.com) の場合、**[表示]** > **[統合ターミナル]** を選択して、Visual Studio Code 環境内にコマンド コンソールを開くことができます。
+| 公開モード | SDK のバージョン | コマンド |
+| ------------ | ----------- | ------- |
+| フレームワークに依存する展開 | 2.x | `dotnet publish -c Release` |
+| フレームワークに依存する実行可能ファイル | 2.2 | `dotnet publish -c Release -r <RID> --self-contained false` |
+|                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained false` |
+|                                | 3.0* | `dotnet publish -c Release` |
+| 自己完結型の展開      | 2.1 | `dotnet publish -c Release -r <RID> --self-contained true` |
+|                                | 2.2 | `dotnet publish -c Release -r <RID> --self-contained true` |
+|                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained true` |
+
+\* SDK バージョン 3.0 を使用する場合、基本的な `dotnet publish` コマンドを実行するときは、フレームワークに依存する実行可能ファイルが既定の公開モードです。 これは、プロジェクトのターゲットが **.NET Core 2.1** または **.NET Core 3.0** である場合にのみ適用されます。
+
+## <a name="publishing-basics"></a>公開の基礎
+
+アプリを公開するときは、プロジェクト ファイルの設定 `<TargetFramework>` で既定のターゲット フレームワークを指定します。 任意の有効な[ターゲット フレームワーク モニカー (TFM)](../../standard/frameworks.md) にターゲット フレームワークを変更できます。 たとえば、プロジェクトで `<TargetFramework>netcoreapp2.2</TargetFramework>` を使用している場合は、.NET Core 2.2 をターゲットとするバイナリが作成されます。 この設定で指定されている TFM が、[`dotnet publish`](../tools/dotnet-publish.md) コマンドで使用される既定のターゲットになります。
+
+複数のフレームワークをターゲットにしたい場合は、セミコロンで区切ることにより設定 `<TargetFrameworks>` で複数の TFM 値を設定できます。 `dotnet publish -f <TFM>` コマンドではフレームワークの 1 つを公開できます。 たとえば、`<TargetFrameworks>netcoreapp2.1;netcoreapp2.2</TargetFrameworks>` と設定して `dotnet publish -f netcoreapp2.1` を実行すると、.NET Core 2.1 をターゲットとするバイナリが作成されます。
+
+他の値を設定しない限り、[`dotnet publish`](../tools/dotnet-publish.md) コマンドの出力ディレクトリは `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/` です。 `-c` パラメーターで変更しない限り、**BUILD-CONFIGURATION** の既定のモードは **Debug** です。 たとえば、`dotnet publish -c Release -f netcoreapp2.1` と指定すると、`myfolder/bin/Release/netcoreapp2.1/publish/` に公開されます。
+
+.NET Core SDK 3.0 を使用する場合、.NET Core バージョン 2.1、2.2、または 3.0 をターゲットとするアプリの既定の公開モードは、フレームワークに依存する実行可能ファイルです。
+
+.NET Core SDK 2.1 を使用する場合、.NET Core バージョン 2.1 または 2.2 をターゲットとするアプリの既定の公開モードは、フレームワークに依存する展開です。
+
+### <a name="native-dependencies"></a>ネイティブの依存関係
+
+アプリにネイティブの依存関係がある場合、別のオペレーティング システムではアプリが実行されない可能性があります。 たとえば、ネイティブの Windows API を使用しているアプリは、macOS または Linux では実行されません。 プラットフォーム固有のコードを提供し、プラットフォームごとに実行可能ファイルをコンパイルする必要があります。
+
+また、参照しているライブラリにネイティブの依存関係がある場合、すべてのプラットフォームではアプリを実行できない可能性があることも考慮してください。 ただし、参照している NuGet パッケージには、必要なネイティブの依存関係を処理するためにプラットフォーム固有のバージョンが含まれている可能性があります。
+
+ネイティブの依存関係があるアプリを配布するときは、`dotnet publish -r <RID>` スイッチを使用して、公開対象のターゲット プラットフォームを指定することが必要な場合があります。 ランタイム識別子の一覧については、[ランタイム識別子 (RID) のカタログ](../rid-catalog.md)に関する記事をご覧ください。
+
+プラットフォーム固有のバイナリの詳細については、「[フレームワークに依存する実行可能ファイル](#framework-dependent-executable)」および「[自己完結型の展開](#self-contained-deployment)」セクションをご覧ください。
+
+## <a name="sample-app"></a>サンプル アプリ
+
+次のいずれかのアプリを使用して、公開コマンドを確認できます。 ターミナルで次のコマンドを実行すると、アプリが作成されます。
+
+```dotnetcli
+mkdir apptest1
+cd apptest1
+dotnet new console
+dotnet add package Figgle
+```
+
+コンソール テンプレートによって生成される `Program.cs` または `Program.vb` ファイルを、次のように変更する必要があります。
+
+```csharp
+using System;
+
+namespace apptest1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(Figgle.FiggleFonts.Standard.Render("Hello, World!"));
+        }
+    }
+}
+```
+
+```vb
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Console.WriteLine(Figgle.FiggleFonts.Standard.Render("Hello, World!"))
+    End Sub
+End Module
+```
+
+アプリを実行すると ([`dotnet run`](../tools/dotnet-run.md))、次の出力が表示されます。
+
+```terminal
+  _   _      _ _         __        __         _     _ _
+ | | | | ___| | | ___    \ \      / /__  _ __| | __| | |
+ | |_| |/ _ \ | |/ _ \    \ \ /\ / / _ \| '__| |/ _` | |
+ |  _  |  __/ | | (_) |    \ V  V / (_) | |  | | (_| |_|
+ |_| |_|\___|_|_|\___( )    \_/\_/ \___/|_|  |_|\__,_(_)
+                     |/
+```
 
 ## <a name="framework-dependent-deployment"></a>フレームワークに依存する展開
 
-サードパーティの依存関係を含まない、フレームワークに依存する展開を展開するプロセスには、アプリのビルド、テスト、および発行が含まれます。 C# で記述された次の単純な例は、このプロセスを示しています。
+.NET Core SDK 2.x の CLI では、フレームワークに依存する展開 (FDD) が、基本的な `dotnet publish` コマンドの既定のモードです。
 
-1. プロジェクトのディレクトリを作成します。
+FDD としてアプリを公開すると、`./bin/<BUILD-CONFIGURATION>/<TFM>/publish/` フォルダーに`<PROJECT-NAME>.dll` ファイルが作成されます。 アプリを実行するには、出力フォルダーに移動して、`dotnet <PROJECT-NAME>.dll` コマンドを使用します。
 
-   プロジェクトのディレクトリを作成し、それを現在のディレクトリにします。
+アプリは、特定のバージョンの .NET Core をターゲットにするように構成されます。 アプリを実行するコンピューターには、そのターゲットの .NET Core ランタイムが存在する必要があります。 たとえば、アプリのターゲットが .NET Core 2.2 である場合、アプリを実行するコンピューターには、.NET Core 2.2 ランタイムがインストールされている必要があります。 「[公開の基礎](#publishing-basics)」セクションで説明したように、プロジェクト ファイルを編集することで、既定のターゲット フレームワークを変更したり、複数のフレームワークをターゲットにしたりできます。
 
-1. プロジェクトを作成します。
+FDD の公開では、アプリが実行されるシステムで使用できる最新の .NET Core セキュリティ更新プログラムまで自動的にロールフォワードするアプリが作成されます。 コンパイル時のバージョンのバインドの詳細については、「[使用する .NET Core のバージョンを選択する](../versions/selection.md#framework-dependent-apps-roll-forward)」をご覧ください。
 
-   コマンドラインから「[dotnet new console](../tools/dotnet-new.md)」と入力すると新しい C# コンソール プロジェクトが作成され、「[dotnet new console -lang vb](../tools/dotnet-new.md)」と入力するとこのディレクトリに新しい Visual Basic コンソール プロジェクトが作成されます。
+## <a name="framework-dependent-executable"></a>フレームワークに依存する実行可能ファイル
 
-1. アプリケーションのソース コードを追加します。
+.NET Core SDK 3.x の CLI では、フレームワークに依存する実行可能ファイル (FDE) が、基本的な `dotnet publish` コマンドの既定のモードです。 現在のオペレーティング システムをターゲットにする限り、他のパラメーターを指定する必要はありません。
 
-   エディターで *Program.cs* または *Program.vb* ファイルを開き、自動生成されたコードを次のコードに置き換えます。 テキストの入力を求めるプロンプトが表示されてから、ユーザーが入力した個々の単語が表示されます。 正規表現 `\w+` を使用して、入力テキストの単語を分離します。
+このモードでは、クロスプラットフォーム アプリをホストするために、プラットフォームに固有の実行可能なホストが作成されます。 FDD では `dotnet` コマンドの形式でホストを要求するので、このモードは FDD と似ています。 ホストの実行可能ファイル名はプラットフォームごとに異なり、`<PROJECT-FILE>.exe` のような名前になります。 この実行可能ファイルを直接実行することができ、`dotnet <PROJECT-FILE>.dll` を呼び出す代わりに使用できますが、このコマンドもアプリの実行手段として同じように使用できます。
 
-   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
-   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
+アプリは、特定のバージョンの .NET Core をターゲットにするように構成されます。 アプリを実行するコンピューターには、そのターゲットの .NET Core ランタイムが存在する必要があります。 たとえば、アプリのターゲットが .NET Core 2.2 である場合、アプリを実行するコンピューターには、.NET Core 2.2 ランタイムがインストールされている必要があります。 「[公開の基礎](#publishing-basics)」セクションで説明したように、プロジェクト ファイルを編集することで、既定のターゲット フレームワークを変更したり、複数のフレームワークをターゲットにしたりできます。
 
-1. プロジェクトの依存関係とツールを更新します。
+FDE の公開では、アプリが実行されるシステムで使用できる最新の .NET Core セキュリティ更新プログラムまで自動的にロールフォワードするアプリが作成されます。 コンパイル時のバージョンのバインドの詳細については、「[使用する .NET Core のバージョンを選択する](../versions/selection.md#framework-dependent-apps-roll-forward)」をご覧ください。
 
-   [dotnet restore](../tools/dotnet-restore.md) コマンドを実行して、プロジェクトで指定された依存関係を復元します ([注記参照](#dotnet-restore-note))。
+`dotnet publish` コマンドで次のスイッチを使用して、FDE を公開する必要があります (現在のプラットフォームをターゲットにするときの .NET Core 3.x を除きます)。
 
-1. アプリのデバッグ ビルドを作成します。
+- `-r <RID>`
+  このスイッチでは、識別子 (RID) を使用してターゲット プラットフォームを指定します。 ランタイム識別子の一覧については、[ランタイム識別子 (RID) のカタログ](../rid-catalog.md)に関する記事をご覧ください。
 
-   [dotnet build](../tools/dotnet-build.md) コマンドを使用すると、アプリケーションをビルドでき、[dotnet run](../tools/dotnet-run.md) コマンドを使用すると、それをビルドして実行できます。
+- `--self-contained false` このスイッチでは、識別子 (RID) を使用してターゲット プラットフォームを指定します。
 
-1. アプリを展開します。
+`-r` スイッチを使用すると常に、出力フォルダーが次のパスに変わります:  `./bin/<BUILD-CONFIGURATION>/<TFM>/<RID>/publish/`
 
-   プログラムをテストし、デバッグした後は、次のコマンドを使用して、展開を作成します。
+[アプリの例](#sample-app)を使用する場合は、`dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false` を実行します。 このコマンドでは、次の実行可能ファイルが作成されます:  `./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe`
 
-      ```console
-      dotnet publish -f netcoreapp2.1 -c Release
-      ```
-   これにより、リリース (デバッグではなく) バージョンのアプリが作成されます。 作成されたファイルは、プロジェクトの *bin* ディレクトリのサブディレクトリ内にある *publish* という名前のディレクトリに配置されます。
+> [!NOTE]
+> **グローバリゼーション インバリアント モード**を有効にすることで、展開の合計サイズを小さくすることができます。 このモードは、全世界を意識するものではなく、[インバリアント カルチャ](xref:System.Globalization.CultureInfo.InvariantCulture)の書式設定規則、大文字/小文字の区別規則、文字列比較、並べ替え順序を使用できるアプリケーションにとって便利です。 **グローバリゼーション インバリアント モード**の詳細と、それを有効にする方法については、「[.NET Core Globalization Invariant Mode](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)」(.NET Core のグローバリゼーション インバリアント モード) をご覧ください
 
-   アプリケーションのファイルと共に、発行プロセスは、アプリに関するデバッグ情報を含むプログラム データベース (.pdb) ファイルを出力します。 このファイルは、主に例外のデバッグに役立ちます。 これは、アプリケーションのファイルと一緒には配布しないよう選択できます。 ただし、アプリのリリース ビルドをデバッグする場合のために、保存しておくことをお勧めします。
+## <a name="self-contained-deployment"></a>自己完結型の展開
 
-   アプリケーション ファイルの完全なセットは、任意の方法で展開できます。 たとえば、Zip ファイルにパッケージ化したり、単純な `copy` コマンドを使用したり、任意のインストール パッケージで展開したりできます。
+自己完結型の展開 (SCD) を公開すると、.NET Core SDK によってプラットフォーム固有の実行可能ファイルが作成されます。 SCD の公開には、アプリの実行に必要なすべての .NET Core ファイルが含まれますが、[.NET Core のネイティブの依存関係](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)は含まれません。 これらの依存関係は、アプリを実行する前に、システムに存在している必要があります。
 
-1. アプリの実行
+SCD の公開で作成されるアプリでは、使用可能な最新の .NET Core セキュリティ更新プログラムへのロールフォワードは行われません。 コンパイル時のバージョンのバインドの詳細については、「[使用する .NET Core のバージョンを選択する](../versions/selection.md#self-contained-deployments-include-the-selected-runtime)」をご覧ください。
 
-   一度インストールすると、ユーザーは `dotnet` コマンドを使用して、`dotnet fdd.dll` などのアプリケーションのファイル名を入力してアプリケーションを実行できます。
+`dotnet publish` コマンドで次のスイッチを使用して、SCD を公開する必要があります。
 
-   また、アプリケーション インストールの一環として、インストーラーはアプリケーション バイナリに加えて、共有フレームワーク インストーラーをバンドルするか、または前提条件として共有フレームワークがあるか確認する必要があります。  共有フレームワークをインストールするには、管理者またはルートの権限が必要です。
+- `-r <RID>`
+  このスイッチでは、識別子 (RID) を使用してターゲット プラットフォームを指定します。 ランタイム識別子の一覧については、[ランタイム識別子 (RID) のカタログ](../rid-catalog.md)に関する記事をご覧ください。
 
-## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>サードパーティの依存関係を含む、フレームワークに依存する展開
+- `--self-contained true` このスイッチでは、SCD として実行可能ファイルを作成するよう .NET Core SDK に指示されます。
 
-1 つ以上のサードパーティの依存関係を備えたフレームワークに依存する展開を展開するには、それらの依存関係がプロジェクトで使用できる必要があります。 `dotnet restore` コマンドを実行する前に、次の 2 つの追加手順を実行する必要があります([注記参照](#dotnet-restore-note))。
-
-1. *csproj* ファイルの `<ItemGroup>` セクションに、必要なサードパーティ ライブラリへの参照を追加します。 次の `<ItemGroup>` セクションには、サードパーティ ライブラリとして [Json.NET](https://www.newtonsoft.com/json) への依存関係があります。
-
-      ```xml
-      <ItemGroup>
-        <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
-      </ItemGroup>
-      ```
-
-1. サードパーティの依存関係を含む NuGet パッケージをまだダウンロードしていない場合は、ダウンロードします。 パッケージをダウンロードするには、依存関係を追加した後で `dotnet restore` コマンドを実行します ([注記参照](#dotnet-restore-note))。 発行時に依存関係はローカルの NuGet キャッシュからが解決されるので、システムで使用可能になる必要があります。
-
-サードパーティの依存関係を含む、フレームワークに依存する展開は、サードパーティの依存関係と同じ移植性を持つことに注意してください。 たとえば、サードパーティ ライブラリが macOS のみをサポートする場合、そのアプリを Windows システムに移植することはできません。 この状況は、サードパーティの依存関係自体がネイティブ コードに依存する場合に生じる可能性があります。 このよい例は、[libuv](https://github.com/libuv/libuv) に対してネイティブの依存関係が必要な [Kestrel サーバー](/aspnet/core/fundamentals/servers/kestrel)です。 このようなサードパーティの依存関係を含むアプリケーションに対して FDD が作成されると、発行された出力には、ネイティブの依存関係がサポートする (そして、その NuGet パッケージ内に存在する) 各[ランタイム識別子 (RID)](../rid-catalog.md) のフォルダーが含まれます。
-
-## <a name="simpleSelf"></a> サードパーティの依存関係を含まない、自己完結型の展開
-
-サードパーティの依存関係を含まない自己完結型の展開を展開するプロセスには、プロジェクトの作成、*csproj* ファイルの変更、アプリのビルド、テスト、および発行が含まれます。 C# で記述された次の単純な例は、このプロセスを示しています。 この例では、コマンド ラインから [dotnet ユーティリティ](../tools/dotnet.md)を使用して、自己完結型の展開を作成する方法を示します。
-
-1. プロジェクトのディレクトリを作成します。
-
-   プロジェクトのディレクトリを作成し、それを現在のディレクトリにします。
-
-1. プロジェクトを作成します。
-
-   コマンド ラインに [dotnet new console](../tools/dotnet-new.md) と入力して、そのディレクトリに新しい C# コンソール プロジェクトを作成します。
-
-1. アプリケーションのソース コードを追加します。
-
-   エディターで *Program.cs* ファイルを開き、自動生成されたコードを次のコードに置き換えます。 テキストの入力を求めるプロンプトが表示されてから、ユーザーが入力した個々の単語が表示されます。 正規表現 `\w+` を使用して、入力テキストの単語を分離します。
-
-   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
-   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
-1. アプリの対象プラットフォームを定義します。
-
-   *csproj* ファイルで、アプリが対象とするプラットフォームを定義する `<RuntimeIdentifiers>` タグを `<PropertyGroup>` セクションに作成し、対象とする各プラットフォームのランタイム識別子 (RID) を指定します。 なお、RID の分離にはセミコロンを追加する必要があることに注意してください。 ランタイム識別子の一覧については、「[Runtime IDentifier catalog](../rid-catalog.md)」 (ランタイム識別子のカタログ) を参照してください。
-
-   たとえば、次の `<PropertyGroup>` セクションは、アプリが 64 ビット Windows 10 オペレーティング システムおよび 64 ビット OS X バージョン 10.11 オペレーティング システムで実行されることを示します。
-
-     ```xml
-     <PropertyGroup>
-         <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
-     </PropertyGroup>
-     ```
-
-   `<RuntimeIdentifiers>` 要素は、*csproj* ファイルの任意の `<PropertyGroup>` に含めることができます。 *csproj* ファイルの完全なサンプルは、このセクションの後の部分で示しています。
-
-1. プロジェクトの依存関係とツールを更新します。
-
-   [dotnet restore](../tools/dotnet-restore.md) コマンドを実行して、プロジェクトで指定された依存関係を復元します ([注記参照](#dotnet-restore-note))。
-
-1. グローバリゼーション インバリアント モードを使用するかどうかを決定します。
-
-   特にアプリの対象が Linux の場合、[グローバリゼーション インバリアント モード](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)を活用することで展開の合計サイズを減らすことができます。 グローバリゼーション インバリアント モードは、全世界を意識するものではなく、[インバリアント カルチャ](xref:System.Globalization.CultureInfo.InvariantCulture)の書式設定規則、大文字/小文字の区別規則、文字列比較、並べ替え順序を使用できるアプリケーションにとって便利です。
-
-   インバリアント モードを有効にするには、**ソリューション エクスプローラー**で (ソリューションではなく) プロジェクトを右クリックし、**[SCD.csproj の編集]** または **[SCD.vbproj の編集]** を選択します。 次の強調表示された行をファイルに追加します。
-
- [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj)]
-
-1. アプリのデバッグ ビルドを作成します。
-
-   コマンド ラインから、[dotnet build](../tools/dotnet-build.md) コマンドを使用します。
-
-1. プログラムをデバッグしてテストしたら、アプリと共に展開するファイルをアプリの対象のプラットフォームごとに作成します。
-
-   両方の対象プラットフォームに、次のように `dotnet publish` コマンドを使用します。
-
-      ```console
-      dotnet publish -c Release -r win10-x64
-      dotnet publish -c Release -r osx.10.11-x64
-      ```
-
-   これにより、各ターゲット プラットフォームに対してアプリのリリース (デバッグではなく) バージョンが作成されます。 作成されたファイルは、プロジェクトの *.\bin\Release\netcoreapp2.1\<runtime_identifier>* サブディレクトリにある *publish* という名前のサブディレクトリに配置されます。 各サブディレクトリには、アプリの起動に必要なファイルの完全なセット (アプリ ファイルとすべての .NET Core ファイルの両方) が含まれています。
-
-アプリケーションのファイルと共に、発行プロセスは、アプリに関するデバッグ情報を含むプログラム データベース (.pdb) ファイルを出力します。 このファイルは、主に例外のデバッグに役立ちます。 これを、アプリケーションのファイルにはパッケージ化しないよう選択できます。 ただし、アプリのリリース ビルドをデバッグする場合のために、保存しておくことをお勧めします。
-
-発行したファイルは、任意の方法で展開できます。 たとえば、Zip ファイルにパッケージ化したり、単純な `copy` コマンドを使用したり、任意のインストール パッケージで展開したりできます。
-
-このプロジェクトの完全な *csproj* ファイルを次に示します。
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
-    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
-  </PropertyGroup>
-</Project>
-```
-
-## <a name="self-contained-deployment-with-third-party-dependencies"></a>サードパーティの依存関係を含む、自己完結型の展開
-
-1 つまたは複数のサードパーティの依存関係を含む自己完結型の展開を展開するプロセスには、依存関係の追加が含まれます。 `dotnet restore` コマンドを実行する前に、次の 2 つの追加手順を実行する必要があります([注記参照](#dotnet-restore-note))。
-
-1. 任意のサードパーティ ライブラリへの参照を *csproj* ファイルの `<ItemGroup>` セクションに追加します。 次の `<ItemGroup>` セクションは、サードパーティ ライブラリとして Json.NET を使用します。
-
-    ```xml
-      <ItemGroup>
-        <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
-      </ItemGroup>
-    ```
-
-1. サードパーティの依存関係を含む NuGet パッケージをシステムにまだダウンロードしていない場合は、ダウンロードします。 依存関係をアプリで使用できるようにするには、依存関係を追加してから、`dotnet restore` コマンドを実行します ([注記参照](#dotnet-restore-note))。 発行時に依存関係はローカルの NuGet キャッシュからが解決されるので、システムで使用可能になる必要があります。
-
-このプロジェクトの完全な *csproj* ファイルを次に示します。
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
-    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
-  </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
-  </ItemGroup>
-</Project>
-```
-
-アプリケーションを展開すると、アプリで使用されるすべてのサードパーティの依存関係も、アプリケーション ファイルに含まれています。 アプリが実行されているシステムには、サードパーティ ライブラリは必要ありません。
-
-サードパーティ ライブラリを含む自己完結型の展開は、そのライブラリでサポートされるプラットフォームにのみ展開できます。 これは、フレームワークに依存する展開にサード パーティの依存関係とネイティブの依存関係があり、ネイティブの依存関係はアプリがインストールされたプラットフォームと対応している必要がある場合と似ています。
-
-<a name="dotnet-restore-note"></a>
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+> [!NOTE]
+> **グローバリゼーション インバリアント モード**を有効にすることで、展開の合計サイズを小さくすることができます。 このモードは、全世界を意識するものではなく、[インバリアント カルチャ](xref:System.Globalization.CultureInfo.InvariantCulture)の書式設定規則、大文字/小文字の区別規則、文字列比較、並べ替え順序を使用できるアプリケーションにとって便利です。 **グローバリゼーション インバリアント モード**の詳細と、それを有効にする方法については、「[.NET Core Globalization Invariant Mode](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)」(.NET Core のグローバリゼーション インバリアント モード) をご覧ください
 
 ## <a name="see-also"></a>関連項目
 
-* [.NET Core アプリケーションの配置](index.md)
-* [.NET Core のランタイム識別子 (RID) のカタログ](../rid-catalog.md)
+- [.NET Core アプリケーションの展開の概要](index.md)
+- [.NET Core のランタイム識別子 (RID) のカタログ](../rid-catalog.md)

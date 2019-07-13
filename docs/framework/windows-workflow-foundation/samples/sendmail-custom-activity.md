@@ -2,12 +2,12 @@
 title: SendMail カスタム アクティビティ
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: 4cd2ed8c80bd5ab4c4e784f4c5c86a58ecceda2f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d760f95b8e98bae52341296b90008e72d5c47d1f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181291"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637662"
 ---
 # <a name="sendmail-custom-activity"></a>SendMail カスタム アクティビティ
 このサンプルでは、<xref:System.Activities.AsyncCodeActivity> から派生するカスタム アクティビティを作成して、SMTP を使用して電子メールを送信し、ワークフロー アプリケーション内で使用する方法を示します。 カスタム アクティビティの機能を使用して<xref:System.Net.Mail.SmtpClient>非同期的に電子メールを送信して、認証を使用したメールを送信します。 また、テスト モード、トークン置換、ファイル テンプレート、テスト ドロップ パスなどのエンドユーザーの機能も提供しています。  
@@ -16,16 +16,16 @@ ms.locfileid: "50181291"
   
 |名前|種類|説明|  
 |-|-|-|  
-|Host|String|SMTP サーバー ホストのアドレス。|  
+|ホスト|String|SMTP サーバー ホストのアドレス。|  
 |ポート|String|ホストの SMTP サービスのポート。|  
 |EnableSsl|bool|<xref:System.Net.Mail.SmtpClient> が、接続を暗号化するために SSL (Secure Sockets Layer) を使用するかどうかを指定します。|  
 |UserName|String|差出人の <xref:System.Net.Mail.SmtpClient.Credentials%2A> プロパティを認証する資格情報を設定するユーザー名。|  
 |[Password]|String|差出人の <xref:System.Net.Mail.SmtpClient.Credentials%2A> プロパティを認証する資格情報を設定するパスワード。|  
 |Subject|<xref:System.Activities.InArgument%601>\<string>|メッセージの件名。|  
 |本文|<xref:System.Activities.InArgument%601>\<string>|メッセージの本文。|  
-|Attachments|<xref:System.Activities.InArgument%601>\<string>|この電子メール メッセージに添付されるデータの格納に使用される添付データのコレクション。|  
+|添付ファイル|<xref:System.Activities.InArgument%601>\<string>|この電子メール メッセージに添付されるデータの格納に使用される添付データのコレクション。|  
 |From|<xref:System.Net.Mail.MailAddress>|この電子メール メッセージのアドレス。|  
-|終了|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|この電子メール メッセージの受信者を格納するアドレスのコレクション。|  
+|目的|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|この電子メール メッセージの受信者を格納するアドレスのコレクション。|  
 |CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|この電子メール メッセージのカーボン コピー (CC) 受信者を格納するコレクションをアドレスします。|  
 |BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|この電子メール メッセージのブラインド カーボン コピー (BCC) 受信者を格納するアドレスのコレクション。|  
 |トークン|<xref:System.Activities.InArgument%601>< IDictionary\<, string >>|本文で置換するトークン。 この機能を使用すると、本文にいくつかの値を指定した後、このプロパティを使用して提供されるトークンで置換できます。|  
@@ -107,29 +107,29 @@ new SendMail
   
  SMTP サーバーの設定に関する詳細については、次のリンクを参照してください。  
   
--   [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
+- [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
   
--   [SMTP サービス (IIS 6.0) を構成します。](https://go.microsoft.com/fwlink/?LinkId=150456)  
+- [SMTP サービス (IIS 6.0) を構成します。](https://go.microsoft.com/fwlink/?LinkId=150456)  
   
--   [IIS 7.0: SMTP 電子メールを構成します。](https://go.microsoft.com/fwlink/?LinkId=150457)  
+- [IIS 7.0:SMTP 電子メールを構成します。](https://go.microsoft.com/fwlink/?LinkId=150457)  
   
--   [SMTP サービスをインストールする方法](https://go.microsoft.com/fwlink/?LinkId=150458)  
+- [SMTP サービスをインストールする方法](https://go.microsoft.com/fwlink/?LinkId=150458)  
   
  ダウンロードには、サードパーティで提供されている SMTP エミュレーターを使用できます。  
   
 ##### <a name="to-run-this-sample"></a>このサンプルを実行するには  
   
-1.  Visual Studio 2010 を使用して、SendMail.sln ソリューション ファイルを開きます。  
+1. Visual Studio 2010 を使用して、SendMail.sln ソリューション ファイルを開きます。  
   
-2.  有効な SMTP サーバーへのアクセス権があることを確認してください。 セットアップ手順を参照してください。  
+2. 有効な SMTP サーバーへのアクセス権があることを確認してください。 セットアップ手順を参照してください。  
   
-3.  サーバー アドレスとの電子メール アドレスには、プログラムを構成します。  
+3. サーバー アドレスとの電子メール アドレスには、プログラムを構成します。  
   
      このサンプルを正しく実行するには、Program.cs および Sequence.xaml の値からその電子メール アドレス、SMTP サーバーのアドレスを構成する必要があります。 プログラムでは電子メールが 2 つの方法で送信されるため、両方の場所でアドレスを変更する必要があります。  
   
-4.  ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。  
+4. ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。  
   
-5.  ソリューションを実行するには、Ctrl キーを押しながら F5 キーを押します。  
+5. ソリューションを実行するには、Ctrl キーを押しながら F5 キーを押します。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  

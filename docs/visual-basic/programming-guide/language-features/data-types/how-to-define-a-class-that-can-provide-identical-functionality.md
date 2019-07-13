@@ -1,5 +1,5 @@
 ---
-title: '方法: 複数のデータ型に同一の機能を提供できるクラスを定義する (Visual Basic)'
+title: '方法: 異なるデータ型 (Visual Basic) に同一の機能を提供するクラスを定義します。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - data type arguments [Visual Basic], using
@@ -26,14 +26,14 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 3570a1c851bb8fead33f4cd208489c4ae087a68d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 19988e766d0f9ec895a24dddfcd17d0854aaf8ad
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650349"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757399"
 ---
-# <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>方法: 複数のデータ型に同一の機能を提供できるクラスを定義する (Visual Basic)
+# <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>方法: 異なるデータ型 (Visual Basic) に同一の機能を提供するクラスを定義します。
 複数の異なるデータ型に同一の機能を提供するオブジェクトを作成するために使用できるクラスを定義できます。 これを行うには、1 つ以上の *型パラメーター* を定義内で指定します。 このようなクラスは、さまざまなデータ型を使用するオブジェクトのテンプレートとして使用できます。 この方法で定義したクラスは、 *ジェネリック クラス*と呼ばれます。  
   
  ジェネリック クラスを定義する利点は、クラスを一度だけ定義すれば、コードの中でそれを使って、さまざまなデータ型を使用する多くのオブジェクトを作成できることです。 これにより、クラスを `Object` 型で定義した場合よりパフォーマンスが向上します。  
@@ -42,29 +42,29 @@ ms.locfileid: "33650349"
   
 ### <a name="to-define-a-class-with-a-type-parameter"></a>型パラメーターを持つクラスを定義するには  
   
-1.  通常の方法でクラスを定義します。  
+1. 通常の方法でクラスを定義します。  
   
-2.  クラス名の直後に `(Of` *typeparameter*`)` を追加し、型パラメーターを指定します。  
+2. クラス名の直後に `(Of` *typeparameter*`)` を追加し、型パラメーターを指定します。  
   
-3.  複数の型パラメーターがある場合は、かっこ内にコンマ区切りのリストを指定します。 `Of` キーワードは繰り返さないでください。  
+3. 複数の型パラメーターがある場合は、かっこ内にコンマ区切りのリストを指定します。 `Of` キーワードは繰り返さないでください。  
   
-4.  型パラメーターに対して単純な代入以外の操作を実行する場合は、その型パラメーターの後に `As` 句を付けて 1 つ以上の *制約*を追加します。 制約は、その型パラメーターに渡される型が、たとえば以下のような要件を満たすことを保証します。  
+4. 型パラメーターに対して単純な代入以外の操作を実行する場合は、その型パラメーターの後に `As` 句を付けて 1 つ以上の *制約*を追加します。 制約は、その型パラメーターに渡される型が、たとえば以下のような要件を満たすことを保証します。  
   
-    -   コードで実行する `>`などの演算をサポートする  
+    - コードで実行する `>`などの演算をサポートする  
   
-    -   コードでアクセスするメソッドなどのメンバーをサポートする  
+    - コードでアクセスするメソッドなどのメンバーをサポートする  
   
-    -   パラメーターなしのコンストラクターを公開する  
+    - パラメーターなしのコンストラクターを公開する  
   
      制約を指定しない場合、コードで使用できる演算とメンバーは、 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)でサポートされるものだけになります。 詳細については、「 [Type List](../../../../visual-basic/language-reference/statements/type-list.md)」を参照してください。  
   
-5.  渡された型を使って宣言する必要のある各クラス メンバーを識別し、それを `As` `typeparameter`として宣言します。 これは、内部ストレージ、プロシージャのパラメーター、戻り値に適用されます。  
+5. 渡された型を使って宣言する必要のある各クラス メンバーを識別し、それを `As` `typeparameter`として宣言します。 これは、内部ストレージ、プロシージャのパラメーター、戻り値に適用されます。  
   
-6.  コードでは、 `itemType`に渡される可能性があるすべてのデータ型でサポートされる演算とメソッドだけを使用します。  
+6. コードでは、 `itemType`に渡される可能性があるすべてのデータ型でサポートされる演算とメソッドだけを使用します。  
   
-     次のコード例は、ごく単純なリストを管理するクラスを定義しています。 このクラスは、リストを内部配列 `items`に格納します。このクラスを使用するコードでは、このリストの要素のデータ型を宣言できます。 パラメーター化されたコンストラクターを使うと、コードで `items`の上限を設定できます。既定のコンストラクターでは、この上限は 9 (合計で 10 アイテム) に設定されます。  
+     次のコード例は、ごく単純なリストを管理するクラスを定義しています。 このクラスは、リストを内部配列 `items`に格納します。このクラスを使用するコードでは、このリストの要素のデータ型を宣言できます。 使用して、パラメーター化されたコンス トラクターは、の上限を設定するコードを`items`、パラメーターなしのコンス トラクターはこれを設定し、(10 個の項目の合計) の 9 にします。  
   
-     [!code-vb[VbVbalrDataTypes#7](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-define-a-class-that-can-provide-identical-functionality_1.vb)]  
+     [!code-vb[VbVbalrDataTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#7)]  
   
      `simpleList` からは、 `Integer` 値のリストを格納するクラス、 `String` 値のリストを格納するクラス、 `Date` 値のリストを格納するクラスなどを宣言できます。 リスト メンバーのデータ型が異なるだけで、これらすべてのクラスから作成されるオブジェクトの動作はまったく同じです。  
   
@@ -72,13 +72,14 @@ ms.locfileid: "33650349"
   
      `simpleList` クラスをテストするには、次のコードを使用します。  
   
-     [!code-vb[VbVbalrDataTypes#8](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-define-a-class-that-can-provide-identical-functionality_2.vb)]  
+     [!code-vb[VbVbalrDataTypes#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#8)]  
   
-## <a name="see-also"></a>関連項目  
- [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Visual Basic におけるジェネリック型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [言語への非依存性、および言語非依存コンポーネント](../../../../standard/language-independence-and-language-independent-components.md)  
- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)  
- [型リスト](../../../../visual-basic/language-reference/statements/type-list.md)  
- [方法 : ジェネリック クラスを使用する](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [Object 型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+## <a name="see-also"></a>関連項目
+
+- [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Visual Basic におけるジェネリック型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [言語への非依存性、および言語非依存コンポーネント](../../../../standard/language-independence-and-language-independent-components.md)
+- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
+- [型リスト](../../../../visual-basic/language-reference/statements/type-list.md)
+- [方法: ジェネリック クラスを使用する](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Object 型](../../../../visual-basic/language-reference/data-types/object-data-type.md)

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1cc7a299e6be328095c0368acf0a4b767fb74d01
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2093466c78b039a06a01e2d850b88ff4543d0ab3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423950"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752463"
 ---
 # <a name="variablelocationtype-enumeration"></a>VariableLocationType 列挙型
 変数のネイティブの場所の種類を示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum VariableLocationType  
 {  
     VLT_REGISTER,               
@@ -41,21 +41,22 @@ typedef enum VariableLocationType
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`VLT_REGISTER`|変数は、レジスタには。|  
+|`VLT_REGISTER`|変数はレジスタでは。|  
 |`VLT_REGISTER_RELATIVE`|変数は、レジスタの相対メモリの場所には。|  
-|`VLT_INVALID`|変数は、登録または登録の相対メモリの場所に格納されません。|  
+|`VLT_INVALID`|変数はレジスタやレジスタの相対メモリの場所は保存されません。|  
   
-## <a name="remarks"></a>コメント  
- メンバー、`VariableLocationType`列挙体は、によって返される、 [ICorDebugVariableHome::GetLocationType](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ メンバー、`VariableLocationType`列挙体は、によって返される、 [ICorDebugVariableHome::GetLocationType](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md)メソッド。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>関連項目
+
+- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

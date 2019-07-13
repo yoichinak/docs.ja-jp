@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc5a06e6b3cc1e9338d860cdb110bf7d516080be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ca922d8b582c0608073d4fd0ba986167ae470e34
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599501"
 ---
 # <a name="cordebugngenpolicy-enumeration"></a>CorDebugNGenPolicy 列挙型
 デバッガーがネイティブ イメージ キャッシュからネイティブ (NGen) イメージを読み込むかどうかを指定する値を提供します。  
@@ -40,19 +40,20 @@ enum CorDebugNGENPolicy {
   
 |メンバー名|説明|  
 |-----------------|-----------------|  
-|`DISABLE_LOCAL_NIC`|[!INCLUDE[win8_appname_long](../../../../includes/win8-appname-long-md.md)]アプリ、ローカルのネイティブ イメージ キャッシュからイメージの使用が無効になっています。 デスクトップ アプリでは、この設定には効果がありません。|  
+|`DISABLE_LOCAL_NIC`|[!INCLUDE[win8_appname_long](../../../../includes/win8-appname-long-md.md)]アプリ、ローカルのネイティブ イメージ キャッシュからのイメージの使用が無効になっています。 デスクトップ アプリケーションでは、この設定には効果はありません。|  
   
-## <a name="remarks"></a>コメント  
- `CorDebugNGENPolicy`列挙型を使用して、 [icordebugprocess 5::enablengenpolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md)メソッドです。 ローカル ネイティブ イメージ キャッシュからの画像の使用を無効にすると、デバッガーが最適化されたネイティブ イメージではなく、デバッグ可能の JIT コンパイルされたイメージを読み込むことができるようにして、一貫性のあるデバッグ機能を提供します。  
+## <a name="remarks"></a>Remarks  
+ `CorDebugNGENPolicy`列挙型を使用して、 [icordebugprocess 5::enablengenpolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md)メソッド。 ローカルのネイティブ イメージ キャッシュからのイメージの使用を無効にすると、デバッガーに最適化されたネイティブ イメージではなく、デバッグ可能の JIT コンパイルされたイメージが読み込まれることを確認してデバッグ エクスペリエンスを一貫した提供します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>関連項目
+
+- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

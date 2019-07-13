@@ -2,12 +2,12 @@
 title: アプリケーション開発での PNRP
 ms.date: 03/30/2017
 ms.assetid: 265615d6-4423-4b5d-8626-752e456f4f4e
-ms.openlocfilehash: b19138c43185f4d31bef4fe67af48f89dc03eba4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4cd0d739e58cd252213e8d5c16d29cc612338df6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50180434"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178140"
 ---
 # <a name="pnrp-in-application-development"></a>アプリケーション開発での PNRP
 Windows Vista では、ネットワーク アプリケーションは、簡単な PNRP アプリケーション プログラミング インターフェイス (API) を通して名前発行および名前解決機能にアクセスできます。  
@@ -19,5 +19,6 @@ Windows Vista では、ネットワーク アプリケーションは、簡単�
   
  PeerToPeer アプリケーション間でのメッセージの受け渡しは、依然として PeerChannel や WCF の[大規模データとストリーミング](https://go.microsoft.com/fwlink/?LinkID=179652)などの、基盤のアーキテクチャによって処理されます。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Net.PeerToPeer>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Net.PeerToPeer>

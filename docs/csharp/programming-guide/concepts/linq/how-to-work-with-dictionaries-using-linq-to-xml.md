@@ -2,12 +2,12 @@
 title: '方法: LINQ to XML を使用してディクショナリを操作する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 57bcefe3-8433-4d3b-935a-511c9bcbdfa8
-ms.openlocfilehash: afe4fafb9963b4fc429f441349f8190c9a1e5bac
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 196720ff9c17e62f8da9e65e1b8c481fed5074cc
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43739894"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484714"
 ---
 # <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a>方法: LINQ to XML を使用してディクショナリを操作する (C#)
 さまざまなデータ構造と XML を相互に変換すると便利な場合がよくあります。 このトピックでは、<xref:System.Collections.Generic.Dictionary%602> と XML を相互に変換することによる、一般的な相互変換の実装について説明します。  
@@ -66,6 +66,3 @@ Child3:Value3
 Child4:Value4  
 ```  
   
-## <a name="see-also"></a>参照
-
-- [プロジェクションと変換 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

@@ -2,12 +2,12 @@
 title: リソースの管理:Use キーワード
 description: については、F#キーワード 'use' と 'using' の関数は、初期化とリソースの解放を制御できます。
 ms.date: 05/16/2016
-ms.openlocfilehash: 127877a3823faade9bc3c6aefea655c86cc348e7
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 3389f84713ec7cf5459dd0132249970f0e2ef3e0
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613090"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641704"
 ---
 # <a name="resource-management-the-use-keyword"></a>リソースの管理:Use キーワード
 
@@ -40,7 +40,7 @@ ms.locfileid: "53613090"
 
 `using`関数には、次の形式。
 
-`using` (*expression1*)*関数またはラムダ*
+`using` (*expression1*) *function-or-lambda*
 
 `using`式、 *expression1*破棄する必要がありますオブジェクトを作成します。 結果*expression1* (破棄する必要がありますオブジェクト) が、引数*値*を*関数またはラムダ*、1 つが必要とする関数によって生成された値に一致する型の引数の残り*expression1*、またはその型の引数を受け取るラムダ式。 ランタイムが呼び出す関数の実行の最後に、`Dispose`リソースを解放し、(値がない限り`null`、後者 Dispose の呼び出しは行われません)。
 

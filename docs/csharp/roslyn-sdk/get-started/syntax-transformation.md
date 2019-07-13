@@ -3,12 +3,12 @@ title: 構文変換の概要 (Roslyn API)
 description: 構文ツリーの走査、クエリおよびウォークに関する概要。
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 3f8d152a2e17bc9e480bd0a76488c563720a63b1
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: bbd56f445a9f06b530a7d094b06f60e6123788da
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122585"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306931"
 ---
 # <a name="get-started-with-syntax-transformation"></a>構文変換の概要
 
@@ -30,7 +30,7 @@ ms.locfileid: "49122585"
 
 最初の構文変換では、ファクトリ メソッドを使用します。 `using System.Collections;` ステートメントを `using System.Collections.Generic;` ステートメントで置き換えます。 この例は、<xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> ファクトリ メソッドを使用して <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode?displayProperty=nameWithType> オブジェクトを作成する方法を示しています。 **ノード**、**トークン**、**トリビア**の各種類に対して、その種類のインスタンスを作成するファクトリ メソッドが用意されています。 ボトムアップ方式でノードを階層的に構成して、構文ツリーを作成します。 次に、既存のプログラムを変換して、既存のノードを作成した新しいツリーで置き換えます。
 
-Visual Studio を起動し、新しい C# の **Stand-Alone Code Analysis Tool** プロジェクトを作成します。 Visual Studio で、**[ファイル]** > **[新規]** > **[プロジェクト]** の順に選択して、[新しいプロジェクト] ダイアログを表示します。 **[Visual C#]** > **[機能拡張]** で、**[Stand-Alone Code Analysis Tool]** を選択します。 このクイック スタートには 2 つのサンプル プロジェクトがあるため、ソリューションに「**SyntaxTransformationQuickStart**」、プロジェクトに「**ConstructionCS**」という名前を付けます。 **[OK]** をクリックします。
+Visual Studio を起動し、新しい C# の **Stand-Alone Code Analysis Tool** プロジェクトを作成します。 Visual Studio で、 **[ファイル]**  >  **[新規]**  >  **[プロジェクト]** の順に選択して、[新しいプロジェクト] ダイアログを表示します。 **[Visual C#]**  >  **[機能拡張]** で、 **[Stand-Alone Code Analysis Tool]** を選択します。 このクイック スタートには 2 つのサンプル プロジェクトがあるため、ソリューションに「**SyntaxTransformationQuickStart**」、プロジェクトに「**ConstructionCS**」という名前を付けます。 **[OK]** をクリックします。
 
 このプロジェクトでは、<xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> クラスのメソッドを使用して、`System.Collections.Generic` 名前空間を表す <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType> を構築します。
 
@@ -94,9 +94,9 @@ Visual Studio を起動し、新しい C# の **Stand-Alone Code Analysis Tool**
 
 `With*` メソッドと <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> メソッドは、構文ツリーの個々のブランチを変換するのに便利な手段です。 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter?displayProperty=nameWithType> クラスは、構文ツリー上で複数の変換を実行します。 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter?displayProperty=nameWithType> クラスは <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor%601?displayProperty=nameWithType> のサブクラスです。 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> は、特定の型の <xref:Microsoft.CodeAnalysis.SyntaxNode> に変換を適用します。 構文ツリー内にその型が存在すれば、複数の型の <xref:Microsoft.CodeAnalysis.SyntaxNode> オブジェクトに変換を適用できます。 このクイック スタートの 2 番目のプロジェクトでは、型の推定が使用される可能性があるすべての場所のローカル変数宣言に含まれる明示的な型を削除する、コマンド ライン リファクタリングを作成します。
 
-新しい C# の **Stand-Alone Code Analysis Tool** プロジェクトを作成します。 Visual Studio で、`SyntaxTransformationQuickStart` ソリューション ノードを右クリックします。 **[追加]** > **[新しいプロジェクト]** を選択して、**[新しいプロジェクト] ダイアログ**を表示します。 **[Visual C#]** > **[機能拡張]** で、**[Stand-Alone Code Analysis Tool]** を選択します。 プロジェクトに「`TransformationCS`」という名前を付けて、[OK] をクリックします。
+新しい C# の **Stand-Alone Code Analysis Tool** プロジェクトを作成します。 Visual Studio で、`SyntaxTransformationQuickStart` ソリューション ノードを右クリックします。 **[追加]**  >  **[新しいプロジェクト]** を選択して、 **[新しいプロジェクト] ダイアログ**を表示します。 **[Visual C#]**  >  **[機能拡張]** で、 **[Stand-Alone Code Analysis Tool]** を選択します。 プロジェクトに「`TransformationCS`」という名前を付けて、[OK] をクリックします。
 
-最初のステップは、変換を実行するための <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> から派生したクラスを作成することです。 新しいクラスのファイルをプロジェクトに追加します。 Visual Studio で、**[プロジェクト]** > **[クラスの追加...]** を選択します。**[新しい項目の追加]** ダイアログで、ファイル名として「`TypeInferenceRewriter.cs`」を入力します。
+最初のステップは、変換を実行するための <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> から派生したクラスを作成することです。 新しいクラスのファイルをプロジェクトに追加します。 Visual Studio で、 **[プロジェクト]**  >  **[クラスの追加...]** を選択します。 **[新しい項目の追加]** ダイアログで、ファイル名として「`TypeInferenceRewriter.cs`」を入力します。
 
 `TypeInferenceRewriter.cs` ファイルに次の using ディレクティブを追加します。
 
@@ -112,7 +112,7 @@ Visual Studio を起動し、新しい C# の **Stand-Alone Code Analysis Tool**
 
 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter.VisitLocalDeclarationStatement(Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax)> メソッドをオーバーライドします。
 
-```C#
+```csharp
 public override SyntaxNode VisitLocalDeclarationStatement(LocalDeclarationStatementSyntax node)
 {
 
@@ -152,7 +152,7 @@ Type variable;
 
 最後に、次の `if` ステートメントを追加して、初期化子式の型が指定の型と一致した場合に既存の型名を `var` キーワードで置き換えるようにします。
 
-[!code-csharp[ReplaceNode](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#BindInitializer "Replace the initializer node")]
+[!code-csharp[ReplaceNode](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#ReplaceNode "Replace the initializer node")]
 
 宣言では初期化子式が基底クラスまたはインターフェイスにキャストされる場合があるので、この条件が必要です。 必要な場合は、割り当ての左側の型と右側の型が一致しません。 このようなケースで明示的な型を削除すると、プログラムのセマンティクスが変わってしまいます。 `var` はコンテキスト キーワードであるため、`var` はキーワードではなく識別子として指定されます。 垂直方向の空白とインデントを維持するために、先頭および末尾のトリビア (空白) が古い型名から `var` キーワードへと転送されています。 型名は実際には宣言ステートメントの孫であるため、`With*` よりも `ReplaceNode` を使用して <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> を変換するほうが簡単です。
 
@@ -178,6 +178,6 @@ Type variable;
 
 [!code-csharp[CreateTestCompilation](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/Program.cs#CreateTestCompilation "Create a test compilation using the code written for this quickstart.")]
 
-幸運を祈ってプロジェクトを実行しましょう。 Visual Studio で、**[デバッグ]** > **[デバッグの開始]** を選択します。 Visual Studio で、プロジェクト内のファイルが変更されたという通知が表示されるはずです。 **[すべてに適用]** をクリックして、変更されたファイルをリロードします。 それらを調べて成果を確認しましょう。 明示的で冗長な型指定子がすべてなくなるとどれほどコードがすっきり見えるかに注目してください。
+幸運を祈ってプロジェクトを実行しましょう。 Visual Studio で、 **[デバッグ]**  >  **[デバッグの開始]** を選択します。 Visual Studio で、プロジェクト内のファイルが変更されたという通知が表示されるはずです。 **[すべてに適用]** をクリックして、変更されたファイルをリロードします。 それらを調べて成果を確認しましょう。 明示的で冗長な型指定子がすべてなくなるとどれほどコードがすっきり見えるかに注目してください。
 
-おめでとうございます!  **コンパイラ API** を使用して、C# プロジェクト内のすべてのファイルで特定の構文パターンを検索し、それらのパターンに一致するソース コードのセマンティクスを分析して変換する独自のリファクタリングを作成できました。 これであなたも正式なリファクタリングの作成者です!
+おめでとうございます! **コンパイラ API** を使用して、C# プロジェクト内のすべてのファイルで特定の構文パターンを検索し、それらのパターンに一致するソース コードのセマンティクスを分析して変換する独自のリファクタリングを作成できました。 これであなたも正式なリファクタリングの作成者です!

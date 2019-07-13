@@ -8,19 +8,19 @@ helpviewer_keywords:
 ms.assetid: 5bb9b6a2-7b57-4aea-8809-32b28bc73e88
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d59416ea2d9a2d7b001421271b9907bb3e84c086
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 441cae712e7338b36e8983f41341b1721770a0bb
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47396969"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489702"
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>共通言語ランタイムの ETW イベント
 共通言語ランタイム (CLR) は、さまざまなデバッグとプロファイリング イベントを通じて、有用な Windows イベント トレーシング (ETW) の診断情報を提供します。 CLR ETW イベントは、Windows ETW トレース システムを利用して、共通言語ランタイムによって提供される既存のプロファイリングとデバッグのサポートを拡張します。  
   
  ETW の詳細については、MSDN で「[Improve Debugging and Performance Tuning with ETW](https://go.microsoft.com/fwlink/?LinkID=161142)」 (ETW によるデバッグとパフォーマンス チューニングの向上) の記事を参照してください。 Xperf に関する情報は、NTDebugging のブログ エントリ「[Windows Performance Toolkit - Xperf](https://go.microsoft.com/fwlink/?LinkID=161144)」にあります。  
   
- イベント トピックに記載されているすべてのイベントには、[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降が必要です。 Windows Vista オペレーティング システムは、サポートされる最小のクライアントで、Windows Server 2008 は、サポートされる最小のサーバーです。  
+ .NET Framework 4 またはそれ以降が、イベントのトピックで説明されているすべてのイベントに対して必要です。 Windows Vista オペレーティング システムは、サポートされる最小のクライアントで、Windows Server 2008 は、サポートされる最小のサーバーです。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [.NET Framework のログ記録の制御](../../../docs/framework/performance/controlling-logging.md)  
@@ -35,5 +35,6 @@ ms.locfileid: "47396969"
  [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)  
  CLR ETW イベント、キーワード、レベル、およびイベント データに関する詳細情報を提供します。  
   
-## <a name="see-also"></a>関連項目  
- [.NET Framework の ETW イベント](../../../docs/framework/performance/etw-events.md)
+## <a name="see-also"></a>関連項目
+
+- [.NET Framework の ETW イベント](../../../docs/framework/performance/etw-events.md)

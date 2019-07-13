@@ -2,12 +2,12 @@
 title: 資格情報の種類の選択
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-ms.openlocfilehash: c2ee1b9062d14eaa44de0651985c2a385fe02f8e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 20c070e9351219a649735ac404231cf6f265d814
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503392"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586123"
 ---
 # <a name="selecting-a-credential-type"></a>資格情報の種類の選択
 *資格情報* とはWindows Communication Foundation (WCF) が要求された身分証明または資格を確立するために使用するデータです。 たとえば、パスポートは、政府によって発行される、国籍または地域籍を証明するための資格情報です。 WCF では、資格情報は、ユーザー名トークンと X.509 証明書などのさまざまな形式を実行できます。 このトピックでは、資格情報、WCF では、使用する方法と、アプリケーションの適切な資格情報を選択する方法について説明します。  
@@ -26,8 +26,8 @@ ms.locfileid: "43503392"
 |設定|説明|  
 |-------------|-----------------|  
 |なし|クライアントが資格情報を提示する必要がないことを指定します。 匿名クライアントであると解釈されます。|  
-|Basic|クライアントに基本認証を指定します。 詳細については、RFC2617 を参照してください。-[HTTP Authentication: Basic and Digest Authentication](https://go.microsoft.com/fwlink/?LinkID=88313)します。|  
-|Digest|クライアントにダイジェスト認証を指定します。 詳細については、RFC2617 を参照してください。-[HTTP Authentication: Basic and Digest Authentication](https://go.microsoft.com/fwlink/?LinkID=88313)します。|  
+|Basic|クライアントに基本認証を指定します。 詳細については、RFC2617 を参照してください。-[HTTP 認証。基本認証とダイジェスト認証](https://go.microsoft.com/fwlink/?LinkID=88313)」を参照してください。|  
+|Digest|クライアントにダイジェスト認証を指定します。 詳細については、RFC2617 を参照してください。-[HTTP 認証。基本認証とダイジェスト認証](https://go.microsoft.com/fwlink/?LinkID=88313)」を参照してください。|  
 |Ntlm|NT LAN Manager (NTLM) 認証を指定します。 これは、何らかの理由で Kerberos 認証を使用できないときに使用されます。 設定して、フォールバックとしての使用を無効にすることもできます、<xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A>プロパティを`false`、これにより、WCF に NTLM を使用する場合に例外をスローするベスト エフォートです。 ただし、このプロパティを `false` に設定しても、ネットワーク経由で NTLM 資格情報が送信されなくなるとは限りません。|  
 |Windows|Windows 認証を指定します。 Windows ドメインで Kerberos プロトコルだけを指定するには、<xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> プロパティを `false` (既定値は `true`) に設定する必要があります。|  
 |証明書|X.509 証明書を使用したクライアント認証を実行します。|  
@@ -85,9 +85,9 @@ ms.locfileid: "43503392"
 ## <a name="how-client-credentials-are-used-to-authenticate-a-client-to-the-service"></a>サービスに対するクライアントの認証でのクライアント資格情報の使用  
  サービスとの通信に必要なクライアント資格情報は、<xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> プロパティまたは <xref:System.ServiceModel.ChannelFactory.Credentials%2A> プロパティを使用して提供されます。 この情報は、サービスに対してクライアントを認証するためにセキュリティ チャネルで使用されます。 認証は、次のいずれかの方法で実行されます。  
   
--   クライアントの資格情報は、最初のメッセージを送信すると、WCF クライアントのインスタンスを使用してセキュリティ コンテキストを確立する前に 1 回使用されます。 アプリケーション メッセージはすべて、そのセキュリティ コンテキストで保護されます。  
+- クライアントの資格情報は、最初のメッセージを送信すると、WCF クライアントのインスタンスを使用してセキュリティ コンテキストを確立する前に 1 回使用されます。 アプリケーション メッセージはすべて、そのセキュリティ コンテキストで保護されます。  
   
--   サービスに送信されたアプリケーション メッセージごとの認証に、クライアント資格情報を使用します。 この場合、クライアントとサービスとの間にコンテキストは確立されません。  
+- サービスに送信されたアプリケーション メッセージごとの認証に、クライアント資格情報を使用します。 この場合、クライアントとサービスとの間にコンテキストは確立されません。  
   
 ### <a name="established-identities-cannot-be-changed"></a>変更できない確立された ID  
  1 つ目の方法を使用した場合、確立されたコンテキストは、クライアント ID に永続的に関連付けられます。 つまり、セキュリティ コンテキストが確立されると、クライアントに関連付けられた ID を変更できません。  
@@ -97,20 +97,20 @@ ms.locfileid: "43503392"
   
  資格情報とセキュリティで保護されたセッションの詳細については、次を参照してください。[セキュリティで保護されたセッションに関するセキュリティの考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  
- <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.BasicHttpMessageSecurity.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.MessageSecurityOverMsmq.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.MessageSecurityOverTcp.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A?displayProperty=nameWithType>  
- [セキュリティの概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- [サービスおよびクライアントのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [WCF セキュリティのプログラミング](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
- [HTTP トランスポート セキュリティ](../../../../docs/framework/wcf/feature-details/http-transport-security.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
+- <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.BasicHttpMessageSecurity.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.MessageSecurityOverMsmq.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.MessageSecurityOverTcp.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A?displayProperty=nameWithType>
+- [セキュリティの概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+- [サービスおよびクライアントのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [WCF セキュリティのプログラミング](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
+- [HTTP トランスポート セキュリティ](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

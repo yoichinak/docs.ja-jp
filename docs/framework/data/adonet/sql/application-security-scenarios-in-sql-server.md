@@ -2,12 +2,12 @@
 title: SQL Server におけるアプリケーション セキュリティのシナリオ
 ms.date: 03/30/2017
 ms.assetid: 0164f3a4-406e-4693-bec3-03c8e18b46d7
-ms.openlocfilehash: bf4f4adfd5f49bd210026e40bd5fa4e67da10d75
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 96c9f48cbf2e2ade2ff1688573a83fd86d613f2c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45994044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877891"
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>SQL Server におけるアプリケーション セキュリティのシナリオ
 安全な SQL Server クライアント アプリケーションを作成するにあたって、絶対に正しいという唯一の方法はありません。 アプリケーションの要件、配置環境、およびユーザー数は、アプリケーションごとに異なります。 配置した当初は十分なセキュリティが確保されたアプリケーションも、時間の経過と共に安全性が低下してゆくことが考えられます。 将来発生する脅威を正確に予測することは不可能です。  
@@ -21,7 +21,7 @@ ms.locfileid: "45994044"
  SQL インジェクションとは、悪意のあるユーザーによって、有効な入力データの代わりに Transact-SQL ステートメントが入力されることをいいます。 この入力データが検証を経ることなくサーバーに直接渡され、なおかつ、挿入されたコードをアプリケーションが気付かずに実行した場合、その攻撃によってデータが破損または破壊される可能性があります。 SQL Server インジェクション攻撃を阻止する方法としては、ストアド プロシージャやパラメーター化コマンドを使用する方法のほか、動的 SQL を実行できないようにしたり、すべてのユーザーの権限を制限したりすることが考えられます。  
   
 ### <a name="elevation-of-privilege"></a>権限の昇格  
- 権限の昇格攻撃は、ユーザーが、所有者や管理者など、信頼されたアカウントの権限で振る舞うことのできる状況で発生します。 大切なことは、常に最小限の特権しか持たないユーザー アカウントで実行するようにし、必要な権限以外は割り当てないようにすることです。 コードの実行に、管理者アカウントや所有者アカウントを使用することは避けてください。 このようにすることで、仮に攻撃を阻止できなかった場合でも、損害の範囲を最小限に抑えることができます。 より高い権限が要求される作業を行う場合は、その期間だけプロシージャの署名や権限の借用を使用するようにします。 証明書を使ってストアド プロシージャに署名したり、権限の借用を使用して一時的に権限を割り当てたりできます。  
+ 権限の昇格攻撃は、ユーザーが、所有者や管理者など、信頼されたアカウントの権限で振る舞うことのできる状況で発生します。 大切なことは、常に最小限の特権しか持たないユーザー アカウントで実行するようにし、必要な権限以外は割り当てないようにすることです。 コードの実行に、管理者アカウントや所有者アカウントを使用することは避けてください。 このようにすることで、仮に攻撃を阻止できなかった場合でも、損害の範囲を最小限に抑えることができます。 より高い権限が要求されるタスクを行う場合は、そのタスクの期間だけプロシージャの署名や権限の借用を使用するようにします。 証明書を使ってストアド プロシージャに署名したり、権限の借用を使用して一時的に権限を割り当てたりできます。  
   
 ### <a name="probing-and-intelligent-observation"></a>プローブと情報取得  
  プローブ攻撃には、アプリケーションから生成されるエラー メッセージを調べてセキュリティ上の脆弱性を探す手法がよく用いられます。 すべてのプロシージャ コードにはエラー処理を実装し、SQL Server のエラー情報がエンド ユーザーに返されないようにしてください。  
@@ -56,8 +56,9 @@ ms.locfileid: "45994044"
  [SQL Server での複数データベースにまたがるアクセスの有効化](../../../../../docs/framework/data/adonet/sql/enabling-cross-database-access-in-sql-server.md)  
  セキュリティを損なうことなく複数データベースにまたがるアクセスを有効にする方法について説明します。  
   
-## <a name="see-also"></a>関連項目  
- [SQL Server のセキュリティ](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [SQL Server セキュリティの概要](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
- [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [SQL Server のセキュリティ](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [SQL Server セキュリティの概要](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
+- [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

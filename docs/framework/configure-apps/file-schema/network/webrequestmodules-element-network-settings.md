@@ -1,5 +1,5 @@
 ---
-title: '&lt;webRequestModules&gt;要素 (ネットワーク設定)'
+title: <webRequestModules> 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - webRequestModules element
 - <webRequestModules> element
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
-ms.openlocfilehash: 1d421009e8b2e0d4074679939092180c6037a0c7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e5d1780a204b2e99593d51179a479845fd49e608
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704948"
 ---
-# <a name="ltwebrequestmodulesgt-element-network-settings"></a>&lt;webRequestModules&gt;要素 (ネットワーク設定)
+# <a name="webrequestmodules-element-network-settings"></a>\<webRequestModules > 要素 (ネットワーク設定)
 使用してネットワークのホストから情報を要求するモジュールを指定します。  
   
  \<configuration>  
@@ -73,7 +73,8 @@ ms.locfileid: "50200445"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.Net.WebRequest>  
-- <xref:System.Net.IWebRequestCreate>  
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Net.WebRequest>
+- <xref:System.Net.IWebRequestCreate>
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

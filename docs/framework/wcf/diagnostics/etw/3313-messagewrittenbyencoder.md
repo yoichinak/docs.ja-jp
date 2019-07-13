@@ -2,15 +2,15 @@
 title: 3313 - MessageWrittenByEncoder
 ms.date: 03/30/2017
 ms.assetid: abdb7db5-373e-4862-b53d-befbb0949e32
-ms.openlocfilehash: 4054eb7d66665ae2f525cbb127f6182f3be41002
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 59cca0f964c7d97cbfea57305ce0e1157e13d560
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458235"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67421929"
 ---
 # <a name="3313---messagewrittenbyencoder"></a>3313 - MessageWrittenByEncoder
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>Properties  
   
 |||  
 |-|-|  
@@ -25,4 +25,4 @@ ms.locfileid: "33458235"
 ## <a name="message"></a>メッセージ  
  サイズ '%1' バイトのメッセージがエンコーダーによって書き込まれました。  
   
-## <a name="details"></a>詳細
+## <a name="details"></a>説明

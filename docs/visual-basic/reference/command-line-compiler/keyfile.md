@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keyfile compiler option [Visual Basic]
 - -keyfile compiler option [Visual Basic]
 ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
-ms.openlocfilehash: 12895e4a18203a0d6c409a3b2117abbc59fab7a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c13f34c23cad9c909c2c5bd3447f1a8fa53f9b4d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793963"
 ---
 # <a name="-keyfile"></a>-keyfile
 アセンブリに厳密な名前を付けるキーまたはキー ペアを含むファイルを指定します。  
@@ -24,35 +24,36 @@ ms.locfileid: "33653482"
   
 ## <a name="arguments"></a>引数  
  `file`  
- 必須。 キーを含むファイルです。 ファイル名にスペースが含まれている場合は、名前を引用符で囲みます ("") です。  
+ 必須。 キーを含むファイルです。 ファイル名にスペースが含まれている場合は、名前を引用符で囲みます ("")。  
   
-## <a name="remarks"></a>コメント  
- コンパイラは、アセンブリ マニフェストに公開キーを挿入し、秘密キーを使用し、最終的なアセンブリを署名します。 キー ファイルを生成する入力`sn -k file`コマンドライン。 詳細については、[Sn.exe (厳密名ツール)] を参照してください。[Sn.exe (厳密名ツール)](../../../framework/tools/sn-exe-strong-name-tool.md))。  
+## <a name="remarks"></a>Remarks  
+ コンパイラはアセンブリ マニフェストに公開キーを挿入し、秘密キーで最終アセンブリに署名します。 キー ファイルを生成するには、コマンド ラインで「`sn -k file`」と入力します。 詳細については、次を参照してください。 [Sn.exe (厳密名ツール)](../../../framework/tools/sn-exe-strong-name-tool.md))。  
   
- コンパイルする場合`-target:module`、キー ファイルの名前が、モジュール内に保持しを伴うアセンブリをコンパイルするときに作成されるアセンブリに組み込む[/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)です。  
+ 使用してコンパイルする場合`-target:module`、キー ファイルの名前がモジュールに保持され、使用してアセンブリをコンパイルするときに作成されるアセンブリに組み込まれます[/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)します。  
   
  また、暗号化情報を [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md) でコンパイラに渡すことができます。 部分的に署名されたアセンブリを作成する場合は、[-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md) を使います。  
   
- カスタム属性としては、このオプションを指定することもできます (<xref:System.Reflection.AssemblyKeyFileAttribute>)、Microsoft intermediate language モジュールのソース コードにします。  
+ カスタム属性として、このオプションを指定することもできます (<xref:System.Reflection.AssemblyKeyFileAttribute>) 任意の Microsoft intermediate language モジュールのソース コードにします。  
   
- 場合両方`-keyfile`と[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)がで指定された (コマンド ライン オプションまたはカスタム属性によって)、同じコンパイル時に、コンパイラにより、キー コンテナーを最初に試行します。 それが成功すると、アセンブリはキー コンテナーの情報で署名されます。 指定されたファイルを試みますが、コンパイラが、キー コンテナーを見つけられない場合`-keyfile`です。 これが成功した、キーのファイルの情報と、アセンブリは署名およびキー コンテナーにキー情報がインストールされている場合 (に似て`sn -i`) 次のコンパイル時に、キー コンテナーが有効になるようにします。  
+ 場合両方`-keyfile`と[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)がで指定された (コマンド ライン オプションまたはカスタム属性によって)、同じコンパイル時に、コンパイラが最初にキー コンテナーを試みます。 それが成功すると、アセンブリはキー コンテナーの情報で署名されます。 指定したファイルがしようと、コンパイラがキー コンテナーを見つけられない場合`-keyfile`します。 これが成功すると、アセンブリは、キー ファイルの情報で署名およびキーの情報がキー コンテナーにインストールされている場合 (のような`sn -i`) 次のコンパイル時にキー コンテナーが有効になるようにします。  
   
  キー ファイルには公開キーだけが含まれる場合があることに注意してください。  
   
- 参照してください[作成と使用](../../../framework/app-domains/create-and-use-strong-named-assemblies.md)アセンブリに署名する方法についてです。  
+ 参照してください[の作成と using strong-named Assemblies](../../../framework/app-domains/create-and-use-strong-named-assemblies.md)アセンブリへの署名の詳細についてはします。  
   
 > [!NOTE]
->  `-keyfile`オプションは、Visual Studio 開発環境からは利用できません; は、コマンドラインからコンパイルするときにのみ使用します。  
+>  `-keyfile`オプションは、Visual Studio 開発環境内からは使用できません。 コマンドラインからコンパイルする場合にのみ使用可能なです。  
   
 ## <a name="example"></a>例  
- 次のコードは、ソース ファイルをコンパイル`Input.vb`し、キー ファイルを指定します。  
+ 次のコードは、ソース ファイルをコンパイル`Input.vb`キー ファイルを指定します。  
   
 ```console  
 vbc -keyfile:myfile.sn input.vb  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [アセンブリとグローバル アセンブリ キャッシュ](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-参照 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>関連項目
+
+- [.NET のアセンブリ](../../../standard/assembly/index.md)
+- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-参照 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

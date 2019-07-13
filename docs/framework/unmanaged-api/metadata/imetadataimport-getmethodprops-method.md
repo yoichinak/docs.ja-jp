@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4037ca42c5a66f075e949cd2035c1e7db510bb8e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 27b2867019085bf5b44f2ee364c07af66144d4b5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448910"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782338"
 ---
 # <a name="imetadataimportgetmethodprops-method"></a>IMetaDataImport::GetMethodProps メソッド
 指定した MethodDef トークンによって参照されるメソッドに関連付けられているメタデータを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetMethodProps (  
     [in]  mdMethodDef         mb,  
     [out] mdTypeDef           *pClass,  
@@ -44,7 +44,7 @@ HRESULT GetMethodProps (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `mb`  
  [in]メタデータを返すメソッドを表す MethodDef トークンです。  
   
@@ -52,38 +52,39 @@ HRESULT GetMethodProps (
  [out]メソッドを実装する型を表す TypeDef トークンへのポインター。  
   
  `szMethod`  
- [out]メソッドの名前を持つバッファーへのポインター。  
+ [out]メソッドの名前を保持するバッファーへのポインター。  
   
  `cchMethod`  
  [in]要求されたサイズの`szMethod`します。  
   
  `pchMethod`  
- [out]ワイド文字単位のサイズへのポインター`szMethod`切り捨て、メソッド名でのワイド文字の実際の数の場合。  
+ [out]ワイド文字のサイズへのポインター`szMethod`切り捨て、メソッド名のワイド文字の実際の数の場合。  
   
  `pdwAttr`  
- [out]メソッドに関連付けられているフラグのいずれかへのポインター。  
+ [out]メソッドに関連付けられているすべてのフラグへのポインター。  
   
  `ppvSigBlob`  
  [out]メソッドのバイナリ メタデータ シグネチャへのポインター。  
   
  `pcbSigBlob`  
- [out]サイズのバイト数へのポインター`ppvSigBlob`です。  
+ [out]サイズのバイト数へのポインター`ppvSigBlob`します。  
   
  `pulCodeRVA`  
  [out]メソッドの相対仮想アドレスへのポインター。  
   
  `pdwImplFlags`  
- [out]メソッドの実装フラグのいずれかへのポインター。  
+ [out]メソッドの場合は、任意の実装フラグへのポインター。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

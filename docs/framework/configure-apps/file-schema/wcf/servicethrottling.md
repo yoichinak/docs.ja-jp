@@ -1,15 +1,15 @@
 ---
-title: '&lt;serviceThrottling&gt;'
+title: <serviceThrottling>
 ms.date: 03/30/2017
 ms.assetid: a337d064-1e64-4209-b4a9-db7fdb7e3eaf
-ms.openlocfilehash: 000124c8d0dda81f99668cd330f7cc97c2520464
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 995ff9979096757225c9241e977f86f755955945
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758107"
 ---
-# <a name="ltservicethrottlinggt"></a>&lt;serviceThrottling&gt;
+# <a name="servicethrottling"></a>\<serviceThrottling>
 WCF (Windows Communication Foundation) サービスの調整機構を指定します。  
   
  \<system.ServiceModel >  
@@ -68,7 +68,8 @@ WCF (Windows Communication Foundation) サービスの調整機構を指定し�
 </behaviors>
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>  
- <xref:System.ServiceModel.Configuration.ServiceThrottlingElement>  
- [WCF サービス パフォーマンスを制御するための ServiceThrottlingBehavior の使用](../../../../../docs/framework/wcf/feature-details/using-servicethrottlingbehavior-to-control-wcf-service-performance.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>
+- <xref:System.ServiceModel.Configuration.ServiceThrottlingElement>
+- [WCF サービス パフォーマンスを制御するための ServiceThrottlingBehavior の使用](../../../../../docs/framework/wcf/feature-details/using-servicethrottlingbehavior-to-control-wcf-service-performance.md)

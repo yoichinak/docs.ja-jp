@@ -17,25 +17,25 @@ helpviewer_keywords:
 - members [Visual Basic], Implements keyword
 - reimplementation
 ms.assetid: 5252cdf9-964d-4fc6-af0f-0449b7126b5a
-ms.openlocfilehash: 1e34245ac528e9e2463afbfd07dff91bf693830b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 05de1d9f8966c17d84deba34f27819cce4aff3fe
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61637766"
 ---
 # <a name="implements-clause-visual-basic"></a>Implements 句 (Visual Basic)
-クラスまたは構造体のメンバーがインターフェイスで定義されているメンバーの実装を提供していることを示します。  
+クラスまたは構造体のメンバーがインターフェイスで定義されているメンバーの実装を提供することを示します。  
   
-## <a name="remarks"></a>コメント  
-`Implements`キーワードと同じではない、 [Implements ステートメント](../../../visual-basic/language-reference/statements/implements-statement.md)です。 使用する、`Implements`クラスまたは構造体は、1 つまたは複数のインターフェイスを実装して、各メンバーを使用することを指定するステートメント、`Implements`どのインターフェイスとメンバーを指定するキーワードを実装します。
+## <a name="remarks"></a>Remarks  
+`Implements`キーワードがないと同じ、 [Implements ステートメント](../../../visual-basic/language-reference/statements/implements-statement.md)します。 使用する、`Implements`クラスまたは構造体は、1 つまたは複数のインターフェイスを実装および使用する各メンバーに対して、指定のステートメント、`Implements`インターフェイスとメンバーを指定するキーワードを実装します。
 
-クラスまたは構造体、インターフェイスを実装する場合は含める必要があります、`Implements`ステートメントの直後に、[クラス ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)または[Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md)、およびすべてのメンバーを実装する必要がありますインターフェイスによって定義されます。
+含めることはクラスまたは構造体、インターフェイスを実装する場合、`Implements`ステートメントの直後に、 [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)または[Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md)、およびすべてのメンバーを実装する必要がありますインターフェイスによって定義されます。
 
-## <a name="reimplementation"></a>再実装が必要  
-派生クラスでは、基本クラスが実装済みインターフェイスのメンバーを再実装できます。 これは、次の点で基底クラスのメンバーをオーバーライドすると異なります。
+## <a name="reimplementation"></a>再実装  
+派生クラスでは、基底クラスが実装済みインターフェイスのメンバーを再実装できます。 これは、次の点で基底クラスのメンバーのオーバーライドとは異なります。
 
-- 基底クラスのメンバーがする必要がない[Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)実装するためにします。
+- 基底クラスのメンバーがある必要はありません[Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)実装するためにします。
 - 別の名前を持つメンバーを再実装できます。
 
 `Implements`キーワードは、次のコンテキストで使用できます。
@@ -44,8 +44,9 @@ ms.locfileid: "33603406"
 - [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)
 - [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>関連項目  
- [Implements ステートメント](../../../visual-basic/language-reference/statements/implements-statement.md)  
- [Interface ステートメント](../../../visual-basic/language-reference/statements/interface-statement.md)  
- [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)  
- [Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md)
+## <a name="see-also"></a>関連項目
+
+- [Implements ステートメント](../../../visual-basic/language-reference/statements/implements-statement.md)
+- [Interface ステートメント](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)
+- [Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md)

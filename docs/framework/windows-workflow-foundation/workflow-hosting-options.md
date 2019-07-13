@@ -2,24 +2,24 @@
 title: ワークフロー ホスティングのオプション
 ms.date: 03/30/2017
 ms.assetid: 37bcd668-9c5c-4e7c-81da-a1f1b3a16514
-ms.openlocfilehash: 7713044e40532c431d090b1cb1795876ead2a899
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b0cd9748c28cd6206e1fedffc5772b2849462dba
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516553"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487359"
 ---
 # <a name="workflow-hosting-options"></a>ワークフロー ホスティングのオプション
-Windows Workflow Foundation (WF) のサンプルのほとんどは、コンソール アプリケーションでホストされるワークフローを使用しますが、実際のワークフローにとって現実的なシナリオはありません。 実際のビジネス アプリケーションのワークフローは、開発者が作成した Windows サービス、[!INCLUDE[iisver](../../../includes/iisver-md.md)] や AppFabric などのサーバー アプリケーションのいずれかの永続的なプロセスでホストされます。 これらの方法の違いを次に示します。  
+ほとんどの Windows Workflow Foundation (WF) のサンプルを使用して、ワークフロー コンソール アプリケーションでホストされているが、実際のワークフローにとって現実的なシナリオはありません。 実際のビジネス アプリケーション内のワークフローは永続的なプロセスの Windows サービスの作成で、developer、または IIS 7.0 や AppFabric などのサーバー アプリケーションによってホストされます。 これらの方法の違いを次に示します。  
   
 ## <a name="hosting-workflows-in-iis-with-windows-appfabric"></a>Windows AppFabric を使用した IIS でのワークフローのホスト  
  IIS と AppFabric は、ワークフローに推奨されるホストです。 AppFabric を使用したワークフローのホスト アプリケーションは Windows プロセス アクティブ化サービスで、これは IIS を介した HTTP への依存関係のみを解消します。  
   
 ## <a name="hosting-workflows-in-iis-alone"></a>IIS のみでのワークフローのホスト  
- [!INCLUDE[iisver](../../../includes/iisver-md.md)] のみを使用することは推奨されていません。AppFabric には、実行中のアプリケーションのメンテナンスを容易にする管理ツールと監視ツールがあるためです。 ワークフローを [!INCLUDE[iisver](../../../includes/iisver-md.md)] のみでホストする必要があるのは、AppFabric への移行に関してインフラストラクチャ上の問題がある場合だけです。  
+ 管理と監視を実行中のアプリケーションの保守を容易にする AppFabric を使用した使用可能なツールがある、単独で IIS 7.0 の使用はお勧めできません。 ワークフローは、AppFabric への移行に関してインフラストラクチャ上の問題がある場合だけで IIS 7.0 でのみホストされている必要があります。  
   
 > [!WARNING]
->  さまざまな理由により、アプリケーション プールは [!INCLUDE[iisver](../../../includes/iisver-md.md)] によって定期的にリサイクルされます。 アプリケーション プールがリサイクルされると、IIS は古いプールへのメッセージの受け取りを中止し、新しいアプリケーション プールをインスタンス化して新しい要求を受け取ります。 ワークフローが応答の送信後も動作し続ける場合、[!INCLUDE[iisver](../../../includes/iisver-md.md)] は作業が完了したことを認識せず、ホスト アプリケーション プールをリサイクルする可能性があります。 このエラーは、ワークフローが中断され、追跡サービスが記録される場合、 [1004 - WorkflowInstanceAborted](../../../docs/framework/windows-workflow-foundation/1004-workflowinstanceaborted.md)理由フィールドが空白のメッセージ。  
+>  IIS 7.0 は、さまざまな理由から定期的にアプリケーション プールをリサイクルします。 アプリケーション プールがリサイクルされると、IIS は古いプールへのメッセージの受け取りを中止し、新しいアプリケーション プールをインスタンス化して新しい要求を受け取ります。 ワークフローには、応答の送信後の作業が引き続き発生する場合、IIS 7.0 は、実行されている作業の認識できなくなります、ホストのアプリケーション プールをリサイクルすることがあります。 これは、ワークフローが中断され、記録、追跡サービスの場合、 [1004 - WorkflowInstanceAborted](1004-workflowinstanceaborted.md)理由フィールドが空白のメッセージ。  
 >   
 >  永続化を使用する場合、ホストは、最後の永続性ポイントから、中止されたインスタンスを明示的に再開する必要があります。  
 >   

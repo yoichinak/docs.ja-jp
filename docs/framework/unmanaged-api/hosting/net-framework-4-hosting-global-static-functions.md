@@ -8,20 +8,21 @@ helpviewer_keywords:
 ms.assetid: 07a1a6e1-db73-4555-81df-bc4054c51492
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 019a17b38eb1cfccab4537d5f27b7625fdef1268
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6cb46d3684e36ca203b3ea5b58491150af4ffd58
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441469"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490144"
 ---
 # <a name="net-framework-4-hosting-global-static-functions"></a>.NET Framework 4 ホスト グローバル静的関数
-[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] MSCorEE.dll に 1 つの新しいエクスポート方法が導入されました。 [CLRCreateIntstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)です。  
+.NET Framework 4 には、MSCorEE.dll で 1 つの新しいエクスポートされたメソッドが導入されています。[CLRCreateIntstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [CLRCreateInstance 関数](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)  
- 3 つのインターフェイスのいずれかの提供: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)、 [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)、または[ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md)です。  
+ 次の 3 つのインターフェイスの 1 つを提供します。[ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)、 [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)、または[ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [ホスト グローバル静的関数](../../../../docs/framework/unmanaged-api/hosting/hosting-global-static-functions.md)  
- [ホスティング](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>関連項目
+
+- [ホスト グローバル静的関数](../../../../docs/framework/unmanaged-api/hosting/hosting-global-static-functions.md)
+- [ホスティング](../../../../docs/framework/unmanaged-api/hosting/index.md)

@@ -1,15 +1,15 @@
 ---
-title: '&lt;netNamedPipeBinding&gt; の &lt;security&gt;'
+title: <security> の <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: bb3cb022-637e-49fd-92e8-6766038affa7
-ms.openlocfilehash: 0079cb9e62abed42a36b67fed935f883473ebbb8
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: fa31dda3274c9768694bdf5232f31554899e1d82
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670522"
 ---
-# <a name="ltsecuritygt-of-ltnetnamedpipebindinggt"></a>&lt;netNamedPipeBinding&gt; の &lt;security&gt;
+# <a name="security-of-netnamedpipebinding"></a>\<セキュリティ > の\<netNamedPipeBinding >
 バインディングのセキュリティ設定を定義します。  
   
  \<system.ServiceModel >  
@@ -51,14 +51,15 @@ ms.locfileid: "54147825"
 |-------------|-----------------|  
 |バインド|バインド要素、 [ \<netNamedPipeBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)します。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.NetNamedPipeSecurity>  
- <xref:System.ServiceModel.NetNamedPipeBinding.Security%2A>  
- <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.Security%2A>  
- <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement>  
- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [資格情報の種類の選択](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
- [バインディング](../../../../../docs/framework/wcf/bindings.md)  
- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.NetNamedPipeSecurity>
+- <xref:System.ServiceModel.NetNamedPipeBinding.Security%2A>
+- <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.Security%2A>
+- <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement>
+- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [資格情報の種類の選択](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [バインディング](../../../../../docs/framework/wcf/bindings.md)
+- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

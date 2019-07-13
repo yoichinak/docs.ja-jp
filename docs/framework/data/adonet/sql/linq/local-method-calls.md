@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c34b5012-aee9-4994-9364-1d99d12b7463
-ms.openlocfilehash: 366c174a13e9a1a1928ef943febf199ae8485dfb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c8a4c29b1faa3c05f2cf32e9a60104b43a9b1c40
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033515"
 ---
 # <a name="local-method-calls"></a>ローカル メソッド呼び出し
-ローカル メソッド呼び出しとは、オブジェクト モデル内で実行される呼び出しです。 リモート メソッド呼び出しとは、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] が SQL に変換し、データベース エンジンに送信して実行される呼び出しです。 ローカル メソッド呼び出しが必要なときに[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]SQL への呼び出しを変換することはできません。 それ以外の場合、<xref:System.InvalidOperationException>がスローされます。  
+ローカル メソッド呼び出しとは、オブジェクト モデル内で実行される呼び出しです。 リモート メソッド呼び出しとは、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] が SQL に変換し、データベース エンジンに送信して実行される呼び出しです。 ローカル メソッド呼び出しが必要なときに[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]SQL への呼び出しを変換することはできません。 それ以外の場合は、<xref:System.InvalidOperationException> がスローされます。  
   
 ## <a name="example-1"></a>例 1  
  次の例では、`Order` クラスは Northwind サンプル データベースの Orders テーブルに割り当てられています。 このクラスには、ローカル インスタンス メソッドが追加されています。  
@@ -26,5 +26,6 @@ ms.locfileid: "33352439"
  [!code-csharp[DlinqLocalMethodCall#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqLocalMethodCall/cs/northwind.cs#2)]
  [!code-vb[DlinqLocalMethodCall#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqLocalMethodCall/vb/northwind.vb#2)]  
   
-## <a name="see-also"></a>関連項目  
- [背景情報](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+## <a name="see-also"></a>関連項目
+
+- [背景情報](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

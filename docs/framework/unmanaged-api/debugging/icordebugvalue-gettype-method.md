@@ -17,41 +17,40 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0fc0dd03abc1adb8eeea76a1053fb4d58de4ecf8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c0dbdee35e6c73fbf2d73edd8a6c479e2f2882ea
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419833"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764315"
 ---
 # <a name="icordebugvaluegettype-method"></a>ICorDebugValue::GetType メソッド
 この"ICorDebugValue"オブジェクトのプリミティブ型を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetType (  
     [out] CorElementType   *pType  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pType`  
- [out]値の型を示す"CorElementType"列挙の値へのポインター。  
+ [out]値の型を示す"CorElementType"列挙型の値へのポインター。  
   
-## <a name="remarks"></a>コメント  
- 適切なサブクラスを使用、その型を調べられる場合があります、オブジェクトが実行時の複雑な型である場合、`ICorDebugValue`インターフェイスです。 たとえば、"ICorDebugObjectValue"から継承される`ICorDebugValue`、複合型を表します。  
+## <a name="remarks"></a>Remarks  
+ 適切なサブクラスを通じてその型を調べることがありますオブジェクトが実行時の複雑な型の場合、`ICorDebugValue`インターフェイス。 たとえば、"ICorDebugObjectValue"を継承する`ICorDebugValue`、複合型を表します。  
   
- `GetType`と[icordebugobjectvalue::getclass](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md)の各メソッドは、値の型に関する情報を返します。 両方の汎用対応によって置き換えられる[icordebugvalue 2::getexacttype](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md)メソッドです。  
+ `GetType`と[icordebugobjectvalue::getclass](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md)各メソッドが値の型に関する情報を返します。 どちらも汎用対応によって置き換えられる[icordebugvalue 2::getexacttype](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md)メソッド。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- 
+## <a name="see-also"></a>関連項目

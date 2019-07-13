@@ -6,17 +6,18 @@ helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: 234190beb2cde69906df9d5c5f468689b7399535
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 7d8bdc5ceef5d82e4bc7e13ee932985cae6c2c10
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235986"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398553"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>匿名型 (C# プログラミング ガイド)
+
 匿名型を使用すると、あらかじめ明示的に型を定義することなく、一連の読み取り専用プロパティを単一のオブジェクトにカプセル化できるので便利です。 型の名前はコンパイラにより生成され、ソース コード レベルでは使用できません。 各プロパティの型はコンパイラにより推測されます。  
   
- 匿名型を作成するには、[new](../../../csharp/language-reference/keywords/new.md) 演算子をオブジェクト初期化子と一緒に使用します。 オブジェクト初期化子の詳細については、「[オブジェクト初期化子とコレクション初期化子](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)」を参照してください。  
+ 匿名型を作成するには、[new](../../../csharp/language-reference/operators/new-operator.md) 演算子をオブジェクト初期化子と一緒に使用します。 オブジェクト初期化子の詳細については、「[オブジェクト初期化子とコレクション初期化子](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)」を参照してください。  
   
  次の例では、`Amount` および `Message` という名前の 2 つのプロパティがある、初期化される匿名型を示します。  
   
@@ -36,7 +37,7 @@ Console.WriteLine(v.Amount + v.Message);
   
  匿名型のメンバー名を指定しない場合、コンパイラは初期化に使用されるプロパティと同じ名前を匿名型メンバーに付けます。 前の例で示されているように、式を使用して初期化されるプロパティの名前を指定する必要があります。 次の例では、`Color` と `Price` が匿名型のプロパティの名前になっています。  
   
- [!code-csharp[csRef30Features#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/anonymous-types_1.cs)]  
+ [!code-csharp[csRef30Features#81](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csRef30Features/CS/csref30.cs#81)]  
   
  通常、変数の初期化に匿名型を使用する場合は、[var](../../../csharp/language-reference/keywords/var.md) を使用することにより、変数を暗黙的に型指定したローカル変数として宣言します。 コンパイラだけが匿名型の基になる名前にアクセスできるため、変数宣言では型の名前を指定できません。 `var` の詳細については、「[暗黙的に型指定されたローカル変数](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)」を参照してください。  
   
@@ -46,7 +47,7 @@ Console.WriteLine(v.Amount + v.Message);
 var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", diam = 1 }};  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  匿名型は [object](../../../csharp/language-reference/keywords/object.md) から直接派生した [class](../../../csharp/language-reference/keywords/class.md) 型であり、[object](../../../csharp/language-reference/keywords/object.md) 以外の型にキャストできません。 コンパイラは各匿名型に名前を付けますが、この名前にアプリケーションはアクセスできません。 共通言語ランタイムから見た場合、匿名型と他の参照型に違いはありません。  
   
  アセンブリ内の複数の匿名オブジェクト初期化子が、同じ順序で同じ名前や型を持つプロパティのシーケンスを指定する場合、コンパイラはそれらのオブジェクトを同じ型のインスタンスとして処理します。 これらのオブジェクトは、コンパイラで生成された同一の型情報を共有します。  
@@ -55,9 +56,9 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
   
  匿名型の <xref:System.Object.Equals%2A> メソッドと <xref:System.Object.GetHashCode%2A> メソッドは、プロパティの `Equals` メソッドと `GetHashCode` メソッドとして定義されています。このため、同じ匿名型の 2 つのインスタンスは、すべてのプロパティが等しい場合のみ等しいとみなされます。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [オブジェクト初期化子とコレクション初期化子](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
-- [C# の LINQ の概要](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [オブジェクト初期化子とコレクション初期化子](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [C# の LINQ の概要](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [LINQ クエリ式](../../../csharp/programming-guide/linq-query-expressions/index.md)

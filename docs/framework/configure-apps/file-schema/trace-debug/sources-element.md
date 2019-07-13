@@ -1,5 +1,5 @@
 ---
-title: '&lt;ソース&gt;要素'
+title: <sources> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources
@@ -9,20 +9,18 @@ helpviewer_keywords:
 - trace sources
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: a9c5c5529e349eca2ba089ed6fb71da4bd48430a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 9104a4a302aa9c6094adbc13396074fdd4db4bbc
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701269"
 ---
-# <a name="ltsourcesgt-element"></a>&lt;ソース&gt;要素
+# <a name="sources-element"></a>\<ソース > 要素
 トレース メッセージを開始するトレース ソースを指定します。  
   
  \<configuration>  
-\<system.diagnostics >  
+\<system.diagnostics>  
 \<ソース >  
   
 ## <a name="syntax"></a>構文  
@@ -81,12 +79,13 @@ ms.locfileid: "48033247"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Diagnostics.TraceListener>  
- <xref:System.Diagnostics.DefaultTraceListener>  
- <xref:System.Diagnostics.TextWriterTraceListener>  
- <xref:System.Diagnostics.ConsoleTraceListener>  
- <xref:System.Diagnostics.EventLogTraceListener>  
- <xref:System.Diagnostics.XmlWriterTraceListener>  
- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Diagnostics.TraceListener>
+- <xref:System.Diagnostics.DefaultTraceListener>
+- <xref:System.Diagnostics.TextWriterTraceListener>
+- <xref:System.Diagnostics.ConsoleTraceListener>
+- <xref:System.Diagnostics.EventLogTraceListener>
+- <xref:System.Diagnostics.XmlWriterTraceListener>
+- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)

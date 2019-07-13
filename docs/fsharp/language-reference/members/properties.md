@@ -2,12 +2,12 @@
 title: プロパティ
 description: オブジェクトに関連付けられている値を表すメンバーである F# プロパティ、について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 8e74e0bc0850b5f07c4697f624d5393813bec6e0
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: bf605ee1135bd3b3561bde9a8ae66353497931b0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666366"
 ---
 # <a name="properties"></a>プロパティ
 
@@ -103,7 +103,7 @@ class1.ExplicitProperty = 1131210765
 AutoProperty の値変更されていないことと、繰り返し呼び出したときに、ExplicitProperty 変更のたびに呼び出されますが、上記のコードの出力を示しています。 これを示します、自動的に実装されたプロパティの式では、毎回は評価されませんは明示的なプロパティの getter メソッドです。
 
 >[!WARNING]
-Entity Framework などのいくつかのライブラリがあります (`System.Data.Entity`) 自動的に実装されたプロパティの初期化とうまく連携する基本クラス コンス トラクターでカスタム操作を実行します。 その場合、明示的なプロパティを使用してみてください。
+>Entity Framework などのいくつかのライブラリがあります (`System.Data.Entity`) 自動的に実装されたプロパティの初期化とうまく連携する基本クラス コンス トラクターでカスタム操作を実行します。 その場合、明示的なプロパティを使用してみてください。
 
 プロパティは、クラス、構造体、判別共用体、レコード、インターフェイス、および拡張機能の型のメンバーであることができ、オブジェクトの式で定義することもできます。
 

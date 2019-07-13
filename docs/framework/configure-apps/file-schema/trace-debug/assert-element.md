@@ -1,5 +1,5 @@
 ---
-title: '&lt;アサート&gt;要素'
+title: <assert> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/assert
@@ -8,21 +8,19 @@ helpviewer_keywords:
 - <assert> element
 - assert element
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: b15e569ff6e42298c0a1de02f77ab7c302c70d86
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2f3823265e358976f970cdfa36772d2251894280
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701360"
 ---
-# <a name="ltassertgt-element"></a>&lt;アサート&gt;要素
+# <a name="assert-element"></a>\<アサート > 要素
 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> メソッドの呼び出し時にメッセージ ボックスを表示するかどうかを指定し、メッセージの書き込み先のファイルの名前も指定します。  
   
  \<configuration>  
-\<system.diagnostics >  
-\<アサート >  
+\<system.diagnostics>  
+\<assert>  
   
 ## <a name="syntax"></a>構文  
   
@@ -71,6 +69,7 @@ ms.locfileid: "53154243"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Diagnostics.Debug>  
- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Diagnostics.Debug>
+- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

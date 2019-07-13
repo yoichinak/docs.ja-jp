@@ -1,15 +1,13 @@
 ---
 title: コンテナーと Docker の概要
 description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | コンテナーと Docker の概要'
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: cf86640456af03d4c44f537fe1ff3282521f2200
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: cb6244939f6ae89ba1dc824b55a21d1e010cef5e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147952"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644512"
 ---
 # <a name="introduction-to-containers-and-docker"></a>コンテナーと Docker の概要
 

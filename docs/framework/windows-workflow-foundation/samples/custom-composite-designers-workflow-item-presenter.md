@@ -2,12 +2,12 @@
 title: カスタム複合デザイナー - Workflow Item Presenter
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
-ms.openlocfilehash: 7a3089f1b96cfc766143dd62d9f917fb014af636
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 0eb2ce0ca7e5d2ffd7ddd9a3d582783b4610427a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836697"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622612"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>カスタム複合デザイナー - Workflow Item Presenter
 <xref:System.Activities.Presentation.WorkflowItemPresenter>任意のアクティビティを配置できる場所の「ドロップ ゾーン」を作成するため、WF デザイナー プログラミング モデル内の主要な型です。 このサンプルは、このような「ドロップ ゾーンです。」を表示するアクティビティ デザイナーを構築する方法を示しています。
@@ -16,18 +16,18 @@ ms.locfileid: "48836697"
 
 ## <a name="demonstrates"></a>使用例
 
--   <xref:System.Activities.Presentation.WorkflowItemPresenter> を使用したカスタム アクティビティ デザイナーの作成
+- <xref:System.Activities.Presentation.WorkflowItemPresenter> を使用したカスタム アクティビティ デザイナーの作成
 
--   メタデータ ストアを使用したカスタム デザイナーの登録。
+- メタデータ ストアを使用したカスタム デザイナーの登録。
 
--   宣言および命令による再ホストされたツールボックスのプログラミング。
+- 宣言および命令による再ホストされたツールボックスのプログラミング。
 
 ## <a name="sample-details"></a>サンプルの詳細
  このサンプルのコードを次に示します。
 
--   カスタム アクティビティ デザイナーは `SimpleNativeActivity` クラス用に作成されます。
+- カスタム アクティビティ デザイナーは `SimpleNativeActivity` クラス用に作成されます。
 
--   <xref:System.Activities.Presentation.WorkflowItemPresenter> を使用してカスタム アクティビティ デザイナーを作成します。
+- <xref:System.Activities.Presentation.WorkflowItemPresenter> を使用してカスタム アクティビティ デザイナーを作成します。
 
 ```xaml
 <sap:ActivityDesigner x:Class="Microsoft.Samples.UsingWorkflowItemPresenter.SimpleNativeDesigner"
@@ -67,9 +67,9 @@ ms.locfileid: "48836697"
 
 #### <a name="to-setup-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには
 
-1.  Visual Studio 2010 でのソリューションを開きます。
+1. Visual Studio 2010 でのソリューションを開きます。
 
-2.  F5 キーを押してアプリケーションをコンパイルし、実行します。
+2. F5 キーを押してアプリケーションをコンパイルし、実行します。
 
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
@@ -80,6 +80,7 @@ ms.locfileid: "48836697"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Activities.Presentation.WorkflowItemPresenter>  
- [ワークフロー デザイナーを使用したアプリケーションの開発](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Activities.Presentation.WorkflowItemPresenter>
+- [ワークフロー デザイナーを使用したアプリケーションの開発](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

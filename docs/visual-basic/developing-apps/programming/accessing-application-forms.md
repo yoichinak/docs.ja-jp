@@ -8,12 +8,12 @@ helpviewer_keywords:
 - My.Forms object
 - forms [Visual Basic], accessing all open
 ms.assetid: 9aaf5aaf-2012-4f97-89c7-6e62b9d17863
-ms.openlocfilehash: eb40606f55785b4b6ec9271b55c8159a26822011
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 85de915f4dc9a79e0161411951062afbeb764513
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581854"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58821687"
 ---
 # <a name="accessing-application-forms-visual-basic"></a>アプリケーション フォームへのアクセス (Visual Basic)
 `My.Forms` オブジェクトは、アプリケーションのプロジェクトで宣言された各 Windows フォームのインスタンスに簡単にアクセスする方法を提供します。 `My.Application` オブジェクトのプロパティを利用し、アプリケーションのスプラッシュ スクリーンとメイン フォームにアクセスし、アプリケーションのオープン フォームの一覧を取得することもできます。  
@@ -27,7 +27,8 @@ ms.locfileid: "33581854"
 |アプリケーションのすべてのオープン フォームのタイトルを表示します。|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>|  
 |アプリケーションの起動時に状態情報でスプラッシュ スクリーンを更新します。|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>|  
   
-## <a name="see-also"></a>参照  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>  
- [My.Forms オブジェクト](../../../visual-basic/language-reference/objects/my-forms-object.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>
+- [My.Forms オブジェクト](../../../visual-basic/language-reference/objects/my-forms-object.md)

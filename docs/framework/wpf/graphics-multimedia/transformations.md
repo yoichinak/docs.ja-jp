@@ -16,22 +16,23 @@ helpviewer_keywords:
 - Transforms [WPF]
 - Transforms [WPF], about Transforms
 ms.assetid: 712b543f-d8b2-4dcf-ba2c-f7921c61c6fd
-ms.openlocfilehash: 0a1be35a37a9f3d0fa94d13f5bc50df213bd1775
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a0b5268d1c7e319a6144a7d551dca45bdc3e64aa
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925999"
 ---
 # <a name="transformations"></a>変換
 変換を使用し、回転、拡大縮小、平行移動、または傾斜<xref:System.Windows.FrameworkElement>オブジェクト。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [変換の概要](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
+ [変換の概要](transforms-overview.md)  
+ [方法トピック](transformations-how-to-topics.md)  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Media.Transform>  
- [グラフィックスとマルチメディア](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [WPF グラフィックス レンダリングの概要](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [レイアウト](../../../../docs/framework/wpf/advanced/layout.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Media.Transform>
+- [グラフィックスとマルチメディア](index.md)
+- [WPF グラフィックス レンダリングの概要](wpf-graphics-rendering-overview.md)
+- [レイアウト](../advanced/layout.md)

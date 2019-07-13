@@ -2,12 +2,12 @@
 title: MustUnderstandBehavior
 ms.date: 03/30/2017
 ms.assetid: 911ed04a-c4b8-4c72-a5c3-fc7b4e3b4348
-ms.openlocfilehash: 0f3efc446104a1afff507f6e7d2cd8c01c4ed417
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 7e6a96c217b038e870b4e865315766afa3b3c757
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61963164"
 ---
 # <a name="mustunderstandbehavior"></a>MustUnderstandBehavior
 MustUnderstandBehavior  
@@ -30,7 +30,7 @@ class MustUnderstandBehavior : Behavior
 ### <a name="validatemustunderstand"></a>ValidateMustUnderstand  
  データ型 : boolean  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  `true` の場合、未処理の `MustUnderstand` 属性を持つすべての SOAP ヘッダーは、動作が例外をスローする原因となります。  
   
@@ -38,7 +38,8 @@ class MustUnderstandBehavior : Behavior
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
-|Namespace|root\ServiceModel で定義|  
+|名前空間|root\ServiceModel で定義|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Description.MustUnderstandBehavior>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Description.MustUnderstandBehavior>

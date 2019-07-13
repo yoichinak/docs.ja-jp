@@ -1,15 +1,13 @@
 ---
 title: API ゲートウェイ パターンと、クライアントからマイクロサービスへの直接通信との比較
 description: API ゲートウェイ パターンと、クライアントからマイクロサービスへの直接通信との相違点およびそれぞれの用途について説明します。
-author: CESARDELATORRE
-ms.author: wiwagn
-ms.date: 09/20/2018
-ms.openlocfilehash: eebbfa6579de4cd24f58371ed1c7ab9a5f2e1c00
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.date: 01/07/2019
+ms.openlocfilehash: 4b169d5a9542b10726a36b65328bc6a3dc3839ef
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030543"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690362"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API ゲートウェイ パターンと、クライアントからマイクロサービスへの直接通信との比較
 
@@ -21,11 +19,11 @@ ms.locfileid: "54030543"
 
 ![クライアントからマイクロサービスへの直接通信アーキテクチャを示す図。各アプリは個々のマイクロサービスと直接通信しています。](./media/image12.png)
 
-**図 4-12**.  クライアントからマイクロサービスへの直接通信アーキテクチャの使用
+**図 4-12**. クライアントからマイクロサービスへの直接通信アーキテクチャの使用
 
 この方法では、各マイクロサービスにパブリック エンドポイントがあり、マイクロサービスごとに異なる TCP ポートがある場合があります。 特定のサービスの URL の例として、Azure での URL を以下に示します。
 
-<http://eshoponcontainers.westus.cloudapp.azure.com:88/>
+`http://eshoponcontainers.westus.cloudapp.azure.com:88/`
 
 クラスターに基づく運用環境では、その URL がクラスターで使用されるロード バランサーにマップされ、その後、マイクロサービス全体に要求が分散されます。 運用環境では、マイクロサービスとインターネット間で [Azure Application Gateway](https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction) などのアプリケーション配信コントローラー (ADC) を使用できます。 これは、負荷分散を実行するだけでなく、SSL 終了を提供することにより、サービスをセキュリティで保護する透過層として機能します。 CPU 負荷の高い SSL 終了と他のルーティング作業を Azure Application Gateway にオフロードすることで、ホストの負荷が改善されます。 いずれの場合も、論理アプリケーション アーキテクチャの観点からロード バランサーと ADC は透過的となります。
 
@@ -73,7 +71,7 @@ ms.locfileid: "54030543"
 
 ![カスタム サービスとして実装された API ゲートウェイの図。この場合、アプリは、要求を個々のマイクロサービスに転送するように構成された 1 つのエンドポイント (API ゲートウェイ) に接続されます。](./media/image13.png)
 
-**図 4-13**.  カスタム サービスとして実装された API ゲートウェイの使用
+**図 4-13**. カスタム サービスとして実装された API ゲートウェイの使用
 
 この例では、API ゲートウェイは、コンテナーとして実行されるカスタム ASP.NET Core WebHost サービスとして実装されます。
 
@@ -132,9 +130,9 @@ API ゲートウェイ製品の実装によっては、さらに幅広い横断�
 
 ![Azure API Management では、ログ記録、セキュリティ、使用状況測定など、API ゲートウェイおよび管理の両方のニーズが解決されます。](./media/image14.png)
 
-**図 4-14**.  API ゲートウェイでの Azure API Management の使用
+**図 4-14**. API ゲートウェイでの Azure API Management の使用
 
-この場合、Azure API Management などの製品を使用する際に単一の API ゲートウェイを使用することはそれほど危険ではありません。この種の API ゲートウェイは "細かい" ためです。つまり、モノシリック コンポーネントに進化する可能性のあるカスタム C# コードを実装することはありません。 これらの製品はイングレス通信のリバース プロキシに近い動作をします。ここでは内部マイクロサービスから API をフィルター処理し、さらにこの単一層で公開された API に承認を適用することもできます。
+この場合、Azure API Management などの製品を使用する際に単一の API ゲートウェイを使用することはそれほど危険ではありません。この種の API ゲートウェイは "細かい" ためです。つまり、モノシリック コンポーネントに進化する可能性のあるカスタム C# コードを実装することはありません。 
 
 API ゲートウェイ製品は通常、イングレス通信のリバース プロキシに近い動作をします。ここでは内部マイクロサービスから API をフィルター処理し、さらにこの単一層で公開された API に承認を適用することもできます。
 
@@ -148,7 +146,7 @@ Azure API Management では、キー、トークン、および IP フィルタ�
 
 [Ocelot](https://github.com/ThreeMammals/Ocelot) は、より簡単な方法としてお勧めする簡易な API ゲートウェイです。 Ocelot は、システムへの統合されたエントリ ポイントを必要とするマイクロサービス アーキテクチャ向けに特別に設計された、オープンソースの .NET Core ベースの API ゲートウェイです。 これは軽量、高速、スケーラブルで、ルーティングや認証をはじめとするさまざまな機能を提供します。
 
-[参照アプリケーション eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) 用に Ocelot を選択する主な理由は、Ocelot が、マイクロサービス/コンテナー (Docker ホスト、Kubernetes、Service Fabric など) をデプロイするのと同じアプリケーション デプロイ環境にデプロイできる簡易な .NET Core API ゲートウェイであるためです。また、.NET Core をベースとしているのでクロスプラットフォームであり、Linux でも Windows でもデプロイできます。
+[参照アプリケーション eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) 用に Ocelot を選択する主な理由は、Ocelot が、マイクロサービス/コンテナー (Docker ホスト、Kubernetes など) をデプロイするのと同じアプリケーション デプロイ環境にデプロイできる簡易な .NET Core API ゲートウェイであるためです。また、.NET Core をベースとしているのでクロスプラットフォームであり、Linux でも Windows でもデプロイできます。
 
 コンテナー内で実行されるカスタム API ゲートウェイを示した前の図は、コンテナーとマイクロサービス ベースのアプリケーションで Ocelot を実行する方法も正確に示しています。
 
@@ -173,25 +171,25 @@ Azure API Management では、キー、トークン、および IP フィルタ�
 ## <a name="additional-resources"></a>その他の技術情報
 
 - **Charles Richardson。パターン: API ゲートウェイ/Backend for Front-End** \
-  [*https://microservices.io/patterns/apigateway.html*](https://microservices.io/patterns/apigateway.html)
+  <https://microservices.io/patterns/apigateway.html>
 
 - **API ゲートウェイ パターン** \
-  [*https://docs.microsoft.com/azure/architecture/microservices/gateway*](https://docs.microsoft.com/azure/architecture/microservices/gateway)
+  <https://docs.microsoft.com/azure/architecture/microservices/gateway>
 
 - **集約とコンポジションのパターン** \
-  [*https://microservices.io/patterns/data/api-composition.html*](https://microservices.io/patterns/data/api-composition.html)
+  <https://microservices.io/patterns/data/api-composition.html>
 
 - **Azure API Management** \
-  [*https://azure.microsoft.com/services/api-management/*](https://azure.microsoft.com/services/api-management/)
+  <https://azure.microsoft.com/services/api-management/>
 
 - **Udi Dahan。サービス指向のコンポジション** \
-  [*http://udidahan.com/2014/07/30/service-oriented-composition-with-video/*](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
+  <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
-- **Clemens Vasters。GOTO 2016 でのメッセージングとマイクロサービス (ビデオ)** \
-  [*https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
+- **Clemens Vasters。GOTO 2016 でのメッセージングとマイクロサービス (ビデオ)**  \
+  <https://www.youtube.com/watch?v=rXi5CLjIQ9k>
 
 - **Nutshell の API ゲートウェイ** (ASP.net Core API ゲートウェイのチュートリアル シリーズ) \
-  [*https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html*](https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html)
+  <https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html>
 
 >[!div class="step-by-step"]
 >[前へ](identify-microservice-domain-model-boundaries.md)

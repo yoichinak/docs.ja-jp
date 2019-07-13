@@ -1,17 +1,15 @@
 ---
 title: 部分的なエラーを処理するための戦略
-description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | 部分的なエラーを処理するための戦略
-author: CESARDELATORRE
-ms.author: wiwagn
-ms.date: 06/08/2018
-ms.openlocfilehash: ba15258be8caa1a5ed800cef0ebe832aa7328252
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+description: 部分的なエラーを適切に処理するための戦略をいくつか紹介します。
+ms.date: 10/16/2018
+ms.openlocfilehash: e96fe99ab44b924460e01abaad30aa3e2432117a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146119"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644238"
 ---
-# <a name="strategies-for-handling-partial-failure"></a>部分的なエラーを処理するための戦略
+# <a name="strategies-to-handle-partial-failure"></a>部分的なエラーを処理する戦略
 
 部分的なエラーを処理するための戦略には、次のものがあります。
 
@@ -25,24 +23,24 @@ ms.locfileid: "53146119"
 
 **フォールバックを実行する**。 この方法の場合、クライアント プロセスは、要求が失敗したときに、キャッシュ データや既定値を返すなどのフォールバック ロジックを実行します。 これは、クエリに適した方法で、更新やコマンドの場合は、複雑さが増します。
 
-**キューに格納する要求の数を制限する**。 クライアントは、クライアント マイクロサービスが特定のサービスに送信できる未処理の要求数に対して、上限を課す必要もあります。 制限に達した場合は、追加の要求を行ってもたいていは無意味で、それらの試みは直ちに失敗します。 実装に関しては、Polly の [バルクヘッド分離](https://github.com/App-vNext/Polly/wiki/Bulkhead)ポリシーを使用して、この要件を満たすことができます。 この方法は、本質的には、<xref:System.Threading.SemaphoreSlim> を実装として使用した並列化スロットルです。 バルクヘッドの外側の "キュー" も許可されます。 (たとえば、容量が一杯であると思われた理由で) 実行前であっても、過度の負荷をプロアクティブに取り除くことができます。 これにより、特定のエラー シナリオへの対処をサーキット ブレーカーよりも速く行うことができます (サーキット ブレーカーは、エラーを待機しているため)。 Polly の BulkheadPolicy オブジェクトを見ると、バルクヘッドとキューがどのくらい一杯になっているかがわかります。また、このオブジェクトは、オーバーフローに関するイベントを提供するので、自動水平スケールの駆動に使用することもできます。
+**キューに格納する要求の数を制限する**。 クライアントは、クライアント マイクロサービスが特定のサービスに送信できる未処理の要求数に対して、上限を課す必要もあります。 制限に達した場合は、追加の要求を行ってもたいていは無意味で、それらの試みは直ちに失敗します。 実装に関しては、Polly の [バルクヘッド分離](https://github.com/App-vNext/Polly/wiki/Bulkhead)ポリシーを使用して、この要件を満たすことができます。 この方法は、本質的には、<xref:System.Threading.SemaphoreSlim> を実装として使用した並列化スロットルです。 バルクヘッドの外側の "キュー" も許可されます。 (たとえば、容量が一杯であると思われた理由で) 実行前であっても、過度の負荷をプロアクティブに取り除くことができます。 これにより、特定のエラー シナリオへの対処をサーキット ブレーカーよりも速く行うことができます (サーキット ブレーカーは、エラーを待機しているため)。 [Polly](http://www.thepollyproject.org/) の BulkheadPolicy オブジェクトを見ると、バルクヘッドとキューがどのくらい一杯になっているかがわかります。また、このオブジェクトは、オーバーフローに関するイベントを提供するので、自動水平スケールの駆動に使用することもできます。
 
 ## <a name="additional-resources"></a>その他の技術情報
 
--   **回復性パターン**
-    [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](https://docs.microsoft.com/azure/architecture/patterns/category/resiliency)
+- **回復性パターン**\
+  [https://docs.microsoft.com/azure/architecture/patterns/category/resiliency](/azure/architecture/patterns/category/resiliency)
 
--   **回復性の追加とパフォーマンスの最適化**
-    [*https://msdn.microsoft.com/library/jj591574.aspx*](https://msdn.microsoft.com/library/jj591574.aspx)
+- **回復性の追加とパフォーマンスの最適化**\
+  <https://docs.microsoft.com/previous-versions/msp-n-p/jj591574(v=pandp.10)>
 
--   **Bulkhead** (バルクヘッド)。 GitHub リポジトリ。 Polly ポリシーを使用した実装。\
-    [*https://github.com/App-vNext/Polly/wiki/Bulkhead*](https://github.com/App-vNext/Polly/wiki/Bulkhead)
+- **Bulkhead** (バルクヘッド)。 GitHub リポジトリ。 Polly ポリシーを使用した実装。\
+  <https://github.com/App-vNext/Polly/wiki/Bulkhead>
 
--   **Azure 用の回復性の高いアプリケーションの設計**
-    [*https://docs.microsoft.com/azure/architecture/resiliency/*](https://docs.microsoft.com/azure/architecture/resiliency/)
+- **Azure 用の回復性の高いアプリケーションの設計**\
+  [https://docs.microsoft.com/azure/architecture/resiliency/](/azure/architecture/resiliency/)
 
--   **一時的フォールト処理**
-    <https://docs.microsoft.com/azure/architecture/best-practices/transient-faults>
+- **一時的フォールト処理**\
+  [https://docs.microsoft.com/azure/architecture/best-practices/transient-faults](/azure/architecture/best-practices/transient-faults)
 
 >[!div class="step-by-step"]
 >[前へ](handle-partial-failure.md)

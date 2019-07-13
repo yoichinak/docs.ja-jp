@@ -1,21 +1,28 @@
 ---
 title: dotnet migrate コマンド
 description: dotnet migrate コマンドは、プロジェクトとそのすべての依存関係を移行します。
-ms.date: 05/25/2018
-ms.openlocfilehash: 73e0169e64be4b55e10127ecca0101885061767e
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.date: 06/26/2019
+ms.openlocfilehash: 3304f666d15d9188cdae76a401747d91791f817f
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170744"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539396"
 ---
 # <a name="dotnet-migrate"></a>dotnet の移行
 
+**このトピックの対象: ✓** .NET Core 1.x SDK 以降のバージョン
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>name
 
-`dotnet migrate` - Preview 2 .NET Core プロジェクトを .NET Core SDK 1.0 プロジェクトに移行します。
+`dotnet migrate` - Preview 2 .NET Core プロジェクトを .NET Core SDK スタイルのプロジェクトに移行します。
+
+> [!NOTE]
+> 次のプレビュー リリースでは、`dotnet migrate` が .NET Core 3.0 SDK から削除されます。
 
 ## <a name="synopsis"></a>構文
 
@@ -26,7 +33,7 @@ dotnet migrate [-h|--help]
 
 ## <a name="description"></a>説明
 
-`dotnet migrate` コマンドは、有効な Preview 2 *project.json* ベースのプロジェクトを有効な .NET Core SDK 1.0 *csproj* プロジェクトに移行します。
+`dotnet migrate` コマンドは、有効な Preview 2 *project.json* ベースのプロジェクトを有効な .NET Core SDK スタイルの *csproj* プロジェクトに移行します。
 
 既定では、このコマンドは、ルート プロジェクトとルート プロジェクトに含まれるすべてのプロジェクト参照を移行します。 この動作は、実行時に `--skip-project-references` オプションを使って、無効にすることができます。
 

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugAppDomainEnum Interface1
+title: ICorDebugAppDomainEnum インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugAppDomainEnum
@@ -16,36 +16,38 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddf8db3b02ba4766d046fc549eec8add31f51069
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: da1fc949109455cf50767191a99a8a727116f77c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989509"
 ---
-# <a name="icordebugappdomainenum-interface1"></a>ICorDebugAppDomainEnum Interface1
-提供、`Next`メソッドで、指定した数を返します`ICorDebugAppDomainEnum`値の列挙体の次の位置を開始します。 このインターフェイスは、"ICorDebugEnum"のサブクラスです。  
+# <a name="icordebugappdomainenum-interface"></a>ICorDebugAppDomainEnum インターフェイス
+
+提供、 `Next` 、指定した数を返すメソッド`ICorDebugAppDomainEnum`列挙体の次の場所から始まる値。 このインターフェイスは、"ICorDebugEnum"のサブクラスです。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Next メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-next-method.md)|コレクションの現在のカーソル位置から指定されたアプリケーション ドメイン数を取得します。|  
+|[Next メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-next-method.md)|現在のカーソル位置から、コレクションから指定されたアプリケーション ドメイン数を取得します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
 >  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICorDebug インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>関連項目
+
+- [ICorDebug インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

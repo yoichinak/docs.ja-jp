@@ -1,5 +1,5 @@
 ---
-title: '&lt;dependentAssembly&gt;要素'
+title: <dependentAssembly> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly
@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5b0d3bfb7e4db2fec39f37c9fb794731cdf5bbc
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: ac83a0b27a965721dabe1bdf2e05afbdc9b9c961
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704779"
 ---
-# <a name="ltdependentassemblygt-element"></a>&lt;dependentAssembly&gt;要素
+# <a name="dependentassembly-element"></a>\<dependentAssembly > 要素
 各アセンブリのバインディング ポリシーとアセンブリの場所をカプセル化します。 1 つを使用して、`dependentAssembly`各アセンブリの要素。  
   
  \<configuration>  
-\<ランタイム >  
+\<runtime>  
 \<assemblyBinding>  
-\<dependentAssembly >  
+\<dependentAssembly>  
   
 ## <a name="syntax"></a>構文  
   
@@ -80,7 +80,8 @@ ms.locfileid: "53613298"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>関連項目
+
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [アセンブリ バージョンのリダイレクト](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

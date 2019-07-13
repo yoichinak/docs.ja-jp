@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a27696b6511103e98d37fb72b33f801d23ad391
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 0b4727ead8abb9b3618f8b9dda8f7a9eb4b2321f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042180"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742475"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>XML ドキュメントからのスキーマの推論
 このトピックでは、<xref:System.Xml.Schema.XmlSchemaInference> クラスを使用して、XML ドキュメントの構造から XML スキーマ定義言語 (XSD) スキーマを推論する方法を説明します。  
@@ -84,8 +84,8 @@ ms.locfileid: "44042180"
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Xml.Schema.XmlSchemaInference>  
-- [XML スキーマ オブジェクト モデル (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
-- [XML スキーマの推論](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
-- [スキーマのノード型および構造を推論するときの規則](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)  
+- <xref:System.Xml.Schema.XmlSchemaInference>
+- [XML スキーマ オブジェクト モデル (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
+- [XML スキーマの推論](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)
+- [スキーマのノード型および構造を推論するときの規則](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)
 - [単純型を推論するときの規則](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)

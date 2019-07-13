@@ -2,12 +2,12 @@
 title: 伝達
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: 1d5ac743e94edd845650a1b550b3e982929d1b32
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ab8b6c003f9e483dccd7b9c7b2687a409f27fdc3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198251"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64600032"
 ---
 # <a name="propagation"></a>伝達
 このトピックでは、Windows Communication Foundation (WCF) トレース モデルでのアクティビティ伝達について説明します。  
@@ -26,11 +26,11 @@ ms.locfileid: "50198251"
 ## <a name="propagation-definition"></a>伝達の定義  
  次のすべての条件に該当する場合に、アクティビティ M の gAId がアクティビティ N に伝達されます。  
   
--   M に起因して N が作成された。  
+- M に起因して N が作成された。  
   
--   M の gAId を N が認識している。  
+- M の gAId を N が認識している。  
   
--   N の gAId と M の gAId が同じである。  
+- N の gAId と M の gAId が同じである。  
   
  次の XML スキーマに示すように、gAId は ActivityId メッセージ ヘッダーによって伝達されます。  
   
@@ -76,8 +76,9 @@ ms.locfileid: "50198251"
 ## <a name="synchronization"></a>同期  
  異なるコンピューター上で実行されるエンドポイント間でイベントを同期するには、メッセージ内で伝達される ActivityId ヘッダーに CorrelationId を追加します。 ツールはこの ID を使用することにより、クロックにずれのあるコンピューター間でもイベントを同期できます。 具体的に言うと、サービス トレース ビューアー ツールは、エンドポイント間のメッセージ フローを示す際に、この ID を使用します。  
   
-## <a name="see-also"></a>関連項目  
- [トレースの構成](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [サービス トレース ビューアーを使用した相関トレースの表示とトラブルシューティング](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [エンドツーエンドのトレースのシナリオ](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- [サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+## <a name="see-also"></a>関連項目
+
+- [トレースの構成](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+- [サービス トレース ビューアーを使用した相関トレースの表示とトラブルシューティング](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [エンドツーエンドのトレースのシナリオ](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

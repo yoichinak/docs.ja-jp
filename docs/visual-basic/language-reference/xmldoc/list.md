@@ -1,5 +1,5 @@
 ---
-title: '&lt;list&gt;(Visual Basic)'
+title: <list> (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - listheader XML tag
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - item XML tag
 - <term> XML tag
 ms.assetid: ec35fced-d58e-4520-a764-0691256e014b
-ms.openlocfilehash: 98c3b8bd809ac550468a5d80e01e6fd16e6d96ea
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 7d7b85867f4c701322c5e6c31f2d89ab38fad05d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940880"
 ---
-# <a name="ltlistgt-visual-basic"></a>&lt;list&gt;(Visual Basic)
+# <a name="list-visual-basic"></a>\<リスト > (Visual Basic)
 リストまたはテーブルを定義します。  
   
 ## <a name="syntax"></a>構文  
@@ -38,7 +38,7 @@ ms.locfileid: "42924935"
 </list>  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `type`  
  リストの型。 箇条書き、番号付きリスト、または 2 つの列のテーブルには、"table"の"number"の"bullet"があります。  
   
@@ -60,7 +60,8 @@ ms.locfileid: "42924935"
 ## <a name="example"></a>例  
  この例では、 `<list>` 「解説」セクションで、箇条書きリストを定義するタグ。  
   
- [!code-vb[VbVbcnXmlDocComments#5](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/list_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#5)]  
   
-## <a name="see-also"></a>関連項目  
- [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>関連項目
+
+- [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)

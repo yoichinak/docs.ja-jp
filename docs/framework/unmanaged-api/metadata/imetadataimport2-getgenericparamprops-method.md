@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b9ded6b4e0ac8f3e70fd0145ab6e2410c3b38e02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cf9f6cc1e568463f2ca9afa38c10f50d0c247013
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448675"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755342"
 ---
 # <a name="imetadataimport2getgenericparamprops-method"></a>IMetaDataImport2::GetGenericParamProps メソッド
 指定したトークンによって表されるジェネリック パラメーターに関連付けられているメタデータを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetGenericParamProps (  
    [in]  mdGenericParam  gp,  
    [out] ULONG           *pulParamSeq,  
@@ -42,12 +42,12 @@ HRESULT GetGenericParamProps (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `gp`  
- [in]メタデータを返す対象のジェネリック パラメーターを表すトークンです。  
+ [in]メタデータを返す対象のジェネリック パラメーターを表すトークン。  
   
  `pulParamSeq`  
- [out]序数の位置、`Type`親コンス トラクターまたはメソッドのパラメーターです。  
+ [out]位置を表す序数、`Type`親コンス トラクターまたはメソッド パラメーター。  
   
  `pdwParamFlags`  
  [out]値、 [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md)を表す列挙体、`Type`のジェネリック パラメーター。  
@@ -67,15 +67,16 @@ HRESULT GetGenericParamProps (
  `pchName`  
  [out]ワイド文字で、名前の返されたサイズ。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
  **ライブラリ:** MsCorEE.dll にリソースとして使用  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

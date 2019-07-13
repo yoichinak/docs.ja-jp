@@ -16,18 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98c3e1ed3da209cbded5d76d938d2420fce606be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09c36dd65c8a4202f13d362668f74cd9a362e35a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744355"
 ---
 # <a name="notifyfilter-enumeration"></a>NOTIFY_FILTER 列挙体
-デバッガーの関数のコールバックを識別します。 詳細については、次を参照してください。、 [inotifysource 2::setnotifyfilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)メソッドです。  
+デバッガーの関数のコールバックを識別します。 詳細については、次を参照してください。、 [inotifysource 2::setnotifyfilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)メソッド。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 enum tagNOTIFY_FILTER  
 {  
     NOTIFY_FILTER_ONSYNCCALLOUT    = 0x1,  
@@ -52,8 +53,9 @@ enum tagNOTIFY_FILTER
 |`NOTIFY_FILTER_ALL`|既存および将来のすべての通知をアクティブにします。|  
 |`NOTIFY_FILTER_NONE`|通知メソッドを呼び出す必要がないことを示します。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>関連項目  
- [シンボル ストア診断列挙型](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+## <a name="see-also"></a>関連項目
+
+- [シンボル ストア診断列挙型](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

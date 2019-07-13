@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: f4a5911787fa5f72be1dcd15c67b3f132c3f1110
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804368"
+---
 ### <a name="icontobitmap-successfully-converts-icons-with-png-frames-into-bitmap-objects"></a>PNG フレームを含んだアイコンが Icon.ToBitmap によって、Bitmap オブジェクトに正常に変換されます
 
 |   |   |
@@ -8,4 +16,3 @@
 |Version|4.6|
 |型|再ターゲット中|
 |影響を受ける API|<ul><li><xref:System.Drawing.Icon.ToBitmap?displayProperty=nameWithType></li></ul>|
-

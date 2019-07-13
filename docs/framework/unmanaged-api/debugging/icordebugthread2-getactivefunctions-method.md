@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7ed7787f0302826cab67664780177f05e551199
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fdf3998d7430348cb71af8e7dd75cf2203d380ce
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421107"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769035"
 ---
 # <a name="icordebugthread2getactivefunctions-method"></a>ICorDebugThread2::GetActiveFunctions メソッド
-このスレッドのフレームのそれぞれに、アクティブな関数に関する情報を取得します。  
+このスレッドのフレームのそれぞれに、アクティブな関数についての情報を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetActiveFunctions (  
     [in]   ULONG32             cFunctions,  
     [out]  ULONG32             *pcFunctions,  
@@ -38,28 +38,28 @@ HRESULT GetActiveFunctions (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `cFunctions`  
  [in] `pFunctions` 配列のサイズ。  
   
  `pcFunctions`  
- [out]返されたオブジェクトの数へのポインター、`pFunctions`配列。 返されるオブジェクトの数は、スタック上のマネージ フレームの数と等しくなります。  
+ [out]返されるオブジェクトの数へのポインター、`pFunctions`配列。 返されるオブジェクトの数は、スタック上のマネージ フレームの数と等しくなります。  
   
  `pFunctions`  
- [入力、出力].このスレッドのフレームでアクティブな関数についての情報を含む各 COR_ACTIVE_FUNCTION オブジェクトの配列。  
+ [入力、出力]このスレッドのフレームでアクティブな関数についての情報を含む、COR_ACTIVE_FUNCTION オブジェクトの配列。  
   
- 最初の要素は、リーフ フレームとスタックのルートまでさかのぼりますに使用されます。  
+ 最初の要素は、リーフ フレームとスタックのルートに戻る ために使用されます。  
   
-## <a name="remarks"></a>コメント  
- 場合`pFunctions`が入力で null`GetActiveFunctions`はスタック上にある関数の数のみを返します。 つまり場合、`pFunctions`が入力で null`GetActiveFunctions`値を返しますでのみ`pcFunctions`です。  
+## <a name="remarks"></a>Remarks  
+ 場合`pFunctions`が null の入力で`GetActiveFunctions`スタック上にある関数の数のみを返します。 つまり場合、`pFunctions`が入力で null`GetActiveFunctions`値を返しますでのみ`pcFunctions`します。  
   
- `GetActiveFunctions`メソッドは最適化の手法として、スタック トレースでのフレームから同じ情報を取得経由でありがありました ICorDebugILFrame オブジェクトに完全なスタック トレースでのフレームのみが含まれています。  
+ `GetActiveFunctions`メソッドは、最適化として、スタック トレース内のフレームから同じ情報の取得をありありました ICorDebugILFrame オブジェクトに完全なスタック トレース フレームのみが含まれています。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

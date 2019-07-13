@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: 9a60499674f0192bb7589f227bffb6f907f682d9
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 012a5b55d052f5f06da5c152da79f4676b2bff4e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084599"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877947"
 ---
 # <a name="oracle-and-adonet"></a>Oracle および ADO.NET
 > [!NOTE]
 >  <xref:System.Data.OracleClient> の型は非推奨とされました。 これらの型は、.NET Framework の現在のバージョンでは引き続きサポートされていますが、今後のリリースでは削除される予定です。 サードパーティの Oracle プロバイダーを使用することをお勧めします。  
   
- このセクションでは、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle 固有の機能および動作について説明します。  
+ このセクションでは、.NET Framework Data Provider for Oracle に固有の機能および動作について説明します。  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle では、Oracle Client ソフトウェアとして提供されている Oracle Call Interface (OCI) を使用して Oracle データベースにアクセスできます。 データ プロバイダーの機能はのように設計されています、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SQL Server、OLE DB および ODBC 用データ プロバイダー。  
+ .NET Framework Data Provider for Oracle では、Oracle クライアント ソフトウェアによって提供される Oracle Call Interface (OCI) を使用して Oracle データベースへのアクセスを提供します。 データ プロバイダーの機能は、SQL Server、OLE DB および ODBC 用の .NET Framework データ プロバイダーのように設計されています。  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle を使用するには、アプリケーションで以下のように <xref:System.Data.OracleClient> 名前空間を参照する必要があります。  
+ .NET Framework Data Provider for Oracle を使用するアプリケーションを参照する必要があります、<xref:System.Data.OracleClient>次のように名前空間。  
   
 ```vb  
 Imports System.Data.OracleClient  
@@ -38,7 +38,7 @@ csc /r:System.Data.OracleClient.dll
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [システム要件](../../../../docs/framework/data/adonet/system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle を使用するための要件を説明し、その際に知っておくべきさまざまなことについて説明します。  
+ Oracle の場合、.NET Framework Data Provider を使用するための要件について説明し、さまざまなことを使用する場合は、注意すべき問題について説明します。  
   
  [Oracle BFILE](../../../../docs/framework/data/adonet/oracle-bfiles.md)  
  <xref:System.Data.OracleClient.OracleBFile> クラスについて説明します。このクラスは、Oracle BFILE データ型を操作するために使用されます。  
@@ -63,7 +63,7 @@ csc /r:System.Data.OracleClient.dll
   
 ## <a name="related-sections"></a>関連項目  
  [ADO.NET アプリケーションのセキュリティ保護](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] を使用する場合の安全なコーディング方法について説明します。  
+ ADO.NET を使用する場合の安全なコーディング方法について説明します。  
   
  [DataSet、DataTable、および DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  `DataSets`、型指定された `DataSets`、`DataTables`、および `DataViews` の作成方法と使用方法について説明します。  
@@ -75,8 +75,9 @@ csc /r:System.Data.OracleClient.dll
  SQL Server 固有の機能の使用方法について説明します。  
   
  [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] でプロバイダーに依存しないコードを記述するための汎用的なクラスについて説明します。  
+ ADO.NET でプロバイダーに依存しないコードを記述するための Generic クラスについて説明します。  
   
-## <a name="see-also"></a>関連項目  
- [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [ADO.NET](../../../../docs/framework/data/adonet/index.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

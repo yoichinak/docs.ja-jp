@@ -17,12 +17,12 @@ ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 480e9a3f7d32bb891b54c7d2529affb45368545b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ce495ce01c970fb46cc7e7e374994fd34a7730a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128649"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648973"
 ---
 # <a name="changing-case-in-net"></a>.NET の大文字と小文字の変更
 ユーザーからの入力を受け付けるアプリケーションを記述する場合、ユーザーがデータ入力に使用するケースを正確に予測することはできません。 多くの場合、特にユーザー インターフェイスにそれを表示する場合には、文字列に一貫性のあるケースを使用することが求められます。 次の表は、3 つのケース変更方式を示しています。 最初の 2 つの方式は、カルチャを受け入れるオーバーロードを提供します。  
@@ -74,5 +74,5 @@ ms.locfileid: "53128649"
   
 ## <a name="see-also"></a>関連項目
 
-- [基本的な文字列操作](../../../docs/standard/base-types/basic-string-operations.md)  
+- [基本的な文字列操作](../../../docs/standard/base-types/basic-string-operations.md)
 - [カルチャを認識しない文字列操作の実行](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

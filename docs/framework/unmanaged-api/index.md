@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 955efad34f816cd0445c4ebdf120d8b614f0d351
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bd84d84706a0d61f26b576b7300fae87fbe602e8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61984166"
 ---
 # <a name="unmanaged-api-reference"></a>アンマネージ API リファレンス
 このセクションには、ランタイム ホスト、コンパイラ、逆アセンブラー、難読化ツール、デバッガー、プロファイラーなど、マネージ コード関連のアプリケーションが使用できるアンマネージ API に関する情報が含まれています。  
@@ -32,7 +32,7 @@ ms.locfileid: "43508523"
  [定数](../../../docs/framework/unmanaged-api/constants-unmanaged-api-reference.md)  
  CorSym.idl で定義される定数について説明します。  
   
- [カスタム インターフェイス属性](https://msdn.microsoft.com/library/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
+ [カスタム インターフェイス属性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms231946(v=vs.100))  
  コンポーネント オブジェクト モデル (COM) のカスタム インターフェイス属性について説明します。  
   
  [デバッグ](../../../docs/framework/unmanaged-api/debugging/index.md)  
@@ -64,5 +64,3 @@ ms.locfileid: "43508523"
   
 ## <a name="related-sections"></a>関連項目  
  [開発ガイド](../../../docs/framework/development-guide.md)  
-  
- [.NET Framework の高度な読み取り](https://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 707e482a6952ee1266950dc181fbc85e5d6ef398
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 717682bdcb2409a5f58f040a3ac2eafd73f01f7e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448056"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777957"
 ---
 # <a name="imetadataassemblyimportenummanifestresources-method"></a>IMetaDataAssemblyImport::EnumManifestResources メソッド
-現在のアセンブリ マニフェストで参照されているリソースの列挙子へのポインターを取得します。  
+現在のアセンブリ マニフェストで参照されるリソースの列挙子へのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EnumManifestResources (  
     [in, out] HCORENUM         *phEnum,   
     [out] mdManifestResource   rManifestResources[],   
@@ -38,34 +38,35 @@ HRESULT EnumManifestResources (
 );   
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [入力、出力].列挙子へのポインター。 これは null を指定する必要があるときの値、`EnumManifestResources`メソッドは、最初に呼び出されます。  
+ [入力、出力]列挙子へのポインター。 これを null には値と、`EnumManifestResources`メソッドは、最初に呼び出されます。  
   
  `rManifestResources`  
  [out]配列の格納に使用される、`mdManifestResource`メタデータ トークン。  
   
  `cMax`  
- [in]最大数`mdManifestResource`に配置できるトークン`rManifestResources`です。  
+ [in]最大数`mdManifestResource`トークン内に配置できる`rManifestResources`します。  
   
  `pcTokens`  
- [out]数`mdManifestResource`にトークンが実際に配置されます`rManifestResources`です。  
+ [out]数`mdManifestResource`トークンが実際に配置`rManifestResources`します。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
 |`S_OK`|`EnumManifestResources` 正常に返されます。|  
-|`S_FALSE`|列挙するトークンがありません。 この場合、`pcTokens`は 0 に設定します。|  
+|`S_FALSE`|トークンを列挙することはありません。 この場合、 `pcTokens` 0 に設定されます。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
  **ライブラリ:** MsCorEE.dll にリソースとして使用  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataAssemblyImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [IMetaDataAssemblyImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

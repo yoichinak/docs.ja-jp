@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eefa1b52907525059b3403e7eb20542d3b5a5c73
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: e18dd5370143dfe4faaffb49017d0a8f62c87433
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123567"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490990"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>スレッドセーフなコレクションを使用する状況
-[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]では、マルチスレッドでの追加や削除をサポートするよう特別に設計された、5つの新しいコレクション型が導入されました。 これらの新しい型では、スレッド セーフを確保するために、さまざまな種類の効率的なロックやロック制御不要の同期機構が用いられます。 同期を行うと、操作にオーバーヘッドが加わります。 どれほどのオーバーヘッドが加わるかは、同期や操作の種類、およびその他の要因 (コレクションに同時にアクセスしようとするスレッドの数など) によって異なります。  
+.NET Framework 4 では、マルチスレッドでの追加や削除の操作をサポートするよう特別に設計された、5 つの新しいコレクション型が導入されました。 これらの新しい型では、スレッド セーフを確保するために、さまざまな種類の効率的なロックやロック制御不要の同期機構が用いられます。 同期を行うと、操作にオーバーヘッドが加わります。 どれほどのオーバーヘッドが加わるかは、同期や操作の種類、およびその他の要因 (コレクションに同時にアクセスしようとするスレッドの数など) によって異なります。  
   
  一部のシナリオでは、同期のオーバーヘッドがほとんどなく、外部ロックで保護される同等の非スレッドセーフ型よりもマルチスレッド型の方が、パフォーマンスとスケーラビリティが大幅に向上することがあります。 その他のシナリオでは、オーバーヘッドにより、スレッドセーフ型のパフォーマンスとスケーラビリティが、外部からロックされる非スレッドセーフ型と同等かそれ以下になることもあります。  
   
@@ -64,6 +64,6 @@ ms.locfileid: "49123567"
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
-- [スレッドセーフなコレクション](../../../../docs/standard/collections/thread-safe/index.md)  
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>
+- [スレッドセーフなコレクション](../../../../docs/standard/collections/thread-safe/index.md)
 - [並列プログラミング](../../../../docs/standard/parallel-programming/index.md)

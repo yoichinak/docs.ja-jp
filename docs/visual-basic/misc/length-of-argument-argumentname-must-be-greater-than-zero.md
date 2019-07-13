@@ -1,23 +1,23 @@
 ---
-title: 引数の長さ '&lt;argumentname&gt;' 0 より大きくなければなりません
+title: 引数の長さ '<argumentname>' 0 より大きくなければなりません
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_LengthGTZero1
 ms.assetid: 709bc232-f8fe-4864-9842-e064795da0f5
-ms.openlocfilehash: d5ccadee5d918302bcc1bc46c9916bd2178f81f7
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 42f2d2d28e6c3850f4c99e7395845bc890f29a83
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53777632"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64604181"
 ---
-# <a name="length-of-argument-ltargumentnamegt-must-be-greater-than-zero"></a>引数の長さ '&lt;argumentname&gt;' 0 より大きくなければなりません
+# <a name="length-of-argument-argumentname-must-be-greater-than-zero"></a>引数の長さ '\<argumentname >' 0 より大きくなければなりません
 引数に、0 以下の値が含まれています。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   0 より大きい引数を指定します。  
+- 0 より大きい引数を指定します。  
   
-## <a name="see-also"></a>関連項目  
- [引数の値渡しと参照渡し](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)  
+## <a name="see-also"></a>関連項目
 
+- [引数の値渡しと参照渡し](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

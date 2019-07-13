@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: カスタム データフロー ブロックの型の作成'
+title: 'チュートリアル: カスタム データ フロー ブロックの型の作成'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: a6147146-0a6a-4d9b-ab0f-237b3c1ac691
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7f07f1a2a7c393d70befc42a2c5b090c2c27320c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 62e2a25e48ead730112a37af451d64c6ccc2e141
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43868618"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593443"
 ---
-# <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>チュートリアル: カスタム データフロー ブロックの型の作成
+# <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>チュートリアル: カスタム データ フロー ブロックの型の作成
 TPL データ フロー ライブラリには、さまざまな機能が有効になるいくつかのデータフロー ブロックの種類が用意されていますが、カスタム ブロックの種類を作成することもできます。 このドキュメントでは、カスタム動作を実装するデータフロー ブロックの種類を作成する方法について説明します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
@@ -52,17 +52,6 @@ TPL データ フロー ライブラリには、さまざまな機能が有効�
  [!code-csharp[TPLDataflow_SlidingWindowBlock#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_slidingwindowblock/cs/slidingwindowblock.cs#100)]
  [!code-vb[TPLDataflow_SlidingWindowBlock#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_slidingwindowblock/vb/slidingwindowblock.vb#100)]  
   
-## <a name="compiling-the-code"></a>コードのコンパイル  
- コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、`SlidingWindowBlock.cs` (Visual Basic では `SlidingWindowBlock.vb`) という名前のファイルに貼り付けてから、Visual Studio のコマンド プロンプト ウィンドウで次のコマンドを実行します。  
-  
- Visual C#  
-  
- **csc.exe /r:System.Threading.Tasks.Dataflow.dll SlidingWindowBlock.cs**  
-  
- Visual Basic  
-  
- **vbc.exe /r:System.Threading.Tasks.Dataflow.dll SlidingWindowBlock.vb**  
-
 ## <a name="see-also"></a>関連項目
 
 - [データフロー](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

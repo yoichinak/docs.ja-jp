@@ -1,20 +1,20 @@
 ---
-title: 'サンプル XML ファイル : 顧客と注文 (LINQ to XML)'
+title: サンプル XML ファイル:顧客と注文 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: ed319807-c432-4f8e-9694-dad4c7648310
-ms.openlocfilehash: 564347d2203390fbf5c609bd7d0a8b2ab885d87b
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 9d5bf7600f99085ec860e88ab58c5b97aa9fae4c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786998"
 ---
-# <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a>サンプル XML ファイル : 顧客と注文 (LINQ to XML)
+# <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a>サンプル XML ファイル:顧客と注文 (LINQ to XML)
 次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。 このファイルには顧客と注文が含まれています。  
   
  「[サンプル XSD ファイル: 顧客と注文](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)」のトピックには、このドキュメントの検証に使用できる XSD が含まれています。 この XSD は、XSD の `xs:key` 機能と `xs:keyref` 機能を使用して、`CustomerID` 要素の `Customer` 属性がキーであることを確立し、各 `CustomerID` 要素の `Order` 要素と各 `CustomerID` 要素の `Customer` 属性の間にリレーションシップを確立します。  
   
- 使用してこのリレーションシップを利用する LINQ クエリの作成例については、`Join`句を参照してください[方法: 2 つのコレクションを結合 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md)します。  
+ `Join` 句を使用してこのリレーションシップを利用する LINQ クエリの作成例については、「[方法: 2 つのコレクション (LINQ to XML) を結合 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md)します。  
   
 ## <a name="customersordersxml"></a>CustomersOrders.xml  
   
@@ -434,5 +434,6 @@ ms.locfileid: "39244057"
 </Root>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [サンプル XML ドキュメント (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a>関連項目
+
+- [サンプル XML ドキュメント (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

@@ -2,12 +2,12 @@
 title: イベント
 description: 学習方法F#イベントには、GUI プログラミングの重要なユーザー アクションと関数の呼び出しを関連付けることが有効にします。
 ms.date: 05/16/2016
-ms.openlocfilehash: 38eb15e59611d018b6005f64a957c9275ec931a4
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: ad2e8001b81f48fdeb783bee2423a3dc9e22ac79
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612167"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645222"
 ---
 # <a name="events"></a>イベント
 
@@ -97,7 +97,6 @@ type AppForm() as this =
     [<CLIEvent>]
     member this.PropertyChanged = propertyChanged.Publish
 
-
     // Define the add and remove methods to implement this interface.
     interface INotifyPropertyChanged with
         member this.add_PropertyChanged(handler) = propertyChanged.Publish.AddHandler(handler)
@@ -138,7 +137,6 @@ type AppForm private (dummy) as this =
         this.Click |> Event.add(fun evArgs -> this.Property1 <- "text2"
         this.Property2 <- "text3")
 
-
     // This property does not have the property changed event set.
     member val Property1 : string = "text" with get, set
 
@@ -168,7 +166,6 @@ type AppForm private (dummy) as this =
         then
             let inpc = this :> INotifyPropertyChanged
             inpc.PropertyChanged.Add(this.OnPropertyChanged)
-
 
 // Create a form, hook up the event handler, and start the application.
 let appForm = new AppForm()

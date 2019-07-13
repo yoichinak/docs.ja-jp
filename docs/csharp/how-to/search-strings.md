@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: b6d5ab1c4588e72bf49c5ca2f859b9996c0d3834
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b9c27e419d37b6c0730f214d3b2b9bbdf7e30d11
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857155"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202874"
 ---
 # <a name="how-to-search-strings"></a>方法: 文字列を検索する
 
@@ -74,12 +74,12 @@ ms.locfileid: "43857155"
 
 [GitHub リポジトリ](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)のコードを見て、これらのサンプルを試すことができます。 または、サンプルを [zip ファイルとして](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)ダウンロードすることができます。
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../programming-guide/index.md)  
-- [文字列](../programming-guide/strings/index.md)  
+- [C# プログラミング ガイド](../programming-guide/index.md)
+- [文字列](../programming-guide/strings/index.md)
 - [LINQ と文字列](../programming-guide/concepts/linq/linq-and-strings.md)
 - <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
 - [.NET Framework 正規表現](../../standard/base-types/regular-expressions.md)
 - [正規表現言語 - クイック リファレンス](../../standard/base-types/regular-expression-language-quick-reference.md)
-- [.NET の文字列を使用するためのベスト プラクティス](../../standard/base-types/best-practices-strings.md)  
+- [.NET の文字列を使用するためのベスト プラクティス](../../standard/base-types/best-practices-strings.md)

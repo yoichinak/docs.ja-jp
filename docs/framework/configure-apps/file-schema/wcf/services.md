@@ -1,15 +1,15 @@
 ---
-title: '&lt;サービス&gt;'
+title: <services>
 ms.date: 03/30/2017
 ms.assetid: 80d76ba9-2058-48ad-9b91-5e4be7e5c113
-ms.openlocfilehash: a48bd0ac30c1a85602122b2fd9213c2aa5159e91
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 2db168d48e3959a7d80a10ca27134f58e3fcb2de
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758159"
 ---
-# <a name="ltservicesgt"></a>&lt;サービス&gt;
+# <a name="services"></a>\<services>
 サービスは、設定ファイルの `services` セクションで定義されます。 各サービスには、独自の `service` 設定セクションがあります。  
   
  \<system.ServiceModel >  
@@ -43,5 +43,6 @@ ms.locfileid: "54148098"
 |-------------|-----------------|  
 |[\<system.serviceModel>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)|すべての Windows Communication Foundation (WCF) 構成要素のルート要素です。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.ServicesSection>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Configuration.ServicesSection>

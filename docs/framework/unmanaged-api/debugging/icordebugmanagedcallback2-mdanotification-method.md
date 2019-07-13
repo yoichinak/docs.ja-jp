@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 64b09c173e2f66d4c650083cc12f8a0ac2c92007
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4011932af6f4b058906c19566e4c1abe96b409db
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417229"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762088"
 ---
 # <a name="icordebugmanagedcallback2mdanotification-method"></a>ICorDebugManagedCallback2::MDANotification メソッド
-コードが実行されるは、デバッグ中のアプリケーションでマネージ デバッグ アシスタント (MDA) が発生したことの通知を提供します。  
+コードが実行されるには、デバッグ中のアプリケーションでマネージ デバッグ アシスタント (MDA) が発生した通知を提供します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT MDANotification(  
     [in] ICorDebugController  *pController,  
     [in] ICorDebugThread      *pThread,  
@@ -37,41 +37,42 @@ HRESULT MDANotification(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pController`  
  [in]プロセスを公開する ICorDebugController インターフェイスまたは MDA が発生したアプリケーション ドメインへのポインター。  
   
- デバッガーしないようにコント ローラーは、プロセスまたはアプリケーション ドメイン、かどうかについて、推測に基づいて、判断を行うインターフェイスを常に照会できることができます。  
+ デバッガーは、コント ローラーは、プロセスまたはアプリケーション ドメインでは、かどうかについてどのような想定をしないでを決定するインターフェイスを常に照会できることですが。  
   
  `pThread`  
  [in]デバッグ イベントが発生したマネージ スレッドを公開する ICorDebugThread インターフェイスへのポインター。  
   
- MDA がアンマネージで発生した場合のスレッドの値`pThread`は null になります。  
+ MDA は、アンマネージで発生した場合のスレッドの値`pThread`は null になります。  
   
- オペレーティング システム (OS) のスレッド ID は、MDA オブジェクト自体から取得する必要があります。  
+ MDA オブジェクト自体からは、オペレーティング システム (OS) のスレッド ID を取得する必要があります。  
   
  `pMDA`  
- [in]ポインター、 [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) MDA の情報を公開するインターフェイスです。  
+ [in]ポインター、 [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) MDA 情報を公開するインターフェイス。  
   
-## <a name="remarks"></a>コメント  
- MDA はヒューリスティック警告であり、呼び出し元を除く任意の明示的なデバッガー アクションは不要[icordebugcontroller::continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)デバッグ中は、アプリケーションの実行を再開します。  
+## <a name="remarks"></a>Remarks  
+ MDA はヒューリスティック警告であり、呼び出し元を除く任意の明示的なデバッガー操作が必要としない[icordebugcontroller::continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)がデバッグされているアプリケーションの実行を再開します。  
   
- Mda が起動され、どのデータが任意の時点で、特定の MDA では、共通言語ランタイム (CLR) を確認できます。 そのため、デバッガーは特定の MDA パターンを必要とするすべての機能を構築する必要があります。  
+ Mda が起動され、特定の MDA 任意の時点でのデータは、共通言語ランタイム (CLR) を確認できます。 そのため、デバッガーは特定の MDA パターンを必要とするすべての機能をビルドする必要があります。  
   
- Mda は、キューに置かれ、MDA が検出された直後後に発生した可能性があります。 これは、ランタイムが検出したときに MDA を発生させるのではなく、MDA を発生させるための安全なポイントに到達するまで待機する必要がある場合に発生する可能性があります。 また、ランタイムは、Mda のキューに置かれたコールバック (「添付」イベントの操作に似ています) の 1 つのセット内の数で発生する可能性があります。  
+ Mda は、キューに MDA が発生した直後後に発生した可能性があります。 これは、ランタイムがそれを見つけたときに MDA を発生させるのではなく、MDA を発生させるためのセーフ ポイントに到達するまで待機する必要がある場合に発生する可能性があります。 また、ランタイムは、Mda のキューに置かれたコールバック (「添付」イベントの操作に似ています) の 1 組の数で発生する可能性があります。  
   
- デバッガーへの参照を解放する必要があります、`ICorDebugMDA`インスタンスから返された後すぐに、 `MDANotification` MDA によって消費されるメモリをリサイクルする CLR のためのコールバック。 多数の Mda が発生している場合、インスタンスを解放するとパフォーマンスが向上する可能性があります。  
+ デバッガーへの参照を解放する必要があります、`ICorDebugMDA`インスタンスから取得した直後に、`MDANotification`コールバック、MDA によって消費されるメモリのリサイクル、CLR を許可します。 インスタンスを解放すると、多数の Mda が発生している場合にパフォーマンスが向上する可能性があります。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [マネージ デバッグ アシスタントによるエラーの診断](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [ICorDebugManagedCallback2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)  
- [ICorDebugManagedCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [マネージド デバッグ アシスタントによるエラーの診断](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [ICorDebugManagedCallback2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
+- [ICorDebugManagedCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

@@ -1,15 +1,15 @@
 ---
-title: 'サンプル XML ファイル : テスト構成 (LINQ to XML)'
+title: サンプル XML ファイル:テスト構成 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 2e0e19f2-83e4-42ad-958a-6b3e34c9bf17
-ms.openlocfilehash: 938916d568558738a703206d98fe42faca072f02
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: ef0df3ba2aa6d7628902cf59ff5fad4d29b017f1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42754147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786933"
 ---
-# <a name="sample-xml-file-test-configuration-linq-to-xml"></a>サンプル XML ファイル : テスト構成 (LINQ to XML)
+# <a name="sample-xml-file-test-configuration-linq-to-xml"></a>サンプル XML ファイル:テスト構成 (LINQ to XML)
 次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。 これはテスト構成ファイルです。  
   
 ## <a name="testconfigxml"></a>TestConfig.xml  
@@ -56,5 +56,6 @@ ms.locfileid: "42754147"
 </Tests>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [サンプル XML ドキュメント (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a>関連項目
+
+- [サンプル XML ドキュメント (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

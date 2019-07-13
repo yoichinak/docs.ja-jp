@@ -2,12 +2,12 @@
 title: メッセージ エンコーダーを選択する
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: 061869704674206739d81be24e105fc87ce0f129
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.openlocfilehash: 93024258ddcf76444d48a19c071b0a18248ea46b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "44248931"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645455"
 ---
 # <a name="choosing-a-message-encoder"></a>メッセージ エンコーダーを選択する
 このトピックでは、Windows Communication Foundation (WCF) に含まれているメッセージ エンコーダーを選択するための基準をについて説明します。 バイナリ、テキスト、および Message Transmission Optimization Mechanism (MTOM)。  
@@ -21,11 +21,11 @@ ms.locfileid: "44248931"
 ## <a name="system-provided-encoders"></a>システム指定のエンコーダー  
  WCF には、次の 3 つのクラスによって表される、3 つのメッセージ エンコーダーが含まれています。  
   
--   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> は、書式なし XML エンコーディングと SOAP エンコーディングの両方をサポートするテキスト メッセージ エンコーダーです。 テキスト メッセージ エンコーダーの書式なし XML エンコーディング モードは、テキスト ベースの SOAP エンコーディングと区別するために、"POX" (Plain Old XML) と呼ばれます。 POX を有効にするには、<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement.MessageVersion%2A> プロパティを <xref:System.ServiceModel.Channels.MessageVersion.None%2A> に設定します。 WCF 以外のエンドポイントと相互運用するには、テキスト メッセージ エンコーダーを使用します。  
+- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> は、書式なし XML エンコーディングと SOAP エンコーディングの両方をサポートするテキスト メッセージ エンコーダーです。 テキスト メッセージ エンコーダーの書式なし XML エンコーディング モードは、テキスト ベースの SOAP エンコーディングと区別するために、"POX" (Plain Old XML) と呼ばれます。 POX を有効にするには、<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement.MessageVersion%2A> プロパティを <xref:System.ServiceModel.Channels.MessageVersion.None%2A> に設定します。 WCF 以外のエンドポイントと相互運用するには、テキスト メッセージ エンコーダーを使用します。  
   
--   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>、、バイナリ メッセージ エンコーダーは、コンパクトなバイナリ形式を使用してと WCF WCF の通信に最適化されたため相互運用可能なではありません。 これが、WCF は、すべてのエンコーダーのほとんどのパフォーマンスの高いエンコーダーです。  
+- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>、、バイナリ メッセージ エンコーダーは、コンパクトなバイナリ形式を使用してと WCF WCF の通信に最適化されたため相互運用可能なではありません。 これが、WCF は、すべてのエンコーダーのほとんどのパフォーマンスの高いエンコーダーです。  
   
--   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> は、MTOM エンコーディングを使用して、メッセージの文字エンコーディングとバージョン管理を指定するバインド要素です。 MTOM は、WCF メッセージでバイナリ データを転送するための効率的なテクノロジです。 MTOM エンコーダーは、効率と相互運用性のバランスをとろうとします。 MTOM エンコーディングは、ほとんどの XML をテキスト形式で転送しますが、大きいサイズのバイナリ データ ブロックはテキストに変換せずにそのまま転送することによって最適化します。 WCF が提供するエンコーダー間で、効率性という点は、MTOM は、(最も遅い) 間のテキストとバイナリ (最も速い) です。  
+- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> は、MTOM エンコーディングを使用して、メッセージの文字エンコーディングとバージョン管理を指定するバインド要素です。 MTOM は、WCF メッセージでバイナリ データを転送するための効率的なテクノロジです。 MTOM エンコーダーは、効率と相互運用性のバランスをとろうとします。 MTOM エンコーディングは、ほとんどの XML をテキスト形式で転送しますが、大きいサイズのバイナリ データ ブロックはテキストに変換せずにそのまま転送することによって最適化します。 WCF が提供するエンコーダー間で、効率性という点は、MTOM は、(最も遅い) 間のテキストとバイナリ (最も速い) です。  
   
 ## <a name="how-to-choose-a-message-encoder"></a>メッセージ エンコーダーを選択する方法  
  メッセージ エンコーダーを選択するために使用される一般的な要因を、次の表に示します。 アプリケーションにとって重要な要因に優先順位を与えて、それらの要因に対して最適なメッセージ エンコーダーを選択します。 この表には示されていないその他の要因と、アプリケーションで必要になることがあるカスタム メッセージ エンコーダーも考慮するようにしてください。  
@@ -41,7 +41,7 @@ ms.locfileid: "44248931"
 |サードパーティ製ツールのサポート|エンコーディングのサポート領域には、開発と診断があります。 サードパーティの開発者は、POX 形式でエンコードされたメッセージを処理するためのライブラリとツールキットに多大な投資をしています。|テキスト (POX)|  
 |相互運用性|この要素は、WCF 以外のサービスとの相互運用する WCF のエンコーダーの機能を指します。|テキスト<br /><br /> MTOM (部分的)|  
   
-メモ: バイナリ エンコーダーを使用している場合、XMLReader を作成するときに IgnoreWhitespace の設定を使用しても効果はありません。  たとえば、サービス操作内で次の操作を実行するとします。  
+メモ:バイナリ エンコーダーを使用する場合、XMLReader を作成するときに IgnoreWhitespace の設定を使用して効果がありません。  たとえば、サービス操作内で次の操作を実行するとします。  
 
 ```csharp
 public void OperationContract(XElement input)
@@ -65,9 +65,9 @@ IgnoreWhitespace の設定は無視されます。
 
 WCF 4.5 以降の WCF バイナリ エンコーダーでは、圧縮がサポートされます。 これにより、WCF クライアントから圧縮メッセージを送信するための gzip/deflate アルゴリズムを使用でき、さらに自己ホスト型 WCF サービスからの圧縮メッセージに応答することができます。 この機能は、HTTP トランスポートおよび TCP トランスポートの両方で圧縮を有効にします。 IIS のホスト サーバーを構成することによって、いつでも IIS でホストされる WCF サービスを有効にして圧縮された応答を送信できます。 圧縮の種類は <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A?displayProperty=nameWithType> プロパティで構成されます。 このプロパティは、いずれかの <xref:System.ServiceModel.Channels.CompressionFormat?displayProperty=nameWithType> 列挙値に設定されます。
 
-* `CompressionFormat.Deflate`
-* `CompressionFormat.GZip`
-* `CompressionFormat.None`
+- <xref:System.ServiceModel.Channels.CompressionFormat.Deflate>
+- <xref:System.ServiceModel.Channels.CompressionFormat.GZip>
+- <xref:System.ServiceModel.Channels.CompressionFormat.None>
   
 このプロパティは、binaryMessageEncodingBindingElement でのみ公開される、ため、次のような機能を使用するカスタム バインディングを作成する必要があります。
 
@@ -84,4 +84,4 @@ WCF 4.5 以降の WCF バイナリ エンコーダーでは、圧縮がサポー
   
 ## <a name="see-also"></a>関連項目
 
-[バインディング](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [バインディング](../../../../docs/framework/wcf/feature-details/bindings.md)

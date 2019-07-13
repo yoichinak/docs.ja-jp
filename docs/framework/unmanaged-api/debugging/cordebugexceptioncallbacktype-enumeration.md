@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fc0919a7c05bfcbfb4b54dd0b618564f019f3fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b712ee0bb8e67f448b7ea2bee3c092367181abad
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407821"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740217"
 ---
 # <a name="cordebugexceptioncallbacktype-enumeration"></a>CorDebugExceptionCallbackType 列挙型
-指定されたコールバックの型を示す、 [icordebugmanagedcallback 2::exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)イベント。  
+行われるコールバックの型を示す、 [icordebugmanagedcallback 2::exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)イベント。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum CorDebugExceptionCallbackType {  
     DEBUG_EXCEPTION_FIRST_CHANCE         = 1,  
     DEBUG_EXCEPTION_USER_FIRST_CHANCE    = 2,  
@@ -43,17 +43,18 @@ typedef enum CorDebugExceptionCallbackType {
 |------------|-----------------|  
 |`DEBUG_EXCEPTION_FIRST_CHANCE`|例外がスローされました。|  
 |`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|例外のワインド プロセスでは、ユーザー コードを入力します。|  
-|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|例外ワインド プロセスの検出、`catch`ユーザー コードのブロックです。|  
+|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|例外のワインド処理、`catch`ユーザー コードでブロックします。|  
 |`DEBUG_EXCEPTION_UNHANDLED`|例外は処理されませんでした。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>関連項目
+
+- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法 : Windows フォームの ImageList コンポーネントにイメージを追加または削除する'
+title: '方法: Windows フォームの ImageList コンポーネントにイメージを追加または削除する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - images [Windows Forms], adding to ImageList component
 - images [Windows Forms], displaying with controls
 ms.assetid: c5eacc56-f769-4e2e-bfb7-f756620913db
-ms.openlocfilehash: 28dce033064517a427750ef99b1cd4f8bccaaf09
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 31ae91958dbc02a2f64945af896b4a2408224d05
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182971"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624032"
 ---
-# <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>方法 : Windows フォームの ImageList コンポーネントにイメージを追加または削除する
+# <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>方法: Windows フォームの ImageList コンポーネントにイメージを追加または削除する
 Windows フォーム<xref:System.Windows.Forms.ImageList>コンポーネントには通常、イメージ前に、コントロールに関連付けられています。 ただし、追加し、イメージ リスト コントロールとの関連付けの後イメージを削除することができます。  
   
 > [!NOTE]
@@ -28,7 +28,7 @@ Windows フォーム<xref:System.Windows.Forms.ImageList>コンポーネント�
   
 ### <a name="to-add-images-programmatically"></a>プログラムでイメージを追加するには  
   
--   使用して、<xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A>メソッドのイメージ リストの<xref:System.Windows.Forms.ImageList.Images%2A>プロパティ。  
+- 使用して、<xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A>メソッドのイメージ リストの<xref:System.Windows.Forms.ImageList.Images%2A>プロパティ。  
   
      イメージの場所は次のコード例で、パスが設定、 **My Documents**フォルダー。 この場所は、Windows オペレーティング システムを実行しているほとんどのコンピューターにはでこのフォルダーが含まれていると想定できるために使用されます。 この場所を選択すると、最小限のシステム アクセス レベル、アプリケーションを安全に実行を持つユーザーもできます。 次のコード例では、使用して、フォームが必要です、<xref:System.Windows.Forms.ImageList>コントロールが既に追加されています。  
   
@@ -76,7 +76,7 @@ Windows フォーム<xref:System.Windows.Forms.ImageList>コンポーネント�
   
 ### <a name="to-add-images-with-a-key-value"></a>キー値を持つイメージを追加します。  
   
--   いずれかを使用して、<xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A>メソッドのイメージ リストの<xref:System.Windows.Forms.ImageList.Images%2A>キーの値を受け取るプロパティです。  
+- いずれかを使用して、<xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A>メソッドのイメージ リストの<xref:System.Windows.Forms.ImageList.Images%2A>キーの値を受け取るプロパティです。  
   
      イメージの場所は次のコード例で、パスが設定、 **My Documents**フォルダー。 この場所は、Windows オペレーティング システムを実行しているほとんどのコンピューターにはでこのフォルダーが含まれていると想定できるために使用されます。 この場所を選択すると、最小限のシステム アクセス レベル、アプリケーションを安全に実行を持つユーザーもできます。 次のコード例では、使用して、フォームが必要です、<xref:System.Windows.Forms.ImageList>コントロールが既に追加されています。  
   
@@ -107,7 +107,7 @@ public void addImage()
   
 ### <a name="to-remove-all-images-programmatically"></a>すべてのイメージをプログラムで削除するには  
   
--   使用して、 <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> 1 つのイメージを削除する方法  
+- 使用して、 <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> 1 つのイメージを削除する方法  
   
      、または、  
   
@@ -129,7 +129,7 @@ imageList1.Images.Clear();
   
 ### <a name="to-remove-images-by-key"></a>キーによるイメージを削除するには  
   
--   使用して、<xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A>キーで 1 つのイメージを削除する方法。  
+- 使用して、<xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A>キーで 1 つのイメージを削除する方法。  
   
     ```vb  
     ' Removes the image named "myPhoto" from the list.  
@@ -141,7 +141,8 @@ imageList1.Images.Clear();
 imageList1.Images.RemoveByKey("myPhoto");  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- [ImageList コンポーネント](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)
-- [ImageList コンポーネントの概要](../../../../docs/framework/winforms/controls/imagelist-component-overview-windows-forms.md)
-- [イメージ、ビットマップ、メタファイル](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+## <a name="see-also"></a>関連項目
+
+- [ImageList コンポーネント](imagelist-component-windows-forms.md)
+- [ImageList コンポーネントの概要](imagelist-component-overview-windows-forms.md)
+- [イメージ、ビットマップ、メタファイル](../advanced/images-bitmaps-and-metafiles.md)

@@ -7,20 +7,20 @@ helpviewer_keywords:
 - Async [Visual Basic]
 - Async keyword [Visual Basic]
 ms.assetid: 1be8b4b5-9689-41b5-bd33-b906bfd53bc5
-ms.openlocfilehash: 244f468d9432e132c93ae8272d51098f86ad439a
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: ad6d671a45cee7d534347d23963bb5035ecc8dac
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802714"
 ---
 # <a name="async-visual-basic"></a>Async (Visual Basic)
-`Async`修飾子には、ことを示します、メソッドまたは[ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)を変更することは非同期です。 このようなメソッドをいいます*非同期メソッド*です。  
+`Async`修飾子には、ことを示します、メソッドまたは[ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)は非同期ですが変更されます。 このようなメソッドとして参照されます*非同期メソッド*します。  
   
  非同期メソッドは、呼び出し元のスレッドをブロックすることなく、実行に時間のかかる可能性のある処理を行うことができる、便利な方法です。 非同期メソッドの呼び出し元は、非同期メソッドの完了を待たずに作業を再開できます。  
   
 > [!NOTE]
->  `Async` キーワードおよび `Await` キーワードは、Visual Studio 2012 で導入されました。 非同期のプログラミングの概要については、次を参照してください。 [Async および Await を使用した非同期プログラミング](../../../visual-basic/programming-guide/concepts/async/index.md)です。  
+>  `Async` キーワードおよび `Await` キーワードは、Visual Studio 2012 で導入されました。 非同期プログラミングの概要については、次を参照してください。 [Async および Await を使用した非同期プログラミング](../../../visual-basic/programming-guide/concepts/async/index.md)します。  
   
  次の例は、非同期メソッドの構造を示しています。 規則により、非同期メソッドの名前の末尾は "Async" になります。  
   
@@ -42,21 +42,21 @@ Public Async Function ExampleMethodAsync() As Task(Of Integer)
 End Function  
 ```  
   
- 通常で修飾されているメソッド、`Async`キーワードは、少なくとも 1 つを含む[Await](../../../visual-basic/language-reference/modifiers/async.md)式またはステートメント。 メソッドは、最初の `Await` に到達するまで同期的に実行されますが、この時点で、待機していたタスクが完了するまで中断されます。 その間、コントロールはメソッドの呼び出し元に戻されます。 メソッドに `Await` 式またはステートメントが含まれていない場合、メソッドは中断されず、同期メソッドのように実行されます。 `Await` が含まれていない非同期メソッドが存在する場合は、その状態がエラーを示す可能性があるため、コンパイラによって警告が通知されます。 詳細については、次を参照してください。、[コンパイラ エラー](../../../visual-basic/language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md)です。  
+ 通常、変更、メソッド、`Async`キーワードでは、少なくとも 1 つ含まれています[Await](../../../visual-basic/language-reference/modifiers/async.md)式またはステートメント。 メソッドは、最初の `Await` に到達するまで同期的に実行されますが、この時点で、待機していたタスクが完了するまで中断されます。 その間、コントロールはメソッドの呼び出し元に戻されます。 メソッドに `Await` 式またはステートメントが含まれていない場合、メソッドは中断されず、同期メソッドのように実行されます。 `Await` が含まれていない非同期メソッドが存在する場合は、その状態がエラーを示す可能性があるため、コンパイラによって警告が通知されます。 詳細については、次を参照してください。、[コンパイラ エラー](../../../visual-basic/language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md)します。  
   
  `Async` キーワードは、予約されていないキーワードです。 メソッドまたはラムダ式を修飾する場合にキーワードとなります。 それ以外の場合は、識別子として解釈されます。  
   
 ## <a name="return-types"></a>戻り値の型  
- 非同期のメソッドは、 [Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)プロシージャ、または[関数](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)を戻り値の型を持つプロシージャ<xref:System.Threading.Tasks.Task>または<xref:System.Threading.Tasks.Task%601>です。 メソッドは、いずれかを宣言できません[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)パラメーター。  
+ 非同期メソッドは、いずれかを[Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)プロシージャ、または[関数](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)プロシージャの戻り値の型を持つ<xref:System.Threading.Tasks.Task>または<xref:System.Threading.Tasks.Task%601>します。 メソッドは、いずれかを宣言できません[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)パラメーター。  
   
- 指定した`Task(Of TResult)`非同期メソッドの戻り値の型の場合、[返す](../../../visual-basic/language-reference/statements/return-statement.md)メソッドのステートメントに TResult 型のオペランド。 メソッドの完了時に意味のある値を返さない場合は、`Task` を使用します。 これにより、メソッドの呼び出しでは `Task` が返されますが、`Task` の完了時に、`Await` を待機している `Task` ステートメントは結果値を生成しません。  
+ 指定した`Task(Of TResult)`、非同期メソッドの戻り値の型の場合、[返す](../../../visual-basic/language-reference/statements/return-statement.md)メソッドのステートメントに TResult 型のオペランド。 メソッドの完了時に意味のある値を返さない場合は、`Task` を使用します。 これにより、メソッドの呼び出しでは `Task` が返されますが、`Task` の完了時に、`Await` を待機している `Task` ステートメントは結果値を生成しません。  
   
  非同期サブルーチンは主として、`Sub` プロシージャが必要なイベント ハンドラーの定義に使用されます。 非同期サブルーチンの呼び出し元は、このサブルーチンを待機できず、このメソッドがスローする例外をキャッチできません。  
   
  使用例を含む詳細については、「[非同期の戻り値の型](../../../visual-basic/programming-guide/concepts/async/async-return-types.md)」をご覧ください。  
   
 ## <a name="example"></a>例  
- 次の例は、非同期のイベント ハンドラー、非同期ラムダ式、および非同期メソッドを示しています。 これらの要素を使用する完全な例を参照してください。[チュートリアル: を使用して Async および Await を Web にアクセスする](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)です。 チュートリアル コードは、[開発者コード サンプル](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)のページからダウンロードできます。  
+ 次の例は、非同期のイベント ハンドラー、非同期ラムダ式、および非同期メソッドを示しています。 これらの要素を使用する完全な例を参照してください。[チュートリアル。Async と Await を使用した Web へのアクセス](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)」をご覧ください。 チュートリアル コードは、[開発者コード サンプル](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)のページからダウンロードできます。  
   
 ```vb  
 ' An event handler must be a Sub procedure.  
@@ -103,8 +103,9 @@ Private Async Function GetURLContentsAsync(url As String) As Task(Of Byte())
 End Function  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>  
- [Await 演算子](../../../visual-basic/language-reference/operators/await-operator.md)  
- [Async および Await を使用した非同期プログラミング](../../../visual-basic/programming-guide/concepts/async/index.md)  
- [チュートリアル: Async と Await を使用した Web へのアクセス](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>
+- [Await 演算子](../../../visual-basic/language-reference/operators/await-operator.md)
+- [Async および Await を使用した非同期プログラミング](../../../visual-basic/programming-guide/concepts/async/index.md)
+- [チュートリアル: Async と Await を使用した Web へのアクセス](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)

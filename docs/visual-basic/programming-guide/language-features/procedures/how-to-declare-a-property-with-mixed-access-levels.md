@@ -1,5 +1,5 @@
 ---
-title: '方法: 複数のアクセス レベルを持つプロパティを宣言する (Visual Basic)'
+title: '方法: 混合アクセス レベル (Visual Basic) を持つプロパティを宣言します。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - access levels [Visual Basic], properties
@@ -10,38 +10,39 @@ helpviewer_keywords:
 - properties [Visual Basic], access levels
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
-ms.openlocfilehash: 8d25086fe6f8b5f5300006466ef49782cb065edf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e899b57e02f492b0e4909aca84c069e5b7688618
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863689"
 ---
-# <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>方法: 複数のアクセス レベルを持つプロパティを宣言する (Visual Basic)
-場合は、`Get`と`Set`手順異なるアクセス レベルを設定するプロパティについてでさらに小さくレベルを使用することができます、`Property`ステートメントといずれかより制限の厳しいレベル、`Get`または`Set`ステートメント。 プロパティの値を取得することができるコードの特定の部分と値を変更することができるコードの他の特定部分したい場合は、プロパティに混合アクセス レベルを使用します。  
+# <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>方法: 混合アクセス レベル (Visual Basic) を持つプロパティを宣言します。
+場合は、`Get`と`Set`手順が異なるアクセス レベルのプロパティについてでより制限の緩やかなレベルを使用することができます、`Property`ステートメントといずれかより制限の厳しいレベル、`Get`または`Set`ステートメント。 プロパティの値を取得できるコードの特定の部分と値を変更することができるコードの他の特定の部分を使う場合は、プロパティに混合アクセス レベルを使用します。  
   
- アクセス レベルの詳細については、次を参照してください。 [Visual Basic でのレベルのアクセス](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)です。  
+ アクセス レベルの詳細については、次を参照してください。[アクセス レベルを Visual Basic で](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)します。  
   
 ### <a name="to-declare-a-property-with-mixed-access-levels"></a>混合アクセス レベルを持つプロパティを宣言するには  
   
-1.  通常の方法でプロパティを宣言し、制限の緩いアクセス レベルを指定します (など`Public`) で、`Property`ステートメントです。  
+1. 通常の方法でプロパティを宣言しより制限の少ないアクセス レベルを指定 (など`Public`) で、`Property`ステートメント。  
   
-2.  宣言するか、`Get`または`Set`より制限の厳しいアクセス レベルを指定する手順 (など`Friend`)。  
+2. いずれかを宣言、`Get`または`Set`より制限の厳しいアクセス レベルを指定する手順 (など`Friend`)。  
   
-3.  その他のプロパティ プロシージャでは、アクセス レベルを指定しません。 宣言されているアクセス レベルを想定しています、`Property`ステートメントです。 プロパティ プロシージャの 1 つのみにアクセスを制限することができます。  
+3. その他のプロパティ プロシージャでは、アクセス レベルを指定しません。 アクセス レベルで宣言されていると想定して、`Property`ステートメント。 プロパティ プロシージャの 1 つだけにアクセスを制限することができます。  
   
-     [!code-vb[VbVbcnProcedures#10](./codesnippet/VisualBasic/how-to-declare-a-property-with-mixed-access-levels_1.vb)]  
+     [!code-vb[VbVbcnProcedures#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#10)]  
   
-     前の例で、`Get`手順では、同じ`Protected`自体のプロパティとしてアクセス中に、`Set`手順では`Private`アクセスします。 派生したクラス`employee`読み取ることができます、`salary`値しか、`employee`クラスで設定できます。  
+     前の例では、`Get`手順では、同じ`Protected`プロパティ自体としてのアクセス中に、`Set`手順では`Private`アクセス。 派生したクラス`employee`読み取ることができます、`salary`値のみが、`employee`クラスで設定できます。  
   
-## <a name="see-also"></a>関連項目  
- [手順](./index.md)  
- [Property プロシージャ](./property-procedures.md)  
- [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)  
- [Property ステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)  
- [Visual Basic でのプロパティと変数の違い](./differences-between-properties-and-variables.md)  
- [方法 : プロパティを作成する](./how-to-create-a-property.md)  
- [方法 : プロパティ プロシージャを呼び出す](./how-to-call-a-property-procedure.md)  
- [方法: 宣言し、Visual Basic では、既定のプロパティを呼び出す](./how-to-declare-and-call-a-default-property.md)  
- [方法 : プロパティに値を格納する](./how-to-put-a-value-in-a-property.md)  
- [方法 : プロパティから値を取得する](./how-to-get-a-value-from-a-property.md)
+## <a name="see-also"></a>関連項目
+
+- [プロシージャ](./index.md)
+- [Property プロシージャ](./property-procedures.md)
+- [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
+- [Property ステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [Visual Basic でのプロパティと変数の違い](./differences-between-properties-and-variables.md)
+- [方法: プロパティを作成します。](./how-to-create-a-property.md)
+- [方法: プロパティ プロシージャを呼び出す](./how-to-call-a-property-procedure.md)
+- [方法: 宣言し、Visual Basic では、既定のプロパティを呼び出す](./how-to-declare-and-call-a-default-property.md)
+- [方法: プロパティに値を格納します。](./how-to-put-a-value-in-a-property.md)
+- [方法: プロパティから値を取得します。](./how-to-get-a-value-from-a-property.md)

@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], BulletDecorator
 - BulletDecorator control [WPF]
 ms.assetid: 1756cabf-59b4-47a7-883d-1bdf2e5abe00
-ms.openlocfilehash: 39fb0dcfe0110a0badcd552d711db40086d46fd0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d5839a75434f71ff6dd91b86474aeab2e8b0ad64
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052665"
 ---
 # <a name="bulletdecorator"></a>BulletDecorator
-<xref:System.Windows.Controls.Primitives.BulletDecorator> 2 つのコンテンツ プロパティがあります:<xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A>と<xref:System.Windows.Controls.Decorator.Child%2A>です。 <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A>プロパティを定義、<xref:System.Windows.UIElement>行頭文字として使用します。 <xref:System.Windows.Controls.Decorator.Child%2A>プロパティを定義、<xref:System.Windows.UIElement>を視覚的に行頭文字と整合します。  
+<xref:System.Windows.Controls.Primitives.BulletDecorator> 2 つのコンテンツ プロパティがあります:<xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A>と<xref:System.Windows.Controls.Decorator.Child%2A>します。 <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A>プロパティを定義、<xref:System.Windows.UIElement>行頭文字として使用します。 <xref:System.Windows.Controls.Decorator.Child%2A>プロパティを定義、<xref:System.Windows.UIElement>行頭文字にする視覚的に揃えて配置します。  
   
- 次の図に、使用するコントロールの例として、<xref:System.Windows.Controls.Primitives.BulletDecorator>です。  
+ 次の図は、使用するコントロールの例として、<xref:System.Windows.Controls.Primitives.BulletDecorator>します。  
   
- ![3 つの Bulletdecorator: CheckBox、RadioButton、TextBox](../../../../docs/framework/wpf/controls/media/bulletdecorator.png "BulletDecorator")  
+ ![チェック ボックス、RadioButton、TextBox の行頭文字デコレーターの例です。](./media/bulletdecorator/three-bullet-decorators.png)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.Primitives.BulletDecorator>

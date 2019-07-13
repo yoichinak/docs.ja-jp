@@ -16,11 +16,11 @@ helpviewer_keywords:
 - statements [Visual Basic], about statements
 ms.assetid: fcfdee1a-82b7-4846-98f7-9ca3f5160089
 ms.openlocfilehash: e66acae5e98d561883f4ad59853dfd862c8ebfee
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946459"
 ---
 # <a name="statements-in-visual-basic"></a>Visual Basic におけるステートメント
 
@@ -152,11 +152,11 @@ Visual Basic でのステートメントは、完全な命令です。 これは
 
    [!code-vb[VbVbalrLineContinuation#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#2)]
 
-- かっこの後 (`{`) または右中かっこの前に (`}`)。 例えば:
+- かっこの後 (`{`) または右中かっこの前に (`}`)。 例:
 
     [!code-vb[VbVbalrLineContinuation#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#3)]
 
-    詳細については、次を参照してください。[オブジェクト初期化子: 名前付きの匿名型](./objects-and-classes/object-initializers-named-and-anonymous-types.md)または[コレクション初期化子](./collection-initializers/index.md)します。
+    詳細については、次を参照してください。[オブジェクト初期化子。名前付きの匿名型](./objects-and-classes/object-initializers-named-and-anonymous-types.md)または[コレクション初期化子](./collection-initializers/index.md)します。
 
 - 埋め込み式、開かれた後 (`<%=`) または埋め込み式の終了前に (`%>`) XML リテラル内で。 例えば:
 
@@ -192,11 +192,11 @@ Visual Basic でのステートメントは、完全な命令です。 これは
 
    [!code-vb[VbVbalrLineContinuation#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#5)]
 
-   ただし、行連結文字を含める必要があります (`_`) を使用するメンバーの修飾子文字を以下に、`With`ステートメントまたは型の初期化リスト内の値を指定します。 代入演算子の後で改行を検討してください (たとえば、 `=`) を使用する場合`With`ステートメントやオブジェクトの初期化リスト。 例えば:
+   ただし、行連結文字を含める必要があります (`_`) を使用するメンバーの修飾子文字を以下に、`With`ステートメントまたは型の初期化リスト内の値を指定します。 代入演算子の後で改行を検討してください (たとえば、 `=`) を使用する場合`With`ステートメントやオブジェクトの初期化リスト。 例:
 
    [!code-vb[VbVbalrLineContinuation#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#14)]
 
-   詳細については、次を参照してください[としています...ステートメントで終了して](../../../visual-basic/language-reference/statements/with-end-with-statement.md)または[オブジェクト初期化子: 名前付きおよび匿名型](./objects-and-classes/object-initializers-named-and-anonymous-types.md)です。
+   詳細については、次を参照してください[としています... ステートメントで終了して](../../../visual-basic/language-reference/statements/with-end-with-statement.md)または[オブジェクト初期化子。名前付きの匿名型](./objects-and-classes/object-initializers-named-and-anonymous-types.md)します。
 
 - XML 軸プロパティ修飾子の後 (`.`または`.@`または`...`)。 ただし、行連結文字を含める必要があります (`_`) を使用するときにメンバー修飾子を指定すると、`With`キーワード。 例えば:
 
@@ -220,7 +220,7 @@ Visual Basic でのステートメントは、完全な命令です。 これは
 
    [!code-vb[VbVbalrLineContinuation#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#12)]
 
-   詳細については、次を参照してください[ごとにしています...次のステートメントの](../../../visual-basic/language-reference/statements/for-each-next-statement.md)します。
+   詳細については、[For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)を参照してください。
 
 - 後に、`From`コレクション初期化子内のキーワード。 例えば:
 
@@ -246,5 +246,5 @@ Visual Basic でのステートメントは、完全な命令です。 これは
 |---|---|
 |[代入演算子](../../../visual-basic/language-reference/operators/assignment-operators.md)|代入演算子をカバーするなどの言語リファレンスのページへのリンクを提供`=`、 `*=`、および`&=`します。|
 |[演算子および式](./operators-and-expressions/index.md)|新しい値を取得する演算子を含む要素を結合する方法を示します。|
-|[方法 : コード内でステートメントを分割および連結する](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|1 つのステートメントを複数の行に分割する方法と同じ行に複数のステートメントを配置する方法を示します。|
-|[方法 : ステートメントへのラベル付け](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|コードの行にラベル付けする方法を示します。|
+|[方法: コード内でステートメントを分割および連結する](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|1 つのステートメントを複数の行に分割する方法と同じ行に複数のステートメントを配置する方法を示します。|
+|[方法: ステートメントへのラベル付け](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|コードの行にラベル付けする方法を示します。|

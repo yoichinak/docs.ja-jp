@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3fe5848c-ecd7-4136-970b-8e48d250bde6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dda1176c6d547421dab9663379329043b614783e
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: fb3ad0d39d47297b7d26a5c28cfbbc269ce99e44
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084811"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052414"
 ---
 # <a name="runtime-directive-elements"></a>ランタイム ディレクティブ要素
 ランタイム ディレクティブ (rd.xml) ファイル形式は、次のランタイム ディレクティブ要素をサポートします。 階層表現については、「[ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)」を参照してください。  
@@ -24,7 +24,7 @@ ms.locfileid: "54084811"
  それを含んでいる [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) ディレクティブが属性の場合、その属性が適用されるコード要素に実行時ポリシーを適用します。  
   
  [\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md)  
- [!INCLUDE[net_native](../../../includes/net-native-md.md)]のすべてのランタイム ディレクティブ ファイルのルート要素です。 その子要素は、[\<Application>](../../../docs/framework/net-native/application-element-net-native.md) と [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) です。  
+ .NET ネイティブ用のすべてのランタイム ディレクティブ ファイルにルート要素です。 その子要素は、[\<Application>](../../../docs/framework/net-native/application-element-net-native.md) と [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) です。  
   
  [\<Event>](../../../docs/framework/net-native/event-element-net-native.md)  
  イベントに実行時ポリシーを適用します。 これは、[\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 要素と [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 要素の子です。  
@@ -68,5 +68,6 @@ ms.locfileid: "54084811"
  [\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)  
  メソッドに渡された <xref:System.Type> 引数によって表される型に実行時ポリシーを適用します。  
   
-## <a name="see-also"></a>関連項目  
- [rd.xml 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+## <a name="see-also"></a>関連項目
+
+- [rd.xml 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

@@ -6,21 +6,21 @@ helpviewer_keywords:
 - clients [WCF]
 ms.assetid: 28dfff47-d95b-4cc2-9d5c-b3b9ba71fd50
 ms.openlocfilehash: b5661c5aaa08d91c3944c4c108b23b03b012439a
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33810058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608867"
 ---
 # <a name="building-clients"></a>クライアントを構築する
-このセクションのトピックでは、作成し、Windows Communication Foundation (WCF) クライアントを使用する方法を示します。  
+このセクションのトピックでは、作成して、Windows Communication Foundation (WCF) クライアントを使用する方法を示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [WCF クライアントの概要](../../../docs/framework/wcf/wcf-client-overview.md)  
- WCF クライアントおよび動作のしくみの概要を示します。  
+ WCF クライアントとそのしくみの概要を示します。  
   
  [WCF クライアントを使用したサービスへのアクセス](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- クライアント アプリケーションで使用するための WCF クライアント オブジェクトの作成の基本的な方法について説明します。  
+ クライアント アプリケーションで使用するための WCF クライアント オブジェクトを作成する基本的な方法について説明します。  
   
  [クライアントのセキュリティ保護](../../../docs/framework/wcf/securing-clients.md)  
  WCF クライアントのセキュリティを構成する方法について説明します。  

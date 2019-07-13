@@ -1,15 +1,15 @@
 ---
-title: '&lt;webSocketSettings&gt;'
+title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: 134a233a337c40d21f7547fe385ec788cef2165b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1101d021f3c7436c4f45a22a48e50f6d1553f753
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769747"
 ---
-# <a name="ltwebsocketsettingsgt"></a>&lt;webSocketSettings&gt;
+# <a name="websocketsettings"></a>\<webSocketSettings >
 Web ソケット設定を指定するために使用される構成要素。  
   
 \<system.ServiceModel >  
@@ -51,7 +51,7 @@ Web ソケット設定を指定するために使用される構成要素。
   
 ## <a name="transportusage-attribute"></a>transportUsage 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |WhenDuplex|コントラクトが双方向の場合に、Web ソケット プロトコルを使用します。|  
 |Always|コントラクトにかかわらず、常にWeb ソケット プロトコルを使用します。|  
@@ -84,12 +84,13 @@ Web ソケット設定を指定するために使用される構成要素。
 </netHttpBinding>
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Channels.Binding>  
- <xref:System.ServiceModel.Channels.BindingElement>  
- <xref:System.ServiceModel.BasicHttpBinding>  
- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
- [バインディング](../../../../../docs/framework/wcf/bindings.md)  
- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Channels.Binding>
+- <xref:System.ServiceModel.Channels.BindingElement>
+- <xref:System.ServiceModel.BasicHttpBinding>
+- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>
+- [バインディング](../../../../../docs/framework/wcf/bindings.md)
+- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

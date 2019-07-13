@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6ac1ecb73257782888c963082953ed243177a86b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c87f2212c761dc31a75addabca6970c5497aa2a0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448805"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782427"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>IMetaDataImport::GetEventProps メソッド
-宣言する型、追加、デリゲートの削除メソッドと任意のフラグと関連付けられているその他のデータを含め、指定したイベント トークンによって表されるイベントのメタデータ情報を取得します。  
+宣言する型の追加と削除メソッドのデリゲート、任意のフラグと関連付けられているその他のデータを含め、指定したイベント トークンによって表されるイベントのメタデータ情報を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetEventProps (  
    [in]  mdEvent       ev,  
    [out] mdTypeDef     *pClass,   
@@ -47,7 +47,7 @@ HRESULT GetEventProps (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ev`  
  [in]メタデータを取得するイベントを表すイベントのメタデータ トークンです。  
   
@@ -55,13 +55,13 @@ HRESULT GetEventProps (
  [out]イベントを宣言するクラスを表す TypeDef トークンへのポインター。  
   
  `szEvent`  
- [out]によって参照されるイベントの名前`ev`です。  
+ [out]によって参照されるイベントの名前`ev`します。  
   
  `pchEvent`  
- [in]要求された長さのワイド文字単位`szEvent`です。  
+ [in]要求された長さのワイド文字で`szEvent`します。  
   
  `pdwEventFlags`  
- [out]ワイド文字で返される長さ`szEvent`です。  
+ [out]ワイド文字で返される長さ`szEvent`します。  
   
  `ptkEventType`  
  [out]TypeRef または TypeDef メタデータ トークンを表すへのポインター、<xref:System.Delegate>イベントの種類。  
@@ -76,23 +76,24 @@ HRESULT GetEventProps (
  [out]イベントを発生させるメソッドを表すメタデータ トークンへのポインター。  
   
  `rmdOtherMethod`  
- [out]イベントに関連付けられたその他のメソッドへのトークンのポインターの配列。  
+ [out]イベントに関連付けられているその他のメソッドへのトークンのポインターの配列。  
   
  `cMax`  
  [in] `rmdOtherMethod` 配列の最大サイズ。  
   
  `pcOtherMethod`  
- [out]返されるトークンの数`rmdOtherMethod`です。  
+ [out]トークンで返される数`rmdOtherMethod`します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

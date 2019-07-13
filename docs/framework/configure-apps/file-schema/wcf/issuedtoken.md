@@ -1,15 +1,15 @@
 ---
-title: '&lt;IssuedToken&gt;'
+title: <issuedToken>
 ms.date: 03/30/2017
 ms.assetid: b6eae4b7-a6cd-4e1a-b0f6-f407022550b0
-ms.openlocfilehash: a06d59c5dfb14e5f3346ff2424339659568a369a
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 83061b283c9430af7bcda9cbc832811fa805ed4c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756287"
 ---
-# <a name="ltissuedtokengt"></a>&lt;IssuedToken&gt;
+# <a name="issuedtoken"></a>\<issuedToken >
 サービスに対するクライアントの認証に使用されるカスタム トークンを指定します。  
   
  \<system.ServiceModel >  
@@ -50,7 +50,7 @@ endpointBehaviors セクション
 |要素|説明|  
 |-------------|-----------------|  
 |[\<localIssuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md)|トークンのローカル発行者のアドレスと、エンドポイントとの通信に使用されるバインディングを指定します。|  
-|[\<issuerChannelBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|ローカル発行者に接続するときに使用するエンドポイント動作を指定します。|  
+|[\<issuerChannelBehaviors>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|ローカル発行者に接続するときに使用するエンドポイント動作を指定します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -63,17 +63,18 @@ endpointBehaviors セクション
   
  このセクションには、トークンのローカル発行者やセキュリティ トークン サービスで使用する動作の構成に使用する要素が含まれます。 ローカル発行者を使用するクライアントの構成については、次を参照してください。[方法。ローカル発行者を構成する](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.IssuedTokenClientElement>  
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
- <xref:System.ServiceModel.Description.ClientCredentials>  
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement.IssuedToken%2A>  
- <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A>  
- <xref:System.ServiceModel.Security.IssuedTokenClientCredential>  
- [セキュリティ動作](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [フェデレーションと発行済みトークン](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [クライアントのセキュリティ保護](../../../../../docs/framework/wcf/securing-clients.md)  
- [方法: フェデレーション クライアントを作成します。](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [方法: ローカル発行者を構成します。](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
- [フェデレーションと発行済みトークン](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Configuration.IssuedTokenClientElement>
+- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
+- <xref:System.ServiceModel.Description.ClientCredentials>
+- <xref:System.ServiceModel.Configuration.ClientCredentialsElement.IssuedToken%2A>
+- <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A>
+- <xref:System.ServiceModel.Security.IssuedTokenClientCredential>
+- [セキュリティ動作](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [フェデレーションと発行済みトークン](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [クライアントのセキュリティ保護](../../../../../docs/framework/wcf/securing-clients.md)
+- [方法: フェデレーション クライアントを作成します。](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [方法: ローカル発行者を構成します。](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [フェデレーションと発行済みトークン](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

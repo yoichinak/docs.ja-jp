@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], Value
 - XML Value property [Visual Basic]
 ms.assetid: 7ddd057a-a195-4e9b-ad8b-2ee0e615a20f
-ms.openlocfilehash: 2b0719320db5843d5d010bfbd70e551646e3ded9
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 1c7aa1cc32bc1c5ef637f7a606db7e695f1dfaee
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61799165"
 ---
 # <a name="xml-value-property-visual-basic"></a>XML Value プロパティ (Visual Basic)
 コレクションの最初の要素の値にアクセスできるように<xref:System.Xml.Linq.XElement>オブジェクト。  
@@ -50,7 +50,7 @@ object.Value
 ## <a name="example"></a>例  
  次の例は、使用する方法を示します、<xref:System.Xml.Linq.XElement.Value%2A>プロパティのコレクションの最初のノードへのアクセスを<xref:System.Xml.Linq.XElement>オブジェクト。 例では、という名前のすべての子ノードのコレクションを取得する子軸プロパティを使用して`phone`内にある、`contact`オブジェクト。  
   
- [!code-vb[VbXMLSamples#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_1.vb)]  
+ [!code-vb[VbXMLSamples#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#15)]  
   
  このコードを実行すると、次のテキストが表示されます。  
   
@@ -59,7 +59,7 @@ object.Value
 ## <a name="example"></a>例  
  次の例は、のコレクションから XML 属性の値を取得する方法を示しています。<xref:System.Xml.Linq.XAttribute>オブジェクト。 例では、値を表示する属性軸プロパティを使用して、`type`のすべての属性、`phone`要素。  
   
- [!code-vb[VbXMLSamples#16](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_2.vb)]  
+ [!code-vb[VbXMLSamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#16)]  
   
  このコードを実行すると、次のテキストが表示されます。  
   
@@ -67,13 +67,14 @@ object.Value
   
  `work`  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Xml.Linq.XElement>  
- <xref:System.Collections.Generic.IEnumerable%601>  
- [XML 軸プロパティ](../../../visual-basic/language-reference/xml-axis/index.md)  
- [XML リテラル](../../../visual-basic/language-reference/xml-literals/index.md)  
- [Visual Basic での XML の作成](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [拡張メソッド](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)  
- [拡張インデクサー プロパティ](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)  
- [XML 子軸プロパティ](../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)  
- [XML 属性軸プロパティ](../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Xml.Linq.XElement>
+- <xref:System.Collections.Generic.IEnumerable%601>
+- [XML 軸プロパティ](../../../visual-basic/language-reference/xml-axis/index.md)
+- [XML リテラル](../../../visual-basic/language-reference/xml-literals/index.md)
+- [Visual Basic での XML の作成](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [拡張メソッド](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+- [拡張インデクサー プロパティ](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)
+- [XML 子軸プロパティ](../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
+- [XML 属性軸プロパティ](../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)

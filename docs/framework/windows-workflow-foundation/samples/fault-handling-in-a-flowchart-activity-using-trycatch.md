@@ -2,12 +2,12 @@
 title: TryCatch を使用した Flowchart アクティビティでのエラー処理
 ms.date: 03/30/2017
 ms.assetid: 50922964-bfe0-4ba8-9422-0e7220d514fd
-ms.openlocfilehash: df3d93087744ce0fba597f5c9f1d2da4b71a50dd
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 81bfeb911658a6f363a9f0f95ecc7db68a02dbe2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005044"
 ---
 # <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a>TryCatch を使用した Flowchart アクティビティでのエラー処理
 このサンプルでは、複雑な制御フロー アクティビティ内で <xref:System.Activities.Statements.TryCatch> アクティビティを使用する方法を示します。
@@ -18,7 +18,7 @@ ms.locfileid: "48845646"
 
 |パラメーター|説明|
 |----------------|-----------------|
-|promoCode|販売促進コード。 型: String<br /><br /> 使用できる値は次のとおりです (かっこ内は値の説明)。<br /><br /> -単一 (単一)<br />MNK (子供の既婚。)<br />MWK (子供の既婚。)|
+|promoCode|販売促進コード。 型:String<br /><br /> 使用できる値は次のとおりです (かっこ内は値の説明)。<br /><br /> -単一 (単一)<br />MNK (子供の既婚。)<br />MWK (子供の既婚。)|
 |numKids|子供の数。 型: int|
 
  `CreateFlowchartWithFaults` アクティビティでは、<xref:System.Activities.Statements.FlowSwitch%601> 引数を有効にする `promoCode` アクティビティを使用し、次の式を使って割引率を計算します。
@@ -27,15 +27,15 @@ ms.locfileid: "48845646"
 |--------------------------|--------------------|
 |Single|10|
 |MNK|16|
-|MWK|15 + (1 – 1/`numberOfKids`)\*10**注:** 可能性のある、この計算をスローできます、<xref:System.DivideByZeroException>します。 そのため、割引率の計算は、<xref:System.Activities.Statements.TryCatch> 例外をキャッチして割引率をゼロに設定する <xref:System.DivideByZeroException> アクティビティでラップされます。|
+|MWK|15 + (1 – 1/`numberOfKids`)\*10**に注意してください。** この計算では、<xref:System.DivideByZeroException> がスローされる可能性があります。 そのため、割引率の計算は、<xref:System.Activities.Statements.TryCatch> 例外をキャッチして割引率をゼロに設定する <xref:System.DivideByZeroException> アクティビティでラップされます。|
 
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには
 
-1.  Visual Studio 2010 を使用して、FlowchartWithFaultHandling.sln ソリューション ファイルを開きます。
+1. Visual Studio 2010 を使用して、FlowchartWithFaultHandling.sln ソリューション ファイルを開きます。
 
-2.  ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。
+2. ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。
 
-3.  ソリューションを実行するには、F5 キーを押します。
+3. ソリューションを実行するには、F5 キーを押します。
 
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
@@ -46,6 +46,7 @@ ms.locfileid: "48845646"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\FlowChartWithFaultHandling`  
   
-## <a name="see-also"></a>関連項目  
- [Flowchart のワークフロー](../../../../docs/framework/windows-workflow-foundation/flowchart-workflows.md)  
- [例外](../../../../docs/framework/windows-workflow-foundation/exceptions.md)
+## <a name="see-also"></a>関連項目
+
+- [Flowchart のワークフロー](../flowchart-workflows.md)
+- [例外](../exceptions.md)

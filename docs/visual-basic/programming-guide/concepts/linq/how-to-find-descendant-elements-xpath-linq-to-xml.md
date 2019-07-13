@@ -1,15 +1,15 @@
 ---
-title: '方法: 子孫要素 (XPATH-LINQ to XML) を検索 (Visual Basic)'
+title: '方法: 子孫の要素 (XPATH-LINQ to XML) を検索 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: e7e2dc9e-bda9-420d-a5b1-4fabf1cca46b
-ms.openlocfilehash: e5915eb06af427c0631049af6dfc30399cb775e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09f12dca7b6278327394126ffb0950682d285f88
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780563"
 ---
-# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-visual-basic"></a>方法: 子孫要素 (XPATH-LINQ to XML) を検索 (Visual Basic)
+# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-visual-basic"></a>方法: 子孫の要素 (XPATH-LINQ to XML) を検索 (Visual Basic)
 このトピックでは、特定の名前を指定して子孫要素を取得する方法について説明します。  
   
  XPath 式は `//Name` です。  
@@ -17,7 +17,7 @@ ms.locfileid: "33640226"
 ## <a name="example"></a>例  
  この例では、`Name` という名前の子孫要素をすべて検索します。  
   
- この例では、「[サンプル XML ファイル: 複数の購買発注書 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)」の XML ドキュメントを使用します。  
+ この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:複数の購買発注書 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
   
 ```vb  
       Dim po As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -51,5 +51,6 @@ Results are identical
 <Name>Jessica Arnold</Name>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [LINQ to XML を XPath ユーザー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>関連項目
+
+- [LINQ to XML XPath ユーザー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

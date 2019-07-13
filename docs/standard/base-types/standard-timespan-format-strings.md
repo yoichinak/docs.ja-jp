@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 52da538ba9cf348062905b66a87d13db82a214a0
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 3e67861a32d5863e4c1b4d9b147c507c1bb54c39
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085267"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491100"
 ---
 # <a name="standard-timespan-format-strings"></a>標準 TimeSpan 書式指定文字列
 <a name="Top"></a> 標準の <xref:System.TimeSpan> 書式指定文字列は、単一の書式指定子を使用して、書式設定操作によって生成される <xref:System.TimeSpan> 値のテキスト表現を定義します。 空白を含む複数の文字で構成される書式指定文字列は、カスタムの <xref:System.TimeSpan> 書式指定文字列として解釈されます。 詳細については、「[カスタム TimeSpan 書式指定文字列](../../../docs/standard/base-types/custom-timespan-format-strings.md)」をご覧ください。  
@@ -34,7 +34,7 @@ ms.locfileid: "44085267"
  [!code-csharp[Conceptual.TimeSpan.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/formatexample1.cs#2)]
  [!code-vb[Conceptual.TimeSpan.Standard#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/formatexample1.vb#2)]  
   
- 標準の <xref:System.TimeSpan> 書式指定文字列は、解析操作に必要な入力文字列の書式を定義するために <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> メソッドと <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> メソッドでも使用されます  (解析では、特定の値の文字列形式が、その値に変換されます)。次のコード例では、解析操作で標準書式指定文字列を使用する方法を示しています。  
+ 標準の <xref:System.TimeSpan> 書式指定文字列は、解析操作に必要な入力文字列の書式を定義するために <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> メソッドと <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> メソッドでも使用されます (解析では、特定の値の文字列形式が、その値に変換されます)。次のコード例では、解析操作で標準書式指定文字列を使用する方法を示しています。  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/parseexample1.cs#3)]
  [!code-vb[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/parseexample1.vb#3)]  
@@ -43,9 +43,9 @@ ms.locfileid: "44085267"
   
 |書式指定子|name|説明|使用例|  
 |----------------------|----------|-----------------|--------------|  
-|"c"|固定 (不変) 書式|この指定子はカルチャに依存しません。 `[-][d’.’]hh’:’mm’:’ss[‘.’fffffff]` の書式を使用します。<br /><br /> ("t" と "T" の各書式指定文字列によって生成される結果は同じになります。)<br /><br /> 詳細については、「[固定の ("c") 書式指定子](#Constant)」を参照してください。|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
-|"g"|一般の短い書式|この指定子は必要なものだけを出力します。 カルチャに依存し、`[-][d’:’]h’:’mm’:’ss[.FFFFFFF]` の書式になります。<br /><br /> 詳細については、「[一般の短い ("g") 書式指定子](#GeneralShort)」を参照してください。|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)|  
-|"G"|一般の長い書式|この指定子は、常に日数と 7 桁の小数部を出力します。 カルチャに依存し、`[-]d’:’hh’:’mm’:’ss.fffffff` の書式になります。<br /><br /> 詳細については、「[一般の長い ("G") 書式指定子](#GeneralLong)」を参照してください。|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en-US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00,0000000 (fr-FR)|  
+|"c"|固定 (不変) 書式|この指定子はカルチャに依存しません。 `[-][d'.']hh':'mm':'ss['.'fffffff]` の書式を使用します。<br /><br /> ("t" と "T" の各書式指定文字列によって生成される結果は同じになります。)<br /><br /> 詳細情報:[固定の ("c") 書式指定子](#Constant)。|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
+|"g"|一般の短い書式|この指定子は必要なものだけを出力します。 カルチャに依存し、`[-][d':']h':'mm':'ss[.FFFFFFF]` の書式になります。<br /><br /> 詳細情報:[一般の短い ("g") 書式指定子](#GeneralShort)。|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)|  
+|"G"|一般の長い書式|この指定子は、常に日数と 7 桁の小数部を出力します。 カルチャに依存し、`[-]d':'hh':'mm':'ss.fffffff` の書式になります。<br /><br /> 詳細情報:[一般の長い ("G") 書式指定子](#GeneralLong)。|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en-US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00,0000000 (fr-FR)|  
   
 <a name="Constant"></a>   
 ## <a name="the-constant-c-format-specifier"></a>固定の ("c") 書式指定子  
@@ -64,7 +64,7 @@ ms.locfileid: "44085267"
 |*ss*|"0" ～ "59" の範囲の秒数。|  
 |*fffffff*|省略可能な秒の小数部。  "0000001" (1 ティック、つまり 1,000 万分の 1 秒) ～ "9999999" (1,000 万分の 9,999,999 秒、つまり 1 秒より 1 ティック少ない) までの範囲の値が可能です。|  
   
- "g" および "G" 書式指定子とは異なり、"c" 書式指定子はカルチャに依存しません。 不変で、かつ <xref:System.TimeSpan> より前のすべての .NET Framework バージョンに共通する、[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 値の文字列形式を生成します。 "c" は、既定の <xref:System.TimeSpan> 書式文字列です。<xref:System.TimeSpan.ToString?displayProperty=nameWithType> メソッドは、"c" 書式指定文字列を使用して時間間隔値の書式を設定します。  
+ "g" および "G" 書式指定子とは異なり、"c" 書式指定子はカルチャに依存しません。 不変で、かつ .NET Framework 4 より前のすべての .NET Framework バージョンに共通する <xref:System.TimeSpan> 値の文字列表現が生成されます。 "c" は、既定の <xref:System.TimeSpan> 書式文字列です。<xref:System.TimeSpan.ToString?displayProperty=nameWithType> メソッドは、"c" 書式指定文字列を使用して時間間隔値の書式を設定します。  
   
 > [!NOTE]
 >  <xref:System.TimeSpan> では、動作が "c" 標準書式指定文字列と同じである "t" と "T" の標準書式指定文字列もサポートされます。  
@@ -132,6 +132,6 @@ ms.locfileid: "44085267"
   
 ## <a name="see-also"></a>関連項目
 
-- [型の書式設定](../../../docs/standard/base-types/formatting-types.md)  
-- [カスタム時間間隔書式指定文字列](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
+- [型の書式設定](../../../docs/standard/base-types/formatting-types.md)
+- [カスタム時間間隔書式指定文字列](../../../docs/standard/base-types/custom-timespan-format-strings.md)
 - [文字列の解析](../../../docs/standard/base-types/parsing-strings.md)

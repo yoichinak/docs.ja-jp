@@ -2,12 +2,12 @@
 title: 列挙
 description: 使用する方法について説明しますF#読みやすく、保守しやすいコードにするためのリテラルの代わりに列挙体。
 ms.date: 05/16/2016
-ms.openlocfilehash: a8839b73de074f62606b70ffe969a53b3db753bf
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 7ff62b1c0a6ab0fda58a30de9387acbb547f6b81
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611737"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645547"
 ---
 # <a name="enumerations"></a>列挙
 

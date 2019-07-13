@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-ms.openlocfilehash: 09ca073a39322e54433c25321e3a9ef44c9efe90
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0e4ac18d4c5835f3bd0539f2a79d68b59860b6e6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145820"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637940"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>資格情報ネゴシエーションを使用しない Windows クライアントを使用するメッセージ セキュリティ
 次のシナリオでは、Windows Communication Foundation (WCF) クライアントと Kerberos のプロトコルで保護されたサービスを説明します。  
@@ -36,9 +36,9 @@ ms.locfileid: "53145820"
 ## <a name="service"></a>サービス  
  次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
   
--   構成を使用せずに、コードを使用してスタンドアロン サービスを作成します。  
+- 構成を使用せずに、コードを使用してスタンドアロン サービスを作成します。  
   
--   提供された構成を使用してサービスを作成しますが、エンドポイントを定義しません。  
+- 提供された構成を使用してサービスを作成しますが、エンドポイントを定義しません。  
   
 ### <a name="code"></a>コード  
  次のコードは、メッセージ セキュリティを使用するサービス エンドポイントを作成します。 このコードは、サービス資格情報のネゴシエーションとセキュリティ コンテキスト トークン (SCT) の確立を無効にします。  
@@ -46,9 +46,9 @@ ms.locfileid: "53145820"
 > [!NOTE]
 >  ネゴシエートせずに Windows の資格情報を使用するには、サービスのユーザー アカウントが、Active Directory ドメインを使用して登録されたサービス プリンシパル名 (SPN) にアクセスする必要があります。 これは次の 2 つの方法で実行できます。  
   
-1.  `NetworkService` アカウントまたは `LocalSystem` アカウントを使用してサービスを実行します。 サービスのメタデータ (Web サービスの説明でサービスのエンドポイント内で適切な SPN 要素を WCF が自動的に生成されますので、これらのアカウントでは、コンピューターのコンピューター、Active Directory ドメインに参加したときに確立された SPN にアクセス、言語、または WSDL) です。  
+1. `NetworkService` アカウントまたは `LocalSystem` アカウントを使用してサービスを実行します。 サービスのメタデータ (Web サービスの説明でサービスのエンドポイント内で適切な SPN 要素を WCF が自動的に生成されますので、これらのアカウントでは、コンピューターのコンピューター、Active Directory ドメインに参加したときに確立された SPN にアクセス、言語、または WSDL) です。  
   
-2.  任意の Active Directory ドメイン アカウントを使用してサービスを実行します。 この場合、そのドメイン アカウント用の SPN を確立する必要があります。 これを行うには、Setspn.exe ユーティリティ ツールを使用する方法があります。 サービスのアカウントの SPN が作成されると、そのメタデータ (WSDL) を通じてサービスのクライアントに公開する WCF を構成します。 これを行うには、アプリケーション構成ファイルまたはコードのどちらかを使用して、公開されるエンドポイントのエンドポイント ID を設定します。 プログラムで ID を公開する方法を次の例に示します。  
+2. 任意の Active Directory ドメイン アカウントを使用してサービスを実行します。 この場合、そのドメイン アカウント用の SPN を確立する必要があります。 これを行うには、Setspn.exe ユーティリティ ツールを使用する方法があります。 サービスのアカウントの SPN が作成されると、そのメタデータ (WSDL) を通じてサービスのクライアントに公開する WCF を構成します。 これを行うには、アプリケーション構成ファイルまたはコードのどちらかを使用して、公開されるエンドポイントのエンドポイント ID を設定します。 プログラムで ID を公開する方法を次の例に示します。  
   
  Spn の詳細について、Kerberos プロトコル、および Active Directory を参照してください。 [Kerberos Technical Supplement for Windows](https://go.microsoft.com/fwlink/?LinkId=88330)します。 エンドポイント id の詳細については、次を参照してください。 [SecurityBindingElement 認証モード](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)します。  
   
@@ -95,9 +95,9 @@ ms.locfileid: "53145820"
 ## <a name="client"></a>Client  
  次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
   
--   コード (およびクライアント コード) を使用してスタンドアロン クライアントを作成します。  
+- コード (およびクライアント コード) を使用してスタンドアロン クライアントを作成します。  
   
--   エンドポイント アドレスを定義しないクライアントを作成します。 代わりに、引数として構成名を受け取るクライアント コンストラクターを使用します。 次に例を示します。  
+- エンドポイント アドレスを定義しないクライアントを作成します。 代わりに、引数として構成名を受け取るクライアント コンストラクターを使用します。 次に例を示します。  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -146,7 +146,8 @@ ms.locfileid: "53145820"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [サービス ID と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>関連項目
+
+- [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [サービス ID と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

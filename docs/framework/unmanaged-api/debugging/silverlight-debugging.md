@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 5e903e04-17d0-4014-ac9a-a43330ec8b1c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80cee666a05432099a380a5ac547a5ca28698c31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1d20bc002e52c3c6a42b45c0d1c5d559e65dc52c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763664"
 ---
 # <a name="silverlight-debugging"></a>Silverlight デバッグ
 このセクションのトピックでは、Windows オペレーティング システム上または Macintosh プラットフォーム上で動作している Silverlight ベースのアプリケーションのデバッグをサポートするために共通言語ランタイム (CLR: Common Language Runtime) で提供される環境とインターフェイスについて説明します。  
@@ -22,13 +22,13 @@ ms.locfileid: "33436034"
  プロセスで CLR を列挙するメカニズムを提供します。  
   
  [CloseCLREnumeration 関数](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md)  
- 有効な CLR 継続スタートアップ イベントによって返されるハンドルの配列内にあるを閉じ、 [EnumerateCLRs 関数](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)、し、ハンドルおよび文字列パス配列のメモリを解放します。  
+ によって返されるハンドルの配列内にある有効な CLR 継続スタートアップ イベントを閉じ、 [EnumerateCLRs 関数](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)、ハンドルおよび文字列パス配列のメモリを解放します。  
   
  [CreateCoreClrDebugTarget 関数](../../../../docs/framework/unmanaged-api/debugging/createcoreclrdebugtarget-function.md)  
  プロセスおよびランタイムの列挙のためのリモート ターゲットへの接続を作成します。  
   
  [CreateCordbObject 関数](../../../../docs/framework/unmanaged-api/debugging/createcordbobject-function.md)  
- リモート プロセスでマネージ デバッグ セッションをインスタンス化するための機能を提供するデバッガー インターフェイスを作成します。  
+ リモート プロセスでマネージド デバッグ セッションをインスタンス化するための機能を提供するデバッガー インターフェイスを作成します。  
   
  [CreateVersionStringFromModule 関数](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)  
  対象プロセス内の CLR パスからバージョン文字列を作成します。  
@@ -52,11 +52,12 @@ ms.locfileid: "33436034"
  プロセスおよびランタイムの列挙のためにリモート ターゲットに接続するよう、トランスポート マネージャーを初期化します。  
   
  [ShutdownDbgTransportManager 関数](../../../../docs/framework/unmanaged-api/debugging/shutdowndbgtransportmanager-function.md)  
- リモート ターゲット コンピューターへの接続用のトランスポート マネージャーをシャットダウンします。  
+ リモート ターゲット コンピューターへの接続のためにトランスポート マネージャーをシャットダウンします。  
   
-## <a name="see-also"></a>関連項目  
- [デバッグ コクラス](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  
- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [デバッグ グローバル静的関数](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)  
- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+## <a name="see-also"></a>関連項目
+
+- [デバッグ コクラス](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)
+- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [デバッグ グローバル静的関数](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)

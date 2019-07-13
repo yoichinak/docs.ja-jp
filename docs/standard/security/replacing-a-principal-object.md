@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: c323687e-b196-487b-beba-f38f9b3f961b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bfcd912fc16aa8d4b89a4f455d65b0294593cead
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 5f33be207dd6166b16a04844f3d92b6e017d1c7a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44205855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018789"
 ---
 # <a name="replacing-a-principal-object"></a>プリンシパル オブジェクトの置き換え
-認証サービスを提供するアプリケーションでは、特定のスレッドの **プリンシパル** オブジェクト (<xref:System.Security.Principal.IPrincipal>) を置換する必要があります。 さらに、虚偽の ID やロールを要求することにより、悪意をもってアタッチされた不適切な **プリンシパル** がアプリケーションのセキュリティに問題を生じさせるため、セキュリティ システムを活用して **プリンシパル** オブジェクトを置き換える機能を保護する必要があります。 そのため、アプリケーションを必要とするを置き換える機能**プリンシパル**オブジェクトを付与する必要があります、<xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType>オブジェクトのプリンシパルを制御します。 (ロール ベースのセキュリティ チェックを実行する、または **プリンシパル** オブジェクトを作成するために、このアクセス許可は必要がないことに注意してください。)  
+認証サービスを提供するアプリケーションでは、特定のスレッドの **プリンシパル** オブジェクト (<xref:System.Security.Principal.IPrincipal>) を置換する必要があります。 さらに、虚偽の ID やロールを要求することにより、悪意をもってアタッチされた不適切な **プリンシパル** がアプリケーションのセキュリティに問題を生じさせるため、セキュリティ システムを活用して **プリンシパル** オブジェクトを置き換える機能を保護する必要があります。 そのため、 **プリンシパル** オブジェクトを置き換える機能を必要とするアプリケーションに、プリンシパルを制御するための <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType> オブジェクトを付与する必要があります。 (ロール ベースのセキュリティ チェックを実行する、または **プリンシパル** オブジェクトを作成するために、このアクセス許可は必要がないことに注意してください。)  
   
  次のタスクを実行することによって、現在の **プリンシパル** オブジェクトを置き換えることができます。  
   
-1.  置き換える **プリンシパル** オブジェクトと関連付けられている **ID** オブジェクトを作成します。  
+1. 置き換える **プリンシパル** オブジェクトと関連付けられている **ID** オブジェクトを作成します。  
   
-2.  新しい **プリンシパル** オブジェクトを呼び出しコンテキストにアタッチします。  
+2. 新しい **プリンシパル** オブジェクトを呼び出しコンテキストにアタッチします。  
   
 ## <a name="example"></a>例  
  次の例では、汎用プリンシパル オブジェクトを作成し、それを使用してスレッドのプリンシパルを設定する方法を示します。  
@@ -36,5 +36,5 @@ ms.locfileid: "44205855"
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType>  
+- <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType>
 - [プリンシパル オブジェクトと ID オブジェクト](../../../docs/standard/security/principal-and-identity-objects.md)

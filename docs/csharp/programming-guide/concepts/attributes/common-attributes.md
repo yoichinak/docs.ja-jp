@@ -2,25 +2,25 @@
 title: 共通属性 (C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-ms.openlocfilehash: 3b02b750ad4801177cb2ee4e2ef4bf51ecb2f20f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bb06fc72fc336df257c6b674d3eaa4fa47801da0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504396"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64603338"
 ---
 # <a name="common-attributes-c"></a>共通属性 (C#)
 このトピックでは、C# プログラムで最もよく使用される属性について説明します。  
   
--   [グローバル属性](#Global)  
+- [グローバル属性](#Global)  
   
--   [Obsolete 属性](#Obsolete)  
+- [Obsolete 属性](#Obsolete)  
   
--   [Conditional 属性](#Conditional)  
+- [Conditional 属性](#Conditional)  
   
--   [呼び出し元情報属性](#CallerInfo)  
+- [呼び出し元情報属性](#CallerInfo)  
   
-##  <a name="Global"></a> グローバル属性  
+## <a name="Global"></a> グローバル属性  
  ほとんどの属性は、クラスやメソッドなど、特定の言語要素に適用されます。ただし、属性の中にはグローバルなものがあり、アセンブリまたはモジュール全体に適用されます。 たとえば、<xref:System.Reflection.AssemblyVersionAttribute> 属性は、次のように、バージョン情報をアセンブリに埋め込むときに使用できます。  
   
 ```csharp  
@@ -31,11 +31,11 @@ ms.locfileid: "43504396"
   
  アセンブリの属性は、アセンブリに関する情報を提供する値です。 これらは次のカテゴリに分けられます。  
   
--   アセンブリ ID 属性  
+- アセンブリ ID 属性  
   
--   情報属性  
+- 情報属性  
   
--   アセンブリ マニフェスト属性  
+- アセンブリ マニフェスト属性  
   
 ### <a name="assembly-identity-attributes"></a>アセンブリ ID 属性  
  アセンブリの ID は、名前、バージョン、カルチャの 3 つの属性によって識別されます (適用できる場合は厳密な名前も使用されます)。 アセンブリの完全な名前を形成するこれらの属性は、コード内でアセンブリを参照するときに必要になります。 アセンブリのバージョンとカルチャは、属性を使用して設定できます。 ただし名前の値は、コンパイラ、Visual Studio IDE の [[アセンブリ情報]](/visualstudio/ide/reference/assembly-information-dialog-box) ダイアログ ボックス、またはアセンブリ リンカー (AI.exe) によってアセンブリの作成時に設定されます。このとき、設定はアセンブリ マニフェストが含まれたファイルに基づきます。 <xref:System.Reflection.AssemblyFlagsAttribute> 属性は、アセンブリの複数のコピーが共存できるかどうかを指定します。  
@@ -72,8 +72,8 @@ ms.locfileid: "43504396"
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|アセンブリ マニフェストのアセンブリの構成 (製品版やデバッグなど) を指定するカスタム属性を定義します。|  
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|アセンブリ マニフェストのわかりやすい既定の別名を定義します。|  
   
-##  <a name="Obsolete"></a> Obsolete 属性  
- `Obsolete` 属性は、使用が推奨されなくなったプログラム エンティティをマークします。 その後、非推奨の印が付いたエンティティが使用されるたびに、この属性の構成に従って警告かエラーが生成されます。 例:  
+## <a name="Obsolete"></a> Obsolete 属性  
+ `Obsolete` 属性は、使用が推奨されなくなったプログラム エンティティをマークします。 その後、非推奨の印が付いたエンティティが使用されるたびに、この属性の構成に従って警告かエラーが生成されます。 次に例を示します。  
   
 ```csharp  
 [System.Obsolete("use class B")]  
@@ -111,7 +111,7 @@ b.NewMethod();
   
  `Obsolete` 属性は、1 回だけ使用できる属性であり、属性を使用できる任意のエンティティに適用できます。 `Obsolete` は <xref:System.ObsoleteAttribute> の別名です。  
   
-##  <a name="Conditional"></a> Conditional 属性  
+## <a name="Conditional"></a> Conditional 属性  
  `Conditional` 属性を使用すると、プリプロセス識別子に依存したメソッドの実行を指定できます。 `Conditional` 属性は <xref:System.Diagnostics.ConditionalAttribute> の別名であり、メソッドまたは属性クラスに適用できます。  
   
  この例では、`Conditional` は、プログラム固有の診断情報の表示を有効または無効にするメソッドに適用されています。  
@@ -216,7 +216,7 @@ class SampleClass
 }  
 ```  
   
-##  <a name="CallerInfo"></a> 呼び出し元情報属性  
+## <a name="CallerInfo"></a> 呼び出し元情報属性  
  呼び出し元情報の属性を使用すると、メソッドへの呼び出し元に関する情報を取得できます。 ソース コードのファイル パス、ソース コードの行番号、呼び出し元のメンバー名を取得できます。  
   
  メンバー呼び出し元情報を取得するには、省略可能なパラメーターに適用される属性を使用します。 省略可能な各パラメーターでは既定値が指定されます。 次の表は、<xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 名前空間で定義されている呼び出し元情報の属性の一覧です。  
@@ -229,11 +229,11 @@ class SampleClass
   
  呼び出し元情報属性の詳細については、「[呼び出し元情報 (C#)](../../../../csharp/programming-guide/concepts/caller-information.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- <xref:System.Reflection>  
-- <xref:System.Attribute>  
-- [C# プログラミング ガイド](../../../../csharp/programming-guide/index.md)  
-- [属性](../../../../../docs/standard/attributes/index.md)  
-- [リフレクション (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
+- <xref:System.Reflection>
+- <xref:System.Attribute>
+- [C# プログラミング ガイド](../../../../csharp/programming-guide/index.md)
+- [属性](../../../../../docs/standard/attributes/index.md)
+- [リフレクション (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
 - [リフレクションを使用した属性へのアクセス (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

@@ -6,22 +6,22 @@ helpviewer_keywords:
 - GroupBox control [Windows Forms]
 - grouping controls [Windows Forms]
 ms.assetid: ee7fb3ed-2fae-4df3-bdeb-15d42e5d7d75
-ms.openlocfilehash: ca302dc78b177241065cde60d1b887ad0d9813a3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b808a76f4aa9d2c28c838d0c6cfd7bc28d589061
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971263"
 ---
 # <a name="groupbox-control-windows-forms"></a>GroupBox コントロール (Windows フォーム)
-Windows フォーム<xref:System.Windows.Forms.GroupBox>コントロールを使用して、その他のコントロールのグループに分けます。 通常、関数によって、フォームを分割するのにグループ ボックスを使用します。 たとえば、注文書を使用するどの宅配業者などの絞り込みメール配信オプションを指定するがあります。 グループ ボックス内のすべてのオプションをグループ化と、ユーザーが論理を視覚的に。 <xref:System.Windows.Forms.GroupBox>コントロールに似ていますが、<xref:System.Windows.Forms.Panel>コントロール。 ただし、のみ、<xref:System.Windows.Forms.GroupBox>コントロールは、キャプションを表示およびのみ、<xref:System.Windows.Forms.Panel>コントロールがスクロール バーを持つことができます。  
+Windows フォーム<xref:System.Windows.Forms.GroupBox>コントロールを使用すると、他のコントロールの特定のグループ化を提供します。 通常、関数によってフォームを分割するのにグループ ボックスを使用します。 たとえば、どの宅配業者を使用するなどの絞り込みメール配信オプションを指定する注文書があります。 グループ ボックス内のすべてのオプションをグループ化と、ユーザーが論理視覚的に。 <xref:System.Windows.Forms.GroupBox>コントロールに似ていますが、<xref:System.Windows.Forms.Panel>制御。 ただし、のみ、<xref:System.Windows.Forms.GroupBox>コントロールは、キャプションを表示およびのみ、<xref:System.Windows.Forms.Panel>コントロールがスクロール バーを持つことができます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [GroupBox コントロールの概要](../../../../docs/framework/winforms/controls/groupbox-control-overview-windows-forms.md)  
- このコントロールの用途、主な機能、およびプロパティについて説明します。  
+ [GroupBox コントロールの概要](groupbox-control-overview-windows-forms.md)  
+ このコントロールについて、および主な機能とプロパティについて説明します。  
   
- [方法: Windows フォーム GroupBox コントロールを使用してコントロールをグループ化する](../../../../docs/framework/winforms/controls/how-to-group-controls-with-the-windows-forms-groupbox-control.md)  
- このコントロールのグループ コントロールに使用する方法をについて説明します。  
+ [方法: Windows フォーム GroupBox コントロールでコントロールをグループ化](how-to-group-controls-with-the-windows-forms-groupbox-control.md)  
+ コントロールをグループ化するには、このコントロールを使用する方法について説明します。  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Forms.GroupBox>  
@@ -31,5 +31,5 @@ Windows フォーム<xref:System.Windows.Forms.GroupBox>コントロールを使
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
 ## <a name="related-sections"></a>関連項目  
- [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)  
  Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。

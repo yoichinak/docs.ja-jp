@@ -2,12 +2,12 @@
 title: 証明書の選択と検証
 ms.date: 03/30/2017
 ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
-ms.openlocfilehash: 2767f8fc62d44e480962690a3cbe379fea0f9662
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 79cc46d91f6b1818154bac6f62df2acbac36fe20
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50048373"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59318352"
 ---
 # <a name="certificate-selection-and-validation"></a>証明書の選択と検証
 <xref:System.Net> クラスは、Secure Socket Layer (SSL) 接続の <xref:System.Security.Cryptography.X509Certificates> を選択および検証する方法を複数サポートしています。 クライアントは、サーバーに対する認証に 1 つまたは複数の証明書を選択できます。 サーバーは、クライアント証明書の認証に固有の属性が 1 つまたは複数あることを必須にすることができます。  
@@ -29,11 +29,11 @@ ms.locfileid: "50048373"
 ## <a name="client-certificate-selection"></a>クライアント証明書の選択  
  .NET Framework は、次の方法でサーバーに提示するクライアント証明書を選択します。  
   
-1.  以前にクライアント証明書がサーバーに提示されていた場合、最初に提示されたときに証明書はキャッシュされ、以降のクライアント証明書要求があった場合に再利用されます。  
+1. 以前にクライアント証明書がサーバーに提示されていた場合、最初に提示されたときに証明書はキャッシュされ、以降のクライアント証明書要求があった場合に再利用されます。  
   
-2.  デリゲートが存在する場合は、選択するクライアント証明書として常にデリゲートの結果が使用されます。 可能な限りキャッシュされた証明書の使用を試行してください。ただし、デリゲートが null を返し、証明書コレクションが空ではない場合、キャッシュされた匿名の資格情報は使用しないでください。  
+2. デリゲートが存在する場合は、選択するクライアント証明書として常にデリゲートの結果が使用されます。 可能な限りキャッシュされた証明書の使用を試行してください。ただし、デリゲートが null を返し、証明書コレクションが空ではない場合、キャッシュされた匿名の資格情報は使用しないでください。  
   
-3.  これがクライアント証明書の最初のチャレンジの場合、.NET Framework は、接続に関連付けられている <xref:System.Security.Cryptography.X509Certificates.X509Certificate> または <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> クラス オブジェクトの証明書を列挙し、サーバーから提供された証明書発行元の一覧と、クライアント証明書の発行元の名前との一致を検索します。 一致した最初の証明書がサーバーに送信されます。 一致する証明書がない場合、または証明書コレクションが空の場合、匿名の資格情報がサーバーに送信されます。  
+3. これがクライアント証明書の最初のチャレンジの場合、.NET Framework は、接続に関連付けられている <xref:System.Security.Cryptography.X509Certificates.X509Certificate> または <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> クラス オブジェクトの証明書を列挙し、サーバーから提供された証明書発行元の一覧と、クライアント証明書の発行元の名前との一致を検索します。 一致した最初の証明書がサーバーに送信されます。 一致する証明書がない場合、または証明書コレクションが空の場合、匿名の資格情報がサーバーに送信されます。  
   
 ## <a name="tools-for-certificate-configuration"></a>証明書構成のツール  
  クライアントとサーバーの証明書構成には複数のツールを使用できます。  
@@ -52,6 +52,7 @@ ms.locfileid: "50048373"
   
  これらのツールに加え、<xref:System.Security.Cryptography.X509Certificates.X509Certificate> クラスと <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> クラスには、ファイル システムから証明書を読み込むメソッドがあります。  
   
-## <a name="see-also"></a>参照  
- [ネットワーク プログラミングにおけるセキュリティ](../../../docs/framework/network-programming/security-in-network-programming.md)  
- [.NET Framework のネットワーク プログラミング](../../../docs/framework/network-programming/index.md)
+## <a name="see-also"></a>関連項目
+
+- [ネットワーク プログラミングにおけるセキュリティ](../../../docs/framework/network-programming/security-in-network-programming.md)
+- [.NET Framework のネットワーク プログラミング](../../../docs/framework/network-programming/index.md)

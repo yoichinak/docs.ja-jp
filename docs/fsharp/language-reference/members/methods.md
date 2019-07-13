@@ -2,12 +2,12 @@
 title: メソッド
 description: 学習方法、F#メソッドは、公開し、オブジェクトと型の動作と機能の実装に使用される型に関連付けられている関数。
 ms.date: 05/16/2016
-ms.openlocfilehash: 03150cc67f79bfde58cf27e4a9d4dfa9e9ff3f55
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 9b661a3ff7fa9a7704f5a31570acb62deaac2fcf
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614026"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641759"
 ---
 # <a name="methods"></a>メソッド
 

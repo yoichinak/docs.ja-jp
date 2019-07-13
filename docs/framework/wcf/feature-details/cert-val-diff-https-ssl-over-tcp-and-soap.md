@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF], validation differences
 ms.assetid: 953a219f-4745-4019-9894-c70704f352e6
-ms.openlocfilehash: 978ef8f0abe3b65110864773a19c15f0c8363236
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0ab343da821e8994ac3a652bfc55db261d5e48f6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857650"
 ---
 # <a name="certificate-validation-differences-between-https-ssl-over-tcp-and-soap-security"></a>HTTPS、SSL Over TCP、SOAP セキュリティ間における証明書検証方法の相違点
 できます証明書使用する Windows Communication Foundation (WCF) でトランスポート層セキュリティ (TLS) だけでなく、メッセージ層 (SOAP) セキュリティで HTTP (HTTPS) または TCP 経由で。 ここでは、このような証明書の検証方法の違いについて説明します。  
   
 ## <a name="validation-of-https-client-certificates"></a>HTTPS クライアント証明書の検証  
- HTTPS を使用してクライアントとサービス間で通信を行う場合、サービスに対して認証を行うためにクライアントが使用する証明書はチェーン信頼をサポートしている必要があります。 つまり、信頼されたルート証明機関にチェーンされている必要があります。 そうでない HTTP レイヤーが発生した場合、<xref:System.Net.WebException>メッセージで"リモート サーバーがエラーを返しました: (403) 許可されていません。" WCF のサーフェスとしては、この例外を<xref:System.ServiceModel.Security.MessageSecurityException>します。  
+ HTTPS を使用してクライアントとサービス間で通信を行う場合、サービスに対して認証を行うためにクライアントが使用する証明書はチェーン信頼をサポートしている必要があります。 つまり、信頼されたルート証明機関にチェーンされている必要があります。 そうでない HTTP レイヤーが発生した場合、<xref:System.Net.WebException>メッセージで"リモート サーバーがエラーを返しました。「(403) 許可されていません。" WCF のサーフェスとしては、この例外を<xref:System.ServiceModel.Security.MessageSecurityException>します。  
   
 ## <a name="validation-of-https-service-certificates"></a>HTTP サービス証明書の検証  
  HTTPS を使用してクライアントとサービス間で通信を行う場合、サーバーが認証に使用する証明書は既定でチェーン信頼をサポートしている必要があります。 つまり、信頼されたルート証明機関にチェーンされている必要があります。 証明書が失効しているかどうかを確認するためのオンライン チェックは行われません。 この動作は、<xref:System.Net.Security.RemoteCertificateValidationCallback> コールバックを登録することによってオーバーライドできます。コードは次のようになります。  
@@ -47,6 +47,7 @@ ms.locfileid: "50183596"
  [!code-csharp[c_CertificateValidationDifferences#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_certificatevalidationdifferences/cs/source.cs#4)]
  [!code-vb[c_CertificateValidationDifferences#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_certificatevalidationdifferences/vb/source.vb#4)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Net.Security.RemoteCertificateValidationCallback>  
- [証明書の使用](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Net.Security.RemoteCertificateValidationCallback>
+- [証明書の使用](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

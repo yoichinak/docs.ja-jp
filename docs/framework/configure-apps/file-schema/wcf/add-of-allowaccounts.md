@@ -1,15 +1,15 @@
 ---
-title: '&lt;allowAccounts&gt; の &lt;add&gt;'
+title: <add> の <allowAccounts>
 ms.date: 03/30/2017
 ms.assetid: 763c7b1f-e7b0-4d99-a42c-4506fcb8da00
-ms.openlocfilehash: 443e401e568f4de0432e66c4e03b033f6bfc42f6
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1c6764b37b2aa5349b8ccf63e6b7c2bc580b69b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701139"
 ---
-# <a name="ltaddgt-of-ltallowaccountsgt"></a>&lt;allowAccounts&gt; の &lt;add&gt;
+# <a name="add-of-allowaccounts"></a>\<add> of \<allowAccounts>
 WCF サービスをホストし、共有サービスへの接続アクセスが許可されるプロセス用のユーザー アカウントを指定します。  
   
  \<system.serviceModel.activation>  
@@ -58,8 +58,9 @@ WCF サービスをホストし、共有サービスへの接続アクセスが�
 </allowAccounts>
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Activation.Configuration.NetTcpSection.AllowAccounts%2A>  
- <xref:System.ServiceModel.Activation.Configuration.NetPipeSection.AllowAccounts%2A>  
- <xref:System.ServiceModel.Activation.Configuration.SecurityIdentifierElementCollection>  
- <xref:System.ServiceModel.Activation.Configuration.SecurityIdentifierElement>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Activation.Configuration.NetTcpSection.AllowAccounts%2A>
+- <xref:System.ServiceModel.Activation.Configuration.NetPipeSection.AllowAccounts%2A>
+- <xref:System.ServiceModel.Activation.Configuration.SecurityIdentifierElementCollection>
+- <xref:System.ServiceModel.Activation.Configuration.SecurityIdentifierElement>

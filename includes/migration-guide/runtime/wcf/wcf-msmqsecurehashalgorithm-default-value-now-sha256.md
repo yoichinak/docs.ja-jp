@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: ce8e162e11802de1b06bfbc63d5c55de67ef23df
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804449"
+---
 ### <a name="wcf-msmqsecurehashalgorithm-default-value-is-now-sha256"></a>WCF MsmqSecureHashAlgorithm の既定値が SHA256 になった
 
 |   |   |
@@ -7,4 +15,3 @@
 |スコープ|マイナー|
 |Version|4.7.1|
 |型|ランタイム|
-

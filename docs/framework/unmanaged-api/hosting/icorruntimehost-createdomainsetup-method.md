@@ -17,27 +17,27 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf3aff2c3c4d10c4ee805a6110561d6fdcd63a55
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1f8e9284283247ec46a225470ae3063dac539f43
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437987"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780020"
 ---
 # <a name="icorruntimehostcreatedomainsetup-method"></a>ICorRuntimeHost::CreateDomainSetup メソッド
-インターフェイス ポインターの型を IAppDomainSetup を取得、<xref:System.AppDomainSetup?displayProperty=nameWithType>インスタンス。 `IAppDomainSetup` 作成する前に、アプリケーション ドメインの側面を構成する方法を提供します。  
+インターフェイス ポインターの型を IAppDomainSetup の取得、<xref:System.AppDomainSetup?displayProperty=nameWithType>インスタンス。 `IAppDomainSetup` 作成される前に、アプリケーション ドメインの側面を構成する方法を提供します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CreateDomainSetup (  
     [out] IUnknown** pAppDomainSetup  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pAppDomainSetup`  
- [out]インターフェイス ポインター、<xref:System.AppDomainSetup?displayProperty=nameWithType>インスタンス。 このパラメーターとして型指定`IUnknown`呼び出し元は一般に呼び出す必要がありますので、`QueryInterface`型のインターフェイス ポインターを取得するには、このポインターを`IAppDomainSetup`です。  
+ [out]インターフェイス ポインターを<xref:System.AppDomainSetup?displayProperty=nameWithType>インスタンス。 このパラメーターとして型指定された`IUnknown`呼び出し元は一般に呼び出す必要がありますので、`QueryInterface`型のインターフェイス ポインターを取得するには、このポインターを`IAppDomainSetup`します。  
   
 ## <a name="return-value"></a>戻り値  
   
@@ -45,24 +45,25 @@ HRESULT CreateDomainSetup (
 |-------------|-----------------|  
 |S_OK|操作が正常に完了しました。|  
 |S_FALSE|操作を完了できませんでした。|  
-|E_FAIL|未知の致命的なエラーが発生しました。 メソッドには、E_FAIL が返されます、共通言語ランタイム (CLR) は、プロセスで使用可能なできなくします。 Api をホストに以降の呼び出しでは、HOST_E_CLRNOTAVAILABLE を返します。|  
-|HOST_E_CLRNOTAVAILABLE|CLR が、プロセスに読み込まれていませんまたは CLR は、状態をマネージ コードを実行またはできないの呼び出しは正常に処理します。|  
+|E_FAIL|未知の致命的なエラーが発生しました。 場合は、メソッドは、E_FAIL を返します、共通言語ランタイム (CLR) はプロセスで使用可能ではなくなりました。 Api をホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。|  
+|HOST_E_CLRNOTAVAILABLE|プロセスに CLR が読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。|  
   
-## <a name="remarks"></a>コメント  
- このメソッドから返されるポインターは通常のパラメーターとして渡さ、 [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ このメソッドから返されるポインターは通常のパラメーターとして渡さ、 [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md)メソッド。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** 1.0、1.1  
+ **.NET framework のバージョン:** 1.0, 1.1  
   
-## <a name="see-also"></a>関連項目  
- <xref:System._AppDomain>  
- <xref:System.AppDomain>  
- <xref:System.AppDomainSetup>  
- <xref:System.IAppDomainSetup?displayProperty=nameWithType>  
- [ICorRuntimeHost インターフェイス](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System._AppDomain>
+- <xref:System.AppDomain>
+- <xref:System.AppDomainSetup>
+- <xref:System.IAppDomainSetup?displayProperty=nameWithType>
+- [ICorRuntimeHost インターフェイス](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

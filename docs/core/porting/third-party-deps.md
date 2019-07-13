@@ -2,18 +2,18 @@
 title: コードを .NET Core に移植するために依存関係を分析する
 description: .NET Framework から .NET Core にプロジェクトを移植するために、外部の依存関係を分析する方法を説明します。
 author: cartermp
-ms.date: 12/04/2018
+ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: dce8e6cd4986b15cf926154b378964db4beef398
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 6c0f55150a4a1c4d0fb8b3125565c9ab8ade3117
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170324"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904333"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>コードを .NET Core に移植するために依存関係を分析する
 
-.NET Core または .NET Standard にコードを移植するには、依存関係を理解する必要があります。 外部の依存関係は、プロジェクトで参照していますが、自分が構築していない [NuGet パッケージ](#analyze-referenced-nuget-packages-on-your-project) または [DLL](#analyze-dependencies-that-arent-nuget-packages) です。 各依存関係を評価し、.NET Core と互換性のない依存関係に対して代替計画を作成します。 ここでは、依存関係が .NET Core と互換性があるかどうかを判断する方法について説明します。
+.NET Core または .NET Standard にコードを移植するには、依存関係を理解する必要があります。 外部の依存関係は、プロジェクトで参照していますが、自分が構築していない [NuGet パッケージ](#analyze-referenced-nuget-packages-in-your-projects) または [DLL](#analyze-dependencies-that-arent-nuget-packages) です。 各依存関係を評価し、.NET Core と互換性のない依存関係に対して代替計画を作成します。 ここでは、依存関係が .NET Core と互換性があるかどうかを判断する方法について説明します。
 
 ## <a name="analyze-referenced-nuget-packages-in-your-projects"></a>プロジェクトで参照される NuGet パッケージを分析する
 
@@ -77,7 +77,7 @@ NuGet パッケージの分析後、ほとんどの NuGet パッケージと同�
 
 .NET Standard 2.0 以降、.NET Framework 互換モードが導入されました。 この互換モードにより、.NET Standard および .NET Core プロジェクトは .NET Framework ライブラリを参照できます。 .NET Framework ライブラリの参照はすべてのプロジェクトで機能するわけではありません (例えばライブラリで Windows Presentation Foundation (WPF) API を使用していても、多くの移植シナリオがブロック解除される場合など)。
 
-[Huitian.PowerCollections](https://www.nuget.org/packages/Huitian.PowerCollections) など、プロジェクトで .NET Framework をターゲットとする NuGet パッケージを参照すると、次の例のようなパッケージ フォールバック警告 ([NU1701](/nuget/reference/errors-and-warnings#nu1701)) が表示されます。
+[Huitian.PowerCollections](https://www.nuget.org/packages/Huitian.PowerCollections) など、プロジェクトで .NET Framework をターゲットとする NuGet パッケージを参照すると、次の例のようなパッケージ フォールバック警告 ([NU1701](/nuget/reference/errors-and-warnings/nu1701)) が表示されます。
 
 `NU1701: Package ‘Huitian.PowerCollections 1.0.0’ was restored using ‘.NETFramework,Version=v4.6.1’ instead of the project target framework ‘.NETStandard,Version=v2.0’. This package may not be fully compatible with your project.`
 
@@ -91,15 +91,15 @@ NuGet パッケージの分析後、ほとんどの NuGet パッケージと同�
 </ItemGroup>
 ```
 
-Visual Studio でコンパイラ警告を非表示にする方法の詳細については、「[NuGet パッケージの警告を非表示にする](/visualstudio/ide/how-to-suppress-compiler-warnings#suppressing-warnings-for-nuget-packages)」を参照してください。
+Visual Studio でコンパイラ警告を非表示にする方法の詳細については、「[NuGet パッケージの警告を非表示にする](/visualstudio/ide/how-to-suppress-compiler-warnings#suppress-warnings-for-nuget-packages)」を参照してください。
 
-### <a name="port-your-packages-to-packagereference"></a>パッケージを `PackageReference` に移植する
+## <a name="port-your-packages-to-packagereference"></a>パッケージを `PackageReference` に移植する
 
 .NET Core は [PackageReference](/nuget/consume-packages/package-references-in-project-files) を使用してパッケージの依存関係を指定します。 パッケージの指定に [packages.config](/nuget/reference/packages-config) を使用している場合は、`PackageReference` に変換する必要があります。
 
 詳細については、「[Migrate from packages.config to PackageReference](/nuget/reference/migrate-packages-config-to-package-reference)」(packages.config から PackageReference への移行) を参照してください。
 
-### <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>NuGet パッケージの依存関係が .NET Core で動作しない場合の対処方法
+## <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>NuGet パッケージの依存関係が .NET Core で動作しない場合の対処方法
 
 依存している NuGet パッケージが .NET Core で動作しない場合の対処方法はいくつかあります。
 
@@ -119,6 +119,5 @@ Visual Studio でコンパイラ警告を非表示にする方法の詳細につ
 
 ファイル システム内の DLL など、NuGet パッケージではない依存関係がある場合もあります。 その依存関係の移植性を調べる唯一の方法が、[.NET Portability Analyzer](https://github.com/Microsoft/dotnet-apiport) ツールを実行することです。 このツールでは、.NET Framework をターゲットとするアセンブリを分析し、.NET Core などの他の .NET プラットフォームに移植できない API を特定できます。 このツールはコンソール アプリケーションまたは [Visual Studio 拡張機能](../../standard/analyzers/portability-analyzer.md)として実行できます。
 
-## <a name="next-steps"></a>次の手順
-
-ライブラリを移植している場合は、「[Porting your Libraries](libraries.md)」(ライブラリへの移植) を参照してください。
+>[!div class="step-by-step"]
+>[次へ](libraries.md)

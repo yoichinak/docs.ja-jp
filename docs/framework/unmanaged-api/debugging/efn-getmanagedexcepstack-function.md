@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44f3604e3c12cd4b9781876d2d412d942353061e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 61f4e057a487462feb385ca0e3ca977fdd165f56
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404155"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739096"
 ---
-# <a name="efngetmanagedexcepstack-function"></a>_EFN_GetManagedExcepStack 関数
-指定したマネージ例外オブジェクトのアドレスに応じて、中に含まれているスタック トレースの文字列バージョンを返します。  
+# <a name="efngetmanagedexcepstack-function"></a>\_EFN\_GetManagedExcepStack 関数
+指定したマネージド例外オブジェクトのアドレスに応じて、中に含まれているスタック トレースの文字列バージョンを返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT _EFN_GetManagedExcepStack(  
     [in]  PDEBUG_CLIENT Client,  
     [in]  ULONG64       StackObjAddr,  
@@ -37,28 +37,29 @@ HRESULT _EFN_GetManagedExcepStack(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `Client`  
  [in]デバッグ中のクライアント。  
   
  `StackObjAddr`  
- [in]派生したマネージ オブジェクトのポインター、<xref:System.Exception>です。  
+ [in]派生したマネージ オブジェクトのポインター<xref:System.Exception>します。  
   
  szStackString  
  [out]返される文字列。  
   
  `cbString`  
- [out]文字列バッファー内の文字の数。  
+ [out]文字列のバッファーで使用できる文字数。  
   
-## <a name="remarks"></a>コメント  
- ない場合マネージ コードのスレッドで現在のコンテキストで、関数は、0xa0 の設備値と 0x1000 のエラー コードとマネージを返します。  
+## <a name="remarks"></a>Remarks  
+ ないマネージ コードのスレッドで現在のコンテキストの場合、関数は、0xa0 の施設の値と 0x1000 のエラー コードをマネージを返します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** SOS_Stacktrace.h  
   
  **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [デバッグ グローバル静的関数](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a>関連項目
+
+- [デバッグ グローバル静的関数](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

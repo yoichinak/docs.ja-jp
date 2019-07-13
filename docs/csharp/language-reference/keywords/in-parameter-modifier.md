@@ -1,20 +1,20 @@
 ---
 title: in パラメーター修飾子 - C# リファレンス
 ms.custom: seodec18
-ms.date: 03/06/2018
+ms.date: 03/26/2019
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: d08b135c92cab176e402fec73999083fe4309362
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e39d470308ed5a2b2ed82ade0faf8ba925228c2c
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236298"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59112646"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>in パラメーター修飾子 (C# リファレンス)
 
-`in` キーワードによって、参照により引数が渡されます。 これは、[ref](ref.md) または [out](out-parameter-modifier.md) キーワードと似ています。ただし、、呼び出されたメソッドで `in` 引数を変更することはできません。 `ref` 引数には変更が許される一方で、`out` 引数の場合、呼び出されたメソッドによって変更される必要があります。そのような変更は、呼び出し元のコンテキストで観察できます。
+`in` キーワードによって、参照により引数が渡されます。 仮パラメーターを引数 (変数にする必要があります) の別名にします。 つまり、パラメーターに対するすべての操作は引数に対して行われます。 これは、[ref](ref.md) または [out](out-parameter-modifier.md) キーワードと似ています。ただし、呼び出されたメソッドで `in` 引数を変更することはできません。 `ref` 引数には変更が許される一方で、`out` 引数の場合、呼び出されたメソッドによって変更される必要があります。そのような変更は、呼び出し元のコンテキストで観察できます。
 
 [!code-csharp-interactive[cs-in-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/InParameterModifier.cs#1)]  
 
@@ -23,9 +23,11 @@ ms.locfileid: "53236298"
 > [!NOTE] 
 > `foreach` ステートメントの一部、または LINQ クエリの `join` 句の一部として、型パラメーターが反変であることを示すために `in` キーワードをジェネリック型パラメーターで使用することもできます。 これらのコンテキストでの `in` キーワードの使用の詳細については、これらすべての使用に関するリンクを提供する「[in](in.md)」を参照してください。
   
- `in` 引数として渡される変数は、メソッド呼び出しで渡される前に初期化する必要があります。 ただし、呼び出されたメソッドでは値の割り当てや、引数の変更を行うことはできません。  
-  
- `in`、`ref`、`out`キーワードは実行時の動作が異なりますが、コンパイル時にメソッド シグネチャの一部とは見なされません。 したがって、唯一の違いが、1 つのメソッドは `ref` または `in` 引数を受け取り、もう一方のメソッドは `out` 引数を受け取ることである場合、メソッドはオーバーロードできません。 たとえば、次のコードはコンパイルされません。  
+`in` 引数として渡される変数は、メソッド呼び出しで渡される前に初期化する必要があります。 ただし、呼び出されたメソッドでは値の割り当てや、引数の変更を行うことはできません。  
+
+`in` パラメーター修飾子は C# 7.2 以降で使用可能です。 以前のバージョンでは、コンパイラ エラー `CS8107` ("Feature 'readonly references' is not available in C# 7.0. Please use language version 7.2 or greater." ('読み取り専用参照' 機能は C# 7.0 では使用できません。7.2 以上の言語バージョンを使用してください)) が生成されました。コンパイラ言語のバージョンを構成するには、「[C# 言語のバージョンの選択](../configure-language-version.md)」をご覧ください。
+
+`in`、`ref`、および `out` キーワードは、オーバーロード解決のためのメソッド シグネチャの一部とは見なされません。 したがって、唯一の違いが、1 つのメソッドは `ref` または `in` 引数を受け取り、もう一方のメソッドは `out` 引数を受け取ることである場合、メソッドはオーバーロードできません。 たとえば、次のコードはコンパイルされません。  
   
 ```csharp
 class CS0663_Example
@@ -119,10 +121,10 @@ Method(in i); // passed by readonly reference, explicitly using `in`
 ## <a name="c-language-specification"></a>C# 言語仕様  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../index.md)  
-- [C# プログラミング ガイド](../../programming-guide/index.md)  
-- [C# のキーワード](index.md)  
-- [メソッド パラメーター](method-parameters.md)  
-- [安全で効率的なコードを記述する](../../write-safe-efficient-code.md)  
+- [C# リファレンス](../index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# のキーワード](index.md)
+- [メソッド パラメーター](method-parameters.md)
+- [安全で効率的なコードを記述する](../../write-safe-efficient-code.md)

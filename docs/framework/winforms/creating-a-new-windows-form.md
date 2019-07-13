@@ -5,21 +5,21 @@ helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating a new form
 ms.assetid: c725559c-803e-4725-80fa-96aba93de29a
-ms.openlocfilehash: ddceec86938ef5f500c38eb90004dc1f9d11b122
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 409dd945ebd26d212f62745ce6751f7507641bb2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009059"
 ---
 # <a name="creating-a-new-windows-form"></a>新しい Windows フォームの作成
-このトピックでは、初めての Windows フォーム アプリケーションを作成する方法について説明したトピックへのリンクを示します。 また、このセクションのトピックでは、Windows フォーム アプリケーションを作成する際に理解しておくべき基本的な用語とガイドラインもいくつか紹介します。 Windows フォーム アプリケーションに関する詳細についてに、イベントとイベントの処理、および、ユーザーからの入力を処理する方法で使用できるコントロールは、関連するトピックの一覧を参照してください。  
+このトピックでは、初めての Windows フォーム アプリケーションを作成する方法について説明したトピックへのリンクを示します。 また、このセクションのトピックでは、Windows フォーム アプリケーションを作成する際に理解しておくべき基本的な用語とガイドラインもいくつか紹介します。 Windows フォーム アプリケーションについてに、イベントとイベントの処理、および、ユーザーからの入力を処理する方法で使用できるコントロールは、関連トピックの一覧を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [Windows フォームの座標](../../../docs/framework/winforms/windows-forms-coordinates.md)です。  
+ [Windows フォームの座標](windows-forms-coordinates.md)  
  クライアント座標と画面座標について説明します。  
   
- [方法: コマンド ラインから Windows フォーム アプリケーションを作成する](../../../docs/framework/winforms/how-to-create-a-windows-forms-application-from-the-command-line.md)  
+ [方法: コマンドラインから Windows フォーム アプリケーションを作成します。](how-to-create-a-windows-forms-application-from-the-command-line.md)  
  基本的な Windows フォームを作成し、コマンド ラインからコンパイルする方法について説明します。  
   
 ## <a name="reference"></a>参照  
@@ -30,14 +30,14 @@ ms.locfileid: "33537782"
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
 ## <a name="related-sections"></a>関連項目  
- [ユーザーの入力の処理](../../../docs/framework/winforms/controls/handling-user-input.md)  
+ [ユーザーの入力の処理](./controls/handling-user-input.md)  
  Windows フォーム アプリケーションにおけるユーザー入力とその処理方法について説明したトピックへのリンクを示します。  
   
- [Windows フォーム内でのイベント ハンドラーの作成](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
+ [Windows フォーム内でのイベント ハンドラーの作成](creating-event-handlers-in-windows-forms.md)  
  Windows フォーム アプリケーションでイベントを処理する方法について説明したトピックへのリンクを示します。  
   
- [Windows フォームの表示形式の変更](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
+ [Windows フォームの表示形式の変更](changing-the-appearance-of-windows-forms.md)  
  Windows フォーム アプリケーションの外観を変更する方法について説明したトピックへのリンクを示します。  
   
- [Windows フォーム コントロールの機能別一覧](../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
+ [Windows フォーム コントロールの機能別一覧](./controls/windows-forms-controls-by-function.md)  
  Windows フォーム アプリケーションで使用できるコントロールについて説明したトピックへのリンクを示します。

@@ -2,12 +2,12 @@
 title: Windows Communication Foundation の採用
 ms.date: 03/30/2017
 ms.assetid: 49ba71e2-9468-4082-84c5-cf8daf95e34a
-ms.openlocfilehash: 5773d2687eb06cfc562dbe25fa9b94864b1b3a49
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 58a51f7ea0db2297c7151a752de3f54307e0c5fd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47232964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857715"
 ---
 # <a name="adopting-windows-communication-foundation"></a>Windows Communication Foundation の採用
 
@@ -23,4 +23,4 @@ WCF クライアントは、ASP.NET Web サービスを使用できます。 WCF
 
 ## <a name="see-also"></a>関連項目
 
-- [方法 : メタデータの取得および準拠サービスの実装をする](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)
+- [方法: メタデータの取得および準拠サービスの実装](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)

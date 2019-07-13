@@ -17,58 +17,59 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb63f1e9d2b30ce764521aa68fbafe0407cbe922
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 94deb4eaeeec2400aebf397d391ce4b67c16989e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441875"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763889"
 ---
 # <a name="ihostcontrolsetappdomainmanager-method"></a>IHostControl::SetAppDomainManager メソッド
-アプリケーション ドメインが作成されているホストに通知します。  
+アプリケーション ドメインが作成されたことをホストに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetAppDomainManager (  
     [in] DWORD     dwAppDomainID,  
     [in] IUnknown* pUnkAppDomainManager  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `dwAppDomainID`  
- [in]選択された数値識別子<xref:System.AppDomain>です。  
+ [in]選択した数値識別子<xref:System.AppDomain>します。  
   
  `pUnkAppDomainManager`  
- [in]ポインター、<xref:System.AppDomainManager>としてホストを実装するオブジェクト`IUnknown`です。  
+ [in]ポインター、<xref:System.AppDomainManager>としてホストを実装するオブジェクト`IUnknown`します。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|`SetAppDomainManager` 正常に返されます。|  
-|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) が、プロセスに読み込まれていませんまたは CLR は、状態をマネージ コードを実行またはできないの呼び出しは正常に処理します。|  
-|HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
-|HOST_E_NOT_OWNER|呼び出し元は、ロックを所有していません。|  
+|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) は、プロセスに読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。|  
+|HOST_E_TIMEOUT|呼び出しがタイムアウトになりました。|  
+|HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
 |HOST_E_ABANDONED|イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。|  
-|E_FAIL|不明な致命的なエラーが発生しました。 メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。 メソッドのホストに以降の呼び出しでは、HOST_E_CLRNOTAVAILABLE を返します。|  
+|E_FAIL|不明な致命的なエラーが発生しました。 メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。 メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>コメント  
- <xref:System.AppDomainManager>ホストのメカニズムを提供してマネージ コードにブートス トラップを作成し、それぞれの設定を制御<xref:System.AppDomain>です。 <xref:System.AppDomainManager>はそれぞれに読み込まれます<xref:System.AppDomain>ときを<xref:System.AppDomain>を作成します。 その選択した場合、CLR をホストに通知の値を設定して、アプリケーション ドメインが作成されている、`pUnkAppDomainManager`パラメーター。  
+## <a name="remarks"></a>Remarks  
+ <xref:System.AppDomainManager>により、ホストにマネージ コードをブートス トラップを作成およびそれぞれの設定を制御するメカニズムで<xref:System.AppDomain>します。 <xref:System.AppDomainManager>それぞれに読み込まれる<xref:System.AppDomain>ときを<xref:System.AppDomain>が作成されます。 選択した場合、CLR をホストに通知の値を設定して、アプリケーション ドメインが作成されたこと、`pUnkAppDomainManager`パラメーター。  
   
- 実装で、`SetAppDomainManager`メソッド、ホストを設定できますアセンブリの名前と種類のアプリケーション ドメイン マネージャー。  
+ 実装で、`SetAppDomainManager`メソッド、ホスト設定できますアセンブリの名前と種類のアプリケーション ドメイン マネージャー。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.AppDomain>  
- <xref:System.AppDomainManager>  
- [IHostControl インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.AppDomain>
+- <xref:System.AppDomainManager>
+- [IHostControl インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)

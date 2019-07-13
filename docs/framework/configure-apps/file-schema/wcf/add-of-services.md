@@ -1,15 +1,15 @@
 ---
-title: '&lt;services&gt; の &lt;add&gt;'
+title: <add> の <services>
 ms.date: 03/30/2017
 ms.assetid: 6bdc4590-aa9c-4ec8-9345-879d780cd141
-ms.openlocfilehash: 9a86b7549e0efef10cbeb16dcc427d04065e43d3
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c07b3377db4f5b434fd021b09de510c1d43ec832
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673577"
 ---
-# <a name="ltaddgt-of-ltservicesgt"></a>&lt;services&gt; の &lt;add&gt;
+# <a name="add-of-services"></a>\<追加 > の\<services >
 インスタンスの設定を指定<xref:System.Workflow.Runtime.WorkflowRuntime>ワークフロー ベースの Windows Communication Foundation (WCF) サービスをホストするためです。 この要素は <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement> 型です。  
   
  \<system.ServiceModel >  
@@ -36,7 +36,7 @@ ms.locfileid: "54145537"
   
 |属性|説明|  
 |---------------|-----------------|  
-|型|初期化するサービスのアセンブリ修飾型名を指定する文字列。 指定されたサービスは、そのコンストラクターのシグネチャに関して一定の規則に従う必要があります。 詳細については、「<xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>」を参照してください。|  
+|種類|初期化するサービスのアセンブリ修飾型名を指定する文字列。 指定されたサービスは、そのコンストラクターのシグネチャに関して一定の規則に従う必要があります。 詳細については、「<xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>」を参照してください。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -66,8 +66,9 @@ ms.locfileid: "54145537"
 </serviceBehaviors>
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>  
- <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>  
- <xref:System.Workflow.Runtime.WorkflowRuntime>  
- [ワークフロー構成ファイル](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>
+- <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>
+- <xref:System.Workflow.Runtime.WorkflowRuntime>
+- [ワークフロー構成ファイル](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))

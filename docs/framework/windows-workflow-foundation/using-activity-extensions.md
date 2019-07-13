@@ -2,27 +2,27 @@
 title: アクティビティ拡張機能の使用
 ms.date: 03/30/2017
 ms.assetid: 500eb96a-c009-4247-b6b5-b36faffdf715
-ms.openlocfilehash: 420bd25a94f67169d299bbac64dae06e15c5b0b2
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: e524f7e7127eb215be85b0c317474eee70830c2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669512"
 ---
 # <a name="using-activity-extensions"></a>アクティビティ拡張機能の使用
 アクティビティは、ワークフローで明示的にモデル化されていない追加機能の提供をホストに許可するワークフロー アプリケーション拡張機能と相互作用することができます。  ここでは、アクティビティの実行回数をカウントする拡張機能を作成および使用する方法について説明します。
 
 ### <a name="to-use-an-activity-extension-to-count-executions"></a>実行回数をカウントするアクティビティ拡張機能を使用するには
 
-1.  Visual Studio 2010 を開きます。 選択**新しい**、**プロジェクト**します。 下、 **Visual c#** ノードの **ワークフロー**します。  選択**ワークフロー コンソール アプリケーション**テンプレートの一覧から。 プロジェクトに `Extensions` という名前を付けます。 **[OK]** をクリックして、プロジェクトを作成します。
+1. Visual Studio 2010 を開きます。 選択**新しい**、**プロジェクト**します。 下、 **Visual c#** ノードの **ワークフロー**します。  選択**ワークフロー コンソール アプリケーション**テンプレートの一覧から。 プロジェクトに `Extensions` という名前を付けます。 **[OK]** をクリックして、プロジェクトを作成します。
 
-2.  追加、`using`の Program.cs ファイル内のステートメント、 **System.Collections.Generic**名前空間。
+2. 追加、`using`の Program.cs ファイル内のステートメント、 **System.Collections.Generic**名前空間。
 
     ```
     using System.Collections.Generic;
     ```
 
-3.  という名前の新しいクラスを作成、Program.cs ファイルで**ExecutionCountExtension**します。 次のコードでは、インスタンス Id を追跡するワークフロー拡張機能とその**登録**メソッドが呼び出されます。
+3. という名前の新しいクラスを作成、Program.cs ファイルで**ExecutionCountExtension**します。 次のコードでは、インスタンス Id を追跡するワークフロー拡張機能とその**登録**メソッドが呼び出されます。
 
     ```
     // This extension collects a list of workflow Ids
@@ -56,7 +56,7 @@ ms.locfileid: "48845522"
     }
     ```
 
-4.  使用するアクティビティを作成、 **ExecutionCountExtension**します。 次のコードを取得するアクティビティを定義する、 **ExecutionCountExtension**オブジェクトを実行時と呼び出しからその**登録**アクティビティの実行時のメソッド。
+4. 使用するアクティビティを作成、 **ExecutionCountExtension**します。 次のコードを取得するアクティビティを定義する、 **ExecutionCountExtension**オブジェクトを実行時と呼び出しからその**登録**アクティビティの実行時のメソッド。
 
     ```
     // Activity that consumes an extension provided by the host. If the extension is available
@@ -75,7 +75,7 @@ ms.locfileid: "48845522"
     }
     ```
 
-5.  アクティビティでは、実装、 **Main** program.cs ファイルのメソッド。 次のコードには、2 つの異なるワークフローを生成し、各ワークフローを数回実行して、拡張機能に含まれる結果のデータを表示するメソッドが含まれています。
+5. アクティビティでは、実装、 **Main** program.cs ファイルのメソッド。 次のコードには、2 つの異なるワークフローを生成し、各ワークフローを数回実行して、拡張機能に含まれる結果のデータを表示するメソッドが含まれています。
 
     ```
     class Program

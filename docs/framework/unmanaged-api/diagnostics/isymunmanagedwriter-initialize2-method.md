@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ac76ef58badcc8e443279415b7239c0b6017af3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4087bdd82041152a9946a576e0eb96bf63f177c7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427130"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777277"
 ---
 # <a name="isymunmanagedwriterinitialize2-method"></a>ISymUnmanagedWriter::Initialize2 メソッド
-このライターが関連付けられるメタデータ エミッタ インターフェイスを設定し、デバッグ シンボルが書き込まれる出力ファイル名を設定します。 このメソッドを使用して、プログラム データベース (PDB) ファイルの最終的な場所を設定することもできます。  
+このライターが関連付けられるメタデータ エミッタ インターフェイスを設定し、デバッグ シンボルが書き込まれる出力ファイル名を設定します。 このメソッドを使用して、プログラム データベース (PDB) ファイルの最後の位置を設定することもできます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Initialize2(  
     [in] IUnknown     *emitter,  
     [in] const WCHAR  *tempfilename,  
@@ -38,29 +38,29 @@ HRESULT Initialize2(
     [in] const WCHAR  *finalfilename);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `emitter`  
  [in]メタデータ エミッタ インターフェイスへのポインター。  
   
  `tempfilename`  
- [in]ポインター、`WCHAR`デバッグ シンボルの書き込み先となるファイル名を格納しています。 ファイル名を使用しないライターに対してファイル名を指定した場合、このパラメーターは無視されます。  
+ [in]ポインターを`WCHAR`デバッグ シンボルが書き込まれるファイル名を格納しています。 ファイル名を使用しないライターに対してファイル名を指定した場合、このパラメーターは無視されます。  
   
  `pIStream`  
- [in]シンボルのライターにシンボルを生成する、指定した場合、指定された<xref:System.Runtime.InteropServices.ComTypes.IStream>で指定されたファイルにではなく、`filename`パラメーター。 
-          `pIStream` パラメーターは省略可能です。  
+ [in]シンボルのライターにシンボルを出力、指定されている場合、指定された<xref:System.Runtime.InteropServices.ComTypes.IStream>で指定されたファイルではなく、`filename`パラメーター。 `pIStream` パラメーターは省略可能です。  
   
  `fFullBuild`  
- [in]`true`場合、これは、完全な再構築`false`インクリメンタル コンパイルの場合。  
+ [in]`true`場合、これは、完全な再構築します。`false`インクリメンタル コンパイルの場合。  
   
  `finalfilename`  
- [in]ポインター、 `WCHAR` PDB ファイルの最終的な場所にパス文字列はします。  
+ [in]ポインターを`WCHAR`は PDB ファイルの最終的な場所にパス文字列。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は S_OK、それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
   
-## <a name="requirements"></a>要件  
- **ヘッダー:** CorSym.idl、CorSym.h  
+## <a name="requirements"></a>必要条件  
+ **ヘッダー:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>関連項目  
- [ISymUnmanagedWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)  
- [Initialize メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize-method.md)
+## <a name="see-also"></a>関連項目
+
+- [ISymUnmanagedWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [Initialize メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize-method.md)

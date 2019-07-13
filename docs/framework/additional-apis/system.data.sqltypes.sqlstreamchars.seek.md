@@ -1,22 +1,23 @@
 ---
 title: SqlStreamChars.Seek (Int64、SeekOrigin) メソッド (System.Data.SqlTypes)
-author: douglaslMS
-ms.author: douglasl
+author: stevestein
+ms.author: sstein
 ms.date: 12/20/2018
-ms.technology:
-- dotnet-data
+ms.technology: dotnet-data
+topic_type:
+- apiref
 api_name:
 - System.Data.SqlTypes.SqlStreamChars.Seek
 api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: aab3195ec0d300a7f001f98f2d646c85be939356
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 6b69f87da9fb3829d765dc135de1f6c10765b63a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152555"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634358"
 ---
 # <a name="sqlstreamcharsseekint64-seekorigin-method"></a>SqlStreamChars.Seek (Int64、SeekOrigin) メソッド
 

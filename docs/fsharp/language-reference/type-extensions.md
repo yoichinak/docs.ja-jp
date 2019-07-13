@@ -1,13 +1,13 @@
 ---
 title: 型拡張
 description: 学習方法F#型の拡張機能により、定義済みのオブジェクト型に新しいメンバーを追加します。
-ms.date: 07/20/2018
-ms.openlocfilehash: 9c0c6247eb5b94e9f42377859026ba7b466eb2e4
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 02/08/2019
+ms.openlocfilehash: 69fb3b771b5334c5771f2ac75341b38c1dad5b90
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982606"
 ---
 # <a name="type-extensions"></a>型の拡張機能
 
@@ -101,6 +101,8 @@ type IEnumerable<'T> with
 
 任意拡張のメンバーはコンパイルされると、静的メンバーになります。このメンバーに対する最初のパラメーターとして、オブジェクト インスタンスが暗黙で渡されます。 ただし、インスタンス メンバーまたはそれらの宣言方法に従って、静的メンバーである場合に機能します。
 
+省略可能な拡張メンバーもに表示されないC#または VB のコンシューマーです。 他でのみ利用F#コード。
+
 ## <a name="generic-limitation-of-intrinsic-and-optional-type-extensions"></a>組み込みと省略可能な型の拡張機能の一般的な制限
 
 型の変数が制限されるジェネリック型の型の拡張機能を宣言することになります。 要件は、拡張機能の宣言の制約が宣言された型の制約と一致することです。
@@ -121,13 +123,13 @@ type IEnumerable<'T> with
 
 * `Sum`メンバーは、さまざまな制約に`'T`(`static member get_Zero`と`static member (+)`) よりの種類の拡張子で定義されています。
 * 変更の種類の拡張子として同じ制約が`Sum`で定義された制約に一致が不要になった`IEnumerable<'T>`します。
-* メンバーの変更を行う`member inline Sum`はエラーの種類の制約が一致しないことになります
+* 変更する`member this.Sum`に`member inline this.Sum`はエラーの種類の制約が一致しないことになります。
 
 何が必要なは、"領域で float"と、これらの種類の拡張しているかのように表示されることができますを静的メソッドです。 これは、拡張メソッドが必要になります。
 
 ## <a name="extension-methods"></a>拡張メソッド
 
-最後に、(「c# スタイル拡張メンバー」とも呼ばれます) の拡張メソッドは、クラスのプロセスのメンバーが静的メソッドとして F# で宣言できます。
+最後に、(「C# スタイル拡張メンバー」とも呼ばれます) の拡張メソッドは、クラスのプロセスのメンバーが静的メソッドとして F# で宣言できます。
 
 拡張メソッドは、型の変数を制約するジェネリック型で拡張を定義するときに役立ちます。 例:
 

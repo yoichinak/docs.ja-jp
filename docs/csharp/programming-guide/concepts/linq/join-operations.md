@@ -2,12 +2,12 @@
 title: 結合操作 (C#)
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-ms.openlocfilehash: f03d5cf14525a6d23240747c2f377348bf608782
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: db42874becaf9760b7060d7f306cc20f950f143a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47193058"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411461"
 ---
 # <a name="join-operations-c"></a>結合操作 (C#)
 2 つのデータ ソースの "*結合*" とは、あるデータ ソースのオブジェクトを、共通の属性を共有する別のデータ ソースのオブジェクトと関連付けることです。  
@@ -18,7 +18,7 @@ ms.locfileid: "47193058"
   
  次の図は、2 つのセットと、内部結合または左外部結合としてこれらのセットに含まれている要素の概念図を示しています。  
   
- ![内側/外側を示す 2 つの重なり合う円。](../../../../csharp/programming-guide/concepts/linq/media/joincircles.png "JoinCircles")  
+ ![内側&#47;外側を示す 2 つの重なり合う円。](./media/join-operations/join-method-overlapping-circles.png)  
   
 ## <a name="methods"></a>メソッド  
   
@@ -27,18 +27,18 @@ ms.locfileid: "47193058"
 |Join|キー セレクター関数に基づいて 2 つのシーケンスを結合し、値のペアを抽出します。|`join … in … on … equals …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=nameWithType>|  
 |GroupJoin|キー セレクター関数に基づいて 2 つのシーケンスを結合し、各要素について結果として得られる一致をグループ化します。|`join … in … on … equals … into …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- <xref:System.Linq>  
-- [標準クエリ演算子の概要 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
-- [匿名型](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
-- [結合およびクロス積クエリの作成](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)  
-- [join 句](../../../../csharp/language-reference/keywords/join-clause.md)  
-- [方法: 複合キーを使用して結合する](../../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)  
-- [方法: 異種ファイルのコンテンツを結合する (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)  
-- [方法: join 句の結果の順序を指定する](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)  
-- [方法: カスタム結合操作を実行する](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md)  
-- [方法: グループ化結合を実行する](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)  
-- [方法: 内部結合を実行する](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)  
-- [方法: 左外部結合を実行する](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)  
+- <xref:System.Linq>
+- [標準クエリ演算子の概要 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [匿名型](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+- [結合およびクロス積クエリの作成](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)
+- [join 句](../../../../csharp/language-reference/keywords/join-clause.md)
+- [方法: 複合キーを使用した結合](../../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)
+- [方法: 異種ファイルのコンテンツを結合する (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)
+- [方法: Join 句の結果の順序指定](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)
+- [方法: カスタム結合操作の実行](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md)
+- [方法: グループ結合の実行](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)
+- [方法: 内部結合の実行](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)
+- [方法: 左外部結合の実行](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)
 - [方法: 複数のソースからオブジェクト コレクションにデータを設定する (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)

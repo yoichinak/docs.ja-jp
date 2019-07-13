@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 21266130bd44d45d03f85cdeee9480b7a9944b55
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876931"
+---
 # <a name="contributing"></a>コントリビューション
 
 .NET ドキュメントへの貢献に関心をお寄せいただきありがとうございます。
@@ -24,7 +32,7 @@
 
 [Git と GitHub.com](https://guides.github.com/activities/hello-world/) の基本的な理解が必要です。
 
-**手順 1:** 小さな変更の場合は、この手順をスキップしてください。 新しいコンテンツを書き込んだり、既存のコンテンツを完全に改訂したりすることに興味がある場合は、自分が何をしたいかを説明する[問題](https://github.com/dotnet/docs/issues)を開きます。
+**手順 1:** 少しの変更の場合 (たとえば、入力ミスを修正する場合や、すぐに pull request を開いてドキュメント内に見つけた問題に対処する場合) は、この手順をスキップします。 新しいコンテンツを書き込んだり、既存のコンテンツを完全に改訂したりすることに興味がある場合は、自分が何をしたいかを説明する[問題](https://github.com/dotnet/docs/issues)を開きます。
 **docs** フォルダーのコンテンツはセクションで構成され、それらが目次 (TOC) に反映されます。 TOC のどこにトピックを配置するかを明確にします。 提案に対するフィードバックを得ます。
 
 - または -
@@ -57,14 +65,16 @@
 
 ### <a name="example-structure"></a>構造の例
 
-    docs
-      /about
-      /core
-        /porting
-          porting-overview.md
-          /media
-            /porting-overview
-                portability_report.png
+```
+docs
+  /about
+  /core
+    /porting
+      porting-overview.md
+      /media
+        /porting-overview
+            portability_report.png
+```
 
 **手順 4:** ご自分のブランチから `dotnet/docs/master` に Pull Request (PR) を送信します。
 
@@ -107,7 +117,7 @@ Microsoft では、リポジトリ内に存在するコードを次のように�
 
 詳細については、[サンプルの Readme](https://github.com/dotnet/samples/blob/master/README.md) を参照してください。
 
-## <a name="the-c-interactive-experience"></a>C# の対話型エクスペリエンス #
+## <a name="the-c-interactive-experience"></a>C# の対話型エクスペリエンス
 
 C# で記述された短いサンプル コードでは、`csharp-interactive` 言語タグを使用して、ブラウザーで実行される C# のサンプルを指定できます  (インライン コード サンプルでは `csharp-interactive` タグを使用し、ソースから含まれるスニペットでは `code-csharp-interactive` タグを使用します)。これらのコード サンプルでは、記事内の コード ウィンドウと出力ウィンドウが表示されます。 ユーザーがサンプルを実行すると、対話型コードの実行による出力が出力ウィンドウに表示されます。 
 
@@ -140,7 +150,7 @@ C# の対話型エクスペリエンスでは、サンプルの操作方法が�
 
 ## <a name="contributor-license-agreement"></a>貢献者使用許諾契約書
 
-ご自分の PR がマージされる前に、[.NET Foundation 貢献者使用許諾契約書 (CLA)](https://cla.dotnetfoundation.org) に署名する必要があります。 これは、.NET Foundation 内のプロジェクトに対して 1 回だけ実行する必要があります。 [貢献者使用許諾契約書 (CLA)](http://en.wikipedia.org/wiki/Contributor_License_Agreement) について詳しくは、Wikipedia を参照してください。
+ご自分の PR がマージされる前に、[.NET Foundation 貢献者使用許諾契約書 (CLA)](https://cla.dotnetfoundation.org) に署名する必要があります。 これは、.NET Foundation 内のプロジェクトに対して 1 回だけ実行する必要があります。 [貢献者使用許諾契約書 (CLA)](https://en.wikipedia.org/wiki/Contributor_License_Agreement) について詳しくは、Wikipedia を参照してください。
 
 契約書: [net-foundation-contribution-license-agreement.pdf](https://github.com/dotnet/home/blob/master/guidance/net-foundation-contribution-license-agreement.pdf)
 

@@ -16,40 +16,43 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3407fcac420b8129dd39eabf84aec84b58651944
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d71d2a5b3007d4e877900443af426a9643b29125
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62045228"
 ---
 # <a name="corthreadsafetyoptions-enumeration"></a>CorThreadSafetyOptions 列挙型
-スレッド セーフのオプションを選択するためのフラグを指定します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-typedef enum CorThreadSafetyOptions {  
-    MDThreadSafetyDefault       = 0x00000000,  
-    MDThreadSafetyOff           = 0x00000000,  
-    MDThreadSafetyOn            = 0x00000001,  
-} CorThreadSafetyOptions;  
-```  
-  
-## <a name="members"></a>メンバー  
-  
-|メンバー|説明|  
-|------------|-----------------|  
-|`MDThreadSatetyDefault`|既定値です。 `MDThreadSatetyOff` と同じ。|  
-|`MDThreadSatetyOff`|リーダー/ライター ロックを設定できないことを示します。|  
-|`MDThreadSatetyOn`|リーダー/ライター ロックを設定できることを示します。|  
-  
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
-  
- **ヘッダー:** CorHdr.h  
-  
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
-## <a name="see-also"></a>関連項目  
- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+
+スレッド セーフのオプションを選択するためのフラグを指定します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+typedef enum CorThreadSafetyOptions {
+    MDThreadSafetyDefault       = 0x00000000,
+    MDThreadSafetyOff           = 0x00000000,
+    MDThreadSafetyOn            = 0x00000001,
+} CorThreadSafetyOptions;
+```
+
+## <a name="members"></a>メンバー
+
+|メンバー|説明|
+|------------|-----------------|
+|`MDThreadSafetyDefault`|既定値です。 `MDThreadSafetyOff` と同じ。|
+|`MDThreadSafetyOff`|読み取り/書き込みロックを設定できないことを示します。|
+|`MDThreadSafetyOn`|読み取り/書き込みロックを設定できることを示します。|
+
+## <a name="requirements"></a>必要条件
+
+**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+
+**ヘッダー:** CorHdr.h
+
+**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+
+## <a name="see-also"></a>関連項目
+
+- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

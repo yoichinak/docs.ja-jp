@@ -9,24 +9,24 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
-ms.openlocfilehash: 629a08a090178ffb1df1e9905182c9f246537533
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16a28db6477ea86a8bc853fbf506cf6d6d4fa5e0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537363"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654591"
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>Windows フォームでのコントロールの使用方法の概要
-このトピックでは、Windows フォーム アプリケーションの重要な要素について説明し、コントロールを使用して Windows フォーム アプリケーションでイベントを処理する簡単な例を示します。  
+このトピックでは、Windows フォーム アプリケーションの重要な要素について説明し、コントロールを使用して Windows フォーム アプリケーションでイベントを処理する簡単な例を提供します。  
   
 ## <a name="simple-windows-forms-applications"></a>単純な Windows フォーム アプリケーション  
  少なくとも、Windows フォーム アプリケーションは、次の要素で構成されます。  
   
--   1 つまたは複数のクラスから派生する<xref:System.Windows.Forms.Form?displayProperty=nameWithType>です。  
+- 1 つまたは複数のクラスから派生した<xref:System.Windows.Forms.Form?displayProperty=nameWithType>します。  
   
--   A`Main`メソッドを呼び出す、 `static` (`shared` Visual Basic で)<xref:System.Windows.Forms.Application.Run%2A>メソッドおよびパス、<xref:System.Windows.Forms.Form>インスタンスにします。 <xref:System.Windows.Forms.Application.Run%2A>メソッドが、オペレーティング システムからアプリケーションへのメッセージを処理します。  
+- A`Main`メソッドを呼び出す、 `static` (`shared` Visual Basic で)<xref:System.Windows.Forms.Application.Run%2A>メソッドを呼び出し、<xref:System.Windows.Forms.Form>のインスタンス。 <xref:System.Windows.Forms.Application.Run%2A>メソッドは、オペレーティング システムからアプリケーションへのメッセージを処理します。  
   
- 次のコード例は、Windows フォーム アプリケーションの重要な要素を示しています。  
+ 次のコード例では、Windows フォーム アプリケーションの重要な要素を示します。  
   
 ```vb  
 Option Explicit  
@@ -74,8 +74,8 @@ public class MyForm : Form {
 }  
 ```  
   
-## <a name="using-controls-in-a-windows-forms-application"></a>Windows フォーム アプリケーションでコントロールの使用  
- 次のコード例では、Windows フォーム アプリケーションのコントロールを使用し、イベントの処理を説明する簡単なアプリケーションを示します。 フォーム上の 3 つのボタンの例で構成されます。各ボタンがクリックされたときの背景色を変更します。  
+## <a name="using-controls-in-a-windows-forms-application"></a>Windows フォーム アプリケーションでコントロールを使用します。  
+ 次のコード例では、Windows フォーム アプリケーションのコントロールを使用してし、イベントを処理する方法を説明する簡単なアプリケーションを示します。 フォームの 3 つのボタンの例で構成されます。各ボタンがクリックされたときに背景色を変更します。  
   
 ```vb  
 Option Explicit  
@@ -223,6 +223,7 @@ public class MyForm : Form {
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [.NET Framework を使用したカスタム Windows フォーム コントロールの開発](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- [Windows フォーム コントロール開発の基本概念](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)
+## <a name="see-also"></a>関連項目
+
+- [.NET Framework を使用したカスタム Windows フォーム コントロールの開発](developing-custom-windows-forms-controls.md)
+- [Windows フォーム コントロール開発の基本概念](windows-forms-control-development-basics.md)

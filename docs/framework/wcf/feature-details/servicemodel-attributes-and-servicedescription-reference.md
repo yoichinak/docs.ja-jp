@@ -2,22 +2,22 @@
 title: ServiceModel 属性および ServiceDescription 参照
 ms.date: 03/30/2017
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
-ms.openlocfilehash: cc7c36ff7a1c81227f118ee7113be8f7f9eb2e9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 022731d7d6e60d36c5f4a595edc90aaff0586a79
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33505971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747741"
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>ServiceModel 属性および ServiceDescription 参照
-*説明ツリー*型の階層は、(以降で、<xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType>クラス)、サービスのすべての側面を同時に記述します。 Windows Communication Foundation (WCF) では、説明ツリーを使用して、Web サービス記述言語 (WSDL)、XML スキーマ定義言語 (XSD)、およびクライアントを使用して、サービスに関するポリシー アサーション (メタデータ) 公開の有効なサービス ランタイムを構築接続し、サービスを使用し、さまざまな構成ファイルを表すコードと、説明ツリーの値を生成します。  
+*説明ツリー*型の階層は、(以降、<xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType>クラス) をまとめて、サービスのすべての側面がについて説明します。 Windows Communication Foundation (WCF) では、説明ツリーを使用して、Web サービス記述言語 (WSDL)、XML スキーマ定義言語 (XSD)、およびクライアントに使用できるサービスに関するポリシー アサーション (メタデータ) を公開する、有効なサービス ランタイムをビルドするには接続し、サービスを使用し、説明ツリーの値のさまざまなコードと構成ファイル表現を生成します。  
   
- ここでは、サービス コントラクトからコントラクトに関連するプロパティが取得されるしくみ、およびこれらのプロパティが実装され、説明ツリーに追加されるしくみについて説明します。 属性値が動作プロパティに変換された後、動作が説明ツリーに挿入される場合もあります。 説明ツリーの値がメタデータに変換される方法の詳細については、次を参照してください。 [ServiceDescription と WSDL 参照](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)です。  
+ ここでは、サービス コントラクトからコントラクトに関連するプロパティが取得されるしくみ、およびこれらのプロパティが実装され、説明ツリーに追加されるしくみについて説明します。 属性値が動作プロパティに変換された後、動作が説明ツリーに挿入される場合もあります。 説明ツリーの値がメタデータに変換される方法の詳細については、次を参照してください。 [ServiceDescription と WSDL 参照](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)します。  
   
 ## <a name="mapping-operations-to-the-description-tree"></a>説明ツリーへの操作のマッピング  
- WCF アプリケーションで、サービス コントラクトはインターフェイス (またはクラス) によってモデル化されている属性を使用して、操作のグループをインターフェイスまたはクラスとそのメソッドをマークします。 <xref:System.ServiceModel.ServiceHost> クラスを開くと、サービス コントラクトと実装が構成情報に反映され、構成情報とマージされて、説明ツリーに挿入されます。  
+ インターフェイス (またはクラス) によって、WCF アプリケーションでサービス コントラクトがモデル化された属性を使用して、操作のグループ化として、インターフェイスまたはクラスとそのメソッドをマークします。 <xref:System.ServiceModel.ServiceHost> クラスを開くと、サービス コントラクトと実装が構成情報に反映され、構成情報とマージされて、説明ツリーに挿入されます。  
   
- 操作のモデルの 2 種類があります。*パラメーター*モデルおよび*メッセージ コントラクト*モデル。 パラメーター モデルでは、<xref:System.ServiceModel.MessageContractAttribute?displayProperty=nameWithType> クラスによってマークされたパラメーターまたは戻り値の型を持たないマネージ メソッドを使用します。 このモデルでは、開発者が値を返すし、パラメーターのシリアル化を制御が WCF サービスとそのコントラクトの説明ツリーの設定に使用される値が生成されます。  
+ 操作モデルの 2 種類があります。*パラメーター*モデルと*メッセージ コントラクト*モデル。 パラメーター モデルでは、<xref:System.ServiceModel.MessageContractAttribute?displayProperty=nameWithType> クラスによってマークされたパラメーターまたは戻り値の型を持たないマネージド メソッドを使用します。 このモデルでは、開発者がパラメーターのシリアル化の制御し、戻り値が WCF サービスとそのコントラクトの説明ツリーを作成するために使用する値を生成します。  
   
  構成ファイルで指定されたバインディングは、<xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A?displayProperty=nameWithType> プロパティに直接読み込まれます。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "33505971"
 |---------------------------------------|-------------------------------------|  
 |CallbackContract|すべての操作の <xref:System.ServiceModel.Description.ContractDescription.CallbackContractType%2A> に追加される <xref:System.ServiceModel.Description.MessageDescription>、<xref:System.ServiceModel.Description.OperationDescription.Messages%2A>|  
 |ConfigurationName|<xref:System.ServiceModel.Description.ContractDescription.ConfigurationName%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.ContractDescription.ProtectionLevel%2A> と、場合によっては子の保護レベル。 保護レベルの階層の詳細については、次を参照してください。[について保護レベル](../../../../docs/framework/wcf/understanding-protection-level.md)です。|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.ContractDescription.ProtectionLevel%2A> と、場合によっては子の保護レベル。 保護レベルの階層の詳細については、次を参照してください。[について保護レベル](../../../../docs/framework/wcf/understanding-protection-level.md)します。|  
 |SessionMode|<xref:System.ServiceModel.Description.ContractDescription.SessionMode%2A>|  
   
 |ServiceKnownTypesAttribute 値|影響を受ける説明ツリーの値|  
@@ -48,7 +48,7 @@ ms.locfileid: "33505971"
 |IsInitiating|<xref:System.ServiceModel.Description.OperationDescription.IsInitiating%2A>|  
 |IsTerminating|<xref:System.ServiceModel.Description.OperationDescription.IsTerminating%2A>|  
 |名前|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> と、場合によっては子の保護レベル。 保護レベルの階層の詳細については、次を参照してください。[について保護レベル](../../../../docs/framework/wcf/understanding-protection-level.md)です。|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> と、場合によっては子の保護レベル。 保護レベルの階層の詳細については、次を参照してください。[について保護レベル](../../../../docs/framework/wcf/understanding-protection-level.md)します。|  
 |ReplyAction|出力メッセージまたは入力メッセージの <xref:System.ServiceModel.Description.MessageDescription.Action%2A>。コントラクトまたはコールバック コントラクトによって異なります。|  
   
 |FaultContractAttribute 値|影響を受ける説明ツリーの値|  
@@ -80,12 +80,12 @@ ms.locfileid: "33505971"
   
 |MessageHeaderAttribute 値|影響を受ける説明ツリーの値|  
 |----------------------------------|-------------------------------------|  
-|アクター|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A> 対応するヘッダーの <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|MustUnderstand|<xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A> 対応するヘッダーの <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|名前|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> 対応するヘッダーの <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|名前空間|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> 対応するヘッダーの <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> 対応するヘッダーの <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|Relay|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A> 対応するヘッダーの <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|アクター|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A> 対応するヘッダー <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|MustUnderstand|<xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A> 対応するヘッダー <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|名前|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> 対応するヘッダー <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|名前空間|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> 対応するヘッダー <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> 対応するヘッダー <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|Relay|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A> 対応するヘッダー <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
   
 |MessageBodyMemberAttribute 値|影響を受ける説明ツリーの値|  
 |--------------------------------------|-------------------------------------|  
@@ -111,7 +111,8 @@ ms.locfileid: "33505971"
 |-------------------------------------|-------------------------------------|  
 |名前|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> 対応する部分 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
   
- 説明ツリーの値がメタデータに変換される方法の詳細については、次を参照してください。 [ServiceDescription と WSDL 参照](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)です。  
+ 説明ツリーの値がメタデータに変換される方法の詳細については、次を参照してください。 [ServiceDescription と WSDL 参照](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [ServiceDescription と WSDL 参照](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)
+## <a name="see-also"></a>関連項目
+
+- [ServiceDescription と WSDL 参照](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)

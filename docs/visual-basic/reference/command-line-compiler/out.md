@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -out compiler option [Visual Basic]
 - out compiler option [Visual Basic]
 ms.assetid: 9f148c15-0909-4cb8-a2db-777f8a8b45ae
-ms.openlocfilehash: b619505f6e87efd1c3b18e1bed2862d3467984a7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5dcf9dc5cc0987e965aba7fd2b8821252e19a655
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788896"
 ---
 # <a name="-out-visual-basic"></a>-除外 (Visual Basic)
 出力ファイルの名前を指定します。  
@@ -44,7 +44,8 @@ ms.locfileid: "53152607"
 vbc t2.vb -out:t3.exe  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-ターゲット (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>関連項目
+
+- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-ターゲット (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -9,41 +9,40 @@ helpviewer_keywords:
 - UI Automation, getting control patterns
 - getting, control patterns
 ms.assetid: 006c54c9-50bf-48d9-a855-9d62eb95603a
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: d948ff2f71ff7d4335cacc0fa3815dd75af4ad45
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 64c5bae738cee5249e6c2406a2f94667ecb2931f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609907"
 ---
 # <a name="get-supported-ui-automation-control-patterns"></a>サポートされている UI オートメーション コントロール パターンの取得
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]に関する最新情報については[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)をご覧ください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
- このトピックからコントロール パターン オブジェクトを取得する方法を示しています。[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]要素。  
+ このトピックでは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要素からコントロール パターン オブジェクトを取得する方法について説明します。  
   
 ### <a name="obtain-all-control-patterns"></a>すべてのコントロール パターンの取得  
   
-1.  取得、<xref:System.Windows.Automation.AutomationElement>に関心がコントロール パターンします。  
+1. 対象とするコントロール パターンを持つ <xref:System.Windows.Automation.AutomationElement> を取得します。  
   
-2.  呼び出す<xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>要素からすべてのコントロール パターンを取得します。  
+2. 要素からすべてのコントロール パターンを取得するために、<xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A> を呼び出します。  
   
 > [!CAUTION]
->  クライアントが使用しないことを強くお勧め<xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>します。 このメソッドを呼び出すと、パフォーマンスを深刻な影響することができます<xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>の各既存のコントロール パターンを内部的にします。 可能であれば、クライアントが呼び出す必要があります<xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>の主なパターンです。  
+>  クライアントでは <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A> を使用しないことを強くお勧めします。 このメソッドは内部で既存のコントロール パターンごとに <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> を呼び出すため、パフォーマンスに重大な影響を及ぼす可能性があります。 可能であれば、クライアントでは主なパターンに対して <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> を呼び出してください。  
   
 ### <a name="obtain-a-specific-control-pattern"></a>特定のコントロール パターンの取得  
   
-1.  取得、<xref:System.Windows.Automation.AutomationElement>に関心がコントロール パターンします。  
+1. 対象とするコントロール パターンを持つ <xref:System.Windows.Automation.AutomationElement> を取得します。  
   
-2.  呼び出す<xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>または<xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A>特定のパターンを照会します。 これらのメソッドと同様に、パターンが見つからない場合は<xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>例外を発生させますと<xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A>返します`false`します。  
+2. 特定のパターンを照会するために、<xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> または <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> を呼び出します。 これらのメソッドは同様ですが、パターンが見つからない場合、<xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> では例外が発生し、<xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> では `false` が返されます。  
   
 ## <a name="example"></a>例  
- 次の例では、取得、<xref:System.Windows.Automation.AutomationElement>リスト項目を取得し、<xref:System.Windows.Automation.SelectionItemPattern>その要素から。  
+ 次の例では、リスト項目の <xref:System.Windows.Automation.AutomationElement> を検索し、その要素から <xref:System.Windows.Automation.SelectionItemPattern> を取得します。  
   
  [!code-csharp[UIAClient_snip#103](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#103)]
  [!code-vb[UIAClient_snip#103](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#103)]  
   
-## <a name="see-also"></a>関連項目  
- [クライアントの UI オートメーション コントロール パターン](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+## <a name="see-also"></a>関連項目
+
+- [クライアントの UI オートメーション コントロール パターン](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)

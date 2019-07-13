@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: cbe1b32fa40e509f620845866c7a584e37f49a80
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774221"
+---
 ### <a name="targetframeworkname-for-default-app-domain-no-longer-defaults-to-null-if-not-set"></a>既定のアプリケーション ドメインの TargetFrameworkName は、設定されなかった場合、既定で null に設定されなくなった
 
 |   |   |
@@ -8,4 +16,3 @@
 |Version|4.6|
 |型|ランタイム|
 |影響を受ける API|<ul><li><xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=nameWithType></li></ul>|
-

@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.PeerNodeAuthenticationFailure
 ms.date: 03/30/2017
 ms.assetid: 0b50f782-ca06-4a82-aa7f-71f78ddc5177
-ms.openlocfilehash: 633f497950ab14d7715537eed8f5cc80e7a350a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 315122914ebcb3e8e4d72c8d976026a126306168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33479854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949891"
 ---
 # <a name="systemservicemodelchannelspeernodeauthenticationfailure"></a>System.ServiceModel.Channels.PeerNodeAuthenticationFailure
 潜在的な近隣ノードとのセキュリティ ハンドシェイクに失敗しました。  
@@ -20,8 +20,9 @@ ms.locfileid: "33479854"
 ## <a name="troubleshooting"></a>トラブルシューティング  
  すべての近隣ノードに適切なセキュリティ資格情報があることを確認します。  
   
-## <a name="see-also"></a>関連項目  
- [ピア チャネルのセキュリティ](../../../../../docs/framework/wcf/feature-details/peer-channel-security.md)  
- [トレース](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [トレースを使用したアプリケーションのトラブルシューティング](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [管理と診断](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>関連項目
+
+- [ピア チャネルのセキュリティ](../../../../../docs/framework/wcf/feature-details/peer-channel-security.md)
+- [トレース](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [トレースを使用したアプリケーションのトラブルシューティング](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [管理と診断](../../../../../docs/framework/wcf/diagnostics/index.md)

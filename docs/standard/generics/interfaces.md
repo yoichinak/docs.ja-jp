@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6c151798c807206cc7f4b2fbeb21e75e9142379
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9570578e8ae4397f060805b891f86d7d4f273cd4
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47234680"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487045"
 ---
 # <a name="generic-interfaces"></a>ジェネリック インターフェイス
 このトピックでは、ジェネリック型のファミリ間に共通する機能を提供するジェネリック インターフェイスについて概説します。  
@@ -24,10 +24,10 @@ ms.locfileid: "47234680"
  ジェネリック インターフェイスは、順序付け比較や等価比較、およびジェネリック コレクション型で共有される機能のために、非ジェネリック インターフェイスに対応するタイプ セーフな機能を提供します。  
   
 > [!NOTE]
->  [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降では、いくつかのジェネリック インターフェイスの型パラメーターが共変または反変としてマークされ、それらのインターフェイスを実装する型をより柔軟に割り当てたり使用したりできます。 「 [共変性と反変性](../../../docs/standard/generics/covariance-and-contravariance.md)を参照してください。  
+>  .NET Framework 4 以降では、いくつかのジェネリック インターフェイスの型パラメーターが共変または反変としてマークされ、それらのインターフェイスを実装する型をより柔軟に割り当てたり使用したりできます。 「 [共変性と反変性](../../../docs/standard/generics/covariance-and-contravariance.md)を参照してください。  
   
 ### <a name="equality-and-ordering-comparisons"></a>等価比較と順序付け比較  
- <xref:System> 名前空間で、<xref:System.IComparable%601?displayProperty=nameWithType> と <xref:System.IEquatable%601?displayProperty=nameWithType> ジェネリック インターフェイスは、対応する非ジェネリック インターフェイスと同じように、順序付け比較と等価比較の方法をそれぞれ定義します。 型は、そのような比較を実行する機能を提供するために、これらのインターフェイスを実装します。  
+ <xref:System> 名前空間で、<xref:System.IComparable%601?displayProperty=nameWithType> と <xref:System.IEquatable%601?displayProperty=nameWithType> ジェネリック インターフェイスは、対応する非ジェネリック インターフェイスと同じように、順序付け比較と等価比較の方法をそれぞれ定義します。 型は、そのような比較の実施能力を提供するために、これらのインターフェイスを実装します。  
   
  <xref:System.Collections.Generic> 名前空間で、<xref:System.Collections.Generic.IComparer%601> と <xref:System.Collections.Generic.IEqualityComparer%601> ジェネリック インターフェイスは、<xref:System.IComparable%601?displayProperty=nameWithType> や <xref:System.IEquatable%601?displayProperty=nameWithType> ジェネリック インターフェイスを実装しない型のために、順序付け比較または等価比較を定義する方法を提供します。また、実装する型のために、それらの関係を再定義する方法も提供します。 これらのインターフェイスは、多くのジェネリック コレクション クラスのメソッドやコンストラクターで使用されます。 たとえば、ジェネリック <xref:System.Collections.Generic.IComparer%601> オブジェクトを <xref:System.Collections.Generic.SortedDictionary%602> クラスのコンストラクターに渡して、ジェネリック <xref:System.IComparable%601?displayProperty=nameWithType> を実装しない型の並べ替え順序を指定することができます。 ジェネリック <xref:System.Collections.Generic.IComparer%601> 実装を使用して配列やリストを並べ替えるための、<xref:System.Array.Sort%2A?displayProperty=nameWithType> ジェネリック静的メソッドと <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> インスタンス メソッドのオーバーロードがあります。  
   
@@ -44,9 +44,9 @@ ms.locfileid: "47234680"
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Collections.Generic?displayProperty=nameWithType>  
-- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
-- [ジェネリック](../../../docs/standard/generics/index.md)  
-- [.NET Framework のジェネリック コレクション](../../../docs/standard/generics/collections.md)  
-- [配列とリストの操作に使用する汎用デリゲート](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
+- <xref:System.Collections.Generic?displayProperty=nameWithType>
+- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>
+- [ジェネリック](../../../docs/standard/generics/index.md)
+- [.NET Framework のジェネリック コレクション](../../../docs/standard/generics/collections.md)
+- [配列とリストの操作に使用する汎用デリゲート](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)
 - [共変性と反変性](../../../docs/standard/generics/covariance-and-contravariance.md)

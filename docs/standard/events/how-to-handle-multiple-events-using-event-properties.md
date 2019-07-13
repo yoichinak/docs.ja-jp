@@ -1,5 +1,5 @@
 ---
-title: '方法 : イベント プロパティを使用して複数のイベントを処理する'
+title: '方法: イベント プロパティを使用して複数のイベントを処理する'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e16270fd900c1c786cfd74f484455481d91e5b52
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: d9f911f3a2783ec538ef628e10d5c1a4f9b06d0f
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873295"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469478"
 ---
-# <a name="how-to-handle-multiple-events-using-event-properties"></a>方法 : イベント プロパティを使用して複数のイベントを処理する
+# <a name="how-to-handle-multiple-events-using-event-properties"></a>方法: イベント プロパティを使用して複数のイベントを処理する
 イベント プロパティを使用するには、イベントを発生させるクラスにイベント プロパティを定義し、そのイベントを処理するクラスにイベント プロパティのデリゲートを設定します。 1 つのクラスにイベント プロパティを複数実装するには、そのクラス内部に、各イベント用に定義されたデリゲートを格納および保持する必要があります。 通常は、イベント キーをインデックスとするデリゲート コレクションを実装することによってこれを実現します。  
   
  イベントのデリゲートを格納するには、<xref:System.ComponentModel.EventHandlerList> クラスを使用するか、独自のコレクションを実装します。 コレクション クラスには、イベント キーに基づいてイベント ハンドラー デリゲートに対する設定、アクセス、および取得を行うメソッドを用意する必要があります。 たとえば、<xref:System.Collections.Hashtable> クラスを使用したり、<xref:System.Collections.DictionaryBase> クラスからカスタム クラスを派生させたりできます。 デリゲート コレクションの実装の詳細をクラスの外部に公開する必要はありません。  
@@ -30,21 +30,21 @@ ms.locfileid: "48873295"
   
 ### <a name="to-handle-multiple-events-using-event-properties"></a>イベント プロパティを使用して複数のイベントを処理するには  
   
-1.  イベントを発生させるクラスにデリゲート コレクションを定義します。  
+1. イベントを発生させるクラスにデリゲート コレクションを定義します。  
   
-2.  各イベントについて、キーを定義します。  
+2. 各イベントについて、キーを定義します。  
   
-3.  イベントを発生させるクラスにイベント プロパティを定義します。  
+3. イベントを発生させるクラスにイベント プロパティを定義します。  
   
-4.  デリゲート コレクションを使用して、各イベント プロパティに対する add アクセサーおよび remove アクセサーを実装します。  
+4. デリゲート コレクションを使用して、各イベント プロパティに対する add アクセサーおよび remove アクセサーを実装します。  
   
-5.  パブリック イベント プロパティを使用して、イベントを処理するクラスのイベント ハンドラー デリゲートの追加と削除を行います。  
+5. パブリック イベント プロパティを使用して、イベントを処理するクラスのイベント ハンドラー デリゲートの追加と削除を行います。  
   
 ## <a name="example"></a>例  
  各イベントのデリゲートを格納するために `MouseDown` を使用して、`MouseUp` イベント プロパティおよび <xref:System.ComponentModel.EventHandlerList> イベント プロパティを実装する C# コードの例を次に示します。 イベント プロパティ コンストラクトのキーワードは、太字で示されています。  
   
 > [!NOTE]
->  イベント プロパティは、[!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] ではサポートされていません。  
+>  イベント プロパティは Visual Basic ではサポートされていません。  
   
  [!code-cpp[Conceptual.Events.Other#31](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.events.other/cpp/example3.cpp#31)]
  [!code-csharp[Conceptual.Events.Other#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.events.other/cs/example3.cs#31)]
@@ -52,7 +52,7 @@ ms.locfileid: "48873295"
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>  
-- [イベント](../../../docs/standard/events/index.md)  
-- <xref:System.Web.UI.Control.Events%2A>  
+- <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>
+- [イベント](../../../docs/standard/events/index.md)
+- <xref:System.Web.UI.Control.Events%2A>
 - [方法: カスタム イベントを宣言してメモリを節約する](~/docs/visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)

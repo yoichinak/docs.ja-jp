@@ -1,22 +1,22 @@
 ---
-title: '&lt;sslStreamSecurity&gt;'
+title: <sslStreamSecurity>
 ms.date: 03/30/2017
 ms.assetid: 430a378b-a742-4858-8a12-9f9b235fd627
-ms.openlocfilehash: b081a577280f4f2a52ef3b5ece76f519f9701faa
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 67ec30b2bf3c322b949700789ce942e4281b77a4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757990"
 ---
-# <a name="ltsslstreamsecuritygt"></a>&lt;sslStreamSecurity&gt;
-SSL ストリームを使用してチャネル セキュリティをサポートするカスタム バインド要素を表します。  
+# <a name="sslstreamsecurity"></a>\<sslStreamSecurity>
+SSL ストリームを使用するチャネル セキュリティをサポートするカスタム バインディング要素を表します。  
   
  \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
 \<binding>  
-\<sslStreamSecurity >  
+\<sslStreamSecurity>  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,11 +44,12 @@ SSL ストリームを使用してチャネル セキュリティをサポート
 |-------------|-----------------|  
 |[\<binding>](../../../../../docs/framework/misc/binding.md)|カスタム バインドのすべてのバインド機能を定義します。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
- [バインディング](../../../../../docs/framework/wcf/bindings.md)  
- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>
+- [バインディング](../../../../../docs/framework/wcf/bindings.md)
+- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

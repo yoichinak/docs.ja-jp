@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ad1cbd9da3a6b55dbb23eaf97c10e6090077fd8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 12415c6d461f3c8040aaa407edf9567633c5b108
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198485"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591572"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (証明書マネージャー ツール)
 証明書マネージャー ツール (Certmgr.exe) は、証明書、証明書信頼リスト (CTL: Certificate Trust List)、および証明書失効リスト (CRL: Certificate Revocation List) を管理します。  
@@ -28,9 +28,9 @@ ms.locfileid: "50198485"
  証明書マネージャーは Visual Studio と共に自動的にインストールされます。 ツールを開始するには、[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)を使用します。  
   
 > [!NOTE]
->  証明書マネージャー ツール (Certmgr.exe) はコマンド ライン ユーティリティですが、証明書 (Certmgr.msc) は Microsoft 管理コンソール (MMC: Microsoft Management Console) スナップインです。 通常、Certmgr.msc は Windows のシステム ディレクトリにあるので、コマンド ラインで「`certmgr`」と入力すると、Visual Studio コマンド プロンプトを開いていた場合でも証明書 MMC スナップインが読み込まれることがあります。 これは、PATH 環境変数で、スナップインのパスが証明書マネージャー ツールのパスよりも前に指定されているためです。 この問題が発生した場合は、実行可能ファイルのパスを指定して Certmgr.exe コマンドを実行できます。  
+>  証明書マネージャー ツール (Certmgr.exe) はコマンド ライン ユーティリティですが、証明書 (Certmgr.msc) は Microsoft 管理コンソール (MMC: Microsoft Management Console) スナップインです。 通常、Certmgr.msc は Windows のシステム ディレクトリにあるので、コマンド ラインで「`certmgr`」と入力すると、Visual Studio 用開発者コマンド プロンプトを開いていた場合でも証明書 MMC スナップインが読み込まれることがあります。 これは、PATH 環境変数で、スナップインのパスが証明書マネージャー ツールのパスよりも前に指定されているためです。 この問題が発生した場合は、実行可能ファイルのパスを指定して Certmgr.exe コマンドを実行できます。  
   
- このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、開発者コマンド プロンプト (または、Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
+ このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
   
  X.509 証明書の概要については、「[証明書の使用](../../../docs/framework/wcf/feature-details/working-with-certificates.md)」を参照してください。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "50198485"
 [/s[/r registryLocation]] [destinationStorename]  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
   
 |引数|説明|  
 |--------------|-----------------|  
@@ -54,7 +54,7 @@ ms.locfileid: "50198485"
 |オプション|説明|  
 |------------|-----------------|  
 |**/add**|証明書、CTL、および CRL を証明書ストアに追加します。|  
-|**/all**|**/add** を指定して使用した場合は、すべてのエントリを追加します。 **/del** を指定して使用した場合は、すべてのエントリを削除します。/add、**/del** のいずれのオプションも指定せずに使用した場合は、すべてのエントリを表示します。 **/all** オプションは、**/put** オプションと共に指定できません。|  
+|**/all**|**/add** を指定して使用した場合は、すべてのエントリを追加します。 **/del** を指定して使用した場合は、すべてのエントリを削除します。**/add**、**/del** のいずれのオプションも指定せずに使用した場合は、すべてのエントリを表示します。 **/all** オプションは、**/put** オプションと共に指定できません。|  
 |**/c**|**/add** を指定して使用した場合は、証明書を追加します。 **/del** を指定して使用した場合は、証明書を削除します。**/put** を指定して使用した場合は、証明書を保存します。 **/add**、**/del**、**/put** のいずれのオプションも指定せずに使用した場合は、証明書を表示します。|  
 |**/CRL**|**/add** を指定して使用した場合は、CRL を追加します。 **/del** を指定して使用した場合は、CRL を削除します。**/put** を指定して使用した場合は、CRL を保存します。 **/add**、**/del**、**/put** のいずれのオプションも指定せずに使用した場合は、CRL を表示します。|  
 |**/CTL**|**/add** を指定して使用した場合は、CTL を追加します。 **/del** を指定して使用した場合は、CTL を削除します。**/put** を指定して使用した場合は、CTL を保存します。 **/add**、**/del**、**/put** のいずれのオプションも指定せずに使用した場合は、CTL を表示します。|  
@@ -72,16 +72,16 @@ ms.locfileid: "50198485"
 |**/7**|出力証明書ストアを PKCS #7 オブジェクトとして保存します。|  
 |**/?**|このツールのコマンド構文とオプションを表示します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  Certmgr.exe は次の基本的な機能を実行します。  
   
--   証明書、CTL、および CRL をコンソールに表示します。  
+- 証明書、CTL、および CRL をコンソールに表示します。  
   
--   証明書、CTL、および CRL を証明書ストアに追加します。  
+- 証明書、CTL、および CRL を証明書ストアに追加します。  
   
--   証明書、CTL、および CRL を証明書ストアから削除します。  
+- 証明書、CTL、および CRL を証明書ストアから削除します。  
   
--   証明書ストアに含まれている X.509 証明書、CTL、または CRL をファイルに保存します。  
+- 証明書ストアに含まれている X.509 証明書、CTL、または CRL をファイルに保存します。  
   
  Certmgr.exe は、**StoreFile** とシステム ストアという 2 つの種類の証明書ストアに対して機能します。 証明書ストアの種類を指定する必要はありません。Certmgr.exe がストアの種類を識別し、適切な操作を実行します。  
   
@@ -137,7 +137,8 @@ certmgr /del /all /ctl /s my newStore.str
 certmgr /put /c /s my newFile  
 ```  
   
-## <a name="see-also"></a>参照  
- [ツール](../../../docs/framework/tools/index.md)  
- [Makecert.exe (証明書作成ツール)](/windows/desktop/SecCrypto/makecert)  
- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>関連項目
+
+- [ツール](../../../docs/framework/tools/index.md)
+- [Makecert.exe (証明書作成ツール)](/windows/desktop/SecCrypto/makecert)
+- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

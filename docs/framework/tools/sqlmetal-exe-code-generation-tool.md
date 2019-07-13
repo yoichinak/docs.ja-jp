@@ -9,28 +9,28 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: 94ed6328857f6e77cea150d69719322d3aaaea69
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d2ee9537df540936e0a5ec448e6aaddbbbc162b1
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002893"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610546"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (コード生成ツール)
-SqlMetal コマンド ライン ツールは、 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] の [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]コンポーネント用のコードとマッピングを生成します。 このトピックで後述するオプションを適用することにより、次のようなアクションを SqlMetal で実行できます。  
+SqlMetal コマンドライン ツールは、.NET Framework の [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] コンポーネント用のコードとマッピングを生成します。 このトピックで後述するオプションを適用することにより、次のようなアクションを SqlMetal で実行できます。  
   
--   データベースから、ソース コードとマッピング属性またはマッピング ファイルを生成する。  
+- データベースから、ソース コードとマッピング属性またはマッピング ファイルを生成する。  
   
--   データベースから、カスタマイズ用の中間的なデータベース マークアップ言語 (.dbml) ファイルを生成する。  
+- データベースから、カスタマイズ用の中間的なデータベース マークアップ言語 (.dbml) ファイルを生成する。  
   
--   .dbml ファイルから、コードとマッピング属性またはマッピング ファイルを生成する。  
+- .dbml ファイルから、コードとマッピング属性またはマッピング ファイルを生成する。  
   
  このツールは、Visual Studio と共に自動的にインストールされます。 既定では、このファイルは `drive`:\Program Files\Microsoft SDKs\Windows\v`n.nn`\bin にあります。 Visual Studio をインストールしない場合は、 [Windows SDK](https://go.microsoft.com/fwlink/?LinkId=142225)をダウンロードすることによって SQLMetal ファイルを入手することもできます。  
   
 > [!NOTE]
 >  Visual Studio を使用している開発者は、 [!INCLUDE[vs_ordesigner_long](../../../includes/vs-ordesigner-long-md.md)] を使ってエンティティ クラスを生成することもできます。 コマンド ライン方式は、大きなデータベースにも適切に対応できます。 SqlMetal はコマンド ライン ツールであるため、ビルド プロセスでこれを使用できます。  
   
- このツールを実行するには、開発者コマンド プロンプト (または、Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。コマンド プロンプトで、次のように入力します。  
+ このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。コマンド プロンプトで、次のように入力します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,10 +47,10 @@ sqlmetal [options] [<input file>]
 |------------|-----------------|  
 |**/server:** *\<name>*|データベース サーバーの名前を指定します。|  
 |**/database:** *\<name>*|サーバー上のデータベース カタログを指定します。|  
-|**/user:** *\<name>*|ログオン ユーザー ID を指定します。既定値は、Windows 認証を使用します。|  
-|**/password:** *\<password>*|ログオン パスワードを指定します。 既定値は、Windows 認証を使用します。|  
+|**/user:** *\<name>*|ログオン ユーザー ID を指定します。既定値:Windows 認証の使用。|  
+|**/password:** *\<password>*|ログオン パスワードを指定します。 既定値:Windows 認証の使用。|  
 |**/conn:** *\<connection string>*|データベース接続文字列を指定します。 **/server**、 **/database**、 **/user**、または **/password** オプションと共に使用することはできません。<br /><br /> 接続文字列にファイル名は含めないでください。 代わりに、コマンド ラインにファイル名を入力ファイルとして追加します。 たとえば、 **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"** というコマンド ラインは、入力ファイルとして "c:\northwnd.mdf" を指定します。|  
-|**/timeout:** *\<seconds>*|SqlMetal がデータベースにアクセスする際のタイムアウト値を指定します。 既定値は 0 (時間制限なし) です。|  
+|**/timeout:** *\<seconds>*|SqlMetal がデータベースにアクセスする際のタイムアウト値を指定します。 既定値:0 (時間制限なし)。|  
   
  **抽出オプション**  
   
@@ -72,25 +72,25 @@ sqlmetal [options] [<input file>]
   
 |オプション|説明|  
 |------------|-----------------|  
-|**/language:** *\<language>*|ソース コードの言語を指定します。<br /><br /> Valid *\<language>*: vb, csharp.<br /><br /> 既定値は、コード ファイル名の拡張子から派生します。|  
+|**/language:** *\<language>*|ソース コードの言語を指定します。<br /><br /> Valid *\<language>* : vb, csharp.<br /><br /> 既定値:コード ファイル名の拡張子から派生します。|  
 |**/namespace:** *\<name>*|生成されるコードの名前空間を指定します。 既定値は、名前空間なしです。|  
-|**/context:** *\<type>*|データ コンテキスト クラスの名前を指定します。 既定値は、データベース名から派生します。|  
-|**/entitybase:** *\<type>*|生成されるコード内のエンティティ クラスの基本クラスを指定します。 既定値は、エンティティの基本クラスなしです。|  
+|**/context:** *\<type>*|データ コンテキスト クラスの名前を指定します。 既定値:データベース名から派生します。|  
+|**/entitybase:** *\<type>*|生成されるコード内のエンティティ クラスの基本クラスを指定します。 既定値:エンティティの基本クラスなしです。|  
 |**/pluralize**|クラスとメンバーの名前を自動的に複数化または単数化します。<br /><br /> このオプションは、米国英語バージョンでのみ使用できます。|  
-|**/serialization:** *\<option>*|シリアル化可能なクラスを生成します。<br /><br /> Valid *\<option>*: Non、Unidirectional。 既定値は None です。<br /><br /> 詳細については、「[Serialization](../../../docs/framework/data/adonet/sql/linq/serialization.md)」 (シリアル化) を参照してください。|  
+|**/serialization:** *\<option>*|シリアル化可能なクラスを生成します。<br /><br /> 有効な *\<オプション>* :None と Unidirectional。 既定値:なし。<br /><br /> 詳細については、「[Serialization](../../../docs/framework/data/adonet/sql/linq/serialization.md)」 (シリアル化) を参照してください。|  
   
  **入力ファイル**  
   
 |オプション|説明|  
 |------------|-----------------|  
-|**\<入力ファイル>**|SQL Server Express .mdf ファイル、 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] .sdf ファイル、または .dbml 中間ファイルを指定します。|  
+|**\<入力ファイル>**|SQL Server Express .mdf ファイル、SQL Server Compact 3.5 .sdf ファイル、または .dbml 中間ファイルを指定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  SqlMetal の実際の機能には、次の 2 つの段階が含まれています。  
   
--   データベースのメタデータを .dbml ファイルに抽出する。  
+- データベースのメタデータを .dbml ファイルに抽出する。  
   
--   コード出力ファイルを生成する。  
+- コード出力ファイルを生成する。  
   
      適切なコマンド ライン オプションを使用することで、Visual Basic または C# ソース コードを生成するか、XML マッピング ファイルを生成できます。  
   
@@ -98,11 +98,11 @@ sqlmetal [options] [<input file>]
   
  **/server** を指定しない場合、 **localhost/sqlexpress** と見なされます。  
   
- 次の条件が少なくとも 1 つ満たされる場合、[!INCLUDE[sqprsqext](../../../includes/sqprsqext-md.md)] は例外をスローします。  
+ Microsoft SQL Server 2005 は、次の条件が少なくとも 1 つ満たされる場合に例外をスローします。  
   
--   自身を呼び出すストアド プロシージャを SqlMetal が抽出しようとした。  
+- 自身を呼び出すストアド プロシージャを SqlMetal が抽出しようとした。  
   
--   ストアド プロシージャ、関数、またはビューの入れ子レベルが 32 を超える。  
+- ストアド プロシージャ、関数、またはビューの入れ子レベルが 32 を超える。  
   
      SqlMetal はこの例外をキャッチして、それを警告として報告します。  
   
@@ -132,7 +132,8 @@ sqlmetal [options] [<input file>]
 > [!NOTE]
 >  サンプル データベース Northwind で **/pluralize** オプションを使用する場合には、注意を必要とする動作があります。 SqlMetal がテーブルのために行型の名前を生成するとき、テーブル名は単数形です。 テーブルに関する <xref:System.Data.Linq.DataContext> プロパティを生成するときには、テーブル名は複数形です。 偶然にも、サンプル データベース Northwind 内のテーブルには既に複数形が使われています。 このため、この部分はうまく機能しません。 データベース テーブルの名前は単数形にするのが一般的ですが、.NET では、コレクションの名前を複数形にすることも一般的です。  
   
-## <a name="see-also"></a>参照  
- [方法: Visual Basic または C# でオブジェクト モデルを生成する](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)  
- [LINQ to SQL でのコード生成](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
- [外部マップ](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+## <a name="see-also"></a>関連項目
+
+- [方法: Visual Basic または C# でオブジェクト モデルを生成する](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [LINQ to SQL でのコード生成](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
+- [外部マップ](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)

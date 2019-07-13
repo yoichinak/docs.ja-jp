@@ -17,45 +17,46 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a7b21179faec0b6f37b8084c9ee8a0bfd327193e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 994f6668de3040cc9f2381356d6db06c18c9e984
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443565"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745885"
 ---
 # <a name="iceegentruncatesection-method"></a>ICeeGen::TruncateSection メソッド
-指定された長さで指定したコードのセクションを切り捨てます。  
+指定された長さでは、指定したコードのセクションを切り捨てます。  
   
- このメソッドは、古いは使用できません。  
+ このメソッドは廃止され、使用する必要があります。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT TruncateSection (  
     [in]  HCEESECTION     section,  
     [in]  ULONG           len  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `section`  
- [in]切り捨てを行うためのセクションです。  
+ [in]切り捨てるセクション。  
   
  `len`  
- [in]セクションを切り捨てるに使用する、バイト単位の長さ。  
+ [in]セクションの切り捨てに使用する、バイト単位の長さ。  
   
-## <a name="remarks"></a>コメント  
- 呼び出す`TruncateSection`他の方法で処理されない特別なセクションの要件がある場合にのみです。  
+## <a name="remarks"></a>Remarks  
+ 呼び出す`TruncateSection`別の方法で処理されない特別なセクションの要件がある場合にのみです。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
  **ライブラリ:** MsCorEE.dll にリソースとして使用  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICeeGen インターフェイス](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [ICeeGen インターフェイス](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

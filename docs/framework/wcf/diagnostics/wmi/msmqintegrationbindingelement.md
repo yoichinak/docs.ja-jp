@@ -2,12 +2,12 @@
 title: MsmqIntegrationBindingElement
 ms.date: 03/30/2017
 ms.assetid: eaaa7651-e6e5-4fae-9dad-c1867d38b586
-ms.openlocfilehash: ff8cc5797c25680d257c8d142425538c75dbf044
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 12d910a0b3b4931c869b9e209912f2f0c96130f7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61963333"
 ---
 # <a name="msmqintegrationbindingelement"></a>MsmqIntegrationBindingElement
 MsmqIntegrationBindingElement  
@@ -30,15 +30,16 @@ class MsmqIntegrationBindingElement : MsmqBindingElementBase
 ### <a name="serializationformat"></a>SerializationFormat  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  メッセージをシリアル化するためにバインディングが使用する形式  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
-|Namespace|root\ServiceModel で定義|  
+|名前空間|root\ServiceModel で定義|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>

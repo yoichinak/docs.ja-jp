@@ -1,15 +1,15 @@
 ---
-title: '&lt;allowAccounts&gt;'
+title: <allowAccounts>
 ms.date: 03/30/2017
 ms.assetid: 166923a9-a8ac-478f-92f9-529d9667f3a6
-ms.openlocfilehash: 61310d530cfec2862fb64155777cd0e88132f748
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: f9def3004b116afdc629de136cdfe0b0eb6e75c2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673538"
 ---
-# <a name="ltallowaccountsgt"></a>&lt;allowAccounts&gt;
+# <a name="allowaccounts"></a>\<allowAccounts>
 ユーザーがプロセスのアカウントをホストする Windows Communication Foundation (WCF) サービス、および共有サービスへの接続アクセスが許可を指定する構成要素のコレクションを含みます。  
   
  \<system.serviceModel.activation>  
@@ -40,8 +40,9 @@ ms.locfileid: "54145940"
 |-------------|-----------------|  
 |[\<net.pipe >](../../../../../docs/framework/configure-apps/file-schema/wcf/net-pipe.md)または[ \<net.tcp >](../../../../../docs/framework/configure-apps/file-schema/wcf/net-tcp.md)|Net Pipe または TCP 共有サービスの構成設定を指定します。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Activation.Configuration.NetTcpSection.AllowAccounts%2A>  
- <xref:System.ServiceModel.Activation.Configuration.NetPipeSection.AllowAccounts%2A>  
- <xref:System.ServiceModel.Activation.Configuration.SecurityIdentifierElementCollection>  
- <xref:System.ServiceModel.Activation.Configuration.SecurityIdentifierElement>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Activation.Configuration.NetTcpSection.AllowAccounts%2A>
+- <xref:System.ServiceModel.Activation.Configuration.NetPipeSection.AllowAccounts%2A>
+- <xref:System.ServiceModel.Activation.Configuration.SecurityIdentifierElementCollection>
+- <xref:System.ServiceModel.Activation.Configuration.SecurityIdentifierElement>

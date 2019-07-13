@@ -1,20 +1,20 @@
 ---
-title: '&lt;udpAnnouncementEndpoint&gt; の &lt;udpTransportSettings&gt;'
+title: <udpTransportSettings> の <udpAnnouncementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: a7ddff1a-5eed-4bbc-8580-b95ef8890e1f
-ms.openlocfilehash: ae640f2e2035f89cb33aecf7e5225cf4fbe3fb20
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 901b7e1429c3afc19e9b609026dc632730c35024
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788168"
 ---
-# <a name="ltudptransportsettingsgt-of-ltudpannouncementendpointgt"></a>&lt;udpAnnouncementEndpoint&gt; の &lt;udpTransportSettings&gt;
-この構成要素の UDP トランスポート設定を公開する[ \<udpAnnoucementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpannoucementendpoint.md)します。  
+# <a name="udptransportsettings-of-udpannouncementendpoint"></a>\<udpTransportSettings > の\<udpAnnouncementEndpoint >
+この構成要素の UDP トランスポート設定を公開する[ \<udpAnnouncementEndpoint >](udpannouncementendpoint.md)します。  
   
 \<system.ServiceModel >  
-\<standardEndpoints >  
-\<udpAnnouncementEndpoint >  
+\<standardEndpoints>  
+\<udpAnnouncementEndpoint>  
   
 ## <a name="syntax"></a>構文  
   
@@ -62,7 +62,8 @@ ms.locfileid: "54147500"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<udpAnnoucementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpannoucementendpoint.md)|固定アナウンス コントラクトと UDP トランスポート バインディングを持つ標準エンドポイント。|  
+|[\<udpAnnouncementEndpoint>](udpannouncementendpoint.md)|固定アナウンス コントラクトと UDP トランスポート バインディングを持つ標準エンドポイント。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Discovery.UdpTransportSettings>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Discovery.UdpTransportSettings>

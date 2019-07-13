@@ -1,13 +1,13 @@
 ---
 title: リテラル
 description: リテラルの型について説明します、F#プログラミング言語。
-ms.date: 05/16/2016
-ms.openlocfilehash: dfc02f0ff8ac3ad8600be5f3b6c9359f02bd25be
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 06/28/2019
+ms.openlocfilehash: 0c9ced0b505817a161ca39c6c9f853f94cedf410
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612453"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610156"
 ---
 # <a name="literals"></a>リテラル
 
@@ -28,6 +28,7 @@ F# のリテラル型を次の表に示します。 16 進表記で桁を表す�
 |uint16|符号なし 16 ビット自然数|us|`86us`|
 |int<br /><br />int32|符号付き 32 ビット整数|l または none|`86`<br /><br />`86l`|
 |uint<br /><br />uint32|符号なし 32 ビット自然数|u または ul|`86u`<br /><br />`86ul`|
+|nativeint|符号付きの自然数へのネイティブ ポインター|n|`123n`|
 |unativeint|符号なし自然数としてのネイティブ ポインター|un|`0x00002D3Fun`|
 |int64|符号付き 64 ビット整数|L|`86L`|
 |uint64|符号なし 64 ビット自然数|UL|`86UL`|
@@ -43,46 +44,47 @@ F# のリテラル型を次の表に示します。 16 進表記で桁を表す�
 |byte[]|ASCII 文字列|B|`"text"B`|
 |String または byte[]|逐語的文字列|@ プリフィックス|`@"\\server\share"` (Unicode)<br /><br />`@"\\server\share"B` (ASCII)|
 
-## <a name="remarks"></a>Remarks
-
-Unicode 文字列に明示的なエンコードを使用して指定することができますを含めることができます`\u`の後に 16 ビットの 16 進コードまたは utf-32 エンコーディングを使用して指定できる`\U`後に、Unicode を表す 32 ビットの 16 進コードサロゲート ペア。
-
-F# 3.1 を使用できます、`+`サインインすると、文字列リテラルを結合します。 ビットごとのこともできます。 または (`|||`) 列挙型フラグを結合する演算子。 たとえば、F# 3.1 では次のようなコードが有効です。
-
-```fsharp
-[<Literal>]
-let literal1 = "a" + "b"
-
-[<Literal>]
-let fileLocation =   __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
-
-[<Literal>]
-let literal2 = 1 ||| 64
-
-[<Literal>]
-let literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
-```
-
-その他のビットごとの演算子は使用できません。
-
 ## <a name="named-literals"></a>名前付きリテラル
 
 定数であることを意図した値でマークできる、[リテラル](https://msdn.microsoft.com/library/465f36ce-d146-41c0-b425-679c509cd285)属性。 この属性には、値が定数としてコンパイルされる効果があります。
 
 パターン マッチ式では、小文字で始まる識別子は、リテラルとしてではなく常にバインドされる変数として扱われます。そのため、一般的に、リテラルを定義する場合は先頭大文字を使用する必要があります。
 
+```fsharp
+[<Literal>]
+let SomeJson = """{"numbers":[1,2,3,4,5]}"""
+
+[<Literal>]
+let Literal1 = "a" + "b"
+
+[<Literal>]
+let FileLocation =   __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
+
+[<Literal>]
+let Literal2 = 1 ||| 64
+
+[<Literal>]
+let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
+```
+
+## <a name="remarks"></a>Remarks
+
+Unicode 文字列に明示的なエンコードを使用して指定することができますを含めることができます`\u`の後に 16 ビットの 16 進数コード (0000 - FFFF)、または utf-32 エンコーディングを使用して指定できる`\U`を表す 32 ビット 16 進コードを続けて任意の Unicode コード ポイント (00000000 - 0010FFFF)。
+
+以外の他のビットごとの演算子の使用`|||`は許可されていません。
+
 ## <a name="integers-in-other-bases"></a>他の底の整数
 
 16 進数、8 進数、またはバイナリを使用して 32 ビット符号付き整数を指定することも、 `0x`、`0o`または`0b`それぞれプレフィックスします。
 
 ```fsharp
-let Numbers = (0x9F, 0o77, 0b1010)
-// Result: Numbers : int * int * int = (159, 63, 10)
+let numbers = (0x9F, 0o77, 0b1010)
+// Result: numbers : int * int * int = (159, 63, 10)
 ```
 
 ## <a name="underscores-in-numeric-literals"></a>数値リテラルでのアンダー スコア
 
-以降でF#4.1、アンダー スコア文字は、桁を区切ることができます (`_`)。
+アンダー スコア文字は、桁を区切ることができます (`_`)。
 
 ```fsharp
 let value = 0xDEAD_BEEF

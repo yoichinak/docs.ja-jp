@@ -9,12 +9,12 @@ helpviewer_keywords:
 - linkres compiler option [Visual Basic]
 - -linkres compiler option [Visual Basic]
 ms.assetid: cf4dcad8-17b7-404c-9184-29358aa05b15
-ms.openlocfilehash: 97e0ccd46f413cc05b659731436bb141ee178419
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 637a1d4b7a523feb2fc8da10a0c18e68774c480a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48849919"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586689"
 ---
 # <a name="-linkresource-visual-basic"></a>-linkresource (Visual Basic)
 マネージド リソースへのリンクを作成します。  
@@ -32,14 +32,14 @@ ms.locfileid: "48849919"
  必須。 アセンブリにリンクするリソース ファイル。 ファイル名にスペースが含まれている場合は、名前を引用符で囲みます ("")。  
   
  `identifier`  
- 任意。 リソースの論理名。 リソースの読み込みに使用される名前です。 既定値は、ファイルの名前です。 かどうか、ファイルがパブリックかプライベート アセンブリ マニフェストの例を指定する必要に応じて、:`-linkres:filename.res,myname.res,public`します。 既定では、`filename`アセンブリ内でパブリックです。  
+ 省略可能です。 リソースの論理名。 リソースの読み込みに使用される名前です。 既定値は、ファイルの名前です。 かどうか、ファイルがパブリックかプライベート アセンブリ マニフェストの例を指定する必要に応じて、:`-linkres:filename.res,myname.res,public`します。 既定では、`filename`アセンブリ内でパブリックです。  
   
 ## <a name="remarks"></a>Remarks  
  `-linkresource`オプションは、リソース ファイルを出力ファイルに埋め込まれません。 を使用して、`-resource`これを実行するオプション。  
   
  `-linkresource`オプションでは、いずれかが必要です、`-target`以外のオプション`-target:module`します。  
   
- 場合`filename`は、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]リソース ファイルの作成例については、によって、 [Resgen.exe (リソース ファイル ジェネレーター)](../../../framework/tools/resgen-exe-resource-file-generator.md)または開発環境でアクセスできるメンバー間で、<xref:System.Resources>名前空間。 (詳細については、「<xref:System.Resources.ResourceManager>」を参照してください)。実行時にその他のすべてのリソースにアクセスするで始まるメソッドを使用して`GetManifestResource`で、<xref:System.Reflection.Assembly>クラス。  
+ 場合`filename`作成例についてでの .NET Framework リソース ファイルには、 [Resgen.exe (リソース ファイル ジェネレーター)](../../../framework/tools/resgen-exe-resource-file-generator.md)または開発環境でアクセスできるメンバー間で、<xref:System.Resources>名前空間。 (詳細については、「<xref:System.Resources.ResourceManager>」を参照してください)。実行時にその他のすべてのリソースにアクセスするで始まるメソッドを使用して`GetManifestResource`で、<xref:System.Reflection.Assembly>クラス。  
   
  ファイル名には、任意のファイル形式を指定できます。 たとえば、ネイティブ DLL をアセンブリの一部にすることで、グローバル アセンブリ キャッシュにインストールして、アセンブリ内のマネージド コードからアクセスできるようにすることができます。  
   
@@ -57,7 +57,7 @@ vbc -linkresource:rf.resource in.vb
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)  
-- [-ターゲット (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
-- [-リソース (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)  
+- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-ターゲット (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [-リソース (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)
 - [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

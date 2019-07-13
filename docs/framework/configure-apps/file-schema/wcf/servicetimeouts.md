@@ -1,22 +1,22 @@
 ---
-title: '&lt;serviceTimeouts&gt;'
+title: <serviceTimeouts>
 ms.date: 03/30/2017
 ms.assetid: ada536cf-97dc-4cd7-89ec-ed1466c1c557
-ms.openlocfilehash: 4cb4b4ae6fe01430989d9ee5f3d94b16778595aa
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 5c2f0ef7ad509eb5d6c686802c3fe5a75ea1a258
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758094"
 ---
-# <a name="ltservicetimeoutsgt"></a>&lt;serviceTimeouts&gt;
+# <a name="servicetimeouts"></a>\<serviceTimeouts>
 サービスのタイムアウトを指定します。  
   
  \<system.ServiceModel >  
 \<<behaviors>  
 \<serviceBehaviors>  
 \<behavior>  
-\<serviceTimeouts >  
+\<serviceTimeouts>  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,5 +45,6 @@ ms.locfileid: "54148475"
 |-------------|-----------------|  
 |[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|動作の要素を指定します。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.ServiceTimeoutsElement>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Configuration.ServiceTimeoutsElement>

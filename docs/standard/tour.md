@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: f9b4e3d885725afc4181256e02e3b174318e3ece
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: acd8e14e1d000f55f03017a4fee43347f50df3a7
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47232847"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415924"
 ---
 # <a name="tour-of-net"></a>.NET のツアー
 
@@ -64,7 +64,7 @@ Microsoft が開発とサポートに力を注いでいる .NET 言語は、C#�
 詳しくは、次のトピックをご覧ください。
 
 * C# の場合は、「[using ステートメント (C# リファレンス)](../csharp/language-reference/keywords/using-statement.md)」を参照してください。
-* F# の場合は、「[リソースの管理: use キーワード](../fsharp/language-reference/resource-management-the-use-keyword.md)」を参照してください。
+* F# の場合は、「[リソースの管理:use キーワード](../fsharp/language-reference/resource-management-the-use-keyword.md)」を参照してください。
 * VB の場合は、「[Using Statement (Visual Basic)](../visual-basic/language-reference/statements/using-statement.md)」 (using ステートメント (Visual Basic)) を参照してください。
 
 ## <a name="type-safety"></a>タイプ セーフ
@@ -125,7 +125,7 @@ LINQ は、データ操作のための単純な宣言型コードを記述でき
 
 Java および Objective-C に対する Mono (つまり Xamarin) の相互運用性サポートの多くが同じようにして構築されています。つまり、同じ原則を使用しているということです。
 
-詳細については、トピック「[ネイティブ相互運用性](native-interop.md)」を参照してください。
+ネイティブ相互運用性の詳細については、記事「[ネイティブ相互運用性](native-interop/index.md)」を参照してください。
 
 ## <a name="unsafe-code"></a>アンセーフ コード
 

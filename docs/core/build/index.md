@@ -4,12 +4,12 @@ description: ソース コードから .NET Core と .NET Core CLI をビルド�
 author: bleroy
 ms.date: 06/28/2017
 ms.custom: seodec18
-ms.openlocfilehash: 036d7fb64d74c00b4ac0e3d34bacc834f3c3a198
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 523b537ba07afd1b6c56192c5e2589082fe5820f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650883"
 ---
 # <a name="build-net-core-from-source"></a>ソースから .NET Core をビルドする
 
@@ -101,6 +101,6 @@ OS 間でのクロス ビルドはありません (X64 にビルドされる ARM
 
 ## <a name="see-also"></a>関連項目
 
-* [.NET Core 共通言語ランタイム (CoreCLR)](https://github.com/dotnet/coreclr/blob/master/README.md)
-* [.NET Core CLI 開発者ガイド](https://github.com/dotnet/cli/blob/master/Documentation/project-docs/developer-guide.md)
-* [.NET Core の配布パッケージ](./distribution-packaging.md)
+- [.NET Core 共通言語ランタイム (CoreCLR)](https://github.com/dotnet/coreclr/blob/master/README.md)
+- [.NET Core CLI 開発者ガイド](https://github.com/dotnet/cli/blob/master/Documentation/project-docs/developer-guide.md)
+- [.NET Core の配布パッケージ](./distribution-packaging.md)

@@ -2,12 +2,12 @@
 title: DiffGrams
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: fd452efff2a26b66c06a7762b215df140047286d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 048c5331028bbe2bb232302637dbb12bcdd2adc3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607814"
 ---
 # <a name="diffgrams"></a>DiffGrams
 DiffGram は、データ要素の現在のバージョンと元のバージョンを識別する XML 形式です。 <xref:System.Data.DataSet> では、 の内容を読み込んで永続化するため、およびネットワーク接続経由で転送する場合にこの内容をシリアル化するために、DiffGram 形式が使用されます。 ときに、<xref:System.Data.DataSet>正確に再作成する内容は、ただし、スキーマの DiffGram に必要なすべての情報を格納しますが、DiffGram として書き込まれますが、 <xref:System.Data.DataSet>、両方の列の値を含む、**元**と**現在**行のバージョン、行エラー情報、および行の順序。  
@@ -20,26 +20,26 @@ DiffGram は、データ要素の現在のバージョンと元のバージョ�
   
 ### <a name="to-generate-a-diffgram"></a>Diffgram を生成するには  
   
-1.  ルート テーブル (親を一切持たないテーブル) のリストを生成します。  
+1. ルート テーブル (親を一切持たないテーブル) のリストを生成します。  
   
-2.  リストの各テーブルとその子孫について、すべての行の現在のバージョンを最初の Diffgram セクションに書き込みます。  
+2. リストの各テーブルとその子孫について、すべての行の現在のバージョンを最初の Diffgram セクションに書き込みます。  
   
-3.  各テーブルに対して、 <xref:System.Data.DataSet>、存在する場合に、すべての行の元のバージョンを書き出すの**\<する前に >** Diffgram のセクション。  
+3. 各テーブルに対して、 <xref:System.Data.DataSet>、存在する場合に、すべての行の元のバージョンを書き出すの **\<する前に >** Diffgram のセクション。  
   
-4.  、エラーが発生した行の書き込みエラーの内容について、 **\<エラー >** 、Diffgram のセクション。  
+4. 、エラーが発生した行の書き込みエラーの内容について、 **\<エラー >** 、Diffgram のセクション。  
   
  Diffgram は XML ファイルの上から下に向かって処理されます。  
   
 ### <a name="to-process-a-diffgram"></a>Diffgram を処理するには  
   
-1.  Diffgram の最初のセクションを処理します。このセクションには、行の現在のバージョンが格納されています。  
+1. Diffgram の最初のセクションを処理します。このセクションには、行の現在のバージョンが格納されています。  
   
-2.  2 つ目の処理、または**\<する前に >** の元の行バージョンが含まれるセクションは変更または削除された行。  
+2. 2 つ目の処理、または **\<する前に >** の元の行バージョンが含まれるセクションは変更または削除された行。  
   
     > [!NOTE]
     >  行が削除済みとしてマークされていた場合、削除操作によってその行の子孫も削除される場合があります。この点は、現在の `Cascade` の <xref:System.Data.DataSet> プロパティに依存します。  
   
-3.  プロセス、 **\<エラー >** セクション。 このセクションの各項目について、指定された行および列のエラー情報を設定します。  
+3. プロセス、 **\<エラー >** セクション。 このセクションの各項目について、指定された行および列のエラー情報を設定します。  
   
 > [!NOTE]
 >  <xref:System.Data.XmlWriteMode> を Diffgram に設定した場合、ターゲット <xref:System.Data.DataSet> の内容が、元の <xref:System.Data.DataSet> の内容と異なる場合があります。  
@@ -83,21 +83,21 @@ DiffGram は、データ要素の現在のバージョンと元のバージョ�
   
 |注釈|説明|  
 |----------------|-----------------|  
-|**ID**|要素と対応するために使用、  **\<diffgr: する前に >** と **\<diffgr:errors >** ブロックの要素、 **\<*****DataInstance*** **>** ブロックします。 値で、 **diffgr:id**注釈は、形式 *[TableName] [RowIdentifier]* します。 たとえば、`<Customers diffgr:id="Customers1">` のように指定します。|  
+|**ID**|要素と対応するために使用、  **\<diffgr: する前に >** と **\<diffgr:errors >** ブロックの要素、 **\<** ***DataInstance*** **>** ブロックします。 値で、 **diffgr:id**注釈は、形式 *[TableName] [RowIdentifier]* します。 たとえば、`<Customers diffgr:id="Customers1">` のように指定します。|  
 |**parentId**|要素を識別する、 **\<** ***DataInstance*** **>** ブロックは、現在の要素の親要素。 値で、 **diffgr:parentId**注釈は、形式 *[TableName] [RowIdentifier]* します。 たとえば、`<Orders diffgr:parentId="Customers1">` のように指定します。|  
-|**hasChanges**|行を識別、 **\<** ***DataInstance*** **>** 変更とブロックされます。 **HasChanges**注釈は、次の 2 つの値のいずれかを指定できます。<br /><br /> **inserted**<br /> 識別、 **Added**行。<br /><br /> **変更**<br /> 識別、 **Modified**を含む行を**元**で行のバージョン、  **\<diffgr: する前に >** ブロック。 注意**Deleted**の行、**元**で行のバージョン、  **\<diffgr: する前に >** ブロックが、注釈付き要素、ことはできません**\<**  ***DataInstance*** **>** ブロックします。|  
+|**hasChanges**|行を識別、 **\<** ***DataInstance*** **>** 変更とブロックされます。 **HasChanges**注釈は、次の 2 つの値のいずれかを指定できます。<br /><br /> **inserted**<br /> 識別、 **Added**行。<br /><br /> **変更**<br /> 識別、 **Modified**を含む行を**元**で行のバージョン、  **\<diffgr: する前に >** ブロック。 注意**Deleted**の行、**元**で行のバージョン、  **\<diffgr: する前に >** ブロックが、注釈付き要素、ことはできません **\<**  ***DataInstance*** **>** ブロックします。|  
 |**hasErrors**|行を識別、 **\<** ***DataInstance*** **>** ブロックと一緒に、 **RowError**します。 エラー要素は内に、  **\<diffgr:errors >** ブロックします。|  
-|**エラー**|テキストを含む、 **RowError**で特定の要素に対して、  **\<diffgr:errors >** ブロックします。|  
+|**Error**|テキストを含む、 **RowError**で特定の要素に対して、  **\<diffgr:errors >** ブロックします。|  
   
  <xref:System.Data.DataSet> の内容が DiffGram として読み取られる、または書き込まれるときには、上記以外の注釈も含まれます。 次の表に、名前空間で定義されている追加の注釈を**urn:スキーマ-microsoft-com:xml-msdata**します。  
   
 |注釈|説明|  
 |----------------|-----------------|  
 |**RowOrder**|元のデータの行順序を保持し、特定の <xref:System.Data.DataTable> の行のインデックスを識別します。|  
-|**非表示**|列として識別する、 **ColumnMapping**プロパティに設定**MappingType.Hidden**します。 属性が形式で記述された**msdata: 非表示** *[ColumnName]*="*値*"。 たとえば、`<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">` のように指定します。<br /><br /> データが格納されている隠し列だけが DiffGram 属性として書き込まれます。 それ以外の場合は無視されます。|  
+|**[非表示]**|列として識別する、 **ColumnMapping**プロパティに設定**MappingType.Hidden**します。 属性が形式で記述された**msdata: 非表示** *[ColumnName]* ="*値*"。 たとえば、`<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">` のように指定します。<br /><br /> データが格納されている隠し列だけが DiffGram 属性として書き込まれます。 それ以外の場合は無視されます。|  
   
 ## <a name="sample-diffgram"></a>DiffGram のサンプル  
- DiffGram 形式の例を次に示します。 この例では、変更のコミット前のテーブル内の行に対する更新結果が示されています。 CustomerID の "ALFKI" である行は変更されていますが、更新されていません。 その結果は、**現在**で行の**diffgr:id** "Customers1"の**\<** ***DataInstance*** **>** ブロック、および**元**で行の**diffgr:id** "Customers1"の **\<diffgr: する前に >** ブロックします。 Customerid が"ANATR"の行が含まれています、 **RowError**で注釈が付けられるため、`diffgr:hasErrors="true"`関連する要素があると、  **\<diffgr:errors >** ブロックします。  
+ DiffGram 形式の例を次に示します。 この例では、変更のコミット前のテーブル内の行に対する更新結果が示されています。 CustomerID の "ALFKI" である行は変更されていますが、更新されていません。 その結果は、**現在**で行の**diffgr:id** "Customers1"の **\<** ***DataInstance*** **>** ブロック、および**元**で行の**diffgr:id** "Customers1"の **\<diffgr: する前に >** ブロックします。 Customerid が"ANATR"の行が含まれています、 **RowError**で注釈が付けられるため、`diffgr:hasErrors="true"`関連する要素があると、  **\<diffgr:errors >** ブロックします。  
   
 ```xml  
 <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">  
@@ -131,9 +131,10 @@ DiffGram は、データ要素の現在のバージョンと元のバージョ�
 </diffgr:diffgram>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [DataSet での XML の使用](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- [XML からの DataSet の読み込み](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
- [DataSet 内容の XML データとしての書き込み](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)  
- [DataSet、DataTable、および DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [DataSet での XML の使用](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+- [XML からの DataSet の読み込み](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
+- [DataSet 内容の XML データとしての書き込み](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)
+- [DataSet、DataTable、および DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

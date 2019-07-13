@@ -11,15 +11,15 @@ api_type:
 - Assembly
 author: stevewhims
 ms.openlocfilehash: 53338c75d31cef3ab89879632710dba3e52091ad
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675404"
 ---
 # <a name="coreresponsedatamstatuscode-field"></a>CoreResponseData.m\_StatusCode フィールド
 
-`CoreResponseData.m_StatusCode` <xref:System.Net.HttpStatusCode>応答のステータスを含むです。
+`CoreResponseData.m_StatusCode` <xref:System.Net.HttpStatusCode>応答のステータスを格納しています。
 
 ## <a name="syntax"></a>構文
   
@@ -28,14 +28,14 @@ public HttpStatusCode m_StatusCode
 ```
 
 > [!WARNING]
-> この API は、コード内で直接使用するものではありません。 代わりに、使用する必要があります、<xref:System.Diagnostics.DiagnosticSource>ネットワーク用のコードをフックします。 参照してください[DiagnosticSource ユーザーズ ガイド 』](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)です。
+> この API は、コード内で直接使用するものではありません。 代わりに、使用する必要があります、<xref:System.Diagnostics.DiagnosticSource>ネットワーク用のコードをフックします。 参照してください[DiagnosticSource ユーザー ガイド](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)します。
 > 
-> Microsoft は、どのような状況下で、実稼働アプリケーションでこのクラスの使用をサポートしていません。
+> Microsoft はいかなる運用アプリケーションでこのクラスの使用をサポートしていません。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**Namespace:** <xref:System.Net>
+**名前空間:** <xref:System.Net>
 
-**アセンブリ:** システム (System.dll)
+**アセンブリ:**(System.dll) のシステム
 
-**.NET framework のバージョン:** 2.0 から利用可能です。
+**.NET framework のバージョン:** 2.0 以降で使用可能です。

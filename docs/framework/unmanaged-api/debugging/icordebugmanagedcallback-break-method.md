@@ -17,40 +17,44 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d7120e092b422b755ecbde9e48236b42e67636fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 621c5b1e32a1a21c2b0b883249c3b65fadceb5f2
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414939"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632367"
 ---
 # <a name="icordebugmanagedcallbackbreak-method"></a>ICorDebugManagedCallback::Break メソッド
-デバッガーに通知時に、<xref:System.Reflection.Emit.OpCodes.Break>コード ストリーム内の命令を実行します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-HRESULT Break (  
-    [in] ICorDebugAppDomain *pAppDomain,  
-    [in] ICorDebugThread    *thread  
-);  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
- `pAppDOmain`  
- [in]Break 命令が含まれるアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。  
-  
- `thread`  
- [in]Break 命令が含まれる、スレッドを表す ICorDebugThread オブジェクトへのポインター。  
-  
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
-  
- **ヘッダー:** CorDebug.idl、CorDebug.h  
-  
- **ライブラリ:** CorGuids.lib  
-  
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
-## <a name="see-also"></a>関連項目  
- [ICorDebugManagedCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+
+デバッガーに通知時に、<xref:System.Reflection.Emit.OpCodes.Break>コード ストリームに命令を実行します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+HRESULT Break (
+    [in] ICorDebugAppDomain *pAppDomain,
+    [in] ICorDebugThread    *thread
+);
+```
+
+## <a name="parameters"></a>パラメーター
+
+`pAppDomain`\
+[in]中断命令を含むアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。
+
+`thread`\
+[in]中断命令を含むスレッドを表す ICorDebugThread オブジェクトへのポインター。
+
+## <a name="requirements"></a>必要条件
+
+**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+
+**ヘッダー:** CorDebug.idl、CorDebug.h
+
+**ライブラリ:** CorGuids.lib
+
+**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+
+## <a name="see-also"></a>関連項目
+
+- [ICorDebugManagedCallback インターフェイス](icordebugmanagedcallback-interface.md)

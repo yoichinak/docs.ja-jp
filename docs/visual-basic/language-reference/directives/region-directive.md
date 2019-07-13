@@ -10,12 +10,12 @@ helpviewer_keywords:
 - region directive (#region)
 - '#Region keyword [Visual Basic]'
 ms.assetid: 90a6a104-3cbf-47d0-bdc4-b585d0921b87
-ms.openlocfilehash: 204b53751fce4f9a3e038ae7c44634522d54657c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: eaaf0f8279ec905767be3f364a88357f0d393bba
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45617222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61812646"
 ---
 # <a name="region-directive"></a>#Region ディレクティブ
 Visual Basic ファイルのコードのセクションを折りたたんで非表示にします。  
@@ -35,14 +35,15 @@ Visual Basic ファイルのコードのセクションを折りたたんで非�
 |`#End Region`|`#Region` ブロックを終了します。|  
   
 ## <a name="remarks"></a>Remarks  
- Visual Studio コード エディターのアウトライン機能を使うときに展開または折りたたみの対象となるコード ブロックを指定するには、`#Region` ディレクティブを使用します。 に配置するまたは*入れ子*、類似した領域をグループ化するには、他のリージョン内のリージョン。  
+ Visual Studio Code エディターのアウトライン機能を使うときに展開または折りたたみの対象となるコード ブロックを指定するには、`#Region` ディレクティブを使用します。 に配置するまたは*入れ子*、類似した領域をグループ化するには、他のリージョン内のリージョン。  
   
 ## <a name="example"></a>例  
  `#Region` ディレクティブの使用例を次に示します。  
   
- [!code-vb[VbVbalrConditionalComp#4](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/region-directive_1.vb)]  
+ [!code-vb[VbVbalrConditionalComp#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#4)]  
   
-## <a name="see-also"></a>関連項目  
- [#If...Then...#Else ディレクティブ](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
- [アウトライン](/visualstudio/ide/outlining)  
- [方法 : コードのセクションを折りたたんで非表示にする](../../../visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md)
+## <a name="see-also"></a>関連項目
+
+- [#If...Then...#Else ディレクティブ](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
+- [アウトライン](/visualstudio/ide/outlining)
+- [方法: コードのセクションを折りたたんで非表示にする](../../../visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md)

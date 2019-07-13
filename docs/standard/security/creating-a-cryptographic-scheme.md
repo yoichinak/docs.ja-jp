@@ -8,27 +8,27 @@ helpviewer_keywords:
 ms.assetid: d40c509f-5a5e-46cc-94cb-a951e9ab6843
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 51d07fadcf359c2b44f22ca9868d0f12e24b80c5
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 3ef3741ef5cec720c2fb285c9aa60d610acc0be9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909390"
 ---
 # <a name="creating-a-cryptographic-scheme"></a>暗号スキームの作成
 .NET Framework の暗号化コンポーネントを組み合わせて、データの暗号化と復号化を行うさまざまなスキームを作成することができます。  
   
  データの暗号化と復号化の単純な暗号スキームでは、次の手順を指定することがあります。  
   
-1.  暗号化側と復号化側は、公開キーと秘密キーのペアを生成する。  
+1. 暗号化側と復号化側は、公開キーと秘密キーのペアを生成する。  
   
-2.  暗号化側と復号化側は、公開キーを交換する。  
+2. 暗号化側と復号化側は、公開キーを交換する。  
   
-3.  暗号化側と復号化側は、たとえば TripleDES 暗号化の秘密キーを生成する。続いて、相手側の公開キーを使用して新規作成されたキーを暗号化する。  
+3. 暗号化側と復号化側は、たとえば TripleDES 暗号化の秘密キーを生成する。続いて、相手側の公開キーを使用して新規作成されたキーを暗号化する。  
   
-4.  暗号化側と復号化側は、相手側にデータを送信し、特定の順序で相手側の秘密キーを自分の秘密キーと組み合わせて、新しい秘密キーを作成する。  
+4. 暗号化側と復号化側は、相手側にデータを送信し、特定の順序で相手側の秘密キーを自分の秘密キーと組み合わせて、新しい秘密キーを作成する。  
   
-5.  暗号化側と復号化側は、対称暗号化を使って会話を開始する。  
+5. 暗号化側と復号化側は、対称暗号化を使って会話を開始する。  
   
  暗号スキームの作成は簡単なタスクではありません。
   

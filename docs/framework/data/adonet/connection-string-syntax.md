@@ -2,12 +2,12 @@
 title: 接続文字列の構文
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: 3d8b37315ab3ceea2ddedd139787627e86b6a131
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4ec2b8a0a478f59ca66f8699e7846004a3a409cf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522474"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583606"
 ---
 # <a name="connection-string-syntax"></a>接続文字列の構文
 すべての .NET Framework データ プロバイダーは、`Connection` を継承する <xref:System.Data.Common.DbConnection> オブジェクトに加え、プロバイダー固有の <xref:System.Data.Common.DbConnection.ConnectionString%2A> プロパティを持ちます。 それぞれのプロバイダーに固有の接続文字列の構文は、対応する `ConnectionString` プロパティのトピックで説明されています。 次の表は、.NET Framework に含まれている 4 つのデータ プロバイダーを一覧にしたものです。  
@@ -22,13 +22,13 @@ ms.locfileid: "43522474"
 ## <a name="connection-string-builders"></a>接続文字列ビルダー  
  ADO.NET 2.0 では、.NET Framework データ プロバイダー用の次の接続文字列ビルダーが導入されました。  
   
--   <xref:System.Data.SqlClient.SqlConnectionStringBuilder>  
+- <xref:System.Data.SqlClient.SqlConnectionStringBuilder>  
   
--   <xref:System.Data.OleDb.OleDbConnectionStringBuilder>  
+- <xref:System.Data.OleDb.OleDbConnectionStringBuilder>  
   
--   <xref:System.Data.Odbc.OdbcConnectionStringBuilder>  
+- <xref:System.Data.Odbc.OdbcConnectionStringBuilder>  
   
--   <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
+- <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
   
  接続文字列ビルダーを使用すると、構文的に正しい接続文字列を実行時に構築できるため、コード内で接続文字列値を手動で連結する必要はありません。 詳細については、「[接続文字列ビルダー](../../../../docs/framework/data/adonet/connection-string-builders.md)」をご覧ください。  
 
@@ -113,13 +113,13 @@ Data Source=MySqlServer\MSSQL1;"
 |----------------------------------------------|---------------------------------------------|-------------------------------------------------------------------|-----------------------------------------------------------|------------|  
 |Ｘ|N/A|無効 (既定値)|無視|暗号化は行われません。|  
 |Ｘ|N/A|はい|無効 (既定値)|暗号化は、検証可能なサーバー証明書が提供されている場合にのみ行われます。それ以外の場合は、接続試行が失敗します。|  
-|Ｘ|N/A|はい|はい|暗号化は常に発生するが自己署名サーバー証明書を使用することがあります。|  
-|はい|Ｘ|無視|無視|暗号化は、検証可能なサーバー証明書がある場合にのみに発生します。それ以外の場合、接続の試行は失敗します。|  
-|はい|はい|無効 (既定値)|無視|暗号化は常に発生するが自己署名サーバー証明書を使用することがあります。|  
-|はい|[はい]|はい|無効 (既定値)|暗号化は、検証可能なサーバー証明書がある場合にのみに発生します。それ以外の場合、接続の試行は失敗します。|  
-|はい|[はい]|[はい]|はい|暗号化は常に発生するが自己署名サーバー証明書を使用することがあります。|  
+|Ｘ|N/A|はい|[はい]|暗号化は常に行われますが、自己署名入りのサーバー証明書を使用することがあります。|  
+|[はい]|Ｘ|無視|無視|暗号化は、検証可能なサーバー証明書がある場合にのみに発生します。それ以外の場合、接続の試行は失敗します。|  
+|[はい]|はい|無効 (既定値)|無視|暗号化は常に行われますが、自己署名入りのサーバー証明書を使用することがあります。|  
+|[はい]|はい|はい|無効 (既定値)|暗号化は、検証可能なサーバー証明書がある場合にのみに発生します。それ以外の場合、接続の試行は失敗します。|  
+|[はい]|はい|はい|[はい]|暗号化は常に行われますが、自己署名入りのサーバー証明書を使用することがあります。|  
   
- 詳細については、次を参照してください。[を使用して検証を伴わない暗号化](/sql/relational-databases/native-client/features/using-encryption-without-validation)します。
+ 詳細については、「[検証を伴わない暗号化の使用](/sql/relational-databases/native-client/features/using-encryption-without-validation)」を参照してください。
   
 ## <a name="oledb-connection-strings"></a>OleDb 接続文字列  
  <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A> の <xref:System.Data.OleDb.OleDbConnection> プロパティを使用すると、Microsoft Access などの OLE DB データ ソースの接続文字列を取得または設定することができます。 `OleDb` クラスを使用して、実行時に <xref:System.Data.OleDb.OleDbConnectionStringBuilder> 接続文字列を作成することもできます。  
@@ -194,7 +194,8 @@ Data Source=Oracle9i;User ID=*****;Password=*****;
   
  ODBC 接続文字列の構文の詳細については、「<xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A>」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [接続文字列](../../../../docs/framework/data/adonet/connection-strings.md)  
- [データ ソースへの接続](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [接続文字列](../../../../docs/framework/data/adonet/connection-strings.md)
+- [データ ソースへの接続](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

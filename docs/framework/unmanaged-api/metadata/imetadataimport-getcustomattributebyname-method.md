@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c25304bef4d240eedea749bb2829595056f9b74d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7bebf254110d9970ff3a99f948ff2e831ffb6b35
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449248"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782433"
 ---
 # <a name="imetadataimportgetcustomattributebyname-method"></a>IMetaDataImport::GetCustomAttributeByName メソッド
-その名前と所有者を指定、カスタム属性を取得します。  
+名前と所有者を指定するカスタム属性を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetCustomAttributeByName (  
    [in]  mdToken          tkObj,  
    [in]  LPCWSTR          szName,  
@@ -38,31 +38,32 @@ HRESULT GetCustomAttributeByName (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `tkObj`  
  [in]カスタム属性を所有するオブジェクトを表すメタデータ トークンです。  
   
  `szName`  
- [in]カスタム属性の名前です。  
+ [in]カスタム属性の名前。  
   
  `ppData`  
  [out]カスタム属性の値であるデータの配列へのポインター。  
   
  `pcbData`  
- [out]返されるデータのバイト サイズ *`ppData`です。  
+ [out]返されるデータのバイト サイズ *`ppData`します。  
   
-## <a name="remarks"></a>コメント  
- 所有者が同じ複数のカスタム属性を定義するには同じ名前があってもあります。 ただし、`GetCustomAttributeByName`インスタンス 1 つだけを返します。 (`GetCustomAttributeByName`を検出した最初のインスタンスが返されます)。カスタム属性のすべてのインスタンスを検索するには、呼び出し、 [imetadataimport::enumcustomattributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ 所有者が同じ複数のカスタム属性を定義することはでも、同じ名前があります。 ただし、 `GetCustomAttributeByName` 1 つだけインスタンスを返します。 (`GetCustomAttributeByName`見つけた最初のインスタンスを返します)。カスタム属性のすべてのインスタンスを検索するには、呼び出し、 [imetadataimport::enumcustomattributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md)メソッド。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -1,15 +1,13 @@
 ---
 title: サーキット ブレーカー パターンの実装
-description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | HTTP 再試行の補足システムとしてサーキット ブレーカー パターンを実装する'
-author: CESARDELATORRE
-ms.author: wiwagn
-ms.date: 07/03/2018
-ms.openlocfilehash: 08467184f40611888a05c3aa1fa4783b73c6b8ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+description: サーキット ブレーカー パターンを HTTP 再試行の補助システムとして実装する方法について説明します。
+ms.date: 10/16/2018
+ms.openlocfilehash: f40a8eec50a4293e4dfb4df647ce3f69f6dc361b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147266"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639831"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>サーキット ブレーカー パターンを実装する
 
@@ -25,7 +23,7 @@ HTTP 再試行を不注意に使用すると、自分のソフトウェアにサ
 
 そのため、試行を続けるに値しないとき、過剰な要求によって停止するように、何らかの防壁が必要になります。 その防壁こそがサーキット ブレーカーです。
 
-サーキット ブレーカー パターンの目的は、"再試行パターン" とは異なります。 "再試行パターン" では、操作が最終的には成功するとの見込みをもってアプリケーションに操作を再試行させます。 サーキット ブレーカー パターンは、失敗する可能性の高い操作をアプリケーションが実行しないようにします。 アプリケーションでは、これら 2 つのパターンを組み合わせることができます。 しかしながら、再試行のロジックはサーキット ブレーカーが返す例外に対応できる必要があり、障害が一時的ではないことをサーキット ブレーカーが示す場合、再試行を中止する必要があります。
+サーキット ブレーカー パターンの目的は、"再試行パターン" とは異なります。 "再試行パターン" では、操作が最終的には成功するとの見込みをもってアプリケーションに操作を再試行させます。 サーキット ブレーカー パターンにより、失敗する可能性の高い操作がアプリケーションで実行されなくなります。 アプリケーションでは、これら 2 つのパターンを組み合わせることができます。 しかしながら、再試行のロジックはサーキット ブレーカーが返す例外に対応できる必要があり、障害が一時的ではないことをサーキット ブレーカーが示す場合、再試行を中止する必要があります。
 
 ## <a name="implement-circuit-breaker-pattern-with-httpclientfactory-and-polly"></a>HttpClientFactory と Polly でサーキット ブレーカー パターンを実装する
 
@@ -38,14 +36,15 @@ HTTP 呼び出しの再試行に使用されるコードに追加する必要が
 ```csharp
 //ConfigureServices()  - Startup.cs
 services.AddHttpClient<IBasketService, BasketService>()
-        .SetHandlerLifetime(TimeSpan.FromMinutes(5))  //Set lifetime to 5 minutes
+        .SetHandlerLifetime(TimeSpan.FromMinutes(5))  //Sample. Default lifetime is 2 minutes
+        .AddHttpMessageHandler<HttpClientAuthorizationDelegatingHandler>()
         .AddPolicyHandler(GetRetryPolicy())
         .AddPolicyHandler(GetCircuitBreakerPolicy());
 ```
 
-`AddPolicyHandler()` メソッドは、使用する HttpClient オブジェクトにポリシーを追加します。 この場合、サーキット ブレーカーの Polly のポリシーを追加しています。
+`AddPolicyHandler()` メソッドは、使用される `HttpClient` オブジェクトにポリシーを追加するものです。 この場合、サーキット ブレーカーの Polly のポリシーを追加しています。
 
-手法のモジュール性を高める目的で、次のコードのように、GetCircuitBreakerPolicy() という名前の別個のメソッドにサーキット ブレーカー ポリシーが定義されます。
+手法のモジュール性を高める目的で、次のコードに示すように、`GetCircuitBreakerPolicy()` という名前の別個のメソッド内でサーキット ブレーカー ポリシーが定義されています。
 
 ```csharp
 static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
@@ -56,51 +55,48 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 }
 ```
 
-上記のコード例では、HTTP 要求の再試行時、エラーが連続して 5 つ発生したとき、サーキットを中断する (またはオープン状態にする) ようにサーキット ブレーカー ポリシーが構成されています。 それが発生すると、サーキットは 30 秒間中断されます。その間、呼び出しは実際に配置されるのではなく、サーキット ブレーカーが働いてすぐに失敗します。  [関連する例外および HTTP 状態コード](https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults) は、ポリシーによって自動的にエラーとして解釈されます。  
+上記のコード例では、HTTP 要求の再試行時、エラーが連続して 5 つ発生したとき、サーキットを中断する (またはオープン状態にする) ようにサーキット ブレーカー ポリシーが構成されています。 それが発生すると、サーキットは 30 秒間中断されます。その間、呼び出しは実際に配置されるのではなく、サーキット ブレーカーが働いてすぐに失敗します。  [関連する例外および HTTP 状態コード](/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults) は、ポリシーによって自動的にエラーとして解釈されます。  
 
-サーキット ブレーカーは、HTTP 呼び出しを実行しているクライアント アプリケーションまたはサービスとは別の環境に展開されている特定のリソースに問題がある場合に、要求をフォールバック インフラストラクチャにリダイレクトするために使用する必要もあります。 こうすれば、バックエンドのマイクロサービスのみに影響を与え、クライアント アプリケーションには影響を与えないデータセンターの停止が生じた場合に、クライアント アプリケーションはフォールバック サービスにリダイレクトできます。 Polly では、この[フェールオーバー ポリシー](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy) シナリオを自動化するための新しいポリシーが計画されています。 
+サーキット ブレーカーは、HTTP 呼び出しを実行しているクライアント アプリケーションまたはサービスとは別の環境にデプロイされている特定のリソースに問題がある場合に、要求をフォールバック インフラストラクチャにリダイレクトするためにも使用する必要があります。 こうすれば、バックエンドのマイクロサービスのみに影響を与え、クライアント アプリケーションには影響を与えないデータセンターの停止が生じた場合に、クライアント アプリケーションはフォールバック サービスにリダイレクトできます。 Polly では、この[フェールオーバー ポリシー](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy) シナリオを自動化するための新しいポリシーが計画されています。 
 
 これらすべての機能は、位置を意識することなく Azure に自動的にフェールオーバーを管理させるのとは対照的に、フェールオーバーを .NET コード内から管理する場合のためのものです。 
 
 使用という観点からは、HttpClient を使用するとき、ここで新しいものは何も追加する必要がありません。前のセクションで示したように、HttpClient と HttpClientFactory の使用時とコードが同じであるからです。 
 
-## <a name="testing-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>eShopOnContainers で HTTP の再試行とサーキット ブレーカーをテストする
+## <a name="test-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>eShopOnContainers 内で HTTP の再試行とサーキット ブレーカーをテストする
 
-Docker ホスト内で eShopOnContainers ソリューションを起動する場合、このソリューションは複数のコンテナーを起動する必要があります。 SQL Server コンテナーなど、一部のコンテナーは起動と初期化が低速です。 eShopOnContainers アプリケーションを Docker に初めて展開する場合は、イメージとデータベースを設定する必要があるため、特にそうです。 一部のコンテナーは他のコンテナーより起動が低速だという事実により、以前のセクションで説明したように docker-compose レベルでコンテナー間の依存関係を設定している場合であっても、残りのサービスによる初期化時の HTTP 例外のスローが引き起こされる可能性があります。 コンテナー間の docker-compose 依存関係は、プロセス レベルだけのものです。 コンテナーのエントリ ポイント プロセスは起動されても、SQL Server はクエリに対して準備ができていないことがあります。 結果としてエラーの連鎖が生じ、アプリケーションがその特定のコンテナーを利用しようとするときに例外が発生することがあります。 
+Docker ホスト内で eShopOnContainers ソリューションを起動する場合、このソリューションは複数のコンテナーを起動する必要があります。 SQL Server コンテナーなど、一部のコンテナーは起動と初期化が低速です。 eShopOnContainers アプリケーションを Docker に初めてデプロイする場合は、イメージとデータベースを設定する必要があるため、特にそのようになります。 一部のコンテナーは他のコンテナーより起動が低速だという事実により、以前のセクションで説明したように docker-compose レベルでコンテナー間の依存関係を設定している場合であっても、残りのサービスによる初期化時の HTTP 例外のスローが引き起こされる可能性があります。 コンテナー間の docker-compose 依存関係は、プロセス レベルだけのものです。 コンテナーのエントリ ポイント プロセスは起動されても、SQL Server はクエリに対して準備ができていないことがあります。 結果としてエラーの連鎖が生じ、アプリケーションがその特定のコンテナーを利用しようとするときに例外が発生することがあります。
 
 また、起動時のこのタイプのエラーは、アプリケーションをクラウドに展開する際に生じることもあります。 その場合、オーケストレーターは、クラスターのノード全体でコンテナーの数を分散させる際に、コンテナーを 1 つのノードまたは VM から別の場所に移動することがあります (つまり、新しいインスタンスを起動する)。
 
 すべてのコンテナーを起動するとき、'eShopOnContainers' では、上記の再試行パターンを利用してこれらの問題を解決します。 
 
-### <a name="testing-the-circuit-breaker-in-eshoponcontainers"></a>eShopOnContainers でサーキット ブレーカーをテストする
+### <a name="test-the-circuit-breaker-in-eshoponcontainers"></a>eShopOnContainers 内でサーキット ブレーカーをテストする
 
 いくつかの方法でサーキットを中断し/オープン状態にし、eShopOnContainers でテストできます。
 
-1 つの方法は、サーキット ブレーカー ポリシーで許可する再試行の数を 1 まで減らし、ソリューション全体を Docker に再展開することです。 再試行を 1 回にすることで、展開中に HTTP 要求が失敗し、サーキット ブレーカーがオープン状態になって、エラーが発生する可能性が高くなります。
+1 つの方法は、サーキット ブレーカー ポリシーで許可する再試行の数を 1 まで減らし、ソリューション全体を Docker に再展開することです。 再試行を 1 回にすることで、デプロイ中に HTTP 要求が失敗し、サーキット ブレーカーがオープン状態になって、エラーが発生する可能性が高くなります。
 
-もう 1 つの方法は、Basket マイクロサービスで実装されているカスタムのミドルウェアを使用することです。 このミドルウェアが有効な場合、すべての HTTP 要求を捕捉し、状態コード 500 を返します。 次のように、"failing" URI に GET 要求を実行してミドルウェアを有効にできます。
+もう 1 つの方法は、**Basket** マイクロサービス内に実装されているカスタムのミドルウェアを使用することです。 このミドルウェアが有効な場合、すべての HTTP 要求を捕捉し、状態コード 500 を返します。 次のように、"failing" URI に GET 要求を実行してミドルウェアを有効にできます。
 
-- `GET http://localhost:5103/failing`
+- `GET http://localhost:5103/failing`\
+  この要求は、ミドルウェアの現在の状態を返します。 ミドルウェアが有効な場合、要求は状態コード 500 を返します。 ミドルウェアが無効の場合、応答はありません。
 
-この要求は、ミドルウェアの現在の状態を返します。 ミドルウェアが有効な場合、要求は状態コード 500 を返します。 ミドルウェアが無効の場合、応答はありません。 
+- `GET http://localhost:5103/failing?enable`\
+  この要求はミドルウェアを有効にします。
 
-- `GET http://localhost:5103/failing?enable`
-
-この要求はミドルウェアを有効にします。 
-
-- `GET http://localhost:5103/failing?disable`
-
-この要求はミドルウェアを無効にします。 
+- `GET http://localhost:5103/failing?disable`\
+  この要求はミドルウェアを無効にします。
 
 たとえば、アプリケーションが実行されたら、任意のブラウザーで次の URI を使用して要求を実行することにより、ミドルウェアを有効にできます。 注文マイクロサービスにはポート 5103 を使用することにご注意ください。
 
 `http://localhost:5103/failing?enable` 
 
-その後、図 10-4 に示されているように、URI `http://localhost:5103/failing` を使用して状態を確認できます。
+その後、図 8-5 に示されているように、URI `http://localhost:5103/failing` を使用して状態を確認できます。
 
-![](./media/image4.png)
+![FailingMiddleware シミュレーションの状態を検査した結果がブラウザーに表示されています。](./media/image4.png)
 
-**図 10-4**. "failing" ASP.NET ミドルウェアの状態を確認している。この場合は無効。 
+**図 8-5** "failing" ASP.NET ミドルウェアの状態を確認している。この場合は無効。
 
 この時点で Basket マイクロサービスは、呼び出すたびに状態コード 500 を返します。
 
@@ -115,7 +111,7 @@ public class CartController : Controller
     public async Task<IActionResult> Index()
     {
         try
-        {          
+        {
             var user = _appUserParser.Parse(HttpContext.User);
             //Http requests using the Typed Client (Service Agent)
             var vm = await _basketSvc.GetBasket(user);
@@ -123,11 +119,11 @@ public class CartController : Controller
         }
         catch (BrokenCircuitException)
         {
-            // Catches error when Basket.api is in circuit-opened mode                 
+            // Catches error when Basket.api is in circuit-opened mode
             HandleBrokenCircuitException();
         }
         return View();
-    }       
+    }
 
     private void HandleBrokenCircuitException()
     {
@@ -136,11 +132,11 @@ public class CartController : Controller
 }
 ```
 
-まとめます。 再試行ポリシーは、HTTP 要求の実行を数回試行し、HTTP エラーが発生します。 再試行回数がサーキット ブレーカー ポリシーに設定された最大回数に達すると (この場合は 5 回)、アプリケーションは BrokenCircuitException をスローします。 結果として、図 10-5 に示されているようなメッセージが表示されます。
+まとめます。 再試行ポリシーは、HTTP 要求の実行を数回試行し、HTTP エラーが発生します。 再試行回数がサーキット ブレーカー ポリシーに設定された最大回数に達すると (この場合は 5 回)、アプリケーションは BrokenCircuitException をスローします。 結果として、図 8-6 に示されているようなメッセージが表示されます。
 
-![](./media/image5.png)
+![ブラウザーに MVC Web アプリが表示されており、サーキット ブレーカー ポリシーによってトリガーされた [basket service inoperative]\(バスケット サービスが動作していません\) というメッセージが示されています。](./media/image5.png)
 
-**図 10-5**. サーキット ブレーカーが UI にエラーを返している
+**図 8-6** サーキット ブレーカーが UI にエラーを返している
 
 サーキットをいつオープン状態にするか/中断するかに関して、別のロジックを実装できます。 または、フォールバック データセンターか冗長バックエンド システムがある場合、他のバックエンド マイクロサービスに対して HTTP 要求を試行することができます。 
 
@@ -148,8 +144,8 @@ public class CartController : Controller
 
 ## <a name="additional-resources"></a>その他の技術情報
 
--   **サーキット ブレーカー パターン**
-    [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)
+- **サーキット ブレーカー パターン**\
+  [https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker](/azure/architecture/patterns/circuit-breaker)
 
 >[!div class="step-by-step"]
 >[前へ](implement-http-call-retries-exponential-backoff-polly.md)

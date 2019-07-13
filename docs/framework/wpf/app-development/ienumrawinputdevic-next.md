@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Next method [WPF]
 ms.assetid: 3698b44d-510e-4d18-b32b-85f17188ee26
-ms.openlocfilehash: 329a2cd96346e199ee834856dd6dbfac6175b722
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 05867af48b64cd1898b13fa055859c8cc0367c8c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949579"
 ---
 # <a name="ienumrawinputdevicnext"></a>IEnumRAWINPUTDEVIC:Next
-次の列挙`celt` [RAWINPUTDEVICE](https://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp)構造体、列挙子の一覧で、それらを返す`rgelt`で列挙された要素の実際の数とともに`pceltFetched`します。  
+次の列挙`celt` [RAWINPUTDEVICE](/windows/desktop/api/winuser/ns-winuser-rawinputdevice)構造体、列挙子の一覧で、それらを返す`rgelt`で列挙された要素の実際の数とともに`pceltFetched`します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -23,10 +23,10 @@ HRESULT Next(
       [out] ULONG *pceltFetched);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `celt`  
   
- [in]数[RAWINPUTDEVICE](https://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp)構造体で返される`rgelt`します。  
+ [in]数[RAWINPUTDEVICE](/windows/desktop/api/winuser/ns-winuser-rawinputdevice)構造体で返される`rgelt`します。  
   
  `rgelt`  
   
@@ -37,4 +37,4 @@ HRESULT Next(
  [out] `rgelt` に実際に指定された要素の数へのポインター。 `NULL` が 1 の場合、呼び出し元は `rgelt` に渡すことができます。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- 指定された要素の数が `celt` の場合は HRESULT: S_OK。それ以外の場合は S_FALSE。
+ HRESULT:指定された要素の数は場合は S_OK `celt`;それ以外の場合は S_FALSE。

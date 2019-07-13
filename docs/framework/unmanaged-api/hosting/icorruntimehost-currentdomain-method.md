@@ -17,27 +17,27 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 96cda3f504910d8fb70905f66b45f417158c505d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d3aa6bc844d2c6629085b0596127c0b51b99357d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436846"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766356"
 ---
 # <a name="icorruntimehostcurrentdomain-method"></a>ICorRuntimeHost::CurrentDomain メソッド
-型のインターフェイス ポインターを取得<xref:System.AppDomain?displayProperty=nameWithType>を表す現在のスレッドで読み込まれているドメインです。  
+型のインターフェイス ポインターを取得<xref:System.AppDomain?displayProperty=nameWithType>を現在のスレッドで読み込まれているドメインを表します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CurrentDomain (  
     [out] IUnknown** pAppDomain  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pAppDomain`  
- [out]型のポインター<xref:System.AppDomain?displayProperty=nameWithType>スレッドの現在のアプリケーション ドメインを表すです。 このポインターが型指定された`IUnknown`呼び出し元は一般に呼び出す必要がありますので、`QueryInterface`型のポインターを取得する<xref:System._AppDomain>です。  
+ [out]型のポインター<xref:System.AppDomain?displayProperty=nameWithType>スレッドの現在のアプリケーション ドメインを表します。 このポインターは型指定`IUnknown`呼び出し元は一般に呼び出す必要がありますので、`QueryInterface`型のポインターを取得する<xref:System._AppDomain>します。  
   
 ## <a name="return-value"></a>戻り値  
   
@@ -45,19 +45,20 @@ HRESULT CurrentDomain (
 |-------------|-----------------|  
 |S_OK|操作が正常に完了しました。|  
 |S_FALSE|操作を完了できませんでした。|  
-|E_FAIL|未知の致命的なエラーが発生しました。 メソッドには、E_FAIL が返されます、共通言語ランタイム (CLR) は、プロセスで使用可能なできなくします。 Api をホストに以降の呼び出しでは、HOST_E_CLRNOTAVAILABLE を返します。|  
-|HOST_E_CLRNOTAVAILABLE|CLR が、プロセスに読み込まれていませんまたは CLR は、状態をマネージ コードを実行またはできないの呼び出しは正常に処理します。|  
+|E_FAIL|未知の致命的なエラーが発生しました。 場合は、メソッドは、E_FAIL を返します、共通言語ランタイム (CLR) はプロセスで使用可能ではなくなりました。 Api をホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。|  
+|HOST_E_CLRNOTAVAILABLE|プロセスに CLR が読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** 1.0、1.1  
+ **.NET framework のバージョン:** 1.0, 1.1  
   
-## <a name="see-also"></a>関連項目  
- <xref:System._AppDomain>  
- <xref:System.AppDomain>  
- [ICorRuntimeHost インターフェイス](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System._AppDomain>
+- <xref:System.AppDomain>
+- [ICorRuntimeHost インターフェイス](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

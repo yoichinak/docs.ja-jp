@@ -9,24 +9,24 @@ helpviewer_keywords:
 ms.assetid: 91fbbb35-e543-4814-b806-371cebae8c5a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d86f9b4903663604094895f6747b1407ff98c990
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: dde711f2d626d88fd80009fa83f1198dd9d47810
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435865"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490481"
 ---
 # <a name="deprecated-clr-hosting-functions"></a>非推奨の CLR ホスト関数
 このセクションでは、以前のバージョンのホスト API で使用されていたアンマネージ グローバル静的関数について説明します。  
   
- .NET Framework によってのみ使用されるインフラストラクチャ関数 (`_Cor*` 関数) を除き、これらの関数は [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] では非推奨とされました。  
+ インフラストラクチャ関数を除く (`_Cor*`関数)、.NET Framework でのみ使用されますが、これらの関数が .NET Framework 4 では非推奨とされました。  
   
 ## <a name="activation-functions"></a>アクティブ化関数  
  [ClrCreateManagedInstance 関数](../../../../docs/framework/unmanaged-api/hosting/clrcreatemanagedinstance-function.md)  
- 非推奨。 指定したマネージ型のインスタンスを作成します。  
+ 非推奨。 指定したマネージド型のインスタンスを作成します。  
   
  [CoInitializeCor 関数](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md)  
- 互換性のために残されています。 共通言語ランタイム (CLR) を初期化するには、いずれかを使用[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)または[CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)です。  
+ 互換性のために残されています。 共通言語ランタイム (CLR) を初期化するためにいずれかの操作を使用して[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)または[CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)します。  
   
  [CoInitializeEE 関数](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)  
  非推奨。 CLR 実行エンジンがプロセスに読み込まれていることを確認します。 使用して、 [iclrruntimehost::start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)メソッド代わりにします。  
@@ -93,7 +93,7 @@ ms.locfileid: "33435865"
  非推奨。 指定したネットワーク パスのアプリケーションを、指定したマニフェストとその他のアプリケーション データを使用して起動します。  
   
  [CorMarkThreadInThreadPool 関数](../../../../docs/framework/unmanaged-api/hosting/cormarkthreadinthreadpool-function.md)  
- 非推奨。 現在実行されているスレッド プールのスレッドに、マネージ コードの実行のマークを付けます。 .NET Framework Version 2.0 以降では、この関数に効力はありません。 必ずしも必要はありませんが、この関数はコードから削除できます。  
+ 非推奨。 現在実行されているスレッド プールのスレッドに、マネージド コードの実行のマークを付けます。 .NET Framework Version 2.0 以降では、この関数に効力はありません。 必ずしも必要はありませんが、この関数はコードから削除できます。  
   
  [CoUninitializeCor 関数](../../../../docs/framework/unmanaged-api/hosting/couninitializecor-function.md)  
  互換性のために残されています。 プロセスから CLR をアンロードできません。  
@@ -102,7 +102,7 @@ ms.locfileid: "33435865"
  互換性のために残されています。  
   
  [CreateDebuggingInterfaceFromVersion 関数](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md)  
- 非推奨。 作成、 [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)オブジェクトが指定されたバージョン情報に基づいています。  
+ 非推奨。 作成、 [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)オブジェクトが指定されたバージョン情報に基づきます。  
   
  [CreateICeeFileGen 関数](../../../../docs/framework/unmanaged-api/hosting/createiceefilegen-function.md)  
  非推奨。 作成、 [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md)オブジェクト。  
@@ -111,7 +111,7 @@ ms.locfileid: "33435865"
  非推奨。 破棄、 [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md)オブジェクト。  
   
  [FExecuteInAppDomainCallback 関数ポインター](../../../../docs/framework/unmanaged-api/hosting/fexecuteinappdomaincallback-function-pointer.md)  
- 非推奨。 CLR がマネージ コードを実行するために呼び出す関数を指します。  
+ 非推奨。 CLR がマネージド コードを実行するために呼び出す関数を指します。  
   
  [FLockClrVersionCallback 関数ポインター](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md)  
  非推奨。 初期化が開始または完了したことをホストに通知するために CLR が呼び出す関数を指します。  
@@ -144,19 +144,20 @@ ms.locfileid: "33435865"
  このセクションの関数は、.NET Framework によってのみ使用されます。  
   
  [_CorDllMain 関数](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md)  
- CLR を初期化し、DLL アセンブリの CLR ヘッダーでマネージ エントリ ポイントを検索して、その実行を開始します。  
+ CLR を初期化し、DLL アセンブリの CLR ヘッダーでマネージド エントリ ポイントを検索して、その実行を開始します。  
   
  [_CorExeMain 関数](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md)  
- CLR を初期化し、実行可能アセンブリの CLR ヘッダーでマネージ エントリ ポイントを検索して、その実行を開始します。  
+ CLR を初期化し、実行可能アセンブリの CLR ヘッダーでマネージド エントリ ポイントを検索して、その実行を開始します。  
   
  [_CorExeMain2 関数](../../../../docs/framework/unmanaged-api/hosting/corexemain2-function.md)  
  指定されたメモリ マップト コードのエントリ ポイントを実行します。 この関数は、オペレーティング システム ローダーによって呼び出されます。  
   
  [_CorImageUnloading 関数](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md)  
- マネージ モジュール イメージがアンロードされたときに、ローダーに通知します。  
+ マネージド モジュール イメージがアンロードされたときに、ローダーに通知します。  
   
  [_CorValidateImage 関数](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md)  
- マネージ モジュール イメージを検証し、それらが読み込まれると、オペレーティング システム ローダーに通知します。  
+ マネージド モジュール イメージを検証し、それらが読み込まれると、オペレーティング システム ローダーに通知します。  
   
-## <a name="see-also"></a>関連項目  
- [.NET Framework 4 ホスト グローバル静的関数](../../../../docs/framework/unmanaged-api/hosting/net-framework-4-hosting-global-static-functions.md) 
+## <a name="see-also"></a>関連項目
+
+- [.NET Framework 4 ホスト グローバル静的関数](../../../../docs/framework/unmanaged-api/hosting/net-framework-4-hosting-global-static-functions.md)

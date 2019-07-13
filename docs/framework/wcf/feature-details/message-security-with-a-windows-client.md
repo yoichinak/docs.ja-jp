@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-ms.openlocfilehash: dbfcd7ea7b8422c79274e7bc65929080da6f11af
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 36193090349f5b8ddb07ee7c3c6c663621cc6d06
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153424"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637851"
 ---
 # <a name="message-security-with-a-windows-client"></a>Windows クライアントとのメッセージ セキュリティ
 このシナリオでは、Windows Communication Foundation (WCF) クライアントとメッセージ セキュリティ モードによって保護されたサーバーを示します。 クライアントとサービスは、Windows 資格情報を使用して認証します。  
@@ -26,14 +26,14 @@ ms.locfileid: "53153424"
 |整合性|はい、共有のセキュリティ コンテキストを使用します|  
 |機密性|はい、共有のセキュリティ コンテキストを使用します|  
 |Transport|NET.TCP|  
-|バインド|<xref:System.ServiceModel.NetTcpBinding>|  
+|バインディング|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>サービス  
  次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
   
--   構成を使用せずに、コードを使用してスタンドアロン サービスを作成します。  
+- 構成を使用せずに、コードを使用してスタンドアロン サービスを作成します。  
   
--   提供された構成を使用してサービスを作成しますが、エンドポイントを定義しません。  
+- 提供された構成を使用してサービスを作成しますが、エンドポイントを定義しません。  
   
 ### <a name="code"></a>コード  
  次のコードでは、メッセージ セキュリティを使用するサービス エンドポイントを作成し、Windows コンピューターとの間にセキュリティで保護されたコンテキストを確立する方法を示します。  
@@ -75,9 +75,9 @@ ms.locfileid: "53153424"
 ## <a name="client"></a>クライアント  
  次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
   
--   コード (およびクライアント コード) を使用してスタンドアロン クライアントを作成します。  
+- コード (およびクライアント コード) を使用してスタンドアロン クライアントを作成します。  
   
--   エンドポイント アドレスを定義しないクライアントを作成します。 代わりに、引数として構成名を受け取るクライアント コンストラクターを使用します。 次に例を示します。  
+- エンドポイント アドレスを定義しないクライアントを作成します。 代わりに、引数として構成名を受け取るクライアント コンストラクターを使用します。 次に例を示します。  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -116,6 +116,7 @@ ms.locfileid: "53153424"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>関連項目
+
+- [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

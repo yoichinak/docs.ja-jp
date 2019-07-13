@@ -1,10 +1,11 @@
 ---
 title: SqlStreamChars.CanSeek プロパティ (System.Data.SqlTypes)
-author: douglaslMS
-ms.author: douglasl
+author: stevestein
+ms.author: sstein
 ms.date: 12/19/2018
-ms.technology:
-- dotnet-data
+ms.technology: dotnet-data
+topic_type:
+- apiref
 api_name:
 - System.Data.SqlTypes.SqlStreamChars.CanSeek
 - System.Data.SqlTypes.SqlStreamChars.get_CanSeek
@@ -12,12 +13,12 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 0145fe87e2c8aa3dd40e73f0089fe40b6b6cca30
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: b85e21c6bc89d2a00ff8d302f67a3d074d5e7b8f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152735"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634384"
 ---
 # <a name="sqlstreamcharscanseek-property"></a>SqlStreamChars.CanSeek プロパティ
 

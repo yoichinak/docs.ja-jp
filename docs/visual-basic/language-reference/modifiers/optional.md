@@ -8,36 +8,36 @@ helpviewer_keywords:
 - Optional keyword [Visual Basic], contexts
 - Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
-ms.openlocfilehash: f88020c7407fb9c91e06bc2ee177773171e344fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40605d4843bfccf9d2819b3ec6f2ef65f9e9cf9a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33599305"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661323"
 ---
 # <a name="optional-visual-basic"></a>Optional (Visual Basic)
 プロシージャが呼び出されたときにプロシージャの引数を省略できますを指定します。  
   
-## <a name="remarks"></a>コメント  
- 省略可能なパラメーターごとに、そのパラメーターの既定値として定数式を指定する必要があります。 式が評価された場合[Nothing](../../../visual-basic/language-reference/nothing.md)値のデータ型の既定値は、パラメーターの既定値として使用します。  
+## <a name="remarks"></a>Remarks  
+ オプションのパラメーターごとに、そのパラメーターの既定値として定数式を指定する必要があります。 式が評価された場合[Nothing](../../../visual-basic/language-reference/nothing.md)値のデータ型の既定値は、パラメーターの既定値として使用されます。  
   
- パラメーター リストには、省略可能なパラメーターが含まれています、それに続くすべてのパラメーターは省略可能な必要があります。  
+ パラメーター リストには、オプションのパラメーターが含まれています、それに続くすべてのパラメーターは省略可能な必要があります。  
   
  `Optional` 修飾子は、次のコンテキストで使用できます。  
   
--   [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)  
+- [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)  
+- [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)  
-  
-> [!NOTE]
->  省略可能なパラメーターの有無のプロシージャを呼び出すときに、位置または名前で引数を渡すことができます。 詳細については、次を参照してください。[位置と名前による引数を渡す](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)です。  
+- [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 > [!NOTE]
->  オーバー ロードを使用して、省略可能なパラメーターを持つプロシージャを定義することもできます。 1 つの省略可能なパラメーターがある場合は、プロシージャ パラメーターを受け取る、しない 2 つのオーバー ロードされたバージョンを定義できます。 詳細については、次を参照してください。[プロシージャのオーバー ロード](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)です。  
+>  省略可能なパラメーターの有無、プロシージャを呼び出すときに、位置または名前で引数を渡すことができます。 詳細については、次を参照してください。[位置と名前による引数を渡す](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)します。  
+  
+> [!NOTE]
+>  オーバー ロードを使用して、省略可能なパラメーターを持つプロシージャを定義することもできます。 1 つの省略可能なパラメーターがある場合、プロシージャ、ないおよびパラメーターを受け取るいずれかの 2 つのオーバー ロードされたバージョンを定義できます。 詳細については、「 [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、省略可能なパラメーターを持つプロシージャを定義します。  
@@ -62,11 +62,12 @@ End Function
 ```  
   
 ## <a name="example"></a>例  
- 次の例では、位置によって渡される引数を指定して、名前によって渡される引数を使用してプロシージャを呼び出す方法を示します。 プロシージャは、2 つの省略可能なパラメーターを持ちます。  
+ 次の例では、位置によって渡される引数と名前によって渡される引数は、プロシージャを呼び出す方法を示します。 プロシージャが、2 つの省略可能なパラメーター。  
   
- [!code-vb[VbVbalrKeywords#21](../../../visual-basic/language-reference/codesnippet/VisualBasic/optional_1.vb)]  
+ [!code-vb[VbVbalrKeywords#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class8.vb#21)]  
   
-## <a name="see-also"></a>関連項目  
- [パラメーター リスト](../../../visual-basic/language-reference/statements/parameter-list.md)  
- [省略可能なパラメーター](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
- [キーワード](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>関連項目
+
+- [パラメーター リスト](../../../visual-basic/language-reference/statements/parameter-list.md)
+- [省略可能なパラメーター](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
+- [キーワード](../../../visual-basic/language-reference/keywords/index.md)

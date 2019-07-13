@@ -1,18 +1,18 @@
 ---
-title: '&lt;include&gt;(Visual Basic)'
+title: <include> (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - include XML tag
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
-ms.openlocfilehash: 0f143f8c023102f44b41e3898f29d18be0083128
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: d9c1c1a50f0e3530c842a6058e288b8d2be15f95
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940908"
 ---
-# <a name="ltincludegt-visual-basic"></a>&lt;include&gt;(Visual Basic)
+# <a name="include-visual-basic"></a>\<含める > (Visual Basic)
 型と、ソース コード内のメンバーを記述する別のファイルを参照します。  
   
 ## <a name="syntax"></a>構文  
@@ -21,7 +21,7 @@ ms.locfileid: "49349109"
 <include file="filename" path="tagpath[@name='id']" />  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `filename`  
  必須。 文書を含むファイルの名前。 ファイル名をパスで修飾することができます。 囲む`filename`で二重引用符 ("")。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "49349109"
 ## <a name="example"></a>例  
  この例では、`<include>`メンバー ドキュメントのコメントをという名前のファイルからインポートするタグ`commentFile.xml`します。  
   
- [!code-vb[VbVbcnXmlDocComments#4](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/include_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#4)]  
   
  形式、`commentFile.xml`のとおりです。  
   
@@ -59,5 +59,6 @@ ms.locfileid: "49349109"
 </Docs>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>関連項目
+
+- [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)

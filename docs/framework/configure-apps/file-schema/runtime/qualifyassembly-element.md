@@ -1,5 +1,5 @@
 ---
-title: '&lt;qualifyAssembly&gt;要素'
+title: <qualifyAssembly> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#qualifyAssembly
@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bbee999feba5839e66f8eb8c0faaa6e90ca85bd5
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 6a4741c6a4745bdba00fdb525b39b70d0b15e005
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704857"
 ---
-# <a name="ltqualifyassemblygt-element"></a>&lt;qualifyAssembly&gt;要素
+# <a name="qualifyassembly-element"></a>\<qualifyAssembly > 要素
 部分名が使用された場合に動的に読み込む必要があるアセンブリの完全名を指定します。  
   
  \<configuration>  
-\<ランタイム >  
+\<runtime>  
 \<assemblyBinding>  
 \<qualifyAssembly>  
   
@@ -75,7 +75,8 @@ ms.locfileid: "53613324"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [ランタイムがアセンブリを検索する方法](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
-- [NIB:部分アセンブリ参照](https://msdn.microsoft.com/library/ec90f07a-398c-4306-9401-0fc5ff9cb59f)
+## <a name="see-also"></a>関連項目
+
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [ランタイムがアセンブリを検索する方法](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [部分アセンブリ参照](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))

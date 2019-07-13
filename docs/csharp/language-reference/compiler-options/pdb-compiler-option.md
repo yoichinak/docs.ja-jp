@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pdb compiler option [C#]
 - /pdb compiler option [C#]
 ms.assetid: e9d0f96a-5b75-45d6-9765-92538dd5f823
-ms.openlocfilehash: dc7ea6aae6aa429efdf1a2dca23a3d679cb21fb7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b0a566931ac76a3adb191f423a497bc446e280c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526582"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575503"
 ---
 # <a name="-pdb-c-compiler-options"></a>-pdb (C# コンパイラ オプション)
 **-pdb** コンパイラ オプションは、デバッグ シンボル ファイルの場所と名前を指定します。  
@@ -42,7 +42,7 @@ ms.locfileid: "43526582"
 csc -debug -pdb:tt t.cs  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)  
+- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

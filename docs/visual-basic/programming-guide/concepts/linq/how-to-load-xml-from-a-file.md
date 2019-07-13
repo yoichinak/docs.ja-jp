@@ -1,21 +1,21 @@
 ---
-title: '方法: XML ファイルから読み込みます (Visual Basic)'
+title: '方法: XML ファイルから読み込む (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: e2d337ad-8ac8-4671-b694-30e5ca1413b7
-ms.openlocfilehash: fce4ebee075f5e622de17bd5227dd6e4ae9cccd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4f1f9abfa33b76e702b51221715da80c3f66421
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942585"
 ---
-# <a name="how-to-load-xml-from-a-file-visual-basic"></a>方法: XML ファイルから読み込みます (Visual Basic)
+# <a name="how-to-load-xml-from-a-file-visual-basic"></a>方法: XML ファイルから読み込む (Visual Basic)
 このトピックでは、<xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> メソッドを使用して URI から XML を読み込む方法について説明します。  
   
 ## <a name="example"></a>例  
  次の例では、ファイルから XML ドキュメントを読み込む方法を示します。 この例では、books.xml を読み込んで、XML ツリーをコンソールに出力します。  
   
- この例では、「[サンプル XML ファイル: 書籍 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)」の XML ドキュメントを使用します。  
+ この例では、XML ドキュメント、「[サンプル XML ファイル:書籍 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md) を使用します。  
   
 ```vb  
 Dim booksFromFile As XElement = XElement.Load("books.xml")  
@@ -48,5 +48,6 @@ Console.WriteLine(booksFromFile)
 </Catalog>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [(Visual Basic) の XML の解析](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a>関連項目
+
+- [(Visual Basic) の XML の解析](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

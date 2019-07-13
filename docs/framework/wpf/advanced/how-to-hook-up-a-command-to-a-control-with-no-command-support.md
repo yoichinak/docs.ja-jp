@@ -1,5 +1,5 @@
 ---
-title: '方法 : コマンドをサポートしないコントロールにコマンドをフックする'
+title: '方法: コマンドをサポートしないコントロールにコマンドをフックする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - RoutedCommand class [WPF], attaching to a Control
 - classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: dad08f64-700b-46fb-ad3f-fbfee95f0dfe
-ms.openlocfilehash: e6ef78cd7e1578745f0bde5c0e9e799bb5e641a9
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
-ms.translationtype: MT
+ms.openlocfilehash: 3ae45c9a9e33a3cb53ada6e1e5430ae0f9e6c198
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805608"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59216978"
 ---
-# <a name="how-to-hook-up-a-command-to-a-control-with-no-command-support"></a>方法 : コマンドをサポートしないコントロールにコマンドをフックする
+# <a name="how-to-hook-up-a-command-to-a-control-with-no-command-support"></a>方法: コマンドをサポートしないコントロールにコマンドをフックする
 次の例では、コマンドのサポートが組み込まれていない <xref:System.Windows.Controls.Control> に <xref:System.Windows.Input.RoutedCommand> をフックする方法を示します。  コマンドを複数のソースに関連付けるサンプル全体については、「[カスタム RoutedCommand の作成のサンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)」を参照してください。  
   
 ## <a name="example"></a>例  
@@ -29,23 +29,24 @@ ms.locfileid: "34805608"
   
  まず、コマンド ソースが作成されます。  <xref:System.Windows.Controls.Button> はコマンド ソースとして使用されます。  
   
- [!code-xaml[commandWithHandler#CommandHandlerCommandSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandsource)]  
+ [!code-xaml[commandWithHandler#CommandHandlerCommandSource](~/samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandsource)]  
   
- [!code-csharp[CommandHandlerProcedural#CommandHandlerButtonCommandSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandHandlerProcedural/CSharp/Window1.xaml.cs#commandhandlerbuttoncommandsource)]
- [!code-vb[CommandHandlerProcedural#CommandHandlerButtonCommandSource](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbuttoncommandsource)]  
+ [!code-csharp[CommandHandlerProcedural#CommandHandlerButtonCommandSource](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandHandlerProcedural/CSharp/Window1.xaml.cs#commandhandlerbuttoncommandsource)]
+ [!code-vb[CommandHandlerProcedural#CommandHandlerButtonCommandSource](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbuttoncommandsource)]  
   
  次に、<xref:System.Windows.Input.ExecutedRoutedEventHandler> と <xref:System.Windows.Input.CanExecuteRoutedEventHandler> が作成されます。  <xref:System.Windows.Input.ExecutedRoutedEventHandler> では単に <xref:System.Windows.MessageBox> が開かれ、コマンドが実行されたことが示されます。  <xref:System.Windows.Input.CanExecuteRoutedEventHandler> は <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> プロパティを `true` に設定します。  通常、実行可能ハンドラーではより堅牢なチェックが行われ、現在のコマンド ターゲットでコマンドを実行できるかどうかが確認されます。  
   
- [!code-csharp[commandWithHandler#CommandHandlerBothHandlers](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml.cs#commandhandlerbothhandlers)]
- [!code-vb[commandWithHandler#CommandHandlerBothHandlers](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/commandWithHandler/VisualBasic/Window1.xaml.vb#commandhandlerbothhandlers)]  
+ [!code-csharp[commandWithHandler#CommandHandlerBothHandlers](~/samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml.cs#commandhandlerbothhandlers)]
+ [!code-vb[commandWithHandler#CommandHandlerBothHandlers](~/samples/snippets/visualbasic/VS_Snippets_Wpf/commandWithHandler/VisualBasic/Window1.xaml.vb#commandhandlerbothhandlers)]  
   
  最後に、<xref:System.Windows.Input.CommandBinding> がアプリケーションのルート <xref:System.Windows.Window> に作成され、<xref:System.Windows.Input.ApplicationCommands.Open%2A> コマンドにルーティング イベント ハンドラーが関連付けられます。  
   
- [!code-xaml[commandWithHandler#CommandHandlerCommandBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandbinding)]  
+ [!code-xaml[commandWithHandler#CommandHandlerCommandBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandbinding)]  
   
- [!code-csharp[CommandHandlerProcedural#CommandHandlerBindingInit](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandHandlerProcedural/CSharp/Window1.xaml.cs#commandhandlerbindinginit)]
- [!code-vb[CommandHandlerProcedural#CommandHandlerBindingInit](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbindinginit)]  
+ [!code-csharp[CommandHandlerProcedural#CommandHandlerBindingInit](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandHandlerProcedural/CSharp/Window1.xaml.cs#commandhandlerbindinginit)]
+ [!code-vb[CommandHandlerProcedural#CommandHandlerBindingInit](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbindinginit)]  
   
-## <a name="see-also"></a>参照  
- [コマンド実行の概要](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [コマンドをサポートするコントロールにコマンドをフックする](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)
+## <a name="see-also"></a>関連項目
+
+- [コマンド実行の概要](commanding-overview.md)
+- [コマンドをサポートするコントロールにコマンドをフックする](how-to-hook-up-a-command-to-a-control-with-command-support.md)

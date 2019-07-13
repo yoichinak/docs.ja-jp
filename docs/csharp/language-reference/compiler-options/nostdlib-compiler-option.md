@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -nostdlib compiler option [C#]
 - /nostdlib compiler option [C#]
 ms.assetid: ec197989-fa49-4725-a455-e06b551eb65f
-ms.openlocfilehash: 70007c74efe9a41bdfc15e8fa7daf3c8fc0221ed
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cf87d8d2ac4531142288a8637f7fbeb9139382ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506696"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54545830"
 ---
 # <a name="-nostdlib-c-compiler-options"></a>-nostdlib (C# コンパイラ オプション)
 
@@ -48,6 +48,6 @@ ms.locfileid: "43506696"
 
 このコンパイラ オプションをプログラムで設定する方法については、「 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.NoStdLib%2A>」をご覧ください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)

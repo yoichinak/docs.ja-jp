@@ -2,11 +2,12 @@
 title: System.ServiceModel.TxCompletionStatusCompletedForAsyncAbort
 ms.date: 03/30/2017
 ms.assetid: 155c3203-2e17-4709-b896-2254e22da45e
-ms.openlocfilehash: a243acc3d8a17e4a53b3d05e3420f481f7b6dc6b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f84cc9336d6cce7d8c477a1feb6caf45b0662177
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996932"
 ---
 # <a name="systemservicemodeltxcompletionstatuscompletedforasyncabort"></a>System.ServiceModel.TxCompletionStatusCompletedForAsyncAbort
 非同期中止が実行されたため、指定された操作の指定のトランザクションは完了されました。  
@@ -17,7 +18,8 @@ ms.lasthandoff: 05/04/2018
 ## <a name="troubleshooting"></a>トラブルシューティング  
  予期された中止ではない場合は、すべてのシステム ログを調べて中止の原因を確認してください。  
   
-## <a name="see-also"></a>関連項目  
- [トレース](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [トレースを使用したアプリケーションのトラブルシューティング](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [管理と診断](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>関連項目
+
+- [トレース](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [トレースを使用したアプリケーションのトラブルシューティング](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [管理と診断](../../../../../docs/framework/wcf/diagnostics/index.md)

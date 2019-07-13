@@ -1,5 +1,5 @@
 ---
-title: '方法 : Windows フォームの RichTextBox コントロールにおける書式属性の変更を確認する'
+title: '方法: Windows フォームの RichTextBox コントロールにおける書式属性の変更を確認する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - text boxes [Windows Forms], determining font changes
 - SelChange event
 ms.assetid: bdfed015-f77a-41e5-b38f-f8629b2fa166
-ms.openlocfilehash: 789a0a25c65185b101ef427ff62871fa490c7f1d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a90affde9de36f1c83d5b7c21b40580cdf53402e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972290"
 ---
-# <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>方法 : Windows フォームの RichTextBox コントロールにおける書式属性の変更を確認する
-Windows フォームの一般的な用途<xref:System.Windows.Forms.RichTextBox>コントロールのフォント オプションなどの段落のスタイル属性を含むテキストは、書式設定します。 アプリケーションは、テキストの多くのワード プロセッシング アプリケーションと同様に、ツールバーを表示するために書式設定の変更を追跡する必要があります。  
+# <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>方法: Windows フォームの RichTextBox コントロールにおける書式属性の変更を確認する
+Windows フォームの一般的な用途<xref:System.Windows.Forms.RichTextBox>コントロールがフォントのオプションや段落スタイルなどの属性を持つテキストを書式設定します。 アプリケーションは、多くのワード プロセッシング アプリケーションと同様に、ツールバーを表示できるように書式設定文字列のすべての変更を追跡する必要があります。  
   
 ### <a name="to-respond-to-changes-in-formatting-attributes"></a>属性の書式設定の変更に応答するには  
   
-1.  コードを記述、<xref:System.Windows.Forms.RichTextBox.SelectionChanged>イベント ハンドラー属性の値に応じて適切なアクションを実行します。 次の例の値に応じてツール バー ボタンの外観を変更する、<xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A>プロパティです。 ツール バー ボタンは、コントロール内にカーソルが移動したときにのみ更新されます。  
+1. コードを記述、<xref:System.Windows.Forms.RichTextBox.SelectionChanged>属性の値に応じて適切なアクションを実行するイベント ハンドラー。 次の例の値に応じて、ツール バー ボタンの外観を変更する、<xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A>プロパティ。 ツール バー ボタンは、コントロールのカーソルが移動したときにのみ更新されます。  
   
-     次の例にフォームを前提としています、<xref:System.Windows.Forms.RichTextBox>コントロールと<xref:System.Windows.Forms.ToolBar>ツール バー ボタンが含まれるコントロール。 ツールバーとツール バー ボタンの詳細については、次を参照してください。[する方法: ツール バー コントロールの追加ボタン](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)です。  
+     次の例でフォームを前提としています、<xref:System.Windows.Forms.RichTextBox>コントロールと<xref:System.Windows.Forms.ToolBar>ツール バー ボタンを格納しているコントロール。 ツールバーとツールバー ボタンの詳細については、次を参照してください。[方法。ツール バー コントロールにボタンを追加](how-to-add-buttons-to-a-toolbar-control.md)します。  
   
     ```vb  
     ' The following code assumes the existence of a toolbar control  
@@ -80,8 +80,9 @@ Windows フォームの一般的な用途<xref:System.Windows.Forms.RichTextBox>
        }  
     ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.RichTextBox.SelectionChanged>  
- <xref:System.Windows.Forms.RichTextBox>  
- [RichTextBox コントロール](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
- [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Forms.RichTextBox.SelectionChanged>
+- <xref:System.Windows.Forms.RichTextBox>
+- [RichTextBox コントロール](richtextbox-control-windows-forms.md)
+- [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)

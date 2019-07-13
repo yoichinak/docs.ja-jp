@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c8f4cffd718fffa9145e1082092ecec45b80a2ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1dd3cf7e4badf8caa711f2a1b972d9fa14215204
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451060"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752133"
 ---
 # <a name="corprfmisc-enumeration"></a>COR_PRF_MISC 列挙型
 特殊な識別子を指定する定数値を含めます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum {  
     PROFILER_PARENT_UNKNOWN = 0xFFFFFFFD,  
     PROFILER_GLOBAL_CLASS   = 0xFFFFFFFE,  
@@ -40,18 +40,19 @@ typedef enum {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`PROFILER_PARENT_UNKNOWN`|によって使用される既定の識別子[icorprofilerinfo::getmoduleinfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md)モジュールのアセンブリにアタッチされていません。|  
-|`PROFILER_GLOBAL_CLASS`|クラスに属していないグローバル定数の既定のクラス識別子。|  
-|`PROFILER_GLOBAL_MODULE`|モジュールに属していないグローバル オブジェクトの既定のモジュールの識別子。|  
+|`PROFILER_PARENT_UNKNOWN`|使用される既定の識別子[icorprofilerinfo::getmoduleinfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md)モジュールのアセンブリに関連付けられていません。|  
+|`PROFILER_GLOBAL_CLASS`|クラスに属していないグローバル定数の既定のクラス id。|  
+|`PROFILER_GLOBAL_MODULE`|モジュールに属していないグローバル オブジェクトの既定のモジュール識別子。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー** : CorProf.idl、CorProf.h  
+ **ヘッダー:** CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [列挙型のプロファイリング](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>関連項目
+
+- [列挙型のプロファイリング](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

@@ -1,6 +1,0 @@
-# [Visual Basic における配列](index.md)
-## [配列の次元](array-dimensions.md)
-## [方法: 配列変数を初期化する](how-to-initialize-an-array-variable.md)
-## [方法: 配列を並べ替える](how-to-sort-an-array.md)
-## [方法 : 配列を別の配列に代入する](how-to-assign-one-array-to-another-array.md)
-## [配列のトラブルシューティング](troubleshooting-arrays.md)

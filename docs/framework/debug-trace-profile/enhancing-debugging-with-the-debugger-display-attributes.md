@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4150658f713e626c5578c21cfada0f6410cbd37b
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 6663b4875fc2c3698b612a4958140ba199ea2669
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873256"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631918"
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>デバッガー表示属性によるデバッグ機能の拡張
 
@@ -45,11 +45,11 @@ class MyHashtable
 ## <a name="using-the-debuggerbrowsableattribute"></a>DebuggerBrowsableAttribute の使用
  <xref:System.Diagnostics.DebuggerBrowsableAttribute> をフィールドまたはプロパティに適用して、デバッガー ウィンドウにフィールドまたはプロパティを表示する方法を指定します。 この属性のコンストラクターは、次の状態のいずれかを指定する <xref:System.Diagnostics.DebuggerBrowsableState> 列挙値を 1 つ取得します。
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.Never> は、データ ウィンドウにメンバーが表示されないことを示します。  たとえば、この値をフィールドで <xref:System.Diagnostics.DebuggerBrowsableAttribute> に使用すると、そのフィールドが階層から削除され、型のインスタンスのプラス記号 (+) をクリックして囲む型を展開したときに、そのフィールドが表示されなくなります。
+- <xref:System.Diagnostics.DebuggerBrowsableState.Never> は、データ ウィンドウにメンバーが表示されないことを示します。  たとえば、この値をフィールドで <xref:System.Diagnostics.DebuggerBrowsableAttribute> に使用すると、そのフィールドが階層から削除され、型のインスタンスのプラス記号 (+) をクリックして囲む型を展開したときに、そのフィールドが表示されなくなります。
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed> は、メンバーが表示されますが、既定で展開されていないことを示します。  これが既定の動作です。
+- <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed> は、メンバーが表示されますが、既定で展開されていないことを示します。  これが既定の動作です。
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> は、メンバー自体は表示されませんが、メンバーが配列またはコレクションである場合は、その構成オブジェクトが表示されることを示します。
+- <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> は、メンバー自体は表示されませんが、メンバーが配列またはコレクションである場合は、その構成オブジェクトが表示されることを示します。
 
 > [!NOTE]
 >  .NET Framework version 2.0 では、<xref:System.Diagnostics.DebuggerBrowsableAttribute> は Visual Basic でサポートされません。

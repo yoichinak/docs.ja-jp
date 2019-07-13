@@ -2,12 +2,12 @@
 title: C# の概要 - 開発ツールに対する理解を深める
 description: この記事では、コンピューターで C# アプリケーションと .NET アプリケーションを開発するためのツールの基礎を提供します。
 ms.date: 10/23/2018
-ms.openlocfilehash: cf5bf68c1497bf62826656aa9cd2bd981128d3a2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: db0b3228272a17feaa11ec754fa0aa4952a0d1ee
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129988"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58920663"
 ---
 # <a name="become-familiar-with-the-net-development-tools"></a>.NET 開発ツールに対する理解を深める
 
@@ -37,12 +37,6 @@ Mac、PC、または Linux 上でローカルの開発環境を設定する手�
 [分岐とループ](branches-and-loops-local.md) チュートリアルでは、変数に格納されている値に基づき、コード実行のさまざまなパスを選択することの基本を説明します。 プログラムが決定して異なる操作を選択する上で基本となる、制御フローの基礎を学習します。
 
 このチュートリアルでは、[Hello world](hello-world.yml) レッスンと [C# における数値](numbers-in-csharp-local.md)レッスンを修了していることが前提条件となります。
-
-## <a name="string-interpolationinterpolated-strings-localmd"></a>[文字列補間](interpolated-strings-local.md)
-
-[文字列補間](interpolated-strings-local.md)チュートリアルでは、文字列に値を挿入する方法について説明します。 C# の埋め込み式を使用して挿入文字列を作成する方法と、結果文字列の書式設定を制御する方法について学習します。
-
-このチュートリアルでは、「[Hello World](hello-world.yml)」、「[C# における数値](numbers-in-csharp-local.md)」、「[分岐とループ](branches-and-loops-local.md)」の各レッスンを完了していることを前提としています。
 
 ## <a name="list-collectionarrays-and-collectionsmd"></a>[リスト コレクション](arrays-and-collections.md)
 

@@ -16,46 +16,46 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1455ce7c3b07809d1dead8e98019c991475eb02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 65af5303468904ee40da4d567381782af70bfb38
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442148"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776502"
 ---
 # <a name="waitortimercallback-function-pointer"></a>WAITORTIMERCALLBACK 関数ポインター
-待機を処理するホストに通知する関数を指します (<xref:System.Threading.WaitHandle>) がされたシグナル状態またはタイムアウトしました。  
+待機を処理するホストに通知する関数を指します (<xref:System.Threading.WaitHandle>) がされたシグナルまたはタイムアウトします。  
   
- この関数ポインターが削除されて、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]です。  
+ この関数ポインターは、.NET Framework 4 では廃止されました。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef VOID (__stdcall *WAITORTIMERCALLBACK) (  
     [in] PVOID lpParameter,  
     [in] BOOL  TimerOrWaitFired  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `lpParameter`  
  [in]ホストによって定義された情報を格納しているオブジェクトへのポインター。  
   
  `TimerOrWaitFired`  
- [in]`true`待機ハンドルがタイムアウトした場合または`false`がタイムアウトした場合。  
+ [in]`true`待機ハンドルがタイムアウトした場合または`false`シグナル通知された場合。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  関数`WAITORTIMERCALLBACK`ポイントはコールバック関数であり、ホスト アプリケーションの作成者によって実装する必要があります。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   
  **ライブラリ:** MSCorWks.dll  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- 
-  [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>関連項目
+
+- [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

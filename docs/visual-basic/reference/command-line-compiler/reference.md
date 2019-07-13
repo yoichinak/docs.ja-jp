@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: 203de45ed3a9e91adaf3237a827df6353f384bfb
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2394a23ddd59d09ce53c78fc4486fc5bae9e8516
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182997"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583361"
 ---
 # <a name="-reference-visual-basic"></a>-参照 (Visual Basic)
 コンパイラで型情報をコンパイルする現在のプロジェクトで使用できる、指定されたアセンブリでようにします。  
@@ -38,15 +38,15 @@ ms.locfileid: "50182997"
   
  アセンブリ (アセンブリ A) を参照する場合は、別のアセンブリ (アセンブリ B) を参照する、場合、アセンブリ B を参照する必要があります。  
   
--   アセンブリ A の型がアセンブリ B の型から継承されているか、アセンブリ B のインターフェイスを実装する。  
+- アセンブリ A の型がアセンブリ B の型から継承されているか、アセンブリ B のインターフェイスを実装する。  
   
--   アセンブリ B の戻り値の型またはパラメーターの型を使用するフィールド、プロパティ、イベント、またはメソッドが呼び出される。  
+- アセンブリ B の戻り値の型またはパラメーターの型を使用するフィールド、プロパティ、イベント、またはメソッドが呼び出される。  
   
  使用[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)を 1 つ以上のアセンブリ参照があるディレクトリを指定します。  
   
  コンパイラがアセンブリ (モジュールではなく) 内の型を認識するには、型の解決を強制する必要があります。 これを実行する方法の 1 つの例では、型のインスタンスを定義します。 その他の方法、コンパイラのアセンブリ内の型名を解決するのには利用できます。 たとえば、アセンブリ内の型から継承する場合、型名し既知となるコンパイラに。  
   
- 参照がよく使用される、Vbc.rsp 応答ファイル[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]アセンブリでは、既定で使用されます。 使用して、`-noconfig`コンパイラが Vbc.rsp を使用したくない場合。  
+ 一般、参照するには、.NET Framework アセンブリが使用され、Vbc.rsp 応答ファイルは、既定で使用されます。 使用して、`-noconfig`コンパイラが Vbc.rsp を使用したくない場合。  
   
  `-reference` の省略形は `/r` です。  
   
@@ -57,9 +57,10 @@ ms.locfileid: "50182997"
 vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)  
- [-ターゲット (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
- [Public](../../../visual-basic/language-reference/modifiers/public.md)  
- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>関連項目
+
+- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
+- [-ターゲット (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [Public](../../../visual-basic/language-reference/modifiers/public.md)
+- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

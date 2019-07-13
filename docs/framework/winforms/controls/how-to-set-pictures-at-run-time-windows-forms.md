@@ -1,5 +1,5 @@
 ---
-title: '方法 : 実行時にピクチャを設定する (Windows フォーム)'
+title: '方法: (Windows フォーム) の実行時にピクチャを設定します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,21 +13,21 @@ helpviewer_keywords:
 - images [Windows Forms], adding with PictureBox control [Windows Forms]
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
-ms.openlocfilehash: fedddf56966c3ab11a1dfb20c1d4cbd8a45fb1a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8275961a8f11332a04f89561fac779f4cdf9f8d8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533475"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64609412"
 ---
-# <a name="how-to-set-pictures-at-run-time-windows-forms"></a>方法 : 実行時にピクチャを設定する (Windows フォーム)
+# <a name="how-to-set-pictures-at-run-time-windows-forms"></a>方法: (Windows フォーム) の実行時にピクチャを設定します。
 Windows フォームが表示されるイメージをプログラムで設定できる<xref:System.Windows.Forms.PictureBox>コントロール。  
   
-### <a name="to-set-a-picture-programmatically"></a>画像をコードから設定するには  
+### <a name="to-set-a-picture-programmatically"></a>画像をプログラムで設定するには  
   
--   設定、<xref:System.Windows.Forms.PictureBox.Image%2A>プロパティを使用して、<xref:System.Drawing.Image.FromFile%2A>のメソッド、<xref:System.Drawing.Image>クラスです。  
+- 設定、<xref:System.Windows.Forms.PictureBox.Image%2A>プロパティを使用して、<xref:System.Drawing.Image.FromFile%2A>のメソッド、<xref:System.Drawing.Image>クラス。  
   
-     次の例では、イメージの場所の設定パスは、マイ ドキュメント フォルダーです。 これは、Windows オペレーティング システムを実行しているほとんどのコンピューターがこのディレクトリを含めることを想定するためです。 また、このようにすることで、最小限のシステム アクセス レベルしか持たないユーザーもアプリケーションを安全に実行できるようになります。 次の例にフォームを前提としています、<xref:System.Windows.Forms.PictureBox>コントロールが既に追加されています。  
+     次の例では、イメージの場所に設定されているパスは、My Documents フォルダーです。 これは、Windows オペレーティング システムを実行しているほとんどのコンピューターにはでこのディレクトリが含まれていると想定できます。 また、このようにすることで、最小限のシステム アクセス レベルしか持たないユーザーもアプリケーションを安全に実行できるようになります。 次の例でフォームを前提としています、<xref:System.Windows.Forms.PictureBox>コントロールが既に追加されています。  
   
     ```vb  
     Private Sub LoadNewPict()  
@@ -65,9 +65,9 @@ Windows フォームが表示されるイメージをプログラムで設定で
        }  
     ```  
   
-### <a name="to-clear-a-graphic"></a>画像を消去するには  
+### <a name="to-clear-a-graphic"></a>グラフィックをクリアするには  
   
--   最初に、イメージで使用されているメモリを解放し、グラフィックをクリアします。 ガベージ コレクションは、メモリ管理が問題になる場合後で、メモリを解放します。  
+- 最初に、イメージで使用されているメモリを解放し、グラフィックをオフにします。 メモリ管理が問題になる場合は、ガベージ コレクションがメモリを後で解放されます。  
   
     ```vb  
     If Not (PictureBox1.Image Is Nothing) Then  
@@ -93,14 +93,15 @@ Windows フォームが表示されるイメージをプログラムで設定で
     ```  
   
     > [!NOTE]
-    >  使用する必要があります理由の詳細については、<xref:System.Drawing.Image.Dispose%2A>この方法でメソッドを参照してください[アンマネージ リソースのクリーンアップ](../../../../docs/standard/garbage-collection/unmanaged.md)です。  
+    >  使用する必要があります理由の詳細については、<xref:System.Drawing.Image.Dispose%2A>この方法でメソッドを参照してください[アンマネージ リソースのクリーンアップ](../../../standard/garbage-collection/unmanaged.md)します。  
   
-     このコードは、画像がデザイン時にコントロールに読み込まれた場合でも、イメージがクリアされます。  
+     グラフィックは、デザイン時に、コントロールに読み込まれた場合でも、このコードは、イメージにクリアされます。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.PictureBox>  
- <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>  
- [PictureBox コントロールの概要](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)  
- [方法: デザイナーを使用してピクチャを読み込む](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)  
- [方法: 実行時にピクチャのサイズまたは配置を変更する](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  
- [PictureBox コントロール](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Forms.PictureBox>
+- <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>
+- [PictureBox コントロールの概要](picturebox-control-overview-windows-forms.md)
+- [方法: デザイナーを使用してピクチャを読み込む.](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [方法: 実行時にサイズまたは画像の配置を変更します。](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [PictureBox コントロール](picturebox-control-windows-forms.md)

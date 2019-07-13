@@ -2,15 +2,15 @@
 title: SQL Server Compact および LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 59022359-a5a2-4c42-9a6a-5c0259c3ad17
-ms.openlocfilehash: 1229fcb285038875950776a924870c9be6bef13b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5fa8f8ba2b0c5bdb92ad507bd48839a26837ba41
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529989"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742867"
 ---
 # <a name="sql-server-compact-and-linq-to-sql"></a>SQL Server Compact および LINQ to SQL
-SQL Server Compact は、Visual Studio にインストールされている既定のデータベースです。 詳細については、次を参照してください。 [PAVE 経由でを使用して SQL Server Compact (Visual Studio)](https://msdn.microsoft.com/library/13320dd1-94e5-4077-bf76-8df253695ccc)します。  
+SQL Server Compact は、Visual Studio にインストールされている既定のデータベースです。 詳細については、次を参照してください。[を使用して SQL Server Compact (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/aa983321(v=vs.110))します。  
   
  ここでは、使用量、構成、機能セット、およびスコープの主な相違点の概要について[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]をサポートします。  
   
@@ -19,28 +19,29 @@ SQL Server Compact は、Visual Studio にインストールされている既�
   
  これには、次のような特徴があります。  
   
--   SQL Server Compact は DLL としてパッケージ化されており、データベース ファイル (.sdf 拡張子) に対して直接使用できます。  
+- SQL Server Compact は DLL としてパッケージ化されており、データベース ファイル (.sdf 拡張子) に対して直接使用できます。  
   
--   SQL Server Compact は、クライアント アプリケーションと同じプロセスで実行されます。 SQL Server Compact との通信の効率性はそのため、SQL Server と通信するよりも高い。 その一方で、SQL Server Compact はコストを伴うマネージ コードとアンマネージ コード間の相互運用性が必要です。  
+- SQL Server Compact は、クライアント アプリケーションと同じプロセスで実行されます。 SQL Server Compact との通信の効率性はそのため、SQL Server と通信するよりも高い。 その一方で、SQL Server Compact はコストを伴うマネージ コードとアンマネージ コード間の相互運用性が必要です。  
   
--   SQL Server Compact DLL のサイズが小さです。 このため、アプリケーション全体のサイズが抑制されます。  
+- SQL Server Compact DLL のサイズが小さです。 このため、アプリケーション全体のサイズが抑制されます。  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ランタイムおよび SQLMetal コマンド ライン ツールが SQL Server Compact をサポートしています。  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ランタイムおよび SQLMetal コマンド ライン ツールが SQL Server Compact をサポートしています。  
   
--   [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] では、SQL Server Compact はサポートしていません。  
+- オブジェクト リレーショナル デザイナーは SQL Server Compact でサポートしません。  
   
 ## <a name="feature-set"></a>機能セット  
  影響を与える次の方法で、SQL Server Compact の機能セットが SQL Server の機能セットよりはるかに簡単[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]アプリケーション。  
   
--   SQL Server Compact は、ストアド プロシージャまたはビューをサポートしません。  
+- SQL Server Compact は、ストアド プロシージャまたはビューをサポートしません。  
   
--   SQL Server Compact は、一部のデータ型と SQL 関数のみをサポートします。  
+- SQL Server Compact は、一部のデータ型と SQL 関数のみをサポートします。  
   
--   SQL Server Compact は、一部の SQL コンストラクトのみをサポートします。  
+- SQL Server Compact は、一部の SQL コンストラクトのみをサポートします。  
   
--   SQL Server Compact は、最小限のオプティマイザーを備えています。 一部のクエリがタイムアウトになる可能性があることができます。  
+- SQL Server Compact は、最小限のオプティマイザーを備えています。 一部のクエリがタイムアウトになる可能性があることができます。  
   
--   SQL Server Compact は、部分信頼をサポートしません。  
+- SQL Server Compact は、部分信頼をサポートしません。  
   
-## <a name="see-also"></a>関連項目  
- [参照](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+## <a name="see-also"></a>関連項目
+
+- [参照](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

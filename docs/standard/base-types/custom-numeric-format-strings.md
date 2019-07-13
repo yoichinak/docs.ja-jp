@@ -18,17 +18,16 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83f3abb2c77461b74e388dcb421fac6c19a43655
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4e55ae32fc83d7879de9d1ecb743d17598bc175d
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47205068"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268218"
 ---
 # <a name="custom-numeric-format-strings"></a>カスタム数値書式指定文字列
 
 1 つ以上のカスタム数値指定子で構成されるカスタム数値書式指定文字列を作成して、数値データの書式設定方法を定義できます。 カスタム数値書式指定文字列は、 [標準の数値書式指定文字列](../../../docs/standard/base-types/standard-numeric-format-strings.md)ではない任意の書式指定文字列です。  
-  
 
  カスタム数値書式指定文字列は、すべての数値型の `ToString` メソッドの一部のオーバーロードでサポートされています。 たとえば、 <xref:System.Int32.ToString%28System.String%29> 型の <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> メソッドおよび <xref:System.Int32> メソッドに数値書式指定文字列を指定できます。 カスタム数値書式指定文字列は、.NET の[複合書式指定機能](../../../docs/standard/base-types/composite-formatting.md)でもサポートされています。この機能を使用するメソッドには、<xref:System.Console> クラスおよび <xref:System.IO.StreamWriter> クラスの一部の `Write` メソッドと `WriteLine` メソッド、<xref:System.String.Format%2A?displayProperty=nameWithType> メソッド、<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> メソッドがあります。 [文字列補間](../../csharp/language-reference/tokens/interpolated.md)機能は、カスタム数値書式指定文字列もサポートしています。  
   
@@ -37,19 +36,19 @@ ms.locfileid: "47205068"
   
 <a name="table"></a> 次の表に、カスタム数値書式指定子の説明および書式指定子ごとのサンプル出力を示します。 カスタム数値書式指定文字列の使用方法については、「 [メモ](#NotesCustomFormatting) 」を参照してください。それらを使用する包括的な例については、「 [例](#example) 」を参照してください。  
   
-|書式指定子|名前|説明|使用例|  
+|書式指定子|name|説明|使用例|  
 |----------------------|----------|-----------------|--------------|  
-|"0"|ゼロ プレースホルダー|対応する数字でゼロを置き換えます。置き換えが行われるのは、対応する数字が存在する場合です。それ以外の場合は、結果の文字列にはゼロが表示されます。<br /><br /> 詳細については、「 ["0" カスタム指定子](#Specifier0)」を参照してください。|1234.5678 ("00000") -> 01235<br /><br /> 0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|  
-|"#"|桁プレースホルダー|対応する数字で "#" 記号を置き換えます。置き換えが行われるのは、対応する数字が存在する場合です。それ以外の場合は、結果の文字列に数字は表示されません。<br /><br /> 入力文字列の対応する数字が意味を持たない 0 の場合、結果の文字列に数字は表示されません。 たとえば、0003 ("####") -> 3 です。<br /><br /> 詳細については、「 ["#" カスタム指定子](#SpecifierD)」を参照してください。|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#.##", en-US) -> .46<br /><br /> 0.45678 ("#.##", fr-FR) -> ,46|  
-|"."|小数点|結果の文字列の小数点位置を決定します。<br /><br /> 詳細については、「["." カスタム指定子](#SpecifierPt)」を参照してください。|0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|  
-|","|桁区切り記号および数値の位取り|桁区切り記号および数値位取り指定子の両方として機能します。 桁区切り記号としては、各グループの間に、ローカライズされた桁区切り記号文字を挿入します。 数値位取り指定子としては、指定されたコンマごとに、数値を 1000 で除算します。<br /><br /> 詳細については、「 ["," カスタム指定子](#SpecifierTh)」を参照してください。|桁区切り記号:<br /><br /> 2147483647 ("##,#", en-US) -> 2,147,483,647<br /><br /> 2147483647 ("##,#", es-ES) -> 2.147.483.647<br /><br /> 位取り指定子:<br /><br /> 2147483647 ("#,#,,", en-US) -> 2,147<br /><br /> 2147483647 ("#,#,,", es-ES) -> 2.147|  
-|"%"|パーセント プレースホルダー|数値に 100 を乗算し、結果の文字列に、ローカライズされたパーセント記号を挿入します。<br /><br /> 詳細については、「 ["%" カスタム指定子](#SpecifierPct)」を参照してください。|0.3697 ("%#0.00", en-US) -> %36.97<br /><br /> 0.3697 ("%#0.00", el-GR) -> %36,97<br /><br /> 0.3697 ("##.0 %", en-US) -> 37.0 %<br /><br /> 0.3697 ("##.0 %", el-GR) -> 37,0 %|  
-|"‰"|パーミル プレースホルダー|数値に 1000 を乗算し、結果の文字列にローカライズされたパーミル記号を挿入します。<br /><br /> 詳細については、「 ["‰" カスタム指定子](#SpecifierPerMille)」を参照してください。|0.03697 ("#0.00‰", en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36,97‰|  
-|"E0"<br /><br /> "E+0"<br /><br /> "E-0"<br /><br /> "E0"<br /><br /> "E+0"<br /><br /> "E-0"|指数表記|後に 0 (ゼロ) が 1 つ以上続く場合に、指数表記を使用して結果の書式を設定します。 大文字 "E" と小文字 "e" は、結果の文字列の指数記号を大文字にするか小文字にするかを示します。 "E" 文字または "e" 文字の後に続くゼロの数によって、指数部の最小桁数が決まります。 正符号 (+) は、符号文字が指数部の前に常に挿入されることを示します。 負符号 (-) は、指数部が負の値の場合にだけその前に符号文字が挿入されることを示します。<br /><br /> 詳細については、「 ["E" カスタム指定子と "e" カスタム指定子](#SpecifierExponent)」を参照してください。|987654 ("#0.0e0") -> 98.8e4<br /><br /> 1503.92311 ("0.0##e+00") -> 1.504e+03<br /><br /> 1.8901385E-16 ("0.0e+00") -> 1.9e-16|  
-|"\\"|エスケープ文字|この文字の次の文字はカスタム書式指定子ではなくリテラルとして解釈されます。<br /><br /> 詳細については、「["\\" エスケープ文字](#SpecifierEscape)」を参照してください。|987654 ("\\###00\\#") -> #987654#|  
-|'*文字列*'<br /><br /> "*文字列*"|リテラル文字列区切り記号|囲まれた文字列が結果の文字列にそのままコピーされることを示します。<br/><br/>詳細については、「[文字リテラル](#character-literals)」を参照してください。|68 ("# 'degrees'") -> 68 degrees<br /><br /> 68 ("#' degrees'") -> 68 degrees|  
-|;|セクション区切り記号|正の数値、負の数値、およびゼロの数値に対して、別々の書式指定文字列を使用してセクションを定義します。<br /><br /> 詳細については、「 [";" セクション区切り記号](#SectionSeparator)」を参照してください。|12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#);-\0-") -> -0-<br /><br /> -12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)<br /><br /> 12.345 ("#0.0#;(#0.0#)") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#)") -> 0.0<br /><br /> -12.345 ("#0.0#;(#0.0#)") -> (12.35)|  
-|その他|上記以外のすべての文字|文字が結果の文字列にそのままコピーされます。<br/><br/>詳細については、「[文字リテラル](#character-literals)」を参照してください。|68 ("# °") -> 68 °|  
+|"0"|ゼロ プレースホルダー|対応する数字でゼロを置き換えます。置き換えが行われるのは、対応する数字が存在する場合です。それ以外の場合は、結果の文字列にはゼロが表示されます。<br /><br /> 詳細情報:["0" カスタム指定子](#Specifier0)。|1234.5678 ("00000") -> 01235<br /><br /> 0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|  
+|"#"|桁プレースホルダー|対応する数字で "#" 記号を置き換えます。置き換えが行われるのは、対応する数字が存在する場合です。それ以外の場合は、結果の文字列に数字は表示されません。<br /><br /> 入力文字列の対応する数字が意味を持たない 0 の場合、結果の文字列に数字は表示されません。 たとえば、0003 ("####") -> 3 です。<br /><br /> 詳細情報:["#" カスタム指定子](#SpecifierD)。|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#.##", en-US) -> .46<br /><br /> 0.45678 ("#.##", fr-FR) -> ,46|  
+|"."|小数点|結果の文字列の小数点位置を決定します。<br /><br /> 詳細情報:["."カスタム指定子](#SpecifierPt)」を参照してください。|0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|  
+|","|桁区切り記号および数値の位取り|桁区切り記号および数値位取り指定子の両方として機能します。 桁区切り記号としては、各グループの間に、ローカライズされた桁区切り記号文字を挿入します。 数値位取り指定子としては、指定されたコンマごとに、数値を 1000 で除算します。<br /><br /> 詳細情報:["," カスタム指定子](#SpecifierTh)。|桁区切り記号:<br /><br /> 2147483647 ("##,#", en-US) -> 2,147,483,647<br /><br /> 2147483647 ("##,#", es-ES) -> 2.147.483.647<br /><br /> 位取り指定子:<br /><br /> 2147483647 ("#,#,,", en-US) -> 2,147<br /><br /> 2147483647 ("#,#,,", es-ES) -> 2.147|  
+|"%"|パーセント プレースホルダー|数値に 100 を乗算し、結果の文字列に、ローカライズされたパーセント記号を挿入します。<br /><br /> 詳細情報:["%" カスタム指定子](#SpecifierPct)。|0.3697 ("%#0.00", en-US) -> %36.97<br /><br /> 0.3697 ("%#0.00", el-GR) -> %36,97<br /><br /> 0.3697 ("##.0 %", en-US) -> 37.0 %<br /><br /> 0.3697 ("##.0 %", el-GR) -> 37,0 %|  
+|"‰"|パーミル プレースホルダー|数値に 1000 を乗算し、結果の文字列にローカライズされたパーミル記号を挿入します。<br /><br /> 詳細情報:["‰" カスタム指定子](#SpecifierPerMille)。|0.03697 ("#0.00‰", en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36,97‰|  
+|"E0"<br /><br /> "E+0"<br /><br /> "E-0"<br /><br /> "E0"<br /><br /> "E+0"<br /><br /> "E-0"|指数表記|後に 0 (ゼロ) が 1 つ以上続く場合に、指数表記を使用して結果の書式を設定します。 大文字 "E" と小文字 "e" は、結果の文字列の指数記号を大文字にするか小文字にするかを示します。 "E" 文字または "e" 文字の後に続くゼロの数によって、指数部の最小桁数が決まります。 正符号 (+) は、符号文字が指数部の前に常に挿入されることを示します。 負符号 (-) は、指数部が負の値の場合にだけその前に符号文字が挿入されることを示します。<br /><br /> 詳細情報:["E" カスタム指定子と "e" カスタム指定子](#SpecifierExponent)。|987654 ("#0.0e0") -> 98.8e4<br /><br /> 1503.92311 ("0.0##e+00") -> 1.504e+03<br /><br /> 1.8901385E-16 ("0.0e+00") -> 1.9e-16|  
+|"\\"|エスケープ文字|この文字の次の文字はカスタム書式指定子ではなくリテラルとして解釈されます。<br /><br /> 詳細情報:["\\" エスケープ文字](#SpecifierEscape)。|987654 ("\\###00\\#") -> #987654#|  
+|'*文字列*'<br /><br /> "*文字列*"|リテラル文字列区切り記号|囲まれた文字列が結果の文字列にそのままコピーされることを示します。<br/><br/>詳細情報:[文字リテラル](#character-literals)。|68 ("# 'degrees'") -> 68 degrees<br /><br /> 68 ("#' degrees'") -> 68 degrees|  
+|;|セクション区切り記号|正の数値、負の数値、およびゼロの数値に対して、別々の書式指定文字列を使用してセクションを定義します。<br /><br /> 詳細情報:[";" セクション区切り記号](#SectionSeparator)。|12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#);-\0-") -> -0-<br /><br /> -12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)<br /><br /> 12.345 ("#0.0#;(#0.0#)") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#)") -> 0.0<br /><br /> -12.345 ("#0.0#;(#0.0#)") -> (12.35)|  
+|その他|上記以外のすべての文字|文字が結果の文字列にそのままコピーされます。<br/><br/>詳細情報:[文字リテラル](#character-literals)。|68 ("# °") -> 68 °|  
   
  以降では、それぞれのカスタム数値書式指定子について詳しく説明します。  
 
@@ -86,7 +85,7 @@ ms.locfileid: "47205068"
  欠落している数字や先頭のゼロをスペースに置き換える結果の文字列を戻すには、次の例に示すように、 [複合書式指定機能](../../../docs/standard/base-types/composite-formatting.md) を使用して、フィールド幅を指定します。  
   
  [!code-cpp[Formatting.Numeric.Custom#12](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/SpaceOrDigit1.cpp#12)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
+ [!code-csharp[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
  [!code-vb[Formatting.Numeric.Custom#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/SpaceOrDigit1.vb#12)]  
   
  [表のトップへ](#table)  
@@ -109,11 +108,11 @@ ms.locfileid: "47205068"
 ## <a name="the--custom-specifier"></a>"," カスタム指定子  
  "," 文字は、桁区切り記号および数値位取り指定子の両方として機能します。  
   
--   桁区切り記号: 数値の整数部の桁を書式設定する 2 つの桁プレースホルダー (0 または #) の間に 1 つ以上のコンマが指定されている場合は、出力の整数部分で各数値グループの間に桁区切り記号文字が挿入されます。  
+- 桁区切り記号: 数値の整数部の桁を書式設定する 2 つの桁プレースホルダー (0 または #) の間に 1 つ以上のコンマが指定されている場合は、出力の整数部分で各数値グループの間に桁区切り記号文字が挿入されます。  
   
      現在の <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A> オブジェクトの <xref:System.Globalization.NumberFormatInfo.NumberGroupSizes%2A> プロパティと <xref:System.Globalization.NumberFormatInfo> プロパティによって、桁区切り記号として使用される文字および各数値グループのサイズが決まります。 たとえば、文字列 "#,#" およびインバリアント カルチャを使用して数値 1000 が書式設定される場合は、出力が "1,000" となります。  
   
--   数値位取り指定子: 明示的または暗黙的な小数点のすぐ左側に 1 つ以上のコンマが指定されている場合は、コンマごとに書式設定対象の数値が 1000 で除算されます。 たとえば、"0,," 文字列を使用して数値 1 億が書式設定された場合、出力は "100" となります。  
+- 数値位取り指定子: 明示的または暗黙的な小数点のすぐ左側に 1 つ以上のコンマが指定されている場合は、コンマごとに書式設定対象の数値が 1000 で除算されます。 たとえば、"0,," 文字列を使用して数値 1 億が書式設定された場合、出力は "100" となります。  
   
  桁区切り記号および数値位取り指定子は、同じ書式指定文字列で使用できます。 たとえば、"#,0,," 文字列およびインバリアント カルチャを使用して 10 億の数値を書式設定した場合、出力は "1,000" となります。  
   
@@ -247,7 +246,7 @@ ms.locfileid: "47205068"
 ### <a name="control-panel-settings"></a>コントロール パネルの設定  
  コントロール パネルの **[地域と言語のオプション]** での設定は、書式設定操作によって生成される結果の文字列に影響します。 これらの設定は、現在のスレッド カルチャに関連付けられた <xref:System.Globalization.NumberFormatInfo> オブジェクトを初期化するために使用され、現在のスレッド カルチャから書式設定の制御に使用される値が提供されます。 コンピューターで使用する設定が異なる場合は、生成される文字列も異なります。  
   
- また、<xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> コンストラクターを使用して、現在のシステム カルチャと同じカルチャを表す新しい <xref:System.Globalization.CultureInfo> オブジェクトをインスタンス化した場合、コントロール パネルの **[地域と言語のオプション]** 項目で設定されたカスタマイズが新しい <xref:System.Globalization.CultureInfo> オブジェクトに適用されます。 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> コンストラクターを使用すると、システムに対するカスタマイズが反映されない <xref:System.Globalization.CultureInfo> オブジェクトを作成できます。  
+ また、 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> コンストラクターを使用して、現在のシステム カルチャと同じカルチャを表す新しい <xref:System.Globalization.CultureInfo> オブジェクトをインスタンス化した場合、コントロール パネルの **[地域と言語のオプション]** 項目で設定されたカスタマイズが新しい <xref:System.Globalization.CultureInfo> オブジェクトに適用されます。 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> コンストラクターを使用すると、システムに対するカスタマイズが反映されない <xref:System.Globalization.CultureInfo> オブジェクトを作成できます。  
   
 ### <a name="rounding-and-fixed-point-format-strings"></a>丸めと固定小数点の書式指定文字列  
  固定小数点の書式指定文字列 (つまり指数表記の書式指定文字を含まない書式指定文字列) の場合は、小数点以下の桁数が小数点の右側にある桁プレースホルダーの数と同じである数値に丸められます。 書式指定文字列に小数点が含まれていない場合には、最も近い整数に丸められます。 数値の桁数が、整数部の桁プレースホルダーの数よりも大きい場合には、桁プレースホルダーに収まらない桁が、結果の文字列の 1 番目の桁プレースホルダーの直前にコピーされます。  
@@ -266,8 +265,8 @@ ms.locfileid: "47205068"
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>  
-- [型の書式設定](../../../docs/standard/base-types/formatting-types.md)  
-- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
-- [方法: 数値に先行するゼロを埋め込む](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
+- <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>
+- [型の書式設定](../../../docs/standard/base-types/formatting-types.md)
+- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)
+- [方法: 数値に先行するゼロを埋め込む](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)
 - [サンプル: .NET Framework 4 の書式設定ユーティリティ](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

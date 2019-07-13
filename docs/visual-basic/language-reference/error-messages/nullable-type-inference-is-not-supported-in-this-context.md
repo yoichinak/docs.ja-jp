@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC36629
 ms.assetid: 0a1e2dbc-d9a4-433d-9306-c5540782b81d
-ms.openlocfilehash: ea531c7be676e940a263b019a66cc80cf280a772
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3ab8028062402e33b787a5a8649d93d975918393
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33593192"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665701"
 ---
 # <a name="nullable-type-inference-is-not-supported-in-this-context"></a>Null 許容型の推論はこのコンテキストではサポートされていません
-値の型と構造体宣言できます null 値を許容します。  
+値型と構造体が null 許容宣言できます。  
   
 ```vb  
 Dim a? As Integer  
@@ -34,8 +34,9 @@ Dim b As Integer?
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   使用して、`As`句を null 値許容と変数を宣言します。  
+- 使用して、 `As` null 許容型として変数を宣言する句。  
   
-## <a name="see-also"></a>関連項目  
- [null 許容値型](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
- [ローカル型の推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+## <a name="see-also"></a>関連項目
+
+- [null 許容値型](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [ローカル型の推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

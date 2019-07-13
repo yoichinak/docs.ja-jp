@@ -5,12 +5,12 @@ helpviewer_keywords:
 - binary serialization, steps
 - serialization, steps
 ms.assetid: 4bcbc883-2a91-418f-b968-6c86a25e9737
-ms.openlocfilehash: ef81ecc7ca177fa9360f53a6b66015412d282065
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: b697e8c590d0865b26eaa9f66a333504a5faece2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954051"
 ---
 # <a name="steps-in-the-serialization-process"></a>シリアル化プロセスの手順
 [フォーマッタ](xref:System.Runtime.Serialization.Formatter)で <xref:System.Runtime.Serialization.Formatter.Serialize*> メソッドが呼び出されると、次の一連の規則に従って、オブジェクトのシリアル化プロセスが実行されます。
@@ -27,5 +27,5 @@ ms.locfileid: "44084917"
   
 ## <a name="see-also"></a>関連項目
 
-- [バイナリ シリアル化](binary-serialization.md)  
+- [バイナリ シリアル化](binary-serialization.md)
 - [XML シリアル化および SOAP シリアル化](xml-and-soap-serialization.md)

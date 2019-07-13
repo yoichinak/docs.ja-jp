@@ -3,12 +3,12 @@ title: C# インターフェイス - C# 言語のツアー
 description: C# の型によって実装されるコントラクトを定義するインターフェイス
 ms.date: 08/10/2016
 ms.assetid: a9bf82f4-efd1-4216-bd34-4ef0fa48c968
-ms.openlocfilehash: bfc6b59a411ff2ddb3331a8bdf24c0ae3d611273
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 240ddfb321c5a89c8aada4353845915d0e242ae0
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144118"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634556"
 ---
 # <a name="interfaces"></a>インターフェイス
 

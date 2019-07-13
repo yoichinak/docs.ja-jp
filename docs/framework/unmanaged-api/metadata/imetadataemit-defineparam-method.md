@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d49ac70aceb76f69711ea4bf514f69697ac156c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9d64a1ef21cd4fa4224609c7cd415c1611313769
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447373"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777551"
 ---
 # <a name="imetadataemitdefineparam-method"></a>IMetaDataEmit::DefineParam メソッド
 指定したトークンによって参照されるメソッドの指定したシグネチャを持つパラメーターの定義を作成し、そのパラメーターの定義のトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT DefineParam (  
     [in]  mdMethodDef md,   
     [in]  ULONG       ulParamSeq,   
@@ -42,43 +42,44 @@ HRESULT DefineParam (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `md`  
- [in]パラメーターを持つが定義されているメソッドのトークン。  
+ [in]パラメーターが定義されているメソッドのトークン。  
   
  `ulParamSeq`  
  [in]パラメーターのシーケンス番号。  
   
  `szName`  
- [in]Unicode のパラメーターの名前です。  
+ [in]Unicode でパラメーターの名前。  
   
  `dwParamFlags`  
- [in]パラメーターのフラグ。 これは、ビットマスク`CorParamAttr`値。  
+ [in]パラメーターのフラグ。 これは、ビットマスクの`CorParamAttr`値。  
   
  `dwCPlusTypeFlag`  
- [in]`ELEMENT_TYPE_` *\** 定数値にします。  
+ [in]`ELEMENT_TYPE_` *\** 定数の値。  
   
  `pValue`  
  [in]パラメーターの定数値。  
   
  `cchValue`  
- [in]Unicode 文字のサイズの`pValue`します。  
+ [in]Unicode 文字で、サイズの`pValue`します。  
   
  `ppd`  
- [out]`mdParamDef`トークンが割り当てられます。  
+ [out]`mdParamDef`に割り当てられたトークン。  
   
-## <a name="remarks"></a>コメント  
- 値がシーケンス`ulParamSeq`パラメーターの 1 から始まります。 戻り値は、シーケンス番号は 0 です。  
+## <a name="remarks"></a>Remarks  
+ シーケンスの値で`ulParamSeq`パラメーターの 1 から始まります。 戻り値は、シーケンス番号は 0 です。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
  **ライブラリ:** MSCorEE.dll にリソースとして使用  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

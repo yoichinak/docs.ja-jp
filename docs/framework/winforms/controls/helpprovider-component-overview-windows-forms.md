@@ -10,31 +10,32 @@ helpviewer_keywords:
 - dialog boxes [Windows Forms], context-sensitive Help
 - Windows Forms, context-sensitive Help
 ms.assetid: 6b10c2cc-c577-4cb5-9669-e37b33416af9
-ms.openlocfilehash: 5ad74b862c09734f3490210cb6898945a3c787fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e8dc2ee2773b26a7bfef1da209399a8b49de9ad
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528620"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624125"
 ---
 # <a name="helpprovider-component-overview-windows-forms"></a>HelpProvider コンポーネントの概要 (Windows フォーム)
-Windows フォーム[HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)に HTML ヘルプ 1.x のヘルプ ファイル (HTML Help Workshop で生成された .chm ファイル、または .htm ファイル) を Windows アプリケーションに関連付けるコンポーネントを使用します。 さまざまな方法でヘルプを提供することができます。  
+Windows フォーム[HelpProvider](helpprovider-component-windows-forms.md)に HTML ヘルプ 1.x のヘルプ ファイル (HTML Help Workshop で生成された .chm ファイル、または .htm ファイル) を Windows アプリケーションに関連付けるコンポーネントを使用します。 さまざまな方法でヘルプを行うことができます。  
   
--   Windows フォーム上のコントロールには、状況依存のヘルプを提供します。  
+- Windows フォームのコントロールには、状況依存のヘルプを提供します。  
   
--   特定のダイアログ ボックスまたはダイアログ ボックスの特定のコントロールでは、状況依存のヘルプを提供します。  
+- 特定のダイアログ ボックスまたはダイアログ ボックスの特定のコントロールでは、状況依存のヘルプを提供します。  
   
--   テーブルの内容、インデックス、または検索機能のメイン ページなどの特定領域へのヘルプ ファイルを開きます。  
+- テーブルの内容、インデックス、または検索関数のメイン ページなどの特定領域へのヘルプ ファイルを開きます。  
   
 ## <a name="using-the-help-provider"></a>ヘルプのプロバイダーを使用します。  
- 追加する、<xref:System.Windows.Forms.HelpProvider>コンポーネントを Windows フォームのヘルプ プロパティを公開するフォーム上の他のコントロールを使用して、<xref:System.Windows.Forms.HelpProvider>コンポーネントです。 これにより、Windows フォーム上のコントロールのヘルプを提供することができます。 ヘルプ ファイルを関連付けることができます、<xref:System.Windows.Forms.HelpProvider>コンポーネントを使用して、<xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>プロパティです。 呼び出しによって提供されるヘルプの種類を指定する<xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A>から値を指定する、<xref:System.Windows.Forms.HelpNavigator>指定したコントロールの列挙。 呼び出してヘルプのキーワードまたはトピックを提供する、<xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A>メソッドです。  
+ 追加、<xref:System.Windows.Forms.HelpProvider>を Windows フォームのコンポーネントは、のヘルプ プロパティを公開するフォーム上の他のコントロールを使用できます、<xref:System.Windows.Forms.HelpProvider>コンポーネント。 これにより、Windows フォーム上のコントロールのヘルプを提供することができます。 ヘルプ ファイルを関連付けることができます、<xref:System.Windows.Forms.HelpProvider>コンポーネントを使用して、<xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>プロパティ。 呼び出すことによって提供されるヘルプの種類を指定する<xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A>から値を指定して、<xref:System.Windows.Forms.HelpNavigator>指定したコントロールの列挙体。 呼び出すことでヘルプのキーワードまたはトピックを提供する、<xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A>メソッド。  
   
- 必要に応じて、特定のヘルプ文字列を別のコントロールに関連付けるを使用して、<xref:System.Windows.Forms.HelpProvider.SetHelpString%2A>メソッドです。 このメソッドを使用して、コントロールに関連付ける文字列は、コントロールにフォーカスがある状態で F1 キーを押したときに、ポップアップ ウィンドウに表示されます。  
+ 必要に応じて、特定のヘルプ文字列を別のコントロールに関連付けるに次のように使用します。、<xref:System.Windows.Forms.HelpProvider.SetHelpString%2A>メソッド。 このメソッドを使用するコントロールと関連付ける文字列は、コントロールにフォーカスがあるユーザーが F1 キーを押したときに、ポップアップ ウィンドウに表示されます。  
   
- 場合<xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>設定された場合、使用する必要がありますされていません。<xref:System.Windows.Forms.HelpProvider.SetHelpString%2A>ヘルプ テキストを提供します。 両方を設定した場合<xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>ヘルプ文字列ヘルプに基づいて<xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>が優先されます。  
+ 場合<xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>設定を使用する必要がありますが<xref:System.Windows.Forms.HelpProvider.SetHelpString%2A>ヘルプ テキストを提供します。 両方を設定している場合<xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>およびヘルプ文字列、ヘルプに基づいて<xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>が優先されます。  
   
 > [!NOTE]
->  相対パスを使用して問題が発生する可能性があるときにヘルプ ファイルへのパスを指定するで、<xref:System.Windows.Forms.Help.ShowHelp%2A>メソッドまたは<xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>のプロパティ、<xref:System.Windows.Forms.HelpProvider>コントロール。 そのため、ヘルプ ファイルを指定するファイルの絶対パスを使用することを確認します。  
+>  ヘルプ ファイルへのパスを指定するときに、相対パスを使用して問題が発生する可能性があります、<xref:System.Windows.Forms.Help.ShowHelp%2A>メソッドまたは<xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>のプロパティ、<xref:System.Windows.Forms.HelpProvider>コントロール。 したがって、ファイルの絶対パスを使用してヘルプ ファイルを指定することを確認します。  
   
-## <a name="see-also"></a>関連項目  
- [Windows フォーム アプリケーションのヘルプ システム](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md)
+## <a name="see-also"></a>関連項目
+
+- [Windows フォーム アプリケーションのヘルプ システム](../advanced/help-systems-in-windows-forms-applications.md)

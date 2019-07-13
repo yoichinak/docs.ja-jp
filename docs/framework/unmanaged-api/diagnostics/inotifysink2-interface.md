@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 52246ac531853eea87464e265f731ece0d350e22
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4f5307ce00160bb4151a7559daac4724367c6497
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940401"
 ---
 # <a name="inotifysink2-interface"></a>INotifySink2 インターフェイス
-シンクの通知のためのメソッドを宣言します。  
+シンク通知メソッドを宣言します。  
   
 ## <a name="methods"></a>メソッド  
   
@@ -32,13 +32,14 @@ ms.locfileid: "33426037"
 |------------|-----------------|  
 |[OnSyncCallEnter メソッド](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md)|呼び出しを入力するときに呼び出されます。|  
 |[OnSyncCallExit メソッド](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md)|呼び出しが終了するときに呼び出されます。|  
-|[OnSyncCallOut メソッド](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md)|呼び出しを抜けるときに呼び出されます。|  
+|[OnSyncCallOut メソッド](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md)|呼び出しがないときに呼び出されます。|  
 |[OnSyncCallReturn メソッド](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md)|呼び出しが戻るときに呼び出されます。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>関連項目  
- [INotifyConnection2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)  
- [INotifySource2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- [シンボル ストア診断インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a>関連項目
+
+- [INotifyConnection2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [INotifySource2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [シンボル ストア診断インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

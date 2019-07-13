@@ -9,27 +9,27 @@ helpviewer_keywords:
 - validating user input [Windows Forms], Windows Forms
 - text boxes [Windows Forms], validating user input
 ms.assetid: 235d6121-027d-481d-8d59-4f6794d15d0c
-ms.openlocfilehash: 84e01e3c8b2275f910c7daf3de31d1ffbe891171
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: af699875f6f3dea2f384574c85d85bd77a4507af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780641"
 ---
 # <a name="maskedtextbox-control-windows-forms"></a>MaskedTextBox コントロール (Windows フォーム)
-このトピックは他のユーザーにリンクを`MaskedTextBox`コントロール。  
+このトピックではに関する他のユーザーにリンク、`MaskedTextBox`コントロール。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [チュートリアル: MaskedTextBox コントロールの使用](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)  
- 主な機能を示しています、`MaskedTextBox`コントロール。  
+ [チュートリアル: MaskedTextBox コントロールの操作](walkthrough-working-with-the-maskedtextbox-control.md)  
+ 主な機能を示します、`MaskedTextBox`コントロール。  
   
- [方法: MaskedTextBox コントロールにデータをバインドする](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-maskedtextbox-control.md)  
- データベース内のデータ マスクで定義された形式に一致しない場合、データの書式を変更する方法を示します。  
+ [方法: MaskedTextBox コントロールにデータをバインドします。](how-to-bind-data-to-the-maskedtextbox-control.md)  
+ データベース内のデータがマスク定義で予期される形式と一致しない場合、データの書式を変更する方法を示します。  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Forms.MaskedTextBox>  
- マスクされたテキスト ボックス コントロールの実装の主なクラスです。  
+ マスクされたテキスト ボックス コントロールの実装のプライマリ クラスです。  
   
 ## <a name="related-sections"></a>関連項目  
- [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)  
  Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。

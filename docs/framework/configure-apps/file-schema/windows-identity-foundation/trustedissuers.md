@@ -1,24 +1,24 @@
 ---
-title: '&lt;trustedIssuers&gt;'
+title: <trustedIssuers>
 ms.date: 03/30/2017
 ms.assetid: d818c917-07b4-40db-9801-8676561859fd
 author: BrucePerlerMS
-ms.openlocfilehash: c390cecc265b27dfa8d9d0a892f5930c982f7054
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: cebfc2f3598f32f233db6039dfe82076d2ffce46
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790482"
 ---
-# <a name="lttrustedissuersgt"></a>&lt;trustedIssuers&gt;
+# <a name="trustedissuers"></a>\<trustedIssuers>
 構成ベースの発行者名レジストリによって使用される信頼された発行者証明書の一覧を構成します (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>)。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
 \<securityTokenHandlers>  
-\<securityTokenHandlerConfiguration >  
-\<issuerNameRegistry >  
-\<trustedIssuers >  
+\<securityTokenHandlerConfiguration>  
+\<issuerNameRegistry>  
+\<trustedIssuers>  
   
 ## <a name="syntax"></a>構文  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48261008"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<issuerNameRegistry >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|発行者名レジストリを構成します。 **重要:** 、`type`の属性、`<issuerNameRegistry>`要素を参照する必要があります、<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>クラス、`<trustedIssuers>`を有効にする要素。|  
+|[\<issuerNameRegistry>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|発行者名レジストリを構成します。 **重要:** `type`の属性、`<issuerNameRegistry>`要素を参照する必要があります、<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>クラス、`<trustedIssuers>`を有効にする要素。|  
   
 ## <a name="remarks"></a>Remarks  
  Windows Identity Foundation (WIF) の単一の実装を提供する、<xref:System.IdentityModel.Tokens.IssuerNameRegistry>すぐに使えるクラス、<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>クラス。 構成の発行者名レジストリは、構成から読み込まれる信頼された発行者の一覧を保持します。 一覧は、各発行者名を発行者によって生成されたトークンの署名を検証するために必要な X.509 証明書に関連付けます。 信頼された発行者の証明書の一覧が指定されて、`<trustedIssuers>`要素。 リスト内の各要素は、その発行者によって生成されたトークンの署名を検証するために必要な X.509 証明書をニーモニックの発行者名を関連付けます。 信頼された証明書が証明書の拇印の形式でエンコードされた ASN.1 を使用して、指定され、を使用して、コレクションに追加されます`<add>`要素。 オフにしたり、発行者 (証明書) を使用して一覧から削除、`<clear>`と`<remove>`要素。  
@@ -76,6 +76,7 @@ ms.locfileid: "48261008"
 </issuerNameRegistry>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>  
- <xref:System.IdentityModel.Tokens.IssuerNameRegistry>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>
+- <xref:System.IdentityModel.Tokens.IssuerNameRegistry>

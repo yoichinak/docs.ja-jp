@@ -1,5 +1,5 @@
 ---
-title: '方法 : 文字列に引用符を挿入する (Windows フォーム)'
+title: '方法: (Windows フォーム) 文字列に引用符を挿入します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,23 +10,23 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-ms.openlocfilehash: 7fcc2e8692880f1e5c2b8df807cf7943a5575c56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0148f9fde9d69bb1605776f1ab617079be96b59e
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534834"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053466"
 ---
-# <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>方法 : 文字列に引用符を挿入する (Windows フォーム)
-テキストの文字列に引用符 (" ") を挿入することが必要な場合があります。 例えば:  
+# <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>方法: (Windows フォーム) 文字列に引用符を挿入します。
+テキストの文字列に引用符 (" ") を挿入することが必要な場合があります。 例:  
   
- 言いました、「treat、優れた」!  
+ わかりました、「を扱う優れた!」  
   
- 代わりに、使用することも、<xref:Microsoft.VisualBasic.ControlChars.Quote>フィールドは定数として。  
+ 代わりに、使用することも、<xref:Microsoft.VisualBasic.ControlChars.Quote>定数としてフィールド。  
   
 ### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a>コードの文字列に引用符を挿入するには  
   
-1.  Visual basic では、埋め込みの引用符として行の 2 つの引用符を挿入します。 Visual C# の場合と[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]、エスケープ シーケンスを挿入\\"として埋め込まれた引用符。 たとえば、上記の文字列を作成するには、次のコードを使用します。  
+1. Visual basic を埋め込み引用符として行の 2 つの引用符を挿入します。 ビジュアルでC#とビジュアルC++、エスケープ シーケンスを挿入\\"を埋め込み引用符として。 たとえば、上記の文字列を作成するには、次のコードを使用します。  
   
     ```vb  
     Private Sub InsertQuote()  
@@ -50,7 +50,7 @@ ms.locfileid: "33534834"
   
      - または -  
   
-2.  引用符を表す ASCII 文字または Unicode 文字を挿入します。 Visual basic では、ASCII 文字 (34) を使用します。 Visual c# では、Unicode 文字 (\u0022) を使用します。  
+2. 引用符を表す ASCII 文字または Unicode 文字を挿入します。 Visual basic では、ASCII 文字 (34) を使用します。 ビジュアルでC#、Unicode 文字 (\u0022) を使用します。  
   
     ```vb  
     Private Sub InsertAscii()  
@@ -69,7 +69,7 @@ ms.locfileid: "33534834"
   
      - または -  
   
-3.  文字の定数を定義し、必要に応じてその定数を使用することもできます。  
+3. 文字の定数を定義し、必要に応じてその定数を使用することもできます。  
   
     ```vb  
     Const quote As String = """"  
@@ -88,13 +88,14 @@ ms.locfileid: "33534834"
        const_cast<String^>(quote));  
     ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.TextBox>  
- <xref:Microsoft.VisualBasic.ControlChars.Quote>  
- [TextBox コントロールの概要](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
- [方法: Windows フォーム TextBox コントロールでのカーソル位置を制御する](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
- [方法: Windows フォームの TextBox コントロールを使用してパスワード テキスト ボックスを作成する](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
- [方法: 読み取り専用テキスト ボックスを作成する](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
- [方法: Windows フォーム TextBox コントロールでテキストを選択する](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)  
- [方法: Windows フォーム TextBox コントロールで複数行を表示する](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
- [TextBox コントロール](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Forms.TextBox>
+- <xref:Microsoft.VisualBasic.ControlChars.Quote>
+- [TextBox コントロールの概要](textbox-control-overview-windows-forms.md)
+- [方法: Windows フォーム TextBox コントロールでのカーソル位置を制御します。](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [方法: Windows フォーム TextBox コントロールでパスワード テキスト ボックスを作成します。](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [方法: 読み取り専用テキスト ボックスを作成します。](how-to-create-a-read-only-text-box-windows-forms.md)
+- [方法: Windows フォームの TextBox コントロールでテキストを選択します。](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [方法: Windows フォームの TextBox コントロールで複数の行を表示します。](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [TextBox コントロール](textbox-control-windows-forms.md)

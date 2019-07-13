@@ -2,11 +2,12 @@
 title: メッセージ キュー (MSMQ) のインストール
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-ms.openlocfilehash: b54fab13d644cafda8a070280d672c60cf71b675
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 813de350c3fd32bb4698384d6b770af8a0913739
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648337"
 ---
 # <a name="installing-message-queuing-msmq"></a>メッセージ キュー (MSMQ) のインストール
 メッセージ キュー 4.0 およびメッセージ キュー 3.0 をインストールする方法を次の手順に示します。  
@@ -16,50 +17,51 @@ ms.lasthandoff: 05/04/2018
   
 #### <a name="to-install-message-queuing-40-on-windows-server-2008-or-windows-server-2008-r2"></a>Windows Server 2008 または Windows Server 2008 R2 にメッセージ キュー 4.0 をインストールするには  
   
-1.  サーバー マネージャーで、をクリックして**機能**します。  
+1. サーバー マネージャーで、**機能**します。  
   
-2.  右側のペインで**機能の概要**をクリックして**機能の追加**です。  
+2. 右側のペインで**機能の概要**、 をクリックして**機能の追加**します。  
   
-3.  結果ウィンドウで、展開**メッセージ キュー**です。  
+3. 結果ウィンドウで、展開**メッセージ キュー**します。  
   
-4.  展開**メッセージ キュー サービス**です。  
+4. 展開**メッセージ キュー サービス**します。  
   
-5.  をクリックして**ディレクトリ サービス統合**(コンピューターの場合、ドメインに参加している)、し、クリックして**HTTP サポート**です。  
+5. をクリックして**ディレクトリ サービス統合**(コンピューターの場合、ドメインに参加している)、そのクリックして**HTTP サポート**します。  
   
-6.  をクリックして**次**、をクリックして**インストール**です。  
+6. クリックして**次**、順にクリックします**インストール**します。  
   
 #### <a name="to-install-message-queuing-40-on-windows-7-or-windows-vista"></a>Windows 7 または Windows Vista にメッセージ キュー 4.0 をインストールするには  
   
-1.  **[コントロール パネル]** を開きます。  
+1. **[コントロール パネル]** を開きます。  
   
-2.  をクリックして**プログラム**し、**プログラムと機能**をクリックして**Windows の機能のオンとオフを**です。  
+2. クリックして**プログラム**し、**プログラムと機能**、 をクリックして**Windows 機能の有効化オンとオフを**します。  
   
-3.  [Microsoft Message Queue (MSMQ) Server]、[Microsoft Message Queue (MSMQ) Server Core] の順に展開して、インストールする次のメッセージ キュー機能のチェック ボックスをオンにします。  
+3. [Microsoft Message Queue (MSMQ) Server]、[Microsoft Message Queue (MSMQ) Server Core] の順に展開して、インストールする次のメッセージ キュー機能のチェック ボックスをオンにします。  
   
-    -   [MSMQ Active Directory Domain Services Integration] \(ドメインに参加するコンピューターの場合)  
+    - [MSMQ Active Directory Domain Services Integration] (ドメインに参加するコンピューターの場合)  
   
-    -   [MSMQ HTTP サポート]  
+    - [MSMQ HTTP サポート]  
   
-4.  **[OK]** をクリックします。  
+4. **[OK]** をクリックします。  
   
-5.  コンピューターを再起動するメッセージが表示されたら、クリックして**OK**インストールを完了します。  
+5. コンピューターを再起動するメッセージが表示されたら、クリックして**OK**インストールを完了します。  
   
 #### <a name="to-install-message-queuing-30-on-windows-xp-and-windows-server-2003"></a>Windows XP および Windows Server 2003 にメッセージ キュー 3.0 をインストールするには  
   
-1.  **[コントロール パネル]** を開きます。  
+1. **[コントロール パネル]** を開きます。  
   
-2.  をクリックして**プログラムの追加と削除** をクリックし、 **Windows コンポーネントの追加**です。  
+2. クリックして**プログラムの追加と削除** をクリックし、 **Windows コンポーネントの追加**します。  
   
-3.  メッセージ キューを選択し、クリックして**詳細**です。  
+3. メッセージ キューを選択し、クリックして**詳細**します。  
   
     > [!NOTE]
     >  [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] を実行している場合は、メッセージ キューにアクセスするアプリケーション サーバーを選択します。  
   
-4.  詳細ページで、[MSMQ HTTP サポート] オプションが選択されていることを確認します。  
+4. 詳細ページで、[MSMQ HTTP サポート] オプションが選択されていることを確認します。  
   
-5.  をクリックして**OK**の詳細 ページを終了し、をクリックして**次へ**です。 インストールを完了します。  
+5. をクリックして**OK**を詳細ページを終了し、をクリックし、 **[次へ]**。 インストールを完了します。  
   
-6.  コンピューターを再起動するメッセージが表示されたら、クリックして**OK**インストールを完了します。  
+6. コンピューターを再起動するメッセージが表示されたら、クリックして**OK**インストールを完了します。  
   
-## <a name="see-also"></a>関連項目  
- [セットアップ手順](../../../../docs/framework/wcf/samples/set-up-instructions.md)
+## <a name="see-also"></a>関連項目
+
+- [セットアップ手順](../../../../docs/framework/wcf/samples/set-up-instructions.md)

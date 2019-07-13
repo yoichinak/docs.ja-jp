@@ -1,15 +1,15 @@
 ---
-title: '&lt;clientCertificate&gt; 要素の &lt;authentication&gt;'
+title: <authentication> <clientCertificate>要素
 ms.date: 03/30/2017
 ms.assetid: 4a55eea2-1826-4026-b911-b7cc9e9c8bfe
-ms.openlocfilehash: 97c742cbcaeba10bc7fcf88a461360b96beebc22
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 2cbc850331dc6bf76c352f975fda834a309564c6
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147110"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423238"
 ---
-# <a name="ltauthenticationgt-of-ltclientcertificategt-element"></a>&lt;clientCertificate&gt; 要素の &lt;authentication&gt;
+# <a name="authentication-of-clientcertificate-element"></a>\<認証 > の\<clientCertificate > 要素
 サービスによって使用されるクライアント証明書の認証動作を指定します。  
   
  \<system.ServiceModel >  
@@ -17,8 +17,8 @@ ms.locfileid: "54147110"
 \<serviceBehaviors>  
 \<behavior>  
 \<serviceCredentials>  
-\<clientCertificate >  
-\<認証 >  
+\<clientCertificate>  
+\<authentication>  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,7 +41,7 @@ ms.locfileid: "54147110"
 |customCertificateValidatorType|省略可能な文字列。 カスタム型の検証に使用される型およびアセンブリです。 `certificateValidationMode` が `Custom` に設定されている場合は、この属性を設定する必要があります。|  
 |certificateValidationMode|省略可能な列挙体です。 資格情報の検証に使用されるモードのいずれかを指定します。 この属性は <xref:System.ServiceModel.Security.X509CertificateValidationMode> 型です。 <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom?displayProperty=nameWithType> に設定されている場合、`customCertificateValidator` も指定する必要があります。 既定値は、<xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust?displayProperty=nameWithType> です。|  
 |includeWindowsGroups|省略可能なブール。 セキュリティ コンテキストに Windows グループが含まれているかどうかを指定します。 この属性を `true` に設定すると、グループ全体が拡張されるため、パフォーマンスに影響が及びます。 ユーザーが属するグループの一覧を生成する必要がない場合は、この属性を `false` に設定します。|  
-|mapClientCertificateToWindowsAcccount|ブール型。 証明書を使用してクライアントを Windows ID にマップできるかどうかを指定します。 これを行うには、Active Directory が有効である必要があります。|  
+|mapClientCertificateToWindowsAccount|ブール型。 証明書を使用してクライアントを Windows ID にマップできるかどうかを指定します。 これを行うには、Active Directory が有効である必要があります。|  
 |revocationMode|省略可能な列挙体です。 証明書失効リスト (RCL) のチェックに使用されるモードのいずれかです。 既定値は、`Online` です。 この値は、HTTP トランスポート セキュリティを使用する場合は無視されます。|  
 |trustedStoreLocation|省略可能な列挙体です。 2 つのシステム格納場所 (`LocalMachine` または `CurrentUser`) のいずれかです。 この値は、サービス証明書がクライアントにネゴシエートされるときに使用されます。 に対して検証が実行、**信頼されたユーザー**指定したストアの場所に格納します。 既定値は `CurrentUser` です。|  
   
@@ -76,7 +76,7 @@ ms.locfileid: "54147110"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)|サービスに対するクライアントの認証に使用する X.509 証明書を定義します。|  
+|[\<clientCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)|サービスに対するクライアントの認証に使用する X.509 証明書を定義します。|  
   
 ## <a name="remarks"></a>Remarks  
  `<authentication>` 要素は、<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> クラスに対応します。 この要素を使用すると、クライアントを認証する方法をカスタマイズできます。 `certificateValidationMode` 属性は、`None`、`ChainTrust`、`PeerOrChainTrust`、`PeerTrust`、または `Custom` に設定できます。 既定では、レベルに設定が`ChainTrust`で終了する証明書の階層で各証明書を検索するを指定する、*ルート機関*チェーンの上部にあります。 これは最もセキュリティで保護されているモードです。 また、値を `PeerOrChainTrust` に設定することもできます。これは、信頼されたチェーン内の証明書と共に、自己発行された証明書 (ピア信頼) も受け入れるよう指定します。 自己発行の資格情報は信頼された証明機関から購入したものである必要はないため、この値はクライアントとサービスの開発およびデバッグに使用されます。 クライアントを展開するときは、代わりに `ChainTrust` 値を使用します。  
@@ -104,12 +104,13 @@ ms.locfileid: "54147110"
 </serviceBehaviors>
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>  
- <xref:System.ServiceModel.Security.X509CertificateValidationMode>  
- <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.Authentication%2A>  
- <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement.Authentication%2A>  
- <xref:System.ServiceModel.Configuration.X509ClientCertificateAuthenticationElement>  
- [セキュリティ動作](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [方法: カスタム証明書の検証を使用するサービスを作成します。](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
- [証明書の使用](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>
+- <xref:System.ServiceModel.Security.X509CertificateValidationMode>
+- <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.Authentication%2A>
+- <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement.Authentication%2A>
+- <xref:System.ServiceModel.Configuration.X509ClientCertificateAuthenticationElement>
+- [セキュリティ動作](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [方法: カスタム証明書の検証を使用するサービスを作成します。](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)
+- [証明書の使用](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

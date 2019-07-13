@@ -13,26 +13,26 @@ helpviewer_keywords:
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7021a984f844660c45ae3e2d98569432ab64b657
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 6939c215633be10e487f9cd5bd25856c0c611921
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002997"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623666"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>属性に格納されている情報の取得
 カスタム属性の取得は簡単なプロセスです。 まず、取得する属性のインスタンスを宣言します。 次に、<xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> メソッドを使用して、取得する属性の値に新しい属性を初期化します。 新しい属性が初期化されたら、そのプロパティを使用して値を取得できるようになります。  
   
 > [!IMPORTANT]
->  このトピックでは、実行コンテキストに読み込まれるコードのカスタム属性を取得する方法について説明します。 リフレクションのみのコンテキストに読み込まれたコードの属性を取得するには、「[方法: リフレクションのみのコンテキストにアセンブリを読み込む](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)」で説明されているように、<xref:System.Reflection.CustomAttributeData> クラスを使用する必要があります。  
+>  このトピックでは、実行コンテキストに読み込まれるコードのカスタム属性を取得する方法について説明します。 リフレクションのみのコンテキストに読み込まれたコードの属性を取得するには、「[方法: リフレクションのみのコンテキストにアセンブリを読み込む」で説明されているように、<xref:System.Reflection.CustomAttributeData> クラスを使用する必要があります。リフレクションのみのコンテキストにアセンブリを読み込む](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)」を参照してください。  
   
  このセクションでは、以下の属性の取得方法について説明します。  
   
--   [属性の単一のインスタンスを取得する](#cpconretrievingsingleinstanceofattribute)  
+- [属性の単一のインスタンスを取得する](#cpconretrievingsingleinstanceofattribute)  
   
--   [同じスコープに適用された属性の複数のインスタンスを取得する](#cpconretrievingmultipleinstancesofattributeappliedtosamescope)  
+- [同じスコープに適用された属性の複数のインスタンスを取得する](#cpconretrievingmultipleinstancesofattributeappliedtosamescope)  
   
--   [異なるスコープに適用された属性の複数のインスタンスを取得する](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
+- [異なるスコープに適用された属性の複数のインスタンスを取得する](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
   
 <a name="cpconretrievingsingleinstanceofattribute"></a>   
 ## <a name="retrieving-a-single-instance-of-an-attribute"></a>属性の単一のインスタンスを取得する  
@@ -86,7 +86,7 @@ The attribute was not found.
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Type?displayProperty=nameWithType>  
-- <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>  
-- <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>  
+- <xref:System.Type?displayProperty=nameWithType>
+- <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>
+- <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>
 - [属性](../../../docs/standard/attributes/index.md)

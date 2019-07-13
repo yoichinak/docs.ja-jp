@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b549c6eacad63b165d26c203817f1a2adac57bca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c38b7f060c34f7408195484dec2c49305db422fe
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448639"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781318"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>IMetaDataImport::EnumCustomAttributes メソッド
-指定した型またはメンバーに関連付けられているカスタム属性定義トークンを列挙します。  
+指定した型またはメンバーに関連付けられたカスタム属性定義トークンを列挙します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EnumCustomAttributes (   
    [in, out] HCORENUM      *phEnum,  
    [in]  mdToken            tk,   
@@ -40,15 +40,15 @@ HRESULT EnumCustomAttributes (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [入力、出力].返された列挙子へのポインター。  
+ [入力、出力]返された列挙子へのポインター。  
   
  `tk`  
  [in]列挙体、またはすべてのカスタム属性に 0 のスコープのトークンです。  
   
  `tkType`  
- [in]列挙する属性の型のコンス トラクターのトークンまたは`null`すべての種類。  
+ [in]列挙するには、属性の型のコンス トラクターのトークンまたは`null`すべての種類。  
   
  `rCustomAttributes`  
  [out]トークンのカスタム属性の配列。  
@@ -57,24 +57,25 @@ HRESULT EnumCustomAttributes (
  [in] `rCustomAttributes` 配列の最大サイズ。  
   
  `pcCustomAttributes`  
- [out, 省略可能]実際に返されるトークンの値の数`rCustomAttributes`です。  
+ [out] 省略可能実際に返されるトークンの値数`rCustomAttributes`します。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
 |`S_OK`|`EnumCustomAttributes` 正常に返されます。|  
-|`S_FALSE`|列挙するカスタム属性はありません。 その場合は、`pcCustomAttributes`ゼロです。|  
+|`S_FALSE`|カスタム属性を列挙することはありません。 その場合は、`pcCustomAttributes`は 0 です。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

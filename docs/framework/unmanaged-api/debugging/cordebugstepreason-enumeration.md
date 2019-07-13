@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71dcc34fd3489fc71cec4050b168548927833082
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3d9dc94689083d79858319387747eb9dafe8b2f6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404532"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739567"
 ---
 # <a name="cordebugstepreason-enumeration"></a>CorDebugStepReason 列挙型
 個々のステップの結果を示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum CorDebugStepReason {  
     STEP_NORMAL,  
     STEP_RETURN,  
@@ -44,23 +44,24 @@ typedef enum CorDebugStepReason {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`STEP_NORMAL`|同じ関数内で、ステップ実行が通常は、完了しました。|  
-|`STEP_RETURN`|ステップ実行は継続通常は、関数が返された後。|  
-|`STEP_CALL`|新しく呼び出された関数の先頭には通常、継続のステップします。|  
-|`STEP_EXCEPTION_FILTER`|例外が生成され、例外フィルターにコントロールが渡されました。|  
-|`STEP_EXCEPTION_HANDLER`|例外が発生しました、制御、例外ハンドラーに渡されました。|  
+|`STEP_NORMAL`|ステップ実行は、同じ関数内で通常は、完了。|  
+|`STEP_RETURN`|ステップ実行を続行通常、関数が返された後。|  
+|`STEP_CALL`|新しく呼び出された関数の先頭には通常、続きステップ実行します。|  
+|`STEP_EXCEPTION_FILTER`|例外が発生しました、例外フィルターに制御が渡されます。|  
+|`STEP_EXCEPTION_HANDLER`|例外が発生しました、例外ハンドラーに制御が渡されます。|  
 |`STEP_INTERCEPT`|コントロールは、インターセプターに渡されました。|  
 |`STEP_EXIT`|ステップが完了する前に、スレッドが終了しました。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [StepComplete メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md)  
- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>関連項目
+
+- [StepComplete メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md)
+- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

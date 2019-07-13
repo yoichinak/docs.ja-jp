@@ -4,12 +4,12 @@ description: Azure Logic Apps は、アプリに統合される自動化され�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 14670a8459db3b80b8fbe3139c2675321cf9592c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 7ece3d30209713d42ee44ef9c1be1cf0fe82464a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147958"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638801"
 ---
 # <a name="azure-logic-apps"></a>Azure Logic Apps
 

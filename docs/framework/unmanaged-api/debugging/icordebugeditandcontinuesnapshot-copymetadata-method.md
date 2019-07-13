@@ -17,15 +17,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3f37fe2628fd9a6217ba8aa4964addbfe56a69b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5dafaef05305a8f4ab4a196690d98486be96d51e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989184"
 ---
 # <a name="icordebugeditandcontinuesnapshotcopymetadata-method"></a>ICorDebugEditAndContinueSnapshot::CopyMetaData メソッド
 `CopyMetaData` は互換性のために残されています。 このメソッドを呼び出さないでください。  
   
-## <a name="see-also"></a>関連項目  
- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>関連項目
+
+- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

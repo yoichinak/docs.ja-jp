@@ -1,5 +1,5 @@
 ---
-title: '方法 : Windows フォーム パネルの背景を設定する'
+title: '方法: Windows フォーム パネルの背景を設定します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Panel control [Windows Forms], background
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: 096cbd8d-45cc-47b8-b1ef-a27f60ea8be0
-ms.openlocfilehash: ff0c748cfb7b38c41b2ede211aed7bf6e6f68544
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9336be2aebb10e5c0bd0bf4648cae34a3b5fe7c3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013180"
 ---
-# <a name="how-to-set-the-background-of-a-windows-forms-panel"></a>方法 : Windows フォーム パネルの背景を設定する
-Windows フォーム<xref:System.Windows.Forms.Panel>コントロールは、背景色と背景イメージの両方を表示できます。 <xref:System.Windows.Forms.Control.BackColor%2A>プロパティは、ラベルやラジオ ボタンなどの含まれるコントロールの背景色を設定します。 場合、<xref:System.Windows.Forms.Control.BackgroundImage%2A>プロパティが設定されていない、<xref:System.Windows.Forms.Control.BackColor%2A>パネル全体がいっぱいに選択します。 場合、<xref:System.Windows.Forms.Control.BackgroundImage%2A>プロパティが設定されて、イメージに含まれるコントロールの内側に表示されます。  
+# <a name="how-to-set-the-background-of-a-windows-forms-panel"></a>方法: Windows フォーム パネルの背景を設定します。
+Windows フォーム<xref:System.Windows.Forms.Panel>コントロールは、背景色と背景イメージの両方を表示できます。 <xref:System.Windows.Forms.Control.BackColor%2A>プロパティは、ラベルやラジオ ボタンなど、含まれるコントロールの背景色を設定します。 場合、<xref:System.Windows.Forms.Control.BackgroundImage%2A>プロパティが設定されていない、<xref:System.Windows.Forms.Control.BackColor%2A>選択がパネル全体を入力します。 場合、<xref:System.Windows.Forms.Control.BackgroundImage%2A>プロパティが設定されて、イメージが格納されているコントロールの背後に表示されます。  
   
-### <a name="to-set-the-background-programmatically"></a>バック グラウンドをコードから設定するには  
+### <a name="to-set-the-background-programmatically"></a>バック グラウンドをプログラムで設定するには  
   
-1.  パネルの設定<xref:System.Windows.Forms.Control.BackColor%2A>プロパティ型の値を<xref:System.Drawing.Color?displayProperty=nameWithType>です。  
+1. パネルの設定<xref:System.Windows.Forms.Control.BackColor%2A>プロパティ型の値を<xref:System.Drawing.Color?displayProperty=nameWithType>します。  
   
     ```vb  
     Panel1.BackColor = Color.AliceBlue  
@@ -37,7 +37,7 @@ Windows フォーム<xref:System.Windows.Forms.Panel>コントロールは、背
     panel1->BackColor = Color::AliceBlue;  
     ```  
   
-2.  パネルの設定<xref:System.Windows.Forms.Control.BackgroundImage%2A>プロパティを使用して、<xref:System.Drawing.Image.FromFile%2A>のメソッド、<xref:System.Drawing.Image?displayProperty=nameWithType>クラスです。  
+2. パネルの設定<xref:System.Windows.Forms.Control.BackgroundImage%2A>プロパティを使用して、<xref:System.Drawing.Image.FromFile%2A>のメソッド、<xref:System.Drawing.Image?displayProperty=nameWithType>クラス。  
   
     ```vb  
     ' You should replace the bolded image   
@@ -67,8 +67,9 @@ Windows フォーム<xref:System.Windows.Forms.Panel>コントロールは、背
        "\\Image.gif"));  
     ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.Control.BackColor%2A>  
- <xref:System.Windows.Forms.Control.BackgroundImage%2A>  
- [Panel コントロール](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)  
- [Panel コントロールの概要](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Forms.Control.BackColor%2A>
+- <xref:System.Windows.Forms.Control.BackgroundImage%2A>
+- [Panel コントロール](panel-control-windows-forms.md)
+- [Panel コントロールの概要](panel-control-overview-windows-forms.md)

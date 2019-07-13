@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a21f4cd8657a9d2c26ac481e7f2b00e6a2f502c9
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 032958c24e03025fc3fc3eee2aae40bdd4491e7b
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123762"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052733"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework の開発ガイド
 ここでは、.NET Framework アプリの作成、構成、デバッグ、保護、および配置を行う方法について説明します。 また、動的プログラミング、相互運用性、拡張性、メモリ管理、スレッド処理などの技術領域に関する情報も提供します。  
@@ -48,7 +48,7 @@ ms.locfileid: "49123762"
  構成ファイルを使用して、.NET Framework アプリを再コンパイルすることなく設定を変更する方法を説明します。  
   
  [.NET ネイティブによるアプリのコンパイル](../../docs/framework/net-native/index.md)  
- [!INCLUDE[net_native](../../includes/net-native-md.md)] プリコンパイル テクノロジを使用して、Windows ストア アプリをビルドおよび配置する方法について説明します。 [!INCLUDE[net_native](../../includes/net-native-md.md)] は、マネージド コード (C#) で記述され、.NET Framework を対象とするアプリをネイティブ コードにコンパイルします。  
+ .NET Native プリコンパイル テクノロジを使用して、Windows ストア アプリをビルドおよび配置する方法について説明します。 .NET Native は、マネージド コード (C#) で記述され、.NET Framework を対象とするアプリをネイティブ コードにコンパイルします。  
   
  [セキュリティ](../../docs/standard/security/index.md)  
  .NET Framework において安全なアプリの開発を促進するクラスおよびサービスに関する情報を示します。  
@@ -65,9 +65,9 @@ ms.locfileid: "49123762"
  [パフォーマンス](../../docs/framework/performance/index.md)  
  キャッシュ、遅延初期化、信頼性、および ETW イベントについて説明します。  
  
-## <a name="reference"></a>参照  
+## <a name="reference"></a>関連項目  
  [.NET Framework クラス ライブラリ](/dotnet/api/?view=netframework-4.7)  
- [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の名前空間に含まれる各クラスの構文、コード例、および使用情報を示します。  
+ .NET Framework の名前空間に含まれる各クラスの構文、コード例、および使用情報を示します。  
   
 ## <a name="related-sections"></a>関連項目  
  [はじめに](../../docs/framework/get-started/index.md)  
@@ -79,5 +79,5 @@ ms.locfileid: "49123762"
  [ツール](../../docs/framework/tools/index.md)  
  .NET Framework テクノロジを使ってアプリを開発、構成、配置するのに役立つツールについて説明します。  
   
- [.NET Framework のサンプル](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)  
- .NET Framework のテクノロジを紹介するサンプル アプリを参照できる MSDN コード サンプル ギャラリーへのリンクです。
+ [.NET サンプルおよびチュートリアル](../samples-and-tutorials/index.md)  
+ .NET を学習する際に役立つサンプルとチュートリアルへのリンクです。

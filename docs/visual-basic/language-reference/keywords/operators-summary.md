@@ -1,4 +1,4 @@
-﻿---
+---
 title: 演算子の概要 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +6,12 @@ helpviewer_keywords:
 - symbols, operators
 - Visual Basic code, operators
 ms.assetid: cb44c210-686f-4417-a13f-51c0d60161f8
-ms.openlocfilehash: 8663b327c76f7d0782bc6c56f7f66b595927652e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3fbb8dd0dafb0d16531f13280a2033e4f085897f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33601008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801284"
 ---
 # <a name="operators-summary-visual-basic"></a>演算子の概要 (Visual Basic)
 Visual Basic 言語のキーワードとランタイム ライブラリ メンバーを、目的と使用方法に応じて編成しました。  
@@ -25,6 +25,7 @@ Visual Basic 言語のキーワードとランタイム ライブラリ メン�
 |論理/ビット処理演算子|[Not](../../../visual-basic/language-reference/operators/not-operator.md), [と](../../../visual-basic/language-reference/operators/and-operator.md), [Or](../../../visual-basic/language-reference/operators/or-operator.md), [Xor](../../../visual-basic/language-reference/operators/xor-operator.md), [AndAlso](../../../visual-basic/language-reference/operators/andalso-operator.md), [OrElse](../../../visual-basic/language-reference/operators/orelse-operator.md)|  
 |その他の演算子|[AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md), [Await](../../../visual-basic/language-reference/operators/await-operator.md), [GetType](../../../visual-basic/language-reference/operators/gettype-operator.md)|  
   
-## <a name="see-also"></a>関連項目  
- [キーワード](../../../visual-basic/language-reference/keywords/index.md)  
- [Visual Basic ランタイム ライブラリのメンバー](../../../visual-basic/language-reference/runtime-library-members.md)
+## <a name="see-also"></a>関連項目
+
+- [キーワード](../../../visual-basic/language-reference/keywords/index.md)
+- [Visual Basic ランタイム ライブラリのメンバー](../../../visual-basic/language-reference/runtime-library-members.md)

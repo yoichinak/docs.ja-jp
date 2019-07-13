@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b48adcb8e9de49a312af77c8a9b80a07455ebfe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 55d4e936c8b732e4cc4a60df8c11b37c86c4a415
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432987"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778483"
 ---
 # <a name="compareassemblyidentity-function"></a>CompareAssemblyIdentity 関数
-それらが等しいかどうかを決定する 2 つのアセンブリ id を比較します。  
+2 つのアセンブリ id と同じかどうかを比較します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 STDAPI CompareAssemblyIdentity (  
     [in]  LPCWSTR                  pwzAssemblyIdentity1,  
     [in]  BOOL                     fUnified1,  
@@ -40,50 +40,51 @@ STDAPI CompareAssemblyIdentity (
  );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pwzAssemblyIdentity1`  
  [in]比較では、最初のアセンブリのテキスト形式の id。  
   
  `fUnified1`  
- [in]ユーザー指定の統一を示すブール型のフラグ`pwzAssemblyIdentity1`です。  
+ [in]ユーザー指定の統一を示すブール フラグ`pwzAssemblyIdentity1`します。  
   
  `pwzAssemblyIdentity2`  
  [in]比較では、2 番目のアセンブリのテキスト形式の id。  
   
  `fUnified2`  
- [in]ユーザー指定の統一を示すブール型のフラグ`pwzAssemblyIdentity2`です。  
+ [in]ユーザー指定の統一を示すブール フラグ`pwzAssemblyIdentity2`します。  
   
  `pfEquivalent`  
- [out]2 つのアセンブリが等価かどうかを示すブール型のフラグ。  
+ [out]2 つのアセンブリが等しいかどうかを示すブール フラグです。  
   
  `pResult`  
  [out][AssemblyComparisonResult](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md)比較に関する詳細情報を含む列挙です。  
   
 ## <a name="return-value"></a>戻り値  
- `pfEquivalent` 2 つのアセンブリが等価かどうかを示すブール値を返します。 `pResult` いずれかを返します、`AssemblyComparisonResult`の値の詳細な理由を指定する値、`pfEquivalent`です。  
+ `pfEquivalent` 2 つのアセンブリが等しいかどうかを示すブール値を返します。 `pResult` いずれかを返します、`AssemblyComparisonResult`の値の詳細な理由を指定する値、`pfEquivalent`します。  
   
-## <a name="remarks"></a>コメント  
- `CompareAssemblyIdentity` チェックするかどうか`pwzAssemblyIdentity1`と`pwzAssemblyIdentity2`は同等です。 `pfEquivalent` 設定されている`true`次の条件の下にある 1 つ以上。  
+## <a name="remarks"></a>Remarks  
+ `CompareAssemblyIdentity` チェックするかどうか`pwzAssemblyIdentity1`と`pwzAssemblyIdentity2`は同等です。 `pfEquivalent` 設定されている`true`次の条件の 1 つ以上。  
   
--   2 つのアセンブリ id は等価です。 厳密な名前付きアセンブリの場合、等価性は、アセンブリ名、バージョン、公開キー トークン、およびカルチャと同じである必要があります。 単に名前付きアセンブリは、等価であるアセンブリ名、およびカルチャに一致する必要があります。  
+- 2 つのアセンブリ id は同等です。 アセンブリ名、バージョン、公開キー トークン、およびカルチャと同じですが、厳密な名前付きアセンブリのと同等のグループが必要です。 単純な名前のアセンブリと同等のグループにはアセンブリ名、およびカルチャに一致する必要があります。  
   
--   両方のアセンブリ id は、.NET Framework で実行されるアセンブリを参照してください。 この条件の戻り値`true`アセンブリ バージョン番号が一致しない場合でもです。  
+- 両方のアセンブリ id は、.NET Framework で実行されるアセンブリを参照してください。 この条件の戻り値`true`場合でも、アセンブリのバージョン番号が一致しません。  
   
--   2 つのアセンブリは、マネージ アセンブリではありませんが、`fUnified1`または`fUnified2`に設定された`true`です。  
+- 2 つのアセンブリは、マネージ アセンブリではありませんが、`fUnified1`または`fUnified2`に設定された`true`します。  
   
- `fUnified`フラグは、厳密な名前付きアセンブリのバージョン番号までのすべてのバージョン番号同等と見なされる厳密な名前付きのアセンブリにことを示します。 たとえば場合の値`pwzAssemblyIndentity1`は"MyAssembly, バージョン 3.0.0.0]、[カルチャを = = neutral, publicKeyToken =..."の値と`fUnified1`は`true`、これは、すべてのバージョンから version 3.0.0.0 に 0.0.0.0 MyAssembly の必要があることを示します。それと同等として扱われます。 このような場合は場合、`pwzAssemblyIndentity2`と同じアセンブリを指す`pwzAssemblyIndentity1`、下位のバージョン番号があることを除いて、`pfEquivalent`に設定されている`true`です。 場合`pwzAssemblyIdentity2`上位のバージョン番号を指す`pfEquivalent`に設定されている`true`場合にのみの値`fUnified2`は`true`します。  
+ `fUnified`フラグは、厳密な名前付きアセンブリのバージョン番号までのすべてのバージョン番号同等と見なされる厳密な名前付きアセンブリにことを示します。 たとえば場合の値`pwzAssemblyIndentity1`が"MyAssembly, バージョン 3.0.0.0, culture = = neutral, publicKeyToken =..."の値と`fUnified1`は`true`、MyAssembly 0.0.0.0 に 3.0.0.0 のバージョンからのすべてのバージョンがあることを示します同等として扱われます。 このような場合は場合、`pwzAssemblyIndentity2`と同じアセンブリを指す`pwzAssemblyIndentity1`、低いバージョン番号があることを除いて、`pfEquivalent`に設定されている`true`します。 場合`pwzAssemblyIdentity2`上位のバージョン番号を指す`pfEquivalent`に設定されている`true`場合にのみの値`fUnified2`は`true`します。  
   
- `pResult`パラメーターには、理由、2 つのアセンブリは同等または同等ではないと見なされますに関する特定の情報が含まれています。 詳細については、次を参照してください。 [AssemblyComparisonResult 列挙型](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md)です。  
+ `pResult`パラメーターには、なぜ 2 つのアセンブリは同等または同等ではないと見なされますに関する特定の情報が含まれています。 詳細については、次を参照してください。 [AssemblyComparisonResult 列挙型](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md)します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Fusion.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [Fusion グローバル静的関数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
- [AssemblyComparisonResult 列挙型](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md)
+## <a name="see-also"></a>関連項目
+
+- [Fusion グローバル静的関数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [AssemblyComparisonResult 列挙型](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md)

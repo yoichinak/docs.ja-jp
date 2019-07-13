@@ -1,5 +1,5 @@
 ---
-title: '&lt;UseSmallInternalThreadStacks&gt;要素'
+title: <UseSmallInternalThreadStacks> 要素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UseSmallInternalThreadStacks element
@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 23a38297526090f1df35f8541026accd5a5cb9bc
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 70113d98c5a4ab41700f6c9842dba89e2b49c297
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613792"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489329"
 ---
-# <a name="ltusesmallinternalthreadstacksgt-element"></a>&lt;UseSmallInternalThreadStacks&gt;要素
+# <a name="usesmallinternalthreadstacks-element"></a>\<UseSmallInternalThreadStacks > 要素
 要求の共通言語ランタイム (CLR) がメモリを減らすことは、内部的には、これらのスレッドの既定のスタック サイズを使用する代わりに使用する特定のスレッドの作成時に、明示的なスタック サイズを指定することによって使用されます。  
   
- \<configuration > 要素  
-\<ランタイム > 要素  
+ \<configuration> 要素  
+\<runtime> 要素  
 \<UseSmallInternalThreadStacks > 要素  
   
 ## <a name="syntax"></a>構文  
@@ -41,7 +41,7 @@ ms.locfileid: "53613792"
 |値|説明|  
 |-----------|-----------------|  
 |true|明示的なスタック サイズを要求します。|  
-|False|既定のスタック サイズを使用します。 これは、既定値は、[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]します。|  
+|False|既定のスタック サイズを使用します。 これは、.NET Framework 4 の既定値です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -57,7 +57,7 @@ ms.locfileid: "53613792"
  この構成要素は、CLR は、その内部のスレッドの場合は、要求が受け入れられます、明示的なスレッドのサイズが既定のサイズより小さいために、プロセスより少ない仮想メモリの使用を要求に使用されます。  
   
 > [!IMPORTANT]
->  この構成要素は、絶対要件ではなく、CLR に要求です。 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]X86 にのみ、要求が受け入れられますアーキテクチャ。 この要素は、CLR の将来のバージョンでは完全に無視されます。 または選択した内部スレッドに常に使用される明示的なスタック サイズを指定して置換可能性があります。  
+>  この構成要素は、絶対要件ではなく、CLR に要求です。 X86 にのみ、.NET Framework 4 で、要求が受け入れられますアーキテクチャ。 この要素は、CLR の将来のバージョンでは完全に無視されます。 または選択した内部スレッドに常に使用される明示的なスタック サイズを指定して置換可能性があります。  
   
  この構成要素、信頼性が低下より小さい仮想メモリの使用を要求が受け入れられる場合スタック サイズが小さくなる可能性があるため可能性のあるスタックを指定することは、多くの場合オーバーフローします。  
   
@@ -72,6 +72,7 @@ ms.locfileid: "53613792"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>関連項目
+
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)

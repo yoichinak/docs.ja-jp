@@ -4,12 +4,12 @@ description: .NET Core の新機能について。
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 4be579f2000c86b3dad412b24589fa8e7024d2f0
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 2d0f6a9faaec4d4438452054624751a40c96c8e5
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45591764"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464074"
 ---
 # <a name="whats-new-in-net-core-20"></a>.NET Core 2.0 の新機能
 
@@ -144,7 +144,7 @@ Visual Studio のプロジェクトを再ターゲットするには、そのプ
 
 複数のターゲット フレームワークのプロジェクトをビルドする場合は、トップレベルのメニューからターゲット プラットフォームを選択できます。 次の図では、SCD1 という名前のプロジェクトが 64 ビット macOS X 10.11 (`osx.10.11-x64`) と 64 ビット Windows 10/Windows Server 2016 (`win10-x64`) をターゲットにしています。 プロジェクト ボタンを選択する前にターゲット フレームワークを選択できます。今回はデバッグ ビルドを実行するために選択します。
 
-![プロジェクト作成時のターゲット フレームワークの選択](media/multitarget.png)
+![プロジェクトをビルドするときのターゲット フレームワークの選択を示すスクリーンショット。](./media/dotnet-core-2-0/target-framework-selection.png)
 
 ### <a name="side-by-side-support-for-net-core-sdks"></a>.NET Core SDK の side-by-side サポート
 
@@ -163,4 +163,4 @@ Visual Studio のプロジェクトを再ターゲットするには、そのプ
 
 ## <a name="see-also"></a>関連項目
 
-* [ASP.NET Core 2.0 の新機能](/aspnet/core/aspnetcore-2.0)
+- [ASP.NET Core 2.0 の新機能](/aspnet/core/aspnetcore-2.0)

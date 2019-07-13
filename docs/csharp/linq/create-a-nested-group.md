@@ -1,14 +1,14 @@
 ---
 title: 入れ子になったグループの作成 (C# での LINQ)
 description: C# で LINQ クエリ式に入れ子になったグループを作成する方法について説明します。
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: e9f00708-362e-4d13-98c5-d77549347ba0
-ms.openlocfilehash: 82b07c303215200fa974ce614a2d5a77882dcf4c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7d056c9e215ccc7ca24d621b64e2328bed79f22e
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509969"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857672"
 ---
 # <a name="create-a-nested-group"></a>入れ子になったグループの作成
 

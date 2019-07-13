@@ -5,12 +5,12 @@ helpviewer_keywords:
 - language reference
 - Visual Basic code, language reference
 ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
-ms.openlocfilehash: 615421afe522770bfcff38ffdb23917d7925150d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 5142fb9f4b5cd49bb35b58fdd92e4fb84b8ecc03
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083909"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593065"
 ---
 # <a name="reference-visual-basic"></a>リファレンス (Visual Basic)
 このセクションでは、Visual Basic プログラミングのさまざまな側面に関するリファレンス情報へのリンクを提供します。  
@@ -23,17 +23,10 @@ ms.locfileid: "44083909"
  コマンド ライン コンパイラに関する情報へのリンクを示します。コマンド ライン コンパイラは、Visual Studio IDE を使用せずにプログラムをコンパイルするためのツールです。  
   
  [.NET Framework リファレンス情報](../../visual-basic/reference/net-framework-reference-information.md)  
- [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] クラス ライブラリの使用方法に関する情報へのリンクを示します。  
+ .NET Framework クラス ライブラリの操作では、情報へのリンクを提供します。  
   
  [Visual Basic 言語仕様](../../visual-basic/reference/language-specification/index.md)  
  言語のあらゆる側面に詳細な情報を含む完全な Visual Basic 言語仕様へのリンクを提供します。  
-  
-## <a name="reference"></a>参照  
- <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=nameWithType>  
- この名前空間には、Visual Basic Power Packs コントロールのクラスが含まれています。 Visual Basic Power Packs コントロールは、追加の Windows フォーム コントロールです。  
-  
- <xref:Microsoft.VisualBasic.PowerPacks.Printing?displayProperty=nameWithType>  
- この名前空間は、画面に表示されているとおりにフォームの複製を印刷できるようにするコンポーネントを提供します。  
   
 ## <a name="related-sections"></a>関連項目  
  [一般的なユーザー インターフェイス要素 (Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  

@@ -1,5 +1,5 @@
 ---
-title: '方法 : Windows フォーム DataGrid コントロールのクリックに応答する'
+title: '方法: Windows フォーム DataGrid コントロールのクリックに応答する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,22 +12,23 @@ helpviewer_keywords:
 - examples [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
-ms.openlocfilehash: 3b89bab9370039e4089ad834c6ea1f528d7b6575
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 60c4dac76b4a7868da9143cab1433ee93f97c7d1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535165"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64636809"
 ---
-# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>方法 : Windows フォーム DataGrid コントロールのクリックに応答する
+# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>方法: Windows フォーム DataGrid コントロールのクリックに応答する
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。 詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。  
+>  
+  <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。 詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。  
   
- Windows フォームの後に<xref:System.Windows.Forms.DataGrid>が接続されているデータベースにユーザーがクリックしたセルを監視できます。  
+ Windows フォームの後に<xref:System.Windows.Forms.DataGrid>が接続されているデータベースに、ユーザーがクリックされたセルを監視できます。  
   
-### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a>DataGrid のユーザーが別のセルを選択したときを検出するには  
+### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a>DataGrid のユーザーを検出するには、別のセルを選択します  
   
--   <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> 、イベント ハンドラーが適切に応答するコードを記述します。  
+- <xref:System.Windows.Forms.DataGrid.CurrentCellChanged>イベント ハンドラーを適切に応答するコードを記述します。  
   
     ```vb  
     Private Sub myDataGrid_CurrentCellChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles myDataGrid.CurrentCellChanged  
@@ -47,7 +48,7 @@ ms.locfileid: "33535165"
     }  
     ```  
   
-     (Visual C#)イベント ハンドラーを登録するフォームのコンス トラクターに次のコードを配置します。  
+     (Visual C#)イベント ハンドラーを登録するフォームのコンス トラクターでは、次のコードを配置します。  
   
     ```csharp  
     this.myDataGrid.CurrentCellChanged += new  
@@ -56,9 +57,9 @@ ms.locfileid: "33535165"
   
 ### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a>ユーザーがクリックしたデータ グリッドのどの部分を決定するには  
   
--   呼び出す、<xref:System.Windows.Forms.DataGrid.HitTest%2A>など、適切なイベント ハンドラーのメソッド、<xref:System.Windows.Forms.Control.MouseDown>または<xref:System.Windows.Forms.Control.Click>イベント。  
+- 呼び出す、<xref:System.Windows.Forms.DataGrid.HitTest%2A>メソッドなど、適切なイベント ハンドラーで、<xref:System.Windows.Forms.Control.MouseDown>または<xref:System.Windows.Forms.Control.Click>イベント。  
   
-     <xref:System.Windows.Forms.DataGrid.HitTest%2A>メソッドを返します、<xref:System.Windows.Forms.DataGrid.HitTestInfo>クリックした領域の列や行を含むオブジェクトです。  
+     <xref:System.Windows.Forms.DataGrid.HitTest%2A>メソッドを返します。 を<xref:System.Windows.Forms.DataGrid.HitTestInfo>行、クリックされた領域の列を含むオブジェクト。  
   
     ```vb  
     Private Sub myDataGrid_MouseDown(ByVal sender As Object, _  
@@ -132,7 +133,7 @@ ms.locfileid: "33535165"
     }  
     ```  
   
-     (Visual C#)イベント ハンドラーを登録するフォームのコンス トラクターに次のコードを配置します。  
+     (Visual C#)イベント ハンドラーを登録するフォームのコンス トラクターでは、次のコードを配置します。  
   
     ```csharp  
     this.myDataGrid.MouseDown += new  
@@ -140,6 +141,7 @@ ms.locfileid: "33535165"
        (this.myDataGrid_MouseDown);  
     ```  
   
-## <a name="see-also"></a>関連項目  
- [DataGrid コントロール](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
- [方法: Windows フォーム DataGrid コントロールに表示されるデータを実行時に変更する](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)
+## <a name="see-also"></a>関連項目
+
+- [DataGrid コントロール](datagrid-control-windows-forms.md)
+- [方法: Windows フォーム DataGrid コントロールでの実行時に表示されるデータの変更](change-displayed-data-at-run-time-wf-datagrid-control.md)

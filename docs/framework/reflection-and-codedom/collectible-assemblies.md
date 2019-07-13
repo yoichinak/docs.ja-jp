@@ -8,16 +8,16 @@ helpviewer_keywords:
 - collectible assemblies, retrieving
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04a04e422fec14055d8ac3f50b9f2f18658a0f9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b26da264b2da40e19db4bc5e3b3575505f5c979c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398262"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637743"
 ---
 # <a name="collectible-assemblies-for-dynamic-type-generation"></a>動的な型生成のための収集可能なアセンブリ
 
-*収集可能なアセンブリ*とは、それらが作成されたアプリケーション ドメインをアンロードせずにアンロードできる動的アセンブリです。 収集可能アセンブリとそれに含まれる型によって使用されているすべてのマネージ メモリとアンマネージ メモリは、再利用することができます。 アセンブリ名などの情報は、内部テーブルから削除されます。
+*収集可能なアセンブリ*とは、それらが作成されたアプリケーション ドメインをアンロードせずにアンロードできる動的アセンブリです。 収集可能アセンブリとそれに含まれる型によって使用されているすべてのマネージド メモリとアンマネージド メモリは、再利用することができます。 アセンブリ名などの情報は、内部テーブルから削除されます。
 
 アンロードを有効にするには、動的アセンブリを作成するときに <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndCollect?displayProperty=nameWithType> フラグを使用します。 このアセンブリは一時的なもので (つまり、保存できません)、「[収集可能なアセンブリに対する制限](#restrictions-on-collectible-assemblies)」セクションで説明されている制限事項が該当します。 収集可能なアセンブリは、そのアセンブリに関連付けられているすべてのオブジェクトが解放されると、共通言語ランタイム (CLR) によって自動的にアンロードされます。 その他のすべての点では、収集可能なアセンブリは他の動的アセンブリと同じように作成および使用されます。
 
@@ -77,9 +77,9 @@ ms.locfileid: "33398262"
 - **コンテキスト バインド オブジェクト**    
    コンテキストの静的変数はサポートされません。 収集可能なアセンブリ内の型は、<xref:System.ContextBoundObject> を拡張できません。 ただし、別の場所で定義されているコンテキスト バインド オブジェクトを、収集可能なアセンブリのコードで使用することはできます。
 
-- **スレッドの静的データ**       
+- **スレッドの静的データ**       
    スレッドの静的変数はサポートされません。
 
 ## <a name="see-also"></a>関連項目
 
-[動的メソッドおよびアセンブリの出力](emitting-dynamic-methods-and-assemblies.md)
+- [動的メソッドおよびアセンブリの出力](emitting-dynamic-methods-and-assemblies.md)

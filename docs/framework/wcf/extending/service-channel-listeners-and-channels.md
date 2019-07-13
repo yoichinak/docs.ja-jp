@@ -1,15 +1,15 @@
 ---
-title: 'サービス: チャネル リスナーとチャネルします。'
+title: サービス:チャネル リスナーとチャネル
 ms.date: 03/30/2017
 ms.assetid: 8ccbe0e8-7e55-441d-80de-5765f67542fa
 ms.openlocfilehash: 88bfdc879e4f3c7df6b2c4035c7ed7fdc2b4c41d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47396930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771460"
 ---
-# <a name="service-channel-listeners-and-channels"></a>サービス: チャネル リスナーとチャネルします。
+# <a name="service-channel-listeners-and-channels"></a>サービス:チャネル リスナーとチャネル
 
 チャネル オブジェクトの 3 つのカテゴリがあります: チャネル、チャネル リスナー、およびチャネル ファクトリ。 チャネルはアプリケーションおよびチャネル スタックとのインターフェイスです。 チャネル リスナーは受信 (またはリッスン) する側のチャネルを作成する役割を果たします。通常は、新しい受信メッセージまたは接続への応答を行います。 チャネル ファクトリは送信側のチャネルを作成し、エンドポイントとの通信を開始する役割を果たします。
 
@@ -35,7 +35,7 @@ WCF では、このプロセスの基本クラス ヘルパーを提供します
 
 - <xref:System.ServiceModel.Channels.ChannelListenerBase> クラスは、<xref:System.ServiceModel.Channels.IChannelListener> を実装しています。 基本状態管理を行います。
 
-次の説明がに基づいて、[トランスポート: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)サンプル。
+次の説明がに基づいて、[トランスポート。UDP](../../../../docs/framework/wcf/samples/transport-udp.md)サンプル。
 
 ## <a name="creating-a-channel-listener"></a>チャネル リスナーを作成します。
 

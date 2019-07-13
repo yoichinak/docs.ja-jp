@@ -9,12 +9,12 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
 author: KrzysztofCwalina
-ms.openlocfilehash: 64efdc46583a0931df9f57c32424ca4233bf2b82
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b8b6ec195fd3f95a4255ea820f2bffcb3e27ba19
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143442"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615216"
 ---
 # <a name="names-of-namespaces"></a>名前空間の名前
 として他の名前付けのガイドラインと名前空間の名前を付けるときの目標を作成するための十分なわかりやすくするために名前空間のコンテンツがある可能性がありますをすぐにいるフレームワークを使用するプログラマにとって。 次のテンプレートは、名前空間の名前付けに関する一般的な規則を指定します。  
@@ -36,7 +36,7 @@ ms.locfileid: "53143442"
   
  **✓ CONSIDER** 適切な場所に複数形の名前空間の名前を使用します。  
   
- たとえば、使用して`System.Collections`の代わりに`System.Collection`します。 ブランド名や略語は、この規則の例外をただしです。 たとえば、使用して`System.IO`の代わりに`System.IOs`します。  
+ たとえば、`System.Collection` の代わりに `System.Collections` を使用します。 ブランド名や略語は、この規則の例外をただしです。 たとえば、`System.IOs` の代わりに `System.IO` を使用します。  
   
  **X DO NOT** その名前空間、名前空間と型に同じ名前を使用します。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "53143442"
   
  異なるカテゴリの名前空間の型名の競合を回避するための特定のガイドラインがあります。  
   
--   **アプリケーション モデルの名前空間**  
+- **アプリケーション モデルの名前空間**  
   
      1 つのアプリケーション モデルに属している名前空間が同時に、使用される非常に多くの場合がほとんどない他のアプリケーション モデルの名前空間を使用します。 たとえば、<xref:System.Windows.Forms?displayProperty=nameWithType>と共に名前空間が使用される非常にまれ、<xref:System.Web.UI?displayProperty=nameWithType>名前空間。 よく知られたアプリケーション モデルの名前空間のグループの一覧を次には。  
   
@@ -60,11 +60,11 @@ ms.locfileid: "53143442"
   
      たとえば、という名前の型を追加しないでください`Page`に、<xref:System.Web.UI.Adapters?displayProperty=nameWithType>名前空間、ため、<xref:System.Web.UI?displayProperty=nameWithType>名前空間に既にという名前の型が含まれている`Page`。  
   
--   **インフラストラクチャの名前空間**  
+- **インフラストラクチャの名前空間**  
   
      このグループには、ほとんどの一般的なアプリケーションの開発時にインポートされる名前空間が含まれています。 たとえば、`.Design`プログラミングの開発ツールと名前空間は主に使用します。 これらの名前空間内の型との競合を避けるは重要ではありません。  
   
--   **コア名前空間**  
+- **コア名前空間**  
   
      すべてのコア名前空間を含める`System`アプリケーション モデルの名前空間およびインフラストラクチャの名前空間を除く、名前空間。 その他のコア名前空間が含まれます`System`、 `System.IO`、 `System.Xml`、および`System.Net`します。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "53143442"
   
      たとえば、使用しないでください`Stream`型名として。 競合する<xref:System.IO.Stream?displayProperty=nameWithType>、非常によく型を使用します。  
   
--   **テクノロジの名前空間のグループ**  
+- **テクノロジの名前空間のグループ**  
   
      このカテゴリには、同じ最初の 2 つの名前空間ノードを持つすべての名前空間が含まれています。 `(<Company>.<Technology>*`)、など`Microsoft.Build.Utilities`と`Microsoft.Build.Tasks`します。 1 つのテクノロジに属している型が互いに競合しないことが重要です。  
   
@@ -86,5 +86,5 @@ ms.locfileid: "53143442"
   
 ## <a name="see-also"></a>関連項目
 
-- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)  
+- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)
 - [名前付けのガイドライン](../../../docs/standard/design-guidelines/naming-guidelines.md)

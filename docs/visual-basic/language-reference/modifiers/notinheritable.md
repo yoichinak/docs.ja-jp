@@ -15,24 +15,25 @@ helpviewer_keywords:
 - sealed classes [Visual Basic]
 - classes [Visual Basic], not inheritable
 ms.assetid: 5c4da7c9-9562-4653-a947-1972e992f9f9
-ms.openlocfilehash: 537d10e68061758234922157b5df14302f1451b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 05adafaf26cab7f7ed00c51ee23fafbe02f2a408
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920693"
 ---
 # <a name="notinheritable-visual-basic"></a>NotInheritable (Visual Basic)
-クラスを基底クラスとして使用できないことを指定します。  
+基底クラスとしてクラスを使用することはできませんを指定します。  
   
-## <a name="remarks"></a>コメント  
- **別の用語**です。 クラスは継承できませんと呼ぶことが、*シール*クラスです。  
+## <a name="remarks"></a>Remarks  
+ **別の用語**します。 クラスを継承することはできませんとも呼ばれます、*シール*クラス。  
   
  `NotInheritable`修飾子は、このコンテキストで使用できます。  
   
  [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)  
   
-## <a name="see-also"></a>関連項目  
- [Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)  
- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
- [キーワード](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>関連項目
+
+- [Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
+- [キーワード](../../../visual-basic/language-reference/keywords/index.md)

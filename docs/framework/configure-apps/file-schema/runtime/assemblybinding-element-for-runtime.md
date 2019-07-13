@@ -1,5 +1,5 @@
 ---
-title: '&lt;assemblyBinding&gt;要素&lt;ランタイム&gt;'
+title: <runtime> の <assemblyBinding> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding
@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 33900f40aab85fd67540ecd6004a46e13e8eb8c2
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: eec77d4dd42a7b95d1e2cd0e353e2e54746676b7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704883"
 ---
-# <a name="ltassemblybindinggt-element-for-ltruntimegt"></a>&lt;assemblyBinding&gt;要素&lt;ランタイム&gt;
+# <a name="assemblybinding-element-for-runtime"></a>\<assemblyBinding > 要素の\<ランタイム >
 アセンブリ バージョンのリダイレクトおよびアセンブリの位置に関する情報が含まれます。  
   
  \<configuration>  
-\<ランタイム >  
+\<runtime>  
 \<assemblyBinding>  
   
 ## <a name="syntax"></a>構文  
@@ -40,7 +40,7 @@ ms.locfileid: "53612037"
 |属性|説明|  
 |---------------|-----------------|  
 |**xmlns**|必須の属性です。<br /><br /> アセンブリのバインディングに必要な XML 名前空間を指定します。 値として、文字列 "urn:schemas-microsoft-com:asm.v1" を使用します。|  
-|**AppliesTo**|.NET Framework アセンブリのリダイレクトを適用するランタイムのバージョンを指定します。 このオプションの属性では、.NET Framework バージョン番号を使用して、適用するバージョンを指定します。 **appliesTo** 属性が指定されていない場合、**\<assemblyBinding>** 要素は、.NET Framework のすべてのバージョンに適用されます。 **AppliesTo**属性は、.NET Framework version 1.1 で導入されたは、.NET Framework version 1.0 で無視されます。 これは **appliesTo** 属性が指定されている場合でも、.NET Framework version 1.0 を使用している場合 **\<assemblyBinding>** のすべての要素が適用されることを意味します。|  
+|**appliesTo**|.NET Framework アセンブリのリダイレクトを適用するランタイムのバージョンを指定します。 このオプションの属性では、.NET Framework バージョン番号を使用して、適用するバージョンを指定します。 **appliesTo** 属性が指定されていない場合、**\<assemblyBinding>** 要素は、.NET Framework のすべてのバージョンに適用されます。 **AppliesTo**属性は、.NET Framework version 1.1 で導入されたは、.NET Framework version 1.0 で無視されます。 これは **appliesTo** 属性が指定されている場合でも、.NET Framework version 1.0 を使用している場合 **\<assemblyBinding>** のすべての要素が適用されることを意味します。|  
   
 ### <a name="child-elements"></a>子要素  
   
@@ -92,7 +92,8 @@ ms.locfileid: "53612037"
 </runtime>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>関連項目
+
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [アセンブリ バージョンのリダイレクト](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

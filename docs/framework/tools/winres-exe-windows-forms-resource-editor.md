@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c56685e2b9bef811f0fa987be976790eca83e91c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 1c9a14c2ea2d7d817aacca1fa25b04ac643f16bf
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43386408"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59296655"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Windows Resource Localization Editor)
 
@@ -43,7 +43,7 @@ winres /?
 |------------|-----------------|
 |**/?**|このツールのコマンド構文とオプションを表示します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 Windows フォーム プロジェクトのフォームの UI 要素の状態は、通常、リソース ファイルに格納されます。リソース ファイルは、拡張子 .resx を持つ XML ベースのファイル、または、これに対応する、拡張子 .resources が設定された、コンパイル済みのバイナリ形式のファイルのいずれかです。 Winres.exe ツールでは、上記いずれかの形式のファイルを、Visual Studio のデザイン環境を使用しないで編集できますが、制限があります。 具体的には、以下の編集操作を行うことができます。
 
@@ -53,7 +53,7 @@ Windows フォーム プロジェクトのフォームの UI 要素の状態は�
 
 - カルチャ リソース ファイルを別のカルチャのリソース ファイルとして保存できます。 たとえば、英語 (U.S.) のリソース ファイルを、ポーランド語のリソース ファイルとして保存できます。 通常は、新しいファイルを引き続き編集して、新しいカルチャに対応させます。
 
-「[ローカリゼーション用リソースの階層編成](https://msdn.microsoft.com/library/756hydy4\(v=vs.110\))」または「[ローカリゼーション用リソースの階層編成](https://msdn.microsoft.com/library/756hydy4\(v=vs.120\))」も参照してください。
+「[ローカリゼーション用リソースの階層編成](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/756hydy4(v=vs.110))」または「[ローカリゼーション用リソースの階層編成](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/756hydy4(v=vs.120))」も参照してください。
 
 Winres.exe では、対応する .resources ファイルに .resx ファイルを変換できません。この場合は Resgen.exe ツールを使用してください。 Resgen.exe について詳しくは、「[Resgen.exe (リソース ファイル ジェネレーター)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)」を参照してください。
 
@@ -106,9 +106,9 @@ Winres.exe には、以下の機能があります。
 
 ### <a name="to-localize-a-resx-or-resources-file-associated-with-a-form"></a>フォームに関連付けられた .resx ファイルまたは .resources ファイルをローカライズするには
 
-1.  開発者コマンド プロンプトで「`winres`」と入力して、Winres.exe を実行します。
+1. 開発者コマンド プロンプトで「`winres`」と入力して、Winres.exe を実行します。
 
-2.  ローカライズするフォームの既定のリソースを開くには、**[ファイル]** メニューの **[開く]** をクリックし、開くファイルを指定します。
+2. ローカライズするフォームの既定のリソースを開くには、**[ファイル]** メニューの **[開く]** をクリックし、開くファイルを指定します。
 
      - または -
 
@@ -129,15 +129,15 @@ Winres.exe には、以下の機能があります。
     > [!NOTE]
     > リソースが編集中であるフォームが他のフォームを継承したフォームである場合は、継承したフォームを含むアセンブリと、継承元 (派生元) のフォームを含むアセンブリの両方が、グローバル アセンブリ キャッシュ (GAC: Global Assembly Cache) に登録されているか、WinRes.exe と同じディレクトリに存在する必要があります。 .NET Framework のコンポーネントを GAC にインストールする方法の詳細については、「[グローバル アセンブリ キャッシュ](../../../docs/framework/app-domains/gac.md)」を参照してください。
 
-3.  フォーム上のコントロールを選択し、このコントロールの <xref:System.Windows.Forms.Control.Text%2A> などのプロパティを変更して、ローカライズ後のカルチャおよび言語を反映します。 ローカライズされたテキストが納まるように、必要に応じてコントロールを移動したりそのサイズを変更したりします。
+3. フォーム上のコントロールを選択し、このコントロールの <xref:System.Windows.Forms.Control.Text%2A> などのプロパティを変更して、ローカライズ後のカルチャおよび言語を反映します。 ローカライズされたテキストが納まるように、必要に応じてコントロールを移動したりそのサイズを変更したりします。
 
-4.  ローカライズしたバージョンの .resx ファイルや .resources ファイルを保存するには、**[上書き保存]** ボタンをクリックするか、**[ファイル]** メニューの [上書き保存] をクリックします。 **[カルチャを選択する]** ウィンドウが表示されます。
+4. ローカライズしたバージョンの .resx ファイルや .resources ファイルを保存するには、**[上書き保存]** ボタンをクリックするか、**[ファイル]** メニューの [上書き保存] をクリックします。 **[カルチャを選択する]** ウィンドウが表示されます。
 
-5.  適切なカルチャおよびファイル モードを選択し、**[OK]** をクリックします。
+5. 適切なカルチャおよびファイル モードを選択し、**[OK]** をクリックします。
 
    ツールによってファイルが保存される場合は、ローカライズされたリソース ファイルに対してランタイムが予測した名前付け規則が使用されます。 たとえば、`TestApp.resources` をドイツのドイツ語用にローカライズする場合、ファイルは `TestApp.de-DE.resources` という名前で保存されます。 `TestApp.resx` をドイツのドイツ語用にローカライズする場合、ファイルは `TestApp.de-DE.resx` という名前で保存されます。 リソースの名前付け規則について詳しくは、「[リソースのパッケージ化と配置](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)」を参照してください。 ランタイムで使用される定義済みカルチャ名の一覧については、「<xref:System.Globalization.CultureInfo> クラス」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.ComponentModel.LocalizableAttribute>
 - <xref:System.Globalization.CultureInfo>

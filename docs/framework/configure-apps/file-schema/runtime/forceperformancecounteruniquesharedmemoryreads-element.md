@@ -1,5 +1,5 @@
 ---
-title: '&lt;forcePerformanceCounterUniqueSharedMemoryReads&gt;要素'
+title: <forcePerformanceCounterUniqueSharedMemoryReads> 要素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - forcePerformanceCounterUniqueSharedMemoryReads element
@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 91149858-4810-4f65-9b48-468488172c9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b53debd8f71bddb353ff7709decf0142c339e5d
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 00af9cf60d0bd2bac60950617b1315579d1a5a4d
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612700"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347333"
 ---
-# <a name="ltforceperformancecounteruniquesharedmemoryreadsgt-element"></a>&lt;forcePerformanceCounterUniqueSharedMemoryReads&gt;要素
+# <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<forcePerformanceCounterUniqueSharedMemoryReads > 要素
 PerfCounter.dll が、.NET Framework バージョン 1.1 のアプリケーションの CategoryOptions レジストリ設定を使用してするかどうかを指定して、カテゴリ別の共有メモリとグローバル メモリのどちらからパフォーマンス カウンター データを読み込むかを決定します。  
   
  \<configuration>  
-\<ランタイム >  
-\<forcePerformanceCounterUniqueSharedMemoryReads >  
+\<runtime>  
+\<forcePerformanceCounterUniqueSharedMemoryReads>  
   
 ## <a name="syntax"></a>構文  
   
@@ -55,16 +55,16 @@ enabled="true|false"/>
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
 ## <a name="remarks"></a>Remarks  
- 前に .NET Framework のバージョンでは、 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]、読み込まれているどちらのバージョンは、プロセスに読み込まれたランタイムに対応します。 かどうか、コンピューターが両方の .NET Framework version 1.1 と[!INCLUDE[dnprdnlong](../../../../../includes/dnprdnlong-md.md)]、インストールされている .NET Framework 1.1 アプリケーションはどちらの .NET Framework 1.1 バージョンを読み込まれます。 以降では、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]どちらのインストールされている最新のバージョンが読み込まれます。 つまり、.NET Framework 1.1 アプリケーションが読み込むこと、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]バージョンどちらの場合、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]がコンピューターにインストールされています。  
+ .NET Framework 4 より前に、の .NET Framework のバージョンでは、読み込まれているどちらのバージョンは、プロセスに読み込まれたランタイムに対応します。 .NET Framework version 1.1 と .NET Framework 2.0 のインストールの両方で、コンピューターを持っている場合、.NET Framework 1.1 アプリケーションがどちらの .NET Framework 1.1 バージョンを読み込みます。 以降、.NET Framework 4 では、どちらのインストールされている最新のバージョンが読み込まれます。 これは、コンピューターに .NET Framework 4 がインストールされている場合、.NET Framework 1.1 アプリケーションがどちらの .NET Framework 4 のバージョンを読み込むことを意味します。  
   
- 以降では、 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]、パフォーマンス カウンターを使用するときにどちらがカテゴリ別の共有メモリまたはグローバル共有メモリから読み取る必要があります、かどうかを確認するには、各プロバイダーの CategoryOptions レジストリ エントリを確認します。 カテゴリに固有の共有メモリの対応でないため、.NET Framework 1.1 のどちらがレジストリのエントリを読み取れませんグローバル共有メモリから常に読み込みます。  
+ 以降、.NET Framework 4 ではパフォーマンス カウンターを使用するときに、どちらのカテゴリに固有の共有メモリまたはグローバル共有メモリから読み取る必要があります、かどうかを確認するには、各プロバイダー CategoryOptions レジストリ エントリをチェックします。 カテゴリに固有の共有メモリの対応でないため、.NET Framework 1.1 のどちらがレジストリのエントリを読み取れませんグローバル共有メモリから常に読み込みます。  
   
- 旧バージョンとの互換性のため、 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] .NET Framework 1.1 アプリケーションの実行時にどちらが CategoryOptions レジストリ エントリを確認できません。 単に、.NET Framework 1.1 のどちらの場合と同様のグローバル共有メモリを使用します。 ただし、指示すること、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]どちらを有効にすると、レジストリ設定を確認する、`<forcePerformanceCounterUniqueSharedMemoryReads>`要素。  
+ 旧バージョンと互換性のため、.NET Framework 4 のどちらをチェックしません CategoryOptions レジストリ エントリで .NET Framework 1.1 アプリケーションを実行する場合。 単に、.NET Framework 1.1 のどちらの場合と同様のグローバル共有メモリを使用します。 ただし、有効にすると、レジストリ設定を確認する .NET Framework 4 のどちらを指示すること、`<forcePerformanceCounterUniqueSharedMemoryReads>`要素。  
   
 > [!NOTE]
 >  有効にすると、`<forcePerformanceCounterUniqueSharedMemoryReads>`要素がカテゴリ別の共有メモリが使用されることを保証していません。 設定を有効になっている`true`CategoryOptions レジストリ設定を参照するどちらでのみ発生します。 CategoryOptions の既定の設定は、カテゴリ固有の共有メモリを使用することです。ただし、グローバル共有メモリを使用することを示す CategoryOptions を変更できます。  
   
- CategoryOptions 設定を格納するレジストリ キーは hkey_local_machine \system\currentcontrolset\services\\< categoryName\>\Performance します。 既定では、CategoryOptions は設定を 3 にどちら (objectclass = *) カテゴリ固有の共有メモリを使用します。 CategoryOptions が 0 に設定されている場合、どちらはグローバル共有メモリを使用します。 作成中のインスタンスの名前は再利用されるインスタンスと同じ場合にのみ、インスタンス データを再利用されます。 すべてのバージョンは、カテゴリに書き込みを可能になります。 CategoryOptions が 1 に設定されている場合は、グローバル共有メモリが使用されますが、カテゴリ名が再利用されるカテゴリと同じ長さである場合は、インスタンス データを再利用されることができます。  
+ CategoryOptions 設定を格納するレジストリ キーは hkey_local_machine \system\currentcontrolset\services\\< categoryName\>\Performance します。 既定では、CategoryOptions は設定を 3 にどちら カテゴリ固有の共有メモリを使用します。 CategoryOptions が 0 に設定されている場合、どちらはグローバル共有メモリを使用します。 作成中のインスタンスの名前は再利用されるインスタンスと同じ場合にのみ、インスタンス データを再利用されます。 すべてのバージョンは、カテゴリに書き込みを可能になります。 CategoryOptions が 1 に設定されている場合は、グローバル共有メモリが使用されますが、カテゴリ名が再利用されるカテゴリと同じ長さである場合は、インスタンス データを再利用されることができます。  
   
  0 と 1 の設定は、メモリ リークおよびパフォーマンス カウンターのメモリの不足につながります。  
   
@@ -79,6 +79,7 @@ enabled="true|false"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>関連項目
+
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)

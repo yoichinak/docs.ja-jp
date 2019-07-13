@@ -1,22 +1,22 @@
 ---
-title: '方法: 空のクエリの結果セット (Visual Basic) のデバッグ'
+title: '方法: 空のクエリ結果セット (Visual Basic) のデバッグします。'
 ms.date: 07/20/2015
 ms.assetid: b242c90a-d2b8-4309-8a1e-e4e70736c727
-ms.openlocfilehash: 33dcfe9b0c0ad41353ca845ed4d8e21ff77292df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 80e505be03a26f80bbba9d3673732505b27e9598
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855687"
 ---
-# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>方法: 空のクエリの結果セット (Visual Basic) のデバッグ
+# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>方法: 空のクエリ結果セット (Visual Basic) のデバッグします。
 XML ツリーのクエリにおける最も一般的な問題の 1 つは、XML ツリーに既定の名前空間がある場合に、XML が名前空間に含まれていないものとして開発者がクエリを記述してしまうことです。  
   
  このトピックの最初に示す一連の例では、既定の名前空間内の XML が読み込まれ、クエリが不適切に実行される典型的な例を示しています。  
   
  2 番目に示す一連の例では、名前空間内の XML に対してクエリを実行できるようにするために必要な修正を示しています。  
   
- 詳細については、次を参照してください。 [XML 名前空間 (Visual Basic) の操作](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)です。  
+ 詳細については、次を参照してください。 [XML 名前空間 (Visual Basic) の使用](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)します。  
   
 ## <a name="example"></a>例  
  この例では、名前空間内にある XML の作成、および空の結果セットを返すクエリを示します。  
@@ -89,5 +89,6 @@ Result set follows:
 End of result set  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [基本的なクエリ (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>関連項目
+
+- [基本的なクエリ (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

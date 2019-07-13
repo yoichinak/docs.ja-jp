@@ -15,12 +15,12 @@ helpviewer_keywords:
 - x:Single [XAML Services]
 - x:Int32 [XAML Services]
 ms.assetid: 11de2f08-5b95-4989-b5ec-5178eb968184
-ms.openlocfilehash: f6225dfcc02b90da58ccafd5c70726b6f80f29d4
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: feda058a9672a3150f7beb5c1bc124eee1eae9eb
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61689711"
 ---
 # <a name="built-in-types-for-common-xaml-language-primitives"></a>共通の XAML 言語プリミティブの組み込み型
 XAML 2009 では、いくつかのデータ型に対する XAML 言語をサポートします。これらのデータ型は、共通言語ランタイム (CLR: Common Language Runtime) およびその他のプログラミング言語でよく使用されているプリミティブです。 XAML 2009 でサポートされるようになったのは、 `x:Object`, `x:Boolean`, `x:Char`, `x:String`, `x:Decimal`, `x:Single`, `x:Double`, `x:Int16`, `x:Int32`, `x:Int64`, `x:TimeSpan`, `x:Uri`, `x:Byte`、および `x:Array`の各プリミティブです。  
@@ -51,7 +51,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xboolean"></a>x:Boolean  
  CLR バッキングの場合は、 `x:Boolean` プリミティブは <xref:System.Boolean>に対応しています。  
   
- XAML は、`x:Boolean` の値の大文字と小文字を区別しないで解析します。 `x:Bool` は、承諾済みのプリミティブではありません。 XAML 言語仕様の定義を参照してください。 [ \[MS XAML\]セクション 5.2.17 および 5.4.11](https://go.microsoft.com/fwlink/?LinkId=114525)します。  
+ XAML は、 `x:Boolean` の値の大文字と小文字を区別しないで解析します。 `x:Bool` は、承諾済みのプリミティブではありません。 XAML 言語仕様の定義を参照してください。 [ \[MS XAML\]セクション 5.2.17 および 5.4.11](https://go.microsoft.com/fwlink/?LinkId=114525)します。  
   
 ### <a name="xchar"></a>x:Char  
  CLR バッキングの場合は、 `x:Char` プリミティブは <xref:System.Char>に対応しています。  
@@ -73,7 +73,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xsingle"></a>x:Single  
  CLR バッキングの場合は、 `x:Single` プリミティブは <xref:System.Single>に対応しています。  
   
- 数値に加え、`x:Single` のテキスト構文はトークン `Infinity`、`-Infinity`、および `NaN` も許可しています。 これらのトークンは、大文字と小文字を区別します。  
+ 数値に加え、 `x:Single` のテキスト構文はトークン `Infinity`、 `-Infinity`、および `NaN`も許可しています。 これらのトークンは、大文字と小文字を区別します。  
   
  `x:Single` は、テキスト構文の最初の文字が `e` または `E`の場合は、指数表記形式の値をサポートします。  
   
@@ -82,7 +82,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xdouble"></a>x:Double  
  CLR バッキングの場合は、 `x:Double` プリミティブは <xref:System.Double>に対応しています。  
   
- 数値に加え、`x:Double` のテキスト構文は、`Infinity`、`-Infinity`、および `NaN` の各トークンも許可しています。 これらのトークンは、大文字と小文字を区別します。  
+ 数値に加え、 `x:Double` のテキスト構文は、 `Infinity`、 `-Infinity`、および `NaN`の各トークンも許可しています。 これらのトークンは、大文字と小文字を区別します。  
   
  `x:Double` は指数表記形式の値をサポートしています。 `e` または `E` という文字を使用して指数部分を示すことができます。  
   
@@ -125,7 +125,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xarray"></a>x:Array  
  CLR バッキングの場合は、 `x:Array` プリミティブは <xref:System.Array>に対応しています。  
   
- マークアップ拡張構文を使用して配列を XAML 2006 で定義することもできますが、XAML 2009 構文は言語によって定義されたプリミティブであり、マークアップ拡張機能にアクセスする必要がありません。 XAML 2006 のサポートの詳細については、「 [x:Array Markup Extension](../../../docs/framework/xaml-services/x-array-markup-extension.md)」を参照してください。  
+ マークアップ拡張構文を使用して配列を XAML 2006 で定義することもできますが、XAML 2009 構文は言語によって定義されたプリミティブであり、マークアップ拡張機能にアクセスする必要がありません。 XAML 2006 のサポートの詳細については、「 [x:Array Markup Extension](x-array-markup-extension.md)」を参照してください。  
   
  XAML 言語仕様の定義を参照してください。 [ \[MS XAML\]セクション 5.2.18](https://go.microsoft.com/fwlink/?LinkId=114525)します。  
   
@@ -133,4 +133,4 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ## <a name="wpf-support"></a>WPF のサポート  
  WPF では XAML 2009 の機能を使用できますが、マークアップ コンパイルされていない XAML に限定されます。 WPF 向けにマークアップ コンパイルされた XAML、および XAML の BAML 形式は、現在、XAML 2009 のキーワードと機能をサポートしていません。  
   
- WPF と共に XAML 2009 の機能を使用するシナリオは、loose XAML を作成して、し、その XAML を WPF ランタイムとオブジェクト グラフに読み込むかどうか<xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>します。 WPF<xref:System.Windows.Markup.XamlReader?displayProperty=nameWithType>とその<xref:System.Windows.Markup.XamlReader.Load%2A>XAML 2009 言語キーワードおよび機能を有効なオブジェクト グラフ表現に処理できます。
+ WPF と共に XAML 2009 の機能を使用できるシナリオとして、Loose XAML を作成し、その XAML を <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>を使用して WPF ランタイムとオブジェクト グラフに読み込む場合があります。 WPF <xref:System.Windows.Markup.XamlReader?displayProperty=nameWithType> およびその <xref:System.Windows.Markup.XamlReader.Load%2A> は、XAML 2009 言語キーワードおよび機能を有効なオブジェクト グラフ表現に処理することができます。

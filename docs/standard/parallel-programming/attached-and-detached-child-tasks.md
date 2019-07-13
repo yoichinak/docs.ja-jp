@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83451af25006e9da396a3e6618cbecee036e9fe2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 29383d0b7f125111071ac131d8a822dba811032e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003764"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603314"
 ---
 # <a name="attached-and-detached-child-tasks"></a>アタッチされた子タスクとデタッチされた子タスク
 *子タスク* (または*入れ子のタスク*) は、*親タスク* と呼ばれる、別のタスクのユーザー デリゲートで作成された、<xref:System.Threading.Tasks.Task?displayProperty=nameWithType> のインスタンスです。 子タスクはデタッチまたはアタッチできます。 *デタッチされた子タスク* は、親とは独立して実行されるタスクです。 *アタッチされた子タスク* は、<xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> オプションで作成される入れ子のタスクです。その親は、明示的にも既定でも、子タスクがアタッチされることを禁止しません。 タスクでは、システム リソースが許す限り、任意の数のアタッチされた子タスクおよびデタッチされた子タスクを作成できます。  
@@ -24,9 +24,9 @@ ms.locfileid: "46003764"
   
 |カテゴリ|デタッチされた子タスク|アタッチされた子タスク|  
 |--------------|--------------------------|--------------------------|  
-|親は子タスクが完了するまで待機します。|×|[はい]|  
-|親は子タスクによってスローされた例外を反映します。|×|[はい]|  
-|親のステータスは子のステータスに依存します。|×|[はい]|  
+|親は子タスクが完了するまで待機します。|×|はい|  
+|親は子タスクによってスローされた例外を反映します。|×|はい|  
+|親のステータスは子のステータスに依存します。|×|はい|  
   
  ほとんどの場合、デタッチされた子タスクを使用することをお勧めします。他のタスクとの関係は複雑度が低いためです。 こうした理由から、既定では親タスク内に作成されたタスクはデタッチされており、アタッチされた子タスクを作成する場合は <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> オプションを明示的に指定する必要があります。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "46003764"
  デタッチされた子タスクが例外をスローする場合、その例外は入れ子でないタスクの場合と同様に監視するか、または親タスク内で直接処理する必要があります。 アタッチされた子タスクが例外をスローした場合、例外は自動的に親タスクに反映され、タスクの <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> プロパティへのアクセスを待機するか、アクセスを試みるスレッドに戻されます。 したがって、アタッチされた子タスクを使用することで、呼び出し元のスレッドの <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> の呼び出しの 1 つの場所ですべての例外を処理できます。 詳細については、「[例外処理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)」を参照してください。  
   
 ## <a name="cancellation-and-child-tasks"></a>キャンセルと子タスク  
- タスクの取り消し処理は他の処理と連携して行われます。 つまり、キャンセル可能であるためには、すべてのアタッチされた子タスク、またはデタッチされた子タスクが、キャンセル トークンの状態を監視する必要があります。 1 つのキャンセル要求を使用して親とその子をすべて取り消す場合は、同じトークンをすべてのタスクに引数として渡し、各タスクの要求に応答するためのロジックを各タスクに提供します。 詳細については、「[タスクのキャンセル](../../../docs/standard/parallel-programming/task-cancellation.md)」および「[方法: タスクとその子を取り消す](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)」を参照してください。  
+ タスクの取り消し処理は他の処理と連携して行われます。 つまり、キャンセル可能であるためには、すべてのアタッチされた子タスク、またはデタッチされた子タスクが、キャンセル トークンの状態を監視する必要があります。 1 つのキャンセル要求を使用して親とその子をすべて取り消す場合は、同じトークンをすべてのタスクに引数として渡し、各タスクの要求に応答するためのロジックを各タスクに提供します。 詳細については、「[タスクのキャンセル](../../../docs/standard/parallel-programming/task-cancellation.md)」と「[方法: タスクとその子を取り消す](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)」を参照してください。  
   
 ### <a name="when-the-parent-cancels"></a>親が取り消された場合  
  子タスクが開始される前に親が取り消された場合、子は開始されません。 子タスクが既に開始された後に親が取り消された場合、子はそれ自体にキャンセル ロジックが適用されていない限り、完了まで実行されます。 詳細については、「[タスクのキャンセル](../../../docs/standard/parallel-programming/task-cancellation.md)」をご覧ください。  
@@ -80,5 +80,5 @@ ms.locfileid: "46003764"
   
 ## <a name="see-also"></a>関連項目
 
-- [並列プログラミング](../../../docs/standard/parallel-programming/index.md)  
+- [並列プログラミング](../../../docs/standard/parallel-programming/index.md)
 - [データの並列化](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)

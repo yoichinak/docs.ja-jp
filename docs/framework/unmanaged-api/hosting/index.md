@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 14295c28-1da8-408b-a656-9584abcd9896
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17ca2eb93fb2b75f043d33d376a5650092030cac
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 412b61e026b019f7516332c247b203ac85304146
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43797418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61672940"
 ---
 # <a name="hosting-unmanaged-api-reference"></a>ホスト (アンマネージ API リファレンス)
 ホスト API を使用すると、アンマネージ ホストのアプリケーションに共通言語ランタイム (CLR: Common Language Runtime) を統合できます。  
@@ -35,5 +35,5 @@ ms.locfileid: "43797418"
  ホスト API で使用されるアンマネージ構造体について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
- [ランタイム ホスト](https://msdn.microsoft.com/library/99d9246a-b994-4fe5-985c-8588d1d59998)  
+ [ランタイム ホスト](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))  
  .NET Framework に組み込まれているランタイム ホストについて説明します。

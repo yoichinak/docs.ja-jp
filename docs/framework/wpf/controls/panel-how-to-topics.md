@@ -7,22 +7,21 @@ helpviewer_keywords:
 - Panel control [WPF], how-to topics
 - controls [WPF], Panel
 ms.assetid: 28d8faf2-490c-4e17-a447-df25a66f6679
-ms.openlocfilehash: d8ead1a799f1bd7524d171beb3e262baeb4b5fbe
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.openlocfilehash: 45a5b67edeea46a29e5c2fc3aea86d34fa4f5e7a
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46493530"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860069"
 ---
 # <a name="panel-how-to-topics"></a>パネルに関する「方法」トピック
-このセクションのトピックでは、使用する方法をについて説明します、<xref:System.Windows.Controls.Panel>要素および関連[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]します。  
+このセクションのトピックでは、使用する方法をについて説明します、<xref:System.Windows.Controls.Panel>要素および関連する Api。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [方法: 要素に、LayoutTransform を適用します。](https://msdn.microsoft.com/library/8221db67-d99f-4783-b65e-a6c5a52c03ab)  
- [カスタム パネル要素を作成する](../../../../docs/framework/wpf/controls/how-to-create-a-custom-panel-element.md)  
- [パネルの OnRender メソッドをオーバーライドする](../../../../docs/framework/wpf/controls/how-to-override-the-panel-onrender-method.md)  
- [要素の Height プロパティを設定する](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  
- [要素の Width プロパティを設定する](../../../../docs/framework/wpf/controls/how-to-set-the-width-properties-of-an-element.md)  
+ [カスタム パネル要素を作成する](how-to-create-a-custom-panel-element.md)  
+ [パネルの OnRender メソッドをオーバーライドする](how-to-override-the-panel-onrender-method.md)  
+ [要素の Height プロパティを設定する](how-to-set-the-height-properties-of-an-element.md)  
+ [要素の Width プロパティを設定する](how-to-set-the-width-properties-of-an-element.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.Panel>  
@@ -40,8 +39,8 @@ ms.locfileid: "46493530"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>関連項目  
- [レイアウト](../../../../docs/framework/wpf/advanced/layout.md)  
+ [レイアウト](../advanced/layout.md)  
   
- [チュートリアル: 初めての WPF デスクトップ アプリケーション](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [チュートリアル: 初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer の概要](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer の概要](scrollviewer-overview.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a70548231454991060098908ce954bf699eff838
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 3d6ddc2978078fd307ad79cffe14d53619d8be9e
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453256"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469709"
 ---
 # <a name="interop-marshaling"></a>相互運用マーシャリング
 <a name="top"></a> 相互運用マーシャリングは、メソッド引数と戻り値によって、呼び出し中にマネージド メモリとアンマネージド メモリの間でデータを渡す方法を制御します。 相互運用マーシャリングは、共通言語ランタイムのマーシャリング サービスによって実行される、ランタイム アクティビティです。  
@@ -24,28 +24,27 @@ ms.locfileid: "49453256"
   
  この概要は、次のセクションで構成されています。  
   
--   [プラットフォーム呼び出しと COM 相互運用のモデル](#platform_invoke_and_com_interop_models)  
+- [プラットフォーム呼び出しと COM 相互運用のモデル](#platform_invoke_and_com_interop_models)  
   
--   [マーシャリングと COM アパートメント](#marshaling_and_com_apartments)  
+- [マーシャリングと COM アパートメント](#marshaling_and_com_apartments)  
   
--   [リモートの呼び出しのマーシャリング](#marshaling_remote_calls)  
+- [リモートの呼び出しのマーシャリング](#marshaling_remote_calls)  
   
--   [関連トピック](#related_topics)  
+- [関連トピック](#related_topics)  
   
--   [参照](#reference)  
+- [参照](#reference)  
   
 <a name="platform_invoke_and_com_interop_models"></a>   
 ## <a name="platform-invoke-and-com-interop-models"></a>プラットフォーム呼び出しと COM 相互運用のモデル  
  共通言語ランタイムは、アンマネージ コードと相互運用するために、次の 2 つのメカニズムを提供します。  
   
--   プラットフォーム呼び出しにより、マネージド コードは、アンマネージド ライブラリからエクスポートされた関数を呼び出すことができます。  
+- プラットフォーム呼び出しにより、マネージド コードは、アンマネージド ライブラリからエクスポートされた関数を呼び出すことができます。  
   
--   COM 相互運用により、マネージド コードは、インターフェイスを介してコンポーネント オブジェクト モデル (COM) オブジェクトと対話できます。  
+- COM 相互運用により、マネージド コードは、インターフェイスを介してコンポーネント オブジェクト モデル (COM) オブジェクトと対話できます。  
   
  プラットフォーム呼び出しと COM 相互運用はどちらも、必要な場合に、相互運用マーシャリングを使用して呼び出し元と呼び出し先との間でメソッド引数を正確に移動します。 次の図が示すように、プラットフォーム呼び出しメソッドの呼び出しはマネージド コードからアンマネージド コードにフローして、[コールバック関数](callback-functions.md)が関係していない限りその逆の方向にはフローしません。 プラットフォーム呼び出しの呼び出しはマネージド コードからアンマネージド コードにのみフローしますが、データは入出力パラメーターとして双方向にフローできます。 COM 相互運用のメソッド呼び出しは、どちらの方向にもフローできます。  
   
- ![プラットフォーム呼び出し](./media/interopmarshaling.png "interopmarshaling")  
-プラットフォーム呼び出しと COM 相互運用の呼び出しフロー  
+ ![プラットフォーム呼び出し](./media/interop-marshaling/interop-marshaling-invoke-and-com.png "プラットフォーム呼び出しと COM 相互運用の呼び出しフロー")  
   
  最下位のレベルでは、どちらのメカニズムも同じ相互運用マーシャリング サービスを使用します。ただし、特定のデータ型は、COM 相互運用またはプラットフォーム呼び出しでのみサポートされます。 詳しくは、「[既定のマーシャリング動作](default-marshaling-behavior.md)」を参照してください。  
   
@@ -67,13 +66,12 @@ ms.locfileid: "49453256"
   
  クライアントとサーバーが同じアパートメント内にあるため、相互運用マーシャリング サービスはすべてのデータのマーシャリングを自動的に処理します。 次の図は、同じ COM スタイル アパートメント内のマネージド ヒープとアンマネージド ヒープの間で機能している、相互運用マーシャリング サービスを示しています。  
   
- ![相互運用マーシャリング](./media/interopheap.gif "interopheap")  
-同じアパートメントでのマーシャリングのプロセス  
+ ![マネージド ヒープとアンマネージド ヒープ間の相互運用マーシャリング](./media/interop-marshaling/interop-heaps-managed-and-unmanaged.gif "同じアパートメントのマーシャリング プロセス")  
   
  マネージド サーバーをエクスポートする予定の場合は、サーバーのアパートメントが COM クライアントによって決定されることに注意してください。 MTA 内で初期化された COM クライアントから呼び出されるマネージド サーバーは、スレッド セーフを確保する必要があります。  
   
 ### <a name="managed-clients-and-com-servers"></a>マネージド クライアントと COM サーバー  
- マネージド クライアントのアパートメントの既定の設定は MTA です。ただし、.NET クライアントのアプリケーションの種類によっては、既定の設定が変更されることがあります。 たとえば、[!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] クライアントのアパートメントの設定は STA です。 <xref:System.STAThreadAttribute?displayProperty=nameWithType>、<xref:System.MTAThreadAttribute?displayProperty=nameWithType>、<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> プロパティ、または <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> プロパティを使用して、マネージド クライアントのアパートメントの設定を変更できます。  
+ マネージド クライアントのアパートメントの既定の設定は MTA です。ただし、.NET クライアントのアプリケーションの種類によっては、既定の設定が変更されることがあります。 たとえば、Visual Basic クライアント アパートメントの設定は STA です。 <xref:System.STAThreadAttribute?displayProperty=nameWithType>、<xref:System.MTAThreadAttribute?displayProperty=nameWithType>、<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> プロパティ、または <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> プロパティを使用して、マネージド クライアントのアパートメントの設定を変更できます。  
   
  コンポーネントの作成者は、COM サーバーのスレッド アフィニティを設定します。 次の表は、.NET クライアントと COM サーバーのアパートメント設定の組み合わせを示しています。 また、結果として生じる、組み合わせのためのマーシャリング要件も示しています。  
   
@@ -84,14 +82,13 @@ ms.locfileid: "49453256"
   
  マネージド クライアントとアンマネージド サーバーが同じアパートメント内にあるとき、相互運用マーシャリング サービスはすべてのデータのマーシャリングを処理します。 ただし、クライアントとサーバーが異なるアパートメント内で初期化される場合は、COM マーシャリングも必要となります。 次の図は、アパートメント間の呼び出しの要素を示しています。  
   
- ![COM マーシャリング](./media/singleprocessmultapt.gif "singleprocessmultapt")  
-.NET クライアントと COM オブジェクト間でのアパートメント間の呼び出し  
+ ![COM マーシャリング](./media/interop-marshaling/single-process-across-multi-apartment.gif ".NET クライアントと COM オブジェクト間でのアパートメント間呼び出し")  
   
  アパートメント間のマーシャリングでは、次の操作を実行できます。  
   
--   アパートメント間のマーシャリングのオーバーヘッドを受け入れます。これは、境界を越える呼び出しが多くがある場合にのみ認識されます。 呼び出しがアパートメントの境界を正常に越えるようにするためには、COM コンポーネントのタイプ ライブラリを登録する必要があります。  
+- アパートメント間のマーシャリングのオーバーヘッドを受け入れます。これは、境界を越える呼び出しが多くがある場合にのみ認識されます。 呼び出しがアパートメントの境界を正常に越えるようにするためには、COM コンポーネントのタイプ ライブラリを登録する必要があります。  
   
--   クライアント スレッドを STA または MTA に設定して、メイン スレッドを変更します。 たとえば、C# クライアントが多くの STA COM コンポーネントを呼び出す場合には、メイン スレッドを STA に設定してアパートメント間のマーシャリングを回避できます。  
+- クライアント スレッドを STA または MTA に設定して、メイン スレッドを変更します。 たとえば、C# クライアントが多くの STA COM コンポーネントを呼び出す場合には、メイン スレッドを STA に設定してアパートメント間のマーシャリングを回避できます。  
   
     > [!NOTE]
     >  C# クライアントのスレッドを STA に設定すると、MTA COM コンポーネントへの呼び出しにはアパートメント間のマーシャリングが必要となります。  
@@ -102,28 +99,26 @@ ms.locfileid: "49453256"
   
 <a name="marshaling_remote_calls"></a>   
 ## <a name="marshaling-remote-calls"></a>リモートの呼び出しのマーシャリング  
- アパートメント間のマーシャリングの場合と同様に、COM マーシャリングは、オブジェクトが別個のプロセス内に存在するときには常に、マネージド コードとアンマネージド コード間の各呼び出しに関与します。 例:  
+ アパートメント間のマーシャリングの場合と同様に、COM マーシャリングは、オブジェクトが別個のプロセス内に存在するときには常に、マネージド コードとアンマネージド コード間の各呼び出しに関与します。 次に例を示します。  
   
--   リモート ホスト上のマネージド サーバーを呼び出す COM クライアントは、分散 COM (DCOM) を使用します。  
+- リモート ホスト上のマネージド サーバーを呼び出す COM クライアントは、分散 COM (DCOM) を使用します。  
   
--   リモート ホスト上の COM サーバーを呼び出すマネージド クライアントは、DCOM を使用します。  
+- リモート ホスト上の COM サーバーを呼び出すマネージド クライアントは、DCOM を使用します。  
   
  次の図は、相互運用マーシャリングと COM マーシャリングが、プロセスとホストの境界を越えて通信チャネルを提供する方法を示しています。  
   
- ![COM マーシャリング](./media/interophost.gif "interophost")  
-プロセス間のマーシャリング  
+ ![COM マーシャリング](./media/interop-marshaling/interop-and-com-marshaling.gif "プロセス間マーシャリング")  
   
 ### <a name="preserving-identity"></a>ID の保持  
  共通言語ランタイムは、マネージド参照とアンマネージド参照の ID を保持します。 次の図は、プロセスとホストの境界を越えている、直接アンマネージド参照 (上の行) と直接マネージド参照 (下の行) のフローを示しています。  
   
- ![COM 呼び出し可能ラッパーとランタイム呼び出し可能ラッパー](./media/interopdirectref.gif "interopdirectref")  
-プロセスとホストの境界を越えて渡される参照  
+ ![COM 呼び出し可能ラッパーとランタイム呼び出し可能ラッパー](./media/interop-marshaling/interop-direct-ref-across-process.gif "プロセスとホスト間で渡される参照")  
   
  この図では:  
   
--   アンマネージド クライアントは、COM オブジェクトへの参照を、リモート ホストからその参照を取得するマネージド オブジェクトから取得します。 リモート処理のメカニズムは DCOM です。  
+- アンマネージド クライアントは、COM オブジェクトへの参照を、リモート ホストからその参照を取得するマネージド オブジェクトから取得します。 リモート処理のメカニズムは DCOM です。  
   
--   マネージド クライアントは、マネージド オブジェクトへの参照を、リモート ホストからその参照を取得している COM オブジェクトから取得します。 リモート処理のメカニズムは DCOM です。  
+- マネージド クライアントは、マネージド オブジェクトへの参照を、リモート ホストからその参照を取得している COM オブジェクトから取得します。 リモート処理のメカニズムは DCOM です。  
   
     > [!NOTE]
     >  マネージド サーバーのエクスポート済みタイプ ライブラリを登録する必要があります。  
@@ -133,7 +128,7 @@ ms.locfileid: "49453256"
 ### <a name="managed-remoting"></a>マネージド リモート処理  
  ランタイムは、プロセスとホストの境界を越えてマネージド オブジェクト間に通信チャネルを確立するために使用できる、マネージド リモート処理も提供します。 次の図に示すように、マネージド リモート処理は、通信コンポーネントの間のファイアウォールに対応できます。  
   
- ![SOAP または TcpChannel](./media/interopremotesoap.gif "interopremotesoap")  
+ ![SOAP または TcpChannel](./media/interop-marshaling/interop-remote-soap-or-tcp.gif "SOAP または TcpChannel クラスを使用したファイアウォールを越えるリモート呼び出し")  
 SOAP または TcpChannel クラスを使用するファイアウォールを越えたリモート呼び出し  
   
  サービス コンポーネントと COM の間の呼び出しなど、一部のアンマネージド呼び出しは SOAP を介して伝達できます。  
@@ -148,17 +143,17 @@ SOAP または TcpChannel クラスを使用するファイアウォールを越
 |[既定のマーシャリング動作](default-marshaling-behavior.md)|相互運用マーシャリング サービスがデータのマーシャリングに使用する規則について説明します。|  
 |[プラットフォーム呼び出しによるデータのマーシャリング](marshaling-data-with-platform-invoke.md)|メソッドのパラメーターを宣言してアンマネージ ライブラリによってエクスポートされた関数に引数を渡す方法について説明します。|  
 |[COM 相互運用機能によるデータのマーシャリング](marshaling-data-with-com-interop.md)|COM ラッパーをカスタマイズしてマーシャリング動作を変更する方法について説明します。|  
-|[方法: マネージ コード DCOM を WCF に移行する](how-to-migrate-managed-code-dcom-to-wcf.md)|DCOM から WCF に移行する方法について説明します。|  
+|[方法: マネージド コード DCOM を WCF に移行する](how-to-migrate-managed-code-dcom-to-wcf.md)|DCOM から WCF に移行する方法について説明します。|  
 |[方法: HRESULT に例外を割り当てる](how-to-map-hresults-and-exceptions.md)|HRESULT にカスタム例外をマップする方法について説明し、各 HRESULT から .NET Framework での同等の例外クラスへの完全なマッピングを示します。|  
-|[ジェネリック型を使用する相互運用](https://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58(v=vs.100))|COM 相互運用性のジェネリック型を使用するとき、どのアクションがサポートされるかについて説明します。|  
+|[ジェネリック型を使用する相互運用](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|COM 相互運用性のジェネリック型を使用するとき、どのアクションがサポートされるかについて説明します。|  
 |[アンマネージ コードとの相互運用](index.md)|共通言語ランタイムが提供する相互運用サービスについて説明します。|  
 |[高度な COM 相互運用性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|.NET Framework アプリケーションに COM コンポーネントを組み込む方法についての詳細情報へのリンクを示します。|  
-|[相互運用のためのデザインの考慮事項](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100))|統合 COM コンポーネントを記述するためのヒントを示します。|  
+|[相互運用のためのデザインの考慮事項](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))|統合 COM コンポーネントを記述するためのヒントを示します。|  
   
  [ページのトップへ](#top)  
   
 <a name="reference"></a>   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>関連項目  
  <xref:System.Runtime.InteropServices?displayProperty=nameWithType>  
   
  [ページのトップへ](#top)

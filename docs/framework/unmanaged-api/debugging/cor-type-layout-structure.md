@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b88a7b0672e15097c60afbe069ce5b78bd5c38d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1793547cfc0d9637352b62ff47beee41e9f5ac5c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408144"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740504"
 ---
 # <a name="cortypelayout-structure"></a>COR_TYPE_LAYOUT 構造体
 メモリ内のオブジェクトのレイアウトに関する情報が提供されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct COR_TYPE_LAYOUT {  
     COR_TYPEID parentID;  
     ULONG32 objectSize;  
@@ -42,24 +42,25 @@ typedef struct COR_TYPE_LAYOUT {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`parentID`|親の識別子は、この種類に入力します。 これは、NULL 型の id になります (token1 = 0、token2 = 0) に、型 id が対応している場合<xref:System.Object?displayProperty=nameWithType>です。|  
-|`objectSize`|この型のオブジェクトの基本サイズ。 非可変サイズのオブジェクトの合計サイズです。|  
+|`parentID`|この型に親の識別子を入力します。 NULL 型の id になります (token1 = 0、token2 = 0) に対応する型 id 場合<xref:System.Object?displayProperty=nameWithType>。|  
+|`objectSize`|この型のオブジェクトの基本サイズ。 これは、非可変サイズのオブジェクトの合計サイズです。|  
 |`numFields`|この型のオブジェクトに含まれるフィールドの数。|  
-|`boxOffset`|この型をボックス化する場合、先頭は、オブジェクトのフィールドのオフセット。 このフィールドは、プリミティブおよび構造体などの値の型に対してのみ有効です。|  
-|`type`|この型が所属する CorElementType です。|  
+|`boxOffset`|この型をボックス化すると、先頭は、オブジェクトのフィールドのオフセット。 このフィールドは、プリミティブと構造体などの値型に対してのみ有効です。|  
+|`type`|この型が所属する CorElementType します。|  
   
-## <a name="remarks"></a>コメント  
- 場合`numFields`はゼロより大きく、呼び出すことができます、 [icordebugprocess 5::gettypefields](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefields-method.md)メソッドをこの種類のフィールドに関する情報を取得します。 場合`type`は`ELEMENT_TYPE_STRING`、 `ELEMENT_TYPE_ARRAY`、または`ELEMENT_TYPE_SZARRAY`、この型のオブジェクトのサイズは変数、および渡すことができます、 [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)に構造体、 [icordebugprocess 5::getarraylayout](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getarraylayout-method.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ 場合`numFields`はゼロより大きく、呼び出すことができます、 [icordebugprocess 5::gettypefields](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefields-method.md)メソッドをこの種類のフィールドについての情報を取得します。 場合`type`は`ELEMENT_TYPE_STRING`、 `ELEMENT_TYPE_ARRAY`、または`ELEMENT_TYPE_SZARRAY`、この型のオブジェクトのサイズは、変数、および、渡すことができます、 [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)構造体を[icordebugprocess 5::getarraylayout](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getarraylayout-method.md)メソッド。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>関連項目
+
+- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)

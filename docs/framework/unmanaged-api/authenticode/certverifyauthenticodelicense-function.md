@@ -10,19 +10,19 @@ api_type:
 ms.assetid: 00118de7-33c6-41c4-8e1f-5d5e35e0da83
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c10d5f363d454a64f9052315514e896f90f7081
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: cf7e997282351cc10dd6da1fc405366ea67c7307
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208849"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741098"
 ---
 # <a name="certverifyauthenticodelicense-function"></a>CertVerifyAuthenticodeLicense 関数
 Authenticode XrML ライセンスの有効性を検証します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CertVerifyAuthenticodeLicense (  
     [in]   PCRYPT_DATA_BLOB                   pLicenseBlob,  
     [in]   OPTIONAL DWORD                     dwFlags,  
@@ -31,7 +31,7 @@ HRESULT CertVerifyAuthenticodeLicense (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pLicenseBlob`  
  [in] 検証する Authenticode XrML ライセンス。  
   
@@ -40,17 +40,17 @@ HRESULT CertVerifyAuthenticodeLicense (
  `dwFlags`  
  [in] オプション。 以下の値の組み合わせ。  
   
--   AXL_REVOCATION_NO_CHECK  
+- AXL_REVOCATION_NO_CHECK  
   
--   AXL_REVOCATION_CHECK_END_CERT_ONLY  
+- AXL_REVOCATION_CHECK_END_CERT_ONLY  
   
--   AXL_REVOCATION_CHECK_ENTIRE_CHAIN  
+- AXL_REVOCATION_CHECK_ENTIRE_CHAIN  
   
--   AXL_URL_CACHE_ONLY_RETRIEVAL  
+- AXL_URL_CACHE_ONLY_RETRIEVAL  
   
--   AXL_LIFETIME_SIGNING  
+- AXL_LIFETIME_SIGNING  
   
--   AXL_TRUST_MICROSOFT_ROOT_ONLY  
+- AXL_TRUST_MICROSOFT_ROOT_ONLY  
   
  `pSignerInfo`  
  [out] 署名者の情報を受け取るため。 ライセンスに署名がない場合、`dwError` は TRUST_E_NOSIGNATURE に設定されます。 使用してリソースを解放する呼び出し元の責任、 [CertFreeAuthenticodeSignerInfo](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodesignerinfo-function.md)使用後に機能します。  
@@ -65,7 +65,8 @@ HRESULT CertVerifyAuthenticodeLicense (
 ## <a name="return-value"></a>戻り値  
  正常に終了した場合は `S_OK` を返します。 それ以外の場合はエラー コードを返します。  
   
-## <a name="see-also"></a>関連項目  
- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)  
- [GetHashFromHandle メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)  
- [ICLRStrongName インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+- [GetHashFromHandle メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)
+- [ICLRStrongName インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

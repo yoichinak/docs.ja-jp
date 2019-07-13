@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
 ms.openlocfilehash: 975bec73235b3b8f82088325e0d4abc50ce6b1dd
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45972651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053783"
 ---
 # <a name="visual-basic-language-features"></a>Visual Basic 言語の機能
 次のトピックでは、紹介し、Visual Basic では、オブジェクト指向のプログラミング言語の重要なコンポーネントについて説明します。 フォームとコントロールを使用してアプリケーションのユーザー インターフェイスを作成した後、アプリケーションの動作を定義するコードを作成する必要があります。 最新のプログラミング言語と Visual Basic では、さまざまな一般的なプログラミング構成要素と言語要素がサポートされています。  
@@ -62,7 +62,7 @@ ms.locfileid: "45972651"
  [演算子および式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
  値を保持する要素を操作するコード要素、それらを効率的に使用する方法、およびそれらを組み合わせて新しい値を取得する方法について説明します。  
   
- [手順](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
+ [プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
  `Sub`、`Function`、`Property`、`Operator` の各プロシージャと、再帰プロシージャやオーバーロード プロシージャなどの高度なトピックについて説明します。  
   
  [ステートメント](../../../visual-basic/programming-guide/language-features/statements.md)  

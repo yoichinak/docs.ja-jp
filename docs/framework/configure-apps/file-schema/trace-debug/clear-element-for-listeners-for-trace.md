@@ -1,5 +1,5 @@
 ---
-title: '&lt;オフ&gt;要素&lt;リスナー&gt;の&lt;トレース&gt;'
+title: <clear> の <listeners> の <trace> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/clear
@@ -7,23 +7,21 @@ helpviewer_keywords:
 - clear element for <listeners> for <trace>
 - <clear> element for <listeners> for <trace>
 ms.assetid: b44732a8-271f-4a06-ba9e-fe3298d6f192
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 91b4b4f132138fa6752c1da9b28e7a3ab7fad006
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 97b18f9d6baa618b0f535955b232e2119c758b11
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701321"
 ---
-# <a name="ltcleargt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;オフ&gt;要素&lt;リスナー&gt;の&lt;トレース&gt;
+# <a name="clear-element-for-listeners-for-trace"></a>\<クリア > 要素の\<リスナー > の\<トレース >
 トレースの `Listeners` コレクションを削除します。  
   
  \<configuration>  
-\<system.diagnostics >  
+\<system.diagnostics>  
 \<トレース >  
-\<リスナー >  
-\<クリア >  
+\<listeners>  
+\<clear>  
   
 ## <a name="syntax"></a>構文  
   
@@ -79,11 +77,12 @@ ms.locfileid: "48033448"
 </configuration>   
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Diagnostics.Trace.Listeners%2A>  
- <xref:System.Diagnostics.Trace>  
- <xref:System.Diagnostics.Debug>  
- <xref:System.Diagnostics.TraceSource>  
- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)  
- [トレース リスナー](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Diagnostics.Trace.Listeners%2A>
+- <xref:System.Diagnostics.Trace>
+- <xref:System.Diagnostics.Debug>
+- <xref:System.Diagnostics.TraceSource>
+- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)
+- [トレース リスナー](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

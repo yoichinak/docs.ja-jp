@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /win32icon compiler option [C#]
 - -win32icon compiler option [C#]
 ms.assetid: 756d9b6d-ab07-41b7-ba58-5bd88f711138
-ms.openlocfilehash: 5014b1da714f8e29f869d4641da93796a607aa4d
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 7bc7da8121ec1190908d9b94fc7c987f9888c020
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027794"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59317455"
 ---
 # <a name="-win32icon-c-compiler-options"></a>-win32icon (C# コンパイラ オプション)
 **-win32icon** オプションは、エクスプローラーで出力ファイルを適切に表示する .ico ファイルを出力ファイルに挿入します。  
@@ -28,18 +28,18 @@ ms.locfileid: "48027794"
  `filename`  
  出力ファイルに追加する .ico ファイル。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  .ico ファイルは[リソース コンパイラ](/windows/desktop/menurc/resource-compiler)で作成できます。 リソース コンパイラは、Visual C++ プログラムをコンパイルするときに呼び出されます。 .ico ファイルは .rc ファイルから作成されます。  
   
  .NET Framework リソース ファイルの [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) (参照) または [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) (アタッチ) をご覧ください。 .res ファイルのインポートについては、[-win32res](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md) をご覧ください。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
   
-1.  プロジェクトの **[プロパティ]** ページを開きます。  
+1. プロジェクトの **[プロパティ]** ページを開きます。  
   
-2.  **[アプリケーション]** プロパティ ページをクリックします。  
+2. **[アプリケーション]** プロパティ ページをクリックします。  
   
-3.  **[アプリケーション アイコン]** プロパティを変更します。  
+3. **[アプリケーション アイコン]** プロパティを変更します。  
   
  このコンパイラ オプションをプログラムで設定する方法については、「 <xref:VSLangProj80.ProjectProperties3.ApplicationIcon%2A>」をご覧ください。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48027794"
 csc -win32icon:rf.ico in.cs  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)  
+- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

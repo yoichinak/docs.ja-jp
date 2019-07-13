@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b6675d50d3222a43abc8838c3c86cb825d2dad16
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c150f4bda901627fc21ed54926c3cf959bb829a3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445722"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776304"
 ---
 # <a name="imetadataassemblyemitdefineassemblyref-method"></a>IMetaDataAssemblyEmit::DefineAssemblyRef メソッド
 このアセンブリが参照するアセンブリのメタデータを含む `AssemblyRef` 構造体を作成し、関連付けられたメタデータ トークンを返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT DefineAssemblyRef (  
     [in]  void                *pbPublicKeyOrToken,  
     [in]  ULONG               cbPublicKeyOrToken,  
@@ -42,44 +42,45 @@ HRESULT DefineAssemblyRef (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pbPublicKeyOrToken`  
- [in]参照先アセンブリの発行者の公開キー。 ヘルパー関数[StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md)このパラメーターとして渡すための公開キーのハッシュを取得するために使用できます。  
+ [in]参照先アセンブリの発行者の公開キー。 ヘルパー関数[StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md)このパラメーターとして渡すパブリック キーのハッシュを取得するために使用できます。  
   
  `cbPublicKeyOrToken`  
- [in]バイト サイズ`pbPublicKeyOrToken`です。  
+ [in]バイト サイズ`pbPublicKeyOrToken`します。  
   
  `szName`  
  [in]アセンブリの人間が判読できるテキストの名前。 この値は 1024 文字を超えない必要があります。  
   
  `pMetaData`  
- [in]参照されたアセンブリのバージョン、プラットフォーム、およびロケール情報を含む ASSEMBLYMETADATA インスタンス。  
+ [in]参照アセンブリのバージョン、プラットフォーム、ロケール情報を含む ASSEMBLYMETADATA インスタンス。  
   
  `pbHashValue`  
- [in]参照されたアセンブリに関連付けられているデータをハッシュします。 任意。  
+ [in]参照先のアセンブリに関連付けられたデータをハッシュします。 任意。  
   
  `cbHashValue`  
- [in]バイト サイズ`pbHashValue`です。  
+ [in]バイト サイズ`pbHashValue`します。  
   
  `dwAssemblyRefFlags`  
- [in]ビットごとの組み合わせ[CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)実行エンジンの動作を決定する値。  
+ [in]ビットごとの組み合わせ[CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)実行エンジンの動作を制御する値。  
   
  `pmdar`  
- [out]返されたへのポインター`AssemblyRef`メタデータ トークン。  
+ [out]返されたポインター`AssemblyRef`メタデータ トークン。  
   
-## <a name="remarks"></a>コメント  
- 1 つ`AssemblyRef`このアセンブリが参照する各アセンブリのメタデータ構造体を定義する必要があります。  
+## <a name="remarks"></a>Remarks  
+ 1 つ`AssemblyRef`このアセンブリを参照する各アセンブリのメタデータ構造を定義する必要があります。  
   
- 実行時に、参照先アセンブリの詳細については、"組み込み"として情報を表すことを示す値をアセンブリの競合回避モジュールに渡されます。 アセンブリ リゾルバーは、ポリシーを適用します。  
+ 実行時に、参照先アセンブリの詳細については、"ビルド"と情報を表すことを示す値をアセンブリの競合回避モジュールに渡されます。 アセンブリ リゾルバーは、ポリシーを適用します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
  **ライブラリ:** MsCorEE.dll にリソースとして使用  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataAssemblyEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [IMetaDataAssemblyEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

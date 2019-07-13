@@ -1,0 +1,10 @@
+- name: スタートアップ設定スキーマ
+  href: index.md
+  items:
+    - name: <startup> 要素
+      href: startup-element.md
+      items:
+        - name: <requiredRuntime> 要素
+          href: requiredruntime-element.md
+        - name: <supportedRuntime> 要素
+          href: supportedruntime-element.md

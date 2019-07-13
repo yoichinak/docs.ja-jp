@@ -3,14 +3,14 @@ title: タプル型 - C# ガイド
 description: C# の名前のないタプルと名前付きタプルについて
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 32d089d36328d30de344e14fb7e88e80eacf5ed0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4000228507bf7925083147ddd49dd10914ef2449
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155133"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882061"
 ---
-# <a name="c-tuple-types"></a>C# のタプル型 #
+# <a name="c-tuple-types"></a>C# のタプル型
 
 C# のタプルは、軽量構文を使用して定義する型で、 構文がシンプルである、変換の規則が要素の数 ("カーディナリティ" と呼ばれます) と種類に基づく、コピー、等値テスト、および割り当ての規則が一貫している、などのメリットがあります。 そのトレードオフとして、タプルでは、継承に関連するオブジェクト指向の表現形式の一部がサポートされていません。 概要については、[C# 7.0 の新機能のタプル](whats-new/csharp-7.md#tuples)に関する記事のセクションをご覧ください。
 
@@ -82,7 +82,7 @@ C# 7.1 以降、タプルのフィールド名は、タプルの初期化に使�
 
 これらの条件によってあいまいさを回避します。 この名前がタプルのフィールドのフィールド名として使用される場合、あいまいさの原因となります。 この条件はどちらも、コンパイル時エラーを発生させることはありません。 代わりに、射影された名前のない要素には、射影されたセマンティック名がありません。  これらの条件の例を以下に示します。
 
-[!code-csharp[Ambiguity](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionAmbiguities "tuples where projections are not performed")]
+[!code-csharp-interactive[Ambiguity](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionAmbiguities "tuples where projections are not performed")]
 
 これらの条件は、タプル フィールド名プロジェクションが利用できなかった場合、C# 7.0 で記述されたコードに対する重大な変更になるため、コンパイラ エラーが発生することはありません。
 
@@ -90,29 +90,31 @@ C# 7.1 以降、タプルのフィールド名は、タプルの初期化に使�
 
 C# 7.3 以降では、タプル型で `==` および `!=` 演算子がサポートされます。 これらの演算子は、左の引数の各メンバーと右の引数の各メンバーを順番に比較することによって機能します。 これらの比較はショートさせます。 これらは、ペアが等値でなくなるとすぐにメンバーの評価を停止します。 次のコード例では `==` を使用しますが、比較規則がすべて `!=` に適用されます。 次のコード例は、整数の 2 つのペアの等値比較を示しています。
 
-[!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
+[!code-csharp-interactive[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 
 タプルの等値テストをより簡単にするルールがいくつかあります。 次のコードに示すように、いずれかのタプルが null 許容タプルの場合、タプルの等値性によって[リフト変換](~/_csharplang/spec/conversions.md#lifted-conversion-operators)が実行されます。
 
-
-[!code-csharp[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]
+[!code-csharp-interactive[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]
 
 タプルの等値性では、両方のタプルの各メンバーに対して暗黙の変換も実行されます。 これらには、リフト変換、拡大変換などの暗黙の型変換も含まれます。 次の例は、整数から long 型への暗黙の型変換によって、整数の 2 つのタプルを long 型の 2 つのタプルと比較できることを示しています。
 
-[!code-csharp[SnippetMemberConversions](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberConversions "converting tuples for equality tests")]
+[!code-csharp-interactive[SnippetMemberConversions](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberConversions "converting tuples for equality tests")]
 
 タプルのメンバーの名前は、等値性のテストに参加しません。 ただし、いずれかのオペランドが明示的な名前を持つタプル リテラルの場合、コンパイラは、この名前が他のオペランドの名前と一致しない場合、警告 CS8383 を生成します。
 両方のオペランドがタプル リテラルである場合、警告は次の例に示すように右オペランドに含まれます。
 
-[!code-csharp[MemberNames](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberNames "Tuple member names do not participate in equality tests")]
+[!code-csharp-interactive[MemberNames](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberNames "Tuple member names do not participate in equality tests")]
 
 最後に、タプルに入れ子になったタプルが含まれることがあります。 タプルの等値性によって、次の例に示すように、入れ子になったタプルを通じて各オペランドの "シェイプ" が比較されます。
 
-[!code-csharp[NestedTuples](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetNestedTuples "Tuples may contain nested tuples that participate in tuple equality.")]
+[!code-csharp-interactive[NestedTuples](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetNestedTuples "Tuples may contain nested tuples that participate in tuple equality.")]
+
+シェイプが異なる 2 つのタプルの等値性 (または非等値性) を比較すると、コンパイル時エラーになります。 コンパイラは、入れ子になったタプルを比較するためにその分解を試行することはありません。
 
 ## <a name="assignment-and-tuples"></a>割り当てとタプル
 
-この言語では、要素の数が同じタプル型間での割り当てがサポートされています。ここでは、右側の各要素をそれに対応する左側の要素に暗黙的に変換できます。 他の変換は、割り当てでは考慮されません。 タプル型間で許可されている割り当ての種類を見てみましょう。
+この言語では、要素の数が同じタプル型間での割り当てがサポートされています。ここでは、右側の各要素をそれに対応する左側の要素に暗黙的に変換できます。 他の変換は、割り当てでは考慮されません。 あるタプルを、シェイプが異なる別のタプルに割り当てると、コンパイル時エラーになります。 コンパイラは、入れ子になったタプルを割り当てるためにその分解を試行することはありません。
+タプル型間で許可されている割り当ての種類を見てみましょう。
 
 以降の例で使用されている変数について考えます。
 
@@ -146,7 +148,7 @@ named = differentShape;
 > この例では、未修正のサンプル標準偏差を計算します。
 > 修正後のサンプル標準偏差式は、`Average` 拡張メソッドで行われるのと同様に、平均値との差の二乗和を、N ではなく (N-1) で除算します。 標準偏差のこうした数式の間に生じる差の詳細については、統計値のテキストを参照してください。
 
-上のコードは、標準偏差の教科書どおりの数式に従っています。 正しい答えが生成されますが、非効率的な実装です。 このメソッドは、シーケンスを 2 回列挙します。1 回は平均値を生成するため、もう 1 回は平均値との差を 2 乗して、その平均値を生成するためです 
+上のコードは、標準偏差の教科書どおりの数式に従っています。 正しい答えが生成されますが、非効率的な実装です。 このメソッドでは、シーケンスが 2 回列挙されます。1 回は平均値を生成するため、もう 1 回は平均値との差を 2 乗して、その平均値を生成するためです 
 (前述のとおり、LINQ クエリは遅延評価されるため、平均値との差と、その差の平均値の計算で生成される列挙は 1 つだけです)。
 
 シーケンスの列挙を 1 つだけ使用して標準偏差を計算する、別の数式があります。  この計算では、シーケンスを列挙しながら、2 つの値が生成されます。1 つはシーケンス内のすべての項目の合計、もう 1 つは各値の二乗和です。

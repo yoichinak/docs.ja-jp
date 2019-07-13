@@ -2,15 +2,15 @@
 title: '方法: 式ツリーを使用して動的クエリ (Visual Basic) を作成するには'
 ms.date: 07/20/2015
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
-ms.openlocfilehash: a2101598a083f8d0738cb531ebbaea0f7a87a577
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 24ce612ed2da9129cd446c6bea7d2547fc69e2bf
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643405"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592151"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>方法: 式ツリーを使用して動的クエリ (Visual Basic) を作成するには
-LINQ では、<xref:System.Linq.IQueryable%601> を実装するデータ ソースをターゲットとする構造化されたクエリを表すために、式ツリーが使われます。 たとえば、LINQ プロバイダーは、リレーショナル データ ストアのクエリを行うために、<xref:System.Linq.IQueryable%601> インターフェイスを実装します。 Visual Basic コンパイラでは、実行時に、式ツリーを構築するコードにこのようなデータ ソースをターゲットとするクエリをコンパイルします。 クエリ プロバイダーは式ツリー データ構造を走査して、データ ソースに適したクエリ言語に変換できます。  
+LINQ では、<xref:System.Linq.IQueryable%601> を実装するデータ ソースをターゲットとする構造化されたクエリを表すために、式ツリーが使われます。 たとえば、LINQ プロバイダーは、リレーショナル データ ストアのクエリを行うために、<xref:System.Linq.IQueryable%601> インターフェイスを実装します。 Visual Basic コンパイラでは、実行時に式ツリーをビルドするコードにこのようなデータ ソースをターゲットとするクエリをコンパイルします。 クエリ プロバイダーは式ツリー データ構造を走査して、データ ソースに適したクエリ言語に変換できます。  
   
  LINQ では、<xref:System.Linq.Expressions.Expression%601> 型の変数に代入されるラムダ式を表すためにも、式ツリーが使われます。  
   
@@ -101,14 +101,13 @@ Next
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
   
--   新しい**コンソール アプリケーション** プロジェクトを作成します。  
+- 新しい**コンソール アプリケーション** プロジェクトを作成します。  
   
--   System.Core.dll がまだ参照されていない場合は、参照を追加します。  
+- System.Linq.Expressions 名前空間をインクルードします。  
   
--   System.Linq.Expressions 名前空間をインクルードします。  
+- 例からコードをコピーして貼り付けます、 `Main` `Sub`プロシージャ。  
   
--   例のコードをコピーして貼り付けます、 `Main` `Sub`プロシージャです。  
-  
-## <a name="see-also"></a>関連項目  
- [式ツリー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)  
- [方法: 式ツリー (Visual Basic) を実行](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+## <a name="see-also"></a>関連項目
+
+- [式ツリー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
+- [方法: 式ツリー (Visual Basic) を実行します。](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;requestCaching&gt;要素 (ネットワーク設定)'
+title: <requestCaching> 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#requestCaching
@@ -8,31 +8,31 @@ helpviewer_keywords:
 - requestCaching element
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-ms.openlocfilehash: fecb3c71e0686a557b8a4b0c85b7d91a9846204f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: af290e4b9258a08425a15e297ff538502edea916
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674429"
 ---
-# <a name="ltrequestcachinggt-element-network-settings"></a>&lt;requestCaching&gt;要素 (ネットワーク設定)
+# <a name="requestcaching-element-network-settings"></a>\<requestCaching> 要素 (ネットワーク設定)
 ネットワーク要求のキャッシュ メカニズムを制御します。  
   
  \<configuration>  
 \<system.net>  
-\<requestCaching >  
+\<requestCaching>  
   
 ## <a name="syntax"></a>構文  
   
 ```xml  
-      <requestCaching>  
-        isPrivateCache ="true|false"  
-        disableAllCaching="true|false"  
-        defaultPolicyLevel="BypassCache|Default|CacheOnly|CacheIfAvailable|Revalidate|Reload|NoCacheNoStore|Revalidate"  
-        unspecifiedMaximumAge= "d.hh.mm.ss">  
-          <defaultHttpCachePolicy> … </defaultHttpCachePolicy>  
-          <defaultFtpCachePolicy> … </defaultFtpCachePolicy>  
-      </requestCaching>
+<requestCaching  
+  isPrivateCache ="true|false"  
+  disableAllCaching="true|false"  
+  defaultPolicyLevel="BypassCache|Default|CacheOnly|CacheIfAvailable|Revalidate|Reload|NoCacheNoStore|Revalidate"  
+  unspecifiedMaximumAge= "d.hh.mm.ss">  
+    <defaultHttpCachePolicy>...</defaultHttpCachePolicy>  
+    <defaultFtpCachePolicy>...</defaultFtpCachePolicy>  
+</requestCaching>
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -65,7 +65,7 @@ ms.locfileid: "50194970"
 |要素|説明|  
 |-------------|-----------------|  
 |[defaultHttpCachePolicy](../../../../../docs/framework/configure-apps/file-schema/network/defaulthttpcachepolicy-element-network-settings.md)|省略可能な要素です。<br /><br /> HTTP キャッシュがアクティブでかどうかし、既定のキャッシュ ポリシーの記述について説明します。|  
-|[\<defaultFtpCachePolicy > 要素 (ネットワーク設定)](../../../../../docs/framework/configure-apps/file-schema/network/defaultftpcachepolicy-element-network-settings.md)|省略可能な要素です。<br /><br /> FTP キャッシュがアクティブでかどうかし、既定のキャッシュ ポリシーを記述について説明します。|  
+|[\<defaultFtpCachePolicy> 要素 (ネットワーク設定](../../../../../docs/framework/configure-apps/file-schema/network/defaultftpcachepolicy-element-network-settings.md)|省略可能な要素です。<br /><br /> FTP キャッシュがアクティブでかどうかし、既定のキャッシュ ポリシーを記述について説明します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -86,6 +86,7 @@ ms.locfileid: "50194970"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.Net.Cache?displayProperty=nameWithType>  
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Net.Cache?displayProperty=nameWithType>
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

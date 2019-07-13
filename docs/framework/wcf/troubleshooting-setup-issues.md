@@ -2,12 +2,12 @@
 title: セットアップに関する問題のトラブルシューティング
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 13828bee07dd455cd2b94d20d4afa7ea416ce186
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 358897917fff7097bc2907456f295d98ad6d431f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840548"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645175"
 ---
 # <a name="troubleshooting-setup-issues"></a>セットアップに関する問題のトラブルシューティング
 このトピックでは、Windows Communication Foundation (WCF) がセットアップ問題のトラブルシューティングを行う方法について説明します。  
@@ -15,44 +15,44 @@ ms.locfileid: "48840548"
 ## <a name="some-windows-communication-foundation-registry-keys-are-not-repaired-by-performing-an-msi-repair-operation-on-the-net-framework-30"></a>.NET Framework 3.0 の MSI 修復操作の実行では修復されない一部の Windows Communication Foundation レジストリ キー  
  次のいずれかのレジストリ キーを削除した場合  
   
--   HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ServiceModelService 3.0.0.0  
+- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ServiceModelService 3.0.0.0  
   
--   HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ServiceModelOperation 3.0.0.0  
+- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ServiceModelOperation 3.0.0.0  
   
--   HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ServiceModelEndpoint 3.0.0.0  
+- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ServiceModelEndpoint 3.0.0.0  
   
--   HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SMSvcHost 3.0.0.0  
+- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SMSvcHost 3.0.0.0  
   
--   HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSDTC Bridge 3.0.0.0  
+- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSDTC Bridge 3.0.0.0  
   
  起動される .NET Framework 3.0 インストーラーを使用して修復を実行する場合、キーが再作成されません、**プログラムの追加/削除**アプレット**コントロール パネルの**します。 これらのキーを正しく再作成するには、.NET Framework 3.0 をアンインストール後、再インストールする必要があります。  
   
 ## <a name="wmi-service-corruption-blocks-installation-of-the-windows-communication-foundation-wmi-provider-during-installation-of-net-framework-30-package"></a>WMI サービスの破損により .NET Framework 3.0 パッケージのインストール中に Windows Communication Foundation WMI プロバイダーのインストールがブロックされる  
  WMI サービスの破損により、Windows Communication Foundation WMI プロバイダーのインストールがブロックされることがあります。 インストール中、Windows Communication Foundation インストーラーは mofcomp.exe コンポーネントを使用して WCF .mof ファイルを登録できません。 発生する現象を次に示します。  
   
-1.  .NET Framework 3.0 のインストールは正常に完了するのに、WCF WMI プロバイダーが登録されない。  
+1. .NET Framework 3.0 のインストールは正常に完了するのに、WCF WMI プロバイダーが登録されない。  
   
-2.  アプリケーション イベント ログに、WCF の WMI プロバイダーの登録、または mofcomp.exe の実行に関する問題を示すエラー イベントが表示される。  
+2. アプリケーション イベント ログに、WCF の WMI プロバイダーの登録、または mofcomp.exe の実行に関する問題を示すエラー イベントが表示される。  
   
-3.  ユーザーの %temp% ディレクトリの dd_wcf_retCA* という名前のセットアップ ログ ファイルに、WCF WMI プロバイダーの登録に失敗したことが示される。  
+3. ユーザーの %temp% ディレクトリの dd_wcf_retCA* という名前のセットアップ ログ ファイルに、WCF WMI プロバイダーの登録に失敗したことが示される。  
   
-4.  イベント ログまたはセットアップ トレース ログ ファイルに、次の例外のいずれかが記録される。  
+4. イベント ログまたはセットアップ トレース ログ ファイルに、次の例外のいずれかが記録される。  
   
-     ServiceModelReg [11:09:59:046]: System.ApplicationException : "E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModel.mof" で E:\WINDOWS\system32\wbem\mofcomp.exe を実行している間に予期しない結果 3 が発生しました  
-  
-     または  
-  
-     ServiceModelReg [07:19:33:843]: System.TypeInitializationException : 'System.Management.ManagementPath' の型初期化子が例外をスローしました。 ---> System.Runtime.InteropServices.COMException (0x80040154) : CLSID {CF4CC405-E2C5-4DDD-B3CE-5E7582D8C9FA} を含むコンポーネントの COM クラス ファクトリを取得中に、次のエラーが発生しました: 80040154。  
+     ServiceModelReg [11:09:59:046]:System.ApplicationException:Unexpected result 3 executing E:\WINDOWS\system32\wbem\mofcomp.exe with "E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModel.mof"  
   
      または  
   
-     ServiceModelReg [07:19:32:750]: System.IO.FileNotFoundException : ファイルまたはアセンブリ 'C:\WINDOWS\system32\wbem\mofcomp.exe'、またはその依存関係の 1 つが読み込めませんでした。 指定されたファイルが見つかりません。  
+     ServiceModelReg [07:19:33:843]:System.TypeInitializationException:'System.management.managementpath' の型の初期化子は、例外をスローしました。 ---> System.Runtime.InteropServices.COMException (0x80040154):次のエラーにより失敗しました。 CLSID {cf4cc405-e2c5-4ddd-b3ce-5e7582d8c9fa} を含むコンポーネントの COM クラス ファクトリを取得します。80040154.  
   
-     ファイル名 : C:\WINDOWS\system32\wbem\mofcomp.exe  
+     または  
+  
+     ServiceModelReg [07:19:32:750]:System.IO.FileNotFoundException:ファイルまたはアセンブリ 'C:\WINDOWS\system32\wbem\mofcomp.exe'、またはその依存関係の 1 つを読み込めませんでした。 指定されたファイルが見つかりません。  
+  
+     ファイル名:'C:\WINDOWS\system32\wbem\mofcomp.exe  
   
  上で説明した問題を解決するためには、次の手順を実行する必要があります。  
   
-1.  実行[WMI 診断ユーティリティ、バージョン 2.0](https://go.microsoft.com/fwlink/?LinkId=94685)の WMI サービスを修復します。 詳細については、このツールを使用して、次を参照してください。、 [WMI 診断ユーティリティ](https://go.microsoft.com/fwlink/?LinkId=94686)トピック。  
+1. 実行[WMI 診断ユーティリティ、バージョン 2.0](https://go.microsoft.com/fwlink/?LinkId=94685)の WMI サービスを修復します。 詳細については、このツールを使用して、次を参照してください。、 [WMI 診断ユーティリティ](https://go.microsoft.com/fwlink/?LinkId=94686)トピック。  
   
  使用して、.NET Framework 3.0 のインストールを修復、**プログラムの追加/削除**アプレットにある**コントロール パネルの**、または .NET Framework 3.0 をアンインストール/再インストールします。  
   
@@ -73,5 +73,6 @@ ms.locfileid: "48840548"
 aspnet_regiis.exe -i -enable  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [セットアップ手順](../../../docs/framework/wcf/samples/set-up-instructions.md)
+## <a name="see-also"></a>関連項目
+
+- [セットアップ手順](../../../docs/framework/wcf/samples/set-up-instructions.md)

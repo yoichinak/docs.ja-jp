@@ -2,12 +2,12 @@
 title: 安全なクライアント アプリケーション
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
-ms.openlocfilehash: a3b035d59a39ca20f6a81fbd40d39069a7cc43c2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0c14089247e916b91cb385c7d715cce54acee57c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664208"
 ---
 # <a name="secure-client-applications"></a>安全なクライアント アプリケーション
 通常、アプリケーションは多数の要素で構成されており、それぞれをデータの損失やシステムのセキュリティ侵害を招く脆弱性から確実に保護する必要があります。 安全なユーザー インターフェイスを作成し、攻撃者によるデータやシステム リソースへのアクセスを未然に阻止することで、多くの問題を防ぐことができます。  
@@ -21,7 +21,7 @@ ms.locfileid: "47397895"
  [セキュリティとユーザー入力](../../../../docs/standard/security/security-and-user-input.md)  
  発見が難しく大きな危険を招く可能性のあるユーザー入力に関連したバグへの対処方法を説明します。  
   
- [ASP.NET Web ページでユーザー入力の検証](https://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461)  
+ [ASP.NET Web ページでユーザー入力の検証](https://docs.microsoft.com/previous-versions/aspnet/7kh55542(v=vs.100))  
  ASP.NET の検証コントロールを使ったユーザー入力の検証について概要を説明します。  
   
  [Windows フォームでのユーザー入力](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
@@ -36,10 +36,10 @@ ms.locfileid: "47397895"
  [Windows フォームのセキュリティ](../../../../docs/framework/winforms/windows-forms-security.md)  
  Windows フォーム アプリケーションをセキュリティで保護する方法について説明します。また、関連項目へのリンクがあります。  
   
- [Windows フォームとアンマネージ アプリケーション](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
+ [Windows Forms and Unmanaged Applications](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
  Windows フォーム アプリケーションでアンマネージ アプリケーションと対話する方法について説明します。  
   
- [ClickOnce 配置の Windows フォーム アプリケーション](https://msdn.microsoft.com/library/34d8c770-48f2-460c-8d67-4ea5684511df)  
+ [Windows フォームの ClickOnce 配置](../../winforms/clickonce-deployment-for-windows-forms.md)  
  Windows フォーム アプリケーションでの `ClickOnce` 配置の使用方法およびセキュリティへの影響について説明します。  
   
 ## <a name="aspnet-and-xml-web-services"></a>ASP.NET と XML Web サービス  
@@ -51,23 +51,24 @@ ms.locfileid: "47397895"
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[NIB: ASP.NET のセキュリティ](https://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d)|ASP.NET アプリケーションをセキュリティで保護する方法について説明します。|  
-|[ASP.NET を使用して作成された XML Web サービスをセキュリティで保護します。](https://msdn.microsoft.com/library/354b2ab1-2782-4542-b32a-dc560178b90c)|ASP.NET Web サービスへのセキュリティの実装方法について説明します。|  
-|[スクリプトによる攻略の概要](https://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)|Web ページに悪意のある文字の挿入を試みるスクリプト攻略攻撃を阻止する方法について説明します。|  
-|[ASP.NET Web アプリケーションのセキュリティ プラクティスを NIB: Basic](https://msdn.microsoft.com/library/94a52ab8-731d-417e-b997-721baf43df38)|一般的なセキュリティ情報のほか、より詳細なページへのリンクも掲載されています。|  
+|[ASP.NET Web サイトをセキュリティで保護します。](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))|ASP.NET アプリケーションをセキュリティで保護する方法について説明します。|  
+|[ASP.NET を使用して作成された XML Web サービスをセキュリティで保護します。](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))|ASP.NET Web サービスへのセキュリティの実装方法について説明します。|  
+|[スクリプトによる攻略の概要](https://docs.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100))|Web ページに悪意のある文字の挿入を試みるスクリプト攻略攻撃を阻止する方法について説明します。|  
+|[Web アプリケーションの基本的なセキュリティ プラクティス](https://docs.microsoft.com/previous-versions/aspnet/zdh19h94(v=vs.100))|一般的なセキュリティ情報のほか、より詳細なページへのリンクも掲載されています。|  
   
 ## <a name="remoting"></a>リモート処理  
  .NET リモート処理を使用すると、広範囲の分散アプリケーションを簡単に構築できます。その場合、アプリケーションのコンポーネントを、すべて 1 台のコンピューターに置くことも、遠隔地のコンピューターに分散させることもできます。 同じコンピューター上、またはネットワークを経由してアクセスできる他の任意のコンピューター上にある他のプロセスのオブジェクトを使用するクライアント アプリケーションを構築できます。 また、.NET リモート処理を使用すると、同じプロセスの他のアプリケーション ドメインと通信できます。  
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[リモート アプリケーションの構成](https://msdn.microsoft.com/library/92c0c097-d984-4315-835b-7490ecdf1097)|一般的な問題を回避するためのリモート処理アプリケーションの構成方法について説明します。|  
-|[リモート処理でのセキュリティ](https://msdn.microsoft.com/library/9574262c-d4b1-41c5-8600-24ff147c0add)|認証と暗号化のほか、リモート処理に関連したその他のセキュリティ トピックについて説明します。|  
+|[リモート アプリケーションの構成](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b8tysty8(v=vs.100))|一般的な問題を回避するためのリモート処理アプリケーションの構成方法について説明します。|  
+|[リモート処理でのセキュリティ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9hwst9th(v=vs.100))|認証と暗号化のほか、リモート処理に関連したその他のセキュリティ トピックについて説明します。|  
 |[セキュリティとリモート処理の考慮事項](../../../../docs/framework/misc/security-and-remoting-considerations.md)|保護されたオブジェクトやアプリケーション ドメインの境界越えに伴うセキュリティの問題について説明します。|  
   
-## <a name="see-also"></a>関連項目  
- [ADO.NET アプリケーションのセキュリティ保護](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [データ アクセス戦略に関する推奨事項](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)  
- [アプリケーションの保護](/visualstudio/ide/securing-applications)  
- [接続情報の保護](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [ADO.NET アプリケーションのセキュリティ保護](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [データ アクセス戦略に関する推奨事項](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
+- [アプリケーションの保護](/visualstudio/ide/securing-applications)
+- [接続情報の保護](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

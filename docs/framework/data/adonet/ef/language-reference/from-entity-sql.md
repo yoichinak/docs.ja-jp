@@ -2,15 +2,15 @@
 title: FROM (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-ms.openlocfilehash: de2ad24e5c6399ed1ca91e3907da4a66c056e337
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 69a6af868ace384a63d08d705c395b58a173ca8e
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765816"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662164"
 ---
 # <a name="from-entity-sql"></a>FROM (Entity SQL)
-使用するコレクションを指定[選択](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)ステートメントです。  
+使用されるコレクションを指定します[選択](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)ステートメント。  
   
 ## <a name="syntax"></a>構文  
   
@@ -22,7 +22,7 @@ FROM expression [ ,...n ] as C
  `expression`  
  `SELECT` ステートメントのソースとして使用するコレクションを生成する任意の有効なクエリ式。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `FROM` 句は、1 つ以上の `FROM` 句の項目をコンマで区切ったリストです。 `FROM` 句を使用して、`SELECT` ステートメントのソースを 1 つ以上指定できます。 `FROM` 句の最も単純な形式は、次の例に示すように、`SELECT` ステートメントのソースとして使用する 1 つのコレクションと 1 つの別名を識別する単一のクエリ式です。  
   
  `FROM C as c`  
@@ -46,7 +46,7 @@ LOB.Customers
  別名を指定しない場合、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] はコレクション式に基づいて別名の生成を試みます。  
   
 ### <a name="join-from-clause-item"></a>JOIN FROM 句の項目  
- `JOIN FROM` 句項目は、2 つの `FROM` 句項目の間の結合を表します。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] では、クロス結合、内部結合、左外部結合、右外部結合、および完全外部結合をサポートしています。 これらすべての結合は、[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] でのサポートと同様にサポートされます。 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] の場合と同様に、`FROM` に含まれる 2 つの `JOIN` 句の項目は独立している必要があります。 つまり、相互に関連付けられた項目は使用できません。 このような場合には、`CROSS APPLY` または `OUTER APPLY` を使用できます。  
+ `JOIN FROM` 句項目は、2 つの `FROM` 句項目の間の結合を表します。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] では、クロス結合、内部結合、左外部結合、右外部結合、および完全外部結合をサポートしています。 これらすべての結合には、Transact SQL でサポートされているのと同様はサポートされています。 Transact SQL では、2 つのように`FROM`に関連する句の項目、`JOIN`独立系である必要があります。 つまり、相互に関連付けられた項目は使用できません。 このような場合には、`CROSS APPLY` または `OUTER APPLY` を使用できます。  
   
 #### <a name="cross-joins"></a>クロス結合  
  次の例に示すように、`CROSS JOIN` クエリ式は 2 つのコレクションのデカルト積を生成します。  
@@ -77,7 +77,7 @@ LOB.Customers
  上記のクエリ式では、`ON` 条件が指定されており、右のコレクションの各要素と対になっている左のコレクションの各要素を結合して処理します。 `ON` 条件が指定されていない場合、式は、NULL 値を使用して、右の要素と対になっている左の要素のインスタンスを 1 つ処理します。 また、NULL 値を使用して、左の要素と対になっている右の要素のインスタンスも 1 つ処理します。  
   
 > [!NOTE]
->  SQL-92 との互換性を保つため、[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] では、OUTER キーワードは省略可能です。 したがって、`LEFT JOIN`、`RIGHT JOIN`、および `FULL JOIN` は、`LEFT OUTER JOIN`、`RIGHT OUTER JOIN`、および `FULL OUTER JOIN` のシノニムです。  
+>  TRANSACT-SQL での sql-92 との互換性を保持するために、OUTER キーワードは省略可能です。 したがって、`LEFT JOIN`、`RIGHT JOIN`、および `FULL JOIN` は、`LEFT OUTER JOIN`、`RIGHT OUTER JOIN`、および `FULL OUTER JOIN` のシノニムです。  
   
 ### <a name="apply-clause-item"></a>APPLY 句の項目  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] は、`APPLY` と `CROSS APPLY` という 2 種類の `OUTER APPLY` をサポートしています。  
@@ -93,17 +93,17 @@ LOB.Customers
  `SELECT c, f FROM C AS c OUTER APPLY c.Assoc AS f`  
   
 > [!NOTE]
->  [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] とは異なり、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] では、明示的なネスト解除の手順は不要です。  
+>  異なり、Transact SQL で必要はありませんで明示的なネスト解除の手順について[!INCLUDE[esql](../../../../../../includes/esql-md.md)]します。  
   
 > [!NOTE]
->  `CROSS` 演算子および `OUTER APPLY` 演算子は [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)] で導入されました。 場合によっては、クエリ パイプラインにより、`CROSS APPLY` 演算子または `OUTER APPLY` 演算子を含む Transact-SQL が生成されることがあります。 SQL Server のバージョンを含む一部のバックエンド プロバイダーよりも前[!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]、これらの演算子をサポートしていません、このようなクエリは、これらのバックエンド プロバイダーで実行することはできません。  
+>  `CROSS` `OUTER APPLY`演算子は、SQL Server 2005 で導入されました。 場合によっては、クエリ パイプラインにより、`CROSS APPLY` 演算子または `OUTER APPLY` 演算子を含む Transact-SQL が生成されることがあります。 SQL Server 2005 より前のバージョンの SQL Server を含む、一部のバックエンド プロバイダーはこれらの演算子がサポートされないために、これらのバックエンド プロバイダーでこのようなクエリを実行できません。  
 >   
 >  `CROSS APPLY` 演算子または `OUTER APPLY` 演算子を含むクエリの生成につながる可能性がある一般的なシナリオとしては、ページングを使用した相関サブクエリ、相関サブクエリ全体またはナビゲーションによって生成されたコレクション全体を対象とした AnyElement、要素セレクターを受け取るグループ化メソッドを使用した LINQ クエリ、`CROSS APPLY` 演算子または `OUTER APPLY` 演算子が明示的に指定されたクエリ、`DEREF` コンストラクターを引数に取る `REF` コンストラクターを含むクエリなどがあります。  
   
 ## <a name="multiple-collections-in-the-from-clause"></a>FROM 句での複数のコレクション  
  `FROM` 句には、複数のコレクションをコンマで区切って含めることができます。 この場合、これらのコレクションは 1 つに結合されるものと見なされます。 これは、n 方向の CROSS JOIN と考えることができます。  
   
- 次の例では、`C`と`D`は独立したコレクションが`c.Names`が依存`C`です。  
+ 次の例では、`C`と`D`は独立したコレクションが`c.Names`が依存`C`します。  
   
 ```  
 FROM C AS c, D AS d, c.Names AS e  
@@ -137,7 +137,7 @@ from (C as c join D as d) cross apply c.Names as e
 from (C as c join D as d) cross apply c.Names as e  
 ```  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] では [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] と異なり、`FROM` 句では別名のみがスコープに導入されます。 これらのコレクションの列 (プロパティ) への参照は、別名を使用して修飾する必要があります。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] (TRANSACT-SQL) とは異なり、`FROM`句がスコープにのみ、エイリアスを説明します。 これらのコレクションの列 (プロパティ) への参照は、別名を使用して修飾する必要があります。  
   
 ## <a name="pulling-up-keys-from-nested-queries"></a>入れ子になったクエリからのキーの抽出  
  入れ子になったクエリからのキーの抽出を必要とする特定の種類のクエリはサポートされていません。 たとえば、次のクエリは有効です。  
@@ -152,7 +152,8 @@ select c.Orders from Customers as c
 select {1} from {2, 3}  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [クエリ式](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)  
- [NULL 値が許容される構造化型](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)
+## <a name="see-also"></a>関連項目
+
+- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [クエリ式](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
+- [NULL 値が許容される構造化型](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)

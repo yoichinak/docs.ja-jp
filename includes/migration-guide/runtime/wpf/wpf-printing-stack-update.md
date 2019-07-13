@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 6fafb689af5d50b31b19f5d1fe7090a6c256ca45
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804364"
+---
 ### <a name="wpf-printing-stack-update"></a>WPF での印刷スタックの更新
 
 |   |   |
@@ -7,4 +15,3 @@
 |スコープ|エッジ|
 |Version|4.7|
 |型|ランタイム|
-

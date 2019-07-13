@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0e3cdbff5054ec990c40c333ed4bd4029a91f12
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 13371d15c8b29f9ef93cc4af87acf85029404644
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420805"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744766"
 ---
 # <a name="icordebugremotedebugactiveprocessex-method"></a>ICorDebugRemote::DebugActiveProcessEx メソッド
-デバッガーの下でリモート コンピューター上のプロセスを起動します。  
+デバッガーでのリモート コンピューター上のプロセスを起動します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT DebugActiveProcessEx (  
     [in]  ICorDebugRemoteTarget *   pRemoteTarget,  
     [in]  DWORD                     dwProcessId,  
@@ -38,31 +38,31 @@ HRESULT DebugActiveProcessEx (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pRemoteTarget`  
- [in]ポインター、 [ICorDebugRemoteTarget インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)です。 このパラメーターは使用、プロセスが実行されているコンピューターを決定します。  
+ [in]ポインター、 [ICorDebugRemoteTarget インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)します。 このパラメーターを使用してをプロセスが実行されているコンピューターを特定します。  
   
  `id`  
- [in]デバッガーのアタッチ先となるプロセスの ID。  
+ [in]デバッガーのアタッチ先のプロセスの ID。  
   
  `win32Attach`  
- [in]`true`デバッガーがプロセスの Win32 デバッガーとして動作する必要があります、アンマネージのコールバックのディスパッチ場合はそれ以外の場合、`false`です。  
+ [in]`true`デバッガーで、Win32 のデバッガー プロセスとして動作する必要があります、アンマネージのコールバックのディスパッチ場合それ以外の場合、`false`します。  
   
  `ppProcess`  
  [out]デバッガーのアタッチするプロセスを表す"ICorDebugProcess"オブジェクトのアドレスへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
  S_OK  
- リモート コンピューター上のプロセスが正常に接続します。  
+ リモート コンピューター上のプロセスに正常に接続します。  
   
  E_FAIL (またはその他の E_ リターン コード)  
  リモート コンピューター上のプロセスにアタッチできません。  
   
-## <a name="remarks"></a>コメント  
- 混合モード デバッグは Silverlight ではサポートされていません。  
+## <a name="remarks"></a>Remarks  
+ Silverlight では、混合モード デバッグはサポートされていません。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -70,8 +70,9 @@ HRESULT DebugActiveProcessEx (
   
  **.NET framework のバージョン:** 4.5、4、3.5 SP1  
   
-## <a name="see-also"></a>関連項目  
- [ICorDebugRemote インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)  
- [ICorDebug インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
-    
- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>関連項目
+
+- [ICorDebugRemote インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
+- [ICorDebug インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+
+- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

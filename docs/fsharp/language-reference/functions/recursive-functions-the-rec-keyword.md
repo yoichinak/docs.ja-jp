@@ -2,12 +2,12 @@
 title: 再帰関数:Rec キーワード
 description: 再帰関数の定義に 'let' キーワードを使用して、F# の 'rec' キーワードが使用される方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 9f9c7e1a4468de9551b3852d0e7b4381025b2699
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 86eaf1c8a5566d8b9cbc4dcb72f945e2497e5439
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612908"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645298"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>再帰関数:Rec キーワード
 

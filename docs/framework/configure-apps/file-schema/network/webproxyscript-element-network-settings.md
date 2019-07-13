@@ -1,5 +1,5 @@
 ---
-title: '&lt;webProxyScript&gt;要素 (ネットワーク設定)'
+title: <webProxyScript> 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#webProxyScript
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <webProxyScript> element
 - webProxyScript element
 ms.assetid: a13c26db-6218-4af3-9696-38f24b23bfac
-ms.openlocfilehash: 683c4c5e3f3f62d947ce244c66cc590eabe64f17
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e73ba86cc17fa51cbf4030f2304ab9141fcc0f26
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674371"
 ---
-# <a name="ltwebproxyscriptgt-element-network-settings"></a>&lt;webProxyScript&gt;要素 (ネットワーク設定)
+# <a name="webproxyscript-element-network-settings"></a>\<webProxyScript > 要素 (ネットワーク設定)
 Web プロキシを検出するために使用するスクリプトの特性を構成します。  
   
  \<configuration>  
@@ -54,5 +54,6 @@ Web プロキシを検出するために使用するスクリプトの特性を�
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
+
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

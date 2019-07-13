@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e874d593a18be352e7053a15525f3168e7fcc9db
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c624866a23eb32f57953847e8a229f6fa5e7b4bb
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397856"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632965"
 ---
 # <a name="dynamic-language-runtime-overview"></a>動的言語ランタイムの概要
 
@@ -24,11 +24,11 @@ ms.locfileid: "47397856"
 
 動的言語の多くには、開発者に次の利点があります。
 
--   高速フィードバック ループ (REPL、つまり Read-Evaluate-Print Loop) を使用する機能。 この機能により、いくつかのステートメントを入力し、すぐに実行して結果を表示できます。
+- 高速フィードバック ループ (REPL、つまり Read-Evaluate-Print Loop) を使用する機能。 この機能により、いくつかのステートメントを入力し、すぐに実行して結果を表示できます。
 
--   トップダウン式の開発と従来のボトムアップ式の開発の両方に対するサポート。 たとえば、トップダウン アプローチを使用する場合は、まだ実装されていない関数を呼び出し、後で必要なときに基になる実装を追加できます。
+- トップダウン式の開発と従来のボトムアップ式の開発の両方に対するサポート。 たとえば、トップダウン アプローチを使用する場合は、まだ実装されていない関数を呼び出し、後で必要なときに基になる実装を追加できます。
 
--   リファクタリングとコード変更の容易さ。コード全体で静的な型宣言を変更する必要がありません。
+- リファクタリングとコード変更の容易さ。コード全体で静的な型宣言を変更する必要がありません。
 
 動的言語は、優れたスクリプト言語です。 動的言語使用して作成されたアプリケーションは、新しいコマンドや機能を追加してユーザーが簡単に拡張できます。 動的言語は、Web サイトやテスト ハーネスの作成、サーバー ファームの管理、さまざまなユーティリティの開発、データ変換の実行にもよく使用されます。
 
@@ -51,9 +51,9 @@ CLR と同様に、DLR は .NET Framework の一部であり、.NET Framework �
 
 以下は、DLR を使用して開発された言語の例です。
 
--   IronPython。 [GitHub](https://github.com/IronLanguages/ironpython2) の Web サイトから、オープン ソース ソフトウェアとして入手できます。
+- IronPython。 [GitHub](https://github.com/IronLanguages/ironpython2) の Web サイトから、オープン ソース ソフトウェアとして入手できます。
 
--   IronRuby。 [RubyForge](https://go.microsoft.com/fwlink/?LinkId=141044) の Web サイトから、オープン ソース ソフトウェアとして入手できます。
+- IronRuby。 [RubyForge](https://go.microsoft.com/fwlink/?LinkId=141044) の Web サイトから、オープン ソース ソフトウェアとして入手できます。
 
 ## <a name="primary-dlr-advantages"></a>DLR の主な利点
  DLR には、次の利点があります。
@@ -80,21 +80,22 @@ CLR と同様に、DLR は .NET Framework の一部であり、.NET Framework �
 
  DLR は、動的言語のサポートを強化するために一連のサービスを CLR に追加します。 これらのサービスには、次のようなものが含まれます。
 
--   式ツリー。 DLR では、式ツリーを使用して言語のセマンティクスを表します。 この目的から、DLR では LINQ の式ツリーが拡張され、制御フロー、代入、およびその他の言語モデリング ノードが追加されています。 詳細については、「[式ツリー](https://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)」を参照してください。
+- 式ツリー。 DLR では、式ツリーを使用して言語のセマンティクスを表します。 この目的から、DLR では LINQ の式ツリーが拡張され、制御フロー、代入、およびその他の言語モデリング ノードが追加されています。 詳細については、「[式ツリー (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md)」または「[式ツリー (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md)」を参照してください。
 
--   呼び出しサイトのキャッシュ。 *動的呼び出しサイト*とは、動的オブジェクトに `a + b` や `a.b()` などの操作を実行するコード内の場所です。 DLR は、`a` と `b` の特性 (通常はこれらのオブジェクトの型) や操作に関する情報をキャッシュします。 同様の操作が以前に実行されていた場合、DLR は、必要なすべての情報をキャッシュから取得して、高速なディスパッチを実現します。
+- 呼び出しサイトのキャッシュ。 *動的呼び出しサイト*とは、動的オブジェクトに `a + b` や `a.b()` などの操作を実行するコード内の場所です。 DLR は、`a` と `b` の特性 (通常はこれらのオブジェクトの型) や操作に関する情報をキャッシュします。 同様の操作が以前に実行されていた場合、DLR は、必要なすべての情報をキャッシュから取得して、高速なディスパッチを実現します。
 
--   動的オブジェクトの相互運用性。 DLR には、動的オブジェクトと操作を表し、言語実装者や動的ライブラリの作成者が使用できるクラスとインターフェイスのセットが用意されています。 このようなクラスやインターフェイスには、<xref:System.Dynamic.IDynamicMetaObjectProvider><xref:System.Dynamic.DynamicMetaObject><xref:System.Dynamic.DynamicObject> および <xref:System.Dynamic.ExpandoObject> があります。
+- 動的オブジェクトの相互運用性。 DLR には、動的オブジェクトと操作を表し、言語実装者や動的ライブラリの作成者が使用できるクラスとインターフェイスのセットが用意されています。 このようなクラスやインターフェイスには、<xref:System.Dynamic.IDynamicMetaObjectProvider><xref:System.Dynamic.DynamicMetaObject><xref:System.Dynamic.DynamicObject> および <xref:System.Dynamic.ExpandoObject> があります。
 
 DLR では、呼び出しサイトのバインダーを使用して、.NET Framework だけでなく、Silverlight や COM などの他のインフラストラクチャやサービスとも通信します。 バインダーは、言語のセマンティクスをカプセル化し、式ツリーを使用して呼び出しサイトの操作を実行する方法を指定します。 これにより、DLR を使用する動的言語および静的に型指定された言語で、ライブラリを共有し、DLR がサポートするすべてのテクノロジを利用できるようになります。
 
 ## <a name="dlr-documentation"></a>DLR に関するドキュメント
  言語に動的な動作を追加するためにオープン ソース バージョンの DLR を使用する方法、または .NET Framework で動的言語の使用を有効にする方法については、GitHub の [IronLanguages/dlr](https://github.com/IronLanguages/dlr/tree/master/Docs) のドキュメントを参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Dynamic.ExpandoObject>
 - <xref:System.Dynamic.DynamicObject>
 - [共通言語ランタイム](../../../docs/standard/clr.md)
-- [式ツリー](https://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)
+- [式ツリー (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [式ツリー (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md)
 - [チュートリアル: 動的オブジェクトの作成と使用](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

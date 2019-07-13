@@ -3,11 +3,11 @@ title: 相関関係のトラブルシューティング
 ms.date: 03/30/2017
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
 ms.openlocfilehash: fecfaf7374823bb19a4ad3d7f6cb2dbbdf139703
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932822"
 ---
 # <a name="troubleshooting-correlation"></a>相関関係のトラブルシューティング
 相関関係は、ワークフロー サービス メッセージを互いに関連付けたり、正しいワークフロー インスタンスに関連付けたりするために使用されますが、正しく構成されていないと、メッセージが受信されず、アプリケーションが正しく機能しなくなります。 ここでは、相関関係のトラブルシューティングのいくつかの方法の概要と、相関関係を使用するときに発生する一般的な問題について説明します。
@@ -161,7 +161,7 @@ SendReply ReplyToStartOrder = new SendReply
 // Construct a workflow using StartOrder and ReplyToStartOrder.
 ```
 
- 間で永続化は許可されていません、 <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply>ペアまたは<xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply>ペア。 両方のアクティビティが完了するまで存続する非永続化ゾーンが作成されます。 遅延アクティビティなどのアクティビティがこの非永続化ゾーンにあって、ワークフローのアイドル状態を引き起こした場合、ホストでワークフローがアイドル状態になったときにワークフローを永続化するようにホストが構成されていても、ワークフローは永続化されません。 Persist アクティビティなどのアクティビティが非永続化ゾーンで明示的に永続化を試みた場合、致命的な例外がスローされ、ワークフローが中止されて、<xref:System.ServiceModel.FaultException> が呼び出し元に返されます。 次の致命的な例外メッセージが表示されます。"System.InvalidOperationException: 持続性のないブロックに Persist アクティビティを含めることはできません。" この例外は呼び出し元に返されませんが、追跡が有効になっている場合は確認できます。 呼び出し元に返される <xref:System.ServiceModel.FaultException> のメッセージは、"WorkflowInstance '5836145b-7da2-49d0-a052-a49162adeab6' が完了しているため、操作を実行できませんでした" です。
+ 間で永続化は許可されていません、 <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply>ペアまたは<xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply>ペア。 両方のアクティビティが完了するまで存続する非永続化ゾーンが作成されます。 遅延アクティビティなどのアクティビティがこの非永続化ゾーンにあって、ワークフローのアイドル状態を引き起こした場合、ホストでワークフローがアイドル状態になったときにワークフローを永続化するようにホストが構成されていても、ワークフローは永続化されません。 Persist アクティビティなどのアクティビティが非永続化ゾーンで明示的に永続化を試みた場合、致命的な例外がスローされ、ワークフローが中止されて、<xref:System.ServiceModel.FaultException> が呼び出し元に返されます。 致命的な例外メッセージは"System.InvalidOperationException:永続化アクティビティは、永続化ブロックがありません。 内に含めることはできません。"です。 この例外は呼び出し元に返されませんが、追跡が有効になっている場合は確認できます。 呼び出し元に返される <xref:System.ServiceModel.FaultException> のメッセージは、"WorkflowInstance '5836145b-7da2-49d0-a052-a49162adeab6' が完了しているため、操作を実行できませんでした" です。
 
  要求-応答の相関関係の詳細については、次を参照してください。[要求/応答](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)します。
 
@@ -188,7 +188,7 @@ MessageQuerySet = new MessageQuerySet
 }
 ```
 
- 関連付けデータが取得されないなど、XPath クエリが正しく構成されていない場合、次のメッセージと共にエラーが返されます。"関連付けクエリで空の結果セットが生成されました。 エンドポイントの関連付けクエリが正しく構成されていることを確認してください。" 前のセクションで説明したとおり、XPath クエリをリテラル値と置換すると、すばやくトラブルシューティングすることができます。 XPath のクエリ ビルダーを使用する場合に、この問題が発生することができます、 **関連付け初期化子**または**CorrelatesOn の定義**ダイアログ ボックスと、ワークフロー サービスは、メッセージ コントラクトを使用します。 次の例では、メッセージ コントラクト クラスを定義します。
+ XPath クエリが正しく構成されていない関連付けデータが取得されないように、次のメッセージでエラーが返されます。"関連付けクエリには、空の結果セットが返されます。 エンドポイントの関連付けクエリが正しく構成されていることを確認してください。" 前のセクションで説明したとおり、XPath クエリをリテラル値と置換すると、すばやくトラブルシューティングすることができます。 XPath のクエリ ビルダーを使用する場合に、この問題が発生することができます、 **関連付け初期化子**または**CorrelatesOn の定義**ダイアログ ボックスと、ワークフロー サービスは、メッセージ コントラクトを使用します。 次の例では、メッセージ コントラクト クラスを定義します。
 
 ```csharp
 [MessageContract]

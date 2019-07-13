@@ -2,17 +2,17 @@
 title: 複合型を使用した AJAX サービスのサンプル
 ms.date: 03/30/2017
 ms.assetid: 88242b99-4811-4cbe-8201-52ddf48fb174
-ms.openlocfilehash: ef44dc0eddb165c93b912da4fed994074668a250
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: cde7e48d0f0c44d68266d60399ac197d322a42cc
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002886"
 ---
 # <a name="ajax-service-using-complex-types-sample"></a>複合型を使用した AJAX サービスのサンプル
 このサンプルでは、Windows Communication Foundation (WCF) を使用して、複合型のインスタンスを作成し、サービスとクライアントの JavaScript Object Notation (JSON) との間で送信する ASP.NET Asynchronous JavaScript and XML (AJAX) サービスを作成する方法を示します。 AJAX サービスには、Web ブラウザー クライアントから JavaScript コードを使用してアクセスできます。 このサンプルでビルド、[基本的な AJAX サービス](../../../../docs/framework/wcf/samples/basic-ajax-service.md)サンプル。  
   
- WCF での AJAX のサポートがを介して ASP.NET AJAX と共に使用するために最適化された、<xref:System.Web.UI.ScriptManager>コントロール。 WCF を使用して ASP.NET AJAX での例は、次を参照してください。、 [AJAX のサンプル](https://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e)します。  
+ WCF での AJAX のサポートがを介して ASP.NET AJAX と共に使用するために最適化された、<xref:System.Web.UI.ScriptManager>コントロール。 WCF を使用して ASP.NET AJAX での例は、次を参照してください。、 [AJAX のサンプル](ajax.md)します。  
   
 > [!NOTE]
 >  このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
@@ -51,11 +51,11 @@ function onSuccess(mathResult){
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
+1. 実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
-2.  」の説明に従って、ソリューション ComplexTypeAjaxService.sln をビルド[Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
+2. 」の説明に従って、ソリューション ComplexTypeAjaxService.sln をビルド[Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
   
-3.  移動します`http://localhost/ServiceModelSamples/ComplexTypeClientPage.aspx`(はプロジェクト ディレクトリからブラウザーで ComplexTypeClientPage.aspx を開くしない操作を行います)。  
+3. 移動します`http://localhost/ServiceModelSamples/ComplexTypeClientPage.aspx`(はプロジェクト ディレクトリからブラウザーで ComplexTypeClientPage.aspx を開くしない操作を行います)。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
@@ -66,5 +66,6 @@ function onSuccess(mathResult){
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Ajax\ComplexTypeAjaxService`  
   
-## <a name="see-also"></a>関連項目  
- [基本的な AJAX サービス](../../../../docs/framework/wcf/samples/basic-ajax-service.md)
+## <a name="see-also"></a>関連項目
+
+- [基本的な AJAX サービス](../../../../docs/framework/wcf/samples/basic-ajax-service.md)

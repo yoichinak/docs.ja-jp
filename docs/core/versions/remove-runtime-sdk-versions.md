@@ -5,12 +5,12 @@ ms.date: 07/28/2018
 author: billwagner
 ms.author: wiwagn
 ms.custom: seodec18
-ms.openlocfilehash: 6204a28200f1db6350e695a9ab29502c46c25590
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4e336abf62299e0dee2e4757bb83f967ed4aed59
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129702"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966022"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>.NET Core ランタイムと SDK を削除する方法
 
@@ -132,7 +132,7 @@ Microsoft.NETCore.App 2.1.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 Microsoft.NETCore.App 2.1.1 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
 ```
 
-***
+---
 
 ## <a name="uninstalling-net-core"></a>.NET Core のアンインストール
 
@@ -158,7 +158,7 @@ Microsoft.NETCore.App 2.1.1 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 - [apt-get(8)](https://linux.die.net/man/8/apt-get) は、Ubuntu などの Debian ベースのシステムによって使用されます。
 - [yum(8)](https://linux.die.net/man/8/yum) は、Fedora、CentOS、Oracle Linux 上で使用されます。
 - [zypper(8)](https://en.opensuse.org/SDB:Zypper_manual_(plain)) は、openSUSE および SUSE Linux Enterprise System (SLES) 上で使用されます。
-- [dnf(8)](https://dnf.readthedocs.io/latest/command_ref.html) は、Fedora 上で使用されます。
+- [dnf(8)](https://dnf.readthedocs.io/en/latest/command_ref.html) は、Fedora 上で使用されます。
 
 ほとんどの場合、パッケージを削除するコマンドは `remove` となります。
 

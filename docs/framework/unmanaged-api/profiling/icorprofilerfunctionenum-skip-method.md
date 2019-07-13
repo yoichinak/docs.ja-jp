@@ -17,23 +17,23 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 95301c4a99253261721c7f524b99f79a6207feb1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 755b022dde01a1d424fea58bcefe5df2bce401b3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453110"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780285"
 ---
 # <a name="icorprofilerfunctionenumskip-method"></a>ICorProfilerFunctionEnum::Skip メソッド
 指定した数の要素がスキップされるように、この列挙子のカーソルを現在の位置から進めます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Skip([in] ULONG celt);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `celt`  
  [in]スキップする要素の数。  
   
@@ -43,20 +43,21 @@ HRESULT Skip([in] ULONG celt);
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|`celt` 要素がスキップされました。|  
-|S_FALSE|少ない`celt`要素がスキップされた複数の要素ではありませんがあることを示します。|  
+|S_FALSE|少ない`celt`要素がスキップされたない要素があることを示します。|  
   
-## <a name="remarks"></a>コメント  
- この列挙子のカーソルの新しい位置は、(現在の位置) +`celt`です。  
+## <a name="remarks"></a>Remarks  
+ この列挙子のカーソルの新しい位置は (現在の位置) +`celt`します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー** : CorProf.idl、CorProf.h  
+ **ヘッダー:** CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICorProfilerFunctionEnum インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)  
- [プロファイリングのインターフェイス](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+## <a name="see-also"></a>関連項目
+
+- [ICorProfilerFunctionEnum インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
+- [プロファイリングのインターフェイス](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

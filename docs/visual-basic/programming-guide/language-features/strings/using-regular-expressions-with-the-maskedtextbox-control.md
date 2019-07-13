@@ -5,12 +5,12 @@ helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-ms.openlocfilehash: 25bdfaef300b001d1c052aeea4e1ad3547a6d3d7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e0165fb8d573878ae19378b2656d89627680b804
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43803811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024509"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Visual Basic の MaskedTextBox コントロールによる正規表現を使用する
 この例を使用する正規表現を単純に変換する方法、<xref:System.Windows.Forms.MaskedTextBox>コントロール。  
@@ -28,7 +28,7 @@ ms.locfileid: "43803811"
 |L|ASCII 文字。 入力は必須です。|[- A-za-z]|  
 |?|ASCII 文字。 省略可能。|[- A-za-z] でしょうか。|  
 |&|文字です。 入力は必須です。|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
-|C|文字です。 省略可能。|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]。|  
+|C|文字です。 省略可能。|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
 |A|英数字。 省略可能。|\W|  
 |.|カルチャに応じた小数点のプレース ホルダーです。|使用できません。|  
 |,|何千ものカルチャに適したプレース ホルダーです。|使用できません。|  
@@ -55,8 +55,9 @@ ms.locfileid: "43803811"
 |`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|米国の電話番号、市外局番の省略可能です。 場合は、ユーザーは、省略可能な文字を入力するつもりはなく、彼女のスペースを入力するかマウス ポインターを最初の 0 で表される、マスク内の位置に直接配置します。|  
 |`$\d{6}.00`|`$999,999.00`|0 ~ 999999 の範囲内の通貨値。 通貨、1/10,000 のおよび 10 進数の文字は、対応するカルチャに固有の実行時に置き換えられます。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>  
- <xref:System.Windows.Forms.MaskedTextBox>  
- [Visual Basic における文字列の検証](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)  
- [MaskedTextBox コントロール](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>
+- <xref:System.Windows.Forms.MaskedTextBox>
+- [Visual Basic における文字列の検証](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)
+- [MaskedTextBox コントロール](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)

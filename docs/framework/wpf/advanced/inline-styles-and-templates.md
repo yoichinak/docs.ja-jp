@@ -7,18 +7,18 @@ helpviewer_keywords:
 - templates [WPF], inline
 - inline styles [WPF]
 ms.assetid: 69a1a3f9-acb5-4e2c-9c43-2e376c055ac4
-ms.openlocfilehash: 9c06f61bce1e17770fa0a9b9ed7a0e20625a79ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b566e157e2d4a9e9be21a678541bf5d5341a898c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051014"
 ---
 # <a name="inline-styles-and-templates"></a>インライン スタイルおよびテンプレート
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供<xref:System.Windows.Style>オブジェクトとテンプレートのオブジェクト (<xref:System.Windows.FrameworkTemplate>サブクラス)、リソースで要素の外観を定義する手段として使用できるように複数回です。 このため、属性で[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]型を受け取る<xref:System.Windows.Style>と<xref:System.Windows.FrameworkTemplate>新しいものをインラインで定義するのではなく、ほとんどの場合の既存のスタイルとテンプレートにリソース参照を作成します。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供<xref:System.Windows.Style>オブジェクトおよびオブジェクトのテンプレート (<xref:System.Windows.FrameworkTemplate>サブクラス) リソース内の要素の視覚的な外観を定義する方法、として使用できるように複数回です。 このため、属性[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]型を受け取る<xref:System.Windows.Style>と<xref:System.Windows.FrameworkTemplate>インライン新しいものを定義するのではなく、ほとんどの場合に既存のスタイルとテンプレートにリソース参照を作成します。  
   
-## <a name="limitations-of-inline-styles-and-templates"></a>インライン スタイルとテンプレートの制限事項  
- [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]スタイルとテンプレートのプロパティは、2 つの方法のいずれかで技術的に設定できます。 たとえば、リソース内で定義されたスタイルを参照する属性の構文を使用できます`<`*オブジェクト*`Style="{StaticResource`*myResourceKey*`}" .../>`です。 または、スタイルをインラインのインスタンスを定義するプロパティ要素構文を使用することができます。  
+## <a name="limitations-of-inline-styles-and-templates"></a>インライン スタイルおよびテンプレートの制限事項  
+ [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]スタイルとテンプレートのプロパティは、2 つの方法のいずれかで技術的には設定できます。 たとえば、リソース内で定義されたスタイルを参照する属性の構文を使用できます`<`*オブジェクト*`Style="{StaticResource`*myResourceKey*`}" .../>`します。 または、インスタンスのスタイルをインラインを定義するプロパティ要素構文を使用することができます。  
   
  `<` *object* `>`  
   
@@ -30,11 +30,12 @@ ms.locfileid: "33545890"
   
  `</` *object* `>`  
   
- 属性の使用方法は、はるかに一般的です。 インラインで定義され、リソースではない定義でスタイルを含む要素のみを対象とするとは限りません、再使用できませんように簡単にリソース キーがあるないためです。 一般にリソース定義のスタイル汎用性と、有用であり、一般的な高く[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]プログラミング モデルの方針のマークアップでのデザイン コードでのプログラム ロジックを分離することです。  
+ 属性の使用法が一般的です。 スタイルはインラインで定義で定義されていないリソースにのみ、含まれる要素のスコープは必ずしも、再使用できませんに簡単にリソース キーがあるないためです。 リソースによって定義されたスタイルの汎用性と有用では、一般とが高く、一般的な[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]モデルのコードでのプログラム ロジックを分離する、マークアップでのデザイン原則をプログラミングします。  
   
- 通常必要はありませんスタイルまたはテンプレートのインラインを設定する場合でも、その場所にそのスタイルまたはテンプレートを使用するだけです。 スタイルまたはテンプレートが実行できるほとんどの要素は、コンテンツのプロパティとコンテンツ モデルもサポートします。 論理ツリーをのみを使用している場合は、1 回スタイルまたはテンプレートで作成するは、さらに簡単に直接的なマークアップでの同等の子要素のコンテンツ プロパティを塗りつぶします。 これは、バイパス スタイルとテンプレート メカニズム完全します。  
+ 通常は、スタイルまたはテンプレートのインラインを設定する理由の場所にそのスタイルまたはテンプレートを使用する場合でも、 スタイルまたはテンプレートが実行できるほとんどの要素では、コンテンツのプロパティとコンテンツ モデルもサポートします。 論理ツリーをのみを使用している場合は、スタイルまたはテンプレートで 1 回作成する、だけコンテンツ プロパティを直接マークアップで同等の子要素を格納するより簡単になります。 これは、バイパス、スタイルとテンプレート メカニズム完全します。  
   
- オブジェクトを返すマークアップ拡張機能を有効になっている他の構文もスタイルとテンプレートの考えられます。 可能なシナリオがあるこのような 2 つの拡張機能を含める[TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)と<xref:System.Windows.Data.Binding>です。  
+ オブジェクトを返すマークアップ拡張機能によって有効になっているその他の構文は、スタイルとテンプレートのこともできます。 考えられるシナリオがある場合、このような 2 つの拡張子を含める[TemplateBinding](templatebinding-markup-extension.md)と<xref:System.Windows.Data.Binding>します。  
   
-## <a name="see-also"></a>関連項目  
- [スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+## <a name="see-also"></a>関連項目
+
+- [スタイルとテンプレート](../controls/styling-and-templating.md)

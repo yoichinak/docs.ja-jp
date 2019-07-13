@@ -2,12 +2,12 @@
 title: PrivacyNoticeBindingElement
 ms.date: 03/30/2017
 ms.assetid: 0cf110b1-e25b-4d67-986b-10cb04dc4826
-ms.openlocfilehash: fdaf30e78b1a74a733753542acd6a41f15f176bd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 04c65d0aa589d99766b4ffc8f1550036d2880718
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962964"
 ---
 # <a name="privacynoticebindingelement"></a>PrivacyNoticeBindingElement
 PrivacyNoticeBindingElement  
@@ -31,14 +31,14 @@ class PrivacyNoticeBindingElement : BindingElement
 ### <a name="privacynoticeversion"></a>PrivacyNoticeVersion  
  データ型 : sint32  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  プライバシーに関する声明のバージョンです。  
   
 ### <a name="url"></a>URL  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  プライバシーに関する声明がある URL です。  
   
@@ -46,7 +46,8 @@ class PrivacyNoticeBindingElement : BindingElement
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
-|Namespace|root\ServiceModel で定義|  
+|名前空間|root\ServiceModel で定義|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Channels.PrivacyNoticeBindingElement>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Channels.PrivacyNoticeBindingElement>

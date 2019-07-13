@@ -1,21 +1,19 @@
 ---
 title: .NET マイクロサービス。 コンテナー化された .NET アプリケーションのアーキテクチャ
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | マイクロサービスはモジュール式で独自に展開可能なサービスです。 Docker コンテナー (Linux と Windows 向け) は、サービスとその依存関係を 1 つの単位にバンドル化する (その後、分離された環境で実行される) ことで、展開とテストを簡略化します。
-author: CESARDELATORRE
-ms.author: wiwagn
-ms.date: 08/31/2018
-ms.openlocfilehash: 52435c31e77e7139b982829ae4ab33a5e0f9f045
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.date: 01/07/2019
+ms.openlocfilehash: fe69dcec58ae1d1eed23a49fadbee378ec129990
+ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030439"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67152021"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET マイクロサービス:コンテナー化された .NET アプリケーションのアーキテクチャ
 
 ![本の表紙](./media/cover-small.png)
 
-**エディション v2.1.03** - ASP.NET Core 2.1 に更新
+**エディション v2.2** - ASP.NET Core 2.2 に更新
 
 このガイドでは、マイクロサービス ベースのアプリケーションの開発とコンテナーを使用してこれらを管理する方法を紹介します。 .NET Core と Docker のコンテナーを使用したアーキテクチャの設計と実装アプローチについて説明します。 
 
@@ -33,9 +31,9 @@ ms.locfileid: "54030439"
 
 ## <a name="introduction"></a>はじめに
 
-企業は、コンテナーを使用して、コストの節減、展開の問題の解決、および DevOps と製造作業の向上を実現しつつあります。 Microsoft では、Azure Container Service や Azure Service Fabric などの製品を作成したり、Docker、Mesosphere、Kubernetes などの業界リーダーと提携することで、Windows および Linux 用のコンテナーの新技術をリリースしています。 これらの製品は、企業が使用しているプラットフォームやツールに関係なく、クラウドの速度とスケールでアプリケーションを構築および展開することに役立つコンテナー ソリューションを提供します。
+企業は、コンテナーを使用して、コストの節減、展開の問題の解決、および DevOps と製造作業の向上を実現しつつあります。 Microsoft では、Azure Kubernetes Service や Azure Service Fabric などの製品を作成したり、Docker、Mesosphere、Kubernetes などの業界リーダーと提携することで、Windows および Linux 用のコンテナーの新技術をリリースしています。 これらの製品は、企業が使用しているプラットフォームやツールに関係なく、クラウドの速度とスケールでアプリケーションを構築および展開することに役立つコンテナー ソリューションを提供します。
 
-Docker は、コンテナー業界では事実上の標準になりつつあり、Windows と Linux のエコシステムで最も重要なベンダーでサポートされています  (Microsoft は Docker をサポートする主要なクラウド ベンダーの 1 つです)。将来、Docker は、クラウドまたはオンプレミスのあらゆるデータセンターで広く使用されるようになるでしょう。
+Docker は、コンテナー業界では事実上の標準になりつつあり、Windows と Linux のエコシステムで最も重要なベンダーでサポートされています (Microsoft は Docker をサポートする主要なクラウド ベンダーの 1 つです)。将来、Docker は、クラウドまたはオンプレミスのあらゆるデータセンターで広く使用されるようになるでしょう。
 
 さらに、ミッション クリティカルな分散アプリケーションのための重要なアプローチとして、[マイクロサービス](https://martinfowler.com/articles/microservices.html) アーキテクチャが新たに出現しています。 マイクロサービス ベースのアーキテクチャでは、個別に開発、テスト、展開、およびバージョン管理が可能なサービスのコレクションに基づいてアプリケーションが構築されます。
 
@@ -49,7 +47,7 @@ Docker は、コンテナー業界では事実上の標準になりつつあり�
 
 ## <a name="version"></a>Version
 
-このガイドは、**.NET Core 2.1** に加え、.NET Core 2.1 と同時期に起こっているテクノロジーの "波" (つまり  Azure とサードパーティのテクノロジー) に関連する多数の最新情報も扱うように改訂されています。 本書がバージョン **2.1** に更新されているのはそれが理由です。 
+このガイドは、 **.NET Core 2.2** バージョンに加え、.NET Core 2.2 と同時期に起こっているテクノロジーの "波" (つまり Azure とサードパーティのテクノロジー) に関連する多数の最新情報も扱うように改訂されています。 本書がバージョン **2.2** に更新されているのはそれが理由です。 
 
 ## <a name="what-this-guide-does-not-cover"></a>このガイドに含まれないもの
 
@@ -57,8 +55,8 @@ Docker は、コンテナー業界では事実上の標準になりつつあり�
 
 ### <a name="additional-resources"></a>その他の技術情報
 
--   **Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル)** (ダウンロード可能な e-book)  
-    [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
+- **Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル)** (ダウンロード可能な e-book)  
+    <https://aka.ms/dockerlifecycleebook>
 
 ## <a name="who-should-use-this-guide"></a>対象読者
 
@@ -124,9 +122,11 @@ eShopOnContainers アプリケーションは、 Docker コンテナーを使用
 >
 > **Scott Hunter**、Microsoft、.NET チーム、パートナー ディレクター PM
 >
+> **Nish Anil**、Microsoft、.NET チーム、シニア プログラム マネージャー
+>
 > **Dylan Reisenberger**、Polly のアーキテクト兼開発リーダー
 >
-> **Steve Smith**、ASPSmith Ltd. のソフトウェア設計者兼トレーナー
+> **Steve "ardalis" Smith** - ソフトウェア アーキテクトおよびトレーナー - [Ardalis.com](https://ardalis.com)
 >
 > **Ian Cooper**、Brighter のコーディング アーキテクト
 >
@@ -148,7 +148,6 @@ eShopOnContainers アプリケーションは、 Docker コンテナーを使用
 >
 > **Miguel Veloso**、Turing Challenge のシニアコンサルタント
 
-
 ## <a name="copyright"></a>Copyright
 
 次の場所でダウンロードできます: <https://aka.ms/microservicesebook>
@@ -163,7 +162,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2018 by Microsoft Corporation
+Copyright © 2019 by Microsoft Corporation
 
 All rights reserved. 本書のいかなる部分も、書面による発行者の許可なしに、いかなる形式または方法によっても、複製または伝送することを禁じます。
 

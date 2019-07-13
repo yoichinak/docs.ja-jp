@@ -10,12 +10,12 @@ helpviewer_keywords:
 - strings [Visual Basic], concatenating
 - sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
-ms.openlocfilehash: 91806c204c313956b292eb9c9be078991f733b4e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4fc8ce96caea436b63fe346139e27ec8dd048f10
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778613"
 ---
 # <a name="-operator-visual-basic"></a>+ 演算子 (Visual Basic)
 2 つの数値を追加します。 または、数値式の正の値を取得します。 2 つの文字列式を連結することも使用できます。  
@@ -83,36 +83,37 @@ expression1 + expression2
 >  使用すると、`+`演算子、する可能性を追加または文字列の連結が発生するかどうかを判断します。 使用して、`&`演算子の連結のあいまいさを排除し、自己文書化コードを提供します。  
   
 ## <a name="overloading"></a>オーバーロード  
- `+`演算子は、*オーバー ロードされた*、つまり、ことクラスまたは構造体を再定義できますその動作はそのクラスまたは構造体の型。 コードは、このようなクラスまたは構造体に、この演算子を使用する場合は、再定義された動作を確認ください。 詳細については、次を参照してください。[演算子プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)します。  
+ `+`演算子は、*オーバー ロードされた*、つまり、ことクラスまたは構造体を再定義できますその動作はそのクラスまたは構造体の型。 コードは、このようなクラスまたは構造体に、この演算子を使用する場合は、再定義された動作を確認ください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、`+`番号を追加する演算子。 オペランドが両方の数値の場合は、Visual Basic は、算術演算の結果を計算します。 算術演算の結果は、2 つのオペランドの合計を表します。  
   
- [!code-vb[VbVbalrOperators#6](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#6)]  
   
  使用することも、`+`文字列を連結する演算子。 オペランドが両方の文字列の場合は、Visual Basic はそれらを連結します。 文字列連結の結果は、他の後に、2 つのオペランドの内容で構成される 1 つの文字列を表します。  
   
  結果は異なりますの設定は、オペランドが混合型である場合、 [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)します。 次の例は、結果を示しています。 ときに`Option Strict`は`On`します。  
   
- [!code-vb[VbVbalrOperators#53](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class3.vb#53)]  
   
- [!code-vb[VbVbalrOperators#50](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_3.vb)]  
-[!code-vb[VbVbalrOperators#51](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_4.vb)]  
+ [!code-vb[VbVbalrOperators#50](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#50)]  
+[!code-vb[VbVbalrOperators#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#51)]  
   
  次の例は、結果を示しています。 ときに`Option Strict`は`Off`します。  
   
- [!code-vb[VbVbalrOperators#54](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_5.vb)]  
+ [!code-vb[VbVbalrOperators#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#54)]  
   
- [!code-vb[VbVbalrOperators#50](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_3.vb)]  
-[!code-vb[VbVbalrOperators#52](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_6.vb)]  
+ [!code-vb[VbVbalrOperators#50](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#50)]  
+[!code-vb[VbVbalrOperators#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#52)]  
   
  あいまいさを排除するために使用する必要があります、`&`演算子の代わりに`+`連結します。  
   
-## <a name="see-also"></a>関連項目  
- [& 演算子](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
- [連結演算子](../../../visual-basic/language-reference/operators/concatenation-operators.md)  
- [算術演算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Visual Basic における算術演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
- [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a>関連項目
+
+- [& 演算子](../../../visual-basic/language-reference/operators/concatenation-operator.md)
+- [連結演算子](../../../visual-basic/language-reference/operators/concatenation-operators.md)
+- [算術演算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Visual Basic における算術演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)

@@ -1,15 +1,15 @@
 ---
-title: '&lt;serviceCredentials&gt; の &lt;clientCertificate&gt;'
+title: <clientCertificate> の <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 90ad03aa-2317-43dd-8a72-6d24cdcad15c
-ms.openlocfilehash: 7f777fd0e09a1bb9491f346a8e9806627aa63441
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 26ebac6439a90959e3a926e6a36c9044251a4aae
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673304"
 ---
-# <a name="ltclientcertificategt-of-ltservicecredentialsgt"></a>&lt;serviceCredentials&gt; の &lt;clientCertificate&gt;
+# <a name="clientcertificate-of-servicecredentials"></a>\<clientCertificate > の\<serviceCredentials >
 双方向通信パターンでサービスからクライアントへのメッセージの署名および暗号化に使用される X.509 証明書を定義します。  
   
  \<system.ServiceModel >  
@@ -18,7 +18,7 @@ ms.locfileid: "54145498"
 \<serviceBehaviors>  
 \<behavior>  
 \<serviceCredentials>  
-\<clientCertificate >  
+\<clientCertificate>  
   
 ## <a name="syntax"></a>構文  
   
@@ -53,12 +53,13 @@ ms.locfileid: "54145498"
   
  この要素で設定される証明書は、`MutualCertificateDuplex` メッセージ セキュリティ認証モードで構成されているバインディングのみを対象に、クライアントへのメッセージを暗号化するために使用されます。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>  
- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.ClientCertificate%2A>  
- <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>  
- <xref:System.ServiceModel.Description.ServiceCredentials.ClientCertificate%2A>  
- <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential>  
- [方法: 双方向コントラクトを作成します。](../../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
- [セキュリティ動作](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [証明書の使用](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>
+- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.ClientCertificate%2A>
+- <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>
+- <xref:System.ServiceModel.Description.ServiceCredentials.ClientCertificate%2A>
+- <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential>
+- [方法: 双方向コントラクトを作成します。](../../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [セキュリティ動作](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [証明書の使用](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

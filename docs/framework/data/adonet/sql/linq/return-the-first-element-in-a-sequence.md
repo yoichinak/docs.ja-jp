@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ccdc3777-b2c2-44e3-a627-abef8d79a555
-ms.openlocfilehash: fd228b2d7534feca3cff49586ac0d43fbf9bcb1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dca917b3c12b0f9923cc9ea34a2568c412a09831
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033450"
 ---
 # <a name="return-the-first-element-in-a-sequence"></a>シーケンスの最初の要素の取得
 <xref:System.Linq.Enumerable.First%2A> 演算子を使用すると、シーケンスの内最初の要素を返すことができます。 <xref:System.Linq.Enumerable.First%2A> を使用するクエリは直ちに実行されます。  
@@ -36,6 +36,7 @@ ms.locfileid: "33361349"
  [!code-csharp[DLinqQueryExamples#15](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#15)]
  [!code-vb[DLinqQueryExamples#15](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#15)]  
   
-## <a name="see-also"></a>関連項目  
- [クエリの例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
- [サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+## <a name="see-also"></a>関連項目
+
+- [クエリの例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

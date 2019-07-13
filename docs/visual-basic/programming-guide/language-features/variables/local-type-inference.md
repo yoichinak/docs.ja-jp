@@ -12,17 +12,17 @@ helpviewer_keywords:
 - inference [Visual Basic]
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
-ms.openlocfilehash: b33b8b2d17c240e380377528d4f5d2f511381a7d
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 786466cb0b94a96e629a1f173388ed7d40be7256
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37959953"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661916"
 ---
 # <a name="local-type-inference-visual-basic"></a>ローカル型の推論 (Visual Basic)
 Visual Basic コンパイラを使用して*型推論*なしで宣言されたローカル変数のデータの種類を決定する、`As`句。 コンパイラでは、初期化式の型から変数の型を推測します。 これにより、次の例に示すように、型を明示的に指定せず変数を宣言することができます。 宣言では、結果として両方`num1`と`num2`整数として厳密に型指定します。  
   
- [!code-vb[VbVbalrTypeInference#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_1.vb)]  
+ [!code-vb[VbVbalrTypeInference#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#1)]  
  
 > [!NOTE]
 >  たくない場合`num2`として型指定するのには、前の例で、`Integer`のような宣言を使用して別の型を指定することができます`Dim num3 As Object = 3`または`Dim num4 As Double = 3`します。  
@@ -40,23 +40,23 @@ Visual Basic コンパイラを使用して*型推論*なしで宣言された�
 ## <a name="examples"></a>使用例  
  型の推定が発生せず、ローカル変数が宣言されている場合、`As`句と初期化します。 コンパイラは、変数の型として割り当てられた初期値の型を使用します。 たとえば、型の変数を宣言次のコード行の各`String`します。  
   
- [!code-vb[VbVbalrTypeInference#2](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_2.vb)]  
+ [!code-vb[VbVbalrTypeInference#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#2)]  
   
  次のコードでは、整数の配列を作成する 2 つの同等の方法を示します。  
   
- [!code-vb[VbVbalrTypeInference#3](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_3.vb)]  
+ [!code-vb[VbVbalrTypeInference#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#3)]  
   
  ループ コントロール変数の種類を決定する型の推定を使用すると便利です。 次のコードでコンパイラが推論される`number`は、`Integer`ため`someNumbers2`前の例は、整数の配列。  
   
- [!code-vb[VbVbalrTypeInference#4](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_4.vb)]  
+ [!code-vb[VbVbalrTypeInference#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#4)]  
   
  ローカル型推論を使用できる`Using`ステートメントを次の例に示すように、リソースの名前の型を確立します。  
   
- [!code-vb[VbVbalrTypeInference#7](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_5.vb)]  
+ [!code-vb[VbVbalrTypeInference#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#7)]  
   
  次の例に示すように、変数の型を関数の戻り値から推論もできます。 両方`pList1`と`pList2`プロセスの配列であるため、`Process.GetProcesses`プロセスの配列を返します。  
   
- [!code-vb[VbVbalrTypeInference#5](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_6.vb)]  
+ [!code-vb[VbVbalrTypeInference#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#5)]  
   
 ## <a name="option-infer"></a>Option Infer します。  
  `Option Infer` ローカル型推論が、特定のファイルで許可されているかどうかを指定できます。 有効または、オプションをブロックするファイルの先頭に次のステートメントのいずれかを入力します。  
@@ -65,17 +65,18 @@ Visual Basic コンパイラを使用して*型推論*なしで宣言された�
   
  `Option Infer Off`  
   
- 値を指定しない場合`Option Infer`コンパイラの既定値は、コードで、`Option Infer On`します。 アップグレードされたプロジェクトの[!INCLUDE[vb_orcas_long](~/includes/vb-orcas-long-md.md)]コンパイラの既定値は、前に、または`Option Infer Off`します。  
+ 値を指定しない場合`Option Infer`コンパイラの既定値は、コードで、`Option Infer On`します。 
   
  ファイルの `Option Infer` に設定した値が IDE またはコマンド ラインに設定した値と競合した場合は、ファイルの値が優先されます。  
   
  詳細については、次を参照してください。 [Option Infer ステートメント](../../../../visual-basic/language-reference/statements/option-infer-statement.md)と[[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)します。  
   
-## <a name="see-also"></a>関連項目  
- [匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
- [事前バインディングと遅延バインディング](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
- [For Each...Next ステートメント](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
- [For...Next ステートメント](../../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [Option Infer ステートメント](../../../../visual-basic/language-reference/statements/option-infer-statement.md)  
- [/optioninfer](../../../../visual-basic/reference/command-line-compiler/optioninfer.md)  
- [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+## <a name="see-also"></a>関連項目
+
+- [匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [事前バインディングと遅延バインディング](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
+- [For Each...Next ステートメント](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+- [For...Next ステートメント](../../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [Option Infer ステートメント](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [/optioninfer](../../../../visual-basic/reference/command-line-compiler/optioninfer.md)
+- [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

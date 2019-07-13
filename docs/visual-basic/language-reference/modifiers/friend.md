@@ -1,4 +1,4 @@
-﻿---
+---
 title: Friend (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,40 +10,40 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: d906fc8ada19f22059da44acbd76dd07dacd4801
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 18681935d0380f9be3970fdb5d17ffb089152f59
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34234590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802545"
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
-1 つまたは複数の宣言されたプログラミング要素がその宣言を含むアセンブリ内からのみアクセスできることを指定します。  
+1 つまたは複数の宣言されたプログラミング要素にその宣言を含むアセンブリ内からのみアクセスできることを指定します。  
   
 ## <a name="remarks"></a>コメント  
- 多くの場合、クラスと構造体を宣言しているコンポーネントがだけでなく、アセンブリ全体で使用するなどの要素をプログラミングできるようにします。 ただしに (たとえば、アプリケーションは商標で守ら) 場合、アセンブリの外部コードによってアクセスできるようにする必要があります。 この方法で要素へのアクセスを制限する場合は、使用して宣言できます、`Friend`修飾子です。  
+ 多くの場合、クラスとそれらを宣言するコンポーネントによってだけでなく、アセンブリ全体で使用される構造体などのプログラミング要素にします。 ただし、(たとえば、アプリケーションが専用) 場合、アセンブリ外部のコードでアクセスできるようにする必要があります。 この方法で要素へのアクセスを制限する場合は、使用して宣言できます、`Friend`修飾子。  
   
- その他のクラス、構造体、およびコンパイルされますが、同じモジュールのコード アセンブリはすべてにアクセスできる、`Friend`そのアセンブリ内の要素。  
+ その他のクラス、構造、およびモジュールを同じコンパイルでコード アセンブリはすべてにアクセスできる、`Friend`そのアセンブリ内の要素。  
   
- `Friend` アクセスは、アプリケーションのプログラミング要素に望ましいレベルでは多くの場合と`Friend`インターフェイス、モジュール、クラスまたは構造のレベルで既定のアクセス。  
+ `Friend` アクセスは、アプリケーションのプログラミング要素の任意のレベルでは多くの場合と`Friend`インターフェイス、モジュール、クラスまたは構造のレベルで既定のアクセス。  
   
- 使用することができます`Friend`モジュール、インターフェイス、または名前空間レベルでのみです。 したがって、宣言コンテキスト、`Friend`ソース ファイル、名前空間、インターフェイス、モジュール、クラスまたは構造体を要素として使用することがあります。 プロシージャをすることはできません。  
+ 使用することができます`Friend`モジュール、インターフェイス、または名前空間レベルでのみです。 宣言コンテキストはそのため、`Friend`ソース ファイル、名前空間、インターフェイス、モジュール、クラスまたは構造体を要素として使用することがあります。 プロシージャをすることはできません。  
 
 > [!NOTE]
-> 使用することも、 [Protected Friend](protected-friend.md)アクセス修飾子は、クラス メンバーをそのクラスの派生クラスからそのクラスが定義されている同じアセンブリ内からアクセスできるようになります。 使用して、同じアセンブリ内の派生クラスからそのクラス内からのメンバーへのアクセスを制限する、[プライベート保護](private-protected.md)アクセス修飾子。
+> 使用することも、 [Protected Friend](protected-friend.md)アクセス修飾子、クラス メンバーに、派生クラスとクラスが定義されている同じアセンブリからそのクラス内からアクセスできるようします。 使用して、同じアセンブリ内の派生クラスからそのクラス内からのメンバーへのアクセスを制限する、[Private Protected](private-protected.md)アクセス修飾子。
 
- 比較について`Friend`と、その他のアクセス修飾子を参照してください[Visual Basic でのレベルのアクセス](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)です。  
+ 比較について`Friend`および他のアクセス修飾子を参照してください[アクセス レベルを Visual Basic で](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)します。  
   
 > [!NOTE]
->  別のアセンブリがで許可されているすべての種類およびとマークされているメンバーにアクセスするアセンブリを指定することができます`Friend`です。 詳細については、[Friend アセンブリ](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)に関するページを参照してください。  
+>  別のアセンブリがフレンド アセンブリ、型とメンバーとしてマークされているすべてのアクセスを許可するかを指定することができます`Friend`します。 詳細については、[Friend アセンブリ](../../../standard/assembly/friend-assemblies.md)に関するページを参照してください。  
   
 ## <a name="example"></a>例  
- 次のクラスは、`Friend`特定のメンバーにアクセスする同じアセンブリ内の他のプログラミング要素を許可する修飾子です。  
+ 次のクラスは、`Friend`修飾子を特定のメンバーへのアクセスに同じアセンブリ内の他のプログラミング要素を許可します。  
   
- [!code-vb[VbVbalrAccessModifiers#1](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/friend_1.vb)]  
+ [!code-vb[VbVbalrAccessModifiers#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalraccessmodifiers/vb/class1.vb#1)]  
   
 ## <a name="usage"></a>使用法  
- 使用することができます、`Friend`これらのコンテキストで修飾子。  
+ 使用することができます、`Friend`これらのコンテキストでの修飾子。  
   
  [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)  
   
@@ -71,14 +71,15 @@ ms.locfileid: "34234590"
   
  [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- [Public](../../../visual-basic/language-reference/modifiers/public.md)  
- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
- [Private](../../../visual-basic/language-reference/modifiers/private.md)  
- [Private Protected](./private-protected.md)   
- [Protected Friend](./protected-friend.md)   
- [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
- [手順](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- [構造体](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
+- [Public](../../../visual-basic/language-reference/modifiers/public.md)
+- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
+- [Private](../../../visual-basic/language-reference/modifiers/private.md)
+- [Private Protected](./private-protected.md)
+- [Protected Friend](./protected-friend.md)
+- [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [構造体](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

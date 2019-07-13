@@ -2,12 +2,12 @@
 title: MSMQ アクティベーション
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 20287af1c1d93bbdcfa83d88e5790284fbbff170
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 43d6cde7a9342b57933cd3e7475bd4412da86d92
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194125"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487558"
 ---
 # <a name="msmq-activation"></a>MSMQ アクティベーション
 このサンプルでは、メッセージ キューから読み取ったアプリケーションを、Windows プロセス アクティブ化サービス (WAS) でホストする方法を示します。 このサンプルでは、`netMsmqBinding`に基づく、[双方向通信](../../../../docs/framework/wcf/samples/two-way-communication.md)サンプル。 この場合、サービスは Web ホスト アプリケーションの 1 つであり、クライアントは自己ホスト型です。クライアントはコンソールに出力して、送信された発注書のステータスを確認します。  
@@ -215,41 +215,41 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  WAS のアクティブ化に必要な [!INCLUDE[iisver](../../../../includes/iisver-md.md)] がインストールされていることを確認します。  
+1. WAS のアクティブ化に必要な IIS 7.0 がインストールされていることを確認します。  
   
-2.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。 さらに、WCF 非 HTTP アクティブ化コンポーネントをインストールする必要があります。  
+2. 実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。 さらに、WCF 非 HTTP アクティブ化コンポーネントをインストールする必要があります。  
   
-    1.  **[スタート]** メニューの **[コントロール パネル]** をクリックします。  
+    1. **[スタート]** メニューの **[コントロール パネル]** をクリックします。  
   
-    2.  選択**プログラムと機能**します。  
+    2. 選択**プログラムと機能**します。  
   
-    3.  クリックして**Windows 機能の有効化または無効**します。  
+    3. クリックして**Windows 機能の有効化または無効**します。  
   
-    4.  [**機能の概要**、] をクリックして**機能の追加**します。  
+    4. [**機能の概要**、] をクリックして**機能の追加**します。  
   
-    5.  展開、 **Microsoft .NET Framework 3.0**ノードとチェック、 **Windows Communication Foundation NON-HTTP Activation**機能します。  
+    5. 展開、 **Microsoft .NET Framework 3.0**ノードとチェック、 **Windows Communication Foundation NON-HTTP Activation**機能します。  
   
-3.  ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
+3. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
-4.  コマンド ウィンドウで client.exe を実行することにより、クライアントを実行します。 これによってキューが作成され、メッセージがそのキューに送信されます。 クライアントを実行しながら、メッセージを読み取るサービスの結果を表示します。  
+4. コマンド ウィンドウで client.exe を実行することにより、クライアントを実行します。 これによってキューが作成され、メッセージがそのキューに送信されます。 クライアントを実行しながら、メッセージを読み取るサービスの結果を表示します。  
   
-5.  MSMQ アクティベーション サービスは、既定では NETWORK SERVICE として動作します。 そのため、アプリケーションのアクティブ化に使用されるキューには、NETWORK SERVICE アカウントによる受信およびピーク権限が必要です。 この権限は、メッセージ キュー MMC を使用して追加できます。  
+5. MSMQ アクティベーション サービスは、既定では NETWORK SERVICE として動作します。 そのため、アプリケーションのアクティブ化に使用されるキューには、NETWORK SERVICE アカウントによる受信およびピーク権限が必要です。 この権限は、メッセージ キュー MMC を使用して追加できます。  
   
-    1.  **開始** メニューのをクリックして**実行**、入力`Compmgmt.msc`ENTER キーを押します。  
+    1. **開始** メニューのをクリックして**実行**、入力`Compmgmt.msc`ENTER キーを押します。  
   
-    2.  **サービスとアプリケーション**、展開**メッセージ キュー**します。  
+    2. **サービスとアプリケーション**、展開**メッセージ キュー**します。  
   
-    3.  クリックして**専用キュー**します。  
+    3. クリックして**専用キュー**します。  
   
-    4.  キュー (servicemodelsamples/Service.svc) を右クリックし **プロパティ**します。  
+    4. キュー (servicemodelsamples/Service.svc) を右クリックし **プロパティ**します。  
   
-    5.  **セキュリティ** タブで、をクリックして**追加**ピークを与えるし、ネットワーク サービスへのアクセス許可を受信します。  
+    5. **セキュリティ** タブで、をクリックして**追加**ピークを与えるし、ネットワーク サービスへのアクセス許可を受信します。  
   
-6.  MSMQ アクティブ化をサポートするよう Windows プロセス アクティブ化サービス (WAS) を設定します。  
+6. MSMQ アクティブ化をサポートするよう Windows プロセス アクティブ化サービス (WAS) を設定します。  
   
      便宜上次の 2 つの手順が、サンプル ディレクトリにある AddMsmqSiteBinding.cmd というバッチ ファイルに実装されています。  
   
-    1.  net.msmq アクティベーションをサポートするには、既定の Web サイトをあらかじめ net.msmq プロトコルにバインドしておく必要があります。 これは、[!INCLUDE[iisver](../../../../includes/iisver-md.md)] 管理ツール セットと共にインストールされる appcmd.exe を使用して行います。 権限のレベルが高い (管理者の) コマンド プロンプトで、次のコマンドを実行します。  
+    1. net.msmq アクティベーションをサポートするには、既定の Web サイトをあらかじめ net.msmq プロトコルにバインドしておく必要があります。 これは、IIS7.0 管理ツール セットと共にインストールされる appcmd.exe を使用して行います。 権限のレベルが高い (管理者の) コマンド プロンプトで、次のコマンドを実行します。  
   
         ```console  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   
@@ -261,7 +261,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
          このコマンドによって、既定の Web サイトに net.msmq サイト バインディングを追加します。  
   
-    2.  サイト内のすべてのアプリケーションが同じ net.msmq バインディングを共有しますが、net.msmq サポートの有効化はアプリケーションごとに指定できます。 /servicemodelsamples アプリケーションで net.msmq を有効にするには、権限のレベルが高いコマンド プロンプトから、次のコマンドを実行します。  
+    2. サイト内のすべてのアプリケーションが同じ net.msmq バインディングを共有しますが、net.msmq サポートの有効化はアプリケーションごとに指定できます。 /servicemodelsamples アプリケーションで net.msmq を有効にするには、権限のレベルが高いコマンド プロンプトから、次のコマンドを実行します。  
   
         ```console  
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http,net.msmq  
@@ -272,9 +272,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
          このコマンドにより、/servicemodelsamples アプリケーションを使用してアクセスする`http://localhost/servicemodelsamples`と`net.msmq://localhost/servicemodelsamples`します。
   
-7.  まだ確認していない場合は、MSMQ アクティベーション サービスが有効になっていることを確認します。 **開始** メニューのをクリックして**実行**、および種類`Services.msc`します。 サービスの一覧を検索、 **Net.Msmq リスナ アダプタ**します。 右クリックして**プロパティ**します。 設定、**スタートアップの種類**に**自動**、 をクリックして**適用** をクリックし、**開始**ボタンをクリックします。 この手順は、Net.Msmq リスナー アダプター サービスを初めて使用する前に 1 回だけ実行する必要があります。  
+7. まだ確認していない場合は、MSMQ アクティベーション サービスが有効になっていることを確認します。 **開始** メニューのをクリックして**実行**、および種類`Services.msc`します。 サービスの一覧を検索、 **Net.Msmq リスナ アダプタ**します。 右クリックして**プロパティ**します。 設定、**スタートアップの種類**に**自動**、 をクリックして**適用** をクリックし、**開始**ボタンをクリックします。 この手順は、Net.Msmq リスナー アダプター サービスを初めて使用する前に 1 回だけ実行する必要があります。  
   
-8.  1 つまたは複数コンピューター構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。 さらに、発注書を送信するときのキューの URI 内のコンピューター名を反映するように、発注書を送信するクライアントのコードを変更します。 次のコードを使用します。  
+8. 1 つまたは複数コンピューター構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。 さらに、発注書を送信するときのキューの URI 内のコンピューター名を反映するように、発注書を送信するクライアントのコードを変更します。 次のコードを使用します。  
   
     ```csharp  
     client.SubmitPurchaseOrder(po, "net.msmq://localhost/private/ServiceModelSamples/OrderStatus");  
@@ -284,7 +284,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
      便宜上次の 2 つの手順が、サンプル ディレクトリにある RemoveMsmqSiteBinding.cmd というバッチ ファイルに実装されています。  
   
-    1.  権限のレベルが高いコマンド プロンプトから次のコマンドを実行して、有効なプロトコルの一覧から net.msmq を削除します。  
+    1. 権限のレベルが高いコマンド プロンプトから次のコマンドを実行して、有効なプロトコルの一覧から net.msmq を削除します。  
   
         ```console  
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http  
@@ -293,7 +293,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
         > [!NOTE]
         >  このコマンドはテキスト 1 行です。  
   
-    2.  権限のレベルが高いコマンド プロンプトから次のコマンドを実行して、net.msmq サイト バインディングを削除します。  
+    2. 権限のレベルが高いコマンド プロンプトから次のコマンドを実行して、net.msmq サイト バインディングを削除します。  
   
         ```console  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" --bindings.[protocol='net.msmq',bindingInformation='localhost']  
@@ -305,11 +305,11 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     > [!WARNING]
     >  バッチ ファイルを実行すると、DefaultAppPool がリセットされて .NET Framework Version 2.0 で実行されます。  
   
- `netMsmqBinding` バインディング トランスポートを使用する場合の既定では、セキュリティが有効です。 トランスポート セキュリティの種類は、`MsmqAuthenticationMode` と `MsmqProtectionLevel` の 2 つのプロパティで決まります。 既定の設定では、認証モードは `Windows`、保護レベルは `Sign` です。 MSMQ の認証および署名の機能を利用するには、ドメインに属している必要があります。 このサンプルをドメインに属していないコンピューターで実行すると、"ユーザーの内部メッセージ キュー認証情報は存在しません" というエラーが表示されます。  
+ `netMsmqBinding` バインディング トランスポートを使用する場合の既定では、セキュリティが有効です。 トランスポート セキュリティの種類は、`MsmqAuthenticationMode` と `MsmqProtectionLevel` の 2 つのプロパティで決まります。 既定の設定では、認証モードは `Windows`、保護レベルは `Sign` です。 MSMQ の認証および署名の機能を利用するには、ドメインに属している必要があります。 ドメインの一部ではないコンピューターでこのサンプルを実行する場合は、次のエラーが発生します。「ユーザーの内部メッセージ キュー証明書がありません」。  
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>ワークグループに参加しているコンピューターでこのサンプルを実行するには  
   
-1.  ドメインに属していないコンピューターを使用する場合は、トランスポート セキュリティをオフにします。オフにするには、認証モードと保護レベルを "none" に設定します。サンプル構成を次に示します。  
+1. ドメインに属していないコンピューターを使用する場合は、トランスポート セキュリティをオフにします。オフにするには、認証モードと保護レベルを "none" に設定します。サンプル構成を次に示します。  
   
     ```xml  
     <bindings>  
@@ -321,34 +321,35 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     </bindings>  
     ```  
   
-2.  サンプルを実行する前に、サーバーとクライアントの両方の構成を変更します。  
+2. サンプルを実行する前に、サーバーとクライアントの両方の構成を変更します。  
   
     > [!NOTE]
     >  `security mode` を `None` に設定することは、`MsmqAuthenticationMode`、`MsmqProtectionLevel`、および `Message` のセキュリティを `None` に設定することに相当します。  
   
-3.  ワークグループに参加しているコンピューターでアクティブ化を有効にするには、アクティベーション サービスとワーカー プロセスの両方を特定のユーザー アカウントで実行する必要があります (どちらも同じアカウントを使用する必要があります)。さらに、キューはその特定のユーザー アカウントの ACL に設定されている必要があります。  
+3. ワークグループに参加しているコンピューターでアクティブ化を有効にするには、アクティベーション サービスとワーカー プロセスの両方を特定のユーザー アカウントで実行する必要があります (どちらも同じアカウントを使用する必要があります)。さらに、キューはその特定のユーザー アカウントの ACL に設定されている必要があります。  
   
      ワーカー プロセスが実行される ID を変更するには  
   
-    1.  Inetmgr.exe を実行します。  
+    1. Inetmgr.exe を実行します。  
   
-    2.  **アプリケーション プール**を右クリックし、 **AppPool** (通常**DefaultAppPool**) 選択**アプリケーション プールの既定値を設定しています.**.  
+    2. **アプリケーション プール**を右クリックし、 **AppPool** (通常**DefaultAppPool**) 選択**アプリケーション プールの既定値を設定しています.** .  
   
-    3.  特定のユーザー アカウントを使用するように、[ID] プロパティを変更します。  
+    3. 特定のユーザー アカウントを使用するように、[ID] プロパティを変更します。  
   
      アクティブ化サービスが実行される ID を変更するには  
   
-    1.  Services.msc を実行します。  
+    1. Services.msc を実行します。  
   
-    2.  右クリックし、 **net.msmq リスナ アダプタ**、選択**プロパティ**します。  
+    2. 右クリックし、 **net.msmq リスナ アダプタ**、選択**プロパティ**します。  
   
-4.  アカウントを変更、**ログオン**タブ。  
+4. アカウントを変更、**ログオン**タブ。  
   
-5.  ワークグループでは、無制限のトークンを使用してサービスを実行する必要もあります。 この操作を行うには、コマンド ウィンドウから次のコマンドを実行します。  
+5. ワークグループでは、無制限のトークンを使用してサービスを実行する必要もあります。 この操作を行うには、コマンド ウィンドウから次のコマンドを実行します。  
   
     ```console  
     sc sidtype netmsmqactivator unrestricted  
     ```  
   
-## <a name="see-also"></a>関連項目  
- [AppFabric のホストおよび永続化のサンプル](https://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a>関連項目
+
+- [AppFabric のホストおよび永続化のサンプル](https://go.microsoft.com/fwlink/?LinkId=193961)

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-ms.openlocfilehash: 213a714a04c31954b0091071b0625449916d154d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 25d7b0e8b8b98d68a0fb4a3cadab3d9f3e8747bd
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146915"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59146147"
 ---
 # <a name="introducing-pluggable-protocols"></a>プラグ可能なプロトコルの概要
 Microsoft .NET Framework は、アプリケーションにすばやく簡単に統合できる、複数層の拡張可能なインターネット サービスのマネージド実装を提供します。 <xref:System.Net> および <xref:System.Net.Sockets> の名前空間内のインターネット アクセス クラスは、Web ベース アプリケーションとインターネット ベース アプリケーションの両方を実装するために使用できます。  
@@ -66,8 +66,9 @@ Microsoft .NET Framework は、アプリケーションにすばやく簡単に�
   
  Windows ソケット インターフェイスに精通している開発者、またはソケット レベルでのプログラミングにより提供されるコントロールが必要な開発者は、**System.Net.Sockets** クラスにより自身のニーズを満たすことができます。 **System.Net.Sockets** クラスは、**System.Net** クラス内でのマネージド コードからネイティブ コードへの遷移ポイントです。 ほとんどの場合、**System.Net.Sockets** クラスは、Windows の 32 ビットに相当するものにデータをマーシャリングするだけでなく、必要なセキュリティ チェックをすべて処理します。  
   
-## <a name="see-also"></a>参照  
- [プラグ可能なプロトコルのプログラミング](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
- [.NET Framework のネットワーク プログラミング](../../../docs/framework/network-programming/index.md)  
- [ネットワーク プログラミングのサンプル](../../../docs/framework/network-programming/network-programming-samples.md)  
- [MSDN Code Gallery 上の .NET 用のネットワークのサンプル](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+## <a name="see-also"></a>関連項目
+
+- [プラグ可能なプロトコルのプログラミング](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
+- [.NET Framework のネットワーク プログラミング](../../../docs/framework/network-programming/index.md)
+- [ネットワーク プログラミングのサンプル](../../../docs/framework/network-programming/network-programming-samples.md)
+- [MSDN Code Gallery 上の .NET 用のネットワークのサンプル](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

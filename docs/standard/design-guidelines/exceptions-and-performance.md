@@ -10,12 +10,12 @@ helpviewer_keywords:
 - throwing exceptions, performance
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
 author: KrzysztofCwalina
-ms.openlocfilehash: ab125117836545b9a2436347375ed0e08c591c7b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f9fe3045d8bd8b4d625c5cd49bc18574ebb740de
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026433"
 ---
 # <a name="exceptions-and-performance"></a>例外とパフォーマンス
 例外に関連する一般的な懸念事項の 1 つを定期的に失敗したコードの例外を使用している場合、パフォーマンスの実装は受け入れられない。 これはもっともです。 メンバーは、例外をスローするときに、パフォーマンスが極端に遅くにできます。 ただし、エラー コードの使用を禁止する例外のガイドラインに厳密に準拠しつつ、良好なパフォーマンスを実現することができます。 このセクションで説明されている 2 つのパターンは、これを行う方法をお勧めします。  
@@ -74,5 +74,5 @@ public struct DateTime {
   
 ## <a name="see-also"></a>関連項目
 
-- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)  
+- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)
 - [例外のデザインのガイドライン](../../../docs/standard/design-guidelines/exceptions.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;legacyCorruptedStateExceptionsPolicy&gt;要素'
+title: <legacyCorruptedStateExceptionsPolicy> 要素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <legacyCorruptedStateExceptionsPolicy> element
@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdf2e69b307d55f778a5cb54f8cc77bc3c69a185
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 6191ee2169a85725f0367763874e60c0ceb1d7a4
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613493"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489437"
 ---
-# <a name="ltlegacycorruptedstateexceptionspolicygt-element"></a>&lt;legacyCorruptedStateExceptionsPolicy&gt;要素
+# <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy > 要素
 共通言語ランタイムがアクセス違反およびその他の破損状態例外をキャッチするマネージ コードをできるかどうかを指定します。  
   
  \<configuration>  
-\<ランタイム >  
-\<legacyCorruptedStateExceptionsPolicy >  
+\<runtime>  
+\<legacyCorruptedStateExceptionsPolicy>  
   
 ## <a name="syntax"></a>構文  
   
@@ -56,18 +56,18 @@ ms.locfileid: "53613493"
 ## <a name="remarks"></a>Remarks  
  .NET Framework 3.5 およびそれ以前のバージョンでは、共通言語ランタイムは、破損したプロセス状態で発生した例外をキャッチするマネージ コードを使用できます。 アクセス違反は、この種類の例外の例を示します。  
   
- 以降では、 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]、マネージ コードではこれらの種類の例外のキャッチされなく`catch`ブロックします。 ただし、この変更を上書きし、2 つの方法で破損状態例外の処理を維持できます。  
+ 以降、.NET Framework 4 では、マネージ コード不要になったキャッチこれらの種類の例外の`catch`ブロックします。 ただし、この変更を上書きし、2 つの方法で破損状態例外の処理を維持できます。  
   
--   設定、`<legacyCorruptedStateExceptionsPolicy>`要素の`enabled`属性を`true`します。 この構成設定は適用されているプロセスであり、すべてのメソッドの影響します。  
+- 設定、`<legacyCorruptedStateExceptionsPolicy>`要素の`enabled`属性を`true`します。 この構成設定は適用されているプロセスであり、すべてのメソッドの影響します。  
   
  - または -  
   
--   適用、<xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType>属性をメソッド、例外を含む`catch`ブロックします。  
+- 適用、<xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType>属性をメソッド、例外を含む`catch`ブロックします。  
   
- この構成要素はでのみ使用できますが、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]以降。  
+ この構成要素は、以降、.NET Framework 4 でのみ使用できます。  
   
 ## <a name="example"></a>例  
- 次の例は、アプリケーションが前に、の動作に戻る必要がありますを指定する方法を示します、 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]、およびすべての破損状態例外のエラーをキャッチします。  
+ 次の例では、アプリケーションが .NET Framework 4 では前に、の動作に戻すし、すべての破損状態例外のエラーをキャッチする必要がありますを指定する方法を示します。  
   
 ```xml  
 <configuration>  
@@ -77,7 +77,8 @@ ms.locfileid: "53613493"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute>  
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute>
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)

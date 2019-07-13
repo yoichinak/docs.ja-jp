@@ -3,13 +3,13 @@ title: 一般的なクライアント側の Web テクノロジ
 description: ASP.NET Core および Azure での最新の Web アプリケーションの設計 | 一般的なクライアント側の Web テクノロジ
 author: ardalis
 ms.author: wiwagn
-ms.date: 6/28/2018
-ms.openlocfilehash: eb5612e0cbdc52e397ba367b4cc744796174d06c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: 4dc0618eceda4df7c5aa76aee3ac649deb9f5310
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153892"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639003"
 ---
 # <a name="common-client-side-web-technologies"></a>一般的なクライアント側の Web テクノロジ
 

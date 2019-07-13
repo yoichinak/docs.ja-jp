@@ -2,12 +2,12 @@
 title: 静的に解決される型パラメーター
 description: 使用する方法について説明します、F#静的に解決される型パラメーターは、実行時ではなく、コンパイル時に実際の型が置き換えられます。
 ms.date: 05/16/2016
-ms.openlocfilehash: 9ad23a881e644dfe2bccd56fa04d3c219b51cf7d
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 337d4f40418ee76cb18397add27acba75f756091
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614091"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645259"
 ---
 # <a name="statically-resolved-type-parameters"></a>静的に解決される型パラメーター
 

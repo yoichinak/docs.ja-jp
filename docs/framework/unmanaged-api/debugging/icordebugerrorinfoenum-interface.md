@@ -1,5 +1,5 @@
 ---
-title: ICorDebugErrorInfoEnum Interface1
+title: ICorDebugErrorInfoEnum インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugErrorInfoEnum
@@ -16,15 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7872a13dea7746b40d5525e4d758c1d8cd7117a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 88f3c270d2ab0adc0b683fda0e0f4bc1d474fb09
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765447"
 ---
-# <a name="icordebugerrorinfoenum-interface1"></a>ICorDebugErrorInfoEnum Interface1
+# <a name="icordebugerrorinfoenum-interface"></a>ICorDebugErrorInfoEnum インターフェイス
+
 `ICorDebugErrorInfoEnum` は互換性のために残されています。 このインターフェイスは使用しないでください。  
   
-## <a name="see-also"></a>関連項目  
- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>関連項目
+
+- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -1,17 +1,17 @@
 ---
-title: '&lt;netPeerTcpBinding&gt;'
+title: <netPeerTcpBinding>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - netPeerBinding element
 ms.assetid: 2dd77ada-a176-47c7-a740-900b279f1aad
-ms.openlocfilehash: 5250edc5ddfc0d381227f619752a8f3826ee2a44
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: b35e2f365e82291d3f8b827850fdebfe8fa2237d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780368"
 ---
-# <a name="ltnetpeertcpbindinggt"></a>&lt;netPeerTcpBinding&gt;
+# <a name="netpeertcpbinding"></a>\<netPeerTcpBinding>
 ピア チャネル固有の TCP メッセージングのバインディングを定義します。  
   
  \<system.ServiceModel >  
@@ -59,7 +59,7 @@ ms.locfileid: "54149255"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|このバインドを使用して設定されるエンドポイントにより処理可能な、SOAP メッセージの複雑さに対する制約を定義します。 この要素は <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> 型です。|  
+|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|このバインドを使用して設定されるエンドポイントにより処理可能な、SOAP メッセージの複雑さに対する制約を定義します。 この要素は <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> 型です。|  
 |[\<resolver>](../../../../../docs/framework/configure-apps/file-schema/wcf/resolver.md)|ピア メッシュ ID を解決してピア メッシュ内のノードのエンドポイント ID アドレスを取得するために、このバインディングによって使用されるピア リゾルバーを指定します。|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netpeerbinding.md)|メッセージのセキュリティ設定を定義します。 この要素は <xref:System.ServiceModel.Configuration.PeerSecurityElement> 型です。|  
   
@@ -73,7 +73,7 @@ ms.locfileid: "54149255"
  このバインディングは、TCP を介したピア トランスポートを使用するピア ツー ピア アプリケーションまたはマルチパーティ アプリケーションの作成をサポートします。 各ピア ノードは、この種類のバイディングを使用して定義された複数のピア チャネルをホストできます。  
   
 ## <a name="example"></a>例  
- 次の例では、ピア チャネルを使用してマルチパーティ通信を実現する、NetPeerTcpBinding バインディングを使用する方法を示します。 このバインディングの使い方の詳細なシナリオでは、次を参照してください。[ネット ピア TCP](https://msdn.microsoft.com/library/31f4db66-edb2-40a6-b92a-14098e92acae)します。  
+ 次の例では、ピア チャネルを使用してマルチパーティ通信を実現する、NetPeerTcpBinding バインディングを使用する方法を示します。 このバインディングの使い方の詳細なシナリオでは、次を参照してください。[ネット ピア TCP](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751426(v=vs.90))します。  
   
 ```xml  
 <configuration>
@@ -100,12 +100,13 @@ ms.locfileid: "54149255"
 </configuration>
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.NetPeerTcpBinding>  
- <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement>  
- [バインディング](../../../../../docs/framework/wcf/bindings.md)  
- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)  
- [ネット ピア TCP](https://msdn.microsoft.com/library/31f4db66-edb2-40a6-b92a-14098e92acae)  
- [ピアツーピア ネットワーク](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.NetPeerTcpBinding>
+- <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement>
+- [バインディング](../../../../../docs/framework/wcf/bindings.md)
+- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [ネット ピア TCP](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751426(v=vs.90))
+- [ピアツーピア ネットワーク](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)

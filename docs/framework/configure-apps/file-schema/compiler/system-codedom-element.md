@@ -1,5 +1,5 @@
 ---
-title: '&lt;system.codedom&gt;要素'
+title: <system.codedom> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.codedom
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - system.codedom element
 - <system.codedom> element
 ms.assetid: 672a68f7-e69f-4479-ac30-e980085ec4fe
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: de0b026b0e4e76b7409e873813f4700c6ced9afd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0f47255bb4073007a847e4a8b85ccfd34100582b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674799"
 ---
-# <a name="ltsystemcodedomgt-element"></a>&lt;system.codedom&gt;要素
+# <a name="systemcodedom-element"></a>\<system.codedom > 要素
 使用可能な言語プロバイダーのコンパイラ構成設定を指定します。  
   
  \<configuration > 要素  
@@ -89,9 +87,10 @@ ms.locfileid: "50187898"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.CodeDom.Compiler.CompilerInfo>  
-- <xref:System.CodeDom.Compiler.CodeDomProvider>  
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [コンパイラおよび言語プロバイダー設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)  
+## <a name="see-also"></a>関連項目
+
+- <xref:System.CodeDom.Compiler.CompilerInfo>
+- <xref:System.CodeDom.Compiler.CodeDomProvider>
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [コンパイラおよび言語プロバイダー設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)
 - [\<compiler> 要素](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)

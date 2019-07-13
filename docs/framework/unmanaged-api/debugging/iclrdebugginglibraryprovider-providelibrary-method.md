@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0644258eb1622f388f55d0657c8922079fe4dc1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 26dbd7cb5f0dc3a385fe15d6c417d6fb8e1c9bc4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407241"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738352"
 ---
 # <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a>ICLRDebuggingLibraryProvider::ProvideLibrary メソッド
-コールバック インターフェイスの共通言語ランタイム (CLR) バージョン固有の上にロードし、要求時にデバッグ ライブラリをライブラリ プロバイダーを取得します。  
+ライブラリのプロバイダーに共通言語ランタイム (CLR) バージョン固有デバッグ ライブラリを検索しに読み込む要求を許可するコールバック インターフェイスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ProvideLibrary(  
      [in] const WCHAR* pwszFileName,  
      [in] DWORD dwTimestamp,  
@@ -37,18 +37,18 @@ HRESULT ProvideLibrary(
      [out] HMODULE* hModule);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pwszFilename`  
- [in]要求されたモジュールの名前。  
+ [in]要求されているモジュールの名前。  
   
  `dwTimestamp`  
- [in]COFF ファイルのヘッダーの PE ファイルに格納されている日付時刻のタイムスタンプ。  
+ [in]PE ファイルの COFF ファイル ヘッダーに格納されている日付時刻スタンプ。  
   
  `pLibraryProvider`  
  [in]`SizeOfImage` PE ファイルの COFF 省略可能なファイルのヘッダーに格納されているフィールドです。  
   
  `hModule`  
- [out]要求されたモジュールへのハンドル。  
+ [out]要求されたモジュールのハンドルです。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。  
@@ -59,25 +59,26 @@ HRESULT ProvideLibrary(
   
 ## <a name="exceptions"></a>例外  
   
-## <a name="remarks"></a>コメント  
- `ProvideLibrary` により、デバッガーは mscordbi.dll mscordacwks.dll などの特定の CLR ファイルのデバッグに必要なモジュールを提供します。 モジュール ハンドルが有効になるまでの呼び出しが、 [iclrdebugging::canunloadnow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md)メソッドは、これら解放される可能性があります、この時点で、ハンドルを解放する、呼び出し元の責任であることを示します。  
+## <a name="remarks"></a>Remarks  
+ `ProvideLibrary` mscordbi.dll mscordacwks.dll などの特定の CLR ファイルをデバッグするために必要なモジュールを提供するデバッガーを使用します。 呼び出すまで、有効なままのモジュール ハンドルが、 [iclrdebugging::canunloadnow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md)メソッドは、これら解放される可能性があります、この時点では、ハンドルを解放する呼び出し元の責任のことを示します。  
   
- デバッガーは、すべて使用可能な方法を使用して、検索またはデバッグのモジュールを調達する可能性があります。  
+ デバッガーは、検索またはデバッグ モジュールを調達、使用可能な手段を使用できます。  
   
 > [!IMPORTANT]
->  この機能は、実行可能ファイル、および可能性のある悪意のあるコードが含まれているモジュールを提供する API の呼び出し元を使用します。 セキュリティ上の予防措置として呼び出し元は、使用しないでください`ProvideLibrary`はそれ自体を実行するすべてのコードを配布します。  
+>  この機能は、実行可能ファイル、および、場合によって悪意のあるコードが含まれているモジュールを提供する API の呼び出し元を使用できます。 セキュリティの予防措置として、呼び出し元を使用する必要がありますいない`ProvideLibrary`自体を実行するつもりはないすべてのコードを配布します。  
 >   
->  Mscordbi.dll または mscordacwks.dll などの既にリリースされてライブラリで重大なセキュリティ上の問題が検出された場合、shim にパッチできるの不適切なバージョンのファイルを認識するようにします。 Shim は、によるパッチ形式のバージョンのファイルに対する要求を発行し、すべての要求に対する応答で提供される場合は、不適切なバージョンを拒否します。 これは、shim の新しいバージョンに、ユーザーがパッチされている場合にのみに発生することができます。 未修正のバージョンは、脆弱なままです。  
+>  Mscordbi.dll または mscordacwks.dll などのリリース済みのライブラリで重大なセキュリティ上の問題が検出された場合、shim パッチを適用できるファイルの不適切なバージョンを認識します。 Shim のパッチが適用されたバージョンのファイルの要求を発行し、すべての要求に対する応答で提供される場合は、不適切なバージョンを拒否します。 これは、ユーザーが、shim の新しいバージョンにパッチを適用する場合にのみに発生します。 未適用のバージョンは、脆弱なままです。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>関連項目
+
+- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)

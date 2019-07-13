@@ -7,30 +7,31 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: e9b71017-bac4-40d7-858b-326939442cb1
-ms.openlocfilehash: 05568de863407b5d746c23ea0aff3139449a8f5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 714303569111f30d4cc03ab0ab7cb2acec4276c2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973694"
 ---
 # <a name="path-animation-how-to-topics"></a>パス アニメーションに関する「方法」トピック
 このセクションのトピックでは、パスに沿ってオブジェクトをアニメーション化する方法を示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [パスに沿ってオブジェクトをアニメーション化する (ダブル アニメーション)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-double-animation.md)  
- [パスに沿ってオブジェクトをアニメーション化する (ポイント アニメーション)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-point-animation.md)  
- [パスに沿ってオブジェクトをアニメーション化する (行列アニメーション)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-matrix-animation.md)  
- [パスに沿ってオブジェクトをアニメーション化する (オフセット累積による行列アニメーション)](../../../../docs/framework/wpf/graphics-multimedia/animate-an-object-along-a-path-matrix-animation-with-offset.md)  
- [ジオメトリック パスを使用してオブジェクトを回転させる (行列アニメーション)](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
- [ジオメトリック パスを使用してオブジェクトを回転させる](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object-by-using-a-geometric-path.md)  
+ [パスに沿ってオブジェクトをアニメーション化する (ダブル アニメーション)](how-to-animate-an-object-along-a-path-double-animation.md)  
+ [パスに沿ってオブジェクトをアニメーション化する (ポイント アニメーション)](how-to-animate-an-object-along-a-path-point-animation.md)  
+ [パスに沿ってオブジェクトをアニメーション化する (行列アニメーション)](how-to-animate-an-object-along-a-path-matrix-animation.md)  
+ [パスに沿ってオブジェクトをアニメーション化する (オフセット累積による行列アニメーション)](animate-an-object-along-a-path-matrix-animation-with-offset.md)  
+ [ジオメトリック パスを使用してオブジェクトを回転させる (行列アニメーション)](how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
+ [ジオメトリック パスを使用してオブジェクトを回転させる](how-to-rotate-an-object-by-using-a-geometric-path.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Media.Animation.PathAnimationSource>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
   
-## <a name="see-also"></a>関連項目  
- [グラフィックスとマルチメディア](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [キー フレーム アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+## <a name="see-also"></a>関連項目
+
+- [グラフィックスとマルチメディア](index.md)
+- [アニメーションの概要](animation-overview.md)
+- [キー フレーム アニメーションの概要](key-frame-animations-overview.md)

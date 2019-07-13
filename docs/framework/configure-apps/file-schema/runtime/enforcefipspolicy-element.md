@@ -1,5 +1,5 @@
 ---
-title: '&lt;enforceFIPSPolicy&gt;要素'
+title: <enforceFIPSPolicy> 要素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - enforceFIPSPolicy element
@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: c35509c4-35cf-43c0-bb47-75e4208aa24e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0bffe72a4bcadb4a36a9ac54263d55e242ffc4d4
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: c13dd2f00e08539d2ba502058c74aa4a1525e3ff
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612011"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816111"
 ---
-# <a name="ltenforcefipspolicygt-element"></a>&lt;enforceFIPSPolicy&gt;要素
+# <a name="enforcefipspolicy-element"></a>\<enforceFIPSPolicy > 要素
 暗号化アルゴリズムが連邦情報処理規格 (FIPS: Federal Information Processing Standard) に準拠する必要があるコンピューターの構成要件を強制するかどうかを指定します。  
   
- \<configuration > 要素  
-\<ランタイム > 要素  
+ \<configuration> 要素  
+\<runtime> 要素  
 \<enforceFIPSPolicy > 要素  
   
 ## <a name="syntax"></a>構文  
@@ -58,7 +58,7 @@ ms.locfileid: "53612011"
 ## <a name="remarks"></a>Remarks  
  以降、.NET Framework 2.0 では、暗号アルゴリズムを実装するクラスの作成は、コンピューターの構成によって制御されます。 FIPS に準拠するアルゴリズムを要求するように、コンピューターが構成されているクラスは、FIPS 準拠アルゴリズムを実装する場合は、そのクラスのインスタンスを作成しようとするとは、例外をスローします。 コンス トラクターがスロー、<xref:System.InvalidOperationException>例外、および`Create`メソッドでスロー、<xref:System.Reflection.TargetInvocationException>と内部例外<xref:System.InvalidOperationException>例外。  
   
- 構成は、fips コンプライアンスを必要とするコンピューターでアプリケーションを実行し、アプリケーションでは fips 準拠アルゴリズムを使用することができます要素を使用してこの構成ファイルから共通言語ランタイム (CLR) を防ぐためにFIPS 準拠を適用します。 この要素で導入された、[!INCLUDE[net_v20SP1_long](../../../../../includes/net-v20sp1-long-md.md)]します。  
+ 構成は、fips コンプライアンスを必要とするコンピューターでアプリケーションを実行し、アプリケーションでは fips 準拠アルゴリズムを使用することができます要素を使用してこの構成ファイルから共通言語ランタイム (CLR) を防ぐためにFIPS 準拠を適用します。 この要素は、.NET Framework 2.0 Service Pack 1 で導入されました。  
   
 ## <a name="example"></a>例  
  次の例では、CLR が FIPS 準拠を適用することを防止する方法を示します。  
@@ -71,7 +71,8 @@ ms.locfileid: "53612011"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>関連項目
+
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [暗号モデル](../../../../../docs/standard/security/cryptography-model.md)

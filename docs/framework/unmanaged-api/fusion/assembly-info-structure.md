@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ed65181abab58117d539d23fcfeffe71ac19388
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 219a92c0a105cc43e0c2af7d93868cac12f2e4e4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430571"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778526"
 ---
 # <a name="assemblyinfo-structure"></a>ASSEMBLY_INFO 構造体
 グローバル アセンブリ キャッシュに登録されているアセンブリに関する情報が含まれています。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct _ASSEMBLY_INFO {  
     ULONG           cbAssemblyInfo;  
     DWORD           dwAssemblyFlags;  
@@ -43,18 +43,19 @@ typedef struct _ASSEMBLY_INFO {
 |メンバー|説明|  
 |------------|-----------------|  
 |`cbAssemblyInfo`|構造体のバイト単位のサイズ。 このフィールドは、将来の機能拡張予約されています。|  
-|`dwAssemblyFlags`|アセンブリのインストールの詳細を示すフラグです。 次の値がサポートされています。<br /><br /> -ASSEMBLYINFO_FLAG_INSTALLED 値アセンブリがインストールされていることを示します。 .NET Framework の現在のバージョンが常に設定`dwAssemblyFlags`この値にします。<br />-ASSEMBLYINFO_FLAG_PAYLOADRESIDENT 値アセンブリが常駐ペイロードであることを示します。 .NET Framework の現在のバージョンを設定しません`dwAssemblyFlags`この値にします。|  
+|`dwAssemblyFlags`|アセンブリのインストールの詳細を示すフラグです。 次の値がサポートされています。<br /><br /> -ASSEMBLYINFO_FLAG_INSTALLED 値、アセンブリがインストールされていることを示します。 .NET Framework の現在のバージョンが常に設定`dwAssemblyFlags`この値にします。<br />-ASSEMBLYINFO_FLAG_PAYLOADRESIDENT 値、アセンブリが常駐ペイロードであることを示します。 .NET Framework の現在のバージョンを設定しません`dwAssemblyFlags`この値にします。|  
 |`uliAssemblySizeInKB`|アセンブリに含まれるファイルの合計サイズ。|  
-|`pszCurrentAssemblyPathBuf`|マニフェスト ファイルに、現在のパスを格納する文字列バッファーへのポインター。 パスの末尾に null 文字を使用する必要があります。|  
-|`cchBuf`|ワイド文字で、null 終端文字の数を`pszCurrentAssemblyPathBuf`が含まれています。|  
+|`pszCurrentAssemblyPathBuf`|マニフェスト ファイルに、現在のパスを保持する文字列バッファーへのポインター。 パスの末尾に null 文字を使用する必要があります。|  
+|`cchBuf`|Null の終端文字を含め、ワイド文字の数を`pszCurrentAssemblyPathBuf`が含まれています。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Fusion.h  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [Fusion 構造体](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)  
- [グローバル アセンブリ キャッシュ](../../../../docs/framework/app-domains/gac.md)
+## <a name="see-also"></a>関連項目
+
+- [Fusion 構造体](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+- [グローバル アセンブリ キャッシュ](../../../../docs/framework/app-domains/gac.md)

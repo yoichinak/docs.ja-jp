@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -baseaddress compiler option [C#]
 - /baseaddress compiler option [C#]
 ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
-ms.openlocfilehash: 58d1511387c93841f49d6ced934b492fe097876b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: aa76e3d1d30e394f28b5112e45fc72229e9a78fc
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518521"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59295784"
 ---
 # <a name="-baseaddress-c-compiler-options"></a>-baseaddress (C# コンパイラ オプション)
 **-baseaddress** オプションを使用すると、DLL を読み込む位置に推奨されるベース アドレスを指定できます。 このオプションを使用するタイミングと理由の詳細については、[Larry Osterman のブログ](https://blogs.msdn.microsoft.com/larryosterman/2004/07/06/why-should-i-even-bother-to-use-dlls-in-my-system/)を参照してください。  
@@ -28,7 +28,7 @@ ms.locfileid: "43518521"
  `address`  
  DLL のベース アドレス。 このアドレスは、10 進数、16 進数、または 8 進数で指定できます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  DLL の既定のベース アドレスは、.NET Framework 共通言語ランタイムにより設定されます。  
   
  このアドレスの下位ワードは丸められることに注意してください。 たとえば、0x11110001 と指定すると、丸められて 0x11110000 になります。  
@@ -37,18 +37,18 @@ ms.locfileid: "43518521"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
   
-1.  プロジェクトの **[プロパティ]** ページを開きます。  
+1. プロジェクトの **[プロパティ]** ページを開きます。  
   
-2.  **[ビルド]** プロパティ ページをクリックします。  
+2. **[ビルド]** プロパティ ページをクリックします。  
   
-3.  **[詳細設定]** ボタンをクリックします。  
+3. **[詳細設定]** ボタンをクリックします。  
   
-4.  **DLL のベース アドレス** プロパティを変更します。  
+4. **DLL のベース アドレス** プロパティを変更します。  
   
      このコンパイラ オプションをプログラムによって設定するには、「<xref:VSLangProj80.CSharpProjectConfigurationProperties3.BaseAddress%2A>」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
 
-- <xref:System.Diagnostics.ProcessModule.BaseAddress%2A?displayProperty=nameWithType>  
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)  
+- <xref:System.Diagnostics.ProcessModule.BaseAddress%2A?displayProperty=nameWithType>
+- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

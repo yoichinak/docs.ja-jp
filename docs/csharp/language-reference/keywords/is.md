@@ -1,77 +1,40 @@
 ---
 title: is - C# リファレンス
 ms.custom: seodec18
-ms.date: 02/17/2017
+ms.date: 06/21/2019
 f1_keywords:
 - is_CSharpKeyword
 - is
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 4fd545ded9da20da2a6378bfdf561279cf343100
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 45e37dcb15e178fe37907e00cc14ef48c1bf230d
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240009"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306592"
 ---
-# <a name="is-c-reference"></a>is (C# リファレンス) #
+# <a name="is-c-reference"></a>is (C# リファレンス)
 
-オブジェクトに指定された型との互換性があるかどうかを確認するか、(C# 7.0 以降では) パターンとの比較によって式をテストします。
+`is` 演算子では、式の結果と指定された型との間に互換性があるかどうかが確認されるか、または (C# 7.0 以降では) パターンに対して式がテストされます。 型テストの `is` 演算子については、「[型テストおよび変換演算子](../operators/type-testing-and-conversion-operators.md)」記事の「[is 演算子](../operators/type-testing-and-conversion-operators.md#is-operator)」セクションをご覧ください。
 
-## <a name="testing-for-type-compatibility"></a>型の互換性に関するテスト ##
+## <a name="pattern-matching-with-is"></a>`is` を使用したパターン マッチング
 
-`is` キーワードを使用すると、実行時に型の互換性が評価されます。 これにより、オブジェクト インスタンスや式の結果を指定された型に変換できるかどうかが判定されます。 構文は次のとおりです
+C# 7.0 以降では、`is` および [switch](switch.md) ステートメントでパターン マッチングがサポートされています。 `is` キーワードでは、以下のパターンがサポートされています。
 
-```csharp
-   expr is type
-```
+- [型パターン](#type-pattern)では、式を指定された型に変換できるかどうかがテストされ、変換できる場合はその型の変数にキャストされます。
 
-ここで *expr* は何らかの型のインスタンスに評価される式、*type* は *expr* の結果が変換される型の名前です。 `is` ステートメントでは、*expr* が null 以外の値で、式の評価によって得られるオブジェクトが *type* に変換できる場合に `true`、それ以外の場合に `false` が返されます。
+- [定数パターン](#constant-pattern): 式の評価が指定された定数値になるかどうかをテストします。
 
-たとえば、次のコードでは `obj` を `Person` 型のインスタンスにキャストできるかどうかが判定されます。
+- [var パターン](#var-pattern): 照合が常に成功し、式の値が新しいローカル変数にバインドされます。
 
-[!code-csharp[is#1](../../../../samples/snippets/csharp/language-reference/keywords/is/is1.cs#1)]
-
-`is` ステートメントは以下の場合に true となります。
-
-- *expr* が *type* と同じ型のインスタンスである。
-
-- *expr* が *type* から派生した型のインスタンスである。 つまり、*expr* の結果を *type* のインスタンスにアップキャストできる。
-
-- *expr* のコンパイル時の型が *type* の基底クラスであり、*expr* の実行時の型が *type* または *type* から派生した型である。 変数の "*コンパイル時の型*" とは、その変数の宣言で定義されている型です。 変数の "*実行時の型*" とは、その変数に代入されているインスタンスの型です。
-
-- *expr* が、*type* インターフェイスを実装する型のインスタンスである。
-
-次の例は、変換ごとの `is` 式の評価が `true` となることを示しています。
-
-[!code-csharp[is#3](../../../../samples/snippets/csharp/language-reference/keywords/is/is3.cs#3)]
-
-式が常に `true` または `false` のいずれかになることが判明している場合は、`is` キーワードによってコンパイル時に警告が生成されます。 参照変換、ボックス変換、アンボックス変換のみが考慮され、ユーザー定義の変換や型の [implicit](implicit.md) および [explicit](explicit.md) 演算子によって定義された変換は無視されます。 次の例では、コンパイル時に変換結果が判明しているため、警告が生成されます。 `int` から `long` および `double` への変換の `is` 式では、変換が [implicit](implicit.md) 演算子によって処理されるため、false が返される点に注意してください。
-
-[!code-csharp[is#2](../../../../samples/snippets/csharp/language-reference/keywords/is/is2.cs#2)]
-
-`expr` には、匿名メソッドとラムダ式を除き、値を返すどのような式でも指定できます。 次の例では、`is` を使用してメソッド呼び出しの戻り値を評価しています。   
-[!code-csharp[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
-
-C# 7.0 以降では、[型パターン](#type)によるパターン マッチングを使用することで、`is` ステートメントを用いたより簡潔なコードを記述できます。
-
-## <a name="pattern-matching-with-is"></a>`is` を使用したパターン マッチング ##
-
-C# 7.0 以降では、`is` および [switch](../../../csharp/language-reference/keywords/switch.md) ステートメントでパターン マッチングがサポートされています。 `is` キーワードでは、以下のパターンがサポートされています。
-
-- [型パターン](#type): 式を指定された型に変換できるかどうかをテストし、変換できる場合はその型の変数にキャストします。
-
-- [定数パターン](#constant): 式の評価が指定された定数値になるかどうかをテストします。
-
-- [var パターン](#var): 照合が常に成功し、式の値が新しいローカル変数にバインドされます。 
-
-### <a name="type" />型パターン</a>
+### <a name="type-pattern"></a>型パターン
 
 型パターンを使用してパターン マッチングを実行すると、式を指定された型に変換できるかどうかが `is` によってテストされ、変換できる場合はその型の変数にキャストされます。 `is` ステートメントのわかりやすい拡張機能であり、型の評価および変換を簡潔に記述できます。 `is` 型パターンの一般的な形式は次のとおりです。
 
 ```csharp
-   expr is type varname 
+   expr is type varname
 ```
 
 ここで *expr* は何らかの型のインスタンスに評価される式、*type* は *expr* の結果が変換される型の名前、*varname* は `is` のテスト結果が `true` である場合に *expr* の結果が変換されるオブジェクトをそれぞれ表しています。 
@@ -86,7 +49,9 @@ C# 7.0 以降では、`is` および [switch](../../../csharp/language-reference
 
 - *expr* が、*type* インターフェイスを実装する型のインスタンスである。
 
-*expr* が `true` で `is` が `if` ステートメントと共に使用されている場合は *varname* への代入が行われ、そのローカル スコープは `if` ステートメント内に限定されます。
+C#7.1 以降、*expr* はジェネリック型パラメーターとその制約によって定義されるコンパイル時型を持つことができます。
+
+*expr* が `true` であり `is` が `if` ステートメントに使用されている場合は、*varname* は `if` ステートメント内のみに割り当てられます。 *varname* のスコープは、`is` 式から `if` ステートメントを閉じるブロックの末尾までになります。 他の任意の場所に *varname* を使用すると、割り当てられていない変数の使用によるコンパイル時エラーが生成されます。
 
 次の例では、`is` 型のパターンを使用して、型 <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> のメソッドの実装を提供します。
 
@@ -96,7 +61,7 @@ C# 7.0 以降では、`is` および [switch](../../../csharp/language-reference
 
 [!code-csharp[is#6](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern6.cs#6)]
 
-`is` 型パターンを使用すると、値の型の種類を判定する場合によりコンパクトなコードを記述できます。 次の例では、`is` 型パターンを使用し、オブジェクトが `Person` インスタンスか `Dog` インスタンスかを判定した後に適切なプロパティの値を表示しています。 
+`is` 型パターンを使用すると、値の型の種類を判定する場合によりコンパクトなコードを記述できます。 次の例では、`is` 型パターンを使用し、オブジェクトが `Person` インスタンスか `Dog` インスタンスかを判定した後に適切なプロパティの値を表示しています。
 
 [!code-csharp[is#9](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern9.cs#9)]
 
@@ -104,7 +69,7 @@ C# 7.0 以降では、`is` および [switch](../../../csharp/language-reference
 
 [!code-csharp[is#10](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern10.cs#10)]
 
-### <a name="a-nameconstant--constant-pattern"></a><a name="constant" />定数パターン ###
+### <a name="constant-pattern"></a>定数パターン
 
 定数パターンを使用してパターン マッチングを実行すると、式が指定された定数と等しいかどうかが `is` によってテストされます。 C# 6 以前のバージョンでの定数パターンは [switch](switch.md) ステートメントでサポートされています。 C# 7.0 以降では、`is` ステートメントでもサポートされています。 構文は次のとおりです。
 
@@ -112,7 +77,7 @@ C# 7.0 以降では、`is` および [switch](../../../csharp/language-reference
    expr is constant
 ```
 
-ここで *expr* は評価する式、*constant* はテストする値を表しています。 *constant* には以下のいずれかの定数式を指定できます。 
+ここで *expr* は評価する式、*constant* はテストする値を表しています。 *constant* には以下のいずれかの定数式を指定できます。
 
 - リテラル値。
 
@@ -132,36 +97,35 @@ C# 7.0 以降では、`is` および [switch](../../../csharp/language-reference
 
 定数パターンを使用して、`null` のチェックを実行できます。 `is` ステートメントで `null` キーワードがサポートされています。 構文は次のとおりです。
 
-```csharp 
+```csharp
    expr is null
 ```
 
 `null` チェックの比較を示す例を次に示します。
 
 [!code-csharp[is#11](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern11.cs#11)]
- 
-### <a name="var" /> var パターン</a>
 
-var パターンによるパターン マッチは常に成功します。 構文は次のとおりです
+### <a name="var-pattern"></a>var パターン
 
-```csharp 
+`var` パターンは、すべての型または値に対応します。 *expr* の値は、常に *expr* のコンパイル時の型と同じ型のローカル変数に割り当てられます。 `is` 式の結果は常に `true` です。 構文は次のとおりです。
+
+```csharp
    expr is var varname
 ```
 
-ここで *expr* の値は常に *varname* というローカル変数に代入されます。 *varname* は *expr* と同じ型の静的変数です。 次の例では、var パターンを使用して式を `obj` という変数に代入しています。 その後、`obj` の値と型が表示されます。
+次の例では、var パターンを使用して式を `obj` という変数に代入しています。 その後、`obj` の値と型が表示されます。
 
 [!code-csharp[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
 
-*expr* が `null` である場合も `is` 式は true となり、`null` が *varname* に代入される点に注意してください。 
-
 ## <a name="c-language-specification"></a>C# 言語仕様
   
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)の「[The is operator (is 演算子)](~/_csharplang/spec/expressions.md#the-is-operator)」セクションおよび以下の C# 言語提案を参照してください。
+
+- [パターン マッチング](~/_csharplang/proposals/csharp-7.0/pattern-matching.md)
+- [ジェネリックを使用したパターン マッチング](~/_csharplang/proposals/csharp-7.1/generics-pattern-match.md)
   
 ## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
-- [typeof](../../../csharp/language-reference/keywords/typeof.md)  
-- [as](../../../csharp/language-reference/keywords/as.md)  
-- [演算子のキーワード](../../../csharp/language-reference/keywords/operator-keywords.md)
+- [C# リファレンス](../index.md)
+- [C# キーワード](index.md)
+- [型テストおよび変換演算子](../operators/type-testing-and-conversion-operators.md)

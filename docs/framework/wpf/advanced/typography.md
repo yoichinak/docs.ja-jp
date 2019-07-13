@@ -8,28 +8,29 @@ helpviewer_keywords:
 - text [WPF], typography
 - typography [WPF]
 ms.assetid: e4ef38db-b7d1-4bda-87ab-8bb738440ddc
-ms.openlocfilehash: d673ccec58cd9f8ba0b49fafa9871efd208e4a40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d8073ff272dd4c295dba11096126a535621727d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981930"
 ---
 # <a name="typography"></a>タイポグラフィ
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] テキスト コンテンツの豊富なプレゼンテーションのサポートが含まれます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のテキストは、テキストのわかりやすさと読みやすさを高める [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] を使用して描画されます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] サポートしています[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]によって定義されたもの以外の他の機能を提供する、フォント、[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]形式です。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] テキスト コンテンツのリッチ プレゼンテーションのサポートが含まれています。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のテキストは、テキストのわかりやすさと読みやすさを高める [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] を使用して描画されます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] サポートしています[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]によって定義されたもの以外の他の機能を提供する、フォント、[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]形式。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [WPF のタイポグラフィ](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [ClearType の概要](../../../../docs/framework/wpf/advanced/cleartype-overview.md)  
- [ClearType レジストリの設定](../../../../docs/framework/wpf/advanced/cleartype-registry-settings.md)  
- [書式設定されたテキストの描画](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)  
- [テキストの高度な書式設定](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md)  
- [フォント](../../../../docs/framework/wpf/advanced/fonts-wpf.md)  
- [グリフ](../../../../docs/framework/wpf/advanced/glyphs.md)  
- [方法トピック](../../../../docs/framework/wpf/advanced/typography-how-to-topics.md)  
+ [WPF のタイポグラフィ](typography-in-wpf.md)  
+ [ClearType の概要](cleartype-overview.md)  
+ [ClearType レジストリの設定](cleartype-registry-settings.md)  
+ [書式設定されたテキストの描画](drawing-formatted-text.md)  
+ [テキストの高度な書式設定](advanced-text-formatting.md)  
+ [フォント](fonts-wpf.md)  
+ [グリフ](glyphs.md)  
+ [方法トピック](typography-how-to-topics.md)  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Documents.Typography>  
- [WPF のドキュメント](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [OpenType フォントの機能](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
- [WPF アプリケーションのパフォーマンスの最適化](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Documents.Typography>
+- [WPF のドキュメント](documents-in-wpf.md)
+- [OpenType フォントの機能](opentype-font-features.md)
+- [WPF アプリケーションのパフォーマンスの最適化](optimizing-wpf-application-performance.md)

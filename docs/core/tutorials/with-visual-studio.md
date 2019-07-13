@@ -1,16 +1,16 @@
 ---
-title: Visual Studio 2017 で C# Hello World アプリケーション .NET Core を構築する
+title: Visual Studio 2017 での .NET Core を使用した C# Hello World アプリケーションの構築
 description: Visual Studio 2017 で C# を使用した、単純な .NET Core コンソール アプリケーションを構築する方法について説明します。
 author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 455058ad0a9155b8c6d2a267259783c2a7cc9815
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: b92c3b293b37921e1a8b557a7842027ecce8851c
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168924"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959253"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Visual Studio 2017 で .NET Core を使用して C# Hello World アプリケーションを構築する
 
@@ -26,10 +26,10 @@ ms.locfileid: "53168924"
 
 まず、シンプルな "Hello World" コンソール アプリケーションを作成してみましょう。 この場合は、以下の手順に従ってください。
 
-1. Visual Studio 2017 を起動します。 **[ファイル]** > **[新規作成]** > **[プロジェクト]** をメニュー バーから選択します。 [*新しいプロジェクト**] ダイアログで、**[Visual C#]** ノードを選択し、**[.NET Core]** ノードを選択します。 次に、**[コンソール アプリ (.NET Core)]** プロジェクト テンプレートを選択します。 **[名前]** テキスト ボックスに "HelloWorld" と入力します。 **[OK]** ボタンを選択します。
+1. Visual Studio 2017 を起動します。 **[ファイル]** > **[新規作成]** > **[プロジェクト]** をメニュー バーから選択します。 [*新しいプロジェクト*\*] ダイアログで、**[Visual C#]** ノードを選択し、**[.NET Core]** ノードを選択します。 次に、**[コンソール アプリ (.NET Core)]** プロジェクト テンプレートを選択します。 **[名前]** テキスト ボックスに "HelloWorld" と入力します。 **[OK]** ボタンを選択します。
 
    ![コンソール アプリが選択された状態の [新しいプロジェクト] ダイアログ](./media/with-visual-studio/visual-studio-new-project.png)
-   
+
 1. Visual Studio は、テンプレートを使用してプロジェクトを作成します。 .NET Core の C# コンソール アプリケーション テンプレートで、`Program` というクラスが、<xref:System.String> 配列を引数として必要とする単一のメソッド `Main` とともに自動的に定義されます。 `Main` はアプリケーションのエントリ ポイントで、アプリケーションを起動するときに、ランタイムによって自動的に呼び出されるメソッドです。 アプリケーションが起動されるときに提供されるコマンドライン引数はすべて *args* 配列にあります。
 
    ![Visual Studio と新しい HelloWorld プロジェクト](./media/with-visual-studio/visual-studio-main-window.png)
@@ -42,6 +42,7 @@ ms.locfileid: "53168924"
    Console.Write("Press any key to continue...");
    Console.ReadKey(true);
    ```
+
    このコードは、任意のキーを押すようにユーザーにメッセージを表示し、キーが押されるまでプログラムを一時停止します。
 
 1. メニュー バーで **[ビルド]** > **[ソリューションのビルド]** の順に選択します。 これにより、プログラムが IL (中間言語) にコンパイルされ、それが JIT (just-in-time) コンパイラによってバイナリ コードに変換されます。
@@ -60,7 +61,7 @@ ms.locfileid: "53168924"
 
    [!code-csharp[GettingStarted#1](../../../samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
 
-   このコードでは、既存の <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>、<xref:System.Console.Write%2A?displayProperty=nameWithType>、および <xref:System.Console.ReadKey%2A?displayProperty=nameWithType> ステートメントを置き換えます。
+   このコードにより、`Main` メソッドのコンテンツが置換されます。
 
    ![Main メソッドが更新された Visual Studio プログラムの C シャープ ファイル](./media/with-visual-studio/visual-csharp-code-window.png)
 
@@ -76,9 +77,9 @@ ms.locfileid: "53168924"
 
 アプリケーションが作成され、実行されました。 本格的なアプリケーションを開発するには、さらにいくつか追加の手順を行い、アプリケーションをリリース可能な状態にします。
 
-- アプリケーションのデバッグ方法の詳細については、「[Visual Studio 2017 で C# Hello World アプリケーションをデバッグする](debugging-with-visual-studio.md)」を参照してください。
+- アプリケーションのデバッグについては、[Visual Studio 2017 を使用した .NET Core Hello World アプリケーションのデバッグ](debugging-with-visual-studio.md)に関するページを参照してください。
 
-- アプリケーションの再頒布可能バージョンの開発と発行については、「[Visual Studio 2017 を使用した C# Hello World アプリケーションの発行](publishing-with-visual-studio.md)」を参照してください。
+- アプリケーションの再頒布可能バージョンの開発と発行については、「[Publish your .NET Core Hello World application with Visual Studio 2017 (Visual Studio 2017 を使用した .NET Core Hello World アプリケーションの発行)](publishing-with-visual-studio.md)」を参照してください。
 
 ## <a name="related-topics"></a>関連トピック
 

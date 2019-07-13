@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3e09bf424a41445f7e36397775d1578cdf4e7e75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2796be32154275387da891683cc5053095f534af
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442788"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772329"
 ---
 # <a name="corsetenc-enumeration"></a>CorSetENC 列挙型
 メタデータの生成中の動作を決定する値が格納されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum CorSetENC {  
   
     MDSetENCOn                  = 0x00000001,  
@@ -50,19 +50,20 @@ typedef enum CorSetENC {
 |------------|-----------------|  
 |`MDSetENCOn`|互換性のために残されています。|  
 |`MDSetENCOff`|互換性のために残されています。|  
-|`MDUpdateENC`|あるメタデータを更新できる一方トークンは移動できないことを示します。|  
+|`MDUpdateENC`|一方、メタデータを更新するには、トークン移動できないことを示します。|  
 |`MDUpdateFull`|トークンを更新中に移動できることを示します。|  
-|`MDUpdateExtension`|更新プログラムが追加ののみで構成できることを示します。 トークンを移動することはできません。|  
+|`MDUpdateExtension`|追加機能のみを更新できますで構成されることを示します。 トークンを移動することはできません。|  
 |`MDUpdateIncremental`|コンパイルが増分であることを示します。|  
-|`MDUpdateDelta`|変更されたメタデータだけを保存するかを示します。|  
-|`MDUpdateMask`|含む`MDUpdateENC`、`MDUpdateFull`と`MDUpdateIncremental`です。|  
+|`MDUpdateDelta`|その唯一の変更されたメタデータを保存するかを示します。|  
+|`MDUpdateMask`|含まれています`MDUpdateENC`、`MDUpdateFull`と`MDUpdateIncremental`します。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorHdr.h  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>関連項目
+
+- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

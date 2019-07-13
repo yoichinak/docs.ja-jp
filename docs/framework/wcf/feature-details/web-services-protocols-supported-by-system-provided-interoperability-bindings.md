@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Web services protocols
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
-ms.openlocfilehash: 0539f2144c85fe20a440f8b99425936025a186c0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b77e0bf52e20ce5bd8f1c0deecfc822e9f910675
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192916"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648385"
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>システム標準の相互運用性バインディングがサポートしている Web サービス プロトコル
 Windows Communication Foundation (WCF) は、一連の Web サービスの仕様と呼ばれる仕様をサポートする Web サービスと相互に構築されています。 WCF の相互運用性のベスト プラクティスのサービス構成を簡素化するには次の 3 つの相互運用可能なシステム指定のバインディングが導入されています: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>、 <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>、および<xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>します。 WCF には Advancement of Structured Information Standards (OASIS) 標準の組織と相互運用性には 1 つの相互運用可能なシステム指定のバインディングが含まれています:<xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>します。 WCF にはメタデータの公開には 2 つの相互運用可能なシステム指定のバインディングが含まれています: [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)と[ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)します。 このトピックでは、システム指定の相互運用可能なバインディングがサポートする仕様を示します。  
@@ -63,9 +63,9 @@ Windows Communication Foundation (WCF) は、一連の Web サービスの仕様
 ## <a name="wsfederationhttpbinding-and-ws2007federationhttpbinding"></a>wsFederationHttpBinding および ws2007FederationHttpBinding  
  [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)と[ \<ws2007FederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)が 3 つ目のフェデレーション シナリオでは、サポートを提供する要素が導入されていますパーティは、クライアントの認証に使用するトークンを発行します。 `wsHttpBinding` で使用されるプロトコルに加えて、`wsFederationHttpBinding` では次のものを使用します。  
   
--   トークンを発行するための `WS-Trust`  
+- トークンを発行するための `WS-Trust`  
   
--   最も一般的に発行されるトークンの形式のための WSS SAML (Security Assertions Markup Language) Token Profile 1.0 および 1.1  
+- 最も一般的に発行されるトークンの形式のための WSS SAML (Security Assertions Markup Language) Token Profile 1.0 および 1.1  
   
  例:  
   
@@ -108,10 +108,11 @@ Windows Communication Foundation (WCF) は、一連の Web サービスの仕様
 |メッセージング|Ws-addressing 2005/08|[Web Services Addressing 1.0 - コア](https://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Web Services Addressing 1.0 - SOAP](https://go.microsoft.com/fwlink/?LinkId=95330)|  
 |メタデータ|WS-MetadataExchange|[WS-MetadataExchange](https://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> WCF には、XML スキーマ、WSDL、Ws-policy を取得するには、Ws-metadataexchange が実装されています。|  
   
-## <a name="see-also"></a>関連項目  
- [システム標準のバインディング](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [\<basicHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)  
- [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)  
- [\<wsDualHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)  
- [\<mexHttpsBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)  
- [\<mexHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)
+## <a name="see-also"></a>関連項目
+
+- [システム標準のバインディング](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [\<basicHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)
+- [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)
+- [\<wsDualHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)
+- [\<mexHttpsBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)
+- [\<mexHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)

@@ -1,15 +1,15 @@
 ---
-title: '方法 : 企業内のエンドポイントをロックダウンする'
+title: '方法: 企業内のエンドポイントをロックダウンする'
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 23264159d30790cd54557509b0bc7c62edc1b5b7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ae4884cb0dcc1b1bdf81d98a9c7a7a87e836af1b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197432"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64606233"
 ---
-# <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>方法 : 企業内のエンドポイントをロックダウンする
+# <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>方法: 企業内のエンドポイントをロックダウンする
 大規模な企業では、多くの場合、企業のセキュリティ ポリシーに準拠してアプリケーションを開発する必要があります。 次のトピックでは、開発し、コンピューターにインストールされているすべての Windows Communication Foundation (WCF) クライアント アプリケーションの検証に使用できるクライアント エンドポイント検証コントロールをインストールする方法について説明します。  
   
  このエンドポイントの動作がクライアントに追加されるために、検証コントロールがクライアント検証コントロールはここでは、 [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) machine.config ファイルのセクション。 WCF では、クライアント アプリケーションに対してのみ、共通のエンドポイント動作を読み込みし、サービス アプリケーションだけで一般的なサービスの動作を読み込みます。 サービス アプリケーション用のこの同じ検証コントロールをインストールするには、検証コントロールがサービス動作であることが必要です。 詳細については、次を参照してください。、 [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)セクション。  
@@ -25,33 +25,33 @@ ms.locfileid: "50197432"
   
 ### <a name="to-create-the-endpoint-validator"></a>エンドポイント検証コントロールを作成するには  
   
-1.  <xref:System.ServiceModel.Description.IEndpointBehavior> メソッドに、必要な検証手順を備えた <xref:System.ServiceModel.Description.IEndpointBehavior.Validate%2A> を作成します。 次にコード例を示します。 (、`InternetClientValidatorBehavior`から取得されますが、[セキュリティ検証](../../../../docs/framework/wcf/samples/security-validation.md)サンプル)。  
+1. <xref:System.ServiceModel.Description.IEndpointBehavior> メソッドに、必要な検証手順を備えた <xref:System.ServiceModel.Description.IEndpointBehavior.Validate%2A> を作成します。 次にコード例を示します。 (、`InternetClientValidatorBehavior`から取得されますが、[セキュリティ検証](../../../../docs/framework/wcf/samples/security-validation.md)サンプル)。  
   
      [!code-csharp[LockdownValidation#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorbehavior.cs#2)]  
   
-2.  手順 1. で作成したエンドポイント検証コントロールを登録する新しい <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> を作成します。 このコード例を次に示します。 (この例の元のコードは、[セキュリティ検証](../../../../docs/framework/wcf/samples/security-validation.md)サンプル)。  
+2. 手順 1. で作成したエンドポイント検証コントロールを登録する新しい <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> を作成します。 このコード例を次に示します。 (この例の元のコードは、[セキュリティ検証](../../../../docs/framework/wcf/samples/security-validation.md)サンプル)。  
   
      [!code-csharp[LockdownValidation#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorelement.cs#3)]  
   
-3.  コンパイル済みのアセンブリが厳密な名前で署名されていることを確認します。 詳細については、次を参照してください。、[厳密名ツール (SN です。EXE)](https://go.microsoft.com/fwlink/?LinkId=248217)と言語のコンパイラ コマンド。  
+3. コンパイル済みのアセンブリが厳密な名前で署名されていることを確認します。 詳細については、次を参照してください。、[厳密名ツール (SN です。EXE)](https://go.microsoft.com/fwlink/?LinkId=248217)と言語のコンパイラ コマンド。  
   
-### <a name="to-install-the-validator-into-the-target-computer"></a>検証コントロールをターゲット コンピューターにインストールには  
+### <a name="to-install-the-validator-into-the-target-computer"></a>検証コントロールをターゲット コンピューターにインストールするには  
   
-1.  適切な機構を使用してエンドポイント検証をインストールします。 企業では、グループ ポリシーと Systems Management Server (SMS) を使用してインストールします。  
+1. 適切な機構を使用してエンドポイント検証をインストールします。 企業では、グループ ポリシーと Systems Management Server (SMS) を使用してインストールします。  
   
-2.  厳密な名前付きアセンブリを使用してグローバル アセンブリ キャッシュにインストール、 [Gacutil.exe (グローバル アセンブリ キャッシュ ツール)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md)します。  
+2. 厳密な名前付きアセンブリを使用してグローバル アセンブリ キャッシュにインストール、 [Gacutil.exe (グローバル アセンブリ キャッシュ ツール)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md)します。  
   
-3.  <xref:System.Configuration?displayProperty=nameWithType> 名前空間の型を使用して、次の処理を行います。  
+3. <xref:System.Configuration?displayProperty=nameWithType> 名前空間の型を使用して、次の処理を行います。  
   
-    1.  拡張を追加、 [ \<behaviorExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md)セクションの完全修飾型名を使用して、要素をロックします。  
+    1. 拡張を追加、 [ \<behaviorExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md)セクションの完全修飾型名を使用して、要素をロックします。  
   
          [!code-csharp[LockdownValidation#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/hostapplication.cs#5)]  
   
-    2.  動作要素を追加、`EndpointBehaviors`のプロパティ、 [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)セクションし、要素をロックします。 (サービスの検証コントロールをインストールするには、検証コントロールが <xref:System.ServiceModel.Description.IServiceBehavior> であることが必要です。また、検証コントロールを `ServiceBehaviors` プロパティに追加する必要があります)。次のコード例は、手順 a. と b. の後の適切な構成を示しています。厳密な名前が存在しない点だけが異なります。  
+    2. 動作要素を追加、`EndpointBehaviors`のプロパティ、 [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)セクションし、要素をロックします。 (サービスの検証コントロールをインストールするには、検証コントロールが <xref:System.ServiceModel.Description.IServiceBehavior> であることが必要です。また、検証コントロールを `ServiceBehaviors` プロパティに追加する必要があります)。次のコード例は、手順 a. と b. の後の適切な構成を示しています。厳密な名前が存在しない点だけが異なります。  
   
          [!code-csharp[LockdownValidation#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/hostapplication.cs#6)]  
   
-    3.  machine.config ファイルを保存します。 次のコード例では、手順 3. にあるすべてのタスクを実行しますが、変更された machine.config ファイルのコピーはローカルに保存されます。  
+    3. machine.config ファイルを保存します。 次のコード例では、手順 3. にあるすべてのタスクを実行しますが、変更された machine.config ファイルのコピーはローカルに保存されます。  
   
          [!code-csharp[LockdownValidation#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/hostapplication.cs#7)]  
   
@@ -63,6 +63,7 @@ ms.locfileid: "50197432"
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  また、構成ファイルの要素を暗号化する必要がある場合もあります。 詳細については、「参照」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [DPAPI を使用して構成ファイルの要素の暗号化](https://go.microsoft.com/fwlink/?LinkId=94954)  
- [RSA を使用して構成ファイルの要素の暗号化](https://go.microsoft.com/fwlink/?LinkId=94955)
+## <a name="see-also"></a>関連項目
+
+- [DPAPI を使用して構成ファイルの要素の暗号化](https://go.microsoft.com/fwlink/?LinkId=94954)
+- [RSA を使用して構成ファイルの要素の暗号化](https://go.microsoft.com/fwlink/?LinkId=94955)

@@ -2,12 +2,12 @@
 title: Web ブラウザーからサービスへのアクセス (WCF Data Services クイックスタート)
 ms.date: 03/30/2017
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
-ms.openlocfilehash: 01184969b7bfcc0f68351db7c8daeebe79be583c
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: ebeda2805f3393b298e43aa4dcc601298ce176f6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793472"
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Web ブラウザーからサービスへのアクセス (WCF Data Services クイックスタート)
 
@@ -18,16 +18,16 @@ ms.locfileid: "44086114"
 
 ## <a name="to-request-the-default-service-document-by-using-internet-explorer"></a>Internet Explorer を使用して既定のサービス ドキュメントを要求するには
 
-1.  Internet Explorer から、**ツール**メニューの [**インターネット オプション**、] をクリックして、**コンテンツ**] タブで [**設定**をオフ**フィードの読み取りビューで有効にする**します。
+1. Internet Explorer から、**ツール**メニューの [**インターネット オプション**、] をクリックして、**コンテンツ**] タブで [**設定**をオフ**フィードの読み取りビューで有効にする**します。
 
      フィードの読み取りが無効になります。 この機能が無効でなければ、Web ブラウザーは、AtomPub エンコードのドキュメントが返されると生の XML データを表示せずに XML フィードとして処理します。
 
     > [!NOTE]
     > ブラウザーでフィードを生の XML データとして表示できない場合は、そのままでフィードをページのソース コードとして表示できます。
 
-2.  Visual Studio で、キーを押して、 **f5 キーを押して**キー、アプリケーションのデバッグを開始します。
+2. Visual Studio で、キーを押して、 **f5 キーを押して**キー、アプリケーションのデバッグを開始します。
 
-3.  ローカル コンピューターで Web ブラウザーを開きます。 アドレス バーに次の URI を入力します。
+3. ローカル コンピューターで Web ブラウザーを開きます。 アドレス バーに次の URI を入力します。
 
     ```
     http://localhost:12345/northwind.svc
@@ -37,7 +37,7 @@ ms.locfileid: "44086114"
 
 ## <a name="to-access-entity-set-resources-from-a-web-browser"></a>Web ブラウザーからエンティティ セット リソースにアクセスするには
 
-1.  Web ブラウザーのアドレス バーに次の URI を入力します。
+1. Web ブラウザーのアドレス バーに次の URI を入力します。
 
     ```
     http://localhost:12345/northwind.svc/Customers
@@ -45,7 +45,7 @@ ms.locfileid: "44086114"
 
      Northwind サンプル データベース内のすべての顧客のセットが返されます。
 
-2.  Web ブラウザーのアドレス バーに次の URI を入力します。
+2. Web ブラウザーのアドレス バーに次の URI を入力します。
 
     ```
     http://localhost:12345/northwind.svc/Customers('ALFKI')
@@ -53,7 +53,7 @@ ms.locfileid: "44086114"
 
      特定の顧客 `ALFKI` のエンティティ インスタンスが返されます。
 
-3.  Web ブラウザーのアドレス バーに次の URI を入力します。
+3. Web ブラウザーのアドレス バーに次の URI を入力します。
 
     ```
     http://localhost:12345/northwind.svc/Customers('ALFKI')/Orders
@@ -61,7 +61,7 @@ ms.locfileid: "44086114"
 
      顧客と注文の間のリレーションシップがスキャンされ、特定の顧客 `ALFKI` のすべての注文のセットが返されます。
 
-4.  Web ブラウザーのアドレス バーに次の URI を入力します。
+4. Web ブラウザーのアドレス バーに次の URI を入力します。
 
     ```
     http://localhost:12345/northwind.svc/Customers('ALFKI')/Orders?$filter=OrderID eq 10643

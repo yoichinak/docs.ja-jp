@@ -5,18 +5,16 @@ helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 2b821a1deb947db86e89207c447045f76a8bb842
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 405199ff0652303fa5ccae18770307ea10e38b52
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035111"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647227"
 ---
 # <a name="caching-in-ui-automation-clients"></a>UI オートメーション クライアントにおけるキャッシュ
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]に関する最新情報については[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)をご覧ください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
  このトピックでは、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のプロパティとコントロール パターンのキャッシュについて説明します。  
   
@@ -24,7 +22,7 @@ ms.locfileid: "48035111"
   
  キャッシュの利点は、Windows Presentation Foundation (WPF) コントロールとサーバー側 UI オートメーション プロバイダーのカスタム コントロールで最も顕著です。 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] コントロールの既定のプロバイダーなど、クライアント側プロバイダーにアクセスするときは、メリットは小さくなります。  
   
- キャッシュはアプリケーションが <xref:System.Windows.Automation.CacheRequest> をアクティブにしたときに発生し、 <xref:System.Windows.Automation.AutomationElement>や <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>など、 <xref:System.Windows.Automation.AutomationElement.FindAll%2A>を返すメソッドやプロパティを使用します。 メソッド、<xref:System.Windows.Automation.TreeWalker>クラスは例外で、場合にのみ実行は、キャッシュ、<xref:System.Windows.Automation.CacheRequest>をパラメーターとして指定された (たとえば、 <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>。  
+ キャッシュはアプリケーションが <xref:System.Windows.Automation.CacheRequest> をアクティブにしたときに発生し、 <xref:System.Windows.Automation.AutomationElement>や <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>など、 <xref:System.Windows.Automation.AutomationElement.FindAll%2A>を返すメソッドやプロパティを使用します。 <xref:System.Windows.Automation.TreeWalker> クラスのメソッドは例外で、 <xref:System.Windows.Automation.CacheRequest> がパラメーターとして指定された場合 (たとえば、 <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>) にのみ、キャッシュが行われます。  
   
  また、キャッシュは、 <xref:System.Windows.Automation.CacheRequest> がアクティブなときにイベントにサブスクライブする場合にも発生します。 イベントのソースとしてイベント ハンドラーに渡された <xref:System.Windows.Automation.AutomationElement> には、元の <xref:System.Windows.Automation.CacheRequest>によって指定されているキャッシュされたプロパティとパターンが含まれています。 イベントにサブスクライブした後で <xref:System.Windows.Automation.CacheRequest> に加えられた変更が、影響を与えることはありません。  
   
@@ -40,17 +38,17 @@ ms.locfileid: "48035111"
   
 <a name="Control_Patterns_to_Cache"></a>   
 ### <a name="control-patterns-to-cache"></a>キャッシュするコントロール パターン  
- 要求をアクティブ化する前に、各パターンの <xref:System.Windows.Automation.CacheRequest.Add%28System.Windows.Automation.AutomationPattern%29> を呼び出して、キャッシュするコントロール パターンを指定できます。 パターンがキャッシュされると、そのプロパティは自動的にキャッシュされません。使用してキャッシュ プロパティを指定する必要があります<xref:System.Windows.Automation.CacheRequest.Add%2A?displayProperty=nameWithType>します。  
+ 要求をアクティブ化する前に、各パターンの <xref:System.Windows.Automation.CacheRequest.Add%28System.Windows.Automation.AutomationPattern%29> を呼び出して、キャッシュするコントロール パターンを指定できます。 パターンがキャッシュされるとき、そのプロパティは自動的にはキャッシュされません。 <xref:System.Windows.Automation.CacheRequest.Add%2A?displayProperty=nameWithType>を使用して、キャッシュするプロパティを指定する必要があります。  
   
 <a name="Scope_of_the_Caching"></a>   
 ### <a name="scope-and-filtering-of-caching"></a>キャッシュのスコープとフィルター処理  
- 要素を指定するには、プロパティとパターンを設定してキャッシュするが、<xref:System.Windows.Automation.CacheRequest.TreeScope%2A?displayProperty=nameWithType>要求をアクティブ化する前に、プロパティ。 スコープは、要求がアクティブな間に取得される要素を基準としています。 たとえば、 <xref:System.Windows.Automation.TreeScope.Children>のみを設定し、 <xref:System.Windows.Automation.AutomationElement>を取得する場合に、要素の子のプロパティとパターンはキャッシュされますが、要素自体のプロパティとパターンはキャッシュされません。 取得される要素自体についてキャッシュが行われるようにするには、 <xref:System.Windows.Automation.TreeScope.Element> プロパティに <xref:System.Windows.Automation.CacheRequest.TreeScope%2A> を含める必要があります。 スコープを <xref:System.Windows.Automation.TreeScope.Parent> または <xref:System.Windows.Automation.TreeScope.Ancestors>に設定することはできません。 ただし、子要素がキャッシュされると親要素をキャッシュできます。このトピックの「キャッシュされた子と親の取得」を参照してください。  
+ 要求をアクティブ化する前に <xref:System.Windows.Automation.CacheRequest.TreeScope%2A?displayProperty=nameWithType> プロパティを設定し、キャッシュするプロパティやパターンを持つ要素を指定できます。 スコープは、要求がアクティブな間に取得される要素を基準としています。 たとえば、 <xref:System.Windows.Automation.TreeScope.Children>のみを設定し、 <xref:System.Windows.Automation.AutomationElement>を取得する場合に、要素の子のプロパティとパターンはキャッシュされますが、要素自体のプロパティとパターンはキャッシュされません。 取得される要素自体についてキャッシュが行われるようにするには、 <xref:System.Windows.Automation.TreeScope.Element> プロパティに <xref:System.Windows.Automation.CacheRequest.TreeScope%2A> を含める必要があります。 スコープを <xref:System.Windows.Automation.TreeScope.Parent> または <xref:System.Windows.Automation.TreeScope.Ancestors>に設定することはできません。 ただし、子要素がキャッシュされると親要素をキャッシュできます。このトピックの「キャッシュされた子と親の取得」を参照してください。  
   
- キャッシュの範囲がによっても影響を受ける、<xref:System.Windows.Automation.CacheRequest.TreeFilter%2A?displayProperty=nameWithType>プロパティ。 既定では、キャッシュは [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューに表示される要素にのみ実行されます。 ただし、キャッシュをすべての要素に適用したり、コンテンツ ビューに表示される要素にのみ適用したりするように、このプロパティを変更することができます。  
+ キャッシュの範囲は、 <xref:System.Windows.Automation.CacheRequest.TreeFilter%2A?displayProperty=nameWithType> プロパティによっても影響を受けます。 既定では、キャッシュは [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューに表示される要素にのみ実行されます。 ただし、キャッシュをすべての要素に適用したり、コンテンツ ビューに表示される要素にのみ適用したりするように、このプロパティを変更することができます。  
   
 <a name="Strength_of_the_Element_References"></a>   
 ### <a name="strength-of-the-element-references"></a>要素の参照の強度  
- <xref:System.Windows.Automation.AutomationElement>を取得するときは、既定では、キャッシュされていないものも含め、その要素のすべてのプロパティとパターンにアクセスできます。 ただし、作業効率を向上するために、 <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> の <xref:System.Windows.Automation.CacheRequest> プロパティを <xref:System.Windows.Automation.AutomationElementMode.None>に設定して、要素への参照がキャッシュされたデータのみを参照するよう指定できます。 この場合、取得された要素のキャッシュされていないプロパティとパターンには、いずれもアクセスできません。 つまり、 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> を通してプロパティにアクセスしたり、 `Current` の <xref:System.Windows.Automation.AutomationElement> プロパティやコントロール パターンにアクセスすることはできません。また、 <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> や <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A>を使用してパターンを取得することもできません。 キャッシュされたパターンでは、配列のプロパティを取得するメソッドを呼び出すことができます<xref:System.Windows.Automation.SelectionPattern.SelectionPatternInformation.GetSelection%2A?displayProperty=nameWithType>、not などのコントロールで、アクションを実行するが、<xref:System.Windows.Automation.InvokePattern.Invoke%2A?displayProperty=nameWithType>します。  
+ <xref:System.Windows.Automation.AutomationElement>を取得するときは、既定では、キャッシュされていないものも含め、その要素のすべてのプロパティとパターンにアクセスできます。 ただし、作業効率を向上するために、 <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> の <xref:System.Windows.Automation.CacheRequest> プロパティを <xref:System.Windows.Automation.AutomationElementMode.None>に設定して、要素への参照がキャッシュされたデータのみを参照するよう指定できます。 この場合、取得された要素のキャッシュされていないプロパティとパターンには、いずれもアクセスできません。 つまり、 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> を通してプロパティにアクセスしたり、 `Current` の <xref:System.Windows.Automation.AutomationElement> プロパティやコントロール パターンにアクセスすることはできません。また、 <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> や <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A>を使用してパターンを取得することもできません。 キャッシュされたパターンでは、 <xref:System.Windows.Automation.SelectionPattern.SelectionPatternInformation.GetSelection%2A?displayProperty=nameWithType>などの配列のプロパティを取得するメソッドを呼び出すことができますが、 <xref:System.Windows.Automation.InvokePattern.Invoke%2A?displayProperty=nameWithType>などのコントロール上でアクションを実行するものは呼び出すことができません。  
   
  オブジェクトへの完全参照を必要としない可能性があるアプリケーションの例として、スクリーン リーダーがあります。これは、ウィンドウ内の要素の <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> プロパティと <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A> プロパティをプリフェッチしても、 <xref:System.Windows.Automation.AutomationElement> オブジェクト自体は必要としません。  
   
@@ -66,9 +64,9 @@ ms.locfileid: "48035111"
 ## <a name="retrieving-cached-properties"></a>キャッシュされたプロパティの取得  
  要素のキャッシュされたプロパティを取得するには、次のメソッドとプロパティを使用します。  
   
--   <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.Cached%2A>  
+- <xref:System.Windows.Automation.AutomationElement.Cached%2A>  
   
  要求されたプロパティがキャッシュ内にない場合、例外が発生します。  
   
@@ -78,9 +76,9 @@ ms.locfileid: "48035111"
 ## <a name="retrieving-cached-control-patterns"></a>キャッシュされたコントロール パターンの取得  
  要素のキャッシュされたコントロール パターンを取得するには、次のメソッドを使用します。  
   
--   <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A>  
+- <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A>  
   
  パターンがキャッシュ内にない場合、 <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> で例外が発生し、 <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A> が `false`を返します。  
   
@@ -103,7 +101,8 @@ ms.locfileid: "48035111"
   
  キャッシュを更新しても、既存の <xref:System.Windows.Automation.AutomationElement> の参照のプロパティはいずれも変更されません。  
   
-## <a name="see-also"></a>関連項目  
- [クライアントの UI オートメーション イベント](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)  
- [UI オートメーションにおけるキャッシュの使用](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
- [FetchTimer サンプル](https://msdn.microsoft.com/library/5b7d3294-de22-4f24-b2d6-d4785a304b90)
+## <a name="see-also"></a>関連項目
+
+- [クライアントの UI オートメーション イベント](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
+- [UI オートメーションにおけるキャッシュの使用](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [FetchTimer サンプル](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))

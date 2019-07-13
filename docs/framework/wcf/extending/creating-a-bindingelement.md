@@ -2,12 +2,12 @@
 title: BindingElement の作成
 ms.date: 03/30/2017
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
-ms.openlocfilehash: 5b7fd3e88fa12a66e086906de6f0d7d6a7d1aa17
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 0c08494315f43f35f60d70abf643f596a013c302
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454461"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587340"
 ---
 # <a name="creating-a-bindingelement"></a>BindingElement の作成
 バインディングとバインド要素 (オブジェクトを拡張する<xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType>と<xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>、それぞれ) は、Windows Communication Foundation (WCF) アプリケーション モデルがチャネル ファクトリとチャネル リスナーに関連付けられている場所。 なしのバインド、カスタム チャネルを使用する必要がありますチャネル レベルでのプログラミング」の説明に従って[サービス チャネル レベルのプログラミング](../../../../docs/framework/wcf/extending/service-channel-level-programming.md)と[クライアント チャネル レベルのプログラミング](../../../../docs/framework/wcf/extending/client-channel-level-programming.md)します。 このトピックでは、wcf での開発、チャネルを使用して有効にする最小要件を説明します、<xref:System.ServiceModel.Channels.BindingElement>の手順 4 で説明したように、アプリケーションから使用可能にする、チャネル、[開発チャネル](../../../../docs/framework/wcf/extending/developing-channels.md)します。  
@@ -26,7 +26,7 @@ ms.locfileid: "49454461"
   
  <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> には、`ChunkingChannelListener` を作成してこれに内部チャネル リスナーを渡す同様の実装があります。  
   
- トランスポート チャネルを使用して別の例として、[トランスポート: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)サンプルは次のオーバーライドを提供します。  
+ トランスポート チャネルを使用して別の例として、[トランスポート。UDP](../../../../docs/framework/wcf/samples/transport-udp.md)サンプルは次のオーバーライドを提供します。  
   
  このサンプルでは、バインド要素は `UdpTransportBindingElement` で、<xref:System.ServiceModel.Channels.TransportBindingElement> から派生しています。 このバインド要素は、チャネルに関連付けられているファクトリを作成する、次のメソッドをオーバーライドします。  
   
@@ -59,11 +59,11 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
 #### <a name="encoding-binding-elements"></a>エンコーディング バインド要素  
  新しいエンコーディング バインド要素を作成するには、まず <xref:System.ServiceModel.Channels.BindingElement> クラスを拡張し、<xref:System.ServiceModel.Channels.MessageEncodingBindingElement?displayProperty=nameWithType> クラスを実装します。 次に、少なくとも、<xref:System.ServiceModel.Channels.BindingElement.Clone%2A> メソッド、<xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A?displayProperty=nameWithType> メソッド、および <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A?displayProperty=nameWithType> プロパティを実装する必要があります。  
   
--   <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>。 このバインド要素の新しいコピーを返します。 最善の方法としては、バインド要素の作成者は基本の copy コンストラクターを呼び出す copy コンストラクターを使用して、<xref:System.ServiceModel.Channels.BindingElement.Clone%2A> を実装し、このクラスに含まれるすべての追加フィールドを複製することをお勧めします。  
+- <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>。 このバインド要素の新しいコピーを返します。 最善の方法としては、バインド要素の作成者は基本の copy コンストラクターを呼び出す copy コンストラクターを使用して、<xref:System.ServiceModel.Channels.BindingElement.Clone%2A> を実装し、このクラスに含まれるすべての追加フィールドを複製することをお勧めします。  
   
--   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A>。 <xref:System.ServiceModel.Channels.MessageEncoderFactory> を返します。これは、新しいエンコーダーを実装する実際のクラスを識別するハンドルを提供し、<xref:System.ServiceModel.Channels.MessageEncoder> を拡張します。 詳細については、次のトピックを参照してください。 <xref:System.ServiceModel.Channels.MessageEncoderFactory> および <xref:System.ServiceModel.Channels.MessageEncoder>.  
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A>。 <xref:System.ServiceModel.Channels.MessageEncoderFactory> を返します。これは、新しいエンコーダーを実装する実際のクラスを識別するハンドルを提供し、<xref:System.ServiceModel.Channels.MessageEncoder> を拡張します。 詳細については、次のトピックを参照してください。 <xref:System.ServiceModel.Channels.MessageEncoderFactory> および <xref:System.ServiceModel.Channels.MessageEncoder>  
   
--   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A>。 このエンコーディングで使用する <xref:System.ServiceModel.Channels.MessageVersion> を返します。これは、使用する SOAP および WS-Addressing のバージョンを表します。  
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A>。 このエンコーディングで使用する <xref:System.ServiceModel.Channels.MessageVersion> を返します。これは、使用する SOAP および WS-Addressing のバージョンを表します。  
   
  ユーザー定義エンコーディング バインド要素のオプション メソッドとプロパティの完全な一覧については、<xref:System.ServiceModel.Channels.MessageEncodingBindingElement> を参照してください。  
   
@@ -71,7 +71,8 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
   
  チャネルのバインド要素を作成した後に戻り、[開発チャネル](../../../../docs/framework/wcf/extending/developing-channels.md)かどうかをバインド要素に構成ファイルのサポートを追加する場合と、メタデータ ドキュメントのサポートを追加する方法を表示するトピックとかどうかと、バインド要素を使用するユーザー定義のバインディングを構築する方法。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Channels.BindingElement>  
- [チャネルの開発](../../../../docs/framework/wcf/extending/developing-channels.md)  
- [トランスポート: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Channels.BindingElement>
+- [チャネルの開発](../../../../docs/framework/wcf/extending/developing-channels.md)
+- [トランスポート:UDP](../../../../docs/framework/wcf/samples/transport-udp.md)

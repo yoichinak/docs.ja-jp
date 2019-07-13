@@ -4,12 +4,12 @@ description: この記事では、.NET Core SDK と ランタイムをバージ�
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: e4ab5e3a6dd487437e267aec042639c70fdc61ad
-ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
+ms.openlocfilehash: e060eac3a63ff869a2fe51fae0166b75329fcb49
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53334809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646866"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core をバージョン管理する方法の概要
 
@@ -106,8 +106,8 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 ## <a name="see-also"></a>関連項目
 
-* [ターゲット フレームワーク](../../standard/frameworks.md)  
-* [.NET Core の配布パッケージ](../build/distribution-packaging.md)  
-* [.NET Core サポート ライフサイクルのファクト シート](https://www.microsoft.com/net/core/support)  
-* [.NET core 2 + バージョン バインディング](https://github.com/dotnet/designs/issues/3)  
-* [.NET Core の Docker イメージ](https://hub.docker.com/r/microsoft/dotnet/)
+- [ターゲット フレームワーク](../../standard/frameworks.md)
+- [.NET Core の配布パッケージ](../build/distribution-packaging.md)
+- [.NET Core サポート ライフサイクルのファクト シート](https://www.microsoft.com/net/core/support)
+- [.NET core 2 + バージョン バインディング](https://github.com/dotnet/designs/issues/3)
+- [.NET Core の Docker イメージ](https://hub.docker.com/_/microsoft-dotnet-core/)

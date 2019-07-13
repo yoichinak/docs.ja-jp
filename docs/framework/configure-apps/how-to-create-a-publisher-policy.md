@@ -7,25 +7,23 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: e7cac3c7e6c588a82e9dfff169ba7b7aa72c35f8
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b37b00cfbeee10f217d1dbe1c754c50b65e31de9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838475"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625865"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>方法: 発行者ポリシーを作成する
 アセンブリの販売できる状態の監視アプリケーションがアップグレード済みのアセンブリに発行者ポリシー ファイルを含めることによって、新しいバージョンのアセンブリを使用する必要があります。 発行者ポリシー ファイルは、アセンブリのリダイレクトとコードの基本設定を指定し、アプリケーション構成ファイルと同じ形式を使用します。 発行者ポリシー ファイルがアセンブリにコンパイルし、グローバル アセンブリ キャッシュに配置します。  
   
  パブリッシャー ポリシーを作成するのには、3 つの手順があります。  
   
-1.  発行者ポリシー ファイルを作成します。  
+1. 発行者ポリシー ファイルを作成します。  
   
-2.  発行者ポリシー アセンブリを作成します。  
+2. 発行者ポリシー アセンブリを作成します。  
   
-3.  発行者ポリシー アセンブリをグローバル アセンブリ キャッシュに追加します。  
+3. 発行者ポリシー アセンブリをグローバル アセンブリ キャッシュに追加します。  
   
  パブリッシャー ポリシー用のスキーマについては、「[アセンブリ バージョンのリダイレクト](../../../docs/framework/configure-apps/redirect-assembly-versions.md)します。 次の例は、パブリッシャー ポリシー ファイルの 1 つのバージョンをリダイレクトする`myAssembly`間。  
   
@@ -53,21 +51,21 @@ ms.locfileid: "48838475"
   
 #### <a name="to-create-a-publisher-policy-assembly"></a>発行者ポリシー アセンブリを作成するには  
   
-1.  コマンド プロンプトで次のコマンドを入力します。  
+1. コマンド プロンプトで次のコマンドを入力します。  
   
      **al /link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*  
   
      このコマンドでは。  
   
-    -   *PublisherPolicyFile*引数は、発行者ポリシー ファイルの名前です。  
+    - *PublisherPolicyFile*引数は、発行者ポリシー ファイルの名前です。  
   
-    -   *PublisherPolicyAssemblyFile*引数は、このコマンドに起因する発行者ポリシー アセンブリの名前。 アセンブリ ファイルの名前は、形式に従う必要があります。  
+    - *PublisherPolicyAssemblyFile*引数は、このコマンドに起因する発行者ポリシー アセンブリの名前。 アセンブリ ファイルの名前は、形式に従う必要があります。  
   
          **policy.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
   
-    -   *KeyPairFile*引数はキー ペアを含むファイルの名前です。 アセンブリと同じキーのペアで発行者ポリシー アセンブリに署名する必要があります。  
+    - *KeyPairFile*引数はキー ペアを含むファイルの名前です。 アセンブリと同じキーのペアで発行者ポリシー アセンブリに署名する必要があります。  
   
-    -   *ProcessorArchitecture*引数は、プロセッサ固有のアセンブリの対象となるプラットフォームを識別します。  
+    - *ProcessorArchitecture*引数は、プロセッサ固有のアセンブリの対象となるプラットフォームを識別します。  
   
         > [!NOTE]
         >  特定のプロセッサ アーキテクチャを対象とする機能は、.NET Framework version 2.0 の新機能です。  
@@ -89,9 +87,9 @@ ms.locfileid: "48838475"
   
 #### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>発行者ポリシー アセンブリをグローバル アセンブリ キャッシュに追加するには  
   
-1.  コマンド プロンプトで次のコマンドを入力します。  
+1. コマンド プロンプトで次のコマンドを入力します。  
   
-     **gacutil/i***publisherPolicyAssemblyFile*  
+     **gacutil /i**  *publisherPolicyAssemblyFile*  
   
      次のコマンドは、追加`policy.1.0.myAssembly.dll`グローバル アセンブリ キャッシュにします。  
   
@@ -102,11 +100,11 @@ ms.locfileid: "48838475"
     > [!IMPORTANT]
     >  元の発行者ポリシー ファイルは、アセンブリと同じディレクトリにある場合を除き、発行者ポリシー アセンブリをグローバル アセンブリ キャッシュに追加できません。  
   
-## <a name="see-also"></a>関連項目  
- [アセンブリを使用したプログラミング](../../../docs/framework/app-domains/programming-with-assemblies.md)  
- [ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [アプリの構成](../../../docs/framework/configure-apps/index.md)  
- [.NET Framework アプリの構成](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
- [ランタイム設定スキーマ](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [構成ファイル スキーマ](../../../docs/framework/configure-apps/file-schema/index.md)  
- [アセンブリ バージョンのリダイレクト](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+## <a name="see-also"></a>関連項目
+
+- [アセンブリを使用したプログラミング](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [構成ファイルを使用してアプリを構成します。](../../../docs/framework/configure-apps/index.md)
+- [ランタイム設定スキーマ](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [構成ファイル スキーマ](../../../docs/framework/configure-apps/file-schema/index.md)
+- [アセンブリ バージョンのリダイレクト](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

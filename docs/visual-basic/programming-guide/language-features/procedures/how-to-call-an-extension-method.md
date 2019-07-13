@@ -1,21 +1,21 @@
 ---
-title: '方法: 拡張メソッドを呼び出す (Visual Basic)'
+title: '方法: 拡張メソッド (Visual Basic) を呼び出す'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - calling extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: df07750f-40f4-4c07-a79e-1113a27cfbea
-ms.openlocfilehash: 32691183bcd1632a82b1e9a2668790abbf8f80fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5cb0684637a716dfec947740ba345c62eaabddd7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863676"
 ---
-# <a name="how-to-call-an-extension-method-visual-basic"></a>方法: 拡張メソッドを呼び出す (Visual Basic)
-拡張メソッドを使用すると、既存のクラスにメソッドを追加できます。 拡張メソッドが宣言されており、スコープに取り込む後、は、拡張する型のインスタンス メソッドと同様に呼び出すことができます。 拡張メソッドを作成する方法の詳細については、次を参照してください。[する方法: 拡張メソッドを記述](./how-to-write-an-extension-method.md)です。  
+# <a name="how-to-call-an-extension-method-visual-basic"></a>方法: 拡張メソッド (Visual Basic) を呼び出す
+拡張メソッドを使用すると、既存のクラスにメソッドを追加できます。 拡張メソッドが宣言され、スコープに取り込む後、は、拡張する型のインスタンス メソッドのように呼び出すことができます。 拡張メソッドを記述する方法の詳細については、次を参照してください。[方法。拡張メソッドを記述](./how-to-write-an-extension-method.md)します。  
   
- 次の手順は、拡張メソッドを参照してください`PrintAndPunctuate`、2 番目のパラメーターを渡して、文字列を呼び出すインスタンス、どのような値を続けて表示される`punc`です。  
+ 次の手順は、拡張メソッドを参照してください`PrintAndPunctuate`、2 番目のパラメーターに渡される文字列インスタンスを呼び出した後にどのような値が表示されますが`punc`します。  
   
 ```vb  
 Imports System.Runtime.CompilerServices  
@@ -30,40 +30,40 @@ Module StringExtensions
 End Module  
 ```  
   
- メソッドが呼び出されるとスコープ内にある必要があります。  
+ メソッドは、呼び出された場合、スコープ内にする必要があります。  
   
 ### <a name="to-call-an-extension-method"></a>拡張メソッドを呼び出す  
   
-1.  拡張メソッドの最初のパラメーターのデータ型を持つ変数を宣言します。 `PrintAndPunctuate`、する必要があります、<xref:System.String>変数。  
+1. 拡張メソッドの最初のパラメーターのデータ型を持つ変数を宣言します。 `PrintAndPunctuate`、する必要があります、<xref:System.String>変数。  
   
     ```  
     Dim example = "Ready"  
     ```  
   
-2.  変数が、拡張メソッドを呼び出し、その値が最初のパラメーターにバインドされている`aString`です。 次のステートメントの呼び出しが表示されます`Ready?`です。  
+2. 変数が、拡張メソッドを呼び出し、その値が最初のパラメーターにバインドされている`aString`します。 次のステートメントの呼び出しが表示されます`Ready?`します。  
   
     ```  
     example.PrintAndPunctuate("?")  
     ```  
   
-     この拡張メソッドの呼び出しは単に検索する通知などのいずれかを呼び出し、<xref:System.String>インスタンス メソッドを 1 つのパラメーターを必要とします。  
+     この拡張メソッドの呼び出しは単に注意してくださいなどのいずれかを呼び出し、<xref:System.String>インスタンス メソッドを 1 つのパラメーターを必要とします。  
   
     ```  
     example.EndsWith("dy")  
     example.IndexOf("R")  
     ```  
   
-3.  別の文字列変数を宣言し、任意の文字列での動作を確認するには、もう一度メソッドを呼び出します。  
+3. もう 1 つの文字列変数を宣言し、任意の文字列で動作するかを確認するには、もう一度メソッドを呼び出します。  
   
     ```  
     Dim example2 = " or not"  
     example2.PrintAndPunctuate("!!!")  
     ```  
   
-     この時間は、結果:`or not!!!`です。  
+     この時間になります:`or not!!!`します。  
   
 ## <a name="example"></a>例  
- 次のコード作成の完全な例、単純な拡張メソッドを使用します。  
+ 次のコード作成の完全な例を単純な拡張メソッドを使用します。  
   
 ```vb  
 Imports System.Runtime.CompilerServices  
@@ -94,7 +94,8 @@ End Module
 ' Goodbye?  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [方法 : 拡張メソッドを作成する](./how-to-write-an-extension-method.md)  
- [拡張メソッド](./extension-methods.md)  
- [Visual Basic におけるスコープ](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+## <a name="see-also"></a>関連項目
+
+- [方法: 拡張メソッドを作成します。](./how-to-write-an-extension-method.md)
+- [拡張メソッド](./extension-methods.md)
+- [Visual Basic におけるスコープ](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

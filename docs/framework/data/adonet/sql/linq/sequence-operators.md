@@ -2,21 +2,21 @@
 title: シーケンス演算子
 ms.date: 03/30/2017
 ms.assetid: 4d332d32-3806-4451-b7af-25af269194ae
-ms.openlocfilehash: 01807e48c06bce1d451961bb6204d1f8e49d53f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 96f36681c4933d3aa15547c00e003b6d9c18d704
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360288"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616114"
 ---
 # <a name="sequence-operators"></a>シーケンス演算子
 一般的には、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では、次のいずれかの性質を持つシーケンス演算子はサポートされません。  
   
--   ラムダとインデックス パラメーターを使用する。  
+- ラムダとインデックス パラメーターを使用する。  
   
--   シーケンス行のプロパティに依存する (<xref:System.Linq.Queryable.TakeWhile%2A> など)。  
+- シーケンス行のプロパティに依存する (<xref:System.Linq.Queryable.TakeWhile%2A> など)。  
   
--   任意の CLR 実装に依存する (<xref:System.Collections.Generic.IComparer%601> など)。  
+- 任意の CLR 実装に依存する (<xref:System.Collections.Generic.IComparer%601> など)。  
   
 |サポートされない例|  
 |-----------------------------|  
@@ -45,5 +45,6 @@ ms.locfileid: "33360288"
 ## <a name="differences-from-net"></a>.NET との相違  
  サポートされるすべてのシーケンス演算子は、`Average` を除いて、共通言語ランタイム (CLR) で正常に動作します。 `Average` は、平均化される型と同じ型の値を返しますが、CLR での `Average` は、常に <xref:System.Double> または <xref:System.Decimal> を返します。 ソース引数が明示的に double / decimal にキャストされている場合、または、セレクターが double / decimal にキャストする場合、作成される SQL でもこのような変換が行われるため、結果に問題はありません。  
   
-## <a name="see-also"></a>関連項目  
- [データ型と関数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+## <a name="see-also"></a>関連項目
+
+- [データ型と関数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

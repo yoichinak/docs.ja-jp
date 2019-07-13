@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 938044a4e932139eb8a4d0a5d2f998cbc6f193cb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5ac5cc8633881749bdc167e1b3925a83f7adf3b3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507694"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760303"
 ---
 # <a name="qualifiersetnext-function"></a>QualifierSet_Next 関数
 [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) 関数の呼び出しによって開始された列挙型内の次の修飾子が返されます。   
@@ -30,7 +30,7 @@ ms.locfileid: "43507694"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT QualifierSet_Next (
    [in] int                  vFunc, 
    [in] IWbemQualifierSet*   ptr, 
@@ -50,7 +50,7 @@ HRESULT QualifierSet_Next (
 [in]ポインター、 [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)インスタンス。
 
 `lFlags`   
-[in]予約されています。 このパラメーターは、0 を指定する必要があります。
+[in] 予約されています。 このパラメーターは、0 を指定する必要があります。
 
 `pstrName`   
 [out]修飾子の名前。 場合`null`、このパラメーターは無視されます。 それ以外`pstrName`、有効なをポイントする必要がありますいない`BSTR`またはメモリ リークが発生します。 かどうかは null でない関数は、常に割り当て、新しい`BSTR`を返す場合`WBEM_S_NO_ERROR`します。
@@ -81,12 +81,13 @@ HRESULT QualifierSet_Next (
 
 列挙時に返される修飾子の順序は定義されません。
 
-## <a name="requirements"></a>要件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>関連項目  
-[WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+## <a name="see-also"></a>関連項目
+
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

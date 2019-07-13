@@ -2,12 +2,12 @@
 title: クエリの例
 ms.date: 03/30/2017
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
-ms.openlocfilehash: 38454890e05b00cd92bca909ce0c7975f5ef1f6e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 74664dd98ac067153894edc934c8f15eec407261
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783111"
 ---
 # <a name="query-examples"></a>クエリの例
 このセクションでは、一般的な Visual Basic と c# の例を提供します。[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]クエリ。 Visual Studio を使用している開発者は、「サンプル」セクションで使用可能なサンプル ソリューションでより多く例を見つけることができます。 詳細については、次を参照してください。[サンプル](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)します。  
@@ -65,8 +65,11 @@ ms.locfileid: "44211867"
  結合の例を示します`select`と他の機能 (たとえば、*匿名型*) クエリ射影を作成します。  
   
 ## <a name="related-sections"></a>関連項目  
- [標準クエリ演算子の概要](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
- 標準クエリ演算子の概念について説明します。  
+ [標準クエリ演算子の概要 (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ 使用して、標準クエリ演算子の概念を説明C#します。  
+  
+ [標準クエリ演算子の概要 (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ Visual Basic を使用して、標準クエリ演算子の概念について説明します。  
   
  [クエリの概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
  クエリに関する概念が [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] でどのように使用されるかを説明します。  

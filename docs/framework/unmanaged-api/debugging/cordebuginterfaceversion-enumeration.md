@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fac90699cf217aff926003aa545b9cceb11bf58d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ad31df899fe98e66e39a1af785618b3679e644bd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410008"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739877"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>CorDebugInterfaceVersion 列挙型
 インターフェイス、つまり .NET Framework のバージョン、またはインターフェイスが導入された .NET Framework のバージョンを指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum CorDebugInterfaceVersion {  
   
     CorDebugInvalidVersion            = 0,  
@@ -204,7 +204,7 @@ typedef enum CorDebugInterfaceVersion {
 |`ver_ICorDebugCode2`|[ICorDebugCode2](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-interface.md)|2.0|  
 |`ver_ICorDebugClass2`|"ICorDebugClass2"|2.0|  
 |`ver_ICorDebugValue2`|"ICorDebugValue2"|2.0|  
-|`ver_ICorDebugEval2`|"ICorDebugEval2"です。|2.0|  
+|`ver_ICorDebugEval2`|"ICorDebugEval2"。|2.0|  
 |`ver_ICorDebugObjectValue2`|"ICorDebugObjectValue2"|2.0|  
 |`ver_ICorDebugThread3`|[ICorDebugThread3](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-interface.md)|4|  
 |`ver_ICorDebugThread4`|[ICorDebugThread4](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)|4|  
@@ -221,30 +221,31 @@ typedef enum CorDebugInterfaceVersion {
 |`ver_ICorDebugILFrame3`|[ICorDebugILFrame3](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-interface.md)|4.5|  
 |`CorDebugLatestVersion`|(すべてのサービス パックを含めて) .NET Framework のバージョンは最新バージョン。|-|  
   
-## <a name="remarks"></a>コメント  
- デバッガーが使用できる、`CorDebugInterfaceVersion`内の列挙型、 [CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md)デバッガーがサポートする .NET Framework の最新バージョンを指定します。  
+## <a name="remarks"></a>Remarks  
+ デバッガーを使用、`CorDebugInterfaceVersion`で列挙、 [CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md)デバッガーがサポートする .NET Framework の最新バージョンを指定する関数。  
   
 ## <a name="interface-names"></a>インターフェイス名  
  デバッグ API でインターフェイス名の最後に示される数字 (`ICorDebugThread3` の "3" など) は、.NET Framework のバージョンではなく、インターフェイスのバージョンを表します。 デバッグ API のすべてのインターフェイス名にはバージョン番号が含まれます (ただし .NET Framework バージョン 1 で導入されたインターフェイスは除きます)。 インターフェイスのバージョン番号と .NET Framework のバージョン番号が同じでもそれは偶然の一致です。  
   
--   .NET Framework バージョン 1.0 で導入されたインターフェイスは暗黙的にすべてバージョン 1 であるため、このインターフェイスには番号が含まれません。  
+- .NET Framework バージョン 1.0 で導入されたインターフェイスは暗黙的にすべてバージョン 1 であるため、このインターフェイスには番号が含まれません。  
   
--   .NET Framework バージョン 1.1 はバージョン 1.0 インターフェイスを使用しており、新しいデバッグ インターフェイスは導入していません。  
+- .NET Framework バージョン 1.1 はバージョン 1.0 インターフェイスを使用しており、新しいデバッグ インターフェイスは導入していません。  
   
--   .NET Framework バージョン 2.0 で導入された 14 個のデバッグ インターフェイスは、バージョン 1 のそれらの論理的拡張であり、名前に "2" が含まれています。  
+- .NET Framework バージョン 2.0 で導入された 14 個のデバッグ インターフェイスは、バージョン 1 のそれらの論理的拡張であり、名前に "2" が含まれています。  
   
--   .NET Framework バージョン 3.0 および 3.5 は既存の .NET Framework 2.0 インターフェイスを使用しており、新しいインターフェイスは導入していません。  
+- .NET Framework バージョン 3.0 および 3.5 は既存の .NET Framework 2.0 インターフェイスを使用しており、新しいインターフェイスは導入していません。  
   
--   [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]インターフェイスの混合バージョンが導入されています。 たとえば、`ICorDebugThread3` および `ICorDebugThread4` は、`ICorDebugThread` インターフェイスの 3 番目および 4 番目のバージョンとして示されます。 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]の最初のバージョンが導入されても、`ICorDebugStackWalk`インターフェイスとの 2 番目のバージョン、`ICorDebugNativeFrame`インターフェイス (`ICorDebugNativeFrame2`)。  
+- .NET Framework 4 では、さまざまなインターフェイスのバージョンについて説明します。 たとえば、`ICorDebugThread3` および `ICorDebugThread4` は、`ICorDebugThread` インターフェイスの 3 番目および 4 番目のバージョンとして示されます。 .NET Framework 4 は、の最初のバージョンも導入されています。、`ICorDebugStackWalk`インターフェイスとの 2 番目のバージョン、`ICorDebugNativeFrame`インターフェイス (`ICorDebugNativeFrame2`)。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>関連項目
+
+- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

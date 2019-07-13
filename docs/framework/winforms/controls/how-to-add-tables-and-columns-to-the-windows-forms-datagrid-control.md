@@ -1,5 +1,5 @@
 ---
-title: '方法 : Windows フォーム DataGrid コントロールにテーブルと列を追加する'
+title: '方法: Windows フォーム DataGrid コントロールにテーブルと列を追加する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,27 +10,27 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 2fe661b9-aa06-49b9-a314-a0d3cbfdcb4d
-ms.openlocfilehash: fc8161ea29da92f5dcc2e76f956f3fecd6140acc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: cc364f3609f8041378b0b03b8e1bc8f312fade18
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527720"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59319912"
 ---
-# <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control"></a>方法 : Windows フォーム DataGrid コントロールにテーブルと列を追加する
+# <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control"></a>方法: Windows フォーム DataGrid コントロールにテーブルと列を追加する
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。 詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。  
+>  <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。 詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。  
   
- Windows フォームでデータを表示することができます<xref:System.Windows.Forms.DataGrid>テーブルおよび列を作成してコントロール**DataGridTableStyle**オブジェクトとに追加すること、 **GridTableStylesCollection**オブジェクトは使用してアクセス、<xref:System.Windows.Forms.DataGrid>コントロールの**TableStyles**プロパティです。 各テーブルのスタイルで指定されたは、どのようなデータ テーブルの内容を表示する、 **DataGridTableStyle**オブジェクトの**MappingName**プロパティです。 テーブル スタイルが指定されていない列のスタイルでは既定では、そのデータ テーブル内のすべての列が表示されます。 追加することによって表示される、テーブルから列を制限する**DataGridColumnStyle**オブジェクトを**GridColumnStylesCollection**からアクセスできるオブジェクト、 **GridColumnStyles**の各プロパティ**DataGridTableStyle**オブジェクト。  
+ データを表示するには、Windows フォームで<xref:System.Windows.Forms.DataGrid>テーブルと列を作成してコントロール**DataGridTableStyle**オブジェクトと追加すること、 **GridTableStylesCollection**となるオブジェクト使用してアクセス、<xref:System.Windows.Forms.DataGrid>コントロールの**TableStyles**プロパティ。 各テーブルのスタイルがで指定されたは、どのようなデータ テーブルの内容を表示、 **DataGridTableStyle**オブジェクトの**MappingName**プロパティ。 既定では、テーブルのスタイルが指定されていない列スタイルを使用するデータ テーブル内のすべての列が表示されます。 追加することで表示するテーブルから列を制限する**DataGridColumnStyle**オブジェクトを**GridColumnStylesCollection**オブジェクトを通じてアクセスされる、 **GridColumnStyles**の各プロパティ**DataGridTableStyle**オブジェクト。  
   
-### <a name="to-add-a-table-and-column-to-a-datagrid-programmatically"></a>データ グリッドに、テーブルと列をプログラムで追加するには  
+### <a name="to-add-a-table-and-column-to-a-datagrid-programmatically"></a>データ グリッドにテーブルと列をプログラムで追加するには  
   
-1.  テーブルにデータを表示するためにする必要がありますまずバインド、<xref:System.Windows.Forms.DataGrid>データセットを制御します。 詳細については、次を参照してください。[する方法: Windows フォーム DataGrid コントロールをデータ ソースにバインド](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)です。  
+1. テーブルにデータを表示するにはまず、<xref:System.Windows.Forms.DataGrid>データセットへのコントロール。 詳細については、「[方法 :データ ソースに Windows フォーム DataGrid コントロールをバインド](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)します。  
   
     > [!CAUTION]
-    >  列のスタイルをプログラムで指定する場合は常に作成する**DataGridColumnStyle**オブジェクトに追加して、 **GridColumnStylesCollection**追加する前にオブジェクト**DataGridTableStyle**オブジェクトを**GridTableStylesCollection**オブジェクト。 空の追加と**DataGridTableStyle** 、コレクションにオブジェクトを**DataGridColumnStyle**オブジェクトが自動的に生成されます。 新規追加しようとする場合に、例外がスローされますその結果、 **DataGridColumnStyle**オブジェクトが複製によって**MappingName**値を**GridColumnStylesCollection**オブジェクト。  
+    >  列のスタイルをプログラムで指定するには、ときに常に作成**DataGridColumnStyle**オブジェクトに追加して、 **GridColumnStylesCollection**オブジェクトを追加する前に**DataGridTableStyle**オブジェクトを**GridTableStylesCollection**オブジェクト。 空の追加と**DataGridTableStyle**オブジェクトをコレクションに**DataGridColumnStyle**オブジェクトが自動的に生成します。 新規追加しようとする場合に例外がスローされます、 **DataGridColumnStyle**重複オブジェクト**MappingName**値を**GridColumnStylesCollection**オブジェクト。  
   
-2.  新しいテーブルのスタイルを宣言し、そのマップ名を設定します。  
+2. 新しいテーブルのスタイルを宣言し、そのマッピングの名前を設定します。  
   
     ```vb  
     Dim ts1 As New DataGridTableStyle()  
@@ -47,7 +47,7 @@ ms.locfileid: "33527720"
     ts1->MappingName = S"Customers";  
     ```  
   
-3.  新しい列のスタイルを宣言し、そのマップ名やその他のプロパティを設定します。  
+3. 新しい列のスタイルを宣言し、そのマッピングの名前とその他のプロパティを設定します。  
   
     ```vb  
     Dim myDataCol As New DataGridBoolColumn()  
@@ -67,7 +67,7 @@ ms.locfileid: "33527720"
     myDataCol->MappingName = "Current";  
     ```  
   
-4.  呼び出す、**追加**のメソッド、 **GridColumnStylesCollection**テーブルのスタイルに列を追加するオブジェクト  
+4. 呼び出す、**追加**のメソッド、 **GridColumnStylesCollection**テーブルのスタイルに列を追加するオブジェクト  
   
     ```vb  
     ts1.GridColumnStyles.Add(myDataCol)  
@@ -81,7 +81,7 @@ ms.locfileid: "33527720"
     ts1->GridColumnStyles->Add(myDataCol);  
     ```  
   
-5.  呼び出す、**追加**のメソッド、 **GridTableStylesCollection**データ グリッドにテーブルのスタイルを追加するオブジェクト。  
+5. 呼び出す、**追加**のメソッド、 **GridTableStylesCollection**データ グリッドにテーブルのスタイルを追加するオブジェクト。  
   
     ```vb  
     DataGrid1.TableStyles.Add(ts1)  
@@ -95,6 +95,7 @@ ms.locfileid: "33527720"
     dataGrid1->TableStyles->Add(ts1);  
     ```  
   
-## <a name="see-also"></a>関連項目  
- [DataGrid コントロール](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
- [方法: Windows フォーム DataGrid コントロールの列を削除するまたは非表示にする](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+## <a name="see-also"></a>関連項目
+
+- [DataGrid コントロール](datagrid-control-windows-forms.md)
+- [方法: 削除、または Windows フォームの DataGrid コントロール内の列を非表示にします。](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

@@ -1,21 +1,21 @@
 ---
-title: '&lt;cookieHandler&gt;'
+title: <cookieHandler>
 ms.date: 03/30/2017
 ms.assetid: bfdc127f-8d94-4566-8bef-f583c6ae7398
 author: BrucePerlerMS
-ms.openlocfilehash: 99bf6edb4e4f631eba292990c65c1f0c8553d8c0
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5238ea7b96c09fb976a25bc00b952539ddd44b49
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791743"
 ---
-# <a name="ltcookiehandlergt"></a>&lt;cookieHandler&gt;
+# <a name="cookiehandler"></a>\<cookieHandler>
 構成、<xref:System.IdentityModel.Services.CookieHandler>を<xref:System.IdentityModel.Services.SessionAuthenticationModule>(SAM) を使用して cookie を読み書きします。  
   
- \<system.identityModel.services >  
-\<federationConfiguration >  
-\<cookieHandler >  
+ \<system.identityModel.services>  
+\<federationConfiguration>  
+\<cookieHandler>  
   
 ## <a name="syntax"></a>構文  
   
@@ -55,8 +55,8 @@ ms.locfileid: "48840720"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<chunkedCookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/chunkedcookiehandler.md)|構成、<xref:System.IdentityModel.Services.ChunkedCookieHandler>します。 この要素は存在のみ可能な場合、`mode`の属性、`<cookieHandler>`要素が"Default"または「チャンク」。|  
-|[\<customCookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/customcookiehandler.md)|カスタム クッキー ハンドラーの型を設定します。 この要素が存在する必要がある場合、`mode`の属性、`<cookieHandler>`要素が"Custom"。 その他の値のために存在することはできません、`mode`属性。 カスタム型から派生する必要があります、<xref:System.IdentityModel.Services.CookieHandler>クラス。|  
+|[\<chunkedCookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/chunkedcookiehandler.md)|構成、<xref:System.IdentityModel.Services.ChunkedCookieHandler>します。 この要素は存在のみ可能な場合、`mode`の属性、`<cookieHandler>`要素が"Default"または「チャンク」。|  
+|[\<customCookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/customcookiehandler.md)|カスタム クッキー ハンドラーの型を設定します。 この要素が存在する必要がある場合、`mode`の属性、`<cookieHandler>`要素が"Custom"。 その他の値のために存在することはできません、`mode`属性。 カスタム型から派生する必要があります、<xref:System.IdentityModel.Services.CookieHandler>クラス。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -83,7 +83,8 @@ ms.locfileid: "48840720"
 <cookieHandler requireSsl="false" />  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.IdentityModel.Services.CookieHandler>  
- <xref:System.IdentityModel.Services.ChunkedCookieHandler>  
- <xref:System.IdentityModel.Services.SessionAuthenticationModule>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.IdentityModel.Services.CookieHandler>
+- <xref:System.IdentityModel.Services.ChunkedCookieHandler>
+- <xref:System.IdentityModel.Services.SessionAuthenticationModule>

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ecd1c714f41c76833ef6a0a4b7be87e338ca1a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7edd2eeafcce6a22c3256d0684a9c4f961b34002
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049896"
 ---
 # <a name="imetadataimport2enumgenericparams-method"></a>IMetaDataImport2::EnumGenericParams メソッド
-トークンのジェネリック パラメーターのトークンが、指定した TypeDef または MethodDef に関連付けられている配列の列挙子を取得します。  
+トークンのジェネリック パラメーター トークンを指定した TypeDef または MethodDef に関連付けられた配列の列挙子を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,38 +39,39 @@ HRESULT EnumGenericParams (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [入力、出力].列挙子へのポインター。  
+ [入力、出力]列挙子へのポインター。  
   
  `tk`  
- [in]ジェネリック パラメーターがある列挙される TypeDef または MethodDef トークンです。  
+ [in]ジェネリック パラメーターを持つが列挙する TypeDef または MethodDef トークンです。  
   
  `rGenericParams`  
- [out]列挙するジェネリック パラメーターの配列。  
+ [out]列挙するために、ジェネリック パラメーターの配列。  
   
  `cMax`  
- [in]配置するトークンの要求の最大数`rGenericParams`です。  
+ [in]配置するトークンの要求の最大数`rGenericParams`します。  
   
  `pcGenericParams`  
- [out]返されたトークンの数が内に配置`rGenericParams`です。  
+ [out]返されたトークンの数に配置`rGenericParams`します。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
 |`S_OK`|`EnumGenericParams` 正常に返されます。|  
-|`S_FALSE`|`phEnum` メンバーの要素がありません。 この場合、`pcGenericParams`は 0 (ゼロ) に設定します。|  
+|`S_FALSE`|`phEnum` メンバーの要素がありません。 この場合、 `pcGenericParams` 0 (ゼロ) に設定されます。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
  **ライブラリ:** MsCorEE.dll にリソースとして使用  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

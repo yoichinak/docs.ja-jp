@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42ee188c2a622d0bed2985e56e49997d2934686f
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: f62ea692c055b0537394ad5e16501d4162faef12
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44078500"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746833"
 ---
 # <a name="endmethodenumeration-function"></a>EndMethodEnumeration 関数
 呼び出しで開始した、列挙体シーケンスの終了、 [BeginMethodEnumeration 関数](beginmethodenumeration.md)します。  
@@ -30,7 +30,7 @@ ms.locfileid: "44078500"
     
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EndMethodEnumeration (
    [in] int               vFunc, 
    [in] IWbemClassObject* ptr 
@@ -60,12 +60,13 @@ HRESULT EndMethodEnumeration (
 
 呼び出し元が列挙体シーケンスの使用を開始[BeginMethodEnumeration 関数](beginmethodenumeration.md)、号餧ェヒェマル、 [NextMethod 関数](nextmethod.md )メソッドが戻るまで`WBEM_S_NO_MORE_DATA`します。 呼び出し元は、呼び出すことによって、シーケンスを完了する必要に応じて`EndMethodEnumeration`します。 呼び出し元が呼び出すことによって、列挙体を早期終了可能性があります`EndMethodEnumeration`いつでもできます。
 
-## <a name="requirements"></a>要件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>関連項目  
-[WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+## <a name="see-also"></a>関連項目
+
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

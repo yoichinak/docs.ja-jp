@@ -1,15 +1,15 @@
 ---
-title: '方法 : 名前空間を持つドキュメントを作成する (LINQ to XML) (Visual Basic)'
+title: '方法: 名前空間 (LINQ to XML) を持つドキュメントの作成 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: cc5b0d4d-360c-4ada-94fa-2d2916e989be
-ms.openlocfilehash: 204d8a9cbb6ce47c6334c7309d27910c75b90ae0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b65d22451d900f7b20226f25b61bb235241dd84f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855518"
 ---
-# <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>方法 : 名前空間を持つドキュメントを作成する (LINQ to XML) (Visual Basic)
+# <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>方法: 名前空間 (LINQ to XML) を持つドキュメントの作成 (Visual Basic)
 このトピックでは、Visual Basic で名前空間を持つドキュメントを作成する方法について説明します。  
   
  Visual Basic で XML リテラルを使用している場合、ユーザーは 1 つのグローバルな既定の XML 名前空間を定義できます。 この名前空間は、XML リテラルと XML プロパティの両方の既定の名前空間です。 既定の XML 名前空間は、プロジェクト レベルまたはファイル レベルで定義できます。 ファイル レベルで定義すると、プロジェクト レベルの既定の名前空間がオーバーライドされます。  
@@ -114,5 +114,6 @@ End Module
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [XML 名前空間 (Visual Basic) の使用](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>関連項目
+
+- [XML 名前空間 (Visual Basic) の使用](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

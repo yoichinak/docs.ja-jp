@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c803a805da605bd52fd50eb1e292c0e277143d7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 38e1b19d6340f559e6f8b7e0f7bc042a10df16c3
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405260"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025990"
 ---
 # <a name="cordebugguidtotypemapping-structure"></a>CorDebugGuidToTypeMapping 構造体
-マップ、[!INCLUDE[wrt](../../../../includes/wrt-md.md)]を対応する ICorDebugType オブジェクトの GUID。  
+Windows ランタイムの GUID を対応する ICorDebugType オブジェクトにマップします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,18 +41,19 @@ typedef struct CorDebugGuidToTypeMapping {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`iid`|キャッシュされた GUID[!INCLUDE[wrt](../../../../includes/wrt-md.md)]型です。|  
-|`pType`|キャッシュの種類に関する情報を提供する ICorDebugType オブジェクトへのポインター。|  
+|`iid`|キャッシュされている Windows ランタイム型の GUID です。|  
+|`pType`|キャッシュされている型に関する情報を提供する ICorDebugType オブジェクトへのポインター。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** Windows ランタイム。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>関連項目
+
+- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)

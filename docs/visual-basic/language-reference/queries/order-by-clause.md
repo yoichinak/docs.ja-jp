@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Order By clause [Visual Basic]
 - Order By statement [Visual Basic]
 ms.assetid: fa911282-6b81-44c7-acfa-46b5bb93df75
-ms.openlocfilehash: d4abb5f0b75ae4069c1dbe695a5c810b1f7aa6e1
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 1c84a4cdb4a149154d459ca4d9c290ed360d1772
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61712566"
 ---
 # <a name="order-by-clause-visual-basic"></a>Order By 句 (Visual Basic)
 クエリ結果の並べ替え順序を指定します。  
@@ -38,20 +38,21 @@ Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]
 ## <a name="example"></a>例  
  次のクエリ式は、`From`範囲変数を宣言する句`book`の`books`コレクション。 `Order By`句で昇順に並べ替えます (既定値) の価格をクエリの結果を並べ替えます。 同じ価格ブックは、タイトルの昇順で並べ替えられます。 `Select`句を選択、`Title`と`Price`プロパティとして、クエリによって返される値。  
   
- [!code-vb[VbSimpleQuerySamples#24](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#24)]  
   
 ## <a name="example"></a>例  
  次のクエリ式は、`Order By`降順で価格をクエリ結果を並べ替えるための句。 同じ価格ブックは、タイトルの昇順で並べ替えられます。  
   
- [!code-vb[VbSimpleQuerySamples#25](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_2.vb)]  
+ [!code-vb[VbSimpleQuerySamples#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#25)]  
   
 ## <a name="example"></a>例  
  次のクエリ式は、`Select`句を書籍のタイトルを選択し、価格、発行日、作成します。 設定し、 `Title`、 `Price`、`PublishDate`と`Author`新しいスコープの範囲変数のフィールド。 `Order By`句の作成者の名前、書籍のタイトル、および価格によって新しい範囲変数の順序。 各列は、既定の順序 (昇順) で並べ替えられます。  
   
- [!code-vb[VbSimpleQuerySamples#26](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_3.vb)]  
+ [!code-vb[VbSimpleQuerySamples#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#26)]  
   
-## <a name="see-also"></a>関連項目  
- [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [クエリ](../../../visual-basic/language-reference/queries/index.md)  
- [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)  
- [From 句](../../../visual-basic/language-reference/queries/from-clause.md)
+## <a name="see-also"></a>関連項目
+
+- [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [クエリ](../../../visual-basic/language-reference/queries/index.md)
+- [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From 句](../../../visual-basic/language-reference/queries/from-clause.md)

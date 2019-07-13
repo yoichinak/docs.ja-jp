@@ -1,21 +1,21 @@
 ---
-title: '例: データ バインディング時の例外の処理'
+title: 例:データ バインド時の例外の処理
 ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a861da011898c3648c66b6a0ea0f97cdb26ff288
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 137459acc275629bb4608218772ae969e3fcf99a
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452758"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052688"
 ---
-# <a name="example-handling-exceptions-when-binding-data"></a>例: データ バインディング時の例外の処理
+# <a name="example-handling-exceptions-when-binding-data"></a>例:データ バインド時の例外の処理
 > [!NOTE]
 >  このトピックでは、プレリリース ソフトウェアである .NET Native Developer Preview について述べています。 プレビュー版は、[Microsoft Connect Web サイト](https://go.microsoft.com/fwlink/?LinkId=394611)からダウンロードできます (登録が必要です)。  
   
- 次の例は、[!INCLUDE[net_native](../../../includes/net-native-md.md)] ツール チェーンでコンパイルされたアプリがデータをバインドしようとしたときにスローされる [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 例外の解決方法を示しています。 例外情報は次のとおりです。  
+ 次の例では、解決する方法を示しています、 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) .NET ネイティブ ツール チェーンでコンパイルされたアプリがデータ バインドを試みるとスローされる例外です。 例外情報は次のとおりです。  
   
 ```  
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:   
@@ -59,6 +59,7 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
   
  ただし、`ViewModel` を XAML ページに指定して、ツール チェーンがコンパイル時にプロパティ バインディングを正しい型に関連付けて、ランタイム ディレクティブを使用せずにメタデータを保持できるようにする方法はあります。  たとえば、適用する可能性があります、<xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType>プロパティの属性。 これにより、XAML コンパイラが必要なルックアップ情報を生成するようになり、Default.rd.xml ファイルのランタイム ディレクティブが不要になります。  
   
-## <a name="see-also"></a>関連項目  
- [はじめに](../../../docs/framework/net-native/getting-started-with-net-native.md)  
- [例: 動的プログラミングのトラブルシューティング](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)
+## <a name="see-also"></a>関連項目
+
+- [はじめに](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [例:動的プログラミングのトラブルシューティング](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)

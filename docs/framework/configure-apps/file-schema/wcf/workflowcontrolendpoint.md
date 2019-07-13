@@ -1,19 +1,19 @@
 ---
-title: '&lt;workflowControlEndpoint&gt;'
+title: <workflowControlEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 6c89e76c-643b-4b6a-9b25-628f753d7027
-ms.openlocfilehash: 178ccc8ac35b0ac76d74c818dce43dcffc5c0835
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: a9c16d1036a8177120cd152d4ac211ad084d588e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54144952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769643"
 ---
-# <a name="ltworkflowcontrolendpointgt"></a>&lt;workflowControlEndpoint&gt;
+# <a name="workflowcontrolendpoint"></a>\<workflowControlEndpoint>
 この構成要素は、ワークフロー インスタンスの実行の制御 (作成、実行、保留、終了など) に使用する標準エンドポイントを定義します。  
   
 \<system.ServiceModel >  
-\<standardEndpoints >  
+\<standardEndpoints>  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,7 +43,8 @@ ms.locfileid: "54144952"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|1 つ以上のプロパティ (アドレス、バインディング、コントラクト) が固定されている、あらかじめ定義されたエンドポイントである標準エンドポイントのコレクション。|  
+|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|1 つ以上のプロパティ (アドレス、バインディング、コントラクト) が固定されている、あらかじめ定義されたエンドポイントである標準エンドポイントのコレクション。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>

@@ -1,18 +1,18 @@
 ---
-title: Visual Studio 2017 での Hello World アプリケーションの発行
-description: 発行では、アプリケーションを実行するために必要なファイルのセットを作成します。
+title: Visual Studio 2017 での .NET Core Hello World アプリケーションの発行
+description: 発行では、.NET Core アプリケーションを実行するために必要なファイルのセットを作成します。
 author: BillWagner
 ms.author: wiwagn
 ms.date: 10/05/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 8d6d5cc7766334e10e7ae3a70af0c309c05bc98b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 0322d44ca37ab8e7faa3188887069c2e04ec755b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169119"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59110267"
 ---
-# <a name="publish-your-hello-world-application-with-visual-studio-2017"></a>Visual Studio 2017 での Hello World アプリケーションの発行
+# <a name="publish-your-net-core-hello-world-application-with-visual-studio-2017"></a>Visual Studio 2017 での .NET Core Hello World アプリケーションの発行
 
 「[Visual Studio 2017 での .NET Core を使用した C# Hello World アプリケーションの構築](with-visual-studio.md)」または「[Visual Studio 2017 での .NET Core を使用した Visual Basic Hello World アプリケーションの構築](vb-with-visual-studio.md)」では、Hello World コンソール アプリケーションを構築しました。 「[Visual Studio 2017 での C# Hello World アプリケーションのデバッグ](debugging-with-visual-studio.md)」では、Visual Studio デバッガーを使ってアプリケーションをテストしました。 正しく動作することが確認できたので、他のユーザーが使用できるように発行することができます。 発行では、アプリケーションを実行するために必要なファイルのセットが作成されます。これらのファイルは、対象コンピューターにコピーすることで配置できます。
 
@@ -25,7 +25,6 @@ ms.locfileid: "53169119"
 1. **HelloWorld** プロジェクト (HelloWorld ソリューションではなく) を右クリックし、メニューから **[発行]** を選びます。 Visual Studio のメイン メニューの **[ビルド]** から **[HelloWorld を発行]** を選択することもできます。
 
    ![Visual Studio の [発行] コンテキスト メニュー](media/publishing-with-visual-studio/publish-context-menu.png)
-
 
    ![Visual Studio の [発行] ウィンドウ](media/publishing-with-visual-studio/publish-settings-window.png)
 

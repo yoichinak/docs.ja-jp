@@ -17,49 +17,48 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 5bf1a0e1d4d8f620f83aab50aa50009a0f6a6cf4
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2c48788507eed40e8240491dbd5064ad6c293c9f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855973"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651927"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF アプリケーションのリソース ファイル、コンテンツ ファイル、およびデータ ファイル
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 多くの場合など、非実行可能ファイルのデータを含むファイルに依存するアプリケーション[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]イメージ、ビデオ、およびオーディオです。 Windows Presentation Foundation (WPF) の構成の識別、およびこれらの種類のアプリケーション データ ファイルと呼ばれる、データ ファイルを使用して特別なサポートを提供します。 このサポートの中心となるのは、次のような特定のアプリケーション データ ファイルの種類のセットです。  
   
--   **リソース ファイル**: データ ファイルも実行可能ファイルまたはライブラリにコンパイルされる[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アセンブリ。  
+- **リソース ファイル**:データ ファイルも実行可能ファイルまたはライブラリにコンパイルされる[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アセンブリ。  
   
--   **コンテンツ ファイル**: スタンドアロン データ ファイルを実行可能ファイルとの明示的な関連付けを持つ[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アセンブリ。  
+- **コンテンツ ファイル**:スタンドアロン データ ファイルを実行可能ファイルとの明示的な関連付けを持つ[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アセンブリ。  
   
--   **起点サイト ファイル**: 実行可能ファイルとの関連付けを持たないスタンドアロン データ ファイル[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アセンブリ。  
+- **起点サイト ファイル**:実行可能ファイルとの関連付けを持たないスタンドアロン データ ファイル[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アセンブリ。  
   
  これらの 3 種類のファイルの重要な違いは、リソース ファイルとコンテンツ ファイルはビルド時に認識されるという点です。アセンブリは、これらを明確に認識します。 起点サイト ファイル、ただし、アセンブリがありますそれらの知識、またはパックを使用して暗黙的な知識[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]参照。 後者の場合、参照される起点サイト ファイルが実際に存在する保証はありません。  
   
- Windows Presentation Foundation (WPF) が、パックを使用するにはアプリケーション データ ファイルを参照するには、[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]はで詳しく説明されているスキーム[WPF におけるパック Uri](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md))。  
+ Windows Presentation Foundation (WPF) が、パックを使用するにはアプリケーション データ ファイルを参照するには、[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]はで詳しく説明されているスキーム[WPF におけるパック Uri](pack-uris-in-wpf.md))。  
   
  このトピックでは、アプリケーション データ ファイルを構成および使用する方法について説明します。  
-  
-  
+
 <a name="Resource_Files"></a>   
 ## <a name="resource-files"></a>リソース ファイル (Visual Studio)  
  アプリケーション データ ファイルを常にアプリケーションで使用可能にするには、コンパイルしてアプリケーションのメイン実行可能アセンブリまたはその参照アセンブリの 1 つに組み込む必要があります。 この種類のアプリケーション データ ファイルと呼ばれる、*リソース ファイル*します。  
   
  リソース ファイルは、次のときに使用します。  
   
--   コンパイルしてアセンブリに組み込んだ後に、リソース ファイルのコンテンツを更新する必要がない。  
+- コンパイルしてアセンブリに組み込んだ後に、リソース ファイルのコンテンツを更新する必要がない。  
   
--   ファイルの依存関係の数を減らして、アプリケーション配布の複雑さを軽減する必要がある。  
+- ファイルの依存関係の数を減らして、アプリケーション配布の複雑さを軽減する必要がある。  
   
--   アプリケーション データ ファイルがローカライズ可能にする必要があります (を参照してください[WPF のグローバリゼーションおよびローカリゼーションの概要](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md))。  
+- アプリケーション データ ファイルがローカライズ可能にする必要があります (を参照してください[WPF のグローバリゼーションおよびローカリゼーションの概要](../advanced/wpf-globalization-and-localization-overview.md))。  
   
 > [!NOTE]
->  このセクションで説明されているリソース ファイルは、リソース ファイルで説明されているものと異なる[XAML リソース](../../../../docs/framework/wpf/advanced/xaml-resources.md)しで説明されている埋め込みまたはリンクされたリソースとは異なる[アプリケーション リソースの管理 (.NET)](https://msdn.microsoft.com/library/f2582734-8ada-4baa-8a7c-e2ef943ddf7e).  
+>  このセクションで説明されているリソース ファイルは、リソース ファイルで説明されているものと異なる[XAML リソース](../advanced/xaml-resources.md)しで説明されている埋め込みまたはリンクされたリソースとは異なる[管理アプリケーションのリソース (.NET)](/visualstudio/ide/managing-application-resources-dotnet).  
   
 ### <a name="configuring-resource-files"></a>リソース ファイルの構成  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]、リソース ファイルに含まれているファイルとは、[!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)]プロジェクトとして、`Resource`項目。  
   
 ```xml  
-<Project "xmlns=http://schemas.microsoft.com/developer/msbuild/2003" ... >  
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
   ...  
   <ItemGroup>  
     <Resource Include="ResourceFile.xaml" />  
@@ -78,24 +77,24 @@ ms.locfileid: "43855973"
   
  たとえば、次のコードが使用する方法を示します<xref:System.Windows.Application.GetResourceStream%2A>を読み込む、<xref:System.Windows.Controls.Page>リソース ファイルし、のコンテンツとして設定する、 <xref:System.Windows.Controls.Frame> (`pageFrame`)。  
   
- [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.cs#loadapageresourcefilemanuallycode)]
- [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.vb#loadapageresourcefilemanuallycode)]  
+ [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.cs#loadapageresourcefilemanuallycode)]
+ [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.vb#loadapageresourcefilemanuallycode)]  
   
  呼び出し中に<xref:System.Windows.Application.GetResourceStream%2A>にアクセスすること、 <xref:System.IO.Stream>、それを設定 プロパティの型に変換する余分な作業を実行する必要があります。 代わりに、させることができます[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]注意を開いたり変換したり、<xref:System.IO.Stream>でコードを使用して型のプロパティに直接、リソース ファイルを読み込みます。  
   
  次の例を読み込む方法を示しています、<xref:System.Windows.Controls.Page>に直接、 <xref:System.Windows.Controls.Frame> (`pageFrame`) コードを使用します。  
   
- [!code-csharp[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.cs#loadpageresourcefilefromcode)]
- [!code-vb[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.vb#loadpageresourcefilefromcode)]  
+ [!code-csharp[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.cs#loadpageresourcefilefromcode)]
+ [!code-vb[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.vb#loadpageresourcefilefromcode)]  
   
  次の例は、上の例と同じ意味のマークアップです。  
   
- [!code-xaml[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml#loadpageresourcefilefromxaml)]  
+ [!code-xaml[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml#loadpageresourcefilefromxaml)]  
   
 ### <a name="application-code-files-as-resource-files"></a>リソース ファイルとしてのアプリケーション コード ファイル  
  一連の特殊な[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]パックを使用して、アプリケーション コード ファイルを参照できる[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)](windows、ページ、フロー ドキュメント、リソース ディクショナリなど)。 たとえば、設定、<xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType>パック プロパティ[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]ウィンドウまたはアプリケーションの起動時に読み込むしたいページを参照します。  
   
- [!code-xaml[WPFAssemblyResourcesSnippets#SetApplicationStartupURI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/App.xaml#setapplicationstartupuri)]  
+ [!code-xaml[WPFAssemblyResourcesSnippets#SetApplicationStartupURI](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/App.xaml#setapplicationstartupuri)]  
   
  場合にこのを行うことができます、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]でファイルが含まれて、[!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)]プロジェクトとして、`Page`項目。  
   
@@ -158,35 +157,35 @@ ms.locfileid: "43855973"
   
  たとえば、次のコードが使用する方法を示します<xref:System.Windows.Application.GetContentStream%2A>を読み込む、<xref:System.Windows.Controls.Page>ファイルのコンテンツし、のコンテンツとして設定する、 <xref:System.Windows.Controls.Frame> (`pageFrame`)。  
   
- [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.cs#loadapagecontentfilemanuallycode)]
- [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.vb#loadapagecontentfilemanuallycode)]  
+ [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.cs#loadapagecontentfilemanuallycode)]
+ [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.vb#loadapagecontentfilemanuallycode)]  
   
  呼び出し中に<xref:System.Windows.Application.GetContentStream%2A>にアクセスすること、 <xref:System.IO.Stream>、それを設定 プロパティの型に変換する余分な作業を実行する必要があります。 代わりに、させることができます[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]注意を開いたり変換したり、<xref:System.IO.Stream>でコードを使用して型のプロパティに直接、リソース ファイルを読み込みます。  
   
  次の例を読み込む方法を示しています、<xref:System.Windows.Controls.Page>に直接、 <xref:System.Windows.Controls.Frame> (`pageFrame`) コードを使用します。  
   
- [!code-csharp[WPFAssemblyResourcesSnippets#LoadPageContentFileFromCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.cs#loadpagecontentfilefromcode)]
- [!code-vb[WPFAssemblyResourcesSnippets#LoadPageContentFileFromCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.vb#loadpagecontentfilefromcode)]  
+ [!code-csharp[WPFAssemblyResourcesSnippets#LoadPageContentFileFromCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.cs#loadpagecontentfilefromcode)]
+ [!code-vb[WPFAssemblyResourcesSnippets#LoadPageContentFileFromCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.vb#loadpagecontentfilefromcode)]  
   
  次の例は、上の例と同じ意味のマークアップです。  
   
- [!code-xaml[WPFAssemblyResourcesSnippets#LoadPageContentFileFromXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml#loadpagecontentfilefromxaml)]  
+ [!code-xaml[WPFAssemblyResourcesSnippets#LoadPageContentFileFromXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml#loadpagecontentfilefromxaml)]  
   
 <a name="Site_of_Origin_Files"></a>   
 ## <a name="site-of-origin-files"></a>起点サイト ファイル  
  リソース ファイルで定義されている、共に配布されるアセンブリを使用した明示的な関連付けがある場合、<xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>します。 ただし、アセンブリとアプリケーション データ ファイル間に暗黙的な関係を持たせる、または関係を持たせない場合があります。たとえば次のような場合です。  
   
--   ファイルは、コンパイル時に存在しません。  
+- ファイルは、コンパイル時に存在しません。  
   
--   アセンブリが必要とするファイルが、実行時までわからない場合。  
+- アセンブリが必要とするファイルが、実行時までわからない場合。  
   
--   関連付けられているアセンブリを再コンパイルせずにファイルを更新可能にする場合。  
+- 関連付けられているアセンブリを再コンパイルせずにファイルを更新可能にする場合。  
   
--   オーディオやビデオなど大容量のデータ ファイルを使用するアプリケーションで、ユーザーが選択した場合にのみファイルをダウンロードする場合。  
+- オーディオやビデオなど大容量のデータ ファイルを使用するアプリケーションで、ユーザーが選択した場合にのみファイルをダウンロードする場合。  
   
  この種の従来型を使用してファイルをロードすることは[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]file:/// http:// 方式などのスキーム。  
   
- [!code-xaml[WPFAssemblyResourcesSnippets#AbsolutePackUriFileHttpReferenceXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/AbsolutePackUriPage.xaml#absolutepackurifilehttpreferencexaml)]  
+ [!code-xaml[WPFAssemblyResourcesSnippets#AbsolutePackUriFileHttpReferenceXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/AbsolutePackUriPage.xaml#absolutepackurifilehttpreferencexaml)]  
   
  ただし、file:/// スキームや http:// スキームを使用する場合は、アプリケーションに完全信頼が必要です。 アプリケーションの場合、[!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]がインターネットまたはイントラネットから起動して、圧縮しないファイルは、配信元 (アプリケーションのサイトからのみ読み込むことが、それらの場所から起動するアプリケーションの許可されるアクセス許可のセットのみを要求場所を起動) します。 このようなファイルと呼びます*起点サイト*ファイル。  
   
@@ -220,23 +219,24 @@ ms.locfileid: "43855973"
   
  たとえば、次のコードが使用する方法を示します<xref:System.Windows.Application.GetRemoteStream%2A>を読み込む、<xref:System.Windows.Controls.Page>起点サイト ファイルし、のコンテンツとして設定、 <xref:System.Windows.Controls.Frame> (`pageFrame`)。  
   
- [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml.cs#loadapagesoofilemanuallycode)]
- [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/SOOPage.xaml.vb#loadapagesoofilemanuallycode)]  
+ [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml.cs#loadapagesoofilemanuallycode)]
+ [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/SOOPage.xaml.vb#loadapagesoofilemanuallycode)]  
   
  呼び出し中に<xref:System.Windows.Application.GetRemoteStream%2A>にアクセスすること、 <xref:System.IO.Stream>、それを設定 プロパティの型に変換する余分な作業を実行する必要があります。 代わりに、させることができます[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]注意を開いたり変換したり、<xref:System.IO.Stream>でコードを使用して型のプロパティに直接、リソース ファイルを読み込みます。  
   
  次の例を読み込む方法を示しています、<xref:System.Windows.Controls.Page>に直接、 <xref:System.Windows.Controls.Frame> (`pageFrame`) コードを使用します。  
   
- [!code-csharp[WPFAssemblyResourcesSnippets#LoadPageSOOFileFromCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml.cs#loadpagesoofilefromcode)]
- [!code-vb[WPFAssemblyResourcesSnippets#LoadPageSOOFileFromCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/SOOPage.xaml.vb#loadpagesoofilefromcode)]  
+ [!code-csharp[WPFAssemblyResourcesSnippets#LoadPageSOOFileFromCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml.cs#loadpagesoofilefromcode)]
+ [!code-vb[WPFAssemblyResourcesSnippets#LoadPageSOOFileFromCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/SOOPage.xaml.vb#loadpagesoofilefromcode)]  
   
  次の例は、上の例と同じ意味のマークアップです。  
   
- [!code-xaml[WPFAssemblyResourcesSnippets#LoadPageSOOFileFromXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml#loadpagesoofilefromxaml)]  
+ [!code-xaml[WPFAssemblyResourcesSnippets#LoadPageSOOFileFromXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml#loadpagesoofilefromxaml)]  
   
 <a name="Rebuilding_after_Changing_Build_Type"></a>   
 ## <a name="rebuilding-after-changing-build-type"></a>ビルドの種類を変更した後のリビルド  
  アプリケーション データ ファイルのビルドの種類を変更した後は、変更を確実に反映するためにアプリケーション全体をリビルドする必要があります。 アプリケーションのみをビルドしても、変更は適用されません。  
   
-## <a name="see-also"></a>関連項目  
- [WPF におけるパッケージの URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
+## <a name="see-also"></a>関連項目
+
+- [WPF におけるパッケージの URI](pack-uris-in-wpf.md)

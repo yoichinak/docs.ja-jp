@@ -3,12 +3,12 @@ title: 式ツリーのまとめ
 description: 式ツリーを使用して、コードをデータとして解釈する動的なプログラムを作成し、そのコードに基づいて新しい機能を構築する方法についてまとめます。
 ms.date: 06/20/2016
 ms.assetid: eb687ebd-1149-4453-9fc1-12a084495a66
-ms.openlocfilehash: e0d46aa67b61fd4e1d2bcc20b4a567524bb00301
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 99b9463df096d3aada19ed7995b04ef4bd41c179
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213511"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59148630"
 ---
 # <a name="expression-trees-summary"></a>式ツリーのまとめ
 
@@ -25,4 +25,3 @@ ms.locfileid: "33213511"
 C# の新しい言語要素の中には、式ツリーに正しく変換できないものもあります。 式ツリーに `await` 式や `async` ラムダ式を含めることはできません。 C# 6 リリースで追加された機能の多くは、式ツリーで記述されたとおりには表示されません。 新しい機能は、等価の形式 (以前の構文) で式ツリーに公開されます。 このことは、それほど大きな制約にはならない場合もあります。 実際、式ツリーを解釈するコードは多くの場合、新しい言語機能が導入されても、以前と同様に動作します。
 
 これらの制限事項があっても、式ツリーでは、データ構造として表されたコードの解釈や変更に依存する動的アルゴリズムを作成することが可能です。 式ツリーは強力なツールであり、Entity Framework などのリッチなライブラリで目的の機能を達成できる .NET エコシステムの 1 機能です。
-

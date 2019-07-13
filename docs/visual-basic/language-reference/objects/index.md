@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic]
 ms.assetid: 651c73e4-dca8-402b-9c6b-e3902b3a3f4b
-ms.openlocfilehash: 9e0b133147fa01b15104b9050cd9067079300e3e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 8852a3daa3cd3891d5053cc1fffe19fa310125de
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486845"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880720"
 ---
 # <a name="objects-visual-basic"></a>オブジェクト (Visual Basic)
 このトピックでは、Visual Basic ランタイム オブジェクトを示すトピックや、そのメンバー プロシージャ、プロパティ、およびイベントの表を含む、その他のトピックへのリンクを提供します。  
@@ -37,14 +37,15 @@ ms.locfileid: "43486845"
 |`My.Computer.Registry` (<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>)|レジストリを操作するためのプロパティとメソッドを提供します。|  
 |[My.Forms オブジェクト](../../../visual-basic/language-reference/objects/my-forms-object.md)|現在のプロジェクトで宣言されている各 Windows フォームのインスタンスにアクセスするためのプロパティを提供します。|  
 |`My.Log` (<xref:Microsoft.VisualBasic.Logging.AspLog>)|イベントと例外の情報を Web アプリケーション用のアプリケーションのログ リスナーに書き込むためのプロパティとメソッドを提供します。|  
-|[My.Request オブジェクト](../../../visual-basic/language-reference/objects/my-request-object.md)|要求されたページの <xref:System.Web.HttpRequest> オブジェクトを取得します。 `My.Request` オブジェクトには、現在の HTTP 要求に関する情報が含まれています。<br /><br /> `My.Request` オブジェクトは、[!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] アプリケーションでのみ使うことができます。|  
+|[My.Request オブジェクト](../../../visual-basic/language-reference/objects/my-request-object.md)|要求されたページの <xref:System.Web.HttpRequest> オブジェクトを取得します。 `My.Request` オブジェクトには、現在の HTTP 要求に関する情報が含まれています。<br /><br /> `My.Request` オブジェクトは、ASP.NET アプリケーションでのみ使うことができます。|  
 |[My.Resources オブジェクト](../../../visual-basic/language-reference/objects/my-resources-object.md)|アプリケーションのリソースにアクセスするためのプロパティとクラスを提供します。|  
-|[My.Response オブジェクト](../../../visual-basic/language-reference/objects/my-response-object.md)|<xref:System.Web.HttpResponse> に関連付けられている <xref:System.Web.UI.Page> オブジェクトを取得します。 このオブジェクトでは、HTTP 応答データをクライアントに送信し、その応答に関する情報を含めることができます。<br /><br /> `My.Response` オブジェクトは、[!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] アプリケーションでのみ使うことができます。|  
+|[My.Response オブジェクト](../../../visual-basic/language-reference/objects/my-response-object.md)|<xref:System.Web.HttpResponse> に関連付けられている <xref:System.Web.UI.Page> オブジェクトを取得します。 このオブジェクトでは、HTTP 応答データをクライアントに送信し、その応答に関する情報を含めることができます。<br /><br /> `My.Response` オブジェクトは、ASP.NET アプリケーションでのみ使うことができます。|  
 |[My.Settings オブジェクト](../../../visual-basic/language-reference/objects/my-settings-object.md)|アプリケーションの設定にアクセスするためのプロパティとメソッドを提供します。|  
 |`My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>)|現在のユーザーに関する情報へのアクセスを提供します。|  
 |[My.WebServices オブジェクト](../../../visual-basic/language-reference/objects/my-webservices-object.md)|現在のプロジェクトによって参照される各 Web サービスの単一のインスタンスを作成してアクセスするためのプロパティを提供します。|  
 |<xref:Microsoft.VisualBasic.FileIO.TextFieldParser>|構造化テキスト ファイルの解析に使用するメソッドとプロパティを提供します。|  
   
-## <a name="see-also"></a>関連項目  
- [Visual Basic の言語リファレンス](../../../visual-basic/language-reference/index.md)  
- [Visual Basic](../../../visual-basic/index.md)
+## <a name="see-also"></a>関連項目
+
+- [Visual Basic の言語リファレンス](../../../visual-basic/language-reference/index.md)
+- [Visual Basic](../../../visual-basic/index.md)

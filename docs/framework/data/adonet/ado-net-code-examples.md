@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: 8719ffc458297191514cfe65714d5b6dd862dd60
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3bbb2e046054e35cf01fe223318a3bf560ef7253
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607788"
 ---
 # <a name="adonet-code-examples"></a>ADO.NET のコード例
 このトピックにリストされたコードは、次の ADO.NET テクノロジを使用してデータベースからデータを取得する方法を示しています。
@@ -137,7 +137,7 @@ End Class
 ```
 
 ### <a name="typed-objectquery"></a>型指定された ObjectQuery
-この例のコードは <xref:System.Data.Objects.ObjectQuery%601> を使用し、カテゴリ オブジェクトとしてデータを返します。 詳細については、次を参照してください。[オブジェクト クエリ](https://msdn.microsoft.com/0768033c-876f-471d-85d5-264884349276)します。
+この例のコードは <xref:System.Data.Objects.ObjectQuery%601> を使用し、カテゴリ オブジェクトとしてデータを返します。 詳細については、次を参照してください。[オブジェクト クエリ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100))します。
 
 ```csharp
 using System;
@@ -344,9 +344,10 @@ End Class
 ```
 
 ## <a name="see-also"></a>関連項目
- [ADO.NET の概要](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [ADO.NET でのデータの取得および変更](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [データ アプリケーションの作成](https://msdn.microsoft.com/library/ab334d5f-4f49-4346-bce0-3325d6130b3e)  
- [Entity Data Model (Entity Framework Tasks) のクエリを実行します。](https://msdn.microsoft.com/187f1caa-e4d3-4e31-bd99-5d5c2b329c77)  
- [操作方法：匿名型オブジェクトを返すクエリを実行します。](https://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)  
+
+- [ADO.NET の概要](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [ADO.NET でのデータの取得および変更](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [データ アプリケーションの作成](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))
+- [Entity Data Model (Entity Framework Tasks) のクエリを実行します。](https://docs.microsoft.com/previous-versions/bb738455(v=vs.90))
+- [方法: 匿名型オブジェクトを返すクエリを実行します。](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

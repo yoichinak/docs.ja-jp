@@ -2,12 +2,12 @@
 title: ワークフロー トレース
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
-ms.openlocfilehash: 27e56933043c9eb955500cdd1c5bbd06cb33bde8
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 8dba5706ee37f243c15befb483ab4f9f2a8e3b9c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591250"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655722"
 ---
 # <a name="workflow-tracing"></a>ワークフロー トレース
 ワークフロー トレースでは、.NET Framework のトレース リスナーを使用して診断情報を取得できます。 トレースは、アプリケーションで問題が検出された場合に有効にし、その問題が解決されたら、再度無効にすることが可能です。 ワークフローのデバッグ トレースを有効にする方法は 2 つあります。 また、イベント トレース ビューアーを使用してトレースを構成したり、<xref:System.Diagnostics> を使用してトレース イベントをファイルに送信したりすることができます。  
@@ -15,17 +15,17 @@ ms.locfileid: "45591250"
 ## <a name="enabling-debug-tracing-in-etw"></a>ETW でのデバッグ トレースの有効化  
  ETW を使用してトレースを有効化するには、次の手順に従ってイベント ビューアーでデバッグ チャネルを有効化します。  
   
-1.  イベント ビューアーで分析ログおよびデバッグ ログのノードに移動します。  
+1. イベント ビューアーで分析ログおよびデバッグ ログのノードに移動します。  
   
-2.  イベント ビューアーのツリー ビューでに移動します。**イベント ビューアーは アプリケーションとサービス ログ Microsoft-> -> Windows アプリケーション サーバー-アプリケーション-> **します。 右クリック**アプリケーション サーバー-アプリケーション**選択**ビューでは、分析およびデバッグ ログ-> **します。 右クリック**デバッグ**選択**ログの有効化**します。  
+2. イベント ビューアーのツリー ビューでに移動します。 **イベント ビューアーは アプリケーションとサービス ログ Microsoft-> -> Windows アプリケーション サーバー-アプリケーション->**  します。 右クリック **アプリケーション サーバー-アプリケーション** 選択 **ビューでは、分析およびデバッグ ログ->**  します。 右クリック **デバッグ** 選択 **ログの有効化** します。  
   
-3.  ワークフローがデバッグを実行し、トレースが ETW デバッグ チャネルに出力されると、トレースをイベント ビューアーで参照できます。 移動します**イベント ビューアーは アプリケーションとサービス ログ Microsoft->-> Windows アプリケーション サーバー-アプリケーション-> **します。 右クリック**デバッグ**選択**更新**します。  
+3. ワークフローがデバッグを実行し、トレースが ETW デバッグ チャネルに出力されると、トレースをイベント ビューアーで参照できます。 移動します **イベント ビューアーは アプリケーションとサービス ログ Microsoft->-> Windows アプリケーション サーバー-アプリケーション->**  します。 右クリック **デバッグ** 選択 **更新** します。  
   
-4.  既定の分析トレースのバッファー サイズは 4 KB ですが、このサイズを 32 KB に増やすことをお勧めします。 これを行うには、次の手順を実行します。  
+4. 既定の分析トレースのバッファー サイズは 4 KB ですが、このサイズを 32 KB に増やすことをお勧めします。 これを行うには、次の手順を実行します。  
   
-    1.  現在のフレームワークのディレクトリ (C:\Windows\Microsoft.NET\Framework\v4.0.21203 など) で、次のコマンドを実行します。`wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
+    1. 現在のフレームワークのディレクトリ (C:\Windows\Microsoft.NET\Framework\v4.0.21203 など) で、次のコマンドを実行します。`wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
   
-    2.  変更、 \<bufferSize > 32 Windows.ApplicationServer.Applications.man ファイルの値。  
+    2. 変更、 \<bufferSize > 32 Windows.ApplicationServer.Applications.man ファイルの値。  
   
         ```xml  
         <channel name="Microsoft-Windows-Application Server-Applications/Analytic" chid="ANALYTIC_CHANNEL" symbol="ANALYTIC_CHANNEL" type="Analytic" enabled="false" isolation="Application" message="$(string.MICROSOFT_WINDOWS_APPLICATIONSERVER_APPLICATIONS.channel.ANALYTIC_CHANNEL.message)" >  
@@ -35,7 +35,7 @@ ms.locfileid: "45591250"
                   </channel>  
         ```  
   
-    3.  現在のフレームワークのディレクトリ (C:\Windows\Microsoft.NET\Framework\v4.0.21203 など) で、次のコマンドを実行します。`wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
+    3. 現在のフレームワークのディレクトリ (C:\Windows\Microsoft.NET\Framework\v4.0.21203 など) で、次のコマンドを実行します。`wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
   
 > [!NOTE]
 >  .NET Framework 4 Client Profile を使用している場合は、.NET Framework 4 ディレクトリから、次のコマンドを実行して ETW マニフェストをまず登録する必要があります。 `ServiceModelReg.exe –i –c:etw`  
@@ -69,6 +69,7 @@ ms.locfileid: "45591250"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Windows Server App Fabric の監視](https://go.microsoft.com/fwlink/?LinkId=201273)  
- [App Fabric でアプリケーションの監視](https://go.microsoft.com/fwlink/?LinkId=201275)
+## <a name="see-also"></a>関連項目
+
+- [Windows Server App Fabric の監視](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [App Fabric でアプリケーションの監視](https://go.microsoft.com/fwlink/?LinkId=201275)

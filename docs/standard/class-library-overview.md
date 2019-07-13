@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b00d08f43874518e117739d4a9502bf9463db5c1
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: b890ac02d54a9092bf2ad24e31367ef1d487c01f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029880"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593500"
 ---
 # <a name="net-class-library-overview"></a>.NET クラス ライブラリの概要
 
@@ -52,17 +52,17 @@ ms.locfileid: "54029880"
   
  .NET の型は、.NET アプリケーション、.NET コンポーネント、およびコントロールを構築するときの基礎となります。 .NET 実装には、次の機能を実行する型が含まれます。  
   
--   基本データ型と例外を表す。  
+- 基本データ型と例外を表す。  
   
--   データ構造をカプセル化する。  
+- データ構造をカプセル化する。  
   
--   入出力を実行する。  
+- 入出力を実行する。  
   
--   読み込まれた型についての情報にアクセスする。  
+- 読み込まれた型についての情報にアクセスする。  
   
--   .NET Framework セキュリティ チェックを呼び出す。  
+- .NET Framework セキュリティ チェックを呼び出す。  
   
--   データ アクセス、豊富なクライアント側 GUI、およびサーバー制御式のクライアント側 GUI を提供する。  
+- データ アクセス、豊富なクライアント側 GUI、およびサーバー制御式のクライアント側 GUI を提供する。  
   
  .NET には、豊富なインターフェイスのセットに加えて、抽象クラスと具象 (抽象ではない) クラスが用意されています。 具象クラスはそのまま使用できますが、多くの場合は、具象クラスから独自のクラスを派生させます。 インターフェイスの機能を使用するには、インターフェイスを実装するクラスを作成するか、またはインターフェイスを実装する .NET クラスの 1 つからクラスを派生させます。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "54029880"
 
  .NET の型では、階層構造を伴うドット構文の名前付けスキームが使用されます。 この方法では、関連する型が名前空間にグループ化されるため、検索と参照を簡単に行うことができます。 フルネームのうち右端のドットまでの最初の部分は、名前空間の名前です。 名前の最後の部分は型名です。 たとえば、`System.Collections.Generic.List<T>` は `System.Collections.Generic` 名前空間に属する `List<T>` 型を表します。 <xref:System.Collections.Generic> の型は、ジェネリック コレクションの操作で使用できます。  
   
- この名前付け方法によって、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] を拡張するライブラリ開発者は、型の階層構造のグループを簡単に作成し、一貫性のあるわかりやすい名前を付けることができます。 また、型の完全名 (つまり名前空間と型名) によって型を明確に特定できるため、型名の競合を防ぐことができます。 ライブラリ開発者は、次の規則に従って名前空間の名前を付けてください。  
+ この名前付け方法によって、.NET Framework を拡張するライブラリ開発者は、型の階層構造のグループを簡単に作成し、一貫性のあるわかりやすい名前を付けることができます。 また、型の完全名 (つまり名前空間と型名) によって型を明確に特定できるため、型名の競合を防ぐことができます。 ライブラリ開発者は、次の規則に従って名前空間の名前を付けてください。  
   
  *CompanyName*.*TechnologyName*  
   
@@ -96,8 +96,8 @@ ms.locfileid: "54029880"
 ||<xref:System.UInt16>|16 ビット符号なし整数。<br /><br /> 非 CLS 準拠|**UShort**|**ushort**|**unsigned short**|**uint16**|  
 ||<xref:System.UInt32>|32 ビット符号なし整数<br /><br /> 非 CLS 準拠|**UInteger**|**uint**|**unsigned int**<br /> - または -<br /> **unsigned long**|**uint32**|  
 ||<xref:System.UInt64>|64 ビット符号なし整数。<br /><br /> 非 CLS 準拠|**ULong**|**ulong**|**unsigned __int64**|**uint64**|  
-|浮動小数点数|<xref:System.Single>|単精度 (32 ビット) 浮動小数点数|**Single**|**float**|**float**|**float32**</br> または</br>**single**|  
-||<xref:System.Double>|倍精度 (64 ビット) 浮動小数点数|**Double**|**double**|**double**|**float**</br> または </br> **double**|  
+|浮動小数点数|<xref:System.Single>|単精度 (32 ビット) 浮動小数点数|**Single**|**float**|**float**|**float32**<br> または<br>**single**|  
+||<xref:System.Double>|倍精度 (64 ビット) 浮動小数点数|**Double**|**double**|**double**|**float**<br> または <br> **double**|  
 |論理|<xref:System.Boolean>|ブール値 (true または false)|**Boolean**|**bool**|**bool**|**bool**|  
 |その他|<xref:System.Char>|Unicode (16 ビット) 文字|**Char**|**char**|**wchar_t**|**char**|  
 ||<xref:System.Decimal>|十進数 (128 ビット) の値です。|**Decimal**|**decimal**|**Decimal**|**decimal**|  
@@ -112,6 +112,6 @@ ms.locfileid: "54029880"
   
 ## <a name="see-also"></a>関連項目
 
-- [共通型システム](../../docs/standard/base-types/common-type-system.md)  
-- [.NET API ブラウザー](../../api/index.md)  
+- [共通型システム](../../docs/standard/base-types/common-type-system.md)
+- [.NET API ブラウザー](../../api/index.md)
 - [概要](../../docs/framework/get-started/overview.md)

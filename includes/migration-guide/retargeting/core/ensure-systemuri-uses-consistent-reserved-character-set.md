@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 2ec5224b1ab16c05f6f942f6084f1ab105b71b0f
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774024"
+---
 ### <a name="ensure-systemuri-uses-a-consistent-reserved-character-set"></a>System.Uri で一貫した予約文字セットが確実に使用されるようになった
 
 |   |   |
@@ -8,4 +16,3 @@
 |Version|4.7.2|
 |型|再ターゲット中|
 |影響を受ける API|<ul><li><xref:System.Uri?displayProperty=nameWithType></li></ul>|
-

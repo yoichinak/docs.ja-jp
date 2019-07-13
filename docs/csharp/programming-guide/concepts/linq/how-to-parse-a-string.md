@@ -2,12 +2,12 @@
 title: '方法: 文字列を解析する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 81e5686c-9658-42d8-a7e3-b11be0a2c98b
-ms.openlocfilehash: b6b955d2cc9a3ea0c6e17e68639ad7fc677c3fc7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 8039e22a3ba1e37818064fafca7c404b57f39021
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43744801"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485286"
 ---
 # <a name="how-to-parse-a-string-c"></a>方法: 文字列を解析する (C#)
 このトピックでは、C# で文字列を解析して XML ツリーを作成する方法について説明します。  
@@ -44,7 +44,3 @@ XElement contacts = XElement.Parse(
     </Contacts>");  
 Console.WriteLine(contacts);  
 ```  
-  
-## <a name="see-also"></a>参照
-
-- [XML の解析 (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

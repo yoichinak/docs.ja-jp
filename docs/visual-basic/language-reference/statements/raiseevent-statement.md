@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: ba4c05b3ef69d180f43ac3b90aa8fd6dee9c80fb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5d8fd6adf33c992341324e07bcd2ad12986bbdf2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783969"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent ステートメント
 クラス、フォーム、またはドキュメント内のモジュール レベルで宣言されているイベントをトリガーします。  
@@ -31,14 +31,14 @@ RaiseEvent eventname[( argumentlist )]
  必須。 トリガーするイベントの名前。  
   
  `argumentlist`  
- 任意。 変数、配列、または式のコンマ区切りのリスト。 `argumentlist`引数はかっこで囲む必要があります。 引数がない場合は、かっこを省略する必要があります。  
+ 省略可能です。 変数、配列、または式のコンマ区切りのリスト。 `argumentlist`引数はかっこで囲む必要があります。 引数がない場合は、かっこを省略する必要があります。  
   
 ## <a name="remarks"></a>Remarks  
  必要な`eventname`は、モジュール内で宣言されたイベントの名前。 Visual Basic 変数の名前付け規則に従います。  
   
  イベントが発生したモジュール内で宣言されていない、エラーが発生します。 次のコード フラグメントは、イベントの宣言とイベントが発生したプロシージャを示しています。  
   
- [!code-vb[VbVbalrEvents#37](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_1.vb)]  
+ [!code-vb[VbVbalrEvents#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#37)]  
   
  使用することはできません`RaiseEvent`モジュールで明示的に宣言されていないイベントを発生させます。 たとえば、すべてのフォームの継承、<xref:System.Windows.Forms.Control.Click>からイベント<xref:System.Windows.Forms.Form?displayProperty=nameWithType>を使用して、発生することはできません`RaiseEvent`派生フォームでします。 宣言する場合、`Click`イベント モジュールでは、フォーム、フォーム自体のシャドウ<xref:System.Windows.Forms.Control.Click>イベント。 フォームを呼び出すことができますも<xref:System.Windows.Forms.Control.Click>イベントを呼び出すことによって、<xref:System.Windows.Forms.Control.OnClick%2A>メソッド。  
   
@@ -63,21 +63,22 @@ RaiseEvent eventname[( argumentlist )]
   
  追加、`WithEvents`変数の宣言セクションに、`Form1`クラス。  
   
- [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_2.vb)]  
+ [!code-vb[VbVbalrEvents#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>例  
  `Form1` のコードに次のコードを追加します。 など、存在するすべての重複するプロシージャを置き換える`Form_Load`、または`Button_Click`します。  
   
- [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_3.vb)]  
+ [!code-vb[VbVbalrEvents#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#15)]  
   
  前の例を実行し、ボタンをクリックします。 f5 キーを押して**開始**します。 最初のテキスト ボックスで、秒のカウント ダウンが開始されます。 カウントダウンが終わると (10 秒が経過すると)、1 つ目のテキスト ボックスに "Done" と表示されます。  
   
 > [!NOTE]
 >  `My.Application.DoEvents`フォームは、メソッドがまったく同じ方法でイベントを処理できません。 使用することができます、イベントを直接処理するためのフォームは、マルチ スレッドです。 詳細については、次を参照してください。[マネージ スレッド処理](../../../standard/threading/index.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [イベント](../../../visual-basic/programming-guide/language-features/events/index.md)  
- [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)  
- [AddHandler ステートメント](../../../visual-basic/language-reference/statements/addhandler-statement.md)  
- [RemoveHandler ステートメント](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
+## <a name="see-also"></a>関連項目
+
+- [イベント](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)
+- [AddHandler ステートメント](../../../visual-basic/language-reference/statements/addhandler-statement.md)
+- [RemoveHandler ステートメント](../../../visual-basic/language-reference/statements/removehandler-statement.md)
+- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法 : カスタム破線を描画する'
+title: '方法: カスタム破線を描画する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,28 +9,29 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - lines [Windows Forms], dashed
 ms.assetid: cd0ed96a-cce4-47b9-b58a-3bae2e3d1bee
-ms.openlocfilehash: 39dde3bb45165783171326b79e98744807350952
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d2184a8d7d7f24b8f631818608ab4bcdb89857c7
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33521616"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506039"
 ---
-# <a name="how-to-draw-a-custom-dashed-line"></a>方法 : カスタム破線を描画する
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 記載されているいくつかの破線スタイルを提供、<xref:System.Drawing.Drawing2D.DashStyle>列挙します。 これらの標準の破線スタイルがニーズに適合しないいない場合は、カスタムの破線のパターンを作成できます。  
+# <a name="how-to-draw-a-custom-dashed-line"></a>方法: カスタム破線を描画する
+GDI + に記載されているいくつかの破線スタイルを提供する、<xref:System.Drawing.Drawing2D.DashStyle>列挙体。 これらの標準の破線スタイルがニーズに合わないしない場合は、カスタムの破線パターンを作成できます。  
   
 ## <a name="example"></a>例  
- カスタム破線を描画する、配列にダッシュと空白の長さを格納し、配列の値として割り当てます、<xref:System.Drawing.Pen.DashPattern%2A>のプロパティ、<xref:System.Drawing.Pen>オブジェクト。 次の例は、配列に基づくカスタム破線を描画`{5, 2, 15, 4}`です。 取得する場合は、配列の要素を 5 のペンの幅に乗算する`{25, 10, 75, 20}`です。 25 と 75 の長さの別の表示ダッシュと長が 10 ~ 20 の空白が交互です。  
+ カスタム破線を描画するために、配列にダッシュと空白の長さを格納し、配列の値として割り当てます、<xref:System.Drawing.Pen.DashPattern%2A>のプロパティを<xref:System.Drawing.Pen>オブジェクト。 次の例では、配列に基づくカスタム破線を描画する`{5, 2, 15, 4}`します。 取得する場合は 5 のペンの幅によって、配列の要素を乗算する`{25, 10, 75, 20}`します。 長さ 25 75 の間で交互に表示されるダッシュと長さが 10 と 20 の間で交互に、スペースです。  
   
- 次の図は、結果として得られる点線を示します。 最終的な dash がで行が終了するようにに 25 よりも短くする必要がある注意 (405, 5)。  
+ 次の図は、結果として得られる、破線を示します。 最終的なダッシュ ボードがで行を終了するようにに 25 よりも短くする必要があるに注意してください (405, 5)。  
   
- ![ペン](../../../../docs/framework/winforms/advanced/media/pens6.gif "pens6")  
+ ![破線を示す図。](./media/how-to-draw-a-custom-dashed-line/dashed-line-illustration.gif "pens6")  
   
- [!code-csharp[System.Drawing.UsingAPen#51](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#51)]
- [!code-vb[System.Drawing.UsingAPen#51](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#51)]  
+ [!code-csharp[System.Drawing.UsingAPen#51](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#51)]
+ [!code-vb[System.Drawing.UsingAPen#51](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#51)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- Windows フォームを作成し、処理、フォームの<xref:System.Windows.Forms.Control.Paint>イベント。 上記のコードを貼り付け、<xref:System.Windows.Forms.Control.Paint>イベント ハンドラー。  
+ Windows フォームを作成し、フォームの処理<xref:System.Windows.Forms.Control.Paint>イベント。 上記のコードを貼り付け、<xref:System.Windows.Forms.Control.Paint>イベント ハンドラー。  
   
-## <a name="see-also"></a>関連項目  
- [ペンを使用した直線と図形の描画](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
+## <a name="see-also"></a>関連項目
+
+- [ペンを使用した直線と図形の描画](using-a-pen-to-draw-lines-and-shapes.md)

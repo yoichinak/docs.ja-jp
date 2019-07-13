@@ -2,12 +2,12 @@
 title: '方法: 複数のソースからオブジェクト コレクションにデータを設定する (LINQ) (C#)'
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: 377b4a21c78be2b53d2bcd0e88d39d06609c462b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0789dee28cc2be5e72d2f99e2265e0181e351d8a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216094"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584392"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>方法: 複数のソースからオブジェクト コレクションにデータを設定する (LINQ) (C#)
 
@@ -18,7 +18,7 @@ ms.locfileid: "44216094"
 
 ## <a name="to-create-the-data-file"></a>データ ファイルを作成するには
 
-「[方法: 異種ファイルのコンテンツを結合する (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)」の説明に従って、names.csv ファイルと scores.csv ファイルをプロジェクト フォルダーにコピーします。
+names.csv ファイルと scores.csv ファイルをプロジェクト フォルダーにコピーします。このとき、「[方法:異種ファイルのコンテンツを結合する (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)」の説明に従います。
 
 ## <a name="example"></a>例
 
@@ -139,16 +139,8 @@ foreach (var student in queryNamesScores2)
 }
 ```
 
-## <a name="compiling-the-code"></a>コードのコンパイル
+## <a name="see-also"></a>関連項目
 
-次のいずれかのオプションを対象とするプロジェクトを作成してコンパイルします。
-
-- System.Core.dll の参照を含む .NET Framework バージョン 3.5。
-- .NET Framework バージョン 4.0 以降
-- .NET Core バージョン 1.0 以降。
-
-## <a name="see-also"></a>参照
-
-- [LINQ と文字列 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
-- [オブジェクト初期化子とコレクション初期化子](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
-- [匿名型](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+- [LINQ と文字列 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+- [オブジェクト初期化子とコレクション初期化子](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [匿名型](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)

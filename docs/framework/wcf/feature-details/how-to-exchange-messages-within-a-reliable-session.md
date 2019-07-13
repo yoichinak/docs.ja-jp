@@ -1,19 +1,19 @@
 ---
-title: '方法 : 信頼されたセッション内のメッセージを変換する'
+title: '方法: 信頼されたセッション内のメッセージを変換する'
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 53e5661bf140540cd0fc7a9fcb739b67488b8491
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: aad4eae870e3ba603c56a28a620fe8bc0e31ceb6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778366"
 ---
-# <a name="how-to-exchange-messages-within-a-reliable-session"></a>方法 : 信頼されたセッション内のメッセージを変換する
+# <a name="how-to-exchange-messages-within-a-reliable-session"></a>方法: 信頼されたセッション内のメッセージを変換する
 
 このトピックでは、信頼できるセッションを有効にするために必要な手順について説明します。ここでは、信頼できるセッションを (既定ではなく) オプションでサポートするシステム指定のバインディングを使用します。 命令型コードを使用して、信頼できるセッションを有効にするか、構成ファイルで宣言します。 この手順は、信頼できるセッションを有効にして、メッセージが送信された順序で到着したかを規定するために、クライアントとサービス構成ファイルを使用します。
 
-この手順の重要な部分は、エンドポイント構成要素を含む、`bindingConfiguration`という名前のバインド構成を参照する属性`Binding1`します。 [ **\<バインド >** ](../../../../docs/framework/misc/binding.md)構成要素を設定して、信頼できるセッションを有効にするには、この名前の参照、`enabled`の属性、 [ **\<reliableSession >** ](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)要素`true`します。 信頼できるセッションで順序付き配信の保証を指定するには、`ordered` 属性を `true` に設定します。
+この手順の重要な部分は、エンドポイント構成要素を含む、`bindingConfiguration`という名前のバインド構成を参照する属性`Binding1`します。 [ **\<バインド >** ](../../../../docs/framework/misc/binding.md)構成要素を設定して、信頼できるセッションを有効にするには、この名前の参照、`enabled`の属性、 [ **\<reliableSession >** ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731302(v=vs.100))要素`true`します。 信頼できるセッションで順序付き配信の保証を指定するには、`ordered` 属性を `true` に設定します。
 
 この例のソースのコピーを次を参照してください。 [WS 信頼できるセッション](../../../../docs/framework/wcf/samples/ws-reliable-session.md)します。
 
@@ -37,7 +37,7 @@ ms.locfileid: "50195737"
    <%@ServiceHost language=c# Service="CalculatorService" %>
    ```
 
-1.  場所、 *Service.svc*インターネット インフォメーション サービス (IIS) 仮想ディレクトリのファイル。
+1. 場所、 *Service.svc*インターネット インフォメーション サービス (IIS) 仮想ディレクトリのファイル。
 
 ### <a name="configure-the-client-with-a-wshttpbinding-to-use-a-reliable-session"></a>信頼できるセッションを使用して、WSHttpBinding でクライアントを構成します。
 
@@ -67,7 +67,7 @@ ms.locfileid: "50195737"
 
 ## <a name="example"></a>例
 
-システム指定のバインディングの中には、信頼できるセッションを既定でサポートするものがあります。 次の設定があります。
+システム指定のバインディングの中には、信頼できるセッションを既定でサポートするものがあります。 不足している機能には次が含まれます。
 
 - <xref:System.ServiceModel.WSDualHttpBinding>
 
@@ -75,8 +75,8 @@ ms.locfileid: "50195737"
 
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>
 
-信頼できるセッションをサポートするカスタム バインドを作成する方法の例は、次を参照してください。[方法: HTTPS でカスタムの信頼できるセッション バインドを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md)します。
+信頼できるセッションをサポートするカスタム バインドを作成する方法の例は、次を参照してください。[方法。HTTPS で信頼できるセッションをカスタム バインディングを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md)します。
 
 ## <a name="see-also"></a>関連項目
 
-[信頼できるセッション](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)
+- [信頼できるセッション](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)

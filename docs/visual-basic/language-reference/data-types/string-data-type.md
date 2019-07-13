@@ -18,12 +18,12 @@ helpviewer_keywords:
 - String literals [Visual Basic]
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
-ms.openlocfilehash: 54f7dcd7de28e8aaa5376bb4ddd67fd53518511e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 11c4f119360af386fa2c5609ea7815b9ae7a64f3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861738"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647001"
 ---
 # <a name="string-data-type-visual-basic"></a>文字列型 (String) (Visual Basic)
 0 ~ 65535 の値範囲の符号なし 16 ビット (2 バイト) コード ポイントのシーケンスを保持します。 各*コード ポイント*、または文字コードを 1 つの Unicode 文字を表します。 文字列は、0 からおよそ 20億を含めることができます (2 ^31) の Unicode 文字。  
@@ -70,19 +70,20 @@ S = Microsoft.VisualBasic.Left(S, 4)
   
 ## <a name="programming-tips"></a>プログラミングのヒント  
   
--   **負の数。** 文字がによって保持されていることに注意してください。`String`署名されていないと、負の値を表すことはできません。 いずれの場合も、行わないで`String`数値の値を保持します。  
+- **負の数。** 文字がによって保持されていることに注意してください。`String`署名されていないと、負の値を表すことはできません。 いずれの場合も、行わないで`String`数値の値を保持します。  
   
--   **相互運用の考慮事項。** 例のオートメーションまたは COM オブジェクト、.NET framework では、作成されていないコンポーネントとやり取りする場合、他の環境では文字列の文字の別のデータ幅 (8 ビット) ことに注意してください。 このようなコンポーネントに 8 ビット文字の文字列引数を渡す場合の宣言として`Byte()`、配列の`Byte`、要素の代わりに`String`新しい Visual Basic コードで。  
+- **相互運用の考慮事項。** 例のオートメーションまたは COM オブジェクト、.NET framework では、作成されていないコンポーネントとやり取りする場合、他の環境では文字列の文字の別のデータ幅 (8 ビット) ことに注意してください。 このようなコンポーネントに 8 ビット文字の文字列引数を渡す場合の宣言として`Byte()`、配列の`Byte`、要素の代わりに`String`新しい Visual Basic コードで。  
   
--   **型宣言文字。** 識別子の型文字を付加`$`任意の識別子に強制的に、`String`データ型。 `String` リテラルの型文字がありません。 ただし、コンパイラは、引用符で囲まれたリテラルを扱います (`" "`) として`String`します。  
+- **型宣言文字。** 識別子の型文字を付加`$`任意の識別子に強制的に、`String`データ型。 `String` リテラルの型文字がありません。 ただし、コンパイラは、引用符で囲まれたリテラルを扱います (`" "`) として`String`します。  
   
--   **フレームワークの型。** .NET Framework に対応する型は、<xref:System.String?displayProperty=nameWithType>クラス。  
+- **フレームワークの型。** .NET Framework に対応する型は、<xref:System.String?displayProperty=nameWithType>クラス。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.String?displayProperty=nameWithType>  
- [データの種類](../../../visual-basic/language-reference/data-types/index.md)  
- [Char データ型](../../../visual-basic/language-reference/data-types/char-data-type.md)  
- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [方法 : 符号なしの型を使用する Windows の機能を呼び出す](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.String?displayProperty=nameWithType>
+- [データの種類](../../../visual-basic/language-reference/data-types/index.md)
+- [Char データ型](../../../visual-basic/language-reference/data-types/char-data-type.md)
+- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [方法: 符号なしの型を使用する Windows の機能を呼び出す](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

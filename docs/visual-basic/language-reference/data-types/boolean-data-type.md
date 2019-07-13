@@ -12,12 +12,12 @@ helpviewer_keywords:
 - True keyword [Visual Basic]
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
-ms.openlocfilehash: bbd914d8b4239bbae1de7031e68b2900cf5ad6a3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b1e4add39cee6c733a6f4b95aa1668975f2f2d6d
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862384"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268254"
 ---
 # <a name="boolean-data-type-visual-basic"></a>Boolean データ型 (Visual Basic)
 値を保持できるのみ`True`または`False`します。 キーワード`True`と`False`の 2 つの状態に対応して`Boolean`変数。  
@@ -36,16 +36,16 @@ ms.locfileid: "43862384"
   
 ## <a name="programming-tips"></a>プログラミングのヒント  
   
--   **負の数。** `Boolean` 数値型ではないと、負の値を表すことはできません。 いずれの場合も、行わないで`Boolean`数値の値を保持します。  
+- **負の数。** `Boolean` 数値型ではないと、負の値を表すことはできません。 いずれの場合も、行わないで`Boolean`数値の値を保持します。  
   
--   **型宣言文字。** `Boolean` リテラルの型文字または識別子の型文字がありません。  
+- **型宣言文字。** `Boolean` リテラルの型文字または識別子の型文字がありません。  
   
--   **フレームワークの型。** .NET Framework において対応する型は、<xref:System.Boolean?displayProperty=nameWithType> 構造体です。  
+- **フレームワークの型。** .NET Framework において対応する型は、<xref:System.Boolean?displayProperty=nameWithType> 構造体です。  
   
 ## <a name="example"></a>例  
  次の例では、`runningVB`は、`Boolean`変数で、単純なはい/いいえの設定を格納します。  
   
-```  
+```vb  
 Dim runningVB As Boolean  
 ' Check to see if program is running on Visual Basic engine.  
 If scriptEngine = "VB" Then  
@@ -53,11 +53,12 @@ If scriptEngine = "VB" Then
 End If  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Boolean?displayProperty=nameWithType>  
- [データの種類](../../../visual-basic/language-reference/data-types/index.md)  
- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
- [トラブルシューティング (データ型)](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [CType 関数](../../../visual-basic/language-reference/functions/ctype-function.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Boolean?displayProperty=nameWithType>
+- [データの種類](../../../visual-basic/language-reference/data-types/index.md)
+- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [トラブルシューティング (データ型)](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [CType 関数](../../../visual-basic/language-reference/functions/ctype-function.md)

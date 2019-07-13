@@ -8,35 +8,35 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74c196c0f6525214e2ea25e6506e9c89f4e48906
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09ee63a1283744da407cde2a99802969c7f55127
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389994"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833651"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>方法: Tlbimp.exe を使用してプライマリ相互運用機能アセンブリを生成する
 プライマリ相互運用機能アセンブリを生成するには、次の 2 つの方法があります。  
   
--   [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] によって提供される[タイプ ライブラリ インポーター (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) を使用します。  
+- Windows Software Development Kit (SDK) によって提供される[タイプ ライブラリ インポーター (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) を使用します。  
   
      プライマリ相互運用機能アセンブリを生成する最も簡単な方法は、[Tlbimp.exe (タイプ ライブラリ インポーター)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) を使用することです。 Tlbimp.exe は、次の保護機能を提供します。  
   
-    -   新規の相互運用機能アセンブリを作成するときには、その前に登録されている他のプライマリ相互運用機能アセンブリを調べて、入れ子になったタイプ ライブラリの参照がないかを確認してください。  
+    - 新規の相互運用機能アセンブリを作成するときには、その前に登録されている他のプライマリ相互運用機能アセンブリを調べて、入れ子になったタイプ ライブラリの参照がないかを確認してください。  
   
-    -   プライマリ相互運用機能アセンブリに厳密な名前が付くようにコンテナー名やファイル名を指定しない場合は、プライマリ相互運用機能アセンブリの生成に失敗します。  
+    - プライマリ相互運用機能アセンブリに厳密な名前が付くようにコンテナー名やファイル名を指定しない場合は、プライマリ相互運用機能アセンブリの生成に失敗します。  
   
-    -   依存アセンブリへの参照を省略した場合は、プライマリ相互運用機能アセンブリの生成に失敗します。  
+    - 依存アセンブリへの参照を省略した場合は、プライマリ相互運用機能アセンブリの生成に失敗します。  
   
-    -   プライマリ相互運用機能アセンブリではない依存アセンブリへの参照を追加した場合は、プライマリ相互運用機能アセンブリの生成に失敗します。  
+    - プライマリ相互運用機能アセンブリではない依存アセンブリへの参照を追加した場合は、プライマリ相互運用機能アセンブリの生成に失敗します。  
   
--   C# などの共通言語仕様 (CLS) に準拠した言語を使用して、ソース コードで手動によりプライマリ相互運用機能アセンブリを作成します。 この方法は、タイプ ライブラリが使用できない場合に便利です。  
+- C# などの共通言語仕様 (CLS) に準拠した言語を使用して、ソース コードで手動によりプライマリ相互運用機能アセンブリを作成します。 この方法は、タイプ ライブラリが使用できない場合に便利です。  
   
  厳密な名前でアセンブリに署名するには、暗号キー ペアが必要です。 詳細については、「[キー ペアを作成する](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)」を参照してください。  
   
 ### <a name="to-generate-a-primary-interop-assembly-using-tlbimpexe"></a>Tlbimp.exe を使用してプライマリ相互運用機能アセンブリを生成する方法  
   
-1.  コマンド プロンプトで、次のコマンドを入力します。  
+1. コマンド プロンプトで、次のコマンドを入力します。  
   
      **tlbimp** *tlbfile*  **/primary /keyfile:** *filename* **/out:** *assemblyname*  
   
@@ -46,7 +46,7 @@ ms.locfileid: "33389994"
   
  元のタイプ ライブラリとは異なるバージョン番号の依存プライマリ相互運用機能アセンブリは、現在のディレクトリにインストールされている場合、検出できません。 依存プライマリ相互運用機能アセンブリを Windows レジストリに登録するか、または **/reference** オプションを使用して、Tlbimp.exe が依存 DLL を検出できるようにする必要があります。  
   
- 複数のバージョンのタイプ ライブラリをラップすることもできます。 その方法については、「[方法: 複数のバージョンのタイプ ライブラリをラップする](https://msdn.microsoft.com/library/79eefe04-a770-4bc3-8ea2-e90ddb8ec31f(v=vs.100))」を参照してください。  
+ 複数のバージョンのタイプ ライブラリをラップすることもできます。 手順については、「[方法:複数のバージョンのタイプ ライブラリをラップする](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/1565h6hc(v=vs.100))」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例は、COM タイプ ライブラリ `LibUtil.tlb` をインポートし、アセンブリ `LibUtil.dll` にキー ファイル `CompanyA.snk` を使用して厳密な名前で署名します。 この例では、特定の名前空間名を省略することにより、既定の名前空間 `LibUtil` を生成します。  
@@ -67,5 +67,6 @@ tlbimp LibUtil.tlb /primary /keyfile:CompanyA.snk /namespace:CompanyA.LibUtil /o
 tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /reference:CompanyA.LibUtil.dll /out:CompanyB.MyLib.dll  
 ```  
   
-## <a name="see-also"></a>参照  
- [方法: プライマリ相互運用機能アセンブリを登録する](../../../docs/framework/interop/how-to-register-primary-interop-assemblies.md)
+## <a name="see-also"></a>関連項目
+
+- [方法: プライマリ相互運用機能アセンブリを登録する](../../../docs/framework/interop/how-to-register-primary-interop-assemblies.md)

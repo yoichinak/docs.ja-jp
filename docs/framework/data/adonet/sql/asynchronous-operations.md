@@ -2,12 +2,12 @@
 title: 非同期操作
 ms.date: 03/30/2017
 ms.assetid: e7d32c3c-bf78-4bfc-a357-c9e82e4a4b3c
-ms.openlocfilehash: c1c99437ada9dd9e71e0e999073e8d207569c2bf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 72c2cc33185cb7fba5b8c8ce8d3805a6bb76f8d7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663974"
 ---
 # <a name="asynchronous-operations"></a>非同期操作
 コマンドの実行など、データベースでの一部の操作は、完了までに長時間かかることがあります。 そのような場合、シングルスレッドのアプリケーションでは、他の操作をブロックして、コマンドが終了するまで待機しなければ操作を続行できません。 これに対して、長時間にわたる操作をバックグラウンド スレッドに割り当てることができれば、フォアグラウンド スレッドがアクティブなまま操作を続行できます。 たとえば、Windows アプリケーションでは、操作を実行中のユーザー インターフェイス スレッドの応答性を維持しながら、時間のかかる操作をバックグラウンド スレッドに委任することができます。  
@@ -29,7 +29,8 @@ ms.locfileid: "43463079"
  [コンソール アプリケーションでのポーリング](../../../../../docs/framework/data/adonet/sql/polling-in-console-applications.md)  
  この例では、ポーリングを使用して非同期コマンドの実行をコンソール アプリケーションで待機する方法を示します。 この技法は、クラス ライブラリまたはユーザー インターフェイスを持たないその他のアプリケーションでも有効です。  
   
-## <a name="see-also"></a>関連項目  
- [SQL Server と ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [同期メソッドの非同期呼び出し](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [SQL Server と ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [同期メソッドの非同期呼び出し](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

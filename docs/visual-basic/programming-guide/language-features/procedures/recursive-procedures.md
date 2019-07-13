@@ -10,19 +10,19 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-ms.openlocfilehash: 0bb89ac855d65d7677a062346db8665698dbb805
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: de9a2af9fc3cd78879b6525245727a6f52d51c63
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791847"
 ---
 # <a name="recursive-procedures-visual-basic"></a>再帰プロシージャ (Visual Basic)
 A*再帰*手順は、自分自身を呼び出します。 通常、これは Visual Basic コードを記述する最も効果的な方法ではありません。  
   
  次の手順では、元の引数の階乗を計算するのに再帰を使用します。  
   
- [!code-vb[VbVbcnProcedures#51](./codesnippet/VisualBasic/recursive-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#51)]  
   
 ## <a name="considerations-with-recursive-procedures"></a>再帰プロシージャに関する考慮事項  
  **制限条件**します。 再帰処理を終了するには少なくとも 1 つの条件をテストする再帰的な手順を設計する必要があり、妥当な数の再帰呼び出し内でこのような条件が満たされていないケースを処理することも必要があります。 失敗せずに満たすことが少なくとも 1 つの条件がない、プロシージャを実行する可能性が高く無限ループで実行します。  
@@ -37,15 +37,15 @@ A*再帰*手順は、自分自身を呼び出します。 通常、これは Vis
   
  **テスト**します。 再帰プロシージャを記述する場合はいくつかの制限の条件を満たしているかどうかを確認する非常に慎重にテストする必要があります。 再帰の呼び出しが多すぎるため、メモリ不足が実行できないということを確認する必要があります。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.StackOverflowException>  
- [手順](./index.md)  
- [Sub プロシージャ](./sub-procedures.md)  
- [Function プロシージャ](./function-procedures.md)  
- [Property プロシージャ](./property-procedures.md)  
- [演算子プロシージャ](./operator-procedures.md)  
- [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)  
- [プロシージャのオーバーロード](./procedure-overloading.md)  
- [プロシージャのトラブルシューティング](./troubleshooting-procedures.md)  
- [ループ構造](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [例外のトラブルシューティング : System.StackOverflowException](https://msdn.microsoft.com/library/51b71217-c507-4f5b-bc35-0236180d7968)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.StackOverflowException>
+- [プロシージャ](./index.md)
+- [Sub プロシージャ](./sub-procedures.md)
+- [Function プロシージャ](./function-procedures.md)
+- [Property プロシージャ](./property-procedures.md)
+- [演算子プロシージャ](./operator-procedures.md)
+- [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
+- [プロシージャのオーバーロード](./procedure-overloading.md)
+- [プロシージャのトラブルシューティング](./troubleshooting-procedures.md)
+- [ループ構造](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)

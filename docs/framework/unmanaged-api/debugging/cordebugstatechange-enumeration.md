@@ -1,6 +1,6 @@
 ---
 title: CorDebugStateChange 列挙体
-ms.date: 03/30/2017
+ms.date: 02/07/2019
 api_name:
 - CorDebugStateChange
 api_location:
@@ -12,48 +12,49 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 841108457293e3377ee87f9c7d7c6898340e51b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 676489880cb30ca540cb78d70797dbf4eedf7395
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404347"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739584"
 ---
 # <a name="cordebugstatechange-enumeration"></a>CorDebugStateChange 列挙体
-プロセスへの変更に基づいて破棄が必要となった、キャッシュされたデータの量を示します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-typedef enum CorDebugStateChange  
-{  
-    PROCESS_RUNNING = 0x0000001,   
-    FLUSH_ALL       = 0x0000002,   
-} CorDebugStateChange;  
-```  
-  
-## <a name="members"></a>メンバー  
-  
-|メンバー|説明|  
-|------------|-----------------|  
-|`PROCESS_RUNNING`|プロセスはフォワード実行によって新しいメモリ状態に達しています。|  
-|`SET_CONTEXT_FLAG_UNWIND_FRAME`|プロセスのメモリは、以前とは異なる状態になっている場合があります。|  
-  
-## <a name="remarks"></a>コメント  
- メンバー、`CorDebugStateChange`列挙体は、デバッガーが、引数として指定される、 [ProcessStateChanged](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-processstatechanged-method.md)メソッド  
-  
-> [!NOTE]
->  この列挙体は .NET ネイティブのデバッグ シナリオのみで使用することを目的としています。  
-  
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
-  
- **ヘッダー:** CorDebug.idl、CorDebug.h  
-  
- **ライブラリ:** CorGuids.lib  
-  
- **.NET framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
-  
-## <a name="see-also"></a>関連項目  
- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+
+プロセスへの変更に基づいて破棄が必要となった、キャッシュされたデータの量を示します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+typedef enum CorDebugStateChange
+{
+    PROCESS_RUNNING = 0x0000001,
+    FLUSH_ALL       = 0x0000002,
+} CorDebugStateChange;
+```
+
+## <a name="members"></a>メンバー
+
+| メンバー            | 説明                                                              |
+| ----------------- | ------------------------------------------------------------------------ |
+| `PROCESS_RUNNING` | プロセスはフォワード実行によって新しいメモリ状態に達しています。            |
+| `FLUSH_ALL`       | プロセスのメモリは、以前とは異なる状態になっている場合があります。 |
+
+## <a name="remarks"></a>Remarks
+
+ メンバー、`CorDebugStateChange`デバッガーを呼び出すと、列挙型が、引数として指定された、`ProcessStateChanged`メソッドで[ICorDebugProcess4::ProcessStateChanged](icordebugprocess4-processstatechanged-method.md)または[ICorDebugProcess6:。ProcessStateChanged](icordebugprocess6-processstatechanged-method.md)
+
+## <a name="requirements"></a>必要条件
+
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+
+ **ヘッダー:** CorDebug.idl、CorDebug.h
+
+ **ライブラリ:** CorGuids.lib
+
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
+
+## <a name="see-also"></a>関連項目
+
+- [列挙型のデバッグ](debugging-enumerations.md)
+- [デバッグ](index.md)

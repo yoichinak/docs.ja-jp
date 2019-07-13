@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04df65a29584f7e2de44389d815b915a541e38f0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6f05f349699b28262c1628cadc6e9a0fb0a3459c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507498"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783101"
 ---
 # <a name="spawnderivedclass-function"></a>SpawnDerivedClass 関数
 指定したオブジェクトから新たに派生するクラス オブジェクトが作成されます。    
@@ -30,7 +30,7 @@ ms.locfileid: "43507498"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SpawnDerivedClass (
    [in] int                  vFunc, 
    [in] IWbemClassObject*    ptr, 
@@ -47,7 +47,7 @@ HRESULT SpawnDerivedClass (
 [in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。
 
 `lFlags`  
-[in]予約されています。 このパラメーターは、0 を指定する必要があります。
+[in] 予約されています。 このパラメーターは、0 を指定する必要があります。
 
 `ppNewClass`  
 [out]新しいクラス定義のオブジェクトへのポインターを受け取ります。 新しいオブジェクトでないエラーが発生する場合、返されると`ppNewClass`は左未変更の状態します。 その値にすることはできません`null`します。
@@ -56,7 +56,7 @@ HRESULT SpawnDerivedClass (
 
 この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
 
-|定数  |値  |説明  |
+|定数  |Value  |説明  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | 一般的なエラーが発生しました。 |
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | インスタンスからのクラスの生成などの無効な操作が要求されました。 |
@@ -73,12 +73,13 @@ HRESULT SpawnDerivedClass (
 
 返される新しいオブジェクト`ppNewClass`自動的に現在のオブジェクトのサブクラスになります。 この動作を上書きすることはできません。 サブクラス (派生クラス) を作成できる他の方法はありません。
 
-## <a name="requirements"></a>要件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>関連項目  
-[WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+## <a name="see-also"></a>関連項目
+
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

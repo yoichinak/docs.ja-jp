@@ -2,12 +2,12 @@
 title: 'ループ: for...to 式'
 description: 参照してください方法 F# for….. ループ変数の値の範囲をループで反復処理する式に使用されます。
 ms.date: 05/16/2016
-ms.openlocfilehash: 041e98fa4bcc140aa3cd699f6ed35bf52c8b4175
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 5b7bb9bac659ddf1d457be1ce17e90a2593666de
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612323"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645249"
 ---
 # <a name="loops-forto-expression"></a>ループ: for...to 式
 

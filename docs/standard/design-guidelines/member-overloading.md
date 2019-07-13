@@ -10,12 +10,12 @@ helpviewer_keywords:
 - signatures, members
 ms.assetid: 964ba19e-8b94-4b5b-b1e3-5a0b531a0bb1
 author: KrzysztofCwalina
-ms.openlocfilehash: 93b294c4b535e015c7f4b021e0f950f038a60361
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b13f9e1551aec7e53ba1ac2ed0b9049d46b0a756
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945546"
 ---
 # <a name="member-overloading"></a>メンバーのオーバーロード
 メンバーのオーバー ロードでは、数またはのパラメーターの型でのみ異なるが、同じ名前を持つ同じ型に 2 つ以上のメンバーの作成を意味します。 たとえば、以下では、`WriteLine`メソッドがオーバー ロードします。  
@@ -59,5 +59,5 @@ public static class Console {
   
 ## <a name="see-also"></a>関連項目
 
-- [メンバーのデザインのガイドライン](../../../docs/standard/design-guidelines/member.md)  
+- [メンバーのデザインのガイドライン](../../../docs/standard/design-guidelines/member.md)
 - [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)

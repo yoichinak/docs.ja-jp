@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: 600d8528125606c6e1af5b031e2fc31aabb79206
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: d633111c5abc572b0fc27c1a5b32050681504073
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925045"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753010"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>WPF のインクを概要します。
 
@@ -22,7 +22,7 @@ Windows Presentation Foundation (WPF) が、インク機能を使用するデジ
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-次の例については、最初に使用する[Microsoft Visual Studio インストール](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)します。 基本的な WPF アプリを記述する方法を理解することもできます。 WPF の概要については、次を参照してください。[チュートリアル: 初めての WPF デスクトップ アプリケーション](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)します。
+次の例を使用するには、最初インストール[Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)します。 基本的な WPF アプリを記述する方法を理解することもできます。 WPF の概要については、次を参照してください。[チュートリアル。初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)します。
 
 ## <a name="quick-start"></a>クイック スタート
 
@@ -42,7 +42,7 @@ WPF アプリを作成するには、インクをサポートしています。
 
 3. 型`<InkCanvas/>`間、`<Grid>`タグ。
 
-   ![InkCanvas タグを持つ XAML デザイナー](media/getting-started-with-ink/inkcanvas-xaml.png)
+   ![InkCanvas タグを持つ XAML デザイナー](./media/getting-started-with-ink/inkcanvas-xaml.png)
 
 4. キーを押して**F5**デバッガーでアプリケーションを起動します。
 
@@ -70,7 +70,7 @@ WPF の機能がいくつかの利点を見てみましょう。 開始タグと
 
 この XAML は、手描き入力サーフェイス グラデーション ブラシのバック グラウンドを作成します。
 
-![WPF アプリで画面を手描き入力のグラデーションの色](media/getting-started-with-ink/gradient-colors.png)
+![WPF アプリで画面を手描き入力のグラデーションの色](./media/getting-started-with-ink/gradient-colors.png)
 
 ### <a name="add-some-code-behind-the-xaml"></a>一部の XAML コードを追加します。
 
@@ -78,12 +78,12 @@ XAML を使用する非常に簡単にユーザー インターフェイスを�
 
 1. 設定、 `MouseRightButtonUp` XAML 内のハンドラー。
 
-   [!code-xaml[DigitalInkTopics#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]
+   [!code-xaml[DigitalInkTopics#3](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]
 
 1. **ソリューション エクスプ ローラー**MainWindow.xaml を展開し、分離コード ファイル (MainWindow.xaml.cs または MainWindow.xaml.vb) を開きます。 次のイベント ハンドラーのコードを追加します。
 
-   [!code-csharp[DigitalInkTopics#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
-   [!code-vb[DigitalInkTopics#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]
+   [!code-csharp[DigitalInkTopics#4](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
+   [!code-vb[DigitalInkTopics#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]
 
 1. アプリケーションを実行します。 、手描き入力を追加し、マウスで右クリックまたはプレス アンド ホールドに相当するスタイラスを使用して実行します。
 
@@ -99,18 +99,18 @@ XAML を使用する非常に簡単にユーザー インターフェイスを�
 
 1. 次のコードを Program.cs または Program.vb ファイルに貼り付けます。
 
-   [!code-csharp[InkCanvasConsoleApp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
-   [!code-vb[InkCanvasConsoleApp#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]
+   [!code-csharp[InkCanvasConsoleApp#1](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
+   [!code-vb[InkCanvasConsoleApp#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]
 
 1. 右クリックし、PresentationCore、PresentationFramework、WindowsBase アセンブリへの参照を追加**参照**で**ソリューション エクスプ ローラー**を選択して**参照の追加**.
 
-   ![PresentationCore と PresentationFramework を示す参照マネージャー](media/getting-started-with-ink/references.png)
+   ![PresentationCore と PresentationFramework を示す参照マネージャー](./media/getting-started-with-ink/reference-manager-presentationcore-presentationframework.png)
 
 1. キーを押してアプリケーションをビルド**F5**します。
 
 ## <a name="see-also"></a>関連項目
 
-- [デジタル インク](../../../../docs/framework/wpf/advanced/digital-ink.md)
-- [インクの収集](../../../../docs/framework/wpf/advanced/collecting-ink.md)
-- [手書き認識](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)
-- [インクの格納](../../../../docs/framework/wpf/advanced/storing-ink.md)
+- [デジタル インク](digital-ink.md)
+- [インクの収集](collecting-ink.md)
+- [手書き認識](handwriting-recognition.md)
+- [インクの格納](storing-ink.md)

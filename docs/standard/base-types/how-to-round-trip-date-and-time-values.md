@@ -1,5 +1,5 @@
 ---
-title: '方法 : 日付と時刻の値をラウンドトリップさせる'
+title: '方法: 日付と時刻の値をラウンドトリップさせる'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55b16d135449cad8ed489a8a3e21db326be0fae0
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: b8f56fcad74287e260c2989534e6bd4931ad646a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45668419"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590018"
 ---
-# <a name="how-to-round-trip-date-and-time-values"></a>方法 : 日付と時刻の値をラウンドトリップさせる
+# <a name="how-to-round-trip-date-and-time-values"></a>方法: 日付と時刻の値をラウンドトリップさせる
 ある特定の時点を明確に表すように日付と時刻の値を保つことは、多くのアプリケーションに共通する要件です。 このトピックでは、<xref:System.DateTime> 値、<xref:System.DateTimeOffset> 値、日時値と時間帯の情報を保存し、復元する方法について説明します。復元した値によって、保存した値と同じ時刻が識別されるようにします。  
   
 ### <a name="to-round-trip-a-datetime-value"></a>DateTime 値をラウンドトリップさせるには  
   
-1.  <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> メソッドを "o" 書式指定子と共に呼び出して、<xref:System.DateTime> 値を対応する文字列形式に変換します。  
+1. <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> メソッドを "o" 書式指定子と共に呼び出して、<xref:System.DateTime> 値を対応する文字列形式に変換します。  
   
-2.  <xref:System.DateTime> 値の文字列形式をファイルに保存するか、プロセス、アプリケーション ドメイン、またはマシン境界を通過させます。  
+2. <xref:System.DateTime> 値の文字列形式をファイルに保存するか、プロセス、アプリケーション ドメイン、またはマシン境界を通過させます。  
   
-3.  <xref:System.DateTime> 値を表す文字列を取得します。  
+3. <xref:System.DateTime> 値を表す文字列を取得します。  
   
-4.  <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> メソッドを呼び出し、`styles` パラメーターの値として <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> を渡します。  
+4. <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> メソッドを呼び出し、`styles` パラメーターの値として <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> を渡します。  
   
  <xref:System.DateTime> 値をラウンドトリップさせる方法を次の例に示します。  
   
@@ -43,13 +43,13 @@ ms.locfileid: "45668419"
   
 ### <a name="to-round-trip-a-datetimeoffset-value"></a>DateTimeOffset 値をラウンドトリップさせるには  
   
-1.  <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> メソッドを "o" 書式指定子と共に呼び出して、<xref:System.DateTimeOffset> 値を対応する文字列形式に変換します。  
+1. <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> メソッドを "o" 書式指定子と共に呼び出して、<xref:System.DateTimeOffset> 値を対応する文字列形式に変換します。  
   
-2.  <xref:System.DateTimeOffset> 値の文字列形式をファイルに保存するか、プロセス、アプリケーション ドメイン、またはマシン境界を通過させます。  
+2. <xref:System.DateTimeOffset> 値の文字列形式をファイルに保存するか、プロセス、アプリケーション ドメイン、またはマシン境界を通過させます。  
   
-3.  <xref:System.DateTimeOffset> 値を表す文字列を取得します。  
+3. <xref:System.DateTimeOffset> 値を表す文字列を取得します。  
   
-4.  <xref:System.DateTimeOffset.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> メソッドを呼び出し、`styles` パラメーターの値として <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> を渡します。  
+4. <xref:System.DateTimeOffset.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> メソッドを呼び出し、`styles` パラメーターの値として <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> を渡します。  
   
  <xref:System.DateTimeOffset> 値をラウンドトリップさせる方法を次の例に示します。  
   
@@ -60,18 +60,18 @@ ms.locfileid: "45668419"
   
 ### <a name="to-round-trip-a-date-and-time-value-with-its-time-zone"></a>日時値とそのタイム ゾーンをラウンドトリップするには  
   
-1.  クラスまたは構造と 2 つのフィールドを定義します。 最初のフィールドは <xref:System.DateTime> または <xref:System.DateTimeOffset> オブジェクトです。2 つ目のフィールドは <xref:System.TimeZoneInfo> オブジェクトです。 次の例は、このような型を簡易にしたものです。  
+1. クラスまたは構造と 2 つのフィールドを定義します。 最初のフィールドは <xref:System.DateTime> または <xref:System.DateTimeOffset> オブジェクトです。2 つ目のフィールドは <xref:System.TimeZoneInfo> オブジェクトです。 次の例は、このような型を簡易にしたものです。  
   
      [!code-csharp[Formatting.HowTo.RoundTrip#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/cs/RoundTrip.cs#3)]
      [!code-vb[Formatting.HowTo.RoundTrip#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/vb/RoundTrip.vb#3)]  
   
-2.  クラスに <xref:System.SerializableAttribute> 属性を付けます。  
+2. クラスに <xref:System.SerializableAttribute> 属性を付けます。  
   
-3.  <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize%2A?displayProperty=nameWithType> メソッドを使用し、オブジェクトをシリアル化します。  
+3. <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize%2A?displayProperty=nameWithType> メソッドを使用し、オブジェクトをシリアル化します。  
   
-4.  <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A> メソッドを使用し、オブジェクトを復元します。  
+4. <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A> メソッドを使用し、オブジェクトを復元します。  
   
-5.  逆シリアル化されたオブジェクトを適切な型のオブジェクトにキャスト (C# の場合) するか、変換 (Visual Basic の場合) します。  
+5. 逆シリアル化されたオブジェクトを適切な型のオブジェクトにキャスト (C# の場合) するか、変換 (Visual Basic の場合) します。  
   
  次の例では、日時とタイム ゾーン情報の両方を保存するオブジェクトをラウンドトリップする方法を確認できます。  
   
@@ -83,24 +83,22 @@ ms.locfileid: "45668419"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  これらの例には次の項目が必要です。  
   
--   次の名前空間を C# `using` ステートメントまたは Visual Basic `Imports` ステートメントでインポートすること:  
+- 次の名前空間を C# `using` ステートメントまたは Visual Basic `Imports` ステートメントでインポートすること:  
   
-    -   <xref:System> (C# のみ)。  
+    - <xref:System> (C# のみ)。  
   
-    -   <xref:System.Globalization?displayProperty=nameWithType>。  
+    - <xref:System.Globalization?displayProperty=nameWithType>。  
   
-    -   <xref:System.IO?displayProperty=nameWithType>。  
+    - <xref:System.IO?displayProperty=nameWithType>.  
   
-    -   <xref:System.Runtime.Serialization?displayProperty=nameWithType>。  
+    - <xref:System.Runtime.Serialization?displayProperty=nameWithType>.  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>。  
+    - <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>。  
   
--   System.Core.dll の参照。  
-  
--   `DateInTimeZone` クラス以外、各コード例はクラスまたは Visual Basic モジュールに含め、メソッドでラップし、`Main` メソッドから呼び出します。  
+- `DateInTimeZone` クラス以外、各コード例はクラスまたは Visual Basic モジュールに含め、メソッドでラップし、`Main` メソッドから呼び出します。  
   
 ## <a name="see-also"></a>関連項目
 
-- [書式設定操作の実行](../../../docs/standard/base-types/performing-formatting-operations.md)  
-- [DateTime、DateTimeOffset、TimeSpan、および TimeZoneInfo の使い分け](../../../docs/standard/datetime/choosing-between-datetime.md)  
+- [書式設定操作の実行](../../../docs/standard/base-types/performing-formatting-operations.md)
+- [DateTime、DateTimeOffset、TimeSpan、および TimeZoneInfo の使い分け](../../../docs/standard/datetime/choosing-between-datetime.md)
 - [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)

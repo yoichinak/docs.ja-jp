@@ -8,12 +8,12 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 1b3dd16cf4c12dca0bc155c478c187047caf4c25
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 43cc051eda8c3458d3dc5c529b52104bcd9b807a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236584"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596121"
 ---
 # <a name="indexers-c-programming-guide"></a>インデクサー (C# プログラミング ガイド)
 
@@ -40,35 +40,35 @@ C# 7.0 以降、get アクセサーと set アクセサーのどちらも、式�
   
 ## <a name="indexers-overview"></a>インデクサーの概要  
   
--   インデクサーを使用すると、配列と同じようにオブジェクトにインデックスを作成することができます。  
+- インデクサーを使用すると、配列と同じようにオブジェクトにインデックスを作成することができます。  
   
--   `get` アクセサーは値を返します。 `set` アクセサーは値を割り当てます。  
+- `get` アクセサーは値を返します。 `set` アクセサーは値を割り当てます。  
   
--   [this](../../../csharp/language-reference/keywords/this.md) キーワードは、インデクサーの定義に使用されます。  
+- [this](../../../csharp/language-reference/keywords/this.md) キーワードは、インデクサーの定義に使用されます。  
   
--   [value](../../../csharp/language-reference/keywords/value.md) キーワードは、`set` インデクサーによって割り当てられる値の定義に使用されます。  
+- [value](../../../csharp/language-reference/keywords/value.md) キーワードは、`set` インデクサーによって割り当てられる値の定義に使用されます。  
   
--   インデクサーは、整数値でインデックスを指定する必要はありません。個々の検索メカニズムの定義方法によります。  
+- インデクサーは、整数値でインデックスを指定する必要はありません。個々の検索メカニズムの定義方法によります。  
   
--   インデクサーはオーバーロードすることができます。  
+- インデクサーはオーバーロードすることができます。  
   
--   インデクサーには、2 次元配列にアクセスする場合など、複数の仮パラメーターを指定できます。  
+- インデクサーには、2 次元配列にアクセスする場合など、複数の仮パラメーターを指定できます。  
   
-##  <a name="BKMK_RelatedSections"></a> 関連セクション  
+## <a name="BKMK_RelatedSections"></a> 関連セクション  
   
--   [インデクサーの使用](../../../csharp/programming-guide/indexers/using-indexers.md)  
+- [インデクサーの使用](../../../csharp/programming-guide/indexers/using-indexers.md)  
   
--   [インターフェイスのインデクサー](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
+- [インターフェイスのインデクサー](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
   
--   [プロパティとインデクサーの比較](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [プロパティとインデクサーの比較](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
   
--   [アクセサーのアクセシビリティの制限](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [アクセサーのアクセシビリティの制限](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
 
 詳細については、「[C# 言語の仕様](../../language-reference/language-specification/index.md)」の「[インデクサー](~/_csharplang/spec/classes.md#indexers)」を参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
 - [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)

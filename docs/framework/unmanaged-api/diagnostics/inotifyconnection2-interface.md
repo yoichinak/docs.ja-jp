@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d0f67b1be58da82c2096c355ba5334b3bfd73611
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7f61f8c77799bbc7a993683421eeee4fd7277d4a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697707"
 ---
 # <a name="inotifyconnection2-interface"></a>INotifyConnection2 インターフェイス
-登録および接続通知ソースの登録を解除するためのメソッドを宣言します。  
+登録と接続の通知のソースを登録解除のためのメソッドを宣言します。  
   
 ## <a name="methods"></a>メソッド  
   
@@ -33,10 +33,11 @@ ms.locfileid: "33426510"
 |[RegisterNotifySource メソッド](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)|指定された通知のソース オブジェクトをインストールします。|  
 |[UnregisterNotifySource メソッド](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)|接続から、指定された通知のソース オブジェクトを削除します。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>関連項目  
- [INotifySink2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- [INotifySource2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- [シンボル ストア診断インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a>関連項目
+
+- [INotifySink2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [INotifySource2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [シンボル ストア診断インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

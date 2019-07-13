@@ -2,12 +2,12 @@
 title: メッセージ ログを参照する
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
-ms.openlocfilehash: 5d007efc9667ee5380b69349d6a960554ab0d4fe
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 5e72aef7addb1e517bdf8cab4e300f6f8df5f833
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50757414"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662833"
 ---
 # <a name="viewing-message-logs"></a>メッセージ ログを参照する
 ここでは、メッセージ ログの表示方法について説明します。  
@@ -29,9 +29,9 @@ ms.locfileid: "50757414"
   
  この問題を解決するには、次のいずれかの方法に従います。  
   
--   次の 3 つのメッセージ ログの 2 つの表示のみ、[サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)いつでもできます。  
+- 次の 3 つのメッセージ ログの 2 つの表示のみ、[サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)いつでもできます。  
   
--   場合内のすべての 3 つのログを表示する必要があります、[サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)新しいを作成して、リレー サービスを変更すると同時に、<xref:System.ServiceModel.Channels.Message>インスタンス。 このインスタンスは、受信メッセージの本文のコピーであり、また、`ActivityId` ヘッダーおよび `Action` ヘッダーを除くすべてのヘッダーのコピーであることが必要です。 これを実行する方法を次のコード例に示します。  
+- 場合内のすべての 3 つのログを表示する必要があります、[サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)新しいを作成して、リレー サービスを変更すると同時に、<xref:System.ServiceModel.Channels.Message>インスタンス。 このインスタンスは、受信メッセージの本文のコピーであり、また、`ActivityId` ヘッダーおよび `Action` ヘッダーを除くすべてのヘッダーのコピーであることが必要です。 これを実行する方法を次のコード例に示します。  
   
 ```csharp
 Message outgoingMessage = Message.CreateMessage(incomingMessage.Version, incomingMessage.Headers.Action, incomingMessage.GetReaderAtBodyContents());  
@@ -50,17 +50,18 @@ incomingMessage.Headers[i].Name.Equals("Action", StringComparison.InvariantCultu
 ## <a name="exceptional-cases-for-inaccurate-message-logging-content"></a>メッセージ ログ内容が不正確になる例外的なケース  
  次の条件では、ログ記録されたメッセージがネットワーク上にあるオクテット ストリームの正確な表現とはならない場合があります。  
   
--   BasicHttpBinding の場合、エンベロープ ヘッダーは /addressing/none 名前空間の受信メッセージについてログ記録されます。  
+- BasicHttpBinding の場合、エンベロープ ヘッダーは /addressing/none 名前空間の受信メッセージについてログ記録されます。  
   
--   空白文字が一致していないことができます。  
+- 空白文字が一致していないことができます。  
   
--   受信メッセージの場合、空の要素が異なる表現になる場合があります。 たとえば、\<タグ >\</タグ > の代わりに\<タグ/>  
+- 受信メッセージの場合、空の要素が異なる表現になる場合があります。 たとえば、\<タグ >\</タグ > の代わりに\<タグ/>  
   
--   既知の PII ログ記録が、既定または enableLoggingKnownPii="true" という明示的な設定で、無効になっている場合。  
+- 既知の PII ログ記録が、既定または enableLoggingKnownPii="true" という明示的な設定で、無効になっている場合。  
   
--   UTF-8 へ変換するためのエンコードが有効な場合。  
+- UTF-8 へ変換するためのエンコードが有効な場合。  
   
-## <a name="see-also"></a>関連項目  
- [サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
- [サービス トレース ビューアーを使用した相関トレースの表示とトラブルシューティング](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [メッセージ ログ](../../../../docs/framework/wcf/diagnostics/message-logging.md)
+## <a name="see-also"></a>関連項目
+
+- [サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [サービス トレース ビューアーを使用した相関トレースの表示とトラブルシューティング](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [メッセージ ログ](../../../../docs/framework/wcf/diagnostics/message-logging.md)

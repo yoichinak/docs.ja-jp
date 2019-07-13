@@ -1,5 +1,5 @@
 ---
-title: '&lt;ソケット&gt;要素 (ネットワーク設定)'
+title: <socket> 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/socket
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <socket> element
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
-ms.openlocfilehash: ff06fd6518e67020b4d67d4e081307b8e54bae85
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5e8ec13a0bb991accff080db502552e46913c66d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194697"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607508"
 ---
-# <a name="ltsocketgt-element-network-settings"></a>&lt;ソケット&gt;要素 (ネットワーク設定)
+# <a name="socket-element-network-settings"></a>\<socket> 要素 (ネットワーク設定)
 ソケット操作が完了ポートを使用するかどうかを指定します。  
   
  \<configuration>  
 \<system.net>  
 \<settings>  
-\<ソケット >  
+\<socket>  
   
 ## <a name="syntax"></a>構文  
   
@@ -64,9 +64,9 @@ ms.locfileid: "50194697"
   
  これは、`ipProtectionLevel`属性の設定が最初に受信トラフィックのみに影響します。  
   
--   着信接続をソケットでリッスンしている TCP サーバー。  
+- 着信接続をソケットでリッスンしている TCP サーバー。  
   
--   ソケットでのパケットを受信 UDP アプリケーションです。  
+- ソケットでのパケットを受信 UDP アプリケーションです。  
   
  この構成設定では既に確立されている TCP 接続が (トラフィックは両方向に無制限) には影響しません UDP パケットを送信するアプリケーションには影響しません。  
   
@@ -103,10 +103,11 @@ ms.locfileid: "50194697"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.Net?displayProperty=nameWithType>  
-- <xref:System.Net.Configuration.SocketElement?displayProperty=nameWithType>  
-- <xref:System.Net.Sockets?displayProperty=nameWithType>  
-- <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>  
-- <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel?displayProperty=nameWithType>  
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Net?displayProperty=nameWithType>
+- <xref:System.Net.Configuration.SocketElement?displayProperty=nameWithType>
+- <xref:System.Net.Sockets?displayProperty=nameWithType>
+- <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>
+- <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel?displayProperty=nameWithType>
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

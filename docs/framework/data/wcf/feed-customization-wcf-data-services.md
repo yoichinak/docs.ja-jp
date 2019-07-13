@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: 1922351ffb11d5ff6541ef22dee623c20d153d6a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 36f0d50994593d1d575a836dfbd04e8c63a21204
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44207493"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306274"
 ---
 # <a name="feed-customization-wcf-data-services"></a>フィードのカスタマイズ (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用して、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]データ フィードとして公開します。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] データ フィードに対して JavaScript Object Notation (JSON) と Atom の両方の形式をサポートします。 Atom フィードを使用するときに[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]エンティティとリレーションシップは、HTTP メッセージの本文に含めることができる XML 形式などのデータをシリアル化の標準的な方法を提供します。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] エンティティに含まれるデータと Atom 要素の既定のエンティティとプロパティのマッピングを定義します。 詳細については、次を参照してください。 [OData: Atom 形式](https://go.microsoft.com/fwlink/?LinkID=185794)します。  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用して、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]データ フィードとして公開します。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] データ フィードに対して JavaScript Object Notation (JSON) と Atom の両方の形式をサポートします。 Atom フィードを使用するときに[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]エンティティとリレーションシップは、HTTP メッセージの本文に含めることができる XML 形式などのデータをシリアル化の標準的な方法を提供します。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] エンティティに含まれるデータと Atom 要素の既定のエンティティとプロパティのマッピングを定義します。 詳細については、次を参照してください[OData:。Atom 形式](https://go.microsoft.com/fwlink/?LinkID=185794)します。  
   
  場合によっては、データ サービスから返されるプロパティのデータを、標準のフィードの形式ではなくカスタマイズした方法でシリアル化する必要があります。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]、データ フィードのシリアル化をカスタマイズするには、エントリの未使用の要素と属性をまたはフィード内のエントリのカスタム要素、エンティティのプロパティをマップ可能性があります。  
   
@@ -31,18 +31,18 @@ ms.locfileid: "44207493"
 >  カスタム フィードを定義する場合、カスタム マッピングが定義されているすべてのエンティティ プロパティが投影に含まれることを保証する必要があります。 マップされているエンティティ プロパティがこの射影に含まれていない場合、データの損失が発生することがあります。 詳細については、次を参照してください。[クエリ射影](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)します。  
   
 ## <a name="customizing-feeds-with-the-entity-framework-provider"></a>Entity Framework プロバイダーを使用したフィードのカスタマイズ  
- [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] プロバイダーで使用されるデータ モデルは、.edmx ファイルの XML として表現されます。 この場合、カスタム フィードを定義する属性が、データ モデルのエンティティ型とプロパティを表現する `EntityType` および `Property` 要素に追加されます。 これらのフィードのカスタマイズ属性が定義されていない[ \[MC-CSDL\]: 概念スキーマ定義ファイル形式](https://go.microsoft.com/fwlink/?LinkId=159072)、形式を[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]プロバイダーを使用して、データ モデルを定義します。 したがって、フィードのカスタマイズ属性を特定のスキーマ名前空間で宣言する必要があります。これは、`m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"` として定義されます。 次の XML フラグメントは、`Property`、`Products`、および `ProductName` プロパティを定義する `ReorderLevel` エンティティ型の `UnitsInStock` 要素に適用されたフィードのカスタマイズ属性を示します。  
+ [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] プロバイダーで使用されるデータ モデルは、.edmx ファイルの XML として表現されます。 この場合、カスタム フィードを定義する属性が、データ モデルのエンティティ型とプロパティを表現する `EntityType` および `Property` 要素に追加されます。 これらのフィードのカスタマイズ属性で定義されていない[ \[MC-CSDL\]:概念スキーマ定義ファイル形式](https://go.microsoft.com/fwlink/?LinkId=159072)、形式を[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]プロバイダーを使用して、データ モデルを定義します。 したがって、フィードのカスタマイズ属性を特定のスキーマ名前空間で宣言する必要があります。これは、`m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"` として定義されます。 次の XML フラグメントは、`Property`、`Products`、および `ProductName` プロパティを定義する `ReorderLevel` エンティティ型の `UnitsInStock` 要素に適用されたフィードのカスタマイズ属性を示します。  
   
- [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/northwind.csdl#edmfeedattributes)]  
+ [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/northwind.csdl#edmfeedattributes)]  
   
  これらの属性によって `Products` エンティティ セットに対して次のカスタム データ フィードが生成されます。 このカスタム データ フィードでは、`ProductName` プロパティ値が `author` 要素内に加えて、`ProductName` プロパティ要素としても表示されます。`UnitsInStock` プロパティは、一意の名前空間、および属性としての `ReorderLevel` プロパティと共にカスタム要素に表示されます。  
   
- [!code-xml[Astoria Custom Feeds#EdmFeedResultProduct](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/edmfeedresult.xml#edmfeedresultproduct)]  
+ [!code-xml[Astoria Custom Feeds#EdmFeedResultProduct](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/edmfeedresult.xml#edmfeedresultproduct)]  
   
- 詳細については、次を参照してください。[方法: Entity Framework プロバイダーでフィードをカスタマイズする](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md)します。  
+ 詳細については、「[方法 :Entity Framework プロバイダーでフィードをカスタマイズ](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md)します。  
   
 > [!NOTE]
->  データ モデルへの拡張はエンティティ デザイナーでサポートされていないので、データ モデルを含む XML ファイルを手動で変更する必要があります。 によって生成される .edmx ファイルの詳細のについては、[!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)]ツールを参照してください[.edmx ファイルの概要](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)します。  
+>  データ モデルへの拡張はエンティティ デザイナーでサポートされていないので、データ モデルを含む XML ファイルを手動で変更する必要があります。 Entity Data Model ツールによって生成される .edmx ファイルの詳細については、次を参照してください。 [.edmx ファイルの概要 (Entity Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))します。  
   
 ### <a name="custom-feed-attributes"></a>カスタム フィード属性  
  次の表に、データ モデルを定義する概念スキーマ定義言語 (CSDL) に追加できるフィードをカスタマイズする XML 属性を示します。 これらの属性は、<xref:System.Data.Services.Common.EntityPropertyMappingAttribute> のプロパティと同等です。  
@@ -63,16 +63,16 @@ ms.locfileid: "44207493"
  リフレクション プロバイダーを使用して実装されたデータ モデル用にフィードをカスタマイズするには、<xref:System.Data.Services.Common.EntityPropertyMappingAttribute> 属性の 1 つ以上のインスタンスをデータ モデル内でエンティティ型を表現するクラスに追加します。 <xref:System.Data.Services.Common.EntityPropertyMappingAttribute> クラスのプロパティは、前のセクションで説明したフィードのカスタマイズ属性に対応します。 両方のプロパティに対して定義されたカスタム フィード マッピングと共に `Order` 型の宣言の例を次に示します。  
   
 > [!NOTE]
->  この例では、データ モデルが、トピックで定義されている[方法: リフレクション プロバイダーを使用してデータ サービスを作成](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)です。  
+>  この例では、データ モデルが、トピックで定義されている[方法。リフレクション プロバイダーを使用してデータ サービスを作成する](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)します。  
   
- [!code-csharp[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria custom feeds/cs/orderitems.svc.cs#customorderfeed)]
- [!code-vb[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria custom feeds/vb/orderitems.svc.vb#customorderfeed)]  
+ [!code-csharp[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_custom_feeds/cs/orderitems.svc.cs#customorderfeed)]
+ [!code-vb[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_custom_feeds/vb/orderitems.svc.vb#customorderfeed)]  
   
  これらの属性によって `Orders` エンティティ セットに対して次のカスタム データ フィードが生成されます。 このカスタム フィード、`OrderId`プロパティの値がでのみ表示されます、`title`の要素、`entry`と`Customer`プロパティの値では、両方が表示されます、`author`要素と同様、`Customer`プロパティ要素。  
   
- [!code-xml[Astoria Custom Feeds#IQueryableFeedResult](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/iqueryablefeedresult.xml#iqueryablefeedresult)]  
+ [!code-xml[Astoria Custom Feeds#IQueryableFeedResult](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/iqueryablefeedresult.xml#iqueryablefeedresult)]  
   
- 詳細については、次を参照してください。[方法: リフレクション プロバイダーでフィードをカスタマイズする](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-the-reflection-provider-wcf-data-services.md)します。  
+ 詳細については、「[方法 :リフレクション プロバイダーでフィードをカスタマイズ](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-the-reflection-provider-wcf-data-services.md)します。  
   
 ## <a name="customizing-feeds-with-a-custom-data-service-provider"></a>カスタム データ サービス プロバイダーを使用したフィードのカスタマイズ  
  カスタム データ サービス プロバイダーを使用して定義されたデータ モデル用のフィードのカスタマイズは、データ モデル内でエンティティ型を表現する <xref:System.Data.Services.Providers.ResourceType.AddEntityPropertyMappingAttribute%2A> で <xref:System.Data.Services.Providers.ResourceType> を呼び出すことによってリソース型に対して定義されます。 詳細については、次を参照してください。[カスタム データ サービス プロバイダー](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)します。  
@@ -83,15 +83,16 @@ ms.locfileid: "44207493"
 ## <a name="feed-customization-considerations"></a>フィードのカスタマイズに関する考慮事項  
  カスタム フィードのマッピングを定義する場合は、以下を検討してください。  
   
--   [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]クライアントに扱います空としてマップされた要素がフィードに空白しか含まれている場合。 このため、空白のみを含むマップされた要素は同じ空白文字で、クライアントで具体化されません。 クライアントでこの空白を保持するためには、値を設定する必要があります`KeepInContext`に`true`フィード マッピング属性にします。  
+- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]クライアントに扱います空としてマップされた要素がフィードに空白しか含まれている場合。 このため、空白のみを含むマップされた要素は同じ空白文字で、クライアントで具体化されません。 クライアントでこの空白を保持するためには、値を設定する必要があります`KeepInContext`に`true`フィード マッピング属性にします。  
   
 ## <a name="versioning-requirements"></a>バージョン管理の要件  
  フィードのカスタマイズには、次に示す [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] プロトコルのバージョン管理の要件があります。  
   
--   フィードのカスタマイズを行う場合は、クライアントとデータ サービスの両方でバージョン 2.0 以降の [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] プロトコルがサポートされている必要があります。  
+- フィードのカスタマイズを行う場合は、クライアントとデータ サービスの両方でバージョン 2.0 以降の [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] プロトコルがサポートされている必要があります。  
   
  詳細については、次を参照してください。[データ サービスのバージョン管理](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [リフレクション プロバイダー](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)  
- [Entity Framework プロバイダー](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)
+## <a name="see-also"></a>関連項目
+
+- [リフレクション プロバイダー](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)
+- [Entity Framework プロバイダー](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)

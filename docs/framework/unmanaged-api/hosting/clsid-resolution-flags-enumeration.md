@@ -16,18 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bec138460d508371565c26017fab3a8c22266db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5274e70c5bead201beb158ee2895415d7ec9e53c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779132"
 ---
 # <a name="clsidresolutionflags-enumeration"></a>CLSID_RESOLUTION_FLAGS 列挙型
-共通言語ランタイム (CLR) を解決する方法を示す値を含む、`CLSID`です。  
+共通言語ランタイム (CLR) を解決する方法を示す値を含む、`CLSID`します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum {  
     CLSID_RESOLUTION_DEFAULT      = 0x0,  
     CLSID_RESOLUTION_REGISTERED   = 0x1  
@@ -39,14 +40,15 @@ typedef enum {
 |メンバー|説明|  
 |------------|-----------------|  
 |`CLSID_RESOLUTION_DEFAULT`|既定の動作を示します。|  
-|`CLSID_RESOLUTION_REGISTERED`|ランタイムは、レジストリ内で検索し、shim のポリシー適用を示します。|  
+|`CLSID_RESOLUTION_REGISTERED`|ランタイムは、レジストリを検索し、shim ポリシー適用を示します。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ホスティングの列挙型](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>関連項目
+
+- [ホスティングの列挙型](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

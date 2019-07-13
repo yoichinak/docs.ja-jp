@@ -8,45 +8,45 @@ helpviewer_keywords:
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 13f7e935ab999ccc3cd3ea1e308e8d686bed4171
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e5e10a1dc1ad3230213a20b850741a6ec0468294
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396936"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616424"
 ---
 # <a name="garbage-collection-etw-events"></a>ガベージ コレクション ETW イベント
 <a name="top"></a> これらのイベントは、ガベージ コレクションに関連する情報を収集します。 ガベージ コレクションが実行された回数、ガベージ コレクションの間に解放されたメモリの量など、診断やデバッグに役立つ情報を入手できます。  
   
  このカテゴリは、次のイベントで構成されます。  
   
--   [GCStart_V1 イベント](#gcstart_v1_event)  
+- [GCStart_V1 イベント](#gcstart_v1_event)  
   
--   [GCEnd_V1 イベント](#gcend_v1_event)  
+- [GCEnd_V1 イベント](#gcend_v1_event)  
   
--   [GCHeapStats_V1 イベント](#gcheapstats_v1_event)  
+- [GCHeapStats_V1 イベント](#gcheapstats_v1_event)  
   
--   [GCCreateSegment_V1 イベント](#gccreatesegment_v1_event)  
+- [GCCreateSegment_V1 イベント](#gccreatesegment_v1_event)  
   
--   [GCFreeSegment_V1 イベント](#gcfreesegment_v1_event)  
+- [GCFreeSegment_V1 イベント](#gcfreesegment_v1_event)  
   
--   [GCRestartEEBegin_V1 イベント](#gcrestarteebegin_v1_event)  
+- [GCRestartEEBegin_V1 イベント](#gcrestarteebegin_v1_event)  
   
--   [GCRestartEEEnd_V1 イベント](#gcrestarteeend_v1_event)  
+- [GCRestartEEEnd_V1 イベント](#gcrestarteeend_v1_event)  
   
--   [GCSuspendEE_V1 イベント](#gcsuspendee_v1_event)  
+- [GCSuspendEE_V1 イベント](#gcsuspendee_v1_event)  
   
--   [GCSuspendEEEnd_V1 イベント](#gcsuspendeeend_v1_event)  
+- [GCSuspendEEEnd_V1 イベント](#gcsuspendeeend_v1_event)  
   
--   [GCAllocationTick_V2 イベント](#gcallocationtick_v2_event)  
+- [GCAllocationTick_V2 イベント](#gcallocationtick_v2_event)  
   
--   [GCFinalizersBegin_V1 イベント](#gcfinalizersbegin_v1_event)  
+- [GCFinalizersBegin_V1 イベント](#gcfinalizersbegin_v1_event)  
   
--   [GCFinalizersEnd_V1 イベント](#gcfinalizersend_v1_event)  
+- [GCFinalizersEnd_V1 イベント](#gcfinalizersend_v1_event)  
   
--   [GCCreateConcurrentThread_V1 イベント](#gccreateconcurrentthread_v1_event)  
+- [GCCreateConcurrentThread_V1 イベント](#gccreateconcurrentthread_v1_event)  
   
--   [GCTerminateConcurrentThread_V1 イベント](#gcterminateconcurrentthread_v1_event)  
+- [GCTerminateConcurrentThread_V1 イベント](#gcterminateconcurrentthread_v1_event)  
   
 <a name="gcstart_v1_event"></a>   
 ## <a name="gcstartv1-event"></a>GCStart_V1 イベント  
@@ -366,5 +366,6 @@ ms.locfileid: "33396936"
   
  イベント データはありません。  
   
-## <a name="see-also"></a>関連項目  
- [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>関連項目
+
+- [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - arrays [Visual Basic]
 - Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
-ms.openlocfilehash: f8bd0f3eed8599f7f9e316df8274e8204a69c48f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 12846b80f04e9fa6d1188485ad55b061cd2863fa
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149901"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758850"
 ---
 # <a name="arrays-in-visual-basic"></a>Visual Basic における配列
 
@@ -32,7 +32,7 @@ ms.locfileid: "53149901"
 ' Declare a single-dimension array of 5 numbers.
 Dim numbers(4) As Integer
 
-'Declare a single-dimension array and set its 4 values.
+' Declare a single-dimension array and set its 4 values.
 Dim numbers = New Integer() {1, 2, 4, 8}
 
 ' Change the size of an existing array to 16 elements and retain the current values.
@@ -61,7 +61,7 @@ Dim sales()() As Double = New Double(11)() {}
 
 - 要素に含まれている値は、その学年の生徒の数を表します。
 
-![生徒数を示す配列の図](../../language-features/arrays/media/arrayexampleschool.gif "ArrayExampleSchool") 「生徒」配列の要素
+![生徒数の配列を示す図](./media/index/students-array-elements.gif)
 
 次の例には、作成し、配列を使用して Visual Basic のコードが含まれています。
 
@@ -87,7 +87,7 @@ Dim sales()() As Double = New Double(11)() {}
 
   [!code-vb[creating2](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#2)]
 
-使用してサイズを再定義できますを既存の配列がある場合、 [ `Redim` ](../../../language-reference/statements/redim-statement.md)ステートメント。 指定することができます、`Redim`ステートメントが、配列内にある値を保持または空の配列を作成することを指定することができます。 次に、 `Redim` ステートメントを使用して既存の配列のサイズを変更する例をいくつか示します。
+使用してサイズを再定義できますを既存の配列がある場合、 [ `ReDim` ](../../../language-reference/statements/redim-statement.md)ステートメント。 指定することができます、`ReDim`ステートメントが、配列内にある値を保持または空の配列を作成することを指定することができます。 次に、 `ReDim` ステートメントを使用して既存の配列のサイズを変更する例をいくつか示します。
 
 [!code-vb[redimensioning](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#3)]
 
@@ -130,17 +130,17 @@ Dim sales()() As Double = New Double(11)() {}
 
 ## <a name="iterating-through-an-array"></a>配列を反復処理します。
 
-最大最小のインデックスとは、最上位から、配列内の各要素にアクセスする配列を反復処理するときに、最下位にします。 通常、いずれかを使用して、[をしています.次のステートメントの](../../../language-reference/statements/for-next-statement.md)または[ごとにしています.次のステートメントの](../../../language-reference/statements/for-each-next-statement.md)配列の要素を反復処理します。 呼び出すことができますが、配列の上限がわからないときに、<xref:System.Array.GetUpperBound%2A?displayProperty=nameWithType>インデックスの最大値を取得します。 最小のインデックス値がほぼ常に 0 を呼び出すことができます、<xref:System.Array.GetLowerBound%2A?displayProperty=nameWithType>インデックスの最小値を取得します。
+配列を反復処理する場合、最小のインデックスから最大のインデックスまで、または最大から最小まで、配列内の各要素にアクセスします。 通常、[For...Nextステートメント](../../../language-reference/statements/for-next-statement.md)または[For Each...Next ステートメント](../../../language-reference/statements/for-each-next-statement.md)のいずれかを使用して、配列の要素を反復処理します。 配列の上限がわからない場合、<xref:System.Array.GetUpperBound%2A?displayProperty=nameWithType>を呼び出すことでインデックスの最大値を取得できます。 最小のインデックス値は、ほとんどの場合 0 ですが、<xref:System.Array.GetLowerBound%2A?displayProperty=nameWithType>を呼び出すことでインデックスの最小値を取得できます。
 
-次の例を使用して、1 次元配列を反復処理、 [ `For...Next` ](../../../language-reference/statements/for-next-statement.md)ステートメント。
+次の例は、 [`For...Next`](../../../language-reference/statements/for-next-statement.md)ステートメントを使用して、1 次元配列を反復処理します。
 
 [!code-vb[iterate-one-dimensional-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate1d.vb)]
 
-次の例を使用して、多次元配列を反復処理を[ `For...Next` ](../../../language-reference/statements/for-next-statement.md)ステートメント。 <xref:System.Array.GetUpperBound%2A> メソッドには、次元を指定するパラメーターがあります。 `GetUpperBound(0)` 最初の次元の最も大きいインデックスを返しますと`GetUpperBound(1)`2 番目の次元の最も大きいインデックスを返します。
+次の例は、[`For...Next`](../../../language-reference/statements/for-next-statement.md)ステートメントを使用して、多次元配列を反復処理します。 <xref:System.Array.GetUpperBound%2A> メソッドには、次元を指定するパラメーターがあります。 `GetUpperBound(0)` は 1 次元目の最も大きいインデックスを返し、`GetUpperBound(1)` は 2 次元目の最も大きいインデックスを返します。
 
 [!code-vb[iterate-two-dimensional-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate2d.vb)]
 
-次の例では、[ごとにしています.次のステートメントの](../../../language-reference/statements/for-each-next-statement.md)1 次元配列と、2 次元配列を反復処理します。
+次の例では、[For Each...Next ステートメント](../../../language-reference/statements/for-each-next-statement.md)を使用して、1 次元配列と、2 次元配列を反復処理します。
 
 [!code-vb[iterate-for-each-next](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate-for-each-next.vb)]
 
@@ -209,7 +209,7 @@ Dim sales()() As Double = New Double(11)() {}
 
 [!code-vb[jagged-arrays](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged.vb)]
 
-前の例では、要素ごとの単位でのジャグ配列に値を割り当ててを使用して、`For...Next`ループします。 入れ子になった配列リテラルを使用してジャグ配列の要素に値を割り当てることもできます。 ただし、使用しようとすると、入れ子になった配列リテラル (たとえば、 ```Dim valuesjagged = {{1, 2}, {2, 3, 4}}```) コンパイラ エラーが発生[BC30568](../../../,,/../misc/bc30568.md)します。 エラーを修正するには、内側の配列リテラルをかっこで囲みます。 かっこは、強制的に配列のリテラル式を評価して、次の例では、外側の配列リテラルには、結果として得られる値が使用されます。
+前の例では、要素ごとの単位でのジャグ配列に値を割り当ててを使用して、`For...Next`ループします。 入れ子になった配列リテラルを使用してジャグ配列の要素に値を割り当てることもできます。 ただし、使用しようとすると、入れ子になった配列リテラル (たとえば、 `Dim valuesjagged = {{1, 2}, {2, 3, 4}}`) コンパイラ エラーが発生[BC30568](../../../,,/../misc/bc30568.md)します。 エラーを修正するには、内側の配列リテラルをかっこで囲みます。 かっこは、強制的に配列のリテラル式を評価して、次の例では、外側の配列リテラルには、結果として得られる値が使用されます。
 
 [!code-vb[jagged-array-initialization](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged-assign.vb)]
 
@@ -269,7 +269,7 @@ Dim arrZ(-1) As String
 > [!NOTE]
 > このセクションでは、1 つの文字列に文字列の配列を結合するには説明しません。 文字列の配列を結合する方法については、次を参照してください。、<xref:System.String.Join%2A?displayProperty=nameWithType>メソッド。
 
-新しい配列に各配列の要素をコピーする前に、まず accompodate 新しい配列に十分な大きさあるように、配列を初期化することを確認する必要があります。 2 つの方法のいずれかでこれを行うことができます。
+新しい配列に各配列の要素をコピーする前に、まず新しい配列を十分に格納されるよう、配列を初期化することを確認する必要があります。 2 つの方法のいずれかでこれを行うことができます。
 
 - 使用して、 [ `ReDim Preserve` ](../../../language-reference/statements/redim-statement.md)ステートメントを動的に新しい要素を追加する前に、配列を展開します。 これは、最も簡単な方法では、大きな配列をコピーするときにパフォーマンスの低下と過剰なメモリ消費量で発生する可能性が。
 - 新しいの大きな配列の必要な要素の合計数を計算し、各ソース配列の要素を追加します。
@@ -299,9 +299,9 @@ Dim arrZ(-1) As String
 |用語|定義|
 |----------|----------------|
 |[Array Dimensions in Visual Basic](../../language-features/arrays/array-dimensions.md)|配列のランクと次元について説明します。|
-|[操作方法：Visual Basic で配列変数を初期化します。](../../language-features/arrays/how-to-initialize-an-array-variable.md)|配列に初期値を設定する方法について説明します。|
-|[操作方法：Visual Basic で配列を並べ替える](../../language-features/arrays/how-to-sort-an-array.md)|配列の要素をアルファベット順に並べ替える方法について説明します。|
-|[操作方法：1 つの配列を別の配列に代入します。](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|配列を別の配列変数に代入するときの手順と規則を説明します。|
+|[方法: Visual Basic で配列変数を初期化します。](../../language-features/arrays/how-to-initialize-an-array-variable.md)|配列に初期値を設定する方法について説明します。|
+|[方法: Visual Basic で配列を並べ替える](../../language-features/arrays/how-to-sort-an-array.md)|配列の要素をアルファベット順に並べ替える方法について説明します。|
+|[方法: 1 つの配列を別の配列に代入します。](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|配列を別の配列変数に代入するときの手順と規則を説明します。|
 |[配列のトラブルシューティング](../../language-features/arrays/troubleshooting-arrays.md)|配列を使用しているときに発生する一般的な問題について説明します。|
 
 ## <a name="see-also"></a>関連項目

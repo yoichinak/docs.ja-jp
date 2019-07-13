@@ -1,48 +1,44 @@
 ---
-title: 運用環境の Docker 環境を管理します。
-description: Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル
-author: CESARDELATORRE
-ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: f968b5199f838e35f336dfa8c7d15aa9e5298951
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+title: Docker の実稼働環境を管理する
+description: コンテナーベースの実稼働環境を管理する際に重要な点について説明します。
+ms.date: 02/15/2019
+ms.openlocfilehash: 7d10f670745f8bac1084b8c33c5acde67bac6229
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147296"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "65641070"
 ---
-# <a name="manage-production-docker-environments"></a>運用環境の Docker 環境を管理します。
+# <a name="manage-production-docker-environments"></a>Docker の実稼働環境を管理する
 
-クラスターの管理とオーケストレーションは、ホストのグループを制御するためのプロセスです。 追加して、クラスターでは、ホストとコンテナーの現在の状態に関する情報を取得し、開始およびプロセスの停止からホストを削除する必要があります。 クラスターの管理とオーケストレーションは、スケジューラは、クラスター内の各ホストへのアクセスをサービスのスケジュールを設定するにがある必要なためにのスケジューリングに密接に関連付けします。 このため、両方の目的で、同じツールがよく使用されます。
+クラスターの管理とオーケストレーションは、ホストのグループを制御するプロセスです。 これには、クラスターのホストの追加と削除、ホストとコンテナーの現在の状態に関する情報の取得、プロセスの開始と停止が含まれます。 サービスをスケジュールするには、スケジューラからクラスター内の各ホストにアクセスできる必要があるため、クラスターの管理とオーケストレーションはスケジューリングと密接に関係しています。 このため、両方の目的に同じツールがよく使用されます。
 
 ## <a name="container-service-and-management-tools"></a>コンテナー サービスと管理ツール
 
-Container Service では、人気のオープン ソース コンテナーのクラスタ リングやオーケストレーション ソリューションの迅速なデプロイを提供します。 Docker イメージを使用して、アプリケーション コンテナーが完全に移植可能であることを確認します。 DC OS/(Mesosphere と Apache Mesos 利用) をデプロイするコンテナー サービスを使用して、Docker Swarm クラスターを Azure Resource Manager テンプレートまたは数千にこれらのアプリケーションをスケーリングできることを確認する Azure portal を使用: 数万も — のコンテナー。
+コンテナー サービスでは、人気のオープン ソースのコンテナー クラスタリングやオーケストレーション ソリューションを短期間でデプロイできます。 アプリケーション コンテナーの完全な移植を確保するため Docker イメージが使用されます。 コンテナー サービスを使用すると、Azure Resource Manager テンプレートまたは Azure portal で DC/OS (Mesosphere および Apache Mesos を搭載) と Docker Swarm クラスターをデプロイし、これらのアプリケーションを数千から数万のコンテナーに確実にスケーリングできるようになります。
 
-Azure 仮想マシン スケール セットを使用してこれらのクラスターを展開して、クラスターを Azure のネットワークおよび記憶域サービスの利用します。 コンテナー サービスにアクセスするには、Azure サブスクリプションを必要があります。 Container service では、オーケストレーション レイヤーなど、アプリケーションの移植性を維持しながら Azure のエンタープライズ級の機能を活用がかかります。
+これらのクラスターは Azure 仮想マシン スケール セットでデプロイされ、Azure ネットワーキングとストレージ サービスが活用されます。 コンテナー サービスにアクセスするには、Azure サブスクリプションが必要です。 コンテナー サービスでは、オーケストレーション レイヤーなどでアプリケーションの移植性を維持しながら、Azure のエンタープライズ レベルの機能を活用できます。
 
-表 6-1 は、オーケストレーター、スケジューラ、クラスタ リングのプラットフォームに関連する、一般的な管理ツールを一覧表示します。
+表 6-1 は、オーケストレーター、スケジューラ、クラスタリング プラットフォームに関連する一般的な管理ツールの一覧です。
 
-表 6-1:Docker の管理ツール
+**表 6-1**. Docker 管理ツール
 
-
-| 管理ツール      | 説明           | 関連するオーケストレーター |
-|-----------------------|-----------------------|-----------------------|
-| Container Service\(Azure portal での UI の管理) | [Container Service](https://azure.microsoft.com/services/container-service/) 、簡単に取得できるは、開始する方法[Azure でコンテナーのクラスターのデプロイ](https://docs.microsoft.com/azure/container-service/dcos-swarm/container-service-deployment)Mesosphere DC/OS、Kubernetes、Docker Swarm などのよく使われるオーケストレーターに基づきます。 <br /><br /> Container Service では、これらのプラットフォームの構成を最適化します。 だけ、サイズ、ホストの数と、オーケストレーター ツールの選択肢を選択する必要があり、コンテナー サービスが他のすべてを処理します。 | Mesosphere DC/OS <br /><br /> Kubernetes <br /><br /> Docker Swarm |
-| Docker ユニバーサル コントロール プレーン\(オンプレミスまたはクラウド) | [Docker ユニバーサル コントロール プレーン](https://docs.docker.com/v1.11/ucp/overview/)は Docker からエンタープライズ グレードのクラスター管理ソリューションです。 1 つの場所から、クラスター全体を管理できます。 <br /><br /> Docker ユニバーサル コントロール プレーンは、Docker Swarm、Docker ユニバーサル コントロール プレーン Docker Trusted Registry を提供する Docker Datacenter をという名前の商用製品の一部として含まれています。 <br /><br /> Docker Datacenter では、オンプレミスにインストールされていることができます。 または Azure のようなパブリック クラウドからプロビジョニングします。 | Docker Swarm\(Container Service でサポートされている) |
-| Docker Cloud\(Tutum; クラウド SaaS とも呼ばれます) | [Docker Cloud](https://docs.docker.com/docker-cloud/)ビルドとテストの機能を設定して、ホスト インフラストラクチャの管理に役立つツールは Dockerized アプリケーション イメージとオーケストレーションの機能と Docker レジストリを提供するホストされる管理サービス (SaaS)具体的なインフラストラクチャをイメージの展開を自動化するのに役立つ機能を展開します。 SaaS の Docker クラウド アカウントは、Docker Swarm クラスターを実行して Container Service のインフラストラクチャに接続できます。 | Docker Swarm\(Container Service でサポートされている) |
-| Mesosphere Marathon\(オンプレミスまたはクラウド) | [Marathon](https://mesosphere.github.io/marathon/docs/marathon-ui.html) Mesosphere の DC/OS と Apache Mesos は、運用環境レベルのコンテナー オーケストレーションとスケジューラ プラットフォーム。 <br /><br /> Mesos で動作する (DC/OS は Apache Mesos に基づく) コントロールの実行時間の長いサービスを示し、[プロセスとコンテナーの管理用の web UI](https://mesosphere.github.io/marathon/docs/marathon-ui.html)。 Web UI の管理ツールを提供します | Mesosphere DC/OS\(Mesos を Apache に基づき、Container Service でサポートされている) |
-| Google Kubernetes | [Kubernetes](https://kubernetes.io/docs/user-guide/ui/#dashboard-access)調整、スケジュール、およびクラスター インフラストラクチャにまたがます。 これはコンテナー中心のインフラストラクチャを提供するホストのクラスターのデプロイ、スケーリング、およびアプリケーション コンテナーの操作を自動化するため、オープン ソース プラットフォーム。 | Google Kubernetes\(Container Service でサポートされている) |
+| 管理ツール | 説明 | 関連するオーケストレーター |
+|------------------|-------------|-----------------------|
+| [コンテナー用 Azure Monitor](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) | Azure 専用 Kubernetes 管理ツール | Azure Kubernetes Services (AKS) |
+| [Kubernetes Web UI (ダッシュボード)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) | Kubernetes 管理ツールでは、ローカル Kubernetes クラスターを監視および管理できます | Azure Kubernetes Service (AKS)<br/>ローカルの Kubernetes |
+| [Azure portal for Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal)<br/>[Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) | Azure、オンプレミス、ローカル開発、およびその他のクラウド上で Service Fabric クラスターを管理するためのオンラインおよびデスクトップ バージョン | Azure Service Fabric |
+| [コンテナー監視 (Azure Monitor)](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | 一般的なコンテナー管理および監視ソリューション。 [コンテナー用 Azure Monitor](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) を使用して Kubernetes クラスターを管理できます。 | Azure Service Fabric<br/>Azure Kubernetes Service (AKS)<br/>Mesosphere DC/OS など。 |
 
 ## <a name="azure-service-fabric"></a>Azure Service Fabric
 
-クラスターのデプロイと管理に関する別の選択肢では、Azure Service Fabric です。 [Service Fabric](https://azure.microsoft.com/services/service-fabric/)開発者と同様にコンテナーのオーケストレーションを含む Microsoft のマイクロ サービス プラットフォームは拡張性の高いマイクロ サービス アプリケーションを構築するモデルをプログラミングします。 Service Fabric では、現在のバージョンの Linux プレビューでは、Docker をサポートと、 [Linux 上の Service Fabric プレビュー](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-anywhere)、および Windows コンテナーの[次のリリースで](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview)します。
+クラスターのデプロイと管理には、Azure Service Fabric という選択肢もあります。 [Service Fabric](https://azure.microsoft.com/services/service-fabric/) は、コンテナー オーケストレーションだけでなく、非常にスケーラブルなマイクロサービス アプリケーションを構築できる開発者プログラミング モデルを含む Microsoft マイクロサービス プラットフォームです。 Service Fabric では、Linux および Windows コンテナーで Docker がサポートされており、Windows および Linux サーバーで実行できます。
 
 Service Fabric 管理ツールを次に示します。
 
--   [Service Fabric 用に azure ポータル](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal)クラスター関連の操作 (作成/更新/削除)、クラスターまたはインフラストラクチャ (Vm、ロード バランサー、ネットワークなど) の構成
+- [Service Fabric 用 Azure portal](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal) では、クラスター関連の操作 (作成/更新/削除) を行い、クラスターのインフラストラクチャ (VM、ロード バランサー、ネットワークなど) を構成します
 
--   [Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) insights と Service Fabric クラスターのノード/vm の観点から、アプリケーションとサービスの観点からの特定の操作を提供する特殊な web UI ツールです。
+- [Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) は、ノード/VM の観点とアプリケーションとサービスの観点から Service Fabric クラスターに関する分析情報と特定の操作を提供する特殊な Web UI およびデスクトップ マルチプラットフォーム ツールです。
 
 >[!div class="step-by-step"]
 >[前へ](run-microservices-based-applications-in-production.md)

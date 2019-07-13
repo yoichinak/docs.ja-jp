@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28e97289eda5949e6d124426eb58105e2e3ad33e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b1aabc5783e66893d13aed60e04d7ea5f6547c68
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435043"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773571"
 ---
 # <a name="iclrassemblyidentitymanagergetbindingidentityfromfile-method"></a>ICLRAssemblyIdentityManager::GetBindingIdentityFromFile メソッド
-指定したファイル パスにあるアセンブリのデータのバインドのアセンブリ id を取得します。  
+指定したファイル パスにあるアセンブリのデータをバインドするアセンブリ id を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetBindingIdentityFromFile(  
     [in] LPCWSTR     pwzFilePath,  
     [in] DWORD       dwFlags,  
@@ -38,18 +38,18 @@ HRESULT GetBindingIdentityFromFile(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pwzFilePath`  
  [in]評価するファイルへのパス。  
   
  `dwFlags`  
- [in]値、 [ECLRAssemblyIdentityFlags](../../../../docs/framework/unmanaged-api/hosting/eclrassemblyidentityflags-enumeration.md)をアセンブリの id の種類を示す列挙体です。 将来の機能拡張を提供します。 CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT は、共通言語ランタイム (CLR) 2.0 をサポートする唯一の値です。  
+ [in]値、 [ECLRAssemblyIdentityFlags](../../../../docs/framework/unmanaged-api/hosting/eclrassemblyidentityflags-enumeration.md)アセンブリの id の種類を示す列挙体。 将来の機能拡張を提供します。 CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT は、共通言語ランタイム (CLR) バージョン 2.0 をサポートする唯一の値です。  
   
  `pwzBuffer`  
- [out]不透明なアセンブリの id データを格納しているバッファー。  
+ [out]非透過的なアセンブリの id データを格納するバッファー。  
   
  `pcchBufferSize`  
- [入力、出力].サイズへのポインター`pwzBuffer`です。  
+ [入力、出力]サイズへのポインター`pwzBuffer`します。  
   
 ## <a name="return-value"></a>戻り値  
   
@@ -58,25 +58,26 @@ HRESULT GetBindingIdentityFromFile(
 |S_OK|メソッドが正常に返されます。|  
 |E_INVALIDARG|指定された`pwzFilePath`が null です。|  
 |ERROR_INSUFFICIENT_BUFFER|サイズ`pwzBuffer`が小さすぎます。|  
-|HOST_E_CLRNOTAVAILABLE|CLR が、プロセスに読み込まれていませんまたは CLR は、状態をマネージ コードを実行またはできないの呼び出しは正常に処理します。|  
-|HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
-|HOST_E_NOT_OWNER|呼び出し元は、ロックを所有していません。|  
+|HOST_E_CLRNOTAVAILABLE|プロセスに CLR が読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。|  
+|HOST_E_TIMEOUT|呼び出しがタイムアウトになりました。|  
+|HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
 |HOST_E_ABANDONED|イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。|  
-|E_FAIL|不明な致命的なエラーが発生しました。 メソッドには、E_FAIL が返された場合、CLR は、プロセス内で使用可能ではなくなりました。 メソッドのホストに以降の呼び出しでは、HOST_E_CLRNOTAVAILABLE を返します。|  
+|E_FAIL|不明な致命的なエラーが発生しました。 メソッドから E_FAIL が返された場合、CLR は、プロセス内で使用可能ではなくなりました。 メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>コメント  
- `GetBindingIdentityFromFile` 通常 2 回呼び出されます。 最初の呼び出しに対して null 値を提供する`pwzBuffer`、適切なサイズが返されます`pcchBufferSize`です。 2 番目の呼び出しが適切に割り当てられたバッファーを提供し、メソッドが完了したときに実際のバッファーのデータを返します。  
+## <a name="remarks"></a>Remarks  
+ `GetBindingIdentityFromFile` 通常は 2 回呼び出されます。 最初の呼び出しには、null 値が指定されています`pwzBuffer`、メソッドは、適切なサイズを返しますと`pcchBufferSize`します。 2 番目の呼び出しは、適切に割り当てられたバッファーを提供し、完了時にデータを実際のバッファーでメソッドを返します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICLRAssemblyIdentityManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  
- [ICLRAssemblyReferenceList インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  
- [ICLRHostBindingPolicyManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [ICLRAssemblyIdentityManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [ICLRAssemblyReferenceList インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
+- [ICLRHostBindingPolicyManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)

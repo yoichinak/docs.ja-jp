@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 07ad8b278f6a44fce78bccc980acdc0dc93b1a7a
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 73440f2ed689bdad56bb1f05025f826da9c409e2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261460"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633322"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>.NET での数値文字列の解析
 すべての数値型には、2 つの静的解析メソッド (`Parse` と `TryParse`) があり、数字の文字列形式を数値型に変換するために使用できます。 これらのメソッドでは、[標準の数値書式指定文字列](../../../docs/standard/base-types/standard-numeric-format-strings.md)と[カスタム数値書式指定文字列](../../../docs/standard/base-types/custom-numeric-format-strings.md)で記述されている書式指定文字列を使用して、生成された文字列を解析できます。 既定では、`Parse` と `TryParse` メソッドは、10 進数の整数を含む文字列を整数値のみに正常に変換することができます。 これらのメソッドは、整数部と小数部、グループ区切り、および小数点記号を含む文字列を浮動小数点値に正常に変換できます。 `TryParse` メソッドが `false` を返すのに対して、`Parse` メソッドは操作が失敗した場合に例外をスローします。  
@@ -28,9 +28,9 @@ ms.locfileid: "48261460"
   
  書式プロバイダーは、<xref:System.IFormatProvider> 実装によって示されます。 このインターフェイスには、1 つのメンバー (<xref:System.IFormatProvider.GetFormat%2A> メソッド) があり、その 1 つのパラメーターは、書式設定される型を示す <xref:System.Type> オブジェクトです。 このメソッドは、書式情報を示すオブジェクトを返します。 .NET では、数値文字列を解析するために、次の 2 つの <xref:System.IFormatProvider> の実装をサポートします。  
   
--   <xref:System.Globalization.CultureInfo> オブジェクト。その <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> メソッドが、カルチャ固有の書式情報を提供する <xref:System.Globalization.NumberFormatInfo> オブジェクトを返します。  
+- <xref:System.Globalization.CultureInfo> オブジェクト。その <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> メソッドが、カルチャ固有の書式情報を提供する <xref:System.Globalization.NumberFormatInfo> オブジェクトを返します。  
   
--   <xref:System.Globalization.NumberFormatInfo> オブジェクト。その <xref:System.Globalization.NumberFormatInfo.GetFormat%2A?displayProperty=nameWithType> メソッドがそれ自体を返します。  
+- <xref:System.Globalization.NumberFormatInfo> オブジェクト。その <xref:System.Globalization.NumberFormatInfo.GetFormat%2A?displayProperty=nameWithType> メソッドがそれ自体を返します。  
   
  次の例では、配列内の各文字列を <xref:System.Double> 値に変換しようとします。 最初に、英語 (米国) カルチャの規則を反映する書式プロバイダーを使用して、文字列を解析しようとします。 この操作が <xref:System.FormatException> をスローする場合、フランス語 (フランス) カルチャの規則を反映する書式プロバイダーを使用して、文字列を解析しようとしています。  
   
@@ -85,6 +85,6 @@ ms.locfileid: "48261460"
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Globalization.NumberStyles>  
-- [文字列の解析](../../../docs/standard/base-types/parsing-strings.md)  
+- <xref:System.Globalization.NumberStyles>
+- [文字列の解析](../../../docs/standard/base-types/parsing-strings.md)
 - [型の書式設定](../../../docs/standard/base-types/formatting-types.md)

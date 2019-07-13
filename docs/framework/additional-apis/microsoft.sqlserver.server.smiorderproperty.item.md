@@ -1,10 +1,11 @@
 ---
 title: SmiOrderProperty.Item プロパティ (Microsoft.SqlServer.Server)
-author: douglaslMS
-ms.author: douglasl
+author: stevestein
+ms.author: sstein
 ms.date: 12/20/2018
-ms.technology:
-- dotnet-data
+ms.technology: dotnet-data
+topic_type:
+- apiref
 api_name:
 - Microsoft.SqlServer.Server.SmiOrderProperty.Item
 - Microsoft.SqlServer.Server.SmiOrderProperty.get_Item
@@ -12,12 +13,12 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: c586d07e8ea0c2ac0b1efb603e8900d681fd0a91
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: e2d8788f610d80c30baf51bff0131f0834d59fcd
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152665"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634583"
 ---
 # <a name="smiorderpropertyitem-property"></a>SmiOrderProperty.Item プロパティ
 

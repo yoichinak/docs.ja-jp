@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 050bfb08dfd95e29b6534f69dbd35400d59e6099
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5e9e33e65b1cdeabe203c67ee4d4f259e2f7ac99
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419605"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770071"
 ---
 # <a name="icordebugthreadenumnext-method"></a>ICorDebugThreadEnum::Next メソッド
 列挙体の現在位置から指定した ICorDebugThread インスタンスの数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Next (  
     [in] ULONG celt,  
     [out, size_is(celt), length_is(*pceltFetched)]  
@@ -38,21 +38,21 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `celt`  
- [in]数`ICorDebugThread`を取得するインスタンス。  
+ [in]数`ICorDebugThread`インスタンスを取得します。  
   
  `threads`  
  [out]それぞれが指すポインターの配列、`ICorDebugThread`スレッドを表すオブジェクト。  
   
  `pceltFetched`  
- [out]数へのポインター`ICorDebugThread`実際に返されるインスタンス。 この値を null にすることがある場合`celt`は 1 つです。  
+ [out]数へのポインター`ICorDebugThread`インスタンスが実際に返されます。 この値は null になる場合`celt`は 1 つです。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b7f70162ae368934e1383683672fed86f9ce18c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 61fc71c2ab0a9107f5e9fbb354fe0f8c2fb0dace
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441414"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776343"
 ---
 # <a name="ceesectionattr-enumeration"></a>CeeSectionAttr 列挙型
-使用するセクションの属性を指定する値を提供、 [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)インターフェイスです。  
+使用するセクションの属性を指定する値を提供、 [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)インターフェイス。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum  {  
     sdNone      = 0,  
     sdReadOnly  = IMAGE_SCN_CNT_INITIALIZED_DATA |  
@@ -45,17 +45,18 @@ typedef enum  {
 |------------|-----------------|  
 |`sdNone`|セクションには、属性がありません。|  
 |`sdReadOnly`|セクションには、読み取りのみ可能で、更新されない初期化されたデータが含まれています。|  
-|`sdReadWrite`|セクションには、読み取りまたは更新が可能な初期化済みデータが含まれています。|  
+|`sdReadWrite`|セクションには、読み取りまたは更新ができる初期化されたデータが含まれています。|  
 |`sdExecute`|セクションには、読み取りし、実行が許可されている実行可能コードが含まれています。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>関連項目
+
+- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

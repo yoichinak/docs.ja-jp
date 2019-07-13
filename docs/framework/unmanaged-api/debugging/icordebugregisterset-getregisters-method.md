@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: deaeb4e244a4f9c1e8582d9bea26c2ae5cfde818
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: daee6c46c247bcd21073f779cada8c843947a949
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421351"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747252"
 ---
 # <a name="icordebugregistersetgetregisters-method"></a>ICorDebugRegisterSet::GetRegisters メソッド
-(現在のコードを実行しているコンピューター) 上の各レジスタの値を取得ビット マスクで指定されています。  
+各レジスタの値を取得します (現在のコードを実行しているコンピューター) でビット マスクによって指定されています。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetRegisters (  
     [in] ULONG64       mask,   
     [in] ULONG32       regCount,  
@@ -38,30 +38,31 @@ HRESULT GetRegisters (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `mask`  
- [in]値が取得するにはどのレジスタを指定するビット マスクです。 各ビットは、レジスタに対応します。 ビットは 1 つに設定されている場合は、レジスタの値が取得されます。それ以外の場合、レジスタの値は取得されません。  
+ [in]値が取得するにはどのレジスタを指定するビット マスク。 各ビットは、レジスタに対応します。 ビットは 1 つに設定されている場合は、レジスタの値が取得されます。それ以外の場合、レジスタの値は取得されません。  
   
  `regCount`  
  [in]取得するレジスタの値の数。  
   
  `regBuffer`  
- [out]配列`CORDB_REGISTER`レジスタの値を受け取る各のオブジェクト。  
+ [out]配列の`CORDB_REGISTER`オブジェクト、レジスタの値を受信します。  
   
-## <a name="remarks"></a>コメント  
- 配列のサイズをビット マスクのいずれかに設定されたビットの数と同じにする必要があります。 `regCount`パラメーターは、レジスタの値を受け取るバッファー内の要素の数を指定します。 場合、`regCount`マスクによって示されるレジスタの数の値が小さすぎる、セットから大きい番号のレジスタは切り捨てられます。 場合、`regCount`値が大きすぎるため、未使用`regBuffer`要素は変更できません。  
+## <a name="remarks"></a>Remarks  
+ 配列のサイズは、ビット マスクのいずれかに設定するビット数に等しい必要があります。 `regCount`パラメーターがレジスタの値を受け取るバッファー内の要素の数を指定します。 場合、`regCount`マスクで指定したレジスタの数の値が小さすぎる、セットから大きい番号のレジスタは切り捨てられます。 場合、`regCount`値が大きすぎて、未使用`regBuffer`要素は変更できません。  
   
- 使用可能なレジスタを指定するビット マスク場合`GetRegisters`そのレジスタの中間の値を返します。  
+ ビット マスクが使用できないレジスタを指定する場合`GetRegisters`そのレジスタの中間の値を返します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICorDebugRegisterSet インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)  
- [ICorDebugRegisterSet2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [ICorDebugRegisterSet インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+- [ICorDebugRegisterSet2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)

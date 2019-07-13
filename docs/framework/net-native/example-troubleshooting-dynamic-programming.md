@@ -1,21 +1,21 @@
 ---
-title: '例: 動的プログラミングのトラブルシューティング'
+title: 例:動的プログラミングのトラブルシューティング
 ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21a373b946c3ce9f4606e870ae10e23a63398bc9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: e482303e684813574a092f0a2d5812445ed7fa6e
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406370"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052619"
 ---
-# <a name="example-troubleshooting-dynamic-programming"></a>例: 動的プログラミングのトラブルシューティング
+# <a name="example-troubleshooting-dynamic-programming"></a>例:動的プログラミングのトラブルシューティング
 > [!NOTE]
 >  このトピックでは、プレリリース ソフトウェアである .NET Native Developer Preview について述べています。 プレビュー版は、[Microsoft Connect Web サイト](https://go.microsoft.com/fwlink/?LinkId=394611)からダウンロードできます (登録が必要です)。  
   
- [!INCLUDE[net_native](../../../includes/net-native-md.md)] ツール チェーンを使用して開発されたアプリでのメタデータ ルックアップの失敗すべてが、例外になるわけではありません。  予測できない方法でアプリに出現するものもあります。  次の例は、null オブジェクトの参照により生じるアクセス違反を示しています。  
+ .NET ネイティブ ツール チェーンの結果を例外を使用してアプリ内のすべてのメタデータ ルックアップの失敗を開発しました。  予測できない方法でアプリに出現するものもあります。  次の例は、null オブジェクトの参照により生じるアクセス違反を示しています。  
   
 ```  
 Access violation - code c0000005 (first chance)  
@@ -33,7 +33,7 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
 [snip]  
 ```  
   
- 「[Getting Started](../../../docs/framework/net-native/getting-started-with-net-native.md)」(はじめに) の「メタデータの欠落を手動で解決する」セクションで説明されている 3 つの手順からなるアプローチを使用して、この例外をトラブルシューティングしてみましょう。  
+ 「[.NET ネイティブの概要](../../../docs/framework/net-native/getting-started-with-net-native.md)」の「メタデータの欠落を手動で解決する」セクションで説明されている 3 つの手順からなるアプローチを使用して、この例外をトラブルシューティングしてみましょう。  
   
 ## <a name="what-was-the-app-doing"></a>アプリが行っていた動作は何か  
  最初に注目するのは、スタックの最下位にある `async` キーワード メカニズムです。  スタックでは元の呼び出しのコンテキストが失われており、別のスレッドで `async` コードを実行しているため、アプリが `async` メソッドで実際に何を行っていたかを決定するのは困難です。 ただし、アプリが最初のページをロードしようとしていたことは推測できます。  `NavigationArgs.Setup` の実装で、次のコードによってアクセス違反が発生しました。  
@@ -52,7 +52,7 @@ AppViewModel.Current.LayoutVM.PageMap
   
  この場合、`App.Core.ViewModels` のランタイム ディレクティブを追加すると、問題が解決します。 根本原因は、**null** を返した <xref:System.Type.GetType%28System.String%29?displayProperty=nameWithType> メソッドへの API 呼び出しで、アプリではクラッシュが発生するまでエラーを出さずにこの問題を無視していました。  
   
- 動的プログラミングでは、[!INCLUDE[net_native](../../../includes/net-native-md.md)]でリフレクション API を使用する場合、失敗したときに例外をスローする <xref:System.Type.GetType%2A?displayProperty=nameWithType> オーバーロードを使用することをお勧めします。  
+ 動的プログラミングでリフレクション Api .NET ネイティブを使用するときのことをお勧めを使用する、<xref:System.Type.GetType%2A?displayProperty=nameWithType>エラーに例外をスローするオーバー ロードします。  
   
 ## <a name="is-this-an-isolated-case"></a>特殊なケースかどうか  
  `App.Core.ViewModels` を使用する際に、その他の問題が発生することもあります。  メタデータの欠落例外すべてを特定して修正する意味があるかどうか、または大きい型のクラスにディレクティブを追加して時間を節約するかを決定する必要があります。  この場合は、出力バイナリのサイズ増大が問題になるのでなければ、`dynamic` の `App.Core.ViewModels` メタデータを追加するのが最適な方法でしょう。  
@@ -60,6 +60,7 @@ AppViewModel.Current.LayoutVM.PageMap
 ## <a name="could-the-code-be-rewritten"></a>コードを書き換えることができるか  
  アプリで `typeof(LayoutApplicationVM)` ではなく `Type.GetType("LayoutApplicationVM")` を使用している場合、ツール チェーンに `browse` メタデータが保存されている可能性があります。  ただし、それでも `invoke` メタデータは作成されておらず、そのため型をインスタンス化するときに [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 例外が発生する可能性があります。 この例外を回避するには、名前空間または `dynamic` ポリシーを指定する型のランタイム ディレクティブを追加する必要があります。 ランタイム ディレクティブの詳細については、「[ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [はじめに](../../../docs/framework/net-native/getting-started-with-net-native.md)  
- [例: データ バインディング時の例外の処理](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
+## <a name="see-also"></a>関連項目
+
+- [はじめに](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [例:データ バインディング時に例外を処理](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)

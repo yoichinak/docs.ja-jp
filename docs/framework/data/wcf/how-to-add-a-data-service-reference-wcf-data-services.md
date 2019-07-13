@@ -1,17 +1,17 @@
 ---
-title: '方法: データ サービス参照を追加する (WCF Data Services)'
+title: '方法: データ サービス参照 (WCF Data Services) の追加します。'
 ms.date: 08/24/2018
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 62c6f318-3ee1-433a-b7a3-efa234c3034c
-ms.openlocfilehash: fc1786e1c6102c702374989253cd3ce23e3f7b54
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 8bf623ec74c3bd165f63f60e883bfcb532d6900b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084638"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633953"
 ---
-# <a name="how-to-add-a-data-service-reference-wcf-data-services"></a>方法: データ サービス参照 (WCF Data Services) の追加
+# <a name="how-to-add-a-data-service-reference-wcf-data-services"></a>方法: データ サービス参照 (WCF Data Services) の追加します。
 
 使用することができます、**サービス参照の追加**WCF Data Services への参照を追加する Visual Studio でダイアログ。 参照をデータ サービスに追加すると、Visual Studio で開発したクライアント アプリケーションのデータ サービスに容易にアクセスできます。 この手順を完了すると、データ サービスから取得されたメタデータに基づいてデータ クラスが生成されます。 詳細については、次を参照してください。[データ サービス クライアント ライブラリの生成](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)します。
 

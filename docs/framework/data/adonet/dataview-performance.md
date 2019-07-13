@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 90820e49-9d46-41f6-9a3d-6c0741bbd8eb
-ms.openlocfilehash: 41b9e51e804d88227b8812124d25eae21838fc6d
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: f0a85232b753eed891cded4b0fb1154269b30dc9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606945"
 ---
 # <a name="dataview-performance"></a>DataView のパフォーマンス
 このトピックでは、<xref:System.Data.DataView.Find%2A> クラスの <xref:System.Data.DataView.FindRows%2A> メソッドと <xref:System.Data.DataView> メソッドを使用すること、および、Web アプリケーションで <xref:System.Data.DataView> をキャッシュすることのパフォーマンス上の利点について説明します。  
@@ -86,5 +86,6 @@ GridView1.DataSource = ordersView;
 GridView1.DataBind();  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [データ バインディングと LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
+## <a name="see-also"></a>関連項目
+
+- [データ バインディングと LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)

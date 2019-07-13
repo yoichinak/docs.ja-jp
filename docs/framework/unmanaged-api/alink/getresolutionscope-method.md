@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e67a71c25c0ae8ee7c54fae2e38d1116a5d92eff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c6c2e741df594e265fdef51a602a9a4927733b7c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402590"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741866"
 ---
 # <a name="getresolutionscope-method"></a>GetResolutionScope メソッド
-指定した型のスコープを取得します。  
+指定された型のスコープを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetResolutionScope(  
     mdAssembly  AssemblyID,  
     mdToken     FileToken,  
@@ -37,15 +37,15 @@ HRESULT GetResolutionScope(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- アセンブリの ID です。  
+ アセンブリの ID。  
   
  `FileToken`  
- 参照が必要なファイルです。  
+ 参照が必要なファイル。  
   
  `TargetFile`  
- その型が定義されているファイルのトークン[ImportFile メソッド](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)です。  
+ その型が定義されているファイルのトークン[ImportFile メソッド](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)します。  
   
  `pScope`  
  アセンブリまたはモジュールの参照を受け取ります。  
@@ -53,10 +53,11 @@ HRESULT GetResolutionScope(
 ## <a name="return-value"></a>戻り値  
  メソッドが成功した場合は、S_OK を返します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  Alink.h が必要です。  
   
-## <a name="see-also"></a>関連項目  
- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>関連項目
+
+- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

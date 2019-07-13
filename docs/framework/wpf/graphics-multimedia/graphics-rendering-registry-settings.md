@@ -8,18 +8,16 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: acaa8f2ff6611f2f0beb07b74193341edfa2a428
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: b1c61aa333c428e5cb811a5d19469516cbb813e3
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259848"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663155"
 ---
 # <a name="graphics-rendering-registry-settings"></a>グラフィックス レンダリングのレジストリ設定
 ここでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションに影響を与える [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] グラフィックス レンダリングのレジストリ設定の概要を示します。  
-  
 
-  
 <a name="overview"></a>   
 ## <a name="when-to-use-graphics-rendering-registry-settings"></a>グラフィックス レンダリングのレジストリ設定を使用する場合  
  これらのレジストリ設定は、トラブルシューティング、デバッグ、製品サポートの目的で提供されています。 レジストリの変更はすべての [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションに影響するため、アプリケーションでは、これらのレジストリ キーを自動的に変更したり、インストール時に変更したりしないでください。  
@@ -35,7 +33,7 @@ ms.locfileid: "44259848"
 |設定|説明|  
 |-------------|-----------------|  
 |**Disable Hardware Acceleration Option (ハードウェア高速化オプションを無効にする)**|ハードウェア高速化を有効にするかどうかを指定します。|  
-|**Maximum Multisample Value (最大マルチサンプル値)**|[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] コンテンツをアンチエイリアシングするためのマルチサンプリングの度合いを指定します。|  
+|**Maximum Multisample Value (最大マルチサンプル値)**|アンチエイリアシングの 3-D コンテンツのマルチ サンプリングの度合いを指定します。|  
 |**Required Video Driver Date Setting (ビデオ ドライバーの日付設定が必須)**|2004 年 11 月より前にリリースされたドライバーについて、ハードウェア高速化を無効にするかどうかを指定します。|  
 |**Use Reference Rasterizer Option (リファレンス ラスタライザー オプションを使用する)**|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] でリファレンス ラスタライザーを使用するかどうかを指定します。|  
   
@@ -50,7 +48,7 @@ ms.locfileid: "44259848"
   
  **[disable hardware acceleration option]** (ハードウェアの高速化オプションを無効にする) を使用すると、デバッグとテストの目的でハードウェアの高速化を無効にできます。 アプリケーションにレンダリング アーティファクトが見られる場合は、ハードウェアの高速化を無効にしてみてください。 アーティファクトが消える場合は、ビデオ ドライバーの問題である可能性があります。  
   
- **[disable hardware acceleration option]** (ハードウェアの高速化オプションを無効にする) は、0 か 1 の DWORD 値です。 値が 1 の場合、ハードウェアの高速化は無効になります。 値が 0 の場合、システムがハードウェアの高速化の要件を満たしていれば、ハードウェアの高速化が有効になります。詳しくは、「[グラフィックスの描画層](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)」をご覧ください。  
+ **[disable hardware acceleration option]** (ハードウェアの高速化オプションを無効にする) は、0 か 1 の DWORD 値です。 値が 1 の場合、ハードウェアの高速化は無効になります。 値が 0 の場合、システムがハードウェアの高速化の要件を満たしていれば、ハードウェアの高速化が有効になります。詳しくは、「[グラフィックスの描画層](../advanced/graphics-rendering-tiers.md)」をご覧ください。  
   
 <a name="maxmultisample"></a>   
 ## <a name="maximum-multisample-value"></a>Maximum Multisample Value (最大マルチサンプル値)  
@@ -59,9 +57,9 @@ ms.locfileid: "44259848"
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\MaxMultisampleType`|DWORD|  
   
- **[Maximum Multisample Value]** (最大マルチサンプル値) を使用すると、[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] コンテンツのアンチエイリアシングの最大量を調整できます。 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] のアンチエイリアシングを [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] で無効にするには、または [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] で有効にするには、このレベルを使用します。  
+ **最大マルチ サンプル値**3-D コンテンツのアンチエイリアシングの最大量を調整することができます。 このレベルを使用して 3-D のアンチエイリアシングで無効にする[!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)]で有効にまたは[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]します。  
   
- **[maximum multisample value]** (最大マルチサンプル値) は 0 から 16 の DWORD 値です。 値 0 は、3-D コンテンツのマルチサンプル アンチエイリアシングが無効になることを指定し、値 16 では、ビデオ カードでサポートされる場合に最大で 16 倍のマルチサンプル アンチエイリアシングの使用が試行されます。 XPDM ドライバーを使用するコンピューターでこのレジストリ キー値を設定すると、アプリケーションは大量のビデオ メモリを追加使用するため、[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] レンダリングのパフォーマンスが低下し、レンダリング エラーや安定性の問題が発生する可能性があることにご注意ください。  
+ **[maximum multisample value]** (最大マルチサンプル値) は 0 から 16 の DWORD 値です。 値 0 は、3-D コンテンツのマルチサンプル アンチエイリアシングが無効になることを指定し、値 16 では、ビデオ カードでサポートされる場合に最大で 16 倍のマルチサンプル アンチエイリアシングの使用が試行されます。 レンダリングのエラーと安定性が発生する可能性があり XPDM ドライバーを使用するコンピューターでこのレジストリ値を設定すると、大量の追加のビデオ メモリを使用して、3-D のレンダリングのパフォーマンスが低下するアプリケーションによってことに注意してください。問題があります。  
   
  このレジストリ キーを設定しないと、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の既定値は、XPDM ドライバーでは 0、WDDM ドライバーでは 4 になります。  
   
@@ -97,6 +95,7 @@ ms.locfileid: "44259848"
   
  **[use reference rasterizer option]** (リファレンス ラスタライザー オプションを使用する) は、DWORD 値を受け取ります。 値 0 は、リファレンス ラスタライザーを使用しないことを示します。 他の 0 以外の値は、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] にリファレンス ラスタライザーの使用を強制します。  
   
-## <a name="see-also"></a>関連項目  
- [グラフィックスの描画層](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)  
- [WPF グラフィックス レンダリングの概要](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+## <a name="see-also"></a>関連項目
+
+- [グラフィックスの描画層](../advanced/graphics-rendering-tiers.md)
+- [WPF グラフィックス レンダリングの概要](wpf-graphics-rendering-overview.md)

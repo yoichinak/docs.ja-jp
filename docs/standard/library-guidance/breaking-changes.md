@@ -4,12 +4,12 @@ description: .NET ライブラリを作成するとき、破壊的変更を進�
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: e0e62cda1b7475cd5d1f8bcd3558dc2fe7f6e07c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a5cfd2dfb544b2e47a87bd0939990ae73e5eda9b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148511"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564225"
 ---
 # <a name="breaking-changes"></a>互換性に影響する変更
 
@@ -100,9 +100,9 @@ public class Document
 
 ## <a name="see-also"></a>関連項目
 
-* [C# 開発者向けのバージョンと更新に関する考慮事項](../../csharp/whats-new/version-update-considerations.md)
-* [API の決定版ガイド - .NET の破壊的変更](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net)
-* [CoreFX 破壊的変更ルール](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/breaking-change-rules.md)
+- [C# 開発者向けのバージョンと更新に関する考慮事項](../../csharp/whats-new/version-update-considerations.md)
+- [API の決定版ガイド - .NET の破壊的変更](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net)
+- [CoreFX 破壊的変更ルール](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/breaking-change-rules.md)
 
 >[!div class="step-by-step"]
 >[前へ](versioning.md)

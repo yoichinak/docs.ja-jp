@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d4422a-7464-4ab8-8ec7-90185fde3ecf
-ms.openlocfilehash: 1ede51ed9119051a647fd27d8d02cd2c93e61bbb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8932f393af58f2014f643c5b6ebd6dc7a127b7eb
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034433"
 ---
 # <a name="creating-a-datareader"></a>DataReader の作成
 <xref:System.Data.DataTable> クラスおよび <xref:System.Data.DataSet> クラスには、<xref:System.Data.DataTable.CreateDataReader%2A> の内容または <xref:System.Data.DataTable> オブジェクトの <xref:System.Data.DataSet> コレクションの内容を、読み取り専用で前方参照専用の 1 つ以上の結果セットとして返す <xref:System.Data.DataSet.Tables%2A> メソッドがあります。  
@@ -30,8 +30,9 @@ ms.locfileid: "43510038"
 4 Russ  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Data.DataTable.CreateDataReader%2A>  
- <xref:System.Data.DataSet.CreateDataReader%2A>  
- [DataTableReaders](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatablereaders.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Data.DataTable.CreateDataReader%2A>
+- <xref:System.Data.DataSet.CreateDataReader%2A>
+- [DataTableReaders](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatablereaders.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

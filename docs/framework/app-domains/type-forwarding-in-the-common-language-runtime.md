@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ad6c87dcec55a332bced00370fe6ea888508793
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5e378eb36e633575d5afa886e886aed302cbdab9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143546"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59310984"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>共通言語ランタイムでの型の転送
 型の転送を使用すると、別のアセンブリに型を移動する際に、元のアセンブリを使用するアプリケーションを再コンパイルする必要がありません。  
@@ -30,9 +30,9 @@ ms.locfileid: "53143546"
 ## <a name="forwarding-types"></a>型の転送  
  型の転送は 4 つの手順で行います。  
   
-1.  型のソース コードを、元のアセンブリから転送先のアセンブリに移動します。  
+1. 型のソース コードを、元のアセンブリから転送先のアセンブリに移動します。  
   
-2.  配置に使用される型のアセンブリで、移動された型の <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> を追加します。 次のコードは、移動された `Example` という型の属性を示しています。  
+2. 配置に使用される型のアセンブリで、移動された型の <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> を追加します。 次のコードは、移動された `Example` という型の属性を示しています。  
   
     ```csharp  
     [assembly:TypeForwardedToAttribute(typeof(Example))]  
@@ -42,11 +42,12 @@ ms.locfileid: "53143546"
     [assembly:TypeForwardedToAttribute(Example::typeid)]  
     ```  
   
-3.  型の現在の場所であるアセンブリをコンパイルします。  
+3. 型の現在の場所であるアセンブリをコンパイルします。  
   
-4.  型の現在の場所であるアセンブリへの参照を指定して、型の元の場所であるアセンブリを再コンパイルします。 たとえば、C# ファイルをコマンド ラインからコンパイルする場合は、[/reference (C# コンパイラ オプション)](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md) オプションを使用して、型の現在の場所であるアセンブリを指定します。 C++ では、ソース ファイルで [#using](/cpp/preprocessor/hash-using-directive-cpp) ディレクティブを使用して、型の現在の場所であるアセンブリを指定します。  
+4. 型の現在の場所であるアセンブリへの参照を指定して、型の元の場所であるアセンブリを再コンパイルします。 たとえば、C# ファイルをコマンド ラインからコンパイルする場合は、[/reference (C# コンパイラ オプション)](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md) オプションを使用して、型の現在の場所であるアセンブリを指定します。 C++ では、ソース ファイルで [#using](/cpp/preprocessor/hash-using-directive-cpp) ディレクティブを使用して、型の現在の場所であるアセンブリを指定します。  
   
-## <a name="see-also"></a>参照  
-- <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>  
-- [型の転送 (C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)  
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>
+- [型の転送 (C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)
 - [#using ディレクティブ](/cpp/preprocessor/hash-using-directive-cpp)

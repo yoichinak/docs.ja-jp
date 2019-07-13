@@ -1,5 +1,5 @@
 ---
-title: '方法 : Windows フォーム コントロールのアクセス キーを作成する'
+title: '方法: Windows フォーム コントロールのアクセス キーを作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -20,19 +20,19 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4faa0991-28ec-4eca-91db-51dc2cd6a7ac
-ms.openlocfilehash: 53ffd3632ff3e1179a72f1e2bfe4ea366e28b0f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6c829553163359301bad2cd896fc43562ee8069
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746847"
 ---
-# <a name="how-to-create-access-keys-for-windows-forms-controls"></a>方法 : Windows フォーム コントロールのアクセス キーを作成する
-*アクセス キー*メニューのメニュー項目、または、ボタンなどのコントロールのラベルのテキストに下線付きの文字がします。 アクセス キーのあるユーザーできます「ボタンをクリック」を定義済みのアクセス キーを持つ組み合わせて ALT キーを押してします。 たとえば、フォームを印刷する手順を実行するボタンおよびその`Text`プロパティは、文字"P"により、文字"P"するには実行時に、ボタンのテキストに下線を付ける前にアンパサンドを追加する"Print"に設定します。 ユーザーは、ALT キーを押しながら P キーを押して、ボタンに関連付けられているコマンドを実行できます。 フォーカスを受け取ることができないコントロールのアクセス キーを持つことはできません。  
+# <a name="how-to-create-access-keys-for-windows-forms-controls"></a>方法: Windows フォーム コントロールのアクセス キーを作成する
+*アクセス キー*がメニューやメニュー項目では、ボタンなどのコントロールのラベルのテキストに下線付きの文字。 アクセス キーでは、ユーザーことができます「ボタンをクリック」を組み合わせて定義済みのアクセス キーを持つ、ALT キーを押してします。 たとえば、フォームを印刷する手順を実行するボタンとその`Text`プロパティが「印刷」に設定されて、文字"P"により、文字"P"を実行時に、ボタンのテキストに下線が引かあります前にアンパサンドを追加します。 ユーザーには、ALT キーを押しながら P キーを押して、ボタンに関連付けられているコマンドを実行できます。 フォーカスを受け取ることはできませんが、コントロールのアクセス キーを持つことはできません。  
   
 ### <a name="to-create-an-access-key-for-a-control"></a>コントロールのアクセス キーを作成するには  
   
-1.  設定、`Text`ショートカットとなる文字の前にアンパサンドを含む文字列 (&) のプロパティです。  
+1. 設定、`Text`プロパティ ショートカットとなる文字の前にアンパサンドを含む文字列 (&)。  
   
     ```vb  
     ' Set the letter "P" as an access key.  
@@ -50,10 +50,11 @@ ms.locfileid: "33530950"
     ```  
   
     > [!NOTE]
-    >  アンパサンド キャプションでアクセス キーを作成することがなく、その 2 つのアンパサンド (& &)。 単一のアンパサンドがキャプションに表示され、文字に下線を付けるありません。  
+    >  アクセス キーを作成することがなく、キャプションにアンパサンドを含める、2 つのアンパサンドを含める (& &)。 単一のアンパサンドがキャプションに表示され、文字に下線を付けるありません。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.Button>  
- [方法: Windows フォームのボタンのクリックに応答する](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
- [方法: Windows フォーム コントロールによって表示されるテキストを設定する](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
- [各 Windows フォーム コントロールのラベル設定とショートカットの作成](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Forms.Button>
+- [方法: Windows フォームのボタン クリックに応答するには](how-to-respond-to-windows-forms-button-clicks.md)
+- [方法: によって表示されるテキストを設定、Windows フォーム コントロール](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [各 Windows フォーム コントロールのラベル設定とショートカットの作成](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

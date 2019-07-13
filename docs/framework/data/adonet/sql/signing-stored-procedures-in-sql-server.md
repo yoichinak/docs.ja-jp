@@ -2,12 +2,12 @@
 title: SQL Server でのストアド プロシージャの署名
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: c24edd59992c246c33944e6693ff5ac69311886a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 2c2076294c0e06ec411ceb1f5b1238dc3d7eb304
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922188"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>SQL Server でのストアド プロシージャの署名
  デジタル署名は、署名者の秘密キーで暗号化されたデータ ダイジェストです。 秘密キーにより、デジタル署名がその保持者または所有者に固有であることが保証されます。 ストアド プロシージャ、関数 (インライン テーブル値関数) を除く、トリガー、およびアセンブリに署名することができます。  
@@ -23,25 +23,25 @@ ms.locfileid: "43865684"
   
  モジュールへの署名では、2 つの必要な手順があります。  
   
-1.  Transact-SQL ステートメント `CREATE CERTIFICATE [certificateName]` を使用して、証明書を作成します。 このステートメントには、開始日、終了日、パスワードを設定するためのオプションがあります。 既定の有効期限の日付は、1 年間です。  
+1. Transact-SQL ステートメント `CREATE CERTIFICATE [certificateName]` を使用して、証明書を作成します。 このステートメントには、開始日、終了日、パスワードを設定するためのオプションがあります。 既定の有効期限の日付は、1 年間です。  
   
-1.  Transact-SQL ステートメント `ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]` を使用して、証明書によってプロシージャに署名します。  
+1. Transact-SQL ステートメント `ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]` を使用して、証明書によってプロシージャに署名します。  
 
 モジュールが署名されていると、1 つまたは複数のプリンシパルは証明書に関連付ける必要のある追加のアクセス許可を保持するために作成する必要があります。  
 
 モジュールには、その他のデータベース レベルのアクセス許可が必要がある場合。  
   
-1.  Transact-SQL ステートメント `CREATE USER [userName] FROM CERTIFICATE [certificateName]` を使用して、証明書に関連付けられたデータベース ユーザーを作成します。 このユーザーは、データベースのみに存在し、その同じ証明書からログインが作成されてもいない限り、ログインに関連付けられていません。  
+1. Transact-SQL ステートメント `CREATE USER [userName] FROM CERTIFICATE [certificateName]` を使用して、証明書に関連付けられたデータベース ユーザーを作成します。 このユーザーは、データベースのみに存在し、その同じ証明書からログインが作成されてもいない限り、ログインに関連付けられていません。  
   
-1.  証明書ユーザーに必要なデータベース レベルのアクセス許可を付与します。  
+1. 証明書ユーザーに必要なデータベース レベルのアクセス許可を付与します。  
   
 モジュールには、追加のサーバー レベルのアクセス許可が必要がある場合。  
   
-1.  証明書のコピー、`master`データベース。  
+1. 証明書のコピー、`master`データベース。  
  
-1.  TRANSACT-SQL を使用してその証明書に関連付けられているログインを作成`CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]`ステートメント。  
+1. TRANSACT-SQL を使用してその証明書に関連付けられているログインを作成`CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]`ステートメント。  
   
-1.  証明書のログインに必要なサーバー レベルのアクセス許可を付与します。  
+1. 証明書のログインに必要なサーバー レベルのアクセス許可を付与します。  
   
 > [!NOTE]  
 >  証明書では、DENY ステートメントを使用して権限が取り消されているユーザーに権限を与えることはできません。 DENY は常に GRANT よりも優先されるため、証明書ユーザーに許可された権限を呼び出し元が継承することはできません。  
@@ -54,12 +54,13 @@ ms.locfileid: "43865684"
 |[モジュール署名](https://go.microsoft.com/fwlink/?LinkId=98590)で SQL Server オンライン ブック|モジュールの署名について説明し、サンプル シナリオと、関連する Transact-SQL のトピックへのリンクを示します。|  
 |[証明書を使用したストアド プロシージャを署名](/sql/relational-databases/tutorial-signing-stored-procedures-with-a-certificate)で SQL Server オンライン ブック|証明書を使用したストアド プロシージャの署名のチュートリアルです。|  
   
-## <a name="see-also"></a>関連項目  
- [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server セキュリティの概要](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
- [SQL Server におけるアプリケーション セキュリティのシナリオ](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [SQL Server でのストアド プロシージャを使用したアクセス許可の管理](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
- [SQL Server での安全な動的 SQL の作成](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
- [SQL Server での借用を使用したアクセス許可のカスタマイズ](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
- [ストアド プロシージャでのデータの変更](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [SQL Server セキュリティの概要](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
+- [SQL Server におけるアプリケーション セキュリティのシナリオ](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
+- [SQL Server でのストアド プロシージャを使用したアクセス許可の管理](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
+- [SQL Server での安全な動的 SQL の作成](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
+- [SQL Server での借用を使用したアクセス許可のカスタマイズ](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)
+- [ストアド プロシージャでのデータの変更](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

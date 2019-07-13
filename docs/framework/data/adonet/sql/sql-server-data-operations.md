@@ -2,12 +2,12 @@
 title: ADO.NET における SQL Server データ操作
 ms.date: 03/30/2017
 ms.assetid: b864ebc9-ed8e-4059-85fd-36d9198f5521
-ms.openlocfilehash: 9c913bffea1be8db0fa5ba2e97714acefe681569
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2dd4430e5b7f86253966f2778abe7d9ba58661a1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876318"
 ---
 # <a name="sql-server-data-operations-in-adonet"></a>ADO.NET における SQL Server データ操作
 このセクションでは、.NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) 固有の SQL Server の機能について説明します。  
@@ -25,7 +25,8 @@ ms.locfileid: "43528187"
  [テーブル値パラメーター](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)  
  SQL Server 2008 で導入された、テーブル値パラメーターの使用方法について説明します。  
   
-## <a name="see-also"></a>関連項目  
- [ADO.NET でのデータの取得および変更](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [SQL Server と ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [ADO.NET でのデータの取得および変更](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [SQL Server と ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

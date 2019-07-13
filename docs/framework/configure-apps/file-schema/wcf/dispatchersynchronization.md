@@ -1,15 +1,15 @@
 ---
-title: '&lt;dispatcherSynchronization&gt;'
+title: <dispatcherSynchronization>
 ms.date: 03/30/2017
 ms.assetid: cc030f9c-4e38-4b14-94dc-9a0e41ec8e2d
-ms.openlocfilehash: 86660620113b162a9a5260b7026a64455284d184
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 6be9752e8102a5d4db4fed31aae8ff6d56fdd24e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673408"
 ---
-# <a name="ltdispatchersynchronizationgt"></a>&lt;dispatcherSynchronization&gt;
+# <a name="dispatchersynchronization"></a>\<dispatcherSynchronization >
   
 サービスが非同期に応答を返すことができるようにするエンドポイントの動作を指定します。  
   
@@ -52,4 +52,5 @@ ms.locfileid: "54151463"
 
 ## <a name="see-also"></a>関連項目
 
- <xref:System.ServiceModel.Configuration.DispatcherSynchronizationElement> <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior>
+- <xref:System.ServiceModel.Configuration.DispatcherSynchronizationElement>
+- <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior>

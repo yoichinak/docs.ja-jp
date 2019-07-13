@@ -2,12 +2,6 @@
 title: 例外リファレンス
 ms.date: 03/30/2017
 ms.assetid: adc19950-5f79-4045-8403-bf6310118ee3
-ms.openlocfilehash: 7034c3bbc25ab7ae6fea1d03c42ecde2e0130ee0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474468"
 ---
 # <a name="exceptions-reference"></a>例外リファレンス
 このセクションでは、Windows Communication Foundation (WCF) によって生成された次の領域内のすべての例外を示します。  
@@ -18,23 +12,23 @@ ms.locfileid: "33474468"
   
  [構成](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)  
   
- [コア通信 : チャネル フレームワーク](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-channel-framework.md)  
+ [コア通信:チャネル フレームワーク](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-channel-framework.md)  
   
- [コア通信 : 接続フレームワーク](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-connection-framework.md)  
+ [コア通信:接続フレームワーク](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-connection-framework.md)  
   
- コア通信 : HTTP/HTTPS トランスポート チャネル  
+ コア通信: HTTP/HTTPS トランスポート チャネル  
   
- [コア通信 : InternalDuplex トランスポート チャネル](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-internal-duplex-transport-channels.md)  
+ [コア通信:Internalduplex トランスポート チャネル](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-internal-duplex-transport-channels.md)  
   
- [コア通信 : 名前付きパイプ トランスポート チャネル](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-named-pipe-transport-channels.md)  
+ [コア通信:名前付きパイプ トランスポート チャネル](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-named-pipe-transport-channels.md)  
   
- [コア通信 : TCP トランスポート チャネル](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-tcp-transport-channels.md)  
+ [コア通信:TCP トランスポート チャネル](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-tcp-transport-channels.md)  
   
- [コア通信 : トランスポート フレームワーク](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-transport-framework.md)  
+ [コア通信:トランスポート フレームワーク](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-transport-framework.md)  
   
- [コア通信 : ユーティリティ](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-utilities.md)  
+ [コア通信:ユーティリティ](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-utilities.md)  
   
- [コア通信 : Webhost サポート](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-webhost-support.md)  
+ [コア通信:Webhost サポート](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-webhost-support.md)  
   
  [トランザクション](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/transaction-exceptions.md)  
   

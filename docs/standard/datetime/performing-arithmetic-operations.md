@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 87c7ddf2-f15e-48af-8602-b3642237e6d0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2a50823b812541786cf1bebfd6b1262ce2e9314
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 2d5f807481468b61365c8b4d8412f12a4741ebb9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912757"
 ---
 # <a name="performing-arithmetic-operations-with-dates-and-times"></a>日付と時刻を使用した算術演算の実行
 
@@ -36,7 +36,7 @@ ms.locfileid: "47070577"
 
 <xref:System.DateTime.CompareTo%28System.DateTime%29>メソッドによって報告されるローカル時刻より前 (またはより小さい)、UTC 時刻と減算演算を示します米国で UTC と、システムのローカル時刻の違い7 時間であることを示しています。 しかし、これら 2 つの値は、ある特定の時点を異なる表現で示したものであるため、この場合、時間差の原因は、UTC を基準としたローカル タイム ゾーンのオフセットにあることは明らかです。
 
-一般的には、<xref:System.DateTime.Kind%2A?displayProperty=nameWithType>プロパティによって返される結果は影響しません<xref:System.DateTime.Kind>比較および算術メソッド (2 つ同じ時点の比較を示します) と、その結果の解釈の影響を与えることができます。 例えば:
+一般的には、<xref:System.DateTime.Kind%2A?displayProperty=nameWithType>プロパティによって返される結果は影響しません<xref:System.DateTime.Kind>比較および算術メソッド (2 つ同じ時点の比較を示します) と、その結果の解釈の影響を与えることができます。 例:
 
 * 算術演算の結果を持つ 2 つの日付と時刻の値で実行<xref:System.DateTime.Kind%2A?displayProperty=nameWithType>プロパティが両方とも<xref:System.DateTimeKind>2 つの値の間の実際の時間間隔を反映します。 同様に、そのような 2 つの日付と時刻の値を比較した結果には、2 つの時間の関係が正確に反映されます。
 
@@ -78,7 +78,7 @@ A<xref:System.DateTimeOffset>値には、日付と時刻だけでなくを明確
 
 詳細については、次を参照してください。[タイム ゾーン間で時刻の変換](../../../docs/standard/datetime/converting-between-time-zones.md)します。
 
-<xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime)>クラスは、日付と時刻の演算を実行するときに、調整規則を自動的に適用されるすべてのメソッドを提供しません。 ただし、あるタイム ゾーンの時刻を UTC に変換してから算術演算を実行し、その後 UTC から元のタイム ゾーンの時刻に再変換することで、調整規則を適用したときと同じ結果を得ることができます。 詳細については、次を参照してください。[方法: 日付と時刻の演算でタイム ゾーンを使用して](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)します。
+<xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime)>クラスは、日付と時刻の演算を実行するときに、調整規則を自動的に適用されるすべてのメソッドを提供しません。 ただし、あるタイム ゾーンの時刻を UTC に変換してから算術演算を実行し、その後 UTC から元のタイム ゾーンの時刻に再変換することで、調整規則を適用したときと同じ結果を得ることができます。 詳細については、「[方法: 日付と時刻の演算でタイム ゾーンを使用して](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)します。
 
 たとえば、次のコードは、2008 年 3 月 9 日の午前 2 時に 2 時間 30 分を加算する 前のコードと似ています。 ただし、中部標準時を UTC に変換した後に日付と時刻の算術演算を実行し、その結果を UTC から中部標準時に変換するため、得られた時刻は中部標準時タイム ゾーンの夏時間への移行を反映しています。
 
@@ -87,5 +87,5 @@ A<xref:System.DateTimeOffset>値には、日付と時刻だけでなくを明確
 
 ## <a name="see-also"></a>関連項目
 
-* [日付、時刻、およびタイム ゾーン](../../../docs/standard/datetime/index.md)
-* [方法: 日付と時刻の演算でタイム ゾーンを使用する](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)
+- [日付、時刻、およびタイム ゾーン](../../../docs/standard/datetime/index.md)
+- [方法: 日付と時刻の演算でタイム ゾーンを使用します。](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)

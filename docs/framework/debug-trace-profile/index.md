@@ -2,25 +2,19 @@
 title: デバッグ、トレース、およびプロファイリング
 ms.date: 03/30/2017
 helpviewer_keywords:
-- debugging [.NET Framework]
-- .NET Framework application configuration, debugging
-- debugging [.NET Framework], .NET Framework application debugging
-- troubleshooting applications [.NET Framework], profiling
-- application development [.NET Framework], debugging
-- .NET Framework application configuration, profiling
-- profiling applications
-- troubleshooting applications [.NET Framework], debugging
-- troubleshooting applications [.NET Framework]
-- application development [.NET Framework], profiling
+  - 'debugging [.NET Framework]'
+  - '.NET Framework application configuration, debugging'
+  - 'debugging [.NET Framework], .NET Framework application debugging'
+  - 'troubleshooting applications [.NET Framework], profiling'
+  - 'application development [.NET Framework], debugging'
+  - '.NET Framework application configuration, profiling'
+  - profiling applications
+  - 'troubleshooting applications [.NET Framework], debugging'
+  - 'troubleshooting applications [.NET Framework]'
+  - 'application development [.NET Framework], profiling'
 ms.assetid: 4a04863e-2475-46f4-bc3f-3c11510c2a4b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ff2be73b2cea563066f70ea2fe6d53840f718e75
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855284"
 ---
 # <a name="debugging-tracing-and-profiling"></a>デバッグ、トレース、およびプロファイリング
 .NET Framework アプリケーションをデバッグするには、アプリケーションにデバッガーをアタッチできるようにコンパイラとランタイム環境を構成する必要があり、可能であれば、アプリケーションとそれに対応する Microsoft Intermediate Language (MSIL) について記号マップと行マップの両方を生成する必要があります。 マネージド アプリケーションのデバッグが完了した後は、パフォーマンスを向上するようにプロファイルできます。 プロファイルでは、最も頻繁に実行されるコードを生成するソース コード行と、そのコードの実行に要する時間を評価して記述します。  
@@ -47,7 +41,7 @@ ms.locfileid: "43855284"
  アプリケーションのパフォーマンスを追跡するために使用できるカウンターについて説明します。  
   
 ## <a name="related-sections"></a>関連項目  
- [ASP.NET アプリケーションおよび AJAX アプリケーションのデバッグ](https://msdn.microsoft.com/library/9d531913-541b-47b8-864d-138021fca0c6)  
+ [Visual Studio での ASP.NET または ASP.NET Core アプリをデバッグします。](/visualstudio/debugger/debugging-aspnet-and-ajax-applications)  
  開発時と配置後に ASP.NET アプリケーションをデバッグするための要件と手順について説明します。  
   
  [開発ガイド](../../../docs/framework/development-guide.md)  

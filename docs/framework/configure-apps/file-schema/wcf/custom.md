@@ -1,15 +1,15 @@
 ---
-title: '&lt;custom&gt;'
+title: <custom>
 ms.date: 03/30/2017
 ms.assetid: a6f65a00-bd1a-4d4a-955a-fe009ec02ab8
-ms.openlocfilehash: 1978c898039a6ff9ab3303427951c214cde96e24
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 18359e871feed17a11006d0b2998907faf25c158
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704194"
 ---
-# <a name="ltcustomgt"></a>&lt;custom&gt;
+# <a name="custom"></a>\<custom>
 ユーザー設定のピア リゾルバー サービスの設定を指定します。  
   
 \<system.serviceModel>  
@@ -53,12 +53,13 @@ ms.locfileid: "54145758"
 |[\<resolver>](../../../../../docs/framework/configure-apps/file-schema/wcf/resolver.md)|ピア メッシュ ID を解決してメッシュに参加する複数ノードを表すピア ノード アドレスのセットを取得するために使用されるピア リゾルバー。|  
   
 ## <a name="remarks"></a>Remarks  
- この要素は、サービスをホストするピアのエンドポイント アドレスや特定のバインディング設定など、カスタム ピア リゾルバー サービスの基本設定を定義します。 カスタム競合回避モジュールを作成する方法の詳細については、次を参照してください。 [PeerChannel アプリケーションへのカスタム競合回避モジュールの追加](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)します。  
+ この要素は、サービスをホストするピアのエンドポイント アドレスや特定のバインディング設定など、カスタム ピア リゾルバー サービスの基本設定を定義します。 カスタム競合回避モジュールを作成する方法の詳細については、次を参照してください。 [PeerChannel アプリケーションへのカスタム競合回避モジュールの追加](https://docs.microsoft.com/previous-versions/ms730105(v=vs.90))します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>  
- <xref:System.ServiceModel.PeerResolvers.PeerCustomResolverSettings>  
- <xref:System.ServiceModel.Configuration.PeerResolverElement.Custom%2A>  
- <xref:System.ServiceModel.Configuration.PeerCustomResolverElement>  
- [ピア リゾルバー](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)  
- [PeerChannel アプリケーションへのカスタム競合回避モジュールの追加](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>
+- <xref:System.ServiceModel.PeerResolvers.PeerCustomResolverSettings>
+- <xref:System.ServiceModel.Configuration.PeerResolverElement.Custom%2A>
+- <xref:System.ServiceModel.Configuration.PeerCustomResolverElement>
+- [ピア リゾルバー](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)
+- [PeerChannel アプリケーションへのカスタム競合回避モジュールの追加](https://docs.microsoft.com/previous-versions/ms730105(v=vs.90))

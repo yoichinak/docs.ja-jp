@@ -2,12 +2,12 @@
 title: 入力文字セット (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 13d291d3-e6bc-4719-b953-758b61a590b6
-ms.openlocfilehash: 5e7886215cac2d9363a9ed68cd03a0fce4374055
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3795660cf6086aa67596f31e49c4d950aa653d86
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780420"
 ---
 # <a name="input-character-set-entity-sql"></a>入力文字セット (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] は、UTF-16 でエンコードされた UNICODE 文字を受け取ります。  
@@ -24,9 +24,10 @@ ms.locfileid: "32764698"
   
  キーワード、式、および句読点には、ラテン語に正規化された任意の UTF-16 文字を使用できます。 たとえば、日本語のコードページの SELECT は有効なキーワードです。  
   
- キーワード、式、および区切り記号に使用できるのは、ラテン文字だけです。 `SELECT` は、日本語のコード ページではキーワードではありません。 +、-、*、/、=、(、)、‘、[、]、およびここに示されていないその他の言語コンストラクトに使用できるのは、ラテン文字だけです。  
+ キーワード、式、および区切り記号に使用できるのは、ラテン文字だけです。 `SELECT` は、日本語のコード ページではキーワードではありません。 +、-、 \*、/、=、(、)、'、[、] は、ここに示されていないその他の言語コンストラクトは、ラテン文字を指定できますのみです。  
   
- シンプルな識別子に使用できるのはラテン文字だけです。 元の値が比較されるので、比較の際のあいまいさが回避されます。 たとえば、[ABC] は、日本語とラテン語のコードページでは異なります。  
+ シンプルな識別子に使用できるのはラテン文字だけです。 元の値が比較されるので、比較の際のあいまいさが回避されます。 たとえば、ABC が日本語とラテンのコードページで異なる場合がします。  
   
-## <a name="see-also"></a>関連項目  
- [Entity SQL の概要](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>関連項目
+
+- [Entity SQL の概要](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

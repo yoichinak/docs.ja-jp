@@ -3,12 +3,12 @@ title: WIF および Web ファーム
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: 8d1d3d67dd578957b5d7f4dc70cd2710143b699d
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 656e7b116b9da68dbb38a5a2fc3d1ed90fda576a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029464"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592281"
 ---
 # <a name="wif-and-web-farms"></a>WIF および Web ファーム
 Windows Identity Foundation (WIF) を使用して、Web ファームに展開されている証明書利用者 (RP) アプリケーションのリソースをセキュリティで保護するには、ファーム内の別のコンピューターで実行されている RP アプリケーションのインスタンスのトークンを WIF が処理できるように、特定の手順を実行する必要があります。 この処理には、セッション トークン シグネチャの検証、セッション トークンの暗号化と復号化、再生されたセキュリティ トークンの検出が含まれます。  
@@ -17,21 +17,21 @@ Windows Identity Foundation (WIF) を使用して、Web ファームに展開さ
   
  既定の設定が使用される場合、WIF は次の処理を実行します。  
   
--   <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> クラスのインスタンスを使用して、認証に使用されたセキュリティ トークンに関するクレームや他の情報を格納するセッション トークン (<xref:System.IdentityModel.Tokens.SessionSecurityToken> クラスのインスタンス) の読み取りと書き込みを行います。 セッション トークンはパッケージ化され、セッション Cookie に格納されます。 既定で <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> は <xref:System.IdentityModel.ProtectedDataCookieTransform> クラスを使用します。このクラスはデータ保護 API (DPAPI) を使用してセッション トークンを保護します。 DPAPI は、ユーザーまたはコンピューターの資格情報を使用して保護を実装し、ユーザー プロファイルにキー データを格納します。  
+- <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> クラスのインスタンスを使用して、認証に使用されたセキュリティ トークンに関するクレームや他の情報を格納するセッション トークン (<xref:System.IdentityModel.Tokens.SessionSecurityToken> クラスのインスタンス) の読み取りと書き込みを行います。 セッション トークンはパッケージ化され、セッション Cookie に格納されます。 既定で <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> は <xref:System.IdentityModel.ProtectedDataCookieTransform> クラスを使用します。このクラスはデータ保護 API (DPAPI) を使用してセッション トークンを保護します。 DPAPI は、ユーザーまたはコンピューターの資格情報を使用して保護を実装し、ユーザー プロファイルにキー データを格納します。  
   
--   <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> クラスの既定のメモリ内実装を使用して、セッション トークンを格納し、処理します。  
+- <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> クラスの既定のメモリ内実装を使用して、セッション トークンを格納し、処理します。  
   
  これらの既定の設定は、RP アプリケーションが単一のコンピューターに展開されるシナリオで機能します。一方、Web ファームに展開する場合、各 HTTP 要求は、別のコンピューターで実行されている RP アプリケーションの別インスタンスに送信され、処理される可能性があります。 このシナリオでは、前述の既定の WIF 設定は機能しません。これは、トークンの保護とトークンのキーボード ショートカットの両方が特定のコンピューターに依存しているためです。  
   
  Web ファームに RP アプリケーションを展開するには、セッション トークン (および再生されたトークン) の処理が、特定のコンピューターで実行されているアプリケーションに依存していないことを確認する必要があります。 これを確認するには、ASP.NET の `<machineKey>` 構成要素に用意されている機能を使用し、セッション トークンと再生されたトークンに分散キャッシュを利用するように RP アプリケーションを実装する方法があります。 `<machineKey>` 要素を使用すると、構成ファイル内のトークンの検証、暗号化、および復号化に必要なキーを指定できます。これにより、Web ファーム内の別のコンピューターで同じキーを指定できるようになります。 WIF には、<xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> という特殊なセッション トークン ハンドラーがあります。このハンドラーは、`<machineKey>` 要素に指定されているキーを使用してトークンを保護します。 この戦略を実施する場合は、次のガイドラインに従うことをお勧めします。  
   
--   構成で ASP.NET の `<machineKey>` 要素を使用して、ファーム内のコンピューター全体で使用できる署名および暗号化キーを明示的に指定します。 次の XML は、構成ファイルの `<system.web>` 要素以下の `<machineKey>` 要素の指定を示しています。  
+- 構成で ASP.NET の `<machineKey>` 要素を使用して、ファーム内のコンピューター全体で使用できる署名および暗号化キーを明示的に指定します。 次の XML は、構成ファイルの `<system.web>` 要素以下の `<machineKey>` 要素の指定を示しています。  
   
     ```xml  
     <machineKey compatibilityMode="Framework45" decryptionKey="CC510D … 8925E6" validationKey="BEAC8 … 6A4B1DE" />  
     ```  
   
--   トークン ハンドラー コレクションに追加することで、<xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> を使用するようにアプリケーションを構成します。 このようなハンドラーが存在する場合は、まず <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> (または <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> クラスから派生した任意のハンドラー) をトークン ハンドラー コレクションから削除する必要があります。 <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> は <xref:System.IdentityModel.Services.MachineKeyTransform> クラスを使用します。このクラスは、`<machineKey>` 要素に指定された暗号化マテリアルを使用して、セッション Cookie データを保護します。 次の XML は、<xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> をトークン ハンドラー コレクションに追加する方法を示しています。  
+- トークン ハンドラー コレクションに追加することで、<xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> を使用するようにアプリケーションを構成します。 このようなハンドラーが存在する場合は、まず <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> (または <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> クラスから派生した任意のハンドラー) をトークン ハンドラー コレクションから削除する必要があります。 <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> は <xref:System.IdentityModel.Services.MachineKeyTransform> クラスを使用します。このクラスは、`<machineKey>` 要素に指定された暗号化マテリアルを使用して、セッション Cookie データを保護します。 次の XML は、<xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> をトークン ハンドラー コレクションに追加する方法を示しています。  
   
     ```xml  
     <securityTokenHandlers>  
@@ -40,7 +40,7 @@ Windows Identity Foundation (WIF) を使用して、Web ファームに展開さ
     </securityTokenHandlers>  
     ```  
   
--   <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> から派生させ、分散キャッシュを実装します。つまり、RP が実行される可能性があるファーム内のすべてのコンピューターからアクセスできるキャッシュです。 構成ファイルに [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) 要素を指定して、分散キャッシュを使用するように RP を構成します。 必要に応じて、派生クラスの <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> メソッドをオーバーライドして、`<sessionSecurityTokenCache>` 要素の子要素を実装することができます。  
+- <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> から派生させ、分散キャッシュを実装します。つまり、RP が実行される可能性があるファーム内のすべてのコンピューターからアクセスできるキャッシュです。 構成ファイルに [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) 要素を指定して、分散キャッシュを使用するように RP を構成します。 必要に応じて、派生クラスの <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> メソッドをオーバーライドして、`<sessionSecurityTokenCache>` 要素の子要素を実装することができます。  
   
     ```xml  
     <caches>  
@@ -52,7 +52,7 @@ Windows Identity Foundation (WIF) を使用して、Web ファームに展開さ
   
      分散キャッシュを実装するには、カスタム キャッシュ用に WCF フロント エンドを用意する方法があります。 WCF キャッシュ サービスの詳細については、「[WCF キャッシュ サービス](#BKMK_TheWCFCachingService)」を参照してください。 キャッシュ サービスを呼び出すために RP アプリケーションが使用できる WCF クライアントの実装の詳細については、「[WCF キャッシュ クライアント](#BKMK_TheWCFClient)」を参照してください。  
   
--   アプリケーションで再生されたトークンを検出する場合、<xref:System.IdentityModel.Tokens.TokenReplayCache> から派生させ、[\<tokenReplayCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) 構成要素内のトークン再生キャッシュ サービスを示すことで、トークン再生キャッシュの場合に同様の分散キャッシュ戦略に従う必要があります。  
+- アプリケーションで再生されたトークンを検出する場合、<xref:System.IdentityModel.Tokens.TokenReplayCache> から派生させ、[\<tokenReplayCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) 構成要素内のトークン再生キャッシュ サービスを示すことで、トークン再生キャッシュの場合に同様の分散キャッシュ戦略に従う必要があります。  
   
 > [!IMPORTANT]
 >  このトピックのコードで、XML の例のすべてから取得されますが、 [ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408)サンプル。  
@@ -250,8 +250,9 @@ namespace CacheLibrary
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>  
- <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>  
- <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>  
- [WIF セッション管理](../../../docs/framework/security/wif-session-management.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>
+- <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>
+- <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>
+- [WIF セッション管理](../../../docs/framework/security/wif-session-management.md)

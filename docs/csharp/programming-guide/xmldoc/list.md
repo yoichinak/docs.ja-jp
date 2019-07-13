@@ -1,5 +1,5 @@
 ---
-title: '&lt;list&gt; - C# プログラミング ガイド'
+title: <list> - C# プログラミング ガイド
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - <item> C# XML tag
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
-ms.openlocfilehash: b960349d26a4addb5f4723bd7aa3f19b07e5f4d2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 9ac1d749d18a9d02ce28f8cf600495f345ec0e89
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241549"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489268"
 ---
-# <a name="ltlistgt-c-programming-guide"></a>&lt;list&gt; (C# プログラミング ガイド)
+# <a name="list-c-programming-guide"></a>\<list> (C# プログラミング ガイド)
 ## <a name="syntax"></a>構文  
   
 ```xml  
@@ -36,14 +36,14 @@ ms.locfileid: "53241549"
 </list>  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `term`  
  定義される用語であり、`description` で定義されます。  
   
  `description`  
  行頭文字または番号付きリストの項目、または `term` の定義です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  \< > ブロックを使用して、テーブルまたは定義の一覧の見出し行を定義します。 テーブルを定義するときにのみ、見出しの用語のエントリを指定する必要があります。  
   
  リスト内の各項目は、\<item> ブロックで指定されます。 定義リストを作成する場合は、`term` と `description` の両方を指定する必要があります。 ただし、テーブル、箇条書きリスト、または番号付きリストの場合は、`description` のエントリを指定するだけで済みます。  
@@ -53,9 +53,9 @@ ms.locfileid: "53241549"
  コンパイル時に [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
 ## <a name="example"></a>例  
- [!code-csharp[csProgGuideDocComments#6](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/list_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#6)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
 - [ドキュメント コメントとして推奨されるタグ](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

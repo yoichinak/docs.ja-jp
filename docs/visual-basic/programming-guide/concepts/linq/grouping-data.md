@@ -2,19 +2,19 @@
 title: データのグループ化 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
-ms.openlocfilehash: e2732c91dfff65ebb86ef45296ba369c3073a8f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b5a6a3795e02e0638b81824701ad0cbacbcca91a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644200"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754462"
 ---
 # <a name="grouping-data-visual-basic"></a>データのグループ化 (Visual Basic)
 グループ化とは、各グループの要素が共通の属性を持つようにデータをグループに分ける操作を指します。  
   
  次の図は、文字のシーケンスをグループ化した結果を示しています。 各グループのキーは文字です。  
   
- ![LINQ グループ化操作](../../../../csharp/programming-guide/concepts/linq/media/linq_group.png "LINQ_Group")  
+ ![LINQ グループ化操作を示す図。](./media/grouping-data/linq-group-operation.png)  
   
  次のセクションでは、データ要素をグループ化する標準クエリ演算子メソッドの一覧を示します。  
   
@@ -63,9 +63,10 @@ MsgBox(sb.ToString())
 ' 208  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Linq>  
- [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Group By 句](../../../../visual-basic/language-reference/queries/group-by-clause.md)  
- [方法: 拡張機能 (LINQ) (Visual Basic) でファイルをグループ化](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
- [方法: 複数のファイルのファイル グループ (LINQ) (Visual Basic) を使用して分割](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Linq>
+- [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Group By 句](../../../../visual-basic/language-reference/queries/group-by-clause.md)
+- [方法: ファイルのグループ化拡張機能 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
+- [方法: 多くのファイルのファイル グループ (LINQ) (Visual Basic) を使用して分割します。](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

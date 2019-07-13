@@ -10,12 +10,12 @@ helpviewer_keywords:
 - BC36644
 - BC36647
 ms.assetid: 0e0050f2-2039-4311-b260-f0ebfde84189
-ms.openlocfilehash: 6f84df5c9388220e5ca817d95362753df0920534
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4167905ca6ddab66b2cbc6c8c40dc7c984e94b8b
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586813"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64913195"
 ---
 # <a name="data-types-of-the-type-parameters-cannot-be-inferred-from-these-arguments"></a>型パラメーターのデータ型を、これらの引数から推論することはできません
 型パラメーターのデータ型は、これらの引数から推論することはできません。 データ型を明示的に指定すると、このエラーが修正される可能性があります。  
@@ -55,9 +55,10 @@ End Interface
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   型の推定に依存せずに、型パラメーターまたはパラメーターのデータ型を指定できる場合があります。  
+- 型の推定に依存せずに、型パラメーターまたはパラメーターのデータ型を指定できる場合があります。  
   
-## <a name="see-also"></a>関連項目  
- [厳密でないデリゲート変換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
- [Visual Basic におけるジェネリック プロシージャ](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)  
- [Visual Basic での型変換](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+## <a name="see-also"></a>関連項目
+
+- [厳密でないデリゲート変換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [Generic Procedures in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
+- [Visual Basic における型変換](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

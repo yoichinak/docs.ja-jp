@@ -1,5 +1,5 @@
 ---
-title: '&lt;smtp&gt;要素 (ネットワーク設定)'
+title: <smtp> 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/mailSettings/smtp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-ms.openlocfilehash: 362c5ba479c845a8183fe705e72ea3a12fb7a94c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1b5f7406f995a86f0a192dbf3249c067dff570ea
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674403"
 ---
-# <a name="ltsmtpgt-element-network-settings"></a>&lt;smtp&gt;要素 (ネットワーク設定)
+# <a name="smtp-element-network-settings"></a>\<smtp > 要素 (ネットワーク設定)
 構成の配信形式、配信方法、および送信者の電子メールを送信するためのアドレス。  
   
  \<configuration>  
@@ -26,13 +26,13 @@ ms.locfileid: "50195646"
 ## <a name="syntax"></a>構文  
   
 ```xml  
-      <smtp  
-        deliveryFormat="format"   
-        deliveryMethod="method"   
-        from="from address">
-          <specifiedPickupDirectory> … </ specifiedPickupDirectory >  
-          <network> … </network>  
-      </smtp>  
+<smtp  
+  deliveryFormat="format"  
+  deliveryMethod="method"  
+  from="from address">
+    <specifiedPickupDirectory>...</specifiedPickupDirectory>  
+    <network>...</network>  
+</smtp>  
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -78,9 +78,10 @@ ms.locfileid: "50195646"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>  
-- <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>  
-- <xref:System.Net.Mail.SmtpDeliveryFormat>  
-- <xref:System.Net.Mail.SmtpDeliveryMethod>  
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>
+- <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
+- <xref:System.Net.Mail.SmtpDeliveryFormat>
+- <xref:System.Net.Mail.SmtpDeliveryMethod>
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

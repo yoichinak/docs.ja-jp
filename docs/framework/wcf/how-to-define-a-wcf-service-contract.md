@@ -1,44 +1,60 @@
 ---
-title: '方法 : Windows Communication Foundation サービス コントラクトを定義する'
-ms.date: 09/14/2018
+title: 'チュートリアル: Windows Communication Foundation サービス コントラクトを定義します。'
+ms.date: 03/19/2019
 helpviewer_keywords:
 - service contracts [WCF], defining
 dev_langs:
 - CSharp
 - VB
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
-ms.openlocfilehash: 9f7f696b1f5be2e96c50938f4627271d891deb32
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a1908339460191fcb81d03d45c56dd57b2cf4c4e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929351"
 ---
-# <a name="how-to-define-a-windows-communication-foundation-service-contract"></a>方法 : Windows Communication Foundation サービス コントラクトを定義する
-これは、最初の基本的な Windows Communication Foundation (WCF) アプリケーションを作成するために必要な 6 つのタスクです。 6 つのすべてのタスクの概要については、「[チュートリアル入門](../../../docs/framework/wcf/getting-started-tutorial.md)」を参照してください。
+# <a name="tutorial-define-a-windows-communication-foundation-service-contract"></a>チュートリアル: Windows Communication Foundation サービス コントラクトを定義します。
 
- WCF サービスを作成するときに、最初のタスクは、サービス コントラクトを定義します。 サービス コントラクトは、サービスがサポートする操作を指定します。 操作は Web サービス メソッドと見なすことができます。 コントラクトは C++、C#、または Visual Basic (VB) インターフェイスを定義することで作成します。 インターフェイスの各メソッドは、特定のサービス操作に対応しています。 各インターフェイスには <xref:System.ServiceModel.ServiceContractAttribute> が適用されており、各操作には <xref:System.ServiceModel.OperationContractAttribute> 属性が適用されている必要があります。 <xref:System.ServiceModel.ServiceContractAttribute> 属性を持つインターフェイス内のメソッドに <xref:System.ServiceModel.OperationContractAttribute> 属性がない場合、そのメソッドはサービスによって公開されません。
+このチュートリアルでは、最初の基本的な Windows Communication Foundation (WCF) アプリケーションを作成するために必要な 5 つのタスクについて説明します。 チュートリアルの概要については、次を参照してください。[チュートリアル。Windows Communication Foundation アプリケーションの概要](getting-started-tutorial.md)します。
 
- 手順の後に、このタスクに使用するコード例を示します。
+WCF サービスを作成するときに、最初のタスクは、サービス コントラクトを定義します。 サービス コントラクトは、サービスがサポートする操作を指定します。 操作は Web サービス メソッドと見なすことができます。 ビジュアルを定義してサービス コントラクトを作成するC#または Visual Basic (VB) インターフェイス。 インターフェイスには、次の特徴があります。
 
-## <a name="define-a-service-contract"></a>サービス コントラクトを定義します。
+- インターフェイスの各メソッドは、特定のサービス操作に対応しています。 
+- インターフェイスごとに適用する必要があります、<xref:System.ServiceModel.ServiceContractAttribute>属性。
+- 各操作またはメソッドに適用する必要があります、<xref:System.ServiceModel.OperationContractAttribute>属性。 
 
-1. プログラムを右クリックして、管理者として Visual Studio を開き、**開始**メニュー**詳細** > **管理者として実行**します。
+このチュートリアルでは、次の作業を行う方法について説明します。
+> [!div class="checklist"]
+> - 作成、 **WCF サービス ライブラリ**プロジェクト。
+> - サービス コントラクト インターフェイスを定義します。
 
-2. WCF サービス ライブラリ プロジェクトを作成します。
+## <a name="create-a-wcf-service-library-project-and-define-a-service-contract-interface"></a>WCF サービス ライブラリ プロジェクトを作成し、サービス コントラクト インターフェイスの定義
+
+1. Visual Studio を管理者として開きます。 これを行うで Visual Studio のプログラムを選択します。、**開始**] メニューの [クリックして**詳細** > **管理者として実行**ショートカット メニューから。
+
+2. 作成、 **WCF サービス ライブラリ**プロジェクト。
 
    1. **[ファイル]** メニューで、**[新規作成]**、 > **[プロジェクト]** の順に作成します。
 
-   2. **新しいプロジェクト**] ダイアログの左側にある [展開**Visual c#** または**Visual Basic**、クリックして、 **WCF**カテゴリ。 プロジェクト テンプレートの一覧は、ダイアログの中央のセクションに表示されます。 選択**WCF サービス ライブラリ**します。
+   2. **新しいプロジェクト**] ダイアログの左側にある [展開**Visual c#** または**Visual Basic**、クリックして、 **WCF**カテゴリ。 Visual Studio は、ウィンドウの中央のセクションで、プロジェクト テンプレートの一覧を表示します。 選択**WCF サービス ライブラリ**します。
 
-   3. 入力`GettingStartedLib`で、**名前**textbox と`GettingStarted`で、**ソリューション名**ダイアログの下部にあるテキスト ボックス。
+      > [!NOTE]
+      > 表示されない場合、 **WCF**プロジェクト テンプレートのカテゴリをインストールする必要があります、 **Windows Communication Foundation** Visual Studio のコンポーネント。 **新しいプロジェクト**ダイアログ ボックスで、 **Visual Studio インストーラーを開く**左側にあるリンクです。 選択、**個々 のコンポーネント**] タブの [、し、検索して選択します**Windows Communication Foundation**下、**開発アクティビティ**カテゴリ。 選択**変更**コンポーネントのインストールを開始します。
 
-   > [!NOTE]
-   > 表示されない場合、 **WCF**プロジェクト テンプレートのカテゴリをインストールする必要があります、 **Windows Communication Foundation** Visual Studio のコンポーネント。 **新しいプロジェクト** ダイアログ ボックスと書かれたリンクをクリックして**Visual Studio インストーラーを開く**します。 選択、**個々 のコンポーネント**] タブの [、し、検索して選択します**Windows Communication Foundation**下、**開発アクティビティ**カテゴリ。 選択**変更**コンポーネントのインストールを開始します。
+   3. ウィンドウの下部のセクションで次のように入力します。 *GettingStartedLib*の、**名前**と*GettingStarted*の、**ソリューション名**します。 
 
-   Visual Studio は、3 つのファイルを含むプロジェクトを作成します: IService1.cs (または IService1.vb)、Service1.cs (または Service1.vb) と App.config です。IService1 ファイルには、既定のサービス コントラクトが含まれています。 Service1 ファイルには、サービス コントラクトの既定の実装が含まれています。 App.config ファイルには、Visual Studio WCF サービス ホストに既定のサービスを読み込むために必要な構成が含まれています。 WCF サービス ホスト ツールの詳細については、次を参照してください[WCF サービス ホスト (WcfSvcHost.exe)。](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
+   4. **[OK]** を選択します。
 
-3. IService1.cs または IService1.vb ファイルを開き、名前空間宣言を残して、名前空間の宣言内のコードを削除します。 次のコードに示すように、名前空間宣言内に新しいインターフェイス `ICalculator` を定義します。
+      Visual Studio では、プロジェクトを 3 つのファイルが作成されます。*IService1.cs* (または*IService1.vb* Visual Basic プロジェクトの)、 *Service1.cs* (または*Service1.vb* Visual Basic プロジェクトの)、および*App.config*します。Visual Studio では、次のように、これらのファイルを定義します。 
+      - *IService1*ファイルには、サービス コントラクトの既定の定義が含まれています。 
+      - *Service1*ファイルには、サービス コントラクトの既定の実装が含まれています。 
+      - *App.config*ファイルには、Visual Studio WCF サービス ホスト ツールを使用して既定のサービスを読み込むために必要な構成情報が含まれています。 WCF サービス ホスト ツールの詳細については、次を参照してください。 [WCF サービス ホスト (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)します。
+
+      > [!NOTE]
+      > Visual Basic 開発者設定が環境で Visual Studio をインストールした場合、ソリューションを非表示に可能性があります。 大文字と小文字の場合は、選択**オプション**から、**ツール**メニューを選択し、**プロジェクトおよびソリューション** > **全般**で**オプション**ウィンドウ。 選択**常にソリューションを表示する**します。 また、いることを確認**作成時に新しいプロジェクトを保存**が選択されています。
+
+3. **ソリューション エクスプ ローラー**、オープン、 **IService1.cs**または**IService1.vb**ファイルを開き、そのコードを次のコードに置き換えます。
 
     ```csharp
     using System;
@@ -81,17 +97,16 @@ ms.locfileid: "48582201"
     End Namespace
     ```
 
-     このコントラクトは、オンライン電卓を定義します。 `ICalculator` インターフェイスは <xref:System.ServiceModel.ServiceContractAttribute> 属性でマークされています。 この属性は、コントラクト名を区別するために使用される名前空間を定義します。 各電卓操作は <xref:System.ServiceModel.OperationContractAttribute> 属性でマークされています。
+     このコントラクトは、オンライン電卓を定義します。 通知、`ICalculator`インターフェイスが付いて、<xref:System.ServiceModel.ServiceContractAttribute>属性 (として簡略化された`ServiceContract`)。 この属性は、コントラクト名を明確に区別する名前空間を定義します。 コードでは、各電卓操作をマークする、<xref:System.ServiceModel.OperationContractAttribute>属性 (として簡略化された`OperationContract`)。
 
 ## <a name="next-steps"></a>次の手順
 
+このチュートリアルでは、次の作業を行う方法を学びました。
+> [!div class="checklist"]
+> - WCF サービス ライブラリ プロジェクトを作成します。
+> - サービス コントラクト インターフェイスを定義します。
+
+WCF サービス コントラクトを実装する方法については、次のチュートリアルに進んでください。
+
 > [!div class="nextstepaction"]
-> [方法: サービス コントラクトを実装します。](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
-
-## <a name="see-also"></a>関連項目
-
-- <xref:System.ServiceModel.ServiceContractAttribute>
-- <xref:System.ServiceModel.OperationContractAttribute>
-- [方法: サービス コントラクトを実装する](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
-- [はじめに](../../../docs/framework/wcf/samples/getting-started-sample.md)
-- [自己ホスト](../../../docs/framework/wcf/samples/self-host.md)
+> [チュートリアル: WCF サービス コントラクトを実装します。](how-to-implement-a-wcf-contract.md)

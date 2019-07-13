@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -nostdlib compiler option [Visual Basic]
 - /nostdlib compiler option [Visual Basic]
 ms.assetid: 140381b8-dc96-4ad5-ae11-792c9ed0be4d
-ms.openlocfilehash: 957eca6066a316a4f4daf7e6de972df98082c26c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1c3c70b24de5163ca004b41a21017205a19d9730
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183297"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583378"
 ---
 # <a name="-nostdlib-visual-basic"></a>-nostdlib (Visual Basic)
 コンパイラが自動的に標準のライブラリを参照します。  
@@ -23,7 +23,7 @@ ms.locfileid: "50183297"
 ```  
   
 ## <a name="remarks"></a>Remarks  
- `-nostdlib`オプションは、System.dll アセンブリへの自動参照を削除し、コンパイラが Vbc.rsp ファイルを読み取ることを防ぎます。 Vbc.exe のファイルと同じディレクトリにある、Vbc.rsp ファイルを一般的に使用される参照[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]アセンブリとインポート、`System`と`Microsoft.VisualBasic`名前空間。  
+ `-nostdlib`オプションは、System.dll アセンブリへの自動参照を削除し、コンパイラが Vbc.rsp ファイルを読み取ることを防ぎます。 Vbc.exe ファイルと同じディレクトリにある、Vbc.rsp ファイルは、一般的に使用される .NET Framework アセンブリを参照し、インポート、`System`と`Microsoft.VisualBasic`名前空間。  
   
 > [!NOTE]
 >  Mscorlib.dll および Microsoft.VisualBasic.dll のアセンブリは、常に参照されます。  
@@ -38,8 +38,9 @@ ms.locfileid: "50183297"
 vbc -nostdlib -define:_MYTYPE=\"Empty\" T2.vb  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)  
- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)  
- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [My で利用可能なオブジェクトのカスタマイズ](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)
+## <a name="see-also"></a>関連項目
+
+- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
+- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [My で利用可能なオブジェクトのカスタマイズ](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)

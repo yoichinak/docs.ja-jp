@@ -1,17 +1,17 @@
 ---
-title: '&lt;GenericParameter&gt; 要素 (.NET ネイティブ)'
+title: <GenericParameter> 要素 (.NET ネイティブ)
 ms.date: 03/30/2017
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd0d9851f62381a16f628607c326c6690492628b
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 40fef845a55412e5731ec08bd1e038d6b311694c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868608"
 ---
-# <a name="ltgenericparametergt-element-net-native"></a>&lt;GenericParameter&gt; 要素 (.NET ネイティブ)
+# <a name="genericparameter-element-net-native"></a>\<GenericParameter > 要素 (.NET ネイティブ)
 ジェネリック型またはメソッドのパラメーターの型にポリシーを適用します。  
   
 ## <a name="syntax"></a>構文  
@@ -21,7 +21,7 @@ ms.locfileid: "49347852"
                   Activate="policy_type"  
                   Browse="policy_type"  
                   Dynamic="policy_type"  
-                  Serialize="policy_type" />  
+                  Serialize="policy_type"  
                   DataContractSerializer="policy_type"  
                   DataContractJsonSerializer="policy_type"  
                   XmlSerializer="policy_type"  
@@ -51,13 +51,13 @@ ms.locfileid: "49347852"
   
 ## <a name="name-attribute"></a>Name 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |*generic_parameter_name*|必須の属性です。 ジェネリック型パラメーターの名前。 たとえば、ジェネリック デリゲート <xref:System.Func%603> の場合、*generic_parameter_name* の値 "TResult" によって、デリゲートの戻り値に実行時ポリシーが適用されます。|  
   
 ## <a name="all-other-attributes"></a>その他すべての属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |*policy_setting*|このポリシーの種類に適用する設定です。 指定できる値は、`All`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal`、および `Required All` です。 詳細については、「[ランタイム ディレクティブのポリシー設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)」を参照してください。|  
   
@@ -86,9 +86,10 @@ ms.locfileid: "49347852"
 </Directives>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [\<Method> 要素](../../../docs/framework/net-native/method-element-net-native.md)  
- [\<型 > 要素](../../../docs/framework/net-native/type-element-net-native.md)  
- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [ランタイム ディレクティブ ポリシーの設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
- [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)
+## <a name="see-also"></a>関連項目
+
+- [\<Method> 要素](../../../docs/framework/net-native/method-element-net-native.md)
+- [\<型 > 要素](../../../docs/framework/net-native/type-element-net-native.md)
+- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [ランタイム ディレクティブ ポリシーの設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法 : ウィンドウを水平方向に分割する'
+title: '方法: ウィンドウを水平方向に分割する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], horizontal
 - windows [Windows Forms], splitting horizontally
 ms.assetid: a1f74f29-048c-4723-85fa-b9d375ab8f4b
-ms.openlocfilehash: 1e097ce5623fab4c3c8c1d59d9bc8c9206abee2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a43d632a82678f362a1cdf6b3ee4486a8db5adde
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012933"
 ---
-# <a name="how-to-split-a-window-horizontally"></a>方法 : ウィンドウを水平方向に分割する
-次のコード例は、分割するスプリッター、<xref:System.Windows.Forms.SplitContainer>コントロールの水平方向です。  
+# <a name="how-to-split-a-window-horizontally"></a>方法: ウィンドウを水平方向に分割する
+次のコード例は、分割するスプリッター、<xref:System.Windows.Forms.SplitContainer>コントロールの水平方向。  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.SplitContainer.Orientation%2A>のプロパティ、<xref:System.Windows.Forms.SplitContainer>コントロールは、スプリッターのではなく、コントロール自体の方向を決定します。  
+>  <xref:System.Windows.Forms.SplitContainer.Orientation%2A>のプロパティ、<xref:System.Windows.Forms.SplitContainer>コントロール、コントロール自体のない、スプリッターの方向を決定します。  
   
 ### <a name="to-split-a-window-horizontally"></a>ウィンドウを水平方向に分割するには  
   
-1.  プロシージャ内で、設定、<xref:System.Windows.Forms.SplitContainer.Orientation%2A>のプロパティ、<xref:System.Windows.Forms.SplitContainer>に制御を<xref:System.Windows.Forms.Orientation.Horizontal>です。  
+1. プロシージャ内で、設定、<xref:System.Windows.Forms.SplitContainer.Orientation%2A>のプロパティ、<xref:System.Windows.Forms.SplitContainer>に制御を<xref:System.Windows.Forms.Orientation.Horizontal>。  
   
     ```vb  
     Sub ShowSplitContainer()  
@@ -55,6 +55,7 @@ ms.locfileid: "33533128"
     }  
     ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.SplitContainer>  
- [SplitContainer コントロール](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Forms.SplitContainer>
+- [SplitContainer コントロール](splitcontainer-control-windows-forms.md)

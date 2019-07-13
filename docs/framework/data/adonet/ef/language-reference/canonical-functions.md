@@ -2,11 +2,12 @@
 title: 正規関数
 ms.date: 03/30/2017
 ms.assetid: bbcc9928-36ea-4dff-9e31-96549ffed958
-ms.openlocfilehash: fed6e45056e318ec0bf34951097304ef3c98f629
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 380c1dbcf86d8bbb844c2b226697d72d00c3e81a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606089"
 ---
 # <a name="canonical-functions"></a>正規関数
 このセクションでは、すべてのデータ プロバイダーがサポートし、あらゆるクエリ テクノロジで使用されている正規関数について説明します。 正規関数は、プロバイダーが拡張することはできません。  
@@ -19,7 +20,7 @@ ms.lasthandoff: 05/03/2018
   
  すべての正規関数は、NULL が入力された場合の動作と明示的に指定されたエラー状況の両方を含んでいます。 ストア プロバイダーはその動作に従う必要がありますが、[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] にはこの動作が適用されません。  
   
- に対してクエリを LINQ のシナリオで、[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]を基になるデータ ソース内のメソッドの CLR メソッドのマッピングも行われます。 特定の一連のメソッドが適切にマップされるように、CLR メソッドはデータ ソースに関係なく正規関数にマップされます。  
+ に対してクエリを LINQ シナリオの場合、[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]を基になるデータ ソース内のメソッドの CLR メソッドのマッピングも行われます。 特定の一連のメソッドが適切にマップされるように、CLR メソッドはデータ ソースに関係なく正規関数にマップされます。  
   
 ## <a name="canonical-functions-namespace"></a>正規関数の名前空間  
  正規関数の名前空間は <xref:System.Data.Metadata.Edm> です。 <xref:System.Data.Metadata.Edm> 名前空間は、自動的にすべてのクエリに含まれます。 ただし、<xref:System.Data.Metadata.Edm> 名前空間に正規関数と同じ名前の関数を含む別の名前空間がインポートされている場合は、名前空間を指定する必要があります。  
@@ -46,8 +47,9 @@ ms.lasthandoff: 05/03/2018
  [その他の正規関数](../../../../../../docs/framework/data/adonet/ef/language-reference/other-canonical-functions.md)  
  ビット単位、日付/時刻、文字列、数学、または集計に分類されない関数について説明します。  
   
-## <a name="see-also"></a>関連項目  
- [Entity SQL の概要](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [概念モデル正規関数と SQL Server 関数とのマッピング](../../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)  
- [ユーザー定義関数](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)
+## <a name="see-also"></a>関連項目
+
+- [Entity SQL の概要](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [概念モデル正規関数と SQL Server 関数とのマッピング](../../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)
+- [ユーザー定義関数](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)

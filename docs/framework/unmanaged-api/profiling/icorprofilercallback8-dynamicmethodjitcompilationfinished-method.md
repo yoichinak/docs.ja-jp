@@ -10,21 +10,21 @@ api_type:
 - COM
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49b5ead8b5428d855b7dab81dced1de6325fd07b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ba9f9d4ee5f95def3dcd2d757517e225c826cb9e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454998"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757993"
 ---
 # <a name="icorprofilercallback8dynamicmethodjitcompilationfinished-method"></a>ICorProfilerCallback8::DynamicMethodJITCompilationFinished メソッド
-[.NET Framework 4.7 以降のバージョンでサポート]  
+[.NET Framework 4.7 以降のバージョンでサポートされます]  
   
 動的メソッドの JIT コンパイルが完了したときに、プロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT DynamicMethodJITCompilationFinished(  
      [in]  FunctionID  functionId,   
      [in]  BOOL        hrStatus,   
@@ -32,32 +32,33 @@ HRESULT DynamicMethodJITCompilationFinished(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
 [入力] `functionId`  
-どの JIT のコンパイルが開始したメモリ内の関数の識別子です。   
+どの JIT コンパイルが開始されてメモリ内の関数の識別子です。   
 
 [in] `hrStatus`   
 JIT コンパイルが成功したかどうかを示す値。
 
 [in] `fIsSafeToBlock`   
-`true` そのブロックを示すためにランタイムになるこのコールバックから戻るには、呼び出し元のスレッドを待機するには`false`をブロックしていないに影響すること、ランタイムの動作を示します。  
+`true` ブロックしていることにより、ランタイムでこのコールバックから返される呼び出し元のスレッドを待機するかを示す`false`をブロックしてに影響しないこと、実行時の操作を示します。  
 
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
 
-動的メソッドの JIT コンパイルが完了するたびに、このコールバックがトリガーされます。 これには、さまざまな IL スタブと LCG メソッドが含まれます。 その目標は、ユーザーにコンパイルされたメソッドを識別するための十分な情報を含むプロファイラー ライターを提供します。
+動的メソッドの JIT コンパイルが完了するたびに、このコールバックがトリガーされます。 これには、さまざまな IL スタブと LCG メソッドが含まれます。 その目的はプロファイラー ライターをユーザーにコンパイルされたメソッドを識別するために十分な情報を提供します。
 
 > [!NOTE]
-> `functionId` 値は、動的メソッドのメタデータがあるないため、メタデータ トークンを解決するのには使用できません。
+> `functionId` 値は、動的メソッドのメタデータがないため、メタデータ トークンを解決するのには使用できません。
 
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー** : CorProf.idl、CorProf.h  
+ **ヘッダー:** CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
   
-## <a name="see-also"></a>関連項目  
- [DynamicMethodJITCompilationStarted メソッド](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)  
- [ICorProfilerCallback8 インターフェイス](icorprofilercallback8-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [DynamicMethodJITCompilationStarted メソッド](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
+- [ICorProfilerCallback8 インターフェイス](icorprofilercallback8-interface.md)

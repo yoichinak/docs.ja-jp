@@ -2,12 +2,12 @@
 title: NativeActivity の基本クラス
 ms.date: 03/30/2017
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
-ms.openlocfilehash: 40eff2e597763fd492b3051df1a91622e7a60672
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: d746bb92dab79e7e68075ad003c420e7e37ed683
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842036"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637510"
 ---
 # <a name="nativeactivity-base-class"></a>NativeActivity の基本クラス
 
@@ -16,46 +16,46 @@ ms.locfileid: "48842036"
 ## <a name="using-nativeactivitycontext"></a>NativeActivityContext の使用
  ワークフロー ランタイムの機能は、<xref:System.Activities.NativeActivity.Execute%2A> 型の `context` パラメーターを使用して、<xref:System.Activities.NativeActivityContext> メソッド内からアクセスできます。 <xref:System.Activities.NativeActivityContext> を介して、以下のような機能を使用できます。
 
--   引数と変数を取得および設定する。
+- 引数と変数を取得および設定する。
 
--   <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A> を使用して子のアクティビティのスケジュールを設定する。
+- <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A> を使用して子のアクティビティのスケジュールを設定する。
 
--   <xref:System.Activities.NativeActivityContext.Abort%2A> を使用してアクティビティの実行を中止する。
+- <xref:System.Activities.NativeActivityContext.Abort%2A> を使用してアクティビティの実行を中止する。
 
--   <xref:System.Activities.NativeActivityContext.CancelChild%2A> および <xref:System.Activities.NativeActivityContext.CancelChildren%2A> を使用して子の実行を取り消す。
+- <xref:System.Activities.NativeActivityContext.CancelChild%2A> および <xref:System.Activities.NativeActivityContext.CancelChildren%2A> を使用して子の実行を取り消す。
 
--   <xref:System.Activities.NativeActivityContext.CreateBookmark%2A>、<xref:System.Activities.NativeActivityContext.RemoveBookmark%2A>、および <xref:System.Activities.NativeActivityContext.ResumeBookmark%2A> などのメソッドを使用して、アクティビティのブックマークにアクセスする。
+- <xref:System.Activities.NativeActivityContext.CreateBookmark%2A>、<xref:System.Activities.NativeActivityContext.RemoveBookmark%2A>、および <xref:System.Activities.NativeActivityContext.ResumeBookmark%2A> などのメソッドを使用して、アクティビティのブックマークにアクセスする。
 
--   <xref:System.Activities.CodeActivityContext.Track%2A> を使用したカスタムの追跡機能。
+- <xref:System.Activities.CodeActivityContext.Track%2A> を使用したカスタムの追跡機能。
 
--   <xref:System.Activities.CodeActivityContext.GetProperty%2A> および <xref:System.Activities.NativeActivityContext.GetValue%2A> を使用して、アクティビティの実行プロパティと値プロパティにアクセスする。
+- <xref:System.Activities.CodeActivityContext.GetProperty%2A> および <xref:System.Activities.NativeActivityContext.GetValue%2A> を使用して、アクティビティの実行プロパティと値プロパティにアクセスする。
 
--   <xref:System.Activities.NativeActivityContext.ScheduleAction%2A> および <xref:System.Activities.NativeActivityContext.ScheduleFunc%2A> を使用してアクティビティのアクションと機能のスケジュールを設定する。
+- <xref:System.Activities.NativeActivityContext.ScheduleAction%2A> および <xref:System.Activities.NativeActivityContext.ScheduleFunc%2A> を使用してアクティビティのアクションと機能のスケジュールを設定する。
 
 ### <a name="to-create-a-custom-activity-that-inherits-from-nativeactivity"></a>NativeActivity から継承するカスタム アクティビティを作成するには
 
-1.  OpenVisual Studio 2010。
+1. OpenVisual Studio 2010。
 
-2.  選択**ファイル**、**新しい**、し**プロジェクト**します。 選択**Workflow 4.0**  **Visual c#** で、**プロジェクトの種類**ウィンドウ、および選択、 **v2010**ノード。 選択**アクティビティ ライブラリ**で、**テンプレート**ウィンドウ。 新しいプロジェクトに HelloActivity という名前を付けます。
+2. 選択**ファイル**、**新しい**、し**プロジェクト**します。 選択**Workflow 4.0**  **Visual c#** で、**プロジェクトの種類**ウィンドウ、および選択、 **v2010**ノード。 選択**アクティビティ ライブラリ**で、**テンプレート**ウィンドウ。 新しいプロジェクトに HelloActivity という名前を付けます。
 
-3.  HelloActivity プロジェクトの Activity1.xaml を右クリックして**削除**します。
+3. HelloActivity プロジェクトの Activity1.xaml を右クリックして**削除**します。
 
-4.  HelloActivity プロジェクトを右クリックして**追加**、し**クラス**します。 新しいクラスに HelloActivity.cs という名前を付けます。
+4. HelloActivity プロジェクトを右クリックして**追加**、し**クラス**します。 新しいクラスに HelloActivity.cs という名前を付けます。
 
-5.  HelloActivity.cs ファイルで、次の `using` ディレクティブを追加します。
+5. HelloActivity.cs ファイルで、次の `using` ディレクティブを追加します。
 
     ```csharp
     using System.Activities;
     using System.Activities.Statements;
     ```
 
-6.  クラス宣言に基本クラスを追加することにより、新しいクラスで <xref:System.Activities.NativeActivity> から継承します。
+6. クラス宣言に基本クラスを追加することにより、新しいクラスで <xref:System.Activities.NativeActivity> から継承します。
 
     ```csharp
     class HelloActivity : NativeActivity
     ```
 
-7.  <xref:System.Activities.NativeActivity.Execute%2A> メソッドを追加して、このクラスに機能を追加します。
+7. <xref:System.Activities.NativeActivity.Execute%2A> メソッドを追加して、このクラスに機能を追加します。
 
     ```csharp
     protected override void Execute(NativeActivityContext context)
@@ -64,7 +64,7 @@ ms.locfileid: "48842036"
     }
     ```
 
-8.  <xref:System.Activities.NativeActivity.CacheMetadata%2A> メソッドをオーバーライドして適切な Add メソッドを呼び出し、カスタム アクティビティの変数、引数、子およびデリゲートについてワークフロー ランタイムに通知します。 詳細については、<xref:System.Activities.NativeActivityMetadata> クラスを参照してください。
+8. <xref:System.Activities.NativeActivity.CacheMetadata%2A> メソッドをオーバーライドして適切な Add メソッドを呼び出し、カスタム アクティビティの変数、引数、子およびデリゲートについてワークフロー ランタイムに通知します。 詳細については、<xref:System.Activities.NativeActivityMetadata> クラスを参照してください。
 
 9. <xref:System.Activities.NativeActivityContext> オブジェクトを使用してブックマークをスケジュールします。 ブックマークを作成、スケジュール、および再開する方法の詳細については、「<xref:System.Activities.WorkflowApplicationIdleEventArgs.Bookmarks%2A>」を参照してください。
 

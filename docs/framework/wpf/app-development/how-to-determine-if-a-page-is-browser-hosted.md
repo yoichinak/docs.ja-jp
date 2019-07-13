@@ -1,5 +1,5 @@
 ---
-title: '方法: ページは、ブラウザーでホストされているかどうかの判断'
+title: '方法: ページがブラウザーでホストされているかを確認する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,24 +8,25 @@ helpviewer_keywords:
 - hosted pages in browser [WPF]
 - pages [WPF], hosted in browser
 ms.assetid: 737e0f26-8371-49b4-9579-70879e51e1aa
-ms.openlocfilehash: 6eb83429cb4f9dac5f3561b41997d24bcaa2c62f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d154de2f885101d1bd0c4613dfb1604be8acbe6a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947811"
 ---
-# <a name="how-to-determine-if-a-page-is-browser-hosted"></a>方法: ページは、ブラウザーでホストされているかどうかの判断
-この例では、かどうかを<xref:System.Windows.Controls.Page>がブラウザーでホストされています。  
+# <a name="how-to-determine-if-a-page-is-browser-hosted"></a>方法: ページがブラウザーでホストされているかを確認する
+かどうか確認する方法を示します、<xref:System.Windows.Controls.Page>がブラウザーでホストされています。  
   
 ## <a name="example"></a>例  
- A<xref:System.Windows.Controls.Page>できるホストに依存しませんでき、その結果などのホストのさまざまな種類に読み込まれ、 <xref:System.Windows.Controls.Frame>、 <xref:System.Windows.Navigation.NavigationWindow>、またはブラウザー。 これは、1 つまたは複数のページを格納していると、これは複数のスタンドアロンによって参照されていると、参照可能なライブラリ アセンブリがある場合に発生することができます ([!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]) アプリケーションをホストします。  
+ A<xref:System.Windows.Controls.Page>ホストに依存しないことができ、その結果、読み込むことができるなど、ホストのさまざまな種類に、 <xref:System.Windows.Controls.Frame>、 <xref:System.Windows.Navigation.NavigationWindow>、またはブラウザー。 これは、1 つまたは複数のページを格納していると、複数のスタンドアロンによって参照されると、参照可能であるライブラリ アセンブリがある場合に発生することができます ([!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]) アプリケーションをホストします。  
   
- 次の例を使用する方法を示します<xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType>かどうかを<xref:System.Windows.Controls.Page>がブラウザーでホストされています。  
+ 次の例を使用する方法を示します<xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType>どうかを判断する<xref:System.Windows.Controls.Page>がブラウザーでホストされています。  
   
- [!code-csharp[HOWTOBrowserInteropHelperSnippets#IsBrowserHostedCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOBrowserInteropHelperSnippets/CSharp/Page1.xaml.cs#isbrowserhostedcode)]
- [!code-vb[HOWTOBrowserInteropHelperSnippets#IsBrowserHostedCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOBrowserInteropHelperSnippets/visualbasic/page1.xaml.vb#isbrowserhostedcode)]  
+ [!code-csharp[HOWTOBrowserInteropHelperSnippets#IsBrowserHostedCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOBrowserInteropHelperSnippets/CSharp/Page1.xaml.cs#isbrowserhostedcode)]
+ [!code-vb[HOWTOBrowserInteropHelperSnippets#IsBrowserHostedCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOBrowserInteropHelperSnippets/visualbasic/page1.xaml.vb#isbrowserhostedcode)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Controls.Frame>  
- <xref:System.Windows.Controls.Page>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Controls.Frame>
+- <xref:System.Windows.Controls.Page>

@@ -1,22 +1,23 @@
 ---
 title: SqlStreamChars.Read (Char、Int32, Int32) メソッド (System.Data.SqlTypes)
-author: douglaslMS
-ms.author: douglasl
+author: stevestein
+ms.author: sstein
 ms.date: 12/20/2018
-ms.technology:
-- dotnet-data
+ms.technology: dotnet-data
+topic_type:
+- apiref
 api_name:
 - System.Data.SqlTypes.SqlStreamChars.Read
 api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 87bff6dd78743ae08a5a3db8a783b56a0b7c3f24
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: df715f622f874b3c9297c421eab9f4c7504e696b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152535"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634318"
 ---
 # <a name="sqlstreamcharsreadchar-int32-int32-method"></a>SqlStreamChars.Read (Char、Int32, Int32) メソッド
 

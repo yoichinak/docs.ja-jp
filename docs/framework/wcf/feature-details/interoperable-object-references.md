@@ -1,21 +1,21 @@
 ---
 title: 相互運用可能なオブジェクト参照
-ms.date: 03/30/2017
+ms.date: 04/15/2019
 ms.assetid: cb8da4c8-08ca-4220-a16b-e04c8f527f1b
-ms.openlocfilehash: eeedd39ec14a6758395aee1f4c3b8ab26a0c2ffd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ada9084f6ac3c97dc641571c0cb8379a2fac68a8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918971"
 ---
 # <a name="interoperable-object-references"></a>相互運用可能なオブジェクト参照
-既定では、<xref:System.Runtime.Serialization.DataContractSerializer> はオブジェクトを値でシリアル化します。 <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> プロパティを使用すると、型のオブジェクトをシリアル化する場合に、オブジェクト参照を保持するようにデータ コントラクト シリアライザーに指示できます。  
+既定では、<xref:System.Runtime.Serialization.DataContractSerializer>値でオブジェクトをシリアル化します。 使用することができます、<xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>オブジェクトをシリアル化するときに、オブジェクト参照を保持するために、データ コントラクト シリアライザーに指示するプロパティ。  
   
 ## <a name="generated-xml"></a>生成される XML  
  例として、次のオブジェクトを考えます。  
   
-```  
+```csharp  
 [DataContract]  
 public class X  
 {  
@@ -45,57 +45,47 @@ public class SomeClass
 ```xml  
 <X>  
    <A id="1">contents of someInstance</A>  
-   <B ref="1" />  
+   <B ref="1"></B>  
 </X>  
 ```  
   
- ただし、<xref:System.Runtime.Serialization.XsdDataContractExporter> プロパティが `id` に設定されている場合でも、`ref` がそのスキーマに `preserveObjectReferences` 属性や `true` 属性を記述することはありません。  
+ ただし、<xref:System.Runtime.Serialization.XsdDataContractExporter>については説明しません、`id`と`ref`そのスキーマ内の属性場合でも、`preserveObjectReferences`プロパティに設定されて`true`します。  
   
 ## <a name="using-isreference"></a>IsReference の使用  
- スキーマの記述に従った有効なオブジェクト参照情報を生成するには、<xref:System.Runtime.Serialization.DataContractAttribute> 属性を型に適用し、<xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> フラグを `true` に設定します。 前のサンプル クラス `IsReference` で `X` を使用するには、次のようにします。  
+ スキーマの記述に従って有効なオブジェクト参照情報を生成するには、適用、<xref:System.Runtime.Serialization.DataContractAttribute>属性を型、および設定、<xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>フラグを`true`します。 次の例は、クラスを変更します`X`追加することで、前の例で`IsReference`:。  
   
- `[DataContract(IsReference=true)] public class X`  
+```csharp
+[DataContract(IsReference=true)]
+public class X   
+{  
+     SomeClass someInstance = new SomeClass(); 
+     [DataMember]
+     public SomeClass A = someInstance;
+     [DataMember] 
+     public SomeClass B = someInstance;
+}
   
- `{`  
-  
- `SomeClass someInstance = new SomeClass();`  
-  
- `[DataMember]`  
-  
- `public SomeClass A = someInstance;`  
-  
- `[DataMember]`  
-  
- `public SomeClass B = someInstance;`  
-  
- `}`  
-  
- `public class SomeClass`  
-  
- `{`  
-  
- `}`  
-  
+public class SomeClass 
+{   
+}  
+````
+
  次のような XML が生成されます。  
+
+```xml
+<X>  
+    <A id="1">
+        <Value>contents of A</Value>  
+    </A> 
+    <B ref="1"></B>  
+</X>
+```  
   
- `<X>`  
+ `IsReference` を使用すると、メッセージのラウンド トリップに対応できます。 これがない型がスキーマから生成されたときに、XML 出力の種類がもともと想定してスキーマを必ずしも互換性がないこと。 つまり、`id` 属性と `ref` 属性がシリアル化されたとしても、元のスキーマによってこれらの属性 (またはすべての属性) が拒否される可能性があります。 `IsReference`として認識されるように、メンバーは引き続きデータ メンバーに適用され、 *referenceable*ときにラウンドト リップできます。  
   
- `<A id="1">`  
-  
- `<Value>contents of A</Value>`  
-  
- `</A>`  
-  
- `<B ref="1">`  
-  
- `</B>`  
-  
- `</X>`  
-  
- `IsReference` を使用すると、メッセージのラウンド トリップに対応できます。 これを使用しない場合、型をスキーマから生成しても、その型に対して返された XML に、もともと想定していたスキーマとの互換性があるとは限りません。 つまり、`id` 属性と `ref` 属性がシリアル化されたとしても、元のスキーマによってこれらの属性 (またはすべての属性) が拒否される可能性があります。 `IsReference` をデータ メンバーに適用すれば、そのメンバーは、ラウンド トリップ時にも "参照可能" として認識され続けます。  
-  
-## <a name="see-also"></a>関連項目  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.CollectionDataContractAttribute>  
- <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>  
- <xref:System.Runtime.Serialization.CollectionDataContractAttribute.IsReference%2A>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.CollectionDataContractAttribute>
+- <xref:System.Runtime.Serialization.DataContractAttribute.IsReference?displayProperty=nameWithType>
+- <xref:System.Runtime.Serialization.CollectionDataContractAttribute.IsReference?displayProperty=nameWithType>

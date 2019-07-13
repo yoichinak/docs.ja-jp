@@ -1,15 +1,15 @@
 ---
-title: Native Activity を使用したカスタム複合
+title: ネイティブ アクティビティを使用したカスタム複合
 ms.date: 03/30/2017
 ms.assetid: ef9e739c-8a8a-4d11-9e25-cb42c62e3c76
-ms.openlocfilehash: 4d7cd64d5a7d581a81d10c39638b63f1f6787570
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: c88a4a7794ef5f9e721669bc61402e97f6032da0
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840457"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637603"
 ---
-# <a name="custom-composite-using-native-activity"></a>Native Activity を使用したカスタム複合
+# <a name="custom-composite-using-native-activity"></a>ネイティブ アクティビティを使用したカスタム複合
 このサンプルでは、他の <xref:System.Activities.NativeActivity> オブジェクトをスケジュールしてワークフローの実行のフローを制御する <xref:System.Activities.Activity> を作成する方法を示します。 この方法を示すために、このサンプルでは一般的な制御フローである Sequence と While の 2 つを使用します。
 
 ## <a name="sample-details"></a>サンプルの詳細
@@ -29,9 +29,9 @@ ms.locfileid: "48840457"
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには
 
-1.  Visual Studio 2010 で Composite.sln サンプル ソリューションを開きます。
+1. Visual Studio 2010 で Composite.sln サンプル ソリューションを開きます。
 
-2.  ソリューションをビルドして実行します。
+2. ソリューションをビルドして実行します。
 
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  

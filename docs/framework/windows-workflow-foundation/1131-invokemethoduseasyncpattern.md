@@ -3,11 +3,11 @@ title: 1131 - InvokeMethodUseAsyncPattern
 ms.date: 03/30/2017
 ms.assetid: eca50fa7-5276-4759-ad1c-e490b9bd1f82
 ms.openlocfilehash: 150973935d12455aa671043a619fbd6fd7e77425
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33512667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009956"
 ---
 # <a name="1131---invokemethoduseasyncpattern"></a>1131 - InvokeMethodUseAsyncPattern
 ## <a name="properties"></a>プロパティ  
@@ -25,7 +25,7 @@ ms.locfileid: "33512667"
 ## <a name="message"></a>メッセージ  
  InvokeMethod '%1' - メソッドでは '%2' および '%3' の非同期パターンを使用します。  
   
-## <a name="details"></a>詳細  
+## <a name="details"></a>説明  
   
 |データ項目名|データ項目の型|説明|  
 |--------------------|--------------------|-----------------|  

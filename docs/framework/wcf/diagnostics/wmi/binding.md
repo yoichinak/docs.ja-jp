@@ -2,14 +2,14 @@
 title: Binding2
 ms.date: 03/30/2017
 ms.assetid: 09511c6c-5749-4bb0-874e-0f0be36bfe04
-ms.openlocfilehash: 84e304f3dedcbd785d6238e6cb5eb142c288b995
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a040cc6e12833d2c737eb14c591300e5873ddce7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61964075"
 ---
-# <a name="binding"></a>バインド
+# <a name="binding"></a>バインディング
 wmi バインディング  
   
 ## <a name="syntax"></a>構文  
@@ -94,7 +94,8 @@ class Binding
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
-|Namespace|root\ServiceModel で定義|  
+|名前空間|root\ServiceModel で定義|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Channels.Binding>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Channels.Binding>

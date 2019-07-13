@@ -1,20 +1,20 @@
 ---
-title: '&lt;削除&gt;schemeSettings (Uri 設定) の要素'
+title: schemeSettings の <remove> 要素 (Uri 設定)
 ms.date: 03/30/2017
 ms.assetid: 4095ba51-de20-4f87-b562-018abe422c91
-ms.openlocfilehash: d444e2eeeace2dc59a53467316507d0bc38970d5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f29ee86deaa150324b40f4fac12ead152553e50d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674442"
 ---
-# <a name="ltremovegt-element-for-schemesettings-uri-settings"></a>&lt;削除&gt;schemeSettings (Uri 設定) の要素
+# <a name="remove-element-for-schemesettings-uri-settings"></a>\<削除 > schemeSettings (Uri 設定) の要素
 スキーム名の構成設定を削除します。  
   
  \<configuration>  
-\<uri >  
-\<schemeSettings >  
+\<uri>  
+\<schemeSettings>  
 \<remove>  
   
 ## <a name="syntax"></a>構文  
@@ -74,11 +74,12 @@ ms.locfileid: "50186045"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
-- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
-- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
-- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>  
-- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>  
-- <xref:System.Uri?displayProperty=nameWithType>  
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
+- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>
+- <xref:System.Configuration.UriSection?displayProperty=nameWithType>
+- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>
+- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>
+- <xref:System.Uri?displayProperty=nameWithType>
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -2,12 +2,12 @@
 title: DataTable 内のデータの操作
 ms.date: 03/30/2017
 ms.assetid: 5cb86d48-a987-4af4-80e0-8cc2c8373d62
-ms.openlocfilehash: a09edc6ce3098ab135d8c27ba0f6ad56cceed159
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 96be67859d9fd136d7ad370ae06d9fcf33426f53
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785425"
 ---
 # <a name="manipulating-data-in-a-datatable"></a>DataTable 内のデータの操作
 <xref:System.Data.DataTable> 内に <xref:System.Data.DataSet> を作成した後で、データベース内のテーブルを使用する場合と同じ操作を実行できます。 テーブル内のデータの追加、表示、編集、および削除を実行したり、エラーとイベントを監視したり、テーブル内のデータを照会したりできます。 内のデータを変更するときに、 **DataTable**変更が正確ですと、プログラムによって受け入れるか変更を拒否するかどうかを判断するかどうかを確認することもできます。  
@@ -37,7 +37,8 @@ ms.locfileid: "43521309"
  [AcceptChange と RejectChange](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)  
  行への変更を受け入れたり拒否したりする方法について説明します。  
   
-## <a name="see-also"></a>関連項目  
- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- [DataTable イベントの処理](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [DataTable イベントの処理](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

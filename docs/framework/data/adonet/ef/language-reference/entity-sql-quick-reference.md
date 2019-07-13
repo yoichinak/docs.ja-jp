@@ -2,12 +2,12 @@
 title: Entity SQL クイック リファレンス
 ms.date: 03/30/2017
 ms.assetid: e53dad9e-5e83-426e-abb4-be3e78e3d6dc
-ms.openlocfilehash: 0617ce96acaf5a6eafb2658cfe218cc8f4135f6e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b4e3eaf8abd82b63fa2663b47f878ecfa9584897
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785256"
 ---
 # <a name="entity-sql-quick-reference"></a>Entity SQL クイック リファレンス
 このトピックでは、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] クエリのクイック リファレンスを提供します。 このトピック内のクエリは、AdventureWorks Sales model に基づいています。  
@@ -15,7 +15,7 @@ ms.locfileid: "32765855"
 ## <a name="literals"></a>リテラル  
   
 ### <a name="string"></a>String  
- Unicode と非 Unicode の文字列リテラルがあります。 Unicode 文字列には n を付けます。たとえば、`N'hello'`です。  
+ Unicode と非 Unicode の文字列リテラルがあります。 Unicode 文字列の先頭 n. にはたとえば、`N'hello'`します。  
   
  非 Unicode 文字列リテラルの例を次に示します。  
   
@@ -27,7 +27,7 @@ ms.locfileid: "32765855"
   
  Output:  
   
-|値|  
+|[値]|  
 |-----------|  
 |hello|  
   
@@ -44,11 +44,11 @@ DATETIME '2006-12-25 01:01'
   
  Output:  
   
-|値|  
+|[値]|  
 |-----------|  
 |12/25/2006 1:01:00 AM|  
   
-### <a name="integer"></a>整数  
+### <a name="integer"></a>整数型  
  整数リテラルには Int32 (123) 型、UInt32 (123U) 型、Int64 (123L) 型、および UInt64 (123UL) 型があります。  
   
  例:  
@@ -60,7 +60,7 @@ DATETIME '2006-12-25 01:01'
   
  Output:  
   
-|値|  
+|[値]|  
 |-----------|  
 |1|  
 |2|  
@@ -72,7 +72,7 @@ DATETIME '2006-12-25 01:01'
 ## <a name="type-constructors"></a>型コンストラクター  
   
 ### <a name="row"></a>ROW  
- [行](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md)ように、構造的に型指定された匿名 (レコード) 値を作成します。 `ROW(1 AS myNumber, ‘Name’ AS myName).`  
+ [行](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md)としての匿名の構造的に型指定された (レコード) 値を作成します。 `ROW(1 AS myNumber, ‘Name’ AS myName).`  
   
  例:  
   
@@ -108,7 +108,7 @@ SELECT VALUE product FROM AdventureWorksEntities.Product AS product WHERE produc
 |842|Touring-Panniers, Large|PA-T100|…|  
   
 ### <a name="object"></a>Object  
- [型コンス トラクターを名前付き](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md)など、(名前付き) のユーザー定義のオブジェクトを構築`person("abc", 12)`です。  
+ [という名前の型コンス トラクター](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md)など、ユーザー定義の (名前付き) のオブジェクトを構築します`person("abc", 12)`します。  
   
  例:  
   
@@ -138,7 +138,7 @@ SELECT REF(o) AS OrderID FROM Orders AS o
   
  Output:  
   
-|値|  
+|[値]|  
 |-----------|  
 |1|  
 |2|  
@@ -156,7 +156,7 @@ SELECT VALUE REF(p).Name FROM
   
  Output:  
   
-|値|  
+|[値]|  
 |-----------|  
 |Adjustable Race|  
 |All-Purpose Bike Stand|  
@@ -164,7 +164,7 @@ SELECT VALUE REF(p).Name FROM
 |...|  
   
 ### <a name="deref"></a>DEREF  
- [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)を逆参照の参照値し、結果が逆参照を生成します。 たとえば、次のクエリは、`SELECT DEREF(o2.r) FROM (SELECT REF(o) AS r FROM LOB.Orders AS o) AS o2` のように、Orders エンティティ セットの各 Order について Order エンティティを生成します。  
+ [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)参照値とその結果が逆参照を生成を逆参照します。 たとえば、次のクエリは、`SELECT DEREF(o2.r) FROM (SELECT REF(o) AS r FROM LOB.Orders AS o) AS o2` のように、Orders エンティティ セットの各 Order について Order エンティティを生成します。  
   
  例:  
   
@@ -175,7 +175,7 @@ SELECT VALUE DEREF(REF(p)).Name FROM
   
  Output:  
   
-|値|  
+|[値]|  
 |-----------|  
 |Adjustable Race|  
 |All-Purpose Bike Stand|  
@@ -204,7 +204,7 @@ SELECT VALUE Key(CreateRef(AdventureWorksEntities.Product, row(p.ProductID)))
 ## <a name="functions"></a>関数  
   
 ### <a name="canonical"></a>正規  
- 名前空間を[正規関数](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)としてでは、Edm、`Edm.Length("string")`です。 正規関数と同じ名前の関数を含んでいる別の名前空間がインポートされない限り、名前空間を指定する必要はありません。 2 つの名前空間に同じ関数が存在する場合は、完全な名前を指定する必要があります。  
+ 名前空間を[正規関数](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)としてでは、Edm では、`Edm.Length("string")`します。 正規関数と同じ名前の関数を含んでいる別の名前空間がインポートされない限り、名前空間を指定する必要はありません。 2 つの名前空間に同じ関数が存在する場合は、完全な名前を指定する必要があります。  
   
  例:  
   
@@ -252,12 +252,12 @@ using SqlServer; LOWER('AA');
   
  Output:  
   
-|値|  
+|[値]|  
 |-----------|  
 |aa|  
   
 ## <a name="paging"></a>ページング  
- ページングを宣言することで表すことができます、 [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)と[制限](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)のサブ句、 [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)句。  
+ ページングを宣言することで表すことができます、[スキップ](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)と[制限](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)サブ句を[ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)句。  
   
  例:  
   
@@ -275,7 +275,7 @@ SELECT c.ContactID as ID, c.LastName as Name FROM
 |12|Aguilar|  
   
 ## <a name="grouping"></a>グループ化  
- [GROUPING BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md)クエリによって返されるオブジェクトのグループを指定します ([選択](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) を配置する式は、します。  
+ [GROUPING BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md)クエリによって返されるオブジェクトにグループを指定します ([選択](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) 式を配置するのには。  
   
  例:  
   
@@ -294,7 +294,7 @@ SELECT VALUE name FROM AdventureWorksEntities.Product as P
 |...|  
   
 ## <a name="navigation"></a>ナビゲーション  
- リレーションシップ ナビゲーション操作を使用すると、開始側のエンティティと終了側のエンティティ間のリレーションシップをナビゲートできます。 [NAVIGATE](../../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md)として修飾されるリレーションシップ型では\<名前空間 >.\<<namespace>.<relationship type name >。 移動 Ref を返します\<T > 場合の基数、終了するは 1 です。 場合の基数、終了が n、コレクション < Ref\<T >> が返されます。  
+ リレーションシップ ナビゲーション操作を使用すると、開始側のエンティティと終了側のエンティティ間のリレーションシップをナビゲートできます。 [NAVIGATE](../../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md)として修飾されるリレーションシップ型では\<名前空間 >.\<リレーションシップ型の名前 >。 移動 Ref を返します\<T > 場合のカーディナリティ、終了するは 1 です。 場合のカーディナリティの終了が n、コレクション < Ref\<T >> が返されます。  
   
  例:  
   
@@ -316,7 +316,7 @@ SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM
 ## <a name="select-value-and-select"></a>SELECT VALUE AND SELECT  
   
 ### <a name="select-value"></a>SELECT VALUE  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] には、暗黙の行の構築をスキップする SELECT VALUE 句が用意されています。 SELECT VALUE 句には 1 つの項目のみを指定できます。 このような句を使用して、row ラッパーは構築されず、SELECT 句内の項目と、コレクション、目的の構造を作成できます、たとえば:`SELECT VALUE a`です。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] には、暗黙の行の構築をスキップする SELECT VALUE 句が用意されています。 SELECT VALUE 句には 1 つの項目のみを指定できます。 場合、このような句を使用して、SELECT 句内の項目に row ラッパーは構築されず、および、必要な構造のコレクションの作成例:`SELECT VALUE a`します。  
   
  例:  
   
@@ -348,7 +348,7 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product as p
 |...|...|  
   
 ## <a name="case-expression"></a>CASE 式  
- [Case 式](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)結果を決定するブール式のセットを評価します。  
+ [Case 式](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)一連の結果を決定するブール式を評価します。  
   
  例:  
   
@@ -358,10 +358,11 @@ CASE WHEN AVG({25,12,11}) < 100 THEN TRUE ELSE FALSE END
   
  Output:  
   
-|値|  
+|[値]|  
 |-----------|  
 |true|  
   
-## <a name="see-also"></a>関連項目  
- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Entity SQL の概要](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>関連項目
+
+- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Entity SQL の概要](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

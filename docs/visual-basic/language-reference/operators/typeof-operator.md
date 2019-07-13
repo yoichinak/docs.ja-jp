@@ -12,15 +12,15 @@ helpviewer_keywords:
 - TypeOf operator [Visual Basic]
 - compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-ms.openlocfilehash: fe287794423048e993d953c83fc8590a06b7a5e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e5cb1ddc130a8b1913f30b0d20d27941005dd9d3
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604056"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063256"
 ---
 # <a name="typeof-operator-visual-basic"></a>TypeOf 演算子 (Visual Basic)
-オブジェクト参照変数をデータ型と比較します。  
+式の結果のランタイム型が型との互換性がかどうかを確認します。 指定された型。
   
 ## <a name="syntax"></a>構文  
   
@@ -42,7 +42,7 @@ result = TypeOf objectexpression IsNot typename
  `typename`  
  必須。 任意のデータ型名。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `TypeOf` 演算子は、`objectexpression` の実行時の型が `typename` と互換性があるかどうかを調べます。 互換性は、`typename` の型のカテゴリに依存します。 互換性を決定する方法を次の表に示します。  
   
 |`typename` の型のカテゴリ|互換性の条件|  
@@ -58,14 +58,15 @@ result = TypeOf objectexpression IsNot typename
 ## <a name="example"></a>例  
  次の例では、`TypeOf`...`Is` 式でさまざまなデータ型を使用して、2 つのオブジェクト参照変数の型の互換性をテストしています。  
   
- [!code-vb[VbVbalrOperators#39](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/typeof-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#39)]  
   
  変数 `refInteger` は、実行時の型 `Integer` を持ちます。 `Integer` と互換性がありますが、`Double` との互換性はありません。 変数 `refForm` は、実行時の型 <xref:System.Windows.Forms.Form> を持ちます。 この変数は、<xref:System.Windows.Forms.Form> (同じ型)、<xref:System.Windows.Forms.Control> (<xref:System.Windows.Forms.Form> は <xref:System.Windows.Forms.Control> を継承する)、および <xref:System.ComponentModel.IComponent> (<xref:System.Windows.Forms.Form> は <xref:System.ComponentModel.IComponent> を実装する <xref:System.ComponentModel.Component> を継承する) と互換性があります。 ただし、`refForm` には <xref:System.Windows.Forms.Label> との互換性はありません。  
   
-## <a name="see-also"></a>関連項目  
- [Is 演算子](../../../visual-basic/language-reference/operators/is-operator.md)  
- [IsNot 演算子](../../../visual-basic/language-reference/operators/isnot-operator.md)  
- [Visual Basic における比較演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
- [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [演算子および式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+## <a name="see-also"></a>関連項目
+
+- [Is 演算子](../../../visual-basic/language-reference/operators/is-operator.md)
+- [IsNot 演算子](../../../visual-basic/language-reference/operators/isnot-operator.md)
+- [Visual Basic における比較演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [演算子および式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

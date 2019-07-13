@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3af512f3-87d9-4005-9e2f-abb1060ff43f
-ms.openlocfilehash: 29db884a88f5150cd93571ba8fa7bf72be2b8c69
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 50cf5011376576d371dba558a602187201395bd0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514569"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599601"
 ---
 # <a name="establishing-the-connection"></a>接続の確立
 Microsoft SQL Server に接続する場合は、.NET Framework Data Provider for SQL Server の <xref:System.Data.SqlClient.SqlConnection> オブジェクトを使用します。 OLE DB データ ソースに接続する場合は、.NET Framework Data Provider for OLE DB の <xref:System.Data.OleDb.OleDbConnection> オブジェクトを使用します。 ODBC データ ソースに接続する場合は、.NET Framework Data Provider for ODBC の <xref:System.Data.Odbc.OdbcConnection> オブジェクトを使用します。 Oracle データ ソースに接続する場合は、.NET Framework Data Provider for Oracle の <xref:System.Data.OracleClient.OracleConnection> オブジェクトを使用します。 安全に格納すると、接続文字列を取得する、次を参照してください。[接続情報の保護](../../../../docs/framework/data/adonet/protecting-connection-information.md)します。  
@@ -51,16 +51,16 @@ using (SqlConnection connection = new SqlConnection(connectionString))
 ### <a name="integrated-security-and-aspnet"></a>統合セキュリティと ASP.NET  
  SQL Server 統合セキュリティ (信頼関係接続とも呼ばれます) は、SQL Server への接続を保護します。接続文字列でユーザー ID とパスワードを公開することがなく、接続の認証用に推奨されている方法でもあるためです。 統合セキュリティでは、実行中のプロセスの現在のセキュリティ ID またはトークンを使用します。 これは、デスクトップ アプリケーションでは通常、現在ログオンしているユーザーの ID です。  
   
- ASP.NET アプリケーションのセキュリティ ID は、他のオプションのうちのいずれかに設定することもできます。 SQL Server に接続するときに、ASP.NET アプリケーションが使用するセキュリティ id をより深く理解するを参照してください[ASP.NET 偽装](https://msdn.microsoft.com/library/a0cb3024-562f-4184-9d3c-095504787d3d)、 [ASP.NET 認証](https://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)、および[方法: SQL へのアクセス。Windows を使用してサーバーの統合セキュリティ](https://msdn.microsoft.com/library/683f9c9f-4375-4de6-8111-943c4423fde5)します。  
+ ASP.NET アプリケーションのセキュリティ ID は、他のオプションのうちのいずれかに設定することもできます。 SQL Server に接続するときに、ASP.NET アプリケーションが使用するセキュリティ id をより深く理解するを参照してください。 [ASP.NET 偽装](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100))、 [ASP.NET 認証](https://docs.microsoft.com/previous-versions/aspnet/eeyk640h(v=vs.100))、および[方法。Windows を使用して、アクセスの SQL Server の統合セキュリティ](https://docs.microsoft.com/previous-versions/aspnet/bsz5788z(v=vs.100))します。  
   
 ## <a name="connecting-to-an-ole-db-data-source"></a>OLE DB データ ソースへの接続  
  OLE DB (SQLOLEDB:、OLE DB Provider for SQL Server) を使用して公開されるデータ ソースへの接続を提供する .NET Framework Data Provider for OLE DB を使用して、 **OleDbConnection**オブジェクト。  
   
  .NET Framework Data Provider for OLE DB で使用される接続文字列フォーマットは ADO で使用される接続文字列フォーマットと同じですが、次の例外があります。  
   
--   **プロバイダー**キーワードが必要です。  
+- **プロバイダー**キーワードが必要です。  
   
--   **URL**、**リモート プロバイダー**、および**リモート サーバー**キーワードがサポートされていません。  
+- **URL**、**リモート プロバイダー**、および**リモート サーバー**キーワードがサポートされていません。  
   
  OLE DB 接続文字列の詳細については、「<xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A>」を参照してください。 また、<xref:System.Data.OleDb.OleDbConnectionStringBuilder> を使用すると、接続文字列を実行時に作成できます。  
   
@@ -142,8 +142,9 @@ OracleConnection nwindConn = new OracleConnection("Data Source=MyOracleServer;In
 nwindConn.Open();  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [データ ソースへの接続](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [接続文字列](../../../../docs/framework/data/adonet/connection-strings.md)  
- [OLE DB、ODBC、および Oracle 接続プール](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [データ ソースへの接続](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [接続文字列](../../../../docs/framework/data/adonet/connection-strings.md)
+- [OLE DB、ODBC、および Oracle 接続プール](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

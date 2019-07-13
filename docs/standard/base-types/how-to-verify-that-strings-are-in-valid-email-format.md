@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ed0721f2bfa8e272822740cf26173c1592de428
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: f6381747bc998f73b374442fcb15e025ca15795d
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236649"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "65589527"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>方法: 文字列が有効な電子メール形式であるかどうかを検証する
 正規表現を使用して文字列の形式が有効な電子メール形式であるかどうかを検証する例を次に示します。  
@@ -41,16 +41,16 @@ ms.locfileid: "53236649"
 |`(.+)`|任意の文字の 1 回以上の出現に一致します。 これが 2 番目のキャプチャ グループです。|  
 |`$`|入力文字列の末尾で照合を終了します。|  
   
- ドメイン名は @ 文字と合わせて `DomainMapper` メソッドに渡されます。このメソッドは <xref:System.Globalization.IdnMapping> クラスを使用して、US-ASCII 文字の範囲に含まれない Unicode 文字を Punycode に変換します。 また、このメソッドは、`invalid` メソッドがドメイン名に無効な文字を検出すると、`True` フラグを <xref:System.Globalization.IdnMapping.GetAscii%2A?displayProperty=nameWithType> に設定します。 このメソッドは、Punycode ドメイン名の前に @ 記号を付けて、これを `IsValidEmail` メソッドに返します。  
+ ドメイン名は @ 文字と合わせて `DomainMapper` メソッドに渡されます。このメソッドは <xref:System.Globalization.IdnMapping> クラスを使用して、US-ASCII 文字の範囲に含まれない Unicode 文字を Punycode に変換します。 また、このメソッドは、 `invalid` メソッドがドメイン名に無効な文字を検出すると、 `True` フラグを <xref:System.Globalization.IdnMapping.GetAscii%2A?displayProperty=nameWithType> に設定します。 このメソッドは、Punycode ドメイン名の前に @ 記号を付けて、これを `IsValidEmail` メソッドに返します。  
   
- 次に、`IsValidEmail` メソッドは <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%29?displayProperty=nameWithType> メソッドを呼び出して、電子メール アドレスが正規表現パターンに準拠するかどうかを確認します。  
+ 次に、 `IsValidEmail` メソッドは <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%29?displayProperty=nameWithType> メソッドを呼び出して、電子メール アドレスが正規表現パターンに準拠するかどうかを確認します。  
   
  `IsValidEmail` メソッドは、認証によって電子メール アドレスを検証するわけではありません。 電子メール アドレスの形式として有効かどうかを判断しているだけです。 さらに、 `IsValidEmail` メソッドは、最上位ドメイン名が [IANA ルート ゾーン データベース](https://www.iana.org/domains/root/db)に掲載されている有効なドメイン名であることを確認しません (これには検索操作が必要です)。 代わりに、正規表現によって単に最上位ドメイン名が 2 ～ 24 文字の ASCII 英数字で構成されており、最初の文字と末尾の文字は英数字、その他の文字は英数字またはハイフン (-) であることを確認します。  
   
  [!code-csharp[RegularExpressions.Examples.Email#7](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Email/cs/example4.cs#7)]
  [!code-vb[RegularExpressions.Examples.Email#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Email/vb/example4.vb#7)]  
   
- この例の正規表現パターン ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`{}|~\w])*)(?<=[0-9a-z])@))(?([)([(\d{1,3}.){3}\d{1,3}])|(([0-9a-z][-0-9a-z]*[0-9a-z]*.)+[a-z0-9][-a-z0-9]{0,22}[a-z0-9]))$`` の意味を次の表に示します。 正規表現のコンパイルでは、<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> フラグが使用されることに注意してください。  
+ この例の正規表現パターン ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`{}|~\w])*)(?<=[0-9a-z])@))(?([)([(\d{1,3}.){3}\d{1,3}])|(([0-9a-z][-0-9a-z]*[0-9a-z]*.)+[a-z0-9][-a-z0-9]{0,22}[a-z0-9]))$`` の意味を次の表に示します。 正規表現のコンパイルでは、 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> フラグが使用されることに注意してください。  
   
 |パターン|説明|  
 |-------------|-----------------|  
@@ -59,8 +59,8 @@ ms.locfileid: "53236649"
 |`(?("")("".+?(?<!\\)""@)`|最初の文字が引用符である場合、始まりの引用符に続く 1 つ以上の任意の文字と終わりの引用符に一致します。 終わりの引用符の前には円記号 (\\) を使用できません。 `(?<!` はゼロ幅の否定先読みアサーションの開始です。 文字列はアット マーク (@) で終わる必要があります。|  
 |<code>&#124;(([0-9a-z]</code>|最初の文字が引用符でない場合は、a ～ z または A ～ Z の任意の英字または 0 ～ 9 の任意の数字と一致します (比較では大文字小文字は区別されません)。|  
 |`(\.(?!\.))`|次の文字がピリオドの場合は、その文字と一致します。 ピリオドでない場合は、次の文字を先読みして照合を継続します。 `(?!\.)` は、2 つの連続するピリオドが電子メール アドレスのローカル部分に出現することを防ぐゼロ幅の負の先読みアサーションです。|  
-|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}\&#124;~\w]</code>|次の文字がピリオドでない場合は、任意の単語文字または -!#$%'*+=?^\`{}&#124;~ のいずれかの文字と一致します。|  
-|<code>((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^\`{}\&#124;~\w])*</code>|0 回以上の代替パターン (ピリオドとそれに続くピリオド以外の文字、または複数の文字のうちのいずれかの 1 文字) と一致します。|  
+|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}&#124;~\w]</code>|次の文字がピリオドでない場合は、任意の単語文字または -!#$%'*+=?^\`{}&#124;~ のいずれかの文字と一致します。|  
+|<code>((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^\`{}&#124;~\w])*</code>|0 回以上の代替パターン (ピリオドとそれに続くピリオド以外の文字、または複数の文字のうちのいずれかの 1 文字) と一致します。|  
 |`@`|@ 文字と一致します。|  
 |`(?<=[0-9a-z])`|@ 文字の前にくる文字が A ～ Z、a ～ z、または 0 ～ 9 である場合に照合を継続します。 `(?<=[0-9a-z])` 構成体は、ゼロ幅の正の後読みアサーションを定義します。|  
 |`(?(\[)`|@ に続く文字が左角かっこかどうかを確認します。|  
@@ -72,36 +72,12 @@ ms.locfileid: "53236649"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  `IsValidEmail` メソッドと `DomainMapper` メソッドは、正規表現ユーティリティ メソッドのライブラリに含めることができるほか、アプリケーション クラス内のプライベートな静的メソッドやインスタンス メソッドとして含めることもできます。  
   
- これらを正規表現ライブラリに含めるには、Visual Studio のクラス ライブラリ プロジェクトにコードをコピーして貼り付けるか、コードをテキスト ファイルにコピーして貼り付けて、次のようなコマンドでコマンド ラインからコンパイルします (ソース コード ファイルの名前を RegexUtilities.cs または RegexUtilities.vb と仮定しています)。  
-  
-```csharp  
-csc /t:library RegexUtilities.cs  
-```  
-  
-```vb  
-vbc /t:library RegexUtilities.vb  
-```  
-  
  また、 <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> メソッドを使用して、この正規表現を正規表現ライブラリに追加できます。  
   
  正規表現ライブラリ内で使用した場合は、次のようなコードを使用して呼び出すことができます。  
   
  [!code-csharp[RegularExpressions.Examples.Email#8](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Email/cs/example4.cs#8)]
  [!code-vb[RegularExpressions.Examples.Email#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Email/vb/example4.vb#8)]  
-  
- 電子メール検証の正規表現を含む RegexUtilities.dll という名前のクラス ライブラリを作成してあると仮定した場合、この例は次の方法のいずれかでコンパイルできます。  
-  
--   Visual Studio では、コンソール アプリケーションを作成して、RegexUtilities.dll への参照をプロジェクトに追加します。  
-  
--   コマンド ラインからは、ソース コードをテキスト ファイルにコピーして貼り付け、次のようなコマンドでコンパイルします (ソース コード ファイルの名前を Example.cs または Example.vb と仮定しています)。  
-  
-    ```csharp  
-    csc Example.cs /r:RegexUtilities.dll  
-    ```  
-  
-    ```vb  
-    vbc Example.vb /r:RegexUtilities.dll  
-    ```  
   
 ## <a name="see-also"></a>関連項目
 

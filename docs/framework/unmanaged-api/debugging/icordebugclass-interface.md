@@ -1,5 +1,5 @@
 ---
-title: ICorDebugClass Interface1
+title: ICorDebugClass インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugClass
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bec35babec96da5ca5d527b19f853b4ce1c384e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7e1ad830e728fbe764085a5808a48e4cacedc595
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61750839"
 ---
-# <a name="icordebugclass-interface1"></a>ICorDebugClass Interface1
+# <a name="icordebugclass-interface"></a>ICorDebugClass インターフェイス
+
 基本型または複合型 (つまり、ユーザー定義) のいずれかの型を表します。 型がジェネリックの場合、`ICorDebugClass` はインスタンス化されないジェネリック型を表します。  
   
 ## <a name="methods"></a>メソッド  
@@ -34,22 +35,23 @@ ms.locfileid: "33406937"
 |[GetStaticFieldValue メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md)|指定された静的フィールドの値を取得します。|  
 |[GetToken メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-gettoken-method.md)|取得、`TypeDef`このクラスのメタデータ トークン。|  
   
-## <a name="remarks"></a>コメント  
- `ICorDebugClass`インターフェイスはインスタンス化されていないジェネリック型を表します。 ICorDebugType インターフェイスでは、ジェネリック型のインスタンスを表します。 たとえば、`Hashtable<K, V>`で表されます`ICorDebugClass`であるのに対し`Hashtable<Int32, String>`で表されます`ICorDebugType`です。  
+## <a name="remarks"></a>Remarks  
+ `ICorDebugClass`インターフェイスは、インスタンス化されていないジェネリック型を表します。 ICorDebugType インターフェイスは、ジェネリック型のインスタンスを表します。 たとえば、`Hashtable<K, V>`で表されます`ICorDebugClass`であるのに対し`Hashtable<Int32, String>`で表されます`ICorDebugType`します。  
   
- 非ジェネリック型は型が両方によって表される`ICorDebugClass`と`ICorDebugType`です。 後者のインターフェイスは、型のインスタンス化に対処するには、.NET Framework version 2.0 で導入されました。  
+ 非ジェネリック型は型が両方によって表される`ICorDebugClass`と`ICorDebugType`します。 後者のインターフェイスは、型のインスタンス化を処理するには、.NET Framework version 2.0 で導入されました。  
   
 > [!NOTE]
 >  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>関連項目
+
+- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

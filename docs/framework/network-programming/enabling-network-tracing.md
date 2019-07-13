@@ -11,21 +11,21 @@ helpviewer_keywords:
 - logs, trace
 - destination for tracing output
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
-ms.openlocfilehash: b289aa2a60deb10ebda0ca8efc3e172caf2df8a6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5145b013db1a86ef1b3128ab1c4495dddaaaf987
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202069"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624636"
 ---
 # <a name="enabling-network-tracing"></a>ネットワークのトレースの有効化
 ネットワークのトレースでは、メソッド呼び出しについての情報、およびマネージド アプリケーションによって生成されるネットワーク トラフィックについての情報にアクセスできます。 アプリケーションでネットワーク トレースを有効にするには、次のタスクを実行する必要があります。  
   
--   トレースを有効にしてコードをコンパイルします。 トレースを有効にするために必要なコンパイラ スイッチの詳細については、「[方法 : トレースとデバッグを指定して条件付きコンパイルを実行する](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)」を参照してください。  
+- トレースを有効にしてコードをコンパイルします。 「[方法:トレースとデバッグを指定して条件付きコンパイルを実行する](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)」で、トレースを有効にするために必要なコンパイラ スイッチの詳細を参照してください。  
   
--   トレースの出力先を指定します。  
+- トレースの出力先を指定します。  
   
--   ネットワークのトレースの動作を構成します。 詳細については、「[方法: ネットワークのトレースを構成する](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)」を参照してください。  
+- ネットワークのトレースの動作を構成します。 「[方法:ネットワークのトレースを構成する](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)」で、詳細を参照してください。  
   
  最も一般的なトレース先 (トレース リスナーとも呼ばれます) は、既定のリスナーとログ ファイルです。  
   
@@ -45,7 +45,8 @@ ms.locfileid: "50202069"
 </system.diagnostics>  
 ```  
   
-## <a name="see-also"></a>参照  
- [ネットワークのトレースの解釈](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
- [.NET Framework のネットワークのトレース](../../../docs/framework/network-programming/network-tracing.md)  
- [アプリケーションのトレースとインストルメント](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+## <a name="see-also"></a>関連項目
+
+- [ネットワークのトレースの解釈](../../../docs/framework/network-programming/interpreting-network-tracing.md)
+- [.NET Framework のネットワークのトレース](../../../docs/framework/network-programming/network-tracing.md)
+- [アプリケーションのトレースとインストルメント](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

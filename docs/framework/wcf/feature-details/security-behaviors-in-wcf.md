@@ -2,30 +2,30 @@
 title: Windows Communication Foundation のセキュリティ動作
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-ms.openlocfilehash: 221e9cb23e05378b68e4b53bc9d678c119738af5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 378edb6ddd7a66249a0c7548a3d9465475f670a8
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127421"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487760"
 ---
 # <a name="security-behaviors-in-wcf"></a>Windows Communication Foundation のセキュリティ動作
 Windows Communication Foundation (WCF) での動作は、サービス レベルまたはエンドポイント レベルでの実行時の動作を変更します。 (一般に、表示動作の詳細については[サービスの実行時の動作を指定する](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md))。*セキュリティ動作*および監査ログの資格情報、認証、承認、制御できるようにします。 動作は、プログラムまたは構成を通じて使用できます。 ここでは、セキュリティ機能に関連する以下の動作の構成について説明します。  
   
--   [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)します。  
+- [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)します。  
   
--   [\<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)します。  
+- [\<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)します。  
   
--   [\<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)します。  
+- [\<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)します。  
   
--   [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)します。  
+- [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)します。  
   
--   [\<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md)クライアントがメタデータにアクセスできるセキュリティで保護されたエンドポイントを指定することがもできます。  
+- [\<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md)クライアントがメタデータにアクセスできるセキュリティで保護されたエンドポイントを指定することがもできます。  
   
 ## <a name="setting-credentials-with-behaviors"></a>動作を使用した資格情報の設定  
  使用して、 [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)と[ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)サービスまたはクライアントの資格情報の値を設定します。 基になるバインド構成によって、資格情報を設定する必要があるかどうかが決まります。 たとえば、セキュリティ モードが `None` に設定されている場合、クライアントとサービスは相互に認証を行わないため、どの種類の資格情報も必要ありません。  
   
- 一方、サービス バインディングでは、クライアント資格情報の種類が必要になることがあります。 その場合は、動作を使用して資格情報の値を設定することが必要になる場合があります  (資格情報の種類の詳細については、次を参照してください[資格情報の種類を選択する](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)。)。Windows 資格情報を使用して認証を行う場合などは、実際の資格情報の値が環境によって自動的に設定されるため、資格情報の別のセットを指定する場合を除き、資格情報の値を明示的に設定する必要がないこともあります。  
+ 一方、サービス バインディングでは、クライアント資格情報の種類が必要になることがあります。 その場合は、動作を使用して資格情報の値を設定することが必要になる場合があります (資格情報の種類の詳細については、次を参照してください[資格情報の種類を選択する](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)。)。Windows 資格情報を使用して認証を行う場合などは、実際の資格情報の値が環境によって自動的に設定されるため、資格情報の別のセットを指定する場合を除き、資格情報の値を明示的に設定する必要がないこともあります。  
   
  すべてのサービス資格情報の子要素として見つかった、 [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)します。 サービス資格情報として使用される証明書を次の例に示します。  
   
@@ -78,16 +78,16 @@ Windows Communication Foundation (WCF) での動作は、サービス レベル�
   
  使用する必要があります、 [ \<allowedAudienceUris >](../../../../docs/framework/configure-apps/file-schema/wcf/allowedaudienceuris.md)利用するフェデレーション アプリケーション内のコレクションを*セキュア トークン サービス*(STS) を発行する`SamlSecurityToken`セキュリティ トークン。 STS がセキュリティ トークンを発行する場合、このセキュリティ トークンに `SamlAudienceRestrictionCondition` を追加して、セキュリティ トークンの提供先となる Web サービスの URI を指定できます。 これにより、受け取り側 `SamlSecurityTokenAuthenticator` Web サービスは、次のようにしてこのチェックが行われるように指定することで、発行されたセキュリティ トークンがこの Web サービスを対象としていることを確認できます。  
   
--   設定、`audienceUriMode`属性の[ \<issuedTokenAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)に`Always`または`BearerKeyOnly`します。  
+- 設定、`audienceUriMode`属性の[ \<issuedTokenAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)に`Always`または`BearerKeyOnly`します。  
   
--   このコレクションに URI を追加して、有効な URI のセットを指定します。 これを行うには、挿入、 [\<追加 >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md)の各 URI に対して  
+- このコレクションに URI を追加して、有効な URI のセットを指定します。 これを行うには、挿入、 [\<追加 >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md)の各 URI に対して  
   
  詳細については、「 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> 」を参照してください。  
   
  詳細については、この構成要素を使用して、次を参照してください。[方法。フェデレーション サービスで資格情報を構成](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)します。  
   
 #### <a name="allowing-anonymous-cardspace-users"></a>匿名の CardSpace ユーザーの許可  
- `AllowUntrustedRsaIssuers` 要素の `<IssuedTokenAuthentication>` 属性を `true` に設定すると、任意の RSA キー ペアで署名された自己発行トークンを提示することがすべてのクライアントに明示的に許可されます。 発行者が*信頼されていない*キーに関連付けられている発行者のデータがあるないためです。 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] ユーザーは、ID の自己提供クレームを含む自己発行カードを作成できます。 この機能を使用するときは十分に注意してください。 この機能を使用する場合は、RSA 公開キーを、ユーザー名と一緒にデータベースに格納する必要のある比較的安全なパスワードとして考えます。 サービスへのクライアント アクセスを許可する前に、クライアントから提示された RSA 公開キーを、提示されたユーザー名に対応する格納済みの公開キーと比較して検証します。 これは、ユーザーが各自のユーザー名を登録し、自己発行の RSA 公開キーに関連付けることができる登録プロセスが確立されていることが前提となります。  
+ `AllowUntrustedRsaIssuers` 要素の `<IssuedTokenAuthentication>` 属性を `true` に設定すると、任意の RSA キー ペアで署名された自己発行トークンを提示することがすべてのクライアントに明示的に許可されます。 発行者が*信頼されていない*キーに関連付けられている発行者のデータがあるないためです。 CardSpace ユーザーは、id の自己提供クレームを含む自己発行カードを作成できます。 この機能を使用するときは十分に注意してください。 この機能を使用する場合は、RSA 公開キーを、ユーザー名と一緒にデータベースに格納する必要のある比較的安全なパスワードとして考えます。 サービスへのクライアント アクセスを許可する前に、クライアントから提示された RSA 公開キーを、提示されたユーザー名に対応する格納済みの公開キーと比較して検証します。 これは、ユーザーが各自のユーザー名を登録し、自己発行の RSA 公開キーに関連付けることができる登録プロセスが確立されていることが前提となります。  
   
 ## <a name="client-credentials"></a>クライアント資格情報  
  クライアント資格情報は、相互認証が必要な場合にサービスに対するクライアントの認証に使用されます。 また、このセクションを使用して、クライアントがサービスの証明書によってサービスへのメッセージをセキュリティで保護する必要がある場合に使用するサービス証明書を指定することもできます。  
@@ -114,19 +114,19 @@ Windows Communication Foundation (WCF) での動作は、サービス レベル�
  </endpointBehaviors>  
 ```  
   
-#### <a name="clientcertifictate-element"></a>\<clientCertifictate > 要素  
- この要素で、クライアントの認証に使用する証明書を設定します。 詳細については、次を参照してください。[方法。クライアント資格情報の値を指定](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)します。  
+#### <a name="clientcertificate-element"></a>\<clientCertificate > 要素  
+ この要素で、クライアントの認証に使用する証明書を設定します。 詳細については、「[方法 :クライアント資格情報の値を指定](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)します。  
   
-#### <a name="httpdigest"></a>\<httpDigest >  
+#### <a name="httpdigest"></a>\<httpDigest>  
  この機能は、Windows の Active Directory およびインターネット インフォメーション サービス (IIS) と共に有効にする必要があります。 詳細については、次を参照してください。 [Digest Authentication in IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88443)します。  
   
 #### <a name="issuedtoken-element"></a>\<issuedToken > 要素  
  [ \<IssuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)トークン、またはセキュリティ トークン サービスで使用する動作のローカル発行者の構成に使用する要素が含まれています。 ローカル発行者を使用するクライアントの構成については、次を参照してください。[方法。ローカル発行者を構成する](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)します。  
   
-#### <a name="localissueraddress"></a>\<localissueraddress プロパティ >  
+#### <a name="localissueraddress"></a>\<localIssuerAddress>  
  既定のセキュリティ トークン サービス アドレスを指定します。 これは、使用時に、<xref:System.ServiceModel.WSFederationHttpBinding>またはフェデレーション バインディングの発行者アドレスが、セキュリティ トークン サービスの URL を指定していません `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` または`null`です。 そのような場合、<xref:System.ServiceModel.Description.ClientCredentials> は、ローカルの発行者およびバインディングのアドレスと共に構成し、その発行者と通信するために使用する必要があります。  
   
-#### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors >  
+#### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors>  
  使用して、 [ \<issuerChannelBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)セキュリティ トークン サービスと通信するときに使用される WCF クライアントの動作を追加します。 クライアント動作を定義、 [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)セクション。 定義された動作を使用するには追加、<`add`> 要素を`<issuerChannelBehaviors>`2 つの属性を持つ要素。 次の例に示すように、`issuerAddress` をセキュリティ トークン サービスの URL に設定し、`behaviorConfiguration` 属性を定義済みのエンドポイントの動作の名前に設定します。  
   
 ```xml  
@@ -144,7 +144,7 @@ Windows Communication Foundation (WCF) での動作は、サービス レベル�
   
  使用して、 [ \<scopedCertificates >](../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md)と[\<追加 >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md)特定のサービスに関連付けられているサービス証明書を設定します。 `<add>` 要素には、証明書をサービスに関連付けるために使用する `targetUri` 属性があります。  
   
- [\<認証 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)要素は、証明書の認証に使用される信頼レベルを指定します。 既定のレベルは "ChainTrust" に設定され、チェーンの最上位の信頼された証明機関で終了する証明書の階層構造で各証明書を検索するよう指定します。 これは最もセキュリティで保護されているモードです。 また、値を "PeerOrChainTrust" に設定することもできます。これは、信頼されたチェーン内の証明書と共に、自己発行された証明書 (ピア信頼) も受け入れることを指定します。 自己発行の資格情報は信頼された証明機関から購入したものである必要はないため、この値はクライアントとサービスの開発およびデバッグに使用されます。 クライアントを展開するときは、代わりに "ChainTrust" 値を使用します。 値を "Custom" または "None" に設定できます。 "Custom" 値を使用するには、`CustomCertificateValidatorType` 属性も証明書の検証に使用するアセンブリと型に設定する必要があります。 独自のカスタム検証を作成するには、抽象 <xref:System.IdentityModel.Selectors.X509CertificateValidator> クラスを継承する必要があります。 詳細については、次を参照してください。[方法。カスタム証明書の検証を使用するサービスを作成する](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)します。  
+ [\<認証 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)要素は、証明書の認証に使用される信頼レベルを指定します。 既定のレベルは "ChainTrust" に設定され、チェーンの最上位の信頼された証明機関で終了する証明書の階層構造で各証明書を検索するよう指定します。 これは最もセキュリティで保護されているモードです。 また、値を "PeerOrChainTrust" に設定することもできます。これは、信頼されたチェーン内の証明書と共に、自己発行された証明書 (ピア信頼) も受け入れることを指定します。 自己発行の資格情報は信頼された証明機関から購入したものである必要はないため、この値はクライアントとサービスの開発およびデバッグに使用されます。 クライアントを展開するときは、代わりに "ChainTrust" 値を使用します。 値を "Custom" または "None" に設定できます。 "Custom" 値を使用するには、`CustomCertificateValidatorType` 属性も証明書の検証に使用するアセンブリと型に設定する必要があります。 独自のカスタム検証を作成するには、抽象 <xref:System.IdentityModel.Selectors.X509CertificateValidator> クラスを継承する必要があります。 詳細については、「[方法 :カスタム証明書の検証を使用するサービスを作成する](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)します。  
   
  [\<認証 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)要素が含まれています、`RevocationMode`失効証明書をチェックする方法を指定する属性。 既定値は "online" です。この場合、証明書が失効していないかどうかが自動的にチェックされます。 詳細については、次を参照してください。 [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)します。  
   
@@ -217,6 +217,7 @@ Windows Communication Foundation (WCF) での動作は、サービス レベル�
 </behaviors>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [監査](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>関連項目
+
+- [監査](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
+- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

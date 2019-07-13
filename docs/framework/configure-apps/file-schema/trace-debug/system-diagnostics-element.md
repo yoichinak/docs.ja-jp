@@ -1,5 +1,5 @@
 ---
-title: '&lt;system.diagnostics&gt;要素'
+title: < System.diagnostics > 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.diagnostics
@@ -8,20 +8,18 @@ helpviewer_keywords:
 - <system.diagnostics> element
 - system.diagnostics element
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 35fe167beb53c27aa511e08507415a26b1749ca2
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 026805ffb9b89aa55e84cf9a5c4afb8ed63cec09
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48029439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673694"
 ---
-# <a name="ltsystemdiagnosticsgt-element"></a>&lt;system.diagnostics&gt;要素
+# <a name="systemdiagnostics-element"></a>\<system.diagnostics > 要素
 メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。  
   
  \<configuration>  
-\<system.diagnostics >  
+\<system.diagnostics>  
   
 ## <a name="syntax"></a>構文  
   
@@ -74,7 +72,8 @@ ms.locfileid: "48029439"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Diagnostics.Trace>  
- <xref:System.Diagnostics.Debug>  
- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Diagnostics.Trace>
+- <xref:System.Diagnostics.Debug>
+- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

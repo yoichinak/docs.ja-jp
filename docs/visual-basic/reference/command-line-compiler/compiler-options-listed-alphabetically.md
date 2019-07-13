@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-ms.openlocfilehash: 98a9295f1a2158e28a699aa6dfb1403542e523b4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 98d8b3eef0afd780b4a6568e8c067296d2243087
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197302"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268191"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Visual Basic コンパイラ オプションのアルファベット順の一覧
 Visual Basic のコマンド ライン コンパイラは、Visual Studio 統合開発環境 (IDE) からプログラムをコンパイルする代替手段として提供されます。 次にアルファベット順に並べ替える Visual Basic のコマンド ライン コンパイラ オプションの一覧を示します。  
@@ -25,7 +25,7 @@ Visual Basic のコマンド ライン コンパイラは、Visual Studio 統合
 |`-analyzer`|このアセンブリからアナライザーを実行します (短縮形: -a)。|  
 |[-baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|DLL のベース アドレスを指定します。|  
 |[-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)|バグを簡単に報告するための情報を含むファイルを作成します。|  
-|`-checksumalgorithm:<alg>`|PDB に格納されているソース ファイルのチェックサムを計算するためのアルゴリズムを指定します。  サポートされる値は、SHA1 (既定値) または SHA256 です。|  
+|`-checksumalgorithm:<alg>`|PDB に格納されているソース ファイルのチェックサムを計算するためのアルゴリズムを指定します。  サポートされる値は SHA1 (既定値) または SHA256 です。|  
 |[-codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|コンパイルですべてのソース コード ファイルに使用するコード ページを指定します。|  
 |[-debug](../../../visual-basic/reference/command-line-compiler/debug.md)|デバッグ情報を生成します。|  
 |[-define](../../../visual-basic/reference/command-line-compiler/define.md)|条件付きコンパイルのシンボルを定義します。|  
@@ -39,13 +39,13 @@ Visual Basic のコマンド ライン コンパイラは、Visual Studio 統合
 |[-imports](../../../visual-basic/reference/command-line-compiler/imports.md)|指定したアセンブリから名前空間をインポートします。|  
 |[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|アセンブリに厳密な名前を付けるキー ペアのキー コンテナー名を指定します。|  
 |[-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)|アセンブリに厳密な名前を付けるキーまたはキー ペアを含むファイルを指定します。|  
-|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|言語バージョンを指定します。 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0。|  
+|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|言語バージョンとして、9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0.|  
 |[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|によって参照されるアセンブリの場所を指定します、 [-参照](../../../visual-basic/reference/command-line-compiler/reference.md)オプション。|  
 |[-linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md)|マネージド リソースへのリンクを作成します。|  
 |[-main](../../../visual-basic/reference/command-line-compiler/main.md)|含むクラスを指定します、`Sub Main`起動時に使用するプロシージャ。|  
 |[-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|モジュールが一部となるアセンブリの名前を指定します。|  
 |`-modulename:<string>`|ソース モジュールの名前を指定します。|  
-|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|[!INCLUDE[Compact](~/includes/compact-md.md)] が対象になるようにコンパイラを設定します。|  
+|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|.NET Compact Framework を対象とするコンパイラを設定します。|  
 |[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|Vbc.rsp でコンパイルしないでください。|  
 |[-nologo](../../../visual-basic/reference/command-line-compiler/nologo.md)|コンパイラの著作権情報が表示されないようにします。|  
 |[-nostdlib](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|コンパイラが標準ライブラリを参照しないようにします。|  
@@ -80,8 +80,7 @@ Visual Basic のコマンド ライン コンパイラは、Visual Studio 統合
 |[-win32manifest](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|プロジェクトのポータブル実行可能 (PE) ファイルに埋め込まれる、ユーザー定義の Win32 アプリケーション マニフェスト ファイルを識別します。|  
 |[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)|Win32 リソースを出力ファイルに挿入します。|  
   
-## <a name="see-also"></a>関連項目  
- [Visual Basic コンパイラ オプション一覧 (カテゴリ別)](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
- [プロジェクト デザイナーの概要](https://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
- [アルファベット順の C# コンパイラ オプションの一覧](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
- [カテゴリ別の C# コンパイラ オプションの一覧](../../../csharp/language-reference/compiler-options/listed-by-category.md)
+## <a name="see-also"></a>関連項目
+
+- [Visual Basic コンパイラ オプション一覧 (カテゴリ別)](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)
+- [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties?view=vs-2017)

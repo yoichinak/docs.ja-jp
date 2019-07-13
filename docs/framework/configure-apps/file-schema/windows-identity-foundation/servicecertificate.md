@@ -1,21 +1,21 @@
 ---
-title: '&lt;ServiceCertificate&gt;'
+title: <serviceCertificate>
 ms.date: 03/30/2017
 ms.assetid: 42c7f291-2ec3-43c5-8872-35897ff3c660
 author: BrucePerlerMS
-ms.openlocfilehash: 008d2269a72759117658e27ec130cc8cf62cfdfa
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 328d074f9edc5ddf871308a7e3d694bf94adea78
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47400414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793823"
 ---
-# <a name="ltservicecertificategt"></a>&lt;ServiceCertificate&gt;
+# <a name="servicecertificate"></a>\<serviceCertificate>
 暗号化し、トークン暗号化解除に使用される X.509 証明書を構成します。  
   
- \<system.identityModel.services >  
-\<federationConfiguration >  
-\<serviceCertificate >  
+ \<system.identityModel.services>  
+\<federationConfiguration>  
+\<serviceCertificate>  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,7 +38,7 @@ ms.locfileid: "47400414"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<certificateReference >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatereference.md)|検索して、証明書ストアに X.509 証明書の検証に使用される設定を指定します。|  
+|[\<certificateReference>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatereference.md)|検索して、証明書ストアに X.509 証明書の検証に使用される設定を指定します。|  
   
 ### <a name="parent-elements"></a>親要素  
   

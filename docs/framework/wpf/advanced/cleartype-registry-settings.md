@@ -5,20 +5,19 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: d6a121e2a95ce4005b43937f83c6c74ec7d8f1c1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a776c3d4060b9ca291e4e919ab6ca33fb713434c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051391"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType レジストリの設定
 このトピックの概要を示します、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]レジストリ設定で使用される[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。  
-  
-  
+
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>テクノロジの概要  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] テキスト表示デバイスの使用をレンダリングするアプリケーション[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]機能、強化された閲覧エクスペリエンスを提供します。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] は、ラップトップや Pocket PC の画面、フラット パネル モニターなど、既存の LCD (液晶ディスプレイ) でのテキストの読みやすさを向上させるために [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] が開発したソフトウェア テクノロジです。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] は、LCD 画面の各ピクセル内の個々の垂直カラー ストライプ要素にアクセスすることによって機能します。 詳細については[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]を参照してください[ClearType の概要](../../../../docs/framework/wpf/advanced/cleartype-overview.md)します。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] テキスト表示デバイスの使用をレンダリングするアプリケーション[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]機能、強化された閲覧エクスペリエンスを提供します。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] は、ラップトップや Pocket PC の画面、フラット パネル モニターなど、既存の LCD (液晶ディスプレイ) でのテキストの読みやすさを向上させるために [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] が開発したソフトウェア テクノロジです。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] は、LCD 画面の各ピクセル内の個々の垂直カラー ストライプ要素にアクセスすることによって機能します。 詳細については[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]を参照してください[ClearType の概要](cleartype-overview.md)します。  
   
  レンダリングされるテキスト[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]ディスプレイ デバイスで表示したときに大幅に異なる表示されることができます。 青、緑、赤の順でカラー ストライプ要素ではなく、一般的な赤、緑、青のモニターの数が少ないの実装例 ( [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) の順序。  
   
@@ -57,7 +56,7 @@ ms.locfileid: "43514859"
   
  で、ユーザーのディスプレイ デバイス名ごと、 `ClearTypeLevel` DWORD 値を定義します。 次のスクリーン ショットのレジストリ エディターの設定、[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]レベル。  
   
- ![レジストリ エディターの ClearType 設定](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")  
+ ![レジストリ エディターの ClearType 設定します。](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 > [!NOTE]
 >  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションで必要に応じて、いずれか 2 つのモードのいずれかのテキストのレンダリング[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]します。 テキストのレンダリングせず[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]、グレースケール レンダリングと呼びます。  
@@ -75,7 +74,7 @@ ms.locfileid: "43514859"
   
  で、ユーザーのディスプレイ デバイス名ごと、 `GammaLevel` DWORD 値を定義します。 次のスクリーンショットは、ガンマ レベルのレジストリ エディターの設定を示しています。  
   
- ![レジストリ エディターの ClearType 設定](../../../../docs/framework/wpf/advanced/media/cleartyperegistry02.png "ClearTypeRegistry02")  
+ ![ClearType ガンマ レベルの設定、レジストリ エディター](./media/cleartype-registry-settings/cleartype-gamma-level-settings-registry-editor.png)  
   
 <a name="pixel_structure"></a>   
 ## <a name="pixel-structure"></a>ピクセル構造  
@@ -99,7 +98,7 @@ ms.locfileid: "43514859"
   
  で、ユーザーのディスプレイ デバイス名ごと、 `PixelStructure` DWORD 値を定義します。 次のスクリーンショットは、ピクセル構造のレジストリ エディターの設定を示しています。  
   
- ![レジストリ エディターの ClearType 設定](../../../../docs/framework/wpf/advanced/media/cleartyperegistry02.png "ClearTypeRegistry02")  
+ ![ClearType ガンマ レベルの設定、レジストリ エディター](./media/cleartype-registry-settings/cleartype-gamma-level-settings-registry-editor.png)  
   
 <a name="text_contrast_level"></a>   
 ## <a name="text-contrast-level"></a>テキストのコントラスト レベル  
@@ -112,8 +111,9 @@ ms.locfileid: "43514859"
   
  で、ユーザーのディスプレイ デバイス名ごと、 `TextContrastLevel` DWORD 値を定義します。 次のスクリーンショットは、テキストのコントラスト レベルのレジストリ エディターの設定を示しています。  
   
- ![レジストリ エディターの ClearType 設定](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")  
+ ![レジストリ エディターの ClearType 設定します。](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
-## <a name="see-also"></a>関連項目  
- [ClearType の概要](../../../../docs/framework/wpf/advanced/cleartype-overview.md)  
- [ClearType アンチエイリアシング](/windows/desktop/gdi/cleartype-antialiasing)
+## <a name="see-also"></a>関連項目
+
+- [ClearType の概要](cleartype-overview.md)
+- [ClearType アンチエイリアシング](/windows/desktop/gdi/cleartype-antialiasing)

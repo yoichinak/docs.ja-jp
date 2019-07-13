@@ -2,12 +2,12 @@
 title: '方法: 大きな XML ドキュメントのストリーミング変換を実行する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 5f16d1f8-5370-4b55-b0c8-e497df163037
-ms.openlocfilehash: f837117bec2bac615e4cbd822c1110f648d32ce8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 033665d14938bc3970b83eddccc159f89e6451d1
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514074"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486642"
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a>方法: 大きな XML ドキュメントのストリーミング変換を実行する (C#)
 大きな XML ファイルを変換して、アプリケーションのメモリ使用量を予想できるようにアプリケーションを作成しなければならない場合があります。 非常に大きな XML ファイルを XML ツリーに設定しようとすると、ファイルのサイズに比例してメモリが過剰に使用されます。 したがって、代わりにストリーミングの手法を使用する必要があります。  
@@ -19,7 +19,7 @@ ms.locfileid: "43514074"
  主な方法は 2 つあります。 1 つは、<xref:System.Xml.Linq.XStreamingElement> の遅延処理の特性を使用する方法です。 もう 1 つは、<xref:System.Xml.XmlWriter> を作成し、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の機能を使用して <xref:System.Xml.XmlWriter> に要素を書き込む方法です。 このトピックでは、両方の方法について説明します。  
   
 ## <a name="example"></a>例  
- 「[方法: ヘッダー情報にアクセスして XML フラグメントをストリーム出力する (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)」の例を基に構築した例を次に示します。  
+ 次の例は、「[方法: ヘッダー情報にアクセスして XML フラグメントをストリーム出力する (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)」の例を基盤としています。  
   
  この例では、<xref:System.Xml.Linq.XStreamingElement> の遅延実行機能を使用してストリーム出力しています。 この例を使用すると、メモリ使用量を低く抑えながら、非常に大きなドキュメントを変換することができます。  
   
@@ -189,7 +189,7 @@ static void Main(string[] args)
 ```  
   
 ## <a name="example"></a>例  
- 次の例も、「[方法: ヘッダー情報にアクセスして XML フラグメントをストリーム出力する (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)」の例を基に構築されています。  
+ 次の例も、「[方法: ヘッダー情報にアクセスして XML フラグメントをストリーム出力する (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)」の例を基盤としています。  
   
  この例では、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の機能を使用して <xref:System.Xml.XmlWriter> に要素を書き込みます。 この例を使用すると、メモリ使用量を低く抑えながら、非常に大きなドキュメントを変換することができます。  
   
@@ -322,6 +322,3 @@ static void Main(string[] args)
 </Root>  
 ```  
   
-## <a name="see-also"></a>参照
-
-- [高度な LINQ to XML プログラミング (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

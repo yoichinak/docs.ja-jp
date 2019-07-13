@@ -17,21 +17,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5fe1ba15f8a9f8ee79582158209049c1e502a61d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 03bc5584d24efa790989f93426251f9f38e65904
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199870"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768521"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim 関数
 指定したバージョンの .NET Framework 再頒布可能パッケージに含まれている DLL を読み込みます。  
   
- この関数は、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] では非推奨とされました。 使用して、 [iclrruntimeinfo::loadlibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md)メソッド代わりにします。  
+ この関数は、.NET Framework 4 では廃止されました。 使用して、 [iclrruntimeinfo::loadlibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md)メソッド代わりにします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT LoadLibraryShim (  
     [in]  LPCWSTR  szDllName,  
     [in]  LPCWSTR  szVersion,  
@@ -40,12 +40,12 @@ HRESULT LoadLibraryShim (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `szDllName`  
  [in].NET Framework ライブラリから読み込まれる DLL の名前を表す、0 で終わる文字列。  
   
  `szVersion`  
- [in]読み込まれる DLL のバージョンを表す、0 で終わる文字列。 場合`szVersion`読み込みはバージョン 4 未満である指定された DLL の最新バージョンを選択したバージョンは null です。 場合は、バージョン 4 以上のすべてのバージョンは無視されます`szVersion`が null の場合と、version 4 より前のバージョンがインストールされていない場合、DLL の読み込みに失敗します。 インストールを確認します。 これは、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]の既存のアプリケーションやコンポーネントには影響しません。 エントリを参照してください。[インプロセス SxS と移行のクイック スタート](https://go.microsoft.com/fwlink/?LinkId=200329)CLR チームのブログにします。  
+ [in]読み込まれる DLL のバージョンを表す、0 で終わる文字列。 場合`szVersion`読み込みはバージョン 4 未満である指定された DLL の最新バージョンを選択したバージョンは null です。 場合は、バージョン 4 以上のすべてのバージョンは無視されます`szVersion`が null の場合と、version 4 より前のバージョンがインストールされていない場合、DLL の読み込みに失敗します。 これは、ため、.NET Framework 4 のインストールは、既存のアプリケーションまたはコンポーネントには影響しません。 エントリを参照してください。[インプロセス SxS と移行のクイック スタート](https://go.microsoft.com/fwlink/?LinkId=200329)CLR チームのブログにします。  
   
  `pvReserved`  
  将来使用するために予約されています。  
@@ -67,12 +67,13 @@ HRESULT LoadLibraryShim (
 > [!NOTE]
 >  以降、.NET Framework version 2.0 と、読み込まれる CLR Fusion.dll を読み込むとします。 Fusion.dll で関数が、ラッパーが、この実装は、ランタイムによって提供されるためです。  
   
-## <a name="requirements"></a>要件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>関連項目
+
+- [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

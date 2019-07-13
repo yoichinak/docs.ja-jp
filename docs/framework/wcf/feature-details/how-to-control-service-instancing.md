@@ -1,25 +1,25 @@
 ---
-title: '方法 : サービスのインスタンス化を制御する'
+title: '方法: サービスのインスタンス化を制御する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e0b12b34-8004-443a-a46d-83a5c00f2601
-ms.openlocfilehash: b9e622903f871564495796b1690ab4e3a1f66fb7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e8efbc5a3dec5f60dbefc8f6dc377d97b29b7653
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699618"
 ---
-# <a name="how-to-control-service-instancing"></a>方法 : サービスのインスタンス化を制御する
+# <a name="how-to-control-service-instancing"></a>方法: サービスのインスタンス化を制御する
 サービスのインスタンス モードを設定することにより、<xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> (およびそのユーザー定義のサービス オブジェクト) をいつ生成するかを指定できます。 設定できるモードについては、<xref:System.ServiceModel.InstanceContextMode> 列挙体を参照してください。 動作の詳細については、次を参照してください。[構成と、ランタイムの動作を拡張](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)します。 実施例については、次を参照してください。[動作](../../../../docs/framework/wcf/samples/behaviors.md)します。  
   
 ### <a name="to-control-the-service-instance-lifetime-using-code"></a>サービス インスタンスの有効期間をコードで制御するには  
   
-1.  サービス クラスに <xref:System.ServiceModel.ServiceBehaviorAttribute> 属性を適用します。  
+1. サービス クラスに <xref:System.ServiceModel.ServiceBehaviorAttribute> 属性を適用します。  
   
-2.  <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> プロパティを <xref:System.ServiceModel.InstanceContextMode.PerCall>、<xref:System.ServiceModel.InstanceContextMode.PerSession>、<xref:System.ServiceModel.InstanceContextMode.Single> のいずれかの値に設定します。  
+2. <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> プロパティを <xref:System.ServiceModel.InstanceContextMode.PerCall>、<xref:System.ServiceModel.InstanceContextMode.PerSession>、<xref:System.ServiceModel.InstanceContextMode.Single> のいずれかの値に設定します。  
   
      [!code-csharp[C_ControlServiceInstancing#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_controlserviceinstancing/cs/source.cs#1)]
      [!code-vb[C_ControlServiceInstancing#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_controlserviceinstancing/vb/source.vb#1)]  
@@ -30,8 +30,9 @@ ms.locfileid: "43514825"
  [!code-csharp[c_ControlServiceInstancing#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_controlserviceinstancing/cs/source.cs#2)]
  [!code-vb[c_ControlServiceInstancing#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_controlserviceinstancing/vb/source.vb#2)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.ServiceBehaviorAttribute>  
- <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>  
- <xref:System.ServiceModel.InstanceContextMode>  
- [サービス: 動作サンプル](https://msdn.microsoft.com/library/4e3c6513-a7ff-4b35-8dcf-b5506c6f39a7)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.ServiceBehaviorAttribute>
+- <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>
+- <xref:System.ServiceModel.InstanceContextMode>
+- [サービス:動作サンプル](../samples/behaviors.md)

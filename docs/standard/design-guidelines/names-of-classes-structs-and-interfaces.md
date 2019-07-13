@@ -13,12 +13,12 @@ helpviewer_keywords:
 - generic type parameters
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
 author: KrzysztofCwalina
-ms.openlocfilehash: ce0daae9b5994808a6ef5d35f09533d96d1d697f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c0790cd20daf859ec81e2252dc9bce46673daf90
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945510"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>クラス、構造体、およびインターフェイスの名前
 次の名前付けのガイドラインは、一般的な種類の名前付けに適用されます。  
@@ -102,5 +102,5 @@ public interface ISessionChannel<TSession> where TSession : ISession {
   
 ## <a name="see-also"></a>関連項目
 
-- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)  
+- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)
 - [名前付けのガイドライン](../../../docs/standard/design-guidelines/naming-guidelines.md)

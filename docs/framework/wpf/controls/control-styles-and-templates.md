@@ -10,12 +10,12 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 58d65ee9842270b07a76ff438c975955689197e9
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: c5c33327c5a80a4e275d1eaa505c1d20d3d7ba4c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017658"
 ---
 # <a name="control-styles-and-templates"></a>コントロールのスタイルとテンプレート
 Windows Presentation Foundation (WPF) コントロールが、<xref:System.Windows.Controls.ControlTemplate>そのコントロールのビジュアル ツリーを格納しています。 構造とコントロールの外観を変更するには変更することによって、<xref:System.Windows.Controls.ControlTemplate>を制御するのです。 コントロールのビジュアル ツリーの一部だけを置換する方法はありません。設定する必要があります、コントロールのビジュアル ツリーを変更する、<xref:System.Windows.Controls.Control.Template%2A>その新しいと完全にコントロールのプロパティ<xref:System.Windows.Controls.ControlTemplate>します。  
@@ -34,38 +34,38 @@ Windows Presentation Foundation (WPF) コントロールが、<xref:System.Windo
 |Aero.NormalColor.xaml|Windows Vista オペレーティング システムの既定テーマ。|  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ボタンのスタイルとテンプレート](../../../../docs/framework/wpf/controls/button-styles-and-templates.md)  
- [カレンダーのスタイルとテンプレート](../../../../docs/framework/wpf/controls/calendar-styles-and-templates.md)  
- [CheckBox のスタイルとテンプレート](../../../../docs/framework/wpf/controls/checkbox-styles-and-templates.md)  
- [ComboBox のスタイルとテンプレート](../../../../docs/framework/wpf/controls/combobox-styles-and-templates.md)  
- [ContextMenu のスタイルとテンプレート](../../../../docs/framework/wpf/controls/contextmenu-styles-and-templates.md)  
- [DataGrid のスタイルとテンプレート](../../../../docs/framework/wpf/controls/datagrid-styles-and-templates.md)  
- [DatePicker のスタイルとテンプレート](../../../../docs/framework/wpf/controls/datepicker-styles-and-templates.md)  
- [DocumentViewer のスタイルとテンプレート](../../../../docs/framework/wpf/controls/documentviewer-styles-and-templates.md)  
- [エクスパンダーのスタイルとテンプレート](../../../../docs/framework/wpf/controls/expander-styles-and-templates.md)  
- [フレームのスタイルとテンプレート](../../../../docs/framework/wpf/controls/frame-styles-and-templates.md)  
- [GroupBox のスタイルとテンプレート](../../../../docs/framework/wpf/controls/groupbox-styles-and-templates.md)  
- [ラベルのスタイルとテンプレート](../../../../docs/framework/wpf/controls/label-styles-and-templates.md)  
- [ListBox のスタイルとテンプレート](../../../../docs/framework/wpf/controls/listbox-styles-and-templates.md)  
- [ListView のスタイルとテンプレート](../../../../docs/framework/wpf/controls/listview-styles-and-templates.md)  
- [メニューのスタイルとテンプレート](../../../../docs/framework/wpf/controls/menu-styles-and-templates.md)  
- [NavigationWindow のスタイルとテンプレート](../../../../docs/framework/wpf/controls/navigationwindow-styles-and-templates.md)  
- [PasswordBox のスタイルとテンプレート](../../../../docs/framework/wpf/controls/passwordbox-syles-and-templates.md)  
- [ProgressBar のスタイルとテンプレート](../../../../docs/framework/wpf/controls/progressbar-styles-and-templates.md)  
- [RadioButton のスタイルとテンプレート](../../../../docs/framework/wpf/controls/radiobutton-styles-and-templates.md)  
- [RepeatButton のスタイルとテンプレート](../../../../docs/framework/wpf/controls/repeatbutton-syles-and-templates.md)  
- [ScrollBar のスタイルとテンプレート](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)  
- [ScrollViewer のスタイルとテンプレート](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md)  
- [スライダーのスタイルとテンプレート](../../../../docs/framework/wpf/controls/slider-styles-and-templates.md)  
- [StatusBar のスタイルとテンプレート](../../../../docs/framework/wpf/controls/statusbar-styles-and-templates.md)  
- [TabControl のスタイルとテンプレート](../../../../docs/framework/wpf/controls/tabcontrol-styles-and-templates.md)  
- [TextBox のスタイルとテンプレート](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)  
- [つまみのスタイルとテンプレート](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
- [ToggleButton のスタイルとテンプレート](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
- [ToolBar のスタイルとテンプレート](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md)  
- [ToolTip のスタイルとテンプレート](../../../../docs/framework/wpf/controls/tooltip-styles-and-templates.md)  
- [TreeView のスタイルとテンプレート](../../../../docs/framework/wpf/controls/treeview-styles-and-templates.md)  
- [ウィンドウのスタイルとテンプレート](../../../../docs/framework/wpf/controls/window-styles-and-templates.md)  
+ [ボタンのスタイルとテンプレート](button-styles-and-templates.md)  
+ [カレンダーのスタイルとテンプレート](calendar-styles-and-templates.md)  
+ [CheckBox のスタイルとテンプレート](checkbox-styles-and-templates.md)  
+ [ComboBox のスタイルとテンプレート](combobox-styles-and-templates.md)  
+ [ContextMenu のスタイルとテンプレート](contextmenu-styles-and-templates.md)  
+ [DataGrid のスタイルとテンプレート](datagrid-styles-and-templates.md)  
+ [DatePicker のスタイルとテンプレート](datepicker-styles-and-templates.md)  
+ [DocumentViewer のスタイルとテンプレート](documentviewer-styles-and-templates.md)  
+ [エクスパンダーのスタイルとテンプレート](expander-styles-and-templates.md)  
+ [フレームのスタイルとテンプレート](frame-styles-and-templates.md)  
+ [GroupBox のスタイルとテンプレート](groupbox-styles-and-templates.md)  
+ [ラベルのスタイルとテンプレート](label-styles-and-templates.md)  
+ [ListBox のスタイルとテンプレート](listbox-styles-and-templates.md)  
+ [ListView のスタイルとテンプレート](listview-styles-and-templates.md)  
+ [メニューのスタイルとテンプレート](menu-styles-and-templates.md)  
+ [NavigationWindow のスタイルとテンプレート](navigationwindow-styles-and-templates.md)  
+ [PasswordBox のスタイルとテンプレート](passwordbox-styles-and-templates.md)  
+ [ProgressBar のスタイルとテンプレート](progressbar-styles-and-templates.md)  
+ [RadioButton のスタイルとテンプレート](radiobutton-styles-and-templates.md)  
+ [RepeatButton のスタイルとテンプレート](repeatbutton-styles-and-templates.md)  
+ [ScrollBar のスタイルとテンプレート](scrollbar-styles-and-templates.md)  
+ [ScrollViewer のスタイルとテンプレート](scrollviewer-styles-and-templates.md)  
+ [スライダーのスタイルとテンプレート](slider-styles-and-templates.md)  
+ [StatusBar のスタイルとテンプレート](statusbar-styles-and-templates.md)  
+ [TabControl のスタイルとテンプレート](tabcontrol-styles-and-templates.md)  
+ [TextBox のスタイルとテンプレート](textbox-styles-and-templates.md)  
+ [つまみのスタイルとテンプレート](thumb-styles-and-templates.md)  
+ [ToggleButton のスタイルとテンプレート](togglebutton-styles-and-templates.md)  
+ [ToolBar のスタイルとテンプレート](toolbar-styles-and-templates.md)  
+ [ToolTip のスタイルとテンプレート](tooltip-styles-and-templates.md)  
+ [TreeView のスタイルとテンプレート](treeview-styles-and-templates.md)  
+ [ウィンドウのスタイルとテンプレート](window-styles-and-templates.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls>  
@@ -73,6 +73,6 @@ Windows Presentation Foundation (WPF) コントロールが、<xref:System.Windo
  <xref:System.Windows.Controls.ControlTemplate>  
   
 ## <a name="related-sections"></a>関連項目  
- [コントロールの作成の概要](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
+ [コントロールの作成の概要](control-authoring-overview.md)  
   
- [スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+ [スタイルとテンプレート](styling-and-templating.md)

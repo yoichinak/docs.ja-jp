@@ -1,5 +1,5 @@
 ---
-title: '方法: プロシージャに引数を渡す (Visual Basic)'
+title: '方法: (Visual Basic)、プロシージャに引数を渡す'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arguments [Visual Basic], passing to procedures
@@ -11,49 +11,49 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
-ms.openlocfilehash: f393f17f87c5920fb9bfa2a2097c09d48bebdc16
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 012ad8e6229958575030ee820a3b0b79cc50facc
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863442"
 ---
-# <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>方法: プロシージャに引数を渡す (Visual Basic)
-プロシージャを呼び出すときに、かっこ内に引数リストを持つプロシージャの名前に従います。 プロシージャに定義されたすべての必須パラメーターに対応する引数を指定して、引数を指定することができます必要に応じて、`Optional`パラメーター。 指定しない場合、`Optional`呼び出しのパラメーターは、任意の以降の引数を指定している場合、引数リスト内での位置をマークするコンマを含める必要があります。  
+# <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>方法: (Visual Basic)、プロシージャに引数を渡す
+プロシージャを呼び出すときに、引数リストをかっこで、プロシージャ名に従ってください。 プロシージャに定義されたすべての必須パラメーターに対応する引数を指定して、引数を指定することができます必要に応じて、`Optional`パラメーター。 指定しない場合、`Optional`呼び出しのパラメーターは、すべての後続の引数を指定している場合、引数リスト内の場所をマークする、コンマを含める必要があります。  
   
- 引数を渡すデータ型の対応するパラメーターの場合と異なるよう意図して`Byte`に`String`、型チェック スイッチを設定することができます ([Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) に`Off`です。 場合`Option Strict`は`On`、いずれかを使用する必要がありますまたは明示的な変換キーワードの変換を拡大します。 詳細については、次を参照してください。[拡大変換と縮小変換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)と[型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)です。  
+ など、対応するパラメーターの異なるに渡すには、データ型の引数にするかどうかに`Byte`に`String`、型チェック スイッチを設定することができます ([Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) に`Off`します。 場合`Option Strict`は`On`、いずれかを使用する必要がありますまたはキーワードの明示的な変換の変換を拡大します。 詳細については、次を参照してください。 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)と[型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)します。  
   
- 詳細については、次を参照してください。[プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)です。  
+ 詳細については、次を参照してください。[プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)します。  
   
 ### <a name="to-pass-one-or-more-arguments-to-a-procedure"></a>プロシージャに 1 つまたは複数の引数を渡す  
   
-1.  呼び出し元のステートメントでは、次のプロシージャ名を括弧をします。  
+1. 呼び出し元のステートメントをかっこでプロシージャ名に従います。  
   
-2.  かっこの内側には、引数リストを格納します。 プロシージャに定義された各必須パラメーターの引数を含めるし、引数はコンマで区切ります。  
+2. かっこの内側に、引数リストを配置します。 プロシージャの定義、必要な各パラメーターの引数を含むし、引数をコンマで区切ります。  
   
-3.  それぞれの引数は、対応するパラメーターの型、プロシージャに変換できるデータ型に評価される有効な式を定義することを確認します。  
+3. 各引数は、対応するパラメーターの型、プロシージャに変換できるデータ型に評価される有効な式を定義することを確認します。  
   
-4.  パラメーターとして定義されている場合[オプション](../../../../visual-basic/language-reference/modifiers/optional.md)、引数リストに含めるか、これを省略することができます。 を省略した場合、プロシージャは、そのパラメーターに定義された既定値を使用します。  
+4. パラメーターとして定義されている場合[(省略可能)](../../../../visual-basic/language-reference/modifiers/optional.md)、引数リストに含めるか、これを省略します。 を省略した場合、手順は、そのパラメーターの定義された既定値を使用します。  
   
-5.  引数を省略した場合、`Optional`パラメーターとパラメーター リストで別のパラメーター後に、引数リスト内の余分なコンマが省略された引数の代わりをマークすることができます。  
+5. 引数を省略した場合、`Optional`パラメーターとパラメーター リストで別のパラメーター後に、引数リスト内の余分なコンマが省略された引数の代わりをマークすることができます。  
   
      次の例では、Visual Basic<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>関数。  
   
-     [!code-vb[VbVbcnProcedures#34](./codesnippet/VisualBasic/how-to-pass-arguments-to-a-procedure_1.vb)]  
+     [!code-vb[VbVbcnProcedures#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#34)]  
   
-     前の例では、必要な最初の引数を表示するメッセージ文字列を指定します。 省略可能な 2 番目のパラメーター、メッセージ ボックスに表示するボタンを指定する引数を省略します。 呼び出しは、値を指定していないため`MsgBox`既定値を使用して`MsgBoxStyle.OKOnly`、のみが表示されます、 **[ok]** ボタンをクリックします。  
+     前の例では、必要な最初の引数は表示されるメッセージ文字列を提供します。 メッセージ ボックスに表示するボタンを指定する省略可能な第 2 パラメーターの引数が省略されます。 呼び出しは、値を指定していないため、 `MsgBox` 、既定値を使用して`MsgBoxStyle.OKOnly`、のみが表示されます、 **[ok]** ボタンをクリックします。  
   
-     引数リスト内の 2 つ目のコンマは省略すると 2 番目の引数の位置をマークし、最後の文字列は省略可能な 3 番目のパラメーターに渡される`MsgBox`、これは、タイトル バーに表示されるテキストです。  
+     引数リスト内の 2 つ目のコンマは省略すると 2 番目の引数の場所をマークし、最後の文字列の省略可能な 3 番目のパラメーターに渡された`MsgBox`、これは、タイトル バーに表示されるテキスト。  
   
 ## <a name="see-also"></a>関連項目
 
- [Sub プロシージャ](./sub-procedures.md)  
- [Function プロシージャ](./function-procedures.md)  
- [Property プロシージャ](./property-procedures.md)  
- [演算子プロシージャ](./operator-procedures.md)  
- [方法 : プロシージャにパラメーターを定義する](./how-to-define-a-parameter-for-a-procedure.md)  
- [引数の値渡しと参照渡し](./passing-arguments-by-value-and-by-reference.md)  
- [再帰プロシージャ](./recursive-procedures.md)  
- [プロシージャのオーバーロード](./procedure-overloading.md)  
- [クラスとオブジェクト](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [オブジェクト指向プログラミング (Visual Basic)](../../concepts/object-oriented-programming.md)  
+- [Sub プロシージャ](./sub-procedures.md)
+- [Function プロシージャ](./function-procedures.md)
+- [Property プロシージャ](./property-procedures.md)
+- [演算子プロシージャ](./operator-procedures.md)
+- [方法: プロシージャのパラメーターを定義します。](./how-to-define-a-parameter-for-a-procedure.md)
+- [引数の値渡しと参照渡し](./passing-arguments-by-value-and-by-reference.md)
+- [再帰プロシージャ](./recursive-procedures.md)
+- [プロシージャのオーバーロード](./procedure-overloading.md)
+- [クラスとオブジェクト](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [オブジェクト指向プログラミング (Visual Basic)](../../concepts/object-oriented-programming.md)

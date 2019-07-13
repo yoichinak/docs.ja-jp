@@ -3,15 +3,15 @@ title: ターゲット フレームワーク
 description: .NET Core アプリとライブラリのターゲット フレームワークについて説明します。
 author: richlander
 ms.author: mairaw
-ms.date: 12/03/2018
+ms.date: 04/02/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 7418c07a211333655501dd9f3d16e72e40564ffd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a7005cfe01d168febd97af5f8b41cfff26b2cfc7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147460"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641468"
 ---
 # <a name="target-frameworks"></a>ターゲット フレームワーク
 
@@ -33,7 +33,7 @@ ms.locfileid: "53147460"
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
 | .NET Standard         | 2.0                         | netstandard2.0                 | N/A                                     |
 | .NET Core             | 2.2                         | netcoreapp2.2                  | 2.0                                     |
-| .NET Framework        | 4.7.2                       | net472                         | 2.0                                     |
+| .NET Framework        | 4.8                         | net48                          | 2.0                                     |
 
 ## <a name="supported-target-framework-versions"></a>サポートされるターゲット フレームワークのバージョン
 
@@ -43,7 +43,7 @@ ms.locfileid: "53147460"
 | -------------------------- | --- |
 | .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0 |
 | .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1<br>netcoreapp2.2 |
-| .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472 |
+| .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472<br>net48 |
 | Windows ストア              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
 | .NET Micro Framework       | netmf |
 | Silverlight                | sl4<br>sl5 |
@@ -131,10 +131,10 @@ public class MyClass
 
 ## <a name="see-also"></a>関連項目
 
-- [パッケージ、メタパッケージ、フレームワーク](../core/packages.md)  
-- [クロス プラットフォーム ツールによるライブラリの開発](../core/tutorials/libraries.md)  
-- [.NET Standard](net-standard.md)  
-- [.NET Core バージョン管理](../core/versions/index.md)  
-- [dotnet/standard GitHub リポジトリ](https://github.com/dotnet/standard)  
-- [NuGet Tools GitHub リポジトリ](https://github.com/joelverhagen/NuGetTools)  
+- [パッケージ、メタパッケージ、フレームワーク](../core/packages.md)
+- [クロス プラットフォーム ツールによるライブラリの開発](../core/tutorials/libraries.md)
+- [.NET Standard](net-standard.md)
+- [.NET Core バージョン管理](../core/versions/index.md)
+- [dotnet/standard GitHub リポジトリ](https://github.com/dotnet/standard)
+- [NuGet Tools GitHub リポジトリ](https://github.com/joelverhagen/NuGetTools)
 - [.NET のフレームワーク プロファイル](https://blog.stephencleary.com/2012/05/framework-profiles-in-net.html)

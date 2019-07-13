@@ -9,12 +9,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 7bf45a701b10372d8cc4061db13f347eb0ddae91
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: f902d6a92f9d982dc00c3446f7b516c372f1a30e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242433"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709521"
 ---
 # <a name="async-c-reference"></a>async (C# リファレンス)
 `async` 修飾子を使用して、メソッド、[ラムダ式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)、または[匿名メソッド](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)が非同期であることを指定します。 この修飾子が使用されているメソッドまたは式を、"*非同期メソッド*" と呼びます。 次の例では、`ExampleMethodAsync` という名前の非同期メソッドを定義します。 
@@ -83,9 +83,9 @@ C# 7.0 以降、`GetAwaiter` メソッドを持つ別の型 (通常は値の型)
 
 使用例を含む詳細については、「[非同期の戻り値の型](../../../csharp/programming-guide/concepts/async/async-return-types.md)」をご覧ください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>  
-- [await](../../../csharp/language-reference/keywords/await.md)  
-- [チュートリアル: Async と Await を使用した Web へのアクセス](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+- <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>
+- [await](../../../csharp/language-reference/keywords/await.md)
+- [チュートリアル: Async と Await を使用した Web へのアクセス](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Async および Await を使用した非同期プログラミング](../../../csharp/programming-guide/concepts/async/index.md)

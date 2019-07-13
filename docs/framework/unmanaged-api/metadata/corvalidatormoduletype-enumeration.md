@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 97e9ae5a7c35b4f9b6e2b4ca7e754b5b7480dfa6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 04bed418d96658e29328cf2ce6bba445639b437f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444140"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750760"
 ---
 # <a name="corvalidatormoduletype-enumeration"></a>CorValidatorModuleType 列挙型
 モジュールの種類を指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum  
 {  
     ValidatorModuleTypeInvalid  = 0x0,  
@@ -45,22 +45,23 @@ typedef enum
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`ValidatorModuleTypeInvalid`|モジュールは、無効な型です。|  
+|`ValidatorModuleTypeInvalid`|モジュールは、型が無効です。|  
 |`ValidatorModuleTypeMin`|最小値、`CorValidatorModuleType`列挙型。|  
 |`ValidatorModuleTypePE`|モジュールは、ポータブル実行可能 (PE) ファイルです。|  
 |`ValidatorModuleTypeObj`|モジュールは、.obj ファイルです。|  
-|`ValidatorModuleTypeEnc`|モジュールは、エディット コンティニュのデバッガー セッションです。|  
-|`ValidatorModuleTypeIncr`|モジュールは、いずれかの段階的に構築します。|  
+|`ValidatorModuleTypeEnc`|モジュールでは、デバッガーのエディット コンティニュ セッションです。|  
+|`ValidatorModuleTypeIncr`|モジュールは、いずれかの段階的に構築されています。|  
 |`ValidatorModuleTypeMax`|最大値、`CorValidatorModuleType`列挙型。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>関連項目
+
+- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

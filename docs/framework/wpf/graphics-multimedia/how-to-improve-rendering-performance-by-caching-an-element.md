@@ -8,23 +8,24 @@ helpviewer_keywords:
 - performance [WPF], caching an element
 - UIElement [WPF], caching
 ms.assetid: 4739c1fc-60ba-4c46-aba6-f6c1a2688f19
-ms.openlocfilehash: a92909c623db0c10e3434677b4275fa82b787fa7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 118e8b0cca52c44788c9d5b291d710f765e7af2a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33559299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947278"
 ---
 # <a name="how-to-improve-rendering-performance-by-caching-an-element"></a>方法: 要素をキャッシュしてレンダリングのパフォーマンスを向上させる
-使用して、<xref:System.Windows.Media.BitmapCache>の複雑なレンダリング パフォーマンスを向上させるためにクラス<xref:System.Windows.UIElement>です。 要素をキャッシュするには、新しいインスタンスを作成、<xref:System.Windows.Media.BitmapCache>クラスし、要素に割り当てる<xref:System.Windows.UIElement.CacheMode%2A>プロパティです。 再利用することができます、<xref:System.Windows.Media.BitmapCache>が効率的な<xref:System.Windows.Media.BitmapCacheBrush>します。  
+使用して、 <xref:System.Windows.Media.BitmapCache> 、複雑なのレンダリング パフォーマンスを向上させるためにクラス<xref:System.Windows.UIElement>します。 要素をキャッシュするには、新しいインスタンスを作成、<xref:System.Windows.Media.BitmapCache>クラスし、要素に割り当てる<xref:System.Windows.UIElement.CacheMode%2A>プロパティ。 再利用することができます、<xref:System.Windows.Media.BitmapCache>で効率的に、<xref:System.Windows.Media.BitmapCacheBrush>します。  
   
 ## <a name="example"></a>例  
- 次のコード例では、複合型の要素を作成し、パフォーマンスを向上させるときは、要素をアニメーション、ビットマップとしてキャッシュする方法を示します。 要素は、頂点の数を持つ図形ジオメトリを保持するキャンバスです。 A<xref:System.Windows.Media.BitmapCache>に既定値は値が割り当てられている、<xref:System.Windows.UIElement.CacheMode%2A>キャンバスのし、アニメーションは、キャッシュされたビットマップのスムーズな拡張を示しています。  
+ 次のコード例では、複合型の要素を作成して、要素がアニメーション化されるときにパフォーマンスが向上ビットマップとしてキャッシュする方法を示します。 要素は、図形のジオメトリの頂点の数を保持するキャンバスです。 A<xref:System.Windows.Media.BitmapCache>に割り当てられている値、既定値は、<xref:System.Windows.UIElement.CacheMode%2A>キャンバスのし、キャッシュされたビットマップのスムーズな拡張、アニメーションを示しています。  
   
- [!code-xaml[System.Windows.Media.BitmapCache#_BitmapCacheXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/system.windows.media.bitmapcache/cs/window1.xaml#_bitmapcachexaml)]  
+ [!code-xaml[System.Windows.Media.BitmapCache#_BitmapCacheXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/system.windows.media.bitmapcache/cs/window1.xaml#_bitmapcachexaml)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Media.BitmapCache>  
- <xref:System.Windows.Media.BitmapCacheBrush>  
- <xref:System.Windows.UIElement.CacheMode%2A>  
- [方法: キャッシュされた要素をブラシとして使用する](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-cached-element-as-a-brush.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Media.BitmapCache>
+- <xref:System.Windows.Media.BitmapCacheBrush>
+- <xref:System.Windows.UIElement.CacheMode%2A>
+- [方法: キャッシュされた要素をブラシとして使用します。](how-to-use-a-cached-element-as-a-brush.md)

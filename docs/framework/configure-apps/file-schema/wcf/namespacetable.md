@@ -1,21 +1,21 @@
 ---
-title: '&lt;namespaceTable&gt;'
+title: <namespaceTable>
 ms.date: 03/30/2017
 ms.assetid: 64801766-01b7-4c65-9ce6-70ad5af67689
-ms.openlocfilehash: 55b5565ffe9d3e9e7ea41d2a2e2f380490be1781
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: ee7a0c23adca883af279addf9d1f221bd4056d00
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772412"
 ---
-# <a name="ltnamespacetablegt"></a>&lt;namespaceTable&gt;
+# <a name="namespacetable"></a>\<namespaceTable>
 
 名前空間とプレフィックスのマッピングを含む要素セットを定義する構成セクションを表します。これは、ルーティングの XPath フィルターで使用されます。
 
-**\<system.serviceModel >**   
+**\<system.serviceModel>**   
 &nbsp;&nbsp;**\<ルーティング >**   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<namespaceTable >**
+&nbsp;&nbsp;&nbsp;&nbsp;**\<namespaceTable>**
   
 ## <a name="syntax"></a>構文  
   
@@ -52,4 +52,4 @@ ms.locfileid: "54151424"
 
 ## <a name="see-also"></a>関連項目
 
-<xref:System.ServiceModel.Routing.Configuration.NamespaceElementCollection?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Routing.Configuration.NamespaceElementCollection?displayProperty=nameWithType>

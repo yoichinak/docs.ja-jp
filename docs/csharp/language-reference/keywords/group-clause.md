@@ -9,12 +9,12 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: 6c28f9f4cdcb2ec2d84f299dddb13dc821c1739a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 160b25bd93f7d7c69ec104a31a0608e930e2dee3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238170"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534892"
 ---
 # <a name="group-clause-c-reference"></a>group 句 (C# リファレンス)
 
@@ -88,12 +88,12 @@ group person by new {name = person.surname, city = person.city};
 
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Linq.IGrouping%602>  
-- <xref:System.Linq.Enumerable.GroupBy%2A>  
-- <xref:System.Linq.Enumerable.ThenBy%2A>  
-- <xref:System.Linq.Enumerable.ThenByDescending%2A>  
-- [クエリ キーワード](query-keywords.md)  
-- [統合言語クエリ (LINQ)](../../linq/index.md)  
-- [入れ子になったグループの作成](../../linq/create-a-nested-group.md)  
-- [クエリ結果のグループ化](../../linq/group-query-results.md)  
+- <xref:System.Linq.IGrouping%602>
+- <xref:System.Linq.Enumerable.GroupBy%2A>
+- <xref:System.Linq.Enumerable.ThenBy%2A>
+- <xref:System.Linq.Enumerable.ThenByDescending%2A>
+- [クエリ キーワード](query-keywords.md)
+- [統合言語クエリ (LINQ)](../../linq/index.md)
+- [入れ子になったグループの作成](../../linq/create-a-nested-group.md)
+- [クエリ結果のグループ化](../../linq/group-query-results.md)
 - [グループ化操作でのサブクエリの実行](../../linq/perform-a-subquery-on-a-grouping-operation.md)

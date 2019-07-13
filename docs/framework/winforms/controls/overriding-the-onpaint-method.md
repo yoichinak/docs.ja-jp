@@ -8,25 +8,25 @@ helpviewer_keywords:
 - Paint event [Windows Forms], handling in Windows Forms custom control
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-ms.openlocfilehash: fbc0a82f82afcc59384246b58437d521d56d708b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: e3c48aec830cdc3ccceb8683f93e3a99ee6364e2
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838521"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506199"
 ---
 # <a name="overriding-the-onpaint-method"></a>OnPaint メソッドのオーバーライド
-定義されているすべてのイベントをオーバーライドするための基本的な手順、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]が同じであり、次の一覧にまとめます。  
+.NET Framework で定義されているすべてのイベントをオーバーライドするための基本的な手順が同じと、次の一覧にまとめます。  
   
 #### <a name="to-override-an-inherited-event"></a>継承されたイベントをオーバーライドするには  
   
-1.  保護されたオーバーライド`On` *EventName*メソッド。  
+1. 保護されたオーバーライド`On` *EventName*メソッド。  
   
-2.  呼び出す、 `On` *EventName*から、オーバーライドされた基底クラスのメソッド`On` *EventName*メソッド、デリゲートを登録するため、イベントを受信します。  
+2. 呼び出す、 `On` *EventName*から、オーバーライドされた基底クラスのメソッド`On` *EventName*メソッド、デリゲートを登録するため、イベントを受信します。  
   
  <xref:System.Windows.Forms.Control.Paint>イベント詳細についてはここですべての Windows フォーム コントロールをオーバーライドする必要がありますので、<xref:System.Windows.Forms.Control.Paint>イベントから継承した<xref:System.Windows.Forms.Control>します。 基本<xref:System.Windows.Forms.Control>クラスの派生コントロールを描画する必要がある方法がわからないし、描画ロジックを提供しない、<xref:System.Windows.Forms.Control.OnPaint%2A>メソッド。 <xref:System.Windows.Forms.Control.OnPaint%2A>メソッドの<xref:System.Windows.Forms.Control>は単に、<xref:System.Windows.Forms.Control.Paint>に登録されているイベント レシーバーのイベント。  
   
- サンプルを実行している場合[方法: 単純な Windows フォーム コントロール開発](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)、オーバーライドする例を見てきました、<xref:System.Windows.Forms.Control.OnPaint%2A>メソッド。 次のコード フラグメントは、そのサンプルから取得されます。  
+ サンプルを実行している場合[方法。単純な Windows フォーム コントロール開発](how-to-develop-a-simple-windows-forms-control.md)、オーバーライドする例を見てきました、<xref:System.Windows.Forms.Control.OnPaint%2A>メソッド。 次のコード フラグメントは、そのサンプルから取得されます。  
   
 ```vb  
 Public Class FirstControl  
@@ -82,11 +82,12 @@ public class PaintEventArgs : EventArgs {
 }  
 ```  
   
- <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 四角形を描画するのには、および<xref:System.Windows.Forms.PaintEventArgs.Graphics%2A>プロパティを指す、<xref:System.Drawing.Graphics>オブジェクト。 内のクラス、<xref:System.Drawing?displayProperty=nameWithType>名前空間は、管理の機能へのアクセスを提供するクラスを[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]、新しい Windows グラフィックス ライブラリ。 <xref:System.Drawing.Graphics>オブジェクト ポイント、文字列、線、円弧、省略記号、およびその他の多数の図形を描画するメソッドがあります。  
+ <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 四角形を描画するのには、および<xref:System.Windows.Forms.PaintEventArgs.Graphics%2A>プロパティを指す、<xref:System.Drawing.Graphics>オブジェクト。 クラスは、<xref:System.Drawing?displayProperty=nameWithType>名前空間をマネージ GDI + で、新しい Windows グラフィックス ライブラリの機能へのアクセスを提供するクラス。 <xref:System.Drawing.Graphics>オブジェクト ポイント、文字列、線、円弧、省略記号、およびその他の多数の図形を描画するメソッドがあります。  
   
  コントロールを呼び出すその<xref:System.Windows.Forms.Control.OnPaint%2A>メソッド ビジュアル表示を変更する必要があるたびにします。 このメソッドが生成されます、<xref:System.Windows.Forms.Control.Paint>イベント。  
   
-## <a name="see-also"></a>関連項目  
- [イベント](../../../../docs/standard/events/index.md)  
- [Windows フォーム コントロールのレンダリング](../../../../docs/framework/winforms/controls/rendering-a-windows-forms-control.md)  
- [イベントの定義](../../../../docs/framework/winforms/controls/defining-an-event-in-windows-forms-controls.md)
+## <a name="see-also"></a>関連項目
+
+- [イベント](../../../standard/events/index.md)
+- [Windows フォーム コントロールのレンダリング](rendering-a-windows-forms-control.md)
+- [イベントの定義](defining-an-event-in-windows-forms-controls.md)

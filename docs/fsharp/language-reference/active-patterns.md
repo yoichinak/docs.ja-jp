@@ -2,12 +2,12 @@
 title: アクティブ パターン
 description: アクティブ パターンを使用して、F# プログラミング言語で入力データを分割する名前付きのパーティションを定義する方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: c830011b69809bd399aab0c8a8bc25d40d5c82cc
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 25ab255574390d3761fe788aeb413c8ee04fda2a
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612843"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690414"
 ---
 # <a name="active-patterns"></a>アクティブ パターン
 
@@ -16,10 +16,16 @@ ms.locfileid: "53612843"
 ## <a name="syntax"></a>構文
 
 ```fsharp
-// Complete active pattern definition.
-let (|identifer1|identifier2|...|) [ arguments ] = expression
+// Active pattern of one choice.
+let (|identifier|) [arguments] valueToMatch= expression
+
+// Active Pattern with multiple choices.
+// Uses a FSharp.Core.Choice<_,...,_> based on the number of case names. In F#, the limitation n <= 7 applies.
+let (|identifer1|identifier2|...|) valueToMatch = expression
+
 // Partial active pattern definition.
-let (|identifier|_|) [ arguments ] = expression
+// Uses a FSharp.Core.option<_> to represent if the type is satisfied at the call site.
+let (|identifier|_|) [arguments ] valueToMatch = expression
 ```
 
 ## <a name="remarks"></a>Remarks
@@ -86,23 +92,23 @@ BlanchedAlmond
 Something else : Not matched.
 ```
 
-部分的なアクティブ パターンを使用する場合、個々 の選択肢があります不整合のあるまたは相互に排他的ですが、必要はありません。 次の例では、パターンの四角形とキューブのパターンのない不整合のある、いくつかの数字は四角形と、64 などのキューブの両方であるためです。 次のプログラムは、すべての整数が四角形とキューブの両方が 1000000 最大を出力します。
+部分的なアクティブ パターンを使用する場合、個々 の選択肢があります不整合のあるまたは相互に排他的ですが、必要はありません。 次の例では、パターンの四角形とキューブのパターンのない不整合のある、いくつかの数字は四角形と、64 などのキューブの両方であるためです。 次のプログラムは、四角形と立方パターンを組み合わせて、AND パターンを使用します。 これは、最大 1,000 両方平方和、キューブとキューブのみであるものであるすべての整数を出力します。 
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
 
 出力は次のとおりです。
 
 ```
-1
-64
-729
-4096
-15625
-46656
-117649
-262144
-531441
-1000000
+1 is a cube and a square
+8 is a cube
+27 is a cube
+64 is a cube and a square
+125 is a cube
+216 is a cube
+343 is a cube
+512 is a cube
+729 is a cube and a square
+1000 is a cube
 ```
 
 ## <a name="parameterized-active-patterns"></a>パラメーター化されたアクティブ パターン

@@ -1,12 +1,12 @@
 ---
 title: シリアル化 (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 7d72be92e5568037264438e3fde1e7565366c962
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 638fdbd31912ffeb284d734e1f8ce2ecd879b540
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61680110"
 ---
 # <a name="serialization-c"></a>シリアル化 (C#)
 
@@ -14,9 +14,9 @@ ms.locfileid: "43858318"
 
 ## <a name="how-serialization-works"></a>シリアル化のしくみ
 
-この図は、シリアル化の全体的なプロセスを示しています。
+この図は、シリアル化の全体的なプロセスを示しています:
 
-![シリアル化グラフィック](./media/serialization.gif "シリアル化")
+![シリアル化グラフィック](./media/index/serialization-process.gif)
 
 オブジェクトは、データだけでなく、バージョン、カルチャ、アセンブリ名などのオブジェクトの型に関する情報も伝達するストリームにシリアル化されます。 そのストリームから、オブジェクトをデータベース、ファイル、またはメモリに格納できます。
 
@@ -68,8 +68,8 @@ XML シリアル化では、オブジェクトのパブリック フィールド
 
 デザイナーのシリアル化はシリアル化の特殊な形式であり、開発ツールに関連付けられているオブジェクトの永続性の種類を含みます。 デザイナーのシリアル化は、後でオブジェクト グラフを復元できるように、オブジェクト グラフをソース ファイルに変換するプロセスです。 ソース ファイルには、コードとマークアップを含めることができますが、SQL テーブル情報を含めることもできます。
 
-##  <a name="BKMK_RelatedTopics"></a>関連トピックと例  
-[チュートリアル: オブジェクトの永続化 (Visual Studio) (C#)](walkthrough-persisting-an-object-in-visual-studio.md)  
+## <a name="BKMK_RelatedTopics">関連トピックと例</a>  
+[チュートリアル: オブジェクトの永続化 (Visual Studio (C#))](walkthrough-persisting-an-object-in-visual-studio.md)  
 シリアル化によってインスタンス間でオブジェクトのデータを永続化して値を保存しておき、次にそのオブジェクトをインスタンス化するときにその値を取得する方法を示します。
 
 [方法: XML ファイルからオブジェクト データを読み込む (C#)](how-to-read-object-data-from-an-xml-file.md)  

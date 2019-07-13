@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2491b700e8fac512f0d782a42e30ae3114e93c3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2e63cf698e41e70084c9b71bdf58d7ac60723d53
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455547"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782790"
 ---
 # <a name="icorprofilerinfogetmodulemetadata-method"></a>ICorProfilerInfo::GetModuleMetaData メソッド
-指定したモジュールにマップされるメタデータ インターフェイスのインスタンスを取得します。  
+指定したモジュールにマップされるメタデータ インターフェイス インスタンスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetModuleMetaData(  
     [in]  ModuleID moduleId,  
     [in]  DWORD    dwOpenFlags,  
@@ -37,32 +37,33 @@ HRESULT GetModuleMetaData(
     [out] IUnknown **ppOut);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `moduleId`  
- [in]インターフェイスのインスタンスをマップするモジュールの ID。  
+ [in]インターフェイス インスタンスのマップされたモジュールの ID。  
   
  `dwOpenFlags`  
- [in]値、 [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)マニフェスト ファイルを開くためのモードを指定する列挙です。 のみ、 `ofRead`、`ofWrite`と`ofNoTransform`のビットが無効です。  
+ [in]値、 [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)マニフェスト ファイルを開くためのモードを指定する列挙体。 のみ、 `ofRead`、`ofWrite`と`ofNoTransform`のビットが無効です。  
   
  `riid`  
- [in]インスタンスが取得するメタデータ インターフェイスの ID (GUID) の参照。 参照してください[メタデータ インターフェイス](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)インターフェイスの一覧についてはします。  
+ [in]参照 ID (GUID) のメタデータ インターフェイスを持つインスタンスが取得されます。 参照してください[メタデータ インターフェイス](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)インターフェイスの一覧についてはします。  
   
  `ppOut`  
- [out]メタデータ インターフェイスのインスタンスのアドレスへのポインター。  
+ [out]メタデータ インターフェイス インスタンスのアドレスへのポインター。  
   
-## <a name="remarks"></a>コメント  
- 読み取り/書き込みモードで開かれるメタデータを要求することがありますが、プログラムのメタデータ実行の速度が遅くなります、コンパイラから場合と同様に、メタデータを最適化することはできませんに変更が行われるためです。  
+## <a name="remarks"></a>Remarks  
+ 読み取り/書き込みモードで開かれるメタデータに問い合わせることができますが、その結果、プログラムのメタデータ、実行速度が、コンパイラからと同様に変更が加えられたため、メタデータは最適化できません。  
   
- メタデータを所有している (リソースのモジュール) などの一部のモジュールはありません。 ような場合、 `GetModuleMetaData` S_FALSE とに null 値の HRESULT 値を返す *`ppOut`です。  
+ メタデータを所有している (リソース モジュール) などの一部のモジュールはありません。 その場合、`GetModuleMetaData`は S_FALSE とで null 値の HRESULT 値を返します *`ppOut`します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー** : CorProf.idl、CorProf.h  
+ **ヘッダー:** CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

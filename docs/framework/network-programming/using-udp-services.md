@@ -17,12 +17,12 @@ helpviewer_keywords:
 - sending data, UDP
 - application protocols, UDP
 ms.assetid: d5c3477a-e798-454c-a890-738ba14c5707
-ms.openlocfilehash: 40cf14936fef7c29f00112a143203ced605f482b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 397c51501ac333d6df699064b3fe82920bc38152
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126564"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086105"
 ---
 # <a name="using-udp-services"></a>UDP サービスの使用
 <xref:System.Net.Sockets.UdpClient> クラスは、UDP を使用してネットワーク サービスと通信します。 <xref:System.Net.Sockets.UdpClient> クラスのプロパティとメソッドは、UDP を使用したデータの要求と受信用に <xref:System.Net.Sockets.Socket> を作成する詳細を抽象化します。
@@ -158,5 +158,7 @@ class Program
 }
 ```
 
-## <a name="see-also"></a>参照
- <xref:System.Net.Sockets.UdpClient> <xref:System.Net.IPAddress>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Net.Sockets.UdpClient>
+- <xref:System.Net.IPAddress>

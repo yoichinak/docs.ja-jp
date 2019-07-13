@@ -2,12 +2,12 @@
 title: SQL Server のセキュリティ
 ms.date: 03/30/2017
 ms.assetid: 9053724d-a1fb-4f0f-b9dc-7f6dd893e8ff
-ms.openlocfilehash: 418dbd3e677619721b841736f5b4c1b423ada94b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4aa4feadb6305f8a0ea6f99c2add780d6fca95cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61927602"
 ---
 # <a name="sql-server-security"></a>SQL Server のセキュリティ
 SQL Server は、安全なデータベース アプリケーションの作成を支援するさまざまな機能を備えています。  
@@ -36,9 +36,10 @@ SQL Server は、安全なデータベース アプリケーションの作成�
 [SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター](/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database)  
 SQL Server と Azure SQL Database のセキュリティに関する考慮事項をについて説明します。
 
-[SQL Server のインストールのセキュリティに関する考慮事項](/sql/sql-server/install/security-considerations-for-a-sql-server-installation)  
-SQL Server をインストールする前に考慮すべきセキュリティに関する注意事項について説明します。
+[SQL Server インストールにおけるセキュリティの考慮事項](/sql/sql-server/install/security-considerations-for-a-sql-server-installation)  
+SQL Server をインストールする前に考慮すべきセキュリティ上の問題について説明します。
 
-## <a name="see-also"></a>関連項目  
- [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server と ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
+## <a name="see-also"></a>関連項目
+
+- [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [SQL Server と ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)

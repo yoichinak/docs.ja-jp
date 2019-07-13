@@ -1,15 +1,15 @@
 ---
-title: '&lt;customBinding&gt; の &lt;security&gt;'
+title: <security> の <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 243a5148-bbd1-447f-a8a5-6e7792c0a3f1
-ms.openlocfilehash: d0a14af56f888c5c4c2c3924625f2e6d45ed2eeb
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: ffe791d495a4e06c9649dd0c37d0fd010e2c64bb
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670585"
 ---
-# <a name="ltsecuritygt-of-ltcustombindinggt"></a>&lt;customBinding&gt; の &lt;security&gt;
+# <a name="security-of-custombinding"></a>\<セキュリティ > の\<customBinding >
 カスタム バインドのセキュリティ オプションを指定します。  
   
  \<system.serviceModel>  
@@ -53,11 +53,11 @@ ms.locfileid: "54146252"
 |includeTimestamp|各メッセージにタイム スタンプが含まれるかどうかを指定するブール値です。 既定値は、`true` です。|  
 |keyEntropyMode|メッセージをセキュリティで保護するキーを計算する方法を指定します。 キーは、クライアント キー マテリアルのみ、サービス キー マテリアルのみ、または両方の組み合わせに基づいて生成できます。 有効な値は、次のとおりです。<br /><br /> -   `ClientEntropy`:セッション キーは、クライアントによって提供されるキー データに基づきます。<br />-   `ServerEntropy`:セッション キーは、サーバーによって提供されるキー データに基づきます。<br />-   `CombinedEntropy`:セッション キーは、クライアントとサービスによって提供されるキー データに基づきます。<br /><br /> 既定値は `CombinedEntropy` です。<br /><br /> この属性は <xref:System.ServiceModel.Security.SecurityKeyEntropyMode> 型です。|  
 |messageProtectionOrder|メッセージ レベルのセキュリティ アルゴリズムをメッセージに適用する順序を設定します。 以下の値が有効です。<br /><br /> -   `SignBeforeEncrypt`:最初に、サインインし、暗号化します。<br />-   `SignBeforeEncryptAndEncryptSignature`:最初にサインインし、暗号化、署名を暗号化します。<br />-   `EncryptBeforeSign`:まず暗号化し、記号。<br /><br /> 既定値は、使用している WS-Security のバージョンによって異なります。 WS-Security 1.1 を使用する場合、既定値は `SignBeforeEncryptAndEncryptSignature` です。 WS-Security 1.0 を使用する場合、既定値は `SignBeforeEncrypt` です。<br /><br /> この属性は <xref:System.ServiceModel.Security.MessageProtectionOrder> 型です。|  
-|messageSecurityVersion|省略可能です。 使用される WS-Security のバージョンを設定します。 以下の値が有効です。<br /><br /> -Wssecurity11wstrustfebruary2005wssecureconversationfebruary2005wssecuritypolicy11 で<br />-WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br />-WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br /><br /> 既定は、WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11 であり、単純に `Default` として XML で表現できます。 この属性は <xref:System.ServiceModel.MessageSecurityVersion> 型です。|  
+|messageSecurityVersion|省略可能です。 使用される WS-Security のバージョンを設定します。 以下の値が有効です。<br /><br /> -   WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11<br />-   WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br />-   WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br /><br /> 既定は、WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11 であり、単純に `Default` として XML で表現できます。 この属性は <xref:System.ServiceModel.MessageSecurityVersion> 型です。|  
 |requireDerivedKeys|キーを元の証明キーから派生できる場合に指定するブール値。 既定値は、`true` です。|  
 |requireSecurityContextCancellation|省略可能です。 セキュリティ コンテキストが不要になったときにそれをキャンセルして終了する必要がある場合に指定するブール値。 既定値は、`true` です。|  
 |requireSignatureConfirmation|省略可能です。 WS-Security 署名確認を有効にするかどうかを指定するブール値です。 `true` に設定されている場合、メッセージ署名が応答側で確認されます。  カスタム バインディングが相互証明書に対して構成されているか、発行されたトークンを使用するように構成されている場合 (WSS 1.1 バインド)、この属性の既定値は `true` です。 それ以外の場合、既定値は `false` になります。<br /><br /> サービスが要求を完全に認識して応答していることを確認するために、署名確認を使用します。|  
-|securityHeaderLayout|省略可能です。 セキュリティ ヘッダーでの要素の順序を指定します。 有効な値は、次のとおりです。<br /><br /> -   `Strict`:"使用前に宣言する" という一般的な方針に従って、項目がセキュリティ ヘッダーに追加されます。<br />-   `Lax`:項目は、WSS に準じた任意の順序で、セキュリティ ヘッダーに追加されます。SOAP メッセージ セキュリティ。<br />-   `LaxWithTimestampFirst`:項目は、WSS に準じた任意の順序で、セキュリティ ヘッダーに追加されます。SOAP メッセージ セキュリティ点を除いて、セキュリティ ヘッダーの最初の要素は wsse:Timestamp 要素である必要があります。<br />-   `LaxWithTimestampLast`:項目は、WSS に準じた任意の順序で、セキュリティ ヘッダーに追加されます。SOAP メッセージ セキュリティ点を除いて、セキュリティ ヘッダーの最後の要素は wsse:Timestamp 要素である必要があります。<br /><br /> 既定値は `Strict` です。<br /><br /> この要素は <xref:System.ServiceModel.Channels.SecurityHeaderLayout> 型です。|  
+|securityHeaderLayout|省略可能です。 セキュリティ ヘッダーでの要素の順序を指定します。 有効な値は、次のとおりです。<br /><br /> -   `Strict`:"使用前に宣言する" という一般的な方針に従って、項目がセキュリティ ヘッダーに追加されます。<br />-   `Lax`:項目は、WSS: SOAP メッセージ セキュリティに準じた任意の順序でセキュリティ ヘッダーに追加されます。<br />-   `LaxWithTimestampFirst`:項目は、WSS: SOAP メッセージ セキュリティに準じた任意の順序でセキュリティ ヘッダーに追加されます。ただし、セキュリティ ヘッダー内の最初の要素が wsse:Timestamp 要素でなければならないという点を除きます。<br />-   `LaxWithTimestampLast`:項目は、WSS: SOAP メッセージ セキュリティに準じた任意の順序でセキュリティ ヘッダーに追加されます。ただし、セキュリティ ヘッダー内の最後の要素が wsse:Timestamp 要素でなければならないという点を除きます。<br /><br /> 既定値は `Strict` です。<br /><br /> この要素は <xref:System.ServiceModel.Channels.SecurityHeaderLayout> 型です。|  
   
 ## <a name="authenticationmode-attribute"></a>authenticationMode 属性  
   
@@ -91,9 +91,9 @@ ms.locfileid: "54146252"
 |要素|説明|  
 |-------------|-----------------|  
 |[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|現在発行されているトークンを指定します。 この要素は <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement> 型です。|  
-|[\<localClientSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)|このバインディングのローカル クライアントのセキュリティ設定を指定します。 この要素は <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement> 型です。|  
-|[\<localServiceSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)|このバインディングのローカル サービスのセキュリティ設定を指定します。 この要素は <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement> 型です。|  
-|[\<secureConversationBootstrap >](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|セキュリティで保護されたメッセージ交換サービスの開始に使用される既定値を指定します。|  
+|[\<localClientSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)|このバインディングのローカル クライアントのセキュリティ設定を指定します。 この要素は <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement> 型です。|  
+|[\<localServiceSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)|このバインディングのローカル サービスのセキュリティ設定を指定します。 この要素は <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement> 型です。|  
+|[\<secureConversationBootstrap>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|セキュリティで保護されたメッセージ交換サービスの開始に使用される既定値を指定します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -166,13 +166,14 @@ ms.locfileid: "54146252"
 </configuration>
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.SecurityElement>  
- <xref:System.ServiceModel.Channels.SecurityBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [バインディング](../../../../../docs/framework/wcf/bindings.md)  
- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [方法: SecurityBindingElement を使用してカスタム バインディングを作成します。](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [カスタム バインド セキュリティ](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Configuration.SecurityElement>
+- <xref:System.ServiceModel.Channels.SecurityBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [バインディング](../../../../../docs/framework/wcf/bindings.md)
+- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [方法: SecurityBindingElement を使用してカスタム バインディングを作成します。](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [カスタム バインド セキュリティ](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

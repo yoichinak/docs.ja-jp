@@ -1,16 +1,16 @@
 ---
-title: '方法: LINQ (Visual Basic) で ArrayList を照会します。'
+title: '方法: ArrayList を照会する linq (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 176358a9-d765-4b57-9557-7feb4428138d
-ms.openlocfilehash: 24865842d073dbd4cbb60fe4a228520e98010f4d
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: ed440a7970d0ef1a49af36fa56b1c7ca74715e5f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908168"
 ---
-# <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>方法: LINQ (Visual Basic) で ArrayList を照会します。
-LINQ を使用して <xref:System.Collections.ArrayList> などの非ジェネリックの <xref:System.Collections.IEnumerable> コレクションをクエリする場合、範囲変数の型を明示的に宣言して、オブジェクトの特定の型をコレクションに反映させる必要があります。 ある場合など、<xref:System.Collections.ArrayList>の`Student`、オブジェクト、 [From 句](../../../../visual-basic/language-reference/queries/from-clause.md)は次のようになります。  
+# <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>方法: ArrayList を照会する linq (Visual Basic)
+LINQ を使用して <xref:System.Collections.ArrayList> などの非ジェネリックの <xref:System.Collections.IEnumerable> コレクションをクエリする場合、範囲変数の型を明示的に宣言して、オブジェクトの特定の型をコレクションに反映させる必要があります。 ある場合など、<xref:System.Collections.ArrayList>の`Student`、オブジェクト、 [From 句](../../../../visual-basic/language-reference/queries/from-clause.md)ようになります。  
   
 ```  
 Dim query = From student As Student In arrList   
@@ -19,7 +19,7 @@ Dim query = From student As Student In arrList
   
  範囲変数の型を指定することで、<xref:System.Collections.ArrayList> 内の各項目を `Student` にキャストします。  
   
- 明示的に型指定された範囲変数をクエリ式で使用すると、<xref:System.Linq.Enumerable.Cast%2A> メソッドを呼び出した場合と同じ結果を得ることができます。 指定したキャストを実行できない場合、<xref:System.Linq.Enumerable.Cast%2A> は例外をスローします。 <xref:System.Linq.Enumerable.Cast%2A> および <xref:System.Linq.Enumerable.OfType%2A> は、非ジェネリックの <xref:System.Collections.IEnumerable> 型で動作する、2 つの標準クエリ演算子メソッドです。 Visual basic で明示的に呼び出す必要があります、<xref:System.Linq.Enumerable.Cast%2A>メソッドをデータ ソースを特定の範囲変数の型を確認します。 詳細については、次を参照してください。[クエリ操作 (Visual Basic) での型の関係](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md)です。  
+ 明示的に型指定された範囲変数をクエリ式で使用すると、<xref:System.Linq.Enumerable.Cast%2A> メソッドを呼び出した場合と同じ結果を得ることができます。 指定したキャストを実行できない場合、<xref:System.Linq.Enumerable.Cast%2A> は例外をスローします。 <xref:System.Linq.Enumerable.Cast%2A> および <xref:System.Linq.Enumerable.OfType%2A> は、非ジェネリックの <xref:System.Collections.IEnumerable> 型で動作する、2 つの標準クエリ演算子メソッドです。 Visual basic で明示的に呼び出す必要があります、<xref:System.Linq.Enumerable.Cast%2A>特定の範囲変数の型を確認するためにデータ ソース メソッド。 詳細については、次を参照してください。[クエリ操作 (Visual Basic) での型の関係](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md)します。  
   
 ## <a name="example"></a>例  
  次の例では、<xref:System.Collections.ArrayList> に対して単純なクエリを実行しています。 この例では、コードが <xref:System.Collections.ArrayList.Add%2A> メソッドを呼び出すときにオブジェクト初期化子を使用していますが、これは必須ではありません。  
@@ -76,5 +76,6 @@ End Module
 '   Garcia: 97  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+## <a name="see-also"></a>関連項目
+
+- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

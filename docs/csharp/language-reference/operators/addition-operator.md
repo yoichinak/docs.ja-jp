@@ -1,67 +1,89 @@
 ---
-title: + 演算子 - C# リファレンス
+title: + および += 演算子 - C# リファレンス
 ms.custom: seodec18
-ms.date: 10/22/2018
+ms.date: 05/24/2019
 f1_keywords:
 - +_CSharpKeyword
+- +=_CSharpKeyword
 helpviewer_keywords:
-- + operator [C#]
-- concatenation operator [C#]
 - addition operator [C#]
+- concatenation operator [C#]
+- delegate combination [C#]
+- + operator [C#]
+- addition assignment operator [C#]
+- event subscription [C#]
+- += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: 92e20dad8ae6358f71137e955bb80e3641a66a54
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 41355dbadd566648b45d825cdd6515bfc6d411aa
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237754"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610035"
 ---
-# <a name="-operator-c-reference"></a>+ 演算子 (C# リファレンス)
+# <a name="-and--operators-c-reference"></a>+ および += 演算子 (C# リファレンス)
 
-`+` 演算子は 2 つの形式でサポートされます。単項プラス演算子と二項加算演算子です。
+`+` 演算子は、組み込み数値型、[文字列](../keywords/delegate.md)型、および[デリゲート](../keywords/string.md)型でサポートされています。
 
-## <a name="unary-plus-operator"></a>単項プラス演算子
+算術演算子 `+` については、「[算術演算子 (C# リファレンス)](arithmetic-operators.md)」の記事の「[単項プラス演算子と単項マイナス演算子](arithmetic-operators.md#unary-plus-and-minus-operators)」セクションと「[加算演算子 +](arithmetic-operators.md#addition-operator-)」セクションを参照してください。
 
-単項 `+` 演算子によって、そのオペランドの値が返されます。 すべての数値型でサポートされます。
-
-## <a name="numeric-addition"></a>数値加算
-
-数値型の場合、`+` 演算子によってそのオペランドの合計が計算されます。
-
-[!code-csharp-interactive[numeric addition](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddNumerics)]
-
-## <a name="string-concatenation"></a>文字列の連結
+## <a name="string-concatenation"></a>文字列連結
 
 一方または両方のオペランドが[文字列](../keywords/string.md)型の場合、`+` 演算子によってそのオペランドの文字列表現が連結されます。
 
-[!code-csharp-interactive[string concatenation](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddStrings)]
+[!code-csharp-interactive[string concatenation](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddStrings)]
 
 C# 6 以降、[文字列補間](../tokens/interpolated.md)という文字列を書式設定するより便利な方法が提供されます。
 
-[!code-csharp-interactive[string interpolation](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#UseStringInterpolation)]
+[!code-csharp-interactive[string interpolation](~/samples/csharp/language-reference/operators/AdditionOperator.cs#UseStringInterpolation)]
 
 ## <a name="delegate-combination"></a>デリゲートの組み合わせ
 
-[デリゲート](../keywords/delegate.md)型の場合、`+` 演算子によって、呼び出されたとき、最初のオペランドを呼び出し、次に 2 番目のオペランドを呼び出す新しいデリゲート インスタンスが返されます。 いずれかのオペランドが `null` の場合、`+` 演算子によって別のオペランドの値が返されます (`null` でもある場合があります)。 次の例では、デリゲートが `+` 演算子と組み合わされるしくみを説明しています。
+同じ[デリゲート](../keywords/delegate.md)型のオペランドの場合、呼び出されると左側のオペランドを呼び出してから右側のオペランドを呼び出す新しいデリゲート インスタンスが `+` 演算子によって返されます。 いずれかのオペランドが `null` の場合、`+` 演算子によって別のオペランドの値が返されます (`null` でもある場合があります)。 次の例では、デリゲートが `+` 演算子と組み合わされるしくみを説明しています。
 
-[!code-csharp-interactive[delegate combination](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddDelegates)]
+[!code-csharp-interactive[delegate combination](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddDelegates)]
+
+デリゲートの削除を実行するには、[`-` 演算子](subtraction-operator.md#delegate-removal)を使用します。
 
 デリゲート型の詳細については、[デリゲート](../../programming-guide/delegates/index.md)に関するページを参照してください。
 
+## <a name="addition-assignment-operator-"></a>加算代入演算子 +=
+
+次のような `+=` 演算子を使用する式があるとします
+
+```csharp
+x += y
+```
+
+上記の式は、次の式と同じです。
+
+```csharp
+x = x + y
+```
+
+ただし、`x` が評価されるのは 1 回だけです。
+  
+`+=` 演算子の使用例を次に示します。
+
+[!code-csharp-interactive[+= examples](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddAndAssign)]
+
+[イベント](../keywords/event.md)をサブスクライブするとき、`+=` 演算子を使用してイベント ハンドラー メソッドを指定することもできます。 詳細については、「[方法: イベント サブスクリプションとサブスクリプションの解除](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)」を参照してください。
+
 ## <a name="operator-overloadability"></a>演算子のオーバーロード可/不可
 
-単項演算子と二項 `+` 演算子は、ユーザー定義型で[オーバーロード](../keywords/operator.md)できます。 二項 `+` 演算子をオーバーロードすると、[加算代入演算子](addition-assignment-operator.md) `+=` も暗黙的にオーバーロードされます。
+ユーザー定義型は `+` 演算子を[オーバーロード](operator-overloading.md)できます。 2 項 `+` 演算子をオーバーロードすると、`+=` 演算子も暗黙的にオーバーロードされます。 ユーザー定義型では、`+=` 演算子を明示的にオーバーロードできません。
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、[C# 言語仕様](../language-specification/index.md)の[単項プラス演算子](~/_csharplang/spec/expressions.md#unary-plus-operator)と[加算演算子](~/_csharplang/spec/expressions.md#addition-operator)に関するセクションを参照してください。
+詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)の[単項プラス演算子](~/_csharplang/spec/expressions.md#unary-plus-operator)と[加算演算子](~/_csharplang/spec/expressions.md#addition-operator)に関するセクションを参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# プログラミングガイド](../../programming-guide/index.md)
 - [C# 演算子](index.md)
 - [文字列補間](../tokens/interpolated.md)
 - [方法: 複数の文字列を連結する](../../how-to/concatenate-multiple-strings.md)
 - [デリゲート](../../programming-guide/delegates/index.md)
-- [checked と unchecked](../keywords/checked-and-unchecked.md)
+- [イベント](../../programming-guide/events/index.md)
+- [算術演算子](arithmetic-operators.md)
+- [- および -= 演算子](subtraction-operator.md)

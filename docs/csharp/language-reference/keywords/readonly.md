@@ -8,18 +8,27 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: dfbeb5ff94f39e8d8df03feea9ff55db748d2182
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: 4a51bb0e854de127c632c28f613a7602bf09f432
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058582"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348020"
 ---
 # <a name="readonly-c-reference"></a>readonly (C# リファレンス)
 
 `readonly` キーワードは、3 つのコンテキストで使用できる修飾子です。
 
-- [フィールドの宣言](#readonly-field-example)では、`readonly` は、フィールドへの割り当てが、宣言の一部として、または同じクラスのコンストラクター内でのみ可能であることを示します。
+- [フィールドの宣言](#readonly-field-example)では、`readonly` は、フィールドへの割り当てが、宣言の一部として、または同じクラスのコンストラクター内でのみ可能であることを示します。 readonly フィールドは、フィールドの宣言とコンストラクターで複数回割り当ておよび再割り当てを行うことができます。 
+  
+  `readonly` フィールドは、コンストラクターが終了した後で割り当てることはできません。 値型と参照型では意味が異なります。
+  
+  - 値型にはそのデータが直接含まれるため、`readonly` 値型のフィールドは変更できません。 
+  - 参照型にはそのデータへの参照が含まれるため、`readonly` 参照型のフィールドは、常に同じオブジェクトを参照する必要があります。 そのオブジェクトは不変ではありません。 `readonly` 修飾子があると、フィールドを参照型の別のインスタンスで置き換えることはできません。 ただし、フィールドのインスタンス データを読み取り専用フィールドで変更することは禁止されません。
+
+  > [!WARNING]
+  > 変更可能な参照型である外部から参照できる読み取り専用フィールドを含む外部から参照できる型はセキュリティの脆弱性があり、警告 [CA2104](/visualstudio/code-quality/ca2104-do-not-declare-read-only-mutable-reference-types) がトリガーされる可能性があります: "読み取り専用の変更可能な参照型を宣言しません"。
+
 - [`readonly struct` の定義](#readonly-struct-example)では、`readonly` は `struct` が変更不可であることを示します。
 - [`ref readonly` メソッドの戻り値](#ref-readonly-return-example)では、`readonly` 修飾子は、メソッドが参照を返し、その参照への書き込みが許可されないことを示します。
 
@@ -35,9 +44,9 @@ ms.locfileid: "54058582"
 
 - 値が宣言で初期化される場合。次に例を示します。
 
-```csharp
-public readonly int y = 5;
-```
+  ```csharp
+  public readonly int y = 5;
+  ```
 
 - インスタンス フィールド宣言を含むクラスのインスタンス コンストラクター内。
 - 静的フィールド宣言を含むクラスの静的コンストラクター内。
@@ -46,16 +55,18 @@ public readonly int y = 5;
 
 > [!NOTE]
 > `readonly` キーワードは [const](const.md) キーワードとは異なります。 `const` フィールドは、フィールドの宣言でしか初期化できません。 `readonly` フィールドは、フィールドの宣言と任意のコンストラクターで複数回割り当てることができます。 このため、`readonly` フィールドは、使用するコンストラクターに応じて異なる値を持つことができます。 また、次の例のように、`const` フィールドがコンパイル時定数であるのに対し、`readonly` フィールドは実行時定数として使用できます。
-
-```csharp
-public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;
-```
+>
+> ```csharp
+> public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;
+> ```
 
 [!code-csharp[Initialize readonly Field example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#InitReadonlyField)]
 
 上の例で、次の例のようなステートメントを使うものとします。
 
-`p2.y = 66;        // Error`
+```csharp
+p2.y = 66;        // Error
+```
 
 この場合、次のコンパイル エラー メッセージが表示されます。
 

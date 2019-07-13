@@ -21,14 +21,12 @@ helpviewer_keywords:
 - configuration settings [.NET Framework], applications
 - configuration file reference [.NET Framework]
 ms.assetid: 69003d39-dc8a-460c-a6be-e6d93e690b38
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 4543802c3918a4761daa5a4fbbab366695823f73
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 6ebb6487136bff567c57143e3000a20270c1f87e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705286"
 ---
 # <a name="configuration-file-schema-for-the-net-framework"></a>.NET Framework の構成ファイル スキーマ
 
@@ -77,10 +75,10 @@ ms.locfileid: "48839045"
 
 ## <a name="related-sections"></a>関連項目
 
-[リモート処理設定スキーマ](https://msdn.microsoft.com/library/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e) リモート処理を実装するクライアント アプリケーションとサーバー アプリケーションを構成する要素について説明します。
+[リモート処理設定スキーマ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100)) リモート処理を実装するクライアント アプリケーションとサーバー アプリケーションを構成する要素について説明します。
 
-[ASP.NET の設定スキーマ](https://msdn.microsoft.com/library/b5ysx397\(v=vs.100\).aspx) ASP.NET Web アプリケーションの動作を制御する要素について説明します。
+[ASP.NET の設定スキーマ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)) ASP.NET Web アプリケーションの動作を制御する要素について説明します。
 
-[Web サービス設定スキーマ](https://msdn.microsoft.com/library/f84d6d55-1add-4eb7-ae46-33df5833ea2e) ASP.NET Web サービス、およびそれらのクライアントの動作を制御する要素について説明します。
+[Web サービス設定スキーマ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100)) ASP.NET Web サービス、およびそれらのクライアントの動作を制御する要素について説明します。
 
-[.NET Framework アプリの構成](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42) セキュリティ、アセンブリのバインディング、および .NET Framework のリモート処理を構成する方法について説明します。
+[.NET Framework アプリの構成](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kza1yk3a(v=vs.100)) セキュリティ、アセンブリのバインディング、および .NET Framework のリモート処理を構成する方法について説明します。

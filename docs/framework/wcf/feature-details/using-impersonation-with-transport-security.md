@@ -2,12 +2,12 @@
 title: トランスポート セキュリティでの偽装の使用
 ms.date: 03/30/2017
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
-ms.openlocfilehash: 41670f36d459af49359cfc4add57cb59a49940d2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f392dbe5806532eba181adef4ba3c8bebce9eddd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187911"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637443"
 ---
 # <a name="using-impersonation-with-transport-security"></a>トランスポート セキュリティでの偽装の使用
 *権限借用*はクライアントの id で実行するサーバー アプリケーションの機能です。 リソースへのアクセスを検証するときに、サービスでは偽装が広く使用されます。 サーバー アプリケーションはサービス アカウントを使用して実行されますが、クライアントの接続を受け入れたサーバーは、クライアントの資格情報を使用してアクセス チェックが実行できるようにクライアントを偽装します。 トランスポート セキュリティは、資格情報を渡すこと、および渡された資格情報を使用して通信をセキュリティで保護することの 2 つの機構から成ります。 このトピックでは、偽装機能を Windows Communication Foundation (WCF) でトランスポート セキュリティの使用について説明します。 メッセージ セキュリティを使用して権限借用の詳細については、次を参照してください。[委任と偽装](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)します。  
@@ -33,29 +33,30 @@ ms.locfileid: "50187911"
 ### <a name="named-pipe-transport"></a>名前付きパイプ トランスポート  
  次の項目が名前付きパイプ トランスポートと共に使用されます。  
   
--   名前付きパイプ トランスポートはローカル コンピューター上のみで使用します。 WCF で名前付きパイプ トランスポートは、コンピューター間の接続を明示的に禁止します。  
+- 名前付きパイプ トランスポートはローカル コンピューター上のみで使用します。 WCF で名前付きパイプ トランスポートは、コンピューター間の接続を明示的に禁止します。  
   
--   名前付きパイプは、`Impersonate` または `Delegate` 偽装レベルでは使用できません。 これらの偽装レベルでは、名前付きパイプはコンピューター上で保障されません。  
+- 名前付きパイプは、`Impersonate` または `Delegate` 偽装レベルでは使用できません。 これらの偽装レベルでは、名前付きパイプはコンピューター上で保障されません。  
   
  名前付きパイプの詳細については、次を参照してください。[トランスポートの選択](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)します。  
   
 ### <a name="http-transport"></a>HTTP トランスポート  
  HTTP トランスポートを使用するバインディング (<xref:System.ServiceModel.WSHttpBinding>と<xref:System.ServiceModel.BasicHttpBinding>) で説明したように、いくつかの認証方式をサポート[Understanding HTTP Authentication](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)します。 サポートされる偽装レベルは、認証方式によって異なります。 次の項目が HTTP トランスポートと共に使用されます。  
   
--   `Anonymous` 認証方式は偽装を無視します。  
+- `Anonymous` 認証方式は偽装を無視します。  
   
--   `Basic`のみをサポートする認証方式、`Delegate`レベル。 これより低い偽装レベルは、アップグレードされます。  
+- `Basic`のみをサポートする認証方式、`Delegate`レベル。 これより低い偽装レベルは、アップグレードされます。  
   
--   `Digest` 認証方式では、`Impersonate` レベルと `Delegate` レベルのみをサポートします。  
+- `Digest` 認証方式では、`Impersonate` レベルと `Delegate` レベルのみをサポートします。  
   
--   `NTLM` 認証方式は、直接またはネゴシエーション経由で選択可能で、ローカル コンピューターで `Delegate` レベルのみをサポートします。  
+- `NTLM` 認証方式は、直接またはネゴシエーション経由で選択可能で、ローカル コンピューターで `Delegate` レベルのみをサポートします。  
   
--   Kerberos 認証方式は、ネゴシエーション経由でのみ選択可能で、サポートされるすべての偽装レベルで使用できます。  
+- Kerberos 認証方式は、ネゴシエーション経由でのみ選択可能で、サポートされるすべての偽装レベルで使用できます。  
   
  HTTP トランスポートの詳細については、次を参照してください。[トランスポートの選択](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [委任と偽装](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
- [承認](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
- [方法: サービスでクライアントに偽装する](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  
- [HTTP 認証の理解](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)
+## <a name="see-also"></a>関連項目
+
+- [委任と偽装](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
+- [承認](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
+- [方法: サービスでのクライアントを偽装します。](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [HTTP 認証の理解](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)

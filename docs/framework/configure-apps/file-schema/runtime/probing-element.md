@@ -1,5 +1,5 @@
 ---
-title: '&lt;プローブ&gt;要素'
+title: <probing> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/probing
@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5b9be3050da21c0a99931ca70cf990b0b8bf1fe
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 9402c9f28c123affb7b90fc189484bb1fd43db46
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704610"
 ---
-# <a name="ltprobinggt-element"></a>&lt;プローブ&gt;要素
+# <a name="probing-element"></a>\<probing > 要素
 アプリケーション ベース、共通言語ランタイム アセンブリを読み込むときに検索するサブディレクトリを指定します。  
   
  \<configuration>  
-\<ランタイム >  
+\<runtime>  
 \<assemblyBinding>  
 \<probing >  
   
@@ -65,8 +65,9 @@ ms.locfileid: "53612309"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [アセンブリの場所の指定](../../../../../docs/framework/configure-apps/specify-assembly-location.md)  
+## <a name="see-also"></a>関連項目
+
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [アセンブリの場所の指定](../../../../../docs/framework/configure-apps/specify-assembly-location.md)
 - [ランタイムがアセンブリを検索する方法](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

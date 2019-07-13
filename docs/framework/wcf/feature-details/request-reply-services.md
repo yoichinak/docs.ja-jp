@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WCF [WCF], request-reply services
 - request-reply contracts [WCF]
 ms.assetid: 2fa710f1-47f4-4598-b063-3ab3bd22ebba
-ms.openlocfilehash: 8fe1343a4b3590622becf71f1167f4b19dbc67af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ff11b1cae4ec8f6fe886a55cb0add27831048d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991121"
 ---
 # <a name="request-reply-services"></a>要求/応答サービス
 要求/応答サービスは、操作コントラクトでは、Windows Communication Foundation (WCF) の既定の種類です。 クライアントはサービス操作を呼び出し、サービスからの応答を待機します。 サービス操作の呼び出しは、同期的または非同期的に実行できます。同期呼び出しでは、応答を受信するか、呼び出しがタイムアウトするまで、クライアントがブロックされます。非同期呼び出しでは、クライアントはサービス操作の呼び出し後、動作を続行し、別のスレッドのサービスからの応答を受信できます。  
@@ -30,6 +30,7 @@ public interface IRequestReplyCalculator
   
  これは既定の動作であるため、<xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> プロパティを `false` に設定する必要はありません。  
   
-## <a name="see-also"></a>関連項目  
- [一方向サービス](../../../../docs/framework/wcf/feature-details/one-way-services.md)  
- [双方向サービス](../../../../docs/framework/wcf/feature-details/duplex-services.md)
+## <a name="see-also"></a>関連項目
+
+- [一方向サービス](../../../../docs/framework/wcf/feature-details/one-way-services.md)
+- [双方向サービス](../../../../docs/framework/wcf/feature-details/duplex-services.md)

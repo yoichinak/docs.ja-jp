@@ -2,12 +2,12 @@
 title: ピア名と PNRP ID
 ms.date: 03/30/2017
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
-ms.openlocfilehash: d842c66de7550c94f4e287449a238ff964093fb2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8cdd5151d029436d11c78806cf7673861cc0d8a4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187653"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623117"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>ピア名と PNRP ID
 ピア名は通信のエンドポイントを表します。ピア名には、コンピューター、ユーザー、グループ、サービスのほか、ピアに関連付けられていて IPv6 アドレスに変換できるすべてのものを指定できます。 ピア名解決プロトコル (PNRP) は、クラウド メンバーの識別に使用される PNRP ID を作成するために、統計的に一意なピア名を取得します。  
@@ -24,12 +24,13 @@ ms.locfileid: "50187653"
   
  PNRP ID は次の部分で構成されています。  
   
--   上位 128 ビット (ピアツーピア (P2P) ID として知られる) は、エンドポイントに割り当てられたピア名のハッシュです。 ピア名は、*Authority.Classifier* という形式です。 セキュリティで保護された名前の場合、*Authority* は、ピア名の公開キーのセキュア ハッシュ アルゴリズム 1 (SHA1) ハッシュ (16 進数の数字で出力される) です。 セキュリティで保護されていない名前の場合、*Authority* は "0" です (単一文字)。 *Classifier* は、アプリケーションを識別する文字列です。 ピア名の分類子は、`null` ターミネータを含めて 149 文字より長くすることができます。  
+- 上位 128 ビット (ピアツーピア (P2P) ID として知られる) は、エンドポイントに割り当てられたピア名のハッシュです。 ピア名は、*Authority.Classifier* の形式で指定されます。 セキュリティで保護された名前の場合、*Authority* は、ピア名の公開キーのセキュア ハッシュ アルゴリズム 1 (SHA1) ハッシュ (16 進数の数字で出力される) です。 セキュリティで保護されていない名前の場合、*Authority* は "0" です (単一文字)。 *Classifier* は、アプリケーションを識別する文字列です。 ピア名の分類子は、`null` ターミネータを含めて 149 文字より長くすることができます。  
   
--   下位 128 ビットは、サービスの場所に割り当てられています。同じクラウド内の同じ P2P ID を持つ異なるインスタンスを識別するために生成された数字です。  
+- 下位 128 ビットは、サービスの場所に割り当てられています。同じクラウド内の同じ P2P ID を持つ異なるインスタンスを識別するために生成された数字です。  
   
  P2P ID とサービスの場所の組み合わせを使用すると、1 台のコンピューターから複数の PNRP ID を登録できます。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Net.PeerToPeer.PeerName>  
- <xref:System.Net.PeerToPeer>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Net.PeerToPeer.PeerName>
+- <xref:System.Net.PeerToPeer>

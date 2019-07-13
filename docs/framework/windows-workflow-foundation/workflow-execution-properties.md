@@ -2,12 +2,12 @@
 title: ワークフロー実行プロパティ
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: 2b72782b4b9fef127e61bb22b7800740af1d8d2b
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 0f87e58a034cbc11565fc74347e6b4362952093c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669382"
 ---
 # <a name="workflow-execution-properties"></a>ワークフロー実行プロパティ
 CLR は、スレッド ローカル ストレージ (TLS) を介して各スレッドの実行コンテキストを維持します。 この実行コンテキストは、スレッド ID、アンビエント トランザクション、現在のアクセス許可セットなど、既知のスレッド プロパティに加えて、名前付きスロットのようなユーザー定義のスレッド プロパティを制御します。  
@@ -45,7 +45,7 @@ class ConsoleColorProperty : IExecutionProperty
 }  
 ```  
   
- アクティビティ作成者がこのプロパティを使用するには、アクティビティの実行オーバーライドに登録します。 この例では、現在の `ConsoleColorScope` の `ConsoleColorProperty` コレクションに追加することで、<xref:System.Activities.NativeActivityContext.Properties%2A> を登録する <xref:System.Activities.NativeActivityContext> アクティビティが定義されています。  
+ アクティビティ作成者がこのプロパティを使用するには、アクティビティの実行オーバーライドに登録します。 この例では、現在の <xref:System.Activities.NativeActivityContext> の <xref:System.Activities.NativeActivityContext.Properties%2A> コレクションに追加することで、`ConsoleColorProperty` を登録する `ConsoleColorScope` アクティビティが定義されています。  
   
 ```csharp  
 public sealed class ConsoleColorScope : NativeActivity  
@@ -161,7 +161,8 @@ End default text.
   
  ワークフロー実行プロパティは、カスタム アクティビティ作成者が使用できます。また、このプロパティには、<xref:System.ServiceModel.Activities.CorrelationScope> や <xref:System.Activities.Statements.TransactionScope> などのアクティビティ向けにハンドル管理の機構も用意されています。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Activities.IExecutionProperty>  
- <xref:System.Activities.IPropertyRegistrationCallback>  
- <xref:System.Activities.RegistrationContext>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Activities.IExecutionProperty>
+- <xref:System.Activities.IPropertyRegistrationCallback>
+- <xref:System.Activities.RegistrationContext>

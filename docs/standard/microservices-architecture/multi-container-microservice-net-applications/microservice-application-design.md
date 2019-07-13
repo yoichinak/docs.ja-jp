@@ -1,15 +1,13 @@
 ---
 title: マイクロサービス指向アプリケーションの設計
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | 十分な情報を得たうえでの決定を行うことができるように、マイクロサービス指向アプリケーションの利点と欠点を理解する。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 8b2372ab5d58898b7a5730e118cc710d09a9bf92
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dfb1619bab68814bd14224e5b50a75d99525a802
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130495"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639514"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>マイクロサービス指向アプリケーションの設計
 
@@ -91,8 +89,8 @@ ms.locfileid: "53130495"
 
 ### <a name="additional-resources"></a>その他の技術情報
 
-- **eShopOnContainers GitHub リポジトリ。参照アプリケーションのソース コード**  
-    [https://aka.ms/eShopOnContainers/](https://aka.ms/eShopOnContainers/)
+- **eShopOnContainers GitHub リポジトリ。参照アプリケーションのソース コード**\
+    <https://aka.ms/eShopOnContainers/>
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>マイクロサービス ベースのソリューションの利点
 
@@ -150,7 +148,7 @@ ms.locfileid: "53130495"
 
 マイクロサービスごとに異なるテクノロジを使用する別の理由は、各マイクロサービスの性質です。 たとえば、C\# のようなオブジェクト指向プログラミング言語ではなく、F\# のような関数型プログラミング言語や、AI と機械学習ドメインをターゲットにしている場合は R のような言語を使用するほうがふさわしい場合があります。
 
-重要なのは、各マイクロサービスは、さまざまな設計パターンに基づいて異なる内部アーキテクチャを持つことができるということです。 すべてのマイクロサービスを高度な DDD パターンを使用して実装する必要はありません。これを行うと、過剰エンジニア リングになります。 同様に、常に変化するビジネス ロジックを使用する複雑なマイクロサービスは、CRUD コンポーネントとして実装すべきではありません。これを行うと、コードの質が低下する可能性があります。 
+重要なのは、各マイクロサービスは、さまざまな設計パターンに基づいて異なる内部アーキテクチャを持つことができるということです。 すべてのマイクロサービスを高度な DDD パターンを使用して実装する必要はありません。これを行うと、過剰エンジニア リングになります。 同様に、常に変化するビジネス ロジックを使用する複雑なマイクロサービスは、CRUD コンポーネントとして実装すべきではありません。これを行うと、コードの質が低下する可能性があります。
 
 ## <a name="the-new-world-multiple-architectural-patterns-and-polyglot-microservices"></a>新しい世界: 複数のアーキテクチャ パターンと多言語マイクロサービス
 
@@ -158,7 +156,7 @@ ms.locfileid: "53130495"
 
 - 単純な CRUD、単一階層、単一レイヤー。
 
-- [従来の N レイヤー](https://msdn.microsoft.com/library/ee658109.aspx#Layers)。
+- [従来の N レイヤー](https://docs.microsoft.com/previous-versions/msp-n-p/ee658109(v=pandp.10))。
 
 - [ドメイン駆動設計の N レイヤー](https://blogs.msdn.microsoft.com/cesardelatorre/2011/07/03/published-first-alpha-version-of-domain-oriented-n-layered-architecture-v2-0/)。
 

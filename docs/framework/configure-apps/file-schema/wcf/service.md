@@ -1,20 +1,20 @@
 ---
-title: '&lt;サービス&gt;'
+title: <service>
 ms.date: 03/30/2017
 ms.assetid: 13123dd6-c4a9-4a04-a984-df184b851788
-ms.openlocfilehash: ef0ae70440323c1ede5deca60e88f29861760e68
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 68bddc01b02d9885b3f0fc4c2cbc5c3249de03f4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670400"
 ---
-# <a name="ltservicegt"></a>&lt;サービス&gt;
+# <a name="service"></a>\<service>
 `service` 要素には Windows Communication Foundation (WCF) サービスの設定が含まれます。 また、サービスを公開するエンドポイントも含まれます。  
   
  \<system.ServiceModel >  
 \<services>  
-\<サービス >  
+\<service>  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,7 +39,7 @@ ms.locfileid: "54145511"
 |要素|説明|  
 |-------------|-----------------|  
 |[\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)|このサービスを公開する `endpoint` 要素のコレクション。|  
-|[\<ホスト >](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|このサービス インスタンスのホストを指定します。 この要素は <xref:System.ServiceModel.Configuration.HostElement> 型です。|  
+|[\<host>](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|このサービス インスタンスのホストを指定します。 この要素は <xref:System.ServiceModel.Configuration.HostElement> 型です。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -68,6 +68,7 @@ ms.locfileid: "54145511"
 </service>
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.ServiceElement>  
- [サービスの構成](../../../../../docs/framework/wcf/configuring-services.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Configuration.ServiceElement>
+- [サービスの構成](../../../../../docs/framework/wcf/configuring-services.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法 : キー コンテナーに非対称キーを格納する'
+title: '方法: キー コンテナーに非対称キーを格納する'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,31 +17,31 @@ helpviewer_keywords:
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a5cd157f89797406fbe87c3d70c415d7b192d1a9
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: c6fada360eda46dc695ab732a2573b135d823f0a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018743"
 ---
-# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>方法 : キー コンテナーに非対称キーを格納する
-非対称秘密キーは、ローカル コンピューターにそのまま平文として保存しないでください。 秘密キーを格納する必要がある場合は、キー コンテナーを使用することをお勧めします。 キー コンテナーの詳細については、「[コンピューター レベルおよびユーザー レベルの RSA キー コンテナーについて](https://msdn.microsoft.com/library/9a179f38-8fb7-4442-964c-fb7b9f39f5b9)」を参照してください。  
+# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>方法: キー コンテナーに非対称キーを格納する
+非対称秘密キーは、ローカル コンピューターにそのまま平文として保存しないでください。 秘密キーを格納する必要がある場合は、キー コンテナーを使用することをお勧めします。 キー コンテナーの詳細については、「[コンピューター レベルおよびユーザー レベルの RSA キー コンテナーについて](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100))」を参照してください。  
   
 ### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a>非対称キーを作成し、キー コンテナーに格納するには  
   
-1.  新しいインスタンスを作成、<xref:System.Security.Cryptography.CspParameters>クラスし、キー コンテナーを呼び出そうと名前を渡す、<xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType>フィールド。  
+1. 新しいインスタンスを作成、<xref:System.Security.Cryptography.CspParameters>クラスし、キー コンテナーを呼び出そうと名前を渡す、<xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType>フィールド。  
   
-2.  派生したクラスの新しいインスタンスを作成、<xref:System.Security.Cryptography.AsymmetricAlgorithm>クラス (通常は**RSACryptoServiceProvider**または**DSACryptoServiceProvider**) 渡す前に作成したと**CspParameters**コンス トラクターへのオブジェクト。  
+2. 派生したクラスの新しいインスタンスを作成、<xref:System.Security.Cryptography.AsymmetricAlgorithm>クラス (通常は**RSACryptoServiceProvider**または**DSACryptoServiceProvider**) 渡す前に作成したと**CspParameters**コンス トラクターへのオブジェクト。  
   
 ### <a name="to-delete-the-key-from-a-key-container"></a>キー コンテナーからキーを削除するには  
   
-1.  **CspParameters** クラスの新しいインスタンスを作成し、キー コンテナーを呼び出すときに使用する名前を **CspParameters.KeyContainerName** フィールドに渡します。  
+1. **CspParameters** クラスの新しいインスタンスを作成し、キー コンテナーを呼び出すときに使用する名前を **CspParameters.KeyContainerName** フィールドに渡します。  
   
-2.  **AsymmetricAlgorithm** クラスから派生したクラス (通常は **RSACryptoServiceProvider** または **DSACryptoServiceProvider**) の新しいインスタンスを作成し、前に作成した **CspParameters** オブジェクトをそのコンストラクターに渡します。  
+2. **AsymmetricAlgorithm** クラスから派生したクラス (通常は **RSACryptoServiceProvider** または **DSACryptoServiceProvider**) の新しいインスタンスを作成し、前に作成した **CspParameters** オブジェクトをそのコンストラクターに渡します。  
   
-3.  **AsymmetricAlgorithm** から派生したクラスの **PersistKeyInCSP** プロパティを **false** (Visual Basic では **False**) に設定します。  
+3. **AsymmetricAlgorithm** から派生したクラスの **PersistKeyInCSP** プロパティを **false** (Visual Basic では **False**) に設定します。  
   
-4.  **AsymmetricAlgorithm** から派生したクラスの **Clear** メソッドを呼び出します。 このメソッドは、クラスのすべてのリソースを解放し、キー コンテナーを消去します。   
+4. **AsymmetricAlgorithm** から派生したクラスの **Clear** メソッドを呼び出します。 このメソッドは、クラスのすべてのリソースを解放し、キー コンテナーを消去します。   
   
 ## <a name="example"></a>例  
  非対称キーを作成し、それをキー コンテナーへ格納し、後でキーを取得し、最後にキー コンテナーからキーを削除する方法の例を次に示します。  
@@ -225,7 +225,7 @@ Key deleted.
   
 ## <a name="see-also"></a>関連項目
 
-- [暗号化と復号化のためのキーの生成](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
-- [データの暗号化](../../../docs/standard/security/encrypting-data.md)  
-- [データの復号化](../../../docs/standard/security/decrypting-data.md)  
+- [暗号化と復号化のためのキーの生成](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
+- [データの暗号化](../../../docs/standard/security/encrypting-data.md)
+- [データの復号化](../../../docs/standard/security/decrypting-data.md)
 - [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

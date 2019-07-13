@@ -1,15 +1,15 @@
 ---
-title: '&lt;netTcpBinding&gt; の &lt;transport&gt;'
+title: <transport> の <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-ms.openlocfilehash: 8416701ce4e787a49ee0a4bdd4829c6592cde94c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 97139b6bea21e4d908c06f5210e54756865d3c46
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788311"
 ---
-# <a name="lttransportgt-of-ltnettcpbindinggt"></a>&lt;netTcpBinding&gt; の &lt;transport&gt;
+# <a name="transport-of-nettcpbinding"></a>\<netTcpBinding> の \<transport>
 構成されているエンドポイントのメッセージ レベルのセキュリティ要件の種類を定義、 [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)します。  
   
  \<system.ServiceModel >  
@@ -53,7 +53,7 @@ ms.locfileid: "54147331"
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |なし|クライアントは匿名です。 これには、サービスの証明書が必要です。|  
 |Windows|SP ネゴシエーション (Kerberos ネゴシエーション) を使用して、クライアントの Windows 認証を指定します。|  
@@ -61,7 +61,7 @@ ms.locfileid: "54147331"
   
 ## <a name="protectionlevel-attribute"></a>protectionLevel 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |なし|保護されません。|  
 |Sign|メッセージは署名されます。|  
@@ -79,13 +79,14 @@ ms.locfileid: "54147331"
 ## <a name="remarks"></a>Remarks  
  トランスポート セキュリティは、SOAP メッセージの整合性と機密性の保護、および相互認証に使用します。 このセキュリティ モードがバインディング上で選択された場合、チャネル スタックはセキュリティ トランスポートを使用して構成され、SOAP メッセージは Windows (ネゴシエート) や TCP 上の SSL などのトランスポート セキュリティを使用して保護されます。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.TcpTransportSecurity>  
- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Transport%2A>  
- <xref:System.ServiceModel.NetTcpSecurity.Transport%2A>  
- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>  
- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [バインディング](../../../../../docs/framework/wcf/bindings.md)  
- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.TcpTransportSecurity>
+- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Transport%2A>
+- <xref:System.ServiceModel.NetTcpSecurity.Transport%2A>
+- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>
+- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [バインディング](../../../../../docs/framework/wcf/bindings.md)
+- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

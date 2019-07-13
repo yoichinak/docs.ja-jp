@@ -2,12 +2,12 @@
 title: データベース アクセス アクティビティ
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: efcdd25ee3e6b86d87d551623b166eab4fa76845
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 5a7c6fa6664acee8000c100513b2cc955ffa3392
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850403"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622456"
 ---
 # <a name="database-access-activities"></a>データベース アクセス アクティビティ
 データベース アクセス アクティビティを使用すると、ワークフロー内でデータベースにアクセスできます。 これらのアクティビティは、取得、情報を変更または使用するデータベースへのアクセスを許可する[ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081)データベースにアクセスします。  
@@ -88,7 +88,7 @@ Public class DbUpdate: AsyncCodeActivity
 
  実行するクエリは `Sql` プロパティで構成し、パラメーターは `Parameters` コレクションを通じて渡します。
 
- 後`DbQueryScalar`は、スカラー型は、実行で返される、`Result``out`引数 (型の`TResult`、つまり基底クラスで定義されている<xref:System.Activities.AsyncCodeActivity%601>)。
+ 後`DbQueryScalar`は、スカラー型は、実行で返される、`Result out`引数 (型の`TResult`、つまり基底クラスで定義されている<xref:System.Activities.AsyncCodeActivity%601>)。
 
 ```
 public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
@@ -200,7 +200,7 @@ public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult 
 
  実行するクエリは `Sql` プロパティで構成し、パラメーターは `Parameters` コレクションを通じて渡します。
 
- 後に、`DbQueryDataSet`が実行される、`DataSet`で返される、`Result``out`引数 (型の`TResult`、つまり基底クラスで定義されている<xref:System.Activities.AsyncCodeActivity%601>)。
+ 後に、`DbQueryDataSet`が実行される、`DataSet`で返される、`Result out`引数 (型の`TResult`、つまり基底クラスで定義されている<xref:System.Activities.AsyncCodeActivity%601>)。
 
 ```
 public class DbQueryDataSet : AsyncCodeActivity<DataSet>
@@ -247,7 +247,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 ## <a name="configuring-connection-information"></a>接続情報の構成
  すべての DbActivities は同じ構成パラメーターを共有します。 パラメーターを構成するには次の 2 つの方法があります。
 
--   `ConnectionString + InvariantName`: ADO.NET プロバイダーの不変名と接続文字列を設定します。
+- `ConnectionString + InvariantName`:ADO.NET プロバイダーの不変の名前と接続文字列を設定します。
 
     ```
     Activity dbSelectCount = new DbQueryScalar<DateTime>()
@@ -260,7 +260,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
     };
     ```
 
--   `ConfigName`: 接続情報を含む構成セクションの名前を設定します。
+- `ConfigName`:接続情報を含む構成セクションの名前を設定します。
 
     ```xml
     <connectionStrings>
@@ -270,7 +270,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
       </connectionStrings>
     ```
 
--   アクティビティで次のように設定します。
+- アクティビティで次のように設定します。
 
     ```
     Activity dbSelectCount = new DbQueryScalar<int>()
@@ -287,38 +287,38 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 
  Setup.cmd スクリプトは、CreateDb.sql スクリプト ファイルを呼び出します。このスクリプト ファイルには、次の操作を実行する SQL コマンドが含まれています。
 
--   DbActivitiesSample という名前のデータベースを作成します。
+- DbActivitiesSample という名前のデータベースを作成します。
 
--   Roles テーブルを作成します。
+- Roles テーブルを作成します。
 
--   Employees テーブルを作成します。
+- Employees テーブルを作成します。
 
--   3 個のレコードを Roles テーブルに挿入します。
+- 3 個のレコードを Roles テーブルに挿入します。
 
--   12 個のレコードを Employees テーブルに挿入します。
+- 12 個のレコードを Employees テーブルに挿入します。
 
 ##### <a name="to-run-setupcmd"></a>Setup.cmd を実行するには
 
-1.  コマンド プロンプトを開きます。
+1. コマンド プロンプトを開きます。
 
-2.  DbActivities サンプル フォルダーに移動します。
+2. DbActivities サンプル フォルダーに移動します。
 
-3.  "Setup.cmd"を入力し、ENTER キーを押します。
+3. "Setup.cmd"を入力し、ENTER キーを押します。
 
     > [!NOTE]
     >  Setup.cmd は、ローカル コンピューターの SqlExpress インスタンスにサンプルをインストールしようとします。 他の SQL Server インスタンスにインストールする場合は、その新しいインスタンス名を使用して Setup.cmd を編集します。
 
 ##### <a name="to-uninstall-the-sample-database"></a>サンプル データベースをアンインストールするには
 
-1.  コマンド プロンプトで、サンプル フォルダーから Cleanup.cmd を実行します。
+1. コマンド プロンプトで、サンプル フォルダーから Cleanup.cmd を実行します。
 
 ##### <a name="to-run-the-sample"></a>サンプルを実行するには
 
-1.  Visual Studio 2010 でソリューションを開きます
+1. Visual Studio 2010 でソリューションを開きます
 
-2.  ソリューションをコンパイルするには、Ctrl キーと Shift キーを押しながら B キーを押します。
+2. ソリューションをコンパイルするには、Ctrl キーと Shift キーを押しながら B キーを押します。
 
-3.  Ctrl キーを押しながら F5 キーを押して、サンプルをデバッグなしで実行します。
+3. Ctrl キーを押しながら F5 キーを押して、サンプルをデバッグなしで実行します。
 
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  

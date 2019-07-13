@@ -8,19 +8,19 @@ dev_langs:
 ms.assetid: dd6dc920-b011-418a-b3db-f1580a7d9251
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 870e800220031338557792fa612d4a3101e79f90
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 9cbef07e3db294dd4c0ffca1f25c15ec39e6ecf3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024572"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647944"
 ---
 # <a name="creating-new-attributes-for-elements-in-the-dom"></a>DOM の要素に対する新しい属性の作成
 属性はノードではなく、要素ノードのプロパティであり、要素に関連付けられた **XmlAttributeCollection** に格納されるため、新しい属性を作成する方法は、他のノード型を作成する方法と異なります。 属性を作成して要素に追加するには、次の 2 つの方法があります。  
   
--   要素ノードを取得し、**SetAttribute** を使用してその要素の属性コレクションに属性を追加します。  
+- 要素ノードを取得し、**SetAttribute** を使用してその要素の属性コレクションに属性を追加します。  
   
--   **CreateAttribute** メソッドを使用して **XmlAttribute** ノードを作成します。要素ノードを取得し、**SetAttributeNode** を使用してその要素の属性コレクションにノードを追加します。  
+- **CreateAttribute** メソッドを使用して **XmlAttribute** ノードを作成します。要素ノードを取得し、**SetAttributeNode** を使用してその要素の属性コレクションにノードを追加します。  
   
  **SetAttribute** メソッドを使用して属性を要素に追加する方法を次の例に示します。  
   
@@ -122,7 +122,7 @@ doc.DocumentElement.SetAttributeNode(attr);
  既定の属性を持つと宣言された要素を作成すると、既定値を持つ新しい既定の属性が XML ドキュメント オブジェクト モデル (DOM) によって作成され、その要素に割り当てられます。 既定の属性の子ノードも同時に作成されます。  
   
 ## <a name="attribute-child-nodes"></a>属性の子ノード  
- 属性ノードの値は、その属性の子ノードになります。 有効な子ノードの型は **XmlText** ノードと **XmlEntityReference** ノードの 2 つだけです。 これらのノードは、**FirstChild** や **LastChild** のようなメソッドが子ノードとして処理するという意味で、子ノードと見なされます。 属性が子ノードを持つという点は、属性または属性の子ノードを削除するときに重要になります。 詳細については、「[DOM の要素ノードからの属性の削除](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md)」を参照してください。  
+ 属性ノードの値は、その属性の子ノードになります。 有効な子ノードの種類は 2 つだけです。**XmlText** ノード、および **XmlEntityReference** ノードです。 これらのノードは、**FirstChild** や **LastChild** のようなメソッドが子ノードとして処理するという意味で、子ノードと見なされます。 属性が子ノードを持つという点は、属性または属性の子ノードを削除するときに重要になります。 詳細については、「[DOM の要素ノードからの属性の削除](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

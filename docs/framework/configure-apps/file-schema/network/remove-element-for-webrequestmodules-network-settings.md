@@ -1,5 +1,5 @@
 ---
-title: '&lt;削除&gt;webRequestModules (ネットワーク設定) の要素'
+title: webRequestModules の <remove> 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/remove
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-ms.openlocfilehash: 2f787206c503c047a34383e12c5676296e39c1fe
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c57e2849d608b1706c41beca91ff8026ebd9ca45
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705026"
 ---
-# <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;削除&gt;webRequestModules (ネットワーク設定) の要素
+# <a name="remove-element-for-webrequestmodules-network-settings"></a>\<削除 > webRequestModules (ネットワーク設定) の要素
 アプリケーションからカスタム Web 要求モジュールを削除します。  
   
  \<configuration>  
@@ -77,6 +77,7 @@ ms.locfileid: "50190750"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.Net.WebRequest>  
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Net.WebRequest>
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

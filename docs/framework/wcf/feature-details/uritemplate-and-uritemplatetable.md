@@ -2,12 +2,12 @@
 title: UriTemplate と UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-ms.openlocfilehash: 66463248f66457aa61ceea22afd003f7b93717e1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b0dc3b2b747bc08da239490db7db3ba77d1e7ed8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918633"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate と UriTemplateTable
 Web 開発者は、サービスの応答先となる URI の形状とレイアウトを記述できる必要があります。 Windows Communication Foundation (WCF) は、その Uri 上のコントロールを開発者に提供する 2 つの新しいクラスを追加します。 <xref:System.UriTemplate> <xref:System.UriTemplateTable> WCF では、URI ベースのディスパッチ エンジンの基盤を形成します。 これらのクラスは、WCF サービスを実装することがなく、テンプレートと URI を活用するために開発者が独自のマッピング メカニズムにも使用できます。  
@@ -65,7 +65,7 @@ Web 開発者は、サービスの応答先となる URI の形状とレイア�
   
  パス式では、先頭と末尾のスラッシュは省略可能です。 クエリ式とフラグメント式は、いずれも式全体を省略できます。 パス セグメントで区切られた一連は、'/'、各セグメントはリテラル値、変数名 ({中かっこ} で記述)、またはワイルドカードを持つことができます (書き込まれる '\*')。 上記のテンプレートでは、"/weather/" セグメントがリテラル値で、"{state}" と "{city}" が変数です。 変数は中かっこの内容から名前を取得して、後で作成する具体的な値を交換できる、*クローズである URI*します。 ワイルドカードは、省略可能ですが、「残りのパス」を論理的に一致が、URI の末尾でだけ記述できます。  
   
- クエリ式 (存在する場合) では、'&' で区切られた順序なしの一連の名前と値のペアを指定します。 クエリ式の要素には、リテラル ペア (x=2) または変数ペア (x={var}) を指定できます。 変数を指定できるのはクエリ式の右辺のみです。 ({someName} = {someValue}) は指定できません。 対になっていない値 (?x) は使用できません。 空のクエリ式と、1 つの '?' だけで構成されたクエリ式は同じものです (いずれも "任意のクエリ" を意味します)。  
+ クエリ式に存在する場合は、一連ので区切られた順序なしの名前/値ペアを指定 '&'。 クエリ式の要素には、リテラル ペア (x=2) または変数ペア (x={var}) を指定できます。 変数を指定できるのはクエリ式の右辺のみです。 ({someName} = {someValue}) は指定できません。 対になっていない値 (?x) は使用できません。 空のクエリ式と、1 つの '?' だけで構成されたクエリ式は同じものです (いずれも "任意のクエリ" を意味します)。  
   
  フラグメント式はリテラル値で構成できます。変数は使用できません。  
   
@@ -83,15 +83,15 @@ Web 開発者は、サービスの応答先となる URI の形状とレイア�
   
 - "{shoe}/{boat}/bed/{quilt}"  
   
-- 「靴/{ボート}」  
+- "shoe/{boat}"  
   
-- "靴/{ボート}/\*"  
+- "shoe/{boat}/\*"  
   
 - "靴/ボート? x = 2"  
   
-- "靴/{ボート}? x = {ベッド}"  
+- "shoe/{boat}?x={bed}"  
   
-- "shoe/{boat}?x={bed}&y=band"  
+- "靴/{ボート}? x = {ベッド} & y = バンド"  
   
 - "?x={shoe}"  
   
@@ -129,7 +129,7 @@ Web 開発者は、サービスの応答先となる URI の形状とレイア�
 - /{shoe}{boat} – 変数はリテラルによって分割されている必要があります。  
   
 ### <a name="matching-and-compound-path-segments"></a>照合と複合パス セグメント  
- 複合パス セグメントを使用すると、1 つのパス セグメント内に複数の変数を含む UriTemplate を定義できます。 たとえば、次のテンプレート文字列で:"アドレス/{state} します。{city}"2 つの変数 (state と city) が同じセグメント内で定義されます。 このテンプレートは、URL をなどに一致`http://example.com/Washington.Redmond`のような URL とも一致しますが、`http://example.com/Washington.Redmond.Microsoft`します。 後者の場合、状態変数が"Washington"が含まれます、city 変数は"Redmond.Microsoft"が含まれます。 この場合、任意のテキスト ('/' 以外) が {city} 変数と一致することになります。 テンプレートを「余分な」テキストが一致しない場合は、配置、変数、別のテンプレート セグメントに例:"アドレス/{state}/{city} します。  
+ 複合パス セグメントを使用すると、1 つのパス セグメント内に複数の変数を含む UriTemplate を定義できます。 : 次のテンプレート文字列の例"アドレス/{state} します。{city}"2 つの変数 (state と city) が同じセグメント内で定義されます。 このテンプレートは、URL をなどに一致`http://example.com/Washington.Redmond`のような URL とも一致しますが、`http://example.com/Washington.Redmond.Microsoft`します。 後者の場合、状態変数が"Washington"が含まれます、city 変数は"Redmond.Microsoft"が含まれます。 この場合、任意のテキスト ('/' 以外) が {city} 変数と一致することになります。 「余分な」テキストと一致するテンプレートを設定する場合、たとえば、別のテンプレート セグメントに変数を配置します。"アドレス/{state}/{city} します。  
   
 ### <a name="named-wildcard-segments"></a>名前付きワイルドカード セグメント  
  名前付きワイルドカード セグメントは変数名を持つが、ワイルドカード文字で始まるパス変数のセグメント '\*'。 次のテンプレート文字列には、"shoe" という名前付きワイルドカード セグメントが含まれています。  
@@ -244,9 +244,9 @@ Console.WriteLine("Bound URI: {0}", boundUri);
   
 - /a/{var1}/b b/{var2}?x=1&y=2  
   
-- a/{x}/b%20b/{var1}?y=2&x=1  
+- a/{x}/b%20b/{var1}?y=2 (& x) = 1  
   
-- a/{y}/B%20B/{z}/?y=2&x=1  
+- a/{y}/B%20B/{z}/?y=2 (& x) = 1  
   
  次の点に注意してください。  
   
@@ -279,9 +279,9 @@ Console.WriteLine("Bound URI: {0}", boundUri);
   
 - ?x=3  
   
-- ?x=1&y={var}  
+- ? x = 1 & y = {var}  
   
-- ?x=2&z={var}  
+- ? x = 2 (& z) {var} を =  
   
 - ?x=3  
   
@@ -295,11 +295,11 @@ Console.WriteLine("Bound URI: {0}", boundUri);
   
 - ?m=get&c=rss  
   
-- ?m=put&c=rss  
+- ? m put (& c) = = rss  
   
-- ?m=get&c=atom  
+- ? m get (& c) = = atom  
   
-- ?m=put&c=atom  
+- ? m put (& c) = = atom  
   
  クエリ文字列テンプレートの次のセットにはあいまいさがあります。  
   
@@ -313,24 +313,25 @@ Console.WriteLine("Bound URI: {0}", boundUri);
   
 - ?y=2  
   
- "x=1&y=2" は両方のテンプレートに一致します。 これは、クエリ文字列に、一致するテンプレートよりも多くのクエリ文字列変数が含まれている可能性があるからです。  
+ "x = 1 & y = 2"両方のテンプレートに一致します。 これは、クエリ文字列に、一致するテンプレートよりも多くのクエリ文字列変数が含まれている可能性があるからです。  
   
 - ?x=1  
   
-- ?x=1&y={var}  
+- ? x = 1 & y = {var}  
   
- "x=1&y=3" は両方のテンプレートに一致します。  
+ "x = 1 & y = 3"両方のテンプレートに一致します。  
   
-- ?x=3&y=4  
+- ? x = 3 (& y) = 4  
   
-- ?x=3&z=5  
+- ? x = 3 (& z) = 5  
   
 > [!NOTE]
 > 文字 á と Á が URI パスまたは <xref:System.UriTemplate> のパス セグメントのリテラルの一部として出現した場合、これらは異なる文字と見なされます (ただし、a と A は同じ文字と見なされます)。 文字 á と Á が <xref:System.UriTemplate> の {variableName} またはクエリ文字列の一部として出現した場合は、これらは同じ文字と見なされます (a と A も同じ文字と見なされます)。  
   
-## <a name="see-also"></a>関連項目  
- [WCF Web HTTP プログラミング モデルの概要](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
- [WCF Web HTTP プログラミング オブジェクト モデル](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
- [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  
- [UriTemplate テーブル](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
- [UriTemplate テーブル ディスパッチャー](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)
+## <a name="see-also"></a>関連項目
+
+- [WCF Web HTTP プログラミング モデルの概要](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [WCF Web HTTP プログラミング オブジェクト モデル](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+- [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)
+- [UriTemplate テーブル](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)
+- [UriTemplate テーブル ディスパッチャー](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)

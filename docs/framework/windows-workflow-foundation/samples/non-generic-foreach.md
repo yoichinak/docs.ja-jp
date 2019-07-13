@@ -2,12 +2,12 @@
 title: 非ジェネリックの ForEach
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: 0274cd5b87e6039ff40afa3108986ffd113fc4fb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 46db1d455bcbdd28e02d3cddfe0c9248b4abd91c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199563"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620850"
 ---
 # <a name="non-generic-foreach"></a>非ジェネリックの ForEach
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] のツールボックスには、制御フロー アクティビティのセットが用意されています。これには、<xref:System.Activities.Statements.ForEach%601> コレクションを反復処理できる <xref:System.Collections.Generic.IEnumerable%601> が含まれています。  
@@ -67,7 +67,7 @@ Activity sampleUsage =
    };  
 ```  
   
-|状態|メッセージ|重大度|例外の種類|  
+|条件|メッセージ|重要度|例外の種類|  
 |---------------|-------------|--------------|--------------------|  
 |値が `null` である|必須のアクティビティ引数 'Values' の値が指定されませんでした。|Error|<xref:System.InvalidOperationException>|  
   
@@ -95,13 +95,13 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
   
 #### <a name="to-run-this-sample"></a>このサンプルを実行するには  
   
-1.  選択したプロジェクトをソリューションのスタートアップ プロジェクトに設定します。  
+1. 選択したプロジェクトをソリューションのスタートアップ プロジェクトに設定します。  
   
-    1.  **CodeTestClient**コードを使用して、アクティビティを使用する方法を示しています。  
+    1. **CodeTestClient**コードを使用して、アクティビティを使用する方法を示しています。  
   
-    2.  **DesignerTestClient**デザイナー内でアクティビティを使用する方法を示しています。  
+    2. **DesignerTestClient**デザイナー内でアクティビティを使用する方法を示しています。  
   
-2.  プロジェクトをビルドして実行します。  
+2. プロジェクトをビルドして実行します。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  

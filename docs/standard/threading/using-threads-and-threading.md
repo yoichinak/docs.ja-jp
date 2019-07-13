@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4fd57de4c6e65c3c82d0dc71bcaf84d668f28bf
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: d23a12ff92202ace69cb80ff59d6afcb5d8f8243
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864230"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960380"
 ---
 # <a name="using-threads-and-threading"></a>スレッドの使用とスレッド処理
 
@@ -32,7 +32,7 @@ ms.locfileid: "43864230"
 
 スレッドの実行を終了するには、<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> メソッドを使用します。 このメソッドでは、呼び出されたスレッド上で <xref:System.Threading.ThreadAbortException> が生成されます。 詳細については、「[スレッドの破棄](destroying-threads.md)」を参照してください。
 
-.NET Framework 4 以降、<xref:System.Threading.CancellationToken?displayProperty=nameWithType> を使用してスレッドを協調的にキャンセルできます。 詳細については、「[スレッドの協調的な取り消し](canceling-threads-cooperatively.md)」を参照してください。
+.NET Framework 4 以降、<xref:System.Threading.CancellationToken?displayProperty=nameWithType> を使用してスレッドを協調的にキャンセルできます。 詳細については、「[マネージド スレッドのキャンセル](cancellation-in-managed-threads.md)」を参照してください。
 
 <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> メソッドを使用すると、そのメソッドが呼び出されたスレッドが終了するまで呼び出し元のスレッドを待機させるようにすることができます。
 
@@ -54,6 +54,6 @@ ms.locfileid: "43864230"
 
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Threading.Thread?displayProperty=nameWithType>  
-- [スレッドおよびスレッド処理](threads-and-threading.md)  
-- [並列プログラミング](../parallel-programming/index.md)  
+- <xref:System.Threading.Thread?displayProperty=nameWithType>
+- [スレッドおよびスレッド処理](threads-and-threading.md)
+- [並列プログラミング](../parallel-programming/index.md)

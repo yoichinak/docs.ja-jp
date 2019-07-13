@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, nullable types
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-ms.openlocfilehash: cd5ac40ca73f7c528a903d5863f3cf5880738f11
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 740b39c9c729f0768e75b0465eb8ca98eb5b318f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61710148"
 ---
 # <a name="nullable-types-c-programming-guide"></a>Null 許容型 (C# プログラミング ガイド)
 
@@ -55,12 +55,12 @@ Null 許容型には次の特性があります。
 
 詳細については、「[Null 許容型の使用](using-nullable-types.md)」と「[方法: Null 許容型を識別する](how-to-identify-a-nullable-type.md)」を参照してください。
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- <xref:System.Nullable%601?displayProperty=nameWithType>  
-- <xref:System.Nullable?displayProperty=nameWithType>  
-- [??演算子](../../language-reference/operators/null-coalescing-operator.md)  
-- [C# プログラミング ガイド](../index.md)  
-- [C# のガイド](../../index.md)  
-- [C# リファレンス](../../language-reference/index.md)  
-- [null 許容値型 (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
+- <xref:System.Nullable%601?displayProperty=nameWithType>
+- <xref:System.Nullable?displayProperty=nameWithType>
+- [??演算子](../../language-reference/operators/null-coalescing-operator.md)
+- [C# プログラミング ガイド](../index.md)
+- [C# のガイド](../../index.md)
+- [C# リファレンス](../../language-reference/index.md)
+- [null 許容値型 (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

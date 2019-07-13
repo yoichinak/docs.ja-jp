@@ -4,14 +4,14 @@ description: このドキュメントでは、Visual Studio Code を使用して
 author: bleroy
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: ad403ed96435f162899e600a317d00bab00638f2
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: e79f5dd90124d2a1902194af2edbde0f5df107c7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170285"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633977"
 ---
-# <a name="getting-started-with-net-core-on-macos"></a>macOS での .NET Core の概要
+# <a name="get-started-with-net-core-on-macos"></a>macOS での .NET Core の概要
 
 このドキュメントでは、macOS 用の .NET Core ソリューションを作成する手順とワークフローを説明します。 プロジェクトと単体テストを作成し、デバッグ ツールを使用して、[NuGet](https://www.nuget.org/) からサードパーティ製ライブラリを組み込む方法について説明します。
 
@@ -26,7 +26,7 @@ ms.locfileid: "53170285"
 
 Visual Studio Code C# 拡張機能をインストールするには、Visual Studio Code を開き、<kbd>F1</kbd> を押して Visual Studio Code パレットを開きます。 「**ext install**」と入力して、拡張機能の一覧を表示します。 C# 拡張機能を選択します。 Visual Studio Code を再起動して、拡張機能をアクティブにします。 詳細については、[Visual Studio Code C# 拡張機能のドキュメント](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)を参照してください。
 
-## <a name="getting-started"></a>作業の開始
+## <a name="get-started"></a>作業開始
 
 このチュートリアルでは 3 つのプロジェクト (ライブラリ プロジェクト、そのライブラリ プロジェクトのテスト、およびライブラリを使用するコンソール アプリケーション) を作成します。 GitHub の dotnet/samples レポジトリで、このトピックの[ソースを表示またはダウンロード](https://github.com/dotnet/samples/tree/master/core/getting-started/golden)することができます。 ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)」を参照してください。
 
@@ -215,7 +215,7 @@ dotnet run -p app/app.csproj
 
 Visual Studio Code ツール バーでデバッグ アイコンを選択するか、メニュー バーから **[表示]、[デバッグ]** の順に選択するか、あるいはキーボード ショートカットの <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd> を使用して、デバッガー タブを開きます。
 
-![Visual Studio Code デバッガー](./media/using-on-macos/vscodedebugger.png)
+![Visual Studio Code デバッガー](./media/using-on-macos/visual-studio-code-debugger.png)
 
 [再生] ボタンを押して、デバッガーでアプリケーションを開始します。 アプリは実行を開始し、ブレークポイントに達した時点で停止します。 `Get` メソッドにステップ インし、正しい引数を渡したことを確認します。 答えが 42 であることを確認してください。
 

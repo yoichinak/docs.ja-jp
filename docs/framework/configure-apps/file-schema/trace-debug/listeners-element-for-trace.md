@@ -1,5 +1,5 @@
 ---
-title: '&lt;リスナー&gt;要素&lt;トレース&gt;'
+title: <trace> の <listeners> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners
@@ -7,16 +7,14 @@ helpviewer_keywords:
 - <listeners> element
 - listeners element
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: bfcf96c553f85aeb0a40dfd6ea36667d504e8eee
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: f9f12d9e61e2472b897169727bbb4fbf9833efd6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701347"
 ---
-# <a name="ltlistenersgt-element-for-lttracegt"></a>&lt;リスナー&gt;要素&lt;トレース&gt;
+# <a name="listeners-element-for-trace"></a>\<リスナー > 要素の\<トレース >
 収集、するリスナーをストアを指定し、メッセージをルーティングします。 リスナーでは、適切なターゲットのトレースを出力します。  
   
  \<configuration > 要素  
@@ -86,6 +84,7 @@ ms.locfileid: "48028002"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Diagnostics.TraceListener>  
- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Diagnostics.TraceListener>
+- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

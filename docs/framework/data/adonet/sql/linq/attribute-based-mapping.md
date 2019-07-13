@@ -2,22 +2,22 @@
 title: 属性ベースの対応付け
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-ms.openlocfilehash: 81bbe8806694967d68c3e15da1d582092fb95e1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a524e37640959c20c9883aa68e978a89428e43a4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358181"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743623"
 ---
 # <a name="attribute-based-mapping"></a>属性ベースの対応付け
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] マップを SQL Server データベース、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]属性を適用するか、または外部マッピング ファイルを使用してオブジェクト モデルです。 このトピックでは、属性ベースの方法について説明します。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] マップを SQL Server データベース、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]いずれかの属性の適用、または外部マッピング ファイルを使用してオブジェクト モデルです。 このトピックでは、属性ベースの方法について説明します。  
   
- 大部分の基本フォームでは、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、データベースと <xref:System.Data.Linq.DataContext>、テーブルとクラス、列およびリレーションシップとそのクラスのプロパティを、それぞれ対応付けています。 属性を使用して、オブジェクト モデル内の継承階層を対応付けることもできます。 詳細については、次を参照してください。[する方法: Visual Basic または c# でのオブジェクト モデルの生成](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)です。  
+ 大部分の基本フォームでは、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、データベースと <xref:System.Data.Linq.DataContext>、テーブルとクラス、列およびリレーションシップとそのクラスのプロパティを、それぞれ対応付けています。 属性を使用して、オブジェクト モデル内の継承階層を対応付けることもできます。 詳細については、「[方法 :Visual Basic でオブジェクト モデルを生成またはC#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)します。  
   
- 通常の Visual Studio を使用している開発者を使用して属性ベースのマッピングを実行、[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]です。 また、SQLMetal コマンド ライン ツールを使用したり、自分で属性をハンド コードしたりすることもできます。 詳細については、次を参照してください。[する方法: Visual Basic または c# でのオブジェクト モデルの生成](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)です。  
+ 通常 Visual Studio を使用している開発者は、オブジェクト リレーショナル デザイナーを使用して属性ベースの対応付けを実行します。 また、SQLMetal コマンド ライン ツールを使用したり、自分で属性をハンド コードしたりすることもできます。 詳細については、「[方法 :Visual Basic でオブジェクト モデルを生成またはC#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)します。  
   
 > [!NOTE]
->  外部 XML ファイルを使用して対応付けることもできます。 詳細については、次を参照してください。[外部マッピング](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)です。  
+>  外部 XML ファイルを使用して対応付けることもできます。 詳細については、次を参照してください。[外部マッピング](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)します。  
   
  以下のセクションでは、属性ベースの対応付けについて詳しく説明します。 詳細については、「<xref:System.Data.Linq.Mapping>」を参照してください。  
   
@@ -48,8 +48,8 @@ ms.locfileid: "33358181"
   
 |プロパティ|種類|既定値|説明|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A>|AutoSync|Never|共通言語ランタイム (CLR) に対して、挿入または更新操作の後に値を取得することを指示します。<br /><br /> オプション : Always、Never、OnUpdate、OnInsert|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>|Boolean|`true`|列に null 値を含めることができることを示します。|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A>|AutoSync|Never|共通言語ランタイム (CLR) に対して、挿入または更新操作の後に値を取得することを指示します。<br /><br /> オプション:Always、Never、OnUpdate、OnInsert します。|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>|ブール型|`true`|列に null 値を含めることができることを示します。|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A>|String|推論によるデータベース列型|データベースの型と修飾子を使用して、データベース列の型を指定します。|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>|String|Empty|データベースの計算列を定義します。|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>|Boolean|`false`|データベースが自動生成する値が、列に含まれることを示します。|  
@@ -61,10 +61,10 @@ ms.locfileid: "33358181"
  詳細については、「<xref:System.Data.Linq.Mapping.ColumnAttribute>」を参照してください。  
   
 > [!NOTE]
->  AssociationAttribute プロパティ値と ColumnAttribute Storage プロパティ値では大文字と小文字が区別されます。 たとえば、AssociationAttribute.Storage  プロパティの属性に使用されている値は、コード内の別の場所で使用されている対応するプロパティ名と、大文字と小文字が一致するようにしてください。 これは、すべての .NET プログラミング言語も含めていない通常大文字と小文字は、Visual Basic などに適用されます。 Storage プロパティの詳細については、「<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>」を参照してください。  
+>  AssociationAttribute プロパティ値と ColumnAttribute Storage プロパティ値では大文字と小文字が区別されます。 たとえば、AssociationAttribute.Storage  プロパティの属性に使用されている値は、コード内の別の場所で使用されている対応するプロパティ名と、大文字と小文字が一致するようにしてください。 これは、すべての .NET プログラミング言語も含めて通常小文字は区別されません、Visual Basic などに適用されます。 Storage プロパティの詳細については、「<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>」を参照してください。  
   
 ## <a name="associationattribute-attribute"></a>AssociationAttribute 属性  
- この属性は、外部キーと主キーのリレーションシップなど、データベース内の関連付けを表すプロパティを指定するために使用します。 リレーションシップの詳細については、次を参照してください。[する方法: マップ データベース リレーションシップ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md)です。  
+ この属性は、外部キーと主キーのリレーションシップなど、データベース内の関連付けを表すプロパティを指定するために使用します。 リレーションシップの詳細については、次を参照してください。[方法。データベース リレーションシップを割り当てる](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md)」をご覧ください。  
   
  この属性のプロパティを次の表に示します。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "33358181"
  詳細については、「<xref:System.Data.Linq.Mapping.AssociationAttribute>」を参照してください。  
   
 > [!NOTE]
->  AssociationAttribute プロパティ値と ColumnAttribute Storage プロパティ値では大文字と小文字が区別されます。 たとえば、AssociationAttribute.Storage  プロパティの属性に使用されている値は、コード内の別の場所で使用されている対応するプロパティ名と、大文字と小文字が一致するようにしてください。 これは、すべての .NET プログラミング言語も含めていない通常大文字と小文字は、Visual Basic などに適用されます。 Storage プロパティの詳細については、「<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>」を参照してください。  
+>  AssociationAttribute プロパティ値と ColumnAttribute Storage プロパティ値では大文字と小文字が区別されます。 たとえば、AssociationAttribute.Storage  プロパティの属性に使用されている値は、コード内の別の場所で使用されている対応するプロパティ名と、大文字と小文字が一致するようにしてください。 これは、すべての .NET プログラミング言語も含めて通常小文字は区別されません、Visual Basic などに適用されます。 Storage プロパティの詳細については、「<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>」を参照してください。  
   
 ## <a name="inheritancemappingattribute-attribute"></a>InheritanceMappingAttribute 属性  
  この属性は、継承階層を対応付けるために使用します。  
@@ -140,7 +140,8 @@ ms.locfileid: "33358181"
 |<xref:System.Data.Linq.Mapping.DataAttribute.Name%2A>|String|データベース内の名前と同じ|テーブル、列などの名前を指定します。|  
 |<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>|String|パブリック アクセサー|基になるストレージ フィールドの名前を指定します。|  
   
- 詳細については、「<xref:System.Data.Linq.Mapping.DataAttribute>」を参照してください。  
+ 詳細については、「 <xref:System.Data.Linq.Mapping.DataAttribute> 」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [参照](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+## <a name="see-also"></a>関連項目
+
+- [参照](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

@@ -2,12 +2,12 @@
 title: PeerResolverBindingElement
 ms.date: 03/30/2017
 ms.assetid: 36882183-13a3-443f-8aae-62a7825d5633
-ms.openlocfilehash: 39945e77dd5650a587b2b5ea6ccabe5185e2c79a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fd70f584d269f5ada31b00ebaac9977987d42510
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61963034"
 ---
 # <a name="peerresolverbindingelement"></a>PeerResolverBindingElement
 PeerResolverBindingElement  
@@ -30,7 +30,7 @@ class PeerResolverBindingElement : BindingElement
 ### <a name="referralpolicy"></a>ReferralPolicy  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  ピア間で参照を共有する方法を指定します。  
   
@@ -38,7 +38,8 @@ class PeerResolverBindingElement : BindingElement
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
-|Namespace|root\ServiceModel で定義|  
+|名前空間|root\ServiceModel で定義|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>

@@ -2,12 +2,12 @@
 title: ピア チャネルのシナリオ
 ms.date: 03/30/2017
 ms.assetid: dae6e0f7-900c-45ee-8be9-3647698382fb
-ms.openlocfilehash: 42b16ea394b9375be14aed4b2792d306fcb62f2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 610668e5f3625c638fc1e814e0116df87970773b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046385"
 ---
 # <a name="peer-channel-scenarios"></a>ピア チャネルのシナリオ
 ピア チャネル API は、次の開発シナリオをサポートします。  
@@ -24,5 +24,6 @@ ms.locfileid: "33492985"
 ## <a name="gaming"></a>ゲーム  
  ピア チャネルを使用することで、アプリケーション開発者はサーバーを使用しないバージョンのゲームを作成できます。このゲームでは、中央サーバーを使用するのではなくピアツーピア メカニズムによって、ゲームの動作を他のプレーヤーに転送したり他のプレーヤーと同期したりします。 小規模の ISV では、これにより、中央サーバーの配置、保守、サービス提供などに関連する運用コストを削減できます。 ピアツーピア アーキテクチャを使用して記述されたゲームは、インターネットや有線または無線のローカル ネットワークでプレイできます。 さらに、ロビーやゲーム内チャットなどのゲームのアクティビティをピアツーピア ネットワークを使用して開発できます。  
   
-## <a name="see-also"></a>関連項目  
- [ピア チャネルの概要](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
+## <a name="see-also"></a>関連項目
+
+- [ピア チャネルの概要](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9de77f942a1b89b0ab11ef71229e491a5305cafc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ed7436ff73fa9cc19790859581930875f39e499e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420753"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746286"
 ---
 # <a name="icordebugnativeframegetlocaldoubleregistervalue-method"></a>ICorDebugNativeFrame::GetLocalDoubleRegisterValue メソッド
-引数またはこのネイティブ フレームの指定した 2 つのレジスタに格納されているローカル変数の値を取得します。  
+このネイティブ フレームに指定した 2 つのレジスタに格納されているローカル変数または引数の値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetLocalDoubleRegisterValue (  
     [in] CorDebugRegister   highWordReg,  
     [in] CorDebugRegister   lowWordReg,  
@@ -39,33 +39,32 @@ HRESULT GetLocalDoubleRegisterValue (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `highWordReg`  
- [in]値の上位ワードを含むレジスタを指定する"CorDebugRegister"列挙の値です。  
+ [in]値の上位ワードを含むレジスタを指定する"CorDebugRegister"列挙型の値。  
   
  `lowWordReg`  
- [in]値、`CorDebugRegister`値の下位ワードを含むレジスタを指定する列挙体です。  
+ [in]値、`CorDebugRegister`値の下位ワードを含むレジスタを指定する列挙体。  
   
  `cbSigBlob`  
  [in]によって参照されているバイナリ メタデータ シグネチャのサイズを指定する整数、`pvSigBlob`パラメーター。  
   
  `pvSigBlob`  
- [in]A`PCCOR_SIGNATURE`値の型のバイナリ メタデータ シグネチャを指している値。  
+ [in]A`PCCOR_SIGNATURE`値の型のバイナリ メタデータ シグネチャを示す値。  
   
  `ppValue`  
  [out]指定されたレジスタに格納されている取得した値を表す"ICorDebugValue"オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>コメント  
- `GetLocalDoubleRegisterValue`ネイティブ フレームまたは、ジャスト イン-タイム (JIT) のいずれか、メソッドを使用できます-フレームをコンパイルします。  
+## <a name="remarks"></a>Remarks  
+ `GetLocalDoubleRegisterValue`ネイティブ フレームまたはの just-in-time (JIT) で、メソッドを使用できます-フレームをコンパイルします。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- 
+## <a name="see-also"></a>関連項目

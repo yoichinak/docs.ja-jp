@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 7e400e20-5d1e-4d22-a65c-9df79d5c1621
-ms.openlocfilehash: c7593273893f1bb4961788b07fe716f234f0576f
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 90004ff2e9d5fcf1470b34b93091545b2b848b33
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42908772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025237"
 ---
 # <a name="xml-axis-properties-visual-basic"></a>XML 軸プロパティ (Visual Basic)
 このセクションのトピックでは、Visual Basic で XML 軸のプロパティの構文を文書化します。 XML 軸のプロパティを簡単に XML をコード内で直接アクセスします。  
@@ -27,5 +27,6 @@ ms.locfileid: "42908772"
 |[拡張インデクサー プロパティ](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)|個々 の要素のコレクションにアクセスする方法について説明します<xref:System.Xml.Linq.XElement>または<xref:System.Xml.Linq.XAttribute>オブジェクト。|  
 |[XML Value プロパティ](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)|コレクションの最初の要素の値にアクセスする方法について説明します<xref:System.Xml.Linq.XElement>または<xref:System.Xml.Linq.XAttribute>オブジェクト。|  
   
-## <a name="see-also"></a>関連項目  
- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
+## <a name="see-also"></a>関連項目
+
+- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)

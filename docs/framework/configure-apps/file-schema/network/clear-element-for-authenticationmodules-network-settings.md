@@ -1,5 +1,5 @@
 ---
-title: '&lt;オフ&gt;authenticationModules (ネットワーク設定) の要素'
+title: authenticationModules の <clear> 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/clear
@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <clear> element, authenticationModules
 - authenticationModules, clear element
 ms.assetid: dc522c45-4a80-4831-8955-f7b68a47edfd
-ms.openlocfilehash: 42fa6a44891e012300f61f1a11a47537c6739e2c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3c018c7d474286f7a9cde2d070e4b54d164b5b40
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674611"
 ---
-# <a name="ltcleargt-element-for-authenticationmodules-network-settings"></a>&lt;オフ&gt;authenticationModules (ネットワーク設定) の要素
+# <a name="clear-element-for-authenticationmodules-network-settings"></a>\<クリア > authenticationModules (ネットワーク設定) の要素
 アプリケーションからのすべての認証モジュールを削除します。  
   
  \<configuration>  
 \<system.net>  
-\<authenticationModules >  
-\<クリア >  
+\<authenticationModules>  
+\<clear>  
   
 ## <a name="syntax"></a>構文  
   
@@ -65,7 +65,8 @@ ms.locfileid: "50205192"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.Net.IAuthenticationModule>  
-- <xref:System.Net.AuthenticationManager>  
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Net.IAuthenticationModule>
+- <xref:System.Net.AuthenticationManager>
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

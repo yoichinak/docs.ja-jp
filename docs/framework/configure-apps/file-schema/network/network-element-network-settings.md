@@ -1,5 +1,5 @@
 ---
-title: '&lt;ネットワーク&gt;要素 (ネットワーク設定)'
+title: <network> 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#network
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <network> element
 - network element
 ms.assetid: 2c2c6ad4-ed11-48ab-b28e-2bc0ba9b42c7
-ms.openlocfilehash: 8e5f44c5e915f63dbcc34ccd985d69c7e5551fb8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c411e00026f03fdb355664049f8db00f3c800352
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674455"
 ---
-# <a name="ltnetworkgt-element-network-settings"></a>&lt;ネットワーク&gt;要素 (ネットワーク設定)
+# <a name="network-element-network-settings"></a>\<ネットワーク > 要素 (ネットワーク設定)
 外部の簡易メール転送プロトコル (SMTP) サーバーのネットワーク オプションを構成します。  
   
  \<configuration>  
@@ -62,7 +62,7 @@ ms.locfileid: "53144482"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<smtp > 要素 (ネットワーク設定)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|簡易メール転送プロトコル (SMTP) 電子メールの送信オプションを構成します。|  
+|[\<smtp> 要素 (ネットワーク設定)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|簡易メール転送プロトコル (SMTP) 電子メールの送信オプションを構成します。|  
   
 ## <a name="remarks"></a>Remarks  
  一部の SMTP サーバーでは、自分でを使用する前に、サーバーに対して認証することが必要です。 ホストの既定のネットワーク資格情報を使用して自分で認証を設定する場合、`defaultCredentials`属性を`true`します。 <xref:System.Net.Configuration.SmtpNetworkElement.DefaultCredentials%2A?displayProperty=nameWithType>プロパティを使用しての現在の値を取得すること、`defaultCredentials`該当する構成ファイルからの属性。  
@@ -109,8 +109,9 @@ ms.locfileid: "53144482"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.Net.Configuration.SmtpNetworkElement?displayProperty=nameWithType>  
-- <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>  
-- <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>  
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Net.Configuration.SmtpNetworkElement?displayProperty=nameWithType>
+- <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>
+- <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

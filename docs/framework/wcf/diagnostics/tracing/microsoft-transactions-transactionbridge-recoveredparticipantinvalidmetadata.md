@@ -2,12 +2,12 @@
 title: Microsoft.Transactions.TransactionBridge.RecoveredParticipantInvalidMetadata
 ms.date: 03/30/2017
 ms.assetid: 5d38eb27-bb00-4d7e-a234-50de8d90a0f9
-ms.openlocfilehash: 616f70301439081295a49563439b78d27dd2a7cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9d9b193df0e9db4a46b0febeeb183981d1ca2bb1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33475271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61997764"
 ---
 # <a name="microsofttransactionstransactionbridgerecoveredparticipantinvalidmetadata"></a>Microsoft.Transactions.TransactionBridge.RecoveredParticipantInvalidMetadata
 参加要素の回復ログ エントリで見つかったエンドポイント参照は、無効であるか、互換性のないメタデータを含んでいます。  
@@ -18,7 +18,8 @@ ms.locfileid: "33475271"
 ## <a name="troubleshooting"></a>トラブルシューティング  
  問題が再発する場合は、マイクロソフトに連絡してください。  
   
-## <a name="see-also"></a>関連項目  
- [トレース](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [トレースを使用したアプリケーションのトラブルシューティング](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [管理と診断](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>関連項目
+
+- [トレース](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [トレースを使用したアプリケーションのトラブルシューティング](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [管理と診断](../../../../../docs/framework/wcf/diagnostics/index.md)

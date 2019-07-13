@@ -1,5 +1,5 @@
 ---
-title: 方法 :ピクセルをコピーして Windows フォームのちらつきを低減する
+title: '方法: ピクセルをコピーして Windows フォームのちらつきを低減する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,22 +13,22 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: dc5f05ff4ea9f3c2b828cbe37860e1bd241fc604
-ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
+ms.openlocfilehash: e3d1c2b681e98dc7c45467683924dd4022eb377e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937749"
 ---
-# <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>方法 :ピクセルをコピーして Windows フォームのちらつきを低減する
-単純なグラフィックをアニメーション化するときにユーザーことができる場合もありますが発生ちらつき、またはその他の望ましくない視覚効果。 この問題を制限する 1 つの方法は、プロセスを使用して、"bitblt"画像の上です。 Bitblt は、「ビット ブロック転送」色データの元の四角形にはピクセルからピクセルの四角形に。  
+# <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>方法: ピクセルをコピーして Windows フォームのちらつきを低減する
+単純なグラフィックをアニメーション化するとユーザーことができます、ちらつき、またはその他の望ましくない視覚効果発生場合があります。 この問題を制限する方法の 1 つでは、グラフィック"bitblt"プロセスを使用します。 Bitblt 関数は、「ビット ブロック転送」カラー データのピクセルの四角形を配信元からのピクセルの四角形に。  
   
- Windows フォームで bitblt が使用される、<xref:System.Drawing.Graphics.CopyFromScreen%2A>のメソッド、<xref:System.Drawing.Graphics>クラスです。 メソッドのパラメーターでは、ソースと宛先 (ポイント) として、コピーするのには、領域のサイズおよび新しい図形の描画に使用するグラフィックス オブジェクトを指定します。  
+ 使用して Windows フォーム、bitblt 関数が実行は、<xref:System.Drawing.Graphics.CopyFromScreen%2A>のメソッド、<xref:System.Drawing.Graphics>クラス。 メソッドのパラメーターでは、ソースと宛先 (ポイント単位) として、コピーされる領域のサイズに新しい図形を描画するために使用するグラフィックス オブジェクトを指定します。  
   
- 次の例では、図形が描画されるフォームでその<xref:System.Windows.Forms.Control.Paint>イベント ハンドラー。 次に、<xref:System.Drawing.Graphics.CopyFromScreen%2A>メソッドは、図形の複製に使用します。  
+ 次の例でのフォームの形状を描画、<xref:System.Windows.Forms.Control.Paint>イベント ハンドラー。 次に、<xref:System.Drawing.Graphics.CopyFromScreen%2A>メソッドを使用して、図形が重複しています。  
   
 > [!NOTE]
->  設定、フォームの<xref:System.Windows.Forms.Control.DoubleBuffered%2A>プロパティを`true`でグラフィックス ベースのコードになります、<xref:System.Windows.Forms.Control.Paint>イベントとなるダブル バッファリングします。 ないすべての認識できるようなパフォーマンスの向上次のコードを使用する場合より複雑なグラフィックス操作のコードを使用する場合に留意するものがあります。  
+>  フォームの設定<xref:System.Windows.Forms.Control.DoubleBuffered%2A>プロパティを`true`でグラフィックス ベースのコードになります、<xref:System.Windows.Forms.Control.Paint>ダブル バッファーされたイベントがあります。 認識できるようなパフォーマンス上のメリットは、次のコードを使用するときにこれがないより複雑なグラフィックス操作のコードを使用する場合に留意すべきことです。  
   
 ## <a name="example"></a>例  
   
@@ -60,11 +60,12 @@ private void Form1_Paint(System.Object sender,
 ```  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- 上記のコードをフォームの実行は<xref:System.Windows.Forms.Control.Paint>イベント ハンドラー、フォームが再描画されると、グラフィックスが永続化できるようにします。 そのためグラフィックスに関連するメソッドを呼び出す必要はありません、 <xref:System.Windows.Forms.Form.Load> 、イベント ハンドラー描画済みのコンテンツが再描画されませんフォームがサイズ変更されるか、別の形式によって隠されるためです。  
+ 上記のコードは、フォームの実行は<xref:System.Windows.Forms.Control.Paint>イベント ハンドラー、フォームが再描画されるときに、グラフィックスが持続するようにします。 そのため、呼び出さないでくださいグラフィックに関連するメソッド、<xref:System.Windows.Forms.Form.Load>イベント ハンドラーでは、フォームのサイズを変更または別の形式によって隠されている場合、描画のコンテンツは描画しないためです。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Drawing.CopyPixelOperation>  
- <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.Control.OnPaint%2A?displayProperty=nameWithType>  
- [Windows フォームにおけるグラフィックスと描画](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- [ペンを使用した直線と図形の描画](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Drawing.CopyPixelOperation>
+- <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Control.OnPaint%2A?displayProperty=nameWithType>
+- [Windows フォームにおけるグラフィックスと描画](graphics-and-drawing-in-windows-forms.md)
+- [ペンを使用した直線と図形の描画](using-a-pen-to-draw-lines-and-shapes.md)

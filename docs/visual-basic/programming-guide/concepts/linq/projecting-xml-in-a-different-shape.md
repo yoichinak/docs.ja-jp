@@ -1,15 +1,15 @@
 ---
-title: 別の図形 (Visual Basic) で XML を射影すること
+title: さまざまな図形 (Visual Basic) での XML の射影
 ms.date: 07/20/2015
 ms.assetid: 2da7ec97-34f7-443d-9a48-b162ac58236b
-ms.openlocfilehash: d5fe201b14bdfa81bd4c750e17eaef6ba6e895f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e5639948cbc264a4b17cffe80de70b011e4d2a70
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645656"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64666122"
 ---
-# <a name="projecting-xml-in-a-different-shape-visual-basic"></a>別の図形 (Visual Basic) で XML を射影すること
+# <a name="projecting-xml-in-a-different-shape-visual-basic"></a>さまざまな図形 (Visual Basic) での XML の射影
 このトピックでは、ソース XML とは異なる構造の XML を射影する例について説明します。  
   
  一般的な XML 変換の多くは、この例のように連結されたクエリで構成されます。 通常、ある形式の XML から開始して、中間結果を匿名型または名前付き型のコレクションとして射影し、最終的にその結果をソース XML とはまったく異なる構造の XML に射影します。  
@@ -17,7 +17,7 @@ ms.locfileid: "33645656"
 ## <a name="example"></a>例  
  この例では、WordprocessingML ドキュメントを処理して、WordprocessingML ドキュメントから段落ノードを取得します。 それぞれの段落のスタイルおよびテキストも特定します。 最後に、別の構造を持った XML を射影します。 この例は、このチュートリアルのこれまでの例に基づいています。 射影を行う新しいステートメントについては、以下のコード内にあるコメントで説明が示されています。  
   
- この例のソース ドキュメントを作成する方法の詳細については、次を参照してください。[ソース Office Open XML ドキュメント (Visual Basic) を作成する](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)です。  
+ この例のソース ドキュメントの作成手順については、次を参照してください。[ソース Office Open XML ドキュメント (Visual Basic) を作成する](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)します。  
   
  この例では、WindowsBase アセンブリのクラスを使用します。 また、<xref:System.IO.Packaging?displayProperty=nameWithType> 名前空間内の型を使用します。  
   
@@ -230,7 +230,8 @@ End Module
 ## <a name="next-steps"></a>次の手順  
  次の例では、クエリを実行して Word 文書内のテキストをすべて検索します。  
   
--   [Word 文書 (Visual Basic) でのテキストの検索](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [Word 文書 (Visual Basic) でのテキストの検索](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
-## <a name="see-also"></a>関連項目  
- [チュートリアル: WordprocessingML ドキュメント (Visual Basic) 内のコンテンツの操作](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a>関連項目
+
+- [チュートリアル: WordprocessingML ドキュメント (Visual Basic) 内のコンテンツの操作](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

@@ -17,35 +17,36 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5c3185dc6d488223d5882f543f0c690d82261b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9b6c839cc664105149f26b0d21d7ba7fb91b3e29
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402445"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742203"
 ---
 # <a name="closeenum-method"></a>CloseEnum メソッド
-指定の列挙体を閉じるし、関連付けられているリソースを解放します。  
+指定の列挙体を終了し、関連付けられているリソースを解放します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CloseEnum(  
     HALINKENUM hEnum  
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `hEnum`  
- 終了する列挙体のハンドルです。  
+ 終了する列挙体のハンドル。  
   
 ## <a name="return-value"></a>戻り値  
  メソッドが成功した場合は、S_OK を返します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  Alink.h が必要です。  
   
-## <a name="see-also"></a>関連項目  
- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>関連項目
+
+- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

@@ -2,12 +2,12 @@
 title: Windows のイベント トレースへの追跡イベント
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 70c75be09528b31572bdf0dc322af5bcd7e3ca5d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: d3afc04fec996f4e24eb6e5ad771886480cd9cb9
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837285"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491043"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Windows のイベント トレースへの追跡イベント
 このサンプルでは、Windows Workflow Foundation (WF) ワークフロー サービスの追跡を有効にして、追跡イベントで Event Tracing for Windows (ETW) を出力する方法を示します。 ワークフロー追跡レコードを ETW に出力するために、このサンプルでは ETW 追跡参加要素 (<xref:System.Activities.Tracking.EtwTrackingParticipant>) を使用します。
@@ -39,33 +39,33 @@ ms.locfileid: "48837285"
 
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには
 
-1.  Visual Studio 2010 を使用して、EtwTrackingParticipantSample.sln ソリューション ファイルを開きます。
+1. Visual Studio 2010 を使用して、EtwTrackingParticipantSample.sln ソリューション ファイルを開きます。
 
-2.  ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。
+2. ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。
 
-3.  ソリューションを実行するには、F5 キーを押します。
+3. ソリューションを実行するには、F5 キーを押します。
 
      既定では、サービスがリッスンしているポート 53797 (http://localhost:53797/SampleWorkflowService.xamlx)します。
 
-4.  [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] を使用して、WCF テスト クライアントを開きます。
+4. ファイル エクスプ ローラーを使用して、WCF テスト クライアントを開きます。
 
      WCF テスト クライアント (WcfTestClient.exe) にある、 \<Visual Studio 2010 のインストール フォルダー > \Common7\IDE\ フォルダーにあります。
 
      既定の Visual Studio 2010 のインストール フォルダーは、C:\Program files \microsoft Visual Studio 10.0 です。
 
-5.  WCF テスト クライアントで次のように選択します。**サービスの追加**から、**ファイル**メニュー。
+5. WCF テスト クライアントで次のように選択します。**サービスの追加**から、**ファイル**メニュー。
 
      入力ボックスにエンドポイントのアドレスを追加します。 既定値は `http://localhost:53797/SampleWorkflowService.xamlx` です。
 
-6.  イベント ビューアー アプリケーションを開きます。
+6. イベント ビューアー アプリケーションを開きます。
 
      サービスを呼び出す前に起動してからイベント ビューアー、**開始**メニューの **実行**に入力`eventvwr.exe`します。 ワークフロー サービスから生成された追跡イベントをイベント ログでリッスンしていることを確認します。
 
-7.  イベント ビューアーのツリー ビューでに移動します。**イベント ビューアー**、 **Applications and Services Logs**、および**Microsoft**します。 右クリック**Microsoft**選択と**ビュー**し**分析およびデバッグ ログ**およびデバッグ ログの分析を有効にするには
+7. イベント ビューアーのツリー ビューでに移動します。**イベント ビューアー**、 **Applications and Services Logs**、および**Microsoft**します。 右クリック**Microsoft**選択と**ビュー**し**分析およびデバッグ ログ**およびデバッグ ログの分析を有効にするには
 
      いることを確認、 **分析およびデバッグ ログ**オプションをオンにします。
 
-8.  イベント ビューアーのツリー ビューでに移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、 。**アプリケーション サーバー-アプリケーション**します。 右クリック**分析**選択**ログの有効化**有効にする、**分析**ログ。
+8. イベント ビューアーのツリー ビューでに移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、 。**アプリケーション サーバー-アプリケーション**します。 右クリック**分析**選択**ログの有効化**有効にする、**分析**ログ。
 
 9. WCF テスト クライアントで、`GetData` をダブルクリックしてサービスをテストします。
 
@@ -123,13 +123,13 @@ ms.locfileid: "48837285"
 
 #### <a name="to-clean-up-optional"></a>クリーンアップするには (省略可能)
 
-1.  イベント ビューアーを開きます。
+1. イベント ビューアーを開きます。
 
-2.  移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、**アプリケーションサーバー-アプリケーション**します。 右クリック**分析**選択**ログの無効化**します。
+2. 移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、**アプリケーションサーバー-アプリケーション**します。 右クリック**分析**選択**ログの無効化**します。
 
-3.  移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、**アプリケーションサーバー-アプリケーション**します。 右クリック**分析**選択**ログの消去**します。
+3. 移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、**アプリケーションサーバー-アプリケーション**します。 右クリック**分析**選択**ログの消去**します。
 
-4.  選択、**オフ**イベントを消去するオプション。
+4. 選択、**オフ**イベントを消去するオプション。
 
 ## <a name="known-issue"></a>既知の問題
 
@@ -149,5 +149,6 @@ ms.locfileid: "48837285"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`  
   
-## <a name="see-also"></a>関連項目  
- [AppFabric の監視のサンプル](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>関連項目
+
+- [AppFabric の監視のサンプル](https://go.microsoft.com/fwlink/?LinkId=193959)

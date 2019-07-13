@@ -5,24 +5,24 @@ helpviewer_keywords:
 - StatusStrip control [Windows Forms]
 - status bars
 ms.assetid: eb1e59da-0a48-4ce5-af7d-13b8e75af4b1
-ms.openlocfilehash: 157db8b9fbbbb6e1c6af41b4cf3903f4a762d763
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e4146cf1897a2d83128a97fc3900aa7a10d59109
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756157"
 ---
 # <a name="statusstrip-control"></a>StatusStrip コントロール
 Windows フォームの `StatusStrip` コントロールは、フォーム上で領域として使用され、通常はウィンドウの下端に表示されます。アプリケーションは、このコントロールにさまざまな種類のステータス情報を表示できます `StatusStrip` コントロールには、通常は `ToolStripStatusLabel` コントロールを配置し、状態を示すためのテキストまたはアイコンや、処理の完了状態を視覚的に表示するための <xref:System.Windows.Forms.ToolStripProgressBar> を表示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [StatusStrip コントロールの概要](../../../../docs/framework/winforms/controls/statusstrip-control-overview.md)  
- このコントロールの用途、主な機能、およびプロパティについて説明します。  
+ [StatusStrip コントロールの概要](statusstrip-control-overview.md)  
+ このコントロールについて、および主な機能とプロパティについて説明します。  
   
- [方法: StatusStrip 内で Spring プロパティを対話的に使用する](../../../../docs/framework/winforms/controls/how-to-use-the-spring-property-interactively-in-a-statusstrip.md)  
+ [方法: Statusstrip 内で Spring プロパティを対話的に使用します。](how-to-use-the-spring-property-interactively-in-a-statusstrip.md)  
  `Spring` プロパティを使用して、`ToolStripStatusLabel` を `StatusStrip` 内で対話式に中央揃えする方法を示します。  
   
- 参照してください[StatusStrip Items コレクション エディター](https://msdn.microsoft.com/library/ms233631\(v=vs.110\))、 [StatusStrip Items コレクション エディター](https://msdn.microsoft.com/library/ms233642\(v=vs.110\))します。  
+ 参照してください[StatusStrip Items コレクション エディター](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233631(v=vs.100))と[StatusStrip タスク ダイアログ ボックス](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233642(v=vs.100))します。  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Forms.StatusStrip>  
@@ -31,5 +31,6 @@ Windows フォームの `StatusStrip` コントロールは、フォーム上で
  <xref:System.Windows.Forms.ToolStripStatusLabel>  
  クラスとそのメンバーに関するリファレンス情報を提供します。  
   
-## <a name="see-also"></a>関連項目  
- [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>関連項目
+
+- [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)

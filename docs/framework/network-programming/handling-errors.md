@@ -31,12 +31,12 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: d199219b36e2cc06314b38303fb2296f9f3794ea
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 26e2a25855485bdd19d30e8497d0f75b7d4432e0
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198342"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59097162"
 ---
 # <a name="handling-errors"></a>エラー処理
 <xref:System.Net.WebRequest> および <xref:System.Net.WebResponse> クラスでは、システム例外 (<xref:System.ArgumentException> など) と Web 固有の例外 (<xref:System.Net.WebRequest.GetResponse%2A> メソッドでスローされる <xref:System.Net.WebException>) の両方がスローされます。  
@@ -167,6 +167,7 @@ End Try
   
  **SocketException** がスローされると、**SocketException** クラスは <xref:System.Net.Sockets.SocketException.ErrorCode%2A> プロパティを、最後に発生したオペレーティング システムのソケット エラーに設定します。 ソケット エラー コードの詳細については、MSDN の Winsock 2.0 API エラー コードに関するドキュメントを参照してください。  
   
-## <a name="see-also"></a>参照  
- [例外処理の基本事項](../../../docs/standard/exceptions/exception-handling-fundamentals.md)  
- [データの要求](../../../docs/framework/network-programming/requesting-data.md)
+## <a name="see-also"></a>関連項目
+
+- [例外処理の基本事項](../../../docs/standard/exceptions/exception-handling-fundamentals.md)
+- [データの要求](../../../docs/framework/network-programming/requesting-data.md)

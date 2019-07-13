@@ -9,12 +9,12 @@ helpviewer_keywords:
 - return statement [C#]
 - return keyword [C#]
 ms.assetid: 6da6e152-5b58-4448-8f3f-470dd0617ecd
-ms.openlocfilehash: 058dc1d51099196559bee4ec2b96dc883e813f93
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3e89f2f854d1f66ca2d7bf1cfa5a507c267798f8
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236559"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422717"
 ---
 # <a name="return-c-reference"></a>return (C# リファレンス)
 
@@ -38,4 +38,3 @@ ms.locfileid: "53236559"
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
 - [return ステートメント](/cpp/cpp/return-statement-cpp)
-- [ジャンプ ステートメント](jump-statements.md)

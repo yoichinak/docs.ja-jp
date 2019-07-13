@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 68593509e384b2acd33fad0f476b6f300f2dbd92
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e72e091d9b120042254df5de323169f6f67c61d4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202187"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616068"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (マネージド プロファイル ガイド付き最適化ツール)
 
@@ -25,7 +25,7 @@ ms.locfileid: "50202187"
   
 中間言語 (IL) アセンブリの起動時間および作業セット サイズでパフォーマンスの問題が見つかった場合、Just-In-Time (JIT) コンパイルのコストを回避し、コード共有を容易にするために、最初に Ngen.exe を使用することをお勧めします。 さらなる向上が必要な場合は、アプリケーションを最適化するために Mpgo.exe を使用できます。 パフォーマンスの向上を評価するためのベースラインとして、最適化されていないネイティブ イメージ アセンブリからのパフォーマンス データを使用できます。 Mpgo.exe を使用することにより、コールド スタートの時間を短縮し、作業セットのサイズを縮小できます。 Mpgo.exe は、最適化されたネイティブ イメージ アセンブリを作成するために Ngen.exe で使用される IL アセンブリに情報を追加します。 詳しくは、.NET ブログ エントリの「[Improving Launch Performance for your Desktop Applications](https://go.microsoft.com/fwlink/p/?LinkId=248943)」 (デスクトップ アプリケーションの起動時のパフォーマンスの向上) をご覧ください。  
   
-このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、管理者の資格情報で開発者コマンド プロンプト (または、Windows 7 の Visual Studio コマンド プロンプト) を使用し、コマンド プロンプトで次のように入力します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
+このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、管理者の資格情報で Visual Studio 用開発者コマンド プロンプト (または、Windows 7 の Visual Studio コマンド プロンプト) を使用し、コマンド プロンプトで次のように入力します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
   
 デスクトップ アプリの場合:  
   
@@ -41,7 +41,7 @@ mpgo –Scenario <command> [-Import <directory>] –AssemblyList <assembly1>  <a
 mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  Mpgo.exe では、どの引数も大文字と小文字が区別されません。 コマンドには、ダッシュがプレフィックスとして付けられます。  
   
 > [!NOTE]
@@ -65,7 +65,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 |`-LeaveNativeImages`|インストルメント化されたネイティブ イメージはシナリオの実行後に削除されないことを指定します。 このオプションは、主に、実行中のシナリオ用に指定したアプリケーションを取得するときに使用されます。 これにより、Mpgo.exe のその後の実行に対してネイティブ イメージを再生成できなくなります。 このオプションを指定した場合、アプリケーションの実行の完了後に、キャッシュ内に孤立したネイティブ イメージが存在する可能性があります。 この場合、同じシナリオおよびアセンブリ リストと共に Mpgo.exe を実行し、`–RemoveNativeImages` パラメーターを使用することによって、こうしたネイティブ イメージを削除します。|
 |`-RemoveNativeImages`|`–LeaveNativeImages` が指定された実行からクリーンアップします。 `-RemoveNativeImages` を指定すると、Mpgo.exe は `-64bit` と `–AssemblyList` を除く引数を無視して、すべてのインストルメントされたネイティブ イメージを削除すると終了します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
  `–AssemblyList` と `- AssemblyListFile` の両方をコマンド行で複数回、使用できます。
 
  アセンブリを指定する際に完全パス名を指定しないと、Mpgo.exe は現在のディレクトリ内を調べます。 正しくないパスを指定した場合、Mpgo.exe がエラー メッセージを表示しますが、他のアセンブリに対するデータの生成は続行されます。 トレーニング シナリオの実行中に読み込まれていないアセンブリを指定すると、トレーニングのデータがそのアセンブリに対して生成されません。
@@ -79,36 +79,36 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
   
 ## <a name="to-use-mpgoexe"></a>Mpgo.exe を使用するには  
   
-1.  Visual Studio Ultimate 2012 およびアプリケーションがインストールされたコンピューターを使用します。  
+1. Visual Studio Ultimate 2012 およびアプリケーションがインストールされたコンピューターを使用します。  
   
-2.  管理者として必要なパラメーターと共に Mpgo.exe を実行します。  サンプル コマンドについては、次のセクションを参照してください。  
+2. 管理者として必要なパラメーターと共に Mpgo.exe を実行します。  サンプル コマンドについては、次のセクションを参照してください。  
   
      最適化された中間言語 (IL) アセンブリが `–OutDir` パラメーターによって指定したフォルダー内に作成されます (この例では、`C:\Optimized` フォルダー)。  
   
-3.  `–OutDir` によって指定したディレクトリからのプロファイル情報を含む新しい IL アセンブリにより、Ngen.exe で使用する IL アセンブリを置き換えます。  
+3. `–OutDir` によって指定したディレクトリからのプロファイル情報を含む新しい IL アセンブリにより、Ngen.exe で使用する IL アセンブリを置き換えます。  
   
-4.  (Mpgo.exe によって提供されるイメージを使用した) アプリケーション セットアップでは、最適化されたネイティブなイメージがインストールされます。  
+4. (Mpgo.exe によって提供されるイメージを使用した) アプリケーション セットアップでは、最適化されたネイティブなイメージがインストールされます。  
   
 ## <a name="suggested-workflow"></a>推奨されるワークフロー  
   
-1.  `–Scenario` パラメーターと共に Mpgo.exe を使用することにより、一連の最適化された IL アセンブリを作成します。  
+1. `–Scenario` パラメーターと共に Mpgo.exe を使用することにより、一連の最適化された IL アセンブリを作成します。  
   
-2.  ソース管理に最適化された IL アセンブリをチェックインします。  
+2. ソース管理に最適化された IL アセンブリをチェックインします。  
   
-3.  ビルド プロセスで、Ngen.exe に渡す最適化された IL イメージを生成するために、ビルド後のステップとして `–Import` パラメーターと共に Mpgo.exe を呼び出します。  
+3. ビルド プロセスで、Ngen.exe に渡す最適化された IL イメージを生成するために、ビルド後のステップとして `–Import` パラメーターと共に Mpgo.exe を呼び出します。  
   
  このプロセスでは、すべてのアセンブリが最適化データを持つことが保証されます。 更新および最適化されたアセンブリのチェックインをより頻繁に行う場合 (ステップ 1 および 2)、製品開発全体でパフォーマンス値はより一貫したものになります。  
   
 ## <a name="using-mpgoexe-from-visual-studio"></a>Visual Studio の Mpgo.exe の使用  
- Visual Studio から次の制限で Mpgo.exe を実行できます (記事 「[方法: ビルド イベントを指定する (C#)](/visualstudio/ide/how-to-specify-build-events-csharp)」を参照)。  
+ Visual Studio から次の制限で Mpgo.exe を実行できます ([方法: ビルド イベントを指定する (C#)](/visualstudio/ide/how-to-specify-build-events-csharp) という記事を参照してください)。  
   
--   既定では Visual Studio マクロも末尾でスラッシュを使用するので、末尾にスラッシュを含む引用符付きのパスを使用することはできません。 (たとえば、`–OutDir "C:\Output Folder\"` は無効です。)この制限を回避するために、末尾のスラッシュをエスケープできます。 (たとえば、代わりに `-OutDir "$(OutDir)\"` を使用します。)  
+- 既定では Visual Studio マクロも末尾でスラッシュを使用するので、末尾にスラッシュを含む引用符付きのパスを使用することはできません。 (たとえば、`–OutDir "C:\Output Folder\"` は無効です。)この制限を回避するために、末尾のスラッシュをエスケープできます。 (たとえば、代わりに `-OutDir "$(OutDir)\"` を使用します。)  
   
--   既定では、Mpgo.exe は Visual Studio のビルド パス上にありません。 Visual Studio にこのパスを追加するか、Mpgo のコマンド ラインで完全パスを指定する必要があります。 Visual Studio でビルド後イベントに `–Scenario` または `–Import` パラメーターのいずれかを使用できます。 ただし、通常のプロセスは開発者コマンド プロンプトから `–Scenario` を 1 度使用し、その後各ビルド後に最適化されたアセンブリを更新するために `–Import` を使用します (たとえば、`"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`)。  
+- 既定では、Mpgo.exe は Visual Studio のビルド パス上にありません。 Visual Studio にこのパスを追加するか、Mpgo のコマンド ラインで完全パスを指定する必要があります。 Visual Studio でビルド後イベントに `–Scenario` または `–Import` パラメーターのいずれかを使用できます。 ただし、通常のプロセスでは、Visual Studio 用開発者コマンド プロンプトから `–Scenario` を一度使用し、その後 `–Import` を使用し、各ビルド後に最適化されたアセンブリを更新します (たとえば、`"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`)。  
   
 <a name="samples"></a>   
 ## <a name="examples"></a>使用例  
- Visual Studio 開発者コマンド プロンプトから次の Mpgo.exe コマンドにより税処理アプリケーションを最適化します。  
+ Visual Studio 用開発者コマンド プロンプトから次の Mpgo.exe コマンドにより税処理アプリケーションを最適化します。  
   
 ```  
 mpgo –scenario "C:\MyApp\MyTax.exe /params par" –AssemblyList Mytax.dll MyTaxUtil2011.dll –OutDir C:\Optimized –TimeOut 15  
@@ -126,8 +126,9 @@ mpgo –scenario "C:\MyApp\wav2wma.exe –input song1.wav –output song1.wma" �
 mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyTaxUtil2011.dll" -outdir C:\ReOptimized  
 ```  
   
-## <a name="see-also"></a>参照  
- [Ngen.exe (ネイティブ イメージ ジェネレーター)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)  
- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
- [デスクトップ アプリケーションの起動時のパフォーマンスの向上](https://go.microsoft.com/fwlink/p/?LinkId=248943)  
- [.NET 4.5 のパフォーマンスの向上の概要](https://go.microsoft.com/fwlink/p/?LinkId=249131)
+## <a name="see-also"></a>関連項目
+
+- [Ngen.exe (ネイティブ イメージ ジェネレーター)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)
+- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [デスクトップ アプリケーションの起動時のパフォーマンスの向上](https://go.microsoft.com/fwlink/p/?LinkId=248943)
+- [.NET 4.5 のパフォーマンスの向上の概要](https://go.microsoft.com/fwlink/p/?LinkId=249131)

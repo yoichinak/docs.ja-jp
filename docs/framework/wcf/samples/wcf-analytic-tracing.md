@@ -2,12 +2,12 @@
 title: WCF 分析トレース
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: a5e4b82bd28cae18f393a4143325623634d4bbaf
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 95a4335ef41240e8cc85c06b7997c12d98800b1d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147425"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624234"
 ---
 # <a name="wcf-analytic-tracing"></a>WCF 分析トレース
 このサンプルは、Windows Communication Foundation (WCF) が ETW に書き込む分析トレースのストリームに独自のトレース イベントを追加する方法を示します[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]します。 分析トレースは、パフォーマンスを低下させずに簡単にサービスを確認できるようにするためのものです。 このサンプルは、使用する方法を示します、 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> Api を WCF サービスと統合されるイベントを記述します。  
@@ -22,13 +22,13 @@ ms.locfileid: "53147425"
 ## <a name="self-hosting-vs-web-hosting"></a>自己ホスト型と Web ホスト  
  Web ホスト サービスでは、WCF の分析トレースは、"HostReference"は、サービスは、トレースの出力を識別するために使用をという名前のフィールドを指定します。 拡張可能なユーザー トレースをこのモデルに加えることができます。このサンプルで、そのためのベスト プラクティスを示します。 Web ホストの形式を参照場合に、パイプ '&#124;' 文字が実際には、最終的な表示文字列は、次のいずれかを指定できます。  
   
--   アプリケーションがルート以外にある場合  
+- アプリケーションがルート以外にある場合  
   
      \<サイト名 >\<ApplicationVirtualPath >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
   
--   アプリケーションがルートにある場合  
+- アプリケーションがルートにある場合  
   
-     \<サイト名 >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
+     \<SiteName>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
   
  自己ホスト型サービスは、WCF の分析トレースで"HostReference"フィールドは設定されません。 このサンプルの `WCFUserEventProvider` クラスは、自己ホスト型サービスで使用した場合も同じように動作します。  
   
@@ -43,31 +43,31 @@ ms.locfileid: "53147425"
   
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには  
   
-1.  Visual Studio 2012 を使用して、WCFAnalyticTracingExtensibility.sln ソリューション ファイルを開きます。  
+1. Visual Studio 2012 を使用して、WCFAnalyticTracingExtensibility.sln ソリューション ファイルを開きます。  
   
-2.  ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。  
+2. ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。  
   
-3.  ソリューションを実行するには、Ctrl キーを押しながら F5 キーを押します。  
+3. ソリューションを実行するには、Ctrl キーを押しながら F5 キーを押します。  
   
      Web ブラウザーで次のようにクリックします。 **[calculator.svc]** します。 サービスの WSDL ドキュメントの URI がブラウザーに表示されます。 その URI をコピーします。  
   
-4.  WCF テスト クライアント (WcfTestClient.exe) を実行します。  
+4. WCF テスト クライアント (WcfTestClient.exe) を実行します。  
   
      WCF テスト クライアント (WcfTestClient.exe) は`\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`します。 既定の Visual Studio 2012 のインストール ディレクトリは`C:\Program Files\Microsoft Visual Studio 10.0`します。  
   
-5.  選択して、サービスを追加、WCF テスト クライアント内で**ファイル**、し**サービスの追加**します。  
+5. 選択して、サービスを追加、WCF テスト クライアント内で**ファイル**、し**サービスの追加**します。  
   
      入力ボックスにエンドポイントのアドレスを追加します。  
   
-6.  クリックして**OK**ダイアログ ボックスを閉じます。  
+6. クリックして**OK**ダイアログ ボックスを閉じます。  
   
      下の左ペインで、ICalculator サービスが追加された**マイ サービス プロジェクト**します。  
   
-7.  イベント ビューアー アプリケーションを開きます。  
+7. イベント ビューアー アプリケーションを開きます。  
   
      サービスを呼び出す前に、イベント ビューアーを起動し、WCF サービスから生成された追跡イベントのイベント ログがリッスンしていることを確認します。  
   
-8.  **開始**メニューの **管理ツール**、し**イベント ビューアー**します。 有効にする、**分析**と**デバッグ**ログ。  
+8. **開始**メニューの **管理ツール**、し**イベント ビューアー**します。 有効にする、**分析**と**デバッグ**ログ。  
   
 9. イベント ビューアーのツリー ビューでに移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、し、。**アプリケーション サーバー-アプリケーション**します。 右クリックして**アプリケーション サーバー-アプリケーション**を選択します**ビュー**、し**分析およびデバッグ ログ**します。  
   
@@ -77,13 +77,13 @@ ms.locfileid: "53147425"
   
 10. WCF テスト クライアントを使用してサービスをテストします。  
   
-    1.  WCF テスト クライアントでのダブルクリック**Add()** ICalculator サービス ノードの下。  
+    1. WCF テスト クライアントでのダブルクリック**Add()** ICalculator サービス ノードの下。  
   
          **Add()** メソッドが 2 つのパラメーターと共に右ペインに表示されます。  
   
-    2.  最初のパラメーターに「2」と入力し、2 番目のパラメーターに「3」と入力します。  
+    2. 最初のパラメーターに「2」と入力し、2 番目のパラメーターに「3」と入力します。  
   
-    3.  クリックして**Invoke**メソッドを呼び出します。  
+    3. クリックして**Invoke**メソッドを呼び出します。  
   
 11. 移動して、**イベント ビューアー**既に開いているウィンドウ。 移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、**アプリケーションサーバー-アプリケーション**します。  
   
@@ -97,13 +97,13 @@ ms.locfileid: "53147425"
   
 #### <a name="to-clean-up-optional"></a>クリーンアップするには (省略可能)  
   
-1.  開いている**イベント ビューアー**します。  
+1. 開いている**イベント ビューアー**します。  
   
-2.  移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、し**アプリケーション サーバー-アプリケーション**します。 右クリック**分析**選択**ログの無効化**します。  
+2. 移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、し**アプリケーション サーバー-アプリケーション**します。 右クリック**分析**選択**ログの無効化**します。  
   
-3.  移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、 **アプリケーション サーバー-アプリケーション**、し**分析**します。 右クリック**分析**選択**ログの消去**します。  
+3. 移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、 **アプリケーション サーバー-アプリケーション**、し**分析**します。 右クリック**分析**選択**ログの消去**します。  
   
-4.  クリックして**オフ**イベントを消去します。  
+4. クリックして**オフ**イベントを消去します。  
   
 ## <a name="known-issue"></a>既知の問題  
  既知の問題がある、**イベント ビューアー** ETW イベントのデコードに失敗する可能性があります。 というエラー メッセージを参照してください可能性があります。"イベント ID の説明\<id > 元が Microsoft Windows のアプリケーション サーバー-アプリケーションが見つかりません。 このイベントを発生させるコンポーネントがローカル コンピューターにインストールされていないか、インストールが破損しています。 インストールしたり、ローカル コンピューターのコンポーネントを修復できます。" このエラーが発生した場合は、選択**更新**から、**アクション**メニュー。 これにより、イベントが正常にデコードされます。  
@@ -117,5 +117,6 @@ ms.locfileid: "53147425"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTrace`  
   
-## <a name="see-also"></a>関連項目  
- [AppFabric の監視のサンプル](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>関連項目
+
+- [AppFabric の監視のサンプル](https://go.microsoft.com/fwlink/?LinkId=193959)

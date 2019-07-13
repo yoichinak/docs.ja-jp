@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: 59b3aa87056cc2d32512c8b9ea68c0a6d5935814
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: a59e47e529a5002c806e37dba7267b2cf8318a35
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847411"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912711"
 ---
 # <a name="endpoint-addresses"></a>エンドポイント アドレス
 すべてのエンドポイントにはこれと関連するアドレスがあり、エンドポイントの検索と識別に使用されます。 このアドレスは主にエンドポイントの位置を指定する URI (Uniform Resource Identifier) で構成されます。 エンドポイント アドレスが、Windows Communication Foundation (WCF) のプログラミング モデルで表される、<xref:System.ServiceModel.EndpointAddress>クラスを含む、省略可能な<xref:System.ServiceModel.EndpointAddress.Identity%2A>他のエンドポイントによるエンドポイントの認証を有効にするプロパティをメッセージをおよび一連の省略可能な交換<xref:System.ServiceModel.EndpointAddress.Headers%2A>プロパティで、サービスに到達するために必要な SOAP ヘッダーを定義します。 オプションのヘッダーは、サービス エンドポイントの識別または対話のために、より詳細なアドレス指定情報を提供します。 エンドポイントのアドレスは、ネットワーク上では WS-Addressing エンドポイント参照 (EPR) として表されます。  
@@ -19,13 +19,13 @@ ms.locfileid: "48847411"
 ## <a name="uri-structure-of-an-address"></a>アドレスの URI 構造  
  ほとんどのトランスポートの URI アドレスは、4 つの部分から構成されます。 URI の 4 つの部分ではたとえば、 `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` 次のように取り上げることができます。  
   
--   スキーム: `http:`
+- スキーム: `http:`
   
--   マシンの場合: `www.fabrikam.com`  
+- マシンの場合: `www.fabrikam.com`  
   
--   (省略可能) ポート : 322  
+- (省略可能)ポート:322  
   
--   パス : /mathservice.svc/secureEndpoint  
+- パス : /mathservice.svc/secureEndpoint  
   
 ## <a name="defining-an-address-for-a-service"></a>サービスのアドレスの定義  
  サービスのエンドポイント アドレスは、コードを使用して命令的に、または構成を通じて宣言的に指定できます。 設置済みサービスのバインドおよびアドレスは一般的に、サービスの開発中に使用されるものとは異なるので、コード内でエンドポイントを定義することは通常、実用的ではありません。 一般に、サービス エンドポイントの定義にはコードではなく、構成を使用する方がより実用的です。 バインディング情報とアドレス情報をコードに含めないことで、変更時にアプリケーションの再コンパイルや再展開を行う必要がなくなります。  
@@ -46,9 +46,9 @@ ms.locfileid: "48847411"
   
  IIS バインディングに使用されるコンポーネントの例を次に示します。  
   
--   バインディング プロトコル : HTTP  
+- バインディング プロトコル。HTTP  
   
--   バインディング情報 : IP アドレス、ポート、ホスト ヘッダー  
+- バインド情報。IP アドレス、ポート、ホスト ヘッダー  
   
  IIS ではサイトごとに複数の IIS バインディングを指定でき、これによりスキームごとに複数のベース アドレスをサポートできます。 前のバージョン[!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]、WCF はスキーマの複数のアドレスをサポートされていませんでしたし、指定された場合にスロー、<xref:System.ArgumentException>アクティブ化時にします。  
   
@@ -100,15 +100,15 @@ ms.locfileid: "48847411"
 ## <a name="extending-addressing-in-wcf-services"></a>WCF サービスによるアドレスの拡張  
  既定のアドレス指定の WCF サービスのモデルでは、次の目的のエンドポイント アドレス URI を使用します。  
   
--   サービスがリッスンするアドレス、つまりエンドポイントがメッセージをリッスンする位置の指定  
+- サービスがリッスンするアドレス、つまりエンドポイントがメッセージをリッスンする位置の指定  
   
--   SOAP アドレス フィルター、つまりエンドポイントが SOAP ヘッダーとして待機するアドレスの指定  
+- SOAP アドレス フィルター、つまりエンドポイントが SOAP ヘッダーとして待機するアドレスの指定  
   
  これらの目的で使用する値は個別に指定することができるため、アドレス指定の拡張が可能になり、次に示すような役に立つシナリオに対応します。  
   
--   SOAP 中継局 : クライアントが送信したメッセージは、最終目的地に到達する前にメッセージを処理する 1 つ以上の追加サービスを経由します。 SOAP 中継局は、メッセージのキャッシュ、ルーティング、負荷分散、スキーム検証など多様なタスクを実行できます。 このシナリオは、最終的な送信先である論理アドレス (`via`) ではなく、中継局を目的とする独立した物理アドレス (`wsa:To`) にメッセージを送信することによって実現されます。  
+- SOAP 中継局 : クライアントが送信したメッセージは、最終目的地に到達する前にメッセージを処理する 1 つ以上の追加サービスを経由します。 SOAP 中継局は、メッセージのキャッシュ、ルーティング、負荷分散、スキーム検証など多様なタスクを実行できます。 このシナリオは、最終的な送信先である論理アドレス (`via`) ではなく、中継局を目的とする独立した物理アドレス (`wsa:To`) にメッセージを送信することによって実現されます。  
   
--   エンドポイントがリッスンするアドレスはプライベート URI であり、`listenURI` プロパティとは異なる値が設定されます。  
+- エンドポイントがリッスンするアドレスはプライベート URI であり、`listenURI` プロパティとは異なる値が設定されます。  
   
  `via` が指定するトランスポート アドレスはメッセージが最初に送信される場所で、この後にメッセージは、`to` パラメーターによって指定された、サービスが存在する別のリモート アドレスに送信されます。 インターネットの場合、`via` URI は、サービスの最終的な <xref:System.ServiceModel.EndpointAddress.Uri%2A> アドレスの `to` プロパティと同じになります。 この 2 つのアドレスを区別するのは、手動ルーティングを行う必要がある場合のみです。  
   
@@ -117,9 +117,9 @@ ms.locfileid: "48847411"
   
  カスタムのアドレス ヘッダーは、コードまたは構成のいずれかを使用して次のように定義できます。  
   
--   コードを使用する場合、カスタムのアドレス ヘッダーは <xref:System.ServiceModel.Channels.AddressHeader> クラスを使用して作成し、<xref:System.ServiceModel.EndpointAddress> の構築時に使用されます。  
+- コードを使用する場合、カスタムのアドレス ヘッダーは <xref:System.ServiceModel.Channels.AddressHeader> クラスを使用して作成し、<xref:System.ServiceModel.EndpointAddress> の構築時に使用されます。  
   
--   構成でカスタム[\<ヘッダー >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)の子として指定されて、 [\<エンドポイント >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)要素。  
+- 構成でカスタム[\<ヘッダー >](../../configure-apps/file-schema/wcf/headers.md)の子として指定されて、 [\<エンドポイント >](../../configure-apps/file-schema/wcf/endpoint-of-client.md)要素。  
   
  配置後もヘッダーを変更できるため、コードよりも構成を使用する方法を一般的にお勧めします。  
   
@@ -128,15 +128,16 @@ ms.locfileid: "48847411"
   
  カスタム リッスン アドレスは、コードまたは構成のいずれかを使用して指定できます。  
   
--   コードを使用する場合、カスタム リッスン アドレスはエンドポイントの動作コレクションに <xref:System.ServiceModel.Description.ClientViaBehavior> クラスを追加して指定します。  
+- コードを使用する場合、カスタム リッスン アドレスはエンドポイントの動作コレクションに <xref:System.ServiceModel.Description.ClientViaBehavior> クラスを追加して指定します。  
   
--   構成では、カスタム リッスン アドレスを指定します、`ListenUri`サービスの属性[\<エンドポイント >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)要素。  
+- 構成では、カスタム リッスン アドレスを指定します、`ListenUri`サービスの属性[\<エンドポイント >](../../configure-apps/file-schema/wcf/endpoint-element.md)要素。  
   
 ### <a name="custom-soap-address-filter"></a>カスタム SOAP アドレス フィルター  
  エンドポイントの SOAP アドレス フィルター (<xref:System.ServiceModel.EndpointAddress.Uri%2A>) を定義するには、<xref:System.ServiceModel.EndpointAddress.Headers%2A> に任意の <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> プロパティを組み合わせて使用します。 既定では、このフィルターは受信メッセージの `To` メッセージ ヘッダーが、エンドポイントの URI に一致し、必要なすべてのエンドポイント ヘッダーがメッセージ内に存在していることを検証します。  
   
  シナリオによっては、適切な `To` ヘッダーを持つメッセージだけではなく、基になるトランスポートに到着したすべてのメッセージをエンドポイントで受信します。 これを行うには、ユーザーは <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> クラスを使用します。  
   
-## <a name="see-also"></a>関連項目  
- [エンドポイント アドレスの指定](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
- [サービス ID と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+## <a name="see-also"></a>関連項目
+
+- [エンドポイント アドレスの指定](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+- [サービス ID と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

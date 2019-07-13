@@ -16,71 +16,72 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 101271823f7b7877bb7f007588b6a164233e5b45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a6f1d76ef5cf36bcbab29a33647520663f822798
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432378"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770030"
 ---
 # <a name="corvalidateimage-function"></a>_CorValidateImage 関数
-マネージ モジュール イメージを検証し、それらが読み込まれると、オペレーティング システム ローダーに通知します。  
+マネージド モジュール イメージを検証し、それらが読み込まれると、オペレーティング システム ローダーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 STDAPI _CorValidateImage (   
    [in] PVOID* ImageBase,  
    [in] LPCWSTR FileName  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ImageBase`  
- [in]として検証するイメージの開始位置を指すポインターはマネージ コードです。 イメージは、メモリに既に読み込まれている必要があります。  
+ [in]イメージを検証する際の開始位置へのポインターはマネージ コードです。 イメージは、メモリに既に読み込まれている必要があります。  
   
  `FileName`  
  [in]イメージのファイル名。  
   
 ## <a name="return-value"></a>戻り値  
- この関数は、標準の値を返します`E_INVALIDARG`、 `E_OUTOFMEMORY`、 `E_UNEXPECTED`、および`E_FAIL`、だけでなく、次の値。  
+ この関数は、標準の値を返します`E_INVALIDARG`、 `E_OUTOFMEMORY`、 `E_UNEXPECTED`、および`E_FAIL`、次の値。  
   
 |戻り値|説明|  
 |------------------|-----------------|  
-|`STATUS_INVALID_IMAGE_FORMAT`|イメージが正しくありません。 この値は、HRESULT 0xC000007BL を持っています。|  
-|`STATUS_SUCCESS`|イメージは有効です。 この値は、HRESULT 0x00000000L を持っています。|  
+|`STATUS_INVALID_IMAGE_FORMAT`|イメージが無効です。 この値は、HRESULT 0xC000007BL を持っています。|  
+|`STATUS_SUCCESS`|イメージが無効です。 この値は、HRESULT 0x00000000L を持っています。|  
   
-## <a name="remarks"></a>コメント  
- Windows XP およびそれ以降のバージョンでは、オペレーティング システム ローダーは、共通のオブジェクト ファイル coff ヘッダー内の COM 記述子ディレクトリ ビットを調べることによってマネージ モジュールをチェックします。 設定済みビットでは、マネージ モジュールを示します。 MsCorEE.dll と呼び出し読み込む場合は、ローダーがマネージ モジュールを検出`_CorValidateImage`、次の操作を実行します。  
+## <a name="remarks"></a>Remarks  
+ Windows XP およびそれ以降のバージョンでは、オペレーティング システム ローダーがマネージ モジュールの一般的なオブジェクト ファイルの形式 (COFF) ヘッダーで COM 記述子ディレクトリ ビットを調べることでチェックします。 設定済みビットでは、マネージ モジュールを示します。 MsCorEE.dll と呼び出しを読み込む場合は、ローダーは、マネージ モジュールを検出、 `_CorValidateImage`、次の操作を実行します。  
   
--   イメージが有効なマネージ モジュールであることを確認します。  
+- 有効なマネージ モジュール イメージがあることを確認します。  
   
--   共通言語ランタイム (CLR) のエントリ ポイントにイメージ内のエントリ ポイントを変更します。  
+- 共通言語ランタイム (CLR) のエントリ ポイントにイメージ内のエントリ ポイントを変更します。  
   
--   64 ビット バージョンの Windows でイメージを PE32 から pe 32 + 形式に変換することによってがメモリ内に変更されます。  
+- Windows の 64 ビット バージョンでは、PE32 から pe 32 + 形式に変換することによってメモリにある画像を変更します。  
   
--   マネージ モジュール イメージが読み込まれるときに、ローダーに戻ります。  
+- マネージ モジュール イメージが読み込まれるときにローダーに戻ります。  
   
- 実行可能イメージは、オペレーティング システム ローダーし、呼び出し、 [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md)関数の実行可能ファイルで指定されたエントリ ポイントに関係なく、します。 ローダーの呼び出し、DLL アセンブリのイメージ、 [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md)関数。  
+ 実行可能イメージでは、オペレーティング システム ローダーを呼び出して、 [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md)関数の実行可能ファイルで指定されたエントリ ポイントに関係なく、します。 ローダーの呼び出し、DLL アセンブリのイメージ、 [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md)関数。  
   
  `_CorExeMain` または`_CorDllMain`は、次の操作を実行します。  
   
--   CLR を初期化します。  
+- CLR を初期化します。  
   
--   アセンブリの CLR ヘッダーからマネージ エントリ ポイントを検索します。  
+- アセンブリの CLR ヘッダーからマネージ エントリ ポイントを検索します。  
   
--   実行を開始します。  
+- 実行を開始します。  
   
- ローダーの呼び出し、 [_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md)管理されているときに機能モジュール イメージがアンロードされます。 ただし、この関数に任意のアクションを実行しませんだけを返します。  
+ ローダーの呼び出し、 [_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md)を管理するときに関数モジュール イメージは読み込まれません。 ただし、この関数が任意のアクションを実行しません返すだけです。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [メタデータ グローバル静的関数](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>関連項目
+
+- [メタデータ グローバル静的関数](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

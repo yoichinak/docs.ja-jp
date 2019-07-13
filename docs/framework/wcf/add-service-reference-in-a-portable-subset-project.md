@@ -2,12 +2,12 @@
 title: ポータブル サブセット プロジェクトでサービス参照を追加する
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: efe95a326e7c13237c7d2d74888c85bf919ed287
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 92ee180da531259b005b5782c180a139fd66847b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782422"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>ポータブル サブセット プロジェクトでサービス参照を追加する
 ポータブル サブセット プロジェクトでは、1 つのソース ツリーを維持し、複数の .NET 実装 (デスクトップ、Silverlight、Windows Phone、および XBOX) をサポートしながら、システムを構築するための .NET アセンブリ プログラマが有効にします。 ポータブル サブセット プロジェクトは、任意の .NET 実装で使用できる .NET framework アセンブリである .NET ポータブル ライブラリのみを参照します。  
@@ -15,21 +15,21 @@ ms.locfileid: "49121143"
 ## <a name="add-service-reference-details"></a>サービス参照の追加の詳細  
  ポータブル サブセット プロジェクトでサービス参照を追加する場合は、次の制限が適用されます。  
   
-1.  <xref:System.Xml.Serialization.XmlSerializer> では、文字エンコーディングのみを使用できます。 SOAP エンコーディングを使用すると、インポート中にエラーが発生します。  
+1. <xref:System.Xml.Serialization.XmlSerializer> では、文字エンコーディングのみを使用できます。 SOAP エンコーディングを使用すると、インポート中にエラーが発生します。  
   
-2.  <xref:System.Runtime.Serialization.DataContractSerializer> シナリオを使用するサービスの場合、再利用された型をポータブル サブセットからのみ受け取ることを確認するために、データ コントラクト サロゲートが提供されます。  
+2. <xref:System.Runtime.Serialization.DataContractSerializer> シナリオを使用するサービスの場合、再利用された型をポータブル サブセットからのみ受け取ることを確認するために、データ コントラクト サロゲートが提供されます。  
   
-3.  ポータブル ライブラリでサポートされていないバインド (<xref:System.ServiceModel.BasicHttpBinding>、トランザクション フロー、信頼できるセッション、または MTOM エンコーディングがない <xref:System.ServiceModel.WSHttpBinding>、および等価のカスタム バインドを除くすべてのバインド) に依存するエンドポイントは無視されます。  
+3. ポータブル ライブラリでサポートされていないバインド (<xref:System.ServiceModel.BasicHttpBinding>、トランザクション フロー、信頼できるセッション、または MTOM エンコーディングがない <xref:System.ServiceModel.WSHttpBinding>、および等価のカスタム バインドを除くすべてのバインド) に依存するエンドポイントは無視されます。  
   
-4.  メッセージ ヘッダーは、インポート前にすべての操作におけるすべてのメッセージの説明から削除されます。  
+4. メッセージ ヘッダーは、インポート前にすべての操作におけるすべてのメッセージの説明から削除されます。  
   
-5.  非ポータブル属性 (<xref:System.ComponentModel.DesignerCategoryAttribute>、<xref:System.SerializableAttribute>、および <xref:System.ServiceModel.TransactionFlowAttribute>) は、生成されたクライアント プロキシ コードから削除されます。  
+5. 非ポータブル属性 (<xref:System.ComponentModel.DesignerCategoryAttribute>、<xref:System.SerializableAttribute>、および <xref:System.ServiceModel.TransactionFlowAttribute>) は、生成されたクライアント プロキシ コードから削除されます。  
   
-6.  非ポータブル プロパティ (ProtectionLevel、SessionMode、IsInitiating、IsTerminating) は、<xref:System.ServiceModel.ServiceContractAttribute>、<xref:System.ServiceModel.OperationContractAttribute>、および <xref:System.ServiceModel.FaultContractAttribute> から削除されます。  
+6. 非ポータブル プロパティ (ProtectionLevel、SessionMode、IsInitiating、IsTerminating) は、<xref:System.ServiceModel.ServiceContractAttribute>、<xref:System.ServiceModel.OperationContractAttribute>、および <xref:System.ServiceModel.FaultContractAttribute> から削除されます。  
   
-7.  すべてのサービス操作は、クライアント プロキシ上で非同期操作として生成されます。  
+7. すべてのサービス操作は、クライアント プロキシ上で非同期操作として生成されます。  
   
-8.  非ポータブル型を使用する生成済みのクライアント コンストラクターは削除されます。  
+8. 非ポータブル型を使用する生成済みのクライアント コンストラクターは削除されます。  
   
 9. <xref:System.Net.CookieContainer> インスタンスは、生成されたクライアントで公開されます。  
   
@@ -43,6 +43,7 @@ ms.locfileid: "49121143"
   
 14. ポータブル サブセット プロジェクトでは <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> はサポートされません。  
   
-## <a name="see-also"></a>関連項目  
- [WCF クライアントを使用したサービスへのアクセス](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- [ポータブル クラス ライブラリ](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)
+## <a name="see-also"></a>関連項目
+
+- [WCF クライアントを使用したサービスへのアクセス](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
+- [ポータブル クラス ライブラリ](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)

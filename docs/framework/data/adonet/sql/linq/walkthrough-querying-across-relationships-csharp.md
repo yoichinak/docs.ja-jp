@@ -1,92 +1,93 @@
 ---
-title: 'チュートリアル : リレーションシップ間でのクエリの実行 (C#)'
+title: 'チュートリアル: リレーションシップを介したクエリの実行 (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: a438b0ae83a223abfc35643915e6eedd5be068a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f36f618cfcb82847f6763641ee64565dcdedd919
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364419"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742650"
 ---
-# <a name="walkthrough-querying-across-relationships-c"></a>チュートリアル : リレーションシップ間でのクエリの実行 (C#)
-このチュートリアルの使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]*アソシエーション*をデータベース内の外部キー リレーションシップを表します。  
+# <a name="walkthrough-querying-across-relationships-c"></a>チュートリアル: リレーションシップを介したクエリの実行 (C#)
+このチュートリアルの使用を示します[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]*アソシエーション*をデータベース内の外部キー リレーションシップを表します。  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
  このチュートリアルは、Visual C# 開発設定を使用して記述されています。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- 完了する必要があります[チュートリアル: 単純なオブジェクト モデルとクエリ (c#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)です。 このチュートリアルは前のチュートリアルに基づいて作成されており、c:\linqtest5 に northwnd.mdf ファイルがあることが前提です。  
+ 完了する必要があります[チュートリアル。単純なオブジェクト モデルとクエリ (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)します。 このチュートリアルは前のチュートリアルに基づいて作成されており、c:\linqtest5 に northwnd.mdf ファイルがあることが前提です。  
   
 ## <a name="overview"></a>概要  
  このチュートリアルは、主に次の 3 つの手順で構成されています。  
   
--   エンティティ クラスを追加して、Northwind サンプル データベース内の Orders テーブルを表します。  
+- エンティティ クラスを追加して、Northwind サンプル データベース内の Orders テーブルを表します。  
   
--   `Customer` クラスに注釈を付けて、`Customer` クラスと `Order` クラス間のリレーションシップを強化します。  
+- `Customer` クラスに注釈を付けて、`Customer` クラスと `Order` クラス間のリレーションシップを強化します。  
   
--   クエリを作成および実行して、`Order` クラスによる `Customer` 情報の取得をテストします。  
+- クエリを作成および実行して、`Order` クラスによる `Customer` 情報の取得をテストします。  
   
 ## <a name="mapping-relationships-across-tables"></a>テーブル間のリレーションシップを指定する  
  `Customer` クラス定義の後に、次のコードから成る `Order` エンティティ クラス定義を作成します。これは、`Order.Customer` が外部キーとして `Customer.CustomerID` に関係することを示しています。  
   
-#### <a name="to-add-the-order-entity-class"></a>Order エンティティ クラスを追加するには  
+### <a name="to-add-the-order-entity-class"></a>Order エンティティ クラスを追加するには  
   
--   `Customer` クラスの後に次のコードを入力または貼り付けます。  
+- `Customer` クラスの後に次のコードを入力または貼り付けます。  
   
      [!code-csharp[DLinqWalk2CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#1)]  
   
 ## <a name="annotating-the-customer-class"></a>Customer クラスに注釈を付ける  
  ここでは、`Customer` クラスに注釈を付けて、`Order` クラスとのリレーションシップを指定します。 いずれかの方向のリレーションシップが定義されていればリンクを作成できるため、この注釈の追加は必ずしも必要ではありません。 しかし、この注釈を追加することで、どちらの方向でも簡単にオブジェクトを移動できます。  
   
-#### <a name="to-annotate-the-customer-class"></a>Customer クラスに注釈を付けるには  
+### <a name="to-annotate-the-customer-class"></a>Customer クラスに注釈を付けるには  
   
--   `Customer` クラスに次のコードを入力または貼り付けます。  
+- `Customer` クラスに次のコードを入力または貼り付けます。  
   
      [!code-csharp[DLinqWalk2CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#2)]  
   
 ## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a>Customer-Order リレーションシップ間のクエリを作成および実行する  
- `Order` オブジェクトから `Customer` オブジェクトに、またはその逆の順序で、直接アクセスできます。 必要としない、明示的な*結合*customers と orders のです。  
+ `Order` オブジェクトから `Customer` オブジェクトに、またはその逆の順序で、直接アクセスできます。 明示的な不要*結合*顧客と注文します。  
   
-#### <a name="to-access-order-objects-by-using-customer-objects"></a>Customer オブジェクトを使用して Order オブジェクトにアクセスするには  
+### <a name="to-access-order-objects-by-using-customer-objects"></a>Customer オブジェクトを使用して Order オブジェクトにアクセスするには  
   
-1.  `Main` メソッドに次のコードを入力または貼り付けることによって、メソッドを変更します。  
+1. `Main` メソッドに次のコードを入力または貼り付けることによって、メソッドを変更します。  
   
      [!code-csharp[DLinqWalk2CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#3)]  
   
-2.  F5 キーを押して、アプリケーションをデバッグします。  
+2. F5 キーを押して、アプリケーションをデバッグします。  
   
     > [!NOTE]
     >  `db.Log = Console.Out;` をコメント アウトすることによって、コンソール ウィンドウ内の SQL コードを除去できます。  
   
-3.  コンソール ウィンドウで Enter キーを押して、デバッグを停止します。  
+3. コンソール ウィンドウで Enter キーを押して、デバッグを停止します。  
   
 ## <a name="creating-a-strongly-typed-view-of-your-database"></a>データベースの厳密に型指定されたビューを作成する  
  データベースの厳密に型指定されたビューを使用すると、操作が非常に簡単になります。 <xref:System.Data.Linq.DataContext> オブジェクトを厳密に型指定することによって、<xref:System.Data.Linq.DataContext.GetTable%2A> を呼び出す必要がありません。 厳密に型指定された <xref:System.Data.Linq.DataContext> オブジェクトを使用する場合は、すべてのクエリで、厳密に型指定されたテーブルを使用できます。  
   
  次の手順では、データベース内の Customers テーブルに対応する厳密に型指定されたテーブルとして、`Customers` を作成します。  
   
-#### <a name="to-strongly-type-the-datacontext-object"></a>DataContext オブジェクトを厳密に型指定するには  
+### <a name="to-strongly-type-the-datacontext-object"></a>DataContext オブジェクトを厳密に型指定するには  
   
-1.  `Customer` クラス宣言の上に次のコードを追加します。  
+1. `Customer` クラス宣言の上に次のコードを追加します。  
   
      [!code-csharp[DLinqWalk2CS#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#4)]  
   
-2.  `Main` メソッドを次のように変更し、厳密に型指定された <xref:System.Data.Linq.DataContext> を使用するようにします。  
+2. `Main` メソッドを次のように変更し、厳密に型指定された <xref:System.Data.Linq.DataContext> を使用するようにします。  
   
      [!code-csharp[DLinqWalk2CS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#5)]  
   
-3.  F5 キーを押して、アプリケーションをデバッグします。  
+3. F5 キーを押して、アプリケーションをデバッグします。  
   
      コンソール ウィンドウの出力は次のとおりです。  
   
      `ID=WHITC`  
   
-4.  コンソール ウィンドウで Enter キーを押して、デバッグを停止します。  
+4. コンソール ウィンドウで Enter キーを押して、デバッグを停止します。  
   
 ## <a name="next-steps"></a>次の手順  
- 次のチュートリアル ([チュートリアル: データの操作 (c#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) データを操作する方法を示します。 そのチュートリアルを実行するのに、既に終了したこのシリーズの 2 つのチュートリアルを保存する必要はありません。  
+ 次のチュートリアル ([チュートリアル。データの操作 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) データを操作する方法を示します。 そのチュートリアルを実行するのに、既に終了したこのシリーズの 2 つのチュートリアルを保存する必要はありません。  
   
-## <a name="see-also"></a>関連項目  
- [チュートリアルによる学習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+## <a name="see-also"></a>関連項目
+
+- [チュートリアルによる学習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

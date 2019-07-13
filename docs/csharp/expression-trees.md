@@ -3,16 +3,16 @@ title: 式ツリー
 description: .NET Core の式ツリーについて、また、それを利用し、検査、変更、実行が可能な構造体としてコードを表す方法について説明します。
 ms.date: 06/20/2016
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.openlocfilehash: 56509f1eb0f2bdca8a8f3a51df958d42e95af6f4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: db6e23d1ad0014a7dbb58a0cd473e67d6bd9acc0
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50190737"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59096616"
 ---
 # <a name="expression-trees"></a>式ツリー
 
-LINQ を使ったことがあれば、API セットに `Func` 型が含まれる豊富なライブラリを利用したのではないでしょうか (LINQ の知識があまりない場合は、この記事の前に、[LINQ のチュートリアル](linq/index.md)と[ラムダ式](lambda-expressions.md)のチュートリアルを読むことをお勧めします)。*式ツリー*には、関数である引数とのさまざまな相互作用があります。
+LINQ を使ったことがあれば、API セットに `Func` 型が含まれる豊富なライブラリを利用したのではないでしょうか (LINQ の知識があまりない場合は、この記事の前に、[LINQ のチュートリアル](linq/index.md)と[ラムダ式](./programming-guide/statements-expressions-operators/lambda-expressions.md)に関する記事を読むことをお勧めします)。*式ツリー*には、関数である引数とのさまざまな相互作用があります。
 
 LINQ クエリを作成するときに関数の引数を作成するには、通常、ラムダ式を使用します。 一般的な LINQ クエリでは、このような関数の引数は、コンパイラで作成されるデリゲートに変換されます。 
 
@@ -51,4 +51,3 @@ LINQ クエリを作成するときに関数の引数を作成するには、通
 7. [まとめ](expression-trees-summary.md)
 
     式ツリーに関する情報のまとめです。
-    

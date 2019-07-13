@@ -4,12 +4,12 @@ description: Visual Studio Code を使用した、C# で初めての .NET Core �
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: bd1e5bf9df929c2c38f737ec3112d3687dba877c
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 1268a943d7cbf1033531a6c51f42c6fd672eaed3
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168976"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401837"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# および Visual Studio Code の使用を開始する
 
@@ -28,13 +28,13 @@ ms.locfileid: "53168976"
 1. プロジェクトを開く
 
     * Visual Studio Code を開きます。
-    * 左側のメニューで [エクスプローラー] アイコンをクリックし、**[フォルダーを開く]** をクリックします。
-    * メイン メニューから **[ファイル]**、**[フォルダーを開く]** の順に選択し、C# プロジェクトを保存するフォルダーを開き、**[フォルダーの選択]** をクリックします。 ここで、*Hello World* という名前のプロジェクトのフォルダーを作成します。
+    * 左側のメニューで [エクスプローラー] アイコンをクリックし、 **[フォルダーを開く]** をクリックします。
+    * メイン メニューから **[ファイル]** 、 **[フォルダーを開く]** の順に選択し、C# プロジェクトを保存するフォルダーを開き、 **[フォルダーの選択]** をクリックします。 ここで、*Hello World* という名前のプロジェクトのフォルダーを作成します。
 
       ![Visual Studio Code の [フォルダーを開く]](media/with-visual-studio-code/vs-code-open-folder.png)
 
 2. C# プロジェクトを初期化する
-    * Visual Studio Code から統合ターミナルを開きます。メイン メニューで **[表示]**、**[統合端末]** の順に選択してください。
+    * Visual Studio Code から統合ターミナルを開きます。メイン メニューで **[表示]** 、 **[統合端末]** の順に選択してください。
     * ターミナル ウィンドウで、`dotnet new console` と入力します。
     * このコマンドで、フォルダーに `HelloWorld.csproj` という名前の C# プロジェクト ファイルとともに、単純な "Hello World" プログラムが既に書き込まれた `Program.cs` ファイルが作成されます。
 
@@ -90,55 +90,57 @@ ms.locfileid: "53168976"
 
 ## <a name="add-a-class"></a>クラスを追加する
 
-1. 新しいクラスを追加するには、VSCode エクスプローラーを右クリックし、**[新しいファイル]** を選択します。 これで、新しいファイルが VSCode で開いたフォルダーに追加されます。
-2. ファイルに `Class1.cs` と名前を付けます。 csharp ファイルとして認識されるには、最後に `.cs` 拡張子を付けて保存する必要があります。
+1. 新しいクラスを追加するには、VSCode エクスプローラーを右クリックし、 **[新しいファイル]** を選択します。 これで、新しいファイルが VSCode で開いたフォルダーに追加されます。
+2. ファイルに `MyClass.cs` と名前を付けます。 csharp ファイルとして認識されるには、最後に `.cs` 拡張子を付けて保存する必要があります。
 3. 次のコードを追加して、1 つ目のクラスを作成します。 `Program.cs` ファイルから参照できるように、正しい名前空間を含めるようにします。
-``` csharp
-using System;
 
-namespace HelloWorld
-{
-    public class Class1
+    ``` csharp
+    using System;
+
+    namespace HelloWorld
     {
-        public string ReturnMessage()
+        public class MyClass
         {
-            return "Happy coding!";
+            public string ReturnMessage()
+            {
+                return "Happy coding!";
+            }
         }
     }
-}
-```
+    ```
 
 4. 次のコードを追加して、`Program.cs` のメイン メソッドから新しいクラスを呼び出します。
 
-```csharp
-using System;
-
-namespace HelloWorld
-{
-    class Program
+    ```csharp
+    using System;
+    
+    namespace HelloWorld
     {
-        static void Main(string[] args)
+        class Program
         {
-            Class1 c1 = new Class1();
-            Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
+            static void Main(string[] args)
+            {
+                MyClass c1 = new MyClass();
+                Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
+            }
         }
     }
-}
-```
+    ```
 
 5. 変更を保存し、プログラムを再度実行します。 新しいメッセージと共に追加した文字列が表示されます。
-```console
-> dotnet run
-Hello World! Happy coding!
-```
 
-## <a name="faq"></a>FAQ
+    ```console
+    > dotnet run
+    Hello World! Happy coding!
+    ```
+
+## <a name="faq"></a>よくあるご質問
 
 ### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>Visual Studio Code 内で C# をビルドおよびデバッグするのに必要な資産が欠落しています。 デバッガーには、"構成がありません" と表示されます。
 
-Visual Studio Code C# の拡張機能では、ビルドおよびデバッグする資産を自動的に作成することができます。 C# プロジェクトを初めて開くと、これらの資産を作成するように Visual Studio Code から求められます。 資産を作成しなかった場合でも、このコマンドを実行する方法はあります。コマンド パレットを開き (**[表示] > [コマンド パレット]**)、「>.NET:Generate Assets for Build and Debug」 と入力します。 これを選択すると、必要としている .vscode、launch.json、tasks.json の各構成ファイルが作成されます。
+Visual Studio Code C# の拡張機能では、ビルドおよびデバッグする資産を自動的に作成することができます。 C# プロジェクトを初めて開くと、これらの資産を作成するように Visual Studio Code から求められます。 資産を作成しなかった場合でも、このコマンドを実行する方法はあります。コマンド パレットを開き ( **[表示] > [コマンド パレット]** )、「>.NET:Generate Assets for Build and Debug」 と入力します。 これを選択すると、必要としている .vscode、launch.json、tasks.json の各構成ファイルが作成されます。
 
 ## <a name="see-also"></a>関連項目
 
-* [Visual Studio Code の設定](https://code.visualstudio.com/docs/setup/setup-overview)
-* [Visual Studio Code でのデバッグ](https://code.visualstudio.com/Docs/editor/debugging)
+- [Visual Studio Code の設定](https://code.visualstudio.com/docs/setup/setup-overview)
+- [Visual Studio Code でのデバッグ](https://code.visualstudio.com/Docs/editor/debugging)

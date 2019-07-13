@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 572930022d44e6f0882ee02ecb837404c409f720
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d9dbaac5b08cf3f700b5f2581c60d0cb7bf3f545
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61986675"
 ---
 # <a name="icorpublishappdomain-interface"></a>ICorPublishAppDomain インターフェイス
 アプリケーション ドメインの情報を表し、提供します。  
@@ -30,18 +30,19 @@ ms.locfileid: "33423573"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetID メソッド](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getid-method.md)|この一意の識別子を取得`ICorPublishAppDomain`です。|  
-|[GetName メソッド](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getname-method.md)|これによって参照されているアプリケーション ドメインの名前を取得`ICorPublishAppDomain`です。|  
+|[GetID メソッド](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getid-method.md)|この一意識別子を取得します。`ICorPublishAppDomain`します。|  
+|[GetName メソッド](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getname-method.md)|これによって参照されるアプリケーション ドメインの名前を取得`ICorPublishAppDomain`します。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** CorPub.idl、CorPub.h  
+ **ヘッダー:** CorPub.idl, CorPub.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [CorpubPublish コクラス](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
+## <a name="see-also"></a>関連項目
+
+- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [CorpubPublish コクラス](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)

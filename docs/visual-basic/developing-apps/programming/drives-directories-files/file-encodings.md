@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Unicode, file encoding
 - file encoding
 ms.assetid: ea2c5f5f-bbb1-4150-9928-b9951fa6bc57
-ms.openlocfilehash: 30aba517b3b0fbb5fa5bea48134934b2c2d26e50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c22e8046a8b88890f25bc6b671825eb6d68ec6b8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582287"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58814004"
 ---
 # <a name="file-encodings-visual-basic"></a>ファイル エンコーディング (Visual Basic)
 ファイル エンコーディングは、文字エンコーディングとも呼ばれ、テキストを処理するときの文字の表現方法を指定します。 言語で処理できる (または処理できない) 文字という観点から、あるエンコードが他のエンコーディングよりも望ましいということがありますが、一般的には Unicode が好まれます。  
@@ -35,6 +35,7 @@ ms.locfileid: "33582287"
 |<xref:System.Text.UTF7Encoding>|Unicode 文字の UTF-7 エンコードを表します。|  
 |<xref:System.Text.UTF8Encoding>|Unicode 文字の UTF-8 エンコードを表します。|  
   
-## <a name="see-also"></a>参照  
- [ファイルの読み取り](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
- [ファイルへの書き込み](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
+## <a name="see-also"></a>関連項目
+
+- [ファイルの読み取り](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
+- [ファイルへの書き込み](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

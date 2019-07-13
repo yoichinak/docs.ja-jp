@@ -11,26 +11,26 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], coding button click events
 - toolbars [Windows Forms], click event handlers
 ms.assetid: 98374f70-993d-4ca4-89fb-48fea6ce5b45
-ms.openlocfilehash: 1aa0a31b5825006cc2d6111ab151f05bf240b920
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f5afde1cc0be772baff373c84c82f81df284b9b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785828"
 ---
 # <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>方法: ツール バー ボタンのメニュー イベントをトリガーする
 > [!NOTE]
 >  <xref:System.Windows.Forms.ToolStrip> コントロールは、<xref:System.Windows.Forms.ToolBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.ToolBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
   
- 場合、Windows フォームの機能、<xref:System.Windows.Forms.ToolBar>コントロール ツール バー ボタンにするかを知りたいユーザーがクリックしたボタンします。  
+ 場合、Windows フォームの特徴を<xref:System.Windows.Forms.ToolBar>コントロールが、ツールバーのボタンで、ユーザーがクリックしたボタンを把握するは。  
   
- <xref:System.Windows.Forms.ToolBar.ButtonClick>のイベント、<xref:System.Windows.Forms.ToolBar>を評価できるコントロール、<xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A>のプロパティ、<xref:System.Windows.Forms.ToolBarButtonClickEventArgs>クラスです。 次の例では、クリックされたボタンを示すメッセージ ボックスが表示されます。 詳細については、「<xref:System.Windows.Forms.MessageBox>」を参照してください。  
+ <xref:System.Windows.Forms.ToolBar.ButtonClick>のイベント、<xref:System.Windows.Forms.ToolBar>評価できるコントロール、<xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A>のプロパティ、<xref:System.Windows.Forms.ToolBarButtonClickEventArgs>クラス。 次の例では、クリックされたボタンを示すメッセージ ボックスが表示されます。 詳細については、「<xref:System.Windows.Forms.MessageBox>」を参照してください。  
   
- 次の例では、<xref:System.Windows.Forms.ToolBar>を Windows フォーム コントロールが追加されました。  
+ 次の例では、 <xref:System.Windows.Forms.ToolBar> Windows フォームにコントロールが追加されました。  
   
 ### <a name="to-handle-the-click-event-on-a-toolbar"></a>ツール バーの Click イベントを処理するには  
   
-1.  プロシージャでは、ツール バー ボタンを追加、<xref:System.Windows.Forms.ToolBar>コントロール。  
+1. プロシージャでは、ツールバー ボタンを追加、<xref:System.Windows.Forms.ToolBar>コントロール。  
   
     ```vb  
     Public Sub ToolBarConfig()  
@@ -70,7 +70,7 @@ ms.locfileid: "33535198"
        }  
     ```  
   
-2.  イベント ハンドラーを追加、<xref:System.Windows.Forms.ToolBar>コントロールの<xref:System.Windows.Forms.ToolBar.ButtonClick>イベント。 ケース ステートメントの切り替えを使用して、<xref:System.Windows.Forms.ToolBarButtonClickEventArgs>ツールバーのボタンがクリックされたを決めるクラスをします。 この結果に基づいて、適切なメッセージ ボックスが表示されます。  
+2. イベント ハンドラーを追加、<xref:System.Windows.Forms.ToolBar>コントロールの<xref:System.Windows.Forms.ToolBar.ButtonClick>イベント。 ケース切り替えステートメントを使用して、<xref:System.Windows.Forms.ToolBarButtonClickEventArgs>ツールバーのボタンがクリックされたを確認するクラス。 この結果に基づいて、適切なメッセージ ボックスが表示されます。  
   
     > [!NOTE]
     >  この例では、メッセージ ボックスは、プレースホルダーとして単独で使用されています。 ツール バーのボタンがクリックされたときに実行するコードは、自由に追加できます。  
@@ -134,8 +134,9 @@ ms.locfileid: "33535198"
        }  
     ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.ToolBar>  
- [方法: ツール バー コントロールにボタンを追加する](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)  
- [方法: ツール バー ボタンのアイコンを定義する](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)  
- [ToolBar コントロール](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Forms.ToolBar>
+- [方法: ツール バー コントロールにボタンを追加します。](how-to-add-buttons-to-a-toolbar-control.md)
+- [方法: ツール バー ボタンのアイコンを定義します。](how-to-define-an-icon-for-a-toolbar-button.md)
+- [ToolBar コントロール](toolbar-control-windows-forms.md)

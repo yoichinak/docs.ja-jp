@@ -1,5 +1,5 @@
 ---
-title: ICorDebugEditAndContinueSnapshot Interface1
+title: ICorDebugEditAndContinueSnapshot インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugEditAndContinueSnapshot
@@ -16,15 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27bec505df1db4ccbba862e81d9407d11245d449
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d7fd463a8cc8ad6a88818669de6fb495e12e497b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989106"
 ---
-# <a name="icordebugeditandcontinuesnapshot-interface1"></a>ICorDebugEditAndContinueSnapshot Interface1
+# <a name="icordebugeditandcontinuesnapshot-interface"></a>ICorDebugEditAndContinueSnapshot インターフェイス
+
 `ICorDebugEditAndContinueSnapshot` は互換性のために残されています。 このインターフェイスは使用しないでください。  
   
-## <a name="see-also"></a>関連項目  
- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>関連項目
+
+- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

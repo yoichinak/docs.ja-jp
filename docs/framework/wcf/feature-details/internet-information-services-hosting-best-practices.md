@@ -2,12 +2,12 @@
 title: インターネット インフォメーション サービス ホスティングのベスト プラクティス
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: 5efa4c56cafe32dcc6864ba0bd68d14ea10b15e3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bb60330aeedfe4b16a2a53d644e79a4a16636afa
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187571"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402436"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>インターネット インフォメーション サービス ホスティングのベスト プラクティス
 このトピックでは、Windows Communication Foundation (WCF) サービスをホストするためのベスト プラクティスについて説明します。  
@@ -16,7 +16,7 @@ ms.locfileid: "50187571"
  WCF を実装する Web アプリケーションの \bin ディレクトリに展開されている DLL としてのサービスは再利用する、Web アプリケーションのモデルの外部サービスなど、インターネット インフォメーション サービス (IIS) が展開されているがない可能性があるテスト環境でできます。  
   
 ## <a name="service-hosts-in-iis-hosted-applications"></a>IIS でホストされるアプリケーションでのサービス ホスト  
- IIS ホスト環境によってネイティブにサポートされていないネットワーク トランスポートで待機する新しいサービス ホストを作成する場合は、強制自己ホスト API を使用しないでください (たとえば、TCP サービスをホストする [!INCLUDE[iis601](../../../../includes/iis601-md.md)]。TCP 通信は、[!INCLUDE[iis601](../../../../includes/iis601-md.md)] でネイティブにサポートされていません)。 この方法はお勧めしません。 強制的に作成されたサービス ホストは、IIS ホスト環境内で認識されないからです。 重要な点は、IIS がホスト アプリケーション プールがアイドル状態であるかどうかを判断するときに、強制的に作成されたサービスによって実行される処理が IIS によって考慮されないことです。 この結果、強制的に作成されたサービス ホストを持つアプリケーションは、IIS ホスト プロセスを積極的に廃棄する IIS ホスト環境を持つことになります。  
+ IIS ホスト環境でネイティブにサポートされているネットワーク トランスポートで待機する新しいサービス ホストを作成する命令型の自己ホスト Api を使用しないでください (たとえば、TCP をホストする IIS 6.0 サービスは、IIS 6.0 で TCP 通信がネイティブでサポートされていないため)。 この方法はお勧めしません。 強制的に作成されたサービス ホストは、IIS ホスト環境内で認識されないからです。 重要な点は、IIS がホスト アプリケーション プールがアイドル状態であるかどうかを判断するときに、強制的に作成されたサービスによって実行される処理が IIS によって考慮されないことです。 この結果、強制的に作成されたサービス ホストを持つアプリケーションは、IIS ホスト プロセスを積極的に廃棄する IIS ホスト環境を持つことになります。  
   
 ## <a name="uris-and-iis-hosted-endpoints"></a>URI と IIS でホストされるエンドポイント  
  IIS でホストされるサービスのエンドポイントは、絶対アドレスではなく、相対 URI (Uniform Resource Identifier) を使用して構成する必要があります。 これにより、エンドポイント アドレスが、ホスト アプリケーションに属する URI アドレスのセット内に確実に含まれ、メッセージに基づくアクティベーションが正常に行われるようになります。  
@@ -40,7 +40,7 @@ ms.locfileid: "50187571"
  Microsoft 管理コンソール (MMC) スナップインを使用して、IIS Web サイト バインディングを構成できます。  
   
 ## <a name="application-pools-running-in-different-user-contexts-overwrite-assemblies-from-other-accounts-in-the-temporary-folder"></a>異なるユーザー コンテキストで実行されるアプリケーション プールが、一時フォルダー内の他のアカウントのアセンブリを上書きする  
- 異なるユーザー コンテキストで実行されているアプリケーション プールが、一時的な [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ファイル フォルダー内の他のアカウントのアセンブリを上書きできないようにするには、アプリケーションごとに個別の ID と一時フォルダーを使用します。 たとえば、/Application1 と /Application2 という 2 つの仮想アプリケーションがある場合は、2 つの異なる ID を使用して、A と B の 2 つのアプリケーション プールを作成できます。 アプリケーション プール A は、一方のユーザー ID (user1) の下で、アプリケーション プール B は、もう一方のユーザー ID (user2) の下で実行でき、/Application1 が A を、/Application2 が B を使用するように構成します。  
+ 異なるユーザー コンテキストで実行されているアプリケーション プールが、temporary ASP.NET files フォルダー内の他のアカウントからのアセンブリを上書きできないことを確認するには、さまざまなアプリケーションのさまざまな id と一時フォルダーを使用します。 たとえば、/Application1 と /Application2 という 2 つの仮想アプリケーションがある場合は、2 つの異なる ID を使用して、A と B の 2 つのアプリケーション プールを作成できます。 アプリケーション プール A は、一方のユーザー ID (user1) の下で、アプリケーション プール B は、もう一方のユーザー ID (user2) の下で実行でき、/Application1 が A を、/Application2 が B を使用するように構成します。  
   
  Web.config を使用して、一時フォルダーを構成できます\< system.web/compilation/@tempFolder>。 、/Application1 の"c:\tempForUser1"であることができ、アプリケーション 2 の"c:\tempForUser2"であることができます。 これらのフォルダーに対応する書き込みアクセス許可を 2 つの ID に与えます。  
   
@@ -81,6 +81,7 @@ ms.locfileid: "50187571"
   </system.webServer>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [サービス ホスト サンプルします。](https://msdn.microsoft.com/library/f703a3f6-0fba-418a-a92f-7ce75ccfa47e)  
- [AppFabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>関連項目
+
+- [サービス ホスト サンプルします。](../samples/hosting.md)
+- [AppFabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkId=201276)

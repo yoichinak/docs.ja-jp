@@ -1,26 +1,27 @@
 ---
-title: Contract2
+title: WCF コントラクト サンプル
 ms.date: 03/30/2017
 ms.assetid: 305eeb65-a52f-459e-9aa8-0ef071eade16
-ms.openlocfilehash: 1b751e3d4fd6eae01e3fcd7500f844427d46524c
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 051a6fc1af7483c5b7c512de6a47afe0b39ae3ad
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002444"
 ---
 # <a name="contract"></a>コントラクト
-このセクションには、コントラクトでは、Windows Communication Foundation (WCF) を示すサンプルが含まれています。  
+
+このセクションには、Windows Communication Foundation (WCF) コントラクトを示すサンプルが含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [データ コントラクト](../../../../docs/framework/wcf/samples/data-contracts.md)  
- WCF でのデータ コントラクトを示しています。  
+ WCF でのデータ コントラクトを示します。  
   
  [メッセージ コントラクト](../../../../docs/framework/wcf/samples/message-contracts.md)  
- WCF でのメッセージ コントラクトを示しています。  
+ WCF でのメッセージ コントラクトを示します。  
   
  [サービス コントラクト](../../../../docs/framework/wcf/samples/service-contracts.md)  
- WCF でのサービス コントラクトを示しています。  
+ WCF サービス コントラクトを示します。  
   
  [DataContractResolver](../../../../docs/framework/wcf/samples/datacontractresolver.md)  
  <xref:System.Runtime.Serialization.DataContractResolver> クラスを使用して、シリアル化プロセスおよび逆シリアル化プロセスをカスタマイズする方法を示します。  

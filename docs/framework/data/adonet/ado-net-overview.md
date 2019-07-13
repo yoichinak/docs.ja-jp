@@ -2,12 +2,12 @@
 title: ADO.NET の概要
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 697911201171a540d6749d03c51f14efba945765
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0a47a2734e68b4c00aab077191d5257386cd6602
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529924"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877207"
 ---
 # <a name="adonet-overview"></a>ADO.NET の概要
 ADO.NET は、SQL Server や XML などのデータ ソースや、OLE DB や ODBC 経由で公開されるデータ ソースに対する一貫性を持ったアクセス機能を実現します。 データを共有する消費者向けアプリケーションで ADO.NET を使用することで、そのようなデータ ソースへの接続や、データ ソースに格納されているデータの取得、操作、更新を実行できます。  
@@ -20,7 +20,7 @@ ADO.NET は、SQL Server や XML などのデータ ソースや、OLE DB や OD
   
  ADO.NET は、.NET Framework におけるデータ アクセスの最も直接的な方法を提供します。 基になるストレージ モデルではなく、概念モデルに対して動作するアプリケーションを使用するより高度な抽象化を参照してください、 [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)します。  
   
- **プライバシーに関する声明**: System.Data.dll、System.Data.Design.dll、System.Data.OracleClient.dll、System.Data.SqlXml.dll、System.Data.Linq.dll、System.Data.SqlServerCe.dll、system.data.datasetextensions.dll の各およびアセンブリがありませんユーザーの個人データとそれ以外のデータを区別します。  これらのアセンブリによって、ユーザーの個人データの収集、格納、送信が実行されることはありません。 ただし、サードパーティ製のアプリケーションでこれらのアセンブリが使用され、ユーザーの個人データの収集、格納、送信が行われる可能性はあります。  
+ **プライバシーに関する声明**:ユーザーの間、System.Data.dll、System.Data.Design.dll、System.Data.OracleClient.dll、System.Data.SqlXml.dll、System.Data.Linq.dll、System.Data.SqlServerCe.dll、system.data.datasetextensions.dll の各およびアセンブリによって区別されません。個人データとそれ以外のデータ。  これらのアセンブリによって、ユーザーの個人データの収集、格納、送信が実行されることはありません。 ただし、サードパーティ製のアプリケーションでこれらのアセンブリが使用され、ユーザーの個人データの収集、格納、送信が行われる可能性はあります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ADO.NET のアーキテクチャ](../../../../docs/framework/data/adonet/ado-net-architecture.md)  
@@ -46,7 +46,7 @@ ADO.NET は、SQL Server や XML などのデータ ソースや、OLE DB や OD
   
 ## <a name="related-sections"></a>関連項目  
  [ADO.NET の新機能](../../../../docs/framework/data/adonet/whats-new.md)  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] の新機能について説明します。  
+ ADO.NET の新機能について説明します。  
   
  [ADO.NET アプリケーションのセキュリティ保護](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  ADO.NET を使用する場合の安全なコーディング方法について説明します。  
@@ -57,7 +57,8 @@ ADO.NET は、SQL Server や XML などのデータ ソースや、OLE DB や OD
  [ADO.NET でのデータの取得および変更](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  データ ソースへの接続、データの取得、データの変更の方法について説明します。 これには、`DataReaders` と `DataAdapters` が含まれます。  
   
-## <a name="see-also"></a>関連項目  
- [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
- [Visual Studio でのデータへのアクセス](/visualstudio/data-tools/accessing-data-in-visual-studio)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [ADO.NET](../../../../docs/framework/data/adonet/index.md)
+- [Visual Studio でのデータへのアクセス](/visualstudio/data-tools/accessing-data-in-visual-studio)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - byte arrays [C#]
 - arrays [C#], byte
 - pointers [C#], to copy bytes
-ms.openlocfilehash: 49151c6d2a573a24e63f733a5279faeee40de1b7
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d174f51fa1709a70b98473a4dbbad89b9c62c22a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241127"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640304"
 ---
 # <a name="how-to-use-pointers-to-copy-an-array-of-bytes--c-programming-guide"></a>方法: ポインターを使用してバイトの配列をコピーする (C# プログラミング ガイド)
 
@@ -25,9 +25,9 @@ ms.locfileid: "53241127"
 
 [!code-csharp[Struct with embedded inline array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#8)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../index.md)  
-- [アンセーフ コードとポインター](index.md)  
-- [-unsafe (C# コンパイラ オプション)](../../language-reference/compiler-options/unsafe-compiler-option.md)  
-- [ガベージ コレクション](../../../standard/garbage-collection/index.md)  
+- [C# プログラミング ガイド](../index.md)
+- [アンセーフ コードとポインター](index.md)
+- [-unsafe (C# コンパイラ オプション)](../../language-reference/compiler-options/unsafe-compiler-option.md)
+- [ガベージ コレクション](../../../standard/garbage-collection/index.md)

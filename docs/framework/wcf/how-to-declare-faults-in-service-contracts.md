@@ -1,39 +1,39 @@
 ---
-title: '方法 : サービス コントラクトでのエラーを宣言する'
+title: '方法: サービス コントラクトでのエラーを宣言する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e8da98e7-d22f-4f60-ac82-3fb0928a353f
-ms.openlocfilehash: 142ad26702f0732bc5103e29d5a44bc57ab37625
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0e173f71201d5f98a04d2ad922469e4ff6666681
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929286"
 ---
-# <a name="how-to-declare-faults-in-service-contracts"></a>方法 : サービス コントラクトでのエラーを宣言する
-マネージ コードでは、エラー条件が発生すると例外がスローされます。 Windows Communication Foundation (WCF) アプリケーションで、ただし、サービス コントラクトを指定、サービス コントラクトの SOAP エラーを宣言することによってどのようなエラー情報がクライアントに返されます。 例外とエラー間のリレーションシップの概要については、次を参照してください。[を指定すると処理のエラー コントラクトおよびサービスの](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)します。  
+# <a name="how-to-declare-faults-in-service-contracts"></a>方法: サービス コントラクトでのエラーを宣言する
+マネージド コードでは、エラー条件が発生すると例外がスローされます。 Windows Communication Foundation (WCF) アプリケーション、ただし、サービス コントラクト指定サービス コントラクトの SOAP エラーを宣言することでどのようなエラー情報がクライアントに返されます。 例外とエラーの間のリレーションシップの概要については、次を参照してください。[を指定すると処理のエラー コントラクトおよびサービスの](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)します。  
   
 ### <a name="create-a-service-contract-that-specifies-a-soap-fault"></a>SOAP エラーを指定するサービス コントラクトを作成する  
   
-1.  サービス コントラクトを作成し、操作をいくつか定義します。 例については、次を参照してください。[する方法: サービス コントラクトを定義する](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)です。  
+1. サービス コントラクトを作成し、操作をいくつか定義します。 例については、「[方法: サービス コントラクトを定義する](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)します。  
   
-2.  操作を選択します。これに対して指定したエラー条件が発生したとき、クライアント側に通知することになります。 エラー状態がクライアントに SOAP エラーを返すことを正当化を決定するには、次を参照してください。[を指定すると処理のエラー コントラクトおよびサービスの](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)します。  
+2. 操作を選択します。これに対して指定したエラー条件が発生したとき、クライアント側に通知することになります。 エラー状態がクライアントに SOAP エラーを返すことを正当化するには、次を参照してください。[を指定すると処理のエラー コントラクトおよびサービスの](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)します。  
   
-3.  選択した操作に対して <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> 属性を適用し、シリアル化可能なエラー型をコンストラクターに渡します。 作成して、シリアル化可能な型の使用に関する詳細については、「[サービス コントラクトのデータ転送を指定する](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)です。 `SampleMethod` 操作で `GreetingFault` を返せるように指定する例を次に示します。  
+3. 選択した操作に対して <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> 属性を適用し、シリアル化可能なエラー型をコンストラクターに渡します。 詳細については、作成して、シリアル化可能な型を使用して、次を参照してください。 [Data Transfer in Service Contracts にを指定する](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)します。 `SampleMethod` 操作で `GreetingFault` を返せるように指定する例を次に示します。  
   
      [!code-csharp[FaultContractAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#4)]
      [!code-vb[FaultContractAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#4)]  
   
-4.  コントラクト内でクライアントへの通知が必要な操作すべてについて、手順 2. および 3. を繰り返します。  
+4. コントラクト内でクライアントへの通知が必要な操作すべてについて、手順 2. および 3. を繰り返します。  
   
 ## <a name="implementing-an-operation-to-return-a-specified-soap-fault"></a>指定した SOAP エラーを返す操作の実装  
  エラー状態を呼び出し元アプリケーションに通知するために、前の手順で指定したような特定の SOAP エラーを操作中に返せるように指定したので、次に実際に通知処理を実装します。  
   
 #### <a name="throw-the-specified-soap-fault-in-the-operation"></a>指定した SOAP エラーを操作中に例外としてスローする  
   
-1.  操作中に <xref:System.ServiceModel.FaultContractAttribute> で指定したエラー条件が発生したとき、<xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> 例外を生成してスローする、というコードを記述します。SOAP エラーは型パラメーターとして、生成する例外に渡します。 前の手順で示した `GreetingFault` 内で `SampleMethod` 例外をスローするコード例を次に示します。  
+1. 操作中に <xref:System.ServiceModel.FaultContractAttribute> で指定したエラー条件が発生したとき、<xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> 例外を生成してスローする、というコードを記述します。SOAP エラーは型パラメーターとして、生成する例外に渡します。 前の手順で示した `GreetingFault` 内で `SampleMethod` 例外をスローするコード例を次に示します。  
   
      [!code-csharp[FaultContractAttribute#5](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#5)]
      [!code-vb[FaultContractAttribute#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#5)]  
@@ -44,6 +44,7 @@ ms.locfileid: "33500237"
  [!code-csharp[FaultContractAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#1)]
  [!code-vb[FaultContractAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#1)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>  
- <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>
+- <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>

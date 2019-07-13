@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a0769dd2-0f6d-48ca-8418-a9d39de7f450
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 224f9273b0c8c9445a6a9e25f064e9726acc84f0
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 3cc468da70d3c62c139a98a6637e7a3c7990c378
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45750194"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602053"
 ---
 # <a name="how-to-unwrap-a-nested-task"></a>方法: 入れ子のタスクのラップを解除する
 以下の例に示すように、メソッドからタスクを返して、そのタスクで待機またはそのタスクから続行することができます。  
@@ -45,5 +45,5 @@ ms.locfileid: "45750194"
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Threading.Tasks.TaskExtensions?displayProperty=nameWithType>  
+- <xref:System.Threading.Tasks.TaskExtensions?displayProperty=nameWithType>
 - [タスク ベースの非同期プログラミング](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)

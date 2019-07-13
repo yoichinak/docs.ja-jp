@@ -8,24 +8,24 @@ helpviewer_keywords:
 - application hosting [WPF]
 - hosting applications [WPF]
 ms.assetid: 1f73067d-c60a-4e9a-b513-c817ee7da3a1
-ms.openlocfilehash: b0a334796cdb698f25f03f629785dae2ee732426
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7259c6275b4a87eb7c4ef083dda55b24c1564e9b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947928"
 ---
 # <a name="hosting-wpf-applications"></a>WPF アプリケーションのホスト
-WPF XAML ブラウザー アプリケーション (Xbap) は、リッチ クライアント アプリケーションを Web サーバーに配置し、ブラウザーで起動されたことができます。 WPF ホスト (PresentationHost.exe) は、シェルと XBAP と XAML ファイルの MIME ハンドラーとして登録されます。 したがって、Internet Explorer では、ホストを開始、WPF XBAP が起動されたときに認識しています。 Firefox のユーザーには、ホストの Xbap Firefox を有効にする Firefox アドオンをインストールできます。 XBAP は、WPF によって提供されているホスティング Api ネイティブ ブラウザーを使用して、他のブラウザーやスタンドアロンのアプリケーションでホストできます。  
+WPF XAML ブラウザー アプリケーション (Xbap) は、Web サーバーに展開して、ブラウザーで起動が可能なリッチ クライアント アプリケーションです。 WPF ホスト (PresentationHost.exe) は、シェルと XBAP と XAML ファイルの MIME ハンドラとして登録されます。 そのため、Internet Explorer は、XBAP を起動するときに、WPF ホストを開始する認識しています。 Firefox ユーザーは、ホストの Xbap を Firefox を有効にする Firefox アドオンをインストールできます。 XBAP は、WPF では、ホスティング Api が提供される、ネイティブ ブラウザーを使用して、その他のブラウザーやスタンドアロン アプリケーションでホストできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [WPF XAML ブラウザー アプリケーションの概要](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)  
-   [WPF ホスト (PresentationHost.exe)](../../../../docs/framework/wpf/app-development/wpf-host-presentationhost-exe.md)  
-  [.NET アプリケーションの配置をサポートするための Firefox のアドオン](../../../../docs/framework/wpf/app-development/firefox-add-ons-to-support-net-application-deployment.md)  
-  [WPF のブラウザーのホスト処理をサポートするネイティブ API](../../../../docs/framework/wpf/app-development/native-wpf-browser-hosting-support-apis.md)  
+ [WPF XAML ブラウザー アプリケーションの概要](wpf-xaml-browser-applications-overview.md)  
+   [WPF ホスト (PresentationHost.exe)](wpf-host-presentationhost-exe.md)  
+  [.NET アプリケーションの配置をサポートするための Firefox のアドオン](firefox-add-ons-to-support-net-application-deployment.md)  
+  [WPF のブラウザーのホスト処理をサポートするネイティブ API](native-wpf-browser-hosting-support-apis.md)  
   
 ## <a name="related-sections"></a>関連項目  
- [アプリケーション管理の概要](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
-  [WPF のウィンドウ](../../../../docs/framework/wpf/app-development/windows-in-wpf-applications.md)  
-  [ナビゲーションの概要](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
-  [ビルドと配置](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)
+ [アプリケーション管理の概要](application-management-overview.md)  
+  [WPF のウィンドウ](windows-in-wpf-applications.md)  
+  [ナビゲーションの概要](navigation-overview.md)  
+  [ビルドと配置](building-and-deploying-wpf-applications.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
 author: KrzysztofCwalina
-ms.openlocfilehash: 159635d6e3ce414c8fd45ff7f02a75fd7cbdfe7e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e0da4cd747846921d170d9c07d6f1fb91dbd4ed7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131093"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615248"
 ---
 # <a name="capitalization-conventions"></a>大文字の使用規則
 この章のレイアウトを使用するための単純なメソッドのガイドラインは、型、メンバー、およびパラメーターを読みやすくする識別子を一貫した適用されるときに場合です。  
@@ -23,9 +23,9 @@ ms.locfileid: "53131093"
 ## <a name="capitalization-rules-for-identifiers"></a>識別子の大文字と小文字の規則  
  識別子内の単語を区別するためには、識別子内の各単語の最初の文字を大文字に変換します。 アンダー スコアは、単語を区別するために使用しないでくださいまたはさらに言えば、識別子で任意の場所。 識別子の使用によって、識別子を大文字に変換する 2 つの適切な方法はあります。  
   
--   Pascal 表記を使用  
+- Pascal 表記を使用  
   
--   キャメル ケース  
+- キャメル ケース  
   
  Pascal 表記を使用規則は、パラメーター名を除くすべての識別子には、次の例に示すように、(2 文字の長さを頭字語を含む) の各単語の最初の文字を大文字になります。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "53131093"
 |Interface|Pascal 形式|`public interface IEnumerable { ... }`|  
 |メソッド|Pascal 形式|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|  
 |プロパティ|Pascal 形式|`public class String {` <br />  `public int Length { get; }` <br /> `}`|  
-|event|Pascal 形式|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
+|イベント|Pascal 形式|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
 |フィールド|Pascal 形式|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|  
 |列挙値|Pascal 形式|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|  
 |パラメーター|Camel 形式|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|  
@@ -106,5 +106,5 @@ ms.locfileid: "53131093"
   
 ## <a name="see-also"></a>関連項目
 
-- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)  
+- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)
 - [名前付けのガイドライン](../../../docs/standard/design-guidelines/naming-guidelines.md)

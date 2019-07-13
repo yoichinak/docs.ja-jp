@@ -2,41 +2,41 @@
 title: WCF Web HTTP プログラミング オブジェクト モデル
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-ms.openlocfilehash: 8400798e4edcad41c4f5336d59646413900347f8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2401a8a051ed4dcd386c7794a2197672709ea423
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861638"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487689"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>WCF Web HTTP プログラミング オブジェクト モデル
 WCF WEB HTTP プログラミング モデルでは、SOAP は必要ありません、基本的な HTTP 要求から、Windows Communication Foundation (WCF) Web サービスを公開できます。 WCF WEB HTTP プログラミング モデルは、既存の WCF 機能拡張モデル上に構築されます。 Web HTTP プログラミング モデルでは、次のクラスが定義されます。  
   
  **プログラミング モデル:**  
   
--   <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>  
+- <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>  
   
--   <xref:System.ServiceModel.Web.WebGetAttribute>  
+- <xref:System.ServiceModel.Web.WebGetAttribute>  
   
--   <xref:System.ServiceModel.Web.WebInvokeAttribute>  
+- <xref:System.ServiceModel.Web.WebInvokeAttribute>  
   
--   <xref:System.ServiceModel.Web.WebServiceHost>  
+- <xref:System.ServiceModel.Web.WebServiceHost>  
   
  **チャネルおよびディスパッチャー インフラストラクチャ:**  
   
--   <xref:System.ServiceModel.WebHttpBinding>  
+- <xref:System.ServiceModel.WebHttpBinding>  
   
--   <xref:System.ServiceModel.Description.WebHttpBehavior>  
+- <xref:System.ServiceModel.Description.WebHttpBehavior>  
   
  **ユーティリティ クラスと機能拡張ポイント:**  
   
--   <xref:System.UriTemplate>  
+- <xref:System.UriTemplate>  
   
--   <xref:System.UriTemplateTable>  
+- <xref:System.UriTemplateTable>  
   
--   <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
+- <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
   
--   <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>  
+- <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>  
   
 ## <a name="aspnetcacheprofileattribute"></a>AspNetCacheProfileAttribute  
  <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> は、サービス操作に適用された場合に、構成ファイル内の ASP.NET 出力キャッシュ プロファイルを示します。この構成ファイルを使用して ASP .NET 出力キャッシュに操作の応答がキャッシュされます。 このプロパティが受け取るパラメーターは 1 つ (構成ファイルでキャッシュ設定を指定するキャッシュ プロファイル名) だけです。  
@@ -94,15 +94,16 @@ WCF WEB HTTP プログラミング モデルでは、SOAP は必要ありませ�
  <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector> クラスは、<xref:System.UriTemplate> クラスおよび <xref:System.UriTemplateTable> クラスを使用して、サービス操作に対して呼び出しをディスパッチします。  
   
 ## <a name="compatibility"></a>互換性  
- WCF WEB HTTP プログラミング モデルを選択し、SOAP ベースのメッセージを使用しないため、サポートされません、ws-* プロトコル。 ただし、SOAP を使用するエンドポイントと SOAP を使用しないその他のエンドポイントの 2 つの異なるエンドポイントを使用して、同じコントラクトを公開できます。 参照してください[方法: コントラクトを SOAP および Web クライアントに公開](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md)例についてはします。  
+ WCF WEB HTTP プログラミング モデルを選択し、SOAP ベースのメッセージを使用しないため、サポートされません、ws-* プロトコル。 ただし、SOAP を使用するエンドポイントと SOAP を使用しないその他のエンドポイントの 2 つの異なるエンドポイントを使用して、同じコントラクトを公開できます。 「[方法:コントラクトを SOAP および Web クライアントに公開](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md)例についてはします。  
   
 ## <a name="security"></a>セキュリティ  
- WCF WEB HTTP プログラミング モデルはサポートされていません、ws-* プロトコルが WCF WEB HTTP プログラミング モデル上に構築された Web サービスをセキュリティで保護する唯一の方法は、SSL を使用して、サービスを公開します。 SSL の設定の詳細については[!INCLUDE[iisver](../../../../includes/iisver-md.md)]を参照してください[IIS に SSL を実装する方法](https://go.microsoft.com/fwlink/?LinkId=131613)  
+ WCF WEB HTTP プログラミング モデルはサポートされていません、ws-* プロトコルが WCF WEB HTTP プログラミング モデル上に構築された Web サービスをセキュリティで保護する唯一の方法は、SSL を使用して、サービスを公開します。 IIS 7.0 で SSL の設定の詳細については、次を参照してください[IIS に SSL を実装する方法。](https://go.microsoft.com/fwlink/?LinkId=131613)  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.WebHttpBinding>  
- <xref:System.ServiceModel.Web.WebGetAttribute>  
- <xref:System.ServiceModel.Web.WebInvokeAttribute>  
- <xref:System.ServiceModel.Description.WebHttpBehavior>  
- <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>  
- [WCF Web HTTP プログラミング モデルの概要](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.WebHttpBinding>
+- <xref:System.ServiceModel.Web.WebGetAttribute>
+- <xref:System.ServiceModel.Web.WebInvokeAttribute>
+- <xref:System.ServiceModel.Description.WebHttpBehavior>
+- <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>
+- [WCF Web HTTP プログラミング モデルの概要](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

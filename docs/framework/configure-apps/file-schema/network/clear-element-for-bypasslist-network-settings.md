@@ -1,5 +1,5 @@
 ---
-title: '&lt;オフ&gt;bypasslist (ネットワーク設定) の要素'
+title: bypasslist の <clear> 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/clear
@@ -10,21 +10,21 @@ helpviewer_keywords:
 - <bypasslist>, clear element
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-ms.openlocfilehash: 5c26857496d52f9fb98ef76a72cb72fe8d852349
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7499d15f1d57887ffc3e78b83ed686c0c0f46cf4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674637"
 ---
-# <a name="ltcleargt-element-for-bypasslist-network-settings"></a>&lt;オフ&gt;bypasslist (ネットワーク設定) の要素
+# <a name="clear-element-for-bypasslist-network-settings"></a>\<クリア > bypasslist (ネットワーク設定) の要素
 プロキシ バイ パスの一覧をクリアします。  
   
  \<configuration>  
 \<system.net>  
-\<defaultProxy >  
-\<bypasslist >  
-\<クリア >  
+\<defaultProxy>  
+\<bypasslist>  
+\<clear>  
   
 ## <a name="syntax"></a>構文  
   
@@ -70,6 +70,7 @@ ms.locfileid: "50201414"
 </configuration>   
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

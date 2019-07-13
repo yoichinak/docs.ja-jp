@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 89a59d00-985e-4f5c-b59f-29b47bad11cb
-ms.openlocfilehash: 0b504a9e368e5179d5f91faf7256445d7da47b1d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 8f8283e7ed09e657a20addab0b203b3d99420d3a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025211"
 ---
 # <a name="xml-child-axis-property-visual-basic"></a>XML 子軸プロパティ (Visual Basic)
 <xref:System.Xml.Linq.XElement> オブジェクト、<xref:System.Xml.Linq.XDocument> オブジェクト、<xref:System.Xml.Linq.XElement> オブジェクトのコレクション、または <xref:System.Xml.Linq.XDocument> オブジェクトのコレクションのいずれかの子にアクセスできます。  
@@ -32,7 +32,7 @@ object.<child>
 |---|---|  
 |`object`|必須。 <xref:System.Xml.Linq.XElement> オブジェクト、<xref:System.Xml.Linq.XDocument> オブジェクト、<xref:System.Xml.Linq.XElement> オブジェクトのコレクション、または <xref:System.Xml.Linq.XDocument> オブジェクトのコレクションです。|  
 |.<|必須。 子軸プロパティの開始を示します。|  
-|`child`|必須。 フォームにアクセスする子ノードの名前 [`prefix``:`]`name`します。<br /><br /> -   `Prefix` -省略可能。 子ノードの XML 名前空間プレフィックスです。 `Imports` ステートメントを使用して定義されているグローバル XML 名前空間を指定する必要があります。<br />-   `Name` 必須。 ローカル子ノードの名前です。 参照してください[宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)します。|  
+|`child`|必須。 フォームにアクセスする子ノードの名前 [`prefix:]name`します。<br /><br /> -   `Prefix` -省略可能。 子ノードの XML 名前空間プレフィックスです。 `Imports` ステートメントを使用して定義されているグローバル XML 名前空間を指定する必要があります。<br />-   `Name` 必須。 ローカル子ノードの名前です。 参照してください[宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)します。|  
 |>|必須。 子軸プロパティの終了を示します。|  
   
 ## <a name="return-value"></a>戻り値  
@@ -49,7 +49,7 @@ object.<child>
 ## <a name="example"></a>例  
  次の例は、`contact` オブジェクトの `phone` という名前の子ノードにアクセスする方法を示しています。  
   
- [!code-vb[VbXMLSamples#17](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-child-axis-property_1.vb)]  
+ [!code-vb[VbXMLSamples#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#17)]  
   
  このコードを実行すると、次のテキストが表示されます。  
   
@@ -58,7 +58,7 @@ object.<child>
 ## <a name="example"></a>例  
  次の例は、`contacts` オブジェクトの `contact` 子軸プロパティによって返されたコレクションの、`phone` という名前の子ノードにアクセスする方法を示しています。  
   
- [!code-vb[VbXMLSamples#18](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-child-axis-property_2.vb)]  
+ [!code-vb[VbXMLSamples#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#18)]  
   
  このコードを実行すると、次のテキストが表示されます。  
   
@@ -67,15 +67,16 @@ object.<child>
 ## <a name="example"></a>例  
  次の例では、`ns` を名前空間プレフィックスとして宣言します。 その後、この名前空間のプレフィックスを使用して XML リテラルを作成し、修飾名 `ns:name` を持つ最初の子ノードにアクセスします。  
   
- [!code-vb[VbXMLSamples#19](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-child-axis-property_3.vb)]  
+ [!code-vb[VbXMLSamples#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples8.vb#19)]  
   
  このコードを実行すると、次のテキストが表示されます。  
   
  `Patrick Hines`  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Xml.Linq.XElement>  
- [XML 軸プロパティ](../../../visual-basic/language-reference/xml-axis/index.md)  
- [XML リテラル](../../../visual-basic/language-reference/xml-literals/index.md)  
- [Visual Basic での XML の作成](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Xml.Linq.XElement>
+- [XML 軸プロパティ](../../../visual-basic/language-reference/xml-axis/index.md)
+- [XML リテラル](../../../visual-basic/language-reference/xml-literals/index.md)
+- [Visual Basic での XML の作成](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

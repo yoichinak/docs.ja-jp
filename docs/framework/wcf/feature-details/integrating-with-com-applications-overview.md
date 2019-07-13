@@ -4,28 +4,28 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
-ms.openlocfilehash: c789d4a52da9b2785fb5919a674bf19f23d23509
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2be428f0ae83596a4398fc9830af40d05f6ab191
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493397"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638652"
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM アプリケーションとの統合の概要
-Windows Communication Foundation (WCF) では、マネージ コードを開発者に接続されているアプリケーションを作成するための有用な環境を提供します。 ただし、アンマネージの COM ベースのコードにかなりの投資があるして移行したくない場合も統合できます WCF Web サービス、既存のコードに直接 WCF サービス モニカーを使用しています。 サービス モニカーは Office VBA、Visual Basic 6.0、または Visual C++ 6.0 などの幅広い COM ベースの開発環境で使用可能です。  
+Windows Communication Foundation (WCF) は、マネージ コードを開発者には、接続型アプリケーションを作成するための豊富な環境を提供します。 ただし、アンマネージ COM ベースのコードにかなりの投資がある、移行したくない場合は、まだ統合できます WCF Web サービスの既存のコードに直接 WCF サービス モニカーを使用しています。 サービス モニカーは Office VBA、Visual Basic 6.0、または Visual C++ 6.0 などの幅広い COM ベースの開発環境で使用可能です。  
   
 > [!NOTE]
->  サービス モニカーでは、すべての通信を WCF 通信チャネルを使用します。 このチャネルのセキュリティ メカニズムと識別メカニズムは、標準の COM および DCOM プロキシで使用されるものとは異なります。 さらに、サービス モニカーは既定のタイムアウト期間の WCF 通信チャネルを使用しているために、1 分間のすべての呼び出しです。  
+>  サービス モニカーでは、WCF の通信チャネルを使用して、すべての通信。 このチャネルのセキュリティ メカニズムと識別メカニズムは、標準の COM および DCOM プロキシで使用されるものとは異なります。 さらに、サービス モニカーは WCF 通信チャネルは、既定のタイムアウト期間を使用するためには、1 分間のすべての呼び出しです。  
   
- サービス モニカーを使用、 `GetObject` WCF Web サービスを呼び出すため、厳密に型指定された COM 固有のアプローチをアンマネージ開発者に提供する関数。 これには、ローカルの WCF Web サービスのコントラクトとバインディングを使用している COM 参照の定義が必要です。 他の WCF クライアントと同様にこのコンストラクションはチャネルは透過的に COM プログラマに最初のメソッド呼び出しに、サービス モニカーは、サービスに型指定されたチャネルを作成する必要があります。  
+ サービス モニカーを併用、 `GetObject` WCF Web サービスを呼び出すための厳密に型指定された、COM に固有の方法で、アンマネージ開発者を提供する関数。 これは、ローカル、WCF Web サービスのコントラクトおよび使用するバインディングの定義を COM から参照できる必要があります。 他の WCF クライアントのようにこのチャネルの構築は、最初のメソッド呼び出し時に COM プログラマに対して透過的に実行が、サービス モニカーは、サービスに型指定されたチャネルを作成する必要があります。  
   
- 他の WCF クライアントが、モニカーを使用する場合、共通のアプリケーションは、アドレス、バインディング、およびサービスと通信するためのコントラクトを指定します。 コントラクトは、次のいずれかの方法で指定できます。  
+ 他の WCF クライアント、モニカーを使用する場合、共通のアプリケーションは、アドレス、バインド、およびサービスと通信するコントラクトを指定します。 コントラクトは、次のいずれかの方法で指定できます。  
   
--   型指定のあるコントラクト - クライアント コンピューターで COM から参照できる型として登録されます。  
+- 型指定のあるコントラクト - クライアント コンピューターで COM から参照できる型として登録されます。  
   
--   WSDL コントラクト - WSDL ドキュメントという形で供給されます。  
+- WSDL コントラクト - WSDL ドキュメントという形で供給されます。  
   
--   MEX コントラクト - 実行時に Metadata Exchange (MEX) エンドポイントから取得されます。  
+- MEX コントラクト - 実行時に Metadata Exchange (MEX) エンドポイントから取得されます。  
   
 ## <a name="parameters-supported-by-the-service-moniker"></a>サービス モニカーでサポートされるパラメーター  
  サービス モニカーでサポートされるパラメーターを次の表に示します。  
@@ -51,7 +51,7 @@ Windows Communication Foundation (WCF) では、マネージ コードを開発�
 |`serializer`|"XML" シリアライザーと "datacontract" シリアライザーのいずれを使用するかを指定します。|  
   
 > [!NOTE]
->  すべての COM ベースのクライアントに使用する場合でも、クライアント コンピューターにインストールするには、WCF とサポートの .NET Framework 2.0 サービス モニカーが必要です。 また、サービス モニカーを使用するクライアント アプリケーションには、適切なバージョンの .NET Framework ランタイムが読み込まれていることが重要です。 Office アプリケーション内でモニカーを使用する場合、構成ファイルに、正しいフレームワーク バージョンが読み込まれていることを確認する必要があります。 たとえば Excel の場合、Excel.exe ファイルと同じディレクトリにある Excel.exe.config というファイルに、次のテキストが記述されている必要があります。  
+>  完全な COM ベースのクライアントと共に使用している場合でもサービス モニカーには、クライアント コンピューターにインストールするには、WCF とサポートの .NET Framework 2.0 が必要です。 また、サービス モニカーを使用するクライアント アプリケーションには、適切なバージョンの .NET Framework ランタイムが読み込まれていることが重要です。 Office アプリケーション内でモニカーを使用する場合、構成ファイルに、正しいフレームワーク バージョンが読み込まれていることを確認する必要があります。 たとえば Excel の場合、Excel.exe ファイルと同じディレクトリにある Excel.exe.config というファイルに、次のテキストが記述されている必要があります。  
 >   
 >  `<?xml version="1.0" encoding="utf-8"?>`  
 >   
@@ -65,5 +65,6 @@ Windows Communication Foundation (WCF) では、マネージ コードを開発�
 >   
 >  `</configuration>`  
   
-## <a name="see-also"></a>関連項目  
- [方法 : サービス モニカーを登録および構成する](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+## <a name="see-also"></a>関連項目
+
+- [方法: 登録し、サービス モニカーの構成](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

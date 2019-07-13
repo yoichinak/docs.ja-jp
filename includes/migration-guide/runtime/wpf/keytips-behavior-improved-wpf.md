@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 946096cb9510ca12bbd2cecd00099142308b072a
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804350"
+---
 ### <a name="keytips-behavior-improved-in-wpf"></a>WPF での KeyTip の動作が改良された
 
 |   |   |
@@ -7,4 +15,3 @@
 |スコープ|エッジ|
 |Version|4.7.2|
 |型|ランタイム|
-

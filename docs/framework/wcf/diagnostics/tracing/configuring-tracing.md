@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: c5064d90c8601ee44be593446b0fd5ad483e57f2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 8c8d4e45035a49a35c32f334895eeae27a1f02a1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649999"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64656204"
 ---
 # <a name="configuring-tracing"></a>トレースの構成
 ここでは、トレースを有効にする方法、トレースを出力し、トレース レベルを設定するようにトレース ソースを構成する方法、エンドツーエンドのトレース相関をサポートするようにアクティビティ トレースと伝達を設定する方法、およびトレースにアクセスするようにトレース リスナーを設定する方法について説明します。  
@@ -22,9 +22,9 @@ ms.locfileid: "45649999"
 ## <a name="enabling-tracing"></a>トレースの有効化  
  Windows Communication Foundation (WCF) は、次のデータの診断トレースを出力します。  
   
--   操作呼び出し、コード例外、警告、その他の重要な処理イベントなど、アプリケーションのすべてのコンポーネントにおける処理マイルストーンのトレース。  
+- 操作呼び出し、コード例外、警告、その他の重要な処理イベントなど、アプリケーションのすべてのコンポーネントにおける処理マイルストーンのトレース。  
   
--   トレース機能が正しく動作しないときの Windows エラー イベント。 参照してください[イベントのログ記録](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)します。  
+- トレース機能が正しく動作しないときの Windows エラー イベント。 参照してください[イベントのログ記録](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)します。  
   
  WCF トレースがの上に構築された<xref:System.Diagnostics>します。 トレースを使用するには、構成ファイルまたはコードでトレース ソースを定義する必要があります。 WCF では、WCF アセンブリごとにトレース ソースを定義します。 `System.ServiceModel`トレース ソースは、最も一般的な WCF トレース ソースし、WCF 通信スタックの出入りユーザー コードへの出入りのトランスポートからの間でマイルス トーンの処理を記録します。 `System.ServiceModel.MessageLogging` トレース ソースは、システムを通過するすべてのメッセージを記録します。  
   
@@ -58,19 +58,19 @@ ms.locfileid: "45649999"
 ## <a name="configuring-trace-sources-to-emit-traces"></a>トレースを出力するためのトレース ソースの構成  
  WCF では、各アセンブリのトレース ソースを定義します。 アセンブリ内で生成されたトレースは、該当するソースで定義されているリスナーによってアクセスされます。 次のトレース ソースが定義されます。  
   
--   System.ServiceModel: WCF 処理されるたびのすべての段階のログ構成を読み取り、トランスポートでメッセージの処理、ユーザー コードでセキュリティ処理、メッセージがディスパッチされます。  
+- System.ServiceModel:WCF 処理されるたびのすべての段階のログ構成を読み取り、トランスポートでメッセージの処理、ユーザー コードでセキュリティ処理、メッセージがディスパッチされます。  
   
--   System.ServiceModel.MessageLogging: システムを通過するすべてのメッセージを記録します。  
+- System.servicemodel.messagelogging:システムを通過するすべてのメッセージを記録します。  
   
--   System.IdentityModel  
+- System.IdentityModel  
   
--   System.ServiceModel.Activation  
+- System.ServiceModel.Activation  
   
--   System.IO.Log: Common Log File System (CLFS) への .NET Framework インターフェイスを記録します。  
+- System.IO.Log:.NET Framework インターフェイスを Common Log File System (CLFS) ログを記録します。  
   
--   System.Runtime.Serialization: オブジェクトの読み取りまたは書き込みを記録します。  
+- System.Runtime.Serialization:ログ オブジェクトの読み取りまたは書き込み時にします。  
   
--   CardSpace  
+- CardSpace  
   
  各トレース ソースは、次の構成例に示すように同じ (共有) リスナーを使用するように構成できます。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "45649999"
   
  カスタム トレース リスナーは、ネットワーク上のリモート データベースなどにトレースを送信するように構成できます。 アプリケーションを展開するユーザーは、リモート コンピューターのトレース ログに適切なアクセス制御を適用する必要があります。  
   
- また、トレース リスナーはプログラムによって構成することもできます。 詳細については、次を参照してください。[方法: を作成し、トレース リスナーを初期化](https://go.microsoft.com/fwlink/?LinkId=94648)と[カスタム TraceListener の作成](https://go.microsoft.com/fwlink/?LinkId=96239)です。  
+ また、トレース リスナーはプログラムによって構成することもできます。 詳細については、「[方法 :作成し、トレース リスナーを初期化](https://go.microsoft.com/fwlink/?LinkId=94648)と[カスタム TraceListener の作成](https://go.microsoft.com/fwlink/?LinkId=96239)です。  
   
 > [!CAUTION]
 >  `System.Diagnostics.XmlWriterTraceListener` はスレッド セーフではないため、トレース ソースは、トレースを出力するときにリソースを排他的にロックする可能性があります。 このリスナーを使用するように構成されたトレース ソースに多くのスレッドがトレースを出力すると、リソースの競合が発生し、パフォーマンスに重大な問題が生じる場合があります。 この問題を解決するには、スレッド セーフなカスタム リスナーを実装する必要があります。  
@@ -153,7 +153,7 @@ ms.locfileid: "45649999"
 |トレース レベル|追跡イベントの性質|追跡イベントの内容|追跡イベント|対象ユーザー|  
 |-----------------|----------------------------------|-----------------------------------|--------------------|-----------------|  
 |オフ|N/A|N/A|トレースは出力されません。|N/A|  
-|重大|「否定的」イベント: 予期しない処理をまたはエラー状態を示すイベント。||次の例を含む未処理の例外が記録されます。<br /><br /> -OutOfMemoryException<br />-ThreadAbortException (CLR が任意の threadabortexceptionhandler を呼び出します)<br />-StackOverflowException (キャッチできません)<br />-ConfigurationErrorsException<br />-SEHException<br />-アプリケーションの起動エラー<br />-フェイルファースト イベント<br />システムがハングします。<br />有害メッセージ: アプリケーションにエラーが発生しているトレースのメッセージします。|管理者<br /><br /> アプリケーション開発者|  
+|重大|「否定的」イベント: 予期しない処理をまたはエラー状態を示すイベント。||次の例を含む未処理の例外が記録されます。<br /><br /> -   OutOfMemoryException<br />-ThreadAbortException (CLR が任意の threadabortexceptionhandler を呼び出します)<br />-StackOverflowException (キャッチできません)<br />-ConfigurationErrorsException<br />-SEHException<br />-アプリケーションの起動エラー<br />-フェイルファースト イベント<br />システムがハングします。<br />有害メッセージ: アプリケーションにエラーが発生しているトレースのメッセージします。|管理者<br /><br /> アプリケーション開発者|  
 |Error|「否定的」イベント: 予期しない処理をまたはエラー状態を示すイベント。|予期しない処理が発生した。 アプリケーションが、タスクを正常に実行できなかった。 ただし、アプリケーションは依然として動作している。|すべての例外がログに記録されます。|管理者<br /><br /> アプリケーション開発者|  
 |警告|「否定的」イベント: 予期しない処理をまたはエラー状態を示すイベント。|問題が発生したか、発生する可能性があるが、アプリケーションは正常に動作している。 ただし、正常な動作を継続できなくなる可能性がある。|-アプリケーションが、調整設定よりもより多くの要求を受信します。<br />-受信キューでは、構成済みの最大容量近くです。<br />タイムアウトを超えました。<br />-資格情報は拒否されます。|管理者<br /><br /> アプリケーション開発者|  
 |情報|「肯定的」イベント: 正常なマイルス トーン イベント|アプリケーションが正常に動作しているかどうかとは無関係の、アプリケーションの実行に関する重要で正常なマイルストーン。|一般に、システム ステータスの監視と診断、パフォーマンスの計測、またはプロファイリングに有用なメッセージが生成されます。 この情報は、キャパシティ プランニングやパフォーマンス管理のために利用できます。<br /><br /> チャネルが作成されます。<br />エンドポイントのリスナーが作成されます。<br />メッセージを入力またはトランスポートから離れる。<br />セキュリティ トークンを取得します。<br />構成の設定は読み取り専用です。|管理者<br /><br /> アプリケーション開発者<br /><br /> 製品開発者。|  
@@ -180,8 +180,9 @@ ms.locfileid: "45649999"
   
  ユーザー定義のトレース ソースでは、`propagateActivity` 属性を使用できません。 ユーザー コード アクティビティ ID の伝達では、ServiceModel `ActivityTracing` 属性を `propagateActivity` に設定しているときは、ServiceModel `true` を設定しないでください。  
   
-## <a name="see-also"></a>関連項目  
- [トレース](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [管理と診断](../../../../../docs/framework/wcf/diagnostics/index.md)  
- [方法 : トレース リスナーを作成し初期化する](https://go.microsoft.com/fwlink/?LinkId=94648)  
- [カスタム TraceListener の作成](https://go.microsoft.com/fwlink/?LinkId=96239)
+## <a name="see-also"></a>関連項目
+
+- [トレース](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [管理と診断](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [方法: 作成し、トレース リスナーの初期化](https://go.microsoft.com/fwlink/?LinkId=94648)
+- [カスタム TraceListener の作成](https://go.microsoft.com/fwlink/?LinkId=96239)

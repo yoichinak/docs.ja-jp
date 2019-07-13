@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-ms.openlocfilehash: 7f4a5fada6c2c17563796ae634ee742285551160
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5ceda5b9c89fdd1770c6573b132c449997fb62b7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181486"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638629"
 ---
 # <a name="internet-unsecured-client-and-service"></a>セキュリティで保護されていないインターネット環境のクライアントとサービス
 次の図は、パブリック、セキュリティ保護されていない Windows Communication Foundation (WCF) クライアントとサービスの例を示します。  
   
- ![セキュリティ保護されていないインターネット クライアントとサービスのシナリオ](../../../../docs/framework/wcf/feature-details/media/publicunsecured.gif "publicUnsecured")  
+ ![セキュリティ保護されていないインターネットのシナリオを示すスクリーン ショット](./media/internet-unsecured-client-and-service/public-unsecured-internet.gif)  
   
 |特徴|説明|  
 |--------------------|-----------------|  
 |セキュリティ モード|なし|  
 |Transport|HTTP|  
-|バインド|<xref:System.ServiceModel.BasicHttpBinding> コードでは、または[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)構成内の要素。|  
+|バインディング|<xref:System.ServiceModel.BasicHttpBinding> コードでは、または[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)構成内の要素。|  
 |相互運用性|既存の Web サービス クライアントとサービスを使用する|  
 |認証|なし|  
 |整合性|なし|  
@@ -30,9 +30,9 @@ ms.locfileid: "50181486"
 ## <a name="service"></a>サービス  
  次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
   
--   構成を使用せずに、コードを使用してスタンドアロン サービスを作成します。  
+- 構成を使用せずに、コードを使用してスタンドアロン サービスを作成します。  
   
--   提供された構成を使用してサービスを作成しますが、エンドポイントを定義しません。  
+- 提供された構成を使用してサービスを作成しますが、エンドポイントを定義しません。  
   
 ### <a name="code"></a>コード  
  次のコードは、セキュリティで保護されないエンドポイントを作成する方法を示しています。 既定では、<xref:System.ServiceModel.BasicHttpBinding> のセキュリティ モードは <xref:System.ServiceModel.BasicHttpSecurityMode.None> に設定されます。  
@@ -70,9 +70,9 @@ ms.locfileid: "50181486"
 ## <a name="client"></a>クライアント  
  次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
   
--   コード (およびクライアント コード) を使用してスタンドアロン クライアントを作成します。  
+- コード (およびクライアント コード) を使用してスタンドアロン クライアントを作成します。  
   
--   エンドポイント アドレスを定義しないクライアントを作成します。 代わりに、引数として構成名を受け取るクライアント コンストラクターを使用します。 次に例を示します。  
+- エンドポイント アドレスを定義しないクライアントを作成します。 代わりに、引数として構成名を受け取るクライアント コンストラクターを使用します。 次に例を示します。  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -109,7 +109,8 @@ ms.locfileid: "50181486"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [一般的なセキュリティ シナリオ](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
- [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>関連項目
+
+- [一般的なセキュリティ シナリオ](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
+- [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

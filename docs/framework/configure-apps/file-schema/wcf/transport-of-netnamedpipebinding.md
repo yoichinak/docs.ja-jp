@@ -1,15 +1,15 @@
 ---
-title: '&lt;netNamedPipeBinding&gt; の &lt;transport&gt;'
+title: <transport> の <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: d9eff52d-4bde-4586-b56a-b0ec24611f8d
-ms.openlocfilehash: 1624b93344e50b0406d314e285ce94786ba6dadc
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: a6d3dd2c24e90bdcdc6520e62dcc1dbe7ce797f9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788350"
 ---
-# <a name="lttransportgt-of-ltnetnamedpipebindinggt"></a>&lt;netNamedPipeBinding&gt; の &lt;transport&gt;
+# <a name="transport-of-netnamedpipebinding"></a>\<トランスポート > の\<netNamedPipeBinding >
 名前付きパイプのトランスポート セキュリティ設定を定義します。  
   
  \<system.ServiceModel >  
@@ -38,7 +38,7 @@ ms.locfileid: "54148982"
   
 |属性|説明|  
 |---------------|-----------------|  
-|protectionLevel|名前付きパイプの保護レベルを定義します。 メッセージに署名すると、転送中のメッセージが第三者によって改ざんされるリスクを軽減します。 暗号化により、転送中にデータレベルのプライバシーが提供されます。 以下の値が有効です。<br /><br /> -None。保護されません。<br />署名:メッセージは署名されます。<br />-EncryptAndSign:メッセージは暗号化および署名されます。<br /><br /> 既定値は EncryptAndSign です。|  
+|protectionLevel|名前付きパイプの保護レベルを定義します。 メッセージに署名すると、転送中のメッセージが第三者によって改ざんされるリスクを軽減します。 暗号化によって、トランスポート中にデータ レベルのプライバシーが提供されます。 以下の値が有効です。<br /><br /> -None。保護されません。<br />署名:メッセージは署名されます。<br />-EncryptAndSign:メッセージは暗号化および署名されます。<br /><br /> 既定値は EncryptAndSign です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし  
@@ -49,13 +49,14 @@ ms.locfileid: "54148982"
 |-------------|-----------------|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netnamedpipebinding.md)|バインディングのセキュリティ設定を定義します。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.NamedPipeTransportSecurity>  
- <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement.Transport%2A>  
- <xref:System.ServiceModel.NetNamedPipeSecurity.Transport%2A>  
- <xref:System.ServiceModel.Configuration.NamedPipeTransportSecurityElement>  
- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [バインディング](../../../../../docs/framework/wcf/bindings.md)  
- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.NamedPipeTransportSecurity>
+- <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement.Transport%2A>
+- <xref:System.ServiceModel.NetNamedPipeSecurity.Transport%2A>
+- <xref:System.ServiceModel.Configuration.NamedPipeTransportSecurityElement>
+- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [バインディング](../../../../../docs/framework/wcf/bindings.md)
+- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

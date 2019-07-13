@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 7086bdfbbd2ebace25f2999a0787bcee48494ab8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dca5830a73d0f4374302862e7ccdffdf9dc48cb2
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147679"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490109"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server の接続プール (ADO.NET)
 通常、データベース サーバーへの接続は、時間のかかるいくつかの手順で構成されています。 ソケットまたは名前付きパイプなどの物理チャネルの確立、サーバーとの最初のハンドシェイクの実行、接続文字列の情報の解析、サーバーによる接続の認証、現在のトランザクションへ参加するための検証などの手順を行う必要があります。  
   
- 実際には、ほとんどのアプリケーションで、1 つまたはいくつかの違いがあるだけの構成を接続に使用しています。 つまり、アプリケーションの実行時に、多数の同一の接続が繰り返し開かれ、閉じられているのです。 接続を開くコストを最小限に抑える[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]と呼ばれる最適化手法を使用して*接続プール*します。  
+ 実際には、ほとんどのアプリケーションで、1 つまたはいくつかの違いがあるだけの構成を接続に使用しています。 つまり、アプリケーションの実行時に、多数の同一の接続が繰り返し開かれ、閉じられているのです。 ADO.NET 接続を開くコストを最小限に抑えると呼ばれる最適化手法を使用して*接続プーリング*します。  
   
  接続プールは、新しく開く必要のある接続の数を減らします。 *プーラー*物理的な接続の所有権を保持します。 プーラーは、任意の接続構成それぞれのアクティブな接続のセットをそのまま保持して、接続を管理します。 この接続の `Open` を呼び出すと、プーラーは、プールに使用可能な接続があるかどうかを確認します。 プールされた接続が使用できる場合は、新しい接続を開く代わりに、プールされた接続を呼び出し元に返します。 アプリケーションが接続で `Close` を呼び出すと、プーラーは接続を閉じる代わりに、プールされたアクティブな接続のセットに接続を返します。 接続がプールに返されると、その接続は、次の `Open` 呼び出しで再度使用できる状態になります。  
   
- 同じ構成を持つ接続のみをプールすることができます。 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] は同時に複数のプールを保持し、各プールでの構成は 1 つです。 接続は接続文字列によってプール内で区別されます。また、統合セキュリティを使用している場合は、Windows ID によっても区別されます。 接続がプールされるかどうかは、その接続がトランザクションに参加しているかどうかにも依存します。 <xref:System.Data.SqlClient.SqlConnection.ChangePassword%2A> を使用すると、<xref:System.Data.SqlClient.SqlCredential> インスタンスは接続プールに影響します。 ユーザー ID とパスワードが同じでも、<xref:System.Data.SqlClient.SqlCredential> のインスタンスごとに異なる接続プールが使用されます。  
+ 同じ構成を持つ接続のみをプールすることができます。 ADO.NET は、複数のプールを構成ごとに 1 つ同時に保持します。 接続は接続文字列によってプール内で区別されます。また、統合セキュリティを使用している場合は、Windows ID によっても区別されます。 接続がプールされるかどうかは、その接続がトランザクションに参加しているかどうかにも依存します。 <xref:System.Data.SqlClient.SqlConnection.ChangePassword%2A> を使用すると、<xref:System.Data.SqlClient.SqlCredential> インスタンスは接続プールに影響します。 ユーザー ID とパスワードが同じでも、<xref:System.Data.SqlClient.SqlCredential> のインスタンスごとに異なる接続プールが使用されます。  
   
- 接続をプールすると、アプリケーションのパフォーマンスとスケーラビリティを大幅に改善できます。 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] では、接続プールが既定で有効になっています。 明示的に無効にしない限り、プーラーは、アプリケーションで接続が開かれたり、閉じられたりする際に接続を最適化します。 また、接続プール機能の動作を制御する接続文字列修飾子を指定することもできます。 詳細については、このトピックで後述する「接続文字列キーワードによる接続プールの制御」を参照してください。  
+ 接続をプールすると、アプリケーションのパフォーマンスとスケーラビリティを大幅に改善できます。 既定では、接続プールは ADO.NET で有効にします。 明示的に無効にしない限り、プーラーは、アプリケーションで接続が開かれたり、閉じられたりする際に接続を最適化します。 また、接続プール機能の動作を制御する接続文字列修飾子を指定することもできます。 詳細については、このトピックで後述する「接続文字列キーワードによる接続プールの制御」を参照してください。  
   
 > [!NOTE]
 >  接続プールが有効になっている場合とタイムアウト エラーや他のログイン エラーが発生した場合は、例外がスローされ、それ以降に接続を試みると、5 秒間の "ブロック期間" 中失敗します。 ブロック期間内にアプリケーションが接続を試みると、最初の例外が再度スローされます。 ブロック期間の終了後も失敗が続く場合は、最大 1 分として、新しいブロック期間は前のブロック期間の 2 倍の長さになります。  
@@ -80,7 +80,7 @@ using (SqlConnection connection = new SqlConnection(
  既に存在しないサーバーへの接続が存在する場合は、接続プーラーが、その接続が切断されていることをまだ検出せず、無効というマークを付けていない状況のときでも、プールからその接続を削除できます。 この機能は、接続がまだ有効であることを確認するオーバーヘッドによってサーバーへのラウンド トリップが実行されることにより、プーラーの利点が失われてしまうことを防ぐためにあります。 この状況が発生した場合は、接続の使用を最初に試みたときに接続が切断されていることが検出され、例外がスローされます。  
   
 ## <a name="clearing-the-pool"></a>プールのクリア  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 では、プールをクリアするために、<xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> と <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A> という 2 つの新しいメソッドが導入されました。 `ClearAllPools` は、指定されたプロバイダーの接続プールをクリアし、`ClearPool` は、特定の接続に関連付けられた接続プールをクリアします。 これらのメソッドが呼び出されたときに使用中の接続がある場合は、適切にマーク付けされ、 接続が閉じられるとプールに返されずに破棄されます。  
+ ADO.NET 2.0 には、プールをクリアする 2 つの新しいメソッドが導入されました。<xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A>と<xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>します。 `ClearAllPools` は、指定されたプロバイダーの接続プールをクリアし、`ClearPool` は、特定の接続に関連付けられた接続プールをクリアします。 これらのメソッドが呼び出されたときに使用中の接続がある場合は、適切にマーク付けされ、 接続が閉じられるとプールに返されずに破棄されます。  
   
 ## <a name="transaction-support"></a>トランザクションのサポート  
  接続はプールから取り出され、トランザクション コンテキストに基づいて割り当てられます。 接続文字列で `Enlist=false` が指定されていない限り、接続プールは、接続を <xref:System.Transactions.Transaction.Current%2A> コンテキストの中に参加させます。 接続が閉じられ、参加した `System.Transactions` トランザクションと共にプールに返されると、同じ `System.Transactions` トランザクションを持つ接続プールに対する次の要求でも、使用可能であれば同じ接続を返すように接続が保持されます。 このような要求が発行された場合で、なおかつ、プールされた接続が使用できない場合は、プールの非トランザクション部分から接続を取り出して参加させます。 プールのどちらの領域にも使用できる接続がない場合は、新しい接続を作成して参加させます。  
@@ -99,7 +99,7 @@ using (SqlConnection connection = new SqlConnection(
 ### <a name="pool-fragmentation-due-to-many-databases"></a>多数のデータベースによるプールの断片化  
  インターネット サービス プロバイダーの多くは、1 つのサーバー上で複数の Web サイトをホストしています。 インターネット サービス プロバイダーは、1 つのデータベースを使用してフォーム認証ログインを確認し、そのユーザーまたはユーザー グループの特定のデータベースへの接続を開きます。 認証データベースへの接続はプールされ、すべてのユーザーが使用できるようになります。 ただし、各データベースに対して個別の接続のプールが存在するため、サーバーへの接続数が増加します。  
   
- これもまた、アプリケーションのデザインの副作用です。 SQL Server に接続するときにセキュリティを損なうことなく、この副作用を回避する比較的簡単な方法があります。 各ユーザーまたはグループの個別のデータベースに接続する代わりに、サーバー上の同じデータベースに接続してから、[!INCLUDE[tsql](../../../../includes/tsql-md.md)] USE ステートメントを実行して目的のデータベースに変更します。 `master` データベースへの最初の接続を作成し、`databaseName` 文字列変数で指定した目的のデータベースに切り替えるコードを次に示します。  
+ これもまた、アプリケーションのデザインの副作用です。 SQL Server に接続するときにセキュリティを損なうことなく、この副作用を回避する比較的簡単な方法があります。 各ユーザーまたはグループの個別のデータベースに接続する代わりに、サーバー上の同じデータベースに接続してから、Transact-SQL USE ステートメントを実行して目的のデータベースに変更します。 `master` データベースへの最初の接続を作成し、`databaseName` 文字列変数で指定した目的のデータベースに切り替えるコードを次に示します。  
   
 ```vb  
 ' Assumes that command is a valid SqlCommand object and that  
@@ -129,8 +129,9 @@ using (SqlConnection connection = new SqlConnection(
 ### <a name="application-role-alternatives"></a>アプリケーション ロールに代わる方法  
  アプリケーション ロールに代わるセキュリティ メカニズムの使用をお勧めします。 詳細については、次を参照してください。 [SQL Server でのアプリケーション ロールの作成](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)です。  
   
-## <a name="see-also"></a>関連項目  
- [接続プール](../../../../docs/framework/data/adonet/connection-pooling.md)  
- [SQL Server と ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
- [パフォーマンス カウンター](../../../../docs/framework/data/adonet/performance-counters.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [接続プール](../../../../docs/framework/data/adonet/connection-pooling.md)
+- [SQL Server と ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
+- [パフォーマンス カウンター](../../../../docs/framework/data/adonet/performance-counters.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

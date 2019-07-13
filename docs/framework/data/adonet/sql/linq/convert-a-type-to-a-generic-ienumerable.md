@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 64774fb5-7447-4296-ad3b-8a94346f99a1
-ms.openlocfilehash: e1d8036dd7ef4e1f59e2af46ac101135c39ef0c4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d75c9b9123b52b3e241bea1bbd1d302c406715e8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032709"
 ---
 # <a name="convert-a-type-to-a-generic-ienumerable"></a>汎用 IEnumerable への型の変換
 汎用 <xref:System.Linq.Enumerable.AsEnumerable%2A> として型指定された引数を返すには、`IEnumerable` を使用します。  
@@ -23,5 +23,6 @@ ms.locfileid: "33360440"
  [!code-csharp[DLinqQueryExamples#46](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#46)]
  [!code-vb[DLinqQueryExamples#46](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#46)]  
   
-## <a name="see-also"></a>関連項目  
- [クエリの例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+## <a name="see-also"></a>関連項目
+
+- [クエリの例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)

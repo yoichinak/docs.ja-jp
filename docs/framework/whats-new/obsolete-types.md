@@ -8,67 +8,67 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab4d3bf7db928f926b802c08ee5e61edf86055b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6a1243ad856bc5f8cc104c9f2e08fce515a849d8
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196754"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457059"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework で互換性のために残されている型
-<a name="introduction"></a> この記事の表に、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] と [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] で互換性のために残されている型をアセンブリ別に示します。 各アセンブリで互換性のために残されている型と推奨される代替型の一覧を表示するには、以下のリンクを使用してください。 これらの型は廃止されているため、そのメンバーもすべて廃止されます。 .NET Framework クラス ライブラリで互換性のために残されているその他のメンバーの一覧については、[互換性のために残されているメンバー](../../../docs/framework/whats-new/obsolete-members.md)に関する記事をご覧ください。
+<a name="introduction"></a>この記事の表には、.NET Framework 4.5 および .NET Framework 4.6 で互換性のために残されている型がアセンブリ別にまとめられています。 各アセンブリで互換性のために残されている型と推奨される代替型の一覧を表示するには、以下のリンクを使用してください。 これらの型は廃止されているため、そのメンバーもすべて廃止されます。 .NET Framework クラス ライブラリで互換性のために残されているその他のメンバーの一覧については、[互換性のために残されているメンバー](obsolete-members.md)に関する記事をご覧ください。
 
--   [互換性のために残されているシステム アセンブリの型](#obsolete_types_in_system_assemblies)
+- [互換性のために残されているシステム アセンブリの型](#obsolete_types_in_system_assemblies)
 
-    -   [mscorlib.dll](#mscorlib)
+    - [mscorlib.dll](#mscorlib)
 
-    -   [System.Core.dll](#Core)
+    - [System.Core.dll](#Core)
 
-    -   [System.Data.dll](#data)
+    - [System.Data.dll](#data)
 
-    -   [System.Data.OracleClient.dll](#oracleclient)
+    - [System.Data.OracleClient.dll](#oracleclient)
 
-    -   [System.Design.dll](#design)
+    - [System.Design.dll](#design)
 
-    -   [System.dll](#system)
+    - [System.dll](#system)
 
-    -   [System.EnterpriseServices.dll](#enterpriseservices)
+    - [System.EnterpriseServices.dll](#enterpriseservices)
 
-    -   [System.Net.dll](#net)
+    - [System.Net.dll](#net)
 
-    -   [System.ServiceModel.dll](#servicemodel)
+    - [System.ServiceModel.dll](#servicemodel)
 
-    -   [System.Web.dll](#web)
+    - [System.Web.dll](#web)
 
-    -   [System.Web.Mobile.dll](#mobile)
+    - [System.Web.Mobile.dll](#mobile)
 
-    -   [System.Workflow.Activities.dll](#workflow_activities)
+    - [System.Workflow.Activities.dll](#workflow_activities)
 
-    -   [System.Workflow.ComponentModel.dll](#workflow_componentmodel)
+    - [System.Workflow.ComponentModel.dll](#workflow_componentmodel)
 
-    -   [System.Workflow.Runtime.dll](#workflow_runtime)
+    - [System.Workflow.Runtime.dll](#workflow_runtime)
 
-    -   [System.WorkflowServices.dll](#workflowservices)
+    - [System.WorkflowServices.dll](#workflowservices)
 
-    -   [System.Xaml.dll](#xaml)
+    - [System.Xaml.dll](#xaml)
 
-    -   [System.Xml.dll](#xml)
+    - [System.Xml.dll](#xml)
 
-    -   [WindowsBase.dll](#WindowsBase)
+    - [WindowsBase.dll](#WindowsBase)
 
--   [互換性のために残されている Microsoft アセンブリの型](#obsolete_types_in_microsoft_assemblies)
+- [互換性のために残されている Microsoft アセンブリの型](#obsolete_types_in_microsoft_assemblies)
 
-    -   [IEHost.dll and IEExec.exe](#IEHost)
+    - [IEHost.dll and IEExec.exe](#IEHost)
 
-    -   [Microsoft.Build.Engine.dll](#Engine)
+    - [Microsoft.Build.Engine.dll](#Engine)
 
-    -   [Microsoft.JScript.dll](#jscript)
+    - [Microsoft.JScript.dll](#jscript)
 
-    -   [Microsoft.VisualBasic.Compatibility.dll](#VBCompat)
+    - [Microsoft.VisualBasic.Compatibility.dll](#VBCompat)
 
-    -   [Microsoft.VisualBasic.Compatibility.Data.dll](#VBCompatData)
+    - [Microsoft.VisualBasic.Compatibility.Data.dll](#VBCompatData)
 
-    -   [Microsoft.VisualC.dll](#visualc)
+    - [Microsoft.VisualC.dll](#visualc)
 
 <a name="obsolete_types_in_system_assemblies"></a>
 ## <a name="obsolete-types-in-system-assemblies"></a>互換性のために残されているシステム アセンブリの型
@@ -140,7 +140,7 @@ ms.locfileid: "47196754"
  [ページのトップへ](#introduction)
 
 <a name="Core"></a>
-### <a name="assembly-systemcoredll"></a>アセンブリ: System.Core.dll
+### <a name="assembly-systemcoredll"></a>アセンブリ:System.Core.dll
 
 |型|メッセージ|
 |----------|-------------|
@@ -149,7 +149,7 @@ ms.locfileid: "47196754"
  [ページのトップへ](#introduction)
 
 <a name="data"></a>
-### <a name="assembly-systemdatadll"></a>アセンブリ: System.Data.dll
+### <a name="assembly-systemdatadll"></a>アセンブリ:System.Data.dll
 
 |型|メッセージ|
 |----------|-------------|
@@ -161,7 +161,7 @@ ms.locfileid: "47196754"
  [ページのトップへ](#introduction)
 
 <a name="oracleclient"></a>
-### <a name="assembly-systemdataoracleclientdll"></a>アセンブリ: System.Data.OracleClient.dll
+### <a name="assembly-systemdataoracleclientdll"></a>アセンブリ:System.Data.OracleClient.dll
 
 |型|メッセージ|
 |----------|-------------|
@@ -177,7 +177,7 @@ ms.locfileid: "47196754"
  [ページのトップへ](#introduction)
 
 <a name="design"></a>
-### <a name="assembly-systemdesigndll"></a>アセンブリ: System.Design.dll
+### <a name="assembly-systemdesigndll"></a>アセンブリ:System.Design.dll
 
 |型|メッセージ|
 |----------|-------------|
@@ -199,13 +199,13 @@ ms.locfileid: "47196754"
  [ページのトップへ](#introduction)
 
 <a name="system"></a>
-### <a name="assembly-systemdll"></a>アセンブリ: System.dll
+### <a name="assembly-systemdll"></a>アセンブリ:System.dll
 
 |型|メッセージ|
 |----------|-------------|
 |<xref:System.ComponentModel.IComNativeDescriptorHandler?displayProperty=nameWithType>|このインターフェイスの使用は非推奨とされました。 代わりに、<xref:System.ComponentModel.TypeDescriptionProvider?displayProperty=nameWithType> をハンドル型 <xref:System.ComponentModel.TypeDescriptor.ComObjectType%2A?displayProperty=nameWithType> に追加します。|
 |<xref:System.ComponentModel.RecommendedAsConfigurableAttribute?displayProperty=nameWithType>|新しい設定モデルを操作するには、代わりに、<xref:System.ComponentModel.SettingsBindableAttribute?displayProperty=nameWithType> を使用してください。|
-|<xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute?displayProperty=nameWithType>|この属性は非推奨とされました。 代わりに、<xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute?displayProperty=nameWithType> を使用してください。 たとえば、CodeDom のルート デザイナーを指定するには、`DesignerSerializerAttribute\(...,typeof\(TypeCodeDomSerializer\)\)` を使用します。|
+|<xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute?displayProperty=nameWithType>|この属性は非推奨とされました。 代わりに、<xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute?displayProperty=nameWithType> を使用してください。|
 |<xref:System.Diagnostics.DiagnosticsConfigurationHandler?displayProperty=nameWithType>|このクラスの使用は非推奨とされました。|
 |<xref:System.Diagnostics.PerformanceCounterManager?displayProperty=nameWithType>|このクラスの使用は非推奨とされました。 代わりに、<xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType> クラスからパフォーマンス カウンターを使用してください。|
 |<xref:System.Net.GlobalProxySelection?displayProperty=nameWithType>|このクラスの使用は非推奨とされました。 グローバルな既定のプロキシにアクセスして設定するには、代わりに、<xref:System.Net.WebRequest.DefaultWebProxy%2A?displayProperty=nameWithType> を使用してください。 <xref:System.Net.GlobalProxySelection.GetEmptyWebProxy%2A?displayProperty=nameWithType> の代わりに、'null' を使用してください。|
@@ -214,7 +214,7 @@ ms.locfileid: "47196754"
  [ページのトップへ](#introduction)
 
 <a name="enterpriseservices"></a>
-### <a name="assembly-systementerpriseservicesdll"></a>アセンブリ: System.EnterpriseServices.dll
+### <a name="assembly-systementerpriseservicesdll"></a>アセンブリ:System.EnterpriseServices.dll
 
 |型|メッセージ|
 |----------|-------------|
@@ -223,7 +223,7 @@ ms.locfileid: "47196754"
  [ページのトップへ](#introduction)
 
 <a name="net"></a>
-### <a name="assembly-systemnetdll"></a>アセンブリ: System.Net.dll
+### <a name="assembly-systemnetdll"></a>アセンブリ:System.Net.dll
 
 |型|メッセージ|
 |----------|-------------|
@@ -240,7 +240,7 @@ ms.locfileid: "47196754"
  [ページのトップへ](#introduction)
 
 <a name="servicemodel"></a>
-### <a name="assembly-systemservicemodeldll"></a>アセンブリ: System.ServiceModel.dll
+### <a name="assembly-systemservicemodeldll"></a>アセンブリ:System.ServiceModel.dll
 
 |型|メッセージ|
 |----------|-------------|
@@ -256,7 +256,7 @@ ms.locfileid: "47196754"
  [ページのトップへ](#introduction)
 
 <a name="web"></a>
-### <a name="assembly-systemwebdll"></a>アセンブリ: System.Web.dll
+### <a name="assembly-systemwebdll"></a>アセンブリ:System.Web.dll
 
 |型|メッセージ|
 |----------|-------------|
@@ -277,7 +277,7 @@ ms.locfileid: "47196754"
  [ページのトップへ](#introduction)
 
 <a name="mobile"></a>
-### <a name="assembly-systemwebmobiledll"></a>アセンブリ: System.Web.Mobile.dll
+### <a name="assembly-systemwebmobiledll"></a>アセンブリ:System.Data.Entity.dll
 
 |型|メッセージ|
 |----------|-------------|
@@ -477,7 +477,7 @@ ms.locfileid: "47196754"
  [ページのトップへ](#introduction)
 
 <a name="workflow_activities"></a>
-### <a name="assembly-systemworkflowactivitiesdll"></a>アセンブリ: System.Workflow.Activities.dll
+### <a name="assembly-systemworkflowactivitiesdll"></a>アセンブリ:System.Workflow.Activities.dll
 
 |型|メッセージ|
 |----------|-------------|
@@ -490,7 +490,7 @@ ms.locfileid: "47196754"
  [ページのトップへ](#introduction)
 
 <a name="workflow_componentmodel"></a>
-### <a name="assembly-systemworkflowcomponentmodeldll"></a>アセンブリ: System.Workflow.ComponentModel.dll
+### <a name="assembly-systemworkflowcomponentmodeldll"></a>アセンブリ:System.Workflow.ComponentModel.dll
 
 |型|メッセージ|
 |----------|-------------|
@@ -508,12 +508,12 @@ ms.locfileid: "47196754"
  [ページのトップへ](#introduction)
 
 <a name="workflow_runtime"></a>
-### <a name="assembly-systemworkflowruntimedll"></a>アセンブリ: System.Workflow.Runtime.dll
+### <a name="assembly-systemworkflowruntimedll"></a>アセンブリ:System.Workflow.Runtime.dll
 
 |型|メッセージ|
 |----------|-------------|
-|<xref:System.Activities.Statements.Interop>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br />Workflow Foundation 3.0 の型の使用は非推奨とされました。 代わりに、<xref:System.Activities>.\* の Workflow 4.0 の型を使用してください。|
-|<xref:System.Activities.Tracking.InteropTrackingRecord>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br />Workflow Foundation 3.0 の型の使用は非推奨とされました。 代わりに、<xref:System.Activities>.\* の Workflow 4.0 の型を使用してください。|
+|<xref:System.Activities.Statements.Interop?displayProperty=nameWithType>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br />Workflow Foundation 3.0 の型の使用は非推奨とされました。 代わりに、<xref:System.Activities>.\* の Workflow 4.0 の型を使用してください。|
+|<xref:System.Activities.Tracking.InteropTrackingRecord?displayProperty=nameWithType>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br />Workflow Foundation 3.0 の型の使用は非推奨とされました。 代わりに、<xref:System.Activities>.\* の Workflow 4.0 の型を使用してください。|
 |<xref:System.Workflow.Runtime> 名前空間のすべての型|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> System.Workflow.\* 型の使用は非推奨とされます。 代わりに、<xref:System.Activities>.\* の新しい型を使用してください。|
 |<xref:System.Workflow.Runtime.Configuration> 名前空間のすべての型|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> System.Workflow.\* 型の使用は非推奨とされます。 代わりに、<xref:System.Activities>.\* の新しい型を使用してください。|
 |<xref:System.Workflow.Runtime.DebugEngine> を除く<xref:System.Workflow.Runtime.DebugEngine.DebugEngineCallback> 名前空間のすべての型|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> System.Workflow.\* 型の使用は非推奨とされます。 代わりに、<xref:System.Activities>.\* の新しい型を使用してください。|
@@ -523,7 +523,7 @@ ms.locfileid: "47196754"
  [ページのトップへ](#introduction)
 
 <a name="workflowservices"></a>
-### <a name="assembly-systemworkflowservicesdll"></a>アセンブリ: System.WorkflowServices.dll
+### <a name="assembly-systemworkflowservicesdll"></a>アセンブリ:System.WorkflowServices.dll
 
 |型|メッセージ|
 |----------|-------------|
@@ -552,7 +552,7 @@ ms.locfileid: "47196754"
  [ページのトップへ](#introduction)
 
 <a name="xaml"></a>
-### <a name="assembly-systemxamldll"></a>アセンブリ: System.Xaml.dll
+### <a name="assembly-systemxamldll"></a>アセンブリ:System.Xaml.dll
 
 |型|メッセージ|
 |----------|-------------|
@@ -561,7 +561,7 @@ ms.locfileid: "47196754"
  [ページのトップへ](#introduction)
 
 <a name="xml"></a>
-### <a name="assembly-systemxmldll"></a>アセンブリ: System.Xml.dll
+### <a name="assembly-systemxmldll"></a>アセンブリ:System.Xml.dll
 
 |型|メッセージ|
 |----------|-------------|
@@ -574,7 +574,7 @@ ms.locfileid: "47196754"
  [ページのトップへ](#introduction)
 
 <a name="WindowsBase"></a>
-### <a name="assembly-windowsbasedll"></a>アセンブリ: WindowsBase.dll
+### <a name="assembly-windowsbasedll"></a>アセンブリ:WindowsBase.dll
 
 |型|メッセージ|
 |----------|-------------|
@@ -587,13 +587,13 @@ ms.locfileid: "47196754"
  以下のセクションで、互換性のために残されている Microsoft アセンブリの型を示します。 これらのアセンブリは、個別の言語 (たとえば、Microsoft.JScript.dll や Microsoft.VisualC.dll) を対象とした特殊な目的のアセンブリです。
 
 <a name="IEHost"></a>
-### <a name="assembly-iehostdll-and-ieexecexe"></a>アセンブリ: IEHost.dll and IEExec.exe
- IEHost.dll および IEExec.exe アセンブリは .NET Framework から削除されています。 これらのアセンブリのすべての型およびメンバーは廃止され、[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ではサポートされていません。 これらのアセンブリは Internet Explorer で Windows フォーム コントロールをホストし、実行可能ファイルを実行するために使用されていました。 代替手段としては、ClickOnce、XAML ブラウザー アプリケーション (XBAP)、および Microsoft Silverlight をお勧めします。
+### <a name="assembly-iehostdll-and-ieexecexe"></a>アセンブリ:IEHost.dll and IEExec.exe
+ IEHost.dll および IEExec.exe アセンブリは .NET Framework から削除されています。 そのすべての型およびメンバーは廃止され、.NET Framework 4 以降はサポートされていません。 これらのアセンブリは Internet Explorer で Windows フォーム コントロールをホストし、実行可能ファイルを実行するために使用されていました。 代替手段としては、ClickOnce、XAML ブラウザー アプリケーション (XBAP)、および Microsoft Silverlight をお勧めします。
 
  [ページのトップへ](#introduction)
 
 <a name="Engine"></a>
-### <a name="assembly-microsoftbuildenginedll"></a>アセンブリ: Microsoft.Build.Engine.dll
+### <a name="assembly-microsoftbuildenginedll"></a>アセンブリ:Microsoft.Build.Engine.dll
 
 |型|メッセージ|
 |----------|-------------|
@@ -603,7 +603,7 @@ ms.locfileid: "47196754"
  [ページのトップへ](#introduction)
 
 <a name="jscript"></a>
-### <a name="assembly-microsoftjscriptdll"></a>アセンブリ: Microsoft.JScript.dll
+### <a name="assembly-microsoftjscriptdll"></a>アセンブリ:Microsoft.JScript.dll
 
 |型|メッセージ|
 |----------|-------------|
@@ -629,8 +629,10 @@ ms.locfileid: "47196754"
  [ページのトップへ](#introduction)
 
 <a name="VBCompat"></a>
-### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>アセンブリ: Microsoft.VisualBasic.Compatibility.dll
-  Visual Basic 6 から移行する方法については、「[Visual Basic 6.0 リソース センター](https://msdn.microsoft.com/library/windows/desktop/ms788229)」を参照してください。
+### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>アセンブリ:Microsoft.VisualBasic.Compatibility.dll
+
+Visual Basic 6 から移行する方法については、「[Visual Basic 6.0 リソース センター](https://docs.microsoft.com/previous-versions/visualstudio/visual-basic-6/visual-basic-6.0-documentation)」を参照してください。
+  
 |型|メッセージ|
 |----------|-------------|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray?displayProperty=nameWithType>|このメンバーは使用されなくなりました。|
@@ -704,7 +706,7 @@ ms.locfileid: "47196754"
  [ページのトップへ](#introduction)
 
 <a name="VBCompatData"></a>
-### <a name="assembly-microsoftvisualbasiccompatibilitydatadll"></a>アセンブリ: Microsoft.VisualBasic.Compatibility.Data.dll
+### <a name="assembly-microsoftvisualbasiccompatibilitydatadll"></a>アセンブリ:Microsoft.VisualBasic.Compatibility.Data.dll
 
 |型|メッセージ|
 |----------|-------------|
@@ -761,7 +763,7 @@ ms.locfileid: "47196754"
  [ページのトップへ](#introduction)
 
 <a name="visualc"></a>
-### <a name="assembly-microsoftvisualcdll"></a>アセンブリ: Microsoft.VisualC.dll
+### <a name="assembly-microsoftvisualcdll"></a>アセンブリ:Microsoft.VisualC.dll
 
 |型|メッセージ|
 |----------|-------------|
@@ -776,5 +778,7 @@ ms.locfileid: "47196754"
 |<xref:Microsoft.VisualC.NeedsCopyConstructorModifier?displayProperty=nameWithType>|Microsoft.VisualC.dll は互換性のために残されているアセンブリであり、下位互換性のためだけに存在します。|
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=nameWithType>|Microsoft.VisualC.dll は互換性のために残されているアセンブリであり、下位互換性のためだけに存在します。|
 
-## <a name="see-also"></a>参照
- [クラス ライブラリの互換性のために残されている機能](../../../docs/framework/whats-new/whats-obsolete.md) [互換性のために残されているメンバー](../../../docs/framework/whats-new/obsolete-members.md)
+## <a name="see-also"></a>関連項目
+
+- [クラス ライブラリの互換性のために残されている機能](whats-obsolete.md)
+- [互換性のために残されているメンバー](obsolete-members.md)

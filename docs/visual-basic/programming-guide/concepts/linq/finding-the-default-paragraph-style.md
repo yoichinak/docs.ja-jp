@@ -1,21 +1,21 @@
 ---
-title: 既定の段落スタイル (Visual Basic) を検索します。
+title: 既定の段落スタイル (Visual Basic) の検索
 ms.date: 07/20/2015
 ms.assetid: 9d094a4a-ec8c-41b0-b7ab-a3deb2a01d45
-ms.openlocfilehash: 77e6e6db321b5f8ef338706e5f938daa02d115eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f874033b9a070b951d27f37aae36f738ab1fd222
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642044"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64618377"
 ---
-# <a name="finding-the-default-paragraph-style-visual-basic"></a>既定の段落スタイル (Visual Basic) を検索します。
+# <a name="finding-the-default-paragraph-style-visual-basic"></a>既定の段落スタイル (Visual Basic) の検索
 「WordprocessingML ドキュメント内の情報の操作」チュートリアルでの最初のタスクは、ドキュメント内にある段落の既定のスタイルを検索することです。  
   
 ## <a name="example"></a>例  
   
 ### <a name="description"></a>説明  
- 次の例では、Office Open XML WordprocessingML ドキュメントを開き、パッケージのドキュメント パーツとスタイル パーツを検索した後、既定のスタイル名を検索するクエリを実行します。 Office Open XML ドキュメントのパッケージとので構成されている部分については、次を参照してください。[詳細 Office Open XML WordprocessingML ドキュメントの (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)です。  
+ 次の例では、Office Open XML WordprocessingML ドキュメントを開き、パッケージのドキュメント パーツとスタイル パーツを検索した後、既定のスタイル名を検索するクエリを実行します。 Office Open XML ドキュメント パッケージおよび構成のパーツについては、次を参照してください。[詳細の Office Open XML WordprocessingML ドキュメント (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)します。  
   
  このクエリは、値が "paragraph" である `w:style` という名前の属性と、値が "1" である `w:type` という名前の属性を持つ `w:default` という名前のノードを検索します。 これらの属性を持つ XML ノードは 1 つしかないため、このクエリは、<xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> 演算子を使用してコレクションをシングルトンに変換します。 次に、`w:styleId` という名前の属性の値を取得します。  
   
@@ -89,7 +89,8 @@ The default style is: Normal
 ## <a name="next-steps"></a>次の手順  
  次の例では、ドキュメント内のすべての段落およびそのスタイルを検索する同様のクエリを記述します。  
   
--   [段落とそのスタイル (Visual Basic) を取得します。](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
+- [段落とそのスタイル (Visual Basic) の取得](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
   
-## <a name="see-also"></a>関連項目  
- [チュートリアル: WordprocessingML ドキュメント (Visual Basic) 内のコンテンツの操作](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a>関連項目
+
+- [チュートリアル: WordprocessingML ドキュメント (Visual Basic) 内のコンテンツの操作](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

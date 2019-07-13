@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1d50c8b4-f550-4775-bbb6-eab6e874cb43
-ms.openlocfilehash: 1223dee7e307c032bd14be154b58972e51287c7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5d812ae9b5fd0a796588d3366b8546ef84c982c3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877358"
 ---
 # <a name="group-elements-in-a-sequence"></a>シーケンスの要素のグループ化
 <xref:System.Linq.Enumerable.GroupBy%2A> 演算子はシーケンスの要素をグループ化します。 Northwind データベースを使用する例を次に示します。  
   
 > [!NOTE]
->  null 列値が <xref:System.Linq.Enumerable.GroupBy%2A> クエリに含まれると、<xref:System.InvalidOperationException> がスローされることがあります。 詳細についてを参照してください"GroupBy InvalidOperationException"の[トラブルシューティング](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)です。  
+>  null 列値が <xref:System.Linq.Enumerable.GroupBy%2A> クエリに含まれると、<xref:System.InvalidOperationException> がスローされることがあります。 詳細については、の「GroupBy InvalidOperationException」セクションを参照してください。[トラブルシューティング](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)します。  
   
 ## <a name="example"></a>例  
  次の例では、`Products` を基準として `CategoryID` をグループ化しています。  
@@ -72,6 +72,7 @@ ms.locfileid: "33364504"
  [!code-csharp[DLinqQueryExamples#35](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#35)]
  [!code-vb[DLinqQueryExamples#35](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#35)]  
   
-## <a name="see-also"></a>関連項目  
- [クエリの例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
- [サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+## <a name="see-also"></a>関連項目
+
+- [クエリの例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

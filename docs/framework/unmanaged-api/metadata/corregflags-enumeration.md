@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f7b935b8f59e434c9da364be1986dbed654a1efd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cf2a1bca6115902d96f72c19dc469d0a1c8588cd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445810"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756218"
 ---
 # <a name="corregflags-enumeration"></a>CorRegFlags 列挙型
-モジュールまたは複合イメージをインストールするときに、登録に使用されるフラグ値を提供します。  
+モジュールまたは複合イメージをインストールするときに登録のために使用するフラグ値を提供します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum   
 {  
     regNoCopy  = 0x00000001,  
@@ -42,17 +42,18 @@ typedef enum
 |メンバー|説明|  
 |------------|-----------------|  
 |`regNoCopy`|変換先にファイルをコピーしないことを指定します。|  
-|`regConfig`|モジュールまたは複合イメージが、構成を指定します。|  
-|`regHasRefs`|モジュールまたは複合イメージが、クラスの参照を持つことを指定します。|  
+|`regConfig`|モジュールまたは複合イメージは、構成を指定します。|  
+|`regHasRefs`|モジュールまたは複合にクラスの参照があることを指定します。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>関連項目
+
+- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

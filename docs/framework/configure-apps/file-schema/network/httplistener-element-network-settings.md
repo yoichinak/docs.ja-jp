@@ -1,21 +1,21 @@
 ---
-title: '&lt;httpListener&gt;要素 (ネットワーク設定)'
+title: <httpListener> 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
-ms.openlocfilehash: 58228eed71dd6a5f5af8e26c02db9633da6ceef6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8257b0311e18a21fbc04185f8297ee8e5f38b86b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197783"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592741"
 ---
-# <a name="lthttplistenergt-element-network-settings"></a>&lt;httpListener&gt;要素 (ネットワーク設定)
-によって使用されるパラメーターのカスタマイズ、<xref:System.Net.HttpListener>クラス。  
+# <a name="httplistener-element-network-settings"></a>\<httpListener > 要素 (ネットワーク設定)
+<xref:System.Net.HttpListener>クラスで使用されるパラメータをカスタマイズします。  
   
  \<configuration>  
 \<system.net>  
 \<settings>  
-\<httpListener >  
+\<httpListener>  
   
 ## <a name="syntax"></a>構文  
   
@@ -52,9 +52,9 @@ ms.locfileid: "50197783"
   
  `http.sys`サービスは 2 つの要求 URI の文字列を公開します。  
   
--   生の URI  
+- 生の URI  
   
--   変換された URI  
+- 変換された URI  
   
  生の URI は、 <xref:System.Uri?displayProperty=nameWithType> HTTP 要求の要求行で提供されます。  
   
@@ -72,11 +72,11 @@ ms.locfileid: "50197783"
   
  `http.sys`サービスの結合、<xref:System.Uri.Host%2A?displayProperty=nameWithType>プロパティの値と、変換された URI を作成する要求の行の文字列。 さらに、`http.sys`と<xref:System.Uri?displayProperty=nameWithType>クラスも、次を行います。  
   
--   すべてのパーセントでエンコードされた値エスケープ解除します。  
+- すべてのパーセントでエンコードされた値エスケープ解除します。  
   
--   Utf-16 文字表現に非 ASCII 文字をパーセントでエンコードに変換します。 Unicode の文字 (Unicode のエンコード %uxxxx 形式を使用) と、utf-8 と ANSI や DBCS 文字がサポートされていることに注意してください。  
+- Utf-16 文字表現に非 ASCII 文字をパーセントでエンコードに変換します。 Unicode の文字 (Unicode のエンコード %uxxxx 形式を使用) と、utf-8 と ANSI や DBCS 文字がサポートされていることに注意してください。  
   
--   パスの圧縮など、他の正規化の手順を実行します。  
+- パスの圧縮など、他の正規化の手順を実行します。  
   
  要求には、パーセントでエンコードされた値に使用されるエンコーディングに関する情報が含まれていない、以降は、パーセントでエンコードされた値を解析するだけで正しいエンコーディングを判断することはできません。  
   
@@ -137,8 +137,9 @@ ms.locfileid: "50197783"
 |検証ファイル||  
 |空にすることができます。||  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.Net.Configuration.HttpListenerElement>  
-- <xref:System.Net.HttpListener>  
-- <xref:System.Net.HttpListenerRequest.Url%2A>  
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Net.Configuration.HttpListenerElement>
+- <xref:System.Net.HttpListener>
+- <xref:System.Net.HttpListenerRequest.Url%2A>
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

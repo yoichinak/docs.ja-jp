@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ac17993a4980e96cbd05fc2523567138e7b56262
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 096c818c1103835110478953d0a0d9082b33569e
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196443"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59180662"
 ---
 # <a name="deploying-the-net-framework"></a>.NET Framework の配置
 .NET Framework ドキュメントのこのセクションでは、アプリケーションとともに .NET Framework をインストールする開発者、およびネットワーク上で .NET Framework を展開する管理者に対して情報を提供します。 また、アクティベーション、配置に伴う再起動の問題、.NET Framework のインストールの進捗を監視する方法についても説明します。  
@@ -30,11 +30,12 @@ ms.locfileid: "50196443"
  [方法: .NET Framework 4.5 インストーラーの進行状況を表示する](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)  
  進行状況のビューを独自に表示する一方で、.NET Framework セットアップ プロセスをサイレントで起動および追跡する方法を説明します。  
   
- [.NET Framework 初期化エラー: ユーザー エクスペリエンスの管理](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)  
+ [.NET Framework の初期化エラー: ユーザー エクスペリエンスの管理](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)  
  ユーザーのコンピューターで無効な、またはインストールされていない CLR バージョンが .NET Framework アプリケーションで必要になると何が起きるか、そしてこのようなエラーの解決方法と、ユーザーに表示されるエラー メッセージの制御方法について説明します。  
   
  [方法: CLR のアクティブ化に関する問題をデバッグする](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)  
  正しいバージョンの CLR でアプリケーションを実行して発生した問題を解決するために、どのようにして CLR アクティベーション ログを表示し、デバッグするかを説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
+
 - [開発ガイド](../../../docs/framework/development-guide.md)

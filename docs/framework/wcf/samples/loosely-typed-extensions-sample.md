@@ -2,12 +2,12 @@
 title: 弱く型指定された拡張のサンプル
 ms.date: 03/30/2017
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
-ms.openlocfilehash: f46cf3dfcdb60669f0a02337b54de97d4af3efdc
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 4d92f45382361c61fe9e7ac85ff5d604a2c87b27
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042193"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592211"
 ---
 # <a name="loosely-typed-extensions-sample"></a>弱く型指定された拡張のサンプル
 配信オブジェクト モデルでは、拡張データをさまざまな方法で処理できます。拡張データとは、配信フィードの XML 表現に含まれているが、<xref:System.ServiceModel.Syndication.SyndicationFeed> や <xref:System.ServiceModel.Syndication.SyndicationItem> などのクラスによって明示的に公開されない情報のことです。 このサンプルでは、拡張データを処理する基本的な方法を示します。  
@@ -54,15 +54,15 @@ w.w3.org/2001/XMLSchema" xmlns="">
   
  このドキュメントには、次の拡張データが含まれています。  
   
--   `myAttribute` 要素の `<feed>` 属性。  
+- `myAttribute` 要素の `<feed>` 属性。  
   
--   `<simpleString>` 要素。  
+- `<simpleString>` 要素。  
   
--   `<DataContractExtension>` 要素。  
+- `<DataContractExtension>` 要素。  
   
--   `<XmlSerializerExtension>` 要素。  
+- `<XmlSerializerExtension>` 要素。  
   
--   `<xElementExtension>` 要素。  
+- `<xElementExtension>` 要素。  
   
 ## <a name="writing-extension-data"></a>拡張データの書き込み  
  属性の拡張は、次のサンプル コードに示すように、エントリを <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> コレクションに追加することによって作成されます。  
@@ -140,11 +140,11 @@ foreach (SyndicationElementExtension extension in feed2.ElementExtensions.Where<
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
+1. 実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
-2.  ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
+2. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
-3.  1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
+3. 1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
@@ -155,6 +155,7 @@ foreach (SyndicationElementExtension extension in feed2.ElementExtensions.Where<
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\LooselyTypedExtensions`  
   
-## <a name="see-also"></a>関連項目  
- [厳密に型指定された拡張](../../../../docs/framework/wcf/samples/strongly-typed-extensions-sample.md)  
- [WCF 配信](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
+## <a name="see-also"></a>関連項目
+
+- [厳密に型指定された拡張](../../../../docs/framework/wcf/samples/strongly-typed-extensions-sample.md)
+- [WCF 配信](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)

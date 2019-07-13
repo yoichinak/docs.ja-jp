@@ -2,12 +2,12 @@
 title: フェデレーション サンプル
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: 49a13b292a627c054510a10445e1e64ab869162c
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 0d3e9b3aa8d94136fae2d26b2b297776d5b7ea9e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087829"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650066"
 ---
 # <a name="federation-sample"></a>フェデレーション サンプル
 このサンプルではフェデレーション セキュリティを示します。  
@@ -17,13 +17,13 @@ ms.locfileid: "44087829"
   
  シナリオは、次の 4 つの部分から構成されます。  
   
--   BookStore サービス  
+- BookStore サービス  
   
--   BookStore STS  
+- BookStore STS  
   
--   HomeRealm STS  
+- HomeRealm STS  
   
--   BookStore クライアント  
+- BookStore クライアント  
   
  BookStore サービスは、`BrowseBooks` と `BuyBook` の 2 つの操作をサポートします。 サービスでは、`BrowseBooks` 操作には匿名アクセスできますが、`BuyBooks` 操作にアクセスするには認証済みのアクセス権限が必要です。 認証は、BookStore STS によって発行されたトークンの形式を取ります。 BookStore サービス用の構成ファイルは、次のように `wsFederationHttpBinding` を使用して、クライアントを BookStore STS にポイントします。  
   
@@ -67,17 +67,17 @@ ms.locfileid: "44087829"
   
  `BuyBook` 操作にアクセスするときに発生するイベントの順序は、次のとおりです。  
   
-1.  クライアントは、Windows 資格情報を使用して HomeRealm STS に対する認証を行います。  
+1. クライアントは、Windows 資格情報を使用して HomeRealm STS に対する認証を行います。  
   
-2.  HomeRealm STS は、BookStore STS に対する認証に使用できるトークンを発行します。  
+2. HomeRealm STS は、BookStore STS に対する認証に使用できるトークンを発行します。  
   
-3.  クライアントは、HomeRealm STS によって発行されたトークンを使用して BookStore STS に対する認証を行います。  
+3. クライアントは、HomeRealm STS によって発行されたトークンを使用して BookStore STS に対する認証を行います。  
   
-4.  BookStore STS は、BookStore サービスに対する認証に使用できるトークンを発行します。  
+4. BookStore STS は、BookStore サービスに対する認証に使用できるトークンを発行します。  
   
-5.  クライアントは、BookStore STS によって発行されたトークンを使用して BookStore サービスに対する認証を行います。  
+5. クライアントは、BookStore STS によって発行されたトークンを使用して BookStore サービスに対する認証を行います。  
   
-6.  クライアントは `BuyBook` 操作にアクセスします。  
+6. クライアントは `BuyBook` 操作にアクセスします。  
   
  このサンプルの設定および実行方法については、次の手順を参照してください。  
   
@@ -86,18 +86,18 @@ ms.locfileid: "44087829"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  SDK コマンド ウィンドウを開きます。 Setup.bat をサンプルのパスで実行します。 これにより、サンプルに必要な仮想ディレクトリが作成され、必要な証明書が適切な権限を付与されてインストールされます。  
+1. SDK コマンド ウィンドウを開きます。 Setup.bat をサンプルのパスで実行します。 これにより、サンプルに必要な仮想ディレクトリが作成され、必要な証明書が適切な権限を付与されてインストールされます。  
   
     > [!NOTE]
     >  Setup.bat バッチ ファイルは、Windows SDK コマンド プロンプトから実行します。 MSSDK 環境変数が SDK のインストール ディレクトリを指している必要があります。 この環境変数は、Windows SDK コマンド プロンプトで自動設定されます。 セットアップで IIS 管理者スクリプトが使用されるため、[!INCLUDE[wv](../../../../includes/wv-md.md)] で IIS 6.0 管理互換がインストールされていることを確認する必要があります。 [!INCLUDE[wv](../../../../includes/wv-md.md)] でセットアップ スクリプトを実行するには、管理者権限が必要です。  
   
-2.  Visual Studio で FederationSample.sln を開き、**ソリューションのビルド**から、**ビルド**メニュー。 これによって共通のプロジェクト ファイル、Bookstore サービス、Bookstore STS、および HomeRealm STS が作成され、IIS に展開されます。 さらに Bookstore クライアント アプリケーションがビルドされ、FederationSample\BookStoreClient\bin\Debug フォルダに実行可能ファイル BookStoreClient.exe が配置されます。  
+2. Visual Studio で FederationSample.sln を開き、**ソリューションのビルド**から、**ビルド**メニュー。 これによって共通のプロジェクト ファイル、Bookstore サービス、Bookstore STS、および HomeRealm STS が作成され、IIS に展開されます。 さらに Bookstore クライアント アプリケーションがビルドされ、FederationSample\BookStoreClient\bin\Debug フォルダーに実行可能ファイル BookStoreClient.exe が配置されます。  
   
-3.  BookStoreClient.exe をダブルクリックします。 BookStoreClient ウィンドウが表示されます。  
+3. BookStoreClient.exe をダブルクリックします。 BookStoreClient ウィンドウが表示されます。  
   
-4.  クリックして、この書店で利用可能なブックを参照できます**Browse Books**します。  
+4. クリックして、この書店で利用可能なブックを参照できます**Browse Books**します。  
   
-5.  特定の本を購入する一覧で本を選択し、をクリックして**Buy Book**します。 アプリケーションが起動し、HomeRealm セキュリティ トークン サービスを使用した Windows 認証によって認証を行います。  
+5. 特定の本を購入する一覧で本を選択し、をクリックして**Buy Book**します。 アプリケーションが起動し、HomeRealm セキュリティ トークン サービスを使用した Windows 認証によって認証を行います。  
   
      サンプルは、ユーザーが 15 ドル以下の本を購入できるように構成されています。 15 ドルを超える本を購入しようとすると、クライアントは、BookStore サービスからアクセス拒否のメッセージを受け取ります。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "44087829"
   
 #### <a name="to-clean-up"></a>クリーンアップするには  
   
-1.  Cleanup.bat を実行します。 これによって、設定中に作成された仮想ディレクトリが削除されます。同時に、設定中にインストールされた証明書も削除されます。  
+1. Cleanup.bat を実行します。 これによって、設定中に作成された仮想ディレクトリが削除されます。同時に、設定中にインストールされた証明書も削除されます。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
@@ -116,5 +116,3 @@ ms.locfileid: "44087829"
 >  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  
-  
-## <a name="see-also"></a>関連項目

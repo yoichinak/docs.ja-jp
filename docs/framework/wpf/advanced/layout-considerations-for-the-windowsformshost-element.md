@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: 5856e710ad5a70fd740a5bb99ff241b8d9f2037a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 67698a0a45bdf84d36603cd1309a8dd5bce2f895
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518950"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598847"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>WindowsFormsHost 要素のレイアウトに関する考慮事項
 このトピックで説明する方法、<xref:System.Windows.Forms.Integration.WindowsFormsHost>要素と対話、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]レイアウト システム。  
@@ -30,21 +30,21 @@ ms.locfileid: "43518950"
   
 |レイアウト機能|説明|  
 |--------------------|-----------------|  
-|自動サイズ調整|いくつか[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]自体の内容を正しく表示するコントロールのサイズを変更します。 詳細については、次を参照してください。 [AutoSize プロパティの概要](../../../../docs/framework/winforms/controls/autosize-property-overview.md)します。|  
-|固定とドッキング|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロールは、位置と親コンテナーに基づくサイズ変更をサポートします。 詳細については、<xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> および <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType> を参照してください。|  
-|自動スケール|自身とその子の出力デバイスまたはコンテナーの既定のフォントのピクセル単位で、サイズ、解像度に基づくコンテナー コントロールのサイズを変更します。 詳細については、次を参照してください。 [Windows フォームで自動スケーリング](../../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md)します。|  
+|自動サイズ調整|いくつか[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]自体の内容を正しく表示するコントロールのサイズを変更します。 詳細については、次を参照してください。 [AutoSize プロパティの概要](../../winforms/controls/autosize-property-overview.md)します。|  
+|固定とドッキング|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロールは、位置と親コンテナーに基づくサイズ変更をサポートします。 詳細については、次のトピックを参照してください。 <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> および <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>|  
+|自動スケール|自身とその子の出力デバイスまたはコンテナーの既定のフォントのピクセル単位で、サイズ、解像度に基づくコンテナー コントロールのサイズを変更します。 詳細については、次を参照してください。 [Windows フォームで自動スケーリング](../../winforms/automatic-scaling-in-windows-forms.md)します。|  
 |レイアウト コンテナー|<xref:System.Windows.Forms.FlowLayoutPanel>と<xref:System.Windows.Forms.TableLayoutPanel>コントロールの子コントロールを配置および自体の内容に従ってサイズします。|  
   
 ## <a name="layout-limitations"></a>レイアウトの制限事項  
  一般に、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールを拡張しで可能な範囲に変換されることはできません[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]します。 次の一覧が既知の制限事項について説明しますと、<xref:System.Windows.Forms.Integration.WindowsFormsHost>要素が、そのホスト型統合しようとしています。[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]にコントロールを、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]レイアウト システム。  
   
--   場合によっては、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールのサイズを変更できない、または特定のディメンションにのみサイズを設定することができます。 たとえば、 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.ComboBox>コントロールにのみ、1 つの高さ、コントロールのフォント サイズで定義されているがサポートしています。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]場所要素延長される可能性が垂直方向に、ホストされる動的レイアウト<xref:System.Windows.Forms.ComboBox>期待どおりに、コントロールは拡張されません。  
+- 場合によっては、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールのサイズを変更できない、または特定のディメンションにのみサイズを設定することができます。 たとえば、 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.ComboBox>コントロールにのみ、1 つの高さ、コントロールのフォント サイズで定義されているがサポートしています。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]場所要素延長される可能性が垂直方向に、ホストされる動的レイアウト<xref:System.Windows.Forms.ComboBox>期待どおりに、コントロールは拡張されません。  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロールを回転または傾斜ことはできません。 <xref:System.Windows.Forms.Integration.WindowsFormsHost>要素の生成、<xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError>傾斜や回転変換を適用する場合のイベント。 処理しない場合、 <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> 、イベント、<xref:System.InvalidOperationException>が発生します。  
+- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロールを回転または傾斜ことはできません。 <xref:System.Windows.Forms.Integration.WindowsFormsHost>要素の生成、<xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError>傾斜や回転変換を適用する場合のイベント。 処理しない場合、 <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> 、イベント、<xref:System.InvalidOperationException>が発生します。  
   
--   ほとんどの場合、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールは比例してスケーリングをサポートしません。 コントロールの全体的なディメンションのスケーラビリティが子コントロールとコントロールのコンポーネント要素可能性がありますのサイズ変更されない期待どおりにします。 この制限はどの程度各依存[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールがスケーリングをサポートします。 さらに、スケールすることはできません[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]0 ピクセルのサイズまでコントロール。  
+- ほとんどの場合、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールは比例してスケーリングをサポートしません。 コントロールの全体的なディメンションのスケーラビリティが子コントロールとコントロールのコンポーネント要素可能性がありますのサイズ変更されない期待どおりにします。 この制限はどの程度各依存[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールがスケーリングをサポートします。 さらに、スケールすることはできません[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]0 ピクセルのサイズまでコントロール。  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロールは、自動スケールのフォームはそれ自体とそのコントロールのフォント サイズに基づいて自動的に変更をサポートします。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]個々 の要素を動的に変更可能性がありますが、ユーザー インターフェイス、フォント サイズを変更するは全体のレイアウトのサイズを変更できません。  
+- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロールは、自動スケールのフォームはそれ自体とそのコントロールのフォント サイズに基づいて自動的に変更をサポートします。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]個々 の要素を動的に変更可能性がありますが、ユーザー インターフェイス、フォント サイズを変更するは全体のレイアウトのサイズを変更できません。  
   
 ### <a name="z-order"></a>Z オーダー  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ユーザー インターフェイスの動作が重複する制御する要素の z オーダーを変更することができます。 ホストされた[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]の上に常に描画するために個別の HWND では、コントロールが描画される[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]要素。  
@@ -73,7 +73,7 @@ ms.locfileid: "43518950"
 |オーバーフロー|ときに、<xref:System.Windows.Forms.Integration.WindowsFormsHost>から要素が変換`double`値を`int`値、オーバーフローが可能です。 も大きい値は<xref:System.Int32.MaxValue>に設定されている<xref:System.Int32.MaxValue>します。|  
   
 ### <a name="layout-related-properties"></a>レイアウト関連のプロパティ  
- レイアウト動作を制御するプロパティ[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールと[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]要素が、適切にマップされている、<xref:System.Windows.Forms.Integration.WindowsFormsHost>要素。 詳細については、次を参照してください。 [Windows フォームと WPF プロパティのマッピング](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)します。  
+ レイアウト動作を制御するプロパティ[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールと[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]要素が、適切にマップされている、<xref:System.Windows.Forms.Integration.WindowsFormsHost>要素。 詳細については、次を参照してください。 [Windows フォームと WPF プロパティのマッピング](windows-forms-and-wpf-property-mapping.md)します。  
   
 ### <a name="layout-changes-in-the-hosted-control"></a>ホストされるコントロールのレイアウトの変更  
  ホストのレイアウトの変更[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]にコントロールを反映[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]レイアウトの更新をトリガーします。 <xref:System.Windows.UIElement.InvalidateMeasure%2A>メソッド<xref:System.Windows.Forms.Integration.WindowsFormsHost>ホストされるコントロールのレイアウトの変更が発生することにより、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]レイアウト エンジンを実行します。  
@@ -84,24 +84,25 @@ ms.locfileid: "43518950"
 ### <a name="sizing-algorithm"></a>サイズ調整アルゴリズム  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>要素は、次の手順を使用してホストされるコントロールのサイズを変更します。  
   
-1.  <xref:System.Windows.Forms.Integration.WindowsFormsHost>要素をオーバーライド、<xref:System.Windows.FrameworkElement.MeasureOverride%2A>と<xref:System.Windows.FrameworkElement.ArrangeOverride%2A>メソッド。  
+1. <xref:System.Windows.Forms.Integration.WindowsFormsHost>要素をオーバーライド、<xref:System.Windows.FrameworkElement.MeasureOverride%2A>と<xref:System.Windows.FrameworkElement.ArrangeOverride%2A>メソッド。  
   
-2.  ホストされるコントロールのサイズを決定する、<xref:System.Windows.FrameworkElement.MeasureOverride%2A>メソッドは、ホストされるコントロールの<xref:System.Windows.Forms.Control.GetPreferredSize%2A>制約を持つメソッドの変換に渡される制約から、<xref:System.Windows.FrameworkElement.MeasureOverride%2A>メソッド。  
+2. ホストされるコントロールのサイズを決定する、<xref:System.Windows.FrameworkElement.MeasureOverride%2A>メソッドは、ホストされるコントロールの<xref:System.Windows.Forms.Control.GetPreferredSize%2A>制約を持つメソッドの変換に渡される制約から、<xref:System.Windows.FrameworkElement.MeasureOverride%2A>メソッド。  
   
-3.  <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>メソッドは、指定されたサイズの制約にホストされるコントロールを設定しようとしています。  
+3. <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>メソッドは、指定されたサイズの制約にホストされるコントロールを設定しようとしています。  
   
-4.  場合、ホストされるコントロールの<xref:System.Windows.Forms.Control.Size%2A>プロパティが指定した制約と一致する、ホストされるコントロールのサイズは、制約にします。  
+4. 場合、ホストされるコントロールの<xref:System.Windows.Forms.Control.Size%2A>プロパティが指定した制約と一致する、ホストされるコントロールのサイズは、制約にします。  
   
  場合、<xref:System.Windows.Forms.Control.Size%2A>プロパティが指定した制約と一致しません、ホストされるコントロールは継続的なサイズ変更をサポートしていません。 たとえば、<xref:System.Windows.Forms.MonthCalendar>コントロールは、不連続のサイズだけを使用できます。 このコントロールの使用可能なサイズは、高さと幅の両方の整数 (月の数を表す) で構成されます。 、このような状況で、<xref:System.Windows.Forms.Integration.WindowsFormsHost>要素の次のように動作します。  
   
--   場合、<xref:System.Windows.Forms.Control.Size%2A>プロパティが指定した制約より大きいサイズを返します、<xref:System.Windows.Forms.Integration.WindowsFormsHost>要素がホストされるコントロールをクリップします。 高さと幅は、いずれかの方向でホストされるコントロールをクリップすることがありますので、個別に処理されます。  
+- 場合、<xref:System.Windows.Forms.Control.Size%2A>プロパティが指定した制約より大きいサイズを返します、<xref:System.Windows.Forms.Integration.WindowsFormsHost>要素がホストされるコントロールをクリップします。 高さと幅は、いずれかの方向でホストされるコントロールをクリップすることがありますので、個別に処理されます。  
   
--   場合、<xref:System.Windows.Forms.Control.Size%2A>プロパティが指定した制約よりも小さいサイズを返します<xref:System.Windows.Forms.Integration.WindowsFormsHost>このサイズの値を受け取り、値を返します、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]レイアウト システム。  
+- 場合、<xref:System.Windows.Forms.Control.Size%2A>プロパティが指定した制約よりも小さいサイズを返します<xref:System.Windows.Forms.Integration.WindowsFormsHost>このサイズの値を受け取り、値を返します、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]レイアウト システム。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [チュートリアル: WPF での Windows フォーム コントロールの配置](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)  
- [WPF のサンプルでのフォーム コントロールの Windows の配置](https://go.microsoft.com/fwlink/?LinkID=159971)  
- [Windows フォームと WPF プロパティの割り当て](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)  
- [移行と相互運用性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [チュートリアル: WPF でのフォーム コントロールの Windows の配置](walkthrough-arranging-windows-forms-controls-in-wpf.md)
+- [WPF のサンプルでのフォーム コントロールの Windows の配置](https://go.microsoft.com/fwlink/?LinkID=159971)
+- [Windows フォームと WPF プロパティの割り当て](windows-forms-and-wpf-property-mapping.md)
+- [移行と相互運用性](migration-and-interoperability.md)

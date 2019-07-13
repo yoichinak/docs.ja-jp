@@ -2,12 +2,12 @@
 title: ワークフロー インスタンスの作成と実行
 ms.date: 03/30/2017
 ms.assetid: 19d27f47-0491-4569-8f53-51bc1d940e80
-ms.openlocfilehash: 571d41194ebc98be81646fb5bfdab060225015ca
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: f2bdfce0b311da6dd20aac5e0fe4f5fbcd14f68a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005304"
 ---
 # <a name="creating-and-running-a-workflow-instance"></a>ワークフロー インスタンスの作成と実行
 このサンプルでは、ワークフロー インスタンスを実行する方法を示します。 ここでは、ワークフロー インスタンスを同期的または非同期的に実行する方法を示します。  
@@ -29,5 +29,6 @@ ms.locfileid: "46562243"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\CreatingWorkflowInstances`  
   
-## <a name="see-also"></a>関連項目  
- [WorkflowInvoker と WorkflowApplication の使用](../../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md)
+## <a name="see-also"></a>関連項目
+
+- [WorkflowInvoker と WorkflowApplication の使用](../using-workflowinvoker-and-workflowapplication.md)

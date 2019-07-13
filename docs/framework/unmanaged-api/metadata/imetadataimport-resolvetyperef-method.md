@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 106ef520f64233323cbb3f26cb3efdee152559b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cb8c232e63d1f3066737ff755d5911c185abe6fb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449482"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755372"
 ---
 # <a name="imetadataimportresolvetyperef-method"></a>IMetaDataImport::ResolveTypeRef メソッド
-解決、<xref:System.Type>参照を指定した TypeRef トークンによって表されます。  
+解決、<xref:System.Type>の参照を指定した TypeRef トークンによって表されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ResolveTypeRef (  
    [in]  mdTypeRef       tr,  
    [in]  REFIID          riid,  
@@ -38,37 +38,38 @@ HRESULT ResolveTypeRef (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `tr`  
  [in]参照先の型情報を返す TypeRef メタデータ トークンです。  
   
  `riid`  
- [in]返されるインターフェイスの IID`ppIScope`です。 通常、IID_IMetaDataImport になります。  
+ [in]返すインターフェイスの IID`ppIScope`します。 通常、IID_IMetaDataImport になります。  
   
  `ppIScope`  
- [out]参照先の型が定義されているモジュール スコープへのインターフェイス。  
+ [out]参照先の型が定義されているモジュールのスコープへのインターフェイス。  
   
  `ptd`  
  [out]参照先の型を表す TypeDef トークンへのポインター。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]
->  複数のアプリケーション ドメインが読み込まれている場合は、このメソッドを使用しないでください。 メソッドは、アプリケーション ドメインの境界を考慮していません。 アセンブリの複数のバージョンが読み込まれ、同じ名前空間を持つ同じ型が含まれている場合は、このメソッドは、見つかった最初の種類のモジュールのスコープを返します。  
+>  複数のアプリケーション ドメインが読み込まれている場合は、このメソッドを使用しないでください。 メソッドは、アプリケーション ドメインの境界を優先しません。 複数のバージョンのアセンブリが読み込まれると、同じ名前空間を持つ同じ型が含まれている場合は、最初に見つけた型のモジュールのスコープを返します。  
   
- `ResolveTypeRef`他のモジュールの種類の定義のメソッドを検索します。 見つかった場合は、型定義は、`ResolveTypeRef`そのモジュール スコープとした TypeDef トークンの種類のインターフェイスを返します。  
+ `ResolveTypeRef`メソッドの他のモジュールの種類の定義を検索します。 型定義が見つかった場合`ResolveTypeRef`型の TypeDef トークンとそのモジュールのスコープのインターフェイスを返します。  
   
- 型参照を解決するが AssemblyRef の解決スコープを持つ場合、`ResolveTypeRef`メソッドの呼び出しをいずれかに既に開かれたメタデータ スコープ内でだけの一致を検索、 [imetadatadispenser::openscope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)メソッドまたは[imetadatadispenser::openscopeonmemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md)メソッドです。 これは、ため`ResolveTypeRef`AssemblyRef スコープのみがディスク上またはグローバル アセンブリ キャッシュにアセンブリの格納場所を判別することはできません。  
+ 型参照を解決する AssemblyRef の解決スコープがある場合、`ResolveTypeRef`メソッドのいずれかへの呼び出しで既に開かれているメタデータのスコープでのみ一致を検索、 [imetadatadispenser::openscope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)メソッドまたは[imetadatadispenser::openscopeonmemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md)メソッド。 これは、ため`ResolveTypeRef`AssemblyRef スコープのみがディスク上またはグローバル アセンブリ キャッシュにアセンブリが格納される場所を判別することはできません。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -1,13 +1,13 @@
 ---
 title: .NET Core のランタイム識別子 (RID) のカタログ
 description: ランタイム識別子 (RID) と .NET Core での RID の使用方法について説明します。
-ms.date: 07/19/2018
-ms.openlocfilehash: b801b7866b563ae06499d8ccd2d07cf5fd52b928
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.date: 02/22/2019
+ms.openlocfilehash: 0d03e39c755b43e145edf5efe48422cbae7abcab
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170210"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745743"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core の RID カタログ
 
@@ -35,7 +35,7 @@ RID は*ランタイム識別子*の略です。 RID の値は、アプリケー
 
 - `[architecture]` はプロセッサ アーキテクチャです。 たとえば `x86`、`x64`、`arm` または `arm64` などです。
 
-- `[additional qualifiers]` はさまざまなプラットフォームをさらに区別します。 例 : `aot` または `corert`。
+- `[additional qualifiers]` はさまざまなプラットフォームをさらに区別します。 たとえば、`aot` のように指定します。
 
 ## <a name="rid-graph"></a>RID グラフ
 
@@ -82,22 +82,22 @@ RID を使用する際に留意しておく必要のある注意事項があり�
 RID を使用するには、どのような RID があるのか知る必要があります。 プラットフォームには新しい RID が定期的に追加されます。
 最新の完全バージョンについては、CoreFX リポジトリの [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) ファイルをご覧ください。
 
-.NET Core 2.0 SDK には、ポータブル RID の概念が導入されています。 これは、RID グラフに新しく追加された値であり、特定のバージョンや OS のディストリビューションに関連付けられていません。 特に、複数の Linux ディストリビューションを扱うときに便利です。
+.NET Core 2.0 SDK には、ポータブル RID の概念が導入されています。 それらは、RID グラフに新しく追加された値であり、特定のバージョンや OS のディストリビューションに関連付けられていません。 .NET Core 2.0 以降を使用するときは、それらを選択することをお勧めします。 ほとんどのディストリビューション RID はポータブル RID にマップされるため、複数の Linux ディストリビューションを扱うときは特に便利です。
 
-次の一覧に、各 OS に使用される最も一般的な RID を示します。 `arm` と `corert` の値は対象外です。
+次の一覧では、各 OS に使用される最も一般的な RID の小さいサブセットを示します。
 
 ## <a name="windows-rids"></a>Windows RID
 
-- ポータブル
-  - `win-x86`
+一般的な値のみを示します。 最新の完全バージョンについては、CoreFX リポジトリの [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) ファイルをご覧ください。
+
+- ポータブル (.NET Core 2.0 以降のバージョン)
   - `win-x64`
+  - `win-x86`
+  - `win-arm`
+  - `win-arm64`
 - Windows 7 / Windows Server 2008 R2
   - `win7-x64`
   - `win7-x86`
-- Windows 8 / Windows Server 2012
-  - `win8-x64`
-  - `win8-x86`
-  - `win8-arm`
 - Windows 8.1 / Windows Server 2012 R2
   - `win81-x64`
   - `win81-x86`
@@ -112,88 +112,41 @@ RID を使用するには、どのような RID があるのか知る必要が�
 
 ## <a name="linux-rids"></a>Linux RID
 
-- ポータブル
-  - `linux-x64`
-- CentOS
-  - `centos-x64`
-  - `centos.7-x64`
-- Debian
-  - `debian-x64`
-  - `debian.8-x64`
-  - `debian.9-x64` (.NET Core 1.1 以降)
-- Fedora
-  - `fedora-x64`
-  - `fedora.27-x64`
-  - `fedora.28-x64` (.NET Core 1.1 以降)
-- Gentoo (.NET Core 2.0 以降)
-  - `gentoo-x64`
-- openSUSE
-  - `opensuse-x64`
-  - `opensuse.42.3-x64`
-- Oracle Linux
-  - `ol-x64`
-  - `ol.7-x64`
-  - `ol.7.0-x64`
-  - `ol.7.1-x64`
-  - `ol.7.2-x64`
-  - `ol.7.3-x64`
-  - `ol.7.4-x64`
+一般的な値のみを示します。 最新の完全バージョンについては、CoreFX リポジトリの [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) ファイルをご覧ください。 以下の一覧にないディストリビューションが実行されているデバイスでも、ポータブル RID のいずれかで動作する可能性があります。 たとえば、一覧にない Linux ディストリビューションが実行されている Raspberry Pi デバイスは、`linux-arm` の対象にできます。
+
+- ポータブル (.NET Core 2.0 以降のバージョン)
+  - `linux-x64` (CentOS、Debian、Fedora、Ubuntu、および派生ディストリビューションなどのほとんどのデスクトップ ディストリビューション)
+  - `linux-musl-x64` (Alpine Linux など、[musl](https://wiki.musl-libc.org/projects-using-musl.html) を使用している軽量ディストリビューション)
+  - `linux-arm` (Raspberry Pi など、ARM で実行されている Linux ディストリビューション)
 - Red Hat Enterprise Linux
-  - `rhel-x64`
+  - `rhel-x64` (RHEL バージョン 6 より後では、`linux-x64` に置き換えられます)
   - `rhel.6-x64` (.NET Core 2.0 以降)
-  - `rhel.7-x64`
-  - `rhel.7.1-x64`
-  - `rhel.7.2-x64`
-  - `rhel.7.3-x64` (.NET Core 2.0 以降)
-  - `rhel.7.4-x64` (.NET Core 2.0 以降)
 - Tizen (.NET Core 2.0 以降)
   - `tizen`
   - `tizen.4.0.0`
   - `tizen.5.0.0`
-- Ubuntu
-  - `ubuntu-x64`
-  - `ubuntu.14.04-x64`
-  - `ubuntu.16.04-x64`
-  - `ubuntu.17.10-x64`
-  - `ubuntu.18.04-x64`
-- Ubuntu の派生ディストリビューション
-  - `linuxmint.17-x64`
-  - `linuxmint.17.1-x64`
-  - `linuxmint.17.2-x64`
-  - `linuxmint.17.3-x64`
-  - `linuxmint.18-x64` (.NET Core 2.0 以降)
-  - `linuxmint.18.1-x64` (.NET Core 2.0 以降)
-  - `linuxmint.18.2-x64` (.NET Core 2.0 以降)
-  - `linuxmint.18.3-x64` (.NET Core 2.0 以降)
-- SUSE Enterprise Linux (SLES) (.NET Core 2.0 以降のバージョン)
-  - `sles-x64`
-  - `sles.12-x64`
-  - `sles.12.1-x64`
-  - `sles.12.2-x64`
-  - `sles.12.3-x64`
-- Alpine Linux (.NET Core 2.1 以降のバージョン)
-  - `alpine-x64`
-  - `alpine.3.7-x64`
 
 詳細については、「[Linux における .NET Core の前提条件](linux-prerequisites.md)」を参照してください。
 
 ## <a name="macos-rids"></a>macOS RID
 
-macOS RID では、以前の "OSX" ブランドが使用されています。
+macOS RID では、以前の "OSX" ブランドが使用されています。 一般的な値のみを示します。 最新の完全バージョンについては、CoreFX リポジトリの [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) ファイルをご覧ください。
 
-- `osx-x64` (.NET Core 2.0 以降のバージョン、最小バージョンは `osx.10.12-x64`)
-- `osx.10.10-x64`
-- `osx.10.11-x64`
-- `osx.10.12-x64` (.NET Core 1.1 以降)
-- `osx.10.13-x64`
+- ポータブル (.NET Core 2.0 以降のバージョン)
+  - `osx-x64` (最小 OS バージョンは、macOS 10.12 Sierra です)
+- macOS 10.10 Yosemite
+  - `osx.10.10-x64`
+- macOS 10.11 El Capitan
+  - `osx.10.11-x64`
+- macOS 10.12 Sierra (.NET Core 1.1 以降のバージョン)
+  - `osx.10.12-x64`
+- macOS 10.13 High Sierra (.NET Core 1.1 以降のバージョン)
+  - `osx.10.13-x64`
+- macOS 10.14 Mojave (.NET Core 1.1 以降のバージョン)
+  - `osx.10.14-x64`
 
 詳細については、「[macOS における .NET Core の前提条件](macos-prerequisites.md)」を参照してください。
 
-## <a name="android-rids-net-core-20-or-later-versions"></a>Android RID (.NET Core 2.0 以降)
-
-- `android`
-- `android.21`
-
 ## <a name="see-also"></a>関連項目
 
-* [ランタイム ID](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/readme.md)
+- [ランタイム ID](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/readme.md)

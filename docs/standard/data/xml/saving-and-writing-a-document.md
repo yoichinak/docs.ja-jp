@@ -8,29 +8,29 @@ dev_langs:
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83aad5d45dda1784069839662486f7dbcc307542
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: a35e06837ac35a743a3f0424cb2a7ad5bbeb5400
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879517"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589962"
 ---
 # <a name="saving-and-writing-a-document"></a>ドキュメントの保存と書き込み
 <xref:System.Xml.XmlDocument> を読み込んで保存した場合、保存されたドキュメントは、元のドキュメントとは次のように異なる可能性があります。  
   
--   <xref:System.Xml.XmlDocument.PreserveWhitespace%2A> メソッドを呼び出す前に `true` プロパティが <xref:System.Xml.XmlDocument.Save%2A> に設定されている場合は、ドキュメント内の空白が出力でも保持されますが、`false` に設定されている場合は、<xref:System.Xml.XmlDocument> が出力を自動的にインデントします。  
+- <xref:System.Xml.XmlDocument.PreserveWhitespace%2A> メソッドを呼び出す前に `true` プロパティが <xref:System.Xml.XmlDocument.Save%2A> に設定されている場合は、ドキュメント内の空白が出力でも保持されますが、`false` に設定されている場合は、<xref:System.Xml.XmlDocument> が出力を自動的にインデントします。  
   
--   属性間のすべての空白は 1 つの空白文字になります。  
+- 属性間のすべての空白は 1 つの空白文字になります。  
   
--   要素間の空白が変更されます。 有意の空白は保持され、意味のない空白は保持されません。 しかしながら、ドキュメントの保存時には、出力が読みやすくなるように、既定で <xref:System.Xml.XmlTextWriter> の**インデント** モードが使用されます。  
+- 要素間の空白が変更されます。 有意の空白は保持され、意味のない空白は保持されません。 しかしながら、ドキュメントの保存時には、出力が読みやすくなるように、既定で <xref:System.Xml.XmlTextWriter> の**インデント** モードが使用されます。  
   
--   属性値を囲む引用符は、既定で二重引用符に変更されます。 <xref:System.Xml.XmlTextReader.QuoteChar%2A> の <xref:System.Xml.XmlTextWriter> プロパティを使用すると、引用符を二重引用符または一重引用符のいずれかに設定できます。  
+- 属性値を囲む引用符は、既定で二重引用符に変更されます。 <xref:System.Xml.XmlTextReader.QuoteChar%2A> の <xref:System.Xml.XmlTextWriter> プロパティを使用すると、引用符を二重引用符または一重引用符のいずれかに設定できます。  
   
--   既定では、`{` のような数値エンティティは展開されます。  
+- 既定では、`{` のような数値エンティティは展開されます。  
   
--   入力ドキュメントのバイト順マークは保持されません。 別のエンコーディングを指定する XML 宣言を明示的に作成しない限り、UCS-2 は UTF-8 として保存されます。  
+- 入力ドキュメントのバイト順マークは保持されません。 別のエンコーディングを指定する XML 宣言を明示的に作成しない限り、UCS-2 は UTF-8 として保存されます。  
   
--   <xref:System.Xml.XmlDocument> をファイルまたはストリームに書き出す場合、書き出される出力はドキュメントのコンテンツと同じになります。 つまり、<xref:System.Xml.XmlDeclaration> が書き出されるのは、ドキュメントに  が 1 つ含まれていて、ドキュメントの出力時に使われるエンコーディングが宣言ノードで指定されたエンコーディングと同じ場合だけです。  
+- <xref:System.Xml.XmlDocument> をファイルまたはストリームに書き出す場合、書き出される出力はドキュメントのコンテンツと同じになります。 つまり、<xref:System.Xml.XmlDeclaration> が書き出されるのは、ドキュメントに  が 1 つ含まれていて、ドキュメントの出力時に使われるエンコーディングが宣言ノードで指定されたエンコーディングと同じ場合だけです。  
   
 ## <a name="writing-an-xmldeclaration"></a>XmlDeclaration の書き込み  
  <xref:System.Xml.XmlDocument> および <xref:System.Xml.XmlDeclaration> の <xref:System.Xml.XmlNode.OuterXml%2A> メソッドに加えて、<xref:System.Xml.XmlNode.InnerXml%2A>、<xref:System.Xml.XmlNode.WriteTo%2A>、および <xref:System.Xml.XmlDocument> の <xref:System.Xml.XmlDocument.Save%2A> および <xref:System.Xml.XmlDocument.WriteContentTo%2A> メンバーは XML 宣言を作成します。  
@@ -55,7 +55,7 @@ doc.Save(tw);
   
  <xref:System.Xml.XmlDocument.Save%2A> メソッドでは、<xref:System.Xml.XmlWriter.WriteStartDocument%2A> クラスの <xref:System.Xml.XmlWriter> メソッドを使用して XML 宣言が書き出されます。 そのため、<xref:System.Xml.XmlWriter.WriteStartDocument%2A> メソッドをオーバーライドすると、ドキュメントの先頭部分の出力方法が変わります。  
   
- <xref:System.Xml.XmlDeclaration>、<xref:System.Xml.XmlNode.OuterXml%2A>、および <xref:System.Xml.XmlDeclaration.WriteTo%2A> の <xref:System.Xml.XmlNode.InnerXml%2A> メンバーについて、<xref:System.Xml.XmlDeclaration.Encoding%2A> プロパティが設定されていないと、エンコーディングは書き出されません。それ以外の場合は、<xref:System.Xml.XmlDeclaration.Encoding%2A> プロパティのエンコーディングと同じエンコーディングが XML 宣言に書き出されます。  
+ <xref:System.Xml.XmlDeclaration>、<xref:System.Xml.XmlNode.OuterXml%2A>、および <xref:System.Xml.XmlDeclaration.WriteTo%2A> の <xref:System.Xml.XmlNode.InnerXml%2A> メンバーについて、<xref:System.Xml.XmlDeclaration.Encoding%2A> プロパティが設定されていないと、エンコーディングは書き出されません。それ以外の場合は、<xref:System.Xml.XmlDeclaration.Encoding%2A> プロパティ内に見られるエンコーディングと同じエンコーディングが XML 宣言に書き出されます。  
   
 ## <a name="writing-document-content-using-the-outerxml-property"></a>OuterXml プロパティを使用したドキュメント内容の書き込み  
  <xref:System.Xml.XmlNode.OuterXml%2A> プロパティは、W3C XML ドキュメント オブジェクト モデル (DOM) 標準に対するマイクロソフトの拡張機能です。 <xref:System.Xml.XmlNode.OuterXml%2A> プロパティは、XML ドキュメント全体のマークアップ、または 1 つのノードとその子ノードのマークアップだけを取得するために使用されます。 <xref:System.Xml.XmlNode.OuterXml%2A> は、指定されたノードとそのすべての子ノードを表すマークアップを返します。  

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - override keyword [C#]
 ms.assetid: dd1907a8-acf8-46d3-80b9-c2ca4febada8
-ms.openlocfilehash: 6a8e79da3897e867fa3becab5fcfc70afe72e614
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: cedce26373c49d33ee17602b621f71ef6732d145
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244441"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401538"
 ---
 # <a name="override-c-reference"></a>override (C# リファレンス)
 
@@ -56,5 +56,5 @@ ms.locfileid: "53244441"
 - [修飾子](modifiers.md)
 - [abstract](abstract.md)
 - [virtual](virtual.md)
-- [new](new.md)
+- [new (修飾子)](new-modifier.md)
 - [ポリモーフィズム](../../programming-guide/classes-and-structs/polymorphism.md)

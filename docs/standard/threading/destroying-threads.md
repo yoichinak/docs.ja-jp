@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a243c95aff77a5de2b3af15542c0bcc44870333
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 93832a296f9b80a5374bc729c04e19d1f178e99f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46525693"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502547"
 ---
 # <a name="destroying-threads"></a>スレッドの破棄
 マネージド スレッドを完全に停止するには、<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> メソッドを使用します。 <xref:System.Threading.Thread.Abort%2A> を呼び出すと、共通言語ランタイムが対象スレッドで <xref:System.Threading.ThreadAbortException> をスローし、対象スレッドはそれをキャッチできます。 詳細については、「<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>」を参照してください。  
@@ -68,6 +68,6 @@ catch (ThreadAbortException ex)
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Threading.ThreadAbortException>  
-- <xref:System.Threading.Thread>  
+- <xref:System.Threading.ThreadAbortException>
+- <xref:System.Threading.Thread>
 - [スレッドの使用とスレッド処理](../../../docs/standard/threading/using-threads-and-threading.md)

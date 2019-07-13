@@ -7,20 +7,20 @@ helpviewer_keywords:
 - RadioButton control [WPF]
 - controls [WPF], RadioButton
 ms.assetid: 6c9ba847-eab7-4bba-9c74-6b56ef72067b
-ms.openlocfilehash: 936b2d72a73a6937bd0c0415cb86ead89062da7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32db3436b536cd1a27dd79e0e98cdc3e6f21c4c9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024132"
 ---
 # <a name="radiobutton"></a>RadioButton
-<xref:System.Windows.Controls.RadioButton> コントロールがいくつかのオプション間で 1 つの選択肢をユーザーに提供を一緒にグループ化通常一度に 1 つだけのボタンを選択することができます。  
+<xref:System.Windows.Controls.RadioButton> コントロールがいくつかのオプション間で 1 つの選択肢をユーザーに提供するまとめてグループ化は、通常一度に 1 つだけのボタンを選択できます。  
   
  次の図の例を示します、<xref:System.Windows.Controls.RadioButton>コントロール。  
   
- ![ラジオ ボタンの状態](../../../../docs/framework/wpf/controls/media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")  
-通常の RadioButton  
+ ![ラジオ ボタンの状態](./media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")  
+一般的なオプション ボタン  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.Primitives.ToggleButton>  

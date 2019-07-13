@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 88d6c166acf9e9ab72c2713b575a8453779f70d1
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774165"
+---
 ### <a name="attempting-a-tcpip-connection-to-a-sql-server-database-that-resolves-to-localhost-fails"></a>`localhost` に解決される SQL Server データベースへの TCP/IP 接続の試みが失敗します
 
 |   |   |
@@ -7,4 +15,3 @@
 |スコープ|マイナー|
 |Version|4.6|
 |型|ランタイム|
-

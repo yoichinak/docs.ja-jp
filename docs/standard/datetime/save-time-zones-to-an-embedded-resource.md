@@ -1,5 +1,5 @@
 ---
-title: '方法: 埋め込みリソースにタイム ゾーンを保存'
+title: '方法: 埋め込みリソースにタイム ゾーンを保存する'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 921874e774d18751c29db495dac1bc53d10cc8ad
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: c67a97193d186275e6a788f6b18bbc17c535f367
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45653351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912705"
 ---
-# <a name="how-to-save-time-zones-to-an-embedded-resource"></a>方法: 埋め込みリソースにタイム ゾーンを保存
+# <a name="how-to-save-time-zones-to-an-embedded-resource"></a>方法: 埋め込みリソースにタイム ゾーンを保存する
 
 多くの場合、タイム ゾーンに対応するアプリケーションでは、特定のタイム ゾーンの存在が必要です。 ただし、ため、個々 の可用性<xref:System.TimeZoneInfo>オブジェクトは、システムのローカル レジストリに格納されている情報によって異なります、慣例的でも使用可能なタイム ゾーンが存在しない可能性があります。 使用してさらに、カスタム タイム ゾーンに関する情報がインスタンス化、<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>メソッドは、レジストリ内の他のタイム ゾーン情報には格納されません。 必要なときにこれらのタイム ゾーンが使用できることを確認するには、シリアル化して保存し、それらを逆シリアル化して復元することができます。
 
@@ -37,9 +37,9 @@ ms.locfileid: "45653351"
 
 1. 既存のタイム ゾーンを取得するか、新しいタイム ゾーンを作成します。
 
-   既存のタイム ゾーンを取得するには、次を参照してください。[方法: 定義済みの UTC とローカル タイム ゾーン オブジェクトにアクセス](../../../docs/standard/datetime/access-utc-and-local.md)と[方法: TimeZoneInfo オブジェクトをインスタンス化](../../../docs/standard/datetime/instantiate-time-zone-info.md)します。
+   既存のタイム ゾーンを取得するには、次を参照してください。[方法。定義済みの UTC とローカル タイム ゾーン オブジェクトにアクセス](../../../docs/standard/datetime/access-utc-and-local.md)と[方法。TimeZoneInfo オブジェクトをインスタンス化](../../../docs/standard/datetime/instantiate-time-zone-info.md)します。
 
-   新しいタイム ゾーンを作成するには、いずれかのオーバー ロードを呼び出す、<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>メソッド。 詳細については、次を参照してください。[方法: 調整規則のないタイム ゾーンを作成](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)と[方法: 調整規則のあるタイム ゾーンを作成](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)です。
+   新しいタイム ゾーンを作成するには、いずれかのオーバー ロードを呼び出す、<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>メソッド。 詳細については、「[方法 :調整規則のないタイム ゾーンを作成](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)と[方法。タイム ゾーン調整規則を作成](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)です。
 
 2. 呼び出す、<xref:System.TimeZoneInfo.ToSerializedString%2A>タイム ゾーンのデータを格納する文字列を作成します。
 
@@ -49,9 +49,9 @@ ms.locfileid: "45653351"
 
 5. タイム ゾーンをパスに文字列をシリアル化、<xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=nameWithType>メソッド。
 
-6. <xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType> メソッドを呼び出します。
+6.  <xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType> メソッドを呼び出します。
 
-7. <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> メソッドを呼び出します。
+7.  <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> メソッドを呼び出します。
 
 8. 閉じる、<xref:System.IO.StreamWriter>オブジェクトを呼び出すことによってその<xref:System.IO.StreamWriter.Close%2A>メソッド。
 
@@ -85,6 +85,6 @@ ms.locfileid: "45653351"
 
 ## <a name="see-also"></a>関連項目
 
-* [日付、時刻、およびタイム ゾーン](../../../docs/standard/datetime/index.md)
-* [タイム ゾーンの概要](../../../docs/standard/datetime/time-zone-overview.md)
-* [方法: 埋め込みリソースからタイム ゾーンを復元する](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)
+- [日付、時刻、およびタイム ゾーン](../../../docs/standard/datetime/index.md)
+- [タイム ゾーンの概要](../../../docs/standard/datetime/time-zone-overview.md)
+- [方法: 埋め込みリソースからタイム ゾーンを復元します。](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)

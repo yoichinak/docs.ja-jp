@@ -2,31 +2,31 @@
 title: 関数型プログラミングと手続き型プログラミング (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: fc64e39c-a487-4882-9169-da4de97917d9
-ms.openlocfilehash: 888c360e1b868c79d378f2fc46a26c152121300f
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 1f713e54cefed5b1fcf8c29cd88aa7587a737327
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47108781"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486950"
 ---
 # <a name="functional-vs-procedural-programming-linq-to-xml-c"></a>関数型プログラミングと手続き型プログラミング (LINQ to XML) (C#)
 XML アプリケーションには、次のようにさまざまな種類があります。  
   
--   ソース XML ドキュメントを受け取り、そのドキュメントとは構造の異なる新しい XML ドキュメントを生成するアプリケーション  
+- ソース XML ドキュメントを受け取り、そのドキュメントとは構造の異なる新しい XML ドキュメントを生成するアプリケーション  
   
--   ソース XML ドキュメントを受け取り、HTML や CSV テキスト ファイルなどのまったく異なる形式のドキュメントを生成するアプリケーション  
+- ソース XML ドキュメントを受け取り、HTML や CSV テキスト ファイルなどのまったく異なる形式のドキュメントを生成するアプリケーション  
   
--   ソース XML ドキュメントを受け取り、データベースにレコードを挿入するアプリケーション  
+- ソース XML ドキュメントを受け取り、データベースにレコードを挿入するアプリケーション  
   
--   データベースなどの別のソースからデータを受け取り、そのデータから XML ドキュメントを作成するアプリケーション  
+- データベースなどの別のソースからデータを受け取り、そのデータから XML ドキュメントを作成するアプリケーション  
   
  XML アプリケーションには他にも種類がありますが、上記のアプリケーションは XML プログラマが実装する必要がある代表的な機能です。  
   
  上記のすべてのアプリケーションで、開発者は 2 つの対照的な方法を使用できます。  
   
--   宣言型の方法を使用する関数型構築  
+- 宣言型の方法を使用する関数型構築  
   
--   プロシージャ コードを使用するメモリ内の XML ツリーの変更  
+- プロシージャ コードを使用するメモリ内の XML ツリーの変更  
   
  LINQ to XML は両方の方法をサポートします。  
   
@@ -38,8 +38,8 @@ XML アプリケーションには、次のようにさまざまな種類があ�
   
  2 つの方法の違いについては、「[メモリ内の XML ツリーの変更と関数型構築の比較 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md)」をご覧ください。  
   
- 関数型変換の記述に関するチュートリアルについては、「[XML の純粋関数型変換 (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)」をご覧ください。  
+ 関数型変換の記述に関するチュートリアルについては、「[XML の純粋関数型変換 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)」をご覧ください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [LINQ to XML プログラミングの概要 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [LINQ to XML プログラミングの概要 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)

@@ -9,23 +9,24 @@ helpviewer_keywords:
 - Viewbox control [WPF]
 - scaling elements [WPF], Viewbox control
 ms.assetid: 00fc0a16-1078-4d55-9849-ffaf7da96531
-ms.openlocfilehash: fe7184df5d889a93f2274dfd20669701947f0965
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 707375230acea3558b060f398add919370d352b2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44212348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761196"
 ---
 # <a name="viewbox"></a>Viewbox
 <xref:System.Windows.Controls.Viewbox>コントロールを拡大または縮小する子要素を使用します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [Viewbox のコンテンツに Stretch プロパティを適用する](../../../../docs/framework/wpf/controls/how-to-apply-stretch-properties-to-the-contents-of-a-viewbox.md)  
+ [Viewbox のコンテンツに Stretch プロパティを適用する](how-to-apply-stretch-properties-to-the-contents-of-a-viewbox.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.Viewbox>  
   
  <xref:System.Windows.Controls.Image>  
   
-## <a name="see-also"></a>関連項目  
- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053)
+## <a name="see-also"></a>関連項目
+
+- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053)

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a3d7d3bb05a878f4d9832cf39a8e8863929c4e5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 09ccf731f0494b6eda49f6a15d04970a723c473b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403215"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742063"
 ---
 # <a name="enumcustomattributes-method"></a>EnumCustomAttributes メソッド
 アセンブリ レベルのカスタム属性を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EnumCustomAttributes(  
     HALINKENUM hEnum,  
     mdToken tkType,  
@@ -39,12 +39,12 @@ HRESULT EnumCustomAttributes(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `hEnum`  
- 列挙子のハンドルです。  
+ 列挙子のハンドル。  
   
  `tkType`  
- 列挙する属性の型。 使用して`mdTokenNill`すべての属性です。  
+ 列挙する属性の型。 使用`mdTokenNill`すべての属性。  
   
  `rCustomValues`  
  カスタム属性のトークンを受信します。  
@@ -58,10 +58,11 @@ HRESULT EnumCustomAttributes(
 ## <a name="return-value"></a>戻り値  
  メソッドが成功した場合は、S_OK を返します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  Alink.h が必要です。  
   
-## <a name="see-also"></a>関連項目  
- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>関連項目
+
+- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

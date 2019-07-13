@@ -1,15 +1,15 @@
 ---
-title: '&lt;UserNameAuthentication&gt;'
+title: <userNameAuthentication>
 ms.date: 03/30/2017
 ms.assetid: 24d8b398-770f-418f-ba23-c4325419cfa6
-ms.openlocfilehash: 3ade257a81e218fa123a08624123af614df84956
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 5a4cf8d429198b889f2bb362294ba3841c814b26
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788701"
 ---
-# <a name="ltusernameauthenticationgt"></a>&lt;UserNameAuthentication&gt;
+# <a name="usernameauthentication"></a>\<userNameAuthentication>
 ユーザー名とパスワードに基づいてサービスの資格情報を指定します。  
   
  \<system.ServiceModel >  
@@ -17,7 +17,7 @@ ms.locfileid: "54150046"
 \<serviceBehaviors>  
 \<behavior>  
 \<serviceCredentials>  
-\<userNameAuthentication >  
+\<userNameAuthentication>  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,9 +39,9 @@ ms.locfileid: "54150046"
 |属性|説明|  
 |---------------|-----------------|  
 |`cacheLogonTokenLifetime`|トークンがキャッシュ内に保持される最大時間を指定する <xref:System.TimeSpan>。 既定値は 00:15:00 です。|  
-|`cacheLogonTokens`|ログオン トークンがキャッシュされるかどうかを指定するブール値。 既定値は、`false` です。|  
+|`cacheLogonTokens`|ログオン トークンがキャッシュされるかどうかを指定するブール値。 既定値は `false` です。|  
 |`customUserNamePasswordValidatorType`|使用されるカスタム ユーザー名およびパスワード検証の種類を指定する文字列。 既定値は空の文字列です。|  
-|`includeWindowsGroups`|セキュリティ コンテキストに Windows グループが含まれるかどうかを指定するブール値。 既定値は、`true` です。<br /><br /> この属性を `true` に設定すると、グループ全体が拡張されるため、パフォーマンスに影響が及びます。 ユーザーが属するグループの一覧を生成する必要がない場合は、このプロパティを `false` に設定します。|  
+|`includeWindowsGroups`|セキュリティ コンテキストに Windows グループが含まれるかどうかを指定するブール値。 既定値は `true` です。<br /><br /> この属性を `true` に設定すると、グループ全体が拡張されるため、パフォーマンスに影響が及びます。 ユーザーが属するグループの一覧を生成する必要がない場合は、このプロパティを `false` に設定します。|  
 |`maxCacheLogonTokens`|キャッシュするログオン トークンの最大数を指定する整数。 この値は、ゼロより大きい値である必要があります。 既定値は 128 です。|  
 |`membershipProviderName`|バインディングの `clientCredentialType` 属性が `username` に設定されている場合、ユーザー名は Windows アカウントにマップされます。 関連するパスワード検証機構を提供する <xref:System.Web.Security.MembershipProvider> 値の名前を含む文字列であるこの属性を使用して動作をオーバーライドできます。|  
 |`userNamePasswordValidationMode`|ユーザー名とパスワードを検証する方法を指定します。 次の値を指定できます。<br /><br /> -Windows<br />-MembershipProvider<br />-カスタム<br /><br /> 既定は Windows です。 この属性は <xref:System.ServiceModel.Security.UserNamePasswordValidationMode> 型です。|  
@@ -60,8 +60,9 @@ ms.locfileid: "54150046"
   
  サービスで使用されるバインディングが Windows 認証のユーザー名とパスワードを使用するように構成されていない場合、ログオン トークンのキャッシュに関連する設定は無視されます。 これには、`cacheLogonTokenLifetime`、`cacheLogonTokens`、および `maxCacheLogonTokens`、が含まれます。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.UserNameServiceElement>  
- <xref:System.ServiceModel.Description.ServiceCredentials.UserNameAuthentication%2A>  
- <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential>  
- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.UserNameAuthentication%2A>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Configuration.UserNameServiceElement>
+- <xref:System.ServiceModel.Description.ServiceCredentials.UserNameAuthentication%2A>
+- <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential>
+- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.UserNameAuthentication%2A>

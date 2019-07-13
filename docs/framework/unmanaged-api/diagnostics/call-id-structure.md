@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f8d6b16f3eeb32e41f3568e0b237f18c945a8cb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2823c018ff22607052cb9a298f69dbd0c4fe2c23
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423898"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769496"
 ---
 # <a name="callid-structure"></a>CALL_ID 構造体
-呼び出される関数はデバッガーに情報を提供します。 参照してください、 [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)詳細についてはインターフェイスです。  
+デバッガーが呼び出される関数に関する情報を提供します。 参照してください、 [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)インターフェイスの詳細についてはします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct tagCALL_ID  
 {  
     LPCOLESTR       szMachine;  
@@ -47,13 +47,14 @@ typedef struct tagCALL_ID
 |`szMachine`|呼び出しを行っているコンピューターを識別します。|  
 |`dwPid`|コンピューターのプロセッサを識別します。|  
 |`pUserThread`|呼び出しを実行しているスレッドを識別します。|  
-|`addrStackPointer`|呼び出しスタックのアドレスを指定します。|  
+|`addrStackPointer`|呼び出し履歴のアドレスを指定します。|  
 |`szEntryPoint`|呼び出しのアドレスを指定します。|  
-|`szDestinationMachine`|呼び出しを実行するコンピューターを識別します。|  
+|`szDestinationMachine`|呼び出しを実行するマシンを識別します。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>関連項目  
- [INotifySink2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- [シンボル ストア診断構造体](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
+## <a name="see-also"></a>関連項目
+
+- [INotifySink2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [シンボル ストア診断構造体](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

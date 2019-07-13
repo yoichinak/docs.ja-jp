@@ -16,26 +16,25 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 50a7e1b08c31b5d0fb779dabf617a08bbb4c6cf4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 697a3dff663b333ce97e05783df6b163692b5d9e
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195919"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610350"
 ---
 # <a name="wpf-architecture"></a>WPF アーキテクチャ
-このトピックでは、Windows Presentation Foundation (WPF) クラスの階層構造のガイド付きツアーを提供します。 主要なサブシステムの大半に対応[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]、やり取りする方法について説明します。 一部のアーキテクトが行う選択の詳細も[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]します。  
-  
-  
+このトピックでは、Windows Presentation Foundation (WPF) クラスの階層構造のガイド付きツアーを提供します。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]の主要なサブシステムの大半に対応し、それらがどのようにやり取りするかについて説明します。 また、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]の構造設計者によって行われた選択についての幾つかを詳細に説明します。  
+
 <a name="System_Object"></a>   
 ## <a name="systemobject"></a>System.Object  
- プライマリ[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]プログラミング モデルがマネージ コードを通じて公開されます。 設計段階の早い段階で[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]さまざまなシステムのマネージ コンポーネントとアンマネージのコンポーネント間、行を描画する場所についての論争がありました。 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]さまざまな生産性と (メモリ管理、エラー処理、共通型システムなど) を含む堅牢な開発を行う機能を提供しますが、コストになったものも。  
+ 主要な[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]プログラミング モデルがマネージ コードを通じて公開されます。 初期の設計段階で[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]のさまざまなシステムのマネージ コンポーネントとアンマネージのコンポーネントとの線引きについての論争がありました。 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]は生産性と堅牢性 (メモリ管理、エラー処理、共通型システムなどを含む) のある開発を行う数多くの機能を提供しますが、それらはコストの増加を招きます。  
   
  主要コンポーネント[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]は次の図のようになります。 (PresentationFramework、PresentationCore、および milcore) の図の赤のセクションではの大規模なコード部分[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]します。 これらのうち、1 つだけは、アンマネージ コンポーネント – milcore です。 緊密な統合を有効にするには Milcore がアンマネージ コードで記述された[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]します。 すべて表示[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]を行う、[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]エンジン、効率的なハードウェアとソフトウェア レンダリングすることができます。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] メモリと実行を細かく制御も必要です。 Milcore 合成エンジンは、非常に機密性の高い、やの多くの利点をあきらめる必要なパフォーマンス、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]パフォーマンスを向上させます。  
   
- ![WPF、.NET Framework 内の位置。](../../../../docs/framework/wpf/advanced/media/wpf-architect1.PNG "wpf_architect1")  
+ ![WPF、.NET Framework 内の位置。](./media/wpf-architect1.PNG "wpf_architect1")  
   
- マネージ コードとアンマネージの部分の間の通信[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]はこのトピックの後半で説明します。 マネージ プログラミング モデルの残りの部分を以下に示します。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]のマネージ コードとアンマネージの部分の間の通信はこのトピックの後半で説明します。 マネージ プログラミング モデルの残りの部分を以下に示します。  
   
 <a name="System_Threading_DispatcherObject"></a>   
 ## <a name="systemthreadingdispatcherobject"></a>System.Threading.DispatcherObject  
@@ -63,7 +62,7 @@ ms.locfileid: "50195919"
   
 <a name="System_Windows_Media_Visual"></a>   
 ## <a name="systemwindowsmediavisual"></a>System.Windows.Media.Visual  
- 定義されているシステムでは、次の手順は画面に描画されるピクセルになっています。 <xref:System.Windows.Media.Visual>クラスがそれぞれ必要に応じて描画命令とこれらの手順 (クリッピング、変換など) をレンダリングする方法についてのメタデータを含む、ビジュアル オブジェクトのツリーを構築するために提供します。 <xref:System.Windows.Media.Visual> ほとんどの機能には、パブリックあるありませんので非常に軽量で柔軟なをするのには設計されています[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]公開し、保護されているコールバック関数に大きく依存します。  
+ 定義されているシステムでは、次の手順は画面に描画されるピクセルになっています。 <xref:System.Windows.Media.Visual>クラスがそれぞれ必要に応じて描画命令とこれらの手順 (クリッピング、変換など) をレンダリングする方法についてのメタデータを含む、ビジュアル オブジェクトのツリーを構築するために提供します。 <xref:System.Windows.Media.Visual> ようにする非常に軽量で柔軟なほとんどの機能のパブリック API に公開がない場合や保護されているコールバック関数に大きく依存して設計されています。  
   
  <xref:System.Windows.Media.Visual> エントリ ポイントは、実際に、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]コンポジション システム。 <xref:System.Windows.Media.Visual> マネージこれらの 2 つサブシステム間の接続ポイントは、[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]まさに、します。  
   
@@ -71,7 +70,7 @@ ms.locfileid: "50195919"
   
  プログラミング[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]、作成する<xref:System.Windows.Media.Visual>要素、および派生型は、このメッセージング プロトコルを使って構成ツリーに内部的に通信します。 各<xref:System.Windows.Media.Visual>で[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]1 つのフィルターまたはいくつかの構成ノードを作成することがあります。  
   
- ![Windows Presentation Foundation のビジュアル ツリー。](../../../../docs/framework/wpf/advanced/media/wpf-architecture2.PNG "wpf_architecture2")  
+ ![Windows Presentation Foundation のビジュアル ツリー。](./media/wpf-architecture2.PNG "wpf_architecture2")  
   
  ここでのビジュアル ツリー全体を通知する非常に重要なアーキテクチャの詳細は、描画命令はキャッシュします。 グラフィックスの用語で[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]保持モードのレンダリング システムを使用します。 これにより、高いリフレッシュ レートを合成システムによってユーザー コードにコールバックをブロックせずに再描画するシステムです。 これは、応答しないアプリケーションの外観を回避できます。  
   
@@ -113,7 +112,7 @@ ms.locfileid: "50195919"
   
  導入されたプライマリ ポリシー<xref:System.Windows.FrameworkElement>アプリケーション レイアウトの周りが。 <xref:System.Windows.FrameworkElement> 導入された基本的なレイアウトのコントラクトに基づいて<xref:System.Windows.UIElement>レイアウト プロパティのレイアウトのセマンティクスを駆動型の一貫性のあるセットがレイアウトの作成者が簡単です「スロット」の概念を追加します。 などのプロパティ<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>、 <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>、 <xref:System.Windows.FrameworkElement.MinWidth%2A>、および<xref:System.Windows.FrameworkElement.Margin%2A>(をいくつかの名前を付ける) から派生したすべてのコンポーネントを提供<xref:System.Windows.FrameworkElement>レイアウト コンテナー内で一貫性のある動作。  
   
- <xref:System.Windows.FrameworkElement> 簡単に用意されています[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]の基本レイヤーについては、多くの機能への露出[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]します。 たとえば、<xref:System.Windows.FrameworkElement>アニメーションに直接アクセスできる、<xref:System.Windows.FrameworkElement.BeginStoryboard%2A>メソッド。 A<xref:System.Windows.Media.Animation.Storyboard>プロパティのセットに対して複数のアニメーションのスクリプトを作成する方法を提供します。  
+ <xref:System.Windows.FrameworkElement> 基本レイヤーで見つかったさまざまな機能に簡単に API の公開も提供[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]します。 たとえば、<xref:System.Windows.FrameworkElement>アニメーションに直接アクセスできる、<xref:System.Windows.FrameworkElement.BeginStoryboard%2A>メソッド。 A<xref:System.Windows.Media.Animation.Storyboard>プロパティのセットに対して複数のアニメーションのスクリプトを作成する方法を提供します。  
   
  2 つの最も重要なことを<xref:System.Windows.FrameworkElement>紹介はデータ バインドとスタイル。  
   
@@ -141,14 +140,15 @@ ms.locfileid: "50195919"
   
  開発を開始すると、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]ベースのアプリケーションでは、非常によくと考える必要があります。 オブジェクトを使用して、すべてのプロパティを設定することができ、データ バインドで同じ方法を使用できる[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]または[!INCLUDE[TLA#tla_aspnet](../../../../includes/tlasharptla-aspnet-md.md)]します。 アーキテクチャにさらに調査すると[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]、根本的に、アプリケーションの中核となるドライバーとしてデータを処理するより充実したアプリケーションを作成するためにできる可能性があることがわかります。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Media.Visual>  
- <xref:System.Windows.UIElement>  
- <xref:System.Windows.Input.ICommand>  
- <xref:System.Windows.FrameworkElement>  
- <xref:System.Windows.Threading.DispatcherObject>  
- <xref:System.Windows.Input.CommandBinding>  
- <xref:System.Windows.Controls.Control>  
- [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [レイアウト](../../../../docs/framework/wpf/advanced/layout.md)  
- [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Media.Visual>
+- <xref:System.Windows.UIElement>
+- <xref:System.Windows.Input.ICommand>
+- <xref:System.Windows.FrameworkElement>
+- <xref:System.Windows.Threading.DispatcherObject>
+- <xref:System.Windows.Input.CommandBinding>
+- <xref:System.Windows.Controls.Control>
+- [データ バインディングの概要](../data/data-binding-overview.md)
+- [レイアウト](layout.md)
+- [アニメーションの概要](../graphics-multimedia/animation-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;developmentMode&gt;要素'
+title: <developmentMode> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/developmentMode
@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 982bc04e362f82760226b1cd2b8b3febe9cc7107
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: fdf840035150f08c894c984213af9a0abe6e95af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704766"
 ---
-# <a name="ltdevelopmentmodegt-element"></a>&lt;developmentMode&gt;要素
+# <a name="developmentmode-element"></a>\<developmentMode > 要素
 DEVPATH 環境変数によって指定されたディレクトリで、ランタイムがアセンブリの検索を行うかどうかを指定します。  
   
  \<configuration>  
-\<ランタイム >  
-\<developmentMode >  
+\<runtime>  
+\<developmentMode>  
   
 ## <a name="syntax"></a>構文  
   
@@ -71,7 +71,8 @@ DEVPATH 環境変数によって指定されたディレクトリで、ランタ
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>関連項目
+
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [方法: DEVPATH を使用してアセンブリを検索します。](../../../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)

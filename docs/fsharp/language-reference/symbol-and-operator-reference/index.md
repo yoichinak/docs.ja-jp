@@ -1,13 +1,13 @@
 ---
 title: シンボルと演算子のリファレンス
 description: シンボルと F# のプログラミング言語で使用される演算子について説明します。
-ms.date: 04/04/2018
-ms.openlocfilehash: 385ddbef2a3519d26dd7ad6abe90da1368f0a2a4
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 02/11/2019
+ms.openlocfilehash: 14ea7a66f7e9a79d24b62a4aa0564eecb891ee1a
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613805"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306184"
 ---
 # <a name="symbol-and-operator-reference"></a>シンボルと演算子のリファレンス
 
@@ -47,7 +47,7 @@ ms.locfileid: "53613805"
 |`+?`|[Null 許容の演算子](nullable-operators.md)|<ul><li>右辺が null 許容型である場合は、左辺と右辺を加算します。<br /></li></ul>|
 |`,`|[タプル](../tuples.md)|<ul><li>タプルの要素または型パラメーターを区切ります。<br /></li></ul>|
 |`-`|[算術演算子](arithmetic-operators.md)|<ul><li>二項演算子として使用されている場合は、左辺から右辺を減算します。<br /></li><li>単項演算子として使用されている場合は、否定演算を実行します。<br /></li></ul>|
-|`-`|[Null 許容の演算子](nullable-operators.md)|<ul><li>右辺が null 許容型である場合は、左辺から右辺を減算します。<br /></li></ul>|
+|`-?`|[Null 許容の演算子](nullable-operators.md)|<ul><li>右辺が null 許容型である場合は、左辺から右辺を減算します。<br /></li></ul>|
 |`->`|[関数](../functions/index.md)<br /><br />[match 式](../match-expressions.md)|<ul><li>関数の型では、引数と戻り値を区切ります。<br /></li><li>(シーケンス式の) 式を生成します。`yield` キーワードと等価です。<br /></li><li>match 式で使用されます。<br /></li></ul>|
 |`.`|[メンバー](../members/index.md)<br /><br />[プリミティブ型](../primitive-types.md)|<ul><li>メンバーにアクセスし、完全修飾名の個々の名前を区切ります。<br /></li><li>浮動小数点数の小数点を示します。<br /></li></ul>|
 |`..`|[ループ:`for...in` 式](../loops-for-in-expression.md)|<ul><li>範囲を指定します。<br /></li></ul>|
@@ -123,17 +123,18 @@ ms.locfileid: "53613805"
 |`as`|Right|
 |`when`|権限|
 |<code>&#124;</code> (パイプ)|Left|
-|`;`|Right|
+|`;`|権限|
 |`let`|非結合|
 |`function`, `fun`, `match`, `try`|非結合|
 |`if`|非結合|
-|`->`|Right|
-|`:=`|Right|
+|`not`|権限|
+|`->`|権限|
+|`:=`|権限|
 |`,`|非結合|
 |`or`, <code>&#124;&#124;</code>|Left|
 |`&`, `&&`|Left|
 |`:>`, `:?>`|権限|
-|`!=`*op*、 `<` *op*、 `>` *op*、 `=`、 <code>&#124;</code> *op*、 `&` *op*, `&`<br /><br />(`<<<`、`>>>`、<code>&#124;&#124;&#124;</code>、`&&&` を含む)|Left|
+|`<`*op*、 `>` *op*、 `=`、 <code>&#124;</code> *op*、 `&` *op*、 `&`<br /><br />(`<<<`、`>>>`、<code>&#124;&#124;&#124;</code>、`&&&` を含む)|Left|
 |`^`*op*<br /><br />(`^^^` を含む)|権限|
 |`::`|権限|
 |`:?`|非結合|

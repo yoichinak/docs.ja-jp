@@ -6,18 +6,16 @@ helpviewer_keywords:
 - control types, Data Grid
 - UI Automation, Data Grid control type
 ms.assetid: a3db4a3f-feb5-4e5f-9b42-aae7fa816e8a
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 88ef124176642137e363a36563a236d6c6029398
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 45eaa66396049b619c9164b20eed798505d478a9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030734"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607035"
 ---
 # <a name="ui-automation-support-for-the-datagrid-control-type"></a>UI オートメーションによる DataGrid コントロール型のサポート
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]に関する最新情報については[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)をご覧ください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
  このトピックでは、DataGrid コントロール型の [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] サポートに関する情報を提供します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]でのコントロール型とは、コントロールが `ControlType` プロパティを使用するために満たす必要がある一連の条件のことです。 これらの条件には、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のプロパティ値、およびコントロール パターンに関する特定のガイドラインが含まれます。  
   
@@ -56,20 +54,20 @@ ms.locfileid: "48030734"
   
 |コントロール パターン|サポート|メモ|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider>|はい|データ グリッド コントロール自体は、メタデータを格納する項目がグリッドに配置されるため、常に、グリッド コントロール パターンをサポートします。|  
+|<xref:System.Windows.Automation.Provider.IGridProvider>|[はい]|データ グリッド コントロール自体は、メタデータを格納する項目がグリッドに配置されるため、常に、グリッド コントロール パターンをサポートします。|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|状況に依存|データ グリッドをスクロールする機能はコンテンツ、およびスクロール バーが存在するかどうかによって異なります。|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider>|状況に依存|データ グリッドを選択する機能は、コンテンツに依存します。|  
-|<xref:System.Windows.Automation.Provider.ITableProvider>|はい|データ グリッド コントロールはサブツリー内に常にヘッダーがあるため、Table コントロール パターンがサポートされる必要があります。|  
+|<xref:System.Windows.Automation.Provider.ITableProvider>|[はい]|データ グリッド コントロールはサブツリー内に常にヘッダーがあるため、Table コントロール パターンがサポートされる必要があります。|  
   
  データ グリッド コンテナー内のデータ項目は、少なくとも次をサポートします。  
   
--   選択項目コントロール パターン (データ グリッドが選択可能な場合)  
+- 選択項目コントロール パターン (データ グリッドが選択可能な場合)  
   
--   スクロール項目コントロール パターン (データ グリッドがスクロール可能な場合)  
+- スクロール項目コントロール パターン (データ グリッドがスクロール可能な場合)  
   
--   グリッド項目コントロール パターン  
+- グリッド項目コントロール パターン  
   
--   テーブル項目コントロール パターン  
+- テーブル項目コントロール パターン  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>必須の UI オートメーション イベント  
@@ -102,11 +100,12 @@ ms.locfileid: "48030734"
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー - コントロール ビュー|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー - コンテンツ ビュー|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|<ul><li>DataGrid (Table、Grid、Selection)</li><li>Header<br /><br /> <ul><li>HeaderItem "Name" (Invoke)</li><li>HeaderItem "Date Modified" (Invoke)</li><li>HeaderItem "Size" (Invoke)</li></ul></li><li>グループ"Contoso"(TableItem、GridItem、SelectionItem、Table *、Grid\*)<br /><br /> <ul><li>DataItem"Accounts Receivable.doc"(SelectionItem、Invoke、TableItem\*、GridItem\*)</li><li>DataItem"Accounts Payable.doc"(SelectionItem、Invoke、TableItem\*、GridItem\*)</li></ul></li></ul>|<ul><li>DataGrid (Table、Grid、Selection)</li><li>グループ"Contoso"(TableItem、GridItem、SelectionItem、Table *、Grid\*)<br /><br /> <ul><li>DataItem"Accounts Receivable.doc"(SelectionItem、Invoke、TableItem\*、GridItem\*)</li><li>DataItem"Accounts Payable.doc"(SelectionItem、Invoke、TableItem\*、GridItem\*)</li></ul></li></ul>|  
+|<ul><li>DataGrid (Table、Grid、Selection)</li><li>Header<br /><br /> <ul><li>HeaderItem "Name" (Invoke)</li><li>HeaderItem "Date Modified" (Invoke)</li><li>HeaderItem "Size" (Invoke)</li></ul></li><li>Group "Contoso" (TableItem, GridItem, SelectionItem, Table*, Grid\*)<br /><br /> <ul><li>DataItem"Accounts Receivable.doc"(SelectionItem、Invoke、TableItem\*、GridItem\*)</li><li>DataItem"Accounts Payable.doc"(SelectionItem、Invoke、TableItem\*、GridItem\*)</li></ul></li></ul>|<ul><li>DataGrid (Table、Grid、Selection)</li><li>Group "Contoso" (TableItem, GridItem, SelectionItem, Table*, Grid\*)<br /><br /> <ul><li>DataItem"Accounts Receivable.doc"(SelectionItem、Invoke、TableItem\*、GridItem\*)</li><li>DataItem"Accounts Payable.doc"(SelectionItem、Invoke、TableItem\*、GridItem\*)</li></ul></li></ul>|  
   
  * 上記の例では、コントロールの複数のレベルを含む DataGrid を示します。 グループ ("Contoso") のコントロールには、2 つのDataItem コントロール ("Accounts Receivable.doc" および "Accounts Payable.doc") が含まれています。 DataGrid と GridItem ペアは、他のレベルのペアから独立しています。 グループの下にある DataItem コントロールは、ListItem コントロール型として公開することもでき、単純なデータ要素としてではなく、選択可能オブジェクトとして、より明確に提示することができます。 この例では、グループ化されたデータ項目のサブ要素は含まれません。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Automation.ControlType.DataGrid>  
- [UI オートメーション コントロール型の概要](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
- [UI オートメーションの概要](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Automation.ControlType.DataGrid>
+- [UI オートメーション コントロール型の概要](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [UI オートメーションの概要](../../../docs/framework/ui-automation/ui-automation-overview.md)

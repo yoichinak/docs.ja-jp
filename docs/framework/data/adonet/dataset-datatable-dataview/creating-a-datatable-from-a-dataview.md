@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-ms.openlocfilehash: ccf95ff250cc7c23b1ff981087de0f1310472880
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c70dd0401ea518613a2b51f047de13f6c7270152
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424364"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621186"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>DataView からの DataTable の作成
 データ ソースからデータを取得し、<xref:System.Data.DataTable> にデータを格納した後、再度データを取得せずに、返されたデータの並べ替え、フィルター処理、または制限の適用を行うことが必要になる場合があります。 これを行うには、<xref:System.Data.DataView> クラスを使用します。 さらに、新たに作成する必要がある場合<xref:System.Data.DataTable>から、 <xref:System.Data.DataView>、使用することができます、<xref:System.Data.DataView.ToTable%2A>メソッドは、新しいすべての行および列、またはデータのサブセットをコピーする<xref:System.Data.DataTable>します。 <xref:System.Data.DataView.ToTable%2A> メソッドには、次の操作を行うためのオーバーロード機能があります。  
   
--   <xref:System.Data.DataTable> 内の列のサブセットである列を含む <xref:System.Data.DataView> の作成  
+- <xref:System.Data.DataTable> 内の列のサブセットである列を含む <xref:System.Data.DataView> の作成  
   
--   作成、<xref:System.Data.DataTable>異なる行のみを含む、 <xref:System.Data.DataView>TRANSACT-SQL の DISTINCT キーワードと同様にします。  
+- 作成、<xref:System.Data.DataTable>異なる行のみを含む、 <xref:System.Data.DataView>TRANSACT-SQL の DISTINCT キーワードと同様にします。  
   
 ## <a name="example"></a>例  
  次のコンソール アプリケーションの例を作成、<xref:System.Data.DataTable>からデータを格納している、 **Person.Contact**テーブルに、 **AdventureWorks**サンプル データベース。 次に、例では、作成、並べ替え、フィルター<xref:System.Data.DataView>に基づいて、<xref:System.Data.DataTable>します。 内容を表示した後、<xref:System.Data.DataTable>と<xref:System.Data.DataView>、例は、作成、新しい<xref:System.Data.DataTable>から、<xref:System.Data.DataView>呼び出すことによって、<xref:System.Data.DataView.ToTable%2A>メソッドを使用できる列のサブセットのみを選択します。 最後に、新しい <xref:System.Data.DataTable> の内容が表示されます。  
@@ -205,7 +205,8 @@ Console.WriteLine();
   
  }  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Data.DataView.ToTable%2A>  
- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Data.DataView.ToTable%2A>
+- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

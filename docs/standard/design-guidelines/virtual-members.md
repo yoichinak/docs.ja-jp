@@ -8,12 +8,12 @@ helpviewer_keywords:
 - members [.NET Framework], virtual
 ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
 author: KrzysztofCwalina
-ms.openlocfilehash: 1719e9843252c25d1e799471330c6cb08211245b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4943ddcdf1bc4e3e32c8d664cbcc5c50ae3959bd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778708"
 ---
 # <a name="virtual-members"></a>仮想メンバー
 そのため、サブクラスの動作を変更する仮想メンバーをオーバーライドできます。 それらは、それらのもたらす拡張性の観点からのコールバックとよく似ていますが、実行のパフォーマンスとメモリ消費量の観点からは優れています。 また、仮想メンバー自然に感じられる特殊な既存の型 (特殊化) の種類を作成する必要のあるシナリオでします。  
@@ -40,5 +40,5 @@ ms.locfileid: "53128930"
   
 ## <a name="see-also"></a>関連項目
 
-- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)  
+- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)
 - [機能拡張のデザイン](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

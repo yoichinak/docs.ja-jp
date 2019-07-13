@@ -2,12 +2,12 @@
 title: SslStreamSecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: 18130d50-8996-4257-9c60-bc457f8654d8
-ms.openlocfilehash: f75fa33be2857904417edb78757b3d40d6efdb59
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 83929c46f57af35932dd8399d4f74b6a5b5debc3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956651"
 ---
 # <a name="sslstreamsecuritybindingelement"></a>SslStreamSecurityBindingElement
 SslStreamSecurityBindingElement  
@@ -30,7 +30,7 @@ class SslStreamSecurityBindingElement : BindingElement
 ### <a name="requireclientcertificate"></a>RequireClientCertificate  
  データ型 : boolean  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  このバインディングにクライアント証明書が必要かどうかを指定します。  
   
@@ -38,7 +38,8 @@ class SslStreamSecurityBindingElement : BindingElement
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
-|Namespace|root\ServiceModel で定義|  
+|名前空間|root\ServiceModel で定義|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>

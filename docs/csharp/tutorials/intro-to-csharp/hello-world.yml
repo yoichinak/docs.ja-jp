@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 86c2226796d5632281f2b6b2cb533bfeacebd288
-  ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+  ms.openlocfilehash: ef52031f75bd2004bcb5927524a9c82ac8fbf36f
+  ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 01/04/2019
-  ms.locfileid: "54030517"
+  ms.lasthandoff: 03/05/2019
+  ms.locfileid: "57370320"
 items:
 - durationInMinutes: 1
   content: >
@@ -259,7 +259,7 @@ items:
     似たような 2 つのメソッドがあり、<xref:System.String.StartsWith%2A> と <xref:System.String.EndsWith%2A> も文字列内の部分文字列を検索します。 これらは文字列の先頭または末尾の部分文字列を検索します。 先述のサンプルを変更して、<xref:System.String.Contains%2A> の代わりに <xref:System.String.StartsWith%2A> と <xref:System.String.EndsWith%2A> を使用してみてください。 文字列の先頭にある "You" または "goodbye" を検索します。 文字列の末尾にある "hello" または "goodbye" を検索します。
 
 
-    > [!Note]
+    > [!NOTE]
 
     > 文字列の末尾にあるテキストをテストするときは、句読点に注意します。 文字列が句点で終わる場合は、末尾に句点を含めた文字列を検索する必要があります。
 

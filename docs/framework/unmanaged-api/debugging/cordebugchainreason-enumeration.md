@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e19897015a00d82da30fd670efcdd97c4d06f56f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e46118e97a4b888a16f12cf6705d2b7e67bbf7ec
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406319"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740351"
 ---
 # <a name="cordebugchainreason-enumeration"></a>CorDebugChainReason 列挙型
 呼び出しチェーンが開始する理由を示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum CorDebugChainReason {  
     CHAIN_NONE              = 0x000,  
     CHAIN_CLASS_INIT        = 0x001,  
@@ -58,23 +58,24 @@ typedef enum CorDebugChainReason {
 |`CHAIN_INTERCEPTION`|使用しません。|  
 |`CHAIN_PROCESS_START`|使用しません。|  
 |`CHAIN_THREAD_START`|スレッド実行の開始によって、チェーンが開始されました。|  
-|`CHAIN_ENTER_MANAGED`|マネージ コードへのエントリによって、チェーンが開始されました。|  
+|`CHAIN_ENTER_MANAGED`|マネージド コードへのエントリによって、チェーンが開始されました。|  
 |`CHAIN_ENTER_UNMANAGED`|アンマネージ コードへのエントリによって、チェーンが開始されました。|  
 |`CHAIN_DEBUGGER_EVAL`|使用しません。|  
 |`CHAIN_CONTEXT_SWITCH`|使用しません。|  
 |`CHAIN_FUNC_EVAL`|関数の評価によって、チェーンが開始されました。|  
   
-## <a name="remarks"></a>コメント  
- 使用して、 [icordebugchain::getreason](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getreason-method.md)メソッドの呼び出しチェーンが開始する理由を確認するためにします。  
+## <a name="remarks"></a>Remarks  
+ 使用して、 [icordebugchain::getreason](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getreason-method.md)メソッドを呼び出しチェーンが開始する理由を確認します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>関連項目
+
+- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

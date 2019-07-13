@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 6c864c8e-6dd3-4a65-ace0-36879d9a9c42
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f5d1546bb9c47d30806d857fa55e1d19fdc2c777
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 7bfc915287e579374c69636135c4b049184ef6ce
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864174"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59164789"
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>CodeDOM グラフからのソース コードの生成およびコンパイル
 <xref:System.CodeDom.Compiler> 名前空間は、CodeDOM オブジェクト グラフからソース コードを生成し、サポートされているコンパイラでコンパイルを管理するためのインターフェイスを提供します。 コード プロバイダーは、CodeDOM グラフに基づいて、特定のプログラミング言語でソース コードを生成できます。 <xref:System.CodeDom.Compiler.CodeDomProvider> から派生したクラスは、通常、プロバイダーが対応している言語のコードを生成し、コンパイルするためのメソッドを提供します。  
@@ -91,10 +91,11 @@ ms.locfileid: "43864174"
  [!code-vb[CodeDomExample#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#23)]  
   
 ## <a name="languages-with-initial-support"></a>初期サポートの言語  
- .NET Framework は、C#、Visual Basic、C++、および JScript のコード コンパイラとコード ジェネレーターを提供します。 CodeDOM のサポートは、言語固有のコード ジェネレーターとコード コンパイラを実装することで、他の言語に拡張できます。  
+ .NET Framework は、C#、Visual Basic、C++、JScript のコード コンパイラとコード ジェネレーターを提供します。 CodeDOM のサポートは、言語固有のコード ジェネレーターとコード コンパイラを実装することで、他の言語に拡張できます。  
   
-## <a name="see-also"></a>参照  
- <xref:System.CodeDom>  
- <xref:System.CodeDom.Compiler>  
- [動的なソース コードの生成とコンパイル](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)  
- [CodeDOM クイック リファレンス](https://msdn.microsoft.com/library/c77b8bfd-0a32-4e36-b59a-4f687f32c524)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.CodeDom>
+- <xref:System.CodeDom.Compiler>
+- [動的なソース コードの生成とコンパイル](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)
+- [CodeDOM クイック リファレンス](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))

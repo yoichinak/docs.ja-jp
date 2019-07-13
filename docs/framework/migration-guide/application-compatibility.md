@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31d14a8ef6a4b17eea1b9160e811bb92946d775b
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 154640499e99767f73a148c6980e6a2a4cfbce2f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728642"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623787"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>.NET Framework のアプリケーションの互換性
 
@@ -42,11 +42,11 @@ ms.locfileid: "34728642"
 
 各問題には、次の情報が含まれます。
 
--   以前のバージョンからの変更点の説明。
+- 以前のバージョンからの変更点の説明。
 
--   変更が顧客に与える影響と、バージョン間で互換性を保つための回避策があるかどうかの説明。
+- 変更が顧客に与える影響と、バージョン間で互換性を保つための回避策があるかどうかの説明。
 
--   変更の重要性の評価。 アプリケーション互換性問題は、次のように分類されます。
+- 変更の重要性の評価。 アプリケーション互換性問題は、次のように分類されます。
 
     |   |   |
     |---|---|
@@ -55,18 +55,18 @@ ms.locfileid: "34728642"
     |エッジ ケース|非常に限られた一般的でないシナリオでアプリに影響を与える変更。|
     |透明|アプリケーションの開発者やユーザーには大きな影響を及ぼさない変更。|
 
--   バージョンは、フレームワークで変更が最初に適用されたバージョンを示します。 変更によっては、特定のバージョンで導入され、それ以降のバージョンで元に戻されるものがあります。そのバージョンも同様に示されます。
+- バージョンは、フレームワークで変更が最初に適用されたバージョンを示します。 変更によっては、特定のバージョンで導入され、それ以降のバージョンで元に戻されるものがあります。そのバージョンも同様に示されます。
 
--   変更の種類：
+- 変更の種類：
 
     |   |   |
     |---|---|
     |再ターゲット中|変更は、新しいバージョンの .NET Framework 向けに再コンパイルされるアプリに影響します。|
     |ランタイム|変更は、以前のバージョンの .NET Framework 向けだが、その後のバージョンでも実行する既存のアプリに影響します。|
 
--   影響を受ける API (ある場合)。
+- 影響を受ける API (ある場合)。
 
--   使用可能な診断の ID
+- 使用可能な診断の ID
 
 ## <a name="usage"></a>使用法
 開始するには、以下の中から互換性の変更の種類を選択します。
@@ -74,9 +74,8 @@ ms.locfileid: "34728642"
 * [変更の再ターゲット](./retargeting/index.md)
 * [ランタイムの変更点](./runtime/index.md)
 
+## <a name="see-also"></a>関連項目
 
-## <a name="see-also"></a>参照
-
-* [バージョンおよび依存関係](../../../docs/framework/migration-guide/versions-and-dependencies.md)
-* [新機能](../../../docs/framework/whats-new/index.md)
-* [クラス ライブラリの互換性のために残されている機能](../../../docs/framework/whats-new/whats-obsolete.md)
+- [バージョンおよび依存関係](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+- [新機能](../../../docs/framework/whats-new/index.md)
+- [クラス ライブラリの互換性のために残されている機能](../../../docs/framework/whats-new/whats-obsolete.md)

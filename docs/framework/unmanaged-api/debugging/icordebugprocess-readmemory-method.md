@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a0063e33a6a7861815ebb9d9eb3dabec64dd4b9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0d74da502492065dbffb5e5499581263760636c7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419654"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737069"
 ---
 # <a name="icordebugprocessreadmemory-method"></a>ICorDebugProcess::ReadMemory メソッド
 このプロセスのメモリの指定された領域を読み取ります。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ReadMemory(  
     [in]  CORDB_ADDRESS address,   
     [in]  DWORD size,  
@@ -37,9 +37,9 @@ HRESULT ReadMemory(
     [out] SIZE_T *read);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `address`  
- [in]A`CORDB_ADDRESS`読み込まれるメモリのベース アドレスを指定する値。  
+ [in]A`CORDB_ADDRESS`読み取られるメモリのベース アドレスを指定する値。  
   
  `size`  
  [in]メモリから読み取られるバイト数。  
@@ -50,18 +50,18 @@ HRESULT ReadMemory(
  `read`  
  [out]バイト数へのポインターは、指定されたバッファーに転送されます。  
   
-## <a name="remarks"></a>コメント  
- `ReadMemory`メソッドは、主にアンマネージ デバッグ対象の部分で使用されているメモリ領域を検査する相互運用機能デバッグで使用されるものです。 このメソッドは、Microsoft intermediate language (MSIL) コードおよびネイティブ JIT コンパイル コードを読むためも使用できます。  
+## <a name="remarks"></a>Remarks  
+ `ReadMemory`メソッドは主にデバッグ対象のアンマネージ部分で使用されているメモリ領域を検査する相互運用機能デバッグで使用されるものです。 このメソッドは、Microsoft intermediate language (MSIL) コードとネイティブ JIT コンパイル コードの読み取りにも使用できます。  
   
- 管理されているブレークポイントはで返されるデータから削除されます、`buffer`パラメーター。 調整は行われませんネイティブのブレークポイントを設定の[icordebugprocess 2::setunmanagedbreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)です。  
+ 返されるデータから管理対象のブレークポイントは削除されます、`buffer`パラメーター。 によってネイティブのブレークポイントの設定の調整は行われません[icordebugprocess 2::setunmanagedbreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)します。  
   
  プロセス メモリのキャッシュは実行されません。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

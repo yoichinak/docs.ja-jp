@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#define directive [C#]'
 ms.assetid: 23638b8f-779c-450e-b600-d55682de7d01
-ms.openlocfilehash: 7be2a2d00e96b4b734e1a68f6dc63180bcbe5e82
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3b543181e3d836226759e77f0d56ed3c3e57e7ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244974"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696205"
 ---
 # <a name="define-c-reference"></a>#define (C# リファレンス)
 `#define` は、シンボルを定義するために使用します。 次の例に示すように、定義したシンボルを式として [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) ディレクティブに渡すと、式は `true` と評価されます。  
@@ -64,12 +64,12 @@ public class TestDefine
   
  シンボルの定義を解除する方法の例については、「[#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [C# プリプロセッサ ディレクティブ](../../../csharp/language-reference/preprocessor-directives/index.md)  
-- [const](../../../csharp/language-reference/keywords/const.md)  
-- [方法: トレースとデバッグを指定して条件付きコンパイルを実行する](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)  
-- [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)  
+- [C# リファレンス](../../../csharp/language-reference/index.md)
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [C# プリプロセッサ ディレクティブ](../../../csharp/language-reference/preprocessor-directives/index.md)
+- [const](../../../csharp/language-reference/keywords/const.md)
+- [方法: トレースとデバッグを指定して条件付きコンパイルを実行する](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)
 - [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)

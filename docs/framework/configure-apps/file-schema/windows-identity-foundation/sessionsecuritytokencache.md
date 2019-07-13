@@ -1,22 +1,22 @@
 ---
-title: '&lt;sessionSecurityTokenCache&gt;'
+title: <sessionSecurityTokenCache>
 ms.date: 03/30/2017
 ms.assetid: d43e676c-0153-485c-ab31-0257a2db7507
 author: BrucePerlerMS
-ms.openlocfilehash: b812673ac1c015adde357d3c0707d85643aad3e9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5c68fe618f965f364a3716c3bc65de5e165b12ec
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47401376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793797"
 ---
-# <a name="ltsessionsecuritytokencachegt"></a>&lt;sessionSecurityTokenCache&gt;
+# <a name="sessionsecuritytokencache"></a>\<sessionSecurityTokenCache>
 サービスまたはセキュリティ トークン ハンドラー コレクションのセッション トークン キャッシュに登録します。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<キャッシュ >  
-\<sessionSecurityTokenCache >  
+\<caches>  
+\<sessionSecurityTokenCache>  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,7 +47,7 @@ ms.locfileid: "47401376"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<キャッシュ >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|サービスまたはセキュリティ トークン ハンドラー コレクションで使用されるキャッシュを登録します。|  
+|[\<caches>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|サービスまたはセキュリティ トークン ハンドラー コレクションで使用されるキャッシュを登録します。|  
   
 ## <a name="example"></a>例  
  次の XML はセッション セキュリティ トークンを保持するためのカスタム キャッシュの構成 (<xref:System.IdentityModel.Tokens.SessionSecurityToken>)。 構成から取得されますが、`ClaimsAwareWebFarm`サンプル。 このサンプルの詳細については、次を参照してください。 [WIF コード サンプル インデックス](../../../../../docs/framework/security/wif-code-sample-index.md)します。  
@@ -61,5 +61,6 @@ ms.locfileid: "47401376"
 </caches>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70d7c058-0280-4815-a008-6f290093591a
-ms.openlocfilehash: c93b322c755036c8bf7150bb5c96b9c32b6dc9b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7a2588b9e5082915dff4d371adff2ad3d232d74
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032540"
 ---
 # <a name="find-the-maximum-value-in-a-numeric-sequence"></a>一連の数値の中の最大値の検出
 一連の数値の中の最大値を見つけるには、<xref:System.Linq.Enumerable.Max%2A> 演算子を使用します。  
@@ -71,6 +71,7 @@ ms.locfileid: "33353818"
   
  `Carnarvon Tigers`  
   
-## <a name="see-also"></a>関連項目  
- [集計クエリ](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)  
- [サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+## <a name="see-also"></a>関連項目
+
+- [集計クエリ](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
+- [サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

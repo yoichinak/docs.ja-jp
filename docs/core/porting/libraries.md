@@ -2,14 +2,14 @@
 title: .NET Core にライブラリを移植する
 description: ライブラリ プロジェクトを .NET Framework から .NET Core に移植する方法を説明します。
 author: cartermp
-ms.date: 07/14/2017
+ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 4002f7d0f98398163df1c4d02ff0e157584c2655
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 8709c4942bcd1b0fc7f0e75ee41e5c9a01df83ee
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169690"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745561"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>.NET Framework ライブラリを .NET Core に移植する
 
@@ -26,7 +26,7 @@ ms.locfileid: "53169690"
 
 次のトピックの内容を理解している必要もあります。
 
-[.NET Standard](~/docs/standard/net-standard.md)   
+[.NET Standard](../../standard/net-standard.md)\
 このトピックでは、すべての .NET 実装で使用可能にすることを目的とした、.NET API の正式な仕様について説明します。
 
 [パッケージ、メタパッケージ、フレームワーク](~/docs/core/packages.md)   
@@ -40,38 +40,6 @@ ms.locfileid: "53169690"
 
 [.NET Core への移植 - サード パーティの依存関係の分析](~/docs/core/porting/third-party-deps.md)   
 このトピックでは、サード パーティの依存関係の移植性と、NuGet パッケージの依存関係が .NET Core で機能しない場合の対処方法について説明します。
-
-## <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Core で使用できない .NET Framework テクノロジ
-
-.NET Framework ライブラリで使用できるテクノロジの中には、.NET Core で使用できないものがあります。たとえば、AppDomain、リモート処理、コード アクセス セキュリティ (CAS)、セキュリティ透過性などです。 ライブラリがこれらのテクノロジの 1 つ以上に依存する場合、以下に示す代替方法を検討してください。 API の互換性の詳細については、CoreFX チームが GitHub で提供する[動作の変更/互換性の破棄と廃止/レガシ API の一覧](https://github.com/dotnet/corefx/wiki/ApiCompat)をご覧ください。
-
-API またはテクノロジが現在実装されていないからといって、意図的にサポートされていないわけではありません。 GitHub の [dotnet/corefx リポジトリの問題](https://github.com/dotnet/corefx/issues)に問題点を挙げて、特定の API やテクノロジについて質問してください。 [問題内の移植に関する要求](https://github.com/dotnet/corefx/labels/port-to-core)には、`port-to-core` のラベルが付いています。
-
-### <a name="appdomains"></a>AppDomain
-
-AppDomain はアプリを互いに分離します。 AppDomain ではランタイム サポートが必要で、通常は非常に高額です。 .NET Core には実装されていません。 将来この機能が追加される予定はありません。 コードの分離には、代わりの方法として、プロセスの分離やコンテナーの利用をお勧めします。 アセンブリの動的読み込みには、新しい <xref:System.Runtime.Loader.AssemblyLoadContext> クラスをお勧めします。
-
-.NET Framework からのコードの移行を簡単にするために、.NET Core の <xref:System.AppDomain> API サーフェスの一部を公開しています。 API のなかには、正常に機能するもの (<xref:System.AppDomain.UnhandledException?displayProperty=nameWithType> など)、処理を行わないメンバー (<xref:System.AppDomain.SetCachePath%2A> など)、<xref:System.PlatformNotSupportedException> をスローするもの (<xref:System.AppDomain.CreateDomain%2A> など) があります。 [dotnet/corefx GitHub リポジトリ](https://github.com/dotnet/corefx)の[ `System.AppDomain` 参照ソース](https://github.com/dotnet/corefx/blob/master/src/System.Runtime.Extensions/src/System/AppDomain.cs)に照らして使用する種類を確認し、実装バージョンに合ったブランチを選択してください。
-
-### <a name="remoting"></a>リモート処理
-
-.NET リモート処理は、問題のあるアーキテクチャであると判断されました。 AppDomain 間の通信で使用されていますが、今後はサポートされなくなります。 また、リモート処理にはランタイム サポートが必要で、維持するのに高いコストがかかります。 これらの理由から、.NET リモート処理は .NET Core でサポートされておらず、また将来サポートが追加される予定もありません。
-
-プロセス間の通信では、リモート処理に代わる方法として、<xref:System.IO.Pipes> または <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> クラスなどのプロセス間通信 (IPC) メカニズムを検討してください。
-
-マシン間では、代替方法としてネットワーク ベースのソリューションを使用してください。 可能であれば、HTTP などのオーバーヘッドの少ないプレーンテキストのプロトコルを使用してください。 この場合、ASP.NET Core で使用される Web サーバーの [Kestrel Web Server](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel) も選択できます。 また、ネットワーク ベースのマシン間のシナリオとして、<xref:System.Net.Sockets> の使用も検討してください。 その他のオプションについては、[.NET オープン ソース開発者プロジェクト:メッセージング](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging)に関する記事をご覧ください。
-
-### <a name="code-access-security-cas"></a>コード アクセス セキュリティ (CAS)
-
-サンド ボックスは、マネージド アプリケーションやライブラリが使用または実行するリソースの制限を、ランタイムまたはフレームワークに依存しています。これは [.NET Framework ではサポートされていない](~/docs/framework/misc/code-access-security.md)ため、.NET Core でもサポートされていません。 .NET Framework やランタイムでは、特権の昇格が発生するケースが多すぎるため、このまま CAS をセキュリティ境界と見なすことはできないと考えています。 さらに、CAS は実装が複雑化しており、その使用を予定していないアプリケーションでは、多くの場合で正確性のパフォーマンスに影響します。
-
-仮想化、コンテナー、ユーザー アカウントなど、オペレーティング システムが提供するセキュリティ境界を使用して、最低限の特権セットでプロセスを実行します。
-
-### <a name="security-transparency"></a>セキュリティ透過性
-
-CAS と同様に、セキュリティ透過性を利用すると、サンドボックス コードをセキュリティ クリティカルなコードから宣言的に分離できますが、[現在はセキュリティ境界としてはサポートされていません](~/docs/framework/misc/security-transparent-code.md)。 この機能は、Silverlight で頻繁に使用されます。 
-
-仮想化、コンテナー、ユーザー アカウントなど、オペレーティング システムが提供するセキュリティ境界を使用して、最低限の特権セットでプロセスを実行します。
 
 ## <a name="retargeting-your-net-framework-code-to-net-framework-472"></a>.NET Framework コードのターゲットを .NET Framework 4.7.2 に変更する
 
@@ -163,3 +131,6 @@ CAS と同様に、セキュリティ透過性を利用すると、サンドボ�
 1. 次のコード レイヤーを選択して移植し、前の手順を繰り返します。
 
 ライブラリのベースから開始してベースから外側に向かい、必要に応じて各レイヤーをテストする場合、移植は、問題が一度でコードの 1 レイヤーに分離される体系的なプロセスになります。
+
+>[!div class="step-by-step"]
+>[次へ](project-structure.md)

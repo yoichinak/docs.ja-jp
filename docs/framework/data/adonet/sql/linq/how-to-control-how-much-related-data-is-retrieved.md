@@ -1,18 +1,18 @@
 ---
-title: '方法 : 取得する関連データの量を制御する'
+title: '方法: 取得する関連データの量を制御する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: efdc203e-3da9-4477-815e-54f10c3d7c6c
-ms.openlocfilehash: 202e33f3130e8db7269af2b4669690cf5c6468cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd59c09185eab003274614dcc30393b060e6b7c0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904476"
 ---
-# <a name="how-to-control-how-much-related-data-is-retrieved"></a>方法 : 取得する関連データの量を制御する
+# <a name="how-to-control-how-much-related-data-is-retrieved"></a>方法: 取得する関連データの量を制御する
 メイン ターゲットと一緒にどの関連データを取得するかを指定するには、<xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> メソッドを使用します。 たとえば、顧客の注文に関する情報が必要になることがわかっている場合は、<xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> を使用して、顧客情報と同時に注文情報を取得できます。 この方法によって、データベースへの 1 回のアクセスで 2 種類の情報セットを両方とも取得できます。  
   
 > [!NOTE]
@@ -24,5 +24,6 @@ ms.locfileid: "33360858"
  [!code-csharp[System.Data.Linq.DataLoadOptions#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/system.data.linq.dataloadoptions/cs/program.cs#2)]
  [!code-vb[System.Data.Linq.DataLoadOptions#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.dataloadoptions/vb/module1.vb#2)]  
   
-## <a name="see-also"></a>関連項目  
- [データベースに対するクエリの実行](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+## <a name="see-also"></a>関連項目
+
+- [データベースに対するクエリの実行](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)

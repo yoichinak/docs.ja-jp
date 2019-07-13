@@ -6,21 +6,21 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: 69fa8837f616969e018e4ec7191f0b30a2df5b62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09c51341a2b81c21804bcca3b244bbebdb7342b6
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541565"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758779"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>ファイル ダイアログ ボックスのカスタム プレイス用既知のフォルダー GUID
-使用する、<xref:System.Guid>を指定する、[!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)]既知のフォルダーにフォルダーを追加するときに、<xref:System.Windows.Forms.FileDialog.CustomPlaces%2A>コレクション。 既知のフォルダー Guid は、大文字小文字は区別されずで KnownFolders.h ファイルで定義されて、[!INCLUDE[winSDK](../../../../includes/winsdk-md.md)]です。  
+使用する、<xref:System.Guid>を指定する、[!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)]既知のフォルダーにフォルダーを追加すると、<xref:System.Windows.Forms.FileDialog.CustomPlaces%2A>コレクション。 既知のフォルダー Guid では、小文字は区別されませんされ、Windows SDK 内の KnownFolders.h ファイルで定義されます。  
   
 > [!NOTE]
->  場合によっては、既知のフォルダーを追加する、<xref:System.Windows.Forms.FileDialogCustomPlacesCollection>に表示されないため、**お気に入りリンク**領域。 たとえば、指定した既知のフォルダーが、アプリケーションを実行しているコンピューターに存在しない場合、既知のフォルダーは表示されません。  
+>  場合によっては、既知のフォルダーに追加、<xref:System.Windows.Forms.FileDialogCustomPlacesCollection>に表示されないため、**お気に入りリンク**領域。 たとえば、指定した既知のフォルダーが、アプリケーションを実行しているコンピューターに存在しない場合は、既知のフォルダーは表示されません。  
   
-## <a name="list-of-guids"></a>Guid の一覧  
- 次の表にリスト[!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)]既知のフォルダーと関連付けられた<xref:System.Guid>です。  
+## <a name="list-of-guids"></a>Guid のリスト  
+ 次の表[!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)]既知のフォルダーと関連付けられた<xref:System.Guid>します。  
   
  AddNewPrograms  
  DE61D971-5EBC-4F02-A3A9-6C82895E5C04  
@@ -58,7 +58,7 @@ ms.locfileid: "33541565"
  CommonTemplates  
  B94237E7-57AC-4347-9151-B08C6C32D1F7  
   
- [コンピューター]  
+ コンピューター  
  0AC0837C-BBF8-452A-850D-79D08E667CA7  
   
  競合  
@@ -73,7 +73,7 @@ ms.locfileid: "33541565"
  コントロール パネル  
  82A74AEB-AEB4-465C-A014-D097EE346D63  
   
- Cookie  
+ クッキー  
  2B0F765D-C0E9-4171-908E-08A611B84FF6  
   
  デスクトップ  
@@ -169,7 +169,7 @@ ms.locfileid: "33541565"
  Programs  
  A77F5D77-2E2B-44C3-A6A2-ABA601054A51  
   
- Public  
+ パブリック  
  DFDF76A2-C82A-4D63-906A-5644AC457385  
   
  PublicDesktop  
@@ -286,6 +286,7 @@ ms.locfileid: "33541565"
  Windows  
  F38BF404-1D43-42F2-9305-67DE0B28FC23  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.FileDialogCustomPlace>  
- [方法: よく使用する場所をファイル ダイアログ ボックスに追加する](../../../../docs/framework/winforms/controls/how-to-add-a-custom-place-to-a-file-dialog-box.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Forms.FileDialogCustomPlace>
+- [方法: ファイル ダイアログ ボックスにカスタム プレースを追加します。](how-to-add-a-custom-place-to-a-file-dialog-box.md)

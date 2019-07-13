@@ -1,0 +1,23 @@
+- name: オープン ソース ライブラリのガイダンス
+  href: index.md
+  items:
+    - name: 作業開始
+      href: get-started.md
+    - name: クロス プラットフォーム ターゲット
+      href: cross-platform-targeting.md
+    - name: 厳密な名前付け
+      href: strong-naming.md
+    - name: NuGet
+      href: nuget.md
+      items:
+        - name: 依存関係
+          href: dependencies.md
+        - name: ソース リンク
+          href: sourcelink.md
+        - name: 置換
+          href: publish-nuget-package.md
+    - name: バージョン管理
+      href: versioning.md
+      items:
+        - name: 互換性に影響する変更
+          href: breaking-changes.md

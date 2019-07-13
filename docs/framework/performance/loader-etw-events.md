@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4746e9e7c8c83caf09ccf51749e9e3cbe69ec52
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf874f9422db0038a421d5f61ce18d8af8ec401e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397430"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616311"
 ---
 # <a name="loader-etw-events"></a>ローダー ETW イベント
 <a name="top"></a> これらのイベントは、アプリケーションのドメイン、アセンブリ、およびモジュールのロードとアンロードに関連する情報を収集します。  
@@ -21,15 +21,15 @@ ms.locfileid: "33397430"
   
  ローダー イベントは、次のように細分化されています。  
   
--   [アプリケーション ドメイン イベント](#application_domain_events)  
+- [アプリケーション ドメイン イベント](#application_domain_events)  
   
--   [CLR ローダー アセンブリ イベント](#clr_loader_assembly_events)  
+- [CLR ローダー アセンブリ イベント](#clr_loader_assembly_events)  
   
--   [モジュール イベント](#module_events)  
+- [モジュール イベント](#module_events)  
   
--   [CLR ドメイン モジュール イベント](#clr_domain_module_events)  
+- [CLR ドメイン モジュール イベント](#clr_domain_module_events)  
   
--   [モジュールの範囲イベント](#module_range_events)  
+- [モジュールの範囲イベント](#module_range_events)  
   
 <a name="application_domain_events"></a>   
 ## <a name="application-domain-events"></a>アプリケーション ドメイン イベント  
@@ -55,7 +55,7 @@ ms.locfileid: "33397430"
 |フィールド名|データ型|説明|  
 |----------------|---------------|-----------------|  
 |AppDomainID|win:UInt64|アプリケーション ドメインの一意の識別子。|  
-|AppDomainFlags|win:UInt32|0x1: 既定のドメイン。<br /><br /> 0x2: 実行可能ファイル。<br /><br /> 0x4: アプリケーション ドメイン、ビット 28 ～ 31: このドメインの共有ポリシー。<br /><br /> 0: 共有ドメイン。|  
+|AppDomainFlags|win:UInt32|0x1:既定のドメイン。<br /><br /> 0x2:実行可能ファイル。<br /><br /> 0x4:アプリケーション ドメイン、ビット 28 ~ 31 です。このドメインのポリシーを共有します。<br /><br /> 0:共有ドメイン。|  
 |AppDomainName|win:UnicodeString|わかりやすいアプリケーション ドメイン名。 プロセスの有効期間中に変更することがあります。|  
 |AppDomainIndex|win:UInt32|このアプリケーション ドメインのインデックス。|  
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
@@ -88,7 +88,7 @@ ms.locfileid: "33397430"
 |AssemblyID|win:UInt64|アセンブリの一意の ID。|  
 |AppDomainID|win:UInt64|このアセンブリのドメインの ID。|  
 |BindingID|win:UInt64|アセンブリ バインディングを一意に識別する ID。|  
-|AssemblyFlags|win:UInt32|0x1: ドメインに中立的なアセンブリ。<br /><br /> 0x2: 動的アセンブリ。<br /><br /> 0x4: アセンブリにネイティブ イメージがある。<br /><br /> 0x8: 収集可能なアセンブリ。|  
+|AssemblyFlags|win:UInt32|0x1:ドメインに依存しないアセンブリ。<br /><br /> 0x2:動的アセンブリ。<br /><br /> 0x4:アセンブリには、ネイティブ イメージがあります。<br /><br /> 0x8:収集可能なアセンブリ。|  
 |AssemblyName|win:UnicodeString|完全修飾アセンブリ名。|  
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
@@ -120,25 +120,25 @@ ms.locfileid: "33397430"
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt64|モジュールの一意な ID。|  
 |AssemblyID|win:UInt64|このモジュールが存在するアセンブリの ID。|  
-|ModuleFlags|win:UInt32|0x1: ドメインに中立的なモジュール。<br /><br /> 0x2: モジュールにネイティブ イメージがある。<br /><br /> 0x4: 動的モジュール。<br /><br /> 0x8: マニフェスト モジュール。|  
+|ModuleFlags|win:UInt32|0x1:ドメイン中立的なモジュール。<br /><br /> 0x2:モジュールには、ネイティブ イメージがあります。<br /><br /> 0x4:動的モジュール。<br /><br /> 0x8:マニフェスト モジュール。|  
 |Reserved1|win:UInt32|予約済みのフィールド。|  
 |ModuleILPath|win:UnicodeString|モジュールの Microsoft intermediate language (MSIL) のイメージのパス、またはそれが動的アセンブリ (null で終わる) である場合は動的モジュール名。|  
 |ModuleNativePath|win:UnicodeString|モジュール ネイティブ イメージがある場合、そのパス (null で終わる)。|  
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
-|ManagedPdbSignature|win:GUID|このモジュールに一致するマネージ プログラム データベース (PDB) の GUID の署名。 (「解説」を参照してください。)|  
+|ManagedPdbSignature|win:GUID|このモジュールに一致するマネージド プログラム データベース (PDB) の GUID の署名。 (「解説」を参照してください。)|  
 |ManagedPdbAge|win:UInt32|このモジュールに一致する管理対象 PDB に書き込まれた期間を表す数値。 (「解説」を参照してください。)|  
 |ManagedPdbBuildPath|win:UnicodeString|このモジュールに一致する管理対象の PDB が構成されている場所へのパス。 これは、ファイル名だけの場合もあります。 (「解説」を参照してください。)|  
 |NativePdbSignature|win:GUID|このモジュールに一致するネイティブ イメージ ジェネレーター (NGen) PDB の GUID の署名 (該当する場合)。 (「解説」を参照してください。)|  
 |NativePdbAge|win:UInt32|このモジュールに一致する NGen PDB に書き込まれた期間を表す数値 (該当する場合)。 (「解説」を参照してください。)|  
 |NativePdbBuildPath|win:UnicodeString|このモジュールに一致する管理対象の NGen PDB が構成されている場所へのパス (該当する場合)。 これは、ファイル名だけの場合もあります。 (「解説」を参照してください。)|  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
--   名前に"Pdb"が付いているフィールドは、プロファイル セッション中に読み込まれたモジュールに一致する PDB を検索するプロファイリング ツールによって使用できます。 これらのフィールドの値は、読み込まれたモジュールに一致する PDB の位置を特定するためにデバッガーが通常使用する、モジュールの IMAGE_DIRECTORY_ENTRY_DEBUG のセクションに書き込まれたデータに対応します。  
+- 名前に"Pdb"が付いているフィールドは、プロファイル セッション中に読み込まれたモジュールに一致する PDB を検索するプロファイリング ツールによって使用できます。 これらのフィールドの値は、読み込まれたモジュールに一致する PDB の位置を特定するためにデバッガーが通常使用する、モジュールの IMAGE_DIRECTORY_ENTRY_DEBUG のセクションに書き込まれたデータに対応します。  
   
--   "ManagedPdb"で始まるフィールド名は、マネージ コンパイラ (c# または Visual Basic コンパイラなど) によって生成された MSIL モジュールに対応する管理対象の PDB を参照します。 この PDB は、管理対象の PDB 形式を使用して、ファイル、行番号、およびシンボルの名前など、元のマネージ ソース コードからの要素が MSIL モジュールにコンパイルされている MSIL 要素にどのようにマップされるかについて説明します。  
+- "ManagedPdb"で始まるフィールド名は、マネージド コンパイラ (C# または Visual Basic コンパイラなど) によって生成された MSIL モジュールに対応する管理対象の PDB を参照します。 この PDB は、管理対象の PDB 形式を使用して、ファイル、行番号、およびシンボルの名前など、元のマネージド ソース コードからの要素が MSIL モジュールにコンパイルされている MSIL 要素にどのようにマップされるかについて説明します。  
   
--   "NativePdb"で始まるフィールド名は、 `NGEN createPDB`を呼び出すことによって生成された NGen PDB を参照します。 この PDB は、ネイティブ PDB 形式を使用して、ファイル、行番号、およびシンボルの名前など、元のマネージ ソース コードからの要素が NGen モジュールにコンパイルされているネイティブ要素にどのようにマップされるかについて説明します。  
+- "NativePdb"で始まるフィールド名は、 `NGEN createPDB`を呼び出すことによって生成された NGen PDB を参照します。 この PDB は、ネイティブ PDB 形式を使用して、ファイル、行番号、およびシンボルの名前など、元のマネージド ソース コードからの要素が NGen モジュールにコンパイルされているネイティブ要素にどのようにマップされるかについて説明します。  
   
  [ページのトップへ](#top)  
   
@@ -167,7 +167,7 @@ ms.locfileid: "33397430"
 |ModuleID|win:UInt64|このモジュールが所属するアセンブリを識別します。|  
 |AssemblyID|win:UInt64|このモジュールが存在するアセンブリの ID。|  
 |AppDomainID|win:UInt64|このモジュールを使用する、アプリケーション ドメインの ID。|  
-|ModuleFlags|win:UInt32|0x1: ドメインに中立的なモジュール。<br /><br /> 0x2: モジュールにネイティブ イメージがある。<br /><br /> 0x4: 動的モジュール。<br /><br /> 0x8: マニフェスト モジュール。|  
+|ModuleFlags|win:UInt32|0x1:ドメイン中立的なモジュール。<br /><br /> 0x2:モジュールには、ネイティブ イメージがあります。<br /><br /> 0x4:動的モジュール。<br /><br /> 0x8:マニフェスト モジュール。|  
 |Reserved1|win:UInt32|予約済みのフィールド。|  
 |ModuleILPath|win:UnicodeString|モジュールの MSIL のイメージのパス、またはそれが動的アセンブリ (null で終わる) である場合は動的モジュール名。|  
 |ModuleNativePath|win:UnicodeString|モジュール ネイティブ イメージがある場合、そのパス (null で終わる)。|  
@@ -205,12 +205,13 @@ ms.locfileid: "33397430"
 |RangeSize1|win:UInt32|0 は無効なデータを示します。|  
 |RangeBegin2|win:UnicodeString||  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  .NET Framework のプロセスで読み込まれた NGen イメージが IBC に最適化されている場合、NGen イメージにホットの範囲を含む `ModuleRange` イベントが `moduleID` と `ClrInstanceID`と共にログに記録されます。  NGen イメージが IBC に最適化されていない場合は、このイベントは記録されません。 モジュール名を確認するには、このイベントをモジュールの読み込みの ETW イベントで照合する必要があります。  
   
  このイベントのペイロードのサイズは変数です。 `Count` フィールドは、イベントに含まれている範囲オフセットの数を示します。  このイベントは、実際の範囲を判断するために Windows `IStart` イベントと照合する必要があります。 Windows Image Load イベントは、イメージが読み込まれ、読み込まれたイメージの仮想アドレスが含まれている場合は必ず記録されます。  
   
  モジュールの範囲イベントは、4 以上のすべての ETW レベルで発行され、情報イベントに分類されます。  
   
-## <a name="see-also"></a>関連項目  
- [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>関連項目
+
+- [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)

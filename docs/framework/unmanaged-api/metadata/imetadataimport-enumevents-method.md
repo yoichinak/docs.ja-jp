@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 608b4a7d147124ede60e9d81f91600dfdaad0a65
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2f3d74830de0541ec789081c47352beca8d81d74
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446497"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780707"
 ---
 # <a name="imetadataimportenumevents-method"></a>IMetaDataImport::EnumEvents メソッド
 指定した TypeDef トークンのイベント定義トークンを列挙します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EnumEvents (   
    [in, out] HCORENUM    *phEnum,   
    [in]      mdTypeDef   td,   
@@ -39,12 +39,12 @@ HRESULT EnumEvents (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [入力、出力].列挙子へのポインター。  
+ [入力、出力]列挙子へのポインター。  
   
  `td`  
- [in]イベント定義を持つが列挙されるまでは TypeDef トークンです。  
+ [in]イベント定義を持つが列挙 TypeDef トークンです。  
   
  `rEvents`  
  [out]返されるイベントの配列。  
@@ -53,24 +53,25 @@ HRESULT EnumEvents (
  [in] `rEvents` 配列の最大サイズ。  
   
  `pcEvents`  
- [out]実際に返されるイベントの数`rEvents`です。  
+ [out]実際に返されるイベントの数`rEvents`します。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
 |`S_OK`|`EnumEvents` 正常に返されます。|  
-|`S_FALSE`|列挙するイベントがありません。 その場合は、`pcEvents`ゼロです。|  
+|`S_FALSE`|列挙するためにイベントはありません。 その場合は、`pcEvents`は 0 です。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

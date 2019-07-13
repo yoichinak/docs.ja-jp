@@ -9,21 +9,21 @@ helpviewer_keywords:
 - templates [WPF], Button
 - ControlTemplate [WPF], Button
 ms.assetid: e223c759-f8c4-4717-acfb-b1e40bdf5f3b
-ms.openlocfilehash: 854160e8b1b049fdb2f3421b9eb24cf410f33672
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: ec64c7c2051b12cba01135054a90e54864b7386a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912484"
 ---
 # <a name="button-styles-and-templates"></a>ボタンのスタイルとテンプレート
-このトピックは、のスタイルとテンプレートについて説明します、<xref:System.Windows.Controls.Button>コントロール。 既定値を変更することができます<xref:System.Windows.Controls.ControlTemplate>コントロールの外観を一意にします。 詳細については、「[ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)」を参照してください。  
+このトピックでは、スタイルとテンプレートについて説明します、<xref:System.Windows.Controls.Button>コントロール。 既定値を変更する<xref:System.Windows.Controls.ControlTemplate>固有の外観を制御します。 詳細については、「[ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)」を参照してください。  
   
 ## <a name="button-parts"></a>ボタンのパーツ  
- <xref:System.Windows.Controls.Button>コントロールには、その名前付きの部分はありません。  
+ <xref:System.Windows.Controls.Button>コントロールには、名前付きパーツはありません。  
   
 ## <a name="button-states"></a>ボタンの状態  
- 次の表に、用ビジュアル状態、<xref:System.Windows.Controls.Button>コントロール。  
+ 次の表のビジュアルの状態、<xref:System.Windows.Controls.Button>コントロール。  
   
 |VisualState 名|VisualStateGroup 名|説明|  
 |-|-|-|  
@@ -40,18 +40,19 @@ ms.locfileid: "34457165"
 ## <a name="button-controltemplate-example"></a>ボタン ControlTemplate の例  
  次の例は、定義する方法を示します、<xref:System.Windows.Controls.ControlTemplate>の<xref:System.Windows.Controls.Button>コントロール。  
   
- [!code-xaml[ControlTemplateExamples#Button](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/button.xaml#button)]  
+ [!code-xaml[ControlTemplateExamples#Button](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/button.xaml#button)]  
   
  前の例では、次のリソースの 1 つ以上を使用します。  
   
- [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
  完全なサンプルについては、[Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.FrameworkElement.Style%2A>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [コントロールのスタイルとテンプレート](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [コントロールのカスタマイズ](../../../../docs/framework/wpf/controls/control-customization.md)  
- [スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.FrameworkElement.Style%2A>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [コントロールのスタイルとテンプレート](control-styles-and-templates.md)
+- [コントロールのカスタマイズ](control-customization.md)
+- [スタイルとテンプレート](styling-and-templating.md)
+- [ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)

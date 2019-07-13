@@ -2,14 +2,14 @@
 title: ルーティング シナリオ
 ms.date: 03/30/2017
 helpviewer_keywords:
-- rounting [WCF], scenarios
+- routing [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
-ms.openlocfilehash: 629f478e1a5a9ad21ce77943fdad098aa21de4a6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0ab071bf7996a296563fbda68dfdc731e95ed897
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200452"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425359"
 ---
 # <a name="routing-scenarios"></a>ルーティング シナリオ
 ルーティング サービスは自由にカスタマイズできますが、まったく新しい構成を作成するときは、効率的なルーティング ロジックを設計するのが困難である場合があります。  しかし、ほとんどのルーティング サービスの構成で想定されている一般的なシナリオがいくつかあります。 これらのシナリオは、特定の構成に直接、適用できない場合もありますが、これらのシナリオに対応するルーティング サービスの構成方法を理解しておくことは、ルーティング サービスを理解する助けとなります。  
@@ -34,24 +34,24 @@ ms.locfileid: "47200452"
   
  ルーティング サービスを使用することで、クライアント アプリケーションからメッセージを受信するための 1 つのエンドポイントを公開し、メッセージの内容に基づいて、各メッセージを適切なバージョンのサービスにルーティングできます。 最も基本的な実装には、メッセージを処理するサービスのバージョンを示すカスタム ヘッダーをメッセージに追加することが含まれます。 ルーティング サービスでは、各メッセージにカスタム ヘッダーがあるかどうかを確認し、メッセージを適切な送信先エンドポイントにルーティングするために XPathMessageFilter を使用できます。  
   
- サービスのバージョン管理の構成を作成するための手順を参照してください[How To: サービスのバージョン管理](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)します。
+ サービスのバージョン管理の構成を作成するための手順を参照してください[How To:サービスのバージョン管理](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)します。
   
 ### <a name="service-data-partitioning"></a>サービス データのパーティション分割  
  分散環境を設計するときは、多くの場合、複数のコンピューターに処理負荷を分散することが望ましいとされています。これは、可用性を高め、個々のコンピューターの処理負荷を軽減し、メッセージの特定のサブセットに対して専用のリソースを提供するためです。 ルーティング サービスは負荷分散専用のソリューションに代わるものではありませんが、このサービスが内容に基づくルーティングを実施する機能は、特定の送信先に類似のメッセージをルーティングする方法として使用できます。 この例として、その他のクライアントから受信するメッセージとは別に、特定のクライアントからのメッセージを処理する必要がある場合が挙げられます。  
   
- サービス データがパーティション分割構成を作成するための手順を参照してください[How To: データのパーティション分割サービス](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)します。  
+ サービス データがパーティション分割構成を作成するための手順を参照してください[How To:サービス データのパーティション分割](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)します。  
   
 ### <a name="dynamic-routing"></a>動的ルーティング  
  変化するビジネス ニーズを満たすために、ルーティング構成を変更した方がよい場合がよくあります。たとえば、新しいバージョンのサービスに対してルートを追加する、ルーティング条件を変更する、または、特定のメッセージに対してフィルターがルーティング先とする送信先エンドポイントを変更することが考えられます。 ルーティング サービスでは、<xref:System.ServiceModel.Routing.RoutingExtension> を使用して、新しい RoutingConfiguration を実行時に提供できるため、これが実現されます。 新しい構成は直ちに有効になりますが、ルーティング サービスで処理される任意の新しいセッションのみに適用されます。  
   
- 動的ルーティングを実装するための手順を参照してください[方法: 動的更新](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)します。
+ 動的ルーティングを実装するための手順を参照してください[How To:動的更新](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)します。
   
 ### <a name="multicast"></a>マルチキャスト  
  メッセージをルーティングするときに、通常は、各メッセージを 1 つの特定の送信先エンドポイントにルーティングします。  しかし、メッセージのコピーを複数の送信先エンドポイントにルーティングする必要がある場合もあります。 マルチキャスト ルーティングを実行するには、次の条件を満たしている必要があります。  
   
--   要求/応答では、要求への応答時にクライアント アプリケーションが受信できるのが 1 つの応答のみであることが要求されるため、チャネル形状が要求/応答でない (一方向または二重のどちらでもよい) ことが必要である。  
+- 要求/応答では、要求への応答時にクライアント アプリケーションが受信できるのが 1 つの応答のみであることが要求されるため、チャネル形状が要求/応答でない (一方向または二重のどちらでもよい) ことが必要である。  
   
--   複数のフィルターを返す必要があります**true**メッセージを評価するときにします。  
+- 複数のフィルターを返す必要があります**true**メッセージを評価するときにします。  
   
  これらの条件を満たす場合、true を返すフィルターと関連付けられた各送信先エンドポイントは、メッセージのコピーを受信します。  
   
@@ -63,16 +63,17 @@ ms.locfileid: "47200452"
   
  ルーティング サービスは、ネットワークまたは通信関連の障害発生時のメッセージに対して堅牢なエラー処理機能を提供することで、このシナリオを対処しようとします。 可能な送信先エンドポイントのリストを作成し、このリストを各メッセージ フィルターと関連付けることで、設定可能な送信先が 1 つのみであるために発生する単一障害点を排除します。 障害が発生した場合、ルーティング サービスは、メッセージが配信されるか、通信以外の障害が発生するか、またはすべてのエンドポイントに対する試行が終わるまで、次のエンドポイントにメッセージを配信しようとします。  
   
- エラー処理を構成するための手順を参照してください[How To: エラー処理](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)します。
+ エラー処理を構成するための手順を参照してください[How To:エラー処理](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)します。
   
 ### <a name="in-this-section"></a>このセクションの内容  
- [サービスのバージョンを管理する方法](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
+ [方法: サービスのバージョン管理](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
   
- [サービス データのパーティションを分割する方法](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
+ [方法: サービス データのパーティション分割](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
   
- [動的な更新を行う方法](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
+ [方法: 動的更新](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
   
- [エラーを処理する方法](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
+ [方法: エラー処理](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
   
-## <a name="see-also"></a>関連項目  
- [ルーティングの概要](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
+## <a name="see-also"></a>関連項目
+
+- [ルーティングの概要](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

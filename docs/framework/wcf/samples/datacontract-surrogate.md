@@ -2,12 +2,12 @@
 title: DataContract サロゲート
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
-ms.openlocfilehash: 10b0c2a3e82e39b03291f567ca360c51042b464e
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a56fbcabfacf146142f7b0c0623325cc8e69c29a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990419"
 ---
 # <a name="datacontract-surrogate"></a>DataContract サロゲート
 このサンプルでは、シリアル化、逆シリアル化、スキーマのエクスポート、スキーマのインポートなどのプロセスを、データ コントラクト サロゲート クラスを使用してカスタマイズする方法を示します。 このサンプルでは、クライアントとサーバーのシナリオは、データをシリアル化し、Windows Communication Foundation (WCF) クライアントとサービス間で送信する場所でサロゲートを使用する方法を示します。  
@@ -64,9 +64,9 @@ public class Person
 }  
 ```  
   
- `DataContract` 属性は `Person` クラスに適用できますが、適用できない場合もあります。 たとえば、`Person` クラスは、ユーザーが制御できない別のアセンブリで定義することができます。  
+ <xref:System.Runtime.Serialization.DataContractAttribute> 属性は `Person` クラスに適用できますが、適用できない場合もあります。 たとえば、`Person` クラスは、ユーザーが制御できない別のアセンブリで定義することができます。  
   
- このような制限がある場合、`Person` クラスをシリアル化するには、このクラスを `DataContractAttribute` でマークされた別のクラスに置き換え、必要なデータをこの新しいクラスにコピーするという方法があります。 この目的は、`Person` クラスを DataContract として <xref:System.Runtime.Serialization.DataContractSerializer> に表示することです。 これは、データ コントラクト クラス以外のクラスをシリアル化する 1 つの方法です。  
+ このような制限がある場合、`Person` クラスをシリアル化するには、このクラスを <xref:System.Runtime.Serialization.DataContractAttribute> でマークされた別のクラスに置き換え、必要なデータをこの新しいクラスにコピーするという方法があります。 この目的は、`Person` クラスを DataContract として <xref:System.Runtime.Serialization.DataContractSerializer> に表示することです。 これは、データ コントラクト クラス以外のクラスをシリアル化する 1 つの方法です。  
   
  このサンプルでは、 `Person` クラスを `PersonSurrogated` という別のクラスに論理的に置き換えます。  
   
@@ -254,11 +254,11 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
+1. 実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
-2.  ソリューションの c# 版をビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
+2. ソリューションの c# 版をビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
   
-3.  1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
+3. 1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
@@ -268,5 +268,3 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
 >  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\DataContract`  
-  
-## <a name="see-also"></a>関連項目

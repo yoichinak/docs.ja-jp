@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 911d0d1444e2cf3cb8241eeeff63a5a86b4ab806
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ec04588bd1cc21e585d89c734c152a86fb835b15
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446275"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772720"
 ---
 # <a name="imetadataassemblyimportgetassemblyprops-method"></a>IMetaDataAssemblyImport::GetAssemblyProps メソッド
-指定したメタデータ シグネチャを持つアセンブリのプロパティのセットを取得します。  
+指定したメタデータ シグネチャを持つアセンブリの一連のプロパティを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetAssemblyProps (  
     [in]  mdAssembly          mda,  
     [out] const void          **ppbPublicKey,   
@@ -43,15 +43,15 @@ HRESULT GetAssemblyProps (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `mda`  
- [in] です。 `mdAssembly`プロパティを取得する対象のアセンブリを表すメタデータ トークン。  
+ [in]。 `mdAssembly`プロパティを取得する対象のアセンブリを表すメタデータ トークン。  
   
  `ppbPublicKey`  
  [out]公開キーまたはメタデータ トークンへのポインター。  
   
  `pcbPublicKey`  
- [out]返されたパブリック キー内のバイト数。  
+ [out]返される公開キーのバイト数。  
   
  `pulHashAlgId`  
  [out]アセンブリ内のファイルのハッシュに使用されるアルゴリズムへのポインター。  
@@ -63,22 +63,23 @@ HRESULT GetAssemblyProps (
  [in]ワイド文字単位のサイズの`szName`します。  
   
  `pchName`  
- [out]実際に返されるワイド文字数`szName`です。  
+ [out]実際に返されるワイド文字数`szName`します。  
   
  `pMetaData`  
  [out]アセンブリのメタデータを含む ASSEMBLYMETADATA 構造体へのポインター。  
   
  `pdwAssemblyFlags`  
- [out]アセンブリに適用されるメタデータを記述するフラグ。 この値は 1 つまたは複数の組み合わせ[CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)値。  
+ [out]アセンブリに適用されるメタデータを記述するフラグ。 この値は、1 つ以上の組み合わせ[CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)値。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
  **ライブラリ:** MsCorEE.dll にリソースとして使用  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataAssemblyImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [IMetaDataAssemblyImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

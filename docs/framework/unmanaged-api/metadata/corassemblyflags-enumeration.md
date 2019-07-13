@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d6ec37bbd8750c27a41b5f18180c7726cdcd483
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3532ca0a30d83aa8f61bc4397090f3d589b73257
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442839"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780935"
 ---
 # <a name="corassemblyflags-enumeration"></a>CorAssemblyFlags 列挙型
 アセンブリ コンパイルに適用されるメタデータを記述する値が格納されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum CorAssemblyFlags {  
   
     afPublicKey             =   0x0001,  
@@ -59,31 +59,32 @@ typedef enum CorAssemblyFlags {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`afPublicKey`|アセンブリ参照が、完全、ハッシュされていないパブリック キーを保持していることを示します。|  
-|`afPA_None`|関数は指定されたプロセッサのアーキテクチャを示します。|  
+|`afPublicKey`|アセンブリ参照が、ハッシュされていない完全な公開キーを保持していることを示します。|  
+|`afPA_None`|プロセッサ アーキテクチャが指定されていないことを示します。|  
 |`afPA_MSIL`|プロセッサ アーキテクチャがニュートラルであることを示します (PE32)。|  
-|`afPA_x86`|プロセッサ アーキテクチャが x86 (PE32) であることを示します。|  
-|`afPA_IA64`|プロセッサ アーキテクチャが Itanium (pe 32 +) であることを示します。|  
-|`afPA_AMD64`|プロセッサ アーキテクチャが AMD X64 (pe 32 +) であることを示します。|  
-|`afPA_ARM`|プロセッサ アーキテクチャが ARM (PE32) であることを示します。|  
-|`afPA_NoPlatform`|アセンブリが参照アセンブリであることを示しますつまり、すべてのアーキテクチャに適用されますが、すべてのアーキテクチャでは実行できません。 したがって、フラグが同じ`afPA_Mask`です。|  
+|`afPA_x86`|プロセッサ アーキテクチャは、x86 (PE32) であることを示します。|  
+|`afPA_IA64`|プロセッサ アーキテクチャは、Itanium (pe 32 +) であることを示します。|  
+|`afPA_AMD64`|プロセッサ アーキテクチャは、AMD X64 (pe 32 +) であることを示します。|  
+|`afPA_ARM`|プロセッサ アーキテクチャは、ARM (PE32) であることを示します。|  
+|`afPA_NoPlatform`|アセンブリが参照アセンブリであることを示しますつまり、すべてのアーキテクチャに適用されますが、任意のアーキテクチャ上で実行できません。 したがってと同じでは、フラグ`afPA_Mask`します。|  
 |`afPA_Specified`|プロセッサ アーキテクチャのフラグに反映させるかを示す、`AssemblyRef`レコード。|  
-|`afPA_Mask`|プロセッサ アーキテクチャを記述するマスク。|  
+|`afPA_Mask`|プロセッサ アーキテクチャを示すマスク。|  
 |`afPA_FullMask`|プロセッサ アーキテクチャの説明が含まれることを指定します。|  
-|`afPA_Shift`|プロセッサ アーキテクチャのフラグとインデックスの間でシフト数を示します。|  
-|`afEnableJITcompileTracking`|対応する値を示す、<xref:System.Diagnostics.DebuggableAttribute.DebuggingModes>の<xref:System.Diagnostics.DebuggableAttribute>です。|  
-|`afDisableJITcompileOptimizer`|対応する値を示す、<xref:System.Diagnostics.DebuggableAttribute.DebuggingModes>の<xref:System.Diagnostics.DebuggableAttribute>です。|  
-|`afRetargetable`|実行時に、別のパブリッシャーからのアセンブリにアセンブリを再ターゲットできることを示します。|  
-|`afContentType_Mask`|コンテンツの種類を説明するマスクです。|  
+|`afPA_Shift`|プロセッサ アーキテクチャのフラグと、インデックスの間でシフト数を示します。|  
+|`afEnableJITcompileTracking`|対応する値を示します、<xref:System.Diagnostics.DebuggableAttribute.DebuggingModes>の<xref:System.Diagnostics.DebuggableAttribute>します。|  
+|`afDisableJITcompileOptimizer`|対応する値を示します、<xref:System.Diagnostics.DebuggableAttribute.DebuggingModes>の<xref:System.Diagnostics.DebuggableAttribute>します。|  
+|`afRetargetable`|実行時に、別の発行者からのアセンブリにアセンブリを再ターゲットできることを示します。|  
+|`afContentType_Mask`|コンテンツの種類を示すマスク。|  
 |`afContentType_Default`|既定のコンテンツ タイプを示します。|  
-|`afContentType_WindowsRuntime`|示します、[!INCLUDE[wrt](../../../../includes/wrt-md.md)]コンテンツの種類。|  
+|`afContentType_WindowsRuntime`|Windows ランタイムのコンテンツの種類を示します。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorHdr.h  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>関連項目
+
+- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

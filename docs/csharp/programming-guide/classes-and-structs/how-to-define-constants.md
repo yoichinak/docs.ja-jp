@@ -1,18 +1,18 @@
 ---
-title: '方法 : C# で定数を定義する'
+title: '方法: C# で定数を定義する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 43f511be-346c-4b8a-995e-aded94542ece
-ms.openlocfilehash: 09d19f708570b55509a3ec2a41e439cb9c9de973
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a85e7728512922be38658c07314229c26b2461fd
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43739696"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201470"
 ---
-# <a name="how-to-define-constants-in-c"></a>方法 : C# で定数を定義する
+# <a name="how-to-define-constants-in-c"></a>方法: C\# で定数を定義する
 定数とは、値がコンパイル時に設定され、変更できないフィールドです。 定数を使用して、特殊な値の数値リテラル ("マジック ナンバー") の代わりにわかりやすい名前を提供します。  
   
 > [!NOTE]
@@ -23,10 +23,10 @@ ms.locfileid: "43739696"
  整数型以外の定数を定義する 1 つの方法は、`Constants` という名前の 1 つの静的クラスにそれらをグループ化することです。 これを行うには、次の例に示すように、クラス名の前に定数へのすべての参照を付ける必要があります。  
   
 ## <a name="example"></a>例  
- [!code-csharp[csProgGuideObjects#89](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-constants_1.cs)]  
+ [!code-csharp[csProgGuideObjects#89](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#89)]  
   
  クラス名修飾子を使用すると、定数を使用するユーザーは、それが定数であり、変更できないことがわかります。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)

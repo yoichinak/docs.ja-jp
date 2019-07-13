@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 8654a415ee0701680064aec2ee45f975086ec2c0
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: a7a39677bbd975ac384357481ef419f57b96d977
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50088586"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489805"
 ---
 # <a name="table-valued-parameters"></a>テーブル値パラメーター
-テーブル値パラメーターを使用すると、ラウンド トリップを何度も繰り返したり、サーバー側にデータを処理するための特殊なロジックを組み込んだりすることなく、複数行のデータをクライアント アプリケーションから SQL Server へと簡単にマーシャリングできます。 テーブル値パラメーターを使用すると、クライアント アプリケーションのデータ行をカプセル化して単一のパラメーター化コマンドでサーバーに送ることができます。 受信データ行はテーブル変数に格納され、[!INCLUDE[tsql](../../../../../includes/tsql-md.md)] によって操作できるようになります。  
+テーブル値パラメーターを使用すると、ラウンド トリップを何度も繰り返したり、サーバー側にデータを処理するための特殊なロジックを組み込んだりすることなく、複数行のデータをクライアント アプリケーションから SQL Server へと簡単にマーシャリングできます。 テーブル値パラメーターを使用すると、クライアント アプリケーションのデータ行をカプセル化して単一のパラメーター化コマンドでサーバーに送ることができます。 受信データ行はテーブル変数に格納され、Transact-SQL によって操作できるようになります。  
   
- テーブル値パラメーターの列値には、[!INCLUDE[tsql](../../../../../includes/tsql-md.md)] の標準的な SELECT ステートメントを使ってアクセスできます。 テーブル値パラメーターは厳密に型指定されており、その構造は自動的に検証されます。 テーブル値パラメーターのサイズは、サーバーのメモリによってのみ制限されます。  
+ テーブル値パラメーターの列値には、Transact-SQL の標準的な SELECT ステートメントを使ってアクセスできます。 テーブル値パラメーターは厳密に型指定されており、その構造は自動的に検証されます。 テーブル値パラメーターのサイズは、サーバーのメモリによってのみ制限されます。  
   
 > [!NOTE]
 >  テーブル値パラメーターにデータを取得することはできません。 テーブル値パラメーターは入力専用です。OUTPUT キーワードはサポートされません。  
@@ -30,16 +30,16 @@ ms.locfileid: "50088586"
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>旧バージョンの SQL Server での複数行の受け渡し  
  テーブル値パラメーターは、SQL Server 2008 に導入された、前に、ストアド プロシージャまたはパラメーター化 SQL コマンドに複数行のデータを渡すためのオプションは限られていました。 複数行をサーバーに渡す方法には、次のオプションがありました。  
   
--   複数のデータ列およびデータ行の値を表す一連の個別パラメーターを使用する。 この方法で渡すことのできるデータの量は、使用可能なパラメーターの数によって制限されます。 SQL Server プロシージャが持つことのできるパラメーター数は最大 2,100 です。 これらの個々の値をテーブル変数または一時テーブルにまとめて処理するには、サーバー側のロジックが必要です。  
+- 複数のデータ列およびデータ行の値を表す一連の個別パラメーターを使用する。 この方法で渡すことのできるデータの量は、使用可能なパラメーターの数によって制限されます。 SQL Server プロシージャが持つことのできるパラメーター数は最大 2,100 です。 これらの個々の値をテーブル変数または一時テーブルにまとめて処理するには、サーバー側のロジックが必要です。  
   
--   複数のデータを区切られた文字列または XML ドキュメントとしてまとめ、そのテキスト値をプロシージャまたはステートメントに渡す。 これには、データ構造を検証して値を処理するためのロジックをプロシージャまたはステートメントに含める必要があります。  
+- 複数のデータを区切られた文字列または XML ドキュメントとしてまとめ、そのテキスト値をプロシージャまたはステートメントに渡す。 これには、データ構造を検証して値を処理するためのロジックをプロシージャまたはステートメントに含める必要があります。  
   
--   複数の行に影響を与えるデータ変更のための一連の SQL ステートメントを作成する。たとえば、`Update` の <xref:System.Data.SqlClient.SqlDataAdapter> メソッドを呼び出すことによって作成できます。 変更はサーバーに個別に送ることもグループにまとめて送ることもできます。 ただし、複数のステートメントを含むバッチを送信しても、サーバーでは個々のステートメントが別々に実行されます。  
+- 複数の行に影響を与えるデータ変更のための一連の SQL ステートメントを作成する。たとえば、`Update` の <xref:System.Data.SqlClient.SqlDataAdapter> メソッドを呼び出すことによって作成できます。 変更はサーバーに個別に送ることもグループにまとめて送ることもできます。 ただし、複数のステートメントを含むバッチを送信しても、サーバーでは個々のステートメントが別々に実行されます。  
   
--   `bcp` ユーティリティ プログラムまたは <xref:System.Data.SqlClient.SqlBulkCopy> オブジェクトを使用して、多数行のデータをテーブルに読み込む。 この方法は効率的ですが、データが一時テーブルまたはテーブル変数に読み込まれなければ、サーバー側での処理がサポートされません。  
+- `bcp` ユーティリティ プログラムまたは <xref:System.Data.SqlClient.SqlBulkCopy> オブジェクトを使用して、多数行のデータをテーブルに読み込む。 この方法は効率的ですが、データが一時テーブルまたはテーブル変数に読み込まれなければ、サーバー側での処理がサポートされません。  
   
 ## <a name="creating-table-valued-parameter-types"></a>テーブル値パラメーター型の作成  
- テーブル値パラメーターは、[!INCLUDE[tsql](../../../../../includes/tsql-md.md)] の CREATE TYPE ステートメントを使用して定義された厳密に型指定されたテーブルの構造に基づいています。 クライアント アプリケーションでテーブル値パラメーターを使用するには、まず SQL Server でテーブル型を作成し、その構造を定義する必要があります。 テーブル型の作成の詳細については、次を参照してください。[ユーザー定義テーブル型](https://go.microsoft.com/fwlink/?LinkID=98364)SQL Server オンライン ブックの「します。  
+ テーブル値パラメーターは、Transact-SQL の CREATE TYPE ステートメントを使用して定義された厳密に型指定されたテーブルの構造に基づいています。 クライアント アプリケーションでテーブル値パラメーターを使用するには、まず SQL Server でテーブル型を作成し、その構造を定義する必要があります。 テーブル型の作成の詳細については、次を参照してください。[ユーザー定義テーブル型](https://go.microsoft.com/fwlink/?LinkID=98364)SQL Server オンライン ブックの「します。  
   
  次のステートメントは、CategoryID と CategoryName 列から成る CategoryTableType というテーブル型を作成します。  
   
@@ -48,7 +48,7 @@ CREATE TYPE dbo.CategoryTableType AS TABLE
     ( CategoryID int, CategoryName nvarchar(50) )  
 ```  
   
- テーブル型を作成したら、その型に基づいてテーブル値パラメーターを宣言できます。 次の [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] フラグメントは、ストアド プロシージャ定義の中でテーブル値パラメーターを宣言する方法を示しています。 テーブル値パラメーターの宣言には READONLY キーワードが必要であることに注意してください。  
+ テーブル型を作成したら、その型に基づいてテーブル値パラメーターを宣言できます。 次の Transact-SQL フラグメントは、ストアド プロシージャ定義の中でテーブル値パラメーターを宣言する方法を示しています。 テーブル値パラメーターの宣言には READONLY キーワードが必要であることに注意してください。  
   
 ```  
 CREATE PROCEDURE usp_UpdateCategories   
@@ -58,7 +58,7 @@ CREATE PROCEDURE usp_UpdateCategories
 ## <a name="modifying-data-with-table-valued-parameters-transact-sql"></a>テーブル値パラメーターによるデータの変更 (Transact-SQL)  
  テーブル値パラメーターは、単一のステートメントを実行して複数行を操作する、セット ベースのデータ変更の中で使用できます。 たとえば、テーブル値パラメーターのすべての行を選択し、それらをデータベース テーブルに挿入できます。また、テーブル値パラメーターを更新対象のテーブルに結合する更新ステートメントを作成することもできます。  
   
- 次の [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] UPDATE ステートメントは、テーブル値パラメーターを Categories テーブルに結合して使用する方法を示しています。 テーブル値パラメーターを FROM 句の JOIN で使用するときは、エイリアスを使用する必要があります。この例ではテーブル値パラメーターに "ec" というエイリアスが使用されています。  
+ 次の Transact-SQL UPDATE ステートメントは、テーブル値パラメーターを Categories テーブルに結合して使用する方法を示しています。 テーブル値パラメーターを FROM 句の JOIN で使用するときは、エイリアスを使用する必要があります。この例ではテーブル値パラメーターに "ec" というエイリアスが使用されています。  
   
 ```  
 UPDATE dbo.Categories  
@@ -67,7 +67,7 @@ UPDATE dbo.Categories
     ON dbo.Categories.CategoryID = ec.CategoryID;  
 ```  
   
- この [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] の例は、単一のセット ベース操作で INSERT を実行するためにテーブル値パラメーターから行を選択する方法を示しています。  
+ この Transact-SQL の例は、単一のセット ベース操作で INSERT を実行するためにテーブル値パラメーターから行を選択する方法を示しています。  
   
 ```  
 INSERT INTO dbo.Categories (CategoryID, CategoryName)  
@@ -77,13 +77,13 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 ## <a name="limitations-of-table-valued-parameters"></a>テーブル値パラメーターの制限  
  テーブル値パラメーターにはいくつかの制限があります。  
   
--   テーブル値パラメーターを渡すことはできません[CLR ユーザー定義関数](/sql/relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions)します。  
+- テーブル値パラメーターを渡すことはできません[CLR ユーザー定義関数](/sql/relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions)します。  
   
--   テーブル値パラメーターでは、UNIQUE 制約または PRIMARY KEY 制約をサポートするためにのみ、インデックスを付けることができます。 SQL Server はテーブル値パラメーターの統計を保持しません。  
+- テーブル値パラメーターでは、UNIQUE 制約または PRIMARY KEY 制約をサポートするためにのみ、インデックスを付けることができます。 SQL Server はテーブル値パラメーターの統計を保持しません。  
   
--   テーブル値パラメーターは [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] コードの中では読み取り専用です。 テーブル値パラメーターの行内の列の値は更新できません。行を挿入することも削除することもできません。 テーブル値パラメーター内のストアド プロシージャやパラメーター化ステートメントに渡すデータを変更するには、一時テーブルまたはテーブル変数にデータを挿入する必要があります。  
+- テーブル値パラメーターは Transact-SQL コードの中では読み取り専用です。 テーブル値パラメーターの行内の列の値は更新できません。行を挿入することも削除することもできません。 テーブル値パラメーター内のストアド プロシージャやパラメーター化ステートメントに渡すデータを変更するには、一時テーブルまたはテーブル変数にデータを挿入する必要があります。  
   
--   ALTER TABLE ステートメントをテーブル値パラメーターの設計変更に使用することはできません。  
+- ALTER TABLE ステートメントをテーブル値パラメーターの設計変更に使用することはできません。  
   
 ## <a name="configuring-a-sqlparameter-example"></a>SqlParameter の構成例  
  <xref:System.Data.SqlClient> では、テーブル値パラメーターからのデータ<xref:System.Data.DataTable>、<xref:System.Data.Common.DbDataReader>または<xref:System.Collections.Generic.IEnumerable%601>  \  <xref:Microsoft.SqlServer.Server.SqlDataRecord>オブジェクト。 <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> の <xref:System.Data.SqlClient.SqlParameter> プロパティを使用して、テーブル値パラメーターの型名を指定する必要があります。 `TypeName` は、既にサーバー上に作成されている、互換性のある型の名前と一致していることが必要です。 次のコード フラグメントは、データを挿入するための <xref:System.Data.SqlClient.SqlParameter> の構成方法を示しています。  
@@ -272,9 +272,10 @@ tvpParam.SqlDbType = SqlDbType.Structured
 insertCommand.ExecuteNonQuery()  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [パラメーターおよびパラメーター データ型の構成](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- [コマンドおよびパラメーター](../../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [DataAdapter パラメーター](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
- [ADO.NET における SQL Server データ操作](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [パラメーターおよびパラメーター データ型の構成](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
+- [コマンドおよびパラメーター](../../../../../docs/framework/data/adonet/commands-and-parameters.md)
+- [DataAdapter パラメーター](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)
+- [ADO.NET における SQL Server データ操作](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

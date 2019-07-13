@@ -1,15 +1,13 @@
 ---
 title: インフラストラクチャの永続レイヤーの設計
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | インフラストラクチャの永続レイヤーの設計でリポジトリ パターンを調べる。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 983e38cc9979ef14e8227e738e9da15b014e050d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 76f545403a1b595ce7a541a96d212b9406d89c10
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147737"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644581"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>インフラストラクチャの永続レイヤーの設計
 
@@ -35,7 +33,7 @@ ms.locfileid: "53147737"
 
 もう一度強調しますが、図 7-17 に示すように、集約ルートごとにリポジトリを 1 つのみ定義することが重要です。 集約内のすべてのオブジェクト間のトランザクションの一貫性を維持するという集約ルートの目標を達成するため、データベース内の各テーブルのリポジトリは作成しません。
 
-![ドメイン レイヤーとインフラストラクチャ レイヤー間のリレーションシップ: バイヤー集約は IBuyerRepository に依存し、Order Aggregate は IOrderRepository インターフェイスに依存し、これらのインターフェイスは UnitOfWork に依存する対応するリポジトリによってインフラストラクチャ レイヤーに実装され、データ層のテーブルにアクセスする場所にも実装されます。](./media/image18.png)
+![ドメイン レイヤーとインフラストラクチャ レイヤー間のリレーションシップ:バイヤー集約は IBuyerRepository に依存し、Order Aggregate は IOrderRepository インターフェイスに依存し、これらのインターフェイスは UnitOfWork に依存する対応するリポジトリによってインフラストラクチャ レイヤーに実装され、データ層のテーブルにアクセスする場所にも実装されます。](./media/image18.png)
 
 **図 7-17**。 リポジトリ、集約、およびデータベース テーブル間のリレーションシップ
 
@@ -111,24 +109,24 @@ eShopOnContainers に実装されたリポジトリは、その変更追跡を�
 ### <a name="repository-pattern"></a>リポジトリ パターン
 
 - **リポジトリ パターン** \
-  [*https://deviq.com/repository-pattern/*](https://deviq.com/repository-pattern/)
+  <https://deviq.com/repository-pattern/>
 
 - **Edward Hieatt、Rob Mee。リポジトリ パターン。** \
-  [*https://martinfowler.com/eaaCatalog/repository.html*](https://martinfowler.com/eaaCatalog/repository.html)
+  <https://martinfowler.com/eaaCatalog/repository.html>
 
 - **リポジトリ パターン** \
-  [*https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)*](https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10))
+  <https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)>
 
-- **Eric Evans。Domain-Driven Design: Tackling Complexity in the Heart of Software (ドメイン駆動設計: ソフトウェア中心部の複雑さへの取り組み)。** (書籍: リポジトリ パターンに関する説明が含まれています)
-  [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+- **Eric Evans。Domain-Driven Design:Tackling Complexity in the Heart of Software (ドメイン駆動設計: ソフトウェア中心部の複雑さへの取り組み)。** (書籍: リポジトリ パターンに関する説明が含まれています)
+  <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 ### <a name="unit-of-work-pattern"></a>Unit of Work パターン
 
 - **Martin Fowler。Unit of Work パターン。** \
-  [*https://martinfowler.com/eaaCatalog/unitOfWork.html*](https://martinfowler.com/eaaCatalog/unitOfWork.html)
+  <https://martinfowler.com/eaaCatalog/unitOfWork.html>
 
 - **ASP.NET MVC アプリケーションでのリポジトリ パターンおよび Unit of Work パターンの実装** \
-  [*https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
+  <https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
 
 >[!div class="step-by-step"]
 >[前へ](domain-events-design-implementation.md)

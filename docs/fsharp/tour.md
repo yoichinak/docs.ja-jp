@@ -1,23 +1,23 @@
 ---
-title: ツアーF#
+title: F# のツアー
 description: 主な機能のいくつかを確認、F#プログラミング言語でこのツアーではコード サンプルを使用します。
 ms.date: 11/06/2018
-ms.openlocfilehash: 72ecb9e71e5d039f5a62f74ad594fac82269f304
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 64394342777003b33dd77028739fb7209b9f3c86
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145524"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301253"
 ---
-# <a name="tour-of-f"></a>ツアーF# #
+# <a name="tour-of-f"></a>F# のツアー\#
 
-F# について学習する最善の方法では、F# コードを読み書きします。 この記事では、F# 言語の主な機能のいくつかツアーとして機能し、コンピューターに実行できる一部のコード スニペットが表示。 開発環境を設定する方法については、チェック アウト[Getting Started](tutorials/getting-started/index.md)します。
+F# について学習する最善の方法は、F# コードを読み書きすることです。 この記事は、F# 言語のいくつかの主な機能の手引きとしての役割を果たし、コンピューターで実行できるいくつかのコード スニペットを示します。 開発環境を設定する方法については、[Getting Started](tutorials/getting-started/index.md) を参照してください。
 
 2 つの主要な概念があるF#: 関数と型。  このツアーではこれら 2 つの概念には、言語の機能を強調します。
 
 ## <a name="executing-the-code-online"></a>オンラインでのコードを実行します。
 
-いない場合F#コンピューターにインストールされている、実行できるすべてのオンライン サンプルの[Fable REPL](https://fable.io/repl/)します。 Fable は言語にF#お使いのブラウザーで直接実行します。 REPL で次のサンプルを表示するチェック アウト**サンプル > 学習 > のツアー F#**  Fable レプリケーションの左側のメニュー バーに
+いない場合F#コンピューターにインストールされている、ことができますを実行するすべてのサンプルと共にブラウザーに[お試しくださいF#WebAssembly で](https://tryfsharp.fsbolero.io/)します。 Fable は言語にF#お使いのブラウザーで直接実行します。 REPL で次のサンプルを表示するチェック アウト**サンプル > 学習 > のツアー F#**  Fable レプリケーションの左側のメニュー バーに
 
 ## <a name="functions-and-modules"></a>関数、およびモジュール
 
@@ -136,10 +136,6 @@ Du するデータ型にツリーを再帰的な構造を表すため、この�
 [パターン照合](language-reference/pattern-matching.md)により、F# の型に対する操作のための正確性が F# 言語機能です。  上記のサンプルのことに気付いたのかなり`match x with ...`構文。  このコンス トラクターにより、コンパイラを強制すると、パターンの完全一致として呼ばれるものを通じて、データ型を使用する場合は、すべての可能なケースのアカウントに、データ型の「形状」を理解することができます。  これは正しいかどうか、非常に強力な巧妙にどのようなコンパイル時にランタイムの問題は、通常「リフト」使用できます。
 
 [!code-fsharp[PatternMatching](../../samples/snippets/fsharp/tour.fs#L705-L742)]
-
-短縮形を使用することもできます`function`のため、関数を使用して作成する場合に有用なパターンに一致させるためのコンストラクト[部分適用](language-reference/functions/index.md#partial-application-of-arguments):。
-
-[!code-fsharp[PatternMatching](../../samples/snippets/fsharp/tour.fs#L744-L762)]
 
 使用は、何かお気付き、`_`パターン。  これと呼ばれますが、[ワイルドカード パターン](language-reference/pattern-matching.md#wildcard-pattern)、「気にしません何かが」と答えるのですが。  、便利ですが誤ってバイパス徹底的なパターンに一致して不要になったコンパイル時の実施メリットを使用して注意が必要ない場合は`_`します。  分解された型の特定の情報が必要ない場合に最適な使用パターン マッチ式内のすべての意味のあるケースを列挙するときと一致する、または最後の句のパターンします。
 

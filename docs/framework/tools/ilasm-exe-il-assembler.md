@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4009fe4910af81c685ee015c7801b040a90c25aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78a601e8b2da4fda0951c1d4f7b565753f0ca03a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409790"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833887"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL アセンブラー)
 
-IL アセンブラーは、ポータブル実行可能 (PE) ファイルを IL (Intermediate Language) から生成します (IL の詳細については、「[マネージ実行プロセス](../../../docs/standard/managed-execution-process.md)」を参照してください)。IL と必要なメタデータを含む実行可能ファイルを実行すると、IL が予測どおりに動作するかどうかを確認できます。
+IL アセンブラーは、ポータブル実行可能 (PE) ファイルを IL (Intermediate Language) から生成します (IL の詳細については、「[マネージド実行プロセス](../../../docs/standard/managed-execution-process.md)」を参照してください)。IL と必要なメタデータを含む実行可能ファイルを実行すると、IL が予測どおりに動作するかどうかを確認できます。
 
-このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、開発者コマンド プロンプト (または、Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。
+このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。
 
 コマンド プロンプトに次のように入力します。
 
@@ -34,7 +34,7 @@ IL アセンブラーは、ポータブル実行可能 (PE) ファイルを IL (
 ilasm [options] filename [[options]filename...]
 ```
 
-#### <a name="parameters"></a>パラメーター
+## <a name="parameters"></a>パラメーター
 
 | 引数 | 説明 |
 | -------- | ----------- |
@@ -47,7 +47,7 @@ ilasm [options] filename [[options]filename...]
 |**/appcontainer**|出力として、Windows アプリ コンテナー内で実行する *.dll* ファイルまたは *.exe* ファイルを作成します。|
 |**/arm**|ターゲット プロセッサとして Advanced RISC Machine (ARM) を指定します。<br /><br /> イメージのビット数を指定しない場合、既定は **/32bitpreferred**です。|
 |**/base:** `integer`|NT オプション ヘッダーの ImageBase を `integer` で指定された値に設定します。 このオプションは、ファイルに指定されている .imagebase IL ディレクティブをオーバーライドします。|
-|**/clock**|指定した .il ソース ファイルのコンパイル時間を計測して報告します。<br /><br /> **Total Run**: 後に続く特定の操作の実行に要した合計時間。<br /><br /> **Startup**: ファイルの読み込みとオープン。<br /><br /> **Emitting MD**: メタデータの生成。<br /><br /> **Ref to Def Resolution**: ファイルの定義への参照の解決。<br /><br /> **CEE File Generation**: メモリ内のファイル イメージの生成。<br /><br /> **PE File Writing**: PE へのイメージの書き込み。|
+|**/clock**|指定した .il ソース ファイルのコンパイル時間を計測して報告します。<br /><br /> **Total Run**: 後に続く特定の操作の実行に要した合計時間。<br /><br /> **Startup**: ファイルを読み込み、開く。<br /><br /> **Emitting MD**:メタデータの出力。<br /><br /> **Ref to Def Resolution**: ファイルの定義への参照の解決。<br /><br /> **CEE File Generation**: メモリ内のファイル イメージの生成。<br /><br /> **PE File Writing**: PE へのイメージの書き込み。|
 |**/debug**[:**IMPL**&#124;**OPT**]|デバッグ情報 (ローカル変数と引数名、および行番号) を組み込みます。 PDB ファイルを作成します。<br /><br /> **/debug** に値を追加しなければ、JIT の最適化が無効になり、PDB ファイルのシーケンス ポイントが使用されます。<br /><br /> **IMPL** を指定すると、JIT 最適化が無効になり、暗黙のシーケンス ポイントが使用されます。<br /><br /> **OPT** を指定すると、JIT 最適化が有効になり、暗黙のシーケンス ポイントが使用されます。|
 |**/dll**|出力として *.dll* ファイルを生成します。|
 |**/enc:** `file`|指定されたソース ファイルからエディット コンティニュ デルタを作成します。<br /><br /> この引数は教育機関専用のため、商業目的の使用はサポートされていません。|
@@ -58,14 +58,14 @@ ilasm [options] filename [[options]filename...]
 |**/include:** `includePath`|`#include`によってインクルードされるファイルの検索パスを設定します。|
 |**/itanium**|ターゲット プロセッサとして Intel Itanium を指定します。<br /><br /> イメージのビット数を指定しない場合、既定は **/pe64**です。|
 |**/key:** `keyFile`|`filename` に含まれる秘密キーを使って、厳密な署名を持つ `keyFile` をコンパイルします。|
-|**/key:** @`keySource`|`filename` で生成された秘密キーを使って、厳密な署名を持つ `keySource` をコンパイルします。|
+|**/key:**  @`keySource`|`filename` で生成された秘密キーを使って、厳密な署名を持つ `keySource` をコンパイルします。|
 |**/listing**|標準出力にリスティング ファイルを生成します。 このオプションを省略すると、リスティング ファイルは生成されません。<br /><br /> このパラメーターは、.NET Framework 2.0 以降ではサポートされません。|
 |**/mdv:** `versionString`|メタデータのバージョン文字列を設定します。|
 |**/msv:** `major`.`minor`|メタデータのストリーム バージョンを設定します。ここで、 `major` と `minor` は整数です。|
 |**/noautoinherit**|基底クラスが指定されていない場合、 <xref:System.Object> からの既定の継承を無効にします。|
 |**/nocorstub**|CORExeMain スタブの生成を抑止します。|
 |**/nologo**|Microsoft 著作権情報を表示しません。|
-|**/output:** `file.ext`|出力ファイルの名前と拡張子を指定します。 既定では、出力ファイルの名前は最初のソース ファイルの名前と同じです。 既定の拡張子は *.exe* です。 **/dll** オプションを指定した場合の既定の拡張子は *.dll* です。 **注:** **/output**:myfile.dll と指定しても **/dll** オプションは設定されません。 **/dll**を指定しないと、*myfile.dll* という名前の実行可能ファイルになります。|
+|**/output:** `file.ext`|出力ファイルの名前と拡張子を指定します。 既定では、出力ファイルの名前は最初のソース ファイルの名前と同じです。 既定の拡張子は *.exe* です。 **/dll** オプションを指定した場合の既定の拡張子は *.dll* です。 **注:**  **/output** :myfile.dll と指定しても **/dll** オプションは設定されません。 **/dll**を指定しないと、*myfile.dll* という名前の実行可能ファイルになります。|
 |**/optimize**|長いインストラクションを短く最適化します。 たとえば `br` を `br.s`にします。|
 |**/pe64**|64 ビットのイメージ (PE32+) を作成します。<br /><br /> ターゲット プロセッサを指定しない場合、既定は `/itanium`です。|
 |**/pdb**|デバッグ情報の追跡を有効にせずに PDB ファイルを作成します。|
@@ -79,15 +79,15 @@ ilasm [options] filename [[options]filename...]
 |**/?**|このツールのコマンド構文とオプションを表示します。|
 
 > [!NOTE]
-> *Ilasm.exe* に関するすべてのオプションでは大文字と小文字が区別されず、先頭の 3 文字で認識されます。 たとえば、**/lis** は **/listing** と等価であり、**/res:** myresfile.res は **/resource:** myresfile.res と等価です。引数を伴うオプションの場合は、オプションと引数の間に区切り記号としてコロン (:) または等号 (=) を挿入できます。 たとえば、**/output**:*file.ext* は **/output**=*file.ext* と等価です。
+> *Ilasm.exe* に関するすべてのオプションでは大文字と小文字が区別されず、先頭の 3 文字で認識されます。 たとえば、 **/lis** は **/listing** と等価であり、 **/res:** myresfile.res は **/resource:** myresfile.res と等価です。引数を伴うオプションの場合は、オプションと引数の間に区切り記号としてコロン (:) または等号 (=) を挿入できます。 たとえば、 **/output**:*file.ext* は **/output**=*file.ext* と等価です。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 IL アセンブラーは、IL ジェネレーターを設計および実装するツールの販売元を支援します。 ツールとコンパイラの開発者は、*Ilasm.exe* を使用することで、PE ファイル形式での IL の出力にかかわることなく、IL とメタデータの生成に集中できます。
 
 C# および Visual Basic など、ランタイムを対象とした他のコンパイラと同様に、*Ilasm.exe* も中間オブジェクト ファイルを生成しません。このため、PE ファイルを形成するためのリンク ステージが必要ありません。
 
-IL アセンブラーは、すべての既存メタデータ、およびランタイムを対象としたプログラミング言語の IL 機能を表現できます。 このため、このようなプログラミング言語で記述されたマネージ コードを IL アセンブラーで適切に表現し、*Ilasm.exe* でコンパイルできます。
+IL アセンブラーは、すべての既存メタデータ、およびランタイムを対象としたプログラミング言語の IL 機能を表現できます。 このため、このようなプログラミング言語で記述されたマネージド コードを IL アセンブラーで適切に表現し、*Ilasm.exe* でコンパイルできます。
 
 > [!NOTE]
 > .il ソース ファイルのコードの最後の行に、後続の空白または行末文字がない場合、コンパイルに失敗することがあります。
@@ -104,11 +104,11 @@ IL アセンブラーは、すべての既存メタデータ、およびラン�
 > [!NOTE]
 > *Ildasm.exe* はディスク上のファイルについてだけ動作します。 グローバル アセンブリ キャッシュ内にインストールされたファイルについては動作しません。
 
-IL の文法の詳細については、 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]の asmparse.grammar ファイルを参照してください。
+IL の文法の詳細については、Windows Software Development Kit (SDK) の asmparse.grammar ファイルを参照してください。
 
 ## <a name="version-information"></a>バージョン情報
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]以降では、次のようなコードを使用してインターフェイス実装にカスタム属性を追加できます。
+.NET Framework 4.5 以降では、次に類似するコードを使用することで、インターフェイス実装にカスタム属性を追加できます。
 
 ```
 .class interface public abstract auto ansi IMyInterface
@@ -128,7 +128,7 @@ IL の文法の詳細については、 [!INCLUDE[winsdklong](../../../includes/
       …
 ```
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]以降では、次のコードに示すように、未処理のバイナリ表現を使用して、任意のマーシャリング BLOB (バイナリ ラージ オブジェクト) を指定できます。
+.NET Framework 4.5 以降では、次のコードに示すように、未処理のバイナリ表現を使用することで、任意のマーシャリング BLOB (バイナリ ラージ オブジェクト) を指定できます。
 
 ```
 .method public hidebysig abstract virtual
@@ -137,7 +137,7 @@ IL の文法の詳細については、 [!INCLUDE[winsdklong](../../../includes/
         Test(object A_1) cil managed
 ```
 
-IL の文法の詳細については、 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]の asmparse.grammar ファイルを参照してください。
+IL の文法の詳細については、Windows Software Development Kit (SDK) の asmparse.grammar ファイルを参照してください。
 
 ## <a name="examples"></a>使用例
 
@@ -229,7 +229,7 @@ public class Hello
 
 ## <a name="see-also"></a>関連項目
 
-[ツール](../../../docs/framework/tools/index.md)  
-[*Ildasm.exe* (IL 逆アセンブラー)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)  
-[マネージ実行プロセス](../../../docs/standard/managed-execution-process.md)  
-[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [ツール](../../../docs/framework/tools/index.md)
+- [*Ildasm.exe* (IL 逆アセンブラー)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
+- [マネージド実行プロセス](../../../docs/standard/managed-execution-process.md)
+- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

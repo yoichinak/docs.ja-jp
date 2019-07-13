@@ -8,31 +8,31 @@ helpviewer_keywords:
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 39472662cd26799e9adbbbd199129e2c83dd0d93
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: af558e6712d58e208bf05cdb7a0f847ec4517f0f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155367"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614306"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>.NET Framework のパフォーマンス カウンター
 ここで見つかりますパフォーマンス カウンターの一覧では、 [Windows パフォーマンス モニター](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29)します。  
   
--   [例外パフォーマンス カウンター](#exception)  
+- [例外パフォーマンス カウンター](#exception)  
   
--   [相互運用パフォーマンス カウンター](#interop)  
+- [相互運用パフォーマンス カウンター](#interop)  
   
--   [JIT パフォーマンス カウンター](#jit)  
+- [JIT パフォーマンス カウンター](#jit)  
   
--   [読み込みパフォーマンス カウンター](#loading)  
+- [読み込みパフォーマンス カウンター](#loading)  
   
--   [ロックおよびスレッド パフォーマンス カウンター](#lockthread)  
+- [ロックおよびスレッド パフォーマンス カウンター](#lockthread)  
   
--   [メモリ パフォーマンス カウンター](#memory)  
+- [メモリ パフォーマンス カウンター](#memory)  
   
--   [ネットワーク パフォーマンス カウンター](#networking)  
+- [ネットワーク パフォーマンス カウンター](#networking)  
   
--   [セキュリティ パフォーマンス カウンター](#security)  
+- [セキュリティ パフォーマンス カウンター](#security)  
   
 <a name="exception"></a>   
 ## <a name="exception-performance-counters"></a>例外パフォーマンス カウンター  
@@ -41,7 +41,7 @@ ms.locfileid: "53155367"
 |パフォーマンス カウンター|説明|  
 |-------------------------|-----------------|  
 |**# of Exceps Thrown**|アプリケーションの開始後にスローされた例外の総数を表示します。 この数には、.NET 例外と .NET 例外に変換されるアンマネージ例外の両方が含まれます。 たとえば、アンマネージド コードから返された HRESULT は、マネージド コードの例外に変換されます。<br /><br /> このカウンターには、処理済みの例外と未処理の例外の両方が含まれます。 再スローされる例外は、再びカウントされます。|  
-|**# of Exceps Thrown / Sec**|1 秒間にスローされた例外の数を表示します。 この数には、.NET 例外と .NET 例外に変換されるアンマネージ例外の両方が含まれます。 たとえば、アンマネージド コードから返された HRESULT は、マネージド コードの例外に変換されます。<br /><br /> このカウンターには、処理済みの例外と未処理の例外の両方が含まれます。 このカウンターは、全時間を通しての平均値ではなく、最後の 2 回の収集で計測された値の差を収集の間隔で割った値が表示されます。 多数 (数百) の例外がスローされた場合、このカウンターがパフォーマンス上問題があることを示します。|  
+|**# of Exceps Thrown / Sec**|1 秒間にスローされた例外の数を表示します。 この数には、.NET 例外と .NET 例外に変換されるアンマネージ例外の両方が含まれます。 たとえば、アンマネージド コードから返された HRESULT は、マネージド コードの例外に変換されます。<br /><br /> このカウンターには、処理済みの例外と未処理の例外の両方が含まれます。 このカウンターは、全時間を通しての平均値ではなく、最後の 2 回の収集で計測された値の差を収集の間隔で割った値が表示されます。 このカウンターは、大規模な場合、潜在的なパフォーマンスの問題を示すインジケーター (> 100 件) の例外がスローされます。|  
 |**# of Filters / Sec**|1 秒間に実行された .NET 例外フィルターの数を表示します。 例外フィルターの評価は、例外が処理済みかどうかに関係なくなされます。<br /><br /> このカウンターは、全時間を通しての平均値ではなく、最後の 2 回の収集で計測された値の差を収集間隔で割った値が表示されます。|  
 |**# of Finallys / Sec**|1 秒間に実行された finally ブロックの数を表示します。 finally ブロックは、try ブロックがどのように終了されたかに関係なく必ず実行されます。  例外に対して実行された finally ブロックだけがカウントされます。通常のコード パスで実行された finally ブロックは、このカウンターではカウントされません。<br /><br /> このカウンターは、全時間を通しての平均値ではなく、最後の 2 回の収集で計測された値の差を収集間隔で割った値が表示されます。|  
 |**Throw to Catch Depth / Sec**|1 秒間に走査されたスタック フレーム (例外をスローしたフレームから例外を処理したフレームまで) の数を表示します。 このカウンターは、例外ハンドラーに入ったときに 0 にリセットされます。したがって、入れ子になった例外ではハンドラーからハンドラーへのスタックの深さを示します。<br /><br /> このカウンターは、全時間を通しての平均値ではなく、最後の 2 回の収集で計測された値の差を収集間隔で割った値が表示されます。|  
@@ -103,12 +103,12 @@ ms.locfileid: "53155367"
 |**# of current logical Threads**|アプリケーションの現在のマネージド スレッド オブジェクト数を表示します。 このカウンターでは、実行中のスレッドと停止中のスレッドの両方がカウントされます。 このカウンターは、全時間を通じての平均値ではなく、最後に計測された値のみが表示されます。|  
 |**# of current physical Threads**|マネージド スレッド オブジェクトの基になるスレッドとして使用するために共通言語ランタイムによって作成され、所有されているネイティブのオペレーティング システムのスレッド数を表示します。 このカウンターの値には、ランタイムが内部操作で使用するスレッドは含まれません。オペレーティング システム プロセスのスレッドのサブセットがカウントされます。|  
 |**# of current recognized threads**|ランタイムによって現在認識されているスレッド数を表示します。 これらのスレッドは対応するマネージド スレッド オブジェクトに関連付けられます。 ランタイムはこれらのスレッドを作成しませんが、少なくとも一度はランタイムの内部で実行します。<br /><br /> 一意のスレッドだけが追跡されます。これらのスレッドは同じスレッド ID で、ランタイムに再入力されるか、スレッド終了後に再作成され、2 回はカウントされません。|  
-|**# of total recognized Threads**|アプリケーションの開始後にランタイムによって認識されたスレッドの総数を表示します。 これらのスレッドは対応するマネージ スレッド オブジェクトに関連付けられます。 ランタイムはこれらのスレッドを作成しませんが、少なくとも一度はランタイムの内部で実行します。<br /><br /> 一意のスレッドだけが追跡されます。これらのスレッドは同じスレッド ID で、ランタイムに再入力されるか、スレッド終了後に再作成され、2 回はカウントされません。|  
+|**# of total recognized Threads**|アプリケーションの開始後にランタイムによって認識されたスレッドの総数を表示します。 これらのスレッドは対応するマネージド スレッド オブジェクトに関連付けられます。 ランタイムはこれらのスレッドを作成しませんが、少なくとも一度はランタイムの内部で実行します。<br /><br /> 一意のスレッドだけが追跡されます。これらのスレッドは同じスレッド ID で、ランタイムに再入力されるか、スレッド終了後に再作成され、2 回はカウントされません。|  
 |**Contention Rate / Sec**|ランタイムのスレッドがマネージド ロック取得の試みに失敗する競合レートを表示します。|  
 |**Current Queue Length**|アプリケーション内でマネージド ロックを待機中のスレッドの総数を表示します。 このカウンターは、全時間を通じての平均値ではなく、最後に計測された値を表示します。|  
 |**Queue Length / sec**|アプリケーション内でロックの取得を待機中の 1 秒あたりのスレッド数を表示します。 このカウンターは、全時間を通しての平均値ではなく、最後の 2 回の収集で計測された値の差を収集間隔で割った値が表示されます。|  
 |**Queue Length Peak**|アプリケーションの開始後にマネージド ロックの取得を待機していたスレッドの総数を表示します。|  
-|**rate of recognized threads / sec**|1 秒間にランタイムによって認識されたスレッド数を表示します。 これらのスレッドは対応するマネージ スレッド オブジェクトに関連付けられます。 ランタイムはこれらのスレッドを作成しませんが、少なくとも一度はランタイムの内部で実行します。<br /><br /> 一意のスレッドだけが追跡されます。これらのスレッドは同じスレッド ID で、ランタイムに再入力されるか、スレッド終了後に再作成され、2 回はカウントされません。<br /><br /> このカウンターは、全時間を通しての平均値ではなく、最後の 2 回の収集で計測された値の差を収集間隔で割った値が表示されます。|  
+|**rate of recognized threads / sec**|1 秒間にランタイムによって認識されたスレッド数を表示します。 これらのスレッドは対応するマネージド スレッド オブジェクトに関連付けられます。 ランタイムはこれらのスレッドを作成しませんが、少なくとも一度はランタイムの内部で実行します。<br /><br /> 一意のスレッドだけが追跡されます。これらのスレッドは同じスレッド ID で、ランタイムに再入力されるか、スレッド終了後に再作成され、2 回はカウントされません。<br /><br /> このカウンターは、全時間を通しての平均値ではなく、最後の 2 回の収集で計測された値の差を収集間隔で割った値が表示されます。|  
 |**Total # of Contentions**|ランタイムのスレッドがマネージド ロックを取得しようとして失敗した回数の合計を表示します。|  
   
 <a name="memory"></a>   
@@ -161,21 +161,21 @@ ms.locfileid: "53155367"
   
  サポートされているネットワーク パフォーマンス カウンターのクラスを次に示します。  
   
--   イベントが発生した回数を測定するイベント カウンター。  
+- イベントが発生した回数を測定するイベント カウンター。  
   
--   送信または受信されたデータの量を測定するデータ カウンター。  
+- 送信または受信されたデータの量を測定するデータ カウンター。  
   
--   各種プロセスが実行される時間を測定する時間計測カウンター。 時間は、オブジェクトの状態が変わった後に、間隔 (通常は秒単位) ごとに計測されます。  
+- 各種プロセスが実行される時間を測定する時間計測カウンター。 時間は、オブジェクトの状態が変わった後に、間隔 (通常は秒単位) ごとに計測されます。  
   
--   間隔 (通常は秒単位) ごとに特定の遷移を形成するオブジェクトの数を測定する間隔ごとのカウンター。  
+- 間隔 (通常は秒単位) ごとに特定の遷移を形成するオブジェクトの数を測定する間隔ごとのカウンター。  
   
  イベントのネットワーク パフォーマンス カウンターには、次のようなものがあります。  
   
--   **Connections Established**  
+- **Connections Established**  
   
--   **Datagrams Received**  
+- **Datagrams Received**  
   
--   **Datagrams Sent**  
+- **Datagrams Sent**  
   
  これらのパフォーマンス カウンターは、プロセス開始後のカウントを提供します。 確立された <xref:System.Net.Sockets.Socket> 接続のカウントには、確立されたストリーム ソケット接続用のアプリケーションによる明示的な <xref:System.Net.Sockets.Socket> メソッド呼び出しと、その他のクラス (<xref:System.Net.HttpWebRequest>、<xref:System.Net.FtpWebRequest>、<xref:System.Net.WebClient>、<xref:System.Net.Sockets.TcpClient> など) による <xref:System.Net.Sockets.Socket> クラスの内部呼び出しが含まれます。  
   
@@ -183,33 +183,33 @@ ms.locfileid: "53155367"
   
  データのネットワーク パフォーマンス カウンターには、次のようなものがあります。  
   
--   **Bytes Received**  
+- **Bytes Received**  
   
--   **Bytes Sent**  
+- **Bytes Sent**  
   
  これらのカウンターは、プロセス開始後のバイトのカウントを提供します。  
   
  <xref:System.Net.HttpWebRequest> オブジェクトが有効期間全体またはその一部を通過するのに要する時間を計測する時間計測カウンターには、次の 2 つがあります。  
   
--   **HttpWebRequest Average Lifetime**  
+- **HttpWebRequest Average Lifetime**  
   
--   **HttpWebRequest Average Queue Time**  
+- **HttpWebRequest Average Queue Time**  
   
  **HttpWebRequest Average Lifetime** カウンターの場合、大部分の <xref:System.Net.HttpWebRequest> オブジェクトの有効期間は、常に、オブジェクトが作成されたときに開始し、アプリケーションによって応答ストリームが閉じられたときに終了します。 ただし、例外的なシナリオが 2 つあります。  
   
--   アプリケーションが  <xref:System.Net.HttpWebRequest.GetResponse%2A> メソッドまたは <xref:System.Net.HttpWebRequest.BeginGetResponse%2A>  メソッドの呼び出しをしない場合、<xref:System.Net.HttpWebRequest> オブジェクトの有効期間は無視されます。  
+- アプリケーションが  <xref:System.Net.HttpWebRequest.GetResponse%2A> メソッドまたは <xref:System.Net.HttpWebRequest.BeginGetResponse%2A>  メソッドの呼び出しをしない場合、<xref:System.Net.HttpWebRequest> オブジェクトの有効期間は無視されます。  
   
--   <xref:System.Net.HttpWebRequest.GetResponse%2A> メソッドまたは <xref:System.Net.HttpWebRequest.EndGetResponse%2A> メソッドを呼び出したときに <xref:System.Net.HttpWebRequest> オブジェクトが <xref:System.Net.WebException> をスローした場合、その例外がスローされたときに有効期間は終了します。 技術的には、基になる応答ストリームもその時点で閉じられます (ユーザーに返される応答ストリームは、実際には、応答ストリームのコピーを含むメモリ ストリームです)。  
+- <xref:System.Net.HttpWebRequest.GetResponse%2A> メソッドまたは <xref:System.Net.HttpWebRequest.EndGetResponse%2A> メソッドを呼び出したときに <xref:System.Net.HttpWebRequest> オブジェクトが <xref:System.Net.WebException> をスローした場合、その例外がスローされたときに有効期間は終了します。 技術的には、基になる応答ストリームもその時点で閉じられます (ユーザーに返される応答ストリームは、実際には、応答ストリームのコピーを含むメモリ ストリームです)。  
   
  間隔ごとに特定の <xref:System.Net.HttpWebRequest> オブジェクトの動作を追跡するカウンターが 4 つあります。 これらのパフォーマンス カウンターは、アプリケーション開発者、管理者、およびサポート スタッフが、<xref:System.Net.HttpWebRequest> オブジェクトの動作をより的確に把握するのに役立ちます。 これらのカウンターは、次のとおりです。  
   
--   **HttpWebRequests Created/sec**  
+- **HttpWebRequests Created/sec**  
   
--   **HttpWebRequests Queued/sec**  
+- **HttpWebRequests Queued/sec**  
   
--   **HttpWebRequests Aborted/sec**  
+- **HttpWebRequests Aborted/sec**  
   
--   **HttpWebRequests Failed/sec**  
+- **HttpWebRequests Failed/sec**  
   
  **HttpWebRequests Aborted/sec** カウンターでは、<xref:System.Net.HttpWebRequest.Abort%2A> の内部呼び出しもカウントされます。 これらの内部呼び出しは、通常、一部のアプリケーションが測定するタイムアウトによって発生します。  
   
@@ -233,9 +233,9 @@ for (int i = 0; i < Array.Length; i++)
   
  ネットワーク パフォーマンス カウンターは、次の 2 つのカテゴリに一覧表示されます。  
   
--   ".NET CLR Networking" - .NET Framework Version 2 で導入され、.NET Framework Version 2 以降でサポートされている元のパフォーマンス カウンター。  
+- ".NET CLR Networking" - .NET Framework Version 2 で導入され、.NET Framework Version 2 以降でサポートされている元のパフォーマンス カウンター。  
   
--   ".NET CLR Networking 4.0.0.0" - 上に示したすべてのソケット カウンターと、.NET Framework Version 4 以降でサポートされている新しいパフォーマンス カウンター。 これらの新しいカウンターは、<xref:System.Net.HttpWebRequest> オブジェクトに関するパフォーマンス情報を提供します。  
+- ".NET CLR Networking 4.0.0.0" - 上に示したすべてのソケット カウンターと、.NET Framework Version 4 以降でサポートされている新しいパフォーマンス カウンター。 これらの新しいカウンターは、<xref:System.Net.HttpWebRequest> オブジェクトに関するパフォーマンス情報を提供します。  
   
  アプリケーションでパフォーマンス カウンターにアクセスして管理する方法の詳細については、「[パフォーマンス カウンター](../../../docs/framework/debug-trace-profile/performance-counters.md)」を参照してください。  
   
@@ -251,6 +251,7 @@ for (int i = 0; i < Array.Length; i++)
 |**Stack Walk Depth**|最後のランタイム コード アクセス セキュリティ チェック時のスタックの深さを表示します。 ランタイム コード アクセス セキュリティ チェックは、スタックを調査することによって実行されます。 このカウンターは、平均値ではなく、最後に計測された値のみを表示します。|  
 |**Total Runtime Checks**|アプリケーションの開始後に実行されたランタイム コード アクセス セキュリティ チェックの総数を表示します。 ランタイム コード アクセス セキュリティ チェックは、呼び出し元が特別のアクセス許可を要求したときに実行されます。 ランタイム チェックは、呼び出し元からのすべての呼び出しに対して実行され、呼び出し元の現在のスレッド スタックをチェックします。 このカウンターを **Stack Walk Depth** カウンターと共に使用することで、セキュリティ チェック時に発生するパフォーマンス低下を把握できます。|  
   
-## <a name="see-also"></a>関連項目  
- [パフォーマンス カウンター](../../../docs/framework/debug-trace-profile/performance-counters.md)  
- [ランタイム プロファイリング](../../../docs/framework/debug-trace-profile/runtime-profiling.md)
+## <a name="see-also"></a>関連項目
+
+- [パフォーマンス カウンター](../../../docs/framework/debug-trace-profile/performance-counters.md)
+- [ランタイム プロファイリング](../../../docs/framework/debug-trace-profile/runtime-profiling.md)

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - -codepage compiler option [Visual Basic]
 ms.assetid: be36ec33-6800-4505-838c-4124564f5cc9
 ms.openlocfilehash: fda75383435fdff718d1d50bc8583afc9858e7e2
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944704"
 ---
 # <a name="-codepage-visual-basic"></a>-codepage (Visual Basic)
 コンパイルですべてのソース コード ファイルに使用するコード ページを指定します。  

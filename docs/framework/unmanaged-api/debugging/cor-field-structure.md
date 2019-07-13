@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0898936665b3b337f2fd4e4d53bcc9f6071469b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2efe159eaa8b49d4d3825e9737593d0a12fc4d4c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405360"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740738"
 ---
 # <a name="corfield-structure"></a>COR_FIELD 構造体
 オブジェクトのフィールドに関する情報が提供されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct COR_FIELD{  
     mdFieldDef token;  
     ULONG32 offset;  
@@ -41,22 +41,23 @@ typedef struct COR_FIELD{
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`token`|`mdFieldDef`フィールド情報を取得するために使用するトークン。|  
-|`offset`|オブジェクトのフィールドのデータをバイト単位でのオフセット。|  
-|`id`|A [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)をこのフィールドの種類を識別する値。|  
-|`fieldType`|フィールドの型を示す CorElementType 列挙型値。|  
+|`token`|`mdFieldDef`フィールド情報を取得するために使用できるトークン。|  
+|`offset`|オブジェクトのフィールドのデータへのバイト オフセット。|  
+|`id`|A [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)をこのフィールドの型を識別する値。|  
+|`fieldType`|フィールドの種類を示す CorElementType 列挙値。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>関連項目
+
+- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)

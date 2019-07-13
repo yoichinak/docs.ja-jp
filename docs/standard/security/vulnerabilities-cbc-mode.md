@@ -1,17 +1,17 @@
 ---
-title: パディングを使用して、CBC モード対称暗号化解除とタイミングの脆弱性
+title: パディングを使用した CBC モードの対称復号化に関するタイミングの脆弱性
 description: 検出および暗号ブロック チェーン (CBC) モードでパディングを使用して暗号化解除の対称のタイミングの脆弱性を軽減する方法について説明します。
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: 4f1d6df3c0368fa0273d871ff32564c159e62a2c
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 6d8c2593cdbc4bbff2b1507196989282b16aa9a8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933901"
 ---
-# <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>パディングを使用して、CBC モード対称暗号化解除とタイミングの脆弱性
+# <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>パディングを使用した CBC モードの対称復号化に関するタイミングの脆弱性
 
 Microsoft は、安全を除き、暗号化テキストの整合性を確認せずに検証可能な埋め込みが適用されているときに、対称暗号化の暗号ブロック チェーン (CBC) モードで暗号化されたデータを復号化には不要になったと考えています非常に限定。状況。 この判断は、現在認識されている暗号リサーチに基づいています。 
 
@@ -29,7 +29,7 @@ Oracle は参照を"なのかを"は、実行しているアクションが正�
 
 Oracle を公開するコードにわずかに変更されたメッセージを送信し、oracle では、ことを示すまでデータの送信を保持するデータが正しく、攻撃者は CBC データ構造と組み合わせて、パディングの oracle を使用できます。 この応答から、攻撃者は、バイトごとのメッセージを暗号化解除できます。
 
-最近のコンピューターのネットワークはこのような高品質の攻撃者がリモート システム上 (0.1 ミリ秒未満) の実行の相違点の時間が非常に小さい検出できます。 成功と失敗の復号化の違いを観察するように設計されたツールからの攻撃に対して脆弱になりますが、データが改ざんされた場合にのみを正常に復号化が発生すると仮定すると、アプリケーションがあります。 このタイミングの違いは、他よりも、いくつかの言語またはライブラリでより重要なことがありますが、障害に対するアプリケーションの応答がアカウントに実行したときに、すべての言語とライブラリの実際的な脅威はこれを今すぐ信じします。
+最近のコンピューターのネットワークはこのような高品質の攻撃者がリモート システム上 (0.1 ミリ秒未満) の実行の相違点の時間が非常に小さい検出できます。 成功と失敗の復号化の違いを観察するように設計されたツールからの攻撃に対して脆弱になりますが、データが改ざんされた場合にのみを正常に復号化が発生すると仮定すると、アプリケーションがあります。 このタイミングの違いは、他よりも、いくつかの言語またはライブラリでより重要なことがありますが、障害に対するアプリケーションの応答がアカウントに実行したときに、すべての言語とライブラリの実際的な脅威はこれを今すぐ信じします。
 
 この攻撃は、暗号化されたデータを変更し、oracle と結果をテストする機能に依存しています。 暗号化されたデータへの変更を検出し、それに対するアクションは実行を拒否するのには完全に攻撃を軽減するしかありません。 これを行う標準的な方法では、データの署名を作成し、すべての操作を実行する前に、その署名を検証します。 署名は検証可能である必要があります、攻撃者が作成できないは、暗号化されたデータを変更し、変更されたデータに基づいて新しい署名の計算のそれ以外の場合。 適切なシグネチャの 1 つの一般的な型は、キー付きハッシュ メッセージ認証コード (HMAC) と呼ばれます。 HMAC は、既知の HMAC を生成する人にのみ、ユーザーの検証に秘密キーを受け取るというチェックサムと異なります。 キーを所有している、なしには、正しい HMAC を生成することはできません。 データが表示されたら、するは暗号化されたデータを取得、個別にコンピューティングいない HMAC の秘密キーを使用し、する、送信者の共有、比較が送信されるとき、いずれかに対してする HMAC 計算。 この比較は一定の時間である必要があります、それ以外の場合追加した別の検出可能な oracle では、異なる種類の攻撃を許可します。
 
@@ -92,7 +92,7 @@ Research は ISO 10126 等価では、メッセージのよく知られている
   - これは防ぐことも、攻撃者が別のメッセージ オフセットで複数回暗号化された同じプレーン テキストを強制する状況でプレーン テキストの回復。
 - ゲートするタイミングのシグナルを緩衝復号化の呼び出しの評価:
   - ホールド時間の計算の余白を含む任意のデータ セグメントに対して暗号化解除操作が行われる最大時間を超える場合の最小値が必要です。
-  - ガイダンスに従い、時間の計算を行う必要があります[高解像度のタイムスタンプを取得](https://msdn.microsoft.com/library/windows/desktop/dn55340.aspx)を使用していない<xref:System.Environment.TickCount?displayProperty=nameWithType>(対象ロール-over/オーバーフロー) または 2 つのシステムのタイムスタンプ (NTP 調整の対象を削除します。エラーの場合)。
+  - ガイダンスに従い、時間の計算を行う必要があります[高解像度のタイムスタンプを取得](/windows/desktop/sysinfo/acquiring-high-resolution-time-stamps)を使用していない<xref:System.Environment.TickCount?displayProperty=nameWithType>(対象ロール-over/オーバーフロー) または 2 つのシステムのタイムスタンプ (NTP 調整の対象を削除します。エラーの場合)。
   - 時間計算する必要があります内のすべての潜在的な例外を含む、復号化操作を含む管理または末尾に埋め込まれただけでなく、C++ アプリケーションです。
   - 成功または失敗をまだ決定されていますが場合、タイミング ゲートは、有効期限が切れるときにエラーを返す必要があります。
 - 認証されていない復号化を実行しているサービスは、大量の「無効」のメッセージが取得することを検出する監視が必要です。
@@ -100,16 +100,16 @@ Research は ISO 10126 等価では、メッセージのよく知られている
 
 ## <a name="finding-vulnerable-code---native-applications"></a>脆弱なコードは、ネイティブ アプリケーションの検索
 
-Windows の暗号化に対してビルドされたプログラム: Next Generation (CNG) ライブラリ。
+Windows の暗号化に対してビルドされたプログラム。[次へ] の Generation (CNG) ライブラリ:
 
 - 復号化の呼び出しはに対する[BCryptDecrypt](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptdecrypt)を指定して、`BCRYPT_BLOCK_PADDING`フラグ。
-- キー ハンドルが呼び出すことによって初期化されている[BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty)で[BCRYPT_CHAINING_MODE](https://msdn.microsoft.com/library/windows/desktop/aa376211.aspx#BCRYPT_CHAINING_MODE)設定`BCRYPT_CHAIN_MODE_CBC`します。
+- キー ハンドルが呼び出すことによって初期化されている[BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty)で[BCRYPT_CHAINING_MODE](/windows/desktop/SecCNG/cng-property-identifiers#BCRYPT_CHAINING_MODE)設定`BCRYPT_CHAIN_MODE_CBC`します。
   - `BCRYPT_CHAIN_MODE_CBC`既定値は、影響を受けるはコードに、値を割り当てることがない可能性がありますが`BCRYPT_CHAINING_MODE`します。
 
 以前の Windows 暗号化 API に対してビルドされたプログラム。
 
 - 復号化の呼び出しはに対する[CryptDecrypt](/windows/desktop/api/wincrypt/nf-wincrypt-cryptdecrypt)で`Final=TRUE`します。
-- キー ハンドルが呼び出すことによって初期化されている[CryptSetKeyParam](/windows/desktop/api/wincrypt/nf-wincrypt-cryptsetkeyparam)で[KP_MODE](https://msdn.microsoft.com/library/windows/desktop/aa379949.aspx#KP_MODE)設定`CRYPT_MODE_CBC`します。
+- キー ハンドルが呼び出すことによって初期化されている[CryptSetKeyParam](/windows/desktop/api/wincrypt/nf-wincrypt-cryptsetkeyparam)で[KP_MODE](/windows/desktop/api/wincrypt/nf-wincrypt-cryptgetkeyparam)設定`CRYPT_MODE_CBC`します。
   - `CRYPT_MODE_CBC`既定値は、影響を受けるはコードに、値を割り当てることがない可能性がありますが`KP_MODE`します。
 
 ## <a name="finding-vulnerable-code---managed-applications"></a>脆弱性のあるコードの検索 - マネージ アプリケーション

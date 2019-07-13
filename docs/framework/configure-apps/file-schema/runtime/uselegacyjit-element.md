@@ -1,22 +1,22 @@
 ---
-title: '&lt;useLegacyJit&gt;要素'
+title: <useLegacyJit> 要素
 ms.date: 04/26/2017
 ms.assetid: c2cf97f0-9262-4f1f-a754-5568b51110ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd4f9728338ecc66f84fe42b9bdbda9938ed518b
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: a467599084f01b1a48c95c5e25fb1f869156dffa
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673889"
 ---
-# <a name="ltuselegacyjitgt-element"></a>&lt;useLegacyJit&gt;要素
+# <a name="uselegacyjit-element"></a>\<useLegacyJit> 要素
 
 共通言語ランタイムが Just-In-Time コンパイルの従来の 64 ビット JIT コンパイラを使用するかどうかを決定します。  
   
 \<configuration>  
-\<ランタイム >  
+\<runtime>  
 \<useLegacyJit >
   
 ## <a name="syntax"></a>構文  
@@ -95,6 +95,6 @@ ms.locfileid: "53612193"
   
 ## <a name="see-also"></a>関連項目
 
-- [\<ランタイム > 要素](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)   
-- [\<configuration> 要素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)   
+- [\<runtime> 要素](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)
+- [\<configuration> 要素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)
 - [軽減策:新しい 64 ビット JIT コンパイラ](../../../../../docs/framework/migration-guide/mitigation-new-64-bit-jit-compiler.md)

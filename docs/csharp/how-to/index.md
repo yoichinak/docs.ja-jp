@@ -2,12 +2,12 @@
 title: 方法に関する記事 (C# ガイド)
 description: 簡単なヒントと、焦点を絞った短いコード サンプルのコレクション
 ms.date: 12/20/2017
-ms.openlocfilehash: 9326235341ee38e46f4204b7b3d7f67cae2774af
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 011e2a8208e647fb2df2ea2e949bfe2d2274eb37
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260192"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744264"
 ---
 # <a name="how-to-c"></a>方法 (C#)
 
@@ -21,7 +21,7 @@ C# の開発者には常識といえるヒントやコツがいくつかあり�
 - [メソッドに構造体を渡す場合とクラスを渡す場合の違いについて理解する](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)。
 - [ラムダ式の使用方法](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md)。
 - [グローバル名前空間のエイリアスを使用して型名の競合を解決する](../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)。
-- [演算子のオーバーロードを使用する](../language-reference/keywords/operator.md)。
+- [演算子のオーバーロードを使用する](../language-reference/operators/operator-overloading.md)。
 - [カスタム拡張メソッドを実装して呼び出す](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md)。
 - C# のプログラマでも[ VB の `My` 名前空間を使用できる場合がある](../programming-guide/namespaces/how-to-use-the-my-namespace.md)。
 - [拡張メソッドを使用して `enum` 型の新しいメソッドを作成する](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md)。
@@ -66,7 +66,7 @@ C# の開発者には常識といえるヒントやコツがいくつかあり�
 - [バイト配列を int に変換する](../programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)。
 - [文字列を数値に変換する](../programming-guide/types/how-to-convert-a-string-to-a-number.md)。
 - [パターン マッチングで `as` と `is` の演算子を使用して異なる型に安全にキャストする](../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)。
-- [`struct` 型の変換演算子を定義する](../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)。
+- [カスタムの型変換を定義する](../language-reference/operators/user-defined-conversion-operators.md)。
 - [型が null 許容値型であるかを判断する](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md)。
 - [null 許容値型と null 非許容値型の間で変換する](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-type-to-an-underlying-type)。
 
@@ -133,4 +133,3 @@ LINQ では、LINQ クエリ式パターンをサポートするすべてのデ�
 通常、C# のプログラムにはコマンド ライン引数が含まれます。 次の記事では、そのようなコマンド ライン引数にアクセスして処理する方法について説明します。
 
 - [`for` を使用してすべてのコマンド ライン引数を取得する](../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)。
-- [`foreach` を使用してすべてのコマンド ライン引数を取得する](../programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)。

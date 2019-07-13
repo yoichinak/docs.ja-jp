@@ -1,6 +1,6 @@
 ---
-title: '方法 : アクセス制御リスト エントリを追加または削除する'
-ms.date: 03/30/2017
+title: '方法: アクセス制御リスト エントリを追加または削除する (.NET Framework のみ)'
+ms.date: 01/14/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -15,36 +15,34 @@ helpviewer_keywords:
 ms.assetid: 53758b39-bd9b-4640-bb04-cad5ed8d0abf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 24c428a80f18b35d0aa3119a3c5fa1a6dcb2130e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 351d8325cc0fc1a1b551b6d513cad02f1291daab
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573424"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772948"
 ---
-# <a name="how-to-add-or-remove-access-control-list-entries"></a>方法 : アクセス制御リスト エントリを追加または削除する
-ファイルでアクセス制御リスト (ACL) エントリを追加または削除するには、<xref:System.Security.AccessControl.FileSecurity> または <xref:System.Security.AccessControl.DirectorySecurity> オブジェクトをファイルまたはディレクトリから取得して変更し、元のファイルまたはディレクトリに適用する必要があります。  
+# <a name="how-to-add-or-remove-access-control-list-entries-net-framework-only"></a>方法: アクセス制御リスト エントリを追加または削除する (.NET Framework のみ)
+ファイルまたはディレクトリでアクセス制御リスト (ACL) エントリを追加したり、削除したりするには、<xref:System.Security.AccessControl.FileSecurity> または <xref:System.Security.AccessControl.DirectorySecurity> オブジェクトをファイルまたはディレクトリから取得します。 オブジェクトを変更し、ファイルまたはディレクトリに戻します。  
   
-### <a name="to-add-or-remove-an-acl-entry-from-a-file"></a>ファイルで ACL エントリの追加または削除を行うには  
+## <a name="add-or-remove-an-acl-entry-from-a-file"></a>ACL エントリをファイルに追加するか、ファイルから削除する  
   
-1.  <xref:System.IO.File.GetAccessControl%2A> メソッドを呼び出して、ファイルの現在の ACL エントリを含む <xref:System.Security.AccessControl.FileSecurity> オブジェクトを取得します。  
+1. <xref:System.IO.File.GetAccessControl%2A?displayProperty=nameWithType> メソッドを呼び出して、ファイルの現在の ACL エントリを含む <xref:System.Security.AccessControl.FileSecurity> オブジェクトを取得します。  
   
-2.  手順 1. から返された <xref:System.Security.AccessControl.FileSecurity> オブジェクトで ACL エントリの追加または削除を行います。  
+2. 手順 1. から返された <xref:System.Security.AccessControl.FileSecurity> オブジェクトで ACL エントリの追加または削除を行います。  
   
-3.  <xref:System.Security.AccessControl.FileSecurity> オブジェクトを <xref:System.IO.File.SetAccessControl%2A> メソッドに渡し、変更を適用します。  
+3. 変更を適用するには、<xref:System.Security.AccessControl.FileSecurity> オブジェクトを <xref:System.IO.File.SetAccessControl%2A?displayProperty=nameWithType> メソッドに渡します。  
   
-### <a name="to-add-or-remove-an-acl-entry-from-a-directory"></a>ディレクトリで ACL エントリの追加または削除を行うには  
+## <a name="add-or-remove-an-acl-entry-from-a-directory"></a>ACL エントリをディレクトリに追加するか、ディレクトリから削除する  
   
-1.  <xref:System.IO.Directory.GetAccessControl%2A> メソッドを呼び出して、ディレクトリの現在の ACL エントリを含む <xref:System.Security.AccessControl.DirectorySecurity> オブジェクトを取得します。  
+1. <xref:System.IO.Directory.GetAccessControl%2A?displayProperty=nameWithType> メソッドを呼び出して、ディレクトリの現在の ACL エントリを含む <xref:System.Security.AccessControl.DirectorySecurity> オブジェクトを取得します。  
   
-2.  手順 1. から返された <xref:System.Security.AccessControl.DirectorySecurity> オブジェクトで ACL エントリの追加または削除を行います。  
+2. 手順 1. から返された <xref:System.Security.AccessControl.DirectorySecurity> オブジェクトで ACL エントリの追加または削除を行います。  
   
-3.  <xref:System.Security.AccessControl.DirectorySecurity> オブジェクトを <xref:System.IO.Directory.SetAccessControl%2A> メソッドに渡し、変更を適用します。  
+3. 変更を適用するには、<xref:System.Security.AccessControl.DirectorySecurity> オブジェクトを <xref:System.IO.Directory.SetAccessControl%2A?displayProperty=nameWithType> メソッドに渡します。  
   
 ## <a name="example"></a>例  
- [!code-cpp[IO.File.GetAccessControl-SetAccessControl#1](../../../samples/snippets/cpp/VS_Snippets_CLR/IO.File.GetAccessControl-SetAccessControl/cpp/sample.cpp#1)]
+ この例を実行するには、有効なユーザーまたはグループ アカウントを使用する必要があります。 この例は <xref:System.IO.File> オブジェクトを使用します。 <xref:System.IO.FileInfo>、<xref:System.IO.Directory>、<xref:System.IO.DirectoryInfo> クラスに対して同じ手順を使用します。
+
  [!code-csharp[IO.File.GetAccessControl-SetAccessControl#1](../../../samples/snippets/csharp/VS_Snippets_CLR/IO.File.GetAccessControl-SetAccessControl/CS/sample.cs#1)]
  [!code-vb[IO.File.GetAccessControl-SetAccessControl#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/IO.File.GetAccessControl-SetAccessControl/VB/sample.vb#1)]  
-  
-## <a name="compiling-the-code"></a>コードのコンパイル  
- この例を実行するには、有効なユーザーまたはグループ アカウントを指定する必要があります。 この例では <xref:System.IO.File> オブジェクトを使用していますが、<xref:System.IO.FileInfo>、<xref:System.IO.Directory>、および <xref:System.IO.DirectoryInfo> クラスにも同じ手順が使用されます。

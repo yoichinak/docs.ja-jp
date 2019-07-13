@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
-ms.openlocfilehash: 3a781f17ac3cabebce17955b9a7e2edda4d4fd4b
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 0c53e3a15bcbe61db7da1edb31ecd3fd562603f5
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785464"
 ---
 # <a name="loading-a-dataset-from-xml"></a>XML からの DataSet の読み込み
 ADO.NET では、XML ストリームまたは XML ドキュメントから <xref:System.Data.DataSet> の内容を作成できます。 また、.NET Framework では、XML から読み込まれる情報と <xref:System.Data.DataSet> のスキーマまたはリレーショナル構造の作成方法を柔軟に変更できます。  
   
- 入力する、 <xref:System.Data.DataSet> 、XML からデータを使用して、 **ReadXml**のメソッド、<xref:System.Data.DataSet>オブジェクト。 **ReadXml**メソッドは、ファイル、ストリームから読み取りますまたは**XmlReader**、XML と省略可能なソースを引数として受け取ります**XmlReadMode**引数。 (の詳細については、 **XmlReader**を参照してください[NIB: XmlTextReader による XML データの読み取り](https://msdn.microsoft.com/library/762c069b-b50c-41b8-936e-39eacfb0d540))。**ReadXml**メソッドは、XML ストリームまたはドキュメントと負荷の内容を読み取り、<xref:System.Data.DataSet>データ。 リレーショナル スキーマは作成も、<xref:System.Data.DataSet>に応じて、 **XmlReadMode**指定し、リレーショナル スキーマが既に存在するかどうか。  
+ 入力する、 <xref:System.Data.DataSet> 、XML からデータを使用して、 **ReadXml**のメソッド、<xref:System.Data.DataSet>オブジェクト。 **ReadXml**メソッドは、ファイル、ストリームから読み取りますまたは**XmlReader**、XML と省略可能なソースを引数として受け取ります**XmlReadMode**引数。 詳細については、 **XmlReader**を参照してください[XmlTextReader による XML データの読み取り](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/tfz3cz6w(v=vs.100))します。 **ReadXml**メソッドは、XML ストリームまたはドキュメントと負荷の内容を読み取り、<xref:System.Data.DataSet>データ。 リレーショナル スキーマは作成も、<xref:System.Data.DataSet>に応じて、 **XmlReadMode**指定し、リレーショナル スキーマが既に存在するかどうか。  
   
  次の表のオプション、 **XmlReadMode**引数。  
   
@@ -100,7 +100,7 @@ foreach (DataTable dataTable in dataSet.Tables)
 ```  
   
 > [!NOTE]
->  場合の XSD スキーマ、<xref:System.Data.DataSet>が含まれています、 **targetNamespace**データが読み取られず、呼び出し時に、例外が発生する可能性があります**ReadXml**を読み込む、<xref:System.Data.DataSet>を含む xml修飾名前空間のない要素。 この場合、修飾されていない要素を読み取り、次のように設定します。 **elementFormDefault**を"qualified"に XSD スキーマ内のと同じです。 例えば:  
+>  場合の XSD スキーマ、<xref:System.Data.DataSet>が含まれています、 **targetNamespace**データが読み取られず、呼び出し時に、例外が発生する可能性があります**ReadXml**を読み込む、<xref:System.Data.DataSet>を含む xml修飾名前空間のない要素。 この場合、修飾されていない要素を読み取り、次のように設定します。 **elementFormDefault**を"qualified"に XSD スキーマ内のと同じです。 例:  
   
 ```xml  
 <xsd:schema id="customDataSet"   
@@ -115,12 +115,13 @@ foreach (DataTable dataTable in dataSet.Tables)
 ## <a name="merging-data-from-xml"></a>XML のデータの結合  
  既に、<xref:System.Data.DataSet> にデータが含まれている場合には、<xref:System.Data.DataSet> の既存のデータに XML の新しいデータが追加されます。 **ReadXml**に XML からマージされない、<xref:System.Data.DataSet>行の主キーが一致する情報。 XML から新しい情報で既存の行情報を上書きするには使用**ReadXml**新たに作成する<xref:System.Data.DataSet>、し<xref:System.Data.DataSet.Merge%2A>新しい<xref:System.Data.DataSet>既存<xref:System.Data.DataSet>します。 使用して DiffGram を読み込む**ReadXML**で、 **XmlReadMode**の**DiffGram**を同じ一意の識別子を持つ行が結合されます。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Data.DataSet.Merge%2A?displayProperty=nameWithType>  
- [DataSet での XML の使用](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)  
- [XML スキーマ (XSD) からの DataSet リレーショナル構造の派生](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
- [XML からの DataSet リレーショナル構造の推論](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
- [XML の DataSet スキーマ情報の読み込み](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
- [DataSet、DataTable、および DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Data.DataSet.Merge%2A?displayProperty=nameWithType>
+- [DataSet での XML の使用](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+- [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)
+- [XML スキーマ (XSD) からの DataSet リレーショナル構造の派生](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)
+- [XML からの DataSet リレーショナル構造の推論](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
+- [XML の DataSet スキーマ情報の読み込み](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
+- [DataSet、DataTable、および DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,20 +1,20 @@
 ---
-title: '&lt;namespaceTable&gt; の &lt;add&gt;'
+title: <add> の <namespaceTable>
 ms.date: 03/30/2017
 ms.assetid: cf7b5b75-63bd-49a6-abac-4bfdab377e36
-ms.openlocfilehash: ef4f1c46a0ee3b94e5548b752e4e0a6a759fd45b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 7e65b66170465a8b3bb60754feebb7730b959d9d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673668"
 ---
-# <a name="ltaddgt-of-ltnamespacetablegt"></a>&lt;namespaceTable&gt; の &lt;add&gt;
+# <a name="add-of-namespacetable"></a>\<add> of \<namespaceTable>
 名前空間とプレフィックスのマッピングを含む構成要素を表します。これは、ルーティングの XPath フィルターで使用されます。  
   
  \<system.serviceModel>  
 \<ルーティング >  
-\<namespaceTable >  
+\<namespaceTable>  
 \<add>  
   
 ## <a name="syntax"></a>構文  
@@ -48,7 +48,8 @@ ms.locfileid: "54149515"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<namespaceTable >](../../../../../docs/framework/configure-apps/file-schema/wcf/namespacetable.md)|名前空間とプレフィックスのマッピングを含む要素セットを定義する構成セクションを表します。これは、ルーティングの XPath フィルターで使用されます。|  
+|[\<namespaceTable>](../../../../../docs/framework/configure-apps/file-schema/wcf/namespacetable.md)|名前空間とプレフィックスのマッピングを含む要素セットを定義する構成セクションを表します。これは、ルーティングの XPath フィルターで使用されます。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Routing.Configuration.NamespaceElement?displayProperty=nameWithType>    
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Routing.Configuration.NamespaceElement?displayProperty=nameWithType>

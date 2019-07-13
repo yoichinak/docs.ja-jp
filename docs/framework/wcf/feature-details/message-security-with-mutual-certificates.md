@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-ms.openlocfilehash: 7f8a8cd1d9d8524c4bfbf3a7f783a33eee972474
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 263ec73af7f4a6f52c4570e17cd140b6afb53601
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183049"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637834"
 ---
 # <a name="message-security-with-mutual-certificates"></a>メッセージ セキュリティと相互の証明書
 次のシナリオでは、Windows Communication Foundation (WCF) サービスとクライアントのメッセージ セキュリティ モードを使用して保護を示しています。 クライアントとサービスは、証明書を使用して認証されます。  
@@ -35,9 +35,9 @@ ms.locfileid: "50183049"
 ## <a name="service"></a>サービス  
  次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
   
--   構成を使用せずに、コードを使用してスタンドアロン サービスを作成します。  
+- 構成を使用せずに、コードを使用してスタンドアロン サービスを作成します。  
   
--   提供された構成を使用してサービスを作成しますが、エンドポイントを定義しません。  
+- 提供された構成を使用してサービスを作成しますが、エンドポイントを定義しません。  
   
 ### <a name="code"></a>コード  
  次のコードでは、メッセージ セキュリティを使用するサービス エンドポイントを作成します。 サービスには、自身を認証するための証明書が必要です。  
@@ -93,9 +93,9 @@ ms.locfileid: "50183049"
 ## <a name="client"></a>クライアント  
  次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
   
--   コード (およびクライアント コード) を使用してスタンドアロン クライアントを作成します。  
+- コード (およびクライアント コード) を使用してスタンドアロン クライアントを作成します。  
   
--   エンドポイント アドレスを定義しないクライアントを作成します。 代わりに、引数として構成名を受け取るクライアント コンストラクターを使用します。 次に例を示します。  
+- エンドポイント アドレスを定義しないクライアントを作成します。 代わりに、引数として構成名を受け取るクライアント コンストラクターを使用します。 次に例を示します。  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -158,7 +158,8 @@ ms.locfileid: "50183049"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
- [方法: を作成し、開発中にトランスポート セキュリティのための WCF で一時的な証明書をインストール](https://go.microsoft.com/fwlink/?LinkId=244264)
+## <a name="see-also"></a>関連項目
+
+- [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [方法: 作成し、開発中にトランスポート セキュリティのための WCF で一時的な証明書をインストール](https://go.microsoft.com/fwlink/?LinkId=244264)

@@ -5,12 +5,12 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: f3054ca74efbd09449f43e0654734bfe10e3a7c0
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: 73667843452bbcab52a8cd4aa7906beecc095677
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614870"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core と .NET Standard の単体テスト
 

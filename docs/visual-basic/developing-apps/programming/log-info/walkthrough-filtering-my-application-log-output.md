@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: 8a299ba0bfb2d6f49b449e2f1e567a06d09da49e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 00e9eeb3227ceef54f899129847bfb74a370c51c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500018"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591287"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>チュートリアル: My.Application.Log の出力のフィルター処理 (Visual Basic)
 このチュートリアルでは、`My.Application.Log` オブジェクトの既定のログ フィルター処理を変更して、`Log` オブジェクトからリスナーに渡される情報や、リスナーによって記述される情報を制御する方法について説明します。 構成情報はアプリケーションの構成ファイルに保存されるため、ロギングの動作はアプリケーションをビルドした後でも変更できます。  
@@ -21,17 +21,17 @@ ms.locfileid: "43500018"
   
 #### <a name="to-build-the-sample-application"></a>サンプル アプリケーションをビルドするには  
   
-1.  新しい Visual Basic Windows アプリケーション プロジェクトを開きます。  
+1. 新しい Visual Basic Windows アプリケーション プロジェクトを開きます。  
   
-2.  Form1 に Button1 という名前のボタンを追加します。  
+2. Form1 に Button1 という名前のボタンを追加します。  
   
-3.  Button1 の <xref:System.Windows.Forms.Control.Click> イベント ハンドラーで、次のコードを追加します。  
+3. Button1 の <xref:System.Windows.Forms.Control.Click> イベント ハンドラーで、次のコードを追加します。  
   
-     [!code-vb[VbVbcnMyApplicationLogFiltering#1](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-filtering-my-application-log-output_1.vb)]  
+     [!code-vb[VbVbcnMyApplicationLogFiltering#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyApplicationLogFiltering/VB/Form1.vb#1)]  
   
-4.  デバッガーでアプリケーションを実行します。  
+4. デバッガーでアプリケーションを実行します。  
   
-5.  **[Button1]** を押します。  
+5. **[Button1]** を押します。  
   
      アプリケーションは、アプリケーションのデバッグ出力とログ ファイルに次の情報を書き込みます。  
   
@@ -39,9 +39,9 @@ ms.locfileid: "43500018"
   
      `DefaultSource Error: 2 : Error in the application.`  
   
-6.  アプリケーションを終了します。  
+6. アプリケーションを終了します。  
   
-     アプリケーションのデバッグ出力ウィンドウを表示する方法について詳しくは、「[出力ウィンドウ](/visualstudio/ide/reference/output-window)」をご覧ください。 アプリケーションのログ ファイルの場所について詳しくは、「[チュートリアル: My.Application.Log による情報の書き込み先の確認](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)」をご覧ください。  
+     アプリケーションのデバッグ出力ウィンドウを表示する方法について詳しくは、「[出力ウィンドウ](/visualstudio/ide/reference/output-window)」をご覧ください。 アプリケーションのログ ファイルの場所については、「[チュートリアル:My.Application.Log による情報の書き込み先の確認](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)」を参照してください。  
   
     > [!NOTE]
     >  既定では、アプリケーションはアプリケーションの終了時にログ ファイルの出力をフラッシュします。  
@@ -71,27 +71,27 @@ ms.locfileid: "43500018"
   
 #### <a name="to-log-only-activity-tracing-events"></a>アクティビティ トレース イベントだけを記録するには  
   
-1.  **ソリューション エクスプローラー**で app.config を右クリックし、**[開く]** を選択します。  
+1. **ソリューション エクスプローラー**で app.config を右クリックし、**[開く]** を選択します。  
   
      - または -  
   
      app.config ファイルがない場合は、次の操作を行います。  
   
-    1.  **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。  
+    1. **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。  
   
-    2.  **[新しい項目の追加]** ダイアログ ボックスで、 **[アプリケーション構成ファイル]** を選択します。  
+    2. **[新しい項目の追加]** ダイアログ ボックスで、 **[アプリケーション構成ファイル]** を選択します。  
   
-    3.  **[追加]** をクリックします。  
+    3. **[追加]** をクリックします。  
   
-2.  最上位の `<configuration>` セクション内の `<system.diagnostics>` セクションで、`<switches>` セクションを見つけます。  
+2. 最上位の `<configuration>` セクション内の `<system.diagnostics>` セクションで、`<switches>` セクションを見つけます。  
   
-3.  スイッチのコレクションに `DefaultSwitch` を追加する要素を見つけます。 これは次のような要素です。  
+3. スイッチのコレクションに `DefaultSwitch` を追加する要素を見つけます。 これは次のような要素です。  
   
      `<add name="DefaultSwitch" value="Information" />`  
   
-4.  `value` 属性の値を "ActivityTracing" に変更します。  
+4. `value` 属性の値を "ActivityTracing" に変更します。  
   
-5.  app.config ファイルの内容は次の XML のようになります。  
+5. app.config ファイルの内容は次の XML のようになります。  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -120,9 +120,9 @@ ms.locfileid: "43500018"
     </configuration>  
     ```  
   
-6.  デバッガーでアプリケーションを実行します。  
+6. デバッガーでアプリケーションを実行します。  
   
-7.  **[Button1]** を押します。  
+7. **[Button1]** を押します。  
   
      アプリケーションは、アプリケーションのデバッグ出力とログ ファイルに次の情報を書き込みます。  
   
@@ -130,12 +130,12 @@ ms.locfileid: "43500018"
   
      `DefaultSource Stop: 5 : Leaving Button1_Click`  
   
-8.  アプリケーションを終了します。  
+8. アプリケーションを終了します。  
   
 9. `value` 属性の値を "Information" に戻します。  
   
     > [!NOTE]
-    >  `DefaultSwitch` スイッチの設定では、`My.Application.Log` のみが制御されます。 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] の <xref:System.Diagnostics.Trace?displayProperty=nameWithType> クラスと <xref:System.Diagnostics.Debug?displayProperty=nameWithType> クラスの動作が変えられることはありません。  
+    >  `DefaultSwitch` スイッチの設定では、`My.Application.Log` のみが制御されます。 .NET Framework の <xref:System.Diagnostics.Trace?displayProperty=nameWithType> クラスと <xref:System.Diagnostics.Debug?displayProperty=nameWithType> クラスの動作が変えられることはありません。  
   
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>My.Application.Log リスナーの個別のフィルター処理  
  前の例では、すべての `My.Application.Log` 出力のフィルター処理を変更する方法について説明しました。 この例では、個別のログ リスナーをフィルター処理する方法について説明します。 既定では、アプリケーションには、アプリケーションのデバッグ出力とログ ファイルに情報を書き込む 2 つのリスナーがあります。  
@@ -146,23 +146,23 @@ ms.locfileid: "43500018"
   
 #### <a name="to-log-only-activity-tracing-events"></a>アクティビティ トレース イベントだけを記録するには  
   
-1.  **ソリューション エクスプローラー**で app.config を右クリックし、**[開く]** を選択します。  
+1. **ソリューション エクスプローラー**で app.config を右クリックし、**[開く]** を選択します。  
   
      - または -  
   
      app.config ファイルがない場合は、次の操作を行います。  
   
-    1.  **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。  
+    1. **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。  
   
-    2.  **[新しい項目の追加]** ダイアログ ボックスで、 **[アプリケーション構成ファイル]** を選択します。  
+    2. **[新しい項目の追加]** ダイアログ ボックスで、 **[アプリケーション構成ファイル]** を選択します。  
   
-    3.  **[追加]** をクリックします。  
+    3. **[追加]** をクリックします。  
   
-2.  **ソリューション エクスプローラー**で app.config を右クリックします。 **[開く]** をクリックします。  
+2. **ソリューション エクスプローラー**で app.config を右クリックします。 **[開く]** をクリックします。  
   
-3.  `<sources>` セクション内にある、`name` 属性が "DefaultSource" の `<source>` セクションで、`<listeners>` セクションを見つけます。 `<sources>` セクションは、最上位の `<configuration>` セクション内の `<system.diagnostics>` セクションにあります。  
+3. `<sources>` セクション内にある、`name` 属性が "DefaultSource" の `<source>` セクションで、`<listeners>` セクションを見つけます。 `<sources>` セクションは、最上位の `<configuration>` セクション内の `<system.diagnostics>` セクションにあります。  
   
-4.  `<listeners>` セクションに次の要素を追加します。  
+4. `<listeners>` セクションに次の要素を追加します。  
   
     ```xml  
     <!-- Remove the default debug listener. -->  
@@ -171,9 +171,9 @@ ms.locfileid: "43500018"
     <add name="NewDefault"/>  
     ```  
   
-5.  最上位の `<sharedListeners>` セクション内の `<system.diagnostics>` セクションで、 `<configuration>` セクションを見つけます。  
+5. 最上位の `<sharedListeners>` セクション内の `<system.diagnostics>` セクションで、 `<configuration>` セクションを見つけます。  
   
-6.  その `<sharedListeners>` セクションに次の要素を追加します。  
+6. その `<sharedListeners>` セクションに次の要素を追加します。  
   
     ```xml  
     <add name="NewDefault"   
@@ -188,7 +188,7 @@ ms.locfileid: "43500018"
   
      <xref:System.Diagnostics.EventTypeFilter> フィルターは <xref:System.Diagnostics.SourceLevels> 列挙値の 1 つをその `initializeData` 属性として取ります。  
   
-7.  app.config ファイルの内容は次の XML のようになります。  
+7. app.config ファイルの内容は次の XML のようになります。  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -229,7 +229,7 @@ ms.locfileid: "43500018"
     </configuration>  
     ```  
   
-8.  デバッガーでアプリケーションを実行します。  
+8. デバッガーでアプリケーションを実行します。  
   
 9. **[Button1]** を押します。  
   
@@ -247,10 +247,11 @@ ms.locfileid: "43500018"
   
  配置後にログの設定を変更する方法については、「[アプリケーション ログの使用](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
- [チュートリアル : My.Application.Log による情報の書き込み先の確認](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
- [チュートリアル : My.Application.Log による情報の書き込み先の変更](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
- [チュートリアル : カスタム ログ リスナーの作成](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
- [方法: ログ メッセージを書き込む](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
- [トレース スイッチ](../../../../framework/debug-trace-profile/trace-switches.md)  
- [アプリケーションからの情報のログ記録](../../../../visual-basic/developing-apps/programming/log-info/index.md)
+## <a name="see-also"></a>関連項目
+
+- [チュートリアル: My.Application.Log による情報の書き込み先の確認](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
+- [チュートリアル: My.Application.Log による情報の書き込み先の変更](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [チュートリアル: カスタム ログ リスナーの作成](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)
+- [方法: ログ メッセージを書き込む](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [トレース スイッチ](../../../../framework/debug-trace-profile/trace-switches.md)
+- [アプリケーションからの情報のログ記録](../../../../visual-basic/developing-apps/programming/log-info/index.md)

@@ -3,12 +3,12 @@ title: クラスおよびオブジェクト - C# チュートリアルの概要
 description: 初めての C# プログラムを作成し、オブジェクト指向の概念を確認します
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 8b823e05ea5e51bb3096d6a0611630c996f56b33
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0932ae8a9d3facd4b2a8469664922f163fe4c679
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205363"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397825"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>クラスおよびオブジェクトを使用したオブジェクト指向プログラミングについて確認します
 
@@ -89,7 +89,7 @@ public BankAccount(string name, decimal initialBalance)
 }
 ```
 
-[`new`](../../language-reference/keywords/new.md) を使用してオブジェクトを作成すると、コンストラクターが呼び出されます。 ***program.cs*** の `Console.WriteLine("Hello World!");` の行を次の行で置き換えます (`<name>` を自分の名前に置き換えます)。
+[`new`](../../language-reference/operators/new-operator.md) を使用してオブジェクトを作成すると、コンストラクターが呼び出されます。 ***program.cs*** の `Console.WriteLine("Hello World!");` の行を次の行で置き換えます (`<name>` を自分の名前に置き換えます)。
 
 ```csharp
 var account = new BankAccount("<name>", 1000);
@@ -98,7 +98,7 @@ Console.WriteLine($"Account {account.Number} was created for {account.Owner} wit
 
 「`dotnet run`」と入力すると何が起こるか見てみましょう。  
 
-口座番号が空であることに気付かれましたか?  次にこの問題を解決します。 口座番号はオブジェクトが作成されるときに割り当てられる必要があります。 しかし、それを作成する責任を呼び出し元に負わせるべきではありません。 `BankAccount` クラスのコードは、新しい口座番号の割り当て方を知っている必要があります。  そのための簡単な方法は、10 桁の数字で始めることです。 そして、新しい口座番号が作成されるごとに値を 1 増加します。 最後に、オブジェクトが作成されるときに現在の口座番号を格納します。
+口座番号が空であることに気付かれましたか? 次にこの問題を解決します。 口座番号はオブジェクトが作成されるときに割り当てられる必要があります。 しかし、それを作成する責任を呼び出し元に負わせるべきではありません。 `BankAccount` クラスのコードは、新しい口座番号の割り当て方を知っている必要があります。  そのための簡単な方法は、10 桁の数字で始めることです。 そして、新しい口座番号が作成されるごとに値を 1 増加します。 最後に、オブジェクトが作成されるときに現在の口座番号を格納します。
 
 `BankAccount` クラスに次のメンバー宣言を追加します。
 
@@ -106,7 +106,7 @@ Console.WriteLine($"Account {account.Number} was created for {account.Owner} wit
 private static int accountNumberSeed = 1234567890;
 ```
 
-これがデータ メンバーです。 これは `private` であり、`BankAccount` クラス内のコードのみがこれにアクセスできます。 この方法により、プライベートな実装 (口座番号の生成方法) から (口座番号を持つなどの) パブリックな責任を分離できます。`static` でもあるため、すべての ``BankAccount`` オブジェクトによって共有されます。 静的でない変数の値は ``BankAccount`` オブジェクトのインスタンスごとに一意です。 次の 2 行をコンストラクターに追加して、口座番号を割り当てます。
+これがデータ メンバーです。 これは `private` であり、`BankAccount` クラス内のコードのみがこれにアクセスできます。 この方法により、プライベートな実装 (口座番号の生成方法) から (口座番号を持つなどの) パブリックな責任を分離できます。`static` でもあるため、すべての `BankAccount` オブジェクトによって共有されます。 静的でない変数の値は `BankAccount` オブジェクトのインスタンスごとに一意です。 次の 2 行をコンストラクターに追加して、口座番号を割り当てます。
 
 ```csharp
 this.Number = accountNumberSeed.ToString();
@@ -156,14 +156,14 @@ using System.Collections.Generic;
 ```csharp
 account.MakeWithdrawal(500, DateTime.Now, "Rent payment");
 Console.WriteLine(account.Balance);
-account.MakeDeposit(100, DateTime.Now, "friend paid me back");
+account.MakeDeposit(100, DateTime.Now, "Friend paid me back");
 Console.WriteLine(account.Balance);
 ```
 
 次に、残高が負の値になっているアカウントを作成してみることで、エラー条件のキャッチをテストします。
 
 ```csharp
-// Test that the initial balances must be positive:
+// Test that the initial balances must be positive.
 try
 {
     var invalidAccount = new BankAccount("invalid", -55);
@@ -178,7 +178,7 @@ catch (ArgumentOutOfRangeException e)
 [`try` と `catch` のステートメント](../../language-reference/keywords/try-catch.md)を使用して、例外をスローする可能性のあるコード ブロックをマークし、想定したエラーをキャッチします。 同じ方法で、残高が負の値になっている場合に例外をスローするコードをテストします。
 
 ```csharp
-// Test for a negative balance
+// Test for a negative balance:
 try
 {
     account.MakeWithdrawal(750, DateTime.Now, "Attempt to overdraw");

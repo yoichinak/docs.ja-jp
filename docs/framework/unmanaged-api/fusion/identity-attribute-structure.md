@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f716ff35ae0cd3d2a53c55756b8957e54fa355c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: de1646cdbc11369b43a821d8b762879d1df7ed2e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431536"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751533"
 ---
 # <a name="identityattribute-structure"></a>IDENTITY_ATTRIBUTE 構造体
-メタデータ属性について説明、 [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)インスタンス。  
+メタデータ属性について説明する[IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)インスタンス。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct _IDENTITY_ATTRIBUTE {  
     LPCWSTR  pszNamespace;  
     LPCWSTR  pszName;  
@@ -40,23 +40,24 @@ typedef struct _IDENTITY_ATTRIBUTE {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`pszNamespace`|属性はで、名前空間を表す null で終わる文字列へのポインター。|  
-|`pszName`|属性の名前を表す null で終わる文字列へのポインター。|  
-|`pszValue`|属性の値を表す null で終わる文字列へのポインター。|  
+|`pszNamespace`|属性はで、名前空間を含む null で終わる文字列へのポインター。|  
+|`pszName`|属性の名前を含む null で終わる文字列へのポインター。|  
+|`pszValue`|属性の値を含む null で終わる文字列へのポインター。|  
   
-## <a name="remarks"></a>コメント  
- `IDENTITY_ATTRIBUTE`構造には、null で終わる文字列への 3 つのポインターが含まれています。 これら 3 つの文字列では、1 つの属性について説明します。  
+## <a name="remarks"></a>Remarks  
+ `IDENTITY_ATTRIBUTE`構造体が null で終わる文字列への 3 つのポインターが含まれています。 これら 3 つの文字列には、1 つの属性について説明します。  
   
- インスタンス、`IDENTITY_ATTRIBUTE`構造体のインスタンスを関連付け、 [IDENTITY_ATTRIBUTE_BLOB](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)構造体。 `IDENTITY_ATTRIBUTE`実際の文字列と、対応する構造に含まれる`IDENTITY_ATTRIBUTE_BLOB`構造で表示されている 3 つの文字列にオフセットを一覧表示、`IDENTITY_ATTRIBUTE`構造体。  
+ インスタンス、`IDENTITY_ATTRIBUTE`構造のインスタンスに関連付け、 [IDENTITY_ATTRIBUTE_BLOB](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)構造体。 `IDENTITY_ATTRIBUTE`実際の文字列と、対応する構造に含まれる`IDENTITY_ATTRIBUTE_BLOB`構造で表示されている 3 つの文字列にオフセットを一覧表示、`IDENTITY_ATTRIBUTE`構造体。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Isolation.h  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IDefinitionIdentity インターフェイス](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)  
- [IDENTITY_ATTRIBUTE_BLOB 構造体](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)  
- [Fusion 構造体](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+## <a name="see-also"></a>関連項目
+
+- [IDefinitionIdentity インターフェイス](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)
+- [IDENTITY_ATTRIBUTE_BLOB 構造体](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)
+- [Fusion 構造体](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)

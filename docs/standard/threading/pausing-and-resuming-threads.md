@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b66881a8a42c0c34b5c2119f7404fe7787c8f3f2
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b39f91c5fabcfb5d7929a645b438b5db77f70956
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836259"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644918"
 ---
 # <a name="pausing-and-interrupting-threads"></a>スレッドの一時中断および中断
 
@@ -45,15 +45,15 @@ ms.locfileid: "48836259"
   
  待機がマネージド待機である場合、<xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> と <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> はどちらもすぐにスレッドを起動します。 待機がアンマネージ待機の場合 (プラットフォームが Win32 [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) 関数を呼び出した場合など)、<xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> と <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> はどちらも、スレッドがマネージド コードに戻るか、またはマネージド コードを呼び出すまで、そのスレッドを制御できません。 マネージド コードの動作は次のとおりです。  
   
--   <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> はスレッドをどのような待機からも起動し、これによって起動先のスレッドで <xref:System.Threading.ThreadInterruptedException> がスローされます。  
+- <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> はスレッドをどのような待機からも起動し、これによって起動先のスレッドで <xref:System.Threading.ThreadInterruptedException> がスローされます。  
   
--   <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> はスレッドをどのような待機からも起動し、これによってスレッドで <xref:System.Threading.ThreadAbortException> がスローされます。 詳細については、「[スレッドの破棄](../../../docs/standard/threading/destroying-threads.md)」を参照してください。  
+- <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> はスレッドをどのような待機からも起動し、これによってスレッドで <xref:System.Threading.ThreadAbortException> がスローされます。 詳細については、「[スレッドの破棄](../../../docs/standard/threading/destroying-threads.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Threading.Thread>  
-- <xref:System.Threading.ThreadInterruptedException>  
-- <xref:System.Threading.ThreadAbortException>  
-- [スレッド化](../../../docs/standard/threading/index.md)  
-- [スレッドの使用とスレッド処理](../../../docs/standard/threading/using-threads-and-threading.md)  
+- <xref:System.Threading.Thread>
+- <xref:System.Threading.ThreadInterruptedException>
+- <xref:System.Threading.ThreadAbortException>
+- [スレッド化](../../../docs/standard/threading/index.md)
+- [スレッドの使用とスレッド処理](../../../docs/standard/threading/using-threads-and-threading.md)
 - [同期プリミティブの概要](../../../docs/standard/threading/overview-of-synchronization-primitives.md)

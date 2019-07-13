@@ -1,15 +1,15 @@
 ---
-title: WCF の &lt;activityStateQueries&gt;
+title: <activityStateQueries> WCF の
 ms.date: 10/08/2018
 ms.assetid: 9e45db49-ed85-4fdf-bd65-0d5477e31823
-ms.openlocfilehash: 2dabfdd248006de60b5e84e739f78e03f364dde3
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c9c78b6929b4550204a22fe2e2786891b516a818
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701087"
 ---
-# <a name="ltactivitystatequeriesgt-of-wcf"></a>WCF の &lt;activityStateQueries&gt;
+# <a name="activitystatequeries-of-wcf"></a>\<activityStateQueries > の WCF
 
 ワークフロー インスタンスを構成するアクティビティのライフサイクルの変化を追跡するために使用する、クエリのコレクションを表します。 たとえば、ワークフロー インスタンス内で、「電子メールの送信」アクティビティが完了するたびの追跡する可能性があります。 追跡参加要素がアクティビティ状態レコード オブジェクトを定期受信するには、このクエリが必要です。 定期受信可能な状態は ActivityStates で指定します。
 
@@ -20,7 +20,7 @@ ms.locfileid: "54146187"
 \<プロファイル >  
 \<trackingProfile>  
 \<ワークフロー >  
-\<activityStateQueries >  
+\<activityStateQueries>  
 
 ## <a name="syntax"></a>構文  
   
@@ -60,7 +60,7 @@ ms.locfileid: "54146187"
 
 |要素|説明|
 |-------------|-----------------|
-|[\<activityStateQuery >](activitystatequery-of-wcf.md)|1 つのアクティビティ内で発生するエラーの処理を追跡するために使用するクエリ。  このイベントは、FaultHandler がエラーを処理するたびに発生します。|
+|[\<activityStateQuery>](activitystatequery-of-wcf.md)|1 つのアクティビティ内で発生するエラーの処理を追跡するために使用するクエリ。  このイベントは、FaultHandler がエラーを処理するたびに発生します。|
 
 ### <a name="parent-elements"></a>親要素
 
@@ -70,7 +70,7 @@ ms.locfileid: "54146187"
 
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElementCollection>    
-- <xref:System.Activities.Tracking.ActivityStateQuery>    
-- [ワークフローの追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElementCollection>
+- <xref:System.Activities.Tracking.ActivityStateQuery>
+- [ワークフローの追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
 - [追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

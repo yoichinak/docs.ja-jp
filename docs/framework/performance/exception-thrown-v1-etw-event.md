@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0d3da389-6b7b-40f6-a877-fac546d6019c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 865b7b16d5807bd9161855f453128a63c84eab96
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: dd322d25d91bb277a4c817594c968c28a6d61d68
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723018"
 ---
 # <a name="exception-thrownv1-etw-event"></a>Exception Thrown_V1 ETW イベント
 このイベントは、スローされる例外に関する情報をキャプチャします。  
@@ -37,8 +37,9 @@ ms.locfileid: "43505224"
 |例外メッセージ|win:UnicodeString|実際の例外メッセージ。|  
 |EIPCodeThrow|win:Pointer|例外が発生した命令ポインター。|  
 |ExceptionHR|win:UInt32|例外 [HRESULT](https://go.microsoft.com/fwlink/?LinkId=179679)。|  
-|ExceptionFlags|win:UInt16|0x01: HasInnerException (Visual Basic のドキュメントで「[CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)」を参照)。<br /><br /> 0x02: IsNestedException。<br /><br /> 0x04: IsRethrownException。<br /><br /> 0x08: IsCorruptedStateException (プロセスの状態が破損していることを示す。MSDN で「[破損状態例外を処理する](https://go.microsoft.com/fwlink/?LinkId=179681)」を参照)。<br /><br /> 0x10: IsCLSCompliant (<xref:System.Exception> から派生した例外は CLS 準拠で、それ以外は CLS 非準拠)。|  
+|ExceptionFlags|win:UInt16|0x01:HasInnerException (を参照してください[CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)Visual Basic のドキュメントで)。<br /><br /> 0x02:IsNestedException。<br /><br /> 0x04:IsRethrownException。<br /><br /> 0x08:IsCorruptedStateException (プロセスの状態が破損していることを示します。 表示[破損状態例外を処理](https://go.microsoft.com/fwlink/?LinkId=179681)msdn)。<br /><br /> 0x10:IsCLSCompliant (から派生した例外<xref:System.Exception>が CLS に準拠していません。 それ以外は CLS 準拠)。|  
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
-## <a name="see-also"></a>関連項目  
- [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>関連項目
+
+- [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)

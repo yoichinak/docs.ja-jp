@@ -3,11 +3,11 @@ title: F# Interactive オプション
 description: サポートされているコマンド ライン オプションについて説明しますF#対話形式で、fsi.exe します。
 ms.date: 05/16/2016
 ms.openlocfilehash: cca1ef6671878acb1b837d6590139d5de7b7167d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996802"
 ---
 # <a name="f-interactive-options"></a>F# Interactive オプション
 
@@ -37,7 +37,7 @@ F# Interactive オプションの引数でリストを指定する場合は、�
 |**--codepage:&lt;int&gt;**|同じ、 **fsc.exe**コンパイラ オプション。 詳細については、「[コンパイラ オプション](compiler-options.md)」を参照してください。|
 |**--consolecolors**[**+**&#124;**-**]|警告の出力とエラー メッセージを色付きでします。|
 |**--crossoptimize**[**+**&#124;**-**]|モジュール間の最適化を有効または無効にします。|
-|**--debug**[**+**&#124;**-**]<br /><br />**-デバッグ:**[**完全**&#124;**pdbonly**&#124;**ポータブル**&#124;**埋め込み**]<br /><br />**-g**[**+**&#124;**-**]<br /><br />**-g:**[**full**&#124;**pdbonly**&#124;**portable**&#124;**embedded**]|同じ、 **fsc.exe**コンパイラ オプション。 詳細については、「[コンパイラ オプション](compiler-options.md)」を参照してください。|
+|**--debug**[**+**&#124;**-**]<br /><br />**--debug:**[**full**&#124;**pdbonly**&#124;**portable**&#124;**embedded**]<br /><br />**-g**[**+**&#124;**-**]<br /><br />**-g:**[**full**&#124;**pdbonly**&#124;**portable**&#124;**embedded**]|同じ、 **fsc.exe**コンパイラ オプション。 詳細については、「[コンパイラ オプション](compiler-options.md)」を参照してください。|
 |**--define:&lt;string&gt;**|同じ、 **fsc.exe**コンパイラ オプション。 詳細については、「[コンパイラ オプション](compiler-options.md)」を参照してください。|
 |**--deterministic**[**+**&#124;**-**]|(モジュールのバージョン GUID、タイムスタンプを含む) の決定論的アセンブリを生成します。|
 |**--exec**|ファイルを読み込んだ後、またはコマンド ラインで指定したスクリプトを実行した後に F# Interactive を終了するように指示します。|
@@ -45,8 +45,8 @@ F# Interactive オプションの引数でリストを指定する場合は、�
 |**--gui**[**+**&#124;**-**]|Windows フォーム イベントのループを有効または無効にします。 既定ではオンです。|
 |**--help**<br /><br />**-?**|各オプションのコマンド ライン構文と簡単な説明を表示するために使用します。|
 |**--lib:&lt;folder-list&gt;**<br /><br />**-I:&lt;folder-list&gt;**|同じ、 **fsc.exe**コンパイラ オプション。 詳細については、「[コンパイラ オプション](compiler-options.md)」を参照してください。|
-|**-ロード:&lt;ファイル名&gt;**|指定したソース コードを起動時にコンパイルし、コンパイルされた F# の構成要素をセッションに読み込みます。 など、ターゲットのソースにスクリプト ディレクティブが含まれている場合 **#use**または **#load**、使用する必要がありますし、 **--を使用して、** または **#use** ではなく **--読み込む**または **#load**します。|
-|**mlcompatibility--**|同じ、 **fsc.exe**コンパイラ オプション。 詳細については、「[コンパイラ オプション](compiler-options.md)」を参照してください。|
+|**--load:&lt;filename&gt;**|指定したソース コードを起動時にコンパイルし、コンパイルされた F# の構成要素をセッションに読み込みます。 など、ターゲットのソースにスクリプト ディレクティブが含まれている場合 **#use**または **#load**、使用する必要がありますし、 **--を使用して、** または **#use** ではなく **--読み込む**または **#load**します。|
+|**--mlcompatibility**|同じ、 **fsc.exe**コンパイラ オプション。 詳細については、「[コンパイラ オプション](compiler-options.md)」を参照してください。|
 |**--noframework**|同じ、 **fsc.exe**コンパイラ オプション。 詳細については、次を参照してください[コンパイラ オプション。](compiler-options.md)|
 |**--nologo**|同じ、 **fsc.exe**コンパイラ オプション。 詳細については、「[コンパイラ オプション](compiler-options.md)」を参照してください。|
 |**--nowarn:&lt;warning-list&gt;**|同じ、 **fsc.exe**コンパイラ オプション。 詳細については、「[コンパイラ オプション](compiler-options.md)」を参照してください。|
@@ -55,7 +55,7 @@ F# Interactive オプションの引数でリストを指定する場合は、�
 |**--quiet**|抑制F#対話型の出力を**stdout**ストリーム。|
 |**--quotations-debug**|追加のデバッグ情報が F# 引用符リテラルとリフレクション定義から派生した式に対して生成されるように指定します。 デバッグ情報は F# 式ツリー ノードのカスタム属性に追加されます。 参照してください[コード クォート](code-quotations.md)と[Expr.CustomAttributes](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3)します。|
 |**--readline**[**+**&#124;**-**]|対話モードでのタブ補完を有効または無効にします。|
-|**-参照:&lt;ファイル名&gt;**<br /><br />**-r:&lt;ファイル名&gt;**|同じ、 **fsc.exe**コンパイラ オプション。 詳細については、「[コンパイラ オプション](compiler-options.md)」を参照してください。|
+|**-参照:&lt;ファイル名&gt;**<br /><br />**-r:&lt;filename&gt;**|同じ、 **fsc.exe**コンパイラ オプション。 詳細については、「[コンパイラ オプション](compiler-options.md)」を参照してください。|
 |**--shadowcopyreferences**[**+**&#124;**-**]|によってロックされてからの参照を防止、F#対話型プロセス。|
 |**--simpleresolution**|MSBuild の解決方法ではなくディレクトリ ベースのルールを使用して、アセンブリ参照を解決します。|
 |**--tailcalls**[**+**&#124;**-**]|tail IL 命令の使用を有効または無効にします。有効にすると、スタック フレームが tail 再帰関数で再利用されます。 既定では、このオプションは有効になっています。|
@@ -68,6 +68,6 @@ F# Interactive オプションの引数でリストを指定する場合は、�
 
 ## <a name="related-topics"></a>関連トピック
 
-|Title|説明|
+|タイトル|説明|
 |-----|-----------|
 |[コンパイラ オプション](compiler-options.md)|使用できるコマンド ライン オプションについて説明します、F#コンパイラ、 **fsc.exe**します。|

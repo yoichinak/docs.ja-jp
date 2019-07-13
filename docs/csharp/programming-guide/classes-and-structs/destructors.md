@@ -7,31 +7,31 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 96153dcc9c144df0f412678ec5c0928d4e832a40
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 87755eadeaebb72c5a8ce147ba2e6faf109e6c12
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235739"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584385"
 ---
 # <a name="finalizers-c-programming-guide"></a>ファイナライザー (C# プログラミング ガイド)
 ガベージ コレクターによってクラス インスタンスが収集されている場合は、ファイナライザー (**デストラクター**とも呼ばれます) を使用して、最終的に必要なすべてのクリーンアップが実行されます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
--   ファイナライザーは、構造体には定義できません。 クラスでだけ使用します。  
+- ファイナライザーは、構造体には定義できません。 クラスでだけ使用します。  
   
--   クラスで使用できるファイナライザーは 1 つだけです。  
+- クラスで使用できるファイナライザーは 1 つだけです。  
   
--   ファイナライザーを継承またはオーバーロードすることはできません。  
+- ファイナライザーを継承またはオーバーロードすることはできません。  
   
--   ファイナライザーを呼び出すことはできません。 デストラクターは自動的に起動されます。  
+- ファイナライザーを呼び出すことはできません。 デストラクターは自動的に起動されます。  
   
--   ファイナライザーは修飾子を取らず、パラメーターはありません。  
+- ファイナライザーは修飾子を取らず、パラメーターはありません。  
   
  たとえば、次はクラス `Car` に対するファイナライザーの宣言です。
   
- [!code-csharp[csProgGuideObjects#86](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_1.cs)]  
+ [!code-csharp[csProgGuideObjects#86](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#86)]  
 
 ファイナライザーは、式本体の定義として実行することもできます。次に例を示します。
 
@@ -72,16 +72,16 @@ protected override void Finalize()
   
  リソースのクリーンアップの詳細については、次のトピックを参照してください。  
   
--   [アンマネージ リソースのクリーンアップ](../../../standard/garbage-collection/unmanaged.md)  
+- [アンマネージ リソースのクリーンアップ](../../../standard/garbage-collection/unmanaged.md)  
   
--   [Dispose メソッドの実装](../../../standard/garbage-collection/implementing-dispose.md)  
+- [Dispose メソッドの実装](../../../standard/garbage-collection/implementing-dispose.md)  
   
--   [using ステートメント](../../../csharp/language-reference/keywords/using-statement.md)  
+- [using ステートメント](../../../csharp/language-reference/keywords/using-statement.md)  
   
 ## <a name="example"></a>例  
  次の例では、継承チェーンを形成する 3 つのクラスを作成します。 `First` が基底クラスであり、`Second` は `First` から派生し、`Third` は `Second` から派生します。 3 つのクラスのいずれにもファイナライザーがあります。 `Main` では、派生が最も多いクラスのインスタンスが作成されます。 プログラムを実行すると、3 つのクラスのファイナライザーが派生が最も多いクラスから派生が最も少ないクラスの順に自動的に呼び出されます。  
   
- [!code-csharp[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]  
+ [!code-csharp[csProgGuideObjects#85](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#85)]  
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
 
@@ -89,7 +89,7 @@ protected override void Finalize()
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.IDisposable>  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [コンストラクター](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- <xref:System.IDisposable>
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [コンストラクター](../../../csharp/programming-guide/classes-and-structs/constructors.md)
 - [ガベージ コレクション](../../../standard/garbage-collection/index.md)

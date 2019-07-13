@@ -1,22 +1,22 @@
 ---
-title: '方法: ADO.NET Entity Framework データ ソースを使用してデータ サービスを作成する (WCF Data Services)'
+title: '方法: ADO.NET Entity Framework データ ソース (WCF Data Services) を使用してデータ サービスを作成します。'
 ms.date: 08/24/2018
 helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: 4bccd1e4655786ae24166cdc32619b420c4a54d3
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 7dd93e5aa44effcf9fc41598e41f6f612a209c86
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839002"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307147"
 ---
-# <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>方法: ADO.NET Entity Framework データ ソースを使用してデータ サービスを作成する (WCF Data Services)
+# <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>方法: ADO.NET Entity Framework データ ソース (WCF Data Services) を使用してデータ サービスを作成します。
 
-WCF Data Services では、データ サービスとしてのエンティティ データを公開します。 このエンティティ データがによって提供される、 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]データ ソースがリレーショナル データベースの場合。 このトピックでは、作成する方法を示します、 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-ベースのデータ モデルは、既存のデータベースに基づいており、このデータ モデルを使用して、新しいデータ サービスを作成する Visual Studio Web アプリケーション。
+WCF Data Services では、データ サービスとしてのエンティティ データを公開します。 このエンティティ データが ADO.NET によって提供される[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]データ ソースがリレーショナル データベースの場合。 このトピックでは、作成する方法を示します、 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-ベースのデータ モデルは、既存のデータベースに基づいており、このデータ モデルを使用して、新しいデータ サービスを作成する Visual Studio Web アプリケーション。
 
-[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]も生成できるコマンド ライン ツールを提供する[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]Visual Studio プロジェクトの外側でモデル。 詳細については、次を参照してください。[方法: モデル ファイルとマッピング ファイルを生成する使用 EdmGen.exe](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)します。
+[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]も生成できるコマンド ライン ツールを提供する[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]Visual Studio プロジェクトの外側でモデル。 詳細については、「[方法 :EdmGen.exe を使用して、モデルとマッピング ファイルを生成する](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)します。
 
 ## <a name="to-add-an-entity-framework-model-that-is-based-on-an-existing-database-to-an-existing-web-application"></a>既存のデータベースに基づく Entity Framework モデルを既存の Web アプリケーションに追加するには
 
@@ -26,7 +26,7 @@ WCF Data Services では、データ サービスとしてのエンティティ 
 
 3. モデル名を入力し、クリックして**追加**します。
 
-     [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] ウィザードの最初のページが表示されます。
+     Entity Data Model ウィザードの先頭ページが表示されます。
 
 4. **モデルのコンテンツの選択**ダイアログ ボックスで、**データベースから生成**します。 その後、 **[次へ]** をクリックします。
 
@@ -45,7 +45,7 @@ WCF Data Services では、データ サービスとしてのエンティティ 
 
 9. クリックして**完了**ウィザードを完了します。
 
-     特定のデータベースに基づく既定のデータ モデルが作成されます。 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] では、データ モデルをカスタマイズできます。 詳細については、[タスク](https://msdn.microsoft.com/library/7166f1f1-4de8-4bd4-86b5-5e20a2ebaccb)に関する記事を参照してください。
+     特定のデータベースに基づく既定のデータ モデルが作成されます。 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] では、データ モデルをカスタマイズできます。 詳細については、次を参照してください。[エンティティ データ モデル ツール タスク](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100))します。
 
 ## <a name="to-create-the-data-service-by-using-the-new-data-model"></a>新しいデータ モデルを使用してデータ サービスを作成するには
 
@@ -53,7 +53,7 @@ WCF Data Services では、データ サービスとしてのエンティティ 
 
 2. **モデル ブラウザー**は、モデルを右クリックし、**プロパティ**、エンティティ コンテナーの名前をメモします。
 
-3. **ソリューション エクスプ ローラー**の名前を右クリックし、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]プロジェクトをクリックして**追加** > **新しい項目の**します。
+3. **ソリューション エクスプ ローラー**、ASP.NET プロジェクトの名前を右クリックし、クリックして**追加** > **新しい項目の**します。
 
 4. **新しい項目の追加**ダイアログ ボックスで、 **WCF Data Service**テンプレート、 **Web**カテゴリ。
 
@@ -76,5 +76,5 @@ WCF Data Services では、データ サービスとしてのエンティティ 
 
 - [WCF Data Services の定義](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
 - [Data Services プロバイダー](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
-- [方法: リフレクション プロバイダーを使用してデータ サービスを作成する](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)
-- [方法: LINQ to SQL データ ソースを使用してデータ サービスを作成する](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md)
+- [方法: リフレクション プロバイダーを使用してデータ サービスを作成します。](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)
+- [方法: SQL データ ソースを LINQ を使用してデータ サービスを作成します。](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md)

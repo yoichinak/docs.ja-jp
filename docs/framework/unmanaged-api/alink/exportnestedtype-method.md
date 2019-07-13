@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0afe4daa1c85f3e15addac55bdbe631d40e03f19
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7dfaedad48291ac09f6959bc7b314ae0d9da76e5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407569"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742045"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType メソッド
-入れ子にされた型をエクスポート可能として指定します。 [ExportType メソッド](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md)エクスポート入れ子にされた型をこともできますが、このメソッドは高速化します。  
+エクスポート可能として入れ子にされた型を指定します。 [ExportType メソッド](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md)入れ子になったエクスポートの種類をこともできますが、このメソッドが高速です。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ExportNestedType(  
     mdAssembly      AssemblyID,  
     mdToken         FileToken,  
@@ -41,7 +41,7 @@ HRESULT ExportNestedType(
 ) PURE;   
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
  エクスポートするアセンブリの ID。  
   
@@ -58,7 +58,7 @@ HRESULT ExportNestedType(
  エクスポートする完全修飾型名。  
   
  `dwFlags`  
- `ComType` フラグのように`tdPublic`または`tdNested`です。 この値に渡すことができます[DefineExportedType メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)です。  
+ `ComType` フラグなど`tdPublic`または`tdNested`します。 この値に渡される[DefineExportedType メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)します。  
   
  `pType`  
  エクスポートされた型のトークンを受け取ります。  
@@ -66,10 +66,11 @@ HRESULT ExportNestedType(
 ## <a name="return-value"></a>戻り値  
  メソッドが成功した場合は、S_OK を返します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  Alink.h が必要です。  
   
-## <a name="see-also"></a>関連項目  
- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>関連項目
+
+- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

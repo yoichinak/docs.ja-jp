@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4685d1a23fdf1874817522a16ccd428d81acd1ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ec18d5d5a6574cb0e08a6c4d6eaedcbcbf6886cd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433231"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759364"
 ---
 # <a name="fusioninstallreference-structure"></a>FUSION_INSTALL_REFERENCE 構造体
 アプリケーションがグローバル アセンブリ キャッシュにアプリケーションがインストールされているアセンブリに参照を表します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct _FUSION_INSTALL_REFERENCE_ {  
     DWORD    cbSize,  
     DWORD    dwFlags,  
@@ -42,19 +42,20 @@ typedef struct _FUSION_INSTALL_REFERENCE_ {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`cbSize`|構造体のサイズ (バイト単位)。|  
-|`dwFlags`|将来の機能拡張予約されています。 この値は、0 (ゼロ) にする必要があります。|  
-|`guidScheme`|参照を追加するエンティティ。 このフィールドは、次の値のいずれかを持つことができます。<br /><br /> -FUSION_REFCOUNT_MSI_GUID: アセンブリは、Microsoft Windows インストーラーを使用してインストールされたアプリケーションによって参照されます。 `szIdentifier`にフィールドが設定されている`MSI`、および`szNonCanonicalData`にフィールドが設定されている`Windows Installer`です。 このスキームでは、Windows サイド バイ サイド アセンブリが使用されます。<br />-FUSION_REFCOUNT_UNINSTALL_SUBKEY_GUID: アセンブリが含まれているアプリケーションによって参照される、**プログラムの追加/削除**インターフェイスです。 `szIdentifier`フィールド トークンを使用してアプリケーションを登録するには、**プログラムの追加/削除**インターフェイスです。<br />-FUSION_REFCOUNT_FILEPATH_GUID: アセンブリは、ファイル システム内のファイルで表されるアプリケーションによって参照されます。 `szIdentifier`フィールドは、このファイルへのパスを提供します。<br />-FUSION_REFCOUNT_OPAQUE_STRING_GUID: アセンブリは、非透過の文字列によってのみ表されるアプリケーションによって参照されます。 `szIdentifier`フィールドは、この不透明な文字列を提供します。 この値を削除すると、グローバル アセンブリ キャッシュがあいまいな参照の存在をチェックされません。<br />-FUSION_REFCOUNT_OSINSTALL_GUID: この値は予約されています。|  
-|`szIdentifier`|アセンブリをグローバル アセンブリ キャッシュにインストールされているアプリケーションを識別する一意の文字列。 その値は、の値によって異なります、`guidScheme`フィールドです。|  
-|`szNonCanonicalData`|参照を追加するエンティティだけが認識する文字列。 グローバル アセンブリ キャッシュは、この文字列を格納しますでは使用されません。|  
+|`cbSize`|(バイト単位) 構造体のサイズ。|  
+|`dwFlags`|将来の機能拡張予約されています。 この値は 0 (ゼロ) である必要があります。|  
+|`guidScheme`|このエンティティの参照を追加します。 このフィールドは、次の値のいずれかを指定できます。<br /><br /> -FUSION_REFCOUNT_MSI_GUID:アセンブリは、Microsoft Windows インストーラーを使用してインストールされたアプリケーションで参照されます。 `szIdentifier`にフィールドが設定されている`MSI`、および`szNonCanonicalData`にフィールドが設定されている`Windows Installer`します。 このスキームは、Windows のサイド バイ サイド アセンブリに使用されます。<br />-FUSION_REFCOUNT_UNINSTALL_SUBKEY_GUID:アセンブリが含まれているアプリケーションによって参照される、**プログラムの追加/削除**インターフェイス。 `szIdentifier`フィールドを使用してアプリケーションを登録するトークンを提供する、**プログラムの追加/削除**インターフェイス。<br />-   FUSION_REFCOUNT_FILEPATH_GUID:アセンブリは、ファイル システム内のファイルで表されるアプリケーションで参照されます。 `szIdentifier`フィールドは、このファイルへのパスを提供します。<br />-   FUSION_REFCOUNT_OPAQUE_STRING_GUID:アセンブリは、不透明な文字列のみで表されるアプリケーションで参照されます。 `szIdentifier`フィールドは、この不透明な文字列を提供します。 この値を削除すると、グローバル アセンブリ キャッシュはあいまいな参照の存在チェックをしません。<br />-   FUSION_REFCOUNT_OSINSTALL_GUID:この値は予約されています。|  
+|`szIdentifier`|アセンブリをグローバル アセンブリ キャッシュにインストールされているアプリケーションを識別する一意の文字列。 その値の値によって異なります、`guidScheme`フィールド。|  
+|`szNonCanonicalData`|参照を追加するエンティティのみが認識する文字列。 グローバル アセンブリ キャッシュでは、この文字列が格納されますが、使用しません。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Fusion.h  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [Fusion 構造体](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)  
- [グローバル アセンブリ キャッシュ](../../../../docs/framework/app-domains/gac.md)
+## <a name="see-also"></a>関連項目
+
+- [Fusion 構造体](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+- [グローバル アセンブリ キャッシュ](../../../../docs/framework/app-domains/gac.md)

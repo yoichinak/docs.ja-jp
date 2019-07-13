@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0ddaddbbd050dc079fcf20551e90c895d2f4ef59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c571e37d87ffd136687452dc80a823b8ddbe3359
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446344"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782057"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>IMetaDataEmit::TranslateSigWithScope メソッド
 現在のスコープにアセンブリをインポートし、マージされたスコープの新しいメタデータ シグネチャを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT TranslateSigWithScope (   
     [in]  IMetaDataAssemblyImport   *pAssemImport,   
     [in]  const void                *pbHashValue,   
@@ -45,15 +45,15 @@ HRESULT TranslateSigWithScope (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pAssemImport`  
  [in] \(署名が定義されている\) インポート アセンブリのインターフェイスです。  
   
  `pbHashValue`  
- [in]アセンブリのハッシュ blob です。  
+ [in]アセンブリのハッシュ blob。  
   
  `cbHashValue`  
- [in]内のバイト数`pbHashValue`です。  
+ [in]内のバイト数`pbHashValue`します。  
   
  `import`  
  [in]インポートのメタデータ スコープのインターフェイスです。  
@@ -62,7 +62,7 @@ HRESULT TranslateSigWithScope (
  [in]インポートする署名します。  
   
  `cbSigBlob`  
- [in]サイズをバイト単位での`pbSigBlob`します。  
+ [in]サイズ (バイト単位) の`pbSigBlob`します。  
   
  `pAssemEmit`  
  [in]エクスポートのアセンブリのインターフェイスです。  
@@ -74,23 +74,24 @@ HRESULT TranslateSigWithScope (
  [out]翻訳されたシグネチャ blob を保持するバッファー。  
   
  `cbTranslatedSigMax`  
- [in] \(バイト単位\) の容量の`pvTranslatedSig`します。  
+ [in] (バイト単位) の容量の`pvTranslatedSig`します。  
   
  `pcbTranslatedSig`  
- [out]翻訳済みの署名の実際のバイト数。  
+ [out]翻訳されたシグネチャでの実際のバイト数。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
  **ライブラリ:** MSCorEE.dll にリソースとして使用  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataAssemblyEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)  
- [IMetaDataAssemblyImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)  
- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [IMetaDataAssemblyEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

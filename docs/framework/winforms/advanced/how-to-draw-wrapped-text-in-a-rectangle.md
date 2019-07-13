@@ -1,5 +1,5 @@
 ---
-title: '方法 : 四角形内にテキストを折り返して描画する'
+title: '方法: 四角形内にテキストを折り返して描画する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,43 +9,44 @@ helpviewer_keywords:
 - text [Windows Forms], drawing in a rectangle
 - strings [Windows Forms], drawing in a rectangle
 ms.assetid: e1fb432a-dc90-48b5-9b6b-acc14507133d
-ms.openlocfilehash: c753be6a200f166e59e1330c7dbcf1fadc7588a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ace79e45737a3ce26d8bdcd603e923c1e6040d4d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524974"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626163"
 ---
-# <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>方法 : 四角形内にテキストを折り返して描画する
-四角形で囲まれたテキストを描画するにを使用して、<xref:System.Drawing.Graphics.DrawString%2A>オーバー ロードされたメソッドの<xref:System.Drawing.Graphics>を受け取るクラス、<xref:System.Drawing.Rectangle>または<xref:System.Drawing.RectangleF>パラメーター。 また、使用、<xref:System.Drawing.Brush>と<xref:System.Drawing.Font>です。  
+# <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>方法: 四角形内にテキストを折り返して描画する
+使用して四角形でラップされたテキストを描画することができます、<xref:System.Drawing.Graphics.DrawString%2A>のメソッドをオーバー ロード、<xref:System.Drawing.Graphics>を受け取るクラス、<xref:System.Drawing.Rectangle>または<xref:System.Drawing.RectangleF>パラメーター。 使用することも、<xref:System.Drawing.Brush>と<xref:System.Drawing.Font>します。  
   
- 使用して、四角形で囲まれたテキストを描画することも、<xref:System.Windows.Forms.TextRenderer.DrawText%2A>オーバー ロードされたメソッドの<xref:System.Windows.Forms.TextRenderer>を受け取る、<xref:System.Drawing.Rectangle>と<xref:System.Windows.Forms.TextFormatFlags>パラメーター。 また、使用、<xref:System.Drawing.Color>と<xref:System.Drawing.Font>です。  
+ 使用して、四角形でラップされたテキストを描画することも、<xref:System.Windows.Forms.TextRenderer.DrawText%2A>のメソッドをオーバー ロード、<xref:System.Windows.Forms.TextRenderer>を受け取る、<xref:System.Drawing.Rectangle>と<xref:System.Windows.Forms.TextFormatFlags>パラメーター。 使用することも、<xref:System.Drawing.Color>と<xref:System.Drawing.Font>します。  
   
- 次の図に、使用すると、四角形に描画されるテキストの出力、<xref:System.Drawing.Graphics.DrawString%2A>メソッドです。  
+ 次の図は、使用すると、四角形の描画されるテキストの出力、<xref:System.Drawing.Graphics.DrawString%2A>メソッド。
   
- ![フォント テキスト](../../../../docs/framework/winforms/advanced/media/csfontstext2.png "csfontstext2")  
+ ![DrawString メソッドを使用する場合は、出力を示すスクリーン ショット。](./media/how-to-draw-wrapped-text-in-a-rectangle/drawstring-method-font-text.png)  
   
-### <a name="to-draw-wrapped-text-in-a-rectangle-with-gdi"></a>GDI + での四角形にテキストを折り返して描画するには  
+### <a name="to-draw-wrapped-text-in-a-rectangle-with-gdi"></a>GDI + を使用して四角形内にテキストを折り返して描画するには  
   
-1.  使用して、<xref:System.Drawing.Graphics.DrawString%2A>オーバー ロードされたメソッド、するは、テキストを渡す<xref:System.Drawing.Rectangle>または<xref:System.Drawing.RectangleF>、<xref:System.Drawing.Font>と<xref:System.Drawing.Brush>です。  
+1. 使用して、 <xref:System.Drawing.Graphics.DrawString%2A> 、テキストを渡すメソッドをオーバー ロードされた<xref:System.Drawing.Rectangle>または<xref:System.Drawing.RectangleF>、<xref:System.Drawing.Font>と<xref:System.Drawing.Brush>します。  
   
-     [!code-csharp[System.Drawing.AlignDrawnText#50](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/CS/Form1.cs#50)]
-     [!code-vb[System.Drawing.AlignDrawnText#50](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#50)]  
+     [!code-csharp[System.Drawing.AlignDrawnText#50](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/CS/Form1.cs#50)]
+     [!code-vb[System.Drawing.AlignDrawnText#50](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#50)]  
   
-### <a name="to-draw-wrapped-text-in-a-rectangle-with-gdi"></a>GDI を使用して、四角形内にテキストを折り返して描画するには  
+### <a name="to-draw-wrapped-text-in-a-rectangle-with-gdi"></a>GDI を使用して四角形内にテキストを折り返して描画するには  
   
-1.  使用して、<xref:System.Windows.Forms.TextFormatFlags>でテキストを指定する列挙値をラップする必要があります、<xref:System.Windows.Forms.TextRenderer.DrawText%2A>オーバー ロードされたメソッド、するは、テキストを渡す<xref:System.Drawing.Rectangle>、<xref:System.Drawing.Font>と<xref:System.Drawing.Color>です。  
+1. 使用して、<xref:System.Windows.Forms.TextFormatFlags>でテキストを指定する列挙値をラップする必要があります、 <xref:System.Windows.Forms.TextRenderer.DrawText%2A> 、テキストを渡すメソッドをオーバー ロードされた<xref:System.Drawing.Rectangle>、<xref:System.Drawing.Font>と<xref:System.Drawing.Color>します。  
   
-     [!code-csharp[System.Drawing.AlignDrawnText#60](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/CS/Form1.cs#60)]
-     [!code-vb[System.Drawing.AlignDrawnText#60](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#60)]  
+     [!code-csharp[System.Drawing.AlignDrawnText#60](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/CS/Form1.cs#60)]
+     [!code-vb[System.Drawing.AlignDrawnText#60](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#60)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  前の例が必要です。  
   
--   <xref:System.Windows.Forms.PaintEventArgs> `e`、パラメーターのある<xref:System.Windows.Forms.PaintEventHandler>です。  
+- <xref:System.Windows.Forms.PaintEventArgs> `e`でのパラメーターである<xref:System.Windows.Forms.PaintEventHandler>します。  
   
-## <a name="see-also"></a>関連項目  
- [方法: GDI を使用してテキストを描画する](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)  
- [フォントとテキストの使用](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)  
- [方法: フォント ファミリとフォントを作成する](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md)  
- [方法: テキストを指定の位置に描画する](../../../../docs/framework/winforms/advanced/how-to-draw-text-at-a-specified-location.md)
+## <a name="see-also"></a>関連項目
+
+- [方法: GDI を使用してテキストを描画します。](how-to-draw-text-with-gdi.md)
+- [フォントとテキストの使用](using-fonts-and-text.md)
+- [方法: フォント ファミリとフォントを作成します。](how-to-construct-font-families-and-fonts.md)
+- [方法: 指定した位置のテキストの描画](how-to-draw-text-at-a-specified-location.md)

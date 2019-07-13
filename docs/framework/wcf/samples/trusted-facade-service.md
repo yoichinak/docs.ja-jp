@@ -2,12 +2,12 @@
 title: 信頼されたファサード サービス
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: 6acea5204ae2c05483978eb6187d1de02ae1b268
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 27e541c0c9738e93678d32081e49798944160715
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463183"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665972"
 ---
 # <a name="trusted-facade-service"></a>信頼されたファサード サービス
 このシナリオのサンプルでは Windows Communication Foundation (WCF) を使用して 1 つのサービスからの呼び出し元の id 情報のフローをセキュリティ インフラストラクチャ。  
@@ -16,11 +16,11 @@ ms.locfileid: "43463183"
   
  このサンプルは、次のコンポーネントで構成されています。  
   
--   電卓クライアント  
+- 電卓クライアント  
   
--   電卓ファサード サービス  
+- 電卓ファサード サービス  
   
--   電卓バックエンド サービス  
+- 電卓バックエンド サービス  
   
  ファサード サービスは、要求を検証して呼び出し元を認証します。 認証と検証が正常に完了すると、ファサード サービスは、境界ネットワークから内部ネットワークへの制御された通信チャネルを使用して、バックエンド サービスに要求を転送します。 ファサード サービスは、転送される要求の一部として呼び出し元の ID に関する情報を格納し、バックエンド サービスがプロセスでこの情報を使用できるようにします。 呼び出し元の ID は、メッセージの `Username` ヘッダー内部にある `Security` セキュリティ トークンを使用して送信されます。 このサンプルでは、WCF のセキュリティ インフラストラクチャを使用して送信してからこの情報を抽出、`Security`ヘッダー。  
   
@@ -234,7 +234,7 @@ Press <ENTER> to terminate client.
   
  次に、バッチ ファイルの各セクションの概要を簡単に説明します。  
   
--   サーバー証明書の作成。  
+- サーバー証明書の作成。  
   
      Setup.bat バッチ ファイルの次の行は、使用するサーバー証明書を作成します。  
   
@@ -250,7 +250,7 @@ Press <ENTER> to terminate client.
   
      `%SERVER_NAME%` 変数はサーバー名を指定します。既定値は localhost です。 証明書は LocalMachine ストアに保存されます。  
   
--   クライアントの信頼された証明書ストアへのファサード サービスの証明書のインストール。  
+- クライアントの信頼された証明書ストアへのファサード サービスの証明書のインストール。  
   
      次の行は、ファサード サービスの証明書をクライアントの信頼されたユーザーのストアにコピーします。 この手順が必要なのは、Makecert.exe によって生成される証明書がクライアント システムにより暗黙には信頼されないからです。 マイクロソフト発行の証明書など、クライアントの信頼されたルート証明書に基づいた証明書が既にある場合は、クライアント証明書ストアにサーバー証明書を配置するこの手順は不要です。  
   
@@ -260,27 +260,27 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
+1. 実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
-2.  ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
+2. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
 #### <a name="to-run-the-sample-on-the-same-machine"></a>サンプルを同じコンピューターで実行するには  
   
-1.  Makecert.exe が存在するフォルダがパスに含まれていることを確認します。  
+1. Makecert.exe が存在するフォルダがパスに含まれていることを確認します。  
   
-2.  Setup.bat をサンプルのインストール フォルダーで実行します。 これにより、サンプルの実行に必要なすべての証明書がインストールされます。  
+2. Setup.bat をサンプルのインストール フォルダーで実行します。 これにより、サンプルの実行に必要なすべての証明書がインストールされます。  
   
-3.  別のコンソール ウィンドウで、\BackendService\bin ディレクトリの BackendService.exe を起動します。  
+3. 別のコンソール ウィンドウで、\BackendService\bin ディレクトリの BackendService.exe を起動します。  
   
-4.  別のコンソール ウィンドウで、\FacadeService\bin ディレクトリの FacadeService.exe を起動します。  
+4. 別のコンソール ウィンドウで、\FacadeService\bin ディレクトリの FacadeService.exe を起動します。  
   
-5.  Client.exe を \client\bin で起動します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。  
+5. Client.exe を \client\bin で起動します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。  
   
-6.  クライアントとサービスが通信できるようにされていない場合[トラブルシューティングのヒント](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)します。  
+6. クライアントとサービスが通信できるようにされていない場合[WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))します。  
   
 #### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには  
   
-1.  サンプルの実行が終わったら、サンプル フォルダーにある Cleanup.bat を実行します。  
+1. サンプルの実行が終わったら、サンプル フォルダーにある Cleanup.bat を実行します。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
@@ -290,5 +290,3 @@ Press <ENTER> to terminate client.
 >  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\TrustedFacade`  
-  
-## <a name="see-also"></a>関連項目

@@ -2,12 +2,12 @@
 title: 追跡を使用したアプリケーションのトラブルシューティング
 ms.date: 03/30/2017
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
-ms.openlocfilehash: f991533b61705c8d0a1a8e71b632dd53f24dd979
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 62c46ca36c89c023bfc775eb76ba454c9a4162c0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004589"
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>追跡を使用したアプリケーションのトラブルシューティング
 Windows Workflow Foundation (WF) では、Windows Workflow Foundation のアプリケーションまたはサービスの実行の詳細を提供するワークフロー関連の情報を追跡することができます。 Windows Workflow Foundation ホストは、ワークフロー インスタンスの実行中にワークフロー イベントをキャプチャできます。 ワークフローは、エラーまたは例外を生成する場合は、追跡の詳細をその処理のトラブルシューティング、Windows Workflow Foundation を使用できます。  
@@ -49,8 +49,9 @@ Windows Workflow Foundation (WF) では、Windows Workflow Foundation のアプ�
   
  この追跡レコードには、例外スタックの形式でエラーの詳細が含まれます。 ハンドルされない例外になったエラー (たとえば、アクティビティ) のソースの詳細があります。Windows Workflow Foundation のエラー イベントにサブスクライブする、追跡参加要素を追加することで追跡を有効にします。 この参加要素は、`ActivityStateQuery (state="Faulted")`、<xref:System.Activities.Tracking.FaultPropagationRecord>、および `WorkflowInstanceQuery (state="UnhandledException")` を照会する追跡プロファイルで構成します。  
   
- ETW 追跡参加要素を使用して追跡を有効にした場合、エラー イベントは ETW セッションに書き出されます。 イベントはイベント ビューアーを使用して表示できます。 ノードの下で確認できます**イベント ビューアーは アプリケーションとサービス ログ Microsoft->-> Windows アプリケーション サーバー-アプリケーション-> **分析チャネルにします。  
+ ETW 追跡参加要素を使用して追跡を有効にした場合、エラー イベントは ETW セッションに書き出されます。 イベントはイベント ビューアーを使用して表示できます。 ノードの下で確認できます **イベント ビューアーは アプリケーションとサービス ログ Microsoft->-> Windows アプリケーション サーバー-アプリケーション->** 分析チャネルにします。  
   
-## <a name="see-also"></a>関連項目  
- [Windows Server App Fabric の監視](https://go.microsoft.com/fwlink/?LinkId=201273)  
- [App Fabric でアプリケーションの監視](https://go.microsoft.com/fwlink/?LinkId=201275)
+## <a name="see-also"></a>関連項目
+
+- [Windows Server App Fabric の監視](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [App Fabric でアプリケーションの監視](https://go.microsoft.com/fwlink/?LinkId=201275)

@@ -8,35 +8,35 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: c7775de75ddbf274f3a1555c9f0daaf63bbee713
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e569742943e121faeae340512544956b674da083
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235346"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595354"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>例外の作成とスロー (C# プログラミング ガイド)
 例外は、プログラムの実行中にエラーが発生したことを示すために使われます。 エラーを説明する例外オブジェクトが作成された後、[throw](../../../csharp/language-reference/keywords/throw.md) キーワードで "*スロー*" されます。 そのとき、ランタイムは最も互換性のある例外ハンドラーを検索します。  
   
  プログラマは、以下の条件が 1 つでも該当するときは、例外をスローする必要があります。  
   
--   メソッドは、定義されている機能を完了できません。  
+- メソッドは、定義されている機能を完了できません。  
   
      たとえば、メソッドへのパラメーターに無効な値が設定されている場合などです。  
   
-     [!code-csharp[csProgGuideExceptions#12](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_1.cs)]  
+     [!code-csharp[csProgGuideExceptions#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#12)]  
   
--   オブジェクトの状態に基づくと、オブジェクトに対して行われた呼び出しが不適切です。  
+- オブジェクトの状態に基づくと、オブジェクトに対して行われた呼び出しが不適切です。  
   
      たとえば、読み取り専用ファイルに書き込もうとしたような場合です。 オブジェクトの状態により操作が許可されない場合は、<xref:System.InvalidOperationException> のインスタンスまたはこのクラスの派生に基づくオブジェクトをスローします。 <xref:System.InvalidOperationException> オブジェクトをスローするメソッドの例を次に示します。  
   
-     [!code-csharp[csProgGuideExceptions#13](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_2.cs)]  
+     [!code-csharp[csProgGuideExceptions#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#13)]  
   
--   メソッドへの引数が原因で例外が発生しました。  
+- メソッドへの引数が原因で例外が発生しました。  
   
      この場合は、元の例外をキャッチして、<xref:System.ArgumentException> のインスタンスを作成する必要があります。 元の例外は、<xref:System.Exception.InnerException%2A> パラメーターとして <xref:System.ArgumentException> のコンストラクターに渡す必要があります。  
   
-     [!code-csharp[csProgGuideExceptions#14](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_3.cs)]  
+     [!code-csharp[csProgGuideExceptions#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#14)]  
   
  例外には、<xref:System.Exception.StackTrace%2A> というプロパティが含まれています。 この文字列には、現在の呼び出し履歴でのメソッドの名前と、各メソッドの例外がスローされたファイル名と行番号が含まれます。 スタック トレースを開始するポイントから例外をスローする必要があるため、共通言語ランタイム (CLR) によって `throw` ステートメントのポイントから <xref:System.Exception.StackTrace%2A> オブジェクトが自動的に作成されます。  
   
@@ -47,18 +47,18 @@ ms.locfileid: "53235346"
 ## <a name="things-to-avoid-when-throwing-exceptions"></a>例外をスローするときに避ける必要があること  
  次の一覧は、例外をスローするときに避ける必要があることです。  
   
--   通常の実行の一部として、例外を使ってプログラムのフローを変更しないでください。 例外は、エラー状態の報告と処理のためだけに使う必要があります。  
+- 通常の実行の一部として、例外を使ってプログラムのフローを変更しないでください。 例外は、エラー状態の報告と処理のためだけに使う必要があります。  
   
--   スローする代わりに、戻り値またはパラメーターとして例外を返さないでください。  
+- スローする代わりに、戻り値またはパラメーターとして例外を返さないでください。  
   
--   自作のソース コードからは、意図的に <xref:System.Exception?displayProperty=nameWithType>、<xref:System.SystemException?displayProperty=nameWithType>、<xref:System.NullReferenceException?displayProperty=nameWithType>、または <xref:System.IndexOutOfRangeException?displayProperty=nameWithType> をスローしないでください。  
+- 自作のソース コードからは、意図的に <xref:System.Exception?displayProperty=nameWithType>、<xref:System.SystemException?displayProperty=nameWithType>、<xref:System.NullReferenceException?displayProperty=nameWithType>、または <xref:System.IndexOutOfRangeException?displayProperty=nameWithType> をスローしないでください。  
   
--   デバッグ モードではスローでき、リリース モードではスローできない例外は、作成しないでください。 開発フェーズ中に実行時エラーを識別するには、代わりにデバッグ アサートを使ってください。  
+- デバッグ モードではスローでき、リリース モードではスローできない例外は、作成しないでください。 開発フェーズ中に実行時エラーを識別するには、代わりにデバッグ アサートを使ってください。  
   
 ## <a name="defining-exception-classes"></a>例外クラスの定義  
- プログラムでは、<xref:System> 名前空間で事前定義された例外クラスをスローするか (上記の場合を除きます)、<xref:System.Exception> から派生することで独自の例外クラスを作成することができます。 派生クラスでは、少なくとも 4 つのコンストラクターを定義する必要があります。既定のコンストラクター、メッセージ プロパティを設定するコンストラクター、<xref:System.Exception.Message%2A> プロパティと <xref:System.Exception.InnerException%2A> プロパティの両方を設定するコンストラクター、 そして 4 番目は例外のシリアル化に使われるコンストラクターです。 新しい例外クラスは、シリアル化可能にする必要があります。 例:  
+ プログラムでは、<xref:System> 名前空間で事前定義された例外クラスをスローするか (上記の場合を除きます)、<xref:System.Exception> から派生することで独自の例外クラスを作成することができます。 派生クラスでは、少なくとも 4 つのコンストラクターを必ず定義します。パラメータ―なしのコンストラクター、メッセージ プロパティを設定するコンストラクター、<xref:System.Exception.Message%2A> プロパティと <xref:System.Exception.InnerException%2A> プロパティの両方を設定するコンストラクター、 そして 4 番目は例外のシリアル化に使われるコンストラクターです。 新しい例外クラスは、シリアル化可能にする必要があります。 次に例を示します。  
   
- [!code-csharp[csProgGuideExceptions#15](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_4.cs)]  
+ [!code-csharp[csProgGuideExceptions#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#15)]  
   
  例外クラスへの新しいプロパティの追加は、プロパティによって提供されるデータが例外の解決に役立つ場合にのみ行う必要があります。 派生例外クラスに新しいプロパティを追加する場合は、`ToString()` をオーバーライドして追加情報を返す必要があります。  
   
@@ -66,9 +66,9 @@ ms.locfileid: "53235346"
 
 詳細については、「[C# 言語仕様](../../language-reference/language-specification/index.md)」の[例外](~/_csharplang/spec/exceptions.md)と [throw ステートメント](~/_csharplang/spec/statements.md#the-throw-statement)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [例外と例外処理](../../../csharp/programming-guide/exceptions/index.md)  
-- [例外階層](../../../standard/exceptions/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [例外と例外処理](../../../csharp/programming-guide/exceptions/index.md)
+- [例外階層](../../../standard/exceptions/index.md)
 - [例外処理](../../../csharp/programming-guide/exceptions/exception-handling.md)

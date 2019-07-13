@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 9ec5fa379556dedeaa7a35e34f004340ab47a39c
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59234418"
+---
 ### <a name="calling-createdefaultauthorizationcontext-with-a-null-argument-has-changed"></a>null 引数を指定した CreateDefaultAuthorizationContext の呼び出しが変更されました
 
 |   |   |
@@ -8,4 +16,3 @@
 |Version|4.6|
 |型|再ターゲット中|
 |影響を受ける API|<ul><li><xref:System.IdentityModel.Policy.AuthorizationContext.CreateDefaultAuthorizationContext(System.Collections.Generic.IList{System.IdentityModel.Policy.IAuthorizationPolicy})?displayProperty=nameWithType></li></ul>|
-

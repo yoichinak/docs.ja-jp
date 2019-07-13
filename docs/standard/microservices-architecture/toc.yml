@@ -1,0 +1,159 @@
+- name: '.NET マイクロサービス:コンテナー化された .NET アプリケーションのアーキテクチャ'
+  href: index.md
+  items:
+    - name: コンテナーと Docker の概要
+      href: container-docker-introduction/index.md
+      items:
+        - name: Docker について
+          href: container-docker-introduction/docker-defined.md
+        - name: Docker に関する用語
+          href: container-docker-introduction/docker-terminology.md
+        - name: Docker コンテナー、イメージ、レジストリ
+          href: container-docker-introduction/docker-containers-images-registries.md
+    - name: Docker コンテナー用 .NET Core と .NET Framework の選択
+      href: net-core-net-framework-containers/index.md
+      items:
+        - name: 一般的なガイダンス
+          href: net-core-net-framework-containers/general-guidance.md
+        - name: Docker コンテナー用 .Net Core を選択するタイミング
+          href: net-core-net-framework-containers/net-core-container-scenarios.md
+        - name: Docker コンテナー用 .NET Framework を選択するタイミング
+          href: net-core-net-framework-containers/net-framework-container-scenarios.md
+        - name: '意思決定テーブル: Docker に使用する .NET Frameworks'
+          href: net-core-net-framework-containers/container-framework-choice-factors.md
+        - name: .NET コンテナーで対象とする OS
+          href: net-core-net-framework-containers/net-container-os-targets.md
+        - name: 公式の .NET Docker イメージ
+          href: net-core-net-framework-containers/official-net-docker-images.md
+    - name: コンテナーとマイクロサービス ベースのアプリケーションの設計
+      href: architect-microservice-container-applications/index.md
+      items:
+        - name: モノリシック アプリケーションのコンテナー化
+          href: architect-microservice-container-applications/containerize-monolithic-applications.md
+        - name: Docker アプリケーションの状態とデータ
+          href: architect-microservice-container-applications/docker-application-state-data.md
+        - name: サービス指向アーキテクチャ
+          href: architect-microservice-container-applications/service-oriented-architecture.md
+        - name: マイクロサービス アーキテクチャ
+          href: architect-microservice-container-applications/microservices-architecture.md
+        - name: マイクロサービス単位のデータ管理
+          href: architect-microservice-container-applications/data-sovereignty-per-microservice.md
+        - name: 論理アーキテクチャと物理アーキテクチャ
+          href: architect-microservice-container-applications/logical-versus-physical-architecture.md
+        - name: 分散データ管理に関する課題と解決策
+          href: architect-microservice-container-applications/distributed-data-management.md
+        - name: マイクロサービスごとにドメイン モデルの境界を識別する
+          href: architect-microservice-container-applications/identify-microservice-domain-model-boundaries.md
+        - name: クライアントからマイクロサービスへの直接通信に対する API ゲートウェイ パターン
+          href: architect-microservice-container-applications/direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md
+        - name: マイクロサービス アーキテクチャでの通信
+          href: architect-microservice-container-applications/communication-in-microservice-architecture.md
+        - name: メッセージベースの非同期通信
+          href: architect-microservice-container-applications/asynchronous-message-based-communication.md
+        - name: マイクロサービス API とコントラクトの作成、進化、バージョン管理
+          href: architect-microservice-container-applications/maintain-microservice-apis.md
+        - name: マイクロサービスのアドレス指定能力およびサービス レジストリ
+          href: architect-microservice-container-applications/microservices-addressability-service-registry.md
+        - name: 複数のマイクロサービスによって生成されるビジュアル UI シェイプ、レイアウトなど、マイクロサービスを基にしている複合 UI を作成する
+          href: architect-microservice-container-applications/microservice-based-composite-ui-shape-layout.md
+        - name: マイクロサービスの回復性と高可用性
+          href: architect-microservice-container-applications/resilient-high-availability-microservices.md
+        - name: 高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する
+          href: architect-microservice-container-applications/scalable-available-multi-container-microservice-applications.md
+    - name: Docker ベースのアプリケーションの開発プロセス
+      href: docker-application-development-process/index.md
+      items:
+        - name: Docker アプリの開発ワークフロー
+          href: docker-application-development-process/docker-app-development-workflow.md
+    - name: 複数のコンテナーとマイクロサービス ベースの NET アプリケーションのデザインと開発
+      href: multi-container-microservice-net-applications/index.md
+      items:
+        - name: マイクロサービス指向アプリケーションの設計
+          href: multi-container-microservice-net-applications/microservice-application-design.md
+        - name: 単純なデータ ドリブン CRUD マイクロサービスの作成
+          href: multi-container-microservice-net-applications/data-driven-crud-microservice.md
+        - name: docker-compose.yml で複数のコンテナー アプリケーションを定義する
+          href: multi-container-microservice-net-applications/multi-container-applications-docker-compose.md
+        - name: コンテナーとして実行するデータベース サーバーの使用
+          href: multi-container-microservice-net-applications/database-server-container.md
+        - name: マイクロサービス間でイベント ベースの通信を実装する (統合イベント)
+          href: multi-container-microservice-net-applications/integration-event-based-microservice-communications.md
+        - name: 開発環境またはテスト環境の RabbitMQ でイベント バスを実装する
+          href: multi-container-microservice-net-applications/rabbitmq-event-bus-development-test-environment.md
+        - name: イベントへのサブスクライブ
+          href: multi-container-microservice-net-applications/subscribe-events.md
+        - name: ASP.NET Core サービスと Web アプリのテスト
+          href: multi-container-microservice-net-applications/test-aspnet-core-services-web-apps.md
+        - name: IHostedService を使ってマイクロサービスのバックグラウンド タスクを実装する
+          href: multi-container-microservice-net-applications/background-tasks-with-ihostedservice.md
+        - name: Ocelot を使った API ゲートウェイの実装
+          href: multi-container-microservice-net-applications/implement-api-gateways-with-ocelot.md
+    - name: マイクロサービスで DDD と CQRS パターンを使ってビジネスの複雑さに取り組む
+      href: microservice-ddd-cqrs-patterns/index.md
+      items:
+        - name: マイクロサービスに簡略化された CQRS と DDD パターンを適用する
+          href: microservice-ddd-cqrs-patterns/apply-simplified-microservice-cqrs-ddd-patterns.md
+        - name: eShopOnContainers で DDD マイクロサービスの CQRS と CQS のアプローチを適用する
+          href: microservice-ddd-cqrs-patterns/eshoponcontainers-cqrs-ddd-microservice.md
+        - name: CQRS マイクロサービスに読み取り/クエリを実装する
+          href: microservice-ddd-cqrs-patterns/cqrs-microservice-reads.md
+        - name: DDD 指向マイクロサービスの設計
+          href: microservice-ddd-cqrs-patterns/ddd-oriented-microservice.md
+        - name: マイクロサービス ドメイン モデルの設計
+          href: microservice-ddd-cqrs-patterns/microservice-domain-model.md
+        - name: .NET Core でマイクロサービス ドメイン モデルを実装する
+          href: microservice-ddd-cqrs-patterns/net-core-microservice-domain-model.md
+        - name: Seedwork (ドメイン モデルの再利用可能な基底クラスとインターフェイス)
+          href: microservice-ddd-cqrs-patterns/seedwork-domain-model-base-classes-interfaces.md
+        - name: 値オブジェクトの実装
+          href: microservice-ddd-cqrs-patterns/implement-value-objects.md
+        - name: 列挙型ではなく列挙型クラスを使用する
+          href: microservice-ddd-cqrs-patterns/enumeration-classes-over-enum-types.md
+        - name: ドメイン モデル レイヤーでの検証の設計
+          href: microservice-ddd-cqrs-patterns/domain-model-layer-validations.md
+        - name: クライアント側の検証 (プレゼンテーション層での検証)
+          href: microservice-ddd-cqrs-patterns/client-side-validation.md
+        - name: 'ドメイン イベント: 設計と実装'
+          href: microservice-ddd-cqrs-patterns/domain-events-design-implementation.md
+        - name: インフラストラクチャの永続レイヤーの設計
+          href: microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-design.md
+        - name: Entity Framework Core でインフラストラクチャの永続レイヤーを実装する
+          href: microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-implemenation-entity-framework-core.md
+        - name: 永続インフラストラクチャとして NoSQL データベースを使用する
+          href: microservice-ddd-cqrs-patterns/nosql-database-persistence-infrastructure.md
+        - name: マイクロサービス アプリケーション レイヤーと Web API を設計する
+          href: microservice-ddd-cqrs-patterns/microservice-application-layer-web-api-design.md
+        - name: Web API を使用したマイクロサービス アプリケーション レイヤーの実装
+          href: microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md
+    - name: 回復性の高いアプリケーションの実装
+      href: implement-resilient-applications/index.md
+      items:
+        - name: 部分的なエラーの処理
+          href: implement-resilient-applications/handle-partial-failure.md
+        - name: 部分的なエラーを処理するための戦略
+          href: implement-resilient-applications/partial-failure-strategies.md
+        - name: 指数バックオフを含む再試行を実装する
+          href: implement-resilient-applications/implement-retries-exponential-backoff.md
+        - name: 回復力の高い Entity Framework Core SQL 接続の実装
+          href: implement-resilient-applications/implement-resilient-entity-framework-core-sql-connections.md
+        - name: 指数のバックオフを含むカスタムの HTTP 呼び出しの再試行について
+          href: implement-resilient-applications/explore-custom-http-call-retries-exponential-backoff.md
+        - name: HttpClientFactory を使用して回復力の高い HTTP 要求を実装する
+          href: implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests.md
+        - name: Polly で指数バックオフを含む HTTP 呼び出しの再試行を実装する
+          href: implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly.md
+        - name: サーキット ブレーカー パターンを実装する
+          href: implement-resilient-applications/implement-circuit-breaker-pattern.md
+        - name: 正常性の監視
+          href: implement-resilient-applications/monitor-app-health.md
+    - name: NET マイクロサービスおよび Web アプリケーションをセキュリティで保護する
+      href: secure-net-microservices-web-applications/index.md
+      items:
+        - name: .NET マイクロサービスと Web アプリケーションでの承認について
+          href: secure-net-microservices-web-applications/authorization-net-microservices-web-applications.md
+        - name: 開発時にアプリケーションの機密情報を安全に格納する
+          href: secure-net-microservices-web-applications/developer-app-secrets-storage.md
+        - name: 実稼働時に機密情報を保護するために Azure Key Vault を使用する
+          href: secure-net-microservices-web-applications/azure-key-vault-protects-secrets.md
+    - name: 重要な習得事項
+      href: key-takeaways.md

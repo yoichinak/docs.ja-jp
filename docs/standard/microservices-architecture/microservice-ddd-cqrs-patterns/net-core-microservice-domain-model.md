@@ -1,17 +1,15 @@
 ---
 title: .NET Core でマイクロサービス ドメイン モデルを実装する
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | DDD 指向ドメイン モデルの実装の詳細について
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 1c21ba1cc4c02336a204b1fe91b72e5f3e89228c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b2ad62c2a16dd3993b9624ec14f0070e934ac2de
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127135"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639768"
 ---
-# <a name="implement-a-microservice-domain-model-with-net-core"></a>.NET Core でマイクロサービス ドメイン モデルを実装する 
+# <a name="implement-a-microservice-domain-model-with-net-core"></a>.NET Core でマイクロサービス ドメイン モデルを実装する
 
 前のセクションでは、ドメイン モデルの基本的な設計原則と設計パターンを説明しました。 ここでは、.NET Core (プレーンな C\# コード) と EF Core を使用してドメイン モデルを実装するために可能な手段を調べます。 ドメイン モデルを構成するのは自分が書くコードだけであることにご注目ください。 EF Core モデルの要件があるだけで、EF に対する実際の依存関係は存在しません。 ドメイン モデルには EF Core または他の ORM への緊密な依存関係や参照を含めないでください。
 
@@ -33,7 +31,7 @@ eShopOnContainers 参照アプリケーションに使用されているフォ�
 
 トランザクションの整合性とは、ビジネス アクションの最後の時点で集約が一貫した状態になり、なおかつ最新状態になることを保証することです。 たとえば、eShopOnContainers 注文マイクロサービス ドメイン モデルの注文集約は、図 7-11 のように構成されています。
 
-![OrderAggregate フォルダーの詳細な表示: Address.cs は値オブジェクト、IOrderRepository はリポジトリ インターフェイス、Order.cs は集約ルート、OrderItem.cs は子エンティティ、OrderStatus.cs は列挙クラス。](./media/image12.png)
+![OrderAggregate フォルダーの詳細な表示:Address.cs は値オブジェクト、IOrderRepository はリポジトリ インターフェイス、Order.cs は集約ルート、OrderItem.cs は子エンティティ、OrderStatus.cs は列挙クラス。](./media/image12.png)
 
 **図 7-11**。 Visual Studio ソリューションにおける注文集約
 
@@ -60,7 +58,7 @@ public class Order : Entity, IAggregateRoot
 
     private readonly List<OrderItem> _orderItems;
     public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;
-  
+
     public Order(string userId, Address address, int cardTypeId, string cardNumber, string cardSecurityNumber,
             string cardHolderName, DateTime cardExpiration, int? buyerId = null, int? paymentMethodId = null)
     {
@@ -74,8 +72,8 @@ public class Order : Entity, IAggregateRoot
         // ...Additional code ...
     }
 
-    public void AddOrderItem(int productId, string productName, 
-                            decimal unitPrice, decimal discount, 
+    public void AddOrderItem(int productId, string productName,
+                            decimal unitPrice, decimal discount,
                             string pictureUrl, int units = 1)
     {
         //...
@@ -83,9 +81,9 @@ public class Order : Entity, IAggregateRoot
         // ...
 
         var orderItem = new OrderItem(productId, productName, unitPrice, discount, pictureUrl, units);
-        
+
         _orderItems.Add(orderItem);
-  
+
     }
     // ...
     // Additional methods with domain rules/logic related to the Order aggregate
@@ -117,7 +115,7 @@ public class Order : Entity, IAggregateRoot
 OrderItem myNewOrderItem = new OrderItem(orderId, productId, productName,
     pictureUrl, unitPrice, discount, units);
 
-//... (WRONG) Accessing the OrderItems colletion directly from the application layer // or command handlers
+//... (WRONG) Accessing the OrderItems collection directly from the application layer // or command handlers
 myOrder.OrderItems.Add(myNewOrderItem);
 //...
 ```
@@ -152,7 +150,7 @@ myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, un
 
 Entity Framework Core 1.1 以降を使用する場合、DDD エンティティをより優れた方法で表すことができます。プロパティに加えて、[フィールドへのマッピング](https://docs.microsoft.com/ef/core/modeling/backing-field)が行えるためです。 これは、子エンティティや値オブジェクトのコレクションを保護する場合に役立ちます。 この機能拡張によって、プロパティではなく簡単なプライベート フィールドを使用できます。また、パブリック メソッドでフィールド コレクションへの更新を実装し、AsReadOnly メソッドを使用して読み取り専用アクセスを提供できます。
 
-DDD では、エンティティのメソッド (またはコンストラクター) だけをとおしてエンティティを更新して、不変条件とデータの整合性を制御し、こうしてプロパティが get アクセサーによってのみ定義されることが望まれます。 プロパティは、プライベート フィールドによってサポートされます。 プライベート メンバーには、クラス内からのみアクセスできます。 ただし、1 つ例外があり、EF Core ではこれらのフィールドも設定する必要があります (適切な値でオブジェクトが返せるようにするため)。
+DDD では、エンティティのメソッド (またはコンストラクター) だけをとおしてエンティティを更新して、不変条件とデータの整合性を制御し、こうしてプロパティが get アクセサーによってのみ定義されることが望まれます。 プロパティは、プライベート フィールドによってサポートされます。 プライベート メンバーには、クラス内からのみアクセスできます。 ただし、1 つ例外があり、EF Core ではこれらのフィールドも設定する必要があります (適切な値でオブジェクトを返せるようにするため)。
 
 ### <a name="map-properties-with-only-get-accessors-to-the-fields-in-the-database-table"></a>get アクセサーのみでプロパティをデータベース テーブル内のフィールドにマッピングする
 
@@ -169,14 +167,14 @@ EF Core 1.1 以降の機能で列をフィールドにマップすれば、プ�
 ### <a name="additional-resources"></a>その他の技術情報
 
 - **Vaughn Vernon。DDD および Entity Framework による集約のモデル化。** これは、Entity Framework Core では*ない*ことにご注意ください。 \
-  [*https://vaughnvernon.co/?p=879*](https://vaughnvernon.co/?p=879)
+  <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
-- **Julie Lerman。ドメイン駆動設計のコーディング: データを重視する開発者のためのヒント** \
-  [*https://msdn.microsoft.com/magazine/dn342868.aspx*](https://msdn.microsoft.com/en-us/magazine/dn342868.aspx)
+- **Julie Lerman。データ ポイント - ドメイン駆動設計のコーディング:データを重視する開発者のためのヒント** \
+  <https://msdn.microsoft.com/magazine/dn342868.aspx>
 
 - **Udi Dahan。完全にカプセル化されたドメイン モデルを作成する方法** \
-  [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
+  <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
->[!div class="step-by-step"]
->[前へ](microservice-domain-model.md)
->[次へ](seedwork-domain-model-base-classes-interfaces.md)
+> [!div class="step-by-step"]
+> [前へ](microservice-domain-model.md)
+> [次へ](seedwork-domain-model-base-classes-interfaces.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
-ms.openlocfilehash: cfc77ff3b030ffebf52feab0190f81fc4e581cf9
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: bb3f35f17b2dd451b41035c8e34f7b3a886a26e8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878294"
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>DataAdapter を使用したバッチ操作の実行
 ADO.NET のバッチ サポートを利用すると、<xref:System.Data.Common.DataAdapter> は、<xref:System.Data.DataSet> または <xref:System.Data.DataTable> から INSERT、UPDATE、および DELETE の各操作を 1 操作ずつサーバーに送信するのではなく、グループ化してサーバーに送信できます。 こうすることで、サーバーへのラウンド トリップの回数が減少し、大幅なパフォーマンスの向上が期待できます。 バッチ更新は、SQL Server (<xref:System.Data.SqlClient>) および Oracle (<xref:System.Data.OracleClient>) の .NET データ プロバイダーでサポートされています。  
@@ -126,7 +126,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
 ```  
   
 ## <a name="handling-batch-update-related-events-and-errors"></a>バッチ更新に関連するイベントおよびエラーの処理  
- **DataAdapter**の 2 つの更新に関連するイベントがあります: **RowUpdating**と**RowUpdated**します。 以前のバージョンの ADO.NET では、バッチ処理が無効になっていると、処理された行ごとにこれらのイベントがそれぞれ生成されます。 **RowUpdating**の更新が行われる前に生成および**RowUpdated**データベースの更新が完了した後に生成されます。  
+ **DataAdapter**の 2 つの更新に関連するイベントがあります。**RowUpdating**と**RowUpdated**します。 以前のバージョンの ADO.NET では、バッチ処理が無効になっていると、処理された行ごとにこれらのイベントがそれぞれ生成されます。 **RowUpdating**の更新が行われる前に生成および**RowUpdated**データベースの更新が完了した後に生成されます。  
   
 ### <a name="event-behavior-changes-with-batch-updates"></a>バッチ更新とイベント動作の違い  
  バッチ処理が有効になっている場合、1 度のデータベース操作で複数の行が更新されます。 このため、`RowUpdated` イベントは処理された各行ごとに発生しますが、`RowUpdating` イベントは各バッチ処理につき、1 つしか発生しません。 バッチ処理が無効になっている場合、1 対 1 のインターリーブを伴う 2 つのイベントが発生します。つまり、1 つの行に対し、`RowUpdating` イベントが 1 つ、`RowUpdated` イベントが 1 つ発生します。すべての行が処理されるまで、次の行に対して `RowUpdating` イベントが 1 つ、`RowUpdated` イベントが 1 つ発生します。  
@@ -141,8 +141,9 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
   
  バッチ処理の実行に対してサポートされる SQL 構成は、データ プロバイダーとバックエンド データベースが決定します。 サポートされていないステートメントが実行時に送信されると、例外がスローされる場合があります。  
   
-## <a name="see-also"></a>関連項目  
- [DataAdapter と DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [DataAdapter によるデータ ソースの更新](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
- [DataAdapter のイベント処理](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [DataAdapter と DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [DataAdapter によるデータ ソースの更新](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
+- [DataAdapter のイベント処理](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: XML ツリーのクエリ (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2e35c1ab-08c8-4378-9ca8-8ff344756eda
-ms.openlocfilehash: e26ff23d5278bcaaeb2c8e26303c2380bbb1f1e9
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 0d3855a562ce5ec43b28fba21b2ab4db0583a2d3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024639"
 ---
 # <a name="querying-xml-trees-visual-basic"></a>XML ツリーのクエリ (Visual Basic)
 ここでは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クエリの例について説明します。  
@@ -26,6 +26,7 @@ ms.locfileid: "43253931"
 |[LINQ to XML XPath ユーザー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)|多くの XPath 式と対応する [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の式について説明します。|  
 |[(Visual Basic) の XML の純粋関数型変換](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)|関数型のプログラミング形式でクエリを記述する簡単なチュートリアルについて説明します。|  
   
-## <a name="see-also"></a>関連項目  
- [プログラミング ガイド (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)  
- [Visual Basic の LINQ の概要](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+## <a name="see-also"></a>関連項目
+
+- [プログラミング ガイド (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+- [Visual Basic の LINQ の概要](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)

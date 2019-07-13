@@ -1,15 +1,15 @@
 ---
-title: '&lt;serviceDiscovery&gt;'
+title: <serviceDiscovery>
 ms.date: 03/30/2017
 ms.assetid: a3c68a4a-fc95-43c5-aacb-785936c0cf39
-ms.openlocfilehash: 2b3061274ef670ccd672c3155ca7285d567834bd
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 54a9833f56927568af711a103bd3831b767711e4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788415"
 ---
-# <a name="ltservicediscoverygt"></a>&lt;serviceDiscovery&gt;
+# <a name="servicediscovery"></a>\<serviceDiscovery >
 サービス エンドポイントの探索可能性を指定します。  
   
  \<system.ServiceModel >  
@@ -49,8 +49,8 @@ ms.locfileid: "54146902"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)|アナウンス エンドポイントのコレクション。 このセクションを使用して、アナウンス メッセージの送信に使用するエンドポイントを指定します。|  
-|[\<discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)|探索エンドポイントのコレクション。 このセクションを使用して、探索メッセージをリッスンするエンドポイントを指定します。|  
+|[\<announcementEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)|アナウンス エンドポイントのコレクション。 このセクションを使用して、アナウンス メッセージの送信に使用するエンドポイントを指定します。|  
+|[\<discoveryEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)|探索エンドポイントのコレクション。 このセクションを使用して、探索メッセージをリッスンするエンドポイントを指定します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -85,5 +85,6 @@ ms.locfileid: "54146902"
 </behaviors>
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>

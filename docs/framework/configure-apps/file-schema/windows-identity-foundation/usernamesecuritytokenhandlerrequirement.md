@@ -1,23 +1,23 @@
 ---
-title: '&lt;userNameSecurityTokenHandlerRequirement&gt;'
+title: <userNameSecurityTokenHandlerRequirement>
 ms.date: 03/30/2017
 ms.assetid: 6ec3bac1-b014-49ae-843c-c54518cb709a
 author: BrucePerlerMS
-ms.openlocfilehash: dfcaad8b150321fda2a86e601bf57204cbdc1a0e
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 18769794da8528f085c567264827db5aa6b214f1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790456"
 ---
-# <a name="ltusernamesecuritytokenhandlerrequirementgt"></a>&lt;userNameSecurityTokenHandlerRequirement&gt;
+# <a name="usernamesecuritytokenhandlerrequirement"></a>\<userNameSecurityTokenHandlerRequirement>
 構成を提供、<xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>クラスまたは派生クラス。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
 \<securityTokenHandlers>  
 \<add>  
-\<userNameSecurityTokenHandlerRequirement >  
+\<userNameSecurityTokenHandlerRequirement>  
   
 ## <a name="syntax"></a>構文  
   

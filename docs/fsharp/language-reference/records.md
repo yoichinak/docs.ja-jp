@@ -1,17 +1,17 @@
 ---
 title: レコード
 description: 学習方法F#レコードはオプションでメンバーの名前付きの値の単純な集計を表します。
-ms.date: 05/16/2016
-ms.openlocfilehash: a499755383654ddaf76af12776ee93f27834b7b0
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.date: 06/09/2019
+ms.openlocfilehash: cfb8de8272b479571119ae4cf91ea1d6fd5db73c
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656142"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816194"
 ---
 # <a name="records"></a>レコード
 
-レコードは、名前付きの値の単純な集合を表しており、オプションでメンバーを含みます。  以降でF#4.1、構造体または参照型になることができますか。  これが、既定では参照型です。
+レコードは、名前付きの値の単純な集合を表しており、オプションでメンバーを含みます。 構造体または参照型かできます。  これが、既定では参照型です。
 
 ## <a name="syntax"></a>構文
 

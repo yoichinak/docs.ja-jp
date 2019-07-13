@@ -7,23 +7,23 @@ helpviewer_keywords:
 - ListBox control [WPF]
 - controls [WPF], ListBox
 ms.assetid: b91bb352-4f51-44e0-9017-a041f216c852
-ms.openlocfilehash: 5363cc3a6939b829a7cde0a87b096932556fc5bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69f93b902fc3c35749871a187e57d45a404c6602
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766985"
 ---
 # <a name="listbox"></a>ListBox
-A<xref:System.Windows.Controls.ListBox>コントロールには、選択可能な項目のリストでユーザーが用意されています。  
+A<xref:System.Windows.Controls.ListBox>コントロールが選択可能な項目の一覧をユーザーに提供します。  
   
- 次の図は、一般的な<xref:System.Windows.Controls.ListBox>します。  
+ 次の図は、一般的な示します<xref:System.Windows.Controls.ListBox>します。  
   
- ![ListBox スクリーン ショット](../../../../docs/framework/wpf/controls/media/ss-ctl-listbox.gif "SS_CTL_listbox")  
-一般的な ListBox  
+ ![ListBox スクリーン ショット](./media/ss-ctl-listbox.gif "SS_CTL_listbox")  
+一般的なリスト ボックス  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [方法トピック](../../../../docs/framework/wpf/controls/listbox-how-to-topics.md)  
+ [方法トピック](listbox-how-to-topics.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.ListBox>  

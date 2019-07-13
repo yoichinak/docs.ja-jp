@@ -7,18 +7,18 @@ helpviewer_keywords:
 - controls [WPF], DockPanel
 - DockPanel control [WPF]
 ms.assetid: 8d3d290b-d38c-47d0-918e-cee2baeb92ae
-ms.openlocfilehash: dd50045b7f0da350a75157d8e17e6c41cade78c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 92dc0d9982e8ef92f4aa99e2bdd694a8585237cf
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911873"
 ---
 # <a name="dockpanel"></a>DockPanel
-<xref:System.Windows.Controls.DockPanel>要素をレイアウト コンテナーの端にある子コンテンツの配置に使用します。  
+<xref:System.Windows.Controls.DockPanel>要素はレイアウト コンテナーの端に沿って子コンテンツの配置に使用します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [方法トピック](../../../../docs/framework/wpf/controls/dockpanel-how-to-topics.md)  
+ [方法トピック](dockpanel-how-to-topics.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.Panel>  
@@ -36,8 +36,8 @@ ms.locfileid: "33550814"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>関連項目  
- [レイアウト](../../../../docs/framework/wpf/advanced/layout.md)  
+ [レイアウト](../advanced/layout.md)  
   
- [チュートリアル: 初めての WPF デスクトップ アプリケーション](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [チュートリアル: 初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer の概要](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer の概要](scrollviewer-overview.md)

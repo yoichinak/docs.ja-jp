@@ -1,23 +1,23 @@
 ---
-title: '&lt;audienceUris&gt;'
+title: <audienceUris>
 ms.date: 03/30/2017
 ms.assetid: 7a3d8515-d756-4afe-a22d-07cbe2217ee3
 author: BrucePerlerMS
-ms.openlocfilehash: af138a4da49a48ed43e1bc8f2c2c81c56892feed
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 556c444d5e48e27036c4b49338f6e70de7ef5c5d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48034481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61750749"
 ---
-# <a name="ltaudienceurisgt"></a>&lt;audienceUris&gt;
+# <a name="audienceuris"></a>\<audienceUris>
 利用者 (RP) の許容可能な識別子 Uri のセットを指定します。 許可された対象 Uri のいずれかのスコープがない限り、トークンは受け入れられません。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
 \<securityTokenHandlers>  
-\<securityTokenHandlerConfiguration >  
-\<audienceUris >  
+\<securityTokenHandlerConfiguration>  
+\<audienceUris>  
   
 ## <a name="syntax"></a>構文  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48034481"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|トークン ハンドラー コレクションのセキュリティの構成を提供します。|  
+|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|トークン ハンドラー コレクションのセキュリティの構成を提供します。|  
   
 ## <a name="remarks"></a>Remarks  
  既定では、コレクションが空です。使用して、 `<add>`、 `<clear>`、および`<remove>`コレクションを変更する要素。 <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>オブジェクトでいずれかを構成する対象ユーザー URI のコレクション内の値が対象ユーザー URI 制限を許可されている使用<xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement>オブジェクト。  

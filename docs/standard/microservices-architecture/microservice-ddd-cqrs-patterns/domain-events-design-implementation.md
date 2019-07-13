@@ -1,15 +1,13 @@
 ---
 title: 'ドメイン イベント:  設計と実装'
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | 集約間の通信を確立するための重要な概念であるドメイン イベントの詳細を表示する。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: fc71e661a5fd2de2a69da36df0fc60616b149802
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5f7084ef638a1d04e0050eab447cb8903c973f45
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127850"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875934"
 ---
 # <a name="domain-events-design-and-implementation"></a>ドメイン イベント: 設計と実装
 
@@ -31,7 +29,7 @@ ms.locfileid: "53127850"
 
 データベース トランザクションと同様に、ドメイン イベントに関連付けられているすべての操作が正常に完了するか、1 つも完了しないようにすることが重要です。
 
-ドメイン イベントはメッセージング スタイルのイベントに似ていますが、重要な相違点が 1 つあります。 実際のメッセージング、メッセージ キュー、メッセージ ブローカー、または AMPQ を使うサービス バスでは、メッセージは常に非同期に送信され、プロセスとマシンの間で通信されます。 これは、複数の境界コンテキスト、マイクロサービス、または異なるアプリケーションを統合する場合に役立ちます。 一方、ドメイン イベントでは、現在実行しているドメイン操作からイベントが生成されて、同じドメイン内で副作用が発生することが望まれます。
+ドメイン イベントはメッセージング スタイルのイベントに似ていますが、重要な相違点が 1 つあります。 実際のメッセージング、メッセージ キュー、メッセージ ブローカー、または AMQP を使うサービス バスでは、メッセージは常に非同期に送信され、プロセスとマシンの間で通信されます。 これは、複数の境界コンテキスト、マイクロサービス、または異なるアプリケーションを統合する場合に役立ちます。 一方、ドメイン イベントでは、現在実行しているドメイン操作からイベントが生成されて、同じドメイン内で副作用が発生することが望まれます。
 
 ドメイン イベントとその副作用 (その後にトリガーされる、イベント ハンドラーによって管理されるアクション) は、ほぼ瞬時に (通常はインプロセス) 同じドメイン内で発生する必要があります。 したがって、ドメイン イベントは同期でも非同期でもかまいません。 ただし、統合イベントは常に非同期でなければなりません。
 
@@ -132,13 +130,13 @@ public class OrderStartedDomainEvent : INotification
 
 次に知りたいことは、関連するイベント ハンドラーに届くようにドメイン イベントを生成する方法です。 複数の方法があります。
 
-Udi Dahan がもともと提案しているのは (たとえば、「[Domain Events – Take 2](http://udidahan.com/2008/08/25/domain-events-take-2/)」(ドメイン イベント – テイク 2 などの複数の関連する投稿を参照))、イベントの管理と生成に静的クラスを使う方法です。 これには、`DomainEvents.Raise(Event myEvent)` のような構文を使用し、呼び出されるとすぐにドメイン イベントを生成する DomainEvents という名前の静的クラスが含まれる場合があります。 Jimmy Bogard も、ブログ投稿「[Strengthening your domain: Domain Events](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)」(ドメインの強化: ドメイン イベント) で同様のアプローチを推奨しています。
+Udi Dahan がもともと提案しているのは (たとえば、「[Domain Events – Take 2](http://udidahan.com/2008/08/25/domain-events-take-2/)」(ドメイン イベント – テイク 2 などの複数の関連する投稿を参照))、イベントの管理と生成に静的クラスを使う方法です。 これには、`DomainEvents.Raise(Event myEvent)` のような構文を使用し、呼び出されるとすぐにドメイン イベントを生成する DomainEvents という名前の静的クラスが含まれる場合があります。 Jimmy Bogard も、ブログ投稿「[Strengthening your domain:Domain Events](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)」(ドメインの強化: ドメイン イベント) で同様のアプローチを推奨しています。
 
 ただし、ドメイン イベント クラスが静的である場合は、ハンドラーにもすぐにディスパッチにします。 これにより、副作用のロジックを含むイベント ハンドラーがイベント生成直後に実行されるため、テストとデバッグが難しくなります。 テストとデバッグを行うときは、現在の集約クラスで発生していることだけに注目する必要があります。他の集約やアプリケーション ロジックに関連する副作用に対する他のイベント ハンドラーに突然リダイレクトされるのは困ります。 このような理由から、次のセクションで説明する他のアプローチが考案されています。
 
 #### <a name="the-deferred-approach-to-raise-and-dispatch-events"></a>イベントを生成し、ディスパッチする遅延アプローチ
 
-ドメイン イベント ハンドラーにすぐにディスパッチするよりよい方法は、ドメイン イベントをコレクションに追加した後、トランザクションを (EF の SaveChanges で) コミットする "*直前*" または "*直**後*" に、それらのドメイン イベントをディスパッチすることです (このアプローチについては、Jimmy Bogard の「[A better domain events pattern](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)」(よりよいドメイン イベント パターン) を参照)。
+ドメイン イベント ハンドラーにすぐにディスパッチするよりよい方法は、ドメイン イベントをコレクションに追加した後、トランザクションを (EF の SaveChanges で) コミットする "*直前*" または "*直* *後*" に、それらのドメイン イベントをディスパッチすることです (このアプローチについては、Jimmy Bogard の「[A better domain events pattern](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)」(よりよいドメイン イベント パターン) を参照)。
 
 ドメイン イベントの送信をトランザクションのコミットの直前または直後のどちらにするかは、副作用を同じトランザクションまたは別のトランザクションのどちらに含めればよいかに影響するので、重要な決定です。 後者の場合は、複数の集約の間の最終的な整合性に対処する必要があります。 これについては、次のセクションで説明します。
 
@@ -218,7 +216,7 @@ public class OrderingContext : DbContext, IUnitOfWork
 
 > 複数の集約に関係するルールは、常に最新の状態であることを期待できません。 イベント処理、バッチ処理、または他の更新メカニズムにより、他の依存関係はある特定の時間内に解決できます。 (128 ページ)
 
-Vaughn Vernon は、『[Effective Aggregate Design.Part II: Making Aggregates Work Together](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)』(効果的な集約設計パート II: 集約処理の連携) で次のように書いています。
+Vaughn Vernon は、『[Effective Aggregate Design.Part II:Making Aggregates Work Together](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)』(効果的な集約設計パート II: 集約処理の連携) で次のように書いています。
 
 > したがって、1 つの集約インスタンスでコマンドを実行するために、他のビジネス ルールを 1 つ以上の集約で実行する必要がある場合は、最終的な整合性を使います \[...\]。DDD モデルには最終的な整合性をサポートするための実用的な方法があります。 集約メソッドが発行したドメイン イベントは、1 つ以上の非同期サブスクライバーに時間内に配信されます。
 
@@ -347,37 +345,37 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 ## <a name="additional-resources"></a>その他の技術情報
 
 - **Greg Young。ドメイン イベントとは** \
-  [*http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/*](http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/)
+  <https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf#page=25>
 
 - **Jan Stenberg。ドメイン イベントと最終的な整合性** \
-  [*https://www.infoq.com/news/2015/09/domain-events-consistency*](https://www.infoq.com/news/2015/09/domain-events-consistency)
+  <https://www.infoq.com/news/2015/09/domain-events-consistency>
 
 - **Jimmy Bogard。よりよいドメイン イベント パターン** \
-  [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
+  <https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/>
 
-- **Vaughn Vernon。効果的な集約設計 - パート II: 集約処理の連携** \
-  [*https://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
+- **Vaughn Vernon。効果的な集約設計パート II:集約処理の連携** \
+  [https://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
-- **Jimmy Bogard。ドメインの強化: ドメイン イベント** \
-  [*https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/*](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)
+- **Jimmy Bogard。ドメインの強化:ドメイン イベント** \
+  <https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/>
 
 - **Tony Truong。ドメイン イベント パターンの例** \
-  [*https://www.tonytruong.net/domain-events-pattern-example/*](https://www.tonytruong.net/domain-events-pattern-example/)
+  <https://www.tonytruong.net/domain-events-pattern-example/>
 
 - **Udi Dahan。完全にカプセル化されたドメイン モデルを作成する方法** \
-  [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
+  <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
 - **Udi Dahan。ドメイン イベント – テイク 2** \
-  [*http://udidahan.com/2008/08/25/domain-events-take-2/*](http://udidahan.com/2008/08/25/domain-events-take-2/%20)
+  <http://udidahan.com/2008/08/25/domain-events-take-2/>
 
 - **Udi Dahan。ドメイン イベント – 救済** \
-  [*http://udidahan.com/2009/06/14/domain-events-salvation/*](http://udidahan.com/2009/06/14/domain-events-salvation/)
+  <http://udidahan.com/2009/06/14/domain-events-salvation/>
 
 - **Jan Kronquist。ドメイン イベントを発行しないで返す** \
-  [*https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/*](https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/)
+  <https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/>
 
 - **Cesar de la Torre。DDD およびマイクロサービス アーキテクチャでのドメイン イベントとDDD の統合イベントとマイクロサービス アーキテクチャ** \
-  [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/)
+  <https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/>
 
 >[!div class="step-by-step"]
 >[前へ](client-side-validation.md)

@@ -6,12 +6,12 @@ ms.date: 10/04/2018
 dev_langs:
 - fsharp
 ms.custom: seodec18
-ms.openlocfilehash: e919da8910129be027ff7e2dbed8c4564738e023
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 926e47c277c8649627482a8036ca3704be142f33
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241763"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631878"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>dotnet テストと NUnit を使用した .NET Core での単体テスト F# ライブラリ
 
@@ -45,7 +45,7 @@ dotnet new sln
 dotnet new classlib -lang F#
 ```
 
-テスト駆動開発 (TDD) を行うには、計算サービスのエラーが発生する実装を作成します。
+計算サービスのエラーが発生する実装を作成します。
 
 ```fsharp
 module MyMath =
@@ -116,7 +116,7 @@ dotnet sln add .\MathService.Tests\MathService.Tests.fsproj
 
 ## <a name="creating-the-first-test"></a>最初のテストの作成
 
-TDD のアプローチでは、失敗するテストを 1 つ記述することを要求し、それを渡して、プロセスを繰り返します。 *UnitTest1.fs* を開き、次のコードを追加します。
+失敗するテストを 1 つ作成してそれを合格させる、というプロセスを繰り返します。 *UnitTest1.fs* を開き、次のコードを追加します。
 
 ```fsharp
 namespace MathService.Tests

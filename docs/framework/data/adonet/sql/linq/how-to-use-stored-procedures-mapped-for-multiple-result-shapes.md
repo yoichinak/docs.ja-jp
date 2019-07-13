@@ -1,20 +1,21 @@
 ---
-title: '方法 : 複数の結果形状が割り当てられたストアド プロシージャを使用する'
+title: '方法: 複数の結果形状が割り当てられたストアド プロシージャを使用する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c2b84dfe-7fec-489a-92de-45215cec4518
-ms.openlocfilehash: 03a003bd5b09ae19b01dcc9880137661ba6fccae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 406e44a0ee3b086ceb47b25a80c4fd0ff5a92607
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902656"
 ---
-# <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>方法 : 複数の結果形状が割り当てられたストアド プロシージャを使用する
+# <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>方法: 複数の結果形状が割り当てられたストアド プロシージャを使用する
 複数の結果形状を返すことができるストアド プロシージャの場合、戻り値の型を単一の射影形状として厳密に型指定することはできません。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]すべての可能性のある射影型を生成することができます、戻されます順序を知ることはできません。  
   
- このシナリオと対照的なのが、複数の結果形状をシーケンシャルに生成するストアド プロシージャです。 詳細については、次を参照してください。[する方法: を使用してストアド プロシージャ用にマップ結果形状をシーケンシャル](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md)です。  
+ このシナリオと対照的なのが、複数の結果形状をシーケンシャルに生成するストアド プロシージャです。 詳細については、「[方法 :シーケンシャルな結果形状が割り当てられたストアド プロシージャを使用して、](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md)します。  
   
  複数の結果型を返すストアド プロシージャには、プロシージャが返す可能性のある一連の型を示す <xref:System.Data.Linq.Mapping.ResultTypeAttribute> 属性を適用します。  
   
@@ -42,5 +43,6 @@ else if(@shape = 2)
  [!code-csharp[DLinqSprox#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/Program.cs#5)]
  [!code-vb[DLinqSprox#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/Module1.vb#5)]  
   
-## <a name="see-also"></a>関連項目  
- [ストアド プロシージャ](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+## <a name="see-also"></a>関連項目
+
+- [ストアド プロシージャ](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

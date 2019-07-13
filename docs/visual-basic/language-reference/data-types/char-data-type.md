@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
-ms.openlocfilehash: 09b0162068bc068bd77612816626897ec4a151d9
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 6600b3b2945120f2f24e14d4cc898cd814366045
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911968"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647070"
 ---
 # <a name="char-data-type-visual-basic"></a>文字型 (Char) (Visual Basic)
 0 から 65535 まで符号なし 16 ビット (2 バイト) コード ポイントを保持します。 各*コード ポイント*、または文字コードを 1 つの Unicode 文字を表します。  
@@ -47,25 +47,26 @@ charVar = "Z"C
   
 ## <a name="programming-tips"></a>プログラミングのヒント  
   
--   **負の数。** `Char` 符号なしの型は、負の値を表すことはできません。 いずれの場合も、行わないで`Char`数値の値を保持します。  
+- **負の数。** `Char` 符号なしの型は、負の値を表すことはできません。 いずれの場合も、行わないで`Char`数値の値を保持します。  
   
--   **相互運用の考慮事項。** 例のオートメーションまたは COM オブジェクト、.NET framework では、作成されていないコンポーネントを使用する場合、他の環境では文字型の別のデータ幅 (8 ビット) ことに注意してください。 このようなコンポーネントに 8 ビットの引数を渡すと場合、宣言として`Byte`の代わりに`Char`で新しい Visual Basic コードです。  
+- **相互運用の考慮事項。** 例のオートメーションまたは COM オブジェクト、.NET framework では、作成されていないコンポーネントを使用する場合、他の環境では文字型の別のデータ幅 (8 ビット) ことに注意してください。 このようなコンポーネントに 8 ビットの引数を渡すと場合、宣言として`Byte`の代わりに`Char`で新しい Visual Basic コードです。  
   
--   **拡大します。** `Char`拡大変換後のデータ型`String`します。 つまり、変換できる`Char`に`String`は発生しませんし、<xref:System.OverflowException?displayProperty=nameWithType>エラー。  
+- **拡大します。** `Char`拡大変換後のデータ型`String`します。 つまり、変換できる`Char`に`String`は発生しませんし、<xref:System.OverflowException?displayProperty=nameWithType>エラー。  
   
--   **型宣言文字。** リテラルの型文字を付加する`C`1 文字の文字列にリテラルを強制的に、`Char`データ型。 `Char` 識別子の型文字がありません。  
+- **型宣言文字。** リテラルの型文字を付加する`C`1 文字の文字列にリテラルを強制的に、`Char`データ型。 `Char` 識別子の型文字がありません。  
   
--   **フレームワークの型。** .NET Framework において対応する型は、<xref:System.Char?displayProperty=nameWithType> 構造体です。  
+- **フレームワークの型。** .NET Framework において対応する型は、<xref:System.Char?displayProperty=nameWithType> 構造体です。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Char?displayProperty=nameWithType>  
- <xref:Microsoft.VisualBasic.Strings.Asc%2A>  
- <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
- <xref:Microsoft.VisualBasic.Strings.Chr%2A>  
- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>  
- [データの種類](../../../visual-basic/language-reference/data-types/index.md)  
- [String データ型](../../../visual-basic/language-reference/data-types/string-data-type.md)  
- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [方法 : 符号なしの型を使用する Windows の機能を呼び出す](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Char?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Strings.Asc%2A>
+- <xref:Microsoft.VisualBasic.Strings.AscW%2A>
+- <xref:Microsoft.VisualBasic.Strings.Chr%2A>
+- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>
+- [データの種類](../../../visual-basic/language-reference/data-types/index.md)
+- [String データ型](../../../visual-basic/language-reference/data-types/string-data-type.md)
+- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [方法: 符号なしの型を使用する Windows の機能を呼び出す](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

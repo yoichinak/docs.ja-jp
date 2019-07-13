@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 39a249108d10e5dc382775378e2d6b84bba87356
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 687fdd0735e6cb0f3a727c8a2da3cf33bffb6a39
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408087"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738985"
 ---
-# <a name="efnstacktrace-function"></a>_EFN_StackTrace 関数
-マネージ スタック トレースのテキスト表現および `CONTEXT` レコードの配列 (アンマネージ コードとマネージ コードの間の各移行につき 1 つ) を提供します。  
+# <a name="efnstacktrace-function"></a>\_EFN\_StackTrace 関数
+マネージド スタック トレースのテキスト表現および `CONTEXT` レコードの配列 (アンマネージド コードとマネージド コードの間の各移行につき 1 つ) を提供します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CALLBACK _EFN_StackTrace(  
     [in]  PDEBUG_CLIENT  Client,  
     [out] WCHAR          wszTextOut[],  
@@ -40,7 +40,7 @@ HRESULT CALLBACK _EFN_StackTrace(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `Client`  
  [in]デバッグ中のクライアント。  
   
@@ -48,10 +48,10 @@ HRESULT CALLBACK _EFN_StackTrace(
  [out]スタック トレースのテキスト表現。  
   
  `puiTextLength`  
- [out]文字数へのポインター`wszTextOut`です。  
+ [out]文字数へのポインター`wszTextOut`します。  
   
  `pTransitionContexts`  
- [out]遷移のコンテキストの配列です。  
+ [out]コンテキストの切り替えの配列。  
   
  `puiTransitionContextCount`  
  [out]配列内の遷移のコンテキストの数へのポインター。  
@@ -60,22 +60,22 @@ HRESULT CALLBACK _EFN_StackTrace(
  [in]Context 構造体のサイズ。  
   
  `Flags`  
- [in]0 または SOS_STACKTRACE_SHOWADDRESSES (0x01) のいずれかに設定する EBP レジスタとそれぞれの前に enter スタック ポインター (ESP) を表示`module!functionname`行です。  
+ [in]0 または SOS_STACKTRACE_SHOWADDRESSES (0x01) のいずれかに設定すると、EBP レジスタとそれぞれの前に入力スタック ポインター (ESP) を表示する`module!functionname`行。  
   
-## <a name="remarks"></a>コメント  
- `_EFN_StackTrace`構造体は、WinDbg プログラム インターフェイスから呼び出すことができます。 パラメーターは、次のように使用されます。  
+## <a name="remarks"></a>Remarks  
+ `_EFN_StackTrace`構造体は、WinDbg プログラマティック インターフェイスから呼び出すことができます。 パラメーターは、次のように使用されます。  
   
--   場合`wszTextOut`が null と`puiTextLength`が null でない関数、文字列の長さを返しますで`puiTextLength`です。  
+- 場合`wszTextOut`が null と`puiTextLength`が null でない関数は、返す文字列の長さで`puiTextLength`します。  
   
--   場合`wszTextOut`が null でない内のテキストは、関数には格納`wszTextOut`によって示される位置まで`puiTextLength`です。 バッファーの長さが不足している場合、バッファー、または返します E_OUTOFMEMORY で十分な空き領域が認識されたかどうかを正常に返します。  
+- 場合`wszTextOut`が null でないテキストでは、関数には格納`wszTextOut`によって示される位置まで`puiTextLength`します。 バッファーの長さが不足している場合、バッファー、または返します E_OUTOFMEMORY で十分な空き領域が認識されたかどうかを正常に返します。  
   
--   場合、関数の遷移の部分は無視されます`pTransitionContexts`と`puiTransitionContextCount`が両方とも null です。 この場合、関数は、関数名のみのテキスト出力を持つ呼び出し元を提供します。  
+- 場合、関数の遷移の部分は無視されます`pTransitionContexts`と`puiTransitionContextCount`はどちらも null です。 この場合、関数は、関数名のみのテキスト出力を持つ呼び出し元を提供します。  
   
--   場合`pTransitionContexts`が null と`puiTransitionContextCount`が null でない関数、必要なエントリ数を返しますのコンテキストで`puiTransitionContextCount`です。  
+- 場合`pTransitionContexts`が null と`puiTransitionContextCount`が null でない関数返しますコンテキスト エントリのために必要な数`puiTransitionContextCount`します。  
   
--   場合`pTransitionContexts`が null でない関数として扱われます長さの構造体の配列`puiTransitionContextCount`です。 構造体のサイズである`uiSizeOfContext`のサイズを指定する必要があります[SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md)または`CONTEXT`アーキテクチャに対応します。  
+- 場合`pTransitionContexts`が null でない関数として扱われます長さの構造体の配列`puiTransitionContextCount`します。 構造体のサイズがで指定された`uiSizeOfContext`のサイズを指定する必要があります[SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md)または`CONTEXT`のアーキテクチャ。  
   
--   `wszTextOut` 次の形式で書き込まれます。  
+- `wszTextOut` 次の形式で書き込まれます。  
   
     ```  
     "<ModuleName>!<Function Name>[+<offset in hex>]  
@@ -84,22 +84,23 @@ HRESULT CALLBACK _EFN_StackTrace(
     ..."  
     ```  
   
--   16 進数でオフセットが「0x0」の場合、オフセットは書き込まれません。  
+- 16 進数でオフセットが「0x0」の場合、オフセットは書き込まれません。  
   
--   ない場合マネージ コードのスレッドで現在のコンテキストで、SOS_E_NOMANAGEDCODE を返します。  
+- コードがないマネージ スレッドの現在のコンテキストで、関数は SOS_E_NOMANAGEDCODE を返します。  
   
--   `Flags`パラメーターが 0 または前にある各 EBP と ESP を表示する SOS_STACKTRACE_SHOWADDRESSES`module!functionname`行です。 既定では、これは 0 です。  
+- `Flags`パラメーターが 0 またはそれぞれの前に、EBP と ESP を表示する SOS_STACKTRACE_SHOWADDRESSES`module!functionname`行。 既定では、これは 0 です。  
   
     ```  
     #define SOS_STACKTRACE_SHOWADDRESSES   0x00000001  
     ```  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** SOS_Stacktrace.h  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [デバッグ グローバル静的関数](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a>関連項目
+
+- [デバッグ グローバル静的関数](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

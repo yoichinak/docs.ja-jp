@@ -2,12 +2,12 @@
 title: 関数
 description: 関数の F# と、F# が共通の関数型プログラミング構成要素をどのようにがサポートする方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 6e9ef916388745d2dd6874295d06dca656971b3f
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: f68a36de7af2bdb803b0b633929aa472806f61aa
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610919"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645399"
 ---
 # <a name="functions"></a>関数
 

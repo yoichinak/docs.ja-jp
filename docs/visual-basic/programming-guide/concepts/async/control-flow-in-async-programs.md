@@ -2,12 +2,12 @@
 title: (Visual Basic) の非同期プログラムにおける制御フロー
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
-ms.openlocfilehash: 368422338f6452bf5dbe968d4798bc0d5e937c92
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c6afd7e166e08ea30637bd3f05026ef71d781ab6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195217"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624759"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>(Visual Basic) の非同期プログラムにおける制御フロー
 `Async` キーワードと `Await` キーワードを使用すると、非同期のプログラムの作成と保守をより簡単に行えます。 ただし、プログラムがどのように動作するかを理解しないと、その結果は予想に反するものになる場合があります。 このトピックでは、簡単な非同期プログラムによる制御フローをトレースして、制御があるメソッドから別のメソッドに移るタイミングと、その都度転送される情報について説明します。  
@@ -19,9 +19,9 @@ ms.locfileid: "50195217"
   
  次の例では、非同期メソッドを使用して、指定した Web サイトのコンテンツを文字列としてダウンロードし、その文字列の長さを表示します。 この例には、次の 2 つのメソッドが含まれています。  
   
--   `startButton_Click` を呼び出して結果を表示する `AccessTheWebAsync`。  
+- `startButton_Click` を呼び出して結果を表示する `AccessTheWebAsync`。  
   
--   Web サイトのコンテンツを文字列としてダウンロードして、その文字列の長さを返す `AccessTheWebAsync`。 `AccessTheWebAsync` は、非同期 <xref:System.Net.Http.HttpClient> メソッドである <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> を使用してコンテンツをダウンロードします。  
+- Web サイトのコンテンツを文字列としてダウンロードして、その文字列の長さを返す `AccessTheWebAsync`。 `AccessTheWebAsync` は、非同期 <xref:System.Net.Http.HttpClient> メソッドである <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> を使用してコンテンツをダウンロードします。  
   
  番号付き表示行はプログラム全体で重要なポイントを示し、プログラムがどのように実行され、マークされている各ポイントで何が発生するかを理解するために役立ちます。 表示行には「1」から「6」までのラベルが付けられています。 このラベルは、プログラムがこれらのコード行に到達する順序を表します。  
   
@@ -98,36 +98,36 @@ Length of the downloaded string: 33946.
 >  例を実行するには、Visual Studio 2012 以降と .NET Framework 4.5 をいる必要があります。 またはコンピューターにインストールされています。  
   
 ### <a name="download-the-program"></a>プログラムをダウンロードする  
- このトピックのアプリケーションは、「[非同期のサンプル: 非同期プログラムにおける制御フロー](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)」からダウンロードできます。 次の手順でプログラムを開いて実行します。  
+ このトピックのアプリケーションは、「[非同期のサンプル:非同期プログラムにおける制御フロー](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)」からダウンロードできます。 次の手順でプログラムを開いて実行します。  
   
-1.  ダウンロードしたファイルを解凍し、Visual Studio を開始します。  
+1. ダウンロードしたファイルを解凍し、Visual Studio を開始します。  
   
-2.  メニュー バーで **[ファイル]**、 **[開く]**、 **[プロジェクト/ソリューション]** の順に選択します。  
+2. メニュー バーで **[ファイル]**、 **[開く]**、 **[プロジェクト/ソリューション]** の順に選択します。  
   
-3.  解凍したサンプル コードが含まれるフォルダーに移動し、ソリューション (.sln) ファイルを開き、F5 キーを押してプロジェクトをビルドし、実行します。  
+3. 解凍したサンプル コードが含まれるフォルダーに移動し、ソリューション (.sln) ファイルを開き、F5 キーを押してプロジェクトをビルドし、実行します。  
   
 ### <a name="build-the-program-yourself"></a>プログラムを手動でビルドする  
  次の Windows Presentation Foundation (WPF) プロジェクトには、このトピックのコード例が含まれています。  
   
  このプロジェクトを実行するには、次の手順を実行します。  
   
-1.  Visual Studio を起動します。  
+1. Visual Studio を起動します。  
   
-2.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]** の順にクリックします。  
+2. メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]** の順にクリックします。  
   
      **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
-3.  **インストールされたテンプレート**ウィンドウで、選択**Visual Basic**を選び、 **WPF アプリケーション**プロジェクトの種類の一覧から。  
+3. **インストールされたテンプレート**ウィンドウで、選択**Visual Basic**を選び、 **WPF アプリケーション**プロジェクトの種類の一覧から。  
   
-4.  プロジェクトの名前として「`AsyncTracer`」と入力し、**[OK]** をクリックします。  
+4. プロジェクトの名前として「`AsyncTracer`」と入力し、**[OK]** をクリックします。  
   
      **ソリューション エクスプローラー**に新しいプロジェクトが表示されます。  
   
-5.  Visual Studio コード エディターで、 **[MainWindow.xaml]** タブをクリックします。  
+5. Visual Studio コード エディターで、 **[MainWindow.xaml]** タブをクリックします。  
   
      タブが表示されない場合は、**ソリューション エクスプローラー**で MainWindow.xaml のショートカット メニューを開き、**[コードの表示]** を選択します。  
   
-6.  MainWindow.xaml の **XAML** ビューで、コードを次のコードに置き換えます。  
+6. MainWindow.xaml の **XAML** ビューで、コードを次のコードに置き換えます。  
   
     ```vb  
     <Window  
@@ -145,9 +145,9 @@ Length of the downloaded string: 33946.
   
      テキスト ボックスとボタンを含む簡単なウィンドウが、MainWindow.xaml の**デザイン** ビューに表示されます。  
   
-7.  <xref:System.Net.Http> への参照を追加します。  
+7. <xref:System.Net.Http> への参照を追加します。  
   
-8.  **ソリューション エクスプ ローラー**MainWindow.xaml.vb のショートカット メニューを開き、選択し、**コードの表示**します。  
+8. **ソリューション エクスプ ローラー**MainWindow.xaml.vb のショートカット メニューを開き、選択し、**コードの表示**します。  
   
 9. MainWindow.xaml.vb でのコードを次のコードに置き換えます。  
   
@@ -358,8 +358,9 @@ Dim contentLength As Integer = Await getLengthTask
   
  ![手順 6.](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace-SIX")  
   
-## <a name="see-also"></a>関連項目  
- [Async および Await を使用した非同期プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
- [非同期の戻り値の型 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)  
- [チュートリアル: Async と Await を使用した Web へのアクセス (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [非同期のサンプル: 非同期プログラムにおける制御フロー (C# と Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)
+## <a name="see-also"></a>関連項目
+
+- [Async および Await を使用した非同期プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [非同期の戻り値の型 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
+- [チュートリアル: 非同期を使用して、Web にアクセスして、Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Async Sample:非同期プログラムにおける制御フロー (C# および Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

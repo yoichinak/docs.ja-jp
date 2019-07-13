@@ -1,15 +1,15 @@
 ---
 title: 継続的インテグレーション (CI) で .NET Core SDK とツールを使用する
 description: .NET Core SDK とそのツールをビルド サーバーで使用する方法に関する情報。
-author: guardrex
+author: mairaw
 ms.date: 05/18/2017
 ms.custom: seodec18
-ms.openlocfilehash: 4c651983bb900d000de37a0e413ef9ab0f7893c9
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 629b7a9e1f2b59981adb77ab4d3125be7036ff02
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611556"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66299968"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>継続的インテグレーション (CI) で .NET Core SDK とツールを使用する
 
@@ -153,7 +153,7 @@ install:
 
 Azure DevOps Services で手動セットアップ スクリプトを使用するには、新しいビルド定義を作成し、ビルド手順で実行するスクリプトを指定します。 これは Azure DevOps Services ユーザー インターフェイスを使用して実行できます。
 
-1. 最初に新しいビルド定義を作成します。 作成するビルドの種類を定義するためのオプションを指定する画面が表示されたら、**[空]** オプションを選択します。
+1. 最初に新しいビルド定義を作成します。 作成するビルドの種類を定義するためのオプションを指定する画面が表示されたら、 **[空]** オプションを選択します。
 
    ![ビルド定義で空を選択する](./media/using-ci-with-cli/select-empty-build-definition.png)
 
@@ -161,7 +161,7 @@ Azure DevOps Services で手動セットアップ スクリプトを使用する
 
    ![ビルド ステップの追加](./media/using-ci-with-cli/add-build-step.png)
 
-1. **[タスク カタログ]** が表示されます。 このカタログには、ビルドで使用するタスクが含まれています。 スクリプトがあるので、**PowerShell: Run a PowerShell スクリプト**の **[追加]** ボタンを選択します。
+1. **[タスク カタログ]** が表示されます。 このカタログには、ビルドで使用するタスクが含まれています。 スクリプトがあるので、 **[追加]** ボタンを **PowerShell:Run a PowerShell スクリプト**に選択します。
 
    ![PowerShell スクリプトの追加手順](./media/using-ci-with-cli/add-powershell-script.png)
 
@@ -177,4 +177,4 @@ Azure DevOps Services で手動セットアップ スクリプトを使用する
 
 ## <a name="see-also"></a>関連項目
 
-* [.NET ダウンロード - Linux](https://dotnet.microsoft.com/download?initial-os=linux)
+- [.NET ダウンロード - Linux](https://dotnet.microsoft.com/download?initial-os=linux)

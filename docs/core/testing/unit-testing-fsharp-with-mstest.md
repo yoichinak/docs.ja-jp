@@ -7,12 +7,12 @@ ms.date: 08/30/2017
 dev_langs:
 - fsharp
 ms.custom: seodec18
-ms.openlocfilehash: dacf820e8e49a337792fa927838fe4b262712e41
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1765c16cb55857b83a8206ae97327d0fd2809019
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240087"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747493"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>dotnet テストと MSTest を使用した .NET Core での単体テスト F# ライブラリ
 
@@ -30,7 +30,7 @@ ms.locfileid: "53240087"
     /MathService
 ```
 
-*MathService* を現在のディレクトリにし、[`dotnet new classlib -lang F#`](../tools/dotnet-new.md) を実行してソース プロジェクトを作成します。  テスト駆動開発 (TDD) を行うには、計算サービスのエラーが発生する実装を作成します。
+*MathService* を現在のディレクトリにし、[`dotnet new classlib -lang F#`](../tools/dotnet-new.md) を実行してソース プロジェクトを作成します。  計算サービスのエラーが発生する実装を作成します。
 
 ```fsharp
 module MyMath =
@@ -87,7 +87,7 @@ dotnet add reference ../MathService/MathService.fsproj
 
 ## <a name="creating-the-first-test"></a>最初のテストの作成
 
-TDD のアプローチでは、失敗するテストを 1 つ記述することを要求し、それを渡して、プロセスを繰り返します。 *Tests.fs* を開き、次のコードを追加します。
+失敗するテストを 1 つ作成してそれを合格させる、というプロセスを繰り返します。 *Tests.fs* を開き、次のコードを追加します。
 
 ```fsharp
 namespace MathService.Tests

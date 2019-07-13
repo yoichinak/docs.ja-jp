@@ -2,12 +2,12 @@
 title: WebContentTypeMapper のサンプル
 ms.date: 03/30/2017
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-ms.openlocfilehash: 572bea9fc38668d554ef467be7689ac01b652fb8
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 381fc4a3084b1a2620384a04de85b9085e02ae16
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006300"
 ---
 # <a name="webcontenttypemapper-sample"></a>WebContentTypeMapper のサンプル
 このサンプルでは、Windows Communication Foundation (WCF) メッセージの本文の形式を新しいコンテンツ タイプをマップする方法を示します。  
@@ -54,11 +54,11 @@ public class JsonContentTypeMapper : WebContentTypeMapper
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
+1. 実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
-2.  」の説明に従って、ソリューション WebContentTypeMapperSample.sln をビルド[Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
+2. 」の説明に従って、ソリューション WebContentTypeMapperSample.sln をビルド[Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
   
-3.  移動します`http://localhost/ServiceModelSamples/JCTMClientPage.htm`(はプロジェクト ディレクトリ内からブラウザーで JCTMClientPage.htm を開くしない操作を行います)。  
+3. 移動します`http://localhost/ServiceModelSamples/JCTMClientPage.htm`(はプロジェクト ディレクトリ内からブラウザーで JCTMClientPage.htm を開くしない操作を行います)。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
@@ -68,5 +68,3 @@ public class JsonContentTypeMapper : WebContentTypeMapper
 >  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Ajax\WebContentTypeMapper`  
-  
-## <a name="see-also"></a>関連項目

@@ -9,26 +9,26 @@ helpviewer_keywords:
 - templates [WPF], Slider
 - ControlTemplate [WPF], Slider
 ms.assetid: d89aa97b-075a-4752-9c41-9679df65c491
-ms.openlocfilehash: ea7e9f5323f29adf10ad8cfe890a85ff91071733
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 385a69ad2bd17ae4c51437245915109aad446bdf
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970977"
 ---
 # <a name="slider-styles-and-templates"></a>スライダーのスタイルとテンプレート
-このトピックは、のスタイルとテンプレートについて説明します、<xref:System.Windows.Controls.Slider>コントロール。 既定値を変更することができます<xref:System.Windows.Controls.ControlTemplate>コントロールの外観を一意にします。 詳細については、「[ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)」を参照してください。  
+このトピックでは、スタイルとテンプレートについて説明します、<xref:System.Windows.Controls.Slider>コントロール。 既定値を変更する<xref:System.Windows.Controls.ControlTemplate>固有の外観を制御します。 詳細については、「[ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)」を参照してください。  
   
-## <a name="slider-parts"></a>スライダーのパーツ  
- 次の表に、名前付きのパーツの<xref:System.Windows.Controls.Slider>コントロール。  
+## <a name="slider-parts"></a>スライダー部分  
+ 次の表に、名前付きパーツ、<xref:System.Windows.Controls.Slider>コントロール。  
   
 |パーツ|型|説明|  
 |-|-|-|  
-|PART_Track|<xref:System.Windows.Controls.Primitives.Track>|要素の位置を示すためのコンテナー、<xref:System.Windows.Controls.Slider>です。|  
-|PART_SelectionRange|<xref:System.Windows.FrameworkElement>|に沿って選択範囲を表示する要素、<xref:System.Windows.Controls.Slider>です。  選択範囲が表示されている場合にのみ、<xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled%2A>プロパティは`true`します。|  
+|PART_Track|<xref:System.Windows.Controls.Primitives.Track>|位置を示す要素のコンテナー、<xref:System.Windows.Controls.Slider>します。|  
+|PART_SelectionRange|<xref:System.Windows.FrameworkElement>|要素に沿った選択範囲を表示する、<xref:System.Windows.Controls.Slider>します。  選択範囲が表示される場合にのみ、<xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled%2A>プロパティは`true`します。|  
   
 ## <a name="slider-states"></a>スライダーの状態  
- 次の表に、用ビジュアル状態、<xref:System.Windows.Controls.Slider>コントロール。  
+ 次の表のビジュアルの状態、<xref:System.Windows.Controls.Slider>コントロール。  
   
 |VisualState 名|VisualStateGroup 名|説明|  
 |----------------------|---------------------------|-----------------|  
@@ -41,21 +41,22 @@ ms.locfileid: "34457970"
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>添付プロパティは`true`がコントロールにフォーカスします。|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>添付プロパティは`true`がコントロールにフォーカスがないです。|  
   
-## <a name="slider-controltemplate-example"></a>スライダー ControlTemplate の例  
+## <a name="slider-controltemplate-example"></a>スライダーの ControlTemplate の例  
  次の例は、定義する方法を示します、<xref:System.Windows.Controls.ControlTemplate>の<xref:System.Windows.Controls.Slider>コントロール。  
   
- [!code-xaml[ControlTemplateExamples#Slider](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/slider.xaml#slider)]  
+ [!code-xaml[ControlTemplateExamples#Slider](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/slider.xaml#slider)]  
   
  前の例では、次のリソースの 1 つ以上を使用します。  
   
- [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
  完全なサンプルについては、[Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.FrameworkElement.Style%2A>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [コントロールのスタイルとテンプレート](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [コントロールのカスタマイズ](../../../../docs/framework/wpf/controls/control-customization.md)  
- [スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.FrameworkElement.Style%2A>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [コントロールのスタイルとテンプレート](control-styles-and-templates.md)
+- [コントロールのカスタマイズ](control-customization.md)
+- [スタイルとテンプレート](styling-and-templating.md)
+- [ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)

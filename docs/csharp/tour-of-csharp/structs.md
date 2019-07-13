@@ -3,12 +3,12 @@ title: C# の構造体 - C# 言語のツアー
 description: 構造体と呼ばれる C# の値型の基本を学ぶ
 ms.date: 08/10/2016
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-ms.openlocfilehash: 6b165dd040213b33f91d1baf1b0fb4909101666d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d22cb23fe095874f24d7c002dfdb3eefdde66722
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53142737"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065961"
 ---
 # <a name="structs"></a>構造体
 
@@ -30,7 +30,7 @@ ms.locfileid: "53142737"
 
 [!code-csharp[PointUse](../../../samples/snippets/csharp/tour/structs/Program.cs#L19-L22)]
 
-`Point` がクラスである場合、a と b は同じオブジェクトを参照しているので、出力は 20 です。 ポイントが構造体である場合、出力は 10 です。`a` の `b` への割り当ては値のコピーを作成し、このコピーは後続の `a.x` への割り当てには影響されないからです。
+`Point` がクラスである場合、`a` と `b` は同じオブジェクトを参照しているので、出力は 20 です。 `Point` が構造体である場合、出力は 10 です。`a` の `b` への割り当ては値のコピーを作成し、このコピーは後続の `a.x` への割り当てには影響されないからです。
 
 前述の例では、構造体の 2 つの制限事項が強調されています。 1 つめは、構造体全体をコピーすることは通常、オブジェクト参照をコピーするよりも非効率であり、割り当てと値パラメーターの引き渡しは参照型よりも構造体のほうが手がかかるということです。 2 つめは、`in`、`ref`、`out` パラメーターを除いて、構造体への参照を作成することはできず、そのために構造体を使用できない状況が数多くあるということです。
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 1b7d5aca6b2c992e4f1d6bdef2a687d1ff43bf71
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f93f215f7be27196217fd506796fd58c4e11d796
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514004"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619180"
 ---
 # <a name="date-and-time-data"></a>日付と時刻のデータ
 SQL Server 2008 では、日付と時刻の情報を扱うための新しいデータ型が導入されました。 新しいデータ型には、日付と時刻の別個のデータ型と、範囲、有効桁数、タイム ゾーン処理が向上した拡張データ型が含まれています。 .NET Framework 3.5 Service Pack (SP) 1 以降では、.NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) が SQL Server 2008 データベース エンジンの新機能すべてをサポートします。 SqlClient でこれらの新機能を使用するには、.NET Framework 3.5 SP1 以降をインストールする必要があります。  
@@ -21,7 +21,7 @@ SQL Server 2008 では、日付と時刻の情報を扱うための新しいデ�
   
  **SQL Server オンライン ブック**  
   
-1.  [日付と時刻のデータの使用](https://go.microsoft.com/fwlink/?LinkID=98361)  
+1. [日付と時刻のデータの使用](https://go.microsoft.com/fwlink/?LinkID=98361)  
   
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>SQL Server 2008 で導入された日付/時刻データ型  
  次の表は、新しい日付と時刻のデータ型の説明です。  
@@ -51,13 +51,13 @@ SQL Server 2008 では、日付と時刻の情報を扱うための新しいデ�
 ## <a name="datetime-data-types-and-parameters"></a>Date/Time データ型とパラメーター  
  新しい日付型と時刻型をサポートするために、<xref:System.Data.SqlDbType> には、次の列挙値が追加されています。  
   
--   `SqlDbType.Date`  
+- `SqlDbType.Date`  
   
--   `SqlDbType.Time`  
+- `SqlDbType.Time`  
   
--   `SqlDbType.DateTime2`  
+- `SqlDbType.DateTime2`  
   
--   `SqlDbType.DateTimeOffSet`  
+- `SqlDbType.DateTimeOffSet`  
 
 データ型を指定することができます、 <xref:System.Data.SqlClient.SqlParameter> 、上記のいずれかを使用して<xref:System.Data.SqlDbType>列挙体。 
 
@@ -66,9 +66,9 @@ SQL Server 2008 では、日付と時刻の情報を扱うための新しいデ�
 
  <xref:System.Data.SqlClient.SqlParameter> オブジェクトの <xref:System.Data.SqlClient.SqlParameter.DbType%2A> プロパティを特定の `SqlParameter` 列挙値に設定することによって、<xref:System.Data.DbType> の型をジェネリックに指定することもできます。 <xref:System.Data.DbType> データ型と `datetime2` データ型をサポートするために、`datetimeoffset` には、次の列挙値が追加されています。  
   
--   DbType.DateTime2  
+- DbType.DateTime2  
   
--   DbType.DateTimeOffset  
+- DbType.DateTimeOffset  
   
  これらの新しい列挙値は、以前のバージョンの .NET Framework に存在した `Date`、`Time`、および `DateTime` の各列挙値を補います。  
   
@@ -88,7 +88,7 @@ SQL Server 2008 では、日付と時刻の情報を扱うための新しいデ�
   
 |プロパティ|説明|  
 |--------------|-----------------|  
-|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|値を NULL に設定できるかどうかを取得または設定します。 サーバーに NULL パラメーター値を送る場合は、<xref:System.DBNull> (Visual Basic の場合は `null`) ではなく、`Nothing` を指定する必要があります。 データベースの null 値の詳細については、次を参照してください。 [Handling Null Values](../../../../../docs/framework/data/adonet/sql/handling-null-values.md)します。|  
+|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|値を NULL に設定できるかどうかを取得または設定します。 サーバーに NULL パラメーター値を送る場合は、<xref:System.DBNull> (Visual Basic の場合は `null`) ではなく、`Nothing` を指定する必要があります。 データベースの NULL 値の詳細については、「 [Handling Null Values](../../../../../docs/framework/data/adonet/sql/handling-null-values.md)」を参照してください。|  
 |<xref:System.Data.SqlClient.SqlParameter.Precision%2A>|その値の最大桁数を取得または設定します。 この設定値は date データ型と time データ型では無視されます。|  
 |<xref:System.Data.SqlClient.SqlParameter.Scale%2A>|値の時刻部分を解決して、小数点以下桁数を取得または`Time`、 `DateTime2`、および`DateTimeOffset`します。 既定値は 0 です。これは、実際の桁数が値から推論されてサーバーに送られることを意味します。|  
 |<xref:System.Data.SqlClient.SqlParameter.Size%2A>|date データ型と time データ型では無視されます。|  
@@ -219,11 +219,11 @@ command.Parameters.AddWithValue( _
 ## <a name="specifying-date-and-time-values-as-literals"></a>日付値と時刻値のリテラル指定  
  日付と時刻のデータ型は、さまざまなリテラル文字列形式を使用して指定できます。SQL Server は、実行時にそれらを内部の日付/時刻構造体に変換します。 SQL Server は、単一引用符 (') で囲まれた日付と時刻のデータを認識します。 次に文字列形式の例を示します。  
   
--   英数字の日付書式 (`'October 15, 2006'` など)。  
+- 英数字の日付書式 (`'October 15, 2006'` など)。  
   
--   数字の日付書式 (`'10/15/2006'` など)。  
+- 数字の日付書式 (`'10/15/2006'` など)。  
   
--   区切りなしの文字列形式 (`'20061015'` など)。これは ISO 規格の日付書式では 2006 年 10 月 15 日と解釈されます。  
+- 区切りなしの文字列形式 (`'20061015'` など)。これは ISO 規格の日付書式では 2006 年 10 月 15 日と解釈されます。  
   
 > [!NOTE]
 >  すべてのリテラル文字列形式と日付/時刻データ型のその他の特徴については、SQL Server オンライン ブックに完全な説明が記載されています。  
@@ -239,8 +239,9 @@ command.Parameters.AddWithValue( _
 |[日付と時刻のデータの使用](https://go.microsoft.com/fwlink/?LinkId=98361)|日付と時刻のデータ型と関数の情報、および使用例を示します。|  
 |[データ型 (TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=98362)|SQL Server 2008 のシステム データ型について説明します。|  
   
-## <a name="see-also"></a>関連項目  
- [SQL Server データ型のマッピング](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
- [パラメーターおよびパラメーター データ型の構成](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- [SQL Server データ型と ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [SQL Server データ型のマッピング](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
+- [パラメーターおよびパラメーター データ型の構成](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
+- [SQL Server データ型と ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

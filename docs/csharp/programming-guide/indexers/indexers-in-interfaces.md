@@ -6,32 +6,32 @@ helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: ff636691ea2f4dacd13fbd2a336f0023ed65750b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: f277758a10b045a6365adfe931ce95d64eb8e445
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235665"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608573"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>インターフェイスのインデクサー (C# プログラミング ガイド)
 [interface](../../../csharp/language-reference/keywords/interface.md) でインデクサーを宣言することができます。 インターフェイスのインデクサーのアクセサーは、[クラス](../../../csharp/language-reference/keywords/class.md)のインデクサーのアクセサーと次の点で異なります。  
   
--   インターフェイスのアクセサーは、修飾子は使用しません。  
+- インターフェイスのアクセサーは、修飾子は使用しません。  
   
--   インターフェイスのアクセサーには、本文はありません。  
+- インターフェイスのアクセサーには、本文はありません。  
   
  したがって、アクセサーの目的は、インデクサーが読み取り/書き込み、読み取り専用、または書き込み専用のどれかを示すことです。  
   
  インターフェイスのインデクサー アクセサーの例を次に示します。  
   
- [!code-csharp[csProgGuideIndexers#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/indexers-in-interfaces_1.cs)]  
+ [!code-csharp[csProgGuideIndexers#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#3)]  
   
  インデクサーのシグネチャは、同じインターフェイスで宣言されている他のすべてのインデクサーの署名とは異なる必要があります。  
   
 ## <a name="example"></a>例  
  次の例では、インターフェイスのインデクサーを実装する方法について説明します。  
   
- [!code-csharp[csProgGuideIndexers#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/indexers-in-interfaces_2.cs)]  
+ [!code-csharp[csProgGuideIndexers#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#4)]  
   
  前の例では、インターフェイス メンバーの完全修飾名を使用して明示的なインターフェイス メンバーの実装を使用することができます。 次に例を示します。  
   
@@ -59,9 +59,9 @@ string ICitizen.this[int index]
   
  これは、`ICitizen` インターフェイスでインデクサーを実装します。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [インデクサー](../../../csharp/programming-guide/indexers/index.md)  
-- [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [インデクサー](../../../csharp/programming-guide/indexers/index.md)
+- [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)
 - [インターフェイス](../../../csharp/programming-guide/interfaces/index.md)

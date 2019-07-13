@@ -1,5 +1,5 @@
 ---
-title: '&lt;etwEnable&gt;要素'
+title: <etwEnable> 要素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - etwEnable element
@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6ea2f8a32a18dfce6be54ce52ce8fef4abf92ce
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 6ba411114bfb853e06c83adb42713d43f1452d9c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704805"
 ---
-# <a name="ltetwenablegt-element"></a>&lt;etwEnable&gt;要素
+# <a name="etwenable-element"></a>\<etwEnable > 要素
 共通言語ランタイム イベントで Windows イベント トレーシング (ETW) を有効にするかどうかを指定します。  
   
- \<configuration > 要素  
-\<ランタイム > 要素  
-\<etwEnabled >  
+ \<configuration> 要素  
+\<runtime> 要素  
+\<etwEnabled>  
   
 ## <a name="syntax"></a>構文  
   
@@ -70,7 +70,8 @@ ms.locfileid: "53610776"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>関連項目
+
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [.NET Framework のログ記録の制御](../../../../../docs/framework/performance/controlling-logging.md)

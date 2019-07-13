@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e22cf8e540bfdb53ad243640dac110b5750e53e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c455b5196ceafef924de59e9134b89ed62455520
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449122"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737226"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>IMetaDataEmit::SetClassLayout メソッド
-前回の呼び出しで定義されているクラスのフィールドのレイアウトが完了した[DefineTypeDef メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)です。  
+前回の呼び出しで定義されているクラスのフィールドのレイアウトが完了すると[DefineTypeDef メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetClassLayout (  
     [in]  mdTypeDef           td,   
     [in]  DWORD               dwPackSize,   
@@ -38,37 +38,38 @@ HRESULT SetClassLayout (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `td`  
- [in]`mdTypeDef`レイアウトされるクラスを指定するトークン。  
+ [in]`mdTypeDef`クラスに配置されることを示すトークン。  
   
  `dwPackSize`  
- [in]パッキング サイズ: 1、2、4、8 バイトまたは 16 バイトです。 パッキング サイズは、横にあるフィールド間のバイト数です。  
+ [in]パッキング サイズ:1、2、4、8 または 16 バイト数。 パッキング サイズには、横にあるフィールド間のバイト数です。  
   
  `rFieldOffsets`  
- [in]配列[COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md)構造体、クラスのフィールドとフィールドのクラス内でオフセットをそれぞれ指定します。 配列を終了`mdTokenNil`です。  
+ [in]配列の[COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md)構造体、クラスのフィールドとフィールドのオフセットされている場合、クラス内でそれぞれを指定します。 終了、配列の`mdTokenNil`します。  
   
  `ulClassSize`  
  [in]クラスのバイト単位のサイズ。  
   
-## <a name="remarks"></a>コメント  
- クラスが最初に呼び出すことによって定義されている、 [imetadataemit::definetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)メソッド、およびクラスのフィールドについて次の 3 つのレイアウトのいずれかを指定する: 自動、シーケンシャル、または明示的なです。 通常は自動レイアウトを使用してランタイムにフィールドをレイアウトする最善の方法を選択します。  
+## <a name="remarks"></a>Remarks  
+ クラスが最初に呼び出すことによって定義されている、 [imetadataemit::definetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)メソッド、およびクラスのフィールドの 3 つのレイアウトのいずれかを指定する: 自動、順次、または明示的な。 通常、自動レイアウトを使用し、ランタイムでフィールドをレイアウトする最善の方法を選択できるようにします。  
   
- ただし、フィールドをアンマネージ コードが使用する配置に従ってレイアウトが必要な場合があります。 この例では、シーケンシャルまたは明示的なレイアウトと呼び出しを選択して`SetClassLayout`フィールドのレイアウトを完了します。  
+ ただし、フィールドをアンマネージ コードが使用する配置に従ってレイアウトたい場合があります。 この場合、レイアウトがシーケンシャルまたは明示的のいずれかと呼び出しを選択`SetClassLayout`フィールドのレイアウトを完了します。  
   
--   シーケンシャル レイアウト: パッキング サイズを指定します。 フィールドは、自然なサイズ、またはどの結果フィールドのオフセットは小さく、パッキング サイズに従って配置します。 設定`rFieldOffsets`と`ulClassSize`をゼロにします。  
+- シーケンシャル レイアウト:パッキング サイズを指定します。 本来のサイズまたはパッキング サイズより小さなオフセット フィールドのいずれかの結果のいずれかに従って、フィールドが配置されます。 設定`rFieldOffsets`と`ulClassSize`をゼロにします。  
   
--   明示的なレイアウト: 各フィールドのオフセットを指定するか、クラスのサイズおよびパッキング サイズを指定します。  
+- 明示的なレイアウト:各フィールドのオフセットを指定するか、クラスのサイズとパッキング サイズを指定します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
  **ライブラリ:** MSCorEE.dll にリソースとして使用  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

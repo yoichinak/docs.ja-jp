@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: 945d00c6-7202-466c-9df9-140b84156d43
-ms.openlocfilehash: 8036421f937385edbaefb8df4ee3915798084c64
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 339f9c9d8b25f6deef4cc77f60c26b7b5d017ce0
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147231"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59105782"
 ---
 # <a name="using-a-synchronous-client-socket"></a>同期クライアント ソケットの使用
 ネットワーク操作が完了するまで、同期クライアント ソケットはアプリケーション プログラムを一時停止させます。 同期ソケットは動作のためにネットワークを多用するアプリケーションには適しませんが、それ以外のアプリケーションの場合、ネットワーク サービスへの簡単アクセスを可能にします。  
@@ -70,7 +70,8 @@ s.Shutdown(SocketShutdown.Both);
 s.Close();  
 ```  
   
-## <a name="see-also"></a>参照  
- [非同期クライアント ソケットの使用](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
- [リッスン (ソケットで)](../../../docs/framework/network-programming/listening-with-sockets.md)  
- [同期クライアント ソケットの例](../../../docs/framework/network-programming/synchronous-client-socket-example.md)
+## <a name="see-also"></a>関連項目
+
+- [非同期クライアント ソケットの使用](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
+- [リッスン (ソケットで)](../../../docs/framework/network-programming/listening-with-sockets.md)
+- [同期クライアント ソケットの例](../../../docs/framework/network-programming/synchronous-client-socket-example.md)

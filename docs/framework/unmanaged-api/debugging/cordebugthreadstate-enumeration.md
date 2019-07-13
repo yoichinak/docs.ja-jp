@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ba8bca6d14308284c869b923853f7e27e045bca5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ce252f5a4b5fbcdbbc7b70c8b1c829490f8f63e5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402940"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739528"
 ---
 # <a name="cordebugthreadstate-enumeration"></a>CorDebugThreadState 列挙型
 デバッグのスレッドの状態を指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum CorDebugThreadState {  
     THREAD_RUN,  
     THREAD_SUSPEND  
@@ -39,22 +39,23 @@ typedef enum CorDebugThreadState {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`THREAD_RUN`|スレッドは、デバッグ イベントが発生しない限り、自由に実行されます。|  
+|`THREAD_RUN`|デバッグ イベントが発生しない限り、スレッドは、自由に実行されます。|  
 |`THREAD_SUSPEND`|スレッドは実行できません。|  
   
-## <a name="remarks"></a>コメント  
- デバッガーを使用して、`CorDebugThreadState`スレッドの実行を制御する列挙です。 使用してスレッドの状態を設定することができます、 [icordebugthread::setdebugstate](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-setdebugstate-method.md)または[icordebugcontroller::setallthreadsdebugstate](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ デバッガーを使用して、`CorDebugThreadState`スレッドの実行を制御する列挙。 使用してスレッドの状態を設定することができます、 [icordebugthread::setdebugstate](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-setdebugstate-method.md)または[icordebugcontroller::setallthreadsdebugstate](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md)メソッド。  
   
- 渡されたコールバック、 [API をホストしている](../../../../docs/framework/unmanaged-api/hosting/index.md)中断状態は必要ありませんのでメッセージ ポンプを使用します。  
+ 提供されるコールバック、 [API をホストしている](../../../../docs/framework/unmanaged-api/hosting/index.md)メッセージ ポンプを使用するため、中断状態は必要ありません。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** CorDebug.idl、CorDegug.h  
+ **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>関連項目
+
+- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

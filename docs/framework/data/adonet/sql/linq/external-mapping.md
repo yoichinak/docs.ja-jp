@@ -2,32 +2,32 @@
 title: 外部マップ
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-ms.openlocfilehash: 640dff5555ab346782825c44ded758a681226648
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b6ced31f5534bd040917ecc5d241d54d9bee95f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365216"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619710"
 ---
 # <a name="external-mapping"></a>外部マップ
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] サポートしている*外部マッピング*、これによって、データベースのデータ モデルと、オブジェクト モデルの間のマッピングを指定する別の XML ファイルを使用するプロセスです。 外部マッピング ファイルを使用すると、次のような利点があります。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] サポート*外部マッピング*、これによって、データベースのデータ モデルと、オブジェクト モデル間のマッピングを指定する別の XML ファイルを使用するプロセス。 外部マッピング ファイルを使用すると、次のような利点があります。  
   
--   マッピング コードをアプリケーション コードから分離できます。 この方法により、アプリケーション コードの煩雑さが軽減されます。  
+- マッピング コードをアプリケーション コードから分離できます。 この方法により、アプリケーション コードの煩雑さが軽減されます。  
   
--   外部マッピング ファイルは、構成ファイルのような方法で扱うことができます。 たとえば、バイナリを配布した後、外部マッピング ファイルを交換するだけでアプリケーションの動作を更新できます。  
+- 外部マッピング ファイルは、構成ファイルのような方法で扱うことができます。 たとえば、バイナリを配布した後、外部マッピング ファイルを交換するだけでアプリケーションの動作を更新できます。  
   
-## <a name="requirements"></a>要件  
- マッピング ファイルは、XML ファイルである必要があり、ファイルが検証のため、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]スキーマ定義 (.xsd) ファイル。  
+## <a name="requirements"></a>必要条件  
+ マッピング ファイルは、XML ファイルである必要があり、ファイルを検証する必要があります、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]スキーマ定義 (.xsd) ファイル。  
   
  次の規則が適用されます。  
   
--   マッピング ファイルは XML ファイルである必要があります。  
+- マッピング ファイルは XML ファイルである必要があります。  
   
--   XML マッピング ファイルは、XML スキーマ定義ファイルに対して有効である必要があります。 詳細については、次を参照してください。[する方法: 検証の DBML ファイルおよび外部マッピング ファイル](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)です。  
+- XML マッピング ファイルは、XML スキーマ定義ファイルに対して有効である必要があります。 詳細については、「[方法 :DBML ファイルおよび外部マッピング ファイルを検証](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)です。  
   
--   外部マッピングは、属性ベースのマッピングをオーバーライドします。 言い換えると、外部マッピング ソースを使って <xref:System.Data.Linq.DataContext> を作成した場合、<xref:System.Data.Linq.DataContext> はクラスに作成したすべてのマッピング属性を無視します。 この動作は、クラスが外部マッピング ファイルに含まれるかどうかにかかわらず適用されます。  
+- 外部マッピングは、属性ベースのマッピングをオーバーライドします。 言い換えると、外部マッピング ソースを使って <xref:System.Data.Linq.DataContext> を作成した場合、<xref:System.Data.Linq.DataContext> はクラスに作成したすべてのマッピング属性を無視します。 この動作は、クラスが外部マッピング ファイルに含まれるかどうかにかかわらず適用されます。  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では、2 つのマッピング方法 (属性ベースと外部) を組み合わせて使用することはできません。  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では、2 つのマッピング方法 (属性ベースと外部) を組み合わせて使用することはできません。  
   
 ## <a name="xml-schema-definition-file"></a>XML スキーマ定義ファイル  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の外部マッピングは、以下のような XML スキーマ定義に対して有効である必要があります。  
@@ -35,7 +35,7 @@ ms.locfileid: "33365216"
  このスキーマ定義ファイルを、DBML ファイルの検証に使われるスキーマ定義ファイルと区別してください。 詳細については、次を参照してください。 [LINQ to SQL でのコード生成](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md))。  
   
 > [!NOTE]
->  Visual Studio ユーザーも紹介この XSD ファイルの XML スキーマ ダイアログ ボックスで「LinqToSqlMapping.xsd」としてします。 このファイルを使用して、正しく外部マッピング ファイルを検証するためを参照してください[する方法: 検証の DBML ファイルおよび外部マッピング ファイル](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)です。  
+>  Visual Studio のユーザーも紹介この XSD ファイル、XML スキーマ ダイアログ ボックスで「LinqToSqlMapping.xsd」としてします。 外部マッピング ファイルを検証するため、このファイルを正しく使用するを参照してください。[方法。DBML ファイルおよび外部マッピング ファイルを検証](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)です。  
   
 ```  
 ?<?xml version="1.0" encoding="utf-16"?>  
@@ -141,7 +141,8 @@ elementFormDefault="qualified" >
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [LINQ to SQL でのコード生成](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
- [参照](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [方法 : オブジェクト モデルを外部ファイルとして生成する](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+## <a name="see-also"></a>関連項目
+
+- [LINQ to SQL でのコード生成](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
+- [参照](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [方法: 外部ファイルとしてのオブジェクト モデルを生成します。](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)

@@ -9,18 +9,16 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-ms.openlocfilehash: b43143fb3f27d127f93f5e8edd55b853ad604ef5
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 707e77ac69878c1c7fb8e975c1f90ad657228d1a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45972755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696414"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>ハイブリッド アプリケーションのトラブルシューティング
 <a name="introduction"></a> このトピックでは、両方を使用するハイブリッド アプリケーションを作成するときに発生する可能性がある一般的な問題を示します[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]と[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]テクノロジ。  
-  
 
-  
 <a name="overlapping_controls"></a>   
 ## <a name="overlapping-controls"></a>コントロールの重複  
  想像どおり、コントロールが重複しない可能性があります。 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 各コントロールの個別の HWND を使用します。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ページ上のすべてのコンテンツには、1 つの HWND を使用します。 この実装の違いにより、予期しない重複する動作。  
@@ -35,7 +33,7 @@ ms.locfileid: "45972755"
   
 <a name="scaling"></a>   
 ## <a name="scaling"></a>スケーリング  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]異なるスケーリング モデルがあります。 いくつか[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]にとって意味のある拡大縮小の変換[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールが、他のユーザーはいません。 たとえば、スケーリング、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールを 0 に機能しますが、0 以外の値に同じコントロールのスケール設定しようとする場合、コントロールのサイズは 0 のままです。 詳細については、次を参照してください。 [WindowsFormsHost 要素のレイアウトに関する考慮事項](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)します。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]異なるスケーリング モデルがあります。 いくつか[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]にとって意味のある拡大縮小の変換[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールが、他のユーザーはいません。 たとえば、スケーリング、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールを 0 に機能しますが、0 以外の値に同じコントロールのスケール設定しようとする場合、コントロールのサイズは 0 のままです。 詳細については、次を参照してください。 [WindowsFormsHost 要素のレイアウトに関する考慮事項](layout-considerations-for-the-windowsformshost-element.md)します。  
   
 <a name="adapter"></a>   
 ## <a name="adapter"></a>アダプター  
@@ -53,7 +51,7 @@ ms.locfileid: "45972755"
   
 <a name="property_mapping"></a>   
 ## <a name="property-mapping"></a>プロパティのマッピング  
- いくつかのプロパティ マッピングが複数の異なる実装間をブリッジする広範な解釈が必要です、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]と[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]テクノロジ。 プロパティ マッピングには、フォント、色、およびその他のプロパティの変更に対応するため、コードが有効にします。 一般に、プロパティ マッピングがリッスンするかによって機能*プロパティ*変更イベントまたは*プロパティ*呼び出し、および子コントロールまたはそのアダプターのいずれかの適切なプロパティの設定を変更します。 詳細については、次を参照してください。 [Windows フォームと WPF プロパティのマッピング](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)します。  
+ いくつかのプロパティ マッピングが複数の異なる実装間をブリッジする広範な解釈が必要です、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]と[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]テクノロジ。 プロパティ マッピングには、フォント、色、およびその他のプロパティの変更に対応するため、コードが有効にします。 一般に、プロパティ マッピングがリッスンするかによって機能*プロパティ*変更イベントまたは*プロパティ*呼び出し、および子コントロールまたはそのアダプターのいずれかの適切なプロパティの設定を変更します。 詳細については、次を参照してください。 [Windows フォームと WPF プロパティのマッピング](windows-forms-and-wpf-property-mapping.md)します。  
   
 <a name="layoutrelated_properties_on_hosted_content"></a>   
 ## <a name="layout-related-properties-on-hosted-content"></a>ホストされるコンテンツにレイアウト関連のプロパティ  
@@ -66,7 +64,7 @@ ms.locfileid: "45972755"
 |<xref:System.Windows.Forms.Integration.ElementHost>|<xref:System.Windows.FrameworkElement.Height%2A><br /><br /> <xref:System.Windows.FrameworkElement.Width%2A><br /><br /> <xref:System.Windows.FrameworkElement.Margin%2A><br /><br /> <xref:System.Windows.FrameworkElement.VerticalAlignment%2A><br /><br /> <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>|  
 |<xref:System.Windows.Forms.Integration.WindowsFormsHost>|<xref:System.Windows.Forms.Control.Margin%2A><br /><br /> <xref:System.Windows.Forms.Control.Dock%2A><br /><br /> <xref:System.Windows.Forms.Control.AutoSize%2A><br /><br /> <xref:System.Windows.Forms.Control.Location%2A><br /><br /> <xref:System.Windows.Forms.Control.MaximumSize%2A>|  
   
- ホストされたコンテンツに直接これらのプロパティを設定しないでください。 詳細については、次を参照してください。 [WindowsFormsHost 要素のレイアウトに関する考慮事項](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)します。  
+ ホストされたコンテンツに直接これらのプロパティを設定しないでください。 詳細については、次を参照してください。 [WindowsFormsHost 要素のレイアウトに関する考慮事項](layout-considerations-for-the-windowsformshost-element.md)します。  
   
 <a name="navigation_applications"></a>   
 ## <a name="navigation-applications"></a>ナビゲーション アプリケーション  
@@ -76,7 +74,7 @@ ms.locfileid: "45972755"
 ## <a name="message-loop-interoperation"></a>メッセージ ループの相互運用  
  使用する場合[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]期待どおりにメッセージ ループでは、メッセージは処理されません。 <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A>メソッドを呼び出して、<xref:System.Windows.Forms.Integration.WindowsFormsHost>コンス トラクター。 このメソッドにメッセージ フィルターを追加、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]メッセージ ループします。 このフィルターを呼び出す、<xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType>メソッド場合、<xref:System.Windows.Forms.Control?displayProperty=nameWithType>メッセージの対象となったとメッセージの変換/ディスパッチします。  
   
- 表示する場合、<xref:System.Windows.Window>で、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]とメッセージ ループ<xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>を呼び出さない限り、何も入力することはできません、<xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>メソッド。 <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>メソッドは、<xref:System.Windows.Window>を追加し、 <xref:System.Windows.Forms.IMessageFilter?displayProperty=nameWithType>、キーに関連するメッセージの経路を変更する、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]メッセージ ループします。 詳細については、次を参照してください。 [Windows フォームと WPF の相互運用性入力アーキテクチャ](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md)します。  
+ 表示する場合、<xref:System.Windows.Window>で、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]とメッセージ ループ<xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>を呼び出さない限り、何も入力することはできません、<xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>メソッド。 <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>メソッドは、<xref:System.Windows.Window>を追加し、 <xref:System.Windows.Forms.IMessageFilter?displayProperty=nameWithType>、キーに関連するメッセージの経路を変更する、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]メッセージ ループします。 詳細については、次を参照してください。 [Windows フォームと WPF の相互運用性入力アーキテクチャ](windows-forms-and-wpf-interoperability-input-architecture.md)します。  
   
 <a name="opacity_and_layering"></a>   
 ## <a name="opacity-and-layering"></a>不透明度と階層化  
@@ -88,7 +86,7 @@ ms.locfileid: "45972755"
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>視覚スタイルを有効にする  
- [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 上の visual スタイルを[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]制御を有効にしない場合があります。 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>用のテンプレートでメソッドが呼び出された、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]アプリケーション。 使用する場合、既定では、このメソッドが呼び出されませんが[!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]取得するは、プロジェクトを作成する[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]Comctl32.dll のバージョン 6.0 が使用可能な場合は、コントロールのビジュアルをスタイル設定します。 呼び出す必要があります、<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>メソッド ハンドルは、スレッドで作成する前にします。 詳細については、次を参照してください。[方法: ハイブリッド アプリケーションで視覚スタイルを有効にする](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)します。  
+ [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 上の visual スタイルを[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]制御を有効にしない場合があります。 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>用のテンプレートでメソッドが呼び出された、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]アプリケーション。 使用する場合、既定では、このメソッドが呼び出されませんが[!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]取得するは、プロジェクトを作成する[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]Comctl32.dll のバージョン 6.0 が使用可能な場合は、コントロールのビジュアルをスタイル設定します。 呼び出す必要があります、<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>メソッド ハンドルは、スレッドで作成する前にします。 詳細については、「[方法 :ハイブリッド アプリケーションで視覚スタイルを有効にする](how-to-enable-visual-styles-in-a-hybrid-application.md)します。  
   
 <a name="licensed_controls"></a>   
 ## <a name="licensed-controls"></a>ライセンスされたコントロール  
@@ -108,19 +106,20 @@ ms.locfileid: "45972755"
 ### <a name="design-time-error-list-appears-when-the-obj-folder-is-deleted"></a>Obj フォルダーが削除されたときに、デザイン時のエラーの一覧が表示されます。  
  Obj フォルダーが削除された場合は、デザイン時エラーの一覧が表示されます。  
   
- 使用してデザインするときに<xref:System.Windows.Forms.Integration.ElementHost>、Windows フォーム デザイナーは、プロジェクトの obj フォルダー内のデバッグまたはリリース フォルダーに生成されたファイルを使用します。 これらのファイルを削除すると、デザイン時のエラーの一覧が表示されます。 この問題を解決するには、プロジェクトをリビルドします。 詳細については、次を参照してください。 [、Windows フォーム デザイナーでデザイン時エラー](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md)します。  
+ 使用してデザインするときに<xref:System.Windows.Forms.Integration.ElementHost>、Windows フォーム デザイナーは、プロジェクトの obj フォルダー内のデバッグまたはリリース フォルダーに生成されたファイルを使用します。 これらのファイルを削除すると、デザイン時のエラーの一覧が表示されます。 この問題を解決するには、プロジェクトをリビルドします。 詳細については、次を参照してください。 [、Windows フォーム デザイナーでデザイン時エラー](../../winforms/controls/design-time-errors-in-the-windows-forms-designer.md)します。  
   
 <a name="elementhost_and_ime"></a>   
 ## <a name="elementhost-and-ime"></a>ElementHost と IME  
  ホストされている WPF コントロール、<xref:System.Windows.Forms.Integration.ElementHost>はサポートされていません、<xref:System.Windows.Forms.Control.ImeMode%2A>プロパティ。 変更<xref:System.Windows.Forms.Control.ImeMode%2A>によってホストされるコントロールは無視されます。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [WPF デザイナーでの相互運用性](https://msdn.microsoft.com/library/2cb7c1ca-2a75-463b-8801-fba81e2b7042)  
- [Windows フォームと WPF の相互運用性入力アーキテクチャ](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md)  
- [方法: ハイブリッド アプリケーションで視覚スタイルを有効にする](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)  
- [WindowsFormsHost 要素のレイアウトに関する考慮事項](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)  
- [Windows フォームと WPF プロパティの割り当て](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)  
- [Windows フォーム デザイナーでのデザイン時エラー](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md)  
- [移行と相互運用性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [WPF デザイナーでの相互運用性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628658(v=vs.100))
+- [Windows フォームと WPF の相互運用性入力アーキテクチャ](windows-forms-and-wpf-interoperability-input-architecture.md)
+- [方法: ハイブリッド アプリケーションで視覚スタイルを有効にします。](how-to-enable-visual-styles-in-a-hybrid-application.md)
+- [WindowsFormsHost 要素のレイアウトに関する考慮事項](layout-considerations-for-the-windowsformshost-element.md)
+- [Windows フォームと WPF プロパティの割り当て](windows-forms-and-wpf-property-mapping.md)
+- [Windows フォーム デザイナーでのデザイン時エラー](../../winforms/controls/design-time-errors-in-the-windows-forms-designer.md)
+- [移行と相互運用性](migration-and-interoperability.md)

@@ -7,18 +7,16 @@ helpviewer_keywords:
 - control patterns, UI Automation
 - UI Automation, control patterns
 ms.assetid: 72c80262-8ca9-4624-9bd6-96984c5b7c5c
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 44f4befc03c886e51a19a44f45f7cbdc20f60fe3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: dc77d3798c9a79b5becf28e55c9f7e3be23eb352
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47209919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982684"
 ---
 # <a name="ui-automation-control-patterns-how-to-topics"></a>UI オートメーション コントロール パターンに関する「方法」トピック
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]に関する最新情報については[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)をご覧ください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
  ここでは、コントロール パターンの実装について詳しく説明します。  
   
@@ -27,4 +25,4 @@ ms.locfileid: "47209919"
  [サポートされている UI オートメーション コントロール パターンの取得](../../../docs/framework/ui-automation/get-supported-ui-automation-control-patterns.md)  
  [UI オートメーションを使用した、チェック ボックスのトグル状態の取得](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
  [UI オートメーションを使用したコントロールの呼び出し](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
- [UI オートメーション要素の移動](../../../docs/framework/ui-automation/move-a-ui-automation-element.md)
+ [Move a UI Automation Element](../../../docs/framework/ui-automation/move-a-ui-automation-element.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: fae0cedfe8bf675dceb9cb9d5835d923cae8b4ab
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4a54059f288a432cbaf904626cabf4f7bcba7209
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235629"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424387"
 ---
 # <a name="built-in-types-table-c-reference"></a>組み込み型の一覧表 (C# リファレンス)
 
@@ -21,22 +21,22 @@ ms.locfileid: "53235629"
 |C# 型|.NET 型|  
 |--------------|-------------------------|  
 |[bool](bool.md)|<xref:System.Boolean?displayProperty=nameWithType>|  
-|[byte](byte.md)|<xref:System.Byte?displayProperty=nameWithType>|  
-|[sbyte](sbyte.md)|<xref:System.SByte?displayProperty=nameWithType>|  
+|[byte](../builtin-types/integral-numeric-types.md)|<xref:System.Byte?displayProperty=nameWithType>|  
+|[sbyte](../builtin-types/integral-numeric-types.md)|<xref:System.SByte?displayProperty=nameWithType>|  
 |[char](char.md)|<xref:System.Char?displayProperty=nameWithType>|  
 |[decimal](decimal.md)|<xref:System.Decimal?displayProperty=nameWithType>|  
 |[double](double.md)|<xref:System.Double?displayProperty=nameWithType>|  
 |[float](float.md)|<xref:System.Single?displayProperty=nameWithType>|  
-|[int](int.md)|<xref:System.Int32?displayProperty=nameWithType>|  
-|[uint](uint.md)|<xref:System.UInt32?displayProperty=nameWithType>|  
-|[long](long.md)|<xref:System.Int64?displayProperty=nameWithType>|  
-|[ulong](ulong.md)|<xref:System.UInt64?displayProperty=nameWithType>|  
+|[int](../builtin-types/integral-numeric-types.md)|<xref:System.Int32?displayProperty=nameWithType>|  
+|[uint](../builtin-types/integral-numeric-types.md)|<xref:System.UInt32?displayProperty=nameWithType>|  
+|[long](../builtin-types/integral-numeric-types.md)|<xref:System.Int64?displayProperty=nameWithType>|  
+|[ulong](../builtin-types/integral-numeric-types.md)|<xref:System.UInt64?displayProperty=nameWithType>|  
 |[object](object.md)|<xref:System.Object?displayProperty=nameWithType>|  
-|[short](short.md)|<xref:System.Int16?displayProperty=nameWithType>|  
-|[ushort](ushort.md)|<xref:System.UInt16?displayProperty=nameWithType>|  
+|[short](../builtin-types/integral-numeric-types.md)|<xref:System.Int16?displayProperty=nameWithType>|  
+|[ushort](../builtin-types/integral-numeric-types.md)|<xref:System.UInt16?displayProperty=nameWithType>|  
 |[string](string.md)|<xref:System.String?displayProperty=nameWithType>|  
   
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 表内の、`object` と `string` を除くすべての型が、単純型と呼ばれます。  
   
@@ -47,7 +47,7 @@ int x = 123;
 System.Int32 y = 123;
 ```
 
-[typeof](typeof.md) 演算子を使用して、指定した型を表す <xref:System.Type?displayProperty=nameWithType> インスタンスを取得します。
+[typeof](../operators/type-testing-and-conversion-operators.md#typeof-operator) 演算子を使用して、指定した型を表す <xref:System.Type?displayProperty=nameWithType> インスタンスを取得します。
 
 ```csharp
 Type stringType = typeof(string);
@@ -66,7 +66,6 @@ Console.WriteLine(doubleType.FullName);
 - [C# リファレンス](../../../csharp/language-reference/index.md)
 - [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
 - [C# のキーワード](index.md)
-- [型のリファレンス表](reference-tables-for-types.md)
 - [値型](value-types.md)
 - [参照型](reference-types.md)
 - [既定値の一覧表](default-values-table.md)

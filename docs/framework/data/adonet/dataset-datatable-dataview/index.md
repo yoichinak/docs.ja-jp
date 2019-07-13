@@ -2,25 +2,25 @@
 title: DataSet、DataTable、および DataView
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
-ms.openlocfilehash: 0f537ad8ff468de54adc8bc820a060eaca357be9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: abfb53b0a7d827ffe8df909746c0c0ad0ce8c57b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506250"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64750758"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>DataSet、DataTable、および DataView
 ADO.NET <xref:System.Data.DataSet> はメモリ常駐型のデータ表現であり、含まれているデータ ソースとは関係なく、一貫性のあるリレーショナル プログラミング モデルを提供します。 <xref:System.Data.DataSet> とは、テーブル間のリレーションシップだけでなく、包括するテーブル、整列するテーブル、およびデータを制約するテーブルを含むデータのセットを表します。  
   
  <xref:System.Data.DataSet> にはさまざまな使用方法があり、単独または組み合わせで使用できます。 次の操作を行うことができます。  
   
--   プログラムを使用して <xref:System.Data.DataTable> 内に <xref:System.Data.DataRelation>、<xref:System.Data.Constraint>、および <xref:System.Data.DataSet> を作成し、テーブルにデータを設定できます。  
+- プログラムを使用して <xref:System.Data.DataTable> 内に <xref:System.Data.DataRelation>、<xref:System.Data.Constraint>、および <xref:System.Data.DataSet> を作成し、テーブルにデータを設定できます。  
   
--   <xref:System.Data.DataSet> を使用して、既存のリレーショナル データ ソースから取得したデータのテーブルで `DataAdapter` を作成できます。  
+- <xref:System.Data.DataSet> を使用して、既存のリレーショナル データ ソースから取得したデータのテーブルで `DataAdapter` を作成できます。  
   
--   XML を使用して、<xref:System.Data.DataSet> の内容を読み込んだり、永続化したりできます。 詳しくは、「[DataSet での XML の使用](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)」を参照してください。  
+- XML を使用して、<xref:System.Data.DataSet> の内容を読み込んだり、永続化したりできます。 詳しくは、「[DataSet での XML の使用](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)」を参照してください。  
   
- 厳密に型指定された <xref:System.Data.DataSet> も XML Web サービスを使用して転送できます。 <xref:System.Data.DataSet> は、XML Web サービスを使用してデータの転送が理想的に行えるように設計されています。 XML Web サービスの概要については、「[XML Web サービスの概要](https://msdn.microsoft.com/library/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)」を参照してください。 XML Web サービスから <xref:System.Data.DataSet> を使用する例については、「[XML Web サービスからの DataSet の使用](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/consuming-a-dataset-from-an-xml-web-service.md)」を参照してください。  
+ 厳密に型指定された <xref:System.Data.DataSet> も XML Web サービスを使用して転送できます。 <xref:System.Data.DataSet> は、XML Web サービスを使用してデータの転送が理想的に行えるように設計されています。 XML Web サービスの概要については、「[XML Web サービスの概要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w9fdtx28(v=vs.100))」を参照してください。 XML Web サービスから <xref:System.Data.DataSet> を使用する例については、「[XML Web サービスからの DataSet の使用](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/consuming-a-dataset-from-an-xml-web-service.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [DataSet の作成](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-dataset.md)  
@@ -78,6 +78,7 @@ ADO.NET <xref:System.Data.DataSet> はメモリ常駐型のデータ表現であ
  [DataSet への既存の制約の追加](../../../../../docs/framework/data/adonet/adding-existing-constraints-to-a-dataset.md)  
  **DataSet** にデータ ソースの主キー情報を設定する方法について説明します。  
   
-## <a name="see-also"></a>関連項目  
- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

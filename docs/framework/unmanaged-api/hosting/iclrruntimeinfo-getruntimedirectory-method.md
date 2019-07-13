@@ -17,32 +17,32 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f366e736c90ffd8cf588af3a6e5f6240426b9980
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2455c896ebdc12f2bb92a30d55745f7bd5bc308a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434526"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765521"
 ---
 # <a name="iclrruntimeinfogetruntimedirectory-method"></a>ICLRRuntimeInfo::GetRuntimeDirectory メソッド
 このインターフェイスに関連付けられている共通言語ランタイム (CLR) のインストール ディレクトリを取得します。  
   
- このメソッドは、 [GetCORSystemDirectory](../../../../docs/framework/unmanaged-api/hosting/getcorsystemdirectory-function.md) .NET Framework のバージョン 2.0、3.0、および 3.5 で提供される関数。  
+ このメソッドは、 [GetCORSystemDirectory](../../../../docs/framework/unmanaged-api/hosting/getcorsystemdirectory-function.md) .NET Framework バージョン 2.0、3.0、および 3.5 で提供される関数。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetRuntimeDirectory(  
 [out, size_is(*pcchBuffer)] LPWSTR pwzBuffer,  
 [in, out]  DWORD *pcchBuffer);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pwzBuffer`  
- [out]CLR のインストール ディレクトリを返します。 インストール パスが完全修飾;たとえば、"c:\windows\microsoft.net\framework\v1.0.3705\\"です。  
+ [out]CLR のインストール ディレクトリを返します。 インストール パスは、完全修飾;たとえば、"c:\windows\microsoft.net\framework\v1.0.3705\\"。  
   
  `pchBuffer`  
- [入力、出力].サイズを指定`pwzBuffer`バッファー オーバーランを回避します。 場合`pwzBuffer`が null、`pchBuffer`の必要なサイズを返します`pwzBuffer`です。  
+ [入力、出力]サイズを示す`pwzBuffer`バッファー オーバーランを回避します。 場合`pwzBuffer`が null、`pchBuffer`の必要なサイズを返します`pwzBuffer`します。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。  
@@ -52,17 +52,18 @@ HRESULT GetRuntimeDirectory(
 |S_OK|メソッドは正常に完了しました。|  
 |E_POINTER|`pwzBuffer` または `pchBuffer` が null です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MetaHost.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICLRRuntimeInfo インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
- [ホスティング](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>関連項目
+
+- [ICLRRuntimeInfo インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [ホスティング](../../../../docs/framework/unmanaged-api/hosting/index.md)

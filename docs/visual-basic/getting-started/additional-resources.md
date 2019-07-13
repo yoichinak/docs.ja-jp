@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: a0ff04bf67faea4c834570e8faa4197369289fb7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: febfe0ae0a3e478109b338b228d0bc306bf56454
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195673"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052783"
 ---
 # <a name="additional-resources"></a>その他の技術情報
 
@@ -26,7 +26,7 @@ ms.locfileid: "50195673"
 |用語|定義|
 |----------|----------------|
 |[Visual Basic .NET 言語設計](https://github.com/dotnet/vblang)|Visual Basic .NET 言語設計に関する GitHub の公式リポジトリ。|
-|[Microsoft Visual Basic チーム ブログ](https://blogs.msdn.microsoft.com/vbteam/)|Visual Basic チームのブログにアクセスする手段を提供します。|
+|[Microsoft Visual Basic チーム ブログ](https://devblogs.microsoft.com/vbteam/)|Visual Basic チームのブログにアクセスする手段を提供します。|
 
 ### <a name="code-samples"></a>コード サンプル
 
@@ -39,7 +39,7 @@ ms.locfileid: "50195673"
 
 |用語|定義|
 |----------|----------------|
-|[Visual Basic フォーラム](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)|一般的な Visual Basic の問題についてディスカッションを行います。|
+|[Visual Basic フォーラム](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)|一般的な Visual Basic の問題についてディスカッションを行います。|
 
 ### <a name="videos-and-webcasts"></a>ビデオと Web キャスト
 
@@ -52,7 +52,7 @@ ms.locfileid: "50195673"
 |用語|定義|
 |----------|----------------|
 |[Microsoft サポート](https://support.microsoft.com)|サポート技術情報 (KB: Knowledge Base) の文書、ダウンロード ファイルや更新プログラム、サポート ウェブキャスト、およびその他のサービスへのアクセスを提供します。|
-|[Visual Studio に関する質問](https://developercommunity.visualstudio.com)|.NET および Visual Studio に関するバグを報告したり、提案を Microsoft に送信したりできます。 Visual Studio で **[ヘルプ]** > **[フィードバックの送信]** > **[問題の報告]** の順に選択して、バグを報告することもできます。|
+|[Visual Studio に関する質問](https://developercommunity.visualstudio.com)|.NET および Visual Studio に関するバグを報告したり、提案を Microsoft に送信したりできます。 Visual Studio で **[ヘルプ]**  >  **[フィードバックの送信]**  >  **[問題の報告]** の順に選択して、バグを報告することもできます。|
 
 ## <a name="third-party-resources"></a>サードパーティのリソース
 
@@ -64,5 +64,5 @@ ms.locfileid: "50195673"
 
 ## <a name="see-also"></a>関連項目
 
-[Visual Basic 入門](../../visual-basic/getting-started/index.md)  
-[ご意見](/visualstudio/ide/talk-to-us)  
+- [Visual Basic 入門](../../visual-basic/getting-started/index.md)
+- [ご意見](/visualstudio/ide/talk-to-us)

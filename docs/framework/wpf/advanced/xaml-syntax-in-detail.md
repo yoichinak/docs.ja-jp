@@ -29,18 +29,16 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 31f9e31d7cd91f9f89e131a7b506cf1a53fce7e4
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 45c3ef319e374c9944c06e2f88e3812b675bf527
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030296"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662178"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 構文の詳細
-このトピックでは、XAML 構文の要素の説明に使用される用語を定義します。 これらの用語は、具体的には、XAML または System.Xaml レベルでの XAML 言語のサポートを有効になっている XAML の基本的な概念を使用する他のフレームワークも、このドキュメントは、WPF のドキュメントの両方の残りの部分でよく使用されます。 このトピックでは、トピックで導入された基本的な用語で展開[XAML の概要 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)します。  
-  
+このトピックでは、XAML 構文の要素の説明に使用される用語を定義します。 これらの用語は、具体的には、XAML または System.Xaml レベルでの XAML 言語のサポートを有効になっている XAML の基本的な概念を使用する他のフレームワークも、このドキュメントは、WPF のドキュメントの両方の残りの部分でよく使用されます。 このトピックでは、トピックで導入された基本的な用語で展開[XAML の概要 (WPF)](xaml-overview-wpf.md)します。  
 
-  
 <a name="the_xaml_language_specification"></a>   
 ## <a name="the-xaml-language-specification"></a>XAML 言語仕様  
  ここで定義されている XAML 構文の用語の定義または、XAML 言語仕様内で参照されてもします。 XAML では、依存しか、拡張 XML の構造上のルールは XML に基づく言語です。 一部の用語はから共有されてまたは XML 言語または XML ドキュメント オブジェクト モデルを記述する場合によく使用する用語に基づきます。  
@@ -60,19 +58,19 @@ ms.locfileid: "54030296"
 ## <a name="object-element-syntax"></a>オブジェクト要素構文  
  *オブジェクト要素構文*XML 要素を宣言することで、CLR クラスまたは構造体をインスタンス化する XAML マークアップ構文です。 この構文では、HTML などの他のマークアップ言語の要素の構文に似ています。 オブジェクト要素構文は、左の山かっこで始まります (\<)、クラスまたはインスタンス化されている構造体の型名ですぐにその後にします。 0 個以上のスペースは、型の名前、および 0 個以上の属性を宣言することも、オブジェクト要素上の各属性の名前を分離する 1 つまたは複数のスペースを含む ="value"ペア。 最後に、次のいずれかが true でする必要があります。  
   
--   要素とタグは、右の山かっこ (>) をすぐに続くフォワード スラッシュ (/) で閉じる必要があります。  
+- 要素とタグは、右の山かっこ (>) をすぐに続くフォワード スラッシュ (/) で閉じる必要があります。  
   
--   開始タグは、右の山かっこ (>) で完了する必要があります。 その他のオブジェクト要素、プロパティ要素、または内部のテキストは、開始タグをフォローできます。 通常、どのようなコンテンツをここで含めることが正確には要素のオブジェクト モデルによって制限されます。 対応するオブジェクト要素のタグを終了する必要がありますも適切な入れ子でが存在し、他の開始と終了タグのペアとバランスを取る。  
+- 開始タグは、右の山かっこ (>) で完了する必要があります。 その他のオブジェクト要素、プロパティ要素、または内部のテキストは、開始タグをフォローできます。 通常、どのようなコンテンツをここで含めることが正確には要素のオブジェクト モデルによって制限されます。 対応するオブジェクト要素のタグを終了する必要がありますも適切な入れ子でが存在し、他の開始と終了タグのペアとバランスを取る。  
   
  .NET で実装されている XAML では、オブジェクトの要素を型、プロパティまたはイベント、および CLR 名前空間とアセンブリに XAML 名前空間への属性にマッピングする規則のセットがあります。 WPF と .NET Framework では、XAML オブジェクト要素にマップされる[!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]で定義された型には、アセンブリが参照されているし、属性、それらの型のメンバーにマップされます。 XAML で CLR 型を参照する場合も、その型の継承されたメンバーへのアクセスがあります。  
   
  たとえば、次の例は、の新しいインスタンスをインスタンス化するオブジェクト要素構文、<xref:System.Windows.Controls.Button>クラスし、も指定します、<xref:System.Windows.FrameworkElement.Name%2A>属性とその属性の値。  
   
- [!code-xaml[XAMLOvwSupport#SyntaxOE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#syntaxoe)]  
+ [!code-xaml[XAMLOvwSupport#SyntaxOE](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#syntaxoe)]  
   
  次の例は、オブジェクト要素構文にも XAML コンテンツ プロパティの構文が含まれます。 内部テキ スト内に含まれる設定に使用される、 <xref:System.Windows.Controls.TextBox> XAML コンテンツ プロパティ、<xref:System.Windows.Controls.TextBox.Text%2A>します。  
   
- [!code-xaml[XAMLOvwSupport#ThisIsATextBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#thisisatextbox)]  
+ [!code-xaml[XAMLOvwSupport#ThisIsATextBox](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#thisisatextbox)]  
   
 ### <a name="content-models"></a>コンテンツ モデル  
  クラスは、構文の観点から XAML オブジェクト要素としての使用方法をサポートする場合がありますが、その要素のみ正常に機能をアプリケーションまたはページに、全体的なコンテンツ モデルまたは要素ツリーの適切な位置に配置されます。 たとえば、<xref:System.Windows.Controls.MenuItem>の子としてのみ配置通常、<xref:System.Windows.Controls.Primitives.MenuBase>などのクラスを派生<xref:System.Windows.Controls.Menu>します。 コンテンツ コントロールおよびその他のクラスのページで、「解説」の一部として特定要素モデルが記載されている[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]XAML 要素として使用できるクラス。  
@@ -88,7 +86,7 @@ ms.locfileid: "54030296"
  属性構文は、既存のオブジェクト要素の属性を宣言することで、プロパティの値を設定する XAML マークアップ構文です。 属性名は、関連するオブジェクトの要素をサポートするクラスのプロパティの CLR メンバー名と一致する必要があります。 属性名には、代入演算子 (=) が続きます。 属性の値は引用符で囲まれた文字列である必要があります。  
   
 > [!NOTE]
->  リテラル属性内の引用符を配置するのに代替の引用符を使用できます。 インスタンスの内部に二重引用符文字を含む文字列を宣言するのに手段として単一引用符を使用することができます。 一重または二重引用符を使用するかどうか、属性値の文字列を開いたり、閉じたりすると一致するペアを使用する必要があります。 エスケープ シーケンスやその他の手法、特定の XAML 構文によって課される文字の制限を回避するために使用できます。 参照してください[XML 文字エンティティと XAML](../../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)します。  
+>  リテラル属性内の引用符を配置するのに代替の引用符を使用できます。 インスタンスの内部に二重引用符文字を含む文字列を宣言するのに手段として単一引用符を使用することができます。 一重または二重引用符を使用するかどうか、属性値の文字列を開いたり、閉じたりすると一致するペアを使用する必要があります。 エスケープ シーケンスやその他の手法、特定の XAML 構文によって課される文字の制限を回避するために使用できます。 参照してください[XML 文字エンティティと XAML](../../xaml-services/xml-character-entities-and-xaml.md)します。  
   
  属性構文で設定するには、プロパティはパブリックである必要があり、書き込み可能である必要があります。 バッキング型システムのプロパティの値は、値型である必要があります。 またはする必要がありますの参照型をインスタンス化されたか、関連するのにアクセスする場合は、XAML プロセッサによって参照されていることがバックアップの種類。  
   
@@ -101,11 +99,11 @@ ms.locfileid: "54030296"
   
  属性の値は、次のいずれかで塗りつぶされます次の処理順序を使用します。  
   
-1.  XAML プロセッサは、中かっこをまたはから派生したオブジェクトの要素が発生した場合<xref:System.Windows.Markup.MarkupExtension>を文字列として値の処理ではなくの参照先のマークアップ拡張機能の最初の評価、およびマークアップ拡張機能によって返されるオブジェクトとして使用します値。 多くの場合は、既存のオブジェクト、または実行時まで評価されないし、新しくインスタンス化されたオブジェクトではない式への参照がマークアップ拡張機能によって返されるオブジェクトになります。  
+1. XAML プロセッサは、中かっこをまたはから派生したオブジェクトの要素が発生した場合<xref:System.Windows.Markup.MarkupExtension>を文字列として値の処理ではなくの参照先のマークアップ拡張機能の最初の評価、およびマークアップ拡張機能によって返されるオブジェクトとして使用します値。 多くの場合は、既存のオブジェクト、または実行時まで評価されないし、新しくインスタンス化されたオブジェクトではない式への参照がマークアップ拡張機能によって返されるオブジェクトになります。  
   
-2.  プロパティが宣言されている場合、属性付きで<xref:System.ComponentModel.TypeConverter>、またはそのプロパティの値の型が宣言されていると、属性付き<xref:System.ComponentModel.TypeConverter>属性の文字列値が変換の入力としての型コンバーターに送信され、コンバーターを返します、新しいオブジェクト インスタンス。  
+2. プロパティが宣言されている場合、属性付きで<xref:System.ComponentModel.TypeConverter>、またはそのプロパティの値の型が宣言されていると、属性付き<xref:System.ComponentModel.TypeConverter>属性の文字列値が変換の入力としての型コンバーターに送信され、コンバーターを返します、新しいオブジェクト インスタンス。  
   
-3.  存在する場合ありません<xref:System.ComponentModel.TypeConverter>プロパティの型への直接変換が試行されます。 この最後のレベルは、XAML 言語プリミティブ型、または列挙型 (、パーサーは、一致する値をその後、アクセス) の名前付き定数の名前のチェックの間のパーサー ネイティブ値に直接変換です。  
+3. 存在する場合ありません<xref:System.ComponentModel.TypeConverter>プロパティの型への直接変換が試行されます。 この最後のレベルは、XAML 言語プリミティブ型、または列挙型 (、パーサーは、一致する値をその後、アクセス) の名前付き定数の名前のチェックの間のパーサー ネイティブ値に直接変換です。  
   
 #### <a name="enumeration-attribute-values"></a>列挙型の属性値  
  XAML の列挙体は、XAML パーサーで本質的に処理され、列挙型の名前付き定数のいずれかの文字列名を指定して列挙体のメンバーを指定する必要があります。  
@@ -130,11 +128,11 @@ ms.locfileid: "54030296"
   
  または、添付イベントの格納オブジェクト要素の独立したか、添付プロパティを参照できます。 (添付プロパティは、以下のセクションで説明しますが)。  
   
- 使用して既定の名前空間を介してアクセス可能な任意のオブジェクトからすべてのイベントを付けることができます、 *typeName*.*イベント*部分的に修飾名。 この構文のルーティング イベントのハンドラーのアタッチをサポートしています、子要素が親要素からルーティング イベントを処理するために、ハンドラーは、場所もがそのイベントのメンバー テーブルにします。 この構文には、添付イベント構文が似ていますが、ここで、イベントが true の添付イベントではありません。 代わりに、修飾名を持つイベントを参照しています。 詳細については、次を参照してください。[ルーティング イベントの概要](../../../../docs/framework/wpf/advanced/routed-events-overview.md)します。  
+ 使用して既定の名前空間を介してアクセス可能な任意のオブジェクトからすべてのイベントを付けることができます、 *typeName*.*イベント*部分的に修飾名。 この構文のルーティング イベントのハンドラーのアタッチをサポートしています、子要素が親要素からルーティング イベントを処理するために、ハンドラーは、場所もがそのイベントのメンバー テーブルにします。 この構文には、添付イベント構文が似ていますが、ここで、イベントが true の添付イベントではありません。 代わりに、修飾名を持つイベントを参照しています。 詳細については、次を参照してください。[ルーティング イベントの概要](routed-events-overview.md)します。  
   
- 一部のシナリオでは、プロパティ名は属性名ではなく、属性の値として提供場合があります。 プロパティ名は、フォームで指定されたプロパティなどの修飾子を含めることができますも*ownerType*.*dependencyPropertyName*します。 XAML でスタイルまたはテンプレートを記述するとき、このシナリオが一般的です。 属性値として指定したプロパティ名の処理ルールが異なると、設定されるプロパティのタイプまたは特定の WPF サブシステムの動作によって制御されます。 詳細については、次を参照してください。[スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)します。  
+ 一部のシナリオでは、プロパティ名は属性名ではなく、属性の値として提供場合があります。 プロパティ名は、フォームで指定されたプロパティなどの修飾子を含めることができますも*ownerType*.*dependencyPropertyName*します。 XAML でスタイルまたはテンプレートを記述するとき、このシナリオが一般的です。 属性値として指定したプロパティ名の処理ルールが異なると、設定されるプロパティのタイプまたは特定の WPF サブシステムの動作によって制御されます。 詳細については、次を参照してください。[スタイルとテンプレート](../controls/styling-and-templating.md)します。  
   
- プロパティ名の別の使用方法では、属性値がプロパティ間のリレーションシップについて説明します。 この機能は、データ バインディングとストーリー ボードのターゲットに使用されで有効になって、<xref:System.Windows.PropertyPath>クラスとその型コンバーター。 検索セマンティクスの詳細については、次を参照してください。 [PropertyPath の XAML 構文](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)します。  
+ プロパティ名の別の使用方法では、属性値がプロパティ間のリレーションシップについて説明します。 この機能は、データ バインディングとストーリー ボードのターゲットに使用されで有効になって、<xref:System.Windows.PropertyPath>クラスとその型コンバーター。 検索セマンティクスの詳細については、次を参照してください。 [PropertyPath の XAML 構文](propertypath-xaml-syntax.md)します。  
   
 <a name="property_element_syntax"></a>   
 ## <a name="property-element-syntax"></a>プロパティ要素構文  
@@ -144,11 +142,11 @@ ms.locfileid: "54030296"
   
  次のプロパティ要素構文は、たとえば、<xref:System.Windows.FrameworkElement.ContextMenu%2A>のプロパティを<xref:System.Windows.Controls.Button>します。  
   
- [!code-xaml[XAMLOvwSupport#ContextMenu](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#contextmenu)]  
+ [!code-xaml[XAMLOvwSupport#ContextMenu](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#contextmenu)]  
   
- プロパティ要素内の値も指定できます、プリミティブ値型が指定されているプロパティの型である場合に、内部テキ ストとしてなど<xref:System.String>、または名前が指定されている列挙体。 構文がシンプルで属性を使用する可能性がありますもこれらの各ケースがあるために、これら 2 つの使用方法はあまり一般的ではありません。 文字列にプロパティ要素を 1 つのシナリオは、XAML コンテンツ プロパティではありませんが、UI のテキストの表示のために使用されるプロパティと、改行など特定の空白要素は、その UI テキストに表示される必要があります。 属性構文はラインフィード、保持することはできませんが、プロパティ要素構文は、重要なは、空白の維持がアクティブになっている限り (詳細については、次を参照してください。[スペースで XAML 処理](../../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md))。 別のシナリオはように[X:uid ディレクティブ](../../../../docs/framework/xaml-services/x-uid-directive.md)プロパティ要素に適用できるし、したがってを BAML の出力を WPF でローカライズする必要がある値、またはその他の技法によって内の値をマークします。  
+ プロパティ要素内の値も指定できます、プリミティブ値型が指定されているプロパティの型である場合に、内部テキ ストとしてなど<xref:System.String>、または名前が指定されている列挙体。 構文がシンプルで属性を使用する可能性がありますもこれらの各ケースがあるために、これら 2 つの使用方法はあまり一般的ではありません。 文字列にプロパティ要素を 1 つのシナリオは、XAML コンテンツ プロパティではありませんが、UI のテキストの表示のために使用されるプロパティと、改行など特定の空白要素は、その UI テキストに表示される必要があります。 属性構文はラインフィード、保持することはできませんが、プロパティ要素構文は、重要なは、空白の維持がアクティブになっている限り (詳細については、次を参照してください。[スペースで XAML 処理](../../xaml-services/whitespace-processing-in-xaml.md))。 別のシナリオはように[X:uid ディレクティブ](../../xaml-services/x-uid-directive.md)プロパティ要素に適用できるし、したがってを BAML の出力を WPF でローカライズする必要がある値、またはその他の技法によって内の値をマークします。  
   
- Property 要素は、WPF の論理ツリーでは表されません。 プロパティ要素は、プロパティを設定するため構文だけでインスタンスまたはオブジェクトのバックアップがある要素ではありません。 (論理ツリーの概念について詳しくは、次を参照してください[WPF のツリー](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)。)。  
+ Property 要素は、WPF の論理ツリーでは表されません。 プロパティ要素は、プロパティを設定するため構文だけでインスタンスまたはオブジェクトのバックアップがある要素ではありません。 (論理ツリーの概念について詳しくは、次を参照してください[WPF のツリー](trees-in-wpf.md)。)。  
   
  プロパティの属性とプロパティの両方の要素の構文がサポートされている場合、2 つの構文では、構文の間で若干異なる空白文字の処理などの微妙なが、同じ結果が一般にあります。  
   
@@ -156,15 +154,15 @@ ms.locfileid: "54030296"
 ## <a name="collection-syntax"></a>コレクションの構文  
  XAML 仕様では、XAML プロセッサ実装で、値の型がコレクションのプロパティを識別する必要があります。 .NET での一般的な XAML プロセッサ実装をマネージ コードと、CLR に基づいておりで、次のいずれかのコレクション型を識別します。  
   
--   実装の入力<xref:System.Collections.IList>します。  
+- 実装の入力<xref:System.Collections.IList>します。  
   
--   実装の入力<xref:System.Collections.IDictionary>します。  
+- 実装の入力<xref:System.Collections.IDictionary>します。  
   
--   型から派生して<xref:System.Array>(XAML での配列の詳細については、次を参照してください[X:array マークアップ拡張機能](../../../../docs/framework/xaml-services/x-array-markup-extension.md)。)。  
+- 型から派生して<xref:System.Array>(XAML での配列の詳細については、次を参照してください[X:array マークアップ拡張機能](../../xaml-services/x-array-markup-extension.md)。)。  
   
  プロパティの型がコレクションの場合、推論されるコレクション型をマークアップにはオブジェクト要素として指定する必要はありません。 代わりに、コレクション内の項目となる要素は、プロパティ要素の 1 つまたは複数の子要素として指定されます。 それらの各項目が読み込み時にオブジェクトを評価し、呼び出すことによって、コレクションに追加、`Add`暗黙のコレクションのメソッド。 たとえば、<xref:System.Windows.Style.Triggers%2A>プロパティの<xref:System.Windows.Style>は特殊なコレクション型を受け取ります<xref:System.Windows.TriggerCollection>、実装する<xref:System.Collections.IList>します。 インスタンスを作成する必要はありません、<xref:System.Windows.TriggerCollection>マークアップ内のオブジェクト要素。 1 つまたは複数を指定する代わりに、<xref:System.Windows.Trigger>項目内の要素として、`Style.Triggers`プロパティ要素を<xref:System.Windows.Trigger>(または派生クラス) は厳密に型指定されたと暗黙的な項目の種類として期待される型です。 <xref:System.Windows.TriggerCollection>。  
   
- [!code-xaml[XAMLOvwSupport#SyntaxPECollection](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#syntaxpecollection)]  
+ [!code-xaml[XAMLOvwSupport#SyntaxPECollection](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#syntaxpecollection)]  
   
  プロパティは、コレクション型とその型の XAML コンテンツ プロパティの両方があり、派生型のこのトピックの次のセクションで説明されるは。  
   
@@ -231,7 +229,7 @@ ms.locfileid: "54030296"
 ## <a name="content-properties-and-collection-syntax-combined"></a>コンテンツ プロパティとコレクション構文の組み合わせ  
  そのまま使用するために複数のコンテンツとして 1 つのオブジェクト要素コンテンツのプロパティの型する必要があります具体的にはコレクション型であります。 XAML プロセッサする必要があります特定コレクション型である型をコレクション型のプロパティ要素構文と同様に、します。 要素に XAML コンテンツ プロパティがあり、ユーザーが XAML コンテンツ プロパティの型がコレクションは、暗黙的なコレクション型はオブジェクト要素としてのマークアップで指定する必要はありません。 し、XAML コンテンツ プロパティがプロパティ el として指定する必要はありません。ement します。 そのため、マークアップで明らかなコンテンツ モデル コンテンツとして割り当てられている 1 つ以上の子要素を指定できます。 コンテンツの構文を次に、<xref:System.Windows.Controls.Panel>クラスを派生します。 すべて<xref:System.Windows.Controls.Panel>派生クラス設定の XAML コンテンツ プロパティを<xref:System.Windows.Controls.Panel.Children%2A>、型の値がありますが、<xref:System.Windows.Controls.UIElementCollection>します。  
   
- [!code-xaml[XAMLOvwSupport#SyntaxContent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page5.xaml#syntaxcontent)]  
+ [!code-xaml[XAMLOvwSupport#SyntaxContent](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page5.xaml#syntaxcontent)]  
   
  注意のどちらも、プロパティ要素<xref:System.Windows.Controls.Panel.Children%2A>もの要素、<xref:System.Windows.Controls.UIElementCollection>マークアップが必要です。 再帰的に定義する要素に含まれているようにこれは、XAML のデザイン機能、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]より直感的に、プロパティ要素タグの介在することがなく、直接の親の子要素の関係を持つ入れ子になった要素のツリーとして表される、またはコレクション オブジェクト。 実際、<xref:System.Windows.Controls.UIElementCollection>できません明示的に指定するマークアップでオブジェクト要素として設計できます。 唯一の意図された用途は、暗黙の型のコレクションとしてため<xref:System.Windows.Controls.UIElementCollection>はパブリックの既定のコンス トラクターを公開しませんし、そのため、オブジェクト要素としてインスタンス化できることはできません。  
   
@@ -246,7 +244,7 @@ ms.locfileid: "54030296"
 ## <a name="xaml-namespaces"></a>XAML 名前空間  
  上記の構文例の既定の XAML 名前空間以外の XAML 名前空間を指定しなければ。 一般的な[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]に指定する XAML 名前空間の既定のアプリケーション、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]名前空間。 既定の XAML 名前空間以外の XAML 名前空間を指定し、同様の構文を引き続き使用できます。 次に、任意の場所で、クラスの名前が既定の XAML 名前空間内でアクセス可能でないクラス名にする必要がありますの前に、XAML 名前空間のプレフィックスに対応する CLR 名前空間にマップします。 たとえば、`<custom:Example/>`のインスタンスをインスタンス化するオブジェクト要素構文には、`Example`クラス、そのクラス (および場合によってバッキング型を含む外部アセンブリ情報) を含む CLR 名前空間を以前に割り当てられて、`custom`プレフィックス。  
   
- XAML 名前空間の詳細については、次を参照してください。 [XAML 名前空間および WPF XAML のマッピングの Namespace](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)します。  
+ XAML 名前空間の詳細については、次を参照してください。 [XAML 名前空間および WPF XAML のマッピングの Namespace](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)します。  
   
 <a name="markup_extensions"></a>   
 ## <a name="markup-extensions"></a>マークアップ拡張機能  
@@ -256,19 +254,19 @@ ms.locfileid: "54030296"
   
  `<Button Style="{StaticResource MyStyle}">My button</Button>`  
   
- ここでは、`StaticResource`識別、<xref:System.Windows.StaticResourceExtension>マークアップ拡張機能の実装を提供するクラス。 次の文字列`MyStyle`既定以外の入力として使用<xref:System.Windows.StaticResourceExtension>コンス トラクター、拡張機能の文字列から取得されているパラメーターが、要求された宣言して<xref:System.Windows.ResourceKey>します。 `MyStyle` 必要です、 [X:key](../../../../docs/framework/xaml-services/x-key-directive.md)の値を<xref:System.Windows.Style>をリソースとして定義されます。 [StaticResource マークアップ拡張機能](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)使用状況が提供する、リソースを使用することを要求、<xref:System.Windows.Style>読み込み時に静的リソースの検索ロジックを使用してプロパティ値。  
+ ここでは、`StaticResource`識別、<xref:System.Windows.StaticResourceExtension>マークアップ拡張機能の実装を提供するクラス。 次の文字列`MyStyle`既定以外の入力として使用<xref:System.Windows.StaticResourceExtension>コンス トラクター、拡張機能の文字列から取得されているパラメーターが、要求された宣言して<xref:System.Windows.ResourceKey>します。 `MyStyle` 必要です、 [X:key](../../xaml-services/x-key-directive.md)の値を<xref:System.Windows.Style>をリソースとして定義されます。 [StaticResource マークアップ拡張機能](staticresource-markup-extension.md)使用状況が提供する、リソースを使用することを要求、<xref:System.Windows.Style>読み込み時に静的リソースの検索ロジックを使用してプロパティ値。  
   
- マークアップ拡張機能の詳細については、 「[マークアップ拡張機能と WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)」を参照してください。 マークアップ拡張機能とプログラミング機能の一般的な .NET の XAML 実装で有効になっている他の XAML の参照を次を参照してください[XAML Namespace (x:)。言語機能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)します。 WPF 固有のマークアップ拡張機能を参照してください。 [WPF XAML 拡張機能](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)します。  
+ マークアップ拡張機能の詳細については、 「[マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)」を参照してください。 マークアップ拡張機能とプログラミング機能の一般的な .NET の XAML 実装で有効になっている他の XAML の参照を次を参照してください[XAML Namespace (x:)。言語機能](../../xaml-services/xaml-namespace-x-language-features.md)します。 WPF 固有のマークアップ拡張機能を参照してください。 [WPF XAML 拡張機能](wpf-xaml-extensions.md)します。  
   
 <a name="attached_properties"></a>   
 ## <a name="attached-properties"></a>アタッチされるプロパティ  
- 添付プロパティは XAML のプロパティを所有しているし、特定の型によって定義されたで導入された、プログラミングの概念上の任意の要素が属性またはプロパティ要素として設定します。 主に、すべての要素の間で、広範囲に共有されたオブジェクト モデルを必要とせず、親要素に情報を報告するマークアップの構造内の子要素を有効にするのには、添付プロパティを意図しています。 逆に、添付プロパティは、子要素に情報を報告する親要素によって使用できます。 目的の添付プロパティと、独自に作成する方法の詳細については、プロパティを接続を参照してください。[添付プロパティの概要](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)します。  
+ 添付プロパティは XAML のプロパティを所有しているし、特定の型によって定義されたで導入された、プログラミングの概念上の任意の要素が属性またはプロパティ要素として設定します。 主に、すべての要素の間で、広範囲に共有されたオブジェクト モデルを必要とせず、親要素に情報を報告するマークアップの構造内の子要素を有効にするのには、添付プロパティを意図しています。 逆に、添付プロパティは、子要素に情報を報告する親要素によって使用できます。 目的の添付プロパティと、独自に作成する方法の詳細については、プロパティを接続を参照してください。[添付プロパティの概要](attached-properties-overview.md)します。  
   
  添付プロパティは、一見プロパティ要素構文のような構文を使用で指定することも、 *typeName*.*propertyName*の組み合わせ。 次の 2 つの重要な違いがあります。  
   
--   使用することができます、 *typeName*.*propertyName*属性構文で添付プロパティを設定するときに、偶数の組み合わせ。 添付プロパティは、唯一のケースはプロパティ名を修飾する、属性構文の要件です。  
+- 使用することができます、 *typeName*.*propertyName*属性構文で添付プロパティを設定するときに、偶数の組み合わせ。 添付プロパティは、唯一のケースはプロパティ名を修飾する、属性構文の要件です。  
   
--   添付プロパティのプロパティ要素構文を使用することもできます。 ただし、一般的なプロパティ要素構文での*typeName*プロパティ要素が含まれるオブジェクトの要素を指定します。 添付プロパティを指定する場合、 *typeName*はオブジェクト要素ではなく、添付プロパティを定義するクラスです。  
+- 添付プロパティのプロパティ要素構文を使用することもできます。 ただし、一般的なプロパティ要素構文での*typeName*プロパティ要素が含まれるオブジェクトの要素を指定します。 添付プロパティを指定する場合、 *typeName*はオブジェクト要素ではなく、添付プロパティを定義するクラスです。  
   
 <a name="attached_events"></a>   
 ## <a name="attached-events"></a>アタッチされるイベント  
@@ -296,29 +294,30 @@ ms.locfileid: "54030296"
 ### <a name="full-typenamemembername-qualified-attributes"></a>完全な typeName.memberName 属性の修飾  
  *TypeName*.*memberName*フォームは、属性、実際には、ルーティング イベント ケースのみより汎用的です。 他の状況ではそのフォームは不要でありのみマークアップ スタイルと読みやすさの原因の場合、それを避ける必要があります。 参照、3 つ次の例では、<xref:System.Windows.Controls.Control.Background%2A>属性は完全に同等です。  
   
- [!code-xaml[XAMLOvwSupport#TypeNameProp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenameprop)]  
+ [!code-xaml[XAMLOvwSupport#TypeNameProp](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenameprop)]  
   
  `Button.Background` 有効では、そのプロパティの修飾参照<xref:System.Windows.Controls.Button>が成功すると (<xref:System.Windows.Controls.Control.Background%2A>コントロールから継承された) と<xref:System.Windows.Controls.Button>はオブジェクト要素のクラスまたは基本クラス。 `Control.Background` 動作のため、<xref:System.Windows.Controls.Control>クラスは、実際に定義<xref:System.Windows.Controls.Control.Background%2A>と<xref:System.Windows.Controls.Control>は、<xref:System.Windows.Controls.Button>基本クラス。  
   
  ただし、次*typeName*.*memberName* form の例は行われず、コメントがあるため表示されます。  
   
- [!code-xaml[XAMLOvwSupport#TypeNameBadProp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenamebadprop)]  
+ [!code-xaml[XAMLOvwSupport#TypeNameBadProp](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenamebadprop)]  
   
  <xref:System.Windows.Controls.Label> 別の派生クラスは、 <xref:System.Windows.Controls.Control>、指定した場合と`Label.Background`内、<xref:System.Windows.Controls.Label>オブジェクト要素の場合は、この使用法がならばします。 ただし、ため<xref:System.Windows.Controls.Label>クラスまたは基底クラスのない<xref:System.Windows.Controls.Button>を処理し、指定した XAML プロセッサの動作は、`Label.Background`添付プロパティとして。 `Label.Background` 使用可能な添付プロパティでないし、この使用法が失敗します。  
   
 ### <a name="basetypenamemembername-property-elements"></a>baseTypeName.memberName プロパティ要素  
  方法と同様の方法で、 *typeName*.*memberName*属性構文では、フォームの動作を*baseTypeName*.*memberName*プロパティ要素構文の構文の動作します。 たとえば、次の構文は動作します。  
   
- [!code-xaml[XAMLOvwSupport#GoofyPE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#goofype)]  
+ [!code-xaml[XAMLOvwSupport#GoofyPE](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#goofype)]  
   
  ここでは、property 要素は、として指定された`Control.Background`にプロパティ要素が含まれている場合でも`Button`します。  
   
  同じように、 *typeName*.*memberName*属性について、フォーム*baseTypeName*.*memberName*マークアップでは、不適切なスタイルは、これを避ける必要があります。  
   
-## <a name="see-also"></a>関連項目  
- [XAML の概要 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [XAML Namespace (x:)言語機能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
- [WPF XAML 拡張機能](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
- [依存関係プロパティの概要](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [TypeConverters および XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)  
- [WPF における XAML とカスタム クラス](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+## <a name="see-also"></a>関連項目
+
+- [XAML の概要 (WPF)](xaml-overview-wpf.md)
+- [XAML Namespace (x:)言語機能](../../xaml-services/xaml-namespace-x-language-features.md)
+- [WPF XAML 拡張機能](wpf-xaml-extensions.md)
+- [依存関係プロパティの概要](dependency-properties-overview.md)
+- [TypeConverters および XAML](typeconverters-and-xaml.md)
+- [WPF における XAML とカスタム クラス](xaml-and-custom-classes-for-wpf.md)

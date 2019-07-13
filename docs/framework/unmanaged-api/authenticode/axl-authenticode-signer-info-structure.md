@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 81c0f8b4-ce35-4716-8651-b642d40648a2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b9f54c7c57d122ac1214b9f31cc4e1d1cddd71c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 232c78db32aecd0ee1379d4d969fa0378db4159a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44184328"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741355"
 ---
 # <a name="axlauthenticodesignerinfo-structure"></a>AXL_AUTHENTICODE_SIGNER_INFO 構造体
 Authenticode の署名者情報を定義します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct _AXL_AUTHENTICODE_SIGNER_INFO {  
     DWORD cbSize;  
     HRESULT dwError;  
@@ -40,5 +40,6 @@ typedef struct _AXL_AUTHENTICODE_SIGNER_INFO {
 |`pwszDescriptionUrl`|説明の URL。|  
 |`pChainContext`|署名者のチェーン コンテキスト。 参照してください、 [CERT_CONTEXT](/windows/desktop/api/wincrypt/ns-wincrypt-_cert_context)構造体。|  
   
-## <a name="see-also"></a>関連項目  
- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+## <a name="see-also"></a>関連項目
+
+- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)

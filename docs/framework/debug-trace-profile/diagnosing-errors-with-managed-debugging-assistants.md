@@ -32,11 +32,11 @@ ms.assetid: 76994ee6-9fa9-4059-b813-26578d24427c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b745fa6a78ab2a7ab0b3a94c9921883d3c56c1b7
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45750285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61874623"
 ---
 # <a name="diagnose-errors-with-managed-debugging-assistants"></a>マネージ デバッグ アシスタントによるエラーを診断します。
 
@@ -109,7 +109,7 @@ MDA には、レジストリ キーを追加しなくても、デバッガーに
 
 ### <a name="environment-variable"></a>環境変数
 
-MDA のアクティブ化は、COMPLUS_MDA 環境変数によって制御することもできます。この環境変数はレジストリ キーをオーバーライドします。 COMPLUS_MDA の文字列は、MDA 名やその他の特殊制御文字列の、セミコロンで区切られたリストで、大文字小文字の区別はありません。 マネージ デバッガーやアンマネージ デバッガーの下で起動すると、MDA のセットが既定で有効になります。 そのためには、デバッガーの下で既定で有効にする MDA のリスト (セミコロン区切り) を、環境変数またはレジストリ キーの値の前に暗黙的に付加します。 特殊制御文字列は次のとおりです。
+MDA のアクティブ化は、COMPLUS_MDA 環境変数によって制御することもできます。この環境変数はレジストリ キーをオーバーライドします。 COMPLUS_MDA の文字列は、MDA 名やその他の特殊制御文字列の、セミコロンで区切られたリストで、大文字小文字の区別はありません。 マネージド デバッガーやアンマネージド デバッガーの下で起動すると、MDA のセットが既定で有効になります。 そのためには、デバッガーの下で既定で有効にする MDA のリスト (セミコロン区切り) を、環境変数またはレジストリ キーの値の前に暗黙的に付加します。 特殊制御文字列は次のとおりです。
 
 - `0` - すべての MDA を非アクティブにします。
 

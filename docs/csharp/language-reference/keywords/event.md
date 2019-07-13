@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
-ms.openlocfilehash: a0729324131c5b3d5c49618c715fc4081af40964
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 9575d6e998ff709b06f1da21abd17a3629c17029
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240529"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251037"
 ---
 # <a name="event-c-reference"></a>event (C# リファレンス)
 `event` キーワードを使用し、パブリッシャー クラス内にイベントを宣言します。  
@@ -46,12 +46,12 @@ ms.locfileid: "53240529"
 ## <a name="c-language-specification"></a>C# 言語仕様  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
-- [add](../../../csharp/language-reference/keywords/add.md)  
-- [remove](../../../csharp/language-reference/keywords/remove.md)  
-- [修飾子](../../../csharp/language-reference/keywords/modifiers.md)  
+- [C# リファレンス](../../../csharp/language-reference/index.md)
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)
+- [add](../../../csharp/language-reference/keywords/add.md)
+- [remove](../../../csharp/language-reference/keywords/remove.md)
+- [修飾子](../../../csharp/language-reference/keywords/modifiers.md)
 - [方法: デリゲートを結合する (マルチキャスト デリゲート)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)

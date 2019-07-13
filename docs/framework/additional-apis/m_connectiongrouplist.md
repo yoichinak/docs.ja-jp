@@ -10,14 +10,14 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: df8afb59-f0f6-4ddc-b3c1-839b9fc601d8
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: a764c74dc0927094675b0f5e0916a4ad29f04250
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 85359492fbf06942a57c51142620cab015999b31
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151164"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300863"
 ---
 # <a name="servicepointmconnectiongrouplist-field"></a>ServicePoint.m\_ConnectionGroupList フィールド
 
@@ -38,6 +38,6 @@ private Hashtable m_ConnectionGroupList
 
 **名前空間:** <xref:System.Net>
 
-**アセンブリ:**(System.dll) のシステム
+**アセンブリ:** (System.dll) のシステム
 
 **.NET framework のバージョン:** 2.0 以降で使用可能です。

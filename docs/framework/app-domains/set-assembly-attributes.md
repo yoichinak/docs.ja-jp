@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1ed022193b4896f91f1096a0bb16c21f5374868
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 638ea8c1f01c62075fc4399cada282128e07422d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201427"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607543"
 ---
 # <a name="setting-assembly-attributes"></a>アセンブリ属性の設定
 アセンブリの属性は、アセンブリに関する情報を提供する値です。 属性は、次のような情報に分類されます。  
   
--   アセンブリ ID 属性。  
+- アセンブリ ID 属性。  
   
--   情報属性。  
+- 情報属性。  
   
--   アセンブリ マニフェスト属性。  
+- アセンブリ マニフェスト属性。  
   
--   厳密な名前の属性。  
+- 厳密な名前の属性。  
   
 ## <a name="assembly-identity-attributes"></a>アセンブリ ID 属性  
  アセンブリは、名前、バージョン、およびカルチャの 3 つの属性と、適用される場合は厳密な名前によって識別されます。 これらの属性は、アセンブリの完全な名前を形成し、コード内でアセンブリを参照するときに必要になります。 属性を使用して、アセンブリのバージョンとのカルチャを設定できます。 コンパイラまたは [アセンブリ リンカー (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) は、アセンブリの作成時に、アセンブリ マニフェストを含むファイルに基づいて名前の値を設定します。  
@@ -39,7 +39,7 @@ ms.locfileid: "50201427"
 |---------------------------------|-----------------|  
 |<xref:System.Reflection.AssemblyCultureAttribute>|アセンブリがサポートするカルチャを示す列挙フィールド。 アセンブリがカルチャに依存しないように指定することもできます。その場合は、アセンブリが既定のカルチャのリソースを格納することを意味します。 **注:** ランタイムは、カルチャ属性が null に設定されていないすべてのアセンブリを、サテライト アセンブリとして扱います。 そのようなアセンブリには、サテライト アセンブリ バインディング規則が適用されます。 詳細については、「 [ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)」を参照してください。|  
 |<xref:System.Reflection.AssemblyFlagsAttribute>|アセンブリを並列で実行できるかどうかなどのアセンブリ属性を設定する値。|  
-|<xref:System.Reflection.AssemblyVersionAttribute>|*major*.*minor*.*build*.*revision* 形式の数値 (たとえば、2.4.0.0)。 共通言語ランタイムは、この値を使用して、厳密な名前付きアセンブリでのバインディング操作を実行します。 **注:** <xref:System.Reflection.AssemblyInformationalVersionAttribute> 属性がアセンブリに適用されない場合、<xref:System.Reflection.AssemblyVersionAttribute> 属性によって指定されたバージョン番号が <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>、<xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType>、および <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> の各プロパティで使用されます。|  
+|<xref:System.Reflection.AssemblyVersionAttribute>|*major*.*minor*.*build*.*revision* 形式の数値 (たとえば、2.4.0.0)。 共通言語ランタイムは、この値を使用して、厳密な名前付きアセンブリでのバインディング操作を実行します。 **注:**<xref:System.Reflection.AssemblyInformationalVersionAttribute> 属性がアセンブリに適用されない場合、<xref:System.Reflection.AssemblyVersionAttribute> 属性によって指定されたバージョン番号が <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>、<xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType>、および <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> の各プロパティで使用されます。|  
   
  バージョン属性とカルチャ属性をアセンブリに適用する方法を次のコード例で示します。  
   
@@ -86,6 +86,7 @@ ms.locfileid: "50201427"
  [!code-csharp[AssemblyDelaySignAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#4)]
  [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
   
-## <a name="see-also"></a>参照  
-- [アセンブリの作成](../../../docs/framework/app-domains/create-assemblies.md)  
+## <a name="see-also"></a>関連項目
+
+- [アセンブリの作成](../../../docs/framework/app-domains/create-assemblies.md)
 - [アセンブリを使用したプログラミング](../../../docs/framework/app-domains/programming-with-assemblies.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 717e38b15767b744816c0a57c97827a1a35c95b3
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 6da9e2a91fe8156c0631aa77594e3ed47d32cb8b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086675"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882186"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation のプライバシー情報
 マイクロソフトは、エンド ユーザーのプライバシー保護に力を入れています。 Windows Communication Foundation (WCF)、バージョン 3.0 を使用してアプリケーションをビルドすると、アプリケーションに、エンドユーザーのプライバシーに関する影響を与える可能性があります。 たとえば、アプリケーションが明示的にユーザーの連絡先情報を収集することがあります。つまり、アプリケーションがインターネットを経由して Web サイトに情報を要求したり、情報を送信したりすることがあります。 マイクロソフトの技術をアプリケーションに組み込んでいる場合、その技術にプライバシーに影響を与える可能性がある独自の動作が存在することがあります。 WCF 送信しませんすべての情報を Microsoft、アプリケーションからまたはエンドユーザーが選択する場合を除き。  
@@ -29,7 +29,7 @@ ms.locfileid: "49086675"
  WCF メッセージング層はローカル コンピューターに個人情報を書き込みません。 ただし、サービスの開発者が個人情報を公開するサービスを作成した場合は、ネットワーク レベルで個人情報を公開することがあります。このような例として、エンドポイント名に個人名を使用している場合や、エンドポイントの Web サービス記述言語に個人情報を追加しても、https を使用して WSDL にアクセスすることをクライアントに要求しない場合などがあります。 また、開発者が実行されている場合、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)個人情報、ツールの出力を公開するエンドポイントに対してツールは、その情報を含めたり、出力ファイルに書き込まれます、ローカルのハード ディスク。  
   
 ## <a name="hosting"></a>ホスト  
- WCF でのホスティング機能は、オンデマンドで開始するか、複数のアプリケーション間のポート共有を有効にするアプリケーションを使用できます。 インターネット インフォメーション サービス (IIS) のような WCF アプリケーションをホストすることができます[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]します。  
+ WCF でのホスティング機能は、オンデマンドで開始するか、複数のアプリケーション間のポート共有を有効にするアプリケーションを使用できます。 WCF アプリケーションは、インターネット インフォメーション サービス (IIS)、ASP.NET のようなホストできます。  
   
  ホストでは、特定の情報をネットワークに公開せず、コンピューター上にデータを格納しません。  
   
@@ -38,16 +38,16 @@ ms.locfileid: "49086675"
   
  認証は、クライアントとサービスとの間で資格情報を交換することによって実行されます。 認証は、次のように、トランスポート レベルのセキュリティまたは SOAP メッセージ レベルのセキュリティで実行できます。  
   
--   SOAP メッセージ セキュリティでは、発行者に応じて、ユーザー名とパスワード、X.509 証明書、Kerberos チケット、SAML トークンのような資格情報を使用して認証が実行されます。このすべての資格情報は、個人情報を含んでいる可能性があります。  
+- SOAP メッセージ セキュリティでは、発行者に応じて、ユーザー名とパスワード、X.509 証明書、Kerberos チケット、SAML トークンのような資格情報を使用して認証が実行されます。このすべての資格情報は、個人情報を含んでいる可能性があります。  
   
--   トランスポート セキュリティでは、HTTP 認証方式 (Basic、Digest、Negotiate、Integrated Windows Authorization、NTLM、None、および Anonymous) のような従来のトランスポート認証機構によって認証が実行されます。  
+- トランスポート セキュリティでは、HTTP 認証方式 (Basic、Digest、Negotiate、Integrated Windows Authorization、NTLM、None、および Anonymous) のような従来のトランスポート認証機構によって認証が実行されます。  
   
  認証によって、通信するエンドポイント間にセキュリティで保護されたセッションを確立できます。 このセッションは、セキュリティ セッションの有効期間が切れるまで有効な GUID によって識別されます。 格納されるデータと格納場所を次の表に示します。  
   
-|データ|ストレージ|  
+|データ|記憶域|  
 |----------|-------------|  
 |ユーザー名、X.509 証明書、Kerberos トークンなどのプレゼンテーション資格情報、および資格情報への参照|Windows 証明書ストアなど、標準の Windows 資格情報管理機構|  
-|ユーザー名とパスワードなど、ユーザーのメンバーシップ情報|[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] メンバーシップ プロバイダー|  
+|ユーザー名とパスワードなど、ユーザーのメンバーシップ情報|ASP.NET メンバーシップ プロバイダー。|  
 |クライアントに対するサービスの認証に使用されるサービスの ID 情報|サービスのエンドポイント アドレス|  
 |呼び出し元情報|監査ログ|  
   
@@ -95,7 +95,7 @@ ms.locfileid: "49086675"
 ### <a name="tracing"></a>トレース  
  WCF インフラストラクチャの診断機能は、トランスポートとサービス モデル レイヤーでは、アクティビティとこれらのメッセージに関連付けられたイベントを通過するメッセージを記録します。 この機能は既定で無効になっています。 アプリケーションの構成ファイルを使用して有効になっているし、トレース動作は、実行時に、WCF WMI プロバイダーを使用して変更できます。 有効にすると、トレース インフラストラクチャは、メッセージ、アクティビティ、および処理イベントを含んだ診断トレースを構成済みリスナーに出力します。 出力の形式と場所は、管理者が選択するリスナー構成によって決まりますが、通常は XML 形式のファイルです。 管理者は、トレース ファイルでアクセス制御リスト (ACL) を設定する必要があります。 特に、Windows アクティベーション システム (WAS) でホストするとき、管理者は、ファイルがパブリック仮想ルート ディレクトリから提供されていないことを確認する必要があります (提供されることを望まない場合)。  
   
- トレースには、メッセージ ログとサービス モデル診断トレースの 2 種類があります。この 2 種類のトレースについて次のセクションで説明します。 この 2 つのトレースは、それぞれ <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> と <xref:System.ServiceModel> というトレース ソースから構成されます。 このログ トレース ソースは両方とも、アプリケーションにローカルなデータを取り込みます。  
+ 2 つの種類のトレースがあります。メッセージ ログと診断のサービス モデルはトレース、次のセクションで説明します。 この 2 つのトレースは、それぞれ <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> と <xref:System.ServiceModel> というトレース ソースから構成されます。 このログ トレース ソースは両方とも、アプリケーションにローカルなデータを取り込みます。  
   
 ### <a name="message-logging"></a>メッセージ ログ  
  メッセージ ログのトレース ソース (<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>) によって管理者は、システムを通過するメッセージをログに記録できます。 ユーザーは構成によって、メッセージ全体またはメッセージ ヘッダーだけをログに記録するかどうか、トランスポート レイヤーまたはサービス モデル レイヤーでログに記録するかどうか、および形式が正しくないメッセージをログに記録するかどうかを設定できます。 また、ユーザーは、フィルター処理を設定して、ログに記録するメッセージを制限できます。  
@@ -163,7 +163,7 @@ ms.locfileid: "49086675"
   
  >  
   
- \<条件の NotBefore"[dateTime]"NotOnOrAfter を = ="[dateTime]">  
+ \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
   
  \<AudienceRestrictionCondition>  
   
@@ -183,7 +183,7 @@ ms.locfileid: "49086675"
   
  \<アドバイス >  
   
- \<AssertionIDReference > [ID]\</AssertionIDReference > *  
+ \<AssertionIDReference>[ID]\</AssertionIDReference>*  
   
  \<アサーション > [アサーション]\</Assertion > *  
   
@@ -213,7 +213,7 @@ ms.locfileid: "49086675"
   
  \<SubjectConfirmation >  
   
- \<ConfirmationMethod > [anyUri]\</ConfirmationMethod > +  
+ \<ConfirmationMethod>[anyUri]\</ConfirmationMethod>+  
   
  \<SubjectConfirmationData > [any]\</SubjectConfirmationData > でしょうか。  
   
@@ -245,7 +245,7 @@ ms.locfileid: "49086675"
   
  `/>?`  
   
- <AuthorityBinding  
+ < AuthorityBinding  
   
  AuthorityKind="[QName]"  
   
@@ -271,7 +271,7 @@ ms.locfileid: "49086675"
   
  `<AttributeValue>[any]</AttributeValue>+`  
   
- \</属性 > +  
+ \</Attribute>+  
   
  \</AttributeStatement>*  
   
@@ -289,7 +289,7 @@ ms.locfileid: "49086675"
   
  \<証拠 >  
   
- \<AssertionIDReference > [ID]\</AssertionIDReference > +  
+ \<AssertionIDReference>[ID]\</AssertionIDReference>+  
   
  \<アサーション > [アサーション]\</Assertion > +  
   
@@ -385,7 +385,7 @@ ms.locfileid: "49086675"
  ビューアーには、WCF トレース ファイルが表示されます。 このビューアーは、トレースに含まれているすべての情報を表示します。  
   
 #### <a name="svcconfigeditorexe"></a>SvcConfigEditor.exe  
- エディターは、作成および WCF 構成ファイルを編集できます。 このエディターは、構成ファイルに含まれているすべての情報を表示します。 テキスト エディターでも同じ操作を実行できます。  
+ エディターは、作成および WCF 構成ファイルを編集できます。 このエディターは、構成ファイルに含まれているすべての情報を表示します。 テキスト エディターでも同じタスクを実行できます。  
   
 #### <a name="servicemodelreg"></a>ServiceModel_Reg  
  このツールでは、コンピューター上の ServiceModel のインストールを管理できます。 実行し、処理で、WCF のインストールの構成に関する情報を表示できますと、コンソール ウィンドウにステータス メッセージが表示されます。  
@@ -401,6 +401,7 @@ ms.locfileid: "49086675"
   
  Web サービス記述言語 (WSDL) には、ポートの定義が入ります。 各ポートには、エンドポイント アドレス、およびアプリケーションが使用するサービスを表すバインディングがあります。 WSDL の公開は、構成を使用して無効にできます。 コンピューターに保持される情報はありません。  
   
-## <a name="see-also"></a>関連項目  
- [Windows Communication Foundation](https://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)  
- [セキュリティ](../../../docs/framework/wcf/feature-details/security.md)
+## <a name="see-also"></a>関連項目
+
+- [Windows Communication Foundation](index.md)
+- [セキュリティ](../../../docs/framework/wcf/feature-details/security.md)

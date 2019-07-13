@@ -1,19 +1,19 @@
 ---
-title: アクティベーションの &lt;diagnostics&gt;
+title: <diagnostics> アクティブ化
 ms.date: 03/30/2017
 ms.assetid: 1486e0eb-fe2a-46c3-b584-c924889477dd
-ms.openlocfilehash: 28f051a7ab06dbc1b40f804c56071818eb37e88b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 30456963a7d74a93e39bb1fddc0910daae97f039
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54144978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704259"
 ---
-# <a name="ltdiagnosticsgt-for-activation"></a>アクティベーションの &lt;diagnostics&gt;
+# <a name="diagnostics-for-activation"></a>\<診断 > アクティブ化
 Windows Communication Foundation (WCF) リスナーの診断機能を構成します。  
   
  \<system.serviceModel.activation>  
-\<診断 >  
+\<diagnostics>  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,5 +46,6 @@ Windows Communication Foundation (WCF) リスナーの診断機能を構成し�
 |-------------|-----------------|  
 |[\<system.serviceModel.activation >](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|リスナー プロセス SMSvcHost.exe の設定が含まれています。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Activation.Configuration.DiagnosticSection>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Activation.Configuration.DiagnosticSection>

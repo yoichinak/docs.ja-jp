@@ -1,42 +1,65 @@
 ---
 title: ?? 演算子 - C# リファレンス
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 06/07/2019
 f1_keywords:
 - ??_CSharpKeyword
 helpviewer_keywords:
-- coalesce operator [C#]
+- null-coalescing operator [C#]
 - ?? operator [C#]
-- conditional-AND operator (&&) [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: 153accdc4995065563b00da0fd62992341c06cf1
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: a19b5558da36ffb11dabd1b9bec419a3623a0f17
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241880"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024993"
 ---
 # <a name="-operator-c-reference"></a>?? 演算子 (C# リファレンス)
-`??` 演算子は、null 合体演算子と呼ばれます。  左側のオペランドが null 値でない場合には左側のオペランドを返し、null 値である場合には右側のオペランドを返します。  
-  
-## <a name="remarks"></a>コメント  
- null 許容型は、型のドメインの値を表すことができ、値は未定義でもかまいません (その場合、値は null になります)。 `??` 演算子の構文を使用して、左側のオペランドが null 許容型でその値が null である場合に、適切な値 (右側のオペランド) を返すことができます。 `??` 演算子を使用せずに、null 非許容値型に対して null 許容値型を割り当てると、コンパイル時にエラーが発生します。 null 許容値型が定義されていない場合にキャストを使用すると、`InvalidOperationException` 例外がスローされます。  
-  
- 詳細については、「[Null 許容型](../../../csharp/programming-guide/nullable-types/index.md)」を参照してください。  
-  
- ?? の結果は、 たとえ両方の引数が定数であった場合でも、定数とは見なされません。  
-  
-## <a name="example"></a>例  
- [!code-csharp[csRefOperators#53](../../../csharp/language-reference/operators/codesnippet/CSharp/null-conditional-operator_1.cs)]  
-  
-## <a name="c-language-specification"></a>C# 言語仕様  
 
-詳細については、「[C# 言語仕様](../language-specification/index.md)」の [null 合体演算子](~/_csharplang/spec/expressions.md#the-null-coalescing-operator)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
-  
-## <a name="see-also"></a>参照
+null 合体演算子 `??` では、それが `null` ではない場合、その左側のオペランドの値が返されます。それ以外の場合は、右側のオペランドが評価され、その結果が返されます。 `??` 演算子では、左側のオペランドが null 値以外に評価された場合は、その右側のオペランドは評価されません。
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
-- [C# 演算子](../../../csharp/language-reference/operators/index.md)  
-- [Null 許容型](../../../csharp/programming-guide/nullable-types/index.md)  
-- ['Lifted' の正確な意味](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)
+null 合体演算子は右結合です。つまり、次のフォームの式は
+
+```csharp
+a ?? b ?? c
+```
+
+これが次のように評価されます。
+
+```csharp
+a ?? (b ?? c)
+```
+
+`??` 演算子は、次のシナリオで役立つことがあります。
+
+- [null 条件演算子 ?. および ?[]](member-access-operators.md#null-conditional-operators--and-) を含む式は、null 条件演算の式の結果が `null` の場合に評価する代替の式を指定するために、null 合体演算子を使用することができます。
+
+  [!code-csharp-interactive[with null-conditional](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullConditional)]
+
+- [null 値許容型](../../programming-guide/nullable-types/index.md)を使用して、基になる値の型の値を提供する必要がある場合、null 合体演算子を使用して、null 値許容型が `null` の場合に提供する値を指定します。
+
+  [!code-csharp-interactive[with nullable types](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullableTypes)]
+
+  null 値許容型が `null` の場合に使用される値を、基になる値型の既定値にする場合は、<xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> メソッドを使用します。
+
+- C# 7.0 以降、null 合体演算子の右側のオペランドとして [`throw` 式](../keywords/throw.md#the-throw-expression)を使用し、引数のチェック コードをより簡潔にすることができます。
+
+  [!code-csharp[with throw expression](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithThrowExpression)]
+
+  上記の例は、[式のようなメンバー](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)を使用してプロパティを定義する方法も示しています。
+
+## <a name="operator-overloadability"></a>演算子のオーバーロード可/不可
+
+null 合体演算子はオーバーロードできません。
+
+## <a name="c-language-specification"></a>C# 言語仕様
+
+詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)の [null 合体演算子](~/_csharplang/spec/expressions.md#the-null-coalescing-operator)に関するセクションを参照してください。
+
+## <a name="see-also"></a>関連項目
+
+- [C# リファレンス](../index.md)
+- [C# 演算子](index.md)
+- [?. および ?[] 演算子](member-access-operators.md#null-conditional-operators--and-)
+- [?:演算子 (C# リファレンス)](conditional-operator.md)

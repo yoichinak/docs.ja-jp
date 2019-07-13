@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae11cdbbdb0fa63d1b903d18aff133344fd17f2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 339a0f502b7e47f7bee82a0da92185481d909e64
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768870"
 ---
 # <a name="icordebugvariablehome-interface"></a>ICorDebugVariableHome インターフェイス
 ローカル変数または関数の引数を表します。  
@@ -33,15 +33,15 @@ ms.locfileid: "33422534"
 |メソッド|説明|  
 |------------|-----------------|  
 |[GetArgumentIndex メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getargumentindex-method.md)|関数の引数のインデックスを取得します。|  
-|[GetCode メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getcode-method.md)|インスタンスを取得します"ICorDebugCode"を含むこの`ICorDebugVariableHome`オブジェクト。|  
-|[GetLiveRange メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getliverange-method.md)|この変数がアクティブ、ネイティブな範囲を取得します。|  
+|[GetCode メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getcode-method.md)|これを含む"ICorDebugCode"インスタンスを取得します。`ICorDebugVariableHome`オブジェクト。|  
+|[GetLiveRange メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getliverange-method.md)|この変数はライブのネイティブの範囲を取得します。|  
 |[GetLocationType メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md)|変数のネイティブの場所の種類を取得します。|  
 |[GetOffset メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getoffset-method.md)|変数のベース レジスタからのオフセットを取得します。|  
-|[GetRegister メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getregister-method.md)|場所の種類を持つ変数を格納するレジスタを取得`VLT_REGISTER`、およびロケーションの型の変数のベース レジスタ`VLT_REGISTER_RELATIVE`です。|  
+|[GetRegister メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getregister-method.md)|場所の種類を持つ変数を格納するレジスタを取得します。 `VLT_REGISTER`、を、基本の場所の型の変数を登録して`VLT_REGISTER_RELATIVE`します。|  
 |[GetSlotIndex メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getslotindex-method.md)|ローカル変数のマネージ スロット インデックスを取得します。|  
   
 ## <a name="example"></a>例  
- 次のコード片では、 [ICorDebugCode4](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-interface.md)という名前のオブジェクト`pCode4`です。  
+ 次のコード フラグメントを使用して、 [ICorDebugCode4](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-interface.md)という名前のオブジェクト`pCode4`します。  
   
 ```cpp  
 ICorDebugCode4 *pCode4 = NULL;  
@@ -82,15 +82,16 @@ for (int i = 0; i < celtFetched; i++)
 }  
 ```  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [ICorDebugVariableHomeEnum インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugVariableHomeEnum インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)

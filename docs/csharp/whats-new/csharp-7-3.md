@@ -2,12 +2,12 @@
 title: C# 7.3 の新機能
 description: C# 7.3 の新機能の概要
 ms.date: 05/16/2018
-ms.openlocfilehash: 570da53059242c0242609ddcba5cb23f1728aa9f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 768070ead2b180d5f4491ac87be6c248c39e9944
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873801"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397779"
 ---
 # <a name="whats-new-in-c-73"></a>C# 7.3 の新機能
 
@@ -34,7 +34,12 @@ C# 7.3 リリースには 2 つの主要なテーマがあります。 1 つ目�
 - `-publicsign`: オープン ソース ソフトウェア (OSS) のアセンブリの署名を可能にします。
 - `-pathmap`: ソース ディレクトリのマッピングを提供します。
 
-この記事の残りの部分では、それぞれの機能強化の詳細とリンクを示します。
+この記事の残りの部分では、それぞれの機能強化の詳細とリンクを示します。 `dotnet try` グローバル ツールを使って、これらの機能をご自身の環境で調べることができます。
+
+1. [dotnet try](https://github.com/dotnet/try/blob/master/README.md#setup) グローバル ツールをインストールします。
+1. [dotnet/try-samples](https://github.com/dotnet/try-samples) リポジトリを複製します。
+1. 現在のディレクトリを、*try-samples* リポジトリの *csharp7* サブディレクトリに設定します。
+1. `dotnet try` を実行します。
 
 ## <a name="enabling-more-efficient-safe-code"></a>セーフ コードをより効率的にする
 
@@ -51,7 +56,7 @@ unsafe struct S
 }
 ```
 
-以前のバージョンの C# では、`myFixedField` の一部であるいずれかの整数にアクセスするために変数のピン留めが必要でした。 現在では、次のコードが安全なコンテキストでコンパイルされるようになりました。
+以前のバージョンの C# では、`myFixedField` の一部であるいずれかの整数にアクセスするために変数のピン留めが必要でした。 今では、次のコードは、変数 `p` を別の `fixed` ステートメントの内部にピン留めせずに、コンパイルされます。
 
 ```csharp
 class C
@@ -112,7 +117,7 @@ int* pArr2 = stackalloc int[] {1, 2, 3};
 Span<int> arr = stackalloc [] {1, 2, 3};
 ```
 
-詳しくは、言語リファレンスの [`stackalloc` ステートメント](../language-reference/keywords/stackalloc.md)に関する記事を参照してください。
+詳細については、「[`stackalloc` 演算子](../language-reference/operators/stackalloc.md)」の記事を参照してください。
 
 ### <a name="more-types-support-the-fixed-statement"></a>`fixed` ステートメントをサポートする型の増加
 

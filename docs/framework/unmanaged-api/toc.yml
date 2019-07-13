@@ -1,0 +1,31 @@
+- name: アンマネージ API リファレンス
+  href: index.md
+  items:
+    - name: 共有のデータ型
+      href: common-data-types-unmanaged-api-reference.md
+    - name: ALink API
+      href: alink/
+    - name: Authenticode
+      href: authenticode/
+    - name: 定数
+      href: constants-unmanaged-api-reference.md
+    - name: デバッグ
+      href: debugging/
+    - name: シンボル ストア診断
+      href: diagnostics/
+    - name: Fusion
+      href: fusion/
+    - name: ホスト
+      href: hosting/
+    - name: メタデータ
+      href: metadata/
+    - name: プロファイル
+      href: profiling/
+    - name: 厳密な名前付け
+      href: strong-naming/
+    - name: WMI およびパフォーマンス カウンター
+      href: wmi/
+    - name: Tlbexp ヘルパー関数
+      href: tlbexp/
+    - name: GUID_ManagedName 属性
+      href: guid-managedname-attribute.md

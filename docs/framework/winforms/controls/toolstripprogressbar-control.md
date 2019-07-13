@@ -7,18 +7,18 @@ helpviewer_keywords:
 - toolbars [Windows Forms], progress bars
 - progress controls [Windows Forms]
 ms.assetid: cb3eb0a8-60b1-483e-a03f-93b0b1351dae
-ms.openlocfilehash: 005c7d0ed69edc0a54f428adba186efb170df6d4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03f078da96a48ed0f53697661cb2add1d6c01901
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009293"
 ---
 # <a name="toolstripprogressbar-control"></a>ToolStripProgressBar コントロール
-<xref:System.Windows.Forms.ToolStripProgressBar>結合<xref:System.Windows.Forms.ToolStrip>の表示および機能をラフティングの一般的なプロセスの追跡機能。  
+<xref:System.Windows.Forms.ToolStripProgressBar>結合<xref:System.Windows.Forms.ToolStrip>レンダリングと、その一般的なプロセスの追跡機能と機能をラフティングします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ToolStripProgressBar コントロールの概要](../../../../docs/framework/winforms/controls/toolstripprogressbar-control-overview.md)  
+ [ToolStripProgressBar コントロールの概要](toolstripprogressbar-control-overview.md)  
  Windows フォームの <xref:System.Windows.Forms.ToolStripProgressBar> コントロールの目的および中心となる概念を説明するトピックを示します。  
   
 ## <a name="reference"></a>参照  
@@ -28,5 +28,6 @@ ms.locfileid: "33533371"
  <xref:System.Windows.Forms.ToolStripProgressBar>  
  <xref:System.Windows.Forms.ToolStripProgressBar> コントロールのリファレンス ドキュメントを提供します。  
   
-## <a name="see-also"></a>関連項目  
- [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>関連項目
+
+- [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)

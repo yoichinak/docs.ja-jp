@@ -1,15 +1,15 @@
 ---
-title: '&lt;serviceBehavior&gt; の &lt;routing&gt;'
+title: <routing> の <serviceBehavior>
 ms.date: 03/30/2017
 ms.assetid: d8f9c844-4629-4a45-9599-856dc8f01794
-ms.openlocfilehash: 0a007eb33063f8f44098a8c63708255b884b5fdc
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: b7a9be18395ef8878900d754b5aa5afdeee0cff8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783059"
 ---
-# <a name="ltroutinggt-of-ltservicebehaviorgt"></a>&lt;serviceBehavior&gt; の &lt;routing&gt;
+# <a name="routing-of-servicebehavior"></a>\<ルーティング > の\<serviceBehavior >
 ルーティング構成の動的な変更を可能にするルーティング サービスへの実行時アクセスを提供します。  
   
  \<system.ServiceModel >  
@@ -56,4 +56,3 @@ ms.locfileid: "54146850"
  サービスの動作構成に追加すると、この構成要素により、サービスのルーティングが有効になります。 この要素には、サービスで使用される実際のルーティング テーブルを指定できます。  
   
  この構成セクションを使用すると、配置パターンの変更時にルーティング設定を変更できます。 実行時には、新しいルーティング設定を使用した独自のルーティング拡張を登録できます。ルーティング サービスは (開始時に適用されていた規則に関係なく) 更新済みの構成情報を使用して新たなメッセージとセッションにサービスを提供します。ただし、インフライトのメッセージやセッションには以前の規則が適用されます。  このようにして、実行時において、セッション セーフでリサイクルの程度を抑えた状態でのルーティング サービスの再構成が可能となります。  
-  

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C#]
 ms.assetid: be2571ed-efb0-4965-b122-81e5b09db0b9
-ms.openlocfilehash: 02d12ef92e1361bc8d46603d803a1b8b7c06a0a0
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 15b193d9f294c01826b6b60587678ad76248e976
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243200"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422064"
 ---
 # <a name="break-c-reference"></a>break (C# リファレンス)
 
@@ -48,11 +48,9 @@ Sorry, invalid selection.
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
-- [switch](../../../csharp/language-reference/keywords/switch.md)  
-- [ジャンプ ステートメント](../../../csharp/language-reference/keywords/jump-statements.md)  
-- [繰り返しステートメント](../../../csharp/language-reference/keywords/iteration-statements.md)
+- [C# リファレンス](../../../csharp/language-reference/index.md)
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)
+- [switch](../../../csharp/language-reference/keywords/switch.md)

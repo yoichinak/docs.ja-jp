@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-ms.openlocfilehash: 28eda94914125f2c5849a471671c8e283475c82c
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: 41f29673622fa7918238dd014b97ee3cf0766257
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321393"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486208"
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments ディレクティブ
 パスの制約は、ジェネリック型のコンス トラクターに汎用の引数を入力します。  
@@ -62,27 +62,28 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 ## <a name="xaml-2006-and-wpf-generic-xaml-usages"></a>XAML 2006 および WPF XAML のジェネリックの使用法  
  XAML 2006 の使用状況、および XAML の WPF アプリケーションで使用する、次の制限の存在の`x:TypeArguments`および一般的な XAML のジェネリック型の使用状況。  
   
--   XAML ファイルのルート要素だけでは、ジェネリック型を参照する汎用的な XAML 使用量をサポートできます。  
+- XAML ファイルのルート要素だけでは、ジェネリック型を参照する汎用的な XAML 使用量をサポートできます。  
   
--   ルート要素は、少なくとも 1 つの型引数を持つジェネリック型にマップする必要があります。 例としては、<xref:System.Windows.Navigation.PageFunction%601>します。 ページ関数は、WPF における XAML のジェネリックの使用法サポートの主なシナリオです。  
+- ルート要素は、少なくとも 1 つの型引数を持つジェネリック型にマップする必要があります。 例としては、<xref:System.Windows.Navigation.PageFunction%601>します。 ページ関数は、WPF における XAML のジェネリックの使用法サポートの主なシナリオです。  
   
--   ジェネリックのルート要素の XAML オブジェクト要素が、部分クラスを使用して、宣言する必要がありますも`x:Class`します。 これは、ビルド アクションを WPF を定義する場合でも当てはまります。  
+- ジェネリックのルート要素の XAML オブジェクト要素が、部分クラスを使用して、宣言する必要がありますも`x:Class`します。 これは、ビルド アクションを WPF を定義する場合でも当てはまります。  
   
--   `x:TypeArguments` 入れ子になったジェネリック制約は参照できません。  
+- `x:TypeArguments` 入れ子になったジェネリック制約は参照できません。  
   
 ## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a>XAML 2009 または XAML 2006 なし、WPF 3.0 または 3.5 の WPF 依存関係  
  XAML 2006 または XAML 2009 のいずれかの .NET Framework XAML サービスでは、WPF に関連する XAML のジェネリックの使用法の制限が緩和されます。 バッキング型システムとオブジェクト モデルをサポートする XAML のマークアップ内の任意の位置にある汎用オブジェクトの要素をインスタンス化することができます。  
   
- XAML 2009 を使用する場合、CLR をマップする代わりに基本の共通言語プリミティブの XAML 型を取得する型、使用することができます[共通の XAML 言語プリミティブの組み込み型](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)内の情報項目として、`typeString`します。 たとえば、次を宣言できます (表示されませんが、プレフィックスのマッピングが、x は XAML 2009 の XAML 言語の XAML 名前空間)。  
+ XAML 2009 を使用する場合、CLR をマップする代わりに基本の共通言語プリミティブの XAML 型を取得する型、使用することができます[共通の XAML 言語プリミティブの組み込み型](built-in-types-for-common-xaml-language-primitives.md)内の情報項目として、`typeString`します。 たとえば、次を宣言できます (表示されませんが、プレフィックスのマッピングが、x は XAML 2009 の XAML 言語の XAML 名前空間)。  
   
 ```xaml  
 <my:BusinessObject x:TypeArguments="x:String,x:Int32"/>  
 ```  
   
- 対象とする場合と WPF で[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]、と共に XAML 2009 の機能を使用する`x:TypeArguments`loose XAML (XAML マークアップ コンパイルされていない) に対してのみです。 WPF 向けにマークアップ コンパイルされた XAML、および XAML の BAML 形式は、現在、XAML 2009 のキーワードと機能をサポートしていません。 必要なマークアップをコンパイルする場合、XAML は、「XAML 2006 および WPF 汎用 XAML 使用法」セクションに記載されている制限で動作する必要があります。  
+ と共に XAML 2009 の機能を使用する WPF および .NET Framework 4 を対象とする場合、 `x:TypeArguments` loose XAML (XAML マークアップ コンパイルされていない) に対してのみです。 WPF 向けにマークアップ コンパイルされた XAML、および XAML の BAML 形式は、現在、XAML 2009 のキーワードと機能をサポートしていません。 必要なマークアップをコンパイルする場合、XAML は、「XAML 2006 および WPF 汎用 XAML 使用法」セクションに記載されている制限で動作する必要があります。  
   
-## <a name="see-also"></a>関連項目  
- [x:Class ディレクティブ](../../../docs/framework/xaml-services/x-class-directive.md)  
- [x:Type マークアップ拡張機能](../../../docs/framework/xaml-services/x-type-markup-extension.md)  
- [共通の XAML 言語プリミティブの組み込み型](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)  
- [XAML のジェネリック](../../../docs/framework/xaml-services/generics-in-xaml.md)
+## <a name="see-also"></a>関連項目
+
+- [x:Class ディレクティブ](x-class-directive.md)
+- [x:Type マークアップ拡張機能](x-type-markup-extension.md)
+- [共通の XAML 言語プリミティブの組み込み型](built-in-types-for-common-xaml-language-primitives.md)
+- [XAML のジェネリック](generics-in-xaml.md)

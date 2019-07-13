@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1e652588d27521a04015228e86eb9af9c53346e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7de5a6d38d43c20ce52f609ef6514a1f28022416
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440815"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781138"
 ---
 # <a name="stackoverflowinfo-structure"></a>StackOverflowInfo 構造体
-スローされた例外をオーバーフローが原因でオーバーフローが発生しましたが、情報の種類を格納します。  
+オーバーフローによりスローされた例外でオーバーフローが発生しましたが、情報の種類を格納します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct _StackOverflowInfo {  
     StackOverflowType   soType;  
     EXCEPTION_POINTERS  *pExceptionInfo;  
@@ -39,20 +39,21 @@ typedef struct _StackOverflowInfo {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`soType`|値、 [StackOverflowType](../../../../docs/framework/unmanaged-api/hosting/stackoverflowtype-enumeration.md)オーバーフローの種類を指定する列挙です。|  
-|`pExceptionInfo`|Win32 へのポインター`EXCEPTION_POINTERS`例外のマシンに依存しない説明を含む例外レコードと時、例外のプロセッサ コンテキストのコンピューターに依存する説明を含むコンテキスト レコードを含むオブジェクト。|  
+|`soType`|値、 [StackOverflowType](../../../../docs/framework/unmanaged-api/hosting/stackoverflowtype-enumeration.md)オーバーフローの種類を指定する列挙体。|  
+|`pExceptionInfo`|Win32 へのポインター`EXCEPTION_POINTERS`例外レコードと、例外のマシンに依存しない説明および例外発生時にプロセッサのコンテキストのマシンに依存する説明を持つコンテキスト レコードを含むオブジェクトです。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  A`StackOverflowInfo`にオブジェクトが渡される、 [iactiononclrevent::onevent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md)メソッド`Event_StackOverflow`イベント。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.idl  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ホスト構造体](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+## <a name="see-also"></a>関連項目
+
+- [ホスト構造体](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

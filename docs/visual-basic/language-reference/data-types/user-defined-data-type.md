@@ -23,12 +23,12 @@ helpviewer_keywords:
 - user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
-ms.openlocfilehash: 1dac93145b6e11a0d149f03b43e1e0b28b770925
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 42aecd0a5d948ab76d7bd11990d4cdbdce611015
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698459"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64646948"
 ---
 # <a name="user-defined-data-type"></a>ユーザー定義型
 定義する形式でデータを保持します。 `Structure`ステートメントの形式を定義します。  
@@ -50,15 +50,15 @@ ms.locfileid: "45698459"
   
 ## <a name="programming-tips"></a>プログラミングのヒント  
   
--   **メモリ使用量。**  他のすべての複合データ型と同様に、構造体の総メモリ使用量を計算する場合、各メンバーのストレージ割り当ての公称サイズを単に合計しただけでは安全ではありません。 さらに、メモリ内に格納される順序が宣言の順序と同じであると仮定するのも安全ではありません。 構造体のストレージ レイアウトを制御する必要がある場合は、<xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性を `Structure` ステートメントに適用します。  
+- **メモリ使用量。**  他のすべての複合データ型と同様に、構造体の総メモリ使用量を計算する場合、各メンバーのストレージ割り当ての公称サイズを単に合計しただけでは安全ではありません。 さらに、メモリ内に格納される順序が宣言の順序と同じであると仮定するのも安全ではありません。 構造体のストレージ レイアウトを制御する必要がある場合は、<xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性を `Structure` ステートメントに適用します。  
   
--   **相互運用の考慮事項。** オートメーションまたは COM オブジェクトなどの .NET Framework 用に作成されていないコンポーネントをやり取りする場合、他の環境でのユーザー定義型は Visual Basic 構造型と互換性がないことに注意してください。  
+- **相互運用の考慮事項。** オートメーションまたは COM オブジェクトなどの .NET Framework 用に作成されていないコンポーネントをやり取りする場合、他の環境でのユーザー定義型は Visual Basic 構造型と互換性がないことに注意してください。  
   
--   **拡大します。** 任意の構造のデータ型との間の自動変換はありません。 変換演算子を定義するには構造体を使用して、 [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)、するには、各変換演算子を宣言して`Widening`または`Narrowing`します。  
+- **拡大します。** 任意の構造のデータ型との間の自動変換はありません。 変換演算子を定義するには構造体を使用して、 [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)、するには、各変換演算子を宣言して`Widening`または`Narrowing`します。  
   
--   **型宣言文字。** リテラルの型文字または識別子の型文字は、構造体のデータ型はあるありません。  
+- **型宣言文字。** リテラルの型文字または識別子の型文字は、構造体のデータ型はあるありません。  
   
--   **フレームワークの型。** .NET Framework では、対応する型はありません。 すべての構造は、.NET Framework クラスから継承<xref:System.ValueType?displayProperty=nameWithType>に対応する個別の構造体がありませんが、<xref:System.ValueType?displayProperty=nameWithType>します。  
+- **フレームワークの型。** .NET Framework では、対応する型はありません。 すべての構造は、.NET Framework クラスから継承<xref:System.ValueType?displayProperty=nameWithType>に対応する個別の構造体がありませんが、<xref:System.ValueType?displayProperty=nameWithType>します。  
   
 ## <a name="example"></a>例  
  構造体の宣言の概要を次に示します。  
@@ -71,14 +71,15 @@ ms.locfileid: "45698459"
 End Structure  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ValueType>  
- <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
- [データの種類](../../../visual-basic/language-reference/data-types/index.md)  
- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Widening](../../../visual-basic/language-reference/modifiers/widening.md)  
- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)  
- [構造体](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ValueType>
+- <xref:System.Runtime.InteropServices.StructLayoutAttribute>
+- [データの種類](../../../visual-basic/language-reference/data-types/index.md)
+- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Widening](../../../visual-basic/language-reference/modifiers/widening.md)
+- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)
+- [構造体](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

@@ -3,12 +3,12 @@ title: 'チュートリアル: 最初のアナライザーとコード修正を�
 description: このチュートリアルでは、.NET Compiler SDK (Roslyn API) を使用してアナライザーとコード修正を作成する手順を詳しく説明します。
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 2959fe3008bfca972d3a164ed27d05c2a8b0e69a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1a4280741650b41174f93c4403008ee3522adbe6
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397999"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452709"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>チュートリアル: 最初のアナライザーとコード修正を作成する
 
@@ -50,8 +50,8 @@ Console.WriteLine(x);
 
 変数を定数にすることができるかどうかを判断するために、構文解析、初期化子式の定数分析、および変数に書き込まれないというデータフロー分析が必要です。 .NET Compiler Platform には、この分析を簡単に実行できる API が用意されています。 最初の手順は、新しい C# の**コード修正を含むアナライザー** プロジェクトを作成することです。
 
-* Visual Studio で、**[ファイル] > [新規] > [プロジェクト]** の順に選択して、[新しいプロジェクト] ダイアログを表示します。
-* **[Visual C#] > [Extensibility]** で、**[Analyzer with code fix (.NET Standard)]\(コード修正付きアナライザー (.NET Standard)\)** を選択します。
+* Visual Studio で、 **[ファイル] > [新規] > [プロジェクト]** の順に選択して、[新しいプロジェクト] ダイアログを表示します。
+* **[Visual C#] > [Extensibility]** で、 **[Analyzer with code fix (.NET Standard)]\(コード修正付きアナライザー (.NET Standard)\)** を選択します。
 * プロジェクトに「**MakeConst**」という名前を付けて、[OK] をクリックします。
 
 コード修正テンプレート付きアナライザー テンプレートを使用すると、アナライザーとコード修正を含むプロジェクト、単体テスト プロジェクト、VSIX プロジェクトという 3 つのプロジェクトが作成されます。 既定のスタートアップ プロジェクトは VSIX プロジェクトです。 **F5** キーを押して、VSIX プロジェクトを開始します。 これにより、新しいアナライザーが読み込まれた Visual Studio の 2 つ目のインスタンスが開始されます。
@@ -92,7 +92,7 @@ Console.WriteLine(x);
 * `AnalyzerMessageFormat` を "定数に変更できる" に変更します。
 * `AnalyzerDescription` を "定数にする" に変更します。
 
-また、**[アクセス修飾子]** ドロップダウンを `public` に変更します。 こうすることで、単体テストでこれらの定数を簡単に使用できるようになります。 完了すると、次の図のようにリソース エディターが表示されます。
+また、 **[アクセス修飾子]** ドロップダウンを `public` に変更します。 こうすることで、単体テストでこれらの定数を簡単に使用できるようになります。 完了すると、次の図のようにリソース エディターが表示されます。
 
 ![文字列リソースを更新する](media/how-to-write-csharp-analyzer-code-fix/update-string-resources.png)
 
@@ -195,11 +195,11 @@ Console.WriteLine(x);
 
 次に `MakeUppercaseAsync` メソッドを削除します これで適用されなくなります。
 
-すべてのコード修正は <xref:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider> から派生しています。 これらはすべて <xref:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.RegisterCodeFixesAsync(Microsoft.CodeAnalysis.CodeFixes.CodeFixContext)?displayProperty=nameWithType> をオーバーライドし、使用できるコード修正を報告します。 `RegisterCodeFixesAsync` で、診断に合わせて、次のように検索している先祖ノードの種類を <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> に変更します。
+すべてのコード修正プロバイダーは <xref:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider> から派生します。 これらはすべて <xref:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.RegisterCodeFixesAsync(Microsoft.CodeAnalysis.CodeFixes.CodeFixContext)?displayProperty=nameWithType> をオーバーライドし、使用できるコード修正を報告します。 `RegisterCodeFixesAsync` で、診断に合わせて、次のように検索している先祖ノードの種類を <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> に変更します。
 
 [!code-csharp[Find local declaration node](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#FindDeclarationNode  "Find the local declaration node that raised the diagnostic")]
 
-次に、最後の行を変更してコード修正を登録します。 この修正で、既存の宣言に `const` 修飾子を追加した結果の新しいドキュメントが作成されます。  
+次に、最後の行を変更してコード修正を登録します。 この修正で、既存の宣言に `const` 修飾子を追加した結果の新しいドキュメントが作成されます。
 
 [!code-csharp[Register the new code fix](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#RegisterCodeFix  "Register the new code fix")]
 
@@ -275,14 +275,14 @@ public void WhenTestCodeIsValidNoDiagnosticIsTriggered(string testCode)
 }
 ```
 
-診断で警告がトリガーされないようにするコード フラグメントすることで、このテスト用に新しいデータ行を作成することができます。 ソース コード フラグメントに対してトリガーされる診断がない場合、`VerifyCSharpDiagnostic` のこのオーバーロードは成功します。  
+診断で警告がトリガーされないようにするコード フラグメントすることで、このテスト用に新しいデータ行を作成することができます。 ソース コード フラグメントに対してトリガーされる診断がない場合、`VerifyCSharpDiagnostic` のこのオーバーロードは成功します。
 
 次に、`TestMethod2` をこのテストに置き換えて、診断を呼び出し、ソース コード フラグメントに対してコード修正を適用するようにします。
 
 ```csharp
 [DataTestMethod]
 [DataRow(LocalIntCouldBeConstant, LocalIntCouldBeConstantFixed, 10, 13)]
-public void WhenDiagosticIsRaisedFixUpdatesCode(
+public void WhenDiagnosticIsRaisedFixUpdatesCode(
     string test,
     string fixTest,
     int line,
@@ -309,7 +309,7 @@ public void WhenDiagosticIsRaisedFixUpdatesCode(
 
 [!code-csharp[string constants for fix test](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#FirstFixTest "string constants for fix test")]
 
-これらの 2 つのテストを実行して、合格することを確認します。 Visual Studio で、**[テスト]** > **[Windows]** > **[テスト エクスプローラー]** の順に選択して、**テスト エクスプローラー**を開きます。  **[すべて実行]** リンクをクリックします。
+これらの 2 つのテストを実行して、合格することを確認します。 Visual Studio で、 **[テスト]**  >  **[Windows]**  >  **[テスト エクスプローラー]** の順に選択して、**テスト エクスプローラー**を開きます。  **[すべて実行]** リンクをクリックします。
 
 ## <a name="create-tests-for-valid-declarations"></a>有効な宣言のテストを作成する
 
@@ -426,7 +426,7 @@ foreach (var variable in localDeclaration.Declaration.Variables)
 
 [!code-csharp[Mismatched types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsInvalid "When the variable type and the constant type don't match, there's no diagnostic")]
 
-また、参照型が正しく処理されません。 参照型に使用できる唯一の定数値は、文字列リテラルを許可する <xref:System.String?displayPropert=nameWIthType> の場合を除き、`null` です。 つまり、`const string s = "abc"` は有効ですが、`const object s = "abc"` は有効ではありません。 このコード スニペットで、次の条件を検証します。
+また、参照型が正しく処理されません。 参照型に使用できる唯一の定数値は、文字列リテラルを許可する <xref:System.String?displayProperty=nameWIthType> の場合を除き、`null` です。 つまり、`const string s = "abc"` は有効ですが、`const object s = "abc"` は有効ではありません。 このコード スニペットで、次の条件を検証します。
 
 [!code-csharp[Reference types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsntString "When the variable type is a reference type other than string, there's no diagnostic")]
 
@@ -444,7 +444,7 @@ foreach (var variable in localDeclaration.Declaration.Variables)
 
 幸いにも、上記のすべてのバグは、ここで学んだテクニックを使って解決できます。
 
-最初のバグを修正するには、まず **DiagnosticAnalyzer.cs** を開き、各ローカル宣言の初期化子が検査される foreach ループを見つけて、それらに定数値が割り当てられていることを確認します。 最初の foreach ループの_直前_に `context.SemanicModel.GetTypeInfo()` を呼び出し、宣言されたローカル宣言の型に関する詳細情報を取得します。
+最初のバグを修正するには、まず **DiagnosticAnalyzer.cs** を開き、各ローカル宣言の初期化子が検査される foreach ループを見つけて、それらに定数値が割り当てられていることを確認します。 最初の foreach ループの_直前_に `context.SemanticModel.GetTypeInfo()` を呼び出し、宣言されたローカル宣言の型に関する詳細情報を取得します。
 
 ```csharp
 var variableTypeName = localDeclaration.Declaration.Type;
@@ -519,7 +519,7 @@ int k = i + j;
 
 これらの変更の後は、最初の 2 つの変数にのみ赤い波線が表示されます。 `i` と `j` の両方に `const` を追加すると、`const` になる可能性があるので、`k` で新しい警告を受け取ります。
 
-おめでとうございます!  ここでは最初の .NET Compiler Platform 拡張機能を作成しました。これは、その場でコード分析を実行し、問題を検出してそれを修正する簡単な修正案を提供する拡張機能です。 この過程で、.NET Compiler Platform SDK (Roslyn API) に含まれる多くのコード API を学びました。 サンプル GitHub リポジトリの[完成したサンプル](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/Tutorials/MakeConst)に対して作業を検査することができます。 また、[完成したプロジェクトの zip ファイル](https://github.com/dotnet/samples/blob/master/csharp/roslyn-sdk/Tutorials/MakeConst.zip)をダウンロードすることもできます。
+おめでとうございます! ここでは最初の .NET Compiler Platform 拡張機能を作成しました。これは、その場でコード分析を実行し、問題を検出してそれを修正する簡単な修正案を提供する拡張機能です。 この過程で、.NET Compiler Platform SDK (Roslyn API) に含まれる多くのコード API を学びました。 サンプル GitHub リポジトリの[完成したサンプル](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/Tutorials/MakeConst)に対して作業を検査することができます。 また、[完成したプロジェクトの zip ファイル](https://github.com/dotnet/samples/blob/master/csharp/roslyn-sdk/Tutorials/MakeConst.zip)をダウンロードすることもできます。
 
 ## <a name="other-resources"></a>その他のリソース
 

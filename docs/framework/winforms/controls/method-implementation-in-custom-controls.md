@@ -11,12 +11,12 @@ helpviewer_keywords:
 - methods [Windows Forms]
 - methods [Windows Forms], custom controls
 ms.assetid: 35d14fca-4bb4-4a27-8211-1f7a98ea27de
-ms.openlocfilehash: 9df2bc9257c3f697f30cbe8c679ffc88ec34517b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 38dcad25af31b87afc1cc6ef4f89a1f7903bc0ed
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012764"
 ---
 # <a name="method-implementation-in-custom-controls"></a>カスタム コントロールへのメソッドの実装
 コントロールにメソッドを実装する方法は、他のコンポーネントにメソッドを実装する場合と同じです。  
@@ -75,6 +75,7 @@ public void Spin(Widget driver)
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [イベント](../../../../docs/standard/events/index.md)  
- [Windows フォーム コントロールのプロパティ](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)
+## <a name="see-also"></a>関連項目
+
+- [イベント](../../../standard/events/index.md)
+- [Windows フォーム コントロールのプロパティ](properties-in-windows-forms-controls.md)

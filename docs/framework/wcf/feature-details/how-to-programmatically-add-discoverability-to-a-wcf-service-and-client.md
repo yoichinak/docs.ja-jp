@@ -1,30 +1,30 @@
 ---
-title: プログラムを使用して探索可能性に WCF サービスとクライアントを追加する方法
+title: '方法: プログラムを使用して探索可能性に WCF サービスとクライアントを追加する'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: 407777b1545fb12eb3ed1787fdba86991c894fdb
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: de227e8df895dd4c031aadce16102559c43e47ce
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838456"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586624"
 ---
-# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>プログラムを使用して探索可能性に WCF サービスとクライアントを追加する方法
+# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>方法: プログラムを使用して探索可能性に WCF サービスとクライアントを追加する
 このトピックでは、Windows Communication Foundation (WCF) サービスを探索可能にする方法について説明します。 基にして、[セルフホスト](https://go.microsoft.com/fwlink/?LinkId=145523)サンプル。  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>既存の自己ホスト サービス サンプルを探索用に構成するには  
   
-1.  Visual Studio 2012 では、自己ホスト ソリューションを開きます。 このサンプルは、TechnologySamples\Basic\Service\Hosting\SelfHost ディレクトリにあります。  
+1. Visual Studio 2012 では、自己ホスト ソリューションを開きます。 このサンプルは、TechnologySamples\Basic\Service\Hosting\SelfHost ディレクトリにあります。  
   
-2.  `System.ServiceModel.Discovery.dll` への参照をサービス プロジェクトに追加します。 "System エラー メッセージが表示することがあります. ServiceModel.Discovery.dll またはその依存関係の 1 つの以降のバージョンが必要です、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ... プロジェクトで指定されている"ソリューション エクスプ ローラーでプロジェクトを右クリックして、このメッセージを表示する場合**プロパティ**します。 **プロジェクトのプロパティ**ウィンドウで、ことを確認、**ターゲット フレームワーク**は[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]します。  
+2. `System.ServiceModel.Discovery.dll` への参照をサービス プロジェクトに追加します。 "System エラー メッセージが表示することがあります. ServiceModel.Discovery.dll またはその依存関係のいずれかの [...]、プロジェクトで指定されている .NET Framework の以降のバージョンが必要です"ソリューション エクスプ ローラーでプロジェクトを右クリックして、このメッセージを表示する場合**プロパティ**します。 **プロジェクトのプロパティ**ウィンドウで、ことを確認、**ターゲット フレームワーク**は[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]します。  
   
-3.  Service.cs ファイルを開き、次の `using` ステートメントを追加します。  
+3. Service.cs ファイルを開き、次の `using` ステートメントを追加します。  
   
     ```csharp  
     using System.ServiceModel.Discovery;  
     ```  
   
-4.  `Main()` メソッドの `using` ステート内で、<xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> インスタンスをサービス ホストに追加します。  
+4. `Main()` メソッドの `using` ステート内で、<xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> インスタンスをサービス ホストに追加します。  
   
     ```csharp  
     public static void Main()  
@@ -42,7 +42,7 @@ ms.locfileid: "48838456"
   
      <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> は、それが適用されているサービスが探索可能であることを指定します。  
   
-5.  <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> を、<xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> を追加するコードの直後でサービス ホストに追加します。  
+5. <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> を、<xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> を追加するコードの直後でサービス ホストに追加します。  
   
     ```csharp  
     // Add ServiceDiscoveryBehavior  
@@ -56,15 +56,15 @@ ms.locfileid: "48838456"
   
 ### <a name="to-create-a-client-application-that-uses-discovery-to-call-the-service"></a>探索を使用してサービスを呼び出すクライアント アプリケーションを作成するには  
   
-1.  新しいコンソール アプリケーションを `DiscoveryClientApp` というソリューションに追加します。  
+1. 新しいコンソール アプリケーションを `DiscoveryClientApp` というソリューションに追加します。  
   
-2.  `System.ServiceModel.dll` および `System.ServiceModel.Discovery.dll` への参照を追加します。  
+2. `System.ServiceModel.dll` および `System.ServiceModel.Discovery.dll` への参照を追加します。  
   
-3.  GeneratedClient.cs ファイルおよび App.config ファイルを、既存のクライアント プロジェクトから新しい DiscoveryClientApp プロジェクトに追加します。 これを行うには、内のファイルを右クリックし、**ソリューション エクスプ ローラー**を選択します**コピー**を選び、 **DiscoveryClientApp** のプロジェクトを右クリックし、**貼り付け**します。  
+3. GeneratedClient.cs ファイルおよび App.config ファイルを、既存のクライアント プロジェクトから新しい DiscoveryClientApp プロジェクトに追加します。 これを行うには、内のファイルを右クリックし、**ソリューション エクスプ ローラー**を選択します**コピー**を選び、 **DiscoveryClientApp** のプロジェクトを右クリックし、**貼り付け**します。  
   
-4.  Program.cs を開きます。  
+4. Program.cs を開きます。  
   
-5.  次の `using` ステートメントを追加します。  
+5. 次の `using` ステートメントを追加します。  
   
     ```csharp  
     using System.ServiceModel;  
@@ -72,7 +72,7 @@ ms.locfileid: "48838456"
     using Microsoft.ServiceModel.Samples;  
     ```  
   
-6.  `FindCalculatorServiceAddress()` という静的メソッドを `Program` クラスに追加します。  
+6. `FindCalculatorServiceAddress()` という静的メソッドを `Program` クラスに追加します。  
   
     ```csharp  
     static EndpointAddress FindCalculatorServiceAddress()  
@@ -82,7 +82,7 @@ ms.locfileid: "48838456"
   
      このメソッドは、探索を使用して `CalculatorService` サービスを検索します。  
   
-7.  `FindCalculatorServiceAddress` メソッド内で、新しい <xref:System.ServiceModel.Discovery.DiscoveryClient> インスタンスを作成し、<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> をコンストラクターに渡します。  
+7. `FindCalculatorServiceAddress` メソッド内で、新しい <xref:System.ServiceModel.Discovery.DiscoveryClient> インスタンスを作成し、<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> をコンストラクターに渡します。  
   
     ```csharp  
     static EndpointAddress FindCalculatorServiceAddress()  
@@ -94,7 +94,7 @@ ms.locfileid: "48838456"
   
      これを WCF に指示する、<xref:System.ServiceModel.Discovery.DiscoveryClient>クラスは、標準の UDP 探索エンドポイントを使用して探索メッセージを送受信する必要があります。  
   
-8.  次の行では、<xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> メソッドを呼び出し、検索対象のサービス コントラクトを含む <xref:System.ServiceModel.Discovery.FindCriteria> インスタンスを指定します。 ここでは、`ICalculator` を指定します。  
+8. 次の行では、<xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> メソッドを呼び出し、検索対象のサービス コントラクトを含む <xref:System.ServiceModel.Discovery.FindCriteria> インスタンスを指定します。 ここでは、`ICalculator` を指定します。  
   
     ```csharp  
     // Find ICalculatorService endpoints              
@@ -190,11 +190,11 @@ ms.locfileid: "48838456"
   
 ### <a name="to-test-the-application"></a>アプリケーションをテストするには  
   
-1.  権限のレベルが高いコマンド プロンプトを開き、Service.exe を実行します。  
+1. 権限のレベルが高いコマンド プロンプトを開き、Service.exe を実行します。  
   
-2.  コマンド プロンプトを開き、Discoveryclientapp.exe を実行します。  
+2. コマンド プロンプトを開き、Discoveryclientapp.exe を実行します。  
   
-3.  Service.exe からの出力は次のようになります。  
+3. Service.exe からの出力は次のようになります。  
   
     ```Output  
     Received Add(100,15.99)  
@@ -207,7 +207,7 @@ ms.locfileid: "48838456"
     Return: 6.25390869293308  
     ```  
   
-4.  Discoveryclientapp.exe からの出力は次のようになります。  
+4. Discoveryclientapp.exe からの出力は次のようになります。  
   
     ```Output  
     Invoking CalculatorService at http://localhost:8000/ServiceModelSamples/service  
@@ -340,6 +340,7 @@ namespace DiscoveryClientApp
 }  
 ```  
 
-## <a name="see-also"></a>関連項目  
- [WCF Discovery の概要](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [WCF Discovery オブジェクト モデル](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)
+## <a name="see-also"></a>関連項目
+
+- [WCF Discovery の概要](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [WCF Discovery オブジェクト モデル](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)

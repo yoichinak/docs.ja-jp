@@ -7,16 +7,16 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: daad986a1e62fe3b1d28fc25d3ebf6d2960d8b1d
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 44ab9766bead15c97a1397ef1f47de75f72643a3
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244272"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423543"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>型パラメーターの制約 (C# プログラミング ガイド)
 
-制約では、型引数に必要な機能をコンパイラに通知します。 制約のない型引数は、任意の型にすることができます。 コンパイラは、.NET 型の最終的な基底クラスになる、<xref:System.Object?displayPropety=nameWithType> のメンバーを見なすことができるだけです。 詳細については、「[制約を使用する理由](#why-use-constraints)」を参照してください。 クライアント コードで、この制限で許可されていない型を使用してクラスをインスタンス化しようとすると、コンパイル時エラーが発生します。 制約を指定するには、`where` コンテキスト キーワードを使用します。 次の表では、7 種類の制約を一覧しています。
+制約では、型引数に必要な機能をコンパイラに通知します。 制約のない型引数は、任意の型にすることができます。 コンパイラは、.NET 型の最終的な基底クラスになる、<xref:System.Object?displayProperty=nameWithType> のメンバーを見なすことができるだけです。 詳細については、「[制約を使用する理由](#why-use-constraints)」を参照してください。 クライアント コードで、この制限で許可されていない型を使用してクラスをインスタンス化しようとすると、コンパイル時エラーが発生します。 制約を指定するには、`where` コンテキスト キーワードを使用します。 次の表では、7 種類の制約を一覧しています。
 
 |制約|説明|
 |----------------|-----------------|
@@ -110,10 +110,10 @@ C# 7.3 以降、基底クラスの制約として <xref:System.Enum?displayPrope
 
 [!code-csharp[using the unmanaged constraint](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#20)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Collections.Generic>
-- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)  
-- [ジェネリックの概要](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
-- [ジェネリック クラス](../../../csharp/programming-guide/generics/generic-classes.md)  
-- [new 制約](../../../csharp/language-reference/keywords/new-constraint.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [ジェネリックの概要](../../../csharp/programming-guide/generics/index.md)
+- [ジェネリック クラス](../../../csharp/programming-guide/generics/generic-classes.md)
+- [new 制約](../../../csharp/language-reference/keywords/new-constraint.md)

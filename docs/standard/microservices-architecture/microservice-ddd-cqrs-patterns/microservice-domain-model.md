@@ -1,15 +1,13 @@
 ---
 title: マイクロサービス ドメイン モデルの設計
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | DDD 指向ドメイン モデルの設計時の主な概念を理解する
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: d98d0f0fee0692bb447779e7f62750931a9773ba
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c6d2e84189ff542a2ed4c584c4a47bf7bf0e946a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143618"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644194"
 ---
 # <a name="design-a-microservice-domain-model"></a>マイクロサービス ドメイン モデルの設計
 
@@ -58,13 +56,13 @@ Martin Fowler は、投稿した [AnemicDomainModel](https://martinfowler.com/bl
 #### <a name="additional-resources"></a>その他の技術情報
 
 - **DevIQ。ドメイン エンティティ** \
-  [*https://deviq.com/entity/*](https://deviq.com/entity/)
+  <https://deviq.com/entity/>
 
 - **Martin Fowler。ドメイン モデル** \
-  [*https://martinfowler.com/eaaCatalog/domainModel.html*](https://martinfowler.com/eaaCatalog/domainModel.html)
+  <https://martinfowler.com/eaaCatalog/domainModel.html>
 
 - **Martin Fowler。貧血症ドメイン モデル** \
-  [*https://martinfowler.com/bliki/AnemicDomainModel.html*](https://martinfowler.com/bliki/AnemicDomainModel.html)
+  <https://martinfowler.com/bliki/AnemicDomainModel.html>
 
 ### <a name="the-value-object-pattern"></a>値オブジェクト パターン
 
@@ -78,20 +76,21 @@ Eric Evans は、"多くのオブジェクトは、概念 ID を持ちません�
 
 値オブジェクトは、関係データベースや ORM (EF など) では管理が難しいですが、ドキュメント指向データベースでは簡単に実装して使用できます。
 
-EF Core 2.0 には、後で詳しく説明しているように、値オブジェクトを処理しやすくする[所有エンティティ](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting)機能が含まれます。
+EF Core 2.0 には、後で詳しく説明しているように、値オブジェクトを処理しやすくする[所有エンティティ](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting)機能が含まれます。
 
 #### <a name="additional-resources"></a>その他の技術情報
 
-- **Martin Fowler。値オブジェクト パターン**
-  [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
+- **Martin Fowler。値オブジェクト パターン** \
+  <https://martinfowler.com/bliki/ValueObject.html>
 
-- **値オブジェクト**
-  [*https://deviq.com/value-object/*](https://deviq.com/value-object/)
+- **値オブジェクト** \
+  <https://deviq.com/value-object/>
 
-- **テスト駆動型開発での値オブジェクト**
-  [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
+- **テスト駆動型開発での値オブジェクト** \
+  [https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
-- **Eric Evans。Domain-Driven Design: Tackling Complexity in the Heart of Software (ドメイン駆動設計: ソフトウェア中心部の複雑さへの取り組み)。** (書籍、値オブジェクトについての記載あり) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+- **Eric Evans。Domain-Driven Design:Tackling Complexity in the Heart of Software (ドメイン駆動設計: ソフトウェア中心部の複雑さへの取り組み)。** (書籍、値オブジェクトについての記載あり) \
+  <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 ### <a name="the-aggregate-pattern"></a>集約パターン
 
@@ -134,23 +133,23 @@ public class Order : Entity, IAggregateRoot
 
 #### <a name="additional-resources"></a>その他の技術情報
 
-- **Vaughn Vernon。効果的な集約設計 - パート I: 1 つの集約のモデリング** \
-  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
+- **Vaughn Vernon。効果的な集約設計 - パート I:1 つの集約のモデリング** (<http://dddcommunity.org/> から) \
+  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_1.pdf>
 
-- **Vaughn Vernon。効果的な集約設計 - パート II: 集約処理の連携** \
-  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf)
+- **Vaughn Vernon。効果的な集約設計 - パート II:集約処理の連携** (<http://dddcommunity.org/> から) \
+  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf>
 
-- **Vaughn Vernon。効果的な集約設計 - パート III: 探索による分析情報の獲得** \
-  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf)
+- **Vaughn Vernon。効果的な集約設計 - パート III:探索による分析情報の獲得** (<http://dddcommunity.org/> から) \
+  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
 
 - **Sergey Grybniak。DDD 戦術的デザイン パターン** \
-  [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
+  <https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part>
 
 - **Chris Richardson。集約を使用したトランザクション マイクロサービスの開発** \
-  [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
+  <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson>
 
 - **DevIQ。集約パターン** \
-  [*https://deviq.com/aggregate-pattern/*](https://deviq.com/aggregate-pattern/)
+  <https://deviq.com/aggregate-pattern/>
 
 >[!div class="step-by-step"]
 >[前へ](ddd-oriented-microservice.md)

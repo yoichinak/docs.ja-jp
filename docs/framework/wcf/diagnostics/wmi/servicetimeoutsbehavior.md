@@ -2,12 +2,12 @@
 title: ServiceTimeoutsBehavior
 ms.date: 03/30/2017
 ms.assetid: 4412525d-a3cc-4eae-b3e8-a50ce766d09d
-ms.openlocfilehash: 1a5284915de739e95325234318842a4d1ab607be
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 58e872f2b15776d65bccdcc47c353ce566cd9d2f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956729"
 ---
 # <a name="servicetimeoutsbehavior"></a>ServiceTimeoutsBehavior
 ServiceTimeoutsBehavior  
@@ -30,7 +30,7 @@ class ServiceTimeoutsBehavior : Behavior
 ### <a name="transactiontimeout"></a>TransactionTimeout  
  データ型 : datetime  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  トランザクションを完了しなければならない期間。  
   
@@ -38,7 +38,8 @@ class ServiceTimeoutsBehavior : Behavior
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
-|Namespace|root\ServiceModel で定義|  
+|名前空間|root\ServiceModel で定義|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.ServiceTimeoutsElement>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Configuration.ServiceTimeoutsElement>

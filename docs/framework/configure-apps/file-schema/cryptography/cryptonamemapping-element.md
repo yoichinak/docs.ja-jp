@@ -1,5 +1,5 @@
 ---
-title: '&lt;cryptoNameMapping&gt;要素'
+title: <cryptoNameMapping> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#cryptoNameMapping
@@ -8,22 +8,20 @@ helpviewer_keywords:
 - <cryptoNameMapping> element
 - cryptoNameMapping element
 ms.assetid: c59c9494-149b-4ce6-b38d-371f896ae85c
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 3909b9cd012ef47f5a191dbc1e7978a5852e62fe
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bcf7894dba66736fcc1a30af9b5557549ef25e7d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674767"
 ---
-# <a name="ltcryptonamemappinggt-element"></a>&lt;cryptoNameMapping&gt;要素
+# <a name="cryptonamemapping-element"></a>\<cryptoNameMapping > 要素
 表示名へのクラスのマッピングを含みます。  
   
  \<configuration>  
-\<mscorlib >  
+\<mscorlib>  
 \<cryptographySettings >  
-\<cryptoNameMapping >  
+\<cryptoNameMapping>  
   
 ## <a name="syntax"></a>構文  
   
@@ -76,8 +74,9 @@ ms.locfileid: "50184167"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [暗号化設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)  
+## <a name="see-also"></a>関連項目
+
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [暗号化設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
 - [暗号化クラスの設定](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

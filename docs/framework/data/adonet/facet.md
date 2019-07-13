@@ -2,15 +2,15 @@
 title: facet
 ms.date: 03/30/2017
 ms.assetid: 91c4e6aa-3e54-4b6c-a38a-abf27808cc85
-ms.openlocfilehash: 2b263a107eae7c75b035dcb4675725556e0f9c2b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9353b143a328e0fb183b7870332462a0a2c91b10
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879061"
 ---
 # <a name="facet"></a>facet
-A*ファセット*詳細プリミティブ型のプロパティ定義を追加するために使用します。 A[プロパティ](../../../../docs/framework/data/adonet/property.md)定義には、プロパティの型に関する情報が含まれていますが、多くの場合より詳しい情報が必要です。 たとえば、概念モデルのエンティティ型に、値を null に設定できない `String` 型のプロパティが含まれる場合があります。 ファセットにより、このレベルの詳細を指定することができます。  
+A*ファセット*詳細プリミティブ型のプロパティ定義を追加するために使用します。 A[プロパティ](../../../../docs/framework/data/adonet/property.md)定義にはプロパティの種類に関する情報が含まれていますが、多くの場合、詳細が必要です。 たとえば、概念モデルのエンティティ型に、値を null に設定できない `String` 型のプロパティが含まれる場合があります。 ファセットにより、このレベルの詳細を指定することができます。  
   
  下の表は、EDM でサポートされるファセットについて説明しています。  
   
@@ -20,7 +20,7 @@ A*ファセット*詳細プリミティブ型のプロパティ定義を追加�
 |ファセット|説明|対象|  
 |-----------|-----------------|----------------|  
 |`Collation`|プロパティの値に対して比較と順序付け操作を行うときに使用する照合シーケンス (または並べ替え順序) を指定します。|`String`|  
-|`ConcurrencyMode`|プロパティの値をオプティミスティック同時実行制御チェックに使用することを指定します。|すべてのプリミティブ型のプロパティ|  
+|`ConcurrencyMode`|プロパティの値をオプティミスティック コンカレンシー チェックに使用することを指定します。|すべてのプリミティブ型のプロパティ|  
 |`Default`|インスタンス化で値が指定されない場合のプロパティの既定値を指定します。|すべてのプリミティブ型のプロパティ|  
 |`FixedLength`|プロパティ値の長さを可変とすることができるかどうかを指定します。|`Binary`, `String`|  
 |`MaxLength`|プロパティ値の最大長を指定します。|`Binary`, `String`|  
@@ -34,6 +34,7 @@ A*ファセット*詳細プリミティブ型のプロパティ定義を追加�
   
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   
-## <a name="see-also"></a>関連項目  
- [Entity Data Model キーの概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a>関連項目
+
+- [Entity Data Model キーの概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)

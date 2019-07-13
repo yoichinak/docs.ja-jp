@@ -16,11 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c6da86ce2d86a6842d2d7d8de860e9a8621bdaf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fba17a2ffad9220acdbc79726efe0d3d4184978a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697980"
 ---
 # <a name="iassemblycacheitem-interface"></a>IAssemblyCacheItem インターフェイス
 グローバル アセンブリ キャッシュ内の 1 つのアセンブリを表します。  
@@ -33,14 +34,15 @@ ms.lasthandoff: 05/04/2018
 |[Commit メソッド](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-commit-method.md)|メモリにキャッシュされたアセンブリ参照をコミットします。|  
 |[CreateStream メソッド](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-createstream-method.md)|指定した名前と形式を使用するストリームを作成します。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Fusion.h  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [Fusion インターフェイス](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [グローバル アセンブリ キャッシュ](../../../../docs/framework/app-domains/gac.md)  
- [IAssemblyCache インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [Fusion インターフェイス](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [グローバル アセンブリ キャッシュ](../../../../docs/framework/app-domains/gac.md)
+- [IAssemblyCache インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)

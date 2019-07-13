@@ -2,16 +2,16 @@
 title: タプル
 description: については、F#タプル、名前のないが、順序付けされた値のさまざまな種類のグループ化します。
 ms.date: 05/16/2016
-ms.openlocfilehash: a1fc31d4dc97c0921545e53b91dcde0547002006
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 950451ad1672e0c9fc609773f1bc32fc13636ddb
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611049"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645113"
 ---
 # <a name="tuples"></a>タプル
 
-A*タプル*名前のないが、順序付けされた値のさまざまな種類のグループです。  参照型または構造体、タプルはできますか。
+*タプル*は、名前はないが順序付けられた値のさまざまな種類のグループです。  タプルは参照型か構造体のどちらかです。
 
 ## <a name="syntax"></a>構文
 
@@ -130,7 +130,7 @@ let struct (newX, newY) = Example.AddOneToXAndY(struct (1, 2))
 
 ### <a name="compiled-form-of-struct-tuples"></a>構造体のタプルのコンパイル済みの形式
 
-構造体のタプル (たとえば、 `struct (x, y)`)、基本的に、参照の組から異なります。  コンパイル、<xref:System.ValueTuple>アリティ、または型パラメーターの数によってオーバー ロードされた型。  同じですが[C# のタプル](../../csharp/tuples.md)と[Visual Basic 2017 組](../../visual-basic/programming-guide/language-features/data-types/tuples.md)、双方向の相互運用とします。
+構造体のタプル (たとえば、 `struct (x, y)`)は、参照タプルとは根本的に異なります。  それらは<xref:System.ValueTuple>型にコンパイルされるか、アリティによってオーバーロードされるか、または型パラメーターの数になります。  これらは [C# 7.0 のタプル](../../csharp/tuples.md)および[Visual Basic 2017のタプル](../../visual-basic/programming-guide/language-features/data-types/tuples.md)と同等であり、双方向で相互運用できます。
 
 ## <a name="see-also"></a>関連項目
 

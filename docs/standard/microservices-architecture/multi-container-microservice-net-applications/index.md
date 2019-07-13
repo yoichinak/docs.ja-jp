@@ -1,15 +1,13 @@
 ---
 title: 複数のコンテナーとマイクロサービス ベースの NET アプリケーションのデザインと開発
 description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | 複数のコンテナーとマイクロサービス ベースの NET アプリケーションをデザインおよび開発するための外部アーキテクチャを理解します。'
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 3bbf746aa9c0b66a097b8c4df2964b5679342fd0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8c2f828e9913a0efcdf580371124b0f624daeffe
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144144"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639465"
 ---
 # <a name="designing-and-developing-multi-container-and-microservice-based-net-applications"></a>複数のコンテナーとマイクロサービス ベースの NET アプリケーションのデザインと開発
 

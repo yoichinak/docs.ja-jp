@@ -1,5 +1,5 @@
 ---
-title: '方法 : 文字の装飾を作成する'
+title: '方法: 文字の装飾を作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,55 +16,53 @@ helpviewer_keywords:
 - typography [WPF], text decorations
 - baseline type [WPF]
 ms.assetid: cf3cb4e7-782a-4be7-b2d4-e0935e21e4e0
-ms.openlocfilehash: c16073dd2413c1258f4875ac4118e0656d29b171
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d586eef8d1308070da38a0a54c63c3ba64d30c8b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776638"
 ---
-# <a name="how-to-create-a-text-decoration"></a>方法 : 文字の装飾を作成する
-A<xref:System.Windows.TextDecoration>オブジェクトがテキストに追加できるビジュアルの装飾します。 文字の装飾の 4 つの種類があります: 下線、基準、取り消し線、および上線。 次の例は、文字の装飾のテキストに対する相対位置を示します。  
+# <a name="how-to-create-a-text-decoration"></a>方法: 文字の装飾を作成する
+A<xref:System.Windows.TextDecoration>オブジェクトがビジュアルの装飾をテキストに追加することができます。 文字装飾の 4 つの種類があります。 ベースライン、下線、取り消し線、および上線。 次の例では、テキストに対する文字装飾の位置を示します。  
   
- ![テキスト装飾位置のダイアグラム](../../../../docs/framework/wpf/advanced/media/textdecoration01.gif "TextDecoration01")  
-テキスト装飾の種類の例  
+ ![文字装飾の種類の図](./media/how-to-create-a-text-decoration/text-decoration-types.gif)  
   
- テキストに文字の装飾を追加するには、作成、<xref:System.Windows.TextDecoration>オブジェクトし、そのプロパティを変更します。 使用して、<xref:System.Windows.TextDecoration.Location%2A>文字飾りが表示される場所、下線などの文字を指定するプロパティです。 使用して、<xref:System.Windows.TextDecoration.Pen%2A>文字飾りを純色の塗りつぶしのグラデーションの色などの外観を指定するプロパティです。 値を指定しない場合、<xref:System.Windows.TextDecoration.Pen%2A>プロパティ、テキストと同じ色に装飾の既定値です。 定義した後、<xref:System.Windows.TextDecoration>オブジェクトに追加して、<xref:System.Windows.TextDecorations>目的のテキスト オブジェクトのコレクション。  
+ テキストには、文字装飾を追加するには、作成、<xref:System.Windows.TextDecoration>オブジェクトし、そのプロパティを変更します。 使用して、<xref:System.Windows.TextDecoration.Location%2A>下線などの文字装飾を表示場所を指定するプロパティ。 使用して、<xref:System.Windows.TextDecoration.Pen%2A>塗りつぶしの純色のグラデーションなどの装飾の外観を指定するプロパティ。 値を指定しない場合、<xref:System.Windows.TextDecoration.Pen%2A>プロパティ、文字装飾の既定値は、テキストと同じ色。 定義した後、<xref:System.Windows.TextDecoration>オブジェクトに追加してください。、<xref:System.Windows.TextDecorations>目的のテキスト オブジェクトのコレクション。  
   
- 次の例では、線形グラデーション ブラシとペンの破線スタイルが設定されているテキスト装飾を示します。  
+ 次の例では、線状グラデーション ブラシと破線のペンによってスタイルが設定されている文字装飾を示します。  
   
- ![線形グラデーション下線付き文字飾り](../../../../docs/framework/wpf/advanced/media/textdecoration02.png "TextDecoration02")  
-線形グラデーションのスタイルの下線の例ブラシ、ペンの破線  
+ ![線形グラデーション下線を使用したテキスト装飾](./media/how-to-create-a-text-decoration/text-decoration-gradient.png)  
   
- <xref:System.Windows.Documents.Hyperlink>オブジェクトはインライン レベル フロー コンテンツ要素フロー コンテンツ内のハイパーリンクをホストすることができます。 既定では、<xref:System.Windows.Documents.Hyperlink>を使用して、<xref:System.Windows.TextDecoration>下線を表示するオブジェクト。 <xref:System.Windows.TextDecoration> オブジェクトができる処理を要するインスタンスを作成すると、パフォーマンスが多数ある場合に特に<xref:System.Windows.Documents.Hyperlink>オブジェクト。 広範な利用を加えた場合<xref:System.Windows.Documents.Hyperlink>要素、するをお勧めしますように、イベントをトリガーする場合にのみ下線を表示、<xref:System.Windows.ContentElement.MouseEnter>イベント。  
+ <xref:System.Windows.Documents.Hyperlink>オブジェクトがインライン レベル フロー コンテンツ要素、フロー コンテンツ内のハイパーリンクをホストすることができます。 既定では、<xref:System.Windows.Documents.Hyperlink>を使用して、<xref:System.Windows.TextDecoration>下線を表示するオブジェクト。 <xref:System.Windows.TextDecoration> 多数ある場合は特に、オブジェクトは処理を要するインスタンスを作成すると、パフォーマンスにできる<xref:System.Windows.Documents.Hyperlink>オブジェクト。 広範に使用する場合<xref:System.Windows.Documents.Hyperlink>要素などのイベントをトリガーするときにのみ下線を表示するのにすることがあります、<xref:System.Windows.ContentElement.MouseEnter>イベント。  
   
- 次の例では、"My MSN"リンクの下線は動的 — これ場合のみ表示されます、<xref:System.Windows.ContentElement.MouseEnter>イベントが発生します。  
+ 次の例では、"マイ MSN"リンクの下線が動的-にのみ表示されるときに、<xref:System.Windows.ContentElement.MouseEnter>イベントがトリガーされます。  
   
- ![Textdecorations を表示するハイパーリンク](../../../../docs/framework/wpf/advanced/media/textdecoration03.png "TextDecoration03")  
-Textdecorations をで定義されているハイパーリンク  
-  
- 詳細については、「[方法: ハイパーリンクに下線を引くかどうかを指定する](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md)」を参照してください。  
+ ![TextDecorations を表示するハイパーリンク](./media/how-to-create-a-text-decoration/text-decorations-hyperlinks.png)  
+   
+ 詳細については、「[方法: ハイパーリンクに下線を引くかどうかを指定する](how-to-specify-whether-a-hyperlink-is-underlined.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次のコード例では、下線の文字装飾は、フォントの既定値を使用します。  
+ 次のコード例では、下線文字の装飾は、既定のフォント値を使用します。  
   
- [!code-csharp[TextDecorationSnippets#TextDecorationSnippets1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml.cs#textdecorationsnippets1)]
- [!code-vb[TextDecorationSnippets#TextDecorationSnippets1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextDecorationSnippets/visualbasic/window1.xaml.vb#textdecorationsnippets1)]
- [!code-xaml[TextDecorationSnippets#TextDecorationSnippets1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets1)]  
+ [!code-csharp[TextDecorationSnippets#TextDecorationSnippets1](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml.cs#textdecorationsnippets1)]
+ [!code-vb[TextDecorationSnippets#TextDecorationSnippets1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextDecorationSnippets/visualbasic/window1.xaml.vb#textdecorationsnippets1)]
+ [!code-xaml[TextDecorationSnippets#TextDecorationSnippets1](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets1)]  
   
- 次のコード例では、下線の文字装飾を純色のブラシ、ペンを使用した作成されます。  
+ 次のコード例では、ペンの純色ブラシを使用して下線の文字装飾が作成されます。  
   
- [!code-csharp[TextDecorationSnippets#TextDecorationSnippets2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml.cs#textdecorationsnippets2)]
- [!code-vb[TextDecorationSnippets#TextDecorationSnippets2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextDecorationSnippets/visualbasic/window1.xaml.vb#textdecorationsnippets2)]
- [!code-xaml[TextDecorationSnippets#TextDecorationSnippets2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets2)]  
+ [!code-csharp[TextDecorationSnippets#TextDecorationSnippets2](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml.cs#textdecorationsnippets2)]
+ [!code-vb[TextDecorationSnippets#TextDecorationSnippets2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextDecorationSnippets/visualbasic/window1.xaml.vb#textdecorationsnippets2)]
+ [!code-xaml[TextDecorationSnippets#TextDecorationSnippets2](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets2)]  
   
- 次のコード例では、下線の文字装飾を破線のペンの線形グラデーション ブラシを使用して作成されます。  
+ 次のコード例では、下線文字の装飾は破線のペンの線状グラデーション ブラシで作成されます。  
   
- [!code-csharp[TextDecorationSnippets#TextDecorationSnippets3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml.cs#textdecorationsnippets3)]
- [!code-vb[TextDecorationSnippets#TextDecorationSnippets3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextDecorationSnippets/visualbasic/window1.xaml.vb#textdecorationsnippets3)]
- [!code-xaml[TextDecorationSnippets#TextDecorationSnippets3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets3)]  
+ [!code-csharp[TextDecorationSnippets#TextDecorationSnippets3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml.cs#textdecorationsnippets3)]
+ [!code-vb[TextDecorationSnippets#TextDecorationSnippets3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextDecorationSnippets/visualbasic/window1.xaml.vb#textdecorationsnippets3)]
+ [!code-xaml[TextDecorationSnippets#TextDecorationSnippets3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets3)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.TextDecoration>  
- <xref:System.Windows.Documents.Hyperlink>  
- [ハイパーリンクに下線を引くかどうかを指定する](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.TextDecoration>
+- <xref:System.Windows.Documents.Hyperlink>
+- [ハイパーリンクに下線を引くかどうかを指定する](how-to-specify-whether-a-hyperlink-is-underlined.md)

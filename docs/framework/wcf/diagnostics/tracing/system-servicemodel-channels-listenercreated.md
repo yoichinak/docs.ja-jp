@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.ListenerCreated
 ms.date: 03/30/2017
 ms.assetid: d4a3401c-f7f8-4761-95c2-ca92b70a503d
-ms.openlocfilehash: 8d6b607472d59dd7be1dc79d556e7921fe0e4a60
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f184ddf66fd7218b5676e2bd9f656435b6414a27
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33480611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792471"
 ---
 # <a name="systemservicemodelchannelslistenercreated"></a>System.ServiceModel.Channels.ListenerCreated
 System.ServiceModel.Channels.ListenerCreated  
@@ -15,7 +15,8 @@ System.ServiceModel.Channels.ListenerCreated
 ## <a name="description"></a>説明  
  リスナーが作成されました。  
   
-## <a name="see-also"></a>関連項目  
- [トレース](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [トレースを使用したアプリケーションのトラブルシューティング](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [管理と診断](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>関連項目
+
+- [トレース](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [トレースを使用したアプリケーションのトラブルシューティング](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [管理と診断](../../../../../docs/framework/wcf/diagnostics/index.md)

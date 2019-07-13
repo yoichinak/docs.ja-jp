@@ -1,15 +1,13 @@
 ---
 title: モノリシック アプリケーションのコンテナー化
 description: モノリシック アプリケーションのコンテナー化は、マイクロサービス アーキテクチャからすべての利点を得ることはありませんが、すぐに提供できる重要な展開の利点があります。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: d1de4c4beb8c60aa543e5c71243d93b83fe52072
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9e457fba56c8fdf946618fca10285f4c0a343af4
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130901"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690548"
 ---
 # <a name="containerizing-monolithic-applications"></a>モノリシック アプリケーションのコンテナー化
 
@@ -35,7 +33,7 @@ ms.locfileid: "53130901"
 
 ![ホストでは、各アプリが別のコンテナー上にある、複数のモノリシック アプリを実行できます。](./media/image2.png)
 
-**図 4-2** モノリシックなアプローチ: 複数のアプリケーションを実行するホスト (各アプリケーションはコンテナーとして実行される)
+**図 4-2** モノリシックなアプローチ:複数のアプリケーションを実行するホスト (各アプリケーションはコンテナーとして実行される)
 
 Microsoft Azure のモノリシック アプリケーションは、各インスタンスに専用の VM を使用して展開できます。 また、[Azure 仮想マシン スケール セット](https://azure.microsoft.com/documentation/services/virtual-machine-scale-sets/)を使用して、簡単に VM のスケーリングを行うことができます。 [Azure App Service](https://azure.microsoft.com/services/app-service/) でモノリシック アプリケーションを実行して、インスタンスを簡単にスケーリングすることもできます。VM の管理は不要です。 Azure App Services 2016 以降では、Docker コンテナーの単一インスタンスも実行できるため、展開が簡単になります。
 
@@ -65,9 +63,9 @@ Azure に展開されたコンテナーを検証する場合でも、アプリ�
 
 **図 4-4** Visual Studio から Azure App Service に単一のコンテナー アプリケーションを発行する
 
-Docker を使用せずに、Azure App Service でサポートされていない他の機能、フレームワーク、または依存関係が必要な場合には、Azure チームが App Service の依存関係を更新するまで待つ必要がありました。 また、Azure Service Fabric、Azure Cloud Services、さらには VM などの他のサービスに切り替えて、詳細な管理を行い、アプリケーションに必要なコンポーネントやフレームワークをインストールする必要がありました。
+Docker を使用せずに、Azure App Service でサポートされていない他の機能、フレームワーク、または依存関係が必要な場合には、Azure チームが App Service の依存関係を更新するまで待つ必要がありました。 また、Azure Cloud Services や VM などの他のサービスに切り替えて、詳細な制御を行い、ご利用のアプリケーションに必要なコンポーネントやフレームワークをインストールする必要がありました。
 
-Visual Studio 2017 ではコンテナーがサポートされているので、図 4-4 に示すように、アプリケーション環境に必要なものをすべて含めることができます。 コンテナー内で実行しているため、アプリケーションに依存関係を追加する場合、その依存関係を自分の Dockerfile または Docker イメージに含めることができます。
+Visual Studio 2017 以降ではコンテナーがサポートされているので、図 4-4 に示すように、アプリケーション環境に必要なものをすべて含めることができます。 コンテナー内で実行しているため、アプリケーションに依存関係を追加する場合、その依存関係を自分の Dockerfile または Docker イメージに含めることができます。
 
 また、図 4-4 に示すように、発行フローはコンテナー レジストリを介してイメージをプッシュします。 これは、Azure Container Registry (Azure 内の展開に近く、Azure Active Directory グループとアカウントによってセキュリティで保護されているレジストリ)、または Docker Hub やオンプレミス レジストリのような他の Docker レジストリにすることができます。
 

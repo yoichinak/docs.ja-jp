@@ -1,22 +1,22 @@
 ---
-title: '方法: 区切り記号入りファイル (LINQ) (Visual Basic) のフィールドの順序を変更'
+title: '方法: (LINQ) (Visual Basic) の区切り記号入りファイルのフィールドの順序を変更します。'
 ms.date: 07/20/2015
 ms.assetid: c451c7db-663b-4daf-b8ba-a2093095d672
-ms.openlocfilehash: f9322ac9601deffd110c962a9ed8b502a02092ee
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 25f860109275bdee1b980c68e71c2c65d44756a4
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122631"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593097"
 ---
-# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a>方法: 区切り記号入りファイル (LINQ) (Visual Basic) のフィールドの順序を変更
+# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a>方法: (LINQ) (Visual Basic) の区切り記号入りファイルのフィールドの順序を変更します。
 コンマ区切り (CSV) ファイルは、テキスト ファイルです。多くの場合、行と列で表されるスプレッドシート データや他の表形式データの格納に使用されます。 <xref:System.String.Split%2A> メソッドを使用してフィールドを区切ると、LINQ を使用した CSV ファイルのクエリと操作がとても簡単になります。 この手法は、CSV ファイルに限らず、行が構造化されているテキストの一部を並べ替えるときに利用できます。  
   
  次の例では、学生の "名"、"姓"、"ID" を表す 3 つの列があります。 これらのフィールドは、学生の姓に基づいてアルファベット順に並べられています。 クエリによって、ID 列が最初に表示され、学生の姓と名を結合して 2 列目に表示されるように列順を変えます。 行は ID フィールドの順に並べ替えられます。 結果は新しいファイルに保存され、元のデータは変更されません。  
   
 ### <a name="to-create-the-data-file"></a>データ ファイルを作成するには  
   
-1.  次の行を、spreadsheet1.csv というプレーン テキスト ファイルにコピーします。 プロジェクト フォルダーにファイルを保存します。  
+1. 次の行を、spreadsheet1.csv というプレーン テキスト ファイルにコピーします。 プロジェクト フォルダーにファイルを保存します。  
   
     ```  
     Adams,Terry,120  
@@ -74,10 +74,8 @@ End Class
 ' 122, Michael Tucker  
 ```  
   
-## <a name="compiling-the-code"></a>コードのコンパイル  
-  
 ## <a name="see-also"></a>関連項目
 
-- [LINQ と文字列 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
-- [LINQ とファイル ディレクトリ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)  
+- [LINQ と文字列 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ とファイル ディレクトリ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
 - [方法: CSV ファイルから XML を生成する](../../../../visual-basic/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)

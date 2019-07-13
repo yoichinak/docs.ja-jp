@@ -16,35 +16,35 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 33c73e58be39a7f1ffa9300947c3ee552231adab
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d5c576cb808ee92452c193c3fbce4f1d2c2cad05
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786350"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636780"
 ---
 # <a name="endenumeration-function"></a>EndEnumeration 関数
-呼び出しで開始した、列挙体シーケンスの終了、 [BeginEnumeration 関数](beginenumeration.md)します。  
+
+呼び出しで開始した、列挙体シーケンスの終了、 [BeginEnumeration 関数](beginenumeration.md)します。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a>構文  
-  
-```  
+
+## <a name="syntax"></a>構文
+
+```cpp
 HRESULT EndEnumeration (
-   [in] int               vFunc, 
-   [in] IWbemClassObject* ptr 
-); 
-```  
+   [in] int               vFunc,
+   [in] IWbemClassObject* ptr
+);
+```
 
 ## <a name="parameters"></a>パラメーター
 
-`vFunc`  
+`vFunc`\
 [in]このパラメーターは使用されません。
 
-`ptr`  
+`ptr`\
 [in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。
-
 
 ## <a name="return-value"></a>戻り値
 
@@ -54,19 +54,21 @@ HRESULT EndEnumeration (
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | 一般的なエラーが発生しました。 |
 |`WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
-  
+
 ## <a name="remarks"></a>Remarks
 
 この関数の呼び出しをラップする、 [IWbemClassObject::EndEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)メソッド。
 
 呼び出し、`EndEnumeration`関数は必要ありませんが、列挙体に関連付けられているリソースを解放するためお勧めします。 ただし、リソースは、次の列挙を開始またはオブジェクトがリリースされたときに、自動的に解放します。
 
-## <a name="requirements"></a>要件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
-  
- **ヘッダー:** WMINet_Utils.idl  
-  
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
-## <a name="see-also"></a>関連項目  
-[WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+## <a name="requirements"></a>必要条件
+
+**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+
+**ヘッダー:** WMINet_Utils.idl
+
+**.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
+## <a name="see-also"></a>関連項目
+
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

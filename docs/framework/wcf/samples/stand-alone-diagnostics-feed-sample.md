@@ -2,12 +2,12 @@
 title: スタンドアロン診断フィードのサンプル
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: 6def1d02ed46675d98db115f77ac36bb9f9401de
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 2737621a98f6a7e89ef3aee01fd1ad7a2a60f9b5
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007821"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>スタンドアロン診断フィードのサンプル
 このサンプルでは、RSS および Atom フィードを Windows Communication Foundation (WCF) を使用して配信用に作成する方法を示します。 オブジェクト モデルの基本と Windows Communication Foundation (WCF) サービスを設定する方法を示す基本的な"Hello World"プログラムです。  
@@ -76,13 +76,13 @@ foreach (SyndicationItem i in feed.Items)
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  セットアップの手順で説明したように、コンピューター上の HTTP および HTTPS の正しいアドレス登録アクセス許可があることを確認します。 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
+1. セットアップの手順で説明したように、コンピューター上の HTTP および HTTPS の正しいアドレス登録アクセス許可があることを確認します。 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
-2.  ソリューションをビルドします。  
+2. ソリューションをビルドします。  
   
-3.  コンソール アプリケーションを実行します。  
+3. コンソール アプリケーションを実行します。  
   
-4.  移動し、コンソール アプリケーションの実行中に`http://localhost:8000/diagnostics/feed/?format=atom`または`http://localhost:8000/diagnostics/feed/?format=rss`RSS 対応のブラウザーを使用します。  
+4. 移動し、コンソール アプリケーションの実行中に`http://localhost:8000/diagnostics/feed/?format=atom`または`http://localhost:8000/diagnostics/feed/?format=rss`RSS 対応のブラウザーを使用します。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
@@ -93,6 +93,7 @@ foreach (SyndicationItem i in feed.Items)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\DiagnosticsFeed`  
   
-## <a name="see-also"></a>関連項目  
- [WCF Web HTTP プログラミング モデル](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- [WCF 配信](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
+## <a name="see-also"></a>関連項目
+
+- [WCF Web HTTP プログラミング モデル](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [WCF 配信](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)

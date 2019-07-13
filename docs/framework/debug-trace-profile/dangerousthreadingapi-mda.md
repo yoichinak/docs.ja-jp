@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: 3e5efbc5-92e4-4229-b31f-ce368a1adb96
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1bfc3aa2bb7d1819f5f6221154ba1d276e0c202c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 46b0add67fc6bc139ef02e09190670870749d4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61874777"
 ---
 # <a name="dangerousthreadingapi-mda"></a>dangerousThreadingAPI MDA
 `dangerousThreadingAPI` マネージド デバッグ アシスタント (MDA) は、現在のスレッド以外のスレッドで <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> メソッドが呼び出されるとアクティブになります。  
   
-## <a name="symptoms"></a>現象  
+## <a name="symptoms"></a>症状  
  アプリケーションがいつまでも応答しないかハングアップしています。 システムまたはアプリケーションのデータが一時的に、またはアプリケーションのシャットダウン後も、予期しない状態のままになっている可能性があります。 一部の操作が予期したとおりに完了していません。  
   
  問題に伴うランダム性により、症状は大きく異なる場合があります。  
@@ -67,7 +67,8 @@ Thread t = new Thread(delegate() { Thread.Sleep(1000); });
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Threading.Thread>  
- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [lock ステートメント](~/docs/csharp/language-reference/keywords/lock-statement.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Threading.Thread>
+- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [lock ステートメント](~/docs/csharp/language-reference/keywords/lock-statement.md)

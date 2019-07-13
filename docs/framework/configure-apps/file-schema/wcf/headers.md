@@ -1,15 +1,15 @@
 ---
-title: '&lt;header&gt;'
+title: <headers>
 ms.date: 03/30/2017
 ms.assetid: c79b897d-8ea3-40b5-a8b6-2471941f7ed3
-ms.openlocfilehash: 84b9a9437d4b0dfae72a6e625b21f2b830eb28d8
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 660497012dd057e4ecf95524833e2573fe03a8b0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670678"
 ---
-# <a name="ltheadersgt"></a>&lt;header&gt;
+# <a name="headers"></a>\<headers>
 エンドポイントは、基本となる URI だけでなく、1 つ以上の SOAP ヘッダーによってアドレス指定することもできます。 これが役に立つのは、エンドポイントのクライアントに中継局を指す SOAP ヘッダーを含める必要がある、SOAP 中継局のシナリオの場合です。 この構成要素を使用して、カスタムのアドレス ヘッダーを定義できます。 エンドポイント ヘッダー コレクション内のエントリは、ユーザー定義の XML 要素です。 各要素は、正しい形式の XML である必要があります。  
   
  \<system.ServiceModel >  
@@ -32,11 +32,7 @@ ms.locfileid: "54147864"
  なし。  
   
 ### <a name="child-elements"></a>子要素  
-  
-|要素|説明|  
-|-------------|-----------------|  
-|Region||  
-|メンバー||  
+ ユーザー定義の XML 要素。  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -47,9 +43,10 @@ ms.locfileid: "54147864"
 ## <a name="remarks"></a>Remarks  
  オプション ヘッダーは、エンドポイントの識別または対話のために、より詳細なアドレス指定情報を提供します。 たとえば、ヘッダーを使用して、受信メッセージの処理方法や、エンドポイントからの応答メッセージの送信先を指定できるほか、複数のサービス インスタンスが使用できる場合に、特定ユーザーからの受信メッセージの処理に使用するインスタンスを指定できます。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.IdentityElement>  
- <xref:System.ServiceModel.EndpointAddress>  
- <xref:System.ServiceModel.EndpointAddress.Headers%2A>  
- <xref:System.ServiceModel.Channels.AddressHeaderCollection>  
- [エンドポイント:アドレス、バインディング、およびコントラクト](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Configuration.IdentityElement>
+- <xref:System.ServiceModel.EndpointAddress>
+- <xref:System.ServiceModel.EndpointAddress.Headers%2A>
+- <xref:System.ServiceModel.Channels.AddressHeaderCollection>
+- [エンドポイント:アドレス、バインディング、およびコントラクト](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

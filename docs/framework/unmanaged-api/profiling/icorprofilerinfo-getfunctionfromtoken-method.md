@@ -17,36 +17,37 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb894e3f52d28ce419ddda90f9fc0ac0e8dce022
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9c971df072cc7c6546e5c17278c78c7e9668ab63
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461943"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780633"
 ---
 # <a name="icorprofilerinfogetfunctionfromtoken-method"></a>ICorProfilerInfo::GetFunctionFromToken メソッド
-関数の ID を取得します。 このメソッドは、.NET Framework version 2.0 廃止されています。 使用して、 [icorprofilerinfo 2::getfunctionfromtokenandtypeargs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md)メソッド代わりにします。  
+関数の ID を取得します。 このメソッドは、.NET Framework version 2.0 で廃止されています。 使用して、 [icorprofilerinfo 2::getfunctionfromtokenandtypeargs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md)メソッド代わりにします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetFunctionFromToken(  
     [in]  ModuleID   moduleId,  
     [in]  mdToken    token,  
     [out] FunctionID *pFunctionId);  
 ```  
   
-## <a name="remarks"></a>コメント  
- `GetFunctionFromToken`メソッドは、ジェネリック関数またはジェネリック型の関数は機能しません。 は廃止されました。 使用して`ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs`すべての関数。  
+## <a name="remarks"></a>Remarks  
+ `GetFunctionFromToken`メソッドは、ジェネリック関数またはジェネリック型の関数は機能しません。 以外は廃止されました。 使用`ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs`すべての関数。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー** : CorProf.idl、CorProf.h  
+ **ヘッダー:** CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** 1.1、1.0  
+ **.NET framework のバージョン:** 1.1, 1.0  
   
-## <a name="see-also"></a>関連項目  
- [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

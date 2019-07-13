@@ -3,11 +3,11 @@ title: 1009 - ActivityScheduled
 ms.date: 03/30/2017
 ms.assetid: 307e38b6-d47e-47a4-9708-e74d8314b1a1
 ms.openlocfilehash: 0e3ea53a7b0509fcb8b73b61193742d615ac7e91
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33509973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61924658"
 ---
 # <a name="1009---activityscheduled"></a>1009 - ActivityScheduled
 ## <a name="properties"></a>プロパティ  
@@ -25,7 +25,7 @@ ms.locfileid: "33509973"
 ## <a name="message"></a>メッセージ  
  Parent Activity '%1'、DisplayName: '%2'、InstanceId: '%3' scheduled child Activity '%4'、DisplayName: '%5'、InstanceId: '%6'。  
   
-## <a name="details"></a>詳細  
+## <a name="details"></a>説明  
   
 |データ項目名|データ項目の型|説明|  
 |--------------------|--------------------|-----------------|  

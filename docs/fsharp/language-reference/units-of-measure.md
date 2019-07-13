@@ -2,12 +2,12 @@
 title: 測定単位
 description: どの浮動小数点をについて説明しますと F# の符号付き整数値には、測定単位を長さ、ボリューム、および大容量を示すために使用される通常を関連付けることができます。
 ms.date: 05/16/2016
-ms.openlocfilehash: 935dbff3545f92736ce8c51de86a168429dc194f
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 217ef67912625c0a4b187a7ee13a739de811cfcb
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610984"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641631"
 ---
 # <a name="units-of-measure"></a>測定単位
 

@@ -1,5 +1,5 @@
 ---
-title: '&lt;リスナー&gt;要素&lt;ソース&gt;'
+title: <source> の <listeners> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners
@@ -7,20 +7,18 @@ helpviewer_keywords:
 - listeners element for <source>
 - <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 86b85779f4eff72e8ab910a5ccd32fd369270509
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: b15a30fb6d356f92312bf33bc1964c7922ba1383
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673759"
 ---
-# <a name="ltlistenersgt-element-for-ltsourcegt"></a>&lt;リスナー&gt;要素&lt;ソース&gt;
+# <a name="listeners-element-for-source"></a>\<リスナー > 要素の\<ソース >
 追加または内のリスナーを削除します、<xref:System.Diagnostics.TraceSource.Listeners%2A>のコレクションを<xref:System.Diagnostics.TraceSource>します。 ログ、ウィンドウ、またはテキスト ファイルなど、適切なターゲットへのトレース出力をリスナーに指示します。  
   
  \<configuration>  
-\<system.diagnostics >  
+\<system.diagnostics>  
 \<ソース >  
 \<ソース >  
 \<リスナー > 要素  
@@ -89,7 +87,8 @@ ms.locfileid: "48027820"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Diagnostics.TraceListener>  
- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [トレース リスナー](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Diagnostics.TraceListener>
+- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [トレース リスナー](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

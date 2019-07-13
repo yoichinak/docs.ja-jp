@@ -15,30 +15,30 @@ helpviewer_keywords:
 ms.assetid: ef6f2662-323b-4534-aa82-6d1afb7b9309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8934a2a51ea4bc86166bf99a6087124d03ab11d9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5b064f0b1cec07f29058300041711285bde66697
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434117"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67748405"
 ---
 # <a name="iclrruntimeinfoisstarted-method"></a>ICLRRuntimeInfo::IsStarted メソッド
-ランタイムが開始されているかどうかを示す (つまり、かどうか、 [iclrruntimehost::start メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)が呼び出されは成功しました)。  
+ランタイムが開始されているかどうかを示します (つまり、かどうか、 [iclrruntimehost::start メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)が呼び出され、成功しました)。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT IsStarted(  
         [out] BOOL     *pbStarted,  
         [out] DWORD    *pdwStartupFlags);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pbStarted`  
- [out]`true`このランタイムが開始された、それ以外の場合は`false`します。  
+ [out]`true`このランタイムが開始しました。 それ以外の場合`false`します。  
   
  `pdwStartupFlags`  
- [out]ランタイムの起動に使用されたフラグを返します。  
+ [out]ランタイムを開始するために使用されたフラグを返します。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。  
@@ -46,21 +46,22 @@ HRESULT IsStarted(
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
-|E_NOTIMPL|共通言語ランタイム (CLR) のバージョンよりも前で CLR のバージョン、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]です。|  
+|E_NOTIMPL|共通言語ランタイム (CLR) バージョンは、.NET Framework 4 で CLR のバージョンより前です。|  
   
-## <a name="remarks"></a>コメント  
- このメソッドでは機能しません CLR のバージョンで CLR のバージョンより前、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]です。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは使えません CLR のバージョンと .NET Framework 4 で CLR のバージョンよりも前。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MetaHost.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICLRRuntimeInfo インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
- [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [ホスティング](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>関連項目
+
+- [ICLRRuntimeInfo インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [ホスティング](../../../../docs/framework/unmanaged-api/hosting/index.md)

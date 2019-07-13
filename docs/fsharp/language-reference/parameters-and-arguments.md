@@ -2,12 +2,12 @@
 title: パラメーターと引数
 description: パラメーターを定義して、関数、メソッド、およびプロパティに引数を渡すのための F# 言語サポートについて説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 08332ad9ab1c1a05f68ba27b2f1513ad0fe7c4d5
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: b68b3fdd14a66a7312efa5adb709adaeceaae282
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666262"
 ---
 # <a name="parameters-and-arguments"></a>パラメーターと引数
 
@@ -105,7 +105,7 @@ let angle (Polar(_, theta)) = theta
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
 
-詳細については、次を参照してください。[コンス トラクター (F#)](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05)します。
+詳細については、[コンス トラクター (F#)](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05)を参照してください。
 
 ## <a name="optional-parameters"></a>省略可能なパラメーター
 
@@ -135,12 +135,22 @@ Baud Rate: 4800 Duplex: Half Parity: false
 ```fsharp
 open System
 open System.Runtime.InteropServices
-type C = 
+type C =
     static member Foo([<Optional; DefaultParameterValue("Hello world")>] message) =
         printfn "%s" message
 ```
 
-引数として指定された値`DefaultParameterValue`型と一致する必要がありますのパラメーター、つまり、次は許可されていません。
+パラメーターの既定値として、新しいオブジェクトを指定することもできます。 たとえば、`Foo`メンバーが省略可能なことが`CancellationToken`代わりに入力として。
+
+```fsharp
+open System.Threading
+open System.Runtime.InteropServices
+type C =
+    static member Foo([<Optional; DefaultParameterValue(CancellationToken())>] ct: CancellationToken) =
+        printfn "%A" ct
+```
+
+引数として指定された値`DefaultParameterValue`パラメーターの型に一致する必要があります。 たとえば、次は許可されていません。
 
 ```fsharp
 type C =

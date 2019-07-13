@@ -9,19 +9,17 @@ helpviewer_keywords:
 - configuration files [ASP.NET]
 - configuration schema [.NET Framework], Web settings
 ms.assetid: ae1ac356-267d-4753-8d7a-7a04eb45a9be
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 461043dbb57043c5c18ea703d45f8b3ae487d271
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0fbc28bb7b871cc245d0fe477ea8e15c147549bb
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47401486"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170023"
 ---
 # <a name="web-settings-schema"></a>Web 設定スキーマ
 Web 設定は、CPU と、ASP.NET ホスト層によって管理されているプロセス全体の動作に適用される CPU および ASP.NET 設定の実行レベルを指定します。 これらの設定は、ASP.NET アプリケーションの Web.config ファイルで指定されているアプリケーション ドメインの種類の設定とは異なります。  
   
- Web 設定は、.NET Framework のバージョンのインストール フォルダーに配置された Aspnet.config ファイルに格納されます。 たとえば、[!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] の Aspnet.config ファイルは次のフォルダーにあります。  
+ Web 設定は、.NET Framework のバージョンのインストール フォルダーに配置された Aspnet.config ファイルに格納されます。 たとえば、.NET Framework 2.0 の Aspnet.config ファイルは、次のフォルダーには。  
   
  `C:\Windows\Microsoft.NET\Framework\v2.0.50727\`  
   
@@ -38,5 +36,6 @@ Web 設定は、CPU と、ASP.NET ホスト層によって管理されている�
 |[\<system.web >](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|ASP.NET ホスト層が使用する情報が含まれています。|  
 |[\<applicationPool>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|CPU と、ASP.NET ホスト層によって管理されているプロセス全体の動作に適用される CPU および ASP.NET 設定の実行レベルを指定します。|  
   
-## <a name="see-also"></a>関連項目  
- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a>関連項目
+
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)

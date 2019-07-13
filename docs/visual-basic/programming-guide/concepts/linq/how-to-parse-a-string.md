@@ -1,21 +1,21 @@
 ---
-title: '方法: 解析 (String) (Visual Basic)'
+title: '方法: (Visual Basic)、文字列を解析します。'
 ms.date: 07/20/2015
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
-ms.openlocfilehash: da12ec98e03acceae375bbed4fc6ad4c2a71ec2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 815e94b3b41c2c0cc1d18d598307ab292919bea4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942598"
 ---
-# <a name="how-to-parse-a-string-visual-basic"></a>方法: 解析 (String) (Visual Basic)
-このトピックでは、C# の場合、XML ツリーを作成する方法を示します。  
+# <a name="how-to-parse-a-string-visual-basic"></a>方法: (Visual Basic)、文字列を解析します。
+このトピックで XML ツリーを作成する方法を示しています。C#します。  
   
 ## <a name="example"></a>例  
- 使用して Visual Basic で文字列を解析することができます、`XElement.Parse`メソッドです。 ただし、次のコードに示すように XML リテラルを使用する方が効率的です。これは、XML リテラルでは、文字列から XML を解析する場合のようなパフォーマンスの低下がないためです。  
+ 使用して Visual Basic で文字列を解析することができます、`XElement.Parse`メソッド。 ただし、次のコードに示すように XML リテラルを使用する方が効率的です。これは、XML リテラルでは、文字列から XML を解析する場合のようなパフォーマンスの低下がないためです。  
   
- XML リテラルを使用すると、だけコピーして、Visual Basic プログラムに XML を貼り付けます。  
+ XML リテラルを使用すると、だけコピーして、Visual Basic プログラムに、XML を貼り付けます。  
   
 > [!NOTE]
 >  テキストの解析やテキスト ファイルからの XML ドキュメントの読み込みは、関数型構築より非効率です。 XML ツリーをコードから初期化すると、関数型構築で必要となるプロセッサ時間は、テキストの解析に比べて短くなります。  
@@ -49,5 +49,6 @@ Dim contacts as XElement = _
     </Contacts>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [(Visual Basic) の XML の解析](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a>関連項目
+
+- [(Visual Basic) の XML の解析](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

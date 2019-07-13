@@ -1,17 +1,15 @@
 ---
-title: 回復力のあるサービス、クラウドの準備をビルドします。 クラウドでの一時的な障害を受け入れる
-description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 |回復力のあるサービス、クラウドの準備をビルドします。 クラウドでの一時的な障害を受け入れる
-author: CESARDELATORRE
-ms.author: wiwagn
+title: 回復力のあるサービス、クラウドの準備をビルドします。 クラウド内の一時的な障害を受け入れる
+description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 |回復力のあるサービス、クラウドの準備をビルドします。 クラウド内の一時的な障害を受け入れる
 ms.date: 04/30/2018
-ms.openlocfilehash: 16228321cc788b381603513213130415eb73a95c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ca5d5e0c3af772ac52a02894c96889c776cf7d48
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128857"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65643736"
 ---
-# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>クラウドの準備が回復力のあるサービスをビルドするには。クラウドでの一時的な障害を受け入れる
+# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>クラウドの準備が整っている回復力のあるサービスの構築:クラウド内の一時的な障害を受け入れる
 
 回復性は、障害から回復し、引き続き機能する能力です。 回復性は、障害を回避、障害が発生するという事実を受け入れてがそれに応答するダウンタイムやデータの損失を回避する方法でについてではありません。 回復性の目的は、障害発生後にアプリケーションを完全に機能する状態に戻すことです。
 
@@ -35,7 +33,7 @@ ms.locfileid: "53128857"
 
 HTTP リソースとデータベース リソースの両方に、これらの手法を使用できます。 図 4-9 では、アプリケーションはこれらの手法は、サービス レベル (HTTP) とデータ層 (TCP) を作成する必要があるため、3 層アーキテクチャに基づきます。 (その他のサービスまたはマイクロ サービス) のデータベースだけでなく、1 つのアプリ レベルのみを使用してモノリシック アプリケーションをデータベースの接続レベルで一時的な障害を処理する可能性があります十分。 このシナリオでは、特定のデータベース接続の構成だけが必要です。
 
-回復力のある通信を使用している .NET のバージョンに応じて、データベースへのアクセスを実装するときに簡単なできます (たとえば、 [Entity Framework 6 以降](https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx)を構成するだけで済みますが、データベース接続の場合)。 またはなどの他のライブラリを使用する必要があります、 [Transient Fault Handling Application Block](https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx) (以前のバージョンの .NET)、独自のライブラリを実装します。
+回復力のある通信を使用している .NET のバージョンに応じて、データベースへのアクセスを実装するときに簡単なできます (たとえば、 [Entity Framework 6 以降](/ef/ef6/fundamentals/connection-resiliency/retry-logic)します。 データベース接続を構成するだけで済みます)。 またはなどの他のライブラリを使用する必要があります、 [Transient Fault Handling Application Block](https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)) (以前のバージョンの .NET)、独自のライブラリを実装します。
 
 使用する .NET の推奨事項は、HTTP の再試行、サーキット ブレーカーを実装する場合、 [Polly](https://github.com/App-vNext/Polly)ライブラリで、.NET Framework 4.0、.NET Framework 4.5、および .NET Core のサポートを含む .NET Standard 1.1 を対象とします。
 
@@ -43,19 +41,19 @@ HTTP リソースとデータベース リソースの両方に、これらの�
 
 ### <a name="additional-resources"></a>その他の技術情報
 
--   **部分的なエラーを処理するために回復力のある通信を実装します。**
+- **部分的なエラーを処理するために回復力のある通信を実装します。**
 
     [https://docs.microsoft.com/dotnet/standard/microservices-architecture/implement-resilient-applications/partial-failure-strategies](../../microservices-architecture/implement-resilient-applications/partial-failure-strategies.md)
 
--   **Entity Framework 接続の回復性と再試行ロジック (バージョン 6 以降)**
+- **Entity Framework 接続の回復性と再試行ロジック (バージョン 6 以降)**
 
-    [https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx](https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx)
+    [https://docs.microsoft.com/ef/ef6/fundamentals/connection-resiliency/retry-logic](/ef/ef6/fundamentals/connection-resiliency/retry-logic)
 
--   **Transient Fault Handling Application Block**
+- **Transient Fault Handling Application Block**
 
--   [https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx](https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx)
+- <https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)>
 
--   **回復力のある HTTP 通信 Polly ライブラリ**
+- **回復力のある HTTP 通信 Polly ライブラリ**
 
     https://github.com/App-vNext/Polly
 

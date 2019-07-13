@@ -1,24 +1,24 @@
 ---
-title: '&lt;RoleClaimType&gt;'
+title: <roleClaimType>
 ms.date: 03/30/2017
 ms.assetid: 69a49deb-6369-41ba-806b-ae8d21fac64b
 author: BrucePerlerMS
-ms.openlocfilehash: 565bf30d334c62c8132c60f411e89f7b260c54f1
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 8c7b7c9b42ac72b878aed4e12298dc3655f1e707
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793875"
 ---
-# <a name="ltroleclaimtypegt"></a>&lt;RoleClaimType&gt;
+# <a name="roleclaimtype"></a>\<roleClaimType>
 コレクション内のロールの種類の要求を定義する要求の種類を指定します<xref:System.Security.Claims.ClaimsIdentity>によって返されるオブジェクト、<xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>トークン ハンドラーのメソッド。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
 \<securityTokenHandlers>  
 \<add>  
-\<samlSecurityTokenRequirement >  
-\<roleClaimType >  
+\<samlSecurityTokenRequirement>  
+\<roleClaimType>  
   
 ## <a name="syntax"></a>構文  
   
@@ -68,5 +68,6 @@ ms.locfileid: "48841516"
 </add>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.RoleClaimType%2A>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.RoleClaimType%2A>

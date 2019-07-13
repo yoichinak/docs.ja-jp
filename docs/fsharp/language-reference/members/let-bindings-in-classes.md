@@ -2,12 +2,12 @@
 title: クラス内の let 束縛
 description: クラス定義で 'let' のバインドを使用して、プライベート フィールドと F# クラスのプライベート関数を定義する方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 03dd583a141971284e6a8ddaad02272236cd1e4c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 29f843e3e065837a53fd5eb26c79088bc0778c76
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611127"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645183"
 ---
 # <a name="let-bindings-in-classes"></a>クラス内の let バインド
 
@@ -45,7 +45,7 @@ A`let`バインドがない静的なインスタンスと呼びます`let`バイ
 
 ## <a name="alternative-ways-to-create-fields"></a>フィールドを作成する別の方法
 
-使用することも、`val`プライベート フィールドを作成するキーワード。 使用する場合、`val`キーワードが与えられていない値と、オブジェクトが作成されますが、代わりに、既定値で初期化されます。 詳細については、次を参照してください。[明示的なフィールド。Val キーワード](explicit-fields-the-val-keyword.md)します。
+使用することも、`val`プライベート フィールドを作成するキーワード。 使用する場合、`val`キーワードが与えられていない値と、オブジェクトが作成されますが、代わりに、既定値で初期化されます。 詳細については、次を参照してください。[明示的なフィールド:Val キーワード](explicit-fields-the-val-keyword.md)します。
 
 メンバーの定義を使用して、キーワードを追加して、クラスでプライベート フィールドを定義することもできます`private`を定義します。 コードを書き直すことがなく、メンバーのアクセシビリティを変更する場合に便利なことができます。 詳細については、「[Access Control](../access-control.md)」(アクセス制御) を参照してください。
 

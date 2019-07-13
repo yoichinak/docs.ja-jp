@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -optioncompare compiler option [Visual Basic]
 - /optioncompare compiler option [Visual Basic]
 ms.assetid: 7237b766-b44d-4cc5-9a3c-885348a7d9e4
-ms.openlocfilehash: 1d50a3bb739bbde09fa10d2adf03ec7c1ff5d344
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fd26643c2c289459b1e7b158952c402e42bae39b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180801"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64639878"
 ---
 # <a name="-optioncompare"></a>-optioncompare
 文字列比較の方法を指定します。  
@@ -38,15 +38,15 @@ ms.locfileid: "50180801"
   
 ### <a name="to-set--optioncompare-in-the-visual-studio-ide"></a>Visual Studio IDE で-optioncompare を設定するには  
   
-1.  **ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。   
+1. **ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。   
   
-2.  **[コンパイル]** タブをクリックします。  
+2. **[コンパイル]** タブをクリックします。  
   
-3.  値を変更、 **Option Compare**ボックス。  
+3. 値を変更、 **Option Compare**ボックス。  
   
 ### <a name="to-set--optioncompare-programmatically"></a>-Optioncompare をプログラムで設定するには  
   
--   参照してください[Option Compare ステートメント](../../../visual-basic/language-reference/statements/option-compare-statement.md)します。  
+- 参照してください[Option Compare ステートメント](../../../visual-basic/language-reference/statements/option-compare-statement.md)します。  
   
 ## <a name="example"></a>例  
  次のコードのコンパイル`ProjFile.vb`バイナリ文字列比較が使用するとします。  
@@ -55,11 +55,12 @@ ms.locfileid: "50180801"
 vbc -optioncompare:binary projFile.vb  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)  
- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)  
- [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)  
- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [Option Compare ステートメント](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
- [[Visual Basic の既定値] ([オプション] ダイアログ ボックス - [プロジェクト])](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+## <a name="see-also"></a>関連項目
+
+- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
+- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
+- [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
+- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Option Compare ステートメント](../../../visual-basic/language-reference/statements/option-compare-statement.md)
+- [[Visual Basic の既定値] ([オプション] ダイアログ ボックス - [プロジェクト])](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

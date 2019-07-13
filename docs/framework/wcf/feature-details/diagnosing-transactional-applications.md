@@ -2,18 +2,18 @@
 title: トランザクション アプリケーションの診断
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-ms.openlocfilehash: 4fa85fea0651d7a31c5a50bbc9c1226421b976b7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9a4f064d903092b04f8885fb00b56e18c9cfeb74
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497001"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751124"
 ---
 # <a name="diagnosing-transactional-applications"></a>トランザクション アプリケーションの診断
-このトピックでは、Windows Communication Foundation (WCF) 管理、および診断機能を使用して、トランザクション アプリケーションをトラブルシューティングする方法について説明します。  
+このトピックでは、Windows Communication Foundation (WCF) の管理と診断機能を使用して、トランザクション アプリケーションをトラブルシューティングする方法について説明します。  
   
 ## <a name="performance-counters"></a>[パフォーマンス カウンター]  
- WCF には、パフォーマンス カウンターをトランザクション アプリケーションのパフォーマンスを測定するための標準セットが用意されています。 詳細については、「[パフォーマンス カウンター](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)」を参照してください。  
+ WCF には、トランザクション アプリケーションのパフォーマンスを測定するためのパフォーマンス カウンターの標準セットが用意されています。 詳細については、「[パフォーマンス カウンター](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)」を参照してください。  
   
  パフォーマンス カウンターには次の表に示すように、サービス、エンドポイント、操作の 3 つのレベルがあります。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "33497001"
 |1 秒あたりのトランザクション フロー|毎秒ごとにこのエンドポイントでの操作に対して実行されたトランザクションの数。 このカウンターは、エンドポイントに送信されたメッセージにトランザクションがある場合は常にインクリメントされます。|  
   
 ## <a name="windows-management-instrumentation"></a>WMI (Windows Management Instrumentation)  
- WCF では、WCF Windows Management Instrumentation (WMI) プロバイダーを介して実行時に、サービスの検査データを公開します。 WMI データへのアクセスの詳細については、次を参照してください。[診断の Windows Management Instrumentation を使用して](../../../../docs/framework/wcf/diagnostics/wmi/index.md)です。  
+ WCF では、WCF Windows Management Instrumentation (WMI) プロバイダーを介して実行時に、サービスの検査データを公開します。 WMI データにアクセスする方法の詳細については、次を参照してください。[診断用の Windows Management Instrumentation のを使用して](../../../../docs/framework/wcf/diagnostics/wmi/index.md)します。  
   
  WMI プロパティには、サービスに適用されるトランザクション設定を示す読み取り専用のプロパティが多数あります。 次の表にこれらの設定をすべて示します。  
   
@@ -87,15 +87,15 @@ ms.locfileid: "33497001"
 ## <a name="tracing"></a>トレース  
  トレースを使用すると、トランザクション アプリケーションにおけるエラーを監視および分析できます。 トレースは次の方法を使用して有効にできます。  
   
--   標準の WCF トレース  
+- 標準の WCF トレース  
   
      この種類のトレースは、任意の WCF アプリケーションのトレースと同じです。 詳細については、「 [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)」を参照してください。  
   
--   WS-AtomicTransaction トレース  
+- WS-AtomicTransaction トレース  
   
-     Ws-atomictransaction トレースを使用して有効にすることができます、 [Ws-atomictransaction 構成ユーティリティ (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)です。 このトレースでは、トランザクションの状態とシステム内の参加要素を把握できます。 内部のサービス モデル トレースも有効にするには、`HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` レジストリ キーを <xref:System.Diagnostics.SourceLevels> 列挙体の有効な値に設定します。 他の WCF アプリケーションと同じ方法でメッセージ ログを有効にすることができます。  
+     WS-AtomicTransaction トレースを使用して有効にすることができます、 [WS-AtomicTransaction 構成ユーティリティ (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)します。 このトレースでは、トランザクションの状態とシステム内の参加要素を把握できます。 内部のサービス モデル トレースも有効にするには、`HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` レジストリ キーを <xref:System.Diagnostics.SourceLevels> 列挙体の有効な値に設定します。 その他の WCF アプリケーションと同じ方法でメッセージ ログを有効にすることができます。  
   
--   `System.Transactions` トレース  
+- `System.Transactions` トレース  
   
      OleTransactions プロトコルを使用する場合、プロトコル メッセージはトレースできません。 <xref:System.Transactions> インフラストラクチャではトレースがサポートされるため (OleTransactions を使用)、ユーザーはトランザクションで発生したイベントを確認できます。 <xref:System.Transactions> アプリケーションのトレースを有効にするには、`App.config` 構成ファイルに次のコードを含めます。  
   
@@ -118,9 +118,10 @@ ms.locfileid: "33497001"
     </configuration>  
     ```  
   
-     これもにより WCF トレースだけで WCF を利用も、<xref:System.Transactions>インフラストラクチャです。  
+     WCF を利用またとして、WCF トレースの場合は、これもできます、<xref:System.Transactions>インフラストラクチャ。  
   
-## <a name="see-also"></a>関連項目  
- [管理と診断](../../../../docs/framework/wcf/diagnostics/index.md)  
- [トレースの構成](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [WS-AtomicTransaction 構成ユーティリティ (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+## <a name="see-also"></a>関連項目
+
+- [管理と診断](../../../../docs/framework/wcf/diagnostics/index.md)
+- [トレースの構成](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+- [WS-AtomicTransaction 構成ユーティリティ (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

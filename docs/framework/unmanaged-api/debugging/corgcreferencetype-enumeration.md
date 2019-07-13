@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 822425b958422ba364a1f10903c7c312ba43fab9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3cbecd5be9b1ac7c08e6970933a48eeb95f01a22
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408607"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739377"
 ---
 # <a name="corgcreferencetype-enumeration"></a>CorGCReferenceType 列挙型
 ガベージ コレクトされる必要のあるオブジェクトのソースを識別します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum {  
     CorHandleStrong = 1,  
     CorHandleStrongPinning = 2,  
@@ -54,33 +54,34 @@ typedef enum {
 |-----------------|-----------------|  
 |`CorHandleStrong`|オブジェクト ハンドル テーブルからの強い参照へのハンドル。|  
 |`CorHandleStrongPinning`|オブジェクト ハンドル テーブルから固定された強い参照へのハンドル。|  
-|`CorHandleWeakShort`|オブジェクト ハンドル テーブルからの弱い参照へのハンドル。|  
-|`CorHandleWeakRefCount`|オブジェクト ハンドル テーブルから弱参照カウント オブジェクトへのハンドル。|  
-|`CorHandleStrongRefCount`|オブジェクト ハンドル テーブルから、参照カウント オブジェクトへのハンドル。|  
-|`CorHandleStrongDependent`|オブジェクト ハンドル テーブルから、依存するオブジェクトへのハンドル。|  
+|`CorHandleWeakShort`|オブジェクト ハンドル テーブルからの弱い参照をへのハンドル。|  
+|`CorHandleWeakRefCount`|オブジェクト ハンドル テーブルから弱い参照カウント オブジェクトへのハンドル。|  
+|`CorHandleStrongRefCount`|オブジェクト ハンドル テーブルから参照カウント オブジェクトへのハンドル。|  
+|`CorHandleStrongDependent`|オブジェクト ハンドル テーブルから、依存オブジェクトへのハンドル。|  
 |`CorHandleStrongAsyncPinned`|オブジェクト ハンドル テーブルからの非同期固定オブジェクト。|  
 |`CorHandleStrongSizedByref`|ガベージ コレクション時に、すべてのオブジェクトおよびオブジェクト ルートの集合的なクロージャの概算サイズを保持する強力なハンドル。|  
 |`CorReferenceStack`|マネージ スタックからの参照。|  
 |`CorReferenceFinalizer`|ファイナライザー キューからの参照。|  
-|CorHandleStrongOnly|ハンドル テーブルから強力な参照のみを返します。 この値を使用して、 [icordebugprocess 5::enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)メソッドのみです。|  
-|`CorHandleWeakOnly`|ハンドル テーブルからの弱い参照のみを返します。 この値を使用して、 [icordebugprocess 5::enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)メソッドのみです。|  
-|`CorHandleAll`|ハンドル テーブルからすべての参照を返します。 この値を使用して、 [icordebugprocess 5::enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)メソッドのみです。|  
+|CorHandleStrongOnly|ハンドル テーブルからの強い参照のみを返します。 この値は使用、 [icordebugprocess 5::enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)メソッドのみです。|  
+|`CorHandleWeakOnly`|ハンドル テーブルからの弱い参照のみを返します。 この値は使用、 [icordebugprocess 5::enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)メソッドのみです。|  
+|`CorHandleAll`|ハンドル テーブルからすべての参照を返します。 この値は使用、 [icordebugprocess 5::enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)メソッドのみです。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CorGCReferenceType`列挙体は次のように使用します。  
   
--   値として、`type`のフィールド、 [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)構造体、参照、またはハンドルのソースを示します。  
+- 値として、`type`のフィールド、 [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)構造の参照またはハンドルのソースを示します。  
   
--   として、`types`への引数、 [icordebugprocess 5::enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)メソッドを指定した列挙体に含めるハンドルの種類。  
+- として、`types`への引数、 [icordebugprocess 5::enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)メソッド、列挙体に含めるハンドルの種類を指定します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>関連項目
+
+- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

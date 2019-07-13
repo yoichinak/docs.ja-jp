@@ -1,5 +1,5 @@
 ---
-title: 必要なファイルが見つかりません&#39;&lt;ファイル名&gt;&#39;
+title: 必要なファイル '<filename>' が見つかりません。
 ms.date: 07/20/2015
 f1_keywords:
 - bc30655
@@ -7,21 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC30655
 ms.assetid: 756db378-e758-48a9-88ff-496bc55bc0b6
-ms.openlocfilehash: a84f687a3e8c9ebd5db26f622ce3db99f92d93f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef1fd4fa94d2fe225077d8b7ed0e04fa29843e7d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595262"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622626"
 ---
-# <a name="unable-to-find-required-file-39ltfilenamegt39"></a>必要なファイルが見つかりません&#39;&lt;ファイル名&gt;&#39;
+# <a name="unable-to-find-required-file-filename"></a>必要なファイルが見つかりません '\<filename >'
 Visual Studio で必要とされるファイルがないか、破損しています。  
   
  **エラー ID:** BC30655  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   Visual Studio を再インストールしてください。  
+- Visual Studio を再インストールしてください。  
   
-## <a name="see-also"></a>関連項目  
- [ご意見](/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a>関連項目
+
+- [ご意見](/visualstudio/ide/talk-to-us)

@@ -4,12 +4,12 @@ description: ref 戻り値と ref ローカル変数を定義して使用する�
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: 6399079e17a53ac5bf283eaa5c799964360350f4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: fcac162f63438b6cbe54908383467d4b0f227c39
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146067"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59081847"
 ---
 # <a name="ref-returns-and-ref-locals"></a>ref 戻り値と ref ローカル変数
 
@@ -59,7 +59,6 @@ ref 戻り値は、呼び出されるメソッドの範囲で、別の変数の�
 - "*参照渡し*" で値を返す場合、その同じ変数の別名を返すことになります。
 - "*参照渡し*" で別のメソッドに値を渡す場合、それが別名を与える変数への参照を渡すことになります。
 - [ref ローカル](#ref-locals)をエイリアスにすると、同じ変数に新しいエイリアスが作られます。
-
 
 ## <a name="ref-locals"></a>ref ローカル変数
 
@@ -124,5 +123,5 @@ refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to differe
 
 ## <a name="see-also"></a>関連項目
 
-- [ref キーワード](../../language-reference/keywords/ref.md)  
+- [ref キーワード](../../language-reference/keywords/ref.md)
 - [安全で効率的なコードを記述する](../../write-safe-efficient-code.md)

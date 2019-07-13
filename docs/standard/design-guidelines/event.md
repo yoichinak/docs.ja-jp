@@ -11,12 +11,12 @@ helpviewer_keywords:
 - signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
 author: KrzysztofCwalina
-ms.openlocfilehash: 54f98b3c685b77ecb9fe659522c599662aa8243c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 530c68ea5342263acd07f8dc8a8c8ce889652503
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026446"
 ---
 # <a name="event-design"></a>イベントのデザイン
 イベントは、コールバック (ユーザー コードを呼び出すために、フレームワークを許可するコンストラクト) の最もよく使用される形式です。 その他のコールバック メカニズムには、デリゲート、仮想メンバー、およびインターフェイス ベースのプラグインを取得するメンバーが含まれます。ユーザビリティ調査からのデータは、開発者の大部分が快適よりも、その他のコールバック メカニズムを使用しているイベントを使用することを示します。 イベントは、Visual Studio と多くの言語で適切に統合されています。  
@@ -72,5 +72,5 @@ ms.locfileid: "53129091"
   
 ## <a name="see-also"></a>関連項目
 
-- [メンバーのデザインのガイドライン](../../../docs/standard/design-guidelines/member.md)  
+- [メンバーのデザインのガイドライン](../../../docs/standard/design-guidelines/member.md)
 - [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)

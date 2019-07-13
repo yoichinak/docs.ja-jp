@@ -1,5 +1,5 @@
 ---
-title: '&lt;linkedConfiguration&gt;要素'
+title: <linkedConfiguration> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/assemblyBinding/linkedConfiguration
@@ -11,22 +11,20 @@ helpviewer_keywords:
 - linked configuration files
 - linkedConfiguration Element
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: c5186aa94993ba551252db6fef55853b5b554789
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 909ee7cbb7cd31cf213f305b23237cb69e295882
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674650"
 ---
 # <a name="linkedconfiguration-element"></a>\<linkedConfiguration > 要素
 
 インクルードする構成ファイルを指定します。
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<assemblyBinding >**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<linkedConfiguration >**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<assemblyBinding >** ](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<linkedConfiguration>**
 
 ## <a name="syntax"></a>構文
 
@@ -44,7 +42,7 @@ ms.locfileid: "47200959"
 
 |     | 説明 |
 | --- | ----------- |
-| [**\<assemblyBinding >** 要素](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | 構成レベルでのアセンブリ バインディング ポリシーを指定します。 |
+| [ **\<assemblyBinding >** 要素](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | 構成レベルでのアセンブリ バインディング ポリシーを指定します。 |
 
 ## <a name="child-elements"></a>子要素
 
@@ -85,5 +83,5 @@ ms.locfileid: "47200959"
 
 ## <a name="see-also"></a>関連項目
 
-[**\<assemblyBinding >** 要素](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
-[.NET Framework の構成ファイル スキーマ](~/docs/framework/configure-apps/file-schema/index.md)
+- [ **\<assemblyBinding >** 要素](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)
+- [.NET Framework の構成ファイル スキーマ](~/docs/framework/configure-apps/file-schema/index.md)

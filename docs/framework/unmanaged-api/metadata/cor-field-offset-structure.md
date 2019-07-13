@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8c4a5c8efc87940b7df0bfd532beaa67931a8c81
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fdfbb22d231d16be7757ff5df26a5a010928af54
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442119"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767054"
 ---
 # <a name="corfieldoffset-structure"></a>COR_FIELD_OFFSET 構造体
 指定したフィールドのクラス内の相対位置を格納します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct COR_FIELD_OFFSET {  
     mdFieldDef  ridOfField;  
     ULONG       ulOffset;  
@@ -42,17 +42,18 @@ typedef struct COR_FIELD_OFFSET {
 |`ridOfField`|`mdFieldDef`フィールドを表すメタデータ トークン。|  
 |`ulOffset`|そのクラス内のフィールドをオフセットします。|  
   
-## <a name="remarks"></a>コメント  
- [Imetadataimport::getclasslayout](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getclasslayout-method.md)と[imetadataemit::setclasslayout](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setclasslayout-method.md)メソッドが型のパラメーターを受け取る`COR_FIELD_OFFSET`です。  
+## <a name="remarks"></a>Remarks  
+ [Imetadataimport::getclasslayout](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getclasslayout-method.md)と[imetadataemit::setclasslayout](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setclasslayout-method.md)メソッドは、型のパラメーターを受け取る`COR_FIELD_OFFSET`します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** CorHdr.h、CorProf.idl  
+ **ヘッダー:** CorHdr.h, CorProf.idl  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [メタデータ構造体](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)  
- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [メタデータ構造体](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
+- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

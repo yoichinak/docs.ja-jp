@@ -8,22 +8,22 @@ helpviewer_keywords:
 ms.assetid: 3af9f584-f1b4-4154-aeaa-8fce7c9f8b50
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b81e7c2ffabdee78af34d00c48fb29c7525dea08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5edd6dfb3dac05ce4614c43949f2ec4c19b5f742
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698513"
 ---
 # <a name="debugging-enumerations"></a>列挙体のデバッグ
 このセクションでは、デバッグ API が使用するアンマネージ列挙体について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [CLR_DEBUGGING_PROCESS_FLAGS 列挙型](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-process-flags-enumeration.md)  
- によって使用されている値を提供、 [iclrdebugging::openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)メソッドです。  
+ 使用される値を提供します、 [iclrdebugging::openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)メソッド。  
   
  [CLRDataEnumMemoryFlags 列挙型](../../../../docs/framework/unmanaged-api/debugging/clrdataenummemoryflags-enumeration.md)  
- メモリ領域への呼び出しを示す、 [iclrdataenummemoryregions::enummemoryregions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)メソッドに含める必要があります。  
+ メモリ領域への呼び出しを示す、 [iclrdataenummemoryregions::enummemoryregions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)メソッドを含める必要があります。  
   
  [COR_PUB_ENUMPROCESS 列挙型](../../../../docs/framework/unmanaged-api/debugging/cor-pub-enumprocess-enumeration.md)  
  列挙するプロセスの型を識別します。  
@@ -35,22 +35,22 @@ ms.locfileid: "33410469"
  呼び出しチェーンが開始する理由を示します。  
   
  [CorDebugCodeInvokeKind 列挙型](../../../../docs/framework/unmanaged-api/debugging/cordebugcodeinvokekind-enumeration.md)  
- エクスポートされた関数がマネージ コードを呼び出す方法を示します。  
+ エクスポートされた関数がマネージド コードを呼び出す方法を示します。  
   
  [CorDebugCodeInvokePurpose 列挙型](../../../../docs/framework/unmanaged-api/debugging/cordebugcodeinvokepurpose-enumeration.md)  
- エクスポートされた関数がマネージ コードを呼び出す理由を示します。  
+ エクスポートされた関数がマネージド コードを呼び出す理由を示します。  
   
  CorDebugCreateProcessFlags  
- 呼び出しで使用できる追加のデバッグ オプションを提供、 [icordebug::createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)メソッドです。  
+ 呼び出しで使用できる追加のデバッグ オプションの提供、 [icordebug::createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)メソッド。  
   
  [CorDebugDebugEventKind 列挙型](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md)  
- 情報がデコードされるによってイベントの種類を示す、 [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md)メソッドです。  
+ 情報がデコードされるによってイベントの種類を示す、 [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md)メソッド。  
   
  [CorDebugDecodeEventFlagsWindows 列挙型](../../../../docs/framework/unmanaged-api/debugging/cordebugdecodeeventflagswindows-enumeration.md)  
  Windows プラットフォームのデバッグ イベントに関する追加情報を提供します。  
   
  CorDebugExceptionCallbackType  
- 指定されたコールバックの型を示す、 [icordebugmanagedcallback 2::exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)イベント。  
+ 行われるコールバックの型を示す、 [icordebugmanagedcallback 2::exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)イベント。  
   
  [CorDebugExceptionFlags 列挙型](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md)  
  例外に関する追加情報を提供します。  
@@ -62,7 +62,7 @@ ms.locfileid: "33410469"
  ガベージ コレクターがワークステーションまたはサーバーのどちらで実行されているかを示します。  
   
  [CorDebugGenerationTypes 列挙型](../../../../docs/framework/unmanaged-api/debugging/cordebuggenerationtypes-enumeration.md)  
- マネージ ヒープ上のメモリ領域の生成を指定します。  
+ マネージド ヒープ上のメモリ領域の生成を指定します。  
   
  CorDebugHandleType  
  ハンドル型を示します。  
@@ -80,7 +80,7 @@ ms.locfileid: "33410469"
  スタック フレームの型を示します。  
   
  [CorDebugJITCompilerFlags 列挙型](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md)  
- マネージ Just-In-Time (JIT) コンパイラの動作に影響を与える値が含まれます。  
+ マネージド Just-In-Time (JIT) コンパイラの動作に影響を与える値が含まれます。  
   
  [CorDebugJITCompilerFlagsDeprecated 列挙型](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflagsdeprecated-enumeration.md)  
  互換性のために残されています。 使用して、`CORDEBUG_JIT_DEFAULT`のメンバー、 [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md)列挙代わりにします。  
@@ -89,13 +89,13 @@ ms.locfileid: "33410469"
  命令ポインター (IP) の値が得られた方法の詳細を提供します。  
   
  [CorDebugMDAFlags 列挙型](../../../../docs/framework/unmanaged-api/debugging/cordebugmdaflags-enumeration.md)  
- マネージ デバッグ アシスタント (MDA) が生成されるスレッドのステータスを指定します。  
+ マネージド デバッグ アシスタント (MDA) が生成されるスレッドのステータスを指定します。  
   
  [CorDebugNGenPolicy 列挙型](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md)  
  デバッガーがネイティブ イメージ キャッシュからネイティブ (NGen) イメージを読み込むかどうかを指定する値を提供します。  
   
  [CorDebugPlatform 列挙型](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md)  
- 使用されるターゲット プラットフォームの値を提供、 [icordebugdatatarget::getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)メソッドです。  
+ 使用されるターゲット プラットフォームの値を提供します、 [icordebugdatatarget::getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)メソッド。  
   
  [CorDebugRecordFormat 列挙型](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)  
  ネイティブ例外デバッグ イベントに関する情報を格納するバイト配列内のデータの形式を示します。  
@@ -128,7 +128,7 @@ ms.locfileid: "33410469"
  デバッガーがローカル変数またはプロファイラー ReJIT インストルメンテーションに追加されたコードにアクセスできるかどうかを指定する値を提供します。  
   
  [LoggingLevelEnum 列挙型](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md)  
- マネージ スレッドがイベントを記録する際にイベント ログに書き込まれる説明メッセージの重大度レベルを示します。  
+ マネージド スレッドがイベントを記録する際にイベント ログに書き込まれる説明メッセージの重大度レベルを示します。  
   
  [LogSwitchCallReason 列挙型](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md)  
  デバッグとトレースの切り替えで実行された操作を示します。  
@@ -137,8 +137,10 @@ ms.locfileid: "33410469"
  変数のネイティブの場所の種類を示します。  
   
  [WriteableMetadataUpdateMode 列挙型](../../../../docs/framework/unmanaged-api/debugging/writeablemetadataupdatemode-enumeration.md)  
- メモリ内のメタデータ更新をデバッガーに対して可視にするかどうかを指定する値を提供します。  
-  
+ メモリ内のメタデータ更新をデバッガーに対して可視にするかどうかを指定する値を提供します。 
+
+ [ClrDataSourceType 列挙](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)CLRDATA_IL_ADDRESS_MAP 構造で使用される値を提供します。
+
 ## <a name="related-sections"></a>関連項目  
  [デバッグ コクラス](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  
   

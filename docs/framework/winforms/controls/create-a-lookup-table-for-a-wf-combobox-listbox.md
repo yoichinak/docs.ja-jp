@@ -1,5 +1,5 @@
 ---
-title: '方法 : Windows フォーム ComboBox、ListBox、または CheckedListBox コントロールのルックアップ テーブルを作成する'
+title: '方法: Windows フォーム ComboBox、ListBox、または CheckedListBox コントロールのルックアップ テーブルを作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], lookup tables
 - ListBox control [Windows Forms], creating lookup tables
 ms.assetid: 4ce35f12-1f4e-4317-92d1-af8686a8cfaa
-ms.openlocfilehash: b719f2112aac1292b668fe199d48de4b0b60ed21
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a58522cc17ac379897a89a8e61485a1e271438a3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43773092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011472"
 ---
-# <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>方法 : Windows フォーム ComboBox、ListBox、または CheckedListBox コントロールのルックアップ テーブルを作成する
+# <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>方法: Windows フォーム ComboBox、ListBox、または CheckedListBox コントロールのルックアップ テーブルを作成する
 Windows フォーム上ではわかりやすい形式でデータを表示し、一方プログラムにはより意味のある形式でデータを格納すると便利な場合があります。 たとえば、食品の注文書の場合、リスト ボックスにメニュー項目が名前で表示されます。 一方、注文を記録するデータ テーブルには、食品を表す一意の ID 番号が含まれることになります。 次の表は、食品の注文書データを格納および表示する方法の例を示しています。  
   
 ### <a name="orderdetailstable"></a>OrderDetailsTable  
@@ -46,13 +46,13 @@ Windows フォーム上ではわかりやすい形式でデータを表示し、
   
 ### <a name="to-create-a-lookup-table"></a>ルックアップ テーブルを作成するには  
   
-1.  フォームに <xref:System.Windows.Forms.ComboBox>、<xref:System.Windows.Forms.ListBox>、または <xref:System.Windows.Forms.CheckedListBox> コントロールを追加します。  
+1. フォームに <xref:System.Windows.Forms.ComboBox>、<xref:System.Windows.Forms.ListBox>、または <xref:System.Windows.Forms.CheckedListBox> コントロールを追加します。  
   
-2.  データ ソースに接続します。  
+2. データ ソースに接続します。  
   
-3.  2 つのテーブル間のデータ リレーションシップを確立します。 参照してください[DataRelation オブジェクトの概要](https://msdn.microsoft.com/library/89d8a881-8265-41f2-a88b-61311ab06192)します。  
+3. 2 つのテーブル間のデータ リレーションシップを確立します。 参照してください[DataRelation オブジェクトの概要](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0k21zcyx(v=vs.120))します。  
   
-4.  次のプロパティを設定します。 これらはコードまたはデザイナーで設定できます。  
+4. 次のプロパティを設定します。 これらはコードまたはデザイナーで設定できます。  
   
     |プロパティ|設定|  
     |--------------|-------------|  
@@ -60,7 +60,7 @@ Windows フォーム上ではわかりやすい形式でデータを表示し、
     |<xref:System.Windows.Forms.ListControl.DisplayMember%2A>|コントロールに表示するデータ ソース テーブルの列。 これは、前のシナリオで`"Name"`(コードで設定するには引用符を使用)。|  
     |<xref:System.Windows.Forms.ListControl.ValueMember%2A>|格納された情報を含むデータ ソース テーブルの列。 これは、前のシナリオで`"ID"`(コードで設定するには引用符を使用)。|  
   
-5.  プロシージャで <xref:System.Windows.Forms.ControlBindingsCollection> クラスの <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> メソッドを呼び出して、フォーム入力を記録するテーブルにコントロールの <xref:System.Windows.Forms.ListControl.SelectedValue%2A> プロパティをバインドします。 行うこともできますこのコードでは、代わりに、デザイナーでコントロールのアクセスすることによって<xref:System.Windows.Forms.Control.DataBindings%2A>プロパティ、**プロパティ**ウィンドウ。 これは、前のシナリオで`OrderDetailsTable`、列と`"ItemID"`します。  
+5. プロシージャで <xref:System.Windows.Forms.ControlBindingsCollection> クラスの <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> メソッドを呼び出して、フォーム入力を記録するテーブルにコントロールの <xref:System.Windows.Forms.ListControl.SelectedValue%2A> プロパティをバインドします。 行うこともできますこのコードでは、代わりに、デザイナーでコントロールのアクセスすることによって<xref:System.Windows.Forms.Control.DataBindings%2A>プロパティ、**プロパティ**ウィンドウ。 これは、前のシナリオで`OrderDetailsTable`、列と`"ItemID"`します。  
   
     ```vb  
     ListBox1.DataBindings.Add("SelectedValue", OrderDetailsTable, "ItemID")  
@@ -70,9 +70,10 @@ Windows フォーム上ではわかりやすい形式でデータを表示し、
     listBox1.DataBindings.Add("SelectedValue", OrderDetailsTable, "ItemID");  
     ```  
   
-## <a name="see-also"></a>関連項目  
- [データ連結と Windows フォーム](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
- [ListBox コントロールの概要](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)  
- [ComboBox コントロールの概要](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)  
- [CheckedListBox コントロールの概要](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)  
- [オプションのリストを表示するための Windows フォーム コントロール](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+## <a name="see-also"></a>関連項目
+
+- [データ連結と Windows フォーム](../data-binding-and-windows-forms.md)
+- [ListBox コントロールの概要](listbox-control-overview-windows-forms.md)
+- [ComboBox コントロールの概要](combobox-control-overview-windows-forms.md)
+- [CheckedListBox コントロールの概要](checkedlistbox-control-overview-windows-forms.md)
+- [オプションのリストを表示するための Windows フォーム コントロール](windows-forms-controls-used-to-list-options.md)

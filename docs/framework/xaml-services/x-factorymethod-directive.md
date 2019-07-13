@@ -6,12 +6,12 @@ helpviewer_keywords:
 - FactoryMethod directive in XAML [XAML Services]
 - x:FactoryMethod directive [XAML Services]
 ms.assetid: 829bcbdf-5318-4afb-9a03-c310e0d2f23d
-ms.openlocfilehash: 436caa9b93467dcf2a0763bcc0962a2beb722315
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8fff4d62e07bdfd4ecc27d2692c391251afdd6d5
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971835"
 ---
 # <a name="xfactorymethod-directive"></a>x:FactoryMethod ディレクティブ
 XAML プロセッサが、バッキング型を解決した後、オブジェクトを初期化するために使用するコンス トラクター以外の方法を指定します。  
@@ -56,5 +56,6 @@ XAML プロセッサが、バッキング型を解決した後、オブジェク
   
  `x:FactoryMethod` 要素には、他のすべてのプロパティ要素が前に指定する必要がありますのいずれかの必要があります前`x:Arguments`も、要素として提供されており、任意の初期化/コンテンツ/内部のテキストのテキストの前にする必要があります。  
   
-## <a name="see-also"></a>関連項目  
- [x:Arguments ディレクティブ](../../../docs/framework/xaml-services/x-arguments-directive.md)
+## <a name="see-also"></a>関連項目
+
+- [x:Arguments ディレクティブ](x-arguments-directive.md)

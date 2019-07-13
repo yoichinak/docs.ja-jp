@@ -2,12 +2,12 @@
 title: ビット処理演算子
 description: 使用可能なビットごとの演算子について説明します、F#プログラミング言語。
 ms.date: 07/20/2018
-ms.openlocfilehash: 01c68be485525b49eb3121dfaea6dce0adfe3972
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: e4d61492ba94d26cfe8354c0ba89fbd732ed782e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611972"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645067"
 ---
 # <a name="bitwise-operators"></a>ビット処理演算子
 

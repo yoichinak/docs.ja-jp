@@ -1,16 +1,16 @@
 ---
-title: リフレクション (Visual Basic) を使用して属性へのアクセス
+title: リフレクション (Visual Basic) を使用した属性へのアクセス
 ms.date: 07/20/2015
 ms.assetid: c56e41da-5433-464f-a7bf-2a722e78bc9f
-ms.openlocfilehash: dca476eef392a2f57d0c66727c53e0e53310d679
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e5cbce8529cc7554a8edacb2d83dabb73a495eec
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937153"
 ---
-# <a name="accessing-attributes-by-using-reflection-visual-basic"></a>リフレクション (Visual Basic) を使用して属性へのアクセス
-カスタム属性を定義し、それらをソース コード内に配置することができても、その情報を取得して操作する手段がなければ、ほとんど価値はありません。 リフレクションを使用すれば、カスタム属性を使用して定義された情報を取得することができます。 鍵となるメソッドは `GetCustomAttributes` です。このメソッドは、ソース コード属性の実行時の等価オブジェクトを配列で返します。 このメソッドには、いくつかのオーバー ロード バージョンがあります。 詳細については、「<xref:System.Attribute>」を参照してください。  
+# <a name="accessing-attributes-by-using-reflection-visual-basic"></a>リフレクション (Visual Basic) を使用した属性へのアクセス
+カスタム属性を定義し、それらをソース コード内に配置することができても、その情報を取得して操作する手段がなければ、ほとんど価値はありません。 リフレクションを使用すれば、カスタム属性を使用して定義された情報を取得することができます。 鍵となるメソッドは `GetCustomAttributes` です。このメソッドは、ソース コード属性の実行時の等価オブジェクトを配列で返します。 このメソッドには、いくつかのオーバー ロード バージョンがあります。 詳細については、「 <xref:System.Attribute> 」を参照してください。  
   
  次のような属性指定は、  
   
@@ -99,11 +99,12 @@ Class TestAuthorAttribute
 End Class  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Reflection>  
- <xref:System.Attribute>  
- [Visual Basic プログラミング ガイド](../../../../visual-basic/programming-guide/index.md)  
- [属性に格納されている情報の取得](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
- [リフレクション (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
- [属性 (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)  
- [カスタム属性の作成 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Reflection>
+- <xref:System.Attribute>
+- [Visual Basic プログラミング ガイド](../../../../visual-basic/programming-guide/index.md)
+- [属性に格納されている情報の取得](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)
+- [リフレクション (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [属性 (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
+- [カスタム属性の作成 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)

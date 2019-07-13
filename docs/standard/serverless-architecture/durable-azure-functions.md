@@ -4,14 +4,14 @@ description: 持続性のある Azure functions では、コード内のステ�
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
-ms.openlocfilehash: 8ad354e1708eb88f016130f8235f534b967eb122
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f7ee74926d6658042120113b49dc763383881423
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147308"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65643399"
 ---
-# <a name="durable-azure-functions"></a>Azure functions の durable
+# <a name="durable-azure-functions"></a>永続的な Azure Functions
 
 Azure Functions でサーバーレス アプリケーションを作成するときに、オペレーション通常ステートレスな方法で実行する設計されています。 この設計の選択の理由としてのプラットフォームのスケールがでコードが実行されているどのサーバーがわかりにくいためにです。 難しく特定の時点でアクティブなインスタンスの数を把握します。 ただし、これには既知であるプロセスの現在の状態を必要とするアプリケーションのクラスがあります。 オンライン ストアへの注文を送信するプロセスを検討してください。 チェック アウト操作には、ワークフロー、プロセスの状態を確認する必要がある複数の操作を構成している可能性があります。 お客様は、クレジット カードの処理の結果と自分のアカウントでは、上の任意のクレジットを持っている場合、このような情報は、製品在庫を含めることができます。 これらの操作は、独自の内部ワークフローまたはサード パーティ システムからもサービスに簡単になります。
 

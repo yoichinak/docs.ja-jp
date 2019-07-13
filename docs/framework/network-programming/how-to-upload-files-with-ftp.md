@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e40f17c5-dd12-4c62-9dbf-00ab491382dc
-ms.openlocfilehash: a1f067462361bb123c9d61a1d099c900a6641d6b
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 670bbc65078e6530cffbcfa7d324c36238014ffb
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028202"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632805"
 ---
 # <a name="how-to-upload-files-with-ftp"></a>方法: FTP を使用してファイルをアップロードする
 

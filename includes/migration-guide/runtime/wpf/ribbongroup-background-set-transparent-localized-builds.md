@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 921baed7381fad363cc832c6b6af69068c2c8f43
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59236050"
+---
 ### <a name="ribbongroup-background-is-set-to-transparent-in-localized-builds"></a>ローカライズされたビルドで RibbonGroup の背景が透明に設定される
 
 |   |   |
@@ -7,4 +15,3 @@
 |スコープ|エッジ|
 |Version|4.6.2|
 |型|ランタイム|
-

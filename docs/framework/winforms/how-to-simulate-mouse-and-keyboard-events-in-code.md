@@ -1,5 +1,5 @@
 ---
-title: '方法 : マウス イベントとキーボード イベントをコードでシミュレートする'
+title: '方法: マウス イベントとキーボード イベントをコードでシミュレートする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: 56c7d534d5428ff116c6de1aeffd9a31bd7a5063
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 1d2e837ec13e6a0b507d004cd75c2f77ae0008dc
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43798114"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583404"
 ---
-# <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>方法 : マウス イベントとキーボード イベントをコードでシミュレートする
+# <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>方法: マウス イベントとキーボード イベントをコードでシミュレートする
 Windows フォームは、プログラムでマウスおよびキーボード入力をシミュレートするためのいくつかのオプションを提供します。 ここでは、これらのオプションの概要について説明します。  
   
 ## <a name="simulating-mouse-input"></a>マウス入力のシミュレート  
@@ -27,11 +27,11 @@ Windows フォームは、プログラムでマウスおよびキーボード入
   
 #### <a name="to-programmatically-click-the-right-mouse-button"></a>プログラムでマウスの右ボタンをクリックするには  
   
-1.  <xref:System.Windows.Forms.MouseEventArgs.Button%2A> プロパティが <xref:System.Windows.Forms.MouseButtons.Right?displayProperty=nameWithType> 値に設定された <xref:System.Windows.Forms.MouseEventArgs> を作成します。  
+1. <xref:System.Windows.Forms.MouseEventArgs.Button%2A> プロパティが <xref:System.Windows.Forms.MouseButtons.Right?displayProperty=nameWithType> 値に設定された <xref:System.Windows.Forms.MouseEventArgs> を作成します。  
   
-2.  この <xref:System.Windows.Forms.Control.OnMouseClick%2A> を持つ <xref:System.Windows.Forms.MouseEventArgs> メソッドを引数として呼び出します。  
+2. この <xref:System.Windows.Forms.Control.OnMouseClick%2A> を持つ <xref:System.Windows.Forms.MouseEventArgs> メソッドを引数として呼び出します。  
   
- カスタム コントロールの詳細については、「[デザイン時の Windows フォーム コントロールの開発](../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)」を参照してください。  
+ カスタム コントロールの詳細については、「[デザイン時の Windows フォーム コントロールの開発](./controls/developing-windows-forms-controls-at-design-time.md)」を参照してください。  
   
  マウス入力をシミュレートする方法はほかにもあります。 たとえば、マウス入力によって標準的に設定する状態を表すコントロールのプロパティをプログラムで設定したり ( <xref:System.Windows.Forms.CheckBox.Checked%2A> コントロールの <xref:System.Windows.Forms.CheckBox> プロパティなど)、シミュレートの対象イベントにアタッチされているデリゲートを直接呼び出したりできます。  
   
@@ -58,36 +58,35 @@ Windows フォームは、プログラムでマウスおよびキーボード入
   
 #### <a name="to-send-a-keystroke-to-the-same-application"></a>同じアプリケーションにキーストロークを送信するには  
   
-1.  <xref:System.Windows.Forms.SendKeys.Send%2A> クラスの <xref:System.Windows.Forms.SendKeys.SendWait%2A> メソッドまたは <xref:System.Windows.Forms.SendKeys> メソッドを呼び出します。 指定されたキーストロークは、アプリケーションのアクティブなコントロールによって受信されます。 次のコード例では、 <xref:System.Windows.Forms.SendKeys.Send%2A> を使用して、ユーザーがフォームのサーフェイスをダブルクリックしたときに、ENTER キーを押す操作をシミュレートします。 この例では、0 のタブ インデックスを持つ単一の <xref:System.Windows.Forms.Form> コントロールがある <xref:System.Windows.Forms.Button> を想定しています。  
+1. <xref:System.Windows.Forms.SendKeys.Send%2A> クラスの <xref:System.Windows.Forms.SendKeys.SendWait%2A> メソッドまたは <xref:System.Windows.Forms.SendKeys> メソッドを呼び出します。 指定されたキーストロークは、アプリケーションのアクティブなコントロールによって受信されます。 次のコード例では、 <xref:System.Windows.Forms.SendKeys.Send%2A> を使用して、ユーザーがフォームのサーフェイスをダブルクリックしたときに、ENTER キーを押す操作をシミュレートします。 この例では、0 のタブ インデックスを持つ単一の <xref:System.Windows.Forms.Form> コントロールがある <xref:System.Windows.Forms.Button> を想定しています。  
   
-     [!code-cpp[System.Windows.Forms.SimulateKeyPress#10](../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#10)]
-     [!code-csharp[System.Windows.Forms.SimulateKeyPress#10](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#10)]
-     [!code-vb[System.Windows.Forms.SimulateKeyPress#10](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#10)]  
+     [!code-cpp[System.Windows.Forms.SimulateKeyPress#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#10)]
+     [!code-csharp[System.Windows.Forms.SimulateKeyPress#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#10)]
+     [!code-vb[System.Windows.Forms.SimulateKeyPress#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#10)]  
   
 #### <a name="to-send-a-keystroke-to-a-different-application"></a>別のアプリケーションにキーストロークを送信するには  
   
-1.  キー入力を受信するアプリケーション ウィンドウをアクティブ化し、 <xref:System.Windows.Forms.SendKeys.Send%2A> メソッドまたは <xref:System.Windows.Forms.SendKeys.SendWait%2A> メソッドを呼び出します。 別のアプリケーションをアクティブ化するマネージド メソッドがないため、ネイティブ Windows メソッドを使用して他のアプリケーションにフォーカスを設定する必要があります。 次のコード例は、プラットフォーム呼び出しを使用して `FindWindow` メソッドと `SetForegroundWindow` メソッドを呼び出し、電卓アプリケーションのウィンドウをアクティブ化してから、 <xref:System.Windows.Forms.SendKeys.SendWait%2A> を呼び出して電卓アプリケーションに一連の計算を発行します。  
+1. キー入力を受信するアプリケーション ウィンドウをアクティブ化し、 <xref:System.Windows.Forms.SendKeys.Send%2A> メソッドまたは <xref:System.Windows.Forms.SendKeys.SendWait%2A> メソッドを呼び出します。 別のアプリケーションをアクティブ化するマネージド メソッドがないため、ネイティブ Windows メソッドを使用して他のアプリケーションにフォーカスを設定する必要があります。 次のコード例は、プラットフォーム呼び出しを使用して `FindWindow` メソッドと `SetForegroundWindow` メソッドを呼び出し、電卓アプリケーションのウィンドウをアクティブ化してから、 <xref:System.Windows.Forms.SendKeys.SendWait%2A> を呼び出して電卓アプリケーションに一連の計算を発行します。  
   
     > [!NOTE]
     >  電卓アプリケーションを特定する `FindWindow` 呼び出しの適切なパラメーターは、Windows のバージョンに応じて異なります。  次のコードでは、 [!INCLUDE[win7](../../../includes/win7-md.md)]の電卓アプリケーションを検索します。 [!INCLUDE[windowsver](../../../includes/windowsver-md.md)]では、最初のパラメーターを「SciCalc」に変更します。 Visual Studio に付属の Spy++ ツールを使用して、適切なパラメーターを特定します。  
   
-     [!code-cpp[System.Windows.Forms.SimulateKeyPress#5](../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#5)]
-     [!code-csharp[System.Windows.Forms.SimulateKeyPress#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#5)]
-     [!code-vb[System.Windows.Forms.SimulateKeyPress#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#5)]  
+     [!code-cpp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#5)]
+     [!code-csharp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#5)]
+     [!code-vb[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#5)]  
   
 ## <a name="example"></a>例  
  次のコード例は、前のコード例の完全なアプリケーションです。  
   
- [!code-cpp[System.Windows.Forms.SimulateKeyPress#0](../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#0)]
- [!code-csharp[System.Windows.Forms.SimulateKeyPress#0](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#0)]
- [!code-vb[System.Windows.Forms.SimulateKeyPress#0](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#0)]  
+ [!code-cpp[System.Windows.Forms.SimulateKeyPress#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#0)]
+ [!code-csharp[System.Windows.Forms.SimulateKeyPress#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#0)]
+ [!code-vb[System.Windows.Forms.SimulateKeyPress#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#0)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   System、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。  
+- System、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。  
   
- コマンドラインからこの例を Visual Basic または Visual c# の構築方法の詳細については、次を参照してください。 [、コマンドラインからビルドする](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)します。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  「[方法: 完成した Windows フォーム コードの例を Visual Studio を使ってコンパイルして実行する](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))」も参照してください。  
-  
-## <a name="see-also"></a>関連項目  
- [Windows フォームでのユーザー入力](../../../docs/framework/winforms/user-input-in-windows-forms.md)
+## <a name="see-also"></a>関連項目
+
+- [Windows フォームでのユーザー入力](user-input-in-windows-forms.md)

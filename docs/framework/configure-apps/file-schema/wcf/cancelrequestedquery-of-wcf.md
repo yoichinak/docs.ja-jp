@@ -1,15 +1,15 @@
 ---
-title: WCF の &lt;cancelRequestedQuery&gt;
+title: <cancelRequestedQuery> WCF の
 ms.date: 03/30/2017
 ms.assetid: b690d870-02eb-4c56-8bc3-e5ca99d7097b
-ms.openlocfilehash: 6b41721dcc0c489377c59bfccdd0b1a617f551b0
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: bd6157e63761efa954744ab08ea6c66535def514
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673361"
 ---
-# <a name="ltcancelrequestedquerygt-of-wcf"></a>WCF の &lt;cancelRequestedQuery&gt;
+# <a name="cancelrequestedquery-of-wcf"></a>\<cancelRequestedQuery > の WCF
 
 親アクティビティが子アクティビティを取り消すための要求を追跡するのに使用するクエリを表します。 追跡参加要素がキャンセル要求レコード オブジェクトを定期受信するには、このクエリが必要です。  
   
@@ -21,7 +21,7 @@ ms.locfileid: "54149073"
 \<trackingProfile>  
 \<ワークフロー >  
 \<cancelRequestedQueries>  
-\<cancelRequestedQuery >  
+\<cancelRequestedQuery>  
   
 ## <a name="syntax"></a>構文  
   
@@ -61,7 +61,7 @@ ms.locfileid: "54149073"
 |-------------|-----------------|  
 |[\<cancelRequestedQueries>](cancelrequestedqueries-of-wcf.md)|親アクティビティが子アクティビティを取り消すための要求を追跡するのに使用する、クエリのコレクションを表します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.CancelRequestedQueryElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.CancelRequestedQuery?displayProperty=nameWithType>

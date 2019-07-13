@@ -2,12 +2,12 @@
 title: メンバー
 description: オブジェクトのメンバーについて説明します、F#プログラミング言語。
 ms.date: 05/16/2016
-ms.openlocfilehash: c32bd76ab60673563f0cc45ce0fb569b2ea262b9
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 0da704b637a9421aa150aa8d8de504bec858e252
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613142"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645151"
 ---
 # <a name="members"></a>メンバー
 

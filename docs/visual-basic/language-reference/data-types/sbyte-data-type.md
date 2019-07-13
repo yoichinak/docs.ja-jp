@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-ms.openlocfilehash: b2ef4f083cd9b6f38dc91bf8bf0eac9cd21c2618
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: f4e95aacc8e7063cbac8f9ed8e117137836f08bd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148085"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647030"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte データ型 (Visual Basic)
 
@@ -64,21 +64,21 @@ Dim number As SByte = &H_F9
 
 ## <a name="programming-tips"></a>プログラミングのヒント
   
--   **CLS 準拠です。** `SByte`データ型がの一部、[共通言語仕様](https://www.ecma-international.org/publications/standards/Ecma-335.htm)(CLS) に CLS 準拠コードがそれを使用するコンポーネントを使用できないようにします。
+- **CLS 準拠です。** `SByte`データ型がの一部、[共通言語仕様](https://www.ecma-international.org/publications/standards/Ecma-335.htm)(CLS) に CLS 準拠コードがそれを使用するコンポーネントを使用できないようにします。
 
--   **拡大します。** `SByte`拡大変換後のデータ型`Short`、 `Integer`、 `Long`、 `Decimal`、 `Single`、および`Double`します。 つまり、変換できる`SByte`遭遇することがなくこれらの型のいずれにも、<xref:System.OverflowException?displayProperty=nameWithType>エラー。
+- **拡大します。** `SByte`拡大変換後のデータ型`Short`、 `Integer`、 `Long`、 `Decimal`、 `Single`、および`Double`します。 つまり、変換できる`SByte`遭遇することがなくこれらの型のいずれにも、<xref:System.OverflowException?displayProperty=nameWithType>エラー。
   
--   **型宣言文字。** `SByte` リテラルの型文字または識別子の型文字がありません。  
+- **型宣言文字。** `SByte` リテラルの型文字または識別子の型文字がありません。  
   
--   **フレームワークの型。** .NET Framework において対応する型は、<xref:System.SByte?displayProperty=nameWithType> 構造体です。
+- **フレームワークの型。** .NET Framework において対応する型は、<xref:System.SByte?displayProperty=nameWithType> 構造体です。
   
 ## <a name="see-also"></a>関連項目
 
- <xref:System.SByte?displayProperty=nameWithType>  
- [データの種類](../../../visual-basic/language-reference/data-types/index.md)  
- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Short データ型](../../../visual-basic/language-reference/data-types/short-data-type.md)  
- [Integer データ型](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
- [Long データ型](../../../visual-basic/language-reference/data-types/long-data-type.md)  
- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- <xref:System.SByte?displayProperty=nameWithType>
+- [データの種類](../../../visual-basic/language-reference/data-types/index.md)
+- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Short データ型](../../../visual-basic/language-reference/data-types/short-data-type.md)
+- [Integer データ型](../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [Long データ型](../../../visual-basic/language-reference/data-types/long-data-type.md)
+- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

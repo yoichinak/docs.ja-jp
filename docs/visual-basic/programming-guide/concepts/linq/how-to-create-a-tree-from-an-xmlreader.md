@@ -1,19 +1,19 @@
 ---
-title: '方法: ツリー XmlReader から作成 (Visual Basic)'
+title: '方法: (Visual Basic)、XmlReader からツリーを作成します。'
 ms.date: 07/20/2015
 ms.assetid: 6de683d8-177d-402b-b0de-d0539f1ce5d8
-ms.openlocfilehash: 34d8ae340f588307401a13948f5e1d6b22846806
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0826112821394ac6a81ba03e7803187aaec2796
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855193"
 ---
-# <a name="how-to-create-a-tree-from-an-xmlreader-visual-basic"></a>方法: ツリー XmlReader から作成 (Visual Basic)
+# <a name="how-to-create-a-tree-from-an-xmlreader-visual-basic"></a>方法: (Visual Basic)、XmlReader からツリーを作成します。
 このトピックでは、<xref:System.Xml.XmlReader> から直接 XML ツリーを作成する方法について説明します。 <xref:System.Xml.Linq.XElement> から <xref:System.Xml.XmlReader> を作成するには、<xref:System.Xml.XmlReader> を要素ノードに配置する必要があります。 <xref:System.Xml.XmlReader> はコメントや処理命令をスキップしますが、<xref:System.Xml.XmlReader> がテキスト ノードに配置されている場合はエラーがスローされます。 このようなエラーを回避するため、<xref:System.Xml.XmlReader> から XML ツリーを作成する前に、必ず <xref:System.Xml.XmlReader> を要素に配置してください。  
   
 ## <a name="example"></a>例  
- この例では、「[サンプル XML ファイル: 書籍 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)」の XML ドキュメントを使用します。  
+ この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:書籍 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)」。  
   
  次のコードでは、`T:System.Xml.XmlReader` オブジェクトを作成し、最初の要素ノードが見つかるまでノードを読み取ります。 次に <xref:System.Xml.Linq.XElement> オブジェクトを読み込みます。  
   
@@ -52,5 +52,6 @@ Console.WriteLine(e)
 </Catalog>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [(Visual Basic) の XML の解析](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a>関連項目
+
+- [(Visual Basic) の XML の解析](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

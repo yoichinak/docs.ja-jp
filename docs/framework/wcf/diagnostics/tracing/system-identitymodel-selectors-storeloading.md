@@ -2,12 +2,12 @@
 title: System.IdentityModel.Selectors.StoreLoading
 ms.date: 03/30/2017
 ms.assetid: a9287a5a-a36b-4659-8c87-13962b1c225c
-ms.openlocfilehash: ec311d5c5aff9b165a9b51dd43aea375218381ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e222ac93669d41baa0903f0fa9ecdf2113374a8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33476662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784723"
 ---
 # <a name="systemidentitymodelselectorsstoreloading"></a>System.IdentityModel.Selectors.StoreLoading
 System.IdentityModel.Selectors.StoreLoading  
@@ -15,7 +15,8 @@ System.IdentityModel.Selectors.StoreLoading
 ## <a name="description"></a>説明  
  指定したストアを初期化します。  
   
-## <a name="see-also"></a>関連項目  
- [トレース](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [トレースを使用したアプリケーションのトラブルシューティング](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [管理と診断](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>関連項目
+
+- [トレース](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [トレースを使用したアプリケーションのトラブルシューティング](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [管理と診断](../../../../../docs/framework/wcf/diagnostics/index.md)

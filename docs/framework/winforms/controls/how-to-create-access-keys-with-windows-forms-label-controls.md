@@ -1,5 +1,5 @@
 ---
-title: '方法 : Windows フォームの Label コントロールでアクセス キーを作成する'
+title: '方法: Windows フォームの Label コントロールでアクセス キーを作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,30 +17,30 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], creating for controls
 - access keys [Windows Forms], Windows Forms
 ms.assetid: 5ee8f823-80be-4a4f-96a4-412671e2e306
-ms.openlocfilehash: fc9592981f3d926b2b5b85b6869da13dc644e7a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ffe4bf6fb29e82b04938e2ba9a2d9d21e5eabcde
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747109"
 ---
-# <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>方法 : Windows フォームの Label コントロールでアクセス キーを作成する
-Windows フォーム<xref:System.Windows.Forms.Label>を他のコントロールのアクセス キーを定義するコントロールを使用できます。 ラベル コントロールにアクセス キーを定義するときに、ユーザーは ALT キーとそれに続くタブ オーダーでコントロールにフォーカスを移動するように指定した文字キーを押すことができます。 ラベルは、フォーカスを受け取ることはできません、ため、タブ オーダーの次のコントロールにフォーカスが自動的に移動します。 この手法を使用して、テキスト ボックス、コンボ ボックス、リスト ボックス、およびデータ グリッドにアクセス キーを割り当てます。  
+# <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>方法: Windows フォームの Label コントロールでアクセス キーを作成する
+Windows フォーム<xref:System.Windows.Forms.Label>他のコントロールのアクセス キーを定義するコントロールを使用できます。 ラベル コントロールにアクセス キーを定義するときに、ユーザーは、ALT キーとそれに続くタブ オーダー内でコントロールにフォーカスを移動する指定した文字に押すことができます。 ラベルは、フォーカスを受け取ることはできません、ために、タブ オーダー内で次のコントロールに自動的にフォーカスが移動します。 この手法を使用して、テキスト ボックス、コンボ ボックス、リスト ボックス、およびデータ グリッドをアクセス キーを割り当てます。  
   
-### <a name="to-assign-an-access-key-to-a-control-with-a-label"></a>ラベルを持つコントロールにアクセス キーを割り当てる  
+### <a name="to-assign-an-access-key-to-a-control-with-a-label"></a>ラベルを持つコントロールに、アクセス キーを割り当てるには  
   
-1.  最初に、ラベルを描画し、その他のコントロールを描画します。  
+1. 最初に、ラベルを描画し、その他のコントロールを描きます。  
   
      - または -  
   
-     任意の順序で、コントロールを描画し、設定、<xref:System.Windows.Forms.Control.TabIndex%2A>他のコントロールより 1 小さい値をラベルのプロパティです。  
+     任意の順序で、コントロールを描画し、設定、<xref:System.Windows.Forms.Control.TabIndex%2A>を他のコントロールより 1 少ない数のラベルのプロパティ。  
   
-2.  ラベルの設定<xref:System.Windows.Forms.Label.UseMnemonic%2A>プロパティを`true`です。  
+2. ラベルの設定<xref:System.Windows.Forms.Label.UseMnemonic%2A>プロパティを`true`します。  
   
-3.  アンパサンドを使用して、ラベルのでは、(&)<xref:System.Windows.Forms.Label.Text%2A>ラベルのアクセス キーを割り当てるプロパティをします。 詳細については、次を参照してください。[アクセス キーの Windows フォーム コントロールの作成](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)です。  
+3. アンパサンド (&) は、ラベルの<xref:System.Windows.Forms.Label.Text%2A>ラベルのアクセス キーを割り当てるプロパティを。 詳細については、次を参照してください。 [Windows のフォーム コントロールのアクセス キーを作成する](how-to-create-access-keys-for-windows-forms-controls.md)します。  
   
     > [!NOTE]
-    >  アクセス キーの作成に使用するのではなく、ラベル コントロールにアンパサンドを表示することがあります。 これは、アンパサンドがデータに含まれるレコード セット内のフィールドに、ラベル コントロールをバインドする場合に発生する可能性があります。 ラベル コントロールでは、アンパサンドを表示するには、設定、<xref:System.Windows.Forms.Label.UseMnemonic%2A>プロパティを`false`です。 アンパサンドを表示しても、アクセス キーを持っている場合は、設定、<xref:System.Windows.Forms.Label.UseMnemonic%2A>プロパティを`true`を示し、1 つのアンパサンドとアクセス キー (&)、アンパサンドは、2 つのアンパサンドで表示します。  
+    >  アクセス キーの作成に使用するのではなく、ラベル コントロールにアンパサンドを表示することがあります。 これは、アンパサンドがデータに含まれるレコード セット内のフィールドにラベル コントロールをバインドする場合に発生する可能性があります。 ラベル コントロールでは、アンパサンドを表示するには、設定、<xref:System.Windows.Forms.Label.UseMnemonic%2A>プロパティを`false`します。 アンパサンドを表示しても、アクセス キーがある場合は、設定、<xref:System.Windows.Forms.Label.UseMnemonic%2A>プロパティを`true`とアクセス キーは 1 つのアンパサンド (&)、アンパサンドを 2 つのアンパサンドを表示します。  
   
     ```vb  
     Label1.UseMnemonic = True  
@@ -63,7 +63,8 @@ Windows フォーム<xref:System.Windows.Forms.Label>を他のコントロール
     label2->Text = "&Copy && Paste";  
     ```  
   
-## <a name="see-also"></a>関連項目  
- [方法: Windows フォーム Label コントロールのサイズを内容に合わせて変更する](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
- [Label コントロールの概要](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)  
- [Label コントロール](../../../../docs/framework/winforms/controls/label-control-windows-forms.md)
+## <a name="see-also"></a>関連項目
+
+- [方法: 内容に合わせて Windows フォーム Label コントロールをサイズします。](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
+- [Label コントロールの概要](label-control-overview-windows-forms.md)
+- [Label コントロール](label-control-windows-forms.md)

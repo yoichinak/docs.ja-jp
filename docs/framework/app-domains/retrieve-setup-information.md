@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5cdb12ae-1e37-4a62-8ec7-93d6dcc6e8d9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d9341b90f876306ff2e964141c2c729d1cf0e5f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 80c9fe6de0fca86497ffe84cd8dadf0eb8cef6c5
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193828"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59108954"
 ---
 # <a name="retrieving-setup-information-from-an-application-domain"></a>アプリケーション ドメインからのセットアップ情報の取得
 アプリケーション ドメインの各インスタンスは、プロパティと <xref:System.AppDomainSetup> 情報の両方で構成されています。 <xref:System.AppDomain?displayProperty=nameWithType> クラスを使って、アプリケーション ドメインからセットアップ情報を取得できます。 このクラスでは、アプリケーション ドメインに関する構成情報を取得する複数のメンバーが提供されています。  
@@ -36,6 +36,7 @@ ms.locfileid: "50193828"
  [!code-csharp[AppDomain_Setup#3](../../../samples/snippets/csharp/VS_Snippets_CLR/AppDomain_Setup/CS/source3.cs#3)]
  [!code-vb[AppDomain_Setup#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AppDomain_Setup/VB/source3.vb#3)]  
   
-## <a name="see-also"></a>参照  
-- [アプリケーション ドメインを使用したプログラミング](application-domains.md#programming-with-application-domains)  
+## <a name="see-also"></a>関連項目
+
+- [アプリケーション ドメインを使用したプログラミング](application-domains.md#programming-with-application-domains)
 - [アプリケーション ドメインの使用](../../../docs/framework/app-domains/use.md)

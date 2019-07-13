@@ -2,12 +2,12 @@
 title: '方法: 特定の名前 (XPATH-LINQ to XML) を使用した兄弟の属性を検索 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 83b3ddca-830a-4b71-9756-9e4bdf907302
-ms.openlocfilehash: 467a9a5f529111b45fccda79437ccc6538f1372a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07fb5647950c450d08ab3235ac8cb396eff15305
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780576"
 ---
 # <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-visual-basic"></a>方法: 特定の名前 (XPATH-LINQ to XML) を使用した兄弟の属性を検索 (Visual Basic)
 このトピックでは、コンテキスト ノードの兄弟が持つすべての属性を検索する方法について説明します。 コレクション内にある特定の名前の属性のみが返されます。  
@@ -19,7 +19,7 @@ ms.locfileid: "33643609"
 ## <a name="example"></a>例  
  この例では、最初に `Book` 要素を検索し、次に `Book` という名前の兄弟要素をすべて検索します。その後、`id` という名前の属性をすべて検索します。 結果は属性のコレクションです。  
   
- この例では、「[サンプル XML ファイル: 書籍 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)」の XML ドキュメントを使用します。  
+ この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:書籍 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)」。  
   
 ```vb  
 Dim books as XDocument = XDocument.Load("Books.xml")  
@@ -54,5 +54,6 @@ id="bk101"
 id="bk102"  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [LINQ to XML を XPath ユーザー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>関連項目
+
+- [LINQ to XML XPath ユーザー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

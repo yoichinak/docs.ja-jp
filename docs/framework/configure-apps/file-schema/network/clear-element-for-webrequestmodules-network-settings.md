@@ -1,5 +1,5 @@
 ---
-title: '&lt;オフ&gt;webRequestModules (ネットワーク設定) の要素'
+title: webRequestModules の <clear> 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/clear
@@ -10,20 +10,20 @@ helpviewer_keywords:
 - webRequestModules, clear element
 - clear element, webRequestModules
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
-ms.openlocfilehash: 39d4a184972036677aaa9fdb33e672521033d35f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5dea238629b282776cb45f7b388e655fa557d084
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674598"
 ---
-# <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a>&lt;オフ&gt;webRequestModules (ネットワーク設定) の要素
+# <a name="clear-element-for-webrequestmodules-network-settings"></a>\<クリア > webRequestModules (ネットワーク設定) の要素
 アプリケーションから登録済みのすべての Web 要求モジュールを削除します。  
   
  \<configuration>  
 \<system.net>  
 \<webRequestModules>  
-\<クリア >  
+\<clear>  
   
 ## <a name="syntax"></a>構文  
   
@@ -69,6 +69,7 @@ ms.locfileid: "50190529"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.Net.WebRequest>  
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Net.WebRequest>
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

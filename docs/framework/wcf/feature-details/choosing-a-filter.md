@@ -2,12 +2,12 @@
 title: フィルターの選択
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: 377d4f5c221ad37acf954b1dafc8712a388122ff
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 76875cd56f74bd555133253beda97b30ee3fa90a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784463"
 ---
 # <a name="choosing-a-filter"></a>フィルターの選択
 ルーティング サービスを構成する際には、適切なメッセージ フィルターを選択し、受信するメッセージと正確に一致できるように、それらのフィルターを構成することが重要です。 選択したフィルターの適合基準が幅広すぎる場合や、適切に構成されていない場合は、メッセージが正しくルーティングされません。 フィルターの適合基準が厳格すぎると、一部のメッセージの有効なルーティング先が見つからないことがあります。  
@@ -135,6 +135,7 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
   
  XPath クエリを設計する方法の詳細については、次を参照してください。 [XPath 構文](https://go.microsoft.com/fwlink/?LinkId=164592)します。  
   
-## <a name="see-also"></a>関連項目  
- [メッセージ フィルター](../../../../docs/framework/wcf/feature-details/message-filters.md)  
- [フィルターを使用する方法](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)
+## <a name="see-also"></a>関連項目
+
+- [メッセージ フィルター](../../../../docs/framework/wcf/feature-details/message-filters.md)
+- [方法: フィルターを使用します。](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)

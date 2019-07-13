@@ -10,23 +10,24 @@ helpviewer_keywords:
 - GlyphRunDrawing objects [WPF]
 - glyphs [WPF]
 ms.assetid: d5d9274c-23b3-4859-8869-6e64403c9ca7
-ms.openlocfilehash: 744906d7dba8b9bc317d181738790b7647fe912c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a887e83babd6126d298170c6aead45c5370c1916
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010255"
 ---
 # <a name="glyphs"></a>グリフ
-グリフは、画面上に描画される文字の低レベルの表現です。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] インターセプトし、テキストを書式設定後に永続化を希望お客様のグリフに直接アクセスを提供します。  
+グリフは、画面上に描画される文字の低レベルの表現です。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 使用し、書式設定後のテキストを保持する必要があるお客様のグリフに直接アクセスを提供します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [GlyphRun オブジェクトと Glyphs 要素の概要](../../../../docs/framework/wpf/advanced/introduction-to-the-glyphrun-object-and-glyphs-element.md)  
-  [方法: グリフを使用してテキストを描画する](../../../../docs/framework/wpf/advanced/draw-text-using-glyphs.md)  
+ [GlyphRun オブジェクトと Glyphs 要素の概要](introduction-to-the-glyphrun-object-and-glyphs-element.md)  
+  [方法: グリフを使用してテキストを描画します。](draw-text-using-glyphs.md)  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Media.GlyphRun>  
- <xref:System.Windows.Media.DrawingContext.DrawText%2A>  
- <xref:System.Windows.Documents.Glyphs>  
- [WPF のドキュメント](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [WPF のタイポグラフィ](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Media.GlyphRun>
+- <xref:System.Windows.Media.DrawingContext.DrawText%2A>
+- <xref:System.Windows.Documents.Glyphs>
+- [WPF のドキュメント](documents-in-wpf.md)
+- [WPF のタイポグラフィ](typography-in-wpf.md)

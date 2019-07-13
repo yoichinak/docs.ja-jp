@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-ms.openlocfilehash: 7c40e16e9c495c5e69dcdd74c3698d51b0d49785
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 669357bbd6527324bbedbcf1f537bf570c63ce5b
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240061"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423665"
 ---
 # <a name="enumeration-types-c-programming-guide"></a>列挙型 (C# プログラミング ガイド)
 
@@ -21,7 +21,7 @@ ms.locfileid: "53240061"
 
 [!code-csharp[csProgGuideEnums#1](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#1)]
 
-既定では、列挙の各要素の基になる型は [int](../../csharp/language-reference/keywords/int.md) です。前の例のように、コロンを使用し、別の整数型を指定できます。 使用可能な型の一覧については、「[enum (C# リファレンス)](../../csharp/language-reference/keywords/enum.md)」を参照してください。
+既定では、列挙の各要素の基になる型は [int](../../csharp/language-reference/builtin-types/integral-numeric-types.md) です。前の例のように、コロンを使用し、別の整数型を指定できます。 使用可能な型の一覧については、「[enum (C# リファレンス)](../../csharp/language-reference/keywords/enum.md)」を参照してください。
 
 次の例のように、基になる型に型変換することで、基になる数値を確認できます。
 
@@ -84,12 +84,12 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
 
 [!code-csharp[csProgGuideEnums#5](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#5)]
 
-詳細については、「<xref:System.Enum?displayProperty=nameWithType>」を参照してください。
+詳細については、<xref:System.Enum?displayProperty=nameWithType> を参照してください。
 
 拡張メソッドを利用して列挙に新しいメソッドを作成することもできます。 詳細については、「[方法 :列挙型対応の新しいメソッドを作成する](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md)」をご覧ください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- <xref:System.Enum?displayProperty=nameWithType>  
-- [C# プログラミング ガイド](../../csharp/programming-guide/index.md)  
+- <xref:System.Enum?displayProperty=nameWithType>
+- [C# プログラミング ガイド](../../csharp/programming-guide/index.md)
 - [enum](../../csharp/language-reference/keywords/enum.md)

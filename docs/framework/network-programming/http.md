@@ -13,12 +13,12 @@ helpviewer_keywords:
 - HTTP, about HTTP
 - HttpWebRequest class, sending and receiving data
 ms.assetid: 985fe5d8-eb71-4024-b361-41fbdc1618d8
-ms.openlocfilehash: 65a799355e35fc7d14e3aaad973209147f7e7eae
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: abbb02b7bd22c4b301c5565037f55aa1019fc3ce
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50182880"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59170600"
 ---
 # <a name="http"></a>HTTP
 .NET Framework は、<xref:System.Net.HttpWebRequest> クラスと <xref:System.Net.HttpWebResponse> クラスを使用して、すべてのインターネット トラフィックの大部分を構成する HTTP プロトコルに対して包括的なサポートを提供します。 <xref:System.Net.WebRequest> と <xref:System.Net.WebResponse> から派生したこれらのクラスは、静的メソッド <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> が "http" または "https" で始まる URI に遭遇するたびに既定で返されます。 ほとんどの場合、**WebRequest** クラスと **WebResponse** クラスは、要求を行うために必要なすべてを提供しますが、プロパティとして公開されている HTTP 固有の機能にアクセスする必要がある場合は、これらのクラスを **HttpWebRequest** または **HttpWebResponse** に型キャストすることができますです。  
@@ -31,7 +31,8 @@ ms.locfileid: "50182880"
   
  アプリケーションでは、<xref:System.Net.WebException.Status%2A> を <xref:System.Net.WebExceptionStatus> に設定し、<xref:System.Net.WebException> をキャッチすることによって HTTP プロトコル エラーを受信します。 <xref:System.Net.WebException.Response%2A> プロパティは、サーバーによって送信された **WebResponse** を含み、実際の HTTP エラーがに発生したことを示します。  
   
-## <a name="see-also"></a>参照  
- [プロキシを介したインターネットへのアクセス](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
- [アプリケーション プロトコルの使用](../../../docs/framework/network-programming/using-application-protocols.md)  
- [方法: HTTP 固有のプロパティにアクセスする](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)
+## <a name="see-also"></a>関連項目
+
+- [プロキシを介したインターネットへのアクセス](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
+- [アプリケーション プロトコルの使用](../../../docs/framework/network-programming/using-application-protocols.md)
+- [方法: HTTP 固有のプロパティにアクセスする](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)

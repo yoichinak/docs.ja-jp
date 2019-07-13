@@ -8,28 +8,29 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: 84f4485a85f83e910cc75b04282e1ad04aee72c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 74cf55ba617eee193bcf1d2454f7e26ce0ba78cb
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960120"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>ID モデルを使用したクレームと承認の管理
-承認は、コンピューター リソースを変更または表示したり、コンピューター リソースにアクセスしたりする権限を持つエンティティを特定するプロセスです。 たとえば、ある業務で、管理者だけが従業員のファイルへのアクセスを許可される場合があります。 Windows Communication Foundation (WCF) には、承認処理を実行するための 2 つのメカニズムがサポートしています。 1 つ目の機構では、既存の共通言語ランタイム (CLR: Common Language Runtime) 構造を使用して承認を制御できます。 2 つ目は、クレームに基づくモデルと呼ばれる、 *Id モデル*です。 WCF の着信メッセージからクレームを作成するのに、Id モデルを使用します。カスタム承認スキームでは新しいクレームの種類をサポートするためには、id モデル クラスを拡張できます。 このトピックでは、ID モデル機能のプログラミングの主要概念について概説し、この機能で使用する最も重要なクラスの一覧を示します。  
+承認は、コンピューター リソースを変更または表示したり、コンピューター リソースにアクセスしたりする権限を持つエンティティを特定するプロセスです。 たとえば、ある業務で、管理者だけが従業員のファイルへのアクセスを許可される場合があります。 Windows Communication Foundation (WCF) には、承認処理を実行するための 2 つのメカニズムがサポートしています。 1 つ目の機構では、既存の共通言語ランタイム (CLR: Common Language Runtime) 構造を使用して承認を制御できます。 2 つ目は、クレーム ベースのモデルと呼ばれる、 *Id モデル*します。 WCF は、Id モデルを使用して着信メッセージからクレームを作成するにはId モデル クラスは、カスタム承認スキームの場合、新しいクレームの種類をサポートするために拡張できます。 このトピックでは、ID モデル機能のプログラミングの主要概念について概説し、この機能で使用する最も重要なクラスの一覧を示します。  
   
 ## <a name="identity-model-scenarios"></a>ID モデルのシナリオ  
  ID モデルの使用例を以下のシナリオに示します。  
   
-### <a name="scenario-1-supporting-identity-role-and-group-claims"></a>シナリオ 1 : ID、ロール、およびグループの各クレームをサポートする場合  
+### <a name="scenario-1-supporting-identity-role-and-group-claims"></a>シナリオ 1:Id、ロール、およびグループの要求をサポートしています。  
  複数のユーザーが Web サービスにメッセージを送信します。 この Web サービスのアクセス制御要件では、ID、ロール、またはグループを使用します。 メッセージ送信者は、一連のロールまたはグループに割り当てられます。 ロールまたはグループの情報は、アクセス チェックを実行する際に使用されます。  
   
-### <a name="scenario-2-supporting-rich-claims"></a>シナリオ 2 : 多様なクレームをサポートする場合  
+### <a name="scenario-2-supporting-rich-claims"></a>シナリオ 2:多様なクレームをサポートしています。  
  複数のユーザーが Web サービスにメッセージを送信します。 この Web サービスのアクセス制御要件では、ID、ロール、またはグループよりも多様なモデルを必要とします。 Web サービスは、クレームに基づく多様なモデルを使用して、指定のユーザーが保護された特定のリソースにアクセスできるかどうかを判断します。 たとえば、あるユーザーは、他のユーザーがアクセスできない給与情報などの特定の情報を読み取ることができます。  
   
-### <a name="scenario-3-mapping-disparate-claims"></a>シナリオ 3 : さまざまなクレームを割り当てる場合  
- ユーザーが Web サービスにメッセージを送信します。 ユーザーは、X.509 証明書、ユーザー名トークン、または Kerberos トークンを使用して資格情報を指定できます。 Web サービスは、ユーザーの資格情報の種類を問わず、アクセス制御チェックを同様に実行する必要があります。 時間の経過に伴って、サポート対象となる資格情報の種類が追加された場合、それに応じてシステムを拡張する必要があります。  
+### <a name="scenario-3-mapping-disparate-claims"></a>シナリオ 3:さまざまなクレームにマッピング  
+ ユーザーが Web サービスにメッセージを送信します。 ユーザーは、多数の異なる方法で自分の資格情報を指定できます。X.509 証明書、ユーザー名トークン、または Kerberos トークンです。 Web サービスは、ユーザーの資格情報の種類を問わず、アクセス制御チェックを同様に実行する必要があります。 時間の経過に伴って、サポート対象となる資格情報の種類が追加された場合、それに応じてシステムを拡張する必要があります。  
   
-### <a name="scenario-4-determining-access-to-multiple-resources"></a>シナリオ 4 : 複数のリソースへのアクセスを特定する場合  
+### <a name="scenario-4-determining-access-to-multiple-resources"></a>シナリオ 4:複数のリソースへのアクセスを決定します。  
  ある Web サービスでは、複数のリソースへのアクセスを試みます。 このサービスは、指定のユーザーに関連付けられたクレームと、保護されたリソースにアクセスするために必要なクレームを比較することによって、そのユーザーがアクセスできるリソースを特定します。  
   
 ## <a name="identity-model-terms"></a>ID モデルの用語  
@@ -68,7 +69,7 @@ ms.lasthandoff: 05/04/2018
  権限  
  リソースに対する使用能力。 ID モデル API によって定義された権限は、<xref:System.IdentityModel.Claims.Rights> クラスのプロパティです。 システムが提供する権限には、<xref:System.IdentityModel.Claims.Rights.Identity%2A> や <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> などがあります。  
   
- [値]  
+ 値  
  権限がクレームされる対象。  
   
 ## <a name="claims"></a>クレーム  
@@ -79,21 +80,21 @@ ms.lasthandoff: 05/04/2018
  さまざまなクレームの種類と権限が ID モデルの一部として定義されています。ただし、システムは拡張できるため、ID モデル インフラストラクチャ上に構築するさまざまなシステムで、必要に応じて他のクレームの種類や権限を定義できます。  
   
 ### <a name="identity-claims"></a>ID クレーム  
- 特殊な権限の 1 つとして、ID の権限があります。 この権限を持つクレームは、エンティティの ID を示します。 たとえば、「ユーザー プリンシパル名」の種類のクレーム (UPN) で、値は"someone@example.com"を示し、Id の権限は、特定のドメイン内の特定の id。  
+ 特殊な権限の 1 つとして、ID の権限があります。 この権限を持つクレームは、エンティティの ID を示します。 たとえば、「ユーザー プリンシパル名」の種類のクレーム (UPN) の値を持つ"someone@example.com"、Id の権限は、特定のドメイン内の特定の id を示します。  
   
 #### <a name="system-identity-claim"></a>System ID クレーム  
- ID モデルでは、System という ID クレームが定義されています。 System ID クレームは、エンティティが現在のアプリケーションまたはシステムであることを示します。  
+ Id モデルでは、1 つの id クレームを定義します。システム。 System ID クレームは、エンティティが現在のアプリケーションまたはシステムであることを示します。  
   
 ### <a name="sets-of-claims"></a>クレーム セット  
  クレームは、システム内の何らかのエンティティによって常に発行されるため、ID を表すクレームのモデルは重要です。エンティティが最終的には何らかの "自己" の概念である場合でも、クレームは発行されます。 クレームは 1 つのセットとしてグループ化され、各セットは発行者を持ちます。 発行者は、1 つのクレーム セットにすぎません。 このような再帰的な関係は最終的に終了する必要があるため、どのクレーム セットもそれ自体の発行者になることができます。  
   
  次の図は、3 つのクレーム セットの一例を示しています。この例では、1 つ目のクレーム セットの発行者は 2 つ目のクレーム セットであり、さらにこの 2 つ目のクレーム セットの発行者は System クレーム セットです。 このように、クレーム セットは任意の深さの階層を形成します。  
   
- ![クレームと承認を管理する](../../../../docs/framework/wcf/feature-details/media/claimshierarchy.gif "claimshierarchy")  
+ ![階層内のクレームのセットです。](./media/managing-claims-and-authorization-with-the-identity-model/claims-sets-hierarchy.gif)  
   
- 次の図に示すように、複数のクレーム セットが同じクレーム セットから発行されている場合もあります。  
+ 同じ発行要求セット、次の図に示すように複数のクレーム セットがあります。
   
- ![クレームと承認を管理する](../../../../docs/framework/wcf/feature-details/media/multiplesetsofclaims.gif "multiplesetsofclaims")  
+ ![複数の同じ発行とクレーム セットはクレーム セットです。](./media/managing-claims-and-authorization-with-the-identity-model/multiple-claim-sets-same-issuing-claim-set.gif)  
   
  クレーム セットがそれ自体の発行者である場合を除き、ID モデルではクレーム セットによるループの形成を一切サポートしていません。 したがって、クレーム セット A がクレーム セット B によって発行された場合に、クレーム セット B 自体がクレーム セット A によって発行されたという状況はありえません。 また、ID モデルでは、クレーム セットが複数の発行者を持つことはできません。 ある特定のクレーム セットを複数の発行者が発行する必要がある場合は、同じクレームを含み、発行者がそれぞれ異なる複数のクレーム セットを使用する必要があります。  
   
@@ -124,7 +125,7 @@ ms.lasthandoff: 05/04/2018
  ![クレームと承認を管理する](../../../../docs/framework/wcf/feature-details/media/xsi-recap.gif "xsi_recap")  
   
 ## <a name="wcf-and-identity-model"></a>WCF と ID モデル  
- WCF は、承認を実行するため、基盤として Id モデル インフラストラクチャを使用します。 WCF では、<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>クラスを指定できます。*承認*サービスの一部としてポリシー。 このような承認ポリシーと呼ばれる*外部承認ポリシー*、リモート サービスと対話してローカル ポリシーに基づく請求処理を行うことです。 承認マネージャーは、によって表される、<xref:System.ServiceModel.ServiceAuthorizationManager>クラスは、各種の資格情報の種類 (トークン) を認識する承認ポリシーと共に外部承認ポリシーを評価し、設定と呼ばれるもの、 *承認コンテキスト*受信メッセージに適切な要求を使用します。 承認コンテキストは、<xref:System.IdentityModel.Policy.AuthorizationContext> クラスによって表されます。  
+ WCF では、承認を実行する基礎として、Id モデル インフラストラクチャを使用します。 WCF では、<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>クラスでは、指定できます。*承認*ポリシーは、サービスの一部です。 このような承認ポリシーと呼ばれる*外部承認ポリシー*、ローカル ポリシーまたはリモート サービスとのやり取りに基づいてクレーム処理を実行できます。 によって表される、承認マネージャー、<xref:System.ServiceModel.ServiceAuthorizationManager>クラスは、各種の資格情報の種類 (トークン) を認識する承認ポリシーと共に外部承認ポリシーを評価しと呼ばれるものを設定します、 *承認コンテキスト*受信メッセージに適切な要求。 承認コンテキストは、<xref:System.IdentityModel.Policy.AuthorizationContext> クラスによって表されます。  
   
 ## <a name="identity-model-programming"></a>ID モデルのプログラミング  
  ID モデル拡張のプログラミングに使用するオブジェクト モデルを次の表に示します。 これらのクラスはすべて、<xref:System.IdentityModel.Policy> 名前空間または <xref:System.IdentityModel.Claims> 名前空間にあります。  
@@ -132,8 +133,8 @@ ms.lasthandoff: 05/04/2018
 |クラス|説明|  
 |-----------|-----------------|  
 |Authorization Component|<xref:System.IdentityModel.Policy.IAuthorizationComponent> インターフェイスを実装する ID モデル クラス。|  
-|<xref:System.IdentityModel.Policy.IAuthorizationComponent>|単一の読み取り専用文字列プロパティ (Id) を提供するインターフェイス。このプロパティの値は、システム内でこのインターフェイスを実装するインスタンスごとに一意です。|  
-|<xref:System.IdentityModel.Policy.AuthorizationContext>|*承認コンポーネント*のセットを含む`ClaimSet`0 個以上のプロパティを持つインスタンス 1 つまたは複数の承認ポリシーの評価結果です。|  
+|<xref:System.IdentityModel.Policy.IAuthorizationComponent>|1 つの読み取り専用文字列プロパティを提供するインターフェイス。Id。このプロパティの値は、システム内でこのインターフェイスを実装するインスタンスごとに一意です。|  
+|<xref:System.IdentityModel.Policy.AuthorizationContext>|*承認コンポーネント*のセットを格納している`ClaimSet`0 個以上のプロパティを持つインスタンスと 1 つまたは複数の承認ポリシーの評価結果です。|  
 |<xref:System.IdentityModel.Claims.Claim>|クレームの種類、権限、および値の組み合わせ。 権限と値の部分は、クレームの種類によって制約されます。|  
 |<xref:System.IdentityModel.Claims.ClaimSet>|抽象基本クラス。 `Claim` インスタンスのコレクション。|  
 |<xref:System.IdentityModel.Claims.DefaultClaimSet>|シール クラス。 `ClaimSet` クラスの実装。|  
@@ -154,27 +155,28 @@ ms.lasthandoff: 05/04/2018
   
 |メンバー|説明|  
 |------------|-----------------|  
-|<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>|派生クラスは、このメソッドを実装して、サービスで操作を実行する前にクレームに基づくアクセス チェックを実行します。 アクセス チェックの決定を行うときに、指定された <xref:System.ServiceModel.OperationContext>、または他の場所にあるすべての情報を確認できます。 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> が `true` を返した場合は、アクセスが許可され、操作を実行できるようになります。 `CheckAccessCore` が `false` を返した場合は、アクセスが拒否され、操作は実行されません。 例については、次を参照してください。[する方法: サービスのカスタム承認マネージャーを作成する](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)です。|  
+|<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>|派生クラスは、このメソッドを実装して、サービスで操作を実行する前にクレームに基づくアクセス チェックを実行します。 アクセス チェックの決定を行うときに、指定された <xref:System.ServiceModel.OperationContext>、または他の場所にあるすべての情報を確認できます。 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> が `true` を返した場合は、アクセスが許可され、操作を実行できるようになります。 `CheckAccessCore` が `false` を返した場合は、アクセスが拒否され、操作は実行されません。 例については、「[方法: サービスのカスタム承認マネージャーを作成する](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)します。|  
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A>|サービスの <xref:System.ServiceModel.ServiceAuthorizationManager> を返します。 承認決定は、<xref:System.ServiceModel.ServiceAuthorizationManager> が行います。|  
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A>|サービスに指定されたカスタム承認ポリシーのコレクション。 受信メッセージの資格情報に関連するポリシーに加え、これらのポリシーも評価されます。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.IdentityModel.Policy.AuthorizationContext>  
- <xref:System.IdentityModel.Claims.Claim>  
- <xref:System.IdentityModel.Policy.EvaluationContext>  
- <xref:System.IdentityModel.Policy.IAuthorizationComponent>  
- <xref:System.IdentityModel.Policy.IAuthorizationPolicy>  
- <xref:System.IdentityModel.Claims.Rights>  
- <xref:System.IdentityModel.Claims>  
- <xref:System.IdentityModel.Policy>  
- <xref:System.IdentityModel.Tokens>  
- <xref:System.IdentityModel.Selectors>  
- [クレームとトークン](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)  
- [リソースへのアクセスのクレームと拒否](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)  
- [クレームの作成とリソース値](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)  
- [方法 : カスタム クレームを作成する](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)  
- [方法 : クレームを比較する](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
- [方法 : カスタム承認ポリシーを作成する](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
- [方法 : サービスで使用するカスタム承認マネージャーを作成する](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
- [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [承認](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.IdentityModel.Policy.AuthorizationContext>
+- <xref:System.IdentityModel.Claims.Claim>
+- <xref:System.IdentityModel.Policy.EvaluationContext>
+- <xref:System.IdentityModel.Policy.IAuthorizationComponent>
+- <xref:System.IdentityModel.Policy.IAuthorizationPolicy>
+- <xref:System.IdentityModel.Claims.Rights>
+- <xref:System.IdentityModel.Claims>
+- <xref:System.IdentityModel.Policy>
+- <xref:System.IdentityModel.Tokens>
+- <xref:System.IdentityModel.Selectors>
+- [クレームとトークン](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)
+- [リソースへのアクセスのクレームと拒否](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)
+- [クレームの作成とリソース値](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)
+- [方法: カスタム クレームを作成します。](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+- [方法: クレームを比較します。](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
+- [方法: カスタム承認ポリシーを作成します。](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)
+- [方法: サービスのカスタム承認マネージャーを作成します。](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [承認](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)

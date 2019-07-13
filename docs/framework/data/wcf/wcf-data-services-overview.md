@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: 0cbb3b3906ad83349f02cf6a345f2e3d5336a2e6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ca52b725f5fad4b591b95bf6a6dd778c7a72d235
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875403"
 ---
 # <a name="wcf-data-services-overview"></a>WCF Data Services の概要
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用して、Web またはイントラネット用のデータ サービスの作成と使用を有効、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]します。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Uri によってアドレス可能なリソースとしてデータを公開できます。 したがって、Representational State Transfer (REST) のセマンティクス (標準的な HTTP 動詞 GET、PUT、POST、DELETE) を使用してデータにアクセスし、そのデータを変更できます。 このトピックでは、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] で定義されるパターンとプラクティスの両方の概要について説明します。また、.NET Framework ベースのアプリケーションで [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] を利用するために [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] で提供される機能についても説明します。  
@@ -25,7 +25,7 @@ ms.locfileid: "43523138"
 ## <a name="interoperable-data-access"></a>相互運用可能なデータ アクセス  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] .NET Framework を使用しないアプリケーションと相互運用可能なデータ サービスを作成する標準のインターネット プロトコルに基づいています。 データのアドレスの標準的な Uri を使用するため、アプリケーションがアクセスできると representational state transfer (REST) の具体的には標準的な HTTP 動詞のセマンティクスを使用して変更データの GET、PUT、POST、および削除します。 そのため、標準的な HTTP プロトコルを介して転送されるデータの解析、およびこれらのデータへのアクセスを行うことができる任意のクライアントからこれらのサービスにアクセスできます。  
   
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] は Atom 公開プロトコル (AtomPub) に対する一連の拡張を定義しています。 さまざまなクライアント アプリケーションおよびプラットフォームに対応するために、複数のデータ形式による HTTP 要求と応答をサポートしています。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] フィードは、Atom、JavaScript Object Notation (JSON)、および通常の XML でデータを表現できます。 Atom が既定の形式ですが、フィードの形式は HTTP 要求のヘッダーで指定されます。 詳細については、次を参照してください。 [OData: Atom 形式](https://go.microsoft.com/fwlink/?LinkID=185794)と[OData: JSON 形式](https://go.microsoft.com/fwlink/?LinkID=185795)します。  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] は Atom 公開プロトコル (AtomPub) に対する一連の拡張を定義しています。 さまざまなクライアント アプリケーションおよびプラットフォームに対応するために、複数のデータ形式による HTTP 要求と応答をサポートしています。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] フィードは、Atom、JavaScript Object Notation (JSON)、および通常の XML でデータを表現できます。 Atom が既定の形式ですが、フィードの形式は HTTP 要求のヘッダーで指定されます。 詳細については、次を参照してください[OData:。Atom 形式](https://go.microsoft.com/fwlink/?LinkID=185794)と[OData:JSON 形式](https://go.microsoft.com/fwlink/?LinkID=185795)します。  
   
  としてデータを発行するときに、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]フィード、[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]キャッシュや認証などの操作の他の既存のインターネット機能に依存しています。 これを実現する[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]既存のホスト アプリケーションおよび ASP.NET、Windows Communication Foundation (WCF) およびインターネット インフォメーション サービス (IIS) などのサービスと統合します。  
   
@@ -53,12 +53,13 @@ ms.locfileid: "43523138"
 ## <a name="architecture-overview"></a>アーキテクチャの概要  
  次の図は、[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]を公開するためのアーキテクチャ[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]フィードとでこれらのフィードを使用して[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-クライアント ライブラリを有効にします。  
   
- ![WCF Data Services のアーキテクチャ図](../../../../docs/framework/data/wcf/media/astoriaservicearch.gif "AstoriaServiceArch")  
+ ![WCF Data Services のアーキテクチャの図に示すスクリーン ショット。](./media/wcf-data-services-overview/windows-communication-foundation-data-services-architecture.gif)  
   
-## <a name="see-also"></a>関連項目  
- [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)  
- [はじめに](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)  
- [WCF Data Services の定義](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
- [データ サービス (WCF Data Services) にアクセスします。](https://msdn.microsoft.com/library/1e54a2b9-2ec6-4002-b8f8-c1d8df37c350)  
- [WCF Data Services クライアント ライブラリ](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
- [Representational State Transfer (REST)](https://go.microsoft.com/fwlink/?LinkId=113919)
+## <a name="see-also"></a>関連項目
+
+- [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)
+- [はじめに](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
+- [WCF Data Services の定義](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [データ サービス リソースへのアクセス (WCF Data Services)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd728283(v=vs.100))
+- [WCF Data Services クライアント ライブラリ](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [Representational State Transfer (REST)](https://go.microsoft.com/fwlink/?LinkId=113919)

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f489ab29726292f6c55151169ad9efc6f0fbfbcf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 76fbbb3f924f610b604586dca78cab344217b544
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407795"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739454"
 ---
 # <a name="cordebuguserstate-enumeration"></a>CorDebugUserState 列挙型
 スレッドのユーザーの状態を示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum CorDebugUserState {  
     USER_STOP_REQUESTED     =  0x01,  
     USER_SUSPEND_REQUESTED  =  0x02,  
@@ -44,31 +44,32 @@ typedef enum CorDebugUserState {
   
 ## <a name="members"></a>メンバー  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
-|`USER_STOP_REQUESTED`|スレッドの終了が要求されました。|  
-|`USER_SUSPEND_REQUESTED`|スレッドの中断が要求されました。|  
+|`USER_STOP_REQUESTED`|スレッドの終了が要求されています。|  
+|`USER_SUSPEND_REQUESTED`|スレッドの中断が要求されています。|  
 |`USER_BACKGROUND`|スレッドのバック グラウンドで実行します。|  
-|`USER_UNSTARTED`|スレッドは、実行を開始していません。|  
+|`USER_UNSTARTED`|スレッドが実行を開始していません。|  
 |`USER_STOPPED`|スレッドが終了しました。|  
-|`USER_WAIT_SLEEP_JOIN`|スレッドは、別のスレッドにタスクの完了を待機しています。|  
+|`USER_WAIT_SLEEP_JOIN`|スレッドがタスクを完了する別のスレッドを待機しています。|  
 |`USER_SUSPENDED`|スレッドが中断されました。|  
-|`USER_UNSAFE_POINT`|スレッドは、アンセーフ ポイントでです。 つまり、スレッドはポイントで実行ガベージ コレクションを妨げること可能性があります。<br /><br /> デバッグ イベントは、安全でないポイントからディスパッチすることがありますが、安全でない時点でスレッドを中断する可能性が高いデッドロックが発生スレッドが再開されるまでです。 安全性と安全でないポイントは、・ イン タイム (JIT) とガベージ コレクションの実装によって決まります。|  
+|`USER_UNSAFE_POINT`|スレッドは、安全でない点になります。 これは、スレッドがある実行の時点でガベージ コレクションを妨げること可能性があります。<br /><br /> デバッグ、安全でないポイントからイベントをディスパッチすることがありますが、安全でない時点でスレッドを中断する、多くの場合、デッドロックが発生、スレッドが再開されるまでです。 安全性と安全でないポイントは、- イン タイム (JIT) およびガベージ コレクションの実装によって決まります。|  
 |`USER_THREADPOOL`|スレッドはスレッド プールです。|  
   
-## <a name="remarks"></a>コメント  
- スレッドのユーザーの状態は、スレッドが、デバッガーがチェック時に状態です。 スレッドは、ユーザー状態の組み合わせがあります。  
+## <a name="remarks"></a>Remarks  
+ スレッドのユーザー状態とは、状態、スレッドがデバッガーを調べることでです。 スレッドは、ユーザー状態の組み合わせがあります。  
   
- 使用して、 [icordebugthread::getuserstate](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md)スレッドのユーザー状態を取得します。  
+ 使用して、 [icordebugthread::getuserstate](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md)スレッドのユーザーの状態を取得します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>関連項目
+
+- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

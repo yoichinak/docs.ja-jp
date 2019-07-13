@@ -17,27 +17,25 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a2905caa011df4f0699445bafb8523c6b7e9eb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b35c0b7028a07e6b760c0e3142995599f30c4c1e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413866"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766232"
 ---
 # <a name="icordebugobjectvaluesetfrommanagedcopy-method"></a>ICorDebugObjectValue::SetFromManagedCopy メソッド
 `SetFromManagedCopy` は互換性のために残されています。 このメソッドを呼び出さないでください。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetFromManagedCopy (  
     [in] IUnknown            *pObject  
 );  
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
-## <a name="see-also"></a>関連項目  
-    
- 
+## <a name="see-also"></a>関連項目

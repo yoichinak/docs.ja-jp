@@ -17,18 +17,18 @@ helpviewer_keywords:
 - type parameters
 - data type arguments
 ms.assetid: 0db8f65c-65af-4089-ab7f-6fcfecb60444
-ms.openlocfilehash: 9ace0ad55d9eb1618dbdafb0d49d1ff4b169a877
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 880570c714292b0c11eef4e2cd4c4b410bb075f1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784151"
 ---
 # <a name="of-clause-visual-basic"></a>Of 句 (Visual Basic)
-導入されています、`Of`句であることを識別、*パラメーター入力*上、*ジェネリック*クラス、構造体、インターフェイス、デリゲート、またはプロシージャ。 ジェネリック型については、次を参照してください。 [Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)です。  
+導入されています、`Of`句は、識別、*パラメーターを入力*上、*ジェネリック*クラス、構造体、インターフェイス、デリゲート、またはプロシージャ。 ジェネリック型については、次を参照してください。 [Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)します。  
   
 ## <a name="using-the-of-keyword"></a>使用して、キーワードの  
- 次のコード例では、`Of`キーワードを次の 2 つの型パラメーターを受け取るクラスの輪郭の定義します。 これは、*制約*、`keyType`によってパラメーター、<xref:System.IComparable>インターフェイスで、利用側のコードを実装する型引数を指定する必要がありますを意味<xref:System.IComparable>です。 これは、必要なできるように、`add`プロシージャを呼び出すことができます、<xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType>メソッドです。 制約の詳細については、次を参照してください。[型リスト](../../../visual-basic/language-reference/statements/type-list.md)です。  
+ 次のコード例では、`Of`キーワードを 2 つの型パラメーターを受け取るクラスのアウトラインを定義します。 これは、*制約*、`keyType`パラメーターで、<xref:System.IComparable>インターフェイスで、使用側コードが実装する型引数を指定する必要がありますが、 <xref:System.IComparable>。 これは、必要なように、`add`プロシージャを呼び出すことができます、<xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType>メソッド。 制約の詳細については、「 [Type List](../../../visual-basic/language-reference/statements/type-list.md)」をご覧ください。  
   
 ```  
 Public Class Dictionary(Of entryType, keyType As IComparable)  
@@ -42,9 +42,9 @@ Public Class Dictionary(Of entryType, keyType As IComparable)
 End Class  
 ```  
   
- 上記のクラス定義を完了する場合は、さまざまなを構築できます`dictionary`からクラスです。 指定する種類`entryType`と`keyType`エントリの種類、クラスを保持し、各エントリに関連付けるキーの種類を決定します。 制約のために指定する必要があります`keyType`を実装する型<xref:System.IComparable>です。  
+ 上記のクラス定義を完了するの場合は、さまざまなを構築できます`dictionary`からクラス。 指定する種類`entryType`と`keyType`決定エントリの種類、クラスを保持し、各エントリとキーの種類を関連付けます。 制約のために指定する必要があります`keyType`を実装する型<xref:System.IComparable>します。  
   
- 次のコード例を保持するオブジェクトを作成する`String`エントリと関連付け、 `Integer` 1 つずつキー。 `Integer` 実装する<xref:System.IComparable>し、そのために、制約を満たす`keyType`です。  
+ 次のコード例は、保持するオブジェクトを作成します。`String`エントリと、`Integer`がそれぞれのキー。 `Integer` 実装<xref:System.IComparable>し、そのために、制約を満たす`keyType`します。  
   
 ```  
 Dim d As New dictionary(Of String, Integer)  
@@ -64,9 +64,10 @@ Dim d As New dictionary(Of String, Integer)
   
  [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.IComparable>  
- [型リスト](../../../visual-basic/language-reference/statements/type-list.md)  
- [Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.IComparable>
+- [型リスト](../../../visual-basic/language-reference/statements/type-list.md)
+- [Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

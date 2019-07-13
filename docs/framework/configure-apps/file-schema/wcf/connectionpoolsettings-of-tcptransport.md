@@ -1,15 +1,15 @@
 ---
-title: '&lt;tcpTransport&gt; の &lt;connectionPoolSettings&gt;'
+title: <connectionPoolSettings> の <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 2fbc3aa7-fcc9-4193-99a3-85d31d60d3f7
-ms.openlocfilehash: 8780709a5713c0192d6be1139e3425747b0b07ca
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 3c17184445aa5cec8a5121252934574add2b3db0
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145693"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423155"
 ---
-# <a name="ltconnectionpoolsettingsgt-of-lttcptransportgt"></a>&lt;tcpTransport&gt; の &lt;connectionPoolSettings&gt;
+# <a name="connectionpoolsettings-of-tcptransport"></a>\<connectionPoolSettings > の\<tcpTransport >
 TCP トランスポートの追加の接続プール設定を指定します。  
   
  \<system.serviceModel>  
@@ -17,7 +17,7 @@ TCP トランスポートの追加の接続プール設定を指定します。
 \<customBinding>  
 \<binding>  
 \<tcpTransport>  
-\<connectionPoolSettings >  
+\<connectionPoolSettings>  
   
 ## <a name="syntax"></a>構文  
   
@@ -25,7 +25,7 @@ TCP トランスポートの追加の接続プール設定を指定します。
 <connectionPoolSettings groupName="String"
                         idleTimeout="TimeSpan"
                         leaseTimeout="TimeSpan"
-                        maxOutboundConnectionsPerEndpopint="Integer" />
+                        maxOutboundConnectionsPerEndpoint="Integer" />
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -47,17 +47,18 @@ TCP トランスポートの追加の接続プール設定を指定します。
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<namedPipeTransport >](../../../../../docs/framework/configure-apps/file-schema/wcf/namedpipetransport.md)|チャネルで名前付きパイプを使用してメッセージを転送するトランスポートを定義します。|  
+|[\<namedPipeTransport>](../../../../../docs/framework/configure-apps/file-schema/wcf/namedpipetransport.md)|チャネルで名前付きパイプを使用してメッセージを転送するトランスポートを定義します。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.TcpConnectionPoolSettingsElement>  
- <xref:System.ServiceModel.Channels.TcpTransportBindingElement.ConnectionPoolSettings%2A>  
- <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [トランスポート](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [トランスポートの選択](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [バインディング](../../../../../docs/framework/wcf/bindings.md)  
- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Configuration.TcpConnectionPoolSettingsElement>
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement.ConnectionPoolSettings%2A>
+- <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [トランスポート](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [トランスポートの選択](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [バインディング](../../../../../docs/framework/wcf/bindings.md)
+- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

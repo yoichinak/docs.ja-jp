@@ -1,15 +1,13 @@
 ---
 title: コンテナーとして実行するデータベース サーバーの使用
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | 開発のためだけにコンテナーとして実行するデータベース サーバーを使用していますか。 理由を理解します。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 347e6d36b7e838082f47d39c5ae67c219ec11d45
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5fd92a28a09cab041225c4c817a10f5ecfedc038
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127720"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639742"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>コンテナーとして実行するデータベース サーバーの使用
 
@@ -47,11 +45,11 @@ SQL Server のコンテナーとしての実行は、SQL Server のインスタ�
 
 #### <a name="additional-resources"></a>その他の技術情報
 
--   **Linux、Mac、Windows で SQL Server Docker イメージを実行する** <br/>
-    [*https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker*](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)
+- **Linux、Mac、Windows で SQL Server Docker イメージを実行する** \
+    [https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker](/sql/linux/sql-server-linux-setup-docker)
 
--   **Linux で sqlcmd を使用して SQL Server に接続してクエリする** <br/>
-    [*https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd*](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
+- **Linux で sqlcmd を使用して SQL Server に接続してクエリする** \
+    [https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd](/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
 
 ### <a name="seeding-with-test-data-on-web-application-startup"></a>Web アプリケーションの起動時のテスト データのシード処理
 
@@ -165,7 +163,7 @@ public class Startup
 
 Redis は、Redis と共に Docker イメージを提供します。 そのイメージは、次の URL での Docker Hub から入手できます。
 
-[https://hub.docker.com/_/redis/](https://hub.docker.com/_/redis/)
+<https://hub.docker.com/\_/redis/>
 
 コマンド プロンプトで次の Docker CLI コマンドを実行することによって、Docker Redis コンテナーを直接実行できます。
 

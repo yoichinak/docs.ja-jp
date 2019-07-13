@@ -16,21 +16,21 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1380d03d4456e0695777775ae786a19982d691b
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b7f24606e3b021b0df5bdbaab795e4f672f724fa
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864408"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761715"
 ---
 # <a name="blessiwbemservicesobject-function"></a>BlessIWbemServicesObject 関数
-ユーザーの資格情報が、指定されたアクセスを許可するかどうかを示す[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)オブジェクト。   
-  
+ユーザーの資格情報が、指定されたアクセスを許可するかどうかを示す[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)オブジェクト。 
+
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>構文  
-  
-```  
+
+## <a name="syntax"></a>構文
+
+```cpp
 HRESULT BlessIWbemServicesObject (
    [in] IUnknown* pIUnknown,
    [in] BSTR strUser, 
@@ -39,24 +39,27 @@ HRESULT BlessIWbemServicesObject (
    [in] DWORD impLevel, 
    [in] DWORD authnLevel
 );
-```  
+```
 
 ## <a name="parameters"></a>パラメーター
 
-`pIWbemServices`  
+`pIWbemServices`\
 [in]WMI サービス オブジェクトへのポインター。
 
-`strUser`  
+`strUser`\
 [in]ユーザー名。
 
-`strPassword`  
+`strPassword`\
 [in]関連付けられているパスワード`strUser`します。
 
-`strAuthority` [in]ユーザーのドメイン名。 参照してください、 [ConnectServerWmi](connectserverwmi.md)関数の詳細についてはします。
+`strAuthority`\
+[in]ユーザーのドメイン名。 参照してください、 [ConnectServerWmi](connectserverwmi.md)関数の詳細についてはします。
 
-`impLevel` [in]偽装レベル。
+`impLevel`\
+[in]偽装レベル。
 
-`authnLevel` [in]承認レベル。
+`authnLevel`\
+[in]承認レベル。
 
 ## <a name="return-value"></a>戻り値
 
@@ -70,12 +73,14 @@ HRESULT BlessIWbemServicesObject (
 | `E_OUTOFMEMORY` | 0x80000002 | メモリ不足のためでは、操作を実行します。 | 
 | `S_OK` | 0 | 関数呼び出しに成功しました。 | 
 
-## <a name="requirements"></a>要件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
-  
- **ヘッダー:** WMINet_Utils.idl  
-  
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
-## <a name="see-also"></a>関連項目  
-[WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+## <a name="requirements"></a>必要条件
+
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+
+ **ヘッダー:** WMINet_Utils.idl
+
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
+## <a name="see-also"></a>関連項目
+
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: 975acb5b814bc5a250cba351e0d1559968f7e298
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 9e4768b598f6046ffb7a0ac014d8594eac40309f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864707"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593052"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname (C# コンパイラ オプション)
 .netmodule がアクセスできる非パブリック型のアセンブリを指定します。  
@@ -28,18 +28,18 @@ ms.locfileid: "43864707"
  `assembly_name`  
  .netmodule がアクセスできる非パブリック型のアセンブリの名前です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **-moduleassemblyname** は、.netmodule をビルドする場合と、次の条件に当てはまる場合に使用する必要があります。  
   
--   .netmodule で、既存のアセンブリ内の非パブリック型へのアクセスが必要な場合。  
+- .netmodule で、既存のアセンブリ内の非パブリック型へのアクセスが必要な場合。  
   
--   .netmodule をビルドするアセンブリの名前を把握していること。  
+- .netmodule をビルドするアセンブリの名前を把握していること。  
   
--   既存のアセンブリに、.netmodule をビルドするアセンブリへのフレンド アセンブリのアクセス権が付与されていること。  
+- 既存のアセンブリに、.netmodule をビルドするアセンブリへのフレンド アセンブリのアクセス権が付与されていること。  
   
  .netmodule のビルドの詳細については、「[-target:module (C# コンパイラ オプション)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md)」を参照してください。  
   
- フレンド アセンブリの詳細については、「[フレンド アセンブリ](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)」を参照してください。  
+ フレンド アセンブリの詳細については、「[フレンド アセンブリ](../../../standard/assembly/friend-assemblies.md)」を参照してください。  
   
  このオプションは、開発環境からは利用できません。これはコマンドラインからコンパイルするときにのみ使用できます。  
   
@@ -95,7 +95,7 @@ class A {
   
 **An_Internal_Class.Test called**
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)  
+- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

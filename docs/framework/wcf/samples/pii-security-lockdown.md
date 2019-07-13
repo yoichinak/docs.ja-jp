@@ -2,21 +2,21 @@
 title: PII セキュリティ ロックダウン
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 48b62ed5c27463b863ff585520a4b42fc4c83f88
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 83c100459ca5cf522b9040a807008e66e1a5c9d8
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195139"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425423"
 ---
 # <a name="pii-security-lockdown"></a>PII セキュリティ ロックダウン
 このサンプルでは、によって、Windows Communication Foundation (WCF) サービスの複数のセキュリティ関連機能を制御する方法を示しています。  
   
--   サービスの構成ファイル内の機密情報を暗号化します。  
+- サービスの構成ファイル内の機密情報を暗号化します。  
   
--   入れ子になったサービス サブディレクトリが設定をオーバーライドできないように、構成ファイル内の要素をロックします。  
+- 入れ子になったサービス サブディレクトリが設定をオーバーライドできないように、構成ファイル内の要素をロックします。  
   
--   トレースおよびメッセージ ログで、個人を特定できる情報 (PII) のログ記録を制御します。  
+- トレースおよびメッセージ ログで、個人を特定できる情報 (PII) のログ記録を制御します。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
@@ -37,17 +37,17 @@ ms.locfileid: "50195139"
  このサンプルでは、トレースおよびメッセージ ログによる、ユーザー名やパスワードなどの個人を特定できる既知の情報 (PII) のログ記録を制御する方法を示します。 既定では、既知の PII のログ記録は無効です。ただし特定の状況では、PII のログ記録はアプリケーションをデバック処理する際に重要になる場合があります。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)します。 さらに、このサンプルではトレースとメッセージ ログを使用します。 詳細については、次を参照してください。、[トレースとメッセージ ログ](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)サンプル。  
   
 ## <a name="encrypting-configuration-file-elements"></a>構成ファイルの要素の暗号化  
- 共有 Web ホストの環境をセキュリティ保護するには、機密情報が含まれる可能性のあるデータベース接続文字列など、特定の構成要素を暗号化することが望ましい場合があります。 構成要素は、.NET Framework フォルダー (%WINDIR%\Microsoft.NET\Framework\v4.0.20728 など) にある aspnet_regiis.exe ツールを使用して暗号化できます。  
+ 共有 Web ホストの環境をセキュリティ保護するには、機密情報が含まれる可能性のあるデータベース接続文字列など、特定の構成要素を暗号化することが望ましい場合があります。 たとえば、%windir%\microsoft.net\framework\v4.0.20728 .NET Framework フォルダーにある aspnet_regiis.exe ツールを使用して構成要素を暗号化できます。  
   
 #### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>サンプルの Web.config で appSettings セクションの値を暗号化するには  
   
-1.  [スタート] > [ファイル名を指定して実行…] を使用してコマンド プロンプトを開き、 入力`cmd` をクリック**OK**します。  
+1. -> 実行開始を使用してコマンド プロンプトのオープンしています. 入力`cmd` をクリック**OK**します。  
   
-2.  コマンド「`cd %WINDIR%\Microsoft.NET\Framework\v4.0.20728`」を実行して、現在の .NET Framework ディレクトリに移動します。  
+2. コマンド「`cd %WINDIR%\Microsoft.NET\Framework\v4.0.20728`」を実行して、現在の .NET Framework ディレクトリに移動します。  
   
-3.  コマンド「`aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`」を実行して、Web.config フォルダーの appSettings 構成設定を暗号化します。  
+3. コマンド「`aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`」を実行して、Web.config フォルダーの appSettings 構成設定を暗号化します。  
   
- 構成ファイルのセクションを暗号化する方法についての詳細については、ASP.NET 構成では DPAPI でに関する記事を参照して見つかんだことができます ([Building Secure ASP.NET Applications: 認証、承認、およびセキュリティで保護された通信](https://go.microsoft.com/fwlink/?LinkId=95137)) と ASP.NET の構成で RSA の使い方 ([How To: ASP.NET 2.0 を使用して RSA 暗号化の構成セクション](https://go.microsoft.com/fwlink/?LinkId=95138))。  
+ 構成ファイルのセクションを暗号化する方法についての詳細については、ASP.NET 構成では DPAPI でに関する記事を参照して見つかんだことができます ([Building Secure ASP.NET Applications:認証、承認、およびセキュリティ保護された通信](https://go.microsoft.com/fwlink/?LinkId=95137)) と ASP.NET の構成で RSA の使い方 ([How To:ASP.NET 2.0 の構成セクションを暗号化する RSA を使用して](https://go.microsoft.com/fwlink/?LinkId=95138))。  
   
 ## <a name="locking-configuration-file-elements"></a>構成ファイルの要素のロック  
  Web ホストのシナリオでは、サービスのサブディレクトリにサービスを設定できます。 こうした状況で、サブディレクトリ内のサービスの構成値を計算するには、Machine.config 内の値を調べ、続いて親ディレクトリの任意の Web.config ファイルとマージしてディレクトリ ツリーの下層に移動します。そして最後に、サービスが含まれるディレクトリ内の Web.config ファイルをマージします。 ほとんどの構成要素での既定の動作は、サブディレクトリ内の構成ファイルが、親ディレクトリに設定されている値をオーバーライドできるようにすることです。 特定の状況では、サブディレクトリ内の構成ファイルが、親ディレクトリの構成に設定されている値をオーバーライドしないようにするのが望ましい場合があります。  
@@ -124,23 +124,24 @@ ms.locfileid: "50195139"
   
  また、DPAPI や RSA を使用して構成ファイルの要素を暗号化することもできます。 詳細については、次のリンクを参照してください。  
   
--   [セキュリティで保護された ASP.NET アプリケーションの構築: 認証、承認、およびセキュリティで保護された通信](https://go.microsoft.com/fwlink/?LinkId=95137)  
+- [セキュリティで保護された ASP.NET アプリケーションの構築:認証、承認、およびセキュリティで保護された通信](https://go.microsoft.com/fwlink/?LinkId=95137)  
   
--   [方法: ASP.NET 2.0 の構成セクションを暗号化する RSA を使用して](https://go.microsoft.com/fwlink/?LinkId=95138)  
+- [方法: ASP.NET 2.0 の構成セクションを暗号化する RSA を使用して](https://go.microsoft.com/fwlink/?LinkId=95138)  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルを設定、ビルド、および実行するには  
   
-1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
+1. 実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
-2.  Machine.config を編集して `enableLoggingKnownPii` 属性を `true` に設定し、必要に応じて親ノードを追加します。  
+2. Machine.config を編集して `enableLoggingKnownPii` 属性を `true` に設定し、必要に応じて親ノードを追加します。  
   
-3.  ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
+3. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
-4.  1 つまたは複数コンピューター構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
+4. 1 つまたは複数コンピューター構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   
 #### <a name="to-clean-up-the-sample"></a>サンプルをクリーンアップするには  
   
-1.  Machine.config を編集して `enableLoggingKnownPii` 属性を `false` に設定します。  
+1. Machine.config を編集して `enableLoggingKnownPii` 属性を `false` に設定します。  
   
-## <a name="see-also"></a>関連項目  
- [AppFabric の監視のサンプル](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>関連項目
+
+- [AppFabric の監視のサンプル](https://go.microsoft.com/fwlink/?LinkId=193959)

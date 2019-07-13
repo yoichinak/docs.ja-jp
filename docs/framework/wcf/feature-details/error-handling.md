@@ -2,12 +2,12 @@
 title: エラー処理
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: 548d93e63440e256ddb54c3ca792a49817c9b059
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 34f4f11176b3827ec3e4622944ffe02be5207df9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856687"
 ---
 # <a name="error-handling"></a>エラー処理
 ## <a name="error-handling-in-windows-communication-foundation"></a>Windows Communication Foundation でのエラー処理  
@@ -22,7 +22,7 @@ ms.locfileid: "49452850"
   
  アプリケーション ブロックは、よく使用されるベスト プラクティスを組み込み、アプリケーション全体の例外処理に共通の方法を提供することを目的としています。 その一方で、独自に開発されたカスタム エラー ハンドラーやエラー コントラクトが非常に便利な場合もあります。 たとえば、カスタム エラー ハンドラーは、FaultExceptions にすべての例外を自動的に昇格させると、アプリケーションにログ機能を追加する絶好の機会を提供します。  
   
- 詳細についてを参照してください[Microsoft Enterprise Library](https://msdn.microsoft.com/library/ff632023.aspx)します。  
+ 詳細についてを参照してください[Microsoft Enterprise Library](https://docs.microsoft.com/previous-versions/msp-n-p/ff632023(v=pandp.10))します。  
   
 ### <a name="dealing-with-expected-exceptions"></a>予期される例外の処理  
  各操作または関連する機能拡張ポイントにおいて予期される例外をキャッチから、回復できる、FaultException で適切なカスタム エラーを返すかどうかを決定する一連の適切な措置は、\<T >  
@@ -34,15 +34,15 @@ ms.locfileid: "49452850"
   
  IErrorHandler を使用すると、例外がスローされたときのアプリケーションの動作を明示的に制御できます。 次のような操作が可能です。  
   
-1.  クライアントにエラーを送信するかどうかを決定する  
+1. クライアントにエラーを送信するかどうかを決定する  
   
-2.  例外をエラーに置き換える  
+2. 例外をエラーに置き換える  
   
-3.  エラーを別のエラーに置き換える  
+3. エラーを別のエラーに置き換える  
   
-4.  ログまたはトレースを実行する  
+4. ログまたはトレースを実行する  
   
-5.  他のカスタム アクティビティを実行する  
+5. 他のカスタム アクティビティを実行する  
   
  カスタム エラー ハンドラーは、サービスのチャネル ディスパッチャーの ErrorHandlers プロパティに追加することでインストールできます。  複数のエラー ハンドラーを設定することができ、これらはこのコレクションに追加された順序で呼び出されます。  
   
@@ -67,5 +67,6 @@ ms.locfileid: "49452850"
   
  型変換のディスパッチ エラーは、エラー ハンドラーをインストールすることで、その他多くの種類のディスパッチ エラーと同様に調査できます。 IErrorHandler 機能拡張ポイントは、サービス レベルの例外を処理するために呼び出されます。 そこから、呼び出し元に返される応答を選択できます (カスタム タスクとレポートを実行することもできます)。  
   
-## <a name="see-also"></a>関連項目  
- [基本的な WCF プログラミング](../basic-wcf-programming.md)
+## <a name="see-also"></a>関連項目
+
+- [基本的な WCF プログラミング](../basic-wcf-programming.md)

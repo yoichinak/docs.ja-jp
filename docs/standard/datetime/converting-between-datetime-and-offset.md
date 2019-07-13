@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b605ff97-0c45-4c24-833f-4c6a3e8be64c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 830e3e6e98be2eaaff2af6c0bdac650732833ab7
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: d4bce84d26e8f498f065c887b583e18d8ea7c786
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61901928"
 ---
 # <a name="converting-between-datetime-and-datetimeoffset"></a>DateTime と DateTimeOffset 間の変換
 
@@ -131,4 +131,4 @@ UTC と現地<xref:System.DateTime>値、<xref:System.DateTimeOffset.Offset%2A>�
 
 ## <a name="see-also"></a>関連項目
 
-* [日付、時刻、およびタイム ゾーン](../../../docs/standard/datetime/index.md)
+- [日付、時刻、およびタイム ゾーン](../../../docs/standard/datetime/index.md)

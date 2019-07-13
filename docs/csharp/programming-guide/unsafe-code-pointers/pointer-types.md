@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 5474d179005742c610d29ccd9dac7bf1dc94c9d2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 81e9a86c4761b329918bf04023dea42d2e1ad6f5
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239434"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423523"
 ---
 # <a name="pointer-types-c-programming-guide"></a>ポインター型 (C# プログラミング ガイド)
 
@@ -23,7 +23,7 @@ void* identifier; //allowed but not recommended
 
 ポインター型の `*` の前に指定された型は、**参照型**と呼ばれます。 次の型はいずれも参照型になります。
 
-- 任意の整数型: [sbyte](../../language-reference/keywords/sbyte.md)、[byte](../../language-reference/keywords/byte.md)、[short](../../language-reference/keywords/short.md)、[ushort](../../language-reference/keywords/ushort.md)、[int](../../language-reference/keywords/int.md)、[uint](../../language-reference/keywords/uint.md)、[long](../../language-reference/keywords/long.md)、[ulong](../../language-reference/keywords/ulong.md)。
+- 任意の整数型: [sbyte](../../language-reference/builtin-types/integral-numeric-types.md)、[byte](../../language-reference/builtin-types/integral-numeric-types.md)、[short](../../language-reference/builtin-types/integral-numeric-types.md)、[ushort](../../language-reference/builtin-types/integral-numeric-types.md)、[int](../../language-reference/builtin-types/integral-numeric-types.md)、[uint](../../language-reference/builtin-types/integral-numeric-types.md)、[long](../../language-reference/builtin-types/integral-numeric-types.md)、[ulong](../../language-reference/builtin-types/integral-numeric-types.md)。
 - 任意の浮動小数点型: [float](../../language-reference/keywords/float.md)、[double](../../language-reference/keywords/double.md)。
 - [char](../../language-reference/keywords/char.md)。
 - [bool](../../language-reference/keywords/bool.md)。
@@ -34,7 +34,7 @@ void* identifier; //allowed but not recommended
 
 ポインター型は [object](../../language-reference/keywords/object.md) を継承せず、ポインター型と `object` の間で変換を行う方法はありません。 また、ボックス化とボックス化解除もポインターをサポートしません。 ただし、異なるポインター型の間で変換したり、ポインター型と整数型の間で変換したりすることはできます。
 
-同じ 1 つの宣言で複数のポインターを宣言する場合、アスタリスク (*) は基底の型だけに記述します。各ポインター名のプレフィックスとしては使用しません。 例:
+同じ 1 つの宣言で複数のポインターを宣言する場合、アスタリスク (*) は基底の型だけに記述します。各ポインター名のプレフィックスとしては使用しません。 次に例を示します。
 
 ```csharp
 int* p1, p2, p3;   // Ok
@@ -61,7 +61,7 @@ int* myVariable;
 
 この例の式 `*myVariable` は、`int` に含まれているアドレスの位置にある `myVariable` 変数を示しています。
 
-トピック「[fixed ステートメント](../../language-reference/keywords/fixed-statement.md)」および「[ポインター変換](../../programming-guide/unsafe-code-pointers/pointer-conversions.md)」に、ポインターの例がいくつか記載されています。 次の例は、`unsafe` キーワードと `fixed` ステートメントの使用例と、内部ポインターのインクリメント方法を示しています。  このコードは、コンソール アプリケーションの Main 関数に貼り付けて実行することができます  これらの例は、[-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md) コンパイラ オプションを設定してコンパイルする必要があります。
+トピック「[fixed ステートメント](../../language-reference/keywords/fixed-statement.md)」および「[ポインター変換](../../programming-guide/unsafe-code-pointers/pointer-conversions.md)」に、ポインターの例がいくつか記載されています。 次の例は、`unsafe` キーワードと `fixed` ステートメントの使用例と、内部ポインターのインクリメント方法を示しています。  このコードは、コンソール アプリケーションの Main 関数に貼り付けて実行することができます これらの例は、[-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md) コンパイラ オプションを設定してコンパイルする必要があります。
 
 [!code-csharp[Using pointer types](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#5)]
 
@@ -75,28 +75,26 @@ int* myVariable;
 
 |演算子/ステートメント|使用|
 |-------------------------|---------|
-|*|ポインターの間接参照を実行します。|
-|->|ポインター経由で構造体のメンバーにアクセスします。|
-|[]|ポインターにインデックスを付けます。|
+|`*`|ポインターの間接参照を実行します。|
+|`->`|ポインター経由で構造体のメンバーにアクセスします。|
+|`[]`|ポインターにインデックスを付けます。|
 |`&`|変数のアドレスを取得します。|
-|++ および --|ポインターをインクリメントおよびデクリメントします。|
-|+ および -|ポインター演算を実行します。|
-|==、!=、\<、>、\<=、>=|ポインターを比較します。|
-|`stackalloc`|スタックにメモリを割り当てます。|
-|`fixed` ステートメント|変数を一時的に固定して、そのアドレスを取得できるようにします。|
+|`++` および `--`|ポインターをインクリメントおよびデクリメントします。|
+|`+` および `-`|ポインター演算を実行します。|
+|`==`、`!=`、`<`、`>`、`<=`、`>=`|ポインターを比較します。|
+|[`stackalloc` 演算子](../../language-reference/operators/stackalloc.md)|スタックにメモリを割り当てます。|
+|[`fixed` ステートメント](../../language-reference/keywords/fixed-statement.md)|変数を一時的に固定して、そのアドレスを取得できるようにします。|
+
+ポインター関連の演算子について詳しくは、「[ポインターに関連する演算子](../../language-reference/operators/pointer-related-operators.md)」をご覧ください。
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+詳しくは、「[C# 言語仕様](~/_csharplang/spec/introduction.md)」の「[ポインター型](~/_csharplang/spec/unsafe-code.md#pointer-types)」をご覧ください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../index.md)  
-- [アンセーフ コードとポインター](index.md)  
-- [ポインター変換](pointer-conversions.md)  
-- [ポインター式](pointer-expressions.md)  
-- [型](../../language-reference/keywords/types.md)  
-- [unsafe](../../language-reference/keywords/unsafe.md)  
-- [fixed ステートメント](../../language-reference/keywords/fixed-statement.md)  
-- [stackalloc](../../language-reference/keywords/stackalloc.md)  
-- [ボックス化とボックス化解除](../types/boxing-and-unboxing.md)
+- [C# プログラミング ガイド](../index.md)
+- [アンセーフ コードとポインター](index.md)
+- [ポインター変換](pointer-conversions.md)
+- [型](../../language-reference/keywords/types.md)
+- [unsafe](../../language-reference/keywords/unsafe.md)

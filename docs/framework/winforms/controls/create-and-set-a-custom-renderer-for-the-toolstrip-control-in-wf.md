@@ -1,5 +1,5 @@
 ---
-title: '方法 : Windows フォームに ToolStrip コントロールのカスタム レンダラーを作成して設定する'
+title: '方法: Windows フォームに ToolStrip コントロールのカスタム レンダラーを作成して設定する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,26 +10,26 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolStrip control [Windows Forms], rendering
 ms.assetid: 88a804ba-679f-4ba3-938a-0dc396199c5b
-ms.openlocfilehash: 0b7a77a4a923065cba8c7ea366826f7b04126f11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ca1a7444c029632f83b1600e5855a13c83777594
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772906"
 ---
-# <a name="how-to-create-and-set-a-custom-renderer-for-the-toolstrip-control-in-windows-forms"></a>方法 : Windows フォームに ToolStrip コントロールのカスタム レンダラーを作成して設定する
-<xref:System.Windows.Forms.ToolStrip> コントロールは、テーマとスタイルを簡単なサポートを提供します。 いずれかを設定して完全なカスタムの外観と動作 (ルック アンド フィール) を実現できる、<xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType>プロパティまたは<xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType>プロパティ、カスタム レンダラーをします。  
+# <a name="how-to-create-and-set-a-custom-renderer-for-the-toolstrip-control-in-windows-forms"></a>方法: Windows フォームに ToolStrip コントロールのカスタム レンダラーを作成して設定する
+<xref:System.Windows.Forms.ToolStrip> コントロールは、テーマとスタイルを簡単にサポートを提供します。 いずれかを設定して完全にカスタムの外観と動作 (ルック アンド フィール) を実現できる、<xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType>プロパティまたは<xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType>プロパティ、カスタム レンダラーをします。  
   
- レンダラーを各ユーザーに割り当てることができます<xref:System.Windows.Forms.ToolStrip>、 <xref:System.Windows.Forms.MenuStrip>、 <xref:System.Windows.Forms.ContextMenuStrip>、または<xref:System.Windows.Forms.StatusStrip>を使用するか、コントロール、<xref:System.Windows.Forms.ToolStripManager.Renderer%2A>プロパティを設定してすべてのオブジェクトに影響を与える、<xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType>プロパティを<xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode?displayProperty=nameWithType>です。  
+ レンダラーを各ユーザーに割り当てることができます<xref:System.Windows.Forms.ToolStrip>、 <xref:System.Windows.Forms.MenuStrip>、 <xref:System.Windows.Forms.ContextMenuStrip>、または<xref:System.Windows.Forms.StatusStrip>コントロール、またはを使用できる、<xref:System.Windows.Forms.ToolStripManager.Renderer%2A>プロパティを設定してすべてのオブジェクトに影響を与える、<xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType>プロパティを<xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode?displayProperty=nameWithType>します。  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 返します<xref:System.Windows.Forms.ToolStripRenderMode.Custom>場合にのみ、値の<xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType>は`null`します。  
+>  <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 返します<xref:System.Windows.Forms.ToolStripRenderMode.Custom>場合にのみの値<xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType>ない`null`します。  
   
 ### <a name="to-create-a-custom-renderer"></a>カスタム レンダラーを作成するには  
   
-1.  拡張、<xref:System.Windows.Forms.ToolStripRenderer>クラスです。  
+1. 拡張、<xref:System.Windows.Forms.ToolStripRenderer>クラス。  
   
-2.  実装して目的のカスタム レンダリングをオーバーライドする適切な*にしています.* メンバー  
+2. 実装して目的のカスタム レンダリングをオーバーライドする適切な*にしています.* メンバー  
   
     ```vb  
     Public Class RedTextRenderer  
@@ -59,7 +59,7 @@ ms.locfileid: "33527175"
   
 ### <a name="to-set-the-custom-renderer-to-be-the-current-renderer"></a>現在のレンダラーにカスタム レンダラーを設定するには  
   
-1.  1 つのカスタム レンダラーを設定する<xref:System.Windows.Forms.ToolStrip>、設定、<xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType>プロパティは、カスタム レンダラーをします。  
+1. 1 つのカスタム レンダラーを設定する<xref:System.Windows.Forms.ToolStrip>、設定、<xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType>プロパティ、カスタム レンダラーをします。  
   
     ```vb  
     toolStrip1.Renderer = New RedTextRenderer()  
@@ -69,7 +69,7 @@ ms.locfileid: "33527175"
     toolStrip1.Renderer = new RedTextRenderer();  
     ```  
   
-2.  または、すべてのカスタム レンダラーを設定する<xref:System.Windows.Forms.ToolStrip>アプリケーションに含まれるクラス: 設定、<xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType>プロパティを設定し、カスタム レンダラー、<xref:System.Windows.Forms.ToolStrip.RenderMode%2A>プロパティを<xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>です。  
+2. または、すべてのカスタム レンダラーを設定する<xref:System.Windows.Forms.ToolStrip>アプリケーションに含まれるクラス。設定、<xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType>プロパティにカスタム レンダラーを設定し、<xref:System.Windows.Forms.ToolStrip.RenderMode%2A>プロパティを<xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>します。  
   
     ```vb  
     toolStrip1.RenderMode = ToolStripRenderMode.ManagerRenderMode  
@@ -81,10 +81,11 @@ ms.locfileid: "33527175"
     ToolStripManager.Renderer = new RedTextRenderer();  
     ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.ToolStripManager.Renderer%2A>  
- <xref:System.Windows.Forms.ToolStripRenderer>  
- <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>  
- [ToolStrip コントロールの概要](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
- [ToolStrip コントロールのアーキテクチャ](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
- [ToolStrip テクノロジの概要](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Forms.ToolStripManager.Renderer%2A>
+- <xref:System.Windows.Forms.ToolStripRenderer>
+- <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>
+- [ToolStrip コントロールの概要](toolstrip-control-overview-windows-forms.md)
+- [ToolStrip コントロールのアーキテクチャ](toolstrip-control-architecture.md)
+- [ToolStrip テクノロジの概要](toolstrip-technology-summary.md)

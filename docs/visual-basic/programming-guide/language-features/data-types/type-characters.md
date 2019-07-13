@@ -36,12 +36,12 @@ helpviewer_keywords:
 - UL literal type characters [Visual Basic]
 - literal types [Visual Basic], default
 ms.assetid: 6353cb9b-6ee4-4af6-a5a8-88ce39f90cc5
-ms.openlocfilehash: 1922282ece4dd90c8f55c8dea20ef2866d8b357c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a469a08ebadd77d5abbfa95b270784c9ef534691
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906751"
 ---
 # <a name="type-characters-visual-basic"></a>(Visual Basic) の文字を入力します。
 
@@ -132,7 +132,7 @@ Dim flags As UShort = &H8000US
 
 前の例では、 `counter` -32768 の 10 進数の値を持つと`flags`+32768 の 10 進数の値を持ちます。
 
-Visual Basic 15.5 以降では、使用することできますもアンダー スコア文字 (`_`) プレフィックスと 16 進数、バイナリ、または 8 進数の桁の間の先頭の区切り記号として。 例えば:
+Visual Basic 15.5 以降では、使用することできますもアンダー スコア文字 (`_`) プレフィックスと 16 進数、バイナリ、または 8 進数の桁の間の先頭の区切り記号として。 例:
 
 ```vb
 Dim number As Integer = &H_C305_F860
@@ -142,10 +142,10 @@ Dim number As Integer = &H_C305_F860
 
 ## <a name="see-also"></a>関連項目
 
- [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [基本データ型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [トラブルシューティング (データ型)](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [変数宣言](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [データの種類](../../../../visual-basic/language-reference/data-types/index.md)
+- [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [基本データ型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [値型と参照型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [トラブルシューティング (データ型)](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [変数宣言](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [データの種類](../../../../visual-basic/language-reference/data-types/index.md)

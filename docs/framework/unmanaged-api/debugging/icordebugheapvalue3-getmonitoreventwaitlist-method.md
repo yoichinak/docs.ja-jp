@@ -17,25 +17,25 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a395579892ff2410865a4fcdd19cf20449b82b88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: db34d56fd4d074551ca4823681bc5d94e76df758
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421075"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756620"
 ---
 # <a name="icordebugheapvalue3getmonitoreventwaitlist-method"></a>ICorDebugHeapValue3::GetMonitorEventWaitList メソッド
-モニター ロックに関連付けられているイベントでは、キュー内のスレッドの順序付きリストを提供します。  
+モニター ロックに関連付けられているイベントをキューに置かれたスレッドの順序付きリストを提供します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetMonitorEventWaitList (  
     [out] ICorDebugThreadEnum **ppThreadEnum  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ppThreadEnum`  
  [out]スレッドの順序付きリストを提供する ICorDebugThreadEnum 列挙子。  
   
@@ -49,26 +49,27 @@ HRESULT GetMonitorEventWaitList (
   
 ## <a name="exceptions"></a>例外  
   
-## <a name="remarks"></a>コメント  
- 一覧の最初のスレッドは、次の呼び出しによってリリースされた最初のスレッド<xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>です。 一覧で、[次へ] のスレッドは、次の呼び出し時に解放されます。  
+## <a name="remarks"></a>Remarks  
+ 一覧の最初のスレッドは、次回の呼び出しからリリースされる最初のスレッド<xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>します。 次の呼び出しでは、上の一覧で、次のスレッドが解放されます。  
   
- リストが空でない場合、このメソッドは、S_OK を返します。 メソッドは S_FALSE; を返します、リストが空の場合ここでは、列挙体がまだ有効では空です。  
+ リストが空でない場合、このメソッドは、S_OK を返します。 リストが空の場合、メソッドは S_FALSE; を返しますこの場合、列挙型がまだ有効で空ですが。  
   
- どちらの場合、列挙インターフェイスは、現在の同期状態の期間に対してのみ使用可能です。 ただし、これから管理されているスレッドのインターフェイスは、スレッドを終了するまで無効です。  
+ いずれの場合も、列挙インターフェイスは、現在の同期状態の期間に対してのみ使用可能です。 ただし、スレッドが終了するまでは、そこから割り当てられたスレッドのインターフェイスは有効です。  
   
- 場合`ppThreadEnum`は有効なポインターではありません、結果は未定義です。  
+ 場合`ppThreadEnum`有効なポインターでない、結果は未定義です。  
   
- スレッドが、モニターを待機している場合、これを確認できないように、エラーが発生した場合、メソッドは失敗を示す HRESULT を返します。  
+ モニタのスレッドが待機している場合に、これを特定できないように、エラーが発生した場合、メソッドは失敗を示す HRESULT を返します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>関連項目
+
+- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)

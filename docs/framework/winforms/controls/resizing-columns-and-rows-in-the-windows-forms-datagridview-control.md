@@ -6,39 +6,40 @@ helpviewer_keywords:
 - columns [Windows Forms], resizing in grids
 - data grids [Windows Forms], resizing columns and rows
 ms.assetid: 7532764d-e5c1-4943-a08b-6377a722d3b6
-ms.openlocfilehash: 1e501d124ccec749537d319b992c5caf00b025f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e1fa2d57cfb2cd374d691fe03a0e0bdbd3ad7141
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903189"
 ---
 # <a name="resizing-columns-and-rows-in-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロール内の列と行のサイズ変更
-`DataGridView`コントロールには、その列と行のサイズ変更動作をカスタマイズするためのさまざまなオプションが用意されています。 通常、`DataGridView`セル サイズを変更しないでその内容を基にします。 代わりに、それらはクリップ表示値があるセルよりも大きいです。 コンテンツは、文字列として表示されることができます、セルにより、ツールヒントに表示します。  
+`DataGridView`コントロールには、その列と行のサイズ変更動作をカスタマイズするためのさまざまなオプションが用意されています。 通常、`DataGridView`セル サイズを変更しないでその内容を基にします。 代わりに、セルよりも大きい任意の表示値のクリップです。 コンテンツを文字列として表示でき、セルにより、ツールヒントに表示します。  
   
- 既定では、ユーザーは、行、列、および詳細情報を表示するには、マウスでのヘッダー区分線をドラッグできます。 ユーザーは、サイズが自動的にその内容に基づいて関連付けられている行、列、またはヘッダーのバンドの区分線をダブルクリックすることもできます。  
+ 既定では、ユーザーは、行、列、および詳細情報を表示するには、マウスでのヘッダー区分線をドラッグできます。 ユーザーは、自動的にその内容に基づいて関連付けられている行、列、またはヘッダーのバンドのサイズを変更する区分線をダブルクリックすることもできます。  
   
- `DataGridView`コントロールには、プロパティ、メソッド、およびカスタマイズしたり、これらすべてのユーザー向け動作を無効にするようにイベントが用意されています。 さらに、プログラムでサイズを変更する行、列、およびその内容に合わせてヘッダーまたはサイズが自動的に自身の内容が変更されるたびにそれらを構成できます。 指定した比率で、コントロールの使用可能な幅を自動的に分割する列を構成することもできます。  
+ `DataGridView`プロパティ、メソッド、およびイベントをカスタマイズまたはすべてのユーザー向けのこれらの動作を無効にするためのコントロールを提供します。 さらに、行、列、およびヘッダーをその内容に合わせてサイズ変更できるプログラムでまたは自体の内容が変更されるたびにで自動的にサイズ変更するように構成することができます。 指定した比率で、コントロールの使用可能な幅を自動的に分割する列を構成することもできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [Windows フォーム DataGridView コントロールのサイズ変更オプション](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)  
- サイズ変更行、列、およびヘッダーのオプションについて説明します。 また、サイズ変更に関連するプロパティやメソッドの詳細を提供し、一般的な使用シナリオについて説明します。  
+ [Windows フォーム DataGridView コントロールのサイズ変更オプション](sizing-options-in-the-windows-forms-datagridview-control.md)  
+ サイズ設定行、列、およびヘッダーのオプションについて説明します。 サイズ変更に関連するプロパティとメソッドの詳細を説明し、一般的な使用シナリオについて説明します。  
   
- [Windows フォーム DataGridView コントロールの列フィル モード](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md)  
- 列フィル モードの詳細、および列フィル モードおよびその他のモードを実験に使用できるデモ用のコードを説明します。  
+ [Windows フォーム DataGridView コントロールの列フィル モード](column-fill-mode-in-the-windows-forms-datagridview-control.md)  
+ 列フィル モードとその他のモードを実験に使用できるデモ コードと列フィル モードの詳細を説明します。  
   
- [方法: Windows フォーム DataGridView コントロールのサイズ変更モードを設定する](../../../../docs/framework/winforms/controls/how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)  
- 一般的な用途のサイズ変更モードを構成する方法について説明します。  
+ [方法: Windows フォーム DataGridView コントロールのサイズ変更モードを設定します。](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)  
+ 一般的な目的のサイズ変更モードを構成する方法について説明します。  
   
- [方法: Windows フォームの DataGridView コントロールの内容に合わせてセルのサイズをプログラムで変更する](../../../../docs/framework/winforms/controls/programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
- プログラムによるサイズ変更をテストに使用できるデモ用のコードを提供します。  
+ [方法: プログラムで Windows フォームの DataGridView コントロールのコンテンツに合わせてセルのサイズを変更します。](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
+ プログラムによるサイズ変更を実験に使用できるデモ コードを提供します。  
   
- [方法: Windows フォームの DataGridView コントロールの内容変更時にセルのサイズを自動的に変更する](../../../../docs/framework/winforms/controls/automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
- 自動サイズ変更モードを実験に使用できるデモ用のコードを提供します。  
+ [方法: Windows フォームの DataGridView コントロールのコンテンツが変更されたときに、セルを自動的にサイズ変更します。](automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
+ 自動サイズ変更モードを実験に使用できるデモ コードを提供します。  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView> コントロールのリファレンス ドキュメントを提供します。  
   
-## <a name="see-also"></a>関連項目  
- [DataGridView コントロール](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
+## <a name="see-also"></a>関連項目
+
+- [DataGridView コントロール](datagridview-control-windows-forms.md)

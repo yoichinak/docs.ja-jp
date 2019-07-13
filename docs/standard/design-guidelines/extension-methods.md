@@ -4,12 +4,12 @@ ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
 author: KrzysztofCwalina
-ms.openlocfilehash: 6fedd41e901035290995d7ece1b5aa23e76f345e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 1835f84a5126ef07adbe119089d2d943ffda18cd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148296"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615287"
 ---
 # <a name="extension-methods"></a>拡張メソッド
 拡張メソッドは、言語機能により、インスタンス メソッドの呼び出し構文を使用して呼び出される静的メソッドです。 これらのメソッドは、メソッドは、操作の対象のインスタンスを表す 1 つ以上のパラメーターを取得する必要があります。  
@@ -22,9 +22,9 @@ ms.locfileid: "53148296"
   
  **✓ CONSIDER** 拡張メソッドを使用して、次のシナリオのいずれかで。  
   
--   ヘルパーを提供するには、コア インターフェイスの観点からは機能している場合、インターフェイスのすべての実装に関連する機能を記述できます。 具体的な実装は、インターフェイスにそれ以外の場合割り当てることはできないためにです。 たとえば、`LINQ to Objects`演算子は、すべての拡張メソッドとして実装されます<xref:System.Collections.Generic.IEnumerable%601>型。 そのため、いずれか`IEnumerable<>`実装は、LINQ で自動的に有効にします。  
+- ヘルパーを提供するには、コア インターフェイスの観点からは機能している場合、インターフェイスのすべての実装に関連する機能を記述できます。 具体的な実装は、インターフェイスにそれ以外の場合割り当てることはできないためにです。 たとえば、`LINQ to Objects`演算子は、すべての拡張メソッドとして実装されます<xref:System.Collections.Generic.IEnumerable%601>型。 そのため、いずれか`IEnumerable<>`実装は、LINQ で自動的に有効にします。  
   
--   インスタンス メソッドがいくつかの型への依存関係がこのような依存関係をどのように導入するときに、依存関係の管理規則ができなくなります。 依存関係など<xref:System.String>に<xref:System.Uri?displayProperty=nameWithType>はおそらく、望ましくないため、`String.ToUri()`インスタンス メソッドが返す`System.Uri`依存関係の管理の観点から正しくない設計になります。 静的な拡張メソッド`Uri.ToUri(this string str)`返す`System.Uri`はるかに優れた設計になります。  
+- インスタンス メソッドがいくつかの型への依存関係がこのような依存関係をどのように導入するときに、依存関係の管理規則ができなくなります。 依存関係など<xref:System.String>に<xref:System.Uri?displayProperty=nameWithType>はおそらく、望ましくないため、`String.ToUri()`インスタンス メソッドが返す`System.Uri`依存関係の管理の観点から正しくない設計になります。 静的な拡張メソッド`Uri.ToUri(this string str)`返す`System.Uri`はるかに優れた設計になります。  
   
  **X AVOID** で拡張メソッドを定義する<xref:System.Object?displayProperty=nameWithType>です。  
   
@@ -48,5 +48,5 @@ ms.locfileid: "53148296"
   
 ## <a name="see-also"></a>関連項目
 
-- [メンバーのデザインのガイドライン](../../../docs/standard/design-guidelines/member.md)  
+- [メンバーのデザインのガイドライン](../../../docs/standard/design-guidelines/member.md)
 - [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)

@@ -1,53 +1,53 @@
 ---
-title: '方法: ステート マシン ワークフローを作成する'
+title: '方法: ステート マシン ワークフローの作成'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: 8098ab4b056ad6375c248e803134c35d67e3f27b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 84d2355a78c7d33bf712baf158f28861e59e75d1
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519822"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881936"
 ---
-# <a name="how-to-create-a-state-machine-workflow"></a>方法: ステート マシン ワークフローを作成する
-ワークフローは、ビルトイン アクティビティおよびカスタム アクティビティから構築できます。 など両方の組み込みのアクティビティを使用するワークフローを作成する手順をこのトピックで、<xref:System.Activities.Statements.StateMachine>アクティビティ、およびカスタム アクティビティ、前の[方法: アクティビティ作成](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)トピック。 このワークフローは、数値推測ゲームをモデル化しています。  
+# <a name="how-to-create-a-state-machine-workflow"></a>方法: ステート マシン ワークフローの作成
+ワークフローは、ビルトイン アクティビティおよびカスタム アクティビティから構築できます。 このトピックでなど両方の組み込みのアクティビティを使用するワークフローを作成する手順、<xref:System.Activities.Statements.StateMachine>アクティビティ、およびカスタム アクティビティ、前の[方法。アクティビティ作成](how-to-create-an-activity.md)トピック。 このワークフローは、数値推測ゲームをモデル化しています。  
   
 > [!NOTE]
->  チュートリアル入門の各トピックは、前のトピックに応じて異なります。 このトピックを完了する必要がありますを完了して[方法: アクティビティ作成](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)です。  
+>  チュートリアル入門の各トピックは、前のトピックに応じて異なります。 このトピックを完了する必要がありますを完了して[方法。アクティビティ作成](how-to-create-an-activity.md)です。  
   
 > [!NOTE]
->  このチュートリアルの完成版をダウンロードするを参照してください。 [Windows Workflow Foundation (WF45) - チュートリアル入門](https://go.microsoft.com/fwlink/?LinkID=248976)します。  
+>  チュートリアルの完成版をダウンロードするには、「 [Windows Workflow Foundation (WF45) - Getting Started Tutorial (Windows Workflow Foundation (WF45) - チュートリアル入門)](https://go.microsoft.com/fwlink/?LinkID=248976)」を参照してください。  
   
 ### <a name="to-create-the-workflow"></a>ワークフローを作成するには  
   
-1.  右クリック**NumberGuessWorkflowActivities**で**ソリューション エクスプ ローラー**選択**追加**、**新しい項目の**します。  
+1. 右クリック**NumberGuessWorkflowActivities**で**ソリューション エクスプ ローラー**選択**追加**、**新しい項目の**します。  
   
-2.  **インストール済み**、**一般的な項目**ノードの **ワークフロー**します。 選択**アクティビティ**から、**ワークフロー**一覧。  
+2. **インストール済み**、**一般的な項目**ノードの **ワークフロー**します。 選択**アクティビティ**から、**ワークフロー**一覧。  
   
-3.  型`StateMachineNumberGuessWorkflow`に、**名前**ボックスし、をクリックして**追加**します。  
+3. 型`StateMachineNumberGuessWorkflow`に、**名前**ボックスし、をクリックして**追加**します。  
   
-4.  ドラッグ、 **StateMachine**からのアクティビティ、**ステート マシン**のセクション、**ツールボックス**にドロップし、**ここにアクティビティをドロップ**のラベルをワークフロー デザイン サーフェイス。  
+4. ドラッグ、 **StateMachine**からのアクティビティ、**ステート マシン**のセクション、**ツールボックス**にドロップし、**ここにアクティビティをドロップ**のラベルをワークフロー デザイン サーフェイス。  
   
 ### <a name="to-create-the-workflow-variables-and-arguments"></a>ワークフロー変数および引数を作成するには  
   
-1.  ダブルクリック**StateMachineNumberGuessWorkflow.xaml**で**ソリューション エクスプ ローラー**まだ表示されていない場合に、デザイナーでワークフローを表示します。  
+1. ダブルクリック**StateMachineNumberGuessWorkflow.xaml**で**ソリューション エクスプ ローラー**まだ表示されていない場合に、デザイナーでワークフローを表示します。  
   
-2.  クリックして**引数**を表示するワークフロー デザイナーの左下で、**引数**ウィンドウ。  
+2. クリックして**引数**を表示するワークフロー デザイナーの左下で、**引数**ウィンドウ。  
   
-3.  クリックして**引数の作成**です。  
+3. クリックして**引数の作成**です。  
   
-4.  型`MaxNumber`に、**名前**ボックスで、**で**から、**方向**ドロップダウン リストで、 **Int32** から**引数の型**ドロップダウン リスト、および引数を保存するには ENTER キーを押します。  
+4. 型`MaxNumber`に、**名前**ボックスで、**で**から、**方向**ドロップダウン リストで、 **Int32** から**引数の型**ドロップダウン リスト、および引数を保存するには ENTER キーを押します。  
   
-5.  クリックして**引数の作成**です。  
+5. クリックして**引数の作成**です。  
   
-6.  型`Turns`に、**名前**新しく追加された下にあるボックス`MaxNumber`引数で、**アウト**から、**方向**選択ドロップダウンリスト**Int32**から、**引数の型**ドロップダウン リスト、および ENTER キーを押します。  
+6. 型`Turns`に、**名前**新しく追加された下にあるボックス`MaxNumber`引数で、**アウト**から、**方向**選択ドロップダウンリスト**Int32**から、**引数の型**ドロップダウン リスト、および ENTER キーを押します。  
   
-7.  クリックして**引数**を閉じるアクティビティ デザイナーの左下で、**引数**ウィンドウ。  
+7. クリックして**引数**を閉じるアクティビティ デザイナーの左下で、**引数**ウィンドウ。  
   
-8.  クリックして**変数**を表示するワークフロー デザイナーの左下で、**変数**ウィンドウ。  
+8. クリックして**変数**を表示するワークフロー デザイナーの左下で、**変数**ウィンドウ。  
   
 9. クリックして**変数作成**です。  
   
@@ -64,14 +64,14 @@ ms.locfileid: "43519822"
   
 ### <a name="to-add-the-workflow-activities"></a>ワークフロー アクティビティを追加するには  
   
-1.  クリックして**State1**をオンにします。 **プロパティ ウィンドウ**、変更、 **DisplayName**に`Initialize Target`します。  
+1. クリックして**State1**をオンにします。 **プロパティ ウィンドウ**、変更、 **DisplayName**に`Initialize Target`します。  
   
     > [!TIP]
     >  場合、**プロパティ ウィンドウ**が表示されている、選択**プロパティ ウィンドウ**から、**ビュー**メニュー。  
   
-2.  新しく名前を変更 をダブルクリックします**Initialize Target**ワークフロー デザイナーの展開の状態。  
+2. 新しく名前を変更 をダブルクリックします**Initialize Target**ワークフロー デザイナーの展開の状態。  
   
-3.  ドラッグ、**割り当てる**からのアクティビティ、**プリミティブ**のセクション、**ツールボックス**にドロップし、**エントリ**状態のセクション。 型`Target`に、**に**ボックスし、次の式を**c# 式を入力します**または**VB の式を入力します。** ボックス。  
+3. ドラッグ、**割り当てる**からのアクティビティ、**プリミティブ**のセクション、**ツールボックス**にドロップし、**エントリ**状態のセクション。 型`Target`に、**に**ボックスし、次の式を**c# 式を入力します**または**VB の式を入力します。** ボックス。  
   
     ```vb  
     New System.Random().Next(1, MaxNumber + 1)  
@@ -84,15 +84,15 @@ ms.locfileid: "43519822"
     > [!TIP]
     >  場合、**ツールボックス**ウィンドウが表示されない場合、選択**ツールボックス**から、**ビュー**メニュー。  
   
-4.  全体に戻る をクリックして状態マシン ビューは、ワークフロー デザイナーに**StateMachine**階層リンクで、ワークフロー デザイナーの上部に表示します。  
+4. 全体に戻る をクリックして状態マシン ビューは、ワークフロー デザイナーに**StateMachine**階層リンクで、ワークフロー デザイナーの上部に表示します。  
   
-5.  ドラッグ、**状態**からのアクティビティ、**ステート マシン**のセクション、**ツールボックス**ワークフロー デザイナーにそのポインターを合わせると、 **Initialize Target**状態。 周囲に 4 つの三角形が表示されることに注意してください、 **Initialize Target**新しい状態が上にあるときの状態。 すぐ下にある三角形の新しい状態をドロップ、 **Initialize Target**状態。 これは、ワークフローの新しい状態しからの移行を作成、 **Initialize Target**新しい状態を状態。  
+5. ドラッグ、**状態**からのアクティビティ、**ステート マシン**のセクション、**ツールボックス**ワークフロー デザイナーにそのポインターを合わせると、 **Initialize Target**状態。 周囲に 4 つの三角形が表示されることに注意してください、 **Initialize Target**新しい状態が上にあるときの状態。 すぐ下にある三角形の新しい状態をドロップ、 **Initialize Target**状態。 これは、ワークフローの新しい状態しからの移行を作成、 **Initialize Target**新しい状態を状態。  
   
-6.  をクリックして**State1**ことを選択するには、変更、 **DisplayName**に`Enter Guess`、ワークフロー デザイナーの展開の状態をダブルクリックします。  
+6. をクリックして**State1**ことを選択するには、変更、 **DisplayName**に`Enter Guess`、ワークフロー デザイナーの展開の状態をダブルクリックします。  
   
-7.  ドラッグ、 **WriteLine**からのアクティビティ、**プリミティブ**のセクション、**ツールボックス**にドロップし、**エントリ**状態のセクション。  
+7. ドラッグ、 **WriteLine**からのアクティビティ、**プリミティブ**のセクション、**ツールボックス**にドロップし、**エントリ**状態のセクション。  
   
-8.  次の式を入力、**テキスト**プロパティ ボックスの**WriteLine**します。  
+8. 次の式を入力、**テキスト**プロパティ ボックスの**WriteLine**します。  
   
     ```vb  
     "Please enter a number between 1 and " & MaxNumber  
@@ -179,19 +179,20 @@ ms.locfileid: "43519822"
   
      次の例は完成したワークフローを示しています。  
   
-     ![完成したステート マシン ワークフロー](../../../docs/framework/windows-workflow-foundation/media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+     ![完成したステート マシン ワークフローを示す図。](./media/how-to-create-a-state-machine-workflow/complete-state-machine-workflow.jpg)  
   
 ### <a name="to-build-the-workflow"></a>ワークフローをビルドするには  
   
-1.  Ctrl キーと Shift キーを押しながら B キーを押して、ソリューションをビルドします。  
+1. Ctrl キーと Shift キーを押しながら B キーを押して、ソリューションをビルドします。  
   
-     ワークフローを実行する方法について、次のトピックをご覧ください[方法: ワークフローを実行する](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)します。 既に完了している場合、[方法: ワークフローを実行する](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)さまざまなスタイルのワークフロー ステップ、状態マシン ワークフローは、この手順を使用してを実行してに進んで、 [のアプリケーションをビルドして、実行](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication)の[方法: ワークフローを実行する](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)します。  
+     ワークフローを実行する方法について、次のトピックをご覧ください[方法。ワークフローを実行する](how-to-run-a-workflow.md)します。 既に完了している場合、[方法。ワークフローを実行する](how-to-run-a-workflow.md)さまざまなスタイルのワークフロー ステップ、状態マシン ワークフローは、この手順を使用してを実行してに進んで、 [、アプリケーションをビルドして実行](how-to-run-a-workflow.md#BKMK_ToRunTheApplication)のセクション[方法。ワークフローを実行する](how-to-run-a-workflow.md)します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Activities.Statements.Flowchart>  
- <xref:System.Activities.Statements.FlowDecision>  
- [Windows Workflow Foundation プログラミング](../../../docs/framework/windows-workflow-foundation/programming.md)  
- [ワークフローの設計](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
- [チュートリアル入門](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
- [アクティビティを作成する方法](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
- [ワークフローを実行する方法](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Activities.Statements.Flowchart>
+- <xref:System.Activities.Statements.FlowDecision>
+- [Windows Workflow Foundation プログラミング](programming.md)
+- [ワークフローの設計](designing-workflows.md)
+- [チュートリアル入門](getting-started-tutorial.md)
+- [方法: アクティビティを作成します。](how-to-create-an-activity.md)
+- [方法: ワークフローを実行します。](how-to-run-a-workflow.md)

@@ -1,20 +1,20 @@
 ---
-title: 'チュートリアル : 簡単なオブジェクト モデルとクエリ (Visual Basic)'
+title: 'チュートリアル: 簡単なオブジェクト モデルとクエリ (Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-ms.openlocfilehash: f2df0dfa039fa37fd9d9b471d28b2a03f06b3037
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9bf97263bf8ae0ac3ece187e81a51edfaef48a54
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365736"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742581"
 ---
-# <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>チュートリアル : 簡単なオブジェクト モデルとクエリ (Visual Basic)
+# <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>チュートリアル: 簡単なオブジェクト モデルとクエリ (Visual Basic)
 このチュートリアルでは、複雑さを抑えた、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 全体の基本的なシナリオを示します。 サンプルの Northwind データベースにある Customers テーブルのモデル化を行うエンティティ クラスを作成します。 次に、住所がロンドンの顧客を表示するための簡単なクエリを作成します。  
   
- このチュートリアルでは、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の考え方を示すために、コード中心の方法をあえて使用しています。 通常は、[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]を使用してオブジェクト モデルを作成できます。  
+ このチュートリアルでは、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の考え方を示すために、コード中心の方法をあえて使用しています。 通常に言うと、オブジェクト モデルを作成するのにオブジェクト リレーショナル デザイナーを使用するとします。  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -22,80 +22,80 @@ ms.locfileid: "33365736"
   
 ## <a name="prerequisites"></a>必須コンポーネント  
   
--   このチュートリアルでは、専用フォルダー ("c:\linqtest") を使用してファイルを保持します。 チュートリアルを開始する前に、このフォルダーを作成してください。  
+- このチュートリアルでは、専用フォルダー ("c:\linqtest") を使用してファイルを保持します。 チュートリアルを開始する前に、このフォルダーを作成してください。  
   
--   このチュートリアルには、Northwind サンプル データベースが必要です。 開発用コンピューターにこのデータベースがない場合は、Microsoft ダウンロード サイトからダウンロードします。 手順については、次を参照してください。[サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)です。 データベースをダウンロードしたら、ファイルを c:\linqtest フォルダーにコピーします。  
+- このチュートリアルには、Northwind サンプル データベースが必要です。 開発用コンピューターにこのデータベースがない場合は、Microsoft ダウンロード サイトからダウンロードします。 手順については、次を参照してください。[サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)します。 データベースをダウンロードしたら、ファイルを c:\linqtest フォルダーにコピーします。  
   
 ## <a name="overview"></a>概要  
  このチュートリアルは、主に次の 6 つのタスクで構成されています。  
   
--   作成する、 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Studio でソリューションです。  
+- 作成、 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Studio でソリューション。  
   
--   データベース テーブルにクラスを割り当てます。  
+- データベース テーブルにクラスを割り当てます。  
   
--   クラスに対し、データベース列を表すプロパティを指定します。  
+- クラスに対し、データベース列を表すプロパティを指定します。  
   
--   Northwind データベースへの接続を指定します。  
+- Northwind データベースへの接続を指定します。  
   
--   データベースに対して実行する簡単なクエリを作成します。  
+- データベースに対して実行する簡単なクエリを作成します。  
   
--   クエリを実行して結果を観察する。  
+- クエリを実行して結果を観察する。  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>LINQ to SQL ソリューションを作成する  
  この最初のタスクでは、ビルドおよび実行するために必要な参照を含む Visual Studio ソリューションを作成、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]プロジェクト。  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>LINQ to SQL ソリューションを作成するには  
   
-1.  **[ファイル]** メニューの **[新しいプロジェクト]** をクリックします。  
+1. **[ファイル]** メニューの **[新しいプロジェクト]** をクリックします。  
   
-2.  **プロジェクトの種類**のペイン、**新しいプロジェクト**ダイアログ ボックスで、をクリックして**Visual Basic**です。  
+2. **プロジェクトの種類**のウィンドウ、**新しいプロジェクト**ダイアログ ボックスで、をクリックして**Visual Basic**します。  
   
-3.  **[テンプレート]** ペインの **[コンソール アプリケーション]** をクリックします。  
+3. **[テンプレート]** ペインの **[コンソール アプリケーション]** をクリックします。  
   
-4.  **名前**ボックスに、入力**linqconsoleapp」と入力**です。  
+4. **名前**ボックスに「 **LinqConsoleApp**します。  
   
-5.  **[OK]** をクリックします。  
+5. **[OK]** をクリックします。  
   
 ## <a name="adding-linq-references-and-directives"></a>LINQ の参照とディレクティブを追加する  
- このチュートリアルで使用するアセンブリは、既定ではプロジェクトにインストールされていない場合があります。 場合`System.Data.Linq`がプロジェクトの参照として表示されない (をクリックして**すべてのファイル**で**ソリューション エクスプ ローラー**を展開し、**参照**ノード)、」の説明に従って、追加次の手順です。  
+ このチュートリアルで使用するアセンブリは、既定ではプロジェクトにインストールされていない場合があります。 場合`System.Data.Linq`がプロジェクトの参照として表示されない (をクリックして**すべてのファイル**で**ソリューション エクスプ ローラー**を展開し、**参照**ノード) で説明したように、それを追加次の手順。  
   
 #### <a name="to-add-systemdatalinq"></a>System.Data.Linq を追加するには  
   
-1.  **ソリューション エクスプ ローラー**を右クリックして**参照**、クリックして**参照の追加**です。  
+1. **ソリューション エクスプ ローラー**を右クリックして**参照**、 をクリックし、**参照の追加**します。  
   
-2.  **参照の追加**ダイアログ ボックスで、をクリックして **.NET**を System.Data.Linq アセンブリをクリックし、をクリックして**OK**です。  
+2. **参照の追加**ダイアログ ボックスで、をクリックして **.NET**、System.Data.Linq アセンブリをクリックし、順にクリックして、 **[ok]** します。  
   
      アセンブリがプロジェクトに追加されます。  
   
-3.  また、**参照の追加**ダイアログ ボックスで、をクリックして **.NET**、までスクロールし、System.Windows.Forms をクリック **[ok]** です。  
+3. さらに、**参照の追加**ダイアログ ボックスで、をクリックして **.NET**をスクロールして [System.Windows.Forms、] をクリックし、順にクリックします **[ok]** します。  
   
      このチュートリアルで使用するメッセージ ボックスをサポートするアセンブリがプロジェクトに追加されます。  
   
-4.  `Module1` の上に次のディレクティブを追加します。  
+4. `Module1` の上に次のディレクティブを追加します。  
   
      [!code-vb[DLinqWalk1VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1VB/vb/Module1.vb#1)]  
   
 ## <a name="mapping-a-class-to-a-database-table"></a>データベース テーブルにクラスを対応付ける  
- この手順では、クラスを作成して、データベース テーブルに対応付けます。 このようなクラスと呼ばれる、*エンティティ クラス*です。 対応付けは、<xref:System.Data.Linq.Mapping.TableAttribute> 属性を追加するだけで完了します。 <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> プロパティを使用して、データベースのテーブルの名前を指定します。  
+ この手順では、クラスを作成して、データベース テーブルに対応付けます。 このようなクラスと呼ばれる、*エンティティ クラス*します。 対応付けは、<xref:System.Data.Linq.Mapping.TableAttribute> 属性を追加するだけで完了します。 <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> プロパティを使用して、データベースのテーブルの名前を指定します。  
   
 #### <a name="to-create-an-entity-class-and-map-it-to-a-database-table"></a>エンティティ クラスを作成し、データベース テーブルに対応付けるには  
   
--   Module1.vb で、`Sub Main` の直前に次のコードを入力または貼り付けます。  
+- Module1.vb で、`Sub Main` の直前に次のコードを入力または貼り付けます。  
   
      [!code-vb[DLinqWalk1VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1VB/vb/Module1.vb#2)]  
   
 ## <a name="designating-properties-on-the-class-to-represent-database-columns"></a>データベース列を表すプロパティをクラスに追加する  
  この手順では、いくつかのタスクを実行します。  
   
--   <xref:System.Data.Linq.Mapping.ColumnAttribute> 属性を使用して、エンティティ クラスの `CustomerID` プロパティおよび `City` プロパティを、データベース テーブルの列を表すものとして指定します。  
+- <xref:System.Data.Linq.Mapping.ColumnAttribute> 属性を使用して、エンティティ クラスの `CustomerID` プロパティおよび `City` プロパティを、データベース テーブルの列を表すものとして指定します。  
   
--   `CustomerID` プロパティを、データベースの主キー列を表すものとして指定します。  
+- `CustomerID` プロパティを、データベースの主キー列を表すものとして指定します。  
   
--   プライベートでの格納用として `_CustomerID` フィールドおよび `_City` フィールドを指定します。 これで、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、ビジネス ロジックを含む場合があるパブリック アクセサーを使用せずに、値を直接格納および取得できます。  
+- プライベートでの格納用として `_CustomerID` フィールドおよび `_City` フィールドを指定します。 これで、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、ビジネス ロジックを含む場合があるパブリック アクセサーを使用せずに、値を直接格納および取得できます。  
   
 #### <a name="to-represent-characteristics-of-two-database-columns"></a>2 つのデータベース列の特性を指定するには  
   
--   Module1.vb で、`End Class` の直前に次のコードを入力または貼り付けます。  
+- Module1.vb で、`End Class` の直前に次のコードを入力または貼り付けます。  
   
      [!code-vb[DLinqWalk1VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1VB/vb/Module1.vb#3)]  
   
@@ -106,20 +106,20 @@ ms.locfileid: "33365736"
   
 #### <a name="to-specify-the-database-connection"></a>データベース接続を指定するには  
   
--   `Sub Main` メソッドに次のコードを入力または貼り付けます。  
+- `Sub Main` メソッドに次のコードを入力または貼り付けます。  
   
      `northwnd.mdf` ファイルは linqtest フォルダーに置かれているものとします。 詳細については、このチュートリアルの「前提条件」を参照してください。  
   
      [!code-vb[DLinqWalk1VB#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1VB/vb/Module1.vb#4)]  
   
 ## <a name="creating-a-simple-query"></a>簡単なクエリの作成  
- この手順では、データベースの Customers テーブルから、住所が London の顧客を検索するクエリを作成します。 この手順で作成するクエリ コードは、クエリを指定するだけです。 実行は行いません。 このアプローチと呼ばれる*遅延実行*です。 詳細については、「[LINQ クエリの概要 (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)」を参照してください。  
+ この手順では、データベースの Customers テーブルから、住所が London の顧客を検索するクエリを作成します。 この手順で作成するクエリ コードは、クエリを指定するだけです。 実行は行いません。 このアプローチと呼ばれる*遅延実行*します。 詳細については、「[LINQ クエリの概要 (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)」を参照してください。  
   
  また、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] が生成した SQL コマンドをログに出力します。 <xref:System.Data.Linq.DataContext.Log%2A> を使用したこのログ機能は、デバッグに有効で、データベースに送信されたコマンドが目的のクエリを正確に表しているかどうかを確認するのに役立ちます。  
   
 #### <a name="to-create-a-simple-query"></a>簡単なクエリを作成するには  
   
--   `Sub Main` メソッドの `Table(Of Customer)` 宣言の後に次のコードを入力または貼り付けます。  
+- `Sub Main` メソッドの `Table(Of Customer)` 宣言の後に次のコードを入力または貼り付けます。  
   
      [!code-vb[DLinqWalk1AVB#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1AVB/vb/Module1.vb#5)]  
   
@@ -128,29 +128,30 @@ ms.locfileid: "33365736"
   
 #### <a name="to-execute-the-query"></a>クエリを実行するには  
   
-1.  `Sub Main` メソッドの末尾 (クエリ指定の後) に次のコードを入力または貼り付けます。  
+1. `Sub Main` メソッドの末尾 (クエリ指定の後) に次のコードを入力または貼り付けます。  
   
      [!code-vb[DLinqWalk1AVB#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1AVB/vb/Module1.vb#6)]  
   
-2.  F5 キーを押してアプリケーションをデバッグします。  
+2. F5 キーを押してアプリケーションをデバッグします。  
   
     > [!NOTE]
-    >  アプリケーションでは、実行時エラーを生成する場合のトラブルシューティングに関するセクションを参照してください。[チュートリアルによる学習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)です。  
+    >  アプリケーションでは、実行時エラーを生成する場合のトラブルシューティングに関するセクションを参照してください。[チュートリアルによる学習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)します。  
   
      メッセージ ボックスには 6 人の顧客の一覧が表示されます。 コンソール ウィンドウには生成された SQL コードが表示されます。  
   
-3.  をクリックして**OK**メッセージ ボックスを閉じます。  
+3. **[OK]** をクリックしてメッセージ ボックスを閉じます。  
   
      アプリケーションが終了します。  
   
-4.  **ファイル** メニューのをクリックして**すべて保存**です。  
+4. **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
      引き続き次のチュートリアルに進む場合は、このアプリケーションが必要になります。  
   
 ## <a name="next-steps"></a>次の手順  
- [チュートリアル: リレーションシップ間でクエリを実行する (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md)トピックでは、このチュートリアルの終了が続行されます。 チュートリアルの「リレーションシップ間でクエリを実行する方法[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]と同様に、テーブル間でクエリを実行できる*結合*リレーショナル データベースにします。  
+ [チュートリアル。リレーションシップ間でクエリの実行 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md) 」トピックでは、このチュートリアルの終わりは続行します。 チュートリアルの「リレーションシップ間でクエリを実行する方法[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]と同様に、テーブル間のクエリは*結合*リレーショナル データベースでします。  
   
  「リレーションシップ間でクエリを実行する」のチュートリアルに進む場合は、必要条件として、ここで完了したチュートリアルのソリューションを保存しておく必要があります。  
   
-## <a name="see-also"></a>関連項目  
- [チュートリアルによる学習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+## <a name="see-also"></a>関連項目
+
+- [チュートリアルによる学習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

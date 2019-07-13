@@ -1,15 +1,15 @@
 ---
-title: WCF の &lt;faultPropagationQueries&gt;
+title: <faultPropagationQueries> WCF の
 ms.date: 03/30/2017
 ms.assetid: d85f66a7-e7b0-4dbb-83cc-89fa06fc9161
-ms.openlocfilehash: 77a38f8474b5e2ac8634d6ea91bc80c6044ff3ed
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: bc016827c5bb243bc83dbb53c1eda7eec1bfd8c4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54144965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704012"
 ---
-# <a name="ltfaultpropagationqueriesgt-of-wcf"></a>WCF の &lt;faultPropagationQueries&gt;
+# <a name="faultpropagationqueries-of-wcf"></a>\<faultPropagationQueries > の WCF
 
 1 つのアクティビティ内で発生するエラーの処理を追跡するために使用する、クエリのコレクションを表します。  このイベントは、FaultHandler がエラーを処理するたびに発生します。 1 つのアクティビティ内で発生したエラーの処理は、このようなクエリを使用して追跡する必要があります。 追跡参加要素がエラー伝達レコードを定期受信するには、このクエリが必要です。  
   
@@ -20,7 +20,7 @@ ms.locfileid: "54144965"
 \<プロファイル >  
 \<trackingProfile>  
 \<ワークフロー >  
-\<faultPropagationQueries >  
+\<faultPropagationQueries>  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,7 +51,7 @@ ms.locfileid: "54144965"
 
 |要素|説明|  
 |-------------|-----------------|  
-|[\<faultPropagationQuery >](faultpropagationquery-of-wcf.md)|1 つのアクティビティ内で発生するエラーの処理を追跡するために使用するクエリ。  このイベントは、FaultHandler がエラーを処理するたびに発生します。|  
+|[\<faultPropagationQuery>](faultpropagationquery-of-wcf.md)|1 つのアクティビティ内で発生するエラーの処理を追跡するために使用するクエリ。  このイベントは、FaultHandler がエラーを処理するたびに発生します。|  
   
 ### <a name="parent-elements"></a>親要素  
   

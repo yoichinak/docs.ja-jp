@@ -11,12 +11,12 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-ms.openlocfilehash: 6b1a61ac7566f624f44480ffed2337dba5e51ca2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2c2c2718d79ce9aa4fed343cf368bbf541e493d0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143364"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613710"
 ---
 # <a name="how-to-configure-network-tracing"></a>方法: ネットワークのトレースを構成する
 アプリケーションまたはコンピューターの構成ファイルには、ネットワークのトレースの形式と内容を決定する設定が保持されます。 この手順に従う前に、トレースが有効になっていることを確認します。 トレースの有効化については、「[ネットワークのトレースの有効化](../../../docs/framework/network-programming/enabling-network-tracing.md)」を参照してください。  
@@ -27,7 +27,7 @@ ms.locfileid: "53143364"
   
 ### <a name="to-configure-network-tracing"></a>ネットワークのトレースを構成するには  
   
--   適切な構成ファイルに次の行を追加します。 これらの設定の値とオプションを次の表に示します。  
+- 適切な構成ファイルに次の行を追加します。 これらの設定の値とオプションを次の表に示します。  
   
     ```xml  
     <configuration>  
@@ -97,8 +97,9 @@ ms.locfileid: "53143364"
 |`maxdatasize`|省略可能な <xref:System.Int32> 属性です。 各行トレースに含まれるネットワーク データの最大バイト数を設定します。 既定値は 1024 です。<br /><br /> この属性は、この例に示すように、\<source> 要素で設定する必要があります。 この属性を \<switches> 要素の下の要素で設定すると、例外がスローされます。|  
 |`Tracemode`|省略可能な <xref:System.String> 属性です。 プロトコル トレースを 16 進数およびテキストの形式で表示するには、`includehex` に設定します。 テキストのみを表示するには、`protocolonly` に設定します。 既定値は `includehex` です。<br /><br /> この属性は、この例に示すように、\<switches> 要素で設定する必要があります。 この属性を \<source> 要素の下の要素で設定すると、例外がスローされます。|  
   
-## <a name="see-also"></a>参照  
- [ネットワークのトレースの解釈](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
- [.NET Framework のネットワークのトレース](../../../docs/framework/network-programming/network-tracing.md)  
- [ネットワークのトレースの有効化](../../../docs/framework/network-programming/enabling-network-tracing.md)  
- [アプリケーションのトレースとインストルメント](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+## <a name="see-also"></a>関連項目
+
+- [ネットワークのトレースの解釈](../../../docs/framework/network-programming/interpreting-network-tracing.md)
+- [.NET Framework のネットワークのトレース](../../../docs/framework/network-programming/network-tracing.md)
+- [ネットワークのトレースの有効化](../../../docs/framework/network-programming/enabling-network-tracing.md)
+- [アプリケーションのトレースとインストルメント](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

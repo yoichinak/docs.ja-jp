@@ -7,14 +7,12 @@ helpviewer_keywords:
 - Windows Forms, application settings schema
 - configuration schema [.NET Framework], application settings
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f11be59941759687806591feb1edcce28b2119e6
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: a74716bcdf3c85c08d0ff3bf66407dce30ee91cc
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705442"
 ---
 # <a name="application-settings-schema"></a>アプリケーション設定のスキーマ
 
@@ -26,20 +24,20 @@ ms.locfileid: "49123339"
 
 | 要素                    | 説明                                                                           |
 | -------------------------- | ------------------------------------------------------------------------------------- |
-| **\<applicationSettings >** | すべてを含む**\<設定 >** アプリケーションに固有のタグ。                         |
-| **\<userSettings >**        | すべてが含まれます**\<設定 >** タグは、現在のユーザーを特定します。                        |
-| **\<設定 >**             | 設定を定義します。 いずれかの子 **\<applicationSettings >** または **\<userSettings >** します。 |
-| **\<value>**               | 設定の値を定義します。 子**\<設定 >** します。                                   |
+| **\<applicationSettings>** | **\<applicationSettings>\< すべてを含む** \<setting> アプリケーションに固有のタグ                         |
+| **\<userSettings>**        | **\<userSettings>\<  すべてが含まれます** \<setting> タグは、現在のユーザーを特定します                        |
+| **\<setting>**             | 設定を定義します。 いずれかの子 **\<applicationSettings >** または **\<userSettings>** します。 |
+| **\<value>**               | 設定の値を定義します。 設定の値を定義します。 子 **\<setting>** します。                                    |
 
-## <a name="applicationsettings-element"></a>\<applicationSettings > 要素
+## <a name="applicationsettings-element"></a>\<applicationSettings> 要素
 
-この要素には、すべてが含まれています**\<設定 >** クライアント コンピューターにアプリケーションのインスタンスに固有のタグ。 属性は定義されません。
+この要素には、すべてが含まれています **\<setting>** クライアント コンピューターにアプリケーションのインスタンスに固有のタグ 属性は定義されません。
 
-## <a name="usersettings-element"></a>\<userSettings > 要素
+## <a name="usersettings-element"></a>\<userSettings> 要素
 
-この要素には、すべてが含まれています**\<設定 >** アプリケーションが現在使用してユーザーに固有のタグ。 属性は定義されません。
+この要素には、すべてが含まれています **\<設定>** アプリケーションが現在使用してユーザーに固有のタグ。 属性は定義されません。
 
-## <a name="setting-element"></a>\<設定 > 要素
+## <a name="setting-element"></a>\<setting> 要素
 
 この要素は、設定を定義します。 次の属性があります。
 
@@ -48,7 +46,7 @@ ms.locfileid: "49123339"
 | **name**         | 必須。 設定の一意の ID。 Visual Studio で作成した設定は、名前で保存は`ProjectName.Properties.Settings`します。 |
 | **serializedAs** | 必須。 テキスト値をシリアル化するために使用する形式。 次の値を指定できます。<br><br>- `string`。 使用して文字列として値をシリアル化、<xref:System.ComponentModel.TypeConverter>します。<br>- `xml`。 値は、XML シリアル化を使用してシリアル化されます。<br>- `binary`。 値は、バイナリ シリアル化を使用して、テキスト エンコードされたバイナリとしてシリアル化されます。<br />- `custom`。 設定プロバイダーは、この設定の固有の情報しシリアル化し、逆シリアル化します。 |
 
-## <a name="value-element"></a>\<値 > 要素
+## <a name="value-element"></a>\<value> 要素
 
 この要素には、設定の値が含まれています。
 
@@ -92,5 +90,5 @@ ms.locfileid: "49123339"
 
 ## <a name="see-also"></a>関連項目
 
-[アプリケーション設定の概要](~/docs/framework/winforms/advanced/application-settings-overview.md)   
-[アプリケーション設定アーキテクチャ](~/docs/framework/winforms/advanced/application-settings-architecture.md)
+- [アプリケーション設定の概要](~/docs/framework/winforms/advanced/application-settings-overview.md)
+- [アプリケーション設定アーキテクチャ](~/docs/framework/winforms/advanced/application-settings-architecture.md)

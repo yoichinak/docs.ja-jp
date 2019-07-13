@@ -1,17 +1,15 @@
 ---
-title: Windows コンテナーとして既存の .NET アプリをデプロイします。
+title: Windows コンテナーとして既存の .NET アプリを展開する
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 |Windows コンテナーとして既存の .NET アプリをデプロイします。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/29/2018
-ms.openlocfilehash: 646acc6fd14c1ff85593dbf6074f0d03d86f04bd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ba9af3fc3a5bf285830bb873fa6a5da8390dc6b4
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143758"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758834"
 ---
-# <a name="deploy-existing-net-apps-as-windows-containers"></a>Windows コンテナーとして既存の .NET アプリをデプロイします。
+# <a name="deploy-existing-net-apps-as-windows-containers"></a>Windows コンテナーとして既存の .NET アプリを展開する
 
 基づく Windows コンテナーのデプロイでは、クラウドに最適化されたアプリケーションとクラウド ネイティブ アプリケーションに適用されます。
 
@@ -39,13 +37,13 @@ ms.locfileid: "53143758"
 
 多くの組織では、次の理由で既存のモノリシック アプリケーションをコンテナー化は。
 
--   **強化された展開による俊敏性をリリース**します。 コンテナーは、開発と運用の間で一貫したデプロイ コントラクトを提供します。 コンテナーを使用する場合と開発者が聞こえません、「機能は私のコンピューターでは、なぜ実稼働環境ででしょうか。」 できます言われるように、「実行のコンテナーとして運用環境で実行するためです」 すべての依存関係と共にパッケージ化されたアプリケーションは、サポートされているコンテナー ベースの環境で実行できます。 すべての展開ターゲット (開発、QA、ステージング、実稼働) で実行する方法は、実行されます。 1 つの段階から次に、展開を大幅に強化するに移動したときに、コンテナーがほとんどあつれきを排除し、すばやく出荷することができます。
+- **強化された展開による俊敏性をリリース**します。 コンテナーは、開発と運用の間で一貫したデプロイ コントラクトを提供します。 コンテナーを使用する場合と開発者が聞こえません、「機能は私のコンピューターでは、なぜ実稼働環境ででしょうか。」 できます言われるように、「実行のコンテナーとして運用環境で実行するためです」 すべての依存関係と共にパッケージ化されたアプリケーションは、サポートされているコンテナー ベースの環境で実行できます。 すべての展開ターゲット (開発、QA、ステージング、実稼働) で実行する方法は、実行されます。 1 つの段階から次に、展開を大幅に強化するに移動したときに、コンテナーがほとんどあつれきを排除し、すばやく出荷することができます。
 
--   **コスト削減**します。 コンテナーは、統合と既存のハードウェア、またはハードウェアの単位あたりのより高密度でアプリケーションを実行してから削除するか、コストの削減につながります。
+- **コスト削減**します。 コンテナーは、統合と既存のハードウェア、またはハードウェアの単位あたりのより高密度でアプリケーションを実行してから削除するか、コストの削減につながります。
 
--   **移植性**します。 コンテナーとは、モジュール化されたポータブルです。 Docker コンテナーは、任意のサーバー オペレーティング システム (Linux と Windows)、主要なパブリック クラウド (Microsoft Azure、Amazon AWS、Google、IBM) で、オンプレミス/プライベートまたはハイブリッド クラウド環境でサポートされます。
+- **移植性**します。 コンテナーとは、モジュール化されたポータブルです。 Docker コンテナーは、任意のサーバー オペレーティング システム (Linux と Windows)、主要なパブリック クラウド (Microsoft Azure、Amazon AWS、Google、IBM) で、オンプレミス/プライベートまたはハイブリッド クラウド環境でサポートされます。
 
--   **コントロール**します。 コンテナーは、コンテナー レベルで制御される柔軟かつセキュリティで保護された環境を提供します。 コンテナーのセキュリティで保護された、分離、およびコンテナーの実行ポリシーの制約を設定しても制限されています。 Windows コンテナーに関するセクションで詳細なとしては、Windows Server 2016 と HYPER-V コンテナーは、追加のエンタープライズ サポート オプションを提供します。
+- **コントロール**します。 コンテナーは、コンテナー レベルで制御される柔軟かつセキュリティで保護された環境を提供します。 コンテナーのセキュリティで保護された、分離、およびコンテナーの実行ポリシーの制約を設定しても制限されています。 Windows コンテナーに関するセクションで詳細なとしては、Windows Server 2016 と HYPER-V コンテナーは、追加のエンタープライズ サポート オプションを提供します。
 
 機敏性、移植性、およびコントロールで大幅に改善を開発およびアプリケーションを管理するコンテナーを使用すると、オブジェクトは最終的に大幅なコストの削減につながります。
 
@@ -123,18 +121,17 @@ HYPER-V による分離の有無で Windows コンテナーを実行すると、
 
 ### <a name="additional-resources"></a>その他の技術情報
 
--   **Windows コンテナーのドキュメント**
+- **Windows コンテナーのドキュメント**
 
-    [https://docs.microsoft.com/virtualization/windowscontainers/](https://docs.microsoft.com/virtualization/windowscontainers/)
+    <https://docs.microsoft.com/virtualization/windowscontainers/>
 
--   **Windows コンテナーの基礎**
+- **Windows コンテナーの基礎**
 
-    [https://docs.microsoft.com/virtualization/windowscontainers/about/](https://docs.microsoft.com/virtualization/windowscontainers/about/)
+    <https://docs.microsoft.com/virtualization/windowscontainers/about/>
 
--   **インフォ グラフィック:Microsoft とコンテナー**
+- **インフォ グラフィック:Microsoft とコンテナー**
 
-    [https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf](https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf)
-
+    <https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf>
 
 ## <a name="the-container-ecosystem-in-azure"></a>Azure でコンテナーのエコシステム
 
@@ -146,18 +143,17 @@ HYPER-V による分離の有無で Windows コンテナーを実行すると、
 > **図 4-7.5 です。** Azure でコンテナーのエコシステム
 
 Azure では、次の製品のインフラストラクチャと見なされるコンテナーをサポートしているコンテナーのエコシステム: から
--   **Azure Container Instances (ACI)**
--   **Azure の仮想マシン**(とコンテナーのサポート)
--   **Azure の仮想マシン スケール セット**(とコンテナーのサポート)
+- **Azure Container Instances (ACI)**
+- **Azure の仮想マシン**(とコンテナーのサポート)
+- **Azure の仮想マシン スケール セット**(とコンテナーのサポート)
 
 これらの 3 つから ACI は、基になる OS のアップグレード/修正などの必要はありませんを維持する必要はありませんが、ACI は、インフラストラクチャ レベルより、この本の次のセクションで説明したように配置がまだという事実は、非常に大きな利点を提供します。
 
 レベルの PaaS (サービスとしてのプラットフォーム) に複数配置と同時に、Azure のサポートのコンテナーでは、製品は次のとおりです。
 
--   **Azure App Service**
--   **Azure Kubernetes Service (AKS と ACS)**
--   **Azure Service Fabric** 
--   **Azure Batch** 
+- **Azure App Service**
+- **Azure Kubernetes Service (AKS と ACS)**
+- **Azure Batch** 
 
 次に、Azure Container Registry には、すべて、以前の製品から登録して、カスタム コンテナー イメージを展開するときに使用できる Azure でホストされている高スケーラブルなコンテナー レジストリです。
 

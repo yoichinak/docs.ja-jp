@@ -7,17 +7,15 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: d2bb4c9a00f31cb87ad8890591aa190fac6384f9
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: bfd901d10fe3158c1c5cb32c3a75f3bc15efd0ba
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261551"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64640928"
 ---
 # <a name="globalization-for-wpf"></a>WPF のグローバリゼーション
 このトピックで作成する際に注意する必要がある問題が発生する[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]グローバル市場向けアプリケーション。 グローバリゼーション プログラミングの要素がで定義されている[!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]で`System.Globalization`します。
-
-
 
 <a name="xaml_globalization"></a>
 ## <a name="xaml-globalization"></a>XAML グローバリゼーション
@@ -47,7 +45,7 @@ ms.locfileid: "48261551"
 
 <a name="lang_attrib"></a>
 ### <a name="language-attribute"></a>言語属性
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 使用して[xml:lang](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)を要素の language 属性を表します。  活用するために、<xref:System.Globalization.CultureInfo>クラス、言語属性の値で定義済みカルチャ名のいずれかを指定する必要がある<xref:System.Globalization.CultureInfo>します。 [xml:lang](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md) は要素ツリーで継承可能であり (XML ルールによる継承であり、必ずしも依存関係プロパティの継承によるものではありません)、その既定値は、明示的に割り当てられていない場合、空の文字列になります。
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 使用して[xml:lang](../../xaml-services/xml-lang-handling-in-xaml.md)を要素の language 属性を表します。  活用するために、<xref:System.Globalization.CultureInfo>クラス、言語属性の値で定義済みカルチャ名のいずれかを指定する必要がある<xref:System.Globalization.CultureInfo>します。 [xml:lang](../../xaml-services/xml-lang-handling-in-xaml.md) は要素ツリーで継承可能であり (XML ルールによる継承であり、必ずしも依存関係プロパティの継承によるものではありません)、その既定値は、明示的に割り当てられていない場合、空の文字列になります。
 
  言語属性は、方言を指定するときに非常に役立ちます。 たとえば、フランス語であれば、フランス、ケベック、ベルギー、スイスでスペル、語彙、発音が異なります。 中国語、日本語、および韓国語のコード ポイントを共有することも[!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)]が、表意文字の形が異なるため、まったく別のフォントを使用します。
 
@@ -71,59 +69,59 @@ ms.locfileid: "48261551"
 
  現在、次の書体がサポートされています。
 
--   アラビア語
+- アラビア語
 
--   ベンガル語
+- ベンガル語
 
--   デバナガリ
+- デバナガリ
 
--   キリル言語
+- キリル言語
 
--   ギリシャ語
+- ギリシャ語
 
--   グジャラート語
+- グジャラート語
 
--   グルムキー
+- グルムキー
 
--   ヘブライ語
+- ヘブライ語
 
--   表意文字スクリプト
+- 表意文字スクリプト
 
--   カナラ語
+- カナラ語
 
--   ラオス語
+- ラオス語
 
--   ラテン語
+- ラテン語
 
--   マラヤーラム語
+- マラヤーラム語
 
--   モンゴル語
+- モンゴル語
 
--   オディア語
+- オディア語
 
--   シリア語
+- シリア語
 
--   タミール語
+- タミール語
 
--   テルグ語
+- テルグ語
 
--   ターナ
+- ターナ
 
--   タイ語*
+- タイ語*
 
--   チベット語
+- チベット語
 
  * このリリースでは、タイ語テキストを表示し、編集できますが、単語を分割することはできません。
 
  現在、次のスクリプトはサポートされていません。
 
--   クメール語
+- クメール語
 
--   韓国語の古いハングル
+- 韓国語の古いハングル
 
--   ミャンマー
+- ミャンマー
 
--   シンハラ語
+- シンハラ語
 
  すべての書記体系エンジン サポート[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]フォント。 [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] フォントを含めることができます、[!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]より国際的およびハイエンドなタイポグラフィ フォントのデザイン、フォントの作成を有効にするレイアウト テーブル。 [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]フォント レイアウト テーブルは、テキストのレイアウトを向上させるためにテキスト処理アプリケーションを有効にするグリフ代用、グリフ配置、位置揃え、基線配置に関する情報を含めることができます。
 
@@ -135,9 +133,9 @@ ms.locfileid: "48261551"
 ### <a name="international-layout"></a>国際対応レイアウト
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では非常に便利な方法で横書きレイアウト、双方向レイアウト、縦書きレイアウトを作成できます。 プレゼンテーション フレームワークで、<xref:System.Windows.FrameworkElement.FlowDirection%2A>レイアウトを定義するプロパティを使用できます。 フローの方向パターン:
 
--   *LeftToRight* - ラテン語や東アジア言語などのための横書きレイアウト。
+- *LeftToRight* - ラテン語や東アジア言語などのための横書きレイアウト。
 
--   *RightToLeft* - アラビア語やヘブライ語などのための双方向レイアウト。
+- *RightToLeft* - アラビア語やヘブライ語などのための双方向レイアウト。
 
 <a name="developing_localizable_apps"></a>
 ## <a name="developing-localizable-applications"></a>ローカライズ可能なアプリケーションの開発
@@ -151,7 +149,7 @@ ms.locfileid: "48261551"
 ### <a name="localizable-user-interface"></a>ローカライズ可能なユーザー インターフェイス
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションを使用して、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]を定義する、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]します。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] で開発すると、オブジェクトの階層に一連のプロパティとロジックを指定できます。 主な用途[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]を開発する[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションが、これを使用して、任意の階層の指定[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]オブジェクト。 ほとんどの開発者が使用して[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]アプリケーションを指定する[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]c# などのプログラミング言語を使用して、ユーザーとの対話に応答するとします。
 
- リソースの観点から、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ファイルの説明の言語に依存するように設計[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]リソース要素は、そのため、最終的な配布形式が外国の言語にローカライズ可能にする必要があります。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]多くようにイベントが処理できない[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]アプリケーションは、これを行うコードのブロックを含めることができます。 詳細については、次を参照してください。 [XAML の概要 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)します。 コードが除去し、異なるバイナリにコンパイル時に、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ファイルが XAML の BAML 形式にトークン化します。 XAML ファイル、画像、その他の種類の管理対象リソース オブジェクトの BAML 形式はサテライト リソース アセンブリに組み込まれます。サテライト リソース アセンブリに組み込むことで、他の言語にローカライズできます。ローカライズが必要なければ、メイン アセンブリに組み込まれます。
+ リソースの観点から、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ファイルの説明の言語に依存するように設計[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]リソース要素は、そのため、最終的な配布形式が外国の言語にローカライズ可能にする必要があります。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]多くようにイベントが処理できない[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]アプリケーションは、これを行うコードのブロックを含めることができます。 詳細については、次を参照してください。 [XAML の概要 (WPF)](xaml-overview-wpf.md)します。 コードが除去し、異なるバイナリにコンパイル時に、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ファイルが XAML の BAML 形式にトークン化します。 XAML ファイル、画像、その他の種類の管理対象リソース オブジェクトの BAML 形式はサテライト リソース アセンブリに組み込まれます。サテライト リソース アセンブリに組み込むことで、他の言語にローカライズできます。ローカライズが必要なければ、メイン アセンブリに組み込まれます。
 
 > [!NOTE]
 >  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] すべてのアプリケーション サポート、 [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)] [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]文字列テーブルやイメージなどのリソース。
@@ -167,7 +165,7 @@ ms.locfileid: "48261551"
 
  使用する、アプリケーションでリソースをインスタンス化、<xref:System.Resources.ResourceManager>を使用するリソースを読み込むとします。 この方法を次の例に示します。
 
- [!code-csharp[LocalizationResources#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationResources/CSharp/page1.xaml.cs#2)]
+ [!code-csharp[LocalizationResources#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationResources/CSharp/page1.xaml.cs#2)]
 
 <a name="using_clickonce"></a>
 ## <a name="using-clickonce-with-localized-applications"></a>ローカライズされたアプリケーションで ClickOnce を使用する
@@ -181,4 +179,5 @@ ms.locfileid: "48261551"
 ```
 
 ## <a name="see-also"></a>関連項目
- [WPF のグローバリゼーションおよびローカリゼーションの概要](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)
+
+- [WPF のグローバリゼーションおよびローカリゼーションの概要](wpf-globalization-and-localization-overview.md)

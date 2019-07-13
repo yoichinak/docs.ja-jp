@@ -1,12 +1,12 @@
 ---
 title: $ (Visual Basic リファレンス)
 ms.date: 10/31/2017
-ms.openlocfilehash: f4651849241ec0ccf8052cc012ae97babd299e62
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1927e8277b0fdeda13d715b62c6e7cede28b3c52
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945159"
 ---
 # <a name="-visual-basic-reference"></a>$ (Visual Basic リファレンス)
 
@@ -18,6 +18,7 @@ ms.locfileid: "50183439"
 
 挿入文字列の詳細については、トピック「[挿入文字列](../../programming-guide/language-features/strings/interpolated-strings.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目  
- [Visual Basic リファレンス](../index.md)  
- [Visual Basic の特殊文字](index.md)
+## <a name="see-also"></a>関連項目
+
+- [Visual Basic リファレンス](../index.md)
+- [Visual Basic の特殊文字](index.md)

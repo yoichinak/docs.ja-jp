@@ -1,15 +1,15 @@
 ---
-title: '&lt;compositeDuplex&gt;'
+title: <compositeDuplex>
 ms.date: 03/30/2017
 ms.assetid: 725004d1-ce88-4405-a220-78e89844f81f
-ms.openlocfilehash: 4b84b4f2816dc68b7dcee784d957189728e5a4b2
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1e5ecc2b937aa0cdb159a6cbd1222fe6d4af79fb
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704181"
 ---
-# <a name="ltcompositeduplexgt"></a>&lt;compositeDuplex&gt;
+# <a name="compositeduplex"></a>\<compositeDuplex >
 サービスがメッセージをクライアントに返送するためのエンドポイントをクライアントが公開する必要がある場合に使用される、バインド要素を定義します。  
   
  \<system.serviceModel>  
@@ -53,11 +53,12 @@ ms.locfileid: "54149051"
 <compositeDuplex clientBaseAddress="http://www.contoso.com" />
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.CompositeDuplexElement>  
- <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [バインディング](../../../../../docs/framework/wcf/bindings.md)  
- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Configuration.CompositeDuplexElement>
+- <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [バインディング](../../../../../docs/framework/wcf/bindings.md)
+- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

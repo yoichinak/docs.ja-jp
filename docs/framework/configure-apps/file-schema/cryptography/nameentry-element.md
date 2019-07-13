@@ -1,5 +1,5 @@
 ---
-title: '&lt;nameEntry&gt;要素'
+title: <nameEntry> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#nameEntry
@@ -8,23 +8,21 @@ helpviewer_keywords:
 - <nameEntry> element
 - nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f5d53debd746ba031e39215354c391d288016b6b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 97521ba9073820beeea62f5fc7cab480b5422fb0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705182"
 ---
-# <a name="ltnameentrygt-element"></a>&lt;nameEntry&gt;要素
+# <a name="nameentry-element"></a>\<nameEntry > 要素
 アルゴリズムの表示名にクラス名をマップして、1 つのクラスが多くの表示名を持つことを許可します。  
   
  \<configuration>  
-\<mscorlib >  
+\<mscorlib>  
 \<cryptographySettings >  
-\<cryptoNameMapping >  
-\<nameEntry >  
+\<cryptoNameMapping>  
+\<nameEntry>  
   
 ## <a name="syntax"></a>構文  
   
@@ -77,8 +75,9 @@ ms.locfileid: "50201359"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [暗号化設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)  
+## <a name="see-also"></a>関連項目
+
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [暗号化設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
 - [暗号化クラスの設定](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

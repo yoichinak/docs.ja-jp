@@ -1,25 +1,25 @@
 ---
-title: '方法 : StackPanel を作成する'
+title: '方法: StackPanel を作成する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - StackPanel control [WPF], creating
 ms.assetid: e7ce65cb-720a-4bb6-95b6-286b74488a58
-ms.openlocfilehash: 30f24d8dba7c09271a5957822439af6b64e05aca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bcf6decff2fbc012b5f8b62794f0d7b2cd9f29fc
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051002"
 ---
-# <a name="how-to-create-a-stackpanel"></a>方法 : StackPanel を作成する
-この例を作成する方法を示しています、<xref:System.Windows.Controls.StackPanel>です。  
+# <a name="how-to-create-a-stackpanel"></a>方法: StackPanel を作成する
+この例は、作成する方法を示します、<xref:System.Windows.Controls.StackPanel>します。  
   
 ## <a name="example"></a>例  
- A<xref:System.Windows.Controls.StackPanel>指定した方向に要素をスタックすることができます。 定義されているプロパティを使用して<xref:System.Windows.Controls.StackPanel>、コンテンツ フローできます両方垂直方向には、これは既定の設定、または水平方向にします。  
+ A<xref:System.Windows.Controls.StackPanel>すると、指定した方向に要素を積み重ねることができます。 定義されているプロパティを使用して<xref:System.Windows.Controls.StackPanel>、コンテンツ流し込むことができます垂直方向に、これは、既定の設定、または水平方向にします。  
   
- 5 は、次の例が垂直方向に積み上げ<xref:System.Windows.Controls.TextBlock>制御する場合に、それぞれ異なる<xref:System.Windows.Controls.Border>と<xref:System.Windows.Controls.Border.Background%2A>を使用して<xref:System.Windows.Controls.StackPanel>です。 指定されて子要素<xref:System.Windows.FrameworkElement.Width%2A>stretch を親ウィンドウです。 ただし、子要素がある、指定した<xref:System.Windows.FrameworkElement.Width%2A>、ウィンドウ内で中央揃えで配置しません。  
+ 次の例を垂直に積み重ねます 5<xref:System.Windows.Controls.TextBlock>制御する場合に、それぞれ異なる<xref:System.Windows.Controls.Border>と<xref:System.Windows.Controls.Border.Background%2A>を使用して<xref:System.Windows.Controls.StackPanel>します。 子要素を持つ指定されていない<xref:System.Windows.FrameworkElement.Width%2A>に親ウィンドウに合わせて伸縮。 ただし、子要素がある、指定した<xref:System.Windows.FrameworkElement.Width%2A>、ウィンドウ内で中央揃えされます。  
   
- 既定のスタック方向、<xref:System.Windows.Controls.StackPanel>は縦方向です。 コントロールのコンテンツ フローに、<xref:System.Windows.Controls.StackPanel>を使用して、<xref:System.Windows.Controls.StackPanel.Orientation%2A>プロパティです。 使用して、水平方向の配置を制御することができます、<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>プロパティです。  
+ 既定のスタック方向、<xref:System.Windows.Controls.StackPanel>が垂直方向。 コンテンツの流れを制御する、<xref:System.Windows.Controls.StackPanel>を使用して、<xref:System.Windows.Controls.StackPanel.Orientation%2A>プロパティ。 使用して水平方向の配置を制御することができます、<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>プロパティ。  
   
 ```xaml  
 <Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" WindowTitle="StackPanel Sample">  
@@ -43,7 +43,8 @@ ms.locfileid: "33553028"
 </Page>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Controls.StackPanel>  
- [パネルの概要](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [方法トピック](../../../../docs/framework/wpf/controls/stackpanel-how-to-topics.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Controls.StackPanel>
+- [パネルの概要](panels-overview.md)
+- [方法トピック](stackpanel-how-to-topics.md)

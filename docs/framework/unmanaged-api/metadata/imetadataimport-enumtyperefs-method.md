@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b8a4fe2a65244156abe1bb0da4266f949ddd3df6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f6af4c1d6eb9c305358573b06da164e2344ff46e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447074"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774620"
 ---
 # <a name="imetadataimportenumtyperefs-method"></a>IMetaDataImport::EnumTypeRefs メソッド
 現在のメタデータ スコープに定義されている TypeRef トークンを列挙します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EnumTypeRefs (  
    [in, out] HCORENUM    *phEnum,   
    [out] mdTypeRef       rTypeRefs[],  
@@ -38,38 +38,39 @@ HRESULT EnumTypeRefs (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [入力、出力].列挙子へのポインター。 このメソッドの最初の呼び出しで NULL があります。  
+ [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しで NULL があります。  
   
  `rTypeRefs`  
- [out]TypeRef トークンを格納する配列。  
+ [out]TypeRef トークンを格納するために使用する配列。  
   
  `cMax`  
  [in] `rTypeRefs` 配列の最大サイズ。  
   
  `pcTypeRefs`  
- [out]返される TypeRef トークンの数へのポインター`rTypeRefs`です。  
+ [out]返される TypeRef トークンの数へのポインター`rTypeRefs`します。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
 |`S_OK`|`EnumTypeRefs` 正常に返されます。|  
-|`S_FALSE`|列挙するトークンがありません。 その場合は、`pcTypeRefs`ゼロです。|  
+|`S_FALSE`|トークンを列挙することはありません。 その場合は、`pcTypeRefs`は 0 です。|  
   
-## <a name="remarks"></a>コメント  
- TypeRef トークンでは、型への参照を表します。  
+## <a name="remarks"></a>Remarks  
+ TypeRef トークンは、型への参照を表します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

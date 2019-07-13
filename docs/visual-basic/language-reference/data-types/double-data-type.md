@@ -19,12 +19,12 @@ helpviewer_keywords:
 - zeros, trailing
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-ms.openlocfilehash: 5d2d84f298b9cf6138e84ef287f6ea9212da2960
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 6273f6c9e71f286bdbebc3fe1953988b43de3101
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44180229"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663203"
 ---
 # <a name="double-data-type-visual-basic"></a>倍精度浮動小数点数型 (Double) (Visual Basic)
 -- をから IEEE の 64 ビット (8 バイト) の倍精度浮動小数点数の符号付き 4.94065645841246544E-負の値と 4.94065645841246544E から 324-324 1.79769313486231570 e + 308 ~正の値。 倍精度数値には、実数の概数が格納されます。  
@@ -36,11 +36,11 @@ ms.locfileid: "44180229"
   
 ## <a name="programming-tips"></a>プログラミングのヒント  
   
--   **有効桁数です。** 浮動小数点数を使用するときに、常にないことを正確に表現メモリ内に注意してください。 値の比較などの特定の操作から予期しない結果に可能性と`Mod`演算子。 詳細については、次を参照してください。[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)します。  
+- **有効桁数です。** 浮動小数点数を使用するときに、常にないことを正確に表現メモリ内に注意してください。 値の比較などの特定の操作から予期しない結果に可能性と`Mod`演算子。 詳細については、次を参照してください。[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)します。  
   
--   **後続のゼロ。** 浮動小数点データ型には、末尾のゼロの文字の任意の内部表現はありません。 たとえば、これらは区別されません 4.2000 および 4.2 します。 その結果、末尾のゼロは表示されません表示した場合、または印刷の浮動小数点値。  
+- **後続のゼロ。** 浮動小数点データ型には、末尾のゼロの文字の任意の内部表現はありません。 たとえば、これらは区別されません 4.2000 および 4.2 します。 その結果、末尾のゼロは表示されません表示した場合、または印刷の浮動小数点値。  
   
--   **型宣言文字。** あるリテラルにリテラルの型文字 `R` を付けると、そのリテラルは `Double` に変換されます。 たとえば、整数値が続く場合`R`に値が変更された、`Double`します。  
+- **型宣言文字。** あるリテラルにリテラルの型文字 `R` を付けると、そのリテラルは `Double` に変換されます。 たとえば、整数値が続く場合`R`に値が変更された、`Double`します。  
   
     ```  
     ' Visual Basic expands the 4 in the statement Dim dub As Double = 4R to 4.0:  
@@ -53,15 +53,16 @@ ms.locfileid: "44180229"
     Dim num# = 3  
     ```  
   
--   **フレームワークの型。** .NET Framework において対応する型は、<xref:System.Double?displayProperty=nameWithType> 構造体です。  
+- **フレームワークの型。** .NET Framework において対応する型は、<xref:System.Double?displayProperty=nameWithType> 構造体です。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Double?displayProperty=nameWithType>  
- [データの種類](../../../visual-basic/language-reference/data-types/index.md)  
- [Decimal データ型](../../../visual-basic/language-reference/data-types/decimal-data-type.md)  
- [Single データ型](../../../visual-basic/language-reference/data-types/single-data-type.md)  
- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
- [トラブルシューティング (データ型)](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [型文字](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Double?displayProperty=nameWithType>
+- [データの種類](../../../visual-basic/language-reference/data-types/index.md)
+- [Decimal データ型](../../../visual-basic/language-reference/data-types/decimal-data-type.md)
+- [Single データ型](../../../visual-basic/language-reference/data-types/single-data-type.md)
+- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [トラブルシューティング (データ型)](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [型文字](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)

@@ -16,18 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f6909fa426fa952c0918638f40a571393c651e8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 18197f0c500a205a66bdda8a9401f31d4208ae67
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780433"
 ---
 # <a name="corprfclausetype-enumeration"></a>COR_PRF_CLAUSE_TYPE 列挙型
 コードが入った、または出た例外句のタイプを示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum {  
     COR_PRF_CLAUSE_NONE = 0,  
     COR_PRF_CLAUSE_FILTER = 1,  
@@ -40,19 +41,20 @@ typedef enum {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`COR_PRF_CLAUSE_NONE`|例外句が正しくありません。|  
-|`COR_PRF_CLAUSE_FILTER`|例外句は、フィルター式です。|  
-|`COR_PRF_CLAUSE_CATCH`|例外句は、`catch`ステートメントです。|  
-|`COR_PRF_CLAUSE_FINALLY`|例外句は、`finally`ステートメントです。|  
+|`COR_PRF_CLAUSE_NONE`|例外の句が無効です。|  
+|`COR_PRF_CLAUSE_FILTER`|例外の句は、フィルター式です。|  
+|`COR_PRF_CLAUSE_CATCH`|例外の句は、`catch`ステートメント。|  
+|`COR_PRF_CLAUSE_FINALLY`|例外の句は、`finally`ステートメント。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー** : CorProf.idl、CorProf.h  
+ **ヘッダー:** CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [列挙型のプロファイリング](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>関連項目
+
+- [列挙型のプロファイリング](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

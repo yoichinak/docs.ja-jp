@@ -4,16 +4,16 @@ description: .NET Core において dotnet test コマンドでフィルター�
 author: smadala
 ms.date: 03/22/2017
 ms.custom: seodec18
-ms.openlocfilehash: 2ec6dc770f33acc4acea79e60cf6f9c33f1077d8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6160a8b9184d031fcc06356b5b489ee24b765e84
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239944"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201418"
 ---
 # <a name="running-selective-unit-tests"></a>選択的単体テストの実行
 
-.NET Core で `dotnet test` コマンドを使用することで、フィルター式を使用して、選択的テストを実行することができます。 この記事では、実行するテストをフィルター処理する方法を示します。 次の例では、`dotnet test` を使用します。 `vstest.console.exe` を使用している場合は、`--filter ` を `--testcasefilter:` に置き換えます。
+.NET Core で `dotnet test` コマンドを使用することで、フィルター式を使用して、選択的テストを実行することができます。 この記事では、実行するテストをフィルター処理する方法を示します。 次の例では、`dotnet test` を使用します。 `vstest.console.exe` を使用している場合は、`--filter` を `--testcasefilter:` に置き換えます。
 
 ## <a name="mstest"></a>MSTest
 

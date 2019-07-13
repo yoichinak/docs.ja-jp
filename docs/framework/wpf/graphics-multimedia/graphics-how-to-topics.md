@@ -8,31 +8,32 @@ helpviewer_keywords:
 - graphics [WPF], how-to topics
 - visual effects [WPF]
 ms.assetid: 959cb1cc-d26c-4bbc-b637-251091987288
-ms.openlocfilehash: f566b5139f839ae37b90c4ea30a4bdfafa696ede
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3ddcb0b68e2b86393775c159a06f4c38dc7b6971
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762229"
 ---
 # <a name="graphics-how-to-topics"></a>グラフィックスに関する「方法」トピック
-次のトピックでは、グラフィックの機能を使用する方法、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]です。  
+次のトピックのグラフィック機能を使用する方法について説明、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [四角形をアニメーション化する](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle.md)  
- [PointAnimation を使用してオブジェクトの位置をアニメーション化する](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
- [点およびベクターを変換する](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-points-and-vectors.md)  
- [WPF アプリケーションへのグラス フレームの拡張](../../../../docs/framework/wpf/graphics-multimedia/extend-glass-frame-into-a-wpf-application.md)  
- [方法: 要素をキャッシュしてレンダリングのパフォーマンスを向上させる](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)  
- [方法: キャッシュされた要素をブラシとして使用する](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-cached-element-as-a-brush.md)  
+ [四角形をアニメーション化する](how-to-animate-a-rectangle.md)  
+ [PointAnimation を使用してオブジェクトの位置をアニメーション化する](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
+ [点およびベクターを変換する](how-to-transform-points-and-vectors.md)  
+ [WPF アプリケーションへのグラス フレームの拡張](extend-glass-frame-into-a-wpf-application.md)  
+ [方法: 要素をキャッシュしてレンダリングのパフォーマンスを向上させる](how-to-improve-rendering-performance-by-caching-an-element.md)  
+ [方法: キャッシュされた要素をブラシとして使用します。](how-to-use-a-cached-element-as-a-brush.md)  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Shapes.Shape>  
- <xref:System.Windows.Media.Transform>  
- <xref:System.Windows.Media.Imaging.BitmapImage>  
- <xref:System.Windows.Media.Geometry>  
- <xref:System.Windows.Media.Drawing>  
- <xref:System.Windows.Media.Brush>  
- <xref:System.Windows.Media.Effects.BitmapEffect>  
- [グラフィックスとマルチメディア](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [WPF グラフィックス レンダリングの概要](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Shapes.Shape>
+- <xref:System.Windows.Media.Transform>
+- <xref:System.Windows.Media.Imaging.BitmapImage>
+- <xref:System.Windows.Media.Geometry>
+- <xref:System.Windows.Media.Drawing>
+- <xref:System.Windows.Media.Brush>
+- <xref:System.Windows.Media.Effects.BitmapEffect>
+- [グラフィックスとマルチメディア](index.md)
+- [WPF グラフィックス レンダリングの概要](wpf-graphics-rendering-overview.md)

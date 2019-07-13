@@ -8,24 +8,24 @@ f1_keywords:
 helpviewer_keywords:
 - const keyword [C#]
 ms.assetid: 79eb447c-117b-4418-933f-97c50aa472db
-ms.openlocfilehash: 63fb86ed24dd4e30d3783d70e3249b9f8e5e20bd
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 7cf4fc52691565a850b4f34574828ad4e043998e
+ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245523"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58307890"
 ---
 # <a name="const-c-reference"></a>const (C# リファレンス)
 
-定数フィールドまたはローカル定数を宣言するには、`const` キーワードを使用します。 定数フィールドとローカルは変数でないため、変更できません。 定数には、数字、ブール値、文字列、または null 参照が含まれます。 いずれかの時点で変わることが予想される情報を表すために定数を作成してはなりません。 たとえば、サービスの価格、製品バージョン番号、会社のブランド名などを格納するためには定数フィールドを使用しないでください。 これらの値は時間の経過とともに変更される場合があります。コンパイラは定数を伝達するため、ライブラリでコンパイルされた他のコードを再コンパイルして、変更点を反映することが必要になってしまいます。 [readonly](../../../csharp/language-reference/keywords/readonly.md) キーワードも参照してください。 例:
+定数フィールドまたはローカル定数を宣言するには、`const` キーワードを使用します。 定数フィールドとローカルは変数でないため、変更できません。 定数には、数字、ブール値、文字列、または null 参照が含まれます。 いずれかの時点で変わることが予想される情報を表すために定数を作成してはなりません。 たとえば、サービスの価格、製品バージョン番号、会社のブランド名などを格納するためには定数フィールドを使用しないでください。 これらの値は時間の経過とともに変更される場合があります。コンパイラは定数を伝達するため、ライブラリでコンパイルされた他のコードを再コンパイルして、変更点を反映することが必要になってしまいます。 [readonly](../../../csharp/language-reference/keywords/readonly.md) キーワードも参照してください。 次に例を示します。
 
 ```csharp
-const int x = 0;
-public const double gravitationalConstant = 6.673e-11;
-private const string productName = "Visual C#";
+const int X = 0;
+public const double GravitationalConstant = 6.673e-11;
+private const string ProductName = "Visual C#";
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 定数宣言の型は、宣言で導入されるメンバーの型を指定します。 ローカル定数または定数フィールドの初期化子は、ターゲット型に暗黙に変換できる定数式であることが必要です。
 
@@ -34,7 +34,7 @@ private const string productName = "Visual C#";
 定数宣言は、複数の定数を宣言できます。たとえば、次のように宣言できます。
 
 ```csharp
-public const double x = 1.0, y = 2.0, z = 3.0;
+public const double X = 1.0, Y = 2.0, Z = 3.0;
 ```
 
 `static` 修飾子は、定数宣言では使用できません。
@@ -42,8 +42,8 @@ public const double x = 1.0, y = 2.0, z = 3.0;
 定数は、次に示すように、定数式の一部になることができます。
 
 ```csharp
-public const int c1 = 5;
-public const int c2 = c1 + 100;
+public const int C1 = 5;
+public const int C2 = C1 + 100;
 ```
 
 > [!NOTE]
@@ -65,8 +65,8 @@ public const int c2 = c1 + 100;
 
 ## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
-- [修飾子](../../../csharp/language-reference/keywords/modifiers.md)  
+- [C# リファレンス](../../../csharp/language-reference/index.md)
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)
+- [修飾子](../../../csharp/language-reference/keywords/modifiers.md)
 - [readonly](../../../csharp/language-reference/keywords/readonly.md)

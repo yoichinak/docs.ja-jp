@@ -5,12 +5,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolBar control [Windows Forms]
 ms.assetid: 6b40e9ce-6a7a-4784-bfc9-7f1d36b7462e
-ms.openlocfilehash: 8162dfc898f7965d65de918d2a5b1f7afbfdf9b2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 3f0a1b6a7f83753ccae1a129528ed320a2613122
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009548"
 ---
 # <a name="toolbar-control-windows-forms"></a>ToolBar コントロール (Windows フォーム)
 > [!NOTE]
@@ -22,27 +22,27 @@ ms.locfileid: "43863284"
 >  `ToolBar` コントロールの <xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A> プロパティは、<xref:System.Windows.Forms.ContextMenu> クラスのインスタンスを参照として取得します。 このプロパティは <xref:System.Windows.Forms.Menu> クラスから継承する任意のオブジェクトを受け入れるため、アプリケーションのツールバーにこの種類のボタンを実装する場合は、渡す参照を慎重に検討してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ToolBar コントロールの概要](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)  
+ [ToolBar コントロールの概要](toolbar-control-overview-windows-forms.md)  
  ユーザーが操作できるカスタム ツールバーを設計できる、`ToolBar` コントロールの一般的な概念について説明します。  
   
- [方法: ツール バー コントロールにボタンを追加する](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)  
+ [方法: ツール バー コントロールにボタンを追加します。](how-to-add-buttons-to-a-toolbar-control.md)  
  ボタンを `ToolBar` コントロールに追加する方法について説明します。  
   
- [方法: ツール バー ボタンのアイコンを定義する](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)  
+ [方法: ツール バー ボタンのアイコンを定義します。](how-to-define-an-icon-for-a-toolbar-button.md)  
  アイコンを `ToolBar` コントロールのボタン内に表示する方法について説明します。  
   
- [方法: ツール バー ボタンのメニュー イベントをトリガーする](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
+ [方法: ツール バー ボタンのメニュー イベントのトリガー](how-to-trigger-menu-events-for-toolbar-buttons.md)  
  `ToolBar` コントロールでユーザーがクリックするボタンを解釈するコードの記述方法について説明します。  
   
- 参照してください[方法: ツールバー ボタンを使用して、デザイナーのアイコンを定義](how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md)、[方法: ツール バー コントロールを使用して、デザイナーにボタンを追加](how-to-add-buttons-to-a-toolbar-control-using-the-designer.md)します。  
+ 参照してください[方法。デザイナーを使用してツール バー ボタンのアイコンを定義する](how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md)、[方法。デザイナーを使用してツール バー コントロールにボタンを追加](how-to-add-buttons-to-a-toolbar-control-using-the-designer.md)します。  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Forms.ToolBar> クラス  
  クラスとそのメンバーに関するリファレンス情報を提供します。  
   
 ## <a name="related-sections"></a>関連項目  
- [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)  
  Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。  
   
- [ToolStrip コントロール](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
+ [ToolStrip コントロール](toolstrip-control-windows-forms.md)  
  Windows フォーム アプリケーションでメニュー、コントロール、およびユーザー コントロールをホストするツールバーについて説明します。

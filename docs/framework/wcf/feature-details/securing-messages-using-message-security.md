@@ -2,12 +2,12 @@
 title: メッセージ セキュリティを使用したメッセージのセキュリティ保護
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: ff1d488e58be64f31836587c8893ba608ccd821b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: cf014c8aa972c45140a523573b9806996062b40f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991030"
 ---
 # <a name="securing-messages-using-message-security"></a>メッセージ セキュリティを使用したメッセージのセキュリティ保護
 このセクションを使用する場合、WCF メッセージ セキュリティをについて説明します<xref:System.ServiceModel.NetMsmqBinding>します。  
@@ -63,8 +63,9 @@ ms.locfileid: "50202030"
 ## <a name="using-transport-and-message-security"></a>トランスポート セキュリティとメッセージ セキュリティの使用  
  トランスポート セキュリティとメッセージ セキュリティの両方を使用する場合は、トランスポート レベルと SOAP メッセージ レベルの両方で同じ証明書を使用してメッセージを保護する必要があります。  
   
-## <a name="see-also"></a>関連項目  
- [トランスポート セキュリティを使用したメッセージのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
- [メッセージ キューを介したメッセージ セキュリティ](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
- [セキュリティの概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- [サービスおよびクライアントのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>関連項目
+
+- [トランスポート セキュリティを使用したメッセージのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
+- [メッセージ キューを介したメッセージ セキュリティ](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
+- [セキュリティの概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+- [サービスおよびクライアントのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding elements [WCF]
 ms.assetid: 765ff77b-7682-4ea3-90eb-e4d751e37379
-ms.openlocfilehash: ca013c939e3db2136ffa1504ae0eedd7b870d773
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.openlocfilehash: eae78220196395ba3002141f01d554f2335a1f28
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982829"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613357"
 ---
 # <a name="bindings-and-binding-elements"></a>バインディングとバインド要素
 バインドと呼ばれる特別な構成要素のコレクションが、*バインド要素*場合は常に、サービス ランタイムによって評価される、または、サービス エンドポイントが構築されます。 バインディング内のバインド要素の型と順序に基づいて、エンドポイントのチャネル スタック内のプロトコル チャネルとトランスポート チャネルが選択され、スタック順が決定されます。  
@@ -21,15 +21,14 @@ ms.locfileid: "50982829"
 ## <a name="extending-bindings-and-binding-elements"></a>バインディングとバインド要素の拡張  
  Windows Communication Foundation (WCF) には、さまざまなシナリオに対応するシステム指定のバインディングが含まれています。 (詳細については、次を参照してください[System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md)。)。あります、ただし、作成および WCF で含まれていないバインディングを使用する必要がある場合。 次のシナリオでは、新しいバインディングを作成する必要があります。  
   
--   新しいバインド要素 (新しいトランスポート バインド要素、エンコード バインド要素、またはプロトコル バインド要素) を使用する場合。そのバインド要素を含む新しいバインディングを作成する必要があります。 たとえば、UDP トランスポートのためのカスタム `UdpTransportBindingElement` を追加した場合は、そのカスタム バインド要素を使用する新しいバインディングを作成する必要があります。 使用してこの動作を実行する方法については、<xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>入力を参照してください[カスタム バインド](../../../../docs/framework/wcf/extending/custom-bindings.md)します。  
+- 新しいバインド要素 (新しいトランスポート バインド要素、エンコード バインド要素、またはプロトコル バインド要素) を使用する場合。そのバインド要素を含む新しいバインディングを作成する必要があります。 たとえば、UDP トランスポートのためのカスタム `UdpTransportBindingElement` を追加した場合は、そのカスタム バインド要素を使用する新しいバインディングを作成する必要があります。 使用してこの動作を実行する方法については、<xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>入力を参照してください[カスタム バインド](../../../../docs/framework/wcf/extending/custom-bindings.md)します。  
   
--   パブリック プロパティでシステム指定のバインディングが公開されないように既存のバインド要素を構成する場合。 たとえば、署名操作と暗号化操作の実行順序を変更するには、新しいバインディングを作成する必要があります。 この動作を実行する方法の詳細については、次を参照してください。[方法: システム指定のバインディングをカスタマイズ](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)します。  
+- パブリック プロパティでシステム指定のバインディングが公開されないように既存のバインド要素を構成する場合。 たとえば、署名操作と暗号化操作の実行順序を変更するには、新しいバインディングを作成する必要があります。 この動作を実行する方法の詳細については、次を参照してください。[方法。システム指定のバインディングをカスタマイズ](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)します。  
   
--   特定の構成オプションだけを公開する、企業の標準バインディングを確立する場合。 たとえば、社内用にセキュリティを無効にできない <xref:System.ServiceModel.WSHttpBinding> のバリエーションを作成するには、<xref:System.ServiceModel.WSHttpBinding> のように動作し、セキュリティが常に有効になる新しいバインディングを作成します。 詳細については、次を参照してください。[ユーザー定義バインディング](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)します。  
+- 特定の構成オプションだけを公開する、企業の標準バインディングを確立する場合。 たとえば、社内用にセキュリティを無効にできない <xref:System.ServiceModel.WSHttpBinding> のバリエーションを作成するには、<xref:System.ServiceModel.WSHttpBinding> のように動作し、セキュリティが常に有効になる新しいバインディングを作成します。 詳細については、次を参照してください。[ユーザー定義バインディング](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)します。  
   
--   特定のカスタム バインド要素を状況に応じて構成または使用するようにメタデータをカスタマイズする場合。 メタデータのサポートを提供するバインディングとバインド要素の詳細については、次を参照してください。[構成とメタデータのサポート](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)します。  
-  
-  
+- 特定のカスタム バインド要素を状況に応じて構成または使用するようにメタデータをカスタマイズする場合。 メタデータのサポートを提供するバインディングとバインド要素の詳細については、次を参照してください。[構成とメタデータのサポート](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)します。  
+
 ## <a name="channels-bindings-and-binding-elements"></a>チャネル、バインディング、およびバインド要素  
  バインディングとバインド要素は、属性と動作を含むアプリケーション プログラミング モデルと、ファクトリとリスナー、メッセージ エンコーダー、およびトランスポートとプロトコルの実装を含むチャネル モデルを結び付けます。 通常、バインド要素とバインディングは、アプリケーション層で使用されるチャネルを有効にするために実装されます。  
   

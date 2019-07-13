@@ -18,12 +18,12 @@ helpviewer_keywords:
 - else directive (#else)
 - '#Else directive [Visual Basic]'
 ms.assetid: 10bba104-e3fd-451b-b672-faa472530502
-ms.openlocfilehash: c98868e16fc609a49721724fdd32221a380ff834
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8c0aece749edf144fdd5c8ede9ec7e2e4c96ad54
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746743"
 ---
 # <a name="ifthenelse-directives"></a>#If...Then...#Else ディレクティブ
 選択した Visual Basic のコード ブロックを条件付きでコンパイルします。  
@@ -78,12 +78,11 @@ ms.locfileid: "50182893"
 ## <a name="example"></a>例
  この例では、`#If...Then...#Else`コンストラクトを特定のステートメントをコンパイルするかどうかを判断します。  
   
- [!code-vb[VbVbalrConditionalComp#1](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/if-then-else-directives_1.vb)]  
+ [!code-vb[VbVbalrConditionalComp#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#1)]  
   
-## <a name="see-also"></a>関連項目  
-[#Const ディレクティブ](../../../visual-basic/language-reference/directives/const-directive.md)  
-[If...Then...Else ステートメント](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
-[条件付きコンパイル](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)   
-<xref:System.Diagnostics.ConditionalAttribute?displayProperty=nameWithType>   
+## <a name="see-also"></a>関連項目
 
-
+- [#Const ディレクティブ](../../../visual-basic/language-reference/directives/const-directive.md)
+- [If...Then...Else ステートメント](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+- [条件付きコンパイル](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+- <xref:System.Diagnostics.ConditionalAttribute?displayProperty=nameWithType>

@@ -5,18 +5,16 @@ helpviewer_keywords:
 - best practices for accessibility
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: a7f3a13d05b8a3c4554810655bbda670efb2b3fd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 25fc2a54d958c221c866d657ccabc5a9aee64fe9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191078"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647232"
 ---
 # <a name="accessibility-best-practices"></a>ユーザー補助のベスト プラクティス
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]に関する最新情報については[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)をご覧ください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
  コントロールやアプリケーションで以下のベスト プラクティスを実行すると、 [!INCLUDE[TLA#tla_at](../../../includes/tlasharptla-at-md.md)] デバイスを使用するユーザーのアクセシビリティ が向上します。 これらのベスト プラクティスの多くは [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] に適した設計を中心としています。 各ベスト プラクティスには、 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] コントロールまたはアプリケーションの実装の情報が含まれています。 多くの場合、これらのベスト プラクティスに対応する作業は既に [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] コントロールに含まれています。  
   
@@ -80,9 +78,9 @@ ms.locfileid: "50191078"
   
  アプリケーションは、次のキーボード インターフェイスを備えている必要があります。  
   
--   ボタン、リンク、またはリスト ボックスなど、ユーザーが操作できるすべてのコントロールのタブ ストップ  
+- ボタン、リンク、またはリスト ボックスなど、ユーザーが操作できるすべてのコントロールのタブ ストップ  
   
--   論理的なタブの順序  
+- 論理的なタブの順序  
   
 <a name="Show_the_Keyboard_Focus"></a>   
 ### <a name="show-the-keyboard-focus"></a>キーボード フォーカスの表示  
@@ -92,11 +90,11 @@ ms.locfileid: "50191078"
   
  アプリケーションは、キーボード フォーカスで以下を行う必要があります。  
   
--   1 つの項目が常にキーボード フォーカスされている必要がある  
+- 1 つの項目が常にキーボード フォーカスされている必要がある  
   
--   キーボード フォーカスは明確に表示されている必要がある  
+- キーボード フォーカスは明確に表示されている必要がある  
   
--   選択項目またはフォーカスされた項目は視覚的に強調表示されている必要がある  
+- 選択項目またはフォーカスされた項目は視覚的に強調表示されている必要がある  
   
 <a name="Support_Navigation_Standards_and_Powerful_Navigation"></a>   
 ### <a name="support-navigation-standards-and-powerful-navigation-schemes"></a>ナビゲーションの標準と強力なナビゲーション スキームをサポートする  
@@ -104,11 +102,11 @@ ms.locfileid: "50191078"
   
  アプリケーションは、次のキーボード インターフェイスを備えている必要があります。  
   
--   すべてのコマンド、メニュー、およびコントロール用のショートカット キーと下線付きのアクセス キー  
+- すべてのコマンド、メニュー、およびコントロール用のショートカット キーと下線付きのアクセス キー  
   
--   重要なリンクへのキーボード ショートカット  
+- 重要なリンクへのキーボード ショートカット  
   
--   すべてのメニュー項目にアクセス キーがあり、すべてのボタンにアクセラレータ キーがあり、すべてのコマンドにアクセラレータ キーがある  
+- すべてのメニュー項目にアクセス キーがあり、すべてのボタンにアクセラレータ キーがあり、すべてのコマンドにアクセラレータ キーがある  
   
 <a name="Do_not_let_Mouse_Location_Interfere_with_Keyboard"></a>   
 ### <a name="do-not-let-mouse-location-interfere-with-keyboard-navigation"></a>マウスの位置がキーボード ナビゲーションと干渉しないようにする  
@@ -132,7 +130,8 @@ ms.locfileid: "50191078"
 ### <a name="use-standard-input-apis-with-device-independent-calls"></a>デバイスに依存しない呼び出しで標準の入力 API を使用する  
  デバイスに依存しない呼び出しは、キーボードとマウスの機能が同等であることを保証する一方、 [!INCLUDE[TLA2#tla_at](../../../includes/tla2sharptla-at-md.md)] に関する必要な情報を [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]に提供します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Automation.Peers>  
- [NumericUpDown Custom Control with Theme and UI Automation Support Sample](https://msdn.microsoft.com/library/9aed3c10-68eb-419e-a57f-1d2af15a8253)  
- [キーボード ユーザー インターフェイス設計のガイドライン](https://docs.microsoft.com/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Automation.Peers>
+- [NumericUpDown Custom Control with Theme and UI Automation Support Sample](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771573(v=vs.90))
+- [キーボード ユーザー インターフェイス設計のガイドライン](https://docs.microsoft.com/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)

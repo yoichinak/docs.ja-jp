@@ -2,12 +2,12 @@
 title: 結合操作 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 39ab4854-ac84-4738-9d0b-3cb79be84db4
-ms.openlocfilehash: 660b6d04e0a807a3072cff51d885999545052018
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: c7bd81f729558c8ec41baacda99765eb2f862b29
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61834377"
 ---
 # <a name="join-operations-visual-basic"></a>結合操作 (Visual Basic)
 2 つのデータ ソースの "*結合*" とは、あるデータ ソースのオブジェクトを、共通の属性を共有する別のデータ ソースのオブジェクトと関連付けることです。  
@@ -18,21 +18,21 @@ ms.locfileid: "48025335"
   
  次の図は、2 つのセットと、内部結合または左外部結合としてこれらのセットに含まれている要素の概念図を示しています。  
   
- ![内側/外側を示す 2 つの重なり合う円。](../../../../csharp/programming-guide/concepts/linq/media/joincircles.png "JoinCircles")  
+ ![内側&#47;外側を示す 2 つの重なり合う円。](./media/join-operations/join-method-overlapping-circles.png)  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド名|説明|Visual Basic のクエリ式の構文|説明|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|Join|キー セレクター関数に基づいて 2 つのシーケンスを結合し、値のペアを抽出します。|`From x In …, y In … Where x.a = y.a`<br /><br /> または<br /><br /> `Join … [As …]In … On …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=nameWithType>|  
+|Join|キー セレクター関数に基づいて 2 つのシーケンスを結合し、値のペアを抽出します。|`From x In …, y In … Where x.a = y.a`<br /><br /> - または -<br /><br /> `Join … [As …]In … On …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=nameWithType>|  
 |GroupJoin|キー セレクター関数に基づいて 2 つのシーケンスを結合し、各要素について結果として得られる一致をグループ化します。|`Group Join … In … On …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Linq>  
-- [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
-- [匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
-- [結合およびクロス積クエリの作成](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)  
-- [Join 句](../../../../visual-basic/language-reference/queries/join-clause.md)  
-- [方法: 異種ファイル (LINQ) (Visual Basic) からコンテンツを結合します。](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)  
-- [方法: 複数のソース (LINQ) (Visual Basic) からオブジェクト コレクションの設定](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
+- <xref:System.Linq>
+- [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [結合およびクロス積クエリの作成](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)
+- [Join 句](../../../../visual-basic/language-reference/queries/join-clause.md)
+- [方法: 異種ファイル (LINQ) (Visual Basic) からコンテンツを結合します。](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)
+- [方法: 複数のソース (LINQ) (Visual Basic) からオブジェクト コレクションを設定します。](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)

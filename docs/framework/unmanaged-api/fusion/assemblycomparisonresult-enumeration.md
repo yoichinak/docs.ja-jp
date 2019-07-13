@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82b81ec29dece182548ead046edc7cb754fbf00e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d6c417eec9583ff069c9d61fa31e9c14f3931130
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430662"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778510"
 ---
 # <a name="assemblycomparisonresult-enumeration"></a>AssemblyComparisonResult 列挙型
 によって決定される 2 つのアセンブリ id の等価性を示す、 [CompareAssemblyIdentity](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md)関数。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum _tagAssemblyComparisonResult {  
     ACR_Unknown,   
     ACR_EquivalentFullMatch,  
@@ -50,27 +50,28 @@ typedef enum _tagAssemblyComparisonResult {
 |メンバー名|説明|  
 |-----------------|-----------------|  
 |`ACR_EquivalentFullMatch`|すべてのアセンブリがフィールド比較一致していることを示します。|  
-|`ACR_EquivalentFXUnified`|あるアセンブリ同等と見なされる、共通言語ランタイム (CLR) のバージョンの統一の .NET Framework version 2.0 でアセンブリのバージョン番号に基づくことを示します。|  
-|`ACR_EquivalentPartialFXUnified`|.NET Framework 2.0 のアセンブリのバージョン番号の CLR 統合に対応するアセンブリは部分的に一致することを示します。|  
-|`ACR_EquivalentPartialMatch`|アセンブリは部分的に一致することを示します。|  
-|`ACR_EquivalentPartialUnified`|バージョン番号の従来の統一に基づいてアセンブリの部分的に一致することを示します。|  
+|`ACR_EquivalentFXUnified`|あるアセンブリ同等と見なされる、共通言語ランタイム (CLR) バージョンの統合、.NET Framework version 2.0 のアセンブリ バージョン番号に基づくことを示します。|  
+|`ACR_EquivalentPartialFXUnified`|.NET Framework 2.0 のアセンブリ バージョン番号の CLR 統合に基づくアセンブリは部分的に一致することを示します。|  
+|`ACR_EquivalentPartialMatch`|部分的に一致するアセンブリを示します。|  
+|`ACR_EquivalentPartialUnified`|部分的に一致するバージョン番号の従来の統合に基づくアセンブリを示します。|  
 |`ACR_EquivalentPartialWeakNamed`|単純な名前のアセンブリは部分的に一致することを示します。|  
-|`ACR_EquivalentUnified`|あるアセンブリ同等と見なされる従来のバージョンの .NET Framework のバージョン番号の CLR 統合に基づくことを示します。|  
+|`ACR_EquivalentUnified`|あるアセンブリ同等と見なされる以前のバージョンの .NET Framework のバージョン番号の CLR 統合に基づくことを示します。|  
 |`ACR_EquivalentWeakNamed`|一致する 2 つの単に名前付きアセンブリのバージョン番号が無視されたことを示します。|  
-|`ACR_NonEquivalent`|2 つのアセンブリ間の一致が発生しなかったことを示します。|  
-|`ACR_NonEquivalentPartialVersion`|2 つのアセンブリが、そのバージョン番号、部分的に一致を除くと一致することを示します。|  
-|`ACR_NonEquivalentVersion`|2 つのアセンブリが一致を除き、バージョン番号、一致していないことを示します。|  
-|`ACR_Unknown`|不一致の理由が不明であることを示します。|  
+|`ACR_NonEquivalent`|2 つのアセンブリ間で一致が発生しなかったことを示します。|  
+|`ACR_NonEquivalentPartialVersion`|2 つのアセンブリが、そのバージョン番号は、部分的に一致を除くと一致することを示します。|  
+|`ACR_NonEquivalentVersion`|2 つのアセンブリが一致しないバージョン番号を取得するには、以外と一致することを示します。|  
+|`ACR_Unknown`|不一致の理由がわからないことを示します。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Fusion.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [CompareAssemblyIdentity 関数](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md)  
- [Fusion 列挙型](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+## <a name="see-also"></a>関連項目
+
+- [CompareAssemblyIdentity 関数](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md)
+- [Fusion 列挙型](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

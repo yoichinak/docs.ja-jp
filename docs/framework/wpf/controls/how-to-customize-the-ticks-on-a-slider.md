@@ -1,18 +1,18 @@
 ---
-title: '方法 : スライダーの目盛りをカスタマイズする'
+title: '方法: スライダーの目盛りをカスタマイズする'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TickBar [WPF]
 - Slider control [WPF], creating with TickBar
 ms.assetid: 4fa694f2-a620-4b15-be78-5f4286f89361
-ms.openlocfilehash: 045a2f540a37cdea84d2bf2f3ed1e74e122bdbb5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 3b32bbedb5f654ce75e90a827eb0c4dba1d4d345
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910690"
 ---
-# <a name="how-to-customize-the-ticks-on-a-slider"></a>方法 : スライダーの目盛りをカスタマイズする
+# <a name="how-to-customize-the-ticks-on-a-slider"></a>方法: スライダーの目盛りをカスタマイズする
 この例は、作成する方法を示します、<xref:System.Windows.Controls.Slider>目盛りがあるコントロール。  
   
 ## <a name="example"></a>例  
@@ -22,10 +22,11 @@ ms.locfileid: "43864377"
   
  次の例は、使用する方法を示します、<xref:System.Windows.Controls.Slider.Ticks%2A>マークに沿った目盛りを作成するプロパティ、<xref:System.Windows.Controls.Slider>間隔は不規則です。  
   
- [!code-xaml[Slider#4](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml#4)]  
+ [!code-xaml[Slider#4](~/samples/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml#4)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Controls.Slider>  
- <xref:System.Windows.Controls.Primitives.TickBar>  
- <xref:System.Windows.Controls.Slider.TickPlacement%2A>  
- [スライダーの操作方法に関するトピック](https://msdn.microsoft.com/library/534be86c-afb2-425d-8186-631278a9925e)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Controls.Slider>
+- <xref:System.Windows.Controls.Primitives.TickBar>
+- <xref:System.Windows.Controls.Slider.TickPlacement%2A>
+- [方法: スライダーをプロパティの値にバインドします。](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms788716(v=vs.90))

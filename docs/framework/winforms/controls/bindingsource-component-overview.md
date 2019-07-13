@@ -7,22 +7,22 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: be838caf-fcb0-4b68-827f-58b2c04b747f
-ms.openlocfilehash: 047df677ade3837e167845ace2bdc6ca14738c3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2237ba71487afc132f9164243a664b277397ccfa
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939109"
 ---
 # <a name="bindingsource-component-overview"></a>BindingSource コンポーネントの概要
 <xref:System.Windows.Forms.BindingSource> コンポーネントは、基になるデータ ソースにコントロールをバインドするプロセスを簡略化するように設計されています。 <xref:System.Windows.Forms.BindingSource> コンポーネントは、他のコントロールのバインド先となるパイプおよびデータ ソースの両方の働きをします。 このコンポーネントは、フォームのデータ接続を抽象化し、基になるデータ リストにコマンドを渡します。 また、コンポーネントに直接データを追加することにより、コンポーネント自体がデータ ソースとして機能するようにすることができます。  
   
 ## <a name="bindingsource-component-as-an-intermediary"></a>媒介手段としての BindingSource コンポーネント  
- <xref:System.Windows.Forms.BindingSource> コンポーネントは、フォーム上のコントロールの一部またはすべてのデータ ソースとして機能します。 Visual Studio で、<xref:System.Windows.Forms.BindingSource>のコントロールにバインドすることができます、`DataBindings`からアクセス可能なプロパティ、**プロパティ**ウィンドウです。 「[方法 : デザイナーを使用して Windows フォーム コントロールを BindingSource コンポーネントにバインドする](../../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)」も参照してください。  
+ <xref:System.Windows.Forms.BindingSource> コンポーネントは、フォーム上のコントロールの一部またはすべてのデータ ソースとして機能します。 Visual Studio で、<xref:System.Windows.Forms.BindingSource>によってコントロールにバインドすることができます、`DataBindings`からアクセス可能であるプロパティ、**プロパティ**ウィンドウ。 参照してください[方法。デザイナーを使用して、BindingSource コンポーネントを使用した Windows フォーム コントロールをバインド](bind-wf-controls-with-the-bindingsource.md)します。  
   
  <xref:System.Windows.Forms.BindingSource> コンポーネントは、単純なデータ ソース (オブジェクトの 1 つのプロパティや、<xref:System.Collections.ArrayList> のような基本的なコレクションなど) と複雑なデータ ソース (データベース テーブルなど) の両方にバインドできます。 <xref:System.Windows.Forms.BindingSource> コンポーネントは、バインディングおよび現在位置管理サービスを提供する媒介手段として機能します。 デザイン時や実行時には、<xref:System.Windows.Forms.BindingSource.DataSource%2A> プロパティと <xref:System.Windows.Forms.BindingSource.DataMember%2A> プロパティをそれぞれデータベースとテーブルに設定して <xref:System.Windows.Forms.BindingSource> コンポーネントを複雑なデータ ソースにバインドできます。 既存のデータ バインディング アーキテクチャにおける <xref:System.Windows.Forms.BindingSource> コンポーネントの位置づけを次の図に示します。  
   
- ![バインディング ソースとデータ バインディング アーキテクチャ](../../../../docs/framework/winforms/controls/media/net-bindsrcdatabindarch.gif "NET_BindSrcDataBindArch")  
+ ![バインディング ソースとデータ バインディング アーキテクチャ](./media/net-bindsrcdatabindarch.gif "NET_BindSrcDataBindArch")  
   
 > [!NOTE]
 >  デザイン時には、特定のアクション (データ ウィンドウから空白のフォームへのデータベース テーブルのドラッグなど) によって <xref:System.Windows.Forms.BindingSource> コンポーネントが作成され、基になるデータ ソースにバインドされ、データ バインディングに対応したコントロールが追加されます。これらはすべて 1 つの操作によって実行されます。 「[Visual Studio でのデータへの Windows フォーム コントロールのバインド](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)」も参照してください。  
@@ -30,10 +30,10 @@ ms.locfileid: "33529605"
 ## <a name="bindingsource-component-as-a-data-source"></a>データソースとしての BindingSource コンポーネント  
  最初にバインド先のリストを指定せずに <xref:System.Windows.Forms.BindingSource> コンポーネントに項目を追加し始めると、このコンポーネントはリスト形式のデータ ソースとして動作し、追加した項目を受け入れます。  
   
- また、<xref:System.Windows.Forms.BindingSource.AddingNew> イベントを使用して、カスタムの "AddNew" 機能を提供するコードを記述することもできます。このイベントは、<xref:System.Windows.Forms.BindingSource.AddNew%2A> メソッドが呼び出された時点で、リストに項目が追加される前に発生します。 詳細については、「[BindingSource コンポーネント アーキテクチャ](../../../../docs/framework/winforms/controls/bindingsource-component-architecture.md)」を参照してください。  
+ また、<xref:System.Windows.Forms.BindingSource.AddingNew> イベントを使用して、カスタムの "AddNew" 機能を提供するコードを記述することもできます。このイベントは、<xref:System.Windows.Forms.BindingSource.AddNew%2A> メソッドが呼び出された時点で、リストに項目が追加される前に発生します。 詳細については、「[BindingSource コンポーネント アーキテクチャ](bindingsource-component-architecture.md)」を参照してください。  
   
 ## <a name="navigation"></a>ナビゲーション  
- フォーム上でデータのナビゲーションを実行する必要のあるユーザーに対しては、<xref:System.Windows.Forms.BindingNavigator> コンポーネントが <xref:System.Windows.Forms.BindingSource> コンポーネントと連携することにより、データのナビゲーションと操作が提供されます。 詳細については、「[BindingNavigator コントロール](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)」を参照してください。  
+ フォーム上でデータのナビゲーションを実行する必要のあるユーザーに対しては、<xref:System.Windows.Forms.BindingNavigator> コンポーネントが <xref:System.Windows.Forms.BindingSource> コンポーネントと連携することにより、データのナビゲーションと操作が提供されます。 詳細については、「[BindingNavigator コントロール](bindingnavigator-control-windows-forms.md)」を参照してください。  
   
 ## <a name="data-manipulation"></a>データの操作  
  <xref:System.Windows.Forms.BindingSource> は、すべてのバインディングの <xref:System.Windows.Forms.CurrencyManager> として動作するため、データ ソースに関する現在位置情報へのアクセスを提供します。 基になるデータへのアクセスおよび操作のために <xref:System.Windows.Forms.BindingSource> コンポーネントが提供するメンバーを次の表に示します。  
@@ -57,11 +57,12 @@ ms.locfileid: "33529605"
 |<xref:System.Windows.Forms.BindingSource.Sort%2A> プロパティ|データ ソースが <xref:System.ComponentModel.IBindingList> である場合は、並べ替えに使用する列名と並べ替え順序情報を取得または設定します。 データ ソースが <xref:System.ComponentModel.IBindingListView> であり、高度な並べ替えをサポートしている場合は、並べ替えに使用する複数の列名と並べ替え順序情報を取得します。|  
 |<xref:System.Windows.Forms.BindingSource.Filter%2A> プロパティ|データ ソースが <xref:System.ComponentModel.IBindingListView> である場合は、表示する行のフィルター処理に使用する式を取得または設定します。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.BindingSource>  
- <xref:System.Windows.Forms.BindingNavigator>  
- [BindingSource コンポーネント アーキテクチャ](../../../../docs/framework/winforms/controls/bindingsource-component-architecture.md)  
- [BindingSource コンポーネント](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [BindingNavigator コントロール](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
- [Windows フォームでのデータ バインディング](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
- [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Forms.BindingSource>
+- <xref:System.Windows.Forms.BindingNavigator>
+- [BindingSource コンポーネント アーキテクチャ](bindingsource-component-architecture.md)
+- [BindingSource コンポーネント](bindingsource-component.md)
+- [BindingNavigator コントロール](bindingnavigator-control-windows-forms.md)
+- [Windows フォームでのデータ バインディング](../windows-forms-data-binding.md)
+- [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)

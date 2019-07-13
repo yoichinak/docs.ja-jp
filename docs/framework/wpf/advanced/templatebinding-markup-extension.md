@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], TemplateBinding markup extension
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
-ms.openlocfilehash: 7c076172424baab4553a277baab2faca634c1e87
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c004560a0b7ab367fbf4fbb48b0e8d8b63f3d8f4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053042"
 ---
 # <a name="templatebinding-markup-extension"></a>TemplateBinding のマークアップ拡張機能
 コントロール テンプレート内のプロパティの値を、template 宣言されたコントロールの別のプロパティの値にリンクします。  
@@ -35,14 +35,14 @@ ms.locfileid: "43512828"
 |||  
 |-|-|  
 |`propertyName`|Setter 構文で設定されるプロパティの <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType>。|  
-|`sourceProperty`|template 宣言された型に存在する、<xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType> によって指定された別の依存関係プロパティ。<br /><br /> または<br /><br /> template 宣言された対象の型とは異なる型で定義されている "ドットダウン" プロパティ名。 これは、実際には <xref:System.Windows.PropertyPath> です。 参照してください[PropertyPath の XAML 構文](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)します。|  
+|`sourceProperty`|template 宣言された型に存在する、<xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType> によって指定された別の依存関係プロパティ。<br /><br /> または<br /><br /> template 宣言された対象の型とは異なる型で定義されている "ドットダウン" プロパティ名。 これは、実際には <xref:System.Windows.PropertyPath> です。 参照してください[PropertyPath の XAML 構文](propertypath-xaml-syntax.md)します。|  
   
 ## <a name="remarks"></a>Remarks  
- A`TemplateBinding`の最適化された形には、[バインド](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)テンプレート シナリオの場合に似ています、`Binding`を使用して構築`{Binding RelativeSource={RelativeSource TemplatedParent}}`します。 関連するプロパティが既定で双方向のバインディングの場合でも、`TemplateBinding` は常に一方向のバインディングです。 関連する両方のプロパティは、依存関係プロパティである必要があります。 実現するためにテンプレート化された親に双方向のバインドを使用して、次のバインド ステートメント代わりに`{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay, Path=MyDependencyProperty}`します。 
+ A`TemplateBinding`の最適化された形には、[バインド](binding-markup-extension.md)テンプレート シナリオの場合に似ています、`Binding`を使用して構築`{Binding RelativeSource={RelativeSource TemplatedParent}}`します。 関連するプロパティが既定で双方向のバインディングの場合でも、`TemplateBinding` は常に一方向のバインディングです。 関連する両方のプロパティは、依存関係プロパティである必要があります。 実現するためにテンプレート化された親に双方向のバインドを使用して、次のバインド ステートメント代わりに`{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay, Path=MyDependencyProperty}`します。 
   
- [RelativeSource](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md)と共に、またはの代わりにでも使用されている別のマークアップ拡張機能は、`TemplateBinding`テンプレート内で相対プロパティ バインディングを実行するためにします。  
+ [RelativeSource](relativesource-markupextension.md)と共に、またはの代わりにでも使用されている別のマークアップ拡張機能は、`TemplateBinding`テンプレート内で相対プロパティ バインディングを実行するためにします。  
   
- コントロール テンプレートを説明する概念としてはここでは説明がありません。詳細については、次を参照してください。[コントロールのスタイルとテンプレート](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)します。  
+ コントロール テンプレートを説明する概念としてはここでは説明がありません。詳細については、次を参照してください。[コントロールのスタイルとテンプレート](../controls/control-styles-and-templates.md)します。  
   
  属性構文は、このマークアップ拡張機能で使用される最も一般的な構文です。 `TemplateBinding` 識別子文字列の後に設定される文字列トークンは、基になる <xref:System.Windows.TemplateBindingExtension.Property%2A> 拡張クラスの <xref:System.Windows.TemplateBindingExtension> 値として割り当てられます。  
   
@@ -58,13 +58,14 @@ ms.locfileid: "43512828"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML プロセッサ実装では、このマークアップ拡張機能の処理がによって定義されている、<xref:System.Windows.TemplateBindingExtension>クラス。  
   
- `TemplateBinding` はマークアップ拡張機能です。 一般にマークアップ拡張機能を実装するのは、属性値をリテラル値やハンドラー名以外にエスケープする要件が存在し、その要件の適用範囲がグローバルで、特定の型やプロパティに型コンバーターを適用するだけにとどまらない場合です。 XAML の使用中のすべてのマークアップ拡張機能、`{`と`}`マークアップ拡張機能が、属性を処理する必要がありますを XAML プロセッサが認識する規則は、それぞれの属性構文内の文字。 詳細については、次を参照してください。[マークアップ拡張機能と WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)します。  
+ `TemplateBinding` はマークアップ拡張機能です。 一般にマークアップ拡張機能を実装するのは、属性値をリテラル値やハンドラー名以外にエスケープする要件が存在し、その要件の適用範囲がグローバルで、特定の型やプロパティに型コンバーターを適用するだけにとどまらない場合です。 XAML の使用中のすべてのマークアップ拡張機能、`{`と`}`マークアップ拡張機能が、属性を処理する必要がありますを XAML プロセッサが認識する規則は、それぞれの属性構文内の文字。 詳細については、次を参照してください。[マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Style>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [XAML の概要 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [マークアップ拡張機能と WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [RelativeSource のマークアップ拡張機能](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md)  
- [バインドのマークアップ拡張機能](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Style>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [スタイルとテンプレート](../controls/styling-and-templating.md)
+- [XAML の概要 (WPF)](xaml-overview-wpf.md)
+- [マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [RelativeSource のマークアップ拡張機能](relativesource-markupextension.md)
+- [バインドのマークアップ拡張機能](binding-markup-extension.md)

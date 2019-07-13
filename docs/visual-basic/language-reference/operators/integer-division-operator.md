@@ -17,12 +17,12 @@ helpviewer_keywords:
 - quotients, integer
 - truncation [Visual Basic], integer division
 ms.assetid: 4b0ee347-950c-45c9-8e23-54bc85df208e
-ms.openlocfilehash: ef3946e871e1dc248b54932e16f6cae6026da08e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1753199e2ecf3f156b90d8c0a5cacd672397260d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013557"
 ---
 # <a name="-operator-visual-basic"></a>\ 演算子 (Visual Basic)
 2 つの数値を除算し、整数の結果を返します。  
@@ -41,38 +41,39 @@ expression1 \ expression2
  必須。 任意の数式。  
   
 ## <a name="supported-types"></a>サポートされている型  
- 符号なしと浮動小数点型を含むすべての数値型と`Decimal`です。  
+ 符号なしと浮動小数点型を含め、すべての数値型と`Decimal`します。  
   
 ## <a name="result"></a>結果  
- 結果は整数の商`expression1`で割った値`expression2`、小数部分を破棄し、整数部分のみを保持します。 これは呼ば*切り捨て*です。  
+ 結果は整数の商`expression1`で割った値`expression2`余りはすべて破棄され、整数部分だけが保持されます。 これと呼ばれます*切り捨て*します。  
   
- 結果のデータ型は数値型のデータ型に適した`expression1`と`expression2`です。 「整数算術演算による」テーブルを参照して[データ型の演算子の結果](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)です。  
+ 結果のデータ型が数値型のデータ型に適した`expression1`と`expression2`します。 「整数の算術演算による」のテーブルを参照してください。[演算子結果のデータ型](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)します。  
   
- [/演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)小数部分の残りの部分を保持するフルの商を返します。  
+ [/演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)小数部分の残りの部分を保持する、完全な商を返します。  
   
-## <a name="remarks"></a>コメント  
- 除算を実行する前に、Visual Basic に任意の浮動小数点の数値式の変換を試みます`Long`です。 場合`Option Strict`は`On`、コンパイラ エラーが発生します。 場合`Option Strict`は`Off`、<xref:System.OverflowException>値の範囲外の場合は、 [Long データ型](../../../visual-basic/language-reference/data-types/long-data-type.md)です。 変換`Long`対象にも*銀行型丸め*です。 詳細についてを参照してください「小数部分」[型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)です。  
+## <a name="remarks"></a>Remarks  
+ 除算を実行する前に、Visual Basic に任意の浮動小数点の数値式の変換を試みます`Long`します。 場合`Option Strict`は`On`、コンパイラ エラーが発生します。 場合`Option Strict`は`Off`、<xref:System.OverflowException>値の範囲外の場合は、 [Long データ型](../../../visual-basic/language-reference/data-types/long-data-type.md)します。 変換`Long`対象にも*銀行型丸め*します。 詳細については、「部分の小数部」を参照してください[型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)します。  
   
  場合`expression1`または`expression2`に評価される[Nothing](../../../visual-basic/language-reference/nothing.md)、0 として扱われます。  
   
 ## <a name="attempted-division-by-zero"></a>0 による除算  
- 場合`expression2`を 0 に評価される、`\`演算子をスロー、<xref:System.DivideByZeroException>例外。 これは、すべての数値データ型のオペランドの場合は true です。  
+ 場合`expression2`を 0 に評価される、`\`演算子がスローされます、<xref:System.DivideByZeroException>例外。 これは、すべての数値データ型のオペランドの場合は true。  
   
 > [!NOTE]
->  `\`演算子を指定できます*オーバー ロードされた*、つまり、あるクラスまたは構造体を再定義できますその動作オペランドは、そのクラスまたは構造体の型を持つときにします。 コードは、このようなクラスまたは構造体で、この演算子を使用する場合は、再定義された動作を理解することを確認します。 詳細については、次を参照してください。[演算子プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)です。  
+>  `\`演算子は、*オーバー ロードされた*、つまり、ことクラスまたは構造体を再定義できますその動作はそのクラスまたは構造体の型。 コードは、このようなクラスまたは構造体に、この演算子を使用する場合は、再定義された動作を確認ください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例では、`\`整数除算を実行する演算子です。 結果は、破棄された後に 2 つのオペランドの商の整数を表す整数です。  
+ 次の例では、`\`整数除算を実行する演算子。 結果は、破棄された残りの部分を 2 つのオペランドの商の整数を表す整数です。  
   
- [!code-vb[VbVbalrOperators#18](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/integer-division-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#18)]  
   
- 前の例の式では、2、3、33、および、~ 22 日の値をそれぞれ返します。  
+ 前の例の式では、それぞれ 2、3、33、および ~ 22 日の値を返します。  
   
-## <a name="see-also"></a>関連項目  
- [\\= 演算子](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)  
- [/演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)  
- [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [算術演算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Visual Basic における算術演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+## <a name="see-also"></a>関連項目
+
+- [\\= 演算子](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
+- [/演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)
+- [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [算術演算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Visual Basic における算術演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

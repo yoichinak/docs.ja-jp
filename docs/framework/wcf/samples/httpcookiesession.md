@@ -2,25 +2,25 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: fdde238d4a4fd9291c520d4ef13694c3648c8298
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 815f6917413afebc71f0ec6e1c81eb1de14547a4
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522821"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876788"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 このサンプルでは、カスタム プロトコル チャネルを作成し、セッション管理用の HTTP クッキーを使用する方法を示します。 このチャネルでは、Windows Communication Foundation (WCF) サービスと ASMX クライアントまたは WCF クライアントと ASMX サービス間の通信ができます。  
   
- クライアントがセッション ベースの ASMX Web サービス内で Web メソッドを呼び出すと、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] エンジンは次の処理を行います。  
+ クライアントは、セッション ベースである ASMX Web サービスで Web メソッドを呼び出し、ときに、ASP.NET エンジンは、次の。  
   
--   一意の ID (セッション ID) を生成します。  
+- 一意の ID (セッション ID) を生成します。  
   
--   セッション オブジェクトを生成し、一意の ID に関連付けます。  
+- セッション オブジェクトを生成し、一意の ID に関連付けます。  
   
--   一意の IDを Set-Cookie HTTP 応答ヘッダーに追加し、クライアントに送信します。  
+- 一意の IDを Set-Cookie HTTP 応答ヘッダーに追加し、クライアントに送信します。  
   
--   送信されるセッション ID に基づき、以降の呼び出しでクライアントを識別します。  
+- 送信されるセッション ID に基づき、以降の呼び出しでクライアントを識別します。  
   
  クライアントは、サーバーに対する以降の要求にこのセッション ID を含めます。 サーバーはクライアントのセッション ID を使用して、現在の HTTP コンテキストに適切なセッション オブジェクトを読み込みます。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "43522821"
 ## <a name="service-channel"></a>サービス チャネル  
  このサンプルでは、`HttpCookieReplySessionChannelListener` クラスでサービス チャネルを提供します。 このクラスは <xref:System.ServiceModel.Channels.IChannelListener> インターフェイスを実装し、チャネル スタックの低いレベルにある <xref:System.ServiceModel.Channels.IReplyChannel> チャネルを <xref:System.ServiceModel.Channels.IReplySessionChannel> に変換します。 このプロセスは、次の部分に分かれています。  
   
--   チャネル リスナが開かれると、チャネル リスナは内部リスナの内部チャネルを受け入れます。 内部リスナはデータグラム リスナであり、受け入れられたチャネルの有効期間は内部リスナの有効期間から切り離されるため、次のように、内部リスナを閉じて内部チャネルの保持のみを行うことができます。  
+- チャネル リスナが開かれると、チャネル リスナは内部リスナの内部チャネルを受け入れます。 内部リスナはデータグラム リスナであり、受け入れられたチャネルの有効期間は内部リスナの有効期間から切り離されるため、次のように、内部リスナを閉じて内部チャネルの保持のみを行うことができます。  
   
     ```  
                 this.innerChannelListener.Open(timeoutHelper.RemainingTime());  
@@ -48,7 +48,7 @@ ms.locfileid: "43522821"
     this.innerChannelListener.Close(timeoutHelper.RemainingTime());  
     ```  
   
--   チャネル リスナを開くプロセスが完了したら、次のようにメッセージ ループをセットアップし、内部チャネルからメッセージを受信します。  
+- チャネル リスナを開くプロセスが完了したら、次のようにメッセージ ループをセットアップし、内部チャネルからメッセージを受信します。  
   
     ```  
     IAsyncResult result = BeginInnerReceiveRequest();  
@@ -63,7 +63,7 @@ ms.locfileid: "43522821"
     }  
     ```  
   
--   メッセージが到着したら、サービス チャネルはセッション識別子を調べ、非多重化を行って適切なセッション チャネルに変換します。 このチャネル リスナは、セッション識別子をセッション チャネル インスタンスにマップするディクショナリを保持します。  
+- メッセージが到着したら、サービス チャネルはセッション識別子を調べ、非多重化を行って適切なセッション チャネルに変換します。 このチャネル リスナは、セッション識別子をセッション チャネル インスタンスにマップするディクショナリを保持します。  
   
     ```  
     Dictionary<string, IReplySessionChannel> channelMapping;  
@@ -82,8 +82,8 @@ InputQueue<RequestContext> requestQueue;
 ## <a name="client-channel"></a>クライアント チャネル  
  対応するクライアント チャネルは、`HttpCookieSessionChannelFactory` クラスにあります。 チャネルの作成中、チャネル ファクトリは内部要求チャネルを `HttpCookieRequestSessionChannel` でラップします。 `HttpCookieRequestSessionChannel` クラスは、基になる要求チャネルへの呼び出しを転送します。 クライアントがプロキシを閉じると、`HttpCookieRequestSessionChannel` はチャネルが閉じられようとしていることを示すメッセージをサービスに送信します。 そのため、サービス チャネル スタックは、使用中のセッション チャネルを正常にシャットダウンできます。  
   
-## <a name="binding-and-binding-element"></a>バインディングとバインド要素  
- サービスとクライアントのチャネルを作成した後は、次の手順は、WCF ランタイムに統合するは。 チャネルは、バインディングとバインド要素を介して WCF に公開されます。 バインディングは、1 つまたは複数のバインド要素で構成されています。 WCF は、いくつかのシステム定義バインディング。たとえば、BasicHttpBinding や WSHttpBinding などです。 `HttpCookieSessionBindingElement` クラスには、バインディング要素の実装が含まれています。 この実装によってチャネル リスナとチャネル ファクトリの作成メソッドがオーバーライドされ、必要なチャネル リスナまたはチャネル ファクトリがインスタンス化されます。  
+## <a name="binding-and-binding-element"></a>バインディングとバインディング要素  
+ サービスとクライアントのチャネルを作成した後は、次の手順は、WCF ランタイムに統合するは。 チャネルは、バインディングとバインド要素を介して WCF に公開されます。 バインディングは、1 つまたは複数のバインディング要素で構成されています。 WCF は、いくつかのシステム定義バインディング。たとえば、BasicHttpBinding や WSHttpBinding などです。 `HttpCookieSessionBindingElement` クラスには、バインディング要素の実装が含まれています。 この実装によってチャネル リスナとチャネル ファクトリの作成メソッドがオーバーライドされ、必要なチャネル リスナまたはチャネル ファクトリがインスタンス化されます。  
   
  このサンプルでは、サービスの説明のポリシー アサーションを使用します。 これにより、サンプルのチャネルの要件を、そのサービスを利用できる他のクライアントに公開できます。 たとえば、このバインド要素はポリシー アサーションを公開し、セッションがサポートされていることを潜在的なクライアントに通知します。 このサンプルでは、バインディング要素の構成で `ExchangeTerminateMessage` プロパティが有効になっています。そのため、サービスで余分なメッセージ交換アクションがサポートされ、セッションでのメッセージ交換が終了されることを示すために必要なアサーションが追加されます。 その後、クライアントはこのアクションを使用できます。 `HttpCookieSessionBindingElement` から作成されたポリシー アサーションを、次の WSDL コードに示します。  
   
@@ -158,16 +158,14 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  次のコマンドを使用して、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 をインストールします。  
+1. 次のコマンドを使用して ASP.NET 4.0 をインストールします。  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
+2. 実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
-3.  ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
+3. ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
   
-4.  1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
-  
-## <a name="see-also"></a>関連項目
+4. 1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Call statement [Visual Basic]
 - procedures [Visual Basic], calling
 ms.assetid: e5b31571-6867-406f-b8e7-a3f9aae4723a
-ms.openlocfilehash: 259fcc6f1c59df09e768a08204df81aa8105de53
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 755443a99a1ad8b0430a76d2dba1ff27472d4c9d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945068"
 ---
 # <a name="call-statement-visual-basic"></a>Call ステートメント (Visual Basic)
 転送コントロールを`Function`、 `Sub`、またはダイナミック リンク ライブラリ (DLL) プロシージャ。  
@@ -28,7 +28,7 @@ ms.locfileid: "37936790"
 |||
 |---|---|
 |`procedureName`|必須。 呼び出すプロシージャの名前。|
-|`argumentList`|任意。 変数または呼び出された場合、プロシージャに渡される引数を表す式の一覧です。 複数の引数は、コンマで区切られます。 含める場合`argumentList`かっこで囲む必要があります。|
+|`argumentList`|省略可能です。 変数または呼び出された場合、プロシージャに渡される引数を表す式の一覧です。 複数の引数は、コンマで区切られます。 含める場合`argumentList`かっこで囲む必要があります。|
 |||
   
 ## <a name="remarks"></a>Remarks  
@@ -41,10 +41,11 @@ ms.locfileid: "37936790"
 ## <a name="example"></a>例  
  次のコードは 2 つの例で、`Call`キーワードは、プロシージャを呼び出すために必要な。 どちらの例では、呼び出された式が識別子で開始しません。  
   
- [!code-vb[VbVbalrStatements#97](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/call-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#97](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#97)]  
   
-## <a name="see-also"></a>関連項目  
- [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)  
- [ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+## <a name="see-also"></a>関連項目
+
+- [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)

@@ -1,15 +1,13 @@
 ---
 title: 一般的なガイダンス
 description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | 一般的なガイダンス'
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: 6ff6170fd1cdd0c69ecc8729cc8199cceea43ffa
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0981cb16d5aa2036391caba0cf6ad3ac5c44ed6f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128480"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644134"
 ---
 # <a name="general-guidance"></a>一般的なガイダンス
 
@@ -17,11 +15,11 @@ ms.locfileid: "53128480"
 
 次の場合には、コンテナー化された Docker サーバー アプリケーションで、.NET Core と Linux または Windows のコンテナーを併用する必要があります。
 
--   クロスプラット フォームが必要である。 たとえば、Linux と Windows のコンテナーの両方を使用する場合。
+- クロスプラット フォームが必要である。 たとえば、Linux と Windows のコンテナーの両方を使用する場合。
 
--   アプリケーション アーキテクチャがマイクロサービスに基づく場合。
+- アプリケーション アーキテクチャがマイクロサービスに基づく場合。
 
--   コンテナーを高速で起動する必要があり、かつコンテナーあたりのフットプリントを小さくして密度を高めたり、ハードウェア ユニットあたりのコンテナーを増やしてコストを削減したりしたい場合。
+- コンテナーを高速で起動する必要があり、かつコンテナーあたりのフットプリントを小さくして密度を高めたり、ハードウェア ユニットあたりのコンテナーを増やしてコストを削減したりしたい場合。
 
 つまり、コンテナー化された .NET アプリケーションを新たに作成する場合には、.NET Core を既定の選択肢として考慮する必要があります。 これには多くの利点があり、コンテナーの理念や作業スタイルとぴったりと適合します。
 
@@ -29,20 +27,20 @@ ms.locfileid: "53128480"
 
 次の場合には、コンテナー化された Docker サーバー アプリケーションで、.NET Framework を使用する必要があります。
 
--   現在、アプリケーションで .NET Framework を使用し、Windows で強い依存関係がある場合。
+- 現在、アプリケーションで .NET Framework を使用し、Windows で強い依存関係がある場合。
 
--   .NET Core がサポートしていない Windows API を使用する必要がある場合。
+- .NET Core がサポートしていない Windows API を使用する必要がある場合。
 
--   .NET Core で使用できないサードパーティ製の .NET ライブラリまたは NuGet パッケージを使用する必要がある場合。
+- .NET Core で使用できないサードパーティ製の .NET ライブラリまたは NuGet パッケージを使用する必要がある場合。
 
 Docker で .NET Framework を使用すると、展開に関する問題を最小限に抑えて、展開のエクスペリエンスを改善できます。 この ["リスト アンド シフト" シナリオ](https://aka.ms/liftandshiftwithcontainersebook)は、ASP.NET WebForms、MVC Web アプリ、WCF (Windows Communication Foundation) サービスなどの従来の .NET Framework を使用して開発されたレガシー アプリケーションをコンテナー化する場合に重要です。
 
 ### <a name="additional-resources"></a>その他の技術情報
 
--   **電子ブック: Modernize existing .NET Framework applications with Azure and Windows Containers (Azure および Windows コンテナーで既存の .NET Framework アプリケーションを最新化する)**  
+- **電子ブック:Modernize existing .NET Framework applications with Azure and Windows Containers (Azure および Windows コンテナーで既存の .NET Framework アプリケーションを最新化する)**  
     https://aka.ms/liftandshiftwithcontainersebook
 
--   **サンプル アプリ: Windows コンテナーを使用した従来の ASP.NET Web アプリの最新化**  
+- **サンプル アプリ:Windows コンテナーを使用した従来の ASP.NET Web アプリの最新化**  
     https://aka.ms/eshopmodernizing
 
 >[!div class="step-by-step"]

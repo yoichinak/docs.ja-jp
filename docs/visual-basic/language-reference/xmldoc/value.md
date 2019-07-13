@@ -1,18 +1,18 @@
 ---
-title: '&lt;value&gt;(Visual Basic)'
+title: <value> (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <value> XML tag
 - value XML tag
 ms.assetid: 0b84b02e-9e6d-41b5-a926-0d5dc76dacb5
-ms.openlocfilehash: ef14836c438cf6a1de300270d9882c1e53e716ee
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2938d485bf6c547c792431b93fc8959c9c36befa
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940739"
 ---
-# <a name="ltvaluegt-visual-basic"></a>&lt;value&gt;(Visual Basic)
+# <a name="value-visual-basic"></a>\<値 > (Visual Basic)
 プロパティの説明を指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -21,7 +21,7 @@ ms.locfileid: "43855934"
 <value>property-description</value>  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `property-description`  
  プロパティの説明。  
   
@@ -33,7 +33,8 @@ ms.locfileid: "43855934"
 ## <a name="example"></a>例  
  この例では、`<value>`どのような値を記述するタグ、`Counter`プロパティを保持します。  
   
- [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/value_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   
-## <a name="see-also"></a>関連項目  
- [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>関連項目
+
+- [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)

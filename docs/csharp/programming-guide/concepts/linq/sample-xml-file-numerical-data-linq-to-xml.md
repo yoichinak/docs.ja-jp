@@ -1,15 +1,15 @@
 ---
-title: 'サンプル XML ファイル : 数値データ (LINQ to XML)'
+title: サンプル XML ファイル:数値データ (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 365cae86-a166-46df-b56a-0209d9771c27
-ms.openlocfilehash: d0351ed8cf4960174fdc45db5d7a15a385c90a61
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fc990d2f9f15f05337e6d21dd9b46a78caa1f63a
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253287"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483584"
 ---
-# <a name="sample-xml-file-numerical-data-linq-to-xml"></a>サンプル XML ファイル : 数値データ (LINQ to XML)
+# <a name="sample-xml-file-numerical-data-linq-to-xml"></a>サンプル XML ファイル:数値データ (LINQ to XML)
 次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。 このファイルには、集計、平均、およびグループ化用の数値データが含まれています。  
   
 ## <a name="dataxml"></a>Data.xml  
@@ -54,7 +54,4 @@ ms.locfileid: "44253287"
   </Data>  
 </Root>  
 ```  
-  
-## <a name="see-also"></a>参照
-
-- [サンプル XML ドキュメント (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+ 

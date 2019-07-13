@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6da4c282c7f969a406a657d1e30dd6120a32b4e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4599bf310a0b819bc662b90a5a86e87ac27c37b1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420909"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737021"
 ---
 # <a name="icordebugprocesswritememory-method"></a>ICorDebugProcess::WriteMemory メソッド
 このプロセスでメモリの領域にデータを書き込みます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT WriteMemory(  
     [in]  CORDB_ADDRESS address,  
     [in]  DWORD size,  
@@ -37,9 +37,9 @@ HRESULT WriteMemory(
     [out] SIZE_T *written);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `address`  
- [in]A`CORDB_ADDRESS`のどのデータをメモリ領域のベース アドレスは、値が書き込まれます。 データ転送が発生すると、前に、システムは、ベース アドレスで始まる、指定したサイズのメモリ領域に書き込みアクセスできることを確認します。 アクセスできない場合、メソッドが失敗します。  
+ [in]A`CORDB_ADDRESS`データ メモリ領域のベース アドレスは、値が書き込まれます。 データ転送が発生する前に、システムは、ベース アドレスで始まる、指定したサイズのメモリ領域が書き込み用にアクセスできることを確認します。 アクセスできない場合、メソッドは失敗します。  
   
  `size`  
  [in]メモリ領域に書き込まれるバイト数。  
@@ -48,18 +48,18 @@ HRESULT WriteMemory(
  [in]書き込むデータを格納するバッファー。  
   
  `written`  
- [out]このプロセスのメモリ領域に書き込まれたバイト数を受け取る変数へのポインター。 場合`written`が NULL の場合、このパラメーターは無視されます。  
+ [out]このプロセスのメモリ領域に書き込まれたバイト数を受け取る変数へのポインター。 場合`written`が null の場合、このパラメーターは無視されます。  
   
-## <a name="remarks"></a>コメント  
- データは、ブレークポイントの背後に自動的に書き込まれます。 .NET Framework version 2.0 でネイティブ デバッガーは、命令ストリームにブレークポイントを挿入するのにこのメソッドを使用する必要があります。 使用して[icordebugprocess 2::setunmanagedbreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)代わりにします。  
+## <a name="remarks"></a>Remarks  
+ データは、ブレークポイントの背後に自動的に書き込まれます。 .NET framework version 2.0 では、ネイティブ デバッガーは、命令ストリームにブレークポイントを挿入するのにこのメソッドを使用する必要があります。 使用[icordebugprocess 2::setunmanagedbreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)代わりにします。  
   
- `WriteMemory`メソッドは、マネージ コード外にのみ使用する必要があります。 このメソッドを誤って使用するとランタイムが破損していることができます。  
+ `WriteMemory`メソッドは、マネージ コードの外側でのみ使用する必要があります。 このメソッドは、誤って使用すると、ランタイムを破壊できます。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

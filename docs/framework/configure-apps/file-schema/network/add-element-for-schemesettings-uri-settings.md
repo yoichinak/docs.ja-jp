@@ -1,20 +1,20 @@
 ---
-title: '&lt;追加&gt;schemeSettings (Uri 設定) の要素'
+title: schemeSettings の <add> 要素 (Uri 設定)
 ms.date: 03/30/2017
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
-ms.openlocfilehash: 07bcaf470c68a4d400057b0fe19e96524b2859cb
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e7606a1185d406384a926ca4dcb7c42586461574
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674702"
 ---
-# <a name="ltaddgt-element-for-schemesettings-uri-settings"></a>&lt;追加&gt;schemeSettings (Uri 設定) の要素
+# <a name="add-element-for-schemesettings-uri-settings"></a>\<追加 > schemeSettings (Uri 設定) の要素
 スキーム名の設定の設定を追加します。  
   
  \<configuration>  
-\<uri >  
-\<schemeSettings >  
+\<uri>  
+\<schemeSettings>  
 \<add>  
   
 ## <a name="syntax"></a>構文  
@@ -81,11 +81,12 @@ ms.locfileid: "50205179"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
-- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
-- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
-- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>  
-- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>  
-- <xref:System.Uri?displayProperty=nameWithType>  
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
+- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>
+- <xref:System.Configuration.UriSection?displayProperty=nameWithType>
+- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>
+- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>
+- <xref:System.Uri?displayProperty=nameWithType>
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

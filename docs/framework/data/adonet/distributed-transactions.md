@@ -2,12 +2,12 @@
 title: 分散トランザクション
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-ms.openlocfilehash: 1f45f572b4336e52f7eee224ec80d9b7f423f991
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 89d94e94ea74c73a7f68f6052291c95a7c96f0d6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606807"
 ---
 # <a name="distributed-transactions"></a>分散トランザクション
 トランザクションとは、たとえば、1 つの単位として成功 (コミット) または失敗 (アボート) する関連タスク セットです。 A*分散トランザクション*いくつかのリソースに影響を与えるトランザクションです。 分散トランザクションがコミットされるためには、すべての参加要素が、すべてのデータ変更が永久的な変更となることを保証する必要があります。 システム クラッシュその他の予期しない出来事が発生した場合でも、変更は保持されます。 1 つの参加要素がこの保証に失敗しただけでも、トランザクション全体が失敗し、トランザクションのスコープ内のデータに対する変更がロールバックされます。  
@@ -47,7 +47,8 @@ ms.locfileid: "43486328"
 ## <a name="configuring-distributed-transactions"></a>分散トランザクションの設定  
  分散トランザクションを使用するには、ネットワーク上の MS DTC を有効にする必要があります。 Windows ファイアウォールを有効にしている場合は、MS DTC サービスでネットワークを使用するか MS DTC ポートを開くことができるようにする必要があります。  
   
-## <a name="see-also"></a>関連項目  
- [トランザクションと同時実行](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [SQL Server と System.Transactions の統合](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [トランザクションと同時実行](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
+- [SQL Server と System.Transactions の統合](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

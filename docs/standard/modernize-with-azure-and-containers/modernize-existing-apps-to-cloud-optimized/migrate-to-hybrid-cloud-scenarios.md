@@ -1,17 +1,15 @@
 ---
-title: ハイブリッド クラウドのシナリオへの移行します。
+title: ハイブリッド クラウド シナリオへの移行
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 |ハイブリッド クラウドのシナリオへの移行します。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 3d6fc272854654d890559d5db032b05667627d94
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 04c618681c61f5584e641e0a4735e1261ab34fa3
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147347"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65643716"
 ---
-# <a name="migrate-to-hybrid-cloud-scenarios"></a>ハイブリッド クラウドのシナリオへの移行します。
+# <a name="migrate-to-hybrid-cloud-scenarios"></a>ハイブリッド クラウド シナリオへの移行
 
 一部の組織や企業は、Microsoft Azure などのパブリック クラウドにアプリケーションの一部または規制や独自のポリシーのための他のパブリック クラウドを移行できません。 ただし、すべての組織がパブリック クラウドとその他のアプリケーションをオンプレミスでのアプリケーションの一部がメリットが高くなります。 混在する環境がさまざまなプラットフォームやパブリック クラウドとオンプレミス環境で使用するテクノロジにより環境での過剰な複雑さを招くことができます。
 
@@ -33,9 +31,9 @@ Azure Stack は、ハイブリッド クラウド プラットフォーム、組
 
 Azure Stack は、ニーズに合わせて、2 つのデプロイ オプションで提供されています。
 
--   Azure Stack 統合システム
+- Azure Stack 統合システム
 
--   Azure Stack Development Kit
+- Azure Stack Development Kit
 
 ### <a name="azure-stack-integrated-systems"></a>Azure Stack 統合システム
 
@@ -47,25 +45,25 @@ Microsoft Azure Stack Development Kit は、評価し、Azure Stack の学習に
 
 ### <a name="additional-resources"></a>その他の技術情報
 
--   **Azure のハイブリッド クラウド**
+- **Azure のハイブリッド クラウド**
 
-    [https://www.microsoft.com/cloud-platform/hybrid-cloud](https://www.microsoft.com/cloud-platform/hybrid-cloud)
+    <https://azure.microsoft.com/overview/hybrid-cloud/>
 
--   **Azure Stack**
+- **Azure Stack**
 
-    [https://azure.microsoft.com/overview/azure-stack/](https://azure.microsoft.com/overview/azure-stack/)
+    <https://azure.microsoft.com/overview/azure-stack/>
 
--   **Windows コンテナーの active Directory サービス アカウントします。**
+- **Windows コンテナーの active Directory サービス アカウントします。**
 
-    [https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts)
+    <https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts>
 
--   **Active Directory のサポートによってコンテナーを作成します。**
+- **Active Directory のサポートによってコンテナーを作成します。**
 
-    [https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/](https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/)
+    <https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/>
 
--   **Azure Hybrid Benefit のライセンス**
+- **Azure Hybrid Benefit のライセンス**
 
-    [https://azure.microsoft.com/pricing/hybrid-use-benefit/](https://azure.microsoft.com/pricing/hybrid-use-benefit/)
+    <https://azure.microsoft.com/pricing/hybrid-benefit/>
 
 >[!div class="step-by-step"]
 >[前へ](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)

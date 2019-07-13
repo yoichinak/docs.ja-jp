@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [XAML Services], type converter services how-to
 ms.assetid: b4dad00f-03da-4579-a4e9-d8d72d2ccbce
-ms.openlocfilehash: b68f00724ecd3a3edc64ee1e3dd7d97bffa20a62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 850e266aed6fc2d69722ba6dac3baa3e115678a8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61953973"
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>型コンバーターおよびマークアップ拡張機能で使用できるサービス コンテキスト
 型コンバーターとマークアップ拡張機能の使用をサポートする型の作成者には、マークアップまたは周辺のオブジェクト グラフ構造体のどこで使用されているかを示す文脈情報が必要です。 情報は、指定されるオブジェクトを正しくインスタンス化するため、またオブジェクト グラフ内の既存オブジェクトへのオブジェクト参照を行うために必要です。 .NET Framework XAML サービスを使用している場合、必要となる可能性のあるコンテキストは一連のサービス インターフェイスとして公開されます。 型コンバーターまたはマークアップ拡張のサポート コードでは、 <xref:System.Xaml.XamlObjectWriter> または関連する型から渡される使用可能なサービス プロバイダー コンテキストを使用して、サービスを照会できます。 XAML スキーマ コンテキストは、このようなサービスを通じて直接使用できます。 このトピックでは、値コンバーター実装からサービス コンテキストにアクセスする方法を説明し、通常使用できるサービスとその役割の一覧を示します。  
   
 <a name="obtaining_services"></a>   
 ## <a name="obtaining-services"></a>サービスの取得  
- 値コンバーターの実装者は、通常、値コンバーターが適用される何らかの種類のコンテキストにアクセスする必要があります。 たとえば、アクティブな XAML スキーマ コンテキスト、XAML スキーマ コンテキストや XAML オブジェクト ライターが提供する型マッピング システムへのアクセスなどの情報が必要です。 マークアップ拡張機能または型コンバーターの実装で使用されるサービスは、各仮想メソッドのシグネチャの一部であるコンテキスト パラメーターを通じて伝達されます。 いずれの場合でも、コンテキストに <xref:System.IServiceProvider> が実装されているので、<xref:System.IServiceProvider.GetService%2A?displayProperty=nameWithType> を呼び出してサービスを要求することができます。  
+ 値コンバーターの実装者は、通常、値コンバーターが適用される何らかの種類のコンテキストにアクセスする必要があります。 たとえば、アクティブな XAML スキーマ コンテキスト、XAML スキーマ コンテキストや XAML オブジェクト ライターが提供する型マッピング システムへのアクセスなどの情報が必要です。 マークアップ拡張機能または型コンバーターの実装で使用されるサービスは、各仮想メソッドのシグネチャの一部であるコンテキスト パラメーターを通じて伝達されます。 いずれの場合でも、コンテキストに <xref:System.IServiceProvider> が実装されているので、 <xref:System.IServiceProvider.GetService%2A?displayProperty=nameWithType> を呼び出してサービスを要求することができます。  
   
 <a name="services_for_a_markup_extension"></a>   
 ## <a name="services-for-a-markup-extension"></a>マークアップ拡張機能のサービス  
@@ -75,7 +75,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="iserviceprovider"></a>IServiceProvider  
  **リファレンス ドキュメント**: <xref:System.IServiceProvider>  
   
- **関連する:** 、.NET Framework でのサービス ベースのインフラストラクチャの基本的な操作を呼び出すように<xref:System.IServiceProvider.GetService%2A?displayProperty=nameWithType>です。  
+ **関連:**.NET Framework でのサービス ベースのインフラストラクチャの基本的な操作を呼び出せるように<xref:System.IServiceProvider.GetService%2A?displayProperty=nameWithType>します。  
   
 ### <a name="itypedescriptorcontext"></a>ITypeDescriptorContext  
  **リファレンス ドキュメント**: <xref:System.ComponentModel.ITypeDescriptorContext>  
@@ -96,14 +96,14 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **サービス API:**  <xref:System.Windows.Markup.IXamlTypeResolver.Resolve%2A>  
   
- XAML ライターがオブジェクト グラフに CLR オブジェクトを構築するときに必要な、XAML から CLR への型マッピングに影響を与えることができます。 <xref:System.Windows.Markup.IXamlTypeResolver.Resolve%2A> は、XAML の型名 (<xref:System.Xaml.XamlType.Name%2A?displayProperty=nameWithType>) に対応する、プレフィックス修飾されていることのある文字列を処理し、CLR の <xref:System.Type> を返します。 型の解決は、通常、XAML スキーマ コンテキストに大きく依存します。 XAML スキーマ コンテキストだけが、どのアセンブリが読み込まれているか、これらのアセンブリの中で、型を解決するためにアクセスできる、またはアクセスする必要があるものはどれかといった考慮事項を認識しています。  
+ XAML ライターがオブジェクト グラフに CLR オブジェクトを構築するときに必要な、XAML から CLR への型マッピングに影響を与えることができます。 <xref:System.Windows.Markup.IXamlTypeResolver.Resolve%2A> は、XAML の型名 (<xref:System.Xaml.XamlType.Name%2A?displayProperty=nameWithType>) に対応する、プレフィックス修飾されていることのある文字列を処理し、CLR の <xref:System.Type>を返します。 型の解決は、通常、XAML スキーマ コンテキストに大きく依存します。 XAML スキーマ コンテキストだけが、どのアセンブリが読み込まれているか、これらのアセンブリの中で、型を解決するためにアクセスできる、またはアクセスする必要があるものはどれかといった考慮事項を認識しています。  
   
 ### <a name="iuricontext"></a>IUriContext  
  **リファレンス ドキュメント**: <xref:System.Windows.Markup.IUriContext>  
   
  **定義元:**  <xref:System.Windows.Markup> 名前空間、System.Xaml アセンブリ  
   
- **関連:** URI または `x:Uri` 値であるメンバー値を処理する読み込みパスおよび保存パス。  
+ **関連:** 読み込みパス、パスの処理の Uri であるメンバーの値を保存または`x:Uri`値。  
   
  **サービス API:**  <xref:System.Windows.Markup.IUriContext.BaseUri%2A>  
   
@@ -114,7 +114,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **定義元:**  <xref:System.Xaml> 名前空間、System.Xaml アセンブリ  
   
- **関連:** 型の参照の遅延または最適化を処理する読み込みパス。  
+ **関連:** パスの処理と型参照の遅延または最適化を読み込みます。  
   
  **サービス API:**  <xref:System.Xaml.IAmbientProvider.GetAllAmbientValues%2A>、その他 3 つ。  
   
@@ -125,11 +125,11 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **定義元:**  <xref:System.Xaml> 名前空間、System.Xaml アセンブリ  
   
- **関連:** 読み込みパス、および XAML 型をバッキング型に解決する必要があるその他の操作。  
+ **関連:** 読み込みパス、および XAML 型をバッキング型に解決する必要がある操作を行う。  
   
  **サービス API:**  <xref:System.Xaml.IXamlSchemaContextProvider.SchemaContext%2A>  
   
- 遅延コンテンツを統合するには、同じスキーマ コンテキストを遅延領域に対しても適用する必要があるので、遅延読み込み操作には XAML スキーマ コンテキストが必要です。 XAML スキーマ コンテキストの役割の詳細については、「 [XAML Services](../../../docs/framework/xaml-services/index.md)」を参照してください。  
+ 遅延コンテンツを統合するには、同じスキーマ コンテキストを遅延領域に対しても適用する必要があるので、遅延読み込み操作には XAML スキーマ コンテキストが必要です。 XAML スキーマ コンテキストの役割の詳細については、「 [XAML Services](index.md)」を参照してください。  
   
 ### <a name="irootobjectprovider"></a>IRootObjectProvider  
  **リファレンス ドキュメント**: <xref:System.Xaml.IRootObjectProvider>  
@@ -158,7 +158,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **定義元:**  <xref:System.Windows.Markup> 名前空間、System.Xaml アセンブリ  
   
- **関連:** 読み込みパス、保存パス。  
+ **関連:** 読み込みパス、パスを保存します。  
   
  **サービス API:**  <xref:System.Windows.Markup.IProvideValueTarget.TargetObject%2A>、 <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A>。  
   
@@ -169,7 +169,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **定義元:**  <xref:System.Xaml> 名前空間、System.Xaml アセンブリ  
   
- **関連:** 読み込みパスのオブジェクト グラフ定義、 `x:Name`、 `x:Reference`またはフレームワーク固有の手法によって識別されるオブジェクトの解決。  
+ **関連:** によって識別されるオブジェクトを解決するパス オブジェクト グラフ定義を読み込む`x:Name`、 `x:Reference`、またはフレームワーク固有の手法です。  
   
  **サービス API:**  <xref:System.Xaml.IXamlNameResolver.Resolve%2A>、前方参照を処理する場合などの高度なシナリオで使用されるその他の API。  
   
@@ -180,14 +180,15 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **定義元:**  <xref:System.Xaml> 名前空間、System.Xaml アセンブリ  
   
- **関連:** 読み込みパスでの間接的な CLR 型情報の解決。  
+ **関連:** 間接的な CLR 型情報のパスの解決を読み込みます。  
   
  **サービス API:** <xref:System.Xaml.IDestinationTypeProvider.GetDestinationType%2A>  
   
- 詳細については、「 <xref:System.Xaml.IDestinationTypeProvider>」を参照してください。  
+ 詳細については、「 <xref:System.Xaml.IDestinationTypeProvider> 」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Markup.MarkupExtension>  
- <xref:System.Xaml.XamlObjectWriter>  
- [XAML のマークアップ拡張機能の概要](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)  
- [XAML の型コンバーターの概要](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Markup.MarkupExtension>
+- <xref:System.Xaml.XamlObjectWriter>
+- [XAML のマークアップ拡張機能の概要](markup-extensions-for-xaml-overview.md)
+- [XAML の型コンバーターの概要](type-converters-for-xaml-overview.md)

@@ -2,17 +2,17 @@
 title: SQL Server スキーマ コレクション
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-ms.openlocfilehash: 7f710af5c05942d2ff1718c9d59d4d776f45c6e7
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 79bf9f1253b64863d3eabddff8c33b6ffab70f41
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878463"
 ---
 # <a name="sql-server-schema-collections"></a>SQL Server スキーマ コレクション
 Microsoft .NET Framework Data Provider for SQL Server は、共通のスキーマ コレクションに加えて追加のスキーマ コレクションをサポートしています。 スキーマ コレクションは、使用している SQL Server のバージョンによって多少異なります。 サポートされるスキーマ コレクションの一覧を確認するのには、呼び出し、 **GetSchema**メソッド引数なしでまたはスキーマ コレクション名に"metadatacollections を指定"します。 これにより、サポートされるスキーマ コレクションの一覧、それぞれがサポートする制限数、および使用する識別子部分の数と共に、<xref:System.Data.DataTable> が返されます。  
   
-## <a name="databases"></a>Databases  
+## <a name="databases"></a>データベース  
   
 |ColumnName|DataType|説明|  
 |----------------|--------------|-----------------|  
@@ -20,7 +20,7 @@ Microsoft .NET Framework Data Provider for SQL Server は、共通のスキー�
 |dbid|Int16|データベース ID。|  
 |create_date|DateTime|データベースの作成日。|  
   
-## <a name="foreign-keys"></a>Foreign Keys  
+## <a name="foreign-keys"></a>外部キー  
   
 |ColumnName|DataType|説明|  
 |----------------|--------------|-----------------|  
@@ -51,7 +51,7 @@ Microsoft .NET Framework Data Provider for SQL Server は、共通のスキー�
   
 |ColumnName|DataType|説明|  
 |----------------|--------------|-----------------|  
-|type_desc|String|インデックスの種類。次のいずれかの値になります。<br /><br /> -ヒープ<br />クラスター化<br />-   NONCLUSTERED<br />XML<br />空間|  
+|type_desc|String|インデックスの種類。次のいずれかの値になります。<br /><br /> -ヒープ<br />クラスター化<br />-   NONCLUSTERED<br />-   XML<br />空間|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
   
@@ -216,7 +216,7 @@ Microsoft .NET Framework Data Provider for SQL Server は、共通のスキー�
 |createdate|DateTime|アカウントが追加された日付。|  
 |updatedate|DateTime|アカウントが最後に変更された日付。|  
   
-## <a name="views"></a>ビュー  
+## <a name="views"></a>Views  
   
 |ColumnName|DataType|説明|  
 |----------------|--------------|-----------------|  
@@ -255,6 +255,7 @@ Microsoft .NET Framework Data Provider for SQL Server は、共通のスキー�
 |Create_Date|DateTime|アセンブリが作成/登録された日付。|  
 |Permission_set_desc|String|アセンブリのアクセス許可セット/セキュリティ レベルのフレンドリ名。|  
   
-## <a name="see-also"></a>関連項目  
- [データベース スキーマ情報の取得](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [データベース スキーマ情報の取得](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

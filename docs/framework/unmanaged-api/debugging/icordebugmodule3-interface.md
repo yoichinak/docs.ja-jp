@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 58bad617eb91b7e529ff3d95edd06a5c73feee64
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 37041764ad37221ea80cefa12adfb214287d8248
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196822"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764006"
 ---
 # <a name="icordebugmodule3-interface"></a>ICorDebugModule3 インターフェイス
 動的モジュールのシンボル リーダーを作成します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 interface ICorDebugModule3 : IUnknown  
 {  
     HRESULT CreateReaderForInMemorySymbols  
@@ -51,8 +51,8 @@ interface ICorDebugModule3 : IUnknown
 > [!NOTE]
 >  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>要件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -60,8 +60,9 @@ interface ICorDebugModule3 : IUnknown
   
  **.NET framework のバージョン:** 4.5、4、3.5 SP1
   
-## <a name="see-also"></a>関連項目  
- [ICorDebugRemoteTarget インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
- [ICorDebug インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
-    
- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>関連項目
+
+- [ICorDebugRemoteTarget インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
+- [ICorDebug インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+
+- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -1,16 +1,16 @@
 ---
-title: ワークフローの &lt;system.serviceModel&gt;
+title: ワークフローの <system.serviceModel>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
-ms.openlocfilehash: 62047d68d559a34ead290cf18f77d032841210b2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5580bf570c4c728b526bd62109b48c3ccc18943a
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755638"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422888"
 ---
-# <a name="ltsystemservicemodelgt-of-workflow"></a>ワークフローの &lt;system.serviceModel&gt;
+# <a name="systemservicemodel-of-workflow"></a>\<system.serviceModel > のワークフロー
 この構成セクションには、すべてのワークフロー構成要素が含まれます。  
   
 ## <a name="syntax"></a>構文  
@@ -28,14 +28,14 @@ ms.locfileid: "32755638"
      </sendMessageChannelCache>  
       <sqlWorkflowInstanceStore   
           connectionStringName="String"   
-          honstLockRenewalPeriod="TimeSpan"  
+          hostLockRenewalPeriod="TimeSpan"  
           instanceCompletionAction="DeleteNothing/DeleteAll"  
           instanceEncodingAction="None/GZip"  
           instanceLockedExceptionAction="NoRetry/BasicRetry/AggressiveRetry"  
           runnableInstancesDetectionPeriod="TimeSpan" />  
       <workflowIdle timeToPersist="TimeSpan"  
           timeToUnload="TimeSpan" />  
-      <workflowUnhandledExceptionaction="Abandon/AbandonAndSuspend/Cancel/Terminate" />  
+      <workflowUnhandledExceptionAction="Abandon/AbandonAndSuspend/Cancel/Terminate" />  
     </behavior>  
     </serviceBehaviors>  
   </behaviors>  
@@ -101,8 +101,8 @@ ms.locfileid: "32755638"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<behaviors>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behaviors-of-workflow.md)|このセクションを定義、 **serviceBehaviors**コレクション。  各コレクション内の要素は、サービスによって使用されるそれぞれの動作要素を定義します。 各動作要素は、独自のによって識別される**名前**属性。|  
-|[\<tracking>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|ワークフロー サービスの追跡設定を定義する構成セクションを表します。<br /><br /> ワークフロー追跡とその構成の詳細については、次を参照してください。[ワークフロー追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)と[ワークフローの追跡を構成する](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)です。|  
+|[\<behaviors>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behaviors-of-workflow.md)|このセクションで定義、 **serviceBehaviors**コレクション。  各コレクション内の要素は、サービスによって使用されるそれぞれの動作要素を定義します。 各動作要素が、一意で識別される**名前**属性。|  
+|[\<tracking>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|ワークフロー サービスの追跡設定を定義する構成セクションを表します。<br /><br /> ワークフロー追跡とその構成の詳細については、次を参照してください。[ワークフロー追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)と[ワークフローの追跡を構成する](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)します。|  
   
 ### <a name="parent-elements"></a>親要素  
   

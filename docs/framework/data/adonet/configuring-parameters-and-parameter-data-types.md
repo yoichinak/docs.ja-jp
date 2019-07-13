@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-ms.openlocfilehash: e4414e33efb077e00e4b38e3e53d218ecd7343a7
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 638e8177060c489a7469f80adde68cb9ba266365
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242049"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879967"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>パラメーターおよびパラメーターのデータ型の構成
 
@@ -33,7 +33,7 @@ ms.locfileid: "53242049"
 
 ## <a name="working-with-parameter-placeholders"></a>パラメーターのプレース ホルダーの操作
 
-パラメーターのプレースホルダーの構文はデータ ソースに依存します。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] のデータ プロバイダーによって、パラメーターおよびパラメーターのプレースホルダーの名前付けや指定方法が異なります。 次の表に示すように、データ ソースごとに固有の構文が採用されています。
+パラメーターのプレースホルダーの構文はデータ ソースに依存します。 .NET Framework のデータ プロバイダーによって、パラメーターおよびパラメーターのプレースホルダーの名前付けや指定方法が異なります。 次の表に示すように、データ ソースごとに固有の構文が採用されています。
 
 |データ プロバイダー|パラメーターの名前付け構文|
 |-------------------|-----------------------------|
@@ -44,9 +44,9 @@ ms.locfileid: "53242049"
 
 ## <a name="specifying-parameter-data-types"></a>パラメーターのデータ型を指定します。
 
-パラメーターのデータ型は [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] データ プロバイダーに固有の属性です。 型が指定されている場合は、その値がデータ ソースに渡される前に `Parameter` の値が [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] データ プロバイダー型に変換されます。 `Parameter` オブジェクトの `DbType` プロパティを特定の `Parameter` に設定する一般的な方法で <xref:System.Data.DbType>の型を指定することもできます。
+パラメーターのデータ型は、.NET Framework データ プロバイダーに固有です。 値を変換する種類を指定する、`Parameter`データ ソースに値を渡す前に .NET Framework データ プロバイダーの種類にします。 `Parameter` オブジェクトの `DbType` プロパティを特定の `Parameter` に設定する一般的な方法で <xref:System.Data.DbType>の型を指定することもできます。
 
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] オブジェクトの `Parameter` データ プロバイダー型は、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] オブジェクトの `Value` の `Parameter` 型、または `DbType` オブジェクトの `Parameter` から推論されます。 `Parameter` 値として渡されるオブジェクトまたは指定された `Parameter` に基づいて推論される `DbType`型を、次の表に示します。
+.NET Framework データ プロバイダーの種類、`Parameter`オブジェクトは、.NET Framework の型から推論されます、`Value`の`Parameter`オブジェクト、または、`DbType`の`Parameter`オブジェクト。 `Parameter` 値として渡されるオブジェクトまたは指定された `Parameter` に基づいて推論される `DbType`型を、次の表に示します。
 
 |.NET Framework 型|DbType|SqlDbType|OleDbType|OdbcType|OracleType|
 |-------------------------|------------|---------------|---------------|--------------|----------------|
@@ -96,12 +96,12 @@ ms.locfileid: "53242049"
 
 ## <a name="using-parameters-with-a-sqlcommand-and-a-stored-procedure"></a>SqlCommand およびストアド プロシージャでパラメーターの使用
 
-ストアド プロシージャは、データドリブンのアプリケーションに多くの利点を提供します。 ストアド プロシージャを使用すると、データベースの操作を単一のコマンドにカプセル化し、最大のパフォーマンスが得られるように最適化し、さらに追加のセキュリティ機能を使用して、セキュリティを強化することができます。 ストアド プロシージャは、ストアド プロシージャ名の後にパラメーター引数を記述して SQL ステートメントとして渡すことで呼び出すことができますが、<xref:System.Data.Common.DbCommand.Parameters%2A> の [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] オブジェクトの <xref:System.Data.Common.DbCommand> コレクションを使用すると、ストアド プロシージャ パラメーターをより明示的に定義でき、出力パラメーターや戻り値にもアクセスできます。
+ストアド プロシージャは、データドリブンのアプリケーションに多くの利点を提供します。 ストアド プロシージャを使用すると、データベースの操作を単一のコマンドにカプセル化し、最大のパフォーマンスが得られるように最適化し、さらに追加のセキュリティ機能を使用して、セキュリティを強化することができます。 ストアド プロシージャは、ストアド プロシージャ名の後にパラメーター引数として、SQL ステートメントを使用して渡すことによって呼び出すことができますが、<xref:System.Data.Common.DbCommand.Parameters%2A>コレクション、ADO.NET の<xref:System.Data.Common.DbCommand>オブジェクトでは、ストアド プロシージャをより明示的に定義できます。パラメーターと戻り値を出力パラメーターにアクセスするとします。
 
 > [!NOTE]
 > パラメーター化ステートメントは、 `sp_executesql,` を使ってサーバー上で実行されるため、クエリ プランの再利用が可能になります。 `sp_executesql` バッチ内のローカル カーソルまたはローカル変数は、 `sp_executesql`を呼び出すバッチでは認識されません。 データベース コンテキストの変更は、 `sp_executesql` ステートメント終了時まで有効です。 詳細については、次を参照してください。 [sp_executesql (TRANSACT-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql)します。
 
-<xref:System.Data.SqlClient.SqlCommand> でパラメーターを使用して SQL Server のストアド プロシージャを実行する場合は、 <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> コレクションに追加したパラメーターの名前が、ストアド プロシージャ内のパラメーター マーカーの名前と一致している必要があります。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server は、SQL ステートメントまたはストアド プロシージャにパラメーターを渡す場合の疑問符 (?) プレースホルダーをサポートしていません。 ストアド プロシージャ内のパラメーターは名前付きのパラメーターと見なされ、一致するパラメーター マーカーが検索されます。 たとえば、 `CustOrderHist` ストアド プロシージャが、 `@CustomerID`という名前のパラメーターで定義されているとします。 このストアド プロシージャを実行する場合、実行元のコードでも `@CustomerID`という名前のパラメーターを使用する必要があります。
+<xref:System.Data.SqlClient.SqlCommand> でパラメーターを使用して SQL Server のストアド プロシージャを実行する場合は、 <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> コレクションに追加したパラメーターの名前が、ストアド プロシージャ内のパラメーター マーカーの名前と一致している必要があります。 .NET Framework Data Provider for SQL Server は、SQL ステートメントまたはストアド プロシージャにパラメーターを渡す場合の疑問符 (?) プレース ホルダーをサポートしていません。 ストアド プロシージャ内のパラメーターは名前付きのパラメーターと見なされ、一致するパラメーター マーカーが検索されます。 たとえば、 `CustOrderHist` ストアド プロシージャが、 `@CustomerID`という名前のパラメーターで定義されているとします。 このストアド プロシージャを実行する場合、実行元のコードでも `@CustomerID`という名前のパラメーターを使用する必要があります。
 
 ```sql
 CREATE PROCEDURE dbo.CustOrderHist @CustomerID varchar(5)
@@ -119,9 +119,9 @@ CREATE PROCEDURE dbo.CustOrderHist @CustomerID varchar(5)
 
 ## <a name="using-parameters-with-an-oledbcommand-or-odbccommand"></a>OleDbCommand または OdbcCommand でパラメーターの使用
 
-<xref:System.Data.OleDb.OleDbCommand> または <xref:System.Data.Odbc.OdbcCommand>でパラメーターを使用するときは、 `Parameters` コレクションにパラメーターが追加されている順序が、ストアド プロシージャ内でパラメーターが定義されている順序と一致している必要があります。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB と [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for ODBC は、ストアド プロシージャ内のパラメーターをプレースホルダーとして処理し、順にパラメーター値を適用します。 また、戻り値パラメーターは、 `Parameters` コレクションに最初に追加されたパラメーターにする必要があります。
+<xref:System.Data.OleDb.OleDbCommand> または <xref:System.Data.Odbc.OdbcCommand>でパラメーターを使用するときは、 `Parameters` コレクションにパラメーターが追加されている順序が、ストアド プロシージャ内でパラメーターが定義されている順序と一致している必要があります。 .NET Framework Data Provider for OLE DB と .NET Framework Data Provider for ODBC は、ストアド プロシージャのパラメーターをプレース ホルダーとして処理し、順序でパラメーター値を適用します。 また、戻り値パラメーターは、 `Parameters` コレクションに最初に追加されたパラメーターにする必要があります。
 
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB と [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for ODBC は、SQL ステートメントまたはストアド プロシージャにパラメーターを渡す場合の名前付きのパラメーターをサポートしていません。 この場合は、次の例に示すように、疑問符 (?) プレースホルダーを使用する必要があります。
+.NET Framework Data Provider for OLE DB と .NET Framework Data Provider for ODBC は、SQL ステートメントまたはストアド プロシージャにパラメーターを渡す場合の名前付きパラメーターの情報をサポートしません。 この場合は、次の例に示すように、疑問符 (?) プレースホルダーを使用する必要があります。
 
 ```sql
 SELECT * FROM Customers WHERE CustomerID = ?

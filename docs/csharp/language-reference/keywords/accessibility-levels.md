@@ -6,12 +6,12 @@ helpviewer_keywords:
 - access modifiers [C#], accessibility levels
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
-ms.openlocfilehash: 1bd4c063afe175b5585e5f732ebddbe1a271c8b3
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: da49c6f0b44ab0eefbd338963a744a11502f75da
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243778"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59130469"
 ---
 # <a name="accessibility-levels-c-reference"></a>アクセシビリティ レベル (C# リファレンス)
 
@@ -22,9 +22,9 @@ ms.locfileid: "53243778"
 |[`public`](public.md)|アクセスは無制限です。|  
 |[`protected`](protected.md)|コンテナーであるクラスまたはそこから派生した型にアクセスが限定されます。|  
 |[`internal`](internal.md)|アクセスは現在のアセンブリに限定されます。|  
-|[`protected internal`](protected-internal.md)|現在のアセンブリ、またはコンテナーであるクラスから派生した型にアクセスが限定されます。|  
+|[`protected internal`](protected-internal.md)|現在のアセンブリ、または包含クラスから派生した型にアクセスが限定されます。|  
 |[`private`](private.md)|コンテナーである型にアクセスが限定されます。|  
-|[`private protected`](private-protected.md)|現在のアセンブリ内の、コンテナーであるクラス、またはコンテナーであるクラスから派生した型にアクセスが制限されます。 C# 7.2 以降で使用可能です。 |  
+|[`private protected`](private-protected.md)|包含クラス、または包含クラスから派生した型にアクセスが制限されます。 C# 7.2 以降で使用可能です。 |  
   
  `protected internal` または `private protected` の組み合わせを使う場合を除き、1 つのメンバーまたは 1 つの型に指定できるアクセス修飾子は 1 つだけです。  
   
@@ -48,15 +48,16 @@ ms.locfileid: "53243778"
 ## <a name="c-language-specification"></a>C# 言語仕様  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>参照  
-- [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
-- [アクセス修飾子](../../../csharp/language-reference/keywords/access-modifiers.md)  
-- [アクセシビリティ ドメイン](../../../csharp/language-reference/keywords/accessibility-domain.md)  
-- [アクセシビリティ レベルの使用に関する制限事項](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)  
-- [アクセス修飾子](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
-- [public](../../../csharp/language-reference/keywords/public.md)  
-- [private](../../../csharp/language-reference/keywords/private.md)  
-- [protected](../../../csharp/language-reference/keywords/protected.md)  
+## <a name="see-also"></a>関連項目
+
+- [C# リファレンス](../../../csharp/language-reference/index.md)
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)
+- [アクセス修飾子](../../../csharp/language-reference/keywords/access-modifiers.md)
+- [アクセシビリティ ドメイン](../../../csharp/language-reference/keywords/accessibility-domain.md)
+- [アクセシビリティ レベルの使用に関する制限事項](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)
+- [アクセス修飾子](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
+- [public](../../../csharp/language-reference/keywords/public.md)
+- [private](../../../csharp/language-reference/keywords/private.md)
+- [protected](../../../csharp/language-reference/keywords/protected.md)
 - [internal](../../../csharp/language-reference/keywords/internal.md)

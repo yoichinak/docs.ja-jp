@@ -1,20 +1,20 @@
 ---
-title: '方法 : 一方向コントラクトと要求/応答コントラクトを使用して WCF サービスにアクセスする'
+title: '方法: 一方向の WCF サービスへのアクセスと要求/応答コントラクト'
 ms.date: 03/30/2017
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-ms.openlocfilehash: 7a60d11432e95f56e8479d853e31895ba3fb266b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 119a63978f6c45aa940ff999249c654c7cf96d91
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855115"
 ---
-# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>方法 : 一方向コントラクトと要求/応答コントラクトを使用して WCF サービスにアクセスする
+# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>方法: 一方向の WCF サービスへのアクセスと要求/応答コントラクト
 次の手順では、一方向コントラクトと要求/応答コントラクトを定義する Windows Communication Foundation (WCF) サービスにアクセスして、双方向通信パターンを使用しない方法について説明します。  
   
 ### <a name="to-define-the-service"></a>サービスを定義するには  
   
-1.  サービス コントラクトを宣言します。 一方向の操作の場合は `IsOneWay` 内で `true` が <xref:System.ServiceModel.OperationContractAttribute> に設定されている必要があります。 次のコードは、`IOneWayCalculator`、`Add`、`Subtract`、および `Multiply` に対して一方向の操作を行う `Divide` コントラクトを宣言します。 また、`SayHello` という要求応答操作も定義します。  
+1. サービス コントラクトを宣言します。 一方向の操作の場合は `IsOneWay` 内で `true` が <xref:System.ServiceModel.OperationContractAttribute> に設定されている必要があります。 次のコードは、`IOneWayCalculator`、`Add`、`Subtract`、および `Multiply` に対して一方向の操作を行う `Divide` コントラクトを宣言します。 また、`SayHello` という要求応答操作も定義します。  
   
     ```csharp  
     [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
@@ -33,7 +33,7 @@ ms.locfileid: "33494323"
     }  
     ```  
   
-2.  サービス コントラクトを実装します。 次のコードは `IOnewayCalculator` インターフェイスを実装します。  
+2. サービス コントラクトを実装します。 次のコードは `IOnewayCalculator` インターフェイスを実装します。  
   
     ```csharp  
     [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Multiple, InstanceContextMode = InstanceContextMode.PerCall)]  
@@ -71,7 +71,7 @@ ms.locfileid: "33494323"
     }  
     ```  
   
-3.  コンソール アプリケーションでサービスをホストします。 次のコードはサービスをホストする方法を示しています。  
+3. コンソール アプリケーションでサービスをホストします。 次のコードはサービスをホストする方法を示しています。  
   
     ```csharp  
     // Host the service within this EXE console application.  
@@ -109,7 +109,7 @@ ms.locfileid: "33494323"
   
 ### <a name="to-access-the-service"></a>サービスにアクセスするには  
   
-1.  実行、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)メタデータ交換エンドポイントのアドレスを使用して、次のコマンドラインを使用して、サービスのクライアント クラスを作成する: `Svcutil http://localhost:8000/Service` 、 [ServiceModelメタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)の次のサンプル コードに示すように、インターフェイスとクラスのセットを生成します。  
+1. 実行、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)メタデータ交換エンドポイントのアドレスを使用して、次のコマンドラインを使用して、サービスのクライアント クラスを作成します。`Svcutil http://localhost:8000/Service` [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)の次のサンプル コードに示すように、インターフェイスとクラスのセットを生成します。  
   
     ```csharp  
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]  
@@ -196,7 +196,7 @@ ms.locfileid: "33494323"
   
      `IOneWayCalculator` インターフェイスでは、一方向サービス操作の <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 属性が `true` に設定されており、要求応答サービス操作の属性は既定値である `false` に設定されていることに注目してください。 また、`OneWayCalculatorClient` クラスにも注目してください。 これはサービスを呼び出すために使用するクラスです。  
   
-2.  クライアント オブジェクトを作成します。  
+2. クライアント オブジェクトを作成します。  
   
     ```csharp  
     // Create a client  
@@ -205,7 +205,7 @@ ms.locfileid: "33494323"
     OneWayCalculatorClient client = new OneWayCalculatorClient(binding, epAddress);  
     ```  
   
-3.  サービス操作を呼び出します。  
+3. サービス操作を呼び出します。  
   
     ```csharp  
     // Call the Add service operation.  
@@ -239,7 +239,7 @@ ms.locfileid: "33494323"
     Console.WriteLine("SayHello() returned: " + response);  
     ```  
   
-4.  クライアントを閉じて接続を終了し、リソースをクリーンアップします。  
+4. クライアントを閉じて接続を終了し、リソースをクリーンアップします。  
   
     ```csharp  
     //Closing the client gracefully closes the connection and cleans up resources  
@@ -400,5 +400,6 @@ namespace Microsoft.ServiceModel.Samples
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [一方向サービス](../../../../docs/framework/wcf/feature-details/one-way-services.md)
+## <a name="see-also"></a>関連項目
+
+- [一方向サービス](../../../../docs/framework/wcf/feature-details/one-way-services.md)

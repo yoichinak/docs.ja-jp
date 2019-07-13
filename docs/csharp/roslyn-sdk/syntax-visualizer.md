@@ -3,12 +3,12 @@ title: Visual Studio で Roslyn Syntax Visualizer を使ってコードを調べ
 description: Syntax Visualizer は、.NET Compiler Platform SDK がコード用に生成したモデルを調べるためのビジュアル ツールを提供します。
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 9b283f656b5c468a2270abe9818a89218ce63d16
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2d1c6d0b9f65324ee2eadafaa7f98360f37e7bb7
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143566"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307202"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Visual Studio で Roslyn Syntax Visualizer を使ってコードを調べる
 
@@ -16,7 +16,7 @@ ms.locfileid: "53143566"
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
-[概要](compiler-api-model.md)の記事を読んで、.NET Compiler Platform SDK で使われている概念をよく理解してください。 この記事では、構文ツリー、ノード、トークン、およびトリビアについて説明されています。
+「[.NET Compiler Platform SDK の概念とオブジェクト モデル](compiler-api-model.md)」の記事を読んで、.NET Compiler Platform SDK で使われている概念をよく理解してください。 この記事では、構文ツリー、ノード、トークン、およびトリビアについて説明されています。
 
 ## <a name="syntax-visualizer"></a>Syntax Visualizer
 
@@ -80,11 +80,11 @@ Visualizer ツール ウィンドウと構文グラフ ウィンドウを使用�
 
 デュアル モニターの設定では、2 つ目のモニターに構文グラフ ウィンドウを配置することもできます。
 
-# <a name="inspecting-semantics"></a>セマンティクスの検査
+## <a name="inspecting-semantics"></a>セマンティクスの検査
 
 Syntax Visualizer を使用すると、シンボルとセマンティクス情報についての基本的な検査ができます。 C# の例で Main() 内に `double x = 1 + 1;` を入力します。 次に、コード エディター ウィンドウで式 `1 + 1` を選択します。 Visualizer で **AddExpression** ノードが強調表示されます。 この **[AddExpression]** をクリックし、**[View Symbol (if any)]\(シンボルの表示 (ある場合)\)** をクリックします。 メニュー項目のほとんどに "if any" 修飾子があることに注目してください。 Syntax Visualizer は、ノードのプロパティ (すべてのノードに提示されない場合があるプロパティを含む) を検査します。 
 
-Visualizer 内のプロパティ グリッドが、次の図のように更新されます。式のシンボルは、**SynthesizedIntrinsicOperatorSymbol** と **Kind = Method** です。
+ビジュアライザー内のプロパティ グリッドが、次の図のように更新されます。式のシンボルは、**SynthesizedIntrinsicOperatorSymbol** と **Kind = Method** です。
 
 ![シンボル プロパティ](media/syntax-visualizer/symbol-properties.png)
 
@@ -128,7 +128,7 @@ End Module
 
 上記の VB の例は、C# で簡単にレプリケートできます。 別名の `Imports C = System.Console` の代わりに `using C = System.Console;` を入力します。 C# で上記の手順を行うと、Visualizer ウィンドウの結果はまったく同じになります。
 
-セマンティックの検査操作は、ノードでのみ使用できます。 トークンまたはトリビアでは使用できません。 すべてのノードに検査する興味深いセマンティック情報があるわけではありません。 ノードに興味深いセマンティック情報がない場合は、**[View \* Symbol (if any)]\(* シンボルの表示 (ある場合)\)** をクリックすると、空白のプロパティ グリッドが表示されます。
+セマンティックの検査操作は、ノードでのみ使用できます。 トークンまたはトリビアでは使用できません。 すべてのノードに検査する興味深いセマンティック情報があるわけではありません。 ノードに興味深いセマンティック情報がない場合は、**[View \* Symbol (if any)]\(シンボルの表示 (ある場合)\)** をクリックすると、空白のプロパティ グリッドが表示されます。
 
 セマンティック分析を実行するための API の詳細については、「[セマンティクスの使用](work-with-semantics.md)」概要ドキュメントを参照してください。
 

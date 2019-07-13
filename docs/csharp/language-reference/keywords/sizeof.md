@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: 1c5526366651d7e6623724c939b08ac46aa7db56
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: a00c4f96e62f7fd7d7c352aece097acd5b600ae2
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242634"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422399"
 ---
 # <a name="sizeof-c-reference"></a>sizeof (C# リファレンス)
 
@@ -52,7 +52,7 @@ ms.locfileid: "53242634"
 int intSize = sizeof(int);
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 C# のバージョン 2.0 以降、`sizeof` を単純型または列挙型に適用する場合、そのコードを [unsafe](unsafe.md) コンテキストでコンパイルする必要がなくなりました。
 
@@ -73,7 +73,6 @@ struct など、その他の型については、`sizeof` 演算子はアンセ�
 - [C# リファレンス](../index.md)
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
-- [演算子のキーワード](operator-keywords.md)
 - [enum](enum.md)
 - [アンセーフ コードとポインター](../../programming-guide/unsafe-code-pointers/index.md)
 - [構造体](../../programming-guide/classes-and-structs/structs.md)

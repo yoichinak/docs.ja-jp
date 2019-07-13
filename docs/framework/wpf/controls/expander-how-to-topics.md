@@ -7,21 +7,21 @@ helpviewer_keywords:
 - controls [WPF], Expander
 - Expander control [WPF], how-to topics
 ms.assetid: c31e85e3-963f-4693-b463-a29adc433fcd
-ms.openlocfilehash: 772f5cdc4f9f1b33e040d252a1308b9ce646611e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ab53f0164c5623c93132d29045498ccffaf9712
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911785"
 ---
 # <a name="expander-how-to-topics"></a>エキスパンダーに関する「方法」トピック
-このセクションのトピックを使用する方法について説明、<xref:System.Windows.Controls.Expander>コントロール。  
+このセクションのトピックでは、使用する方法をについて説明します、<xref:System.Windows.Controls.Expander>コントロール。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ScrollViewer を持つエキスパンダーを作成する](../../../../docs/framework/wpf/controls/how-to-create-an-expander-with-a-scrollviewer.md)  
+ [ScrollViewer を持つエキスパンダーを作成する](how-to-create-an-expander-with-a-scrollviewer.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.Expander>  
   
 ## <a name="related-sections"></a>関連項目  
- [エキスパンダーの概要](../../../../docs/framework/wpf/controls/expander-overview.md)
+ [エキスパンダーの概要](expander-overview.md)

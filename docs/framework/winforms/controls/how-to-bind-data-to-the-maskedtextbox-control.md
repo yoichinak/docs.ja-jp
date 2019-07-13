@@ -1,5 +1,5 @@
 ---
-title: '方法 : MaskedTextBox コントロールにデータをバインドする'
+title: '方法: MaskedTextBox コントロールにデータをバインドする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,29 +10,29 @@ helpviewer_keywords:
 - data binding [Windows Forms], MaskedTextBox control [Windows Forms]
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
-ms.openlocfilehash: 98d59e7443b51c17baafd05e6701c1418298b4a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f10a19433c70eb0a1dacf99925f70d6796727da9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530921"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64612409"
 ---
-# <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>方法 : MaskedTextBox コントロールにデータをバインドする
-データをバインドすることができます、<xref:System.Windows.Forms.MaskedTextBox>と同様に、他の Windows フォーム コントロールを制御します。 ただし、データベース内のデータの形式でマスクで定義された形式が一致しない場合は、データの書式を変更する必要があります。 次の手順を使用してこれを行う方法を示して、<xref:System.Windows.Forms.Binding.Format>と<xref:System.Windows.Forms.Binding.Parse>のイベント、<xref:System.Windows.Forms.Binding>クラスを別の電話番号を表示およびデータベースの拡張フィールドを 1 つの編集可能なフィールドとして電話します。  
+# <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>方法: MaskedTextBox コントロールにデータをバインドする
+データをバインドすることができます、<xref:System.Windows.Forms.MaskedTextBox>他の Windows フォーム コントロールと同様に制御します。 ただし、データベース内のデータの形式で、マスクの定義で予期される形式が一致しない場合は、データの書式を変更する必要があります。 次の手順を使用してこれを行う方法を示して、<xref:System.Windows.Forms.Binding.Format>と<xref:System.Windows.Forms.Binding.Parse>のイベント、<xref:System.Windows.Forms.Binding>クラスを別の電話番号を表示および編集可能なフィールドを 1 つとして、拡張データベースのフィールドを電話します。  
   
- 次の手順では、インストールされている、Northwind サンプル データベースと SQL Server データベースへのアクセスがあることが必要です。  
+ 次の手順では、インストールされている Northwind サンプル データベースで SQL Server データベースへのアクセスが必要です。  
   
 ### <a name="to-bind-data-to-a-maskedtextbox-control"></a>MaskedTextBox コントロールにデータをバインドするには  
   
-1.  新しい Windows フォーム プロジェクトを作成します。  
+1. 新しい Windows フォーム プロジェクトを作成します。  
   
-2.  2 つをドラッグして<xref:System.Windows.Forms.TextBox>; フォームにコントロールに名前を付ける`FirstName`と`LastName`です。  
+2. 2 つをドラッグ<xref:System.Windows.Forms.TextBox>コントロールをフォームに名前を付けます`FirstName`と`LastName`します。  
   
-3.  ドラッグ、<xref:System.Windows.Forms.MaskedTextBox>からフォームにコントロール以外の名前を付けます`PhoneMask`です。  
+3. ドラッグ、<xref:System.Windows.Forms.MaskedTextBox>コントロールをフォームには、名前を付けます`PhoneMask`します。  
   
-4.  設定、<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>プロパティ`PhoneMask`に`(000) 000-0000 x9999`です。  
+4. 設定、<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>プロパティの`PhoneMask`に`(000) 000-0000 x9999`します。  
   
-5.  次の名前空間のインポートをフォームに追加します。  
+5. 次の名前空間のインポートをフォームに追加します。  
   
     ```csharp  
     using System.Data.SqlClient;  
@@ -42,7 +42,7 @@ ms.locfileid: "33530921"
     Imports System.Data.SqlClient  
     ```  
   
-6.  フォームを右クリックして選択**コードの表示**です。 このコードをフォーム クラスに置きます。  
+6. フォームを右クリックし **コードの表示**します。 このコードをフォーム クラスに置きます。  
   
     ```csharp  
     Binding currentBinding, phoneBinding;  
@@ -136,7 +136,7 @@ ms.locfileid: "33530921"
     End Sub  
     ```  
   
-7.  イベント ハンドラーを追加、<xref:System.Windows.Forms.Binding.Format>と<xref:System.Windows.Forms.Binding.Parse>イベントに結合し、分離、`PhoneNumber`と`Extension`、バインドからフィールドを<xref:System.Data.DataSet>です。  
+7. イベント ハンドラーを追加、<xref:System.Windows.Forms.Binding.Format>と<xref:System.Windows.Forms.Binding.Parse>したり分割したりするイベント、`PhoneNumber`と`Extension`、バインドからフィールド<xref:System.Data.DataSet>します。  
   
     ```csharp  
     private void phoneBinding_Format(Object sender, ConvertEventArgs e)  
@@ -204,7 +204,7 @@ ms.locfileid: "33530921"
     End Sub  
     ```  
   
-8.  2 つ追加<xref:System.Windows.Forms.Button>フォームのコントロールです。 名前を付けます`previousButton`と`nextButton`です。 追加するには、各ボタンをダブルクリックして、<xref:System.Windows.Forms.Control.Click>イベント ハンドラー、およびイベント ハンドラーのコード例を次に示すように入力します。  
+8. 2 つ追加<xref:System.Windows.Forms.Button>フォームのコントロール。 名前を付けます`previousButton`と`nextButton`します。 追加するには、各ボタンをダブルクリックして、<xref:System.Windows.Forms.Control.Click>イベント ハンドラー、およびイベント ハンドラーに次のコード例で示すように入力します。  
   
     ```csharp  
     private void previousButton_Click(object sender, EventArgs e)  
@@ -228,26 +228,27 @@ ms.locfileid: "33530921"
     End Sub  
     ```  
   
-9. サンプルを実行します。 データを編集して、**前**と **[次へ]** ボタンのデータを正しく保存されることを確認、<xref:System.Data.DataSet>です。  
+9. サンプルを実行します。 データを編集して、**前**と**次**ボタンのデータが適切に保持されることを確認、 <xref:System.Data.DataSet>。  
   
 ## <a name="example"></a>例  
- 次のコード例では、前の手順を完了するの結果であるを一覧表示する完全なコードを示します。  
+ 次のコード例は、コード全体を前の手順を完了には、その結果の一覧です。  
   
- [!code-cpp[MaskedTextBoxData#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/MaskedTextBoxData/cpp/form1.cpp#1)]
- [!code-csharp[MaskedTextBoxData#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/MaskedTextBoxData/CS/form1.cs#1)]
- [!code-vb[MaskedTextBoxData#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/MaskedTextBoxData/VB/form1.vb#1)]  
+ [!code-cpp[MaskedTextBoxData#1](~/samples/snippets/cpp/VS_Snippets_Winforms/MaskedTextBoxData/cpp/form1.cpp#1)]
+ [!code-csharp[MaskedTextBoxData#1](~/samples/snippets/csharp/VS_Snippets_Winforms/MaskedTextBoxData/CS/form1.cs#1)]
+ [!code-vb[MaskedTextBoxData#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MaskedTextBoxData/VB/form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
   
--   Visual c# または Visual Basic プロジェクトを作成します。  
+- ビジュアルを作成するC#または Visual Basic プロジェクト。  
   
--   追加、<xref:System.Windows.Forms.TextBox>と<xref:System.Windows.Forms.MaskedTextBox>フォームにコントロールを前の手順で説明します。  
+- 追加、<xref:System.Windows.Forms.TextBox>と<xref:System.Windows.Forms.MaskedTextBox>フォームにコントロールを前の手順で説明します。  
   
--   プロジェクトの既定のフォームのソース コード ファイルを開きます。  
+- プロジェクトの既定のフォームのソース コード ファイルを開きます。  
   
--   このファイルのソース コードを前の"Code"セクションに記載されているコードに置き換えます。  
+- このファイル内のソース コードを前の"Code"セクションに記載されているコードに置き換えます。  
   
--   アプリケーションをコンパイルします。  
+- アプリケーションをコンパイルします。  
   
-## <a name="see-also"></a>関連項目  
- [チュートリアル: MaskedTextBox コントロールの使用](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)
+## <a name="see-also"></a>関連項目
+
+- [チュートリアル: MaskedTextBox コントロールの操作](walkthrough-working-with-the-maskedtextbox-control.md)

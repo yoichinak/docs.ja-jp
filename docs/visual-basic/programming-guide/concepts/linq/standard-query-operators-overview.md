@@ -2,12 +2,12 @@
 title: 標準クエリ演算子の概要 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 302bd39e-2ec1-495b-94bf-37d370d6f05f
-ms.openlocfilehash: 27b144ae75054dbdc535b6ad894e4a5a0b8529e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9bfdf2163be52d9016a800d65006bbc4fbf560a3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908142"
 ---
 # <a name="standard-query-operators-overview-visual-basic"></a>標準クエリ演算子の概要 (Visual Basic)
 "*標準クエリ演算子*" は、LINQ パターンを形成するメソッドです。 これらのメソッドの大部分はシーケンスに対して機能します。ここでシーケンスとは、<xref:System.Collections.Generic.IEnumerable%601> インターフェイスまたは <xref:System.Linq.IQueryable%601> インターフェイスを実装している型のオブジェクトのことです。 標準クエリ演算子には、フィルター処理、プロジェクション、集計、並べ替えなどのクエリ機能が用意されています。  
@@ -64,7 +64,7 @@ MsgBox(output.ToString())
 ```  
   
 ## <a name="query-expression-syntax"></a>クエリ式の構文  
- 頻繁に使用される標準クエリ演算子の中には、C# および Visual Basic 言語専用のキーワード構文が使用されているものがあります。こうした構文では、標準クエリ演算子を、"*クエリ**式*" の一部として呼び出すことができます。 専用のキーワードと対応する構文では、標準クエリ演算子の詳細については、次を参照してください。[標準クエリ演算子 (Visual Basic) のクエリ式構文](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)です。  
+ 頻繁に使用される標準クエリ演算子の中には、C# および Visual Basic 言語専用のキーワード構文が使用されているものがあります。こうした構文では、標準クエリ演算子を、"*クエリ* *式*" の一部として呼び出すことができます。 専用のキーワードと対応する構文では、標準クエリ演算子の詳細については、次を参照してください。[標準クエリ演算子 (Visual Basic) のクエリ式構文](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)します。  
   
 ## <a name="extending-the-standard-query-operators"></a>標準クエリ演算子の拡張  
  標準クエリ演算子のセットを拡張するには、対象のドメインまたはテクノロジに適したドメイン固有のメソッドを作成します。 また、標準クエリ演算子を、リモート評価、クエリ変換、最適化などの追加サービスが用意されている独自の実装で置き換えることもできます。 例については、「<xref:System.Linq.Enumerable.AsEnumerable%2A>」を参照してください。  
@@ -92,18 +92,19 @@ MsgBox(output.ToString())
   
  [等値演算 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/equality-operations.md)  
   
- [要素の操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/element-operations.md)  
+ [要素操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/element-operations.md)  
   
- [変換する際のデータ型 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)  
+ [データ型 (Visual Basic) の変換](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)  
   
  [連結演算 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/concatenation-operations.md)  
   
  [集計操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Linq.Enumerable>  
- <xref:System.Linq.Queryable>  
- [LINQ の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)  
- [標準クエリ演算子 (Visual Basic) のクエリ式の構文](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)  
- [実行 (Visual Basic) 方法による標準クエリ演算子の分類](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)  
- [拡張メソッド](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Linq.Enumerable>
+- <xref:System.Linq.Queryable>
+- [LINQ の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)
+- [標準クエリ演算子 (Visual Basic) のクエリ式構文](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
+- [(Visual Basic) の実行方法による標準クエリ演算子の分類](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
+- [拡張メソッド](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)

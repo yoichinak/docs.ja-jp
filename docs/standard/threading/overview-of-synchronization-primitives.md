@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37ab502277cb413a116aa1301d1127f700097a45
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 24df4140e515483adb94fa542a7063bd2ae2120b
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146577"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479785"
 ---
 # <a name="overview-of-synchronization-primitives"></a>同期プリミティブの概要
 
@@ -112,7 +112,7 @@ Windows では、プロセス間同期で <xref:System.Threading.Semaphore> を�
 
 Windows では、プロセス間同期で <xref:System.Threading.EventWaitHandle> を使用できます。 そのためには、名前または <xref:System.Threading.EventWaitHandle.OpenExisting%2A?displayProperty=nameWithType> メソッドを指定する [EventWaitHandle コンストラクター](<xref:System.Threading.EventWaitHandle.%23ctor%2A>)のいずれかを使用して、名前付きシステム同期イベントを表す <xref:System.Threading.EventWaitHandle> インスタンスを作成します。
 
-詳細については、「[EventWaitHandle](eventwaithandle.md)」、「[AutoResetEvent](autoresetevent.md)」、「[ManualResetEvent と ManualResetEventSlim](manualresetevent-and-manualreseteventslim.md)」 の記事を参照してください。 API リファレンスについては、<xref:System.Threading.EventWaitHandle>、<xref:System.Threading.AutoResetEvent>、<xref:System.Threading.ManualResetEvent>、および <xref:System.Threading.ManualResetEventSlim> に関する記述を参照してください。
+詳細については、「[EventWaitHandle](eventwaithandle.md)」の記事を参照してください。 API リファレンスについては、<xref:System.Threading.EventWaitHandle>、<xref:System.Threading.AutoResetEvent>、<xref:System.Threading.ManualResetEvent>、および <xref:System.Threading.ManualResetEventSlim> に関する記述を参照してください。
 
 ### <a name="countdownevent-class"></a>CountdownEvent クラス
 

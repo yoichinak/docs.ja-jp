@@ -4,19 +4,20 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrCollection_BeforeAfterExclusive
 ms.assetid: f55fb8d2-746d-45de-b350-5a47f83e5ab4
-ms.openlocfilehash: 74bfbf341d7c39fed4fedc4ec987f16c3c7d932d
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 6508178c7415de041d2e886f19e30b81feb095b2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53781040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008138"
 ---
 # <a name="before-and-after-arguments-cannot-be-combined"></a>'Before' 引数と 'After' 引数を組み合わせることはできません
 引数リストに、相互に排他的な `Before` および `After` 引数の両方が含まれます。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  `Before` または `After` 引数のどちらかを削除します。  
+1. `Before` または `After` 引数のどちらかを削除します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Xml.XmlNodeOrder>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Xml.XmlNodeOrder>

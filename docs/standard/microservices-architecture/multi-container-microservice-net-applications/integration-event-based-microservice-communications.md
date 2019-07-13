@@ -1,15 +1,13 @@
 ---
 title: マイクロサービス間でイベント ベースの通信を実装する (統合イベント)
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | マイクロサービス間でイベント ベースの通信を実装する統合イベントを理解する
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 844d4bd8ac18bc31b5abeff5882df1f9a4acaab5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8a5cfa280063da742dc1693905fc44cf870c1fcc
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147263"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65640722"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>マイクロサービス間でイベント ベースの通信を実装する (統合イベント)
 
@@ -76,19 +74,19 @@ public class ProductPriceChangedIntegrationEvent : IntegrationEvent
 
 [オブザーバー パターン](https://en.wikipedia.org/wiki/Observer_pattern)では、プライマリ オブジェクト (オブザーバブルと呼ばれます) が登録されている他のオブジェクト (オブザーバーと呼ばれます) に関連情報 (イベント) を通知します。
 
-### <a name="publishsubscribe-pubsub-pattern"></a>発行/サブスクライブ (Pub/Sub) パターン 
+### <a name="publishsubscribe-pubsub-pattern"></a>発行/サブスクライブ (Pub/Sub) パターン
 
-[発行/サブスクライブ パターン](https://msdn.microsoft.com/library/ff649664.aspx)の目的はオブザーバー パターンと同じです。特定のイベントが発生したことを他のサービスに通知する必要があります。 ただし、オブザーバー パターンと Pub/Sub パターンの間には重要な違いがあります。 オブザーバー パターンでは、オブザーバブルからオブザーバーに直接ブロードキャストされるため、これらは互いを "認識" しています。 しかし、Pub/Sub パターンを使う場合は、ブローカー、メッセージ ブローカー、またはイベント バスと呼ばれる、発行者とサブスクライバーの両方から認識される第 3 のコンポーネントが存在します。 そのため、Pub/Sub パターンを使うと、前述したイベント バス (またはメッセージ ブローカー) によって、発行者とサブスクライバーが厳密に切り離されます。
+[発行/サブスクライブ パターン](https://docs.microsoft.com/previous-versions/msp-n-p/ff649664(v=pandp.10))の目的はオブザーバー パターンと同じです。特定のイベントが発生したことを他のサービスに通知する必要があります。 ただし、オブザーバー パターンと Pub/Sub パターンの間には重要な違いがあります。 オブザーバー パターンでは、オブザーバブルからオブザーバーに直接ブロードキャストされるため、これらは互いを "認識" しています。 しかし、Pub/Sub パターンを使う場合は、ブローカー、メッセージ ブローカー、またはイベント バスと呼ばれる、発行者とサブスクライバーの両方から認識される第 3 のコンポーネントが存在します。 そのため、Pub/Sub パターンを使うと、前述したイベント バス (またはメッセージ ブローカー) によって、発行者とサブスクライバーが厳密に切り離されます。
 
-### <a name="the-middleman-or-event-bus"></a>仲介者またはイベント バス 
+### <a name="the-middleman-or-event-bus"></a>仲介者またはイベント バス
 
 発行者とサブスクライバーの間の匿名性は、どのように実現すればよいのでしょうか。 簡単な方法は、仲介者にすべての通信を処理させることです。 イベント バスは、このような仲介者の 1 つです。
 
 イベント バスは通常 2 つの部分で構成されます。
 
--   抽象化またはインターフェイス。
+- 抽象化またはインターフェイス。
 
--   1 つ以上の実装。
+- 1 つ以上の実装。
 
 図 6-19 では、イベント バスが、アプリケーションの観点からは、Pub/Sub のチャネルにすぎないことがわかります。 この非同期通信は、さまざまな方法で実装できます。 環境の要件 (たとえば、運用環境と開発環境) に応じて実装を切り替えるために、複数の実装を使うことができます。
 
@@ -129,6 +127,6 @@ public interface IEventBus
 
 `Subscribe` メソッド (引数に応じていくつかの実装を使えます) は、イベントを受信するマイクロサービスによって使われます。 このメソッドには、2 つの引数があります。 1 つ目は、サブスクライブする統合イベントです (`IntegrationEvent`)。 2 番目の引数は、受信側マイクロサービスが統合イベントのメッセージを取得すると実行される、統合イベントのハンドラー (またはコールバック メソッド) です (`IIntegrationEventHandler<T>`)。
 
->[!div class="step-by-step"]
->[前へ](database-server-container.md)
->[次へ](rabbitmq-event-bus-development-test-environment.md)
+> [!div class="step-by-step"]
+> [前へ](database-server-container.md)
+> [次へ](rabbitmq-event-bus-development-test-environment.md)

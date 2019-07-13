@@ -1,25 +1,23 @@
 ---
-title: 一般的なコンテナー設計の原則
-description: Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル
-author: CESARDELATORRE
-ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 8aa388c7c19f532829d64208a48b6e556e43d802
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+title: コンテナー設計の共通原則
+description: コンテナーでは 1 つのプロセスのみをホストする必要があるという、適切なコンテナー設計の基本原則について学習します。
+ms.date: 02/15/2019
+ms.openlocfilehash: 69f3ff6c9303f0c4082695d861a8c90031295b6a
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152878"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "65644795"
 ---
-# <a name="common-container-design-principles"></a>一般的なコンテナー設計の原則
+# <a name="common-container-design-principles"></a>コンテナー設計の共通原則
 
-今後、開発プロセスには、コンテナーを使用する方法に関して触れていくつかの基本的な概念があります。
+開発プロセスに進む前に、コンテナーの使用方法について言及すべき基本概念がいくつかあります。
 
-## <a name="container-equals-a-process"></a>コンテナー プロセスに等しい
+## <a name="container-equals-a-process"></a>コンテナーはプロセスと等しい
 
-コンテナー モデルでは、コンテナーは、1 つのプロセスを表します。 コンテナー プロセス境界として定義すると、スケール、またはバッチから、プロセスに使用するプリミティブの作成を開始します。 Docker コンテナーを実行すると表示されます、 [ENTRYPOINT](https://docs.docker.com/engine/reference/builder/#/entrypoint)定義します。 これは、プロセスとコンテナーの有効期間を定義します。 プロセスが完了したら、コンテナーのライフ サイクルが終了します。 Web サーバー、およびバッチ ジョブは、Microsoft Azure として実装される可能性がありますなどの有効期間が短いプロセスなどの実行時間の長いプロセスがある[WebJobs](https://azure.microsoft.com/documentation/articles/websites-webjobs-resources/)します。 プロセスが失敗した場合、コンテナーが終了し、Orchestrator が引き継ぎます。 オーケストレーターが実行されている 5 つのインスタンスを保持するように指示し、1 つが失敗した場合、オーケストレーターは、失敗した処理を置換する別のコンテナーを作成します。 バッチ ジョブで、プロセスはパラメーターを指定して開始されます。 プロセスが完了すると、作業が完了します。
+コンテナー モデルでは、コンテナーは単一のプロセスを表します。 コンテナーをプロセス境界として定義することで、プロセスのスケーリング、またはバッチ処理に使用されるプリミティブの作成を開始します。 Docker コンテナーを実行すると、[ENTRYPOINT](https://docs.docker.com/engine/reference/builder/#/entrypoint) 定義が表示されます。 これでプロセスとコンテナーの有効期間が定義されます。 プロセスが完了すると、コンテナーのライフサイクルが終了します。 Web サーバーなどの実行時間の長いプロセス、およびバッチ ジョブなどの短期間のプロセスがあります。これらは、Microsoft Azure [WebJobs](https://azure.microsoft.com/documentation/articles/websites-webjobs-resources/) として実装されている可能性があります。 プロセスが失敗した場合、コンテナーが終了し、Orchestrator が引き継ぎます。 オーケストレーターが 5 つのインスタンスの実行を維持するように指示されており、1 つが失敗した場合、オーケストレーターでは、失敗したプロセスを置換する別のコンテナーが作成されます。 バッチ ジョブで、プロセスはパラメーターを指定して開始されます。 プロセスが完了すると、作業が完了します。
 
-複数のプロセスを 1 つのコンテナーで実行されている必要があるシナリオがあります。 任意のアーキテクチャのドキュメントはありません、"never、"は常にも、「常時」。 一般的なパターンは複数のプロセスを必要とするシナリオでは、使用する[スーパーバイザー](http://supervisord.org/)します。
+単一のコンテナーで複数のプロセスを実行する必要があるシナリオが見られる場合があります。 どのアーキテクチャ ドキュメントでも、絶対に "絶対" は存在せず、また、いつも "いつも" は存在しません。 複数のプロセスを必要とするシナリオの場合、一般的なパターンは[スーパーバイザー](http://supervisord.org/)を使用することです。
 
 >[!div class="step-by-step"]
 >[前へ](design-docker-applications.md)

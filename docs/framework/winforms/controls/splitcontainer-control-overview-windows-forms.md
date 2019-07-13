@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-ms.openlocfilehash: 81898e09ff513043b205cde13378ae24ee755226
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f6dcdbde480c1900ea488c6db3cc320b20f9f182
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002876"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591487"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>SplitContainer コントロールの概要 (Windows フォーム)
 Windows フォームの <xref:System.Windows.Forms.SplitContainer> コントロールは複合と考えることができ、移動可能なバーで区切られた 2 つのパネルです。 マウス ポインターがバーの上に移動すると、ポインターの形が変わり、バーが移動可能であることを示します。  
   
 > [!IMPORTANT]
->  **ツールボックス**、<xref:System.Windows.Forms.SplitContainer>置換を制御、 <xref:System.Windows.Forms.Splitter> Visual Studio の以前のバージョンであるコントロール。 <xref:System.Windows.Forms.SplitContainer> コントロールは <xref:System.Windows.Forms.Splitter> コントロールより優先されます。 <xref:System.Windows.Forms.Splitter>クラスも含める、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]既存のアプリケーションとの互換性のために使用するぜひが、<xref:System.Windows.Forms.SplitContainer>新しいプロジェクトのコントロール。  
+>  **ツールボックス**、<xref:System.Windows.Forms.SplitContainer>置換を制御、 <xref:System.Windows.Forms.Splitter> Visual Studio の以前のバージョンであるコントロール。 <xref:System.Windows.Forms.SplitContainer> コントロールは <xref:System.Windows.Forms.Splitter> コントロールより優先されます。 <xref:System.Windows.Forms.Splitter> クラスは、既存のアプリケーションの互換性のために .NET Framework に含まれていますが、新しいプロジェクトでは <xref:System.Windows.Forms.SplitContainer> コントロールを使用することを強くお勧めします。  
   
  <xref:System.Windows.Forms.SplitContainer>コントロール、複雑なユーザー インターフェイスを作成することができます。 多くの場合、1 つのパネルで選択範囲を決定、その他のパネルに表示されるオブジェクト。 この配置は、情報の表示と参照に対して非常に効果的です。 2 つのパネルで地域では、情報を集計して、バー、または「分割」により、パネルのサイズを変更するユーザーに簡単です。  
   
@@ -49,7 +49,8 @@ Windows フォームの <xref:System.Windows.Forms.SplitContainer> コントロ�
 |<xref:System.Windows.Forms.SplitContainer.SplitterMoving> イベント|分割線を移動するときに発生します。|  
 |<xref:System.Windows.Forms.SplitContainer.SplitterMoved> イベント|分割線が移動されたときに発生します。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.SplitContainer>  
- [SplitContainer コントロール](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
- [SplitContainer コントロールのサンプル](https://msdn.microsoft.com/library/9015fad0-7108-4d85-a83a-a72d038c4f65)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Forms.SplitContainer>
+- [SplitContainer コントロール](splitcontainer-control-windows-forms.md)
+- [SplitContainer コントロールのサンプル](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/0ffz7d1b(v=vs.90))

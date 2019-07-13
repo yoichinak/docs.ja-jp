@@ -2,12 +2,12 @@
 title: バージョン間の耐性があるシリアル化に対応する技術サンプル
 ms.date: 03/30/2017
 ms.assetid: 2a183664-bfbf-4ff0-96f6-c836284ea916
-ms.openlocfilehash: 34dccc9065c0100a01a7969a1fe762001e2999a9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 6c30c39848be02785b6b808ecf4af711c0c9e95d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44210855"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66482997"
 ---
 # <a name="version-tolerant-serialization-technology-sample"></a>バージョン間の耐性があるシリアル化に対応する技術サンプル
 [サンプルのダウンロード](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  
@@ -16,29 +16,29 @@ ms.locfileid: "44210855"
   
 ### <a name="to-build-the-sample-using-the-command-prompt"></a>コマンド プロンプトを使用してサンプルをビルドするには  
   
-1.  コマンド プロンプト ウィンドウを表示し、サンプルの使用言語に対応するサブディレクトリ (V1 Application または V2 Application の下) に移動します。  
+1. コマンド プロンプト ウィンドウを表示し、サンプルの使用言語に対応するサブディレクトリ (V1 Application または V2 Application の下) に移動します。  
   
-2.  コマンド ラインに「**msbuild.exe \<ver> application.sln**」と入力します (この \<ver> は v1 または v2 です)。  
+2. コマンド ラインに「**msbuild.exe \<ver> application.sln**」と入力します (この \<ver> は v1 または v2 です)。  
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>Visual Studio を使用してサンプルをビルドするには  
   
-1.  [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)]を開き、サンプルが格納されている、言語固有のサブディレクトリのいずれかに移動します。  
+1. ファイル エクスプ ローラーを開き、サンプルの言語固有のサブディレクトリのいずれかに移動します。  
   
-2.  前の手順で選択したディレクトリの V1 Application サブディレクトリに移動します。  
+2. 前の手順で選択したディレクトリの V1 Application サブディレクトリに移動します。  
   
-3.  V1 Application.sln ファイルのアイコンをダブルクリックして、このファイルを Visual Studio で開きます。  
+3. V1 Application.sln ファイルのアイコンをダブルクリックして、このファイルを Visual Studio で開きます。  
   
-4.  **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。  
+4. **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。  
   
-5.  V2 Application サブディレクトリに移動し、前の 2 つの手順を実行して、V2 Application をビルドします。  
+5. V2 Application サブディレクトリに移動し、前の 2 つの手順を実行して、V2 Application をビルドします。  
   
  各アプリケーションは、既定で、それぞれのプロジェクト ディレクトリの \bin または \bin\Debug サブディレクトリにビルドされます。  
   
 ### <a name="to-run-the-sample"></a>サンプルを実行するには  
   
-1.  コマンド プロンプト ウィンドウで、サンプル アプリケーションをビルドしたときに選択した言語に対応する、言語固有のサブディレクトリに移動します。  
+1. コマンド プロンプト ウィンドウで、サンプル アプリケーションをビルドしたときに選択した言語に対応する、言語固有のサブディレクトリに移動します。  
   
-2.  コマンド ラインに「**runme.cmd**」と入力し、両方のアプリケーションを一度に実行します。  
+2. コマンド ラインに「**runme.cmd**」と入力し、両方のアプリケーションを一度に実行します。  
   
  または、新しい実行可能ファイルが格納されているディレクトリに移動し、これらを順に実行します。  
   
@@ -47,5 +47,5 @@ ms.locfileid: "44210855"
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>  
+- <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>
 - <xref:System.IO.FileStream>

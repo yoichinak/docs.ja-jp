@@ -7,58 +7,59 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
-ms.openlocfilehash: faa06e4558401c1d0e9335fbc630c5371d1bc516
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 53291a0e428b723cd7a6e7b1184639a7b3c3b972
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772984"
 ---
 # <a name="optimizing-wpf-application-performance"></a>WPF アプリケーションのパフォーマンスの最適化
-このセクションの目的は、参照用として[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション開発者が、アプリケーションのパフォーマンスを向上させる方法を探しています。 新しい Microsoft .NET Framework には、開発者がいるかどうかと[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、おく必要があります最初に自分で両方のプラットフォームです。 このセクションでは、両方の実用的な知識を前提としていてが既に実行して、アプリケーションを十分に把握するプログラマにとって書き込まれます。  
+このセクションへの参照[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション開発者がアプリケーションのパフォーマンスを向上させる方法を探しています。 Microsoft .NET Framework で新しく導入した開発者のかどうかと[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、両方のプラットフォームで自分で最初理解する必要があります。 ここでは、両方の実用的な知識を前提としていて、既に起動して実行して、アプリケーションを十分に把握するプログラマが書き込まれます。  
   
 > [!NOTE]
->  このセクションで提供されるパフォーマンス データがに基づいて[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]RAM および ATI Radeon 9700、512 で 2.8 GHz PC で実行されるアプリケーション グラフィックス カードです。  
+>  このセクションで提供されるパフォーマンス データがに基づいて[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]RAM と、ATI Radeon 9700 を 512 2.8 GHz の PC で実行されているアプリケーションのグラフィックス カード。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [アプリケーション パフォーマンスの計画](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
+ [アプリケーション パフォーマンスの計画](planning-for-application-performance.md)  
   
- [ハードウェアの活用](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  
+ [ハードウェアの活用](optimizing-performance-taking-advantage-of-hardware.md)  
   
- [レイアウトとデザイン](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
+ [レイアウトとデザイン](optimizing-performance-layout-and-design.md)  
   
- [2D グラフィックスとイメージング](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [2D グラフィックスとイメージング](optimizing-performance-2d-graphics-and-imaging.md)  
   
- [オブジェクトの動作](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
+ [オブジェクトの動作](optimizing-performance-object-behavior.md)  
   
- [アプリケーション リソース](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
+ [アプリケーション リソース](optimizing-performance-application-resources.md)  
   
- [[テキスト]](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
+ [[テキスト]](optimizing-performance-text.md)  
   
- [データ バインディング](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [データ バインディング](optimizing-performance-data-binding.md)  
   
- [コントロール](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)  
+ [コントロール](optimizing-performance-controls.md)  
   
- [パフォーマンスに関するその他の推奨事項](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)  
+ [パフォーマンスに関するその他の推奨事項](optimizing-performance-other-recommendations.md)  
   
- [アプリケーションの起動時間](../../../../docs/framework/wpf/advanced/application-startup-time.md)  
+ [アプリケーションの起動時間](application-startup-time.md)  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Media.RenderOptions>  
- <xref:System.Windows.Media.RenderCapability>  
- [グラフィックスの描画層](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)  
- [WPF グラフィックス レンダリングの概要](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [レイアウト](../../../../docs/framework/wpf/advanced/layout.md)  
- [WPF のツリー](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)  
- [Drawing オブジェクトの概要](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
- [DrawingVisual オブジェクトの使用](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)  
- [依存関係プロパティの概要](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Freezable オブジェクトの概要](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [XAML リソース](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
- [WPF のドキュメント](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [書式設定されたテキストの描画](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)  
- [WPF のタイポグラフィ](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [ナビゲーションの概要](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
- [アニメーションのヒントとテクニック](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)  
- [チュートリアル: WPF アプリケーション内のアプリケーション データのキャッシュ](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Media.RenderOptions>
+- <xref:System.Windows.Media.RenderCapability>
+- [グラフィックスの描画層](graphics-rendering-tiers.md)
+- [WPF グラフィックス レンダリングの概要](../graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [レイアウト](layout.md)
+- [WPF のツリー](trees-in-wpf.md)
+- [Drawing オブジェクトの概要](../graphics-multimedia/drawing-objects-overview.md)
+- [DrawingVisual オブジェクトの使用](../graphics-multimedia/using-drawingvisual-objects.md)
+- [依存関係プロパティの概要](dependency-properties-overview.md)
+- [Freezable オブジェクトの概要](freezable-objects-overview.md)
+- [XAML リソース](xaml-resources.md)
+- [WPF のドキュメント](documents-in-wpf.md)
+- [書式設定されたテキストの描画](drawing-formatted-text.md)
+- [WPF のタイポグラフィ](typography-in-wpf.md)
+- [データ バインディングの概要](../data/data-binding-overview.md)
+- [ナビゲーションの概要](../app-development/navigation-overview.md)
+- [アニメーションのヒントとテクニック](../graphics-multimedia/animation-tips-and-tricks.md)
+- [チュートリアル: WPF アプリケーションでアプリケーション データのキャッシュ](walkthrough-caching-application-data-in-a-wpf-application.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;mscorlib&gt;暗号設定の要素'
+title: 暗号設定の <mscorlib> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#mscorlib
@@ -8,20 +8,18 @@ helpviewer_keywords:
 - mscorlib element
 - <mscorlib> element
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 6a8a589077aba413fa89518e560373df816f8943
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ec328bc4c63bd4754c6f975ac03e610718304245
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674747"
 ---
-# <a name="ltmscorlibgt-element-for-cryptography-settings"></a>&lt;mscorlib&gt;暗号設定の要素
+# <a name="mscorlib-element-for-cryptography-settings"></a>\<mscorlib > 要素の暗号化の設定
 含まれています、 [ \<cryptographySettings > 要素](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md)します。  
   
  \<configuration>  
-\<mscorlib >  
+\<mscorlib>  
   
 ## <a name="syntax"></a>構文  
   
@@ -70,10 +68,11 @@ ms.locfileid: "50187846"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>  
-- <xref:System.Security.Cryptography>  
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [暗号化設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)  
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>
+- <xref:System.Security.Cryptography>
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [暗号化設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
 - [暗号化クラスの設定](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma warning [C#]'
 ms.assetid: 723493d5-9753-4cec-babb-54e2b8eb36b6
-ms.openlocfilehash: 3b50585e0ae0964cf19379573bd85923daa552f4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 0145df533572ff9d5004a653bb232a7ff60af5f1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242738"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495105"
 ---
-# <a name="pragma-warning-c-reference"></a>#pragma 警告 (C# リファレンス)
+# <a name="pragma-warning-c-reference"></a>#pragma warning (C# リファレンス)
 `#pragma warning` を使用すると、特定の警告を有効または無効にすることができます。  
   
 ## <a name="syntax"></a>構文  
@@ -24,7 +24,7 @@ ms.locfileid: "53242738"
 #pragma warning restore warning-list  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `warning-list`  
  警告番号のコンマ区切りのリスト。 "CS" というプレフィックスは省略可能です。  
   
@@ -59,9 +59,9 @@ public class D
 }  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [C# プリプロセッサ ディレクティブ](../../../csharp/language-reference/preprocessor-directives/index.md)  
+- [C# リファレンス](../../../csharp/language-reference/index.md)
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [C# プリプロセッサ ディレクティブ](../../../csharp/language-reference/preprocessor-directives/index.md)
 - [C# コンパイラ エラー](../../../csharp/language-reference/compiler-messages/index.md)

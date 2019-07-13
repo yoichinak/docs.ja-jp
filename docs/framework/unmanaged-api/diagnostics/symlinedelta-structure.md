@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 77cd8b7d791d11f6d40386f4747c60cd4832521a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d98ebed2eb853d5dc8177b0b044bf654c3978494
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428095"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744349"
 ---
 # <a name="symlinedelta-structure"></a>SYMLINEDELTA 構造体
-シンボル ハンドラーを編集した結果として移動されたメソッドに関する情報を提供します。  
+編集の結果として移動されたメソッドに関する情報をシンボル ハンドラーを提供します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct _SYMLINEDELTA  
     {  
         mdMethodDef  mdMethod;  
@@ -43,8 +43,9 @@ typedef struct _SYMLINEDELTA
 |`mdMethod`|メソッドのメタデータ トークンです。|  
 |`delta`|メソッドが移動された行の数。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** CorSym.idl  
   
-## <a name="see-also"></a>関連項目  
- [シンボル ストア診断構造体](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
+## <a name="see-also"></a>関連項目
+
+- [シンボル ストア診断構造体](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

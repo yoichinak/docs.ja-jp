@@ -1,5 +1,5 @@
 ---
-title: '&lt;system.web&gt;要素 (Web 設定)'
+title: <system.web> 要素 (Web 設定)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Web.config configuration file [ASP.NET]
@@ -8,16 +8,14 @@ helpviewer_keywords:
 - ASP.NET configuration system
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 39d305d429490380c76e15bdcdde434f0d75457b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b9a43c5f5141e364ab9aac1cfdff577a8fb8a161
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47202690"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486676"
 ---
-# <a name="ltsystemwebgt-element-web-settings"></a>&lt;system.web&gt;要素 (Web 設定)
+# <a name="systemweb-element-web-settings"></a>\<system.web > 要素 (Web 設定)
 ASP.NET ホスト レイヤーがプロセス全体の動作を管理する方法についてを説明します。  
   
  \<configuration>  
@@ -46,13 +44,13 @@ ASP.NET ホスト レイヤーがプロセス全体の動作を管理する方�
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|共通言語ランタイムおよび [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
+|[\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルでは、ルート要素を指定します。|  
   
 ## <a name="remarks"></a>Remarks  
- `system.web`要素とその子`applicationPool`に要素が追加された、[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]の[!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]します。 実行すると[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]も以降のバージョンの統合モードでは、この要素を組み合わせて、ASP.NET スレッドを管理する方法と、ASP.NET が IIS アプリケーション プールでホストされている場合に要求をキューにする方法を構成できます。 実行する場合[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]以降のバージョン、クラシックまたは ISAPI のモードでこれらの設定は無視されます。  
+ `system.web`要素とその子`applicationPool`要素は、.NET Framework 3.5 SP1 の時点で、.NET Framework に追加されました。 統合モードで IIS 7.0 またはそれ以降のバージョンを実行するときにこの要素の組み合わせでは、ASP.NET はスレッドを管理する方法と、ASP.NET が IIS アプリケーション プールでホストされている場合に要求をキューにする方法を構成することができます。 クラシックまたは ISAPI のモードで IIS 7.0 またはそれ以降のバージョンを実行する場合は、これらの設定は無視されます。  
   
 ## <a name="example"></a>例  
- 次の例では、ASP.NET が IIS アプリケーション プールでホストされている場合は、aspnet.config ファイルに ASP.NET プロセス全体の動作を構成する方法を示します。 この例では統合で IIS が実行されているモードと、アプリケーションを使用している、[!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]以降のバージョン。 バージョンでこの動作は発生しません、[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]よりも前、[!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]します。 値の例では、既定値です。  
+ 次の例では、ASP.NET が IIS アプリケーション プールでホストされている場合は、aspnet.config ファイルに ASP.NET プロセス全体の動作を構成する方法を示します。 この例では統合で IIS が実行されているモードと、アプリケーションが、.NET Framework 3.5 SP1 またはそれ以降のバージョンを使用しています。 この動作は、.NET Framework、.NET Framework 3.5 SP1 より前のバージョンでは発生しません。 値の例では、既定値です。  
   
 ```xml  
 <configuration>  
@@ -74,5 +72,6 @@ ASP.NET ホスト レイヤーがプロセス全体の動作を管理する方�
 |検証ファイル||  
 |空にすることができます。||  
   
-## <a name="see-also"></a>関連項目  
- [\<applicationPool> 要素 (Web 設定)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)
+## <a name="see-also"></a>関連項目
+
+- [\<applicationPool> 要素 (Web 設定)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)

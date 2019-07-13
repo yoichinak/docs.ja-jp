@@ -2,12 +2,12 @@
 title: TransportSecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: 31b8cd3b-3be5-4b6c-93f0-69d7aaf791d0
-ms.openlocfilehash: f6c4da005a90c2b58bd6b06556fdd2daaa40c0f9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 072d8a38e4c784f4f7b81f80172ab0e1e8078284
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641711"
 ---
 # <a name="transportsecuritybindingelement"></a>TransportSecurityBindingElement
 TransportSecurityBindingElement  
@@ -27,7 +27,8 @@ class TransportSecurityBindingElement : SecurityBindingElement
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
-|Namespace|root\ServiceModel で定義|  
+|名前空間|root\ServiceModel で定義|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>

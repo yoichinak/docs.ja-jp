@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ identifier type character'
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
-ms.openlocfilehash: ffc1cd141ba624d2ce26e4b1c070431ff0ddd6fe
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 00945e0f3cd4e605bf625068ab6693101ae3b164
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44180463"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647054"
 ---
 # <a name="decimal-data-type-visual-basic"></a>10 進型 (Decimal) (Visual Basic)
 符号付き 10 の累乗によってスケーリング 96 ビット (12 バイト) の整数値を表す 128 ビット (16 バイト) 値を保持します。 スケール ファクターは小数点の右側にある数字の数を指定します。その範囲は 0 から 28 です。 最大有効値は 0 (数値) の小数点以下桁数、79,228,162,514,264,337,593,543,950,335 +/-(7 +/-.9228162514264337593543950335E + 28)。 小数点以下桁数が 28 7.9228162514264337593543950335 については、最大値は、および 0 以外の最小値は、(1 e ~ 28) +/-+/-0.0000000000000000000000000001。  
@@ -37,13 +37,13 @@ ms.locfileid: "44180463"
   
 ## <a name="programming-tips"></a>プログラミングのヒント  
   
--   **有効桁数です。** `Decimal` 浮動小数点データ型はありません。 `Decimal`構造体は、符号ビットとスケール ファクターがどの程度の値が 10 進数の割合を指定する整数値のバイナリ整数値を保持します。 このため、`Decimal`番号は、浮動小数点型よりもメモリ内でより正確な表現を持ち (`Single`と`Double`)。  
+- **有効桁数です。** `Decimal` 浮動小数点データ型はありません。 `Decimal`構造体は、符号ビットとスケール ファクターがどの程度の値が 10 進数の割合を指定する整数値のバイナリ整数値を保持します。 このため、`Decimal`番号は、浮動小数点型よりもメモリ内でより正確な表現を持ち (`Single`と`Double`)。  
   
--   **パフォーマンス。** `Decimal`データ型はすべての数値型の最も遅い。 データ型を選択する前にパフォーマンスと精度の重要性を比較検討する必要があります。  
+- **パフォーマンス。** `Decimal`データ型はすべての数値型の最も遅い。 データ型を選択する前にパフォーマンスと精度の重要性を比較検討する必要があります。  
   
--   **拡大します。** `Decimal`拡大変換後のデータ型`Single`または`Double`します。 つまり、変換できる`Decimal`遭遇することがなくこれらの型のいずれかに、<xref:System.OverflowException?displayProperty=nameWithType>エラー。  
+- **拡大します。** `Decimal`拡大変換後のデータ型`Single`または`Double`します。 つまり、変換できる`Decimal`遭遇することがなくこれらの型のいずれかに、<xref:System.OverflowException?displayProperty=nameWithType>エラー。  
   
--   **後続のゼロ。** Visual Basic では後続の 0 を格納しません、`Decimal`リテラル。 ただし、`Decimal`変数には、計算に必要なすべての後続のゼロが保持されます。 次に例を示します。  
+- **後続のゼロ。** Visual Basic では後続の 0 を格納しません、`Decimal`リテラル。 ただし、`Decimal`変数には、計算に必要なすべての後続のゼロが保持されます。 次に例を示します。  
   
     ```  
     Dim d1, d2, d3, d4 As Decimal  
@@ -59,9 +59,9 @@ ms.locfileid: "44180463"
   
      d1 2.375、d2 の = = 1.625、d3 4.000、d4 を = = 4  
   
--   **型宣言文字。** あるリテラルにリテラルの型文字 `D` を付けると、そのリテラルは `Decimal` に変換されます。 ある識別子に識別子の型文字 `@` を付けると、その識別子は整数型 (`Decimal`) に変換されます。  
+- **型宣言文字。** あるリテラルにリテラルの型文字 `D` を付けると、そのリテラルは `Decimal` に変換されます。 ある識別子に識別子の型文字 `@` を付けると、その識別子は整数型 (`Decimal`) に変換されます。  
   
--   **フレームワークの型。** .NET Framework において対応する型は、<xref:System.Decimal?displayProperty=nameWithType> 構造体です。  
+- **フレームワークの型。** .NET Framework において対応する型は、<xref:System.Decimal?displayProperty=nameWithType> 構造体です。  
   
 ## <a name="range"></a>範囲  
  使用する必要があります、`D`文字入力すると大きな値を割り当てる、`Decimal`変数または定数。 この要件は、コンパイラがリテラルとして解釈されるので`Long`しない限り、リテラルの型文字以下、リテラルの例を次に示します。  
@@ -78,13 +78,14 @@ Dim bigDec3 As Decimal = 9223372036854775808D  ' No overflow.
   
  `bigDec3`、リテラルの型文字`D`としてリテラルを解釈するコンパイラを強制することで、問題を解決する`Decimal`の代わりとして、 `Long`。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Decimal?displayProperty=nameWithType>  
- <xref:System.Decimal.%23ctor%2A?displayProperty=nameWithType>  
- <xref:System.Math.Round%2A?displayProperty=nameWithType>  
- [データの種類](../../../visual-basic/language-reference/data-types/index.md)  
- [Single データ型](../../../visual-basic/language-reference/data-types/single-data-type.md)  
- [Double 型](../../../visual-basic/language-reference/data-types/double-data-type.md)  
- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Decimal?displayProperty=nameWithType>
+- <xref:System.Decimal.%23ctor%2A?displayProperty=nameWithType>
+- <xref:System.Math.Round%2A?displayProperty=nameWithType>
+- [データの種類](../../../visual-basic/language-reference/data-types/index.md)
+- [Single データ型](../../../visual-basic/language-reference/data-types/single-data-type.md)
+- [Double 型](../../../visual-basic/language-reference/data-types/double-data-type.md)
+- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

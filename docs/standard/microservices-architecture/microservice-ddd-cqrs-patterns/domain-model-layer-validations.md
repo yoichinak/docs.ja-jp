@@ -1,15 +1,13 @@
 ---
 title: ドメイン モデル レイヤーでの検証の設計
 description: コンテナー化された .NET アプリケーション用の .NET マイクロサービス アーキテクチャ | ドメイン モデル検証の主要な概念を理解する。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: f348e1dbb65f37f625c1dec243364af683c99b8a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 1d3196d2130df33969ed231bccfe0fc6f0af2ad8
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153684"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639586"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>ドメイン モデル レイヤーでの検証を設計する
 
@@ -42,7 +40,7 @@ public void SetAddress(Address address)
 public void SetAddress(string line1, string line2,
     string city, string state, int zip)
 {
-    _shipingAddress.line1 = line1 ?? throw new ...
+    _shippingAddress.line1 = line1 ?? throw new ...
     _shippingAddress.line2 = line2;
     _shippingAddress.city = city ?? throw new ...
     _shippingAddress.state = (IsValid(state) ? state : throw new …);
@@ -88,26 +86,26 @@ UI 層内でモデルの検証を許可するために、入力を受け取る V
 ## <a name="additional-resources"></a>その他の技術情報
 
 - **Rachel Appel。ASP.NET Core MVC でのモデル検証の概要** \
-  [*https://docs.microsoft.com/aspnet/core/mvc/models/validation*](https://docs.microsoft.com/aspnet/core/mvc/models/validation)
+  <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
 
 - **Rick Anderson の 検証の追加** \
-  [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
+  <https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation>
 
 - **Martin Fowler。検証で例外のスローを通知に置き換える** \
-  [*https://martinfowler.com/articles/replaceThrowWithNotification.html*](https://martinfowler.com/articles/replaceThrowWithNotification.html)
+  <https://martinfowler.com/articles/replaceThrowWithNotification.html>
 
 - **仕様と通知のパターン** \
-  [*https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns*](https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns)
+  <https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns>
 
 - **Lev Gorodinski。ドメイン駆動設計 (DDD) での検証** \
-  [*http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/*](http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/)
+  <http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/>
 
 - **Colin Jack。ドメイン モデルの検証** \
-  [*http://colinjack.blogspot.com/2008/03/domain-model-validation.html*](http://colinjack.blogspot.com/2008/03/domain-model-validation.html)
+  <https://colinjack.blogspot.com/2008/03/domain-model-validation.html>
 
 - **Jimmy Bogard。DDD 世界での検証** \
-  [*https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/*](https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/)
+  <https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/>
 
->[!div class="step-by-step"]
->[前へ](enumeration-classes-over-enum-types.md)
->[次へ](client-side-validation.md)
+> [!div class="step-by-step"]
+> [前へ](enumeration-classes-over-enum-types.md)
+> [次へ](client-side-validation.md)

@@ -6,23 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - drag-and-drop [WPF], how-to topics
 ms.assetid: 559c0804-c62a-4640-b6b9-cbd2aa9fb99c
-ms.openlocfilehash: 72dae52c6d6b570831aefb54ca2843a92c5ad35a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 87c1425e6eaf03b900e07cfd9fc489ef01b1607a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010437"
 ---
 # <a name="drag-and-drop-how-to-topics"></a>ドラッグ アンド ドロップに関する「方法」トピック
 次の例を使用して一般的なタスクを実行する方法を示します、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]フレームワークのドラッグ アンド ドロップします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [RichTextBox コントロール上にドロップしたファイルを開く](../../../../docs/framework/wpf/advanced/how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  
- [データ オブジェクトを作成する](../../../../docs/framework/wpf/advanced/how-to-create-a-data-object.md)  
- [データ形式がデータ オブジェクトに存在するかどうかを判別する](../../../../docs/framework/wpf/advanced/how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  
- [データ オブジェクト内のデータ形式の一覧を表示する](../../../../docs/framework/wpf/advanced/how-to-list-the-data-formats-in-a-data-object.md)  
- [特定のデータ形式でデータを取得する](../../../../docs/framework/wpf/advanced/how-to-retrieve-data-in-a-particular-data-format.md)  
- [データ オブジェクトへ複数のデータ形式を格納する](../../../../docs/framework/wpf/advanced/how-to-store-multiple-data-formats-in-a-data-object.md)  
+ [RichTextBox コントロール上にドロップしたファイルを開く](how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  
+ [データ オブジェクトを作成する](how-to-create-a-data-object.md)  
+ [データ形式がデータ オブジェクトに存在するかどうかを判別する](how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  
+ [データ オブジェクト内のデータ形式の一覧を表示する](how-to-list-the-data-formats-in-a-data-object.md)  
+ [特定のデータ形式でデータを取得する](how-to-retrieve-data-in-a-particular-data-format.md)  
+ [データ オブジェクトへ複数のデータ形式を格納する](how-to-store-multiple-data-formats-in-a-data-object.md)  
   
-## <a name="see-also"></a>関連項目  
- [ドラッグ アンド ドロップの概要](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)
+## <a name="see-also"></a>関連項目
+
+- [ドラッグ アンド ドロップの概要](drag-and-drop-overview.md)

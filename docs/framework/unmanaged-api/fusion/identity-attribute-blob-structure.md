@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59b4c832a4bbc915749aadf435b204e084828698
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e478cb89821ce8666f1746e752e06d2caa3ad2bb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434347"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751594"
 ---
 # <a name="identityattributeblob-structure"></a>IDENTITY_ATTRIBUTE_BLOB 構造体
-アセンブリでは、1 つの属性に関する情報が含まれておりは、3 つの`DWORD`s。 各`DWORD`によって生成される文字バッファーへのオフセットです、`CurrentIntoBuffer`のメソッド、 [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)インターフェイス  
+アセンブリでは、1 つの属性に関する情報を格納および 3 つから成る`DWORD`秒。 各`DWORD`によって生成される文字バッファーへのオフセットです、`CurrentIntoBuffer`のメソッド、 [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)インターフェイス  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct _IDENTITY_ATTRIBUTE_BLOB {  
     DWORD  ofsNamespace;  
     DWORD  ofsName;  
@@ -42,22 +42,22 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`ofsNamespace`|最初の文字バッファーにオフセットします。 属性の名前空間ではなく、一連の null 文字は、このオフセットは追跡されません。 したがっては使用されません。|  
-|`ofsName`|文字バッファーに 2 つ目のオフセット。 この場所は、属性の名前の先頭をマークします。|  
+|`ofsNamespace`|最初の文字バッファーにオフセットします。 属性の名前空間ではなく、一連の null 文字は、このオフセットは追跡されません。 そのためは使用されません。|  
+|`ofsName`|文字バッファーへの 2 つ目のオフセット。 この場所は、属性の名前の先頭をマークします。|  
 |`ofsValue`|文字バッファーに 3 つ目のオフセット。 この場所は、属性の値の開始をマークします。|  
   
 ## <a name="sample"></a>サンプル  
  次の例は、最終的に設定されているいくつかの基本的な手順を示しています。`IDENTITY_ATTRIBUTE_BLOB`構造体。  
   
-1.  取得、 [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)アセンブリのです。  
+1. 取得、 [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)アセンブリ。  
   
-2.  呼び出す、`IReferenceIdentity::EnumAttributes`メソッドを取得し、 [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)です。  
+2. 呼び出す、`IReferenceIdentity::EnumAttributes`メソッドを取得し、 [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)します。  
   
-3.  文字バッファーを作成し、としてキャスト、`IDENTITY_ATTRIBUTE_BLOB`構造体。  
+3. 文字バッファーを作成し、としてキャスト、`IDENTITY_ATTRIBUTE_BLOB`構造体。  
   
-4.  呼び出す、`CurrentIntoBuffer`のメソッド、`IEnumIDENTITY_ATTRIBUTE`インターフェイスです。 このメソッドは、属性、コピー `Namespace`、 `Name`、および`Value`文字バッファーにします。 これらの文字列に 3 つのオフセットが利用可能になる、`IDENTITY_ATTRIBUTE_BLOB`構造体。  
+4. 呼び出す、`CurrentIntoBuffer`のメソッド、`IEnumIDENTITY_ATTRIBUTE`インターフェイス。 このメソッドは、属性をコピー `Namespace`、 `Name`、および`Value`文字バッファーにします。 これらの文字列に 3 つのオフセットで使用可能になる、`IDENTITY_ATTRIBUTE_BLOB`構造体。  
   
-```  
+```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
   
 #include "stdafx.h"  
@@ -225,7 +225,7 @@ Exit:
  C:\\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll  
   
 ### <a name="sample-output"></a>出力例  
- カルチャ ニュートラルを =  
+ Culture = neutral  
   
  名前 = システム  
   
@@ -235,15 +235,16 @@ Exit:
   
  バージョン 2.0.0.0 を =  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Isolation.h  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IReferenceIdentity インターフェイス](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)  
- [IEnumIDENTITY_ATTRIBUTE インターフェイス](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)  
- [IDENTITY_ATTRIBUTE 構造体](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)  
- [Fusion 構造体](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+## <a name="see-also"></a>関連項目
+
+- [IReferenceIdentity インターフェイス](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
+- [IEnumIDENTITY_ATTRIBUTE インターフェイス](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
+- [IDENTITY_ATTRIBUTE 構造体](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)
+- [Fusion 構造体](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)

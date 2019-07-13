@@ -1,15 +1,15 @@
 ---
-title: '&lt;フィルター&gt;'
+title: <filters>
 ms.date: 03/30/2017
 ms.assetid: 37a87222-ec78-4728-8105-9ca1bd961f0c
-ms.openlocfilehash: aae70fbe873eee10fcf95dcdd443dfa9ae6efb57
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: b840e17c2dccabce9e58cb658d757b0a98e1ffcf
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703999"
 ---
-# <a name="ltfiltersgt"></a>&lt;フィルター&gt;
+# <a name="filters"></a>\<filters>
 
 `filters` 要素は、ログに記録されるメッセージの種類の制御に使用される XPath フィルターのコレクションを保持します。
 
@@ -37,11 +37,13 @@ SOAP ヘッダー セクションがあるメッセージだけを記録する�
   
 ## <a name="see-also"></a>関連項目
 
- <xref:System.ServiceModel.Configuration.DiagnosticSection> <xref:System.ServiceModel.Diagnostics>
- <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>
- <xref:System.ServiceModel.Configuration.MessageLoggingElement>
- <xref:System.ServiceModel.Configuration.MessageLoggingElement.Filters%2A>
- <xref:System.ServiceModel.Configuration.XPathMessageFilterElementCollection>
- <xref:System.ServiceModel.Configuration.XPathMessageFilterElement>
- <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>
- [メッセージのログの構成](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) [ \<messageLogging >](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
+- <xref:System.ServiceModel.Configuration.DiagnosticSection>
+- <xref:System.ServiceModel.Diagnostics>
+- <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>
+- <xref:System.ServiceModel.Configuration.MessageLoggingElement>
+- <xref:System.ServiceModel.Configuration.MessageLoggingElement.Filters%2A>
+- <xref:System.ServiceModel.Configuration.XPathMessageFilterElementCollection>
+- <xref:System.ServiceModel.Configuration.XPathMessageFilterElement>
+- <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>
+- [メッセージ ログの構成](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
+- [\<messageLogging>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)

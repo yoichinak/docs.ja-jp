@@ -1,4 +1,12 @@
-### <a name="resizing-a-grid-can-hang"></a>グリッドのサイズを変更すると、ハングする可能性がある
+---
+ms.openlocfilehash: 5df5afec17d400ed14fe9b4c03c2f754895f0dd7
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378768"
+---
+### <a name="resizing-a-grid-can-cause-an-application-to-become-unresponsive"></a>グリッドのサイズを変更するとアプリケーションが応答しなくなることがある
 
 |   |   |
 |---|---|
@@ -7,4 +15,3 @@
 |スコープ|エッジ|
 |Version|4.7|
 |型|ランタイム|
-

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13ec60999db88b9d7191a3866fcebe8098b4edee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7c9e2bb9ef97326c3d11553b6cabd0de0fd6e495
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411387"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747503"
 ---
 # <a name="icordebugcodegetiltonativemapping-method"></a>ICorDebugCode::GetILToNativeMapping メソッド
 Microsoft intermediate language (MSIL) オフセットからネイティブ オフセットへのマッピングを表す"COR_DEBUG_IL_TO_NATIVE_MAP"インスタンスの配列を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetILToNativeMapping (  
     [in]  ULONG32    cMap,  
     [out] ULONG32    *pcMap,  
@@ -38,29 +38,30 @@ HRESULT GetILToNativeMapping (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `cMap`  
  [in] `map` 配列のサイズ。  
   
  `pcMap`  
- [out]実際に返される要素の数へのポインター、`map`配列。  
+ [out]実際に返される要素数へのポインター、`map`配列。  
   
  `map`  
- [out]配列`COR_DEBUG_IL_TO_NATIVE_MAP`以下構造、MSIL のオフセットからネイティブ オフセットへのマッピングを表します。  
+ [out]配列の`COR_DEBUG_IL_TO_NATIVE_MAP`構造体、MSIL のオフセットからネイティブ オフセットへのマッピングを表します。  
   
  返される要素の配列に順序がありません。  
   
-## <a name="remarks"></a>コメント  
- `GetILToNativeMapping`メソッドは、この"ICorDebugCode"インスタンスがジャストでタイム (JIT) MSIL コードをコンパイルしたネイティブ コードを表す場合にのみ、意味のある結果を返します。  
+## <a name="remarks"></a>Remarks  
+ `GetILToNativeMapping`メソッドは、この"ICorDebugCode"インスタンスは、just-in-time (JIT) MSIL コードをコンパイルしたネイティブ コードを表す場合にのみ、意味のある結果を返します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICorDebugCode Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-interface1.md)
+## <a name="see-also"></a>関連項目
+
+- [ICorDebugCode インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-interface1.md)

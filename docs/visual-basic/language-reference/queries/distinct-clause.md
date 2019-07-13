@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Distinct statement [Visual Basic]
 - queries [Visual Basic], Distinct
 ms.assetid: 86f42614-0d8f-4ffc-b888-ce8a37a8d36a
-ms.openlocfilehash: 18d09d8018303aab6a69801c84c7ec9c6ea19ca9
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: fbca9fa8aa227d8d5b6488bef179f4bda08bb38c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945354"
 ---
 # <a name="distinct-clause-visual-basic"></a>Distinct 句 (Visual Basic)
 次のクエリ句で、重複を排除する現在の範囲変数の値を制限します。  
@@ -30,11 +30,12 @@ Distinct
 ## <a name="example"></a>例  
  次のクエリ式では、顧客の一覧と顧客の注文のリストを結合します。 `Distinct`句は、一意の顧客名のリストを返し、注文日に含まれています。  
   
- [!code-vb[VbSimpleQuerySamples#20](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/distinct-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#20)]  
   
-## <a name="see-also"></a>関連項目  
- [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [クエリ](../../../visual-basic/language-reference/queries/index.md)  
- [From 句](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)  
- [WHERE 句](../../../visual-basic/language-reference/queries/where-clause.md)
+## <a name="see-also"></a>関連項目
+
+- [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [クエリ](../../../visual-basic/language-reference/queries/index.md)
+- [From 句](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)
+- [Where 句](../../../visual-basic/language-reference/queries/where-clause.md)

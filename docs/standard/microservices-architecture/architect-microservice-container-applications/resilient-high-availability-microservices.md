@@ -1,15 +1,13 @@
 ---
 title: マイクロサービスの回復性と高可用性
 description: マイクロサービスの高可用性を実現するには、一時的なネットワークや依存関係のエラーに耐えるような設計が必要であり、回復性も求められます。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: cbfff525c977c8dc11503a9f230c3ede6f0d6f37
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.openlocfilehash: bb1bef0c9cc08e43aed80a29effe89587fb296f6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52745330"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639930"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>マイクロサービスの回復性と高可用性
 
@@ -29,12 +27,12 @@ ms.locfileid: "52745330"
 
 正常性は診断とは異なります。 正常性は、適切なアクションを実行するためにマイクロサービスが現在の状態を報告することです。 可用性を維持するためのアップグレードと展開の操作は、この良い例です。 プロセスのクラッシュやコンピューターの再起動のために、サービスが現在異常でも、サービスは引き続き動作している場合があります。 最も望まないことは、アップグレードの実行によってこれを悪化させることです。 最良のアプローチは、最初に調査を行うか、マイクロサービスが回復できるように時間を与えることです。 マイクロサービスからの正常性イベントは、情報に基づいた意思決定を行い、実質的に自己修復サービスを作成するのに役立ちます。
 
-このガイドの [ASP.NET Core サービス セクションでの正常性チェックの実装](../implement-resilient-applications/monitor-app-health.md#implementing-health-checks-in-aspnet-core-services)では、新しい ASP.NET HealthChecks ライブラリをマイクロサービスで使用し、適切なアクションを実行するために状態を監視サービスに報告する方法について説明しています。
+このガイドの [ASP.NET Core サービス セクションでの正常性チェックの実装](../implement-resilient-applications/monitor-app-health.md#implement-health-checks-in-aspnet-core-services)では、新しい ASP.NET HealthChecks ライブラリをマイクロサービスで使用し、適切なアクションを実行するために状態を監視サービスに報告する方法について説明しています。
 
 Beat Pulse と呼ばれる優れたオープン ソース ライブラリを使用することもできます。これは、[GitHub](https://github.com/Xabaril/BeatPulse) で、および [NuGet パッケージ](https://www.nuget.org/packages/BeatPulse/)として入手できます。 このライブラリでも正常性チェックが行われますが、チェックが 2 種類あります。
 
-- **稼動**: マイクロサービスが稼動しているかどうか。つまり要求を受け入れ、応答できるかどうかがチェックされます。 
-- **準備**: マイクロサービスの依存関係 (データベース、キュー サービスなど) 自体が準備できていて、マイクロサービスが求められた操作を実行できるかどうかがチェックされます。 
+- **稼動**:マイクロサービスが稼動しているかどうか。つまり要求を受け入れ、応答できるかどうかがチェックされます。 
+- **準備**:マイクロサービスの依存関係 (データベース、キュー サービスなど) 自体が準備できていて、マイクロサービスが求められた操作を実行できるかどうかがチェックされます。 
 
 ### <a name="using-diagnostics-and-logs-event-streams"></a>診断とログのイベント ストリームを使用する
 
@@ -42,7 +40,7 @@ Beat Pulse と呼ばれる優れたオープン ソース ライブラリを使�
 
 モノリシック サーバー ベースのアプリケーションでは、単純にログをディスク上のファイルに書き込み (ログ ファイル)、後でツールを使用して分析します アプリケーションの実行は、固定サーバーまたは VM に制限されているため、イベントのフローの分析は一般的にそれほど複雑ではありません。 ただし、複数のサービスがオーケストレーター クラスタ内の多くのノードに渡って実行される分散アプリケーションでは、分散イベントを関連付けることは難しい課題です。
 
-マイクロサービスベースのアプリケーションは、イベントまたはログファイルの出力ストリームをアプリケーション自体で保存しないようにする必要があり、さらに中央の場所へのイベントのルーティングも管理しないようにする必要があります 透過的になっている必要があります。つまり、各プロセスは、標準出力にイベント ストリームを書き込むだけで、それが実行されている実行環境インフラストラクチャによって収集されるようにする必要があります。 これらのイベント ストリーム ルーターの例として、[Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow) は、複数のソースからイベント ストリームを収集し、出力システムに公開します。 これらには、開発環境用の単純な標準出力、[Application Insights](https://azure.microsoft.com/services/application-insights/)、[OMS](https://github.com/Azure/diagnostics-eventflow#oms-operations-management-suite) (オンプレミス アプリケーション用)、[Azure Diagnostics](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics) などのクラウド システムが含まれます。 ログの検索、アラート、レポート、監視を行うことができる優れたサードパーティ製のログ分析プラットフォームとツールもあり、[Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA) のようにリアルタイムで実行できるものもあります。
+マイクロサービスベースのアプリケーションは、イベントまたはログファイルの出力ストリームをアプリケーション自体で保存しないようにする必要があり、さらに中央の場所へのイベントのルーティングも管理しないようにする必要があります 透過的になっている必要があります。つまり、各プロセスは、標準出力にイベント ストリームを書き込むだけで、それが実行されている実行環境インフラストラクチャによって収集されるようにする必要があります。 これらのイベント ストリーム ルーターの例として、[Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow) は、複数のソースからイベント ストリームを収集し、出力システムに公開します。 これらには、開発環境や、[Azure Monitor](https://azure.microsoft.com/services/monitor//) や [Azure Diagnostics](https://docs.microsoft.com/azure/azure-monitor/platform/diagnostics-extension-overview) などのクラウド システムに向けた、シンプルな標準出力を含めることができます。 ログの検索、アラート、レポート、監視を行うことができる優れたサードパーティ製のログ分析プラットフォームとツールもあり、[Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA) のようにリアルタイムで実行できるものもあります。
 
 ### <a name="orchestrators-managing-health-and-diagnostics-information"></a>正常性および診断情報を管理するオーケストレーター
 
@@ -58,26 +56,26 @@ Beat Pulse と呼ばれる優れたオープン ソース ライブラリを使�
 
 ## <a name="additional-resources"></a>その他の技術情報
 
-- **Twelve-Factor App.XI.ログ: イベント ストリームとしてログを処理する** \
-  [*https://12factor.net/logs*](https://12factor.net/logs)
+- **Twelve-Factor App.XI.ログ:イベント ストリームとしてログを処理する** \
+  <https://12factor.net/logs>
 
 - **Microsoft 診断 EventFlow ライブラリ** GitHub リポジトリ。 \
-  [*https://github.com/Azure/diagnostics-eventflow*](https://github.com/Azure/diagnostics-eventflow)
+  <https://github.com/Azure/diagnostics-eventflow>
 
-- **Azure 診断について** \
-  [*https://docs.microsoft.com/azure/azure-diagnostics*](https://docs.microsoft.com/azure/azure-diagnostics)
+- **Azure Diagnostics について** \
+  <https://docs.microsoft.com/azure/azure-diagnostics>
 
-- **Windows コンピューターを Azure の Log Analytics サービスに接続する** \
-  [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
+- **Windows コンピューターを Azure Monitor サービスに接続する** \
+  <https://docs.microsoft.com/azure/azure-monitor/platform/agent-windows>
 
-- **意味を表すログ: セマンティック ログ アプリケーション ブロックを使用する** \
-  [*https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
+- **意味を表すログ:セマンティック ログ アプリケーション ブロックを使用する** \
+  <https://docs.microsoft.com/previous-versions/msp-n-p/dn440729(v=pandp.60)>
 
 - **Splunk** 公式サイト。 \
-  [*https://www.splunk.com/*](https://www.splunk.com/)
+  <https://www.splunk.com/>
 
 - Windows イベント トレーシング (ETW) の **EventSource クラス** API \
-  [*https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource)
+  [https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource](xref:System.Diagnostics.Tracing.EventSource)
 
 >[!div class="step-by-step"]
 >[前へ](microservice-based-composite-ui-shape-layout.md)

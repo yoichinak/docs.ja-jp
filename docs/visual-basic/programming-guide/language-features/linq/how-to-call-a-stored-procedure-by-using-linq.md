@@ -1,5 +1,5 @@
 ---
-title: '方法 : LINQ を使用してストアド プロシージャを呼び出す (Visual Basic)'
+title: '方法: LINQ (Visual Basic) を使用してストアド プロシージャを呼び出す'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], stored procedure calls
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - stored procedures [LINQ to SQL]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 6436d384-d1e0-40aa-8afd-451007477260
-ms.openlocfilehash: 50a4dff90dc1ce02869978f1da147e530cefc3e1
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
-ms.translationtype: MT
+ms.openlocfilehash: af25ebe10681ebb1c346f90afc0291e53224833a
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122668"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59319574"
 ---
-# <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>方法 : LINQ を使用してストアド プロシージャを呼び出す (Visual Basic)
+# <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>方法: LINQ (Visual Basic) を使用してストアド プロシージャを呼び出す
 統合言語クエリ (LINQ) を簡単にデータベースなどに格納されているオブジェクトの手順も含め、データベースの情報にアクセスします。  
   
  次の例では、SQL Server データベースでストアド プロシージャを呼び出すアプリケーションを作成する方法を示します。 データベースの 2 つの異なるストアド プロシージャを呼び出す方法を示します。 各手順では、クエリの結果を返します。 1 つのプロシージャは、入力パラメーターを受け取り、その他のプロシージャはパラメーターを取りません。  
@@ -25,52 +25,53 @@ ms.locfileid: "49122668"
   
 ### <a name="to-create-a-connection-to-a-database"></a>データベースへの接続を作成するには  
   
-1.  Visual Studio で開く**サーバー エクスプ ローラー**/**データベース エクスプ ローラー**をクリックして**サーバー エクスプ ローラー**/**データベースエクスプ ローラー**上、**ビュー**メニュー。  
+1. Visual Studio で開く**サーバー エクスプ ローラー**/**データベース エクスプ ローラー**をクリックして**サーバー エクスプ ローラー**/**データベースエクスプ ローラー**上、**ビュー**メニュー。  
   
-2.  右クリック**データ接続**で**サーバー エクスプ ローラー**/**データベース エクスプ ローラー**  をクリックし、**接続の追加**します。  
+2. 右クリック**データ接続**で**サーバー エクスプ ローラー**/**データベース エクスプ ローラー**  をクリックし、**接続の追加**します。  
   
-3.  Northwind サンプル データベースへの接続を有効なを指定します。  
+3. Northwind サンプル データベースへの接続を有効なを指定します。  
   
 ### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>LINQ to SQL ファイルを格納しているプロジェクトを追加するには  
   
-1.  Visual Studio で、**[ファイル]** メニューの **[新規作成]** をポイントし、**[プロジェクト]** をクリックします。 Visual Basic を選択**Windows フォーム アプリケーション**プロジェクトの種類として。  
+1. Visual Studio で、**[ファイル]** メニューの **[新規作成]** をポイントし、**[プロジェクト]** をクリックします。 Visual Basic を選択**Windows フォーム アプリケーション**プロジェクトの種類として。  
   
-2.  **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。 選択、 **LINQ to SQL クラス**項目テンプレート。  
+2. **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。 選択、 **LINQ to SQL クラス**項目テンプレート。  
   
-3.  そのファイルに `northwind.dbml` という名前を付けます。 **[追加]** をクリックします。 Northwind.dbml ファイル用には、オブジェクト リレーショナル デザイナー (O/R デザイナー) を開きます。  
+3. そのファイルに `northwind.dbml` という名前を付けます。 **[追加]** をクリックします。 Northwind.dbml ファイル用には、オブジェクト リレーショナル デザイナー (O/R デザイナー) を開きます。  
   
 ### <a name="to-add-stored-procedures-to-the-or-designer"></a>ストアド プロシージャを O/R デザイナーに追加するには  
   
-1.  **サーバー エクスプ ローラー**/**データベース エクスプ ローラー**、Northwind データベースへの接続を展開します。 展開、 **Stored Procedures**フォルダー。  
+1. **サーバー エクスプ ローラー**/**データベース エクスプ ローラー**、Northwind データベースへの接続を展開します。 展開、 **Stored Procedures**フォルダー。  
   
      O/R デザイナーを閉じた場合は、先ほど追加した northwind.dbml ファイルをダブルクリックして開くことができます。  
   
-2.  をクリックして、 **Sales by Year**ストアド プロシージャと、デザイナーの右ペインにドラッグします。 をクリックして、 **10 最も高価な製品**ストアド プロシージャは、デザイナーの右側のペインにドラッグします。  
+2. をクリックして、 **Sales by Year**ストアド プロシージャと、デザイナーの右ペインにドラッグします。 をクリックして、 **10 最も高価な製品**ストアド プロシージャは、デザイナーの右側のペインにドラッグします。  
   
-3.  変更を保存し、デザイナーを閉じます。  
+3. 変更を保存し、デザイナーを閉じます。  
   
-4.  プロジェクトを保存します。  
+4. プロジェクトを保存します。  
   
 ### <a name="to-add-code-to-display-the-results-of-the-stored-procedures"></a>ストアド プロシージャの結果を表示するコードを追加するには  
   
-1.  **ツールボックス**、ドラッグ、<xref:System.Windows.Forms.DataGridView>に、プロジェクトの Form1 の既定の Windows フォーム コントロール。  
+1. **ツールボックス**、ドラッグ、<xref:System.Windows.Forms.DataGridView>に、プロジェクトの Form1 の既定の Windows フォーム コントロール。  
   
-2.  コードを追加する Form1 をダブルクリックしてその`Load`イベント。  
+2. コードを追加する Form1 をダブルクリックしてその`Load`イベント。  
   
-3.  デザイナーが追加されたストアド プロシージャを O/R デザイナーに追加したときに、<xref:System.Data.Linq.DataContext>プロジェクトのオブジェクト。 このオブジェクトには、これらのプロシージャにアクセスするに必要なコードが含まれています。 <xref:System.Data.Linq.DataContext>オブジェクトの名前は、プロジェクトに基づく .dbml ファイルの名前。 このプロジェクトで、<xref:System.Data.Linq.DataContext>オブジェクトの名前は`northwindDataContext`します。  
+3. デザイナーが追加されたストアド プロシージャを O/R デザイナーに追加したときに、<xref:System.Data.Linq.DataContext>プロジェクトのオブジェクト。 このオブジェクトには、これらのプロシージャにアクセスするに必要なコードが含まれています。 <xref:System.Data.Linq.DataContext>オブジェクトの名前は、プロジェクトに基づく .dbml ファイルの名前。 このプロジェクトで、<xref:System.Data.Linq.DataContext>オブジェクトの名前は`northwindDataContext`します。  
   
      インスタンスを作成することができます、 <xref:System.Data.Linq.DataContext> O/R デザイナーによって、コードの呼び出しでストアド プロシージャのメソッドを指定します。 バインドする、<xref:System.Windows.Forms.DataGridView>オブジェクト、クエリを強制的に呼び出すことによってすぐに実行する必要があります、<xref:System.Linq.Enumerable.ToList%2A>メソッドでは、ストアド プロシージャの結果。  
   
      次のコードを追加、`Load`データ コンテキストのメソッドとして公開されたストアド プロシージャのいずれかを呼び出すイベントです。  
   
-     [!code-vb[VbLINQtoSQLHowTos#1](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-call-a-stored-procedure-by-using-linq_1.vb)]  
-    [!code-vb[VbLINQtoSQLHowTos#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-call-a-stored-procedure-by-using-linq_2.vb)]  
+     [!code-vb[VbLINQtoSQLHowTos#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form3.vb#1)]  
+    [!code-vb[VbLINQtoSQLHowTos#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form3.vb#2)]  
   
-4.  F5 キーを押してプロジェクトを実行し、結果を表示します。  
+4. F5 キーを押してプロジェクトを実行し、結果を表示します。  
   
-## <a name="see-also"></a>関連項目  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [クエリ](../../../../visual-basic/language-reference/queries/index.md)  
- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [DataContext メソッド (O/R デザイナー)](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
- [方法: 更新、挿入、および削除を実行するストアド プロシージャを割り当てる (O/R デザイナー)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)
+## <a name="see-also"></a>関連項目
+
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [クエリ](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [DataContext メソッド (O/R デザイナー)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+- [方法: 更新、挿入、および削除を実行するストアド プロシージャを割り当てる (O/R デザイナー)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)

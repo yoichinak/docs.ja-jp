@@ -17,44 +17,45 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b5f66099eb4b1cb84d9911567cac4255bf20480
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d70797d810d6dd2fe97c1f0f3b9c45a18fb2afba
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421399"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767553"
 ---
 # <a name="icordebugprocess5enumerategcreferences-method"></a>ICorDebugProcess5::EnumerateGCReferences メソッド
 プロセスでガベージ コレクトされるすべてのオブジェクトの列挙子を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EnumerateGCReferences(  
     [in] Bool enumerateWeakReferences,   
     [out] ICorDebugGCReferenceEnum **ppEnum  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `enumerateWeakReferences`  
- [in]弱い参照は、列挙するもあるかどうかを示すブール値。 場合`enumerateWeakReferences`は`true`、`ppEnum`列挙子には、強力な参照および弱い参照の両方が含まれています。 場合`enumerateWeakReferences`は`false`、列挙子には、強力な参照のみが含まれています。  
+ [in]弱い参照を列挙するもあるかどうかを示すブール値。 場合`enumerateWeakReferences`は`true`、`ppEnum`列挙子には、強い参照と弱い参照の両方が含まれています。 場合`enumerateWeakReferences`は`false`、列挙子には、強力な参照のみが含まれています。  
   
  `ppEnum`  
- [out]アドレスへのポインター、 [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)つまりする列挙子オブジェクトのガベージ コレクションします。  
+ [out]アドレスへのポインター、 [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)ガベージ コレクトされる列挙子は、オブジェクト。  
   
-## <a name="remarks"></a>コメント  
- このメソッドは、プロセスでマネージ オブジェクトに対して完全ルート チェーンを決定する方法を提供し、オブジェクトが生きて理由を判断するために使用できます。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、プロセス内の任意のマネージ オブジェクトのルートの完全なチェーンを決定する方法を提供し、オブジェクトがまだ有効な状態の理由を特定するために使用できます。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICorDebugProcess5 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)  
- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>関連項目
+
+- [ICorDebugProcess5 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
+- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

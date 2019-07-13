@@ -5,18 +5,16 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 17a30ba5132673af70860e4f5f1a87f861c97386
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5be2ca8b4247fcd6bdc628ae0f4aefff30a11256
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193646"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64652223"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI オートメーション コントロール パターンの概要
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]に関する最新情報については[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)をご覧ください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
  この概要では、 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] コントロール パターンについて説明します。 コントロール パターンは、コントロール型や外観に関係なく、コントロールの機能を分類したり公開したりするための手段です。  
   
@@ -29,11 +27,11 @@ ms.locfileid: "47193646"
 ## <a name="ui-automation-control-pattern-components"></a>UI オートメーションのコントロール パターン コンポーネント  
  コントロール パターンは、コントロールで使用可能な機能の個々の部分を定義するために必要なメソッド、プロパティ、イベント、およびリレーションシップをサポートします。  
   
--   UI オートメーション要素とその親、子、兄弟との間の関係によって、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー内の要素の構造を記述します。  
+- UI オートメーション要素とその親、子、兄弟との間の関係によって、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー内の要素の構造を記述します。  
   
--   メソッドは、UI オートメーション クライアントがコントロールを操作できるようにします。  
+- メソッドは、UI オートメーション クライアントがコントロールを操作できるようにします。  
   
--   プロパティとイベントは、コントロール パターンの機能に関する情報だけでなく、コントロールの状態に関する情報も提供します。  
+- プロパティとイベントは、コントロール パターンの機能に関する情報だけでなく、コントロールの状態に関する情報も提供します。  
   
  コントロール パターンと [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] の関係は、インターフェイスと [!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)] オブジェクトの関係に似ています。 [!INCLUDE[TLA2#tla_com](../../../includes/tla2sharptla-com-md.md)]では、オブジェクトを照会してサポートされるインターフェイスを確認し、それらのインターフェイスを使用して機能にアクセスすることができます。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]では、UI オートメーション クライアントは、サポートされるコントロール パターンをコントロールに対して確認し、サポートされているコントロール パターンによって公開されているプロパティ、メソッド、イベント、構造体を使用してコントロールとやり取りすることができます。 たとえば、複数行のエディット ボックスでは、UI オートメーション プロバイダーは <xref:System.Windows.Automation.Provider.IScrollProvider>を実装します。 クライアントは、 <xref:System.Windows.Automation.AutomationElement> が <xref:System.Windows.Automation.ScrollPattern> コントロール パターンをサポートしていることを認識すると、そのコントロール パターンによって公開されているプロパティ、メソッド、イベントを使用して、コントロールを操作したり、コントロールに関する情報にアクセスしたりできます。  
   
@@ -43,7 +41,7 @@ ms.locfileid: "47193646"
   
  UI オートメーション クライアントは、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] コントロール パターン クラスのメソッドとプロパティにアクセスし、それらを使用して [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]に関する情報を取得したり、 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]を操作したりします。 これらのコントロール パターン クラスは、 <xref:System.Windows.Automation> 名前空間 (たとえば、 <xref:System.Windows.Automation.InvokePattern> や <xref:System.Windows.Automation.SelectionPattern>) にあります。  
   
- クライアントを使用して、<xref:System.Windows.Automation.AutomationElement>メソッド (など<xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType>または<xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>) または[!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)]アクセサーにアクセスする、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]パターンのプロパティ。 各コントロール パターン クラスを持つフィールド メンバー (たとえば、 <xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType>' または<xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType>) をそのコントロール パターンを識別し、パラメーターとして渡すことができます<xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>または<xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>のパターンを取得する、 <xref:System.Windows.Automation.AutomationElement>。  
+ クライアントは <xref:System.Windows.Automation.AutomationElement> メソッド ( <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> や <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>など) または [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] アクセサーを使用して、パターン上の [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティにアクセスします。 各コントロール パターン クラスを持つフィールド メンバー (たとえば、<xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType>または<xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType>) をそのコントロール パターンを識別し、パラメーターとして渡すことができます<xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>または<xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>のパターンを取得する、<xref:System.Windows.Automation.AutomationElement>します。  
   
 <a name="uiautomation_control_patterns_dynamic"></a>   
 ## <a name="dynamic-control-patterns"></a>動的コントロール パターン  
@@ -74,9 +72,10 @@ ms.locfileid: "47193646"
 |<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.Provider.IValueProvider>|クライアントで、値の範囲をサポートしないコントロールで値を取得したり、設定したりできます。 たとえば、日時指定のピッカーなどがあります。|  
 |<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|[!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] オペレーティング システムの基本概念であるウィンドウに固有の情報を公開します。 ウィンドウのコントロールの例として、最上位のアプリケーション ウィンドウ ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]や [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]など)、 [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)] 子ウィンドウ、ダイアログがあります。|  
   
-## <a name="see-also"></a>関連項目  
- [クライアントの UI オートメーション コントロール パターン](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [UI オートメーション クライアントのコントロール パターン マッピング](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
- [UI オートメーションの概要](../../../docs/framework/ui-automation/ui-automation-overview.md)  
- [クライアントの UI オートメーション プロパティ](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
- [クライアントの UI オートメーション イベント](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
+## <a name="see-also"></a>関連項目
+
+- [クライアントの UI オートメーション コントロール パターン](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [UI オートメーション クライアントのコントロール パターン マッピング](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
+- [UI オートメーションの概要](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [クライアントの UI オートメーション プロパティ](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
+- [クライアントの UI オートメーション イベント](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)

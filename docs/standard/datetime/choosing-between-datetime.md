@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54392ce12ca93d3a7979b1d0bbc78132773f88ce
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0ed41d7739822d531986d65faa820ab7100c6651
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026563"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>DateTime、DateTimeOffset、TimeSpan、および TimeZoneInfo の使い分け
 
@@ -47,7 +47,7 @@ ms.locfileid: "44227715"
 
 ## <a name="the-datetime-structure"></a>DateTime 構造体
 
-<xref:System.DateTime> 値は、特定の日付と時刻を定義します。 含まれています、<xref:System.DateTime.Kind%2A>プロパティを提供する制限については、タイム ゾーンその日付と時刻が属する。 <xref:System.DateTimeKind>によって返される値、<xref:System.DateTime.Kind%2A>プロパティを示すかどうか、<xref:System.DateTime>値が現地時刻を表します (<xref:System.DateTimeKind.Local?displayProperty=nameWithType>)、世界協定時刻 (UTC) (<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>)、または、指定されていない時刻 (<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>)。
+<xref:System.DateTime> 値は、特定の日付と時刻を定義します。 含まれています、<xref:System.DateTime.Kind%2A>プロパティを提供する制限については、タイム ゾーンその日付と時刻が属する。 <xref:System.DateTimeKind> プロパティによって返される <xref:System.DateTime.Kind%2A> 値は、 <xref:System.DateTime> 値が現地時刻 (<xref:System.DateTimeKind.Local?displayProperty=nameWithType>)、世界協定時刻 (UTC) (<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>)、指定されていない時刻 (<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>) のうちのどれを表すかを示します。
 
 <xref:System.DateTime> 構造体は、次の操作を実行するアプリケーションに適しています。
 
@@ -65,10 +65,10 @@ ms.locfileid: "44227715"
 
 * 日付と時刻の演算を実行しますが、これは一般的な結果に関するものです。 たとえば、6 カ月を特定の日付と時刻に加算する加算演算では、多くの場合、結果を夏時間に合わせて調整するかどうかは重要ではありません。
 
-特定の <xref:System.DateTime> 値が UTC を表さない場合、通常、その日付と時刻の値は、あいまいであるか、その移植性に限定されます。 たとえば、 <xref:System.DateTime> 値が現地時刻を表す場合、そのローカル タイム ゾーン内で移植することができます (つまり、同じタイム ゾーンにある別のシステムで値が逆シリアル化されると、その値は明確に単一時点を識別します)。 ローカル タイム ゾーン外では、その <xref:System.DateTime> 値は複数の意味を持つ場合があります。 値の <xref:System.DateTime.Kind%2A> プロパティが <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> の場合、移植性は低くなります。同じタイム ゾーン内であいまいになり、最初にシリアル化したのと同じシステムにおいてさえもあいまいになる可能性があります。 <xref:System.DateTime> 値が UTC を表す場合のみ、値が使用されるシステムまたはタイム ゾーンに関係なく、その値は明確に単一時点を識別します。
+特定の <xref:System.DateTime> 値が UTC を表さない場合、通常、その日付と時刻の値は、あいまいであるか、その移植性に限定されます。 たとえば、 <xref:System.DateTime> 値が現地時刻を表す場合、そのローカル タイム ゾーン内で移植することができます (つまり、同じタイム ゾーンにある別のシステムで値が逆シリアル化されると、その値は明確に単一時点を識別します)。 ローカル タイム ゾーン外では、その <xref:System.DateTime> 値は複数の意味を持つ場合があります。 値の <xref:System.DateTime.Kind%2A> プロパティが <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>の場合、移植性は低くなります。同じタイム ゾーン内であいまいになり、最初にシリアル化したのと同じシステムにおいてさえもあいまいになる可能性があります。 <xref:System.DateTime> 値が UTC を表す場合のみ、値が使用されるシステムまたはタイム ゾーンに関係なく、その値は明確に単一時点を識別します。
 
 > [!IMPORTANT]
-> <xref:System.DateTime> データを保存または共有する際、UTC を使用する必要があり、<xref:System.DateTime> 値の <xref:System.DateTime.Kind%2A> プロパティを <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> に設定する必要があります。
+> <xref:System.DateTime> データを保存または共有する際、UTC を使用する必要があり、 <xref:System.DateTime> 値の <xref:System.DateTime.Kind%2A> プロパティを <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>に設定する必要があります。
 
 ## <a name="the-datetimeoffset-structure"></a>DateTimeOffset 構造体
 
@@ -114,7 +114,7 @@ ms.locfileid: "44227715"
 
 ## <a name="the-timezoneinfo-class"></a>TimeZoneInfo クラス
 
-<xref:System.TimeZoneInfo> class represents any of the Earth's time zones, and enables the conversion of any date and time in one time zone to its equivalent in another time zone. <xref:System.TimeZoneInfo> クラスにより、日付と時刻を使用して、どの日付と時刻の値も明確に単一時点を識別できるようにすることができます。 <xref:System.TimeZoneInfo> クラスを拡張することもできます。 Windows システムで提供され、レジストリで定義されているタイム ゾーン情報に依存していますが、カスタムのタイム ゾーンの作成もサポートされています。 また、タイム ゾーン情報のシリアル化と逆シリアル化もサポートされています。
+ <xref:System.TimeZoneInfo> class represents any of the Earth's time zones, and enables the conversion of any date and time in one time zone to its equivalent in another time zone. <xref:System.TimeZoneInfo> クラスにより、日付と時刻を使用して、どの日付と時刻の値も明確に単一時点を識別できるようにすることができます。 <xref:System.TimeZoneInfo> クラスを拡張することもできます。 Windows システムで提供され、レジストリで定義されているタイム ゾーン情報に依存していますが、カスタムのタイム ゾーンの作成もサポートされています。 また、タイム ゾーン情報のシリアル化と逆シリアル化もサポートされています。
 
 場合によっては、 <xref:System.TimeZoneInfo> クラスをフル活用するために、開発作業をさらに実行する必要が生じることもあります。 日付と時刻の値がタイム ゾーンを属していることがさらに作業を密結合しない場合は、必要があります。 アプリケーションが、日付と時刻とその関連タイム ゾーンをリンクするメカニズムを提供しない限り、そのタイム ゾーンから解除するには、特定の日付と時刻の値の簡単です。 この情報をリンクする 1 つの方法は、日付と時刻の値とその関連タイム ゾーン オブジェクトの両方を含むクラスまたは構造体を定義するという方法です。
 
@@ -122,4 +122,4 @@ ms.locfileid: "44227715"
 
 ## <a name="see-also"></a>関連項目
 
-* [日付、時刻、およびタイム ゾーン](../../../docs/standard/datetime/index.md)
+- [日付、時刻、およびタイム ゾーン](../../../docs/standard/datetime/index.md)

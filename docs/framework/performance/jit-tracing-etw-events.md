@@ -7,21 +7,21 @@ helpviewer_keywords:
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aeb0415395a59e59b4d5dc78c11d8b8f0902bad8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07d84506a7c07bde09b3b46ea608b1874842c3ac
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397560"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616388"
 ---
 # <a name="jit-tracing-etw-events"></a>JIT トレース ETW イベント
 <a name="top"></a> これらのイベントは、Just-in-time (JIT) インライン展開と JIT 末尾呼び出しの成功または失敗に関する情報を収集します。  
   
  JIT トレース イベントは、次の 2 つのカテゴリで構成されます。  
   
--   [JIT インライン展開イベント](#jit_inlining_events)  
+- [JIT インライン展開イベント](#jit_inlining_events)  
   
--   [JIT 末尾呼び出しイベント](#jit_tail_call_events)  
+- [JIT 末尾呼び出しイベント](#jit_tail_call_events)  
   
 <a name="jit_inlining_events"></a>   
 ## <a name="jit-inlining-events"></a>JIT インライン展開イベント  
@@ -149,5 +149,6 @@ ms.locfileid: "33397560"
 |TailCallType|win:UnicodeString|末尾呼び出しの種類。|  
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
-## <a name="see-also"></a>関連項目  
- [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>関連項目
+
+- [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)

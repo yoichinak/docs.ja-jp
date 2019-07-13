@@ -2,12 +2,12 @@
 title: DataTables
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
-ms.openlocfilehash: 2849d159fbfdb0c0739b76fd288a987d4ce3d02f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f6509400d7f6633749155f778e3ba58ec6c27ec2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61880000"
 ---
 # <a name="datatables"></a>DataTables
 <xref:System.Data.DataSet> は、テーブル、リレーションシップ、および制約のコレクションで構成されます。 ADO.NET では、<xref:System.Data.DataTable>オブジェクトは、テーブルを表すために使用する**データセット**します。 A **DataTable**リレーショナル データをメモリ内の 1 つのテーブルを表すデータがローカルにします。NET ベースのアプリケーションが存在するを使用して Microsoft SQL Server などのデータ ソースからデータを読み込むことができます、 **DataAdapter**詳細については、次を参照してください[DataAdapter からの Dataset](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md) .  
@@ -52,8 +52,9 @@ ms.locfileid: "43786066"
  <xref:System.Data.DataTable>  
  参照情報を提供、 **DataTable**オブジェクト。  
   
- [クラス ライブラリの概要](../../../../../docs/standard/class-library-overview.md)  
+ [.NET クラス ライブラリの概要](../../../../../docs/standard/class-library-overview.md)  
  .NET Framework クラス ライブラリの概要を説明など、**システム**名前空間、2 番目のレベルの名前空間と**System.Data**。  
   
-## <a name="see-also"></a>関連項目  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

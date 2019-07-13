@@ -7,12 +7,12 @@ helpviewer_keywords:
 - x:Uid attribute [XAML Services]
 - Uid attribute [XAML Services]
 ms.assetid: 81defade-483b-4a89-b76d-9b25bba34010
-ms.openlocfilehash: 7075f8258e617d2d13d4585fdd5fb7aefaa50664
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c8f0580c987b87193b5b6a38559043e50fc7cb89
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938841"
 ---
 # <a name="xuid-directive"></a>x:Uid ディレクティブ
 マークアップ要素の一意の識別子を提供します。 多くのシナリオでは、この一意の識別子は XAML のローカライズ プロセスとツールによって使用されます。  
@@ -39,9 +39,10 @@ ms.locfileid: "43528389"
  フレームワークは、エイリアスにするには、そのオブジェクト モデルで特定のプロパティを指定できます`x:Uid`属性を適用することで<xref:System.Windows.Markup.UidPropertyAttribute>を定義する型。 フレームワークでは、特定のプロパティを指定する場合は、両方を指定する有効ないない`x:Uid`と同じオブジェクトの別名のメンバー。 両方`x:Uid`エイリアス化されたメンバーを指定すると、通常 .NET Framework XAML サービス API をスローおよび<xref:System.Xaml.XamlDuplicateMemberException>このケース。  
   
 ## <a name="wpf-usage-notes"></a>WPF の使用上の注意  
- ロールの詳細については`x:Uid`WPF のローカライズ プロセスおよび XAML の BAML 形式では、「 [WPF のグローバリゼーション](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)または <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
+ ロールの詳細については`x:Uid`WPF のローカライズ プロセスおよび XAML の BAML 形式では、「 [WPF のグローバリゼーション](../wpf/advanced/globalization-for-wpf.md)または <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
- <xref:Microsoft.Build.Tasks.Windows.UidManager>  
- [WPF のグローバリゼーション](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>
+- <xref:Microsoft.Build.Tasks.Windows.UidManager>
+- [WPF のグローバリゼーション](../wpf/advanced/globalization-for-wpf.md)

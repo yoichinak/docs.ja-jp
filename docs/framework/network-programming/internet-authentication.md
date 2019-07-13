@@ -15,12 +15,12 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-ms.openlocfilehash: 245e94cab61c0c60672476aadb417fc798b30362
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8b17f5a7167eb539e04a19db797bc1b0cc6c5eaa
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50181044"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59295459"
 ---
 # <a name="internet-authentication"></a>インターネット認証
 <xref:System.Net> クラスは、さまざまなクライアント認証メカニズムをサポートしています。これには、基本、ダイジェスト、ネゴシエート、NTLM、および Kerberos の標準のインターネット認証方法の他に、ユーザーが作成できるカスタム メソッドも含まれます。  
@@ -33,13 +33,14 @@ ms.locfileid: "50181044"
   
  インターネット リソースが認証を要求すると、<xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType> メソッドは資格情報の要求と共に <xref:System.Net.WebRequest> を **AuthenticationManager** に送信します。 そして要求は、次のプロセスに従って認証されます。  
   
-1.  **AuthenticationManager** が登録済みの各認証モジュールで、登録された順番で <xref:System.Net.IAuthenticationModule.Authenticate%2A> メソッドを呼び出します。 **AuthenticationManager** は **null** を返さない 1 つ目のモジュールを使用して認証プロセスを実行します。 プロセスの詳細は、使用する認証モジュールの種類によって異なります。  
+1. **AuthenticationManager** が登録済みの各認証モジュールで、登録された順番で <xref:System.Net.IAuthenticationModule.Authenticate%2A> メソッドを呼び出します。 **AuthenticationManager** は **null** を返さない 1 つ目のモジュールを使用して認証プロセスを実行します。 プロセスの詳細は、使用する認証モジュールの種類によって異なります。  
   
-2.  認証プロセスが完了すると、認証モジュールが <xref:System.Net.Authorization> をインターネット リソースにアクセスするために必要な情報を含む **WebRequest** に返します。  
+2. 認証プロセスが完了すると、認証モジュールが <xref:System.Net.Authorization> をインターネット リソースにアクセスするために必要な情報を含む **WebRequest** に返します。  
   
  一部の認証スキームでは、最初にリソースの要求を作成しなくても、ユーザーを認証することができます。 リソースでユーザーを事前認証することで、サーバーへのラウンド トリップを少なくとも 1 回減らせるため、アプリケーションが時間を節約できます。 または、後でユーザーへの応答性を高めるため、プログラムの起動中に認証を実行できます。 事前認証を使用できる認証スキームで <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A> プロパティを **true** に設定します。  
   
-## <a name="see-also"></a>参照  
- [基本認証とダイジェスト認証](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
- [NTLM 認証および Kerberos 認証](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)  
- [ネットワーク プログラミングにおけるセキュリティ](../../../docs/framework/network-programming/security-in-network-programming.md)
+## <a name="see-also"></a>関連項目
+
+- [基本認証とダイジェスト認証](../../../docs/framework/network-programming/basic-and-digest-authentication.md)
+- [NTLM 認証および Kerberos 認証](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)
+- [ネットワーク プログラミングにおけるセキュリティ](../../../docs/framework/network-programming/security-in-network-programming.md)

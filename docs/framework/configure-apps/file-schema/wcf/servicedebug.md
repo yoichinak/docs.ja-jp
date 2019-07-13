@@ -1,15 +1,15 @@
 ---
-title: '&lt;serviceDebug&gt;'
+title: <serviceDebug>
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
-ms.openlocfilehash: e4f929e5c847c1f8db3a3ab5a8e72ec198c7d223
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 7b7526dbcbd1948d3d8a27d146efd0462fefaca5
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788441"
 ---
-# <a name="ltservicedebuggt"></a>&lt;serviceDebug&gt;
+# <a name="servicedebug"></a>\<serviceDebug >
 Windows Communication Foundation (WCF) サービスのデバッグおよびヘルプ情報機能を指定します。  
   
  \<system.ServiceModel >  
@@ -70,9 +70,10 @@ Windows Communication Foundation (WCF) サービスのデバッグおよびヘ�
   
  省略可能な `httpHelpPageBinding` 属性および `httpHelpPageBinding` 属性を使用すると、サービス ウェブ ページにアクセスするためのバインディングを構成できます。 これらの属性が指定されていない場合、サービス ヘルプ ページへのアクセスには、適切な既定のバインディグ (HTTP の場合は `HttpTransportBindingElement`、HTTPS の場合は `HttpsTransportBindingElement`) が使用されます。 これらの属性は、組み込みの WCF バインディングでは使用できないことに注意してください。 バインディング xref:System.ServiceModel.Channels.IReplyChannel をサポートする内部バインディング要素でのみ > がサポートされます。 さらに、バインディングの <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> プロパティが <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType> である必要があります。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.ServiceDebugElement>  
- <xref:System.ServiceModel.Description.ServiceDebugBehavior>  
- [コントラクトおよびサービスのエラーの指定と処理](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)  
- [例外とエラーの処理](../../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)  
- [サービス デバッグ動作](../../../../../docs/framework/wcf/samples/service-debug-behavior.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Configuration.ServiceDebugElement>
+- <xref:System.ServiceModel.Description.ServiceDebugBehavior>
+- [コントラクトおよびサービスのエラーの指定と処理](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [例外とエラーの処理](../../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)
+- [サービス デバッグ動作](../../../../../docs/framework/wcf/samples/service-debug-behavior.md)

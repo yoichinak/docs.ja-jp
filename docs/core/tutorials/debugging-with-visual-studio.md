@@ -3,16 +3,16 @@ title: Visual Studio 2017 を使用して Hello World .NET Core アプリケー�
 description: C# または Visual Basic で記述された Hello World アプリを、Visual Studio 2017 を使用してデバッグする方法についてご説明します。
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: b08744e784ffdde6682a6271888ae55d3fbd242b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 4c6a9fe46e29addf53319adf2351af3a7af05119
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170666"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063076"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Visual Studio 2017 を使用して C# または Visual Basic .NET Core の Hello World アプリケーションをデバッグする
 
-ここまでは、[「Visual Studio 2017 での .NET Core を使用した C# Hello World アプリケーションの構築」](with-visual-studio.md) または[「Visual Studio 2017 での .NET Core を使用した Visual Basic Hello World アプリケーションの構築」](vb-with-visual-studio.md)の手順に従って、簡単なコンソール アプリケーションを作成して実行しました。 アプリケーションを記述してコンパイルしたら、テストを開始できます。 Visual Studio には、アプリケーションのテストおよびトラブルシューティングの際に使用できるデバッグ ツールの包括的なセットが含まれています。
+ここまでは、[「Visual Studio 2017 での .NET Core を使用した C# Hello World アプリケーションの構築」](with-visual-studio.md) または[「Visual Studio 2017 での .NET Core を使用した Visual Basic Hello World アプリケーションの構築」](vb-with-visual-studio.md)の手順に従って、簡単なコンソール アプリケーションを作成して実行しました。 アプリケーションを記述してコンパイルしたら、テストを開始できます。 Visual Studio には、アプリケーションのテストおよびトラブルシューティングの際に使用できるデバッグ ツールの包括的なセットが含まれています。 
 
 ## <a name="debugging-in-debug-mode"></a>デバッグ モードでのデバッグ
 
@@ -39,7 +39,7 @@ ms.locfileid: "53170666"
 
 1. プログラムがブレークポイントに到達すると、プログラム実行は停止します。`Console.WriteLine` メソッドが実行される前にも停止します。 **[自動変数]** ウィンドウには、現在の行の付近で使用されている変数の値が表示されます。 **[ローカル]** ウィンドウ (**[ローカル]** タブをクリックすることで表示できる) には、現在実行しているメソッドで定義されている変数の値が表示されます。
 
-   ![Visual Studio のアプリケーション ウィンドウ](./media/debugging-with-visual-studio/break.png)
+   ![Visual Studio でのブレークポイントのスクリーンショット。](./media/debugging-with-visual-studio/breakpoint-console-window.png)
 
 1. 変数の値を変更して、プログラムにどのような影響があるかを確認できます。 **[イミディエイト ウィンドウ]** が表示されない場合は、**[デバッグ]** > **[Windows]** > **[イミディエイト]** メニュー項目の順に選びます。 **[イミディエイト ウィンドウ]** では、デバッグ中のアプリケーションと対話できます。
 
@@ -154,6 +154,7 @@ ms.locfileid: "53170666"
    ```vb
    ? String.IsNullOrEmpty(name)
    ```
+
   ![ステートメントが実行された後で値 true を返す [イミディエイト ウィンドウ] - Visual Basic](./media/debugging-with-visual-studio/vb-immediate-window-output.png)
 
 1. ツール バーの **[続行]** を選んで、プログラムの実行を続けます。

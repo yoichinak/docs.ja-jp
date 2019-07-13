@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77d9ec0cf1cbca63382e7f29de85c2f9566dc2bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2779cfaecfdd241b5317ac8b467222e045d48049
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416167"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753324"
 ---
 # <a name="icordebugeval2callparameterizedfunction-method"></a>ICorDebugEval2::CallParameterizedFunction メソッド
-コンス トラクターは、クラス内で入れ子にできる指定の ICorDebugFunction への呼び出しを設定<xref:System.Type>パラメーター、またはそれ自体がとれる<xref:System.Type>パラメーター。  
+コンス トラクターはクラス内にネストすることができますが、指定された、ICorDebugFunction への呼び出しを設定<xref:System.Type>パラメーター、または自体がかかる<xref:System.Type>パラメーター。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CallParameterizedFunction (  
     [in] ICorDebugFunction     *pFunction,  
     [in] ULONG32               nTypeArgs,  
@@ -39,7 +39,7 @@ HRESULT CallParameterizedFunction (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pFunction`  
  [in]ポインター、`ICorDebugFunction`に呼び出される関数を表すオブジェクト。  
   
@@ -47,26 +47,26 @@ HRESULT CallParameterizedFunction (
  [in]関数が受け取る引数の数。  
   
  `ppTypeArgs`  
- [in]関数の引数を表す ICorDebugType オブジェクトを指し示すそれぞれが、ポインターの配列。  
+ [in]関数の引数を表す ICorDebugType オブジェクトを指す各ポインターの配列。  
   
  `nArgs`  
- [in]値の数は、関数に渡されます。  
+ [in]関数に渡された値の数。  
   
  `ppArgs`  
- [in]関数の引数の値を表す ICorDebugValue オブジェクトを指し示すそれぞれが、ポインターの配列が渡されます。  
+ [in]関数の引数の値を表す ICorDebugValue オブジェクトを指す各ポインター、配列が渡されます。  
   
-## <a name="remarks"></a>コメント  
- `CallParameterizedFunction` 同様に、 [icordebugeval::callfunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md)関数は、型パラメーターを持つクラスの内部である可能性があります、する点を除いてかかる場合があります自体の型パラメーター、またはその両方です。 クラスのしてから、関数、型引数を最初に指定してください。  
+## <a name="remarks"></a>Remarks  
+ `CallParameterizedFunction` ように、 [icordebugeval::callfunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md)関数は、型パラメーターを持つクラスの内部で可能性があります、点がかかる場合があります自体の型パラメーター、またはその両方です。 型引数は、クラスのしてから、関数は、まず指定しないでください。  
   
- 関数は、別のアプリケーション ドメインでは、遷移が発生します。 ただし、すべての型と値の引数は、対象のアプリケーション ドメインにする必要があります。  
+ 関数は、別のアプリケーション ドメインでは、遷移が発生します。 ただし、すべての型と値の引数は、対象のアプリケーション ドメインである必要があります。  
   
- 関数の評価は、限られたシナリオでのみ実行できます。 場合`CallParameterizedFunction`または`ICorDebugEval::CallFunction`失敗した場合、返された HRESULT エラーに対する最も一般的な原因が示されます。  
+ 関数の評価は、限られたシナリオでのみ実行できます。 場合`CallParameterizedFunction`または`ICorDebugEval::CallFunction`失敗した場合、返された HRESULT はエラーの最も一般的な考えられる理由を示します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

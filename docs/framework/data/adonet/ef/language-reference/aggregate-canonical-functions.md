@@ -2,18 +2,18 @@
 title: 集計正規関数
 ms.date: 03/30/2017
 ms.assetid: 3bcff826-ca90-41b3-a791-04d6ff0e5085
-ms.openlocfilehash: e4772176130fc72a22645462921c90dd5b7967b2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2738d649190b088c34272de5b3e8732d87811a59
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506639"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489511"
 ---
 # <a name="aggregate-canonical-functions"></a>集計正規関数
 
 集計とは、一連の入力値をまとまった値 (単一の値など) に変換する式を指します。 集計は SELECT 式の GROUP BY 句と組み合わせて使用されるのが一般的であり、どこで使用できるかについては制約があります。
 
-## <a name="aggegate-entity-sql-canonical-functions"></a>Aggegate Entity SQL 正規関数
+## <a name="aggregate-entity-sql-canonical-functions"></a>集計 Entity SQL 正規関数
 
 集計の Entity SQL 正規関数を次に示します。
 
@@ -31,7 +31,7 @@ NULL 以外の値の平均を返します。
 
 **例**
 
-[!code-csharp[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_avg)] 
+[!code-csharp[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_avg)]
 [!code-sql[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_avg)]
 
 ### <a name="bigcountexpression"></a>BigCount(expression)
@@ -48,10 +48,10 @@ NULL 値および重複値を含む集計のサイズを返します。
 
 **例**
 
-[!code-csharp[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_bigcount)] 
+[!code-csharp[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_bigcount)]
 [!code-sql[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_bigcount)]
 
-### <a name="countexpression"></a>Count(expression) 
+### <a name="countexpression"></a>Count(expression)
 
 NULL 値および重複値を含む集計のサイズを返します。
 
@@ -185,7 +185,7 @@ A `Double`、または`null`場合はすべての入力値`null`値。
 **例**
 
 [!code-csharp[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_varp)]
-[!code-sql[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)] 
+[!code-sql[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)]
 
 同等の機能は、Microsoft SQL クライアント マネージド プロバイダーでも利用できます。 詳細については、次を参照してください。 [Entity Framework の関数の SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)します。
 
@@ -206,7 +206,7 @@ min(select value o.ShipDate from LOB.Orders as o)
 次の例では、製品ごとの平均発注数量を計算しています。
 
 ```sql
-select p, avg(ol.Quantity) from LOB.OrderLines as ol 
+select p, avg(ol.Quantity) from LOB.OrderLines as ol
   group by ol.Product as p
 ```
 
@@ -224,8 +224,8 @@ select avg(ol.Quantity) from LOB.OrderLines as ol group by 1
 
 グループベースの集計内の式は、WHERE 句式から可視である名前解決スコープ内で評価されます。
 
-うに[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]、グループ ベースの集計は、ALL を指定できますもまたは DISTINCT 修飾子。 DISTINCT 修飾子が指定された場合、集計を計算する前に、集計の入力コレクションから重複が除外されます。 ALL 修飾子が指定された場合 (または修飾子が指定されなかった場合)、重複は除外されません。  
+TRANSACT-SQL のようにグループ ベースの集計もすべてを指定または DISTINCT 修飾子。 DISTINCT 修飾子が指定された場合、集計を計算する前に、集計の入力コレクションから重複が除外されます。 ALL 修飾子が指定された場合 (または修飾子が指定されなかった場合)、重複は除外されません。
 
 ## <a name="see-also"></a>関連項目
 
-[正規関数](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
+- [正規関数](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)

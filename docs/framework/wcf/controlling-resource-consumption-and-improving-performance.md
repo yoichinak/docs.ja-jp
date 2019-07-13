@@ -2,12 +2,12 @@
 title: リソース消費の制御とパフォーマンスの向上
 ms.date: 03/30/2017
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-ms.openlocfilehash: 1e0512ce62f5a7b25546e8824a745fdaabb5ec72
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 11d1333ed0ae8b46f8f87fa6f4643d4b31fac3ff
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785061"
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>リソース消費の制御とパフォーマンスの向上
 このトピックでは、リソース消費を制御する機能し、パフォーマンス メトリックに影響する、Windows Communication Foundation (WCF) のアーキテクチャのさまざまな領域でさまざまなプロパティについて説明します。
@@ -41,7 +41,7 @@ ms.locfileid: "43397876"
 > [!NOTE]
 > 生成済みシリアル化コードはクライアント アプリケーションでのみ使用できます。サービスでは使用できません。
 
- [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)アプリケーションのコンパイル済みアセンブリから必要なシリアル化コードを生成することによって、これらのアプリケーションの起動時のパフォーマンスを向上させることができます。 詳細については、次を参照してください。[方法: スタートアップ アプリケーション間を短縮の WCF クライアント、XmlSerializer を使用して](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)します。
+ [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)アプリケーションのコンパイル済みアセンブリから必要なシリアル化コードを生成することによって、これらのアプリケーションの起動時のパフォーマンスを向上させることができます。 詳細については、「[方法 :スタートアップ アプリケーション間を短縮の WCF クライアント、XmlSerializer を使用して](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)します。
 
 ## <a name="performance-issues-when-hosting-wcf-services-under-aspnet"></a>ASP.NET で WCF サービスをホストする場合のパフォーマンスの問題
  WCF サービスを IIS および ASP.NET でホストする場合、IIS と ASP.NET の構成設定が WCF サービスのスループットやメモリの占有領域に影響する場合があります。  ASP.NET パフォーマンスの詳細については、次を参照してください。 [ASP.NET パフォーマンスの向上](https://go.microsoft.com/fwlink/?LinkId=186462)します。  予想外の結果を引き起こす可能性のある設定の 1 つに、<xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> があります。これは、<xref:System.Web.Configuration.ProcessModelSection> のプロパティです。 アプリケーションのクライアントが固定数または少数である場合、<xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> を 2 に設定すると、CPU の使用率が 100% に近いマルチプロセッサ コンピューターのスループットが向上する場合があります。 このパフォーマンスの向上にはコストが伴います。つまり、メモリの使用率も増加するため、スケーラビリティが低下する場合があります。

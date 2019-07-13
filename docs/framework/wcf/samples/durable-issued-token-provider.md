@@ -2,34 +2,34 @@
 title: 永続性発行済みトークン プロバイダー
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 7def23a00e42e134d8c0b9bd911710917681ad31
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bfe8f8bb8c3775760bc69031e338a156d690ab25
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504592"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487601"
 ---
 # <a name="durable-issued-token-provider"></a>永続性発行済みトークン プロバイダー
 このサンプルでは、カスタム クライアントの発行済みトークン プロバイダーを実装する方法を示します。  
   
 ## <a name="discussion"></a>説明  
- Windows Communication Foundation (WCF) でのトークン プロバイダーは、セキュリティ インフラストラクチャに資格情報の入力に使用されます。 一般的に、トークン プロバイダーは、ターゲットをチェックし、適切な証明書を発行して、セキュリティ インフラストラクチャがメッセージのセキュリティを保護できるようにします。 WCF に付属する[!INCLUDE[infocard](../../../../includes/infocard-md.md)]トークン プロバイダー。 カスタム トークン プロバイダーは、次の場合に便利です。  
+ Windows Communication Foundation (WCF) でのトークン プロバイダーは、セキュリティ インフラストラクチャに資格情報の入力に使用されます。 一般的に、トークン プロバイダーは、ターゲットをチェックし、適切な証明書を発行して、セキュリティ インフラストラクチャがメッセージのセキュリティを保護できるようにします。 WCF は、CardSpace トークン プロバイダーに同梱されています。 カスタム トークン プロバイダーは、次の場合に便利です。  
   
--   組み込みのトークン プロバイダが連係動作できない資格情報ストアがある場合。  
+- 組み込みのトークン プロバイダが連係動作できない資格情報ストアがある場合。  
   
--   ユーザーは、WCF クライアントが資格情報を使用する場合の詳細を提供するときに、ポイントから資格情報を変換するための独自のカスタム メカニズムを提供する場合は。  
+- ユーザーは、WCF クライアントが資格情報を使用する場合の詳細を提供するときに、ポイントから資格情報を変換するための独自のカスタム メカニズムを提供する場合は。  
   
--   カスタム トークンを構築している場合。  
+- カスタム トークンを構築している場合。  
   
  このサンプルでは、セキュリティ トークン サービス (STS) によって発行されたトークンをキャッシュする、カスタム トークン プロバイダーを構築する方法を示します。  
   
  このサンプルに示されている手順の概要は次のとおりです。  
   
--   クライアントをカスタム トークン プロバイダーを使用して構成する手順。  
+- クライアントをカスタム トークン プロバイダーを使用して構成する手順。  
   
--   発行済みトークンをキャッシュして、WCF クライアントに提供される方法です。  
+- 発行済みトークンをキャッシュして、WCF クライアントに提供される方法です。  
   
--   サーバーがクライアントによってサーバーの X.509 証明書を使用して認証される手順。  
+- サーバーがクライアントによってサーバーの X.509 証明書を使用して認証される手順。  
   
  このサンプルは、クライアント コンソール プログラム (Client.exe)、セキュリティ トークン サービス コンソール プログラム (Securitytokenservice.exe)、およびサービス コンソール プログラム (Service.exe) で構成されています。 サービスは、要求/応答通信パターンを定義するコントラクトを実装します。 このコントラクトは `ICalculator` インターフェイスによって定義されており、算術演算 (加算、減算、乗算、および 除算) を公開しています。 クライアントは、セキュリティ トークンをセキュリティ トークン サービス (STS) から取得し、指定された算術演算を実行する同期要求をサービスに対して行います。サービスは、結果を添えて応答します。 クライアント アクティビティは、コンソール ウィンドウに表示されます。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "43504592"
   
 #### <a name="to-develop-a-custom-token-provider"></a>カスタム トークン プロバイダーを開発するには  
   
-1.  カスタム トークン プロバイダーを作成します。  
+1. カスタム トークン プロバイダーを作成します。  
   
      サンプルでは、キャッシュから取得したセキュリティ トークンを返すカスタム トークン プロバイダーを実装します。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "43504592"
     }  
     ```  
   
-2.  カスタム セキュリティ トークン マネージャーを作成します。  
+2. カスタム セキュリティ トークン マネージャーを作成します。  
   
      <xref:System.IdentityModel.Selectors.SecurityTokenManager> は、<xref:System.IdentityModel.Selectors.SecurityTokenProvider> メソッド内で渡される特定の <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> の `CreateSecurityTokenProvider` の作成に使用されます。 セキュリティ トークン マネージャーは、トークン認証システムとトークン シリアライザーの作成にも使用されますが、このサンプルでは扱っていません。 このサンプルでは、カスタム セキュリティ トークン マネージャーは <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> クラスを継承し、`CreateSecurityTokenProvider` メソッドをオーバーライドして、渡されたトークンの要件で発行済みトークンが必要であることが示されている場合にはカスタム トークン プロバイダーを返します。  
   
@@ -162,7 +162,7 @@ ms.locfileid: "43504592"
     }  
     ```  
   
-3.  カスタム クライアント資格情報を作成します。  
+3. カスタム クライアント資格情報を作成します。  
   
      クライアント資格情報クラスは、クライアント プロキシ用に構成された資格情報を表すために使用され、トークン認証システム、トークン プロバイダ、およびトークン シリアライザの取得に使用されるセキュリティ トークン マネージャを作成します。  
   
@@ -204,7 +204,7 @@ ms.locfileid: "43504592"
     }  
     ```  
   
-4.  トークン キャッシュを実装します。 サンプルの実装では抽象基本クラスを使用し、トークン キャッシュの利用先ではこのクラスを通じてキャッシュとやり取りします。  
+4. トークン キャッシュを実装します。 サンプルの実装では抽象基本クラスを使用し、トークン キャッシュの利用先ではこのクラスを通じてキャッシュとやり取りします。  
   
     ```  
     public abstract class IssuedTokenCache  
@@ -233,17 +233,17 @@ ms.locfileid: "43504592"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  setup.cmd ファイルを実行して、必要な証明書を作成します。  
+1. setup.cmd ファイルを実行して、必要な証明書を作成します。  
   
-2.  ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。 ソリューション内のすべてのプロジェクトがビルドされていることを確認します (Shared、RSTRSTR、Service、SecurityTokenService、Client)。  
+2. ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。 ソリューション内のすべてのプロジェクトがビルドされていることを確認します (Shared、RSTRSTR、Service、SecurityTokenService、Client)。  
   
-3.  Service.exe と SecurityTokenService.exe がどちらも管理者権限で実行されていることを確認します。  
+3. Service.exe と SecurityTokenService.exe がどちらも管理者権限で実行されていることを確認します。  
   
-4.  client.exe を実行します。  
+4. client.exe を実行します。  
   
 #### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには  
   
-1.  サンプルの実行が終わったら、サンプル フォルダーにある Cleanup.cmd を実行します。  
+1. サンプルの実行が終わったら、サンプル フォルダーにある Cleanup.cmd を実行します。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
@@ -253,5 +253,3 @@ ms.locfileid: "43504592"
 >  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\DurableIssuedTokenProvider`  
-  
-## <a name="see-also"></a>関連項目

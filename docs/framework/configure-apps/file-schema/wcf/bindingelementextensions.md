@@ -1,18 +1,18 @@
 ---
-title: '&lt;bindingElementExtensions&gt;'
+title: <bindingElementExtensions>
 ms.date: 03/30/2017
 ms.assetid: bb597fc0-c947-451c-afda-bf23d42f4f4d
-ms.openlocfilehash: ee67df95de715f0b21250bbf5739f84b4945d719
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 775f93f319c136a29a32ffaa1dfabc12ee081b29
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700996"
 ---
-# <a name="ltbindingelementextensionsgt"></a>&lt;bindingElementExtensions&gt;
-このセクションは、コンピューターまたはアプリケーションの構成ファイルからカスタム バインド要素を使用できます。 このコレクションにカスタム バインディング要素を追加するには、`add` キーワードを使用し、要素の `type` 属性をバインディング要素拡張に設定して、`name` 属性をカスタム バインディング要素に設定します。  
+# <a name="bindingelementextensions"></a>\<bindingElementExtensions>
+このセクションは、コンピューターまたはアプリケーションの構成ファイルからカスタム バインディング要素を使用できます。 このコレクションにカスタム バインド要素を追加するには、`add` キーワードを使用し、要素の `type` 属性をバインド要素拡張に設定して、`name` 属性をカスタム バインド要素に設定します。  
   
- バインディングの拡張により、ユーザーは、カスタム バインディングの一部として使用するユーザー定義のバインディング要素を作成できます。 プログラムではバインディング拡張は、抽象クラス <xref:System.ServiceModel.Channels.BindingElement> を実装する型です。 構成ファイルでは、`bindingElementExtensions` セクションは、拡張要素を定義するために使用されます。  
+ バインディングの拡張により、ユーザーは、カスタム バインドの一部として使用するユーザー定義のバインド要素を作成できます。 プログラムではバインディング拡張は、抽象クラス <xref:System.ServiceModel.Channels.BindingElement> を実装する型です。 構成ファイルでは、`bindingElementExtensions` セクションは、拡張要素を定義するために使用されます。  
   
  次の例は、`add` 要素と `name` 属性を使用して、構成ファイルの `bindingElementExtensions` セクションにバインディング拡張を追加します。  
   
@@ -43,6 +43,7 @@ ms.locfileid: "54151450"
 </customBinding>
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>  
- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>
+- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)

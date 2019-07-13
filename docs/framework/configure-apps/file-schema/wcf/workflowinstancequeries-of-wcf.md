@@ -1,15 +1,15 @@
 ---
-title: WCF の &lt;workflowInstanceQueries&gt;
+title: <workflowInstanceQueries> WCF の
 ms.date: 03/30/2017
 ms.assetid: b0852f77-16e4-4d55-8eb7-a19feb0e8fc4
-ms.openlocfilehash: e3ad1139781c54cc1ca4e2d2b264f3f375b49108
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 89e122b87743a81a80ce63b382ae235c1c4863bc
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790521"
 ---
-# <a name="ltworkflowinstancequeriesgt-of-wcf"></a>WCF の &lt;workflowInstanceQueries&gt;
+# <a name="workflowinstancequeries-of-wcf"></a>\<workflowInstanceQueries > の WCF
 
 開始したイベントや完了したイベントなど、ワークフロー インスタンスのライフサイクルの変化を追跡する構成要素のコレクションを表します。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "54145563"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<workflow>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|識別される特定のワークフローのすべてのクエリを格納する構成要素、 [activityDefinitionId](https://msdn.microsoft.com/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx)プロパティ。|  
+|[\<workflow>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|識別される特定のワークフローのすべてのクエリを格納する構成要素、 [activityDefinitionId](xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId)プロパティ。|  
   
 ## <a name="remarks"></a>Remarks
 

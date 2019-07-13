@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1cc754fcf7d1defa815bb0a74b7c2b4a6909478
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 6b21e08d3bf6845b9fc44d5a5edef0ea39b91da5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085755"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746529"
 ---
 # <a name="getmethodorigin-function"></a>GetMethodOrigin 関数
 メソッドを宣言しているクラスが特定されます。
@@ -30,7 +30,7 @@ ms.locfileid: "44085755"
     
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetMethodOrigin (
    [in] int                 vFunc, 
    [in] IWbemClassObject*   ptr, 
@@ -71,12 +71,13 @@ HRESULT GetMethodOrigin (
 
 `pstrClassName`パラメーターが有効なをポイントする必要がありますいない`BSTR`ため、これは、関数が呼び出される前に、`out`パラメーター。 この関数によって返された後に、ポインターが割り当て解除されません。
 
-## <a name="requirements"></a>要件  
-**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>関連項目  
-[WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+## <a name="see-also"></a>関連項目
+
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

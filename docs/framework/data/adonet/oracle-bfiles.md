@@ -2,12 +2,12 @@
 title: Oracle BFILE
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
-ms.openlocfilehash: 683b4a9be826e1d0d4ee354fada10168d833e3d7
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 2d7db741cea5421b2391588c0479f44e2b478ca3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087577"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626421"
 ---
 # <a name="oracle-bfiles"></a>Oracle BFILE
 .NET Framework Data Provider for Oracle には、<xref:System.Data.OracleClient.OracleBFile> クラスが含まれています。このクラスは、Oracle <xref:System.Data.OracleClient.OracleType.BFile> データ型で使用されます。  
@@ -16,19 +16,19 @@ ms.locfileid: "44087577"
   
  その他の特性、 **BFILE**から区別するためのデータ型、 **LOB**データ型はできることです。  
   
--   非構造化データの保持。  
+- 非構造化データの保持。  
   
--   サーバー側チャンキングのサポート。  
+- サーバー側チャンキングのサポート。  
   
--   参照コピーのセマンティクスの使用。 コピー操作を実行する場合など、 **BFILE**、のみ、 **BFILE** (つまり、ファイルへの参照) ロケーターをコピーします。 ファイル内のデータはコピーされません。  
+- 参照コピーのセマンティクスの使用。 コピー操作を実行する場合など、 **BFILE**、のみ、 **BFILE** (つまり、ファイルへの参照) ロケーターをコピーします。 ファイル内のデータはコピーされません。  
   
  **BFILE**サイズが大きい Lob を参照するデータ型を使用する必要があり、そのため、データベースに格納する実用的ではありません。 複数のクライアント、サーバー、および通信のオーバーヘッドを必要とを使用して、 **BFILE**と比較して、データ型、 **LOB**データ型。 アクセスする方が効率的です、 **BFILE**のみ少量のデータを取得する必要がある場合。 オブジェクト全体を取得したい場合は、データベースに常駐する LOB へのアクセスがいっそう効果的です。  
   
  各 NULL でない**OracleBFile**オブジェクトが基になる物理ファイルの場所を定義する 2 つのエンティティに関連付けられています。  
   
-1.  Oracle DIRECTORY オブジェクト。ファイル システムのディレクトリに対するデータベースのエイリアスです。  
+1. Oracle DIRECTORY オブジェクト。ファイル システムのディレクトリに対するデータベースのエイリアスです。  
   
-2.  基になる物理ファイルのファイル名。このファイルは、DIRECTORY オブジェクトに関連付けられたディレクトリに配置されています。  
+2. 基になる物理ファイルのファイル名。このファイルは、DIRECTORY オブジェクトに関連付けられたディレクトリに配置されています。  
   
 ## <a name="example"></a>例  
  C# の例を次に示しますを作成する方法、 **BFILE** 、Oracle のテーブルし、の形式で取得し、 **OracleBFile**オブジェクト。 この例で、<xref:System.Data.OracleClient.OracleDataReader>オブジェクトと**OracleBFile** **シーク**と**読み取り**メソッド。 このサンプルを使用するために作成することする必要がありますまずという名前のディレクトリ"c:\\\bfiles"と"MyFile.jpg"をという名前を Oracle サーバー上のファイル。  
@@ -86,6 +86,7 @@ public class Sample
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Oracle および ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [Oracle および ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

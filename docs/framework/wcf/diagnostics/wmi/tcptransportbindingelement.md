@@ -2,12 +2,12 @@
 title: TcpTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 33bbc1e5-44e4-4ee3-b7b5-801dc78956e4
-ms.openlocfilehash: 04326484bbf1f07c66ad8fb401642880f9ba8c6e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6d2717bc2d1d14e369af2b9c5a8c0affb67501d9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956547"
 ---
 # <a name="tcptransportbindingelement"></a>TcpTransportBindingElement
 TcpTransportBindingElement  
@@ -31,30 +31,30 @@ class TcpTransportBindingElement : ConnectionOrientedTransportBindingElement
  TcpTransportBindingElement クラスには、次のプロパティがあります。  
   
 ### <a name="connectionpoolsettings"></a>ConnectionPoolSettings  
- データ型 : TcpConnectionPoolSettings  
+ データの種類:TcpConnectionPoolSettings  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  接続プールの設定。  
   
 ### <a name="listenbacklog"></a>ListenBacklog  
  データ型 : sint32  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  保留可能なキュー内の接続要求の最大数です。  
   
 ### <a name="portsharingenabled"></a>PortSharingEnabled  
  データ型 : boolean  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  TCP ポート共有をこの接続で有効にするかどうかを指定するブール値です。  
   
 ### <a name="teredoenabled"></a>TeredoEnabled  
  データ型 : boolean  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  Teredo (ファイアウォールの内側にあるクライアントをアドレス指定するためのテクノロジ) を有効にするかどうかを指定するブール値です。  
   
@@ -62,7 +62,8 @@ class TcpTransportBindingElement : ConnectionOrientedTransportBindingElement
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
-|Namespace|root\ServiceModel で定義|  
+|名前空間|root\ServiceModel で定義|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>

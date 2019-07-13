@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0f71e59eb13321517de61315d3ba06b96c5458f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5786f24f6543d4d262dd8a6389132aba02f9aacc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449274"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779202"
 ---
 # <a name="cortypeattr-enumeration"></a>CorTypeAttr 列挙型
 メタデータ型を示す値が格納されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum CorTypeAttr {  
   
     tdVisibilityMask        =   0x00000007,  
@@ -79,46 +79,47 @@ typedef enum CorTypeAttr {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`tdVisibilityMask`|型の可視性の情報を使用します。|  
+|`tdVisibilityMask`|可視性の種類の情報に使用されます。|  
 |`tdNotPublic`|型がパブリック スコープでないことを指定します。|  
-|`tdPublic`|型がパブリックのスコープ内であるを指定します。|  
-|`tdNestedPublic`|型がパブリックの可視性を持つ入れ子になったことを指定します。|  
+|`tdPublic`|パブリック スコープで型を指定します。|  
+|`tdNestedPublic`|型がパブリックな可視性と入れ子になったことを指定します。|  
 |`tdNestedPrivate`|型がプライベートの可視性を持つ入れ子になったことを指定します。|  
-|`tdNestedFamily`|ファミリの可視性を持つ型が入れ子になったことを指定します。|  
-|`tdNestedAssembly`|アセンブリの可視性を持つ型が入れ子になったことを指定します。|  
-|`tdNestedFamANDAssem`|型が属するファミリとアセンブリの可視性を持つ入れ子になっているを指定します。|  
-|`tdNestedFamORAssem`|ファミリまたはアセンブリの可視性を持つ型が入れ子になったことを指定します。|  
+|`tdNestedFamily`|ファミリの可視性を持つ型が入れ子になっていることを指定します。|  
+|`tdNestedAssembly`|アセンブリの可視性を持つ型が入れ子になっていることを指定します。|  
+|`tdNestedFamANDAssem`|ファミリとアセンブリの可視性を持つ型が入れ子になっていることを指定します。|  
+|`tdNestedFamORAssem`|ファミリまたはアセンブリの可視性を持つ型が入れ子になっていることを指定します。|  
 |`tdLayoutMask`|型のレイアウト情報を取得します。|  
 |`tdAutoLayout`|この型のフィールドが自動的にレイアウトされることを指定します。|  
-|`tdSequentialLayout`|この型のフィールドが順番にレイアウトするかを指定します。|  
-|`tdExplicitLayout`|そのフィールドのレイアウトが明示的に指定されたを指定します。|  
-|`tdClassSemanticsMask`|型のセマンティクス情報を取得します。|  
+|`tdSequentialLayout`|この型のフィールドが順番にレイアウトされることを指定します。|  
+|`tdExplicitLayout`|フィールド レイアウトは明示的に指定されたを指定します。|  
+|`tdClassSemanticsMask`|型に関するセマンティック情報を取得します。|  
 |`tdClass`|型がクラスであることを示します。|  
 |`tdInterface`|型がインターフェイスであることを示します。|  
 |`tdAbstract`|型が抽象的であることを示します。|  
 |`tdSealed`|型を拡張できないことを指定します。|  
-|`tdSpecialName`|クラスの名前が特別なことを指定します。 その名前で記述する方法です。|  
+|`tdSpecialName`|特殊なクラス名を指定します。 その名前で記述する方法。|  
 |`tdImport`|型がインポートされることを指定します。|  
 |`tdSerializable`|型がシリアル化可能なことを指定します。|  
-|`tdWindowsRuntime`|この型があることを指定します、[!INCLUDE[wrt](../../../../includes/wrt-md.md)]型です。|  
-|`tdStringFormatMask`|文字列のエンコード方法および書式設定方法に関する情報を取得します。|  
-|`tdAnsiClass`|この型が、ANSI として LPTSTR を解釈するように指定します。|  
-|`tdUnicodeClass`|この型が Unicode として LPTSTR を解釈するように指定します。|  
+|`tdWindowsRuntime`|この型が、Windows ランタイム型であることを指定します。|  
+|`tdStringFormatMask`|文字列のエンコードおよび書式設定方法に関する情報を取得します。|  
+|`tdAnsiClass`|この型に、LPTSTR ANSI として解釈するを指定します。|  
+|`tdUnicodeClass`|この型が Unicode として LPTSTR を解釈するを指定します。|  
 |`tdAutoClass`|この型が自動的に LPTSTR を解釈することを指定します。|  
-|`tdCustomFormatClass`|型が非標準のエンコーディングを指定して指定されたとおり`CustomFormatMask`です。|  
-|`tdCustomFormatMask`|このマスクを使用すると、ネイティブの相互運用機能の非標準のエンコード情報を取得できます。 これらの 2 つのビット値の意味は、指定されていません。|  
+|`tdCustomFormatClass`|型が非標準のエンコーディングを持つことを指定で指定された`CustomFormatMask`します。|  
+|`tdCustomFormatMask`|このマスクを使用して、ネイティブ相互運用機能の非標準のエンコード情報を取得します。 これら 2 つのビットの値の意味では、指定されていません。|  
 |`tdBeforeFieldInit`|静的フィールドにアクセスする最初の試行する前に、型を初期化する必要がありますを指定します。|  
-|`tdForwarder`|型がエクスポートになっていることを指定し、型フォワーダーです。|  
-|`tdReservedMask`|このフラグは、以下のフラグは、共通言語ランタイムによって内部的に使用されます。|  
+|`tdForwarder`|型がエクスポートされたことを指定します。 型フォワーダーとします。|  
+|`tdReservedMask`|このフラグは、次のフラグは、共通言語ランタイムによって内部的に使用されます。|  
 |`tdRTSpecialName`|名前のエンコーディングに共通言語ランタイムが確認する必要がありますを指定します。|  
 |`tdHasSecurity`|型が関連付けられているセキュリティを指定します。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorHdr.h  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>関連項目
+
+- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

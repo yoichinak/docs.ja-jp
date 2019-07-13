@@ -2,12 +2,12 @@
 title: OLE DB スキーマ コレクション
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
-ms.openlocfilehash: 1ab6426875b73b400a59b7e4cf155615d7472d05
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6c3441e86d4c5267418cf8002ba17d539c464d5c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514490"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645896"
 ---
 # <a name="ole-db-schema-collections"></a>OLE DB スキーマ コレクション
 ここでは、Microsoft SQL Server、Oracle、および Microsoft Jet 用の各 OLE DB プロバイダーでのスキーマ コレクションのサポートについて説明します。  
@@ -15,17 +15,17 @@ ms.locfileid: "43514490"
 ## <a name="microsoft-sql-server-ole-db-provider"></a>Microsoft SQL Server OLE DB Provider  
  Microsoft SQL Server OLE DB Driver は、共通のスキーマ コレクションに加えて次の特定のスキーマ コレクションをサポートしています。  
   
--   [テーブル]  
+- [テーブル]  
   
--   列  
+- 列  
   
--   手順  
+- 手順  
   
--   ProcedureParameters  
+- ProcedureParameters  
   
--   Catalog  
+- Catalog  
   
--   Indexes  
+- Indexes  
   
 ### <a name="tables"></a>[テーブル]  
   
@@ -35,7 +35,7 @@ ms.locfileid: "43514490"
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |TABLE_TYPE|String|  
-|TABLE_GUID|Guid|  
+|TABLE_GUID|GUID|  
 |DESCRIPTION|String|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DateTime|  
@@ -49,15 +49,15 @@ ms.locfileid: "43514490"
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |ORDINAL_POSITION|Int64|  
-|COLUMN_HASDEFAULT|Boolean|  
+|COLUMN_HASDEFAULT|ブール型|  
 |COLUMN_DEFAULT|String|  
 |COLUMN_FLAGS|Int64|  
-|IS_NULLABLE|Boolean|  
+|IS_NULLABLE|ブール型|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|Guid|  
+|TYPE_GUID|GUID|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
@@ -77,7 +77,7 @@ ms.locfileid: "43514490"
 |COLUMN_COMPFLAGS|Int32|  
 |COLUMN_SORTID|Int32|  
 |COLUMN_TDSCOLLATION|Byte[]|  
-|IS_COMPUTED|Boolean|  
+|IS_COMPUTED|ブール型|  
   
 ### <a name="procedures"></a>手順  
   
@@ -102,9 +102,9 @@ ms.locfileid: "43514490"
 |PARAMETER_NAME|String|  
 |ORDINAL_POSITION|Int32|  
 |PARAMETER_TYPE|Int32|  
-|PARAMETER_HASDEFAULT|Boolean|  
+|PARAMETER_HASDEFAULT|ブール型|  
 |PARAMETER_DEFAULT|String|  
-|IS_NULLABLE|Boolean|  
+|IS_NULLABLE|ブール型|  
 |DATA_TYPE|Int32|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
@@ -131,42 +131,42 @@ ms.locfileid: "43514490"
 |INDEX_CATALOG|String|  
 |INDEX_SCHEMA|String|  
 |INDEX_NAME|String|  
-|PRIMARY_KEY|Boolean|  
-|UNIQUE|Boolean|  
-|CLUSTERED|Boolean|  
+|PRIMARY_KEY|ブール型|  
+|UNIQUE|ブール型|  
+|CLUSTERED|ブール型|  
 |TYPE|Int32|  
 |FILL_FACTOR|Int32|  
 |INITIAL_SIZE|Int32|  
 |NULLS|Int32|  
-|SORT_BOOKMARKS|Boolean|  
-|AUTO_UPDATE|Boolean|  
+|SORT_BOOKMARKS|ブール型|  
+|AUTO_UPDATE|ブール型|  
 |NULL_COLLATION|Int32|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |COLLATION|Int16|  
 |CARDINALITY|Decimal (10 進数型)|  
 |PAGES|Int32|  
 |FILTER_CONDITION|String|  
-|INTEGRATED|Boolean|  
+|INTEGRATED|ブール型|  
   
 ## <a name="microsoft-oracle-ole-db-provider"></a>Microsoft Oracle OLE DB Provider  
  Microsoft Oracle OLE DB Driver は、共通のスキーマ コレクションに加えて次のスキーマ コレクションをサポートしています。  
   
--   [テーブル]  
+- [テーブル]  
   
--   列  
+- 列  
   
--   手順  
+- 手順  
   
--   ProcedureColumns  
+- ProcedureColumns  
   
--   ProcedureParameters  
+- ProcedureParameters  
   
--   ビュー  
+- Views  
   
--   Indexes  
+- Indexes  
   
 ### <a name="tables"></a>[テーブル]  
   
@@ -176,7 +176,7 @@ ms.locfileid: "43514490"
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |TABLE_TYPE|String|  
-|TABLE_GUID|Guid|  
+|TABLE_GUID|GUID|  
 |DESCRIPTION|String|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DateTime|  
@@ -190,15 +190,15 @@ ms.locfileid: "43514490"
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |ORDINAL_POSITION|Int64|  
-|COLUMN_HASDEFAULT|Boolean|  
+|COLUMN_HASDEFAULT|ブール型|  
 |COLUMN_DEFAULT|String|  
 |COLUMN_FLAGS|Int64|  
-|IS_NULLABLE|Boolean|  
+|IS_NULLABLE|ブール型|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|Guid|  
+|TYPE_GUID|GUID|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
@@ -236,13 +236,13 @@ ms.locfileid: "43514490"
 |PROCEDURE_SCHEMA|String|  
 |PROCEDURE_NAME|String|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |ROWSET_NUMBER|Int64|  
 |ORDINAL_POSITION|Int64|  
-|IS_NULLABLE|Boolean|  
+|IS_NULLABLE|ブール型|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|Guid|  
+|TYPE_GUID|GUID|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
@@ -250,7 +250,7 @@ ms.locfileid: "43514490"
 |DESCRIPTION|String|  
 |OVERLOAD|Int16|  
   
-### <a name="views"></a>ビュー  
+### <a name="views"></a>Views  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
@@ -258,8 +258,8 @@ ms.locfileid: "43514490"
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |VIEW_DEFINITION|String|  
-|CHECK_OPTION|Boolean|  
-|IS_UPDATABLE|Boolean|  
+|CHECK_OPTION|ブール型|  
+|IS_UPDATABLE|ブール型|  
 |DESCRIPTION|String|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
@@ -274,38 +274,38 @@ ms.locfileid: "43514490"
 |INDEX_CATALOG|String|  
 |INDEX_SCHEMA|String|  
 |INDEX_NAME|String|  
-|PRIMARY_KEY|Boolean|  
-|UNIQUE|Boolean|  
-|CLUSTERED|Boolean|  
+|PRIMARY_KEY|ブール型|  
+|UNIQUE|ブール型|  
+|CLUSTERED|ブール型|  
 |TYPE|Int32|  
 |FILL_FACTOR|Int32|  
 |INITIAL_SIZE|Int32|  
 |NULLS|Int32|  
-|SORT_BOOKMARKS|Boolean|  
-|AUTO_UPDATE|Boolean|  
+|SORT_BOOKMARKS|ブール型|  
+|AUTO_UPDATE|ブール型|  
 |NULL_COLLATION|Int32|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |COLLATION|Int16|  
 |CARDINALITY|Decimal (10 進数型)|  
 |PAGES|Int32|  
 |FILTER_CONDITION|String|  
-|INTEGRATED|Boolean|  
+|INTEGRATED|ブール型|  
   
 ## <a name="microsoft-jet-ole-db-provider"></a>Microsoft Jet OLE DB Provider  
  Microsoft Jet OLE DB Driver は、共通のスキーマ コレクションに加えて次のスキーマ コレクションをサポートしています。  
   
--   [テーブル]  
+- [テーブル]  
   
--   列  
+- 列  
   
--   手順  
+- 手順  
   
--   ビュー  
+- Views  
   
--   Indexes  
+- Indexes  
   
 ### <a name="tables"></a>[テーブル]  
   
@@ -315,7 +315,7 @@ ms.locfileid: "43514490"
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |TABLE_TYPE|String|  
-|TABLE_GUID|Guid|  
+|TABLE_GUID|GUID|  
 |DESCRIPTION|String|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DateTime|  
@@ -329,15 +329,15 @@ ms.locfileid: "43514490"
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |ORDINAL_POSITION|Int64|  
-|COLUMN_HASDEFAULT|Boolean|  
+|COLUMN_HASDEFAULT|ブール型|  
 |COLUMN_DEFAULT|String|  
 |COLUMN_FLAGS|Int64|  
-|IS_NULLABLE|Boolean|  
+|IS_NULLABLE|ブール型|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|Guid|  
+|TYPE_GUID|GUID|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
@@ -367,7 +367,7 @@ ms.locfileid: "43514490"
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
-### <a name="views"></a>ビュー  
+### <a name="views"></a>Views  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
@@ -375,8 +375,8 @@ ms.locfileid: "43514490"
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |VIEW_DEFINITION|String|  
-|CHECK_OPTION|Boolean|  
-|IS_UPDATABLE|Boolean|  
+|CHECK_OPTION|ブール型|  
+|IS_UPDATABLE|ブール型|  
 |DESCRIPTION|String|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
@@ -391,19 +391,19 @@ ms.locfileid: "43514490"
 |INDEX_CATALOG|String|  
 |INDEX_SCHEMA|String|  
 |INDEX_NAME|String|  
-|PRIMARY_KEY|Boolean|  
-|UNIQUE|Boolean|  
-|CLUSTERED|Boolean|  
+|PRIMARY_KEY|ブール型|  
+|UNIQUE|ブール型|  
+|CLUSTERED|ブール型|  
 |TYPE|Int32|  
 |FILL_FACTOR|Int32|  
 |INITIAL_SIZE|Int32|  
 |NULLS|Int32|  
-|SORT_BOOKMARKS|Boolean|  
-|AUTO_UPDATE|Boolean|  
+|SORT_BOOKMARKS|ブール型|  
+|AUTO_UPDATE|ブール型|  
 |NULL_COLLATION|Int32|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |COLLATION|Int16|  
 |CARDINALITY|Decimal (10 進数型)|  
@@ -411,5 +411,6 @@ ms.locfileid: "43514490"
 |FILTER_CONDITION|String|  
 |INTEGRATED|ブール型|  
   
-## <a name="see-also"></a>関連項目  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4fd6102b65137a06009428c1245b80c0d44924a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f005ee9d3d9d4b8977cd6a1838fe46015e604df5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445492"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777471"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>IMetaDataEmit::DefineTypeRefByName メソッド
-現在のスコープ外には、指定されたスコープで定義されている型のメタデータ トークンを取得します。  
+現在のスコープ外には、指定したスコープで定義されている型のメタデータ トークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT DefineTypeRefByName (   
     [in]  mdToken     tkResolutionScope,   
     [in]  LPCWSTR     szName,   
@@ -37,35 +37,36 @@ HRESULT DefineTypeRefByName (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `tkResolutionScope`  
- [in]解決スコープを指定するトークンです。 次のトークンの種類は有効です。  
+ [in]解決スコープを指定するトークンです。 次のトークン型は有効です。  
   
--   `mdModuleRef`、型が呼び出し元が定義されている同じアセンブリに定義されている場合。  
+- `mdModuleRef`、呼び出し元が定義されている同じアセンブリで型が定義されている場合。  
   
--   `mdAssemblyRef`、型が呼び出し元が定義されている以外のアセンブリで定義されている場合。  
+- `mdAssemblyRef`、呼び出し元が定義されているもの以外のアセンブリで型が定義されている場合。  
   
--   `mdTypeRef`、型が入れ子にされた型である場合。  
+- `mdTypeRef`、型が入れ子にされた型の場合。  
   
--   `mdModule`、型が呼び出し元が定義されている同じモジュールで定義されている場合。  
+- `mdModule`、、型が、呼び出し元が定義されている同じモジュールで定義されている場合。  
   
--   型がグローバルに定義されている場合は null です。  
+- 型がグローバルに定義されている場合は null です。  
   
  `szName`  
- [in]Unicode で対象の型の名前です。  
+ [in]Unicode で対象の型の名前。  
   
  `ptr`  
  [out]ポインター、`mdTypeRef`型に割り当てられているトークンです。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
  **ライブラリ:** MSCorEE.dll にリソースとして使用  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

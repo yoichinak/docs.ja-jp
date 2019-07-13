@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - var keyword [C#]
 ms.assetid: 0777850a-2691-4e3e-927f-0c850f5efe15
-ms.openlocfilehash: 79a3fe331107a902957158a9631f607cb431be32
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: a523e575f14c88ea385bf115f0b07f54190499a5
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610646"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633200"
 ---
 # <a name="var-c-reference"></a>var (C# リファレンス)
 

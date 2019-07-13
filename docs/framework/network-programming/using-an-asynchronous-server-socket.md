@@ -17,12 +17,12 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
-ms.openlocfilehash: 24bbbc304111b3735bc6e8f3965ef37e9374bda6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 32a2a99d5f71cb500dca467433f138a893d01e5b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152514"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59119926"
 ---
 # <a name="using-an-asynchronous-server-socket"></a>非同期サーバー ソケットの使用
 非同期サーバー ソケットは、.NET Framework の非同期プログラミング モデルを使用してネットワーク サービス要求を処理します。 <xref:System.Net.Sockets.Socket> クラスは、標準の .NET Framework の非同期名前付けパターンに従います。たとえば、同期の <xref:System.Net.Sockets.Socket.Accept%2A> メソッドは非同期の <xref:System.Net.Sockets.Socket.BeginAccept%2A> メソッドと <xref:System.Net.Sockets.Socket.EndAccept%2A> メソッドに対応します。  
@@ -268,8 +268,9 @@ public static void ReadCallback(IAsyncResult ar)
 }  
 ```  
   
-## <a name="see-also"></a>参照  
- [同期サーバー ソケットの使用](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
- [非同期サーバー ソケットの例](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)  
- [スレッド化](../../../docs/standard/threading/index.md)  
- [リッスン (ソケットで)](../../../docs/framework/network-programming/listening-with-sockets.md)
+## <a name="see-also"></a>関連項目
+
+- [同期サーバー ソケットの使用](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
+- [非同期サーバー ソケットの例](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)
+- [スレッド化](../../../docs/standard/threading/index.md)
+- [リッスン (ソケットで)](../../../docs/framework/network-programming/listening-with-sockets.md)

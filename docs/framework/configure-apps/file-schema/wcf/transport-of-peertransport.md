@@ -1,15 +1,15 @@
 ---
-title: '&lt;peerTransport&gt; の &lt;transport&gt;'
+title: <transport> の <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
-ms.openlocfilehash: c82e91543920522f0ed6232036ec1b5a94189fa8
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 9b6f548515afbba5068659bd5c6f7f2b33f80cda
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788285"
 ---
-# <a name="lttransportgt-of-ltpeertransportgt"></a>&lt;peerTransport&gt; の &lt;transport&gt;
+# <a name="transport-of-peertransport"></a>\<トランスポート > の\<peerTransport >
 このバインドで構成されたピアが送信する、セキュリティで保護されたメッセージのトランスポートの型を指定します。  
   
  \<system.serviceModel>  
@@ -39,7 +39,7 @@ ms.locfileid: "54148944"
   
 ## <a name="credentialtype-attribute"></a>credentialType 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |証明書|ピア チャネル トランスポートの認証には X 509 証明書が必要です。|  
 |[Password]|ピア チャネル トランスポートの認証には正しいパスワードが必要です。|  
@@ -56,15 +56,16 @@ ms.locfileid: "54148944"
 ## <a name="remarks"></a>Remarks  
  場合にのみこの要素は、設定の mode 属性[\<セキュリティ >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)に設定されている`Transport`または`TransportWithMessageCredential`します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>  
- <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>  
- <xref:System.ServiceModel.PeerTransportSecuritySettings>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [トランスポート セキュリティ](../../../../../docs/framework/wcf/feature-details/transport-security.md)  
- [トランスポート](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [トランスポートの選択](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [バインディング](../../../../../docs/framework/wcf/bindings.md)  
- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>
+- <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>
+- <xref:System.ServiceModel.PeerTransportSecuritySettings>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [トランスポート セキュリティ](../../../../../docs/framework/wcf/feature-details/transport-security.md)
+- [トランスポート](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [トランスポートの選択](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [バインディング](../../../../../docs/framework/wcf/bindings.md)
+- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

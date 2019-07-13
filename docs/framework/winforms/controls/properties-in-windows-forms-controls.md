@@ -6,12 +6,12 @@ helpviewer_keywords:
 - controls [Windows Forms], properties
 - properties [Windows Forms]
 ms.assetid: 2785279b-fb57-4937-8f6b-2050e475db6f
-ms.openlocfilehash: 37db3f16a17acc7f3a6e594bd284ba368801e70a
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: e531b80cffabb94d2589383936a425b740c9cc07
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012505"
 ---
 # <a name="properties-in-windows-forms-controls"></a>Windows フォーム コントロールのプロパティ
 Windows フォーム コントロールは多くのプロパティ フォームの基本クラスを継承して<xref:System.Windows.Forms.Control?displayProperty=nameWithType>します。 などのプロパティが含まれます<xref:System.Windows.Forms.Control.Font%2A>、 <xref:System.Windows.Forms.Control.ForeColor%2A>、 <xref:System.Windows.Forms.Control.BackColor%2A>、 <xref:System.Windows.Forms.Control.Bounds%2A>、 <xref:System.Windows.Forms.Control.ClientRectangle%2A>、 <xref:System.Windows.Forms.Control.DisplayRectangle%2A>、 <xref:System.Windows.Forms.Control.Enabled%2A>、 <xref:System.Windows.Forms.Control.Focused%2A>、 <xref:System.Windows.Forms.Control.Height%2A>、 <xref:System.Windows.Forms.Control.Width%2A>、 <xref:System.Windows.Forms.Control.Visible%2A>、 <xref:System.Windows.Forms.Control.AutoSize%2A>、その他の多くとします。 詳細については、継承されたプロパティは、次を参照してください。<xref:System.Windows.Forms.Control?displayProperty=nameWithType>します。  
@@ -19,19 +19,19 @@ Windows フォーム コントロールは多くのプロパティ フォーム�
  コントロールで継承されたプロパティをオーバーライドしたり、新しいプロパティを定義したりできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [プロパティの定義](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)  
+ [プロパティの定義](defining-a-property-in-windows-forms-controls.md)  
  カスタム コントロールまたはカスタム コンポーネントのプロパティを実装する方法と、そのプロパティをデザイン環境に統合する方法について説明します。  
   
- [ShouldSerialize メソッドと Reset メソッドによる既定値の定義](../../../../docs/framework/winforms/controls/defining-default-values-with-the-shouldserialize-and-reset-methods.md)  
+ [ShouldSerialize メソッドと Reset メソッドによる既定値の定義](defining-default-values-with-the-shouldserialize-and-reset-methods.md)  
  カスタム コントロールまたはカスタム コンポーネントの既定のプロパティ値を定義する方法について説明します。  
   
- [プロパティ変更イベント](../../../../docs/framework/winforms/controls/property-changed-events.md)  
+ [プロパティ変更イベント](property-changed-events.md)  
  プロパティ値が変更されたときに、プロパティ変更通知を有効にする方法について説明します。  
   
- [方法 : 内在コントロールのプロパティを公開する](../../../../docs/framework/winforms/controls/how-to-expose-properties-of-constituent-controls.md)  
+ [方法: 内在コントロールのプロパティを公開します。](how-to-expose-properties-of-constituent-controls.md)  
  カスタム複合コントロール内の内在コントロールのプロパティを公開する方法について説明します。  
   
- [カスタム コントロールへのメソッドの実装](../../../../docs/framework/winforms/controls/method-implementation-in-custom-controls.md)  
+ [カスタム コントロールへのメソッドの実装](method-implementation-in-custom-controls.md)  
  カスタム コントロールおよびカスタム コンポーネントにメソッドを実装する方法について説明します。  
   
 ## <a name="reference"></a>参照  
@@ -45,11 +45,11 @@ Windows フォーム コントロールは多くのプロパティ フォーム�
  指定する属性について、<xref:System.Drawing.Design.UITypeEditor>カスタム プロパティに使用します。  
   
 ## <a name="related-sections"></a>関連項目  
- [Windows フォーム コントロールの属性](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
+ [Windows フォーム コントロールの属性](attributes-in-windows-forms-controls.md)  
  カスタム コントロールとコンポーネントのプロパティや他のメンバーに適用できる属性について説明します。  
   
- [コンポーネントのデザイン時属性](https://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)  
+ [コンポーネントのデザイン時属性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120))  
  ビジュアル デザイナーでデザインするときに正しく表示されるようにコンポーネントとコントロールに適用するメタデータ属性の一覧を表示します。  
   
- [デザイン時サポートの拡張](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ [デザイン時サポートの拡張](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))  
  デザイン時サポートを提供するエディターやデザイナーなどのクラスを実装する方法について説明します。

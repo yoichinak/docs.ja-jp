@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], TreeView
 - TreeView control [WPF], how-to topics
 ms.assetid: b9e9790e-7bfd-45d1-8b7a-1e0d125182a8
-ms.openlocfilehash: 902478763a214b96c3d0565fe38f0e9cd4c2acc0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa7ef39083eb192c6ea675568b955fc78608ba88
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761313"
 ---
 # <a name="treeview-how-to-topics"></a>TreeView に関する「方法」トピック
-このセクションのトピックを使用する方法について説明、<xref:System.Windows.Controls.TreeView>階層構造の情報を表示するコントロール。  
+このセクションのトピックでは、使用する方法をについて説明します、<xref:System.Windows.Controls.TreeView>階層構造で情報を表示するコントロール。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [単純または複雑な TreeView を作成する](../../../../docs/framework/wpf/controls/how-to-create-simple-or-complex-treeviews.md)  
-  [SelectedValue、SelectedValuePath、および SelectedItem を使用する](../../../../docs/framework/wpf/controls/how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)  
-  [深度がわからないデータに TreeView をバインドする](../../../../docs/framework/wpf/controls/how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md)  
-  [TreeView のパフォーマンスを改善する](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md)  
-  [TreeView での TreeViewItem の検索](../../../../docs/framework/wpf/controls/how-to-find-a-treeviewitem-in-a-treeview.md)  
+ [単純または複雑な TreeView を作成する](how-to-create-simple-or-complex-treeviews.md)  
+  [SelectedValue、SelectedValuePath、および SelectedItem を使用する](how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)  
+  [深度がわからないデータに TreeView をバインドする](how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md)  
+  [TreeView のパフォーマンスを改善する](how-to-improve-the-performance-of-a-treeview.md)  
+  [TreeView での TreeViewItem の検索](how-to-find-a-treeviewitem-in-a-treeview.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.TreeView>  

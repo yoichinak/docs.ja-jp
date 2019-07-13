@@ -1,0 +1,31 @@
+- name: 管理と診断
+  href: index.md
+- name: メッセージ ログ
+  href: message-logging.md
+  items:
+    - name: メッセージ フローの概要
+      href: message-flow-overview.md
+    - name: メッセージ ログの構成
+      href: configuring-message-logging.md
+    - name: メッセージ ログを参照する
+      href: viewing-message-logs.md
+    - name: メッセージ ログ記録のセキュリティの考慮事項
+      href: security-concerns-for-message-logging.md
+    - name: トレース
+      href: tracing/
+    - name: ETW を使用した分析トレース
+      href: etw/
+    - name: パフォーマンス カウンター
+      href: performance-counters/
+    - name: イベント ログ
+      href: event-logging/
+    - name: 診断用の WMI (Windows Management Instrumentation) の使用
+      href: wmi/
+    - name: 例外リファレンス
+      href: exceptions-reference/
+- name: アプリケーションの構成
+  href: configuring-your-application.md
+- name: ServiceModel 登録ツール
+  href: servicemodel-registration-tool.md
+- name: サービスの配置
+  href: deploying-services.md

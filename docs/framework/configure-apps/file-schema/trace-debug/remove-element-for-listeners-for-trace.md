@@ -1,5 +1,5 @@
 ---
-title: '&lt;削除&gt;要素&lt;リスナー&gt;の&lt;トレース&gt;'
+title: <remove> の <listeners> の <trace> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/remove
@@ -7,22 +7,20 @@ helpviewer_keywords:
 - remove element
 - <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 54fd529c571c8e8cf43c5dabe2398ae4a6cf4f11
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: adf00394bc0bfe808836e74214003cd2078204e4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673681"
 ---
-# <a name="ltremovegt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;削除&gt;要素&lt;リスナー&gt;の&lt;トレース&gt;
+# <a name="remove-element-for-listeners-for-trace"></a>\<削除 > 要素の\<リスナー > の\<トレース >
 リスナーを削除、**リスナー**コレクション。  
   
  \<configuration>  
-\<system.diagnostics >  
+\<system.diagnostics>  
 \<トレース >  
-\<リスナー >  
+\<listeners>  
 \<remove>  
   
 ## <a name="syntax"></a>構文  
@@ -72,9 +70,10 @@ ms.locfileid: "48030537"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Diagnostics.TraceListener>  
- <xref:System.Diagnostics.DefaultTraceListener>  
- <xref:System.Diagnostics.TextWriterTraceListener>  
- <xref:System.Diagnostics.EventLogTraceListener>  
- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Diagnostics.TraceListener>
+- <xref:System.Diagnostics.DefaultTraceListener>
+- <xref:System.Diagnostics.TextWriterTraceListener>
+- <xref:System.Diagnostics.EventLogTraceListener>
+- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

@@ -3,23 +3,25 @@ title: .NET Core を使用した REST クライアントの作成
 description: このチュートリアルでは、.NET Core と C# 言語のさまざまな機能を説明します。
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 521c6edfa7163219ea86c6fb8444bc95859c9aa1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f6e3371a72810b30f804169be4025360aa10c477
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126643"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063884"
 ---
 # <a name="rest-client"></a>REST クライアント
 
 ## <a name="introduction"></a>はじめに
+
 このチュートリアルでは、.NET Core と C# 言語のさまざまな機能を説明します。 内容は以下のとおりです。
-*   .NET Core コマンド ライン インターフェイス (CLI) の基本
-*   C# 言語機能の概要
-*   NuGet での依存関係の管理
-*   HTTP 通信
-*   JSON 情報の処理
-*   属性を使用した構成の管理 
+
+* .NET Core コマンド ライン インターフェイス (CLI) の基本
+* C# 言語機能の概要
+* NuGet での依存関係の管理
+* HTTP 通信
+* JSON 情報の処理
+* 属性を使用した構成の管理
 
 GitHub 上の REST サービスに対して HTTP 要求を発行するアプリケーションをビルドします。 JSON 形式で情報を読み取り、その JSON パケットを C# オブジェクトに変換します。 最後に、C# オブジェクトを操作する方法について説明します。
 
@@ -28,15 +30,19 @@ GitHub 上の REST サービスに対して HTTP 要求を発行するアプリ�
 このトピックの[最終的なサンプル](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient)も参照したい方は、ダウンロードできます。 ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)」を参照してください。
 
 ## <a name="prerequisites"></a>必須コンポーネント
-お使いのコンピューターを、.NET Core が実行されるように設定する必要があります。 インストールの手順については、[.NET Core](https://www.microsoft.com/net/core) のページを参照してください。 このアプリケーションは、Windows、Linux、macOS または Docker コンテナーで実行できます。 お好みのコード エディターをインストールしてください。 次の説明では、オープン ソースのクロス プラットフォーム エディターである [Visual Studio Code](https://code.visualstudio.com/) を使用しています。 しかし、他の使い慣れたツールを使用しても構いません。
+
+お使いのコンピューターを、.NET Core が実行されるように設定する必要があります。 インストールの手順については、[.NET Core](https://www.microsoft.com/net/core) のページを参照してください。 このアプリケーションは、Windows、Linux、macOS または Docker コンテナーで実行できます。
+お好みのコード エディターをインストールしてください。 次の説明では、オープン ソースのクロス プラットフォーム エディターである [Visual Studio Code](https://code.visualstudio.com/) を使用しています。 しかし、他の使い慣れたツールを使用しても構いません。
+
 ## <a name="create-the-application"></a>アプリケーションを作成する
-最初に新しいアプリケーションを作成します。 コマンド プロンプトを開き、アプリケーション用の新しいディレクトリを作成します。 それを、現在のディレクトリとしてください。 コマンド プロンプトで `dotnet new console` のコマンドを入力します。 これで、基本的な "Hello World" アプリケーションのスターター ファイルが作成されます。
 
-変更を加える前に、このシンプルな Hello World アプリケーションを実行する手順を見ていきましょう。 アプリケーション作成後、コマンド プロンプトで「`dotnet restore`」 ([注記を参照](#dotnet-restore-note)) と入力します。 このコマンドにより、NuGet パッケージの復元処理が実行されます。 NuGet は .NET パッケージ マネージャーです。 このコマンドにより、プロジェクトの依存関係のうち欠落しているものがすべてダウンロードされます。 これは新しいプロジェクトなので、依存関係は何もなく、最初の実行で .NET Core フレームワークがダウンロードされます。 この最初の手順の後は、新しい依存パッケージを追加するときに `dotnet restore` ([注記を参照](#dotnet-restore-note)) を実行するか、依存関係のいずれかのバージョンを更新する必要があるだけです。  
+最初に新しいアプリケーションを作成します。 コマンド プロンプトを開き、アプリケーション用の新しいディレクトリを作成します。 それを、現在のディレクトリとしてください。 コマンド プロンプトで `dotnet new console` のコマンドを入力します。 これで、基本的な "Hello World" アプリケーションのスターター ファイルが作成されます。 これは新しいプロジェクトで依存関係が存在しないため、1 回目の実行では、.NET Core フレームワークがダウンロードされ、開発証明書がインストールされ、NuGet パッケージ マネージャーが実行されて、不足している依存関係が復元されます。
 
-パッケージを復元したら、`dotnet build` を実行します。 これにより、ビルド エンジンが実行され、アプリケーションが作成されます。 最後に、`dotnet run` を実行してアプリケーションを実行します。
+変更を開始する前に、コマンド プロンプトに「`dotnet run`」(「[注](#dotnet-restore-note)」を参照してください) と入力してアプリケーションを実行します。 環境に依存関係がない場合、`dotnet run` では自動的に `dotnet restore` が実行されます。 アプリケーションのリビルドが必要な場合にも `dotnet build` が実行されます。
+初期設定の後は、プロジェクトにとって意味がある場合にのみ `dotnet restore` または `dotnet build` を実行する必要があります。
 
 ## <a name="adding-new-dependencies"></a>新しい依存関係を追加する
+
 .NET Core の重要な設計目標の 1 つは、.NET インストール サイズを最小限に抑えることです。 その一部の機能のための追加ライブラリがアプリケーションで必要な場合は、C# プロジェクト (\*.csproj) ファイルにそれらの依存関係を追加します。 ここで示す例の場合は、`System.Runtime.Serialization.Json` パッケージを追加して、アプリケーションが JSON 応答を処理できるようにする必要があります。
 
 `csproj` プロジェクト ファイルを開きます。 ファイルの最初の行は次のように表示されます。
@@ -45,19 +51,21 @@ GitHub 上の REST サービスに対して HTTP 要求を発行するアプリ�
 <Project Sdk="Microsoft.NET.Sdk">
 ```
 
-この行の直後に次のコードを追加します。 
+この行の直後に次のコードを追加します。
 
 ```xml
    <ItemGroup>
       <PackageReference Include="System.Runtime.Serialization.Json" Version="4.3.0" />
-   </ItemGroup> 
+   </ItemGroup>
 ```
+
 ほとんどのコード エディターでは、これらのライブラリの複数のバージョンの入力候補が表示されます。 通常は、追加するパッケージの最新バージョンを使用します。 ただし、すべてのパッケージのバージョンが一致しており、.NET Core アプリケーション フレームワークのバージョンとも一致していることを確認してください。
 
-これらの変更を加えた後で、`dotnet restore` ([注記を参照](#dotnet-restore-note)) をもう一度実行して、システムにパッケージがインストールされるようにします。
+これらの変更を行った後で、`dotnet restore` を実行して (「[注](#dotnet-restore-note)」を参照してください) システムにパッケージがインストールされるようにします。
 
 ## <a name="making-web-requests"></a>Web 要求を作成する
-Web サイトからデータの取得を開始する準備ができました。 このアプリケーションでは、[GitHub API](https://developer.github.com/v3/) から情報を読み取ります。 [.NET Foundation](https://www.dotnetfoundation.org/) にあるプロジェクトに関する情報を読み取ります。 最初に、プロジェクトに関する情報を取得する GitHub API に対する要求を作成します。 使用するエンドポイントは [https://api.github.com/orgs/dotnet/repos](https://api.github.com/orgs/dotnet/repos) です。 HTTP GET 要求を使用して、これらのプロジェクトに関する情報をすべて取得します。
+
+Web サイトからデータの取得を開始する準備ができました。 このアプリケーションでは、[GitHub API](https://developer.github.com/v3/) から情報を読み取ります。 [.NET Foundation](https://www.dotnetfoundation.org/) にあるプロジェクトに関する情報を読み取ります。 最初に、プロジェクトに関する情報を取得する GitHub API に対する要求を作成します。 使用するエンドポイントは <https://api.github.com/orgs/dotnet/repos> です。 HTTP GET 要求を使用して、これらのプロジェクトに関する情報をすべて取得します。
 HTTP GET 要求はブラウザーでも使用されるので、ブラウザーに URL を貼り付けて、取得および処理する情報を確認できます。
 
 <xref:System.Net.Http.HttpClient> クラスを使用して Web 要求を作成します。 最新のすべての .NET API と同様に、<xref:System.Net.Http.HttpClient> は実行時間の長い API の非同期メソッドだけをサポートします。
@@ -66,7 +74,6 @@ HTTP GET 要求はブラウザーでも使用されるので、ブラウザー�
 ```csharp
 private static async Task ProcessRepositories()
 {
-    
 }
 ```
 
@@ -108,7 +115,7 @@ namespace WebAPIClient
 }
 ```
 
- `ProcessRepositories` メソッドに戻って、最初のバージョンのプログラムを記述します。
+`ProcessRepositories` メソッドに戻って、最初のバージョンのプログラムを記述します。
 
 ```csharp
 private static async Task ProcessRepositories()
@@ -132,13 +139,13 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 ```
 
-この最初のバージョンでは、.NET Foundation にあるすべてのリポジトリのリストを読み取る Web 要求を作成します  (.NET Foundation の gitHub ID は "dotnet" です)。 最初の数行では、この要求の <xref:System.Net.Http.HttpClient> を設定します。 最初は、GitHub の JSON 応答を受け入れるように構成されます。
+この最初のバージョンでは、.NET Foundation にあるすべてのリポジトリのリストを読み取る Web 要求を作成します (.NET Foundation の gitHub ID は "dotnet" です)。 最初の数行では、この要求の <xref:System.Net.Http.HttpClient> を設定します。 最初は、GitHub の JSON 応答を受け入れるように構成されます。
 この形式は単なる JSON です。 次の行では、このオブジェクトからのすべての要求にユーザー エージェント ヘッダーを追加します。 これらの 2 つのヘッダーは、GitHub サーバー コードによってチェックされ、GitHub から情報を取得するために必要です。
 
-<xref:System.Net.Http.HttpClient> を構成したら、Web 要求を作成して応答を取得します。 この最初のバージョンでは、<xref:System.Net.Http.HttpClient.GetStringAsync(System.String)?displayProperty=nameWithType> 簡易メソッドを使います。 この簡易メソッドは、Web 要求を作成するタスクを開始し、要求が返されると応答ストリームを読み取って、ストリームからコンテンツを抽出します。 応答の本文は <xref:System.String> として返されます。 この文字列は、タスクが完了すると使用できます。 
+<xref:System.Net.Http.HttpClient> を構成したら、Web 要求を作成して応答を取得します。 この最初のバージョンでは、<xref:System.Net.Http.HttpClient.GetStringAsync(System.String)?displayProperty=nameWithType> 簡易メソッドを使います。 この簡易メソッドは、Web 要求を作成するタスクを開始し、要求が返されると応答ストリームを読み取って、ストリームからコンテンツを抽出します。 応答の本文は <xref:System.String> として返されます。 この文字列は、タスクが完了すると使用できます。
 
 このメソッドの最後の 2 行は、そのタスクを待機し、コンソールに応答を出力します。
-アプリケーションをビルドして実行してください。 `ProcessRepositories` に `await` 演算子が含まれているため、ビルドの警告が表示されなくなりました。 JSON 形式の長いテキストが表示されます。   
+アプリケーションをビルドして実行してください。 `ProcessRepositories` に `await` 演算子が含まれているため、ビルドの警告が表示されなくなりました。 JSON 形式の長いテキストが表示されます。
 
 ## <a name="processing-the-json-result"></a>JSON の結果を処理する
 
@@ -156,9 +163,9 @@ namespace WebAPIClient
         public string name;
     }
 }
-``` 
+```
 
-"repo.cs" という新しいファイルに上記のコードを記述します。 このバージョンのクラスは、JSON データを処理する最もシンプルなパスを表します。 クラス名とメンバー名は、C# の規約に従うのではなく、JSON パケットで使用される名前に一致します。 後でいくつかの構成属性を指定して、これを修正します。 このクラスは、JSON のシリアル化と逆シリアル化のもう 1 つの重要な機能を示します。JSON パケット内のすべてのフィールドがこのクラスに含まれているわけではありません。
+"repo.cs" という新しいファイルに上記のコードを記述します。 このバージョンのクラスは、JSON データを処理する最もシンプルなパスを表します。 クラス名とメンバー名は、C# の規約に従うのではなく、JSON パケットで使用される名前に一致します。 後でいくつかの構成属性を指定して、これを修正します。 このクラスは、JSON のシリアル化と逆シリアル化に関する、もう一つの重要な特性を示しています:JSON パケット内のすべてのフィールドがこのクラスの一部というわけではありません。
 JSON シリアライザーは、使用されているクラス型に含まれていない情報を無視します。
 この機能により、JSON パケット内のフィールドのサブセットのみを操作する型を容易に作成できます。
 
@@ -184,7 +191,8 @@ var repositories = serializer.ReadObject(await streamTask) as List<repo>;
 
 <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)> ではなく、<xref:System.Net.Http.HttpClient.GetStreamAsync(System.String)> が使用されていることをご確認ください。 シリアライザーは、文字列の代わりにストリームをソースとして使用します。 上記の 2 行目で使用されている C# 言語のいくつかの機能について説明します。 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream)> への引数は `await` 式です。 await 式は、コード内のほとんどの場所に表示される可能性があります (これまでは代入ステートメントの一部としてしか表示されていませんでした)。
 
-次に、`as` 演算子がコンパイル時の型である `object` を `List<repo>` に変換します。 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream)> の宣言は、<xref:System.Object?displayProperty=nameWithType> 型のオブジェクトが返されることを宣言しています。 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream)> は、構成時に指定した型 (このチュートリアルでは `List<repo>`) を返します。 変換が成功しなかった場合、`as` 演算子は例外をスローする代わりに `null` と評価します。
+次に、`as` 演算子がコンパイル時の型である `object` を `List<repo>` に変換します。
+<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream)> の宣言は、<xref:System.Object?displayProperty=nameWithType> 型のオブジェクトが返されることを宣言しています。 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream)> は、構成時に指定した型 (このチュートリアルでは `List<repo>`) を返します。 変換が成功しなかった場合、`as` 演算子は例外をスローする代わりに `null` と評価します。
 
 このセクションでの作業はほぼ完了です。 JSON を C# オブジェクトに変換したので、次は各リポジトリの名前を表示します。 次の行があるとします。
 
@@ -204,9 +212,9 @@ foreach (var repo in repositories)
 
 ## <a name="controlling-serialization"></a>シリアル化を制御する
 
-機能を追加する前に、`repo` 型を処理して、その型が C# の標準的な規約に従うようにします。 そのためには、JSON シリアライザーの動作を制御する "*属性*" を使用して `repo` 型に注釈を設定します。 ここでは、これらの属性を使用して、JSON キー名と C# のクラスおよびメンバーの名前との間のマッピングを定義します。 使用する 2 つの属性は `DataContract` および `DataMember` です。 慣例により、すべての属性クラスはサフィックス `Attribute` で終わります。 ただし、属性の適用時にそのサフィックスを使用する必要はありません。 
+機能を追加する前に、`repo` 型を処理して、その型が C# の標準的な規約に従うようにします。 そのためには、JSON シリアライザーの動作を制御する "*属性*" を使用して `repo` 型に注釈を設定します。 ここでは、これらの属性を使用して、JSON キー名と C# のクラスおよびメンバーの名前との間のマッピングを定義します。 使用する 2 つの属性は <xref:System.Runtime.Serialization.DataContractAttribute> と <xref:System.Runtime.Serialization.DataMemberAttribute> 属性です。 慣例により、すべての属性クラスはサフィックス `Attribute` で終わります。 ただし、属性の適用時にそのサフィックスを使用する必要はありません。
 
-`DataContract` 属性と `DataMember` 属性は別のライブラリにあるため、C# プロジェクト ファイルにそのライブラリを依存関係として追加する必要があります。 プロジェクト ファイルの `<ItemGroup>` セクションに次の行を追加します。
+<xref:System.Runtime.Serialization.DataContractAttribute> 属性と <xref:System.Runtime.Serialization.DataMemberAttribute> 属性は別のライブラリにあるため、C# プロジェクト ファイルにそのライブラリを依存関係として追加する必要があります。 プロジェクト ファイルの `<ItemGroup>` セクションに次の行を追加します。
 
 ```xml
 <PackageReference Include="System.Runtime.Serialization.Primitives" Version="4.3.0" />
@@ -214,7 +222,7 @@ foreach (var repo in repositories)
 
 ファイルを保存したら、`dotnet restore` ([注記を参照](#dotnet-restore-note))を実行してこのパッケージを取得します。
 
-次に、`repo.cs` ファイルを開きます。 パスカル ケースを使用するように名前を変更し、`Repository` という名前を記述します。 この型に JSON の "repo" ノードをマップするために、クラス宣言に `DataContract` 属性を追加する必要があります。 属性の `Name` プロパティを、この型にマップする JSON ノードの名前に設定します。
+次に、`repo.cs` ファイルを開きます。 パスカル ケースを使用するように名前を変更し、`Repository` という名前を記述します。 この型に JSON の "repo" ノードをマップするために、クラス宣言に <xref:System.Runtime.Serialization.DataContractAttribute> 属性を追加する必要があります。 属性の `Name` プロパティを、この型にマップする JSON ノードの名前に設定します。
 
 ```csharp
 [DataContract(Name="repo")]
@@ -261,8 +269,8 @@ public string Name { get; set; }
 コンパイラは、`get` アクセサーと `set` アクセサーの本文および名前を格納するプライベート フィールドを生成します。 次のようなコードを手動で入力できます。
 
 ```csharp
-public string Name 
-{ 
+public string Name
+{
     get { return this._name; }
     set { this._name = value; }
 }
@@ -334,6 +342,7 @@ foreach (var repo in repositories)
     Console.WriteLine();
 }
 ```
+
 最後の手順として、最後のプッシュ操作に関する情報を追加します。 この情報は、JSON 応答では次のように書式設定されます。
 
 ```json
@@ -347,7 +356,7 @@ foreach (var repo in repositories)
 private string JsonDate { get; set; }
 ```
 
-`DataMember` 属性は、このプロパティがパブリック メンバーでないとしても処理する必要があることをシリアライザーに通知します。 次に、文字列を有効な <xref:System.DateTime> オブジェクトに変換してその <xref:System.DateTime> を返す読み取り専用のパブリック プロパティを記述する必要があります。
+<xref:System.Runtime.Serialization.DataMemberAttribute> 属性は、このプロパティがパブリック メンバーでないとしても処理する必要があることをシリアライザーに通知します。 次に、文字列を有効な <xref:System.DateTime> オブジェクトに変換してその <xref:System.DateTime> を返す読み取り専用のパブリック プロパティを記述する必要があります。
 
 ```csharp
 [IgnoreDataMember]
@@ -360,7 +369,7 @@ public DateTime LastPush
 }
 ```
 
-上記の新しいコンストラクトについて詳しく見てみましょう。 `IgnoreDataMember` 属性は、JSON オブジェクトとの間でこの型の読み取りまたは書き込みを行わないようにシリアライザーに指示します。 このプロパティには `get` アクセサーだけが含まれています。 `set` アクセサーがない。 C# では、この方法で "*読み取り専用*" プロパティを定義します  (C# では "*書き込み専用*" プロパティを作成できますが、その値は制限されています)。<xref:System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider)> メソッドは、指定された日付形式を使用して文字列を解析し、<xref:System.DateTime> オブジェクトを作成します。次に、`CultureInfo` オブジェクトを使用して `DateTime` にメタデータを追加します。 解析操作が失敗した場合、プロパティのアクセサーは例外をスローします。
+上記の新しいコンストラクトについて詳しく見てみましょう。 `IgnoreDataMember` 属性は、JSON オブジェクトとの間でこの型の読み取りまたは書き込みを行わないようにシリアライザーに指示します。 このプロパティには `get` アクセサーだけが含まれています。 `set` アクセサーがない。 C# では、この方法で "*読み取り専用*" プロパティを定義します (C# では "*書き込み専用*" プロパティを作成できますが、その値は制限されています)。<xref:System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider)> メソッドは、指定された日付形式を使用して文字列を解析し、<xref:System.DateTime> オブジェクトを作成します。次に、`CultureInfo` オブジェクトを使用して `DateTime` にメタデータを追加します。 解析操作が失敗した場合、プロパティのアクセサーは例外をスローします。
 
 <xref:System.Globalization.CultureInfo.InvariantCulture> を使用するには、`repo.cs` 内の `using` ステートメントに <xref:System.Globalization> 名前空間を追加する必要があります。
 
@@ -375,10 +384,11 @@ Console.WriteLine(repo.LastPush);
 ```
 
 以上で、作成してきたバージョンは[最終的なサンプル](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient)と同じになるはずです。
- 
+
 ## <a name="conclusion"></a>まとめ
 
 このチュートリアルでは、Web 要求を作成する方法、結果を解析する方法、およびそれらの結果のプロパティを表示する方法を紹介しました。 また、依存関係として新しいパッケージをプロジェクトに追加しました。 さらに、オブジェクト指向の手法をサポートする C# 言語の一部の機能について確認しました。
 
 <a name="dotnet-restore-note"></a>
+
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

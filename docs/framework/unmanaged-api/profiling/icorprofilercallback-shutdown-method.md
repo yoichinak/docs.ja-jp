@@ -17,38 +17,39 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83e32b2b69d53772f8a4ebaabe1c025b95d1da47
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9d63dd911a5f674a3ce0b02ec78de443c7aebf84
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453728"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747175"
 ---
 # <a name="icorprofilercallbackshutdown-method"></a>ICorProfilerCallback::Shutdown メソッド
-アプリケーションがシャット ダウンしているプロファイラーに通知します。  
+アプリケーションのシャット ダウンをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Shutdown();  
 ```  
   
-## <a name="remarks"></a>コメント  
- プロファイラー コードがのメソッドを安全に呼び出すことはできません、 [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)インターフェイスの後に、`Shutdown`メソッドが呼び出されます。 呼び出しの`ICorProfilerInfo`メソッドの後に未定義の動作が発生、`Shutdown`メソッドを返します。 シャット ダウン後にこの特定の変更できないイベントがあります。プロファイラーは、これが発生するとすぐに戻ります注意する必要があります。  
+## <a name="remarks"></a>Remarks  
+ プロファイラー コードがのメソッドを安全に呼び出すことはできません、 [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)インターフェイスの後に、`Shutdown`メソッドが呼び出されます。 呼び出し`ICorProfilerInfo`メソッドの後に未定義の動作が発生する、`Shutdown`メソッドを返します。 シャット ダウン後に特定の変更できないイベントが発生します。プロファイラーは、これが発生したときにすぐに返される注意する必要があります。  
   
- `Shutdown`プロファイリングされているマネージ アプリケーションがマネージ コードとして開始された場合のみ、メソッドが呼び出されます (つまり、プロセスのスタックの初期のフレームが管理対象)。 アプリケーションがアンマネージ コードとして開始された後でマネージ コードにジャンプする場合は、それによってインスタンスを作成する共通言語ランタイム (CLR) の`Shutdown`は呼び出されません。 このような場合、プロファイラーが、ライブラリに含める必要があります、`DllMain`ルーチン、ありますを使用する値の任意のリソースを解放し、トレースなどのディスクにフラッシュなど、そのデータのクリーンアップ処理を実行します。  
+ `Shutdown`プロファイリングされているマネージ アプリケーションがマネージ コードとして起動する場合にのみ、メソッドが呼び出されます (つまり、プロセスのスタックの最初のフレームが管理対象)。 アプリケーションがアンマネージ コードとして開始された後でマネージ コードにジャンプする場合は、それによってインスタンスを作成する共通言語ランタイム (CLR) の`Shutdown`は呼び出されません。 ような場合、プロファイラーは、ライブラリに含める必要があります、 `DllMain` DLL_PROCESS_DETACH を使用するルーチンの値をすべてのリソースを解放し、これにディスクにトレースのフラッシュなどのデータのクリーンアップ処理を実行します。  
   
- 一般に、プロファイラーは、予期しないシャット ダウンに対処する必要があります。 たとえば、win32 のプロセスを中止する可能性があります`TerminateProcess`メソッド (Winbase.h で宣言)。 それ以外の場合、CLR は、それらの計画的な破壊メッセージを配信せず特定のマネージ スレッド (バック グラウンド スレッド) を停止します。  
+ 一般に、プロファイラーは、予期しないシャット ダウンに対処する必要があります。 たとえば、win32 のプロセスを中止する可能性があります`TerminateProcess`メソッド (Winbase.h で宣言)。 それ以外の場合、CLR は、それらの計画的な破棄のメッセージを配信することがなく、特定のマネージ スレッド (バック グラウンド スレッド) を停止します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー** : CorProf.idl、CorProf.h  
+ **ヘッダー:** CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [Initialize メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)
+## <a name="see-also"></a>関連項目
+
+- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Initialize メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)

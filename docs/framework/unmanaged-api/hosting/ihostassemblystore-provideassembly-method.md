@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e32d48931177a42dd14092b4052370764a217abe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f5fab4ef0d67ab6b86510bd4b2f814d9456213fb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440364"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763985"
 ---
 # <a name="ihostassemblystoreprovideassembly-method"></a>IHostAssemblyStore::ProvideAssembly メソッド
-によって参照されているアセンブリへの参照を取得、 [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)から返された[ihostassemblymanager::getnonhoststoreassemblies](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getnonhoststoreassemblies-method.md)です。 共通言語ランタイム (CLR) を呼び出す`ProvideAssembly`一覧に表示されていないアセンブリごとにします。  
+によって参照されているアセンブリへの参照を取得、 [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)から返された[ihostassemblymanager::getnonhoststoreassemblies](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getnonhoststoreassemblies-method.md)します。 共通言語ランタイム (CLR) を呼び出す`ProvideAssembly`一覧に含まれていないアセンブリごとにします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ProvideAssembly (  
     [in]  AssemblyBindInfo *pBindInfo,  
     [out] UINT64           *pAssemblyId,  
@@ -39,18 +39,18 @@ HRESULT ProvideAssembly (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pBindInfo`  
- [in]ポインター、 [AssemblyBindInfo](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md)ホストを使用して、任意のバージョン管理ポリシーの存在の有無を含め、特定のバインド特性を判別するインスタンスにバインドするアセンブリとします。  
+ [in]ポインター、 [AssemblyBindInfo](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md)などの任意のバージョン管理ポリシーが存在するか、特定のバインド特性を決定する、ホストが使用するインスタンスにバインドするアセンブリとします。  
   
  `pAssemblyId`  
- [out]この要求されたアセンブリの一意の識別子へのポインター`IStream`です。  
+ [out]これは、要求されたアセンブリの一意の識別子へのポインター`IStream`します。  
   
  `pHostContext`  
- [out]プラットフォームがなくても要求されたアセンブリの証拠の決定に使用されるホストに固有のデータへのポインターでは、呼び出しが発生します。 `pHostContext` 対応する、<xref:System.Reflection.Assembly.HostContext%2A>マネージ プロパティ<xref:System.Reflection.Assembly>クラスです。  
+ [out]プラットフォームがなくても要求されたアセンブリの証拠を判断するために使用するホスト固有のデータへのポインターは、呼び出しを起動します。 `pHostContext` 対応する、<xref:System.Reflection.Assembly.HostContext%2A>マネージ プロパティ<xref:System.Reflection.Assembly>クラス。  
   
  `ppStmAssemblyImage`  
- [out]アドレスへのポインター、`IStream`ポータブル実行可能 (PE) イメージを読み込む、またはアセンブリが見つからなかった場合は null を格納しています。  
+ [out]アドレスへのポインター、 `IStream` 、読み込まれるまたはアセンブリが見つからなかった場合は null にするポータブル実行可能 (PE) イメージを格納しています。  
   
  `ppStmPDB`  
  [out]アドレスへのポインター、`IStream`を格納しているプログラムのデバッグ (PDB) の情報、または null 場合、.pdb ファイルが見つかりませんでした。  
@@ -60,27 +60,28 @@ HRESULT ProvideAssembly (
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|`ProvideAssembly` 正常に返されます。|  
-|HOST_E_CLRNOTAVAILABLE|CLR が、プロセスに読み込まれていませんまたは CLR は、状態をマネージ コードを実行またはできないの呼び出しは正常に処理します。|  
-|HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
-|HOST_E_NOT_OWNER|呼び出し元は、ロックを所有していません。|  
+|HOST_E_CLRNOTAVAILABLE|プロセスに CLR が読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。|  
+|HOST_E_TIMEOUT|呼び出しがタイムアウトになりました。|  
+|HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
 |HOST_E_ABANDONED|イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。|  
-|E_FAIL|不明な致命的なエラーが発生しました。 メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。 メソッドのホストに以降の呼び出しでは、HOST_E_CLRNOTAVAILABLE を返します。|  
-|COR_E_FILENOTFOUND (0X80070002)|要求されたアセンブリが見つかりませんでした。|  
-|E_NOT_SUFFICIENT_BUFFER|によって指定されたバッファー サイズ`pAssemblyId`に返す必要が、ホストの識別子を保持するのに十分ではありません。|  
+|E_FAIL|不明な致命的なエラーが発生しました。 メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。 メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。|  
+|COR_E_FILENOTFOUND (0x80070002)|要求されたアセンブリを配置できませんでした。|  
+|E_NOT_SUFFICIENT_BUFFER|によって指定されたバッファー サイズ`pAssemblyId`ホストを返す必要がある識別子を保持するために十分な大きさではありません。|  
   
-## <a name="remarks"></a>コメント  
- Id 値が返される`pAssemblyId`ホストによって指定します。 識別子は、プロセスの有効期間内で一意である必要があります。 CLR は、この値をストリームの一意の識別子として使用します。 値に対して各値をチェック`pAssemblyId`を他の呼び出しによって返される`ProvideAssembly`です。 場合は、ホストは、同じを返します`pAssemblyId`別の値`IStream`CLR では、そのストリームの内容が既にマップされているかどうかを確認します。 場合は、ランタイムは新しい 1 つのマッピングではなく、イメージの既存のコピーを読み込みます。  
+## <a name="remarks"></a>Remarks  
+ Id 値が返される`pAssemblyId`ホストによって指定されます。 識別子は、プロセスの有効期間内で一意である必要があります。 CLR は、この値をストリームの一意の識別子として使用します。 値に対して各値をチェック`pAssemblyId`するその他の呼び出しによって返される`ProvideAssembly`します。 場合は、ホストは、同じを返します`pAssemblyId`別の値`IStream`CLR は、そのストリームの内容が既にマップされているかどうかを確認します。 そうである場合、ランタイムは、新しいものをマップする代わりに、イメージの既存のコピーを読み込みます。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICLRAssemblyReferenceList インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  
- [IHostAssemblyManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)  
- [IHostAssemblyStore インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [ICLRAssemblyReferenceList インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
+- [IHostAssemblyManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)
+- [IHostAssemblyStore インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)

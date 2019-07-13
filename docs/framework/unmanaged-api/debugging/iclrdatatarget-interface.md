@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0a5abe8877c8414443fadc00e223df240721132
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6ed3cb62b56e80a7fe4ea54b43ac9f4a28b8d102
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698110"
 ---
 # <a name="iclrdatatarget-interface"></a>ICLRDataTarget インターフェイス
 共通言語ランタイム (CLR) のターゲット項目と対話するためのメソッドを提供します。  
@@ -33,27 +33,28 @@ ms.locfileid: "33410443"
 |[GetCurrentThreadID メソッド](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getcurrentthreadid-method.md)|現在のスレッドのオペレーティング システムの識別子を取得します。|  
 |[GetImageBase メソッド](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getimagebase-method.md)|指定したイメージのメモリのベース アドレスを取得します。|  
 |[GetMachineType メソッド](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getmachinetype-method.md)|ターゲット プロセスを使用している命令セットの種類の識別子を取得します。|  
-|[GetPointerSize メソッド](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getpointersize-method.md)|(バイト単位)、現在のターゲットへのポインターのサイズを取得します。|  
-|[GetThreadContext メソッド](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getthreadcontext-method.md)|指定した識別子のスレッドのコンテキストへのポインターを取得します。|  
-|[GetTLSValue メソッド](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-gettlsvalue-method.md)|指定したスレッドの指定したインデックスにあるスレッド ローカル ストレージ (TLS) の値を取得します。|  
-|[ReadVirtual メソッド](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-readvirtual-method.md)|指定されたバッファーに指定された仮想メモリ アドレスからデータを読み取ります。|  
+|[GetPointerSize メソッド](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getpointersize-method.md)|現在のターゲットへのポインターのバイト単位のサイズを取得します。|  
+|[GetThreadContext メソッド](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getthreadcontext-method.md)|指定した識別子、スレッドのコンテキストへのポインターを取得します。|  
+|[GetTLSValue メソッド](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-gettlsvalue-method.md)|スレッド ローカル ストレージ (TLS) で指定されたスレッドの指定したインデックス位置の値を取得します。|  
+|[ReadVirtual メソッド](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-readvirtual-method.md)|指定されたバッファーに指定された仮想メモリ アドレスからのデータを読み取ります。|  
 |[Request メソッド](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-request-method.md)|実装によって定義されているように、操作を要求する共通言語ランタイム (CLR) データ アクセス サービスによって呼び出されます。|  
-|[SetThreadContext メソッド](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-setthreadcontext-method.md)|ターゲット プロセスで指定されたスレッドの現在のコンテキストを設定します。|  
-|[SetTLSValue メソッド](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-settlsvalue-method.md)|ターゲット プロセス内の指定されたスレッドのスレッド ローカル ストレージ (TLS) の値を設定します。|  
-|[WriteVirtual メソッド](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-writevirtual-method.md)|指定された仮想メモリ アドレスに指定されたバッファーからデータを書き込みます。|  
+|[SetThreadContext メソッド](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-setthreadcontext-method.md)|ターゲット プロセスでは、指定したスレッドの現在のコンテキストを設定します。|  
+|[SetTLSValue メソッド](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-settlsvalue-method.md)|ターゲット プロセス内の指定したスレッドのスレッド ローカル ストレージ (TLS) の値を設定します。|  
+|[WriteVirtual メソッド](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-writevirtual-method.md)|指定された仮想メモリ アドレスには、指定したバッファーからデータを書き込みます。|  
   
-## <a name="remarks"></a>コメント  
- API クライアント (つまりデバッガー) は、特定のターゲット項目に応じてこのインターフェイスを実装する必要があります。 たとえば、ライブ プロセスの実装は、メモリ ダンプの実装とは異なります。  
+## <a name="remarks"></a>Remarks  
+ API クライアント (つまりデバッガー) は、特定のターゲット項目に適したには、このインターフェイスを実装する必要があります。 たとえば、ライブ プロセスの実装は、メモリ ダンプの実装とは異なります。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** ClrData.idl、ClrData.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICLRDataTarget2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)  
- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>関連項目
+
+- [ICLRDataTarget2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)
+- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

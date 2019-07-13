@@ -5,12 +5,12 @@ helpviewer_keywords:
 - operators [Visual Basic], logical
 - logical operators [Visual Basic], Visual Basic
 ms.assetid: 55de4889-7679-4859-8063-bee15abca53f
-ms.openlocfilehash: 3b3a5befb0edcb9bbabf601a16da6398dd2d9a2a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b501d21efd02a0b96d98bc32af7968a61aae1f29
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33600819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774791"
 ---
 # <a name="logicalbitwise-operators-visual-basic"></a>論理/ビット演算子 (Visual Basic)
 Visual Basic で定義されている論理/ビット演算子を次に示します。  
@@ -31,6 +31,7 @@ Visual Basic で定義されている論理/ビット演算子を次に示しま
   
  [IsTrue 演算子](../../../visual-basic/language-reference/operators/istrue-operator.md)  
   
-## <a name="see-also"></a>関連項目  
- [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Visual Basic における論理/ビット処理演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+## <a name="see-also"></a>関連項目
+
+- [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Visual Basic での論理とビット処理演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

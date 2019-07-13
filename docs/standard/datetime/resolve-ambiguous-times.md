@@ -1,5 +1,5 @@
 ---
-title: '方法: あいまいな時刻を解決するには'
+title: '方法: あいまいな時刻を解決する'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 2cf5fb25-492c-4875-9245-98cac8348e97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb09b1f087e0a0f726d32d85e06cfb2a9ec741a8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 1c98f47613479c40804dce254261c560d829d91c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863135"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586371"
 ---
-# <a name="how-to-resolve-ambiguous-times"></a>方法: あいまいな時刻を解決するには
+# <a name="how-to-resolve-ambiguous-times"></a>方法: あいまいな時刻を解決する
 
 あいまいな時刻とは、複数の世界協定時刻 (UTC) にマップされる時刻です。 これは、あるタイム ゾーンの夏時間から標準時間に移行する際など、時計の時刻を前に戻すときに発生します。 あいまいな時刻を処理する場合は、次のいずれかの操作を行います。
 
@@ -53,11 +53,9 @@ ms.locfileid: "43863135"
 
 この例で必要な要素は次のとおりです。
 
-* System.Core.dll への参照をプロジェクトに追加します。
-
 * <xref:System>と共に名前空間をインポートする、`using`ステートメント (c# コードで必要)。
 
 ## <a name="see-also"></a>関連項目
 
-* [日付、時刻、およびタイム ゾーン](../../../docs/standard/datetime/index.md)
-* [方法: ユーザーがあいまいな時刻を解決できるようにする](../../../docs/standard/datetime/let-users-resolve-ambiguous-times.md)
+- [日付、時刻、およびタイム ゾーン](../../../docs/standard/datetime/index.md)
+- [方法: ユーザーがあいまいな時刻を解決できるように](../../../docs/standard/datetime/let-users-resolve-ambiguous-times.md)

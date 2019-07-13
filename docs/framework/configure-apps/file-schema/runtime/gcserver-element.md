@@ -1,5 +1,5 @@
 ---
-title: '&lt;gcServer&gt;要素'
+title: <gcServer> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/gcServer
@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80421a66a3ace4970324fb295e167b7d4875063f
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 5df7ab070cc0a40f4e2f3d0545c5bc40ccb07f4d
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610685"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378036"
 ---
-# <a name="ltgcservergt-element"></a>&lt;gcServer&gt;要素
+# <a name="gcserver-element"></a>\<gcServer > 要素
 共通言語ランタイムがサーバーのガベージ コレクションを実行するかどうかを指定します。  
   
  \<configuration>  
-\<ランタイム >  
+\<runtime>  
 \<gcServer>  
   
 ## <a name="syntax"></a>構文  
@@ -65,7 +65,7 @@ ms.locfileid: "53610685"
  この要素は、アプリケーション構成ファイルでのみ使用できます。要素がマシン構成ファイルにある場合には無視されます。  
   
 > [!NOTE]
->  .NET Framework 4 以前のバージョンでは、サーバー ガベージ コレクションを有効にすると同時実行ガベージ コレクションが使用できません。 [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] 以降では、サーバー ガベージ コレクションは同時実行されるようになりました。 非同時実行サーバー ガベージ コレクションを使用する設定、`<gcServer>`要素`true`と[ \<gcConcurrent > 要素](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)に`false`します。  
+>  .NET Framework 4 以前のバージョンでは、サーバー ガベージ コレクションを有効にすると同時実行ガベージ コレクションが使用できません。 以降、.NET Framework 4.5 では、サーバーのガベージ コレクションは、同時実行します。 非同時実行サーバー ガベージ コレクションを使用する設定、`<gcServer>`要素`true`と[ \<gcConcurrent > 要素](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)に`false`します。  
   
 ## <a name="example"></a>例  
  サーバー ガベージ コレクションを有効にする方法を次の例に示します。  
@@ -78,8 +78,9 @@ ms.locfileid: "53610685"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>  
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [方法: 同時実行ガベージ コレクションを無効にします。](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [同時実行ガベージ コレクションを無効にするには](gcconcurrent-element.md#to-disable-background-garbage-collection)

@@ -8,25 +8,26 @@ helpviewer_keywords:
 - event handling, troubleshooting
 - event handlers, troubleshooting
 ms.assetid: e1c8759f-5370-4308-8476-8c48b73509bf
-ms.openlocfilehash: f6355cf7fc2e43651c1112d048220a8179968c76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f2ddef64ca02ca7c96c6c906f5ee79e3cf99dece
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646330"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64604060"
 ---
 # <a name="troubleshooting-inherited-event-handlers-in-visual-basic"></a>Visual Basic での継承されたイベント ハンドラーのトラブルシューティング
-このトピックでは、継承されたコンポーネントのイベント ハンドラーで発生する一般的な問題を示します。  
+このトピックでは、継承されたコンポーネントのイベント ハンドラーで発生する一般的な問題を一覧表示します。  
   
 ## <a name="procedures"></a>手順  
   
-#### <a name="code-in-event-handler-executes-twice-for-every-call"></a>呼び出しごとに 2 回実行されるコードのイベント ハンドラー  
+#### <a name="code-in-event-handler-executes-twice-for-every-call"></a>イベント ハンドラーのコードは呼び出しごとに 2 回実行します  
   
--   継承されたイベント ハンドラーを含めないでください、[処理](../../../../visual-basic/language-reference/statements/handles-clause.md)句。 基本クラスのメソッドは既にイベントに関連付けが発生します。 削除、`Handles`継承されたメソッドから句。  
+- 継承されたイベント ハンドラーが含めることはできません、[処理](../../../../visual-basic/language-reference/statements/handles-clause.md)句。 基本クラスのメソッドは既に、イベントに関連付けられたが発生します。 削除、`Handles`句継承されたメソッドから。  
   
-     [!code-vb[VbVbalrEvents#32](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/troubleshooting-inherited-event-handlers_1.vb)]  
+     [!code-vb[VbVbalrEvents#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#32)]  
   
--   継承されたメソッドがない場合、`Handles`キーワード、コードに余分なが含まれていないことを確認してください。 [AddHandler ステートメント](../../../../visual-basic/language-reference/statements/addhandler-statement.md)または同じイベントを処理する追加のメソッドです。  
+- 継承されたメソッドがあるない場合、`Handles`キーワード、コードに追加が含まれていないことを確認します[AddHandler ステートメント](../../../../visual-basic/language-reference/statements/addhandler-statement.md)または他のメソッドを同じイベントを処理します。  
   
-## <a name="see-also"></a>関連項目  
- [イベント](../../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a>関連項目
+
+- [イベント](../../../../visual-basic/programming-guide/language-features/events/index.md)

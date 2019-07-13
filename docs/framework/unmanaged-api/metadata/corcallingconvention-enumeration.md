@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 468ad1acf55c4d1b4fc2b53730f16ee8630cf19b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 576fb8632818a6b8ffc3e2c0acc50eaafd074de3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444016"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766965"
 ---
 # <a name="corcallingconvention-enumeration"></a>CorCallingConvention 列挙型
-マネージ コードで作成される呼び出し規則のタイプを記述する値が格納されます。  
+マネージド コードで作成される呼び出し規則のタイプを記述する値が格納されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum CorCallingConvention  
 {  
     IMAGE_CEE_CS_CALLCONV_DEFAULT       = 0x0,  
@@ -55,25 +55,26 @@ typedef enum CorCallingConvention
 |メンバー|説明|  
 |------------|-----------------|  
 |`IMAGE_CEE_CS_CALLCONV_DEFAULT`|既定の呼び出し規約を示します。|  
-|`IMAGE_CEE_CS_CALLCONV_VARARG`|メソッドが可変個のパラメーターを取ることを示します。|  
-|`IMAGE_CEE_CS_CALLCONV_FIELD`|フィールドへの呼び出しであることを示します。|  
-|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|ローカル メソッド呼び出しであることを示します。|  
-|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|プロパティへの呼び出しであることを示します。|  
+|`IMAGE_CEE_CS_CALLCONV_VARARG`|メソッドが変数の数のパラメーターを受け取ることを示します。|  
+|`IMAGE_CEE_CS_CALLCONV_FIELD`|フィールドへの呼び出しがあることを示します。|  
+|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|ローカル メソッド呼び出しがあることを示します。|  
+|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|プロパティへの呼び出しがあることを示します。|  
 |`IMAGE_CEE_CS_CALLCONV_UNMGD`|呼び出しが管理対象であることを示します。|  
 |`IMAGE_CEE_CS_CALLCONV_GENERICINST`|ジェネリック メソッドのインスタンス化を示します。|  
 |`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|可変個のパラメーターを受け取るメソッドへの 64 ビット PInvoke 呼び出しを示します。|  
 |`IMAGE_CEE_CS_CALLCONV_MAX`|無効な 4 ビット値をについて説明します。|  
-|`IMAGE_CEE_CS_CALLCONV_MASK`|下位 4 ビットで呼び出し規則が記述されていることを示します。|  
-|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|最上位ビットが記述されていることを示します、`this`パラメーター。|  
-|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|示します、`this`パラメーターが、シグネチャでは明示的に記述します。|  
-|`IMAGE_CEE_CS_CALLCONV_GENERIC`|明示的な数の型引数にジェネリック メソッドのシグネチャを示します。 これには、通常のパラメーター数よりも前です。|  
+|`IMAGE_CEE_CS_CALLCONV_MASK`|下位 4 ビットで、呼び出し規則が記述されていることを示します。|  
+|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|最上位ビットを記述していることを示します、`this`パラメーター。|  
+|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|示します、`this`パラメーターは、署名には明示的に記述します。|  
+|`IMAGE_CEE_CS_CALLCONV_GENERIC`|型引数の明示的な数のジェネリック メソッドのシグネチャを示します。 これには、通常のパラメーター カウントよりも前します。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorHdr.h  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>関連項目
+
+- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

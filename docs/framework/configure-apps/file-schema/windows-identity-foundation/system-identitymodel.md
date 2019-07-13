@@ -1,16 +1,16 @@
 ---
-title: '&lt;system.identityModel&gt;'
+title: <system.identityModel>
 ms.date: 03/30/2017
 ms.assetid: 210ce7e9-d07b-400c-800f-5f525dcf95e8
 author: BrucePerlerMS
-ms.openlocfilehash: 1b3121a6e7e036ec268cf83ffbf545c0e669a9b9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2f0040fb7084b9d53adbd1a114f1cfc62d58e5a1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793758"
 ---
-# <a name="ltsystemidentitymodelgt"></a>&lt;system.identityModel&gt;
+# <a name="systemidentitymodel"></a>\<system.identityModel>
 アプリケーションの Windows Identity Foundation (WIF) オプションを有効にするための構成を提供します。  
   
  \<system.identityModel>  
@@ -32,7 +32,7 @@ ms.locfileid: "50199397"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|サービス レベルの id の設定を指定します。|  
+|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|サービス レベルの id の設定を指定します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -75,5 +75,6 @@ ms.locfileid: "50199397"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.IdentityModel.Configuration.SystemIdentityModelSection>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.IdentityModel.Configuration.SystemIdentityModelSection>

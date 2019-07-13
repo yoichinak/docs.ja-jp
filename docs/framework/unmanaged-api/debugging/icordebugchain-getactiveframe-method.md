@@ -17,38 +17,38 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a104d4d3cc74a6c1cb343818c9b0b3e8978b97df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c79f3b3b976b83eb99f8aa26d38a1fe316de471a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402800"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744999"
 ---
 # <a name="icordebugchaingetactiveframe-method"></a>ICorDebugChain::GetActiveFrame メソッド
-アクティブなを取得 (つまり、最新) のフレーム チェーンをします。  
+アクティブなを取得します (つまり、最新) チェーン上のフレーム。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetActiveFrame (  
     [out] ICorDebugFrame   **ppFrame  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ppFrame`  
- [out]アクティブなを表す ICorDebugFrame オブジェクトのアドレスへのポインター (つまり、最新) のフレーム チェーンをします。  
+ [out]アクティブなを表す ICorDebugFrame オブジェクトのアドレスへのポインター (つまり、最新) チェーン上のフレーム。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  マネージ スタック フレームが使用できない場合`ppFrame`設定を null にします。  
   
- アクティブなフレームが使用できない場合、呼び出しが成功し、`ppFrame`は null になります。 アクティブなフレームはチェーン CHAIN_ENTER_UNMANAGED、により開始されるのと CHAIN_CLASS_INIT により開始されるいくつかのチェーンを利用できません。 CorDebugChainReason 列挙型を参照してください。  
+ アクティブなフレームを使用できない場合、呼び出しが成功し、`ppFrame`は null になります。 アクティブなフレーム チェーン CHAIN_ENTER_UNMANAGED、により開始されると CHAIN_CLASS_INIT により開始されたいくつかのチェーンで利用できるされません。 CorDebugChainReason 列挙型を参照してください。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

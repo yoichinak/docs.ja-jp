@@ -1,15 +1,15 @@
 ---
-title: WCF の &lt;customTrackingQueries&gt;
+title: <customTrackingQueries> WCF の
 ms.date: 03/30/2017
 ms.assetid: 14cfe47e-9935-4120-84f1-8f38de8ca4c1
-ms.openlocfilehash: f75c6bf50d30da5a136137c858a5cd96ce0783ff
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 8b317cc289853902592e145e34b6e7bf5f84763b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704169"
 ---
-# <a name="ltcustomtrackingqueriesgt-of-wcf"></a>WCF の &lt;customTrackingQueries&gt;
+# <a name="customtrackingqueries-of-wcf"></a>\<customTrackingQueries > の WCF
 
 コード アクティビティで定義するイベントを追跡するために使用する、クエリのコレクションを表します。 追跡参加要素がカスタム追跡レコードを定期受信するには、このクエリが必要です。  
   
@@ -20,7 +20,7 @@ ms.locfileid: "54150085"
 \<プロファイル >  
 \<trackingProfile>  
 \<ワークフロー >  
-\<customTrackingQueries >  
+\<customTrackingQueries>  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,7 +51,7 @@ ms.locfileid: "54150085"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<customTrackingQuery >](customtrackingquery-of-wcf.md)|コード アクティビティで定義するイベントを追跡するために使用するクエリ。|  
+|[\<customTrackingQuery>](customtrackingquery-of-wcf.md)|コード アクティビティで定義するイベントを追跡するために使用するクエリ。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -61,7 +61,7 @@ ms.locfileid: "54150085"
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.ServiceModel.Activities.Tracking.Configuration.CustomTrackingQueryElementCollection?displayProperty=nameWithType>       
-- <xref:System.Activities.Tracking.CustomTrackingQuery?displayProperty=nameWithType>       
-- [ワークフローの追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.CustomTrackingQueryElementCollection?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.CustomTrackingQuery?displayProperty=nameWithType>
+- [ワークフローの追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
 - [追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

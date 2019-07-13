@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: 6584889f527e1459090bea322720f0cd8d9694f6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a0252493ffd251b8d760927345c71e2f5ef55aaa
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149238"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401517"
 ---
 # <a name="for-c-reference"></a>for (C# リファレンス)
 
@@ -47,11 +47,11 @@ for (initializer; condition; iterator)
 
   - メソッドの呼び出し
 
-  - 前置または後置の[インクリメント](../operators/increment-operator.md)式 (`++i`、`i++` など)
+  - 前置または後置の[インクリメント](../operators/arithmetic-operators.md#increment-operator-)式 (`++i`、`i++` など)
 
-  - 前置または後置の[デクリメント](../operators/decrement-operator.md)式 (`--i`、`i--` など)
+  - 前置または後置の[デクリメント](../operators/arithmetic-operators.md#decrement-operator---)式 (`--i`、`i--` など)
 
-  - [new](new-operator.md) キーワードを使用したオブジェクト作成
+  - [new](../operators/new-operator.md) 演算子を使用したオブジェクト作成
 
   - [await](await.md) 式
 
@@ -79,11 +79,11 @@ i < 5
 
 - メソッドの呼び出し
 
-- 前置または後置の[インクリメント](../operators/increment-operator.md)式 (`++i`、`i++` など)
+- 前置または後置の[インクリメント](../operators/arithmetic-operators.md#increment-operator-)式 (`++i`、`i++` など)
 
-- 前置または後置の[デクリメント](../operators/decrement-operator.md)式 (`--i`、`i--` など)
+- 前置または後置の[デクリメント](../operators/arithmetic-operators.md#decrement-operator---)式 (`--i`、`i--` など)
 
-- [new](new-operator.md) キーワードを使用したオブジェクト作成
+- [new](../operators/new-operator.md) 演算子を使用したオブジェクト作成
 
 - [await](await.md) 式
 
@@ -112,5 +112,4 @@ i++
 - [C# リファレンス](../index.md)
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
-- [繰り返しステートメント](iteration-statements.md)
 - [foreach、in](foreach-in.md)

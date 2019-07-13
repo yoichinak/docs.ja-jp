@@ -2,12 +2,12 @@
 title: 数学関数
 ms.date: 03/30/2017
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
-ms.openlocfilehash: 63f83532c399f77e268913da3198327345b9c2ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b6f248382f069df59a55e85e9a764b0df700fb26
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780316"
 ---
 # <a name="mathematical-functions"></a>数学関数
 
@@ -233,7 +233,7 @@ ms.locfileid: "53143676"
 
 `SqlServer.PI()`
 
-## <a name="powernumericexpression-powerexpression"></a>電源 (numeric_expression、power_expression)
+## <a name="powernumericexpression-powerexpression"></a>POWER(numeric_expression, power_expression)
 
 指定された式の指定されたべき乗を計算します。
 
@@ -382,10 +382,10 @@ ms.locfileid: "53143676"
   
 ## <a name="see-also"></a>関連項目
 
-SqlClient でサポートされる数学関数の詳細については、SqlClient プロバイダー マニフェストで指定した SQL Server のバージョンのドキュメントを参照してください。  
-  
-**SQL Server 2005:**[数学関数 (TRANSACT-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))  
-**SQL Server 2008:**[数学関数 (TRANSACT-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))  
-**SQL Server 2012 以降の場合:**[数学関数 (TRANSACT-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)   
+SqlClient でサポートされる数学関数の詳細については、SqlClient プロバイダー マニフェストで指定した SQL Server のバージョンのドキュメントを参照してください。
 
- [Entity Framework 用 SqlClient 関数](sqlclient-for-ef-functions.md)
+- **SQL Server 2005:**[数学関数 (TRANSACT-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))
+- **SQL Server 2008:**[数学関数 (TRANSACT-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))
+- **SQL Server 2012 以降の場合:**[数学関数 (TRANSACT-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)
+
+- [Entity Framework 用 SqlClient 関数](sqlclient-for-ef-functions.md)

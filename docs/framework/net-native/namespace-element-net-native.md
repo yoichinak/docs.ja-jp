@@ -1,17 +1,17 @@
 ---
-title: '&lt;Namespace&gt; 要素 (.NET ネイティブ)'
+title: <Namespace> 要素 (.NET ネイティブ)
 ms.date: 03/30/2017
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 108c27747e0b823f2315a914f8db3c8711fbb698
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c304606a27552e604bf40953f49a30a794026281
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61866913"
 ---
-# <a name="ltnamespacegt-element-net-native"></a>&lt;Namespace&gt; 要素 (.NET ネイティブ)
+# <a name="namespace-element-net-native"></a>\<Namespace > 要素 (.NET ネイティブ)
 指定した名前空間内のすべての型にランタイム リフレクション ポリシーを適用します。  
   
 ## <a name="syntax"></a>構文  
@@ -19,7 +19,7 @@ ms.locfileid: "33391691"
 ```xml  
 <Namespace Name="namespace_name"   
            Activate="policy_type"   
-           Browse="policy_type" />  
+           Browse="policy_type"  
            Dynamic="policy_setting"  
            Serialize="policy_setting"  
            DataContractSerializer="policy_setting"  
@@ -51,13 +51,13 @@ ms.locfileid: "33391691"
   
 ## <a name="name-attribute"></a>Name 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |*namespace_name*|名前空間の名前。 \<Namespace> 要素が [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) 要素、[\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 要素、または [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 要素の子である場合、*namespace_name* は名前空間の完全修飾名である必要があります。 \<Namespace> 要素が別の \<Namespace> 要素の子である場合、*namespace_name* は名前空間の相対名である必要があります。|  
   
 ## <a name="all-other-attributes"></a>その他すべての属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |*policy_setting*|名前空間内のすべての型について、このポリシーの種類に適用する設定です。 指定できる値は、`All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal`、および `Required All` です。 詳細については、「[ランタイム ディレクティブのポリシー設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)」を参照してください。|  
   
@@ -78,12 +78,13 @@ ms.locfileid: "33391691"
 |[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|実行時にリフレクションに使用可能なメタデータを持つ型と型のメンバーを含むアセンブリを定義します。 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 要素は、0 または 1 個の [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 要素を持つことができます。|  
 |`<Namespace>`|親名前空間内のすべての型にリフレクション ポリシーを適用します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `Activate` 属性、`Browse` 属性、`Dynamic`、および `Serialize` 属性はすべて省略可能です。 いずれも存在しない場合、`<Namespace>` 要素は子要素のコンテナーとしてのみ機能します。 存在する場合は、`<Namespace>` 要素は、指定された名前空間内のすべての型にランタイム リフレクション ポリシーを適用します。  
   
  [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 要素の子である場合、`<Namespace>` 要素は [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 要素により定義されたランタイム リフレクション ポリシーをオーバーライドします。  
   
-## <a name="see-also"></a>関連項目  
- [ランタイム ディレクティブ ポリシーの設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)
+## <a name="see-also"></a>関連項目
+
+- [ランタイム ディレクティブ ポリシーの設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)

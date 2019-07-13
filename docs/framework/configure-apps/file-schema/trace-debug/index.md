@@ -11,14 +11,12 @@ helpviewer_keywords:
 - configuration sections [.NET Framework]
 - elements [.NET Framework], trace and debug settings
 ms.assetid: 277ca5f6-e1c4-41b6-a47f-3a67ce5b94ac
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 9927ad0e853577abb19750d54ba9e852a4e7ec51
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 79054ba450dcab1a18562aaadd71b9171896c1e9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701399"
 ---
 # <a name="trace-and-debug-settings-schema"></a>トレースおよびデバッグ設定のスキーマ
 トレースおよびデバッグの設定により、メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。  
@@ -49,8 +47,9 @@ ms.locfileid: "47397947"
 |[\<system.diagnostics>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/system-diagnostics-element.md)|メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。|  
 |[\<trace>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|トレース メッセージを収集、格納、およびルーティングするリスナーを保持します。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Diagnostics.Trace>  
- <xref:System.Diagnostics.TraceSource>  
- <xref:System.Diagnostics.Debug>  
- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Diagnostics.Trace>
+- <xref:System.Diagnostics.TraceSource>
+- <xref:System.Diagnostics.Debug>
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)

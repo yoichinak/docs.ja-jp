@@ -2,12 +2,12 @@
 title: 順番を無視したメッセージの処理
 ms.date: 03/30/2017
 ms.assetid: 33fc62a5-5d59-461c-a37a-0e1b51ac763d
-ms.openlocfilehash: 3beca8d73788d177d07868d7169d8aea3ecd8e80
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 4e1864b25a4dbe8192cd5c692c75645bebbb92d2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701243"
 ---
 # <a name="out-of-order-message-processing"></a>順番を無視したメッセージの処理
 ワークフロー サービスは、特定の順序で送信されるメッセージに依存する場合があります。 ワークフロー サービスには 1 つ以上の <xref:System.ServiceModel.Activities.Receive> アクティビティが含まれ、それぞれの <xref:System.ServiceModel.Activities.Receive> アクティビティは特定のメッセージに対応しています。 特定のトランスポート配信保証がないと、クライアントから送信されるメッセージに遅延が生じ、それによって、ワークフロー サービスが予期しない順序でメッセージが配信されることがあります。 特定の順序でメッセージが送信されることを必要としないワークフローは、通常、Parallel アクティビティを使用して実装されます。 アプリケーション プロトコルがより複雑な場合は、ワークフローがすぐに複雑になります。  Windows Communication Foundation (WCF) 機能の処理順序のメッセージの入れ子になった並列アクティビティの複雑さがすべてないこのようなワークフローを作成することができます。 順序のメッセージの処理のみをサポートするチャネルでサポートされて<xref:System.ServiceModel.Channels.ReceiveContext>WCF MSMQ バインディングなど。  
@@ -34,7 +34,8 @@ WorkflowService service = new WorkflowService
 </Sequence>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Channels.ReceiveContext>  
- [ワークフロー サービス](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [キューと信頼できるセッション](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Channels.ReceiveContext>
+- [ワークフロー サービス](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+- [キューと信頼できるセッション](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)

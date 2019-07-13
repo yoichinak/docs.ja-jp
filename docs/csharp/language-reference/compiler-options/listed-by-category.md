@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: 891e5eac249f4bd22b6eadde7509de2d07cd1576
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bceb6283e202dfa699115edd6e0a1a040095783d
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527188"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58028704"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>カテゴリ別の C# コンパイラ オプションの一覧
 
@@ -54,7 +54,8 @@ ms.locfileid: "43527188"
 |[-reference](reference-compiler-option.md)|アセンブリが格納されているファイルからメタデータをインポートします。|
 |-analyzer|このアセンブリからアナライザーを実行します (短縮形: /a)。|
 |-additionalfile|コードの生成に直接影響はないが、エラーまたは警告を生成するためにアナライザーが使用できる追加のファイルを指定します。|
-
+|-embed|すべてのソース ファイルを PDB に埋め込みます。|
+|-embed:\<file list>|特定のファイルを PDB に埋め込みます。|
 ## <a name="debuggingerror-checking"></a>デバッグ/エラー チェック
 
 |オプション|目的|
@@ -95,7 +96,7 @@ ms.locfileid: "43527188"
 |[-codepage](codepage-compiler-option.md)|コンパイルですべてのソース コード ファイルに使用するコード ページを指定します。|
 |[-help](help-compiler-option.md)|stdout にコンパイラ オプションの一覧を表示します。|
 |[-highentropyva](highentropyva-compiler-option.md)|実行可能ファイルが ASLR (Address Space Layout Randomization) をサポートするように指定します。|
-|[-langversion](langversion-compiler-option.md)|言語のバージョンを指定します: Default、ISO-1、ISO-2、3、4、5、6、7、7.1、7.2、7.3、Latest |
+|[-langversion](langversion-compiler-option.md)|言語バージョンを指定します: 既定、ISO-1、ISO-2、3、4、5、6、7、7.1、7.2、7.3、または最新。 |
 |[-main](main-compiler-option.md)|**Main** メソッドの場所を指定します。|
 |[-noconfig](noconfig-compiler-option.md)|csc.rsp でコンパイルにしないようコンパイラに指示します。|
 |[-nologo](nologo-compiler-option.md)|コンパイラの著作権情報が表示されないようにします。|
@@ -104,7 +105,7 @@ ms.locfileid: "43527188"
 |[/unsafe](unsafe-compiler-option.md)|[unsafe](../../../csharp/language-reference/keywords/unsafe.md) キーワードを使用するコードのコンパイルを有効にします。|
 |[-utf8output](utf8output-compiler-option.md)|UTF-8 エンコードを使用してコンパイラ出力を表示します。|
 |-parallel[+&#124;-]|同時実行ビルドを使用する (+) かどうかを指定します。|
-|-checksumalgorithm:\<alg>|PDB に格納されているソース ファイルのチェックサムを計算するためのアルゴリズムを指定します。  サポートされる値は、SHA1 (既定値) または SHA256 です。|
+|-checksumalgorithm:\<alg>|PDB に格納されているソース ファイルのチェックサムを計算するためのアルゴリズムを指定します。  サポートされる値は SHA1 (既定値) または SHA256 です。<br>SHA1 との競合問題のため、Microsoft では SHA256 を推奨しています。|
 
 ## <a name="obsolete-options"></a>廃止されたオプション
 
@@ -112,8 +113,8 @@ ms.locfileid: "43527188"
 |---|---|
 |-incremental|インクリメンタル コンパイルを有効にします。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](index.md)  
-- [アルファベット順の C# コンパイラ オプションの一覧](listed-alphabetically.md)  
+- [C# コンパイラ オプション](index.md)
+- [アルファベット順の C# コンパイラ オプションの一覧](listed-alphabetically.md)
 - [方法: Visual Studio のコマンドラインのための環境変数を設定する](how-to-set-environment-variables-for-the-visual-studio-command-line.md)

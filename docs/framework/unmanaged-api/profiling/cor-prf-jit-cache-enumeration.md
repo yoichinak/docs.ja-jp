@@ -16,22 +16,22 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b8c972bcace3ba3d855a3b5eebc16e6b76994eb7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a62199563c620156885c941204207b185834beb4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450705"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752149"
 ---
 # <a name="corprfjitcache-enumeration"></a>COR_PRF_JIT_CACHE 列挙型
 キャッシュされている関数検索の結果を示します。  
   
 > [!NOTE]
->  `COR_PRF_CACHED_FUNCTION_FOUND` ゼロの値があり、その`COR_PRF_JIT_CACHE`ブール サロゲートとして使用することはできません。  
+>  `COR_PRF_CACHED_FUNCTION_FOUND` そのため、0 の値を持つ`COR_PRF_JIT_CACHE`ブール サロゲートとして使用できません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum {  
     COR_PRF_CACHED_FUNCTION_FOUND,  
     COR_PRF_CACHED_FUNCTION_NOT_FOUND  
@@ -43,16 +43,17 @@ typedef enum {
 |メンバー|説明|  
 |------------|-----------------|  
 |`COR_PRF_FUNCTION_FOUND`|検索では、関数が見つかりました。|  
-|`COR_PRF_FUNCTION_NOT_FOUND`|検索は、関数を検出しませんでした。|  
+|`COR_PRF_FUNCTION_NOT_FOUND`|検索、関数が見つかりませんでした。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー** : CorProf.idl、CorProf.h  
+ **ヘッダー:** CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [列挙型のプロファイリング](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>関連項目
+
+- [列挙型のプロファイリング](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

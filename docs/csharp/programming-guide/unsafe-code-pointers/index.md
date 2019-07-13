@@ -11,46 +11,47 @@ helpviewer_keywords:
 - C# language, pointers
 - pointers [C#], about pointers
 ms.assetid: b0fcca10-a92d-4f2a-835b-b0ccae6739ee
-ms.openlocfilehash: 7d7371fb29f12a766ef6b78544f82d021dd8dceb
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 99f0b925a37bff8b6ab1ff46e9ce2f0ea0a38aed
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237910"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959482"
 ---
 # <a name="unsafe-code-and-pointers-c-programming-guide"></a>アンセーフ コードとポインター (C# プログラミング ガイド)
-タイプ セーフとセキュリティを維持するために、既定では C# はポインター演算をサポートしません。 ただし、[unsafe](../../../csharp/language-reference/keywords/unsafe.md) キーワードを使用すれば、ポインターを使用できる unsafe コンテキストを定義できます。 ポインターの詳細については、「[ポインター型 (C# プログラミング ガイド)](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)」を参照してください。  
+
+タイプ セーフとセキュリティを維持するために、既定では C# はポインター演算をサポートしません。 ただし、[unsafe](../../language-reference/keywords/unsafe.md) キーワードを使用すれば、ポインターを使用できる unsafe コンテキストを定義できます。 ポインターについて詳しくは、[ポインター型](pointer-types.md)に関するページをご覧ください。  
   
 > [!NOTE]
->  共通言語ランタイム (CLR) では、アンセーフ コードは検査できないコードと呼ばれます。 C# のアンセーフ コードは、必ずしも危険ではありません。ただ、CLR で安全性を検査できないコードであるというだけです。 そのため CLR は、完全に信頼できるアセンブリ内にある場合にのみ、アンセーフ コードを実行します。 アンセーフ コードを使用する場合は、セキュリティ上のリスクやポインター エラーが発生しないように注意してください。  
+> 共通言語ランタイム (CLR) では、アンセーフ コードは検査できないコードと呼ばれます。 C# のアンセーフ コードは、必ずしも危険ではありません。ただ、CLR で安全性を検査できないコードであるというだけです。 そのため CLR は、完全に信頼できるアセンブリ内にある場合にのみ、アンセーフ コードを実行します。 アンセーフ コードを使用する場合は、セキュリティ上のリスクやポインター エラーが発生しないように注意してください。  
   
-## <a name="unsafe-code-overview"></a>アンセーフ コードの概要  
- アンセーフ コードには次の特徴があります。  
-  
--   メソッド、型、およびコード ブロックをアンセーフとして定義できます。  
-  
--   アンセーフ コードでアプリケーションのパフォーマンスが向上することがあります。これは、配列のバインド チェックが削除されるためです。  
-  
--   アンセーフ コードは、ポインターを必要とするネイティブ関数を呼び出すときに必要です。  
-  
--   アンセーフ コードを使用すると、セキュリティと安定性の面でリスクが生じます。  
-  
--   C# でアンセーフ コードをコンパイルするには、[/unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md) を指定してアプリケーションをコンパイルする必要があります。  
-  
-## <a name="related-sections"></a>関連項目  
- 詳細については次を参照してください:  
-  
--   [ポインター型](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
-  
--   [固定サイズ バッファー](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md)  
-  
--   [方法: ポインターを使用してバイトの配列をコピーする](../../../csharp/programming-guide/unsafe-code-pointers/how-to-use-pointers-to-copy-an-array-of-bytes.md)  
-  
--   [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
-  
-## <a name="c-language-specification"></a>C# 言語仕様  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>参照
+## <a name="unsafe-code-overview"></a>アンセーフ コードの概要
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+アンセーフ コードには次の特徴があります。
+
+- メソッド、型、およびコード ブロックをアンセーフとして定義できます。
+
+- アンセーフ コードでアプリケーションのパフォーマンスが向上することがあります。これは、配列のバインド チェックが削除されるためです。
+
+- アンセーフ コードは、ポインターを必要とするネイティブ関数を呼び出すときに必要です。
+
+- アンセーフ コードを使用すると、セキュリティと安定性の面でリスクが生じます。
+
+- unsafe ブロックを含むコードは、[-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md) コンパイラ オプションを使ってコンパイルする必要があります。
+  
+## <a name="related-sections"></a>関連項目
+
+詳細については次を参照してください:
+
+- [ポインター型](pointer-types.md)
+
+- [固定サイズ バッファー](fixed-size-buffers.md)
+
+## <a name="c-language-specification"></a>C# 言語仕様
+
+詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)の[アンセーフ コード](~/_csharplang/spec/unsafe-code.md)に関するトピックを参照してください。
+  
+## <a name="see-also"></a>関連項目
+
+- [C# プログラミング ガイド](../index.md)
+- [unsafe](../../language-reference/keywords/unsafe.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;トレース&gt;要素'
+title: <trace> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace
@@ -10,20 +10,18 @@ helpviewer_keywords:
 - trace element
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 55a7eb431432b67b3252853d14bf93be304ee883
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 5faf352dce2a459a999b3cf54209f6bd9793bde0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673798"
 ---
-# <a name="lttracegt-element"></a>&lt;トレース&gt;要素
+# <a name="trace-element"></a>\<トレース > 要素
 トレース メッセージを収集、格納、およびルーティングするリスナーを保持します。  
   
  \<configuration>  
-\<system.diagnostics >  
+\<system.diagnostics>  
 \<トレース >  
   
 ## <a name="syntax"></a>構文  
@@ -87,9 +85,10 @@ ms.locfileid: "48845438"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Diagnostics.TraceListener>  
- <xref:System.Diagnostics.DefaultTraceListener>  
- <xref:System.Diagnostics.TextWriterTraceListener>  
- <xref:System.Diagnostics.EventLogTraceListener>  
- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Diagnostics.TraceListener>
+- <xref:System.Diagnostics.DefaultTraceListener>
+- <xref:System.Diagnostics.TextWriterTraceListener>
+- <xref:System.Diagnostics.EventLogTraceListener>
+- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

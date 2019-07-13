@@ -7,57 +7,57 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 4302ee961fcd396c7e6a6ddb0d9bbe1bdb714cfc
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 55d78ed9bf839d66b3487f91d71d7a07a2123c5f
+ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453464"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67569555"
 ---
 # <a name="working-with-certificates"></a>証明書の使用
 Windows Communication Foundation (WCF) のセキュリティをプログラミングする場合、一般に X.509 デジタル証明書を使用して、クライアントとサーバーの認証、暗号化、およびメッセージのデジタル署名を行います。 ここでは、X.509 デジタル証明書の機能および WCF でのそれらの機能の使用方法について簡単に説明します。また、これらの概念の詳細を説明するトピックや、WCF と証明書を使用した一般的なタスクの実行方法が記載されたトピックへのリンクも示します。  
   
- 簡単に言うと、デジタル証明書は、"*公開キー基盤 (PKI: Public Key Infrastructure)*" の一部です。PKI は、デジタル証明書、証明機関、およびその他の登録機関から成るシステムです。登録機関では、公開キー暗号化を使用して、電子取引に関与する各当事者の有効性の検証と認証を行います。 証明機関は証明書を発行します。各証明書には、"*サブジェクト*" (証明書の発行先のエンティティ)、有効期間 (証明書が有効な場合)、発行者 (証明書を発行したエンティティ)、公開キーなどのデータが含まれた一連のフィールドがあります。 WCF では、これらの各プロパティは <xref:System.IdentityModel.Claims.Claim> (クレーム) として処理されます。各クレームは、さらに ID と権限の 2 種類に分けられます。 X.509 証明書の詳細については、「[X.509 Public Key Certificates](https://go.microsoft.com/fwlink/?LinkId=209952)」(X.509 公開キー証明書) を参照してください。 WCF におけるクレームと承認の詳細については、「[ID モデルを使用したクレームと承認の管理](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)」を参照してください。 PKI の実装の詳細については、「[Windows Server 2008 R2 - Certificate Services](https://go.microsoft.com/fwlink/?LinkId=209949)」(Windows Server 2008 R2 - 証明書サービス) を参照してください。  
+ 簡単に言うと、デジタル証明書は、"*公開キー基盤 (PKI: Public Key Infrastructure)* " の一部です。PKI は、デジタル証明書、証明機関、およびその他の登録機関から成るシステムです。登録機関では、公開キー暗号化を使用して、電子取引に関与する各当事者の有効性の検証と認証を行います。 証明機関は証明書を発行します。各証明書には、"*サブジェクト*" (証明書の発行先のエンティティ)、有効期間 (証明書が有効な場合)、発行者 (証明書を発行したエンティティ)、公開キーなどのデータが含まれた一連のフィールドがあります。 WCF では、これらの各プロパティは <xref:System.IdentityModel.Claims.Claim> (クレーム) として処理されます。各クレームは、さらに ID と権限の 2 種類に分けられます。 X.509 証明書の詳細については、「[X.509 Public Key Certificates](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates)」(X.509 公開キー証明書) を参照してください。 WCF におけるクレームと承認の詳細については、「[ID モデルを使用したクレームと承認の管理](managing-claims-and-authorization-with-the-identity-model.md)」を参照してください。 PKI 実装の詳細については、次を参照してください。 [Windows Server 2012 R2 Active Directory 証明書サービスとエンタープライズ PKI](https://blogs.technet.microsoft.com/yungchou/2013/10/21/enterprise-pki-with-windows-server-2012-r2-active-directory-certificate-services-part-1-of-2/)します。  
   
  証明書の第一の機能は、他者に対して証明書の所有者の ID を認証することです。 証明書は所有者の "*公開キー*" を含んでおり、所有者が秘密キーを保持しています。 公開キーを使用して、証明書の所有者に送信されるメッセージを暗号化できます。 秘密キーにアクセスできるのは所有者だけであるため、所有者だけが暗号化されたメッセージを復号化できます。  
   
  証明書は、証明機関によって発行される必要があります。多くの場合、証明機関はサードパーティの証明書発行者です。 Windows ドメインでは、そのドメインのコンピューターに対して証明書を発行する際に使用できる証明機関が含まれています。  
   
 ## <a name="viewing-certificates"></a>証明書の表示  
- 証明書を使用するには、多くの場合、証明書を表示し、プロパティを確認する必要があります。 Microsoft 管理コンソール (MMC: Microsoft Management Console) スナップイン ツールを使用すると、これを簡単に行うことができます。 詳細については、「[方法: MMC スナップインを使用して証明書を参照する](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)」を参照してください。  
+ 証明書を使用するには、多くの場合、証明書を表示し、プロパティを確認する必要があります。 Microsoft 管理コンソール (MMC: Microsoft Management Console) スナップイン ツールを使用すると、これを簡単に行うことができます。 詳細については、「[方法 :MMC スナップインで証明書を表示](how-to-view-certificates-with-the-mmc-snap-in.md)します。  
   
 ## <a name="certificate-stores"></a>証明書ストア  
  証明書はストアに格納されています。 2 つの主要なストアがあり、さらにサブストアに分かれています。 コンピューターの管理者は、MMC スナップイン ツールを使用して、両方の主要なストアを表示できます。 管理者以外のユーザーは、現在のユーザー ストアだけを表示できます。  
   
--   **ローカル コンピューター ストア**:  このストアには、コンピューター プロセス ([!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] など) がアクセスする証明書が格納されます。 クライアントに対してサーバーを認証するための証明書は、ここに格納します。  
+- **ローカル コンピューター ストア**: これには、ASP.NET などのコンピューターのプロセスによってアクセスする証明書が含まれています。 クライアントに対してサーバーを認証するための証明書は、ここに格納します。  
   
--   **現在のユーザー ストア**:  コンピューターの現在のユーザーの証明書は、通常、対話型アプリケーションによってここに配置されます。 クライアント アプリケーションを作成する場合、サービスに対してユーザーを認証するための証明書は、通常、ここに配置します。  
+- **現在のユーザー ストア**: コンピューターの現在のユーザーの証明書は、通常、対話型アプリケーションによってここに配置されます。 クライアント アプリケーションを作成する場合、サービスに対してユーザーを認証するための証明書は、通常、ここに配置します。  
   
  上記の 2 つのストアは、さらにサブストアに分かれています。 サブストアの中で、WCF でプログラミングするときに最も重要なものは次のとおりです。  
   
--   **信頼されたルート証明機関**:  このストア内の証明書を使用して、証明書チェーンを作成できます。証明書チェーンをさかのぼることで、このストア内の任意の証明機関証明書に到達できます。  
+- **信頼されたルート証明機関**: このストア内の証明書を使用して、証明書チェーンを作成できます。証明書チェーンをさかのぼることで、このストア内の任意の証明機関証明書に到達できます。  
   
     > [!IMPORTANT]
     >  証明書が信頼されたサードパーティ証明機関から発行されたものではない場合でも、ローカル コンピューターは、このストアに配置された証明書を暗黙で信頼します。 したがって、発行者を完全に信頼し、かつ信頼することの結果を理解していない限り、このストアに証明書を配置しないでください。  
   
--   **個人**:  このストアは、コンピューターのユーザーに関連付けられた証明書に使用されます。 通常、このストアは、信頼されたルート証明機関ストアにある証明機関証明書のいずれかによって発行された証明書に使用されます。 また、自己発行され、アプリケーションから信頼された証明書が格納されている場合もあります。  
+- **個人**: このストアは、コンピューターのユーザーに関連付けられた証明書に使用されます。 通常、このストアは、信頼されたルート証明機関ストアにある証明機関証明書のいずれかによって発行された証明書に使用されます。 また、自己発行され、アプリケーションから信頼された証明書が格納されている場合もあります。  
   
  証明書ストアの詳細については、「[Certificate Stores](/windows/desktop/secauthn/certificate-stores)」(証明書ストア) を参照してください。  
   
 ### <a name="selecting-a-store"></a>ストアの選択  
  証明書を格納する場所の選択は、サービスまたはクライアントの実行方法や実行する状況によって異なります。 次の一般規則が適用されます。  
   
--   WCF サービスが Windows サービスでホストされる場合は、**ローカル コンピューター** ストアを使用します。 ローカル コンピューター ストアに証明書をインストールするには、管理特権が必要です。  
+- WCF サービスが Windows サービスでホストされる場合は、**ローカル コンピューター** ストアを使用します。 ローカル コンピューター ストアに証明書をインストールするには、管理特権が必要です。  
   
--   サービスまたはクライアントがユーザー アカウントで実行されるアプリケーションである場合は、**現在のユーザー** ストアを使用します。  
+- サービスまたはクライアントがユーザー アカウントで実行されるアプリケーションである場合は、**現在のユーザー** ストアを使用します。  
   
 ### <a name="accessing-stores"></a>ストアへのアクセス  
- ストアは、コンピューター上の一種のフォルダーであり、アクセス制御リスト (ACL: Access Control List) によって保護されています。 インターネット インフォメーション サービス (IIS: Internet Information Services) によってホストされたサービスを作成すると、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] アカウントで [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] プロセスが実行されます。 このアカウントは、サービスが使用する証明書を格納するストアにアクセス可能である必要があります。 各主要ストアは既定のアクセス リストで保護されていますが、これらのリストは変更できます。 ストアにアクセスする別のロールを作成した場合、そのロールにアクセス許可を付与する必要があります。 WinHttpCertConfig.exe ツールを使用してアクセス リストを変更する方法については、「[方法: 開発中に使用する一時的な証明書を作成する](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)」を参照してください。 IIS でクライアント証明書を使用する方法の詳細については、「[ASP.NET Web アプリケーションで認証用のクライアント証明書を使用して Web サービスを呼び出す方法 ](https://go.microsoft.com/fwlink/?LinkId=88914)」を参照してください。  
+ ストアは、コンピューター上の一種のフォルダーであり、アクセス制御リスト (ACL: Access Control List) によって保護されています。 インターネット インフォメーション サービス (IIS) によってホストされるサービスを作成するときに、ASP.NET プロセスは、ASP.NET アカウントで実行されます。 このアカウントは、サービスが使用する証明書を格納するストアにアクセス可能である必要があります。 各主要ストアは既定のアクセス リストで保護されていますが、これらのリストは変更できます。 ストアにアクセスする別のロールを作成した場合、そのロールにアクセス許可を付与する必要があります。 WinHttpCertConfig.exe ツールを使用してアクセス リストを変更する方法については、次を参照してください。[方法。開発中に使用するための一時的な証明書を作成](how-to-create-temporary-certificates-for-use-during-development.md)です。 IIS でクライアント証明書を使用する方法の詳細については、「[ASP.NET Web アプリケーションで認証用のクライアント証明書を使用して Web サービスを呼び出す方法 ](https://support.microsoft.com/en-us/help/901183/how-to-call-a-web-service-by-using-a-client-certificate-for-authentica)」を参照してください。  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>信頼チェーンと証明機関  
  証明書は、各証明書がその発行元の CA にリンクされる階層構造で作成されます。 このリンクは CA の証明書へのリンクになります。 CA の証明書の元の CA の証明書を発行した CA へのリンク。 ルート CA の証明書に到達するまでこのプロセスが繰り返されます。 ルート CA の証明書は本質的に信頼されています。  
   
- デジタル証明書を使用する場合、この階層 ("*信頼チェーン*" とも呼ばれます) に依存してエンティティを認証します。 証明書のチェーンを表示するには、MMC スナップインを使用して、証明書をダブルクリックし、**[証明書パス]** タブをクリックします。証明機関の証明書チェーンをインポートする方法の詳細については、「[方法 : 署名の検証に使用する証明機関の証明書チェーンを指定する](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md)」を参照してください。  
+ デジタル証明書を使用する場合、この階層 ("*信頼チェーン*" とも呼ばれます) に依存してエンティティを認証します。 証明書のチェーンを表示するには、MMC スナップインを使用して、証明書をダブルクリックし、 **[証明書パス]** タブをクリックします。証明機関の証明書チェーンをインポートする方法の詳細については、次を参照してください。[方法。署名を確認するために使用する証明機関証明書チェーンを指定](specify-the-certificate-authority-chain-verify-signatures-wcf.md)します。  
   
 > [!NOTE]
 >  証明書を "信頼されたルート証明機関" 証明書ストアに配置することにより、その証明書の発行者を信頼されたルート証明機関として指定できます。  
@@ -74,35 +74,35 @@ Windows Communication Foundation (WCF) のセキュリティをプログラミ�
   
  構成を使用して、このプロパティを設定することもできます。 検証モードを指定するには、次の要素を使用します。  
   
--   [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
+- [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
   
--   [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
+- [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
   
--   [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
+- [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
   
 ## <a name="custom-authentication"></a>カスタム認証  
  `CertificateValidationMode` プロパティを使用すると、証明書の認証方法をカスタマイズすることもできます。 既定では、レベルは `ChainTrust` に設定されています。 <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> 値を使用するには、`CustomCertificateValidatorType` 属性を証明書の検証に使用するアセンブリと型に設定することも必要です。 カスタム検証を作成するには、抽象 <xref:System.IdentityModel.Selectors.X509CertificateValidator> クラスから継承する必要があります。  
   
  カスタム認証システムを作成する場合、オーバーライドする最も重要なメソッドは <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> メソッドです。 カスタム認証の例については、「[X.509 証明書検証](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md)」のサンプルを参照してください。 詳細については、「[カスタム資格情報と資格情報の検証](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)」を参照してください。  
   
-## <a name="using-the-powershell-new-selfsignedcertificate-cmdlet-to-build-a-certificate-chain"></a>Powershell New-selfsignedcertificate コマンドレットを使用して、証明書チェーンを構築するには  
- Powershell New-selfsignedcertificate コマンドレットは、X.509 証明書と秘密キーと公開キーのペアを作成します。 秘密キーをディスクに保存し、新しい証明書の発行と署名に使用できるため、チェーンになった証明書の階層をシミュレートできます。 コマンドレットが支援手段としてのみ使用で向けサービスの開発や実際の展開用の証明書の作成に使用することはありません。 WCF サービスを開発する場合は、New-selfsignedcertificate コマンドレットとの信頼関係のチェーンの構築に次の手順を使用します。  
+## <a name="using-the-powershell-new-selfsignedcertificate-cmdlet-to-build-a-certificate-chain"></a>PowerShell New-selfsignedcertificate コマンドレットを使用して、証明書チェーンを構築するには  
+ PowerShell New-selfsignedcertificate コマンドレットは、X.509 証明書と秘密キーと公開キーのペアを作成します。 秘密キーをディスクに保存し、新しい証明書の発行と署名に使用できるため、チェーンになった証明書の階層をシミュレートできます。 コマンドレットが支援手段としてのみ使用で向けサービスの開発や実際の展開用の証明書の作成に使用することはありません。 WCF サービスを開発する場合は、New-selfsignedcertificate コマンドレットとの信頼関係のチェーンの構築に次の手順を使用します。  
   
 #### <a name="to-build-a-chain-of-trust-with-the-new-selfsignedcertificate-cmdlet"></a>New-selfsignedcertificate コマンドレットとの信頼関係のチェーンを構築するには  
   
-1.  New-selfsignedcertificate コマンドレットを使用して一時的なルート機関 (自己署名) 証明を作成します。 秘密キーをディスクに保存します。  
+1. New-selfsignedcertificate コマンドレットを使用して一時的なルート機関 (自己署名) 証明を作成します。 秘密キーをディスクに保存します。  
   
-2.  この新しい証明書を使用して、公開キーを含む別の証明書を発行します。  
+2. この新しい証明書を使用して、公開キーを含む別の証明書を発行します。  
   
-3.  信頼されたルート証明機関ストアに、ルート証明機関証明書をインポートします。  
+3. 信頼されたルート証明機関ストアに、ルート証明機関証明書をインポートします。  
   
-4.  詳しい手順については、「[方法: 開発中に使用する一時的な証明書を作成する](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)」を参照してください。  
+4. 手順については、次を参照してください。[方法。開発中に使用するための一時的な証明書を作成](how-to-create-temporary-certificates-for-use-during-development.md)です。  
   
 ## <a name="which-certificate-to-use"></a>使用する証明書の選択  
  証明書に関する一般的な質問は、どの証明書を使用するかということとその理由に関するものです。 その答えは、クライアントとサービスのどちらをプログラミングするかによって異なります。 以下に一般的なガイドラインを示します (これらの質問に対する包括的な答えではありません)。  
   
 ### <a name="service-certificates"></a>サービス証明書  
- サービス証明書の第一のタスクは、クライアントに対してサーバーを認証することです。 クライアントがサーバーを認証するときの最初のチェックの 1 つとして、"**サブジェクト**" フィールドの値とサービスへのアクセスに使用する URI (Uniform Resource Identifier) が比較されます。この場合、双方の DNS が一致する必要があります。 たとえば、サービスの URI は、 `http://www.contoso.com/endpoint/` 、**サブジェクト**フィールドでは、値を含める必要がありますも`www.contoso.com`します。  
+ サービス証明書の第一の目的は、クライアントに対してサーバーを認証することです。 クライアントがサーバーを認証するときの最初のチェックの 1 つとして、"**サブジェクト**" フィールドの値とサービスへのアクセスに使用する URI (Uniform Resource Identifier) が比較されます。この場合、双方の DNS が一致する必要があります。 たとえば、サービスの URI は、 `http://www.contoso.com/endpoint/` 、**サブジェクト**フィールドでは、値を含める必要がありますも`www.contoso.com`します。  
   
  このフィールドには複数の値を含めることができますが、各値の先頭にはその値を示す初期化コードが付加されます。 ほとんどの場合、初期化が"CN"の共通名は、たとえば、`CN = www.contoso.com`します。 "**サブジェクト**" フィールドを空白にすることもできます。この場合、"**サブジェクト代替名**" フィールドに値として **DNS 名**を含めることができます。  
   
@@ -170,9 +170,10 @@ Windows Communication Foundation (WCF) のセキュリティをプログラミ�
   
  WCF の最初のリリースでは、ドメイン ポリシーを参照せずにマッピングが実行されます。 そのため、マッピングが有効になっており、X.509 証明書がドメイン ポリシーを満たしていない場合は、最初のリリースの下で実行しているときには動作していた古いアプリケーションが動作しなくなる可能性があります。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Channels>  
- <xref:System.ServiceModel.Security>  
- <xref:System.ServiceModel>  
- <xref:System.Security.Cryptography.X509Certificates.X509FindType>  
- [サービスおよびクライアントのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Channels>
+- <xref:System.ServiceModel.Security>
+- <xref:System.ServiceModel>
+- <xref:System.Security.Cryptography.X509Certificates.X509FindType>
+- [サービスおよびクライアントのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

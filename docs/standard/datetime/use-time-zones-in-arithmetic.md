@@ -1,5 +1,5 @@
 ---
-title: '方法: 日付と時刻の演算でタイム ゾーンを使用'
+title: '方法: 日付と時刻の演算でタイム ゾーンを使用する'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 83dd898d-1338-415d-8cd6-445377ab7871
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9c9f7b2623b4ed766fb44b46c3f54caa962c07eb
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 3d504aa9ad7d6e4084192a2434ac408e8fa7a041
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041523"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588542"
 ---
-# <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>方法: 日付と時刻の演算でタイム ゾーンを使用
+# <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>方法: 日付と時刻の演算でタイム ゾーンを使用する
 
 通常とを実行して日付時刻の算術演算を使用して<xref:System.DateTime>または<xref:System.DateTimeOffset>結果の値は、タイム ゾーン調整規則が反映されません。 日付と時刻の値のタイム ゾーンが明確に識別できる場合でもこれが true (場合など、<xref:System.DateTime.Kind%2A>プロパティに設定されて<xref:System.DateTimeKind.Local>)。 このトピックでは、特定のタイム ゾーンに属している日付と時刻の値に対する算術演算を実行する方法を示します。 算術演算の結果には、タイム ゾーンの調整規則が反映されます。
 
@@ -60,11 +60,9 @@ ms.locfileid: "44041523"
 
 この例で必要な要素は次のとおりです。
 
-* System.Core.dll への参照をプロジェクトに追加します。
-
 * <xref:System>と共に名前空間をインポートする、`using`ステートメント (c# コードで必要)。
 
 ## <a name="see-also"></a>関連項目
 
-* [日付、時刻、およびタイム ゾーン](../../../docs/standard/datetime/index.md)
-* [日付と時刻を使用した算術演算の実行](../../../docs/standard/datetime/performing-arithmetic-operations.md)
+- [日付、時刻、およびタイム ゾーン](../../../docs/standard/datetime/index.md)
+- [日付と時刻を使用した算術演算の実行](../../../docs/standard/datetime/performing-arithmetic-operations.md)

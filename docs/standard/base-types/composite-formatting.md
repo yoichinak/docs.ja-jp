@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60ccf478e974e24b437aa75bc9452033bd19a00f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8d0574c7e0910a658f1dc80d8394f55b472c31a3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126862"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634567"
 ---
 # <a name="composite-formatting"></a>複合書式指定
 
@@ -67,7 +67,7 @@ ms.locfileid: "53126862"
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
  [!code-vb[Formatting.Composite#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#7)]  
   
- 同じパラメーター指定子を指定することによって、複数の書式指定項目でオブジェクトのリスト内の同じ要素を参照できます。 たとえば、次の例に示すように、"0x{0:X} {0:E} {0:N}" など、複合書式文字列を指定することで、16 進数、指数、および数字形式で同じ数値の書式を指定できます。  
+ 同じパラメーター指定子を指定することによって、複数の書式指定項目でオブジェクトのリスト内の同じ要素を参照できます。 たとえば、次のような複合書式文字列を指定することで、16 進数、指数、および数字形式で同じ数値の書式を指定できます:次の例に示すような "0x{0:X} {0:E} {0:N}"。  
   
  [!code-csharp[Formatting.Composite#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#10)]
  [!code-vb[Formatting.Composite#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#10)]  
@@ -100,15 +100,15 @@ ms.locfileid: "53126862"
   
  エスケープされた中かっこの解釈によっては、予測しない結果になる場合があります。 たとえば、書式項目 "{{{0:D}}}" があるとします。これは、始まりの中かっこ、10 進数で表記された数値、閉じ中かっこを表示することを意図しています。 しかし、この書式指定項目は、実際には、次のように解釈されます。  
   
-1.  最初の 2 つの左中かっこ ("{{") がエスケープされ、左中かっこ 1 つが作成されます。  
+1. 最初の 2 つの左中かっこ ("{{") がエスケープされ、左中かっこ 1 つが作成されます。  
   
-2.  次の 3 文字 ("{0:") は、書式指定項目の開始として解釈されます。  
+2. 次の 3 文字 ("{0:") は、書式指定項目の開始として解釈されます。  
   
-3.  次の文字 ("D") は、Decimal 標準数値書式指定子として解釈できますが、エスケープされた次の 2 つの右中かっこ ("}}") からは単一の中かっこが作成されます。 結果として作成される文字列 ("D}") は、標準数値書式指定子ではないため、リテラル文字列 "D}" の表示を意味するカスタム書式指定文字列として解釈されます。  
+3. 次の文字 ("D") は、Decimal 標準数値書式指定子として解釈できますが、エスケープされた次の 2 つの右中かっこ ("}}") からは単一の中かっこが作成されます。 結果として作成される文字列 ("D}") は、標準数値書式指定子ではないため、リテラル文字列 "D}" の表示を意味するカスタム書式指定文字列として解釈されます。  
   
-4.  最後の中かっこ ("}") は、書式指定項目の終わりとして解釈されます。  
+4. 最後の中かっこ ("}") は、書式指定項目の終わりとして解釈されます。  
   
-5.  最終的には、"{D}" というリテラル文字列が表示されます。 書式設定対象だった数値は、表示されません。  
+5. 最終的には、"{D}" というリテラル文字列が表示されます。 書式設定対象だった数値は、表示されません。  
   
  エスケープした中かっこと書式指定項目とが誤って解釈されないコードを記述するためには、中かっこと書式指定項目を別々に書式設定するという方法があります。 つまり、最初の書式設定操作でリテラルの開く中かっこを表示し、次の書式設定操作で書式指定項目の結果を表示し、最後の操作でリテラルの閉じる中かっこを表示します。 このアプローチの例を次に示します。  
   
@@ -116,23 +116,23 @@ ms.locfileid: "53126862"
  [!code-vb[Formatting.Composite#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Escaping1.vb#2)]  
   
 ### <a name="processing-order"></a>処理の順序  
- 複合書式指定メソッドの呼び出しに、値が `null` でない <xref:System.IFormatProvider> 引数が含まれている場合、ランタイムはその <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> メソッドを呼び出して、<xref:System.ICustomFormatter> 実装を要求します。 このメソッドが <xref:System.ICustomFormatter> 実装を返すことができる場合、実装は複合書式指定メソッドの呼び出しの期間中キャッシュされます。
+ 複合書式指定メソッドの呼び出しに、値が <xref:System.IFormatProvider> でない `null` 引数が含まれている場合、ランタイムはその <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> メソッドを呼び出して、<xref:System.ICustomFormatter> 実装を要求します。 このメソッドが <xref:System.ICustomFormatter> 実装を返すことができる場合、実装は複合書式指定メソッドの呼び出しの期間中キャッシュされます。
   
  書式指定項目に対応するパラメーター リストのそれぞれの値は、次のように文字列に変換されます。  
   
-1.  書式設定する値が `null` の場合は、空の文字列 <xref:System.String.Empty?displayProperty=nameWithType> が返されます。  
+1. 書式設定する値が `null` の場合は、空の文字列 <xref:System.String.Empty?displayProperty=nameWithType> が返されます。  
   
-2.  <xref:System.ICustomFormatter> 実装が利用できる場合、ランタイムはその <xref:System.ICustomFormatter.Format%2A> メソッドを呼び出します。 メソッドには書式指定項目の *formatString* 値 (ある場合) または `null` (ない場合) と、<xref:System.IFormatProvider> 実装が渡されます。 <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> メソッドの呼び出しから `null` が返ると、実行は次のステップに進みます。それ以外の場合は、<xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> の呼び出しの結果が返されます。
+2. <xref:System.ICustomFormatter> 実装が利用できる場合、ランタイムはその <xref:System.ICustomFormatter.Format%2A> メソッドを呼び出します。 メソッドには書式指定項目の *formatString* 値 (ある場合) または `null` (ない場合) と、<xref:System.IFormatProvider> 実装が渡されます。 <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> メソッドの呼び出しから `null` が返ると、実行は次のステップに進みます。それ以外の場合は、<xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> の呼び出しの結果が返されます。
   
-3.  値が <xref:System.IFormattable> インターフェイスを実装している場合は、インターフェイスの <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> メソッドが呼び出されます。 メソッドは、*formatString* 値 (書式指定項目内に値がある場合) または `null` (ない場合) を受け取ります。 <xref:System.IFormatProvider> 引数は、次のように判断されます。  
+3. 値が <xref:System.IFormattable> インターフェイスを実装している場合は、インターフェイスの <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> メソッドが呼び出されます。 メソッドは、*formatString* 値 (書式指定項目内に値がある場合) または `null` (ない場合) を受け取ります。 <xref:System.IFormatProvider> 引数は、次のように判断されます。  
   
-    -   数値の場合、null 以外の <xref:System.IFormatProvider> 引数を持つ複合書式指定メソッドが呼び出されると、ランタイムは <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> メソッドから <xref:System.Globalization.NumberFormatInfo> オブジェクトを要求します。 オブジェクトを 1 つも取得できないか、引数の値が `null` であるか、または複合書式指定メソッドに <xref:System.IFormatProvider> パラメーターがない場合は、現在のスレッド カルチャの <xref:System.Globalization.NumberFormatInfo> オブジェクトが使用されます。  
+    - 数値の場合、null 以外の <xref:System.IFormatProvider> 引数を持つ複合書式指定メソッドが呼び出されると、ランタイムは <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> メソッドから <xref:System.Globalization.NumberFormatInfo> オブジェクトを要求します。 オブジェクトを 1 つも取得できないか、引数の値が `null` であるか、または複合書式指定メソッドに <xref:System.IFormatProvider> パラメーターがない場合は、現在のスレッド カルチャの <xref:System.Globalization.NumberFormatInfo> オブジェクトが使用されます。  
   
-    -   日付と時刻の値の場合、null 以外の <xref:System.IFormatProvider> 引数を持つ複合書式指定メソッドが呼び出されると、ランタイムは <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> メソッドから <xref:System.Globalization.DateTimeFormatInfo> オブジェクトを要求します。 オブジェクトを 1 つも取得できないか、引数の値が `null` であるか、または複合書式指定メソッドに <xref:System.IFormatProvider> パラメーターがない場合は、現在のスレッド カルチャの <xref:System.Globalization.DateTimeFormatInfo> オブジェクトが使用されます。  
+    - 日付と時刻の値の場合、null 以外の <xref:System.IFormatProvider> 引数を持つ複合書式指定メソッドが呼び出されると、ランタイムは <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> メソッドから <xref:System.Globalization.DateTimeFormatInfo> オブジェクトを要求します。 オブジェクトを 1 つも取得できないか、引数の値が `null` であるか、または複合書式指定メソッドに <xref:System.IFormatProvider> パラメーターがない場合は、現在のスレッド カルチャの <xref:System.Globalization.DateTimeFormatInfo> オブジェクトが使用されます。  
   
-    -   他の型のオブジェクトの場合、<xref:System.IFormatProvider> 引数を使用して複合書式のメソッドを呼び出すと、その値は <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 実装に直接渡されます。 それ以外の場合は、`null` が <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 実装に渡されます。  
+    - 他の型のオブジェクトの場合、<xref:System.IFormatProvider> 引数を使用して複合書式のメソッドを呼び出すと、その値は <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 実装に直接渡されます。 それ以外の場合は、`null` が <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 実装に渡されます。  
   
-4.  `ToString` をオーバーライドするか、基底クラスの動作を継承する、型のパラメーターなしの <xref:System.Object.ToString?displayProperty=nameWithType> メソッドが呼び出されます。 この場合、書式指定項目の *formatString* コンポーネントで指定されている書式指定文字列は、存在していても無視されます。  
+4. `ToString` をオーバーライドするか、基底クラスの動作を継承する、型のパラメーターなしの <xref:System.Object.ToString?displayProperty=nameWithType> メソッドが呼び出されます。 この場合、書式指定項目の *formatString* コンポーネントで指定されている書式指定文字列は、存在していても無視されます。  
   
  前の手順が実行された後、アラインメントが適用されます。  
   
@@ -161,15 +161,15 @@ ms.locfileid: "53126862"
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Console.WriteLine%2A>  
-- <xref:System.String.Format%2A?displayProperty=nameWithType>  
-- [文字列補間 (C#)](../../csharp/language-reference/tokens/interpolated.md)  
-- [文字列補間 (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
-- [型の書式設定](../../../docs/standard/base-types/formatting-types.md)  
-- [標準の数値書式指定文字列](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
-- [カスタム数値書式指定文字列](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
-- [標準の日時書式指定文字列](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
-- [カスタム日時書式指定文字列](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
-- [標準の時間間隔書式指定文字列](../../../docs/standard/base-types/standard-timespan-format-strings.md)  
-- [カスタム時間間隔書式指定文字列](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
+- <xref:System.Console.WriteLine%2A>
+- <xref:System.String.Format%2A?displayProperty=nameWithType>
+- [文字列補間 (C#)](../../csharp/language-reference/tokens/interpolated.md)
+- [文字列補間 (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
+- [型の書式設定](../../../docs/standard/base-types/formatting-types.md)
+- [標準の数値書式指定文字列](../../../docs/standard/base-types/standard-numeric-format-strings.md)
+- [カスタム数値書式指定文字列](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [標準の日時書式指定文字列](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [カスタム日時書式指定文字列](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [標準の時間間隔書式指定文字列](../../../docs/standard/base-types/standard-timespan-format-strings.md)
+- [カスタム時間間隔書式指定文字列](../../../docs/standard/base-types/custom-timespan-format-strings.md)
 - [Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)

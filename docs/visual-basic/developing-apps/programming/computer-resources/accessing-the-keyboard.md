@@ -7,12 +7,12 @@ helpviewer_keywords:
 - keystrokes
 - CapsLock property
 ms.assetid: aa37d54c-5c98-4b44-b98a-c26d2a03c038
-ms.openlocfilehash: 9f37c9ab0eb3b0943d1ae0720690a95e8c491704
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 00cdf18d057ca8a5c59cde02759b5c8c572a8bba
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582652"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58823572"
 ---
 # <a name="accessing-the-keyboard-visual-basic"></a>キーボードへのアクセス (Visual Basic)
 `My.Computer.Keyboard` オブジェクトは、現在どのキーが押されているかなど、キーボードの現在の状態にアクセスするためのプロパティを提供します。また、キーストロークを作業中のウィンドウに送る方法を提供します。  
@@ -30,6 +30,7 @@ ms.locfileid: "33582652"
 |SCROLL LOCK がオンになっているかどうかを判断する|<xref:Microsoft.VisualBasic.Devices.Keyboard.ScrollLock%2A>|  
 |アプリケーションを起動してキーストロークを送る|[方法: アプリケーションを起動してキーストロークを送る (Visual Basic)](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-start-an-application-and-send-it-keystrokes.md)|  
   
-## <a name="see-also"></a>参照  
- <xref:Microsoft.VisualBasic.Devices.Keyboard>  
- <xref:System.Windows.Forms.Keys?displayProperty=nameWithType>
+## <a name="see-also"></a>関連項目
+
+- <xref:Microsoft.VisualBasic.Devices.Keyboard>
+- <xref:System.Windows.Forms.Keys?displayProperty=nameWithType>

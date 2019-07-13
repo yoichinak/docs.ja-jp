@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f9729a3536a6611ed593f16ba3bc09e7af20a4c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c4536a5caa789712227bfd637d65cfc4c22adf80
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238820"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422695"
 ---
 # <a name="throw-c-reference"></a>throw (C# リファレンス)
 
@@ -60,7 +60,7 @@ C# 7.0 以降、`throw` は、式およびステートメントとして使用�
 
    [!code-csharp[csrefKeyword#5](~/samples/snippets/csharp/language-reference/keywords/throw/coalescing.cs#1)]  
 
-- 式形式の[ラムダ](../../lambda-expressions.md)またはメソッド。 次の例では、<xref:System.DateTime> 値への変換がサポートされていないため <xref:System.InvalidCastException> をスローする、式形式のメソッドを示しています。
+- 式形式の[ラムダ](../../programming-guide/statements-expressions-operators/lambda-expressions.md)またはメソッド。 次の例では、<xref:System.DateTime> 値への変換がサポートされていないため <xref:System.InvalidCastException> をスローする、式形式のメソッドを示しています。
 
    [!code-csharp[csrefKeyword#6](~/samples/snippets/csharp/language-reference/keywords/throw/exp-bodied.cs#1)]  
 
@@ -70,10 +70,9 @@ C# 7.0 以降、`throw` は、式およびステートメントとして使用�
   
 ## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../index.md)  
-- [C# プログラミングガイド](../../programming-guide/index.md)  
-- [try-catch](try-catch.md)  
-- [C++ の try、catch、および throw ステートメント](try-catch.md)  
-- [C# のキーワード](index.md)  
-- [例外処理ステートメント](exception-handling-statements.md)  
+- [C# リファレンス](../index.md)
+- [C# プログラミングガイド](../../programming-guide/index.md)
+- [try-catch](try-catch.md)
+- [C++ の try、catch、および throw ステートメント](try-catch.md)
+- [C# のキーワード](index.md)
 - [方法: 例外を明示的にスローする](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

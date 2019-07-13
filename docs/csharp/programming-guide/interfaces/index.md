@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 33e3feb874b8ddb13788a2a3a2bb69a199335e54
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 330e4e8b36f03b028786920422cd325b31d814e0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61711201"
 ---
 # <a name="interfaces-c-programming-guide"></a>インターフェイス (C# プログラミング ガイド)
 
@@ -21,13 +21,13 @@ ms.locfileid: "53245442"
   
 [interface](../../language-reference/keywords/interface.md) キーワードを使用してインターフェイスを定義します。 次の例のようにします。  
   
-[!code-csharp[csProgGuideInheritance#47](../classes-and-structs/codesnippet/CSharp/interfaces_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#47](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#47)]  
 
 構造体の名前を、有効な C# の[識別子名](../inside-a-program/identifier-names.md)にする必要があります。 慣例により、インターフェイス名は大文字の `I` で始めます。
 
 <xref:System.IEquatable%601> インターフェイスを実装するすべてのクラスまたは構造体は、インターフェイスで指定されたシグネチャに一致する <xref:System.IEquatable%601.Equals%2A> メソッドの定義を含む必要があります。 したがって、`IEquatable<T>` を実装するクラスが `Equals` メソッドを含むと想定したうえで、これを使用してクラスの 1 つのインスタンスが同じクラスの別のインスタンスと等しいかどうかを判定できます。  
   
-`IEquatable<T>` の定義は `Equals` の実装を提供しません。 インターフェイスは、シグネチャのみを定義します。 つまり、C# のインターフェイスは、すべてのメソッドが抽象的である抽象クラスに似ています。 クラスまたは構造体は複数のインターフェイスを実装できます。ただし、クラスが継承できるのは、抽象的かどうかに関係なく、1 つのクラスのみです。 したがって、インターフェイスを使用することにより、クラス内の複数のソースの動作を含めることができます。  
+`IEquatable<T>` の定義は `Equals` の実装を提供しません。 インターフェイスは、シグネチャのみを定義します。 つまり、C# のインターフェイスは、すべてのメソッドが抽象的である抽象クラスに似ています。 クラスまたは構造体は複数のインターフェイスを実装できます。ただし、クラスが継承できるのは、抽象的かどうかに関係なく、1 つのクラスのみです。
   
 抽象クラスの詳細については、「[抽象クラスとシール クラス、およびクラス メンバー](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md)」を参照してください。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "53245442"
   
 <xref:System.IEquatable%601> インターフェイスを実装する例を次に示します。 実装するクラスの `Car` は、<xref:System.IEquatable%601.Equals%2A> メソッドの実装を提供する必要があります。  
   
-[!code-csharp[csProgGuideInheritance#48](../classes-and-structs/codesnippet/CSharp/interfaces_2.cs)]  
+ [!code-csharp[csProgGuideInheritance#48](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#48)]  
   
 クラスのプロパティとインデクサーでは、インターフェイスに定義されているプロパティまたはインデクサーの追加のアクセサーを定義できます。 たとえば、インターフェイスで [get](../../language-reference/keywords/get.md) アクセサーを持つプロパティを宣言するとします。 このインターフェイスを実装するクラスでは、`get` アクセサーと [set](../../language-reference/keywords/set.md) アクセサーの両方を持つ同じプロパティを宣言できます。 ただし、プロパティまたはインデクサーで明示的な実装を使用する場合は、これらのアクセサーが一致する必要があります。 明示的な実装の詳細については、「[明示的なインターフェイス実装](explicit-interface-implementation.md)」および「[インターフェイスのプロパティ](../classes-and-structs/interface-properties.md)」を参照してください。  
 
@@ -51,7 +51,7 @@ ms.locfileid: "53245442"
 
 インターフェイスは、次の特性を持ちます。  
 
-- インターフェイスは、抽象基本クラスに似ています。 インターフェイスを実装するすべてのクラスまたは構造体では、そのすべてのメンバーを実装する必要があります。
+- インターフェイスは、抽象メンバーのみを含む抽象基本クラスに似ています。 インターフェイスを実装するすべてのクラスまたは構造体では、そのすべてのメンバーを実装する必要があります。
 - インターフェイスを直接インスタンス化することはできません。 そのメンバーは、インターフェイスを実装する任意のクラスまたは構造体によって実装されます。
 - インターフェイスには、イベント、インデクサー、メソッド、およびプロパティを含めることができます。
 - インターフェイスには、メソッドの実装は含まれません。
@@ -68,7 +68,7 @@ ms.locfileid: "53245442"
  [方法: 2 つのインターフェイスのメンバーを明示的に実装する](how-to-explicitly-implement-members-of-two-interfaces.md)  
  継承を持つインターフェイスのメンバーを明示的に実装する方法の例を示します。  
   
-##  <a name="BKMK_RelatedSections"></a>関連項目
+## <a name="BKMK_RelatedSections"></a>関連項目
 
 - [インターフェイスのプロパティ](../classes-and-structs/interface-properties.md)  
 - [インターフェイスのインデクサー](../indexers/indexers-in-interfaces.md)  
@@ -86,7 +86,7 @@ ms.locfileid: "53245442"
 
 「[インターフェイス](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652489%28v%3Dorm.10%29)」(『[Learning C# 3.0: Master the fundamentals of C# 3.0 (C# 3.0 の学習: C# 3.0 の基礎を習得)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v%253dorm.10%29)』)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# プログラミング ガイド](../index.md)
 - [継承](../classes-and-structs/inheritance.md)

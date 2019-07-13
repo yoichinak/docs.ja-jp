@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 933694a6a033dbfe817e3848b9008f05b86f51f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 187a5e673457d2d1eebb60cc1795e9885426c6d3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449013"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781953"
 ---
 # <a name="imetadataimportenummethods-method"></a>IMetaDataImport::EnumMethods メソッド
 指定した型のメソッドを表す MethodDef トークンを列挙します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EnumMethods (  
    [in, out] HCORENUM   *phEnum,   
    [in]  mdTypeDef      cl,   
@@ -39,12 +39,12 @@ HRESULT EnumMethods (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [入力、出力].列挙子へのポインター。 このメソッドの最初の呼び出しで NULL があります。  
+ [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しで NULL があります。  
   
  `cl`  
- [in]型を列挙するメソッドを表す TypeDef トークンです。  
+ [in]列挙するメソッドと型を表す TypeDef トークンです。  
   
  `rMethods`  
  [out]MethodDef トークンを格納する配列。  
@@ -53,24 +53,25 @@ HRESULT EnumMethods (
  [in]MethodDef の最大サイズ`rMethods`配列。  
   
  `pcTokens`  
- [out]MethodDef トークンで返される数`rMethods`です。  
+ [out]返される MethodDef トークン数`rMethods`します。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
 |`S_OK`|`EnumMethods` 正常に返されます。|  
-|`S_FALSE`|MethodDef トークンを列挙することはありません。 その場合は、`pcTokens`ゼロです。|  
+|`S_FALSE`|MethodDef トークンを列挙することはありません。 その場合は、`pcTokens`は 0 です。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

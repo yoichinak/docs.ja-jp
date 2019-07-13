@@ -2,12 +2,12 @@
 title: プロパティ
 description: C# のプロパティについて説明します。C# のプロパティには、検証、計算値、遅延評価、プロパティ変更通知の機能があります。
 ms.date: 04/25/2018
-ms.openlocfilehash: d4fa7b6117bec63c41318dd4bcc3850ce55a5907
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: e8b6955da1f36673962339785b0bfb012343acf8
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956239"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878273"
 ---
 # <a name="properties"></a>プロパティ
 
@@ -123,7 +123,7 @@ public class Measurements
 [!code-csharp[Invalidating the cache correctly](../../samples/snippets/csharp/properties/Person.cs#13)]
 
 上の最終版では、必要になった場合にのみ `FullName` プロパティが評価されます。
-以前に計算されたものが有効であれば、それが使用されます。 状態が変化したことで、以前に計算されたバージョンが無効になると、再計算が行われます。 このクラスを使用するにあたって、開発者は実装の詳細を知っている必要はありません。 内部で変化があっても Person オブジェクトの使用には影響しません。 これが、プロパティを使用してオブジェクトのデータ メンバーを公開する重要な利点です。
+以前に計算されたものが有効であれば、それが使用されます。 状態が変化したことで、以前に計算されたバージョンが無効になると、再計算が行われます。 このクラスを使用するにあたって、開発者は実装の詳細を知っている必要はありません。 内部で変化があっても Person オブジェクトの使用には影響しません。 これが、プロパティを使用してオブジェクトのデータ メンバーを公開するする重要な利点です。
 
 ### <a name="attaching-attributes-to-auto-implemented-properties"></a>自動実装プロパティに属性をアタッチする
 
@@ -140,7 +140,7 @@ C# 7.3 以降、自動実装プロパティのコンパイラの生成したバ�
 
 [!code-csharp[invalidating the cache correctly](../../samples/snippets/csharp/properties/Person.cs#15)]
 
-`?.` は "*null 条件演算子*" と呼ばれる演算子です。 演算子の右側を評価する前に、null 参照がないかをチェックします。 チェックの結果、`PropertyChanged` イベントに対するサブスクライバーがない場合は、イベントを発生させるコードは実行されません。 その場合、評価は行われず `NullReferenceException` がスローされます。 詳細については、「[`events`](delegates-events.md)」を参照してください。 上記の例では、新たに `nameof` という演算子を使用して、記号としてのプロパティ名を文字列に変換しています。
+`?.` は "*null 条件演算子*" と呼ばれる演算子です。 演算子の右側を評価する前に、null 参照がないかをチェックします。 チェックの結果、`PropertyChanged` イベントに対するサブスクライバーがない場合は、イベントを発生させるコードは実行されません。 その場合、評価は行われず `NullReferenceException` がスローされます。 詳細については、「[`events`](events-overview.md)」を参照してください。 上記の例では、新たに `nameof` という演算子を使用して、記号としてのプロパティ名を文字列に変換しています。
 `nameof` を使用すると、プロパティ名にタイプミスが含まれるというエラーを減らすことができます。
 
 <xref:System.ComponentModel.INotifyPropertyChanged> の実装も、アクセサーでコードを記述することで目的のシナリオをサポートできるケースの一例です。

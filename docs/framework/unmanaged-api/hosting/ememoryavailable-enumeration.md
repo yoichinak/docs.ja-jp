@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 139cf540617e278eeaae8a2a5acf10dd797d5d10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 76fc5f578e6da731ffd6406344d00cda8b57f493
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429887"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772398"
 ---
 # <a name="ememoryavailable-enumeration"></a>EMemoryAvailable 列挙型
-コンピューター上の物理メモリの空き容量を示す値を含みます。 これらの値論理的にマップする、イベントから返されるメモリの高値と安値の`CreateMemoryResourceNotification`Win32 API の関数。  
+コンピューター上の空き物理メモリの量を示す値を含みます。 返されるメモリの高値と安値のこの値は、論理的にイベントに対応付ける、 `CreateMemoryResourceNotification` Windows api 関数。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum {  
     eMemoryAvailableLow     = 1,  
     eMemoryAvailableNeutral = 2,  
@@ -40,21 +40,22 @@ typedef enum {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`eMemoryAvailableHigh`|十分な物理メモリは、使用できます。|  
+|`eMemoryAvailableHigh`|大量の物理メモリは使用できます。|  
 |`eMemoryAvailableLow`|ほとんどの物理メモリは使用できます。|  
 |`eMemoryAvailableNeutral`|使用可能な物理メモリは、ニュートラルです。|  
   
-## <a name="remarks"></a>コメント  
- 呼び出しを使用して、共通言語ランタイム (CLR) によってホストによってこの値が渡される、 [iclrmemorynotificationcallback::onmemorynotification](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ 呼び出しを使用して、共通言語ランタイム (CLR) にホストによってこの値が渡される、 [iclrmemorynotificationcallback::onmemorynotification](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md)メソッド。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   
  **ライブラリ:** MSCorEE.dll  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ホスティングの列挙型](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>関連項目
+
+- [ホスティングの列挙型](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

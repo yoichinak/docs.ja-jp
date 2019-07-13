@@ -2,12 +2,12 @@
 title: 構成サンプル
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: ae1b98d4afcc4a7bc97a4668ef7d974b27cafed9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 8c96b41877fa56f486bec03a10dcbf47bac9e37a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862080"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651040"
 ---
 # <a name="configuration-sample"></a>構成サンプル
 このサンプルでは、構成ファイルを使用してサービスを探索可能にする方法を示します。  
@@ -27,15 +27,15 @@ ms.locfileid: "43862080"
 ## <a name="service-configuration"></a>サービス構成  
  このサンプルの構成ファイルでは、次の 2 つの機能を示します。  
   
--   標準の <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> を介してサービスを探索できるようにします。  
+- 標準の <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> を介してサービスを探索できるようにします。  
   
--   サービスのアプリケーション エンドポイントに対する探索関連の情報を調整し、標準エンドポイントに対する探索関連の設定を調整します。  
+- サービスのアプリケーション エンドポイントに対する探索関連の情報を調整し、標準エンドポイントに対する探索関連の設定を調整します。  
   
  探索を有効にするには、サービスのアプリケーション構成ファイルで次の変更を行う必要があります。  
   
--   探索エンドポイントを `<service>` 要素に追加する必要があります。 これは標準の <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> エンドポイントです。 このエンドポイントが、ランタイムによって探索サービスに関連付けられるシステム エンドポイントになります。 探索サービスは、このエンドポイント上でメッセージをリッスンします。  
+- 探索エンドポイントを `<service>` 要素に追加する必要があります。 これは標準の <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> エンドポイントです。 このエンドポイントが、ランタイムによって探索サービスに関連付けられるシステム エンドポイントになります。 探索サービスは、このエンドポイント上でメッセージをリッスンします。  
   
--   `<serviceDiscovery>` 動作を `<serviceBehaviors>` セクションに追加します。 これにより、サービスが実行時に探索されるようになり、前述の探索エンドポイントを使用して探索の `Probe` メッセージおよび `Resolve` メッセージをリッスンするようになります。 この 2 つの追加により、指定した探索エンドポイントでサービスが探索可能になります。  
+- `<serviceDiscovery>` 動作を `<serviceBehaviors>` セクションに追加します。 これにより、サービスが実行時に探索されるようになり、前述の探索エンドポイントを使用して探索の `Probe` メッセージおよび `Resolve` メッセージをリッスンするようになります。 この 2 つの追加により、指定した探索エンドポイントでサービスが探索可能になります。  
   
  次の構成スニペットでは、アプリケーション エンドポイントのサービスと定義された探索エンドポイントが示されています。  
   
@@ -261,12 +261,10 @@ behaviorConfiguration="endpointBehaviorConfiguration"
   
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには  
   
-1.  このサンプルは、HTTP エンドポイントを使用して、このサンプルで、適切な URL Acl を実行する必要があります追加を参照してください[構成の HTTP および HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)詳細についてはします。 管理特権で次のコマンドを実行すると、適切な ACL が追加されます。 そのままではコマンドが動作しない場合は、代わりに、ドメインとユーザー名を引数に指定して実行してみてください。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. このサンプルは、HTTP エンドポイントを使用して、このサンプルで、適切な URL Acl を実行する必要があります追加を参照してください[構成の HTTP および HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)詳細についてはします。 管理特権で次のコマンドを実行すると、適切な ACL が追加されます。 そのままではコマンドが動作しない場合は、代わりに、ドメインとユーザー名を引数に指定して実行してみてください。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2.  ソリューションをビルドします。  
+2. ソリューションをビルドします。  
   
-3.  ビルド ディレクトリからサービス実行可能ファイルを実行します。  
+3. ビルド ディレクトリからサービス実行可能ファイルを実行します。  
   
-4.  クライアント実行可能ファイルを実行します。 クライアントでサービスを検索できることに注意してください。  
-  
-## <a name="see-also"></a>関連項目
+4. クライアント実行可能ファイルを実行します。 クライアントでサービスを検索できることに注意してください。  

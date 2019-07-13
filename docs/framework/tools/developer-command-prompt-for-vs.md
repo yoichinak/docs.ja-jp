@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cded8ce271ea0f3d1dbb8fc3d9a072ee4a23d1ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 79cfc607e20d921c7ae942cb9755eee4264336eb
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149173"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877059"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Visual Studio 用開発者コマンド プロンプト
 
 Visual Studio 用開発者コマンド プロンプトでは、.NET Framework ツールをもっと簡単に使用できます。 それは、特定の環境変数を自動的に設定するコマンド プロンプトです。
 
 > [!div class="button"]
-> [Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
+> [Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)
 
 ## <a name="search-for-the-command-prompt-on-your-machine"></a>コンピューター上でのコマンド プロンプトの検索
 
@@ -34,11 +34,11 @@ Visual Studio のバージョンと、インストールした追加の SDK に�
 
 1. タスクバーの検索ボックスに、`dev` や `developer command prompt` など、ツールの名前を入力します。 検索パターンに一致する、インストールされているアプリの一覧が表示されます。 別のコマンド プロンプトを探す場合は、別の検索語句 (「`prompt`」など) を入力してください。
 
-2. **[開発者コマンド プロンプト]** (または、使用するコマンド プロンプト) を選択します。
+2. **Visual Studio 用開発者コマンド プロンプト** (または、使用するコマンド プロンプト) を選択します。
 
 ### <a name="in-windows-81"></a>Windows 8.1 の場合
 
-1. キーボードの Windows ロゴ キー ![Windows ロゴ](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") を押すなどして、**[スタート]** 画面に移動します。
+1. キーボードの Windows ロゴ キー ![キーボードの Windows ロゴ キー](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) を押すなどして、**[スタート]** 画面に 移動します。
 
 2. **[スタート]** 画面で、**Ctrl**+**Tab** キーを押して **[アプリ]** の一覧を開き、`V`.と入力します。 インストールされているすべての Visual Studio コマンド プロンプトが含まれた一覧が表示されます。
 
@@ -46,9 +46,9 @@ Visual Studio のバージョンと、インストールした追加の SDK に�
 
 ### <a name="in-windows-8"></a>Windows 8 の場合
 
-1. キーボードの Windows ロゴ キー ![Windows ロゴ](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") を押すなどして、**[スタート]** 画面に移動します。
+1. キーボードの Windows ロゴ キー ![キーボードの Windows ロゴ キー](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) を押すなどして、**[スタート]** 画面に 移動します。
 
-2. **[スタート]** 画面で、Windows ロゴ キー ![Windows ロゴ](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") `+ Z` を押します。
+2. **[スタート]** 画面で、Windows ロゴ キー ![キーボードの Windows ロゴ キー](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png)  `+ Z` を押します。
 
 3. 画面下部にある**アプリ ビュー** アイコンを選択し、「`V`」と入力します。 インストールされているすべての Visual Studio コマンド プロンプトが含まれた一覧が表示されます。
 

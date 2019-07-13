@@ -1,5 +1,5 @@
 ---
-title: 型&#39; &lt;typename&gt; &#39;コンス トラクターがありません
+title: 型 '<typename>' にはコンストラクターがありません。
 ms.date: 07/20/2015
 f1_keywords:
 - bc30251
@@ -7,28 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - BC30251
 ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
-ms.openlocfilehash: 16b64365ecd5dcfe592c47745dcb66878c2ee5a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8564499b9ff55514179314217b7d40d8d3cdf6a2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031149"
 ---
-# <a name="type-39lttypenamegt39-has-no-constructors"></a>型&#39; &lt;typename&gt; &#39;コンス トラクターがありません
+# <a name="type-typename-has-no-constructors"></a>型 '\<typename >' のコンス トラクターがありません
 型が `Sub New()` の呼び出しをサポートしません。 コンパイラまたはバイナリ ファイルが破損していることが原因の 1 つとして考えられます。  
   
  **エラー ID:** BC30251  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  型が別のプロジェクトまたは参照ファイル内にある場合は、プロジェクトまたはファイルを再インストールします。  
+1. 型が別のプロジェクトまたは参照ファイル内にある場合は、プロジェクトまたはファイルを再インストールします。  
   
-2.  型が同じプロジェクト内にある場合は、型を含むアセンブリを再コンパイルします。  
+2. 型が同じプロジェクト内にある場合は、型を含むアセンブリを再コンパイルします。  
   
-3.  エラーが再発する場合は、Visual Basic コンパイラを再インストールします。  
+3. エラーが再発する場合は、Visual Basic コンパイラを再インストールします。  
   
-4.  エラーが続く場合は、状況に関する情報を収集し、マイクロソフト プロダクト サポート サービスに通知してください。  
+4. エラーが続く場合は、状況に関する情報を収集し、マイクロソフト プロダクト サポート サービスに通知してください。  
   
-## <a name="see-also"></a>関連項目  
- [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [ご意見](/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a>関連項目
+
+- [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [ご意見](/visualstudio/ide/talk-to-us)

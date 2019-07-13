@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56f7f36baa71a3e58dfa3314ebe06a018cfd3468
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ae668a40ba1510e0e3d4f509643022ebe822a4f0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408230"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738942"
 ---
 # <a name="enumerateclrs-function"></a>EnumerateCLRs 関数
 プロセスで CLR を列挙するメカニズムを提供します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EnumerateCLRs (  
     [in]  DWORD      debuggeePID,  
     [out] HANDLE**   ppHandleArrayOut,  
@@ -39,7 +39,7 @@ HRESULT EnumerateCLRs (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `debuggeePID`  
  [in] 読み込まれている CLR を列挙するプロセスのプロセス識別子。  
   
@@ -65,17 +65,17 @@ HRESULT EnumerateCLRs (
  E_FAIL (またはその他の E_ リターン コード)  
  読み込まれている CLR を列挙できません。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  この関数は、`debuggeePID` で指定された対象プロセスについて、プロセスに読み込まれている CLR のパスの配列 (`ppStringArrayOut`)、同じインデックスにある CLR の継続スタートアップ イベントを含むイベント ハンドルの配列 (`ppHandleArrayOut`)、および読み込まれている CLR の数を示す配列のサイズ (`pdwArrayLengthOut`) を返します。  
   
- Windows オペレーティング システムでは、`debuggeePID` が OS プロセス識別子に対応づけられます。  
+ Windows オペレーティング システムでは、`debuggeePID` がプロセス識別子に対応づけられます。  
   
- `ppHandleArrayOut` および `ppStringArrayOut` のメモリはこの関数によって割り当てられます。 呼び出す必要があります、割り当てられたメモリを解放して[CloseCLREnumeration 関数](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md)です。  
+ `ppHandleArrayOut` および `ppStringArrayOut` のメモリはこの関数によって割り当てられます。 呼び出す必要があります、割り当てられたメモリを解放して[CloseCLREnumeration 関数](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md)します。  
   
  両方の配列パラメーターを null に設定してこの関数を呼び出すことで、対象プロセス内の CLR の数を取得できます。 この数から、呼び出し元は、作成されるバッファーのサイズを推論できます (`(sizeof(HANDLE) * count) + (sizeof(LPWSTR) * count) + (sizeof(WCHAR*) * count * MAX_PATH)`)。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** dbgshim.h  
   

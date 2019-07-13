@@ -7,19 +7,20 @@ helpviewer_keywords:
 - StackPanel control [WPF], how-to topics
 - controls [WPF], StackPanel
 ms.assetid: c9849df3-d000-4cdf-8345-5edcd053919d
-ms.openlocfilehash: c70fba3cd07d6ec88160783c3e922e2f1bafe934
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7456eeb4fc248998730a21f757699497c83f4e9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791067"
 ---
 # <a name="stackpanel-how-to-topics"></a>StackPanel に関する「方法」トピック
-このセクションのトピックを使用する方法について説明、<xref:System.Windows.Controls.StackPanel>要素を水平方向または垂直方向にコンテンツをスタックします。  
+このセクションのトピックでは、使用する方法をについて説明します、<xref:System.Windows.Controls.StackPanel>要素コンテンツを水平方向または垂直方向にスタックにします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [StackPanel または DockPanel を選択する](../../../../docs/framework/wpf/controls/how-to-choose-between-stackpanel-and-dockpanel.md)  
- [StackPanel を作成する](../../../../docs/framework/wpf/controls/how-to-create-a-stackpanel.md)  
- [StackPanel にコンテンツを水平方向または垂直方向に配置する](../../../../docs/framework/wpf/controls/how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  
+ [StackPanel または DockPanel を選択する](how-to-choose-between-stackpanel-and-dockpanel.md)  
+ [StackPanel を作成する](how-to-create-a-stackpanel.md)  
+ [StackPanel にコンテンツを水平方向または垂直方向に配置する](how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.Panel>  
@@ -37,8 +38,8 @@ ms.lasthandoff: 05/04/2018
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>関連項目  
- [レイアウト](../../../../docs/framework/wpf/advanced/layout.md)  
+ [レイアウト](../advanced/layout.md)  
   
- [チュートリアル: 初めての WPF デスクトップ アプリケーション](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [チュートリアル: 初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer の概要](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer の概要](scrollviewer-overview.md)

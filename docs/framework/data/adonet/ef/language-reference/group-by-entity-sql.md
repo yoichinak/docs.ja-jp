@@ -2,12 +2,12 @@
 title: GROUP BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cf4f4972-4724-4945-ba44-943a08549139
-ms.openlocfilehash: 3b5edee08afef8418f19df433223818218ae909d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 574d952e0183eb65c88864f2788eb7d698c9f2ec
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879542"
 ---
 # <a name="group-by-entity-sql"></a>GROUP BY (Entity SQL)
 クエリ ([SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) 式によって返されるオブジェクトをグループ化するよう指定します。  
@@ -22,8 +22,8 @@ ms.locfileid: "32763187"
  `aliasedExpression`  
  グループ化の実行対象となる有効なクエリ式。 `expression` には、プロパティを指定することも、FROM 句から返されたプロパティを参照する非集計式を指定することもできます。 GROUP BY 句内の各式は、等価かどうかを比較できる型に評価される必要があります。 通常、これらの型は数値、文字列、日付などのスカラー プリミティブです。 コレクション別にグループ化することはできません。  
   
-## <a name="remarks"></a>コメント  
- SELECT 句で集計関数が含まれている場合\<選択リスト >、GROUP by によって各グループの集計値を計算します。 GROUP BY を指定する場合は、選択リスト内の非集計式内の各プロパティ名が GROUP BY リストに含まれるか、GROUP BY 式が選択リスト式に正確に一致する必要があります。  
+## <a name="remarks"></a>Remarks  
+ SELECT 句で集計関数が含まれている場合\<選択リスト >、GROUP BY には、各グループの集計値を計算します。 GROUP BY を指定する場合は、選択リスト内の非集計式内の各プロパティ名が GROUP BY リストに含まれるか、GROUP BY 式が選択リスト式に正確に一致する必要があります。  
   
 > [!NOTE]
 >  ORDER BY 句を指定しない場合、GROUP BY 句でグループが返される順序には特に決まりはありません。 データの特定の順序を指定するには、常に ORDER BY 句を使用することをお勧めします。  
@@ -62,12 +62,13 @@ GROUP BY 1   -- BAD, a constant is not allowed
 ## <a name="example"></a>例  
  次の Entity SQL クエリでは、GROUP BY 演算子を使用して、クエリによって返されるオブジェクトをグループ化するよう指定します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
-1.  」の手順に従って[する方法: PrimitiveType 結果が返されますそのクエリを実行する](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)です。  
+1. 」の手順に従って[方法。PrimitiveType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)します。  
   
-2.  次のクエリを引数として `ExecutePrimitiveTypeQuery` メソッドに渡します。  
+2. 次のクエリを引数として `ExecutePrimitiveTypeQuery` メソッドに渡します。  
   
  [!code-csharp[DP EntityServices Concepts 2#GROUPBY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#groupby)]  
   
-## <a name="see-also"></a>関連項目  
- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [クエリ式](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
+## <a name="see-also"></a>関連項目
+
+- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [クエリ式](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)

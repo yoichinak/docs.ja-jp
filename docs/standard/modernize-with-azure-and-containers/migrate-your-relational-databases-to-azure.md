@@ -1,15 +1,13 @@
 ---
 title: リレーショナル データベースを azure に移行します。
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 |リレーショナル データベースを azure に移行します。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: a2aedc9729c674a7b4958506b90c285e54d8d724
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3d4f03e61144bb6a442a50916d7fd024d38ec611
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153762"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051930"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>リレーショナル データベースを azure に移行します。
 
@@ -49,7 +47,7 @@ Azure SQL database マネージ インスタンスには、次の特徴があり
 
   - ネイティブのバックアップと復元、およびログ配布
 
-これらの機能を備えた Azure SQL database では、既存のアプリケーション データベースを移行するときに、マネージ インスタンス モデルでは、Paas の利点のほぼ 100% for SQL Server。 マネージ インスタンスは、インスタンス レベルの機能を使用して、アプリケーションの設計を変更することがなく引き続き SQL Server 環境です。
+これらの機能を備えた Azure SQL database では、既存のアプリケーション データベースを移行するときに、マネージ インスタンス モデルでは、PaaS の利点のほぼ 100% for SQL Server。 マネージ インスタンスは、インスタンス レベルの機能を使用して、アプリケーションの設計を変更することがなく引き続き SQL Server 環境です。
 
 マネージ インスタンスは、現在使用している SQL Server、およびクラウドでのネットワーク セキュリティの柔軟性を必要とする企業に最適では可能性があります。 SQL database 向けのプライベート仮想ネットワークをできるようになります。
 
@@ -83,7 +81,7 @@ Azure SQL Database には次の利点があります。
 
 移行オプションの 1 つは、元のリレーショナル データベース管理システム (RDBMS) では、Oracle、IBM DB2、MySQL、PostgreSQL、または SQL Server を含む Azure VM で実行されているようなサーバーを移動します。 最小限の変更、またはまったく変更せずにクラウドへの移行を最速をまったく必要とする既存のアプリケーションがある場合は、クラウドで IaaS への直接の移行が公正なオプションにあります。 すべてのクラウドの利点を活用するために最善の方法ができない可能性がありますが、最も高速な初期パスである可能性があります。
 
-現時点では、Microsoft Azure がサポートする最大[331 の別のデータベース サーバー](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/category/databases?page=1&subcategories=databases-all) IaaS Vm としてデプロイします。 SQL Server、Oracle、MySQL、PostgreSQL、および IBM DB2 の場合のような一般的な RDBMS および MongoDB、Cassandra、DataStax、MariaDB、Cloudera などの他の多くの NoSQL データベースが含まれます。
+現時点では、Microsoft Azure がサポートする最大[331 の別のデータベース サーバー](https://azuremarketplace.microsoft.com/marketplace/apps/category/databases?page=1&subcategories=databases-all) IaaS Vm としてデプロイします。 SQL Server、Oracle、MySQL、PostgreSQL、および IBM DB2 の場合のような一般的な RDBMS および MongoDB、Cassandra、DataStax、MariaDB、Cloudera などの他の多くの NoSQL データベースが含まれます。
 
 > [!NOTE]
 > 移動するは、RDBMS に Azure VM (IaaS のため)、データをクラウドに移行する最も簡単な方法があります、このアプローチには、(データベース管理者および IT プロフェッショナル) は、IT チームにかなりの投資が必要があります。 企業のチームは、設定および高可用性、ディザスター リカバリー、および SQL Server の修正プログラムを管理することができる必要があります。 このコンテキストでは、完全な管理者権限を持つ、カスタマイズされた環境も必要です。
@@ -108,24 +106,24 @@ Azure Database Migration Service を使用してデータベースを移行す�
 
 - **クラウド SQL Server オプションを選択します。Azure SQL Database (PaaS) または Azure VM (IaaS) 上の SQL Server**
 
-    [https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
+    <https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas>
 
 - **Azure SQL DB マネージ インスタンスとデータベース移行サービスで迅速にクラウドに**
 
-    [https://channel9.msdn.com/Events/Build/2017/P4008](https://channel9.msdn.com/Events/Build/2017/P4008)
+    <https://channel9.msdn.com/Events/Build/2017/P4008>
 
-- **SQL Server データベースのクラウドで SQL Database への移行**
+- **SQL Server データベースのクラウド内の SQL Database への移行**
 
-    [https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate](https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate)
+    <https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate>
 
 - **Azure SQL Database**
 
-    [https://azure.microsoft.com/services/sql-database/?v=16.50](https://azure.microsoft.com/services/sql-database/?v=16.50)
+    <https://azure.microsoft.com/services/sql-database/?v=16.50>
 
 - **Virtual machines における SQL Server**
 
-    [https://azure.microsoft.com/services/virtual-machines/sql-server/](https://azure.microsoft.com/services/virtual-machines/sql-server/)
+    <https://azure.microsoft.com/services/virtual-machines/sql-server/>
 
->[!div class="step-by-step"]
->[前へ](lift-and-shift-existing-apps-azure-iaas.md)
->[次へ](modernize-existing-apps-to-cloud-optimized/index.md)
+> [!div class="step-by-step"]
+> [前へ](lift-and-shift-existing-apps-azure-iaas.md)
+> [次へ](modernize-existing-apps-to-cloud-optimized/index.md)

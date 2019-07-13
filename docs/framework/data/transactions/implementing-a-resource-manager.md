@@ -3,18 +3,18 @@ title: リソース マネージャーの実装
 ms.date: 03/30/2017
 ms.assetid: d5c153f6-4419-49e3-a5f1-a50ae4c81bf3
 ms.openlocfilehash: f3e29dae095fbe56181cf7b67787c1044efa07ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793706"
 ---
 # <a name="implementing-a-resource-manager"></a>リソース マネージャーの実装
 トランザクションで使用される各リソースはリソース マネージャーによって管理され、その動作はトランザクション マネージャーによって調整されます。 リソース マネージャーは、トランザクション マネージャーと連携してアプリケーションに原子性と分離を保証します。 Microsoft SQL Server、永続的なメッセージ キュー、メモリ内ハッシュ テーブルはすべて、リソース マネージャーの例です。  
   
  リソース マネージャーは、永続性データまたは揮発性データを管理します。 リソース マネージャーの永続性または揮発性とは、リソース マネージャーがエラーの回復をサポートするかどうかを意味します。 リソース マネージャーがエラーの回復をサポートする場合、フェーズ 1 (準備) 中にデータが永続ストレージに保存されます。したがって、リソース マネージャーがダウンした場合でも、回復時にトランザクションへの再参加を行い、トランザクション マネージャーから受信した通知に基づいて適切な動作を実行できます。 一般に、揮発性リソース マネージャーは、メモリ内のデータ構造 (たとえば、メモリ内のトランザクション ハッシュ テーブル) などの揮発性リソースを管理し、永続的リソース マネージャーは、より永続的なバッキング ストアを持つリソース (たとえば、バッキング ストアがディスクであるデータベース) を管理します。  
   
- リソースをトランザクションに参加させるには、リソースをトランザクションに登録する必要があります。 <xref:System.Transactions.Transaction>クラスを定義する一連のメソッドの名前が始まる**Enlist**この機能を提供します。 さまざまな**Enlist**メソッドは、可能性のある、リソース マネージャーの参加のさまざまな種類に対応しています。 具体的には、揮発性リソースには <xref:System.Transactions.Transaction.EnlistVolatile%2A> メソッド、永続性リソースには <xref:System.Transactions.Transaction.EnlistDurable%2A> メソッドを使用します。 簡単に説明すると、リソースが永続性をサポートするかどうかに応じて、<xref:System.Transactions.Transaction.EnlistDurable%2A> メソッドまたは <xref:System.Transactions.Transaction.EnlistVolatile%2A> メソッドのどちらを使用するかを決定した後、リソース マネージャーに <xref:System.Transactions.IEnlistmentNotification> インターフェイスを実装して、2 フェーズ コミット (2PC) に参加するようにリソースを登録する必要があります。 2 pc の詳細については、次を参照してください。[単一フェーズと複数のフェーズでトランザクションをコミットする](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)です。  
+ リソースをトランザクションに参加させるには、リソースをトランザクションに登録する必要があります。 <xref:System.Transactions.Transaction>クラス定義で名前が始まるメソッドのセットを**参加**この機能を提供します。 さまざまな**参加**メソッドは、リソース マネージャーがいる可能性のある登録のさまざまな種類に対応します。 具体的には、揮発性リソースには <xref:System.Transactions.Transaction.EnlistVolatile%2A> メソッド、永続性リソースには <xref:System.Transactions.Transaction.EnlistDurable%2A> メソッドを使用します。 簡単に説明すると、リソースが永続性をサポートするかどうかに応じて、<xref:System.Transactions.Transaction.EnlistDurable%2A> メソッドまたは <xref:System.Transactions.Transaction.EnlistVolatile%2A> メソッドのどちらを使用するかを決定した後、リソース マネージャーに <xref:System.Transactions.IEnlistmentNotification> インターフェイスを実装して、2 フェーズ コミット (2PC) に参加するようにリソースを登録する必要があります。 2 pc の詳細については、次を参照してください。[単一フェースおよび複数フェーズでトランザクションをコミットする](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)します。  
   
  参加により、リソース マネージャーは、トランザクションがコミットまたは中止したときに、トランザクション マネージャーからのコールバックを取得することを保証します。 各参加リストについて、<xref:System.Transactions.IEnlistmentNotification> のインスタンスが 1 つ存在します。 通常、トランザクションごとに 1 つの参加リストが存在しますが、リソース マネージャーは、同じトランザクションへの複数回の参加を選択できます。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "33363264"
   
  要約すると、2 フェーズ コミット プロトコルとリソース マネージャーの組み合わせにより、トランザクションの原子性と永続性が実現されます。  
   
- <xref:System.Transactions.Transaction> クラスは、PSPE (Promotable Single Phase Enlistment) を参加させるための <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> メソッドも提供しています。 これにより、永続的リソース マネージャー (RM) は、MSDTC による管理のために後で必要に応じてエスカレートできるトランザクションをホストおよび "所有" できます。 詳細については、次を参照してください。[単一フェーズのコミットし、昇格可能な単一フェーズの通知を使用して、最適化](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)です。  
+ <xref:System.Transactions.Transaction> クラスは、PSPE (Promotable Single Phase Enlistment) を参加させるための <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> メソッドも提供しています。 これにより、永続的リソース マネージャー (RM) は、MSDTC による管理のために後で必要に応じてエスカレートできるトランザクションをホストおよび "所有" できます。 詳細については、これは、次を参照してください。 [Single Phase Commit and Promotable Single Phase Notification を使用した最適化](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  リソース マネージャーが通常実行する手順の概要については、次のトピックを参照してください。  

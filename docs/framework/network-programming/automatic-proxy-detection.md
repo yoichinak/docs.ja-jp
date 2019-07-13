@@ -14,12 +14,12 @@ helpviewer_keywords:
 - network
 - WPAD (Web Proxy Auto-Discovery)
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
-ms.openlocfilehash: 3a59347c3fcd72f68ee2ae07ccc638ec43021a3b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 656a21a7b8801a2c3b72b25531705576fcf047cd
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188509"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59295758"
 ---
 # <a name="automatic-proxy-detection"></a>自動プロキシ検出
 自動プロキシ検出は、Web プロキシ サーバーがシステムによって確認され、クライアントに代わって要求を送信する際に使用されるプロセスです。 この機能は、Web プロキシの自動検出 (WPAD) とも呼ばれます。 自動プロキシ検出を有効にすると、システムは、要求に使用できるプロキシのセットを返すプロキシ構成スクリプトを検索しようとします。 プロキシ構成スクリプトが見つかった場合、プロキシ情報、要求ストリーム、または <xref:System.Net.WebProxy> インスタンスを使用する要求に対する応答が取得されたときに、ローカル コンピューター上でスクリプトがダウンロード、コンパイル、および実行されます。  
@@ -31,13 +31,13 @@ ms.locfileid: "50188509"
   
  自動プロキシ検出を有効にすると、<xref:System.Net.WebProxy> クラスは次のようにプロキシ構成スクリプトを検索しようとします。  
   
-1.  WinINet の `InternetQueryOption` 関数を使用して、Internet Explorer によって最後に検出されたプロキシ構成スクリプトを検索します。  
+1. WinINet の `InternetQueryOption` 関数を使用して、Internet Explorer によって最後に検出されたプロキシ構成スクリプトを検索します。  
   
-2.  スクリプトが見つからない場合、<xref:System.Net.WebProxy> クラスは動的ホスト構成プロトコル (DHCP) を使用してスクリプトを検索します。 DHCP サーバーは、スクリプトの場所 (ホスト名)、またはスクリプトの完全な URL で応答できます。  
+2. スクリプトが見つからない場合、<xref:System.Net.WebProxy> クラスは動的ホスト構成プロトコル (DHCP) を使用してスクリプトを検索します。 DHCP サーバーは、スクリプトの場所 (ホスト名)、またはスクリプトの完全な URL で応答できます。  
   
-3.  DHCP で WPAD ホストが識別されない場合は、名前またはエイリアスとして WPAD を使用して、ホストについて DNS が照会されます。  
+3. DHCP で WPAD ホストが識別されない場合は、名前またはエイリアスとして WPAD を使用して、ホストについて DNS が照会されます。  
   
-4.  ホストが識別されず、プロキシ構成スクリプトの場所が Internet Explorer の LAN の設定または構成ファイルで指定されている場合は、この場所が使用されます。  
+4. ホストが識別されず、プロキシ構成スクリプトの場所が Internet Explorer の LAN の設定または構成ファイルで指定されている場合は、この場所が使用されます。  
   
 > [!NOTE]
 >  NT サービスまたは ASP.NET の一部として実行されているアプリケーションでは、呼び出しユーザーの Internet Explorer のプロキシ サーバー設定が使用されます (使用可能な場合)。 これらの設定が、すべてのサービス アプリケーションで使用できるとは限りません。  
@@ -67,7 +67,8 @@ Public Shared Sub DisableForMyRequest(ByVal resource As Uri)
   
  プロキシがない要求では、アプリケーション ドメインの既定のプロキシが使用されます。この既定のプロキシは <xref:System.Net.WebRequest.DefaultWebProxy%2A> プロパティで使用できます。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Net.WebProxy>  
- <xref:System.Net.WebRequest>  
- [\<system.Net> 要素 (ネットワーク設定)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Net.WebProxy>
+- <xref:System.Net.WebRequest>
+- [\<system.Net> 要素 (ネットワーク設定)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)

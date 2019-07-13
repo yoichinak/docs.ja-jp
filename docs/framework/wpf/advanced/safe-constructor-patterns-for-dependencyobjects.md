@@ -6,21 +6,19 @@ helpviewer_keywords:
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-ms.openlocfilehash: 03615c1c49f2acf2a7c7f0910860f36de0a4f2d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ba8b0a48b2b75a9191553392d5ec0a1f66575807
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053510"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>DependencyObject の安全なコンストラクター パターン
-一般的に、コンストラクターは派生クラスのコンストラクターの基底の初期化として呼び出されることがあるため、クラスのコンストラクターでは、仮想メソッドやデリゲートなどのコールバックを呼び出しません。 対象オブジェクトの初期化が不完全な状態で、仮想メソッドに入ることがあります。 ただし、プロパティ システム自体は、依存関係プロパティ システムの一部としてコールバックを呼び出し、内部的に公開します。 単純な操作と依存関係プロパティの値を設定した場合と<xref:System.Windows.DependencyObject.SetValue%2A>呼び出しには可能性がありますが含まれますコールバックには任意の場所を特定します。 このため、使用する型が基底クラスとして使われる場合に、コンストラクター本体内に依存関係プロパティ値を設定すると問題が発生する可能性があり、注意が必要です。 実装するための特定のパターンがある<xref:System.Windows.DependencyObject>」で説明されている依存関係プロパティの状態と固有のコールバックでは、特定の問題を回避するコンス トラクターです。  
-  
- 
-  
+一般的に、コンストラクターは派生クラスのコンストラクターの基底の初期化として呼び出されることがあるため、クラスのコンストラクターでは、仮想メソッドやデリゲートなどのコールバックを呼び出しません。 対象オブジェクトの初期化が不完全な状態で、仮想メソッドに入ることがあります。 ただし、プロパティ システム自体は、依存関係プロパティ システムの一部としてコールバックを呼び出し、内部的に公開します。 単純な操作で依存関係プロパティの値を設定すると<xref:System.Windows.DependencyObject.SetValue%2A>呼び出し組み込めますコールバックどこかを決定します。 このため、使用する型が基底クラスとして使われる場合に、コンストラクター本体内に依存関係プロパティ値を設定すると問題が発生する可能性があり、注意が必要です。 実装するための特定のパターンがある<xref:System.Windows.DependencyObject>コンス トラクターをここに記載されている依存関係プロパティの状態と固有のコールバックでは、特定の問題を回避できます。  
+
 <a name="Property_System_Virtual_Methods"></a>   
 ## <a name="property-system-virtual-methods"></a>プロパティ システムの仮想メソッド  
- 次の仮想メソッドまたはコールバックの計算中に呼び出される可能性のある、<xref:System.Windows.DependencyObject.SetValue%2A>を依存関係プロパティの値を設定する呼び出し: <xref:System.Windows.ValidateValueCallback>、 <xref:System.Windows.PropertyChangedCallback>、 <xref:System.Windows.CoerceValueCallback>、<xref:System.Windows.DependencyObject.OnPropertyChanged%2A>です。 これらの仮想メソッドまたはコールバックは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] のプロパティ システムと依存関係プロパティの汎用性を高めるうえで、それぞれ特定の目的を果たします。 これらの仮想メソッドを使用してプロパティ値の決定をカスタマイズする方法の詳細については、「[依存関係プロパティのコールバックと検証](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)」を参照してください。  
+ 計算中には、次の仮想メソッドまたはコールバックは呼び出される可能性のある、<xref:System.Windows.DependencyObject.SetValue%2A>依存関係プロパティの値を設定する呼び出し: <xref:System.Windows.ValidateValueCallback>、 <xref:System.Windows.PropertyChangedCallback>、 <xref:System.Windows.CoerceValueCallback>、<xref:System.Windows.DependencyObject.OnPropertyChanged%2A>します。 これらの仮想メソッドまたはコールバックは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] のプロパティ システムと依存関係プロパティの汎用性を高めるうえで、それぞれ特定の目的を果たします。 これらの仮想メソッドを使用してプロパティ値の決定をカスタマイズする方法の詳細については、「[依存関係プロパティのコールバックと検証](dependency-property-callbacks-and-validation.md)」を参照してください。  
   
 ### <a name="fxcop-rule-enforcement-vs-property-system-virtuals"></a>FXCop ルールの適用とプロパティ システムの仮想メソッドの比較  
  ビルド プロセスの一部として Microsoft ツールの FXCop を使用している場合、基底コンストラクターを呼び出す特定の [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] フレームワーク クラスを派生させるとき、派生クラスで独自の依存関係プロパティを実装するときに、FXCop の特定のルール違反が発生することがあります。 ルール違反に該当する名前文字列は次のとおりです。  
@@ -33,7 +31,7 @@ ms.locfileid: "33547343"
  このルールによって報告される問題は、構築のシーケンスで仮想メソッドを呼び出すように実装したクラスが派生される場合に発生します。 クラスをシールする場合、クラスが派生されないとわかっている場合、クラスが派生されないように強制する場合は、ここで説明する内容や FXCop のルールによって起こる問題は該当しません。 ただし、テンプレートや拡張可能なコントロール ライブラリのセットを作成する場合などのように、基底クラスとしての使用を想定したクラスを作成する場合は、ここで説明されているコンストラクターの推奨パターンに従う必要があります。  
   
 ### <a name="default-constructors-must-initialize-all-values-requested-by-callbacks"></a>既定のコンストラクターにおいて、コールバックによって要求されるすべての値の初期化の必要性  
- 任意のクラスの無視またはコールバック (「プロパティ システムの仮想メソッド」セクションの一覧にあるコールバック) によって使用されるすべてのインスタンス メンバーは、クラスの既定のコンストラクターで初期化する必要があります。これは、既定以外のコンストラクターのパラメーターによって値の一部に "実際の" 値が入る場合も同様です。  
+ 任意のクラスのオーバーライドまたはコールバック (「プロパティ システムの仮想メソッド」セクションの一覧にあるコールバック) によって使用されるすべてのインスタンス メンバーは、クラスの既定のコンストラクターで初期化する必要があります。これは、既定以外のコンストラクターのパラメーターによって値の一部に "実際の" 値が入る場合も同様です。  
   
  次のコード例 (および以降の例) は、この規則に違反する擬似 C# コードの例であり、問題を説明しています。  
   
@@ -62,7 +60,7 @@ public class MyClass : DependencyObject
 }  
 ```  
   
- アプリケーション コードによって `new MyClass(objectvalue)` が呼び出されると、既定のコンストラクターと基底クラスのコンストラクターが呼び出されます。 設定し、 `Property1 = object1`、仮想メソッドを呼び出している`OnPropertyChanged`で所有している`MyClass`<xref:System.Windows.DependencyObject>です。  無視では、まだ初期化されていない `_myList` が参照されます。  
+ アプリケーション コードによって `new MyClass(objectvalue)` が呼び出されると、既定のコンストラクターと基底クラスのコンストラクターが呼び出されます。 設定し、 `Property1 = object1`、仮想メソッドを呼び出し`OnPropertyChanged`、所有`MyClass`<xref:System.Windows.DependencyObject>します。  オーバーライドでは、まだ初期化されていない `_myList` が参照されます。  
   
  これらの問題を回避する方法の 1 つは、コールバックが他の依存関係プロパティのみを使用し、それぞれの使用する依存関係プロパティが、登録済みのメタデータの一部として確立された既定値を持つようにすることです。  
   
@@ -112,9 +110,10 @@ public MyClass : SomeBaseClass {
  基本データ型に複数のシグネチャがある場合は、追加のプロパティを設定する前に、クラスの既定のコンストラクターを呼び出す推奨パターンを使用する独自のコンストラクター実装で、考えられるすべてのシグネチャを意図的に一致させる必要があります。  
   
 #### <a name="setting-dependency-properties-with-setvalue"></a>SetValue による依存関係プロパティの設定  
- これらと同じパターンの適用に無効なプロパティの設定の利便性のため、ラッパーを持つ値を設定するプロパティを設定する場合は<xref:System.Windows.DependencyObject.SetValue%2A>します。 呼び出す<xref:System.Windows.DependencyObject.SetValue%2A>コンス トラクターのパラメーターをパススルーすることで、初期化のためのクラスの既定のコンス トラクターを呼び出すことがも必要があります。  
+ ラッパー プロパティの設定の利便性を持たないしの値を設定するプロパティを設定する場合は、これらの同じパターンが適用されます<xref:System.Windows.DependencyObject.SetValue%2A>します。 呼び出しを<xref:System.Windows.DependencyObject.SetValue%2A>パススルーそのコンス トラクターのパラメーターは、初期化のため、クラスの既定のコンス トラクターを呼び出すも必要があります。  
   
-## <a name="see-also"></a>関連項目  
- [カスタム依存関係プロパティ](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [依存関係プロパティの概要](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [依存関係プロパティのセキュリティ](../../../../docs/framework/wpf/advanced/dependency-property-security.md)
+## <a name="see-also"></a>関連項目
+
+- [カスタム依存関係プロパティ](custom-dependency-properties.md)
+- [依存関係プロパティの概要](dependency-properties-overview.md)
+- [依存関係プロパティのセキュリティ](dependency-property-security.md)

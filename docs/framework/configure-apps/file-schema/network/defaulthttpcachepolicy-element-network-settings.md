@@ -1,5 +1,5 @@
 ---
-title: '&lt;defaultHttpCachePolicy&gt;要素 (ネットワーク設定)'
+title: <defaultHttpCachePolicy> 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/requestCaching/defaultHttpCachePolicy
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-ms.openlocfilehash: d88d99b663b0aaeb0ae432cf02675a45c4c8bc1f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 20d9b92ca2bbffd6b98b8641e5cef5e567cb84cc
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705130"
 ---
-# <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a>&lt;defaultHttpCachePolicy&gt;要素 (ネットワーク設定)
+# <a name="defaulthttpcachepolicy-element-network-settings"></a>\<defaultHttpCachePolicy > 要素 (ネットワーク設定)
 HTTP キャッシュがアクティブでかどうかし、既定のキャッシュ ポリシーの記述について説明します。  
   
  \<configuration>  
 \<system.net>  
-\<requestCaching >  
-\<defaultHttpCachePolicy >  
+\<requestCaching>  
+\<defaultHttpCachePolicy>  
   
 ## <a name="syntax"></a>構文  
   
@@ -80,8 +80,9 @@ HTTP キャッシュがアクティブでかどうかし、既定のキャッシ
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.Net.Cache>  
-- <xref:System.Net.WebRequest>  
-- <xref:System.Net.Cache.RequestCacheLevel>  
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Net.Cache>
+- <xref:System.Net.WebRequest>
+- <xref:System.Net.Cache.RequestCacheLevel>
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

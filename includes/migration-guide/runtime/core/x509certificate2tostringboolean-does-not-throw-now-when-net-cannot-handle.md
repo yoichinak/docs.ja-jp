@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 0dfc87201b9b31cd9d936f2c965c7d0ca0140cab
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774172"
+---
 ### <a name="x509certificate2tostringboolean-does-not-throw-now-when-net-cannot-handle-the-certificate"></a>.NET で証明書を処理できないときに、X509Certificate2.ToString(Boolean) がスローしなくなった
 
 |   |   |
@@ -8,4 +16,3 @@
 |Version|4.6|
 |型|ランタイム|
 |影響を受ける API|<ul><li><xref:System.Security.Cryptography.X509Certificates.X509Certificate2.ToString(System.Boolean)?displayProperty=nameWithType></li></ul>|
-

@@ -2,25 +2,25 @@
 title: CustomChannelTester
 ms.date: 03/30/2017
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
-ms.openlocfilehash: eebe4f15095c7cefbd32971fd2f3ee308e9916b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1517a2eb73da778c9b84ff857f4b8ad2b4334498
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499389"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425003"
 ---
 # <a name="customchannelstester"></a>CustomChannelTester
 `CustomChannelsTester` は、カスタム チャネルの実装を、定義済みのサービス コントラクト セットに対してテストする際に使用できるツールです。 サービス コントラクト セットを選択し、XML ファイルを使用してこのツールに渡すことができます。 これを受け取ったツールは、メッセージ交換中にカスタム チャネル実装をテストするサービスとクライアントを生成します。  
   
 ### <a name="to-build-the-tool"></a>ツールをビルドするには  
   
-1.  指示に従って、ソリューションをビルドする[Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)です。  
+1. ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
   
-2.  ソリューションをビルドすると、CustomChannelsTester.exe、TestSpec.xml、および SampleRun.cmd の 3 つのファイルが生成されます。 SampleRun.cmd ファイルがテストにこのツールを使用する方法を示すサンプルのコマンドライン、[トランスポート: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)サンプルです。  
+2. ソリューションをビルドするには、3 つのファイルが生成されます。CustomChannelsTester.exe、TestSpec.xml、および SampleRun.cmd します。 SampleRun.cmd ファイルはこのツールを使用してテストする方法を示すサンプル コマンドラインを持ち、[トランスポート。UDP](../../../../docs/framework/wcf/samples/transport-udp.md)サンプル。  
   
 ### <a name="to-run-the-tool"></a>ツールを実行するには  
   
--   コマンド プロンプトに次のコマンドを入力します。  
+- コマンド プロンプトに次のコマンドを入力します。  
   
     ```  
     CustomChannelsTester.exe /binding:YourCustomBindngName /dll:TheAssemblyWhereThisTypeisDefined /testspec:XmlFileNameWhichContainsTestOptions  
@@ -28,7 +28,7 @@ ms.locfileid: "33499389"
   
      `/binding` オプションを使用する必要があります。  
   
-     `/dll` "binding"が Windows Communication Foundation (WCF) によって提供されるシステム指定のバインディングではない場合は必須です。  
+     `/dll` "binding"が Windows Communication Foundation (WCF) によって提供されているシステム指定のバインディングではない場合は、このプロパティの値が必要です。  
   
      `/testspec` は省略可能です。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "33499389"
         <ServerName>ReplaceThisWithTheServerMachineName</ServerName>  
     <!-- Port Number - Optional-->  
         <Port>8000</Port>  
-    <!--URI for the callBack address for the CLient. The client will receive the messages from the server on this address in case of a CallBack Contract-->  
+    <!--URI for the callBack address for the client. The client will receive the messages from the server on this address in case of a CallBack Contract-->  
         <ClientCallBackAddress/>      
     <!-- Duration (in sec) after the server has started, it times out - optional(default = 300sec) -->  
         <ServerTimeout>300</ServerTimeout>  
@@ -68,5 +68,3 @@ ms.locfileid: "33499389"
     </TestDetails>  
     </TestSpec>  
     ```  
-  
-## <a name="see-also"></a>関連項目

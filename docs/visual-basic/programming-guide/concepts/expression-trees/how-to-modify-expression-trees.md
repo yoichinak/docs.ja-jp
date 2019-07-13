@@ -1,24 +1,24 @@
 ---
-title: '方法: 式ツリー (Visual Basic) を変更'
+title: '方法: 式ツリー (Visual Basic) を変更します。'
 ms.date: 07/20/2015
 ms.assetid: d1309fff-28bd-4d8e-a2cf-75725999e8f2
-ms.openlocfilehash: 92a0fb37e2a383c68beb2e4a56deb16f89a9bd28
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9b94cbd7bf24b0cc8efcfc66d8c5e7df4e27307
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787154"
 ---
-# <a name="how-to-modify-expression-trees-visual-basic"></a>方法: 式ツリー (Visual Basic) を変更
+# <a name="how-to-modify-expression-trees-visual-basic"></a>方法: 式ツリー (Visual Basic) を変更します。
 このトピックでは、式ツリーを変更する方法について説明します。 式ツリーは変更不可であるため、直接変更を加えることができません。 式ツリーを変更するには、既存の式ツリーのコピーを作成する必要があります。コピーを作成する際に、必要な変更を加えます。 <xref:System.Linq.Expressions.ExpressionVisitor> クラスを使用して、既存の式ツリーを走査し、走査した各ノードをコピーすることができます。  
   
 ### <a name="to-modify-an-expression-tree"></a>式ツリーを変更するには  
   
-1.  新しい**コンソール アプリケーション** プロジェクトを作成します。  
+1. 新しい**コンソール アプリケーション** プロジェクトを作成します。  
   
-2.  追加、`Imports`ステートメントについては、ファイルを`System.Linq.Expressions`名前空間。  
+2. 追加、`Imports`ステートメントは、ファイルを`System.Linq.Expressions`名前空間。  
   
-3.  `AndAlsoModifier` クラスをプロジェクトに追加します。  
+3. `AndAlsoModifier` クラスをプロジェクトに追加します。  
   
     ```vb  
     Public Class AndAlsoModifier  
@@ -46,9 +46,9 @@ ms.locfileid: "33643877"
   
      このクラスは、`AND` 条件演算を表す式を変更するための特別なクラスで、<xref:System.Linq.Expressions.ExpressionVisitor> クラスを継承します。 このクラスによって条件 `AND` が条件 `OR` に変更されます。 そのために、クラスは基本データ型の <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> メソッドをオーバーライドします。`AND` 条件式は二項式で表されるためです。 `VisitBinary` メソッドでは、渡される式が `AND` 条件演算を表す場合、`AND` 条件演算子ではなく `OR` 条件演算子を含む新しい式がコードによって作成されます。 `VisitBinary` に渡される式が `AND` 条件演算を表さない場合は、基底クラスの実装が延期されます。 基底クラスのメソッドによって、渡された式ツリーに似たノードが作成されますが、そのノードのサブツリーは、ビジターによって再帰的に作成される式ツリーに置き換えられます。  
   
-4.  追加、`Imports`ステートメントについては、ファイルを`System.Linq.Expressions`名前空間。  
+4. 追加、`Imports`ステートメントは、ファイルを`System.Linq.Expressions`名前空間。  
   
-5.  コードを追加して、 `Main` Module1.vb ファイルを式ツリーを作成し、そのメソッドに渡すことでメソッドが変更されます。  
+5. コードを追加して、`Main`を式ツリーを作成し、メソッドに渡すことを Module1.vb ファイル内のメソッドが変更されます。  
   
     ```vb  
     Dim expr As Expression(Of Func(Of String, Boolean)) = _  
@@ -68,8 +68,9 @@ ms.locfileid: "33643877"
   
      次のコードは、`AND` 条件演算を含む式を作成し、 `AndAlsoModifier` クラスのインスタンスを作成して、このクラスの `Modify` メソッドにその式を渡します。 元の式ツリーと変更された式ツリーの両方が出力され、変更内容が表示されます。  
   
-6.  アプリケーションをコンパイルして実行します。  
+6. アプリケーションをコンパイルして実行します。  
   
-## <a name="see-also"></a>関連項目  
- [方法: 式ツリー (Visual Basic) を実行](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
- [式ツリー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
+## <a name="see-also"></a>関連項目
+
+- [方法: 式ツリー (Visual Basic) を実行します。](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+- [式ツリー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - compiler optimization [C#]
 - o compiler option [C#]
 ms.assetid: 6dd5b6f2-cd1d-4593-a9f4-1c2ed9404ca0
-ms.openlocfilehash: f8fec2c4da49aa6cac2f8dc1dc9b07c5864b837a
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 25a9ee1b27836dfb00dcbc72712ed068639fa2fc
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259955"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59320033"
 ---
 # <a name="-optimize-c-compiler-options"></a>-optimize (C# コンパイラ オプション)
 **-optimize** オプションは、コンパイラで実行する最適化を有効または無効にします。最適化を実行すると、出力ファイルのサイズが小さくなり、速度と効率が向上します。  
@@ -28,7 +28,7 @@ ms.locfileid: "44259955"
 -optimize[+ | -]  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **-optimize** は実行時にコードを最適化するように共通言語ランタイムに指示します。  
   
  既定では、最適化が無効になります。 **-optimize+** を指定して最適化を有効にします。  
@@ -41,11 +41,11 @@ ms.locfileid: "44259955"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
   
-1.  プロジェクトの **[プロパティ]** ページを開きます。  
+1. プロジェクトの **[プロパティ]** ページを開きます。  
   
-2.  **[ビルド]** プロパティ ページをクリックします。  
+2. **[ビルド]** プロパティ ページをクリックします。  
   
-3.  **コードの最適化**プロパティを変更します。  
+3. **コードの最適化**プロパティを変更します。  
   
  このコンパイラ オプションをプログラムで設定する方法については、「 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.Optimize%2A>」をご覧ください。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "44259955"
 csc t2.cs -optimize  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)  
+- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

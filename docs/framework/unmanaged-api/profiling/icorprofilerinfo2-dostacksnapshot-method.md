@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3c65e48595f2b49abe06e649898649d76a0668a0
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 102349461456f971a2fdeaf2783630c1b88dbd6b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45969786"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778629"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot メソッド
 指定されたスレッドのスタックでマネージド フレームをについて説明し、コールバックを通じてプロファイラーに情報を送信します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT DoStackSnapshot(  
     [in] ThreadID thread,  
     [in] StackSnapshotCallback *callback,  
@@ -39,7 +39,7 @@ HRESULT DoStackSnapshot(
     [in] ULONG32 contextSize);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `thread`  
  [in]対象のスレッドの ID。  
   
@@ -73,7 +73,7 @@ HRESULT DoStackSnapshot(
   
  スタックが走査され、順序が逆の方法、フレームがスタックにプッシュされた: 最後 (最後にプッシュされた) 最初に、メイン (最初にプッシュされた) フレームをリーフします。  
   
- プロファイラーでマネージ スタックをプログラムする方法の詳細については、次を参照してください。 [、.NET Framework 2.0 における Profiler スタック ウォーク: 基本、そしてその向こう](https://go.microsoft.com/fwlink/?LinkId=73638)します。  
+ プロファイラーでマネージ スタックをプログラムする方法の詳細については、次を参照してください。 [、.NET Framework 2.0 における Profiler スタック ウォーク。基本、そしてその向こう](https://go.microsoft.com/fwlink/?LinkId=73638)します。  
   
  スタック ウォークには、次のセクションで説明するよう同期または非同期でを指定できます。  
   
@@ -91,23 +91,24 @@ HRESULT DoStackSnapshot(
   
  非同期のスタック ウォークを簡単にデッドロックが発生するか、アクセス違反が次のガイドラインに従わない場合、します。  
   
--   直接のスレッドを中断する場合は、マネージ コードを実行しないが、スレッドが別のスレッドを中断できますを注意してください。  
+- 直接のスレッドを中断する場合は、マネージ コードを実行しないが、スレッドが別のスレッドを中断できますを注意してください。  
   
--   常にブロック、 [icorprofilercallback::threaddestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md)スレッドのスタック ウォークが完了するまでのコールバック。  
+- 常にブロック、 [icorprofilercallback::threaddestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md)スレッドのスタック ウォークが完了するまでのコールバック。  
   
--   プロファイラーがガベージ コレクションをトリガーできる CLR 関数を呼び出すときに、ロックを保持しないでください。 つまり、所有元のスレッドがガベージ コレクションをトリガーする呼び出しを行う場合、ロックを保持しないでください。  
+- プロファイラーがガベージ コレクションをトリガーできる CLR 関数を呼び出すときに、ロックを保持しないでください。 つまり、所有元のスレッドがガベージ コレクションをトリガーする呼び出しを行う場合、ロックを保持しないでください。  
   
  またがデッドロックの危険性を呼び出す場合`DoStackSnapshot`プロファイラーが別のターゲット スレッドのスタックを学ぶことができるように作成したスレッドから。 最初に作成したスレッドが特定`ICorProfilerInfo*`メソッド (含む`DoStackSnapshot`)、CLR はスレッドごと、そのスレッドで CLR 固有の初期化を実行します。 プロファイラーには、スタック ウォーク、しようとして対象のスレッドが中断されている場合、およびその対象スレッドは、このスレッドごとの初期化を実行するために必要なロックを所有するが発生した場合は、デッドロックが発生します。 このデッドロックを回避することを最初の呼び出しに`DoStackSnapshot`からプロファイラーが作成したスレッドについて説明しますが、別が対象に、スレッドは、まず対象のスレッドを中断しないようにします。 この最初の呼び出しにより、スレッドごとの初期化がデッドロックなしで完了できます。 場合`DoStackSnapshot`が成功し、少なくとも 1 つのフレームを報告その後、対象のスレッドと呼び出しを中断するプロファイラーが作成したスレッドの安全ななります`DoStackSnapshot`ターゲット スレッドのスタック ウォークします。  
   
-## <a name="requirements"></a>要件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー** : CorProf.idl、CorProf.h  
+ **ヘッダー:** CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

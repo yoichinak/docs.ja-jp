@@ -7,14 +7,14 @@ helpviewer_keywords:
 - interface implementation [Visual Basic], walkthrough
 - interfaces [Visual Basic], creating
 ms.assetid: ded82af2-9f52-4232-98ef-fe458180f112
-ms.openlocfilehash: af9305deb60637b642d091501e743f2c7a57ccad
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: faed4d3c9498938e022daf821dd0aefbcbcf2e8d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43391082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053770"
 ---
-# <a name="walkthrough-creating-and-implementing-interfaces-visual-basic"></a>チュートリアル: インターフェイスの作成と実装 (Visual Basic)
+# <a name="walkthrough-creating-and-implementing-interfaces-visual-basic"></a>チュートリアル: 作成するインターフェイスと実装 (Visual Basic)
 
 インターフェイスは、プロパティ、メソッド、およびイベントの特性を記述が最大構造体またはクラスの実装の詳細のままにします。  
   
@@ -27,15 +27,15 @@ ms.locfileid: "43391082"
   
 ## <a name="to-define-an-interface"></a>インターフェイスを定義するには
   
-1.  新しい Visual Basic Windows アプリケーション プロジェクトを開きます。  
+1. 新しい Visual Basic Windows アプリケーション プロジェクトを開きます。  
   
-2.  新しいモジュールをクリックして、プロジェクトに追加**モジュールの追加**上、**プロジェクト**メニュー。  
+2. 新しいモジュールをクリックして、プロジェクトに追加**モジュールの追加**上、**プロジェクト**メニュー。  
   
-3.  新しいモジュールの名前を付けます`Module1.vb`クリック**追加**。 新しいモジュールのコードが表示されます。  
+3. 新しいモジュールの名前を付けます`Module1.vb`クリック**追加**。 新しいモジュールのコードが表示されます。  
   
-4.  という名前のインターフェイスを定義`TestInterface`内`Module1`」と入力して`Interface TestInterface`間、`Module`と`End Module`ステートメント、およびし、ENTER キーを押します。 **コード エディター**インデント、`Interface`キーワードを追加し、`End Interface`コード ブロックを形成するステートメント。  
+4. という名前のインターフェイスを定義`TestInterface`内`Module1`」と入力して`Interface TestInterface`間、`Module`と`End Module`ステートメント、およびし、ENTER キーを押します。 **コード エディター**インデント、`Interface`キーワードを追加し、`End Interface`コード ブロックを形成するステートメント。  
   
-5.  間に次のコードを配置することで、プロパティ、メソッド、およびインターフェイスのイベントを定義、`Interface`と`End Interface`ステートメント。  
+5. 間に次のコードを配置することで、プロパティ、メソッド、およびインターフェイスのイベントを定義、`Interface`と`End Interface`ステートメント。  
   
      [!code-vb[VbVbalrOOP#98](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#98)]
   
@@ -45,13 +45,13 @@ ms.locfileid: "43391082"
   
 ### <a name="to-implement-the-interface"></a>インターフェイスを実装するには
   
-1.  という名前のクラスを追加`ImplementationClass`次のステートメントを追加して`Module1`後に、`End Interface`ステートメントする前に、`End Module`ステートメント、および ENTER を押してします。  
+1. という名前のクラスを追加`ImplementationClass`次のステートメントを追加して`Module1`後に、`End Interface`ステートメントする前に、`End Module`ステートメント、および ENTER を押してします。  
   
      [!code-vb[VbVbalrOOP#99](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#99)]
   
      統合開発環境内で作業している場合、**コード エディター**提供、一致する`End Class`ENTER キーを押したときのステートメント。  
   
-2.  次の追加`Implements`ステートメントを`ImplementationClass`クラス、インターフェイスの名前を実装します。  
+2. 次の追加`Implements`ステートメントを`ImplementationClass`クラス、インターフェイスの名前を実装します。  
   
      [!code-vb[VbVbalrOOP#100](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#100)]
   
@@ -59,13 +59,13 @@ ms.locfileid: "43391082"
   
      統合開発環境内で作業している場合、**コード エディター**で必要なクラス メンバーを実装して`TestInterface`、ENTER キーを押すし、次の手順をスキップすることができます。  
   
-3.  統合開発環境内で動作していない場合は、インターフェイスのすべてのメンバーを実装する必要があります`MyInterface`します。 次のコードを追加`ImplementationClass`を実装する`Event1`、 `Method1`、および`Prop1`:  
+3. 統合開発環境内で動作していない場合は、インターフェイスのすべてのメンバーを実装する必要があります`MyInterface`します。 次のコードを追加`ImplementationClass`を実装する`Event1`、 `Method1`、および`Prop1`:  
   
      [!code-vb[VbVbalrOOP#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#101)]
   
      `Implements`ステートメント インターフェイスおよび実装するインターフェイス メンバーの名前します。  
   
-4.  定義が完了`Prop1`プロパティ値を格納するクラスにプライベート フィールドを追加することで。  
+4. 定義が完了`Prop1`プロパティ値を格納するクラスにプライベート フィールドを追加することで。  
   
      [!code-vb[VbVbalrOOP#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#102)]
   
@@ -77,39 +77,39 @@ ms.locfileid: "43391082"
   
      [!code-vb[VbVbalrOOP#104](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#104)]
   
-5.  定義が完了`Method1`次のコードを追加します。  
+5. 定義が完了`Method1`次のコードを追加します。  
   
      [!code-vb[VbVbalrOOP#105](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#105)]
   
 ### <a name="to-test-the-implementation-of-the-interface"></a>インターフェイスの実装をテストするには
   
-1.  プロジェクトのスタートアップ フォームを右クリックし、**ソリューション エクスプ ローラー**、 をクリック**コードの表示**します。 エディターには、スタートアップ フォームのクラスが表示されます。 既定では、スタートアップ フォームと呼ばれる`Form1`します。  
+1. プロジェクトのスタートアップ フォームを右クリックし、**ソリューション エクスプ ローラー**、 をクリック**コードの表示**します。 エディターには、スタートアップ フォームのクラスが表示されます。 既定では、スタートアップ フォームと呼ばれる`Form1`します。  
   
-2.  次の追加`testInstance`フィールドを`Form1`クラス。  
+2. 次の追加`testInstance`フィールドを`Form1`クラス。  
   
      [!code-vb[VbVbalrOOP#120](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#120)]
   
      宣言することで`testInstance`として`WithEvents`、`Form1`クラスは、そのイベントを処理できます。  
   
-3.  次のイベント ハンドラーを追加、`Form1`によって生成されるイベントを処理するクラスを`testInstance`:  
+3. 次のイベント ハンドラーを追加、`Form1`によって生成されるイベントを処理するクラスを`testInstance`:  
   
      [!code-vb[VbVbalrOOP#106](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#106)]
   
-4.  という名前のサブルーチンを追加`Test`を`Form1`実装クラスをテストするクラス。  
+4. という名前のサブルーチンを追加`Test`を`Form1`実装クラスをテストするクラス。  
   
      [!code-vb[VbVbalrOOP#107](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#107)]
   
      `Test`プロシージャは、実装するクラスのインスタンスを作成します。 `MyInterface`、そのインスタンスを割り当てます、`testInstance`フィールド、プロパティの設定およびインターフェイスを通じたメソッドを実行します。  
   
-5.  呼び出すコードを追加、`Test`プロシージャから、`Form1 Load`スタートアップ フォームの手順。  
+5. 呼び出すコードを追加、`Test`プロシージャから、`Form1 Load`スタートアップ フォームの手順。  
   
      [!code-vb[VbVbalrOOP#108](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#108)]
   
-6.  実行、 `Test` f5 キーを押してプロシージャ。 メッセージ"Prop1 が 9 に設定"が表示されます。 クリックした後、メッセージ"Method1 の X パラメーター is 5"が表示されます。 [Ok] をクリックして、「イベント ハンドラーが、イベントが発生しました」のメッセージが表示されます。  
+6. 実行、 `Test` f5 キーを押してプロシージャ。 メッセージ"Prop1 が 9 に設定"が表示されます。 クリックした後、メッセージ"Method1 の X パラメーター is 5"が表示されます。 [Ok] をクリックして、「イベント ハンドラーが、イベントが発生しました」のメッセージが表示されます。  
   
 ## <a name="see-also"></a>関連項目
 
- [Implements ステートメント](../../../../visual-basic/language-reference/statements/implements-statement.md)  
- [インターフェイス](../../../../visual-basic/programming-guide/language-features/interfaces/index.md)  
- [Interface ステートメント](../../../../visual-basic/language-reference/statements/interface-statement.md)  
- [Event ステートメント](../../../../visual-basic/language-reference/statements/event-statement.md)  
+- [Implements ステートメント](../../../../visual-basic/language-reference/statements/implements-statement.md)
+- [インターフェイス](../../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+- [Interface ステートメント](../../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Event ステートメント](../../../../visual-basic/language-reference/statements/event-statement.md)

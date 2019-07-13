@@ -7,29 +7,29 @@ helpviewer_keywords:
 - WPF application [WPF], building
 - WPF application [WPF], deploying
 ms.assetid: 88952ad2-5b74-48ca-a4c5-3f4fbb53ce12
-ms.openlocfilehash: bed7484f7ff487d1ff34ef1ff1e86bc8689a2cfc
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 4aaeeed4ff6a130c6d3ddda696286222d7c9efaf
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46561017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052236"
 ---
 # <a name="build-and-deploy-how-to-topics"></a>ビルドおよび配置に関する「方法」トピック
 次のトピックのさまざまなプロジェクト ファイルを作成する方法を説明する[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションの種類。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [WPF アプリケーションを配置するように IIS 5.0 および IIS 6.0 を構成する](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)  
- [Visual Studio を構成して Web サービスを呼び出す XAML ブラウザー アプリケーションをデバッグする](../../../../docs/framework/wpf/app-development/configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)  
- [インストールされている WPF のバージョンを確認する](../../../../docs/framework/wpf/app-development/how-to-determine-the-installed-version-of-wpf.md)  
- [.NET Framework 3.0 がインストールされているかどうかを確認する](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)  
- [.NET Framework 3.5 がインストールされているかどうかを確認する](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-5-is-installed.md)  
- [Firefox に対応した WPF プラグインがインストールされているかどうかを確認する](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)  
+ [WPF アプリケーションを配置するように IIS 5.0 および IIS 6.0 を構成する](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)  
+ [Visual Studio を構成して Web サービスを呼び出す XAML ブラウザー アプリケーションをデバッグする](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)  
+ [インストールされている WPF のバージョンを確認する](how-to-determine-the-installed-version-of-wpf.md)  
+ [.NET Framework 3.0 がインストールされているかどうかを確認する](how-to-detect-whether-the-net-framework-3-0-is-installed.md)  
+ [.NET Framework 3.5 がインストールされているかどうかを確認する](how-to-detect-whether-the-net-framework-3-5-is-installed.md)  
+ [Firefox に対応した WPF プラグインがインストールされているかどうかを確認する](how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)  
   
 ## <a name="related-sections"></a>関連項目  
- [WPF アプリケーションのビルド](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
+ [WPF アプリケーションのビルド](building-a-wpf-application-wpf.md)  
   
- [WPF アプリケーションの配置](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
+ [WPF アプリケーションの配置](deploying-a-wpf-application-wpf.md)  
   
- [方法: 新しい WPF アプリケーション プロジェクトを作成します。](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)  
+ [チュートリアル: 初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [方法: 新しい WPF ブラウザー アプリケーション プロジェクトを作成します。](https://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f)
+ [方法: 新しい WPF ブラウザー アプリケーション プロジェクトを作成します。](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0333cd73240e685b46917d85afe0876532db3fd1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 081548f9004d2fedf4d49845d3f44d4609fa508e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391899"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626303"
 ---
 # <a name="how-to-reference-net-types-from-com"></a>方法: COM から .NET 型を参照する
 クライアント アンド サーバー コードの観点からすると、COM と .NET Framework の違いはほとんどわかりません。 Microsoft Visual Basic クライアントでは、オブジェクト ブラウザーを使って .NET オブジェクトを表示できます。オブジェクト ブラウザーには、オブジェクトのメソッドと構文、プロパティ、およびフィールドが、他の COM オブジェクトの場合と同様に公開されます。  
@@ -28,7 +28,7 @@ ms.locfileid: "33391899"
   
 ### <a name="to-import-a-library"></a>ライブラリをインポートするには  
   
--   **#import** ディレクティブで **raw_interfaces_only** オプションを指定します。 例:  
+- **#import** ディレクティブで **raw_interfaces_only** オプションを指定します。 次に例を示します。  
   
     ```cpp  
     #import "..\LoanLib\LoanLib.tlb" raw_interfaces_only  
@@ -36,15 +36,16 @@ ms.locfileid: "33391899"
   
      - または -  
   
--   Mscorlib.tlb の #import ディレクティブを含めます。 例:  
+- Mscorlib.tlb の #import ディレクティブを含めます。 次に例を示します。  
   
     ```cpp  
     #import "mscorlib.tlb"  
     #import "..\LoanLib\LoanLib.tlb"  
     ```  
   
-## <a name="see-also"></a>参照  
- [COM への .NET Framework コンポーネントの公開](exposing-dotnet-components-to-com.md)  
- [COM へのアセンブリの登録](registering-assemblies-with-com.md)  
- [.NET オブジェクトの呼び出し](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))  
- [COM アクセスに対するアプリケーションの配置](https://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce(v=vs.100))
+## <a name="see-also"></a>関連項目
+
+- [COM への .NET Framework コンポーネントの公開](exposing-dotnet-components-to-com.md)
+- [COM へのアセンブリの登録](registering-assemblies-with-com.md)
+- [.NET オブジェクトの呼び出し](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
+- [COM アクセスに対するアプリケーションの配置](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))

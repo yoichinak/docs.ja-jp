@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: b98095cd6afd408331ab8c8f6bb15e7741d3073a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b35db12c8da1f333b481d2bd2e7633026ae30c30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189694"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570724"
 ---
 # <a name="net-architectural-components"></a>.NET アーキテクチャ コンポーネント
 
@@ -22,15 +22,15 @@ ms.locfileid: "50189694"
 
 .NET Standard は、[ターゲット フレームワーク](glossary.md#target-framework)でもあります。 コードが .NET Standard のバージョンをターゲットにする場合、.NET Standard のそのバージョンをサポートするすべての .NET 実装でそのコードを実行できます。
 
-.NET Standard とそのターゲットの設定方法については、「[.NET Standard](net-standard.md)」を参照してください。
+.NET Standard とそのターゲットの設定方法については、「[.NET Standard](net-standard.md)」を参照してください。 
 
 ## <a name="net-implementations"></a>.NET 実装
 
 各 .NET 実装には、次のコンポーネントが含まれています。
 
-- 1 つまたは複数のランタイム。 たとえば、CLR for .NET Framework、CoreCLR、CoreRT for .NET Core などです。
+- 1 つまたは複数のランタイム。 次に例を示します。CLR for .NET Framework、CoreCLR、CoreRT for .NET Core などです。
 - .NET Standard を実装し、他の API も実装する可能性があるクラス ライブラリ。 たとえば、.NET Framework 基本クラス ライブラリや .NET Core 基本クラス ライブラリなどです。
-- 必要に応じて、1 つまたは複数のアプリケーション フレームワーク。 たとえば、.NET Framework には、[ASP.NET](https://www.asp.net/)、[Windows フォーム](../framework/winforms/windows-forms-overview.md)、[Windows Presentation Foundation (WPF)](../framework/wpf/index.md) などです。
+- 必要に応じて、1 つまたは複数のアプリケーション フレームワーク。 次に例を示します。 .NET Framework には、[ASP.NET](https://www.asp.net/)、[Windows フォーム](../framework/winforms/windows-forms-overview.md)、[Windows Presentation Foundation (WPF)](../framework/wpf/index.md) などです。
 - 必要に応じて、開発ツール。 一部の開発ツールは、複数の実装間で共有されます。
 
 Microsoft が積極的に開発し保守している主要な .NET 実装としては、.NET Core、.NET Framework、Mono、UWP の 4 つがあります。
@@ -86,10 +86,10 @@ UWP の詳細については、「[ユニバーサル Windows プラットフォ
 
 ## <a name="see-also"></a>関連項目
 
-- [サーバー アプリ用 .NET Core と .NET Framework の選択](choosing-core-framework-server.md)   
-- [.NET Standard](net-standard.md)  
-- [.NET Core のガイド](../core/index.md)  
-- [.NET Framework ガイド](../framework/index.md)  
-- [C# のガイド](../csharp/index.md)  
-- [F# のガイド](../fsharp/index.md)  
-- [VB.NET ガイド](../visual-basic/index.md)  
+- [サーバー アプリ用 .NET Core と .NET Framework の選択](choosing-core-framework-server.md)
+- [.NET Standard](net-standard.md)
+- [.NET Core のガイド](../core/index.md)
+- [.NET Framework ガイド](../framework/index.md)
+- [C# のガイド](../csharp/index.md)
+- [F# のガイド](../fsharp/index.md)
+- [VB.NET ガイド](../visual-basic/index.md)

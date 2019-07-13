@@ -9,19 +9,19 @@ helpviewer_keywords:
 - literals [Visual Basic], coercing data type
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
-ms.openlocfilehash: 1d030f8058cd497212c20bca8f064f2bedc99fce
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 50e36aa13439bafcca27a7153a8c5d6043f03975
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906972"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>定数とリテラルのデータ型 (Visual Basic)
 リテラルは、変数の値または値 3 または文字列「こんにちは」など、式の結果ではなく自体として表現される値です。 定数とは、リテラルの代わりを受け取り、値が変化し、変数ではなく、プログラム全体で同じ値を保持するわかりやすい名前です。  
   
  ときに[Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)は`Off`と[Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)は`On`データ型を持つすべての定数を明示的に宣言する必要があります。 データ型を次の例では、`MyByte`データ型として明示的に宣言されて`Byte`:  
   
- [!code-vb[VbVbalrConstants#1](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_1.vb)]  
+ [!code-vb[VbVbalrConstants#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#1)]  
   
  ときに`Option Infer`は`On`または`Option Strict`は`Off`、定数を宣言するにはデータ型を指定せず、`As`句。 コンパイラは、定数式の型からの種類を決定します。 既定でに整数リテラルをキャスト、`Integer`データ型。 浮動小数点数がの既定のデータ型`Double`、およびキーワード`True`と`False`指定、`Boolean`定数。  
   
@@ -39,11 +39,11 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
   
  前の例を実行するために、追加することができます、`D`文字入力すると、リテラルとして表現すると、その、 `Decimal`:  
   
- [!code-vb[VbVbalrConstants#2](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_2.vb)]  
+ [!code-vb[VbVbalrConstants#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#2)]  
   
  次の例では、型文字と囲み文字の正しい使用法を示しています。  
   
- [!code-vb[VbVbalrConstants#3](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_3.vb)]  
+ [!code-vb[VbVbalrConstants#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#3)]  
   
  次の表は、それを囲む文字と Visual Basic で利用可能な型の文字。  
   
@@ -61,14 +61,15 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
 |`Single`|(なし)|F または!|  
 |`String`|"|(なし)|  
   
-## <a name="see-also"></a>関連項目  
- [ユーザー定義定数](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)  
- [方法 : 定数を宣言する](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)  
- [定数の概要](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)  
- [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [Option Explicit ステートメント](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
- [列挙型の概要](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)  
- [方法: 列挙型を宣言](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)  
- [列挙型と名前の修飾](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)  
- [データの種類](../../../../visual-basic/language-reference/data-types/index.md)  
- [定数と列挙体](../../../../visual-basic/language-reference/constants-and-enumerations.md)
+## <a name="see-also"></a>関連項目
+
+- [ユーザー定義定数](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)
+- [方法: 定数を宣言します。](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)
+- [定数の概要](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
+- [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Option Explicit ステートメント](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)
+- [列挙型の概要](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
+- [方法: 列挙体を宣言します。](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [列挙型と名前の修飾](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
+- [データの種類](../../../../visual-basic/language-reference/data-types/index.md)
+- [定数と列挙体](../../../../visual-basic/language-reference/constants-and-enumerations.md)

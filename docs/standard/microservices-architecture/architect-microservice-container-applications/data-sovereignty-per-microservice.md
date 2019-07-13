@@ -1,15 +1,13 @@
 ---
 title: マイクロサービス単位のデータ管理
 description: マイクロサービスのキー ポイントの 1 つは、マイクロサービス単位でのデータ管理です。 各マイクロサービスは、他とそのデータベースを共有することがない、その唯一の所有者である必要があります。 マイクロサービスのすべてのインスタンスは、当然同じ高可用性のデータベースに接続されます。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 136f8d173042ab235e5fa3c8478f4aa5659a9787
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ccb12451cd7cd44938e09d171eb29e614786f469
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126849"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644445"
 ---
 # <a name="data-sovereignty-per-microservice"></a>マイクロサービス単位のデータ管理
 
@@ -27,7 +25,7 @@ ms.locfileid: "53126849"
 
 中央のデータベース アプローチは、最初は単純に思え、さまざまなサブシステムでエンティティを再利用してすべての一貫性を保てるように思えます。 しかし、実際は、多くの異なるサブシステムにサービスを提供する、ほとんどの場合に必要のない属性や列を含んだ大きなテーブルを用意することになります。 これは、短い散歩にも、日帰りドライブにも、地理の勉強にも、同じ縮尺の地図を利用するようなものです。
 
-通常は単一のリレーショナル データベースを使用するモノリシック アプリケーションには、[ACID トランザクション](https://en.wikipedia.org/wiki/ACID)と SQL 言語という 2 つの重要な利点があります。このいずれも、アプリケーションに関連するすべてのテーブルとデータを処理します。 このアプローチを利用すると、複数のテーブルのデータを結合するクエリを簡単に記述することができます。
+単一のリレーショナル データベースを使用するモノリシック アプリケーションには、通常、[ACID トランザクション](https://en.wikipedia.org/wiki/ACID)と SQL 言語という 2 つの重要な利点があります。このいずれも、アプリケーションに関連するすべてのテーブルとデータを処理します。 このアプローチを利用すると、複数のテーブルのデータを結合するクエリを簡単に記述することができます。
 
 一方、マイクロサービス アーキテクチャに移行すると、データ アクセスははるかに複雑になります。 ただし、マイクロサービスまたは境界コンテキスト内で ACID トランザクションを使用できる場合、または使用する必要がある場合でも、各マイクロサービスが所有するデータは、そのマイクロサービス専用です。また、マイクロサービス API を介してのみアクセスできます。 データをカプセル化することで、マイクロサービス間の結合は弱くなり、相互に独立して進化できます。 複数のサービスが同じデータにアクセスしている場合、スキーマの更新にはすべてのサービスに対する更新を調整する必要があります。 これではマイクロサービスのライフサイクルの自律性が失われます。 ただし、分散データ構造なので、マイクロサービス全体で単一の ACID トランザクションは作成できません。 つまり、ビジネス プロセスが複数のマイクロサービスにまたがる場合、最終的な整合性を使用する必要があります。 これは、後述するとおり、別のデータベース間で整合性制約を作成したり、分散トランザクションを使用したりできないので、単純な SQL 結合を実装するよりも困難になります。 同様に、その他の多くのリレーショナル データベース機能も、複数のマイクロサービス間で使用できません。
 
@@ -37,7 +35,7 @@ ms.locfileid: "53126849"
 
 ## <a name="the-relationship-between-microservices-and-the-bounded-context-pattern"></a>マイクロサービスと境界コンテキスト パターンの関係
 
-マイクロサービスの概念は、[ドメイン駆動型設計 (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design) の[境界コンテキスト (BC) パターン](http://martinfowler.com/bliki/BoundedContext.html)に由来しています。 DDD は、モデルを複数の BC に分割し、その境界を明示的にすることで大規模なモデルを扱っています。 各 BC は独自のモデルとデータベースを持つ必要があります。同様に、各マイクロサービスはその関連データを所有しています。 さらに各 BC には、ソフトウェア開発者とドメイン専門家の間のコミュニケーションに役立つ独自の[ユビキタス言語](http://martinfowler.com/bliki/UbiquitousLanguage.html)が存在するのが一般的です。
+マイクロサービスの概念は、[ドメイン駆動型設計 (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design) の[境界コンテキスト (BC) パターン](https://martinfowler.com/bliki/BoundedContext.html)に由来しています。 DDD は、モデルを複数の BC に分割し、その境界を明示的にすることで大規模なモデルを扱っています。 各 BC は独自のモデルとデータベースを持つ必要があります。同様に、各マイクロサービスはその関連データを所有しています。 さらに各 BC には、ソフトウェア開発者とドメイン専門家の間のコミュニケーションに役立つ独自の[ユビキタス言語](https://martinfowler.com/bliki/UbiquitousLanguage.html)が存在するのが一般的です。
 
 異なるドメイン エンティティが同じ ID (つまり、ストレージからエンティティを読み取るために使用される一意の ID) を共有している場合でも、ユビキタス言語で使われる用語 (主にドメイン エンティティ) は、境界コンテキストによって名前が異なる可能性があります。 たとえば、"ユーザー プロファイル" 境界コンテキストの "ユーザー" ドメイン エンティティが、"注文" 境界コンテキストの "購入者" ドメイン エンティティと ID を共有する可能性があります。
 
@@ -50,16 +48,16 @@ DDD は、分散型マイクロサービスの形で実際の境界を獲得す�
 ### <a name="additional-resources"></a>その他の技術情報
 
 - **Chris Richardson。パターン: サービスごとのデータベース** \
-  [*https://microservices.io/patterns/data/database-per-service.html*](https://microservices.io/patterns/data/database-per-service.html)
+  <https://microservices.io/patterns/data/database-per-service.html>
 
 - **Martin Fowler。BoundedContext** \
-  [*https://martinfowler.com/bliki/BoundedContext.html*](https://martinfowler.com/bliki/BoundedContext.html)
+  <https://martinfowler.com/bliki/BoundedContext.html>
 
 - **Martin Fowler。PolyglotPersistence** \
-  [*https://martinfowler.com/bliki/PolyglotPersistence.html*](https://martinfowler.com/bliki/PolyglotPersistence.html)
+  <https://martinfowler.com/bliki/PolyglotPersistence.html>
 
 - **Alberto Brandolini。コンテキスト マッピングを使用した戦略的ドメイン駆動設計** \
-  [*https://www.infoq.com/articles/ddd-contextmapping*](https://www.infoq.com/articles/ddd-contextmapping)
+  <https://www.infoq.com/articles/ddd-contextmapping>
 
 >[!div class="step-by-step"]
 >[前へ](microservices-architecture.md)

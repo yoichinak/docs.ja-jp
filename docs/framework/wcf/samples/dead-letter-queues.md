@@ -2,12 +2,12 @@
 title: 配信不能キュー
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: c6b3f059f1a1b11825b595346ed47f6a498078f1
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 59e2344d2bd6a9de3396f7d6d878182333138ff3
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582607"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425484"
 ---
 # <a name="dead-letter-queues"></a>配信不能キュー
 このサンプルでは、配信できなかったメッセージの処理方法を示します。 基にして、[トランザクション MSMQ バインディング](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)サンプル。 このサンプルでは、`netMsmqBinding` バインディングを使用します。 サービスは自己ホスト型コンソール アプリケーションであるので、キューに置かれたメッセージをサービスが受信するようすを観察できます。
@@ -20,19 +20,19 @@ ms.locfileid: "48582607"
 
  キュー通信では、クライアントはサービスとの通信にキューを使用します。 厳密には、クライアントはメッセージをキューに送信します。 サービスは、メッセージをキューから受信します。 したがって、キューを使用する通信では、サービスとクライアントが同時に実行されていなくてもかまいません。
 
- キューを使用する通信では一定の活動停止状態が生じるので、メッセージの有効期間を設定して、有効期間経過後はメッセージをアプリケーションに配信しないようにすることが必要になる場合があります。 また、アプリケーションによっては、メッセージの配信が失敗したかどうかを通知する必要があります。 このような場合に、メッセージの有効期間が経過すると、あるいはメッセージの配信に失敗すると、メッセージは配信不能キューに置かれます。 このとき、送信元のアプリケーションは、配信不能キューに置かれたメッセージを読み取って修正処理を行います。修正処理とは、何も行わない場合から、配信失敗の原因を解消してメッセージを再送信する場合までさまざまです。
+ キューを使用する通信では一定の活動停止状態が生じるので、メッセージの有効期間を設定して、有効期間経過後はメッセージをアプリケーションに配信しないようにすることが必要になる場合があります。 また、アプリケーションによっては、メッセージの配信が失敗したかどうかを通知する必要があります。 このような場合に、メッセージの有効期間が経過すると、あるいはメッセージの配信に失敗すると、メッセージは配信不能キューに置かれます。 このとき、送信元のアプリケーションは、配信不能キューに置かれたメッセージを読み取って是正措置を行います。是正措置とは、何も行わない場合から、配信失敗の原因を解消してメッセージを再送信する場合までさまざまです。
 
  `NetMsmqBinding` バインディングの配信不能キューは、次のプロパティとして表されます。
 
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> プロパティは、クライアントが必要とする配信不能キューの種類を表します。 この列挙体には、次の値があります。
+- <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> プロパティは、クライアントが必要とする配信不能キューの種類を表します。 この列挙体には、次の値があります。
 
--   `None` : クライアントは配信不能キューを必要としません。
+- `None`:クライアントでは、配信不能キューは必要ありません。
 
--   `System`: システムの配信不能キューを使用して配信不能メッセージを保存します。 システムの配信不能キューは、そのコンピューターで実行されているすべてのアプリケーションで共有されます。
+- `System`:システム配信不能キューを使用して、配信不能メッセージを格納します。 システムの配信不能キューは、そのコンピューターで実行されているすべてのアプリケーションで共有されます。
 
--   `Custom`: <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> プロパティで指定されるカスタムの配信不能キューを使用して配信不能メッセージを保存します。 この機能は、[!INCLUDE[wv](../../../../includes/wv-md.md)] でのみ使用できます。 同じコンピューターで実行されている他のアプリケーションとキューを共有するのではなく、そのアプリケーション専用の配信不能キューが必要な場合に、この値を使用します。
+- `Custom`:カスタム配信不能キューを使用して指定、<xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>プロパティは、配信不能メッセージの格納に使用されます。 この機能は、[!INCLUDE[wv](../../../../includes/wv-md.md)] でのみ使用できます。 同じコンピューターで実行されている他のアプリケーションとキューを共有するのではなく、そのアプリケーション専用の配信不能キューが必要な場合に、この値を使用します。
 
--   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> プロパティは、配信不能キューとして使用される特定のキューを表します。 このプロパティは [!INCLUDE[wv](../../../../includes/wv-md.md)] でのみ使用できます。
+- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> プロパティは、配信不能キューとして使用される特定のキューを表します。 このプロパティは [!INCLUDE[wv](../../../../includes/wv-md.md)] でのみ使用できます。
 
  このサンプルでは、クライアントがトランザクションのスコープ内からメッセージをまとめてサービスに送信しますが、メッセージの "有効期間" には意図的に小さい値 (約 2 秒) を指定しています。 さらに、有効期限切れのメッセージを入れるために使用するカスタムの配信不能キューを指定します。
 
@@ -156,7 +156,7 @@ class Client
 ```csharp
 public void SubmitPurchaseOrder(PurchaseOrder po)
 {
-    Console.WriteLine("Submitting purchase order did not succed ", po);
+    Console.WriteLine("Submitting purchase order did not succeed ", po);
     MsmqMessageProperty mqProp =
                   OperationContext.Current.IncomingMessageProperties[
                   MsmqMessageProperty.Name] as MsmqMessageProperty;
@@ -310,27 +310,27 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには
 
-1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。
+1. 実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。
 
-2.  サービスを最初に実行すると、サービスはキューが存在するかどうかを確認します。 キューが存在しない場合、サービスによってキューが作成されます。 最初にサービスを実行してキューを作成することも、MSMQ キュー マネージャーでキューを作成することもできます。 Windows 2008 でキューを作成するには、次の手順に従います。
+2. サービスを最初に実行すると、サービスはキューが存在するかどうかを確認します。 キューが存在しない場合、サービスによってキューが作成されます。 最初にサービスを実行してキューを作成することも、MSMQ キュー マネージャーでキューを作成することもできます。 Windows 2008 でキューを作成するには、次の手順に従います。
 
-    1.  Visual Studio 2012 では、サーバー マネージャーを開きます。
+    1. Visual Studio 2012 では、サーバー マネージャーを開きます。
 
-    2.  展開、**機能**タブ。
+    2. 展開、**機能**タブ。
 
-    3.  右クリック**プライベート メッセージ キュー**、選び**新規**、**プライベート キュー**します。
+    3. 右クリック**プライベート メッセージ キュー**、選び**新規**、**プライベート キュー**します。
 
-    4.  チェック、**トランザクション**ボックス。
+    4. チェック、**トランザクション**ボックス。
 
-    5.  入力`ServiceModelSamplesTransacted`として新しいキューの名前。
+    5. 入力`ServiceModelSamplesTransacted`として新しいキューの名前。
 
-3.  ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。
+3. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。
 
-4.  実行するサンプル 1 つまたは複数コンピューター構成の変更のキュー名、適切に localhost、コンピューターの完全な名前との指示に従います[Windows Communication Foundation サンプルを実行している](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. 実行するサンプル 1 つまたは複数コンピューター構成の変更のキュー名、適切に localhost、コンピューターの完全な名前との指示に従います[Windows Communication Foundation サンプルを実行している](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>ワークグループに参加しているコンピューターでこのサンプルを実行するには
 
-1.  ドメインに属していないコンピューターを使用する場合は、トランスポート セキュリティをオフにします。オフにするには、認証モードとセキュリティ レベルを `None` に設定します。サンプル構成を次に示します。
+1. ドメインに属していないコンピューターを使用する場合は、トランスポート セキュリティをオフにします。オフにするには、認証モードとセキュリティ レベルを `None` に設定します。サンプル構成を次に示します。
 
     ```xml
     <bindings>
@@ -344,13 +344,13 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
      エンドポイントの `bindingConfiguration` 属性が設定されて、エンドポイントとバインディングとが関連付けられていることを確認します。
 
-2.  DeadLetterService、サーバー、およびクライアントの構成を変更したことを確認してから、サンプルを実行します。
+2. DeadLetterService、サーバー、およびクライアントの構成を変更したことを確認してから、サンプルを実行します。
 
     > [!NOTE]
     >  `security mode` を `None` に設定することは、`MsmqAuthenticationMode`、`MsmqProtectionLevel`、および `Message` のセキュリティを `None` に設定することに相当します。
 
 ## <a name="comments"></a>コメント
- `netMsmqBinding` バインディング トランスポートを使用する場合の既定では、セキュリティが有効です。 トランスポート セキュリティの種類は、`MsmqAuthenticationMode` と `MsmqProtectionLevel` の 2 つのプロパティで決まります。 既定の設定では、認証モードは `Windows`、保護レベルは `Sign` です。 MSMQ の認証および署名の機能を利用するには、ドメインに属している必要があります。 ドメインに属していないコンピューターでこのサンプルを実行すると、"User's internal message queuing certificate does not exist" というエラーが表示されます。
+ `netMsmqBinding` バインディング トランスポートを使用する場合の既定では、セキュリティが有効です。 トランスポート セキュリティの種類は、`MsmqAuthenticationMode` と `MsmqProtectionLevel` の 2 つのプロパティで決まります。 既定の設定では、認証モードは `Windows`、保護レベルは `Sign` です。 MSMQ の認証および署名の機能を利用するには、ドメインに属している必要があります。 ドメインの一部ではないコンピューターでこのサンプルを実行する場合は、次のエラーが表示されます。「ユーザーの内部メッセージ キュー証明書がありません」。
 
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
@@ -360,5 +360,3 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 >  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  
-  
-## <a name="see-also"></a>関連項目

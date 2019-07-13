@@ -1,15 +1,14 @@
 ---
 title: .NET Core CLI の拡張モデル
 description: コマンド ライン インターフェイス (CLI) ツールを拡張する方法について説明します。
-author: blackdwarf
 ms.date: 04/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 3aedd1d507fde1cd7402ef97fa00d0c7f13005e3
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: ca6bf30fb6aaf815a859a00bc391ef790566acaf
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170237"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675096"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>.NET Core CLI ツールの拡張モデル
 
@@ -79,7 +78,7 @@ CLI ツールは、主に次の 3 つの方法で拡張できます。
 豊富な例やさまざまな組み合わせを [.NET Core CLI リポジトリ](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestProjects) で見つけることができます。
 また、同じリポジトリで[使用されたツールの実装](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestPackages)を確認することもできます。
 
-### <a name="custom-targets"></a>カスタム ターゲット
+## <a name="custom-targets"></a>カスタム ターゲット
 NuGet には、[カスタム MSBuild ターゲット ファイルとプロパティ ファイルをパッケージ化](/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package)する機能があります。 .NET Core CLI ツールが MSBuild を使用するようになり、同じ拡張機能のメカニズムが .NET Core プロジェクトに適用されています。 このような拡張機能は、ビルド プロセスの拡張が必要な場合、生成されたファイルなどのビルド プロセスの成果物にアクセスする必要がある場合、またはビルドが呼び出される構成を検査する場合などに使用します。
 
 次の例では、ターゲットのプロジェクト ファイルで `csproj` 構文を使用しています。 これは、[`dotnet pack`](dotnet-pack.md) コマンドにパッケージ対象を指示し、ターゲット ファイルだけでなくアセンブリをパッケージ内の *build* フォルダーに格納する例です。 `Label` プロパティが `dotnet pack instructions` に設定された `<ItemGroup>` 要素があり、その下に Target が定義されています。
@@ -137,7 +136,7 @@ NuGet には、[カスタム MSBuild ターゲット ファイルとプロパテ
 
 ただし、ユーザーに優れたユーザー エクスペリエンスを提供するため、プロジェクトごとのツールとカスタム ターゲットを組み合わせることができます。 このシナリオでは、プロジェクトごとのツールは基本的に必要な任意のパラメーターのみを受け入れ、それをターゲットを実行する必要な [`dotnet msbuild`](dotnet-msbuild.md) の呼び出しに変換します。 このような相乗効果のサンプルは、[`dotnet-packer`](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer) プロジェクトの「[MVP Summit 2016 Hackathon samples](https://github.com/dotnet/MVPSummitHackathon2016)」 (MVP Summit 2016 ハッカソンのサンプル) レポートで参照することができます。
 
-### <a name="path-based-extensibility"></a>パス ベースの拡張機能
+## <a name="path-based-extensibility"></a>パス ベースの拡張機能
 通常、パス ベースの拡張機能は、概念的に複数のプロジェクトに対応するツールが必要な開発用コンピューターに使用されます。 この拡張機能のメカニズムの主なデメリットは、ツールが存在するマシンに関連付けられていることです。 別のコンピューターで拡張機能が必要な場合は、それを展開する必要があります。
 
 このパターンの CLI ツールセットの拡張は、非常に単純です。 [.NET Core CLI の概要](index.md)に関するページにあるように、`dotnet` ドライバーは、`dotnet-<command>` 規則にふさわしい名前が付けられた任意のコマンドを実行することができます。 この既定の解決ロジックは、最初にいくつかの場所をプローブし、最後にシステム パスに取りかかります。 要求されたコマンドがシステム パスに存在し、起動することができるバイナリである場合、`dotnet` ドライバーでそれを起動します。

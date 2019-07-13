@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], overview
 ms.assetid: 1d37645e-086d-4d68-a358-f3c5b6e8205e
-ms.openlocfilehash: d0fc45b5ccabedb127061090eed1f6b63fd7acba
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f9c903dd520f1aa85fc0577264288ecbc8c62a7f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046563"
 ---
 # <a name="metadata-architecture-overview"></a>メタデータ アーキテクチャの概要
 Windows Communication Foundation (WCF) は、エクスポート、公開、取得、およびサービスのメタデータをインポートするためのさまざまなインフラストラクチャを提供します。 WCF サービスでは、メタデータを使用して、Svcutil.exe などのツールが、サービスにアクセスするためのクライアント コードを自動的に生成されるように、サービスのエンドポイントと対話する方法について説明します。  
@@ -53,7 +53,7 @@ Windows Communication Foundation (WCF) は、エクスポート、公開、取�
 > [!CAUTION]
 > MEX エンドポイントをアプリケーション構成ファイルに追加した後で、<xref:System.ServiceModel.Description.ServiceMetadataBehavior> をコード内のサービス ホストに追加しようとすると、次の例外が発生します。  
 >
-> System.InvalidOperationException: コントラクト名 'IMetadataExchange' は、サービス Service1 によって実装されたコントラクトの一覧に見つかりませんでした。 ServiceMetadataBehavior を構成ファイルまたは ServiceHost ディレクトリに直接追加してこのコントラクトのサポートを有効にしてください。  
+> System.InvalidOperationException:コントラクト名 'IMetadataExchange' は、サービス Service1 によって実装されるコントラクトの一覧で見つかりませんでした。 ServiceMetadataBehavior を構成ファイルまたは ServiceHost ディレクトリに直接追加してこのコントラクトのサポートを有効にしてください。  
 >
 > <xref:System.ServiceModel.Description.ServiceMetadataBehavior> を構成ファイルに追加するか、またはエンドポイントと <xref:System.ServiceModel.Description.ServiceMetadataBehavior> の両方をコードに追加することにより、この問題を回避できます。  
 >
@@ -87,12 +87,13 @@ Windows Communication Foundation (WCF) は、エクスポート、公開、取�
 ## <a name="dynamic-bindings"></a>動的なバインド  
  エンドポイントのバインドが変化するイベントでサービス エンドポイントへのチャネルを作成する、または、同じコントラクトを使用しているがバインドが異なるエンドポイントへのチャネルを作成するために使用するバインドを動的に更新することができます。 <xref:System.ServiceModel.Description.MetadataResolver> 静的クラスを使用して、特定のコントラクトを実装しているサービス エンドポイントのメタデータを、実行時に取得またはインポートできます。 その後、インポートした <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> オブジェクトを使用して、必要なエンドポイントに対するクライアントまたはチャネル ファクトリを作成できます。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Description>  
- [メタデータ形式](../../../../docs/framework/wcf/feature-details/metadata-formats.md)  
- [メタデータのエクスポートとインポート](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)  
- [メタデータの公開](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
- [メタデータを取得する](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
- [メタデータを使用する](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
- [メタデータを使用する場合のセキュリティ上の考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
- [メタデータ システムの拡張](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Description>
+- [メタデータ形式](../../../../docs/framework/wcf/feature-details/metadata-formats.md)
+- [メタデータのエクスポートとインポート](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)
+- [メタデータの公開](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)
+- [メタデータを取得する](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)
+- [メタデータを使用する](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+- [メタデータを使用する場合のセキュリティ上の考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
+- [メタデータ システムの拡張](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)

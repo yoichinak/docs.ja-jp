@@ -1,5 +1,5 @@
 ---
-title: '&lt;compiler&gt;要素'
+title: <compiler> 要素
 ms.date: 08/14/2018
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#compiler
@@ -10,16 +10,14 @@ helpviewer_keywords:
 - compiler configuration attributes
 - compiler element
 ms.assetid: 7a151659-b803-4c27-b5ce-1c4aa0d5a823
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: e8c5021b00de503783adb3f1b1dc11964639afbf
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 34753d538ff37ac4ae621f653d47ac92ac6749a0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705377"
 ---
-# <a name="ltcompilergt-element"></a>&lt;compiler&gt;要素
+# <a name="compiler-element"></a>\<compiler> 要素
 
 言語プロバイダーのコンパイラ構成属性を指定します。
 
@@ -106,4 +104,4 @@ ms.locfileid: "50193541"
 - [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [\<compilers> 要素](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)
 - [完全修飾型名の指定](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)
-- [(ASP.NET 設定スキーマ) compilation の compilers の compiler 要素](https://msdn.microsoft.com/library/f7d6b078-5d42-4134-b3f7-62e1aba1df1e(v=vs.100))
+- [(ASP.NET 設定スキーマ) compilation の compilers の compiler 要素](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a15ebt6c(v=vs.100))

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6a2c38340614e633de4049515b38cb387031739b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1ccafea78aa2497c52442a10ad1af1c05771df7e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446037"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737110"
 ---
 # <a name="imetadataemitsetfieldprops-method"></a>IMetaDataEmit::SetFieldProps メソッド
 設定または指定したフィールドのトークンによって参照されるフィールドの既定値を更新します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetFieldProps (  
     [in]  mdFieldDef  fd,   
     [in]  DWORD       dwFieldFlags,   
@@ -39,31 +39,32 @@ HRESULT SetFieldProps (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `fd`  
- [in]対象のフィールドのトークン。  
+ [in]対象フィールドのトークンです。  
   
  `dwFieldFlags`  
- [in]フィールドの属性。 これは、ビットマスク`CorFieldAttr`値。  
+ [in]フィールドの属性。 これは、ビットマスクの`CorFieldAttr`値。  
   
  `dwCPlusTypeFlag`  
- [in]`ELEMENT_TYPE_` *\** 定数値にします。 これは、`CorElementType`値。 定数が定義されない場合は、この値を設定`ELEMENT_TYPE_END`です。  
+ [in]`ELEMENT_TYPE_` *\** 定数の値。 これは、`CorElementType`値。 定数が定義されていない場合は、この値を設定`ELEMENT_TYPE_END`します。  
   
  `pValue`  
  [in]フィールドの定数値。  
   
  `cchValue`  
- [in]Unicode 文字のサイズの`pValue`します。  
+ [in]Unicode 文字で、サイズの`pValue`します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
  **ライブラリ:** MSCorEE.dll にリソースとして使用  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

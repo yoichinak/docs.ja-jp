@@ -2,12 +2,12 @@
 title: キーワード リファレンス
 description: すべての F# 言語のキーワードに関する情報へのリンクを検索します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 75adc609dc6feeda2be9aa76bbb50b47b3d738ea
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: d55846fe7c8d31454b6bc8684de75546800df7d6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904099"
 ---
 # <a name="keyword-reference"></a>キーワード リファレンス
 
@@ -20,7 +20,7 @@ ms.locfileid: "53611751"
 |キーワード|リンク|説明|
 |-------|----|-----------|
 |`abstract`|[メンバー](members/index.md)<br /><br />[抽象クラス](abstract-classes.md)|宣言されているか、仮想で既定の実装を備えた型の実装を持つかないメソッドを示します。|
-|`and`|[`let` バインド](functions/let-bindings.md)<br /><br />[メンバー](members/index.md)<br /><br />[制約](generics/constraints.md)|相互に再帰的なバインドで、ジェネリック パラメーターで複数の制約を使用してプロパティの宣言で使用されます。|
+|`and`|[`let` バインド](functions/let-bindings.md)<br /><br />[レコード](records.md)<br /><br />[メンバー](members/index.md)<br /><br />[制約](generics/constraints.md)|再帰的なバインドとレコードをジェネリック パラメーターで複数の制約を使用してプロパティの宣言で相互にで使用されます。|
 |`as`|[クラス](classes.md)<br /><br />[パターン一致](Pattern-Matching.md)|現在のクラス オブジェクトにオブジェクト名を提供するために使用します。 パターン マッチング内のパターン全体に名前を指定するために使用します。|
 |`assert`|[アサーション](assertions.md)|デバッグ中にコードを確認するために使用します。|
 |`base`|[クラス](classes.md)<br /><br />[継承](inheritance.md)|基底クラスのオブジェクトの名前として使用されます。|
@@ -50,7 +50,7 @@ ms.locfileid: "53611751"
 |`inline`|[関数](functions/index.md)<br /><br />[インライン関数](functions/inline-functions.md)|呼び出し元のコードに直接統合される関数を示すために使用します。|
 |`interface`|[インターフェイス](interfaces.md)|宣言し、インターフェイスを実装するために使用します。|
 |`internal`|[アクセス制御](access-control.md)|メンバーが表示されていることを指定するために使用ではなく外では、アセンブリ内部。|
-|`lazy`|[遅延計算](lazy-computations.md)|結果が必要な場合にのみ実行する計算を指定するために使用します。|
+|`lazy`|[遅延式](lazy-expressions.md)|結果が必要な場合にのみ実行される式を指定するために使用します。|
 |`let`|[`let` バインド](functions/let-bindings.md)|関連付けるには、またはバインドして、値または関数の名前に使用します。|
 |`let!`|[非同期ワークフロー](asynchronous-workflows.md)<br /><br />[コンピュテーション式](computation-expressions.md)|非同期計算の結果に名前をバインドする非同期のワークフローまたは計算型の結果に名前をバインドするために使用、その他のコンピュテーション式を使用します。|
 |`match`|[match 式](match-expressions.md)|値をパターンと比較して分岐を使用します。|
@@ -64,7 +64,7 @@ ms.locfileid: "53611751"
 |`null`|[null 値](values/null-values.md)<br /><br />[制約](generics/constraints.md)|オブジェクトがないことを示します。<br /><br />ジェネリック パラメーターの制約にも使用されます。|
 |`of`|[判別共用体](discriminated-unions.md)<br /><br />[デリゲート](delegates.md)<br /><br />[例外の種類](exception-handling/exception-types.md)|値のカテゴリの種類を示すために、判別共用体およびデリゲートと例外の宣言を使用します。|
 |`open`|[インポート宣言: `open`キーワード](import-declarations-the-open-keyword.md)|修飾なしの名前空間またはモジュールの内容を利用するために使用します。|
-|`or`|[シンボルと演算子のリファレンス](symbol-and-operator-reference/index.md)<br /><br />[制約](generics/constraints.md)|ブール値としてブール条件で使用される`or`演算子。 等価 '||`.<br /><br />メンバー制約でも使用されます。|
+|`or`|[シンボルと演算子のリファレンス](symbol-and-operator-reference/index.md)<br /><br />[制約](generics/constraints.md)|ブール値としてブール条件で使用される`or`演算子。 これは、`||` に相当します。<br /><br />メンバー制約でも使用されます。|
 |`override`|[メンバー](members/index.md)|基本のバージョンとは異なる抽象または仮想メソッドのバージョンを実装するために使用します。|
 |`private`|[アクセス制御](access-control.md)|同じ型またはモジュール内のコードにメンバーへのアクセスを制限します。|
 |`public`|[アクセス制御](access-control.md)|型の外部からのメンバーにアクセスをできます。|
@@ -73,7 +73,7 @@ ms.locfileid: "53611751"
 |`return!`|[コンピュテーション式](computation-expressions.md)<br /><br />[非同期ワークフロー](asynchronous-workflows.md)|コンピュテーション式を示すために使用するには、評価されると、親のコンピュテーション式の結果を提供します。|
 |`select`|[クエリ式](query-expressions.md)|クエリ式で使用すると、どのようなフィールドまたは列を抽出するを指定します。 コンテキスト キーワード、つまり実際に予約語ではないと適切なコンテキストでのキーワードに似た動作のみであるに注意してください。|
 |`static`|[メンバー](members/index.md)|メソッドや型のインスタンスなしで呼び出されるプロパティまたは型のすべてのインスタンス間で共有される値のメンバーを示すために使用します。|
-|`struct`|[構造体](structures.md)<br /><br />[制約](generics/constraints.md)|構造体の型を宣言するために使用します。<br /><br />ジェネリック パラメーターの制約にも使用されます。<br /><br />OCaml モジュールの定義の互換性のために使用します。|
+|`struct`|[構造体](structures.md)<br /><br /> [タプル](tuples.md)<br/><br/>[制約](generics/constraints.md)|構造体の型を宣言するために使用します。<br /><br/>構造体タプルを指定するために使用します。<br/><br />ジェネリック パラメーターの制約にも使用されます。<br /><br />OCaml モジュールの定義の互換性のために使用します。|
 |`then`|[条件式: `if...then...else`](conditional-expressions-if-then-else.md)<br /><br />[コンストラクター](members/constructors.md)|条件式で使用されます。<br /><br />オブジェクトの構築後に副作用を実行するために使用します。|
 |`to`|[ループ:`for...to` 式](loops-for-to-expression.md)|使用される`for`ループ範囲を示します。|
 |`true`|[プリミティブ型](primitive-types.md)|ブール型リテラルとして使用されます。|

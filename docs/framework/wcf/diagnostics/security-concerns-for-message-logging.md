@@ -2,12 +2,12 @@
 title: メッセージ ログ記録のセキュリティの考慮事項
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: 5ed2529d82c3994a245d2132909cd1e88b6ed62d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e1503249d5fd33e320ccb6642eb6e97c3029ba85
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188808"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651824"
 ---
 # <a name="security-concerns-for-message-logging"></a>メッセージ ログ記録のセキュリティの考慮事項
 ここでは、メッセージ ログに表示される機密データだけでなく、メッセージ ログによって生成されるイベントを保護する方法についても説明します。  
@@ -21,11 +21,11 @@ ms.locfileid: "50188808"
   
  ログ ファイルの内容が意図せず公開されることを防ぐためには、次のヒントに従います。  
   
--   Web ホストおよび自己ホストの両方のシナリオにおいて、ログ ファイルがアクセス制御リスト (ACL) によって保護されていることを確認します。  
+- Web ホストおよび自己ホストの両方のシナリオにおいて、ログ ファイルがアクセス制御リスト (ACL) によって保護されていることを確認します。  
   
--   Web 要求を使用して簡単に処理できないファイル拡張子を選択します。 たとえば、.xml ファイルの拡張子を選ぶのは安全ではありません。 インターネット インフォメーション サービス (IIS) の管理ガイドを参照して、処理できる拡張子のリストを確認します。  
+- Web 要求を使用して簡単に処理できないファイル拡張子を選択します。 たとえば、.xml ファイルの拡張子を選ぶのは安全ではありません。 インターネット インフォメーション サービス (IIS) の管理ガイドを参照して、処理できる拡張子のリストを確認します。  
   
--   ログ ファイルのある場所への絶対パスを指定します。この場所は、部外者が Web ブラウザーを使用してアクセスできないように、Web ホストの vroot パブリック ディレクトリの外にします。  
+- ログ ファイルのある場所への絶対パスを指定します。この場所は、部外者が Web ブラウザーを使用してアクセスできないように、Web ホストの vroot パブリック ディレクトリの外にします。  
   
  既定では、キーおよびユーザー名やパスワードなどの個人を特定できる情報 (PII) は、トレースおよびログに記録するメッセージではありません。 しかし、コンピューターの管理者は、Machine.config ファイルの `enableLoggingKnownPII` 要素にある `machineSettings` 属性を使用して、コンピューター上で実行されているアプリケーションに対し、既知の PII (個人を特定できる情報) のログ記録を許可できます。 次の構成では、この設定方法について示します。  
   
@@ -99,16 +99,17 @@ ms.locfileid: "50188808"
 ## <a name="events-triggered-by-message-logging"></a>メッセージ ログ記録でトリガーされるイベント  
  メッセージ ログ記録で発生するすべてのイベントを以下に示します。  
   
--   Message logging on : このイベントは、メッセージ ログ記録が構成内で、または WMI を介して有効になっている場合に発生します。 イベントの内容は "メッセージのログ記録が有効になりました。 機密情報は、通信回線上で暗号化されていた場合でも平文で記録される可能性があります (メッセージ本文など)" となります。  
+- メッセージのログ記録:構成では、または WMI を通じて、メッセージのログ記録が有効にすると、このイベントが生成されます。 イベントの内容は "メッセージのログ記録が有効になりました。 機密情報は、通信回線上で暗号化されていた場合でも平文で記録される可能性があります (メッセージ本文など)" となります。  
   
--   Message logging off : このイベントは、メッセージ ログ記録が WMI を介して無効になっている場合に発生します。 イベントの内容は "メッセージのログ記録が無効になりました" となります。  
+- ログオフ メッセージ:メッセージのログ記録が WMI を介して無効にした場合、このイベントが生成されます。 イベントの内容は "メッセージのログ記録が無効になりました" となります。  
   
--   Log Known PII On : このイベントは、既知の PII のログ記録が有効になっている場合に発生します。 これは、ようなときに、`enableLoggingKnownPii`属性、 `machineSettings` Machine.config ファイルの要素に設定されている`true`、および`logKnownPii`の属性、 `source` に、App.configまたはWeb.configファイル内の要素が設定されている`true`.  
+- 既知の PII をログオンします。既知の PII のログ記録が有効にすると、このイベントが生成されます。 これは、ようなときに、`enableLoggingKnownPii`属性、 `machineSettings` Machine.config ファイルの要素に設定されている`true`、および`logKnownPii`の属性、 `source` に、App.configまたはWeb.configファイル内の要素が設定されている`true`.  
   
--   Log Known PII Not Allowed : このイベントは既知の PII のログ記録が許可されていない場合に発生します。 これは、ようなときに、`logKnownPii`の属性、 `source` 、App.config または Web.config ファイル内の要素に設定されている`true`が、`enableLoggingKnownPii`属性、 `machineSettings` にMachine.configファイルの要素が設定されている`false`. 例外をスローすることはありません。  
+- 許可されていない既知の PII をログします。既知の PII のログ記録が許可されていない場合は、このイベントが生成されます。 これは、ようなときに、`logKnownPii`の属性、 `source` 、App.config または Web.config ファイル内の要素に設定されている`true`が、`enableLoggingKnownPii`属性、 `machineSettings` にMachine.configファイルの要素が設定されている`false`. 例外をスローすることはありません。  
   
  これらのイベントは、Windows に付属するイベント ビューアー ツールを使用して表示できます。 詳細については、これは、次を参照してください。[イベントがログ記録](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [メッセージ ログ](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
- [トレースに関するセキュリティの考慮事項と役立つヒント](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)
+## <a name="see-also"></a>関連項目
+
+- [メッセージ ログ](../../../../docs/framework/wcf/diagnostics/message-logging.md)
+- [トレースに関するセキュリティの考慮事項と役立つヒント](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)

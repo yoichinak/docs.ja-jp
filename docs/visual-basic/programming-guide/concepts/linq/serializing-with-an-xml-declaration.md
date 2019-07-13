@@ -1,15 +1,15 @@
 ---
-title: XML 宣言 (Visual Basic) でシリアル化します。
+title: XML 宣言 (Visual Basic) 付きのシリアル化
 ms.date: 07/20/2015
 ms.assetid: 8726f79e-2bb0-4ba0-969d-197cca591647
-ms.openlocfilehash: 6b7351d85dab997ba6cb0ef023972e9e4e4fca14
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f51dacb0f89e1042ba9875bec10a0cb1fe25f889
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786439"
 ---
-# <a name="serializing-with-an-xml-declaration-visual-basic"></a>XML 宣言 (Visual Basic) でシリアル化します。
+# <a name="serializing-with-an-xml-declaration-visual-basic"></a>XML 宣言 (Visual Basic) 付きのシリアル化
 このトピックでは、シリアル化を実行する際に XML 宣言を生成するかどうかを制御する方法について説明します。  
   
 ## <a name="xml-declaration-generation"></a>XML 宣言の生成  
@@ -61,5 +61,6 @@ Console.WriteLine(sb.ToString())
 <Root><Child>child content</Child></Root>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [(Visual Basic) の XML ツリーをシリアル化します。](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)
+## <a name="see-also"></a>関連項目
+
+- [シリアル化する XML ツリー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)

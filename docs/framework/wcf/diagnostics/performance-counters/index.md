@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: d0ad7ee0bc3ea1d15197e6b8d9888d60b21a2f15
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 2f4c62ff551ac66c4b7192a4e978db0a9f443f3f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846221"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613697"
 ---
 # <a name="wcf-performance-counters"></a>WCF パフォーマンス カウンター
 Windows Communication Foundation (WCF) には、多数アプリケーションのパフォーマンスの測定に役立つパフォーマンス カウンターにはが含まれています。  
@@ -27,11 +27,11 @@ Windows Communication Foundation (WCF) には、多数アプリケーション�
   
  特定の種類のパフォーマンス カウンターを有効にするよう `performanceCounters` 属性を設定できます。 有効な値は、次のとおりです。  
   
--   All : すべてのカテゴリ カウンター (ServiceModelService、ServiceModelEndpoint、ServiceModelOperation) を有効にします。  
+- すべての：すべてのカテゴリ カウンター (ServiceModelService、ServiceModelEndpoint、ServiceModelOperation) が有効になります。  
   
--   ServiceOnly : ServiceModelService カテゴリ カウンターのみを有効にします。 これが既定値です。  
+- ServiceOnly:ServiceModelService カテゴリ カウンターのみが有効になります。 これが既定値です。  
   
--   Off : ServiceModel* パフォーマンス カウンターを無効にします。  
+- オフします。ServiceModel * パフォーマンス カウンターが無効です。  
   
  すべての WCF アプリケーションのパフォーマンス カウンターを有効にする場合は、Machine.config ファイルで構成設定を配置できます。  参照してください、**パフォーマンス カウンターのメモリ サイズの増加**コンピューターに十分なメモリのパフォーマンス カウンターの構成の詳細については後述します。  
   
@@ -59,28 +59,28 @@ config.Save();
 ## <a name="increasing-memory-size-for-performance-counters"></a>パフォーマンス カウンターのメモリ サイズの増加  
  WCF では、そのパフォーマンス カウンターのカテゴリを個別の共有メモリを使用します。  
   
- 既定では、個々の共有メモリは、グローバル パフォーマンス カウンターのメモリ サイズの 4 分の 1 に設定されます。 グローバル パフォーマンス カウンターのメモリの既定値は 524,288 バイトです。 そのため、3 つの WCF パフォーマンス カウンターのカテゴリには、既定のサイズは約 128 KB があります。 コンピューターで WCF アプリケーションの実行時特性によっては、パフォーマンス カウンターのメモリを使い果たして可能性があります。 この場合、WCF は、アプリケーション イベント ログにエラーを書き込みます。 エラーの内容にはパフォーマンス カウンターが読み込まれなかったことが示され、エントリには、"System.InvalidOperationException: カスタム カウンター ファイル ビューのメモリが足りません" という例外が含まれます。 このエラー レベルでトレースが有効になっている場合は、さらにこの障害がトレースされます。 パフォーマンス カウンターのメモリがなくなった場合は、パフォーマンスの低下になる可能性がありますを有効になっているパフォーマンス カウンターと、WCF アプリケーションの実行を継続します。 コンピューターの管理者は、使用可能なすべてのパフォーマンス カウンターをいつでも読み込めるだけの十分なメモリを割り当てておく必要があります。  
+ 既定では、個々の共有メモリは、グローバル パフォーマンス カウンターのメモリ サイズの 4 分の 1 に設定されます。 グローバル パフォーマンス カウンターのメモリの既定値は 524,288 バイトです。 そのため、3 つの WCF パフォーマンス カウンターのカテゴリには、既定のサイズは約 128 KB があります。 コンピューターで WCF アプリケーションの実行時特性によっては、パフォーマンス カウンターのメモリを使い果たして可能性があります。 この場合、WCF は、アプリケーション イベント ログにエラーを書き込みます。 エラーの内容の状態のパフォーマンス カウンターが読み込まれていないことと、エントリには、例外が含まれています"System.invalidoperationexception::。カスタム カウンター ファイル ビューのメモリ不足です。" このエラー レベルでトレースが有効になっている場合は、さらにこの障害がトレースされます。 パフォーマンス カウンターのメモリがなくなった場合は、パフォーマンスの低下になる可能性がありますを有効になっているパフォーマンス カウンターと、WCF アプリケーションの実行を継続します。 コンピューターの管理者は、使用可能なすべてのパフォーマンス カウンターをいつでも読み込めるだけの十分なメモリを割り当てておく必要があります。  
   
  レジストリ内の WCF カテゴリのパフォーマンス カウンターのメモリの量を変更することができます。 これを行うには、次の 3 つの場所に `FileMappingSize` という名前の新しい DWORD 値を追加し、目的の値をバイト単位で設定します。 コンピューターを再起動すると、設定した値が有効になります。  
   
--   HKLM\System\CurrentControlSet\Services\ServiceModelEndpoint 4.0.0.0\Performance  
+- HKLM\System\CurrentControlSet\Services\ServiceModelEndpoint 4.0.0.0\Performance  
   
--   HKLM\System\CurrentControlSet\Services\ServiceModelOperation 4.0.0.0\Performance  
+- HKLM\System\CurrentControlSet\Services\ServiceModelOperation 4.0.0.0\Performance  
   
--   HKLM\System\CurrentControlSet\Services\ServiceModelService 4.0.0.0\Performance  
+- HKLM\System\CurrentControlSet\Services\ServiceModelService 4.0.0.0\Performance  
   
  膨大な数のオブジェクト (ServiceHost など) が破棄され、ガベージ コレクトされるまで待機している場合、`PrivateBytes` パフォーマンス カウンターには非常に高い数値が登録されます。 この問題を解決するには、アプリケーション固有の独自のカウンターを追加するか、`performanceCounters` 属性を使用してサービス レベルのカウンターだけを有効にします。  
   
 ## <a name="types-of-performance-counters"></a>パフォーマンス カウンターの種類  
- パフォーマンス カウンターには、サービス、エンドポイント、操作の 3 つのレベルがあります。  
+ 次の 3 つの異なるレベルのスコープはパフォーマンス カウンター。サービス、エンドポイントおよび操作します。  
   
- WMI を使用してパフォーマンス カウンターのインスタンス名を取得できます。 たとえば、オブジェクトに適用された  
+ WMI を使用してパフォーマンス カウンターのインスタンス名を取得できます。 例えば以下のようにします。  
   
--   WMI を通じてサービス カウンター インスタンス名を取得できます[サービス](../../../../../docs/framework/wcf/diagnostics/wmi/service.md)インスタンスの"CounterInstanceName"プロパティです。  
+- WMI を通じてサービス カウンター インスタンス名を取得できます[サービス](../../../../../docs/framework/wcf/diagnostics/wmi/service.md)インスタンスの"CounterInstanceName"プロパティです。  
   
--   WMI を通じてエンドポイント カウンター インスタンス名を取得できます[エンドポイント](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md)インスタンスの"CounterInstanceName"プロパティです。  
+- WMI を通じてエンドポイント カウンター インスタンス名を取得できます[エンドポイント](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md)インスタンスの"CounterInstanceName"プロパティです。  
   
--   WMI を通じて操作カウンター インスタンス名を取得できます[エンドポイント](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md)インスタンスの"GetOperationCounterInstanceName"メソッドです。  
+- WMI を通じて操作カウンター インスタンス名を取得できます[エンドポイント](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md)インスタンスの"GetOperationCounterInstanceName"メソッドです。  
   
  WMI の詳細については、次を参照してください。[診断用の Windows Management Instrumentation のを使用して](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)します。  
   
@@ -126,17 +126,18 @@ ServiceName@ServiceBaseAddress
 ## <a name="programming-the-wcf-performance-counters"></a>WCF パフォーマンス カウンターのプログラミング  
  複数のファイルは、WCF パフォーマンス カウンタをプログラムでアクセスできるように、SDK のインストール フォルダーにインストールされます。 そのファイルを次に示します。  
   
--   _ServiceModelEndpointPerfCounters.vrg  
+- _ServiceModelEndpointPerfCounters.vrg  
   
--   _ServiceModelOperationPerfCounters.vrg  
+- _ServiceModelOperationPerfCounters.vrg  
   
--   _ServiceModelServicePerfCounters.vrg  
+- _ServiceModelServicePerfCounters.vrg  
   
--   _SMSvcHostPerfCounters.vrg  
+- _SMSvcHostPerfCounters.vrg  
   
--   _TransactionBridgePerfCounters.vrg  
+- _TransactionBridgePerfCounters.vrg  
   
  カウンターをプログラムでアクセスする方法の詳細については、次を参照してください。[パフォーマンス カウンターのプログラミング アーキテクチャ](https://go.microsoft.com/fwlink/?LinkId=95179)します。  
   
-## <a name="see-also"></a>関連項目  
- [管理と診断](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>関連項目
+
+- [管理と診断](../../../../../docs/framework/wcf/diagnostics/index.md)

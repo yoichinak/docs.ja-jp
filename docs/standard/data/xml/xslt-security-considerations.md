@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 77f29cb14af90854fa18f421acbeb701928bcd76
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 69ee0743f7b0c64efbfd8a75e8dc463d79323d4c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50034363"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615312"
 ---
 # <a name="xslt-security-considerations"></a>XSLT のセキュリティに関する考慮事項
 XSLT 言語には、優れた性能と柔軟性を兼ね備えた豊富な機能が用意されています。 ただし、多くの機能を利用できることが便利であると同時に、外部から不正に利用される可能性もあります。 XSLT を安全に使用するために、XSLT の使用に伴うさまざまなセキュリティ上の問題とそのリスクを軽減するための基本的な対策を理解しておく必要があります。  
@@ -18,9 +18,9 @@ XSLT 言語には、優れた性能と柔軟性を兼ね備えた豊富な機能
 ## <a name="xslt-extensions"></a>XSLT 拡張機能  
  スタイル シート スクリプトと拡張オブジェクトの 2 つは、XSLT の一般的な拡張機能です。 これらの拡張機能を使用すると、XSLT プロセッサでコードを実行できます。  
   
--   拡張オブジェクトは、XSLT にプログラミング機能を追加します。  
+- 拡張オブジェクトは、XSLT にプログラミング機能を追加します。  
   
--   スクリプトは、拡張要素である `msxsl:script` 要素を使用してスタイル シートに埋め込むことができます。  
+- スクリプトは、拡張要素である `msxsl:script` 要素を使用してスタイル シートに埋め込むことができます。  
   
 ### <a name="extension-objects"></a>拡張オブジェクト  
  拡張オブジェクトは、<xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> メソッドを使用して追加します。 拡張オブジェクトをサポートするには、FullTrust アクセス許可セットが必要です。 このアクセス許可セットを設定すれば、拡張オブジェクト コードの実行時にアクセス許可の昇格が起こりません。 FullTrust アクセス許可なしで <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> メソッドを呼び出そうとすると、セキュリティ例外がスローされます。  
@@ -34,9 +34,9 @@ XSLT 言語には、優れた性能と柔軟性を兼ね備えた豊富な機能
 ## <a name="external-resources"></a>外部リソース  
  XSLT 言語には、`xsl:import`、`xsl:include`、または `document()` 関数などの機能があります。これらの機能では、プロセッサが URI リファレンスを解決する必要があります。 外部リソースを解決するには、<xref:System.Xml.XmlResolver> クラスを使用します。 外部リソースの解決が必要になる可能性があるのは、次の 2 つの場合です。  
   
--   スタイル シートをコンパイルする場合には、<xref:System.Xml.XmlResolver> および `xsl:import` を解決するために `xsl:include` を使用します。  
+- スタイル シートをコンパイルする場合には、<xref:System.Xml.XmlResolver> および `xsl:import` を解決するために `xsl:include` を使用します。  
   
--   変換を実行する場合には、<xref:System.Xml.XmlResolver> 関数を解決するために `document()` を使用します。  
+- 変換を実行する場合には、<xref:System.Xml.XmlResolver> 関数を解決するために `document()` を使用します。  
   
     > [!NOTE]
     >  `document()` クラスでは、<xref:System.Xml.Xsl.XslCompiledTransform> 関数は既定で無効になっています。 この機能を有効にするには、<xref:System.Xml.Xsl.XsltSettings.EnableDocumentFunction%2A?displayProperty=nameWithType> プロパティを `true` に設定して、<xref:System.Xml.Xsl.XsltSettings> オブジェクトを <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> メソッドに渡します。  
@@ -48,16 +48,16 @@ XSLT 言語には、優れた性能と柔軟性を兼ね備えた豊富な機能
   
  <xref:System.Xml.XmlResolver> オブジェクトを使用する場合の説明を次の一覧に示します。  
   
--   XSLT 処理で認証が必要なネットワーク リソースにアクセスする必要がある場合、必要な資格情報に対して <xref:System.Xml.XmlResolver> を使用します。  
+- XSLT 処理で認証が必要なネットワーク リソースにアクセスする必要がある場合、必要な資格情報に対して <xref:System.Xml.XmlResolver> を使用します。  
   
--   XSLT 処理がアクセスできるリソースを制限する場合、適切なアクセス許可セットに対して <xref:System.Xml.XmlSecureResolver> を使用します。 制御対象外の (信頼できない) リソースを開く場合には、<xref:System.Xml.XmlSecureResolver> クラスを使用します。  
+- XSLT 処理がアクセスできるリソースを制限する場合、適切なアクセス許可セットに対して <xref:System.Xml.XmlSecureResolver> を使用します。 制御対象外の (信頼できない) リソースを開く場合には、<xref:System.Xml.XmlSecureResolver> クラスを使用します。  
   
--   動作をカスタマイズする場合は、独自の <xref:System.Xml.XmlResolver> クラスを実装し、これを使用してリソースを解決することができます。  
+- 動作をカスタマイズする場合は、独自の <xref:System.Xml.XmlResolver> クラスを実装し、これを使用してリソースを解決することができます。  
   
--   外部リソースにアクセスできないようにする場合は、<xref:System.Xml.XmlResolver> の引数に `null` を指定します。  
+- 外部リソースにアクセスできないようにする場合は、<xref:System.Xml.XmlResolver> の引数に `null` を指定します。  
   
 ## <a name="see-also"></a>関連項目
 
-- [XSLT 変換](../../../../docs/standard/data/xml/xslt-transformations.md)  
-- [XSLT 処理中の外部リソースの解決](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)  
+- [XSLT 変換](../../../../docs/standard/data/xml/xslt-transformations.md)
+- [XSLT 処理中の外部リソースの解決](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)
 - [コード アクセス セキュリティ](../../../../docs/framework/misc/code-access-security.md)

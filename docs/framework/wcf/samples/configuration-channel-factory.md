@@ -2,12 +2,12 @@
 title: 構成チャネル ファクトリ
 ms.date: 03/30/2017
 ms.assetid: 3b749493-bd8a-4ccb-893e-5948901a1486
-ms.openlocfilehash: ec48743deddd52faed31b4a1a0af365909593414
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5bee4c7cc2c2e64c6e0d8d0ec2634f9500cd9d51
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002307"
 ---
 # <a name="configuration-channel-factory"></a>構成チャネル ファクトリ
 このサンプルでは、<xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> の使用方法を示します。 <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> WCF クライアントの構成サーバーの全体を管理できます。 これは、アプリケーション ドメインによる読み込みの後に構成が選択または変更される場合にも役立ちます。
@@ -33,15 +33,15 @@ ICalculatorChannel client1 = factory1.CreateChannel();
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには
 
-1.  管理者特権で Visual Studio 2012 を開きます。
+1. 管理者特権で Visual Studio 2012 を開きます。
 
-2.  ConfigurationChannelFactory ソリューション (2 プロジェクト) を右クリックし、**プロパティ**します。
+2. ConfigurationChannelFactory ソリューション (2 プロジェクト) を右クリックし、**プロパティ**します。
 
-3.  **共通プロパティ**を選択します**スタートアップ プロジェクト**、 をクリックし、**マルチ スタートアップ プロジェクト**します。
+3. **共通プロパティ**を選択します**スタートアップ プロジェクト**、 をクリックし、**マルチ スタートアップ プロジェクト**します。
 
-4.  移動、**サービス**でプロジェクトは、リストの先頭を**アクション 'Start'**、し、移動、**クライアント**プロジェクトの後に、**サービス**プロジェクトでも、**アクション 'Start'** であり、**クライアント**プロジェクトを実行した後、**サービス**プロジェクト。
+4. 移動、**サービス**でプロジェクトは、リストの先頭を**アクション 'Start'**、し、移動、**クライアント**プロジェクトの後に、**サービス**プロジェクトでも、**アクション 'Start'** であり、**クライアント**プロジェクトを実行した後、**サービス**プロジェクト。
 
-5.  をクリックして**OK**、し、f5 キーを押して (または ctrl キーを押しながら f5 キー)、サンプルを実行するキーを押します。
+5. をクリックして**OK**、し、f5 キーを押して (または ctrl キーを押しながら f5 キー)、サンプルを実行するキーを押します。
 
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  

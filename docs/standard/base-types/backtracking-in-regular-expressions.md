@@ -20,12 +20,12 @@ ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 3a61c65b108cba6bb256949a120afc76b58949f2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 289b6997a4d17463072418fbf17f5f99874f4988
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130092"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378163"
 ---
 # <a name="backtracking-in-regular-expressions"></a>正規表現におけるバックトラッキング
 <a name="top"></a> バックトラッキングは、正規表現パターンに省略可能な [量指定子](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) または [代替構成体](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)が含まれている場合に発生します。この場合、正規表現エンジンは、一致の検索を継続するために、以前に保存した状態に戻ります。 バックトラッキングは、正規表現を強力にするための中心的な機能で、これにより、非常に複雑なパターンを照合できる強力かつ柔軟な正規表現を作成できるようになります。 その一方で、バックトラッキングにはマイナス面もあり、 多くの場合、正規表現エンジンのパフォーマンスを左右する最大の要因になります。 さいわい、正規表現エンジンの動作とバックトラッキングの使用方法は開発者が制御できます。 ここでは、バックトラッキングの動作のしくみと、バックトラッキングを制御する方法について説明します。  
@@ -35,13 +35,13 @@ ms.locfileid: "53130092"
   
  このトピックは、次のセクションで構成されています。  
   
--   [バックトラッキングを使用しない直線的な比較](#linear_comparison_without_backtracking)  
+- [バックトラッキングを使用しない直線的な比較](#linear_comparison_without_backtracking)  
   
--   [省略可能な量指定子または代替構成体によるバックトラッキング](#backtracking_with_optional_quantifiers_or_alternation_constructs)  
+- [省略可能な量指定子または代替構成体によるバックトラッキング](#backtracking_with_optional_quantifiers_or_alternation_constructs)  
   
--   [入れ子になった省略可能な量指定子によるバックトラッキング](#backtracking_with_nested_optional_quantifiers)  
+- [入れ子になった省略可能な量指定子によるバックトラッキング](#backtracking_with_nested_optional_quantifiers)  
   
--   [バックトラッキングの制御](#controlling_backtracking)  
+- [バックトラッキングの制御](#controlling_backtracking)  
   
 <a name="linear_comparison_without_backtracking"></a>   
 ## <a name="linear-comparison-without-backtracking"></a>バックトラッキングを使用しない直線的な比較  
@@ -91,15 +91,15 @@ ms.locfileid: "53130092"
   
  この場合、正規表現エンジンでは次のようにバックトラッキングが使用されます。  
   
--   `.*` (任意の文字の 0 回以上の出現に一致します) を入力文字列全体と照合します。  
+- `.*` (任意の文字の 0 回以上の出現に一致します) を入力文字列全体と照合します。  
   
--   正規表現パターンの "e" との照合を試みますが、 入力文字列にはもう照合する文字がありません。  
+- 正規表現パターンの "e" との照合を試みますが、 入力文字列にはもう照合する文字がありません。  
   
--   最後に成功した照合 ("Essential services are provided by regular expressions.") にバックトラックして、"e" を文末のピリオドと照合します。 照合に失敗します。  
+- 最後に成功した照合 ("Essential services are provided by regular expressions.") にバックトラックして、"e" を文末のピリオドと照合します。 照合に失敗します。  
   
--   成功した前の照合へのバックトラッキングを一度に 1 文字ずつ繰り返して、暫定的に一致する部分文字列 "Essential services are provided by regular expr" に到達します。 その後、パターンの "e" を "expressions" の 2 つ目の "e" と比較して、一致を見つけます。  
+- 成功した前の照合へのバックトラッキングを一度に 1 文字ずつ繰り返して、暫定的に一致する部分文字列 "Essential services are provided by regular expr" に到達します。 その後、パターンの "e" を "expressions" の 2 つ目の "e" と比較して、一致を見つけます。  
   
--   パターンの "s" を、一致した文字 "e" の後の "s" ("expressions" の 1 つ目の "s") と比較します。 照合に成功します。  
+- パターンの "s" を、一致した文字 "e" の後の "s" ("expressions" の 1 つ目の "s") と比較します。 照合に成功します。  
   
  バックトラッキングを使用した場合、この正規表現パターンを 55 文字の入力文字列と照合するのに 67 回の比較操作が必要になります。 一般に、正規表現パターンに 1 つの代替構成体または省略可能な量指定子が含まれている場合、パターンの照合に必要な比較操作の回数は入力文字列の文字数の 2 倍以上になります。  
   
@@ -114,11 +114,11 @@ ms.locfileid: "53130092"
   
  出力を見るとわかるように、入力文字列がパターンに一致しない場合の処理時間は一致する場合の約 2 倍になります。 これは、照合の失敗は常に最悪のシナリオに相当するためです。 正規表現エンジンは、照合の失敗という結論に到達するまでに、正規表現を使用してデータのすべての可能なパスを辿らなければなりません。かっこが入れ子になっていると、データのパスは大幅に増加します。 2 つ目の文字列がパターンに一致しないという結論に到達するまでに正規表現エンジンによって行われる操作を以下に示します。  
   
--   文字列の先頭にいることを確認し、文字列の最初の 5 文字をパターン `a+`と照合します。 次に、文字 "a" のグループが文字列内にそれ以上ないことを特定します。 最後に、文字列の終わりをテストします。 文字列にまだ文字が 1 文字残っているため、照合は失敗します。 この照合の失敗に必要な比較は 9 回です。 正規表現エンジンは、"a" (以降は照合 1 と呼びます)、"aa" (照合 2)、"aaa" (照合 3)、および "aaaa" (照合 4) の各照合の状態情報を保存します。  
+- 文字列の先頭にいることを確認し、文字列の最初の 5 文字をパターン `a+`と照合します。 次に、文字 "a" のグループが文字列内にそれ以上ないことを特定します。 最後に、文字列の終わりをテストします。 文字列にまだ文字が 1 文字残っているため、照合は失敗します。 この照合の失敗に必要な比較は 9 回です。 正規表現エンジンは、"a" (以降は照合 1 と呼びます)、"aa" (照合 2)、"aaa" (照合 3)、および "aaaa" (照合 4) の各照合の状態情報を保存します。  
   
--   以前に保存した照合 4 に戻ります。 追加のキャプチャ グループに割り当てる必要がある文字 "a" があと 1 つあることを特定します。 最後に、文字列の終わりをテストします。 文字列にまだ文字が 1 文字残っているため、照合は失敗します。 この照合の失敗に必要な比較は 4 回です。 これまでに実行された比較は合計 13 回になります。  
+- 以前に保存した照合 4 に戻ります。 追加のキャプチャ グループに割り当てる必要がある文字 "a" があと 1 つあることを特定します。 最後に、文字列の終わりをテストします。 文字列にまだ文字が 1 文字残っているため、照合は失敗します。 この照合の失敗に必要な比較は 4 回です。 これまでに実行された比較は合計 13 回になります。  
   
--   以前に保存した照合 3 に戻ります。 追加のキャプチャ グループに割り当てる必要がある文字 "a" があと 2 つあることを特定しますが、 文字列の終わりのテストに失敗します。 その後、照合 3 に戻り、2 つの追加のキャプチャ グループの 2 つの追加の文字 "a" を照合しようとしますが、 ここでも文字列の終わりのテストに失敗します。 これらの照合の失敗に必要な比較は 12 回です。 これまでに実行された比較は合計 25 回になります。  
+- 以前に保存した照合 3 に戻ります。 追加のキャプチャ グループに割り当てる必要がある文字 "a" があと 2 つあることを特定しますが、 文字列の終わりのテストに失敗します。 その後、照合 3 に戻り、2 つの追加のキャプチャ グループの 2 つの追加の文字 "a" を照合しようとしますが、 ここでも文字列の終わりのテストに失敗します。 これらの照合の失敗に必要な比較は 12 回です。 これまでに実行された比較は合計 25 回になります。  
   
  このようにして、正規表現エンジンがすべての可能な一致の組み合わせを試行し終わるまで入力文字列と正規表現の比較が続けられます。一致しないという結論に到達するのはその後です。 この比較は、入れ子になった量指定子があるため、O(2<sup>n</sup>) (指数演算、*n* は入力文字列の文字数) です。 そのため、最悪のケースでは、30 文字の入力文字列で約 1,073,741,824 回、40 文字の入力文字列では約 1,099,511,627,776 回の比較が必要になります。 使用する文字列の長さがこのレベル以上になると、正規表現パターンに一致しない入力を処理するときに、正規表現メソッドの完了までに膨大な時間がかかる可能性があります。  
   
@@ -130,14 +130,14 @@ ms.locfileid: "53130092"
   
 <a name="Timeout"></a>   
 ### <a name="defining-a-time-out-interval"></a>タイムアウト間隔の定義  
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]以降では、正規表現エンジンが単一の一致を検索する最長間隔を表すタイムアウト値を設定できます。それを超えると試行が中止され、 <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> 例外がスローされます。 タイムアウト間隔を指定するには、インスタンス正規表現の <xref:System.TimeSpan> コンストラクターに <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> 値を指定します。 また、各静的パターン一致メソッドには、 <xref:System.TimeSpan> パラメーターを持つオーバーロードがあり、これを使用してタイムアウト値を指定できます。 既定のタイムアウト間隔は <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> に設定されており、正規表現エンジンはタイムアウトしません。  
+ .NET Framework 4.5 以降では、試行が中止されて <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> 例外がスローされるまでの、正規表現エンジンが単一の一致を検索する最長間隔を表すタイムアウト値を設定できます。 タイムアウト間隔を指定するには、インスタンス正規表現の <xref:System.TimeSpan> コンストラクターに <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> 値を指定します。 また、各静的パターン一致メソッドには、 <xref:System.TimeSpan> パラメーターを持つオーバーロードがあり、これを使用してタイムアウト値を指定できます。 既定のタイムアウト間隔は <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> に設定されており、正規表現エンジンはタイムアウトしません。  
   
 > [!IMPORTANT]
 >  正規表現がバックトラッキングに依存する場合は、常にタイムアウト間隔を設定することをお勧めします。  
   
  <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> 例外では、指定されたタイムアウト間隔中に正規表現エンジンで一致を見つけられなかったことを示しますが、例外がスローされた理由は示しません。 原因は、通常は過度なバックトラッキングですが、例外がスローされたときのシステムの負荷に対して、タイムアウト間隔の設定が短すぎた可能性もあります。 例外を処理するときに、入力文字列との一致の検索をやめるか、タイムアウト間隔を延長して一致操作を再試行するかを選択できます。  
   
- たとえば、次のコードは <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> コンストラクターを呼び出して、1 秒のタイムアウト値を持つ <xref:System.Text.RegularExpressions.Regex> オブジェクトをインスタンス化します。 正規表現パターン `(a+)+$` は、行の末尾にある 1 つ以上の "a" 文字の 1 つ以上のシーケンスに一致しますが、過度なバックトラッキングの対象になります。 この例では、 <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> がスローされたら、タイムアウト値を 3 秒の最大間隔まで大きくします。 その後、パターンに一致させる試行を中止します。  
+ たとえば、次のコードは <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> コンストラクターを呼び出して、1 秒のタイムアウト値を持つ <xref:System.Text.RegularExpressions.Regex> オブジェクトをインスタンス化します。 正規表現パターン `(a+)+$`は、行の末尾にある 1 つ以上の "a" 文字の 1 つ以上のシーケンスに一致しますが、過度なバックトラッキングの対象になります。 この例では、 <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> がスローされたら、タイムアウト値を 3 秒の最大間隔まで大きくします。 その後、パターンに一致させる試行を中止します。  
   
  [!code-csharp[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/cs/ctor1.cs#1)]
  [!code-vb[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/vb/ctor1.vb#1)]  
@@ -157,7 +157,7 @@ ms.locfileid: "53130092"
   
  `(?<=` *subexpression* `)` は肯定後読みアサーションで、現在の位置の前にある文字が *subexpression*に一致する必要があります。 `(?<!`*subexpression*`)` は否定後読みアサーションで、現在の位置の前にある文字が *subexpression*に一致しない必要があります。 否定と肯定のどちらの後読みアサーションも、 *subexpression* が前の部分式のサブセットである場合に特に役立ちます。  
   
- 次の例では、メール アドレスのユーザー名を検証する 2 つの同等の正規表現パターンが使われています。 1 つ目のパターンでは、過度なバックトラッキングのためにパフォーマンスが低下します。 2 つ目のパターンでは、1 つ目の正規表現に変更を加えて、入れ子になった量指定子を肯定後読みアサーションに置き換えています。 この例の出力には、<xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> メソッドの実行時間が表示されます。  
+ 次の例では、メール アドレスのユーザー名を検証する 2 つの同等の正規表現パターンが使われています。 1 つ目のパターンでは、過度なバックトラッキングのためにパフォーマンスが低下します。 2 つ目のパターンでは、1 つ目の正規表現に変更を加えて、入れ子になった量指定子を肯定後読みアサーションに置き換えています。 この例の出力には、 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> メソッドの実行時間が表示されます。  
   
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking5.cs#5)]
  [!code-vb[Conceptual.RegularExpressions.Backtracking#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking5.vb#5)]  
@@ -219,8 +219,8 @@ ms.locfileid: "53130092"
   
 ## <a name="see-also"></a>関連項目
 
-- [.NET の正規表現](../../../docs/standard/base-types/regular-expressions.md)  
-- [正規表現言語 - クイック リファレンス](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
-- [量指定子](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  
-- [代替構成体](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)  
+- [.NET の正規表現](../../../docs/standard/base-types/regular-expressions.md)
+- [正規表現言語 - クイック リファレンス](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [量指定子](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)
+- [代替構成体](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)
 - [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)

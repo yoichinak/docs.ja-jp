@@ -8,20 +8,20 @@ helpviewer_keywords:
 ms.assetid: 50abd02d-6488-4815-999b-4fb89af4d568
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1eae19d592dcf5243139e11bb6662953436e45a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ab7cbac98af24e89ec4da3cc9737b0cadf5cc394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789780"
 ---
 # <a name="ialink-interface"></a>IALink インターフェイス
-.NET Framework アセンブリを構築する際に役立ちます。 特に、インターフェイスには、マルチ モジュール アセンブリのアセンブリ マニフェストの作成、厳密な名前によるアセンブリの署名および netmodule の作成を補助するメソッドが含まれています。  
+.NET Framework アセンブリの構築に役立ちます。 その他のものは、インターフェイスには、マルチ モジュール アセンブリのアセンブリ マニフェストの作成、厳密な名前によるアセンブリの署名および netmodule の作成を補助するメソッドが含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [AddFile Method1](../../../../docs/framework/unmanaged-api/alink/addfile-method.md)  
+ [AddFile メソッド](../../../../docs/framework/unmanaged-api/alink/addfile-method.md)  
   
- [AddImport Method1](../../../../docs/framework/unmanaged-api/alink/addimport-method.md)  
+ [AddImport メソッド](../../../../docs/framework/unmanaged-api/alink/addimport-method.md)  
   
  [CloseAssembly メソッド](../../../../docs/framework/unmanaged-api/alink/closeassembly-method.md)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "33408594"
   
  [GetResolutionScope メソッド](../../../../docs/framework/unmanaged-api/alink/getresolutionscope-method.md)  
   
- [GetScope Method1](../../../../docs/framework/unmanaged-api/alink/getscope-method.md)  
+ [GetScope メソッド](../../../../docs/framework/unmanaged-api/alink/getscope-method.md)  
   
  [GetWin32ResBlob メソッド](../../../../docs/framework/unmanaged-api/alink/getwin32resblob-method.md)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "33408594"
   
  [ImportTypes メソッド](../../../../docs/framework/unmanaged-api/alink/importtypes-method.md)  
   
- 「Init メソッド  
+ "Init"メソッド  
   
  [LinkResource メソッド](../../../../docs/framework/unmanaged-api/alink/linkresource-method.md)  
   
@@ -75,7 +75,8 @@ ms.locfileid: "33408594"
   
  [SetNonAssemblyFlags メソッド](../../../../docs/framework/unmanaged-api/alink/setnonassemblyflags-method.md)  
   
-## <a name="see-also"></a>関連項目  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)  
- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Al.exe (アセンブリ リンカー)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a>関連項目
+
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [Al.exe (アセンブリ リンカー)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

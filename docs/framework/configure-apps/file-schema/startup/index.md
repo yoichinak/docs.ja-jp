@@ -6,24 +6,24 @@ helpviewer_keywords:
 - schema startup settings
 - configuration schema [.NET Framework], startup settings
 ms.assetid: 03de6972-442a-4648-9f3e-efa654e3b949
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 4cdf6a051552ab1effd9c4d9c783297a62602f7a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e5f9c9af64ff38e7c0f1f26ccab039261b052e30
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701516"
 ---
 # <a name="startup-settings-schema"></a>スタートアップ設定スキーマ
+
 スタートアップ設定は、アプリケーションを実行する必要のある共通言語ランタイムのバージョンを指定します。  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<requiredRuntime>](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)|バージョン 1.0 の共通言語ランタイムのみがアプリケーションでサポートされることを指定します。 ランタイムのバージョン 1.1 でビルドされたアプリケーションは、**\<supportedRuntime >** 要素を使用します。|  
-|[\<supportedRuntime>](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)|アプリケーションでサポートされる共通言語ランタイムのバージョンを指定します。|  
-|[\<startup>](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)|**\<requiredRuntime>** 要素と **\<supportedRuntime>** 要素を含みます。|  
+|[\<requiredRuntime>](requiredruntime-element.md)|バージョン 1.0 の共通言語ランタイムのみがアプリケーションでサポートされることを指定します。 ランタイムのバージョン 1.1 でビルドされたアプリケーションは、**\<supportedRuntime >** 要素を使用します。|  
+|[\<supportedRuntime>](supportedruntime-element.md)|アプリケーションでサポートされる共通言語ランタイムのバージョンを指定します。|  
+|[\<startup>](startup-element.md)|**\<requiredRuntime>** 要素と **\<supportedRuntime>** 要素を含みます。|  
   
-## <a name="see-also"></a>関連項目  
- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<PaveOver> 使用するランタイム バージョンの指定](https://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)
+## <a name="see-also"></a>関連項目
+
+- [構成ファイル スキーマ](../index.md)
+- [方法: .NET Framework 4 以降のバージョンをサポートするアプリを構成する](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

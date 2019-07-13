@@ -2,12 +2,12 @@
 title: ワークフロー サービスのホスティング
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-ms.openlocfilehash: d51157863984314583c5d225bc9d8d0b6cf74874
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 07e4f7779c06e6c95b45d59bcdd0890fb5a9cf55
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186097"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636138"
 ---
 # <a name="hosting-workflow-services"></a>ワークフロー サービスのホスティング
 ワークフロー サービスが受信メッセージに応答するには、ワークフロー サービスがホストされている必要があります。 ワークフロー サービスは WCF メッセージング インフラストラクチャを使用するため、これと似た方法でホストされます。 WCF のサービスと同様に、インターネット インフォメーション サービス (IIS)、または Windows プロセス アクティブ化サービス (WAS) の下で、任意の管理対象のアプリケーションでワークフロー サービスをホストできます。 さらに、ワークフロー サービスは、Windows Server Appfabric でホストできます。 Windows Server App Fabric の詳細については、次を参照してください。 [Windows Server App Fabric のドキュメント](https://go.microsoft.com/fwlink/?LinkId=193037)、 [AppFabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkId=196494)、および[AppFabric ホスティングの概念](https://go.microsoft.com/fwlink/?LinkId=196495)します。 WCF をホストするさまざまな方法の詳細については、「」を参照をサービスの[ホスティング サービス](../../../../docs/framework/wcf/hosting-services.md)します。
@@ -18,9 +18,9 @@ ms.locfileid: "50186097"
 ## <a name="hosting-under-iis-or-was"></a>IIS または WAS の下でのホスト
  IIS または WAS の下でワークフロー サービスをホストする場合は、仮想ディレクトリを作成し、サービスとその動作を定義するファイルをその仮想ディレクトリ内に配置します。 IIS または WAS の下でワークフローをホストする場合は、いくつかの方法が考えられます。
 
--   ワークフロー サービスを定義する .xamlx ファイルを、サービス動作、エンドポイント、およびその他の構成要素を指定する Web.config ファイルと共に、IIS/WAS 仮想ディレクトリに配置します。
+- ワークフロー サービスを定義する .xamlx ファイルを、サービス動作、エンドポイント、およびその他の構成要素を指定する Web.config ファイルと共に、IIS/WAS 仮想ディレクトリに配置します。
 
--   ワークフロー サービスを定義する .xamlx ファイルを IIS/WAS 仮想ディレクトリに配置します。 この .xamlx ファイルで、公開するエンドポイントが指定されます。 エンドポイントは、次の例に示すように、`WorkflowService.Endpoints` 要素で指定されます。
+- ワークフロー サービスを定義する .xamlx ファイルを IIS/WAS 仮想ディレクトリに配置します。 この .xamlx ファイルで、公開するエンドポイントが指定されます。 エンドポイントは、次の例に示すように、`WorkflowService.Endpoints` 要素で指定されます。
 
     ```xml
     <WorkflowService xmlns="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel"  xmlns:p1="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:sad="clr-namespace:System.Activities.Debugger;assembly=System.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
@@ -38,9 +38,9 @@ ms.locfileid: "50186097"
     > [!NOTE]
     > 動作は .xamlx ファイルで指定できないため、動作設定を指定するには Web.config を使用する必要があります。
 
--   ワークフロー サービスを定義する .xamlx ファイルを IIS/WAS 仮想ディレクトリに配置します。 さらに、.svc ファイルを仮想ディレクトリに配置します。 .svc ファイルでは、カスタム Web サービス ホスト ファクトリの指定、カスタム動作の適用、またはカスタムの場所からの構成の読み込みが可能です。
+- ワークフロー サービスを定義する .xamlx ファイルを IIS/WAS 仮想ディレクトリに配置します。 さらに、.svc ファイルを仮想ディレクトリに配置します。 .svc ファイルでは、カスタム Web サービス ホスト ファクトリの指定、カスタム動作の適用、またはカスタムの場所からの構成の読み込みが可能です。
 
--   WCF メッセージング アクティビティを使用するアクティビティを含むアセンブリを IIS/WAS 仮想ディレクトリに配置します。
+- WCF メッセージング アクティビティを使用するアクティビティを含むアセンブリを IIS/WAS 仮想ディレクトリに配置します。
 
  ワークフロー サービスを定義する .xamlx ファイルを含める必要があります、<`Service`> ルート要素、またはルート要素から派生する型を含む<xref:System.Workflow.ComponentModel.Activity>します。 Visual Studio の活動テンプレートを使用する場合は、.xamlx ファイルが作成されます。 WCF ワークフロー サービス テンプレートを使用する場合は、.xamlx ファイルが作成されます。
 

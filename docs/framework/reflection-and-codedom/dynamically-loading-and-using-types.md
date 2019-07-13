@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9795fa411d3b81f9092ddab183c6978ee701ef67
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 085b89de8180a216288e8f547af5b73eaf004457
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397976"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469676"
 ---
 # <a name="dynamically-loading-and-using-types"></a>型の動的な読み込みおよび使用
-リフレクションは、[!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] や JScript などの言語コンパイラで使用される、暗黙の遅延バインディングを実装するインフラストラクチャを提供します。 バインディングとは、一意に指定した型に対応する宣言 (つまり、実装) を検索するプロセスです。 このプロセスがコンパイル時ではなく、実行時に発生する場合、それは遅延バインディングと呼ばれます。 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] のコードでは、暗黙の遅延バインディングを使用できます。これでは、Visual Basic のコンパイラが、オブジェクトの型を取得する、リフレクションを使用するヘルパー メソッドを呼び出します。 ヘルパー メソッドに渡される引数により、実行時に適切なメソッドが呼び出されます。 これらの引数は、メソッドを呼び出すインスタンス (オブジェクト)、呼び出されたメソッド名 (文字列)、呼び出されたメソッドに渡される引数 (オブジェクトの配列) です。  
+リフレクションは、言語コンパイラで使用される、暗黙の遅延バインディングを実装するインフラストラクチャを提供します。 バインディングとは、一意に指定した型に対応する宣言 (つまり、実装) を検索するプロセスです。 このプロセスがコンパイル時ではなく、実行時に発生する場合、それは遅延バインディングと呼ばれます。 Visual Basic のコードでは、暗黙の遅延バインディングを使用できます。Visual Basic のコンパイラからは、オブジェクトの型の取得にリフレクションを使用するヘルパー メソッドが呼び出されます。 ヘルパー メソッドに渡される引数により、実行時に適切なメソッドが呼び出されます。 これらの引数は、メソッドを呼び出すインスタンス (オブジェクト)、呼び出されたメソッド名 (文字列)、呼び出されたメソッドに渡される引数 (オブジェクトの配列) です。  
   
  次の例では、Visual Basic コンパイラがリフレクションを暗黙的に使用して、コンパイル時には型が不明なオブジェクトのメソッドを呼び出します。 **HelloWorld** クラスには、**PrintHello** メソッドに渡される、"Hello World" とこれに連結されたいくつかのテキストを出力する **PrintHello** メソッドがあります。 この例で呼び出される **PrintHello** メソッドは、実際には <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType> です。Visual Basic コードでは、オブジェクトの型 (helloObj) が実行時ではなく (遅延バインディング) コンパイル時に認識された (事前バインディング) かのように **PrintHello** メソッドを呼び出します。  
   
@@ -99,8 +99,9 @@ End Module
   
  <xref:System.Type> クラスは、参照を特定のメンバーとして解決する **Binder** 型のパラメーターを使用する **get** メソッドを持っています。 <xref:System.Type.GetConstructor%2A?displayProperty=nameWithType>、<xref:System.Type.GetMethod%2A?displayProperty=nameWithType>、および <xref:System.Type.GetProperty%2A?displayProperty=nameWithType> は、現在の型の特定のメンバーに関するシグネチャ情報を提供して、そのメンバーを検索します。 該当するメソッドの指定されたシグネチャ情報を選択するために、<xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=nameWithType> および <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=nameWithType> がコールバックされます。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>  
- <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
- [型情報の表示](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  
- [.NET Framework における型変換](../../../docs/standard/base-types/type-conversion.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>
+- <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
+- [型情報の表示](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [.NET Framework における型変換](../../../docs/standard/base-types/type-conversion.md)

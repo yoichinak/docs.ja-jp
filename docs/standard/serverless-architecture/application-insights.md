@@ -4,12 +4,12 @@ description: Application Insights は、サーバーレス診断プラットフ�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: b4884d483de07c1c2077f7280b6b77c6059572c0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 1f5b99fba448c2c1c12139524ffdcd3708b3c956
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154263"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65643351"
 ---
 # <a name="telemetry-with-application-insights"></a>Application Insights のテレメトリ
 

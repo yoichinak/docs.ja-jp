@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7512795e678f66c97185a499e602e99f51188117
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5898f2f0900b0bbe392d4dbaa8fc1db5e0e45c9e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443025"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767011"
 ---
 # <a name="cordeclsecurity-enumeration"></a>CorDeclSecurity 列挙型
 宣言型セキュリティを使用して実行できるセキュリティ アクションを指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum CorDeclSecurity {  
   
     dclActionMask               =   0x001f,  
@@ -64,13 +64,13 @@ typedef enum CorDeclSecurity {
 |`dclActionNil`|予約済み。|  
 |`dclRequest`|予約済み。|  
 |`dclDemand`|呼び出し履歴の上位にあるすべての呼び出し元には、現在のアクセス許可オブジェクトで指定されたアクセス許可が付与されている必要があります。|  
-|`dclAssert`|呼び出し元のコードは、呼び出し元のスタック内の上位がリソースにアクセスする権限が許可されていない場合でも、現在のアクセス許可オブジェクトで識別されるリソースにアクセスできます。|  
-|`dclDeny`|アクセス許可を付与されている場合でも、呼び出し元に、現在のアクセス許可オブジェクトで指定されたリソースにアクセスする権限が拒否されました。|  
+|`dclAssert`|呼び出し元のコードは、リソースにアクセスするためのアクセス許可が呼び出し元のスタックの上位に与えられていない場合でも、現在のアクセス許可オブジェクトで識別されるリソースにアクセスできます。|  
+|`dclDeny`|アクセス許可を付与されている場合でも、呼び出し元に対して、現在のアクセス許可オブジェクトによって指定されるリソースにアクセスする権限が拒否されました。|  
 |`dclPermitOnly`|他のリソースにアクセスできるアクセス許可がコードに付与されていても、このアクセス許可オブジェクトで指定されたリソースにしかアクセスできません。|  
-|`dclLinktimeCheck`|直前の呼び出し元は、一定の時間の指定した権限付与されている必要があります。|  
-|`dclInheritanceCheck`|派生クラスが別のクラスを継承することや、メソッドをオーバーライドするクラスは、指定した権限付与されている必要があります。|  
+|`dclLinktimeCheck`|直前の呼び出し元は、一定の期間の指定した権限が付与されている必要があります。|  
+|`dclInheritanceCheck`|別のクラスを継承またはメソッドをオーバーライドする派生クラスは、指定した権限が付与されている必要があります。|  
 |`dclRequestMinimum`|呼び出し元は、コードを実行するために必要な最小限のアクセス許可を要求できます。 この操作は、アセンブリのスコープ内でのみ使用できます。|  
-|`dclRequestOptional`|呼び出し元は、省略可能 (実行には必要ありません) は、追加のアクセス許可を要求できます。 この要求は、個別に要求されていない、他のすべてのアクセス許可を暗黙的に拒否します。 この操作は、アセンブリのスコープ内でのみ使用できます。|  
+|`dclRequestOptional`|呼び出し元は、追加は省略可能です (実行には必要ありません) のアクセス許可を要求できます。 この要求は、個別に要求されていない、他のすべてのアクセス許可を暗黙的に拒否します。 この操作は、アセンブリのスコープ内でのみ使用できます。|  
 |`dclRequestRefuse`|呼び出し元の要求が悪用された場合のアクセス許可は付与されません。 この操作は、アセンブリのスコープ内でのみ使用できます。|  
 |`dclPrejitGrant`|予約済み。|  
 |`dclPrejitDenied`|予約済み。|  
@@ -82,12 +82,13 @@ typedef enum CorDeclSecurity {
 |`dclDemandChoice`|予約済み。|  
 |`dclMaximumValue`|予約済み。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorHdr.h  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>関連項目
+
+- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

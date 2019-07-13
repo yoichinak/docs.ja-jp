@@ -1,21 +1,19 @@
 ---
 title: Docker と Microsoft Azure を使用したコンテナー化アプリケーションの設計と開発
-description: Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル
-author: CESARDELATORRE
-ms.author: wiwagn
-ms.date: 09/21/2017
-ms.openlocfilehash: 2f8e969ce48a448a293efafccbce1d62b059640d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+description: Docker アプリケーション ライフサイクルの開発/設計ワークロードについて見ていきましょう。
+ms.date: 02/15/2019
+ms.openlocfilehash: ad7f635feab21cd6e6b31c0b5d43fb2598ffa16c
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155224"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "65641131"
 ---
 # <a name="designing-and-developing-containerized-apps-using-docker-and-microsoft-azure"></a>Docker と Microsoft Azure を使用したコンテナー化アプリケーションの設計と開発
 
-ビジョン:設計および開発 Docker を使用したスケーラブルなソリューションに注意してください。
+*展望:Docker を念頭に置き、スケーラブルなソリューションを設計し、開発します。*
 
-コンテナーには、マイクロサービス指向のアーキテクチャ用のみでなく、実行する通常のサービスや Web アプリケーションが単にあり、開発環境と運用環境への展開で摩擦を減らしたい場合など、非常に適した用途が多数あります。
+*マイクロサービス指向のアーキテクチャだけでなく、通常のサービスや Web アプリケーションを実行しているとき、開発と運用環境デプロイの間の摩擦を減らすなど、コンテナーには非常に適した用途がたくさんあります。*
 
 >[!div class="step-by-step"]
 >[前へ](../Microsoft-platform-tools-containerized-apps/index.md)

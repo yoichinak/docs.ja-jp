@@ -2,12 +2,12 @@
 title: ServiceAuthorizationBehavior
 ms.date: 03/30/2017
 ms.assetid: 77dad8e8-fea4-4d1c-b366-2f01a2a87f78
-ms.openlocfilehash: c916d0820a1eae333384deab7b0619abfbdc8167
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 51555e3357b8c33a53261c4894d97798b0a05656
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61957056"
 ---
 # <a name="serviceauthorizationbehavior"></a>ServiceAuthorizationBehavior
 ServiceAuthorizationBehavior  
@@ -33,28 +33,28 @@ class ServiceAuthorizationBehavior : Behavior
 ### <a name="impersonatecallerforalloperations"></a>impersonateCallerForAllOperations  
  データ型 : boolean  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  受信メッセージによって提供される資格情報を使用してサービスが偽装を試みるかどうかを制御する値。  
   
 ### <a name="principalpermissionmode"></a>PrincipalPermissionMode  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  サーバーでの操作を実行するために使用されるプリンシパル。  
   
 ### <a name="roleprovider"></a>RoleProvider  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  ASP.NET ロール プロバイダーの名前。  
   
 ### <a name="serviceauthorizationmanager"></a>ServiceAuthorizationManager  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  カスタム承認で使用される承認マネージャー。  
   
@@ -62,7 +62,8 @@ class ServiceAuthorizationBehavior : Behavior
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
-|Namespace|root\ServiceModel で定義|  
+|名前空間|root\ServiceModel で定義|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>

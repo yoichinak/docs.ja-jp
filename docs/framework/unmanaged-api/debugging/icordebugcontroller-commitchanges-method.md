@@ -17,15 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ed8c616fd71855f3c2313cee0b9fee3ba31babd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 115f3a8c81bcedb48669d06e57f26b88d36148d6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61749593"
 ---
 # <a name="icordebugcontrollercommitchanges-method"></a>ICorDebugController::CommitChanges メソッド
 `CommitChanges` は互換性のために残されています。 このメソッドを呼び出さないでください。  
   
-## <a name="see-also"></a>関連項目  
- 
+## <a name="see-also"></a>関連項目

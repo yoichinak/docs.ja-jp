@@ -5,18 +5,18 @@ helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: d3981be7977b56af0b60f9796519b78dc9ac5db3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f8afece073076b9ae94faaba8477f2a13e11b295
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505767"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268088"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Windows フォームにおける自動スケーリング
 
-自動スケーリングによって、特定のディスプレイの解像度またはシステムのフォントを持つマシンに合わせて設計されたフォームとコントロールを、ディスプレイの別の解像度やシステム フォントを持つ別のマシンで適切に表示することができます。 フォームとコントロールが、ユーザーとその他の開発者のマシンのネイティブ ウィンドウとその他のアプリケーションで、一貫性を持つよう適切にサイズ変更され、 自動スケーリングと視覚スタイルに対する [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] のサポートにより、各ユーザーのマシンのネイティブの Windows アプリケーションと比較した場合、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] アプリケーションが一貫したルック アンド フィールを維持することができます。
+自動スケーリングによって、特定のディスプレイの解像度またはシステムのフォントを持つマシンに合わせて設計されたフォームとコントロールを、ディスプレイの別の解像度やシステム フォントを持つ別のマシンで適切に表示することができます。 フォームとコントロールが、ユーザーとその他の開発者のマシンのネイティブ ウィンドウとその他のアプリケーションで、一貫性を持つよう適切にサイズ変更され、 自動スケーリングと視覚スタイルの .NET Framework のサポートには、各ユーザーのコンピューターにネイティブの Windows アプリケーションと比較すると、一貫したルック アンド フィールを維持するために .NET Framework のアプリケーションができます。
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] バージョン 2.0 以降では、ほとんどの場合、自動スケーリングは正常に機能します。 ただし、フォント パターンの変更が問題になる可能性があります。 この問題を解決する方法の例は、次を参照してください。[方法: Windows フォーム アプリケーションでフォント パターンの変更に応答](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md)します。
+ほとんどの場合、2.0 以降では、.NET Framework のバージョンのとして自動スケーリングの動作が必要です。 ただし、フォント パターンの変更が問題になる可能性があります。 この問題を解決する方法の例は、次を参照してください。[方法。Windows フォーム アプリケーションでフォント パターンの変更に応答](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md)します。
 
 ## <a name="need-for-automatic-scaling"></a>自動スケーリングの必要性
 
@@ -24,11 +24,11 @@ ms.locfileid: "43505767"
 
 類似する状況は、アプリケーションがディスプレイの特定の解像度のために設計されている場合にも発生します。 最も一般的なディスプレイの解像度が 96 ドット/インチ (DPI)、100% 表示スケールが達すると、これがより高い解像度ディスプレイが 125%、150%、200% をサポートしている (どのそれぞれ等しい 120、144 と 192 DPI) が一般的に以上とします。 調整なしだと、特にグラフィックスに基づくアプリケーションで、ある解像度のために設計されたものが、別の解像度で実行したときに、表示が大きすぎたり小さすぎたりします。
 
-自動スケーリングは、相対的なフォント サイズやディスプレイ解像度に従ってフォームと子コントロールを自動でサイズ変更することで、これらの問題を改善しようとしています。 Windows オペレーティング システムは、ダイアログ単位と呼ばれるは、相対的な測定単位を使用して、ダイアログ ボックスの自動スケーリングをサポートします。 ダイアログ単位は、システム フォントに基づいており、ピクセルとの関係は、Win32 SDK 関数 `GetDialogBaseUnits` によって決定できます。 ユーザーが Windows によって使用されるテーマを変更すると、すべてのダイアログ ボックスがそれに合わせて自動的に調整されます。 さらに、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]のいずれか、既定のシステム フォントまたはディスプレイの解像度に応じて、自動スケーリングをサポートしています。 必要に応じて、アプリケーションで自動スケーリングを無効化できます。
+自動スケーリングは、相対的なフォント サイズやディスプレイ解像度に従ってフォームと子コントロールを自動でサイズ変更することで、これらの問題を改善しようとしています。 Windows オペレーティング システムは、ダイアログ単位と呼ばれるは、相対的な測定単位を使用して、ダイアログ ボックスの自動スケーリングをサポートします。 ダイアログ単位は、システム フォントに基づいており、ピクセルとの関係は、Win32 SDK 関数 `GetDialogBaseUnits` によって決定できます。 ユーザーが Windows によって使用されるテーマを変更すると、すべてのダイアログ ボックスがそれに合わせて自動的に調整されます。 さらに、.NET Framework のいずれか、既定のシステム フォントまたはディスプレイの解像度に応じて、自動スケーリングをサポートします。 必要に応じて、アプリケーションで自動スケーリングを無効化できます。
 
 ## <a name="original-support-for-automatic-scaling"></a>自動スケーリングの元のサポート
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] のバージョン 1.0 および 1.1 は、Windows の UI に使用される (Win32 SDK 値 **DEFAULT_GUI_FONT** で表す) 既定のフォントに依存した、簡単な方法で自動スケーリングをサポートしていました。 このフォントは、通常、ディスプレイの解像度が変更されたときにのみ変更されました。 自動スケーリングを実装するために、次のメカニズムが使用されていました。
+バージョン 1.0 および 1.1 の Win32 SDK 値によって表される UI に使用される Windows の既定のフォントに依存していた簡単な方法で .NET Framework がサポートされている自動スケーリングの**DEFAULT_GUI_FONT**します。 このフォントは、通常、ディスプレイの解像度が変更されたときにのみ変更されました。 自動スケーリングを実装するために、次のメカニズムが使用されていました。
 
 1. デザイン時は、<xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> プロパティ (これは現在非推奨とされます) が、開発者のマシンの既定のシステム フォントの高さと幅に設定されていました。
 
@@ -46,24 +46,24 @@ ms.locfileid: "43505767"
 
 - フォームとその子コントロールの設計作業を複数の開発者によって並行して進めることができたのは、マシンの解像度が同じ場合に限られていました。 同じように、フォームの継承は、親フォームに関連付けられている解像度に依存していました。
 
-- <xref:System.Windows.Forms.FlowLayoutPanel> や <xref:System.Windows.Forms.TableLayoutPanel> など、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] バージョン 2.0 で導入された新しいレイアウト マネージャーと互換性がありません。
+- などの .NET Framework version 2.0 で導入された新しいレイアウト マネージャーと互換性がない<xref:System.Windows.Forms.FlowLayoutPanel>と<xref:System.Windows.Forms.TableLayoutPanel>します。
 
-- [!INCLUDE[compact](../../../includes/compact-md.md)] への互換性に必要なディスプレイの解像度に直接基づくスケーリングをサポートしていませんでした。
+- .NET Compact Framework の互換性のために必要なディスプレイの解像度に直接基づくスケーリングはサポートしませんでした。
 
-このメカニズムは、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] バージョン 2.0 で後方互換性のために保持されますが、次に説明するより堅牢なスケーリング メカニズムによって置き換えられました。 その結果、<xref:System.Windows.Forms.Form.AutoScale%2A>、<xref:System.Windows.Forms.Form.ApplyAutoScaling%2A>、<xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A>、および特定の <xref:System.Windows.Forms.Control.Scale%2A> のオーバーロードは廃止マークが付けられています。
+旧バージョンとの互換性を維持するために .NET Framework version 2.0 では、このメカニズムが維持され、次に説明するより堅牢なスケーリング メカニズムによって置き換えられました。 その結果、<xref:System.Windows.Forms.Form.AutoScale%2A>、<xref:System.Windows.Forms.Form.ApplyAutoScaling%2A>、<xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A>、および特定の <xref:System.Windows.Forms.Control.Scale%2A> のオーバーロードは廃止マークが付けられています。
 
 > [!NOTE]
-> 従来のコードを [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] バージョン 2.0 にアップグレードする際、これらのメンバーへの参照を削除して問題ありません。
+> これらのメンバーへの参照は、従来のコードを .NET Framework version 2.0 にアップグレードするときに安全に削除することができます。
 
 ## <a name="current-support-for-automatic-scaling"></a>自動スケーリングの現在のサポート
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] バージョン 2.0 は、Windows フォームの自動規スケーリングに次の変更を導入することで、以前の制限を解消しています。
+.NET Framework version 2.0 では、Windows フォームの自動スケーリングを次の変更を導入することで以前の制限を surmounts:
 
 - スケーリングの基本サポートは <xref:System.Windows.Forms.ContainerControl> クラスに移動し、フォーム、ネイティブの複合コントロールおよびユーザー コントロールは、すべて統一されたスケーリングのサポートを受け取ります。 新しいメンバー <xref:System.Windows.Forms.ContainerControl.AutoScaleFactor%2A>、<xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>、<xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>、および <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A> が追加されました。
 
 - <xref:System.Windows.Forms.Control> クラスにも、スケーリングに参加して同じフォームでのスケーリングの混在をサポートできる新しいメンバーがいくつかあります。 具体的には、<xref:System.Windows.Forms.Control.Scale%2A>、<xref:System.Windows.Forms.Control.ScaleChildren%2A>、および <xref:System.Windows.Forms.Control.GetScaledBounds%2A> メンバーが、スケーリングをサポートします。
 
-- 画面の解像度に基づくスケーリングのサポートが追加され、<xref:System.Windows.Forms.AutoScaleMode> の列挙型により定義されるように、システム フォントのサポートを補完します。 このモードは、アプリケーションの移行を容易にする [!INCLUDE[compact](../../../includes/compact-md.md)] によりサポートされる、自動スケーリングと互換性があります。
+- 画面の解像度に基づくスケーリングのサポートが追加され、<xref:System.Windows.Forms.AutoScaleMode> の列挙型により定義されるように、システム フォントのサポートを補完します。 このモードは、自動スケーリングが容易にアプリケーションの移行を有効にすると、.NET Compact Framework でサポートされているとの互換性です。
 
 - <xref:System.Windows.Forms.FlowLayoutPanel> や <xref:System.Windows.Forms.TableLayoutPanel> などのレイアウト マネージャーの互換性が、自動スケーリングの実装に追加されています。
 

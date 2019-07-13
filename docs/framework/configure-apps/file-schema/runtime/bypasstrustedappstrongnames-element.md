@@ -1,5 +1,5 @@
 ---
-title: '&lt;bypassTrustedAppStrongNames&gt;要素'
+title: <bypassTrustedAppStrongNames> 要素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - strong-name bypass feature
@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59fe6beb359575c818131e1ae502fdebcec5096c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: c70a03e1ad443739f43dc50ab34021652017713d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613753"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607422"
 ---
-# <a name="ltbypasstrustedappstrongnamesgt-element"></a>&lt;bypassTrustedAppStrongNames&gt;要素
+# <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames> 要素
 完全信頼に読み込まれる完全に信頼されたアセンブリに厳密な名前の検証をバイパスするかどうかを指定します<xref:System.AppDomain>します。  
   
  \<configuration>  
-\<ランタイム >  
-\<bypassTrustedAppStrongNames >  
+\<runtime>  
+\<bypassTrustedAppStrongNames>  
   
 ## <a name="syntax"></a>構文  
   
@@ -61,16 +61,16 @@ ms.locfileid: "53613753"
   
  バイ パス機能は、厳密な名前で署名されていて、次の特性を持つアセンブリに適用されます。  
   
--   なく完全に信頼された、<xref:System.Security.Policy.StrongName>証拠 (たとえば、`MyComputer`ゾーン証拠)。  
+- なく完全に信頼された、<xref:System.Security.Policy.StrongName>証拠 (たとえば、`MyComputer`ゾーン証拠)。  
   
--   完全に信頼された <xref:System.AppDomain> に読み込まれる。  
+- 完全に信頼された <xref:System.AppDomain> に読み込まれる。  
   
--   その <xref:System.AppDomain> の <xref:System.AppDomainSetup.ApplicationBase%2A> プロパティに基づいた場所から読み込まれる。  
+- その <xref:System.AppDomain> の <xref:System.AppDomainSetup.ApplicationBase%2A> プロパティに基づいた場所から読み込まれる。  
   
--   遅延署名されていない。  
+- 遅延署名されていない。  
   
 > [!NOTE]
->  バイパス機能がオフになっているコンピューター上のすべてのアプリケーションのレジストリ キーを使用して場合は、この構成ファイルの設定に影響はありません。 詳細については、「[方法 :厳密な名前のバイパス機能を無効にする](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)します。  
+>  バイパス機能がオフになっているコンピューター上のすべてのアプリケーションのレジストリ キーを使用して場合は、この構成ファイルの設定に影響はありません。 詳細については、「[方法 :厳密な名前のバイパス機能を無効にする](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、完全信頼アセンブリの厳密な名前の署名を検証する動作を指定する方法を示します。  
@@ -83,7 +83,8 @@ ms.locfileid: "53613753"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [方法: 厳密な名前のバイパス機能を無効にします。](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)
+## <a name="see-also"></a>関連項目
+
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [方法: 厳密な名前のバイパス機能を無効にする](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)

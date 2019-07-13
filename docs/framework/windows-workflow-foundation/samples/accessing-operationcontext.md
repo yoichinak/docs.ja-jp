@@ -2,12 +2,12 @@
 title: OperationContext へのアクセス
 ms.date: 03/30/2017
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
-ms.openlocfilehash: 3c7ce1c9c37ee93b58a07376e0aeae045f0ca408
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: fc3be627c8dfc8d8e49fde01684968a54912f548
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864301"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64617342"
 ---
 # <a name="accessing-operationcontext"></a>OperationContext へのアクセス
 このサンプルでは、メッセージング アクティビティ (<xref:System.ServiceModel.Activities.Receive>と<xref:System.ServiceModel.Activities.Send>) にアクセスする、カスタムのスコープ アクティビティと共に使用できます<xref:System.ServiceModel.OperationContext.Current%2A>アタッチし、または、送信または受信メッセージ内のカスタム メッセージ ヘッダーを取得します。  
@@ -20,21 +20,21 @@ ms.locfileid: "43864301"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  このサンプルでは、HTTP エンドポイントを使用してワークフロー サービスを公開します。 このサンプルで、適切な URL Acl を実行するを追加する必要があります (を参照してください[構成の HTTP および HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)詳細については)、Visual Studio を管理者として実行されているか、適切な Acl を追加する管理者特権のプロンプトで次のコマンドを実行すること。 ドメインとユーザー名は置き換えてください。  
+1. このサンプルでは、HTTP エンドポイントを使用してワークフロー サービスを公開します。 このサンプルで、適切な URL Acl を実行するを追加する必要があります (を参照してください[構成の HTTP および HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)詳細については)、Visual Studio を管理者として実行されているか、適切な Acl を追加する管理者特権のプロンプトで次のコマンドを実行すること。 ドメインとユーザー名は置き換えてください。  
   
     ```  
     netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%  
     ```  
   
-2.  URL ACL を追加したら、次の手順を実行します。  
+2. URL ACL を追加したら、次の手順を実行します。  
   
-    1.  ソリューションをビルドします。  
+    1. ソリューションをビルドします。  
   
-    2.  複数のスタートアップ プロジェクトを設定するには、ソリューションを右クリックし、選択**スタートアップ プロジェクトの設定**します。  
+    2. 複数のスタートアップ プロジェクトを設定するには、ソリューションを右クリックし、選択**スタートアップ プロジェクトの設定**します。  
   
-    3.  追加**サービス**と**クライアント**(順序) で複数のスタートアップ プロジェクトとして。  
+    3. 追加**サービス**と**クライアント**(順序) で複数のスタートアップ プロジェクトとして。  
   
-    4.  アプリケーションを実行します。 クライアント コンソールに実行中のワークフローが 2 回示され、[サービス] ウィンドウにこれらのワークフローのインスタンス ID が示されます。  
+    4. アプリケーションを実行します。 クライアント コンソールに実行中のワークフローが 2 回示され、[サービス] ウィンドウにこれらのワークフローのインスタンス ID が示されます。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  

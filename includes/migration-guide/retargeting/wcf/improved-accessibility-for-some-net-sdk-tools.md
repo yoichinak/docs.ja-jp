@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 0b087fca59d60a086a9ea8b2bb19c09f646c3dfd
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804414"
+---
 ### <a name="improved-accessibility-for-some-net-sdk-tools"></a>一部の .NET SDK ツールのアクセシビリティが強化されました
 
 |   |   |
@@ -6,4 +14,3 @@
 |スコープ|エッジ|
 |Version|4.7.1|
 |型|再ターゲット中|
-

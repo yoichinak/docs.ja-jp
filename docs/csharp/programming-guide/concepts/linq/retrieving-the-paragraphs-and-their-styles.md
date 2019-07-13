@@ -2,12 +2,12 @@
 title: 段落とそのスタイルの取得 (C#)
 ms.date: 07/20/2015
 ms.assetid: c2f767f8-57b1-4b4b-af04-89ffb1f7067d
-ms.openlocfilehash: 46ffc13c9808b6186efa402bd46b75c6c1a9bbda
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9edbaaf004018a26b84539d1e8ab133af5dca934
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510775"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483888"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-c"></a>段落とそのスタイルの取得 (C#)
 この例では、WordprocessingML ドキュメントから段落ノードを取得するクエリを記述します。 それぞれの段落のスタイルも特定します。  
@@ -132,6 +132,6 @@ StyleName:Code
 ## <a name="next-steps"></a>次の手順  
  次のトピック (「[段落のテキストの取得 (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)」) では、段落のテキストを取得するクエリを記述します。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)

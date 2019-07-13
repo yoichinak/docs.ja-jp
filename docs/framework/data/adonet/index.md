@@ -2,12 +2,12 @@
 title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: 59828e988659b9fc5644ff801f77171103630660
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4105aaba92c73206e7a162415e3bc245507f40e3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667087"
 ---
 # <a name="adonet"></a>ADO.NET
 ADO.NET は、.NET Framework のプログラミングでデータ アクセス サービスを使用できるようにするためのクラスの集合です。 ADO.NET は、分散型データ共有アプリケーションを作成する、さまざまなコンポーネントのセットを提供します。 ADO.NET は .NET Framework の不可欠な部分であり、リレーショナル データ、XML データ、およびアプリケーション データへのアクセス機能を提供します。 ADO.NET は、アプリケーション、ツール、言語、またはインターネット ブラウザーが使用するフロントエンド データベース クライアントや中間層ビジネス オブジェクトの作成を含む、各種の開発ニーズをサポートします。  
@@ -44,24 +44,22 @@ ADO.NET は、.NET Framework のプログラミングでデータ アクセス �
  .NET Framework Data Provider for Oracle 固有の機能および動作について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
- [ネイティブ コードと .NET Framework コードのセキュリティ](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
- Visual Studio、.NET Framework、および暗号のセキュリティに関するトピックへのリンクが掲載されています。  
+ [統合言語クエリ (LINQ) - C#](../../../csharp/programming-guide/concepts/linq/index.md)  
+ LINQ のトピックへのリンクを提供し、サンプルを使用してC#します。  
   
- [統合言語クエリ (LINQ)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- LINQ に関連したトピックおよびサンプルへのリンクが掲載されています。  
+ [統合言語クエリ (LINQ) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ LINQ のトピックと Visual Basic を使用してサンプルへのリンクを提供します。  
   
  [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] を使用して、Open Data Protocol (OData) を実装するデータ サービスを Web またはインターネットに配置する方法について説明します。  
   
- [コア開発テクノロジ](https://msdn.microsoft.com/library/csxbhtye.aspx)  
+ [.NET Framework の開発ガイド](../../development-guide.md)  
  .NET Framework の標準的な開発タスクに関する情報へのリンクが掲載されています。  
   
- [高度な開発テクノロジ](https://msdn.microsoft.com/library/a493kdy6.aspx)  
- .NET Framework の最新の開発タスクと開発手法に関する情報へのリンクが記載されています。  
+ [サンプルおよびチュートリアル](../../../samples-and-tutorials/index.md)  
+ .NET のサンプルとチュートリアルの一覧を示します。
   
- [サンプルとクイック スタート](https://msdn.microsoft.com/library/ms184422.aspx)  
- .NET Framework に関連するすべてのサンプルとクイックスタート サンプルの詳細な一覧が掲載されています。  
-  
-## <a name="see-also"></a>関連項目  
- [Visual Studio でのデータへのアクセス](/visualstudio/data-tools/accessing-data-in-visual-studio)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [Visual Studio でのデータへのアクセス](/visualstudio/data-tools/accessing-data-in-visual-studio)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

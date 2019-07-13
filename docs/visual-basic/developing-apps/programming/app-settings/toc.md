@@ -1,5 +1,0 @@
-# [アプリケーション設定へのアクセス](accessing-application-settings.md)
-## [方法 : ユーザー設定のためのプロパティ グリッドを作成する](how-to-create-property-grids-for-user-settings.md)
-## [方法 : ユーザー設定を永続化する](how-to-persist-user-settings.md)
-## [方法 : ユーザー設定を変更する](how-to-change-user-settings.md)
-## [方法 : アプリケーション設定を読み取る](how-to-read-application-settings.md)

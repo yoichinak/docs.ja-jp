@@ -1,22 +1,20 @@
 ---
-title: .NET の機械学習に関するハウツー ガイド - ML.NET
+title: ML.NET 使い方ガイド
 description: カスタム AI ソリューションの作成と、.NET アプリケーションへの Machine Learning 統合を支援するための、特定のタスクを実行する方法について説明します。
 ms.custom: seodec18
-ms.date: 12/04/2018
-ms.openlocfilehash: edff20b36d11dec169e1a4318a473533c8664842
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.date: 03/01/2019
+ms.openlocfilehash: c16adf6bf85aec1aef51751c6d4fe8c7f0f3c9f4
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235190"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645030"
 ---
-# <a name="net-machine-learning-how-to-guides---mlnet"></a>.NET の機械学習に関するハウツー ガイド - ML.NET
+# <a name="net-machine-learning-how-to-guides"></a>.NET の機械学習に関するハウツー ガイド 
 
 ML.NET ガイドの方法に関するセクションには、よく寄せられる質問に対する簡単な回答が記載されています。 場合によっては、見つけやすいように、記事が複数のセクションで表示されることもあります。
 
-## <a name="prepare-data"></a>データの準備
-
-### <a name="load-data"></a>データの読み込み
+## <a name="load-the-data"></a>データを読み込む
 
 * [機械学習の処理のために多数の列を含むデータを CSV ファイルから読み込みます。](load-data-from-mult-column-csv-ml-net.md)
 
@@ -24,9 +22,11 @@ ML.NET ガイドの方法に関するセクションには、よく寄せられ�
 
 * [機械学習の処理のためにテキスト ファイルからデータを読み込みます。](load-data-from-text-file-ml-net.md)
 
+### <a name="prepare-the-data"></a>データを準備する
+
 * [データ処理で使うためにノーマライザーでトレーニング データを前処理します。](normalizers-preprocess-data-ml-net.md)
 
-## <a name="train-model"></a>モデルをトレーニングする
+## <a name="train-the-model"></a>モデルをトレーニングする
 
 * [テキスト ファイルではないデータを使って機械学習モデルをトレーニングします。](load-non-file-training-data-ml-net.md)
 
@@ -34,7 +34,7 @@ ML.NET ガイドの方法に関するセクションには、よく寄せられ�
 
 * [ML.NET を使って値を予測する回帰モデルをトレーニングします。](train-regression-model-ml-net.md)
 
-### <a name="evaluate-model-quality"></a>モデルの品質を評価する
+### <a name="evaluate-the-model-quality"></a>モデルの品質を評価する
 
 * [メトリックを計算してモデルの品質を評価します。](verify-model-quality-ml-net.md)
 
@@ -50,7 +50,7 @@ ML.NET ガイドの方法に関するセクションには、よく寄せられ�
 
 * [ML.NET を使ってテキスト データに対するモデル トレーニングに特徴エンジニアリングを適用します。](train-model-textual-ml-net.md)
 
-## <a name="run"></a>実行 
+## <a name="run"></a>実行
 
 * [ML.NET パイプライン処理中の中間データ値を検査します。](inspect-intermediate-data-ml-net.md)
 
@@ -58,7 +58,6 @@ ML.NET ガイドの方法に関するセクションには、よく寄せられ�
 
 * [PredictionFunction を使って一度に 1 つの予測を行います。](single-predict-model-ml-net.md)
 
-## <a name="probabalistic-infernet"></a>確率論的 (Infer.NET)
+## <a name="probabilistic-infernet"></a>確率論的 (Infer.NET)
 
 * [Infer.NET と確率論的プログラミングでゲーム対戦リスト アプリを作成します。](matchup-app-infer-net.md)
-

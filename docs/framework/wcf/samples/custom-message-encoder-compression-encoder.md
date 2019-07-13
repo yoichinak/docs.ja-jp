@@ -1,15 +1,15 @@
 ---
-title: 'カスタム メッセージ エンコーダー : 圧縮エンコーダー'
+title: カスタム メッセージ エンコーダー:Expression Encoder
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: b70875e385fa32256476f6d1ae53e8cc1f5ff9de
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 32ca96987a86c04c227f8bb0d680f647898dfccf
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696797"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348428"
 ---
-# <a name="custom-message-encoder-compression-encoder"></a>カスタム メッセージ エンコーダー : 圧縮エンコーダー
+# <a name="custom-message-encoder-compression-encoder"></a>カスタム メッセージ エンコーダー:Expression Encoder
 このサンプルでは、Windows Communication Foundation (WCF) プラットフォームを使用してカスタム エンコーダーを実装する方法を示します。  
   
 > [!IMPORTANT]
@@ -29,33 +29,33 @@ ms.locfileid: "46696797"
   
  このサンプルでは、ビルドし、WCF アプリケーションにカスタム メッセージ エンコーダーを統合する方法を示します。 GZipEncoder.dll ライブラリは、クライアントとサービスの両方で配置されます。 また、このサンプルではメッセージを圧縮したときの影響も示します。 GZipEncoder.dll のコードでは、次が示されます。  
   
--   カスタム エンコーダーおよびエンコーダー ファクトリの作成。  
+- カスタム エンコーダーおよびエンコーダー ファクトリの作成。  
   
--   カスタム エンコーダのバインド要素の開発。  
+- カスタム エンコーダのバインド要素の開発。  
   
--   カスタム バインド要素を統合するためのカスタム バインド構成の使用。  
+- カスタム バインド要素を統合するためのカスタム バインド構成の使用。  
   
--   カスタム バインディング要素のファイル構成を可能にするカスタム構成ハンドラーの開発。  
+- カスタム バインド要素のファイル構成を可能にするカスタム構成ハンドラーの開発。  
   
  前に示したように、カスタム エンコーダにはいくつかのレイヤが実装されています。 こうした各レイヤ間の関係をわかりやすく説明するために、サービス起動のイベントの順序を簡略化した一覧を次に示します。  
   
-1.  サーバーが起動します。  
+1. サーバーが起動します。  
   
-2.  構成情報が読み取られます。  
+2. 構成情報が読み取られます。  
   
-    1.  サービス構成がカスタム構成ハンドラを登録します。  
+    1. サービス構成がカスタム構成ハンドラを登録します。  
   
-    2.  サービス ホストが作成されて開かれます。  
+    2. サービス ホストが作成されて開かれます。  
   
-    3.  カスタム構成要素がカスタム バインド要素を作成して返します。  
+    3. カスタム構成要素がカスタム バインド要素を作成して返します。  
   
-    4.  カスタム バインド要素がメッセージ エンコーダ ファクトリを作成して返します。  
+    4. カスタム バインド要素がメッセージ エンコーダ ファクトリを作成して返します。  
   
-3.  メッセージが受信されます。  
+3. メッセージが受信されます。  
   
-4.  メッセージ エンコーダ ファクトリは、メッセージを読み込んで応答を出力するためのメッセージ エンコーダを返します。  
+4. メッセージ エンコーダ ファクトリは、メッセージを読み込んで応答を出力するためのメッセージ エンコーダを返します。  
   
-5.  エンコーダ レイヤはクラス ファクトリとして実装されます。 カスタム エンコーダ用にパブリックに公開する必要があるのはエンコーダのクラス ファクトリだけです。 <xref:System.ServiceModel.ServiceHost> オブジェクトまたは <xref:System.ServiceModel.ChannelFactory%601> オブジェクトが作成されると、ファクトリ オブジェクトがバインディング要素によって返されます。 メッセージ エンコーダは、バッファ モードまたはストリーミング モードで動作できます。 このサンプルでは、バッファ モードとストリーミング モードの両方を示します。  
+5. エンコーダ レイヤはクラス ファクトリとして実装されます。 カスタム エンコーダ用にパブリックに公開する必要があるのはエンコーダのクラス ファクトリだけです。 <xref:System.ServiceModel.ServiceHost> オブジェクトまたは <xref:System.ServiceModel.ChannelFactory%601> オブジェクトが作成されると、ファクトリ オブジェクトがバインド要素によって返されます。 メッセージ エンコーダは、バッファ モードまたはストリーミング モードで動作できます。 このサンプルでは、バッファ モードとストリーミング モードの両方を示します。  
   
  各モードの `ReadMessage` 抽象クラスには、関連する `WriteMessage` メソッドと `MessageEncoder` メソッドがあります。 エンコード処理の大部分はこれらのメソッドで行われます。 サンプルでは、既存のテキスト エンコーダとバイナリ メッセージ エンコーダをラップします。 これにより、内部のエンコーダがネットワーク上でのメッセージの表現の読み取りと書き込みを代行し、圧縮エンコーダがその結果を圧縮または解凍できます。 メッセージ エンコーディングのパイプラインがないため、これは、WCF で複数のエンコーダーを使用するための唯一のモデルです。 メッセージが解凍されると、結果として得られたメッセージは、処理対象のチャネル スタックの上にスタックとして渡されます。 圧縮中は、結果として得られる圧縮メッセージは指定されたストリームに直接書き込まれます。  
   
@@ -63,9 +63,9 @@ ms.locfileid: "46696797"
   
  バッファ内の `ReadMessage` クラスと `WriteMessage` クラスは、`BufferManager` クラスを使用します。 エンコーダにはエンコーダ ファクトリを通じてのみアクセスできます。 `MessageEncoderFactory` 抽象クラスは、現在のエンコーダにアクセスするための `Encoder` という名前のプロパティと、セッションをサポートするエンコーダを作成するための `CreateSessionEncoder` という名前のメソッドを提供します。 チャネルがセッションをサポートし、順序付けされて信頼できるシナリオでは、このようなエンコーダを使用できます。 このシナリオでは、ネットワークに書き込まれるデータの各セッションを最適化できます。 これが必要でない場合は、基本メソッドをオーバーロードしないでください。 `Encoder` プロパティは、セッションのないエンコーダにアクセスする機構を備えており、`CreateSessionEncoder` メソッドの既定の実装では、このプロパティの値が返されます。 サンプルでは既存のエンコーダをラップして圧縮を行うので、`MessageEncoderFactory` の実装では、内部のエンコーダ ファクトリを表す `MessageEncoderFactory` が受け入れられます。  
   
- エンコーダーおよびエンコーダー ファクトリを定義すると、これでは、WCF クライアントおよびサービスで使用できます。 ただし、これらのエンコーダをチャネル スタックに追加する必要があります。 <xref:System.ServiceModel.ServiceHost> クラスと <xref:System.ServiceModel.ChannelFactory%601> クラスの派生クラスを作成して `OnInitialize` メソッドをオーバーライドすると、このエンコーダ ファクトリを手動で追加することができます。 また、カスタム バインディング要素を介してエンコーダ ファクトリを公開することもできます。  
+ エンコーダーおよびエンコーダー ファクトリを定義すると、これでは、WCF クライアントおよびサービスで使用できます。 ただし、これらのエンコーダをチャネル スタックに追加する必要があります。 <xref:System.ServiceModel.ServiceHost> クラスと <xref:System.ServiceModel.ChannelFactory%601> クラスの派生クラスを作成して `OnInitialize` メソッドをオーバーライドすると、このエンコーダ ファクトリを手動で追加することができます。 また、カスタム バインド要素を介してエンコーダ ファクトリを公開することもできます。  
   
- 新しいカスタム バインディング要素を作成するには、<xref:System.ServiceModel.Channels.BindingElement> クラスの派生クラスを作成します。 ただし、バインド要素には複数の型があります。 カスタム バインディング要素がメッセージ エンコード バインディング要素として認識されるには、さらに <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> も実装する必要があります。 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> は、新しいメッセージ エンコーダ ファクトリ (`CreateMessageEncoderFactory`) を作成するためのメソッドを公開します。このメソッドを実装すると、一致するメッセージ エンコーダ ファクトリのインスタンスが返されます。 また、<xref:System.ServiceModel.Channels.MessageEncodingBindingElement> にはアドレス バージョンを示すプロパティがあります。 このサンプルでは既存のエンコーダをラップするので、サンプルの実装では既存のエンコーダ バインディング要素もラップし、内部のエンコーダ バインディング要素をコンストラクタへのパラメータとして設定して、プロパティを介して公開します。 `GZipMessageEncodingBindingElement` クラスを実装する方法を次のサンプル コードに示します。  
+ 新しいカスタム バインド要素を作成するには、<xref:System.ServiceModel.Channels.BindingElement> クラスの派生クラスを作成します。 ただし、バインド要素には複数の型があります。 カスタム バインド要素がメッセージ エンコード バインド要素として認識されるには、さらに <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> も実装する必要があります。 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> は、新しいメッセージ エンコーダ ファクトリ (`CreateMessageEncoderFactory`) を作成するためのメソッドを公開します。このメソッドを実装すると、一致するメッセージ エンコーダ ファクトリのインスタンスが返されます。 また、<xref:System.ServiceModel.Channels.MessageEncodingBindingElement> にはアドレス バージョンを示すプロパティがあります。 このサンプルでは既存のエンコーダをラップするので、サンプルの実装では既存のエンコーダ バインド要素もラップし、内部のエンコーダ バインド要素をコンストラクタへのパラメータとして設定して、プロパティを介して公開します。 `GZipMessageEncodingBindingElement` クラスを実装する方法を次のサンプル コードに示します。  
   
 ```  
 public sealed class GZipMessageEncodingBindingElement   
@@ -167,7 +167,7 @@ GZipMessageEncoderFactory(innerBindingElement.CreateMessageEncoderFactory());
 }  
 ```  
   
- `GZipMessageEncodingBindingElement` クラスは `IPolicyExportExtension` インターフェイスを実装しているので、次の例に示すように、このバインディング要素はメタデータ内のポリシーとしてエクスポートできます。  
+ `GZipMessageEncodingBindingElement` クラスは `IPolicyExportExtension` インターフェイスを実装しているので、次の例に示すように、このバインド要素はメタデータ内のポリシーとしてエクスポートできます。  
   
 ```xml  
 <wsp:Policy wsu:Id="BufferedHttpSampleServer_ISampleServer_policy">  
@@ -220,9 +220,9 @@ binding.Name = "SampleBinding";
 binding.Namespace = "http://tempuri.org/bindings";  
 ```  
   
- ほとんどのユーザー シナリオではこのコードで十分ですが、サービスが Web ホストの場合はファイル構成のサポートが重要になります。 Web ホストのシナリオをサポートするには、カスタム構成ハンドラを開発して、カスタム バインド要素をファイル内で構成できるようにする必要があります。  
+ ほとんどのユーザー シナリオではこのコードで十分ですが、サービスが Web ホストの場合はファイル構成のサポートが重要になります。 Web ホストのシナリオをサポートするには、カスタム構成ハンドラを開発して、カスタム バインディング要素をファイル内で構成できるようにする必要があります。  
   
- バインディング要素の構成ハンドラーを、[!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] によって用意された構成システム上にビルドできます。 バインディング要素の構成ハンドラーは、<xref:System.ServiceModel.Configuration.BindingElementExtensionElement> クラスから派生する必要があります。 `BindingElementType` プロパティを使用して、このセクション用に作成するバインディング要素の型を構成システムに通知します。 設定可能な `BindingElement` のすべての側面を、<xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 派生クラスのプロパティとして公開する必要があります。 <xref:System.Configuration.ConfigurationPropertyAttribute> を使用して、構成要素の属性をプロパティにマップしたり、属性がない場合は既定値を設定する際に役立てます。 構成から値が読み込まれてプロパティに適用されると、<xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A> メソッドが呼び出されます。このメソッドは、プロパティをバインディング要素の具体的なインスタンスに変換します。 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A> メソッドを使用して、<xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 派生クラスのプロパティを、新しく作成されたバインディング要素の設定対象の値に変換します。  
+ 構成システム上に、バインド要素の構成ハンドラーを構築できます。 バインド要素の構成ハンドラーは、<xref:System.ServiceModel.Configuration.BindingElementExtensionElement> クラスから派生する必要があります。 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.BindingElementType?displayProperty=nameWithType>をここで作成するバインド要素の型の構成システムに通知します。 設定可能な `BindingElement` のすべての側面を、<xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 派生クラスのプロパティとして公開する必要があります。 <xref:System.Configuration.ConfigurationPropertyAttribute>構成要素の属性をプロパティにマップし、属性がない場合、既定値の設定に役立ちます。 構成から値が読み込まれてプロパティに適用されると、<xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A?displayProperty=nameWithType> メソッドが呼び出されます。このメソッドは、プロパティをバインディング要素の具体的なインスタンスに変換します。 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A?displayProperty=nameWithType>でプロパティを変換するメソッドを使用、<xref:System.ServiceModel.Configuration.BindingElementExtensionElement>新しく作成されたバインド要素で設定する値にクラスを派生します。  
   
  `GZipMessageEncodingElement` を実装するサンプル コードを次に示します。  
   
@@ -334,17 +334,17 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  次のコマンドを使用して、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 をインストールします。  
+1. 次のコマンドを使用して ASP.NET 4.0 をインストールします。  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
+2. 実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
-3.  ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
+3. ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
   
-4.  1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
+4. 1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
@@ -354,5 +354,3 @@ Press <ENTER> to terminate client.
 >  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`  
-  
-## <a name="see-also"></a>関連項目

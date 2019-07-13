@@ -6,12 +6,12 @@ helpviewer_keywords:
 - local functions [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50dd7fbb35358ad153cfdbec62a2922fdc28775c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e91069c25ebe6c2a22927391734e5030a908e4ae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240230"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663928"
 ---
 # <a name="local-functions-c-programming-guide"></a>ローカル関数 (C# プログラミング ガイド)
 
@@ -79,6 +79,6 @@ C# 7.0 以降、C# では*ローカル関数*がサポートされています�
 
 [!code-csharp[LocalFunctionAsync`](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async2.cs)] 
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [メソッド](methods.md)

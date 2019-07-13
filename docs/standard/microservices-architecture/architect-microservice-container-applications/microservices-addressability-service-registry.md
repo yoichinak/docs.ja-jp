@@ -1,15 +1,13 @@
 ---
 title: マイクロサービスのアドレス指定能力およびサービス レジストリ
 description: マイクロサービス アーキテクチャ内のコンテナー イメージ レジストリの役割を理解します。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 60afb2e06c0c9a37104a82a74de016da5c134a61
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d72ba399f3da730f0e57c44c5ec01c1cc9f5fc05
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145846"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690462"
 ---
 # <a name="microservices-addressability-and-the-service-registry"></a>マイクロサービスのアドレス指定能力およびサービス レジストリ
 
@@ -17,20 +15,18 @@ ms.locfileid: "53145846"
 
 [サービス レジストリ パターン](https://microservices.io/patterns/service-registry.html)は、サービス検出の重要な部分です。 レジストリは、サービス インスタンスのネットワークの場所を含むデータベースです。 サービス レジストリは、可用性が高く、最新の状態である必要があります。 クライアントは、サービス レジストリから取得したネットワークの場所をキャッシュすることが可能です。 ただし、その情報は最終的には期限切れになり、クライアントはサービス インスタンスを検出できなくなります。 したがって、サービス レジストリは、レプリケーション プロトコルを使用して整合性を維持するサーバーのクラスターで構成されます。
 
-一部のマイクロサービスの展開環境 (クラスターと呼ばれ、後のセクションで説明します) には、サービス検出が組み込まれています。 たとえば、Kubernetes (AKS) 環境での Azure Container Service では、サービス インスタンスの登録と登録解除を処理できます。 また、これはサーバー側の検出ルーターの役割を果たす各クラスター ホスト上でプロキシも実行します。 別の例として Azure Service Fabric が挙げられます。これもまた、すぐに使用できる Naming Service を介してサービス レジストリを提供します。
-
-サービス レジストリと API ゲートウェイ パターンとの間には特定のオーバーラップがあり、この問題の解決にも役立っています。 たとえば、[Service Fabric のリバース プロキシ](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy)は、Service Fabric の Naming Service に基づく API ゲートウェイの実装の種類であり、内部サービスへのアドレス解決を解決するのに役に立ちます。
+一部のマイクロサービスの展開環境 (クラスターと呼ばれ、後のセクションで説明します) には、サービス検出が組み込まれています。 たとえば、Kubernetes (AKS) 環境での Azure Container Service では、サービス インスタンスの登録と登録解除を処理できます。 また、これはサーバー側の検出ルーターの役割を果たす各クラスター ホスト上でプロキシも実行します。
 
 ## <a name="additional-resources"></a>その他の技術情報
 
 - **Chris Richardson。パターン: サービス レジストリ** \
-  [*https://microservices.io/patterns/service-registry.html*](https://microservices.io/patterns/service-registry.html)
+  <https://microservices.io/patterns/service-registry.html>
 
 - **Auth0。サービス レジストリ** \
-  [*https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/*](https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/)
+  <https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/>
 
 - **Gabriel Schenker。サービス探索** \
-  [*https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/*](https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/)
+  <https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/>
 
 >[!div class="step-by-step"]
 >[前へ](maintain-microservice-apis.md)

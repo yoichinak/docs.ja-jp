@@ -1,13 +1,13 @@
 ---
 title: dotnet-install スクリプト
 description: .NET Core CLI ツールと共有ランタイムをインストールする dotnet-install スクリプトについて説明します。
-ms.date: 11/15/2018
-ms.openlocfilehash: 0f565fee3e4ff4bec65bd196f635e9e9601485c2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/16/2019
+ms.openlocfilehash: 6404a8332a7196f0e6fdfe649c2c180970390775
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148329"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204796"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install スクリプト参照
 
@@ -36,7 +36,7 @@ macOS/Linux の場合:
 
 これらのスクリプトの主な有用性は、オートメーションのシナリオと管理者以外のインストールにおいてです。 2 つのスクリプトがあります。1 つは Windows 上で動作する PowerShell スクリプトで、もう 1 つは Linux/macOS 上で動作する bash スクリプトです。 スクリプトの動作は両方とも同じです。 bash スクリプトは PowerShell のスイッチも読み取るので、Linux/macOS システムのスクリプトで PowerShell のスイッチを使うことができます。
 
-インストール スクリプトは CLI ビルド ドロップから ZIP/tarball ファイルをダウンロードし、既定の場所または `-InstallDir|--install-dir` で指定された場所へのインストールに進みます。 既定では、インストール スクリプトは SDK をダウンロードしてインストールします。 共有ランタイムの取得だけを行いたい場合は、`--shared-runtime` 引数を指定します。
+インストール スクリプトは CLI ビルド ドロップから ZIP/tarball ファイルをダウンロードし、既定の場所または `-InstallDir|--install-dir` で指定された場所へのインストールに進みます。 既定では、インストール スクリプトは SDK をダウンロードしてインストールします。 共有ランタイムの取得だけを行いたい場合は、`--runtime` 引数を指定します。
 
 既定では、スクリプトはインストールの場所を現在のセッションの $PATH に追加します。 `--no-path` 引数を指定することによってこの既定の動作をオーバーライドします。
 
@@ -73,7 +73,7 @@ macOS/Linux の場合:
 
 * **`-Architecture <ARCHITECTURE>`**
 
-  インストールする .NET Core バイナリのアーキテクチャです。 可能性のある値は、`auto`、`x64`、および `x86` です。 既定値は `auto` です。これは実行中の OS アーキテクチャを示します。
+  インストールする .NET Core バイナリのアーキテクチャです。 指定できる値は、`<auto>`、`amd64`、`x64`、`x86`、`arm64`、および `arm` です。 既定値は `<auto>` です。これは実行中の OS アーキテクチャを示します。
 
 * **`-SharedRuntime`**
 
@@ -168,13 +168,13 @@ macOS/Linux の場合:
   Windows の場合:
 
   ```powershell
-  ./dotnet-install.ps1 -SharedRuntime -Version 1.1.0
+  ./dotnet-install.ps1 -Runtime dotnet -Version 1.1.0
   ```
 
   macOS/Linux の場合:
 
   ```bash
-  ./dotnet-install.sh --shared-runtime --version 1.1.0
+  ./dotnet-install.sh --runtime dotnet --version 1.1.0
   ```
 
 * スクリプトを入手し、会社のプロキシの背後に 2.1.2 バージョンをインストールします (Windows のみ)。
@@ -200,5 +200,5 @@ macOS/Linux の場合:
 
 ## <a name="see-also"></a>関連項目
 
-* [.NET Core のリリース](https://github.com/dotnet/core/releases)
-* [.NET Core ランタイムと SDK ダウンロード アーカイブ](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)
+- [.NET Core のリリース](https://github.com/dotnet/core/releases)
+- [.NET Core ランタイムと SDK ダウンロード アーカイブ](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)

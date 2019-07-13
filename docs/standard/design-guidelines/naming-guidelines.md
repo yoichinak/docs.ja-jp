@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
 author: KrzysztofCwalina
 ms.openlocfilehash: 4c7f411bdf538762de18873007c839f66911f96a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757262"
 ---
 # <a name="naming-guidelines"></a>名前付けのガイドライン
 フレームワーク開発で一貫した名前付け規則に従うことは、フレームワークの使いやすさへの主要な貢献となりえます。 これにより、広範囲に分散されたプロジェクトで多くの開発者が使用するフレームワークができます。 形式の一貫性以上に、フレームワーク要素の名前は簡単に理解でき、各要素の機能を伝えるものでなければなりません。  

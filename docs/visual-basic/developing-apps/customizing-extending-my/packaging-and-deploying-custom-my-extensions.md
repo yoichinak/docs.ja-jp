@@ -7,15 +7,15 @@ helpviewer_keywords:
 - My namespace [Visual Basic], extending
 ms.assetid: fd89c54b-0290-4c50-95a3-ff17d4487a21
 ms.openlocfilehash: 4212f58c39f63be6ba20c3b79e5d9c98d0615c5e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014207"
 ---
 # <a name="package-and-deploy-custom-my-extensions-visual-basic"></a>パッケージ化し、カスタム My 拡張 (Visual Basic) のデプロイ
 
-Visual Basic では、ユーザー設定を展開するための簡単な方法`My`Visual Studio テンプレートを使用して名前空間の拡張機能。 対象のプロジェクト テンプレートを作成する場合、`My`拡張機能は、新しいプロジェクトの種類の不可欠なカスタムを含めることができますのみ`My`テンプレートをエクスポートする場合は、プロジェクトで拡張機能のコード。 プロジェクト テンプレートをエクスポートする方法の詳細については、次を参照してください。[方法: プロジェクト テンプレートを作成](/visualstudio/ide/how-to-create-project-templates)です。
+Visual Basic では、ユーザー設定を展開するための簡単な方法`My`Visual Studio テンプレートを使用して名前空間の拡張機能。 対象のプロジェクト テンプレートを作成する場合、`My`拡張機能は、新しいプロジェクトの種類の不可欠なカスタムを含めることができますのみ`My`テンプレートをエクスポートする場合は、プロジェクトで拡張機能のコード。 プロジェクト テンプレートをエクスポートする方法の詳細については、次を参照してください。[方法。プロジェクト テンプレートを作成](/visualstudio/ide/how-to-create-project-templates)です。
 
 場合、カスタム`My`拡張機能が 1 つのコード ファイルに、ユーザーは、あらゆる種類の Visual Basic プロジェクトに追加できる項目テンプレートとして、ファイルをエクスポートすることができます。 追加の機能と、カスタムの動作を有効にする項目テンプレートをカスタマイズすることができますし`My`Visual Basic プロジェクトで拡張機能。 これらの機能を以下に示します。
 
@@ -33,7 +33,7 @@ Visual Basic では、ユーザー設定を展開するための簡単な方法`
 
 ## <a name="export-a-my-namespace-extension-as-an-item-template"></a>エクスポートする項目のテンプレートと My 名前空間拡張
 
-含むコード ファイルを作成したら、`My`名前空間の拡張機能は、Visual Studio 項目テンプレートとして、コード ファイルをエクスポートすることができます。 Visual Studio 項目テンプレートとしてファイルにエクスポートする方法の詳細については、次を参照してください。[方法: 項目テンプレートを作成](/visualstudio/ide/how-to-create-item-templates)です。
+含むコード ファイルを作成したら、`My`名前空間の拡張機能は、Visual Studio 項目テンプレートとして、コード ファイルをエクスポートすることができます。 Visual Studio 項目テンプレートとしてファイルにエクスポートする方法の詳細については、次を参照してください。[方法。項目テンプレートを作成](/visualstudio/ide/how-to-create-item-templates)です。
 
 > [!NOTE]
 > 場合、`My`名前空間の拡張機能は、特定のアセンブリに対する依存関係を持つ、自動的にインストールするように項目テンプレートをカスタマイズすることができます、`My`そのアセンブリへの参照が追加されたときに名前空間の拡張機能。 その結果、コード ファイルを Visual Studio 項目テンプレートとしてエクスポートするときに、アセンブリ参照を除外するされます。

@@ -1,14 +1,14 @@
 ---
 title: レコード式のコピーと更新
-description: "'コピーと更新レコード式を' 既存のレコード、更新プログラムをコピーするフィールドを指定および更新されたレコードを返します記述する方法について説明します。"
+description: "'コピーと更新式を' 既存のレコードまたは匿名のレコード、更新プログラムをコピーするフィールドを指定して、更新されたレコードまたは匿名のレコードを返します記述する方法について説明します。"
 author: ChrSteinert
-ms.date: 06/04/2016
-ms.openlocfilehash: 5f9b13ebf6c456aff73872b7522d7670c068dd88
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 06/12/2019
+ms.openlocfilehash: d16f5ca337047ab2eecc8828b21d8a423bf39a1f
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613311"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041731"
 ---
 # <a name="copy-and-update-record-expressions"></a>レコード式のコピーと更新
 
@@ -18,12 +18,16 @@ A*コピーして更新するレコード式*を既存のレコードをコピ�
 
 ```fsharp
 { record-name with
-    updated-member-definitions }
+    updated-labels }
+
+{| anonymous-record-name with
+    updated-labels |}
 ```
 
 ## <a name="remarks"></a>Remarks
 
-レコードは、可能な更新プログラムを既存のレコードがないように、既定では、不変です。 更新したレコードを作成するには、レコードのすべてのフィールドには、もう一度指定する必要があります。 このタスクを簡略化する、*コピーして更新するレコード式*ことができます。 この式は、既存のレコードには、式から指定したフィールドと、式で指定された存在しないフィールドを使用して、同じ型の新しいデフォルトを作成します。
+レコードと匿名は可能な更新プログラムを既存のレコードがないように、既定では、変更できません。 更新したレコードを作成するには、レコードのすべてのフィールドには、もう一度指定する必要があります。 このタスクを簡略化する、*コピーして、式を更新*ことができます。 この式は、既存のレコードには、式から指定したフィールドと、式で指定された存在しないフィールドを使用して、同じ型の新しいデフォルトを作成します。
+
 これは、フィールドの値の一部を変更する可能性があります、既存のレコードをコピーする必要があるときに役立ちます。
 
 新しく作成されたレコード インスタンスがかかります。
@@ -37,4 +41,5 @@ A*コピーして更新するレコード式*を既存のレコードをコピ�
 ## <a name="see-also"></a>関連項目
 
 - [レコード](records.md)
+- [匿名のレコード](anonymous-records.md)
 - [F# 言語リファレンス](index.md)

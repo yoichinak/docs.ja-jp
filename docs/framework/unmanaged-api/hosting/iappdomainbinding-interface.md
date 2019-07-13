@@ -16,29 +16,31 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6761ff204d299bc2db84e2e80d988306125a110
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e2c3a3057003d0035bfcb096a94c84d610e3056f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985513"
 ---
 # <a name="iappdomainbinding-interface"></a>IAppDomainBinding インターフェイス
-共通言語ランタイム (CLR) にホスト アプリケーションにアプリケーション ドメインが作成されていることを通知で呼び出されるメソッドを提供します。  
+共通言語ランタイム (CLR) に、アプリケーション ドメインが作成されたことをホスト アプリケーションに通知するによって呼び出されるメソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[OnAppDomain メソッド](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|共通言語ランタイム (CLR) にアプリケーション ドメインが作成されているホストに通知によって呼び出されます。|  
+|[OnAppDomain メソッド](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|共通言語ランタイム (CLR) に、ホスト アプリケーション ドメインが作成されたことを通知するによって呼び出されます。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>関連項目
+
+- [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

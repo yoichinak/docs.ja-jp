@@ -5,17 +5,17 @@ helpviewer_keywords:
 - My.Computer.Mouse object [Visual Basic], tasks
 - mouse [Visual Basic], accessing [Visual Basic]
 ms.assetid: 6d31a3d2-d860-459d-9d13-3aa192d62ba2
-ms.openlocfilehash: e08c5c24e0de0f467d012870238663b967656973
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0297df4ebfbbe718dd553b279ad62a6b30f0e7e4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582591"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838007"
 ---
 # <a name="accessing-the-mouse-visual-basic"></a>マウスへのアクセス (Visual Basic)
 `My.Computer.Mouse` オブジェクトは、コンピューターのマウスに関する情報 (マウスが存在するか、マウス ボタンの数など) を見つける方法とマウス ホイールに関する詳細を提供します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  この表は `My.Computer.Mouse` オブジェクトに関連するタスクを一覧にしたものであり、各タスクの実行方法を実演するトピックにここからアクセスできます。  
   
 |終了|解決方法については、|  
@@ -24,5 +24,6 @@ ms.locfileid: "33582591"
 |マウスの左右のボタンが入れ替えられているかどうかを判断します。|<xref:Microsoft.VisualBasic.Devices.Mouse.ButtonsSwapped>|  
 |マウス ホイールを 1 目盛り回転したときのスクロール範囲を設定します。|<xref:Microsoft.VisualBasic.Devices.Mouse.WheelScrollLines>|  
   
-## <a name="see-also"></a>参照  
- <xref:Microsoft.VisualBasic.Devices.Mouse>
+## <a name="see-also"></a>関連項目
+
+- <xref:Microsoft.VisualBasic.Devices.Mouse>

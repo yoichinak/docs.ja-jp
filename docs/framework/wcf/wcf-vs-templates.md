@@ -2,12 +2,12 @@
 title: WCF Visual Studio テンプレート
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: 73d2645977381602ef028d091675a22fb933d60b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2e192e671d37e096e4199b295d4f533194ab89b6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512710"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613226"
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio テンプレート
 Windows Communication Foundation (WCF) の Visual Studio テンプレートは、定義済みのプロジェクトと項目テンプレートを WCF サービスや周辺アプリケーションをすばやく作成する Visual Studio で使用することができます。  
@@ -20,11 +20,11 @@ Windows Communication Foundation (WCF) の Visual Studio テンプレートは�
   
  使用して新しいプロジェクトを作成する場合、 **WCF サービス**テンプレート、新しいプロジェクトに自動的に次の 3 つのファイルが含まれています。  
   
--   サービス コントラクト ファイル (IService1.cs または IService1.vb)。 サービス コントラクトのファイルは、適用される WCF サービスの属性を持つインターフェイスです。 このファイルには、サービスの定義方法を示す単純なサービスの定義が含まれています。その他に、パラメーター ベースの操作や、単純なデータ コントラクトのサンプルも含まれています。 これは、WCF サービス プロジェクトを作成したら、コード エディターに表示される既定のファイルです。  
+- サービス コントラクト ファイル (IService1.cs または IService1.vb)。 サービス コントラクトのファイルは、適用される WCF サービスの属性を持つインターフェイスです。 このファイルには、サービスの定義方法を示す単純なサービスの定義が含まれています。その他に、パラメーター ベースの操作や、単純なデータ コントラクトのサンプルも含まれています。 これは、WCF サービス プロジェクトを作成したら、コード エディターに表示される既定のファイルです。  
   
--   サービス実装ファイル (Service1.cs または Service1.vb)。 サービス実装ファイルは、サービス コントラクト ファイルに定義されているコントラクトを実装します。  
+- サービス実装ファイル (Service1.cs または Service1.vb)。 サービス実装ファイルは、サービス コントラクト ファイルに定義されているコントラクトを実装します。  
   
--   アプリケーション構成ファイル (App.config)。 構成ファイルでは、セキュリティで保護された HTTP バインディングで WCF サービス モデルの基本的な要素を提供します。 サービスのエンドポイントも含まれており、メタデータの交換も可能です。  
+- アプリケーション構成ファイル (App.config)。 構成ファイルでは、セキュリティで保護された HTTP バインディングで WCF サービス モデルの基本的な要素を提供します。 サービスのエンドポイントも含まれており、メタデータの交換も可能です。  
   
 > [!NOTE]
 >  Visual Studio を使用して実行した場合、プロジェクトの構成ファイルと App.config ファイルを認識するように構成、 [WCF サービス ホスト (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)既定の構成します。 サービス ライブラリを実行可能ファイルでホストする場合は、DLL の構成ファイルは無効になるため、その実行可能ファイルの構成ファイルに構成コードを移動する必要があります。  
@@ -34,13 +34,13 @@ Windows Communication Foundation (WCF) の Visual Studio テンプレートは�
   
  使用して新しいプロジェクトを作成する場合、 **WCF Web アプリケーション サービス**テンプレート プロジェクトにはには、次の 4 つのファイルが含まれています。  
   
--   サービス ホスト ファイル (service1.svc)。  
+- サービス ホスト ファイル (service1.svc)。  
   
--   サービス コントラクト ファイル (IService1.cs または IService1.vb)。  
+- サービス コントラクト ファイル (IService1.cs または IService1.vb)。  
   
--   サービス実装ファイル (Service1.svc.cs または Service1.svc.vb)。  
+- サービス実装ファイル (Service1.svc.cs または Service1.svc.vb)。  
   
--   Web 構成ファイル (Web.config)。  
+- Web 構成ファイル (Web.config)。  
   
  このテンプレートでは、自動的に Web サイトが作成されて (仮想ディレクトリに配置されます)、サービスがホストされます。  
   
@@ -59,7 +59,7 @@ Windows Communication Foundation (WCF) の Visual Studio テンプレートは�
  既存のプロジェクトが Web プロジェクトの場合は、サービス ホスト ファイル (service1.svc) も作成されます。  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>WCF WF サービス プロジェクト/項目テンプレート  
- これらのテンプレートは、WCF サービスをワークフロー サービスをホストする作成し、これは、web サービスのようにアクセスできるワークフローです。 この他に、XAML プログラミング モデルや命令型プログラミング モデルのテンプレートも用意されています。 これらのテンプレートを使用すると、シーケンシャル ワークフローやステート マシン ワークフローを作成できます。 これらのワークフローの種類の詳細については、次を参照してください。 [Windows Workflow Foundation チュートリアル](https://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97)します。 ワークフロー プロジェクトの作成の詳細については、次を参照してください。[従来のワークフロー プロジェクトを作成する](/visualstudio/workflow-designer/creating-legacy-workflow-projects)します。  
+ これらのテンプレートは、WCF サービスをワークフロー サービスをホストする作成し、これは、web サービスのようにアクセスできるワークフローです。 この他に、XAML プログラミング モデルや命令型プログラミング モデルのテンプレートも用意されています。 これらのテンプレートを使用すると、シーケンシャル ワークフローやステート マシン ワークフローを作成できます。 これらのワークフローの種類の詳細については、次を参照してください。[方法。ワークフロー作成](../windows-workflow-foundation/how-to-create-a-workflow.md)です。 ワークフロー プロジェクトの作成の詳細については、次を参照してください。[従来のワークフロー プロジェクトを作成する](/visualstudio/workflow-designer/creating-legacy-workflow-projects)します。  
   
  XOML 型のワークフローが使用される代わりにコード ベースのときに、visual Studio デザイナーの応答性が向上します。 XOML ワークフローは、既定で作成されるワークフロー型です。  
   
@@ -82,6 +82,7 @@ Windows Communication Foundation (WCF) の Visual Studio テンプレートは�
 > [!NOTE]
 >  Silverlight 対応 WCF サービスは、セキュリティ設定を一切有効にせずに `basicHttpBinding` エンドポイントを公開します。 したがって、サービスに接続しているすべてのクライアントが、このサービスに関する情報を取得できることになります。 また、サービスとクライアント間で交換されるメッセージの署名と暗号化も行われません。 エンドポイントを正しくセキュリティで保護するには、ASP.NET 認証や HTTPS などのメカニズムを使用する必要があります。  
   
-## <a name="see-also"></a>関連項目  
- [WCF サービス ホスト (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
- [WCF のテスト用クライアント (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+## <a name="see-also"></a>関連項目
+
+- [WCF サービス ホスト (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
+- [WCF のテスト用クライアント (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

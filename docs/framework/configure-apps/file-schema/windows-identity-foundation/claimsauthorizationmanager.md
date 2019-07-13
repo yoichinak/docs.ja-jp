@@ -1,16 +1,16 @@
 ---
-title: '&lt;claimsAuthorizationManager&gt;'
+title: <claimsAuthorizationManager>
 ms.date: 03/30/2017
 ms.assetid: 9354eee3-f692-4ad6-8427-3169686b8bcc
 author: BrucePerlerMS
-ms.openlocfilehash: a745339cffdada56a9b7f27f3f879b9d437c2da2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 59d47eda97e97629408ece12a1d1dfbe804feb3e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667315"
 ---
-# <a name="ltclaimsauthorizationmanagergt"></a>&lt;claimsAuthorizationManager&gt;
+# <a name="claimsauthorizationmanager"></a>\<claimsAuthorizationManager >
 入力方向の要求のクレーム承認マネージャーを登録します。  
   
  \<system.identityModel>  
@@ -36,7 +36,7 @@ ms.locfileid: "50195555"
   
 |属性|説明|  
 |---------------|-----------------|  
-|型|派生したカスタム型、<xref:System.Security.Claims.ClaimsAuthorizationManager>クラス。 詳細を指定する方法については、`type`属性は、「[カスタム型の参照](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)します。|  
+|種類|派生したカスタム型、<xref:System.Security.Claims.ClaimsAuthorizationManager>クラス。 詳細を指定する方法については、`type`属性は、「[カスタム型の参照](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)します。|  
   
 ### <a name="child-elements"></a>子要素  
  ある場合ありません`type`属性、または、`type`属性参照、<xref:System.Security.Claims.ClaimsAuthenticationManager>クラス、`<claimsAuthorizationManager>`要素は子要素を取りません。 ただし、から派生したクラス<xref:System.Security.Claims.ClaimsAuthorizationManager>子構成要素を定義できます。  
@@ -45,7 +45,7 @@ ms.locfileid: "50195555"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|サービス レベルの id の設定を指定します。|  
+|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|サービス レベルの id の設定を指定します。|  
   
 ## <a name="remarks"></a>Remarks  
  によって提供される既定の動作、<xref:System.Security.Claims.ClaimsAuthorizationManager>クラスは常に、入力方向の要求を承認します。 いない場合`type`属性が指定されて場合は、`type`属性を指定します、<xref:System.Security.Claims.ClaimsAuthorizationManager>クラス、`<claimsAuthorizationManager>`要素は子要素を取りません。 指定することができます、`type`から派生した型を登録する属性、<xref:System.Security.Claims.ClaimsAuthorizationManager>カスタム動作を実装するクラス。 派生クラスの子要素を使用した構成をサポートできる、`<claimsAuthorizationManager>`要素をオーバーライドすることで、<xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A>これらの要素を処理するメソッド。 子要素に対して定義されているスキーマは、最大クラスのデザイナーです。  

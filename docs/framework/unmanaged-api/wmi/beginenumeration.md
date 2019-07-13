@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 08406f7d93671b406b3c7cd8719a7a0e5e423184
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5ccf39c019094d896ca20534fccbbccf38ab1dd3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523503"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761807"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration 関数
 列挙子を列挙体の先頭にリセットします。  
@@ -30,7 +30,7 @@ ms.locfileid: "43523503"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT BeginEnumeration (
    [in] int               vFunc, 
    [in] IWbemClassObject* ptr, 
@@ -40,12 +40,13 @@ HRESULT BeginEnumeration (
 
 ## <a name="parameters"></a>パラメーター
 
-`vFunc`  
+`vFunc`\
 [in]このパラメーターは使用されません。
 
-`ptr` [in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。
+`ptr`\
+[in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。
 
-`lEnumFlags`  
+`lEnumFlags`\
 [in]フラグまたはで説明されている値のビットごとの組み合わせ、[解説](#remarks)列挙体に含まれるプロパティを制御するセクション。
 
 ## <a name="return-value"></a>戻り値
@@ -96,13 +97,13 @@ HRESULT BeginEnumeration (
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 定義またはクラス自体で変更されるプロパティを列挙型を制限します。 |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | 基底クラスから継承されるプロパティを列挙型を制限します。 |
 
-
-## <a name="requirements"></a>要件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>関連項目  
-[WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+## <a name="see-also"></a>関連項目
+
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

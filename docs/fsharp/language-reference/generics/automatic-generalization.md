@@ -2,12 +2,12 @@
 title: 自動ジェネリック化
 description: どの F# 自動的に一般化引数と関数の種類可能であれば、複数の種類で動作させることについて説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 15ecf8e6f07da19bb015fd028a7465ba8b837190
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 8fc61b5e0c227474a5e913b37f4c0dad9b235a6f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611712"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641868"
 ---
 # <a name="automatic-generalization"></a>自動ジェネリック化
 

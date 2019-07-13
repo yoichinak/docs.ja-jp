@@ -1,6 +1,0 @@
-# [デスクトップ アプリケーションのリソース](index.md)
-## [リソース ファイルの作成](creating-resource-files-for-desktop-apps.md)
-### [プログラムによる .resx ファイルの使用](working-with-resx-files-programmatically.md)
-## [サテライト アセンブリの作成](creating-satellite-assemblies-for-desktop-apps.md)
-## [リソースのパッケージ化と配置](packaging-and-deploying-resources-in-desktop-apps.md)
-## [リソースの取得](retrieving-resources-in-desktop-apps.md)

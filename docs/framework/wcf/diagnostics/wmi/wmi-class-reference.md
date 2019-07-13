@@ -3,17 +3,17 @@ title: WMI クラスの参照
 ms.date: 03/30/2017
 ms.assetid: b95a51f5-8251-4619-ae05-7de88cb90f9a
 ms.openlocfilehash: 73b36bfc3df917982a2cc9071bdb31f42b3b2dff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61915657"
 ---
 # <a name="wmi-class-reference"></a>WMI クラスの参照
-このセクションでは、Windows Communication Foundation (WCF) WMI プロバイダーによって公開されているすべての WMI クラスを一覧表示します。  
+このセクションでは、Windows Communication Foundation (WCF) WMI プロバイダーによって公開されるすべての WMI クラスを示します。  
   
 ## <a name="accessing-wmi-instances"></a>WMI インスタンスへのアクセス  
- WMI オブジェクト リファレンスに記載されているクラスはすべて、インスタンスを直接生成することはできません。ただし Service、AppDomain、Contract、ServiceAppDomain、ServiceToEndpointAssociation、Endpoint の各クラスを除きます。 他のインスタンスには、これらのトップ レベル クラスのプロパティからアクセスできます。 たとえば TransportBindingElement のインスタンスには、Endpoint のインスタンスから、Binding、BindingElements の順にたどってアクセスできます。  
+ WMI オブジェクト リファレンスに記載されているクラスはすべて、インスタンスを直接生成することはできません。ただし Service、AppDomain、Contract、ServiceAppDomain、ServiceToEndpointAssociation、Endpoint の各クラスを除きます。 他のインスタンスには、これらのトップ レベル クラスのプロパティからアクセスできます。 TransportBindingElement のインスタンスへのアクセスなどのバインド]-> [インスタンスのエンドポイントから BindingElements]-> [です。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ActivityTransfer](../../../../../docs/framework/wcf/diagnostics/wmi/activitytransfer.md)  
@@ -24,7 +24,7 @@ ms.locfileid: "33487621"
   
  [AsymmetricSecurityBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/asymmetricsecuritybindingelement.md)  
   
- 「Behavior クラス」  
+ 「動作クラス」  
   
  [BinaryMessageEncodingBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/binarymessageencodingbindingelement.md)  
   
@@ -80,7 +80,7 @@ ms.locfileid: "33487621"
   
  [OneWayBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/onewaybindingelement.md)  
   
- 「操作クラス」  
+ 「Operation クラス」  
   
  [OperationBehaviorAttribute](../../../../../docs/framework/wcf/diagnostics/wmi/operationbehaviorattribute.md)  
   

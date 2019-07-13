@@ -1,5 +1,5 @@
 ---
-title: '&lt;sectionGroup&gt;要素&lt;configSections&gt;'
+title: <sectionGroup>appSettings&gt;の<configSections>add&gt;要素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/sectionGroup
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - sectionGroup Element
 - <sectionGroup> Element
 ms.assetid: 6c27f9e2-809c-4bc9-aca9-72f90360e7a3
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: b898c81700e95ec9bc94e04c5a76494b7ac4b0dc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 750708483f9680745eef4531d86fa7ecaa329f51
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754016"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301192"
 ---
-# <a name="sectiongroup-element-for-configsections"></a>\<sectionGroup > 要素を\<configSections >
+# <a name="sectiongroup-element-for-configsections"></a>\<sectionGroup > 要素の\<configSections >
 
 構成セクションの名前空間を定義します。
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<configSections >**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<sectionGroup >**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<sectionGroup>**
 
 ## <a name="syntax"></a>構文
 
@@ -36,23 +36,23 @@ ms.locfileid: "32754016"
 
 |           | 説明 |
 | --------- | ----------- |
-| **name**  | 必須の属性です。<br><br>定義しているセクション グループの名前を指定します。 |
+| **name**  | 必須の属性です。<br><br>定義するセクション グループの名前を指定します。 |
 
 ## <a name="parent-element"></a>親要素
 
 |     | 説明 |
 | --- | ----------- |
-| [**\<configSections >** 要素](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 構成セクションと名前空間宣言が含まれています。 |
+| [ **\<configSections >** 要素](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 構成セクションと名前空間宣言が含まれています。 |
 
 ## <a name="child-elements"></a>子要素
 
 |     | 説明 |
 | --- | ----------- |
-| [**\<セクション >**](~/docs/framework/configure-apps/file-schema/section-element.md) | 構成セクションの宣言が含まれています。 |
+| [ **\<section>** ](~/docs/framework/configure-apps/file-schema/section-element.md) | 構成セクションの宣言が含まれています。 |
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-セクション グループを宣言すると、構成セクションのコンテナー タグを作成し、他のユーザーによって定義された構成セクションの名前付けの競合がないことを確認します。 入れ子にすることができます **\<sectionGroup >** 相互内の要素。
+セクション グループを宣言すると、構成セクションのコンテナー タグを作成し、他のユーザーによって定義されている構成セクションと名前付けの競合が存在しないようにします。 入れ子にすることができます **\<sectionGroup >** 相互内の要素。
 
 ## <a name="example"></a>例
 
@@ -80,4 +80,4 @@ ms.locfileid: "32754016"
 
 ## <a name="see-also"></a>関連項目
 
-[.NET Framework の構成ファイル スキーマ](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework の構成ファイル スキーマ](~/docs/framework/configure-apps/file-schema/index.md)

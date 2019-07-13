@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bd1a55d4100d74b769b2bc1b8fe33d2042f5e739
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8ffcc3a079e7e9a9d69622dc6666bb0e7641d4e3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650779"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>ISymUnmanagedWriter::SetSymAttribute メソッド
 その名前に基づくカスタム属性を定義します。 これらの属性は、カスタム属性のメタデータとは異なり、シンボル ストアに保持されます。  
@@ -37,12 +37,12 @@ HRESULT SetSymAttribute(
     [in, size_is(cData)] unsigned char data[]);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `parent`  
- [in]属性が定義されているメタデータ トークンです。  
+ [in]属性を定義するメタデータ トークンです。  
   
  `name`  
- [in]ポインター、`WCHAR`属性名を格納しています。  
+ [in]ポインターを`WCHAR`属性名を格納しています。  
   
  `cData`  
  [in]A`ULONG32`のサイズを示す、`data`配列。  
@@ -51,10 +51,11 @@ HRESULT SetSymAttribute(
  [in]属性の値。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は S_OK、それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
   
-## <a name="requirements"></a>要件  
- **ヘッダー:** CorSym.idl、CorSym.h  
+## <a name="requirements"></a>必要条件  
+ **ヘッダー:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>関連項目  
- [ISymUnmanagedWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [ISymUnmanagedWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

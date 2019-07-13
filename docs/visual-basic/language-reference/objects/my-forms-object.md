@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Forms object
 ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
-ms.openlocfilehash: d15765b7673f321d4362ceea0adb73959a7e7726
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4998097b910a504461a34af3cc159ddb1c74cc62
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949319"
 ---
 # <a name="myforms-object"></a>My.Forms オブジェクト
 プロパティは、現在のプロジェクトで宣言されている各 Windows フォームのインスタンスへのアクセスを提供します。  
@@ -46,13 +46,13 @@ ms.locfileid: "48582659"
 ## <a name="example"></a>例  
  この例は、既定のタイトルを変更`SidebarMenu`フォーム。  
   
- [!code-vb[VbVbalrMyForms#2](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-forms-object_1.vb)]  
+ [!code-vb[VbVbalrMyForms#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyForms/VB/Class1.vb#2)]  
   
  この例を動作させるには、プロジェクトがという名前のフォームをいる必要があります`SidebarMenu`します。  
   
  このコードは、Windows アプリケーション プロジェクトでのみ動作します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 ### <a name="availability-by-project-type"></a>プロジェクトの種類ごとの可用性  
   
@@ -66,11 +66,12 @@ ms.locfileid: "48582659"
 |Windows サービス|いいえ|  
 |Web サイト|いいえ|  
   
-## <a name="see-also"></a>関連項目  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>  
- <xref:System.Windows.Forms.Form>  
- <xref:System.Windows.Forms.Form.Close%2A>  
- [オブジェクト](../../../visual-basic/language-reference/objects/index.md)  
- [Is 演算子](../../../visual-basic/language-reference/operators/is-operator.md)  
- [IsNot 演算子](../../../visual-basic/language-reference/operators/isnot-operator.md)  
- [アプリケーション フォームへのアクセス](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>
+- <xref:System.Windows.Forms.Form>
+- <xref:System.Windows.Forms.Form.Close%2A>
+- [オブジェクト](../../../visual-basic/language-reference/objects/index.md)
+- [Is 演算子](../../../visual-basic/language-reference/operators/is-operator.md)
+- [IsNot 演算子](../../../visual-basic/language-reference/operators/isnot-operator.md)
+- [アプリケーション フォームへのアクセス](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)

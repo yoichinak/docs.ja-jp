@@ -3,17 +3,17 @@ title: WIF 要求プログラミング モデル
 ms.date: 03/30/2017
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
 author: BrucePerlerMS
-ms.openlocfilehash: 91b719967cd4ab9fd412e5c0799bb5e1921a4801
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 19dbf5ed8852ea8d3ad9be078cb575c6e4dc06ed
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316507"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631897"
 ---
 # <a name="wif-claims-programming-model"></a>WIF 要求プログラミング モデル
 ASP.NET と Windows Communication Foundation (WCF) の開発者は、通常、IIdentity インターフェイスや IPrincipal インターフェイスを利用し、ユーザーの ID 情報を処理します。 .NET 4.5 では、Windows Identity Foundation (WIF) が統合され、あらゆるプリンシパルに対して常に要求が表示されるようになりました。次の図をご覧ください。
 
- ![WIF 要求プログラミング モデル](../../../docs/framework/security/media/wifclaimsprogrammingmodel.png "WIFClaimsProgrammingModel")
+ ![WIF 要求プログラミング モデルを示す図。](./media/wif-claims-programming-model/wif-claims-programming-model.png)
 
  .NET 4.5 では、System.Security.Claims に新しい ClaimsPrincipal クラスと ClaimsIdentity クラスが含まれます (上の図をご覧ください)。 .NET のすべてのプリンシパルは ClaimsPrincipal から派生するようになりました。 ASP.NET の FormsIdentity や WindowsIdentity のような、組み込み ID クラスはすべて ClaimsIdentity から派生するようになりました。 同様に、GenericPrincipal や WindowsPrincipal など、組み込みのプリンシパル クラスはすべて ClaimsPrincipal から派生します。
 
@@ -59,7 +59,7 @@ WIF は、すぐに使える、さまざまな認証メカニズムの組み合�
 |SAML 2.0|"SAML 1.1" と同じ。|"Windows アカウントにマップされた SAML 1.1" と同じ。|
 |X509|1.X500 の識別名、emailName、dnsName、SimpleName、UpnName、UrlName、拇印、RsaKey (これは X509Certificate2.PublicKey.Keyy プロパティから RSACryptoServiceProvider.ExportParameters メソッドを利用して抽出できます)、DsaKey (これは X509Certificate2.PublicKey.Key プロパティから DSACryptoServiceProvider.ExportParameters メソッドを利用して抽出できます)、X509 証明書の SerialNumber プロパティを持つ要求。<br />2.値 `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509` を持つ AuthenticationMethod 要求。 証明書が XmlSchema DateTime 形式で検証されたときの値を持つ AuthenticationInstant 要求。|1.Windows アカウントの完全修飾ドメイン名が `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name` 要求値として使用されます。 .<br />2.Windows にマッピングされていない X509 証明書からの要求と、Windows に証明書をマッピングして取得した Windows アカウントからの要求。|
 |UPN|1.要求は、Windows 認証セクションの要求と似ています。<br />2.値 `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password` を持つ AuthenticationMethod 要求。 パスワードが XmlSchema DateTime 形式で検証されたときの値を持つ AuthenticationInstant 要求。||
-|Windows (Kerberos または NTLM)|1.PrimarySID、DenyOnlyPrimarySID、PrimaryGroupSID、DenyOnlyPrimaryGroupSID、GroupSID、DenyOnlySID、Name など、アクセス トークンから生成された要求。<br />2.値 `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows` を持つ AuthenticationMethod。 Windows アクセス トークンが XMLSchema DateTime 形式で作成されたときの値を持つ AuthenticationInstant。||
+|Windows (Kerberos または NTLM)|1.など、アクセス トークンから生成された要求。PrimarySID、DenyOnlyPrimarySID、PrimaryGroupSID、DenyOnlyPrimaryGroupSID、GroupSID、DenyOnlySID、および名前<br />2.値 `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows` を持つ AuthenticationMethod。 Windows アクセス トークンが XMLSchema DateTime 形式で作成されたときの値を持つ AuthenticationInstant。||
 |RSA キー ペア|1.値 RSAKeyValue を持つ `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/rsa` 要求。<br />2.値 `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/signature` を持つ AuthenticationMethod 要求。 RSA キーが XMLSchema DateTime 形式で認証された (つまり、署名が検証された) ときの値を持つ AuthenticationInstant 要求。||
 
 |認証の種類|"AuthenticationMethod" 要求の URI|

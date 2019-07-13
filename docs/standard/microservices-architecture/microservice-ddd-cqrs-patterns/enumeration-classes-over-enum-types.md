@@ -1,19 +1,17 @@
 ---
 title: 列挙型ではなく列挙型クラスを使用する
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | enum のいくつかの制限を解決する方法として、代わりに Enumeration クラスを使用する方法を説明します。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 72a3e7ef8043e0016cefb45a4182b5c2e3061753
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 10b4c2f7b9f079ed535111e65b8154791f6575cd
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029711"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003836"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>enum 型の代わりに Enumeration クラスを使用する
 
-[列挙型](../../../../docs/csharp/language-reference/keywords/enum.md) (省略形も同じ *列挙型*) は、整数型を包む薄い言語ラッパーです。 閉じた値のセットから 1 つの値を格納するときに、列挙型の使用を制限することができます。 サイズ (小、中、大) に基づく分類は良い一例です。 制御フローまたはより堅牢な抽象化のために列挙型を使用すると、[コードの臭い](http://deviq.com/code-smells/)になることがあります。 このような用法は、列挙型の値を検査する多くの制御フロー ステートメントでは脆弱なコードにつながります。
+[列挙型](../../../../docs/csharp/language-reference/keywords/enum.md) (省略形も同じ *列挙型*) は、整数型を包む薄い言語ラッパーです。 閉じた値のセットから 1 つの値を格納するときに、列挙型の使用を制限することができます。 サイズ (小、中、大) に基づく分類は良い一例です。 制御フローまたはより堅牢な抽象化のために列挙型を使用すると、[コードの臭い](https://deviq.com/code-smells/)になることがあります。 このような用法は、列挙型の値を検査する多くの制御フロー ステートメントでは脆弱なコードにつながります。
 
 代わりに、オブジェクト指向言語の豊富な機能をすべて使用できる列挙型クラスを作成する方法があります。
 
@@ -29,9 +27,6 @@ public abstract class Enumeration : IComparable
     public string Name { get; private set; }
 
     public int Id { get; private set; }
-
-    protected Enumeration()
-    { }
 
     protected Enumeration(int id, string name) 
     {
@@ -72,32 +67,15 @@ public abstract class Enumeration : IComparable
 次の `CardType` : `Enumeration` クラスに関しては、このクラスを任意のエンティティまたは値オブジェクトの型として使用できます。
 
 ```csharp
-public abstract class CardType : Enumeration
+public class CardType : Enumeration
 {
-    public static CardType Amex = new AmexCardType();
-    public static CardType Visa = new VisaCardType();
-    public static CardType MasterCard = new MasterCardType();
+    public static CardType Amex = new CardType(1, "Amex");
+    public static CardType Visa = new CardType(2, "Visa");
+    public static CardType MasterCard = new CardType(3, "MasterCard");
 
-    protected CardType(int id, string name)
+    public CardType(int id, string name)
         : base(id, name)
-    { }
-
-    private class AmexCardType : CardType
     {
-        public AmexCardType(): base(1, "Amex")
-        { }
-    }
-    
-    private class VisaCardType : CardType
-    {
-        public VisaCardType(): base(2, "Visa")
-        { }
-    }
-    
-    private class MasterCardType : CardType
-    {
-        public MasterCardType(): base(3, "MasterCard")
-        { }
     }
 }
 ```
@@ -105,25 +83,25 @@ public abstract class CardType : Enumeration
 ## <a name="additional-resources"></a>その他の技術情報
 
 - **列挙型は悪 — 更新** \
-  [*https://www.planetgeek.ch/2009/07/01/enums-are-evil/*](https://www.planetgeek.ch/2009/07/01/enums-are-evil/)
+  <https://www.planetgeek.ch/2009/07/01/enums-are-evil/>
 
 - **Daniel Hardman。列挙型で広がる病気 — そしてその治療方法** \
-  [*https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/*](https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/)
+  <https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/>
 
 - **Jimmy Bogard。列挙型クラス** \
-  [*https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/*](https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/)
+  <https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/>
 
 - **Steve Smith。C# の列挙型の代替** \
-  [*https://ardalis.com/enum-alternatives-in-c*](https://ardalis.com/enum-alternatives-in-c)
+  <https://ardalis.com/enum-alternatives-in-c>
 
 - **Enumeration.cs。** eShopOnContainers の基底列挙型クラス \
-  [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)
+  <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs>
 
 - **CardType.cs**。 eShopOnContainers のサンプル列挙型クラス。 \
-  [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs)
+  <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs>
     
 - **SmartEnum**. Ardalis - .NET で厳密に型指定されたスマートな列挙型を生成するためのクラス。 \
-  [*https://www.nuget.org/packages/Ardalis.SmartEnum/*](https://www.nuget.org/packages/Ardalis.SmartEnum/)
+  <https://www.nuget.org/packages/Ardalis.SmartEnum/>
 
 >[!div class="step-by-step"]
 >[前へ](implement-value-objects.md)

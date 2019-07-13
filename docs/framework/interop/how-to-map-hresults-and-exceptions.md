@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d5728de1140df51b9c725db0c8c80d21ace6deb
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 60173739842835a705a72da4e7ab442cacfc08d2
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454474"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59306548"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>方法: HRESULT に例外を割り当てる
 COM メソッドでは、HRESULT を返してエラーを報告します。 .NET メソッドでは、例外をスローしてエラーを報告します。 ランタイムは、この 2 つの間の遷移を処理します。 .NET Framework の例外クラスはそれぞれ HRESULT に割り当てられます。  
@@ -31,7 +31,7 @@ COM メソッドでは、HRESULT を返してエラーを報告します。 .NET
   
 ### <a name="to-create-a-new-exception-class-and-map-it-to-an-hresult"></a>新しい例外クラスを作成し、HRESULT に割り当てるには  
   
-1.  次のコードを使用して、`NoAccessException` という新しい例外クラスを作成し、HRESULT `E_ACCESSDENIED` に割り当てます。  
+1. 次のコードを使用して、`NoAccessException` という新しい例外クラスを作成し、HRESULT `E_ACCESSDENIED` に割り当てます。  
   
     ```cpp  
     Class NoAccessException : public ApplicationException  
@@ -142,6 +142,7 @@ CMyClass::MethodThatThrows
   
  **Message**、**Source**、および **StackTrace** などの例外フィールドは、**StackOverflowException** では使用できません。  
   
-## <a name="see-also"></a>参照  
- [高度な COM 相互運用性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))  
- [例外](../../standard/exceptions/index.md)
+## <a name="see-also"></a>関連項目
+
+- [高度な COM 相互運用性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
+- [例外](../../standard/exceptions/index.md)

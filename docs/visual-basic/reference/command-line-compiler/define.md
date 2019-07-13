@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-ms.openlocfilehash: 4cab6bc968275bc12af4365fd3da5e3b5ff417f2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d0a483e7a3c9e9863db39e89d655cf172c1e8c81
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649726"
 ---
 # <a name="-define-visual-basic"></a>-定義 (Visual Basic)
 条件付きコンパイル定数を定義します。  
@@ -31,7 +31,7 @@ ms.locfileid: "50195178"
   
 |用語|定義|  
 |---|---|  
-|`symbol`|必ず指定します。 定義する記号。|  
+|`symbol`|必須。 定義する記号。|  
 |`value`|省略可能です。 `symbol` に代入する値。 場合`value`文字列で、シーケンスのバック スラッシュ/引用符で囲みます (\\") 引用符の代わりにします。 値が指定されていない場合は、True として処理されます。|  
   
 ## <a name="remarks"></a>Remarks  
@@ -50,10 +50,11 @@ ms.locfileid: "50195178"
 ## <a name="example"></a>例  
  2 つの条件付きコンパイル定数を定義して使用する場合のコード例を次に示します。  
   
- [!code-vb[VbVbalrCompiler#45](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/define_1.vb)]  
+ [!code-vb[VbVbalrCompiler#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/Class1.vb#45)]  
   
-## <a name="see-also"></a>関連項目  
- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)  
- [#If...Then...#Else ディレクティブ](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
- [#Const ディレクティブ](../../../visual-basic/language-reference/directives/const-directive.md)  
- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>関連項目
+
+- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [#If...Then...#Else ディレクティブ](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
+- [#Const ディレクティブ](../../../visual-basic/language-reference/directives/const-directive.md)
+- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

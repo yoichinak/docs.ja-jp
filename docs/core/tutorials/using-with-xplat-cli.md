@@ -5,14 +5,14 @@ author: cartermp
 ms.date: 09/10/2018
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: 11d8a4d1841a1d161c4aed233a025813374556d6
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 92ca5149ad5f0e4a50c809a316123fbf77d4152d
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169990"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545365"
 ---
-# <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Windows/Linux/macOS の .NET Core でのコマンド ラインの使用に関する概要
+# <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Windows/Linux/macOS の .NET Core でのコマンド ラインの使用に関する概要
 
 このトピックでは、.NET Core CLI ツールを利用し、自分のコンピューターでプラットフォームに依存しないアプリを開発する方法について説明します。
 
@@ -30,13 +30,13 @@ GitHub の dotnet/samples レポジトリから、[サンプル コードを表�
 コマンド プロンプトを開き、*Hello* という名前のフォルダーを作成します。 作成したフォルダーに移動して、次のように入力します。
 
 ```console
-$ dotnet new console
-$ dotnet run
+dotnet new console
+dotnet run
 ```
 
 簡単に説明します。
 
-1. `$ dotnet new console`
+1. `dotnet new console`
 
    [`dotnet new`](../tools/dotnet-new.md) は、コンソール アプリのビルドに必要な依存関係を含む最新の `Hello.csproj` プロジェクト ファイルを作成します。  また、アプリケーションのエントリ ポイントを含む基本的なファイルである `Program.cs` も作成します。
 
@@ -59,12 +59,12 @@ $ dotnet run
 
    [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-   `dotnet new` は [`dotnet restore`](../tools/dotnet-restore.md) を暗黙的に呼び出します。 `dotnet restore` は、[NuGet](https://www.nuget.org/) (.NET パッケージ マネージャー) を呼び出して依存関係ツリーを復元します。 NuGet は、*Hello.csproj* ファイルを分析し、ファイルに記載されている依存関係をダウンロードし (またはコンピューターのキャッシュから取得し)、サンプルをコンパイルして実行するために必要な *obj/project.assets.json* ファイルを記述します。 
-   
+   `dotnet new` は [`dotnet restore`](../tools/dotnet-restore.md) を暗黙的に呼び出します。 `dotnet restore` は、[NuGet](https://www.nuget.org/) (.NET パッケージ マネージャー) を呼び出して依存関係ツリーを復元します。 NuGet は、*Hello.csproj* ファイルを分析し、ファイルに記載されている依存関係をダウンロードし (またはコンピューターのキャッシュから取得し)、サンプルをコンパイルして実行するために必要な *obj/project.assets.json* ファイルを記述します。
+
    > [!IMPORTANT]
    > .NET Core 1.x バージョンの SDK を使用している場合は、`dotnet new` の呼び出し後に `dotnet restore` を自分で呼び出す必要があります。
 
-2. `$ dotnet run`
+2. `dotnet run`
 
    [`dotnet run`](../tools/dotnet-run.md) は、[`dotnet build`](../tools/dotnet-build.md) を呼び出してビルド ターゲットがビルドされていることを確認した後、`dotnet <assembly.dll>` を呼び出してターゲット アプリケーションを実行します。
 
@@ -74,6 +74,7 @@ $ dotnet run
     ```
 
     [`dotnet build`](../tools/dotnet-build.md) を実行し、ビルド コンソール アプリケーションを実行しないでコードをコンパイルすることもできます。 これで、Windows で `dotnet bin\Debug\netcoreapp2.1\Hello.dll` を使用して (Windows 以外のシステムの場合は `/` を使用して) 実行できる DLL ファイルとしてアプリケーションがコンパイルされます。 アプリケーションには引数を指定することもできます。それについてはこのトピックの後半で説明します。
+
     ```console
     $ dotnet bin\Debug\netcoreapp2.1\Hello.dll
     Hello World!
@@ -118,7 +119,8 @@ $ dotnet run
 
 ## <a name="working-with-multiple-files"></a>複数のファイルの操作
 
-単純な 1 回だけのプログラムには 1 つのファイルで十分ですが、より複雑なアプリを開発する場合、プロジェクトに複数のソース ファイルを用意する必要があるでしょう。先のフィボナッチのサンプルから作成してみましょう。いくつかのフィボナッチ値をキャッシュしてから、再帰機能を追加します。
+単純な 1 回だけのプログラムには 1 つのファイルで十分ですが、より複雑なアプリをビルドする場合、プロジェクトに複数のソース ファイルを使用する可能性があります。
+先のフィボナッチのサンプルから作成してみましょう。いくつかのフィボナッチ値をキャッシュしてから、再帰機能をいくつか追加します。
 
 1. 次のコードを利用し、*FibonacciGenerator.cs* という名前の *Hello* ディレクトリ内に新しいファイルを追加します。
 
@@ -157,4 +159,4 @@ $ dotnet run
 
 ## <a name="see-also"></a>関連項目
 
-* [.NET Core CLI ツールを使用したプロジェクトの整理およびテスト](testing-with-cli.md)
+- [.NET Core CLI ツールを使用したプロジェクトの整理およびテスト](testing-with-cli.md)

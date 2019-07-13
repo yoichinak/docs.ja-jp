@@ -2,12 +2,12 @@
 title: '方法: グループ化を使用して階層を作成する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 0213d59e-5f76-438c-9cab-4bf11f7b971d
-ms.openlocfilehash: 8fa384ced04a90002f8f721266f163c874d6e0ff
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 685c8ad1360ba2959dc81632ae084b935bd37c47
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46585561"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485846"
 ---
 # <a name="how-to-create-hierarchy-using-grouping-c"></a>方法: グループ化を使用して階層を作成する (C#)
 この例では、データをグループ化し、そのグループ化に基づいて XML を生成する方法を示します。  
@@ -15,7 +15,7 @@ ms.locfileid: "46585561"
 ## <a name="example"></a>例  
  この例では、まずデータをカテゴリごとにグループ化し、次にグループ化を反映した XML 階層を含む新しい XML ファイルを生成します。  
   
- この例では、「[サンプル XML ファイル: 数値データ (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)」の XML ドキュメントを使用します。  
+ この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:数値データ (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)」。  
   
 ```csharp  
 XElement doc = XElement.Load("Data.xml");  
@@ -73,7 +73,3 @@ Console.WriteLine(newData);
   </Group>  
 </Root>  
 ```  
-  
-## <a name="see-also"></a>参照
-
-- [高度なクエリ手法 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

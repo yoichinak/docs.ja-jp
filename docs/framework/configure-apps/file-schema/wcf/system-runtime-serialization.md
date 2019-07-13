@@ -1,15 +1,15 @@
 ---
-title: '&lt;system.runtime.serialization&gt;'
+title: <system.runtime.serialization>
 ms.date: 03/30/2017
 ms.assetid: a8cebf4c-06d2-4667-8f5b-c3e1fc90df6f
-ms.openlocfilehash: 7cda0918ec14f9065ab1aea2479a14c8d224fcf8
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c34eba2614a354f1753d8da077f8653f2c260a97
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757912"
 ---
-# <a name="ltsystemruntimeserializationgt"></a>&lt;system.runtime.serialization&gt;
+# <a name="systemruntimeserialization"></a>\<system.runtime.serialization>
 <xref:System.Runtime.Serialization> 名前空間セクションのルート要素を表し、<xref:System.Runtime.Serialization.DataContractSerializer> のオプションを設定するための要素を含みます。  
   
  system.runtime.serialization  
@@ -43,7 +43,7 @@ ms.locfileid: "54150553"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md)|逆シリアル化時に使用される既知の型の追加を可能にします。|  
+|[\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md)|逆シリアル化時に使用される既知の型の追加を可能にします。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -51,7 +51,8 @@ ms.locfileid: "54150553"
 |-------------|-----------------|  
 |[\<configuration> 要素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|構成の最上位の要素。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Runtime.Serialization>  
- [データ コントラクトの使用](../../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [既知のデータ コントラクト型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Runtime.Serialization>
+- [データ コントラクトの使用](../../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [既知のデータ コントラクト型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)

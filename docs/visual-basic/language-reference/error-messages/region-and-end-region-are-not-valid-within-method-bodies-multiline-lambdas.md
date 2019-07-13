@@ -1,5 +1,5 @@
 ---
-title: '&#39;#Region&#39;と&#39;#End Region&#39;ステートメントはメソッド本体に複数行ラムダでは有効ではありません。'
+title: "'#Region' および ' #End Region' ステートメントはメソッド本体や複数行ラムダ内では有効ではありません。"
 ms.date: 07/20/2015
 f1_keywords:
 - bc32025
@@ -7,23 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC32025
 ms.assetid: 43707bf1-1c6b-4d82-b081-e5a17dca51c1
-ms.openlocfilehash: bf3843e0ec3009f3dc7d60e91c340a7f20543231
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c41b95da7e3565ae7aaf332fe49361336e79f7c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33593234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013765"
 ---
-# <a name="39region39-and-39end-region39-statements-are-not-valid-within-method-bodiesmultiline-lambdas"></a>&#39;#Region&#39;と&#39;#End Region&#39;ステートメントはメソッド本体や複数行ラムダでは有効ではありません。
-`#Region`ブロックは、クラス、モジュール、または名前空間レベルで宣言する必要があります。 折りたたみ可能な領域が 1 つ以上のプロシージャを含めることができますが、開始日または終了、プロシージャ内でそのことはできません。  
+# <a name="region-and-end-region-statements-are-not-valid-within-method-bodiesmultiline-lambdas"></a>'#Region' および '#End Region' ステートメントは、メソッド本体や複数行ラムダの内部では有効ではありません。
+`#Region`ブロックは、クラス、モジュール、または名前空間レベルで宣言する必要があります。 折りたたみ可能な領域は、1 つ以上のプロシージャを含めることができますが、開始またはプロシージャの内部で終了することはできません。  
   
  **エラー ID:** BC32025  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  前の手順がで正常終了したことを確認してください、`End Function`または`End Sub`ステートメントです。  
+1. 直前のプロシージャが、`End Function`ステートメントまたは`End Sub`ステートメントによって正しく終了していることを確認します。  
   
-2.  いることを確認、`#Region`と`#End Region`ディレクティブが同じコード ブロックではします。  
+2. `#Region`ディレクティブおよび`#End Region`ディレクティブが同じコード ブロック内にあることを確認します。  
   
-## <a name="see-also"></a>関連項目  
- [#Region ディレクティブ](../../../visual-basic/language-reference/directives/region-directive.md)
+## <a name="see-also"></a>関連項目
+
+- [#Region ディレクティブ](../../../visual-basic/language-reference/directives/region-directive.md)

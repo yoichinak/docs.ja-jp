@@ -9,21 +9,21 @@ helpviewer_keywords:
 - states [WPF], Expander
 - parts [WPF], Expander
 ms.assetid: da2e5a1c-5230-4c21-98a5-59c7895facd7
-ms.openlocfilehash: f2c06918752de55941671c860055295d55cac5cb
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: c5f805c251d3f6b256035e568798cd6d252ea9a4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34456963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911736"
 ---
 # <a name="expander-styles-and-templates"></a>エクスパンダーのスタイルとテンプレート
-このトピックは、のスタイルとテンプレートについて説明します、<xref:System.Windows.Controls.Expander>コントロール。 既定値を変更することができます<xref:System.Windows.Controls.ControlTemplate>コントロールの外観を一意にします。 詳細については、「[ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)」を参照してください。  
+このトピックでは、スタイルとテンプレートについて説明します、<xref:System.Windows.Controls.Expander>コントロール。 既定値を変更する<xref:System.Windows.Controls.ControlTemplate>固有の外観を制御します。 詳細については、「[ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)」を参照してください。  
   
-## <a name="expander-parts"></a>Expander のパーツ  
- <xref:System.Windows.Controls.Expander>コントロールには、その名前付きの部分はありません。  
+## <a name="expander-parts"></a>展開コントロール パーツ  
+ <xref:System.Windows.Controls.Expander>コントロールには、名前付きパーツはありません。  
   
-## <a name="expander-states"></a>展開状態  
- 次の表に、用ビジュアル状態、<xref:System.Windows.Controls.Expander>コントロール。  
+## <a name="expander-states"></a>エキスパンダーの状態  
+ 次の表のビジュアルの状態、<xref:System.Windows.Controls.Expander>コントロール。  
   
 |VisualState 名|VisualStateGroup 名|説明|  
 |-|-|-|  
@@ -32,9 +32,9 @@ ms.locfileid: "34456963"
 |無効|CommonStates|コントロールが無効になっています。|  
 |フォーカスされている|FocusStates|コントロールにフォーカスがあります。|  
 |フォーカスされていない|FocusStates|コントロールにフォーカスがありません。|  
-|展開済み|ExpansionStates|コントロールを拡張します。|  
-|Collapsed|ExpansionStates|コントロールが展開されていません。|  
-|ExpandDown|ExpandDirectionStates|コントロールを展開します。|  
+|[展開済み]|ExpansionStates|コントロールが展開されます。|  
+|Collapsed|ExpansionStates|コントロールは展開されません。|  
+|ExpandDown|ExpandDirectionStates|下のコントロールに展開します。|  
 |ExpandUp|ExpandDirectionStates|コントロールを展開します。|  
 |ExpandLeft|ExpandDirectionStates|コントロールは左に展開します。|  
 |ExpandRight|ExpandDirectionStates|コントロールが右に展開します。|  
@@ -45,18 +45,19 @@ ms.locfileid: "34456963"
 ## <a name="expander-controltemplate-example"></a>Expander ControlTemplate の例  
  次の例は、定義する方法を示します、<xref:System.Windows.Controls.ControlTemplate>の<xref:System.Windows.Controls.Expander>コントロール。  
   
- [!code-xaml[ControlTemplateExamples#Expander](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/expander.xaml#expander)]  
+ [!code-xaml[ControlTemplateExamples#Expander](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/expander.xaml#expander)]  
   
  前の例では、次のリソースの 1 つ以上を使用します。  
   
- [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
  完全なサンプルについては、[Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.FrameworkElement.Style%2A>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [コントロールのスタイルとテンプレート](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [コントロールのカスタマイズ](../../../../docs/framework/wpf/controls/control-customization.md)  
- [スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.FrameworkElement.Style%2A>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [コントロールのスタイルとテンプレート](control-styles-and-templates.md)
+- [コントロールのカスタマイズ](control-customization.md)
+- [スタイルとテンプレート](styling-and-templating.md)
+- [ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)

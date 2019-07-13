@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 182ec76d-5a01-4d73-996c-0b0d14fcea18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2166412269a84329d42f58c7e3423229be4327b8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: ca2dfcfbb5407be2727343a5b3a5b429af83ae20
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877761"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634584"
 ---
 # <a name="compilation-and-reuse-in-regular-expressions"></a>正規表現におけるコンパイルと再利用
 正規表現エンジンが式をどのようにコンパイルするか、および正規表現がどのようにキャッシュされるかを理解することで、正規表現を幅広く使用するアプリケーションのパフォーマンスを最適化できます。 このトピックでは、コンパイルとキャッシュの両方について説明します。  
@@ -40,9 +40,9 @@ ms.locfileid: "43877761"
   
  アプリケーションでは、次の 2 つの方法のいずれかでプリコンパイル済みの正規表現を利用できます。  
   
--   <xref:System.Text.RegularExpressions.Regex> オブジェクトの静的メソッドを使用して、正規表現を定義する。 別の静的メソッド呼び出しで既に定義されている正規表現パターンを使用している場合、正規表現エンジンはこれをキャッシュから取得します。 そうでない場合、エンジンは正規表現をコンパイルしてキャッシュに追加します。  
+- <xref:System.Text.RegularExpressions.Regex> オブジェクトの静的メソッドを使用して、正規表現を定義する。 別の静的メソッド呼び出しで既に定義されている正規表現パターンを使用している場合、正規表現エンジンはこれをキャッシュから取得します。 そうでない場合、エンジンは正規表現をコンパイルしてキャッシュに追加します。  
   
--   既存の <xref:System.Text.RegularExpressions.Regex> オブジェクトの正規表現パターンが必要な間、このオブジェクトを再利用する。  
+- 既存の <xref:System.Text.RegularExpressions.Regex> オブジェクトの正規表現パターンが必要な間、このオブジェクトを再利用する。  
   
  オブジェクトのインスタンス化および正規表現のコンパイルのオーバーヘッドが原因となり、さまざまな <xref:System.Text.RegularExpressions.Regex> オブジェクトを作成してすぐに破棄するプロセスは非常にコストがかかります。 多数の異なる正規表現を使用するアプリケーションの場合は、静的 `Regex` メソッドの呼び出しを使用することで、および場合によっては正規表現キャッシュのサイズを大きくすることで、パフォーマンスを最適化できます。  
   

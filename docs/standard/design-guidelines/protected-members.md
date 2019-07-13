@@ -11,12 +11,12 @@ helpviewer_keywords:
 - customizing class behavior
 ms.assetid: aa0b58ee-3956-494d-ab48-471ae5db8740
 author: KrzysztofCwalina
-ms.openlocfilehash: f0ad21f0a5b869332223d96991dd0a7bebeba420
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 7d940f10799df2efc6c6d031781e1ef7cf777dd6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937398"
 ---
 # <a name="protected-members"></a>プロテクト メンバー
 単独で保護されたメンバーでは任意の拡張機能は提供しませんより強力なサブクラス化による拡張性を作成することができます。 これらは、メインのパブリック インターフェイスを不必要に複雑にせず、高度なカスタマイズ オプションを公開する使用できます。  
@@ -35,5 +35,5 @@ ms.locfileid: "53149355"
   
 ## <a name="see-also"></a>関連項目
 
-- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)  
+- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)
 - [機能拡張のデザイン](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

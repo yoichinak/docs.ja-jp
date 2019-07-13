@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0508e9291b089ec7af6a0b41bbc231fdb0701ad6
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 858d651523ac6196aa2dcad008ea53674eb01b04
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452990"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832842"
 ---
 # <a name="global-assembly-cache"></a>グローバル アセンブリ キャッシュ
 共通言語ランタイムがインストールされている各コンピューターには、グローバル アセンブリ キャッシュと呼ばれる、コンピューター全体にわたって使用されるコード キャッシュがあります。 グローバル アセンブリ キャッシュは、そのコンピューター上の複数のアプリケーションで共有するように特別に指定されたアセンブリを格納します。  
@@ -29,9 +29,9 @@ ms.locfileid: "49452990"
   
  アセンブリをグローバル アセンブリ キャッシュに配置するには、次の 2 つの方法があります。  
   
--   グローバル アセンブリ キャッシュを扱えるように設計されたインストーラーを使用する。 これは、アセンブリをグローバル アセンブリ キャッシュにインストールするための推奨オプションです。  
+- グローバル アセンブリ キャッシュを扱えるように設計されたインストーラーを使用する。 これは、アセンブリをグローバル アセンブリ キャッシュにインストールするための推奨オプションです。  
   
--   [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]に用意されている[グローバル アセンブリ キャッシュ ツール (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) という開発者ツールを使用する。  
+- Windows Software Development Kit (SDK) に用意されている[グローバル アセンブリ キャッシュ ツール (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) という開発者ツールを使用する。  
   
     > [!NOTE]
     >  配置時に、Windows Installer を使用して、アセンブリをグローバル アセンブリ キャッシュにインストールします。 グローバル アセンブリ キャッシュ ツールの使用は、開発時のみに限定してください。グローバル アセンブリ キャッシュ ツールでは、Windows インストーラーを使用した場合に提供されるアセンブリ参照カウントやその他の機能が提供されません。  
@@ -42,7 +42,8 @@ ms.locfileid: "49452990"
   
  グローバル アセンブリ キャッシュに配置するアセンブリには、厳密な名前を付けておく必要があります。 アセンブリをグローバル アセンブリ キャッシュに追加すると、アセンブリを構成するすべてのファイルに対して、整合性チェックが実行されます。 キャッシュはこのような整合性チェックを実行することで、ファイルが変更されたにもかかわらず、マニフェストにその変更が反映されていないなど、アセンブリに不整合が生じていないかどうかを確認します。  
   
-## <a name="see-also"></a>参照  
-- [共通言語ランタイムのアセンブリ](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
-- [アセンブリとグローバル アセンブリ キャッシュの使用](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
+## <a name="see-also"></a>関連項目
+
+- [共通言語ランタイムのアセンブリ](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [アセンブリとグローバル アセンブリ キャッシュの使用](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
 - [厳密な名前付きアセンブリ](../../../docs/framework/app-domains/strong-named-assemblies.md)

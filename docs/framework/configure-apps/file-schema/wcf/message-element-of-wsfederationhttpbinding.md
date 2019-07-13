@@ -1,15 +1,15 @@
 ---
-title: '&lt;wsFederationHttpBinding&gt; の &lt;message&gt; 要素'
+title: <message> 要素 <wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
-ms.openlocfilehash: 5b1e507de98e9f2ebde1d5740ffb164c060ffe6a
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 79739dd715d7982555e5577c921cb65156af5923
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769877"
 ---
-# <a name="ltmessagegt-element-of-ltwsfederationhttpbindinggt"></a>&lt;wsFederationHttpBinding&gt; の &lt;message&gt; 要素
+# <a name="message-element-of-wsfederationhttpbinding"></a>\<メッセージ > 要素の\<wsFederationHttpBinding >
 メッセージ レベル セキュリティの設定を定義、 [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)します。  
   
  \<system.ServiceModel >  
@@ -88,12 +88,12 @@ ms.locfileid: "54145672"
 |---------------|-----------------|  
 |algorithmSuite|メッセージの暗号化とキー ラップ アルゴリズムを設定します。 この属性の有効な値については、「algorithmSuite 属性」の表を参照してください。 既定値は `Basic256` です。<br /><br /> この属性は <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 型です。 これらのアルゴリズムは、Security Policy Language (WS-SecurityPolicy) の仕様で指定されているアルゴリズムに対応付けられています。|  
 |issuedKeyType|発行されるキーの種類を指定します。 以下の値が有効です。<br /><br /> SymmetricKey<br />-公開鍵<br /><br /> 既定値は `SymmetricKey` です。 この属性は <xref:System.IdentityModel.Tokens.SecurityKeyType> 型です。|  
-|issuedTokenType|発行されるトークンの型を指定する URI を含む文字列。 既定値は、`null` です。|  
+|issuedTokenType|発行されるトークンの型を指定する URI を含む文字列。 既定値は `null` です。|  
 |negotiateServiceCredential|サービス資格情報がネゴシエーションの一部として交換されるか、帯域外で使用できるかを指定するブール値。 既定値は `true` で、サービス資格情報がネゴシエートされます。|  
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |Basic128|Basic128 暗号化を使用し、メッセージ ダイジェストには Sha1 を、キー ラップには Rsa-oaep-mgf1p を使用します。|  
 |Basic192|Basic192 暗号化を使用し、メッセージ ダイジェストには Sha1 を、キー ラップには Rsa-oaep-mgf1p を使用します。|  
@@ -127,12 +127,14 @@ ms.locfileid: "54145672"
 |-------------|-----------------|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md)|バインディングのセキュリティ設定を定義します。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>  
- <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>  
- <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>  
- `System.ServiceModel.Configuration.FederatedMessageSecurityElement` [サービスとクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [バインディング](../../../../../docs/framework/wcf/bindings.md)  
- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>
+- <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>
+- <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>
+- <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>
+- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [バインディング](../../../../../docs/framework/wcf/bindings.md)
+- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

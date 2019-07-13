@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6ed8bbbd9699fe707d638bb8d07064e508b6f2fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 71a2c7a61d573c1e17d0e8fefcd34d60e05ed3c5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447773"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780478"
 ---
 # <a name="imetadataimportenumfieldswithname-method"></a>IMetaDataImport::EnumFieldsWithName メソッド
 指定した名前を持つ指定した型の FieldDef トークンを列挙します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EnumFieldsWithName (  
    [in, out] HCORENUM    *phEnum,   
    [in]  mdTypeDef       cl,   
@@ -40,44 +40,45 @@ HRESULT EnumFieldsWithName (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [入力、出力].列挙子へのポインター。  
+ [入力、出力]列挙子へのポインター。  
   
  `cl`  
- [in]その結果、フィールドが列挙するのには、型のトークンです。  
+ [in]フィールドが列挙型のトークンです。  
   
  `szName`  
  [in]列挙体のスコープを制限するフィールド名です。  
   
  `rFields`  
- [out]FieldDef トークンを格納する配列。  
+ [out]配列の FieldDef トークンを格納するために使用します。  
   
  `cMax`  
  [in] `rFields` 配列の最大サイズ。  
   
  `pcTokens`  
- [out]実際に返される FieldDef トークン数`rFields`です。  
+ [out]実際に返される FieldDef トークン数`rFields`します。  
   
-## <a name="remarks"></a>コメント  
- 異なり[imetadataimport::enumfields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md)、`EnumFieldsWithName`を指定した名前を持たないすべてのフィールド トークンを破棄します。  
+## <a name="remarks"></a>Remarks  
+ 異なり[imetadataimport::enumfields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md)、`EnumFieldsWithName`を指定した名前を持たないすべてのフィールドのトークンを破棄します。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
 |`S_OK`|`EnumFieldsWithName` 正常に返されます。|  
-|`S_FALSE`|列挙するフィールドはありません。 その場合は、`pcTokens`ゼロです。|  
+|`S_FALSE`|列挙するフィールドはありません。 その場合は、`pcTokens`は 0 です。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

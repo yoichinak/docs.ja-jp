@@ -1,5 +1,5 @@
 ---
-title: '方法 : メディアの再生を反復する'
+title: '方法: メディアの再生を反復する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - media [WPF], repeating playback
@@ -7,24 +7,25 @@ helpviewer_keywords:
 - multimedia [WPF], repeating media playback
 - playback of media [WPF], repeating
 ms.assetid: 02ab486d-c6b6-4918-9edd-45a12aca4683
-ms.openlocfilehash: cb87eb43c64a3f746850db45560ce57caea3df14
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 788bc6f31d61626f15548791135adb8c60258b49
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33558656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942052"
 ---
-# <a name="how-to-repeat-media-playback"></a>方法 : メディアの再生を反復する
+# <a name="how-to-repeat-media-playback"></a>方法: メディアの再生を反復する
 この例では、メディアを無制限に再生する (無限ループで再生されるようにメディアを設定する) 方法を示します。  
   
 ## <a name="example"></a>例  
- 次の例で<xref:System.Windows.Controls.MediaElement>と<xref:System.Windows.Media.MediaTimeline>で、<xref:System.Windows.Media.Animation.Storyboard>無限ループにメディア クリップを再生します。  
+ 次の例では<xref:System.Windows.Controls.MediaElement>と<xref:System.Windows.Media.MediaTimeline>で、<xref:System.Windows.Media.Animation.Storyboard>無限ループにメディア クリップを再生します。  
   
- [!code-xaml[MediaGallery_snippet#SoundRepeatExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MediaGallery_snippet/CSharp/SoundRepeatExample.xaml#soundrepeatexamplewholepage)]  
+ [!code-xaml[MediaGallery_snippet#SoundRepeatExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/MediaGallery_snippet/CSharp/SoundRepeatExample.xaml#soundrepeatexamplewholepage)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Controls.MediaElement>  
- <xref:System.Windows.Media.MediaTimeline>  
- <xref:System.Windows.Media.Animation.Storyboard>  
- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/audio-and-video-how-to-topics.md)  
- [グラフィックスとマルチメディア](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Controls.MediaElement>
+- <xref:System.Windows.Media.MediaTimeline>
+- <xref:System.Windows.Media.Animation.Storyboard>
+- [方法トピック](audio-and-video-how-to-topics.md)
+- [グラフィックスとマルチメディア](index.md)

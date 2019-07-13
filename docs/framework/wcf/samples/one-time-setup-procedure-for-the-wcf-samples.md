@@ -2,12 +2,12 @@
 title: Windows Communication Foundation サンプルの 1 回限りのセットアップの手順
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 5db72a6e5970a2c10e0dd1fb62339efd9b69138c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: f55f994d1fd2d8af8ba15aa159d1bab84cc72d15
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840115"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876722"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation サンプルの 1 回限りのセットアップの手順
 Windows Communication Foundation (WCF) サンプルのほとんどがインターネット インフォメーション サービス (IIS) でホストされているし、共通の仮想ディレクトリから実行します。 この 1 回限りのセットアップ手順は、ディスクにフォルダーを作成しますという名前の iis 仮想ディレクトリも追加**ServiceModelSamples**します。
@@ -19,13 +19,13 @@ Windows Communication Foundation (WCF) サンプルのほとんどがインタ�
   
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>WCF サンプルの 1 回限りのセットアップの手順  
   
-1.  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] がセットアップされていることを確認します。 設定する方法の詳細についての[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]を参照してください[インターネット インフォメーション サービスのホスティング手順](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)します。  
+1. ASP.NET が設定されていることを確認します。 ASP.NET を設定する方法の詳細については、次を参照してください。[インターネット インフォメーション サービスのホスティング手順](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)します。  
   
-2.  [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] がインストールされていることを確認します。 次のディレクトリに、v4.0 (またはそれ以降) を検索: **\Windows\Microsoft.NET\Framework**  
+2. [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] がインストールされていることを確認します。 次のディレクトリに、v4.0 (またはそれ以降) を検索: **\Windows\Microsoft.NET\Framework**  
   
-3.  Visual Studio 2012 がインストールされていないかどうかと、オペレーティング システムが Windows Server 2008 SP2 または後で、インストール[修正プログラム 251798](https://go.microsoft.com/fwlink/?LinkId=184693)します。  
+3. Visual Studio 2012 がインストールされていないかどうかと、オペレーティング システムが Windows Server 2008 SP2 または後で、インストール[修正プログラム 251798](https://go.microsoft.com/fwlink/?LinkId=184693)します。  
   
-4.  次のコマンドを実行します。 これらのコマンドを実行する必要があります理由の詳細については、次を参照してください。 [IIS ホスト サービスのエラー](https://msdn.microsoft.com/library/ee5499fc-1b10-4cda-a9b1-13dba70f05f8)します。  
+4. 次のコマンドを実行します。 これらのコマンドを実行する必要があります理由の詳細については、次を参照してください。 [IIS ホスト サービスのエラー](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752252(v=vs.90))します。  
   
     > [!WARNING]
     >  IIS を再インストールした場合は、次のコマンドを再実行します。
@@ -38,19 +38,19 @@ Windows Communication Foundation (WCF) サンプルのほとんどがインタ�
     > [!WARNING]
     >  コマンドを実行して`aspnet_regiis –i –enable`すると、既定のアプリケーション プールを使用して実行[!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]、同じコンピューター上の他のアプリケーションの互換性の問題を生成する可能性があります。  
   
-5.  に従って、[ファイアウォール手順](../../../../docs/framework/wcf/samples/firewall-instructions.md)サンプルで使用されるポートを有効にするためです。  
+5. に従って、[ファイアウォール手順](../../../../docs/framework/wcf/samples/firewall-instructions.md)サンプルで使用されるポートを有効にするためです。  
   
-6.  次の既定のディレクトリの確認: \<InstallDrive >:**\WF_WCF_Samples**します。 サンプルが既にインストールされている場合は、これが既定のディレクトリです。  
+6. 次の既定のディレクトリを確認します。\<InstallDrive >:**\WF_WCF_Samples**します。 サンプルが既にインストールされている場合は、これが既定のディレクトリです。  
   
-7.  サンプルがインストールされていない場合はそれらのサンプルのダウンロード場所からインストール[Visual c#](https://go.microsoft.com/fwlink/?LinkId=190939)または[Visual Basic](https://go.microsoft.com/fwlink/?LinkID=193373)します。  
+7. サンプルがインストールされていない場合はそれらのサンプルのダウンロード場所からインストール[Visual c#](https://go.microsoft.com/fwlink/?LinkId=190939)または[Visual Basic](https://go.microsoft.com/fwlink/?LinkID=193373)します。  
   
-8.  サンプルのインストール後に移動: \<InstallDrive >:**\WF_WCF_Samples\WCF\Setup\\**  
+8. サンプルをインストールした後を参照してください。\<InstallDrive >:**\WF_WCF_Samples\WCF\Setup\\**  
   
 9. 実行、 **Setupvroot.bat**バッチ ファイル。 次の手順が実行されます。  
   
-    -   ServiceModelSamples という名前の仮想ディレクトリが IIS に作成されます。  
+    - ServiceModelSamples という名前の仮想ディレクトリが IIS に作成されます。  
   
-    -   %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples and %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples\bin という名前の新しいディスク ディレクトリが作成されます。  
+    - %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples and %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples\bin という名前の新しいディスク ディレクトリが作成されます。  
   
      これらのディレクトリを手動で設定する場合を参照してください、[仮想ディレクトリのセットアップ手順](../../../../docs/framework/wcf/samples/virtual-directory-setup-instructions.md)します。 この手順で行ったすべての変更を元に戻すには、サンプルの使用が終わった後で cleanupvroot.bat を実行します。  
   
@@ -66,11 +66,11 @@ Windows Communication Foundation (WCF) サンプルのほとんどがインタ�
 
 12. Setupcerttool.bat ファイルを実行します。 このファイルにある、 \<InstallPath > \WF_WCF_Samples\WCF\Setup\ フォルダー。  このスクリプトでは、次のタスクが実行されます。
 
-    -   FindPrivateKey ツールをビルドします。
+    - FindPrivateKey ツールをビルドします。
 
-    -   %ProgramFiles%\ServiceModelSampleTools という名前のディレクトリを作成します。
+    - %ProgramFiles%\ServiceModelSampleTools という名前のディレクトリを作成します。
 
-    -   新しい FindPrivateKey ツールをこのディレクトリにコピーします。
+    - 新しい FindPrivateKey ツールをこのディレクトリにコピーします。
 
      このツールは、証明書を使用して IIS でホストされるサンプルで必要です。
 
@@ -85,5 +85,3 @@ Windows Communication Foundation (WCF) サンプルのほとんどがインタ�
     >  メッセージ キューが必要なサンプルを実行する場合は、MSMQ サービスを事前に開始しておいてください。
 
 15. 一部のサンプルには証明書が必要です。 参照してください[インターネット インフォメーション サービス (IIS) サーバー証明書のインストール手順](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)します。
-
-## <a name="see-also"></a>関連項目

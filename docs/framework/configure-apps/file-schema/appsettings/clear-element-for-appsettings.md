@@ -1,5 +1,5 @@
 ---
-title: '&lt;オフ&gt;要素&lt;appSettings&gt;'
+title: <appSettings>の<clear>要素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/clear
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: 6d18c7be-27db-438b-8fb5-765d396b0b7b
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: bc52e3149c213925ea64a8421ee65befeea4161e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5d4d96143dbd1db440de2247a7dc2f0c66f20403
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184219"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301295"
 ---
-# <a name="clear-element-for-appsettings"></a>\<クリア > 要素の\<appSettings >
+# <a name="clear-element-for-appsettings"></a>\<appSettings>の\<clear>要素
 
 カスタム アプリケーションの設定をクリアします。
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<クリア >**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
 
 ## <a name="syntax"></a>構文
 
@@ -40,7 +40,7 @@ ms.locfileid: "50184219"
 
 |     | 説明 |
 | --- | ----------- |
-| [**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | ファイル パス、XML Web サービスの Url、またはその他のカスタム アプリケーションの構成情報など、カスタム アプリケーション設定が含まれています。 |
+| [ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | ファイル パス、XML Web サービスの Url、またはその他のカスタム アプリケーションの構成情報など、カスタム アプリケーション設定が含まれています。 |
 
 ## <a name="child-elements"></a>子要素
 

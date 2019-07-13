@@ -17,45 +17,44 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1173091a5f2d8814747c93f827150afe39b8b309
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 07f8be1a1831bc00eea3cfb659b46b67b6a78711
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399122"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747722"
 ---
 # <a name="icordebugcodecreatebreakpoint-method"></a>ICorDebugCode::CreateBreakpoint メソッド
-次のコードで指定したオフセット位置にブレークポイントを作成します。  
+指定したオフセットには、このコード セグメントでは、ブレークポイントを作成します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CreateBreakpoint (  
     [in] ULONG32     offset,  
     [out] ICorDebugFunctionBreakpoint **ppBreakpoint  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `offset`  
- [in]ブレークポイントの作成に使用するオフセットです。  
+ [in]ブレークポイントを作成するオフセットです。  
   
  `ppBreakpoint`  
  [out]ブレークポイントを表す"ICorDebugFunctionBreakpoint"オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>コメント  
- ブレークポイントがアクティブで前に、プロセス オブジェクトを追加する必要があります。  
+## <a name="remarks"></a>Remarks  
+ 前に、ブレークポイントがアクティブでは、プロセス オブジェクトに追加する必要があります。  
   
- このコードは、Microsoft intermediate language (MSIL) コード、および、ジャスト イン-タイム (JIT) があるかどうかに、ブレークポイント、コードのコンパイル済みのネイティブのバージョンは、JIT コンパイルのコードにも適用されます。 (同じは true を指定すると、コードは JIT コンパイルされた後で) です。  
+ このコードは、Microsoft intermediate language (MSIL) コードでは、およびの just-in-time (JIT) があるかどうか、コードの JIT コンパイルにも、ブレークポイント、コードのコンパイル済みのネイティブのバージョンが適用されます。 (同じは、コードが JIT コンパイルされた後では、true を返します。)  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- 
+## <a name="see-also"></a>関連項目

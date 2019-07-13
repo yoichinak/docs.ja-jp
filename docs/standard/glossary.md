@@ -1,16 +1,14 @@
 ---
 title: .NET 用語集
 description: .NET のドキュメントで使われている用語からいくつか選択してその意味を説明します。
-author: tdykstra
-ms.author: tdykstra
-ms.date: 07/08/2017
+ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 4ffcf56ba171192048a736b58ddcfa591fd3af58
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 2d19ec0b79abdcce9797767d1280d055a9c77a87
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840272"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674511"
 ---
 # <a name="net-glossary"></a>.NET 用語集
 
@@ -21,6 +19,8 @@ ms.locfileid: "48840272"
 Ahead Of Time コンパイラ。
 
 [JIT](#jit) と同様に、このコンパイラも [IL](#il) をマシン コードに変換します。 JIT コンパイルとは異なり、AOT コンパイルはアプリケーションが実行される前に行われ、通常は、別のコンピューターで実行されます。 AOT ツール チェーンは実行時にコンパイルしないので、コンパイルに費やされる時間を最小限に抑える必要はありません。 つまり、より多くの時間を最適化に費やすことができます。 AOT のコンテキストはアプリケーション全体であるため、AOT コンパイラはモジュール間のリンクとプログラム全体の分析も実行します。これは、すべての参照が追跡されて、1 つの実行可能ファイルが生成されることを意味します。
+
+「[CoreRT](#corert)」と「[.NET Native](#net-native)」を参照してください。
 
 ## <a name="aspnet"></a>ASP.NET 
 
@@ -115,9 +115,9 @@ Just-In-Time コンパイラ。
 
 .NET の実装には次のものが含まれます。
 
-- 1 つまたは複数のランタイム。 たとえば、CLR、CoreCLR CoreRT などです。
+- 1 つまたは複数のランタイム。 次に例を示します。 CLR、CoreCLR、CoreRT。
 - .NET Standard の 1 つのバージョンを実装し、他の API を含むことができるクラス ライブラリ。 たとえば、.NET Framework 基本クラス ライブラリや .NET Core 基本クラス ライブラリなどです。
-- 必要に応じて、1 つまたは複数のアプリケーション フレームワーク。 たとえば、.NET Framework には ASP.NET、Windows フォーム、WPF が含まれます。
+- 必要に応じて、1 つまたは複数のアプリケーション フレームワーク。 次に例を示します。 .NET Framework には ASP.NET、Windows フォーム、WPF が含まれます。
 - 必要に応じて、開発ツール。 一部の開発ツールは、複数の実装間で共有されます。
 
 .NET の実装の例:
@@ -172,7 +172,7 @@ Mono について詳しくは、[Mono のドキュメント](https://www.mono-pr
 
 一連のライブラリとツールであり、開発者はこれを利用して .NET Core のアプリケーションやライブラリを作成できます。 アプリ構築用の [.NET Core CLI](#net-core-cli)、アプリの構築および実行用の .NET Core ライブラリとランタイム、CLI コマンドとアプリケーションを実行する dotnet 実行可能ファイル (*dotnet.exe*) が含まれます。
 
-「[.NET Core SDK の概要](../core/sdk.md)」をご覧ください。
+「[.NET Core SDK 概要](../core/sdk.md)」をご覧ください。
 
 ## <a name="net-framework"></a>.NET Framework
 
@@ -272,8 +272,8 @@ OS は、ランタイム環境の一部ですが、.NET ランタイムの一部
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET のガイド](index.md)  
-- [.NET Framework ガイド](../framework/index.md)  
-- [.NET Core](../core/index.md)  
-- [ASP.NET の概要](/aspnet/index#pivot=aspnet)  
-- [ASP.NET Core の概要](/aspnet/index#pivot=core)  
+- [.NET のガイド](index.md)
+- [.NET Framework ガイド](../framework/index.md)
+- [.NET Core](../core/index.md)
+- [ASP.NET の概要](/aspnet/index#pivot=aspnet)
+- [ASP.NET Core の概要](/aspnet/index#pivot=core)

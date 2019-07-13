@@ -1,18 +1,18 @@
 ---
-title: '&lt;client&gt;'
+title: <client>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.ServiceModel/client
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#client
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
-ms.openlocfilehash: 24defe7e01603f1b1be3023d07854091335d6c60
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 2e0352efdd5b709984338fe4484b120bddb7d545
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704298"
 ---
-# <a name="ltclientgt"></a>&lt;client&gt;
+# <a name="client"></a>\<client>
 `client` 要素は、クライアントが接続可能なエンドポイントの一覧を定義します。  
   
  \<system.ServiceModel >  
@@ -72,8 +72,9 @@ ms.locfileid: "54148644"
 </client>
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.ClientSection>  
- <xref:System.ServiceModel.Configuration.MetadataElement>  
- [WCF クライアントの構成](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
- [クライアント](../../../../../docs/framework/wcf/feature-details/clients.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Configuration.ClientSection>
+- <xref:System.ServiceModel.Configuration.MetadataElement>
+- [WCF クライアントの構成](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
+- [クライアント](../../../../../docs/framework/wcf/feature-details/clients.md)

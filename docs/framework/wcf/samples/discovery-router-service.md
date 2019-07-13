@@ -2,12 +2,12 @@
 title: 探索ルーター サービス
 ms.date: 03/30/2017
 ms.assetid: 3d30af47-b24f-40e5-833a-24d77125c9e6
-ms.openlocfilehash: 9c0c409eb6cf3146a198b9f4bcd6d76660f5da36
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 166f6b9d1055e36f987e6b9a81fe69dc8bd548b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773036"
 ---
 # <a name="discovery-router-service"></a>探索ルーター サービス
 このサンプルでは、探索メッセージを別のエンドポイントに転送する方法を示します。  
@@ -22,13 +22,13 @@ ms.locfileid: "43509082"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  このサンプルをビルドします。  
+1. このサンプルをビルドします。  
   
-2.  DiscoveryRouter 実行可能ファイルを実行します。  
+2. DiscoveryRouter 実行可能ファイルを実行します。  
   
-3.  ビルド ディレクトリからサービス実行可能ファイルを実行します。  
+3. ビルド ディレクトリからサービス実行可能ファイルを実行します。  
   
-4.  クライアント実行可能ファイルを実行します。 クライアントでサービスが検索されることに注意してください。  
+4. クライアント実行可能ファイルを実行します。 クライアントでサービスが検索されることに注意してください。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  

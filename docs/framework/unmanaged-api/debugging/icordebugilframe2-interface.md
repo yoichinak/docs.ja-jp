@@ -1,5 +1,5 @@
 ---
-title: ICorDebugILFrame2 Interface1
+title: ICorDebugILFrame2 インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugILFrame2
@@ -16,36 +16,38 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccb39609b37aff09ac7890df562d6c08e3c3c159
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a4f57f27ec92e7977b46ebfa5967b0590674d2a1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946472"
 ---
-# <a name="icordebugilframe2-interface1"></a>ICorDebugILFrame2 Interface1
+# <a name="icordebugilframe2-interface"></a>ICorDebugILFrame2 インターフェイス
+
 ICorDebugILFrame インターフェイスを論理的に拡張します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[EnumerateTypeParameters メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md)|含む ICorDebugTypeEnum オブジェクトを取得、<xref:System.Type>このフレーム内のパラメーターです。|  
-|[RemapFunction メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md)|新しい MSIL オフセットを指定することによって編集された関数を再マップします。|  
+|[EnumerateTypeParameters メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md)|含む ICorDebugTypeEnum オブジェクトを取得、<xref:System.Type>このフレーム内のパラメーター。|  
+|[RemapFunction メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md)|新しい MSIL オフセットを指定することで編集された関数を再マップします。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
 >  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>関連項目
+
+- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

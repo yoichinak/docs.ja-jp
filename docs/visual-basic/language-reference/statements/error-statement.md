@@ -10,12 +10,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-ms.openlocfilehash: 84fce92183228cbfa5554a3ba45770a86e83bff5
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8ac7cee2f9959bc75df165d00d3a0a67e1dd9af0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47232938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982398"
 ---
 # <a name="error-statement"></a>Error ステートメント
 エラーの発生をシミュレートします。  
@@ -57,15 +57,16 @@ On Error Resume Next   ' Defer error handling.
 Error 11   ' Simulate the "Division by zero" error.  
 ```  
   
-## <a name="requirements"></a>要件  
- **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+## <a name="requirements"></a>必要条件  
+ **名前空間:**[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
  **アセンブリ:** Visual Basic ランタイム ライブラリ (Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>関連項目  
- <xref:Microsoft.VisualBasic.ErrObject.Clear%2A>  
- <xref:Microsoft.VisualBasic.Information.Err%2A>  
- <xref:Microsoft.VisualBasic.ErrObject.Raise%2A>  
- [On Error ステートメント](../../../visual-basic/language-reference/statements/on-error-statement.md)  
- [Resume ステートメント](../../../visual-basic/language-reference/statements/resume-statement.md)  
- [エラー メッセージ](../../../visual-basic/language-reference/error-messages/index.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:Microsoft.VisualBasic.ErrObject.Clear%2A>
+- <xref:Microsoft.VisualBasic.Information.Err%2A>
+- <xref:Microsoft.VisualBasic.ErrObject.Raise%2A>
+- [On Error ステートメント](../../../visual-basic/language-reference/statements/on-error-statement.md)
+- [Resume ステートメント](../../../visual-basic/language-reference/statements/resume-statement.md)
+- [エラー メッセージ](../../../visual-basic/language-reference/error-messages/index.md)

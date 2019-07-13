@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: af5a342b83608d6a149879de8dec80a1e1746b76
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3cc04d9a0504e7cd79703b97441caa5ac84eda94
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242720"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978112"
 ---
 # <a name="fields-c-programming-guide"></a>フィールド (C# プログラミング ガイド)
 *フィールド*とは、[クラス](../../../csharp/language-reference/keywords/class.md)または[構造体](../../../csharp/language-reference/keywords/struct.md)で直接宣言される任意の型の変数です。 フィールドは、それを含んでいる型の*メンバー*です。  
@@ -23,15 +23,15 @@ ms.locfileid: "53242720"
   
  フィールドは、フィールドのアクセス レベル、フィールドの型、フィールドの名前の順に指定して、クラス ブロック内で宣言します。 次に例を示します。  
   
- [!code-csharp[csProgGuideObjects#61](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_1.cs)]  
+ [!code-csharp[csProgGuideObjects#61](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#61)]  
   
  オブジェクト内のフィールドにアクセスするには、`objectname.fieldname` のように、オブジェクト名の後にピリオドを追加し、その後にフィールド名を続けます。 次に例を示します。  
   
- [!code-csharp[csProgGuideObjects#62](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_2.cs)]  
+ [!code-csharp[csProgGuideObjects#62](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#62)]  
   
  フィールドには、フィールドの宣言時に代入演算子を使用して初期値を指定できます。 たとえば、`day` フィールドに `"Monday"` を自動的に代入するには、次の例のように `day` を宣言します。  
   
- [!code-csharp[csProgGuideObjects#63](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_3.cs)]  
+ [!code-csharp[csProgGuideObjects#63](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#63)]  
   
  フィールドは、オブジェクト インスタンスのコンストラクターが呼び出される直前に初期化されます。 コンストラクターがフィールドの値を代入すると、フィールドの宣言時に指定された値はすべて上書きされます。 詳細については、「[コンストラクターの使用](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)」を参照してください。  
   
@@ -47,11 +47,11 @@ ms.locfileid: "53242720"
 ## <a name="c-language-specification"></a>C# 言語仕様  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [コンストラクターの使用](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
-- [継承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
-- [アクセス修飾子](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [コンストラクターの使用](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)
+- [継承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+- [アクセス修飾子](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
 - [抽象クラスとシール クラス、およびクラス メンバー](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)

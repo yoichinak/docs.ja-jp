@@ -1,0 +1,131 @@
+### YamlMime:Tutorial
+title: 文字列補間を使用し、書式設定された文字列を作成する
+metadata:
+  title: 文字列補間 - C# の対話形式チュートリアル
+  description: このチュートリアルでは、ブラウザーを使用して、対話形式で C# の文字列補間機能の詳細を確認します。 C# コードを記述し、ブラウザーで直接コードをコンパイルして、実行した結果を確認します。
+  audience: Developer
+  ms.custom: mvc
+  ms.date: 08/24/2018
+  level: Beginner
+  displayType: two-column
+  interactive: csharp
+  ms.openlocfilehash: 70d63f460ad2e67fe60cd8d5130e8ff22889d8be
+  ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 05/24/2019
+  ms.locfileid: "66195951"
+items:
+- durationInMinutes: 2
+  content: >
+    このチュートリアルでは、[文字列補間](../../language-reference/tokens/interpolated.md)を使用して、単一の文字列に値を挿入する方法を説明します。 結果文字列のテキスト書式設定を制御する方法も紹介します。 ブラウザーを使用して C# コードを記述して実行し、結果をすぐに確認できます。
+- title: 挿入文字列を作成する
+  durationInMinutes: 2
+  content: >
+    対話型ウィンドウで次のコードを実行します。 そのためには、対話型ウィンドウでこのコードを入力し ("`<name>`" を自分の名前に置き換えて)、**[実行]** を選択します。
+
+
+    ```csharp
+
+    var name = "<name>";
+
+    Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
+
+    ```
+
+
+    コードを実行すると、**出力**にはあいさつ文に自分の名前を含む文字列が表示されます。 <xref:System.Console.WriteLine%2A> メソッド呼び出しの文字列引数は、*挿入文字列式*です。 これは、埋め込みコードを含む文字列から (*結果文字列*という) 単一の文字列を構築できる一種のテンプレートです。 挿入文字列式は、文字列に値を挿入したり、いくつかの文字列を (結合) 連結したりする場合に特に便利です。
+
+
+    上記の例には、すべての挿入文字列式に含める必要がある次の 2 つの要素が含まれています。
+
+
+    - 始まりの引用符文字の前の `$` で始まる文字列リテラル。 `$` シンボルと引用符文字の間にスペースを挿入することはできません  (スペースが含まれている場合の動作を確認したい場合は、対話型ウィンドウで `$` 文字の後にスペースを挿入し、更新されたコードを実行します。 C# コンパイラには "予期しない '$' 文字です" と示されます)。
+
+
+    - 1 つ以上の*補間式*。 補間式は、始めかっこと終わりかっこ (`{` と `}`) で示されます。 かっこ内に (`null` を含む) 値を返す C# 式を配置できます。
+
+
+    その他のいくつかのデータ型を持つ文字列補間の例をさらにいくつか試してみましょう。
+
+
+    > [!NOTE]
+
+    > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
+- title: さまざまなデータ型を含める
+  durationInMinutes: 5
+  content: "前の手順では、文字列補間を使用して、1 つの文字列内に別の文字列を挿入しましたが、 ただし、挿入文字列式に含まれる各補間式にはあらゆるデータ型を指定できます。 挿入文字列にさまざまなデータ型式の値を含めてみましょう。\n\n次の例では、最初に `Name`、`Price`、`perPackage` というメンバーを持つ[タプル](../../tuples.md)を定義します。 対話型ウィンドウで次のコードを実行します。\n\n```csharp\nvar item = (Name: \"eggplant\", Price: 1.99m, perPackage: 3);\nvar date = DateTime.Now;\nConsole.WriteLine($\"On {date}, the price of {item.Name} was {item.Price:C2} per {item.perPackage} items.\");\n```\n\n補間文字列の挿入式 `item.Price` は、結果の文字列のテキスト \"1.99\" に解決されることに注意してください。 これは、式の結果の型が文字列でない場合に、結果が次の方法で文字列に解決されるためです。\n\n- 補間式が `null` の場合、空の文字列 (\"\"、または <xref:System.String.Empty?displayProperty=nameWithType>) が使用されます。\n\n- 補間式が `null` でない場合、通常、結果の式の `ToString` メソッドが呼び出されます。 \n\nこの例の出力では、日付の精度が高すぎ (\"eggplant\" の価格は毎秒変更されることはありません)、価格の値は通貨の単位を示していません。 次の手順では、式の結果における文字列表現の書式を制御することで、こうした問題を修正する方法について説明します。\n\n> [!NOTE]\n> このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。\n"
+- title: 補間式の書式設定を制御する
+  durationInMinutes: 5
+  content: >
+    前の手順では、適切に書式設定されていない 2 つの文字列が結果文字列に挿入されました。 1 つは、日付のみが適切な日時の値でした。 もう 1 つは、通貨単位を示さない価格でした。 両方の問題には簡単に対処することができます。 文字列補間では、特定の型の書式設定を制御する*書式指定文字列*を指定することができます。 前の例の `Console.WriteLine` 呼び出しを変更し、次の行に示すように、日付と価格の式の書式指定文字列を含めます。
+
+
+    ```csharp
+
+    Console.WriteLine($"On {date:d}, the price of {item.Name} was {item.Price} per {item.perPackage} items");
+
+    ```
+
+
+    コロン (":") と書式指定文字列を持つ補間式に従って、書式指定文字列を指定します。 "d" は、短い日付形式を表す[標準の日時書式設定文字列](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier)です。 "C2" は、小数点以下が 2 桁の通貨値として数値を表す[標準の数値書式指定文字列](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier)です。
+
+
+    .NET ライブラリの多くの型で、定義済みの書式指定文字列セットがサポートされています。 これらには、数値型と日時型がすべて含まれます。 書式指定文字列をサポートする型の完全なリストについては、「[.Net 型の書式設定](../../../standard/base-types/formatting-types.md)」記事の「[.NET クラス ライブラリの型および書式指定文字列](../../../standard/base-types/formatting-types.md#stringRef)」を参照してください。
+
+
+    この例で書式指定文字列を変更してみて、日時と数値の書式設定にどのように影響するかを確認します。 `{date:d}` の "d" を "t" (短い時刻形式を表示する)、"y" (年と月を表示する)、"yyyy" (4 桁の数字として年を表示する) に変更します。 `{price:C2}` "C2" を "e" (指数表記の場合) と "F3" (小数点以下が 3 桁の数値の場合) に変更します。
+
+
+    書式設定を制御するだけでなく、結果の文字列に含まれる書式指定された文字列のフィールドの幅と配置を制御することもできます。 次の手順では、この方法を説明します。
+
+
+    > [!NOTE]
+
+    > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
+- title: 補間式のフィールドの幅と配置を制御する
+  durationInMinutes: 6
+  content: >
+    通常、挿入文字列式の結果が文字列に書式設定される場合、文字列は先頭スペースおよび末尾スペースなしで結果文字列に含まれます。 通常、データのセットを操作する場合、フィールドの幅とテキストの配置を制御できることで、読みやすい出力を生成できます。 そのためには、次のコードを実行します。
+
+
+    ```csharp
+      var inventory = new Dictionary<string, int>()
+      {
+          ["hammer, ball pein"] = 18,
+          ["hammer, cross pein"] = 5,
+          ["screwdriver, Phillips #2"] = 14
+      };
+
+      Console.WriteLine($"Inventory on {DateTime.Now:d}");
+      Console.WriteLine(" ");
+      Console.WriteLine($"|{"Item",-25}|{"Quantity",10}|");
+      foreach (var item in inventory)
+         Console.WriteLine($"|{item.Key,-25}|{item.Value,10}|");
+    ```
+
+
+    項目名は左揃えになり、その数量は右揃えになります。 補間式の後にコンマ (",") を追加し、*最小*のフィールド幅を指定して、配置を指定します。 指定された値が正数の場合、フィールドは右揃えになります。 負数の場合、フィールドは左揃えになります。
+
+
+    `{"Item",-25}` と `{item.Key,-25}` のコードから負号を削除してみて、もう一度例を実行します。 この場合、項目名は右揃えになります。
+
+
+    単一の補間式にアラインメント指定子と書式指定文字列を組み合わせることができます。 この操作を行うには、最初に配置を指定して、その後にコロンと書式指定文字列を続けます。 フィールド幅が定義された 3 つの書式指定された文字列を表示する、次のコードを試します。
+
+
+    ```csharp
+
+    Console.WriteLine($"[{DateTime.Now,-20:d}] Hour [{DateTime.Now,-10:HH}] [{1063.342,15:N2}] feet");
+
+    ```
+
+
+    > [!NOTE]
+
+    > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
+- content: >-
+    文字列補間の対話式チュートリアルはこれで終了です。 下の **C# のコレクション**のリンクをクリックして、次の対話式チュートリアルを開始することができます。また、[.NET サイト](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial)にアクセスして .NET Core SDK をダウンロードし、ご利用のコンピューター上でプロジェクトを作成し、コーディングを続けることもできます。 "学習の継続" の手順では、これらのチュートリアルに戻ります。
+
+
+    詳細については、[文字列補間](../../language-reference/tokens/interpolated.md)に関するトピックを参照してください。

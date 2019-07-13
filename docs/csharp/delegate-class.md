@@ -3,12 +3,12 @@ title: System.Delegate と `delegate` キーワード
 description: デリゲートをサポートする .NET Framework のクラスと、それが ’delegate’ キーワードにどのように対応付けられるかについて取り上げます。
 ms.date: 06/20/2016
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 39dca1053f87a5059bdc60f8b722091ba991cbd5
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 4cf2b113fc9e2c6621f648af7ecb272a42b1f056
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827301"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465777"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate と `delegate` キーワード
 
@@ -67,7 +67,7 @@ int result = comparator(left, right);
 上の行のコードは、デリゲートにアタッチされているメソッドを "*呼び出し*" ます。
 変数をメソッド名として扱い、通常のメソッド呼び出しの構文を使用して呼び出します。
 
-このコード行は、安全でない想定を行っています。つまり、ターゲットがデリゲートに追加済みであるという保証がありません。 ターゲットがアタッチされていない場合、上の行によって `NullReferenceException` がスローされます。 この問題に対処するための用法は、単純な null チェックよりも複雑で、この[シリーズ](delegates-patterns.md)の後の方で説明します。
+このコード行は安全でない想定を行っています。つまり、ターゲットがデリゲートに追加済みであるという保証はありません。 ターゲットがアタッチされていない場合、上の行によって `NullReferenceException` がスローされます。 この問題に対処するための用法は、単純な null チェックよりも複雑で、この[シリーズ](delegates-patterns.md)の後の方で説明します。
 
 ## <a name="assigning-adding-and-removing-invocation-targets"></a>呼び出しターゲットの割り当て、追加、削除
 
@@ -92,14 +92,14 @@ phrases.Sort(CompareLength);
 
 メソッド名が、かっこなしで使用されることに注意してください。 メソッドを引数として使用すると、コンパイラは、メソッドの参照を、デリゲート呼び出しターゲットとして使用できる参照に変換し、そのメソッドを呼び出しターゲットとしてアタッチします。
 
-'Comparison<string>' 型の変数を宣言し、割り当てを行うことで、明示的にそうすることもできました。
+`Comparison<string>` 型の変数を宣言し、割り当てを行うことで、明示的にそうすることもできました。
 
 ```csharp
 Comparison<string> comparer = CompareLength;
 phrases.Sort(comparer);
 ```
 
-デリゲート ターゲットとして使用されているメソッドが小さなメソッドである場合は、[ラムダ式](lambda-expressions.md)構文を使用して割り当てを実行することが一般的です。
+デリゲート ターゲットとして使用されているメソッドが小さなメソッドである場合は、[ラムダ式](./programming-guide/statements-expressions-operators/lambda-expressions.md)構文を使用して割り当てを実行することが一般的です。
 
 ```csharp
 Comparison<string> comparer = (left, right) => left.Length.CompareTo(right.Length);

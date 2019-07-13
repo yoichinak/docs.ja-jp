@@ -2,12 +2,12 @@
 title: 型プロバイダーのセキュリティ
 description: 型プロバイダーのセキュリティについてF#、型プロバイダーの信頼設定を変更する方法などです。
 ms.date: 05/16/2016
-ms.openlocfilehash: 9ccb33d7298736c3d6b54980b6fe09bc9f2e0259
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 26f95ad3950b37a668c497f293b9941ed13a18c7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611192"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641847"
 ---
 # <a name="type-provider-security"></a>型プロバイダーのセキュリティ
 

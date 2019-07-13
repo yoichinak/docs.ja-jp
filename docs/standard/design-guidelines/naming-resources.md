@@ -10,12 +10,12 @@ helpviewer_keywords:
 - international applications, naming guidelines
 ms.assetid: 8b0e97f3-7877-44fd-bc76-e05d36d5d79c
 author: KrzysztofCwalina
-ms.openlocfilehash: 5331c82069bb289c282e746841f5a328e2e628f2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 44627aafd9ec779625413a0862412a8f6c408109
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756885"
 ---
 # <a name="naming-resources"></a>リソースに名前を付ける
 場合のプロパティと同様、特定のオブジェクトを使用してローカライズ可能なリソースを参照できる、ので、リソースの名前付けのガイドラインは、プロパティのガイドラインに似ています。  
@@ -42,5 +42,5 @@ ms.locfileid: "53130903"
   
 ## <a name="see-also"></a>関連項目
 
-- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)  
+- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)
 - [名前付けのガイドライン](../../../docs/standard/design-guidelines/naming-guidelines.md)

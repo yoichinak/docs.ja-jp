@@ -2,12 +2,12 @@
 title: トランスポート セキュリティ
 ms.date: 03/30/2017
 ms.assetid: 86c94153-e48d-4539-b6cf-cd8060582e7f
-ms.openlocfilehash: 7fab84b830917c22d684a06dfbfb2dd540703845
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 036c3db96a14b6e2be299380f495f54436b5c87d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050728"
 ---
 # <a name="transport-security"></a>トランスポート セキュリティ
 Windows Communication Foundation (WCF) でのトランスポート セキュリティは、選択したバインドに依存します。 バインディングが実装するトランスポートによって実際のセキュリティ機構が決まります。 このセクションの各トピックでは、実装される機構とそのオプションについて説明します。  
@@ -25,7 +25,7 @@ Windows Communication Foundation (WCF) でのトランスポート セキュリ�
  [トランスポート セキュリティでの偽装の使用](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
  トランスポート セキュリティ モードで使用できる 5 つの偽装レベルについて説明します。  
   
- [方法 : SSL 証明書を使用してポートを構成する](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
+ [方法: SSL 証明書でポートを構成します。](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
  SSL (トランスポート) セキュリティを実現するために、X.509 証明書を使用してコンピューターのポートを構成する際の基本事項について説明します。  
   
 ## <a name="reference"></a>参照  
@@ -38,5 +38,6 @@ Windows Communication Foundation (WCF) でのトランスポート セキュリ�
 ## <a name="related-sections"></a>関連項目  
  [サービスおよびクライアントのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
   
-## <a name="see-also"></a>関連項目  
- [WCF セキュリティのプログラミング](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
+## <a name="see-also"></a>関連項目
+
+- [WCF セキュリティのプログラミング](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

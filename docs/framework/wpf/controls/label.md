@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [WPF], Label
 - Label control [WPF]
 ms.assetid: 241c1ce2-60f8-4613-a0ec-9b9bb25fb6af
-ms.openlocfilehash: ec5dda6c2a4690106e47ecb447ea2a409e474856
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 131eb251493b77f13b5dc59a3a03504be8868e8a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052054"
 ---
 # <a name="label"></a>group1
 <xref:System.Windows.Controls.Label> コントロールが通常の情報を提供、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]します。  従来を<xref:System.Windows.Controls.Label>のみのテキストが格納されているが、<xref:System.Windows.Controls.Label>付属している[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]は、 <xref:System.Windows.Controls.ContentControl>、いずれかのテキストを含めることができますまたは<xref:System.Windows.UIElement>。  
   
  A<xref:System.Windows.Controls.Label>アクセス キーの機能およびビジュアルの両方のサポートを提供します。 などのコントロールへの簡単なキーボード アクセスを有効にするでよく使用される、<xref:System.Windows.Controls.TextBox>します。 割り当てる、<xref:System.Windows.Controls.Label>を<xref:System.Windows.Controls.Control>に設定して、<xref:System.Windows.Controls.Label.Target%2A?displayProperty=nameWithType>プロパティをコントロールをユーザーのアクセス キーを押したときに、フォーカスを取得する必要があります。  
   
- 次の図は、 <xref:System.Windows.Controls.Label> 「テーマ」を対象とする、<xref:System.Windows.Controls.ComboBox>します。  ユーザーがキーを押したときに、<xref:System.Windows.Controls.ComboBox>がフォーカスを受け取る。  詳細については、次を参照してください。[方法: ラベルのターゲット プロパティを設定](https://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)します。  
+ 次の図は、 <xref:System.Windows.Controls.Label> 「テーマ」を対象とする、<xref:System.Windows.Controls.ComboBox>します。  ユーザーがキーを押したときに、<xref:System.Windows.Controls.ComboBox>がフォーカスを受け取る。  詳細については、「[方法 :ラベルのターゲット プロパティを設定](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90))します。  
   
- ![表示プロパティを示しますを使用してラベルの付いた](../../../../docs/framework/wpf/controls/media/labeledby.JPG "LabeledBy")  
+ ![表示プロパティを示しますを使用してラベルの付いた](./media/labeledby.JPG "LabeledBy")  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [方法: ラベルのターゲット プロパティを設定する](https://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)  
+ [方法: アクセス キーおよびテキスト折り返し機能を持つコントロールを作成します。](how-to-create-a-control-that-has-an-access-key-and-text-wrapping.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.Label>

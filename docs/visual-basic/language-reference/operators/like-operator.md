@@ -22,16 +22,19 @@ helpviewer_keywords:
 - data [Visual Basic], string comparisons
 - string comparison [Visual Basic], Like operators
 ms.assetid: 966283ec-80e2-4294-baa8-c75baff804f9
-ms.openlocfilehash: c5b26bd1d3ebae5136718833c124e3c6e575e9b7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 38e56b8c0ec6bab89052ee42a2cd9c24053c658e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768330"
 ---
 # <a name="like-operator-visual-basic"></a>Like 演算子 (Visual Basic)
 文字列をパターンと比較します。  
-  
+
+> [!IMPORTANT]
+> `Like`演算子が .NET Core と .NET Standard プロジェクトでサポートされていません現在します。
+
 ## <a name="syntax"></a>構文  
   
 ```  
@@ -43,7 +46,7 @@ result = string Like pattern
  必須。 すべて`Boolean`変数。 結果は、`Boolean`を示す値かどうか、`string`を満たす、`pattern`します。  
   
  `string`  
- 必須。 任意のブール型 (`String`) の式を指定します。  
+ 必須。 任意のブール型 ( `String` ) の式を指定します。  
   
  `pattern`  
  必須。 すべて`String`「解説」で説明されているパターン一致規則に準拠している式。  
@@ -73,7 +76,7 @@ result = string Like pattern
 ## <a name="special-characters"></a>特殊文字  
  特殊文字の左角かっこの一致するように (`[`)、疑問符 (`?`)、シャープ記号 (`#`)、およびアスタリスク (`*`)、角かっこで囲みます。 右の角かっこ (`]`) 自体には、一致するように、グループ内で使用できませんが、グループ外で個別の文字として使用することができます。  
   
- 文字シーケンス`[]`長さ 0 の文字列と見なされます (`""`)。 ただし、角かっこで囲まれた文字の一覧の一部にすることはできません。 内の位置かどうかを確認したい場合`string`1 つ含まれる使用できる一連の文字または文字の`Like`2 回です。 例については、次を参照してください。[方法: 文字列をパターンに一致](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)します。  
+ 文字シーケンス`[]`長さ 0 の文字列と見なされます (`""`)。 ただし、角かっこで囲まれた文字の一覧の一部にすることはできません。 内の位置かどうかを確認したい場合`string`1 つ含まれる使用できる一連の文字または文字の`Like`2 回です。 例については、「[方法: 文字列をパターンに一致](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)します。  
   
 ## <a name="character-ranges"></a>文字範囲  
  ハイフンを使用して (`–`) と、範囲の上限を設定する`charlist`文字の範囲を指定できます。 たとえば、`[A–Z]`結果と一致する場合は、対応する文字の位置で`string`範囲内の任意の文字が含まれています`A`–`Z`、および`[!H–L]`結果と一致する場合は、対応する文字の位置範囲外の任意の文字を含む`H`–`L`します。  
@@ -95,19 +98,20 @@ result = string Like pattern
  Digraph 文字を使用する言語がシステムのロケール設定で指定した場合、いずれかで 1 つ digraph 文字のオカレンス`pattern`または`string`他の文字列で同等の 2 文字シーケンスと一致します。 同様に、digraph 文字`pattern`角かっこで囲む (単独で、リスト、または範囲内) で同等の 2 文字のシーケンスと一致`string`します。  
   
 ## <a name="overloading"></a>オーバーロード  
- `Like`演算子は、*オーバー ロードされた*、つまり、ことクラスまたは構造体を再定義できますその動作はそのクラスまたは構造体の型。 コードは、このようなクラスまたは構造体に、この演算子を使用する場合は、再定義された動作を確認ください。 詳細については、次を参照してください。[演算子プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)します。  
+ `Like`演算子は、*オーバー ロードされた*、つまり、ことクラスまたは構造体を再定義できますその動作はそのクラスまたは構造体の型。 コードは、このようなクラスまたは構造体に、この演算子を使用する場合は、再定義された動作を確認ください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  この例では、`Like`をさまざまなパターン文字列を比較する演算子。 移動し、結果を`Boolean`各文字列がパターンを満たすかどうかを示す変数。  
   
- [!code-vb[VbVbalrOperators#30](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/like-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#30)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:Microsoft.VisualBasic.Strings.InStr%2A>  
- <xref:Microsoft.VisualBasic.Strings.StrComp%2A>  
- [比較演算子](../../../visual-basic/language-reference/operators/comparison-operators.md)  
- [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Option Compare ステートメント](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
- [演算子および式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [方法 : 文字列がパターンに一致するかを調べる](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:Microsoft.VisualBasic.Strings.InStr%2A>
+- <xref:Microsoft.VisualBasic.Strings.StrComp%2A>
+- [比較演算子](../../../visual-basic/language-reference/operators/comparison-operators.md)
+- [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Option Compare ステートメント](../../../visual-basic/language-reference/statements/option-compare-statement.md)
+- [演算子および式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [方法: 文字列をパターンに一致します。](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)

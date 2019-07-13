@@ -1,21 +1,21 @@
 ---
-title: '&lt;claimTypeRequired&gt;'
+title: <claimTypeRequired>
 ms.date: 03/30/2017
 ms.assetid: c469d71f-6c77-4a24-97aa-53efa126ceef
 author: BrucePerlerMS
-ms.openlocfilehash: df4494de6b76943849db2bedef8f43ad894b6bd1
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: eafaf253e27db632f17acfce4445a07d18b109aa
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778457"
 ---
-# <a name="ltclaimtyperequiredgt"></a>&lt;claimTypeRequired&gt;
+# <a name="claimtyperequired"></a>\<claimTypeRequired>
 必要な受信セキュリティ トークンのクレームのセットを指定します。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<claimTypeRequired >  
+\<claimTypeRequired>  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,10 +38,10 @@ ms.locfileid: "48837764"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<claimType >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtype.md)|受け取ったセキュリティ トークンの 1 つの省略可能または必須のクレームを指定します。|  
+|[\<claimType>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtype.md)|受け取ったセキュリティ トークンの 1 つの省略可能または必須のクレームを指定します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|サービス レベルの id の設定を指定します。|
+|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|サービス レベルの id の設定を指定します。|

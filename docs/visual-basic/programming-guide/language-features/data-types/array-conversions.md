@@ -12,21 +12,21 @@ helpviewer_keywords:
 - conversions [Visual Basic], array types
 - object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
-ms.openlocfilehash: 93e6365a70f52f730b016cd4d4ac9382baeeba55
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f69ed6e0040f33f810d324a76859d448e9dc7632
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43784882"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64601143"
 ---
 # <a name="array-conversions-visual-basic"></a>配列の変換 (Visual Basic)
 別の配列型に、配列型を変換するには、次の条件を満たす指定。  
   
--   **ランクが等しい。** 2 つの配列のランクは同じである必要があります、つまり、同じ次元数があります。 ただし、それぞれの次元の長さが同じである必要はありません。  
+- **ランクが等しい。** 2 つの配列のランクは同じである必要があります、つまり、同じ次元数があります。 ただし、それぞれの次元の長さが同じである必要はありません。  
   
--   **要素のデータ型。** 両方の配列の要素のデータ型は、参照型である必要があります。 変換することはできません、`Integer`配列を`Long`配列、またはさらに、`Object`に少なくとも 1 つの値の型が関係するための配列。 詳細については、次を参照してください。[値型と参照型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)します。  
+- **要素のデータ型。** 両方の配列の要素のデータ型は、参照型である必要があります。 変換することはできません、`Integer`配列を`Long`配列、またはさらに、`Object`に少なくとも 1 つの値の型が関係するための配列。 詳細については、「 [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)」を参照してください。  
   
--   **でもです。** 2 つの配列の要素型の間で、拡張または縮小、変換できる必要があります。 この要件に失敗した例は、間の変換を実行しようとした、`String`とクラスの配列から派生した<xref:System.Attribute?displayProperty=nameWithType>します。 これら 2 つの型が共通の何もあるし、それらの間の任意の種類の変換は存在しません。  
+- **でもです。** 2 つの配列の要素型の間で、拡張または縮小、変換できる必要があります。 この要件に失敗した例は、間の変換を実行しようとした、`String`とクラスの配列から派生した<xref:System.Attribute?displayProperty=nameWithType>します。 これら 2 つの型が共通の何もあるし、それらの間の任意の種類の変換は存在しません。  
   
  1 つの配列型の間の変換は拡大またはそれぞれの要素の変換を拡大または縮小するかどうかに応じて縮小します。 詳細については、「 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。  
   
@@ -59,12 +59,13 @@ students = New Student(3) {}
 students = names  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [暗黙の型変換と明示的な型変換](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [文字列とその他の型との変換](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- [方法: オブジェクトを Visual Basic で別の型に変換](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- [データの種類](../../../../visual-basic/language-reference/data-types/index.md)  
- [データ型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [配列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a>関連項目
+
+- [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [暗黙の型変換と明示的な型変換](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [文字列とその他の型との変換](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
+- [方法: オブジェクトを Visual Basic で別の型に変換します。](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [データの種類](../../../../visual-basic/language-reference/data-types/index.md)
+- [データ型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [配列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)

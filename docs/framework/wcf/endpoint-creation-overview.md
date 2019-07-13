@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
-ms.openlocfilehash: b72c3959b2a42c6a5abc8ef31975d5bdb9ce220e
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: fa6486db483c004430e0e8ed75c75a6b25c05d6b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086844"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613584"
 ---
 # <a name="endpoint-creation-overview"></a>エンドポイントの作成の概要
 を介して Windows Communication Foundation (WCF) サービスとすべての通信が行われます、*エンドポイント*サービス。 エンドポイントは、WCF サービスを提供する機能へのアクセスをクライアントに提供します。 このセクションでは、エンドポイントの構造およびエンドポイントの設定またはコードによる定義の方法の概要を説明します。  
@@ -20,11 +20,11 @@ ms.locfileid: "49086844"
 ## <a name="the-structure-of-an-endpoint"></a>エンドポイントの構造  
  各エンドポイントは、そのエンドポイントが存在する場所を示すアドレス、クライアントがエンドポイントと通信するための方法を指定するバインディング、および利用可能なメソッドを特定するコントラクトで構成されます。  
   
--   **アドレス**。 アドレスは、エンドポイントを一意に識別し、潜在的なユーザーにそのサービスの場所を示します。 WCF オブジェクト モデルで表されます、<xref:System.ServiceModel.EndpointAddress>アドレスは、Uniform Resource Identifier (URI) および id、いくつかの Web サービス記述言語 (WSDL) 要素およびオプションのコレクションが含まれるアドレスのプロパティが含まれていますヘッダー。 オプション ヘッダーは、エンドポイントの識別または対話のために、より詳細なアドレス指定情報を提供します。 詳細については、次を参照してください。[エンドポイント アドレスを指定する](../../../docs/framework/wcf/specifying-an-endpoint-address.md)します。  
+- **アドレス**。 アドレスは、エンドポイントを一意に識別し、潜在的なユーザーにそのサービスの場所を示します。 WCF オブジェクト モデルで表されます、<xref:System.ServiceModel.EndpointAddress>アドレスは、Uniform Resource Identifier (URI) および id、いくつかの Web サービス記述言語 (WSDL) 要素およびオプションのコレクションが含まれるアドレスのプロパティが含まれていますヘッダー。 オプション ヘッダーは、エンドポイントの識別または対話のために、より詳細なアドレス指定情報を提供します。 詳細については、次を参照してください。[エンドポイント アドレスを指定する](../../../docs/framework/wcf/specifying-an-endpoint-address.md)します。  
   
--   **バインド**。 バインディングはエンドポイントとの通信方法を指定します。 バインディングによって、使用するトランスポート プロトコル (TCP や HTTP など)、メッセージに使用するエンコード (テキストやバイナリなど)、必要なセキュリティ要件 (SSL (Secure Sockets Layer) や SOAP メッセージ セキュリティなど) など、そのエンドポイントが通信を行う方法が指定されます。 詳細については、次を参照してください。[サービスを構成してクライアントを使用してバインド](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)します。  
+- **バインド**。 バインディングはエンドポイントとの通信方法を指定します。 バインディングによって、使用するトランスポート プロトコル (TCP や HTTP など)、メッセージに使用するエンコード (テキストやバイナリなど)、必要なセキュリティ要件 (SSL (Secure Sockets Layer) や SOAP メッセージ セキュリティなど) など、そのエンドポイントが通信を行う方法が指定されます。 詳細については、次を参照してください。[サービスを構成してクライアントを使用してバインド](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)します。  
   
--   **サービス コントラクト**します。 サービス コントラクトは、エンドポイントがクライアントに公開する機能を示します。 コントラクトは、クライアントが呼び出すことのできる操作、メッセージの形式、操作の呼び出しに必要な入力パラメーターやデータの型、クライアントに提供する処理または応答メッセージの種類を指定します。 基本的なメッセージ交換パターン (MEP) に対応する基本的なコントラクトの種類には、データグラム (一方向)、要求/応答、二重 (双方向) の 3 つがあります。 サービス コントラクトは、データ コントラクトとメッセージ コントラクトを使用して、クライアントが特定のデータ型とメッセージ形式でアクセスするように要求することもできます。 サービス コントラクトを定義する方法の詳細については、次を参照してください。 [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)します。 クライアントでは、二重 MEP でサービスからメッセージを受信するために、コールバック コントラクトというサービス定義のコントラクトを実装することが必要な場合があります。 詳細については、次を参照してください。[双方向サービス](../../../docs/framework/wcf/feature-details/duplex-services.md)します。  
+- **サービス コントラクト**します。 サービス コントラクトは、エンドポイントがクライアントに公開する機能を示します。 コントラクトは、クライアントが呼び出すことのできる操作、メッセージの形式、操作の呼び出しに必要な入力パラメーターやデータの型、クライアントに提供する処理または応答メッセージの種類を指定します。 基本的なメッセージ交換パターン (MEP) に対応する基本的なコントラクトの種類には、データグラム (一方向)、要求/応答、二重 (双方向) の 3 つがあります。 サービス コントラクトは、データ コントラクトとメッセージ コントラクトを使用して、クライアントが特定のデータ型とメッセージ形式でアクセスするように要求することもできます。 サービス コントラクトを定義する方法の詳細については、次を参照してください。 [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)します。 クライアントでは、二重 MEP でサービスからメッセージを受信するために、コールバック コントラクトというサービス定義のコントラクトを実装することが必要な場合があります。 詳細については、次を参照してください。[双方向サービス](../../../docs/framework/wcf/feature-details/duplex-services.md)します。  
   
  サービスのエンドポイントはコードを使用して強制的に指定するか、構成を介して宣言として指定できます。 エンドポイントが指定されていない場合、ランタイムは、サービスで実装されたサービス コントラクトごとに、1 つの既定のエンドポイントを各ベース アドレスに追加することで、既定のエンドポイントを提供します。 設置済みサービスのバインドおよびアドレスは一般的に、サービスの開発中に使用されるものとは異なるので、コード内でエンドポイントを定義することは通常、実用的ではありません。 一般に、サービス エンドポイントの定義にはコードではなく、構成を使用する方がより実用的です。 バインディング情報とアドレス情報をコードに含めないことで、変更時にアプリケーションの再コンパイルや再展開を行う必要がなくなります。  
   
@@ -34,13 +34,13 @@ ms.locfileid: "49086844"
 ## <a name="defining-endpoints-in-code"></a>コードでのエンドポイントの定義  
  次の例は、コードにエンドポイントを指定する方法を示しています。  
   
--   任意の名前を受け付け、"Hello \<name>!" とエコー応答するサービスの `IEcho` 型のコントラクトを定義します。  
+- 任意の名前を受け付け、"Hello \<name>!" とエコー応答するサービスの `IEcho` 型のコントラクトを定義します。  
   
--   `Echo` コントラクトで定義された型の `IEcho` サービスを実装します。  
+- `Echo` コントラクトで定義された型の `IEcho` サービスを実装します。  
   
--   指定のエンドポイント アドレス`http://localhost:8000/Echo`サービス。  
+- 指定のエンドポイント アドレス`http://localhost:8000/Echo`サービス。  
   
--   <xref:System.ServiceModel.WSHttpBinding> のバインディングを使用して `Echo` サービスを構成します。  
+- <xref:System.ServiceModel.WSHttpBinding> のバインディングを使用して `Echo` サービスを構成します。  
   
 ```csharp  
 Namespace Echo  
@@ -129,7 +129,7 @@ serviceHost.Open()
 >  サービスとクライアントのどちらの場合も、<xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> の呼び出しの前に記述を変更することをお勧めします。  
   
 ## <a name="defining-endpoints-in-configuration"></a>構成でのエンドポイントの定義  
- アプリケーションの作成では、各種決定事項をアプリケーションを展開する管理者に任せる場合がよくあります。 たとえば、どのサービス アドレス (URI) を使用するかなどの情報は、前もって知るすべがありません。 アドレスをハードコーディングする代わりに、サービスの作成後に管理者が指定する方が便利です。  構成を活用することで、この柔軟性が得られます。 詳細については、[サービスを構成する](../../../docs/framework/wcf/configuring-services.md) を参照してください。  
+ アプリケーションの作成では、各種決定事項をアプリケーションを展開する管理者に任せる場合がよくあります。 たとえば、どのサービス アドレス (URI) を使用するかなどの情報は、前もって知るすべがありません。 アドレスをハードコーディングする代わりに、サービスの作成後に管理者が指定する方が便利です。  構成を活用することで、この柔軟性が得られます。  詳細については、[サービスを構成する](../../../docs/framework/wcf/configuring-services.md) を参照してください。  
   
 > [!NOTE]
 >  [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) の `/config:`*filename*`[,`*filename*`]` を切り替えて使用すると、構成ファイルをすばやく作成できます。  
@@ -198,5 +198,6 @@ serviceHost.Open()
   
  エンドポイントを明示的に指定しない場合、<xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> を呼び出す前に、<xref:System.ServiceModel.ServiceHost> で <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> を呼び出すことによって、既定のエンドポイントを引き続き追加できます。 既定のエンドポイントの詳細については、次を参照してください。 [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md)と[Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [サービス コントラクトの実装](../../../docs/framework/wcf/implementing-service-contracts.md)
+## <a name="see-also"></a>関連項目
+
+- [サービス コントラクトの実装](../../../docs/framework/wcf/implementing-service-contracts.md)

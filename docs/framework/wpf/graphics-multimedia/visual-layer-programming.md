@@ -9,25 +9,26 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: d82c89db-077f-4c3c-a4f8-310ebfbe0fe2
-ms.openlocfilehash: 13957e60c92a90624882e126fe66aca789b6835a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 599ef73e2e8c772559badb3a562a12f8311e9c60
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762099"
 ---
 # <a name="visual-layer-programming"></a>ビジュアル層のプログラミング
-<xref:System.Windows.Media.Visual>オブジェクトは、コア[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]プライマリ ロールがあるレンダリング サポートを提供するオブジェクト。 などのユーザー インターフェイス コントロール<xref:System.Windows.Controls.Button>と<xref:System.Windows.Controls.TextBox>から派生して、<xref:System.Windows.Media.Visual>クラス、およびその表示データを保持するに使用します。  
+<xref:System.Windows.Media.Visual>オブジェクトは、コア[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]そのプライマリの役割は描画をサポートするオブジェクト。 などのユーザー インターフェイス コントロール<xref:System.Windows.Controls.Button>と<xref:System.Windows.Controls.TextBox>から派生、<xref:System.Windows.Media.Visual>クラス、およびレンダリング データを保持するのに使用します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ビジュアル層でのヒット テスト](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
- [DrawingVisual オブジェクトの使用](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)  
- [チュートリアル : Win32 アプリケーションでのビジュアル オブジェクトのホスト](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)  
- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/visual-layer-programming-how-to-topics.md)  
+ [ビジュアル層でのヒット テスト](hit-testing-in-the-visual-layer.md)  
+ [DrawingVisual オブジェクトの使用](using-drawingvisual-objects.md)  
+ [チュートリアル: Win32 アプリケーションでのビジュアル オブジェクトのホスト](tutorial-hosting-visual-objects-in-a-win32-application.md)  
+ [方法トピック](visual-layer-programming-how-to-topics.md)  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Media.Visual>  
- <xref:System.Windows.Media.VisualTreeHelper>  
- <xref:System.Windows.Media.DrawingVisual>  
- [WPF グラフィックス レンダリングの概要](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [グラフィックスとマルチメディア](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Media.Visual>
+- <xref:System.Windows.Media.VisualTreeHelper>
+- <xref:System.Windows.Media.DrawingVisual>
+- [WPF グラフィックス レンダリングの概要](wpf-graphics-rendering-overview.md)
+- [グラフィックスとマルチメディア](index.md)

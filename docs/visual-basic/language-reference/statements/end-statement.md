@@ -14,12 +14,12 @@ helpviewer_keywords:
 - End statement [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 0e64467c-0f34-4aab-9ddd-43f8b9d55d90
-ms.openlocfilehash: 8fd489dc9f12f7e80ef2dd49c6e2dee6c28ae761
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 4fc4fd36fb6b057195e9d8a79eb0a5b3ac9ff95c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43395723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638143"
 ---
 # <a name="end-statement"></a>End ステートメント
 すぐに実行を終了します。  
@@ -50,12 +50,13 @@ End
 ## <a name="example"></a>例  
  次の例では、`End`ユーザーが要求する場合は、コードの実行を終了するステートメント。  
   
- [!code-vb[VbVersHelp60Controls#64](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/end-statement_1.vb)]  
+ [!code-vb[VbVersHelp60Controls#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVersHelp60Controls/VB/Form1.vb#64)]  
   
 ## <a name="smart-device-developer-notes"></a>スマート デバイスの開発者向け注意事項  
  このステートメントはサポートされていません。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Security.Permissions.SecurityPermissionFlag>  
- [Stop ステートメント](../../../visual-basic/language-reference/statements/stop-statement.md)  
- [終了\<キーワード > ステートメント](../../../visual-basic/language-reference/statements/end-keyword-statement.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Security.Permissions.SecurityPermissionFlag>
+- [Stop ステートメント](../../../visual-basic/language-reference/statements/stop-statement.md)
+- [終了\<キーワード > ステートメント](../../../visual-basic/language-reference/statements/end-keyword-statement.md)

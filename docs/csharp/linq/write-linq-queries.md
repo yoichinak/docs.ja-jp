@@ -1,16 +1,16 @@
 ---
 title: C# での LINQ クエリの作成
 description: C# で LINQ クエリを作成する方法について説明します。
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: 30703f79-cf3a-4d02-b892-c95d58a1d9ed
-ms.openlocfilehash: 2ebba0d2d601932c976a88726fbe3ed37daffdcb
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: ed32543b0422e0664a8577f2c27f7c7c00a719a1
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44214980"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632873"
 ---
-# <a name="write-linq-queries-in-c"></a>C# での LINQ クエリの作成 #
+# <a name="write-linq-queries-in-c"></a>C\# での LINQ クエリの作成
 
 この記事では、C# で LINQ クエリを作成できる 3 つの方法を示しています。
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], about ActiveX controls
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
-ms.openlocfilehash: b2ea15703b09cd722f5c7fd01f8112482f3c04f2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 02f3224a8069fd091833bb09744389592c769818
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501876"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592500"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Windows フォームおよびアンマネージ アプリケーションの概要
 Windows フォーム アプリケーションとコントロールは、いくつかの注意事項がありますが、アンマネージ アプリケーションと相互運用できます。 次のセクションでは、Windows フォーム アプリケーションとコントロールがサポートするシナリオと構成、および、サポートしないシナリオと構成について説明します。  
@@ -27,7 +27,7 @@ Windows フォーム アプリケーションとコントロールは、いく�
   
  Windows フォーム コントロールのサポートをホストしている、使用できる ActiveX を次の表に示します。  
   
-|Windows フォームのバージョン|Support|  
+|Windows フォームのバージョン|サポート|  
 |---------------------------|-------------|  
 |.NET Framework version 1.0|Internet Explorer 5.01 以降のバージョン|  
 |.NET Framework version 1.1 以降|Internet Explorer 5.01 以降のバージョン<br /><br /> Microsoft Foundation Classes (MFC) 7.0 以降|  
@@ -47,22 +47,23 @@ Windows フォーム アプリケーションとコントロールは、いく�
  アプリケーションのメッセージ ループは、スレッドのメッセージ キューのメッセージを取得して変換し、処理のためにアプリケーションに送信する内部プログラム ループです。 Windows フォームのメッセージ ループは、Visual Basic 6.0 アプリケーションや MFC アプリケーションなど、以前のアプリケーションが提供するメッセージ ループと同じアーキテクチャを持っていません。 メッセージ ループにポストされたウィンドウのメッセージは、Windows フォームの要求とは異なる処理を実行することがあります。 そのため、予期しない動作が発生する可能性があります。 一部のキーストロークの組み合わせ、一部のマウスのアクティビティが動作せず、一部のイベントが想定どおりに発生しないことがあります。  
   
 ## <a name="resolving-interoperability-issues"></a>相互運用性の問題の解決  
- これらの問題は、<xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> メソッドを使用して作成された [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] メッセージ ループでフォームを表示することで解決できます。  
+ これらの問題を解決するには、フォームを使用して作成された .NET Framework のメッセージ ループ上、<xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>メソッド。  
   
  Windows フォームが COM クライアント アプリケーションから正しく動作するには、Windows フォームのメッセージ ループ上で実行する必要があります。 そのためには、次の方法のいずれかを使用します。  
   
--   <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> メソッドを使用して、Windows フォームを表示します。 詳細については、「 [方法 : ShowDialog メソッドで Windows フォームを表示して COM 相互運用機能をサポートする](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md)」を参照してください。  
+- <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> メソッドを使用して、Windows フォームを表示します。 詳細については、「[方法 :ShowDialog メソッドを使用して Windows フォームを表示して COM 相互運用機能をサポートして](com-interop-by-displaying-a-windows-form-shadow.md)します。  
   
--   各 Windows フォームを新しいスレッドで表示します。 詳細については、「[方法 : 独自のスレッドで各 Windows フォームを表示して COM 相互運用機能をサポートする](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)」を参照してください。  
+- 各 Windows フォームを新しいスレッドで表示します。 詳細については、「[方法 :独自のスレッドで各 Windows フォームを表示して COM 相互運用機能をサポート](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [Windows フォームとアンマネージ アプリケーション](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
- [COM 相互運用](../../../visual-basic/programming-guide/com-interop/index.md)  
- [.NET Framework アプリケーションにおける COM 相互運用性](~/docs/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)  
- [COM 相互運用性サンプル](https://msdn.microsoft.com/library/09c38567-6380-4d70-848a-e896a4ca05f4)  
- [Aximp.exe (Windows フォーム ActiveX コントロール インポーター)](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md)  
- [COM への .NET Framework コンポーネントの公開](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [COM 用のアセンブリのパッケージ化](../../../../docs/framework/interop/packaging-an-assembly-for-com.md)  
- [COM へのアセンブリの登録](../../../../docs/framework/interop/registering-assemblies-with-com.md)  
- [方法: ShowDialog メソッドで Windows フォームを表示して COM 相互運用機能をサポートする](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md)  
- [方法: 独自のスレッドで各 Windows フォームを表示して COM 相互運用機能をサポートする](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+## <a name="see-also"></a>関連項目
+
+- [Windows フォームとアンマネージ アプリケーション](windows-forms-and-unmanaged-applications.md)
+- [COM 相互運用](../../../visual-basic/programming-guide/com-interop/index.md)
+- [.NET Framework アプリケーションにおける COM 相互運用性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
+- [COM 相互運用性サンプル](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cxcz83xf(v=vs.90))
+- [Aximp.exe (Windows フォーム ActiveX コントロール インポーター)](../../tools/aximp-exe-windows-forms-activex-control-importer.md)
+- [COM への .NET Framework コンポーネントの公開](../../interop/exposing-dotnet-components-to-com.md)
+- [COM 用のアセンブリのパッケージ化](../../interop/packaging-an-assembly-for-com.md)
+- [COM へのアセンブリの登録](../../interop/registering-assemblies-with-com.md)
+- [方法: ShowDialog メソッドを使用して Windows フォームを表示して COM 相互運用機能をサポートします。](com-interop-by-displaying-a-windows-form-shadow.md)
+- [方法: 独自のスレッドで各 Windows フォームを表示して COM 相互運用機能をサポートします。](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)

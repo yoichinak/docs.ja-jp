@@ -2,12 +2,12 @@
 title: データベース スキーマ情報の取得
 ms.date: 03/30/2017
 ms.assetid: 79038d52-f122-4fd4-9bfb-aaa22d6a114b
-ms.openlocfilehash: 00cf0e36dd7886897c26adf50102f32892ebb18e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 885d3c9ad61c9099c960ddb0c0f77fa8a98dbefa
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43772842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664247"
 ---
 # <a name="retrieving-database-schema-information"></a>データベース スキーマ情報の取得
 データベースからのスキーマ情報の取得は、スキーマの検出プロセスによって行われます。 スキーマの検出により、マネージ プロバイダーを見つけるとも呼ばれる、データベース スキーマに関する情報を返すことを要求するアプリケーション*メタデータ*、特定のデータベース。 テーブル、列、ストアド プロシージャなどの各種のデータベース スキーマ要素は、スキーマ コレクションを通じて公開されます。 各スキーマ コレクションには、使用されているプロバイダーに固有の各種のスキーマ情報が含まれています。  
@@ -71,6 +71,7 @@ ms.locfileid: "43772842"
  <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A>  
  について説明します、 **GetSchemaTable**のメソッド、<xref:System.Data.SqlClient.SqlDataReader>クラス。  
   
-## <a name="see-also"></a>関連項目  
- [ADO.NET でのデータの取得および変更](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [ADO.NET でのデータの取得および変更](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

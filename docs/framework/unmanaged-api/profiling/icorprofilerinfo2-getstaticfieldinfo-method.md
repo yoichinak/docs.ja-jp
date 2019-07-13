@@ -17,26 +17,26 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f2ab0d482366b037f92a55f00dd33df8a312e84b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 36cb8d5865cdc4c1c8e34671010ede25d531bacf
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454432"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782256"
 ---
 # <a name="icorprofilerinfo2getstaticfieldinfo-method"></a>ICorProfilerInfo2::GetStaticFieldInfo メソッド
 指定したフィールドに適用される静的の種類を示す値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetStaticFieldInfo (  
     [in] ClassID               classId,  
     [in] mdFieldDef            fieldToken,  
     [out] COR_PRF_STATIC_TYPE  *pFieldInfo);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `classId`  
  [in]静的フィールドが定義されているクラスの ID。  
   
@@ -44,22 +44,23 @@ HRESULT GetStaticFieldInfo (
  [in]静的フィールドのメタデータ トークン。  
   
  `pFieldInfo`  
- [out]値へのポインター、 [COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md)列挙型を示す、指定したフィールドが静的かどうかとかどうか、静的の種類に適用されるフィールドです。  
+ [out]値へのポインター、 [COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md)列挙型を示す指定したフィールドが静的かどうかとかどうか、静的な種類に適用されるフィールド。  
   
-## <a name="remarks"></a>コメント  
- この情報は、静的フィールドのアドレスを取得するために呼び出す関数を決定に使用できます。  
+## <a name="remarks"></a>Remarks  
+ この情報は、静的フィールドのアドレスを取得するために呼び出すには、どの関数を使用できます。  
   
- プロファイラー コード アドレスを実際に持つようにするための静的フィールドのメタデータを確認する必要があります。 静的リテラル (つまり、定数) は、メタデータ内にのみ存在し、アドレスはありません。  
+ プロファイラー コードでは、実際にアドレスを持っていることを確認する静的フィールドのメタデータを確認する必要がありますもします。 静的リテラル (つまり、定数) は、メタデータにのみ存在し、アドレスはありません。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー** : CorProf.idl、CorProf.h  
+ **ヘッダー:** CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

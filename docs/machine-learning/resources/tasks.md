@@ -1,22 +1,21 @@
 ---
-title: 機械学習のタスク - ML.NET
-description: ML.NET でサポートされる機械学習のさまざまなタスクと、関連する学習器について説明します。
+title: 機械学習のタスク
+description: ML.NET でサポートされる機械学習のさまざまなタスクと、それらに関連するタスクについて説明します。
 ms.custom: seodec18
-ms.date: 11/29/2018
-author: jralexander
-ms.openlocfilehash: 4b333fb8c954c94ed84033d9858a496f591f2169
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 04/23/2019
+author: natke
+ms.openlocfilehash: ed6361fdcbca11c100ee5cae4ca76e152ddfba11
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126589"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063547"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>ML.NET での機械学習のタスク
 
-機械学習モデルを構築する場合は、データを使用して実現したい目的を最初に定義する必要があります。 その後で、状況に適した機械学習のタスクを選択できます。 選択可能な機械学習のさまざまなタスクといくつかの一般的なユース ケースについて以下で説明します。
+機械学習モデルを構築する場合は、データを使用して実現したい目的を最初に定義する必要があります。 これによって、状況に適した機械学習のタスクを選択できます。 選択可能な機械学習のさまざまなタスクといくつかの一般的なユース ケースについて以下で説明します。
 
-> [!NOTE]
-> ML.NET は現在プレビュー段階です。 現時点では、機械学習のタスクがすべてサポートされているわけではありません。 特定のタスクに対するご要望を送信するには、[dotnet/machinelearning リポジトリ](https://github.com/dotnet/machinelearning/issues)で問題をオープンしてください。
+どのタスクが自分のシナリオにとって適切かを決定したら、モデルをトレーニングするのに最適なアルゴリズムを選択する必要があります。 使用可能なアルゴリズムは、タスクごとのセクションに一覧表示されています。
 
 ## <a name="binary-classification"></a>二項分類
 
@@ -29,29 +28,36 @@ ms.locfileid: "53126589"
 
 詳しくは、Wikipedia の[二項分類](https://en.wikipedia.org/wiki/Binary_classification)の記事を参照してください。
 
-二項分類で推奨される学習器:
+### <a name="binary-classification-trainers"></a>二項分類トレーナー
 
-* AveragedPerceptronTrainer
-* StochasticGradientDescentClassificationTrainer
-* LightGbmBinaryTrainer
-* FastTreeBinaryClassificationTrainer
-* SymSgdClassificationTrainer
+次のアルゴリズムを使用して二項分類モデルをトレーニングすることができます。
 
-### <a name="binary-classification-learners"></a>二項分類学習器
+* <xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer> 
+* <xref:Microsoft.ML.Trainers.PriorTrainer> 
+* <xref:Microsoft.ML.Trainers.LinearSvmTrainer>
 
-二項分類タスクでは、次の学習器を利用できます。
+### <a name="binary-classification-inputs-and-outputs"></a>二項分類の入力と出力
 
-* [AveragedPerceptronTrainer](xref:Microsoft.ML.Trainers.Online.AveragedPerceptronTrainer)
-* [BinaryClassificationGamTrainer](xref:Microsoft.ML.Trainers.FastTree.BinaryClassificationGamTrainer)
-* [FastForestClassification](xref:Microsoft.ML.Trainers.FastTree.FastForestClassification)
-* [FastTreeBinaryClassificationTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryClassificationTrainer)
-* [FieldAwareFactorizationMachineTrainer](xref:Microsoft.ML.Runtime.FactorizationMachine.FieldAwareFactorizationMachineTrainer)
-* [LightGbmBinaryTrainer](xref:Microsoft.ML.Runtime.LightGBM.LightGbmBinaryTrainer)
-* [LinearSvm](xref:Microsoft.ML.Trainers.Online.LinearSvm)
-* [PriorTrainer](xref:Microsoft.ML.Trainers.PriorTrainer)
-* [RandomTrainer](xref:Microsoft.ML.Trainers.RandomTrainer)
-* [StochasticGradientDescentClassificationTrainer](xref:Microsoft.ML.Trainers.StochasticGradientDescentClassificationTrainer)
-* [SymSgdClassificationTrainer](xref:Microsoft.ML.Trainers.SymSgd.SymSgdClassificationTrainer)
+二値分類で最適な結果を得るには、バランスの取れた (つまり、正と負のトレーニング データの数が等しい) トレーニング データを使用します。 不足や値はトレーニングの前に処理しておきます。
+
+入力ラベル列データは <xref:System.Boolean> にする必要があります。
+入力特徴列データは、<xref:System.Single> の固定サイズ ベクターにする必要があります。
+
+これらのトレーナーから、以下の列が出力されます。
+
+| 出力列の名前 | 列の型 | 説明|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | モデルによって計算された生のスコア|
+| `PredictedLabel` | <xref:System.Boolean> | スコアの符号に基づく予測ラベル。 負のスコアは `false` にマップされ、正のスコアは `true` にマップされます。|
 
 ## <a name="multiclass-classification"></a>多クラス分類
 
@@ -63,27 +69,32 @@ ms.locfileid: "53126589"
 
 詳しくは、Wikipedia の[多クラス分類](https://en.wikipedia.org/wiki/Multiclass_classification)の記事を参照してください。
 
-多クラスで推奨される学習器:
-
-* OVA-AveragedPerceptronTrainer
-* SdcaMultiClassTrainer
-* LightGbmMulticlassTrainer
-* OVA-FastTreeBinaryClassificationTrainer
-
 >[!NOTE]
->OVA と PKPD では、多クラス データセットに対して機能するように[二項分類学習器](#binary-classification)がアップグレードされています。 詳細については、[Wikipedia] (https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest)) を参照してください。
+>一対全では、多クラス データセットに対して機能するように[二項分類学習器](#binary-classification)がアップグレードされます。 詳細については、[Wikipedia] (https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest)) を参照してください。
 
-### <a name="multiclass-classification-learners"></a>多クラス分類学習器
+### <a name="multiclass-classification-trainers"></a>多クラス分類トレーナー
 
-多クラス分類タスクでは、次の学習器を利用できます。
+次のトレーニング アルゴリズムを使用して多クラス分類モデルをトレーニングすることができます。
 
-* [LightGbmMulticlassTrainer](xref:Microsoft.ML.Runtime.LightGBM.LightGbmMulticlassTrainer)
-* [MetaMulticlassTrainer<TTransformer,TModel>](xref:Microsoft.ML.Runtime.Learners.MetaMulticlassTrainer%602)
-* [MultiClassClassificationTrainers](xref:Microsoft.ML.Trainers.MultiClassClassificationTrainers)
-* [MultiClassNaiveBayesTrainer](xref:Microsoft.ML.Trainers.MultiClassNaiveBayesTrainer)
-* [Ova](xref:Microsoft.ML.Trainers.Ova)
-* [Pkpd](xref:Microsoft.ML.Trainers.Pkpd)
-* [SdcaMultiClassTrainer](xref:Microsoft.ML.Trainers.SdcaMultiClassTrainer)
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmMulticlassTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer>
+* <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer> 
+* <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer> 
+* <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
+* <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer> 
+
+### <a name="multiclass-classification-inputs-and-outputs"></a>多クラス分類の入力と出力
+
+入力ラベル列データは[キー](xref:Microsoft.ML.Data.KeyDataViewType)型にする必要があります。
+特徴列は、<xref:System.Single> の固定サイズ ベクターにする必要があります。
+
+このトレーナーの出力は以下のとおりです。
+
+| 出力の名前 | 型 | 説明|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> のベクター | すべてのクラスのスコア。 値が大きいほど、関連するクラスに分類される可能性が高くなります。 i 番目の要素が最大値の場合、予測ラベル インデックスは i になります。 i はゼロベースのインデックスです。 |
+| `PredictedLabel` | [キー](xref:Microsoft.ML.Data.KeyDataViewType)型 | 予測ラベルのインデックス。 その値が i の場合、実際のラベルはキーと値の入力ラベルの型の i 番目のカテゴリになります。 |
 
 ## <a name="regression"></a>回帰
 
@@ -93,30 +104,29 @@ ms.locfileid: "53126589"
 * 履歴データと現在の市場動向に基づいて将来の株価を予測する。
 * 広告予算に基づいて製品の売り上げを予測する。
 
-回帰で推奨される学習器:
+### <a name="regression-trainers"></a>回帰トレーナー
 
-* FastTreeTweedieTrainer 
-* LightGbmRegressorTrainer 
-* SdcaRegressionTrainer 
-* FastTreeRegressionTrainer
+次のアルゴリズムを使用して回帰モデルをトレーニングすることができます。
 
-### <a name="regression-learners"></a>回帰学習器
+* <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.OlsTrainer>
+* <xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer> 
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastForestRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.GamRegressionTrainer>
 
-回帰タスクでは、次の学習器を利用できます。
+### <a name="regression-inputs-and-outputs"></a>回帰の入力と出力
 
-* [FastTreeRegressionTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer)
-* [FastTreeRegressionFastTreeTrainer](xref:Microsoft.ML.Runtime.FastTreeRegressionFastTreeTrainer)
-* [FastTreeTweedieRegressionFastTreeTrainer](xref:Microsoft.ML.Runtime.FastTreeTweedieRegressionFastTreeTrainer)
-* [FastTreeTweedieTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer)
-* [LightGbmRegressorTrainer](xref:Microsoft.ML.Runtime.LightGBM.LightGbmRegressorTrainer)
-* [LogisticRegression](xref:Microsoft.ML.Runtime.Learners.LogisticRegression)
-* [OlsLinearRegressionTrainer](xref:Microsoft.ML.Trainers.HalLearners.OlsLinearRegressionTrainer)
-* [OnlineGradientDescentTrainer](xref:Microsoft.ML.Trainers.Online.OnlineGradientDescentTrainer)
-* [PoissonRegression](xref:Microsoft.ML.Trainers.PoissonRegression)
-* [RegressionGamTrainer](xref:Microsoft.ML.Trainers.FastTree.RegressionGamTrainer)
-* [SdcaRegressionTrainer](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer)
-* [FastTree.SingleTrainer](xref:Microsoft.ML.Trainers.FastTree.SingleTrainer)
-* [LightGBM.SingleTrainer](xref:Microsoft.ML.Runtime.LightGBM.SingleTrainer)
+入力ラベル列データは <xref:System.Single> にする必要があります。
+
+このタスクのトレーナーの出力は以下のとおりです。
+
+| 出力の名前 | 型 | 説明|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | モデルによって予測された生のスコア |
 
 ## <a name="clustering"></a>クラスタリング
 
@@ -126,11 +136,22 @@ ms.locfileid: "53126589"
 * 対象を絞った広告キャンペーンの構築に役立つ顧客セグメントと統計データを特定する。
 * 製造メトリックに基づいてインベントリを分類する。
 
-### <a name="clustering-learners"></a>クラスタリング学習器
+### <a name="clustering-trainer"></a>クラスタリング トレーナー
 
-クラスタリング タスクでは、次の学習器を利用できます。
+次のアルゴリズムを使用してクラスタリング モデルをトレーニングすることができます。
 
-* [KMeansPlusPlusTrainer](xref:Microsoft.ML.Trainers.KMeans.KMeansPlusPlusTrainer)
+* <xref:Microsoft.ML.Trainers.KMeansTrainer> 
+
+### <a name="clustering-inputs-and-outputs"></a>入力と出力のクラスタリング
+
+入力特徴データは <xref:System.Single> である必要があります。 ラベルは必要ありません。
+
+このトレーナーの出力は以下のとおりです。
+
+| 出力の名前 | 型 | 説明|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> のベクター | 与えられたデータ ポイントからすべてのクラスターの重心までの距離 |
+| `PredictedLabel` | [キー](xref:Microsoft.ML.Data.KeyDataViewType)型 | モデルによって予測された最も近いクラスターのインデックス。 |
 
 ## <a name="anomaly-detection"></a>異常検出
 
@@ -147,31 +168,51 @@ ms.locfileid: "53126589"
 
 異常とは定義上はまれに発生するイベントであるため、モデル化するために使用する代表的なデータ サンプルを収集するのは困難です。 このカテゴリに含まれるアルゴリズムは、不均衡なデータセットの使用によるモデルの構築とトレーニングという主要な課題に対処するように特別に設計されています。
 
-### <a name="anomaly-detection-learners"></a>異常検出学習器
+### <a name="anomaly-detection-trainer"></a>異常検出トレーナー
 
-異常検出タスクでは、次の学習器を利用できます。
+次のアルゴリズムを使用して異常検出モデルをトレーニングすることができます。
 
-* [RandomizedPcaTrainer](xref:Microsoft.ML.Trainers.PCA.RandomizedPcaTrainer)
+* <xref:Microsoft.ML.Trainers.RandomizedPcaTrainer>
+
+### <a name="anomaly-detection-inputs-and-outputs"></a>異常検出の入力と出力
+
+入力特徴は、<xref:System.Single> の固定サイズのベクターにする必要があります。
+
+このトレーナーの出力は以下のとおりです。
+
+| 出力の名前 | 型 | 説明|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | 異常検出モデルによって計算された、負ではない無制限のスコア |
 
 ## <a name="ranking"></a>ランキング
 
 ランキング タスクでは、ラベル付きのサンプルのセットからランカーが構築されます。 この例のセットは、特定の条件を使用してスコア付けできるインスタンス グループで構成されています。 順位付けのラベルは、インスタンスごとに {0、1、2、3, 4} です。  各インスタンスのスコアが不明である新しいインスタンス グループをランク付けするように、ランカーがトレーニングされます。 ML.NET のランキング学習器は、[機械が学習したランキング](https://en.wikipedia.org/wiki/Learning_to_rank)に基づいています。
 
-### <a name="ranking-learners"></a>ランキング学習器
+### <a name="ranking-training-algorithms"></a>ランキング トレーニング アルゴリズム
 
-ランキング タスクでは、次の学習器を利用できます。
+次のアルゴリズムを使ってランキング モデルをトレーニングすることができます。
 
-* [FastTreeRankingFastTreeTrainer](xref:Microsoft.ML.Runtime.FastTreeRankingFastTreeTrainer)
-* [FastTreeRankingTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer)
-* [LightGbmRankingTrainer](xref:Microsoft.ML.Runtime.LightGBM.LightGbmRankingTrainer)
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRankingTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer> 
 
-## <a name="recommendation"></a>レコメンデーション
+### <a name="ranking-input-and-outputs"></a>入力と出力のランキング
+
+入力ラベル データ型は[キー](xref:Microsoft.ML.Data.KeyDataViewType)型または <xref:System.Single> である必要があります。 ラベルの値によって関連性が決まります。値が高いほど関連性が高くなります。 ラベルが[キー](xref:Microsoft.ML.Data.KeyDataViewType)型の場合、キーのインデックスは関連性の値です。ここで、最小のインデックスは最も低い関連性です。 ラベルが <xref:System.Single> の場合、値が大きいほど関連性が高いことを示します。
+
+特徴データは <xref:System.Single> の固定サイズのベクターにする必要があります。また、入力行グループ列は[キー](xref:Microsoft.ML.Data.KeyDataViewType)型にする必要があります。
+
+このトレーナーの出力は以下のとおりです。
+
+| 出力の名前 | 型 | 説明|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | 予測を決定するためにモデルによって計算された無制限のスコア |
+
+## <a name="recommendation"></a>推奨事項
 
 レコメンデーション タスクによって、推奨される製品やサービスの一覧を作成できます。 ML.NET では、カタログ内に製品のレーティングの履歴データがある場合は、レコメンデーション用の[協調フィルタリング](https://en.wikipedia.org/wiki/Collaborative_filtering) アルゴリズムである[行列因子分解 (MF)](https://en.wikipedia.org/wiki/Matrix_factorization_%28recommender_systems%29) が使用されます。 たとえば、ユーザーによる映画の採点の履歴データがあるときに、そのユーザーが次に見たいと思う映画を推薦できます。
 
-### <a name="recommendation-learners"></a>レコメンデーション学習機
+### <a name="recommendation-training-algorithms"></a>レコメンデーション トレーニング アルゴリズム
 
-レコメンデーション タスクでは、次の学習器を利用できます。
+次のアルゴリズムを使ってレコメンデーション モデルをトレーニングすることができます。
 
-* [MatrixFactorizationTrainer](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer)
-* [MatrixFactorizationPredictionTransformer](xref:Microsoft.ML.Trainers.Recommender.MatrixFactorizationPredictionTransformer)
+* <xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer>

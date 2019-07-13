@@ -2,12 +2,12 @@
 title: '方法: XmlSerializer を使用してシリアル化する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 2e0a0bbc-c548-4fe2-8741-be5a9ccd0cbb
-ms.openlocfilehash: 32a23792947639c2c0eb1dc14b640c3786bdfd4c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2a9d51bbae905a128d6d5846423a5c02fe1d67d0
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45990402"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484879"
 ---
 # <a name="how-to-serialize-using-xmlserializer-c"></a>方法: XmlSerializer を使用してシリアル化する (C#)
 このトピックでは、<xref:System.Xml.Serialization.XmlSerializer> を使用してシリアル化および逆シリアル化を行う例について説明します。  
@@ -88,7 +88,3 @@ Testing for type: System.Xml.Linq.XElement
 Testing for type: XElementContainer  
   Deserialized type: XElementContainer  
 ```  
-  
-## <a name="see-also"></a>参照
-
-- [XElement オブジェクトを含むオブジェクト グラフのシリアル化 (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

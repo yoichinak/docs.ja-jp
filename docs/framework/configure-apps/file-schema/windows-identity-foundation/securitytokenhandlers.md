@@ -1,16 +1,16 @@
 ---
-title: '&lt;securityTokenHandlers&gt;'
+title: <securityTokenHandlers>
 ms.date: 03/30/2017
 ms.assetid: f11a631d-4094-4e11-bb03-4ede74b30281
 author: BrucePerlerMS
-ms.openlocfilehash: e63f02add81495e474b59b6c5cc090bd69add3d2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a5af3893ab72d23c2b3814569decfc50431b8e55
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47206181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793836"
 ---
-# <a name="ltsecuritytokenhandlersgt"></a>&lt;securityTokenHandlers&gt;
+# <a name="securitytokenhandlers"></a>\<securityTokenHandlers>
 エンドポイントに登録されているセキュリティ トークン ハンドラーのコレクションを指定します。  
   
  \<system.identityModel>  
@@ -44,13 +44,13 @@ ms.locfileid: "47206181"
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|トークン ハンドラー コレクションには、セキュリティ トークン ハンドラーを追加します。|  
 |[\<clear>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/clear.md)|トークン ハンドラー コレクションからすべてのセキュリティ トークン ハンドラーをクリアします。|  
 |[\<remove>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/remove.md)|トークン ハンドラー コレクションからセキュリティ トークン ハンドラーを削除します。|  
-|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|トークン ハンドラーのコレクションの構成を提供します。|  
+|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|トークン ハンドラーのコレクションの構成を提供します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|サービス レベルの id の設定を指定します。|  
+|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|サービス レベルの id の設定を指定します。|  
   
 ## <a name="remarks"></a>Remarks  
  サービス構成では、セキュリティ トークン ハンドラーの 1 つまたは複数の名前付きコレクションを指定できます。 使用してコレクションの名前を指定することができます、`name`属性。 フレームワークを処理する唯一の名前とは、"ActAs"と"OnBehalfOf"です。 ハンドラーは、これらのコレクションに存在する場合で使用されるセキュリティ トークン サービス (STS)、既定のハンドラーではなく処理するときに`ActAs`と`OnBehalfOf`トークンです。  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa5930ad-f3d7-40aa-b6f6-c6edcd5c64f7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b8c7616a3187cd5fa28f231dffd15b0bfeea4b7f
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: c5b74f2608022d48dbd7e63e4ddf6112c333e3f4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018746"
 ---
 # <a name="principal-and-identity-objects"></a>プリンシパル オブジェクトと ID オブジェクト
 マネージ コードには、id またはでプリンシパルの役割を検出できる、<xref:System.Security.Principal.IPrincipal>への参照を含むオブジェクトを<xref:System.Security.Principal.IIdentity>オブジェクト。 ID オブジェクトとプリンシパル オブジェクトは、ユーザーとグループ アカウントのようななじみのある概念と比較するとわかりやすいでしょう。 ほとんどのネットワーク環境で、ユーザー アカウントは人またはプログラムを表し、グループ アカウントは特定のカテゴリのユーザーやそのユーザーが所有する権限を表します。 同様に、.NET Framework の ID オブジェクトはユーザーを表し、ロールはメンバーシップやセキュリティ コンテキストを表します。 .NET Framework で、プリンシパル オブジェクトは、ID オブジェクトとロールの両方をカプセル化します。 .NET Framework アプリケーションは、ID または一般的にはロール メンバーシップに基づいてプリンシパルに権限を付与します。  
@@ -44,9 +44,9 @@ ms.locfileid: "48025507"
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: WindowsPrincipal オブジェクトを作成する](../../../docs/standard/security/how-to-create-a-windowsprincipal-object.md)  
-- [方法: GenericPrincipal オブジェクトと GenericIdentity オブジェクトを作成する](../../../docs/standard/security/how-to-create-genericprincipal-and-genericidentity-objects.md)  
-- [プリンシパル オブジェクトの置き換え](../../../docs/standard/security/replacing-a-principal-object.md)  
-- [偽装と復帰](../../../docs/standard/security/impersonating-and-reverting.md)  
-- [ロール ベースのセキュリティ](../../../docs/standard/security/role-based-security.md)  
+- [方法: WindowsPrincipal オブジェクトを作成します。](../../../docs/standard/security/how-to-create-a-windowsprincipal-object.md)
+- [方法: GenericPrincipal オブジェクトと GenericIdentity オブジェクトを作成します。](../../../docs/standard/security/how-to-create-genericprincipal-and-genericidentity-objects.md)
+- [プリンシパル オブジェクトの置き換え](../../../docs/standard/security/replacing-a-principal-object.md)
+- [偽装と復帰](../../../docs/standard/security/impersonating-and-reverting.md)
+- [ロール ベースのセキュリティ](../../../docs/standard/security/role-based-security.md)
 - [セキュリティの基本概念](../../../docs/standard/security/key-security-concepts.md)

@@ -24,14 +24,12 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: b27a5dec4483afb0f6c66c3a015c89967483cb61
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: a8f5c6f6aba9ec4ad627fcd4d3b3caaff810ee72
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47087503"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456203"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>構成ファイルを使用してアプリを構成する方法
 .NET Framework を使用すると、開発者および管理者は、構成ファイルを使用することにより、アプリケーションの実行方法を制御し、アプリケーションの実行に柔軟性を持たせることができます。 構成ファイルは XML ファイルで、必要に応じて変更できます。 管理者は、アプリケーションからアクセスできるプロテクト リソース、アプリケーションが使用するアセンブリのバージョン、およびリモート アプリケーションやオブジェクトの配置場所を制御できます。 開発者は、構成ファイル内に設定を格納できます。これにより、設定変更のたびにアプリケーションを再コンパイルする必要がなくなります。 このセクションでは、設定できる内容と、アプリケーションを設定することが有益である理由を説明します。  
@@ -54,9 +52,9 @@ ms.locfileid: "47087503"
 ```  
   
 ## <a name="machine-configuration-files"></a>マシン構成ファイル  
- マシン構成ファイル Machine.config には、コンピューター全体に適用する設定を含めます。 このファイルは、%*runtime install path*%\Config ディレクトリに含まれています。 Machine.config には、マシン全体のアセンブリ バインディング、組み込みの[リモート処理チャネル](https://msdn.microsoft.com/library/6e9b60e0-9bc0-47b4-a8ef-3b78585f9a18)、および ASP.NET に関する構成設定が含まれます。  
+ マシン構成ファイル Machine.config には、コンピューター全体に適用する設定を含めます。 このファイルは、%*runtime install path*%\Config ディレクトリに含まれています。 Machine.config には、マシン全体のアセンブリ バインディング、組み込みの[リモート処理チャネル](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100))、および ASP.NET に関する構成設定が含まれます。  
   
- 構成システムは、まずマシン構成ファイル内で、[**\<appSettings>** 要素](~/docs/framework/configure-apps/file-schema/appsettings/index.md)と、開発者が定義したその他の構成セクションを調べます。 次に、アプリケーション構成ファイルを調べます。 マシン構成ファイルを管理しやすくするには、これらの設定をアプリケーション構成ファイルに配置するのが最適です。 しかし、それらの設定をマシン構成ファイル内に配置した方が、システムの保守が簡単になります。 たとえば、クライアント アプリケーションとサーバー アプリケーションの両方で使用されるサードパーティ コンポーネントがある場合、そのコンポーネントの設定を 1 か所に設まとめた方が簡単です。 この場合、同じ設定を 2 つのファイルに配置する必要がなくなるという点から、設定を格納するのに適した場所はマシン構成ファイルになります。  
+ 構成システムは、まずマシン構成ファイル内で、[ **\<appSettings>** 要素](~/docs/framework/configure-apps/file-schema/appsettings/index.md)と、開発者が定義したその他の構成セクションを調べます。 次に、アプリケーション構成ファイルを調べます。 マシン構成ファイルを管理しやすくするには、これらの設定をアプリケーション構成ファイルに配置するのが最適です。 しかし、それらの設定をマシン構成ファイル内に配置した方が、システムの保守が簡単になります。 たとえば、クライアント アプリケーションとサーバー アプリケーションの両方で使用されるサードパーティ コンポーネントがある場合、そのコンポーネントの設定を 1 か所に設まとめた方が簡単です。 この場合、同じ設定を 2 つのファイルに配置する必要がなくなるという点から、設定を格納するのに適した場所はマシン構成ファイルになります。  
   
 > [!NOTE]
 >  XCOPY を使用してアプリケーションを配置しても、マシン構成ファイル内の設定はコピーされません。  
@@ -68,7 +66,7 @@ ms.locfileid: "47087503"
   
  アプリケーション構成ファイルの名前と場所は、アプリケーションのホストによって異なり、次のいずれかの場合が考えられます。  
   
--   実行可能ファイルによってホストされるアプリケーション。  
+- 実行可能ファイルによってホストされるアプリケーション。  
   
      これらのアプリケーションには構成ファイルが 2 つあります。開発中に開発者によって変更されるソース構成ファイルと、アプリケーションと共に配布される出力構成ファイルです。  
   
@@ -76,11 +74,11 @@ ms.locfileid: "47087503"
   
      Visual Studio は、コンパイル済みアセンブリが格納されるディレクトリに自動的にソース構成ファイルをコピーして、アプリケーションと共に配置される出力構成ファイルを作成します。 場合によっては、Visual Studio が出力構成ファイルを変更することがあります。詳細については、「[アセンブリ バージョンのリダイレクト](../../../docs/framework/configure-apps/redirect-assembly-versions.md#BKMK_Redirectingassemblyversionsattheapplevel)」の「[アプリ レベルでのアセンブリ バージョンのリダイレクト](../../../docs/framework/configure-apps/redirect-assembly-versions.md)」を参照してください。  
   
--   ASP.NET によってホストされるアプリケーション。  
+- ASP.NET によってホストされるアプリケーション。  
   
-     ASP.NET 構成ファイルの詳細については、「[ASP.NET の構成設定](https://msdn.microsoft.com/library/116608f3-c03d-4413-9fc7-978703e18b0f(v=vs.100))」を参照してください。  
+     ASP.NET 構成ファイルの詳細については、次を参照してください。 [ASP.NET 構成設定](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100))します。
   
--   Internet Explorer によってホストされるアプリケーション。  
+- Internet Explorer によってホストされるアプリケーション。  
   
      Internet Explorer でホストされるアプリケーションに構成ファイルが関連付けられている場合、そのファイルの場所は、`<link>` タグ内に次の構文で指定します。  
   
@@ -92,18 +90,18 @@ ms.locfileid: "47087503"
  セキュリティ構成ファイルには、コード グループ階層構造に関する情報と、ポリシー レベルに関連付けたアクセス許可セットを含めます。 セキュリティ ポリシーを変更するときは、ポリシーの変更によってセキュリティ構成ファイルが破損しないように、[コード アクセス セキュリティ ポリシー ツール (Caspol.exe)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md) を使用することを強くお勧めします。  
   
 > [!NOTE]
->  [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 以降では、セキュリティ構成ファイルはセキュリティ ポリシーが変更された場合にのみ存在します。  
+>  以降、.NET Framework 4 では、セキュリティの構成ファイルは、セキュリティ ポリシーが変更された場合にのみ存在します。  
   
  セキュリティ構成ファイルは次の場所にあります。  
   
--   エンタープライズ ポリシー構成ファイル: %*runtime-install-path*%\Config\Enterprisesec.config  
+- エンタープライズ ポリシー構成ファイル: %*runtime-install-path*%\Config\Enterprisesec.config  
   
--   コンピューター ポリシー構成ファイル: %*runtime-install-path*%\Config\Security.config  
+- コンピューター ポリシー構成ファイル: %*runtime-install-path*%\Config\Security.config  
   
--   ユーザー ポリシー構成ファイル: %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
+- ユーザー ポリシー構成ファイル: %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [方法 : DEVPATH を使用してアセンブリを指定する](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
+ [方法: DEVPATH を使用してアセンブリを検索します。](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
  アセンブリ検索のときに DEVPATH 環境変数を使用するようにランタイムに指示する方法を説明します。  
   
  [アセンブリ バージョンのリダイレクト](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  
@@ -115,19 +113,18 @@ ms.locfileid: "47087503"
  [暗号化クラスの設定](../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
  暗号化クラスにアルゴリズム名を割り当てる方法と、暗号化アルゴリズムにオブジェクト ID を割り当てる方法を説明します。  
   
- [方法: 発行者ポリシーを作成する](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)  
+ [方法: 発行者ポリシーを作成します。](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)  
  アセンブリのリダイレクトやコード ベース設定を指定する発行者ポリシー ファイルを追加する状況や方法を説明します。  
   
  [構成ファイル スキーマ](../../../docs/framework/configure-apps/file-schema/index.md)  
  スキーマ、起動時の階層、ランタイム、ネットワーク、およびその他の種類の構成設定を説明します。  
   
-## <a name="see-also"></a>関連項目  
- [構成ファイル スキーマ](../../../docs/framework/configure-apps/file-schema/index.md)  
- [アセンブリの場所の指定](../../../docs/framework/configure-apps/specify-assembly-location.md)  
- [アセンブリ バージョンのリダイレクト](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  
- [構成ファイルを使用してリモート オブジェクトの登録](https://msdn.microsoft.com/library/bc503ee1-c811-4f82-9525-470343326adc)  
- [ASP.NET Web サイト管理](https://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)  
- [NIB: セキュリティ ポリシーの管理](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)  
- [Caspol.exe (コード アクセス セキュリティ ポリシー ツール)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)  
- [共通言語ランタイムのアセンブリ](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [リモート オブジェクト](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)
+## <a name="see-also"></a>関連項目
+
+- [構成ファイル スキーマ](../../../docs/framework/configure-apps/file-schema/index.md)
+- [アセンブリの場所の指定](../../../docs/framework/configure-apps/specify-assembly-location.md)
+- [アセンブリ バージョンのリダイレクト](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [ASP.NET Web サイト管理](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
+- [セキュリティ ポリシーの管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
+- [Caspol.exe (コード アクセス セキュリティ ポリシー ツール)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)
+- [共通言語ランタイムのアセンブリ](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

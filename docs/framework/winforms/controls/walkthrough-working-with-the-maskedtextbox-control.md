@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル : MaskedTextBox コントロールの使用'
+title: 'チュートリアル: MaskedTextBox コントロールの使用'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,45 +11,45 @@ helpviewer_keywords:
 - user input [Windows Forms], controlling
 - text [Windows Forms], controls for input
 ms.assetid: df60565e-5447-4110-92a6-be1f6ff5faa3
-ms.openlocfilehash: bcca6c5f5481d351a39a4e71532cc0f006075128
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7f25e21008c77ebf5e55e7affbb4cf07db377c5d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538442"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623269"
 ---
-# <a name="walkthrough-working-with-the-maskedtextbox-control"></a>チュートリアル : MaskedTextBox コントロールの使用
+# <a name="walkthrough-working-with-the-maskedtextbox-control"></a>チュートリアル: MaskedTextBox コントロールの使用
 このチュートリアルでは、以下のタスクを行います。  
   
--   初期化中、<xref:System.Windows.Forms.MaskedTextBox>コントロール  
+- 初期化、<xref:System.Windows.Forms.MaskedTextBox>コントロール  
   
--   使用して、<xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected>文字がマスクに準拠していないときにユーザーに警告するイベント ハンドラー  
+- 使用して、<xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected>文字が、マスクに準拠していないときにユーザーに警告するイベント ハンドラー  
   
--   型を割り当てる、<xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A>プロパティを使用して、<xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted>をコミットしようとしている値の型の有効な場合、ユーザーのアラートを生成するイベント ハンドラー  
+- 型の割り当て、<xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A>プロパティを使用して、<xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted>コミットしようとして値の型の有効な場合、ユーザーのアラートを生成するイベント ハンドラー  
   
-## <a name="creating-the-project-and-adding-a-control"></a>プロジェクトを作成して、コントロールの追加  
+## <a name="creating-the-project-and-adding-a-control"></a>プロジェクトを作成し、コントロールの追加  
   
 #### <a name="to-add-a-maskedtextbox-control-to-your-form"></a>MaskedTextBox コントロールをフォームに追加するには  
   
-1.  配置するフォームを開いて、<xref:System.Windows.Forms.MaskedTextBox>コントロール。  
+1. 配置するフォームを開いて、<xref:System.Windows.Forms.MaskedTextBox>コントロール。  
   
-2.  ドラッグ、<xref:System.Windows.Forms.MaskedTextBox>から制御、**ツールボックス**をフォームにします。  
+2. ドラッグ、<xref:System.Windows.Forms.MaskedTextBox>コントロールから、**ツールボックス**をフォームにします。  
   
-3.  コントロールを右クリックして選択**プロパティ**です。 **プロパティ**ウィンドウで、**マスク**プロパティをクリックして、**しています.** プロパティ名の横にある (省略記号) ボタンをクリックします。  
+3. コントロールを右クリックし、選択**プロパティ**します。 **プロパティ**ウィンドウで、**マスク**プロパティをクリックして、 **.** プロパティ名の横にある (省略記号) ボタンをクリックします。  
   
-4.  **定型入力**ダイアログ ボックスで、**短い日付**マスクし、をクリックして**OK**です。  
+4. **定型入力**ダイアログ ボックスで、**短い日付**マスクし、をクリックして**OK**。  
   
-5.  **プロパティ**ウィンドウのセット、<xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A>プロパティを`true`です。 このプロパティはにより、ビープ音を鳴らすたびに、ユーザーが、マスク定義に違反する文字を入力しようとしています。 です。  
+5. **プロパティ**ウィンドウのセット、<xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A>プロパティを`true`します。 このプロパティの場合、短いビープ音を鳴らす、ユーザーが入力マスクの定義に違反している文字を試みるたびにします。  
   
- 概要については、マスクのプロパティをサポートする文字のの「解説」セクションを参照してください、<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>プロパティです。  
+ Mask プロパティをサポートする、文字の概要については、「解説」を参照してください、<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>プロパティ。  
   
 ## <a name="alert-the-user-to-input-errors"></a>入力エラーをユーザーに警告します。  
   
-#### <a name="add-a-balloon-tip-for-rejected-mask-input"></a>拒否されたマスクの入力のバルーン ヒントを追加します。  
+#### <a name="add-a-balloon-tip-for-rejected-mask-input"></a>拒否されたマスク入力のバルーン ヒントを追加します  
   
-1.  戻り、**ツールボックス**を追加し、<xref:System.Windows.Forms.ToolTip>をフォームにします。  
+1. 戻り、**ツールボックス**を追加し、<xref:System.Windows.Forms.ToolTip>をフォームにします。  
   
-2.  イベント ハンドラーを作成、<xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected>イベントを発生させる、<xref:System.Windows.Forms.ToolTip>入力エラーが発生します。 バルーン ヒントは引き続き、5 秒間のまたは、ユーザーがクリックするまで表示します。  
+2. イベント ハンドラーを作成、<xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected>イベントを発生させる、<xref:System.Windows.Forms.ToolTip>入力エラーが発生します。 5 秒間、または、ユーザーがクリックするまで、バルーン ヒントが表示されたままです。  
   
     ```csharp  
     public void Form1_Load(Object sender, EventArgs e)   
@@ -78,11 +78,11 @@ ms.locfileid: "33538442"
     End Sub  
     ```  
   
-## <a name="alert-the-user-to-a-type-that-is-not-valid"></a>無効な型をユーザーに警告します。  
+## <a name="alert-the-user-to-a-type-that-is-not-valid"></a>無効な種類のユーザーに警告します。  
   
-#### <a name="add-a-balloon-tip-for-invalid-data-types"></a>無効なデータ型のバルーン ヒントを追加します。  
+#### <a name="add-a-balloon-tip-for-invalid-data-types"></a>無効なデータ型のバルーン ヒントを追加します  
   
-1.  フォームの<xref:System.Windows.Forms.Form.Load>、イベント ハンドラーを割り当てます、<xref:System.Type>オブジェクトを表す、<xref:System.DateTime>型を<xref:System.Windows.Forms.MaskedTextBox>コントロールの<xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A>プロパティ。  
+1. フォームの<xref:System.Windows.Forms.Form.Load>イベント ハンドラーを割り当てる、<xref:System.Type>オブジェクトを表す、<xref:System.DateTime>型、<xref:System.Windows.Forms.MaskedTextBox>コントロールの<xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A>プロパティ。  
   
     ```csharp  
     private void Form1_Load(Object sender, EventArgs e)  
@@ -100,7 +100,7 @@ ms.locfileid: "33538442"
     End Sub  
     ```  
   
-2.  <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> イベントのイベント ハンドラーを追加します。  
+2. <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> イベントのイベント ハンドラーを追加します。  
   
     ```csharp  
     public void maskedTextBox1_TypeValidationCompleted(object sender, TypeValidationEventArgs e)  
@@ -124,6 +124,7 @@ ms.locfileid: "33538442"
     End Sub  
     ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.MaskedTextBox>  
- [MaskedTextBox コントロール](../../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Forms.MaskedTextBox>
+- [MaskedTextBox コントロール](maskedtextbox-control-windows-forms.md)

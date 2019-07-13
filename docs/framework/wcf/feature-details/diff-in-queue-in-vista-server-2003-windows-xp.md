@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], differences in operating systems
 ms.assetid: aa809d93-d0a3-4ae6-a726-d015cca37c04
-ms.openlocfilehash: d956a72c9413384176c10effefc0307b09744c4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 694d7af8e6e869a7a21a3414be6c69cf9f5e7c8f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492025"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626997"
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Windows Vista、Windows Server 2003、および Windows XP におけるキュー機能の相違点
-このトピックは、Windows Communication Foundation (WCF) キューの機能との間での違いを示して[!INCLUDE[wv](../../../../includes/wv-md.md)]、 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]、および[!INCLUDE[wxp](../../../../includes/wxp-md.md)]です。  
+このトピックでは、Windows Communication Foundation (WCF) キューの機能との間の違いをまとめたものです。 [!INCLUDE[wv](../../../../includes/wv-md.md)]、 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]、および[!INCLUDE[wxp](../../../../includes/wxp-md.md)]します。  
   
 ## <a name="application-specific-dead-letter-queue"></a>アプリケーションごとの配信不能キュー  
  キューに置かれたメッセージは、受信側のアプリケーションでタイムリーに読み取らなれないと、無期限にキューに残ることがあります。 時間依存のメッセージでは、このような動作は適切ではありません。 時間依存のメッセージとは、キューに置かれたバインディングで `TimeToLive` プロパティが設定されているメッセージです。 このプロパティでは、メッセージの期限が切れるまでのキュー内での保持期間を指定します。 期限切れのメッセージは、配信不能キューと呼ばれる特別なキューに送信されます。 また、キューのクォータの超過、認証エラーの発生など、その他の理由でメッセージが配信不能キューに送信される場合もあります。  
@@ -26,15 +26,16 @@ ms.locfileid: "33492025"
   
  [!INCLUDE[wv](../../../../includes/wv-md.md)]、[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]、および [!INCLUDE[wxp](../../../../includes/wxp-md.md)] のメッセージ キュー (MSMQ) には、有害メッセージの処理に関して次のような重要な相違点があります。  
   
--   [!INCLUDE[wv](../../../../includes/wv-md.md)] の MSMQ はサブキューをサポートしますが、[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] と [!INCLUDE[wxp](../../../../includes/wxp-md.md)] はサポートしません。 サブキューは、有害メッセージ処理で使用されます。 再試行キューと有害キューは、有害メッセージ処理の設定に基づいて作成されるアプリケーション キューのサブキューです。 作成する再試行サブキューの数は、`MaxRetryCycles` で指定します。 したがって、[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] または [!INCLUDE[wxp](../../../../includes/wxp-md.md)] で実行している場合、`MaxRetryCycles` は無視されるため、`ReceiveErrorHandling.Move` は使用できません。  
+- [!INCLUDE[wv](../../../../includes/wv-md.md)] の MSMQ はサブキューをサポートしますが、[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] と [!INCLUDE[wxp](../../../../includes/wxp-md.md)] はサポートしません。 サブキューは、有害メッセージ処理で使用されます。 再試行キューと有害キューは、有害メッセージ処理の設定に基づいて作成されるアプリケーション キューのサブキューです。 作成する再試行サブキューの数は、`MaxRetryCycles` で指定します。 したがって、[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] または [!INCLUDE[wxp](../../../../includes/wxp-md.md)] で実行している場合、`MaxRetryCycles` は無視されるため、`ReceiveErrorHandling.Move` は使用できません。  
   
--   [!INCLUDE[wv](../../../../includes/wv-md.md)] の MSMQ では、否定受信確認がサポートされます。[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] と [!INCLUDE[wxp](../../../../includes/wxp-md.md)] の MSMQ ではサポートされません。 受信側キュー マネージャーから否定受信確認を受け取ると、送信側キュー マネージャーは拒否されたメッセージを配信不能キューに入れます。 そのため、`ReceiveErrorHandling.Reject` は、[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] と [!INCLUDE[wxp](../../../../includes/wxp-md.md)] では使用できません。  
+- [!INCLUDE[wv](../../../../includes/wv-md.md)] の MSMQ では、否定受信確認がサポートされます。[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] と [!INCLUDE[wxp](../../../../includes/wxp-md.md)] の MSMQ ではサポートされません。 受信側キュー マネージャーから否定受信確認を受け取ると、送信側キュー マネージャーは拒否されたメッセージを配信不能キューに入れます。 そのため、`ReceiveErrorHandling.Reject` は、[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] と [!INCLUDE[wxp](../../../../includes/wxp-md.md)] では使用できません。  
   
--   [!INCLUDE[wv](../../../../includes/wv-md.md)] の MSMQ は、メッセージの配信試行回数を保持するメッセージ プロパティをサポートします。 この中止回数のプロパティは、[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] と [!INCLUDE[wxp](../../../../includes/wxp-md.md)] では使用できません。 WCF は、ので、このプロパティが含まれていないこと、正確な値には、Web ファーム内の 1 つ以上の WCF サービスによって、同じメッセージが読み取られた場合に、中止回数をメモリ内を保持します。  
+- [!INCLUDE[wv](../../../../includes/wv-md.md)] の MSMQ は、メッセージの配信試行回数を保持するメッセージ プロパティをサポートします。 この中止回数のプロパティは、[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] と [!INCLUDE[wxp](../../../../includes/wxp-md.md)] では使用できません。 WCF は、ので、このプロパティが含まれていないこと、正確な値には、同じメッセージが Web ファーム内の 1 つ以上の WCF サービスによって読み取られるときに、中止回数をメモリ内を保持します。  
   
 ## <a name="remote-transactional-read"></a>リモート トランザクション読み取り  
  [!INCLUDE[wv](../../../../includes/wv-md.md)] 上の MSMQ は、リモート トランザクション読み取りをサポートします。 これによって、キューから読み取りを行うアプリケーションを、そのキューをホストしているコンピューターとは別のコンピューター上でホストすることが可能になります。 これにより、サービスのファーム全体で中央のキューから読み取りを行うことができるようになり、システムの全体のスループットが向上します。 また、メッセージの読み取り中および処理中にエラーが発生した場合、トランザクションはロールバックし、メッセージは後で処理できるようにキューに残るようにもなります。  
   
-## <a name="see-also"></a>関連項目  
- [配信不能キューを使用したメッセージ転送エラー処理](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
- [有害メッセージ処理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
+## <a name="see-also"></a>関連項目
+
+- [配信不能キューを使用したメッセージ転送エラー処理](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
+- [有害メッセージ処理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

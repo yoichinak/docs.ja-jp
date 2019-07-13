@@ -1,5 +1,5 @@
 ---
-title: '&lt;httpWebRequest&gt;要素 (ネットワーク設定)'
+title: <httpWebRequest> 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/httpWebRequest
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <httpWebRequest> element
 - httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
-ms.openlocfilehash: 0d3feb168acbd623270a2038bf06a3c97126bd05
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 722b2f726c9085f6dee6bad82044da3011b98702
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674546"
 ---
-# <a name="lthttpwebrequestgt-element-network-settings"></a>&lt;httpWebRequest&gt;要素 (ネットワーク設定)
+# <a name="httpwebrequest-element-network-settings"></a>\<httpWebRequest > 要素 (ネットワーク設定)
 Web 要求のパラメーターをカスタマイズします。  
   
  \<configuration>  
 \<system.net>  
 \<settings>  
-\<httpWebRequest >  
+\<httpWebRequest>  
   
 ## <a name="syntax"></a>構文  
   
@@ -76,6 +76,7 @@ Web 要求のパラメーターをカスタマイズします。
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>  
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

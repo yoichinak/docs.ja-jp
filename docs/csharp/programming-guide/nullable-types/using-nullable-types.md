@@ -6,12 +6,12 @@ ms.date: 08/02/2018
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-ms.openlocfilehash: d2c6f2f78ed71558b71adcc1d4d8cc9a6f459d75
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ef7c9c18d303131b5a1c0156be820e1d475e7ec1
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235216"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59306652"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Null 許容型の使用 (C# プログラミング ガイド)
 
@@ -21,7 +21,7 @@ Null 許容型は、`Nullable<T>` または `T?` のいずれかの形式で参�
   
 ## <a name="declaration-and-assignment"></a>宣言と代入
 
-値型は、対応する Null 許容型に暗黙的に変換できるので、基になる値型の場合と同様に Null 許容型に値を代入します。 `null` 値を代入することもできます。  例:
+値型は、対応する Null 許容型に暗黙的に変換できるので、基になる値型の場合と同様に Null 許容型に値を代入します。 `null` 値を代入することもできます。  次に例を示します。
   
 [!code-csharp[declare and assign](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#1)]
 
@@ -53,7 +53,7 @@ Null 許容型の値を Null 非許容型に代入する必要がある場合は
 
 Null 許容型の値が null の場合に使用される値を、基になる値型の既定値にする場合は、<xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> メソッドを使用します。
   
-Null 許容型を Null 非許容型に明示的にキャストすることができます。 例:  
+Null 許容型を Null 非許容型に明示的にキャストすることができます。 次に例を示します。  
   
 [!code-csharp[explicit cast](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#6)]
 
@@ -63,9 +63,12 @@ Null 非許容値型は、対応する Null 許容型に暗黙的に変換され
   
 ## <a name="operators"></a>演算子
 
-値型向けに存在している定義済みの単項演算子、2 項演算子およびすべてのユーザー定義演算子は、Null 許容型でも使用できます。 これらの演算子では、1 つまたは両方のオペランドが null の場合は null 値が生成され、null 以外の場合は、含まれている値に基づいて結果が算出されます。 例:  
+値型向けに存在している定義済みの単項演算子、2 項演算子およびすべてのユーザー定義演算子は、Null 許容型でも使用できます。 これらの演算子では、1 つまたは両方のオペランドが null の場合は null 値が生成され、null 以外の場合は、含まれている値に基づいて結果が算出されます。 次に例を示します。  
   
 [!code-csharp[operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#7)]
+
+> [!NOTE]
+> `bool?` 型の場合、定義済みの `&` および `|` 演算子は、このセクションで説明されている規則に従わないことに注意してください。オペランドの 1 つが null の場合も、演算子の評価の結果は null 以外である可能性があります。 詳細については、「[Boolean logical operators (ブール論理演算子)](../../language-reference/operators/boolean-logical-operators.md)」記事の「[Nullable Boolean logical operators (null 許容論理演算子)](../../language-reference/operators/boolean-logical-operators.md#nullable-boolean-logical-operators)」セクションを参照してください。
   
 関係演算子 (`<`、`>`、`<=`、`>=`) では、1 つまたは両方のオペランドが null の場合、結果は `false` になります。 ある比較 (たとえば、`<=`) から返される結果が `false` であっても、逆の比較 (`>`) から返される結果が `true` であるとは限りません。 次の例は、10 が
 
@@ -75,6 +78,8 @@ Null 非許容値型は、対応する Null 許容型に暗黙的に変換され
 [!code-csharp-interactive[relational and equality operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#8)]
   
 上記の例は、どちらも null である 2 つの null 許容型を等価比較すると、結果が `true` と評価されることを示しています。
+
+詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)に関するページの「[リフトされた演算子](~/_csharplang/spec/expressions.md#lifted-operators)」セクションを参照してください。
 
 ## <a name="boxing-and-unboxing"></a>ボックス化とボックス化解除
 
@@ -87,31 +92,8 @@ Null 許容値型は、次の規則に従って[ボックス化](../types/boxing
 
 [!code-csharp-interactive[boxing and unboxing](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#9)]
 
-## <a name="the-bool-type"></a>bool? 型
+## <a name="see-also"></a>関連項目
 
-`bool?` null 許容型は、[true](../../language-reference/keywords/true-literal.md)、[false](../../language-reference/keywords/false-literal.md)、[null](../../language-reference/keywords/null.md) の 3 つの異なる値を格納できます。 `bool?` 型は、SQL で使用されるブール変数型に似ています。 `&` 演算子と `|` 演算子によって生成される結果が SQL の 3 値のブール型と一致するようにするには、次の定義済みの演算子を指定します。
-
-- `bool? operator &(bool? x, bool? y)`  
-- `bool? operator |(bool? x, bool? y)`  
-  
-次の表に、これらの演算子のセマンティクスが定義されています。  
-  
-|x|Y|x&y|x&#124;y|  
-|-------|-------|---------|--------------|  
-|true|true|true|true|  
-|TRUE|False|false|true|  
-|true|null|null|true|  
-|False|true|False|true|  
-|False|False|False|False|  
-|False|null|False|null|  
-|null|true|null|true|  
-|null|False|False|null|  
-|null|null|null|null|  
-
-これら 2 つの演算子は、「[演算子](#operators)」セクションで説明されている規則に従わないことに注意してください。オペランドの 1 つが null の場合も、演算子の評価の結果は null 以外である可能性があります。
-  
-## <a name="see-also"></a>参照
-
-- [Null 許容型](index.md)  
-- [C# プログラミング ガイド](../../programming-guide/index.md)  
-- [What Exactly Does 'Lifted' mean? ('Lifted' の正確な意味)](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)  
+- [Null 許容型](index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [What Exactly Does 'Lifted' mean? ('Lifted' の正確な意味)](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)

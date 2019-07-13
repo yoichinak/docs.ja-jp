@@ -2,12 +2,12 @@
 title: Match 式
 description: について説明しますが、どのようにF#match 式が式のパターンのセットとの比較に基づいている分岐を制御を提供します。
 ms.date: 04/19/2018
-ms.openlocfilehash: 8972cc012d2746cb720eeed1acee403948941425
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 69ff8de1617e6b55d112d310bfcd8b2f967b6e8a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611569"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645198"
 ---
 # <a name="match-expressions"></a>Match 式
 

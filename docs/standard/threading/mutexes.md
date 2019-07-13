@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31c99d38cd608e93e9ee3467e0ce425835a3d572
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: dededed9bcd4558296323532c0ecbfb60bf5b311
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201479"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567920"
 ---
 # <a name="mutexes"></a>ミューテックス
 <xref:System.Threading.Mutex> オブジェクトを使用して、リソースへの排他的アクセスを提供できます。 <xref:System.Threading.Mutex> クラスは <xref:System.Threading.Monitor> クラスよりも多くのシステム リソースを使用しますが、アプリケーション ドメイン境界を越えてマーシャリングしたり、複数の待機操作とともに使用したり、異なるプロセスのスレッドを同期するために使用できます。 マネージド同期メカニズムの比較については、「[同期プリミティブの概要](../../../docs/standard/threading/overview-of-synchronization-primitives.md)」を参照してください。  
@@ -51,11 +51,11 @@ ms.locfileid: "50201479"
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Threading.Mutex?displayProperty=nameWithType>  
-- <xref:System.Threading.Mutex.%23ctor%2A?displayProperty=nameWithType>  
-- <xref:System.Security.AccessControl.MutexSecurity?displayProperty=nameWithType>  
+- <xref:System.Threading.Mutex?displayProperty=nameWithType>
+- <xref:System.Threading.Mutex.%23ctor%2A?displayProperty=nameWithType>
+- <xref:System.Security.AccessControl.MutexSecurity?displayProperty=nameWithType>
 - <xref:System.Security.AccessControl.MutexAccessRule?displayProperty=nameWithType>
-- <xref:System.Threading.Monitor?displayProperty=nameWithType>  
-- [スレッド処理オブジェクトと機能](threading-objects-and-features.md)  
+- <xref:System.Threading.Monitor?displayProperty=nameWithType>
+- [スレッド処理オブジェクトと機能](threading-objects-and-features.md)
 - [スレッドおよびスレッド処理](threads-and-threading.md)
-- [スレッド化](index.md)  
+- [スレッド化](index.md)

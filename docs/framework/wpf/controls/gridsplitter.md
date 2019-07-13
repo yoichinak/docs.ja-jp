@@ -8,18 +8,18 @@ helpviewer_keywords:
 - GridSplitter control [WPF]
 - content [WPF], GridSplitter control
 ms.assetid: 98b007e8-ea6b-41b5-8120-ca7134e8239f
-ms.openlocfilehash: d173843c17a1881224cffadcfd1538547ce763b3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9fd1b50e4c3f79218de2d0d54f98d645ebb5fd61
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911431"
 ---
 # <a name="gridsplitter"></a>GridSplitter
 <xref:System.Windows.Controls.GridSplitter>行または列の間にスペースを再分配、<xref:System.Windows.Controls.Grid>コントロール。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [方法トピック](../../../../docs/framework/wpf/controls/gridsplitter-how-to-topics.md)  
+ [方法トピック](gridsplitter-how-to-topics.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.GridSplitter>  

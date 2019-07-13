@@ -2,12 +2,12 @@
 title: 関数型プログラミングと命令型プログラミング (C#)
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
-ms.openlocfilehash: 01be2758147b84af3410709aab62a0ca89b0c9cf
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 2b6a53943ea2363869530ae773c19a52b5578b56
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696444"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596705"
 ---
 # <a name="functional-programming-vs-imperative-programming-c"></a>関数型プログラミングと命令型プログラミング (C#)
 このトピックでは、関数型プログラミングを従来の命令型 (手続き型) プログラミングと比較対照します。  
@@ -35,11 +35,11 @@ ms.locfileid: "46696444"
 ## <a name="advantages-of-pure-functions"></a>純粋関数の利点  
  関数型変換を純粋関数として実装する最大の理由は、純粋関数が構成可能であること (自己完結していて、ステートレスなこと) です。 これらの特性は、以下に示すようなさまざまな利点をもたらします。  
   
--   読みやすさが向上し、保守が容易になる。 これは、それぞれの関数が、引数を渡されると特定のタスクを実行するように作られていて、 外部の状態に依存しないためです。  
+- 読みやすさが向上し、保守が容易になる。 これは、それぞれの関数が、引数を渡されると特定のタスクを実行するように作られていて、 外部の状態に依存しないためです。  
   
--   反復開発が容易になる。 コードのリファクタリングが容易になるため、多くの場合、設計変更を実装しやすくなります。 たとえば、複雑な変換を記述していて、何度も繰り返されているコードがあることに気付いた場合、 純粋メソッドによるリファクタリングでは、副作用を考慮せずにその純粋メソッドを自由に呼び出すことができます。  
+- 反復開発が容易になる。 コードのリファクタリングが容易になるため、多くの場合、設計変更を実装しやすくなります。 たとえば、複雑な変換を記述していて、何度も繰り返されているコードがあることに気付いた場合、 純粋メソッドによるリファクタリングでは、副作用を考慮せずにその純粋メソッドを自由に呼び出すことができます。  
   
--   テストやデバッグが容易になる。 純粋関数は単独でのテストが容易なため、典型的な値、有効なエッジ ケース、および無効なエッジ ケースを使用して純粋関数を呼び出すテスト コードを作成できます。  
+- テストやデバッグが容易になる。 純粋関数は単独でのテストが容易なため、典型的な値、有効なエッジ ケース、および無効なエッジ ケースを使用して純粋関数を呼び出すテスト コードを作成できます。  
   
 ## <a name="transitioning-for-oop-developers"></a>OOP 開発者向けの移行  
  従来のオブジェクト指向プログラミング (OOP) では、ほとんどの開発者が命令型/手続き型スタイルのプログラミングに慣れています。 純粋関数型スタイルの開発に移行するには、考え方を切り替えて、開発に適用する方法を変える必要があります。  
@@ -50,8 +50,8 @@ ms.locfileid: "46696444"
   
  C# では、命令型と関数型の両方のプログラミング方法がサポートされているため、関数型プログラミングに完全に移行する必要はありません。 開発者は、個々のシナリオに適した方法を選択できます。 実際、プログラムで両方の方法が組み合わされている場合もよくあります。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [純粋関数型変換の概要 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
-- [XSLT 変換](../../../../standard/data/xml/xslt-transformations.md)  
+- [純粋関数型変換の概要 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [XSLT 変換](../../../../standard/data/xml/xslt-transformations.md)
 - [純粋関数へのリファクタリング (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

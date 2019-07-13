@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fecd5af43f4b984a4ab626e9832b3318715c0516
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: e71a1538e42061c6cb949b22bb63fe6b17a0dfc9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058361"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741113"
 ---
 # <a name="clrdebuggingversion-structure"></a>CLR_DEBUGGING_VERSION 構造体
 デバッグのために共通言語ランタイム (CLR) の製品バージョンを定義します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct _CLR_DEBUGGING_VERSION  
 {  
     WORD wStructVersion;
@@ -53,7 +53,7 @@ typedef struct _CLR_DEBUGGING_VERSION
  `CLR_DEBUGGING_VERSION`構造がただし COR_VERSION 構造体と同じでは、`CLR_DEBUGGING_VERSION`構造は追加の構造のバージョン フィールドを提供します (`wStructVersion`)。 現時点では、このフィールドは 0 に設定する必要があります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl  
   
@@ -61,6 +61,7 @@ typedef struct _CLR_DEBUGGING_VERSION
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>関連項目
+
+- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)

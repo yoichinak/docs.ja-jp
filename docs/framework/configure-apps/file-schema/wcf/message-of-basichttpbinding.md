@@ -1,15 +1,15 @@
 ---
-title: '&lt;basicHttpBinding&gt; の &lt;message&gt;'
+title: <message> の <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 51cdd329-6461-471a-8747-56c2299b61e5
-ms.openlocfilehash: 8c3519e2db12e34d9f2bd03689e0e9684c5792ae
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 746acd91074863029211a1ca2584743c464c9ce1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768980"
 ---
-# <a name="ltmessagegt-of-ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt; の &lt;message&gt;
+# <a name="message-of-basichttpbinding"></a>\<メッセージ > の\<basicHttpBinding >
 メッセージ レベル セキュリティの設定を定義、 [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)します。  
   
  \<system.ServiceModel >  
@@ -34,11 +34,11 @@ ms.locfileid: "54151281"
 |属性|説明|  
 |---------------|-----------------|  
 |algorithmSuite|メッセージの暗号化とキー ラップ アルゴリズムを設定します。 この属性は、アルゴリズムとキー サイズを指定する <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 型です。 これらのアルゴリズムは、Security Policy Language (WS-SecurityPolicy) の仕様で指定されているアルゴリズムに対応付けられています。<br /><br /> 既定値は `Basic256` です。|  
-|clientCredentialType|メッセージ ベースのセキュリティを使用してクライアント認証を実行するときに使用される資格情報の種類を指定します。 既定値は、`UserName` です。|  
+|clientCredentialType|メッセージ ベースのセキュリティを使用してクライアント認証を実行するときに使用される資格情報の種類を指定します。 既定値は `UserName` です。|  
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |UserName|-ユーザー名資格情報を使用してサーバーにクライアントを認証する必要があります。 この資格情報を使用して指定する必要があります、 [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)します。<br />WCF は、パスワード ダイジェストの送信、またはパスワードを使用して、このようなキーを使用して、メッセージ セキュリティのためのキーの派生をサポートしていません。 そのため、WCF トランスポートは、UserName 資格情報を使用する場合にセキュリティで保護することを強制します。 `basicHttpBinding` の場合は、SSL チャネルの設定が必要です。|  
 |証明書|証明書を使用してクライアントをサーバーに認証するように要求します。 ここでクライアント資格情報を使用して指定する必要があります[ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)と[ \<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)します。 さらに、メッセージのセキュリティ モードを使用する場合は、クライアントにサービス証明書を準備する必要があります。 ここでサービス資格情報を使用して指定する必要があります<xref:System.ServiceModel.Description.ClientCredentials>クラスまたは`ClientCredentials`動作の要素と、サービスの指定を使用して証明書の[ \<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)します。|  
@@ -119,13 +119,14 @@ ms.locfileid: "54151281"
 </system.serviceModel>
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.BasicHttpMessageSecurity>  
- <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Message%2A>  
- <xref:System.ServiceModel.BasicHttpSecurity.Message%2A>  
- <xref:System.ServiceModel.Configuration.BasicHttpMessageSecurityElement>  
- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [バインディング](../../../../../docs/framework/wcf/bindings.md)  
- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.BasicHttpMessageSecurity>
+- <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Message%2A>
+- <xref:System.ServiceModel.BasicHttpSecurity.Message%2A>
+- <xref:System.ServiceModel.Configuration.BasicHttpMessageSecurityElement>
+- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [バインディング](../../../../../docs/framework/wcf/bindings.md)
+- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

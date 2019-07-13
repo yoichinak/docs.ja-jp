@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9017e8dc50914bbffbcea52192e6ec10fbc7a6df
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 55b859f109cc224ebf1a8fd62a1d3d3440cf906c
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840820"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636099"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>方法: プライマリ相互運用機能アセンブリを登録する
 
-クラスは、COM 相互運用でのみマーシャリングすることができ、常にインターフェイスとしてマーシャリングされます。 場合によっては、クラスをマーシャリングするために使用されるインターフェイスが、クラス インターフェイスと呼ばれます。 クラス インターフェイスを任意のインターフェイスでオーバーライドする方法の詳細については、「[COM 呼び出し可能ラッパー](../../../docs/framework/interop/com-callable-wrapper.md)」を参照してください。
+クラスは、COM 相互運用でのみマーシャリングすることができ、常にインターフェイスとしてマーシャリングされます。 クラスをマーシャリングするために使用されるインターフェイスが、クラス インターフェイスと呼ばれる場合があります。 クラス インターフェイスを任意のインターフェイスでオーバーライドする方法の詳細については、「[COM 呼び出し可能ラッパー](../../../docs/framework/interop/com-callable-wrapper.md)」を参照してください。
 
  .NET Framework アプリケーションから COM の型を使用するすべての開発者は相互運用機能アセンブリを生成できますが、そのようにすると問題が発生します。 開発者が COM タイプ ライブラリをインポートして署名するたびに、その開発者は、別の開発者によってインポートされて署名されたものとは互換性のない一意の型のセットを作成することになります。 この型の非互換性の問題を解決する方法は、各開発者が、ベンダーによって提供されて署名されたプライマリ相互運用機能アセンブリを取得することです。
 
@@ -28,15 +28,15 @@ ms.locfileid: "48840820"
 
  Visual Studio を使用する予定がない限り、プライマリ相互運用機能アセンブリを登録する必要はありませんが、登録には次の 2 つの利点があります。
 
--   登録されているプライマリ相互運用機能アセンブリは、元のタイプ ライブラリのレジストリ キーの下で明白にマークされます。 登録は、コンピューター上のプライマリ相互運用機能アセンブリを検索するための最善の方法です。
+- 登録されているプライマリ相互運用機能アセンブリは、元のタイプ ライブラリのレジストリ キーの下で明白にマークされます。 登録は、コンピューター上のプライマリ相互運用機能アセンブリを検索するための最善の方法です。
 
--   将来のいつか、Visual Studio を使用して登録されていないプライマリ相互運用機能アセンブリのある型を参照する場合に、間違えて新しい相互運用機能アセンブリを生成して使用してしまうことを回避できます。
+- 将来のいつか、Visual Studio を使用して登録されていないプライマリ相互運用機能アセンブリのある型を参照する場合に、間違えて新しい相互運用機能アセンブリを生成して使用してしまうことを回避できます。
 
 [アセンブリ登録ツール (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) を使用して、プライマリ相互運用機能アセンブリを登録します。
 
 ## <a name="to-register-a-primary-interop-assembly"></a>プライマリ相互運用機能アセンブリを登録する方法
 
-1.  コマンド プロンプトで、次のコマンドを入力します。
+1. コマンド プロンプトで、次のコマンドを入力します。
 
      **regasm** *assemblyname*
 
@@ -49,8 +49,8 @@ ms.locfileid: "48840820"
 regasm CompanyA.UtilLib.dll
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [プライマリ相互運用機能アセンブリを使ったプログラミング](https://msdn.microsoft.com/library/306fa1d6-0703-4004-9e93-d0a57f1be81e(v=vs.100))
-- [プライマリ相互運用機能アセンブリの検索](https://msdn.microsoft.com/library/d6768e4b-cd80-414d-a4f8-05d979eb393b(v=vs.100))
-- [プライマリ相互運用機能アセンブリの再配布](https://msdn.microsoft.com/library/e76384f0-d631-474c-bdbd-13884cba0265(v=vs.100))
+- [プライマリ相互運用機能アセンブリを使ったプログラミング](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/baxfadst(v=vs.100))
+- [プライマリ相互運用機能アセンブリの検索](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y06sxw56(v=vs.100))
+- [プライマリ相互運用機能アセンブリの再配布](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w0dt2w20(v=vs.100))

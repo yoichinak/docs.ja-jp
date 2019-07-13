@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 48617022940d889abedb9a9d25f04782371c4a5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f94867db6908f0999604511d9782b6f5abfb5e77
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451946"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752038"
 ---
 # <a name="corprfmoduleflags-enumeration"></a>COR_PRF_MODULE_FLAGS 列挙体
 モジュールのプロパティを指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum  
 {  
     COR_PRF_MODULE_DISK             = 0x00000001,  
@@ -49,21 +49,22 @@ typedef enum
 |COR_PRF_MODULE_NGEN|モジュールは、ネイティブ イメージ ジェネレーター (Ngen.exe) によって生成されました。|  
 |COR_PRF_MODULE_DYNAMIC|メソッドによって作成されたモジュール、<xref:System.Reflection.Emit?displayProperty=nameWithType>名前空間。|  
 |COR_PRF_MODULE_COLLECTIBLE|モジュールの有効期間は、ガベージ コレクターによって管理されます。|  
-|COR_PRF_MODULE_RESOURCE|モジュールは、メタデータが含まれていないと、リソースとしてにのみ使用されます。 このビットのマネージ相当するものは、<xref:System.Reflection.Module.IsResource%2A?displayProperty=nameWithType>メソッドです。|  
-|COR_PRF_MODULE_FLAT_LAYOUT|メモリ内のモジュールのレイアウトは、割り当てられていないフラットな。 モジュールがこのビット設定場合、ポータブル実行可能 (PE) ファイル ヘッダーから直接情報が相対仮想アドレス (Rva) ヘッダーを解釈する際は注意する必要があるプロファイラーです。|  
-|COR_PRF_MODULE_WINDOWS_RUNTIME|このモジュールのアセンブリのメタデータで Windows ランタイム コンテンツ タイプ フラグが設定します。 これは、すべての Windows メタデータ (.winmd) モジュールの場合です。|  
+|COR_PRF_MODULE_RESOURCE|モジュールは、メタデータが含まれていないし、リソースとしてにのみ使用されます。 このビットのマネージ バージョンは、<xref:System.Reflection.Module.IsResource%2A?displayProperty=nameWithType>メソッド。|  
+|COR_PRF_MODULE_FLAT_LAYOUT|メモリ内のモジュールのレイアウトはフラットでマップされていません。 場合、モジュールがこのビットが設定、プロファイラーで読み取るポータブル実行可能 (PE) ファイル ヘッダーから直接情報がヘッダー内の相対仮想アドレス (Rva) を解釈するときに注意する必要があります。|  
+|COR_PRF_MODULE_WINDOWS_RUNTIME|Windows ランタイムのコンテンツの種類のフラグは、このモジュールのアセンブリのメタデータで設定されます。 これは、すべての Windows メタデータ (.winmd) モジュールの場合です。|  
   
-## <a name="remarks"></a>コメント  
- プロファイラーに返されるビットは COR_PRF_MODULE_FLAGS から、`pdwModuleFlags`出力のパラメーター、 [icorprofilerinfo 3::getmoduleinfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getmoduleinfo2-method.md)メソッドです。 2 つ以上のフラグの組み合わせによっては、可能であればが、すべての組み合わせが可能です。  
+## <a name="remarks"></a>Remarks  
+ プロファイラーに返されるビットは COR_PRF_MODULE_FLAGS から、`pdwModuleFlags`出力パラメーター、 [icorprofilerinfo 3::getmoduleinfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getmoduleinfo2-method.md)メソッド。 2 つ以上のフラグのいくつかの組み合わせが可能であればがすべての組み合わせが可能です。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー** : CorProf.idl、CorProf.h  
+ **ヘッダー:** CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [列挙型のプロファイリング](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>関連項目
+
+- [列挙型のプロファイリング](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

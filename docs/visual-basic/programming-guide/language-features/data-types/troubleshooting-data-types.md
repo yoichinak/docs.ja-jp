@@ -19,12 +19,12 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-ms.openlocfilehash: 9bbc7f51de9899354184d051d8f1a584651dd030
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 837022cf1675097af5ebce63441cad1ce63eaabb
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850375"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591099"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>データ型のトラブルシューティング (Visual Basic)
 このページには、組み込みデータ型の操作を実行するときに発生する一般的な問題が一覧表示されます。  
@@ -40,7 +40,7 @@ ms.locfileid: "48850375"
   
  次の例では、2 つの正しくないと、適切な比較`Double`値。  
   
- [!code-vb[VbVbalrDataTypes#10](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#10)]  
   
  前の例では、<xref:System.Double.ToString%2A>のメソッド、<xref:System.Double>より精度を指定できるように構造体、`CStr`キーワードを使用します。 既定値は 15 桁の数字が、"G17"書式が 17 桁に拡張します。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48850375"
   
  次の例では、浮動小数点のオペランドの誤差の可能性を示します。  
   
- [!code-vb[VbVbalrDataTypes#11](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#11)]  
   
  前の例では、<xref:System.Double.ToString%2A>のメソッド、<xref:System.Double>より精度を指定できるように構造体、`CStr`キーワードを使用します。 既定値は 15 桁の数字が、"G17"書式が 17 桁に拡張します。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48850375"
  宣言するための十分ながないことに注意してください。`decimalRemainder`として`Decimal`します。 リテラルを強制することも必要があります。 `Decimal`、使用することも`Double`既定と`decimalRemainder`として同じ不正確な値を受け取る`doubleRemainder`します。  
   
 ## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>Boolean データで正確な数値型に変換されません。  
- [Boolean データ型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)値は、数値として格納されず、格納された値は数値と同等であることを意図していません。 以前のバージョンとの互換性のために、Visual Basic には、`Boolean`と数値型の間の変換を行うための変換キーワード ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)、 `CBool`、`CInt`など) が用意されています。 ただし、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]メソッドと同様に、他の言語でもこれらの変換の実行方法が異なる場合があります。  
+ [Boolean データ型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)値は、数値として格納されず、格納された値は数値と同等であることを意図していません。 以前のバージョンとの互換性のために、Visual Basic には、`Boolean`と数値型の間の変換を行うための変換キーワード ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)、 `CBool`、`CInt`など) が用意されています。 ただし、他の言語場合があります実行これらの変換、異なる .NET Framework のメソッドの操作を行います。  
   
  数値と等価の値に依存するコードを記述する必要がありますしない`True`と`False`します。 使用を制限する必要があります、可能な限り`Boolean`変数を論理値に設計されています。 組み合わせる必要がある場合`Boolean`数値、選択した変換の方法を理解することを確認します。  
   
@@ -89,22 +89,22 @@ ms.locfileid: "48850375"
   
  次の例は、リテラルを成功、失敗の割り当て、`Char`変数。  
   
- [!code-vb[VbVbalrDataTypes#12](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_3.vb)]  
+ [!code-vb[VbVbalrDataTypes#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#12)]  
   
  常にリスクが縮小の変換を使用して実行時にそれらが失敗する可能性です。 変換など、`String`に`Char`が失敗する場合、`String`値には、1 つ以上の文字が含まれています。 そのため、それを使用するプログラミングがより、`C`文字を入力します。  
   
 ## <a name="string-conversion-fails-at-run-time"></a>String の変換は実行時に失敗します。  
  [文字列データ型](../../../../visual-basic/language-reference/data-types/string-data-type.md)がごく少数の拡大変換に参加します。 `String` 自体にのみ拡大変換と`Object`とのみ`Char`と`Char()`(、`Char`配列) に拡大変換`String`。 これは、ため`String`変数と定数は、他のデータ型を含めることはできませんの値を含めることができます。  
   
- 型チェックを切り替えると ([Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) は`On`コンパイラには、すべての暗黙的な縮小変換が許可されていません。 関連するものが含まれます`String`します。 コードの変換キーワードをなど、使用もできる`CStr`と[CType 関数](../../../../visual-basic/language-reference/functions/ctype-function.md)、どのダイレクト、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]変換を試みます。  
+ 型チェックを切り替えると ([Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) は`On`コンパイラには、すべての暗黙的な縮小変換が許可されていません。 関連するものが含まれます`String`します。 コードの変換キーワードをなど、使用もできる`CStr`と[CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)変換を試行する .NET Framework を直接します。  
   
 > [!NOTE]
->  縮小変換エラーが抑制されて内の要素からの変換、`For Each…Next`ループ コントロール変数のコレクション。 詳細と例については、"Narrowing Conversions"セクションを参照してください[ごとにしています...次のステートメントの](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)します。  
+>  `For Each…Next`のコレクション内の要素からループ コントロール変数への変換では、縮小変換エラーが抑制されます。 詳細と例については、[For Each...Next ステートメント](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)の"縮小変換"セクションを参照してください。  
   
 ### <a name="narrowing-conversion-protection"></a>縮小変換の保護  
  縮小変換の欠点は、ことは、実行時に失敗したことができます。 たとえば場合、`String`変数のものを含む"True"または"False"に変換できない以外`Boolean`します。 区切り文字が含まれている、任意の数値型への変換は失敗します。 あるとわかっている場合を除き、`String`変数変換先の型を受け入れることができる値を常に保持する、変換しないでください。  
   
- 変換する必要がある場合`String`を別のデータ型では、最も安全な手順で実行しようとした変換を囲む、[お試しください.キャッチしてください.Finally ステートメント](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)します。 これにより、実行時エラーに対処できます。  
+ 変換する必要がある場合`String`を別のデータ型では、最も安全な手順で実行しようとした変換を囲む、[Try...Catch...Finally ステートメント](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)します。 これにより、実行時エラーに対処できます。  
   
 ### <a name="character-arrays"></a>文字配列  
  1 つ`Char`と配列の`Char`要素の両方に拡大変換する`String`します。 ただし、`String`に拡大変換されない`Char()`します。 変換する、`String`値を`Char`使用することができます、配列、<xref:System.String.ToCharArray%2A>のメソッド、<xref:System.String?displayProperty=nameWithType>クラス。  
@@ -112,11 +112,12 @@ ms.locfileid: "48850375"
 ### <a name="meaningless-values"></a>意味のない値  
  一般に、`String`値他のデータ型では意味がなく、変換は非常に危険です。 可能な限り`String`の使用をそれらが設計されている文字シーケンスに制限する必要があります。 その他の種類に対応する値に依存するコードを書かないようにしてください。  
   
-## <a name="see-also"></a>関連項目  
- [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [型文字](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [値型と参照型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [データの種類](../../../../visual-basic/language-reference/data-types/index.md)  
- [データ型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [データ型の有効な使用方法](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>関連項目
+
+- [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [型文字](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [値型と参照型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [データの種類](../../../../visual-basic/language-reference/data-types/index.md)
+- [データ型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [データ型の有効な使用方法](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

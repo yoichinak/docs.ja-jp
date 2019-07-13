@@ -9,19 +9,19 @@ helpviewer_keywords:
 - images [WPF]
 - graphics [WPF], images
 ms.assetid: 2fe21d59-b444-4786-b68d-35d94e18ce0d
-ms.openlocfilehash: dbb8b9511b05c5df228a463d82efb17b7cd6f23a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f14c99b1c5f624fcebf2c08f0889903f258e5c68
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785724"
 ---
 # <a name="images"></a>イメージ
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] には、複数のイメージ形式、高品質な画像のレンダリング、およびコーデック拡張機能のサポートが組み込まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [イメージングの概要](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)  
+ [イメージングの概要](imaging-overview.md)  
+ [方法トピック](imaging-how-to-topics.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.Image>  
@@ -30,6 +30,7 @@ ms.locfileid: "33561700"
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a>関連項目  
- [2D グラフィックスとイメージング](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [グラフィックスとマルチメディア](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>関連項目
+
+- [2D グラフィックスとイメージング](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [グラフィックスとマルチメディア](index.md)

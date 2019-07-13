@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 307d2809-208b-4cf8-b6a9-5d16f15fc16c
-ms.openlocfilehash: 90aa1e5dceb3cac87d330837496b9dc467dc1876
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 18c391e97baa170b78dcfe0165fb38b6c6d739f4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607285"
 ---
 # <a name="adding-existing-constraints-to-a-dataset"></a>DataSet への既存の制約の追加
 **入力**のメソッド、 **DataAdapter**塗りつぶします、<xref:System.Data.DataSet>では、テーブルの列と、データ ソースからの行のみが制約は一般設定、データ ソースによって、 **の塗りつぶし**メソッドにこのスキーマ情報を追加できません、**データセット**既定。 設定する、**データセット**いずれかの呼び出しでは、データ ソースから既存の主キー制約情報できます、 **FillSchema**のメソッド、 **DataAdapter**、設定や、**MissingSchemaAction**のプロパティ、 **DataAdapter**に**AddWithKey**呼び出す前に**入力**します。 これにより、その主キー制約、**データセット**データ ソースに反映します。 外部キー制約情報が含まれていないのように、明示的に作成する必要があります[DataTable の制約](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)します。  
@@ -60,8 +60,9 @@ custAdapter.Fill(custDataSet, "Customers");
 > [!NOTE]
 >  場合、 **FillSchema**のメソッド、 **OleDbDataAdapter**オブジェクトが複数の結果セットを返すコマンドに対して呼び出されると、最初の結果セットからスキーマ情報のみが返されます。 設定した場合の複数の結果のスキーマ情報を返すを使用して、 **OleDbDataAdapter**を指定することをお勧め、 **MissingSchemaAction**の**AddWithKey**呼び出すときに、スキーマ情報を取得し、**入力**メソッド。  
   
-## <a name="see-also"></a>関連項目  
- [DataAdapter と DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [DataSet、DataTable、および DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET でのデータの取得および変更](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [DataAdapter と DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [DataSet、DataTable、および DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [ADO.NET でのデータの取得および変更](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

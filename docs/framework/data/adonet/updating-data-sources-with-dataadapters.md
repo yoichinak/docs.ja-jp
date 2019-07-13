@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
-ms.openlocfilehash: b8e082b98870a59e8fb6f42fa7bedb86c2832d33
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 96b1e08a64a52affa89cda2506230e60fc337077
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245627"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645767"
 ---
 # <a name="updating-data-sources-with-dataadapters"></a>DataAdapter によるデータ ソースの更新
 `Update` の <xref:System.Data.Common.DataAdapter> メソッドを呼び出して、変更を <xref:System.Data.DataSet> からデータ ソースに反映します。 `Update` メソッドは、`Fill` メソッドと同様に、引数として `DataSet` のインスタンスおよびオプションの <xref:System.Data.DataTable> オブジェクトまたは `DataTable` 名を受け取ります。 `DataSet` のインスタンスは、行われた変更点を格納する `DataSet` です。`DataTable` は、変更点の取得元のテーブルです。 `DataTable` を指定しなかった場合、`DataTable` 内の最初の `DataSet` が使用されます。  
@@ -98,13 +98,13 @@ adapter.Update(table.Select(null, null, DataViewRowState.Added));
 ## <a name="use-a-dataadapter-to-retrieve-and-update-data"></a>DataAdapter を使用したデータの取得と更新  
  DataAdapter を使用すると、データを取得および更新できます。  
   
--   このサンプルでは、DataAdapter.AcceptChangesDuringFill を使用してデータベース内のデータを複製します。 このプロパティが false として設定されている場合、AcceptChanges はテーブルにデータを格納するときに呼び出されず、新しく追加された行が挿入された行として処理されます。 そのため、このサンプルでは、これらの行を使用して、データベースに新しい行を挿入します。  
+- このサンプルでは、DataAdapter.AcceptChangesDuringFill を使用してデータベース内のデータを複製します。 このプロパティが false として設定されている場合、AcceptChanges はテーブルにデータを格納するときに呼び出されず、新しく追加された行が挿入された行として処理されます。 そのため、このサンプルでは、これらの行を使用して、データベースに新しい行を挿入します。  
   
--   このサンプルでは、DataAdapter.TableMappings を使用して、ソース テーブルと DataTable 間のマッピングを定義します。  
+- このサンプルでは、DataAdapter.TableMappings を使用して、ソース テーブルと DataTable 間のマッピングを定義します。  
   
--   このサンプルでは、DataAdapter.FillLoadOption を使用して、アダプターが DbDataReader から DataTable にデータを設定する方法を決定します。 DataTable を作成するときに、プロパティを LoadOption.Upsert または LoadOption.PreserveChanges として設定した場合のみ、データベースのデータを現在のバージョンまたは元のバージョンに書き込むことができます。  
+- このサンプルでは、DataAdapter.FillLoadOption を使用して、アダプターが DbDataReader から DataTable にデータを設定する方法を決定します。 DataTable を作成するときに、プロパティを LoadOption.Upsert または LoadOption.PreserveChanges として設定した場合のみ、データベースのデータを現在のバージョンまたは元のバージョンに書き込むことができます。  
   
--   このサンプルでは、DbDataAdapter.UpdateBatchSize を使用してバッチ操作を実行することにより、テーブルを更新します。  
+- このサンプルでは、DbDataAdapter.UpdateBatchSize を使用してバッチ操作を実行することにより、テーブルを更新します。  
   
  サンプルをコンパイルして実行する前に、サンプル データベースを作成する必要があります。  
   
@@ -368,10 +368,11 @@ class Program {
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [DataAdapter と DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [行の状態とバージョン](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
- [AcceptChange と RejectChange](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)  
- [DataSet の内容のマージ](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)  
- [ID 値および Autonumber 値の取得](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [DataAdapter と DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [行の状態とバージョン](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
+- [AcceptChange と RejectChange](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)
+- [DataSet の内容のマージ](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)
+- [ID 値および Autonumber 値の取得](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

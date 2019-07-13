@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 613ad742-3c11-401d-a6b3-893ceb8de4f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1f1542cf9d0568fe2ec35c046c358b7249231d42
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 876f0fe3c40cb6754b4ba714833dd160dc4de3a8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754402"
 ---
 # <a name="invalidgchandlecookie-mda"></a>invalidGCHandleCookie MDA
-`invalidGCHandleCookie` マネージ デバッグ アシスタント (MDA) は、無効な <xref:System.IntPtr> Cookie から <xref:System.Runtime.InteropServices.GCHandle> への変換が試行されたときにアクティブ化されます。  
+`invalidGCHandleCookie` マネージド デバッグ アシスタント (MDA) は、無効な <xref:System.IntPtr> Cookie から <xref:System.Runtime.InteropServices.GCHandle> への変換が試行されたときにアクティブ化されます。  
   
-## <a name="symptoms"></a>現象  
+## <a name="symptoms"></a>症状  
  <xref:System.Runtime.InteropServices.GCHandle> の使用または <xref:System.IntPtr> からの取得を試みているときのアクセス違反やメモリ破損などの定義されていない動作。  
   
 ## <a name="cause"></a>原因  
@@ -45,7 +45,8 @@ ms.locfileid: "33392906"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Runtime.InteropServices.GCHandle.FromIntPtr%2A>  
- <xref:System.Runtime.InteropServices.GCHandle>  
- [マネージ デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Runtime.InteropServices.GCHandle.FromIntPtr%2A>
+- <xref:System.Runtime.InteropServices.GCHandle>
+- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

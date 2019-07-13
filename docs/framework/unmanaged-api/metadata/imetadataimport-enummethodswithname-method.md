@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cea47f8300c57362abae0c10223559319ecb2469
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e5de55d74741e9deb33be2f9adf15a970561664b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448844"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779734"
 ---
 # <a name="imetadataimportenummethodswithname-method"></a>IMetaDataImport::EnumMethodsWithName メソッド
 指定された名前を持ち、指定された TypeDef トークンによって参照される型で定義されているメソッドを列挙します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EnumMethodsWithName (  
    [in, out] HCORENUM    *phEnum,  
    [in]  mdTypeDef       cl,  
@@ -40,44 +40,45 @@ HRESULT EnumMethodsWithName (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [入力、出力].列挙子へのポインター。 このメソッドの最初の呼び出しで NULL があります。  
+ [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しで NULL があります。  
   
  `cl`  
- [in]型を列挙するには、そのメソッドを表す TypeDef トークンです。  
+ [in]列挙するメソッドを持つ型を表す TypeDef トークンです。  
   
  `szName`  
  [in]列挙体のスコープを制限する名前です。  
   
  `rMethods`  
- [out]MethodDef トークンを格納する配列。  
+ [out]MethodDef トークンを格納するために使用する配列。  
   
  `cMax`  
  [in] `rMethods` 配列の最大サイズ。  
   
  `pcTokens`  
- [out]MethodDef トークンで返される数`rMethods`です。  
+ [out]返される MethodDef トークン数`rMethods`します。  
   
-## <a name="remarks"></a>コメント  
- このメソッドは、フィールド、メソッドがないプロパティまたはイベントを列挙します。 異なり[imetadataimport::enummethods](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummethods-method.md)、`EnumMethodsWithName`を指定した名前を持たないすべてのメソッド トークンを破棄します。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、フィールドと、メソッドがないプロパティまたはイベントを列挙します。 異なり[imetadataimport::enummethods](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummethods-method.md)、`EnumMethodsWithName`を指定した名前を持たないすべてのメソッドのトークンを破棄します。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
 |`S_OK`|`EnumMethodsWithName` 正常に返されます。|  
-|`S_FALSE`|列挙するトークンがありません。 その場合は、`pcTokens`ゼロです。|  
+|`S_FALSE`|トークンを列挙することはありません。 その場合は、`pcTokens`は 0 です。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

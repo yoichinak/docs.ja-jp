@@ -1,19 +1,19 @@
 ---
-title: '&lt;ルーティング&gt;'
+title: <routing>
 ms.date: 03/30/2017
 ms.assetid: a210c209-3940-4288-9a8e-39b1e62606bc
-ms.openlocfilehash: 220c18ab8ea6222fcf7d9fb8a93950281c9de796
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: cc7c1a64f9481a7ab41cf35241ade04bd690dae0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786387"
 ---
-# <a name="ltroutinggt"></a>&lt;ルーティング&gt;
+# <a name="routing"></a>\<ルーティング >
 
 Windows Communication Foundation (WCF) の種類を指定するルーティング フィルター セットを定義する構成セクションを表します<xref:System.ServiceModel.Dispatcher.MessageFilter>受信メッセージの評価とルーティング テーブルをするターゲット エンドポイントを定義するときに使用される。フィルターが一致したときにメッセージを送信します。
 
-[**\<system.serviceModel >**](system-servicemodel.md)   
+[**\<system.serviceModel>**](system-servicemodel.md)   
 &nbsp;&nbsp;**\<ルーティング >**
   
 ## <a name="syntax"></a>構文  
@@ -52,15 +52,15 @@ Windows Communication Foundation (WCF) の種類を指定するルーティン�
 
 |     | 説明 |
 | --- | ----------- |
-| [**\<フィルター >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md) | 受信メッセージを評価するときに使用する Windows Communication Foundation (WCF) の MessageFilter の種類を決定するルーティング フィルター セットが含まれています。 |
-| [**\<filterTables >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertables.md) | ルーティング フィルターとターゲット エンドポイントとのマッピングを格納します。フィルターが一致したときにエンドポイントを指定するために使用されます。 |
+| [**\<filters>**](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md) | 受信メッセージを評価するときに使用する Windows Communication Foundation (WCF) の MessageFilter の種類を決定するルーティング フィルター セットが含まれています。 |
+| [**\<filterTables>**](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertables.md) | ルーティング フィルターとターゲット エンドポイントとのマッピングを格納します。フィルターが一致したときにエンドポイントを指定するために使用されます。 |
 
 ### <a name="parent-elements"></a>親要素
 
 |     | 説明 |
 | --- | ----------- |
-| **\<システム。ServiceModel >** | すべての WCF 構成要素のルート要素です。 |
+| **\<system.ServiceModel>** | すべての WCF 構成要素のルート要素です。 |
 
 ## <a name="see-also"></a>関連項目
 
-<xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>

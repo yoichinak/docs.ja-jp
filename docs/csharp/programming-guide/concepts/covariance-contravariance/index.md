@@ -3,11 +3,11 @@ title: 共変性と反変性 (C#)
 ms.date: 07/20/2015
 ms.assetid: 066d9a3c-aab7-4ea6-826d-0b1a85399c74
 ms.openlocfilehash: bfd78b1a32b9d4fe11b1dce129c24ceb5aca6754
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61668563"
 ---
 # <a name="covariance-and-contravariance-c"></a>共変性と反変性 (C#)
 C# では、共変性と反変性により、配列型、デリゲート型、およびジェネリック型引数の暗黙の参照変換が可能になります。 共変性は代入互換性を維持し、反変性はこれを反転させます。  

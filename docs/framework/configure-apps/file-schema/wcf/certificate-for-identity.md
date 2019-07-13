@@ -1,21 +1,21 @@
 ---
-title: '&lt;identity&gt; の &lt;certificate&gt;'
+title: <certificate> の <identity>
 ms.date: 03/30/2017
 ms.assetid: 4aeccaf7-8f23-495c-aa5f-5bd8b5d4a10c
-ms.openlocfilehash: 0b65157aea84760f3e52bc294f7559967fc308f1
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 76bdcb40d5016d7fcbff6c0d9769819f710065fe
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673356"
 ---
-# <a name="ltcertificategt-for-ltidentitygt"></a>&lt;identity&gt; の &lt;certificate&gt;
+# <a name="certificate-for-identity"></a>\<証明書 > の\<identity >
 クライアントに対するサービスの検証に使用される X.509 証明書を指定します。  
   
  要素の値を設定する方法についての詳細については、次を参照してください。[サービス Id と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)します。  
   
  \<identity>  
-\<証明書 >  
+\<証明書>  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,10 +50,11 @@ ms.locfileid: "54146915"
 </identity>
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.IdentityElement>  
- <xref:System.ServiceModel.EndpointAddress>  
- <xref:System.ServiceModel.EndpointAddress.Identity%2A>  
- <xref:System.ServiceModel.EndpointIdentity>  
- [サービス ID と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Configuration.IdentityElement>
+- <xref:System.ServiceModel.EndpointAddress>
+- <xref:System.ServiceModel.EndpointAddress.Identity%2A>
+- <xref:System.ServiceModel.EndpointIdentity>
+- [サービス ID と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)

@@ -1,24 +1,24 @@
 ---
 title: Docker 実稼働環境の実行、管理、および監視
 description: Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル
-author: CESARDELATORRE
-ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 2f29119e102bbb62e96da6b3c00f9c53c0a270a2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.date: 02/15/2019
+ms.openlocfilehash: 900c361d5604f7fdaf41613287aa48c5381a9af7
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130951"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "65644874"
 ---
 # <a name="run-manage-and-monitor-docker-production-environments"></a>Docker 実稼働環境の実行、管理、および監視
 
-ビジョン:エンタープライズ アプリケーションを高可用性と高スケーラビリティを実行する必要があります。IT 運用は、環境とアプリケーション自体を管理および監視できる必要があります。
+展望:エンタープライズ アプリケーションは可用性と拡張性が高い状態で実行する必要があります。IT 運用チームは、環境とアプリケーション自体を管理および監視できる必要があります。
 
 コンテナー化された Docker アプリケーションのライフ サイクルのこの最後の柱の焦点は、拡張性と可用性の高い (HA) 実稼働環境で、アプリケーションをどのように実行、管理、および監視するかです。
 
-実稼働環境 (インフラストラクチャ アーキテクチャとプラットフォーム テクノロジ) で、コンテナー化アプリケーションをどのように実行するかは、この電子書籍の第 1 章で確認した、選択したアーキテクチャと開発プラットフォームにも、非常に関連しており、完全に基づいています。 この章では、非常に拡張性の高い、HA 分散アプリケーションを効率的に実行するために使用できる、Microsoft および他のベンダーの特定の製品および技術を確認します。それに加え、IT の観点からどのようにそれを管理および監視するか検証します。
+実稼働環境 (インフラストラクチャ アーキテクチャとプラットフォーム テクノロジ) でコンテナー化アプリケーションを実行する方法は、この電子書籍の第 1 章で取り上げた、選択したアーキテクチャと開発プラットフォームに非常に関連しており、基礎としています。
+
+この章では、拡張性の高い、HA 分散アプリケーションを効率的に実行するために使用できる、Microsoft と他のベンダーの特定の製品と技術を確認します。それに加え、IT の観点からどのようにそれを管理し、監視するか検証します。
 
 >[!div class="step-by-step"]
->[前へ](../docker-devops-workflow/docker-application-outer-loop-devops-workflow.md)
+>[前へ](../docker-devops-workflow/create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md)
 >[次へ](run-microservices-based-applications-in-production.md)

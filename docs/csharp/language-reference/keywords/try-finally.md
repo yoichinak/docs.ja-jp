@@ -9,12 +9,12 @@ helpviewer_keywords:
 - finally keyword [C#]
 - try-finally statement [C#]
 ms.assetid: c27623fb-7261-4464-862c-7a369d3c8f0a
-ms.openlocfilehash: 2bfdc4e94f5c5dc613eac06efcd69407576b0db4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e8442438d06e8853e159b717b1f86fdce5c4b8f7
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239265"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422149"
 ---
 # <a name="try-finally-c-reference"></a>try-finally (C# リファレンス)
 
@@ -42,13 +42,12 @@ C# には、<xref:System.IDisposable> オブジェクトに対して同様の機
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
 - [try、throw、catch ステートメント (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)
-- [例外処理ステートメント](exception-handling-statements.md)
 - [throw](throw.md)
 - [try-catch](try-catch.md)
 - [方法: 例外を明示的にスローする](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

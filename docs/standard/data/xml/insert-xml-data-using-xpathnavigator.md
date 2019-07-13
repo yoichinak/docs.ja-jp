@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8b9eedfab68dc6aeacf9ed51ffc7205b73c062ca
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.openlocfilehash: a941c99e1d22a71dc6d94e73f5402716f41e3a81
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "45698342"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647912"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>XPathNavigator による XML データの挿入
 <xref:System.Xml.XPath.XPathNavigator> クラスは、XML ドキュメント内に兄弟ノード、子ノード、および属性ノードを挿入するためのメソッドのセットを提供します。 これらのメソッドを使用するには、<xref:System.Xml.XPath.XPathNavigator> オブジェクトが編集可能である必要があります。つまり、その <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> プロパティを `true` にする必要があります。  
@@ -29,13 +29,13 @@ ms.locfileid: "45698342"
 ### <a name="inserting-sibling-nodes"></a>兄弟ノードの挿入  
  <xref:System.Xml.XPath.XPathNavigator> クラスは、兄弟ノードを挿入する次のメソッドを提供します。  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertElementAfter%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertElementAfter%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertElementBefore%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertElementBefore%2A>  
   
  これらのメソッドは <xref:System.Xml.XPath.XPathNavigator> オブジェクトの現在位置にあるノードの前と後に兄弟ノードを挿入します。  
   
@@ -58,13 +58,13 @@ ms.locfileid: "45698342"
 ### <a name="inserting-child-nodes"></a>子ノードの挿入  
  <xref:System.Xml.XPath.XPathNavigator> クラスは、子ノードを挿入する次のメソッドを提供します。  
   
--   <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.AppendChildElement%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.AppendChildElement%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.PrependChildElement%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.PrependChildElement%2A>  
   
  これらのメソッドは、<xref:System.Xml.XPath.XPathNavigator> オブジェクトの現在位置にあるノードの一連の子ノードの最後と最初に、子ノードを追加します。  
   
@@ -87,9 +87,9 @@ ms.locfileid: "45698342"
 ### <a name="inserting-attribute-nodes"></a>属性ノードの挿入  
  <xref:System.Xml.XPath.XPathNavigator> クラスは、属性ノードを挿入する次のメソッドを提供します。  
   
--   <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A>  
   
  これらのメソッドは <xref:System.Xml.XPath.XPathNavigator> オブジェクトの現在位置にある要素ノードに属性ノードを挿入します。 <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A> メソッドは、パラメーターとして指定された名前空間プレフィックス、ローカル名、名前空間 URI、および値を使用して <xref:System.Xml.XPath.XPathNavigator> オブジェクトの現在位置にある要素ノードに、属性ノードを作成します。 <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A> メソッドは、属性ノードの挿入に使用される <xref:System.Xml.XmlWriter> オブジェクトも返します。  
   
@@ -227,26 +227,26 @@ navigator.SetTypedValue(DateTime.Now);
   
  発生する可能性のある名前空間の競合は次のとおりです。  
   
--   <xref:System.Xml.XmlReader> オブジェクトのコンテキスト内のスコープに名前空間があり、プレフィックスから名前空間 URI へのマッピングが <xref:System.Xml.XPath.XPathNavigator> オブジェクトのコンテキスト内にない場合、新たに挿入されたノードに関する新しい名前空間宣言が追加されます。  
+- <xref:System.Xml.XmlReader> オブジェクトのコンテキスト内のスコープに名前空間があり、プレフィックスから名前空間 URI へのマッピングが <xref:System.Xml.XPath.XPathNavigator> オブジェクトのコンテキスト内にない場合、新たに挿入されたノードに関する新しい名前空間宣言が追加されます。  
   
--   <xref:System.Xml.XmlReader> オブジェクトのコンテキスト内と <xref:System.Xml.XPath.XPathNavigator> オブジェクトのコンテキスト内の両方のスコープに同じ名前空間 URI があるが、両方のコンテキスト内で別のプレフィックスにマップされている場合、<xref:System.Xml.XmlReader> オブジェクトからのプレフィックスと名前空間 URI を使用して、新たに挿入されたノードに対する新しい名前空間宣言が追加されます。  
+- <xref:System.Xml.XmlReader> オブジェクトのコンテキスト内と <xref:System.Xml.XPath.XPathNavigator> オブジェクトのコンテキスト内の両方のスコープに同じ名前空間 URI があるが、両方のコンテキスト内で別のプレフィックスにマップされている場合、<xref:System.Xml.XmlReader> オブジェクトからのプレフィックスと名前空間 URI を使用して、新たに挿入されたノードに対する新しい名前空間宣言が追加されます。  
   
--   <xref:System.Xml.XmlReader> オブジェクトのコンテキスト内と <xref:System.Xml.XPath.XPathNavigator> オブジェクトのコンテキスト内の両方のスコープに同じ名前空間プレフィックスがあるが、両方のコンテキスト内で別の名前空間 URI にマップされている場合、新たに挿入されたノードに対する新しい名前空間宣言が追加され、<xref:System.Xml.XmlReader> オブジェクトからの名前空間 URI を使用してそのプレフィックスを再宣言します。  
+- <xref:System.Xml.XmlReader> オブジェクトのコンテキスト内と <xref:System.Xml.XPath.XPathNavigator> オブジェクトのコンテキスト内の両方のスコープに同じ名前空間プレフィックスがあるが、両方のコンテキスト内で別の名前空間 URI にマップされている場合、新たに挿入されたノードに対する新しい名前空間宣言が追加され、<xref:System.Xml.XmlReader> オブジェクトからの名前空間 URI を使用してそのプレフィックスを再宣言します。  
   
--   <xref:System.Xml.XmlReader> オブジェクトのコンテキスト内と <xref:System.Xml.XPath.XPathNavigator> オブジェクトのコンテキスト内の両方で、プレフィックスと名前空間 URI が同じ場合、新たに挿入されたノードに対する新しい名前空間宣言は追加されません。  
+- <xref:System.Xml.XmlReader> オブジェクトのコンテキスト内と <xref:System.Xml.XPath.XPathNavigator> オブジェクトのコンテキスト内の両方で、プレフィックスと名前空間 URI が同じ場合、新たに挿入されたノードに対する新しい名前空間宣言は追加されません。  
   
 > [!NOTE]
 >  上記の説明は、プレフィックスとして空の `string` (たとえば、既定の名前空間宣言) を使用した名前空間宣言にも適用されます。  
   
  発生する可能性のある `xml:lang` の競合は次のとおりです。  
   
--   `xml:lang` 属性が <xref:System.Xml.XmlReader> オブジェクトのコンテキスト内のスコープにあるが、<xref:System.Xml.XPath.XPathNavigator> オブジェクトのコンテキスト内にはない場合、`xml:lang` オブジェクトから受け取った値を持つ <xref:System.Xml.XmlReader> 属性が、新たに挿入されたノードに対して追加されます。  
+- `xml:lang` 属性が <xref:System.Xml.XmlReader> オブジェクトのコンテキスト内のスコープにあるが、<xref:System.Xml.XPath.XPathNavigator> オブジェクトのコンテキスト内にはない場合、`xml:lang` オブジェクトから受け取った値を持つ <xref:System.Xml.XmlReader> 属性が、新たに挿入されたノードに対して追加されます。  
   
--   `xml:lang` 属性が <xref:System.Xml.XmlReader> オブジェクトのコンテキスト内と <xref:System.Xml.XPath.XPathNavigator> オブジェクトのコンテキスト内の両方のスコープにあるが、それぞれの値が異なる場合、`xml:lang` オブジェクトから受け取った値を持つ <xref:System.Xml.XmlReader> 属性が、新たに挿入されたノードに対して追加されます。  
+- `xml:lang` 属性が <xref:System.Xml.XmlReader> オブジェクトのコンテキスト内と <xref:System.Xml.XPath.XPathNavigator> オブジェクトのコンテキスト内の両方のスコープにあるが、それぞれの値が異なる場合、`xml:lang` オブジェクトから受け取った値を持つ <xref:System.Xml.XmlReader> 属性が、新たに挿入されたノードに対して追加されます。  
   
--   `xml:lang` 属性が <xref:System.Xml.XmlReader> オブジェクトのコンテキスト内と <xref:System.Xml.XPath.XPathNavigator> オブジェクトのコンテキスト内の両方のスコープにあるが、それぞれの値が同じ場合、新たに挿入されたノードに対して新しい `xml:lang` 属性は追加されません。  
+- `xml:lang` 属性が <xref:System.Xml.XmlReader> オブジェクトのコンテキスト内と <xref:System.Xml.XPath.XPathNavigator> オブジェクトのコンテキスト内の両方のスコープにあるが、それぞれの値が同じ場合、新たに挿入されたノードに対して新しい `xml:lang` 属性は追加されません。  
   
--   `xml:lang` 属性が <xref:System.Xml.XPath.XPathNavigator> オブジェクトのコンテキスト内のスコープにあるが、<xref:System.Xml.XmlReader> オブジェクトのコンテキスト内にはない場合、新たに挿入されたノードに対して `xml:lang` 属性は追加されません。  
+- `xml:lang` 属性が <xref:System.Xml.XPath.XPathNavigator> オブジェクトのコンテキスト内のスコープにあるが、<xref:System.Xml.XmlReader> オブジェクトのコンテキスト内にはない場合、新たに挿入されたノードに対して `xml:lang` 属性は追加されません。  
   
 ## <a name="inserting-nodes-with-xmlwriter"></a>XmlWriter によるノードの挿入  
  「ノードと値の挿入」に記載されている兄弟ノード、子ノード、および属性ノードの挿入に使用されるメソッドはオーバーロードされます。 <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A> クラスの <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>、<xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>、<xref:System.Xml.XPath.XPathNavigator.PrependChild%2A>、<xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A>、および <xref:System.Xml.XPath.XPathNavigator> メソッドは、ノードの挿入に使用される <xref:System.Xml.XmlWriter> オブジェクトを返します。  
@@ -271,11 +271,11 @@ navigator.SetTypedValue(DateTime.Now);
   
  以下は、複数の <xref:System.Xml.XmlWriter> オブジェクト使用時の重要な注意事項です。  
   
--   それぞれの <xref:System.Xml.XmlWriter> オブジェクトの <xref:System.Xml.XmlWriter.Close%2A> メソッドが呼び出されるときに、<xref:System.Xml.XmlWriter> オブジェクトによって書き込まれる XML フラグメントが XML ドキュメントに追加されます。 その時点まで、<xref:System.Xml.XmlWriter> オブジェクトは、まとまっていないフラグメントを書き込んでいます。 XML ドキュメントに対する操作が実行される場合、<xref:System.Xml.XmlWriter> の呼び出し前に <xref:System.Xml.XmlWriter.Close%2A> オブジェクトによって書き込まれているフラグメントは影響を受けません。  
+- それぞれの <xref:System.Xml.XmlWriter> オブジェクトの <xref:System.Xml.XmlWriter.Close%2A> メソッドが呼び出されるときに、<xref:System.Xml.XmlWriter> オブジェクトによって書き込まれる XML フラグメントが XML ドキュメントに追加されます。 その時点まで、<xref:System.Xml.XmlWriter> オブジェクトは、まとまっていないフラグメントを書き込んでいます。 XML ドキュメントに対する操作が実行される場合、<xref:System.Xml.XmlWriter> の呼び出し前に <xref:System.Xml.XmlWriter.Close%2A> オブジェクトによって書き込まれているフラグメントは影響を受けません。  
   
--   特定の XML サブツリー上に、開いた <xref:System.Xml.XmlWriter> オブジェクトがあり、そのサブツリーが削除された場合、<xref:System.Xml.XmlWriter> オブジェクトが引き続きそのサブツリーに追加する可能性があります。 サブツリーは単に削除済みフラグメントになります。  
+- 特定の XML サブツリー上に、開いた <xref:System.Xml.XmlWriter> オブジェクトがあり、そのサブツリーが削除された場合、<xref:System.Xml.XmlWriter> オブジェクトが引き続きそのサブツリーに追加する可能性があります。 サブツリーは単に削除済みフラグメントになります。  
   
--   XML ドキュメント内の同じ位置で、複数の <xref:System.Xml.XmlWriter> オブジェクトが開かれた場合、<xref:System.Xml.XmlWriter> オブジェクトが開かれた順序ではなく、それらが閉じられる順序で XML ドキュメントにそれらが追加されます。  
+- XML ドキュメント内の同じ位置で、複数の <xref:System.Xml.XmlWriter> オブジェクトが開かれた場合、<xref:System.Xml.XmlWriter> オブジェクトが開かれた順序ではなく、それらが閉じられる順序で XML ドキュメントにそれらが追加されます。  
   
  次の例では、<xref:System.Xml.XmlDocument> オブジェクトを作成し、<xref:System.Xml.XPath.XPathNavigator> オブジェクトを作成した後、<xref:System.Xml.XmlWriter> メソッドによって返される <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> オブジェクトを使用して、`books.xml` ファイル内に最初の book 構造体を作成します。 この例は、それを `book.xml` ファイルとして保存します。  
   
@@ -332,9 +332,9 @@ document.Save("book.xml");
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Xml.XmlDocument>  
-- <xref:System.Xml.XPath.XPathDocument>  
-- <xref:System.Xml.XPath.XPathNavigator>  
-- [XPath データ モデルを使用した XML データの処理](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
-- [XpathNavigator による XML データの変更](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md)  
+- <xref:System.Xml.XmlDocument>
+- <xref:System.Xml.XPath.XPathDocument>
+- <xref:System.Xml.XPath.XPathNavigator>
+- [XPath データ モデルを使用した XML データの処理](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
+- [XpathNavigator による XML データの変更](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md)
 - [XPathNavigator による XML データの削除](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)

@@ -2,12 +2,12 @@
 title: ルーティング コントラクト
 ms.date: 03/30/2017
 ms.assetid: 9ceea7ae-ea19-4cf9-ba4f-d071e236546d
-ms.openlocfilehash: 17bdd4556533b33b635f80b9aec3f16d0f256843
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 660652caa804b8c19f6dd18bcba51bf4abc3ba12
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991108"
 ---
 # <a name="routing-contracts"></a>ルーティング コントラクト
 ルーティング コントラクトは、ルーティング サービスが処理できるメッセージ パターンを定義します。  各コントラクトは型指定されておらず、サービスは、メッセージ スキーマやアクションを認識していない場合でもメッセージを受信できます。 このため、ルーティング サービスは、ルーティングされる基盤のメッセージの詳細構成を追加することなく、メッセージをジェネリックにルーティングできます。  
@@ -26,6 +26,7 @@ ms.locfileid: "50191010"
 |<xref:System.ServiceModel.Routing.IRequestReplyRouter>|SessionMode = SessionMode.Allowed<br /><br /> AsyncPattern = true|IReplyChannel -> IRequestChannel|  
 |<xref:System.ServiceModel.Routing.IDuplexSessionRouter>|SessionMode=SessionMode.Required<br /><br /> CallbackContract=typeof(ISimplexSession)<br /><br /> AsyncPattern = true<br /><br /> IsOneWay = true<br /><br /> TransactionFlow(TransactionFlowOption.Allowed)|IDuplexSessionChannel -> IDuplexSessionChannel|  
   
-## <a name="see-also"></a>関連項目  
- [ルーティング サービス](../../../../docs/framework/wcf/feature-details/routing-service.md)  
- [ルーティングの概要](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
+## <a name="see-also"></a>関連項目
+
+- [ルーティング サービス](../../../../docs/framework/wcf/feature-details/routing-service.md)
+- [ルーティングの概要](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

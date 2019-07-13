@@ -1,22 +1,22 @@
 ---
-title: '&lt;tokenReplayCache&gt;'
+title: <tokenReplayCache>
 ms.date: 03/30/2017
 ms.assetid: 1572ab23-6933-41b5-bfb4-0c4548145500
 author: BrucePerlerMS
-ms.openlocfilehash: d21a819f789b5be4bdf7ebf57b37a072e1d213ff
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1567c669b5e682a7a771d7bedc95a8effa474e36
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47206221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790508"
 ---
-# <a name="lttokenreplaycachegt"></a>&lt;tokenReplayCache&gt;
+# <a name="tokenreplaycache"></a>\<tokenReplayCache>
 トークン再生キャッシュ サービスまたはセキュリティ トークン ハンドラー コレクションに登録します。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<キャッシュ >  
-\<tokenReplayCache >  
+\<caches>  
+\<tokenReplayCache>  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,7 +47,7 @@ ms.locfileid: "47206221"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<キャッシュ >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|サービスまたはセキュリティ トークン ハンドラー コレクションで使用されるキャッシュを登録します。|  
+|[\<caches>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|サービスまたはセキュリティ トークン ハンドラー コレクションで使用されるキャッシュを登録します。|  
   
 ## <a name="remarks"></a>Remarks  
  トークン再生キャッシュを使用して、再生されたトークンを検出できます。 トークン リプレイ検出が有効になっている、 [ \<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)要素もトークンの最大有効期限を指定します。  
@@ -62,6 +62,7 @@ ms.locfileid: "47206221"
 </caches>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.IdentityModel.Tokens.TokenReplayCache>  
- [\<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.IdentityModel.Tokens.TokenReplayCache>
+- [\<tokenReplayDetection>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)

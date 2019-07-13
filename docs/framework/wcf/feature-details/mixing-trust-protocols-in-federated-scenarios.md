@@ -2,12 +2,12 @@
 title: Trust プロトコルが混在するフェデレーション シナリオ
 ms.date: 03/30/2017
 ms.assetid: d7b5fee9-2246-4b09-b8d7-9e63cb817279
-ms.openlocfilehash: ce5c3a1875d84d98068dcc78d8346a88bc0b28f3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 18f486b9de83db48e186bb3856aff6cc6ccb56b1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182912"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64606506"
 ---
 # <a name="mixing-trust-protocols-in-federated-scenarios"></a>Trust プロトコルが混在するフェデレーション シナリオ
 シナリオによっては、フェデレーション クライアントが、Trust バージョンの一致しないサービスやセキュリティ トークン サービス (STS: Security Token Service) と通信する場合があります。 たとえば、サービス WSDL に、STS とは異なるバージョンの WS-Trust 要素を持つ `RequestSecurityTokenTemplate` アサーションが含まれることがあります。 このような場合は、Windows Communication Foundation (WCF) クライアントがから受け取った Ws-trust 要素を変換、 `RequestSecurityTokenTemplate` STS trust バージョンの一致するようにします。 WCF では、標準バインディングのみを対象の不一致の trust バージョンを処理します。 WCF によって認識されるすべての標準的なアルゴリズム パラメーターは、標準バインディングの一部です。 このトピックでは、サービスと STS の間さまざまな信頼の設定で WCF の動作について説明します。  
@@ -15,17 +15,17 @@ ms.locfileid: "50182912"
 ## <a name="rp-feb-2005-and-sts-feb-2005"></a>RP 2005/02 および STS 2005/02  
  証明書利用者 (RP: Relying Party) の WSDL には、`RequestSecurityTokenTemplate` セクション内に次の要素が含まれます。  
   
--   `CanonicalizationAlgorithm`  
+- `CanonicalizationAlgorithm`  
   
--   `EncryptionAlgorithm`  
+- `EncryptionAlgorithm`  
   
--   `EncryptWith`  
+- `EncryptWith`  
   
--   `SignWith`  
+- `SignWith`  
   
--   `KeySize`  
+- `KeySize`  
   
--   `KeyType`  
+- `KeyType`  
   
  クライアント構成ファイルには、パラメーターのリストが含まれます。  
   
@@ -34,19 +34,19 @@ ms.locfileid: "50182912"
 ## <a name="rp-trust-13-and-sts-trust-13"></a>RP Trust 1.3 および STS Trust 1.3  
  RP の WSDL には、`RequestSecurityTokenTemplate` セクション内に次の要素が含まれます。  
   
--   `CanonicalizationAlgorithm`  
+- `CanonicalizationAlgorithm`  
   
--   `EncryptionAlgorithm`  
+- `EncryptionAlgorithm`  
   
--   `EncryptWith`  
+- `EncryptWith`  
   
--   `SignWith`  
+- `SignWith`  
   
--   `KeySize`  
+- `KeySize`  
   
--   `KeyType`  
+- `KeyType`  
   
--   `KeyWrapAlgorithm`  
+- `KeyWrapAlgorithm`  
   
  クライアント構成ファイルには、RP によって指定されたパラメーターをラップする `secondaryParameters` 要素が含まれます。  
   
@@ -55,17 +55,17 @@ ms.locfileid: "50182912"
 ## <a name="rp-trust-feb-2005-and-sts-trust-13"></a>RP Trust 2005/02 および STS Trust 1.3  
  RP の WSDL には、`RequestSecurityTokenTemplate` セクション内に次の要素が含まれます。  
   
--   `CanonicalizationAlgorithm`  
+- `CanonicalizationAlgorithm`  
   
--   `EncryptionAlgorithm`  
+- `EncryptionAlgorithm`  
   
--   `EncryptWith`  
+- `EncryptWith`  
   
--   `SignWith`  
+- `SignWith`  
   
--   `KeySize`  
+- `KeySize`  
   
--   `KeyType`  
+- `KeyType`  
   
  クライアント構成ファイルには、パラメーターのリストが含まれます。  
   
@@ -73,28 +73,28 @@ ms.locfileid: "50182912"
   
  WCF のハンドル、 `KeyType`、 `KeySize`、および`TokenType`要素として次のとおりです。  
   
--   WSDL をダウンロードし、バインディングを作成して、`KeyType`、`KeySize`、および `TokenType` を RP パラメーターから割り当てます。 その後、クライアント構成ファイルが生成されます。  
+- WSDL をダウンロードし、バインディングを作成して、`KeyType`、`KeySize`、および `TokenType` を RP パラメーターから割り当てます。 その後、クライアント構成ファイルが生成されます。  
   
--   この時点で、クライアントは構成ファイル内のパラメーターを変更できます。  
+- この時点で、クライアントは構成ファイル内のパラメーターを変更できます。  
   
--   WCF 実行時に指定されたすべてのパラメーターがコピー、`AdditionalTokenParameters`以外のクライアント構成ファイルのセクション`KeyType`、`KeySize`と`TokenType`これらのパラメーターは、構成ファイル中に考慮するため、生成します。  
+- WCF 実行時に指定されたすべてのパラメーターがコピー、`AdditionalTokenParameters`以外のクライアント構成ファイルのセクション`KeyType`、`KeySize`と`TokenType`これらのパラメーターは、構成ファイル中に考慮するため、生成します。  
   
 ## <a name="rp-trust-13-and-sts-trust-feb-2005"></a>RP Trust 1.3 および STS Trust 2005/02  
  RP の WSDL には、`RequestSecurityTokenTemplate` セクション内に次の要素が含まれます。  
   
--   `CanonicalizationAlgorithm`  
+- `CanonicalizationAlgorithm`  
   
--   `EncryptionAlgorithm`  
+- `EncryptionAlgorithm`  
   
--   `EncryptWith`  
+- `EncryptWith`  
   
--   `SignWith`  
+- `SignWith`  
   
--   `KeySize`  
+- `KeySize`  
   
--   `KeyType`  
+- `KeyType`  
   
--   `KeyWrapAlgorithm`  
+- `KeyWrapAlgorithm`  
   
  クライアント構成ファイルには、RP によって指定されたパラメーターをラップする `secondaryParamters` 要素が含まれます。  
   

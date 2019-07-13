@@ -1,20 +1,20 @@
 ---
-title: '&lt;baseAddressPrefixFilter&gt; の &lt;add&gt;'
+title: <add> の <baseAddressPrefixFilter>
 ms.date: 03/30/2017
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
-ms.openlocfilehash: ece3178c48c84c609ab959a5cfc426062de9255f
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: a58a29e44fff3d653d04da271e3b240f2969611f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673751"
 ---
-# <a name="ltaddgt-of-ltbaseaddressprefixfiltergt"></a>&lt;baseAddressPrefixFilter&gt; の &lt;add&gt;
+# <a name="add-of-baseaddressprefixfilter"></a>\<add> of \<baseAddressPrefixFilter>
 パススルー フィルター、IIS で Windows Communication Foundation (WCF) アプリケーションをホストする場合は、適切なインターネット インフォメーション サービス (IIS) バインドを選択するメカニズムを提供するを指定する構成要素を表します。  
   
  \<system.ServiceModel >  
 \<serviceHostingEnvironment >  
-\<baseAddressPrefixFilters >  
+\<baseAddressPrefixFilters>  
 \<add>  
   
 ## <a name="syntax"></a>構文  
@@ -43,7 +43,7 @@ ms.locfileid: "54145602"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<baseAddressPrefixFilters >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|パススルー フィルター、IIS で Windows Communication Foundation (WCF) アプリケーションをホストする場合は、適切な IIS バインドを選択するためのメカニズムを提供するを指定する構成要素のコレクション。|  
+|[\<baseAddressPrefixFilters>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|パススルー フィルター、IIS で Windows Communication Foundation (WCF) アプリケーションをホストする場合は、適切な IIS バインドを選択するためのメカニズムを提供するを指定する構成要素のコレクション。|  
   
 ## <a name="remarks"></a>Remarks  
  プレフィックス フィルターは、サービスによって使用される URI を、共有ホスティング プロバイダーが指定できるようにする手段を提供します。 これにより、共有ホストは、同じサイト上の同じスキームに対して、別々のベース アドレスを使用して複数のアプリケーションをホストできるようになります。  
@@ -79,8 +79,9 @@ http://test2.fabrikam.com/Service.svc
 > [!NOTE]
 >  フィルターでワイルドカードはサポートされません。 また、IIS が提供する baseAddresses には、`baseAddressPrefixFilters` リストに存在しない他のスキームにバインドされたアドレスが指定される場合があります。 これらのアドレスはフィルターで除外されません。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.BaseAddressPrefixFilterElement>  
- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
- <xref:System.ServiceModel.ServiceHostingEnvironment>  
- [ホスティング](../../../../../docs/framework/wcf/feature-details/hosting.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Configuration.BaseAddressPrefixFilterElement>
+- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
+- <xref:System.ServiceModel.ServiceHostingEnvironment>
+- [ホスティング](../../../../../docs/framework/wcf/feature-details/hosting.md)

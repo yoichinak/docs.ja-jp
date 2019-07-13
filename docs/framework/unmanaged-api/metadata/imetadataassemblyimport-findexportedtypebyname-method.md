@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 048c7234fcb2592ea0dade135a32341a6e0f404f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8a70c041bc17f58a5e17877dd2e1f2aa2944e689
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444920"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777920"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>IMetaDataAssemblyImport::FindExportedTypeByName メソッド
-名前およびそれを囲む型を指定、エクスポートされた型へのポインターを取得します。  
+名前およびそれを囲む型を指定するエクスポートされた型、ポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT FindExportedTypeByName (  
     [in]  LPCWSTR           szName,   
     [in]  mdToken           mdtExportedType,   
@@ -37,28 +37,29 @@ HRESULT FindExportedTypeByName (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `szName`  
- [in]エクスポートされた型の名前。  
+ [in]エクスポートされる型の名前。  
   
  `mdtExportedType`  
- [in]エクスポートされた型の外側のクラスのメタデータ トークン。 この値は`mdExportedTypeNil`型が入れ子にされた型ではない場合は、要求されたエクスポートします。  
+ [in]エクスポートされた型の外側のクラスのメタデータ トークン。 この値は`mdExportedTypeNil`型が入れ子になった型ではない場合は、要求されたエクスポートします。  
   
  `ptkExportedType`  
- [out]ポインター、`mdExportedType`エクスポートされた型を表すトークンです。  
+ [out]ポインター、`mdExportedType`エクスポートされる型を表すトークン。  
   
-## <a name="remarks"></a>コメント  
- `FindExportedTypeByName`メソッドは参照を解決するための共通言語ランタイムによって使用されている標準的な規則を使用します。  
+## <a name="remarks"></a>Remarks  
+ `FindExportedTypeByName`メソッドは、参照を解決するための共通言語ランタイムによって使用されている標準の規則を使用します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
  **ライブラリ:** MsCorEE.dll にリソースとして使用  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataAssemblyImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)  
- [ランタイムがアセンブリを検索する方法](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+## <a name="see-also"></a>関連項目
+
+- [IMetaDataAssemblyImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [ランタイムがアセンブリを検索する方法](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

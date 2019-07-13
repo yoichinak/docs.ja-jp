@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a96542ab5113311bba79cc552afd7f29e6eafa2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2cccb862a0dfd16eb0bbfe557e3c35373cd7e7b8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406397"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740812"
 ---
 # <a name="corarraylayout-structure"></a>COR_ARRAY_LAYOUT 構造体
 メモリ内の配列オブジェクトのレイアウトに関する情報が提供されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct COR_ARRAY_LAYOUT {  
     COR_TYPEID componentID;  
     CorElementType componentType;  
@@ -46,28 +46,29 @@ typedef struct COR_ARRAY_LAYOUT {
 |メンバー|説明|  
 |------------|-----------------|  
 |`componentID`|配列が含まれているオブジェクトの種類の識別子。|  
-|`componentType`|コンポーネントがガベージ コレクションの参照、値クラス、またはプリミティブであるかどうかを示す CorElementType 列挙型値。|  
+|`componentType`|コンポーネントがガベージ コレクションの参照、値クラス、またはプリミティブであるかどうかを示す CorElementType 列挙値。|  
 |`firstElementOffset`|配列の最初の要素のオフセット。|  
 |`elementSize`|各要素のサイズ。|  
-|`countOffset`|配列内の要素の数をオフセットします。|  
+|`countOffset`|配列内の要素の数にオフセットします。|  
 |`rankSize`|(バイト単位)、ランクのサイズ。|  
 |`numRanks`|配列のランクの数。|  
-|`rankOffset`|ランクを開始するオフセットです。|  
+|`rankOffset`|ランクの開始位置のオフセット。|  
   
-## <a name="remarks"></a>コメント  
- `rankSize`フィールドは、多次元配列のランクのサイズを指定します。 これは、1 次元の配列も正確です。  
+## <a name="remarks"></a>Remarks  
+ `rankSize`フィールドは、多次元配列のランクのサイズを指定します。 1 次元の配列も正確になります。  
   
- 値`numRanks`は 1 次元配列の場合は 1 と`N`の多次元配列を`N`ディメンションです。  
+ 値`numRanks`は 1 次元配列の 1 と`N`の多次元配列の`N`ディメンション。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>関連項目
+
+- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)

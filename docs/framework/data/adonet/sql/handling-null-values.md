@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: 039a6f5aab2f1b857f98803f8b3d6425cc549877
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 45b123e7b0db4832a1629f8ec0224729ff20f689
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486042"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623455"
 ---
 # <a name="handling-null-values"></a>null 値の処理
 列の値が不明または欠落している場合は、リレーショナル データベースの NULL 値が使用されます。 NULL は空文字列 (文字または日付時刻データ型) でもゼロ値 (数値データ型) でもありません。 ANSI SQL-92 の規格では、すべてのデータ型について NULL は同一でなければならないと規定されているため、すべての NULL が一貫して処理されます。 <xref:System.Data.SqlTypes> 名前空間では、<xref:System.Data.SqlTypes.INullable> インターフェイスを実装することで NULL セマンティクスが提供されます。 <xref:System.Data.SqlTypes> 内の各データ型には、それぞれ独自に `IsNull` プロパティと `Null` 値があり、データ型のインスタンスに割り当てることができます。  
@@ -21,11 +21,11 @@ ms.locfileid: "43486042"
 ## <a name="nulls-and-three-valued-logic"></a>NULL および 3 つの値を持つロジック  
  列定義に NULL 値を許可することで、3 つの値を持つロジックをアプリケーションに定義できます。 比較によって、次の 3 つの条件のうちの 1 つを評価できます。  
   
--   True  
+- True  
   
--   False  
+- False  
   
--   不明  
+- 不明  
   
  NULL は不明であるとされるため、2 つの NULL 値を相互に比較した場合、同等であるとは見なされません。 算術演算子を使用する式では、オペランドのいずれかが NULL である場合は結果も NULL になります。  
   
@@ -87,15 +87,15 @@ WHERE TerritoryID IN (1, 2, 3)
   
  さらに、`DataRow.["columnName"]` の NULL 値割り当てのインスタンスには、次の規則が適用されます。  
   
-1.  既定の*既定*値は`DbNull.Value`が適切な厳密に厳密に型指定された null 列に null 値が型指定された点を除いてすべて。  
+1. 既定の*既定*値は`DbNull.Value`が適切な厳密に厳密に型指定された null 列に null 値が型指定された点を除いてすべて。  
   
-2.  XML ファイルへのシリアル化中に NULL 値が書き出されることはありません ("xsi:nil" と同じ)。  
+2. XML ファイルへのシリアル化中に NULL 値が書き出されることはありません ("xsi:nil" と同じ)。  
   
-3.  既定値を含む NULL 以外のすべての値は、常に XML へのシリアル化中に書き出されます。 これは、NULL 値 (xsi:nil) が明示的で既定値が暗黙的である、XSD/XML セマンティクスとは異なります (XML にない場合は、検証パーサーが関連付けられた XSD スキーマから取得します)。 逆に `DataTable` では、NULL 値が暗黙的で、既定値が明示的になります。  
+3. 既定値を含む NULL 以外のすべての値は、常に XML へのシリアル化中に書き出されます。 これは、NULL 値 (xsi:nil) が明示的で既定値が暗黙的である、XSD/XML セマンティクスとは異なります (XML にない場合は、検証パーサーが関連付けられた XSD スキーマから取得します)。 逆に `DataTable` では、NULL 値が暗黙的で、既定値が明示的になります。  
   
-4.  XML 入力から読み取られた各行の欠落している列値にはすべて、NULL が割り当てられます。 <xref:System.Data.DataTable.NewRow%2A> または類似のメソッドを使用して作成された行には、DataColumn の既定値が割り当てられます。  
+4. XML 入力から読み取られた各行の欠落している列値にはすべて、NULL が割り当てられます。 <xref:System.Data.DataTable.NewRow%2A> または類似のメソッドを使用して作成された行には、DataColumn の既定値が割り当てられます。  
   
-5.  <xref:System.Data.DataRow.IsNull%2A> メソッドは、`true` と `DbNull.Value` のどちらに対しても `INullable.Null` を返します。  
+5. <xref:System.Data.DataRow.IsNull%2A> メソッドは、`true` と `DbNull.Value` のどちらに対しても `INullable.Null` を返します。  
   
 ## <a name="assigning-null-values"></a>NULL 値の割り当て  
  任意の <xref:System.Data.SqlTypes> インスタンスの既定値は NULL です。  
@@ -118,7 +118,7 @@ isColumnNull=True, ID=Null, Description=Null
 ```  
   
 ## <a name="comparing-null-values-with-sqltypes-and-clr-types"></a>NULL 値と SqlTypes および CLR 型との比較  
- NULL 値を比較する場合は、`Equals` メソッドによって <xref:System.Data.SqlTypes> で NULL 値を評価する方法と、CLR 型を使用する方法との違いを理解することが重要です。 すべての<xref:System.Data.SqlTypes>`Equals`メソッドが null 値を評価するためにデータベース セマンティクスを使用: null のいずれかまたは両方の値が null の場合の比較となります。 その一方で、2 つの `Equals` に対して CLR <xref:System.Data.SqlTypes> メソッドを使用した場合は、両方が NULL であれば true が得られます。 これは、CLR `String.Equals` メソッドなどのインスタンス メソッドを使用した場合と、`SqlString.Equals` などの静的/共有メソッドを使用した場合の違いを反映しています。  
+ NULL 値を比較する場合は、`Equals` メソッドによって <xref:System.Data.SqlTypes> で NULL 値を評価する方法と、CLR 型を使用する方法との違いを理解することが重要です。 <xref:System.Data.SqlTypes>`Equals` メソッドではすべて、NULL 値の評価にデータベース セマンティクスが使用されます。一方または両方の値が NULL である場合は、比較によって NULL が得られます。 その一方で、2 つの `Equals` に対して CLR <xref:System.Data.SqlTypes> メソッドを使用した場合は、両方が NULL であれば true が得られます。 これは、CLR `String.Equals` メソッドなどのインスタンス メソッドを使用した場合と、`SqlString.Equals` などの静的/共有メソッドを使用した場合の違いを反映しています。  
   
  次のコード サンプルでは、`SqlString.Equals` メソッドと `String.Equals` メソッドにそれぞれ NULL 値のペアを渡し、次に空の文字列のペアを渡した場合の、各メソッドの結果の違いを示します。  
   
@@ -141,6 +141,7 @@ String.Equals instance method:
   Two empty strings=True   
 ```  
   
-## <a name="see-also"></a>関連項目  
- [SQL Server データ型と ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [SQL Server データ型と ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

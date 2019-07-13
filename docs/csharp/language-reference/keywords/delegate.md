@@ -10,12 +10,12 @@ helpviewer_keywords:
 - delegate keyword [C#]
 - function pointers [C#]
 ms.assetid: 0bb8cb6d-2f87-47c7-9d1f-d65c1cd01e9f
-ms.openlocfilehash: 233b0255121cf6e7a5283041d594e2d843f105fb
-ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
+ms.openlocfilehash: f9df40c3ca721ca97b575a05377bbac29a29aec9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53286469"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560608"
 ---
 # <a name="delegate-c-reference"></a>delegate (C# リファレンス)
 
@@ -46,12 +46,12 @@ public delegate int TestDelegate(MyType m, long num);
 
 ## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
-- [参照型](../../../csharp/language-reference/keywords/reference-types.md)  
-- [デリゲート](../../../csharp/programming-guide/delegates/index.md)  
-- [イベント](../../../csharp/programming-guide/events/index.md)  
-- [名前付きメソッドを使用したデリゲートと匿名メソッドを使用したデリゲート](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md) 
+- [C# リファレンス](../../../csharp/language-reference/index.md)
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)
+- [参照型](../../../csharp/language-reference/keywords/reference-types.md)
+- [デリゲート](../../../csharp/programming-guide/delegates/index.md)
+- [イベント](../../../csharp/programming-guide/events/index.md)
+- [名前付きメソッドを使用したデリゲートと匿名メソッドを使用したデリゲート](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)
 - [匿名メソッド](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)
 - [ラムダ式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)

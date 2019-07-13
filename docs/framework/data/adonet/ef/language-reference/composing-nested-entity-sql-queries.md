@@ -2,18 +2,18 @@
 title: 入れ子になった Entity SQL クエリの作成
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-ms.openlocfilehash: 8a0efa672a57a9255af2d90af1725b34be75600e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4d6892e96cfbc9c5ba9d389aa03588c5133c7943
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606226"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>入れ子になった Entity SQL クエリの作成
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] は、機能の豊富な関数言語です。 ビルド ブロック[!INCLUDE[esql](../../../../../../includes/esql-md.md)]式を指定します。 従来の SQL とは異なり[!INCLUDE[esql](../../../../../../includes/esql-md.md)]は表形式の結果セットに限定されません。[!INCLUDE[esql](../../../../../../includes/esql-md.md)]リテラル、パラメーター、または入れ子になった式が複雑な式の作成をサポートしています。 式の値をパラメーター化されたまたはその他の式で構成できます。  
   
 ## <a name="nested-expressions"></a>入れ子になった式  
- 入れ子になった式は、その式によって返される型の値が受け入れられる場所であればどこにでも配置できます。 次に例を示します。  
+ 入れ子になった式は、その式によって返される型の値が受け入れられる場所であればどこにでも配置できます。 例:  
   
 ```  
 -- Returns a hierarchical collection of three elements at top-level.   
@@ -25,7 +25,7 @@ ROW(@x, {@x}, {@x, 4, 5}, {@x, 7, 8, 9})
 {{{@x}}};  
 ```  
   
- 入れ子になったクエリは、projection 句に配置できます。 次に例を示します。  
+ 入れ子になったクエリは、projection 句に配置できます。 例:  
   
 ```  
 -- Returns a collection of rows where each row contains an Address entity.  
@@ -46,7 +46,7 @@ UNION ALL
 FROM … );  
 ```  
   
- 次の例は、内の式を正しく入れ子にする方法を示します[!INCLUDE[esql](../../../../../../includes/esql-md.md)]:[方法: 共用体の 2 つのクエリで注文](https://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313)します。  
+ 次の例は、内の式を正しく入れ子にする方法を示します[!INCLUDE[esql](../../../../../../includes/esql-md.md)]:[方法:2 つのクエリの結合を並べ替える](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100))します。  
   
 ## <a name="nested-queries-in-projection"></a>投影内の入れ子になったクエリ  
  project 句内の入れ子になったクエリは、サーバーでデカルト積に変換されないことがあります。 SLQ Server などの一部のバックエンド サーバーでは、これによって TempDB テーブルのサイズが非常に大きくなり、サーバーのパフォーマンスに悪影響を及ぼす場合があります。  
@@ -75,5 +75,6 @@ SELECT C2.FirstName, C2.LastName
         ORDER BY C1.LastName) as C2  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Entity SQL の概要](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>関連項目
+
+- [Entity SQL の概要](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: 5cf49f8b97b33e179234bda4eb9ed6ef01d07fca
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 47c79b8d716be6c247be3ec66c9ef00fbc021973
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086765"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586271"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Visual Basic 言語のチュートリアル
 チュートリアルでは、製品や特定の機能領域について学習を開始するのに適した一般的なシナリオについて詳細な手順を示します。  
@@ -47,9 +47,6 @@ ms.locfileid: "44086765"
  [COM オブジェクトによる継承の実装](../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
  クラスを含む COM オブジェクトを Visual Basic 6.0 で作成し、そのオブジェクトを Visual Basic で基底クラスとして使用する方法について説明します。  
   
- [マルチスレッド](https://msdn.microsoft.com/library/2cbf5116-8499-4af9-818c-6f7c1c2ad2c9)  
- テキスト ファイルで単語を検索するマルチスレッド アプリケーションの作成方法について説明します。  
-  
  [My.Application.Log による情報の書き込み先の確認](../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
  `My.Application.Log` の既定の設定と、アプリケーションの設定を確認する方法について説明します。  
   
@@ -75,10 +72,10 @@ ms.locfileid: "44086765"
  Visual Basic の関数を使用して、ファイル情報を確認する方法、ファイル内で文字列を検索する方法、およびファイルへの書き込みを行う方法について説明します。  
   
  [NET Framework のメソッドによるファイル操作](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] のメソッドを使用して、ファイル情報を確認する方法、ファイル内で文字列を検索する方法、およびファイルへの書き込みを行う方法について説明します。  
+ .NET Framework のメソッドを使用して、ファイル情報を確認する方法、ファイル内で文字列を検索する方法、およびファイルへの書き込みを行う方法について説明します。  
   
  [オブジェクトの永続化 (Visual Basic)](../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  簡単なオブジェクトを作成し、そのデータをファイルに永続化する方法について説明します。  
   
- [使用法から生成機能によるテスト ファーストのサポート](https://msdn.microsoft.com/library/764c17a4-cd95-4c23-bf63-d92d9c5adfb2)  
+ [チュートリアル: 使用法から生成機能のテスト ファーストのサポート](/visualstudio/ide/walkthrough-test-first-support-with-the-generate-from-usage-feature)  
  テスト ファースト開発を行う方法について説明します。この開発では、単体テストを作成してからソース コードを記述して、テストを成功させます。

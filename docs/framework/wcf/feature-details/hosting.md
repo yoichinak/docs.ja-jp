@@ -2,12 +2,12 @@
 title: Hosting2
 ms.date: 03/30/2017
 ms.assetid: 0820c7e5-0b50-4cde-80e7-74e346513002
-ms.openlocfilehash: 9237518f5bfa48401e60e47ccc40e4ee303dec35
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 575b2a3e34246e1082d34545baaf812203a1dde1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44209239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855843"
 ---
 # <a name="hosting"></a>ホスト
 このセクションのトピックでは、サービス ホスティングについて説明します。 インターネット インフォメーション サービス (IIS)、Windows プロセス アクティブ化サービス (WAS)、Windows Server AppFabric、Windows サービス、またはマネージ アプリケーションによっては、サービスをホストされていることができます: このオプションとして呼ば*自己ホスト*します。  
@@ -33,6 +33,7 @@ ms.locfileid: "44209239"
  [複数の IIS サイト バインディングのサポート](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md)  
  1 つの Web サイト上で同じ URI スキームを使用してサービスの複数のベース アドレスを指定する方法について説明します。  
   
-## <a name="see-also"></a>関連項目  
- [ホスティング サービス](../../../../docs/framework/wcf/hosting-services.md)  
- [Windows Server App Fabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>関連項目
+
+- [ホスティング サービス](../../../../docs/framework/wcf/hosting-services.md)
+- [AppFabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkId=201276)

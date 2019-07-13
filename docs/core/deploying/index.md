@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 12/03/2018
 ms.custom: seodec18
-ms.openlocfilehash: bba4a76364f2951cabc3dde9866019459e9b3f06
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6f88659fcef49eba9344d3c4b2f0245b4072d7ab
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61613379"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core アプリケーションの展開
 
@@ -30,7 +30,7 @@ FDD では、アプリ、およびサードパーティの依存関係のみを�
 
 FDD の展開には、次のいくつかの利点があります。
 
-- .NET Core アプリが実行されるターゲットのオペレーティング システムを事前に定義する必要はありません。 .NET Core は、オペレーティング システムに関係なく実行可能ファイルとライブラリに共通の PE ファイル形式を使用するので、.NET Core は、基になるオペレーティング システムに関係なくアプリを実行できます。 PE ファイル形式の詳細については、「[.NET Assembly File Format](../../standard/assembly-format.md)」 (.NET アセンブリのファイル形式) を参照してください。
+- .NET Core アプリが実行されるターゲットのオペレーティング システムを事前に定義する必要はありません。 .NET Core は、オペレーティング システムに関係なく実行可能ファイルとライブラリに共通の PE ファイル形式を使用するので、.NET Core は、基になるオペレーティング システムに関係なくアプリを実行できます。 PE ファイル形式の詳細については、「[.NET Assembly File Format](../../standard/assembly/file-format.md)」 (.NET アセンブリのファイル形式) を参照してください。
 
 - 展開パッケージは小サイズです。 .NET Core 自体ではなく、アプリとその依存関係のみを展開します。
 
@@ -66,7 +66,7 @@ FDD および SCD の展開では別個のホスト実行可能ファイルを�
 
 - .NET Core だけでなくアプリおよびそのサードパーティの依存関係を含める必要があるので、展開パッケージは比較的大きくなります。
 
-  .NET Core 2.0 以降では、.NET Core の ["*グローバリゼーション インバリアント モード*"](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md) を使用することで、Linux システムでの展開のサイズを約 28 MB 小さくすることができます。 通常、Linux 上の .NET Core は [ICU ライブラリ](https://github.com/dotnet/docs/issues/http%22//icu-project.org)に依存してグローバリゼーションをサポートします。 インバリアント モードでは、ライブラリは展開に含まれず、すべてのカルチャが[インバリアント カルチャ](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)のように動作します。
+  .NET Core 2.0 以降では、.NET Core の ["*グローバリゼーション インバリアント モード*"](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md) を使用することで、Linux システムでの展開のサイズを約 28 MB 小さくすることができます。 通常、Linux 上の .NET Core は [ICU ライブラリ](http://icu-project.org)に依存してグローバリゼーションをサポートします。 インバリアント モードでは、ライブラリは展開に含まれず、すべてのカルチャが[インバリアント カルチャ](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)のように動作します。
 
 - 多数の自己完結型の .NET Core アプリをシステムに展開すると、各アプリが .NET Core ファイルを複製するので、非常に多くのディスク領域を使用する可能性があります。
 
@@ -94,16 +94,11 @@ FDE の展開には、次のいくつかの利点があります。
 
 ## <a name="step-by-step-examples"></a>手順の例
 
-CLI ツールで .NET Core アプリを展開する手順の例については、「[Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md)」(CLI ツールで .NET Core アプリを展開する) をご覧ください。 Visual Studio で .NET Core アプリを展開する手順の例については、「[Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md)」(Visual Studio で .NET Core アプリを展開する) をご覧ください。 各記事には、次の展開の例が含まれます。
-
-- フレームワークに依存する展開
-- サードパーティの依存関係を含む、フレームワークに依存する展開
-- 自己完結型の展開
-- サードパーティの依存関係を含む、自己完結型の展開
+CLI ツールで .NET Core アプリを展開する手順の例については、「[Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md)」(CLI ツールで .NET Core アプリを展開する) をご覧ください。 Visual Studio で .NET Core アプリを展開する手順の例については、「[Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md)」(Visual Studio で .NET Core アプリを展開する) をご覧ください。 
 
 ## <a name="see-also"></a>関連項目
 
-* [CLI ツールで .NET Core アプリを展開する](deploy-with-cli.md)
-* [Visual Studio で .NET Core アプリを展開する](deploy-with-vs.md)
-* [パッケージ、メタパッケージ、フレームワーク](../packages.md)
-* [.NET Core のランタイム識別子 (RID) のカタログ](../rid-catalog.md)
+- [CLI ツールで .NET Core アプリを展開する](deploy-with-cli.md)
+- [Visual Studio で .NET Core アプリを展開する](deploy-with-vs.md)
+- [パッケージ、メタパッケージ、フレームワーク](../packages.md)
+- [.NET Core のランタイム識別子 (RID) のカタログ](../rid-catalog.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Return statement [Visual Basic]
 - expressions [Visual Basic], returning control to
 ms.assetid: ac86e7f0-5a67-42c3-9834-0e0381efa3ec
-ms.openlocfilehash: fe200add4e29fe4bbe0fdf335dcd94107b8ff1eb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 7f8ec0456576133d37dd19b5c0f8878a7ac57dab
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47210176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783904"
 ---
 # <a name="return-statement-visual-basic"></a>Return ステートメント (Visual Basic)
 呼び出したコードに制御が戻ります、 `Function`、 `Sub`、 `Get`、 `Set`、または`Operator`プロシージャ。  
@@ -44,14 +44,15 @@ Return expression
 ## <a name="example"></a>例  
  次の例では、`Return`ステートメント、プロシージャが他に行うがあるない場合に、呼び出し元のコードに戻るに何度もします。  
   
- [!code-vb[VbVbalrStatements#53](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/return-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#53)]  
   
-## <a name="see-also"></a>関連項目  
- [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Get ステートメント](../../../visual-basic/language-reference/statements/get-statement.md)  
- [Set ステートメント](../../../visual-basic/language-reference/statements/set-statement.md)  
- [Operator ステートメント](../../../visual-basic/language-reference/statements/operator-statement.md)  
- [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)  
- [Exit ステートメント](../../../visual-basic/language-reference/statements/exit-statement.md)  
- [Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+## <a name="see-also"></a>関連項目
+
+- [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Get ステートメント](../../../visual-basic/language-reference/statements/get-statement.md)
+- [Set ステートメント](../../../visual-basic/language-reference/statements/set-statement.md)
+- [Operator ステートメント](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Exit ステートメント](../../../visual-basic/language-reference/statements/exit-statement.md)
+- [Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

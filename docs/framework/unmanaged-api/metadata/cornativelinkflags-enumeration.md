@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98a83a64a692955d5627e891e7fb3a3ef6f53476
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6be71878ba354ebe53b4b8b9b40db3222ec828f3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442570"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781738"
 ---
 # <a name="cornativelinkflags-enumeration"></a>CorNativeLinkFlags 列挙型
 ネイティブ コードをリンクするときに、リンカーが使用するフラグ値を提供します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum  
 {  
     nlfNone         = 0x00,  
@@ -43,18 +43,19 @@ typedef enum
 |メンバー|説明|  
 |------------|-----------------|  
 |`nlfNone`|フラグがないことを示します。|  
-|`nlfLastError`|示します、`setLastError`キーワード。|  
-|`nlfNoMangle`|示します、`nomangle`キーワード。|  
+|`nlfLastError`|示す、`setLastError`キーワード。|  
+|`nlfNoMangle`|示す、`nomangle`キーワード。|  
 |`nlfMaxValue`|使用しません。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>関連項目
+
+- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

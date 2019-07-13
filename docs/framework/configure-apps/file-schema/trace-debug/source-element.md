@@ -1,5 +1,5 @@
 ---
-title: '&lt;ソース&gt;要素'
+title: <source> 要素
 ms.date: 09/29/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source
@@ -7,20 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - <source> element
 - source element
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 818324077322fffb40a192c9197efde6e8ff7591
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8860f5d3ed7ee0c04d1e8afd7614f3f73b470808
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673707"
 ---
-# <a name="ltsourcegt-element"></a>&lt;ソース&gt;要素
+# <a name="source-element"></a>\<ソース > 要素
 トレース メッセージを開始するトレース ソースを指定します。  
   
  \<configuration>  
-\<system.diagnostics >  
+\<system.diagnostics>  
 \<ソース >  
 \<ソース >  
   
@@ -84,6 +82,7 @@ ms.locfileid: "47231890"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [トレース スイッチ](../../../../../docs/framework/debug-trace-profile/trace-switches.md)
+## <a name="see-also"></a>関連項目
+
+- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [トレース スイッチ](../../../../../docs/framework/debug-trace-profile/trace-switches.md)

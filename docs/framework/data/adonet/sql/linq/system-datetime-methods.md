@@ -2,12 +2,12 @@
 title: System.DateTime メソッド
 ms.date: 03/30/2017
 ms.assetid: 4f80700c-e83f-4ab6-af0f-1c9a606e1133
-ms.openlocfilehash: 57ffb3a7f79607b449c6e300ca15396a3f99386b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 85af6f252362b811356d68a3ae220df2bb813882
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876773"
 ---
 # <a name="systemdatetime-methods"></a>System.DateTime メソッド
 LINQ to SQL でサポートされている以下のメソッド、演算子、およびプロパティは、LINQ to SQL のクエリで使用できます。 メソッド、演算子、またはプロパティがサポートされていない場合は、LINQ to SQL でメンバーを変換して SQL Server で実行することはできません。 これらのメンバーはコード内で使用できますが、クエリが Transact-SQL に変換される前、またはデータベースから結果が取得された後で評価する必要があります。  
@@ -64,8 +64,9 @@ LINQ to SQL でサポートされている以下のメソッド、演算子、�
 |<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffHour%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMinute%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffSecond%2A>|  
 |<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMicrosecond%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMonth%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffYear%2A>|  
   
-## <a name="see-also"></a>関連項目  
- [クエリの概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- [オブジェクト モデルの作成](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
- [SQL と CLR の型マッピング](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
- [データ型と関数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+## <a name="see-also"></a>関連項目
+
+- [クエリの概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [オブジェクト モデルの作成](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
+- [SQL と CLR の型マッピング](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
+- [データ型と関数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

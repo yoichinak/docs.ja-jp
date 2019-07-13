@@ -1,22 +1,22 @@
 ---
-title: '&lt;webHttp&gt;'
+title: <webHttp>
 ms.date: 03/30/2017
 ms.assetid: 1f9d0754-d41e-44ce-a298-e51cb3096c64
-ms.openlocfilehash: 9ba54dc1744751efe4efad04f829cccce1244e0d
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 795e61b9054d2ea9276970988018c50099bcbe17
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769799"
 ---
-# <a name="ltwebhttpgt"></a>&lt;webHttp&gt;
+# <a name="webhttp"></a>\<webHttp>
 この要素は、構成によってエンドポイントに <xref:System.ServiceModel.Description.WebHttpBehavior> を指定します。 この動作は、組み合わせて使用する場合、 [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)標準バインディングにより、Windows Communication Foundation (WCF) サービスの Web プログラミング モデル。  
   
  \<system.ServiceModel >  
 \<<behaviors>  
 \<endpointBehaviors>  
 \<behavior>  
-\<webHttp >  
+\<webHttp>  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,8 +46,9 @@ ms.locfileid: "54145678"
 |-------------|-----------------|  
 |[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|エンドポイントの動作のセットを指定します。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.WebHttpElement>  
- <xref:System.ServiceModel.Description.WebHttpBehavior>  
- [AJAX の統合と JSON のサポート](../../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)  
- [\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Configuration.WebHttpElement>
+- <xref:System.ServiceModel.Description.WebHttpBehavior>
+- [AJAX の統合と JSON のサポート](../../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)
+- [\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)

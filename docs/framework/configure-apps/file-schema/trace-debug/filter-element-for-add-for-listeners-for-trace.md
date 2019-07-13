@@ -1,5 +1,5 @@
 ---
-title: '&lt;フィルター&gt;要素&lt;追加&gt;の&lt;リスナー&gt;の&lt;トレース&gt;'
+title: <filter> の <add> の <listeners> の <trace> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add/filter
@@ -8,22 +8,20 @@ helpviewer_keywords:
 - filter element for <add> for <listeners> for <trace>
 - <filter> element for <add> for <listeners> for <trace>
 ms.assetid: eb9c18f5-dfa8-47c5-b91b-e4b93e76e1cc
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: be4f3dcce1a746b287e75e0e6d3ba6eaa1d9b57b
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 5961125e1b8d0d0f5711f8b942b68ba71d61888f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701308"
 ---
-# <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-lttracegt"></a>&lt;フィルター&gt;要素&lt;追加&gt;の&lt;リスナー&gt;の&lt;トレース&gt;
+# <a name="filter-element-for-add-for-listeners-for-trace"></a>\<フィルター > 要素の\<追加 > の\<リスナー > の\<トレース >
 内のリスナーにフィルターを追加、`Listeners`トレースのコレクション。  
   
  \<configuration>  
-\<system.diagnostics >  
+\<system.diagnostics>  
 \<トレース >  
-\<リスナー >  
+\<listeners>  
 \<add>  
 \<フィルター >  
   
@@ -83,9 +81,10 @@ ms.locfileid: "48032557"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Diagnostics.Trace>  
- <xref:System.Diagnostics.TraceListener>  
- <xref:System.Diagnostics.TraceListener.Filter%2A?displayProperty=nameWithType>  
- <xref:System.Diagnostics.TraceFilter>  
- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Diagnostics.Trace>
+- <xref:System.Diagnostics.TraceListener>
+- <xref:System.Diagnostics.TraceListener.Filter%2A?displayProperty=nameWithType>
+- <xref:System.Diagnostics.TraceFilter>
+- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

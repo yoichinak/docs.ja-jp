@@ -1,17 +1,21 @@
 ---
 title: dotnet clean コマンド
 description: dotnet clean コマンドは現在のディレクトリを消去します。
-ms.date: 12/04/2018
-ms.openlocfilehash: a25b7930794795e3dff5051a8ca1dd1b9c261dfd
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.date: 06/26/2019
+ms.openlocfilehash: 36630c046ff8f1ad8d513b4e64cfb74a8625776b
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169860"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422020"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
+**このトピックの対象: ✓** .NET Core 1.x SDK 以降のバージョン
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>name
 
@@ -20,7 +24,8 @@ ms.locfileid: "53169860"
 ## <a name="synopsis"></a>構文
 
 ```
-dotnet clean [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
+dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] 
+    [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
 
@@ -30,9 +35,9 @@ dotnet clean [-h|--help]
 
 ## <a name="arguments"></a>引数
 
-`PROJECT`
+`PROJECT | SOLUTION`
 
-消去する MSBuild プロジェクトです。 プロジェクト ファイルを指定しない場合、MSBuild は、現在の作業ディレクトリから *proj* で終わるファイル名拡張子を検索し、そのファイルを使います。
+クリーンにする MSBuild プロジェクトまたはソリューション。 プロジェクトまたはソリューションのファイルを指定しない場合、MSBuild は、現在の作業ディレクトリから *proj* または *sln* のどちらかで終わるファイル拡張子を持つファイルを検索して、そのファイルを使います。
 
 ## <a name="options"></a>オプション
 
@@ -48,9 +53,17 @@ dotnet clean [-h|--help]
 
   コマンドの短いヘルプを印刷します。
 
+* **`--interactive`**
+
+  コマンドを停止して、ユーザーの入力または操作のために待機させることができます。 たとえば、認証を完了する場合があります。 .NET Core 3.0 SDK 以降で使用できます。
+
+* **`--nologo`**
+
+  著作権情報を表示しません。 .NET Core 3.0 SDK 以降で使用できます。
+
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  ビルド出力が配置されたディレクトリです。 プロジェクトのビルド時にフレームワークを指定した場合、出力ディレクトリ スイッチと共に `-f|--framework <FRAMEWORK>` スイッチを指定します。
+  クリーンにするビルド成果物を含むディレクトリ。 プロジェクトのビルド時にフレームワークを指定した場合、出力ディレクトリ スイッチと共に `-f|--framework <FRAMEWORK>` スイッチを指定します。
 
 * **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
@@ -58,7 +71,7 @@ dotnet clean [-h|--help]
 
 * **`-v|--verbosity <LEVEL>`**
 
-  コマンドの詳細レベルを設定します。 指定できるレベルは、q[uiet]、m[inimal]、n[ormal]、d[etailed]、diag[nostic] です。
+  MSBuild の詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。 既定値は、`normal` です。
 
 ## <a name="examples"></a>使用例
 

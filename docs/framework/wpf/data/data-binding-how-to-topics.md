@@ -7,52 +7,52 @@ helpviewer_keywords:
 - data binding [WPF], how-to topics
 - binding data [WPF], how-to topics
 ms.assetid: a3b2563e-d879-41a7-9dfd-ac56b27fdcad
-ms.openlocfilehash: ae69481a884610d6253ee9a45bc3139cabac7e0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49929dc5afaa9bc1e97589d244c2bdbbd14cdb00
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023755"
 ---
 # <a name="data-binding-how-to-topics"></a>データ バインドに関する「方法」トピック
-このセクションのトピックでは、データ バインディングを使用して要素をさまざまな共通言語ランタイム (CLR) オブジェクトと XML の形式でデータ ソースからデータにバインドする方法について説明します。  
+このセクションのトピックでは、データ バインディングを使用して、要素のさまざまな共通言語ランタイム (CLR) オブジェクトと XML の形式でデータ ソースからデータにバインドする方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [簡単なバインディングを作成する](../../../../docs/framework/wpf/data/how-to-create-a-simple-binding.md)  
- [バインディング ソースを指定する](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md)  
- [XAML でデータをバインディング可能にする](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)  
- [TextBox テキストでソースを更新するタイミングを制御する](../../../../docs/framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md)  
- [バインディングの方向を指定する](../../../../docs/framework/wpf/data/how-to-specify-the-direction-of-the-binding.md)  
- [コレクションにバインドして選択に基づく情報を表示する](../../../../docs/framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md)  
- [方法: 列挙値にバインドする](../../../../docs/framework/wpf/data/how-to-bind-to-an-enumeration.md)  
- [2 つのコントロールのプロパティをバインドする](../../../../docs/framework/wpf/data/how-to-bind-the-properties-of-two-controls.md)  
- [バインディングの検証の実装](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md)  
- [カスタム オブジェクトに検証ロジックを実装する](../../../../docs/framework/wpf/data/how-to-implement-validation-logic-on-custom-objects.md)  
- [バインドされているターゲット プロパティからのバインディング オブジェクトの取得](../../../../docs/framework/wpf/data/how-to-get-the-binding-object-from-a-bound-target-property.md)  
- [CompositeCollection を実装する](../../../../docs/framework/wpf/data/how-to-implement-a-compositecollection.md)  
- [バインドされたデータを変換する](../../../../docs/framework/wpf/data/how-to-convert-bound-data.md)  
- [コードでバインディングを作成する](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md)  
- [データ コレクションの既定のビューを取得する](../../../../docs/framework/wpf/data/how-to-get-the-default-view-of-a-data-collection.md)  
- [データ CollectionView のオブジェクト間を移動する](../../../../docs/framework/wpf/data/how-to-navigate-through-the-objects-in-a-data-collectionview.md)  
- [ビュー内のデータをフィルター処理する](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)  
- [ビュー内のデータの並べ替え](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)  
- [XAML でビューを使用してデータの並べ替えおよびグループ化を行う](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)  
- [階層データでマスター詳細パターンを使用する](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)  
- [階層 XML データでマスター詳細パターンを使用する](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)  
- [バインドされた項目の一覧に基づいて値を生成する](../../../../docs/framework/wpf/data/how-to-produce-a-value-based-on-a-list-of-bound-items.md)  
- [プロパティの変更通知を実装する](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md)  
- [ObservableCollection を作成およびバインドする](../../../../docs/framework/wpf/data/how-to-create-and-bind-to-an-observablecollection.md)  
- [PriorityBinding を実装する](../../../../docs/framework/wpf/data/how-to-implement-prioritybinding.md)  
- [XMLDataProvider と XPath クエリを使用して XML データにバインドする](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)  
- [XDocument、XElement、または LINQ for XML クエリの結果にバインドする](../../../../docs/framework/wpf/data/how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)  
- [データ バインドで XML 名前空間を使用する](../../../../docs/framework/wpf/data/how-to-use-xml-namespaces-in-data-binding.md)  
- [ADO.NET データ ソースにバインドする](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)  
- [メソッドにバインドする](../../../../docs/framework/wpf/data/how-to-bind-to-a-method.md)  
- [バインディングの更新の通知を設定する](../../../../docs/framework/wpf/data/how-to-set-up-notification-of-binding-updates.md)  
- [バインディングをクリアする](../../../../docs/framework/wpf/data/how-to-clear-bindings.md)  
- [DataTemplate によって生成された要素を検索する](../../../../docs/framework/wpf/data/how-to-find-datatemplate-generated-elements.md)  
- [Web サービスにバインドする](../../../../docs/framework/wpf/data/how-to-bind-to-a-web-service.md)  
- [LINQ クエリの結果にバインドする](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)  
+ [簡単なバインディングを作成する](how-to-create-a-simple-binding.md)  
+ [バインディング ソースを指定する](how-to-specify-the-binding-source.md)  
+ [XAML でデータをバインディング可能にする](how-to-make-data-available-for-binding-in-xaml.md)  
+ [TextBox テキストでソースを更新するタイミングを制御する](how-to-control-when-the-textbox-text-updates-the-source.md)  
+ [バインディングの方向を指定する](how-to-specify-the-direction-of-the-binding.md)  
+ [コレクションにバインドして選択に基づく情報を表示する](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)  
+ [方法: 列挙値にバインドする](how-to-bind-to-an-enumeration.md)  
+ [2 つのコントロールのプロパティをバインドする](how-to-bind-the-properties-of-two-controls.md)  
+ [バインディングの検証の実装](how-to-implement-binding-validation.md)  
+ [カスタム オブジェクトに検証ロジックを実装する](how-to-implement-validation-logic-on-custom-objects.md)  
+ [バインドされているターゲット プロパティからのバインディング オブジェクトの取得](how-to-get-the-binding-object-from-a-bound-target-property.md)  
+ [CompositeCollection を実装する](how-to-implement-a-compositecollection.md)  
+ [バインドされたデータを変換する](how-to-convert-bound-data.md)  
+ [コードでバインディングを作成する](how-to-create-a-binding-in-code.md)  
+ [データ コレクションの既定のビューを取得する](how-to-get-the-default-view-of-a-data-collection.md)  
+ [データ CollectionView のオブジェクト間を移動する](how-to-navigate-through-the-objects-in-a-data-collectionview.md)  
+ [ビュー内のデータをフィルター処理する](how-to-filter-data-in-a-view.md)  
+ [ビュー内のデータの並べ替え](how-to-sort-data-in-a-view.md)  
+ [XAML でビューを使用してデータの並べ替えおよびグループ化を行う](how-to-sort-and-group-data-using-a-view-in-xaml.md)  
+ [階層データでマスター詳細パターンを使用する](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)  
+ [階層 XML データでマスター詳細パターンを使用する](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)  
+ [バインドされた項目の一覧に基づいて値を生成する](how-to-produce-a-value-based-on-a-list-of-bound-items.md)  
+ [プロパティの変更通知を実装する](how-to-implement-property-change-notification.md)  
+ [ObservableCollection を作成およびバインドする](how-to-create-and-bind-to-an-observablecollection.md)  
+ [PriorityBinding を実装する](how-to-implement-prioritybinding.md)  
+ [XMLDataProvider と XPath クエリを使用して XML データにバインドする](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)  
+ [XDocument、XElement、または LINQ for XML クエリの結果にバインドする](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)  
+ [データ バインドで XML 名前空間を使用する](how-to-use-xml-namespaces-in-data-binding.md)  
+ [ADO.NET データ ソースにバインドする](how-to-bind-to-an-ado-net-data-source.md)  
+ [メソッドにバインドする](how-to-bind-to-a-method.md)  
+ [バインディングの更新の通知を設定する](how-to-set-up-notification-of-binding-updates.md)  
+ [バインディングをクリアする](how-to-clear-bindings.md)  
+ [DataTemplate によって生成された要素を検索する](how-to-find-datatemplate-generated-elements.md)  
+ [Web サービスにバインドする](how-to-bind-to-a-web-service.md)  
+ [LINQ クエリの結果にバインドする](how-to-bind-to-the-results-of-a-linq-query.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Data>  
@@ -64,6 +64,6 @@ ms.locfileid: "33557694"
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
 ## <a name="related-sections"></a>関連項目  
- [データ バインディング](../../../../docs/framework/wpf/data/data-binding-wpf.md)  
+ [データ バインディング](data-binding-wpf.md)  
   
- [データ バインディング](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
+ [データ バインディング](../advanced/optimizing-performance-data-binding.md)

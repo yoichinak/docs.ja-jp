@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-ms.openlocfilehash: 4a98ada39a04730b46f40fe139e72d1855d9b067
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c39272d53fea136c83a5a09444b65a594fe3b7a7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43739504"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625512"
 ---
-# <a name="inherits-statement"></a>Inherits Statement
+# <a name="inherits-statement"></a>Inherits ステートメント
 現在のクラスまたは属性、変数、プロパティ、プロシージャ、およびイベントを別のクラスまたはインターフェイスのセットから継承するインターフェイスとします。  
   
 ## <a name="syntax"></a>構文  
@@ -37,11 +37,11 @@ Inherits basetypenames
   
 ## <a name="rules"></a>ルール  
   
--   **クラスの継承します。** クラスで使用する場合、`Inherits`ステートメントでは、1 つだけの基本クラスを指定することができます。  
+- **クラスの継承します。** クラスで使用する場合、`Inherits`ステートメントでは、1 つだけの基本クラスを指定することができます。  
   
      クラスは、その中に入れ子になったクラスから継承できません。  
   
--   **インターフェイスの継承します。** インターフェイスで使用する場合、`Inherits`ステートメントでは、1 つまたは複数の基底インターフェイスを指定することができます。 同じ名前のメンバーが定義されている場合でも、2 つのインターフェイスから継承できます。 これを行う場合、実装コードは、実装しています。 どのメンバーを指定する名前の修飾を使用する必要があります。  
+- **インターフェイスの継承します。** インターフェイスで使用する場合、`Inherits`ステートメントでは、1 つまたは複数の基底インターフェイスを指定することができます。 同じ名前のメンバーが定義されている場合でも、2 つのインターフェイスから継承できます。 これを行う場合、実装コードは、実装しています。 どのメンバーを指定する名前の修飾を使用する必要があります。  
   
      インターフェイスより制限の厳しいアクセス レベルを持つ別のインターフェイスから継承できません。 たとえば、`Public`インターフェイスから継承することはできません、`Friend`インターフェイス。  
   
@@ -54,18 +54,19 @@ Inherits basetypenames
 ## <a name="example"></a>例  
  次の例では、`Inherits`クラスの名前付け方法を表示するステートメント`thisClass`という名前の基本クラスのすべてのメンバーを継承できる`anotherClass`します。  
   
- [!code-vb[VbVbalrStatements#37](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/inherits-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#37)]  
   
 ## <a name="example"></a>例  
  次の例では、複数のインターフェイスの継承を示します。  
   
- [!code-vb[VbVbalrStatements#38](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/inherits-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#38)]  
   
  という名前のインターフェイス`thisInterface`内のすべての定義が含まれています、 <xref:System.IComparable>、 <xref:System.IDisposable>、および<xref:System.IFormattable>継承されたメンバーでは、それぞれ 2 つのオブジェクトの種類に固有の比較を解放するインターフェイスには、リソースが割り当てられますをオブジェクトとしての値を表現して、`String`します。 実装するクラス`thisInterface`すべて基底インターフェイスのすべてのメンバーを実装する必要があります。  
   
-## <a name="see-also"></a>関連項目  
- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
- [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)  
- [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [継承の基本](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
- [インターフェイス](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a>関連項目
+
+- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
+- [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)
+- [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [継承の基本](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [インターフェイス](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

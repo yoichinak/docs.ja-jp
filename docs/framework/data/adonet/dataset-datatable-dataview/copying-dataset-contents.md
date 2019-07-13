@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
-ms.openlocfilehash: b85fb6ebf56b110330be121c87d2492b0cfac536
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 29afeb84498f2b1d000940ddc28545602a44d408
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43804070"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626150"
 ---
 # <a name="copying-dataset-contents"></a>DataSet の内容のコピー
 コピーを作成することができます、<xref:System.Data.DataSet>元のデータに影響を与えずにデータを操作したり、作業するためのデータのサブセットを**データセット**。 コピーするときに、**データセット**を実行できます。  
   
--   正確なコピーを作成、**データセット**(スキーマ、データ、行状態情報、行のバージョンなど)。  
+- 正確なコピーを作成、**データセット**(スキーマ、データ、行状態情報、行のバージョンなど)。  
   
--   作成、**データセット**、既存のスキーマを格納している**データセット**、変更された行だけです。 変更されているすべての行を返すか、特定の指定**DataRowState**します。 行の状態の詳細については、次を参照してください。[行の状態と行バージョン](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)します。  
+- 作成、**データセット**、既存のスキーマを格納している**データセット**、変更された行だけです。 変更されているすべての行を返すか、特定の指定**DataRowState**します。 行の状態の詳細については、次を参照してください。[行の状態と行バージョン](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)します。  
   
--   スキーマ、またはリレーショナル構造のコピー、**データセット**のみ、すべての行をコピーすることがなく。 行は、<xref:System.Data.DataTable> を使用して、既存の <xref:System.Data.DataTable.ImportRow%2A> にインポートできます。  
+- スキーマ、またはリレーショナル構造のコピー、**データセット**のみ、すべての行をコピーすることがなく。 行は、<xref:System.Data.DataTable> を使用して、既存の <xref:System.Data.DataTable.ImportRow%2A> にインポートできます。  
   
  正確なコピーを作成する、**データセット**スキーマとデータの両方を含む、使用、<xref:System.Data.DataSet.Copy%2A>のメソッド、**データセット**します。 次のコード例の完全なコピーを作成する方法を示しています、**データセット**します。  
   
@@ -94,8 +94,9 @@ foreach (DataRow copyRow in copyRows)
   customerTable.ImportRow(copyRow);  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Data.DataSet>  
- <xref:System.Data.DataTable>  
- [DataSet、DataTable、および DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Data.DataSet>
+- <xref:System.Data.DataTable>
+- [DataSet、DataTable、および DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

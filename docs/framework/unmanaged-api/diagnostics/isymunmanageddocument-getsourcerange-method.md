@@ -17,18 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 00baed93bd9ab48c92de83dac76931c3149afc2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 981048c10be27900f011afeab55d1c5eb523f734
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776679"
 ---
 # <a name="isymunmanageddocumentgetsourcerange-method"></a>ISymUnmanagedDocument::GetSourceRange メソッド
-指定されたバッファーに埋め込まれたソースの指定した範囲を返します。 バッファーは、ソースを保持するのに十分な大きさである必要があります。  
+指定されたバッファーに埋め込みのソースの指定した範囲を返します。 バッファーは、ソースを保持するために十分な大きさである必要があります。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetSourceRange(  
     [in]  ULONG32  startLine,  
     [in]  ULONG32  startColumn,  
@@ -40,7 +41,7 @@ HRESULT GetSourceRange(
         length_is(*pcSourceBytes)] BYTE source[]);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `startLine`  
  [in]現在のドキュメント内の開始行。  
   
@@ -48,10 +49,10 @@ HRESULT GetSourceRange(
  [in]現在のドキュメント内の開始列。  
   
  `endLine`  
- [in]現在のドキュメント内の最終行。  
+ [in]現在のドキュメントの最後の行。  
   
  `endColumn`  
- [in]現在のドキュメント内の最終列。  
+ [in]現在のドキュメントの最後の列。  
   
  `cSourceBytes`  
  [in] \(バイト単位)、ソースのサイズ。  
@@ -60,10 +61,11 @@ HRESULT GetSourceRange(
  [out]ソースのサイズを受け取る変数へのポインター。  
   
  `source`  
- [out]サイズ (バイト単位)、ソース ドキュメントの指定された範囲の長さ。  
+ [out]サイズと指定されたバイト数で、ソース ドキュメントの範囲の長さ。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は S_OK です。  
+ メソッドが成功した場合は s_ok を返します。  
   
-## <a name="see-also"></a>関連項目  
- [ISymUnmanagedDocument インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [ISymUnmanagedDocument インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

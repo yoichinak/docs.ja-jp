@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 98ef688c1136a81a5b57c3fdfee73c53024186e7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0ca510f30f0f38ae54eb83046b0e9d5541db882d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191043"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758691"
 ---
 # <a name="putmethod-function"></a>PutMethod 関数
 メソッドが作成されます。
@@ -30,7 +30,7 @@ ms.locfileid: "50191043"
     
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT PutMethod (
    [in] int                vFunc, 
    [in] IWbemClassObject*  ptr, 
@@ -60,7 +60,6 @@ HRESULT PutMethod (
 
 `pSignatureOut`  
 [in] コピーへのポインター、 [_parameters システム クラス](/windows/desktop/WmiSdk/--parameters)を格納している、`out`メソッドのパラメーター。 場合、このパラメーターは無視されます設定`null`します。
- 
 
 ## <a name="return-value"></a>戻り値
 
@@ -95,11 +94,12 @@ HRESULT PutMethod (
 例については、次を参照してください。、 [IWbemClassObject::PutMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-putmethod)メソッド。
 
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>関連項目  
-[WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+## <a name="see-also"></a>関連項目
+
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

@@ -17,33 +17,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4924f373270a30b593e27c334d383963fc4a7cf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4244ef04d6789b7c17ccc8330cb0c26a6c9f3866
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435852"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765550"
 ---
 # <a name="iclrruntimeinfogetinterface-method"></a>ICLRRuntimeInfo::GetInterface メソッド
-現在のプロセスに CLR を読み込んで、ランタイム、インターフェイス ポインターをなど返します[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)、 [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)、および[IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)です。  
+現在のプロセスに CLR をロードし、ランタイム、インターフェイス ポインターをなど返します[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)、 [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)、および[IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)します。  
   
- このメソッドはすべて、 `CorBindTo`* で機能、 [CLR をホストしている関数の非推奨](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)セクションです。  
+ このメソッドはすべて、 `CorBindTo`* 関数の[CLR ホスト関数の非推奨とされます](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)セクション。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetInterface(  
 [in]  REFCLSID rclsid,  
 [in]  REFIID   riid,  
 [out, iid_is(riid), retval] LPVOID *ppUnk);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `rclsid`  
- [in]コクラスの CLSID インターフェイスです。  
+ [in]コクラスの CLSID のインターフェイスです。  
   
  `riid`  
- [in]要求された IID`rclsid`インターフェイスです。  
+ [in]要求された IID`rclsid`インターフェイス。  
   
  `ppUnk`  
  [out]照会されたインターフェイスへのポインター。  
@@ -55,35 +55,36 @@ HRESULT GetInterface(
 |-------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
 |E_POINTER|`ppUnk` が null です。|  
-|E_OUTOFMEMORY|十分なメモリが要求を処理します。|  
-|CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|異なるランタイムは、従来の CLR バージョン 2 のアクティブ化ポリシーに既にバインドされています。|  
+|E_OUTOFMEMORY|メモリが不足は、要求を処理するために使用できます。|  
+|CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|別のランタイムは、従来の CLR バージョン 2 のアクティブ化ポリシーに既にバインドされています。|  
   
-## <a name="remarks"></a>コメント  
- このメソッドによって、CLR が読み込まれますが、初期化されていません。  
+## <a name="remarks"></a>Remarks  
+ このメソッドにより、CLR が読み込まれますが、初期化されていません。  
   
- 次の表は、サポートされる組み合わせの`rclsid`と`riid`です。  
+ 次の表は、サポートされている組み合わせ`rclsid`と`riid`します。  
   
 |`rclsid`|`riid`|  
 |--------------|------------|  
-|CLSID_CorMetaDataDispenser|IID_IMetaDataDispenser、IID_IMetaDataDispenserEx|  
-|CLSID_CorMetaDataDispenserRuntime|IID_IMetaDataDispenser、IID_IMetaDataDispenserEx|  
+|CLSID_CorMetaDataDispenser|IID_IMetaDataDispenser, IID_IMetaDataDispenserEx|  
+|CLSID_CorMetaDataDispenserRuntime|IID_IMetaDataDispenser, IID_IMetaDataDispenserEx|  
 |CLSID_CorRuntimeHost|IID_ICorRuntimeHost|  
-|CLSID_CLRRuntimeHost|Iid_iclrruntimehost です。|  
+|CLSID_CLRRuntimeHost|IID_ICLRRuntimeHost|  
 |CLSID_TypeNameFactory|IID_ITypeNameFactory|  
 |CLSID_CLRDebuggingLegacy|IID_ICorDebug|  
 |||  
 |CLSID_CLRStrongName|IID_ICLRStrongName|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MetaHost.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICLRRuntimeInfo インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
- [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [ホスティング](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>関連項目
+
+- [ICLRRuntimeInfo インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [ホスティング](../../../../docs/framework/unmanaged-api/hosting/index.md)

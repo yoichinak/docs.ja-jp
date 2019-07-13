@@ -7,22 +7,23 @@ helpviewer_keywords:
 - reusing resources [WPF]
 - 'resources [WPF], '
 ms.assetid: 9f986a6d-7cc8-45ac-bb0f-43177a57649d
-ms.openlocfilehash: e0dc707419e975fa57a47e6c51a40c295b8e62ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ad776b8ed18d74a6804b0efd8853c7af6efee0e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053484"
 ---
 # <a name="resources-how-to-topics"></a>リソースに関する「方法」トピック
 このセクションのトピックでは、Windows Presentation Foundation (WPF) のリソースを使用する方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [リソースを定義および参照する](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)  
- [アプリケーション リソースを使用する](../../../../docs/framework/wpf/advanced/how-to-use-application-resources.md)  
- [SystemFonts を使用する](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)  
- [システム フォント キーを使用する](../../../../docs/framework/wpf/advanced/how-to-use-system-fonts-keys.md)  
- [SystemParameters を使用する](../../../../docs/framework/wpf/advanced/how-to-use-systemparameters.md)  
- [システム パラメーター キーを使用する](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)  
+ [リソースを定義および参照する](how-to-define-and-reference-a-resource.md)  
+ [アプリケーション リソースを使用する](how-to-use-application-resources.md)  
+ [SystemFonts を使用する](how-to-use-systemfonts.md)  
+ [システム フォント キーを使用する](how-to-use-system-fonts-keys.md)  
+ [SystemParameters を使用する](how-to-use-systemparameters.md)  
+ [システム パラメーター キーを使用する](how-to-use-system-parameters-keys.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.FrameworkTemplate.Resources%2A>  
@@ -34,4 +35,4 @@ ms.lasthandoff: 05/04/2018
  <xref:System.Windows.SystemFonts>  
   
 ## <a name="related-sections"></a>関連項目  
- [XAML リソース](../../../../docs/framework/wpf/advanced/xaml-resources.md)
+ [XAML リソース](xaml-resources.md)

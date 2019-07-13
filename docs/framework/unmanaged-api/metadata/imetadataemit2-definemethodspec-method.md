@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 85b17199ad40d8b3fbf4e1a0271828e5a5ac7991
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a4185ec41fc9f7d1d919a79b57c02625210ad72a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445261"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777179"
 ---
 # <a name="imetadataemit2definemethodspec-method"></a>IMetaDataEmit2::DefineMethodSpec メソッド
-メソッドのジェネリックのインスタンスを作成し、定義にトークンを取得します。  
+メソッドのジェネリック インスタンスを作成し、定義するためのトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT DefineMethodSpec (  
     [in]  mdToken           tkParent,   
     [in]  PCCOR_SIGNATURE   pvSigBlob,   
@@ -38,28 +38,29 @@ HRESULT DefineMethodSpec (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `tkParent`  
- [in]ジェネリックのインスタンスを作成する対象のメソッドのトークンです。 トークン型でなければなりません`mdMethodDef`または`mdMemberRef`です。  
+ [in]ジェネリックのインスタンスを作成する対象のメソッドのトークンです。 トークン型でなければなりません`mdMethodDef`または`mdMemberRef`します。  
   
  `pvSigBlob`  
- [in]バイナリ COM + メソッドのシグネチャへのポインター。  
+ [in]メソッドのバイナリの COM + シグネチャへのポインター。  
   
  `cbSibBlob`  
- [in]サイズをバイト単位での`pvSigBlob`します。  
+ [in]サイズ (バイト単位) の`pvSigBlob`します。  
   
  `pmi`  
- [out]メソッドのメタデータ署名の定義をトークンです。  
+ [out]メソッドのメタデータ署名定義のトークン。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
  **ライブラリ:** MsCorEE.dll にリソースとして使用  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

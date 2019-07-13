@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9648375f-d368-4373-a976-3332ece00c0a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d8f4254da256bf2814f66aa62d43204fb302701
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 11f62b8fe8a28d6fe6401d53dac4b9bc1c45b21d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669109"
 ---
 # <a name="instantiating-a-datetimeoffset-object"></a>DateTimeOffset オブジェクトのインスタンス化
 
@@ -96,4 +96,4 @@ ms.locfileid: "47070722"
 
 ## <a name="see-also"></a>関連項目
 
-* [日付、時刻、およびタイム ゾーン](../../../docs/standard/datetime/index.md)
+- [日付、時刻、およびタイム ゾーン](../../../docs/standard/datetime/index.md)

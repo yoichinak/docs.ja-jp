@@ -3,11 +3,11 @@ title: AppDomainInfo
 ms.date: 03/30/2017
 ms.assetid: 6610b7d8-81eb-4bec-a543-9b72ad7b6f73
 ms.openlocfilehash: 0b7f8aadbd9a9dfcdd33fc65be3a5a41ea95f5be
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61964256"
 ---
 # <a name="appdomaininfo"></a>AppDomainInfo
 アプリケーション ドメイン情報  
@@ -55,21 +55,21 @@ class AppDomainInfo
 ### <a name="logmalformedmessages"></a>LogMalformedMessages  
  データ型 : boolean  
   
- アクセスの種類:読み取り/書き込み  
+ アクセスの種類:[読み取り/書き込み]  
   
  非整形式メッセージをログに記録するかどうかを指定する値です。  
   
 ### <a name="logmessagesatservicelevel"></a>LogMessagesAtServiceLevel  
  データ型 : boolean  
   
- アクセスの種類:読み取り/書き込み  
+ アクセスの種類:[読み取り/書き込み]  
   
  メッセージをサービス レベルでトレースするかどうかを指定する値です (暗号化およびトランスポート関連の変換前)。  
   
 ### <a name="logmessagesattransportlevel"></a>LogMessagesAtTransportLevel  
  データ型 : boolean  
   
- アクセスの種類:読み取り/書き込み  
+ アクセスの種類:[読み取り/書き込み]  
   
  メッセージをトランスポート レベルでトレースするかどうかを指定する値です。  
   
@@ -111,7 +111,7 @@ class AppDomainInfo
 ### <a name="tracelevel"></a>TraceLevel  
  データ型: string  
   
- アクセスの種類:読み取り/書き込み  
+ アクセスの種類:[読み取り/書き込み]  
   
  System.Wmi トレース ソースのトレース レベル。  
   
@@ -126,4 +126,4 @@ class AppDomainInfo
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
-|Namespace|root\ServiceModel で定義|
+|名前空間|root\ServiceModel で定義|

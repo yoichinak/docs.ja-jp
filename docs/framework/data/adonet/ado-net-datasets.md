@@ -2,15 +2,15 @@
 title: ADO.NET データセット
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-ms.openlocfilehash: e4f2aeca72404379a9cebbfacda77f98a9e85bf3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: da6fb7bbe82e37787615518fa74a0d84bf95758f
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44178352"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504276"
 ---
 # <a name="adonet-datasets"></a>ADO.NET データセット
-<xref:System.Data.DataSet> オブジェクトは、[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] で非接続型分散データ シナリオをサポートするうえで中心的な役割を果たします。 **データセット**データ ソースに関係なく一貫したリレーショナル プログラミング モデルを提供するデータのメモリ常駐型の表現です。 複数の異なるデータ ソースや XML データと組み合わせて使用でき、アプリケーションにとってローカルなデータの管理にも使用できます。 **データセット**関連テーブル、制約、およびテーブル間のリレーションシップを含む、データの完全なセットを表します。 次の図は、**データセット**オブジェクト モデルです。  
+<xref:System.Data.DataSet>オブジェクトは、切断されているサポートの中心となる分散データ シナリオ ADO.NET をします。 **データセット**データ ソースに関係なく一貫したリレーショナル プログラミング モデルを提供するデータのメモリ常駐型の表現です。 複数の異なるデータ ソースや XML データと組み合わせて使用でき、アプリケーションにとってローカルなデータの管理にも使用できます。 **データセット**関連テーブル、制約、およびテーブル間のリレーションシップを含む、データの完全なセットを表します。 次の図は、**データセット**オブジェクト モデルです。  
   
  ![ADO.Net グラフィック](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
 DataSet オブジェクト モデル  
@@ -20,7 +20,7 @@ DataSet オブジェクト モデル
  **データセット**も永続化および XML としてその内容とそのスキーマを XML スキーマ定義言語 (XSD) スキーマとしてを再読み込みできます。 詳しくは、「[DataSet での XML の使用](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)」を参照してください。  
   
 ## <a name="the-datatablecollection"></a>DataTableCollection  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] **データセット**によって表現される 0 個以上のテーブルのコレクションを含む<xref:System.Data.DataTable>オブジェクト。 <xref:System.Data.DataTableCollection>すべてが含まれています、 **DataTable**内のオブジェクトを**データセット**します。  
+ ADO.NET**データセット**によって表現される 0 個以上のテーブルのコレクションを含む<xref:System.Data.DataTable>オブジェクト。 <xref:System.Data.DataTableCollection>すべてが含まれています、 **DataTable**内のオブジェクトを**データセット**します。  
   
  A **DataTable**で定義されている、<xref:System.Data>名前空間、メモリ常駐データの 1 つのテーブルを表します。 このテーブルには、共にテーブルのスキーマを定義する <xref:System.Data.DataColumnCollection> で表現される列と <xref:System.Data.ConstraintCollection> で表現される制約のコレクションが含まれます。 A **DataTable**もによって表される行のコレクションを含む、<xref:System.Data.DataRowCollection>テーブルにデータを格納します。 <xref:System.Data.DataRow> には、行に格納された値の変更を識別できるように、行の現在の状態と共に、行の現在のバージョンと元のバージョンの両方が保持されます。  
   
@@ -41,12 +41,13 @@ DataSet オブジェクト モデル
  **データセット**、 **DataTable**、および**DataColumn**がすべて、 **ExtendedProperties**プロパティ。 **ExtendedProperties**は、 **PropertyCollection**結果セットの生成に使用された SELECT ステートメントやデータが生成された時刻などのカスタム情報を配置することができます。 **ExtendedProperties**コレクションのスキーマ情報に保存されて、**データセット**します。  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] は、DataSet に格納された非接続型データに対する統合言語クエリ機能を提供します。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 標準を使用して[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]構文と、Visual Studio IDE を使用しているときに、コンパイル時の構文チェック、静的な型指定、および IntelliSense のサポートを提供します。  
+ LINQ to DataSet は、データセットに格納されている非接続型データの統合言語クエリ機能を提供します。 LINQ to DataSet 規格を使用して[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]構文と、Visual Studio IDE を使用しているときに、コンパイル時の構文チェック、静的な型指定、および IntelliSense のサポートを提供します。  
   
  詳細については、「[LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [ADO.NET の概要](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [DataSet、DataTable、および DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET でのデータの取得および変更](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [ADO.NET の概要](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [DataSet、DataTable、および DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [ADO.NET でのデータの取得および変更](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

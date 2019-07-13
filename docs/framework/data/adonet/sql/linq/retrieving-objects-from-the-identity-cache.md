@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
-ms.openlocfilehash: fe22dbdff0e5e9ea6bfe55fc24c492414e01cd6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8e4fc9b83e11aef4347ab4765f6a2e75c526387
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357609"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64910754"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>ID キャッシュからのオブジェクトの取得
 このトピックでは、<xref:System.Data.Linq.DataContext> によって管理される ID キャッシュからオブジェクトを返す、LINQ to SQL クエリの種類について説明します。  
@@ -20,43 +20,43 @@ ms.locfileid: "33357609"
  通常、LINQ to SQL で ID キャッシュからオブジェクトを取得するには、そのクエリがオブジェクトのプライマリ キーに基づき、1 つのオブジェクトを返すようにする必要があります。 特に、次に示す一般的な形式のいずれかでクエリを実行する必要があります。  
   
 > [!NOTE]
->  プリコンパイル済みクエリでは、ID キャッシュからオブジェクトが返されません。 事前にコンパイルされたクエリの詳細については、次を参照してください。<xref:System.Data.Linq.CompiledQuery>と[する方法: ストアとクエリの再利用](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md)です。  
+>  プリコンパイル済みクエリでは、ID キャッシュからオブジェクトが返されません。 コンパイル済みクエリの詳細については、次を参照してください。<xref:System.Data.Linq.CompiledQuery>と[方法。格納およびクエリを再利用](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md)します。  
   
  オブジェクトを ID キャッシュから取得するには、次に示す一般的な形式のいずれかでクエリを実行する必要があります。  
   
--   <xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `)`  
+- <xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `)`  
   
--   <xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `).Function2()`  
+- <xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `).Function2()`  
   
  これらの一般的な形式では、`Function1`、`Function2`、および `predicate` が次のように定義されます。  
   
  `Function1` は、次のいずれかになります。  
   
--   <xref:System.Linq.Queryable.Where%2A>  
+- <xref:System.Linq.Queryable.Where%2A>  
   
--   <xref:System.Linq.Queryable.First%2A>  
+- <xref:System.Linq.Queryable.First%2A>  
   
--   <xref:System.Linq.Queryable.FirstOrDefault%2A>  
+- <xref:System.Linq.Queryable.FirstOrDefault%2A>  
   
--   <xref:System.Linq.Queryable.Single%2A>  
+- <xref:System.Linq.Queryable.Single%2A>  
   
--   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
+- <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
  `Function2` は、次のいずれかになります。  
   
--   <xref:System.Linq.Queryable.First%2A>  
+- <xref:System.Linq.Queryable.First%2A>  
   
--   <xref:System.Linq.Queryable.FirstOrDefault%2A>  
+- <xref:System.Linq.Queryable.FirstOrDefault%2A>  
   
--   <xref:System.Linq.Queryable.Single%2A>  
+- <xref:System.Linq.Queryable.Single%2A>  
   
--   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
+- <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
  `predicate` は、オブジェクトのプライマリ キー プロパティが定数値に設定された式である必要があります。 オブジェクトのプライマリ キーが複数のプロパティで定義されている場合は、それぞれのプライマリ キー プロパティが定数値に設定されている必要があります。 `predicate` に使用する必要がある形式の例を次に示します。  
   
--   `c => c.PK == constant_value`  
+- `c => c.PK == constant_value`  
   
--   `c => c.PK1 == constant_value1 && c=> c.PK2 == constant_value2`  
+- `c => c.PK1 == constant_value1 && c=> c.PK2 == constant_value2`  
   
 ## <a name="example"></a>例  
  次のコードは、ID キャッシュからオブジェクトを取得する LINQ to SQL クエリの例です。  
@@ -64,8 +64,9 @@ ms.locfileid: "33357609"
  [!code-csharp[L2S_QueryCache#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/l2s_querycache/cs/program.cs#1)]
  [!code-vb[L2S_QueryCache#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/l2s_querycache/vb/module1.vb#1)]  
   
-## <a name="see-also"></a>関連項目  
- [クエリの概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- [オブジェクト ID](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
- [背景情報](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [オブジェクト ID](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+## <a name="see-also"></a>関連項目
+
+- [クエリの概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [オブジェクト ID](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+- [背景情報](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [オブジェクト ID](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)

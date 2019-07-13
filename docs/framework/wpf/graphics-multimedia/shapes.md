@@ -14,21 +14,22 @@ helpviewer_keywords:
 - stretchable Shapes [WPF]
 - Shape objects [WPF]
 ms.assetid: 893253b8-c2df-4f22-961d-cbc533d64c79
-ms.openlocfilehash: 1dc19da76b73d5b8e5d66851b539a7d1829fc938
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c25e26130adc7f012d375f35a173a4b5dc9871f0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008177"
 ---
 # <a name="shapes"></a>図形
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 使用して基本図形を描画するためのサポートを提供、<xref:System.Windows.Shapes.Shape>クラスです。 図形オブジェクトから取得<xref:System.Windows.FrameworkElement>とそのため、レイアウト システムに参加しを使用して単に描画できる[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]です。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 使用して基本的な図形を描画するためのサポートの提供、<xref:System.Windows.Shapes.Shape>クラス。 図形オブジェクトから派生<xref:System.Windows.FrameworkElement>し、そのため、レイアウト システムに参加しを使用するだけに描画できる[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [WPF での図形と基本描画の概要](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/shapes-how-to-topics.md)  
+ [WPF での図形と基本描画の概要](shapes-and-basic-drawing-in-wpf-overview.md)  
+ [方法トピック](shapes-how-to-topics.md)  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Shapes.Shape>  
- [2D グラフィックスとイメージング](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [グラフィックスとマルチメディア](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Shapes.Shape>
+- [2D グラフィックスとイメージング](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [グラフィックスとマルチメディア](index.md)

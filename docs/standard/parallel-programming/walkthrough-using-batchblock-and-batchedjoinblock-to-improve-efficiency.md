@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb3f50459eeafcbb9f4882e56fb08b2001a35fb3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 91520b8967445a70a7775b99faef0cefc5e01cc2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042369"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654403"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>チュートリアル: BatchBlock および BatchedJoinBlock を使用した効率の向上
 TPL データ フロー ライブラリが提供する <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> および <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> クラスを使って、1 つ以上のソースからデータを受信してバッファーに格納し、それを 1 つのコレクションとして反映することができます。 このバッチ メカニズムは、1 つ以上のソースからデータを収集し、複数のデータ要素をバッチとして処理する場合に便利です。 例として、データフローを使ってレコードをデータベースに挿入するアプリケーションについて考えてみましょう。 この操作は、1 つずつ順番にではなく、複数の項目が同時に挿入される場合により効率的となります。 このドキュメントでは、<xref:System.Threading.Tasks.Dataflow.BatchBlock%601> クラスを使用して、そのようなデータベースの挿入操作を効率的に行う方法について説明します。 また、<xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> クラスを使用して、プログラムでデータベースを読み取る場合に、その結果と発生する例外の両方をキャプチャする方法について説明します。
@@ -25,43 +25,43 @@ TPL データ フロー ライブラリが提供する <xref:System.Threading.Ta
 
 ## <a name="prerequisites"></a>必須コンポーネント  
   
-1.  このチュートリアルを開始する前に、ドキュメント「[データフロー](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)」の結合ブロックのセクションを参照してください。  
+1. このチュートリアルを開始する前に、ドキュメント「[データフロー](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)」の結合ブロックのセクションを参照してください。  
   
-2.  コンピューターに Northwind データベース (Northwind.sdf) のコピーがあることを確認します。 このファイルは通常、%Program Files%\Microsoft SQL Server Compact Edition\v3.5\Samples\\ フォルダーに置かれています。  
+2. コンピューターに Northwind データベース (Northwind.sdf) のコピーがあることを確認します。 このファイルは通常、%Program Files%\Microsoft SQL Server Compact Edition\v3.5\Samples\\ フォルダーに置かれています。  
   
     > [!IMPORTANT]
-    >  Windows のバージョンによっては、Visual Studio が管理者以外のモードで実行されている場合には、Northwind.sdf に接続できません。 Northwind.sdf に接続するには、**[管理者として実行]** モードで、Visual Studio または Visual Studio のコマンド プロンプトを開始します。  
+    >  Windows のバージョンによっては、Visual Studio が管理者以外のモードで実行されている場合には、Northwind.sdf に接続できません。 Northwind.sdf に接続するには、**[管理者として実行]** モードで、Visual Studio または Visual Studio 用開発者コマンド プロンプトを開始します。  
   
  このチュートリアルは、次のセクションで構成されています。  
   
--   [コンソール アプリケーションの作成](#creating)  
+- [コンソール アプリケーションの作成](#creating)  
   
--   [Employee クラスの定義](#employeeClass)  
+- [Employee クラスの定義](#employeeClass)  
   
--   [従業員データベースの操作の定義](#operations)  
+- [従業員データベースの操作の定義](#operations)  
   
--   [バッファリングを使用しない従業員データのデータベースへの追加](#nonBuffering)  
+- [バッファリングを使用しない従業員データのデータベースへの追加](#nonBuffering)  
   
--   [バッファリングを使用した従業員データのデータベースへの追加](#buffering)  
+- [バッファリングを使用した従業員データのデータベースへの追加](#buffering)  
   
--   [バッファリングされた結合を使用した従業員データのデータベースからの読み込み](#bufferedJoin)  
+- [バッファリングされた結合を使用した従業員データのデータベースからの読み込み](#bufferedJoin)  
   
--   [コード例全体](#complete)  
+- [コード例全体](#complete)  
   
 <a name="creating"></a>   
 ## <a name="creating-the-console-application"></a>コンソール アプリケーションの作成  
   
 <a name="consoleApp"></a>   
-1.  Visual Studio で、Visual C# または Visual Basic の**コンソール アプリケーション** プロジェクトを作成します。 このドキュメントでは、プロジェクトの名前を `DataflowBatchDatabase` とします。  
+1. Visual Studio で、Visual C# または Visual Basic の**コンソール アプリケーション** プロジェクトを作成します。 このドキュメントでは、プロジェクトの名前を `DataflowBatchDatabase` とします。  
   
-2.  プロジェクトで、System.Data.SqlServerCe.dll への参照と System.Threading.Tasks.Dataflow.dll への参照を追加します。  
+2. プロジェクトで、System.Data.SqlServerCe.dll への参照と System.Threading.Tasks.Dataflow.dll への参照を追加します。  
   
-3.  Form1.cs (Visual Basic の Form1.vb) に次の `using` (Visual Basic では `Imports`) ステートメントが含まれていることを確認します。  
+3. Form1.cs (Visual Basic の Form1.vb) に次の `using` (Visual Basic では `Imports`) ステートメントが含まれていることを確認します。  
   
      [!code-csharp[TPLDataflow_BatchDatabase#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#1)]
      [!code-vb[TPLDataflow_BatchDatabase#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#1)]  
   
-4.  `Program` クラスに次のデータ メンバーを追加します。  
+4. `Program` クラスに次のデータ メンバーを追加します。  
   
      [!code-csharp[TPLDataflow_BatchDatabase#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#2)]
      [!code-vb[TPLDataflow_BatchDatabase#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#2)]  

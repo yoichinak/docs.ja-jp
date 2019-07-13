@@ -1,107 +1,59 @@
 ---
-title: =&gt; 演算子 - C# リファレンス
+title: => 演算子 - C# リファレンス
 ms.custom: seodec18
-ms.date: 10/02/2017
+ms.date: 01/22/2019
 f1_keywords:
 - =>_CSharpKeyword
 helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: c193a91eaffe2e56a5df2afa8d66989981123a48
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: a7fea9810cb02269278638ec71cd106463b029e9
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238794"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025016"
 ---
-# <a name="gt-operator-c-reference"></a>=&gt; 演算子 (C# リファレンス)
+# <a name="-operator-c-reference"></a>=> 演算子 (C# リファレンス)
 
-C# では、`=>` 演算子を 2 通りの方法で使用できます。
-
-- [ラムダ式](../../lambda-expressions.md)の[ラムダ演算子](#lamba-operator)として使用する場合、入力変数とラムダ本体が切り離されます。
- 
-- [式本体の定義](#expression-body-definition)で、メンバー名とメンバー実装が切り離されます。 
+`=>` トークンは、ラムダ演算子、および式本体の定義におけるメンバー名とメンバー実装の区切り記号という 2 つの形式でサポートされています。
 
 ## <a name="lambda-operator"></a>ラムダ演算子
 
-`=>` トークンはラムダ演算子と呼ばれます。 これは、左側の入力変数を右側のラムダ本体から分けるために*ラムダ式*で使用されます。 ラムダ式はインライン式の一種で匿名メソッドと似ていますが、それよりも柔軟性があります。この式はメソッド構文で表される LINQ クエリで広く使用されています。 詳細については、「[ラムダ式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)」を参照してください。  
-  
- 次の例では、文字列の配列の最も短い文字列の長さを検索して表示する 2 とおりの方法を示します。 この例の最初の部分では、`words` の配列の各要素にラムダ式 (`w => w.Length`) を適用し、<xref:System.Linq.Enumerable.Min%2A> メソッドを使用して最小の長さを検索します。 比較のために、例の 2 番目の部分では、同じ機能を実行するためにクエリ構文を使用する長いソリューションを示します。  
-  
-```csharp  
-string[] words = { "cherry", "apple", "blueberry" };  
-  
-// Use method syntax to apply a lambda expression to each element  
-// of the words array.   
-int shortestWordLength = words.Min(w => w.Length);  
-Console.WriteLine(shortestWordLength);  
-  
-// Compare the following code that uses query syntax.  
-// Get the lengths of each word in the words array.  
-var query = from w in words  
-            select w.Length;  
-// Apply the Min method to execute the query and get the shortest length.  
-int shortestWordLength2 = query.Min();  
-Console.WriteLine(shortestWordLength2);  
-  
-// Output:   
-// 5  
-// 5  
-```  
-  
-### <a name="remarks"></a>コメント  
- `=>` 演算子と代入演算子 (`=`) は優先順位が同じで、結合規則が右から左です。  
-  
- 入力変数の型を明示的に指定することができます。また、コンパイラで型を推測することもできます。いずれの場合も、変数はコンパイル時に厳密に型指定されます。 型を指定する場合は、次の例のように、型名と変数名をかっこで囲む必要があります。  
-  
-```csharp  
-int shortestWordLength = words.Min((string w) => w.Length);  
-```  
-  
-### <a name="example"></a>例  
- 次の例は、2 つの引数を受け取る標準クエリ演算子 <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> のオーバーロードのラムダ式を記述する方法を示しています。 ラムダ式には複数のパラメーターがあるため、パラメーターをかっこで囲む必要があります。 2 番目のパラメーター `index` は、コレクション内の現在の要素のインデックスを表します。 `Where` 式は、長さが配列内のインデックスの位置より短い文字列をすべて返します。  
-  
-```csharp  
-static void Main(string[] args)  
-{  
-    string[] digits = { "zero", "one", "two", "three", "four", "five",   
-            "six", "seven", "eight", "nine" };  
-  
-    Console.WriteLine("Example that uses a lambda expression:");  
-    var shortDigits = digits.Where((digit, index) => digit.Length < index);  
-    foreach (var sD in shortDigits)  
-    {  
-        Console.WriteLine(sD);  
-    }  
-  
-    // Output:  
-    // Example that uses a lambda expression:  
-    // five  
-    // six  
-    // seven  
-    // eight  
-    // nine  
-}  
-```  
+[ラムダ式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)では、ラムダ演算子 `=>` により、左側の入力変数と右側のラムダ本体とが分けられます。
+
+次の例は、メソッド構文で [LINQ](../../programming-guide/concepts/linq/index.md) 機能を使用して、ラムダ式の使用法を示しています。
+
+[!code-csharp-interactive[infer types of input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#InferredTypes)]
+
+ラムダ式の入力変数は、コンパイル時に厳密に型指定されます。 前の例のように、コンパイラが入力変数の型を推論できる場合は、省型宣言を略できます。 入力変数の型を指定する必要がある場合は、次の例に示すように、変数ごとに指定する必要があります。
+
+[!code-csharp-interactive[specify types of input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#ExplicitTypes)]
+
+次の例は、入力変数を含まないラムダ式を定義する方法を示しています。
+
+[!code-csharp-interactive[without input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#WithoutInput)]
+
+詳細については、「[ラムダ式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)」を参照してください。
+
 ## <a name="expression-body-definition"></a>式本体の定義
 
-式本体の定義を使用すると、メンバーの実装が簡潔でわかりやすい形式になります。 一般的な構文は次のようになります。
+式本体の定義には、次の一般的な構文があります。
 
 ```csharp
 member => expression;
 ```
-この *expression* には有効な式を指定します。 メンバーの戻り値の型が `void` の場合か、メンバーがコンストラクターかファイナライザーの場合にのみ、*式*は*ステートメント式*になります。
 
-メソッドとプロパティの get ステートメントの場合、C# 6 以降で式本体の定義を利用できます。 コンストラクター、ファイナライザー、プロパティの set ステートメント、インデクサーの場合、C# 7 以降で式本体の定義を利用できます。
+この *expression* には有効な式を指定します。 メンバーの戻り値の型が `void` の場合か、メンバーがコンストラクター、ファイナライザー、またはプロパティ `set` アクセサーの場合にのみ、*式*は*ステートメント式*になります。
 
-`Person.ToString` メソッドの式本体の定義は次のようになります。
+次の例は、`Person.ToString` メソッドの式本体の定義を示しています。
 
 ```csharp
 public override string ToString() => $"{fname} {lname}".Trim();
 ```
 
-次のメソッド定義を短くしたものです。
+これは、次のメソッド定義の短縮形バージョンです。
 
 ```csharp
 public override string ToString()
@@ -109,11 +61,22 @@ public override string ToString()
    return $"{fname} {lname}".Trim();
 }
 ```
-式本体の定義の詳細については、[式形式メンバー](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)に関するページを参照してください。
 
-## <a name="see-also"></a>参照
+メソッドおよび読み取り専用プロパティの式本体の定義は、C# 6 以降でサポートされています。 コンストラクター、ファイナライザー、プロパティ アクセサー、およびインデクサーの式本体の定義は、C# 7.0 以降でサポートされています。
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)   
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)   
-- [ラムダ式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
+詳細については、「[式形式のメンバー](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)」を参照してください。
+
+## <a name="operator-overloadability"></a>演算子のオーバーロード可/不可
+
+`=>` 演算子はオーバーロードできません。
+
+## <a name="c-language-specification"></a>C# 言語仕様
+
+詳細については、「[C# 言語仕様](../language-specification/index.md)」の[無名関数の式](~/_csharplang/spec/expressions.md#anonymous-function-expressions)に関するセクションを参照してください。
+
+## <a name="see-also"></a>関連項目
+
+- [C# リファレンス](../index.md)
+- [C# 演算子](index.md)
+- [ラムダ式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)
 - [式形式のメンバー](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)

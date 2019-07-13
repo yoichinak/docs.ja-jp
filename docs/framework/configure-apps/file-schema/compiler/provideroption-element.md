@@ -1,5 +1,5 @@
 ---
-title: '&lt;providerOption&gt;要素'
+title: <providerOption> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - provideroption
@@ -8,16 +8,14 @@ helpviewer_keywords:
 - providerOptions
 - provideroption element
 ms.assetid: 014f2e0b-c0b5-4fc4-92d3-73f02978b2a1
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 449bc1a7f9d74ba9b38d70ef36303e0ff399c187
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9c69ea7bf95b311a796ec29d90410a77b748c3c6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705325"
 ---
-# <a name="ltprovideroptiongt-element"></a>&lt;providerOption&gt;要素
+# <a name="provideroption-element"></a>\<providerOption > 要素
 言語プロバイダーのコンパイラ バージョン属性を指定します。  
   
  \<configuration >要素  
@@ -91,10 +89,11 @@ ms.locfileid: "50182582"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.CodeDom.Compiler.CompilerInfo>  
-- <xref:System.CodeDom.Compiler.CodeDomProvider>  
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [\<compilers> 要素](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)  
-- [完全修飾型名の指定](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)  
-- [(ASP.NET 設定スキーマ) compilation の compilers の compiler 要素](https://msdn.microsoft.com/library/f7d6b078-5d42-4134-b3f7-62e1aba1df1e)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.CodeDom.Compiler.CompilerInfo>
+- <xref:System.CodeDom.Compiler.CodeDomProvider>
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [\<compilers> 要素](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)
+- [完全修飾型名の指定](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)
+- [(ASP.NET 設定スキーマ) compilation の compilers の compiler 要素](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a15ebt6c(v=vs.100))

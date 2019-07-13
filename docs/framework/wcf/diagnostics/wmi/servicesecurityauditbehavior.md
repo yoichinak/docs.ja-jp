@@ -2,12 +2,12 @@
 title: ServiceSecurityAuditBehavior
 ms.date: 03/30/2017
 ms.assetid: 2c5809e7-5364-44ce-bc71-848be4672e2a
-ms.openlocfilehash: e8b24877c2d76a3f2f90c27ae83374c7bca1328b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 30679e1f67c6943bf674a6bbd8bf12be090765a8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956898"
 ---
 # <a name="servicesecurityauditbehavior"></a>ServiceSecurityAuditBehavior
 ServiceSecurityAuditBehavior  
@@ -33,28 +33,28 @@ class ServiceSecurityAuditBehavior : Behavior
 ### <a name="auditloglocation"></a>AuditLogLocation  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  監査ログの場所。  
   
 ### <a name="messageauthenticationauditlevel"></a>MessageAuthenticationAuditLevel  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  監査イベントをログに記録するために使用されるメッセージ認証レベルの種類。  
   
 ### <a name="serviceauthorizationauditlevel"></a>ServiceAuthorizationAuditLevel  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  監査ログに記録される承認イベントの種類。  
   
 ### <a name="suppressauditfailure"></a>SuppressAuditFailure  
  データ型 : boolean  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  監査ログへの書き込みエラーを非表示にする動作を指定するブール型の値。  
   
@@ -62,7 +62,8 @@ class ServiceSecurityAuditBehavior : Behavior
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
-|Namespace|root\ServiceModel で定義|  
+|名前空間|root\ServiceModel で定義|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>

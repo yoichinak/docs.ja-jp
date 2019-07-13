@@ -8,19 +8,19 @@ helpviewer_keywords:
 - layout [WPF], Panel control
 - Panel control [WPF]
 ms.assetid: 792943c5-335d-49dd-aa5b-ec1582a10088
-ms.openlocfilehash: 0d76883621b07a3049895e4577516e9362720896
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6471aebf4a510c63084f8da733fb3dfe2300c1aa
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770670"
 ---
 # <a name="panel"></a>パネル
-<xref:System.Windows.Controls.Panel> アプリケーションのレイアウトをサポートするすべての要素の基底クラスは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]です。  
+<xref:System.Windows.Controls.Panel> アプリケーションのレイアウトをサポートするすべての要素の基本クラスは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [パネルの概要](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [方法トピック](../../../../docs/framework/wpf/controls/panel-how-to-topics.md)  
+ [パネルの概要](panels-overview.md)  
+ [方法トピック](panel-how-to-topics.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.Panel>  
@@ -38,8 +38,8 @@ ms.locfileid: "33554925"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>関連項目  
- [レイアウト](../../../../docs/framework/wpf/advanced/layout.md)  
+ [レイアウト](../advanced/layout.md)  
   
- [チュートリアル: 初めての WPF デスクトップ アプリケーション](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [チュートリアル: 初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer の概要](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer の概要](scrollviewer-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法 : BindingSource コンポーネントを使用してフォーム間でバインド データを共有する'
+title: '方法: BindingSource コンポーネントを使用してフォーム間でバインド データを共有する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,33 +10,32 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], examples
 - BindingSource [Windows Forms], using with multiple forms
 ms.assetid: a1a49630-db9c-4485-b888-1f62a373a4f7
-ms.openlocfilehash: 765bdb7ee75d7e0c6461311263afe9481830673f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 28eceaec72053d70885d54bc09179cff743ff71c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45973048"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591439"
 ---
-# <a name="how-to-share-bound-data-across-forms-using-the-bindingsource-component"></a>方法 : BindingSource コンポーネントを使用してフォーム間でバインド データを共有する
+# <a name="how-to-share-bound-data-across-forms-using-the-bindingsource-component"></a>方法: BindingSource コンポーネントを使用してフォーム間でバインド データを共有する
 <xref:System.Windows.Forms.BindingSource> コンポーネントを使用してフォーム間でデータを簡単に共有できます。 たとえば、データ ソースのデータを集計する 1 つの読み取り専用のフォームと、データ ソース内の現在選択されているアイテムについての詳細情報を含む別の編集可能なフォームを表示することがあります。 この例は、このシナリオを示しています。  
   
 ## <a name="example"></a>例  
  次のコード例は、<xref:System.Windows.Forms.BindingSource> およびフォーム間でバインドされたデータを共有する方法を示しています。 この例で、共有された <xref:System.Windows.Forms.BindingSource> が子フォームのコンストラクターに渡されます。 子フォームでは、メイン フォームで現在選択されているアイテムのデータをユーザーが編集することができます。  
   
 > [!NOTE]
->  例の <xref:System.Windows.Forms.BindingSource> コンポーネントの <xref:System.Windows.Forms.BindingSource.BindingComplete> イベントは、2 つの形式が同期を保つために処理されます。 これを実行する理由の詳細については、「[方法: 複数のコントロールを 1 つのデータ ソースにバインドして同期状態を保つ](../../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)」を参照してください。  
+>  例の <xref:System.Windows.Forms.BindingSource> コンポーネントの <xref:System.Windows.Forms.BindingSource.BindingComplete> イベントは、2 つの形式が同期を保つために処理されます。 これ行う理由の詳細については、「[方法。複数のコントロールと同じデータ ソースにバインドが同期を保つ](../multiple-controls-bound-to-data-source-synchronized.md)します。  
   
- [!code-csharp[System.Windows.Forms.BindingSourceMultipleForms#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleForms/CS/Form1.cs#1)]
- [!code-vb[System.Windows.Forms.BindingSourceMultipleForms#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleForms/VB/Form1.vb#1)]  
+ [!code-csharp[System.Windows.Forms.BindingSourceMultipleForms#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleForms/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.BindingSourceMultipleForms#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleForms/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   System、System.Windows.Forms、System.Drawing、System.Data、および System.Xml アセンブリへの参照。  
+- System、System.Windows.Forms、System.Drawing、System.Data、および System.Xml アセンブリへの参照。  
   
- コマンドラインからこの例を Visual Basic または Visual c# の構築方法の詳細については、次を参照してください。 [、コマンドラインからビルドする](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)します。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  「[方法: 完成した Windows フォーム コードの例を Visual Studio を使ってコンパイルして実行する](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))」も参照してください。  
-  
-## <a name="see-also"></a>関連項目  
- [BindingSource コンポーネント](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [Windows フォームでのデータ バインディング](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
- [方法: データ バインドで発生するエラーと例外を処理する](../../../../docs/framework/winforms/controls/how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
+## <a name="see-also"></a>関連項目
+
+- [BindingSource コンポーネント](bindingsource-component.md)
+- [Windows フォームでのデータ バインディング](../windows-forms-data-binding.md)
+- [方法: エラーとデータ バインドで発生する例外を処理します。](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)

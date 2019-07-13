@@ -1,15 +1,13 @@
 ---
 title: Docker コンテナー用 .Net Core を選択するタイミング
 description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | Docker コンテナー用 .Net Core を選択するタイミング'
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: b283916d6ae4d19fdc6a4f7976a3adbb66d26b2c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 54ed1b4bbb16352b8c99204383f85ffb25d62be7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143410"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644367"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Docker コンテナー用 .Net Core を選択するタイミング
 
@@ -29,9 +27,9 @@ Docker (Linux と Windows) でサポートされている複数のプラット�
 
 [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/) は、macOS 上で実行する、Docker ベースのアプリケーションの開発をサポートする Xamarin Studio の進化版の IDE です。 これは、強力な IDE を使用したい Mac コンピューターで作業する開発者にとって好ましい選択肢です。
 
-また、macOS、Linux、および Windows 上で [Visual Studio Code](https://code.visualstudio.com/) (VS Code) も使用できます。 VS Code は、IntelliSense、デバッグなどの .NET Core を完全にサポートしています。 VS Code は軽量なエディターなので、Docker CLI や [.NET Core コマンドライン インターフェイス (CLI)](https://docs.microsoft.com/dotnet/core/tools/?tabs=netcore2x) と組み合わせて、コンテナー化されたアプリケーションを Mac 上で開発することができます。 Sublime、Emacs、vi、オープンソースの OmniSharp プロジェクト (IntelliSense サポートも提供) など、ほとんどのサードパーティ製エディターで .NET Core を対象にすることもできます。
+また、macOS、Linux、および Windows 上で [Visual Studio Code](https://code.visualstudio.com/) (VS Code) も使用できます。 VS Code は、IntelliSense、デバッグなどの .NET Core を完全にサポートしています。 VS Code は軽量なエディターなので、Docker CLI や [.NET Core コマンドライン インターフェイス (CLI)](../../../core/tools/index.md) と組み合わせて、コンテナー化されたアプリケーションを Mac 上で開発することができます。 Sublime、Emacs、vi、オープンソースの OmniSharp プロジェクト (IntelliSense サポートも提供) など、ほとんどのサードパーティ製エディターで .NET Core を対象にすることもできます。
 
-IDE とエディターだけでなく、サポートされているすべてのプラットフォームで [.NET Core CLI](https://docs.microsoft.com/dotnet/core/tools/?tabs=netcore2x) ツールを使用できます。
+IDE とエディターだけでなく、サポートされているすべてのプラットフォームで [.NET Core CLI](../../../core/tools/index.md) ツールを使用できます。
 
 ## <a name="using-containers-for-new-green-field-projects"></a>新しい ("グリーン フィールド") プロジェクトにコンテナーを使用する
 

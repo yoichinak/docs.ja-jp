@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, concurency sample
 - Concurrency Sample [Windows Communication Foundation]
 ms.assetid: f8dbdfb3-6858-4f95-abe3-3a1db7878926
-ms.openlocfilehash: f8925157714621f8b97893bc25e41685778416f5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6d0ab9536c93c5a89330e7a74ef30ca1a4560f8b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186006"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651004"
 ---
 # <a name="concurrency"></a>コンカレンシー
 コンカレンシーのサンプルでは、<xref:System.ServiceModel.ServiceBehaviorAttribute> を <xref:System.ServiceModel.ConcurrencyMode> 列挙体と共に使用する方法を示します。この列挙体は、サービスのインスタンスがメッセージを順番に処理するか、または同時に処理するかを制御します。 サンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)、実装、`ICalculator`サービス コントラクト。 このサンプルでは、`ICalculatorConcurrency` から継承される新しいコントラクト `ICalculator` を定義します。これによって、サービスのコンカレンシーの状態を検査するための 2 つの操作が追加されます。 コンカレンシー設定を変更してから、クライアントを実行して動作の変更を確認します。  
@@ -20,17 +20,17 @@ ms.locfileid: "50186006"
 > [!NOTE]
 >  このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
   
- 選択可能な同時実行モードは次の 3 つです。  
+ 選択可能なコンカレンシー モードは次の 3 つです。  
   
--   `Single`: 各サービス インスタンスは、一度に 1 つのメッセージを処理します。 これが既定の同時実行モードです。  
+- `Single`:各サービス インスタンスは、一度に 1 つのメッセージを処理します。 これが既定のコンカレンシー モードです。  
   
--   `Multiple`: 各サービス インスタンスは、同時に複数のメッセージを処理します。 この同時実行モードを使用するには、サービスの実装がスレッドセーフである必要があります。  
+- `Multiple`:各サービス インスタンスは、同時に複数のメッセージを処理します。 このコンカレンシー モードを使用するには、サービスの実装がスレッドセーフである必要があります。  
   
--   `Reentrant`: 各サービス インスタンスは、一度に 1 つのメッセージを処理しますが、再入可能呼び出しを受け入れます。 サービスがこの呼び出しを受け入れるのは、コール アウトするときだけです。再入方法については、 [ConcurrencyMode.Reentrant](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md)サンプル。  
+- `Reentrant`:各サービス インスタンスは、一度に 1 つのメッセージを処理しますが、再入可能呼び出しを受け入れます。 サービスがこの呼び出しを受け入れるのは、コール アウトするときだけです。再入方法については、 [ConcurrencyMode.Reentrant](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md)サンプル。  
   
- コンカレンシーの使用は、インスタンス化モードに関連します。 <xref:System.ServiceModel.InstanceContextMode.PerCall> インスタンス化では、各メッセージが新しいサービス インスタンスによって処理されるため、同時実行は関係しません。 <xref:System.ServiceModel.InstanceContextMode.Single> インスタンス化では、<xref:System.ServiceModel.ConcurrencyMode.Single> と <xref:System.ServiceModel.ConcurrencyMode.Multiple> のいずれかのコンカレンシーが関係します。これは 1 つのインスタンスがメッセージを順番に処理するか、同時に処理するかによって決まります。 <xref:System.ServiceModel.InstanceContextMode.PerSession> インスタンス化では、どのコンカレンシー モードも関係する可能性があります。  
+ コンカレンシーの使用は、インスタンス化モードに関連します。 <xref:System.ServiceModel.InstanceContextMode.PerCall> インスタンス化では、各メッセージが新しいサービス インスタンスによって処理されるため、コンカレンシーは関係しません。 <xref:System.ServiceModel.InstanceContextMode.Single> インスタンス化では、<xref:System.ServiceModel.ConcurrencyMode.Single> と <xref:System.ServiceModel.ConcurrencyMode.Multiple> のいずれかのコンカレンシーが関係します。これは 1 つのインスタンスがメッセージを順番に処理するか、同時に処理するかによって決まります。 <xref:System.ServiceModel.InstanceContextMode.PerSession> インスタンス化では、どのコンカレンシー モードも関係する可能性があります。  
   
- サービス クラスは、`[ServiceBehavior(ConcurrencyMode=<setting>)]` 属性を使用して同時実行動作を指定します。次のサンプル コードを参照してください。 行のコメント化を変更して、`Single` および `Multiple` の同時実行モードをそれぞれ試してみてください。 同時実行モードを変更したら、サービスを再ビルドする必要があります。  
+ サービス クラスは、`[ServiceBehavior(ConcurrencyMode=<setting>)]` 属性を使用してコンカレンシー動作を指定します。次のサンプル コードを参照してください。 行のコメント化を変更して、`Single` および `Multiple` のコンカレンシー モードをそれぞれ試してみてください。 コンカレンシー モードを変更したら、サービスを再ビルドする必要があります。  
   
 ```csharp
 // Single allows a single message to be processed sequentially by each service instance.  
@@ -89,19 +89,19 @@ public class CalculatorService : ICalculatorConcurrency
 }  
 ```  
   
- サンプルの既定の設定では、<xref:System.ServiceModel.ConcurrencyMode.Multiple> インスタンス化と <xref:System.ServiceModel.InstanceContextMode.Single> 同時実行が使用されます。 クライアント コードは、非同期プロキシを使用するように変更されています。 これにより、クライアントはサービスを呼び出した後に、応答を待たずに次の呼び出しを行うことができます。 サービスの同時実行モードの動作の違いを観察してください。  
+ サンプルの既定の設定では、<xref:System.ServiceModel.ConcurrencyMode.Multiple> インスタンス化と <xref:System.ServiceModel.InstanceContextMode.Single> コンカレンシーが使用されます。 クライアント コードは、非同期プロキシを使用するように変更されています。 これにより、クライアントはサービスを呼び出した後に、応答を待たずに次の呼び出しを行うことができます。 サービスのコンカレンシー モードの動作の違いを観察してください。  
   
- このサンプルを実行すると、操作要求および応答がクライアントのコンソール ウィンドウに表示されます。 実行中のサービスのコンカレンシー モードが表示され、各操作が呼び出され、その後で操作数が表示されます。 同時実行モードが `Multiple` の場合、結果が返される順序は呼び出された順序とは異なります。サービスは複数のメッセージを同時に実行するからです。 コンカレンシー モードを `Single` に変更すると、結果は呼び出された順序どおりに返されます。サービスは各メッセージを順次処理するからです。 クライアントをシャットダウンするには、クライアント ウィンドウで Enter キーを押します。  
+ このサンプルを実行すると、操作要求および応答がクライアントのコンソール ウィンドウに表示されます。 実行中のサービスのコンカレンシー モードが表示され、各操作が呼び出され、その後で操作数が表示されます。 コンカレンシー モードが `Multiple` の場合、結果が返される順序は呼び出された順序とは異なります。サービスは複数のメッセージを同時に実行するからです。 コンカレンシー モードを `Single` に変更すると、結果は呼び出された順序どおりに返されます。サービスは各メッセージを順次処理するからです。 クライアントをシャットダウンするには、クライアント ウィンドウで Enter キーを押します。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
+1. 実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
-2.  Svcutil.exe を使用してプロキシ クライアントを生成する場合は、含めることを確認、`/async`オプション。  
+2. Svcutil.exe を使用してプロキシ クライアントを生成する場合は、含めることを確認、`/async`オプション。  
   
-3.  ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
+3. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
-4.  1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
+4. 1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
@@ -111,5 +111,3 @@ public class CalculatorService : ICalculatorConcurrency
 >  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Concurrency`  
-  
-## <a name="see-also"></a>関連項目

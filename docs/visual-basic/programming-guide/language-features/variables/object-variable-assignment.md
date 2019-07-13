@@ -13,12 +13,12 @@ helpviewer_keywords:
 - assignment statements [Visual Basic], object variable assignment
 - Me keyword [Visual Basic], as object variable
 ms.assetid: 3706811d-fd40-44fe-8727-d692e8e55d6d
-ms.openlocfilehash: 571b09a0783ec0dfd09970b000faec39dca682b3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: dff1b9bb9e87f827663786cac3f33531db41b2c1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757067"
 ---
 # <a name="object-variable-assignment-visual-basic"></a>オブジェクト変数への代入 (Visual Basic)
 オブジェクトをオブジェクト変数に代入するのにには、通常代入ステートメントを使用します。 オブジェクト式を割り当てることができます、または[Nothing](../../../../visual-basic/language-reference/nothing.md)キーワードでは、次の例として示します。  
@@ -75,10 +75,11 @@ End Sub
 addStandardText(Me)  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [オブジェクト変数](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
- [オブジェクト変数の宣言](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
- [オブジェクト変数の値](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
- [方法: オブジェクト変数を宣言し、Visual Basic でオブジェクトを割り当てる](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)  
- [方法: オブジェクト変数がインスタンスを参照しないようにする](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)  
- [Me、My、MyBase、および MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+## <a name="see-also"></a>関連項目
+
+- [オブジェクト変数](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [オブジェクト変数の宣言](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
+- [オブジェクト変数の値](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
+- [方法: オブジェクト変数を宣言し、Visual Basic でオブジェクトを割り当てる](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)
+- [方法: オブジェクトが変数になる任意のインスタンスを参照していません](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)
+- [Me、My、MyBase、および MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

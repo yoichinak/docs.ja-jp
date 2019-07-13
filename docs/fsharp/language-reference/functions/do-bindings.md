@@ -2,12 +2,12 @@
 title: do バインド
 description: 学習方法、F#関数または値を定義することがなくコードを実行するために使用は、'do' のバインドします。
 ms.date: 05/16/2016
-ms.openlocfilehash: d29f8557fda06097d2e85748ab6286f0415730b3
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 0755e36912fc4e5a645e55eb4bee5c730a56cadf
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614520"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641910"
 ---
 # <a name="do-bindings"></a>do バインド
 

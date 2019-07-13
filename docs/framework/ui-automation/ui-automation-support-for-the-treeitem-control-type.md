@@ -6,18 +6,16 @@ helpviewer_keywords:
 - Tree Item control type
 - UI Automation, Tree Item control type
 ms.assetid: 229f341a-477f-434e-b877-4db9973068eb
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 58a7395d78feb30ceac4bc42e9d90ec106ed9972
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: aea10ea857c2c347a5f8f5f6240af9d0b581abd2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996477"
 ---
 # <a name="ui-automation-support-for-the-treeitem-control-type"></a>UI オートメーションによる TreeItem コントロール型のサポート
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]に関する最新情報については[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)をご覧ください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
  このトピックでは、TreeItem コントロール型に対する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のサポートについて説明します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]でのコントロール型とは、コントロールが <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> プロパティを使用するために満たす必要がある一連の条件のことです。 これらの条件には、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のプロパティ値、およびコントロール パターンに関する特定のガイドラインが含まれます。  
   
@@ -65,11 +63,11 @@ ms.locfileid: "47204535"
 |コントロール パターン/パターン プロパティ|サポート/値|メモ|  
 |---------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IInvokeProvider>|状況に依存|ツリー項目に操作可能な別のコマンドがある場合は、このコントロール パターンを実装します。|  
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|はい|すべてのツリー項目を展開または折りたたむことができます。|  
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|[はい]|すべてのツリー項目を展開または折りたたむことができます。|  
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|展開されたノード、折りたたまれたノード、またはリーフ ノード|ツリー項目は、展開されたり、折りたたまれたりしない場合は、リーフ ノードになります。|  
 |<xref:System.Windows.Automation.Provider.IScrollItemProvider>|状況に依存|ツリー コンテナーが Scroll コントロール パターンをサポートする場合、このコントロール パターンを実装します。|  
 |<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|状況に依存|ユーザーがツリー コンテナーに戻るときに、アクティブな選択を保持することができる場合、このコントロール パターンを実装します。|  
-|<xref:System.Windows.Automation.Provider.ISelectionItemProvider.SelectionContainer%2A>|はい|このプロパティは、コンテナー内のすべての項目に対して同じコンテナーを公開します。|  
+|<xref:System.Windows.Automation.Provider.ISelectionItemProvider.SelectionContainer%2A>|[はい]|このプロパティは、コンテナー内のすべての項目に対して同じコンテナーを公開します。|  
 |<xref:System.Windows.Automation.Provider.IToggleProvider>|状況に依存|ツリー項目に関連付けられたチェック ボックスがある場合、このコントロール パターンを実装します。|  
   
 <a name="Required_UI_Automation_Events"></a>   
@@ -94,7 +92,8 @@ ms.locfileid: "47204535"
 |<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> プロパティ変更イベント。|状況に依存|なし|  
 |<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> プロパティ変更イベント。|状況に依存|なし|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Automation.ControlType.TreeItem>  
- [UI オートメーション コントロール型の概要](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
- [UI オートメーションの概要](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Automation.ControlType.TreeItem>
+- [UI オートメーション コントロール型の概要](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [UI オートメーションの概要](../../../docs/framework/ui-automation/ui-automation-overview.md)

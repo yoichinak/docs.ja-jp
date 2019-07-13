@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92c4f488dcdc5712dcd2632f489fb0cd65d05ee6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 875125185e9af74b85a833d04539403f81badf8f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416258"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761512"
 ---
 # <a name="icordebugmanagedcallback2exceptionunwind-method"></a>ICorDebugManagedCallback2::ExceptionUnwind メソッド
 例外のアンワインド処理中に状態の通知を提供します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ExceptionUnwind (  
     [in] ICorDebugAppDomain                  *pAppDomain,  
     [in] ICorDebugThread                     *pThread,  
@@ -38,33 +38,34 @@ HRESULT ExceptionUnwind (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pAppDomain`  
- [in]ICorDebugAppDomain を表すオブジェクトを含む例外がスローされたスレッドのアプリケーション ドメインへのポインター。  
+ [in]例外がスローされたスレッドを格納しているアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。  
   
  `pThread`  
  [in]例外がスローされたスレッドを表す ICorDebugThread オブジェクトへのポインター。  
   
  `dwEventType`  
- [in]アンワインド フェーズ中にコールバックによって通知されるイベントを指定する CorDebugExceptionUnwindCallbackType 列挙型の値です。  
+ [in]アンワインド フェーズ中に、コールバックによって通知されるイベントを指定する CorDebugExceptionUnwindCallbackType 列挙型の値。  
   
  `dwFlags`  
- [in]値、 [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md)例外に関する追加情報を指定する列挙です。  
+ [in]値、 [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md)例外に関する追加情報を指定する列挙体。  
   
-## <a name="remarks"></a>コメント  
- `ExceptionUnwind` 例外処理プロセスのアンワインド フェーズ中にさまざまな時点で呼び出されます。 `ExceptionUnwind` 1 つの例外のアンワインド中に複数回呼び出すことができます。  
+## <a name="remarks"></a>Remarks  
+ `ExceptionUnwind` 例外処理プロセスのアンワインド フェーズ中にさまざまなポイントで呼び出されます。 `ExceptionUnwind` 1 つの例外のアンワインド中には複数回呼び出すことができます。  
   
- 場合`dwEventType`= DEBUG_EXCEPTION_INTERCEPTED、する前にシーケンス ポイントで、スレッドのリーフ フレームで、命令ポインターになります (これは、前にいくつかの手順をなる可能性があります) に、例外を引き起こした命令します。  
+ 場合`dwEventType`DEBUG_EXCEPTION_INTERCEPTED、= の前にシーケンス ポイントで、スレッドのリーフ フレームで、命令ポインターになります (前にいくつかの手順でもかまいません) 例外の原因の命令。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICorDebugManagedCallback2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)  
- [ICorDebugManagedCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [ICorDebugManagedCallback2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
+- [ICorDebugManagedCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

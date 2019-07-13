@@ -2,12 +2,12 @@
 title: '方法: 式ツリーを実行する (C#)'
 ms.date: 07/20/2015
 ms.assetid: b8c40db5-2464-4bb9-9001-8c2bc7f006c5
-ms.openlocfilehash: 2aad970946e417d623907c9f832e2c6e29eef912
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: acf841194ef0990d2eb00481454c89088f4616c8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45641600"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586133"
 ---
 # <a name="how-to-execute-expression-trees-c"></a>方法: 式ツリーを実行する (C#)
 このトピックでは、式ツリーを実行する方法について説明します。 式ツリーを実行すると値が返される場合がありますが、メソッドの呼び出しなどの処理が実行されるだけの場合もあります。  
@@ -44,11 +44,9 @@ Console.WriteLine(result);
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
   
--   System.Core.dll がまだ参照されていない場合は、System.Core.dll へのプロジェクト参照を追加します。  
+- System.Linq.Expressions 名前空間をインクルードします。  
   
--   System.Linq.Expressions 名前空間をインクルードします。  
-  
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [式ツリー (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
+- [式ツリー (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)
 - [方法: 式ツリーを変更する (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)

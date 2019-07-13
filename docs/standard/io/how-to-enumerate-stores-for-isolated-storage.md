@@ -1,5 +1,5 @@
 ---
-title: '方法 : 分離ストレージでストアを列挙する'
+title: '方法: 分離ストレージでストアを列挙する'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 0fcf279a-f241-48f0-8034-2e3d331f1fcb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 484ba261f8e5c88f17b3eba3a354967e2350a621
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: f14259afe4ee296d930b042d9e9ef069a81e65f9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43875890"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591761"
 ---
-# <a name="how-to-enumerate-stores-for-isolated-storage"></a>方法 : 分離ストレージでストアを列挙する
+# <a name="how-to-enumerate-stores-for-isolated-storage"></a>方法: 分離ストレージでストアを列挙する
 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> 静的メソッドを使用すると、現在のユーザー用の分離ストアをすべて列挙できます。 このメソッドは、<xref:System.IO.IsolatedStorage.IsolatedStorageScope> 値を取り、<xref:System.IO.IsolatedStorage.IsolatedStorageFile> 列挙子を返します。 ストアを列挙する場合、<xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser> 値を指定する <xref:System.Security.Permissions.IsolatedStorageFilePermission> のアクセス許可が必要です。 <xref:System.IO.IsolatedStorage.IsolatedStorageScope.User> 値を使用して <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> メソッドを呼び出す場合、現在のユーザーに対して定義された <xref:System.IO.IsolatedStorage.IsolatedStorageFile> オブジェクトの配列が返されます。  
   
 ## <a name="example"></a>例  
@@ -33,5 +33,5 @@ ms.locfileid: "43875890"
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - [分離ストレージ](../../../docs/standard/io/isolated-storage.md)

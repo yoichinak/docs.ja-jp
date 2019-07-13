@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: 9cb7dbdfb1ad221e00823d8d55e7fd3c52cabe8b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: cb2dd26d3f111e8de0dc9c7904837d9b053d17bb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194138"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724714"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework でのトランスポート層セキュリティ (TLS) のベスト プラクティス
 
@@ -56,7 +56,7 @@ WCF は、.NET Framework 4.7 での既定値として TLS 1.0、1.1、1.2 をサ
 
 ASP.NET アプリケーションの場合、意図したバージョンの .NET Framework を使っていることを確認するには、_web.config_ の `<system.web><httpRuntime targetFramework>` 要素を調べます。
 
-Windows フォームおよび他のアプリケーションについては、「[方法: .NET Framework のターゲット バージョンを指定する](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)」をご覧ください。
+Windows フォームやその他のアプリケーションの場合は、「[方法:.NET Framework のターゲット バージョンを指定する](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)」を参照してください。
 
 以下のセクションで説明するようにして、特定のバージョンの TLS や SSL を使っていないことを確認します。
 
@@ -150,7 +150,7 @@ HTTP ネットワーク (<xref:System.Net.ServicePointManager>) または TCP �
 
 ### <a name="switchsystemnetdontenableschusestrongcrypto"></a>Switch.System.Net.DontEnableSchUseStrongCrypto
 
-`Switch.System.Net.DontEnableSchUseStrongCrypto` の値を `false` に設定すると、アプリは強力な暗号を使うようになります。 `DontEnableSchUseStrongCrypto` を `false` にすると、安全性の高いネットワーク プロトコル (TLS 1.2、TLS 1.1、TLS 1.0) が使われ、セキュリティ保護されていないプロトコルはブロックされます。 詳しくは、「[SCH_USE_STRONG_CRYPTO フラグ](#the-schusestrongcrypto-flag)」をご覧ください。 値 `true` は、アプリの強力な暗号を無効にします。
+`Switch.System.Net.DontEnableSchUseStrongCrypto` の値を `false` に設定すると、アプリは強力な暗号を使うようになります。 `DontEnableSchUseStrongCrypto` を `false` にすると、安全性の高いネットワーク プロトコル (TLS 1.2、TLS 1.1、TLS 1.0) が使われ、セキュリティ保護されていないプロトコルはブロックされます。 詳しくは、「[SCH_USE_STRONG_CRYPTO フラグ](#the-sch_use_strong_crypto-flag)」をご覧ください。 値 `true` は、アプリの強力な暗号を無効にします。
 
 アプリの対象が .NET Framework 4.6 以降のバージョンの場合、このスイッチの既定値は `false` です。 これは、推奨されるセキュリティ保護が有効な既定値です。 アプリの実行環境が .NET Framework 4.6 であっても、以前のバージョンが対象になっている場合は、このスイッチの既定値は `true` です。 その場合は、`false` に明示的に設定する必要があります。
 
@@ -174,7 +174,7 @@ HTTP ネットワーク (<xref:System.Net.ServicePointManager>) または TCP �
 
 .NET Framework 4.7.1 以降のバージョンを対象とするアプリケーションでは、この値の既定値は `false` です。 .NET Framework 4.7 以前のバージョンを対象とするアプリケーションでは、この値の既定値は `true` です。
 
-TLS プロトコルについて詳しくは、「[軽減策: TLS プロトコル](../migration-guide/mitigation-tls-protocols.md)」をご覧ください。 `AppContext` スイッチについて詳しくは、「[`<AppContextSwitchOverrides> Element`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)」をご覧ください。
+TLS プロトコルの詳細については、「[Mitigation:TLS Protocols (軽減策: TLS プロトコル)](../migration-guide/mitigation-tls-protocols.md)」をご覧ください。 `AppContext` スイッチについて詳しくは、「[`<AppContextSwitchOverrides> Element`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)」をご覧ください。
 
 ## <a name="configuring-security-via-the-windows-registry"></a>Windows レジストリによるセキュリティの構成
 
@@ -191,7 +191,7 @@ HTTP ネットワーク (<xref:System.Net.ServicePointManager>) または TCP �
 
 ### <a name="schusestrongcrypto"></a>SchUseStrongCrypto
 
-`HKEY_LOCAL_MACHINE\SOFTWARE\[Wow6432Node\]Microsoft\.NETFramework\<VERSION>: SchUseStrongCrypto` レジストリ キーの値は DWORD 型です。 値を 1 に設定すると、アプリは強力な暗号を使うようになります。 強力な暗号では、安全性の高いネットワーク プロトコル (TLS 1.2、TLS 1.1、TLS 1.0) が使われ、セキュリティ保護されていないプロトコルはブロックされます。 値 0 は、強力な暗号を無効にします。 詳しくは、「[SCH_USE_STRONG_CRYPTO フラグ](#the-schusestrongcrypto-flag)」をご覧ください。
+`HKEY_LOCAL_MACHINE\SOFTWARE\[Wow6432Node\]Microsoft\.NETFramework\<VERSION>: SchUseStrongCrypto` レジストリ キーの値は DWORD 型です。 値を 1 に設定すると、アプリは強力な暗号を使うようになります。 強力な暗号では、安全性の高いネットワーク プロトコル (TLS 1.2、TLS 1.1、TLS 1.0) が使われ、セキュリティ保護されていないプロトコルはブロックされます。 値 0 は、強力な暗号を無効にします。 詳しくは、「[SCH_USE_STRONG_CRYPTO フラグ](#the-sch_use_strong_crypto-flag)」をご覧ください。
 
 アプリの対象が .NET Framework 4.6 以降のバージョンの場合、このキーの既定値は 1 です。 これは、推奨されるセキュリティ保護が有効な既定値です。 アプリの実行環境が .NET Framework 4.6 であっても、対象が以前のバージョンの場合は、このキーの既定値は 0 です。 その場合は、値を 1 に明示的に設定する必要があります。
 
@@ -205,7 +205,7 @@ HTTP ネットワーク (<xref:System.Net.ServicePointManager>) または TCP �
 
 アプリの対象が .NET Framework 4.7 以降のバージョンの場合、このキーの既定値は 1 です。 これは、推奨されるセキュリティ保護が有効な既定値です。 アプリの実行環境が .NET Framework 4.7 以降のバージョンであっても、以前のバージョンが対象になっている場合は、このキーの既定値は 0 になります。 その場合は、値を 1 に明示的に設定する必要があります。
 
-詳しくは、「[Windows 10 Version 1511 および Windows Server 2016 Technical Preview 4 用の累積的な更新プログラム(2016 年 5 月 10 日)](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016)」をご覧ください。
+詳細については、「[Windows 10 Version 1511 および Windows Server 2016 Technical Preview 4 用の累積的な更新プログラム(2016 年 5 月 10 日)](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016)」をご覧ください。
 
 .NET Framework 3.5.1 の場合について詳しくは、「[Support for TLS System Default Versions included in .NET Framework 3.5.1 on Windows 7 SP1 and Server 2008 R2 SP1](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework)」(Windows 7 SP1 および Server 2008 R2 SP1 の .NET Framework 3.5.1 に含まれる TLS システムの既定バージョンのサポート) をご覧ください。
 
@@ -237,7 +237,7 @@ Windows Registry Editor Version 5.00
 
 最上位は `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols` レジストリ キーです。 そのキーの下に、`SSL 2.0`、`SSL 3.0`、`TLS 1.0`、`TLS 1.1`、`TLS 1.2` のセットで任意のサブキーを作成できます。 これらの各サブキーの下に、サブキー `Client` と `Server` の一方または両方を作成できます。 `Client` および `Server` の下には、DWORD 値 `DisabledByDefault` (0 または 1) および `Enabled` (0 または 0xFFFFFFFF) を作成できます。
 
-## <a name="the-schusestrongcrypto-flag"></a>SCH_USE_STRONG_CRYPTO フラグ
+## <a name="the-sch_use_strong_crypto-flag"></a>SCH_USE_STRONG_CRYPTO フラグ
 
 有効になっている場合 (既定では、`AppContext` スイッチまたは Windows レジストリにより)、アプリが TLS セキュリティ プロトコルを要求すると、.NET Framework は `SCH_USE_STRONG_CRYPTO` フラグを使います。 `SCH_USE_STRONG_CRYPTO` フラグは、`AppContext` スイッチまたはレジストリを使って、既定で有効にすることができます。 OS は `Schannel` にフラグを渡して、既知の脆弱な暗号アルゴリズム、暗号スイート、および相互運用性向上のために他で有効になっている可能性のある TLS/SSL プロトコルのバージョンを無効にするよう指示します。 詳細については次を参照してください:
 
@@ -252,13 +252,13 @@ Windows Registry Editor Version 5.00
 
 オペレーティング システムが最適なバージョンの TLS を選んで使えるように .NET Framework を更新するには、少なくとも次のものをインストールする必要があります。
 
-- [.NET Framework August 2017 Preview の品質ロールアップ](https://blogs.msdn.microsoft.com/dotnet/2017/08/16/net-framework-august-2017-preview-of-quality-rollup)。
-- **または**、[.NET Framework September 2017 のセキュリティおよび品質ロールアップ](https://blogs.msdn.microsoft.com/dotnet/2017/09/12/net-framework-september-2017-security-and-quality-rollup)。
+- [.NET Framework August 2017 Preview の品質ロールアップ](https://devblogs.microsoft.com/dotnet/net-framework-august-2017-preview-of-quality-rollup/)。
+- **または**、[.NET Framework September 2017 のセキュリティおよび品質ロールアップ](https://devblogs.microsoft.com/dotnet/net-framework-september-2017-security-and-quality-rollup/)。
 
 参照:
 
 - [.NET Framework のバージョンおよび依存関係](../migration-guide/versions-and-dependencies.md)
-- [方法: インストールされている .NET Framework バージョンを確認する](../migration-guide/how-to-determine-which-versions-are-installed.md)
+- [方法: インストールされている .NET Framework バージョンを確認する](../migration-guide/how-to-determine-which-versions-are-installed.md)」を参照してください。
 
 ## <a name="support-for-tls-12"></a>TLS 1.2 のサポート
 
@@ -270,10 +270,10 @@ TLS 1.2 と TLS 1.1 の一方または両方をサポートするシステムで
 
 | **OS** | **TLS 1.2 のサポート** |
 | --- | --- |
-| Windows 10</br>Windows Server 2016 | サポートされていて、既定で有効。 |
-| Windows 8.1</br>Windows Server 2012 R2 | サポートされていて、既定で有効。 |
-| Windows 8.0</br>Windows Server 2012 | サポートされていて、既定で有効。 |
-| Windows 7 SP1</br>Windows Server 2008 R2 SP1 | サポートされているが、既定では無効。 TLS 1.2 を有効にする方法について詳しくは、「[Transport Layer Security (TLS) registry settings](/windows-server/security/tls/tls-registry-settings)」(トランスポート層セキュリティ (TLS) のレジストリ設定) Web ページをご覧ください。 |
+| Windows 10<br>Windows Server 2016 | サポートされていて、既定で有効。 |
+| Windows 8.1<br>Windows Server 2012 R2 | サポートされていて、既定で有効。 |
+| Windows 8.0<br>Windows Server 2012 | サポートされていて、既定で有効。 |
+| Windows 7 SP1<br>Windows Server 2008 R2 SP1 | サポートされているが、既定では無効。 TLS 1.2 を有効にする方法について詳しくは、「[Transport Layer Security (TLS) registry settings](/windows-server/security/tls/tls-registry-settings)」(トランスポート層セキュリティ (TLS) のレジストリ設定) Web ページをご覧ください。 |
 | Windows Server 2008 | TLS 1.2 および TLS 1.1 のサポートには、更新プログラムが必要。 「[Windows Server 2008 SP2 に TLS 1.1 および TLS 1.2 のサポートを追加する更新プログラム](https://support.microsoft.com/help/4019276/update-to-add-support-for-tls-1-1-and-tls-1-2-in-windows-server-2008-s)」をご覧ください。 |
 | Windows Vista | サポートされていません。 |
 
@@ -285,10 +285,10 @@ Windows の各バージョンにおいて既定で有効にされる TLS/SSL プ
 
 | **OS** | **.NET Framework 3.5 で TLS 1.2 をサポートするために必要な最低限の更新プログラム** |
 | --- | --- |
-| Windows 10</br>Windows Server 2016 | [Windows 10 Version 1511 および Windows Server 2016 Technical Preview 4 用の累積的な更新プログラム(2016 年 5 月 10 日)](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016) |
-| Windows 8.1</br>Windows Server 2012 R2 | [Windows 8.1 および Windows Server 2012 R2 の .NET Framework 3.5 に含まれる TLS システムの既定バージョンのサポート](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework) |
-| Windows 8.0</br>Windows Server 2012 | [Windows Server 2012 の .NET Framework 3.5 に含まれる TLS システムの既定バージョンのサポート](https://support.microsoft.com/help/3154519/support-for-tls-system-default-versions-included-in-the--net-framework) |
-| Windows 7 SP1</br>Windows Server 2008 R2 SP1 | [Windows 7 SP1 および Server 2008 R2 SP1 の .NET Framework 3.5.1 に含まれる TLS システムの既定バージョンのサポート](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework) |
+| Windows 10<br>Windows Server 2016 | [Windows 10 Version 1511 および Windows Server 2016 Technical Preview 4 用の累積的な更新プログラム(2016 年 5 月 10 日)](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016) |
+| Windows 8.1<br>Windows Server 2012 R2 | [Windows 8.1 および Windows Server 2012 R2 の .NET Framework 3.5 に含まれる TLS システムの既定バージョンのサポート](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework) |
+| Windows 8.0<br>Windows Server 2012 | [Windows Server 2012 の .NET Framework 3.5 に含まれる TLS システムの既定バージョンのサポート](https://support.microsoft.com/help/3154519/support-for-tls-system-default-versions-included-in-the--net-framework) |
+| Windows 7 SP1<br>Windows Server 2008 R2 SP1 | [Windows 7 SP1 および Server 2008 R2 SP1 の .NET Framework 3.5.1 に含まれる TLS システムの既定バージョンのサポート](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework) |
 | Windows Server 2008 | [Windows Vista SP2 および Server 2008 SP2 の .NET Framework 2.0 SP2 に含まれる TLS システムの既定バージョンのサポート](https://support.microsoft.com/help/3154517/support-for-tls-system-default-versions-included-in-the--net-framework) |
 | Windows Vista | サポートなし |
 

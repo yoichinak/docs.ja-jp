@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 963d46aea4ab31e770cb845fe699208f6c8f9ac7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 44b5dfb31cfe0364a745b729018be536f6be9aac
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447241"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778971"
 ---
 # <a name="imetadataimportgetnativecallconvfromsig-method"></a>IMetaDataImport::GetNativeCallConvFromSig メソッド
-指定したシグネチャ ポインターで表されるメソッドのネイティブな呼び出し規則を取得します。  
+指定したシグネチャ ポインターで表されるメソッドのネイティブな呼び出し規約を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetNativeCallConvFromSig (  
    [in]  void const  *pvSig,  
    [in]  ULONG       cbSig,  
@@ -37,26 +37,27 @@ HRESULT GetNativeCallConvFromSig (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pvSig`  
  [in]呼び出し規約を返すメソッドのメタデータ署名へのポインター。  
   
  `cbSig`  
- [in]バイト サイズ`pvSig`です。  
+ [in]バイト サイズ`pvSig`します。  
   
  `pCallConv`  
- [out]ネイティブ呼び出し規則へのポインター。  
+ [out]ネイティブ呼び出し規約へのポインター。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Runtime.InteropServices.CallingConvention>  
- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Runtime.InteropServices.CallingConvention>
+- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

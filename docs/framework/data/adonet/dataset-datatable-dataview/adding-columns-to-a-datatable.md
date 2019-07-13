@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
-ms.openlocfilehash: d5031136b48b50ef7ad34b97942b7f6d8054d340
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.openlocfilehash: 2e7008f6693d7d76520a7ff6ae9172e28e4990c2
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522317"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59207007"
 ---
 # <a name="adding-columns-to-a-datatable"></a>DataTable への列の追加
 A<xref:System.Data.DataTable>のコレクションを含む<xref:System.Data.DataColumn>によって参照されるオブジェクト、**列**テーブルのプロパティ。 この列のコレクションと制約によって、テーブルのスキーマ (構造) が定義されます。  
@@ -51,10 +51,11 @@ workTable.Columns.Add("Purchases", typeof(Double));
   
  <xref:System.Xml.Linq.XElement> を、<xref:System.Data.DataColumn.DataType%2A> 内の <xref:System.Data.DataColumn> の <xref:System.Data.DataTable> として使用すると、データを読み取るときに XML シリアル化が機能しません。 たとえば、<xref:System.Xml.XmlDocument> メソッドを使用して `DataTable.WriteXml` を書き込むと、XML へのシリアル化で <xref:System.Xml.Linq.XElement> に親ノードが追加されます。 この問題に対処するには、<xref:System.Data.SqlTypes.SqlXml> の代わりに <xref:System.Xml.Linq.XElement> 型を使用します。 `ReadXml` および `WriteXml` は、<xref:System.Data.SqlTypes.SqlXml> で適切に機能します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Data.DataColumn>  
- <xref:System.Data.DataColumnCollection>  
- <xref:System.Data.DataTable>  
- [DataTable スキーマの定義](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Data.DataColumn>
+- <xref:System.Data.DataColumnCollection>
+- <xref:System.Data.DataTable>
+- [DataTable スキーマの定義](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
+- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

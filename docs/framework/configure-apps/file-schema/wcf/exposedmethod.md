@@ -1,20 +1,20 @@
 ---
-title: '&lt;exposedMethod&gt;'
+title: <exposedMethod>
 ms.date: 03/30/2017
 ms.assetid: 61c938cd-4ee9-4b06-ab28-922ef491ab11
-ms.openlocfilehash: c63689224e3bba69816f5904599425a235a51bae
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 91eafa46aa73b5e6d359fcbe48f098f9f8a4d0f0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644317"
 ---
-# <a name="ltexposedmethodgt"></a>&lt;exposedMethod&gt;
+# <a name="exposedmethod"></a>\<exposedMethod >
 COM+ コンポーネントのインターフェイスが Web サービスとして公開されるときに公開される COM+ メソッドを表します。  
   
  \<system.ServiceModel >  
 \<comContracts>  
-\<comContract >  
+\<comContract>  
 \<メソッド >  
   
 ## <a name="syntax"></a>構文  
@@ -68,9 +68,10 @@ COM+ コンポーネントのインターフェイスが Web サービスとし�
   
  ランタイムの一覧に含まれるメソッドのみを追加することを反映して、サービス コントラクトを生成するサービスの初期化時、 [ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md)要素。 トレースは、サービス コントラクトに含まれないインターフェイス メソッド用に作成されます。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.ComMethodElementCollection>  
- <xref:System.ServiceModel.Configuration.ComMethodElement>  
- [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
- [COM+ アプリケーションとの統合](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
- [方法: COM + サービス設定を構成します。](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Configuration.ComMethodElementCollection>
+- <xref:System.ServiceModel.Configuration.ComMethodElement>
+- [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
+- [COM+ アプリケーションとの統合](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+- [方法: COM + サービス設定を構成します。](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

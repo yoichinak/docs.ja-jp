@@ -37,12 +37,12 @@ helpviewer_keywords:
 - storage order, controlling in Visual Basic
 - data types [Visual Basic], memory requirements
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
-ms.openlocfilehash: 8afeba3f88c4bfe6e1c9777f950c3b458665e340
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 46a65972a1ea96435002ff6956bc2837c07b0e57
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925904"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64913107"
 ---
 # <a name="data-type-summary-visual-basic"></a>データ型の概要 (Visual Basic)
 次の表は、Visual Basic のデータ型、サポートしている共通言語ランタイム型、その公称記憶域の割り当て、およびそれぞれの値の範囲を示します。  
@@ -77,24 +77,25 @@ ms.locfileid: "42925904"
 ## <a name="memory-consumption"></a>メモリの使用量  
  基本データ型を宣言するときに、メモリの消費がその公称記憶域の割り当てと同じであると仮定する安全ではありません。 次の考慮事項が原因です。  
   
--   **記憶域の割り当て。** 共通言語ランタイムは、アプリケーションが実行されているプラットフォームの現在の特性に基づいて記憶域を割り当てることができます。 メモリがほぼいっぱいの場合に近い、宣言された要素をまとめてパック、可能性があります。 それ以外の場合、メモリ アドレスのパフォーマンスを最適化するためにハードウェアの自然な境界を揃えること可能性があります。  
+- **記憶域の割り当て。** 共通言語ランタイムは、アプリケーションが実行されているプラットフォームの現在の特性に基づいて記憶域を割り当てることができます。 メモリがほぼいっぱいの場合に近い、宣言された要素をまとめてパック、可能性があります。 それ以外の場合、メモリ アドレスのパフォーマンスを最適化するためにハードウェアの自然な境界を揃えること可能性があります。  
   
--   **プラットフォームの幅。** 64 ビット プラットフォームでの記憶域の割り当ては、32 ビット プラットフォームでの割り当てと異なります。  
+- **プラットフォームの幅。** 64 ビット プラットフォームでの記憶域の割り当ては、32 ビット プラットフォームでの割り当てと異なります。  
   
 ### <a name="composite-data-types"></a>複合データ型  
  構造体や配列などの複合データ型の各メンバーにも同じ考慮事項が適用されます。 型のメンバーの公称記憶域の割り当てを単純にまとめて追加依存することはできません。 さらに、これには、次などの他の考慮事項があります。  
   
--   **オーバーヘッドです。** 一部の複合型では、追加のメモリ要件があります。 たとえば、配列は配列自体および各ディメンションに余分なメモリを使用します。 32 ビット プラットフォームでは、このオーバーヘッドは現在 12 バイト + ディメンションごとに 8 バイトです。 64 ビット プラットフォームでこの要件は 2 倍になります。  
+- **オーバーヘッドです。** 一部の複合型では、追加のメモリ要件があります。 たとえば、配列は配列自体および各ディメンションに余分なメモリを使用します。 32 ビット プラットフォームでは、このオーバーヘッドは現在 12 バイト + ディメンションごとに 8 バイトです。 64 ビット プラットフォームでこの要件は 2 倍になります。  
   
--   **記憶域のレイアウト。** メモリ内に格納される順序は、宣言の順序と同じ安全に限りません。 2 バイトまたは 4 バイトの境界などのバイトのアラインメントを推測することもできません。 クラスまたは構造体を定義する、そのメンバーのストレージ レイアウトを制御する必要があると、適用することができる場合、<xref:System.Runtime.InteropServices.StructLayoutAttribute>属性をクラスまたは構造体。  
+- **記憶域のレイアウト。** メモリ内に格納される順序は、宣言の順序と同じ安全に限りません。 2 バイトまたは 4 バイトの境界などのバイトのアラインメントを推測することもできません。 クラスまたは構造体を定義する、そのメンバーのストレージ レイアウトを制御する必要があると、適用することができる場合、<xref:System.Runtime.InteropServices.StructLayoutAttribute>属性をクラスまたは構造体。  
   
 ### <a name="object-overhead"></a>オブジェクトのオーバーヘッド  
  `Object`型、基本または複合データを参照するだけでなく、データ型に含まれるデータの 4 バイトを使用します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:Microsoft.VisualBasic.Strings.StrConv%2A>  
- <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [型文字](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:Microsoft.VisualBasic.Strings.StrConv%2A>
+- <xref:System.Runtime.InteropServices.StructLayoutAttribute>
+- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [型文字](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

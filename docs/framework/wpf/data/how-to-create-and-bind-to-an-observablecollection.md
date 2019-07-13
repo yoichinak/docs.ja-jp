@@ -1,5 +1,5 @@
 ---
-title: '方法 : ObservableCollection を作成およびバインドする'
+title: '方法: ObservableCollection を作成およびバインドする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 5e04aa1a1d209074dbdadcb1df089e31efa84ded
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45f8b097bfdb8d3d7994e53ea05146aa6de0fc21
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020921"
 ---
-# <a name="how-to-create-and-bind-to-an-observablecollection"></a>方法 : ObservableCollection を作成およびバインドする
-この例から派生したコレクションを作成してバインドする方法を示しています、<xref:System.Collections.ObjectModel.ObservableCollection%601>クラスは、項目が追加または削除されたときに通知を提供するコレクション クラスです。  
+# <a name="how-to-create-and-bind-to-an-observablecollection"></a>方法: ObservableCollection を作成およびバインドする
+派生したコレクションを作成してバインドする方法を示します、<xref:System.Collections.ObjectModel.ObservableCollection%601>クラスは、項目が追加または削除された場合に、通知を提供するコレクション クラスです。  
   
 ## <a name="example"></a>例  
  `NameList` コレクションの実装例を次に示します。  
@@ -104,7 +104,7 @@ Public Class PersonName
 End Class  
 ```  
   
- このコレクションをバインディングに使用できるようにする方法は、「[XAML でデータをバインディング可能にする](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)」で説明した、他の[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] オブジェクトの場合と同様です。 たとえば、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] でコレクションをインスタンス化し、次に示すように、そのコレクションをリソースとして指定します。  
+ このコレクションをバインディングに使用できるようにする方法は、「[XAML でデータをバインディング可能にする](how-to-make-data-available-for-binding-in-xaml.md)」で説明した、他の[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] オブジェクトの場合と同様です。 たとえば、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] でコレクションをインスタンス化し、次に示すように、そのコレクションをリソースとして指定します。  
   
 ```xaml  
 <Window  
@@ -136,13 +136,14 @@ End Class
  `NameItemTemplate` の定義は、ここには示していません。  
   
 > [!NOTE]
->  コレクション内のオブジェクトは、「[バインディング ソースの概要](../../../../docs/framework/wpf/data/binding-sources-overview.md)」で説明されている要件を満たす必要があります。 使用している場合、特に<xref:System.Windows.Data.BindingMode.OneWay>または<xref:System.Windows.Data.BindingMode.TwoWay>(するなど、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]ソースのプロパティを動的に変更するときに更新する)、など、適切なプロパティの変更通知のメカニズムを実装する必要があります<xref:System.ComponentModel.INotifyPropertyChanged>インターフェイスです。  
+>  コレクション内のオブジェクトは、「[バインディング ソースの概要](binding-sources-overview.md)」で説明されている要件を満たす必要があります。 使用する場合は、特に<xref:System.Windows.Data.BindingMode.OneWay>または<xref:System.Windows.Data.BindingMode.TwoWay>(するなど、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]ソースのプロパティを動的に変更するときに更新する)、などの適切なプロパティ変更通知メカニズムを実装する必要があります<xref:System.ComponentModel.INotifyPropertyChanged>インターフェイス。  
   
- 詳しくは、「[データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)」の「コレクションへのバインド」をご覧ください。  
+ 詳しくは、「[データ バインディングの概要](data-binding-overview.md)」の「コレクションへのバインド」をご覧ください。  
   
-## <a name="see-also"></a>関連項目  
- [ビュー内のデータの並べ替え](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)  
- [ビュー内のデータをフィルター処理する](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)  
- [XAML でビューを使用してデータの並べ替えおよびグループ化を行う](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)  
- [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [方法トピック](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>関連項目
+
+- [ビュー内のデータの並べ替え](how-to-sort-data-in-a-view.md)
+- [ビュー内のデータをフィルター処理する](how-to-filter-data-in-a-view.md)
+- [XAML でビューを使用してデータの並べ替えおよびグループ化を行う](how-to-sort-and-group-data-using-a-view-in-xaml.md)
+- [データ バインディングの概要](data-binding-overview.md)
+- [方法トピック](data-binding-how-to-topics.md)

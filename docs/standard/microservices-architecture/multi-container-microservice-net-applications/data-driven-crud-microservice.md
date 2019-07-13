@@ -1,15 +1,13 @@
 ---
 title: 単純なデータ ドリブン CRUD マイクロサービスの作成
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | マイクロサービス アプリケーションのコンテキストでの単純な CRUD (データ ドリブン) マイクロサービスの作成を理解する。
-author: CESARDELATORRE
-ms.author: wiwagn
-ms.date: 10/02/2018
-ms.openlocfilehash: 32a0e55b17c51a9aa5b7c1fd70a42456c03c186d
-ms.sourcegitcommit: 5b831a3200f835cb9a69f8aae99129bdda8b2ca1
+ms.date: 01/07/2019
+ms.openlocfilehash: 53aba727c8dae35df8b34bc1558c0cc390fe2014
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53786219"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053565"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>単純なデータ ドリブン CRUD マイクロサービスの作成
 
@@ -33,7 +31,7 @@ ms.locfileid: "53786219"
 
 クラウドまたはオンプレミスでデータベースをプロビジョニングしなくてもすべての依存関係を稼働させることができるので、Docker コンテナー内の SQL Server のようなデータベース サーバーの実行は開発環境に適しています。 これは、統合テストの実行時にとても便利です。 ただし運用環境では、コンテナーでデータベース サーバーを実行すると、通常は高可用性が実現されないため、このアプローチはお勧めしません。 Azure の運用環境では、Azure SQL DB、または高可用性と高スケーラビリティを提供できるその他のデータベース テクノロジを使用することをお勧めします。 たとえば、NoSQL アプローチでは、CosmosDB を選択できます。
 
-最後に、Dockerfile と docker-compose.yml メタデータ ファイルを編集して、このコンテナーのイメージの作成方法 (使用される基本イメージに加えて、内部および外部の名前と TCP ポートなどの設計設定) を構成できます。 
+最後に、Dockerfile と docker-compose.yml メタデータ ファイルを編集して、このコンテナーのイメージの作成方法 (使用される基本イメージに加えて、内部および外部の名前と TCP ポートなどの設計設定) を構成できます。
 
 ## <a name="implementing-a-simple-crud-microservice-with-aspnet-core"></a>ASP.NET Core での単純な CRUD マイクロサービスの実装
 
@@ -100,9 +98,9 @@ public class CatalogContext : DbContext
 }
 ```
 
-追加の `DbContext` 実装も使用できます。 たとえば、サンプルの Catalog.API マイクロサービスには `CatalogContextSeed` という名前の 2 番目の `DbContext` があり、データベースに初めてアクセスしようとしたときにサンプル データが自動的に設定されます。 このメソッドは、デモ データと自動テストのシナリオにも役立ちます。 
+追加の `DbContext` 実装も使用できます。 たとえば、サンプルの Catalog.API マイクロサービスには `CatalogContextSeed` という名前の 2 番目の `DbContext` があり、データベースに初めてアクセスしようとしたときにサンプル データが自動的に設定されます。 このメソッドは、デモ データと自動テストのシナリオにも役立ちます。
 
-`DbContext` 内で、`OnModelCreating` メソッドを使用し、オブジェクト/データベース エンティティのマッピングとその他の [EF 機能拡張ポイント](https://blogs.msdn.microsoft.com/dotnet/2016/09/29/implementing-seeding-custom-conventions-and-interceptors-in-ef-core-1-0/)をカスタマイズします。
+`DbContext` 内で、`OnModelCreating` メソッドを使用し、オブジェクト/データベース エンティティのマッピングとその他の [EF 機能拡張ポイント](https://devblogs.microsoft.com/dotnet/implementing-seeding-custom-conventions-and-interceptors-in-ef-core-1-0/)をカスタマイズします。
 
 ##### <a name="querying-data-from-web-api-controllers"></a>Web API コントローラーからのデータのクエリ
 
@@ -116,7 +114,7 @@ public class CatalogController : ControllerBase
     private readonly CatalogSettings _settings;
     private readonly ICatalogIntegrationEventService _catalogIntegrationEventService;
 
-    public CatalogController(CatalogContext context, 
+    public CatalogController(CatalogContext context,
                              IOptionsSnapshot<CatalogSettings> settings,
                              ICatalogIntegrationEventService catalogIntegrationEventService)
     {
@@ -131,7 +129,7 @@ public class CatalogController : ControllerBase
     [HttpGet]
     [Route("[action]")]
     [ProducesResponseType(typeof(PaginatedItemsViewModel<CatalogItem>), (int)HttpStatusCode.OK)]
-    public async Task<IActionResult> Items([FromQuery]int pageSize = 10, 
+    public async Task<IActionResult> Items([FromQuery]int pageSize = 10,
                                            [FromQuery]int pageIndex = 0)
 
     {
@@ -150,7 +148,7 @@ public class CatalogController : ControllerBase
             pageIndex, pageSize, totalItems, itemsOnPage);
 
         return Ok(model);
-    } 
+    }
     //...
 }
 ```
@@ -213,10 +211,10 @@ public void ConfigureServices(IServiceCollection services)
 ### <a name="additional-resources"></a>その他の技術情報
 
 - **データのクエリ** \
-  [*https://docs.microsoft.com/ef/core/querying/index*](https://docs.microsoft.com/ef/core/querying/index)
+  [https://docs.microsoft.com/ef/core/querying/index](/ef/core/querying/index)
 
 - **データの保存** \
-  [*https://docs.microsoft.com/ef/core/saving/index*](https://docs.microsoft.com/ef/core/saving/index)
+  [https://docs.microsoft.com/ef/core/saving/index](/ef/core/saving/index)
 
 ## <a name="the-db-connection-string-and-environment-variables-used-by-docker-containers"></a>Docker コンテナーで使用される DB 接続文字列と環境変数
 
@@ -253,19 +251,19 @@ catalog.api:
     - "5101:80"
 ```
 
-ソリューション レベルでの docker-compose.yml ファイルは、プロジェクトまたはマイクロサービス レベルの構成ファイルよりも柔軟性が高いだけでなく、docker-compose ファイルで宣言されている環境変数を Azure DevOps Services Docker デプロイ タスクからの値のようなデプロイ ツールで設定された値でオーバーライドするとセキュリティが向上します。 
+ソリューション レベルでの docker-compose.yml ファイルは、プロジェクトまたはマイクロサービス レベルの構成ファイルよりも柔軟性が高いだけでなく、docker-compose ファイルで宣言されている環境変数を Azure DevOps Services Docker デプロイ タスクからの値のようなデプロイ ツールで設定された値でオーバーライドするとセキュリティが向上します。
 
 最後に、前のコード例の ConfigureServices メソッドで示されているように、構成 \["ConnectionString"\] を使用してコードから値を取得できます。
 
 ただし、運用環境では、接続文字列などのシークレットを格納する方法について、追加の方法を調べることが必要な場合があります。 アプリケーション シークレットを管理する優れた方法は [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) を使用することです。
 
-Azure Key Vault は、暗号化キーと、クラウド アプリケーションやサービスで使用されるシークレットを保管したり、保護したりするのに役立ちます。 API キー、接続文字列、パスワードなど、厳重に管理するあらゆるものがシークレットです。厳重な管理としては、使用を記録したり、有効期限を設定したり、アクセスを管理したり<span class="underline">します</span>。
+Azure Key Vault は、暗号化キーと、クラウド アプリケーションやサービスで使用されるシークレットを保管したり、保護したりするのに役立ちます。 API キー、接続文字列、パスワードなど、厳重に管理するあらゆるものがシークレットです。厳重な管理としては、使用を記録したり、有効期限を設定したり、アクセスを管理したり*します*。
 
 Azure Key Vault を利用することで、誰にも知らせる必要なく、アプリケーション シークレットの使用を非常に細かく制御できます。 シークレットは一定の周期で再利用し、開発や運用を妨げることなくセキュリティを強化できます。
 
 アプリケーションで Azure Key Vault を使用するには、組織の Active Directory に登録する必要があります。
 
-詳細については、<span class="underline">Azure Key Vault の概念に関するドキュメント</span>をご覧いただけます。
+詳細については、*Azure Key Vault の概念に関するドキュメント*をご覧いただけます。
 
 ### <a name="implementing-versioning-in-aspnet-web-apis"></a>ASP.NET Web API でのバージョン管理の実装
 
@@ -297,15 +295,15 @@ public class CatalogController : ControllerBase
 ### <a name="additional-resources"></a>その他の技術情報
 
 - **Scott Hanselman。簡単になった ASP.NET Core RESTful Web API のバージョン管理** \
-  [*https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
+  <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
 - **RESTful Web API のバージョン管理** \
-  [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
+  <https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api>
 
 - **Roy Fielding。バージョン管理、ハイパーメディア、REST** \
-  [*https://www.infoq.com/articles/roy-fielding-on-versioning*](https://www.infoq.com/articles/roy-fielding-on-versioning)
+  <https://www.infoq.com/articles/roy-fielding-on-versioning>
 
-## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>ASP.NET Core Web API からの Swagger 記述メタデータの生成 
+## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>ASP.NET Core Web API からの Swagger 記述メタデータの生成
 
 [Swagger](https://swagger.io/) は一般に使用されるオープン ソース フレームワークであり、RESTful API の設計、構築、文書化、使用に役立つツールの大規模なエコシステムによってサポートされています。 API 記述メタデータ ドメインの標準になりつつあります。 Swagger 記述メタデータを任意の種類のマイクロサービス (次のセクションで説明するデータ ドリブン マイクロサービスまたはより高度なドメイン ドリブン マイクロサービス) と共に含める必要があります。
 
@@ -313,7 +311,7 @@ Swagger の中心となるのは、JSON または YAML ファイル内の API �
 
 仕様は、OpenAPI 仕様 (OAS) の基盤であり、RESTful インターフェイスを定義する方法を標準化するためにオープンで透過的なコラボレーション コミュニティで開発されています。
 
-仕様では、サービスの検出方法とその機能を理解する方法に関する構造体を定義します。 Web エディターや、Spotify、Uber、Slack、Microsoft などの企業の Swagger 仕様の例については、Swagger のサイト ([https://swagger.io](https://swagger.io)) をご覧ください。
+仕様では、サービスの検出方法とその機能を理解する方法に関する構造体を定義します。 Web エディターや、Spotify、Uber、Slack、Microsoft などの企業の Swagger 仕様の例については、Swagger のサイト (<https://swagger.io>) をご覧ください。
 
 ### <a name="why-use-swagger"></a>Swagger を使用する理由
 
@@ -323,7 +321,7 @@ API 用の Swagger メタデータを生成する主な理由は次のとおり�
 
 - [AutoRest](https://github.com/Azure/AutoRest)。 Swagger を呼び出すための .NET クライアント クラスを自動的に生成することができます。 このツールは CLI から使用することができ、GUI から簡単に使用できるように Visual Studio とも統合されています。
 
-- [Microsoft Flow](https://flow.microsoft.com/en-us/)。 自動的に [API 使用し、高レベルの Microsoft Flow ワークフローと統合](https://flow.microsoft.com/en-us/blog/integrating-custom-api/)できます。プログラミング スキルは不要です。
+- [Microsoft Flow](https://flow.microsoft.com/)。 自動的に [API 使用し、高レベルの Microsoft Flow ワークフローと統合](https://flow.microsoft.com/blog/integrating-custom-api/)できます。プログラミング スキルは不要です。
 
 - [Microsoft PowerApps](https://powerapps.microsoft.com/)。 [PowerApps Studio](https://powerapps.microsoft.com/build-powerapps/) で作成された [PowerApps モバイル アプリ](https://powerapps.microsoft.com/blog/register-and-use-custom-apis-in-powerapps/)から API を自動的に使用できます。プログラミング スキルは不要です。
 
@@ -333,9 +331,9 @@ API 用の Swagger メタデータを生成する主な理由は次のとおり�
 
 Swagger のメタデータは、Microsoft Flow、PowerApps、Azure Logic Apps が API の使用方法と API への接続方法を理解するために使用するものです。
 
-機能 API のヘルプ ページのフォームでは、ASP.NET Core REST API アプリケーションの Swagger メタデータ生成はいくつかの方法で自動化でき、<span class="underline">swagger-ui</span> によって異なります。
+機能 API のヘルプ ページのフォームでは、ASP.NET Core REST API アプリケーションの Swagger メタデータ生成はいくつかの方法で自動化でき、*swagger-ui* によって異なります。
 
-最もよく知られている方法はおそらく、[Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) です。これは現在、[eShopOnCntainers](https://github.com/dotnet-architecture/eShopOnContainers) で使用されています。これについてはこのガイドで取り上げますが、[NSwag](https://github.com/RSuter/NSwag) を使用するという選択肢もあります。その場合、Swagger または OpenAPI の仕様から、さらには [NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio) を使用し、コントローラーを含む .dll をスキャンするという方法によって、Typescript、C\# API クライアント、C\# コントローラーを生成できます。
+最もよく知られている方法はおそらく、[Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) です。これは現在、[eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) で使用されています。これについてはこのガイドで取り上げますが、[NSwag](https://github.com/RSuter/NSwag) を使用するという選択肢もあります。その場合、Swagger または OpenAPI の仕様から、さらには [NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio) を使用し、コントローラーを含む .dll をスキャンするという方法によって、Typescript、C\# API クライアント、C\# コントローラーを生成できます。
 
 ### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>Swashbuckle NuGet パッケージで API Swagger メタデータの生成を自動化する方法
 
@@ -402,17 +400,17 @@ public class Startup
 
 ```url
   http://<your-root-url>/swagger/v1/swagger.json
-  
+
   http://<your-root-url>/swagger/
 ```
 
-http://\<your-root-url\>/swagger のような URL に対して Swashbuckle で作成された生成済みの UI を前に参照しました。 図 6-9 では、API メソッドをテストする方法も確認できます。
+`http://<your-root-url>/swagger` のような URL に対して Swashbuckle で作成された生成済みの UI を前に参照しました。 図 6-9 では、API メソッドをテストする方法も確認できます。
 
 ![Swagger UI の API 詳細画面に応答のサンプルが表示されています。実際の API を実行する際に利用でき、開発者にとって検出に役立ちます。](./media/image10.png)
 
 **図 6-9**。 カタログ/アイテム API メソッドをテストする Swashbuckle UI
 
-図 6-10 は、[Postman](https://www.getpostman.com/) を使用して \<your-root-url\>/swagger/v1/swagger.json を要求したときに eShopOnContainers マイクロサービス (これは、ツールが下で使用するものです) から生成された Swagger JSON メタデータを示しています。
+図 6-10 は、[Postman](https://www.getpostman.com/) を使用して `http://<your-root-url>/swagger/v1/swagger.json` を要求したときに eShopOnContainers マイクロサービス (これは、ツールが表面下で使用するものです) から生成された Swagger JSON メタデータを示しています。
 
 ![Swagger JSON メタデータを示す Postman UI のサンプル](./media/image11.png)
 
@@ -423,14 +421,14 @@ http://\<your-root-url\>/swagger のような URL に対して Swashbuckle で�
 ### <a name="additional-resources"></a>その他の技術情報
 
 - **Swagger を使用する ASP.NET Web API のヘルプ ページ** \
-  [*https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger*](https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger)
+  [https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger](/aspnet/core/tutorials/web-api-help-pages-using-swagger)
 
 - **Swashbuckle と ASP.NET Core の概要** \
-  [*https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-2.1\&tabs=visual-studio%2Cvisual-studio-xml*](https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-2.1\&tabs=visual-studio%2Cvisual-studio-xml)
+  [https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-swashbuckle](/aspnet/core/tutorials/getting-started-with-swashbuckle)
 
 - **NSwag と ASP.NET Core の概要** \
-  [*https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag?view=aspnetcore-2.1\&tabs=visual-studio%2Cvisual-studio-xml*](https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-nswag?view=aspnetcore-2.1\&tabs=visual-studio%2Cvisual-studio-xml)
+  [https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag](/aspnet/core/tutorials/getting-started-with-nswag)
 
->[!div class="step-by-step"]
->[前へ](microservice-application-design.md)
->[次へ](multi-container-applications-docker-compose.md)
+> [!div class="step-by-step"]
+> [前へ](microservice-application-design.md)
+> [次へ](multi-container-applications-docker-compose.md)

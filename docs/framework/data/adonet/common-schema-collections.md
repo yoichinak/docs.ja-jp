@@ -2,12 +2,12 @@
 title: 共通のスキーマ コレクション
 ms.date: 03/30/2017
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
-ms.openlocfilehash: 157330304ac656ddbdbb18408ca5144566746808
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
-ms.translationtype: MT
+ms.openlocfilehash: f6307352cc2d976e4e9f47d1e111d40f96fc16c7
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260270"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59209672"
 ---
 # <a name="common-schema-collections"></a>共通のスキーマ コレクション
 共通のスキーマ コレクションとは、それぞれの .NET Framework マネージド プロバイダーにより実装されるスキーマ コレクションのことです。 呼び出すことによってサポートされるスキーマ コレクションの一覧を決定する .NET Framework マネージ プロバイダーを照会することができます、 **GetSchema**メソッド引数なしでまたはスキーマ コレクション名に"metadatacollections を指定"します。 これにより、サポートされるスキーマ コレクションの一覧、それぞれがサポートする制限数、および使用する識別子部分の数と共に、<xref:System.Data.DataTable> が返されます。 これらのコレクションは、必要なすべての列を表現します。 プロバイダーでは、任意で列を追加できます。 たとえば、`SqlClient` と `OracleClient` は、ParameterName を制限のコレクションに追加します。  
@@ -17,7 +17,7 @@ ms.locfileid: "44260270"
  使用しての詳細については、 **GetSchema**メソッドを参照してください[GetSchema およびスキーマ コレクション](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)します。  
   
 ## <a name="metadatacollections"></a>MetaDataCollections  
- このスキーマ コレクションは、データベースに接続するために現在使用されている、.NET Framework マネージ プロバイダーによりサポートされるすべてのスキーマ コレクションに関する情報を公開します。  
+ このスキーマ コレクションは、データベースに接続するために現在使用されている、.NET Framework マネージド プロバイダーによりサポートされるすべてのスキーマ コレクションに関する情報を公開します。  
   
 |ColumnName|DataType|説明|  
 |----------------|--------------|-----------------|  
@@ -26,7 +26,7 @@ ms.locfileid: "44260270"
 |NumberOfIdentifierParts|int|複合識別子部分とデータベース オブジェクト名部分の数。 たとえば、SQL Server の場合は、テーブルに 3 つ、列に 4 つになります。 Oracle の場合は、テーブルに 2 つ、列に 3 つになります。|  
   
 ## <a name="datasourceinformation"></a>DataSourceInformation  
- このスキーマ コレクションは、.NET Framework マネージ プロバイダーが現在接続しているデータ ソースに関する情報を公開します。  
+ このスキーマ コレクションは、.NET Framework マネージド プロバイダーが現在接続しているデータ ソースに関する情報を公開します。  
   
 |ColumnName|DataType|説明|  
 |----------------|--------------|-----------------|  
@@ -49,7 +49,7 @@ ms.locfileid: "44260270"
 |SupportedJoinOperators|<xref:System.Data.Common.SupportedJoinOperators>|データ ソースでサポートされる SQL の JOIN ステートメントの種類を指定します。|  
   
 ## <a name="datatypes"></a>DataTypes  
- このスキーマ コレクションは、.NET Framework マネージ プロバイダーが現在接続されているデータベースでサポートされているデータ型に関する情報を公開します。  
+ このスキーマ コレクションは、.NET Framework マネージド プロバイダーが現在接続されているデータベースでサポートされているデータ型に関する情報を公開します。  
   
 |ColumnName|DataType|説明|  
 |----------------|--------------|-----------------|  
@@ -88,13 +88,14 @@ ms.locfileid: "44260270"
 |RestrictionNumber|int|この特定の制限が収まっているコレクションの制限内の実際の位置。|  
   
 ## <a name="reservedwords"></a>ReservedWords  
- このスキーマ コレクションは、.NET Framework マネージ プロバイダーが現在接続されているデータベースにより予約されている予約語に関する情報を公開します。  
+ このスキーマ コレクションは、.NET Framework マネージド プロバイダーが現在接続されているデータベースにより予約されている予約語に関する情報を公開します。  
   
 |ColumnName|DataType|説明|  
 |----------------|--------------|-----------------|  
 |ReservedWord|string|特定のプロバイダーは予約語です。|  
   
-## <a name="see-also"></a>関連項目  
- [データベース スキーマ情報の取得](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [GetSchema およびスキーマ コレクション](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [データベース スキーマ情報の取得](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
+- [GetSchema およびスキーマ コレクション](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

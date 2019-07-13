@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a2eb894a8bac702c30826d1e965c91cae9b259ee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3b4d143d8dd5391283736d0140e8f1ced1dec53e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448561"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775325"
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>IMetaDataAssemblyEmit::DefineExportedType メソッド
 指定してエクスポートした型のメタデータが含まれる `ExportedType` 構造体を作成し、関連付けられたメタデータ トークンを返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT DefineExportedType (  
     [in]  LPCWSTR             szName,  
     [in]  mdToken             tkImplementation,   
@@ -39,41 +39,42 @@ HRESULT DefineExportedType (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `szName`  
- [in]エクスポートする型の名前。 エクスポートされた型の名前、共通言語ランタイムのバージョン 1.1 で指定された名前と一致する必要がありますの`TypeDef`の種類。  
+ [in]エクスポートする型の名前。 エクスポートされた型の名前、共通言語ランタイムのバージョン 1.1 で指定された名前と一致する必要がありますの`TypeDef`型。  
   
  `tkImplementation`  
- [in]エクスポートされた型が実装されているを指定するトークンです。 有効な値とその意味です。  
+ [in]エクスポートされる型が実装されているを指定するトークンです。 有効な値とその意味は。  
   
--   `mdFile` 種類は、このアセンブリ内の別のファイルに実装されます。  
+- `mdFile` 種類は、このアセンブリ内の別のファイルに実装されます。  
   
--   `mdAssemblyRef` 種類は、別のアセンブリに実装されます。  
+- `mdAssemblyRef` 種類は、別のアセンブリに実装されます。  
   
--   `mdExportedTYpe` 型は他のいくつかの型の中で入れ子になった。  
+- `mdExportedTYpe` 型が他の何らかの種類内で入れ子になった。  
   
--   `mdFileNil` 型は、マニフェストと同じファイルでは、され、入れ子にされた型ではありません。  
+- `mdFileNil` 種類は、マニフェストと同じファイルであり、入れ子になった型ではありません。  
   
  `tkTypeDef`  
- [in]エクスポートする型を指定するメタデータをトークンです。 この値が入力される、`TypeDef`型を実装し、そのファイルがこのアセンブリ内にある場合にのみ関連するファイル内のテーブルです。  
+ [in]エクスポートする型を指定するメタデータ トークンです。 この値が入力される、`TypeDef`内の型を実装、そのファイルがこのアセンブリ内にある場合にのみ関連するファイル内のテーブル。  
   
  `dwExportedTypeFlags`  
- [in]ビットごとの組み合わせ[CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)エクスポートされた型のプロパティの設定を定義する列挙値。  
+ [in]ビットごとの組み合わせ[CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)エクスポートされる型のプロパティの設定を定義する列挙値。  
   
  `pmdct`  
- [out]エクスポートされた型を示す、返されるメタデータ トークンへのポインター。  
+ [out]エクスポートされた型を示す、返されたメタデータ トークンへのポインター。  
   
-## <a name="remarks"></a>コメント  
- `ExportedType`このアセンブリによって公開されると、モジュール マニフェストを含む 1 つ以外で実装される各型のメタデータ構造体を定義する必要があります。  
+## <a name="remarks"></a>Remarks  
+ `ExportedType`このアセンブリによって公開されると、モジュール マニフェストを含む 1 つ以外で実装される各型のメタデータ構造を定義する必要があります。  
   
-## <a name="requirements"></a>要件  
- **Platform:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
  **ライブラリ:** MsCorEE.dll にリソースとして使用  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataAssemblyEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [IMetaDataAssemblyEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

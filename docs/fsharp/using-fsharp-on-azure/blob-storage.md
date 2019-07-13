@@ -1,16 +1,16 @@
 ---
-title: F# を使用して Azure Blob storage の概要します。
+title: F# を使用した Azure Blob Storage の概要
 description: Azure Blob storage を使用してクラウドでは、非構造化データを格納します。
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: ea9dc334ec9c2bcd4a80cc501d4b6634da5f64e4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 3d020c2cd9a11db1cd4b7a60113e1be03655f763
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44037283"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880044"
 ---
-# <a name="get-started-with-azure-blob-storage-using-f"></a>F# を使用して Azure Blob storage の概要します。 #
+# <a name="get-started-with-azure-blob-storage-using-f"></a>F を使用した Azure Blob storage を概要します。\#
 
 Azure BLOB Storage は、非構造化データをオブジェクト/BLOB としてクラウドに格納するサービスです。 Blob Storage は、ドキュメント、メディア ファイル、アプリケーション インストーラーなど、任意の種類のテキストまたはバイナリ データを格納できます。 Blob Storage は、オブジェクト ストレージとも呼ばれます。
 
@@ -102,14 +102,14 @@ Azure Blob Storage には、ブロック blob とページ blob がサポート�
 
 たとえば、次の一連のブロック blob という名前のコンテナーで`photos`:
 
-*photo1.jpg*
-*2015/architecture/description.txt*
-*2015/architecture/photo3.jpg*
-*2015/architecture/photo4.jpg*
-*2016/architecture/photo5.jpg*
-*2016/architecture/photo6.jpg*
-*2016/architecture/description.txt*
-*2016/photo7.jpg*
+*photo1.jpg*\
+*2015/architecture/description.txt*\
+*2015/architecture/photo3.jpg*\
+*2015/architecture/photo4.jpg*\
+*2016/architecture/photo5.jpg*\
+*2016/architecture/photo6.jpg*\
+*2016/architecture/description.txt*\
+*2016/photo7.jpg*\
 
 呼び出すと`ListBlobs`(上記のサンプル) のように、コンテナーに対して、階層化された一覧が返されます。 両方が含まれる場合`CloudBlobDirectory`と`CloudBlockBlob`し、次のように、結果の出力ディレクトリと、コンテナー内の blob をそれぞれ表すオブジェクト。
 
@@ -196,8 +196,8 @@ Blob を削除するには、まず blob の参照を取得を呼び出して、
 
 Azure storage 内のすべての blob は、コンテナー内に存在する必要があります。 コンテナーは、blob 名の一部を形成します。 たとえば、`mydata`これらサンプル blob Uri 内のコンテナーの名前を指定します。
 
-    https://storagesample.blob.core.windows.net/mydata/blob1.txt
-    https://storagesample.blob.core.windows.net/mydata/photos/myphoto.jpg
+- https://storagesample.blob.core.windows.net/mydata/blob1.txt
+- https://storagesample.blob.core.windows.net/mydata/photos/myphoto.jpg
 
 コンテナー名は、次の名前付け規則に準拠している、有効な DNS 名である必要があります。
 
@@ -216,23 +216,24 @@ Azure storage 内のすべての blob は、コンテナー内に存在する必
 
 既定では、ストレージ アカウント内の blob データはストレージ アカウント所有者のみがアクセスできます。 Blob storage に対する要求の認証には、既定では、アカウント アクセス キーが必要です。 ただし、特定の blob データを他のユーザーが利用できるようにする場合があります。
 
-Blob ストレージへのアクセスを制御する方法の詳細については、次を参照してください。[アクセス コントロール上の blob ストレージ セクションの .NET ガイド](/azure/storage/storage-dotnet-how-to-use-blobs#controlling-access-to-blob-data)します。
-
-
 ### <a name="encrypting-blob-data"></a>Blob データの暗号化
 
 Azure Storage では、クライアントとサーバーの両方の blob データの暗号化をサポートします。
-
-Blob データの暗号化について詳しくは、次を参照してください。 [blob ストレージ セクションの暗号化には、.NET ガイド](/azure/storage/storage-dotnet-how-to-use-blobs#encrypting-blob-data)します。
 
 ## <a name="next-steps"></a>次の手順
 
 これで、Blob storage の基本を学習するは詳細については、これらのリンクに従います。
 
 ### <a name="tools"></a>ツール
-- [F# AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/)の F# 型プロバイダー Blob、Table、および Azure Storage のキューの資産を探索し、それらに対する CRUD 操作を簡単に適用するために使用できます。
-- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage) F# の API を Microsoft Azure Table Storage サービスを使用します。
-- [Microsoft Azure ストレージ エクスプ ローラー (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer)から Microsoft Windows、OS X、Linux で Azure Storage のデータを視覚的に作業することができますが、無料のスタンドアロン アプリです。
+
+- [F#AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/)\
+F#型プロバイダーが Blob、Table、および Azure Storage のキューの資産を探索し、それらに対する CRUD 操作を簡単に適用するために使用できます。
+
+- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage)\
+F# Microsoft Azure Table Storage サービスを使用するための API
+
+- [Microsoft Azure ストレージ エクスプ ローラー (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer)\
+Microsoft Windows、OS X、Linux で Azure Storage のデータを視覚的に作業することができます、無料のスタンドアロン アプリです。
 
 ### <a name="blob-storage-reference"></a>Blob ストレージのリファレンス
 
@@ -246,3 +247,4 @@ Blob データの暗号化について詳しくは、次を参照してくださ
 - [Linux 上の AzCopy コマンド ライン ユーティリティを使用したデータを転送します。](/azure/storage/common/storage-use-azcopy-linux)
 - [Azure Storage 接続文字列を構成します。](/azure/storage/common/storage-configure-connection-string)
 - [Azure Storage チーム ブログ](https://blogs.msdn.microsoft.com/windowsazurestorage/)
+- [クイック スタート:.NET を使用してオブジェクト ストレージに blob を作成するには](/azure/storage/blobs/storage-quickstart-blobs-dotnet)

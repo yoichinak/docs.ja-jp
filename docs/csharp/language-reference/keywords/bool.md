@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: a274083ad2e518f8f29384e51d692bcf9a9cb61e
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: a6aae34433ee6f5d141d95f0c434af1825e9bf4b
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237247"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424432"
 ---
 # <a name="bool-c-reference"></a>bool (C# リファレンス)
 
 `bool` キーワードは <xref:System.Boolean?displayProperty=nameWithType> の別名です。 ブール値 ([true](true-literal.md) と [false](false-literal.md)) を格納する変数を宣言するために使われます。
 
 > [!NOTE]
-> 値 `null` も格納できるブール変数が必要な場合は、`bool?` を使います。 詳細については、「[Null 許容型の使用](../../programming-guide/nullable-types/using-nullable-types.md)」の記事の「[bool? 型](../../programming-guide/nullable-types/using-nullable-types.md#the-bool-type)」セクションを参照してください。
+> 3 値ロジックをサポートする必要がある場合は、`bool?` 型を使用します。たとえば、3 値ブール型をサポートするデータベースを操作する場合などです。 `bool?` オペランドの場合、定義済みの `&` 演算子と `|` 演算子は 3 値ロジックをサポートします。 詳細については、「[Boolean logical operators (ブール論理演算子)](../operators/boolean-logical-operators.md)」記事の「[Nullable Boolean logical operators (null 許容論理演算子)](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators)」セクションを参照してください。
 
 ## <a name="literals"></a>リテラル
 
@@ -52,10 +52,10 @@ C++ では、`bool` 型の値を `int` 型の値に変換できます。つま�
 
 ## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
-- [整数型の一覧表](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [組み込み型の一覧表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [暗黙的な数値変換の一覧表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-- [明示的な数値変換の一覧表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- [C# リファレンス](../../../csharp/language-reference/index.md)
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)
+- [整数型](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
+- [組み込み型の一覧表](../../../csharp/language-reference/keywords/built-in-types-table.md)
+- [暗黙的な数値変換の一覧表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
+- [明示的な数値変換の一覧表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

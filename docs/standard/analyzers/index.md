@@ -2,15 +2,15 @@
 title: Roslyn ベースのアナライザー - .NET
 description: 問題を検出し、各問題について修正を提案する Roslyn ベースのアナライザーについて説明します。
 author: billwagner
-ms.author: billwagner
+ms.author: wiwagn
 ms.date: 01/24/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 226482d1d385078811f2b1c5ee138e24287a785e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 436cfb3904f0891f8c18bb5890563a13d65e2d1c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003055"
 ---
 # <a name="the-roslyn-based-analyzers"></a>Roslyn ベースのアナライザー
 
@@ -27,12 +27,12 @@ Roslyn ベースのアナライザーでは、エラー、警告、または問�
 Roslyn ベースのアナライザーは、プロジェクト内に NuGet パッケージとしてインストールします。 構成されたアナライザーと各アナライザーに対するすべての設定は復元され、そのプロジェクト用の任意の開発者のマシンで実行されます。
 
 > [!NOTE]
-> Roslyn ベースのアナライザーのユーザー エクスペリエンスは、FxCop の旧バージョンのようなコード分析ライブラリや、セキュリティ分析ツールとは異なるものです。  明示的に Roslyn ベースのアナライザーを実行する必要はありません。 Visual Studio の [分析] メニューで [コード分析の実行] メニュー項目を使用する必要はありません。 Roslyn ベースのアナライザーは、ユーザーの作業と同期して実行されます。 
+> Roslyn ベースのアナライザーのユーザー エクスペリエンスは、FxCop の旧バージョンのようなコード分析ライブラリや、セキュリティ分析ツールとは異なるものです。  明示的に Roslyn ベースのアナライザーを実行する必要はありません。 Visual Studio の [分析] メニューで [コード分析の実行] メニュー項目を使用する必要はありません。 Roslyn ベースのアナライザーは、ユーザーの作業と同期して実行されます。
 
 ## <a name="more-information-on-specific-analyzers"></a>特定のアナライザーについての詳細
 
 このセクションでは、次のアナライザーについて説明します。
 
-* [API アナライザー](api-analyzer.md): このアナライザーでは、コードの互換性の潜在的リスクや、非推奨の API の使用が調べられます。    
+* [API アナライザー](api-analyzer.md): このアナライザーでは、コードの互換性の潜在的リスクや、非推奨の API の使用が調べられます。
 * [フレームワーク アナライザー](framework-analyzer.md): このアナライザーでは、コードが .NET Framework アプリケーションのガイドラインに従っているかどうかが調べられます。 これらの規則には、セキュリティに基づく推奨事項がいくつか含まれます。
-* [.NET Portability Analyzer](portability-analyzer.md): このアナライザーでは、コードを調べて、アプリケーションと他の .NET の実装やプロファイル (.NET Core、.NET Standard、UWP、Xamarin for iOS、Android、Mac など) との互換性を確保するために必要な作業量を確認します。 
+* [.NET Portability Analyzer](portability-analyzer.md): このアナライザーでは、コードを調べて、アプリケーションと他の .NET の実装やプロファイル (.NET Core、.NET Standard、UWP、Xamarin for iOS、Android、Mac など) との互換性を確保するために必要な作業量を確認します。

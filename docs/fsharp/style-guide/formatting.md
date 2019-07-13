@@ -1,15 +1,15 @@
 ---
-title: F#コードの書式設定に関するガイドライン
+title: F# コードのフォーマットに関するガイドライン
 description: 書式設定するためのガイドラインについて説明しますF#コード。
-ms.date: 11/26/2018
-ms.openlocfilehash: e8e0af2ebffd0e2f3720896bf710961afa11e7bd
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
+ms.date: 02/08/2019
+ms.openlocfilehash: 8be5337d3f593c7e5a2f32cb7231cb7f759fb509
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53396826"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833905"
 ---
-# <a name="f-code-formatting-guidelines"></a>F#コードの書式設定に関するガイドライン
+# <a name="f-code-formatting-guidelines"></a>F# コードのフォーマットに関するガイドライン
 
 この記事では、F# コードが実行されるように、コードを書式設定する方法に関するガイドラインを提供します。
 
@@ -74,7 +74,7 @@ let ( !> ) x f = f x
 let (!>) x f = f x
 ```
 
-始まる任意のカスタム演算子の`*`コンパイラのあいまいさを避けるために、定義の先頭に空白文字を追加する必要があります。 このため、単に 1 つの空白文字を持つすべての演算子の定義を囲むことをお勧めします。
+始まる任意のカスタム演算子の`*`と 1 つ以上の文字を持つ、コンパイラのあいまいさを避けるために、定義の先頭に空白文字を追加する必要があります。 このため、単に 1 つの空白文字を持つすべての演算子の定義を囲むことをお勧めします。
 
 ### <a name="surround-function-parameter-arrows-with-white-space"></a>空白文字で関数パラメーターの矢印を囲む
 
@@ -86,6 +86,46 @@ type MyFun = int -> int -> string
 
 // Bad
 type MyFunBad = int->int->string
+```
+
+### <a name="surround-function-arguments-with-white-space"></a>空白文字でブロックの挿入関数の引数
+
+関数を定義するときに、各引数の周囲の空白文字を使用します。
+
+```fsharp
+// OK
+let myFun (a: decimal) b c = a + b + c
+
+// Bad
+let myFunBad (a:decimal)(b)c = a + b + c
+```
+
+### <a name="type-annotations"></a>型の注釈
+
+#### <a name="right-pad-function-argument-type-annotations"></a>引数型の注釈の右側を埋める関数
+
+型の注釈の引数を定義するときに、後の空白文字を使用して、`:`シンボル。
+
+```fsharp
+// OK
+let complexFunction (a: int) (b: int) c = a + b + c
+
+// Bad
+let complexFunctionBad (a :int) (b :int) (c:int) = a + b + c
+```
+
+#### <a name="surround-return-type-annotations-with-white-space"></a>空白の戻り値の型注釈がブロックの挿入
+
+Let バインドされた関数または値型の注釈 (戻り値の型、関数の場合)、空白文字は使用前に、と後、`:`シンボル。
+
+```fsharp
+// OK
+let expensiveToCompute : int = 0 // Type annotation for let-bound value
+let myFun (a: decimal) b c : decimal = a + b + c // Type annotation for the return type of a function
+// Bad
+let expensiveToComputeBad1:int = 1
+let expensiveToComputeBad2 :int = 2
+let myFunBad (a: decimal) b c:decimal = a + b + c
 ```
 
 ## <a name="formatting-blank-lines"></a>空白行を書式設定
@@ -250,12 +290,13 @@ x ^^^ y // Bitwise xor, also for working with “flags” enumeration
 
 ### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>ジェネリックのプレフィックスの構文を使用して (`Foo<T>`) 方が優先的後置構文 (`T Foo`)
 
-F#ジェネリック型の名前付けの両方、後置 ML スタイルを継承 (たとえば、 `int list`) .NET スタイルのプレフィックスと (たとえば、 `list<int>`)。 次の 4 つの特定の型を除く、.NET スタイルを優先するには。
+F#ジェネリック型の名前付けの両方、後置 ML スタイルを継承 (たとえば、 `int list`) .NET スタイルのプレフィックスと (たとえば、 `list<int>`)。 5 つの特定の型を除く、.NET スタイルを優先するには。
 
 1. F#後置形式を使用して、リスト、:`int list`なく`list<int>`します。
 2. F#オプションを使用して、後置形式:`int option`なく`option<int>`します。
-3. F#構文の名前を使用して、配列、`int[]`なく`int array`または`array<int>`します。
-4. 参照セルを使用して`int ref`なく`ref<int>`または`Ref<int>`します。
+3. F#値のオプションを使用して、後置形式:`int voption`なく`voption<int>`します。
+4. F#構文の名前を使用して、配列、`int[]`なく`int array`または`array<int>`します。
+5. 参照セルを使用して`int ref`なく`ref<int>`または`Ref<int>`します。
 
 他のすべての種類では、前置形式を使用します。
 
@@ -275,6 +316,18 @@ match x, y with
 | x, 1 -> 0
 | x, y -> 1
 ```
+
+タプルが関数の戻り値の場合は、かっこを省略することもよく受け入れられます。
+
+```fsharp
+// OK
+let update model msg =
+    match msg with
+    | 1 -> model + 1, []
+    | _ -> model, [ msg ]
+```
+
+要約すると、かっこで囲まれたタプルのインスタンス化、必要に応じてをパターンに一致するか、戻り値のタプルを使用する場合と見なされるかっこを回避するために問題ありません。
 
 ## <a name="formatting-discriminated-union-declarations"></a>判別共用体の宣言の書式設定
 
@@ -333,31 +386,31 @@ type PostalAddress =
     City: string
     Zip: string }
     member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
-    
+
 // Unusual in F#
 type PostalAddress =
-    { 
+    {
         Address: string
         City: string
         Zip: string
     }
 ```
 
-開始トークンを配置する、新しい行で、新しい行に終了トークンは、レコードのメンバー、またはインターフェイスの実装を宣言する場合はお勧めです。
+開始トークンを配置する、新しい行で、新しい行に終了トークンは、レコードのメンバー、またはインターフェイスの実装を宣言する場合に推奨されます。
 
 ```fsharp
 // Declaring additional members on PostalAddress
 type PostalAddress =
-    { 
+    {
         Address: string
         City: string
         Zip: string
     } with
     member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
-    
+
 type MyRecord =
     {
-        SomeField : int
+        SomeField: int
     }
     interface IMyInterface
 ```
@@ -378,7 +431,7 @@ let rainbow =
       Lackeys = ["Zippy"; "George"; "Bungle"] }
 ```
 
-開始を配置することと、タブ付きトークンを新しい行に、内容、1 つのスコープ、新しい行に終了トークンが使用する場合は、なるべく。
+開始を配置して、タブ付きトークンを新しい行に、内容、1 つのスコープ、新しい行に終了トークンがいる場合に適しています。
 
 * インデントの異なるスコープを使用したコード内でレコードを移動します。
 * 関数にパイプすること
@@ -396,10 +449,10 @@ let rainbow =
         Boss8 = "Jeffrey"
         Lackeys = ["Zippy"; "George"; "Bungle"]
     }
-    
+
 type MyRecord =
     {
-        SomeField : int
+        SomeField: int
     }
     interface IMyInterface
 
@@ -412,6 +465,42 @@ let foo a =
 ```
 
 リストと配列の要素の場合と同じ規則が適用されます。
+
+## <a name="formatting-copy-and-update-record-expressions"></a>レコードのコピーと更新の式を書式設定
+
+レコードのコピーと更新式はまだ、レコードのようなガイドラインが適用されます。
+
+短い式は、1 行に収めることができます。
+
+```fsharp
+let point2 = { point with X = 1; Y = 2 }
+```
+
+長い式では、新しい行を使用する必要があります。
+
+```fsharp
+let rainbow2 =
+    { rainbow with
+        Boss = "Jeffrey"
+        Lackeys = ["Zippy"; "George"; "Bungle"] }
+```
+
+として、レコードのガイダンスとすることも、中かっこの別々 の行を割り当てるし、式の右側に 1 つのスコープにインデントを設定します。 でかっこがない場合、オプションの値をラッピングなどのいくつかの特殊なケースでする必要があります 1 行に中かっこを保持することを確認してください。
+
+```fsharp
+type S = { F1: int; F2: string }
+type State = { F:  S option }
+
+let state = { F = Some { F1 = 1; F2 = "Hello" } }
+let newState =
+    {
+        state with
+            F = Some {
+                    F1 = 0
+                    F2 = ""
+                }
+    }
+```
 
 ## <a name="formatting-lists-and-arrays"></a>書式設定のリストと配列
 
@@ -676,7 +765,7 @@ module A2 =
 let comparer =
     { new IComparer<string> with
           member x.Compare(s1, s2) =
-              let rev (s : String) =
+              let rev (s: String) =
                   new String (Array.rev (s.ToCharArray()))
               let reversed = rev s1
               reversed.CompareTo (rev s2) }
@@ -748,14 +837,14 @@ type MyRecord =
 
 ## <a name="formatting-literals"></a>書式設定リテラル
 
-[F#リテラル](../language-reference/literals.md)を使用して、`Literal`属性を独自の行に属性を配置し、camelCase 名前付けを使用する必要がある必要があります。
+[F#リテラル](../language-reference/literals.md)を使用して、`Literal`属性の属性を独自の行に配置し、PascalCase 名前付けを使用する必要があります。
 
 ```fsharp
 [<Literal>]
-let path = __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
+let Path = __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
 
 [<Literal>]
-let myUrl = "www.mywebsitethatiamworkingwith.com"
+let MyUrl = "www.mywebsitethatiamworkingwith.com"
 ```
 
 属性値と同じ行を配置しないでください。

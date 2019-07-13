@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e6e6f4f6bdfba8deecb3661d88a881759da043ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3ebf8c736cdd1362cae1b1e0b734ce14bea49b18
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456308"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751885"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>ICorProfilerInfo2::GetArrayObjectInfo メソッド
-配列オブジェクトに関する詳細情報を取得します。  
+配列オブジェクトに関する詳細な情報を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetArrayObjectInfo(  
     [in] ObjectID objectId,  
     [in] ULONG32 cDimensions,  
@@ -38,7 +38,7 @@ HRESULT GetArrayObjectInfo(
     [out] BYTE **ppData);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `objectId`  
  [in]有効な配列オブジェクトの ID。  
   
@@ -46,26 +46,27 @@ HRESULT GetArrayObjectInfo(
  [in]配列のランク (次元数)。  
   
  `pDimensionSizes`  
- [out]それぞれの配列の次元のサイズを表す整数値を格納する配列。  
+ [out]各配列の次元のサイズを表す整数を格納する配列。  
   
  `pDimensionLowerBounds`  
- [out]整数を含む配列、配列の次元の下限を表すそれぞれバインドします。  
+ [out]整数を含む配列、配列の次元の下限を表す各バインドされています。  
   
  `ppData`  
- [out]C++ の規約に従ってレイアウトは、配列の生バッファーのアドレスへのポインター。  
+ [out]に従ってレイアウトは、配列の生バッファーのアドレスへのポインター、C++規則。  
   
-## <a name="remarks"></a>コメント  
- `pDimensionSizes`と`pDimensionLowerBounds`は並列配列は、ため各配列内の同じインデックスにある要素が、同じエンティティの特性。  
+## <a name="remarks"></a>Remarks  
+ `pDimensionSizes`と`pDimensionLowerBounds`は並列配列は、各配列内の同じインデックス位置にある要素は、同じエンティティの特性。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー** : CorProf.idl、CorProf.h  
+ **ヘッダー:** CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

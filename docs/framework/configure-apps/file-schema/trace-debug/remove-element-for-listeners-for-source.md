@@ -1,5 +1,5 @@
 ---
-title: '&lt;削除&gt;要素&lt;リスナー&gt;の&lt;ソース&gt;'
+title: <remove> の <listeners> の <source> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/remove
@@ -7,23 +7,21 @@ helpviewer_keywords:
 - remove element for <listeners> for <source>
 - <remove> element for <listeners> for <source>
 ms.assetid: 3ff6b578-273d-407f-b07f-8251f1f9f5d0
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 5cfed154af93d72f69efc24c6475b432d0963580
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 4809c471deb51e0560b438b5a2c8849daad34ca0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48029288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701607"
 ---
-# <a name="ltremovegt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;削除&gt;要素&lt;リスナー&gt;の&lt;ソース&gt;
+# <a name="remove-element-for-listeners-for-source"></a>\<削除 > 要素の\<リスナー > の\<ソース >
 トレース ソースの `Listeners` コレクションからリスナーを削除します。  
   
  \<configuration>  
-\<system.diagnostics >  
+\<system.diagnostics>  
 \<ソース >  
 \<ソース >  
-\<リスナー >  
+\<listeners>  
 \<remove>  
   
 ## <a name="syntax"></a>構文  
@@ -81,9 +79,10 @@ ms.locfileid: "48029288"
 </configuration>   
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Diagnostics.TraceSource.Listeners%2A>  
- <xref:System.Diagnostics.TraceSource>  
- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)  
- [トレース リスナー](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Diagnostics.TraceSource.Listeners%2A>
+- <xref:System.Diagnostics.TraceSource>
+- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)
+- [トレース リスナー](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

@@ -2,12 +2,12 @@
 title: ClientCredentials
 ms.date: 03/30/2017
 ms.assetid: 41dffd6b-8f14-4fed-aefb-2a1bb168efb3
-ms.openlocfilehash: 8b6200f84f352d49cf142d9c8b97d1c2b36149b2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c3adc675bb6c1e9011459a88fd7dc8e8cf63a880
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61963977"
 ---
 # <a name="clientcredentials"></a>ClientCredentials
 ClientCredentials  
@@ -37,56 +37,56 @@ class ClientCredentials : Behavior
 ### <a name="clientcertificate"></a>ClientCertificate  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  クライアントがサービスに対して自身を認証するために使用する X.509 証明書です。  
   
 ### <a name="httpdigest"></a>HttpDigest  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  現在の Http ダイジェスト資格情報です。  
   
 ### <a name="issuedtoken"></a>IssuedToken  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  ローカル セキュリティ トークン サービスにアクセスするために使用されるエンドポイント アドレスおよびバインディングです。  
   
 ### <a name="peer"></a>Peer  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  ピア ノードがメッシュ内の他のノードに対して自身を認証するために使用する資格情報です。  
   
 ### <a name="servicecertificate"></a>ServiceCertificate  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  サービスの X.509 証明書です。  
   
 ### <a name="supportinteractive"></a>SupportInteractive  
  データ型 : boolean  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  資格情報が対話的なネゴシエーションをサポートしているかどうかを指定するブール値です。  
   
 ### <a name="username"></a>UserName  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  クライアントがサービスに対して自身を認証するために使用するユーザー名とパスワードです。  
   
 ### <a name="windows"></a>Windows  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  クライアントがサービスに対して自身を認証するために使用する Windows 資格情報です。  
   
@@ -94,7 +94,8 @@ class ClientCredentials : Behavior
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
-|Namespace|root\ServiceModel で定義|  
+|名前空間|root\ServiceModel で定義|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Description.ClientCredentials>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Description.ClientCredentials>

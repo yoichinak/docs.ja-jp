@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed7db321b32657087b791758096c692f25f3d7f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 83dac3b9b2ac396cdef19695fcce0f7e20485a50
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407837"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740396"
 ---
 # <a name="cordebugblockingobject-structure"></a>CorDebugBlockingObject 構造体
-スレッドとスレッドがブロックされている特定の理由をブロックしているオブジェクトを定義します。  
+スレッドおよびスレッドがブロックされている特定の理由をブロックしているオブジェクトを定義します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 Typedef struct CorDebugBlockingObject  
 {  
 ICorDebugValue pBlockingObject;  
@@ -41,21 +41,22 @@ CorDebugBlockingReason blockingReason;
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`pBlockingObject`|スレッドがブロックしているオブジェクト。 このオブジェクトは、現在の同期状態の期間に対してのみ有効です。 予想される場合があります、同じ同期された状態で同じオブジェクトで 2 つのスレッドのブロックは場合、 [icordebugvalue::getaddress](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getaddress-method.md)を同じ値を返すメソッド。 ただし、インターフェイスは、同等のポインターができない可能性があります。|  
-|`dwTimeout`|ブロックしている操作の前に時間をミリ秒単位は、タイムアウト、または値を示すものではタイムアウトしない INFINITE されます。タイムアウト値は、時間が残っているではなく、ブロック操作の時間の合計の長さを指定します。|  
+|`pBlockingObject`|スレッドがブロックしているオブジェクト。 このオブジェクトは、現在の同期状態の期間に対してのみ有効です。 同じ同期された状態で同じオブジェクトでは、2 つのスレッドがブロックして、期待する場合は可能性があります、 [icordebugvalue::getaddress](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getaddress-method.md)メソッドを同じ値を返します。 ただし、インターフェイスは、同等のポインターができない可能性があります。|  
+|`dwTimeout`|ブロック操作までのミリ秒数は、タイムアウト、または、値は INFINITE で、ものではタイムアウトしないことを示します。タイムアウト値には、時間が残っているではなく、ブロック操作の時間の合計の長さを指定します。|  
 |`blockingReason`|このオブジェクトのスレッドがブロックされている理由です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>関連項目
+
+- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)

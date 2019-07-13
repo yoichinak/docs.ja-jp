@@ -1,13 +1,13 @@
 ---
 title: null 値
 description: Null 値を使用する方法について説明します、F#プログラミング言語。
-ms.date: 05/16/2016
-ms.openlocfilehash: 58c54065a98a84c4d4e912cbc42d59cfea8c6de1
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 03/22/2019
+ms.openlocfilehash: 93ac48eddf36981b9df550e76405c3175ae92e0a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902279"
 ---
 # <a name="null-values"></a>null 値
 
@@ -19,7 +19,7 @@ Null 値は通常使用されません F# での値または変数。 ただし�
 
 F# で定義されているし、F# から厳密に使用される型、F# ライブラリを直接使用して null 値を作成する唯一の方法は使用する[Unchecked.defaultof](https://msdn.microsoft.com/library/9ff97f2a-1bd4-4f4c-afbe-5886a74ab977)または[Array.zeroCreate](https://msdn.microsoft.com/library/fa5b8e7a-1b5b-411c-8622-b58d7a14d3b2)します。 ただし、F# 型の他の .NET 言語から使用されるまたは null 値が発生することがその型を使用して、F# など、.NET Framework で記述されていない API を使用している場合。
 
-使用することができます、 `option` F# 参照変数を別の .NET 言語で使用できる null 値で使用するときに入力します。 Null の場合、代わりに、 F# `option`型、オプションの値を使用する`None`オブジェクトが存在しない場合。 オプションの値を使用する`Some(obj)`オブジェクト`obj`オブジェクトがある場合。 詳細については、次を参照してください。[オプション](../options.md)します。
+使用することができます、 `option` F# 参照変数を別の .NET 言語で使用できる null 値で使用するときに入力します。 Null の場合、代わりに、 F# `option`型、オプションの値を使用する`None`オブジェクトが存在しない場合。 オプションの値を使用する`Some(obj)`オブジェクト`obj`オブジェクトがある場合。 詳細については、[オプション](../options.md)に関するページを参照してください。 まだをパックすることに注意してください、`null`オプションに値の場合の`Some x`、`x`たまたま`null`。 このためが使用する重要な`None`、値が`null`します。
 
 `null`キーワードは、F# 言語では、有効なキーワードと、.NET Framework Api または他の .NET 言語で記述されている他の Api を使用しているときに使用する必要があります。 Null 値をする必要があります、2 つの状況は、.NET API を呼び出すし、引数として null 値を渡すされ、戻り値または .NET メソッドの呼び出しからの出力パラメーターを解釈するときに。
 

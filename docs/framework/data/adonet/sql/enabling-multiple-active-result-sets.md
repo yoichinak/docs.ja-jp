@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 073cd3a57f254f639fac44900ff6bf022e1fb165
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 71d5bbf7eb2df4065362031f30840635062a9298
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504307"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583499"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>複数のアクティブな結果セットの有効化
 複数のアクティブな結果セット (MARS : Multiple Active Result Set) は、SQL Server で動作する機能であり、複数のバッチを単一の接続で実行することができます。 SQL Server で使用できるように MARS が有効になっているときは、使用中の各コマンド オブジェクトは接続にセッションを追加します。  
@@ -75,15 +75,15 @@ string connectionString = "Data Source=MSSQL1;" +
   
  バッチ実行環境には、次のコンポーネントが含まれます。  
   
--   SET オプション (ANSI_NULLS、DATE_FORMAT、LANGUAGE、TEXTSIZE など)  
+- SET オプション (ANSI_NULLS、DATE_FORMAT、LANGUAGE、TEXTSIZE など)  
   
--   セキュリティ コンテキスト (ユーザーまたはアプリケーションのロール)  
+- セキュリティ コンテキスト (ユーザーまたはアプリケーションのロール)  
   
--   データベース コンテキスト (現在のデータベース)  
+- データベース コンテキスト (現在のデータベース)  
   
--   実行状態変数 (たとえば、@@ERROR、@@ROWCOUNT、@@FETCH_STATUS @@IDENTITY)  
+- 実行状態変数 (たとえば、@@ERROR、@@ROWCOUNT、@@FETCH_STATUS @@IDENTITY)  
   
--   最上位の一時テーブル  
+- 最上位の一時テーブル  
   
  MARS を使用すると、既定の実行環境が接続に関連付けられます。 所定の接続で実行を開始する新しいバッチは、いずれも既定の環境のコピーを受け取ります。 コードが所定のバッチで実行されるときは、その環境に対して行われるすべての変更は、常に特定のバッチにスコープ設定されます。 実行が完了すると、実行の設定は既定の環境にコピーされます。 単一のバッチが複数のコマンドを発行し、それらが同じトランザクションで連続して実行される場合、そのセマンティクスは、以前のクライアントやサーバーを含む接続で公開されているときのセマンティクスと同じです。  
   
@@ -92,25 +92,26 @@ string connectionString = "Data Source=MSSQL1;" +
   
  たとえば、次のようなシナリオがあるとします。 2 つのコマンド オブジェクトが作成され、一方は結果セットを処理し、もう一方はデータを更新するとします。それらは MARS を介して共通の接続を共有します。 このシナリオで、`Transaction`します。`Commit` 次の例外を生成する最初のコマンド オブジェクトのすべての結果を読み取られるまでの更新で失敗します。  
   
- メッセージ: トランザクション コンテキストを他のセッションが使用中です。  
+ メッセージ:別のセッションで使用中のトランザクション コンテキスト。  
   
- ソース: .Net SqlClient Data Provider  
+ ソース: .NET SqlClient データ プロバイダー  
   
  期待される出力: (null)  
   
- 受信: System.Data.SqlClient.SqlException  
+ 受信。System.Data.SqlClient.SqlException  
   
  このシナリオに対応するには、次の 3 つの方法があります。  
   
-1.  リーダーが作成されてからトランザクションを開始し、リーダーがトランザクションの一部にならないようにします。 すべての更新は、それ自身のトランザクションになります。  
+1. リーダーが作成されてからトランザクションを開始し、リーダーがトランザクションの一部にならないようにします。 すべての更新は、それ自身のトランザクションになります。  
   
-2.  リーダーが閉じてからすべての操作をコミットします。 この場合、後続の更新バッチが実行される可能性があります。  
+2. リーダーが閉じてからすべての操作をコミットします。 この場合、後続の更新バッチが実行される可能性があります。  
   
-3.  MARS を使用せず、代わりに MARS が導入される以前に行っていたように、コマンド オブジェクトごとに別々の接続を使用します。  
+3. MARS を使用せず、代わりに MARS が導入される以前に行っていたように、コマンド オブジェクトごとに別々の接続を使用します。  
   
 ### <a name="detecting-mars-support"></a>MARS サポートの検出  
  アプリケーションは、`SqlConnection.ServerVersion` の値を読み取って MARS サポートを確認することができます。 SQL Server 2005 のメジャー番号は 9、SQL Server 2008 のメジャー番号は 10 です。  
   
-## <a name="see-also"></a>関連項目  
- [複数のアクティブな結果セット (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [複数のアクティブな結果セット (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

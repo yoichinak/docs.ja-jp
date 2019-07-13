@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 14b8930044381d1d86ec7984d36a5c3588eebd81
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774035"
+---
 ### <a name="the-default-hash-algorithm-for-wpfs-markup-compiler-is-now-sha256"></a>WPF のマークアップ コンパイラの既定のハッシュ アルゴリズムが SHA256 になった
 
 |   |   |
@@ -7,4 +15,3 @@
 |スコープ|透明|
 |Version|4.7.2|
 |型|再ターゲット中|
-

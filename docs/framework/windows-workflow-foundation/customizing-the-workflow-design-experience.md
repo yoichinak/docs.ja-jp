@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extending [WF], Workflow Designer
 ms.assetid: 98135077-0f5d-4d16-9337-01094e843537
-ms.openlocfilehash: ed4ccb45e4470eb03cec856e865d4b50220816e3
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 926edb4478551affa03619f44ee886d5eb591e4d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836460"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637271"
 ---
 # <a name="customizing-the-workflow-design-experience"></a>ワークフロー デザイン操作のカスタマイズ
 
@@ -17,15 +17,15 @@ ms.locfileid: "48836460"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
- [カスタム アクティビティ デザイナーおよびテンプレートの使用](../../../docs/framework/windows-workflow-foundation/using-custom-activity-designers-and-templates.md)
+ [カスタム アクティビティ デザイナーおよびテンプレートの使用](using-custom-activity-designers-and-templates.md)
 
  新しいカスタム アクティビティ デザイナーおよびテンプレートを作成する方法について説明します。
 
- [ワークフロー デザイナーのホスト変更](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
+ [ワークフロー デザイナーのホスト変更](rehosting-the-workflow-designer.md)
 
  再ホストする方法について説明します、[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]検証エラーを表示する方法と Visual Studio の外部でします。
 
- [カスタム式エディターの使用](../../../docs/framework/windows-workflow-foundation/using-a-custom-expression-editor.md)
+ [カスタム式エディターの使用](using-a-custom-expression-editor.md)
 
  Visual Studio 2010 の外部で再ホストされたワークフロー デザイナーで使用するカスタム式エディターを実装する方法について説明します。
 
@@ -35,7 +35,7 @@ ms.locfileid: "48836460"
 
 ## <a name="see-also"></a>関連項目
 
-- [Windows Workflow Foundation の拡張](../../../docs/framework/windows-workflow-foundation/extend.md)
-- [デザイナー](../../../docs/framework/windows-workflow-foundation/samples/designer.md)
-- [カスタム アクティビティ デザイナー](../../../docs/framework/windows-workflow-foundation/samples/custom-activity-designers.md)
-- [デザイナーのホスト変更](../../../docs/framework/windows-workflow-foundation/samples/designer-rehosting.md)
+- [Windows Workflow Foundation の拡張](extend.md)
+- [デザイナー](./samples/designer.md)
+- [カスタム アクティビティ デザイナー](./samples/custom-activity-designers.md)
+- [デザイナーのホスト変更](./samples/designer-rehosting.md)

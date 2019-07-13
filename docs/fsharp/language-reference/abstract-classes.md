@@ -2,12 +2,12 @@
 title: 抽象クラス
 description: 一部またはすべてのメンバーを実装しないままにして F# 抽象クラスをについて説明し、多様な種類のオブジェクトのセットの共通の機能を表します。
 ms.date: 05/16/2016
-ms.openlocfilehash: fecd3b2d550c6b8f59fa614f5d00c5f730a4896a
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 8251d481c9056d40a0b13ae3c89353406986c116
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613480"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645541"
 ---
 # <a name="abstract-classes"></a>抽象クラス
 

@@ -5,21 +5,21 @@ ms.technology: dotnet-standard
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e8bd2eaa977c9e3546758e9fd0e9fa3b4527634
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: d0a6b3faff0208634e711b9d7908e3fd8dc640ae
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087941"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170836"
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>XslTransform クラスの随意動作の実装
 
 > [!NOTE]
-> <xref:System.Xml.Xsl.XslTransform> では、[!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] クラスが廃止されています。 <xref:System.Xml.Xsl.XslCompiledTransform> クラスを使用して XSLT (Extensible Stylesheet Language for Transformations) 変換を実行できます。 詳しくは、「[XslCompiledTransform クラスの使用](using-the-xslcompiledtransform-class.md)」および「[XslTransform クラスからの移行](migrating-from-the-xsltransform-class.md)」をご覧ください。
+> .NET Framework 2.0 では <xref:System.Xml.Xsl.XslTransform> クラスが廃止されています。 <xref:System.Xml.Xsl.XslCompiledTransform> クラスを使用して XSLT (Extensible Stylesheet Language for Transformations) 変換を実行できます。 詳しくは、「[XslCompiledTransform クラスの使用](using-the-xslcompiledtransform-class.md)」および「[XslTransform クラスからの移行](migrating-from-the-xsltransform-class.md)」をご覧ください。
 
 随意動作とは、[W3C (World Wide Web Consortium) 勧告『XSL Transformations (XSLT) Version 1.0』](https://www.w3.org/TR/1999/REC-xslt-19991116)で列挙されている動作で、ある状況に対処する手段として、実装プロバイダーが複数のオプションから 1 つ選択するものです。 たとえば、W3C Recommendation は、セクション 7.3「Creating Processing Instructions」で、`xsl:processing-instruction` の内容をインスタンス化したときに、テキスト ノード以外のノードが作成されるのはエラーであるとしています。 いくつかの問題に関しては、プロセッサがエラー状態から回復するときにどのような対処をするべきかを、W3C が規定しています。 セクション 7.3 に記述されている問題に関しては、W3C では、作成されたノードとその内容を無視することで、このエラーから回復できるとしています。
 
-W3C で許可されている随意動作について、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の <xref:System.Xml.Xsl.XslTransform> クラスに実装されている随意動作と、その問題について記述している W3C 勧告『XSLT 1.0』のセクションを次の表に示します。
+W3C で許可されている随意動作について、.NET Framework の <xref:System.Xml.Xsl.XslTransform> クラスに実装されている随意動作と、その問題について記述している W3C 勧告『XSLT 1.0』のセクションを次の表に示します。
 
 |問題|動作|セクション|
 |-------------|--------------|-------------|
@@ -82,10 +82,10 @@ XSLT プロセッサがオプションで実装する機能を次に示します
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Xml.Xsl.XslTransform>
-- [XslTransform クラスによる XSLT プロセッサの実装](xsltransform-class-implements-the-xslt-processor.md)  
-- [XslTransform クラスを使用した XSLT 変換](xslt-transformations-with-the-xsltransform-class.md)  
-- [変換における XPathNavigator](xpathnavigator-in-transformations.md)  
-- [変換における XPathNodeIterator](xpathnodeiterator-in-transformations.md)  
-- [XslTransform への XPathDocument の入力](xpathdocument-input-to-xsltransform.md)  
-- [XslTransform への XmlDataDocument の入力](xmldatadocument-input-to-xsltransform.md)  
-- [XslTransform への XmlDocument の入力](xmldocument-input-to-xsltransform.md)  
+- [XslTransform クラスによる XSLT プロセッサの実装](xsltransform-class-implements-the-xslt-processor.md)
+- [XslTransform クラスを使用した XSLT 変換](xslt-transformations-with-the-xsltransform-class.md)
+- [変換における XPathNavigator](xpathnavigator-in-transformations.md)
+- [変換における XPathNodeIterator](xpathnodeiterator-in-transformations.md)
+- [XslTransform への XPathDocument の入力](xpathdocument-input-to-xsltransform.md)
+- [XslTransform への XmlDataDocument の入力](xmldatadocument-input-to-xsltransform.md)
+- [XslTransform への XmlDocument の入力](xmldocument-input-to-xsltransform.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法: ステートメントへのラベル付け (Visual Basic)'
+title: '方法: ラベル ステートメント (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - colons (:)
@@ -7,34 +7,35 @@ helpviewer_keywords:
 - ': separator character'
 - Visual Basic code, labeling statements
 ms.assetid: 38f1ff43-2054-42cb-963b-1998e60c6ed4
-ms.openlocfilehash: df368bdba73ca35dd70bdd2f4e88cc10af894b5a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cbb80d94dc8280aa67859c89daad1520ce4e9669
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650125"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648743"
 ---
-# <a name="how-to-label-statements-visual-basic"></a>方法: ステートメントへのラベル付け (Visual Basic)
-ステートメント ブロックは、コロンで区切られたコードの行が構成をされています。 行の識別文字列または整数に続くコードと呼ばれます*というラベルの付いた*です。 ステートメント ラベルはなどを識別に使用するステートメントを使用するコードの行をマークするために使用`On Error Goto`です。  
+# <a name="how-to-label-statements-visual-basic"></a>方法: ラベル ステートメント (Visual Basic)
+ステートメント ブロックはコロンで区切られたコードの行で構成をされます。 行の識別文字列または整数に続くコードがあると言われますは*というラベルの付いた*します。 ステートメント ラベルは識別するために、使用するためのステートメントでなどのコード行をマークするために使用`On Error Goto`します。  
   
- ラベルとして使用できるは、有効な Visual Basic 識別子 — などのプログラミング要素を識別するもの、または整数リテラル。 ラベルは、ソース コードの行の先頭に置く必要があり、後にするかどうかが続くことは、ステートメントが同じ直線上に関係なく、コロン必要があります。  
+ ラベルとして使用できるは、有効な Visual Basic 識別子、プログラミング要素を識別するようなまたは整数リテラル。 ラベルは、ソース コードの行の先頭に表示する必要があり、かどうかに続くステートメントで同じ行に関係なく、コロンの後にする必要があります。  
   
- コンパイラは、行の先頭が任意に定義済みの識別子と一致するかどうかをチェックして、ラベルを識別します。 そうでない場合、コンパイラはラベルであると想定します。  
+ コンパイラは、行の先頭に任意に定義済みの識別子が一致するかどうかをチェックして、ラベルを識別します。 そうでない場合、コンパイラでは、ラベルが前提としています。  
   
- ラベルは、独自の宣言領域があるし、その他の識別子に干渉しません。 ラベルのスコープは、メソッドの本体です。 ラベルの宣言は、あいまいな場合でも優先されます。  
+ ラベルは、独自の宣言領域があるし、他の識別子に干渉することはできません。 ラベルのスコープは、メソッドの本体です。 ラベルの宣言は、あいまいな場合でも優先されます。  
   
 > [!NOTE]
->  ラベルは、メソッドの中の実行可能なステートメントでのみ使用できます。  
+>  ラベルは、メソッド内で実行可能ステートメントでのみ使用できます。  
   
-### <a name="to-label-a-line-of-code"></a>コードの行にラベル付け  
+### <a name="to-label-a-line-of-code"></a>ラベルのコード行に  
   
--   その後にソース コードの行の先頭に、コロン、識別子を配置します。  
+- 識別子の後にソース コードの行の先頭のコロンを配置します。  
   
-     たとえば、次のコード行は、ラベルが付いた`Jump`と`120`、それぞれします。  
+     たとえば、次のコード行ラベルが付けられます`Jump`と`120`、それぞれします。  
   
-     [!code-vb[VbVbalrStatements#708](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/how-to-label-statements_1.vb)]  
+     [!code-vb[VbVbalrStatements#708](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#708)]  
   
-## <a name="see-also"></a>関連項目  
- [ステートメント](../../../visual-basic/programming-guide/language-features/statements.md)  
- [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [プログラム構造とコード規則](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
+## <a name="see-also"></a>関連項目
+
+- [ステートメント](../../../visual-basic/programming-guide/language-features/statements.md)
+- [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [プログラム構造とコード規則](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)

@@ -2,17 +2,16 @@
 title: F# の型
 description: 使用される種類について学ぶF#とどのようにF#型の名前し、説明。
 ms.date: 05/16/2016
-ms.openlocfilehash: bdbb89dc751970ac31fe102df009f0bff6388e52
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: b48376c80b48df210bf7bc699a769d40fec60864
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "33565590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934642"
 ---
 # <a name="f-types"></a>F# の型
 
 このトピックで説明で使用される型F#とどのようにF#型の名前し、説明。
-
 
 ## <a name="summary-of-f-types"></a>概要F#型
 いくつかの型は考慮*プリミティブ型*、ブール型など`bool`と型バイトと文字を含む、さまざまなサイズの整数と浮動小数点型。 これらの型が記載されて[プリミティブ型](primitive-types.md)します。
@@ -27,34 +26,30 @@ ms.locfileid: "33565590"
 
 F#関数型プログラミングの注意のように設計された便利なコレクション型を提供します。 これらのコレクション型を使用すると、スタイルでより高機能なコードを記述できます。 詳細については、次を参照してください。 [ F#コレクション型](fsharp-collection-types.md)します。
 
-
 ## <a name="syntax-for-types"></a>型の構文
 F#コードでは、多くの場合、記述する必要が out 型の名前。 すべての型が構文の形式と型の注釈、抽象メソッドの宣言、デリゲートの宣言、署名、およびその他のコンストラクトでこれらの構文形式を使用します。 インタープリターで、新しいプログラム コンス トラクターを宣言するたびにその型の構造と構文の名前が出力されます。 この構文は、単なるユーザー定義型の識別子または組み込み識別子としてのような可能性があります`int`または`string`がより複雑な型の場合、構文は複雑です。
 
 次の表に、型の構文の側面F#型。
 
-
-
 |型|型の構文|使用例|
 |----|-----------|--------|
 |プリミティブ型|*type-name*|`int`<br /><br />`float`<br /><br />`string`|
 |集計の種類 (クラス、構造体、共用体、レコード、列挙型、およびなど)|*type-name*|`System.DateTime`<br /><br />`Color`|
-|型略称|*型略称名*|`bigint`|
-|完全修飾型|*namespaces.type 名*<br /><br />または<br /><br />*modules.type 名*<br /><br />または<br /><br />*namespaces.modules.type 名*|`System.IO.StreamWriter`|
+|型略称|*type-abbreviation-name*|`bigint`|
+|完全修飾型|*namespaces.type-name*<br /><br />または<br /><br />*modules.type-name*<br /><br />または<br /><br />*namespaces.modules.type-name*|`System.IO.StreamWriter`|
 |array|*型名*または<br /><br />*型名*配列|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
-|2 次元配列|*型名*[,]|`int[,]`<br /><br />`float[,]`|
-|3 次元の配列|*型名*[,]|`float[,,]`|
+|2 次元配列|*type-name*[,]|`int[,]`<br /><br />`float[,]`|
+|3 次元の配列|*type-name*[,,]|`float[,,]`|
 |tuple|*型 name1* &#42; *型 name2* .|たとえば、`(1,'b',3)`型があります `int * char * int`|
-|ジェネリック型|*型パラメーター* *ジェネリック型名*<br /><br />または<br /><br />*ジェネリック型名*&lt;*型のパラメーター リスト*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
-|構築された型 (指定された特定の型引数を持つジェネリック型)|*型引数* *ジェネリック型名*<br /><br />または<br /><br />*ジェネリック型名*&lt;*型引数リスト*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
-|1 つのパラメーターを含む関数の種類|*パラメーター-type1*  - &gt; *戻り値の型*|受け取る関数、`int`を返します、`string`型があります `int -> string`|
-|複数のパラメーターを含む関数の種類|*パラメーター-type1*  - &gt; *パラメーター type2*  - &gt; ... -&gt; *戻り値の型*|受け取る関数、`int`と`float`を返します、`string`型があります `int -> float -> string`|
+|ジェネリック型|*type-parameter* *generic-type-name*<br /><br />または<br /><br />*generic-type-name*&lt;*type-parameter-list*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
+|構築された型 (指定された特定の型引数を持つジェネリック型)|*型引数* *ジェネリック型名*<br /><br />または<br /><br />*generic-type-name*&lt;*type-argument-list*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
+|1 つのパラメーターを含む関数の種類|*parameter-type1* -&gt; *return-type*|受け取る関数、`int`を返します、`string`型があります `int -> string`|
+|複数のパラメーターを含む関数の種類|*parameter-type1* -&gt; *parameter-type2* -&gt; ... -&gt; *return-type*|受け取る関数、`int`と`float`を返します、`string`型があります `int -> float -> string`|
 |パラメーターとして高階関数|(*関数型*)|`List.map` 型があります。 `('a -> 'b) -> 'a list -> 'b list`|
 |delegate|デリゲートの*関数型*|`delegate of unit -> int`|
-|フレキシブル型|#*型名*|`#System.Windows.Forms.Control`<br /><br />`#seq<int>`|
+|フレキシブル型|#*type-name*|`#System.Windows.Forms.Control`<br /><br />`#seq<int>`|
 
 ## <a name="related-topics"></a>関連トピック
-
 
 |トピック|説明|
 |-----|-----------|

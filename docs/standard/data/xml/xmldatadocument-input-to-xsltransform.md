@@ -5,18 +5,18 @@ ms.technology: dotnet-standard
 ms.assetid: a0b536b6-cdb3-4a44-86c2-3b2ebc7bd4c9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e7fb30104f36a565f4e6742c8f808c48e4ef39ec
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 308725ecc139d3c95ddff6bdf2d75746750673ce
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842555"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170848"
 ---
 # <a name="xmldatadocument-input-to-xsltransform"></a>XslTransform への XmlDataDocument の入力
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> では、[!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] クラスが廃止されています。 <xref:System.Xml.Xsl.XslCompiledTransform> クラスを使用して XSLT (Extensible Stylesheet Language for Transformations) 変換を実行できます。 詳しくは、「[XslCompiledTransform クラスの使用](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)」および「[XslTransform クラスからの移行](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)」をご覧ください。  
+>  .NET Framework 2.0 では <xref:System.Xml.Xsl.XslTransform> クラスが廃止されています。 <xref:System.Xml.Xsl.XslCompiledTransform> クラスを使用して XSLT (Extensible Stylesheet Language for Transformations) 変換を実行できます。 詳しくは、「[XslCompiledTransform クラスの使用](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)」および「[XslTransform クラスからの移行](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)」をご覧ください。  
   
- Microsoft [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] は、XML ドキュメント内のデータにアクセスするための XML ドキュメント オブジェクト モデル (DOM) を実装しているほか、XML ドキュメント内で読み込み、書き込み、移動を行うためのさまざまなクラスも実装しています。 <xref:System.Xml> 名前空間にある <xref:System.Xml.XmlDataDocument> は、<xref:System.Data.DataSet> 内のデータへのリレーショナル アクセス機能およびリレーショナル データとの同期機能を備えています。 <xref:System.Data.DataSet> のリレーショナル表現を介して構造化 XML を表示すると同時に操作したり、<xref:System.Xml.XmlDataDocument> の DOM 表現を介して半構造化 XML を操作したりすることができます。 したがって、<xref:System.Xml.XmlDataDocument> は、XML 環境とリレーショナル環境の境界を越えて機能します。  
+ Microsoft .NET Framework は、XML ドキュメント内のデータにアクセスするための XML ドキュメント オブジェクト モデル (DOM) を実装しているほか、XML ドキュメント内で読み込み、書き込み、移動を行うためのさまざまなクラスも実装しています。 <xref:System.Xml> 名前空間にある <xref:System.Xml.XmlDataDocument> は、<xref:System.Data.DataSet> 内のデータへのリレーショナル アクセス機能およびリレーショナル データとの同期機能を備えています。 <xref:System.Data.DataSet> のリレーショナル表現を介して構造化 XML を表示すると同時に操作したり、<xref:System.Xml.XmlDataDocument> の DOM 表現を介して半構造化 XML を操作したりすることができます。 したがって、<xref:System.Xml.XmlDataDocument> は、XML 環境とリレーショナル環境の境界を越えて機能します。  
   
  データがリレーショナル構造に格納されている場合、そのデータを XSLT 変換への入力として使用するには、そのリレーショナル データを <xref:System.Data.DataSet> に読み込み、<xref:System.Xml.XmlDataDocument> に関連付けます。 <xref:System.Xml.XPath.XPathNavigator> への入力である <xref:System.Xml.Xsl.XslTransform> は、<xref:System.Xml.XmlDataDocument> インターフェイスを介して <xref:System.Xml.XPath.IXPathNavigable> に実装されます。 リレーショナル データを受け取り、それを <xref:System.Data.DataSet> に読み込み、<xref:System.Xml.XmlDataDocument> 内の同期機能を利用することで、そのリレーショナル データに対する XSLT 変換を実行できます。  
   
@@ -24,11 +24,11 @@ ms.locfileid: "48842555"
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Xml.XmlDataDocument>  
-- [DataSet と XmlDataDocument の同期](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
-- [XslTransform クラスを使用した XSLT 変換](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
-- [XslTransform クラスによる XSLT プロセッサの実装](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)  
-- [変換における XPathNavigator](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)  
-- [変換における XPathNodeIterator](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)  
-- [XslTransform への XPathDocument の入力](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
+- <xref:System.Xml.XmlDataDocument>
+- [DataSet と XmlDataDocument の同期](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
+- [XslTransform クラスを使用した XSLT 変換](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)
+- [XslTransform クラスによる XSLT プロセッサの実装](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+- [変換における XPathNavigator](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)
+- [変換における XPathNodeIterator](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)
+- [XslTransform への XPathDocument の入力](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)
 - [XslTransform への XmlDocument の入力](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)

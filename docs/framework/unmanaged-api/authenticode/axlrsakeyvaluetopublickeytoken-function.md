@@ -10,12 +10,12 @@ api_type:
 ms.assetid: d60f19fe-7bec-47ba-b60e-ba9ce66abf8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e09391af9b5d71cfa423b3bf1a2b307117d0dee1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4f9981c4cf2e45795576024b797f93831324dbc9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517599"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741269"
 ---
 # <a name="axlrsakeyvaluetopublickeytoken-function"></a>\_AxlRSAKeyValueToPublicKeyToken 関数
 
@@ -23,7 +23,7 @@ Modulus および Exponent を、厳密な名前の公開キー トークンに�
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT _AxlRSAKeyValueToPublicKeyToken (  
     [in]  PCRYPT_DATA_BLOB pModulusBlob,  
     [in]  PCRYPT_DATA_BLOB pExponentBlob,  
@@ -31,7 +31,7 @@ HRESULT _AxlRSAKeyValueToPublicKeyToken (
 );  
 ```  
   
-### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pModulusBlob`  
  [in]Base64 でエンコードされた Modulus blob (から、 \<Modulus > 要素)。  参照してください、 [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob)構造体。  
   
@@ -44,5 +44,6 @@ HRESULT _AxlRSAKeyValueToPublicKeyToken (
 ## <a name="return-value"></a>戻り値  
  関数が成功した場合は `S_OK`。 それ以外の場合はエラー コードを返します。  
   
-## <a name="see-also"></a>関連項目  
- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+## <a name="see-also"></a>関連項目
+
+- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)

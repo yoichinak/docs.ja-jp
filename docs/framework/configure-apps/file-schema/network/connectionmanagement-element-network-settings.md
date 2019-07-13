@@ -1,5 +1,5 @@
 ---
-title: '&lt;connectionManagement&gt;要素 (ネットワーク設定)'
+title: <connectionManagement> 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <connectionManagement> element
 - connectionManagement element
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
-ms.openlocfilehash: 7cc5f2a37c0520ee48a10afeb4b9bc83ffd61033
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4412fe30bfb8dcb3d7576df18cb2a472463d935c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674585"
 ---
-# <a name="ltconnectionmanagementgt-element-network-settings"></a>&lt;connectionManagement&gt;要素 (ネットワーク設定)
+# <a name="connectionmanagement-element-network-settings"></a>\<connectionManagement > 要素 (ネットワーク設定)
 ネットワーク ホストへの接続の最大数を指定します。  
   
  \<configuration>  
 \<system.net>  
-\<connectionManagement >  
+\<connectionManagement>  
   
 ## <a name="syntax"></a>構文  
   
@@ -69,7 +69,8 @@ ms.locfileid: "50201544"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.Net.ServicePoint>  
-- <xref:System.Net.ServicePointManager>  
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Net.ServicePoint>
+- <xref:System.Net.ServicePointManager>
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

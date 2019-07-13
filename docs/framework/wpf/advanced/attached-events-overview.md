@@ -12,21 +12,19 @@ helpviewer_keywords:
 - backing attached events with routed events [WPF]
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
-ms.openlocfilehash: c6a8b3b7355d315b83f859e7016018b56ade5484
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2b3f659a5916aa63d510959583e8ae038085460c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196344"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655503"
 ---
 # <a name="attached-events-overview"></a>添付イベントの概要
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] は言語コンポーネントと*添付イベント*と呼ばれている種類のイベントを定義します。 添付イベントという概念を利用すると、イベントを実際に定義または継承する要素にではなく、任意の要素に特定のイベントのハンドラーを追加できます。 この場合、イベントを発生させる可能性があるオブジェクトとターゲット処理インスタンスのいずれもイベントを定義せず、"所有" しません。  
-  
- 
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このトピックは、「[ルーティング イベントの概要](../../../../docs/framework/wpf/advanced/routed-events-overview.md)」と「[XAML の概要 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)」を既に読んでいることを前提としています。  
+ このトピックは、「[ルーティング イベントの概要](routed-events-overview.md)」と「[XAML の概要 (WPF)](xaml-overview-wpf.md)」を既に読んでいることを前提としています。  
   
 <a name="Syntax"></a>   
 ## <a name="attached-event-syntax"></a>添付イベントの構文  
@@ -36,7 +34,7 @@ ms.locfileid: "47196344"
   
  たとえば、カスタム [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 添付イベントのハンドラーを添付する `NeedsCleaning` 構文は次のようになります。  
   
- [!code-xaml[WPFAquariumSln#AE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquarium/Window1.xaml#ae)]  
+ [!code-xaml[WPFAquariumSln#AE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquarium/Window1.xaml#ae)]  
   
  `aqua:` 接頭辞に注意してください。この場合は、マッピングされたカスタム xmlns から来ているカスタム イベントが添付イベントであるため、この接頭辞が必要になります。  
   
@@ -58,7 +56,7 @@ ms.locfileid: "47196344"
   
  一般的には、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 添付イベントは [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ルーティング イベントとそれほど異なっているわけではありません。 違いは、イベントの発生源とメンバーとしてクラスにより公開される方法 (これは [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ハンドラー構文にも影響を与えます) です。  
   
- ただし、前述のように、既存の [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 添付イベントは [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] での取り扱いを特に意図しているわけではありません。 多くの場合、このイベントの目的は、合成中、合成された要素が親要素に状態を報告できるようにすることです。合成においては、イベントは通常、コードで発生します。また、関連する親クラスにおいて、クラスの処理に依存します。 内のアイテムなど、 <xref:System.Windows.Controls.Primitives.Selector> 、添付を生成する必要があります<xref:System.Windows.Controls.Primitives.Selector.Selected>によって、クラスでは、そのイベントが処理される、<xref:System.Windows.Controls.Primitives.Selector>クラスし、で可能性のある変換、<xref:System.Windows.Controls.Primitives.Selector>クラス別のルーティング イベントを<xref:System.Windows.Controls.Primitives.Selector.SelectionChanged>. ルーティング イベントとクラス処理については、「[ルーティング イベントの処理済みとしてのマーキング、およびクラス処理](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)」を参照してください。  
+ ただし、前述のように、既存の [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 添付イベントは [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] での取り扱いを特に意図しているわけではありません。 多くの場合、このイベントの目的は、合成中、合成された要素が親要素に状態を報告できるようにすることです。合成においては、イベントは通常、コードで発生します。また、関連する親クラスにおいて、クラスの処理に依存します。 内のアイテムなど、 <xref:System.Windows.Controls.Primitives.Selector> 、添付を生成する必要があります<xref:System.Windows.Controls.Primitives.Selector.Selected>によって、クラスでは、そのイベントが処理される、<xref:System.Windows.Controls.Primitives.Selector>クラスし、で可能性のある変換、<xref:System.Windows.Controls.Primitives.Selector>クラス別のルーティング イベントを<xref:System.Windows.Controls.Primitives.Selector.SelectionChanged>. ルーティング イベントとクラス処理については、「[ルーティング イベントの処理済みとしてのマーキング、およびクラス処理](marking-routed-events-as-handled-and-class-handling.md)」を参照してください。  
   
 <a name="Custom"></a>   
 ## <a name="defining-your-own-attached-events-as-routed-events"></a>独自の添付イベントをルーティング イベントとして定義する  
@@ -66,9 +64,9 @@ ms.locfileid: "47196344"
   
  パターンは次のとおりです。  
   
--   メソッド**追加*EventName*ハンドラー** 2 つのパラメーターを使用します。 最初のパラメーターは、イベントを識別して、特定のイベントを持つ名前が一致する必要があります、 ***EventName***メソッド名。 2 番目のパラメーターは追加するハンドラーです。 メソッドである必要があります`public`と`static`、戻り値はありません。  
+- メソッド**追加*EventName*ハンドラー** 2 つのパラメーターを使用します。 最初のパラメーターは、イベント ハンドラーを追加するインスタンスです。 The second parameter is the event handler to add. メソッドである必要があります`public`と`static`、戻り値はありません。  
   
--   メソッド**削除*EventName*ハンドラー** 2 つのパラメーターを使用します。 最初のパラメーターは、イベントを識別して、特定のイベントを持つ名前が一致する必要があります、 ***EventName***メソッド名。 2 番目のパラメーターは削除するハンドラーです。 メソッドである必要があります`public`と`static`、戻り値はありません。  
+- メソッド**削除*EventName*ハンドラー** 2 つのパラメーターを使用します。 最初のパラメーターは、イベント ハンドラーを削除するインスタンスです。 2 番目のパラメーターは、削除するイベント ハンドラーです。 メソッドである必要があります`public`と`static`、戻り値はありません。  
   
  **追加*EventName*ハンドラー**アクセサー メソッドを容易に、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]属性が要素で宣言されたイベント ハンドラーをアタッチするときに処理します。 **追加*EventName*ハンドラー**と**削除*EventName*ハンドラー**メソッドでは、コードのイベント ハンドラー ストアへのアクセスも有効にします添付イベント。  
   
@@ -80,10 +78,10 @@ ms.locfileid: "47196344"
   
  たとえば、次のコードは、添付イベントをルーティング イベントとして宣言する [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 添付イベント方法を利用し、所有者クラス `Aquarium` で `NeedsCleaning` 添付イベントを定義します。  
   
- [!code-csharp[WPFAquariumSln#AECode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#aecode)]
- [!code-vb[WPFAquariumSln#AECode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#aecode)]  
+ [!code-csharp[WPFAquariumSln#AECode](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#aecode)]
+ [!code-vb[WPFAquariumSln#AECode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#aecode)]  
   
- 添付イベント id フィールドを確立するために、メソッドを使用することに注意してください。 <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>、実際にメソッドと同じ非添付のルーティング イベントを登録するために使用します。 添付イベントとルーティング イベントはすべて、集中管理されている内部ストアに登録されます。 このイベント ストア実装により "インターフェイスとしてのイベント" という概念が可能になります。この概念に関する説明は「[ルーティング イベントの概要](../../../../docs/framework/wpf/advanced/routed-events-overview.md)」にあります。  
+ 添付イベント id フィールドを確立するために、メソッドを使用することに注意してください。 <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>、実際にメソッドと同じ非添付のルーティング イベントを登録するために使用します。 添付イベントとルーティング イベントはすべて、集中管理されている内部ストアに登録されます。 このイベント ストア実装により "インターフェイスとしてのイベント" という概念が可能になります。この概念に関する説明は「[ルーティング イベントの概要](routed-events-overview.md)」にあります。  
   
 <a name="Raising"></a>   
 ## <a name="raising-a-wpf-attached-event"></a>WPF 添付イベントを発生させる  
@@ -91,7 +89,8 @@ ms.locfileid: "47196344"
   
  ただし、に基づいてカスタム添付イベントを定義するかどうか、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ベースのモデルでイベントをアタッチする<xref:System.Windows.RoutedEvent>、使用することができます<xref:System.Windows.UIElement.RaiseEvent%2A>いずれかから添付イベントを発生させる<xref:System.Windows.UIElement>または<xref:System.Windows.ContentElement>します。 (添付または非) ルーティング イベントを発生させるには、イベント ソースとして要素ツリー内の特定の要素を宣言することが必要です。そのソースとして報告、<xref:System.Windows.UIElement.RaiseEvent%2A>呼び出し元。 ツリーのソースとして報告される要素を決定することはサービスの担当です。  
   
-## <a name="see-also"></a>関連項目  
- [ルーティング イベントの概要](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [XAML 構文の詳細](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)  
- [WPF における XAML とカスタム クラス](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+## <a name="see-also"></a>関連項目
+
+- [ルーティング イベントの概要](routed-events-overview.md)
+- [XAML 構文の詳細](xaml-syntax-in-detail.md)
+- [WPF における XAML とカスタム クラス](xaml-and-custom-classes-for-wpf.md)

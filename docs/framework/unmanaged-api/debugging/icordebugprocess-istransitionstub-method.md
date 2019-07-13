@@ -17,41 +17,41 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e06dc35998a2874ed1d2f76725078874817e94d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1ec29aa748c437199434fa1394e1a00c82154447
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420096"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766876"
 ---
 # <a name="icordebugprocessistransitionstub-method"></a>ICorDebugProcess::IsTransitionStub メソッド
 マネージ コードへの遷移を発生させるスタブ内にアドレスがあるかどうかを示す値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT IsTransitionStub(  
     [in]  CORDB_ADDRESS address,  
     [out] BOOL *pbTransitionStub);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `address`  
- [in]A`CORDB_ADDRESS`対象のアドレスを指定する値。  
+ [in]A`CORDB_ADDRESS`対象アドレスを指定する値。  
   
  `pbTransitionStub`  
- [out]ブール値へのポインター`true`場合は、指定したアドレスがマネージ コードへの遷移を発生させるスタブ内のそれ以外の場合 *`pbTransitionStub`は`false`します。  
+ [out]ブール値へのポインター`true`場合、マネージ コードへの遷移を発生させるスタブ内で指定されたアドレスは、それ以外の場合 *`pbTransitionStub`は`false`。  
   
-## <a name="remarks"></a>コメント  
- `IsTransitionStub`をマネージ ステッパをステップ実行の制御を返すタイミングを決定するアンマネージのステップ実行のコードでメソッドを使用できます。  
+## <a name="remarks"></a>Remarks  
+ `IsTransitionStub`をマネージ ステッパをステップ実行の制御を返すタイミングを決定するアンマネージ ステップ実行のコードでメソッドを使用できます。  
   
  こともできます identity 遷移スタブ ポータブル実行可能 (PE) ファイルに情報を参照しています。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

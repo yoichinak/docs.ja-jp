@@ -1,29 +1,29 @@
 ---
-title: '方法 : Visual Basic の StringBuilder を使用して文字列を作成する'
+title: '方法: Visual Basic では、StringBuilder を使用して文字列を作成します。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - StringBuilder class
 - strings [Visual Basic], using StringBuilder
 ms.assetid: 9c042880-aa16-432e-9ccb-cd00abda9ae3
-ms.openlocfilehash: 49f3271d41e9e858c6ecafe1dde5330ebff767f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 00fefcc138164288d872cd339f165dc6ffc0131a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032126"
 ---
-# <a name="how-to-create-strings-using-a-stringbuilder-in-visual-basic"></a>方法 : Visual Basic の StringBuilder を使用して文字列を作成する
-この例を使用して多数の小さな文字列から長い文字列を構築する、<xref:System.Text.StringBuilder>クラスです。 <xref:System.Text.StringBuilder>クラスより効率的、`&=`演算子を多数の文字列を連結する場合。  
+# <a name="how-to-create-strings-using-a-stringbuilder-in-visual-basic"></a>方法: Visual Basic では、StringBuilder を使用して文字列を作成します。
+この例を使用して多数の小さな文字列から長い文字列を構築します、<xref:System.Text.StringBuilder>クラス。 <xref:System.Text.StringBuilder>クラスより効率的、`&=`演算子の多くの文字列を連結します。  
   
 ## <a name="example"></a>例  
- 次の例のインスタンスを作成する、<xref:System.Text.StringBuilder>クラスが、そのインスタンスに 1,000 文字列を追加して、文字列形式を返します。  
+ 次の例のインスタンスを作成する、<xref:System.Text.StringBuilder>クラス、1,000 の文字列をそのインスタンスに追加し、その文字列表現を返します。  
   
- [!code-vb[VbVbalrStrings#70](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-create-strings-using-a-stringbuilder_1.vb)]  
+ [!code-vb[VbVbalrStrings#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#70)]  
   
-## <a name="see-also"></a>関連項目  
- [StringBuilder クラスの使用](../../../../standard/base-types/stringbuilder.md)  
- [& = 演算子](../../../../visual-basic/language-reference/operators/and-assignment-operator.md)  
- [文字列](../../../../visual-basic/programming-guide/language-features/strings/index.md)  
- [新しい文字列の作成](../../../../standard/base-types/creating-new.md)  
- [文字列の操作](../../../../standard/base-types/manipulating-strings.md)  
- [文字列の例](https://msdn.microsoft.com/library/be9e82a3-dc95-4aaa-9396-61b66e467e02(v=vs.100))
+## <a name="see-also"></a>関連項目
+
+- [StringBuilder クラスの使用](../../../../standard/base-types/stringbuilder.md)
+- [& = 演算子](../../../../visual-basic/language-reference/operators/and-assignment-operator.md)
+- [文字列](../../../../visual-basic/programming-guide/language-features/strings/index.md)
+- [新しい文字列の作成](../../../../standard/base-types/creating-new.md)
+- [文字列の操作](../../../../standard/base-types/manipulating-strings.md)

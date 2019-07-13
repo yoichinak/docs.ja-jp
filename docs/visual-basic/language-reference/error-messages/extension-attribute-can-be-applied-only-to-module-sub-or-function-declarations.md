@@ -1,5 +1,5 @@
 ---
-title: '&#39;拡張機能&#39;属性にのみ適用できます&#39;モジュール&#39;、 &#39;Sub&#39;、または&#39;関数&#39;宣言'
+title: "'Extension' 属性は 'Module'、'Sub'、または 'Function' の各宣言にのみ適用できます"
 ms.date: 07/20/2015
 f1_keywords:
 - bc36550
@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC36550
 ms.assetid: 4387a51f-733c-45d7-abdb-eb64d4f51078
-ms.openlocfilehash: d7f8829cb879d612711ac6bcc6bf4aa065fbe323
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88212fb2c04eab61b719a161ae01ccdda9a6110d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587320"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64640728"
 ---
-# <a name="39extension39-attribute-can-be-applied-only-to-39module39-39sub39-or-39function39-declarations"></a>&#39;拡張機能&#39;属性にのみ適用できます&#39;モジュール&#39;、 &#39;Sub&#39;、または&#39;関数&#39;宣言
-Visual Basic でのデータ型を拡張する唯一の方法では、標準的なモジュールの中に拡張メソッドを定義します。 拡張メソッドを指定できます、`Sub`プロシージャまたは`Function`プロシージャです。 すべての拡張メソッドは、拡張属性と共に設定されなければなりません`<Extension()>`から、<xref:System.Runtime.CompilerServices?displayProperty=nameWithType>名前空間。 必要に応じて、拡張メソッドを含むモジュールの場合は、同じ方法でマークされている可能性があります。 拡張属性の他の使用が有効ではありません。  
+# <a name="extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations"></a>'Extension' 属性は 'Module'、'Sub'、または 'Function' の各宣言にのみ適用できます
+Visual Basic でのデータ型を拡張する唯一の方法では、標準のモジュール内で拡張メソッドを定義します。 拡張メソッドになる、`Sub`プロシージャまたは`Function`プロシージャ。 すべての拡張メソッドは、拡張機能の属性でマークする必要があります`<Extension()>`から、<xref:System.Runtime.CompilerServices?displayProperty=nameWithType>名前空間。 必要に応じて、拡張メソッドを含むモジュールの場合は、同じ方法でマークされている可能性があります。 拡張属性の他の使用が有効ではありません。  
   
  **エラー ID:** BC36550  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   拡張属性を削除します。  
+- 拡張属性を削除します。  
   
--   それを囲むモジュールで定義されている、メソッドとして、拡張機能を設計し直します。  
+- 外側のモジュールで定義されている、方法として、拡張機能を再設計します。  
   
 ## <a name="example"></a>例  
- 次の例では定義、`Print`のメソッド、`String`データ型。  
+ 次の例では、定義、`Print`のメソッド、`String`データ型。  
   
 ```  
 Imports StringUtility  
@@ -42,7 +42,8 @@ Namespace StringUtility
 End Namespace  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [属性の概要](../../../visual-basic/programming-guide/concepts/attributes/index.md)  
- [拡張メソッド](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)  
- [Module ステートメント](../../../visual-basic/language-reference/statements/module-statement.md)
+## <a name="see-also"></a>関連項目
+
+- [属性の概要](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [拡張メソッド](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+- [Module ステートメント](../../../visual-basic/language-reference/statements/module-statement.md)

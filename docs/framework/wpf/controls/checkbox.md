@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], CheckBox
 - CheckBox control [WPF]
 ms.assetid: ee701cc2-968b-4683-8f81-3fafd8542700
-ms.openlocfilehash: a3f59ce8632a56f363f6ea029fc328655fece930
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 42d4d0e232d66c076a2f3ecfb2ae95a41b0557a5
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052223"
 ---
 # <a name="checkbox"></a>CheckBox
-使用することができます、<xref:System.Windows.Controls.CheckBox>で、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]にアプリケーションをユーザーがオンまたはオフにするオプションを表します。 1 つのチェック ボックスを使用することができますか、2 つ以上のチェック ボックスをグループ化することができます。  
+使用することができます、<xref:System.Windows.Controls.CheckBox>で、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]のアプリケーションをユーザーがオンまたはオフにするオプションを表します。 1 つのチェック ボックスを使用するか、2 つ以上のチェック ボックスをグループ化することができます。  
   
- 次の図は、別の状態、<xref:System.Windows.Controls.CheckBox>です。  
+ 次の図のさまざまな状態を示しています、<xref:System.Windows.Controls.CheckBox>します。  
   
- ![チェック ボックスの状態](../../../../docs/framework/wpf/controls/media/ss-ctl-checkbox.png "SS_CTL_checkbox")  
+ ![チェック ボックスをオンの状態](./media/ss-ctl-checkbox.png "SS_CTL_checkbox")  
 さまざまな状態の CheckBox コントロール  
   
 ## <a name="reference"></a>参照  

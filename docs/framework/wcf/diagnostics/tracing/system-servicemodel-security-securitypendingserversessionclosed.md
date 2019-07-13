@@ -2,12 +2,12 @@
 title: System.ServiceModel.Security.SecurityPendingServerSessionClosed
 ms.date: 03/30/2017
 ms.assetid: 1fa7098b-1724-4524-ad91-be7592951f69
-ms.openlocfilehash: 7f56f0862dfad8a18a786baab97d38a34ed25bfa
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bb149cb13290ebe2866a1dfafab2a745e964289e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752556"
 ---
 # <a name="systemservicemodelsecuritysecuritypendingserversessionclosed"></a>System.ServiceModel.Security.SecurityPendingServerSessionClosed
 System.ServiceModel.Security.SecurityPendingServerSessionClosed  
@@ -15,7 +15,8 @@ System.ServiceModel.Security.SecurityPendingServerSessionClosed
 ## <a name="description"></a>説明  
  保留中のセキュリティ セッションはサーバーによって閉じられました。  
   
-## <a name="see-also"></a>関連項目  
- [トレース](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [トレースを使用したアプリケーションのトラブルシューティング](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [管理と診断](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>関連項目
+
+- [トレース](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [トレースを使用したアプリケーションのトラブルシューティング](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [管理と診断](../../../../../docs/framework/wcf/diagnostics/index.md)

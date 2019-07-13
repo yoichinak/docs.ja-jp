@@ -1,39 +1,49 @@
 ---
 title: Visual Studio では、DPI の認識を無効にします。
-description: HDPI モニターは、Windows フォーム デザイナーと DPI に対応していないプロセスとして Visual Studio を実行する方法の制限事項について説明します。
-ms.date: 12/17/2018
-ms.prod: visual-studio-dev15
+description: HDPI のモニターでの Windows フォーム デザイナーの制限事項と DPI に対応していないプロセスとして Visual Studio を実行する方法について説明します。
+ms.date: 04/05/2019
+ms.prod: visual-studio-windows
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 0820450fb9ae257cba87b3055ea1dde91112b19e
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.custom: seoapril2019
+ms.openlocfilehash: e52debea382033417afe0bd47f899af1666192bc
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967233"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Visual Studio では、DPI の認識を無効にします。
 
 Visual Studio では、表示スケールを自動的に意味インチ (DPI) 対応アプリケーションあたりのドットです。 アプリケーションでは、DPI 対応ではないことを示す、オペレーティング システムは、ビットマップとしてアプリケーションをスケーリングします。 この動作は、DPI の仮想化とも呼ばれます。 アプリケーションは引き続き、100% に拡大縮小、または 96 dpi で実行されていると認識します。
 
+この記事では、HDPI モニターでの Windows フォーム デザイナーの制限事項と DPI に対応していないプロセスとして Visual Studio を実行する方法について説明します。
+
 ## <a name="windows-forms-designer-on-hdpi-monitors"></a>HDPI のモニターでの Windows フォーム デザイナー
 
 **Windows フォーム デザイナー** Visual Studio ではありませんスケーリングをサポートします。 表示の問題は、一部のフォームを開いたときにこれにより、 **Windows フォーム デザイナー** high dots per インチ (HDPI) モニターです。 例については、コントロールは、次の図のように重複する表示できます。
 
-![HDPI のモニターでの Windows フォーム デザイナー](media/disable-dpi-awareness-visual-studio/win-forms-designer-hdpi.png)
+![HDPI のモニターでの Windows フォーム デザイナー](./media/disable-dpi-awareness-visual-studio/win-forms-designer-hdpi.png)
 
-Visual Studio 2017 15.8 でフォームを開くと、以降のバージョンで、 **Windows フォーム デザイナー** HDPI モニターで、Visual Studio は、デザイナーの上部にある黄色のバーの情報を表示します。
+フォームを開くと、 **Windows フォーム デザイナー** HDPI モニターで Visual Studio で、Visual Studio は、デザイナーの上部にある黄色のバーの情報を表示します。
 
-![DPI に対応していないモードで再起動する Visual Studio での情報バー](media/disable-dpi-awareness-visual-studio/scaling-gold-bar.png)
+![DPI に対応していないモードで再起動する Visual Studio での情報バー](./media/disable-dpi-awareness-visual-studio/scaling-gold-bar.png)
 
 メッセージを読み取り**メイン ディスプレイのスケーリングを 200% (192 dpi) に設定します。デザイナー ウィンドウのレンダリングの問題があります。**
 
-場合は、デザイナーを使用していないし、フォームのレイアウトを調整する必要はありません、情報バーを無視し、コード エディターまたはデザイナーの他の種類では、作業を続行できます。 (することもできます[通知を無効にする](#disable-notifications)情報バーが表示され続けるようにします)。のみ、 **Windows フォーム デザイナー**が影響を受けます。 作業する必要がある場合、 **Windows フォーム デザイナー**、次のセクションでは[、問題を解決する](#to-resolve-the-problem)します。
+> [!NOTE]
+> この情報バーは、Visual Studio 2017 バージョン 15.8 で導入されました。
 
-## <a name="to-resolve-the-problem"></a>この問題を解決するのには
+場合は、デザイナーを使用していないし、フォームのレイアウトを調整する必要はありません、情報バーを無視し、コード エディターまたはデザイナーの他の種類では、作業を続行できます。 (することもできます[通知を無効にする](#disable-notifications)情報バーが表示され続けるようにします)。のみ、 **Windows フォーム デザイナー**が影響を受けます。 作業する必要がある場合、 **Windows フォーム デザイナー**、次のセクションでは[、問題を解決する](#to-resolve-the-display-problem)します。
+
+## <a name="to-resolve-the-display-problem"></a>表示に関する問題を解決するのには
 
 表示に関する問題を解決するのには次の 3 つのオプションがあります。
+
+1. [DPI に対応していないプロセスとして Visual Studio を再起動します。](#restart-visual-studio-as-a-dpi-unaware-process)
+2. [レジストリ エントリを追加します。](#add-a-registry-entry)
+3. [設定、画面のスケーリングを 100% に設定します。](#set-your-display-scaling-setting-to-100)
 
 ### <a name="restart-visual-studio-as-a-dpi-unaware-process"></a>DPI に対応していないプロセスとして Visual Studio を再起動します。
 
@@ -51,10 +61,13 @@ Visual Studio を DPI に対応していないプロセスとして実行する�
 
 Visual Studio は、レジストリを変更して DPI 対応としてマークできます。 開いている**レジストリ エディター**にエントリを追加し、 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers**サブキー。
 
-**エントリ**:C:\Program Files (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+**エントリ**:かどうかを使用して Visual Studio 2017 または 2019 によってこれらの値のいずれかの手順に従います。
 
-   > [!NOTE]
-   > Visual Studio 2017 の Professional または Enterprise edition を使用している場合は置き換えます**コミュニティ**で**Professional**または**Enterprise**エントリにします。 また、必要に応じて、ドライブ文字を置き換えます。
+- C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+- C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe
+
+> [!NOTE]
+> Visual Studio の Professional または Enterprise edition を使用している場合は置き換えます**コミュニティ**で**Professional**または**Enterprise**エントリにします。 また、必要に応じて、ドライブ文字を置き換えます。
 
 **型**:REG_SZ
 
@@ -75,7 +88,7 @@ Visual Studio での問題のスケーリングの DPI 通知しないように�
 
 通知を無効にする次のように選択します。**ツール** > **オプション**を開く、**オプション**ダイアログ。 選択し、 **Windows フォーム デザイナー** > **全般**、設定と**DPI スケーリング通知**に**False**します。
 
-![DPI スケーリングに Visual Studio の通知オプション](media/disable-dpi-awareness-visual-studio/notifications-option.png)
+![DPI スケーリングに Visual Studio の通知オプション](./media/disable-dpi-awareness-visual-studio/notifications-option.png)
 
 スケールの通知を後で再度有効にする場合、プロパティを設定**True**します。
 

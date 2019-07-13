@@ -5,47 +5,48 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: 6b7c13355fe46d4b768699555bbaf522e3b49c73
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ce626d9b75f2061ff024fa25ce005f952301603e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64617261"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>XAML のマークアップ拡張機能の概要
 マークアップ拡張機能は、プリミティブでも特定の XAML 型でもない値を取得するための XAML の手法です。 属性による使用では、マークアップ拡張機能は、左中かっこ `{` でマークアップ拡張機能スコープに入り、右中かっこ `}` で終了するという、既知の文字シーケンスを使用します。 .NET Framework XAML サービスを使用する場合は、System.Xaml アセンブリから XAML 言語の定義済みのマークアップ拡張機能をいくつか使用できます。 また、System.Xaml で定義された <xref:System.Windows.Markup.MarkupExtension> クラスからサブクラスを作成し、独自のマークアップ拡張機能を定義することもできます。 あるいは、特定のフレームワークを既に参照している場合は、そのフレームワークによって定義されたマークアップ拡張機能を使用することができます。  
   
- マークアップ拡張機能の使用にアクセスした XAML オブジェクト ライターは、<xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A?displayProperty=nameWithType> オーバーライドのサービス接続ポイントを通じて、カスタム <xref:System.Windows.Markup.MarkupExtension> クラスにサービスを提供することができます。 このサービスを使用すると、使用に関するコンテキスト、オブジェクト ライターの特定の機能、XAML スキーマ コンテキストなどを取得することができます。  
+ マークアップ拡張機能の使用にアクセスした XAML オブジェクト ライターは、 <xref:System.Windows.Markup.MarkupExtension> オーバーライドのサービス接続ポイントを通じて、カスタム <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A?displayProperty=nameWithType> クラスにサービスを提供することができます。 このサービスを使用すると、使用に関するコンテキスト、オブジェクト ライターの特定の機能、XAML スキーマ コンテキストなどを取得することができます。  
   
 <a name="XAML_Defined_Markup_Extensions"></a>   
 ## <a name="xaml-defined-markup-extensions"></a>XAML で定義されたマークアップ拡張機能  
  XAML 言語をサポートするため、.NET Framework XAML サービスによっていくつかのマークアップ拡張機能が実装されています。 これらのマークアップ拡張機能は、言語としての XAML の仕様の部分に対応しています。 これらは、通常、一般的に使用される構文では `x:` プレフィックスによって識別できます。 これらの XAML 言語要素に対する .NET Framework XAML サービスの実装は、すべて  <xref:System.Windows.Markup.MarkupExtension> 基底クラスから派生します。  
   
 > [!NOTE]
->  `x:` プレフィックスは、XAML 稼働環境のルート要素で、XAML 言語の名前空間を標準的な XAML 名前空間にマッピングするために使用します。 たとえば、これを使用して XAML ファイルの開始、Visual Studio プロジェクト テンプレートおよびページ テンプレートのさまざまな特定のフレームワーク`x:`マッピングします。 独自の XAML 名前空間のマッピングに別のプレフィックス トークンを選択することもできますが、このドキュメントでは、既定の `x:` マッピングを、独自の固有なフレームワークの既定の XAML 名前空間や他の任意の CLR 名前空間または XML 名前空間ではなく、XAML 言語の XAML 名前空間の一部として定義されているエンティティを識別する手段と想定します。  
+>  `x:` プレフィックスは、XAML 稼働環境のルート要素で、XAML 言語の名前空間を標準的な XAML 名前空間にマッピングするために使用します。 さまざまな特定のフレームワークの Visual Studio プロジェクトとページ テンプレートがこれを使用して XAML ファイルを開始するなど、`x:`マッピングします。 独自の XAML 名前空間のマッピングに別のプレフィックス トークンを選択することもできますが、このドキュメントでは、既定の `x:` マッピングを、独自の固有なフレームワークの既定の XAML 名前空間や他の任意の CLR 名前空間または XML 名前空間ではなく、XAML 言語の XAML 名前空間の一部として定義されているエンティティを識別する手段と想定します。  
   
 ### <a name="xtype"></a>x:Type  
- `x:Type` は、名前を指定した型の <xref:System.Type> オブジェクトを提供します。 この機能は、基になる CLR 型やそれから派生した型をグループ化のモニカーまたは識別子として使用する遅延メカニズムの中で最も頻繁に使用されます。 具体的な例には、WPF のスタイルとテンプレート、およびそれらにおける `TargetType` プロパティの使用があります。 詳細については、「 [x:Type Markup Extension](../../../docs/framework/xaml-services/x-type-markup-extension.md)」を参照してください。  
+ `x:Type` は、名前を指定した型の <xref:System.Type> オブジェクトを提供します。 この機能は、基になる CLR 型やそれから派生した型をグループ化のモニカーまたは識別子として使用する遅延メカニズムの中で最も頻繁に使用されます。 具体的な例には、WPF のスタイルとテンプレート、およびそれらにおける `TargetType` プロパティの使用があります。 詳細については、「 [x:Type Markup Extension](x-type-markup-extension.md)」を参照してください。  
   
 ### <a name="xstatic"></a>x:Static  
- `x:Static` は、直接的にはプロパティの値の型ではなくても、その型に評価することができる値型コード エンティティから、静的な値を生成します。 これは、型定義で既知の定数として既に存在する値を指定するときに便利です。 詳細については、「 [x:Static Markup Extension](../../../docs/framework/xaml-services/x-static-markup-extension.md)」を参照してください。  
+ `x:Static` は、直接的にはプロパティの値の型ではなくても、その型に評価することができる値型コード エンティティから、静的な値を生成します。 これは、型定義で既知の定数として既に存在する値を指定するときに便利です。 詳細については、「 [x:Static Markup Extension](x-static-markup-extension.md)」を参照してください。  
   
 ### <a name="xnull"></a>x:Null  
- `x:Null` は、XAML メンバーに対する値として `null` を指定します。 特定の型の設計やフレームワークの広義の概念によっては、 `null` がプロパティの既定値に該当しない場合や、空の文字列属性の暗黙的な値に該当しない場合もあります。 詳細については、「 [x:Null Markup Extension](../../../docs/framework/xaml-services/x-null-markup-extension.md)」を参照してください。  
+ `x:Null` は、XAML メンバーに対する値として `null` を指定します。 特定の型の設計やフレームワークの広義の概念によっては、 `null` がプロパティの既定値に該当しない場合や、空の文字列属性の暗黙的な値に該当しない場合もあります。 詳細については、「 [x:Null Markup Extension](x-null-markup-extension.md)」を参照してください。  
   
 ### <a name="xarray"></a>x:Array  
- `x:Array` は、XAML 構文での一般的な配列の作成をサポートします。基本要素とコントロール モデルで提供されているコレクションのサポートをあえて使用しない場合に使用します。 詳細については、「 [x:Array Markup Extension](../../../docs/framework/xaml-services/x-array-markup-extension.md)」を参照してください。 XAML 2009 では、厳密に言うと、拡張機能としてではなく言語プリミティブとして配列にアクセスします。 詳細については、「 [XAML 2009 Language Features](../../../docs/framework/xaml-services/xaml-2009-language-features.md)」を参照してください。  
+ `x:Array` は、XAML 構文での一般的な配列の作成をサポートします。基本要素とコントロール モデルで提供されているコレクションのサポートをあえて使用しない場合に使用します。 詳細については、「 [x:Array Markup Extension](x-array-markup-extension.md)」を参照してください。 XAML 2009 では、厳密に言うと、拡張機能としてではなく言語プリミティブとして配列にアクセスします。 詳細については、「 [XAML 2009 Language Features](xaml-2009-language-features.md)」を参照してください。  
   
 ### <a name="xreference"></a>x:Reference  
- `x:Reference` は XAML 2009 に含まれており、元 (2006) の言語セットの拡張機能です。 `x:Reference` は、オブジェクト グラフにある別の既存のオブジェクトへの参照を表します。 このオブジェクトは、その `x:Name`によって識別されます。 詳細については、「 [x:Reference Markup Extension](../../../docs/framework/xaml-services/x-reference-markup-extension.md)」を参照してください。  
+ `x:Reference` は XAML 2009 に含まれており、元 (2006) の言語セットの拡張機能です。 `x:Reference` は、オブジェクト グラフにある別の既存のオブジェクトへの参照を表します。 このオブジェクトは、その `x:Name`によって識別されます。 詳細については、「 [x:Reference Markup Extension](x-reference-markup-extension.md)」を参照してください。  
   
-### <a name="other-x-constructs"></a>その他の x: コンストラクト  
- XAML 言語機能をサポートするための他の `x:` コンストラクトも存在しますが、マークアップ拡張機能としては実装されていません。 詳細については、「 [XAML Namespace (x:) Language Features](../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)」を参照してください。  
+### <a name="other-x-constructs"></a>その他の x:構築します  
+ XAML 言語機能をサポートするための他の `x:` コンストラクトも存在しますが、マークアップ拡張機能としては実装されていません。 詳細については、次を参照してください[XAML Namespace (x:)。言語機能](xaml-namespace-x-language-features.md)します。  
   
 <a name="the_markupextension_base_class"></a>   
 ## <a name="the-markupextension-base-class"></a>MarkupExtension 基底クラス  
  System.Xaml の XAML リーダーと XAML ライターの既定の実装と対話できるカスタム マークアップ拡張機能を定義するには、抽象クラス <xref:System.Windows.Markup.MarkupExtension> からクラスを派生します。 このクラスには、オーバーライドする 1 つのメソッドとして、 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>があります。 また、マークアップ拡張機能で使用する引数をサポートする追加のコンストラクターと、それに対応する設定可能なプロパティも定義する必要があります。  
   
- カスタム マークアップ拡張機能は、 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>を通じて、マークアップ拡張機能が XAML プロセッサによって実際に起動された環境を報告するサービス コンテキストにアクセスします。 読み込みパスでは、これは通常 <xref:System.Xaml.XamlObjectWriter>です。 保存パスでは、これは通常 <xref:System.Xaml.XamlXmlWriter>です。 これらはそれぞれ、サービス プロバイダー パターンを実装する内部 XAML サービス プロバイダー コンテキスト クラスとして、サービス コンテキストを報告します。 使用できるサービスと、これらのサービスが何を表現するかについての詳細については、「 [Type Converters and Markup Extensions for XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)」を参照してください。  
+ カスタム マークアップ拡張機能は、 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>を通じて、マークアップ拡張機能が XAML プロセッサによって実際に起動された環境を報告するサービス コンテキストにアクセスします。 読み込みパスでは、これは通常 <xref:System.Xaml.XamlObjectWriter>です。 保存パスでは、これは通常 <xref:System.Xaml.XamlXmlWriter>です。 これらはそれぞれ、サービス プロバイダー パターンを実装する内部 XAML サービス プロバイダー コンテキスト クラスとして、サービス コンテキストを報告します。 使用できるサービスと、これらのサービスが何を表現するかについての詳細については、「 [Type Converters and Markup Extensions for XAML](type-converters-and-markup-extensions-for-xaml.md)」を参照してください。  
   
  マークアップ拡張機能クラスは、パブリックなアクセス レベルを使用する必要があります。XAML プロセッサは、マークアップ拡張機能のサービスを使用するために、そのマークアップ拡張機能のサポート クラスをいつでもインスタンス化できる必要があるからです。  
   
@@ -53,9 +54,9 @@ ms.lasthandoff: 05/04/2018
 ## <a name="defining-the-support-type-for-a-custom-markup-extension"></a>カスタム マークアップ拡張機能のサポート型の定義  
  .NET Framework XAML サービス、または .NET Framework XAML サービスに基づいて構築されたフレームワークを使用する場合は、2 種類の方法でマークアップ拡張機能のサポート型に名前を付けることができます。 型名は、XAML オブジェクト ライターが XAML 内でマークアップ拡張機能の使用を検出したときに、マークアップ拡張機能のサポート型にアクセスして呼び出しを試みる方法に関連しています。 次のいずれかの方法で名前を付けます。  
   
--   XAML マークアップの使用トークンと完全に一致する型名を付ける。 たとえば、 `{Collate ...}` 拡張機能の使用をサポートするためには、サポート型に `Collate`という名前を付けます。  
+- XAML マークアップの使用トークンと完全に一致する型名を付ける。 たとえば、 `{Collate ...}` 拡張機能の使用をサポートするためには、サポート型に `Collate`という名前を付けます。  
   
--   使用トークンの文字列に `Extension`サフィックスを付加した型名を付ける。 たとえば、 `{Collate ...}` 拡張機能の使用をサポートするためには、サポート型に `CollateExtension`という名前を付けます。  
+- 使用トークンの文字列に `Extension`サフィックスを付加した型名を付ける。 たとえば、 `{Collate ...}` 拡張機能の使用をサポートするためには、サポート型に `CollateExtension`という名前を付けます。  
   
  検索は、まずサフィックス `Extension`が付加されたクラス名、次にサフィックス `Extension` が付加されていないクラス名という順序で行われます。  
   
@@ -80,9 +81,9 @@ public Collate(CollationMode collationMode) {...}
   
  この処理では、概念としては、マークアップ拡張機能を「作成するオブジェクト」と見なして、そのメンバー値を設定します。 設定するように指定された各プロパティは、作成するオブジェクトに指定されたメンバーが設定される場合と同じように、XAML が解析される時点で評価されます。 次の 2 つの重要な違いがあります。  
   
--   前述のとおり、マークアップ拡張機能のサポート型では、XAML でインスタンス化するための既定のコンストラクターが必須ではありません。 オブジェクトの構築は、テキスト構文で使用できる引数が位置指定引数または名前付き引数のいずれかとしてトークン化および評価されるまで遅延され、その時点で適切なコンストラクターが呼び出されます。  
+- 前述のとおり、マークアップ拡張機能のサポート型では、XAML でインスタンス化するための既定のコンストラクターが必須ではありません。 オブジェクトの構築は、テキスト構文で使用できる引数が位置指定引数または名前付き引数のいずれかとしてトークン化および評価されるまで遅延され、その時点で適切なコンストラクターが呼び出されます。  
   
--   マークアップ拡張機能の使用は入れ子にすることができます。 最も内側のマークアップ拡張機能が最初に評価されます。 そのため、そのような使用を想定して、いずれかの構築パラメーターを、生成するために値コンバーター (マークアップ拡張機能など) を必要とする型として宣言できます。  
+- マークアップ拡張機能の使用は入れ子にすることができます。 最も内側のマークアップ拡張機能が最初に評価されます。 そのため、そのような使用を想定して、いずれかの構築パラメーターを、生成するために値コンバーター (マークアップ拡張機能など) を必要とする型として宣言できます。  
   
  このような処理への依存については、前の例で説明したとおりです。 .NET Framework XAML サービスの XAML オブジェクト ライターは、列挙定数の名前を、ネイティブ レベルでの列挙値に処理します。  
   
@@ -109,13 +110,13 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
 <a name="accessing_service_provider_context_from_a_markup_extension_implementation"></a>   
 ## <a name="accessing-service-provider-context-from-a-markup-extension-implementation"></a>マークアップ拡張機能の実装からサービス プロバイダーのコンテキストにアクセスする  
- 使用可能なサービスは、すべての値コンバーターの場合と同じです。 ただし、それぞれの値コンバーターがサービス コンテキストを受け取る方法が違います。 サービスへのアクセスと、使用できるサービスについては、「 [Type Converters and Markup Extensions for XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)」のトピックを参照してください。  
+ 使用可能なサービスは、すべての値コンバーターの場合と同じです。 ただし、それぞれの値コンバーターがサービス コンテキストを受け取る方法が違います。 サービスへのアクセスと、使用できるサービスについては、「 [Type Converters and Markup Extensions for XAML](type-converters-and-markup-extensions-for-xaml.md)」のトピックを参照してください。  
   
 <a name="property_element_usage_of_a_markup_extension"></a>   
 ## <a name="property-element-usage-of-a-markup-extension"></a>マークアップ拡張機能のプロパティ要素の使用方法  
  マークアップ拡張機能の使用のシナリオは、多くの場合、属性を使用したマークアップ拡張機能の使用を中心にして設計されます。 ただし、プロパティ要素による使用をサポートするバッキング クラスを定義することも可能です。  
   
- マークアップ拡張機能のプロパティ要素による使用をサポートするには、パブリックな既定のコンストラクターを定義します。 これは、静的コンストラクターではなく、インスタンス コンストラクターにする必要があります。 これが必要である理由は、XAML プロセッサは、通常、マークアップに基づいて処理する任意のオブジェクト要素に対して既定のコンストラクターを呼び出す必要があり、これにはオブジェクト要素としてのマークアップ拡張機能クラスも含まれるからです。 さらに複雑なシナリオとして、クラスに対して既定以外の構築パスを定義することもできます。 (詳細については、次を参照してください[X:factorymethod ディレクティブ](../../../docs/framework/xaml-services/x-factorymethod-directive.md)。)。ただし、マークアップ拡張機能の目的では、これらのパターンを使用しないことをお勧めします。未加工のマークアップのデザイナーにとってもユーザーにとっても、使用パターンの検出が非常に困難になるからです。  
+ マークアップ拡張機能のプロパティ要素による使用をサポートするには、パブリックな既定のコンストラクターを定義します。 これは、静的コンストラクターではなく、インスタンス コンストラクターにする必要があります。 これが必要である理由は、XAML プロセッサは、通常、マークアップに基づいて処理する任意のオブジェクト要素に対して既定のコンストラクターを呼び出す必要があり、これにはオブジェクト要素としてのマークアップ拡張機能クラスも含まれるからです。 さらに複雑なシナリオとして、クラスに対して既定以外の構築パスを定義することもできます。 (詳細については、次を参照してください[X:factorymethod ディレクティブ](x-factorymethod-directive.md)。)。ただし、マークアップ拡張機能の目的では、これらのパターンを使用しないことをお勧めします。未加工のマークアップのデザイナーにとってもユーザーにとっても、使用パターンの検出が非常に困難になるからです。  
   
 <a name="attributing_for_a_custom_markup_extension"></a>   
 ## <a name="attributing-for-a-custom-markup-extension"></a>カスタム マークアップ拡張機能の属性設定  
@@ -123,9 +124,9 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
  <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> は、 <xref:System.Type> が返すオブジェクトの型の <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> 情報を報告します。 純粋なシグネチャとしては、 <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> は <xref:System.Object>を返します。 ただし、コンシューマーの種類によっては、戻り値の型についてさらに詳細な情報が必要になる場合があります。 バインディングには、以下の項目が含まれます。  
   
--   マークアップ拡張機能の使用に関して、型を認識したサポートを提供できるデザイナーや IDE を実現するための情報。  
+- マークアップ拡張機能の使用に関して、型を認識したサポートを提供できるデザイナーや IDE を実現するための情報。  
   
--   ターゲット クラスに対する `SetMarkupExtension` ハンドラーの高度な実装のための情報。特定の既知の <xref:System.Windows.Markup.MarkupExtension> 実装を名前で分岐して判別するのではなく、リフレクションに基づいてマークアップ拡張機能の戻り値の型を判別できるようになります。  
+- ターゲット クラスに対する `SetMarkupExtension` ハンドラーの高度な実装のための情報。特定の既知の <xref:System.Windows.Markup.MarkupExtension> 実装を名前で分岐して判別するのではなく、リフレクションに基づいてマークアップ拡張機能の戻り値の型を判別できるようになります。  
   
 <a name="serialization_of_markup_extension_usages"></a>   
 ## <a name="serialization-of-markup-extension-usages"></a>マークアップ拡張機能の使用のシリアル化  
@@ -153,7 +154,8 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
  保存パスで XAML ノード ストリームを処理している場合は、通常、シリアル化するオブジェクトが当初はマークアップ拡張機能の使用と `ProvideValue` の結果によって提供されたことを知らせる情報はオブジェクト グラフ表現の中に存在しません。 マークアップ拡張機能の使用をラウンドトリップさせ、オブジェクト グラフのその他の変化もキャプチャする必要があるシナリオでは、元の XAML 入力に由来するマークアップ拡張機能の使用の情報を保存するため、独自の手法を考案する必要があります。 たとえば、マークアップ拡張機能の使用を復元するには、保存パス上のノード ストリームを処理してマークアップ拡張機能の使用を復元するか、元の XAML とラウンドトリップされた XAML に対して何らかのマージ処理を実行することができます。 WPF などの一部の XAML 実装フレームワークでは、中間の型 (式) を使用して、マークアップ拡張機能の使用が値を提供したケースを表す場合があります。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Markup.MarkupExtension>  
- [XAML の型コンバーターおよびマークアップ拡張機能](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)  
- [マークアップ拡張機能と WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Markup.MarkupExtension>
+- [XAML の型コンバーターおよびマークアップ拡張機能](type-converters-and-markup-extensions-for-xaml.md)
+- [マークアップ拡張機能と WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

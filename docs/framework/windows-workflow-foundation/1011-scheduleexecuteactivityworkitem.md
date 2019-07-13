@@ -3,11 +3,11 @@ title: 1011 - ScheduleExecuteActivityWorkItem
 ms.date: 03/30/2017
 ms.assetid: e503ae46-ad6b-4fcb-8c0e-146d59a8eff1
 ms.openlocfilehash: 299d09b7c4db94a2e27378ba0cc3dfeb03734ab4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33509617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982255"
 ---
 # <a name="1011---scheduleexecuteactivityworkitem"></a>1011 - ScheduleExecuteActivityWorkItem
 ## <a name="properties"></a>プロパティ  
@@ -25,7 +25,7 @@ ms.locfileid: "33509617"
 ## <a name="message"></a>メッセージ  
  Activity '%1'、DisplayName: '%2'、InstanceId: '%3' に対して ExecuteActivityWorkItem がスケジュールされました。  
   
-## <a name="details"></a>詳細  
+## <a name="details"></a>説明  
   
 |データ項目名|データ項目の型|説明|  
 |--------------------|--------------------|-----------------|  

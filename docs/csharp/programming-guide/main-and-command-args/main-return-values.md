@@ -5,24 +5,24 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 8337303f97a3a654f5a3718bf0714ee876a7dc9f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ea6f93e52ade91e61bdfcbc35aeb56de9101e80f
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242650"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878926"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() の戻り値 (C# プログラミング ガイド)
 
 `Main` メソッドは `void` を返すことができます。
 
-[!code-csharp[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_1.cs)]
+ [!code-csharp[csProgGuideMain#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#12)]
 
 `int` を返すこともできます。
 
-[!code-csharp[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_2.cs)]
+ [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
 
-`Main` からの戻り値を使用しない場合は、`void` を返すと少し簡単なコードにすることができます。 ただし、整数値を返すことによって、プログラムが状態の情報を、実行可能ファイルを呼び出す他のプログラムまたはスクリプトに伝達することができます。 `Main` からの戻り値は、プロセスの終了コードとして扱われます。 次の例では、`Main` からの戻り値にアクセスする方法を示します。
+`Main` からの戻り値を使用しない場合は、`void` を返すと少し簡単なコードにすることができます。 ただし、整数値を返すことによって、プログラムが状態の情報を、実行可能ファイルを呼び出す他のプログラムまたはスクリプトに伝達することができます。 `Main` からの戻り値は、プロセスの終了コードとして扱われます。 `void` が `Main` から返された場合、終了コードは暗黙的に `0` になります。 次の例では、`Main` からの戻り値にアクセスする方法を示します。
 
 ## <a name="example"></a>例
 
@@ -30,7 +30,7 @@ ms.locfileid: "53242650"
 
 *program.cs* の `Main` メソッドを次のように変更します。
 
-[!code-csharp[csProgGuideMain#14](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_3.cs)]
+ [!code-csharp[csProgGuideMain#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#14)]
 
 プログラムを Windows で実行する場合、`Main` 関数からの戻り値はすべて 1 つの環境変数に格納されます。 この環境変数を取得するには、バッチ ファイルから `ERRORLEVEL` を使用するか、PowerShell から `$LastExitCode` を使用します。
 
@@ -93,9 +93,9 @@ private static async Task<int> AsyncConsoleWork()
 > [!NOTE]
 >この例の `Main` メソッドで `async` 修飾子を使用した場合、同じコードが生成されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
+
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# リファレンス](../index.md)
 - [Main() とコマンドライン引数](index.md)
 - [方法: コマンド ライン引数を表示する](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-- [方法: foreach を使用してコマンド ライン引数にアクセスする](../../programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - extension indexer [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: a16a4b13-54be-432c-82b3-a87091464ada
-ms.openlocfilehash: ab9eacc3fb3796139d8ed8382146a4a6c2b28a97
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: a02c482db81d9d76752cfe66a292dc57c48b2acb
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44189502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698903"
 ---
 # <a name="extension-indexer-property-visual-basic"></a>拡張インデクサー プロパティ (Visual Basic)
 コレクション内の個々の要素にアクセスできます。  
@@ -49,15 +49,16 @@ object(index)
 ## <a name="example"></a>例  
  次の例は、拡張機能インデクサーを使用して、2 番目の子ノードのコレクションにアクセスする方法を示しています。<xref:System.Xml.Linq.XElement>オブジェクト。 コレクションには、という名前のすべての子要素を取得する子軸プロパティを使用してアクセス`phone`で、`contact`オブジェクト。  
   
- [!code-vb[VbXMLSamples#24](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/extension-indexer-property_1.vb)]  
+ [!code-vb[VbXMLSamples#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#24)]  
   
  このコードを実行すると、次のテキストが表示されます。  
   
  `Second phone number: 425-555-0145`  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Xml.Linq.XElement>  
- [XML 軸プロパティ](../../../visual-basic/language-reference/xml-axis/index.md)  
- [XML リテラル](../../../visual-basic/language-reference/xml-literals/index.md)  
- [Visual Basic での XML の作成](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [XML Value プロパティ](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Xml.Linq.XElement>
+- [XML 軸プロパティ](../../../visual-basic/language-reference/xml-axis/index.md)
+- [XML リテラル](../../../visual-basic/language-reference/xml-literals/index.md)
+- [Visual Basic での XML の作成](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [XML Value プロパティ](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)

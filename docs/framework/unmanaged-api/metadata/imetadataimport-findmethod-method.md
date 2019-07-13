@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6b68d4e3d51fdb50290319de804a78c1a78a07a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4225794740b7786c6f758c9a0953d323c31a1081
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447389"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782490"
 ---
 # <a name="imetadataimportfindmethod-method"></a>IMetaDataImport::FindMethod メソッド
-ポインターを取得した MethodDef トークンが囲まれているメソッドに、指定した<xref:System.Type>指定した名前とメタデータ シグネチャを持つとします。  
+囲まれたメソッドの methoddef にポインターをトークン取得を指定した<xref:System.Type>指定した名前とメタデータ シグネチャを持つとします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT FindMethod (  
    [in]  mdTypeDef          td,  
    [in]  LPCWSTR            szName,   
@@ -39,9 +39,9 @@ HRESULT FindMethod (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `td`  
- [in]`mdTypeDef`を検索するメンバーを囲む型 (クラスまたはインターフェイス) のトークン。 この値が場合`mdTokenNil`、グローバル関数の参照を実行し、します。  
+ [in]`mdTypeDef`を検索するメンバーを囲む型 (クラスまたはインターフェイス) のトークン。 この値が場合`mdTokenNil`、グローバル関数、検索を実行し、します。  
   
  `szName`  
  [in]検索するメソッドの名前。  
@@ -50,28 +50,29 @@ HRESULT FindMethod (
  [in]メソッドのバイナリ メタデータ シグネチャへのポインター。  
   
  `cbSigBlob`  
- [in]バイト サイズ`pvSigBlob`です。  
+ [in]バイト サイズ`pvSigBlob`します。  
   
  `pmb`  
  [out]一致する MethodDef トークンへのポインター。  
   
-## <a name="remarks"></a>コメント  
- 外側のクラスまたはインターフェイスを使用して、メソッドを指定する (`td`)、その名前 (`szName`)、および必要に応じて、シグネチャ (`pvSigBlob`)。 クラスまたはインターフェイスで同じ名前の複数のメソッドである可能性があります。 その場合は、一意の一致を検索するメソッドのシグネチャを渡します。  
+## <a name="remarks"></a>Remarks  
+ 外側のクラスまたはインターフェイスを使用して、メソッドを指定する (`td`)、その名前 (`szName`)、および必要に応じてその署名 (`pvSigBlob`)。 クラスまたはインターフェイスで同じ名前の複数のメソッドである可能性があります。 その場合は、一意の一致を検索するメソッドのシグネチャを渡します。  
   
- 渡される署名`FindMethod`生成された、現在のスコープで特定のスコープにバインドされるためです。 シグネチャには、外側のクラスまたは値の型を識別するトークンを埋め込むことができます。 トークンは、ローカルの TypeDef テーブルへのインデックスです。 現在のスコープのコンテキストの外部のランタイムのシグネチャを作成できずを入力としてにその署名を使用して`FindMethod`です。  
+ 渡される署名`FindMethod`生成された現在のスコープで特定のスコープにバインドされるためです。 署名は、外側のクラスまたは値の型を識別するトークンを埋め込むことができます。 トークンは、ローカルの TypeDef テーブルへのインデックスです。 現在のスコープのコンテキスト外にある実行時シグネチャを作成してを入力としてその署名を使用することはできません`FindMethod`します。  
   
- `FindMethod` クラスまたはインターフェイスで直接定義されたメソッドのみを検索します。継承されたメソッドが見つかりません。  
+ `FindMethod` クラスまたはインターフェイス内で直接定義されたメソッドのみを検索します継承されたメソッドは検索しません。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Reflection.MethodInfo>  
- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Reflection.MethodInfo>
+- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

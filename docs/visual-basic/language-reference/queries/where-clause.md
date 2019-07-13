@@ -8,12 +8,12 @@ helpviewer_keywords:
 - queries [Visual Basic], Where
 - Where clause [Visual Basic]
 ms.assetid: 48b5c2c5-3181-429c-8545-894296798c89
-ms.openlocfilehash: de7b4bf3e7dc1145b7e95197c7bd05c66acdabd6
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5632e69039baebb3d1f1fd90c04586d9e50fe40f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945211"
 ---
 # <a name="where-clause-visual-basic"></a>Where 句 (Visual Basic)
 クエリのフィルター処理条件を指定します。  
@@ -38,16 +38,17 @@ Where condition
 ## <a name="example"></a>例  
  次のクエリ式は、`From`範囲変数を宣言する句`cust`各`Customer`オブジェクト、`customers`コレクション。 `Where`句では、範囲変数を使用して、指定されたリージョンからお客様に、出力を制限します。 `For Each`ループは、クエリ結果の各顧客の会社名を表示します。  
   
- [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/where-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  
   
 ## <a name="example"></a>例  
  次の例では`And`と`Or`の論理演算子、`Where`句。  
   
- [!code-vb[VbSimpleQuerySamples#31](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/where-clause_2.vb)]  
+ [!code-vb[VbSimpleQuerySamples#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#31)]  
   
-## <a name="see-also"></a>関連項目  
- [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [クエリ](../../../visual-basic/language-reference/queries/index.md)  
- [From 句](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)  
- [For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+## <a name="see-also"></a>関連項目
+
+- [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [クエリ](../../../visual-basic/language-reference/queries/index.md)
+- [From 句](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)
+- [For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)

@@ -16,21 +16,21 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cd87cb619ef2dc1e0548c7553585b7e51e94c4f
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 80faf1a5a6297f5b105fdb609366f6774f8692b3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924776"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761654"
 ---
 # <a name="clone-function"></a>Clone 関数
-現在のオブジェクトの完全な複製である新しいオブジェクトを返します。   
+現在のオブジェクトの完全な複製である新しいオブジェクトが返されます。   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Clone (
    [in] int                  vFunc, 
    [in] IWbemClassObject*    ptr, 
@@ -66,12 +66,13 @@ HRESULT Clone (
 
 複製されたオブジェクトは、1 の参照カウントを含む COM オブジェクトです。
 
-## <a name="requirements"></a>要件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>関連項目  
-[WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+## <a name="see-also"></a>関連項目
+
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - downloading Internet resources, connections
 - ServicePointManager class, about ServicePointManager class
 ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
-ms.openlocfilehash: 4fd7d01a3592c76fc1bb4ff8afe280c50cdf9f12
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9c434ce0f5934509489a7deeced9e9e579d9cf7a
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181304"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59152907"
 ---
 # <a name="managing-connections"></a>接続の管理
 HTTP を使用してデータ リソースに接続するアプリケーションは、.NET Framework の <xref:System.Net.ServicePoint> クラスと <xref:System.Net.ServicePointManager> クラスを使用してインターネットに対する接続を管理し、最適なスケールとパフォーマンスを達成することができます。  
@@ -64,6 +64,7 @@ Dim sp As ServicePoint = ServicePointManager.FindServicePoint(uri)
 sp.ConnectionLimit = newLimit  
 ```  
   
-## <a name="see-also"></a>参照  
- [接続のグループ化](../../../docs/framework/network-programming/connection-grouping.md)  
- [アプリケーション プロトコルの使用](../../../docs/framework/network-programming/using-application-protocols.md)
+## <a name="see-also"></a>関連項目
+
+- [接続のグループ化](../../../docs/framework/network-programming/connection-grouping.md)
+- [アプリケーション プロトコルの使用](../../../docs/framework/network-programming/using-application-protocols.md)

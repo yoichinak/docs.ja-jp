@@ -10,15 +10,15 @@ helpviewer_keywords:
 - x:Code XAML directive element [XAML Services]
 - XAML [XAML Services], x:Code directive element
 ms.assetid: 87986b13-1a2e-4830-ae36-15f9dc5629e8
-ms.openlocfilehash: 92be0b3b0fd1212c4254a449f902b85e998aa148
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f6898008fa3e3e7e385a2bc77c5b2eac7eeda2ec
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564314"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64617154"
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>x:Code 組み込み XAML 型 
-XAML の運用環境でコードの配置を許可します。 XAML、またはランタイムによって解釈など、後から使用の XAML の運用環境で左側をコンパイルする XAML プロセッサの実装でこのようなコードをコンパイルするか、できます。  
+XAML の運用環境でコードを配置をできます。 XAML、またはランタイムによって解釈など、後から使用の XAML の運用環境で左側をコンパイルする任意の XAML プロセッサ実装によってこのようなコードをコンパイルすることができますか。  
   
 ## <a name="xaml-object-element-usage"></a>XAML オブジェクト要素の使用方法  
   
@@ -28,27 +28,28 @@ XAML の運用環境でコードの配置を許可します。 XAML、または�
 </x:Code>  
 ```  
   
-## <a name="remarks"></a>コメント  
- 内のコード、 `x:Code` XAML ディレクティブ要素が、一般的な XML 名前空間内の解釈のままと XAML 名前空間を指定します。 そのため、必要がある通常を使用するコードを囲む`x:Code`内、`CDATA`セグメント。  
+## <a name="remarks"></a>Remarks  
+ 内のコード、 `x:Code` XAML ディレクティブ要素は、一般的な XML 名前空間内で解釈のままと XAML 名前空間を提供します。 したがって、用のコードを囲むために必要な通常は`x:Code`内で、`CDATA`セグメント。  
   
- `x:Code` 次の XAML の運用環境のすべての可能な展開メカニズムは許可されません。 特定のフレームワーク (WPF など) でコードをコンパイルする必要があります。 その他のフレームワーク`x:Code`使用状況を通常許可されない可能性があります。  
+ `x:Code` XAML の運用環境のすべての可能な展開メカニズムは許可されません。 特定のフレームワーク (WPF など) では、コードをコンパイルする必要があります。 その他のフレームワークで`x:Code`使用状況を通常許可されない可能性があります。  
   
- 管理を許可するフレームワーク`x:Code`コンテンツを使用する適切な言語コンパイラ`x:Code`コンテンツは、アプリケーションのコンパイルに使用されるを含むプロジェクトの設定とターゲットによって決まります。  
+ 管理を許可するフレームワーク`x:Code`コンテンツに使用する適切な言語コンパイラ`x:Code`コンテンツが設定およびアプリケーションをコンパイルするために使用を含むプロジェクトのターゲットによって決定されます。  
   
 ## <a name="wpf-usage-notes"></a>WPF の使用上の注意  
- 内で宣言されているコード`x:Code`WPF には、いくつかの重要な制限。  
+ 内で宣言されているコード`x:Code`は WPF がいくつかの注目すべき制限があります。  
   
--   `x:Code`ディレクティブ要素は XAML の運用環境のルート要素のすぐ下の子要素である必要があります。  
+- `x:Code`ディレクティブ要素は XAML の運用環境のルート要素の直接の子要素である必要があります。  
   
--   [X:class ディレクティブ](../../../docs/framework/xaml-services/x-class-directive.md)親ルート要素に提供する必要があります。  
+- [X:class ディレクティブ](x-class-directive.md)親ルート要素に提供する必要があります。  
   
--   コード内に配置`x:Code`は既にその XAML ページに対して作成される部分クラスのスコープ内にあるコンパイルによって処理されます。 したがって、部分クラスのメンバーまたは変数を定義するすべてのコードがあります。  
+- コード内に配置`x:Code`は、その XAML ページを既に作成されている部分クラスのスコープ内にあるコンパイルで扱われます。 したがってすべてのコードを定義するには、その部分クラスのメンバーまたは変数があります。  
   
--   以外の場合、部分クラス内のクラスを入れ子にして、追加のクラスを定義することはできません (入れ子可能ですが、XAML で入れ子になったクラスは参照できないために、一般的ではありません)。 既存の部分クラスに使用される名前空間以外の CLR 名前空間を定義またはに追加できません。  
+- 部分クラス内にクラスを入れ子にして他よりも、追加のクラスを定義することはできません (入れ子が許可されているが、XAML で入れ子になったクラスは参照できないために、通常ではありません)。 既存の部分クラスに使用される名前空間以外の CLR 名前空間を定義またはに追加できません。  
   
--   部分クラスの CLR 名前空間の外部コードのエンティティへの参照する必要がありますすべて完全修飾します。 上書きを部分クラスのオーバーライド可能なメンバーにメンバーが宣言されている場合は、言語固有のオーバーライド キーワードを使用してこれを指定してください。 メンバーが宣言されている場合`x:Code`XAML から作成された部分クラスのメンバーと競合するスコープ、ように、コンパイラが、競合を報告していること、XAML ファイルことはできませんコンパイル、またはロードします。  
+- 部分クラスの CLR 名前空間の外部のコード エンティティを参照する必要がありますすべて完全修飾します。 部分クラスのオーバーライド可能なメンバーをオーバーライド メンバーが宣言されている場合は、これを言語固有の override キーワードを指定する必要があります。 メンバーが宣言されている場合`x:Code`XAML から作成された部分クラスのメンバーと競合するスコープ、このような方法で、コンパイラが、競合を報告する XAML ファイルことはできませんコンパイルまたは読み込みます。  
   
-## <a name="see-also"></a>関連項目  
- [x:Class ディレクティブ](../../../docs/framework/xaml-services/x-class-directive.md)  
- [WPF における分離コードと XAML](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
- [XAML の概要 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a>関連項目
+
+- [x:Class ディレクティブ](x-class-directive.md)
+- [WPF における分離コードと XAML](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
+- [XAML の概要 (WPF)](../wpf/advanced/xaml-overview-wpf.md)

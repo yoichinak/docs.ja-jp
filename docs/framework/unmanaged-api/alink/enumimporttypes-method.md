@@ -17,47 +17,52 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 90319886dfe149a3d2d76451c1a8526299cf5b89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0cd154ac90418dd0f6f476151686ff670c01c98c
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401649"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632232"
 ---
 # <a name="enumimporttypes-method"></a>EnumImportTypes メソッド
-それぞれのスコープ内の各種類を列挙します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-HRESULT EnumImportTypes(  
-    HALINKENUM   hEnum,  
-    DWORD        dwMax,  
-    mdTypeDef    aTypeDefs[],  
-    DWORD*       pdwCount  
-) PURE;  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
- `hEnum`  
- 列挙子のハンドルです。  
-  
- `dwMax`  
- 取得する型の最大数。  
-  
- `aTypeDefs`  
- 型を超えないように、トークンを受け取ります`dwMax`です。  
-  
- `pdwCount`  
- 型の実際の数を受け取る`aTypeDefs`です。  
-  
-## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は、S_OK を返します。  
-  
-## <a name="requirements"></a>要件  
- Alink.h が必要です。  
-  
-## <a name="see-also"></a>関連項目  
- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+
+それぞれのスコープでは、各種類を列挙します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+HRESULT EnumImportTypes(
+    HALINKENUM   hEnum,
+    DWORD        dwMax,
+    mdTypeDef    aTypeDefs[],
+    DWORD*       pdwCount
+) PURE;
+```
+
+## <a name="parameters"></a>パラメーター
+
+`hEnum`\
+列挙子の処理です。
+
+`dwMax`\
+取得する型の最大数。
+
+`aTypeDefs`\
+超えないように、型のトークンを受け取る`dwMax`します。
+
+`pdwCount`\
+型の実際の数を受け取る`aTypeDefs`します。
+
+## <a name="return-value"></a>戻り値
+
+メソッドが成功した場合は、S_OK を返します。
+
+## <a name="requirements"></a>必要条件
+
+Alink.h が必要です。
+
+## <a name="see-also"></a>関連項目
+
+- [IALink インターフェイス](ialink-interface.md)
+- [IALink2 インターフェイス](ialink2-interface.md)
+- [ALink API](index.md)

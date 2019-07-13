@@ -13,12 +13,12 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-ms.openlocfilehash: adb7668b6a818b2042a38f9458685a6f93085dc8
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: c4dd249620ba1bf445642ce4600498f6beb30461
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61637967"
 ---
 # <a name="goto-statement"></a>GoTo ステートメント
 プロシージャ内の指定した行に無条件に分岐します。  
@@ -34,7 +34,7 @@ GoTo line
  必須。 任意の行のラベル。  
   
 ## <a name="remarks"></a>Remarks  
- `GoTo`のみが表示されるプロシージャ内の行にステートメントを分岐できます。 ラベルを 1 行が必要`GoTo`を参照できます。 詳細については、次を参照してください。[方法: ラベル ステートメント](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)します。  
+ `GoTo`のみが表示されるプロシージャ内の行にステートメントを分岐できます。 ラベルを 1 行が必要`GoTo`を参照できます。 詳細については、「[方法 :ステートメントにラベル付け](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)します。  
   
 > [!NOTE]
 >  `GoTo` ステートメントすると、コードが読み取りおよびメンテナンスを困難になります。 可能であれば、制御構造を使用します。 詳細については、次を参照してください。[制御フロー](../../../visual-basic/programming-guide/language-features/control-flow/index.md)します。  
@@ -54,20 +54,20 @@ GoTo line
   
  次の図では 1 つ`Try`別内で入れ子になった構築します。 2 つの構築ブロック間でさまざまな分岐は、有効または無効と表示されています。  
   
- ![Try 構造内の分岐のグラフィック ダイアグラム](../../../visual-basic/language-reference/statements/media/trybranching.gif "TryBranching")  
-Try 構造内の有効および無効な分岐  
+ ![Try 構造内の分岐のグラフィック ダイアグラム](./media/goto-statement/try-construction-branching.gif)  
   
 ## <a name="example"></a>例  
  次の例では、`GoTo`ステートメントをプロシージャ内の行ラベルに分岐します。  
   
- [!code-vb[VbVbalrStatements#31](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/goto-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#31)]  
   
-## <a name="see-also"></a>関連項目  
- [Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
- [For...Next ステートメント](../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
- [If...Then...Else ステートメント](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
- [Select...Case ステートメント](../../../visual-basic/language-reference/statements/select-case-statement.md)  
- [Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
- [While...End While ステートメント](../../../visual-basic/language-reference/statements/while-end-while-statement.md)  
- [With...End With ステートメント](../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+## <a name="see-also"></a>関連項目
+
+- [Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)
+- [For...Next ステートメント](../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+- [If...Then...Else ステートメント](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+- [Select...Case ステートメント](../../../visual-basic/language-reference/statements/select-case-statement.md)
+- [Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [While...End While ステートメント](../../../visual-basic/language-reference/statements/while-end-while-statement.md)
+- [With...End With ステートメント](../../../visual-basic/language-reference/statements/with-end-with-statement.md)

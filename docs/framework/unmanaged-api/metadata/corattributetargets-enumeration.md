@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54d239c3091b29424b26fbab4cb4eb9152ff9ad9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9fb1dff80fccc920540d370797441b3a019d766c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442167"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780920"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets 列挙型
 属性を適用できるアプリケーション要素を指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum CorAttributeTargets  
 {  
     catAssembly            = 0x0001,  
@@ -67,7 +67,7 @@ typedef enum CorAttributeTargets
 |`catAssembly`|属性は、アセンブリに適用できます。|  
 |`catModule`|属性は、ポータブル実行可能ファイル (.dll または .exe) モジュールに適用できます。|  
 |`catClass`|属性は、クラスに適用できます。|  
-|`catStruct`|属性は、構造体に適用できます。つまり、値を入力します。|  
+|`catStruct`|構造体に属性を適用できます。つまり、値を入力します。|  
 |`catEnum`|属性は、列挙体に適用できます。|  
 |`catConstructor`|属性は、コンス トラクターに適用できます。|  
 |`catMethod`|属性は、メソッドに適用できます。|  
@@ -81,17 +81,18 @@ typedef enum CorAttributeTargets
 |`catAll`|属性は、任意のアプリケーション要素に適用できます。|  
 |`catClassMembers`|属性は、クラスのメンバーに適用できます。|  
   
-## <a name="remarks"></a>コメント  
- `CorAttributeTargets`列挙値は、優先の組み合わせを取得するビットごとの OR 演算と組み合わせることができます。  
+## <a name="remarks"></a>Remarks  
+ `CorAttributeTargets`列挙値は、任意の組み合わせを取得するビットごとの OR 演算と組み合わせることができます。  
   
- `CorAttributeTargets`は対応しているマネージ<xref:System.AttributeTargets?displayProperty=nameWithType>列挙します。  
+ `CorAttributeTargets`マネージ対応<xref:System.AttributeTargets?displayProperty=nameWithType>列挙体。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorHdr.h  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>関連項目
+
+- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -4,12 +4,12 @@ description: .NET ライブラリの NuGet の依存関係を管理するため�
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 5566ab83040ce5dc23520401e3fc4bb619af4ec4
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.openlocfilehash: 0cd00ff36ad52bc46769ca1793b9efd02db14da1
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "49400552"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644255"
 ---
 # <a name="dependencies"></a>依存関係
 

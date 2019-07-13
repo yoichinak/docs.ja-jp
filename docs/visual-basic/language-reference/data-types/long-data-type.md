@@ -20,12 +20,12 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Long data type
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
-ms.openlocfilehash: 357b7b42c7ad609b2a86ec3ee79a0f6f38dd9471
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 7b4226c83f25807e013823031820d58790bb6db2
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155120"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912782"
 ---
 # <a name="long-data-type-visual-basic"></a>Long データ型 (Visual Basic)
 
@@ -68,20 +68,20 @@ Dim number = &H_0FAC_0326_1489_D68CL
 
 ## <a name="programming-tips"></a>プログラミングのヒント
 
--   **相互運用の考慮事項。** .NET Framework、例のオートメーションまたは COM オブジェクト用に作成されていないコンポーネントとやり取りする場合に注意している`Long`に他の環境は別のデータ幅 (32 ビット)。 このようなコンポーネントに 32 ビットの引数を渡す場合の宣言として`Integer`の代わりに`Long`で新しい Visual Basic コードです。  
+- **相互運用の考慮事項。** .NET Framework、例のオートメーションまたは COM オブジェクト用に作成されていないコンポーネントとやり取りする場合に注意している`Long`に他の環境は別のデータ幅 (32 ビット)。 このようなコンポーネントに 32 ビットの引数を渡す場合の宣言として`Integer`の代わりに`Long`で新しい Visual Basic コードです。  
   
--   **拡大します。** `Long`拡大変換後のデータ型`Decimal`、 `Single`、または`Double`します。 これは、`Long` エラーを発生させることなく、これらの型のいずれかに <xref:System.OverflowException?displayProperty=nameWithType> を変換できることを意味します。  
+- **拡大します。** `Long`拡大変換後のデータ型`Decimal`、 `Single`、または`Double`します。 これは、`Long` エラーを発生させることなく、これらの型のいずれかに <xref:System.OverflowException?displayProperty=nameWithType> を変換できることを意味します。  
   
--   **型宣言文字。** あるリテラルにリテラルの型文字 `L` を付けると、そのリテラルは `Long` に変換されます。 ある識別子に識別子の型文字 `&` を付けると、その識別子は整数型 (`Long`) に変換されます。  
+- **型宣言文字。** あるリテラルにリテラルの型文字 `L` を付けると、そのリテラルは `Long` に変換されます。 ある識別子に識別子の型文字 `&` を付けると、その識別子は整数型 (`Long`) に変換されます。  
   
--   **フレームワークの型。** .NET Framework において対応する型は、<xref:System.Int64?displayProperty=nameWithType> 構造体です。  
+- **フレームワークの型。** .NET Framework において対応する型は、<xref:System.Int64?displayProperty=nameWithType> 構造体です。  
 
 ## <a name="see-also"></a>関連項目
 
-<xref:System.Int64>
-[データ型](../../../visual-basic/language-reference/data-types/index.md)   
-[整数データ型](../../../visual-basic/language-reference/data-types/integer-data-type.md)   
-[Short データ型](../../../visual-basic/language-reference/data-types/short-data-type.md)   
-[型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
-[変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
-[データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- <xref:System.Int64>
+- [データの種類](../../../visual-basic/language-reference/data-types/index.md)
+- [Integer データ型](../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [Short データ型](../../../visual-basic/language-reference/data-types/short-data-type.md)
+- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

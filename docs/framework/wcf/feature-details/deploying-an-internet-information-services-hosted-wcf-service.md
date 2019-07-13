@@ -2,12 +2,12 @@
 title: インターネット インフォメーション サービスでホストされる WCF サービスの配置
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 99ed9ce5304717073057f6712a2b96d910d43bea
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: fcfad4c6cd7ffb0bf1233bab842b57a10bcc7f87
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47170179"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486925"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>インターネット インフォメーション サービスでホストされる WCF サービスの配置
 
@@ -23,11 +23,11 @@ ms.locfileid: "47170179"
 
 - WCF サービスを構成します。
 
-IIS でホストされる WCF サービスの作成の詳細なチュートリアルを参照してください。[方法: IIS で WCF サービスをホスト](how-to-host-a-wcf-service-in-iis.md)します。
+IIS でホストされる WCF サービスの作成の詳細なチュートリアルを参照してください。[方法。IIS で WCF サービスをホスト](how-to-host-a-wcf-service-in-iis.md)します。
 
 ## <a name="ensure-that-iis-aspnet-and-wcf-are-correctly-installed-and-registered"></a>IIS、ASP.NET、および WCF が正しくインストールおよび登録されていることの確認
 
-IIS でホストされる WCF services が正しく機能するには、WCF、IIS、および ASP.NET をインストールする必要があります。 (.NET Framework の一部) として WCF、ASP.NET、および IIS をインストールする手順は、オペレーティング システムによって異なります。 WCF と .NET Framework のインストールの詳細については、次を参照してください。[開発者向けの .NET Framework のインストール](../../install/guide-for-developers.md)します。 Windows 10 で IIS をインストールするには、開く**プログラムと機能**で**コントロール パネルの **選び**オンまたはオフにする Windows 機能**。 **Windows 機能**を選択します**インターネット インフォメーション サービス**選び、 **OK**します。
+IIS でホストされる WCF services が正しく機能するには、WCF、IIS、および ASP.NET をインストールする必要があります。 (.NET Framework の一部) として WCF、ASP.NET、および IIS をインストールする手順は、オペレーティング システムによって異なります。 WCF と .NET Framework のインストールの詳細については、次を参照してください。[開発者向けの .NET Framework のインストール](../../install/guide-for-developers.md)します。 Windows 10 で IIS をインストールするには、開く**プログラムと機能**で**コントロール パネルの** 選び**オンまたはオフにする Windows 機能**。 **Windows 機能**を選択します**インターネット インフォメーション サービス**選び、 **OK**します。
 
 ![強調表示されている IIS と Windows の機能](media/windows-features-iis.png)
 
@@ -35,15 +35,15 @@ IIS でホストされる WCF services が正しく機能するには、WCF、II
 
 .NET Framework のインストール プロセスは、IIS が既にコンピューターに存在する場合に自動的に WCF と IIS に登録します。 .NET Framework の後に IIS がインストールされている場合は、IIS および ASP.NET で WCF を登録する追加の手順が必要です。 使用しているオペレーティング システムに応じて、次のように実行します。
 
-- Windows 7 および Windows Server 2003: 使用して、 [ServiceModel 登録ツール (ServiceModelReg.exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md) WCF を IIS に登録するためのツール。 このツールを使用する入力**ServiceModelReg.exe/i/x**で、 [Visual Studio 用開発者コマンド プロンプト](../../tools/developer-command-prompt-for-vs.md)します。
+- Windows 7 および Windows Server 2003:使用して、 [ServiceModel 登録ツール (ServiceModelReg.exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md) WCF を IIS に登録するためのツール。 このツールを使用する入力**ServiceModelReg.exe/i/x**で、 [Visual Studio 用開発者コマンド プロンプト](../../tools/developer-command-prompt-for-vs.md)します。
 
-- Windows 7: 最後に、必要がありますを確認する、.NET Framework version 4 以降を使用する ASP.NET が構成されていること。 指定して ASPNET_Regiis ツールを実行して、これを行う、`–i`オプション。 詳細については、次を参照してください。 [ASP.NET IIS 登録ツール](https://go.microsoft.com/fwlink/?LinkId=201186)します。
+- Windows 7:最後に、.NET Framework version 4 以降を使用する ASP.NET が構成されていることを確認する必要があります。 指定して ASPNET_Regiis ツールを実行して、これを行う、`–i`オプション。 詳細については、次を参照してください。 [ASP.NET IIS 登録ツール](https://go.microsoft.com/fwlink/?LinkId=201186)します。
 
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>新しい IIS アプリケーションの作成、または既存の ASP.NET アプリケーションの再利用
 
-IIS でホストされる WCF サービスは、IIS アプリケーションの内部にする必要があります。 排他的に WCF サービスをホストする新しい IIS アプリケーションを作成することができます。 または、既にホストしている既存のアプリケーションに、WCF サービスをデプロイできる[!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]コンテンツ (.aspx ページや ASP.NET Web サービス (ASMX))。 これらのオプションの詳細についてを参照してください、「ホスティング WCF - サイド ASP.NET を使用した」と「ASP.NET 互換モードでは WCF サービスをホスティング」セクション[WCF サービスと ASP.NET](wcf-services-and-aspnet.md)します。
+IIS でホストされる WCF サービスは、IIS アプリケーションの内部にする必要があります。 排他的に WCF サービスをホストする新しい IIS アプリケーションを作成することができます。 また、ASP.NET 2.0 のコンテンツ (.aspx ページや ASP.NET Web サービス (ASMX)) を既にホストしている既存のアプリケーションに、WCF サービスをデプロイできます。 これらのオプションの詳細についてを参照してください、「ホスティング WCF - サイド ASP.NET を使用した」と「ASP.NET 互換モードでは WCF サービスをホスティング」セクション[WCF サービスと ASP.NET](wcf-services-and-aspnet.md)します。
 
-[!INCLUDE[iis601](../../../../includes/iis601-md.md)] とそれ以降のバージョンでは、隔離されているオブジェクト指向プログラミング アプリケーションは定期的に再起動されることに注意してください。 既定値は 1740 分です。 サポートされている最大値は 71,582 分です。 この再起動は、無効にできます。 このプロパティの詳細については、次を参照してください。、 [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968)します。
+IIS 6.0 およびそれ以降のバージョン定期的に再起動すること分離オブジェクト指向プログラミング アプリケーションに注意してください。 既定値は 1740 分です。 サポートされている最大値は 71,582 分です。 この再起動は、無効にできます。 このプロパティの詳細については、次を参照してください。、 [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968)します。
 
 ## <a name="create-an-svc-file-for-the-wcf-service"></a>WCF サービス用の .svc ファイルの作成
 
@@ -65,7 +65,7 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
 
 ## <a name="deploy-the-service-implementation-to-the-iis-application"></a>IIS アプリケーションへのサービス実装の展開
 
-IIS でホストされる WCF サービスと同様の動的なコンパイル モデルを使用して、[!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]します。 、ASP.NET と同様に、次のように、さまざまな場所にいくつかの方法で、IIS でホストされる WCF サービスの実装コードをデプロイできます。
+IIS でホストされる WCF サービスは、ASP.NET 2.0 として同じの動的なコンパイル モデルを使用します。 、ASP.NET と同様に、次のように、さまざまな場所にいくつかの方法で、IIS でホストされる WCF サービスの実装コードをデプロイできます。
 
 - グローバル アセンブリ キャッシュ (GAC: Global Assembly Cache) またはアプリケーションの \bin ディレクトリに配置される、プリコンパイルされた .dll ファイルとして展開します。 プリコンパイルされたバイナリは、新しいバージョンのクラス ライブラリが展開されるまで更新されません。
 
@@ -73,7 +73,7 @@ IIS でホストされる WCF サービスと同様の動的なコンパイル �
 
 - コンパイルされていないコードは、.svc ファイルで直接配置します。 実装コードでは、後は、サービスの .svc ファイルに配置されているインラインことができます、 \@ServiceHost ディレクティブ。 インライン コードを変更すると、次の要求を受け取ったときにアプリケーションがリサイクルされ、再コンパイルされます。
 
-詳細については、[!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]コンパイル モデルを参照してください[ASP.NET コンパイルの概要](https://go.microsoft.com/fwlink/?LinkId=94773)します。
+ASP.NET 2.0 のコンパイル モデルの詳細については、次を参照してください。 [ASP.NET コンパイルの概要](https://go.microsoft.com/fwlink/?LinkId=94773)します。
 
 ## <a name="configure-the-wcf-service"></a>WCF サービスの構成
 
@@ -103,7 +103,7 @@ IIS でホストされるサービスのエンドポイントには、常に相�
 
 ### <a name="available-transports"></a>利用可能なトランスポート
 
-IIS 5.1 でホストされる WCF サービスと[!INCLUDE[iis601](../../../../includes/iis601-md.md)]HTTP ベースの通信を使用してに制限されます。 これらの IIS プラットフォームでホストされるサービスで、非 HTTP バインドを使用するように構成すると、サービスをアクティブ化するときにエラーが発生します。 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]でサポートされるトランスポートには、既存の MSMQ アプリケーションとの後方互換性を実現する HTTP、Net.TCP、Net.Pipe、Net.MSMQ、msmq.formatname があります。
+WCF サービスでホストされている IIS 5.1 および IIS 6.0 は、HTTP ベースの通信を使用してに制限されます。 これらの IIS プラットフォームでホストされるサービスで、非 HTTP バインドを使用するように構成すると、サービスをアクティブ化するときにエラーが発生します。 IIS 7.0 では、サポートされているトランスポートを含める HTTP、Net.TCP、Net.Pipe、Net.MSMQ、および msmq.formatname の旧バージョンと既存の MSMQ アプリケーションとの互換性。
 
 ### <a name="http-transport-security"></a>HTTP トランスポート セキュリティ
 
@@ -115,4 +115,4 @@ IIS でホストされる WCF サービスと http を使用して、トラン�
 
 - [インターネット インフォメーション サービスでのホスティング](hosting-in-internet-information-services.md)
 - [インターネット インフォメーション サービス ホスティングのベスト プラクティス](internet-information-services-hosting-best-practices.md)
-- [Windows Server App Fabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [AppFabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkId=201276)

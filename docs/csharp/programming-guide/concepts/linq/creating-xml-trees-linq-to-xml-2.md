@@ -2,12 +2,12 @@
 title: C# での XML ツリーの作成 (LINQ to XML)
 ms.date: 08/31/2018
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
-ms.openlocfilehash: 9fb03800f04a3c0615fa5b7fc44eb078e224eebc
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 37970b58519f5ff28165b45ebc729cc0a7f447d3
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452418"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487505"
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>C# での XML ツリーの作成 (LINQ to XML)
 ここでは、C# での XML ツリーの作成について説明します。  
@@ -50,17 +50,17 @@ XElement contacts =
   
  `content` パラメーターは非常に柔軟です。 <xref:System.Xml.Linq.XElement> の有効な子オブジェクトの型すべてがサポートされています。 このパラメーターで渡されるさまざまな型のオブジェクトには、次の規則が適用されます。  
   
--   文字列はテキスト コンテンツとして追加されます。  
+- 文字列はテキスト コンテンツとして追加されます。  
   
--   <xref:System.Xml.Linq.XElement> は子要素として追加されます。  
+- <xref:System.Xml.Linq.XElement> は子要素として追加されます。  
   
--   <xref:System.Xml.Linq.XAttribute> は属性として追加されます。  
+- <xref:System.Xml.Linq.XAttribute> は属性として追加されます。  
   
--   <xref:System.Xml.Linq.XProcessingInstruction>、<xref:System.Xml.Linq.XComment>、または <xref:System.Xml.Linq.XText> は、子コンテンツとして追加されます。  
+- <xref:System.Xml.Linq.XProcessingInstruction>、<xref:System.Xml.Linq.XComment>、または <xref:System.Xml.Linq.XText> は、子コンテンツとして追加されます。  
   
--   <xref:System.Collections.IEnumerable> は列挙され、その結果にこれらの規則が再帰的に適用されます。  
+- <xref:System.Collections.IEnumerable> は列挙され、その結果にこれらの規則が再帰的に適用されます。  
   
--   その他の型に対しては `ToString` メソッドが呼び出され、その結果がテキスト コンテンツとして追加されます。  
+- その他の型に対しては `ToString` メソッドが呼び出され、その結果がテキスト コンテンツとして追加されます。  
   
 ### <a name="creating-an-xelement-with-content"></a>コンテンツを持つ XElement の作成  
  単純コンテンツが含まれる <xref:System.Xml.Linq.XElement> は、1 回のメソッド呼び出しで作成できます。 そのためには、次のように、コンテンツを 2 番目のパラメーターとして指定します。  
@@ -234,6 +234,6 @@ Console.WriteLine("Child2 was {0}",
 //    Child2 was attached  
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [XML ツリーの作成 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+- [XML ツリーの作成 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)

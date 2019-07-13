@@ -1,25 +1,26 @@
 ---
-title: '方法 : TextBox コントロールでタブ文字を有効にする'
+title: '方法: TextBox コントロールでタブ文字を有効にする'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TextBox control [WPF], enabling tab characters
 - tab characters [WPF], enabling
 ms.assetid: 14b1b064-61f7-4958-be63-88d85b868d03
-ms.openlocfilehash: 9203a09408b4f88f3fbe8c0d87e365c1d05a1462
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9a01ae93d1b75c604fbe4f15f720e0a84086bd1a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910573"
 ---
-# <a name="how-to-enable-tab-characters-in-a-textbox-control"></a>方法 : TextBox コントロールでタブ文字を有効にする
-この例で通常の入力として、タブ文字の受け入れを有効にする方法を示しています、<xref:System.Windows.Controls.TextBox>コントロール。  
+# <a name="how-to-enable-tab-characters-in-a-textbox-control"></a>方法: TextBox コントロールでタブ文字を有効にする
+この例で通常の入力としてタブ文字の受け入れを有効にする方法を示しています、<xref:System.Windows.Controls.TextBox>コントロール。  
   
 ## <a name="example"></a>例  
- 入力として、タブ文字の受け入れを有効にする、<xref:System.Windows.Controls.TextBox>コントロールを設定、<xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsTab%2A>属性を**true**です。  
+ タブ文字の受け入れを入力として有効にする、<xref:System.Windows.Controls.TextBox>設定、制御、<xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsTab%2A>属性を**true**します。  
   
- [!code-xaml[TextBox_EnablingTab#_AcceptsTab](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_EnablingTab/CS/Window1.xaml#_acceptstab)]  
+ [!code-xaml[TextBox_EnablingTab#_AcceptsTab](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_EnablingTab/CS/Window1.xaml#_acceptstab)]  
   
-## <a name="see-also"></a>関連項目  
- [TextBox の概要](../../../../docs/framework/wpf/controls/textbox-overview.md)  
- [RichTextBox の概要](../../../../docs/framework/wpf/controls/richtextbox-overview.md)
+## <a name="see-also"></a>関連項目
+
+- [TextBox の概要](textbox-overview.md)
+- [RichTextBox の概要](richtextbox-overview.md)

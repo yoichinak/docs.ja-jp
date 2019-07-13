@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 63fadd3c37c7533211e7bd0ac07952ca99fd6a79
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c7d5d4ef7d812e186813cd08f9e4e2adf2ab1a58
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244266"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306653"
 ---
 # <a name="lock-statement-c-reference"></a>lock ステートメント (C# リファレンス)
 
@@ -54,7 +54,7 @@ finally
 共有リソースへのスレッド アクセスを同期する場合、専用オブジェクト インスタンス (`private readonly object balanceLock = new object();` など) またはコードの関連のない部分によってロック オブジェクトとして使用される可能性がない別のインスタンスをロックします。 異なる共有リソースに対して同じロック オブジェクト インスタンスを使用することは避けてください。デッドロックやロックの競合が発生する可能性があります。 特に、以下をロック オブジェクトとして使用しないでください。
 
 - `this`。ロックとして呼び出し元に使用される可能性があります。
-- <xref:System.Type> インスタンス。[typeof](typeof.md) 演算子またはリフレクションによって取得される可能性があります。
+- <xref:System.Type> インスタンス。[typeof](../operators/type-testing-and-conversion-operators.md#typeof-operator) 演算子またはリフレクションによって取得される可能性があります。
 - 文字列リテラルを含む文字列インスタンス。[インターン処理](/dotnet/api/system.string.intern#remarks)される可能性があります。
 
 ## <a name="example"></a>例

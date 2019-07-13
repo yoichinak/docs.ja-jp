@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10f947fc44e69368e30614e0b41eaf7c73fb6563
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: cc4850ff87d9ea827e86a16ee6b3a6953c1e3552
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084950"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622707"
 ---
 # <a name="garbage-collection-notifications"></a>ガベージ コレクションの通知
 共通言語ランタイムによるフル ガベージ コレクション (つまり、ジェネレーション 2 のコレクション) がパフォーマンスに悪影響を及ぼす場合があります。 これは、特に要求を大量に処理するサーバーで問題となることがあります。この例では、長時間のガベージ コレクションによって、要求のタイムアウトが発生します。重要な期間にフル ガベージ コレクションが発生しないようにするには、フル ガベージ コレクションが近づいていることの通知を受けたら、ワークロードを別のサーバー インスタンスにリダイレクトするアクションを取ります。 現在のサーバー インスタンスで要求を処理する必要がない場合、自分でコレクションを強制実行することもできます。  
@@ -28,26 +28,26 @@ ms.locfileid: "44084950"
   
  通知が発生したことを判断するには、<xref:System.GC.WaitForFullGCApproach%2A> と <xref:System.GC.WaitForFullGCComplete%2A> メソッドを使用します。 通常、これらのメソッドは、通知の状態を示す <xref:System.GCNotificationStatus> 列挙体を継続的に取得する `while` ループで使用します。 その値が <xref:System.GCNotificationStatus.Succeeded> の場合、次を行うことができます。  
   
--   <xref:System.GC.WaitForFullGCApproach%2A> メソッドで取得した通知を受け、作業負荷をリダイレクトします。ガベージ コレクションを手動で強制的に実行することもできます。  
+- <xref:System.GC.WaitForFullGCApproach%2A> メソッドで取得した通知を受け、作業負荷をリダイレクトします。ガベージ コレクションを手動で強制的に実行することもできます。  
   
--   <xref:System.GC.WaitForFullGCComplete%2A> メソッドで取得した通知を受け、現在のサーバー インスタンスで再度要求を処理できるようにします。 情報を収集することもできます。 たとえば、<xref:System.GC.CollectionCount%2A> メソッドを使用して、コレクションの数を記録することもできます。  
+- <xref:System.GC.WaitForFullGCComplete%2A> メソッドで取得した通知を受け、現在のサーバー インスタンスで再度要求を処理できるようにします。 情報を収集することもできます。 たとえば、<xref:System.GC.CollectionCount%2A> メソッドを使用して、コレクションの数を記録することもできます。  
   
  <xref:System.GC.WaitForFullGCApproach%2A> と <xref:System.GC.WaitForFullGCComplete%2A> メソッドは、連携して動作するように設計されています。 片方のみを使用する場合、結果が不正確になる場合があります。  
   
 ## <a name="full-garbage-collection"></a>フル ガベージ コレクション  
  ランタイムでは、次のいずれかのシナリオに当てはまる場合にフル ガベージ コレクションを実行します。  
   
--   十分なメモリがジェネレーション 2 に昇格し、次のジェネレーション 2 のガベージ コレクションが発生する場合。  
+- 十分なメモリがジェネレーション 2 に昇格し、次のジェネレーション 2 のガベージ コレクションが発生する場合。  
   
--   十分なメモリが、大きいオブジェクトのヒープに昇格し、次のジェネレーション 2 のガベージ コレクションが発生する場合。  
+- 十分なメモリが、大きいオブジェクトのヒープに昇格し、次のジェネレーション 2 のガベージ コレクションが発生する場合。  
   
--   その他の要因により、ジェネレーション 1 のガベージ コレクションがジェネレーション 2 のガベージ コレクションにエスカレートする場合。  
+- その他の要因により、ジェネレーション 1 のガベージ コレクションがジェネレーション 2 のガベージ コレクションにエスカレートする場合。  
   
  <xref:System.GC.RegisterForFullGCNotification%2A> メソッドに指定したしきい値は、最初の 2 つのシナリオに該当します。 ただし、最初のシナリオでは、以下の 2 つの理由から、指定したしきい値に比例したタイミングで常に通知を受け取るとは限りません。  
   
--   ランタイムは、パフォーマンス上の理由から、小さなオブジェクトの割り当てをチェックしません。  
+- ランタイムは、パフォーマンス上の理由から、小さなオブジェクトの割り当てをチェックしません。  
   
--   メモリがジェネレーション 2 に移動されるのは、ジェネレーション 1 のガベージ コレクションが実行された場合だけです。  
+- メモリがジェネレーション 2 に移動されるのは、ジェネレーション 1 のガベージ コレクションが実行された場合だけです。  
   
  3 番目のシナリオによっても、通知がいつあるかが不確実になります。 保証されるわけではないものの、この間要求をリダイレクトしたり、都合の良いときに自分でガベージ コレクションを強制的に実行したりして、タイミングの悪いフル ガベージ コレクションの影響を緩和することは有効な方法です。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "44084950"
   
  通知が発生すると、<xref:System.GC.WaitForFullGCApproach%2A> および <xref:System.GC.WaitForFullGCComplete%2A> メソッドによって、それぞれのイベント処理ユーザー メソッドが呼び出されます。  
   
--   `OnFullGCApproachNotify`  
+- `OnFullGCApproachNotify`  
   
      このメソッドはユーザー メソッド `RedirectRequests`を呼び出し、要求をキューに格納するサーバーに対して、このサーバーへの要求の送信を一時停止するよう指示します。 これは、これ以上オブジェクトが割り当てられないように、クラスレベルの変数 `bAllocate` を `false` に設定することによってシミュレートできます。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "44084950"
   
      最後に、作業負荷が軽いため、ガベージ コレクションが強制的に実行されます。  
   
--   `OnFullGCCompleteNotify`  
+- `OnFullGCCompleteNotify`  
   
      サーバーがフル ガベージ コレクションの影響を受ける可能性が低くなったため、ユーザー メソッド `AcceptRequests` を呼び出し、要求の受付を再開します。 このアクションは、オブジェクトが <xref:System.Collections.Generic.List%601> コレクションに追加開始されるよう `bAllocate` 変数を `true` に設定することによってシミュレートできます。  
   

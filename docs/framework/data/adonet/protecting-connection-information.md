@@ -2,12 +2,12 @@
 title: 接続情報の保護
 ms.date: 03/30/2017
 ms.assetid: 1471f580-bcd4-4046-bdaf-d2541ecda2f4
-ms.openlocfilehash: 6cd27f2bce1879301e80c7a8ec689971705a45b0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ccb039a79c76c31b905783b81710571d8c5ab82b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878931"
 ---
 # <a name="protecting-connection-information"></a>接続情報の保護
 アプリケーションのセキュリティを実現するうえで、データ ソースへのアクセスを保護することは、最も重要な目標の 1 つです。 保護されていない接続文字列は脆弱性を招く原因になります。 接続情報をテキスト形式で保存したり、メモリ内に保持したりすると、システム全体のセキュリティが損なわれる可能性があります。 使用して、ソース コードに埋め込まれた接続文字列を読み取ることができます、 [Ildasm.exe (IL Disassembler)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md)コンパイル済みアセンブリ内の Microsoft intermediate language (MSIL) を表示します。  
@@ -39,8 +39,9 @@ ms.locfileid: "43513478"
 ## <a name="encrypt-configuration-files"></a>構成ファイルの暗号化  
  接続文字列は構成ファイルに保存することもでき、そうすることで、アプリケーションのコードに接続文字列を組み込むことを避けられます。 構成ファイルは、.NET Framework が基本的な要素を定義するために使用する標準的な XML ファイルです。 構成ファイル内の接続文字列は、通常の内部格納、  **\<connectionStrings >** 内の要素、 **app.config** Windows アプリケーションの場合、または**web.config** ASP.NET アプリケーションのファイル。 取得して、構成ファイルから接続文字列の暗号化が参照を格納する基本の詳細については、[接続文字列と構成ファイル](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [ADO.NET アプリケーションのセキュリティ保護](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [保護された構成を使用して構成情報の暗号化](https://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1)  
- [ネイティブ コードと .NET Framework コードのセキュリティ](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [ADO.NET アプリケーションのセキュリティ保護](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [保護された構成を使用して構成情報の暗号化](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))
+- [.NET でのセキュリティ](../../../standard/security/index.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -5,27 +5,27 @@ helpviewer_keywords:
 - WPF Host application [WPF]
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
-ms.openlocfilehash: ca8198e17bec62866b6a58e6fd14ea468308f48b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 543076c3b00bf7946111df4c18d8c71928ce7ee2
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552689"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487321"
 ---
 # <a name="wpf-host-presentationhostexe"></a>WPF ホスト (PresentationHost.exe)
-Windows Presentation Foundation (WPF) のホスト (PresentationHost.exe) は、アプリケーションを有効にする[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アプリケーションの互換性のあるブラウザーのホスト (など[!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)]およびそれ以降)。 シェルとして既定では、Windows Presentation Foundation (WPF) のホストが登録されていると[!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)]のハンドラーはブラウザーによってホストされる[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]コンテンツが含まれます。  
+Windows Presentation Foundation (WPF) のホスト (PresentationHost.exe) は、アプリケーションを使用[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]互換性のあるブラウザーでホストされるアプリケーション (を含む[!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)]以降)。 シェルとして既定では、Windows Presentation Foundation (WPF) のホストが登録されていると[!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)]ハンドラーをブラウザーでホストされる[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]コンテンツが含まれます。  
   
--   Loose (コンパイルされていない) [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイル (.xaml)。  
+- Loose (コンパイルされていない) [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイル (.xaml)。  
   
--   [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] (.xbap)。  
+- [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] (.xbap)。  
   
- これらの型の Windows Presentation Foundation (WPF) のホスト ファイル。  
+ これらの型では、Windows Presentation Foundation (WPF) のホストのファイル。  
   
--   登録された起動[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]Windows Presentation Foundation (WPF) コンテンツをホストするハンドラー。  
+- 登録されている起動[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]Windows Presentation Foundation (WPF) コンテンツをホストするハンドラー。  
   
--   必須の適切なバージョンを読み込みます[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]および Windows Presentation Foundation (WPF) のアセンブリ。  
+- 必須の正しいバージョンを読み込みます[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]と Windows Presentation Foundation (WPF) のアセンブリ。  
   
--   展開のゾーンに適切なアクセス許可レベルが設定されるようにします。  
+- 展開のゾーンに適切なアクセス許可レベルが設定されるようにします。  
   
  このトピックでは、PresentationHost.exe で使用できるコマンド ライン パラメーターについて説明します。  
   
@@ -41,7 +41,7 @@ Windows Presentation Foundation (WPF) のホスト (PresentationHost.exe) は、
 |-debugSecurityZoneURL \<url>|アプリケーションを、指定した [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] から展開されたものとしてデバッグする必要があることを PresentationHost.exe に指示するために、[!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] 値と共に使用します。 これは、展開ゾーンと起点サイトの両方を決定します。|  
 |-embedding|OLE で必要になります。 `-event` パラメーターまたは `-debug` パラメーターを指定した場合、`-embedding` パラメーターは内部で設定されるため、指定する必要はありません。|  
 |-event \<eventname>|PresentationHost.exe が初期化され、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] コンテンツをホストする準備ができた時点で、この名前のイベントを開き、シグナルを送信します。 PresentationHost.exe は、イベントを開く際にエラーが発生すると (そのイベントがまだ作成されていない場合など) 終了します。|  
-|-launchApplication \<url>|指定した URL から、スタンドアロンの [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] アプリケーションを起動します。 .NET アプリケーションに関する [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] と WinINet のセキュリティ ポリシーが適用されます。|  
+|-launchApplication \<url>|スタンドアロンの指定した URL からの ClickOnce アプリケーションを起動します。 .NET アプリケーションに関する [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] と WinINet のセキュリティ ポリシーが適用されます。|  
   
 ## <a name="scenarios"></a>シナリオ  
   
@@ -57,5 +57,6 @@ Windows Presentation Foundation (WPF) のホスト (PresentationHost.exe) は、
 ### <a name="visual-studio-debugging-in-zone"></a>Visual Studio によるゾーンでのデバッグ  
  `PresentationHost.exe -debug -debugSecurityZoneURL http://www.example.com c:\folderpath\example.xbap`  
   
-## <a name="see-also"></a>関連項目  
- [セキュリティ](../../../../docs/framework/wpf/security-wpf.md)
+## <a name="see-also"></a>関連項目
+
+- [セキュリティ](../security-wpf.md)

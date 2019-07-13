@@ -8,23 +8,21 @@ f1_keywords:
 helpviewer_keywords:
 - default keyword [C#]
 ms.assetid: 14c48aaa-7d35-4058-a1a4-f53353050579
-ms.openlocfilehash: ae145e5711a1bccf062d705037cdd0e852ffe0c2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d1ee9dc731f3cb96bd40935b94113c7c2aa91ff4
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53234761"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59183197"
 ---
 # <a name="default-c-reference"></a>default (C# リファレンス)
 
-`default` キーワードは、`switch` ステートメントまたは既定の値式で使うことができます。
-
-- [switch ステートメント](switch.md):既定のラベルを指定します。
-
-- [既定の値式](../../programming-guide/statements-expressions-operators/default-value-expressions.md):型の既定の値を生成します。
+`default` キーワードは、以下の 2 とおりの方法で使用できます。
+- 既定のラベルを指定する [`switch` ステートメント](switch.md)。
+- 型の既定値を生成する[既定の値式](../../programming-guide/statements-expressions-operators/default-value-expressions.md)。
 
 ## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../index.md)  
-- [C# プログラミング ガイド](../../programming-guide/index.md)  
-- [C# のキーワード](index.md)  
+- [C# リファレンス](../index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# のキーワード](index.md)

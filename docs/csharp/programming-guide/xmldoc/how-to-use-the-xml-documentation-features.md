@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: ce14de1f5aef4703a0c9b3868852104dc313e728
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 047207e495f542108d6f41247b25009d9c9bb909
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241669"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634781"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>方法: XML ドキュメント機能を使用する
 
@@ -132,8 +132,8 @@ XML ドキュメントは、/// で始まります。 新しいプロジェク�
     > [!NOTE]
     > XML ファイルでは、型とメンバーに関する完全な情報は提供されません (たとえば、型の情報は含まれません)。 型またはメンバーの完全な情報を取得するには、ドキュメント ファイルと併せて、実際の型またはメンバーでリフレクションを使う必要があります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [/doc (C# コンパイラ オプション)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
-- [XML ドキュメント コメント](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [/doc (C# コンパイラ オプション)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)
+- [XML ドキュメント コメント](../../../csharp/programming-guide/xmldoc/index.md)

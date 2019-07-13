@@ -4,12 +4,12 @@ description: .NET Core 機能をサポートおよび拡張する、インスト
 author: mlacouture
 ms.date: 11/27/2018
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 5f42cddc31204bba2aafaee0b909bbf92d232fde
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 75c74c16367bacf66fa2fb56d7666a07f7274aff
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243592"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631969"
 ---
 # <a name="net-core-additional-tools-overview"></a>.NET Core の追加ツールの概要
 

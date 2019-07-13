@@ -9,12 +9,12 @@ helpviewer_keywords:
 - My.Application.Log object
 - examples [Visual Basic], logging application information
 ms.assetid: 8bf4f047-22d6-48d6-aec5-93b98ad5b8e8
-ms.openlocfilehash: 68ec09dac026e46716ff18dce88acf9d60635026
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 3202bdb2c4274e6d3127537b7cae661ba6e63a35
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44183042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052509"
 ---
 # <a name="logging-information-from-the-application-visual-basic"></a>アプリケーションからの情報のログ記録 (Visual Basic)
 このセクションには、`My.Application.Log` オブジェクトまたは `My.Log` オブジェクトを使ってアプリケーションの情報を記録する方法と、アプリケーションのログ機能を拡張する方法に関するトピックが含まれます。  
@@ -28,16 +28,17 @@ ms.locfileid: "44183042"
 |終了|解決方法については、|  
 |--------|---------|  
 |イベントの情報をアプリケーションのログに書き込みます。|[方法: ログ メッセージを書き込む](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)|  
-|例外の情報をアプリケーションのログに書き込みます。|[方法 : 例外をログに記録する](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)|  
-|アプリケーションの起動時または終了時に、トレース情報をアプリケーションのログに書き込みます。|[方法 : アプリケーションの起動時または終了時にメッセージをログに記録する](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-messages-when-the-application-starts-or-shuts-down.md)|  
-|テキスト ファイルに情報を書き込むように `My.Application.Log` を構成します。|[方法 : イベント情報をテキスト ファイルに書き込む](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)|  
-|イベント ログに情報を書き込むように `My.Application.Log` を構成します。|[方法 : アプリケーション イベント ログに書き込む](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)|  
-|`My.Application.Log` が情報を書き込む場所を変更します。|[チュートリアル : My.Application.Log による情報の書き込み先の変更](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)|  
-|`My.Application.Log` が情報を書き込む場所を取得します。|[チュートリアル : My.Application.Log による情報の書き込み先の確認](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)|  
-|`My.Application.Log` のカスタム ログ リスナーを作成します。|[チュートリアル : カスタム ログ リスナーの作成](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)|  
-|`My.Application.Log` ログの出力をフィルター処理します。|[チュートリアル : My.Application.Log の出力をフィルター処理する](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)|  
+|例外の情報をアプリケーションのログに書き込みます。|[方法: 例外をログに記録する](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)|  
+|アプリケーションの起動時または終了時に、トレース情報をアプリケーションのログに書き込みます。|[方法: アプリケーションの起動時または終了時にメッセージをログに記録する](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-messages-when-the-application-starts-or-shuts-down.md)|  
+|テキスト ファイルに情報を書き込むように `My.Application.Log` を構成します。|[方法: イベント情報をテキスト ファイルに書き込む](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)|  
+|イベント ログに情報を書き込むように `My.Application.Log` を構成します。|[方法: アプリケーション イベント ログに書き込む](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)|  
+|`My.Application.Log` が情報を書き込む場所を変更します。|[チュートリアル: My.Application.Log による情報の書き込み先の変更](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)|  
+|`My.Application.Log` が情報を書き込む場所を取得します。|[チュートリアル: My.Application.Log による情報の書き込み先の確認](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)|  
+|`My.Application.Log` のカスタム ログ リスナーを作成します。|[チュートリアル: カスタム ログ リスナーの作成](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)|  
+|`My.Application.Log` ログの出力をフィルター処理します。|[チュートリアル: My.Application.Log の出力をフィルター処理する](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)|  
   
-## <a name="see-also"></a>参照  
- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
- [アプリケーション ログの使用](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)  
- [トラブルシューティング : ログ リスナー](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
+- [アプリケーション ログの使用](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
+- [トラブルシューティング : ログ リスナー](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)

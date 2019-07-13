@@ -2,22 +2,23 @@
 title: 浮動小数点数
 ms.date: 03/30/2017
 ms.assetid: 73c218c6-1c44-4402-a167-4f6262629a91
-ms.openlocfilehash: 2ab583a07c78cfa06ac597c369486f89e19ca66e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: d1c033d7999fa403aaf18fccb765da178cba169a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042368"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882040"
 ---
 # <a name="floating-point-numbers"></a>浮動小数点数
-このトピックでは、開発者が [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] で浮動小数点数を扱う際によく遭遇する問題について説明します。 これらはコンピューターによる浮動小数点数の格納方法に起因する問題であり、<xref:System.Data.SqlClient> や <xref:System.Data.OracleClient> など、特定のプロバイダーに固有の問題ではありません。  
+このトピックでは、ADO.NET の浮動小数点数を扱う際に、開発者がよく直面する問題の一部について説明します。 これらはコンピューターによる浮動小数点数の格納方法に起因する問題であり、<xref:System.Data.SqlClient> や <xref:System.Data.OracleClient> など、特定のプロバイダーに固有の問題ではありません。  
   
  通常、浮動小数点数には正確なバイナリ表現がありません。 その代わり、数値の近似値がコンピューターによって格納されます。 浮動小数点数を表現するために使用されるバイナリ桁数はそのときどきで異なります。 浮動小数点数をある表現から別の表現に変換した場合、その数値の最下位の桁がわずかに変わってしまう場合があります。 一般に、変換が発生するのは型をキャストしたときです。 この差異は、変換を 1 つのデータベース内で行うか、データベースの値を表す型間で行うか、型と型の間で行うかに関係なく生じます。 このような差が生じてしまう関係上、論理的には等しくなるはずの数値でも、最下位の桁の値が異なる場合があります。 数値の有効桁数が、本来の桁数よりも大きくなったり小さくなったりすることもあります。 また、数値を文字列として表した場合に、期待した値が得られない場合もあります。  
   
- こうした影響を最小限に抑えるには、使用できる数値型のうち、最も近い型を使用する必要があります。 たとえば、SQL Server を使用する場合、正確な数値の値は実際の型の TRANSACT-SQL 値を float 型の値に変換する場合を変更できます。 同様に、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] では、<xref:System.Single> を <xref:System.Double> に変換すると、予想外の結果になることがあります。 いずれの場合も、最善の方法は、アプリケーションのすべての値に同じ数値型を使用することです。 固定精度の decimal 型を使用したり、あらかじめ浮動小数点数を固定精度の decimal 型にキャストしておく方法もあります。  
+ こうした影響を最小限に抑えるには、使用できる数値型のうち、最も近い型を使用する必要があります。 たとえば、SQL Server を使用する場合、正確な数値の値は実際の型の TRANSACT-SQL 値を float 型の値に変換する場合を変更できます。 .NET framework は、変換、<xref:System.Single>を<xref:System.Double>予期しない結果が生じることもします。 いずれの場合も、最善の方法は、アプリケーションのすべての値に同じ数値型を使用することです。 固定精度の decimal 型を使用したり、あらかじめ浮動小数点数を固定精度の decimal 型にキャストしておく方法もあります。  
   
  等価比較の問題を回避するには、最下位桁の差異を無視できるようにアプリケーションをコーディングすることを検討してください。 たとえば、2 つの数値の等価性を比較するのではなく、一方の数値からもう一方の数値を減算するようにします。 その差が丸め処理の許容範囲内であれば、2 つの数値が等価であるものとして処理できます。  
   
-## <a name="see-also"></a>関連項目  
- [浮動小数点数の精度の低下](https://msdn.microsoft.com/library/1acb1add-ac06-4134-a2fd-aff13d8c4c15)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [浮動小数点数の精度の低下](/cpp/build/reference/why-floating-point-numbers-may-lose-precision)
+- [ADO.NET の概要](ado-net-overview.md)

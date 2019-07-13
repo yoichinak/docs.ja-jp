@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC42326
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
-ms.openlocfilehash: 69228bbb5f659a8e500e85dea1ef87cb43b0356e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9e51ddfd9956ea3267a4323bc2d6e7fa865b207
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590168"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661963"
 ---
 # <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a>ラムダ式はこのイベント ハンドラーから削除されません
-ラムダ式は、このイベント ハンドラーから削除されません。 変数をラムダ式を割り当てる、変数を使用して追加およびイベントを削除します。  
+ラムダ式は、このイベント ハンドラーからは削除されません。 変数にラムダ式を割り当てるし、変数の追加し、削除イベントを使用します。  
   
- イベント ハンドラーにラムダ式を使用している場合は、意図した動作が見えない可能性があります。 コンパイラでは、同一である場合でも、各ラムダ式の定義用の新しいメソッドが生成されます。 したがって、次のコードが表示されます`False`です。  
+ イベント ハンドラーでラムダ式を使用している場合は、意図した動作が見えないがあります。 同じ場合でも、コンパイラはラムダ式定義ごとに、新しいメソッドを生成します。 そのため、次のコードが表示されます`False`します。  
   
 ```vb  
 Module Module1  
@@ -33,7 +33,7 @@ Module Module1
 End Module  
 ```  
   
- イベント ハンドラーにラムダ式を使用している場合、予期しない結果が発生する可能性があります。 次の例では、ラムダ式の追加によって`AddHandler`では削除されませんが、`RemoveHandler`ステートメントです。  
+ イベント ハンドラーでラムダ式を使用している場合、予期しない結果が発生する可能性があります。 次の例では、ラムダ式の追加によって`AddHandler`では削除されません、`RemoveHandler`ステートメント。  
   
 ```vb  
 Module Module1  
@@ -54,13 +54,13 @@ Module Module1
 End Module  
 ```  
   
- 既定では、このメッセージは警告です。 警告を非表示または警告をエラーとして扱う方法の詳細については、次を参照してください。 [Visual Basic での警告の構成](/visualstudio/ide/configuring-warnings-in-visual-basic)です。  
+ 既定では、このメッセージは警告です。 警告を表示しない方法や、警告をエラーとして扱う方法の詳細については、「 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)」を参照してください。  
   
  **エラー ID:** BC42326  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   警告を回避し、ラムダ式を削除する、ラムダ式を変数に代入し、両方の変数を使用して、`AddHandler`と`RemoveHandler`ステートメント、次の例で示すようにします。  
+- 警告を回避し、ラムダ式を削除する変数にラムダ式を割り当てるし、両方で、変数を使用して、`AddHandler`と`RemoveHandler`ステートメントは、次の例に示すようにします。  
   
 ```vb  
 Module Module1  
@@ -84,7 +84,8 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [厳密でないデリゲート変換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
- [イベント](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a>関連項目
+
+- [ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [厳密でないデリゲート変換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [イベント](../../../visual-basic/programming-guide/language-features/events/index.md)

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a518df5b016552de25091e7a9d89f737a1a66151
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 1c2f28490203bcc4853bc6736ce7089f308bc275
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087659"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59338710"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>スキーマのノード型および構造を推論するときの規則
 このトピックでは、スキーマ推論プロセスで、XML ドキュメント内のノード型を XML スキーマ定義言語 (XSD) 構造に変換する方法を説明します。  
@@ -18,21 +18,21 @@ ms.locfileid: "44087659"
 ## <a name="element-inference-rules"></a>要素を推論するときの規則  
  このセクションでは、要素宣言を推論するときの規則を説明します。 推論される要素宣言には 8 つの構造があります。  
   
-1.  単純型の要素  
+1. 単純型の要素  
   
-2.  空要素  
+2. 空要素  
   
-3.  属性を持つ空要素  
+3. 属性を持つ空要素  
   
-4.  属性と単純内容を持つ要素  
+4. 属性と単純内容を持つ要素  
   
-5.  子要素のシーケンスを持つ要素  
+5. 子要素のシーケンスを持つ要素  
   
-6.  子要素のシーケンスと属性を持つ要素  
+6. 子要素のシーケンスと属性を持つ要素  
   
-7.  子要素のシーケンスと choice を持つ要素  
+7. 子要素のシーケンスと choice を持つ要素  
   
-8.  子要素のシーケンスと choice を持つ要素  
+8. 子要素のシーケンスと choice を持つ要素  
   
 > [!NOTE]
 >  すべての `complexType` 宣言は匿名型として推論されます。 推論されるグローバル要素はルート要素だけであり、その他すべての要素はローカル要素です。  
@@ -148,8 +148,8 @@ ms.locfileid: "44087659"
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Xml.Schema.XmlSchemaInference>  
-- [XML スキーマ オブジェクト モデル (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
-- [XML スキーマの推論](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
-- [XML ドキュメントからのスキーマの推論](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
+- <xref:System.Xml.Schema.XmlSchemaInference>
+- [XML スキーマ オブジェクト モデル (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
+- [XML スキーマの推論](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)
+- [XML ドキュメントからのスキーマの推論](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
 - [単純型を推論するときの規則](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)

@@ -15,29 +15,29 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8f2dc9fccf6718c4edebc26efcdda71b41873a3a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f2b2d5a935c2608b2315633538fc93dd62595558
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195243"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59340036"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>アンマネージ DLL 関数の処理
-プラットフォーム呼び出しは、マネージド コードがダイナミック リンク ライブラリ (DLL) に実装されたアンマネージド 関数 (Win32 API に含まれているものなど) を呼び出すことを可能にするサービスです。 これはエクスポートされた関数を見つけて呼び出し、必要に応じて相互運用の境界を越えて、その引数 (整数、文字列、配列、構造体、その他) をマーシャリングします。  
+プラットフォーム呼び出しは、マネージド コードがダイナミック リンク ライブラリ (DLL) に実装されたアンマネージド関数 (Windows API に含まれているものなど) を呼び出すことを可能にするサービスです。 これはエクスポートされた関数を見つけて呼び出し、必要に応じて相互運用の境界を越えて、その引数 (整数、文字列、配列、構造体、その他) をマーシャリングします。  
   
  このセクションでは、アンマネージド DLL 関数の使用に関連するタスクを紹介し、プラットフォーム呼び出しについての詳しい情報を提供します。 以下のタスクに加えて、一般的な考慮事項、および追加情報や例を提供するリンクがあります。  
   
 #### <a name="to-consume-exported-dll-functions"></a>エクスポートされた DLL 関数を使用するには  
   
-1.  [DLL 内の関数を識別します](../../../docs/framework/interop/identifying-functions-in-dlls.md)。  
+1. [DLL 内の関数を識別します](../../../docs/framework/interop/identifying-functions-in-dlls.md)。  
   
      少なくとも、関数の名前とそれを含んでいる DLL の名前を指定する必要があります。  
   
-2.  [DLL 関数を保持するクラスを作成します](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)。  
+2. [DLL 関数を保持するクラスを作成します](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)。  
   
      既存のクラスを使用して、アンマネージ関数ごとに個別のクラスを作成するか、または関連するアンマネージ関数のセットを格納する 1 つのクラスを作成できます。  
   
-3.  [マネージド コードでプロトタイプを作成します](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)。  
+3. [マネージド コードでプロトタイプを作成します](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)。  
   
      [Visual Basic] **Declare** ステートメントを **Function** および **Lib** キーワードと共に使用します。 いくつかのまれなケースでは、**DllImportAttribute** を **Shared Function** キーワードと共に使用できます。 それらのケースについては、このセクションで後述します。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "50195243"
   
      [C++] **DllImportAttribute** を使用して DLL と関数を指定します。 ラッパー メソッドまたは関数を **extern "C"** でマークします。  
   
-4.  [DLL 関数を呼び出します](../../../docs/framework/interop/calling-a-dll-function.md)。  
+4. [DLL 関数を呼び出します](../../../docs/framework/interop/calling-a-dll-function.md)。  
   
      他のマネージド メソッドと同様の方法で、マネージド クラスのメソッドを呼び出します。 [構造体の受け渡し](../../../docs/framework/interop/passing-structures.md)および[コールバック関数の実装](../../../docs/framework/interop/callback-functions.md)は、特殊なケースです。  
   
@@ -54,25 +54,25 @@ ms.locfileid: "50195243"
 ## <a name="a-closer-look-at-platform-invoke"></a>プラットフォーム呼び出しの詳細  
  プラットフォーム呼び出しは、エクスポート関数を検索して、その引数を実行時にマーシャリングするために、メタデータに依存します。 次に、このプロセスの図を示します。  
   
- ![プラットフォーム呼び出し](../../../docs/framework/interop/media/pinvoke.gif "pinvoke")  
-アンマネージ DLL 関数を呼び出すプラットフォーム呼び出し  
+ ![プラットフォーム呼び出しを示す図。](./media/consuming-unmanaged-dll-functions/platform-invoke-call.gif)  
   
  プラットフォーム呼び出しがアンマネージ関数を呼び出すと、以下の一連のアクションが実行されます。  
   
-1.  関数を含む DLL を検索します。  
+1. 関数を含む DLL を検索します。  
   
-2.  DLL をメモリに読み込みます。  
+2. DLL をメモリに読み込みます。  
   
-3.  メモリ内の関数のアドレスを検索し、その引数をスタックにプッシュし、必要に応じてデータをマーシャリングします。  
+3. メモリ内の関数のアドレスを検索し、その引数をスタックにプッシュし、必要に応じてデータをマーシャリングします。  
   
     > [!NOTE]
     >  DLL の検索と読み込み、およびメモリ内の関数のアドレスの検索は、その関数を初めて呼び出したときにのみ生じます。  
   
-4.  アンマネージ関数に制御を移します。  
+4. アンマネージ関数に制御を移します。  
   
  プラットフォーム呼び出しは、アンマネージド 関数によって生成された例外を、マネージド呼び出し元にスローします。
 
-## <a name="see-also"></a>参照  
- [アンマネージ コードとの相互運用](../../../docs/framework/interop/index.md)  
- [プラットフォーム呼び出しの例](../../../docs/framework/interop/platform-invoke-examples.md)  
- [相互運用マーシャリング](../../../docs/framework/interop/interop-marshaling.md)  
+## <a name="see-also"></a>関連項目
+
+- [アンマネージ コードとの相互運用](../../../docs/framework/interop/index.md)
+- [プラットフォーム呼び出しの例](../../../docs/framework/interop/platform-invoke-examples.md)
+- [相互運用マーシャリング](../../../docs/framework/interop/interop-marshaling.md)

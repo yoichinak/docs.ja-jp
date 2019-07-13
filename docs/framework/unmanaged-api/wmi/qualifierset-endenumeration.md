@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dbf47dbfddac7d48b78c9d52969de1ef03385c15
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 206d6448835b60c55b378636ff5daa5fa4f8b5d0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524315"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782592"
 ---
 # <a name="qualifiersetendenumeration-function"></a>QualifierSet_EndEnumeration 関数
 呼び出しで開始された列挙の終了、 [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)関数。  
@@ -30,7 +30,7 @@ ms.locfileid: "43524315"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT QualifierSet_EndEnumeration (
    [in] int                  vFunc, 
    [in] IWbemQualifierSet*   ptr
@@ -59,13 +59,14 @@ HRESULT QualifierSet_EndEnumeration (
 
 この呼び出しは、お勧めしますが、必要ありません。 列挙体に関連付けられているリソースを直ちに解放します。
 
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
 
-**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
 **ヘッダー:** WMINet_Utils.idl  
   
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>関連項目  
-[WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+## <a name="see-also"></a>関連項目
+
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

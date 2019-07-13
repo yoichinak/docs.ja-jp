@@ -1,5 +1,5 @@
 ---
-title: '&lt;appDomainManagerType&gt;要素'
+title: <appDomainManagerType> 要素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - appDomainManagerType element
@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: ae8d5a7e-e7f7-47f7-98d9-455cc243a322
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e7f37fd652ce98e24d2e2e99edcd3d59a0e597b
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 19cd74f0e2550ec91cb56e70cf34a03bd84fc60e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610432"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487741"
 ---
-# <a name="ltappdomainmanagertypegt-element"></a>&lt;appDomainManagerType&gt;要素
+# <a name="appdomainmanagertype-element"></a>\<appDomainManagerType > 要素
 既定のアプリケーション ドメインのアプリケーション ドメイン マネージャーの役割を果たす種類を指定します。  
   
  \<configuration>  
-\<ランタイム >  
-\<appDomainManagerType >  
+\<runtime>  
+\<appDomainManagerType>  
   
 ## <a name="syntax"></a>構文  
   
@@ -58,7 +58,7 @@ ms.locfileid: "53610432"
   
  型および名前空間の形式が使用されるのと同じ形式、<xref:System.Type.FullName%2A?displayProperty=nameWithType>プロパティ。  
   
- この構成要素はでのみ使用できますが、[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]以降。  
+ この構成要素は、以降、.NET Framework 4 でのみ使用できます。  
   
 ## <a name="example"></a>例  
  次の例では、プロセスの既定のアプリケーション ドメインのアプリケーション ドメイン マネージャーを指定する方法を示しています、`MyMgr`で入力、`AdMgrExample`アセンブリ。  
@@ -73,10 +73,11 @@ ms.locfileid: "53610432"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>  
-- <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>  
-- [\<appDomainManagerAssembly > 要素](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)  
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>関連項目
+
+- <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>
+- <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>
+- [\<appDomainManagerAssembly > 要素](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [SetAppDomainManagerType メソッド](../../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)

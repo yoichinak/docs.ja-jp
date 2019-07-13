@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], naming
 ms.assetid: 31f87e6c-247b-48f5-8e94-b9e1e33d8d09
-ms.openlocfilehash: cd878452f3ec99627507334a26873a004e5b5314
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 16a42a2808104a77e56e93564a679dfc578e73f6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857283"
 ---
 # <a name="data-contract-names"></a>データ コントラクト名
 
@@ -64,7 +64,7 @@ ms.locfileid: "47196695"
 
 ## <a name="customizing-data-contract-names-for-generic-types"></a>ジェネリック型のデータ コントラクト名をカスタマイズ
 
-前述のようにジェネリック型用に生成されたデータ コントラクト名を容認できない場合があります。 たとえば、名前の競合が起こらないことが前もってわかっているため、ハッシュを削除するとします。 この場合、<xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 属性の `DataContractAttribute` プロパティを使用して、名前を生成する別の方法を指定できます。 `Name` プロパティの中かっこ内に数字を指定して、ジェネリック パラメーターのデータ コントラクト名を参照できます  (0 は最初のパラメーターを参照し、1 は 2 番目のパラメーターを参照します。以下同様です)。中かっこ内にシャープ記号 (#) を指定すると、ハッシュを参照できます。 これらの各参照は、複数回使用しても、まったく使用しなくてもかまいません。
+前述のようにジェネリック型用に生成されたデータ コントラクト名を容認できない場合があります。 たとえば、名前の競合が起こらないことが前もってわかっているため、ハッシュを削除するとします。 この場合、使用することができます、<xref:System.Runtime.Serialization.DataContractAttribute.Name%2A?displayProperty=nameWithType>プロパティ名を生成する別の方法を指定します。 `Name` プロパティの中かっこ内に数字を指定して、ジェネリック パラメーターのデータ コントラクト名を参照できます  (0 は最初のパラメーターを参照し、1 は 2 番目のパラメーターを参照します。以下同様です)。中かっこ内にシャープ記号 (#) を指定すると、ハッシュを参照できます。 これらの各参照は、複数回使用しても、まったく使用しなくてもかまいません。
 
 たとえば、前の `Drawing` ジェネリック型は次の例に示すように宣言できます。
 

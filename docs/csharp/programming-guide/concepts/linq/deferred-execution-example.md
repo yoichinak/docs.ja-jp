@@ -2,12 +2,12 @@
 title: 遅延実行の例 (C#)
 ms.date: 07/20/2015
 ms.assetid: 50f4fbac-81fe-4f26-aedf-506e21419b19
-ms.openlocfilehash: 0ad1ed2998cfbd612f7f2b60a0d15c7ffcef0daf
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c9ac87cf2b2af4114e5a20c211b4a6b3f7fced6b
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518476"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486110"
 ---
 # <a name="deferred-execution-example-c"></a>遅延実行の例 (C#)
 このトピックでは、遅延実行とレイジー評価が LINQ to XML クエリの実行にどのように影響するかについて説明します。  
@@ -61,8 +61,8 @@ Main: str GHI
   
  このチュートリアルの次のトピックでは、クエリの連結について説明します。  
   
--   [クエリの連結の例 (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-queries-example.md)  
+- [クエリの連結の例 (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-queries-example.md)  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [チュートリアル: クエリの連結 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+- [チュートリアル: クエリの連結 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

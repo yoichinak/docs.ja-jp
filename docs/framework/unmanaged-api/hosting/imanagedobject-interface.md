@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9d10126ac7edd3073d91a9c68c86a7df8cad402
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c90df6a8b6f25a93835981b1593a4b3d123cd168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943404"
 ---
 # <a name="imanagedobject-interface"></a>IManagedObject インターフェイス
 マネージ オブジェクトを制御するためのメソッドを提供します。  
@@ -30,17 +30,18 @@ ms.locfileid: "33441124"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetObjectIdentity メソッド](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getobjectidentity-method.md)|この管理オブジェクトの id を取得します。|  
-|[GetSerializedBuffer メソッド](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getserializedbuffer-method.md)|この管理オブジェクトの文字列形式を取得します。|  
+|[GetObjectIdentity メソッド](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getobjectidentity-method.md)|この管理対象のオブジェクトの id を取得します。|  
+|[GetSerializedBuffer メソッド](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getserializedbuffer-method.md)|この管理対象のオブジェクトの文字列表現を取得します。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>関連項目
+
+- [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 732bc9d38ca0d6c2dc3f30603a722b7370034b80
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 61a9cad9d0ce807d62c811e77402b8cc6d8c6905
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408191"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740695"
 ---
 # <a name="corgcreference-structure"></a>COR_GC_REFERENCE 構造体
 ガベージ コレクトされるオブジェクトに関する情報が含まれます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct _COR_GC_REFERENCE {  
     ICorDebugAppDomain *domain;   
     ICorDebugValue *location;  
@@ -41,37 +41,38 @@ typedef struct _COR_GC_REFERENCE {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`domain`|ハンドルまたはオブジェクトが所属するアプリケーション ドメインへのポインター。 その値があります`null`です。|  
+|`domain`|ハンドルまたはオブジェクトが所属するアプリケーション ドメインへのポインター。 その値があります`null`します。|  
 |`location`|ICorDebugValue またはガベージ コレクトされるオブジェクトに対応する ICorDebugReferenceValue インターフェイスのいずれか。|  
-|`type`|A [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md)でルートの出所を示す列挙値。 詳細については、「解説」を参照してください。|  
-|`extraData`|ガベージ コレクトされるオブジェクトに関する追加データ。 この情報は、によって示される、オブジェクトのソースとは異なります。、`type`フィールドです。 詳細については、「解説」を参照してください。|  
+|`type`|A [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md)ルートの出所を示す列挙値。 詳細については、「解説」を参照してください。|  
+|`extraData`|ガベージ コレクトされるオブジェクトに関する追加データ。 この情報は、によって示される、オブジェクトのソースとは異なります。、`type`フィールド。 詳細については、「解説」を参照してください。|  
   
-## <a name="remarks"></a>コメント  
- `type`フィールドは、 [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md)参照元の場所を示す列挙値。 特定の`COR_GC_REFERENCE`値は、管理対象オブジェクトの次の種類のいずれかを反映できます。  
+## <a name="remarks"></a>Remarks  
+ `type`フィールドは、 [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md)参照の出所を示す列挙値。 特定の`COR_GC_REFERENCE`値は次のようなマネージ オブジェクトのいずれかを反映できます。  
   
--   すべてのマネージ スタックからオブジェクト (`CorGCReferenceType.CorReferenceStack`)。 これには、共通言語ランタイムによって作成されたオブジェクトと同様に、マネージ コードでのライブ参照が含まれます。  
+- すべてのマネージ スタックからオブジェクト (`CorGCReferenceType.CorReferenceStack`)。 これには、共通言語ランタイムによって作成されたオブジェクトと同様に、マネージ コードでのライブ参照が含まれます。  
   
--   オブジェクト ハンドル テーブルから (`CorGCReferenceType.CorHandle*`)。 これには、強い参照が含まれます (`HNDTYPE_STRONG`と`HNDTYPE_REFCOUNT`) とモジュールの静的変数。  
+- オブジェクト ハンドル テーブルから (`CorGCReferenceType.CorHandle*`)。 強い参照が含まれます (`HNDTYPE_STRONG`と`HNDTYPE_REFCOUNT`) とモジュールの静的変数。  
   
--   ファイナライザー キューからのオブジェクト (`CorGCReferenceType.CorReferenceFinalizer`)。 ファイナライザー キューは、ファイナライザーが実行されるまで、オブジェクトをルートします。  
+- ファイナライザー キューからオブジェクト (`CorGCReferenceType.CorReferenceFinalizer`)。 ファイナライザー キューでは、ファイナライザーが実行されるまでオブジェクトがルートします。  
   
- `extraData`フィールドには参照のソース (または型) によって余分なデータが含まれています。 指定できる値は次のとおりです。  
+ `extraData`フィールドには参照のソース (または型) によって追加のデータが含まれています。 指定できる値は次のとおりです。  
   
--   `DependentSource`。 場合、`type`は`CorGCREferenceType.CorHandleStrongDependent`、このフィールドはオブジェクトでガベージ コレクトされるオブジェクトの場合は、ルートを`COR_GC_REFERENCE.Location`です。  
+- `DependentSource`。 場合、`type`は`CorGCREferenceType.CorHandleStrongDependent`、このフィールドはオブジェクトでガベージ コレクトされるオブジェクトの場合は、ルートを`COR_GC_REFERENCE.Location`します。  
   
--   `RefCount`。 場合、`type`は`CorGCREferenceType.CorHandleStrongRefCount`、このフィールドは、ハンドルの参照カウントします。  
+- `RefCount`。 場合、`type`は`CorGCREferenceType.CorHandleStrongRefCount`、このフィールドは、ハンドルの参照カウントします。  
   
--   `Size`。 場合、`type`は`CorGCREferenceType.CorHandleStrongSizedByref`、このフィールドは、ガベージ コレクターがオブジェクトのルートを計算する、オブジェクト ツリーの最後のサイズ。 この計算は最新の状態とは限りませんではないことに注意してください。  
+- `Size`。 場合、`type`は`CorGCREferenceType.CorHandleStrongSizedByref`、このフィールドは、ガベージ コレクターがオブジェクトのルートを計算するオブジェクト ツリーの最後のサイズ。 この計算は必ずしも最新ではないことに注意してください。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>関連項目
+
+- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)

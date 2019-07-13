@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - service contracts [WCF], designing services and transactions
 ms.assetid: 864813ff-2709-4376-912d-f5c8d318c460
-ms.openlocfilehash: 2e37a42b3767d279da0d742ba9958ceb6628aab1
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 9dfe34406bfda2c16bd2f0cd53796b2fcef07b57
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967922"
 ---
 # <a name="services-and-transactions"></a>サービスとトランザクション
 Windows Communication Foundation (WCF) アプリケーションでは、クライアントからトランザクションを開始でき、サービス操作内でトランザクションを調整することができます。 クライアントはトランザクションを開始し、複数のサービス操作を呼び出す可能性があります。サービス操作が、1 つの単位としてコミットまたはロールバックされます。  
@@ -88,7 +88,8 @@ using (TransactionScope ts = new TransactionScope(TransactionScopeOption.Require
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [System.ServiceModel でのトランザクション サポート](../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)  
- [トランザクション モデル](../../../docs/framework/wcf/feature-details/transaction-models.md)  
- [WS トランザクション フロー](../../../docs/framework/wcf/samples/ws-transaction-flow.md)
+## <a name="see-also"></a>関連項目
+
+- [System.ServiceModel でのトランザクション サポート](../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)
+- [トランザクション モデル](../../../docs/framework/wcf/feature-details/transaction-models.md)
+- [WS トランザクション フロー](../../../docs/framework/wcf/samples/ws-transaction-flow.md)

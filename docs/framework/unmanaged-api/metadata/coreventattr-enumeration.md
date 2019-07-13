@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e4e4b9d9c7481bdc51aaf75b26b3805940875f8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7562ec10b6822ae0ec1478cdb077578493ea0b7a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442307"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781879"
 ---
 # <a name="coreventattr-enumeration"></a>CorEventAttr 列挙型
 イベントのメタデータを記述する値が格納されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum CorEventAttr {  
   
     evSpecialName           =   0x0200,  
@@ -43,16 +43,17 @@ typedef enum CorEventAttr {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`evSpecialName`|イベントは、特別なことと、その名前が記述されているを指定する方法です。|  
-|`evReservedMask`|共通言語ランタイムでは、内部使用に予約されています。|  
-|`evRTSpecialName`|共通言語ランタイムがイベント名のエンコードを確認する必要がありますを指定します。|  
+|`evSpecialName`|イベントでは、特別なとその名前が説明を指定する方法。|  
+|`evReservedMask`|共通言語ランタイムでは、内部使用のため予約されています。|  
+|`evRTSpecialName`|イベント名のエンコーディングに共通言語ランタイムが確認する必要がありますを指定します。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorHdr.h  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>関連項目
+
+- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

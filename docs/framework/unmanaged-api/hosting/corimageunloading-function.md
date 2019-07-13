@@ -16,38 +16,39 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebd7ef3b329eae8e35b680f3d8c74864e2a0f4d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b488b6a887b0c66d8c17f8ea78f48f7d2ea31011
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428688"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758396"
 ---
 # <a name="corimageunloading-function"></a>_CorImageUnloading 関数
-マネージ モジュール イメージがアンロードされたときに、ローダーに通知します。  
+マネージド モジュール イメージがアンロードされたときに、ローダーに通知します。  
   
- この関数は実装されていません。 呼び出された場合、E_NOTIMPL を返します。  
+ この関数が実装されていません。 呼び出された場合、E_NOTIMPL を返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 STDAPI (VOID) _CorImageUnloading(   
    [in] PVOID* ImageBase  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ImageBase`  
  [in]アンロードするイメージの開始位置へのポインター。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [メタデータ グローバル静的関数](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>関連項目
+
+- [メタデータ グローバル静的関数](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

@@ -1,21 +1,21 @@
 ---
-title: '&lt;knownType&gt;'
+title: <knownType>
 ms.date: 03/30/2017
 ms.assetid: ee2b7be3-7148-4a3a-b861-48e7330615e5
-ms.openlocfilehash: 6156f102573333ec0d5533b8f1a8506d91215f47
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 4d3dd9042951ffb46b8e0a3f7bb7bcdee23fd58b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760689"
 ---
-# <a name="ltknowntypegt"></a>&lt;knownType&gt;
+# <a name="knowntype"></a>\<knownType >
 逆シリアル化中に <xref:System.Runtime.Serialization.DataContractSerializer> によって使用される型を指定します。 この要素には、"宣言型" のフィールドまたはプロパティによって返される "既知の型" を指定します。 詳細については、次を参照してください。 [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)します。  
   
- \<system.runtime.serialization >  
+ \<system.runtime.serialization>  
 \<dataContractSerializer >  
 \<declaredTypes > 要素  
-\<追加 > の\<declaredTypes >  
+\<add> of \<declaredTypes>  
 \<knownType > 要素  
   
 ## <a name="syntax"></a>構文  
@@ -69,8 +69,9 @@ ms.locfileid: "54151931"
 </add>
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- [既知のデータ コントラクト型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
- [\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)  
- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- [既知のデータ コントラクト型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)
+- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)

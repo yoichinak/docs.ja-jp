@@ -1,15 +1,15 @@
 ---
-title: '&lt;msmqIntegrationBinding&gt; の &lt;security&gt;'
+title: <security> の <msmqIntegrationBinding>
 ms.date: 03/30/2017
 ms.assetid: ae5c68a8-14a2-4c6e-b9e0-3e94e3e9135e
-ms.openlocfilehash: a0c6e016980b5a40d74b9bd94dab96a0aa9fb243
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 8d79523db2a1567283b934abbd3de1adbbe6b0b5
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670535"
 ---
-# <a name="ltsecuritygt-of-ltmsmqintegrationbindinggt"></a>&lt;msmqIntegrationBinding&gt; の &lt;security&gt;
+# <a name="security-of-msmqintegrationbinding"></a>\<セキュリティ > の\<msmqIntegrationBinding >
 メッセージ キュー (MSMQ) 統合チャネルのトランスポート セキュリティ設定を定義します。  
   
  \<system.ServiceModel >  
@@ -57,15 +57,16 @@ msmqIntegrationBinding
 |-------------|-----------------|  
 |[\<binding>](../../../../../docs/framework/misc/binding.md)|バインド要素、 [ \<msmqIntegrationBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)します。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>  
- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding.Security%2A>  
- <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement.Security%2A>  
- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity>  
- [WCF のキュー](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [バインディング](../../../../../docs/framework/wcf/bindings.md)  
- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)  
- [\<msmqIntegrationBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>
+- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding.Security%2A>
+- <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement.Security%2A>
+- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity>
+- [WCF のキュー](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [バインディング](../../../../../docs/framework/wcf/bindings.md)
+- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [\<msmqIntegrationBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)

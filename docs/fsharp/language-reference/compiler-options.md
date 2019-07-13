@@ -2,22 +2,19 @@
 title: コンパイラ オプション
 description: 使用F#のコンパイルを制御するためのコンパイラ コマンド ライン オプション、F#アプリとライブラリ。
 ms.date: 12/10/2018
-ms.openlocfilehash: d8e4331bcacd7082d7560ddc6fcadb4ce2b61cf8
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 7d7f8ddc8fddd0fb7605ff57fa323dd03a56bde3
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614494"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65642015"
 ---
 # <a name="compiler-options"></a>コンパイラ オプション
 
 このトピックでは、F# コンパイラ (fsc.exe) のコマンド ライン オプションについて説明します。 コンパイル環境は、プロジェクトのプロパティを設定して制御することもできます。
 
-
 ## <a name="compiler-options-listed-alphabetically"></a>アルファベット順のコンパイラ オプション
 次の表は、コンパイラ オプションのアルファベット順の一覧です。 一部の F# コンパイラ オプションは C# コンパイラ オプションに似ています。 それらについては、C# コンパイラ オプションのトピックへのリンクも用意されています。
-
-
 
 |コンパイラ オプション|説明|
 |---------------|-----------|
@@ -25,7 +22,7 @@ ms.locfileid: "53614494"
 |`--baseaddress:address`|DLL を読み込む位置に推奨されるベース アドレスを指定します。<br /><br />このコンパイラ オプションは、同じ名前の C# コンパイラ オプションに相当します。 詳細については、次を参照してください。 [ &#47;baseaddress &#40;C&#35;コンパイラ オプション&#41;](https://msdn.microsoft.com/library/2fdbz5xd.aspx)します。|
 |`--codepage:id`|必要なページが、システムの現在の既定のコード ページがない場合は、コンパイル時に使用するコード ページを指定します。<br /><br />このコンパイラ オプションは、同じ名前の C# コンパイラ オプションに相当します。 詳細については、次を参照してください。 [&#47;コード ページ&#40;C&#35;コンパイラ オプション&#41;](../../csharp/language-reference/compiler-options/codepage-compiler-option.md)します。|
 |`--consolecolors`|エラーおよび警告がコンソールの色分けされたテキストを使用することを指定します。|
-|'--crossoptimize[+|-]`|モジュール間の最適化を有効または無効にします。|
+|`--crossoptimize[+|-]`|モジュール間の最適化を有効または無効にします。|
 |<code>--delaysign[+&#124;-]</code>|厳密な名前のキーのパブリックな部分のみを使ってアセンブリに遅延署名します。<br /><br />このコンパイラ オプションは、同じ名前の C# コンパイラ オプションに相当します。 詳細については、次を参照してください。 [ &#47;delaysign &#40;C&#35;コンパイラ オプション&#41;](https://msdn.microsoft.com/library/ta1sxwy8.aspx)します。|
 |<code>--checked[+&#124;-]</code>|オーバーフロー チェックの生成を有効または無効にします。<br /><br />このコンパイラ オプションは、同じ名前の C# コンパイラ オプションに相当します。 詳細については、次を参照してください。 [&#47;チェック&#40;C&#35;コンパイラ オプション&#41;](https://msdn.microsoft.com/library/h25wtyxf.aspx)します。|
 |<code>--debug[+&#124;-]</code><br /><br /><code>-g[+&#124;-]</code><br /><br /><code>--debug:[full&#124;pdbonly]</code><br /><br /><code>-g: [full&#124;pdbonly]</code>|デバッグ情報の生成を有効または無効にしたり、生成するデバッグ情報の種類を指定したりします。 既定値は、実行中のプログラムにアタッチできる full です。 選択**pdbonly** pdb (プログラム データベース) ファイルに格納されている制限のデバッグ情報を取得します。<br /><br />同じ名前の C# コンパイラ オプションに相当します。 詳細については、次のトピックを参照してください。<br /><br />[&#47;デバッグ&#40;C&#35;コンパイラ オプション&#41;](https://msdn.microsoft.com/library/8cw0bt21.aspx)します。|

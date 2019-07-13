@@ -16,21 +16,21 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b38e4753105932d2464bf78797a6979aeb0a0aee
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b3777319f818b7652157147f458b81d9935805b1
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527840"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637002"
 ---
 # <a name="createclassenumwmi-function"></a>CreateClassEnumWmi 関数
-指定した選択条件を満たしたすべてのクラスに対する列挙子が返されます。  
+指定した選択条件を満たしたすべてのクラスに対する列挙子が返されます。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>構文  
-  
-```  
+
+## <a name="syntax"></a>構文
+
+```cpp
 HRESULT CreateClassEnumWmi (
    [in] BSTR                    strSuperclass,
    [in] long                    lFlags,
@@ -42,16 +42,16 @@ HRESULT CreateClassEnumWmi (
    [in] BSTR                    strUser,
    [in] BSTR                    strPassword,
    [in] BSTR                    strAuthority
-); 
-```  
+);
+```
 
 ## <a name="parameters"></a>パラメーター
 
-`strSuperclass`    
+`strSuperclass`\
 [in]ない場合`null`空白または親クラスの名前を指定する、列挙子は、このクラスのサブクラスだけを返します。 場合は`null`または空白と`lFlags`WBEM_FLAG_SHALLOW 場合、最上位クラス (親クラスを持たないクラス) のみを返します。 場合は`null`または空白と`lFlags`は`WBEM_FLAG_DEEP`、名前空間内のすべてのクラスを返します。
 
-`lFlags`   
-[in]この関数の動作に影響するフラグの組み合わせ。 次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。 
+`lFlags`\
+[in]この関数の動作に影響するフラグの組み合わせ。 次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
 
 |定数  |値  |説明  |
 |---------|---------|---------|
@@ -60,31 +60,32 @@ HRESULT CreateClassEnumWmi (
 | `WBEM_FLAG_SHALLOW` | 1 | 列挙体は、このクラスの純粋なインスタンスのみが含まれていますおよび、このクラスにないプロパティが指定のサブクラスのすべてのインスタンスを除外します。 |
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | フラグには、半同期的メソッドの呼び出しが行わします。 |
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | 関数は、順方向専用の列挙子を返します。 呼び出しは許可されませんが、通常、順方向専用の列挙子は、高速と従来の列挙子より少ないメモリを使用して、[複製](clone.md)します。 |
-| `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI は、リリースされるまで、enumration 内のオブジェクトへのポインターを保持します。 | 
+| `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI は、リリースされるまでに、列挙内のオブジェクトへのポインターを保持します。 |
 
 推奨されるフラグは`WBEM_FLAG_RETURN_IMMEDIATELY`と`WBEM_FLAG_FORWARD_ONLY`最適なパフォーマンス。
 
-`pCtx`  
-[in]この値は、通常、`null`します。 ポインターは、それ以外の場合、 [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)インスタンスを要求されたクラスを提供しているプロバイダーによって使用されることができます。 
+`pCtx`\
+[in]この値は、通常、`null`します。 ポインターは、それ以外の場合、 [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)インスタンスを要求されたクラスを提供しているプロバイダーによって使用されることができます。
 
-`ppEnum`  
+`ppEnum`\
 [out]列挙子へのポインターを受け取ります。
 
-`authLevel`  
+`authLevel`\
 [in]承認レベル。
 
-`impLevel` [in]偽装レベル。
+`impLevel`\
+[in]偽装レベル。
 
-`pCurrentNamespace`   
+`pCurrentNamespace`\
 [in]ポインター、 [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)現在の名前空間を表すオブジェクト。
 
-`strUser`   
+`strUser`\
 [in]ユーザー名。 参照してください、 [ConnectServerWmi](connectserverwmi.md)関数の詳細についてはします。
 
-`strPassword`   
+`strPassword`\
 [in]パスワードです。 参照してください、 [ConnectServerWmi](connectserverwmi.md)関数の詳細についてはします。
 
-`strAuthority`   
+`strAuthority`\
 [in]ユーザーのドメイン名。 参照してください、 [ConnectServerWmi](connectserverwmi.md)関数の詳細についてはします。
 
 ## <a name="return-value"></a>戻り値
@@ -101,19 +102,21 @@ HRESULT CreateClassEnumWmi (
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI は、おそらく停止および再起動されました。 呼び出す[ConnectServerWmi](connectserverwmi.md)もう一度です。 |
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | 現在のプロセスと WMI のリモート プロシージャ コール (RPC) リンクに失敗しました。 |
 |`WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
-  
+
 ## <a name="remarks"></a>Remarks
 
 この関数の呼び出しをラップする、 [iwbemservices::createclassenum](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-createclassenum)メソッド。
 
 呼び出すことによって追加のエラー情報を取得するには、関数呼び出しに失敗した場合、 [GetErrorInfo](geterrorinfo.md)関数。
 
-## <a name="requirements"></a>要件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
-  
- **ヘッダー:** WMINet_Utils.idl  
-  
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
-## <a name="see-also"></a>関連項目  
-[WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+## <a name="requirements"></a>必要条件
+
+**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+
+**ヘッダー:** WMINet_Utils.idl
+
+**.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
+## <a name="see-also"></a>関連項目
+
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

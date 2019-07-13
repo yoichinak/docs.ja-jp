@@ -1,24 +1,19 @@
 ---
-title: サンプルおよびチュートリアル
+title: .NET サンプルおよびチュートリアル
 description: .NET Core、ASP.NET Core、C# 言語に関する、.NET の学習に役立つサンプルとチュートリアルの情報です。
-keywords: .NET、.NET Core、ASP.NET、C#、サンプル、チュートリアル
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.topic: article
-ms.prod: .net
-ms.devlang: dotnet
-ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
-ms.openlocfilehash: f69aa704b05bffeaf932a093b991810f8678251c
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: ea5bedc9bd58ca0661524d7edf999e21037e0063
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30957647"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960299"
 ---
-# <a name="samples-and-tutorials"></a>サンプルおよびチュートリアル
+# <a name="net-samples-and-tutorials"></a>.NET サンプルおよびチュートリアル
 
-.NET ドキュメントには、.NET について学習できるサンプルとチュートリアルが含まれています。 ここでは、.NET Core、ASP.NET Core、C# のサンプルを検索、表示、ダウンロードする方法について説明します。 F# プログラミング言語の学習に最適なリソースは [F# Foundation のサイト](http://fsharp.org/learn.html)にあります。 オンラインでのコード エディターを使用して c# を学習する場合は、まず[この対話型のチュートリアル](https://www.microsoft.com/net/learn/in-browser-tutorial/1)、次に [c# の対話型クイック スタート](../csharp/quick-starts/index.md)をご覧ください。 サンプル コードの表示とダウンロード方法については、「[サンプルの表示とダウンロード](#viewing-and-downloading-samples)」セクションをご覧ください。
+.NET ドキュメントには、.NET について学習できるサンプルとチュートリアルが含まれています。 ここでは、.NET Core、ASP.NET Core、C# のサンプルを検索、表示、ダウンロードする方法について説明します。 F# プログラミング言語の学習に最適なリソースは [F# Foundation のサイト](https://fsharp.org/learn.html)にあります。 オンラインでのコード エディターを使用して C# を学習する場合は、まず[この対話型のチュートリアル](https://www.microsoft.com/net/learn/in-browser-tutorial/1)、次に [C# の対話型チュートリアル](../csharp/tutorials/intro-to-csharp/index.md)をご覧ください。 サンプル コードの表示とダウンロード方法については、「[サンプルの表示とダウンロード](#viewing-and-downloading-samples)」セクションをご覧ください。
 
 ## <a name="net-core"></a>.NET Core
 
@@ -66,6 +61,14 @@ ms.locfileid: "30957647"
 
 この一連のサンプルは、統合言語クエリ (LINQ) の多くの機能を示しています。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/core/linq/csharp)は、GitHub の dotnet/samples リポジトリにあります。
 
+**マネージド COM サーバーのサンプル**
+
+[COM サーバー](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo)のサンプルは、マネージド COM サーバーの作成と、それをグローバルに登録するか、RegFree COM を介して使用する方法を示しています。
+
+**Microsoft Office PIA サンプル**
+
+[ExcelDemo](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo) サンプルは、.NET Core の [Microsoft Office PIA](/visualstudio/vsto/office-primary-interop-assemblies) の使用を示しています。
+
 ### <a name="tutorials"></a>チュートリアル
 
 **[コンソール アプリケーション](../csharp/tutorials/console-teleprompter.md)**
@@ -80,10 +83,6 @@ ms.locfileid: "30957647"
 
 このチュートリアルでは、LINQ の多くの機能と、それをサポートする言語要素について説明します。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-linq)は、GitHub の dotnet/samples リポジトリにあります。
 
-**[Docker でホストされているマイクロサービス](../csharp/tutorials/microservices.md)**
-
-このチュートリアルでは、ASP.NET Core のマイクロ サービスの構築と、これを Docker でホストする方法について説明します。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/csharp/getting-started/WeatherMicroservice)は、GitHub の dotnet/samples リポジトリにあります。
-
 **[Visual Studio for Mac を使用した macOS での .NET Core の概要](../core/tutorials/using-on-mac-vs.md)**
 
 このチュートリアルでは、Visual Studio for Mac を使用した、簡単な .NET Core コンソール アプリを構築する方法を示します。
@@ -91,6 +90,10 @@ ms.locfileid: "30957647"
 **[Visual Studio for Mac を使用した macOS での完全な .NET Core ソリューションの構築](../core/tutorials/using-on-mac-vs-full-solution.md)**
 
 このチュートリアルでは、再利用可能なライブラリと単体テストを含む完全な .NET Core ソリューションを構築する方法を示します。
+
+**[プラグインをサポートする .NET Core アプリケーションの作成](../core/tutorials/creating-app-with-plugin-support.md)**
+
+このチュートリアルでは、プラグイン アーキテクチャをサポートする単純なアプリケーションを .NET Core で構築する方法を示します。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin)は、GitHub の dotnet/samples リポジトリにあります。
 
 ## <a name="deploying-to-containers"></a>コンテナーへの展開
 
@@ -112,7 +115,7 @@ ms.locfileid: "30957647"
    * リポジトリをローカル環境にクローンします。 ローカル システムにドキュメントのリポジトリを直接クローンすると、公式のリポジトリに対して直接コミットできないため、後でドキュメントに貢献できなくなります。 後でドキュメントに貢献する可能性がある場合は、前述のフォークとクローンの手順を使用してください。
 1. リポジトリ フォルダー内のサンプルがある場所に移動します。 サンプルへのリンクをクリックすると、サンプルがある場所への相対パスがブラウザーのアドレス バーに表示されます。
 1. サンプルを実行するには、次のいくつかのオプションがあります。
-   * [dotnet CLI ツール](../core/tools/index.md)を使用する: コンソール ウィンドウで、サンプルのフォルダーに移動し、dotnet CLI コマンドを使用します。
-   * [Visual Studio](https://www.visualstudio.com/) または [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/) を使用する: メニュー バーから **[ファイル] > [開く] > [プロジェクト/ソリューション]** の順に選択し、サンプルを開きます。次にサンプルのプロジェクト フォルダーに移動し、プロジェクト ファイル (*.csproj* または *.fsproj*) を選択します。
+   * [dotnet CLI ツール](../core/tools/index.md)を使用する: コンソール ウィンドウで、サンプルのフォルダーに移動し、dotnet CLI コマンドを使用する。
+   * [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) または [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) を使用する: メニュー バーから **[ファイル] > [開く] > [プロジェクト/ソリューション]** の順に選択し、サンプルを開きます。次にサンプルのプロジェクト フォルダーに移動し、プロジェクト ファイル (*.csproj* または *.fsproj*) を選択します。
    * [Visual Studio Code](https://code.visualstudio.com/) を使用する: メニュー バーから **[ファイル] > [フォルダーを開く]** の順に選択し、サンプルのプロジェクト フォルダーを選択してサンプルを開きます。
    * .NET Core プロジェクトをサポートする別の IDE を使用する。

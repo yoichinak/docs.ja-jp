@@ -8,12 +8,12 @@ helpviewer_keywords:
 - throwing exceptions, design guidelines
 ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
 author: KrzysztofCwalina
-ms.openlocfilehash: 016a42ee7a772a3268e823e75b6239467e13b315
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 74eee418a3c87b335cdf96557c4e17b95aff7b58
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669070"
 ---
 # <a name="exception-throwing"></a>例外のスロー
 このセクションで説明されている例外のスローのガイドラインには、実行エラーの意味を適切な定義が必要です。 メンバーが実行できないときに、実行エラーが発生します (どのようなメンバー名を意味します) を実行するように設計します。 たとえば場合、`OpenFile`メソッドが呼び出し元に、開いているファイル ハンドルを返すことはできませんで実行エラーと思われることです。  
@@ -66,5 +66,5 @@ ms.locfileid: "53148043"
   
 ## <a name="see-also"></a>関連項目
 
-- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)  
+- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)
 - [例外のデザインのガイドライン](../../../docs/standard/design-guidelines/exceptions.md)

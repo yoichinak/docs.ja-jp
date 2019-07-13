@@ -1,15 +1,13 @@
 ---
 title: .NET コンテナーで対象とする OS
 description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | .NET コンテナーで対象とする OS'
-author: CESARDELATORRE
-ms.author: wiwagn
-ms.date: 09/11/2018
-ms.openlocfilehash: f6a5cf8d5e32e527977b7c142f5686310e88a068
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/07/2019
+ms.openlocfilehash: 6f160aeba5257722490788271e6f89359342cc0d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147201"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639079"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>.NET コンテナーで対象とする OS
 
@@ -38,25 +36,25 @@ Dockerfile ファイルにイメージ名を追加すると、次の例のよう
 </thead>
 <tbody>
 <tr>
-<td>microsoft/dotnet:2.1-runtime</td>
-<td>.NET Core 2.1 マルチアーキテクチャ: Docker ホストに応じて、Linux と Windows Nano Server をサポートします。</td>
+<td>mcr.microsoft.com/dotnet/core/runtime:2.2</td>
+<td>.NET Core 2.2 マルチアーキテクチャ:Docker ホストに応じて、Linux と Windows Nano Server をサポートします。</td>
 </tr>
 <tr class="odd">
-<td>microsoft/dotnet:2.1-aspnetcore-runtime</td>
-<td><p>ASP.NET Core 2.1 マルチアーキテクチャ: Docker ホストに応じて、Linux と Windows Nano Server をサポートします。</p>
+<td>mcr.microsoft.com/dotnet/core/aspnet:2.2</td>
+<td><p>ASP.NET Core 2.2 マルチアーキテクチャ:Docker ホストに応じて、Linux と Windows Nano Server をサポートします。</p>
 <p>aspnetcore イメージでは、ASP.NET Core 用に 少しの最適化が行われています。</p></td>
 </tr>
 <tr class="even">
-<td>microsoft/dotnet:2.1-aspnetcore-runtime-alpine</td>
-<td>Linux Alpine ディストリビューションでの .NET Core 2.1 ランタイムのみ</td>
+<td>mcr.microsoft.com/dotnet/core/aspnet:2.2-alpine</td>
+<td>Linux Alpine ディストリビューションでの .NET Core 2.2 ランタイムのみ</td>
 </tr>
 <tr class="odd">
-<td>microsoft/dotnet:2.1-aspnetcore-runtime-nanoserver-1803</td>
-<td>Windows Nano Server (Windows Server バージョン 1803) では .NET Core 2.1 ランタイムのみ</td>
+<td>mcr.microsoft.com/dotnet/core/aspnet:2.2-nanoserver-1803</td>
+<td>Windows Nano Server (Windows Server バージョン 1803) では .NET Core 2.2 ランタイムのみ</td>
 </tr>
 </tbody>
 </table>
 
->[!div class="step-by-step"]
->[前へ](container-framework-choice-factors.md)
->[次へ](official-net-docker-images.md)
+> [!div class="step-by-step"]
+> [前へ](container-framework-choice-factors.md)
+> [次へ](official-net-docker-images.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f4a84be2-309c-439c-b686-6facb85f4654
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a1056e1b8d544e514063c6c1ad20b447815960ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d5c80a72eef31abaacedc52c9e63d561c30cc25
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753432"
 ---
 # <a name="alink-api-unmanaged-api-reference"></a>ALink API (アンマネージ API リファレンス)
 .NET Framework アセンブリと非バインド モジュールの作成をサポートします。  
@@ -39,5 +39,6 @@ ms.locfileid: "33403956"
   
  [IALink3 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)  
   
-## <a name="see-also"></a>関連項目  
- [アンマネージ API リファレンス](../../../../docs/framework/unmanaged-api/index.md)
+## <a name="see-also"></a>関連項目
+
+- [アンマネージ API リファレンス](../../../../docs/framework/unmanaged-api/index.md)

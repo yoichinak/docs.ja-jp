@@ -1,5 +1,5 @@
 ---
-title: '&lt;appDomainResourceMonitoring&gt;要素'
+title: <appDomainResourceMonitoring> 要素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - appDomainResourceMonitoring element
@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32ffe48e7a65ab4ca2250eee65d188c0c7270c11
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: ad0ae023215eeb1f42f9351369ee77d41d537b88
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611335"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487729"
 ---
-# <a name="ltappdomainresourcemonitoringgt-element"></a>&lt;appDomainResourceMonitoring&gt;要素
+# <a name="appdomainresourcemonitoring-element"></a>\<appDomainResourceMonitoring > 要素
 プロセスのライフサイクルにおいて、プロセスのすべてのアプリケーション ドメインの統計を収集するようにランタイムに指示します。  
   
  \<configuration>  
-\<ランタイム >  
+\<runtime>  
 \<appDomainResourceMonitoring >  
   
 ## <a name="syntax"></a>構文  
@@ -59,7 +59,7 @@ ms.locfileid: "53611335"
   
  マネージ コードからの監視を有効にするには使用、<xref:System.AppDomain.MonitoringIsEnabled%2A>プロパティ。  
   
- この構成要素はでのみ使用できますが、[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]以降。  
+ この構成要素は、以降、.NET Framework 4 でのみ使用できます。  
   
 ## <a name="example"></a>例  
  次の例では、アプリケーション ドメインのリソースの監視を有効にする方法を示します。  
@@ -72,7 +72,8 @@ ms.locfileid: "53611335"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>関連項目
+
+- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)

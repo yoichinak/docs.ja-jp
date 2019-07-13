@@ -6,21 +6,21 @@ helpviewer_keywords:
 - Help [Windows Forms], displaying on Windows Forms
 - HelpProvider component [Windows Forms]
 ms.assetid: a09a6e0b-79d8-457f-bb36-86fad2beeada
-ms.openlocfilehash: 63574e6a4f7a9c5a1c2bcb267c64baa5c5e392f3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b5da5895b39412052f83cb0a89c3852d28f264bb
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011308"
 ---
 # <a name="helpprovider-component-windows-forms"></a>HelpProvider コンポーネント (Windows フォーム)
 Windows フォーム `HelpProvider` コンポーネントは、Windows ベースのアプリケーションで HTML ヘルプ 1.x のヘルプ ファイル (HTML Help Workshop で生成された .chm ファイル、または .htm ファイル) を関連付けるために使用します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [HelpProvider コンポーネントの概要](../../../../docs/framework/winforms/controls/helpprovider-component-overview-windows-forms.md)  
+ [HelpProvider コンポーネントの概要](helpprovider-component-overview-windows-forms.md)  
  HTML ヘルプ ファイルを Windows ベースのアプリケーションに関連付けることができる、`HelpProvider` コンポーネントの一般的な概念について説明します。  
   
- 参照してください[のヘルプ システムを Windows フォーム アプリケーションで](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md)します。  
+ 参照してください[のヘルプ システムを Windows フォーム アプリケーションで](../advanced/help-systems-in-windows-forms-applications.md)します。  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Forms.HelpProvider>  
@@ -30,7 +30,7 @@ Windows フォーム `HelpProvider` コンポーネントは、Windows ベース
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
 ## <a name="related-sections"></a>関連項目  
- [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)  
  Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。  
   
- 参照してください[Windows フォーム アプリケーションのヘルプ システム](https://msdn.microsoft.com/library/55dct0a1\(v=vs.110\))します。
+ 参照してください[Windows フォーム アプリケーションのヘルプ システム](../advanced/help-systems-in-windows-forms-applications.md)します。

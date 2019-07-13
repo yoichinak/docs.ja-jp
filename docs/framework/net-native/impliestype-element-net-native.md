@@ -1,17 +1,17 @@
 ---
-title: '&lt;ImpliesType&gt; 要素 (.NET ネイティブ)'
+title: <ImpliesType> 要素 (.NET ネイティブ)
 ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 97b3e63ceb4b121c3e71e33a00fdf725258039c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c1cd2177707edfd29dc393e2bcfd6bbacb749b30
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395591"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616685"
 ---
-# <a name="ltimpliestypegt-element-net-native"></a>&lt;ImpliesType&gt; 要素 (.NET ネイティブ)
+# <a name="impliestype-element-net-native"></a>\<ImpliesType > 要素 (.NET ネイティブ)
 型にポリシーを適用します (含んでいる型またはメソッドにそのポリシーが適用されている場合)。  
   
 ## <a name="syntax"></a>構文  
@@ -51,13 +51,13 @@ ms.locfileid: "33395591"
   
 ## <a name="name-attribute"></a>Name 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |*type_name*|型名。 この `<ImpliesType>` 要素により表される型がそれを含んでいる `<Type>` 要素と同じ名前空間にある場合、*type_name* には名前空間なしで型の名前を含めることができます。 それ以外の場合は、*type_name* には完全修飾型名を含める必要があります。|  
   
 ## <a name="all-other-attributes"></a>その他すべての属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |*policy_setting*|このポリシーの種類に適用する設定です。 指定できる値は、`All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal`、および `Required All` です。 詳細については、「[ランタイム ディレクティブのポリシー設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)」を参照してください。|  
   
@@ -72,12 +72,12 @@ ms.locfileid: "33395591"
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|構築されたジェネリック型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
 |[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|メソッドにリフレクション ポリシーを適用します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `<ImpliesType>` 要素は主にライブラリによる使用を想定しています。 これは、次のシナリオに対応します。  
   
--   ルーチンを 1 つの型にリフレクションする必要がある場合、2 番目の型にもリフレクションする必要がある。  
+- ルーチンを 1 つの型にリフレクションする必要がある場合、2 番目の型にもリフレクションする必要がある。  
   
--   スタティック分析で必要であると示されないため、2 番目の型の暗黙的なインスタンス化のメタデータをそれ以外の方法で使用できない。  
+- スタティック分析で必要であると示されないため、2 番目の型の暗黙的なインスタンス化のメタデータをそれ以外の方法で使用できない。  
   
  最も一般的には、2 つの型は共有型引数を持つジェネリックなインスタンス化です。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "33395591"
 </Type>  
 ```  
   
- `<ImpliesType>` 要素は `<Method>` 要素内にも配置できます。これは、ジェネリック メソッドのインスタンス化が型のインスタンス化へのリフレクションを暗黙的に決定する場合があるためです。 たとえば、関連付けられている <xref:System.Collections.Generic.List%601> 型と <xref:System.Array> 型と共に、特定のライブラリが動的にアクセスするジェネリック メソッド `IEnumerable<T> MakeEnumerable<T>(string``spelling``, T``defaultValue``)` を考えます。 これは次のように表すことができます。  
+ `<ImpliesType>` 要素は `<Method>` 要素内にも配置できます。これは、ジェネリック メソッドのインスタンス化が型のインスタンス化へのリフレクションを暗黙的に決定する場合があるためです。 たとえば、ジェネリック メソッド`IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)`、関連付けられていると共に、特定のライブラリが動的にアクセスする<xref:System.Collections.Generic.List%601>と<xref:System.Array>型。 これは次のように表すことができます。  
   
 ```xml  
 <Type Name="MyType">  
@@ -110,7 +110,8 @@ ms.locfileid: "33395591"
 </Type>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [ランタイム ディレクティブ ポリシーの設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+## <a name="see-also"></a>関連項目
+
+- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [ランタイム ディレクティブ ポリシーの設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

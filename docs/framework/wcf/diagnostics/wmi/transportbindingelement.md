@@ -2,12 +2,12 @@
 title: TransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 54ecfbee-53c0-410c-a7fa-a98f2e40c545
-ms.openlocfilehash: 79d8b1f4a5127ca36eb57954cff6ee6a97e55e41
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bdb5ca7400a41dd724c2ad7fc76695a82874ded6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641620"
 ---
 # <a name="transportbindingelement"></a>TransportBindingElement
 TransportBindingElement  
@@ -33,28 +33,28 @@ class TransportBindingElement : BindingElement
 ### <a name="manualaddressing"></a>ManualAddressing  
  データ型 : boolean  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  メッセージのアドレス指定をユーザーが制御するかどうかを指定するブール値。  
   
 ### <a name="maxbufferpoolsize"></a>MaxBufferPoolSize  
  データ型 : sint64  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  バインディングに使用するバッファー プールの最大サイズ。  
   
 ### <a name="maxreceivedmessagesize"></a>MaxReceivedMessageSize  
  データ型 : sint64  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  このバインディングで処理されるメッセージの最大サイズ。  
   
 ### <a name="scheme"></a>Scheme  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  トランスポートの URI スキーム。  
   
@@ -62,7 +62,8 @@ class TransportBindingElement : BindingElement
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
-|Namespace|root\ServiceModel で定義|  
+|名前空間|root\ServiceModel で定義|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Channels.TransportBindingElement>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Channels.TransportBindingElement>

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - files [C#]
 ms.assetid: 0f2511cf-2b02-4b41-b001-b1754677c38f
 ms.openlocfilehash: 64c852e6fcc034cb56651ffc2d22fa5323bbb54f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61680065"
 ---
 # <a name="file-system-and-the-registry-c-programming-guide"></a>ファイル システムとレジストリ (C# プログラミング ガイド)
 以下のトピックでは、C# と .NET Framework を使用して、ファイル、フォルダー、レジストリに対するさまざまな基本操作を実行する方法を示します。  

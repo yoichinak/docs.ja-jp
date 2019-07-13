@@ -1,5 +1,5 @@
 ---
-title: '方法 : 成型された Windows フォームを作成する'
+title: '方法: 成型された Windows フォームを作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,32 +18,33 @@ helpviewer_keywords:
 - Windows Forms, circular
 - forms [Windows Forms], custom shapes
 ms.assetid: 6e6041e0-8e67-4487-b1e9-e410dbd1ef6c
-ms.openlocfilehash: 4a799baa2732b4d2a28a9d8d67fa54d8b48dd191
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3c90e6d5d2613239e513f8ec30d67b58084cba5e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522218"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64643498"
 ---
-# <a name="how-to-create-a-shaped-windows-form"></a>方法 : 成型された Windows フォームを作成する
-この例は、フォームのサイズを変更する楕円形です。  
+# <a name="how-to-create-a-shaped-windows-form"></a>方法: 成型された Windows フォームを作成する
+この例では、フォームのサイズを変更する楕円形フォームを示します。  
   
 ## <a name="example"></a>例  
- [!code-cpp[System.Drawing.ConceptualHowTos#10](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/cpp/form1.cpp#10)]
- [!code-csharp[System.Drawing.ConceptualHowTos#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/CS/form1.cs#10)]
- [!code-vb[System.Drawing.ConceptualHowTos#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/VB/form1.vb#10)]  
+ [!code-cpp[System.Drawing.ConceptualHowTos#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/cpp/form1.cpp#10)]
+ [!code-csharp[System.Drawing.ConceptualHowTos#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/CS/form1.cs#10)]
+ [!code-vb[System.Drawing.ConceptualHowTos#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/VB/form1.vb#10)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   <xref:System.Windows.Forms> 名前空間と <xref:System.Drawing> 名前空間への参照。  
+- <xref:System.Windows.Forms> 名前空間と <xref:System.Drawing> 名前空間への参照。  
   
- この例で上書き、<xref:System.Windows.Forms.Control.OnPaint%2A>フォームの形状を変更するメソッド。 このコードを使用するには、メソッドの宣言とメソッドの内部の描画コードをコピーします。  
+ この例は、<xref:System.Windows.Forms.Control.OnPaint%2A>メソッドは、フォームの形状を変更します。 このコードを使用するには、メソッドの宣言とメソッドの内部の描画コードをコピーします。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.Control.OnPaint%2A>  
- <xref:System.Drawing.Region>  
- <xref:System.Drawing>  
- <xref:System.Drawing.Drawing2D.GraphicsPath.AddEllipse%2A>  
- <xref:System.Windows.Forms.Control.Region%2A>  
- [グラフィックス プログラミングについて](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Forms.Control.OnPaint%2A>
+- <xref:System.Drawing.Region>
+- <xref:System.Drawing>
+- <xref:System.Drawing.Drawing2D.GraphicsPath.AddEllipse%2A>
+- <xref:System.Windows.Forms.Control.Region%2A>
+- [グラフィックス プログラミングについて](getting-started-with-graphics-programming.md)

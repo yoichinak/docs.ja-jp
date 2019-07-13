@@ -3,32 +3,32 @@ title: C# の歴史 - C# ガイド
 description: この言語の最初のバージョンがどのようなものであったか、そしてそれ以降どのように進化してきたかについて説明します。
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: ad05e803000393800764a4b3aa1bf6288f765fd4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 351e4de01a7c3c50cb815a99f0bde546848a9e51
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245601"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423241"
 ---
-# <a name="the-history-of-c"></a>C# の歴史 #
+# <a name="the-history-of-c"></a>C\# の歴史
 
 この記事では、C# 言語の各メジャー リリースの履歴について説明します。 C# チームは、引き続き新機能を刷新および追加していきます。 今後のリリースに向けて検討される機能を含め、言語機能ステータスについての詳細は GitHub の [dotnet/roslyn リポジトリ](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md)で見つけられます。
 
 > [!IMPORTANT]
-> C# 言語の一部の機能は、C# の仕様で定義されている "*標準ライブラリ*" の型とメソッドに依存しています。 .NET プラットフォームでは、さまざまなパッケージでそれらの型とメソッドが提供されています。 一例として、例外処理があります。 すべての `throw` ステートメントまたは式は、スローされたオブジェクトが <xref:System.Exception> から派生していることを確認するために、チェックされます。 同様に、すべての `catch` は、キャッチされた型が <xref:System.Exception> から派生していることを確認するために、チェックされます。 バージョンごとに新しい要件が追加されている場合があります。 古い環境で言語の最新機能を使用するには、特定のライブラリをインストールする必要がある場合があります。 これらの依存関係については、特定のバージョンごとに用意されたページに記載されています。 この依存関係の経緯と詳細については、[言語とライブラリ間の関係](relationships-between-language-and-library.md)に関する記事をご覧ください。 
+> C# 言語の一部の機能は、C# の仕様で定義されている "*標準ライブラリ*" の型とメソッドに依存しています。 .NET プラットフォームでは、さまざまなパッケージでそれらの型とメソッドが提供されています。 一例として、例外処理があります。 すべての `throw` ステートメントまたは式は、スローされたオブジェクトが <xref:System.Exception> から派生していることを確認するために、チェックされます。 同様に、すべての `catch` は、キャッチされた型が <xref:System.Exception> から派生していることを確認するために、チェックされます。 バージョンごとに新しい要件が追加されている場合があります。 古い環境で言語の最新機能を使用するには、特定のライブラリをインストールする必要がある場合があります。 これらの依存関係については、特定のバージョンごとに用意されたページに記載されています。 この依存関係の経緯と詳細については、[言語とライブラリ間の関係](relationships-between-language-and-library.md)に関する記事をご覧ください。
 
 C# のビルド ツールでは、言語の最新のメジャー リリースが言語の既定のバージョンと見なされます。 メジャー リリースの間には、このセクションの他の記事で詳しく説明するポイント リリースが存在することがあります。 ポイント リリースで最新の機能を使用するには、[コンパイラ言語バージョンを構成](../language-reference/configure-language-version.md)し、バージョンを選択する必要があります。 C# 7.0 以降、3 つのポイント リリースがありました。
 
 * [C# 7.3](csharp-7-3.md):
-  - C# 7.3 は現在 [Visual Studio 2017 バージョン 15.7](https://visualstudio.microsoft.com/vs/whatsnew/) および [.NET Core 2.1 SDK 2.1.300 RC1](../../core/whats-new/index.md) で利用可能です。
+  - C# 7.3 は [Visual Studio 2017 バージョン 15.7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) および [.NET Core 2.1 SDK](../../core/whats-new/dotnet-core-2-1.md) 以降で利用可能です。
 * [C# 7.2](csharp-7-2.md):
-  - C# 7.2 は現在 [Visual Studio 2017 バージョン 15.5](https://visualstudio.microsoft.com/vs/whatsnew/) および [.NET Core 2.0 SDK](../../core/whats-new/index.md) で利用可能です。
+  - C# 7.2 は [Visual Studio 2017 バージョン 15.5](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) および [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md) 以降で利用可能です。
 * [C# 7.1](csharp-7-1.md):
-  - これらの機能は、[Visual Studio 2017 バージョン 15.3](https://visualstudio.microsoft.com/vs/whatsnew/) および [.NET Core 2.0 SDK](../../core/whats-new/index.md) に追加されています。
+  - C# 7.1 は [Visual Studio 2017 バージョン 15.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) および [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md) 以降で利用可能です。
 
 ## <a name="c-version-10"></a>C# バージョン 1.0
 
-振り返ってみると、C# バージョン 1.0 は Java によく似ていました。 [ECMA で掲げられた設計目標の一環](http://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html)として、C# は "シンプルかつモダンな汎用オブジェクト指向言語" を目指していました。  当時、Java に似ていることは、初期の設計目標を達成したことを意味していました。
+振り返ってみると、C# バージョン 1.0 は Java によく似ていました。 [ECMA で掲げられた設計目標の一環](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html)として、C# は "シンプルかつモダンな汎用オブジェクト指向言語" を目指していました。  当時、Java に似ていることは、初期の設計目標を達成したことを意味していました。
 
 しかし、今 C# 1.0 を振り返ってみると、少し混乱するかもしれません。 現在では当たり前となっている組み込みの非同期機能や、ジェネリック関連の優れた機能の一部は備わっていませんでした。 実際、ジェネリック全体がなかったのです。  そして [LINQ](../linq/index.md) も、 まだ使用できませんでした。 このような追加機能が登場するまでにはまだ数年かかります。
 
@@ -45,7 +45,6 @@ C# 1.0 の主な機能:
 - [式](../programming-guide/statements-expressions-operators/expressions.md)
 - [ステートメント](../programming-guide/statements-expressions-operators/statements.md)
 - [属性](../programming-guide/concepts/attributes/index.md)
-- [リテラル](../language-reference/keywords/literal-keywords.md)
 
 ## <a name="c-version-12"></a>C# バージョン 1.2
 
@@ -84,7 +83,7 @@ C# バージョン 3.0 は、Visual Studio 2008 と共に 2007 年後半に登�
 - [自動実装プロパティ](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [匿名型](../programming-guide/classes-and-structs/anonymous-types.md)
 - [クエリ式](../linq/query-expression-basics.md)
-- [ラムダ式](../lambda-expressions.md)
+- [ラムダ式](../programming-guide/statements-expressions-operators/lambda-expressions.md)
 - [式ツリー](../expression-trees.md)
 - [拡張メソッド](../programming-guide/classes-and-structs/extension-methods.md)
 - [暗黙的に型指定されるローカル変数](../language-reference/keywords/var.md)
@@ -123,7 +122,7 @@ C# バージョン 5.0 は、この言語の専心的なバージョンでした
 - [非同期メンバー](../async.md)
 - [呼び出し元情報属性](../programming-guide/concepts/caller-information.md)
 
-### <a name="see-also"></a>参照
+### <a name="see-also"></a>関連項目
 
 * [コード プロジェクト:C# 5.0 の呼び出し元情報属性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
@@ -142,7 +141,7 @@ C# バージョン 3.0 と 5.0 では、主要な新機能がオブジェクト�
 - [Null 伝達子](./csharp-6.md#null-conditional-operators)
 - [文字列補間](./csharp-6.md#string-interpolation)
 - [nameof 演算子](./csharp-6.md#the-nameof-expression)
-- [インデックス初期化子](csharp-6.md#index-initializers)
+- [インデックス初期化子](csharp-6.md#extension-add-methods-in-collection-initializers)
 
 その他に次の新機能があります。
 
@@ -168,7 +167,6 @@ C# バージョン 3.0 と 5.0 では、主要な新機能がオブジェクト�
 
 - [破棄](./csharp-7.md#discards)
 - [バイナリ リテラルと桁区切り文字](./csharp-7.md#numeric-literal-syntax-improvements)
-- [ref 戻り値と ref ローカル変数](./csharp-7.md#ref-locals-and-returns)
 - [throw 式](./csharp-7.md#throw-expressions)
 
 これらすべての機能が素晴らしい新機能を開発者に提供し、これまでよりもさらにクリーンなコードを記述する機会を提供します。 ハイライトは、`out` キーワードで使用するために変数の宣言を凝縮することと、タプルを通じて複数の戻り値を許可することです。

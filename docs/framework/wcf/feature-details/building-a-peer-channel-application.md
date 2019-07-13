@@ -2,12 +2,12 @@
 title: ピア チャネル アプリケーションの構築
 ms.date: 03/30/2017
 ms.assetid: a69a1b8f-8e15-45c5-87b8-bdb71e1c7ab8
-ms.openlocfilehash: ffeb973cbf82f1750fa2be90fa8362fda908322c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6f856eed1aa011bd21bcf01172e9322df70925b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857676"
 ---
 # <a name="building-a-peer-channel-application"></a>ピア チャネル アプリケーションの構築
 次のセクションでは、ピア チャネル アプリケーションの開発に関するガイダンスを示します。  
@@ -25,5 +25,6 @@ ms.locfileid: "33488300"
  [セキュリティによるピア チャネル アプリケーションの保護](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  
  トランスポート ベースとメッセージ ベースのセキュリティ、およびピア チャネル アプリケーションのベスト プラクティスについて説明します。  
   
-## <a name="see-also"></a>関連項目  
- [ピア チャネルの概要](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
+## <a name="see-also"></a>関連項目
+
+- [ピア チャネルの概要](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)

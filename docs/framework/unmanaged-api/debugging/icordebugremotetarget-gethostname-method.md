@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1536a89d0e85480d3829939c40cd986fe65883df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 43a502682e6ccfc36931970d0121f91529f51711
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422472"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744723"
 ---
 # <a name="icordebugremotetargetgethostname-method"></a>ICorDebugRemoteTarget::GetHostName メソッド
 リモート デバッグ対象コンピューターの完全修飾ドメイン名または IPv4 アドレスを返します。 IPV6 はこの時点ではサポートされません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetHostName (  
     [in] ULONG32      cchHostName,  
     [out] ULONG32*    pcchHostName,  
@@ -37,7 +37,7 @@ HRESULT GetHostName (
             WCHAR szHostName[]  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `cchHostName`  
  [入力] `szHostName` バッファーのサイズ (文字単位)。 このパラメーターが 0 である場合、`szHostName` は null であることが必要です。  
   
@@ -54,11 +54,11 @@ HRESULT GetHostName (
  E_FAIL (またはその他の E_ リターン コード)  
  ホスト名または IP アドレスを返すことができません。  
   
-## <a name="remarks"></a>コメント  
- このメソッドは、デバッガー ライターによって実装されます。 複数の呼び出しパラダイムに従う必要があります。最初の呼び出しでは、呼び出し元が `cchHostName` および `szHostName` の両方に null を渡し、`pcchHostName` が必要なバッファーのサイズを返します。 第 2 の呼び出しでは、以前に返されたサイズが `cchHostName` に渡され、適切にサイズ設定されたバッファーが `szHostName` に渡されます。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、デバッガー ライターによって実装されます。 複数の呼び出しパラダイムに従う必要があります。最初の呼び出しでは、呼び出し元に null を渡し両方`cchHostName`と`szHostName`、および`pcchHostName`必要なバッファーのサイズを返します。 第 2 の呼び出しでは、以前に返されたサイズが `cchHostName` に渡され、適切にサイズ設定されたバッファーが `szHostName` に渡されます。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl  
   
@@ -66,6 +66,7 @@ HRESULT GetHostName (
   
  **.NET framework のバージョン:** 3.5 SP1  
   
-## <a name="see-also"></a>関連項目  
- [ICorDebugRemoteTarget インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
- [ICorDebug インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [ICorDebugRemoteTarget インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
+- [ICorDebug インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

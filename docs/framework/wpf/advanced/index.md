@@ -9,27 +9,27 @@ helpviewer_keywords:
 - WPF programming model [WPF]
 - XAML [WPF], content models
 ms.assetid: 58843391-b28c-4d32-adf5-87acaf6578a1
-ms.openlocfilehash: 3c933e7062e270a9f4d03772ffbece2500ef9482
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 13225779cb3ed844e6ea8622ad559db83fadc166
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942806"
 ---
 # <a name="advanced-windows-presentation-foundation"></a>詳細設定 (Windows Presentation Foundation)
 このセクションでは、WPF の高度な領域について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [WPF アーキテクチャ](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
- [基本要素](../../../../docs/framework/wpf/advanced/base-elements.md)  
- [要素のツリーおよびシリアル化](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
- [ドラッグ アンド ドロップ](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
- [ドキュメント](../../../../docs/framework/wpf/advanced/documents.md)  
- [グローバライズとローカライズ](../../../../docs/framework/wpf/advanced/globalization-and-localization.md)  
- [移行と相互運用性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
- [パフォーマンス](../../../../docs/framework/wpf/advanced/performance.md)  
- [スレッド モデル](../../../../docs/framework/wpf/advanced/threading-model.md)  
- [WPF のアドインの概要](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)  
- [WPF のアンマネージ API リファレンス](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)  
+ [WPF アーキテクチャ](wpf-architecture.md)  
+ [基本要素](base-elements.md)  
+ [要素のツリーおよびシリアル化](element-tree-and-serialization.md)  
+ [ドラッグ アンド ドロップ](drag-and-drop.md)  
+ [ドキュメント](documents.md)  
+ [グローバライズとローカライズ](globalization-and-localization.md)  
+ [移行と相互運用性](migration-and-interoperability.md)  
+ [パフォーマンス](performance.md)  
+ [スレッド モデル](threading-model.md)  
+ [WPF アドインの概要](../app-development/wpf-add-ins-overview.md)  
+ [WPF のアンマネージ API リファレンス](wpf-unmanaged-api-reference.md)  
   
 ## <a name="related-sections"></a>関連項目

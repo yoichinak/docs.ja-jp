@@ -1,16 +1,16 @@
 ---
 title: .NET アーキテクチャ ガイダンス
-description: .NET ソフトウェアを設計し、構築するときの推奨プラクティスを紹介します。
+description: .NET ソフトウェアを設計してビルドするときの推奨プラクティスを紹介します。
 author: BillWagner
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.technology: dotnet
-ms.openlocfilehash: e63f7043b2dfdbe367ed2cbfba13bc6985c1ead6
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.technology: dotnet-ebooks
+ms.openlocfilehash: 9aeb950ea0eae8a5e52110802410caadcba368cb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404175"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379589"
 ---
 # <a name="net-architecture-guidance"></a>.NET アーキテクチャ ガイダンス
 

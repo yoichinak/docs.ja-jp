@@ -8,12 +8,12 @@ helpviewer_keywords:
 - icon list control
 - ImageList component [Windows Forms], about ImageList component
 ms.assetid: 7e25d89b-5633-40c1-afc3-82e0e301ffa2
-ms.openlocfilehash: 1ce9ced0c7e6bc13d5cdf331135590ba48c624fb
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: d4513439594c9bceac3463a5b878f9059a16046e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48844918"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645697"
 ---
 # <a name="imagelist-component-overview-windows-forms"></a>ImageList コンポーネントの概要 (Windows フォーム)
 
@@ -30,4 +30,4 @@ Windows フォーム <xref:System.Windows.Forms.ImageList> コンポーネント
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.ImageList>
-- [方法: Windows フォームの ImageList コンポーネントにイメージを追加または削除する](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)
+- [方法: 追加または削除のイメージを Windows フォームの ImageList コンポーネント](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

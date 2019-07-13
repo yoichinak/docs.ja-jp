@@ -2,14 +2,14 @@
 title: Visual Studio で、AJAX 対応 WCF サービスと ASP.NET クライアントを作成します。
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: 954ee0409f370c3fa28814a70d51334fd75f7b79
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 06fa3a9d0151f3b4b865c421f9960854ef471377
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024611"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754608"
 ---
-# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>方法 : AJAX 対応 WCF サービスとこのサービスにアクセスする ASP.NET クライアントを作成する
+# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>方法: サービスにアクセスする、AJAX 対応 WCF サービスと ASP.NET クライアントを作成します。
 
 このトピックでは、Visual Studio を使用して、AJAX 対応の Windows Communication Foundation (WCF) サービスと、サービスにアクセスする ASP.NET クライアントを作成する方法を示します。
 
@@ -77,15 +77,15 @@ ms.locfileid: "48024611"
 
 4. 戻り、**ソース**間に次のコードを追加、表示、  **\<ScriptManager >** WCF サービスへのパスを指定するタグ。
 
-    ```html
+    ```xml
     <Services>
        <asp:ServiceReference Path="~/CostService.svc" />
     </Services>
     ```
 
-1. Javascript 関数のコードを追加`Calculate()`します。 次のコードを配置、**ヘッド**web フォームのセクション。
+5. Javascript 関数のコードを追加`Calculate()`します。 次のコードを配置、**ヘッド**web フォームのセクション。
 
-    ```javascript
+    ```html
     <script type="text/javascript">
 
         function Calculate() {

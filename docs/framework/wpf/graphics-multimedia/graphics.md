@@ -7,34 +7,36 @@ helpviewer_keywords:
 - visual effects [WPF]
 - graphics [WPF], effects
 ms.assetid: 3bfc652e-91b7-4697-a4f4-83ff0e98327e
-ms.openlocfilehash: 5d3a19460fa2a2a8269887df0e97a3ad18654607
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c59d19c925d99ac8f5dd07da84295ee002c956de
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762216"
 ---
 # <a name="graphics"></a>グラフィックス
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] プランには、マルチ メディア、ベクター グラフィックス、アニメーション、およびコンテンツの構成、簡単に興味深いユーザー インターフェイスとコンテンツを構築する開発者向けのサポートが統合されています。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] プランには、マルチ メディア、ベクター グラフィックス、アニメーション、および簡単興味深いユーザー インターフェイスやコンテンツを構築する開発者向けコンテンツの構成のサポートが統合されています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ビットマップ効果](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects.md)  
- [ブラシ](../../../../docs/framework/wpf/graphics-multimedia/brushes.md)  
- [描画](../../../../docs/framework/wpf/graphics-multimedia/drawings.md)  
- [ジオメトリ](../../../../docs/framework/wpf/graphics-multimedia/geometries.md)  
- [イメージ](../../../../docs/framework/wpf/graphics-multimedia/images.md)  
- [図形](../../../../docs/framework/wpf/graphics-multimedia/shapes.md)  
- [変換](../../../../docs/framework/wpf/graphics-multimedia/transformations.md)  
- [グラフィックス レンダリングのレジストリ設定](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
+ [ビットマップ効果](bitmap-effects.md)  
+ [ブラシ](brushes.md)  
+ [描画](drawings.md)  
+ [ジオメトリ](geometries.md)  
+ [イメージ](images.md)  
+ [図形](shapes.md)  
+ [変換](transformations.md)  
+ [グラフィックス レンダリングのレジストリ設定](graphics-rendering-registry-settings.md)  
+ [方法トピック](graphics-how-to-topics.md)  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Shapes.Shape>  
- <xref:System.Windows.Media.Transform>  
- <xref:System.Windows.Media.Imaging.BitmapImage>  
- <xref:System.Windows.Media.Geometry>  
- <xref:System.Windows.Media.Drawing>  
- <xref:System.Windows.Media.Brush>  
- <xref:System.Windows.Media.Effects.BitmapEffect>  
- [2D グラフィックスとイメージング](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [グラフィックスとマルチメディア](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [WPF グラフィックス レンダリングの概要](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Shapes.Shape>
+- <xref:System.Windows.Media.Transform>
+- <xref:System.Windows.Media.Imaging.BitmapImage>
+- <xref:System.Windows.Media.Geometry>
+- <xref:System.Windows.Media.Drawing>
+- <xref:System.Windows.Media.Brush>
+- <xref:System.Windows.Media.Effects.BitmapEffect>
+- [2D グラフィックスとイメージング](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [グラフィックスとマルチメディア](index.md)
+- [WPF グラフィックス レンダリングの概要](wpf-graphics-rendering-overview.md)

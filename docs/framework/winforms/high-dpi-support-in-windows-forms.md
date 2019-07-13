@@ -1,5 +1,5 @@
 ---
-title: Windows フォームでの高 DPI サポート
+title: Windows フォームで高 DPI のサポート
 ms.date: 05/16/2017
 helpviewer_keywords:
 - High DPI in Windows Forms
@@ -9,37 +9,37 @@ helpviewer_keywords:
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fbf2d7b61b34a2cd4641a77ee1f2fcdff7f3c3fe
-ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
+ms.openlocfilehash: 1641702c7b1c3d3b0e83c59a96529de70f699d17
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34483542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966947"
 ---
-# <a name="high-dpi-support-in-windows-forms"></a>Windows フォームでの高 DPI サポート
+# <a name="high-dpi-support-in-windows-forms"></a>Windows フォームで高 DPI のサポート
 
-.NET Framework 4.7 以降、Windows フォームには、共通の高 DPI と動的 DPI シナリオ用の機能強化が含まれています。 次の設定があります。 
+以降、.NET Framework 4.7 では、Windows フォームには、共通の高 DPI および動的 DPI シナリオの機能強化が含まれています。 不足している機能には次が含まれます。
 
-- スケーリングとさまざまな Windows フォームのレイアウトの改善を制御するように、<xref:System.Windows.Forms.MonthCalendar>コントロールと<xref:System.Windows.Forms.CheckedListBox>コントロール。 
+- スケーリングとさまざまな Windows フォームのレイアウトの機能強化を制御するなど、<xref:System.Windows.Forms.MonthCalendar>コントロールと<xref:System.Windows.Forms.CheckedListBox>コントロール。
 
-- シングル パスをスケーリングします。  .NET Framework 4.6 と以前のバージョンでのスケーリングが必要以上にスケールする一部のコントロールの原因となる、複数のパスを通じて実行されました。
+- 単一パスをスケーリングします。  .NET Framework 4.6 以前のバージョンで、スケーリングが必要以上にスケールする一部のコントロールの原因とする複数のパスから実行されました。
 
-- Windows フォーム アプリケーションの起動後、ユーザー DPI またはスケール ファクターを変更する動的の DPI シナリオをサポートします。
+- Windows フォーム アプリケーションが起動された後に、ユーザー、DPI またはスケール ファクターを変更、動的 DPI シナリオのサポート。
 
-.NET Framework 4.7 以降の .NET Framework のバージョンでは、高 DPI サポートの強化は、オプトイン機能です。 これを活用するために、アプリケーションを構成する必要があります。
+.NET Framework 4.7 以降では、.NET Framework のバージョンでは、高 DPI サポートの強化は、オプトイン機能です。 これを活用するためにアプリケーションを構成する必要があります。
 
-## <a name="configuring-your-windows-forms-app-for-high-dpi-support"></a>高 DPI サポートについては、Windows フォーム アプリを構成します。
+## <a name="configuring-your-windows-forms-app-for-high-dpi-support"></a>高 DPI のサポートを Windows フォーム アプリの構成
 
-高 DPI 認識をサポートする新しい Windows フォームの機能は、.NET Framework 4.7 をターゲットし、Windows 10 の作成者の更新で Windows オペレーティング システムで実行されているアプリケーションでのみ使用できます。 
+高 DPI 対応をサポートする Windows フォームの新しい機能は、.NET Framework 4.7 を対象し、Windows 10 Creators Update 以降の Windows オペレーティング システムで実行しているアプリケーションでのみ使用できます。
 
-さらに、Windows フォーム アプリケーションで高 DPI サポートを構成するにする必要があります、次のように行います。
+さらに、Windows フォーム アプリケーションで高 DPI のサポートを構成するにする必要があります、次のように行います。
 
-- Windows 10 との互換性を宣言します。
+- Windows 10 と互換性を宣言します。
 
   これを行うには、マニフェスト ファイルに、次を追加します。
 
   ```xml
-  <compatibility xmlns="urn:schemas-microsoft.com:compatibility.v1">
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
     <application>
       <!-- Windows 10 compatibility -->
       <supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />
@@ -47,68 +47,68 @@ ms.locfileid: "34483542"
   </compatibility>
   ```
 
-- モニターごとの DPI 対応能力を有効にする、 *app.config*ファイル。
+- モニターごとの DPI 認識を有効にする、 *app.config*ファイル。
 
-  Windows フォームが導入されていますが、新しい[ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../../../docs/framework/configure-apps/file-schema/winforms/index.md)の新機能と .NET Framework 4.7 以降追加のカスタマイズをサポートする要素。 高 DPI をサポートする新しい機能を利用するには、アプリケーション構成ファイルに、次を追加します。   
+  Windows フォームが導入されていますが、新しい[ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../configure-apps/file-schema/winforms/index.md)の新機能と .NET Framework 4.7 以降では追加のカスタマイズをサポートする要素。 高 DPI をサポートする新しい機能を利用するには、アプリケーション構成ファイルに、次を追加します。
 
   ```xml
   <System.Windows.Forms.ApplicationConfigurationSection>
     <add key="DpiAwareness" value="PerMonitorV2" />
-  </System.Windows.Forms.ApplicationConfigurationSection>      
+  </System.Windows.Forms.ApplicationConfigurationSection>
   ```
-   
+
   > [!IMPORTANT]
-  > .NET Framework の以前のバージョンでは、マニフェストを使用して、高 DPI サポートを追加しました。 このアプローチは推奨されなく、app.config ファイルで定義された設定をオーバーライドするためです。
-   
-- 静的なを呼び出す<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>メソッドです。
-   
-  これは、アプリケーションのエントリ ポイントの最初のメソッド呼び出しでなければなりません。 例えば:
-   
+  > .NET Framework の以前のバージョンでは、マニフェストを使用して、高 DPI のサポートを追加します。 このアプローチは推奨されなく app.config ファイルで定義された設定をオーバーライドするためです。
+
+- 呼び出す静的<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>メソッド。
+
+  これは、アプリケーションのエントリ ポイントでは、最初のメソッド呼び出しでなければなりません。 例えば:
+
   ```csharp
   static void Main()
   {
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
-      Application.Run(new Form2());   
+      Application.Run(new Form2());
   }
   ```
 
-## <a name="opting-out-of-individual-high-dpi-features"></a>高 DPI 機能を個別の除外
+## <a name="opting-out-of-individual-high-dpi-features"></a>個々 の高 DPI 機能を無効にします。
 
-設定、`DpiAwareness`値を`PerMonitorV2`.NET Framework 4.7 以降の .NET Framework バージョンでサポートされている、すべて高 DPI 認識の機能を有効にします。 通常、これはほとんどの Windows フォーム アプリケーションに適しています。 ただし、1 つまたは複数の個々 の機能を除外することがあります。 これを行うための最も重要な理由は、既存のアプリケーション コードは、その機能を既に処理です。  たとえば、アプリケーションでは、自動スケーリングを処理する場合に、次のように自動サイズ変更機能を無効にする可能性があります。
+設定、`DpiAwareness`値を`PerMonitorV2`.NET Framework 4.7 以降では .NET Framework のバージョンでサポートされている、すべての高 DPI 認識の機能を有効にします。 通常、これは、ほとんどの Windows フォーム アプリケーションに適しています。 ただし、1 つまたは複数の個々 の機能を無効にすることがあります。 これを行うための最も重要な理由は、既存のアプリケーション コードは、その機能を既に処理です。  たとえば、アプリケーションでは、自動スケーリングを処理する場合は次のように、自動サイズ変更機能を無効にします。
 
 ```xml
 <System.Windows.Forms.ApplicationConfigurationSection>
   <add key="DpiAwareness" value="PerMonitorV2" />
-  <add key="EnableWindowsFormsHighDpiAutoResizing" value="false" /> 
-</System.Windows.Forms.ApplicationConfigurationSection>    
+  <add key="EnableWindowsFormsHighDpiAutoResizing" value="false" />
+</System.Windows.Forms.ApplicationConfigurationSection>
 ```
 
-個々 のキーと値の一覧は、次を参照してください。 [Windows フォームに追加の構成要素](../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)です。
+個々 のキーおよび値の一覧は、次を参照してください。 [Windows フォームの追加の構成要素](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)します。
 
-## <a name="new-dpi-change-events"></a>新しい DPI の変更イベント
+## <a name="new-dpi-change-events"></a>新しい DPI 変更イベント
 
-.NET Framework 4.7 以降では、3 つの新しいイベントを使用する動的 DPI の変更をプログラムで処理します。
+3 つの新しいイベントは、.NET Framework 4.7 以降では、プログラムによって動的 DPI の変更を処理することができます。
 
-- <xref:System.Windows.Forms.Control.DpiChangedAfterParent>、コントロールの DPI 設定は、親コントロールの DPI の変更イベントの後にプログラムで変更またはフォームが発生したときに発生します。
-- <xref:System.Windows.Forms.Control.DpiChangedBeforeParent>、コントロールの DPI 設定は、親コントロールの DPI の変更イベントの前にプログラムで変更またはフォームが発生したときに発生します。
-- <xref:System.Windows.Forms.Form.DpiChanged>、フォームが現在表示されている、ディスプレイ デバイスに DPI 設定が変更されたときに発生します。
+- <xref:System.Windows.Forms.Control.DpiChangedAfterParent>を親コントロールの DPI 変更イベントの後に、コントロールの DPI 設定がプログラムで変更またはフォームが発生したときに発生します。
+- <xref:System.Windows.Forms.Control.DpiChangedBeforeParent>を親コントロールの DPI 変更イベントの前に、コントロールの DPI 設定がプログラムで変更またはフォームが発生したときに発生します。
+- <xref:System.Windows.Forms.Form.DpiChanged>、フォームが現在表示されているディスプレイ デバイスの DPI 設定が変更されたときに、これが発生します。
 
 ## <a name="new-helper-methods-and-properties"></a>新しいヘルパー メソッドとプロパティ
 
-.NET Framework 4.7 では、さまざまな DPI スケーリングに関する情報を提供し、DPI スケールを実行できるようにする新しいヘルパー メソッドとプロパティも追加されます。 次の設定があります。
+.NET Framework 4.7 では、さまざまな DPI スケールに関する情報を提供し、DPI スケールを実行できるようにする新しいヘルパー メソッドとプロパティも追加します。 不足している機能には次が含まれます。
 
 - <xref:System.Windows.Forms.Control.LogicalToDeviceUnits%2A>を論理座標から値をデバイス ピクセルに変換します。
 
-- <xref:System.Windows.Forms.Control.ScaleBitmapLogicalToDevice%2A>、デバイスの論理 DPI にビットマップのスケールを設定します。
+- <xref:System.Windows.Forms.Control.ScaleBitmapLogicalToDevice%2A>、ビットマップ イメージにデバイスの論理 DPI スケールします。
 
-- <xref:System.Windows.Forms.Control.DeviceDpi%2A>、現在のデバイスの DPI が返されます。
+- <xref:System.Windows.Forms.Control.DeviceDpi%2A>を現在のデバイスの DPI が返されます。
 
 ## <a name="versioning-considerations"></a>バージョン管理に関する考慮事項
 
-、.NET Framework 4.7 と Windows 10 の作成者 Update 上だけでなく、アプリケーションがない高 DPI の機能強化と互換性のある環境では実行もします。 この場合、代替のアプリケーションを開発する必要があります。 こうことを実行する[カスタム描画](./controls/user-drawn-controls.md)スケーリングを処理します。
+.NET Framework 4.7 と Windows 10 Creators Update でを実行するだけでなく、アプリケーションもない高 DPI 機能強化と互換性のある環境で実行できます。 この場合、代替のアプリケーションを開発する必要があります。 実行するために行うことができます[カスタム描画](./controls/user-drawn-controls.md)スケーリングを処理します。
 
-これを行うには、アプリが実行されているオペレーティング システムを決定する必要があります。 次のようなコードを行うことができます。
+これを行うには、アプリが実行されているオペレーティング システムを決定する必要があります。 次のようなコードで行うことができます。
 
 ```csharp
 // Create a reference to the OS version of Windows 10 Creators Update.
@@ -122,9 +122,9 @@ Console.WriteLine(Environment.OSVersion.VersionString);
 Console.WriteLine(Environment.OSVersion.Version.CompareTo(OsMinVersion));
 ```
 
-アプリケーションが正常が認識できない Windows 10、アプリケーション マニフェストでサポートされているオペレーティング システムとして表示されていない場合に注意してください。
+エントリのアプリケーション マニフェストでサポートされているオペレーティング システムとして表示されていない場合、アプリケーションはありません Windows 10 が検出が正常に注意してください。
 
-に対して、アプリケーションが作成されている .NET Framework のバージョンを確認することもできます。
+アプリケーションがビルドされた .NET Framework のバージョンをチェックすることもできます。
 
 ```csharp
 Console.WriteLine(AppDomain.CurrentDomain.SetupInformation.TargetFrameworkName);
@@ -132,5 +132,5 @@ Console.WriteLine(AppDomain.CurrentDomain.SetupInformation.TargetFrameworkName);
 
 ## <a name="see-also"></a>関連項目
 
-[Windows フォームの構成要素を追加します。](../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)  
-[Windows フォームのサイズとスケールを調整する](../../../docs/framework/winforms/adjusting-the-size-and-scale-of-windows-forms.md)
+- [Windows フォームの構成要素を追加します。](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
+- [Windows フォームのサイズとスケールを調整する](adjusting-the-size-and-scale-of-windows-forms.md)

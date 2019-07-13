@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a65c3c14507b2520c69875a1bc101ce826ace7ba
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: eb83bc3c0c7724dbcd3133465d4e7ad3a9eea3a9
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041409"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636502"
 ---
 # <a name="blessiwbemservices-function"></a>BlessIWbemServices 関数
 ユーザーの資格情報が指定したへのアクセスを許可するかどうかを示す[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)クラス。   
@@ -43,20 +43,23 @@ HRESULT BlessIWbemServices (
 
 ## <a name="parameters"></a>パラメーター
 
-`pIWbemServices`  
+`pIWbemServices`\
 [in]ポインター、 [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)オブジェクトの権限が必要です。
 
-`strUser`  
+`strUser`\
 [in]ユーザー名。
 
-`strPassword`  
+`strPassword`\
 [in]関連付けられているパスワード`strUser`します。
 
-`strAuthority` [in]ユーザーのドメイン名。 参照してください、 [ConnectServerWmi](connectserverwmi.md)関数の詳細についてはします。
+`strAuthority`\
+[in]ユーザーのドメイン名。 参照してください、 [ConnectServerWmi](connectserverwmi.md)関数の詳細についてはします。
 
-`impLevel` [in]偽装レベル。
+`impLevel`\
+[in]偽装レベル。
 
-`authnLevel` [in]承認レベル。
+`authnLevel`\
+[in]承認レベル。
 
 ## <a name="return-value"></a>戻り値
 
@@ -70,12 +73,14 @@ HRESULT BlessIWbemServices (
 | `E_OUTOFMEMORY` | 0x80000002 | メモリ不足のためでは、操作を実行します。 | 
 | `S_OK` | 0 | 関数呼び出しに成功しました。 | 
 
-## <a name="requirements"></a>要件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>関連項目  
-[WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+## <a name="see-also"></a>関連項目
+
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

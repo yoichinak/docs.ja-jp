@@ -5,16 +5,18 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-ms.openlocfilehash: 07986ac0c49387422aa334711b6997b159151e79
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 675369936b9f90620b03365104255a622855fa9f
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244968"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401786"
 ---
 # <a name="new-modifier-c-reference"></a>new 修飾子 (C# リファレンス)
 
 `new` キーワードを宣言の修飾子として使用すると、基底クラスから継承されたメンバーを明示的に隠ぺいできます。 継承されたメンバーを隠ぺいすると、派生バージョンのメンバーで基底クラスのバージョンが置き換えられます。 `new` 修飾子を使わずにメンバーを隠ぺいすることもできますが、コンパイラ警告が表示されます。 メンバーを明示的に隠ぺいするために `new` を使用する場合は、この警告が抑制されます。
+
+`new` キーワードは、[型のインスタンスの作成](../operators/new-operator.md)に使用することも、または[ジェネリック型制約](../keywords/new-constraint.md)として使用することもできます。
 
 継承されたメンバーを隠ぺいするには、派生クラスで同じメンバー名を使用してメンバーを宣言し、`new` キーワードで修飾します。 例:
 
@@ -24,11 +26,11 @@ ms.locfileid: "53244968"
 
 継承による名前の隠ぺいは、次のいずれかの形式で行われます。
 
-一般的に、定数、フィールド、プロパティ、型をクラスまたは構造体で使用すると、同じ名前を共有するすべての基底クラス メンバーが隠ぺいされます。  次のような特殊な状況があります。  たとえば、呼び出し可能ではない型を持つ `N` という名前の新しいフィールドを宣言し、基本型が `N` をメソッドとして宣言する場合は、新しいフィールドが呼び出し構文内で基本型の宣言を隠ぺいすることはありません。  詳細については、[C# 5.0 の言語仕様](https://www.microsoft.com/download/details.aspx?id=7029) に関するページ ("式" セクション内の "メンバー ルックアップ" セクション) を参照してください。
+- 一般的に、定数、フィールド、プロパティ、型をクラスまたは構造体で使用すると、同じ名前を共有するすべての基底クラス メンバーが隠ぺいされます。 次のような特殊な状況があります。 たとえば、呼び出し可能ではない型を持つ `N` という名前の新しいフィールドを宣言し、基本型が `N` をメソッドとして宣言する場合は、新しいフィールドが呼び出し構文内で基本型の宣言を隠ぺいすることはありません。 詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)の「[メンバー ルックアップ](~/_csharplang/spec/expressions.md#member-lookup)」セクションを参照してください。
 
-メソッドをクラスまたは構造体で使用すると、基底クラスで同じ名前を共有するプロパティ、フィールド、型が隠ぺいされます。 また、同じシグネチャを持つすべての基底クラス メソッドも隠ぺいされます。
+- メソッドをクラスまたは構造体で使用すると、基底クラスで同じ名前を共有するプロパティ、フィールド、型が隠ぺいされます。 また、同じシグネチャを持つすべての基底クラス メソッドも隠ぺいされます。
 
-インデクサーをクラスまたは構造体で使用すると、同じシグネチャを持つすべての基底クラス インデクサーが隠ぺいされます。
+- インデクサーをクラスまたは構造体で使用すると、同じシグネチャを持つすべての基底クラス インデクサーが隠ぺいされます。
 
 `new` と [override](override.md) には相反する意味があるため、同じメンバーにこの 2 つの修飾子を使用するとエラーになります。 `new` 修飾子は、同じ名前で新しいメンバーを作成し、元のメンバーを隠ぺいします。 `override` 修飾子は、継承されたメンバーの実装を拡張します。
 
@@ -48,20 +50,19 @@ ms.locfileid: "53244968"
 
 `new` 修飾子を削除すると、プログラムのコンパイルおよび実行は行われますが、次の警告が出力されます。
 
-```
+```text
 The keyword new is required on 'MyDerivedC.x' because it hides inherited member 'MyBaseC.x'.
 ```
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)の「[new 修飾子](~/_csharplang/spec/classes.md#the-new-modifier)」セクションを参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../../language-reference/index.md)
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
-- [演算子のキーワード](operator-keywords.md)
 - [修飾子](modifiers.md)
 - [Override キーワードと New キーワードによるバージョン管理](../../programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)
 - [Override キーワードと New キーワードを使用する場合について](../../programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)

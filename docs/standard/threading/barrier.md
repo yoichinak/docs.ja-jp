@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 613a8bc7-6a28-4795-bd6c-1abd9050478f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cbbf7055a250ae7fa630097f3014a6420228fed3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 081a4e66462ab546bf4738b4a8b06a4a2ec91a1d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397008"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645040"
 ---
 # <a name="barrier"></a>バリア
 
@@ -44,17 +44,17 @@ ms.locfileid: "47397008"
 
  バリアは、スレッドで複数のフェーズをループ処理する場合に特に便利です。 コードで作業のフェーズが 1 つか 2 つしか必要ない場合は、次のような何らかの暗黙的な結合と共に <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> オブジェクトを使用することを検討してください。  
   
--   <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType>  
+- <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType>  
   
--   <xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWithType>  
+- <xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWithType>  
   
--   <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>  
+- <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>  
   
--   <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>  
+- <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>  
   
  詳細については、「[継続タスクを使用したタスクの連結](../parallel-programming/chaining-tasks-by-using-continuation-tasks.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [スレッド処理オブジェクトと機能](threading-objects-and-features.md)  
+- [スレッド処理オブジェクトと機能](threading-objects-and-features.md)
 - [方法: バリアを使用して同時実行操作を同期する](how-to-synchronize-concurrent-operations-with-a-barrier.md)

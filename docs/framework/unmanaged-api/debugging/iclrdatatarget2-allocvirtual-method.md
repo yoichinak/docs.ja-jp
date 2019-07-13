@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46532592057f4fa6d9883d46dcef2f8f9e5f7228
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 92eff65078f05557f542c64c1be7d4f6eca43eb5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406345"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738475"
 ---
 # <a name="iclrdatatarget2allocvirtual-method"></a>ICLRDataTarget2::AllocVirtual メソッド
-このターゲット プロセスのアドレス空間内のメモリを割り当てられません共通言語ランタイム (CLR) データ アクセス サービスによって呼び出されます。  
+このターゲット プロセスのアドレス空間でメモリの割り当てに共通言語ランタイム (CLR) データ アクセス サービスによって呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT AllocVirtual(  
     [in] CLRDATA_ADDRESS addr,  
     [in] ULONG32 size,  
@@ -39,7 +39,7 @@ HRESULT AllocVirtual(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `addr`  
  [in]A`CLRDATA_ADDRESS`割り当てられるメモリの要求の開始アドレスを指定する値。  
   
@@ -47,28 +47,29 @@ HRESULT AllocVirtual(
  [in]割り当てられるメモリのバイト単位のサイズ。  
   
  `typeFlags`  
- [in]メモリの割り当てを制御するフラグ。 Win32 を参照してください`VirtualAlloc`関数。  
+ [in]メモリの割り当てを制御するフラグ。 Win32 を参照してください。`VirtualAlloc`関数。  
   
  `protectFlags`  
- [in]割り当てられたメモリの保護属性。 Win32 を参照してください`VirtualAlloc`関数。  
+ [in]割り当てられたメモリの保護属性。 Win32 を参照してください。`VirtualAlloc`関数。  
   
  `virt`  
- [out]ポインター、`CLRDATA_ADDRESS`割り当てられたメモリの実際の開始アドレスを指定する値。  
+ [out]ポインターを`CLRDATA_ADDRESS`割り当てられたメモリの実際の開始アドレスを指定する値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `AllocVirtual`メソッドは、Win32 の論理ラッパーとして機能`VirtualAlloc`関数。  
   
  このメソッドは、デバッグ アプリケーションの作成者によって実装されます。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** ClrData.idl、ClrData.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICLRDataTarget2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)  
- [FreeVirtual メソッド](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-freevirtual-method.md)
+## <a name="see-also"></a>関連項目
+
+- [ICLRDataTarget2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)
+- [FreeVirtual メソッド](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-freevirtual-method.md)

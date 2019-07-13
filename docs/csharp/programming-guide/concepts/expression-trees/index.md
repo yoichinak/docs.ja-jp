@@ -2,17 +2,17 @@
 title: 式ツリー (C#)
 ms.date: 07/20/2015
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
-ms.openlocfilehash: f17b4fba92c502ca6d53fef7ac6d01f2fdefc02e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7744954d3a3f552d5765e6e7085950f08a5adf55
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702738"
 ---
 # <a name="expression-trees-c"></a>式ツリー (C#)
 式ツリーでは、コードがツリー状のデータ構造で表示されます。各ノードは 1 つの式に対応しています。たとえば、メソッドの呼び出しや `x < y` のような二項演算などです。  
   
- 式ツリーで表されるコードはコンパイルおよび実行できます。 これによって、実行可能なコードの動的な変更、さまざまなデータベースでの LINQ クエリの実行、および動的クエリの作成が可能になります。 LINQ の式ツリーの詳細については、「[How to: Use Expression Trees to Build Dynamic Queries (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md)」 (方法: 式ツリーを使用して動的クエリをビルドする (C#)) を参照してください。  
+ 式ツリーで表されるコードはコンパイルおよび実行できます。 これによって、実行可能なコードの動的な変更、さまざまなデータベースでの LINQ クエリの実行、および動的クエリの作成が可能になります。 LINQ の式ツリーの詳細については、「[方法: 式ツリーを使用して動的クエリをビルドする (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md)」をご覧ください。  
   
  また、式ツリーを動的言語ランタイム (DLR) に使用することで、動的言語と .NET Framework 間の相互運用性が実現し、コンパイラ ライターで Microsoft Intermediate language (MSIL) ではなく式ツリーを出力できるようになります。 DLR の詳細については、「[動的言語ランタイムの概要](../../../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)」を参照してください。  
   
@@ -118,7 +118,7 @@ Console.WriteLine("Decomposed expression: {0} => {1} {2} {3}",
 ```  
   
 ## <a name="immutability-of-expression-trees"></a>式ツリーの不変性  
- 式ツリーは変更できません。 つまり、式ツリーを変更するには、既存の式ツリーをコピーしてツリー内のノードを置き換えることで、新しい式ツリーを作成する必要があります。 式ツリー ビジターを使用して、既存の式ツリーを走査することができます。 詳細については、「[方法: 式ツリーを変更する (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)」を参照してください。  
+ 式ツリーは変更できません。 つまり、式ツリーを変更するには、既存の式ツリーをコピーしてツリー内のノードを置き換えることで、新しい式ツリーを作成する必要があります。 式ツリー ビジターを使用して、既存の式ツリーを走査することができます。 詳細については、「[方法 :式ツリーを変更する (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)」をご覧ください。  
   
 ## <a name="compiling-expression-trees"></a>式ツリーのコンパイル  
  <xref:System.Linq.Expressions.Expression%601> 型に含まれる <xref:System.Linq.Expressions.Expression%601.Compile%2A> メソッドにより、式ツリーが表すコードを実行可能なデリゲートにコンパイルします。  
@@ -145,13 +145,13 @@ Console.WriteLine(expr.Compile()(4));
 // Also prints True.  
 ```  
   
- 詳細については、「[方法: 式ツリーを実行する (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)」を参照してください。  
+ 詳細については、「[方法 :式ツリーを実行する (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)」をご覧ください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- <xref:System.Linq.Expressions>  
-- [方法 : 式ツリーを実行する (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
-- [方法: 式ツリーを変更する (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)  
-- [ラムダ式](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
-- [動的言語ランタイムの概要](../../../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
+- <xref:System.Linq.Expressions>
+- [方法: 式ツリーを実行する (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+- [方法: 式ツリーを変更する (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
+- [ラムダ式](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+- [動的言語ランタイムの概要](../../../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
 - [プログラミングの概念 (C#)](../../../../csharp/programming-guide/concepts/index.md)

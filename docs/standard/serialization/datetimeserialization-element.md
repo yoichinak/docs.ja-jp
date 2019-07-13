@@ -1,19 +1,19 @@
 ---
-title: '&lt;dateTimeSerialization&gt; 要素'
+title: <dateTimeSerialization> 要素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - dateTimeSerialization element
 - XML serialization, configuration
 - <dateTimeSerialization> element
 ms.assetid: 90fda55c-7730-41e9-bc4b-6423a4b920af
-ms.openlocfilehash: cd275cdbc51c86b1d774058db839c38349b319a6
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: af0d8eeb36e023b4d38f9ad5831de3d392a487fd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922552"
 ---
-# <a name="ltdatetimeserializationgt-element"></a>&lt;dateTimeSerialization&gt; 要素
+# <a name="datetimeserialization-element"></a>\<dateTimeSerialization > 要素
 <xref:System.DateTime> オブジェクトのシリアル化モードを決定します。  
   
  \<configuration>  
@@ -34,7 +34,7 @@ ms.locfileid: "47079472"
   
 |属性|説明|  
 |----------------|-----------------|  
-|`mode`|省略可能です。 シリアル化モードを指定します。 <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode> 値のいずれかに設定します。 既定値は **RoundTrip** です。|  
+|`mode`|任意。 シリアル化モードを指定します。 <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode> 値のいずれかに設定します。 既定値は **RoundTrip** です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -52,10 +52,10 @@ ms.locfileid: "47079472"
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.DateTime>  
-- <xref:System.Xml.Serialization.XmlSchemaImporter>  
-- <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>  
-- [構成ファイル スキーマ](../../../docs/framework/configure-apps/file-schema/index.md)  
-- [\<schemaImporterExtensions> 要素](../../../docs/standard/serialization/schemaimporterextensions-element.md)  
-- [\<追加 > 要素の\<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)  
+- <xref:System.DateTime>
+- <xref:System.Xml.Serialization.XmlSchemaImporter>
+- <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
+- [構成ファイル スキーマ](../../../docs/framework/configure-apps/file-schema/index.md)
+- [\<schemaImporterExtensions> 要素](../../../docs/standard/serialization/schemaimporterextensions-element.md)
+- [\<追加 > 要素の\<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
 - [\<system.xml.serialization> 要素](../../../docs/standard/serialization/system-xml-serialization-element.md)

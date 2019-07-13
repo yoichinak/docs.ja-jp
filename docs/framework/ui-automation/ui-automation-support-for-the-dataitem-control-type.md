@@ -6,18 +6,16 @@ helpviewer_keywords:
 - Data Item control type
 - control types, Data Item
 ms.assetid: 181708fd-2595-4c43-9abd-75811627d64c
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: e055733a8f3d1ecb9c1fcea336bbe90ddd155731
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
-ms.translationtype: MT
+ms.openlocfilehash: 6263d7777becc1042cf477503c7f68af29fa7f4c
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49337650"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59125212"
 ---
 # <a name="ui-automation-support-for-the-dataitem-control-type"></a>UI オートメーションによる DataItem コントロール型のサポート
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]に関する最新情報については[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)をご覧ください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
  このトピックでは、DataItem コントロール型に対する [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] のサポートについて説明します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] でのコントロール型とは、コントロールが <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> プロパティを使用するために満たす必要がある一連の条件のことです。 これらの条件には、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のプロパティ値、およびコントロール パターンに関する特定のガイドラインが含まれます。  
   
@@ -104,11 +102,12 @@ ms.locfileid: "49337650"
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー - コントロール ビュー|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー - コンテンツ ビュー|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|-グループ"Contoso"(テーブル、グリッド)<br />-DataItem"Accounts Receivable.doc"(TableItem、GridItem、SelectionItem を呼び出す)<br />-"Accounts Receivable.doc"のイメージします。<br />-"Name"(TableItem、GridItem、値"Accounts Receivable.doc") を編集します。<br />編集「更新日」(TableItem、GridItem、値"2006 年 8 月 25 日午後 3時 29分")<br />-[サイズ] (、TableItem、GridItem 値"11.0 KB) を編集します。<br />-DataItem"Accounts Payable.doc"(TableItem、GridItem、SelectionItem を呼び出す)<br />-   ...|-グループ"Contoso"(テーブル、グリッド)<br />-DataItem"Accounts Receivable.doc"(TableItem、GridItem、SelectionItem を呼び出す)<br />-"Accounts Receivable.doc"のイメージします。<br />-"Name"(TableItem、GridItem、値"Accounts Receivable.doc") を編集します。<br />編集「更新日」(TableItem、GridItem、値"2006 年 8 月 25 日午後 3時 29分")<br />-[サイズ] (、TableItem、GridItem 値"11.0 KB) を編集します。<br />-DataItem"Accounts Payable.doc"(TableItem、GridItem、SelectionItem を呼び出す)<br />-   …|  
+|-グループ"Contoso"(テーブル、グリッド)<br />-DataItem"Accounts Receivable.doc"(TableItem、GridItem、SelectionItem を呼び出す)<br />-"Accounts Receivable.doc"のイメージします。<br />-"Name"(TableItem、GridItem、値"Accounts Receivable.doc") を編集します。<br />編集「更新日」(TableItem、GridItem、値"2006 年 8 月 25 日午後 3時 29分")<br />-   Edit "Size" (GridItem, TableItem, Value "11.0 KB)<br />-   DataItem "Accounts Payable.doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-   ...|-グループ"Contoso"(テーブル、グリッド)<br />-DataItem"Accounts Receivable.doc"(TableItem、GridItem、SelectionItem を呼び出す)<br />-"Accounts Receivable.doc"のイメージします。<br />-"Name"(TableItem、GridItem、値"Accounts Receivable.doc") を編集します。<br />編集「更新日」(TableItem、GridItem、値"2006 年 8 月 25 日午後 3時 29分")<br />-   Edit "Size" (GridItem, TableItem, Value "11.0 KB)<br />-   DataItem "Accounts Payable.doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-   …|  
   
  グリッドが選択可能な項目のリストを表している場合、DataItem コントロール型の代わりに、ListItem コントロール型で対応する UI 要素を公開できます。 前の例では、グループ ("Contoso") の下の DataItem 要素 ("Accounts Receivable.doc" および "Accounts Payable.doc") を ListItem コントロール型として公開することで、その型が既に SelectionItem コントロール パターンをサポートしているため、それらの要素を向上させることができます。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Automation.ControlType.DataItem>  
- [UI オートメーション コントロール型の概要](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
- [UI オートメーションの概要](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Automation.ControlType.DataItem>
+- [UI オートメーション コントロール型の概要](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [UI オートメーションの概要](../../../docs/framework/ui-automation/ui-automation-overview.md)

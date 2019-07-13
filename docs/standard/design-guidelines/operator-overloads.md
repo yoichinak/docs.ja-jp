@@ -9,12 +9,12 @@ helpviewer_keywords:
 - overloaded operators
 ms.assetid: 37585bf2-4c27-4dee-849a-af70e3338cc1
 author: KrzysztofCwalina
-ms.openlocfilehash: d1b9d8bc1f5f6f83a50dbd798894f94937320d2b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 441dc2777cd8d221300c526b6b31a647af60ca71
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756859"
 ---
 # <a name="operator-overloads"></a>演算子のオーバーロード
 演算子のオーバー ロードは、組み込みの言語プリミティブとして表示するフレームワークの種類を許可します。  
@@ -45,7 +45,7 @@ ms.locfileid: "53152137"
   
  次の表には、演算子と、対応するメソッドのフレンドリ名の一覧が含まれています。  
   
-|C# 演算子記号|メタデータ名|フレンドリ名|  
+|C# 演算子記号|メタデータ名|表示名|  
 |-------------------------|-------------------|-------------------|  
 |`N/A`|`op_Implicit`|`To<TypeName>/From<TypeName>`|  
 |`N/A`|`op_Explicit`|`To<TypeName>/From<TypeName>`|  
@@ -114,5 +114,5 @@ ms.locfileid: "53152137"
   
 ## <a name="see-also"></a>関連項目
 
-- [メンバーのデザインのガイドライン](../../../docs/standard/design-guidelines/member.md)  
+- [メンバーのデザインのガイドライン](../../../docs/standard/design-guidelines/member.md)
 - [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)

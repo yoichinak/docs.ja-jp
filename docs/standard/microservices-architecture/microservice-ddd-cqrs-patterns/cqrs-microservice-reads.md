@@ -1,15 +1,13 @@
 ---
 title: CQRS マイクロサービスに読み取り/クエリを実装する
 description: コンテナー化された .NET アプリケーション用の .NET マイクロサービス アーキテクチャ | Dapper を使用した eShopOnContainers でのオーダリング マイクロサービスの CQRS のクエリ側の実装を理解する。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: a77a92d12e3b60ebb67bab557a4e5ec1dd2f882f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f791546e2fc00e276ab55302802a5534465ace58
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126447"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639719"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>CQRS マイクロサービスに読み取り/クエリを実装する
 
@@ -89,17 +87,17 @@ public class OrderQueries : IOrderQueries
 
 重要な点は、動的な型を使用することで、返されるデータ コレクションが ViewModel として動的にアセンブルされることです。
 
-**長所:** この方法では、クエリの SQL 文を更新するたびに静的な ViewModel クラスを変更する必要性が低くなります。したがって、この設計方法は非常にアジャイルなコーディング方法であり、簡単で、将来の変更に合わせてすばやく進化します。
+**長所 :** この方法では、クエリの SQL 文を更新するたびに静的な ViewModel クラスを変更する必要性が低くなります。したがって、この設計方法は非常にアジャイルなコーディング方法であり、簡単で、将来の変更に合わせてすばやく進化します。
 
-**短所:** 長期的に見ると、動的な型はクライアント アプリのサービスの明確性と互換性に悪影響を与える場合があります。 さらに、Swashbuckle のようなミドルウェア ソフトウェアでは、動的な型を使用する場合に戻り値の型で同じレベルのドキュメントを提供できません。
+**短所 :** 長期的に見ると、動的な型はクライアント アプリのサービスの明確性と互換性に悪影響を与える場合があります。 さらに、Swashbuckle のようなミドルウェア ソフトウェアでは、動的な型を使用する場合に戻り値の型で同じレベルのドキュメントを提供できません。
 
 ### <a name="viewmodel-as-predefined-dto-classes"></a>定義済み DTO クラスとしての ViewModel
 
-**長所:** 明示的な DTO クラスに基づく "コントラクト" のように、静的な定義済み ViewModel クラスを使用することは、パブリック API だけでなく、長期的なマイクロサービスにも確実に適しています。同じアプリケーションでのみ使用される場合でも同様です。
+**長所** :明示的な DTO クラスに基づく "コントラクト" のように、静的な定義済み ViewModel クラスを使用することは、パブリック API だけでなく、長期的なマイクロサービスにも確実に適しています。同じアプリケーションでのみ使用される場合でも同様です。
 
 Swagger の応答型を指定する場合は、戻り値の型として明示的な DTO クラスを使用する必要があります。 したがって、定義済み DTO クラスを使用すれば、Swagger からより豊富な情報を提供することができます。 これにより、API 利用時の API のドキュメントと互換性が改善されます。
 
-**短所:** 前述のとおり、コードを更新する場合、DTO クラスを更新するためにさらにいくつかの手順を実行します。
+**短所** :前述のとおり、コードを更新する場合、DTO クラスを更新するためにさらにいくつかの手順を実行します。
 
 *経験に基づくヒント:* 開発段階の初期には非常に簡単でアジャイルであるため、eShopOnContainers のオーダリング マイクロサービスに実装したクエリには、動的な ViewModel を使用して開発を開始しました。 しかし、開発が安定した後で、API をリファクタリングし、ViewModel に静的な、または定義済みの DTO を使用することにしました。これは、マイクロサービスのコンシューマーが、"コントラクト" として使用される、明示的な DTO 型を認識しやすいためです。
 
@@ -188,13 +186,13 @@ public class OrderSummary
 ## <a name="additional-resources"></a>その他の技術情報
 
 - **Dapper** \
-  [*https://github.com/StackExchange/dapper-dot-net*](https://github.com/StackExchange/dapper-dot-net)
+ <https://github.com/StackExchange/dapper-dot-net>
 
 - **Julie Lerman。データ ポイント - Dapper、Entity Framework、およびハイブリッド アプリ (MSDN マガジンの記事)** \
-  [*https://msdn.microsoft.com/magazine/mt703432.aspx*](https://msdn.microsoft.com/magazine/mt703432.aspx)
+  <https://msdn.microsoft.com/magazine/mt703432.aspx>
 
 - **Swagger を使用する ASP.NET Core Web API のヘルプ ページ** \
-  [*https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio*](https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio)
+  <https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio>
 
 >[!div class="step-by-step"]
 >[前へ](eshoponcontainers-cqrs-ddd-microservice.md)

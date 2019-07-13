@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2a4eb444967390492be33b25866de8a93a1698c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 47120ff9de9e6e4802c5aea990841b235cd6c74c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518294"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783067"
 ---
 # <a name="writepropertyvalue-function"></a>WritePropertyValue 関数
 指定したバイト数が、プロパティ ハンドルによって識別されるプロパティに書き込まれます。
@@ -30,7 +30,7 @@ ms.locfileid: "43518294"
     
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT WritePropertyValue (
    [in] int                  vFunc, 
    [in] IWbemObjectAccess*   ptr, 
@@ -61,7 +61,7 @@ HRESULT WritePropertyValue (
 
 この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
 
-|定数  |値  |説明  |
+|定数  |Value  |説明  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが無効です。 |
 |`WBEM_E_TYPE_MISMATCH` | 0x80041005 | 型の不一致が発生しました。 |
@@ -75,12 +75,13 @@ HRESULT WritePropertyValue (
 
 非文字列プロパティの値の`lNumBytes`指定されたプロパティ型の適切なデータ サイズにする必要があります。 文字列プロパティの値、`lNumBytes`長さにする必要があります (バイト単位) で指定した文字列と文字列の偶数の長さをバイト数である必要があり、null 終端文字の後にします。
 
-## <a name="requirements"></a>要件  
-**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>関連項目  
-[WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+## <a name="see-also"></a>関連項目
+
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

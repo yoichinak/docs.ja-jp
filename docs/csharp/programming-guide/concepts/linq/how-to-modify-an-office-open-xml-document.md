@@ -2,12 +2,12 @@
 title: '方法: Office Open XML ドキュメントを変更する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 467d489c-2b1b-453b-a757-8ac180e82a96
-ms.openlocfilehash: 7a85341ee64c71a3f57b71b3db82889aee667040
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3a6edd31ff2a22e32c979e1a6a548b212406cbf5
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517629"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486651"
 ---
 # <a name="how-to-modify-an-office-open-xml-document-c"></a>方法: Office Open XML ドキュメントを変更する (C#)
 このトピックでは、Office Open XML ドキュメントを開き、それを変更して保存する例について説明します。  
@@ -147,6 +147,3 @@ class Program
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  
 ```  
   
-## <a name="see-also"></a>参照
-
-- [高度なクエリ手法 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;bindingRedirect&gt;要素'
+title: <bindingRedirect> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/bindingRedirect
@@ -9,23 +9,21 @@ helpviewer_keywords:
 - container tags, <bindingRedirect> element
 - bindingRedirect element
 ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: fc2c5fb906856365e901c27bfe6624375f1e0137
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: dda99bb4b96efbdd274e24e7cd548e4ed4df8b66
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704896"
 ---
-# <a name="ltbindingredirectgt-element"></a>&lt;bindingRedirect&gt;要素
+# <a name="bindingredirect-element"></a>\<bindingRedirect > 要素
 1 つのアセンブリ バージョンを別のバージョンにリダイレクトします。  
   
  \<configuration>  
-\<ランタイム >  
+\<runtime>  
 \<assemblyBinding>  
-\<dependentAssembly >  
-\<bindingRedirect >  
+\<dependentAssembly>  
+\<bindingRedirect>  
   
 ## <a name="syntax"></a>構文  
   
@@ -86,7 +84,8 @@ newVersion="new assembly version"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>関連項目
+
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [アセンブリ バージョンのリダイレクト](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

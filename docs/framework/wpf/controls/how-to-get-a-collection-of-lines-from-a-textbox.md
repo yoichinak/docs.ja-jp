@@ -1,25 +1,26 @@
 ---
-title: '方法 : TextBox から行のコレクションを取得する'
+title: '方法: TextBox から行のコレクションを取得する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - lines [WPF], getting collection of
 - TextBox control [WPF], getting collection of lines
 ms.assetid: a12f529d-b926-47f6-92bf-cad5f17b532a
-ms.openlocfilehash: 64187527da3cfb97343e2036338822d479dd997a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7b2f1c2e071388635fb50b1e3573fd7f44334dd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052483"
 ---
-# <a name="how-to-get-a-collection-of-lines-from-a-textbox"></a>方法 : TextBox から行のコレクションを取得する
-この例からのテキスト行のコレクションを取得する方法を示しています、<xref:System.Windows.Controls.TextBox>です。  
+# <a name="how-to-get-a-collection-of-lines-from-a-textbox"></a>方法: TextBox から行のコレクションを取得する
+この例からのテキストの行のコレクションを取得する方法を示しています、<xref:System.Windows.Controls.TextBox>します。  
   
 ## <a name="example"></a>例  
- 次の例を受け取る単純なメソッドを示しています、<xref:System.Windows.Controls.TextBox>引数、および返しますとして、<xref:System.Collections.Specialized.StringCollection>内のテキストの行を含む、 **TextBox**です。  <xref:System.Windows.Controls.TextBox.LineCount%2A>現在では行の数を決定するプロパティを使用、 **TextBox**、および<xref:System.Windows.Controls.TextBox.GetLineText%2A>各行を抽出し、行のコレクションに追加するメソッドを使用しています。  
+ 次の例を受け取る単純なメソッドを示しています、<xref:System.Windows.Controls.TextBox>引数として返す、<xref:System.Collections.Specialized.StringCollection>内のテキストの行を含む、 **TextBox**。  <xref:System.Windows.Controls.TextBox.LineCount%2A>プロパティを使用して、現在の行の数を調べます、 **TextBox**と<xref:System.Windows.Controls.TextBox.GetLineText%2A>メソッドを使用して各行を抽出し、行のコレクションに追加します。  
   
- [!code-csharp[TextBox_MiscCode#_TextBox_GetLines](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml.cs#_textbox_getlines)]  
+ [!code-csharp[TextBox_MiscCode#_TextBox_GetLines](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml.cs#_textbox_getlines)]  
   
-## <a name="see-also"></a>関連項目  
- [TextBox の概要](../../../../docs/framework/wpf/controls/textbox-overview.md)  
- [RichTextBox の概要](../../../../docs/framework/wpf/controls/richtextbox-overview.md)
+## <a name="see-also"></a>関連項目
+
+- [TextBox の概要](textbox-overview.md)
+- [RichTextBox の概要](richtextbox-overview.md)

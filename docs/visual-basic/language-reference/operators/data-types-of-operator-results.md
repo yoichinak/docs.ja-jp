@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data types [Visual Basic], ranges
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
-ms.openlocfilehash: 135c44217debcddb15fd4cef7e73ca2f98903c43
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 1169a30f25db6084b8d232c0696991b040e7ea59
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003699"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662534"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>演算子の結果のデータ型 (Visual Basic)
 Visual Basic では、オペランドのデータ型に基づく操作の結果のデータ型を決定します。 場合によっては、データ型のいずれかのオペランドよりも広い範囲をこれがあります。  
@@ -22,21 +22,21 @@ Visual Basic では、オペランドのデータ型に基づく操作の結果�
 ## <a name="data-type-ranges"></a>データ型の範囲  
  最小から最大値、順序で、該当するデータ型の範囲は次のとおりです。  
   
--   [ブール](../../../visual-basic/language-reference/data-types/boolean-data-type.md): 2 つの値  
+- [ブール](../../../visual-basic/language-reference/data-types/boolean-data-type.md): 2 つの値  
   
--   [SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)、[バイト](../../../visual-basic/language-reference/data-types/byte-data-type.md)— 256 の整数の値  
+- [SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)、[バイト](../../../visual-basic/language-reference/data-types/byte-data-type.md)— 256 の整数の値  
   
--   [短い](../../../visual-basic/language-reference/data-types/short-data-type.md)、 [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md) — 65,536 (6.5... E + 4) 使用可能な整数値  
+- [短い](../../../visual-basic/language-reference/data-types/short-data-type.md)、 [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md) — 65,536 (6.5... E + 4) 使用可能な整数値  
   
--   [整数](../../../visual-basic/language-reference/data-types/integer-data-type.md)、 [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md) — 4,294,967,296 (4.2. E + 9) 使用可能な整数値  
+- [整数](../../../visual-basic/language-reference/data-types/integer-data-type.md)、 [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md) — 4,294,967,296 (4.2. E + 9) 使用可能な整数値  
   
--   [長い](../../../visual-basic/language-reference/data-types/long-data-type.md)、 [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md) — 18,446,744,073,709,551,615 (1.8... E + 19) 使用可能な整数値  
+- [長い](../../../visual-basic/language-reference/data-types/long-data-type.md)、 [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md) — 18,446,744,073,709,551,615 (1.8... E + 19) 使用可能な整数値  
   
--   [10 進](../../../visual-basic/language-reference/data-types/decimal-data-type.md)-1.5... E + 29 可能な整数値、最大の範囲は 7.9... E + 28 (絶対値)  
+- [10 進](../../../visual-basic/language-reference/data-types/decimal-data-type.md)-1.5... E + 29 可能な整数値、最大の範囲は 7.9... E + 28 (絶対値)  
   
--   [1 つ](../../../visual-basic/language-reference/data-types/single-data-type.md)-最大範囲 3.4 E + 38 (絶対値)  
+- [1 つ](../../../visual-basic/language-reference/data-types/single-data-type.md)-最大範囲 3.4 E + 38 (絶対値)  
   
--   [二重](../../../visual-basic/language-reference/data-types/double-data-type.md)-最大範囲 1.7 E + 308 (絶対値)  
+- [二重](../../../visual-basic/language-reference/data-types/double-data-type.md)-最大範囲 1.7 E + 308 (絶対値)  
   
  Visual Basic データ型の詳細については、次を参照してください。[データ型](../../../visual-basic/language-reference/data-types/index.md)します。  
   
@@ -68,11 +68,11 @@ Visual Basic では、オペランドのデータ型に基づく操作の結果�
 ## <a name="integer-arithmetic"></a>整数の算術演算  
  整数演算の結果のデータ型は、オペランドのデータ型に依存します。 一般に、Visual Basic では、結果のデータ型を決定するため、次のポリシーを使用します。  
   
--   二項演算子の両方のオペランドが同じであるかどうか、結果がそのデータ型をデータ型します。 例外は、 `Boolean`、これは強制的に`Short`します。  
+- 二項演算子の両方のオペランドが同じであるかどうか、結果がそのデータ型をデータ型します。 例外は、 `Boolean`、これは強制的に`Short`します。  
   
--   符号付きのオペランドの符号なしのオペランドが参加すると場合、結果には符号付きの型で、最低どちらかのオペランドとして。  
+- 符号付きのオペランドの符号なしのオペランドが参加すると場合、結果には符号付きの型で、最低どちらかのオペランドとして。  
   
--   それ以外の場合、結果は、通常の 2 つのオペランドのデータ型のうち、大きい方。  
+- それ以外の場合、結果は、通常の 2 つのオペランドのデータ型のうち、大きい方。  
   
  結果のデータ型がありますいずれかのオペランドのデータ型と同じに注意してください。  
   
@@ -86,7 +86,7 @@ Visual Basic では、オペランドのデータ型に基づく操作の結果�
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
 |単項 `+`|Short|SByte|Byte|Short|UShort|整数型|UInteger|Long|ULong|  
-|単項 `–`|Short|SByte|Short|Short|整数|整数型|Long|Long|Decimal (10 進数型)|  
+|単項 `–`|Short|SByte|Short|Short|整数型|整数型|Long|Long|Decimal (10 進数型)|  
   
 ### <a name="-and--operators"></a><\< >> 演算子  
  次の表は、2 つのビット シフト演算子の結果のデータ型を示します`<<`と`>>`します。 各ビット シフト演算子は、Visual Basic は、左側のオペランド (シフトするビット パターン) の単項演算子として扱います。  
@@ -104,10 +104,10 @@ Visual Basic では、オペランドのデータ型に基づく操作の結果�
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Boolean`|Short|SByte|Short|Short|整数|整数型|Long|Long|Decimal (10 進数型)|  
-|`SByte`|SByte|SByte|Short|Short|整数|整数型|Long|Long|Decimal (10 進数型)|  
+|`Boolean`|Short|SByte|Short|Short|整数型|整数型|Long|Long|Decimal (10 進数型)|  
+|`SByte`|SByte|SByte|Short|Short|整数型|整数型|Long|Long|Decimal (10 進数型)|  
 |`Byte`|Short|Short|Byte|Short|UShort|整数型|UInteger|Long|ULong|  
-|`Short`|Short|Short|Short|Short|整数|整数型|Long|Long|Decimal (10 進数型)|  
+|`Short`|Short|Short|Short|Short|整数型|整数型|Long|Long|Decimal (10 進数型)|  
 |`UShort`|整数型|整数型|UShort|整数型|UShort|整数型|UInteger|Long|ULong|  
 |`Integer`|整数型|整数型|整数型|整数型|整数型|整数型|Long|Long|Decimal (10 進数型)|  
 |`UInteger`|Long|Long|UInteger|Long|UInteger|Long|UInteger|Long|ULong|  
@@ -120,10 +120,10 @@ Visual Basic では、オペランドのデータ型に基づく操作の結果�
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Boolean`|Short|SByte|Short|Short|整数|整数型|Long|Long|Long|  
-|`SByte`|SByte|SByte|Short|Short|整数|整数型|Long|Long|Long|  
+|`Boolean`|Short|SByte|Short|Short|整数型|整数型|Long|Long|Long|  
+|`SByte`|SByte|SByte|Short|Short|整数型|整数型|Long|Long|Long|  
 |`Byte`|Short|Short|Byte|Short|UShort|整数型|UInteger|Long|ULong|  
-|`Short`|Short|Short|Short|Short|整数|整数型|Long|Long|Long|  
+|`Short`|Short|Short|Short|Short|整数型|整数型|Long|Long|Long|  
 |`UShort`|整数型|整数型|UShort|整数型|UShort|整数型|UInteger|Long|ULong|  
 |`Integer`|整数型|整数型|整数型|整数型|整数型|整数型|Long|Long|Long|  
 |`UInteger`|Long|Long|UInteger|Long|UInteger|Long|UInteger|Long|ULong|  
@@ -156,10 +156,10 @@ Visual Basic では、オペランドのデータ型に基づく操作の結果�
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Boolean`|ブール型|SByte|Short|Short|整数|整数型|Long|Long|Long|  
-|`SByte`|SByte|SByte|Short|Short|整数|整数型|Long|Long|Long|  
+|`Boolean`|ブール型|SByte|Short|Short|整数型|整数型|Long|Long|Long|  
+|`SByte`|SByte|SByte|Short|Short|整数型|整数型|Long|Long|Long|  
 |`Byte`|Short|Short|Byte|Short|UShort|整数型|UInteger|Long|ULong|  
-|`Short`|Short|Short|Short|Short|整数|整数型|Long|Long|Long|  
+|`Short`|Short|Short|Short|Short|整数型|整数型|Long|Long|Long|  
 |`UShort`|整数型|整数型|UShort|整数型|UShort|整数型|UInteger|Long|ULong|  
 |`Integer`|整数型|整数型|整数型|整数型|整数型|整数型|Long|Long|Long|  
 |`UInteger`|Long|Long|UInteger|Long|UInteger|Long|UInteger|Long|ULong|  
@@ -175,14 +175,15 @@ Visual Basic では、オペランドのデータ型に基づく操作の結果�
   
  `Like`のパターンに一致するのみの演算子が定義されている`String`オペランド。 Visual Basic が、必要に応じて各オペランドを変換しようとしています。`String`操作の前にします。 結果のデータ型は常に`Boolean`します。  
   
-## <a name="see-also"></a>関連項目  
- [データの種類](../../../visual-basic/language-reference/data-types/index.md)  
- [演算子および式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [Visual Basic における算術演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
- [Visual Basic における比較演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
- [演算子](../../../visual-basic/language-reference/operators/index.md)  
- [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [算術演算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [比較演算子](../../../visual-basic/language-reference/operators/comparison-operators.md)  
- [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a>関連項目
+
+- [データの種類](../../../visual-basic/language-reference/data-types/index.md)
+- [演算子および式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [Visual Basic における算術演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Visual Basic における比較演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [演算子](../../../visual-basic/language-reference/operators/index.md)
+- [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [算術演算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [比較演算子](../../../visual-basic/language-reference/operators/comparison-operators.md)
+- [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)

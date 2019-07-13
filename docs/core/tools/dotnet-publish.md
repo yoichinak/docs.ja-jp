@@ -2,12 +2,12 @@
 title: dotnet publish コマンド
 description: dotnet publish コマンドは、.NET Core プロジェクトをディレクトリに発行します。
 ms.date: 05/29/2018
-ms.openlocfilehash: 353adfcbb0479e4a951b900f06327e23a3414225
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 24490bd0fbfca65692d7025b5ed2aea659c35473
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169782"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611550"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -20,23 +20,29 @@ ms.locfileid: "53169782"
 ## <a name="synopsis"></a>構文
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+
 ```
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-build] [--no-dependencies]
     [--no-restore] [-o|--output] [-r|--runtime] [--self-contained] [-v|--verbosity] [--version-suffix]
 dotnet publish [-h|--help]
 ```
+
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+
 ```
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-dependencies]
     [--no-restore] [-o|--output] [-r|--runtime] [--self-contained] [-v|--verbosity] [--version-suffix]
 dotnet publish [-h|--help]
 ```
+
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
 ```
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
     [--version-suffix]
 dotnet publish [-h|--help]
 ```
+
 ---
 
 ## <a name="description"></a>説明
@@ -227,5 +233,5 @@ dotnet publish [-h|--help]
 
 ## <a name="see-also"></a>関連項目
 
-* [ターゲット フレームワーク](../../standard/frameworks.md)
-* [ランタイム識別子 (RID) のカタログ](../rid-catalog.md)
+- [ターゲット フレームワーク](../../standard/frameworks.md)
+- [ランタイム識別子 (RID) のカタログ](../rid-catalog.md)

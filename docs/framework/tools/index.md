@@ -9,17 +9,17 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 208dc3048b52cc895a5142a7686829390d1d4503
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 995aeca60d462c96f951411aff9fcb2c772169d1
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041487"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489653"
 ---
 # <a name="net-framework-tools"></a>.NET Framework ツール
 .NET Framework ツールを使用すると、.NET Framework に対応したアプリケーションやコンポーネントを簡単に作成、配置、および管理できます。  
   
-ここで説明する .NET Framework ツールの大半は、Visual Studio のインストール時に自動的にインストールされます。 Visual Studio は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページからダウンロードできます。
+ここで説明する .NET Framework ツールの大半は、Visual Studio のインストール時に自動的にインストールされます。 Visual Studio は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ページからダウンロードできます。
   
  アセンブリ キャッシュ ビューアー (Shfusion.dll) を除き、これらのツールはすべてコマンド ラインから実行できます。 エクスプローラーから Shfusion.dll にアクセスする必要があります。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "44041487"
  ActiveX コントロール用の COM タイプ ライブラリに属する型定義を Windows フォーム コントロールに変換します。  
   
  [Caspol.exe (コード アクセス セキュリティ ポリシー ツール)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)  
- コンピューター ポリシー レベル、ユーザー ポリシー レベル、およびエンタープライズ ポリシー レベルのセキュリティ ポリシーを表示および構成できます。 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降では、[\<legacyCasPolicy> 要素](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)が `true` に設定されていない限り、このツールがコード アクセス セキュリティ (CAS: Code Access Security) ポリシーに影響を与えることはありません。 詳細については、「[セキュリティの変更点](../../../docs/framework/security/security-changes.md)」を参照してください。  
+ コンピューター ポリシー レベル、ユーザー ポリシー レベル、およびエンタープライズ ポリシー レベルのセキュリティ ポリシーを表示および構成できます。 .NET Framework 4 以降では、[\<legacyCasPolicy> 要素](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)が `true` に設定されていない限り、このツールがコード アクセス セキュリティ (CAS) ポリシーに影響を与えることはありません。 詳細については、「[セキュリティの変更点](../../../docs/framework/security/security-changes.md)」を参照してください。  
   
  [Cert2spc.exe (ソフトウェア発行元証明書テスト ツール)](../../../docs/framework/tools/cert2spc-exe-software-publisher-certificate-test-tool.md)  
  1 つ以上の X.509 証明書からソフトウェア発行元証明書 (SPC: Software Publisher's Certificate) を作成します。 このツールはテスト専用です。  
@@ -63,10 +63,10 @@ ms.locfileid: "44041487"
  中間言語 (IL) コードを含む移植可能な実行可能 (PE) ファイルを受け取り、IL アセンブラー (Ilasm.exe) への入力として使用できるテキスト ファイルを作成します。  
   
  [Installutil.exe (インストーラー ツール)](../../../docs/framework/tools/installutil-exe-installer-tool.md)  
- 指定したアセンブリのインストーラー コンポーネントを実行することによって、サーバー リソースのインストールとアンインストールを実行できます  (<xref:System.Configuration.Install> 名前空間のクラスと連携して動作します)。指定したアセンブリのインストーラー コンポーネントを実行することによって、サーバー リソースのインストールとアンインストールを実行できます  (<xref:System.Configuration.Install> 名前空間のクラスと連携して動作します)。  
+ 指定したアセンブリのインストーラー コンポーネントを実行することによって、サーバー リソースのインストールとアンインストールを実行できます (<xref:System.Configuration.Install> 名前空間のクラスと連携して動作します)。 
   
  [Lc.exe (ライセンス コンパイラ)](../../../docs/framework/tools/lc-exe-license-compiler.md)  
- ライセンス情報を含むテキスト ファイルを読み込んで、.licenses ファイルを生成します。この .licenses ファイルは、共通言語ランタイムの実行可能ファイルにリソースとして埋め込むことができます。 ライセンス情報を含むテキスト ファイルを読み込んで、.licenses ファイルを生成します。この .licenses ファイルは、共通言語ランタイムの実行可能ファイルにリソースとして埋め込むことができます。  
+ ライセンス情報を含むテキスト ファイルを読み込んで、.licenses ファイルを生成します。この .licenses ファイルは、共通言語ランタイムの実行可能ファイルにリソースとして埋め込むことができます。 
   
  [Mage.exe (マニフェストの生成および編集ツール)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
  アプリケーション マニフェストと配置マニフェストの作成、編集、および署名を行います。 Mage.exe はコマンド ライン ツールであるため、バッチ スクリプトから実行したり、ASP.NET アプリケーションなどの他の Windows ベースのアプリケーションから実行したりできます。  
@@ -129,7 +129,7 @@ ms.locfileid: "44041487"
  Windows フォームで使用されるユーザー インターフェイス (UI) リソース (.resx ファイルまたは .resources ファイル) のローカライズを支援します。 文字列を翻訳した後、ローカライズされた文字列に合わせて、コントロールのサイズを変更したり、コントロールを移動したり、非表示にしたりできます。  
   
 ## <a name="related-sections"></a>関連項目  
- [ツール](https://msdn.microsoft.com/library/f533241c-317c-445e-88ca-c80c8d078fca)  
+ [WPF ツール](https://docs.microsoft.com/previous-versions/ms742404(v=vs.110))  
  isXPS 適合性ツール (isXPS.exe) およびパフォーマンス プロファイリング ツールなどのツールを含みます。  
   
  [Windows Communication Foundation ツール](../../../docs/framework/wcf/tools.md)  

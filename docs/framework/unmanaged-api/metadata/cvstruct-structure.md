@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 195f311d58f2169d715bb33986ee6e591622f377
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b3e35cea4601c8e51eb3021dc9f598ddb881afe0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445044"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750723"
 ---
 # <a name="cvstruct-structure"></a>CVStruct 構造体
 モジュールまたは複合イメージをインストールするときに使用する情報が含まれます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct {  
     short Major;  
     short Minor;  
@@ -41,19 +41,20 @@ typedef struct {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|Major|メジャー バージョンのビルド番号です。|  
+|Major|ビルド番号のメジャー バージョンです。|  
 |マイナー|ビルド番号のマイナー バージョンです。|  
 |Sub|サブ ビルド番号です。|  
-|ビルド|ビルド番号です。|  
+|Build|ビルド番号です。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
  **ライブラリ:** MsCorEE.dll にリソースとして使用  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [メタデータ構造体](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
+## <a name="see-also"></a>関連項目
+
+- [メタデータ構造体](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)

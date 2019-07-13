@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - null keyword [C#]
 ms.assetid: fecb1c60-6232-4efe-87f7-9a86ba2e9119
-ms.openlocfilehash: 9c3aeb3066542080bbd5514fe536d4d125dc8ecc
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 12b7f69d7cbcac4a0270dcecfeb0c2cb8eb77fe2
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243947"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421990"
 ---
 # <a name="null-c-reference"></a>null (C# リファレンス)
 
@@ -32,6 +32,5 @@ ms.locfileid: "53243947"
 - [C# リファレンス](../../language-reference/index.md)
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
-- [リテラル キーワード](literal-keywords.md)
 - [既定値の一覧表](default-values-table.md)
 - [Nothing](../../../visual-basic/language-reference/nothing.md)

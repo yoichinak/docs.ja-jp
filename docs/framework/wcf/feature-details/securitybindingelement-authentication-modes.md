@@ -5,30 +5,30 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
-ms.openlocfilehash: 2b1601bd84e92b5a39c5c4c91fdfe67537720430
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2aed766e6b2da7ebaf7b5b863375ee95b99eb159
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748471"
 ---
 # <a name="securitybindingelement-authentication-modes"></a>SecurityBindingElement 認証モード
 Windows Communication Foundation (WCF) は、クライアントとサービスを相互に認証されるいくつかのモードを提供します。 <xref:System.ServiceModel.Channels.SecurityBindingElement> クラスの静的メソッドまたは構成を使用して、この認証モード用のセキュリティ バインド要素を作成できます。 このトピックでは、18 の認証モードについて簡単に説明します。  
   
- 認証モードのいずれかの要素を使用しての例は、次を参照してください。[方法: 指定された認証モード用の SecurityBindingElement を作成](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)です。  
+ 認証モードのいずれかの要素を使用しての例は、次を参照してください。[方法。指定した認証モード用の SecurityBindingElement を作成](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)です。  
   
 ## <a name="basic-configuration-programming"></a>基本的な構成プログラミング  
  構成ファイルで認証モードを設定する手順を次に示します。  
   
 #### <a name="to-set-the-authentication-mode-in-configuration"></a>構成で認証モードを設定するには  
   
-1.  [\<バインド >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)要素を追加、 [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)します。  
+1. [\<バインド >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)要素を追加、 [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)します。  
   
-2.  子要素として、追加、 [\<バインド >](../../../../docs/framework/misc/binding.md)要素を`<customBinding>`要素。  
+2. 子要素として、追加、 [\<バインド >](../../../../docs/framework/misc/binding.md)要素を`<customBinding>`要素。  
   
-3.  `<security>` 要素を `<binding>` 要素に追加します。  
+3. `<security>` 要素を `<binding>` 要素に追加します。  
   
-4.  `authenticationMode` 属性を、以下で説明する値のいずれかに設定します。 たとえば、次のコードによりモードは `AnonymousForCertificate` に設定されます。  
+4. `authenticationMode` 属性を、以下で説明する値のいずれかに設定します。 たとえば、次のコードによりモードは `AnonymousForCertificate` に設定されます。  
   
     ```xml  
     <bindings>  
@@ -42,14 +42,14 @@ Windows Communication Foundation (WCF) は、クライアントとサービス�
   
 #### <a name="to-set-the-mode-programmatically"></a>プログラムでモードを設定するには  
   
-1.  戻り値の型を決めます。<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>、<xref:System.ServiceModel.Channels.TransportSecurityBindingElement>、<xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>、または <xref:System.ServiceModel.Channels.SecurityBindingElement> のいずれかを指定できます。  
+1. 戻り値の型を決めます。<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>、<xref:System.ServiceModel.Channels.TransportSecurityBindingElement>、<xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>、または <xref:System.ServiceModel.Channels.SecurityBindingElement> のいずれかを指定できます。  
   
-2.  <xref:System.ServiceModel.Channels.SecurityBindingElement> クラスの適切な静的メソッドを呼び出します。 たとえば、次のコードは <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateAnonymousForCertificateBindingElement%2A> メソッドを呼び出します。  
+2. <xref:System.ServiceModel.Channels.SecurityBindingElement> クラスの適切な静的メソッドを呼び出します。 たとえば、次のコードは <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateAnonymousForCertificateBindingElement%2A> メソッドを呼び出します。  
   
      [!code-csharp[c_CustomBindingsAuthMode#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombindingsauthmode/cs/source.cs#3)]
      [!code-vb[c_CustomBindingsAuthMode#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_custombindingsauthmode/vb/source.vb#3)]  
   
-3.  カスタム バインドを作成するにはバインド要素を使用します。 詳細については、次を参照してください。[カスタム バインド](../../../../docs/framework/wcf/extending/custom-bindings.md)します。  
+3. カスタム バインドを作成するにはバインド要素を使用します。 詳細については、次を参照してください。[カスタム バインド](../../../../docs/framework/wcf/extending/custom-bindings.md)します。  
   
 ## <a name="mode-descriptions"></a>モードの説明  
   
@@ -120,6 +120,7 @@ Windows Communication Foundation (WCF) は、クライアントとサービス�
 ### <a name="usernameovertransport"></a>UserNameOverTransport  
  この認証モードでは、クライアントは、署名付きサポート トークン、つまりメッセージ署名で署名されたトークンとして SOAP 層に表示されるユーザー名トークンを使用して認証を行います。 サービスはトランスポート層で X.509 証明書を使用して認証されます。 セキュリティ バインド要素は、`TransportSecurityBindingElement` メソッドによって返される <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameOverTransportBindingElement%2A> です。 代わりに、`authenticationMode` 属性に `UserNameOverTransport` を設定します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Channels.SecurityBindingElement>  
- [方法 : 指定した認証モード用の SecurityBindingElement を作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Channels.SecurityBindingElement>
+- [方法: 指定した認証モード用の SecurityBindingElement を作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

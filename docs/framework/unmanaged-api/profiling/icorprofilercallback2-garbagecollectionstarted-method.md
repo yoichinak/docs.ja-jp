@@ -17,51 +17,52 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a447dca98e5010163d5cc5f4f3da4333f4cdf7d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f4f639f9794002748e1019821514c546e4f4429f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455271"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746869"
 ---
 # <a name="icorprofilercallback2garbagecollectionstarted-method"></a>ICorProfilerCallback2::GarbageCollectionStarted メソッド
 ガベージ コレクションが開始されたことをコード プロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GarbageCollectionStarted(  
     [in] int cGenerations,  
     [in, size_is(cGenerations), length_is(cGenerations)] BOOL generationCollected[],  
     [in] COR_PRF_GC_REASON reason);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `cGenerations`  
- [in]内のエントリの総数、`generationCollected`配列。  
+ [in]内のエントリの合計数、`generationCollected`配列。  
   
  `generationCollected`  
- [in]ブール型の値の配列`true`このガベージ コレクションによって収集された、それ以外の配列インデックスに対応する生成されている場合`false`です。  
+ [in]ブール値の配列`true`このガベージ コレクションによって収集されます。 それ以外の場合、配列のインデックスに対応する生成されている場合`false`します。  
   
- 配列のインデックスの値を[COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md)列挙体は、生成されたことを示します。  
+ 値によって、配列のインデックスが、 [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md)列挙体は、ジェネレーションを示します。  
   
  `reason`  
- [in]値、 [COR_PRF_GC_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-reason-enumeration.md)をガベージ コレクションの理由を示す列挙体が発生しました。  
+ [in]値、 [COR_PRF_GC_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-reason-enumeration.md)ガベージ コレクション理由を示す列挙体が発生しました。  
   
-## <a name="remarks"></a>コメント  
- このガベージ コレクションに関連するすべてのコールバックの間で発生、`GarbageCollectionStarted`コールバックと、対応する[icorprofilercallback 2::garbagecollectionfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)コールバック。 これらのコールバックは必要があります、同じスレッドでは発生しません。  
+## <a name="remarks"></a>Remarks  
+ このガベージ コレクションに関連するすべてのコールバック間で発生する、`GarbageCollectionStarted`コールバックと、対応する[icorprofilercallback 2::garbagecollectionfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)コールバック。 これらのコールバックは、同じスレッドでは発生する必要があります。  
   
- プロファイラーの中に元の場所にオブジェクトを検査を安全では、`GarbageCollectionStarted`コールバック。 戻り値の後に、ガベージ コレクターがオブジェクト移動を開始`GarbageCollectionStarted`です。 プロファイラーが無効であることを受信するまでのすべてのオブジェクト Id を検討してください、プロファイラーがこのコールバックから返された後、`ICorProfilerCallback2::GarbageCollectionFinished`コールバック。  
+ プロファイラーが中に元の場所にオブジェクトを検査するは安全では、`GarbageCollectionStarted`コールバック。 ガベージ コレクターが移動オブジェクトからの戻り値の後に開始されます`GarbageCollectionStarted`します。 プロファイラーがこのコールバックから戻ると後、プロファイラーが受信するまで無効にするすべてのオブジェクト Id を検討してください、`ICorProfilerCallback2::GarbageCollectionFinished`コールバック。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー** : CorProf.idl、CorProf.h  
+ **ヘッダー:** CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ICorProfilerCallback2 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback2 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

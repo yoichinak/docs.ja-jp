@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5f2da2849bdf9ce922a89bf25e1758d868ee5ea8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f444dd512dc27f1b7cda017e2c2848ac41eb56de
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47233016"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59305040"
 ---
 # <a name="traversing-xml-schemas"></a>XML スキーマの走査
 スキーマ オブジェクト モデル (SOM) API を使用して XML スキーマを走査すると、SOM に格納されている要素、属性、および型にアクセスできます。 また、SOM API を使用して XML スキーマを編集する際には、最初に SOM に読み込まれた XML スキーマを走査します。  
@@ -43,19 +43,19 @@ ms.locfileid: "47233016"
   
  このサンプルでは、次の手順でカスタム スキーマの走査を行います。  
   
-1.  カスタム スキーマを新しい <xref:System.Xml.Schema.XmlSchemaSet> オブジェクトに追加し、コンパイルします。 スキーマの読み取りまたはコンパイル時に発生するスキーマ検証に関する警告とエラーは、<xref:System.Xml.Schema.ValidationEventHandler> デリゲートで処理されます。  
+1. カスタム スキーマを新しい <xref:System.Xml.Schema.XmlSchemaSet> オブジェクトに追加し、コンパイルします。 スキーマの読み取りまたはコンパイル時に発生するスキーマ検証に関する警告とエラーは、<xref:System.Xml.Schema.ValidationEventHandler> デリゲートで処理されます。  
   
-2.  <xref:System.Xml.Schema.XmlSchema> プロパティを反復処理して、<xref:System.Xml.Schema.XmlSchemaSet> からコンパイルされた <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> オブジェクトを取得します。 スキーマはコンパイルされているため、スキーマのコンパイル後の情報セット (PSCI) プロパティにアクセスできます。  
+2. <xref:System.Xml.Schema.XmlSchema> プロパティを反復処理して、<xref:System.Xml.Schema.XmlSchemaSet> からコンパイルされた <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> オブジェクトを取得します。 スキーマはコンパイルされているため、スキーマのコンパイル後の情報セット (PSCI) プロパティにアクセスできます。  
   
-3.  各要素の名前をコンソールに出力するスキーマ コンパイル後の <xref:System.Xml.Schema.XmlSchemaElement> コレクションの <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> コレクションで、各 <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> を反復処理します。  
+3. 各要素の名前をコンソールに出力するスキーマ コンパイル後の <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> コレクションの <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> コレクションで、各 <xref:System.Xml.Schema.XmlSchemaElement> を反復処理します。  
   
-4.  `Customer` クラスを使用して <xref:System.Xml.Schema.XmlSchemaComplexType> 要素の複合型を取得します。  
+4. `Customer` クラスを使用して <xref:System.Xml.Schema.XmlSchemaComplexType> 要素の複合型を取得します。  
   
-5.  複合型に何らかの属性がある場合、それぞれの <xref:System.Collections.IDictionaryEnumerator> を列挙する <xref:System.Xml.Schema.XmlSchemaAttribute> を取得して、その名前をコンソールに出力します。  
+5. 複合型に何らかの属性がある場合、それぞれの <xref:System.Collections.IDictionaryEnumerator> を列挙する <xref:System.Xml.Schema.XmlSchemaAttribute> を取得して、その名前をコンソールに出力します。  
   
-6.  <xref:System.Xml.Schema.XmlSchemaSequence> クラスを使用して、複合型の sequence のパーティクルを取得します。  
+6. <xref:System.Xml.Schema.XmlSchemaSequence> クラスを使用して、複合型の sequence のパーティクルを取得します。  
   
-7.  各子要素の名前をコンソールに出力する <xref:System.Xml.Schema.XmlSchemaElement> コレクション内で、それぞれの <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType> を反復処理します。  
+7. 各子要素の名前をコンソールに出力する <xref:System.Xml.Schema.XmlSchemaElement> コレクション内で、それぞれの <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType> を反復処理します。  
   
  完全なコード サンプルを次に示します。  
   
@@ -69,10 +69,10 @@ ms.locfileid: "47233016"
   
 ## <a name="see-also"></a>関連項目
 
-- [XML スキーマ オブジェクト モデルの概要](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
-- [XML スキーマの読み取りと書き込み](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
-- [XML スキーマの作成](../../../../docs/standard/data/xml/building-xml-schemas.md)  
-- [XML スキーマの編集](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
-- [XML スキーマのインクルードまたはインポート](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
-- [スキーマをコンパイルするための XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- [XML スキーマ オブジェクト モデルの概要](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
+- [XML スキーマの読み取りと書き込み](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
+- [XML スキーマの作成](../../../../docs/standard/data/xml/building-xml-schemas.md)
+- [XML スキーマの編集](../../../../docs/standard/data/xml/editing-xml-schemas.md)
+- [XML スキーマのインクルードまたはインポート](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
+- [スキーマをコンパイルするための XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
 - [スキーマのコンパイル後の情報セット](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

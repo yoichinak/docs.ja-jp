@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 95850448504fd863f2726a7fb7574436476a6dc5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e9d2c74adecdfb0201f9f0c08998feba674f9e0f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449326"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778928"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>IMetaDataImport::GetParamProps メソッド
 指定した ParamDef トークンによって参照されるパラメーターのメタデータ値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetParamProps (  
    [in]  mdParamDef      tk,  
    [out] mdMethodDef     *pmd,  
@@ -44,7 +44,7 @@ HRESULT GetParamProps (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `tk`  
  [in]メタデータを返すパラメーターを表す ParamDef トークンです。  
   
@@ -58,16 +58,16 @@ HRESULT GetParamProps (
  [out]パラメーターの名前を保持するバッファー。  
   
  `cchName`  
- [in]要求されたサイズのワイド文字単位`szName`です。  
+ [in]要求されたサイズのワイド文字単位`szName`します。  
   
  `pchName`  
- [out]ワイド文字で返されるサイズ`szName`です。  
+ [out]ワイド文字で返されるサイズ`szName`します。  
   
  `pdwAttr`  
- [out]パラメーターに関連付けられている任意の属性フラグへのポインター。  
+ [out]パラメーターに関連付けられているすべての属性フラグへのポインター。 これは、ビットマスクの`CorParamAttr`値。  
   
  `pdwCPlusTypeFlag`  
- [out]パラメーターを指定するフラグへのポインター、<xref:System.ValueType>です。  
+ [out]パラメーターを指定するフラグへのポインター、<xref:System.ValueType>します。  
   
  `ppValue`  
  [out]パラメーターによって返される定数文字列へのポインター。  
@@ -75,15 +75,20 @@ HRESULT GetParamProps (
  `pcchValue`  
  [out]サイズ`ppValue`ワイド文字、または場合は 0 で`ppValue`文字列を保持しません。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="remarks"></a>Remarks
+
+シーケンスの値で`pulSequence`パラメーターの 1 から始まります。 戻り値は、シーケンス番号は 0 です。
+
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

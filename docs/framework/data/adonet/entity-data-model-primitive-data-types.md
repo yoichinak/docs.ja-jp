@@ -1,24 +1,24 @@
 ---
-title: 'Entity Data Model: プリミティブ データ型'
+title: Entity Data Model:プリミティブ データ型
 ms.date: 03/30/2017
 ms.assetid: 7635168e-0566-4fdd-8391-7941b0d9f787
-ms.openlocfilehash: 3e99f65c57cf0e0ee4cbccc79d5819d39b9ee60b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 044a0ed981bb9cda3550fb3a3a9f1cb9bff96f25
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667133"
 ---
-# <a name="entity-data-model-primitive-data-types"></a>Entity Data Model: プリミティブ データ型
-Entity Data Model (EDM) は、一連の定義に使用される抽象プリミティブ データ型 (文字列、ブール値、Int32 など) をサポートしている[プロパティ](../../../../docs/framework/data/adonet/property.md)概念モデルでします。 これらのプリミティブ データ型は、SQL Server データベースや共通言語ランタイム (CLR) などのストレージ環境またはホスト環境でサポートされる、実際のプリミティブ データ型のプロキシです。 EDM では、プリミティブ データ型に対する演算や変換のセマンティクスを定義していません。これらのセマンティクスは、ストレージ環境またはホスト環境で定義されます。 通常、EDM のプリミティブ データ型は、ストレージ環境またはホスト環境の対応プリミティブ データ型にマップされます。 Entity Framework が、EDM のプリミティブ型を SQL Server データ型にマップする方法については、次を参照してください。 [Entity Framework 用 SqlClient](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md)です。  
+# <a name="entity-data-model-primitive-data-types"></a>Entity Data Model:プリミティブ データ型
+Entity Data Model (EDM) は、一連の定義に使用される抽象プリミティブ データ型 (文字列、ブール値、Int32 など) をサポートしている[プロパティ](../../../../docs/framework/data/adonet/property.md)概念モデル。 これらのプリミティブ データ型は、SQL Server データベースや共通言語ランタイム (CLR) などのストレージ環境またはホスト環境でサポートされる、実際のプリミティブ データ型のプロキシです。 EDM では、プリミティブ データ型に対する演算や変換のセマンティクスを定義していません。これらのセマンティクスは、ストレージ環境またはホスト環境で定義されます。 通常、EDM のプリミティブ データ型は、ストレージ環境またはホスト環境の対応プリミティブ データ型にマップされます。 Entity Framework が EDM のプリミティブ型を SQL Server データ型にマップする方法については、次を参照してください。[エンティティ FrameworkTypes 用 SqlClient](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md)します。  
   
 > [!NOTE]
 >  EDM では、プリミティブ データ型のコレクションをサポートしていません。  
   
- EDM の構造化されたデータ型については、次を参照してください。[エンティティ型](../../../../docs/framework/data/adonet/entity-type.md)と[複合型](../../../../docs/framework/data/adonet/complex-type.md)です。  
+ EDM の構造化されたデータ型については、次を参照してください。[エンティティ型](../../../../docs/framework/data/adonet/entity-type.md)と[複合型](../../../../docs/framework/data/adonet/complex-type.md)します。  
   
 ## <a name="primitive-data-types-supported-in-the-entity-data-model"></a>Entity Data Model でサポートされるプリミティブ データ型  
- 下の表は、EDM でサポートされるプリミティブ データ型の一覧を示します。 テーブルの一覧も、[ファセット](../../../../docs/framework/data/adonet/facet.md)各プリミティブ データ型に適用することがあります。  
+ 下の表は、EDM でサポートされるプリミティブ データ型の一覧を示します。 テーブルの一覧も、[ファセット](../../../../docs/framework/data/adonet/facet.md)各プリミティブ データ型に適用できます。  
   
 |プリミティブ データ型|説明|使用できるファセット|  
 |-------------------------|-----------------|-----------------------|  
@@ -38,6 +38,7 @@ Entity Data Model (EDM) は、一連の定義に使用される抽象プリミ�
 |String|文字データを格納します。|Unicode、FixedLength、MaxLength、Collation、Precision、Nullable、Default|  
 |時刻|時刻を格納します。|Precision、Nullable、Default|  
   
-## <a name="see-also"></a>関連項目  
- [Entity Data Model キーの概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a>関連項目
+
+- [Entity Data Model キーの概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)

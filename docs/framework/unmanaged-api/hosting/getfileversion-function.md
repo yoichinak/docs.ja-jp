@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b772de720a8c3b669bd3cbe9591637d931cb8763
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b1f5508e9ee41d8670b43d5b219846237e11fc8f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430620"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778149"
 ---
 # <a name="getfileversion-function"></a>GetFileVersion 関数
-指定されたバッファーを使用して、指定されたファイルの共通言語ランタイム (CLR) バージョン情報を取得します。  
+指定したバッファーを使用して、指定したファイルの共通言語ランタイム (CLR) バージョン情報を取得します。  
   
- この関数は、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] では非推奨とされました。  
+ この関数は、.NET Framework 4 では廃止されました。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetFileVersion (  
     [in]  LPCWSTR      szFilename,   
     [in, out] LPWSTR   szBuffer,   
@@ -39,26 +39,26 @@ HRESULT GetFileVersion (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `szFilename`  
  [in]調査するファイルのパス。  
   
  `szBuffer`  
- [入力、出力].返されるバージョン情報に割り当てられたバッファー。  
+ [入力、出力]返されるバージョンについては、割り当てられたバッファー。  
   
  `cchBuffer`  
  [in]ワイド文字単位のサイズの`szBuffer`します。  
   
  `dwLength`  
- [out]サイズ (バイト単位)、返された`szBuffer`です。  
+ [out]サイズ (バイト単位)、返された`szBuffer`します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- 
-  [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>関連項目
+
+- [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

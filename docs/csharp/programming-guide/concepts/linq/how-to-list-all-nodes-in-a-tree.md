@@ -2,12 +2,12 @@
 title: '方法: ツリー内のすべてのノードを一覧表示する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3e934371-f4c6-458b-9f6b-f9061b596f5b
-ms.openlocfilehash: e014de90935830df3ea5454dcd4d5a840f4d04ad
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 16d61e146e3721d8d5110d89e651aeb33ee556cd
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513685"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486678"
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-c"></a>方法: ツリー内のすべてのノードを一覧表示する (C#)
 ツリー内のすべてのノードを一覧表示すると便利な場合があります。 これは、メソッドやプロパティがツリーに及ぼす影響を確認するときに役立ちます。 すべてのノードをテキスト形式で一覧表示する方法の 1 つは、ツリー内の任意のノードを正確かつ明確に識別する XPath 式を生成することです。  
@@ -348,6 +348,3 @@ class Program
 /Root/aw:ElementInNamespace/aw:ChildInNamespace  
 ```  
   
-## <a name="see-also"></a>参照
-
-- [高度なクエリ手法 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

@@ -3,12 +3,12 @@ title: 標準的な .NET イベント パターン
 description: .NET イベント パターンに関する情報を提供するほか、標準的なイベント ソースを作成し、標準的なイベントをコードでサブスクライブおよび処理する方法について説明します。
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 16a091dabe34a064ab3ee65a6d9f3e0ab36f1db4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: cd1ead318529d1afc5b27ff8710cebcaae9b7bc3
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129403"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062971"
 ---
 # <a name="standard-net-event-patterns"></a>標準的な .NET イベント パターン
 
@@ -47,7 +47,7 @@ void OnEventRaised(object sender, EventArgs args);
 
 パターンに一致するファイルを検索し、一致が検出されると、適切なイベントを発生する FileSearcher クラスを記述します。
 
-[!code-csharp[FileSearxcher](../../samples/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
+[!code-csharp[FileSearcher](../../samples/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
 
 ## <a name="defining-and-raising-field-like-events"></a>フィールドのように使用するイベントの定義と発生
 
@@ -55,7 +55,7 @@ void OnEventRaised(object sender, EventArgs args);
 
 [!code-csharp[DeclareEvent](../../samples/csharp/events/Program.cs#DeclareEvent "Declare the file found event")]
 
-これはパブリック フィールドを宣言しているように見えるため、不適切なオブジェクト指向プラクティスと考えられるかもしれません。 プロパティ、またはメソッドでデータ アクセスを保護したくなるところです。 これは一見すると不適切なプラクティスのように見えますが、コンパイラによって生成されたコードがラッパーを作成するため、イベント オブジェクトは安全な方法によってのみアクセスされます。 フィールドのように使用するイベントで使用できる唯一の操作は、ハンドラーの追加です。
+これはパブリック フィールドを宣言しているように見えるため、不適切なオブジェクト指向プラクティスと考えられるかもしれません。 プロパティ、またはメソッドでデータ アクセスを保護したくなるところです。 これは一見すると不適切なプラクティスのように見えるかもしれませんが、安全な方法でしかイベント オブジェクトにアクセスできないように、コンパイラによって生成されたコードでは、ラッパーを作成します。 フィールドのように使用するイベントで使用できる唯一の操作は、ハンドラーの追加です。
 
 [!code-csharp[DeclareEventHandler](../../samples/csharp/events/Program.cs#DeclareEventHandler "Declare the file found event handler")]
 
@@ -69,7 +69,7 @@ void OnEventRaised(object sender, EventArgs args);
 
 ## <a name="returning-values-from-event-subscribers"></a>イベント サブスクライバーからの戻り値
 
-この単純なバージョンは正常に動作しています。 次に、別の機能、キャンセルを追加します。
+この単純なバージョンは正常に動作しています。 別の機能を追加してみましょう。キャンセル機能です。
 
 検出されたイベントを発生させるとき、このファイルが要求された最後のファイルである場合、リスナーはその後の処理を停止する必要があります。
 

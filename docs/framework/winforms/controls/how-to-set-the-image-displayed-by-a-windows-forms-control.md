@@ -1,5 +1,5 @@
 ---
-title: '方法 : Windows フォーム コントロールによって表示されるイメージを設定する'
+title: '方法: Windows フォーム コントロールによって表示されるイメージを設定する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - images [Windows Forms], Windows Forms controls
 - examples [Windows Forms], controls
 ms.assetid: 9445af8f-4f62-48b0-a3f6-068058964b9f
-ms.openlocfilehash: 4870f9e2acc48a90e1e2193d514926fedee05f61
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1de835bda5ac906837ac3fbd97b87f68f14d1953
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013141"
 ---
-# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>方法 : Windows フォーム コントロールによって表示されるイメージを設定する
-いくつかの Windows フォーム コントロールは、イメージを表示できます。 これらのイメージはボタン上のフロッピー ディスク アイコンなど、コントロールの目的を明確にするアイコンを指定できます、**保存**コマンド。 目的の動作と外観の制御できるように背景画像の代わりに、アイコンもあります。  
+# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>方法: Windows フォーム コントロールによって表示されるイメージを設定する
+いくつかの Windows フォーム コントロールは、イメージを表示できます。 これらのイメージには、ボタン上のフロッピー ディスク アイコンなど、コントロールの目的を明確にするアイコンがあります、**保存**コマンド。 また、アイコンには、外観と動作を制御するための背景イメージもあります。  
   
 ### <a name="to-set-the-image-displayed-by-a-control"></a>コントロールによって表示されるイメージを設定するには  
   
-1.  コントロールの設定`Image`または`BackgroundImage`プロパティ型のオブジェクトを<xref:System.Drawing.Image>です。 一般に、するはから読み込まれるイメージ ファイルを使用して、<xref:System.Drawing.Image.FromFile%2A>メソッドです。  
+1. コントロールの設定`Image`または`BackgroundImage`プロパティ型のオブジェクトを<xref:System.Drawing.Image>します。 一般に、するはから読み込まれるイメージ ファイルを使用して、<xref:System.Drawing.Image.FromFile%2A>メソッド。  
   
-     イメージの場所は次のコード例では、パスが設定、**マイ ピクチャ**フォルダーです。 Windows オペレーティング システムを実行しているほとんどのコンピューターは、このディレクトリが含まれます。 最小限のシステムのアクセス レベルを持つユーザー、アプリケーションを安全に実行することもできます。 次のコード例では、既にフォームにある必要があります、<xref:System.Windows.Forms.PictureBox>コントロールを追加します。  
+     イメージの場所は次のコード例で、パスが設定、**マイ ピクチャ**フォルダー。 Windows オペレーティング システムを実行しているほとんどのコンピューターでは、このディレクトリが含まれます。 これにより、ユーザーは最小限のシステム アクセスのレベルでアプリケーションを安全に実行がもできます。 次のコード例では、既に使用して、フォームが必要です、<xref:System.Windows.Forms.PictureBox>コントロールを追加します。  
   
     ```vb  
     ' Replace the image named below  
@@ -56,7 +56,8 @@ ms.locfileid: "33533742"
        "\\Image.gif"));  
     ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Drawing.Image.FromFile%2A>  
- <xref:System.Drawing.Image>  
- <xref:System.Windows.Forms.Control.BackgroundImage%2A>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Drawing.Image.FromFile%2A>
+- <xref:System.Drawing.Image>
+- <xref:System.Windows.Forms.Control.BackgroundImage%2A>

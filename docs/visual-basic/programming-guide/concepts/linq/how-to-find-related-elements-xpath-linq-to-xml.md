@@ -1,15 +1,15 @@
 ---
-title: '方法: 関連要素 (XPATH-LINQ to XML) を検索 (Visual Basic)'
+title: '方法: 関連する (XPATH-LINQ to XML) の要素を検索する (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 6b0ef058-d704-48a5-98cd-33f00d088af9
-ms.openlocfilehash: 24a8f252d0c703cc7883ae1408120b8cae018331
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58137a1bca93c0281424ba457569631a4b513a55
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780433"
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a>方法: 関連要素 (XPATH-LINQ to XML) を検索 (Visual Basic)
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a>方法: 関連する (XPATH-LINQ to XML) の要素を検索する (Visual Basic)
 このトピックでは、別の要素の値によって参照される属性に基づいて要素を取得する方法について説明します。  
   
  XPath 式を次に示します。  
@@ -19,9 +19,9 @@ ms.locfileid: "33643175"
 ## <a name="example"></a>例  
  この例では、12 番目の `Order` 要素を検索し、その注文に対応する顧客を検索します。  
   
- .Net のリストのインデックスは '0' から始まることに注意してください。 XPath 述語のノード コレクションのインデックスは '1' から始まります。 両者の違いを次の例で示します。  
+ .NET でのリストのインデックスは '0' から始まることに注意してください。 XPath 述語のノード コレクションのインデックスは '1' から始まります。 両者の違いを次の例で示します。  
   
- この例では、「[サンプル XML ファイル: 顧客と注文 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)」の XML ドキュメントを使用します。  
+ この例では、XML ドキュメント、「[サンプル XML ファイル:顧客と注文 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)。  
   
 ```vb  
 Dim co As XDocument = XDocument.Load("CustomersOrders.xml")  
@@ -73,5 +73,6 @@ Results are identical
 </Customer>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [LINQ to XML を XPath ユーザー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>関連項目
+
+- [LINQ to XML XPath ユーザー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4d1d5602ff224c1c8f3e0948fc93c9200b9661e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 8e2b6ca8ef04ad6ff637a59f03f3b4cf04cb06ad
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44189077"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615365"
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>XmlSchemaValidator のプッシュ ベースの検証
 <xref:System.Xml.Schema.XmlSchemaValidator> は、プッシュ ベース方式で、XML スキーマを基準として XML データを検証する、効率的かつ高性能なしくみを提供します。 たとえば、<xref:System.Xml.Schema.XmlSchemaValidator> クラスでは、XML 情報セットを XML ドキュメントにシリアル化してから検証型 XML リーダーを使用してドキュメントを再解析する必要なしに、情報セットをそのまま検証することができます。  
@@ -76,9 +76,9 @@ ms.locfileid: "44189077"
 ### <a name="initializing-validation"></a>検証の初期化  
  <xref:System.Xml.Schema.XmlSchemaValidator> オブジェクトの構築後に、<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> オブジェクトの状態の初期化に使用される 2 つのオーバーロードされた <xref:System.Xml.Schema.XmlSchemaValidator> メソッドがあります。 次が、その 2 つの <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> メソッドです。  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType>  
   
  既定の <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType> メソッドは <xref:System.Xml.Schema.XmlSchemaValidator> オブジェクトを開始状態に初期化し、オーバーロードされた <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType> メソッドは <xref:System.Xml.Schema.XmlSchemaObject> をパラメーターとして取り、部分検証のために <xref:System.Xml.Schema.XmlSchemaValidator> オブジェクトを開始状態に初期化します。  
   
@@ -171,11 +171,11 @@ validator.ValidateEndElement(null);
   
  <xref:System.Xml.Schema.XmlSchemaValidator> クラスの次のメソッドは、<xref:System.Xml.Schema.XmlValueGetter>`delegate` をパラメーターとして受け入れます。  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A>  
   
  次は、最初の <xref:System.Xml.Schema.XmlValueGetter> クラスの例から取られた `delegate`<xref:System.Xml.Schema.XmlSchemaValidator> の例です。 <xref:System.Xml.Schema.XmlValueGetter>`delegate` は属性の値を <xref:System.DateTime> オブジェクトとして返します。 <xref:System.DateTime> から返された <xref:System.Xml.Schema.XmlValueGetter> オブジェクトを検証するために、<xref:System.Xml.Schema.XmlSchemaValidator> オブジェクトは、最初にそれを属性のデータ型の ValueType (ValueType は XSD 型に対する既定の CLR の割り当て) に変換し、次に変換された値のファセットをチェックします。  
   
@@ -216,21 +216,21 @@ static XmlValueGetter dateTimeGetter(DateTime dateTime)
   
  次の <xref:System.Xml.Schema.XmlSchemaValidator> クラスのメソッドは、<xref:System.Xml.Schema.XmlSchemaInfo> オブジェクトを Out パラメーターとして受け入れます。  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A>  
   
  <xref:System.Xml.Schema.XmlSchemaInfo> クラスの完全な例については、最初の例を参照してください。 <xref:System.Xml.Schema.XmlSchemaInfo> クラスに関する詳細については、<xref:System.Xml.Schema.XmlSchemaInfo> クラスのリファレンス ドキュメントを参照してください。  
   

@@ -6,15 +6,15 @@ helpviewer_keywords:
 - WCF [WCF], architecture
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-ms.openlocfilehash: 1514010ca573be364e54a53ae047a2ff49cdad82
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: b0e4f9af0ff84a8d560b332d227b1ba9ae18bd4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782458"
 ---
 # <a name="windows-communication-foundation-architecture"></a>Windows Communication Foundation のアーキテクチャ
-次の図は、Windows Communication Foundation (WCF) アーキテクチャの主要なレイヤーを示しています。  
+次の図は、Windows Communication Foundation (WCF) のアーキテクチャの主要なレイヤーを示しています。  
   
 ## <a name="wcf-architecture"></a>WCF アーキテクチャ  
  ![WCF アーキテクチャ](../../../docs/framework/wcf/media/wcf-architecture.gif "WCF_Architecture")  
@@ -30,7 +30,7 @@ ms.locfileid: "33804223"
  拡張機能を使用すると、ランタイム プロセスをカスタマイズできます。 たとえば、メッセージの検査はメッセージの各部分を検査する機能です。また、パラメーターのフィルター処理を使用すると、メッセージ ヘッダーに作用するフィルターに基づいて、事前設定されたアクションを実行できます。  
   
 ### <a name="messaging"></a>メッセージング  
- メッセージング レイヤーで構成されます*チャネル*です。 チャネルは、何らかの方法 (たとえば、メッセージを認証するなど) によってメッセージを処理するコンポーネントです。 一連のチャネルとも呼ばれます、*チャネル スタック*です。 チャネルは、メッセージおよびメッセージ ヘッダーに対して作用します。 これは、主にメッセージ本文の内容の処理に関係するサービス ランタイム レイヤーとは異なります。  
+ メッセージング層から成るは*チャネル*します。 チャネルは、何らかの方法 (たとえば、メッセージを認証するなど) によってメッセージを処理するコンポーネントです。 一連のチャネルとも呼ばれますが、*チャネル スタック*します。 チャネルは、メッセージおよびメッセージ ヘッダーに対して作用します。 これは、主にメッセージ本文の内容の処理に関係するサービス ランタイム レイヤーとは異なります。  
   
  チャネルの種類としては、トランスポート チャネルとプロトコル チャネルの 2 つがあります。  
   
@@ -41,10 +41,11 @@ ms.locfileid: "33804223"
  メッセージング レイヤーは、データに使用できる形式と交換パターンを示します。 WS-Security は、メッセージ レイヤーでのセキュリティを有効にする WS-Security 仕様の実装です。 WS-ReliableMessaging チャネルは、メッセージ配信の保証を有効にします。 エンコーダーは、メッセージのニーズに合わせて使用できるさまざまなエンコーディングを提供します。 HTTP チャネルは、ハイパーテキスト転送プロトコルをメッセージ配信に使用することを指定します。 同様に、TCP チャネルは TCP プロトコルを指定します。 トランザクション フロー チャネルは、トランザクション メッセージ パターンを制御します。 名前付きパイプ チャネルは、プロセス間通信を有効にします。 MSMQ チャネルは、MSMQ アプリケーションとの相互運用を有効にします。  
   
 ### <a name="hosting-and-activation"></a>ホストとアクティブ化  
- サービスの最終的な形はプログラムです。 他のプログラムと同様、サービスは実行可能ファイルで実行される必要があります。 これと呼ばれますが、*セルフホスト*サービス。  
+ サービスの最終的な形はプログラムです。 他のプログラムと同様、サービスは実行可能ファイルで実行される必要があります。 これと呼ばれますが、*セルフホステッド*サービス。  
   
- サービスがすることもできます*ホスト*、または IIS や Windows アクティブ化サービス (WAS) などの外部エージェントによって管理される実行可能ファイルで実行します。 WCF アプリケーション側で実行しているコンピューターに展開されているときに自動的にアクティブ化がでした。 サービスは、実行可能ファイル (.exe ファイル) として手動で実行することもできます。 また、Windows サービスとして自動的に実行することもできます。 COM + コンポーネントは、WCF サービスとしてホストすることもできます。  
+ サービスがすることもできます*ホスト*、または IIS や Windows アクティブ化サービス (WAS) などの外部エージェントによって管理されている実行可能ファイルでを実行します。 により、WCF アプリケーションを実行するコンピューターに展開されているときに自動的にアクティブにするがでした。 サービスは、実行可能ファイル (.exe ファイル) として手動で実行することもできます。 また、Windows サービスとして自動的に実行することもできます。 COM + コンポーネントは、WCF サービスとしてホストすることもできます。  
   
-## <a name="see-also"></a>関連項目  
- [Windows Communication Foundation とは](../../../docs/framework/wcf/whats-wcf.md)  
- [Windows Communication Foundation の基本概念](../../../docs/framework/wcf/fundamental-concepts.md)
+## <a name="see-also"></a>関連項目
+
+- [Windows Communication Foundation とは](../../../docs/framework/wcf/whats-wcf.md)
+- [Windows Communication Foundation の基本概念](../../../docs/framework/wcf/fundamental-concepts.md)

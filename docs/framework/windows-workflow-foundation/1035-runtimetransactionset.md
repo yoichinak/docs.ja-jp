@@ -3,11 +3,11 @@ title: 1035 - RuntimeTransactionSet
 ms.date: 03/30/2017
 ms.assetid: 03b37de9-778c-4beb-b0e3-de73ece6088e
 ms.openlocfilehash: 198e11dd94b0ad5cdc1e01c3611280754ca081d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33510035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61924853"
 ---
 # <a name="1035---runtimetransactionset"></a>1035 - RuntimeTransactionSet
 ## <a name="properties"></a>プロパティ  
@@ -23,7 +23,7 @@ ms.locfileid: "33510035"
  アクティビティがランタイムのトランザクションを設定したことを示します。  
   
 ## <a name="message"></a>メッセージ  
- Activity '%1'、DisplayName によってランタイム トランザクションが設定されました: '%2'、InstanceId: '%3' です。  実行の分離 Activity '%4'、DisplayName: '%5'、InstanceId: '%6' です。  
+ Activity '%1'、DisplayName によってランタイム トランザクションが設定されています: '%2'、InstanceId: '%3'。  実行の分離を Activity '%4'、DisplayName: '%5'、InstanceId: '%6'。  
   
 ## <a name="details"></a>説明  
   

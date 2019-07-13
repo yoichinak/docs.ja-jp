@@ -5,17 +5,17 @@ ms.technology: dotnet-standard
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 10449867a37863798a0da2df9111bcd7addfc6ef
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: e3b99606698124455ca9b325042ffbe430915aee
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45625946"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170772"
 ---
 # <a name="result-tree-fragment-in-transformations"></a>変換での結果ツリー フラグメントの処理
 
 > [!NOTE]
-> <xref:System.Xml.Xsl.XslTransform> では、[!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] クラスが廃止されています。 <xref:System.Xml.Xsl.XslCompiledTransform> クラスを使用して XSLT (Extensible Stylesheet Language for Transformations) 変換を実行できます。 詳しくは、「[XslCompiledTransform クラスの使用](using-the-xslcompiledtransform-class.md)」および「[XslTransform クラスからの移行](migrating-from-the-xsltransform-class.md)」をご覧ください。
+> .NET Framework 2.0 では <xref:System.Xml.Xsl.XslTransform> クラスが廃止されています。 <xref:System.Xml.Xsl.XslCompiledTransform> クラスを使用して XSLT (Extensible Stylesheet Language for Transformations) 変換を実行できます。 詳しくは、「[XslCompiledTransform クラスの使用](using-the-xslcompiledtransform-class.md)」および「[XslTransform クラスからの移行](migrating-from-the-xsltransform-class.md)」をご覧ください。
 
  結果ツリー フラグメントは、ノード セットの特殊な型にすぎません。 ノード フラグメントでは、ノード セットで実行できる任意の関数を実行できます。 `node-set()` 関数を使用して結果ツリー フラグメントをノード セットに変換し、ノード セットを使用できる任意の場所でそれを使用することもできます。
 
@@ -113,7 +113,7 @@ ms.locfileid: "45625946"
 
 このスタイル シートを使用して XML を変換した結果を次に示します。
 
-## <a name="output"></a>出力
+## <a name="output"></a>Output
 
 ```xml
 <first_book xmlns:user="urn:books">Book1</first_book>
@@ -194,7 +194,6 @@ ms.locfileid: "45625946"
 
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Xml.XPath.XPathNodeIterator>  
-- <xref:System.Xml.XPath.XPathNodeIterator>  
-- [XslTransform クラスを使用した XSLT 変換](xslt-transformations-with-the-xsltransform-class.md)  
-- [XslTransform クラスによる XSLT プロセッサの実装](xsltransform-class-implements-the-xslt-processor.md)  
+- <xref:System.Xml.XPath.XPathNodeIterator>
+- [XslTransform クラスを使用した XSLT 変換](xslt-transformations-with-the-xsltransform-class.md)
+- [XslTransform クラスによる XSLT プロセッサの実装](xsltransform-class-implements-the-xslt-processor.md)

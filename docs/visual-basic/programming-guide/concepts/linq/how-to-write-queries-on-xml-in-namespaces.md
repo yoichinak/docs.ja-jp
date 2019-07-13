@@ -1,15 +1,15 @@
 ---
-title: '方法: 名前空間 (Visual Basic) 内の XML に対するクエリの作成'
+title: '方法: (Visual Basic) の名前空間内の XML に対するクエリを作成します。'
 ms.date: 07/20/2015
 ms.assetid: 7d4131b5-3288-414f-b77c-b2edc2a1f465
-ms.openlocfilehash: f4e895e560d0fb11c128248e4f42d1d5124bc124
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4efa1de254a0264752514c5ae6e601a66fa56f95
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614831"
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>方法: 名前空間 (Visual Basic) 内の XML に対するクエリの作成
+# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>方法: (Visual Basic) の名前空間内の XML に対するクエリを作成します。
 名前空間内の XML に対するクエリを記述するには、正しい名前空間を持つ <xref:System.Xml.Linq.XName> オブジェクトを使用する必要があります。  
   
  Visual Basic での最も一般的な方法は、グローバル名前空間を定義し、その名前空間を使用する XML リテラルおよび XML プロパティを使用することです。 既定のグローバル名前空間を定義できます。その場合、XML リテラルの要素は既定でこの名前空間に含まれることになります。 または、プレフィックスを持つグローバル名前空間を定義し、そのプレフィックスを必要に応じて XML リテラルや XML プロパティで使用できます。 XML のその他の形式と同様に、属性は既定でどの名前空間にも含まれません。  
@@ -88,5 +88,6 @@ End Module
 3  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [XML 名前空間 (Visual Basic) の使用](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>関連項目
+
+- [XML 名前空間 (Visual Basic) の使用](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

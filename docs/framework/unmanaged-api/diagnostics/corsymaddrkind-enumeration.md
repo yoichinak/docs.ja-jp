@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98cf49714829b4b2f80e0240c2ebde7fa6c280e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ba24f5394ef8fb31d8bfa4e74ac59e7bd4af86d8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425406"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769864"
 ---
 # <a name="corsymaddrkind-enumeration"></a>CorSymAddrKind 列挙体
 メモリ アドレスの種類を示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum CorSymAddrKind  
 {  
     ADDR_IL_OFFSET          = 1,  
@@ -53,14 +53,15 @@ typedef enum CorSymAddrKind
 |`ADDR_NATIVE_REGISTER`|CPU レジスタを示します。|  
 |`ADDR_NATIVE_REGREL`|最初のアドレスは、レジスタと 2 番目のアドレスは、オフセットを示します。|  
 |`ADDR_NATIVE_OFFSET`|ベース アドレスからのオフセットを示します。|  
-|`ADDR_NATIVE_REGREG`|最初のアドレスは、レジスタの低部、2 つ目は高い部分を示します。|  
-|`ADDR_NATIVE_REGSTK`|ことを示します最初のアドレスは、レジスタの不足部分であり、2 つ目は、高の部分では、3 番目のオフセット。|  
-|`ADDR_NATIVE_STKREG`|最初のアドレスは、レジスタ、2 番目のオフセット、そのが、3 番目のレジスタの高い部分を示します。|  
-|`ADDR_BITFIELD`|最初のアドレスは、フィールドの開始、2 番目のアドレスは、フィールド長を示します。|  
+|`ADDR_NATIVE_REGREG`|最初のアドレスは、レジスタの下位部、2 つ目は高い部分を示します。|  
+|`ADDR_NATIVE_REGSTK`|最初のアドレスは、レジスタの下位部、2 つ目は、高の部分では、および 3 番目のオフセットは、ことを示します。|  
+|`ADDR_NATIVE_STKREG`|最初のアドレスは、レジスタこと、2 つ目は、オフセット、および 3 番目はレジスタの高い部分を示します。|  
+|`ADDR_BITFIELD`|最初のアドレスは、フィールドの最初と 2 番目のアドレスは、フィールド長のことを示します。|  
 |`ADDR_NATIVE_ISECTOFFSET`|最初のアドレスは、セクションと 2 番目のアドレスは、オフセットを示します。|  
   
-## <a name="requirements"></a>要件  
- **ヘッダー:** CorSym.idl、CorSym.h  
+## <a name="requirements"></a>必要条件  
+ **ヘッダー:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>関連項目  
- [シンボル ストア診断列挙型](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+## <a name="see-also"></a>関連項目
+
+- [シンボル ストア診断列挙型](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

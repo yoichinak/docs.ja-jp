@@ -15,12 +15,12 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
-ms.openlocfilehash: 74dd44e704836b209366a7975d08a43375318e90
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d14eb426c8e142f56d9f024dcbf37a1d2d78664d
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50190789"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59072342"
 ---
 # <a name="programming-pluggable-protocols"></a>プラグ可能なプロトコルのプログラミング
 抽象クラスの <xref:System.Net.WebRequest> と <xref:System.Net.WebResponse> は、プラグ可能なプロトコルの基礎を提供します。 アプリケーションでは、<xref:System.Net.WebRequest> と <xref:System.Net.WebResponse> からプロトコル固有のクラスを派生することにより、使うプロトコルを指定しなくても、インターネット リソースにデータを要求して応答を読み取ることができます。  
@@ -31,8 +31,9 @@ ms.locfileid: "50190789"
   
  プラグ可能なプロトコルを利用するには、<xref:System.Net.WebRequest> の子孫で、プロトコル固有のプロパティを設定する必要がない既定の要求-応答トランザクションを提供する必要があります。 たとえば、HTTP 用の <xref:System.Net.WebRequest> クラスを実装する <xref:System.Net.HttpWebRequest> クラスは、既定で `GET` 要求を提供し、Web サーバーから返されたストリームを含む <xref:System.Net.HttpWebResponse> を返します。  
   
-## <a name="see-also"></a>参照  
- [WebRequest からの派生](../../../docs/framework/network-programming/deriving-from-webrequest.md)  
- [WebResponse からの派生](../../../docs/framework/network-programming/deriving-from-webresponse.md)  
- [.NET Framework のネットワーク プログラミング](../../../docs/framework/network-programming/index.md)  
- [方法: WebRequest を型キャストしてプロトコル固有のプロパティにアクセスする](../../../docs/framework/network-programming/how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)
+## <a name="see-also"></a>関連項目
+
+- [WebRequest からの派生](../../../docs/framework/network-programming/deriving-from-webrequest.md)
+- [WebResponse からの派生](../../../docs/framework/network-programming/deriving-from-webresponse.md)
+- [.NET Framework のネットワーク プログラミング](../../../docs/framework/network-programming/index.md)
+- [方法: WebRequest を型キャストしてプロトコル固有のプロパティにアクセスする](../../../docs/framework/network-programming/how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)

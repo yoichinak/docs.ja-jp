@@ -7,30 +7,30 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF], how-to topics
 ms.assetid: 006aa461-fe37-4cd8-860a-d38d76e8b9f7
-ms.openlocfilehash: 2319ea8522a90705cf65006ffb368801921cda57
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d3d5116a2fa2198661050a1c1adbae9512cd078a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45742811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790885"
 ---
 # <a name="textbox-how-to-topics"></a>TextBox に関する「方法」トピック
 このセクションを使用して一般的なタスクを実行する方法を示す例を示します、<xref:System.Windows.Controls.TextBox>コントロール。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [複数行の TextBox コントロールを作成する](../../../../docs/framework/wpf/controls/how-to-create-a-multiline-textbox-control.md)  
- [TextBox のテキストがいつ変更されたかを検出する](../../../../docs/framework/wpf/controls/how-to-detect-when-text-in-a-textbox-has-changed.md)  
- [TextBox コントロールでタブ文字を有効にする](../../../../docs/framework/wpf/controls/how-to-enable-tab-characters-in-a-textbox-control.md)  
- [TextBox から行のコレクションを取得する](../../../../docs/framework/wpf/controls/how-to-get-a-collection-of-lines-from-a-textbox.md)  
- [TextBox コントロールを読み取り専用にする](../../../../docs/framework/wpf/controls/how-to-make-a-textbox-control-read-only.md)  
- [TextBox コントロールのテキストの先頭または末尾にカーソルを配置する](../../../../docs/framework/wpf/controls/position-the-cursor-at-the-beginning-or-end-of-text.md)  
- [テキスト選択を取得する](../../../../docs/framework/wpf/controls/how-to-retrieve-a-text-selection.md)  
- [TextBox コントロールにフォーカスを設定する](../../../../docs/framework/wpf/controls/how-to-set-focus-in-a-textbox-control.md)  
- [TextBox コントロールのテキスト コンテンツを設定する](../../../../docs/framework/wpf/controls/how-to-set-the-text-content-of-a-textbox-control.md)  
- [テキスト編集コントロールでスペル チェックを有効にする](../../../../docs/framework/wpf/controls/how-to-enable-spell-checking-in-a-text-editing-control.md)  
- [TextBox でカスタム コンテキスト メニューを使用する](../../../../docs/framework/wpf/controls/how-to-use-a-custom-context-menu-with-a-textbox.md)  
- [コンテキスト メニューでスペル チェックを使用する](../../../../docs/framework/wpf/controls/how-to-use-spell-checking-with-a-context-menu.md)  
- [TextBox へのウォーターマークの追加](../../../../docs/framework/wpf/controls/how-to-add-a-watermark-to-a-textbox.md)  
+ [複数行の TextBox コントロールを作成する](how-to-create-a-multiline-textbox-control.md)  
+ [TextBox のテキストがいつ変更されたかを検出する](how-to-detect-when-text-in-a-textbox-has-changed.md)  
+ [TextBox コントロールでタブ文字を有効にする](how-to-enable-tab-characters-in-a-textbox-control.md)  
+ [TextBox から行のコレクションを取得する](how-to-get-a-collection-of-lines-from-a-textbox.md)  
+ [TextBox コントロールを読み取り専用にする](how-to-make-a-textbox-control-read-only.md)  
+ [TextBox コントロールのテキストの先頭または末尾にカーソルを配置する](position-the-cursor-at-the-beginning-or-end-of-text.md)  
+ [テキスト選択を取得する](how-to-retrieve-a-text-selection.md)  
+ [TextBox コントロールにフォーカスを設定する](how-to-set-focus-in-a-textbox-control.md)  
+ [TextBox コントロールのテキスト コンテンツを設定する](how-to-set-the-text-content-of-a-textbox-control.md)  
+ [テキスト編集コントロールでスペル チェックを有効にする](how-to-enable-spell-checking-in-a-text-editing-control.md)  
+ [TextBox でカスタム コンテキスト メニューを使用する](how-to-use-a-custom-context-menu-with-a-textbox.md)  
+ [コンテキスト メニューでスペル チェックを使用する](how-to-use-spell-checking-with-a-context-menu.md)  
+ [TextBox へのウォーターマークの追加](how-to-add-a-watermark-to-a-textbox.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.TextBox>  
@@ -41,6 +41,7 @@ ms.locfileid: "45742811"
   
  <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="see-also"></a>関連項目  
- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053)  
- [TextBox のスタイルとテンプレート](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)
+## <a name="see-also"></a>関連項目
+
+- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [TextBox のスタイルとテンプレート](textbox-styles-and-templates.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;追加&gt;要素&lt;スイッチ&gt;'
+title: <switches> の <add> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/switches/add
@@ -7,21 +7,19 @@ helpviewer_keywords:
 - <add> element for <switches>
 - add element for <switches>
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 0a1a2c9ec34c43eb1b9559d90a8da0d70193c19e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d7500620aed1165ff365fee8529230ba252dbc4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47209127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673811"
 ---
-# <a name="ltaddgt-element-for-ltswitchesgt"></a>&lt;追加&gt;要素&lt;スイッチ&gt;
+# <a name="add-element-for-switches"></a>\<追加 > 要素の\<スイッチ >
 トレース スイッチを設定するレベルを指定します。  
   
  \<configuration>  
-\<system.diagnostics >  
-\<スイッチ >  
+\<system.diagnostics>  
+\<switches>  
 \<add>  
   
 ## <a name="syntax"></a>構文  
@@ -69,8 +67,9 @@ ms.locfileid: "47209127"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Diagnostics.Switch>  
- <xref:System.Diagnostics.TraceSwitch>  
- <xref:System.Diagnostics.BooleanSwitch>  
- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Diagnostics.Switch>
+- <xref:System.Diagnostics.TraceSwitch>
+- <xref:System.Diagnostics.BooleanSwitch>
+- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

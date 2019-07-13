@@ -1,43 +1,43 @@
 ---
-title: 共通の属性 (Visual Basic)
+title: 共通属性 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 5a91b0aa48a22db4ea7fb56a9c632ff0cb44dce5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58de23280f2e8765d945ac765d9455a89c45c9cb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644161"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642404"
 ---
-# <a name="common-attributes-visual-basic"></a>共通の属性 (Visual Basic)
+# <a name="common-attributes-visual-basic"></a>共通属性 (Visual Basic)
 このトピックでは、Visual Basic プログラムで最もよく使用される属性について説明します。  
   
--   [グローバル属性](#Global)  
+- [グローバル属性](#Global)  
   
--   [Obsolete 属性](#Obsolete)  
+- [Obsolete 属性](#Obsolete)  
   
--   [Conditional 属性](#Conditional)  
+- [Conditional 属性](#Conditional)  
   
--   [呼び出し元情報属性](#CallerInfo)  
+- [呼び出し元情報属性](#CallerInfo)  
   
--   [Visual Basic の属性](#VB)  
+- [Visual Basic の属性](#VB)  
   
-##  <a name="Global"></a> グローバル属性  
+## <a name="Global"></a> グローバル属性  
  ほとんどの属性は、クラスやメソッドなど、特定の言語要素に適用されます。ただし、属性の中にはグローバルなものがあり、アセンブリまたはモジュール全体に適用されます。 たとえば、<xref:System.Reflection.AssemblyVersionAttribute> 属性は、次のように、バージョン情報をアセンブリに埋め込むときに使用できます。  
   
 ```vb  
 <Assembly: AssemblyVersion("1.0.0.0")>  
 ```  
   
- グローバル属性は、いずれかの後、ソース コードに表示されます。 最上位`Imports`ステートメントと型、モジュール、または名前空間宣言の前にします。 グローバル属性は複数のソース ファイルに指定できますが、それらのファイルは、1 つのコンパイル パスでコンパイルする必要があります。 Visual Basic プロジェクトで、一般的に (Visual Studio でプロジェクトを作成するときに、ファイルが自動的に作成されます) AssemblyInfo.vb ファイル内にグローバル属性が配置されています。  
+ グローバル属性は、後にソース コードに表示されます。 最上位`Imports`ステートメントと、型、モジュール、または名前空間宣言の前にします。 グローバル属性は複数のソース ファイルに指定できますが、それらのファイルは、1 つのコンパイル パスでコンパイルする必要があります。 Visual Basic プロジェクトでは、グローバル属性は (Visual Studio でプロジェクトを作成するときに、ファイルが自動的に作成されます)、AssemblyInfo.vb ファイルで一般に配置します。  
   
  アセンブリの属性は、アセンブリに関する情報を提供する値です。 これらは次のカテゴリに分けられます。  
   
--   アセンブリ ID 属性  
+- アセンブリ ID 属性  
   
--   情報属性  
+- 情報属性  
   
--   アセンブリ マニフェスト属性  
+- アセンブリ マニフェスト属性  
   
 ### <a name="assembly-identity-attributes"></a>アセンブリ ID 属性  
  アセンブリの ID は、名前、バージョン、カルチャの 3 つの属性によって識別されます (適用できる場合は厳密な名前も使用されます)。 アセンブリの完全な名前を形成するこれらの属性は、コード内でアセンブリを参照するときに必要になります。 アセンブリのバージョンとカルチャは、属性を使用して設定できます。 ただし名前の値は、コンパイラ、Visual Studio IDE の [[アセンブリ情報]](/visualstudio/ide/reference/assembly-information-dialog-box) ダイアログ ボックス、またはアセンブリ リンカー (AI.exe) によってアセンブリの作成時に設定されます。このとき、設定はアセンブリ マニフェストが含まれたファイルに基づきます。 <xref:System.Reflection.AssemblyFlagsAttribute> 属性は、アセンブリの複数のコピーが共存できるかどうかを指定します。  
@@ -74,8 +74,8 @@ ms.locfileid: "33644161"
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|アセンブリ マニフェストのアセンブリの構成 (製品版やデバッグなど) を指定するカスタム属性を定義します。|  
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|アセンブリ マニフェストのわかりやすい既定の別名を定義します。|  
   
-##  <a name="Obsolete"></a> Obsolete 属性  
- `Obsolete` 属性は、使用が推奨されなくなったプログラム エンティティをマークします。 その後、非推奨の印が付いたエンティティが使用されるたびに、この属性の構成に従って警告かエラーが生成されます。 例えば:  
+## <a name="Obsolete"></a> Obsolete 属性  
+ `Obsolete` 属性は、使用が推奨されなくなったプログラム エンティティをマークします。 その後、非推奨の印が付いたエンティティが使用されるたびに、この属性の構成に従って警告かエラーが生成されます。 例:  
   
 ```vb  
 <System.Obsolete("use class B")>   
@@ -116,7 +116,7 @@ b.NewMethod()
   
  `Obsolete` 属性は、1 回だけ使用できる属性であり、属性を使用できる任意のエンティティに適用できます。 `Obsolete` は <xref:System.ObsoleteAttribute> の別名です。  
   
-##  <a name="Conditional"></a> Conditional 属性  
+## <a name="Conditional"></a> Conditional 属性  
  `Conditional` 属性を使用すると、プリプロセス識別子に依存したメソッドの実行を指定できます。 `Conditional` 属性は <xref:System.Diagnostics.ConditionalAttribute> の別名であり、メソッドまたは属性クラスに適用できます。  
   
  この例では、`Conditional` は、プログラム固有の診断情報の表示を有効または無効にするメソッドに適用されています。  
@@ -209,7 +209,7 @@ Class SampleClass
 End Class  
 ```  
   
-##  <a name="CallerInfo"></a> 呼び出し元情報属性  
+## <a name="CallerInfo"></a> 呼び出し元情報属性  
  呼び出し元情報の属性を使用すると、メソッドへの呼び出し元に関する情報を取得できます。 ソース コードのファイル パス、ソース コードの行番号、呼び出し元のメンバー名を取得できます。  
   
  メンバー呼び出し元情報を取得するには、省略可能なパラメーターに適用される属性を使用します。 省略可能な各パラメーターでは既定値が指定されます。 次の表は、<xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 名前空間で定義されている呼び出し元情報の属性の一覧です。  
@@ -218,28 +218,28 @@ End Class
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|呼び出し元を含むソース ファイルのフル パスです。 これはコンパイル時のパスです。|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|メソッドの呼び出し元であるソース ファイルの行番号。|`Integer`|  
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|呼び出し元のメソッド名またはプロパティ名。 詳細については、次を参照してください。[呼び出し元情報 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)です。|`String`|  
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|呼び出し元のメソッド名またはプロパティ名。 詳細については、次を参照してください。[呼び出し元情報 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)します。|`String`|  
   
- 呼び出し元情報属性の詳細については、次を参照してください。[呼び出し元情報 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)です。  
+ 呼び出し元情報属性の詳細については、次を参照してください。[呼び出し元情報 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)します。  
   
-##  <a name="VB"></a> Visual Basic の属性  
+## <a name="VB"></a> Visual Basic の属性  
  次の表は、Visual Basic に固有の属性を一覧表示します。  
   
 |属性|目的|  
 |---------------|-------------|  
-|<xref:Microsoft.VisualBasic.ComClassAttribute>|COM オブジェクトとして、クラスを公開する必要がありますをコンパイラに指示します。|  
-|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|モジュール メンバーに、モジュールに必要な修飾子のみを使用してアクセスできるようにします。|  
-|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|入力し、出力ファイルを使用するための構造体で固定長文字列のサイズを指定の関数。|  
-|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|入力し、出力ファイルを使用するための構造体で固定長配列のサイズを指定の関数。|  
+|<xref:Microsoft.VisualBasic.ComClassAttribute>|クラスを COM オブジェクトとして公開する必要がありますをコンパイラに示します。|  
+|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|モジュール メンバーに、モジュールに必要な修飾子のみを使用してアクセスを許可します。|  
+|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|入力し、出力ファイルを使用するための構造で固定長文字列のサイズを指定します。 関数。|  
+|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|入力し、出力ファイルを使用するための構造で固定長配列のサイズを指定します。 関数。|  
   
 ### <a name="comclassattribute"></a>COMClassAttribute  
- 使用して`COMClassAttribute`Visual Basic から COM コンポーネントを作成するプロセスが簡略化します。 COM オブジェクトは .NET Framework アセンブリからされず`COMClassAttribute`いくつかの Visual Basic から COM オブジェクトを生成する手順に従う必要があります。 マークされたクラスの`COMClassAttribute`コンパイラは、次の手順の多くを自動的に実行します。  
+ 使用`COMClassAttribute`を Visual Basic から COM コンポーネントを作成するプロセスを簡略化します。 COM オブジェクトがされず、.NET Framework アセンブリからは、かなり異なる`COMClassAttribute`さまざまな Visual Basic から COM オブジェクトを生成する手順に従う必要があります。 マークされたクラスの`COMClassAttribute`コンパイラは、次の手順の多くを自動的に実行します。  
   
 ### <a name="hidemodulenameattribute"></a>HideModuleNameAttribute  
- 使用して`HideModuleNameAttribute`モジュール メンバーに、モジュールに必要な修飾子のみを使用してアクセスできるようにします。  
+ 使用`HideModuleNameAttribute`モジュール メンバーに、モジュールに必要な修飾子のみを使用してアクセスを許可します。  
   
 ### <a name="vbfixedstringattribute"></a>VBFixedStringAttribute  
- 使用して`VBFixedStringAttribute`固定長文字列を作成する Visual Basic を強制的にします。 既定では、可変長の文字列し、この属性は、ファイルに文字列を格納するときに便利です。 次のコードでは、これを示しています。  
+ 使用`VBFixedStringAttribute`させる、Visual Basic で固定長文字列を作成します。 既定では、可変長の文字列し、この属性は、ファイルに文字列を格納する場合に便利です。 次のコードでは、これを示しています。  
   
 ```vb  
 Structure Worker  
@@ -252,12 +252,13 @@ End Structure
 ```  
   
 ### <a name="vbfixedarrayattribute"></a>VBFixedArrayAttribute  
- 使用して`VBFixedArrayAttribute`が固定サイズで配列を宣言します。 Visual Basic の文字列のような配列は、既定では可変長の。 この属性は、シリアル化またはファイルにデータを書き込む場合に便利です。  
+ 使用`VBFixedArrayAttribute`が固定サイズで配列を宣言します。 Visual Basic の文字列のような配列は、既定では可変長の。 この属性は、シリアル化またはファイルにデータを書き込む場合に便利です。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Reflection>  
- <xref:System.Attribute>  
- [Visual Basic プログラミング ガイド](../../../../visual-basic/programming-guide/index.md)  
- [属性](../../../../standard/attributes/index.md)  
- [リフレクション (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
- [リフレクションを使用した属性へのアクセス (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Reflection>
+- <xref:System.Attribute>
+- [Visual Basic プログラミング ガイド](../../../../visual-basic/programming-guide/index.md)
+- [属性](../../../../standard/attributes/index.md)
+- [リフレクション (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [リフレクションを使用した属性へのアクセス (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

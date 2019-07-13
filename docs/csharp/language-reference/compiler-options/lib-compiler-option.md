@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -lib compiler option [C#]
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
-ms.openlocfilehash: c140a49de0503da1e59396f14ac1aee4c1d7d1a6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 49920a46f1d970c3f00025c3dc3eb384c937aa99
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511206"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59319405"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib (C# コンパイラ オプション)
 **-lib** オプションは、[-reference (C# コンパイラ オプション)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) オプションによって参照されるアセンブリの場所を指定します。  
@@ -31,16 +31,16 @@ ms.locfileid: "43511206"
  `dir2`  
  アセンブリ参照を検索する 1 つまたは複数の追加ディレクトリです。 複数のディレクトリはコンマで区切り、それらの間に空白文字は入れません。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  コンパイラは、完全に修飾されていないアセンブリ参照を次の順序で検索します。  
   
-1.  現在の作業ディレクトリ。 これは、コンパイラを起動したディレクトリです。  
+1. 現在の作業ディレクトリ。 これは、コンパイラを起動したディレクトリです。  
   
-2.  共通言語ランタイムのシステム ディレクトリ。  
+2. 共通言語ランタイムのシステム ディレクトリ。  
   
-3.  **-lib** によって指定されているディレクトリ。  
+3. **-lib** によって指定されているディレクトリ。  
   
-4.  LIB 環境変数によって指定されているディレクトリ。  
+4. LIB 環境変数によって指定されているディレクトリ。  
   
  アセンブリ参照を指定するには **-reference** を使います。  
   
@@ -52,11 +52,11 @@ ms.locfileid: "43511206"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
   
-1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。  
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。  
   
-2.  **[参照パス]** プロパティ ページをクリックします。  
+2. **[参照パス]** プロパティ ページをクリックします。  
   
-3.  リスト ボックスの内容を変更します。  
+3. リスト ボックスの内容を変更します。  
   
  このコンパイラ オプションをプログラムで設定する方法については、「 <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>」をご覧ください。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "43511206"
 csc -lib:c:\ -reference:t2.dll t2.cs  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)  
+- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

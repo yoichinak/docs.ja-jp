@@ -1,15 +1,15 @@
 ---
-title: '&lt;issuerMetadata&gt;'
+title: <issuerMetadata>
 ms.date: 03/30/2017
 ms.assetid: e7eae2c0-cc17-4281-af59-e4eb8d54f92a
-ms.openlocfilehash: 38fa373212464a7dc919c2f364524a391db17d43
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 0dffad6a17720dd0506acbcd60efe4aafe24ed28
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761677"
 ---
-# <a name="ltissuermetadatagt"></a>&lt;issuerMetadata&gt;
+# <a name="issuermetadata"></a>\<issuerMetadata >
 \<system.serviceModel>  
 \<bindings>  
 \<wsFederationHttpBinding >  
@@ -48,7 +48,7 @@ ms.locfileid: "54149359"
   
 |属性|説明|  
 |---------------|-----------------|  
-|address|必須の `string` 属性です。<br /><br /> エンドポイントのアドレスを指定します。 アドレスは、絶対 URI にする必要があります。 既定値は空の文字列です。|  
+|アドレス|必須の `string` 属性です。<br /><br /> エンドポイントのアドレスを指定します。 アドレスは、絶対 URI にする必要があります。 既定値は空の文字列です。|  
   
 ### <a name="child-elements"></a>子要素  
   
@@ -63,10 +63,11 @@ ms.locfileid: "54149359"
 |-------------|-----------------|  
 |[\<message>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-wsfederationhttpbinding.md)|メッセージ レベル セキュリティの設定を定義、 [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)要素。|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A>  
- <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.IssuerMetadata%2A>  
- [サービス ID と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [フェデレーションと発行済みトークン](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [カスタム バインドを使用したセキュリティ機能](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
- [フェデレーションと発行済みトークン](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A>
+- <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.IssuerMetadata%2A>
+- [サービス ID と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [フェデレーションと発行済みトークン](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [カスタム バインドを使用したセキュリティ機能](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [フェデレーションと発行済みトークン](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

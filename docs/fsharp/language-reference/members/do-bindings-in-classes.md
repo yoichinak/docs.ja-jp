@@ -2,12 +2,12 @@
 title: クラス内の do バインド
 description: 使用する方法について説明します、 F# 'do'、オブジェクトが作成されたとき、または型が初めて使用すると、操作を実行するクラス定義のバインディング。
 ms.date: 05/16/2016
-ms.openlocfilehash: 0ddf2b5ca458d0950c2e07bf2c37c205877e2173
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: c924c882974989436d8ea404ebee0a7ef3c54fd3
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613116"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641799"
 ---
 # <a name="do-bindings-in-classes"></a>クラス内の do バインド
 

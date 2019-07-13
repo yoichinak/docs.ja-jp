@@ -2,12 +2,12 @@
 title: 判別共用体
 description: 使用する方法について説明しますF#判別共用体。
 ms.date: 05/16/2016
-ms.openlocfilehash: 1bb6dc06fb727f85eb5500719b175fc29090450b
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: a3958a9ffb021c0c46c24216f17a1e7ee5605dd3
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611868"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816245"
 ---
 # <a name="discriminated-unions"></a>判別共用体
 
@@ -80,7 +80,7 @@ let getShapeHeight shape =
     | Prism(height = h) -> h
 ```
 
-通常は、共用体の名前で、修飾せずにケース識別子を使用できます。 適用することが常に、共用体の名前を持つ修飾名を使用する場合、 [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15)属性を共用体型の定義。
+通常は、共用体の名前で、修飾せずにケース識別子を使用できます。 適用することが常に、共用体の名前を持つ修飾名を使用する場合、 [RequireQualifiedAccess](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-[fsharp])属性を共用体型の定義。
 
 ### <a name="unwrapping-discriminated-unions"></a>判別共用体のラップを解除
 
@@ -111,7 +111,7 @@ let someFunctionUsingShaderProgram (ShaderProgram id) =
 
 ## <a name="struct-discriminated-unions"></a>構造体の判別共用体
 
-以降でF#4.1、構造体としての判別共用体を表すこともできます。  これは、`[<Struct>]`属性。
+判別共用体は構造体として表すこともできます。  これは、`[<Struct>]`属性。
 
 ```fsharp
 [<Struct>]
@@ -156,7 +156,7 @@ Area of rectangle that has height 5.000000 and width 10.000000 is 50.000000
 
 このコードでは、`resultSumTree` の値は 10 です。 次の図は、`myTree` のツリー構造を示しています。
 
-![myTree のツリー構造](../media/TreeStructureDiagram.png)
+![MyTree のツリー構造を示す図。](../media/discriminated-unions/tree-structure-mytree.png)
 
 判別共用体は、ツリーのノードが異種の場合でも、問題なく機能します。 次のコードの `Expression` 型は、数と変数の加算と乗算をサポートする簡単なプログラミング言語での式の抽象構文ツリーを表します。 共用体の一部のケースは再帰的ではなく、数 (`Number`) または変数 (`Variable`) を表します。 他のケースは再帰的で、演算 (`Add` および `Multiply`) を表し、オペランドも式です。 `Evaluate` 関数では、match 式を使用して再帰的に構文ツリーを処理しています。
 
@@ -164,14 +164,46 @@ Area of rectangle that has height 5.000000 and width 10.000000 is 50.000000
 
 このコードを実行すると、`result` の値は 5 になります。
 
+## <a name="members"></a>メンバー
+
+判別共用体のメンバーを定義することになります。 次の例では、プロパティを定義し、インターフェイスを実装する方法を示します。
+
+```fsharp
+open System
+
+type IPrintable =
+    abstract Print: unit -> unit
+
+type Shape =
+    | Circle of float
+    | EquilateralTriangle of float
+    | Square of float
+    | Rectangle of float * float
+
+    member this.Area =
+        match this with
+        | Circle r -> 2.0 * Math.PI * r
+        | EquilateralTriangle s -> s * s * sqrt 3.0 / 4.0
+        | Square s -> s * s
+        | Rectangle(l, w) -> l * w
+
+    interface IPrintable with
+        member this.Print () =
+            match this with
+            | Circle r -> printfn "Circle with radius %f" r
+            | EquilateralTriangle s -> printfn "Equilateral Triangle of side %f" s
+            | Square s -> printfn "Square with side %f" s
+            | Rectangle(l, w) -> printfn "Rectangle with length %f and width %f" l w
+```
+
 ## <a name="common-attributes"></a>共通の属性
 
 次の属性は、判別共用体でよく見られます。
 
-* `[RequireQualifiedAccess]`
-* `[NoEquality]`
-* `[NoComparison]`
-* `[Struct]`
+* `[<RequireQualifiedAccess>]`
+* `[<NoEquality>]`
+* `[<NoComparison>]`
+* `[<Struct>]`
 
 ## <a name="see-also"></a>関連項目
 

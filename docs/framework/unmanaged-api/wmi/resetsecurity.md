@@ -1,6 +1,6 @@
 ---
 title: ResetSecurity 関数 (アンマネージ API リファレンス)
-description: ResetSecurity 関数では、現在のスレッドに偽装トークンを割り当てます。
+description: ResetSecurity 関数では、現在のスレッドに偽装トークンが割り当てられます。
 ms.date: 11/06/2017
 api_name:
 - ResetSecurity
@@ -16,21 +16,21 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31e42b9e39ddb43025e18888572c394d742e38cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d3d87fa10dafba326147bcaa39836b631291ef1c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457907"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783126"
 ---
 # <a name="resetsecurity-function"></a>ResetSecurity 関数
-指定された権限借用トークンを現在のスレッドに割り当てます。   
+指定した偽装トークンが現在のスレッドに割り当てられます。   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ResetSecurity (
    [in] HANDLE token
 ); 
@@ -43,16 +43,17 @@ HRESULT ResetSecurity (
 
 ## <a name="return-value"></a>戻り値
 
-関数が成功した場合、戻り値は`S_OK`(0) です。
+関数が成功した場合、戻り値は`S_OK`(0)。
 
-関数が失敗した場合、戻り値がゼロ以外のエラー コードです。 拡張エラー情報を取得する呼び出し、 [GetErrorInfo](geterrorinfo.md)関数。
+関数が失敗した場合、戻り値が 0 以外のエラー コードにします。 拡張エラー情報を取得する、 [GetErrorInfo](geterrorinfo.md)関数。
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** WMINet_Utils.idl  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>関連項目  
-[WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+## <a name="see-also"></a>関連項目
+
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

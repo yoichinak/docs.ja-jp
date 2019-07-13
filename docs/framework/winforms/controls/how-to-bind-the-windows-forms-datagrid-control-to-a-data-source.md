@@ -1,5 +1,5 @@
 ---
-title: '方法 : データ ソースに Windows フォーム DataGrid コントロールをバインドする'
+title: '方法: データ ソースに Windows フォーム DataGrid コントロールをバインドする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,26 +14,26 @@ helpviewer_keywords:
 - bound controls [Windows Forms]
 - data-bound controls [Windows Forms], DataGrid
 ms.assetid: 128cdb07-dfd3-4d60-9d6a-902847667c36
-ms.openlocfilehash: 62f61eb2d294baf007b0b3f749f3cf6b7f4857c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 920a93894cc126f85bc6b618efbe6e9cedea4881
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666431"
 ---
-# <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source"></a>方法 : データ ソースに Windows フォーム DataGrid コントロールをバインドする
+# <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source"></a>方法: データ ソースに Windows フォーム DataGrid コントロールをバインドする
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。 詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。  
+>  <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。 詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。  
   
- Windows フォーム<xref:System.Windows.Forms.DataGrid>コントロールは具体的には、データ ソースから情報を表示するように設計されています。 実行時に呼び出すことによって、コントロールをバインドする、<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>メソッドです。 さまざまなデータ ソースからデータを表示できますが、最も一般的なソース、データセットとデータのビューです。  
+ Windows フォーム<xref:System.Windows.Forms.DataGrid>コントロールが具体的には、データ ソースから情報を表示するように設計します。 実行時に呼び出すことによって、コントロールをバインドする、<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>メソッド。 さまざまなデータ ソースからデータを表示できますが、最も一般的なソース、データセットとデータのビューです。  
   
 ### <a name="to-data-bind-the-datagrid-control-programmatically"></a>DataGrid コントロールをプログラムでデータ バインドする  
   
-1.  データセットを読み込むコードを記述します。  
+1. データセットを挿入するコードを記述します。  
   
-     データ ソースが、データセットまたはデータセットのテーブルに基づいたデータ ビューの場合は、データセットへのデータ、フォームにコードを追加します。  
+     データ ソースがデータセットまたはデータセットのテーブルに基づくデータ ビューの場合は、データセットを挿入するためのフォームにコードを追加します。  
   
-     実際に使用するコードは、データセットがデータを取得する場所によって異なります。 データセットは、データベースから直接登録されているが、通常を呼び出した場合、`Fill`という名前のデータセットに読み込まれる次の例のように、データ アダプターの`DsCategories1`:  
+     実際に使用するコードは、データセットがデータを取得する場所に依存します。 通常、呼び出す場合は、データセットをデータベースから直接登録されている、`Fill`メソッドという名前のデータセットを設定します次の例のように、データ アダプターの`DsCategories1`:。  
   
     ```vb  
     sqlDataAdapter1.Fill(DsCategories1)  
@@ -47,7 +47,7 @@ ms.locfileid: "33530303"
     sqlDataAdapter1->Fill(dsCategories1);  
     ```  
   
-     場合は、データセットは、XML Web サービスから指定されている、通常、コードでサービスのインスタンスを作成し、データセットを返すメソッドのいずれかを呼び出します。 XML Web サービスからのデータセットをマージするには、ローカルのデータセットにします。 次の例と呼ばれる XML Web サービスのインスタンスを作成する方法を示しています`CategoriesService`を呼び出してその`GetCategories`メソッド、およびローカルのデータセットに結果のデータセットと呼ばれるマージ`DsCategories1`:  
+     XML Web サービス、データセットが指定されている場合、通常コードで、サービスのインスタンスを作成し、データセットを返すメソッドのいずれかを呼び出します。 その後、XML Web サービスからのデータセットは、ローカルのデータセットにマージします。 次の例と呼ばれる XML Web サービスのインスタンスを作成する方法を示しています`CategoriesService`、呼び出すその`GetCategories`メソッド、およびローカルのデータセットに結果のデータセットと呼ばれるマージ`DsCategories1`:。  
   
     ```vb  
     Dim ws As New MyProject.localhost.CategoriesService()  
@@ -68,10 +68,10 @@ ms.locfileid: "33530303"
     dsCategories1->Merge(ws->GetCategories());  
     ```  
   
-2.  呼び出す、<xref:System.Windows.Forms.DataGrid>コントロールの<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>メソッド、データ ソースとデータ メンバーを渡します。 データ メンバーを明示的に渡す必要がない場合は、空の文字列を渡します。  
+2. 呼び出す、<xref:System.Windows.Forms.DataGrid>コントロールの<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>メソッド、データ ソースとデータ メンバーに渡します。 データ メンバーを明示的に渡す必要がない場合は、空の文字列を渡します。  
   
     > [!NOTE]
-    >  最初に、グリッドをバインドする場合は、コントロールを設定することができます<xref:System.Windows.Forms.DataGrid.DataSource%2A>と<xref:System.Windows.Forms.DataGrid.DataMember%2A>プロパティです。 ただし、これらを設定したら、これらのプロパティをリセットできません。 そのため、お勧め必ず使用すること、<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>メソッドです。  
+    >  最初に、グリッドをバインドする場合は、コントロールを設定できます<xref:System.Windows.Forms.DataGrid.DataSource%2A>と<xref:System.Windows.Forms.DataGrid.DataMember%2A>プロパティ。 ただし、設定されていると、これらのプロパティをリセットできません。 そのため、お勧め必ず使用すること、<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>メソッド。  
   
      次の例は、プログラムによってという名前のデータセット内の Customers テーブルにバインドする方法を示しています`DsCustomers1`:。  
   
@@ -101,10 +101,11 @@ ms.locfileid: "33530303"
     dataGrid1->SetDataBinding(dsCustomers1, "");  
     ```  
   
-3.  (省略可能)グリッドに適切なテーブルのスタイルおよび列のスタイルを追加します。 テーブルのスタイルがない場合、テーブルが表示されますが、最低限の書式とすべての列が表示されます。  
+3. (省略可能)グリッドに適切なテーブルのスタイルおよび列のスタイルを追加します。 テーブル スタイルがない場合は、テーブルが表示されますが、最低限の書式と表示されているすべての列。  
   
-## <a name="see-also"></a>関連項目  
- [DataGrid コントロールの概要](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  
- [方法: Windows フォーム DataGrid コントロールにテーブルと列を追加する](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)  
- [DataGrid コントロール](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
- [Windows フォームでのデータ バインディング](../../../../docs/framework/winforms/windows-forms-data-binding.md)
+## <a name="see-also"></a>関連項目
+
+- [DataGrid コントロールの概要](datagrid-control-overview-windows-forms.md)
+- [方法: Windows フォームの DataGrid コントロールにテーブルと列を追加します。](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [DataGrid コントロール](datagrid-control-windows-forms.md)
+- [Windows フォームでのデータ バインディング](../windows-forms-data-binding.md)

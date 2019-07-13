@@ -2,12 +2,12 @@
 title: 呼び出し元情報 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: 0074ad5bfa5907fb1d02cc92b8b5717897a36b3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d9dc542ee9b800cfe6342f868ff9c2b170a4beec
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644213"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642366"
 ---
 # <a name="caller-information-visual-basic"></a>呼び出し元情報 (Visual Basic)
 呼び出し元情報の属性を使用すると、メソッドへの呼び出し元に関する情報を取得できます。 ソース コードのファイル パス、ソース コードの行番号、および呼び出し元のメンバー名を取得できます。 この情報は、トレース、デバッグ、および診断ツールの作成に役立ちます。  
@@ -46,7 +46,7 @@ End Sub
 '   source line number: 15  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  省略可能な各パラメーターには、明示的な既定値を指定する必要があります。 省略可能と指定されていないパラメーターには、呼び出し元情報の属性を適用できません。  
   
  呼び出し元情報の属性によってパラメーターが省略可能になるわけではありません。 この属性は、引数を省略したときに渡される既定値に影響します。  
@@ -55,12 +55,12 @@ End Sub
   
  省略可能な引数を明示的に指定して、呼び出し元情報を制御したり、非表示にしたりできます。  
   
-###  <a name="MEMBERNAMES"></a>メンバー名  
+### <a name="MEMBERNAMES"></a>メンバー名  
  `CallerMemberName` 属性を使用して、呼び出されたメソッドにメンバー名を `String` 引数として指定することを回避できます。 この方法を使用すると、**リファクタリングの名前の変更**で `String` 値が変更されないという問題が発生しなくなります。 この利点は、次のタスクで役立ちます。  
   
--   トレース ルーチンと診断ルーチンの使用。  
+- トレース ルーチンと診断ルーチンの使用。  
   
--   データ バインディング時の <xref:System.ComponentModel.INotifyPropertyChanged> インターフェイスの実装。 このインターフェイスを使用すると、オブジェクトのプロパティが、プロパティが変更されたことをデータ バインド コントロールに通知できます。これによって、このコントロールは、更新された情報を表示できます。 `CallerMemberName` 属性がない場合は、リテラルとしてプロパティ名を指定する必要があります。  
+- データ バインディング時の <xref:System.ComponentModel.INotifyPropertyChanged> インターフェイスの実装。 このインターフェイスを使用すると、オブジェクトのプロパティが、プロパティが変更されたことをデータ バインド コントロールに通知できます。これによって、このコントロールは、更新された情報を表示できます。 `CallerMemberName` 属性がない場合は、リテラルとしてプロパティ名を指定する必要があります。  
   
  次のグラフは、`CallerMemberName` 属性の使用時に返されるメンバー名を示します。  
   
@@ -74,8 +74,9 @@ End Sub
 |Attribute コンストラクター|属性が適用されるメンバーの名前。 属性がメンバー内の要素 (パラメーター、戻り値、ジェネリック型パラメーターなど) である場合、この結果は、その要素に関連付けられているメンバーの名前になります。|  
 |含んでいないメンバー (型に適用されているアセンブリ レベルや属性など)|省略可能なパラメーターの既定値。|  
   
-## <a name="see-also"></a>関連項目  
- [属性 (Visual Basic)](../../../visual-basic/language-reference/attributes.md)  
- [一般的な属性 (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)  
- [省略可能なパラメーター](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
- [プログラミングの概念 (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)
+## <a name="see-also"></a>関連項目
+
+- [属性 (Visual Basic)](../../../visual-basic/language-reference/attributes.md)
+- [一般的な属性 (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)
+- [省略可能なパラメーター](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
+- [プログラミングの概念 (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)

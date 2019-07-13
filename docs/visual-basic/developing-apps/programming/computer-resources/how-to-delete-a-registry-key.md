@@ -11,12 +11,12 @@ helpviewer_keywords:
 - registry [Visual Basic], deleting keys
 - examples [Visual Basic], registry
 ms.assetid: ab9aca0e-42b0-4ff7-8ff9-845a4bfdf9f2
-ms.openlocfilehash: 8a983436b8c7415f0d356d65ae7d6c5ffd1c2db5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e0c8990fcc55bc4208b1c23690ff748b7167002
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583852"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662767"
 ---
 # <a name="how-to-delete-a-registry-key-in-visual-basic"></a>方法: レジストリ キーを削除する (Visual Basic)
 <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> メソッドと <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> メソッドはレジストリ キーの削除に使用できます。  
@@ -25,29 +25,29 @@ ms.locfileid: "33583852"
   
 #### <a name="to-delete-a-registry-key"></a>レジストリ キーを削除するには  
   
--   `DeleteSubKey` メソッドを使用して、レジストリ キーを削除します。 この例では、CurrentUser ハイブの Software/TestApp キーを削除します。 このキーは、コード内で適切な文字列に変更したり、ユーザーが指定した情報を使用したりすることができます。  
+- `DeleteSubKey` メソッドを使用して、レジストリ キーを削除します。 この例では、CurrentUser ハイブの Software/TestApp キーを削除します。 このキーは、コード内で適切な文字列に変更したり、ユーザーが指定した情報を使用したりすることができます。  
   
-     [!code-vb[VbResourceTasks#19](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-delete-a-registry-key_1.vb)]  
+     [!code-vb[VbResourceTasks#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#19)]  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  キーと値の組み合わせが存在しない場合、`DeleteSubKey` メソッドは空の文字列を返します。  
   
  次の条件を満たす場合は、例外が発生する可能性があります。  
   
--   キーの名前が `Nothing` である場合 (<xref:System.ArgumentNullException>)。  
+- キーの名前が `Nothing` である場合 (<xref:System.ArgumentNullException>)。  
   
--   レジストリ キーを作成するためのアクセス許可がユーザーにない場合 (<xref:System.Security.SecurityException>)。  
+- レジストリ キーを作成するためのアクセス許可がユーザーにない場合 (<xref:System.Security.SecurityException>)。  
   
--   キー名が 255 文字の制限を超えている場合 (<xref:System.ArgumentException>)。  
+- キー名が 255 文字の制限を超えている場合 (<xref:System.ArgumentException>)。  
   
--   レジストリ キーが読み取り専用の場合 (<xref:System.UnauthorizedAccessException>)。  
+- レジストリ キーが読み取り専用の場合 (<xref:System.UnauthorizedAccessException>)。  
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  必要なアクセス許可が実行時に与えられない (<xref:System.Security.Permissions.RegistryPermission>) 場合、またはユーザーが設定の作成や書き込みを行うための適切な (ACL によって決定された) アクセス権を持っていない場合、レジストリ呼び出しは失敗します。 たとえば、コード アクセス セキュリティのアクセス許可を持つローカル アプリケーションには、オペレーティング システムのアクセス許可がない可能性があります。  
   
-## <a name="see-also"></a>参照  
- <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>  
- <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>  
- <xref:Microsoft.Win32.RegistryKey>  
- [セキュリティとレジストリ](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)  
- [レジストリからの読み取りとレジストリへの書き込み](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>
+- <xref:Microsoft.Win32.RegistryKey>
+- [セキュリティとレジストリ](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)
+- [レジストリからの読み取りとレジストリへの書き込み](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)

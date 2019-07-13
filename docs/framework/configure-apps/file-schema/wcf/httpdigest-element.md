@@ -1,15 +1,15 @@
 ---
-title: '&lt;httpDigest&gt; 要素'
+title: <httpDigest> 要素
 ms.date: 03/30/2017
 ms.assetid: 3da4f276-dfd9-4247-8c07-01d83618727c
-ms.openlocfilehash: 2211c593090d697ae07350fcf7ac491b9d23e2d0
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 914711e4d6c3dbb1ccc741af1b3abd6b8de716a8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751047"
 ---
-# <a name="lthttpdigestgt-element"></a>&lt;httpDigest&gt; 要素
+# <a name="httpdigest-element"></a>\<httpDigest > 要素
 サービスに対するクライアントの認証時に使用されるダイジェスト型の資格情報を指定します。  
   
  \<system.ServiceModel >  
@@ -17,7 +17,7 @@ ms.locfileid: "54150142"
 \<endpointBehaviors>  
 \<behavior>  
 \<clientCredentials>  
-\<httpDigest >  
+\<httpDigest>  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,14 +48,15 @@ ms.locfileid: "54150142"
   
  この機能は、Windows の Active Directory およびインターネット インフォメーション サービス (IIS) と共に有効にする必要があります。 詳細については、次を参照してください。 [Digest Authentication in IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88443)します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement.HttpDigest%2A>  
- <xref:System.ServiceModel.Description.ClientCredentials>  
- <xref:System.ServiceModel.Description.ClientCredentials.HttpDigest%2A>  
- <xref:System.ServiceModel.Configuration.HttpDigestClientElement>  
- <xref:System.ServiceModel.Security.HttpDigestClientCredential>  
- [セキュリティ動作](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [クライアントのセキュリティ保護](../../../../../docs/framework/wcf/securing-clients.md)  
- [証明書の使用](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
+- <xref:System.ServiceModel.Configuration.ClientCredentialsElement.HttpDigest%2A>
+- <xref:System.ServiceModel.Description.ClientCredentials>
+- <xref:System.ServiceModel.Description.ClientCredentials.HttpDigest%2A>
+- <xref:System.ServiceModel.Configuration.HttpDigestClientElement>
+- <xref:System.ServiceModel.Security.HttpDigestClientCredential>
+- [セキュリティ動作](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [クライアントのセキュリティ保護](../../../../../docs/framework/wcf/securing-clients.md)
+- [証明書の使用](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fdbad4a5eb9a9d0c81ae8d29394652e9f6df136e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: c1a0e2a6c7851b261baa3e02f6431e7a4ff697e4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44214434"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660323"
 ---
 # <a name="contextswitchdeadlock-mda"></a>contextSwitchDeadlock MDA
 
@@ -39,11 +39,11 @@ ms.locfileid: "44214434"
 
 次のすべての条件が満たされる場合、この MDA が誤ってアクティブ化される可能性があります。
 
--   アプリケーションがライブラリを通じて直接または間接的に STA スレッドから COM コンポーネントを作成する。
+- アプリケーションがライブラリを通じて直接または間接的に STA スレッドから COM コンポーネントを作成する。
 
--   デバッガーでアプリケーションが中断され、ユーザーがアプリケーションを続行したか、またはステップ操作を実行した。
+- デバッガーでアプリケーションが中断され、ユーザーがアプリケーションを続行したか、またはステップ操作を実行した。
 
--   アンマネージ デバッグが有効になっていない。
+- アンマネージ デバッグが有効になっていない。
 
 MDA が誤ってアクティブ化されたかどうかを判断するには、すべてのブレークポイントを無効にし、アプリケーションを再び実行して、中断なしで実行させます。 MDA がアクティブ化されない場合は、最初のアクティブ化は誤りだった可能性があります。 その場合は、MDA を無効にして、デバッグ セッションとの干渉を防ぎます。
 

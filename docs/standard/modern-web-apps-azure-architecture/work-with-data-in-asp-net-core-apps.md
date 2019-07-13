@@ -3,13 +3,13 @@ title: ASP.NET Core アプリでのデータの操作
 description: ASP.NET Core および Azure での最新の Web アプリケーションの設計 | ASP.NET Core アプリでのデータの操作
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: efadf3a0d216197b05d6cd4cfe94ee3eb24bb18e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: 9f765acce89bec1fd73e9c43a6e7d75d78be785d
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147175"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423989"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core アプリでのデータの操作
 
@@ -51,7 +51,7 @@ public class CatalogContext : DbContext
 }
 ```
 
-DbContext には、DbContextOptions を受け入れるコンストラクターが必要です。また、この引数を基本の DbContext コンストラクターに渡す必要があります。 ご利用のアプリケーションに DbContext が 1 つだけ存在する場合は、DbContextOptions のインスタンスを渡すことができますが、複数存在する場合は、ジェネリックの DbContextOptions<T> 型を使用して、ジェネリック パラメーターとして DbContext 型を渡す必要があることに注意してください。
+DbContext には、DbContextOptions を受け入れるコンストラクターが必要です。また、この引数を基本の DbContext コンストラクターに渡す必要があります。 ご利用のアプリケーションに DbContext が 1 つだけ存在する場合は、DbContextOptions のインスタンスを渡すことができますが、複数存在する場合は、ジェネリックの DbContextOptions\<T> 型を使用して、ジェネリック パラメーターとして DbContext 型を渡す必要があることに注意してください。
 
 ### <a name="configuring-ef-core"></a>EF Core の構成
 
@@ -89,7 +89,7 @@ var brandItems = await _context.CatalogBrands
     .ToListAsync();
 ```
 
-上記の例では、クエリをすぐに実行するために、ToListAsync への呼び出しを追加することが重要です。 それ以外の場合、ステートメントは IQueryable<SelectListItem> を brandItems に割り当て、列挙されるまで実行されません。 メソッドから IQueryable 結果を返すことには長所と短所があります。 EF Core で構築されるクエリをさらに変更できますが、EF Core で変換できないクエリに操作が追加された場合、実行時にのみ発生するエラーが発生する可能性もあります。 データ アクセスを実行するメソッドにすべてのフィルターを渡して、結果としてメモリ内コレクション (List<T> など) を戻す方が一般的には安全です。
+上記の例では、クエリをすぐに実行するために、ToListAsync への呼び出しを追加することが重要です。 それ以外の場合、ステートメントは IQueryable\<SelectListItem> を brandItems に割り当て、列挙されるまで実行されません。 メソッドから IQueryable 結果を返すことには長所と短所があります。 EF Core で構築されるクエリをさらに変更できますが、EF Core で変換できないクエリに操作が追加された場合、実行時にのみ発生するエラーが発生する可能性もあります。 データ アクセスを実行するメソッドにすべてのフィルターを渡して、結果としてメモリ内コレクション (List\<T> など) を戻す方が一般的には安全です。
 
 EF Core は、永続化からフェッチするエンティティの変更を追跡します。 追跡対象エンティティの変更を保存するには、DbContext で SaveChanges メソッドを呼び出すだけです。これで、エンティティのフェッチに使用されたものと同じ DbContext インスタンスであることが確認されます。 エンティティの追加と削除は適切な DbSet プロパティで直接行います。この場合も、データベース コマンドを実行するために SaveChanges を呼び出します。 次の例では、永続化のエンティティの追加、更新、および削除を示します。
 
@@ -123,13 +123,82 @@ var brandsWithItems = await _context.CatalogBrands
     .ToListAsync();
 ```
 
-複数のリレーションシップを含めることができます。また、ThenInclude を使用して、サブリレーションシップを含めることもできます。 EF Core は単一のクエリを実行して、エンティティの結果セットを取得します。
+複数のリレーションシップを含めることができます。また、ThenInclude を使用して、サブリレーションシップを含めることもできます。 EF Core は単一のクエリを実行して、エンティティの結果セットを取得します。 あるいは、次のように '.' で区切った文字列を `.Include()` 拡張メソッドに渡すことで、ナビゲーション プロパティを含めることができます。
+
+```csharp
+    .Include(“Items.Products”)
+```
+
+この仕様はフィルタリング ロジックをカプセル化するだけでなく、データを入力するプロパティなど、返すデータのシェイプも指定できます。 eShopOnWeb サンプルには、仕様内で一括読み込み情報のカプセル化を実演するいくつかの仕様が含まれています。 クエリの一部として仕様がどのように使用されるのかここで確認できます。
+
+```csharp
+// Includes all expression-based includes
+query = specification.Includes.Aggregate(query,
+            (current, include) => current.Include(include));
+
+// Include any string-based include statements
+query = specification.IncludeStrings.Aggregate(query,
+            (current, include) => current.Include(include));
+```
 
 関連データを読み込むために、_明示的読み込み_を使用することもできます。 明示的読み込みを使用すれば、既に取得されているエンティティに追加データを読み込むことができます。 これにはデータベースへの個別の要求が必要になるため、要求ごとに行われるデータベース ラウンド トリップの数を最小限に抑える必要がある、Web アプリケーションではお勧めできません。
 
 _遅延読み込み_は、アプリケーションでの参照時に関連データを自動的に読み込む機能です。 EF Core では、バージョン 2.1 で遅延読み込みのサポートが追加されました。 遅延読み込みは既定では有効になりません。`Microsoft.EntityFrameworkCore.Proxies` をインストールする必要があります。 明示的読み込みと同様、遅延読み込みは通常、Web アプリケーションでは無効にする必要があります。遅延読み込みを使用すると、各 Web 要求内で追加のデータベース クエリが行われるためです。 待機時間が短く、テストに使用されるデータ セットが小さい場合、残念ながら、遅延読み込みによって発生するオーバーヘッドについては開発時にあまり気付きません。 しかし、ユーザーやデータがより多く、待機時間がより長い運用環境では、追加のデータベース要求により、遅延読み込みを多用する Web アプリケーションのパフォーマンスが低下する可能性があります。
 
 [Web アプリケーションでのエンティティの遅延読み込みを回避する](https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications)
+
+### <a name="encapsulating-data"></a>データをカプセル化する
+
+EF Core は、モデルでその状態を正しくカプセル化するための機能をいくつか備えています。 ドメイン モデルでよくある問題として、コレクションのナビゲーション プロパティが一般にアクセス可能なリスト型として公開されることがあります。 そうすると、コラボレーターが誰でもこれらのコレクション型のコンテンツを操作できるようになり、結果として、コレクションに関連する重要なビジネス ルールがバイパスされ、オブジェクトが無効な状態のままになる可能性があります。 これに対する解決策は、関連するコレクションへの読み取り専用アクセスを公開することと、クライアントがこれらのコレクションを操作する方法を定義したメソッドを明示的に提供することです。次の例をご覧ください。
+
+```csharp
+public class Basket : BaseEntity
+{
+    public string BuyerId { get; set; }
+    private readonly List<BasketItem> _items = new List<BasketItem>();
+    public IReadOnlyCollection<BasketItem> Items => _items.AsReadOnly();
+
+    public void AddItem(int catalogItemId, decimal unitPrice, int quantity = 1)
+    {
+        if (!Items.Any(i => i.CatalogItemId == catalogItemId))
+        {
+            _items.Add(new BasketItem()
+            {
+                CatalogItemId = catalogItemId,
+                Quantity = quantity,
+                UnitPrice = unitPrice
+            });
+            return;
+        }
+        var existingItem = Items.FirstOrDefault(i => i.CatalogItemId == catalogItemId);
+        existingItem.Quantity += quantity;
+    }
+}
+```
+
+このエンティティ型ではパブリックの `List` または `ICollection` プロパティが公開されず、代わりに、基になるリスト型をラップする `IReadOnlyCollection` 型が公開されます。 このパターンを使用するとき、次のように、バッキング フィールドを使用するように Entity Framework Core に指示できます。
+
+```csharp
+private void ConfigureBasket(EntityTypeBuilder<Basket> builder)
+{
+    var navigation = builder.Metadata.FindNavigation(nameof(Basket.Items));
+
+    navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+}
+```
+
+ドメイン モデルを改善する別の方法としては、ID がなく、そのプロパティだけで区別される型に値オブジェクトを使用するという方法があります。 エンティティのプロパティとしてこのような型を使用すると、ロジックはそれが属する値オブジェクトに固有となり、同じ概念を使用する複数のエンティティ間でロジックが重複することがありません。 Entity Framework Core では、次のように、所有されるエンティティとして型を構成することで、所有するエンティティと同じテーブルに値オブジェクトを保持できます。
+
+```csharp
+private void ConfigureOrder(EntityTypeBuilder<Order> builder)
+{
+    builder.OwnsOne(o => o.ShipToAddress);
+}
+```
+
+この例では、`ShipToAddress` プロパティの型は `Address` です。 `Address` は、`Street` や `City` など、いくつかのプロパティを持つ値オブジェクトです。 EF Core では、`Address` プロパティごとに 1 列の配分で `Order` オブジェクトがそのテーブルにマッピングされます。各列の名前の先頭にプロパティの名前が接頭辞として付きます。 この例で、`Order` テーブルに `ShipToAddress_Street` や `ShipToAddress_City` などの列が含まれます。
+
+[EF Core 2.2 では、所有エンティティのコレクションがサポートされました](https://docs.microsoft.com/ef/core/what-is-new/ef-core-2.2#collections-of-owned-entities)
 
 ### <a name="resilient-connections"></a>回復力のある接続
 
@@ -165,9 +234,9 @@ public class Startup
 
 EF Core 接続で再試行を有効にすると、EF Core を使用して実行する各操作は、独自の再試行可能な操作になります。 一時的なエラーが発生した場合、SaveChanges への各クエリと各呼び出しは 1 つのユニットとして再試行されます。
 
-一方、BeginTransaction を使用してトランザクションを開始するコードの場合、1 ユニットとして扱う必要のある独自の操作グループを定義しています。エラーが発生した場合、トランザクション内のすべてがロールバックされます。 EF 実行戦略 (再試行ポリシー) を使用し、複数の DbContext からの SaveChanges をいくつかトランザクションに含める場合、そのトランザクションを実行しようとすると、次のような例外が表示されます。
+一方、BeginTransaction を使用してトランザクションを開始するコードの場合、1 ユニットとして扱う必要のある独自の操作グループを定義しています。エラーが発生した場合、トランザクション内のすべてがロールバックされる必要があります。 EF 実行戦略 (再試行ポリシー) を使用し、複数の DbContext からの SaveChanges をいくつかトランザクションに含める場合、そのトランザクションを実行しようとすると、次のような例外が表示されます。
 
-System.InvalidOperationException: 構成された実行戦略 'SqlServerRetryingExecutionStrategy' は、ユーザーが開始したトランザクションをサポートしていません。 'DbContext.Database.CreateExecutionStrategy()' から返された実行戦略を使用して、再試行可能なユニットとしてトランザクション内のすべての操作を実行します。
+System.InvalidOperationException:構成された実行戦略 'SqlServerRetryingExecutionStrategy' は、ユーザーが開始したトランザクションをサポートしていません。 'DbContext.Database.CreateExecutionStrategy()' から返された実行戦略を使用して、再試行可能なユニットとしてトランザクション内のすべての操作を実行します。
 
 この解決策では、実行する必要があるすべてを表すデリゲートを使用して EF 実行戦略を手動で呼び出します。 一時的なエラーが発生した場合、実行戦略によってデリゲートが再び呼び出されます。 次のコードは、この方法を実装する方法を示しています。
 
@@ -261,7 +330,7 @@ var data = connection.Query<Post, User, Post>(sql,
 
 従来、SQL Server などのリレーショナル データベースが永続的なデータ記憶域のマーケットプレースの多くを占めますが、使用可能な唯一のソリューションではありません。 [MongoDB](https://www.mongodb.com/what-is-mongodb) などの NoSQL データベースでは、オブジェクトを格納するさまざまな方法が提供されます。 オブジェクトをテーブルと行にマップするのではなく、オブジェクト グラフ全体をシリアル化して、結果を格納することもできます。 この方法の利点は、少なくとも最初は単純さとパフォーマンスとなります。 オブジェクトがデータベースから最後に取得されてから変更された可能性のある、リレーションシップ、更新プログラム、および行を持つ多くのテーブルにオブジェクトを分解するよりも、キーを持つ単一のシリアル化されたオブジェクトを格納する方が確実に簡単です。 同様に、キーベースのストアから単一のオブジェクトをフェッチして逆シリアル化することは、リレーショナル データベースから同じオブジェクトを完全に構成するために必要な複雑な結合や複数のデータベース クエリよりも通常ははるかに速くて簡単です。 また、ロックやトランザクションあるいは固定スキーマがないため、NoSQL データベースは多くのコンピューターでのスケーリングに非常に適しており、非常に大規模なデータセットをサポートできます。
 
-その一方で、NoSQL データベース (通常は呼び出し時に) には欠点があります。 リレーショナル データベースでは、正規化を使用して整合性を適用し、データの重複を防ぎます。 これにより、データベースの合計サイズが小さくなり、共有データの更新プログラムがデータベース全体ですぐに使用できるようになります。 リレーショナル データベースでは、Address テーブルが ID で Country テーブルを参照する場合があります。国の名前が変更された場合、アドレス レコードは更新プログラムの利点が得られ、それ自体の更新は必要ありません。 ただし、NoSQL データベースでは、Address とそれに関連付けられている Country が、格納されている多くのオブジェクトの一部としてシリアル化される可能性があります。 国の名前を更新するには、単一行ではなく、すべてのオブジェクトを更新する必要があります。 リレーショナル データベースでは、外部キーのようなルールを適用することで、リレーショナルの整合性を確認することもできます。 通常、NoSQL データベースでは、そのデータに対するこのような制約は提供されません。
+その一方で、NoSQL データベース (通常は呼び出し時に) には欠点があります。 リレーショナル データベースでは、正規化を使用して整合性を適用し、データの重複を防ぎます。 これにより、データベースの合計サイズが小さくなり、共有データの更新プログラムがデータベース全体ですぐに使用できるようになります。 リレーショナル データベースでは、Address テーブルによって、ID を使用して Country テーブルが参照される場合があります。国/地域の名前が変更された場合、アドレス レコードは更新プログラムの利点が得られ、それ自体の更新は必要ありません。 ただし、NoSQL データベースでは、Address とそれに関連付けられている Country が、格納されている多くのオブジェクトの一部としてシリアル化される可能性があります。 国/地域の名前を更新するには、単一行ではなく、すべてのオブジェクトを更新する必要があります。 リレーショナル データベースでは、外部キーのようなルールを適用することで、リレーショナルの整合性を確認することもできます。 通常、NoSQL データベースでは、そのデータに対するこのような制約は提供されません。
 
 NoSQL データベースで対処する必要があるもう 1 つの複雑なものとして、バージョン管理があります。 オブジェクトのプロパティが変更された場合、格納された過去のバージョンから逆シリアル化できなくなる可能性があります。 したがって、シリアル化された (以前の) バージョンのオブジェクトを持つ既存のすべてのオブジェクトを更新して、新しいスキーマに準拠する必要があります。 これは、スキーマの変更に更新スクリプトとマッピング更新が必要な場合がある、リレーショナル データベースとは概念的に異なります。 ただし、NoSQL の方法では多くの場合、変更する必要があるエントリの数がはるかに増えます。これは、データの重複が増えるためです。
 
@@ -275,7 +344,7 @@ Azure DocumentDB はフル マネージドの NoSQL データベース サービ
 
 ![DocumentDB (NoSQL JSON データベース) のリソース間の階層関係](./media/image8-2.png)
 
-**図 8-2**  DocumentDB リソースの組織。
+**図 8-2** DocumentDB リソースの組織。
 
 DocumentDB クエリ言語は、JSON ドキュメントを照会するための簡単かつ強力なインターフェイスです。 言語では ANSI SQL 文法のサブセットがサポートされ、JavaScript のオブジェクト、配列、オブジェクトの構築、関数呼び出しと緊密に統合できます。
 

@@ -2,12 +2,12 @@
 title: dotnet tool uninstall コマンド
 description: dotnet tool uninstall コマンドは、マシン上の指定された .NET Core グローバル ツールをアンインストールします。
 ms.date: 05/29/2018
-ms.openlocfilehash: 2ac0046d012fcf4a4be1c9bfa2e942e35b2c7290
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 4d53d305131e3399ab5d9c19f9319f3ba3544c19
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168352"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680924"
 ---
 # <a name="dotnet-tool-uninstall"></a>dotnet tool uninstall
 
@@ -65,4 +65,4 @@ dotnet tool uninstall <-h|--help>
 
 ## <a name="see-also"></a>関連項目
 
-* [.NET Core グローバル ツール](global-tools.md)
+- [.NET Core グローバル ツール](global-tools.md)

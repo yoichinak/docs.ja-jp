@@ -1,5 +1,5 @@
 ---
-title: '&lt;コンパイラ&gt;要素'
+title: <compilers> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#compilers
@@ -9,20 +9,18 @@ helpviewer_keywords:
 - <compilers> element
 - compilers element
 ms.assetid: d40fba59-98f9-4783-ae0c-2ebea27ce77b
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: a73c3e8f554d2c78252ca763a620d05c5b494884
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 744ef0d9bc58e6a0152dce53c40c24eb5283dc0f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705338"
 ---
-# <a name="ltcompilersgt-element"></a>&lt;コンパイラ&gt;要素
+# <a name="compilers-element"></a>\<コンパイラ > 要素
 0 個以上の [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) 要素を含むコンパイラ構成要素のコンテナー。  
   
  \<configuration>  
-\<system.codedom >  
+\<system.codedom>  
 \<コンパイラ > 要素  
   
 ## <a name="syntax"></a>構文  
@@ -79,9 +77,10 @@ ms.locfileid: "50192929"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.CodeDom.Compiler.CompilerInfo>  
-- <xref:System.CodeDom.Compiler.CodeDomProvider>  
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [コンパイラおよび言語プロバイダー設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)  
+## <a name="see-also"></a>関連項目
+
+- <xref:System.CodeDom.Compiler.CompilerInfo>
+- <xref:System.CodeDom.Compiler.CodeDomProvider>
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [コンパイラおよび言語プロバイダー設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)
 - [\<compiler> 要素](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)

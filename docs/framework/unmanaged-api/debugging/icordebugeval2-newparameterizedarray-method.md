@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 552d2fa8a7c35066e32fb9f8e9455b3092b1e65b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 973f975885bbbf5cbed74adef7b9f4f423c42583
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413281"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753657"
 ---
 # <a name="icordebugeval2newparameterizedarray-method"></a>ICorDebugEval2::NewParameterizedArray メソッド
-指定した要素の型および次元の新しい配列を割り当てます。  
+指定した要素型とディメンションの新しい配列を割り当てます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT NewParameterizedArray(  
     [in] ICorDebugType          *pElementType,  
     [in] ULONG32                rank,  
@@ -38,27 +38,27 @@ HRESULT NewParameterizedArray(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pElementType`  
  [in]配列に格納されている要素の型を表す ICorDebugType オブジェクトへのポインター。  
   
  `rank`  
- [in]配列の次元の数。 .NET Framework version 2.0 では、この値は 1 にする必要があります。  
+ [in]配列の次元の数。 .NET framework version 2.0 では、この値は 1 にある必要があります。  
   
  `dims`  
  [in]配列の各次元のバイト単位のサイズ。  
   
  `lowBounds`  
- [in] オプション。 配列の各次元の下限値です。 この値を省略すると、各次元の下限を 0 が使われます。  
+ [in] オプション。 配列の各次元の下限値です。 この値を省略すると、各ディメンションの下限を 0 が使われます。  
   
-## <a name="remarks"></a>コメント  
- 配列の要素のジェネリック型のインスタンスがあります。 配列は常に、現在のスレッドが実行されているアプリケーション ドメインに作成します。 .NET Framework 2.0 の値で`rank`1 にする必要があります。  
+## <a name="remarks"></a>Remarks  
+ 配列の要素には、ジェネリック型のインスタンスを使用できます。 配列が常に、スレッドが現在実行されているアプリケーション ドメインで作成されます。 .NET Framework 2.0 の値で`rank`1 である必要があります。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 72acd0029d0189de1c724856572957f111b9d18f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675897"
+---
 ## <a name="installation-instructions"></a>インストール手順 
 
 **Visual Studio インストーラー**で **.NET Compiler Platform SDK** を見つけるには、以下の 2 つの異なる方法があります。

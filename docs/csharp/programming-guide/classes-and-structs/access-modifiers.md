@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: d315355db546c5be45d40fe0c5bcfc46d0f6ead8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6622612e927b800e1a4769c99df0e2fa7d99a33d
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240048"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609651"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>アクセス修飾子 (C# プログラミング ガイド)
 すべての型とそのメンバーには、アクセシビリティ レベルがあります。同じアセンブリ (または他のアセンブリ) にある他のコードからそれらの型やそのメンバーを利用できるかどうかは、アクセシビリティ レベルによって制御されます。 型またはメンバーにはその宣言時に、以下のアクセス修飾子を使ってアクセシビリティを指定できます。  
@@ -33,7 +33,7 @@ ms.locfileid: "53240048"
   
  次の例は、型とメンバーにアクセス修飾子を指定する方法を示しています。  
   
- [!code-csharp[csProgGuideObjects#72](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_1.cs)]  
+ [!code-csharp[csProgGuideObjects#72](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#72)]  
   
  コンテキストに関係なくすべての型またはすべてのメンバーにどのようなアクセス修飾子でも使用できるというわけではありません。型のメンバーのアクセシビリティが、それを含んでいる型のアクセシビリティによって制約を受ける場合もあります。 以降のセクションでは、アクセシビリティについてさらに詳しく取り上げます。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "53240048"
   
  派生クラスに、その基本型を超えるアクセシビリティを割り当てることはできません。 つまり、internal クラス `A` から派生したクラス `B` を public にすることはできません。 仮にそれが許容されるならば、`A` が public になると考えられます。`A` のすべての protected メンバーと internal メンバーに派生クラスからアクセスできることになるからです。  
   
- InternalsVisibleToAttribute を使うと、internal 型へのアクセスを他の特定のアセンブリに許可することができます。 詳細については、[Friend アセンブリ](../concepts/assemblies-gac/friend-assemblies.md)に関するページを参照してください。  
+ InternalsVisibleToAttribute を使うと、internal 型へのアクセスを他の特定のアセンブリに許可することができます。 詳細については、[Friend アセンブリ](../../../standard/assembly/friend-assemblies.md)に関するページを参照してください。  
   
 ## <a name="class-and-struct-member-accessibility"></a>クラスと構造体のメンバーのアクセシビリティ  
  クラスのメンバー (入れ子にされているクラスや構造体も含む) は、6 種類あるアクセス修飾子をどれでも使って宣言できます。 構造体のメンバーを protected として宣言することはできません。構造体は継承をサポートしていないためです。  
@@ -53,13 +53,13 @@ ms.locfileid: "53240048"
   
  フィールド、プロパティ、イベントのいずれかに該当するメンバーの型には、メンバー自体と同じかそれ以上のアクセシビリティが必要です。 同様に、メソッド、インデクサー、デリゲートのいずれかに該当するメンバーの戻り値の型とパラメーターの型には、メンバー自体と同じかそれ以上のアクセシビリティが必要です。 たとえば、クラス `C` を返すメソッド `M` を public にするためには、`C` も public である必要があります。 同様に、`A` が private として宣言されている場合、`A` 型のプロパティを protected にすることはできません。  
   
- ユーザー定義の演算子は、必ず public として宣言する必要があります。 詳細については、「[operator (C# Reference) (operator (C# リファレンス))](../../../csharp/language-reference/keywords/operator.md)」を参照してください。  
+ ユーザー定義の演算子は、必ず public かつ静的として宣言する必要があります。 詳細については、「[演算子のオーバーロード](../../../csharp/language-reference/operators/operator-overloading.md)」を参照してください。  
   
  アクセシビリティ修飾子をファイナライザーに割り当てることはできません。  
   
  クラスまたは構造体のメンバーにアクセス レベルを設定するには、該当するキーワードをメンバーの宣言に追加します。その例を次に示します。  
   
- [!code-csharp[csProgGuideObjects#73](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_2.cs)]  
+ [!code-csharp[csProgGuideObjects#73](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#73)]  
   
 > [!NOTE]
 >  protected internal のアクセシビリティ レベルは、"protected AND internal" ではなく "protected OR internal" という意味になります。 つまり、protected internal のメンバーには、同じアセンブリ内の任意のクラス (派生クラスも含む) からアクセスすることができます。 同じアセンブリ内の派生クラスのみにアクセシビリティを限定するには、クラス自体は internal として宣言し、そのメンバーを protected として宣言します。 また、C# 7.2 以降、外側のクラスを internal にしなくても、private protected アクセス修飾子を利用して同じ結果を得ることができます。  
@@ -74,17 +74,17 @@ ms.locfileid: "53240048"
 ## <a name="c-language-specification"></a>C# 言語仕様  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [インターフェイス](../../../csharp/programming-guide/interfaces/index.md)  
-- [private](../../../csharp/language-reference/keywords/private.md)  
-- [public](../../../csharp/language-reference/keywords/public.md)  
-- [internal](../../../csharp/language-reference/keywords/internal.md)  
-- [protected](../../../csharp/language-reference/keywords/protected.md)  
-- [protected internal](../../../csharp/language-reference/keywords/protected-internal.md)  
-- [private protected](../../../csharp/language-reference/keywords/private-protected.md)  
-- [class](../../../csharp/language-reference/keywords/class.md)  
-- [struct](../../../csharp/language-reference/keywords/struct.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [インターフェイス](../../../csharp/programming-guide/interfaces/index.md)
+- [private](../../../csharp/language-reference/keywords/private.md)
+- [public](../../../csharp/language-reference/keywords/public.md)
+- [internal](../../../csharp/language-reference/keywords/internal.md)
+- [protected](../../../csharp/language-reference/keywords/protected.md)
+- [protected internal](../../../csharp/language-reference/keywords/protected-internal.md)
+- [private protected](../../../csharp/language-reference/keywords/private-protected.md)
+- [class](../../../csharp/language-reference/keywords/class.md)
+- [struct](../../../csharp/language-reference/keywords/struct.md)
 - [interface](../../../csharp/language-reference/keywords/interface.md)

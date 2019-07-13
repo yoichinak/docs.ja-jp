@@ -2,12 +2,12 @@
 title: F#コンポーネントのデザイン ガイドライン
 description: 他の呼び出し元で消費するための F# コンポーネントを記述するためのガイドラインについて説明します。
 ms.date: 05/14/2018
-ms.openlocfilehash: bc8d4908912c4630f649ba30593d43a557278efa
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c61e4cd9098388b356c71c325d66c760fa866cf0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902162"
 ---
 # <a name="f-component-design-guidelines"></a>F#コンポーネントのデザイン ガイドライン
 
@@ -47,7 +47,7 @@ ms.locfileid: "53145674"
 type Point =
 
     /// Computes the distance between this point and another
-    member DistanceTo : otherPoint:Point -> float
+    member DistanceTo: otherPoint:Point -> float
 ```
 
 短い形式のいずれかの XML コメントを使用することができます (`/// comment`)、または標準の XML コメント (`///<summary>comment</summary>`)。
@@ -74,7 +74,7 @@ type Point =
 |-----------|------|------|----------|-------|
 | 具象型 | PascalCase | 名詞または形容詞 | 一覧で、Double、複雑な | 具象型は、構造体、クラス、列挙、デリゲート、レコード、および共用体です。 型名が小文字従来 OCaml には、F# 型の .NET の名前付けスキームは採用します。
 | DLL           | PascalCase |                 | Fabrikam.Core.dll |  |
-| 共用体タグ     | PascalCase | 名詞 | いくつかの追加、成功 | パブリック Api では、プレフィックスを使用しないでください。 必要に応じてときなど、内部プレフィックスを使用して、 `チームの入力 TAlpha を = | TBeta | TDelta` |
+| 共用体タグ     | PascalCase | 名詞 | いくつかの追加、成功 | パブリック Api では、プレフィックスを使用しないでください。 必要に応じてときなど、内部プレフィックスを使用します。 `type Teams = TAlpha | TBeta | TDelta.` |
 | event          | PascalCase | 動詞 | ValueChanged/ValueChanging |  |
 | 例外     | PascalCase |      | WebException | 名前は、"Exception"で終わる必要があります。 |
 | フィールド          | PascalCase | 名詞 | CurrentName  | |
@@ -191,16 +191,16 @@ type Counter() =
 
 ```fsharp
 type Serializer =
-    abstract Serialize<'T> : preserveRefEq: bool -> value: 'T -> string
-    abstract Deserialize<'T> : preserveRefEq: bool -> pickle: string -> 'T
+    abstract Serialize<'T>: preserveRefEq: bool -> value: 'T -> string
+    abstract Deserialize<'T>: preserveRefEq: bool -> pickle: string -> 'T
 ```
 
 優先。
 
 ```fsharp
 type Serializer<'T> = {
-    Serialize : bool -> 'T -> string
-    Deserialize : bool -> string -> 'T
+    Serialize: bool -> 'T -> string
+    Deserialize: bool -> string -> 'T
 }
 ```
 
@@ -243,13 +243,13 @@ module CollectionType =
 場合によってベクトルなどの数学的構造をモデル化するクラスが使用されます。 モデル化されるドメインによく知られている演算子がある場合、クラスに固有のメンバーとして定義することお勧めします。
 
 ```fsharp
-type Vector(x:float) =
+type Vector(x: float) =
 
     member v.X = x
 
-    static member (*) (vector:Vector, scalar:float) = Vector(vector.X * scalar)
+    static member (*) (vector: Vector, scalar: float) = Vector(vector.X * scalar)
 
-    static member (+) (vector1:Vector, vector2:Vector) = Vector(vector1.X + vector2.X)
+    static member (+) (vector1: Vector, vector2: Vector) = Vector(vector1.X + vector2.X)
 
 let v = Vector(5.0)
 
@@ -306,7 +306,7 @@ F#、実装の継承はほとんど使用しません。 さらに、継承階�
 戻り値の型で組を使用する良い例を次に示します。
 
 ```fsharp
-val divrem : BigInteger -> BigInteger -> BigInteger * BigInteger
+val divrem: BigInteger -> BigInteger -> BigInteger * BigInteger
 ```
 
 多くのコンポーネントを含む型を返すかを特定できる単一のエンティティには、コンポーネントが関係する場合は、タプルではなく名前付きの型を使用することを検討してください。
@@ -317,9 +317,9 @@ val divrem : BigInteger -> BigInteger -> BigInteger * BigInteger
 
 ```fsharp
 type SomeType =
-    member this.Compute(x:int) : int =
+    member this.Compute(x:int): int =
         ...
-    member this.AsyncCompute(x:int) : Async<int> =
+    member this.AsyncCompute(x:int): Async<int> =
         ...
 
 type System.ServiceModel.Channels.IInputChannel with
@@ -501,15 +501,15 @@ type Utilities =
 
 F#レコードの種類は、単純な .NET クラスをコンパイルします。 これらは Api のいくつか単純で安定した型に適しています。 使用を検討する必要があります、`[<NoEquality>]`と`[<NoComparison>]`インターフェイスの自動生成を抑制する属性。 また、パブリック フィールドとしてこれらの公開バニラ .NET Api の変更可能なレコードのフィールドを使用しないでください。 常にクラスが API の将来の進化をより柔軟なオプションを提供するかどうかを検討してください。
 
-たとえば、次の F# コードは、c# コンシューマーへのパブリック API を公開します。
+たとえば、次の F# コードは、C# コンシューマーへのパブリック API を公開します。
 
-F#:
+F#: 
 
 ```fsharp
 [<NoEquality; NoComparison>]
 type MyRecord =
-    { FirstThing : int
-        SecondThing : string }
+    { FirstThing: int
+        SecondThing: string }
 ```
 
 C#: 
@@ -574,7 +574,7 @@ type MyBadType() =
     [<CLIEvent>]
     member this.MyEvent = myEv.Publish
 
-type MyEventArgs(x:int) =
+type MyEventArgs(x: int) =
     inherit System.EventArgs()
     member this.X = x
 
@@ -596,7 +596,7 @@ type MyGoodType() =
 /// A type in a component designed for use from other .NET languages
 type MyType() =
 
-    let compute (x: int) : Async<int> = async { ... }
+    let compute (x: int): Async<int> = async { ... }
 
     member this.ComputeAsync(x) = compute x |> Async.StartAsTask
 ```
@@ -606,7 +606,7 @@ type MyType() =
 ```fsharp
 /// A type in a component designed for use from other .NET languages
 type MyType() =
-    let compute(x:int) : Async<int> = async { ... }
+    let compute(x: int): Async<int> = async { ... }
     member this.ComputeAsTask(x, cancellationToken) = Async.StartAsTask(compute x, cancellationToken)
 ```
 
@@ -617,14 +617,14 @@ type MyType() =
 これには。
 
 ```fsharp
-member this.Transform(f:int->int) =
+member this.Transform(f: int->int) =
     ...
 ```
 
 方法 :
 
 ```fsharp
-member this.Transform(f:Func<int,int>) =
+member this.Transform(f: Func<int,int>) =
     ...
 ```
 
@@ -639,18 +639,18 @@ Api で F# オプションの種類の使用の一般的なパターンはより
 ```fsharp
 member this.ReturnOption() = Some 3
 
-member this.ReturnBoolAndOut(outVal : byref<int>) =
+member this.ReturnBoolAndOut(outVal: byref<int>) =
     outVal <- 3
     true
 
-member this.ParamOption(x : int, y : int option) =
+member this.ParamOption(x: int, y: int option) =
     match y with
     | Some y2 -> x + y2
     | None -> x
 
-member this.ParamOverload(x : int) = x
+member this.ParamOverload(x: int) = x
 
-member this.ParamOverload(x : int, y : int) = x + y
+member this.ParamOverload(x: int, y: int) = x + y
 ```
 
 #### <a name="use-the-net-collection-interface-types-ienumerablet-and-idictionarykeyvalue-for-parameters-and-return-values"></a>使用して、.NET コレクション インターフェイス型の IEnumerable\<T\>と IDictionary\<キー, Value\>パラメーターと戻り値
@@ -660,14 +660,14 @@ member this.ParamOverload(x : int, y : int) = x + y
 代わりに F# の一覧です。
 
 ```fsharp
-member this.PrintNames(names : string list) =
+member this.PrintNames(names: string list) =
     ...
 ```
 
 使用F#シーケンス。
 
 ```fsharp
-member this.PrintNames(names : seq<string>) =
+member this.PrintNames(names: seq<string>) =
     ...
 ```
 
@@ -678,13 +678,13 @@ member this.PrintNames(names : seq<string>) =
 ```fsharp
 ✔ member this.NoArguments() = 3
 
-✔ member this.ReturnVoid(x : int) = ()
+✔ member this.ReturnVoid(x: int) = ()
 ```
 
 これには。
 
 ```fsharp
-member this.WrongUnit( x:unit, z:int) = ((), ())
+member this.WrongUnit( x: unit, z: int) = ((), ())
 ```
 
 #### <a name="check-for-null-values-on-vanilla-net-api-boundaries"></a>標準の .NET API の境界上で null 値のチェック
@@ -708,7 +708,7 @@ let checkNonNull` argName (arg: obj) =
 
 #### <a name="avoid-the-use-of-currying-of-parameters"></a>パラメーターのカリー化を使用をしません。
 
-代わりに、.NET の呼び出し規約を使用して、``Method(arg1,arg2,…,argN)``します。
+代わりに、.NET の呼び出し規約を使用して、`Method(arg1,arg2,…,argN)`します。
 
 ```fsharp
 member this.TupledArguments(str, num) = String.replicate num str
@@ -774,7 +774,7 @@ public class Point1
 
 * 引数名などのメタデータが保持されています。
 
-* 2 つの引数を取る F# メソッドでは、2 つの引数を取る c# メソッドになります。
+* 2 つの引数を取る F# メソッドでは、2 つの引数を取る C# メソッドになります。
 
 * 関数とリストは、対応する型が F# ライブラリへの参照になります。
 

@@ -1,5 +1,5 @@
 ---
-title: '方法 : デザイナーを使って ToolBar コントロールにボタンを追加する'
+title: '方法: デザイナーを使って ToolBar コントロールにボタンを追加する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - toolbars [Windows Forms], adding buttons
@@ -8,48 +8,51 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
-ms.openlocfilehash: b96f112c83d2296356e3eb566a24315bcefeff1f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: ed479c04db094b5fc0c42bfecbfe5a7753c16358
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253170"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960185"
 ---
-# <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>方法 : デザイナーを使って ToolBar コントロールにボタンを追加する
+# <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>方法: デザイナーを使って ToolBar コントロールにボタンを追加する
+
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStrip> コントロールは、<xref:System.Windows.Forms.ToolBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.ToolBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
-  
- 不可欠な部分、<xref:System.Windows.Forms.ToolBar>コントロールは、ボタンを追加します。 メニュー コマンドに簡単にアクセスを提供するこれらを使用できますか、または、メニュー構造では使用できないユーザーにコマンドを公開するアプリケーションのユーザー インターフェイスの別の領域に配置することができます。  
-  
- 次の手順が必要です、 **Windows アプリケーション**プロジェクトが含まれているフォームを<xref:System.Windows.Forms.ToolBar>コントロール。 このようなプロジェクトの設定の詳細については、次を参照してください。[方法: Windows アプリケーション プロジェクトを作成](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)と[方法: Windows フォームにコントロールを追加](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)します。  
-  
+> 
+  <xref:System.Windows.Forms.ToolStrip> コントロールは、<xref:System.Windows.Forms.ToolBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.ToolBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。
+
+不可欠な部分、<xref:System.Windows.Forms.ToolBar>コントロールは、ボタンを追加します。 メニュー コマンドに簡単にアクセスを提供するこれらを使用できますか、または、メニュー構造では使用できないユーザーにコマンドを公開するアプリケーションのユーザー インターフェイスの別の領域に配置することができます。
+
+次の手順が必要です、 **Windows アプリケーション**プロジェクトが含まれているフォームを<xref:System.Windows.Forms.ToolBar>コントロール。 このようなプロジェクトの設定の詳細については、次を参照してください。[方法。Windows フォーム アプリケーション プロジェクトを作成](/visualstudio/ide/step-1-create-a-windows-forms-application-project)と[方法。Windows フォームにコントロールを追加](how-to-add-controls-to-windows-forms.md)します。
+
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
-  
-### <a name="to-add-buttons-at-design-time"></a>デザイン時にボタンを追加するには  
-  
-1.  <xref:System.Windows.Forms.ToolBar> コントロールを選択します。  
-  
-2.  **プロパティ**ウィンドウで、をクリックして、<xref:System.Windows.Forms.ToolBar.Buttons%2A>プロパティを選択し、クリックして、**省略記号**(![VisualStudioEllipsesButton スクリーン ショット](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) ボタンをクリックする、**ツールバー ・ ボタン コレクション エディター**します。  
-  
-3.  使用して、**追加**と**削除**ボタンの追加し、削除 ボタンから、<xref:System.Windows.Forms.ToolBar>コントロール。  
-  
-4.  各ボタンのプロパティを構成、**プロパティ**エディターの右側にあるペインに表示されるウィンドウ。 次の表では、考慮すべき重要なプロパティを示します。  
-  
-    |プロパティ|説明|  
-    |--------------|-----------------|  
-    |<xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A>|ドロップダウン ツール バー ボタンに表示されるメニューを設定します。 ツール バー ボタンの<xref:System.Windows.Forms.ToolBarButton.Style%2A>にプロパティを設定する必要があります<xref:System.Windows.Forms.ToolBarButtonStyle.DropDownButton>します。 このプロパティは、のインスタンスを受け取り、<xref:System.Windows.Forms.ContextMenu>クラスとして参照します。|  
-    |<xref:System.Windows.Forms.ToolBarButton.PartialPush%2A>|トグル スタイルのツール バー ボタンが部分的に押されているかどうかを設定します。 ツール バー ボタンの<xref:System.Windows.Forms.ToolBarButton.Style%2A>にプロパティを設定する必要があります<xref:System.Windows.Forms.ToolBarButtonStyle.ToggleButton>します。|  
-    |<xref:System.Windows.Forms.ToolBarButton.Pushed%2A>|トグル スタイルのツール バー ボタンが押された状態では現在あるかどうかを設定します。 ツール バー ボタンの<xref:System.Windows.Forms.ToolBarButton.Style%2A>にプロパティを設定する必要があります<xref:System.Windows.Forms.ToolBarButtonStyle.ToggleButton>または<xref:System.Windows.Forms.ToolBarButtonStyle.PushButton>します。|  
-    |<xref:System.Windows.Forms.ToolBarButton.Style%2A>|ツール バー ボタンのスタイルを設定します。 内の値のいずれかを指定する必要があります、<xref:System.Windows.Forms.ToolBarButtonStyle>列挙体。|  
-    |<xref:System.Windows.Forms.ToolBarButton.Text%2A>|ボタンによって表示される文字列。|  
-    |<xref:System.Windows.Forms.ToolBarButton.ToolTipText%2A>|ボタンのツールヒントとして表示されるテキスト。|  
-  
-5.  をクリックして**OK**をダイアログ ボックスを閉じて、指定したパネルを作成します。  
-  
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.ToolBar>  
- [方法: ツール バー ボタンのアイコンを定義する](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)  
- [方法: ツール バー ボタンのメニュー イベントをトリガーする](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
- [ToolBar コントロールの概要](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)  
- [ToolBar コントロール](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
+> 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。
+
+### <a name="to-add-buttons-at-design-time"></a>デザイン時にボタンを追加するには
+
+1. <xref:System.Windows.Forms.ToolBar> コントロールを選択します。
+
+2. **プロパティ**ウィンドウで、をクリックして、<xref:System.Windows.Forms.ToolBar.Buttons%2A>プロパティを選択し、クリックして、**省略記号**(![Visual Studio の [プロパティ] ウィンドウで、省略記号ボタン (…).](./media/visual-studio-ellipsis-button.png))ボタンをクリックする、**ツールバー ・ ボタン コレクション エディター**します。
+
+3. 使用して、**追加**と**削除**ボタンの追加し、削除 ボタンから、<xref:System.Windows.Forms.ToolBar>コントロール。
+
+4. 各ボタンのプロパティを構成、**プロパティ**エディターの右側にあるペインに表示されるウィンドウ。 次の表では、考慮すべき重要なプロパティを示します。
+
+    |プロパティ|説明|
+    |--------------|-----------------|
+    |<xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A>|ドロップダウン ツール バー ボタンに表示されるメニューを設定します。 ツール バー ボタンの<xref:System.Windows.Forms.ToolBarButton.Style%2A>にプロパティを設定する必要があります<xref:System.Windows.Forms.ToolBarButtonStyle.DropDownButton>します。 このプロパティは、のインスタンスを受け取り、<xref:System.Windows.Forms.ContextMenu>クラスとして参照します。|
+    |<xref:System.Windows.Forms.ToolBarButton.PartialPush%2A>|トグル スタイルのツール バー ボタンが部分的に押されているかどうかを設定します。 ツール バー ボタンの<xref:System.Windows.Forms.ToolBarButton.Style%2A>にプロパティを設定する必要があります<xref:System.Windows.Forms.ToolBarButtonStyle.ToggleButton>します。|
+    |<xref:System.Windows.Forms.ToolBarButton.Pushed%2A>|トグル スタイルのツール バー ボタンが押された状態では現在あるかどうかを設定します。 ツール バー ボタンの<xref:System.Windows.Forms.ToolBarButton.Style%2A>にプロパティを設定する必要があります<xref:System.Windows.Forms.ToolBarButtonStyle.ToggleButton>または<xref:System.Windows.Forms.ToolBarButtonStyle.PushButton>します。|
+    |<xref:System.Windows.Forms.ToolBarButton.Style%2A>|ツール バー ボタンのスタイルを設定します。 内の値のいずれかを指定する必要があります、<xref:System.Windows.Forms.ToolBarButtonStyle>列挙体。|
+    |<xref:System.Windows.Forms.ToolBarButton.Text%2A>|ボタンによって表示される文字列。|
+    |<xref:System.Windows.Forms.ToolBarButton.ToolTipText%2A>|ボタンのツールヒントとして表示されるテキスト。|
+
+5. をクリックして**OK**をダイアログ ボックスを閉じて、指定したパネルを作成します。
+
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Forms.ToolBar>
+- [方法: ツール バー ボタンのアイコンを定義します。](how-to-define-an-icon-for-a-toolbar-button.md)
+- [方法: ツール バー ボタンのメニュー イベントのトリガー](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [ToolBar コントロールの概要](toolbar-control-overview-windows-forms.md)
+- [ToolBar コントロール](toolbar-control-windows-forms.md)

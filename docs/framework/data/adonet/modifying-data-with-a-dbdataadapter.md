@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e35c7f9e-648b-4fcc-9361-d365c3e42c9a
-ms.openlocfilehash: 0e38bc663d3c2143703ba178eb8ac420bb1baa08
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 3038e35947cd8f97266d374a367a77380df440dd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43400547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772178"
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>DbDataAdapter を使用したデータの変更
 <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> オブジェクトの <xref:System.Data.Common.DbProviderFactory> メソッドを使用すると、ファクトリの作成時に指定した基になるデータ プロバイダーに対して厳密に型指定された <xref:System.Data.Common.DbDataAdapter> オブジェクトを取得できます。 続いて <xref:System.Data.Common.DbCommandBuilder> を使用することで、データ ソースに対して <xref:System.Data.DataSet> のデータの挿入、更新、削除を実行するコマンドを作成できます。  
@@ -42,8 +42,9 @@ ms.locfileid: "43400547"
 > [!IMPORTANT]
 >  プロバイダー固有のパラメーターを完全に回避するために、文字列の連結を利用して直接 SQL ステートメントを作成することは、セキュリティ上の理由から推奨されません。 パラメーターではなく文字列の連結を利用した場合、アプリケーションが SQL インジェクション攻撃に対して脆弱になります。  
   
-## <a name="see-also"></a>関連項目  
- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
- [DbProviderFactory の取得](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)  
- [DbConnection、DbCommand、および DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
+- [DbProviderFactory の取得](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
+- [DbConnection、DbCommand、および DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

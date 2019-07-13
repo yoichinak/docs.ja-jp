@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ee003d668916baec313c6115cc12826286f6cdd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 81fcc99a739d5e673d1d01d5efb801ba4930bdee
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423677"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752548"
 ---
 # <a name="pfnclrdatacreateinstance-function-pointer"></a>PFN_CLRDataCreateInstance 関数ポインター
-指定したターゲット項目のインターフェイス オブジェクトを作成する関数を指します。  
+指定したターゲット項目のインターフェイス オブジェクトを作成する関数へのポインター。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef HRESULT (STDAPICALLTYPE* PFN_CLRDataCreateInstance) (  
     [in]  REFIID           iid,  
     [in]  ICLRDataTarget  *target,  
@@ -36,7 +36,7 @@ typedef HRESULT (STDAPICALLTYPE* PFN_CLRDataCreateInstance) (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `iid`  
  [in]インスタンス化するインターフェイスの識別子。  
   
@@ -46,17 +46,18 @@ typedef HRESULT (STDAPICALLTYPE* PFN_CLRDataCreateInstance) (
  `iface`  
  [out]返されたインターフェイス オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>コメント  
- `ICLRDataTarget`オブジェクトは、デバッグ アプリケーションの作成者によって実装されています。 実装は、表されるターゲット項目の種類によって異なります。 ターゲット項目には、プロセス、メモリ ダンプ、リモート コンピューター、およびなどがあります。  
+## <a name="remarks"></a>Remarks  
+ `ICLRDataTarget`オブジェクトがデバッグ アプリケーションの作成者によって実装されます。 実装は、表されるターゲット項目の種類によって異なります。 ターゲット項目には、プロセス、メモリ ダンプ、リモート コンピューター、およびなどがあります。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** ClrData.idl  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [デバッグ グローバル静的関数](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a>関連項目
+
+- [デバッグ グローバル静的関数](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

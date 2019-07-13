@@ -8,26 +8,26 @@ helpviewer_keywords:
 - events [WPF], windows
 - WPF [WPF], events
 ms.assetid: d3b93c6f-aa6b-486d-a010-d097ea8a516b
-ms.openlocfilehash: b5a3b71758fea9c98c04377b910ba07b49617696
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6aa6fea3c19d452013e4e77d7ef4773a2f45343
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010346"
 ---
 # <a name="events-wpf"></a>イベント (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] では、アプリケーションの要素ツリー内のさまざまなリスナー上に存在するハンドラーを呼び出すことができるルーティング イベントが導入されています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ルーティング イベントの概要](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [添付イベントの概要](../../../../docs/framework/wpf/advanced/attached-events-overview.md)  
- [オブジェクトの有効期間イベント](../../../../docs/framework/wpf/advanced/object-lifetime-events.md)  
- [ルーティング イベントの処理済みとしてのマーキング、およびクラス処理](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
- [プレビュー イベント](../../../../docs/framework/wpf/advanced/preview-events.md)  
- [プロパティ変更イベント](../../../../docs/framework/wpf/advanced/property-change-events.md)  
- [Visual Basic と WPF のイベント処理](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)  
- [弱いイベント パターン](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)  
- [方法トピック](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)  
+ [ルーティング イベントの概要](routed-events-overview.md)  
+ [添付イベントの概要](attached-events-overview.md)  
+ [オブジェクトの有効期間イベント](object-lifetime-events.md)  
+ [ルーティング イベントの処理済みとしてのマーキング、およびクラス処理](marking-routed-events-as-handled-and-class-handling.md)  
+ [プレビュー イベント](preview-events.md)  
+ [プロパティ変更イベント](property-change-events.md)  
+ [Visual Basic と WPF のイベント処理](visual-basic-and-wpf-event-handling.md)  
+ [弱いイベント パターン](weak-event-patterns.md)  
+ [方法トピック](events-how-to-topics.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.RoutedEvent>  
@@ -37,13 +37,13 @@ ms.locfileid: "33542588"
  <xref:System.Windows.RoutingStrategy>  
   
 ## <a name="related-sections"></a>関連項目  
- [WPF アーキテクチャ](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [WPF の XAML](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [基本要素](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [要素のツリーおよびシリアル化](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [プロパティ](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [入力](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [リソース](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [WPF のコンテンツ モデル](../../../../docs/framework/wpf/controls/wpf-content-model.md)  
-  [スレッド モデル](../../../../docs/framework/wpf/advanced/threading-model.md)
+ [WPF アーキテクチャ](wpf-architecture.md)  
+  [WPF の XAML](xaml-in-wpf.md)  
+  [基本要素](base-elements.md)  
+  [要素のツリーおよびシリアル化](element-tree-and-serialization.md)  
+  [Properties](properties-wpf.md)  
+  [入力](input-wpf.md)  
+  [リソース](resources-wpf.md)  
+  [スタイルとテンプレート](../controls/styling-and-templating.md)  
+  [WPF のコンテンツ モデル](../controls/wpf-content-model.md)  
+  [スレッド モデル](threading-model.md)

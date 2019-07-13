@@ -6,17 +6,18 @@ helpviewer_keywords:
 - getting started, Visual C#
 author: rpetrusha
 ms.author: ronpet
-ms.date: 08/23/2017
-ms.openlocfilehash: 73bf7ca1f05bd388239d970fcc6e33bf30810111
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.date: 04/05/2019
+ms.custom: seoapril2019
+ms.openlocfilehash: 0c97a5b843d27258f58d654d35420a262d5b741a
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837894"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062959"
 ---
 # <a name="get-started-with-c"></a>C\# の使用を開始する
 
-このセクションでは、C# と .NET Core を使用して短時間でアプリケーションを構築できる、短いシンプルなチュートリアルについて説明します。 Visual Studio 2017 と Visual Studio Code については、その概要を説明しているトピックがあります。 単純な Hello World アプリケーションをビルドするか、Visual Studio 2017 を持っている場合は、他のアプリケーションで使用できる単純なクラス ライブラリをビルドできます。
+このセクションでは、C# と .NET Core を使用して短時間でアプリケーションを構築できる、短いシンプルなチュートリアルについて説明します。 Visual Studio 2017 と Visual Studio Code については、その概要を説明しているトピックがあります。 これらの記事は、ある程度のプログラミング経験を仮定しています。 初めてプログラミングを行う場合は、[C# の概要](../tutorials/intro-to-csharp/index.md)に関する対話型チュートリアルをお試しください。
 
 次のトピックを参照できます。
 
@@ -42,10 +43,6 @@ ms.locfileid: "48837894"
 
 ## <a name="related-sections"></a>関連項目
 
-* [Visual C# 開発環境の使用](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
-
-    Visual C# 統合開発環境を使用する方法について説明します。
-
 * [C# プログラミング ガイド](../../csharp/programming-guide/index.md)
 
     C# プログラミングの概念に関する情報を提供し、C# でさまざまなタスクを実行する方法について説明します。
@@ -54,14 +51,10 @@ ms.locfileid: "48837894"
 
     C# のキーワード、演算子、プリプロセッサ ディレクティブ、コンパイラ オプション、およびコンパイラのエラーと警告に関する詳細なリファレンス情報を紹介します。
 
-* [Visual Studio のサンプル](/visualstudio/ide/visual-studio-samples)
-
-    オンライン サンプルへのアクセス方法に関する情報を提供します。
-
 * [チュートリアル](../../csharp/walkthroughs.md)
 
     C# を使用するプログラミングのチュートリアルと、各チュートリアルに関する簡単な説明へのリンクを示します。
 
 ## <a name="see-also"></a>関連項目
 
-* [Visual Studio を使用した Visual C# と Visual Basic の概要](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- * [Visual Studio を使用した C# 開発](/visualstudio/get-started/csharp/)

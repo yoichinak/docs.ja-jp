@@ -17,43 +17,43 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15b102be5a792f982edeb320199576bdddbd859a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 67959b2ebbfb62b47a1b2a770e278d043fc66d21
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412361"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754923"
 ---
 # <a name="icordebugfunction2setjmcstatus-method"></a>ICorDebugFunction2::SetJMCStatus メソッド
-関数をマイ コードのみをこの ICorDebugFunction2 によって表されるマークのステップ インします。  
+マイ コードのみのこの ICorDebugFunction2 によって表される関数をマーク ステップ実行します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetJMCStatus (  
     [in] BOOL   bIsJustMyCode  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `bIsJustMyCode`  
- [in]設定`true`ユーザー コードとして関数をマークするそれ以外の場合、`false`です。  
+ [in]設定`true`ユーザー コードとして関数をマークする場合は、`false`します。  
   
 ## <a name="return-values"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|関数が正常にマークされました。|  
-|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|デバッグできないために、関数をユーザー コードとしてマークできませんでした。|  
+|`S_OK`|関数は正しく設定されました。|  
+|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|デバッグすることはできませんので、関数をユーザー コードとしてマークされませんでした。|  
   
-## <a name="remarks"></a>コメント  
- マイ コードのみステッパは非ユーザー コードをスキップします。 ユーザー コードは、デバッグ可能なコードのサブセットである必要があります。  
+## <a name="remarks"></a>Remarks  
+ マイ コードのみステッパでは、非ユーザー コードをスキップします。 ユーザー コードは、デバッグできるコードのサブセットである必要があります。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

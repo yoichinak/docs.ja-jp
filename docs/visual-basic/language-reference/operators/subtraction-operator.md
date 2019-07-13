@@ -17,12 +17,12 @@ helpviewer_keywords:
 - operators [Visual Basic], negation
 - minus operator [Visual Basic]
 ms.assetid: bff2c368-662d-4c92-ac87-1d9bdfd3426a
-ms.openlocfilehash: 4df8eb3844ed20fd24ca375f77cea46b9c6cee37
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1a5c47a2f1bc8a8b9e1b0263b90006a0e58e17bb
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013479"
 ---
 # <a name="--operator-visual-basic"></a>- 演算子 (Visual Basic)
 2 つの数値式または数値式の負の値の差を返します。  
@@ -40,35 +40,37 @@ ms.locfileid: "33604316"
  必須。 任意の数式。  
   
  `expression2`  
- いない限り、必須、`–`演算子が負の値を計算します。 任意の数式。  
+ ために必要な場合を除き、`–`演算子が負の値を計算します。 任意の数式。  
   
 ## <a name="result"></a>結果  
- 結果の違いは、`expression1`と`expression2`、またはの負数化された値`expression1`です。  
+ 結果の違いは、`expression1`と`expression2`、または負の値の`expression1`します。  
   
- 結果のデータ型は数値型のデータ型に適した`expression1`と`expression2`です。 「整数算術演算による」テーブルを参照して[データ型の演算子の結果](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)です。  
+ 結果のデータ型が数値型のデータ型に適した`expression1`と`expression2`します。 「整数の算術演算による」のテーブルを参照してください。[演算子結果のデータ型](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)します。  
   
 ## <a name="supported-types"></a>サポートされている型  
- すべての数値型。 これには、符号なし型と浮動小数点型が含まれますと`Decimal`です。  
+ すべての数値型。 これには、符号なしと浮動小数点型が含まれますと`Decimal`します。  
   
-## <a name="remarks"></a>コメント  
- 最初の使用率が、前に示した構文に示すように、`–`演算子は、*バイナリ*2 つの数値式の違いを減算演算子。  
+## <a name="remarks"></a>Remarks  
+ 最初の使用率が、前に示した構文に示すように、`–`演算子は、*バイナリ*算術減算演算子の 2 つの数値式の違い。  
   
- 2 番目の使用率が、前に示した構文に示すように、`–`演算子は、*単項*式の負の値の否定演算子。 符号を反転することの否定は、この意味で`expression1`結果が正の値になるよう場合`expression1`が負の値。  
+ 2 つ目の使用率が、前に示した構文に示すように、`–`演算子は、*単項*式の負の値を否定演算子。 この意味では、否定の符号を反転の`expression1`、結果は正ように場合`expression1`が負の値。  
   
  いずれかの式が評価された場合[Nothing](../../../visual-basic/language-reference/nothing.md)、`–`演算子は 0 として処理します。  
   
 > [!NOTE]
->  `–`演算子を指定できます*オーバー ロードされた*、つまり、あるクラスまたは構造体を再定義できますその動作オペランドは、そのクラスまたは構造体の型を持つときにします。 コードは、このようなクラスまたは構造体で、この演算子を使用する場合は、その再定義された動作を理解することを確認します。 詳細については、次を参照してください。[演算子プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)です。  
+>  `–`演算子は、*オーバー ロードされた*、つまり、ことクラスまたは構造体を再定義できますその動作はそのクラスまたは構造体の型。 コードは、このようなクラスまたは構造体に、この演算子を使用する場合は、その再定義された動作を理解することを確認します。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例では、`–`演算子を計算し、2 つの数値の差を返すし、数値を否定します。  
+ 次の例では、`–`演算子を計算して、2 つの数値の差を返すし、数値を否定します。  
   
- [!code-vb[VbVbalrOperators#10](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/subtraction-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#10)]  
   
- 次のこれらのステートメントの実行`binaryResult`124.45 が含まれていますと`unaryResult`–334.90 が含まれています。  
+ これらのステートメントの実行`binaryResult`124.45 が含まれていますと`unaryResult`–334.90 が含まれています。  
   
-## <a name="see-also"></a>関連項目  
- [-= 演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md) [算術演算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Visual Basic における算術演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+## <a name="see-also"></a>関連項目
+
+- [-= 演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
+- [算術演算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Visual Basic における算術演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

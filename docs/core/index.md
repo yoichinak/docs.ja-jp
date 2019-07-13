@@ -4,12 +4,12 @@ description: .NET Core は、Windows、Linux、および Mac アプリを作成�
 author: richlander
 ms.date: 08/01/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 62019c5414857ed5eee99a6a60f5b0b183fe25e8
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 79a0c09074159160dd01b0c7970612f7058cc3fc
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614454"
 ---
 # <a name="net-core-guide"></a>.NET Core のガイド
 
@@ -21,7 +21,7 @@ ms.locfileid: "54030283"
 
 ## <a name="download-net-core-22"></a>.NET Core 2.2 のダウンロード
 
-[.NET Core  2.2 SDK](https://www.microsoft.com/net/download) をダウンロードして、Windows、macOS、または Linux マシンで .NET Core をお試しください。 Docker コンテナーを使用する方がよければ、[microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) にアクセスしてください。
+[.NET Core  2.2 SDK](https://www.microsoft.com/net/download) をダウンロードして、Windows、macOS、または Linux マシンで .NET Core をお試しください。 Docker コンテナーを使用する方がよければ、[dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) にアクセスしてください。
 
 別の .NET Core バージョンを探している場合も、すべての .NET Core バージョンを [.NET Core のダウンロード](https://www.microsoft.com/net/download/archives)で入手できます。
 

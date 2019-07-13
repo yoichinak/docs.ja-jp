@@ -2,12 +2,12 @@
 title: 複数のアクティブな結果セット (MARS)
 ms.date: 03/30/2017
 ms.assetid: c90ef863-bac7-44cf-adc1-f05c36fcf57d
-ms.openlocfilehash: 67df210fa48c1b72323177b627b17e537f9fb180
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: bb00fbfec32a9d64fd6661cd5cdfd06fe3aa7410
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43744410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922357"
 ---
 # <a name="multiple-active-result-sets-mars"></a>複数のアクティブな結果セット (MARS)
 複数のアクティブな結果セット (MARS : Multiple Active Result Set) は、複数のバッチを単一の接続で実行できる機能です。 従来のバージョンでは、単一の接続で同時に実行できるバッチは 1 つだけでした。 MARS で複数のバッチを実行することは、同時に操作を実行することではありません。  
@@ -23,6 +23,7 @@ ms.locfileid: "43744410"
  [非同期操作](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
  ADO.NET での新たな非同期機能の使い方について詳しく説明します。  
   
-## <a name="see-also"></a>関連項目  
- [SQL Server と ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [SQL Server と ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,15 +1,15 @@
 ---
-title: WCF の &lt;customTrackingQuery&gt;
+title: <customTrackingQuery> WCF の
 ms.date: 03/30/2017
 ms.assetid: 164446ae-8440-4b67-b217-6786cfae1e01
-ms.openlocfilehash: 234703e677f838dcdccdf857ba38b8729d25a488
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 0a5e7c034ce1ef12a8d7d5b1753e2e441e48e293
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673174"
 ---
-# <a name="ltcustomtrackingquerygt-of-wcf"></a>WCF の &lt;customTrackingQuery&gt;
+# <a name="customtrackingquery-of-wcf"></a>\<customTrackingQuery > の WCF
 
 コード アクティビティで定義するイベントを追跡するために使用されるクエリを表します。 追跡参加要素がカスタム追跡レコードを定期受信するには、このクエリが必要です。
 
@@ -20,8 +20,8 @@ ms.locfileid: "54146382"
 \<プロファイル >  
 \<trackingProfile>  
 \<ワークフロー >  
-\<customTrackingQueries >  
-\<customTrackingQuery >  
+\<customTrackingQueries>  
+\<customTrackingQuery>  
   
 ## <a name="syntax"></a>構文  
   

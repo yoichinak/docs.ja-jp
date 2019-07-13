@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec6472a33c49d9345793d73ac2f78f8896dc218b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6b01f38fbcf1cb0439b82a933b37971515b06ac4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454819"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758147"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>ICorProfilerCallback4::ReJITError メソッド
-・ イン タイム (JIT) コンパイラが再コンパイル プロセスでエラーが発生したことをプロファイラーに通知します。  
+ジャストイン タイム (JIT) コンパイラに再コンパイル プロセスでエラーが発生したことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ReJITError(  
     [in] ModuleID    moduleId,  
     [in] mdMethodDef methodId,  
@@ -37,15 +37,15 @@ HRESULT ReJITError(
     [in] HRESULT     hrStatus);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `moduleID`  
  [in]`ModuleID`再コンパイルが失敗した試行が行われる。  
   
  `methodId`  
- [in]`MethodDef`再コンパイルが失敗した試行が行われたメソッドの。  
+ [in]`MethodDef`の再コンパイルが失敗した試行が行われたメソッド。  
   
  `functionId`  
- [in]再コンパイルまたは用にマークの再コンパイルされている関数のインスタンス。 この値は、 `NULL` (たとえば、プロファイラーには、再コンパイルするメソッドを無効なメタデータ トークンが指定された) 場合、インスタンス化ごとにではなくメソッドごとに障害が発生したかどうか。  
+ [in]再コンパイルされたまたはマークの再コンパイルされている関数のインスタンス。 この値は、 `NULL` (たとえば、プロファイラーには、再コンパイルするメソッドを無効なメタデータ トークンが指定された) 場合、インスタンス化ごとにではなく、メソッドごとに障害が発生したかどうか。  
   
  `hrStatus`  
  [in]エラーの性質を示す HRESULT。 値の一覧については、状態 HRESULT」を参照してください。  
@@ -57,22 +57,23 @@ HRESULT ReJITError(
   
 |状態配列 HRESULT|説明|  
 |--------------------------|-----------------|  
-|E_INVALIDARG|`moduleID`または`methodDef`トークンが`NULL`です。|  
+|E_INVALIDARG|`moduleID`または`methodDef`トークンが`NULL`します。|  
 |CORPROF_E_DATAINCOMPLETE|モジュールが完全に読み込まれていないか、またはアンロード中です。|  
-|CORPROF_E_MODULE_IS_DYNAMIC|指定されたモジュールが動的に生成された (などによって、 `Reflection.Emit`)、このメソッドでサポートされないためです。|  
-|CORPROF_E_FUNCTION_IS_COLLECTIBLE|メソッドは、回収可能アセンブリにインスタンス化であるため再コンパイルすることができません。 型および非リフレクション コンテキストで定義された関数 (たとえば、 `List<MyCollectibleStruct>`) 回収可能アセンブリにインスタンス化することができます。|  
+|CORPROF_E_MODULE_IS_DYNAMIC|指定したモジュールを動的に生成されました (たとえば、 `Reflection.Emit`) はこのメソッドによってサポートされていませんので。|  
+|CORPROF_E_FUNCTION_IS_COLLECTIBLE|メソッドは、収集可能なアセンブリにインスタンス化であるため再コンパイルすることができません。 型に注意してくださいと非リフレクション コンテキストで定義されている関数 (たとえば、 `List<MyCollectibleStruct>`) 収集可能なアセンブリにインスタンス化することができます。|  
 |E_OUTOFMEMORY|CLR は JIT 再コンパイルの指定したメソッドをマークしているときにメモリ不足になりました。|  
-|その他|オペレーティング システムは、CLR 制御範囲外のエラーを返しました。 たとえば、メモリのページのアクセスの保護を変更するシステム呼び出しが失敗した場合、オペレーティング システム エラーが表示されます。|  
+|Other|オペレーティング システムは、CLR 制御範囲外のエラーを返しました。 たとえば、メモリのページのアクセスの保護を変更するシステム コールに失敗した場合、オペレーティング システム エラーが表示されます。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー** : CorProf.idl、CorProf.h  
+ **ヘッダー:** CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ICorProfilerCallback4 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback4 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)

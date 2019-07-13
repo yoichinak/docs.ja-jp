@@ -1,5 +1,5 @@
 ---
-title: アセンブリに必要な参照&#39; &lt;assemblyname&gt; &#39;基本クラスを含む&#39; &lt;classname&gt;&#39;
+title: 基本クラス '<assemblyname>' を含むアセンブリ '<classname>' への参照が必要です。参照をプロジェクトに追加してください。
 ms.date: 07/20/2015
 f1_keywords:
 - bc30007
@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30007
 ms.assetid: 5f34cf47-6c6e-4954-bd8e-d6b020b75fb7
-ms.openlocfilehash: aabf4afb9f87f40d0e31ac7ccd725bfb285ddf37
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8218a3325d5d47bf85aacab1724221d233d92ba4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33593533"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661703"
 ---
-# <a name="reference-required-to-assembly-39ltassemblynamegt39-containing-the-base-class-39ltclassnamegt39"></a>アセンブリに必要な参照&#39; &lt;assemblyname&gt; &#39;基本クラスを含む&#39; &lt;classname&gt;&#39;
-参照アセンブリが必要です '\<assemblyname >' を含む基底クラスの\<classname >' です。 プロジェクトに参照を追加してください。  
+# <a name="reference-required-to-assembly-assemblyname-containing-the-base-class-classname"></a>参照アセンブリが必要です '\<assemblyname >' 基底クラスを含む\<classname >'
+参照アセンブリが必要です '\<assemblyname >' 基底クラスを含む\<classname >'。 プロジェクトに参照を追加してください。  
   
  プロジェクト内で直接参照されないダイナミック リンク ライブラリ (DLL) またはアセンブリでクラスが定義されています。 Visual Basic コンパイラでは、クラスが 1 つ以上の DLL またはアセンブリで定義されている場合に備えて、あいまいさを避けるためへの参照が必要です。  
   
@@ -23,9 +23,9 @@ ms.locfileid: "33593533"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   参照されない DLL またはアセンブリの名前をプロジェクト参照に含めます。  
+- 参照されない DLL またはアセンブリの名前をプロジェクト参照に含めます。  
   
-## <a name="see-also"></a>関連項目  
-   
- [プロジェクト内の参照の管理](/visualstudio/ide/managing-references-in-a-project)  
- [壊れた参照のトラブルシューティング](/visualstudio/ide/troubleshooting-broken-references)
+## <a name="see-also"></a>関連項目
+
+- [プロジェクト内の参照の管理](/visualstudio/ide/managing-references-in-a-project)
+- [壊れた参照のトラブルシューティング](/visualstudio/ide/troubleshooting-broken-references)

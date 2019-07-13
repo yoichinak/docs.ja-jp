@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 583cfb6e3a5145c6c0dfc82ec9ff64c6d87414ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: edec95ea729fdf26e384b6658c241ca307e60851
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61643115"
 ---
 # <a name="interoperating-with-unmanaged-code"></a>アンマネージ コードとの相互運用
 
-.NET Framework は、COM コンポーネント、COM+ サービス、外部のタイプ ライブラリ、各種のオペレーティング システム サービスとの相互運用を促進します。 データ型、メソッド署名、およびエラー処理機構は、マネージ オブジェクト モデルとアンマネージ オブジェクト モデルでは異なります。 .NET Framework コンポーネントとアンマネージ コードの間の相互運用を簡素化し、移行パスを簡単にするために、共通言語ランタイムがクライアントとサーバーの両方からこれらのオブジェクト モデルの違いを隠します。
+.NET Framework は、COM コンポーネント、COM+ サービス、外部のタイプ ライブラリ、各種のオペレーティング システム サービスとの相互運用を促進します。 データ型、メソッド署名、およびエラー処理機構は、マネージド オブジェクト モデルとアンマネージド オブジェクト モデルでは異なります。 .NET Framework コンポーネントとアンマネージ コードの間の相互運用を簡素化し、移行パスを簡単にするために、共通言語ランタイムがクライアントとサーバーの両方からこれらのオブジェクト モデルの違いを隠します。
 
-ランタイムの制御下で実行されるコードは、マネージ コードと呼ばれます。 逆に、ランタイムの外部で実行されるコードはアンマネージ コードと呼ばれます。 アンマネージ コードの例としては、COM コンポーネント、ActiveX インターフェイス、Win32 API 関数があります。
+ランタイムの制御下で実行されるコードは、マネージド コードと呼ばれます。 逆に、ランタイムの外部で実行されるコードはアンマネージ コードと呼ばれます。 アンマネージ コードの例としては、COM コンポーネント、ActiveX インターフェイス、Windows API 関数があります。
 
 ## <a name="in-this-section"></a>このセクションの内容
 

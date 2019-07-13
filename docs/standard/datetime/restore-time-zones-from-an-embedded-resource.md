@@ -1,5 +1,5 @@
 ---
-title: '方法: 埋め込みリソースからタイム ゾーンを復元'
+title: '方法: 埋め込みリソースからタイム ゾーンを復元する'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: 6b7b4de9-da07-47e3-8f4c-823f81798ee7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99d38b336b5e655dd1c96682eec90c5fbe8469d6
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 71fc4e04c87dfa3b83eabb06361d1da94a512a5e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026537"
 ---
-# <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>方法: 埋め込みリソースからタイム ゾーンを復元
+# <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>方法: 埋め込みリソースからタイム ゾーンを復元する
 
-このトピックでは、リソース ファイルに保存されているタイム ゾーンを復元する方法について説明します。 情報およびタイム ゾーンを保存する方法の手順では、次を参照してください。[方法: 埋め込みリソースにタイム ゾーンを保存](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)します。
+このトピックでは、リソース ファイルに保存されているタイム ゾーンを復元する方法について説明します。 情報およびタイム ゾーンを保存する方法の手順では、次を参照してください。[方法。埋め込みリソースにタイム ゾーンを保存](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)します。
 
 ### <a name="to-deserialize-a-timezoneinfo-object-from-an-embedded-resource"></a>埋め込みリソースから TimeZoneInfo オブジェクトを逆シリアル化するには
 
@@ -60,6 +60,6 @@ ms.locfileid: "48841060"
 
 ## <a name="see-also"></a>関連項目
 
-* [日付、時刻、およびタイム ゾーン](../../../docs/standard/datetime/index.md)
-* [タイム ゾーンの概要](../../../docs/standard/datetime/time-zone-overview.md)
-* [方法: 埋め込みリソースにタイム ゾーンを保存する](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)
+- [日付、時刻、およびタイム ゾーン](../../../docs/standard/datetime/index.md)
+- [タイム ゾーンの概要](../../../docs/standard/datetime/time-zone-overview.md)
+- [方法: 埋め込みリソースにタイム ゾーンを保存します。](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)

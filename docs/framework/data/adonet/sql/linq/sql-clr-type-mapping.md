@@ -2,12 +2,12 @@
 title: SQL と CLR の型マッピング
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: d5c0072d8561efa1211de191a1f2b6f3a1e55b7b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: d2ec70d014198299bd911b1a72ab8eb26c096ba9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837337"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592471"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL と CLR の型マッピング
 LINQ to SQL では、リレーショナル データベースのデータ モデルが、任意のプログラミング言語で表されるオブジェクト モデルに対応付けられています。 アプリケーションが実行されると、LINQ to SQL は、オブジェクト モデルの統合言語クエリを SQL に変換し、それをデータベースに送信して実行します。 データベースから結果が返されると、LINQ to SQL はその結果をプログラミング言語で操作できるオブジェクトに変換し直します。  
@@ -16,29 +16,29 @@ LINQ to SQL では、リレーショナル データベースのデータ モデ
   
  このトピックでは、以下の点について説明します。  
   
--   [既定の型マッピング](#DefaultTypeMapping)  
+- [既定の型マッピング](#DefaultTypeMapping)  
   
--   [型マッピングと実行時の動作の関係](#BehaviorMatrix)  
+- [型マッピングと実行時の動作の関係](#BehaviorMatrix)  
   
--   [CLR と SQL の実行の動作の相違](#BehaviorDiffs)  
+- [CLR と SQL の実行の動作の相違](#BehaviorDiffs)  
   
--   [Enum 型のマッピング](#EnumMapping)  
+- [Enum 型のマッピング](#EnumMapping)  
   
--   [数値のマッピング](#NumericMapping)  
+- [数値のマッピング](#NumericMapping)  
   
--   [テキストおよび XML のマッピング](#TextMapping)  
+- [テキストおよび XML のマッピング](#TextMapping)  
   
--   [日付し、時刻のマッピング](#DateMapping)  
+- [日付し、時刻のマッピング](#DateMapping)  
   
--   [バイナリのマッピング](#BinaryMapping)  
+- [バイナリのマッピング](#BinaryMapping)  
   
--   [その他のマッピング](#MiscMapping)  
+- [その他のマッピング](#MiscMapping)  
   
 <a name="DefaultTypeMapping"></a>   
 ## <a name="default-type-mapping"></a>既定の型マッピング  
  オブジェクト モデルまたは外部マッピング ファイルは、オブジェクト リレーショナル デザイナー (O/R デザイナー) または SQLMetal コマンド ライン ツールを使用して自動的に作成できます。 これらのツールの既定の型マッピングでは、SQL Server データベース内の列にマップするためにどの CLR 型を選択するかが定義されています。 詳細については、これらのツールを使用して、次を参照してください。[オブジェクト モデルを作成する](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)します。  
   
- また、<xref:System.Data.Linq.DataContext.CreateDatabase%2A> メソッドを使用して、オブジェクト モデルまたは外部マッピング ファイルのマッピング情報に基づいて SQL Server データベースを作成することもできます。 <xref:System.Data.Linq.DataContext.CreateDatabase%2A> メソッドの既定の型マッピングでは、オブジェクト モデル内の CLR 型にマップするためにどの型の SQL Server 列を作成するかが定義されています。 詳細については、次を参照してください。[方法: データベースを動的に作成](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md)です。  
+ また、<xref:System.Data.Linq.DataContext.CreateDatabase%2A> メソッドを使用して、オブジェクト モデルまたは外部マッピング ファイルのマッピング情報に基づいて SQL Server データベースを作成することもできます。 <xref:System.Data.Linq.DataContext.CreateDatabase%2A> メソッドの既定の型マッピングでは、オブジェクト モデル内の CLR 型にマップするためにどの型の SQL Server 列を作成するかが定義されています。 詳細については、「[方法 :データベースを動的に作成](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md)です。  
   
 <a name="BehaviorMatrix"></a>   
 ## <a name="type-mapping-run-time-behavior-matrix"></a>型マッピングと実行時動作の関係  
@@ -58,21 +58,21 @@ LINQ to SQL では、リレーショナル データベースのデータ モデ
   
  CLR および SQL Server 間での動作の違いの例を次に示します。  
   
--   SQL Server では、一部のデータ型が、CLR の対応する型のデータとは異なる順序で並べ替えられます。 たとえば、SQL Server の `UNIQUEIDENTIFIER` 型のデータは、CLR の <xref:System.Guid?displayProperty=nameWithType> 型のデータとは異なる順序で並べ替えられます。  
+- SQL Server では、一部のデータ型が、CLR の対応する型のデータとは異なる順序で並べ替えられます。 たとえば、SQL Server の `UNIQUEIDENTIFIER` 型のデータは、CLR の <xref:System.Guid?displayProperty=nameWithType> 型のデータとは異なる順序で並べ替えられます。  
   
--   SQL Server では、一部の文字列比較操作の処理が CLR とは異なります。 SQL Server での文字列比較の動作は、サーバー上の照合順序の設定によって決まります。 詳細については、次を参照してください。[照合順序の使用](https://go.microsoft.com/fwlink/?LinkId=115330)、Microsoft SQL Server オンライン ブックの「します。  
+- SQL Server では、一部の文字列比較操作の処理が CLR とは異なります。 SQL Server での文字列比較の動作は、サーバー上の照合順序の設定によって決まります。 詳細については、次を参照してください。[照合順序の使用](https://go.microsoft.com/fwlink/?LinkId=115330)、Microsoft SQL Server オンライン ブックの「します。  
   
--   SQL Server では、マップされている一部の関数で、CLR とは異なる値が返されることがあります。 たとえば、末尾の空白文字のみが異なる 2 つの文字列を等価関数で比較した場合、SQL Server では等しいと見なされるのに対し、CLR では等しくないと見なされます。  
+- SQL Server では、マップされている一部の関数で、CLR とは異なる値が返されることがあります。 たとえば、末尾の空白文字のみが異なる 2 つの文字列を等価関数で比較した場合、SQL Server では等しいと見なされるのに対し、CLR では等しくないと見なされます。  
   
 <a name="EnumMapping"></a>   
 ## <a name="enum-mapping"></a>Enum 型のマッピング  
  LINQ to SQL では、CLR の <xref:System.Enum?displayProperty=nameWithType> 型の SQL Server 型へのマッピングが 2 種類サポートされています。  
   
--   SQL 数値型 (`TINYINT`、`SMALLINT`、`INT`、`BIGINT`) へのマッピング  
+- SQL 数値型 (`TINYINT`、`SMALLINT`、`INT`、`BIGINT`) へのマッピング  
   
      CLR <xref:System.Enum?displayProperty=nameWithType> 型を SQL 数値型にマップすると、基になる CLR <xref:System.Enum?displayProperty=nameWithType> の整数値は SQL Server データベース列の値にマップされます。 たとえば、<xref:System.Enum?displayProperty=nameWithType> という名前の `DaysOfWeek` に、基になる整数値が 3 である `Tue` という名前のメンバーが含まれる場合、そのメンバーはデータベース値 3 にマップされます。  
   
--   SQL テキスト型 (`CHAR`、`NCHAR`、`VARCHAR`、`NVARCHAR`) へのマッピング  
+- SQL テキスト型 (`CHAR`、`NCHAR`、`VARCHAR`、`NVARCHAR`) へのマッピング  
   
      CLR <xref:System.Enum?displayProperty=nameWithType> 型を SQL テキスト型にマップすると、CLR <xref:System.Enum?displayProperty=nameWithType> のメンバーの名前に SQL データベース値がマップされます。 たとえば、<xref:System.Enum?displayProperty=nameWithType> という名前の `DaysOfWeek` に、基になる整数値が 3 である `Tue` という名前のメンバーが含まれる場合、このメンバーはデータベース値 `Tue` にマップされます。  
   
@@ -154,13 +154,13 @@ LINQ to SQL では、リレーショナル データベースのデータ モデ
 ### <a name="xml-types"></a>XML 型  
  SQL Server の `XML` データ型は、Microsoft SQL Server 2005 以降で使用できます。 SQL Server の `XML` データ型は、<xref:System.Xml.Linq.XElement>、<xref:System.Xml.Linq.XDocument>、または <xref:System.String> にマップできます。 <xref:System.Xml.Linq.XElement> に読み込むことができない XML フラグメントが列に格納されている場合は、列を <xref:System.String> にマップして、実行時エラーを回避する必要があります。 <xref:System.String> にマップする必要がある XML フラグメントを次に示します。  
   
--   XML 要素のシーケンス  
+- XML 要素のシーケンス  
   
--   属性  
+- 属性  
   
--   パブリック識別子 (PI)  
+- パブリック識別子 (PI)  
   
--   コメント  
+- コメント  
   
  マップすることができます<xref:System.Xml.Linq.XElement>と<xref:System.Xml.Linq.XDocument>を SQL Server のように、[型マッピングと実行時動作関係](#BehaviorMatrix)、<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>メソッドには、これらの型の既定の SQL Server 型マッピングがありません。  
   
@@ -256,8 +256,9 @@ LINQ to SQL では、リレーショナル データベースのデータ モデ
   
  LINQ to SQL では、ここに示したその他の型に対する上記以外の型マッピングはサポートされません。  詳細については、次を参照してください。、[型マッピングの実行時動作関係](#BehaviorMatrix)します。  
   
-## <a name="see-also"></a>関連項目  
- [属性ベースの対応付け](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
- [外部マップ](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
- [データ型と関数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
- [SQL と CLR の型の不一致](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)
+## <a name="see-also"></a>関連項目
+
+- [属性ベースの対応付け](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
+- [外部マップ](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+- [データ型と関数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [SQL と CLR の型の不一致](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)

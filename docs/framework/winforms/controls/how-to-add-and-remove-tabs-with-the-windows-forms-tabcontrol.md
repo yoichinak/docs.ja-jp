@@ -1,5 +1,5 @@
 ---
-title: '方法 : Windows フォーム TabControl のタブを追加および削除する'
+title: '方法: Windows フォーム TabControl のタブを追加および削除する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 66d4dfca-41e8-44e3-9c80-fb7ac4cb1619
-ms.openlocfilehash: 938dbb4ae695f22d6daff417fbf7176800420aae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 938f1210eaa3479822e752327123737a3286fe9a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525605"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624059"
 ---
-# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a>方法 : Windows フォーム TabControl のタブを追加および削除する
-既定では、<xref:System.Windows.Forms.TabControl>コントロールでは、2 つ含まれている<xref:System.Windows.Forms.TabPage>コントロール。 これらのタブを通じてアクセスできる、<xref:System.Windows.Forms.TabControl.TabPages%2A>プロパティです。  
+# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a>方法: Windows フォーム TabControl のタブを追加および削除する
+既定で、<xref:System.Windows.Forms.TabControl>コントロールでは、2 つ含まれている<xref:System.Windows.Forms.TabPage>コントロール。 を通じてこれらのタブにアクセスすることができます、<xref:System.Windows.Forms.TabControl.TabPages%2A>プロパティ。  
   
-### <a name="to-add-a-tab-programmatically"></a>プログラムを追加するタブ  
+### <a name="to-add-a-tab-programmatically"></a>プログラムでタブを追加するには  
   
--   使用して、<xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A>のメソッド、<xref:System.Windows.Forms.TabControl.TabPages%2A>プロパティです。  
+- 使用して、<xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A>のメソッド、<xref:System.Windows.Forms.TabControl.TabPages%2A>プロパティ。  
   
     ```vb  
     Dim myTabPage As New TabPage()  
@@ -45,13 +45,13 @@ ms.locfileid: "33525605"
     tabControl1->TabPages->Add(myTabPage);  
     ```  
   
-### <a name="to-remove-a-tab-programmatically"></a>プログラムで、タブを削除するには  
+### <a name="to-remove-a-tab-programmatically"></a>プログラムにより、タブを削除するには  
   
--   削除するには選択したタブを使用して、<xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A>のメソッド、<xref:System.Windows.Forms.TabControl.TabPages%2A>プロパティです。  
+- 選択したタブを削除するを使用して、<xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A>のメソッド、<xref:System.Windows.Forms.TabControl.TabPages%2A>プロパティ。  
   
      - または -  
   
--   削除するにはすべてのタブを使用して、<xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A>のメソッド、<xref:System.Windows.Forms.TabControl.TabPages%2A>プロパティです。  
+- すべてのタブを削除するには、使用、<xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A>のメソッド、<xref:System.Windows.Forms.TabControl.TabPages%2A>プロパティ。  
   
     ```vb  
     ' Removes the selected tab:  
@@ -74,8 +74,9 @@ ms.locfileid: "33525605"
     tabControl1->TabPages->Clear();  
     ```  
   
-## <a name="see-also"></a>関連項目  
- [TabControl コントロールの概要](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
- [方法: タブ ページにコントロールを追加する](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)  
- [方法: タブ ページを無効化する](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)  
- [方法: Windows フォーム TabControl の表示形式を変更する](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+## <a name="see-also"></a>関連項目
+
+- [TabControl コントロールの概要](tabcontrol-control-overview-windows-forms.md)
+- [方法: タブ ページにコントロールを追加します。](how-to-add-a-control-to-a-tab-page.md)
+- [方法: タブ ページを無効にします。](how-to-disable-tab-pages.md)
+- [方法: Windows フォーム TabControl の外観を変更します。](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

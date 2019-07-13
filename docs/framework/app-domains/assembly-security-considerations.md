@@ -17,27 +17,27 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8d83da6e995c35de650c496c5792e55b05dd9095
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6b78b770417b9599719ea219041a9fd6adaf5a84
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50088794"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423411"
 ---
 # <a name="assembly-security-considerations"></a>アセンブリのセキュリティに関する考慮事項
 <a name="top"></a> アセンブリを作成する場合は、アセンブリの実行に必要となるアクセス許可セットを指定できます。 アセンブリに対して特定のアクセス許可を付与するかどうかは、証拠に基づいて決定されます。  
   
  証拠には 2 つの使い方があります。  
   
--   入力された証拠をローダーによって収集された証拠とマージして、ポリシーの解決に使用される最終的な証拠のセットを作成します。 この形式を使用するメソッドには、**Assembly.Load**、**Assembly.LoadFrom**、**Activator.CreateInstance** があります。  
+- 入力された証拠をローダーによって収集された証拠とマージして、ポリシーの解決に使用される最終的な証拠のセットを作成します。 この形式を使用するメソッドには、**Assembly.Load**、**Assembly.LoadFrom**、**Activator.CreateInstance** があります。  
   
--   入力された証拠を変更せずに、ポリシーの解決に使用する最終的な証拠のセットとして使用します。 この形式を使用するメソッドには、**Assembly.Load(byte[])** と **AppDomain.DefineDynamicAssembly()** があります。  
+- 入力された証拠を変更せずに、ポリシーの解決に使用する最終的な証拠のセットとして使用します。 この形式を使用するメソッドには、**Assembly.Load(byte[])** と **AppDomain.DefineDynamicAssembly()** があります。  
   
  アセンブリが実行されるコンピューターで設定されている[セキュリティ ポリシー](../../../docs/framework/misc/code-access-security-basics.md)により、オプションのアクセス許可を与えることもできます。 発生する可能性があるセキュリティ例外をすべて処理するコードを作成するには、次のいずれかを行います。  
   
--   コードを実行するために必要なすべてのアクセス許可に対してアクセス許可要求を挿入し、アクセス許可が与えられなかった場合に生じる読み込み時エラーをあらかじめ処理しておく。  
+- コードを実行するために必要なすべてのアクセス許可に対してアクセス許可要求を挿入し、アクセス許可が与えられなかった場合に生じる読み込み時エラーをあらかじめ処理しておく。  
   
--   コードを実行するために必要なアクセス許可を取得するためのアクセス許可要求は使用せず、アクセス許可が与えられなかった場合のセキュリティ例外を処理できるように準備しておく。  
+- コードを実行するために必要なアクセス許可を取得するためのアクセス許可要求は使用せず、アクセス許可が与えられなかった場合のセキュリティ例外を処理できるように準備しておく。  
   
     > [!NOTE]
     >  セキュリティは複雑な分野で、選択できるオプションも数多くあります。 詳細については、「[セキュリティの基本概念](../../../docs/standard/security/key-security-concepts.md)」を参照してください。  
@@ -62,7 +62,8 @@ ms.locfileid: "50088794"
   
  厳密な名前と [SignTool.exe (署名ツール)](../../../docs/framework/tools/signtool-exe.md) を使用する署名によって整合性が保証されるため、これら 2 種類のアセンブリ証拠に基づいてコード アクセス セキュリティ ポリシーを設定できます。 厳密な名前と [SignTool.exe (署名ツール)](../../../docs/framework/tools/signtool-exe.md) を使用する署名では、デジタル署名と証明書によって整合性が保証されます。 以上で述べた技術 (ハッシュ検査、厳密な名前、[SignTool.exe (署名ツール)](../../../docs/framework/tools/signtool-exe.md) を使用する署名) をすべて組み合わせて使用することで、アセンブリがどのような方法によっても変更されていないことが保証されます。  
   
-## <a name="see-also"></a>参照  
-- [厳密な名前付きアセンブリ](../../../docs/framework/app-domains/strong-named-assemblies.md)  
-- [共通言語ランタイムのアセンブリ](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+## <a name="see-also"></a>関連項目
+
+- [厳密な名前付きアセンブリ](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [共通言語ランタイムのアセンブリ](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [SignTool.exe (署名ツール)](../../../docs/framework/tools/signtool-exe.md)

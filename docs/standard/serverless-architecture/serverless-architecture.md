@@ -4,16 +4,16 @@ description: さまざまなアーキテクチャと web アプリ、モバイ�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 5f22f8b9894a23e5920adb2af3fdf02bce2877d7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 60d225d9794d5c15b0cd8e42800ccad4d7872756
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967822"
 ---
 # <a name="serverless-architecture"></a>サーバーレス アーキテクチャ
 
-サーバーレス アーキテクチャを使用する多くの方法はあります。 この章では、サーバーレスを統合する一般的なアーキテクチャの例について説明します。 追加の課題をもたらす可能性があります、またはサーバーレスを実装する場合は、追加の考慮事項を必要とする考慮事項についても説明します。 最後に、デザイン例をいくつかは、さまざまなサーバーレスのユース ケースを説明する指定されます。
+使用する方法はたくさんあります[サーバーレス](http://azure.com/serverless)アーキテクチャ。 この章では、サーバーレスを統合する一般的なアーキテクチャの例について説明します。 追加の課題をもたらす可能性があります、またはサーバーレスを実装する場合は、追加の考慮事項を必要とする考慮事項についても説明します。 最後に、デザイン例をいくつかは、さまざまなサーバーレスのユース ケースを説明する指定されます。
 
 サーバーレスのホストでは、サーバーレスのインスタンスを管理するのに既存のコンテナー ベースまたは PaaS レイヤーを多くの場合、使用します。 たとえば、Azure Functions に基づきます。 [Azure App Service](https://docs.microsoft.com/azure/app-service/)します。 App Service は、スケール アウト インスタンスと Azure Functions のコードを実行するランタイムの管理に使用されます。 PaaS とスケールの役割として実行するホストを Windows ベースの関数では、.NET ランタイムをチェック アウトします。 Linux ベースの関数では、ホストは、コンテナーを活用します。
 

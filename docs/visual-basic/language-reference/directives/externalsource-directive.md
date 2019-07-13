@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ExternalSource directive (#ExternalSource)
 - '#ExternalSource directive'
 ms.assetid: 243bc6a2-34c3-4eeb-a776-9fd2bf988149
-ms.openlocfilehash: dcde8507eb033d0a47d5c5d3fa36176cd63b0856
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 39e6963c97340daab3f0ab7ad6860695f1f6c135
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747045"
 ---
 # <a name="externalsource-directive"></a>#ExternalSource ディレクティブ
 ソース コードの特定の行とソース外部のテキスト間のマッピングを示します。  
@@ -50,5 +50,6 @@ ms.locfileid: "43861789"
   
  外部ソース ディレクティブは、コンパイルに影響を与えるありませんし、入れ子にすることはできません。 内部使用のアプリケーションのみが用意されています。  
   
-## <a name="see-also"></a>関連項目  
- [条件付きコンパイル](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+## <a name="see-also"></a>関連項目
+
+- [条件付きコンパイル](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

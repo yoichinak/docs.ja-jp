@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], attribute
 - XML [Visual Basic], accessing
 ms.assetid: 7a4777e1-0618-4de9-9510-fb9ace2bf4db
-ms.openlocfilehash: 9107b946394ab70980e4865364fc1ba9683e2025
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a7a93608d14bcbec316228b59467b23e9247e043
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025224"
 ---
 # <a name="xml-attribute-axis-property-visual-basic"></a>XML 属性軸プロパティ (Visual Basic)
 属性の値にアクセスできるように、<xref:System.Xml.Linq.XElement>オブジェクトまたは最初の要素のコレクションを<xref:System.Xml.Linq.XElement>オブジェクト。  
@@ -36,18 +36,18 @@ object.@<attribute>
  必須。 属性軸プロパティの開始を示します。  
   
  <  
- 任意。 属性の名前の先頭を示すとき`attribute`Visual Basic では有効な識別子ではありません。  
+ 省略可能です。 属性の名前の先頭を示すとき`attribute`Visual Basic では有効な識別子ではありません。  
   
  `attribute`  
  必須。 フォームにアクセスする属性の名前 [`prefix`:]`name`します。  
   
 |パーツ|説明|  
 |----------|-----------------|  
-|`prefix`|任意。 属性の XML 名前空間プレフィックス。 `Imports` ステートメントを使用して定義されているグローバル XML 名前空間を指定する必要があります。|  
+|`prefix`|省略可能です。 属性の XML 名前空間プレフィックス。 `Imports` ステートメントを使用して定義されているグローバル XML 名前空間を指定する必要があります。|  
 |`name`|必須。 属性のローカル名。 参照してください[宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)します。|  
   
  \>  
- 任意。 属性の名前の終了を示すとき`attribute`Visual Basic では有効な識別子ではありません。  
+ 省略可能です。 属性の名前の終了を示すとき`attribute`Visual Basic では有効な識別子ではありません。  
   
 ## <a name="return-value"></a>戻り値  
  値を格納する文字列`attribute`します。 属性名が存在しない場合`Nothing`が返されます。  
@@ -65,7 +65,7 @@ object.@<attribute>
 ## <a name="example"></a>例  
  次の例は、XML 属性の名前付きの値を取得する方法を示します`type`という名前の XML 要素のコレクションから`phone`します。  
   
- [!code-vb[VbXMLSamples#12](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_1.vb)]  
+ [!code-vb[VbXMLSamples#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#12)]  
   
  このコードを実行すると、次のテキストが表示されます。  
   
@@ -80,7 +80,7 @@ object.@<attribute>
 ## <a name="example"></a>例  
  次の例は、ここでは、XML の動的なのインスタンスに属性を追加することでとの一部として、両方の XML 要素の属性を作成する方法を示します、<xref:System.Xml.Linq.XElement>オブジェクト。 `type`属性を宣言によって作成および`owner`属性が動的に作成されます。  
   
- [!code-vb[VbXMLSamples#44](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_2.vb)]  
+ [!code-vb[VbXMLSamples#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#44)]  
   
  このコードを実行すると、次のテキストが表示されます。  
   
@@ -91,7 +91,7 @@ object.@<attribute>
 ## <a name="example"></a>例  
  次の例では、山かっこ構文を使用してという名前の XML 属性の値を取得`number-type`、Visual Basic では、有効な識別子ではないです。  
   
- [!code-vb[VbXMLSamples#13](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_3.vb)]  
+ [!code-vb[VbXMLSamples#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#13)]  
   
  このコードを実行すると、次のテキストが表示されます。  
   
@@ -100,15 +100,16 @@ object.@<attribute>
 ## <a name="example"></a>例  
  次の例では、`ns` を名前空間プレフィックスとして宣言します。 XML リテラルを作成し、修飾名を持つ最初の子ノードにアクセスする次の名前空間のプレフィックスを使用して"`ns:name`"。  
   
- [!code-vb[VbXMLSamples#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_4.vb)]  
+ [!code-vb[VbXMLSamples#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples6.vb#14)]  
   
  このコードを実行すると、次のテキストが表示されます。  
   
  `Phone type: home`  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Xml.Linq.XElement>  
- [XML 軸プロパティ](../../../visual-basic/language-reference/xml-axis/index.md)  
- [XML リテラル](../../../visual-basic/language-reference/xml-literals/index.md)  
- [Visual Basic での XML の作成](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Xml.Linq.XElement>
+- [XML 軸プロパティ](../../../visual-basic/language-reference/xml-axis/index.md)
+- [XML リテラル](../../../visual-basic/language-reference/xml-literals/index.md)
+- [Visual Basic での XML の作成](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

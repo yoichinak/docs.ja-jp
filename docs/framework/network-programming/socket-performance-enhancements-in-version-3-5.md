@@ -2,12 +2,12 @@
 title: バージョン 3.5 のソケット パフォーマンスの強化
 ms.date: 03/30/2017
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
-ms.openlocfilehash: 588edc35f1b0fb39beb9be9a71573a1727ffeab8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 28f2543d1f8c81efd32ffbb644265fb5709a9bb3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193449"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59333289"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>バージョン 3.5 のソケット パフォーマンスの強化
 非同期ネットワーク I/O を利用して最高のパフォーマンスを達成するために、バージョン 3.5 で、<xref:System.Net.Sockets.Socket?displayProperty=nameWithType> クラスが機能強化されました。 <xref:System.Net.Sockets.Socket> クラスの機能強化の一環として、一連の新しいクラスが追加されました。これが提供する代替非同期パターンは、目的に特化した高パフォーマンスのソケット アプリケーションで利用できます。 この機能強化は、高いパフォーマンスを必要とするネットワーク サーバー アプリケーションのために設計されたものです。 あるアプリケーションで、機能強化された非同期パターンを排他的に、言い換えると、アプリケーションの高負荷領域 (大量のデータを受け取るときなど) のみで使用できます。  
@@ -19,24 +19,25 @@ ms.locfileid: "50193449"
   
  このクラスで非同期ソケット操作を実行するパターンは次の手順で構成されます。  
   
-1.  新しい <xref:System.Net.Sockets.SocketAsyncEventArgs> コンテキスト オブジェクトを割り当てるか、アプリケーション プールから空きコンテキスト オブジェクトを入手します。  
+1. 新しい <xref:System.Net.Sockets.SocketAsyncEventArgs> コンテキスト オブジェクトを割り当てるか、アプリケーション プールから空きコンテキスト オブジェクトを入手します。  
   
-2.  コンテキスト オブジェクトのプロパティをこれから実行する操作 (コールバック デリゲート メソッドやデータ バッファーなど) に設定します。  
+2. コンテキスト オブジェクトのプロパティをこれから実行する操作 (コールバック デリゲート メソッドやデータ バッファーなど) に設定します。  
   
-3.  適切なソケット メソッド (xxxAsync) を呼び出し、非同期操作を開始します。  
+3. 適切なソケット メソッド (xxxAsync) を呼び出し、非同期操作を開始します。  
   
-4.  非同期ソケット メソッド (xxxAsync) がコールバックで true を返した場合、コンテキスト プロパティに完了状態を問い合わせます。  
+4. 非同期ソケット メソッド (xxxAsync) がコールバックで true を返した場合、コンテキスト プロパティに完了状態を問い合わせます。  
   
-5.  非同期ソケット メソッド (xxxAsync) がコールバックで false を返した場合、操作は非同期で完了しています。 コンテキスト プロパティに操作結果が問い合わされることがあります。  
+5. 非同期ソケット メソッド (xxxAsync) がコールバックで false を返した場合、操作は非同期で完了しています。 コンテキスト プロパティに操作結果が問い合わされることがあります。  
   
-6.  別の操作でコンテキストを再利用するか、プールに戻すか、破棄します。  
+6. 別の操作でコンテキストを再利用するか、プールに戻すか、破棄します。  
   
  新しい非同期ソケット操作コンテキスト オブジェクトの有効期間は、アプリケーション コードの参照と非同期 I/O の参照により決定されます。 非同期ソケット操作メソッドの 1 つにパラメーターとして送信された後、非同期ソケット操作コンテキスト オブジェクトの参照をアプリケーションが維持する必要はありません。 完了コールバックが戻るまで、参照状態が維持されます。 ただし、コンテキスト オブジェクトの参照をアプリケーションが維持することには、将来の非同期ソケット操作で再利用できるため、利便性があります。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>  
- <xref:System.Net.Sockets.SendPacketsElement?displayProperty=nameWithType>  
- <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType>  
- <xref:System.Net.Sockets.SocketAsyncOperation?displayProperty=nameWithType>  
- [ネットワーク プログラミングのサンプル](../../../docs/framework/network-programming/network-programming-samples.md)  
- [ソケットのコード例](socket-code-examples.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>
+- <xref:System.Net.Sockets.SendPacketsElement?displayProperty=nameWithType>
+- <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType>
+- <xref:System.Net.Sockets.SocketAsyncOperation?displayProperty=nameWithType>
+- [ネットワーク プログラミングのサンプル](../../../docs/framework/network-programming/network-programming-samples.md)
+- [ソケットのコード例](socket-code-examples.md)

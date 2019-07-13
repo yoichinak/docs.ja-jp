@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54ca80e83511d6120669df634ae34ca0bf486bf3
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 2d69fd06f4048667a05ddbfec571067c16f9e86a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453451"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833728"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>ランタイムがアセンブリを検索する方法
 .NET Framework アプリケーションを正しく配置するには、アプリケーションを構成するアセンブリを共通言語ランタイムがどのように検索し、バインドするかを理解している必要があります。 既定では、ランタイムはアプリケーションを構成するアセンブリの正しいバージョンをバインドしようとします。 この既定の動作は、構成ファイルの設定によってオーバーライドできます。  
@@ -24,7 +24,7 @@ ms.locfileid: "49453451"
  共通言語ランタイムは、アセンブリを検索し、アセンブリの参照を解決しようとするときにいくつかの手順を実行します。 それぞれの手順については、後続のセクションで説明します。 ランタイムがアセンブリを検索する方法の説明では、「プローブ」という用語が頻繁に使用されます。プローブとは、アセンブリの名前およびカルチャに基づいてアセンブリを特定するための一連のヒューリスティックです。  
   
 > [!NOTE]
->  [に含まれている](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)アセンブリ バインディング ログ ビューアー (Fuslogvw.exe) [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]を使用すると、ログ ファイル内のバインディング情報を表示できます。  
+>  Windows Software Development Kit (SDK) に含まれている[アセンブリ バインディング ログ ビューアー (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) を使用して、ログ ファイル内のバインディング情報を表示できます。  
   
 ## <a name="initiating-the-bind"></a>バインドの開始  
  アセンブリを検索し、バインドするプロセスは、ランタイムが別のアセンブリへの参照を解決しようとしたときに開始します。 この参照は、静的参照または動的参照のいずれかです。 コンパイラは、ビルド時に静的参照をアセンブリ マニフェストのメタデータに記録します。 動的参照は、 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>など、各種のメソッド呼び出しの結果として実行時に生成されます。  
@@ -40,22 +40,22 @@ ms.locfileid: "49453451"
   
  ランタイムは、次の手順を使用することによってアセンブリ参照を解決します。  
   
-1.  適用可能な構成ファイル (アプリケーション構成ファイル、発行者ポリシー ファイル、マシン構成ファイルなど) をチェックして、[正しいアセンブリ バージョンを決定します。](#step1)  構成ファイルがリモート コンピューターに配置されている場合、ランタイムは最初にアプリケーション構成ファイルを検索し、ダウンロードする必要があります。  
+1. 適用可能な構成ファイル (アプリケーション構成ファイル、発行者ポリシー ファイル、マシン構成ファイルなど) をチェックして、[正しいアセンブリ バージョンを決定します。](#step1) 構成ファイルがリモート コンピューターに配置されている場合、ランタイムは最初にアプリケーション構成ファイルを検索し、ダウンロードする必要があります。  
   
-2.  [以前にアセンブリ名がバインドされているかどうかをチェック](#step2) し、バインドされている場合は、前に読み込んだアセンブリを使用します。 前にアセンブリの読み込み要求が失敗している場合は、アセンブリの読み込みを試みることなく要求が直ちにエラーとなります。  
+2. [以前にアセンブリ名がバインドされているかどうかをチェック](#step2) し、バインドされている場合は、前に読み込んだアセンブリを使用します。 前にアセンブリの読み込み要求が失敗している場合は、アセンブリの読み込みを試みることなく要求が直ちにエラーとなります。  
   
     > [!NOTE]
     >  アセンブリ バインディング エラーのキャッシュは、.NET Framework Version 2.0 で新たに追加されました。  
   
-3.  [グローバル アセンブリ キャッシュをチェックします](#step3)。 そこにアセンブリが見つかった場合は、ランタイムでそのアセンブリが使用されます。  
+3. [グローバル アセンブリ キャッシュをチェックします](#step3)。 そこにアセンブリが見つかった場合は、ランタイムでそのアセンブリが使用されます。  
   
-4.  次の手順を使用することによって、[アセンブリのプローブ](#step4) を実行します。  
+4. 次の手順を使用することによって、[アセンブリのプローブ](#step4) を実行します。  
   
-    1.  構成と発行者ポリシーが元の参照に影響しない場合およびバインド要求が <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> メソッドを使用することによって作成されている場合、ランタイムは位置ヒントをチェックします。  
+    1. 構成と発行者ポリシーが元の参照に影響しない場合およびバインド要求が <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> メソッドを使用することによって作成されている場合、ランタイムは位置ヒントをチェックします。  
   
-    2.  構成ファイル内でコードベースが見つかった場合、ランタイムはその場所だけをチェックします。 このプローブが失敗した場合、ランタイムはバインド要求が失敗したと判断し、それ以上のプローブは実行しません。  
+    2. 構成ファイル内でコードベースが見つかった場合、ランタイムはその場所だけをチェックします。 このプローブが失敗した場合、ランタイムはバインド要求が失敗したと判断し、それ以上のプローブは実行しません。  
   
-    3.  「 [手順 4: コードベースまたはプローブによるアセンブリの検索](#step4)」で説明するヒューリスティックを使用してアセンブリをプローブします。 プローブしてもアセンブリが見つからなかった場合、ランタイムは Windows Installer に対してアセンブリを提供するように要求します。 これは、オンデマンド インストール機能として実行されます。  
+    3. 「 [手順 4: コードベースまたはプローブによるアセンブリの検索](#step4)」で説明するヒューリスティックを使用してアセンブリをプローブします。 プローブしてもアセンブリが見つからなかった場合、ランタイムは Windows Installer に対してアセンブリを提供するように要求します。 これは、オンデマンド インストール機能として実行されます。  
   
         > [!NOTE]
         >  厳密な名前を持たないアセンブリについては、ランタイムはバージョン チェックをしません。また、厳密な名前を持たないアセンブリについては、グローバル アセンブリ キャッシュ内のチェックも実行しません。  
@@ -64,11 +64,11 @@ ms.locfileid: "49453451"
 ## <a name="step-1-examining-the-configuration-files"></a>手順 1: 構成ファイルのチェック  
  アセンブリ バインディング動作は、次の 3 つの XML ファイルに基づいて、さまざまなレベルで設定できます。  
   
--   アプリケーション構成ファイル  
+- アプリケーション構成ファイル  
   
--   発行者ポリシー ファイル  
+- 発行者ポリシー ファイル  
   
--   マシン構成ファイル  
+- マシン構成ファイル  
   
  これらのファイルには、特定のアセンブリについて、バインディング リダイレクト、コードの場所、バインディング モードなどの情報が同じ構文で記述されています。 バインディング プロセスをリダイレクトする各構成ファイルは [\<assemblyBinding> 要素](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)を含めることができます。 [\<assemblyBinding> 要素](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)の子要素には [\<dependentAssembly> 要素](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)が含まれます。 [\<dependentAssembly> 要素](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)の子は、[\<assemblyIdentity> 要素](/visualstudio/deployment/assemblyidentity-element-clickonce-deployment)、[\<bindingRedirect> 要素](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)と、[\<codeBase> 要素](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)が含まれます。  
   
@@ -132,7 +132,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 #### <a name="safe-mode"></a>セーフ モード  
  通常、発行者ポリシー ファイルは、Service Pack またはプログラム更新の一部として明示的にインストールされます。 アップグレードされた共有コンポーネントに何か問題がある場合は、セーフ モードを使用して発行者ポリシー ファイル内のオーバーライドを無視できます。 セーフ モードは **\<publisherPolicy apply="yes**&#124;**no"/>** 要素によって決まります。この要素は、アプリケーション構成ファイルだけにあります。 この要素は、発行者ポリシーの構成情報をバインディング プロセスから削除するかどうかを指定します。  
   
- セーフ モードは、アプリケーション全体に対して設定するか、または選択したアセンブリに対して設定できます。 つまり、アプリケーションを構成するすべてのアセンブリのポリシーをオフに設定するか、または一部のアセンブリについてだけポリシーをオフにし、それ以外はオフにしないように設定できます。 アプリケーションを構成するアセンブリに発行者ポリシーを選択的に適用するには、**\<publisherPolicy apply\=no/>** を設定し、\<**dependentAssembly**> 要素を使用して適用対象のアセンブリを指定します。 アプリケーションを構成するすべてのアセンブリに発行者ポリシーを適用するには、依存アセンブリの場合は、要素なしの **\<publisherPolicy apply\=no/>** を設定します。 構成の詳細については、「 [構成ファイルを使用してアプリを構成する方法](../../../docs/framework/configure-apps/index.md)」を参照してください。  
+ セーフ モードは、アプリケーション全体に対して設定するか、または選択したアセンブリに対して設定できます。 つまり、アプリケーションを構成するすべてのアセンブリのポリシーをオフに設定するか、または一部のアセンブリについてだけポリシーをオフにし、それ以外はオフにしないように設定できます。 アプリケーションを構成するアセンブリに発行者ポリシーを選択的に適用するには、 **\<publisherPolicy apply\=no/>** を設定し、\<**dependentAssembly**> 要素を使用して適用対象のアセンブリを指定します。 アプリケーションを構成するすべてのアセンブリに発行者ポリシーを適用するには、依存アセンブリの場合は、要素なしの **\<publisherPolicy apply\=no/>** を設定します。 構成の詳細については、「 [構成ファイルを使用してアプリを構成する方法](../../../docs/framework/configure-apps/index.md)」を参照してください。  
   
 ### <a name="machine-configuration-file"></a>マシン構成ファイル  
  3 番目に、ランタイムはマシン構成ファイルをチェックします。 このファイルは、Machine.config という名前で、ローカル コンピューターの、ランタイムがインストールされているルート ディレクトリの Config サブディレクトリにあります。 管理者は、このマシン構成ファイルを使用して、そのコンピューターに固有のアセンブリ バインディング制限を指定できます。 マシン構成ファイル内の設定は、ほかのすべての構成設定に優先します。ただし、これは、他のすべての構成設定をこのマシン構成ファイルに配置する必要があるという意味ではありません。 管理者ポリシー ファイルによって決定されるバージョンは最終的であり、オーバーライドすることはできません。 Machine.config ファイル内に指定されたオーバーライドは、すべてのアプリケーションに作用します。 構成ファイルの詳細については、「 [構成ファイルを使用してアプリを構成する方法](../../../docs/framework/configure-apps/index.md)」を参照してください。  
@@ -151,12 +151,12 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  厳密な名前の付いたアセンブリの場合、バインディング プロセスは、続いてグローバル アセンブリ キャッシュ内を調べます。 グローバル アセンブリ キャッシュには、コンピューター上の複数のアプリケーションで使用できるアセンブリが格納されています。 グローバル アセンブリ キャッシュに配置するアセンブリには、すべて厳密な名前を付ける必要があります。  
   
 <a name="step4"></a>   
-## <a name="step-4-locating-the-assembly-through-codebases-or-probing"></a>手順 4 : コードベースまたはプローブによるアセンブリの検索  
+## <a name="step-4-locating-the-assembly-through-codebases-or-probing"></a>手順 4: コードベースまたはプローブによるアセンブリの検索  
  共通言語ランタイムは、呼び出し元アセンブリの参照および構成ファイル内の情報を使用して正しいアセンブリ バージョンを決定した後、およびグローバル アセンブリ キャッシュ内をチェック (厳密な名前が付いたアセンブリの場合だけ) した後で、アセンブリの検索を試みます。 アセンブリを検索するプロセスは、次のとおりです。  
   
-1.  [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 要素は、アプリケーション構成ファイルに格納されている場合、ランタイムはこの要素に指定されている場所を調べます。 一致するアセンブリが見つかった場合は、そのアセンブリが使用され、プローブは実行されません。 指定されている場所でアセンブリが見つからなかった場合、バインド要求は失敗します。  
+1. [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 要素は、アプリケーション構成ファイルに格納されている場合、ランタイムはこの要素に指定されている場所を調べます。 一致するアセンブリが見つかった場合は、そのアセンブリが使用され、プローブは実行されません。 指定されている場所でアセンブリが見つからなかった場合、バインド要求は失敗します。  
   
-2.  次に、ランタイムは、後でこのセクションで指定する規則に従って、参照先アセンブリをプローブします。  
+2. 次に、ランタイムは、後でこのセクションで指定する規則に従って、参照先アセンブリをプローブします。  
   
 > [!NOTE]
 >  アセンブリがディレクトリ内に複数バージョンあり、特定バージョンのアセンブリを参照する場合は、[\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 要素の `privatePath` 属性ではなく [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 要素を使用する必要があります。 [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 要素を使用すると、ランタイムは、参照されている単純なアセンブリ名に一致するアセンブリを初めて検出した時点で、それが適切な一致かどうかに関係なくプローブを停止します。 適切な一致である場合は、そのアセンブリが使用されます。 適切な一致でない場合、プローブは停止し、バインディングは失敗します。  
@@ -172,13 +172,13 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ### <a name="locating-the-assembly-through-probing"></a>プローブによるアセンブリの検索  
  アプリケーション構成ファイルに [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 要素がない場合、ランタイムは 4 個の条件を使用してアセンブリをプローブします。  
   
--   アプリケーション ベース (アプリケーションが実行されるルート位置)。  
+- アプリケーション ベース (アプリケーションが実行されるルート位置)。  
   
--   カルチャ (参照先アセンブリのカルチャ属性)。  
+- カルチャ (参照先アセンブリのカルチャ属性)。  
   
--   名前 (参照先アセンブリの名前)。  
+- 名前 (参照先アセンブリの名前)。  
   
--   [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 要素の `privatePath` 属性 (ルート位置の下にあるサブディレクトリのユーザー定義の一覧)。 この場所は、アプリケーション ドメインの <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> プロパティを使用して、アプリケーション構成ファイルとマネージド コード内に指定できます。 マネージド コード内に指定した場合は、マネージド コード `privatePath` が先にプローブされ、その後でアプリケーション構成ファイルに指定したパスがプローブされます。  
+- [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 要素の `privatePath` 属性 (ルート位置の下にあるサブディレクトリのユーザー定義の一覧)。 この場所は、アプリケーション ドメインの <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> プロパティを使用して、アプリケーション構成ファイルとマネージド コード内に指定できます。 マネージド コード内に指定した場合は、マネージド コード `privatePath` が先にプローブされ、その後でアプリケーション構成ファイルに指定したパスがプローブされます。  
   
 #### <a name="probing-the-application-base-and-culture-directories"></a>アプリケーション ベース ディレクトリとカルチャ ディレクトリのプローブ  
  ランタイムは、常に、アプリケーションのベース (URL またはコンピューター上のアプリケーションのルート ディレクトリのいずれか) からプローブを開始します。 アプリケーション ベースで参照先アセンブリが見つからず、カルチャ情報が提供されていない場合、ランタイムはそのアセンブリ名を持つすべてのサブディレクトリ内を検索します。 プローブされるディレクトリは、次のとおりです。  
@@ -213,13 +213,13 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 #### <a name="probing-examples"></a>プローブの例  
  次の情報が指定されています。  
   
--   参照先アセンブリの名前: myAssembly  
+- 参照先アセンブリの名前: myAssembly  
   
--   アプリケーション ルート ディレクトリ: `http://www.code.microsoft.com`  
+- アプリケーション ルート ディレクトリ: `http://www.code.microsoft.com`  
   
--   構成ファイルの [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 要素による指定: bin  
+- 構成ファイルの [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 要素による指定: bin  
   
--   カルチャ: de  
+- カルチャ: de  
   
  ランタイムは、次の URL をプローブします。  
   
@@ -247,6 +247,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
  たとえば、Assembly1 が Assembly2 を参照し、Assembly1 が `http://www.code.microsoft.com/utils` からダウンロードされていた場合、この場所が、Assembly2.dll を検索する場所についてのヒントと見なされます。 次に、ランタイムは `http://www.code.microsoft.com/utils/Assembly2.dll` と `http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll` のアセンブリをプローブします。 どちらの場所でも Assembly2 が見つからなかった場合は、ランタイムは Windows Installer に問い合わせます。  
   
-## <a name="see-also"></a>参照  
-- [アセンブリの読み込みのベスト プラクティス](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+## <a name="see-also"></a>関連項目
+
+- [アセンブリの読み込みのベスト プラクティス](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)
 - [配置](../../../docs/framework/deployment/index.md)

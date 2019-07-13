@@ -1,33 +1,27 @@
 ---
-title: を概要します。F#
-description: 使用する方法については、F#プログラミング言語。
+title: "F#をはじめよう"
+description: "F#のはじめ方を探し出そう"
 ms.date: 12/08/2018
-ms.openlocfilehash: df0e98b4d001ceaeca2ebe3d154c6bad57a8a30d
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170822"
 ---
-# <a name="get-started-with-f"></a>を概要します。F# #
+# <a name="get-started-with-f"></a>F#をはじめよう
 
-開始できますF#コンピューターまたはオンライン。
+F#はローカルマシン環境か、オンライン環境から学びはじめることができます。
 
-## <a name="get-started-on-your-machine"></a>コンピューターに開始します。
+## <a name="get-started-on-your-machine"></a>ローカルマシンではじめる
 
-インストールして使用する方法の複数のガイドがあるF#をコンピューターに初めてです。  意思決定に役立つ次の表を使用できます。
+F#の開発環境をあなたのローカルマシンにインストールして、利用する方法については複数の選択肢があります。次の表を元に、あなたに適した方法を選択してください。
 
-| OS | Visual Studio を使用します。 | Visual Studio Code を使用します。 | コマンドラインを使用します。 |
+| OS | Visual Studio | Visual Studio Code | CLI |
 | -- |------------------------|--------------------------|-----------------------------|-------------------------|
-| Windows | [Visual Studio を概要します。](get-started-visual-studio.md) | [Visual Studio Code および Ionide を概要します。](get-started-vscode.md) | [.NET Core CLI を概要します。](get-started-command-line.md) |
-| macOS | [Mac 用 VS を概要します。](get-started-with-visual-studio-for-mac.md) | [Visual Studio Code および Ionide を概要します。](get-started-vscode.md) | [.NET Core CLI を概要します。](get-started-command-line.md) |
-| Linux | N/A | [Visual Studio Code および Ionide を概要します。](get-started-vscode.md) | [.NET Core CLI を概要します。](get-started-command-line.md) |
+| Windows | [Visual Studio ではじめる](get-started-visual-studio.md) | [VS Code + Ionide ではじめる](get-started-vscode.md) | [.NET Core CLI ではじめる](get-started-command-line.md) |
+| macOS   | [Mac 用 VS ではじめる](get-started-with-visual-studio-for-mac.md) | [VS Code + Ionide ではじめる](get-started-vscode.md) | [.NET Core CLI ではじめる](get-started-command-line.md) |
+| Linux   | N/A | [VS Code + Ionide ではじめる](get-started-vscode.md) | [.NET Core CLI ではじめる](get-started-command-line.md) |
 
-一般に、残りの部分よりも高い特定することはありません。 すべての方法を使用しようとしたことをお勧めします。F#などの内容を表示するコンピューターに最適です。
+一般的に、上記の方法のどれが優れているということはありません。すべての方法を試してみて、あなたに一番適した開発環境を見つけてください！
 
-## <a name="get-started-online"></a>オンラインで開始します。
+## <a name="get-started-online"></a>オンライン環境ではじめる
 
-インストールはではなく場合F#とコンピューターに .NET では、することができますも開始F#、ブラウザーで。
+もし F# と .NET の開発環境をローカルマシンに構築したくない場合、ブラウザ上で F# を始めることもできます。
 
-* [概要F#Azure Notebook 上](https://notebooks.azure.com/Microsoft/projects/2018-Intro-FSharp/html/Introduction%20to%20FSharp.ipynb)は、 [Jupyter notebook](https://jupyter.org/) 、無料の Azure Notebook サービスにします。 Microsoft アカウントでサインインし、ブラウザーで直接離れた hack できます!
-* [Fable REPL](https://fable.io/repl/)を使用する対話型のブラウザーで REPL [Fable](https://fable.io/)に変換するF#に JavaScript コード。 その範囲から多数のサンプルをチェックF#完全ひとかどのビデオ ゲームをブラウザーで実行中のすべての基本です。
+- 「[Introduction to F# on Azure Notebooks](https://notebooks.azure.com/Microsoft/projects/2018-Intro-FSharp/html/Introduction%20to%20FSharp.ipynb)」は [Jupyter notebook](https://jupyter.org/) でホストされている、無料の Azure Notebooks サービスです。Microsoft アカウントでサインインするだけで、すぐにブラウザ上から学び始めることができます！
+- 「[The Fable REPL](https://fable.io/repl/)」は F# コードを JavaScript に変換するために Fable を使用している、ブラウザ内 REPL です。F# の基本から本格的なゲームのコードまで、ブラウザ上で実際に実行できる多数のサンプルが紹介されているので、ぜひチェックしてみてください！

@@ -2,21 +2,21 @@
 title: '方法: 署名のないフレンド アセンブリ (Visual Basic) を作成します。'
 ms.date: 03/14/2018
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
-ms.openlocfilehash: 5fb2310a5d883e65df0b59b6fe316aa4d4637b7f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4771d0fe116d1532c270cf41b209665d5403a9b8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022234"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>方法: 署名のないフレンド アセンブリ (Visual Basic) を作成します。
 この例では、署名のないアセンブリと共にフレンド アセンブリを使用する方法を示します。  
   
 ### <a name="to-create-an-assembly-and-a-friend-assembly"></a>署名のないアセンブリとフレンド アセンブリを作成するには  
   
-1.  コマンド プロンプトを開きます。  
+1. コマンド プロンプトを開きます。  
   
-2.  という名前の Visual Basic ファイルを作成する`friend_signed_A.`次のコードを格納しています。 コードでは <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性を使用して、フレンド アセンブリとして friend_signed_B を宣言します。  
+2. という名前の Visual Basic ファイルを作成する`friend_signed_A.`次のコードを格納しています。 コードでは <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性を使用して、フレンド アセンブリとして friend_signed_B を宣言します。  
   
     ```vb  
     ' friend_unsigned_A.vb  
@@ -42,13 +42,13 @@ ms.locfileid: "50188330"
     End Class  
     ```  
   
-3.  次のコマンドを使用して friend_signed_A をコンパイルして署名します。  
+3. 次のコマンドを使用して friend_signed_A をコンパイルして署名します。  
   
     ```console  
     vbc -target:library friend_unsigned_A.vb  
     ```  
   
-4.  という名前の Visual Basic ファイルを作成する`friend_unsigned_B`次のコードを格納しています。 friend_unsigned_A が friend_unsigned_B をフレンド アセンブリとして指定しているため、friend_unsigned_B 内のコードは、friend_unsigned_A の `Friend` 型とメンバーにアクセスできます。  
+4. という名前の Visual Basic ファイルを作成する`friend_unsigned_B`次のコードを格納しています。 friend_unsigned_A が friend_unsigned_B をフレンド アセンブリとして指定しているため、friend_unsigned_B 内のコードは、friend_unsigned_A の `Friend` 型とメンバーにアクセスできます。  
   
     ```vb  
     ' friend_unsigned_B.vb  
@@ -69,7 +69,7 @@ ms.locfileid: "50188330"
     End Module  
     ```  
   
-5.  次のコマンドを使用して friend_signed_B をコンパイルします。  
+5. 次のコマンドを使用して friend_signed_B をコンパイルします。  
   
     ```console
     vbc -r:friend_unsigned_A.dll friend_unsigned_B.vb  
@@ -77,16 +77,17 @@ ms.locfileid: "50188330"
   
      コンパイラによって生成されるアセンブリの名前は、<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性に渡されるフレンド アセンブリ名と一致している必要があります。 使用して、アセンブリを明示的に設定することができます、`/out`コンパイラ オプション。  
   
-6.  friend_signed_B.exe ファイルを実行します。  
+6. friend_signed_B.exe ファイルを実行します。  
   
-     2 つの文字列が表示されます:"Class1.Test"と"Class2.Test"。  
+     プログラムでは、2 つの文字列が表示されます。"Class1.Test" と "Class2.Test" です。  
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性と <xref:System.Security.Permissions.StrongNameIdentityPermission> クラスには類似点があります。 主な違いは、<xref:System.Security.Permissions.StrongNameIdentityPermission> はセキュリティ アクセス許可を要求することで特定のコード セクションを実行できますが、<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性では `Friend` 型とメンバーの参照可能範囲を制御することです。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- [アセンブリとグローバル アセンブリ キャッシュ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [フレンド アセンブリ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- [方法: 署名されたフレンド アセンブリ (Visual Basic) を作成します。](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
- [プログラミング ガイドの概念](../../../../visual-basic/programming-guide/concepts/index.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
+- [.NET のアセンブリ](../../../../standard/assembly/index.md)
+- [フレンド アセンブリ](../../../../standard/assembly/friend-assemblies.md)
+- [方法: 署名されたフレンド アセンブリ (Visual Basic) を作成します。](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
+- [プログラミング ガイドの概念](../../../../visual-basic/programming-guide/concepts/index.md)

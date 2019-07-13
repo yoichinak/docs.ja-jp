@@ -4,12 +4,12 @@ description: Azure Event Grid には、信頼性の高いイベントの配信�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: a10fc6a47322de5db40870b1b727edc5559a27f6
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 4970130ede0c96c645129ee6c8c7d54cb1114042
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61959387"
 ---
 # <a name="event-grid"></a>イベント グリッド
 
@@ -98,7 +98,7 @@ Event Grid の使用の大きな利点は、Azure によって生成された自
 |  | Microsoft.Resources.ResourceDeleteSuccess | リソースの削除操作が成功したときに発生します。 |
 |  | Microsoft.Resources.ResourceDeleteFailure | リソースの削除操作が失敗したときに発生します。 |
 | | Microsoft.Resources.ResourceDeleteCancel | リソースの削除操作が取り消されたときに発生します。 このイベントは、テンプレートのデプロイが取り消されたときに発生します。 |
-| Blob ストレージ | Microsoft.Storage.BlobCreated | Blob が作成されたときに発生します。 |
+| BLOB ストレージ | Microsoft.Storage.BlobCreated | Blob が作成されたときに発生します。 |
 | | Microsoft.Storage.BlobDeleted | Blob が削除されたときに発生します。 |
 | イベント ハブ | Microsoft.EventHub.CaptureFileCreated | キャプチャ ファイルが作成されたときに発生します。
 | IoT Hub | Microsoft.Devices.DeviceCreated | デバイスが IoT hub に登録されているときに発行します。 |
@@ -124,7 +124,7 @@ Event Grid は、あらゆる種類のオンプレミスで実行されるもの
 * [Application Insights](https://docs.microsoft.com/azure/application-insights)
 * [Application Insights Analytics](https://docs.microsoft.com/azure/application-insights/app-insights-analytics)
 * [Azure:サーバーレス Azure Functions を使用してクラウドにアプリを表示します。](https://channel9.msdn.com/events/Connect/2017/E102)
-* [Azure Event Grid](https://docs.microsoft.com/azure/azure-event-grid/overview)
+* [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
 * [Azure Event Grid イベント スキーマ](https://docs.microsoft.com/azure/event-grid/event-schema)
 * [Azure Event Hubs](https://docs.microsoft.com/azure/event-hubs)
 * [Azure Functions のドキュメント](https://docs.microsoft.com/azure/azure-functions)

@@ -7,18 +7,19 @@ helpviewer_keywords:
 - FlowDocumentPageViewer control [WPF]
 - controls [WPF], FlowDocumentPageViewer
 ms.assetid: 1ed5a30e-f415-4c26-a52f-9f028a68f66f
-ms.openlocfilehash: bad83378863cbc8b05fd3b74fe126e8147a20494
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef041fad1bb9195d9fc6cba172de8c2fdc7507bd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911740"
 ---
 # <a name="flowdocumentpageviewer"></a>FlowDocumentPageViewer
-<xref:System.Windows.Controls.FlowDocumentPageViewer>コントロールを使用して、表示<xref:System.Windows.Documents.FlowDocument>ページごとのコンテンツ。 比較して、 <xref:System.Windows.Controls.FlowDocumentScrollViewer>、どの表示<xref:System.Windows.Documents.FlowDocument>スクロール ビューアーのコンテンツ。  
+<xref:System.Windows.Controls.FlowDocumentPageViewer>コントロールを使用する表示<xref:System.Windows.Documents.FlowDocument>ページごとのコンテンツ。 これと対照的、 <xref:System.Windows.Controls.FlowDocumentScrollViewer>、どの表示<xref:System.Windows.Documents.FlowDocument>スクロール ビューアーのコンテンツ。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Documents.FlowDocument>  
- [フロー ドキュメントの概要](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [方法トピック](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
- [WPF のドキュメント](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Documents.FlowDocument>
+- [フロー ドキュメントの概要](../advanced/flow-document-overview.md)
+- [方法トピック](../advanced/flow-content-elements-how-to-topics.md)
+- [WPF のドキュメント](../advanced/documents-in-wpf.md)

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: df5b32fa-e73b-4e8e-b66f-357c748e0173
-ms.openlocfilehash: 062e726b6f1d6831303e1cc0ae82a434daab860c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83fdc77bd17115f9952f2ca6c494ed0eb873cd9c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608776"
 ---
 # <a name="configuring-client-behaviors"></a>クライアントの動作の構成
-Windows Communication Foundation (WCF) では、2 つの方法で動作を構成します--で定義されている動作の構成を参照して、`<behavior>`クライアント アプリケーション構成ファイル – またはプログラムによって呼び出し元のセクション。アプリケーション。 このトピックでは、両方の方法について説明します。  
+Windows Communication Foundation (WCF) は、2 つの方法で動作を構成します--で定義されている動作の構成を参照して、`<behavior>`セクションのクライアント アプリケーション構成ファイル – またはプログラムで、呼び出し元。アプリケーション。 このトピックでは、両方の方法について説明します。  
   
  構成ファイルを使用する場合、動作の構成には、構成設定の名前付きコレクションがあります。 各動作の構成には、一意の名前を指定する必要があります。 この文字列をエンドポイントの構成の `behaviorConfiguration` 属性で使用し、エンドポイントと動作を関連付けます。  
   
@@ -43,7 +43,7 @@ Windows Communication Foundation (WCF) では、2 つの方法で動作を構成
 ```  
   
 ## <a name="using-behaviors-programmatically"></a>プログラムによる動作の使用  
- 構成で、適切な動作をプログラムによって挿入したり`Behaviors`Windows Communication Foundation (WCF) クライアント オブジェクトまたはクライアントを開く前に、クライアント チャネル ファクトリ オブジェクトのプロパティです。  
+ 設定を探し、適切な動作をプログラムで挿入や`Behaviors`Windows Communication Foundation (WCF) クライアント オブジェクトまたはクライアントを開く前に、クライアント チャネル ファクトリ オブジェクトのプロパティ。  
   
 ## <a name="example"></a>例  
  次のコード例は、チャネル オブジェクトの作成前に、<xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> プロパティから返される <xref:System.ServiceModel.Description.ServiceEndpoint> 上の <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> プロパティにアクセスすることで、プログラムでクライアント動作が挿入される方法を示します。  
@@ -51,5 +51,6 @@ Windows Communication Foundation (WCF) では、2 つの方法で動作を構成
  [!code-csharp[ChannelFactoryBehaviors#10](../../../samples/snippets/csharp/VS_Snippets_CFX/channelfactorybehaviors/cs/client.cs#10)]
  [!code-vb[ChannelFactoryBehaviors#10](../../../samples/snippets/visualbasic/VS_Snippets_CFX/channelfactorybehaviors/vb/client.vb#10)]  
   
-## <a name="see-also"></a>関連項目  
- [\<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
+## <a name="see-also"></a>関連項目
+
+- [\<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)

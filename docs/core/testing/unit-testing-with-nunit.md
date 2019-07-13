@@ -4,12 +4,12 @@ description: dotnet テストおよび NUnit を使用したサンプル ソリ�
 author: rprouse
 ms.date: 08/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 80c831a6d8ab9aa35435d0ff8f13334f7d169a3a
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 7d3daa344b2a6fb8694a255fdc26b5ba31e2d82a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169040"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747984"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>NUnit と .NET Core による単体テスト C#
 
@@ -42,7 +42,7 @@ dotnet new sln
 dotnet new classlib
 ```
 
-*Class1.cs* の名前を *PrimeService.cs* に変更します。 テスト駆動開発 (TDD) を行うには、`PrimeService` クラスのエラーが発生する実装を作成します。
+*Class1.cs* の名前を *PrimeService.cs* に変更します。 `PrimeService` クラスのエラーが発生する実装を作成します。
 
 ```csharp
 using System;
@@ -109,15 +109,15 @@ dotnet add reference ../PrimeService/PrimeService.csproj
         PrimeService.Tests.csproj
 ```
 
-*unit-testing-using-dotnet-test* ディレクトリ内で次のコマンドを実行します。
+*unit-testing-vb-nunit* ディレクトリ内で次のコマンドを実行します。
 
 ```console
-dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj
+dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 ```
 
 ## <a name="creating-the-first-test"></a>最初のテストの作成
 
-TDD のアプローチでは、失敗するテストを 1 つ記述することを要求し、それを渡して、プロセスを繰り返します。 *PrimeService.Tests*ディレクトリ内で、*UnitTest1.cs*ファイルの名前を *PrimeService_IsPrimeShould.cs* に変更し、その内容全体を次のコードに置き換えます。
+失敗するテストを 1 つ作成してそれを合格させる、というプロセスを繰り返します。 *PrimeService.Tests*ディレクトリ内で、*UnitTest1.cs*ファイルの名前を *PrimeService_IsPrimeShould.cs* に変更し、その内容全体を次のコードに置き換えます。
 
 ```csharp
 using NUnit.Framework;

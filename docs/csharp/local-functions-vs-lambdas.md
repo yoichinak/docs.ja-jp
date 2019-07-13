@@ -3,16 +3,16 @@ title: ローカル関数とラムダ式の比較
 description: ローカル関数がラムダ式よりも適した選択肢となり得る理由について。
 ms.date: 06/27/2016
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
-ms.openlocfilehash: 2b98ebeeb3866779715fa629c2518f739e196ae8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 7577950314f8c57fba635db8b2bcd69e8d427dc3
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43740433"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611446"
 ---
 # <a name="local-functions-compared-to-lambda-expressions"></a>ローカル関数とラムダ式の比較
 
-一見したところ、[ローカル関数](programming-guide/classes-and-structs/local-functions.md)と[ラムダ式](lambda-expressions.md)は、非常に似ています。 多くの場合、ラムダ式とローカル関数の使用のどちらを選択するかは、スタイルと個人的な好みの問題です。 ただし、どちらか一方を使用できる場合、認識しておくべき実質的な違いがあります。
+一見したところ、[ローカル関数](programming-guide/classes-and-structs/local-functions.md)と[ラムダ式](./programming-guide/statements-expressions-operators/lambda-expressions.md)は、非常に似ています。 多くの場合、ラムダ式とローカル関数の使用のどちらを選択するかは、スタイルと個人的な好みの問題です。 ただし、どちらか一方を使用できる場合、認識しておくべき実質的な違いがあります。
 
 階乗アルゴリズムのローカル関数とラムダ式の実装の違いについて見てみましょう。 まずは、ローカル関数を使用するバージョンです。
 
@@ -59,7 +59,7 @@ int M()
 > [!NOTE]
 > このメソッドのローカル関数と同等のものも、同じクロージャのクラスを使用します。 ローカル関数のクロージャが `class` として実装される場合でも、実装の詳細が `struct` である場合でも同様です。 ローカル関数は `struct` を使用する場合がありますが、ラムダは常に `class` を使用します。
 
-[!code-csharp[TaskLocalFunctionExample](../../samples/snippets/csharp/new-in-7/AsyncWork.cs#29_TaskExample "Task returning method with local function")]
+[!code-csharp[TaskLocalFunctionExample](../../samples/snippets/csharp/new-in-7/AsyncWork.cs#TaskExample "Task returning method with local function")]
 
 この例では説明しませんが、最後の 1 つの利点は値のシーケンスを生成するために `yield return` 構文を使用して、ローカル関数を反復子として実装できることです。 ラムダ式では `yield return` ステートメントは許可されません。
 

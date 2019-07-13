@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Skip statement [Visual Basic]
 - Skip clause [Visual Basic]
 ms.assetid: f00eb172-3907-4c43-9745-d8546ab86234
-ms.openlocfilehash: 615f98bf36d29c1f269d6866b1232ad33a5ae2f2
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: db2d79596895505ddaa7778e831082a94c7ad44e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945250"
 ---
 # <a name="skip-clause-visual-basic"></a>Skip 句 (Visual Basic)
 コレクション内の指定された数の要素をバイパスし、残りの要素を返します。  
@@ -40,13 +40,14 @@ Skip count
 ## <a name="example"></a>例  
  次のコード例では、`Skip`句と組み合わせて、`Take`句をページ内のクエリからデータを返します。 `GetCustomers`関数は、`Skip`値、および使用して、指定された開始インデックスを作成するまで、リスト内の顧客をバイパスする句、`Take`句にそのインデックス値から開始のページが返されます。  
   
- [!code-vb[VbSimpleQuerySamples#1](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/skip-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#1)]  
   
-## <a name="see-also"></a>関連項目  
- [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [クエリ](../../../visual-basic/language-reference/queries/index.md)  
- [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)  
- [From 句](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Order By 句](../../../visual-basic/language-reference/queries/order-by-clause.md)  
- [Skip While 句](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
- [Take 句](../../../visual-basic/language-reference/queries/take-clause.md)
+## <a name="see-also"></a>関連項目
+
+- [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [クエリ](../../../visual-basic/language-reference/queries/index.md)
+- [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From 句](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Order By 句](../../../visual-basic/language-reference/queries/order-by-clause.md)
+- [Skip While 句](../../../visual-basic/language-reference/queries/skip-while-clause.md)
+- [Take 句](../../../visual-basic/language-reference/queries/take-clause.md)

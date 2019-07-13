@@ -2,12 +2,12 @@
 title: 配列
 description: 作成し、F# プログラミング言語で配列を使用する方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 9670f2a61ed5c254493806501120552be9caecdf
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 4a81a0994479ecd92b8556c4901fea23c3c0507b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772711"
 ---
 # <a name="arrays"></a>配列
 
@@ -109,6 +109,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 ```
 [|5; 6; 7; 8; 9; 10; 11; 12; 13; 14|]
 ```
+
 [`Array.append`](https://msdn.microsoft.com/library/08836310-5036-4474-b9a2-2c73e2293911) 既存の 2 つの配列を組み合わせることで、新しい配列を作成します。
 
 次のコード例**Array.append**します。
@@ -164,7 +165,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 
 [`Array.rev`](https://msdn.microsoft.com/library/1bbf822c-763b-4794-af21-97d2e48ef709) 既存の配列の順序を反転して、新しい配列を生成します。 次のコードで `Array.rev` の例を示します。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet18.fs)]  
+[!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet18.fs)]
 
 このコードによる出力は、次のようになります。
 
@@ -205,7 +206,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 2 次元配列 (マトリックス) では、範囲を指定して、ワイルドカードを使用して、サブ行列を抽出できます (`*`) 全体の行または列を指定する文字。
 
 ```fsharp
-/ Get rows 1 to N from an NxM matrix (returns a matrix):
+// Get rows 1 to N from an NxM matrix (returns a matrix):
 matrix.[1.., *]
 
 // Get rows 1 to 3 from a matrix (returns a matrix):
@@ -239,7 +240,7 @@ type Matrix<'T>(N: int, M: int) =
         and set(a: int, b: int) (value:'T) = internalArray.[a, b] <- value
 
     member this.GetSlice(rowStart: int option, rowFinish : int option, colStart: int option, colFinish : int option) =
-        let rowStart = 
+        let rowStart =
             match rowStart with
             | Some(v) -> v
             | None -> 0
@@ -247,33 +248,33 @@ type Matrix<'T>(N: int, M: int) =
             match rowFinish with
             | Some(v) -> v
             | None -> internalArray.GetLength(0) - 1
-        let colStart = 
+        let colStart =
             match colStart with
             | Some(v) -> v
             | None -> 0
-        let colFinish = 
+        let colFinish =
             match colFinish with
             | Some(v) -> v
             | None -> internalArray.GetLength(1) - 1
         internalArray.[rowStart..rowFinish, colStart..colFinish]
 
     member this.GetSlice(row: int, colStart: int option, colFinish: int option) =
-        let colStart = 
+        let colStart =
             match colStart with
             | Some(v) -> v
             | None -> 0
-        let colFinish = 
+        let colFinish =
             match colFinish with
             | Some(v) -> v
             | None -> internalArray.GetLength(1) - 1
         internalArray.[row, colStart..colFinish]
 
     member this.GetSlice(rowStart: int option, rowFinish: int option, col: int) =
-        let rowStart = 
+        let rowStart =
             match rowStart with
             | Some(v) -> v
             | None -> 0
-        let rowFinish = 
+        let rowFinish =
             match rowFinish with
             | Some(v) -> v
             | None -> internalArray.GetLength(0) - 1

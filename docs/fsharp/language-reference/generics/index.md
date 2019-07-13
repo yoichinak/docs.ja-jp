@@ -2,12 +2,12 @@
 title: ジェネリック
 description: 使用する方法について説明しますF#ジェネリック関数と型で、コードを繰り返さなくても、さまざまな型で動作するコードを記述できます。
 ms.date: 05/16/2016
-ms.openlocfilehash: bafb80893df2f3fab85840ee844bc78d1fb33428
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: e30b00343e48d3a8abd51f62c003ba0d1984db18
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614377"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641864"
 ---
 # <a name="generics"></a>ジェネリック
 

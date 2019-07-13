@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-ms.openlocfilehash: ad49e5443016dc4fed57be4a991df9f6d6095b55
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e2dbbd63be07a19c6e05c7ec8f94bdcd8f50c902
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519278"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586304"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>拡大変換と縮小変換 (Visual Basic)
 型変換で重要な考慮事項は、変換の結果が変換先のデータ型の範囲内かどうか。  
@@ -52,7 +52,7 @@ ms.locfileid: "43519278"
 |いずれかの列挙型 ([Enum](../../../../visual-basic/language-reference/statements/enum-statement.md))|基になる整数型と任意の型を基になる型拡大変換されます。|  
 |[Char](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`Char`, `String`|  
 |`Char` 配列|`Char` 配列、 `String`|  
-|任意の型|[オブジェクト](../../../../visual-basic/language-reference/data-types/object-data-type.md)|  
+|任意の型|[Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)|  
 |すべての派生型|いずれかの基本データ型の派生元である<sup>3</sup>します。|  
 |任意の型|任意のインターフェイスを実装します。|  
 |[Nothing](../../../../visual-basic/language-reference/nothing.md)|任意のデータ型またはオブジェクトの種類。|  
@@ -68,20 +68,20 @@ ms.locfileid: "43519278"
 ## <a name="narrowing-conversions"></a>縮小変換  
  標準の縮小変換を以下に示します。  
   
--   (すべての型は、自動的に拡大) する点を除いて、前の拡大変換の逆の方向がテーブルにします。  
+- (すべての型は、自動的に拡大) する点を除いて、前の拡大変換の逆の方向がテーブルにします。  
   
--   いずれかの方向との間で変換[ブール](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)と任意の数値型  
+- いずれかの方向との間で変換[ブール](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)と任意の数値型  
   
--   列挙型の任意の数値型からいずれかへの変換 (`Enum`)  
+- 列挙型の任意の数値型からいずれかへの変換 (`Enum`)  
   
--   いずれかの方向との間で変換[文字列](../../../../visual-basic/language-reference/data-types/string-data-type.md)と任意の数値型`Boolean`、または[日付](../../../../visual-basic/language-reference/data-types/date-data-type.md)  
+- いずれかの方向との間で変換[文字列](../../../../visual-basic/language-reference/data-types/string-data-type.md)と任意の数値型`Boolean`、または[日付](../../../../visual-basic/language-reference/data-types/date-data-type.md)  
   
--   それから派生した型にデータ型またはオブジェクトからの変換の入力します。  
+- それから派生した型にデータ型またはオブジェクトからの変換の入力します。  
   
  縮小変換は常にではありません、実行時に成功し失敗したり、データ損失が発生できます。 エラーは、先のデータ型に変換される値を受信できない場合に発生します。 たとえば、数値変換が、オーバーフローがあります。 コンパイラでは許可しない限り、暗黙的に縮小変換を実行することできません、 [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)型チェック スイッチを設定`Off`します。  
   
 > [!NOTE]
->  縮小変換エラーが抑制されて内の要素からの変換、`For Each…Next`ループ コントロール変数のコレクション。 詳細と例については、"Narrowing Conversions"セクションを参照してください[ごとにしています。。。次のステートメントの](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)します。  
+>  `For Each…Next`のコレクション内の要素からループ コントロール変数への変換では、縮小変換エラーが抑制されます。 詳細と例については、[For Each...Next ステートメント](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)の"縮小変換"セクションを参照してください。  
   
 ### <a name="when-to-use-narrowing-conversions"></a>縮小変換を使用する場合  
  元の値は、エラーまたはデータ損失のない変換先のデータ型に変換できることがわかっている場合は、縮小変換を使用します。 ある場合など、`String`使用できますがわかっている"True"または"False"のいずれかが含まれています、`CBool`に変換キーワード`Boolean`します。  
@@ -89,11 +89,11 @@ ms.locfileid: "43519278"
 ## <a name="exceptions-during-conversion"></a>変換中に例外  
  拡大変換を常にあるため、成功しますが、例外をスローしないでください。 失敗したときに、縮小変換は、最もよく、次の例外をスローします。  
   
--   <xref:System.InvalidCastException> -2 つの型の間で変換が定義されていない場合  
+- <xref:System.InvalidCastException> -2 つの型の間で変換が定義されていない場合  
   
--   <xref:System.OverflowException> -(整数型の場合のみ)、指定した型の変換後の値が大きすぎる場合  
+- <xref:System.OverflowException> -(整数型の場合のみ)、指定した型の変換後の値が大きすぎる場合  
   
- クラスまたは構造体が定義されている場合、 [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)そのクラスまたは構造体、または変換演算子として機能するを`CType`適切と見なされるすべての例外をスローすることができます。 さらを`CType`Visual Basic の関数を呼び出すことがありますまたは[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]メソッドで、さらに、さまざまな例外をスローする可能性があります。  
+ クラスまたは構造体が定義されている場合、 [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)そのクラスまたは構造体、または変換演算子として機能するを`CType`適切と見なされるすべての例外をスローすることができます。 さらを`CType`Visual Basic の関数またはさらに、さまざまな例外をスローする可能性があります .NET Framework のメソッドを呼び出すことができます。  
   
 ## <a name="changes-during-reference-type-conversions"></a>参照型の変換中の変更  
  変換、*参照型*ポインターだけが、値をコピーします。 値そのものがコピーも、何らかの方法で変更します。 変更できることだけでは、ポインターを保持する変数のデータ型です。 次の例では、データ型は、派生クラスから、その基底クラスに変換されますが、両方の変数をポイントするようになりましたオブジェクトは変更されません。  
@@ -107,12 +107,13 @@ Dim square As cSquare = New cSquare
 shape = square  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [暗黙の型変換と明示的な型変換](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [文字列とその他の型との変換](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- [方法: オブジェクトを Visual Basic で別の型に変換](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- [配列変換](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
- [データの種類](../../../../visual-basic/language-reference/data-types/index.md)  
- [データ型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+## <a name="see-also"></a>関連項目
+
+- [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [暗黙の型変換と明示的な型変換](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [文字列とその他の型との変換](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
+- [方法: オブジェクトを Visual Basic で別の型に変換します。](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [配列変換](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
+- [データの種類](../../../../visual-basic/language-reference/data-types/index.md)
+- [データ型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

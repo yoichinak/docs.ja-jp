@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - adorners [WPF], how-to topics
 ms.assetid: e29d7516-d5e6-4500-bd4f-775e6f830984
-ms.openlocfilehash: ba81f8e2d603ee2e734e5afd14182e95804fe69e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 930d0834570529bd958006818cddb8f5692066d7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981683"
 ---
 # <a name="adorners-how-to-topics"></a>装飾に関する「方法」トピック
-次の例を使用して一般的なタスクを実行する方法を示します、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]装飾フレームワークです。  
+次の例を使用して一般的なタスクを実行する方法を示します、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]装飾フレームワーク。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [装飾を実装する](../../../../docs/framework/wpf/controls/how-to-implement-an-adorner.md)  
- [要素に装飾をバインドする](../../../../docs/framework/wpf/controls/how-to-bind-an-adorner-to-an-element.md)  
- [パネルの子を装飾する](../../../../docs/framework/wpf/controls/how-to-adorn-the-children-of-a-panel.md)  
- [要素から装飾を削除する](../../../../docs/framework/wpf/controls/how-to-remove-an-adorner-from-an-element.md)  
- [要素からすべての装飾を削除する](../../../../docs/framework/wpf/controls/how-to-remove-all-adorners-from-an-element.md)  
+ [装飾を実装する](how-to-implement-an-adorner.md)  
+ [要素に装飾をバインドする](how-to-bind-an-adorner-to-an-element.md)  
+ [パネルの子を装飾する](how-to-adorn-the-children-of-a-panel.md)  
+ [要素から装飾を削除する](how-to-remove-an-adorner-from-an-element.md)  
+ [要素からすべての装飾を削除する](how-to-remove-all-adorners-from-an-element.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.AdornedElementPlaceholder>  

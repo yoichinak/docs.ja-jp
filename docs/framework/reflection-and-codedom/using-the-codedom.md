@@ -22,21 +22,21 @@ helpviewer_keywords:
 ms.assetid: 0444ddf3-c3f6-44ed-a999-f710d9c3e0cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50ff6e2baaee683674f82cff178eeef7b7e43de4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 336a0fb5bc0fca5dd6ef917a2eeaf0908680d12b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486213"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591499"
 ---
 # <a name="using-the-codedom"></a>CodeDOM の使用方法
 CodeDOM には一般的なさまざま種類のソース コード要素を表す型が用意されています。 オブジェクト グラフをアセンブルする CodeDOM 要素を使用すると、ソース コード モデルを構築するプログラムをデザインできます。 このオブジェクト グラフは、サポートされているプログラミング言語用の CodeDOM コード ジェネレーターを使用して、ソース コードとしてレンダリングできます。 また、CodeDOM を使用して、ソース コードをバイナリ アセンブリにコンパイルすることもできます。  
   
  CodeDOM の一般的な使用方法の例は次のとおりです。  
   
--   テンプレートを使ったコード生成。ASP.NET、XML Web サービス クライアント プロキシ、コード ウィザード、デザイナー、またはその他のコード出力機構のためのコードを生成します。  
+- テンプレートを使ったコード生成。ASP.NET、XML Web サービス クライアント プロキシ、コード ウィザード、デザイナー、またはその他のコード出力機構のためのコードを生成します。  
   
--   動的コンパイル。1 つ以上の言語でのコードのコンパイルをサポートします。  
+- 動的コンパイル。1 つ以上の言語でのコードのコンパイルをサポートします。  
   
 ## <a name="building-a-codedom-graph"></a>CodeDOM グラフの構築  
  <xref:System.CodeDom> 名前空間には、言語の構文に依存しない、ソース コードの論理構造を表すクラスが用意されています。  
@@ -127,4 +127,4 @@ CodeDOM には一般的なさまざま種類のソース コード要素を表�
   
  CodeDOM のそれぞれの型については、<xref:System.CodeDom> 名前空間の説明を参照してください。  
   
- 特定の種類のコード要素を表す CodeDOM 要素を探すための一覧については、「[CodeDOM Quick Reference](https://msdn.microsoft.com/library/c77b8bfd-0a32-4e36-b59a-4f687f32c524)」(CodeDOM クイック リファレンス) を参照してください。
+ 特定の種類のコード要素を表す CodeDOM 要素を探すための一覧については、「[CodeDOM Quick Reference](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))」(CodeDOM クイック リファレンス) を参照してください。

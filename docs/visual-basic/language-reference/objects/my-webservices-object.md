@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.WebServices object
 ms.assetid: f188dc05-2c75-41b6-bb68-122d1c3110a2
-ms.openlocfilehash: 7ae99bec5797591e53c6c77f5d9f88589352104c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: a60f32c4f581e42f240fca55ce496776c5511ba3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050287"
 ---
 # <a name="mywebservices-object"></a>My.WebServices オブジェクト
 プロパティは、作成して、現在のプロジェクトによって参照される各 XML Web サービスの 1 つのインスタンスへのアクセスを提供します。  
@@ -42,13 +42,13 @@ ms.locfileid: "43862397"
 ## <a name="example"></a>例  
  この例では、`FahrenheitToCelsius`のメソッド、 `TemperatureConverter` XML Web サービスでは、結果を返します。  
   
- [!code-vb[VbVbalrMyWebService#1](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-webservices-object_1.vb)]  
+ [!code-vb[VbVbalrMyWebService#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWebService/VB/Form1.vb#1)]  
   
  この例を動作させるには、プロジェクトがという名前の Web サービスを参照する必要があります`Converter`、し、その Web サービスを公開する必要があります、`ConvertTemperature`メソッド。 詳細については、次を参照してください。[にアクセスするアプリケーションの Web サービス](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)します。  
   
  このコードは、Web アプリケーション プロジェクトでは機能しません。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 ### <a name="availability-by-project-type"></a>プロジェクトの種類ごとの可用性  
   
@@ -62,7 +62,8 @@ ms.locfileid: "43862397"
 |Windows サービス|**はい**|  
 |Web サイト|いいえ|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>  
- <xref:System.ArgumentException>  
- [アプリケーションの Web サービスへのアクセス](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>
+- <xref:System.ArgumentException>
+- [アプリケーションの Web サービスへのアクセス](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)

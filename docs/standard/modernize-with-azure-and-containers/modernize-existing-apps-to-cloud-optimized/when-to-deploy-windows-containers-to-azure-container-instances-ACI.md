@@ -1,27 +1,25 @@
 ---
 title: Azure Container Instances (ACI) に Windows コンテナーを展開するタイミング
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 |Azure Container Instances (ACI) に Windows コンテナーを展開するタイミング
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/29/2018
-ms.openlocfilehash: 297461f1403ab2d6ca6fd63a05d5ded7f210483e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3b6ae1ced9c4e01f5ab400e2575947a396064ebd
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128100"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758595"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-instances-aci"></a>Azure Container Instances (ACI) に Windows コンテナーを展開するタイミング
 
-Azure Container Instances は、主な価値提案は、すぐにコンテナーをデプロイすることができ、その環境を維持する必要はありません、基本オペレーティング システムまたは Vm すべてに対して透過的なアップグレード/修正する必要はありませんし、展開します。コンテナーをすぐに使用できる環境にします。
+Azure Container Instances は、主な価値提案は、すぐにコンテナーをデプロイすることができ、その環境を維持する必要はありません、基になるオペレーティング システムまたは Vm すべてに対して透過的なアップグレード/修正する必要はありませんし、展開します。コンテナーをすぐに使用できる環境にします。
 
 上の理由から、ACI を使用する場合のシナリオは主なシナリオのような基本的に、コンテナーを Azure Vm を使用すると、Azure Container Instances を使用する主なシナリオは。
 
--   **開発/テスト シナリオ**
--   **タスクの自動化**
--   **エージェントの CI/CD**
--   **小規模スケール/バッチ処理**
--   **単純な web アプリ**
+- **開発/テスト シナリオ**
+- **タスクの自動化**
+- **エージェントの CI/CD**
+- **小規模スケール/バッチ処理**
+- **単純な web アプリ**
 
 単純な web アプリのシナリオは ACI の公正なシナリオが ACI でコンテナー イメージごとの 1 つのコンテナー インスタンスでのみ設定できる、ので高可用性はありませんをスケーラビリティが制限を考慮します。
 
@@ -29,13 +27,13 @@ Azure Container Instances は、主な価値提案は、すぐにコンテナー
 
 Azure Container Instances (ACI) の主な利点は次のとおりです。
 
--   サーバーを管理することがなくコンテナーを実行します。
--   オンデマンドでのコンテナーでの機敏性を高める
--   前例のないシンプルさと速度で、クラウドへのコンテナーのデプロイ-1 つのコマンドを使用します。 
--   ハイパーバイザー分離を使用したセキュリティで保護されたアプリケーション
+- サーバーを管理することがなくコンテナーを実行します。
+- オンデマンドでのコンテナーでの機敏性を高める
+- 前例のないシンプルさと速度で、クラウドへのコンテナーのデプロイ-1 つのコマンドを使用します。
+- ハイパーバイザー分離を使用したセキュリティで保護されたアプリケーション
 
 つまり、ACI では、仮想マシンを管理または新しいツールを学習することがなく高速アプリを開発できます。 クラウドで実行しているコンテナーで、アプリケーションだけになります。
 
->[!div class="step-by-step"]
->[前へ](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
->[次へ](when-to-deploy-windows-containers-to-service-fabric.md)
+> [!div class="step-by-step"]
+> [前へ](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
+> [次へ](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)

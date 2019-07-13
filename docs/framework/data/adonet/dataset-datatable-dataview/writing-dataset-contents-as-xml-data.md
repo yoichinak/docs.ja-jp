@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
-ms.openlocfilehash: ff63c63be9bbfab7c3a9600f259abdea81be4260
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: dae044a9d7802e858f1f24dd4aa0f1de8f6cba7a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607022"
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>DataSet 内容の XML データとしての書き込み
 ADO.NET では、<xref:System.Data.DataSet> の XML 表現を記述することができます。このとき、 にスキーマが含まれていても、含まれていなくてもかまいません。 XML にインラインで含まれているスキーマ情報は、XML スキーマ定義言語 (XSD) を使用して記述されています。 スキーマには、リレーション定義および制約定義と、<xref:System.Data.DataSet> のテーブル定義が含まれています。  
@@ -68,15 +68,16 @@ xmlSW.Close();
   
 |MappingType の値|説明|  
 |-----------------------|-----------------|  
-|**要素**|既定値です。 列が XML 要素として書き込まれます。このとき、ColumnName は要素名になり、列の内容は要素のテキストとして書き込まれます。 例えば:<br /><br /> `<ColumnName>Column Contents</ColumnName>`|  
-|**属性**|列が、現在の行の XML 要素の XML 属性として書き込まれます。このとき、ColumnName は属性名になり、列の内容は属性の値として書き込まれます。 例えば:<br /><br /> `<RowElement ColumnName="Column Contents" />`|  
-|**SimpleContent**|列の内容が、現在の行の XML 要素のテキストとして書き込まれます。 例えば:<br /><br /> `<RowElement>Column Contents</RowElement>`<br /><br /> なお**SimpleContent**を持つテーブルの列を設定できません**要素**列または入れ子になったリレーション。|  
-|**非表示**|列は XML 出力に書き込まれません。|  
+|**要素**|既定値です。 列が XML 要素として書き込まれます。このとき、ColumnName は要素名になり、列の内容は要素のテキストとして書き込まれます。 例:<br /><br /> `<ColumnName>Column Contents</ColumnName>`|  
+|**属性**|列が、現在の行の XML 要素の XML 属性として書き込まれます。このとき、ColumnName は属性名になり、列の内容は属性の値として書き込まれます。 例:<br /><br /> `<RowElement ColumnName="Column Contents" />`|  
+|**SimpleContent**|列の内容が、現在の行の XML 要素のテキストとして書き込まれます。 例:<br /><br /> `<RowElement>Column Contents</RowElement>`<br /><br /> なお**SimpleContent**を持つテーブルの列を設定できません**要素**列または入れ子になったリレーション。|  
+|**[非表示]**|列は XML 出力に書き込まれません。|  
   
-## <a name="see-also"></a>関連項目  
- [DataSet での XML の使用](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)  
- [DataRelation の入れ子化](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
- [XSD としての DataSet スキーマ情報の書き込み](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-schema-information-as-xsd.md)  
- [DataSet、DataTable、および DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [DataSet での XML の使用](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+- [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)
+- [DataRelation の入れ子化](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)
+- [XSD としての DataSet スキーマ情報の書き込み](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-schema-information-as-xsd.md)
+- [DataSet、DataTable、および DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,15 +1,13 @@
 ---
 title: メッセージベースの非同期通信
 description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | メッセージベースの非同期通信はマイクロサービスにとって極めて重要な概念です。マイクロサービス間の独立性を維持し、同時に、最終的には同期させる最良の方法であるためです。'
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 5346e5f3e780961e8353c9dec0860bebd4fc6657
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 65bd0cd2b316fe7011ad8e878852547ee5949f09
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148900"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641373"
 ---
 # <a name="asynchronous-message-based-communication"></a>メッセージベースの非同期通信
 
@@ -77,7 +75,7 @@ ms.locfileid: "53148900"
 
 - [トランザクション ログ マイニング](https://www.scoop.it/t/sql-server-transaction-log-mining)を使用します。
 
-- 完全な[イベント ソーシング パターン](https://msdn.microsoft.com/library/dn589792.aspx)を使用します。
+- 完全な[イベント ソーシング パターン](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)を使用します。
 
 - [送信トレイ パターン](http://gistlabs.com/2014/05/the-outbox/)を使用します。これは、イベントを作成してパブリッシュするイベントクリエーター コンポーネントの基盤となる、メッセージ キューとしてのトランザクション データベース テーブルです。
 
@@ -86,26 +84,26 @@ ms.locfileid: "53148900"
 ## <a name="additional-resources"></a>その他の技術情報
 
 - **イベント駆動型メッセージング** \
-  [*http://soapatterns.org/design_patterns/event_driven_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
+  <http://soapatterns.org/design_patterns/event_driven_messaging>
 
 - **発行/サブスクライブ チャネル** \
-  [*https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
+  <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
 - **Udi Dahan。CQRS の明確化** \
-  [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
+  <http://udidahan.com/2009/12/09/clarified-cqrs/>
 
 - **コマンド クエリ責務分離 (CQRS)** \
-  [*https://docs.microsoft.com/azure/architecture/patterns/cqrs*](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
+  <https://docs.microsoft.com/azure/architecture/patterns/cqrs>
 
 - **境界コンテキスト間の通信** \
-  [*https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)*](https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10))
+  <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
 - **最終的な整合性** \
-  [*https://en.wikipedia.org/wiki/Eventual_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
+  <https://en.wikipedia.org/wiki/Eventual_consistency>
 
 - **Jimmy Bogard。復元性を目指したリファクタリング: 結合の評価** \
-  [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
+  <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
->[!div class="step-by-step"]
->[前へ](communication-in-microservice-architecture.md)
->[次へ](maintain-microservice-apis.md)
+> [!div class="step-by-step"]
+> [前へ](communication-in-microservice-architecture.md)
+> [次へ](maintain-microservice-apis.md)

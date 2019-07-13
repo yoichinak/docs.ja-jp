@@ -2,12 +2,12 @@
 title: SQL Server Express のセキュリティ
 ms.date: 03/30/2017
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
-ms.openlocfilehash: 736c450d944efe7e6a69e16e00e1c96f0a868697
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: f4291de89b397f60aedd35b89d6aa3130d348be5
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876786"
 ---
 # <a name="sql-server-express-security"></a>SQL Server Express のセキュリティ
 Microsoft SQL Server Express Edition (SQL Server Express) は Microsoft SQL Server をベースとしており、同データベース エンジンの多くの機能をサポートしています。 必須ではない機能やネットワーク接続は、既定では無効にされています。 これは悪意のあるユーザーに攻撃の隙をできるだけ与えないようにするための配慮です。  
@@ -31,13 +31,12 @@ Microsoft SQL Server Express Edition (SQL Server Express) は Microsoft SQL Serv
   
 |||  
 |-|-|  
-|[SQL Server オンライン ブック](https://msdn.microsoft.com/library/bb543165.aspx)|SQL Server Express のドキュメントが含まれます。|  
-|[SQL Server Express への接続](https://msdn.microsoft.com/library/ms165679.aspx)で SQL Server オンライン ブック|SQL Server Express Edition をネットワーク上で使用する方法について説明します。|  
-|[Microsoft SQL Server 2005 Express Edition オンライン ブック](https://msdn.microsoft.com/library/ms165706.aspx)|SQL Server 2005 Express Edition の完全なドキュメントです。|  
-|[管理者以外のユーザー インスタンス](https://msdn.microsoft.com/library/ms143684.aspx)で SQL Server オンライン ブック|ユーザー インスタンスの作成方法および配置方法について説明します。|  
+|[Microsoft SQL Server 2005 Express Edition オンライン ブック](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|SQL Server 2005 Express Edition の完全なドキュメントです。|  
+|[管理者以外のユーザー インスタンス](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100))で SQL Server オンライン ブック|ユーザー インスタンスの作成方法および配置方法について説明します。|  
 |[SQL Server Express ユーザー インスタンス](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|ADO.NET アプリケーションにおけるユーザー インスタンスの機能について説明します。 ユーザー インスタンスを有効にする方法、<xref:System.Data.SqlClient.SqlConnection> を使ってユーザー インスタンスに接続する方法、ユーザー インスタンスの有効期間、ユーザー インスタンスのシナリオについて情報を提供します。|  
   
-## <a name="see-also"></a>関連項目  
- [SQL Server のセキュリティ](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [SQL Server Express ユーザー インスタンス](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [SQL Server のセキュリティ](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [SQL Server Express ユーザー インスタンス](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

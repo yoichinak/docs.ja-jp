@@ -1,15 +1,15 @@
 ---
-title: '&lt;protocolMapping&gt; の &lt;add&gt;'
+title: <add> の <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 08e62249-1641-41d1-91b1-66d7b46244e4
-ms.openlocfilehash: e21c3ca665d6a75394d70da43ec2044e00f16429
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 85d09c920de2ca1ab4971551ff98ea58c4492f44
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704493"
 ---
-# <a name="ltaddgt-of-ltprotocolmappinggt"></a>&lt;protocolMapping&gt; の &lt;add&gt;
+# <a name="add-of-protocolmapping"></a>\<追加 > の\<protocolMapping >
 トランスポート プロトコル スキーム (など、http、net.tcp、net.pipe など) と Windows Communication Foundation (WCF) バインドの間の既定のプロトコル マッピングを表します。 実行時に既定のエンドポイントを作成するときに、WCF は構成済みのマッピングではされ、特定に使用するバインディングをベース アドレスを決定します。  
   
  \<system.serviceModel>  
@@ -44,7 +44,7 @@ ms.locfileid: "54145485"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<protocolMapping >](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|トランスポート プロトコル スキーム (など、http、net.tcp、net.pipe など) と Windows Communication Foundation (WCF) バインドの間の既定のプロトコル マッピングを定義するための構成セクションを表します。|  
+|[\<protocolMapping>](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|トランスポート プロトコル スキーム (など、http、net.tcp、net.pipe など) と Windows Communication Foundation (WCF) バインドの間の既定のプロトコル マッピングを定義するための構成セクションを表します。|  
   
 ## <a name="example"></a>例  
  次の構成例は、machine.config ファイル内の既定のプロトコル マッピングを示しています。 machine.config ファイルを変更することで、既定のマッピングをコンピューター レベルでオーバーライドできます。 または、アプリケーションのスコープ内だけでオーバーライドする場合は、アプリケーション構成ファイルのこのセクションをオーバーライドし、各プロトコル スキームのマッピングを変更できます。  
@@ -62,6 +62,7 @@ ms.locfileid: "54145485"
 </protocolMapping>
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>      
- <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>    
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>

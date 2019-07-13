@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CS3024
 ms.assetid: fef9db31-9a7f-42d5-ad37-3e7faf661f95
-ms.openlocfilehash: c4c2f915d6172e3c30fc32c5c57fe9921c3f915d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7515fdd7bc8f57890e3f1aac6303ed4607cc2249
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33280346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61688255"
 ---
 # <a name="compiler-warning-cs3024"></a>コンパイラの警告 CS3024
 制約型 'type' が CLS に準拠していません。  
@@ -20,7 +20,7 @@ ms.locfileid: "33280346"
   
 ### <a name="to-eliminate-this-warning"></a>この警告を回避するには  
   
-1.  型制約には、CLS 準拠の型を使用します。  
+1. 型制約には、CLS 準拠の型を使用します。  
   
 ## <a name="example"></a>例  
  次の例では、複数の場所で CS3024 が生成されます。  
@@ -55,5 +55,6 @@ public class Test
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [型パラメーターの制約](../../csharp/programming-guide/generics/constraints-on-type-parameters.md)
+## <a name="see-also"></a>関連項目
+
+- [型パラメーターの制約](../../csharp/programming-guide/generics/constraints-on-type-parameters.md)

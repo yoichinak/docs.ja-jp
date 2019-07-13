@@ -1,5 +1,5 @@
 ---
-title: '&lt;削除&gt;connectionManagement (ネットワーク設定) の要素'
+title: connectionManagement の <remove> 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement/remove
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-ms.openlocfilehash: 03cac1523c0fce268c2df8d04134c0d5e88830e2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d9c584fb2faa971e7ce1ca287a94c8c6129820fd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705195"
 ---
-# <a name="ltremovegt-element-for-connectionmanagement-network-settings"></a>&lt;削除&gt;connectionManagement (ネットワーク設定) の要素
+# <a name="remove-element-for-connectionmanagement-network-settings"></a>\<削除 > connectionManagement (ネットワーク設定) の要素
 接続管理リストから IP アドレスまたは DNS 名を削除します。  
   
  \<configuration>  
 \<system.net>  
-\<connectionManagement >  
+\<connectionManagement>  
 \<remove>  
   
 ## <a name="syntax"></a>構文  
@@ -74,7 +74,8 @@ ms.locfileid: "50181554"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.Net.ServicePoint>  
-- <xref:System.Net.ServicePointManager>  
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Net.ServicePoint>
+- <xref:System.Net.ServicePointManager>
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

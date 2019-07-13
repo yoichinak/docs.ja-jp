@@ -17,18 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 04b6c04868efff31253b2d723c5783060382212b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 574ac706a07e7fcd701ab04f923d5171bea6f64a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782389"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>IMetaDataImport::GetFieldProps メソッド
 指定した FieldDef トークンによって参照されるフィールドに関連付けられているメタデータを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetFieldProps (  
    [in]  mdFieldDef        mb,   
    [out] mdTypeDef         *pClass,  
@@ -44,7 +45,7 @@ HRESULT GetFieldProps (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `mb`  
  [in]関連付けられているメタデータを取得するフィールドを表す FieldDef トークンです。  
   
@@ -52,22 +53,22 @@ HRESULT GetFieldProps (
  [out]フィールドが属するクラスの型を表す TypeDef トークンへのポインター。  
   
  `szField`  
- [out]フィールドの名前です。  
+ [out]フィールドの名前。  
   
  `cchField`  
- [in]サイズのバッファーのワイド文字*szField*です。  
+ [in]サイズのバッファーのワイド文字単位*szField*します。  
   
  `pchField`  
  [out]返されたバッファーの実際のサイズ。  
   
  `pdwAttr`  
- [out]フィールドのメタデータに関連付けられるフラグ。  
+ [out]フィールドのメタデータに関連付けられたフラグ。  
   
  `ppvSigBlob`  
- [in]フィールドを説明するバイナリ メタデータ値へのポインター。  
+ [in]フィールドを説明するメタデータのバイナリ値へのポインター。  
   
  `pcbSigBlob`  
- [out]バイト サイズ`ppvSigBlob`です。  
+ [out]バイト サイズ`ppvSigBlob`します。  
   
  `pdwCPlusTypeFlag`  
  [out]フィールドの値の型を指定するフラグ。  
@@ -76,17 +77,18 @@ HRESULT GetFieldProps (
  [out]フィールドの定数値。  
   
  `pcchValue`  
- [out]サイズの文字で`ppValue`文字列が存在しない場合は 0 です。  
+ [out]サイズの文字で`ppValue`、または 0 の文字列が存在しない場合。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

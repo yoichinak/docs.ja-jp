@@ -1,19 +1,19 @@
 ---
-title: '&lt;フィルター&gt;'
+title: <filter>
 ms.date: 03/30/2017
 ms.assetid: 3266700b-904b-44e4-93a7-e06a1a445100
-ms.openlocfilehash: f7224eab9f3c21bce9839298b50c52e9da08b6f7
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: bff19f106d86c73dea80b8b57bb73442eaa2cf9f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704038"
 ---
-# <a name="ltfiltergt"></a>&lt;フィルター&gt;
+# <a name="filter"></a>\<フィルター >
 
 Windows Communication Foundation (WCF) の型を決定するルーティング フィルターを定義します。<xref:System.ServiceModel.Dispatcher.MessageFilter>も任意のサポート データまたはフィルターに必要なパラメーターとして、受信メッセージを評価するときに使用します。
 
-\<system.serviceModel >\<ルーティング >\<フィルター >\<フィルター >
+\<system.serviceModel> \<routing> \<filters> \<filter>
   
 ## <a name="syntax"></a>構文  
   
@@ -53,6 +53,6 @@ Windows Communication Foundation (WCF) の型を決定するルーティング �
 
 ## <a name="see-also"></a>関連項目
 
-<xref:System.ServiceModel.Routing.Configuration.FilterElement?displayProperty=nameWithType>    
-<xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A?displayProperty=nameWithType>   
-<xref:System.ServiceModel.Routing.Configuration.FilterType?displayProperty=nameWithType>   
+- <xref:System.ServiceModel.Routing.Configuration.FilterElement?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Routing.Configuration.FilterType?displayProperty=nameWithType>

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DataServiceQuery class, about DataServiceQuery class
 - DataServiceContext class, about DataServiceContext class
 ms.assetid: 21075e50-8917-413e-a8ea-35a0f6e65aa5
-ms.openlocfilehash: 4f389530b287d1c7a11a88972ef948347d3ea533
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5d14a1be3cd40ace2e31fec6f44a86707e5c4476
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875200"
 ---
 # <a name="wcf-data-services-client-library"></a>WCF Data Services クライアント ライブラリ
 HTTP 要求を送信し、データ サービスが返す [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] フィードを処理できるのであれば、どのようなアプリケーションでも [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ベースのデータ サービスと対話できます。 この相互運用性によって、広範な Web 対応アプリケーションから [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ベースのサービスにアクセスすることが可能になります。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用する場合は、高度なプログラミング エクスペリエンスを提供するクライアント ライブラリが含まれています[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]から .NET Framework または Silverlight ベースのアプリケーションにフィードします。  
@@ -51,6 +51,7 @@ HTTP 要求を送信し、データ サービスが返す [!INCLUDE[ssODataFull]
  [バイナリ データの操作](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
  データ サービスによってデータ ストリームとして返されるバイナリ データにアクセスしてバイナリ データを変更する方法について説明します。  
   
-## <a name="see-also"></a>関連項目  
- [WCF Data Services の定義](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
- [はじめに](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
+## <a name="see-also"></a>関連項目
+
+- [WCF Data Services の定義](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [はじめに](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)

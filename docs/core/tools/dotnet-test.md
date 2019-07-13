@@ -2,12 +2,12 @@
 title: dotnet test コマンド
 description: dotnet test コマンドは、指定されたプロジェクトで単体テストを実行する場合に使用されます。
 ms.date: 05/29/2018
-ms.openlocfilehash: 2cfe96b24e5f46ae679c970a1df028d38ebf6037
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 6b67273f549edd7712237756a5aba13d5cb59a61
+ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170851"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410364"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -120,7 +120,7 @@ dotnet test [-h|--help]
 
 `-s|--settings <SETTINGS_FILE>`
 
-テストの実行時に使用される設定です。
+テストの実行に使用する `.runsettings` ファイルです。 [`.runsettings` ファイルを使用して単体テストを構成します。](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
 
 `-t|--list-tests`
 
@@ -190,7 +190,7 @@ RunSettings について詳しくは、[vstest.console.exe:RunSettings 引数渡
 
 `-s|--settings <SETTINGS_FILE>`
 
-テストの実行時に使用される設定です。
+テストの実行に使用する `.runsettings` ファイルです。 [`.runsettings` ファイルを使用して単体テストを構成します。](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
 
 `-t|--list-tests`
 
@@ -240,7 +240,7 @@ RunSettings について詳しくは、[vstest.console.exe:RunSettings 引数渡
 
 `-s|--settings <SETTINGS_FILE>`
 
-テストの実行時に使用される設定です。
+テストの実行に使用する `.runsettings` ファイルです。 [`.runsettings` ファイルを使用して単体テストを構成します。](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
 
 `-t|--list-tests`
 
@@ -304,5 +304,5 @@ RunSettings について詳しくは、[vstest.console.exe:RunSettings 引数渡
 
 ## <a name="see-also"></a>関連項目
 
-* [フレームワークとターゲット](../../standard/frameworks.md)  
-* [.NET Core のランタイム識別子 (RID) のカタログ](../rid-catalog.md)
+- [フレームワークとターゲット](../../standard/frameworks.md)
+- [.NET Core のランタイム識別子 (RID) のカタログ](../rid-catalog.md)

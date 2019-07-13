@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/18/2016
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 48724c65de4fe71294eb5c61c1891d9d56c9b5a4
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d7c5946f5df8a94bf8b54c10f33234b40338a622
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45746823"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348163"
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>タプルとその他の型の分解
 
@@ -107,4 +107,4 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 ## <a name="see-also"></a>関連項目
 
 - [破棄](discards.md)
-- [タプル](tuples.md)  
+- [タプル](tuples.md)

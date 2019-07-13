@@ -1,5 +1,5 @@
 ---
-title: '&lt;上の sharedListeners&gt;要素'
+title: <sharedListeners> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#sharedListeners
@@ -11,21 +11,19 @@ helpviewer_keywords:
 - trace listeners, <sharedListeners> element
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: b312ea8180c464fb9f955e7d7079cac930c8bf05
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 48cb59dfc0871822bfcff5e16d4283008a411479
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701217"
 ---
-# <a name="ltsharedlistenersgt-element"></a>&lt;上の sharedListeners&gt;要素
+# <a name="sharedlisteners-element"></a>\<上の sharedListeners > 要素
 任意の source 要素または trace 要素が参照できるリスナーを含みます。  これらのリスナーが既定では、トレースを受信しないと、実行時にこれらのリスナーを取得することはできません。 共有リスナーとして識別されたリスナーは、名前によってソースまたはトレースに追加できます。  
   
  \<configuration>  
-\<system.diagnostics >  
-\<上の sharedListeners >  
+\<system.diagnostics>  
+\<sharedListeners>  
   
 ## <a name="syntax"></a>構文  
   
@@ -87,10 +85,11 @@ ms.locfileid: "47397112"
       </listeners>  
     </trace>  
   </system.diagnostics>  
-</configuration></system.diagnostics>   
+</configuration>
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Diagnostics.TraceListener>  
- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [トレース リスナー](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Diagnostics.TraceListener>
+- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [トレース リスナー](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

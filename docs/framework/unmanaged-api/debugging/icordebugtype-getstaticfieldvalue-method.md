@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b136f30b0c1ce9f83228f340ac5e147cc02002b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1054c7c977a487bb5a4bbf464322a65bcc039608
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422030"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755733"
 ---
 # <a name="icordebugtypegetstaticfieldvalue-method"></a>ICorDebugType::GetStaticFieldValue メソッド
-指定したスタック フレームでトークンを指定したフィールドによって参照される静的フィールドの値を格納している ICorDebugValue オブジェクト インターフェイス ポインターを取得します。  
+指定したスタック フレームでトークンを指定したフィールドによって参照される静的フィールドの値を含む ICorDebugValue オブジェクトにインターフェイス ポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetStaticFieldValue (  
     [in]  mdFieldDef        fieldDef,  
     [in]  ICorDebugFrame    *pFrame,  
@@ -37,31 +37,31 @@ HRESULT GetStaticFieldValue (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `fieldDef`  
- [in]`mdFieldDef`静的フィールドを指定するトークン。  
+ [in]`mdFieldDef`トークンを静的フィールドを指定します。  
   
  `pFrame`  
- [in]スタック フレームを表す ICorDebugFrame へのポインター。  
+ [in]スタック フレームを表す、ICorDebugFrame へのポインター。  
   
  `ppValue`  
  [out]アドレスへのポインター、`ICorDebugValue`静的フィールドの値を格納します。  
   
-## <a name="remarks"></a>コメント  
- `GetStaticFieldValue`メソッドとして使用できる型が ELEMENT_TYPE_CLASS または ELEMENT_TYPE_VALUETYPE 場合に、のみによって示される、 [icordebugtype::gettype](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ `GetStaticFieldValue`メソッドは使用できます、型が ELEMENT_TYPE_CLASS または ELEMENT_TYPE_VALUETYPE 場合に、のみで示されている、 [icordebugtype::gettype](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md)メソッド。  
   
  非ジェネリック型の場合、操作を実行して`GetStaticFieldValue`を呼び出すことと同じ[icordebugclass::getstaticfieldvalue](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md) ICorDebugClass オブジェクトによって返される[icordebugtype::getclass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md).  
   
- ジェネリック型の静的フィールドの値を特定のインスタンス化の基準としたされます。 また、静的フィールドは、スレッド、コンテキスト、またはアプリケーション ドメインを基準とした可能性ありますでした、スタック フレームは適切な値を決定するデバッガーを提供します。  
+ ジェネリック型は、静的フィールドの値は、特定のインスタンス化を基準になります。 また、静的フィールドがスレッド、コンテキスト、またはアプリケーション ドメインを基準とした可能性がある場合は、スタック フレームをデバッガーで適切な値の確認は役立ちます。  
   
-## <a name="remarks"></a>コメント  
- `GetStaticFieldValue` 呼び出すときにのみ使用できます`ICorDebugType::GetType`ELEMENT_TYPE_CLASS または ELEMENT_TYPE_VALUETYPE の値を返します。  
+## <a name="remarks"></a>Remarks  
+ `GetStaticFieldValue` 呼び出す場合にのみ使用できます`ICorDebugType::GetType`ELEMENT_TYPE_CLASS または ELEMENT_TYPE_VALUETYPE の値を返します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

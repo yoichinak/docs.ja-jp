@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-ms.openlocfilehash: 1d35951aef3692d82bdfa648df48eb8c1bca88ff
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 74084b8eef46f700733ad44e04cf8b3811456b85
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642413"
 ---
 # <a name="network-programming-in-the-net-framework"></a>.NET Framework のネットワーク プログラミング
 Microsoft .NET Framework は、アプリケーションにすばやく簡単に統合できる、複数層の拡張可能なインターネット サービスのマネージド実装を提供します。 ネットワーク アプリケーションは、プラグ可能なプロトコルを基に自動的に新しいインターネット プロトコルを使用するように作成することも、ソケット レベルでネットワークを使用できるように Windows ソケット インターフェイスのマネージド実装を使用することもできます。  
@@ -85,7 +85,7 @@ Microsoft .NET Framework は、アプリケーションにすばやく簡単に�
  [ネットワーク プログラミングのサンプル](../../../docs/framework/network-programming/network-programming-samples.md)  
  <xref:System.Net>、 <xref:System.Net.Cache>、 <xref:System.Net.Configuration>、 <xref:System.Net.Mail>、 <xref:System.Net.Mime>、 <xref:System.Net.NetworkInformation>、 <xref:System.Net.PeerToPeer>、 <xref:System.Net.Security>、 <xref:System.Net.Sockets> 名前空間のクラスを使用する、ダウンロード可能なネットワーク プログラミング サンプルへのリンク。  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>関連項目  
  <xref:System.Net?displayProperty=nameWithType>  
  最近のネットワークで使用されている多くのプロトコル用の単純なプログラミング インターフェイスを提供します。 この名前空間の <xref:System.Net.WebRequest?displayProperty=nameWithType> および <xref:System.Net.WebResponse?displayProperty=nameWithType> クラスは、プラグ可能なプロトコルの基礎です。  
   
@@ -134,10 +134,10 @@ Microsoft .NET Framework は、アプリケーションにすばやく簡単に�
  <xref:System.Security.Authentication.ExtendedProtection.Configuration?displayProperty=nameWithType>  
  アプリケーションの拡張保護を使用した認証の構成をサポートします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
 
- [.NET Framework でのトランスポート層セキュリティ (TLS) のベスト プラクティス](../../../docs/framework/network-programming/tls.md)  
- [ネットワーク プログラミング方法のトピック](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
- [ネットワーク プログラミングのサンプル](../../../docs/framework/network-programming/network-programming-samples.md)  
- [MSDN Code Gallery 上の .NET 用のネットワークのサンプル](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)  
- [HttpClient のサンプル](https://go.microsoft.com/fwlink/?LinkId=242550)
+- [.NET Framework でのトランスポート層セキュリティ (TLS) のベスト プラクティス](../../../docs/framework/network-programming/tls.md)
+- [ネットワーク プログラミング方法のトピック](../../../docs/framework/network-programming/network-programming-how-to-topics.md)
+- [ネットワーク プログラミングのサンプル](../../../docs/framework/network-programming/network-programming-samples.md)
+- [MSDN Code Gallery 上の .NET 用のネットワークのサンプル](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+- [HttpClient のサンプル](https://go.microsoft.com/fwlink/?LinkId=242550)

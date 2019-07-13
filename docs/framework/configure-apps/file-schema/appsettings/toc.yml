@@ -1,0 +1,12 @@
+- name: アプリ設定スキーマ
+  href: index.md
+  items:
+    - name: <configuration> の <appSettings> 要素
+      href: appsettings-element-for-configuration.md
+      items:
+        - name: <add> 要素
+          href: add-element-for-appsettings.md
+        - name: <clear> 要素
+          href: clear-element-for-appsettings.md
+        - name: <remove> 要素
+          href: remove-element-for-appsettings.md

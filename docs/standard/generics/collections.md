@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cdead5a54c6e8dbe6fd61f82fc3985913bd7d381
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fa6cd032ecf3a35c1dc32d9907218c9b6efd4bcc
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47202578"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592273"
 ---
 # <a name="generic-collections-in-net"></a>.NET の汎用コレクション
 
@@ -44,7 +44,7 @@ ms.locfileid: "47202578"
   
  <xref:System.ArraySegment%601> ジェネリック構造体は、任意の型の 0 から始まる 1 次元の配列内で、要素の範囲を区切る方法を提供します。 ジェネリック型パラメーターは、配列の要素の型です。  
   
- <xref:System.EventHandler%601> ジェネリック デリゲートにより、イベントが [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] によって使用されるイベント処理パターンに従う場合に、イベントを処理するためにデリゲート型を宣言する必要がなくなります。 たとえば、イベントのデータを保持するために、<xref:System.EventArgs> から派生した `MyEventArgs` クラスを作成したとします。 その場合、イベントを次のように宣言できます。  
+ <xref:System.EventHandler%601> ジェネリック デリゲートにより、イベントが .NET Framework によって使用されるイベント処理パターンに従う場合に、イベントを処理するためにデリゲート型を宣言する必要がなくなります。 たとえば、イベントのデータを保持するために、<xref:System.EventArgs> から派生した `MyEventArgs` クラスを作成したとします。 その場合、イベントを次のように宣言できます。  
   
  [!code-cpp[Conceptual.Generics.Overview#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source2.cpp#7)]
  [!code-csharp[Conceptual.Generics.Overview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source2.cs#7)]
@@ -52,8 +52,8 @@ ms.locfileid: "47202578"
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Collections.Generic?displayProperty=nameWithType>  
-- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
-- [ジェネリック](../../../docs/standard/generics/index.md)  
-- [配列とリストの操作に使用する汎用デリゲート](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
+- <xref:System.Collections.Generic?displayProperty=nameWithType>
+- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>
+- [ジェネリック](../../../docs/standard/generics/index.md)
+- [配列とリストの操作に使用する汎用デリゲート](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)
 - [ジェネリック インターフェイス](../../../docs/standard/generics/interfaces.md)

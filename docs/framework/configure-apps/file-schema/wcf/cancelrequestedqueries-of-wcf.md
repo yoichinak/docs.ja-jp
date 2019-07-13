@@ -1,15 +1,15 @@
 ---
-title: WCF の &lt;cancelRequestedQueries&gt;
+title: <cancelRequestedQueries> WCF の
 ms.date: 03/30/2017
 ms.assetid: a7cc7125-9ea3-4d3f-99c0-878cdeb1258a
-ms.openlocfilehash: 9cf2761bdab36d95b5077e36174565659230b512
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: a9364fc53c7eb62a240206f6c81bd434b25c3f40
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704376"
 ---
-# <a name="ltcancelrequestedqueriesgt-of-wcf"></a>WCF の &lt;cancelRequestedQueries&gt;
+# <a name="cancelrequestedqueries-of-wcf"></a>\<cancelRequestedQueries > の WCF
 親アクティビティが子アクティビティを取り消すための要求を追跡するのに使用する、クエリのコレクションを表します。 追跡参加要素がキャンセル要求レコード オブジェクトを定期受信するには、このクエリが必要です。  
   
 追跡プロファイルのクエリの詳細については、次を参照してください[追跡プロファイル。](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  

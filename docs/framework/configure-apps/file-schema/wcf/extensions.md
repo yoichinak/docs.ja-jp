@@ -1,15 +1,15 @@
 ---
-title: '&lt;拡張機能&gt;'
+title: <extensions>
 ms.date: 03/30/2017
 ms.assetid: bcfe5c44-04ef-4a20-96a5-90bfadf39623
-ms.openlocfilehash: 1110c9790b3afd1af5c5947b4976cbaca88fd324
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: bb0df4535560a509d6e3511815196c126a95d0c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700775"
 ---
-# <a name="ltextensionsgt"></a>&lt;拡張機能&gt;
+# <a name="extensions"></a>\<extensions>
 この構成要素には、標準の探索可能なメタデータと共に発行する必要のあるカスタム メタデータ (EPR、ContractTypeName、BindingName、Scope、ListenURI) を含む XML 要素のコレクションが格納されます。 この構成要素を使用する場合の例を次に示します。  
   
 ```xml  
@@ -45,5 +45,6 @@ ms.locfileid: "54146863"
 </behaviors>
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

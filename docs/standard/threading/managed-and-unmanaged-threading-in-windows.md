@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34bd959890717a16df80d3870099757dd7400943
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 04ef2ea6bf9d10baabea39133b2e0a9a72a6ce4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50757362"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674847"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Windows でのマネージド スレッド処理とアンマネージド スレッド処理
 
@@ -75,8 +75,8 @@ ms.locfileid: "50757362"
 
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>  
-- <xref:System.Threading.ThreadState>  
-- <xref:System.EnterpriseServices.ServicedComponent>  
-- <xref:System.Threading.Thread>  
+- <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>
+- <xref:System.Threading.ThreadState>
+- <xref:System.EnterpriseServices.ServicedComponent>
+- <xref:System.Threading.Thread>
 - <xref:System.Threading.Monitor>

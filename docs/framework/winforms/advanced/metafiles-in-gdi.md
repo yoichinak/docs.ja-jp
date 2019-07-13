@@ -9,32 +9,34 @@ helpviewer_keywords:
 - GDI+, metafiles
 - metafiles
 ms.assetid: 51da872c-c783-440f-8bf6-1e580a966c31
-ms.openlocfilehash: 73cacb7f701768b42121c31cfbc4f26905961231
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df54289722cf12bad840722c6eafdaa43279a5dc
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504593"
 ---
 # <a name="metafiles-in-gdi"></a>GDI+ でのメタファイル
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供、<xref:System.Drawing.Imaging.Metafile>クラスを記録してメタファイルを表示できるようにします。 ベクター イメージとも呼ばれる、メタファイルは、コマンドと設定の描画のシーケンスとして格納されているイメージです。 コマンドと設定に記録、<xref:System.Drawing.Imaging.Metafile>オブジェクトをメモリに格納されているか、ファイルまたはストリームに保存します。  
+GDI + は、提供、<xref:System.Drawing.Imaging.Metafile>クラスに記録し、メタファイルを表示できます。 ベクター イメージとも呼ばれる、メタファイルは、一連の描画コマンドと設定として格納されているイメージです。 コマンドおよび設定に記録する<xref:System.Drawing.Imaging.Metafile>オブジェクトをメモリに格納されているか、ファイルまたはストリームに保存します。  
   
-## <a name="metafile-formats"></a>メタファイルの形式  
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 次の形式で格納されているメタファイルを表示できます。  
+## <a name="metafile-formats"></a>メタファイル形式  
+ GDI + は、次の形式で格納されているメタファイルを表示できます。  
   
--   Windows のメタファイル (WMF)  
+- Windows メタファイル (WMF)  
   
--   拡張メタファイル (EMF)  
+- 拡張メタファイル (EMF)  
   
--   EMF +  
+- EMF +  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] WMF の形式ではなく、EMF と EMF + の形式で、メタファイルを記録できます。  
+ GDI + を記録できますメタファイル WMF 形式ではなく、EMF、EMF + 形式にします。  
   
- EMF + は、拡張機能により、EMF[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]レコードが格納されます。 EMF + 形式に 2 つのバリエーションがあります: EMF + デュアルと EMF + のみです。 メタファイル EMF + だけのみを含める[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]レコード。 このようなメタファイルはによって表示されることができます[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]がなく、[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]です。 EMF + デュアル メタファイルを含む[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]と[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]レコード。 各[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]EMF + デュアルでレコード メタファイルとペアになる代替[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]レコード。 このようなメタファイルはによって表示されることができます[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]または[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]です。  
+ EMF + GDI + レコードを格納することができる EMF の拡張機能です。 EMF + 形式の 2 つのバリエーションがあります。EMF + のみと EMF + Dual します。 メタファイル EMF + だけでは、GDI + レコードだけが含まれます。 GDI + では、GDI ではなく、このようなメタファイルを表示できます。 EMF + Dual メタファイルには、GDI + と GDI レコードが含まれます。 EMF + Dual メタファイルに各の GDI + レコードは、代替 GDI レコードと組み合わせて使用します。 このようなメタファイルは、GDI または GDI + によって表示できます。  
   
- 次の例では、ファイルとして保存されているメタファイルを表示します。 左上隅のメタファイルが表示されます (100, 100)。  
+ 次の例では、ファイルとして保存された以前メタファイルを表示します。 左上隅にあるとメタファイルが表示されます (100, 100)。  
   
- [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#21)]
- [!code-vb[System.Drawing.ImagesBitmapsMetafiles#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#21)]  
+ [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#21)]
+ [!code-vb[System.Drawing.ImagesBitmapsMetafiles#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#21)]  
   
-## <a name="see-also"></a>関連項目  
- [イメージ、ビットマップ、メタファイル](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+## <a name="see-also"></a>関連項目
+
+- [イメージ、ビットマップ、メタファイル](images-bitmaps-and-metafiles.md)

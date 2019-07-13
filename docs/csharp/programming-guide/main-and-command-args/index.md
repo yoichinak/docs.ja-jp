@@ -13,12 +13,12 @@ helpviewer_keywords:
 - command line [C#], arguments
 - command-line arguments [C#], Main method
 ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
-ms.openlocfilehash: e9fcee86f8a3daed73adebb1f4ce3e16f7ea2042
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: f1cbbc6081c0e2f3e29d49f413e00c7346ea7e60
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61678843"
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() とコマンドライン引数 (C# プログラミング ガイド)
 
@@ -26,7 +26,7 @@ ms.locfileid: "53237091"
 
  C# プログラムのエントリ ポイントは 1 つのみです。 `Main` メソッドを持つクラスが 2 つ以上ある場合、プログラムをコンパイルする際に **/main** コンパイラ オプションを使用して、どの `Main` メソッドをエントリ ポイントとして使用するかを指定する必要があります。 詳細については、「[/main (C# コンパイラ オプション)](../../../csharp/language-reference/compiler-options/main-compiler-option.md)」を参照してください。
 
- [!code-csharp[csProgGuideMain#17](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-and-command-line-arguments_1.cs)]
+ [!code-csharp[csProgGuideMain#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#17)]
 
 ## <a name="overview"></a>概要
 
@@ -42,9 +42,9 @@ ms.locfileid: "53237091"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [csc.exe を使用したコマンド ラインからのビルド](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [メソッド](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [インサイド C# プログラム](../../../csharp/programming-guide/inside-a-program/index.md)  
+- [csc.exe を使用したコマンド ラインからのビルド](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [メソッド](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [インサイド C# プログラム](../../../csharp/programming-guide/inside-a-program/index.md)

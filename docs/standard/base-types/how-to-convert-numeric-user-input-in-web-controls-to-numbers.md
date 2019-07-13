@@ -1,5 +1,5 @@
 ---
-title: '方法 : Web コントロールでの数値のユーザー入力を数値に変換する'
+title: '方法: Web コントロールでの数値のユーザー入力を数値に変換する'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,33 +15,33 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 663f9d88315f396b187cca874c930179f1dea523
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 5af942b5e7576c13ff7be8d11c0009fd0c4f7462
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349138"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882469"
 ---
-# <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>方法 : Web コントロールでの数値のユーザー入力を数値に変換する
+# <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>方法: Web コントロールでの数値のユーザー入力を数値に変換する
 Web ページは世界中のあらゆる場所で表示され、利用者はほぼ無限の形式で <xref:System.Web.UI.WebControls.TextBox> コントロールに数値データを入力できます。 結果として、Web ページの利用者の住んでいる地域 (ロケール) や文化 (カルチャ) を判断することが非常に重要となります。 ユーザー入力を解析するとき、ユーザーのロケールとカルチャによって定義される書式設定規則を適用できます。  
   
 ### <a name="to-convert-numeric-input-from-a-web-textbox-control-to-a-number"></a>Web TextBox コントロールの数値入力を数字に変換するには  
   
-1.  <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> プロパティから返された文字列の配列に入力があるか判断します。 ない場合、手順 6 に進みます。  
+1. <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> プロパティから返された文字列の配列に入力があるか判断します。 ない場合、手順 6 に進みます。  
   
-2.  <xref:System.Web.HttpRequest.UserLanguages%2A> プロパティから返された文字列の配列に入力がある場合、最初の要素を取得します。 最初の要素は、ユーザーの既定または優先する言語および地域です。  
+2. <xref:System.Web.HttpRequest.UserLanguages%2A> プロパティから返された文字列の配列に入力がある場合、最初の要素を取得します。 最初の要素は、ユーザーの既定または優先する言語および地域です。  
   
-3.  <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> コンストラクターを呼び出して、ユーザーの優先するカルチャを表す <xref:System.Globalization.CultureInfo> オブジェクトをインスタンス化します。  
+3. <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> コンストラクターを呼び出して、ユーザーの優先するカルチャを表す <xref:System.Globalization.CultureInfo> オブジェクトをインスタンス化します。  
   
-4.  ユーザーの入力の変換後の形となる数値型の `TryParse` または `Parse` メソッドを呼び出します。 `provider` パラメーターを指定して `TryParse` または `Parse` メソッドのオーバー ロードを使用し、次のいずれかを渡します。  
+4. ユーザーの入力の変換後の形となる数値型の `TryParse` または `Parse` メソッドを呼び出します。 `provider` パラメーターを指定して `TryParse` または `Parse` メソッドのオーバー ロードを使用し、次のいずれかを渡します。  
   
-    -   手順 3 で作成した <xref:System.Globalization.CultureInfo> オブジェクト。  
+    - 手順 3 で作成した <xref:System.Globalization.CultureInfo> オブジェクト。  
   
-    -   手順 3 で作成した <xref:System.Globalization.CultureInfo> オブジェクトの <xref:System.Globalization.CultureInfo.NumberFormat%2A> プロパティによって返された <xref:System.Globalization.NumberFormatInfo> オブジェクト。  
+    - 手順 3 で作成した <xref:System.Globalization.CultureInfo> オブジェクトの <xref:System.Globalization.CultureInfo.NumberFormat%2A> プロパティによって返された <xref:System.Globalization.NumberFormatInfo> オブジェクト。  
   
-5.  変換に失敗する場合、<xref:System.Web.HttpRequest.UserLanguages%2A> プロパティから返された文字列の配列内のそれぞれの残りの要素に対して、手順 2 から 4 を繰り返します。  
+5. 変換に失敗する場合、<xref:System.Web.HttpRequest.UserLanguages%2A> プロパティから返された文字列の配列内のそれぞれの残りの要素に対して、手順 2 から 4 を繰り返します。  
   
-6.  それでも変換が失敗する場合や <xref:System.Web.HttpRequest.UserLanguages%2A> プロパティから返された文字列の配列が空の場合、<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> プロパティによって返される、インバリアント カルチャを使用して文字列を解析します。  
+6. それでも変換が失敗する場合や <xref:System.Web.HttpRequest.UserLanguages%2A> プロパティから返された文字列の配列が空の場合、<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> プロパティによって返される、インバリアント カルチャを使用して文字列を解析します。  
   
 ## <a name="example"></a>例  
  次は Web フォームの完全な分離コード ページの例です。<xref:System.Web.UI.WebControls.TextBox> コントロールに (アルファベットではなく) 数値を入力するように求め、それを数字に変換します。 数字に変換された後、元の入力と同じ書式設定ルールを利用して倍精度にして表示されます。  
@@ -58,20 +58,20 @@ Web ページは世界中のあらゆる場所で表示され、利用者はほ�
  コードは、ユーザーの入力の変換後の形となる数値型の `Parse` または `TryParse` メソッドを呼び出すことができます。 1 回の解析操作には、Parse メソッドへの呼び出しが複数回必要な場合もあります。 その結果、解析処理が失敗した場合、`false` が返されるので、`TryParse` メソッドの方が優れています。 対照的に、1 つの Web アプリケーションで `Parse` メソッドで何度もスローされる例外を処理することは、非常に不経済です。  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- コードをコンパイルするには、[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 分離コード ページにそれをコピーします。すべての既存コードが置換されます。 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web には、次のコントロールを含めてください。  
+ コードをコンパイルするには、ASP.NET 分離コード ページにそれをコピーします。すべての既存コードが置換されます。 ASP.NET Web ページには、次のコントロールが含まれている必要があります。  
   
--   <xref:System.Web.UI.WebControls.Label> コントロール。これはコードで参照されません。 その <xref:System.Web.UI.WebControls.TextBox.Text%2A> プロパティを "Enter a Number:\(数字を入力:\)" に設定します。  
+- <xref:System.Web.UI.WebControls.Label> コントロール。これはコードで参照されません。 その <xref:System.Web.UI.WebControls.TextBox.Text%2A> プロパティを "Enter a Number:\(数字を入力:\)" に設定します。  
   
--   `NumericString` という名前の <xref:System.Web.UI.WebControls.TextBox> コントロール。  
+- `NumericString` という名前の <xref:System.Web.UI.WebControls.TextBox> コントロール。  
   
--   `OKButton` という名前の <xref:System.Web.UI.WebControls.Button> コントロール。 その <xref:System.Web.UI.WebControls.Button.Text%2A> プロパティを "OK" に設定します。  
+- `OKButton` という名前の <xref:System.Web.UI.WebControls.Button> コントロール。 その <xref:System.Web.UI.WebControls.Button.Text%2A> プロパティを "OK" に設定します。  
   
- 名前を `NumericUserInput` から、[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] ページの `Page` ディレクティブの `Inherits` 属性によって定義されるクラスの名前に変更します。 `NumericInput` オブジェクト参照の名前を、[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] ページの `form` タグの `id` 属性によって定義される名前に変更します。  
+ 名前を `NumericUserInput` から、ASP.NET ページの `Page` ディレクティブの `Inherits` 属性によって定義されるクラスの名前に変更します。 `NumericInput` オブジェクト参照の名前を、ASP.NET ページの `form` タグの `id` 属性によって定義される名前に変更します。  
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  ユーザーが HTML ストリームにスクリプトを挿入する行為を防ぐために、サーバー応答でユーザー入力がエコーのように返されないようにしてください。 代わりに、<xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType> メソッドを利用して暗号化されるようにします。  
   
 ## <a name="see-also"></a>関連項目
 
-- [書式設定操作の実行](../../../docs/standard/base-types/performing-formatting-operations.md)  
+- [書式設定操作の実行](../../../docs/standard/base-types/performing-formatting-operations.md)
 - [数値文字列の解析](../../../docs/standard/base-types/parsing-numeric.md)

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - As keyword [Visual Basic], statement syntax
 - As keyword [Visual Basic]
 ms.assetid: b4281ec8-2be5-49f7-aae8-ae0a96265b0d
-ms.openlocfilehash: 9c1d9943c59a8ed4c3f2002fdbcdefeefafe42ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4b0ebbb6a86cc2c71882427afd33e7d9e0fe7a04
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945094"
 ---
 # <a name="as-clause-visual-basic"></a>As 句 (Visual Basic)
-導入されています、`As`句は、宣言ステートメントまたはジェネリック型パラメーターの制約リストでのデータ型を識別します。  
+導入されています、`As`句は、宣言ステートメントまたはジェネリック型パラメーターの制約リスト内のデータ型を識別します。  
   
 ## <a name="remarks"></a>コメント  
  キーワード `As` は次のコンテキストで使用できます。  
@@ -59,10 +59,11 @@ ms.locfileid: "33604264"
   
  [Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
   
-## <a name="see-also"></a>関連項目  
- [方法 : 新しい変数を作成する](../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)  
- [データの種類](../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [変数宣言](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [型リスト](../../../visual-basic/language-reference/statements/type-list.md)  
- [Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [キーワード](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>関連項目
+
+- [方法: 新しい変数を作成します。](../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
+- [データの種類](../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [変数宣言](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [型リスト](../../../visual-basic/language-reference/statements/type-list.md)
+- [Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [キーワード](../../../visual-basic/language-reference/keywords/index.md)

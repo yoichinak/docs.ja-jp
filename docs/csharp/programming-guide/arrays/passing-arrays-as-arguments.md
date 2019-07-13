@@ -5,12 +5,12 @@ ms.date: 07/05/2018
 helpviewer_keywords:
 - arrays [C#], passing as arguments
 ms.assetid: f3a0971e-c87c-4a1f-8262-bc0a3b712772
-ms.openlocfilehash: 6e11020491c36349f035abb333aa3396c246dd68
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1538988c1145a19055074b440f04cbaac4ef7aa7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245614"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741179"
 ---
 # <a name="passing-arrays-as-arguments-c-programming-guide"></a>引数としての配列の受け渡し (C# プログラミング ガイド)
 
@@ -58,8 +58,8 @@ ms.locfileid: "53245614"
 
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../index.md)  
-- [配列](index.md)  
-- [1 次元配列](single-dimensional-arrays.md)  
-- [多次元配列](multidimensional-arrays.md)  
-- [ジャグ配列](jagged-arrays.md)  
+- [C# プログラミング ガイド](../index.md)
+- [配列](index.md)
+- [1 次元配列](single-dimensional-arrays.md)
+- [多次元配列](multidimensional-arrays.md)
+- [ジャグ配列](jagged-arrays.md)

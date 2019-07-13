@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parameters [C#], params
 - params keyword [C#]
 ms.assetid: 1690815e-b52b-4967-8380-5780aff08012
-ms.openlocfilehash: dd9699eb50f7dffc7c2f4976a79afbf689ba2470
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 772c8da879eeccbe484c631a47de7fe8a32ec8d2
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235843"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633579"
 ---
 # <a name="params-c-reference"></a>params (C# リファレンス)
 

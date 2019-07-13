@@ -9,25 +9,26 @@ helpviewer_keywords:
 - content [WPF], ScrollViewer control
 - controls [WPF], ScrollViewer
 ms.assetid: 2163666e-04da-4036-841f-40947c9c034d
-ms.openlocfilehash: b5417632c50924200390d0ec01048d8df3d393ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e8b1b30fc50318882ca7a7f5ed2a4827d5446c2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971003"
 ---
 # <a name="scrollviewer"></a>ScrollViewer
-<xref:System.Windows.Controls.ScrollViewer>コントロールは、コンテンツがスクロール可能水平方向または垂直方向にスクロール可能な領域を作成します。  
+<xref:System.Windows.Controls.ScrollViewer>コントロールが水平方向または垂直方向でスクロールできるコンテンツのスクロール可能な領域を作成します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ScrollViewer の概要](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)  
- [方法トピック](../../../../docs/framework/wpf/controls/scrollviewer-how-to-topics.md)  
+ [ScrollViewer の概要](scrollviewer-overview.md)  
+ [方法トピック](scrollviewer-how-to-topics.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
   
  <xref:System.Windows.Controls.ScrollViewer>  
   
-## <a name="see-also"></a>関連項目  
- [パネルの概要](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [レイアウト](../../../../docs/framework/wpf/advanced/layout.md)
+## <a name="see-also"></a>関連項目
+
+- [パネルの概要](panels-overview.md)
+- [レイアウト](../advanced/layout.md)

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c76e46c75680d9fc0ad70e94da288f0c6b5e5ee1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f8dd1daf3528bbc642033e254a809c18c3662ff1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446321"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779189"
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a>IMetaDataAssemblyImport::GetExportedTypeProps メソッド
 指定したメタデータ シグネチャを持つエクスポートされた型のプロパティのセットを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetExportedTypeProps (  
     [in]  mdExportedType    mdct,   
     [out] LPWSTR            szName,   
@@ -41,12 +41,12 @@ HRESULT GetExportedTypeProps (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `mdct`  
  [in]`mdExportedType`エクスポートされた型を表すメタデータ トークン。  
   
  `szName`  
- [out]エクスポートされた型の名前。  
+ [out]エクスポートされる型の名前。  
   
  `cchName`  
  [in]ワイド文字単位のサイズの`szName`します。  
@@ -55,22 +55,23 @@ HRESULT GetExportedTypeProps (
  [out]実際に返されるワイド文字の数 `szName`  
   
  `ptkImplementation`  
- [out]`mdFile`、 `mdAssemblyRef`、または`mdExportedType`含まれているか、エクスポートされた型のプロパティにアクセスできるようにするメタデータ トークン。  
+ [out]`mdFile`、 `mdAssemblyRef`、または`mdExportedType`またはエクスポートされる型のプロパティにアクセスできるようにするメタデータ トークン。  
   
  `ptkTypeDef`  
- [out]ポインター、`mdTypeDef`ファイル内の型を表すトークンです。  
+ [out]ポインター、`mdTypeDef`ファイル内の型を表すトークン。  
   
  `pdwExportedTypeFlags`  
  [out]エクスポートされた型に適用されるメタデータを記述するフラグへのポインター。 1 つまたは複数フラグ値を指定できます[CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)値。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
  **ライブラリ:** MsCorEE.dll にリソースとして使用  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataAssemblyImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [IMetaDataAssemblyImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

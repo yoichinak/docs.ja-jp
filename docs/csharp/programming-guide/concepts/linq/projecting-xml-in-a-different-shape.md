@@ -2,12 +2,12 @@
 title: 異なる構造の XML の射影 (C#)
 ms.date: 07/20/2015
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
-ms.openlocfilehash: fe6166a333988d4b0a4550900a9307f1c4951aec
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3b992b9eb56f978ce92f3b0210223da978f44e2b
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43786997"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484032"
 ---
 # <a name="projecting-xml-in-a-different-shape-c"></a>異なる構造の XML の射影 (C#)
 このトピックでは、ソース XML とは異なる構造の XML を射影する例について説明します。  
@@ -233,8 +233,5 @@ class Program
 ## <a name="next-steps"></a>次の手順  
  次の例では、クエリを実行して Word 文書内のテキストをすべて検索します。  
   
--   [Word 文書内のテキストの検索 (C#)](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [Word 文書内のテキストの検索 (C#)](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
-## <a name="see-also"></a>参照
-
-- [チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

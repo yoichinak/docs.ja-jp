@@ -2,12 +2,12 @@
 title: ワークフロー トランザクション
 ms.date: 03/30/2017
 ms.assetid: 6081fb02-c0f2-483d-97b8-f3b7dc03011d
-ms.openlocfilehash: e2a0c301abac562904e976fe09e5a68697b191e5
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 17e4b712f5b6955ab777168d60d8a28e8b0ebd63
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670197"
 ---
 # <a name="workflow-transactions"></a>ワークフロー トランザクション
 
@@ -47,9 +47,10 @@ static Activity ScenarioOne()
 }  
 ```  
   
-詳細については、使用方法を参照してください<xref:System.ServiceModel.Activities.TransactedReceiveScope>を参照してください[ワークフロー サービスとの間にトランザクションをフロー](../../../docs/framework/wcf/feature-details/flowing-transactions-into-and-out-of-workflow-services.md)します。  
+詳細については、使用方法を参照してください<xref:System.ServiceModel.Activities.TransactedReceiveScope>を参照してください[ワークフロー サービスとの間にトランザクションをフロー](../wcf/feature-details/flowing-transactions-into-and-out-of-workflow-services.md)します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Activities.Statements.TransactionScope>  
- <xref:System.Transactions.TransactionScope>  
- <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Activities.Statements.TransactionScope>
+- <xref:System.Transactions.TransactionScope>
+- <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType>

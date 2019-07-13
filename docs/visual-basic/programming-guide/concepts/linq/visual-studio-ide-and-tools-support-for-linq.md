@@ -2,12 +2,12 @@
 title: Visual Studio IDE およびツールの LINQ (Visual Basic) のサポート
 ms.date: 07/20/2015
 ms.assetid: e3bfe0d9-4a79-49cf-a31c-93297c688829
-ms.openlocfilehash: b6b6cda40da1d54a68fdf924e6bf92efd5dec7a0
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 0ed0488f76e81d3097ec84ab914e060d4d1198a1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45624633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907505"
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-visual-basic"></a>Visual Studio IDE およびツールの LINQ (Visual Basic) のサポート
 Visual Studio 統合開発環境 (IDE) では、LINQ アプリケーションの開発をサポートする次の機能が提供されています。  
@@ -24,5 +24,6 @@ Visual Studio 統合開発環境 (IDE) では、LINQ アプリケーションの
 ## <a name="visual-studio-debugger-support"></a>Visual Studio デバッガーのサポート  
  Visual Studio デバッガーは、クエリ式のデバッグをサポートしています。 詳しくは、「[LINQ のデバッグ](/visualstudio/debugger/debugging-linq)」をご覧ください。  
   
-## <a name="see-also"></a>関連項目  
- [統合言語クエリ (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+## <a name="see-also"></a>関連項目
+
+- [統合言語クエリ (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)

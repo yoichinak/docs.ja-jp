@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0a506f05aac3b8335a0863c3152567fe05463a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7a15e3ab0d50763ad53b1caa921035239868fec1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415881"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761237"
 ---
 # <a name="icordebugmanagedcallbackupdatemodulesymbols-method"></a>ICorDebugManagedCallback::UpdateModuleSymbols メソッド
 共通言語ランタイム モジュールのシンボルが変更されたことをデバッガーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT UpdateModuleSymbols (  
     [in] ICorDebugAppDomain *pAppDomain,  
     [in] ICorDebugModule    *pModule,  
@@ -37,31 +37,32 @@ HRESULT UpdateModuleSymbols (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pAppDomain`  
- [in]ICorDebugAppDomain を表すオブジェクトを含むモジュールのシンボルが変更されたが、アプリケーション ドメインへのポインター。  
+ [in]シンボルが変更されたが、モジュールを格納しているアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。  
   
  `pModule`  
  [in]シンボルが変更されたが、モジュールを表す ICorDebugModule オブジェクトへのポインター。  
   
  `pSymbolStream`  
- [in]Win32 COM へのポインター`IStream`変更済みのシンボルを格納するオブジェクト。  
+ [in]Win32 COM へのポインター`IStream`変更されたシンボルを含むオブジェクト。  
   
-## <a name="remarks"></a>コメント  
- このメソッドを呼び出すことによってモジュールのシンボルのデバッガーのビューを更新する機会を提供する[isymunmanagedreader::updatesymbolstore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md)または[isymunmanagedreader::replacesymbolstore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-replacesymbolstore-method.md)です。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、呼び出すことによって、モジュールのシンボルのデバッガーのビューを更新する機会を提供します。 [isymunmanagedreader::updatesymbolstore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md)または[isymunmanagedreader::replacesymbolstore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-replacesymbolstore-method.md)します。  
   
- このコールバックに、同じモジュールの複数回発生します。  
+ このコールバックでは、同じモジュールの複数回は発生します。  
   
- デバッガーは、バインドされていないソース レベルのブレークポイントをバインドする試してください。  
+ デバッガーは、ソース レベルのブレークポイントがバインドされていないをバインドしようとする必要があります。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICorDebugManagedCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [ICorDebugManagedCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

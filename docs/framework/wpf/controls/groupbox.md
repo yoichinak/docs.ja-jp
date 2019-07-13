@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], GroupBox
 - GroupBox control [WPF]
 ms.assetid: 1f4ed3d9-a171-4623-bc4f-3314e3576271
-ms.openlocfilehash: e7e73523f9c7038fdcec64f66567dc41a75d5e2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6baee12c04e93a94736acacb1e4774b3cc20a3ac
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008734"
 ---
 # <a name="groupbox"></a>GroupBox
-<xref:System.Windows.Controls.GroupBox>コントロールは、 <xref:System.Windows.Controls.HeaderedContentControl> 」というタイトルのコンテナーを提供する[!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)]コンテンツ。  
+<xref:System.Windows.Controls.GroupBox>コントロールが、 <xref:System.Windows.Controls.HeaderedContentControl> 」というタイトルのコンテナーを提供する[!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)]コンテンツ。  
   
- 次の図は、<xref:System.Windows.Controls.GroupBox>を格納している、<xref:System.Windows.Controls.TabControl>と<xref:System.Windows.Controls.Button>で囲まれている、<xref:System.Windows.Controls.StackPanel>です。  
+ 次の図は、<xref:System.Windows.Controls.GroupBox>を格納している、<xref:System.Windows.Controls.TabControl>と<xref:System.Windows.Controls.Button>で囲まれた、<xref:System.Windows.Controls.StackPanel>します。  
   
- ![GroupBoxImage](../../../../docs/framework/wpf/controls/media/groupboximage.JPG "GroupBoxImage")  
+ ![Groupbox を示すスクリーン ショット。](./media/groupbox/groupbox-tab-button-stackpanel.jpg)  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [GroupBox テンプレートを定義する](../../../../docs/framework/wpf/controls/how-to-define-a-groupbox-template.md)  
+ [GroupBox テンプレートを定義する](how-to-define-a-groupbox-template.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.GroupBox>  

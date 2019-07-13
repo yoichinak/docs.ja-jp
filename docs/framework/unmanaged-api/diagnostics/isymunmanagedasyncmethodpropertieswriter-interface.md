@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: caa71820-8058-4b6a-93a2-25ee757d92d3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ec66e0064a8d6e8d4664dd8c727aa87621cfd8e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 82fcddd7a3f89a92cc79285930b30342333fbec2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940102"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriter-interface"></a>ISymUnmanagedAsyncMethodPropertiesWriter インターフェイス
-各メソッドのシンボルの省略可能な非同期メソッドの情報を定義できます。 常に開かれているメソッド; で使用します。つまり、呼び出しの間、 [OpenMethod メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)と[CloseMethod メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)です。  
+各メソッドのシンボルのオプションの非同期メソッドの情報を定義することができます。 開かれているメソッド; で常に使用します。つまり、呼び出しの間で、 [OpenMethod メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)と[CloseMethod メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -24,12 +25,13 @@ ms.lasthandoff: 05/04/2018
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[DefineAsyncStepInfo メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md)|非同期のグループを定義する、現在のメソッドでの操作を待機します。<br /><br /> 各 yield オフセットでは、潜在的な yield を識別する、await の戻り値の命令と一致します。 各`breakpointMethod` / `breakpointOffset`ペアを識別、非同期操作が再開されます。 別の方法である可能性があります。|  
-|[DefineCatchHandlerILOffSet メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-definecatchhandleriloffset-method.md)|IL オフセットの非同期メソッドをラップするコンパイラで生成された catch ハンドラーを設定します。<br /><br /> デバッガーは生成された catch の IL オフセットを使用して、ユーザー コード メソッドで発生することも、非ユーザー コードの場合と同様に catch を処理します。 具体的への応答で使用されている、 **CatchHandlerFound**例外イベント。|  
+|[DefineAsyncStepInfo メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md)|非同期のグループを定義、現在のメソッドでの操作を待機します。<br /><br /> 各 yield オフセットでは、潜在的な yield を識別する、await の戻り命令と一致します。 各`breakpointMethod` / `breakpointOffset`ペアを識別、非同期操作が再開されます。 別のメソッドである可能性があります。|  
+|[DefineCatchHandlerILOffSet メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-definecatchhandleriloffset-method.md)|IL オフセットの非同期メソッドをラップする catch のコンパイラによって生成されたハンドラーを設定します。<br /><br /> 生成された catch の IL オフセットは、ユーザー コード メソッドが発生する場合でも、非ユーザー コードの場合と同様に、catch を処理するために、デバッガーによって使用されます。 具体的への応答で使用される、 **CatchHandlerFound**例外イベント。|  
 |[DefineKickoffMethod メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-definekickoffmethod-method.md)|非同期操作を開始する開始メソッドを設定します。|  
   
-## <a name="requirements"></a>要件  
- **ヘッダー:** CorSym.idl、CorSym.h  
+## <a name="requirements"></a>必要条件  
+ **ヘッダー:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>関連項目  
- [シンボル ストア診断インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a>関連項目
+
+- [シンボル ストア診断インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

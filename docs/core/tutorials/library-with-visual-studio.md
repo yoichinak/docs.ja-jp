@@ -1,18 +1,18 @@
 ---
-title: Visual Studio 2017 を使用して C# .NET Standard クラス ライブラリを構築する
+title: Visual Studio 2017 を使用して C# .NET Standard ライブラリを構築する
 description: Visual Studio 2017 を使用して C# で記述された .NET Standard クラス ライブラリを作成する方法について説明します。
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/07/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 0c98f8c8fc4847570964d8d4ea8deb221164441d
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 440ef2ed398b22262923422efd7f1259e3ee9b74
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168937"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633691"
 ---
-# <a name="build-a-net-standard-class-library-with-c-and-the-net-core-sdk-in-visual-studio-2017"></a>Visual Studio 2017 の C# と .NET Core を使用して .NET Standard クラス ライブラリを構築する
+# <a name="build-a-net-standard-library-with-c-and-the-net-core-sdk-in-visual-studio-2017"></a>Visual Studio 2017 の C# と .NET Core を使用して .NET Standard ライブラリを構築する
 
 "*クラス ライブラリ*" は、アプリケーションから呼び出される型とメソッドを定義します。 .NET Standard 2.0 をターゲットとするクラス ライブラリでは、お使いのライブラリを、そのバージョンの .NET Standard をサポートする任意の .NET 実装によって呼び出すことができます。 クラス ライブラリを完了させたら、サードパーティ製のコンポーネントとして配布するかどうか、あるいは 1 つまたは複数のアプリケーションにバンドルされたコンポーネントとして含めるかどうかを決定できます。
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0810ba945c1ed5874dae79704362a399c7349604
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa633d554652050af51065e11221f898b34d5c63
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445823"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772673"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a>IMetaDataAssemblyImport::GetAssemblyRefProps メソッド
 指定したメタデータ シグネチャを持つアセンブリ参照のプロパティのセットを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetAssemblyRefProps (  
     [in]  mdAssemblyRef        mdar,   
     [out] const void          **ppbPublicKeyOrToken,   
@@ -44,7 +44,7 @@ HRESULT GetAssemblyRefProps (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `mdar`  
  [in]`mdAssemblyRef`プロパティを取得する対象のアセンブリ参照を表すメタデータ トークン。  
   
@@ -61,7 +61,7 @@ HRESULT GetAssemblyRefProps (
  [in]ワイド文字単位のサイズの`szName`します。  
   
  `pchName`  
- [out]実際に返されるワイド文字数へのポインター`szName`です。  
+ [out]実際に返されるワイド文字数へのポインター`szName`します。  
   
  `pMetaData`  
  [out]アセンブリのメタデータを含む ASSEMBLYMETADATA 構造体へのポインター。  
@@ -70,22 +70,23 @@ HRESULT GetAssemblyRefProps (
  [out]ハッシュ値へのポインター。 これは、sha-1 アルゴリズムを使用して、ハッシュ、 `PublicKey` 、arfFullOriginator のフラグを設定しない限り、参照されるアセンブリのプロパティ、 [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md)列挙型を設定します。  
   
  `pcbHashValue`  
- [out]返されるハッシュ値のワイド文字の数。  
+ [out]返されたハッシュ値のワイド文字の数。  
   
  `pdwAssemblyRefFlags`  
- [out]アセンブリに適用されるメタデータを記述するフラグをへのポインター。 フラグの値は 1 つまたは複数の組み合わせ[CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)値。  
+ [out]アセンブリに適用されるメタデータを記述するフラグをへのポインター。 フラグの値は、1 つ以上の組み合わせ[CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)値。  
   
 ## <a name="return-value"></a>戻り値  
- このメソッドは、それが成功した場合は S_OK を返します。それ以外の場合、Winerror.h ヘッダー ファイルで定義されているエラー コードのいずれかを返します。  
+ このメソッドは、成功の場合は S_OK を返します。それ以外の場合、Winerror.h ヘッダー ファイルで定義されているエラー コードのいずれかを返します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
  **ライブラリ:** MsCorEE.dll にリソースとして使用  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataAssemblyImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [IMetaDataAssemblyImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

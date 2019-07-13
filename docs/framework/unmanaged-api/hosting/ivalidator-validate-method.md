@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf2c343db459879ca95372e104aee68b22dee6b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 840a3779ca5692787c2c352db60a29d6a4d4ba4f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440618"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768593"
 ---
 # <a name="ivalidatorvalidate-method"></a>IValidator::Validate メソッド
 指定したポータブル実行可能 (PE) または Microsoft intermediate language (MSIL) ファイルを検証します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Validate (  
     [in] IVEHandler            *veh,  
     [in] IUnknown              *pAppDomain,  
@@ -42,39 +42,36 @@ HRESULT Validate (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `veh`  
- [in]ポインター、`IVEHandler`妥当性確認エラーを処理するインスタンス。  
+ [in]ポインター、`IVEHandler`検証エラーを処理するインスタンス。  
   
  `pAppDomain`  
  [in]ファイルが読み込まれているアプリケーション ドメインへのポインター。  
   
  `ulFlags`  
- [in]ビットごとの組み合わせ[ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md)を実行するか、検証を示す値。  
+ [in]ビットごとの組み合わせ[ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md)実行される検証を示す値。  
   
  `ulMaxError`  
  [in]検証を終了する前に許可されるエラーの最大数。  
   
  `token`  
- [in]使用しません。  
+ [in]使用されません。  
   
  `fileName`  
- [in]検証に使用するファイルの名前を指定する文字列。  
+ [in]検証するファイルの名前を指定する文字列。  
   
  `pe`  
  [in]ファイルが格納されているメモリ バッファーへのポインター。  
   
  `ulSize`  
- [in]検証に使用するファイルのバイト単位のサイズ。  
+ [in]検証するファイルのバイト単位のサイズ。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** IValidator.idl、IValidator.h  
+ **ヘッダー:** IValidator.idl, IValidator.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
-  
-## <a name="see-also"></a>関連項目  
- 
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  

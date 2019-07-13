@@ -2,29 +2,29 @@
 title: セキュリティによるピア チャネル アプリケーションの保護
 ms.date: 03/30/2017
 ms.assetid: d4a0311d-3f78-4525-9c4b-5c93c4492f28
-ms.openlocfilehash: 725e629a187261a5bc50d880f75b942734df960b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4b52e0476ce6ac54a2e4a3a8cfceb112d662186b
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497556"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959885"
 ---
 # <a name="securing-peer-channel-applications"></a>セキュリティによるピア チャネル アプリケーションの保護
-[!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] での他のバインディングと同様に、`NetPeerTcpBinding` には、既定で有効にされているセキュリティがあり、トランスポート ベースのセキュリティとメッセージ ベースのセキュリティが提供されます。 このトピックでは、これら 2 種類のセキュリティについて説明します。 セキュリティの種類は、バインディング仕様のセキュリティ モード タグ (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`) で指定します。  
+などの他のバインディング、WinFX`NetPeerTcpBinding`セキュリティが既定で有効になっているし、両方 (または両方) のトランスポートとメッセージ ベースのセキュリティを提供します。 このトピックでは、これら 2 種類のセキュリティについて説明します。 セキュリティの種類は、バインディング仕様のセキュリティ モード タグ (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`) で指定します。  
   
 ## <a name="transport-based-security"></a>トランスポート ベースのセキュリティ  
  ピア チャネルでは、トランスポートをセキュリティで保護するための 2 種類の認証資格情報がサポートされます。両方とも、関連する `ClientCredentialSettings.Peer` で `ChannelFactory` プロパティを設定する必要があります。  
   
--   パスワード。 クライアントは、接続の認証に秘密パスワードの知識を利用します。 この種類の資格情報を使用する場合、`ClientCredentialSettings.Peer.MeshPassword` は、有効なパスワードと、必要に応じて `X509Certificate2` インスタンスを転送する必要があります。  
+- パスワード。 クライアントは、接続の認証に秘密パスワードの知識を利用します。 この種類の資格情報を使用する場合、`ClientCredentialSettings.Peer.MeshPassword` は、有効なパスワードと、必要に応じて `X509Certificate2` インスタンスを転送する必要があります。  
   
--   証明書。 特定のアプリケーション認証を使用します。 この種類の資格情報を使用する場合は、<xref:System.IdentityModel.Selectors.X509CertificateValidator> で `ClientCredentialSettings.Peer.PeerAuthentication` の具体的な実装を使用する必要があります。  
+- 証明書。 特定のアプリケーション認証を使用します。 この種類の資格情報を使用する場合は、<xref:System.IdentityModel.Selectors.X509CertificateValidator> で `ClientCredentialSettings.Peer.PeerAuthentication` の具体的な実装を使用する必要があります。  
   
 ## <a name="message-based-security"></a>メッセージ ベース セキュリティ  
  メッセージ セキュリティを使用すると、アプリケーションで送信メッセージに署名できるので、メッセージが信頼されたパーティから送信されたこと、および転送中にメッセージが改ざんされていないことをすべての受信パーティが確認できます。 現在、ピア チャネルでは、X.509 資格情報メッセージの署名のみがサポートされます。  
   
 ## <a name="best-practices"></a>ベスト プラクティス  
   
--   ここでは、ピア チャネル アプリケーションをセキュリティで保護するためのベスト プラクティスについて説明します。  
+- ここでは、ピア チャネル アプリケーションをセキュリティで保護するためのベスト プラクティスについて説明します。  
   
 ### <a name="enable-security-with-peer-channel-applications"></a>ピア チャネル アプリケーションでセキュリティを有効にする  
  ピア チャネル プロトコルは分散的な性質のため、セキュリティで保護されていないメッシュ内でメッシュ メンバーシップ、機密性、およびプライバシーを強化することは困難です。 クライアントとリゾルバー サービス間の通信をセキュリティで保護することも重要です。 PNRP (Peer Name Resolution Protocol) では、セキュリティで保護された名前を使用してスプーフィングや他の一般的な攻撃を回避してください。 カスタム リゾルバー サービスをセキュリティで保護するには、メッセージ ベース セキュリティおよびトランスポート ベース セキュリティの両方を含むリゾルバー サービスにアクセスするためにクライアントが使用する接続でセキュリティを有効にします。  
@@ -41,6 +41,7 @@ ms.locfileid: "33497556"
 ## <a name="peer-channel-code-examples"></a>ピア チャネルのコード例  
  [ピア チャネルのシナリオ](../../../../docs/framework/wcf/feature-details/peer-channel-scenarios.md)  
   
-## <a name="see-also"></a>関連項目  
- [ピア チャネルのセキュリティ](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)  
- [ピア チャネル アプリケーションの構築](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+## <a name="see-also"></a>関連項目
+
+- [ピア チャネルのセキュリティ](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)
+- [ピア チャネル アプリケーションの構築](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

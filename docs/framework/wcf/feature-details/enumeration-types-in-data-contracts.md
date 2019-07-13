@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: ed4a0c572f651793a40cb5ffcaa32aef884c1cec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f8d399859e4f861158ab74db9ed410aec280dbe2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494518"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586678"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>データ コントラクトの列挙型
 列挙はデータ コントラクト モデルで表現できます。 このトピックでは、いくつかの例を通してプログラミング モデルを説明します。  
@@ -30,7 +30,7 @@ ms.locfileid: "33494518"
  <xref:System.Runtime.Serialization.DataContractAttribute> プロパティ (<xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> と <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>) を、列挙データ コントラクトとして通常通り使用できます。  
   
 ### <a name="enumeration-member-values"></a>列挙メンバー値  
- 通常、データ コントラクトには、数値ではなく列挙メンバー名が含まれます。 ただし、受信側が WCF クライアントの場合は、データ コントラクト モデルを使用している場合、エクスポートされたスキーマは、数値を保持します。 これはいない大文字と小文字を使用する場合、 [XmlSerializer クラスを使用して](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)です。  
+ 通常、データ コントラクトには、数値ではなく列挙メンバー名が含まれます。 ただし、受信側が WCF クライアントの場合は、データ コントラクト モデルを使用している場合、エクスポートされたスキーマには、数値が保持されます。 ない場合を使用する場合に注意してください、 [XmlSerializer クラスを使用して](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)します。  
   
  前の例では、`condition` が `Used` に設定され、データが XML にシリアル化されると、結果の XML は `<condition>Used</condition>` になりますが `<condition>1</condition>` にはなりません。 したがって、次のデータ コントラクトは、`CarConditionEnum` のデータ コントラクトと同じです。  
   
@@ -39,13 +39,13 @@ ms.locfileid: "33494518"
   
  たとえば、`CarConditionEnum` を送信側で使用し、`CarConditionWithNumbers` を受信側で使用できます。 送信側で `Used` に値 "1" を使用し、受信側で値 "20" を使用しても、XML 表現は送信側と受信側共に `<condition>Used</condition>` です。  
   
- データ コントラクトに含めるには、<xref:System.Runtime.Serialization.EnumMemberAttribute> 属性を適用する必要があります。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] では、列挙に特殊な値 0 (ゼロ) を常に割り当てることができます。これはまた、すべての列挙の既定値になります。 ただし、この特殊値ゼロも <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性を使用してマークされない限りシリアル化できません。  
+ データ コントラクトに含めるには、<xref:System.Runtime.Serialization.EnumMemberAttribute> 属性を適用する必要があります。 .NET framework では、常に特別な値が 0 (ゼロ) も任意の列挙体の既定値は、列挙型に適用できます。 ただし、この特殊値ゼロも <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性を使用してマークされない限りシリアル化できません。  
   
  これには、次のような 2 つの例外があります。  
   
--   フラグ列挙体 (このトピックの後で説明)  
+- フラグ列挙体 (このトピックの後で説明)  
   
--   <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> プロパティが `false` に設定された列挙データ メンバー (この場合、値がゼロの列挙はシリアル化されたデータから除外される)  
+- <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> プロパティが `false` に設定された列挙データ メンバー (この場合、値がゼロの列挙はシリアル化されたデータから除外される)  
   
 ### <a name="customizing-enumeration-member-values"></a>列挙メンバー値のカスタマイズ  
  データ コントラクトの一部を形成する列挙メンバー値は、<xref:System.Runtime.Serialization.EnumMemberAttribute.Value%2A> 属性の <xref:System.Runtime.Serialization.EnumMemberAttribute> プロパティを使ってカスタマイズできます。  
@@ -79,11 +79,11 @@ ms.locfileid: "33494518"
   
  フラグの列挙値を送信する手順を次に示します。  
   
-1.  数値にマップする列挙メンバー (<xref:System.Runtime.Serialization.EnumMemberAttribute> 属性が適用されている) の検索を試みます。 見つかった場合、そのメンバーのみを含むリストを送信します。  
+1. 数値にマップする列挙メンバー (<xref:System.Runtime.Serialization.EnumMemberAttribute> 属性が適用されている) の検索を試みます。 見つかった場合、そのメンバーのみを含むリストを送信します。  
   
-2.  合計の各部にマップされる列挙メンバー (それぞれに <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性が適用されている) が存在するような形で、数値をこの合計に分割します。 このメンバーすべてのリストを送信します。 注意してください、*最長一致アルゴリズム*をこのような合計を検索するために使用し、したがってでも存在する場合は、このような合計が表示される保証はありません。 この問題を回避するには、列挙メンバーの数値を必ず 2 の累乗数にします。  
+2. 合計の各部にマップされる列挙メンバー (それぞれに <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性が適用されている) が存在するような形で、数値をこの合計に分割します。 このメンバーすべてのリストを送信します。 なお、*最長一致アルゴリズム*、このような合計を検索するために使用し、したがってが存在する場合でも、このような合計が検出される保証はありません。 この問題を回避するには、列挙メンバーの数値を必ず 2 の累乗数にします。  
   
-3.  前の 2 つの手順が失敗し、数値がゼロ以外の場合、<xref:System.Runtime.Serialization.SerializationException> をスローします。 数値がゼロの場合、空のリストを送信します。  
+3. 前の 2 つの手順が失敗し、数値がゼロ以外の場合、<xref:System.Runtime.Serialization.SerializationException> をスローします。 数値がゼロの場合、空のリストを送信します。  
   
 ### <a name="example"></a>例  
  フラグ操作で使用できる列挙の例を次に示します。  
@@ -96,7 +96,8 @@ ms.locfileid: "33494518"
  [!code-csharp[c_DataContractEnumerations#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractenumerations/cs/source.cs#5)]
  [!code-vb[c_DataContractEnumerations#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractenumerations/vb/source.vb#5)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- [データ コントラクトの使用](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [サービス コントラクトでのデータ転送の指定](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- [データ コントラクトの使用](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [サービス コントラクトでのデータ転送の指定](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

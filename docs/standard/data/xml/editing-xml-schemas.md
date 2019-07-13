@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fc8df722acd5c9547833cb4fe3051e1590c6c627
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 119c4c13c90aeca8c14d2725d927c38be32212a6
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087674"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59308719"
 ---
 # <a name="editing-xml-schemas"></a>XML スキーマの編集
 XML スキーマの編集は、スキーマ オブジェクト モデル (SOM) の最も重要な機能の 1 つです。 XML スキーマの既存の値を変更する場合、SOM のスキーマ コンパイル前のすべてのプロパティを使用できます。 その後、XML スキーマを再コンパイルすると、変更が反映されます。  
@@ -27,19 +27,19 @@ XML スキーマの編集は、スキーマ オブジェクト モデル (SOM) �
 ### <a name="phonenumber-element-example"></a>PhoneNumber 要素の例  
  この最初のコード サンプルでは、カスタム スキーマの `PhoneNumber` 要素に新しい `Customer` 要素を追加します。 このコード サンプルでは、次の手順でカスタム スキーマの編集を行います。  
   
-1.  カスタム スキーマを新しい <xref:System.Xml.Schema.XmlSchemaSet> オブジェクトに追加し、コンパイルします。 スキーマの読み取りまたはコンパイル時に発生するスキーマ検証に関する警告とエラーは、<xref:System.Xml.Schema.ValidationEventHandler> デリゲートで処理されます。  
+1. カスタム スキーマを新しい <xref:System.Xml.Schema.XmlSchemaSet> オブジェクトに追加し、コンパイルします。 スキーマの読み取りまたはコンパイル時に発生するスキーマ検証に関する警告とエラーは、<xref:System.Xml.Schema.ValidationEventHandler> デリゲートで処理されます。  
   
-2.  <xref:System.Xml.Schema.XmlSchema> プロパティを反復処理して、<xref:System.Xml.Schema.XmlSchemaSet> からコンパイルされた <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> オブジェクトを取得します。 スキーマはコンパイルされているため、スキーマのコンパイル後の情報セット (PSCI) プロパティにアクセスできます。  
+2. <xref:System.Xml.Schema.XmlSchema> プロパティを反復処理して、<xref:System.Xml.Schema.XmlSchemaSet> からコンパイルされた <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> オブジェクトを取得します。 スキーマはコンパイルされているため、スキーマのコンパイル後の情報セット (PSCI) プロパティにアクセスできます。  
   
-3.  `PhoneNumber` クラスを使用する <xref:System.Xml.Schema.XmlSchemaElement> 要素を作成し、`xs:string` クラスおよび <xref:System.Xml.Schema.XmlSchemaSimpleType> クラスを使用する <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction> 単純型の制限を作成し、制限の <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction.Facets%2A> プロパティに pattern ファセットを追加し、単純型の <xref:System.Xml.Schema.XmlSchemaSimpleType.Content%2A> プロパティに制限を追加して、<xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A> 要素の `PhoneNumber` に単純型を追加します。  
+3. `PhoneNumber` クラスを使用する <xref:System.Xml.Schema.XmlSchemaElement> 要素を作成し、`xs:string` クラスおよび <xref:System.Xml.Schema.XmlSchemaSimpleType> クラスを使用する <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction> 単純型の制限を作成し、制限の <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction.Facets%2A> プロパティに pattern ファセットを追加し、単純型の <xref:System.Xml.Schema.XmlSchemaSimpleType.Content%2A> プロパティに制限を追加して、<xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A> 要素の `PhoneNumber` に単純型を追加します。  
   
-4.  スキーマ コンパイル後の <xref:System.Xml.Schema.XmlSchemaElement> コレクションの <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> コレクションで、それぞれの <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> を反復処理します。  
+4. スキーマ コンパイル後の <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> コレクションの <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> コレクションで、それぞれの <xref:System.Xml.Schema.XmlSchemaElement> を反復処理します。  
   
-5.  要素の <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> が `"Customer"` である場合、`Customer` クラスを使用する複合型の <xref:System.Xml.Schema.XmlSchemaComplexType> 要素と <xref:System.Xml.Schema.XmlSchemaSequence> クラスを使用する複合型の sequence のパーティクルを取得します。  
+5. 要素の <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> が `"Customer"` である場合、`Customer` クラスを使用する複合型の <xref:System.Xml.Schema.XmlSchemaComplexType> 要素と <xref:System.Xml.Schema.XmlSchemaSequence> クラスを使用する複合型の sequence のパーティクルを取得します。  
   
-6.  シーケンスのスキーマ コンパイル前の `PhoneNumber` コレクションを使用する既存の `FirstName` 要素および `LastName` 要素を格納するシーケンスに、新しい <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A> 要素を追加します。  
+6. シーケンスのスキーマ コンパイル前の <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A> コレクションを使用する既存の `FirstName` 要素および `LastName` 要素を格納するシーケンスに、新しい `PhoneNumber` 要素を追加します。  
   
-7.  最後に、<xref:System.Xml.Schema.XmlSchema> クラスの <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> および <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> メソッドを使用して、変更された <xref:System.Xml.Schema.XmlSchemaSet> オブジェクトの再処理とコンパイルを行って、コンソールに出力します。  
+7. 最後に、<xref:System.Xml.Schema.XmlSchema> クラスの <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> および <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> メソッドを使用して、変更された <xref:System.Xml.Schema.XmlSchemaSet> オブジェクトの再処理とコンパイルを行って、コンソールに出力します。  
   
  完全なコード サンプルを次に示します。  
   
@@ -76,34 +76,34 @@ XML スキーマの編集は、スキーマ オブジェクト モデル (SOM) �
   
  このコード サンプルでは、次の手順でカスタム スキーマの編集を行います。  
   
-1.  カスタム スキーマを新しい <xref:System.Xml.Schema.XmlSchemaSet> オブジェクトに追加し、コンパイルします。 スキーマの読み取りまたはコンパイル時に発生するスキーマ検証に関する警告とエラーは、<xref:System.Xml.Schema.ValidationEventHandler> デリゲートで処理されます。  
+1. カスタム スキーマを新しい <xref:System.Xml.Schema.XmlSchemaSet> オブジェクトに追加し、コンパイルします。 スキーマの読み取りまたはコンパイル時に発生するスキーマ検証に関する警告とエラーは、<xref:System.Xml.Schema.ValidationEventHandler> デリゲートで処理されます。  
   
-2.  <xref:System.Xml.Schema.XmlSchema> プロパティを反復処理して、<xref:System.Xml.Schema.XmlSchemaSet> からコンパイルされた <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> オブジェクトを取得します。 スキーマはコンパイルされているため、スキーマのコンパイル後の情報セット (PSCI) プロパティにアクセスできます。  
+2. <xref:System.Xml.Schema.XmlSchema> プロパティを反復処理して、<xref:System.Xml.Schema.XmlSchemaSet> からコンパイルされた <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> オブジェクトを取得します。 スキーマはコンパイルされているため、スキーマのコンパイル後の情報セット (PSCI) プロパティにアクセスできます。  
   
-3.  `FirstName` クラスを使用して <xref:System.Xml.Schema.XmlSchemaComplexType> 要素に対する複合型を新しく作成します。  
+3. `FirstName` クラスを使用して <xref:System.Xml.Schema.XmlSchemaComplexType> 要素に対する複合型を新しく作成します。  
   
-4.  `xs:string` および <xref:System.Xml.Schema.XmlSchemaSimpleContent> クラスを使用して、<xref:System.Xml.Schema.XmlSchemaSimpleContentExtension> の基本型を使った単純なコンテンツの拡張型を新しく作成します。  
+4. `xs:string` および <xref:System.Xml.Schema.XmlSchemaSimpleContent> クラスを使用して、<xref:System.Xml.Schema.XmlSchemaSimpleContentExtension> の基本型を使った単純なコンテンツの拡張型を新しく作成します。  
   
-5.  `Title` の <xref:System.Xml.Schema.XmlSchemaAttribute> を使用して、<xref:System.Xml.Schema.XmlSchemaAttribute.SchemaTypeName%2A> クラスを使用する `xs:string` 属性を新しく作成し、その属性を単純なコンテンツの拡張型に追加します。  
+5. `Title` の <xref:System.Xml.Schema.XmlSchemaAttribute> を使用して、<xref:System.Xml.Schema.XmlSchemaAttribute.SchemaTypeName%2A> クラスを使用する `xs:string` 属性を新しく作成し、その属性を単純なコンテンツの拡張型に追加します。  
   
-6.  単純なコンテンツのコンテンツ モデルを単純なコンテンツの拡張型に設定し、複合型のコンテンツ モデルを単純なコンテンツに設定します。  
+6. 単純なコンテンツのコンテンツ モデルを単純なコンテンツの拡張型に設定し、複合型のコンテンツ モデルを単純なコンテンツに設定します。  
   
-7.  スキーマ コンパイル前の <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> コレクションに、新しい複合型を追加します。  
+7. スキーマ コンパイル前の <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> コレクションに、新しい複合型を追加します。  
   
-8.  スキーマのコンパイル前の <xref:System.Xml.Schema.XmlSchemaObject> コレクションで、それぞれの <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> を反復処理します。  
+8. スキーマのコンパイル前の <xref:System.Xml.Schema.XmlSchemaObject> コレクションで、それぞれの <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> を反復処理します。  
   
 > [!NOTE]
 >  `FirstName` 要素はスキーマのグローバル要素ではないため、<xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> または <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> コレクションでは使用できません。 コード サンプルでは、`FirstName` 要素を検索するために、最初に `Customer` 要素の検索を行います。  
 >   
 >  最初のコード サンプルでは、スキーマ コンパイル後の <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> コレクションを使用してスキーマを走査しました。 このサンプルでは、スキーマ コンパイル前の <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> コレクションを使用してスキーマを走査します。 どちらのコレクションでもスキーマのグローバル要素にアクセスできますが、<xref:System.Xml.Schema.XmlSchema.Items%2A> コレクションで反復処理を行う場合、スキーマ内のすべてのグローバル要素に対して反復処理を行う必要があり、スキーマに PSCI プロパティが存在しないため、処理時間が長くなります。 PSCI コレクション (<xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>、<xref:System.Xml.Schema.XmlSchema.Attributes%2A?displayProperty=nameWithType>、<xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A?displayProperty=nameWithType> など) では、グローバルな要素、属性、型、および PSCI プロパティに直接アクセスできます。  
   
-1.  <xref:System.Xml.Schema.XmlSchemaObject> が要素 (その <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> が `"Customer"`) である場合、`Customer` クラスを使用する複合型の <xref:System.Xml.Schema.XmlSchemaComplexType> 要素と <xref:System.Xml.Schema.XmlSchemaSequence> クラスを使用する複合型の sequence のパーティクルを取得します。  
+1. <xref:System.Xml.Schema.XmlSchemaObject> が要素 (その <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> が `"Customer"`) である場合、`Customer` クラスを使用する複合型の <xref:System.Xml.Schema.XmlSchemaComplexType> 要素と <xref:System.Xml.Schema.XmlSchemaSequence> クラスを使用する複合型の sequence のパーティクルを取得します。  
   
-2.  スキーマのコンパイル前の <xref:System.Xml.Schema.XmlSchemaParticle> コレクションで、それぞれの <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType> を反復処理します。  
+2. スキーマのコンパイル前の <xref:System.Xml.Schema.XmlSchemaParticle> コレクションで、それぞれの <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType> を反復処理します。  
   
-3.  <xref:System.Xml.Schema.XmlSchemaParticle> が要素 (その <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> が `"FirstName"`) である場合、<xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> 要素の `FirstName` を新しい `FirstName` 複合型に設定します。  
+3. <xref:System.Xml.Schema.XmlSchemaParticle> が要素 (その <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> が `"FirstName"`) である場合、<xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> 要素の `FirstName` を新しい `FirstName` 複合型に設定します。  
   
-4.  最後に、<xref:System.Xml.Schema.XmlSchema> クラスの <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> および <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> メソッドを使用して、変更された <xref:System.Xml.Schema.XmlSchemaSet> オブジェクトの再処理とコンパイルを行って、コンソールに出力します。  
+4. 最後に、<xref:System.Xml.Schema.XmlSchema> クラスの <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> および <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> メソッドを使用して、変更された <xref:System.Xml.Schema.XmlSchemaSet> オブジェクトの再処理とコンパイルを行って、コンソールに出力します。  
   
  完全なコード サンプルを次に示します。  
   
@@ -137,10 +137,10 @@ XML スキーマの編集は、スキーマ オブジェクト モデル (SOM) �
   
 ## <a name="see-also"></a>関連項目
 
-- [XML スキーマ オブジェクト モデルの概要](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
-- [XML スキーマの読み取りと書き込み](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
-- [XML スキーマの作成](../../../../docs/standard/data/xml/building-xml-schemas.md)  
-- [XML スキーマの走査](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
-- [XML スキーマのインクルードまたはインポート](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
-- [スキーマをコンパイルするための XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- [XML スキーマ オブジェクト モデルの概要](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
+- [XML スキーマの読み取りと書き込み](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
+- [XML スキーマの作成](../../../../docs/standard/data/xml/building-xml-schemas.md)
+- [XML スキーマの走査](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
+- [XML スキーマのインクルードまたはインポート](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
+- [スキーマをコンパイルするための XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
 - [スキーマのコンパイル後の情報セット](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

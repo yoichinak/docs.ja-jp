@@ -8,24 +8,24 @@ helpviewer_keywords:
 - properties [Windows Forms], defining in code
 - custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
-ms.openlocfilehash: c21aee867fc78c55e62eb183bb1a12ebf1c472e8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f2f36cc7fe59262e1e16b913e18daa7363240847
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858667"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648042"
 ---
 # <a name="defining-a-property-in-windows-forms-controls"></a>Windows フォーム コントロールのプロパティの定義
-プロパティの概要については、「[プロパティの概要](https://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52)」を参照してください。 プロパティを定義するときには、いくつかの重要な考慮事項があります。  
+プロパティの概要については、「[プロパティの概要](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120))」を参照してください。 プロパティを定義するときには、いくつかの重要な考慮事項があります。  
   
--   定義するプロパティに属性を適用する必要があります。 属性によって、デザイナーでプロパティがどのように表示されるかが指定されます。 詳細については、「[コンポーネントのデザイン時属性](https://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)」を参照してください。  
+- 定義するプロパティに属性を適用する必要があります。 属性によって、デザイナーでプロパティがどのように表示されるかが指定されます。 詳細については、「[コンポーネントのデザイン時属性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120))」を参照してください。  
   
--   プロパティを変更するコントロールの視覚的な表示に影響する場合、<xref:System.Windows.Forms.Control.Invalidate%2A>メソッド (から継承したコントロールを<xref:System.Windows.Forms.Control>) から、`set`アクセサー。 <xref:System.Windows.Forms.Control.Invalidate%2A> 呼び出し、<xref:System.Windows.Forms.Control.OnPaint%2A>メソッドで、コントロールを再描画します。 複数回呼び出す<xref:System.Windows.Forms.Control.Invalidate%2A>を 1 回呼び出すと、<xref:System.Windows.Forms.Control.OnPaint%2A>効率が向上します。  
+- プロパティを変更するコントロールの視覚的な表示に影響する場合、<xref:System.Windows.Forms.Control.Invalidate%2A>メソッド (から継承したコントロールを<xref:System.Windows.Forms.Control>) から、`set`アクセサー。 <xref:System.Windows.Forms.Control.Invalidate%2A> 呼び出し、<xref:System.Windows.Forms.Control.OnPaint%2A>メソッドで、コントロールを再描画します。 複数回呼び出す<xref:System.Windows.Forms.Control.Invalidate%2A>を 1 回呼び出すと、<xref:System.Windows.Forms.Control.OnPaint%2A>効率が向上します。  
   
--   .NET Framework クラス ライブラリでは、整数、10 進数、ブール値など、一般的なデータ型に対応する型コンバーターを使用できます。 型コンバーターは、一般に文字列から値への変換を行うために使用されます (文字列データから他のデータ型に変換)。 一般的なデータ型は、値を文字列に変換し、文字列を適切なデータ型に変換する既定の型コンバーターに関連付けられています。 カスタム (つまり、非標準的な) データ型であるプロパティを定義する場合、そのプロパティに関連付けられる型コンバーターを指定する属性を適用する必要があります。 また、属性を使用してカスタム UI 型エディターとプロパティを関連付けることもできます。 UI 型エディターには、プロパティやデータ型を編集するためのユーザー インターフェイスが備わっています。 たとえば、カラー ピッカーなどの UI 型エディターがあります。 属性の例は、このトピックの最後に記載されています。  
+- .NET Framework クラス ライブラリでは、整数、10 進数、ブール値など、一般的なデータ型に対応する型コンバーターを使用できます。 型コンバーターは、一般に文字列から値への変換を行うために使用されます (文字列データから他のデータ型に変換)。 一般的なデータ型は、値を文字列に変換し、文字列を適切なデータ型に変換する既定の型コンバーターに関連付けられています。 カスタム (つまり、非標準的な) データ型であるプロパティを定義する場合、そのプロパティに関連付けられる型コンバーターを指定する属性を適用する必要があります。 また、属性を使用してカスタム UI 型エディターとプロパティを関連付けることもできます。 UI 型エディターには、プロパティやデータ型を編集するためのユーザー インターフェイスが備わっています。 たとえば、カラー ピッカーなどの UI 型エディターがあります。 属性の例は、このトピックの最後に記載されています。  
   
     > [!NOTE]
-    >  型コンバーターまたは UI 型エディターをカスタム プロパティに使用できない場合、「[デザイン時サポートの拡張](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)」に示されているものを実装できます。  
+    >  型コンバーターまたは UI 型エディターをカスタム プロパティに使用できない場合、「[デザイン時サポートの拡張](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))」に示されているものを実装できます。  
   
  次のコード フラグメントは、カスタム コントロール `FlashTrackBar` に対して `EndColor` という名前のカスタム プロパティを定義します。  
   
@@ -120,8 +120,9 @@ public int Value {
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Windows フォーム コントロールのプロパティ](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
- [ShouldSerialize メソッドと Reset メソッドによる既定値の定義](../../../../docs/framework/winforms/controls/defining-default-values-with-the-shouldserialize-and-reset-methods.md)  
- [プロパティ変更イベント](../../../../docs/framework/winforms/controls/property-changed-events.md)  
- [Windows フォーム コントロールの属性](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)
+## <a name="see-also"></a>関連項目
+
+- [Windows フォーム コントロールのプロパティ](properties-in-windows-forms-controls.md)
+- [ShouldSerialize メソッドと Reset メソッドによる既定値の定義](defining-default-values-with-the-shouldserialize-and-reset-methods.md)
+- [プロパティ変更イベント](property-changed-events.md)
+- [Windows フォーム コントロールの属性](attributes-in-windows-forms-controls.md)

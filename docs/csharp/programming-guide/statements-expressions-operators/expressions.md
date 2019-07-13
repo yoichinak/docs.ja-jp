@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: b2975403c38dbb2b73c10b147a6903013a1e5573
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c8856dfd1c6c8e35399c20b630c0d44493e42b6a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239291"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972197"
 ---
 # <a name="expressions-c-programming-guide"></a>式 (C# プログラミング ガイド)
 *式*とは、1 つの値、オブジェクト、メソッド、または名前空間に評価できる、1 つ以上のオペランドと 0 個以上の演算子のシーケンスです。 式には、リテラル値、メソッドの呼び出し、演算子とそのオペランド、または*簡易名*を含めることができます。 単純な名前には、変数、型メンバー、メソッド パラメーター、名前空間、または型の名前を指定できます。  
@@ -25,7 +25,7 @@ System.Convert.ToInt32("35");
 ```  
   
 ## <a name="expression-values"></a>式の値  
- ステートメントやメソッド パラメーターなど、式が使用されるコンテキストの大部分では、式はなんらかの値に評価されることが期待されます。 たとえば、x と y が整数である場合、式 `x + y` は数値に評価されます。 式 `new MyClass()` は、`MyClass` オブジェクトの新しいインスタンスへの参照に評価されます。 式 `myClass.ToString()` は、メソッドの戻り値の型である文字列に評価されます。 ただし、名前空間名については、分類上は式として扱われますが、値には評価されないため、式の最終結果になることはありません。 名前空間名は、メソッド パラメーターに渡すことはできません。また、新しい式で使用したり、変数に割り当てたりすることもできません。 名前空間名は、より大きい式の部分式としてのみ使用できます。 同じことが、型 (<xref:System.Type?displayProperty=nameWithType> オブジェクトとは異なります)、メソッド グループ名 (特定のメソッドとは異なります)、およびイベント アクセサーである [add](../../../csharp/language-reference/keywords/add.md) と [remove](../../../csharp/language-reference/keywords/remove.md) にも当てはまります。  
+ ステートメントやメソッド パラメーターなど、式が使用されるコンテキストの大部分では、式はなんらかの値に評価されることが期待されます。 たとえば、x と y が整数である場合、式 `x + y` は数値に評価されます。 式 `new MyClass()` は、`MyClass` クラスの新しいインスタンスへの参照に評価されます。 式 `myClass.ToString()` は、メソッドの戻り値の型である文字列に評価されます。 ただし、名前空間名については、分類上は式として扱われますが、値には評価されないため、式の最終結果になることはありません。 名前空間名は、メソッド パラメーターに渡すことはできません。また、新しい式で使用したり、変数に割り当てたりすることもできません。 名前空間名は、より大きい式の部分式としてのみ使用できます。 同じことが、型 (<xref:System.Type?displayProperty=nameWithType> オブジェクトとは異なります)、メソッド グループ名 (特定のメソッドとは異なります)、およびイベント アクセサーである [add](../../../csharp/language-reference/keywords/add.md) と [remove](../../../csharp/language-reference/keywords/remove.md) にも当てはまります。  
   
  すべての値には、型が関連付けられています。 たとえば、x と y が両方とも型 `int` の変数である場合、式 `x + y` の値も `int` として型指定されます。 異なる型の変数に値が割り当てられた場合や、x と y の型が異なる場合は、型変換の規則が適用されます。 このような変換の動作方法の詳細については、「[キャストと型変換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)」を参照してください。  
   
@@ -40,13 +40,13 @@ System.Convert.ToInt32("35");
 ## <a name="literals-and-simple-names"></a>リテラルと簡易名  
  式の中で最も単純なものはリテラルと簡易名です。 リテラルは、名前を持たない定数値です。 たとえば、次のコード例の `5` と `"Hello World"` は共にリテラル値です。  
   
- [!code-csharp[csProgGuideStatements#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_1.cs)]  
+ [!code-csharp[csProgGuideStatements#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#2)]  
   
  リテラルの詳細については、「[型](../../../csharp/language-reference/keywords/types.md)」を参照してください。  
   
  前の例の `i` と `s` は、どちらもローカル変数を識別する簡易名です。 これらの変数を式で使用すると、変数名は、変数のメモリ位置に現在格納されている値に評価されます。 以下の例を参照してください。  
   
- [!code-csharp[csProgGuideStatements#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_2.cs)]  
+ [!code-csharp[csProgGuideStatements#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#3)]  
 ## <a name="invocation-expressions"></a>Invocation 式  
  次のコード例では、`DoWork` の呼び出しが Invocation 式です。  
   
@@ -70,14 +70,14 @@ DoWork();
 
 C# は*式形式のメンバー*をサポートしています。式形式のメンバーを使用すると、メソッド、コンストラクター、ファイナライザー、プロパティ、およびインデクサー用に簡潔な式本体の定義を指定できます。 詳細については、「[式形式のメンバー](expression-bodied-members.md)」を参照してください。
 
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  変数、オブジェクト プロパティ、またはオブジェクトのインデクサー アクセスが式から識別されると、その項目の値が式の値として使用されます。 C# の式は、式が最終的に必要な型に評価される限り、値やオブジェクトが必要とされる任意の位置に配置できます。  
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [メソッド](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [デリゲート](../../../csharp/programming-guide/delegates/index.md)  
-- [演算子](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
-- [型](../../../csharp/programming-guide/types/index.md)  
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [メソッド](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [デリゲート](../../../csharp/programming-guide/delegates/index.md)
+- [演算子](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
+- [型](../../../csharp/programming-guide/types/index.md)
 - [LINQ クエリ式](../../../csharp/programming-guide/linq-query-expressions/index.md)

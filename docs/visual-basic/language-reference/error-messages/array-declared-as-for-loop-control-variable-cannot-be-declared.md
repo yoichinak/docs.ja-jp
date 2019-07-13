@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC32039
 ms.assetid: 1d8b6560-c9eb-4b71-a038-24c6f5a5ce46
-ms.openlocfilehash: f6cf397b1e76313ab399d5e39a43ae0263df619c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f24dd2a20dc3a4935cd288a20a0e12c1d47bee1
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587985"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912339"
 ---
 # <a name="array-declared-as-for-loop-control-variable-cannot-be-declared-with-an-initial-size"></a>ループ コントロール変数として宣言された配列を初期サイズで宣言することはできません
-A`For Each`ループとして配列を使用してその*要素*繰り返し変数がその配列を初期化します。  
+A`For Each`ループとして配列を使用してその*要素*繰り返し変数は、その配列を初期化します。  
   
- 次のステートメントでは、このエラーを生成する方法を示しています。  
+ 次のステートメントでは、このエラーの生成方法を示しています。  
   
 ```  
 Dim arrayList As New List(Of Integer())  
@@ -25,15 +25,16 @@ For Each listElement() As Integer In arrayList
 For Each listElement(1) As Integer In arrayList  
 ```  
   
- 最初の`For Each`ステートメントの要素にアクセスするための正しい方法は、`arrayList`です。 2 番目`For Each`ステートメントは、このエラーを生成します。  
+ 最初の`For Each`ステートメントの要素にアクセスする正しい方法は、`arrayList`します。 2 番目の`For Each`ステートメントには、このエラーが生成されます。  
   
  **エラー ID:** BC32039  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   宣言から初期化を削除、*要素*繰り返し変数。  
+- 宣言から初期化を削除、*要素*繰り返し変数。  
   
-## <a name="see-also"></a>関連項目  
- [For...Next ステートメント](../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [配列](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [コレクション](../../../standard/collections/index.md)
+## <a name="see-also"></a>関連項目
+
+- [For...Next ステートメント](../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [配列](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [コレクション](../../../standard/collections/index.md)

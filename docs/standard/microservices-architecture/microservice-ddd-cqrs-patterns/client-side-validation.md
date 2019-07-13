@@ -1,15 +1,13 @@
 ---
 title: クライアント側の検証 (プレゼンテーション層での検証)
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | クライアント側の検証の主な概念を調べる。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 3ec8ca932924c1b1b6750dd30750e3c1e56b7538
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4e72dcafafc3144a75afe1fd23a4a779f5667459
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130079"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644837"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>クライアント側の検証 (プレゼンテーション層での検証)
 
@@ -30,26 +28,26 @@ ms.locfileid: "53130079"
 ### <a name="validation-in-xamarin-mobile-apps"></a>Xamarin モバイル アプリの検証
 
 - **テキスト入力の検証とエラーの表示** \
-  [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
+  [https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
 - **検証コールバック** \
-  [*https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/*](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
+  <https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/>
 
 ### <a name="validation-in-aspnet-core-apps"></a>ASP.NET Core アプリの検証
 
 - **Rick Anderson の 検証の追加** \
-  [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
+  <https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation>
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>SPA Web アプリの検証 (Angular 2、TypeScript、JavaScript)
 
 - **Ado Kukic。Angular 2 フォームの検証** \
-  [*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
+  <https://scotch.io/tutorials/angular-2-form-validation>
 
 - **フォームの検証** \
-  [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
+  <https://angular.io/guide/form-validation>
 
 - **検証。** Breeze ドキュメント。 \
-  [*https://breeze.github.io/doc-js/validation.html*](https://breeze.github.io/doc-js/validation.html)
+  <https://breeze.github.io/doc-js/validation.html>
 
 要約すると、検証に関する最も重要な概念は次のとおりです。
 

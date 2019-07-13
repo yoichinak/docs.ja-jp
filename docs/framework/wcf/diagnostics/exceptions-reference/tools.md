@@ -3,14 +3,14 @@ title: ツール
 ms.date: 03/30/2017
 ms.assetid: 89c907f9-313f-408c-992a-631f1eadf1da
 ms.openlocfilehash: 6c4ada74c2fc6aba84eb1fe46f4d7cdee9978d13
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780745"
 ---
 # <a name="tools"></a>ツール
-このトピックでは、Windows Communication Foundation (WCF) ツールによって生成されたすべての例外を示します。  
+このトピックでは、Windows Communication Foundation (WCF) ツールによって生成されるすべての例外を使用します。  
   
 ## <a name="exception-list"></a>例外の一覧  
   
@@ -75,8 +75,8 @@ ms.locfileid: "33474615"
 |ErrInputConflictsWithMode|指定された対象から読み取った入力が、他のオプションと矛盾しています。|  
 |ErrDuplicateValuePassedToTypeArg|指定された値が指定されたオプションに繰り返し、渡されました。 各型は 1 回しか指定できません。|  
 |ErrInputEPRFileParseError|指定された対象からエンドポイント参照を読み取ることができません。 XML の形式が正しく、有効であることを確認してください。|  
-|ErrCouldNotCreateCodeProvider|渡された指定された値に対してコード プロバイダーを作成することはできません、/{1}引数。 コード プロバイダーが適切にインストールおよび構成されていることを確認してください。|  
-|ErrPathTooLongDirOnly|結果の指定されたパスが長すぎます。 指定された引数をレビューしてください。|  
+|ErrCouldNotCreateCodeProvider|渡された指定の値に対してコード プロバイダーを作成することはできません、/{1}引数。 コード プロバイダーが適切にインストールおよび構成されていることを確認してください。|  
+|ErrPathTooLongDirOnly|結果の指定されたパスが長すぎます。 指定された引数を確認してください。|  
 |HelpDataContractSerializer|シリアル化と逆シリアル化に DataContract シリアライザーを使用するデータ型を生成します。|  
 |ErrUnableToExportEndpoint|指定された名前空間の指定されたエンドポイント名を、アセンブリに対して読み込んだ構成ファイル内の指定されたサービス型にエクスポートしているときにエラーが発生しました。|  
 |HelpUsage1|ヘルプの使用方法を表示します。|  
@@ -91,7 +91,7 @@ ms.locfileid: "33474615"
 |ErrDirectoryInsteadOfFile|指定された入力パスは、ディレクトリのように思われます。 URL またはファイル パスを入力する必要があります。|  
 |HelpConfig|指定した名前を持つ構成ファイルを生成するようにツールに指示します。 既定 : output.config。|  
 |ErrSingleUseSwitch|指定されたオプションを繰り返し指定することはできません。|  
-|警告|警告:|  
+|警告|警告 :|  
 |WrnAmbiguousServiceConfig|指定された構成名を持つ複数のサービス構成が見つかりました。次のアセンブリが指定されています。|  
 |ErrInvalidInputPath|指定された入力パスは、既存のファイルを参照していないように思われます。また、有効な URI ではないように思われます。|  
 |ErrUnableToLoadInputs|読み込まれたメタデータの読み取り中にエラーが発生しました。|  
@@ -114,7 +114,7 @@ ms.locfileid: "33474615"
 |HelpCommonOptionsCategory|-= 共通のオプション =-|  
 |ParametersServiceName|\<serviceConfigName>|  
 |ErrNoValidInputFilesSpecified|有効な入力ファイルが指定されていません。 メタデータ ドキュメントまたはアセンブリ ファイルを指定してください。|  
-|ParametersLanguage|\<言語 >|  
+|ParametersLanguage|\<language>|  
 |ErrUnableToLoadMetadataDocument|読み込んだドキュメントの 1 つからメタデータを読み取っているときにエラーが発生しました。 ドキュメント識別子が指定されています。|  
 |ErrConflictingInputs|指定された入力引数は、ツール操作の別のモードを意味するため、指定された対象と競合しています。|  
 |WrnUnableToLoadContractForValidation|コントラクトの型の読み込み中にエラーが発生しました。 型と詳細が指定されています。|  
@@ -125,7 +125,7 @@ ms.locfileid: "33474615"
 |GeneratingFiles|ファイルを生成しています...|  
 |ErrCannotSpecifyMultipleMappingsForNamespace|無効な値が、指定されたオプションに渡されました。 指定されたターゲット名前空間は、指定された複数の CLR 名前空間にマップできません。|  
 |ErrCouldNotLoadReferenceAssemblyAt|指定された参照アセンブリを読み込めません。|  
-|ParametersOut|\<ファイル >|  
+|ParametersOut|\<file>|  
 |NoCodeWasGeneratedSuggestDCOnly|スキーマからコントラクトを生成するには、指定されたオプションを使用してください。|  
 |ErrUnableToLoadInputConfig|指定された構成ファイルを読み込むことができません。|  
 |ErrUnexpectedDelimiter|オプションの先頭には、無効な引数区切り記号 (':' または '=') を使用できません。|  

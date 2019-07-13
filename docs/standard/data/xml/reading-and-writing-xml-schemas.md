@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: b5757c4a-ea59-467e-ac62-be2bfe24eb77
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 241ff40448c3dca2846f9e420dc7df41427dc79d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: f80157ddf394fdd058793830bfe3052b41ad1e40
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841204"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576487"
 ---
 # <a name="reading-and-writing-xml-schemas"></a>XML スキーマの読み取りと書き込み
 スキーマ オブジェクト モデル (SOM) API を使用すると、ファイルまたは他のソースから XML スキーマ定義言語 (XSD) スキーマを読み取ったり、書き込んだりできます。また、W3C (World Wide Web Consortium) 勧告『XML Schema』で定義された構造に割り当てられた <xref:System.Xml.Schema?displayProperty=nameWithType> 名前空間のクラスを使用してメモリ内に XML スキーマを作成することもできます。  
@@ -49,11 +49,11 @@ ms.locfileid: "48841204"
   
 ## <a name="see-also"></a>関連項目
 
-- [XML スキーマ オブジェクト モデルの概要](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
-- [XML スキーマの作成](../../../../docs/standard/data/xml/building-xml-schemas.md)  
-- [XML スキーマの走査](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
-- [XML スキーマの編集](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
-- [XML スキーマのインクルードまたはインポート](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
-- [スキーマをコンパイルするための XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
-- [スキーマのコンパイル後の情報セット](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)  
+- [XML スキーマ オブジェクト モデルの概要](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
+- [XML スキーマの作成](../../../../docs/standard/data/xml/building-xml-schemas.md)
+- [XML スキーマの走査](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
+- [XML スキーマの編集](../../../../docs/standard/data/xml/editing-xml-schemas.md)
+- [XML スキーマのインクルードまたはインポート](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
+- [スキーマをコンパイルするための XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
+- [スキーマのコンパイル後の情報セット](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
 - [XML ドキュメントでの名前空間の管理](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md)

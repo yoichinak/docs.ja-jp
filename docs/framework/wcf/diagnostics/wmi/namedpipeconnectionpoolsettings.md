@@ -2,12 +2,12 @@
 title: NamedPipeConnectionPoolSettings
 ms.date: 03/30/2017
 ms.assetid: 079bccb8-54b5-4436-a43d-5567763f72ce
-ms.openlocfilehash: 77d8403947d341ea2efcef98bbf166f94f75f31f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8c2d4bfc08a503a8d6eb0e8abf6f1e798b90bc83
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61963216"
 ---
 # <a name="namedpipeconnectionpoolsettings"></a>NamedPipeConnectionPoolSettings
 NamedPipeConnectionPoolSettings  
@@ -32,21 +32,21 @@ class NamedPipeConnectionPoolSettings
 ### <a name="groupname"></a>GroupName  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  バインド要素により使用される接続プールのグループ名。  
   
 ### <a name="idletimeout"></a>IdleTimeout  
  データ型 : datetime  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  接続が切断されるまでの最大アイドル時間。  
   
 ### <a name="maxoutboundconnectionsperendpoint"></a>MaxOutboundConnectionsPerEndpoint  
  データ型 : sint32  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  クライアント上の各エンドポイントでの発信接続の最大数。  
   
@@ -54,7 +54,8 @@ class NamedPipeConnectionPoolSettings
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
-|Namespace|root\ServiceModel で定義|  
+|名前空間|root\ServiceModel で定義|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Channels.NamedPipeConnectionPoolSettings>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Channels.NamedPipeConnectionPoolSettings>

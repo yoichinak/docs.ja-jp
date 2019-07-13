@@ -10,33 +10,33 @@ helpviewer_keywords:
 - properties [Visual Basic], read-only
 - read-only variables
 ms.assetid: e868185d-6142-4359-a2fd-a7965cadfce8
-ms.openlocfilehash: e2957bf49292dfcafab8e78f4b997247c34ad279
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1a486d0fadce8135fe01d9eecd611081c986bfae
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33599913"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647687"
 ---
 # <a name="readonly-visual-basic"></a>ReadOnly (Visual Basic)
-変数またはプロパティを読み取るがある書き込まれませんを指定します。  
+ある変数またはプロパティを読み込めるが書き込まれませんを指定します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="rules"></a>ルール  
   
--   **宣言コンテキスト。** `ReadOnly` は、モジュール レベルでのみ使用できます。 つまりの宣言コンテキスト、`ReadOnly`要素は、クラス、構造体、またはモジュールにある必要があるあり、ソース ファイル、名前空間、またはプロシージャにすることはできません。  
+- **宣言コンテキスト。** `ReadOnly` は、モジュール レベルでのみ使用できます。 これは、意味の宣言のコンテキストを`ReadOnly`要素は、クラス、構造体、またはモジュールにある必要があるあり、ソース ファイル、名前空間、またはプロシージャにすることはできません。  
   
--   **結合された修飾子。** 指定することはできません`ReadOnly`と共に`Static`同じ宣言内で。  
+- **結合された修飾子。** 指定することはできません`ReadOnly`と共に`Static`同じ宣言内。  
   
--   **値を代入しています。** コードの使用、`ReadOnly`プロパティは、その値を設定できません。 基になる記憶域にアクセスするコードが割り当てるまたはいつでも、値を変更します。  
+- **値を代入します。** コードの使用、`ReadOnly`プロパティは、その値を設定できません。 基になるストレージにアクセスするコードが割り当てるまたは値をいつでもでも変更します。  
   
-     値を割り当てることができます、`ReadOnly`変数の宣言またはクラスまたは定義されている構造体のコンス トラクターでのみです。  
+     値を割り当てることができます、`ReadOnly`変数の宣言でのみ、またはクラスまたは構造体が定義されているのコンス トラクター。  
   
-## <a name="when-to-use-a-readonly-variable"></a>読み取り専用変数を使用する場合  
- 使用することはできませんが、 [Const ステートメント](../../../visual-basic/language-reference/statements/const-statement.md)を宣言し、定数値を割り当てます。 たとえば、`Const`ステートメントで割り当てるには、必要なデータ型を受け入れない場合や、定数式でのコンパイル時に値を計算することができません。 わからない場合がありますも値コンパイル時にします。 このような場合は、使用することができます、`ReadOnly`定数値を保持する変数。  
+## <a name="when-to-use-a-readonly-variable"></a>読み取り専用の変数を使用する場合  
+ 状況を使用することはできません、 [Const ステートメント](../../../visual-basic/language-reference/statements/const-statement.md)宣言して定数値を代入します。 たとえば、`Const`ステートメントで割り当てるには、必要なデータ型を受け付けないことがありますまたはコンパイル時に定数式で値を計算することができません。 コンパイル時に値をも認識していない可能性があります。 このような場合は、使用することができます、`ReadOnly`定数値を保持する変数。  
   
 > [!IMPORTANT]
->  場合でも、変数自体に、そのメンバーを変更することができます、変数のデータ型が配列またはクラスのインスタンスなど、参照型の場合`ReadOnly`です。 次に例を示します。  
+>  場合でも、変数自体がそのメンバーを変更できます、変数のデータ型が配列やクラスのインスタンスなど、参照型の場合`ReadOnly`します。 次に例を示します。  
   
  `ReadOnly characterArray() As Char = {"x"c, "y"c, "z"c}`  
   
@@ -46,14 +46,14 @@ ms.locfileid: "33599913"
   
  `End Sub`  
   
- 初期化する場合、配列を指す`characterArray()`を保持"x"、"y"および"z"です。 変数`characterArray`は`ReadOnly`、初期化; であると、その値を変更することはできません、新しい配列を割り当てることはできません。 ただし、配列メンバーの 1 つ以上の値を変更することができます。 次のプロシージャの呼び出し`changeArrayElement`、配列を指す`characterArray()`を保持"x"、"M"および"z"です。  
+ 初期化されると、配列が指す`characterArray()`およびを保持"x"、"y"、"z"です。 変数`characterArray`は`ReadOnly`、初期化; であると、その値を変更することはできません、新しい配列を割り当てることはできません。 ただし、配列メンバーの 1 つ以上の値を変更することができます。 次のプロシージャの呼び出し`changeArrayElement`、によって示される配列`characterArray()`およびを保持"x"、"M"、"z"です。  
   
- これは、プロシージャ パラメーターの宣言に似て[ByVal](../../../visual-basic/language-reference/modifiers/byval.md)プロシージャが呼び出し元引数自体を変更できないようにするが、そのメンバーを変更することができます。  
+ これは、プロシージャのパラメーターを宣言することのような[ByVal](../../../visual-basic/language-reference/modifiers/byval.md)、呼び出し元引数自体を変更できなくなります、プロシージャがそのメンバーを変更するようになります。  
   
 ## <a name="example"></a>例  
- 次の例では定義、`ReadOnly`従業員が雇用された日付のプロパティです。 プロパティ値としての内部クラス ストア、`Private`クラス内の変数、およびのみのコードは、その値を変更できます。 ただし、このプロパティは`Public`、すべてのコードをクラスにアクセスできますが、プロパティを読み取ることができます。  
+ 次の例では、定義、`ReadOnly`従業員が雇用された日付のプロパティ。 プロパティの値として内部的にクラス ストア、`Private`クラス内部の変数、そして唯一のコードは、その値を変更できます。 ただし、このプロパティは`Public`、およびクラスにアクセスできる任意のコードは、プロパティを読み取ることができます。  
   
- [!code-vb[VbVbalrKeywords#4](../../../visual-basic/language-reference/codesnippet/VisualBasic/readonly_1.vb)]  
+ [!code-vb[VbVbalrKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#4)]  
   
  `ReadOnly` 修飾子は、次のコンテキストで使用できます。  
   
@@ -61,6 +61,7 @@ ms.locfileid: "33599913"
   
  [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)  
   
-## <a name="see-also"></a>関連項目  
- [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)  
- [キーワード](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>関連項目
+
+- [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)
+- [キーワード](../../../visual-basic/language-reference/keywords/index.md)

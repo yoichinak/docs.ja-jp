@@ -2,12 +2,12 @@
 title: カスタムの有効期間
 ms.date: 08/20/2018
 ms.assetid: 52806c07-b91c-48fe-b992-88a41924f51f
-ms.openlocfilehash: 1946608c69401fb08f6eb458a8adabea24563963
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: be6013d568e3625c5eac7e0c145db7df1c6917e3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003160"
 ---
 # <a name="custom-lifetime"></a>カスタムの有効期間
 
@@ -201,7 +201,7 @@ public void InitializeInstanceContext(InstanceContext instanceContext,
 }
 ```
 
- 最後に、<xref:System.ServiceModel.Dispatcher.IInstanceContextProvider>実装にフックされる、サービス モデルを使用して、<xref:System.ServiceModel.Description.IServiceBehavior>実装します。 この実装は、`CustomLeaseTimeAttribute` クラスに配置されています。また、`Attribute` 基本クラスから派生してこの動作を属性として公開します。
+ 最後に、<xref:System.ServiceModel.Dispatcher.IInstanceContextProvider>実装にフックされる、サービス モデルを使用して、<xref:System.ServiceModel.Description.IServiceBehavior>実装します。 この実装は、`CustomLeaseTimeAttribute` クラスに配置されています。また、<xref:System.Attribute> 基本クラスから派生してこの動作を属性として公開します。
 
 ```csharp
 public void ApplyDispatchBehavior(ServiceDescription description,
@@ -240,7 +240,7 @@ public class EchoService : IEchoService
 
 1. 実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](one-time-setup-procedure-for-the-wcf-samples.md)します。
 
-2. ソリューションの c# または Visual Basic .NET 版をビルドする手順については、 [Windows Communication Foundation サンプルのビルド](building-the-samples.md)します。
+2. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](building-the-samples.md)」の手順に従います。
 
 3. 1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](running-the-samples.md)します。
 

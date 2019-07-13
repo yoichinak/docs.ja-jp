@@ -5,18 +5,16 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 68fa7753be76b0681c40e540e86b11c89e7a8ca1
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 641fc3f8dfca3ff6506354c076b98cc88073a1b7
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48037340"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802118"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>UI オートメーションによる標準コントロールのサポート
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]に関する最新情報については[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)をご覧ください。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
  このトピックでは、 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 、 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]、および [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]フレームワーク向けに開発されたアプリケーションの標準コントロールに対する [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] サポートについて説明します。  
   
@@ -51,8 +49,8 @@ ms.locfileid: "48037340"
 |SysIPAddress32|カスタム|  
 |SysHeader32|Header/HeaderItem|  
 |SysListView32|DataGrid|  
-|SysListView32|リスト|  
-|ListBox|リスト|  
+|SysListView32|List|  
+|ListBox|List|  
 |ListBox|ListItem|  
 |#32768|メニュー|  
 |#32768|MenuItem|  
@@ -65,7 +63,7 @@ ms.locfileid: "48037340"
 |msctls_trackbar32|スライダー|  
 |msctls_updown32|Spinner|  
 |msctls_statusbar32|StatusBar|  
-|SysTabControl32|タブ|  
+|SysTabControl32|Tab|  
 |SysTabControl32|TabItem|  
 |ToolbarWindow32|ToolBar|  
 |ToolbarWindow32|MenuItem|  
@@ -138,7 +136,7 @@ ms.locfileid: "48037340"
 |VscrollBar|  
 |Web ブラウザー|  
   
- 次に示すコントロールは、 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] のサポートによってのみ、 [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)]に公開されています。 一部の機能が使用できないことがあります。  
+ 次のコントロールに公開[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]Microsoft Active Accessibility のサポートによってのみです。 一部の機能が使用できないことがあります。  
   
 |コントロール名|  
 |------------------|  
@@ -169,5 +167,6 @@ ms.locfileid: "48037340"
 |RaftingContainer|  
 |StatusStrip|  
   
-## <a name="see-also"></a>関連項目  
- [UI オートメーション コントロール型](../../../docs/framework/ui-automation/ui-automation-control-types.md)
+## <a name="see-also"></a>関連項目
+
+- [UI オートメーション コントロール型](../../../docs/framework/ui-automation/ui-automation-control-types.md)

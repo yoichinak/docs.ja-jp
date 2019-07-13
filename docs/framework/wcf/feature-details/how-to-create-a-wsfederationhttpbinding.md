@@ -1,5 +1,5 @@
 ---
-title: '方法 : WSFederationHttpBinding を作成する'
+title: '方法: WSFederationHttpBinding を作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: e54897d7-aa6c-46ec-a278-b2430c8c2e10
-ms.openlocfilehash: 16b93126157ff129d5e0b815bc951873e7fa760d
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.openlocfilehash: 3a6564683a856c8d1eb47b1569f156e0b6d5cc67
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46525540"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636416"
 ---
-# <a name="how-to-create-a-wsfederationhttpbinding"></a>方法 : WSFederationHttpBinding を作成する
+# <a name="how-to-create-a-wsfederationhttpbinding"></a>方法: WSFederationHttpBinding を作成する
 
 Windows Communication Foundation (WCF) で、<xref:System.ServiceModel.WSFederationHttpBinding>クラス ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)構成で) フェデレーション サービスを公開するためのメカニズムを提供します。 これはクライアントに対して認証を要求するサービスであって、認証にはセキュリティ トークン サービスが発行するセキュリティ トークンが必要となります。 このトピックでは、必要な処理をコード中に埋め込む形、あるいは構成ファイルに必要な記述を加える形で、<xref:System.ServiceModel.WSFederationHttpBinding> の設定をする手順を説明します。 バインディングを作成すると、エンドポイントを設定してこのバインディングを使用できるようになります。
 
@@ -91,7 +91,7 @@ Windows Communication Foundation (WCF) で、<xref:System.ServiceModel.WSFederat
 
 12. 詳細については、次を参照してください。[サービス Id と認証](service-identity-and-authentication.md)します。
 
-13. クライアント側ではローカル発行者が指定されていなければ必須。サービス側では不要。 作成、 [\<バインド >](../../../../docs/framework/misc/binding.md)セキュリティ トークン サービスとの通信に使用できるバインディング セクション内の要素。 バインディングの作成の詳細については、次を参照してください。[方法: 構成でサービス バインディング指定](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)します。
+13. クライアント側ではローカル発行者が指定されていなければ必須。サービス側では不要。 作成、 [\<バインド >](../../../../docs/framework/misc/binding.md)セキュリティ トークン サービスとの通信に使用できるバインディング セクション内の要素。 バインディングの作成の詳細については、次を参照してください。[方法。構成でサービス バインディング指定](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)します。
 
 14. `binding` 要素の `bindingConfiguration` 属性および `<issuer>` 属性に設定して、前の手順で作成したバインディングを指定します。
 
@@ -110,4 +110,4 @@ Windows Communication Foundation (WCF) で、<xref:System.ServiceModel.WSFederat
 
 - [フェデレーション](federation.md)
 - [フェデレーション サンプル](../../../../docs/framework/wcf/samples/federation-sample.md)
-- [方法 : WSFederationHttpBinding のセキュリティで保護されたセッションを無効にする](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [方法: WSFederationHttpBinding のセキュリティで保護されたセッションを無効にします。](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)

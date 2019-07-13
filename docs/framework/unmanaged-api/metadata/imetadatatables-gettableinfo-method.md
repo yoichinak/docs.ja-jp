@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ea617668a72413f3387a35fe009b37fa15d03354
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4844834232e34ab5dacfa34e7aa5d204ee344612
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449609"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781356"
 ---
 # <a name="imetadatatablesgettableinfo-method"></a>IMetaDataTables::GetTableInfo メソッド
-名前、行のサイズ、行の数、列の数と、指定したテーブルのキー列のインデックスを取得します。  
+名、行のサイズ、行の数、列の数と、指定したテーブルのキー列のインデックスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetTableInfo (  
     [in]  ULONG       ixTbl,  
     [out] ULONG       *pcbRow,  
@@ -40,12 +40,12 @@ HRESULT GetTableInfo (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ixTbl`  
  [in]テーブルの識別子を返すプロパティを持つ。  
   
  `pcbRow`  
- [out]テーブルの行のバイト単位のサイズへのポインター。  
+ [out]サイズ (バイト単位)、テーブルの行へのポインター。  
   
  `pcRows`  
  [out]テーブル内の行の数へのポインター。  
@@ -59,15 +59,16 @@ HRESULT GetTableInfo (
  `ppName`  
  [out]テーブル名へのポインターへのポインター。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
  **ライブラリ:** MsCorEE.dll にリソースとして使用  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataTables インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [IMetaDataTables2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [IMetaDataTables インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [IMetaDataTables2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

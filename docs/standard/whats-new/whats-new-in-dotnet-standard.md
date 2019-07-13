@@ -6,12 +6,12 @@ ms.date: 04/12/2018
 ms.technology: dotnet-standard
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19353bd068e3b04bc3d852c1e22db9c97ebef628
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 45e67fe1436863da4050342bb224d67894111cc4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583166"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712488"
 ---
 # <a name="whats-new-in-the-net-standard"></a>.NET Standard の新機能
 
@@ -93,5 +93,5 @@ dotnet new classlib -lang vb
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Standard](../net-standard.md)  
-- [.NET Standard の概要](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/)
+- [.NET Standard](../net-standard.md)
+- [.NET Standard の概要](https://devblogs.microsoft.com/dotnet/introducing-net-standard/)

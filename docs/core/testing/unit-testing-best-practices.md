@@ -5,12 +5,12 @@ author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
 ms.custom: seodec18
-ms.openlocfilehash: 7db37fd4fcb76d4bfcfb21204a191fd43c9bb6b6
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 2787f43645250dbaf7a67aa7b7158372cf624be5
+ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240724"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410375"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core と .NET Standard での単体テストのベスト プラクティス
 
@@ -18,7 +18,7 @@ ms.locfileid: "53240724"
 
 このガイドでは、テストの回復性とわかりやすさを維持するよう単体テストを記述する際のいくつかのベスト プラクティスについて説明します。
 
-著者: [John Reese](http://reesespieces.io)、協力者: [Roy Osherove](http://osherove.com/)
+著者: [John Reese](https://reese.dev)、協力者: [Roy Osherove](https://osherove.com/)
 
 ## <a name="why-unit-test"></a>単体テストを記述する理由
 
@@ -250,17 +250,17 @@ Assert.True(mockOrder.Validated);
 ```csharp
 public string ParseLogLine(string input)
 {
-    var sanitizedInput = trimInput(input);
+    var sanitizedInput = TrimInput(input);
     return sanitizedInput;
 }
 
-private string trimInput(string input)
+private string TrimInput(string input)
 {
     return input.Trim();
 }
 ```
 
-メソッドが想定どおりに動作していることを確認する必要があるので、まずは、`trimInput` に対してテストを記述しようと考えるかもしれません。 しかし、想定外の方法で `ParseLogLine` が `sanitizedInput` を操作し、`trimInput` に対するテストが無効になる可能性があります。 
+メソッドが想定どおりに動作していることを確認する必要があるので、まずは、`TrimInput` に対してテストを記述しようと考えるかもしれません。 しかし、想定外の方法で `ParseLogLine` が `sanitizedInput` を操作し、`TrimInput` に対するテストが無効になる可能性があります。 
 
 実際のテストは、パブリックに公開された `ParseLogLine` メソッドに対して行う必要があります。最終的にはこのメソッドが鍵となるためです。 
 
@@ -283,7 +283,7 @@ public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
 ```csharp
 public int GetDiscountedPrice(int price)
 {
-    if(DateTime.Now == DayOfWeek.Tuesday) 
+    if(DateTime.Now.DayOfWeek == DayOfWeek.Tuesday) 
     {
         return price / 2;
     }

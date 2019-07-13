@@ -1,19 +1,19 @@
 ---
-title: '&lt;system.identityModel.services&gt;'
+title: <system.identityModel.services>
 ms.date: 03/30/2017
 ms.assetid: fa1624dd-2d74-4ae3-942e-498cee261ac5
 author: BrucePerlerMS
-ms.openlocfilehash: c7261d20ae2379ad33679cadecdef484f2afdecf
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 9728f3caee4dba367e4fc4a3e68213b1055cc3d1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793784"
 ---
-# <a name="ltsystemidentitymodelservicesgt"></a>&lt;system.identityModel.services&gt;
+# <a name="systemidentitymodelservices"></a>\<system.identityModel.services>
 Ws-federation プロトコルを使用して認証用の構成セクション。  
   
- \<system.identityModel.services >  
+ \<system.identityModel.services>  
   
 ## <a name="syntax"></a>構文  
   

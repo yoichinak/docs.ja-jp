@@ -17,18 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cf580f6d3fb18e729f3eca300aa817036eb61e4f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f03a2dfa60f2fbdce317d96a9e5b23c6f017dc3d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777742"
 ---
 # <a name="imetadatadispenserexgetcorsystemdirectory-method"></a>IMetaDataDispenserEx::GetCORSystemDirectory メソッド
-現在の共通言語ランタイム (CLR) を保持するディレクトリを取得します。 このメソッドは、アウト プロセスのデバッガーで使用するためだけサポートします。 別のコンポーネントから呼び出す場合、E_NOTIMPL を返します。  
+現在の共通言語ランタイム (CLR) を保持するディレクトリを取得します。 このメソッドは、プロセス外のデバッガーでのみサポートします。 別のコンポーネントから呼び出す場合、E_NOTIMPL を返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetCORSystemDirectory (  
     [out] LPWSTR      szBuffer,   
     [in]  DWORD       cchBuffer,   
@@ -36,25 +37,26 @@ HRESULT GetCORSystemDirectory (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `szBuffer`  
  [out]ディレクトリ名を受け取るバッファー。  
   
  `cchBuffer`  
- [in]サイズをバイト単位での`szBuffer`します。  
+ [in]サイズ (バイト単位) の`szBuffer`します。  
   
  `pchBuffer`  
- [out]実際に返されるバイト数`szBuffer`です。  
+ [out]実際に返されるバイト数`szBuffer`します。  
   
-## <a name="requirements"></a>要件  
- **Platform:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
  **ライブラリ:** MsCorEE.dll にリソースとして使用  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataDispenserEx インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
- [IMetaDataDispenser インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [IMetaDataDispenserEx インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [IMetaDataDispenser インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

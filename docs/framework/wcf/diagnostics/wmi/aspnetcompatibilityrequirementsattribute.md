@@ -2,12 +2,12 @@
 title: AspNetCompatibilityRequirementsAttribute
 ms.date: 03/30/2017
 ms.assetid: 00908a39-a21b-4029-bbb9-33e5a6ed25a7
-ms.openlocfilehash: 87a238f76bd66b23e7e32474853d04423aa26010
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 8e4b2e0e32ccd3b671e81531833ccb3aa3788389
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61964269"
 ---
 # <a name="aspnetcompatibilityrequirementsattribute"></a>AspNetCompatibilityRequirementsAttribute
 AspNetCompatibilityRequirementsAttribute  
@@ -30,7 +30,7 @@ class AspNetCompatibilityRequirementsAttribute : Behavior
 ### <a name="requirementsmode"></a>RequirementsMode  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  Asp.Net 互換モードがアクティブであるかどうかを示します。  
   
@@ -38,7 +38,8 @@ class AspNetCompatibilityRequirementsAttribute : Behavior
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
-|Namespace|root\ServiceModel で定義|  
+|名前空間|root\ServiceModel で定義|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.ServiceHostingEnvironment.AspNetCompatibilityEnabled%2A>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.ServiceHostingEnvironment.AspNetCompatibilityEnabled%2A>

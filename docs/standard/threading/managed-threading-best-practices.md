@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab33474fa8f3d62fb21c86a0699bbfcb75e7a270
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d8319424c82327fd9743c573846663bdd76ed1b9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150616"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644629"
 ---
 # <a name="managed-threading-best-practices"></a>マネージド スレッド処理の実施
 マルチスレッドには慎重なプログラミングが必要です。 ほとんどのタスクでは、スレッド プールのスレッドを使って実行の要求をキューに置くことによって、処理の複雑さを軽減できます。 このトピックでは、マルチ スレッド動作の調整や、ブロックするスレッドの処理など、より難しい状況について説明します。  
@@ -86,21 +86,21 @@ else {
 ## <a name="general-recommendations"></a>一般的な推奨事項  
  マルチスレッドを使用するときは、以下のガイドラインを考慮してください。  
   
--   他のスレッドを終了させるために <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> を使用することは避けてください。 他のスレッド **Abort** を呼び出すことは、そのスレッドの処理がどこまで到達しているかを把握せずに例外をスローするのと同じことになります。  
+- 他のスレッドを終了させるために <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> を使用することは避けてください。 他のスレッド **Abort** を呼び出すことは、そのスレッドの処理がどこまで到達しているかを把握せずに例外をスローするのと同じことになります。  
   
--   <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> と <xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType> を使用して複数のスレッドの動作を同期することは避けてください。 <xref:System.Threading.Mutex>、<xref:System.Threading.ManualResetEvent>、<xref:System.Threading.AutoResetEvent>、および <xref:System.Threading.Monitor> を使用してください。  
+- <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> と <xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType> を使用して複数のスレッドの動作を同期することは避けてください。 <xref:System.Threading.Mutex>、<xref:System.Threading.ManualResetEvent>、<xref:System.Threading.AutoResetEvent>、および <xref:System.Threading.Monitor> を使用してください。  
   
--   メイン プログラムから、イベントなどを使用して、ワーカー スレッドの実行を制御しないでください。 ワーカー スレッドの側で、作業ができるようになるまでの待機、作業の実行、および実行終了後のプログラムへの通知を行うように、プログラムをデザインします。 ワーカー スレッドによるブロックを行わない場合は、スレッド プールのスレッドを使用することを考慮します。 ワーカー スレッドがブロックを行う場合は、<xref:System.Threading.Monitor.PulseAll%2A?displayProperty=nameWithType> が役立ちます。  
+- メイン プログラムから、イベントなどを使用して、ワーカー スレッドの実行を制御しないでください。 ワーカー スレッドの側で、作業ができるようになるまでの待機、作業の実行、および実行終了後のプログラムへの通知を行うように、プログラムをデザインします。 ワーカー スレッドによるブロックを行わない場合は、スレッド プールのスレッドを使用することを考慮します。 ワーカー スレッドがブロックを行う場合は、<xref:System.Threading.Monitor.PulseAll%2A?displayProperty=nameWithType> が役立ちます。  
   
--   ロック オブジェクトとして型を使用しないでください。 つまり、C# の `lock(typeof(X))`、Visual Basic の `SyncLock(GetType(X))` などのコードを使用すること、または <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> を <xref:System.Type> オブジェクトと組み合わせて使用することを避けます。 <xref:System.Type?displayProperty=nameWithType> のインスタンスは、1 つの型につきアプリケーション ドメインごとに 1 つのみです。 ロックする型がパブリックの場合、自分以外のコードでもその型をロックできるため、デッドロックになる可能性があります。 詳細については、「[信頼性に関するベスト プラクティス](../../../docs/framework/performance/reliability-best-practices.md)」を参照してください。  
+- ロック オブジェクトとして型を使用しないでください。 つまり、C# の `lock(typeof(X))`、Visual Basic の `SyncLock(GetType(X))` などのコードを使用すること、または <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> を <xref:System.Type> オブジェクトと組み合わせて使用することを避けます。 <xref:System.Type?displayProperty=nameWithType> のインスタンスは、1 つの型につきアプリケーション ドメインごとに 1 つのみです。 ロックする型がパブリックの場合、自分以外のコードでもその型をロックできるため、デッドロックになる可能性があります。 詳細については、「[信頼性に関するベスト プラクティス](../../../docs/framework/performance/reliability-best-practices.md)」を参照してください。  
   
--   インスタンスをロックする場合 (たとえば、C# の `lock(this)`、Visual Basic の `SyncLock(Me)`) には注意してください。 アプリケーション内の、その型以外の他のコードがオブジェクトをロックすると、デッドロックが発生する場合があります。  
+- インスタンスをロックする場合 (たとえば、C# の `lock(this)`、Visual Basic の `SyncLock(Me)`) には注意してください。 アプリケーション内の、その型以外の他のコードがオブジェクトをロックすると、デッドロックが発生する場合があります。  
   
--   モニター状態に入った (ロックを取得した) スレッドは、モニター状態である間に例外が発生した場合でも、必ずモニター状態から出すようにします。 C# の [lock](~/docs/csharp/language-reference/keywords/lock-statement.md) ステートメントと Visual Basic の [SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md) ステートメントは、**finally** ブロックを使用して <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> が呼び出されるようにすることで、この動作を自動的に提供します。 **Exit** を確実に呼び出すことができない場合は、**Mutex** を使用するようにデザインを変更することを検討してください。 ミューテックスは、現在それを保持しているスレッドが終了すると、自動的に解放されます。  
+- モニター状態に入った (ロックを取得した) スレッドは、モニター状態である間に例外が発生した場合でも、必ずモニター状態から出すようにします。 C# の [lock](~/docs/csharp/language-reference/keywords/lock-statement.md) ステートメントと Visual Basic の [SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md) ステートメントは、**finally** ブロックを使用して <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> が呼び出されるようにすることで、この動作を自動的に提供します。 **Exit** を確実に呼び出すことができない場合は、**Mutex** を使用するようにデザインを変更することを検討してください。 ミューテックスは、現在それを保持しているスレッドが終了すると、自動的に解放されます。  
   
--   マルチ スレッドは異なるリソースを必要とするタスクに使用し、1 つのリソースに複数のスレッドを割り当てることがないように注意します。 たとえば、I/O を含む作業であれば、その作業専用のスレッドを用意すると有益です。I/O 操作の間、このスレッドはブロックを行いますが、他のスレッドは実行できるからです。 ユーザー入力も、専用のスレッドが役に立つリソースの 1 つです。 シングル プロセッサのコンピューターでは、計算中心のタスクがユーザー入力や I/O タスクと共存することはできますが、計算中心タスクどうしは競合してしまいます。  
+- マルチ スレッドは異なるリソースを必要とするタスクに使用し、1 つのリソースに複数のスレッドを割り当てることがないように注意します。 たとえば、I/O を含む作業であれば、その作業専用のスレッドを用意すると有益です。I/O 操作の間、このスレッドはブロックを行いますが、他のスレッドは実行できるからです。 ユーザー入力も、専用のスレッドが役に立つリソースの 1 つです。 シングル プロセッサのコンピューターでは、計算中心のタスクがユーザー入力や I/O タスクと共存することはできますが、計算中心タスクどうしは競合してしまいます。  
   
--   単純な状態変更については、<xref:System.Threading.Interlocked> ステートメント (Visual Basic では `lock`) ではなく、`SyncLock` クラスのメソッドの使用を検討します。 `lock` ステートメントは汎用的なツールとして優れていますが、<xref:System.Threading.Interlocked> クラスは、分離不可能な状態であることが必要な更新のパフォーマンスに優れています。 内部的には、競合がない場合は、単一の lock プレフィックスが実行されます。 コードの校閲で、次に示す例のようなコードを探します。 最初の例では、状態変数をインクリメントしています。  
+- 単純な状態変更については、<xref:System.Threading.Interlocked> ステートメント (Visual Basic では `lock`) ではなく、`SyncLock` クラスのメソッドの使用を検討します。 `lock` ステートメントは汎用的なツールとして優れていますが、<xref:System.Threading.Interlocked> クラスは、分離不可能な状態であることが必要な更新のパフォーマンスに優れています。 内部的には、競合がない場合は、単一の lock プレフィックスが実行されます。 コードの校閲で、次に示す例のようなコードを探します。 最初の例では、状態変数をインクリメントしています。  
   
     ```vb  
     SyncLock lockObject  
@@ -169,15 +169,15 @@ else {
 ## <a name="recommendations-for-class-libraries"></a>クラス ライブラリに関する推奨事項  
  マルチスレッド用のクラス ライブラリをデザインするときには、次のガイドラインを検討します。  
   
--   可能な限り、同期の必要を避けるようにします。 これは、頻繁に使用するコードの場合に特に言えます。 たとえば、競合状態をなくすのではなく、競合状態に対応できるようにアルゴリズムを調整できる場合があります。 不要な同期があると、パフォーマンスが低下し、デッドロックや競合状態が発生する可能性が生じます。  
+- 可能な限り、同期の必要を避けるようにします。 これは、頻繁に使用するコードの場合に特に言えます。 たとえば、競合状態をなくすのではなく、競合状態に対応できるようにアルゴリズムを調整できる場合があります。 不要な同期があると、パフォーマンスが低下し、デッドロックや競合状態が発生する可能性が生じます。  
   
--   静的なデータ (Visual Basic では `Shared`) は既定でスレッド セーフにします。  
+- 静的なデータ (Visual Basic では `Shared`) は既定でスレッド セーフにします。  
   
--   インスタンス データは既定でスレッド セーフにしないようにします。 スレッド セーフなコードを作成するロックを追加すると、パフォーマンスが低下し、ロックの競合が増加し、デッドロックが発生する可能性が生じます。 一般的なアプリケーション モデルでは、一度にユーザー コードを実行するスレッドは 1 つだけにして、スレッド セーフを実現する必要を最小限に抑えます。 この理由から、.NET Framework のクラス ライブラリは既定ではスレッド セーフではないことが必要です。  
+- インスタンス データは既定でスレッド セーフにしないようにします。 スレッド セーフなコードを作成するロックを追加すると、パフォーマンスが低下し、ロックの競合が増加し、デッドロックが発生する可能性が生じます。 一般的なアプリケーション モデルでは、一度にユーザー コードを実行するスレッドは 1 つだけにして、スレッド セーフを実現する必要を最小限に抑えます。 この理由から、.NET Framework のクラス ライブラリは既定ではスレッド セーフではないことが必要です。  
   
--   静的状態を変更する静的メソッドは提供しないでください。 一般的なサーバーのシナリオでは、静的状態は要求間で共有されます。つまり、複数のスレッドがそのコードを同時に実行できます。 これにより、スレッド処理のバグが発生する可能性が高くなります。 要求間で共有されないインスタンスにデータをカプセル化するデザイン パターンの使用を検討してください。 加えて、静的なデータを同期する場合は、状態を変更する呼び出しが静的メソッド間にあると、デッドロックや冗長な同期が生じる可能性があり、パフォーマンスに悪影響を及ぼします。  
+- 静的状態を変更する静的メソッドは提供しないでください。 一般的なサーバーのシナリオでは、静的状態は要求間で共有されます。つまり、複数のスレッドがそのコードを同時に実行できます。 これにより、スレッド処理のバグが発生する可能性が高くなります。 要求間で共有されないインスタンスにデータをカプセル化するデザイン パターンの使用を検討してください。 加えて、静的なデータを同期する場合は、状態を変更する呼び出しが静的メソッド間にあると、デッドロックや冗長な同期が生じる可能性があり、パフォーマンスに悪影響を及ぼします。  
   
 ## <a name="see-also"></a>関連項目
 
-- [スレッド化](../../../docs/standard/threading/index.md)  
+- [スレッド化](../../../docs/standard/threading/index.md)
 - [スレッドおよびスレッド処理](../../../docs/standard/threading/threads-and-threading.md)

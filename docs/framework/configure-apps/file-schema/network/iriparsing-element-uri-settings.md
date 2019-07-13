@@ -1,21 +1,21 @@
 ---
-title: '&lt;iriParsing&gt;要素 (Uri 設定)'
+title: <iriParsing> 要素 (Uri 設定)
 ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
-ms.openlocfilehash: de4eafc735bae69df5a2eb0adf263ba5cdca2097
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 7033f4dcda7d2fe73310ae0d36d9b05c090d13d4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50048412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674520"
 ---
-# <a name="ltiriparsinggt-element-uri-settings"></a>&lt;iriParsing&gt;要素 (Uri 設定)
+# <a name="iriparsing-element-uri-settings"></a>\<iriParsing > 要素 (Uri 設定)
 International Resource Identifier (IRI) 解析が、<xref:System.Uri> に適用されるかどうか、および IRI の解析規則が適用されるどうかを指定します。  
   
 ## <a name="schema-hierarchy"></a>スキーマの階層  
  [\<configuration> 要素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
- [\<Uri > 要素 (Uri 設定)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
+ [\<Uri> 要素 (Uri 設定)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
  [\<iriParsing >](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)  
   
@@ -50,13 +50,13 @@ International Resource Identifier (IRI) 解析が、<xref:System.Uri> に適用�
   
  IRI のサポートを有効にするのには、次の 2 つの変更が必要です。  
   
-1.  .NET Framework 2.0 のディレクトリの machine.config ファイルに次の行を追加します。  
+1. .NET Framework 2.0 のディレクトリの machine.config ファイルに次の行を追加します。  
   
     ```xml  
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2.  IRI 解析規則を適用する必要があるかどうかを指定します。 これは、machine.config ファイルまたは app.config ファイルで指定できます。  
+2. IRI 解析規則を適用する必要があるかどうかを指定します。 これは、machine.config ファイルまたは app.config ファイルで指定できます。  
   
  IRI 解析を有効にする (iriParsing を有効になっている = `true`) 正規化を行うし、RFC 3987 ルール文字に従って最新の IRI チェックします。 既定値は`false`とは正規化を実行し、チェックに従って RFC 2396 および RFC 3986 を (IPv6 のリテラル) の文字します。  
   
@@ -79,7 +79,8 @@ International Resource Identifier (IRI) 解析が、<xref:System.Uri> に適用�
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType>  
- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType>
+- <xref:System.Configuration.UriSection?displayProperty=nameWithType>
+- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

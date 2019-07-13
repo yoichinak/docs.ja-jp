@@ -7,12 +7,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], attributes
 ms.assetid: ee0038ef-b247-4747-a650-3c5c5cd58d8b
 author: KrzysztofCwalina
-ms.openlocfilehash: 332917e5d31c2299f7d68a8fe6716d28ed08759d
-ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
+ms.openlocfilehash: 6d4cc6615b7f7346e9c8fc2a7264025f318c8a3d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53451171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785568"
 ---
 # <a name="attributes"></a>属性
 <xref:System.Attribute?displayProperty=nameWithType> カスタム属性を定義するために使用する基本クラス。  
@@ -51,5 +51,5 @@ ms.locfileid: "53451171"
   
 ## <a name="see-also"></a>関連項目
 
-- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)  
+- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)
 - [使用方法のガイドライン](../../../docs/standard/design-guidelines/usage-guidelines.md)

@@ -17,24 +17,24 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ac041db64a874cc143657c601f30e4482dd2462
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7e7c1de620979b387e969f4b8c9f17f493e7bcb8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434436"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776548"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>ICLRMetaHost::RequestRuntimeLoadedNotification メソッド
-共通言語ランタイム (CLR) のバージョンが最初に読み込まれましたが、開始していないときに呼び出される保証されているコールバック関数を提供します。 このメソッドは、 [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)関数。  
+共通言語ランタイム (CLR) バージョンが初めて読み込まれるが、開始していないときに呼び出されることが保証されるコールバック関数を提供します。 このメソッドは、 [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)関数。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT RequestRuntimeLoadedNotification (  
     [in] RuntimeLoadedCallbackFnPtr pCallbackFunction);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pCallbackFunction`  
  [in]新しいランタイムが読み込まれたときに呼び出されるコールバック関数。  
   
@@ -46,18 +46,18 @@ HRESULT RequestRuntimeLoadedNotification (
 |S_OK|メソッドは正常に完了しました。|  
 |E_POINTER|`pCallbackFunction` が null です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  コールバックは、次のように動作します。  
   
--   最初に、ランタイムが読み込まれるときにのみ、コールバックが呼び出されます。  
+- 最初に、ランタイムが読み込まれる場合にのみ、コールバックが呼び出されます。  
   
--   コールバックは、同じランタイムの再入可能な負荷に対しては呼び出されません。  
+- 同じランタイムの再入可能な負荷、コールバックは呼び出されません。  
   
--   再入不可能なランタイムの読み込み、コールバック関数への呼び出しがシリアル化されます。  
+- 再入不可能なランタイムの読み込み、コールバック関数の呼び出しがシリアル化します。  
   
- コールバック関数では、次のプロトタイプには。  
+ コールバック関数では、次のプロトタイプを持ちます。  
   
-```  
+```cpp  
 typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(  
                      ICLRRuntimeInfo *pRuntimeInfo,  
                      CallbackThreadSetFnPtr pfnCallbackThreadSet,  
@@ -66,38 +66,39 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
   
  コールバック関数のプロトタイプは次のとおりです。  
   
--   `pfnCallbackThreadSet`:  
+- `pfnCallbackThreadSet`:  
   
-    ```  
+    ```cpp  
     typedef HRESULT (__stdcall *CallbackThreadSetFnPtr)();  
     ```  
   
--   `pfnCallbackThreadUnset`:  
+- `pfnCallbackThreadUnset`:  
   
-    ```  
+    ```cpp  
     typedef HRESULT (__stdcall *CallbackThreadUnsetFnPtr)();  
     ```  
   
- ホストにより、再入可能な方法で読み込まれる別のランタイムの読み込みまたはしているつもりの場合、`pfnCallbackThreadSet`と`pfnCallbackThreadUnset`次のように、コールバック関数を使用する必要がありますに用意されているパラメーター。  
+ ホストが読み込みまたは再入可能の方法で読み込まれる別のランタイムが発生する場合、`pfnCallbackThreadSet`と`pfnCallbackThreadUnset`コールバック内で次のように関数を使用する必要がありますに用意されているパラメーター。  
   
--   `pfnCallbackThreadSet` このような負荷が試みられる前に、実行時の負荷を引き起こす可能性のあるスレッドから呼び出す必要があります。  
+- `pfnCallbackThreadSet` このような負荷が試みられる前に、実行時の負荷を引き起こす可能性のあるスレッドから呼び出す必要があります。  
   
--   `pfnCallbackThreadUnset` スレッドがランタイム負荷がかかるおそれが不要になった場合 (および初期コールバックから戻る前に) 呼び出す必要があります。  
+- `pfnCallbackThreadUnset` スレッドは実行時の負荷が発生しない場合 (および初期コールバックから戻る前に) 呼び出す必要があります。  
   
--   `pfnCallbackThreadSet` および`pfnCallbackThreadUnset`再入不可能なは、どちらもします。  
+- `pfnCallbackThreadSet` `pfnCallbackThreadUnset`はどちらも再入不可能な。  
   
 > [!NOTE]
->  ホスト アプリケーションを呼び出してはならない`pfnCallbackThreadSet`と`pfnCallbackThreadUnset`のスコープ外、`pCallbackFunction`パラメーター。  
+>  ホスト アプリケーションを呼び出してはならない`pfnCallbackThreadSet`と`pfnCallbackThreadUnset`の範囲外の`pCallbackFunction`パラメーター。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MetaHost.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICLRMetaHost インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)  
- [ホスティング](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>関連項目
+
+- [ICLRMetaHost インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
+- [ホスティング](../../../../docs/framework/unmanaged-api/hosting/index.md)

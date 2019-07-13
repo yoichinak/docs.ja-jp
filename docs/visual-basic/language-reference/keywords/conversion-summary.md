@@ -7,12 +7,12 @@ helpviewer_keywords:
 - conversions [Visual Basic], Visual Basic
 - type conversion [Visual Basic], keywords
 ms.assetid: ae2c79a7-2d62-4fbe-8585-14360d11f987
-ms.openlocfilehash: eacc9ebded8ab1ef9ec9c9448b4f1f602103037f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 94fa8c5f648211252b59d3f530f6b651566a7136
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33601632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802447"
 ---
 # <a name="conversion-summary-visual-basic"></a>変換の概要 (Visual Basic)
 Visual Basic 言語のキーワードとランタイム ライブラリ メンバーを、目的と使用方法に応じて編成しました。  
@@ -26,11 +26,12 @@ Visual Basic 言語のキーワードとランタイム ライブラリ メン�
 |数値を文字列に変換|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Conversion.Str%2A>|  
 |データ型間の変換|[CBool](../../../visual-basic/language-reference/functions/type-conversion-functions.md)、 [CByte](../../../visual-basic/language-reference/functions/type-conversion-functions.md)、 [CDate](../../../visual-basic/language-reference/functions/type-conversion-functions.md)、 [CDbl](../../../visual-basic/language-reference/functions/type-conversion-functions.md)、 [CDec](../../../visual-basic/language-reference/functions/type-conversion-functions.md)、 [CInt](../../../visual-basic/language-reference/functions/type-conversion-functions.md)、 [CLng](../../../visual-basic/language-reference/functions/type-conversion-functions.md)、 [CSng](../../../visual-basic/language-reference/functions/type-conversion-functions.md)、 [CShort](../../../visual-basic/language-reference/functions/type-conversion-functions.md)、 [CStr](../../../visual-basic/language-reference/functions/type-conversion-functions.md)、 [CType](../../../visual-basic/language-reference/functions/ctype-function.md)、 <xref:Microsoft.VisualBasic.Conversion.Fix%2A>、 <xref:Microsoft.VisualBasic.Conversion.Int%2A>|  
 |日付を日、月、曜日、または年に変換|<xref:Microsoft.VisualBasic.DateAndTime.Day%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Month%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Weekday%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Year%2A>|  
-|時刻を時、分、または秒に変換|<xref:Microsoft.VisualBasic.DateAndTime.Hour%2A>、<xref:Microsoft.VisualBasic.DateAndTime.Minute%2A>、<xref:Microsoft.VisualBasic.DateAndTime.Second%2A>|  
+|時刻を時、分、または秒に変換|<xref:Microsoft.VisualBasic.DateAndTime.Hour%2A>、 <xref:Microsoft.VisualBasic.DateAndTime.Minute%2A>、 <xref:Microsoft.VisualBasic.DateAndTime.Second%2A>|  
 |文字列を ASCII 値に変換|<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>|  
 |文字列を数値に変換|<xref:Microsoft.VisualBasic.Conversion.Val%2A>|  
 |時刻をシリアル値に変換|<xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A>|  
   
-## <a name="see-also"></a>関連項目  
- [キーワード](../../../visual-basic/language-reference/keywords/index.md)  
- [Visual Basic ランタイム ライブラリのメンバー](../../../visual-basic/language-reference/runtime-library-members.md)
+## <a name="see-also"></a>関連項目
+
+- [キーワード](../../../visual-basic/language-reference/keywords/index.md)
+- [Visual Basic ランタイム ライブラリのメンバー](../../../visual-basic/language-reference/runtime-library-members.md)

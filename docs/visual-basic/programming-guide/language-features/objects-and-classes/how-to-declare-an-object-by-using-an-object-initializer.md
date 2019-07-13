@@ -1,5 +1,5 @@
 ---
-title: '方法: オブジェクト初期化子を使用してオブジェクトを宣言する (Visual Basic)'
+title: '方法: オブジェクト初期化子 (Visual Basic) を使用してオブジェクトを宣言します。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declaring objects using object initializer
@@ -7,60 +7,61 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - Video How tos, Visual Basic
 ms.assetid: 0f53a553-efd6-466d-80bf-6b679e5cd174
-ms.openlocfilehash: 3a372ba91377b53c87c05976e416ca8ed55ccbbe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 850e20fe8b5b6bfd392c80c87950a81a1a8a5c24
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649166"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755202"
 ---
-# <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>方法: オブジェクト初期化子を使用してオブジェクトを宣言する (Visual Basic)
-オブジェクト初期化子を使用すると、宣言して、単一のステートメント内のクラスのインスタンスをインスタンス化できます。 さらに、パラメーター化されたコンス トラクターを呼び出さずに、同時にインスタンスの 1 つまたは複数のメンバーを初期化することができます。  
+# <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>方法: オブジェクト初期化子 (Visual Basic) を使用してオブジェクトを宣言します。
+オブジェクト初期化子を使用すると、宣言および 1 つのステートメント内のクラスのインスタンスをインスタンス化できます。 さらに、パラメーター化されたコンス トラクターを呼び出さずに、同時インスタンスの 1 つまたは複数のメンバーを初期化できます。  
   
- オブジェクト初期化子を使用して名前付きの型のインスタンスを作成するときに指定した順序で指定されたメンバーの初期化後に、クラスの既定のコンス トラクターが呼び出されます。  
+ 名前付きの型のインスタンスを作成する、オブジェクト初期化子を使用すると、指定した順序で指定されたメンバーの初期化後に、クラスのパラメーターなしのコンス トラクターが呼び出されます。  
   
- 次の手順のインスタンスを作成する方法を示しています、 `Student` 3 つの方法でクラスです。 クラスには、名、姓、名、およびクラス年などのプロパティがあります。 新しいインスタンスを作成、3 つの宣言の各`Student`、プロパティを持つ`First`プロパティ「マイケル ・」に設定`Last`"Tucker"に設定され、その他のすべてのメンバーが既定値に設定します。 プロシージャのそれぞれの宣言の結果は、次の例は、オブジェクト初期化子を使用しないと等価です。  
+ インスタンスを作成する方法は、次の手順を`Student`3 つの異なる方法でクラス。 クラスには、名、姓、名、およびその他のクラスの年プロパティがあります。 新しいインスタンスを作成、3 つの宣言の各`Student`、プロパティを持つ`First`プロパティ「マイケル ・」に設定`Last`「tucker です」に設定され、その他のすべてのメンバーが既定値に設定します。 手順では、各宣言の結果は、次の例は、オブジェクト初期化子を使用しないのと同じです。  
   
- [!code-vb[VbVbalrObjectInit#20](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_1.vb)]  
+ [!code-vb[VbVbalrObjectInit#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#20)]  
   
- 実装については、`Student`クラスを参照してください[する方法: リストの項目を作成](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)です。 コードをコピーするには、クラスを設定しの一覧を作成するには、そのトピックから`Student`オブジェクトを使用します。  
+ 実装については、`Student`クラスを参照してください[方法。項目の一覧を作成](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)です。 コードをコピーするには、クラスを設定しの一覧を作成するには、そのトピックから`Student`オブジェクトを使用します。  
   
-### <a name="to-create-an-object-of-a-named-class-by-using-an-object-initializer"></a>オブジェクト初期化子を使用して、名前付きクラスのオブジェクトを作成するには  
+### <a name="to-create-an-object-of-a-named-class-by-using-an-object-initializer"></a>オブジェクト初期化子を使用して名前付きクラスのオブジェクトを作成するには  
   
-1.  コンス トラクターを使用する場合に、宣言を開始します。  
+1. コンス トラクターを使用する場合、宣言を開始します。  
   
      `Dim student1 As New Student`  
   
-2.  キーワードを入力`With`、中かっこで初期化リストは、その後にします。  
+2. キーワードを入力`With`、初期化リストを中かっこでその後にします。  
   
      `Dim student1 As New Student With { <initialization list> }`  
   
-3.  初期化リストには初期化し、初期値を割り当てる必要とする各プロパティが含まれます。 プロパティの名前の前にピリオドです。  
+3. 初期化リストで初期化し、初期値を割り当てるしたい各プロパティが含まれます。 プロパティの名前の前にピリオドです。  
   
-     [!code-vb[VbVbalrObjectInit#21](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_2.vb)]  
+     [!code-vb[VbVbalrObjectInit#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#21)]  
   
      クラスの 1 つまたは複数のメンバーを初期化することができます。  
   
-4.  または、クラスの新しいインスタンスを宣言しに値を割り当てることができます。 インスタンスを最初に、宣言`Student`:  
+4. または、クラスの新しいインスタンスを宣言し、値を割り当てることができます。 インスタンスを最初に、宣言`Student`:  
   
      `Dim student2 As Student`  
   
-5.  インスタンスの作成を開始します`Student`通常の方法でします。  
+5. インスタンスの作成を開始`Student`通常どおりにします。  
   
      `Dim student2 As Student = New Student`  
   
-6.  型`With`とし、オブジェクト初期化子に 1 つまたは複数のメンバーの新しいインスタンスを初期化します。  
+6. 型`With`と 1 つまたは複数のメンバーの新しいインスタンスを初期化するためにオブジェクト初期化子、します。  
   
-     [!code-vb[VbVbalrObjectInit#22](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_3.vb)]  
+     [!code-vb[VbVbalrObjectInit#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#22)]  
   
-7.  省略することで、前の手順で定義を簡素化できます`As Student`です。 これを行う場合、コンパイラが判断した`student3`のインスタンスは、`Student`ローカル型推論を使用しています。  
+7. 省略すると、前の手順で定義を簡略化できます`As Student`します。 コンパイラが判断した場合、これを行うと、`student3`のインスタンスである`Student`ローカル型推論を使用しています。  
   
-     [!code-vb[VbVbalrObjectInit#23](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_4.vb)]  
+     [!code-vb[VbVbalrObjectInit#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#23)]  
   
-     詳細については、次を参照してください。[ローカル型推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)です。  
+     詳細については、次を参照してください。[ローカル型推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [ローカル型の推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [方法: 項目のリストを作成する](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)  
- [オブジェクト初期化子 : 名前付きの型と匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
- [匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+## <a name="see-also"></a>関連項目
+
+- [ローカル型の推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [方法: 項目の一覧を作成します。](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)
+- [オブジェクト初期化子:名前付きの匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

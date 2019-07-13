@@ -16,15 +16,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0922a27dff8d7958d60b4cf225143a96f1a6c351
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7f19b6107d6da19f9799655fa86fc58b95df330d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996065"
 ---
 # <a name="icordebugeditandcontinueerrorinfo-interface"></a>ICorDebugEditAndContinueErrorInfo インターフェイス
 `ICorDebugEditAndContinueErrorInfo` は互換性のために残されています。 このインターフェイスは使用しないでください。  
   
-## <a name="see-also"></a>関連項目  
- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>関連項目
+
+- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

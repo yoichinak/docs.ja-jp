@@ -1,5 +1,5 @@
 ---
-title: '方法 : WebBrowser コントロールを使用して印刷する'
+title: '方法: WebBrowser コントロールを使用して印刷する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,31 +13,32 @@ helpviewer_keywords:
 - Web pages [Windows Forms], printing
 - examples [Windows Forms], WebBrowser control
 ms.assetid: 3fb2a305-64ce-4b6c-9258-5330d3f21b6c
-ms.openlocfilehash: 2ddb362100d5678d678a71707d8959a3be25853c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fcc0e83b833181b731d33f3869e1229b6444f4ff
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532851"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662362"
 ---
-# <a name="how-to-print-with-a-webbrowser-control"></a>方法 : WebBrowser コントロールを使用して印刷する
-次のコード例で使用方法、<xref:System.Windows.Forms.WebBrowser>表示せず、Web ページを印刷するコントロール。  
+# <a name="how-to-print-with-a-webbrowser-control"></a>方法: WebBrowser コントロールを使用して印刷する
+コード例を次に示しますを使用する方法、<xref:System.Windows.Forms.WebBrowser>コントロールを表示せず、Web ページを印刷します。  
   
 ## <a name="example"></a>例  
- [!code-csharp[WebBrowserMisc#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#10)]
- [!code-vb[WebBrowserMisc#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WebBrowserMisc/vb/WebBrowserMisc.vb#10)]  
+ [!code-csharp[WebBrowserMisc#10](~/samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#10)]
+ [!code-vb[WebBrowserMisc#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WebBrowserMisc/vb/WebBrowserMisc.vb#10)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   `System` アセンブリおよび `System.Windows.Forms` アセンブリへの参照。  
+- `System` アセンブリおよび `System.Windows.Forms` アセンブリへの参照。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Forms.WebBrowser>  
- <xref:System.Windows.Forms.WebBrowser.Print%2A>  
- <xref:System.Windows.Forms.WebBrowser.Url%2A>  
- [方法: WebBrowser コントロールで URL に移動する](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
- [方法: Windows フォーム アプリケーションに Web ブラウザーの機能を追加する](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)  
- [方法: Windows フォーム アプリケーションで HTML ドキュメントビューアーを作成する](../../../../docs/framework/winforms/controls/how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)  
- [WebBrowser コントロールの概要](../../../../docs/framework/winforms/controls/webbrowser-control-overview.md)  
- [WebBrowser セキュリティ](../../../../docs/framework/winforms/controls/webbrowser-security.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Forms.WebBrowser>
+- <xref:System.Windows.Forms.WebBrowser.Print%2A>
+- <xref:System.Windows.Forms.WebBrowser.Url%2A>
+- [方法: WebBrowser コントロールで URL に移動します](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [方法: Windows フォーム アプリケーションに Web ブラウザーの機能を追加します。](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
+- [方法: Windows フォーム アプリケーションで HTML ドキュメントビューアーを作成します。](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
+- [WebBrowser コントロールの概要](webbrowser-control-overview.md)
+- [WebBrowser セキュリティ](webbrowser-security.md)

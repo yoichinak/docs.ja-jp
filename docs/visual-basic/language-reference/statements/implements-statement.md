@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Implements statement [Visual Basic]
 - interface implementation [Visual Basic], Implements statement
 ms.assetid: 1fafb83f-f55a-4215-8ea9-681e8622613d
-ms.openlocfilehash: 805813506b957afb326c71ee4bbb15837726e4e5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 1f0c6b052ead303e0b43465dac2067422abc4ef8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61637740"
 ---
 # <a name="implements-statement"></a>Implements ステートメント
 1 つ以上のインターフェイス、またはインターフェイス メンバーの場合、クラスで実装する必要がありますまたはが表示される構造体の定義を指定します。  
@@ -46,16 +46,17 @@ Implements interfacename.interfacemember [, ...]
 ## <a name="example"></a>例  
  次の例は、使用する方法を示します、`Implements`インターフェイスのメンバーを実装するステートメント。 という名前のインターフェイスを定義`ICustomerInfo`イベント、プロパティ、およびプロシージャを使用します。 クラスは、`customerInfo`インターフェイスで定義されているすべてのメンバーを実装します。  
   
- [!code-vb[VbVbalrStatements#33](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/implements-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#33)]  
   
  なお、クラス`customerInfo`を使用して、`Implements`クラスのすべてのメンバーを実装することを示す別のソース コード行のステートメントで、`ICustomerInfo`インターフェイス。 クラス内の各メンバーを使用して、`Implements`をそのインターフェイスのメンバーを実装することを示すために、メンバー宣言の一部としてキーワード。  
   
 ## <a name="example"></a>例  
  次の 2 つの手順では、前の例で実装されたインターフェイスを使用する方法を示しています。 実装をテストするには、呼び出しをプロジェクトにこれらの手順を追加、`testImplements`プロシージャ。  
   
- [!code-vb[VbVbalrStatements#34](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/implements-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#34)]  
   
-## <a name="see-also"></a>関連項目  
- [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)  
- [Interface ステートメント](../../../visual-basic/language-reference/statements/interface-statement.md)  
- [インターフェイス](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a>関連項目
+
+- [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)
+- [Interface ステートメント](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [インターフェイス](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

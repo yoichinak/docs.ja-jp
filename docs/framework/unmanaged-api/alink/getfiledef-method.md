@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b772ae37baed44b90e4f5420e0f7724201a56abe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a51e8c83d0949f68a41f6a4e10396adbc4f3c9c1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401812"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741894"
 ---
 # <a name="getfiledef-method"></a>GetFileDef メソッド
 (ALink によって割り当てられたトークン) ではなくメタデータで使用される実際の FileDef トークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetFileDef(  
     mdAssembly AssemblyID,  
     mdFile TargetFile,  
@@ -36,9 +36,9 @@ HRESULT GetFileDef(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- アセンブリの ID です。  
+ アセンブリの ID。  
   
  `TargetFile`  
  追加されたファイルのトークン AddFile メソッドまたは AddImport メソッドから取得します。  
@@ -49,10 +49,11 @@ HRESULT GetFileDef(
 ## <a name="return-value"></a>戻り値  
  メソッドが成功した場合は、S_OK を返します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  Alink.h が必要です。  
   
-## <a name="see-also"></a>関連項目  
- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>関連項目
+
+- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

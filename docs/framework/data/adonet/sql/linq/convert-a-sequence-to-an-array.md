@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: bf0af444-890d-43e2-aeca-98589dd74ddf
-ms.openlocfilehash: b668a010ee5839b195d4bc9d18c3886c0152f5df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7d854a769ed580375e7463ba8661becc73ab8128
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032527"
 ---
 # <a name="convert-a-sequence-to-an-array"></a>方法 : シーケンスを配列に変換する
 シーケンスから配列を作成するには、<xref:System.Linq.Enumerable.ToArray%2A> を使用します。  
@@ -21,5 +21,6 @@ ms.locfileid: "33357947"
  [!code-csharp[DLinqQueryExamples#44](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#44)]
  [!code-vb[DLinqQueryExamples#44](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#44)]  
   
-## <a name="see-also"></a>関連項目  
- [クエリの例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+## <a name="see-also"></a>関連項目
+
+- [クエリの例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)

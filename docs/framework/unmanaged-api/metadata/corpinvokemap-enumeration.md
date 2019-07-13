@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: edb45c9ceefb242e5a72e8602dc93ecd39b2df09
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a876ff1ba0d2342f7975bf5adfc8ec03d21578f5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447955"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781641"
 ---
 # <a name="corpinvokemap-enumeration"></a>CorPinvokeMap 列挙型
 PInvoke 呼び出しのオプションを指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum  CorPinvokeMap {  
   
     pmNoMangle          = 0x0001,  
@@ -70,32 +70,33 @@ typedef enum  CorPinvokeMap {
 |`pmNoMangle`|指定された各メンバー名を使用します。|  
 |`pmCharSetMask`|予約済み。|  
 |`pmCharSetNotSpec`|予約済み。|  
-|`pmCharSetAnsi`|マルチ バイト文字の文字列としての文字列をマーシャ リングします。|  
-|`pmCharSetUnicode`|2 バイトの Unicode 文字としての文字列をマーシャ リングします。|  
-|`pmCharSetAuto`|対象のオペレーティング システムに適した文字列を自動的にマーシャ リングします。 既定値は Unicode に Windows NT、Windows 2000、Windows XP および Windows Server 2003 ファミリです。既定値は Windows 98 や Windows me では ANSI|  
+|`pmCharSetAnsi`|マルチ バイト文字の文字列として文字列をマーシャ リングします。|  
+|`pmCharSetUnicode`|Unicode 2 バイト文字の文字列をマーシャ リングします。|  
+|`pmCharSetAuto`|自動的に対象のオペレーティング システムを適切に文字列をマーシャ リングします。 既定値は Unicode では、Windows NT、Windows 2000、Windows XP、および Windows Server 2003 ファミリです。既定値はし、Windows 98 および Windows me では ANSI|  
 |`pmBestFitUseAssem`|予約済み。|  
-|`pmBestFitEnabled`|ANSI 文字セットで一致がない Unicode 文字の最適マッピングを実行します。|  
-|`pmBestFitDisabled`|Unicode 文字の最適マッピングを実行できません。 この場合、すべてのマップできない文字に置き換えられます、'?' です。|  
+|`pmBestFitEnabled`|ANSI 文字セットで一致がない Unicode 文字の最適なマッピングを実行します。|  
+|`pmBestFitDisabled`|Unicode 文字の最適なマッピングを実行しません。 この場合、すべてのマップできない文字に置き換えられます、'?' です。|  
 |`pmBestFitMask`|予約済み。|  
 |`pmThrowOnUnmappableCharUseAssem`|予約済み。|  
-|`pmThrowOnUnmappableCharEnabled`|相互運用マーシャラーは、マップできない文字を検出したときに、例外をスローします。|  
+|`pmThrowOnUnmappableCharEnabled`|相互運用マーシャラーは、マップできない文字を検出した場合は、例外をスローします。|  
 |`pmThrowOnUnmappableCharDisabled`|相互運用マーシャラーは、マップできない文字を検出したときに例外をスローしません。|  
 |`pmThrowOnUnmappableCharMask`|予約されています。|  
-|`pmSupportsLastError`|呼び出して、Win32、呼び出し先を許可する`SetLastError`属性付きメソッドから戻る前に機能します。|  
+|`pmSupportsLastError`|呼び出す、Win32 呼び出しを許可する`SetLastError`属性付きメソッドから戻る前に関数。|  
 |`pmCallConvMask`|予約されています。|  
-|`pmCallConvWinapi`|既定のプラットフォーム呼び出し規約を使用します。 たとえば、Windows では、既定値は`StdCall`では Windows CE .NET`Cdecl`です。|  
-|`pmCallConvCdecl`|使用して、`Cdecl`呼び出し規約です。 この場合、呼び出し元は、スタックをクリーンアップします。 これにより、関数を呼び出す`varargs`(つまり、可変個のパラメーターを受け入れる関数)。|  
-|`pmCallConvStdcall`|使用して、`StdCall`呼び出し規約です。 この場合、呼び出し先がスタックを消去します。 これは、アンマネージ関数を呼び出すプラットフォーム呼び出しの既定の規則です。|  
-|`pmCallConvThiscall`|使用して、`ThisCall`呼び出し規約です。 この場合、最初のパラメーターは、`this`ポインター レジスタ ECX に保存されます。 その他のパラメーターをスタックにプッシュされます。 `ThisCall`呼び出し規約はアンマネージ DLL からエクスポートされたクラスのメソッドの呼び出しに使用します。|  
+|`pmCallConvWinapi`|既定のプラットフォーム呼び出し規約を使用します。 たとえば、Windows の既定値は`StdCall`とは、Windows CE .NET`Cdecl`します。|  
+|`pmCallConvCdecl`|使用して、`Cdecl`呼び出し規約。 この場合、呼び出し元がスタックを消去します。 これにより、関数を呼び出す`varargs`(可変個のパラメーターを受け入れる関数)。|  
+|`pmCallConvStdcall`|使用して、`StdCall`呼び出し規約。 この場合、呼び出し先がスタックを消去します。 これは、アンマネージ関数を呼び出すプラットフォーム呼び出しの既定の規則です。|  
+|`pmCallConvThiscall`|使用して、`ThisCall`呼び出し規約。 この場合は、最初のパラメーターは、`this`ポインター レジスタ ECX に格納されます。 その他のパラメーターは、スタックにプッシュされます。 `ThisCall`アンマネージ DLL からエクスポートしたクラスのメソッドの呼び出しに使用呼び出し規約。|  
 |`pmCallConvFastcall`|予約済み。|  
 |`pmMaxValue`|予約済み。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorHdr.h  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>関連項目
+
+- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

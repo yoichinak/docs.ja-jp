@@ -7,20 +7,22 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF]
 ms.assetid: a177374d-ee54-4d00-aaae-c983481cae9b
-ms.openlocfilehash: 201dd8cfc76191fefb45ff01dd42f26fd8454f20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f1e4257804b6ce77eeb1bed7b984e90e90cc2752
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971068"
 ---
 # <a name="richtextbox"></a>RichTextBox
-<xref:System.Windows.Controls.RichTextBox>要素は、切り取りと貼り付け、豊富なドキュメントの表示、およびコンテンツの選択などの機能の組み込みサポートを備えた編集中のコントロールを定義します。  
+<xref:System.Windows.Controls.RichTextBox>要素は、切り取りと貼り付け、豊富なドキュメントの表示、およびコンテンツの選択などの機能の組み込みサポートを備えた編集コントロールを定義します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [RichTextBox の概要](../../../../docs/framework/wpf/controls/richtextbox-overview.md)  
- [方法トピック](../../../../docs/framework/wpf/controls/richtextbox-how-to-topics.md)  
+ [RichTextBox の概要](richtextbox-overview.md)  
+ [方法トピック](richtextbox-how-to-topics.md)  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Controls.TextBox>  
- [WPF のドキュメント](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [フロー ドキュメントの概要](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Controls.TextBox>
+- [WPF のドキュメント](../advanced/documents-in-wpf.md)
+- [フロー ドキュメントの概要](../advanced/flow-document-overview.md)

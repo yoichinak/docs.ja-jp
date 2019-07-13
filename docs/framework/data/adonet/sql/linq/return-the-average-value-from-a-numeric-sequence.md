@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ee3b8673-a2e7-4b2d-9b5c-4972ff9e665d
-ms.openlocfilehash: 3e808b836183a23fa6bd80faeb0d3cfc5921f4cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eea1439337b29fee51c422238425491fc2345211
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037558"
 ---
 # <a name="return-the-average-value-from-a-numeric-sequence"></a>一連の数値の平均値の取得
 <xref:System.Linq.Enumerable.Average%2A> 演算子は、一連の数値の平均値を計算します。  
@@ -37,7 +37,7 @@ ms.locfileid: "33358857"
 ## <a name="example"></a>例  
  次の例は、`Average` 演算子を使用して、カテゴリ内の平均単価よりも単価が高い `Products` を見つけます。 その後、結果をグループ別に表示します。  
   
- この例の戻り値は匿名型なので、C# で `var` キーワードを使用する必要がある点に注意してください。  
+ この例の戻り値の型は匿名型なので、C# で `var` キーワードを使用する必要がある点に注意してください。  
   
  [!code-csharp[DLinqQueryExamples#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#3)]
  [!code-vb[DLinqQueryExamples#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#3)]  
@@ -114,5 +114,6 @@ ms.locfileid: "33358857"
   
  `Gravad lax`  
   
-## <a name="see-also"></a>関連項目  
- [集計クエリ](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
+## <a name="see-also"></a>関連項目
+
+- [集計クエリ](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)

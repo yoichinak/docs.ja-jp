@@ -7,19 +7,20 @@ helpviewer_keywords:
 - controls [WPF], FlowDocumentReader
 - FlowDocumentReader control [WPF]
 ms.assetid: ba7aaa70-f77b-4555-a79d-68a12c8e134b
-ms.openlocfilehash: b390c345beee74d505d23196133ed7f82cfd8ef4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d8201eeceeb39ffea888849eba32e77ee7c25ece
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054914"
 ---
 # <a name="flowdocumentreader"></a>FlowDocumentReader
-<xref:System.Windows.Controls.FlowDocumentReader>コントロールを使用して、表示<xref:System.Windows.Documents.FlowDocument>コンテンツ。 これは、複数の表示モードをサポートします。  
+<xref:System.Windows.Controls.FlowDocumentReader>コントロールを使用する表示<xref:System.Windows.Documents.FlowDocument>コンテンツ。 複数の表示モードをサポートします。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Controls.FlowDocumentReader>  
- <xref:System.Windows.Controls.FlowDocumentPageViewer>  
- <xref:System.Windows.Controls.FlowDocumentScrollViewer>  
- [WPF のドキュメント](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [フロー ドキュメントの概要](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Controls.FlowDocumentReader>
+- <xref:System.Windows.Controls.FlowDocumentPageViewer>
+- <xref:System.Windows.Controls.FlowDocumentScrollViewer>
+- [WPF のドキュメント](../advanced/documents-in-wpf.md)
+- [フロー ドキュメントの概要](../advanced/flow-document-overview.md)

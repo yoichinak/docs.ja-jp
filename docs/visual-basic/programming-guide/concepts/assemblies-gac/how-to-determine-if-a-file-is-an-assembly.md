@@ -2,29 +2,29 @@
 title: '方法: ファイルがアセンブリ (Visual Basic) を確認します。'
 ms.date: 07/20/2015
 ms.assetid: de26f410-9bd1-4b55-a343-cc82f81684be
-ms.openlocfilehash: ced41279e7e192d6d5bed53dbce7378395b32e6d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 47ac7f29509af86819006a4394ca661140b95ab0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47089400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022169"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a>方法: ファイルがアセンブリ (Visual Basic) を確認します。
 ファイルが管理されていて、ファイルのメタデータにアセンブリ エントリが含まれている場合、そのファイルはアセンブリです。 アセンブリとメタデータの詳細については、「[アセンブリ マニフェスト](../../../../framework/app-domains/assembly-manifest.md)」を参照してください。  
   
 ## <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>ファイルがアセンブリかどうかを手動で確認する方法  
   
-1.  [Ildasm.exe (IL 逆アセンブラー)](../../../../framework/tools/ildasm-exe-il-disassembler.md) を起動します。  
+1. [Ildasm.exe (IL 逆アセンブラー)](../../../../framework/tools/ildasm-exe-il-disassembler.md) を起動します。  
   
-2.  テストするファイルを読み込みます。  
+2. テストするファイルを読み込みます。  
   
-3.  **ILDASM** で、そのファイルが移植可能な実行可能 (PE) ファイルではないと報告された場合、そのファイルはアセンブリでありません。 詳細については、「[方法: アセンブリの内容を表示する](../../../../framework/app-domains/how-to-view-assembly-contents.md)」を参照してください。  
+3. **ILDASM** で、そのファイルが移植可能な実行可能 (PE) ファイルではないと報告された場合、そのファイルはアセンブリでありません。 詳細については、トピック「[方法: アセンブリの内容を表示する](../../../../framework/app-domains/how-to-view-assembly-contents.md)」を参照してください。  
   
 ## <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>ファイルがアセンブリかどうかをプログラムによって確認する方法  
   
-1.  テストするファイルの完全パスと名前を渡して、<xref:System.Reflection.AssemblyName.GetAssemblyName%2A> メソッドを呼び出します。  
+1. テストするファイルの完全パスと名前を渡して、<xref:System.Reflection.AssemblyName.GetAssemblyName%2A> メソッドを呼び出します。  
   
-2.  <xref:System.BadImageFormatException> 例外がスローされた場合、ファイルはアセンブリでありません。  
+2. <xref:System.BadImageFormatException> 例外がスローされた場合、ファイルはアセンブリでありません。  
   
 ## <a name="example"></a>例  
  次の例では、DLL がアセンブリかどうかをテストして確認します。  
@@ -54,6 +54,6 @@ End Module
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Reflection.AssemblyName>  
-- [プログラミングの概念](../../../../visual-basic/programming-guide/concepts/index.md)  
+- <xref:System.Reflection.AssemblyName>
+- [プログラミングの概念](../../../../visual-basic/programming-guide/concepts/index.md)
 - [アセンブリとグローバル アセンブリ キャッシュ (Visual Basic)](index.md)

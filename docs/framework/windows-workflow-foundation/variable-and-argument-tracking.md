@@ -2,12 +2,12 @@
 title: 変数と引数の追跡
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-ms.openlocfilehash: 45ed3761cd7ead82650023b93a2f32a43e847339
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 75ec8124200b146965214d161d0e6f246888542c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195876"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64640981"
 ---
 # <a name="variable-and-argument-tracking"></a>変数と引数の追跡
 ワークフローの実行を追跡するときは、データを抽出すると便利です。 これにより、実行後に追跡レコードにアクセスするときにコンテキストが追加されます。 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] では、追跡を使用して、ワークフローのアクティビティのスコープ内の参照可能な変数や引数を抽出できます。 プロファイルを追跡すると、データを簡単に抽出できるようになります。  
@@ -15,9 +15,9 @@ ms.locfileid: "47195876"
 ## <a name="variables-and-arguments"></a>変数と引数  
  変数および引数が抽出されるのは、アクティビティが ActivityStateRecord を生成したときです。  変数は、アクティビティのスコープ内にある場合にのみ抽出の対象となります。 アクティビティ内に抽出する変数は、次のように指定します。  
   
--   変数名によって変数が指定されている場合、追跡されている現在のアクティビティと親アクティビティ内の変数が追跡で検索されます。 変数は、現在のアクティビティのスコープと親スコープ内で検索されます。  
+- 変数名によって変数が指定されている場合、追跡されている現在のアクティビティと親アクティビティ内の変数が追跡で検索されます。 変数は、現在のアクティビティのスコープと親スコープ内で検索されます。  
   
--   抽出される変数名を使用して指定した場合は、="*"、追跡されている現在のアクティビティ内のすべての変数が抽出されます。 この場合、スコープ内の変数でも、親アクティビティで定義されているものは抽出されません。  
+- 抽出される変数名を使用して指定した場合は、="*"、追跡されている現在のアクティビティ内のすべての変数が抽出されます。 この場合、スコープ内の変数でも、親アクティビティで定義されているものは抽出されません。  
   
  引数の抽出時、抽出される引数はアクティビティの状態によって異なります。 アクティビティの状態が Executing である場合、`InArguments` のみが抽出に使用できます。 他のアクティビティ状態 (Closed、Faulted、Canceled) については、すべての引数、InArguments と OutArguments の両方が抽出に使用できます。  
   
@@ -40,12 +40,13 @@ ms.locfileid: "47195876"
 ## <a name="protecting-information-stored-within-variables-and-arguments"></a>変数および引数に格納される情報の保護  
  追跡される変数や引数は、既定では WF ランタイムによって参照可能になります。 ワークフローの開発者は、次のような手順を行うことで、追跡対象の変数や引数へのアクセスを防止できます。  
   
-1.  変数の値を暗号化します。  
+1. 変数の値を暗号化します。  
   
-2.  追跡プロファイルの作成を管理して、変数や引数の抽出を防止します。  
+2. 追跡プロファイルの作成を管理して、変数や引数の抽出を防止します。  
   
-3.  カスタムの追跡参加要素については、変数や引数に格納されている機密情報が WF コードによって公開されないようにします。  
+3. カスタムの追跡参加要素については、変数や引数に格納されている機密情報が WF コードによって公開されないようにします。  
   
-## <a name="see-also"></a>関連項目  
- [Windows Server App Fabric の監視](https://go.microsoft.com/fwlink/?LinkId=201273)  
- [App Fabric でアプリケーションの監視](https://go.microsoft.com/fwlink/?LinkId=201275)
+## <a name="see-also"></a>関連項目
+
+- [Windows Server App Fabric の監視](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [App Fabric でアプリケーションの監視](https://go.microsoft.com/fwlink/?LinkId=201275)

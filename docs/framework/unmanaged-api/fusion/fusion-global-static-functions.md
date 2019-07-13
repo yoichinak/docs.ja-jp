@@ -9,45 +9,45 @@ ms.assetid: 229b2188-9168-4b44-a987-e1f515494688
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 86cb59c0935c193a9865d5ace5fe11c96226d9e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697720"
 ---
 # <a name="fusion-global-static-functions"></a>Fusion グローバル静的関数
 このセクションでは、fusion API が使用されるアンマネージ グローバル静的関数について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ClearDownloadCache 関数](../../../../docs/framework/unmanaged-api/fusion/cleardownloadcache-function.md)  
- ダウンロードされたアセンブリのグローバル アセンブリ キャッシュをクリアします。  
+ ダウンロードしたアセンブリのグローバル アセンブリ キャッシュをクリアします。  
   
  [CompareAssemblyIdentity 関数](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md)  
- それらが等しいかどうかを決定する 2 つのアセンブリ id を比較します。  
+ 2 つのアセンブリ id と同じかどうかを比較します。  
   
  [CreateApplicationContext 関数](../../../../docs/framework/unmanaged-api/fusion/createapplicationcontext-function.md)  
- 内部使用のみ。 (この関数は、.NET Framework インフラストラクチャをサポートしているし、コードから直接使用するものではありません)。  
+ 内部のみ。 (この関数は、.NET Framework インフラストラクチャをサポートしているし、コードから直接使用するものではありません)。  
   
  [CreateAssemblyCache 関数](../../../../docs/framework/unmanaged-api/fusion/createassemblycache-function.md)  
- 新しいへのポインターを取得[IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)をグローバル アセンブリ キャッシュを表すインスタンス。  
+ 新しいポインターを取得します。 [IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)グローバル アセンブリ キャッシュを表すインスタンス。  
   
  [CreateAssemblyEnum 関数](../../../../docs/framework/unmanaged-api/fusion/createassemblyenum-function.md)  
- ポインターを取得、 [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)を指定したアセンブリ内に存在するオブジェクトの一覧を表すインスタンス。  
+ ポインターを取得、 [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)指定したアセンブリ内に存在するオブジェクトの一覧を表すインスタンス。  
   
  [CreateAssemblyNameObject 関数](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md)  
- ポインターを取得、 [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)を指定した名前を持つアセンブリの一意の id を表すインスタンス。  
+ ポインターを取得、 [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)指定した名前のアセンブリの一意の id を表すインスタンス。  
   
  [CreateHistoryReader 関数](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)  
  指定したファイルの履歴のリーダーを作成します。  
   
  [CreateInstallReferenceEnum 関数](../../../../docs/framework/unmanaged-api/fusion/createinstallreferenceenum-function.md)  
- ポインターを取得、 [IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md)を指定したアセンブリへのアプリケーションの参照の一覧を表すインスタンス。  
+ ポインターを取得、 [IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md)指定したアセンブリへのアプリケーションの参照のリストを表すインスタンス。  
   
  [GetAppIdAuthority 関数](../../../../docs/framework/unmanaged-api/fusion/getappidauthority-function.md)  
  ポインターを取得、 [IAppIdAuthority](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md)アプリケーション id と参照のキーを管理するインスタンス。  
   
  [GetAssemblyIdentityFromFile 関数](../../../../docs/framework/unmanaged-api/fusion/getassemblyidentityfromfile-function.md)  
- ポインターを取得、`IUnknown`指定したオブジェクト`IID`のアセンブリにある指定したファイル パス。  
+ ポインターを取得、 `IUnknown` 、指定したオブジェクト`IID`のアセンブリにある指定したファイル パス。  
   
  [GetCachePath 関数](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)  
  指定したフラグを使用して、キャッシュされたアセンブリへのパスを取得します。  

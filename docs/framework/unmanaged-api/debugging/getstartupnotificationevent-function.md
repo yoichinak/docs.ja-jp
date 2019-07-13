@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3692471e0652a1a812b1d0cbed9e38cc32112ef4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f67f3ef57b4996eb4a956c596b76fb94b1bdfd7a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404311"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738891"
 ---
 # <a name="getstartupnotificationevent-function"></a>GetStartupNotificationEvent 関数
 指定された対象プロセスに読み込まれている任意の共通言語ランタイム (CLR: Common Language Runtime) によって通知されるイベント ハンドルを作成または開きます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetStartupNotificationEvent  
     (  
     [in]  DWORD     debuggeePID,  
@@ -38,7 +38,7 @@ HRESULT GetStartupNotificationEvent
     );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `debuggeePID`  
  [in] 受信する CLR スタートアップ通知の送信元である対象プロセスのプロセス識別子。  
   
@@ -55,13 +55,13 @@ HRESULT GetStartupNotificationEvent
  E_FAIL (またはその他の E_ リターン コード)  
  スタートアップ通知イベントに対するハンドルを取得できません。  
   
-## <a name="remarks"></a>コメント  
- Windows オペレーティング システムでは、`debuggeePID` が OS プロセス識別子に対応づけられます。  
+## <a name="remarks"></a>Remarks  
+ Windows オペレーティング システムでは、`debuggeePID` がプロセス識別子に対応づけられます。  
   
- イベントは、通知元の CLR によってマネージ コードが実行される前に通知されます。  
+ イベントは、通知元の CLR によってマネージド コードが実行される前に通知されます。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** dbgshim.h  
   

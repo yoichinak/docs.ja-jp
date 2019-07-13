@@ -1,45 +1,46 @@
 ---
-title: '方法 : Visual Basic でディレクトリを作成する'
+title: '方法: Visual Basic でディレクトリを作成する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - directories [Visual Basic], creating
 - folders [Visual Basic], creating
 ms.assetid: 0351a2ca-24d8-43b5-bb39-9b99e6401cff
-ms.openlocfilehash: ec9ee01e17f116e80708dbcb34e4d804bf3d7a6e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54696dab41c99774bb3638e0c19837a906144d27
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583956"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64629077"
 ---
-# <a name="how-to-create-a-directory-in-visual-basic"></a>方法 : Visual Basic でディレクトリを作成する
+# <a name="how-to-create-a-directory-in-visual-basic"></a>方法: Visual Basic でディレクトリを作成する
 ディレクトリを作成するには、`My.Computer.FileSystem` オブジェクトの `CreateDirectory` メソッドを使用します。  
   
  ディレクトリが既にある場合、例外はスローされません。  
   
 ### <a name="to-create-a-directory"></a>ディレクトリを作成するには  
   
--   ディレクトリを作成する場所を完全にパスに指定して、`CreateDirectory` メソッドを使用します。 この例では、`C:\Documents and Settings\All Users\Documents` に `NewDirectory` ディレクトリを作成します。  
+- ディレクトリを作成する場所を完全にパスに指定して、`CreateDirectory` メソッドを使用します。 この例では、`C:\Documents and Settings\All Users\Documents` に `NewDirectory` ディレクトリを作成します。  
   
-     [!code-vb[VbVbcnMyFileSystem#2](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-directory_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#2)]  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  次の条件を満たす場合は、例外が発生する可能性があります。  
   
--   ディレクトリ名が不正な場合。 たとえば、不正な文字が含まれている場合や、空白だけの場合などです (<xref:System.ArgumentException>)。  
+- ディレクトリ名が不正な場合。 たとえば、不正な文字が含まれている場合や、空白だけの場合などです (<xref:System.ArgumentException>)。  
   
--   作成するディレクトリの親ディレクトリが読み取り専用である場合 (<xref:System.IO.IOException>)。  
+- 作成するディレクトリの親ディレクトリが読み取り専用である場合 (<xref:System.IO.IOException>)。  
   
--   ディレクトリ名が `Nothing` の場合 (<xref:System.ArgumentNullException>)｡  
+- ディレクトリ名が `Nothing` の場合 (<xref:System.ArgumentNullException>)｡  
   
--   ディレクトリ名が長すぎる場合 (<xref:System.IO.PathTooLongException>)｡  
+- ディレクトリ名が長すぎる場合 (<xref:System.IO.PathTooLongException>)｡  
   
--   ディレクトリ名がコロン ":" の場合 (<xref:System.NotSupportedException>)｡  
+- ディレクトリ名がコロン ":" の場合 (<xref:System.NotSupportedException>)｡  
   
--   ユーザーがディレクトリを作成するアクセス許可を持っていない場合 (<xref:System.UnauthorizedAccessException>)。  
+- ユーザーがディレクトリを作成するアクセス許可を持っていない場合 (<xref:System.UnauthorizedAccessException>)。  
   
--   部分的に信頼されている状況でユーザーにアクセス許可がない場合 (<xref:System.Security.SecurityException>)。  
+- 部分的に信頼されている状況でユーザーにアクセス許可がない場合 (<xref:System.Security.SecurityException>)。  
   
-## <a name="see-also"></a>参照  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CreateDirectory%2A>  
- [ファイルおよびディレクトリの作成、削除、および移動](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CreateDirectory%2A>
+- [ファイルおよびディレクトリの作成、削除、および移動](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)

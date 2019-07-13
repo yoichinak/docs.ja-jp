@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -debug compiler option [C#]
 - /debug compiler option [C#]
 ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
-ms.openlocfilehash: c0e8909a1e642333e93cfea5dbfde2f6c33c5443
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 4828e1cdd8b830f10b134b613bc96e69490091fe
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43470958"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59338489"
 ---
 # <a name="-debug-c-compiler-options"></a>-debug (C# コンパイラ オプション)
 **-debug** オプションを指定すると、コンパイラによってデバッグ情報が生成され、出力ファイルに格納されます。  
@@ -32,7 +32,7 @@ ms.locfileid: "43470958"
  `full` &#124; `pdbonly`  
  コンパイラによって生成されるデバッグ情報の種類を指定します。 full 引数を使用すると (**-debug:pdbonly** を指定しない場合)、実行中のプログラムにデバッガーをアタッチできます。 pdbonly を指定すると、プログラムがデバッガーで開始されたときにはソース コードをデバッグできますが、実行中のプログラムをデバッガーにアタッチしたときはアセンブラーしか表示されません。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  このオプションを使用してデバッグ ビルドを作成します。 **-debug**、**-debug+**、または **-debug:full** のいずれも指定しなかった場合、プログラムの出力ファイルをデバッグすることはできません。  
   
  **-debug:full** を使用する場合は、JIT によって最適化されるコードの速度とサイズに若干影響が生じる点に注意してください。また、**-debug:full** でデバッグした場合、わずかではありますが、コードの品質にも影響が生じます。 生成されるリリース コードには、**-debug:pdbonly** を使用するか、PDB を一切使用しないことをお勧めします。  
@@ -46,15 +46,15 @@ ms.locfileid: "43470958"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
   
-1.  プロジェクトの **[プロパティ]** ページを開きます。  
+1. プロジェクトの **[プロパティ]** ページを開きます。  
   
-2.  **[ビルド]** プロパティ ページをクリックします。  
+2. **[ビルド]** プロパティ ページをクリックします。  
   
-3.  **[詳細設定]** ボタンをクリックします。  
+3. **[詳細設定]** ボタンをクリックします。  
   
-4.  **[デバッグ情報]** プロパティを変更します。  
+4. **[デバッグ情報]** プロパティを変更します。  
   
- このコンパイラ オプションをプログラムで設定する方法については、「<xref:VSLangProj80.CSharpProjectConfigurationProperties3.DebugSymbols%2A>」をご覧ください。  
+ このコンパイラ オプションをプログラムで設定する方法については、「 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DebugSymbols%2A>」をご覧ください。  
   
 ## <a name="example"></a>例  
  デバッグ情報を出力ファイル `app.pdb` に出力します。  
@@ -63,7 +63,7 @@ ms.locfileid: "43470958"
 csc -debug -pdb:app.pdb test.cs  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)  
+- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

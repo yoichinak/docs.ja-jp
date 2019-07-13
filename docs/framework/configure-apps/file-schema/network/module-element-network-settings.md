@@ -1,5 +1,5 @@
 ---
-title: '&lt;モジュール&gt;要素 (ネットワーク設定)'
+title: <module> 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#module
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - module element
 - <module> element
 ms.assetid: 10318725-9666-4d65-ab61-b94c64e59f13
-ms.openlocfilehash: 2d263fd64475d119d536e7cef69896fcfa5ae42c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0d108f2350d82666e3dc24f0f6854fe64ea4755f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674490"
 ---
-# <a name="ltmodulegt-element-network-settings"></a>&lt;モジュール&gt;要素 (ネットワーク設定)
+# <a name="module-element-network-settings"></a>\<module> 要素 (ネットワーク設定)
 新しいプロキシ モジュールをアプリケーションに追加します。  
   
  \<configuration>  
 \<system.net>  
-\<defaultProxy >  
-\<モジュール >  
+\<defaultProxy>  
+\<module>  
   
 ## <a name="syntax"></a>構文  
   
@@ -72,6 +72,7 @@ ms.locfileid: "50183699"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.Net.IWebProxy?displayProperty=nameWithType>  
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Net.IWebProxy?displayProperty=nameWithType>
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

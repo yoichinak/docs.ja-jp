@@ -1,5 +1,5 @@
 ---
-title: '方法 : 分離ストレージでストアを取得する'
+title: '方法: 分離ストレージでストアを取得する'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e2f87bfe1e3e7f3a1c8135c047b25a998793453
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 7ef65356d84016462941850ef9b9d6210debc62c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084071"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622692"
 ---
-# <a name="how-to-obtain-stores-for-isolated-storage"></a>方法 : 分離ストレージでストアを取得する
+# <a name="how-to-obtain-stores-for-isolated-storage"></a>方法: 分離ストレージでストアを取得する
 分離ストアでは、データ コンパートメント内の仮想ファイル システムを公開します。 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> クラスでは、分離ストアと対話するためのいくつかのメソッドが提供されます。 ストアを作成して取得するために、<xref:System.IO.IsolatedStorage.IsolatedStorageFile> では次の 3 つの静的メソッドが提供されます。  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> は、ユーザーおよびアセンブリ別に分離されるストレージを返します。  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> は、ユーザーおよびアセンブリ別に分離されるストレージを返します。  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> は、ドメインおよびアセンブリ別に分離されるストレージを返します。  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> は、ドメインおよびアセンブリ別に分離されるストレージを返します。  
   
      両方のメソッドで、呼び出し元のコードに属するストアが取得されます。  
   
--   静的メソッド <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> は、スコープ パラメーターの組み合わせを渡すことで指定される分離ストアを返します。  
+- 静的メソッド <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> は、スコープ パラメーターの組み合わせを渡すことで指定される分離ストアを返します。  
   
  次のコードでは、ユーザー、アセンブリ、およびドメイン別に分離されるストアを返します。  
   
@@ -58,8 +58,8 @@ ms.locfileid: "44084071"
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
-- <xref:System.IO.IsolatedStorage.IsolatedStorageScope>  
-- [分離ストレージ](../../../docs/standard/io/isolated-storage.md)  
-- [分離のタイプ](../../../docs/standard/io/types-of-isolation.md)  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
+- <xref:System.IO.IsolatedStorage.IsolatedStorageScope>
+- [分離ストレージ](../../../docs/standard/io/isolated-storage.md)
+- [分離のタイプ](../../../docs/standard/io/types-of-isolation.md)
 - [共通言語ランタイムのアセンブリ](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

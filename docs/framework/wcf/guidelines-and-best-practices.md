@@ -8,18 +8,18 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-ms.openlocfilehash: 54af876a361dfee7a00e3fd29f43f4b643b07913
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 1c16c0936f729636aaa56e6e50c33e18c2b0f788
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929338"
 ---
 # <a name="guidelines-and-best-practices"></a>ガイドラインと最適な使用方法
 このセクションには、Windows Communication Foundation (WCF) アプリケーションを作成するためのガイドラインを提供するトピックが含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ベスト プラクティス: データ コントラクトのバージョン管理](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
+ [ベスト プラクティス:データ コントラクトのバージョン管理](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
  将来のバージョンが作成されても影響を受けることのないデータ コントラクトを作成する方法と、そのタイミングについて説明します。  
   
  [サービスのバージョン管理](../../../docs/framework/wcf/service-versioning.md)  
@@ -44,8 +44,9 @@ ms.locfileid: "48850441"
   
  [基本的な WCF プログラミング](../../../docs/framework/wcf/basic-wcf-programming.md)  
   
-## <a name="see-also"></a>関連項目  
- [Windows Communication Foundation とは](../../../docs/framework/wcf/whats-wcf.md)  
- [Windows Communication Foundation サンプル](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
- [概念](../../../docs/framework/wcf/conceptual-overview.md)  
- [クライアントを構築する](../../../docs/framework/wcf/building-clients.md)
+## <a name="see-also"></a>関連項目
+
+- [Windows Communication Foundation とは](../../../docs/framework/wcf/whats-wcf.md)
+- [Windows Communication Foundation (WCF) のサンプル](./samples/index.md)
+- [概念](../../../docs/framework/wcf/conceptual-overview.md)
+- [クライアントを構築する](../../../docs/framework/wcf/building-clients.md)

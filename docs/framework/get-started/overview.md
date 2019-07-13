@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a8519f7ecfc430aaa9b888f9239f669e6e54eb02
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f50a469327a06eabdb6a80821203f2222dcd2921
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192747"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878026"
 ---
 # <a name="overview-of-the-net-framework"></a>.NET Framework の概要
 
@@ -45,7 +45,7 @@ ms.locfileid: "50192747"
 
 共通言語ランタイムおよびクラス ライブラリの、アプリケーションおよびシステム全体に対する関係を次の図に示します。 この図には、比較的大規模なアーキテクチャの内部でマネージ コードが動作する方法も示されています。
 
-![大規模アーキテクチャのマネージ コードの](../../../docs/framework/get-started/media/circle.gif "円グラフ") コンテキスト内の .NET Framework
+![比較的大規模なアーキテクチャの内部でマネージド コードが動作する方法を示すスクリーンショット。](./media/overview/language-runtime-class-library-relationship.gif)
 
 .NET Framework の主要な機能を以降のセクションでより詳細に説明します。
 
@@ -87,15 +87,15 @@ ms.locfileid: "50192747"
 
 - Windows Communication Foundation (WCF) を使用するサービス指向アプリケーション。 「[WCF を使用したサービス指向アプリケーション](../../../docs/framework/wcf/index.md)」を参照してください。
 
-- Windows Workflow Foundation (WF) を使用するワークフロー対応アプリケーション。 「[.NET Framework におけるワークフローの作成](https://msdn.microsoft.com/library/cbf3880f-dc7b-466d-b808-1109b1223f4a)」を参照してください。
+- Windows Workflow Foundation (WF) を使用するワークフロー対応アプリケーション。 「[Windows Workflow Foundation](../windows-workflow-foundation/index.md)」を参照してください。
 
 Windows フォーム クラスは、Windows GUI の開発を非常に簡単にする、再利用可能な型の包括的なセットです。 ASP.NET Web フォーム アプリケーションを作成する場合は、Web フォーム クラスを使用します。
 
 ## <a name="see-also"></a>関連項目
 
-- [システム要件](../../../docs/framework/get-started/system-requirements.md)   
-- [インストール ガイド](../../../docs/framework/install/index.md)   
-- [開発ガイド](../../../docs/framework/development-guide.md)   
-- [ツール](../../../docs/framework/tools/index.md)   
-- [.NET Framework のサンプル](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)   
+- [システム要件](../../../docs/framework/get-started/system-requirements.md)
+- [インストール ガイド](../../../docs/framework/install/index.md)
+- [開発ガイド](../../../docs/framework/development-guide.md)
+- [ツール](../../../docs/framework/tools/index.md)
+- [.NET サンプルおよびチュートリアル](../../samples-and-tutorials/index.md)
 - [.NET Framework クラス ライブラリ](https://go.microsoft.com/fwlink/?LinkID=227195)

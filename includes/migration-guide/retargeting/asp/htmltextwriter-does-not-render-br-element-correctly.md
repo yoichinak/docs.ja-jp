@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: e600b8249096eecb13f63ea00343a771a8c12b60
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804439"
+---
 ### <a name="htmltextwriter-does-not-render-br-element-correctly"></a>HtmlTextWriter で `<br/>` 要素が正しく表示されない
 
 |   |   |
@@ -8,4 +16,3 @@
 |Version|4.6|
 |型|再ターゲット中|
 |影響を受ける API|<ul><li><xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)?displayProperty=nameWithType></li><li><xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.Web.UI.HtmlTextWriterTag)?displayProperty=nameWithType></li></ul>|
-

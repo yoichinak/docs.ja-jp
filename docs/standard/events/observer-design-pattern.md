@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1dbd2c991f4b4259caa180375283ecb6d957336
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a89739b92d64e8774080d82f9e39af24c269223e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578125"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615170"
 ---
 # <a name="observer-design-pattern"></a>オブサーバー デザイン パターン
 オブザーバー デザイン パターンでは、プロバイダーにサブスクライバーを登録して通知を受信することができます。 このデザイン パターンは、プッシュ ベースの通知を必要とするあらゆるシナリオに適しています。 このパターンでは、1 つの*プロバイダー* (*サブジェクト*または*観察可能なオブジェクト*とも呼ばれます) と、0 個以上の*オブザーバー*を定義します。 プロバイダーにオブザーバーを登録すると、あらかじめ定義した条件、イベント、または状態変化が発生するたびに、プロバイダーのいずれかのメソッドが呼び出されて自動的にすべてのオブザーバーに通知されます。 このメソッド呼び出しで、プロバイダーからオブザーバーに現在の状態の情報を提供することもできます。 .NET Framework でオブザーバー デザイン パターンを適用するには、ジェネリック インターフェイスの <xref:System.IObservable%601?displayProperty=nameWithType> および <xref:System.IObserver%601?displayProperty=nameWithType> を実装します。 ジェネリック型パラメーターは、通知情報を提供する型を表します。  
@@ -29,24 +29,24 @@ ms.locfileid: "33578125"
   
  このパターンを実装するために必要なものを以下に示します。  
   
--   プロバイダー (サブジェクト)。オブザーバーに通知を送信するオブジェクトです。 プロバイダーは、<xref:System.IObservable%601> インターフェイスを実装するクラスまたは構造体で、 <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> という 1 つのメソッドを実装する必要があります。このメソッドは、プロバイダーからの通知を受信するオブザーバーによって呼び出されます。  
+- プロバイダー (サブジェクト)。オブザーバーに通知を送信するオブジェクトです。 プロバイダーは、<xref:System.IObservable%601> インターフェイスを実装するクラスまたは構造体で、 <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> という 1 つのメソッドを実装する必要があります。このメソッドは、プロバイダーからの通知を受信するオブザーバーによって呼び出されます。  
   
--   オブザーバー。プロバイダーからの通知を受信するオブジェクトです。 オブザーバーは、<xref:System.IObserver%601> インターフェイスを実装するクラスまたは構造体で、 オブザーバーでは、次の 3 つのメソッドを実装する必要があります。これらはすべてプロバイダーによって呼び出されます。  
+- オブザーバー。プロバイダーからの通知を受信するオブジェクトです。 オブザーバーは、<xref:System.IObserver%601> インターフェイスを実装するクラスまたは構造体で、 オブザーバーでは、次の 3 つのメソッドを実装する必要があります。これらはすべてプロバイダーによって呼び出されます。  
   
-    -   <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType>。新しい情報または現在の情報をオブザーバーに提供します。  
+    - <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType>。新しい情報または現在の情報をオブザーバーに提供します。  
   
-    -   <xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType>。エラーが発生したことをオブザーバーに通知します。  
+    - <xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType>。エラーが発生したことをオブザーバーに通知します。  
   
-    -   <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>。プロバイダーが通知の送信を完了したことを示します。  
+    - <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>。プロバイダーが通知の送信を完了したことを示します。  
   
--   プロバイダーがオブザーバーを追跡するための機構。 通常、プロバイダーでは、<xref:System.Collections.Generic.List%601?displayProperty=nameWithType> オブジェクトなどのコンテナー オブジェクトを使用して、通知にサブスクライブした <xref:System.IObserver%601> の実装への参照を保持します。 このようにストレージ コンテナーを使用すると、プロバイダーで必要に応じていくつでもオブザーバーを処理できます。 オブザーバーが通知を受信する順序は定義されていないため、プロバイダーで自由に順序を決定できます。  
+- プロバイダーがオブザーバーを追跡するための機構。 通常、プロバイダーでは、<xref:System.Collections.Generic.List%601?displayProperty=nameWithType> オブジェクトなどのコンテナー オブジェクトを使用して、通知にサブスクライブした <xref:System.IObserver%601> の実装への参照を保持します。 このようにストレージ コンテナーを使用すると、プロバイダーで必要に応じていくつでもオブザーバーを処理できます。 オブザーバーが通知を受信する順序は定義されていないため、プロバイダーで自由に順序を決定できます。  
   
--   通知が完了したときにプロバイダーがオブザーバーを削除できるようにするための <xref:System.IDisposable> の実装。 オブザーバーは、<xref:System.IDisposable> の実装への参照を <xref:System.IObservable%601.Subscribe%2A> メソッドから受け取ります。このため、プロバイダーが通知の送信を終了する前に、オブザーバーで <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> メソッドを呼び出してサブスクリプションを解除することもできます。  
+- 通知が完了したときにプロバイダーがオブザーバーを削除できるようにするための <xref:System.IDisposable> の実装。 オブザーバーは、<xref:System.IDisposable> の実装への参照を <xref:System.IObservable%601.Subscribe%2A> メソッドから受け取ります。このため、プロバイダーが通知の送信を終了する前に、オブザーバーで <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> メソッドを呼び出してサブスクリプションを解除することもできます。  
   
--   プロバイダーがオブザーバーに送信するデータを含むオブジェクト。 このオブジェクトの型は、<xref:System.IObservable%601> インターフェイスと <xref:System.IObserver%601> インターフェイスのジェネリック型パラメーターに対応します。 このオブジェクトは、<xref:System.IObservable%601> の実装と同じにすることもできますが、別の型にするのが最も一般的です。  
+- プロバイダーがオブザーバーに送信するデータを含むオブジェクト。 このオブジェクトの型は、<xref:System.IObservable%601> インターフェイスと <xref:System.IObserver%601> インターフェイスのジェネリック型パラメーターに対応します。 このオブジェクトは、<xref:System.IObservable%601> の実装と同じにすることもできますが、別の型にするのが最も一般的です。  
   
 > [!NOTE]
->  オブザーバー デザイン パターンを実装するだけでなく、<xref:System.IObservable%601> インターフェイスと <xref:System.IObserver%601> インターフェイスを使用して構築されたライブラリを使用することもできます。 たとえば、[.NET (Rx) の反応拡張](https://msdn.microsoft.com/library/hh242985.aspx)は、非同期プログラミングをサポートする一連の拡張メソッドと LINQ 標準シーケンス演算子で構成します。  
+>  オブザーバー デザイン パターンを実装するだけでなく、<xref:System.IObservable%601> インターフェイスと <xref:System.IObserver%601> インターフェイスを使用して構築されたライブラリを使用することもできます。 たとえば、[.NET (Rx) の反応拡張](https://docs.microsoft.com/previous-versions/dotnet/reactive-extensions/hh242985(v=vs.103))は、非同期プログラミングをサポートする一連の拡張メソッドと LINQ 標準シーケンス演算子で構成します。  
   
 ## <a name="implementing-the-pattern"></a>パターンの実装  
  次の例では、オブザーバー デザイン パターンを使用して、空港の手荷物受取所の情報システムを実装します。 `BaggageInfo` クラスは、到着便と、各便の手荷物の受け取り場所に関する情報を提供します。 これを次の例に示します。  
@@ -56,9 +56,9 @@ ms.locfileid: "33578125"
   
  `BaggageHandler` クラスは、到着便と手荷物の受け取り場所に関する情報を受け取るクラスです。 その内部では、次の 2 つのコレクションが保持されます。  
   
--   `observers` - 更新された情報を受け取るクライアントのコレクション。  
+- `observers` - 更新された情報を受け取るクライアントのコレクション。  
   
--   `flights` - 飛行機の便と、各便に割り当てられた手荷物の受け取り場所のコレクション。  
+- `flights` - 飛行機の便と、各便に割り当てられた手荷物の受け取り場所のコレクション。  
   
  どちらのコレクションも、`BaggageHandler` クラスのコンストラクターでインスタンス化されるジェネリック <xref:System.Collections.Generic.List%601> オブジェクトによって表されます。 `BaggageHandler` クラスのソース コードを次の例に示します。  
   

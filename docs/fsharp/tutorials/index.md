@@ -1,13 +1,13 @@
 ---
 redirect_url: /dotnet/fsharp/index
-ms.openlocfilehash: e9328a08370f1e7188fe3959d5d8ab3b382f8baa
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 25a509c136e7ee3a61b5477b5bfb4143d54f7a4d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "25726539"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645191"
 ---
 # <a name="f-tutorials"></a>F# チュートリアル
 
 > [!NOTE]
-これは現在も進行中です。
+> これは現在も進行中です。

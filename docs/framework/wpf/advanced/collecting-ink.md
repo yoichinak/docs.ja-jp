@@ -13,20 +13,20 @@ helpviewer_keywords:
 - properties [WPF], DefaultDrawingAttributes
 - DefaultDrawingAttributes property [WPF]
 ms.assetid: 66a3129d-9577-43eb-acbd-56c147282016
-ms.openlocfilehash: 25f9c0141a97d8e52e0883b14fd3e1f4574a05ea
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d2178a4cbf888baaf0ae84b03b3d463b0de658b1
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004281"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645729"
 ---
 # <a name="collect-ink"></a>インクを収集します。
 
-[Windows Presentation Foundation](../../../../docs/framework/wpf/index.md) プラットフォームでは、その機能の中核としてデジタル インクが収集されます。 このトピックでは、Windows Presentation Foundation (WPF) でのインクの収集方法について説明します。
+[Windows Presentation Foundation](../index.md) プラットフォームでは、その機能の中核としてデジタル インクが収集されます。 このトピックでは、Windows Presentation Foundation (WPF) でのインクの収集方法について説明します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-次の例を使用する、Visual Studio をインストールする必要があります最初、[!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]します。 WPF のアプリケーションを作成する方法を理解することもあります。 WPF の概要については、次を参照してください。[チュートリアル: 初めての WPF デスクトップ アプリケーション](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)します。
+次の例を使用する、Visual Studio をインストールする必要があります最初、[!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]します。 WPF のアプリケーションを作成する方法を理解することもあります。 WPF の概要については、次を参照してください。[チュートリアル。初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)します。
 
 ## <a name="use-the-inkcanvas-element"></a>InkCanvas 要素を使用します。
 
@@ -34,15 +34,15 @@ ms.locfileid: "46004281"
 
 XAML を使用して設定できますインク コレクションの追加と簡単に、 **InkCanvas**ツリーの要素。 次の例では、追加、<xref:System.Windows.Controls.InkCanvas>既定の WPF プロジェクトは Visual Studio で作成します。
 
-[!code-xaml[DigitalInkTopics#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#6)]
+[!code-xaml[DigitalInkTopics#6](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#6)]
 
 **InkCanvas**要素は、XAML 要素のほぼすべての種類にインク注釈機能を追加することの子要素を含めることもできます。 たとえば、テキスト要素には、手描き入力機能を追加するに単に使用するの子、 <xref:System.Windows.Controls.InkCanvas>:
 
-[!code-xaml[DigitalInkTopics#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#5)]
+[!code-xaml[DigitalInkTopics#5](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#5)]
 
 インクの画像をマークするためのサポートを追加すると、同じくらい簡単です。
 
-[!code-xaml[DigitalInkTopics#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#7)]
+[!code-xaml[DigitalInkTopics#7](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#7)]
 
 ### <a name="inkcollection-modes"></a>InkCollection モード
 
@@ -58,8 +58,8 @@ XAML を使用して設定できますインク コレクションの追加と�
 
 次のコードの値に基づいて編集モードの設定、 <xref:System.Windows.Forms.CheckBox>:
 
-[!code-csharp[DigitalInkTopics#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#8)]
-[!code-vb[DigitalInkTopics#8](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#8)]
+[!code-csharp[DigitalInkTopics#8](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#8)]
+[!code-vb[DigitalInkTopics#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#8)]
 
 #### <a name="drawingattributes"></a>DrawingAttributes
 
@@ -67,8 +67,8 @@ XAML を使用して設定できますインク コレクションの追加と�
 
 次の例では、選択したストロークの色を red に変更します。
 
-[!code-csharp[DigitalInkTopics#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#9)]
-[!code-vb[DigitalInkTopics#9](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#9)]
+[!code-csharp[DigitalInkTopics#9](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#9)]
+[!code-vb[DigitalInkTopics#9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#9)]
 
 ### <a name="defaultdrawingattributes"></a>DefaultDrawingAttributes
 
@@ -78,11 +78,11 @@ XAML を使用して設定できますインク コレクションの追加と�
 
 次の例は、設定する方法を示します、<xref:System.Windows.Ink.DrawingAttributes.Color%2A>プロパティ。 このコードを使用するには、Visual Studio で"helloinkcanvas"新しい WPF プロジェクトを作成します。 コードに置き換えます、 *MainWindow.xaml*を次のコード ファイル。
 
-[!code-xaml[HelloInkCanvas#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml#1)]
+[!code-xaml[HelloInkCanvas#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml#1)]
 
 次に、MainWindow クラス内のファイルのコードが次のボタン イベント ハンドラーを追加します。
 
-[!code-csharp[HelloInkCanvas#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml.cs#2)]
+[!code-csharp[HelloInkCanvas#2](~/samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml.cs#2)]
 
 このコードをコピーした後、キーを押して**F5** Visual Studio で、デバッガーでプログラムを実行します。
 

@@ -1,16 +1,16 @@
 ---
-title: 使用して Azure Table storage を概要します。F#
+title: F# を使用した Azure Table Storage の概要
 description: Azure Table storage または Azure Cosmos DB を使用してクラウドで構造化データを格納します。
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 45a5d845dcedb5c3ea07cc4540f66bad23338a88
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 54c777acd454e4f675175b814675c185e41ad9a4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756352"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Azure Table storage と F# を使用して Azure Cosmos DB Table API の概要します。 # 
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Azure Table storage と F を使用した Azure Cosmos DB Table API の概要します。\#
 
 Azure Table storage とは、クラウドで構造化 NoSQL データを格納するサービスです。 テーブル ストレージは、スキーマレス設計のキー/属性ストアです。 Table storage は、スキーマなしであるために、簡単に、アプリケーションの進化のニーズに合わせてデータを調整できますが。 データへのアクセスとは、高速でコスト効率に優れたアプリケーションのすべての種類です。 テーブル ストレージは、大幅に従来の SQL と同様、大量のデータよりも低コストでは通常です。
 
@@ -35,7 +35,6 @@ Azure Table storage 用に記述されたアプリケーションでは、コー
 ## <a name="prerequisites"></a>必須コンポーネント
 
 このガイドを使用するのにはまず[Azure ストレージ アカウントを作成](/azure/storage/storage-create-storage-account)または[Azure Cosmos DB アカウント](https://azure.microsoft.com/try/cosmosdb/)します。
-
 
 ## <a name="create-an-f-script-and-start-f-interactive"></a>作成して、F# スクリプトと開始 F# 対話型
 
@@ -128,7 +127,6 @@ Azure Configuration Manager の使用は省略可能です。 .NET Framework の
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L84-L85)]
 
-
 ### <a name="retrieve-a-range-of-entities-in-a-partition"></a>パーティション内のエンティティの範囲を取得します。
 
 パーティション内のすべてのエンティティのクエリを実行しない場合は、パーティション キー フィルターと行キー フィルターを組み合わせることで、範囲を指定できます。 ここでは、フィルターを使用する 2 つ、"Smith"パーティション内のすべてのエンティティを取得するのに、行キー (名) 文字から始まり、アルファベットの"M"よりも前。
@@ -148,7 +146,6 @@ Azure Configuration Manager の使用は省略可能です。 .NET Framework の
 結果を印刷するようになりました。
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L113-L115)]
-
 
 ### <a name="replace-an-entity"></a>エンティティを置換します。
 

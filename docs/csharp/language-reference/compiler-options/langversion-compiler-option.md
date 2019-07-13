@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: 9ebc90b3d4f610aec58f950f375d97fd2abf3617
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 030af5df222772b1e5a4d6f6946e59f4f2d1e1a9
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857272"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195797"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (C# コンパイラ オプション)
 
@@ -32,24 +32,22 @@ ms.locfileid: "43857272"
   
 |オプション|説明|  
 |------------|-------------|  
-|default|コンパイラは、最新のメジャー バージョンからサポートできるすべての有効な言語構文を受け入れます。|
-|ISO-1|コンパイラは、ISO/IEC 23270:2003 C# (1.0/1.2) に含まれている構文のみを受け入れます<sup id="TISO1">[ISO1](#FISO1)</sup>|  
-|ISO-2|コンパイラは、ISO/IEC 23270:2006 C# (2.0) に含まれている構文のみを受け入れます<sup id="TISO2">[ISO2](#FISO2)</sup>|
-|3|コンパイラは、C# 3.0 以下に含まれている構文のみを受け入れます<sup id="TCS3">[CS3](#FCS3)</sup>|
-|4|コンパイラは、C# 4.0 以下に含まれている構文のみを受け入れます<sup id="TCS4">[CS4](#FCS4)</sup>|
-|5|コンパイラは、C# 5.0 以下に含まれている構文のみを受け入れます<sup id="TCS5">[CS5](#FCS5)</sup>|
-|6|コンパイラは、C# 6.0 以下に含まれている構文のみを受け入れます<sup id="TCS6">[CS6](#FCS6)</sup>|
-|7|コンパイラは、C# 7.0 以下に含まれている構文のみを受け入れます<sup id="TCS7">[CS7](#FCS7)</sup>|
-|7.1|コンパイラは、C# 7.1 以下に含まれている構文のみを受け入れます<sup id="TCS71">[CS71](#FCS71)</sup>|
-|7.2|コンパイラは、C# 7.2 以下に含まれている構文のみを受け入れます<sup id="TCS72">[CS72](#FCS72)</sup>|
+|preview|コンパイラは、サポート可能な最新のプレビュー バージョンの有効な言語構文をすべて受け入れます。|
+|latest|コンパイラは、サポート可能な最新バージョン (マイナー リリースを含む) の有効な言語構文をすべて受け入れます。|
+|latestMajor|コンパイラは、最新のメジャー バージョンからサポートできるすべての有効な言語構文を受け入れます。|
+|8.0|コンパイラは、C# 8.0 以下に含まれている構文のみを受け入れます。 <sup id="TCS80">[CS80](#FCS80)</sup>|
 |7.3|コンパイラは、C# 7.3 以下に含まれている構文のみを受け入れます<sup id="TCS73">[CS73](#FCS73)</sup>|
-|latest|コンパイラは、サポートできるすべての有効な言語の構文を受け入れます。|
+|7.2|コンパイラは、C# 7.2 以下に含まれている構文のみを受け入れます<sup id="TCS72">[CS72](#FCS72)</sup>|
+|7.1|コンパイラは、C# 7.1 以下に含まれている構文のみを受け入れます<sup id="TCS71">[CS71](#FCS71)</sup>|
+|7|コンパイラは、C# 7.0 以下に含まれている構文のみを受け入れます<sup id="TCS7">[CS7](#FCS7)</sup>|
+|6|コンパイラは、C# 6.0 以下に含まれている構文のみを受け入れます<sup id="TCS6">[CS6](#FCS6)</sup>|
+|5|コンパイラは、C# 5.0 以下に含まれている構文のみを受け入れます<sup id="TCS5">[CS5](#FCS5)</sup>|
+|4|コンパイラは、C# 4.0 以下に含まれている構文のみを受け入れます<sup id="TCS4">[CS4](#FCS4)</sup>|
+|3|コンパイラは、C# 3.0 以下に含まれている構文のみを受け入れます<sup id="TCS3">[CS3](#FCS3)</sup>|
+|ISO-2|コンパイラは、ISO/IEC 23270:2006 C# (2.0) に含まれている構文のみを受け入れます<sup id="TISO2">[ISO2](#FISO2)</sup>|
+|ISO-1|コンパイラは、ISO/IEC 23270:2003 C# (1.0/1.2) に含まれている構文のみを受け入れます<sup id="TISO1">[ISO1](#FISO1)</sup>|  
 
-<!--- Uncomment and move these above
-|8|The compiler accepts only syntax that is included in C# 8 or lower <sup id="TCS8">[CS8](#FCS8)</sup>|
--->
-
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
  C# アプリケーションで参照されるメタデータは、**-langversion** コンパイラ オプションの対象になりません。  
   
@@ -63,27 +61,33 @@ ms.locfileid: "43857272"
   
  このコンパイラ オプションをプログラムで設定する方法については、「<xref:VSLangProj80.CSharpProjectConfigurationProperties3.LanguageVersion%2A>」を参照してください。  
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](index.md)  
-- [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)  
+- [C# コンパイラ オプション](index.md)
+- [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)
 
 ### <a name="c-language-specification"></a>C# 言語仕様
 
-|Version|リンク|説明|
+|Version|Link|説明|
 |-------|----|-----------|
-|C# 1.0|[DOC のダウンロード](https://download.microsoft.com/download/a/9/e/a9e229b9-fee5-4c3e-8476-917dee385062/csharp%20language%20specification%20v1.0.doc)|C# 言語仕様バージョン 1.0: Microsoft Corporation|
-|C# 1.2|[DOC のダウンロード](https://download.microsoft.com/download/5/e/5/5e58be0a-b02b-41ac-a4a3-7a22286214ff/csharp%20language%20specification%20v1.2.doc)|C# 言語仕様バージョン 1.2: Microsoft Corporation|
-|C# 2.0|[PDF のダウンロード](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/Ecma-334%204th%20edition%20June%202006.pdf)|Standard ECMA-334 4th Edition|
-|C# 3.0|[DOC のダウンロード](https://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc)|C# 言語仕様バージョン 3.0: Microsoft Corporation|
-|C# 5.0|[PDF のダウンロード](https://www.ecma-international.org/publications/files/ECMA-ST/Ecma-334.pdf)|Standard ECMA-334 5th Edition|
-|C# 6.0|[リンク](../language-specification/index.md)|C# 言語仕様バージョン 6 - 非公式ドラフト: .NET Foundation|
 |C# 7.0 以降||現在使用できません|
+|C# 6.0|[リンク](../language-specification/index.md)|C# 言語仕様バージョン 6 - 非公式ドラフト: .NET Foundation|
+|C# 5.0|[PDF のダウンロード](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)|Standard ECMA-334 5th Edition|
+|C# 3.0|[DOC のダウンロード](https://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc)|C# 言語仕様バージョン 3.0:Microsoft Corporation|
+|C# 2.0|[PDF のダウンロード](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%204th%20edition%20June%202006.pdf)|Standard ECMA-334 4th Edition|
+|C# 1.2|[DOC のダウンロード](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%202nd%20edition%20December%202002.pdf)|C# 言語仕様バージョン 1.2:Microsoft Corporation|
+|C# 1.0|[DOC のダウンロード](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%201st%20edition%20December%202001.pdf)|C# 言語仕様バージョン 1.0:Microsoft Corporation|
 
 ### <a name="minimum-compiler-version-needed-to-support-all-language-features"></a>すべての言語機能をサポートするために必要な最小コンパイラ バージョン
 
-[↩](#TISO1)<a name="FISO1">ISO1</a>: Microsoft Visual Studio/Build Tools .Net 2002 またはバンドルされている .Net Framework 1.0 コンパイラ [↩](#TISO2)<a name="FISO2">ISO2</a>: Microsoft Visual Studio/Build Tools 2005 またはバンドルされている .Net Framework 2.0 コンパイラ [↩](#TCS3)<a name="FCS3">CS3</a>: Microsoft Visual Studio/Build Tools 2008 またはバンドルされている .Net Framework 3.5 コンパイラ [↩](#TCS4)<a name="FCS4">CS4</a>: Microsoft Visual Studio/Build Tools 2010 またはバンドルされている .Net Framework 4.0 コンパイラ [↩](#TCS5)<a name="FCS5">CS5</a>: Microsoft Visual Studio/Build Tools 2012 またはバンドルされている .Net Framework 4.5 コンパイラ [↩](#TCS6)<a name="FCS6">CS6</a>: Microsoft Visual Studio/Build Tools 2015 [↩](#TCS7)<a name="FCS7">CS7</a>: Microsoft Visual Studio/Build Tools 2017 [↩](#TCS71)<a name="FCS71">CS71</a>: Microsoft Visual Studio/Build Tools 2017、バージョン 15.3 [↩](#TCS72)<a name="FCS72">CS72</a>: Microsoft Visual Studio/Build Tools 2017、バージョン 15.5 [↩](#TCS73)<a name="FCS73">CS73</a>: Microsoft Visual Studio/Build Tools 2017、バージョン 15.7
-
-<!--- Uncomment and add to the above when they become officially released
-[↩](#TCS8)<a name="FCS8">CS8</a>: Microsoft Visual Studio/Build Tools 20??    
--->
+[↩](#TCS80)<a name="FCS80">CS80</a>:Microsoft Visual Studio/Build Tools 2019、バージョン 16、または .NET Core 3.0 SDK  
+[↩](#TCS73)<a name="FCS73">CS73</a>:Microsoft Visual Studio/Build Tools 2017、バージョン 15.7  
+[↩](#TCS72)<a name="FCS72">CS72</a>:Microsoft Visual Studio/Build Tools 2017、バージョン 15.5  
+[↩](#TCS71)<a name="FCS71">CS71</a>:Microsoft Visual Studio/Build Tools 2017、バージョン 15.3  
+[↩](#TCS7)<a name="FCS7">CS7</a>:Microsoft Visual Studio/Build Tools 2017  
+[↩](#TCS6)<a name="FCS6">CS6</a>:Microsoft Visual Studio/Build Tools 2015  
+[↩](#TCS5)<a name="FCS5">CS5</a>:Microsoft Visual Studio/Build Tools 2012、またはバンドルされている .Net Framework 4.5 コンパイラ  
+[↩](#TCS4)<a name="FCS4">CS4</a>:Microsoft Visual Studio/Build Tools 2010、またはバンドルされている .Net Framework 4.0 コンパイラ  
+[↩](#TCS3)<a name="FCS3">CS3</a>:Microsoft Visual Studio/Build Tools 2008、またはバンドルされている .Net Framework 3.5 コンパイラ  
+[↩](#TISO2)<a name="FISO2">ISO2</a>:Microsoft Visual Studio/Build Tools 2005、またはバンドルされている .Net Framework 2.0 コンパイラ  
+[↩](#TISO1)<a name="FISO1">ISO1</a>:Microsoft Visual Studio/Build Tools .NET 2002、またはバンドルされている .N Framework 1.0 コンパイラ  

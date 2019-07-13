@@ -17,59 +17,64 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b794a62a0ac0d253f1431be29b43101816dc7233
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6e512b7cd8869c6ede1472bbc5b6ec4c428b40ef
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449443"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757646"
 ---
 # <a name="imetadataemitmergeend-method"></a>IMetaDataEmit::MergeEnd メソッド
-現在のマージのスコープを 1 つまたは複数の以前の呼び出しで指定されたすべてのメタデータ スコープ[imetadataemit::merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)です。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-HRESULT MergeEnd ();  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
- このメソッドには、パラメーターはありません。  
-  
-## <a name="remarks"></a>コメント  
- このルーチンは、メタデータの実際のマージをトリガー、すべてのインポート前に呼び出しを追加して指定した範囲`IMetaDataEmit::Merge`、現在の出力のスコープにします。  
-  
- 次の特殊な条件は、マージに適用されます。  
-  
--   モジュールのバージョン id (MVID) インポートされることは、インポートのスコープ内のメタデータを一意になっているためです。  
-  
--   既存のモジュール全体のプロパティは上書きされません。  
-  
-     モジュールのプロパティが既に設定されている現在のスコープのモジュールのプロパティはインポートされません。 ただし、現在のスコープでこのモジュールのプロパティが設定されていない場合、最初に検出された、1 回だけがインポートされます。 これらのモジュールのプロパティが再度発生する場合、重複しています。 (MVID) を除くすべてのモジュールのプロパティの値を比較し、重複部分が見つからない、エラーが発生します。  
-  
--   型の定義 (`TypeDef`)、現在のスコープに重複がマージされません。 `TypeDef` オブジェクトはそれぞれに対して重複をチェック*オブジェクトの完全修飾名* + *GUID* + *バージョン番号*です。 名前または GUID のいずれかに一致があるその他の 2 つの要素のいずれかが異なる場合は、エラーが発生します。 それ以外の場合、3 つの項目をすべて一致する場合、`MergeEnd`エントリが重複しないことを確認するにはない場合、エラーが発生します。 この簡単なチェックを探します。  
-  
-    -   同じメンバー宣言と同じ順序で発生しています。 メンバーとしてフラグが付いている`mdPrivateScope`(を参照してください、 [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md)列挙型) です。 この確認に含まれていない特別にマージされます。  
-  
-    -   同じクラス レイアウトです。  
-  
-     つまり、`TypeDef`オブジェクト必要があります常に完全かつ一貫して定義するすべてのメタデータ スコープ内で宣言されている以外の完全定義があると見なされます (クラス) のメンバーの実装が複数のコンパイル単位に分散している場合すべてのスコープ内に存在しスコープごとにインクリメントは行われません。 たとえば、パラメーター名が、コントラクトに関連する場合は、する必要がありますに出力すると同じ方法すべてのスコープ関連する、ない場合、必要があるメタデータに対して出力されません。  
-  
-     例外は、`TypeDef`オブジェクトとしてフラグが設定された増分のメンバーを持つことができます`mdPrivateScope`です。 これらは、発生時に`MergeEnd`増分重複に関係なく、現在のスコープに追加します。 コンパイラは、プライベートのスコープを認識するため、コンパイラが規則を適用する行う必要があります。  
-  
--   相対仮想アドレス (Rva) のインポートまたは; トピックとマージされていません。コンパイラは、この情報を再生成すると想定されます。  
-  
--   アタッチされている項目がマージされた場合にのみ、カスタム属性がマージされます。 たとえば、クラスに関連付けられているカスタム属性は、クラスが最初に検出されたときにマージされます。 カスタム属性が関連付けられている場合、`TypeDef`または`MemberDef`(メンバー コンパイルのタイムスタンプ) などのコンパイル単位に固有であるはマージされませんおよび削除するか、このようなメタデータを更新するコンパイラの責任です。  
-  
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
-  
- **ヘッダー:** Cor.h  
-  
- **ライブラリ:** MSCorEE.dll にリソースとして使用  
-  
- **.NET framework のバージョン:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
-  
-## <a name="see-also"></a>関連項目  
- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+
+マージを現在のスコープを 1 つまたは複数の前の呼び出しで指定されたすべてのメタデータ スコープ[imetadataemit::merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)します。
+
+## <a name="syntax"></a>構文
+
+```cppcpp
+HRESULT MergeEnd ();
+```
+
+## <a name="parameters"></a>パラメーター
+
+このメソッドには、パラメーターはありません。
+
+## <a name="remarks"></a>Remarks
+
+このルーチンはトリガーのメタデータの実際の結合は、すべてのインポート前の呼び出しによって指定されたスコープ`IMetaDataEmit::Merge`出力の現在のスコープにします。
+
+マージに、次の特殊な条件が適用されます。
+
+- モジュールのバージョン id (MVID) は、インポート スコープ内のメタデータに一意であるため、まったくインポートします。
+
+- 既存のモジュール全体のプロパティは上書きされません。
+
+  モジュールのプロパティは、現在のスコープで既に設定された、モジュールのプロパティはインポートされません。 ただし、現在のスコープ内でモジュールのプロパティが設定されていない、最初に検出されたときに、一度だけがインポートされます。 これらのモジュールのプロパティが再度発生した場合、重複しています。 (MVID) を除くすべてのモジュールのプロパティの値が比較され、重複が見つからなかった場合、エラーが発生します。
+
+- 型の定義 (`TypeDef`)、現在のスコープに重複はマージされません。 `TypeDef` オブジェクトはそれぞれに対して重複をチェック*オブジェクトの完全修飾名* + *GUID* + *バージョン番号*します。 名前または GUID のいずれかで一致があるその他の 2 つの要素のいずれかが異なる場合、エラーが発生します。 それ以外の場合、3 つすべての項目が一致する場合`MergeEnd`エントリが重複しないことを確認する簡単なチェックがない場合、エラーが発生します。 この簡単なチェックを探します。
+
+  - 同じメンバー宣言を同じ順序で発生しています。 メンバーとしてフラグが付いている`mdPrivateScope`(を参照してください、 [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md)列挙型)。 この確認には含まれません特別にマージされます。
+
+  - 同じクラス レイアウト。
+
+  つまり、`TypeDef`オブジェクトする必要があります常に完全かつ一貫して定義するすべてのメタデータ スコープで宣言されている完全な定義があると見なされます (クラス) をそのメンバーの実装が複数のコンパイル単位に分散している場合。すべてのスコープに存在して各スコープには増分されません。 たとえば、パラメーター名、コントラクトに関連する場合が送出同様に、すべてのスコープに関連いない場合、それらがメタデータに出力しないする必要があります。
+
+  例外が、`TypeDef`オブジェクトとしてフラグが設定された増分のメンバーを持つことが`mdPrivateScope`します。 これらは、発生時に`MergeEnd`増分重複に関係なく、現在のスコープに追加します。 コンパイラは、プライベート スコープを認識するため、コンパイラはルールの適用を担当である必要があります。
+
+- 相対仮想アドレス (Rva) がインポートまたは; マージできません。コンパイラは、この情報を再生成が必要です。
+
+- アタッチされている項目がマージされた場合にのみ、カスタム属性がマージされます。 たとえば、クラスに関連付けられているカスタム属性は、クラスが最初に検出されたときにマージされます。 カスタム属性が関連付けられている場合、`TypeDef`または`MemberDef`はマージされません、削除またはそのようなメタデータを更新するコンパイラの責任です (メンバーのコンパイルのタイムスタンプ) などのコンパイル単位に固有です。
+
+## <a name="requirements"></a>必要条件
+
+**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+
+**ヘッダー:** Cor.h
+
+**ライブラリ:** MSCorEE.dll にリソースとして使用
+
+**.NET Framework のバージョン:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
+
+## <a name="see-also"></a>関連項目
+
+- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

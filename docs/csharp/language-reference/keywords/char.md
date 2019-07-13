@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 6acb40117c4f59deb084965cb3db9e4a96f7f61a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 0b4f04a1ba6244373e36cc6a6188edabe33ec453
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242348"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424341"
 ---
 # <a name="char-c-reference"></a>char (C# リファレンス)
 
@@ -33,7 +33,7 @@ ms.locfileid: "53242348"
 
 ## <a name="conversions"></a>変換
 
-`char` は、[ushort](../../../csharp/language-reference/keywords/ushort.md)、[int](../../../csharp/language-reference/keywords/int.md)、[uint](../../../csharp/language-reference/keywords/uint.md)、[long](../../../csharp/language-reference/keywords/long.md)、[ulong](../../../csharp/language-reference/keywords/ulong.md)、[float](../../../csharp/language-reference/keywords/float.md)、[double](../../../csharp/language-reference/keywords/double.md)、または [decimal](../../../csharp/language-reference/keywords/decimal.md) に暗黙的に変換できます。 ただし、他の型から `char` 型へと暗黙的に変換することはできません。
+`char` は、[ushort](../builtin-types/integral-numeric-types.md)、[int](../builtin-types/integral-numeric-types.md)、[uint](../builtin-types/integral-numeric-types.md)、[double](../../../csharp/language-reference/keywords/double.md)、または [decimal](../../../csharp/language-reference/keywords/decimal.md) に暗黙的に変換できます。 ただし、他の型から `char` 型へと暗黙的に変換することはできません。
 
 <xref:System.Char?displayProperty=nameWithType> 型では、`char` 値を操作するための静的メソッドがいくつか提供されています。
 
@@ -43,13 +43,13 @@ ms.locfileid: "53242348"
 
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Char>  
-- [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
-- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)  
-- [整数型の一覧表](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [組み込み型の一覧表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [暗黙的な数値変換の一覧表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-- [明示的な数値変換の一覧表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
-- [Null 許容型](../../../csharp/programming-guide/nullable-types/index.md)  
+- <xref:System.Char>
+- [C# リファレンス](../../../csharp/language-reference/index.md)
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)
+- [整数型](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
+- [組み込み型の一覧表](../../../csharp/language-reference/keywords/built-in-types-table.md)
+- [暗黙的な数値変換の一覧表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
+- [明示的な数値変換の一覧表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+- [Null 許容型](../../../csharp/programming-guide/nullable-types/index.md)
 - [文字列](../../../csharp/programming-guide/strings/index.md)

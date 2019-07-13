@@ -1,5 +1,5 @@
 ---
-title: '方法 : Windows フォーム DataGrid コントロールの列を削除するまたは非表示にする'
+title: '方法: Windows フォーム DataGrid コントロールの列を削除するまたは非表示にする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,33 +12,33 @@ helpviewer_keywords:
 - columns [Windows Forms], deleting in data grids
 - DataGrid control [Windows Forms], hiding columns
 ms.assetid: bcd0dd96-6687-4c48-b0e1-d5287b93ac91
-ms.openlocfilehash: 6541ffff1149e5df13c43ee392ffa8b221c8407d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3f1f013cbb5e41c997014f556602b01bab62914
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757392"
 ---
-# <a name="how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control"></a>方法 : Windows フォーム DataGrid コントロールの列を削除するまたは非表示にする
+# <a name="how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control"></a>方法: Windows フォーム DataGrid コントロールの列を削除するまたは非表示にする
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。 詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。  
+>  <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。 詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。  
   
- プログラムで削除するか、Windows フォーム内の列を非表示に<xref:System.Windows.Forms.DataGrid>のプロパティとメソッドを使用して、コントロール、<xref:System.Windows.Forms.GridColumnStylesCollection>と<xref:System.Windows.Forms.DataGridColumnStyle>オブジェクト (のメンバーである、<xref:System.Windows.Forms.DataGridTableStyle>クラス)。  
+ プログラムで削除するか、Windows フォーム内の列を非表示に<xref:System.Windows.Forms.DataGrid>コントロールのメソッドとプロパティを使用して、<xref:System.Windows.Forms.GridColumnStylesCollection>と<xref:System.Windows.Forms.DataGridColumnStyle>オブジェクト (のメンバーである、<xref:System.Windows.Forms.DataGridTableStyle>クラス)。  
   
- 削除または非表示の列は、データ ソース、グリッドがバインドされ、プログラムでアクセスできますにまだ存在します。 データ グリッドに表示されますなくなるだけです。  
+ 削除または非表示の列は、グリッドにバインドされていて、プログラムでアクセスできるデータ ソースにまだ存在します。 なくなるだけデータ グリッドに表示されます。  
   
 > [!NOTE]
->  アプリケーションが特定の列のデータにアクセスできません、データ グリッドに表示しない場合は、し、必要がある可能性がありますこれらに含めるデータ ソースの最初の場所。  
+>  アプリケーションが特定の列のデータにアクセスしないデータ グリッドに表示しない場合は、し、おそらく必要はありません、最初に、データ ソースに含める。  
   
 ### <a name="to-delete-a-column-from-the-datagrid-programmatically"></a>データ グリッドから列をプログラムで削除するには  
   
-1.  フォームの宣言領域内の新しいインスタンスを宣言、<xref:System.Windows.Forms.DataGridTableStyle>クラスです。  
+1. フォームの宣言領域内の新しいインスタンスを宣言、<xref:System.Windows.Forms.DataGridTableStyle>クラス。  
   
-2.  設定、<xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A?displayProperty=nameWithType>スタイルを適用するデータ ソース内のテーブルにプロパティです。 次の例では、<xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType>プロパティで、既に設定されていることを前提としています。  
+2. 設定、<xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A?displayProperty=nameWithType>プロパティ、スタイルを適用するデータ ソース内のテーブルにします。 次の例では、<xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType>プロパティで、既に設定されていることを前提としています。  
   
-3.  新しい追加<xref:System.Windows.Forms.DataGridTableStyle>を datagrid のテーブル スタイルのコレクション オブジェクト。  
+3. 新しい追加<xref:System.Windows.Forms.DataGridTableStyle>へ datagrid のテーブルのスタイルのコレクション オブジェクト。  
   
-4.  呼び出す、<xref:System.Windows.Forms.GridColumnStylesCollection.RemoveAt%2A>のメソッド、<xref:System.Windows.Forms.DataGrid>の<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>コレクションを削除する列の列インデックスを指定します。  
+4. 呼び出す、<xref:System.Windows.Forms.GridColumnStylesCollection.RemoveAt%2A>のメソッド、<xref:System.Windows.Forms.DataGrid>の<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>コレクションを削除する列の列インデックスを指定します。  
   
     ```vb  
     ' Declare a new DataGridTableStyle in the  
@@ -79,13 +79,13 @@ ms.locfileid: "33534555"
   
 ### <a name="to-hide-a-column-in-the-datagrid-programmatically"></a>DataGrid の列をプログラムで非表示にするには  
   
-1.  フォームの宣言領域内の新しいインスタンスを宣言、<xref:System.Windows.Forms.DataGridTableStyle>クラスです。  
+1. フォームの宣言領域内の新しいインスタンスを宣言、<xref:System.Windows.Forms.DataGridTableStyle>クラス。  
   
-2.  設定、<xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>のプロパティ、<xref:System.Windows.Forms.DataGridTableStyle>スタイルを適用するデータ ソース内のテーブルにします。 次のコード例では、<xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType>プロパティで、既に設定されていることを前提としています。  
+2. 設定、<xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>のプロパティ、<xref:System.Windows.Forms.DataGridTableStyle>スタイルを適用するデータ ソース内のテーブルにします。 次のコード例では、<xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType>プロパティで、既に設定されていることを前提としています。  
   
-3.  新しい追加<xref:System.Windows.Forms.DataGridTableStyle>を datagrid のテーブル スタイルのコレクション オブジェクト。  
+3. 新しい追加<xref:System.Windows.Forms.DataGridTableStyle>へ datagrid のテーブルのスタイルのコレクション オブジェクト。  
   
-4.  設定して、列を非表示にその`Width`プロパティを非表示にするのには、列の列インデックスを指定する 0 にします。  
+4. 設定して、列を非表示にその`Width`プロパティを非表示にする列の列インデックスを指定する 0 にします。  
   
     ```vb  
     ' Declare a new DataGridTableStyle in the  
@@ -124,6 +124,7 @@ ms.locfileid: "33534555"
     }  
     ```  
   
-## <a name="see-also"></a>関連項目  
- [方法: Windows フォーム DataGrid コントロールに表示されるデータを実行時に変更する](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)  
- [方法: Windows フォーム DataGrid コントロールにテーブルと列を追加する](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+## <a name="see-also"></a>関連項目
+
+- [方法: Windows フォーム DataGrid コントロールでの実行時に表示されるデータの変更](change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [方法: Windows フォームの DataGrid コントロールにテーブルと列を追加します。](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)

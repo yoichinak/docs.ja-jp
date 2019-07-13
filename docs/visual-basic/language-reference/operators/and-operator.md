@@ -13,15 +13,15 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - bitwise comparison [Visual Basic]
 ms.assetid: 2ea711f3-439a-4c7c-9e3a-1ffe3b0d6046
-ms.openlocfilehash: e14dfd8ba200598084cad04d1faa05f3561f8dab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e25f25677fa684427bdaf00cea73916ffbad655
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608360"
 ---
 # <a name="and-operator-visual-basic"></a>And 演算子 (Visual Basic)
-2 つの論理積`Boolean`式、または 2 つの数値式に対してビットごとの積。  
+2 つの論理積を求めます`Boolean`式、または 2 つの数値式のビットごとの積。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,18 +31,18 @@ result = expression1 And expression2
   
 ## <a name="parts"></a>指定項目  
  `result`  
- 必須。 どの`Boolean`または数値式です。 ブール値の比較の`result`は 2 つの論理積`Boolean`値。 ビットごとの演算`result`は、次の 2 つの数値のビット パターンのビットごとの積を表す数値を指定します。  
+ 必須。 すべて`Boolean`または数値式です。 ブール値の比較の`result`は 2 つの論理積`Boolean`値。 ビットごとの演算`result`は 2 つの数値ビット パターンのビットごとの積を表す数値です。  
   
  `expression1`  
- 必須。 どの`Boolean`または数値式です。  
+ 必須。 すべて`Boolean`または数値式です。  
   
  `expression2`  
- 必須。 どの`Boolean`または数値式です。  
+ 必須。 すべて`Boolean`または数値式です。  
   
-## <a name="remarks"></a>コメント  
- ブール値の比較の`result`は`True`場合にのみ、両方`expression1`と`expression2`に評価される`True`です。 次に示す方法`result`決定されます。  
+## <a name="remarks"></a>Remarks  
+ ブール値の比較の`result`は`True`場合にのみ、両方`expression1`と`expression2`に評価される`True`します。 次の表はどのように`result`決定されます。  
   
-|場合`expression1`は|および`expression2`は|値`result`は|  
+|場合`expression1`は|`expression2`は|値`result`は|  
 |-------------------------|--------------------------|------------------------------|  
 |`True`|`True`|`True`|  
 |`True`|`False`|`False`|  
@@ -50,11 +50,11 @@ result = expression1 And expression2
 |`False`|`False`|`False`|  
   
 > [!NOTE]
->  ブール値の比較で、`And`演算子では、両方の式では、プロシージャの呼び出しを含めることが常に評価されます。 [AndAlso 演算子](../../../visual-basic/language-reference/operators/andalso-operator.md)実行*ショート サーキット*、つまりを`expression1`は`False`、し、`expression2`は評価されません。  
+>  ブール値の比較で、`And`演算子では、両方の式では、プロシージャの呼び出しを含めることが常に評価されます。 [AndAlso 演算子](../../../visual-basic/language-reference/operators/andalso-operator.md)実行*ショート サーキット*、つまり、その場合`expression1`は`False`、し`expression2`は評価されません。  
   
- 数値の値に適用されるときに、`And`演算子が 2 つの数値式で同じ位置にビットのビットごとの比較を実行し、対応するにビットを設定`result`次の表のとおりです。  
+ 数値の値に適用すると、`And`演算子が 2 つの数値式で同じ位置にビットのビット単位の比較を実行し、対応するでビットを設定`result`次の表に従ってします。  
   
-|場合内のビット`expression1`は|でビット`expression2`は|内のビット`result`は|  
+|場合にビット`expression1`は|ビットと`expression2`は|内のビット`result`は|  
 |--------------------------------|---------------------------------|----------------------------|  
 |1|1|1|  
 |1|0|0|  
@@ -62,33 +62,34 @@ result = expression1 And expression2
 |0|0|0|  
   
 > [!NOTE]
->  論理演算子およびビット演算子の他の算術演算子や関係演算子よりも優先順位が低いため、ビットごとの演算が正確な結果のようにかっこで囲む必要があります。  
+>  論理/ビット処理演算子の他の算術演算子や関係演算子よりも優先順位の低いため、ビットごとの演算は、正確な結果を確認するためにかっこで囲む必要があります。  
   
 ## <a name="data-types"></a>データの種類  
- いずれかのオペランドで構成される場合`Boolean`式と 1 つの数値式では、Visual Basic に変換します、`Boolean`数値を指定する式 (– 1`True`と 0 を`False`) し、ビットごとの演算を実行します。  
+ いずれかのオペランドで構成される場合`Boolean`式と 1 つの数値式では、Visual Basic に変換します、`Boolean`式を数値に (– 1 `True` 0 `False`) し、ビットごとの演算を実行します。  
   
- ブール値の比較結果のデータ型は`Boolean`します。 ビットごとの比較結果のデータ型は数値型のデータ型に適した`expression1`と`expression2`です。 「リレーショナルとビットごとの比較」表を参照して[データ型の演算子の結果](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)です。  
+ ブール値の比較結果のデータ型は`Boolean`します。 ビット単位の比較結果のデータ型は数値型のデータ型に適した`expression1`と`expression2`します。 「リレーショナルとビットごとの比較」表を参照して[演算子結果のデータ型](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)します。  
   
 > [!NOTE]
->  `And`演算子を指定できます*オーバー ロードされた*、つまり、あるクラスまたは構造体を再定義できますその動作オペランドは、そのクラスまたは構造体の型を持つときにします。 コードは、このようなクラスまたは構造体で、この演算子を使用する場合は、再定義された動作を理解することを確認します。 詳細については、次を参照してください。[演算子プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)です。  
+>  `And`演算子は、*オーバー ロードされた*、つまり、ことクラスまたは構造体を再定義できますその動作はそのクラスまたは構造体の型。 コードは、このようなクラスまたは構造体に、この演算子を使用する場合は、再定義された動作を確認ください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例では、 `And` 2 つの式に対して論理積を実行する演算子です。 結果は、`Boolean`が両方の式かどうかを表す値`True`です。  
+ 次の例では、`And`演算子を 2 つの式に対して論理積を実行します。 結果は、`Boolean`が両方の式かどうかを表す値`True`します。  
   
- [!code-vb[VbVbalrOperators#22](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/and-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#22)]  
   
  前の例の結果を生成する`True`と`False`、それぞれします。  
   
 ## <a name="example"></a>例  
- 次の例では、`And`オペレーターが 2 つの数値式のビットごとの論理積を実行します。 結果のパターン内のビットは、オペランドの対応するビットは次の両方 1 に設定する場合に設定されます。  
+ 次の例では、`And`オペレーターが 2 つの数値式のビットごとの論理積を実行します。 オペランドの対応するビットが 1 に設定する両方の場合、結果パターンのビットが設定されます。  
   
- [!code-vb[VbVbalrOperators#23](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/and-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#23)]  
   
  前の例では、それぞれ 8、2、および 0 の場合の結果を生成します。  
   
-## <a name="see-also"></a>関連項目  
- [論理/ビット演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)  
- [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [AndAlso 演算子](../../../visual-basic/language-reference/operators/andalso-operator.md)  
- [Visual Basic における論理/ビット処理演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+## <a name="see-also"></a>関連項目
+
+- [論理/ビット演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
+- [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [AndAlso 演算子](../../../visual-basic/language-reference/operators/andalso-operator.md)
+- [Visual Basic での論理とビット処理演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

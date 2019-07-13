@@ -1,5 +1,5 @@
 ---
-title: '&lt;authenticationModules&gt;要素 (ネットワーク設定)'
+title: <authenticationModules> 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#authenticationModules
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - authenticationModules element
 - <authenticationModules> element
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
-ms.openlocfilehash: 074f2f0cd2c3ac6c6287db08b22ead07afa58fc5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8878bcbdf8b3613677231db3e91a6d71dfa10bae
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674715"
 ---
-# <a name="ltauthenticationmodulesgt-element-network-settings"></a>&lt;authenticationModules&gt;要素 (ネットワーク設定)
+# <a name="authenticationmodules-element-network-settings"></a>\<authenticationModules > 要素 (ネットワーク設定)
 ネットワーク要求の認証に使用されるモジュールを指定します。  
   
  \<configuration>  
 \<system.net>  
-\<authenticationModules >  
+\<authenticationModules>  
   
 ## <a name="syntax"></a>構文  
   
@@ -69,7 +69,8 @@ ms.locfileid: "50190815"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- <xref:System.Net.IAuthenticationModule>  
-- <xref:System.Net.AuthenticationManager>  
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Net.IAuthenticationModule>
+- <xref:System.Net.AuthenticationManager>
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

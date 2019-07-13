@@ -2,25 +2,25 @@
 title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: 0a02899ab9dc751cfee1127a092854b81b8360db
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 8a69d74966b99d78b4a7addaa4323d61d82ce8d5
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664762"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539770"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities は、開発者が Visual Basic または Visual C# を使用して Entity Framework 概念モデルに対するクエリを作成するための統合言語クエリ (LINQ) のサポートを提供します。 Entity Framework に対するクエリで代表的なものが、コマンド ツリー クエリです。これはオブジェクト コンテキストに対して実行されます。 LINQ to Entities では、統合言語クエリ (LINQ) クエリをコマンド ツリー クエリに変換し、そのクエリを Entity Framework に対して実行します。返されたオブジェクトは、Entity Framework でも LINQ でも使用できます。 次に、LINQ to Entities クエリを作成して実行する手順を示します。  
   
-1.  <xref:System.Data.Objects.ObjectQuery%601> から <xref:System.Data.Objects.ObjectContext> インスタンスを作成します。  
+1. <xref:System.Data.Objects.ObjectQuery%601> から <xref:System.Data.Objects.ObjectContext> インスタンスを作成します。  
   
-2.  <xref:System.Data.Objects.ObjectQuery%601> インスタンスを使用して、C# または Visual Basic で LINQ to Entities クエリを作成します。  
+2. <xref:System.Data.Objects.ObjectQuery%601> インスタンスを使用して、C# または Visual Basic で LINQ to Entities クエリを作成します。  
   
-3.  LINQ 標準クエリ演算子および標準クエリ式をコマンド ツリーに変換します。  
+3. LINQ 標準クエリ演算子および標準クエリ式をコマンド ツリーに変換します。  
   
-4.  コマンド ツリーで表されたクエリをデータ ソースに対して実行します。 実行中にデータ ソースに対してスローされた例外は、クライアントに直接渡されます。  
+4. コマンド ツリーで表されたクエリをデータ ソースに対して実行します。 実行中にデータ ソースに対してスローされた例外は、クライアントに直接渡されます。  
   
-5.  クエリの結果をクライアントに返します。  
+5. クエリの結果をクライアントに返します。  
   
 ## <a name="constructing-an-objectquery-instance"></a>ObjectQuery インスタンスの構築  
  <xref:System.Data.Objects.ObjectQuery%601> ジェネリック クラスは、0 個以上の型指定されたエンティティのコレクションを返すクエリを表します。 通常、オブジェクト クエリは手作業で構築されるのではなく、既存のオブジェクト コンテキストから構築され、常にそのオブジェクト コンテキストに属しています。 このコンテキストにより、クエリの作成と実行に必要な接続情報とメタデータ情報が取得されます。 <xref:System.Data.Objects.ObjectQuery%601> ジェネリック クラスでは、<xref:System.Linq.IQueryable%601> ジェネリック インターフェイスが実装されます。このインターフェイスのビルダー メソッドにより、LINQ クエリを段階的に構築できます。 C# `var` キーワード (Visual Basic の場合は `Dim`、ローカル型推論を有効にする) を使用することで、コンパイラでエンティティの型を推論することもできます。  
@@ -47,7 +47,7 @@ LINQ to Entities は、開発者が Visual Basic または Visual C# を使用�
   
  CLR メソッドの呼び出しをデータ ソースの正規関数にマップする方法については、次を参照してください。 [CLR メソッドと正規関数マッピング](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md)します。  
   
- 内からカスタム関数と標準的な呼び出し、データベース、する方法については[!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]クエリを参照してください[LINQ to Entities クエリ内の関数の呼び出し](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)します。  
+ 正規の呼び出し、データベース、およびエンティティのクエリを LINQ 内からのカスタム関数をする方法については、次を参照してください。 [LINQ to Entities クエリ内の関数の呼び出し](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)します。  
   
 ## <a name="query-execution"></a>クエリの実行  
  ユーザーが LINQ クエリを作成すると、Entity Framework と互換性のある表現 (コマンド ツリーの形) に変換された後、データ ソースに対して実行されます。 クエリの実行時に、すべてのクエリ式 (またはクエリの構成要素) がクライアントまたはサーバー上で評価されます。 これには、結果の具体化やエンティティの投影で使用される式も含まれます。 詳細については、次を参照してください。[クエリの実行](../../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md)します。 クエリを 1 回コンパイルしてから、実行する複数回異なるパラメーターを使用してパフォーマンスを向上させる方法については、次を参照してください。[コンパイルされたクエリ (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)します。  
@@ -57,13 +57,13 @@ LINQ to Entities は、開発者が Visual Basic または Visual C# を使用�
   
  通常、クエリの結果は次のいずれかの形で返されます。  
   
--   0 個以上の型指定されたエンティティ オブジェクトのコレクション、または概念モデルで定義されている複合型のプロジェクション。  
+- 0 個以上の型指定されたエンティティ オブジェクトのコレクション、または概念モデルで定義されている複合型のプロジェクション。  
   
--   [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] でサポートされる CLR 型。  
+- [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] でサポートされる CLR 型。  
   
--   インライン コレクション。  
+- インライン コレクション。  
   
--   匿名型。  
+- 匿名型。  
   
  詳細については、次を参照してください。[クエリ結果](../../../../../../docs/framework/data/adonet/ef/language-reference/query-results.md)します。  
   
@@ -88,8 +88,10 @@ LINQ to Entities は、開発者が Visual Basic または Visual C# を使用�
   
  [LINQ to Entities の既知の問題および注意点](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)  
   
-## <a name="see-also"></a>関連項目  
- [LINQ to Entities の既知の問題および注意点](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)  
- [統合言語クエリ (LINQ)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- [LINQ と ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
- [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)
+## <a name="see-also"></a>関連項目
+
+- [LINQ to Entities の既知の問題および注意点](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
+- [統合言語クエリ (LINQ) - C#](../../../../../csharp/programming-guide/concepts/linq/index.md)
+- [統合言語クエリ (LINQ) - Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [LINQ と ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)
+- [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)

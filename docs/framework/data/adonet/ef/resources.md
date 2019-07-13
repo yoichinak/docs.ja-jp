@@ -2,12 +2,12 @@
 title: Entity Framework のリソース
 ms.date: 03/30/2017
 ms.assetid: 0bb04c18-4a14-42a4-baa9-a63d556c9f49
-ms.openlocfilehash: bc1a5b76ecc038d8059b04f4dc222126e796f03d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c1e93896bbbaf7be68f53e4cfb45ba7465a423bd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879334"
 ---
 # <a name="entity-framework-resources"></a>Entity Framework のリソース
 次の外部リソースでは、Entity Framework アプリケーションの作成に関する情報とサポートを提供しています。  
@@ -27,8 +27,9 @@ ms.locfileid: "53128675"
  [Entity Framework に関する FAQ](https://social.technet.microsoft.com/wiki/contents/articles/3737.entity-framework-faq.aspx)  
  Wiki セクションを含むに関してよく寄せられる質問、Entity Framework。  
   
-## <a name="see-also"></a>関連項目  
- [Entity Framework の概要](../../../../../docs/framework/data/adonet/ef/overview.md)  
- [はじめに](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
- [Entity Framework の用語](../../../../../docs/framework/data/adonet/ef/terminology.md)  
- [ADO.NET Entity Data Model ツール](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)
+## <a name="see-also"></a>関連項目
+
+- [Entity Framework の概要](../../../../../docs/framework/data/adonet/ef/overview.md)
+- [はじめに](../../../../../docs/framework/data/adonet/ef/getting-started.md)
+- [Entity Framework の用語](../../../../../docs/framework/data/adonet/ef/terminology.md)
+- [ADO.NET Entity Data Model ツール](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

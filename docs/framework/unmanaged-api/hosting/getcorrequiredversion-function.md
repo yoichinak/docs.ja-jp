@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 637ff0fca74dc123a3f7a47dcc3fdeded8d884ea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8597b68b75d2b5f77f68fc13c3fb78bfdae46178
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430048"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736293"
 ---
 # <a name="getcorrequiredversion-function"></a>GetCORRequiredVersion 関数
 必要な共通言語ランタイム (CLR) バージョン番号を取得します。  
   
- この関数は、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] では非推奨とされました。  
+ この関数は、.NET Framework 4 では廃止されました。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetCORRequiredVersion (  
     [out] LPWSTR   pbuffer,  
     [in]  DWORD    cchBuffer,  
@@ -38,9 +38,9 @@ HRESULT GetCORRequiredVersion (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pbuffer`  
- [out]バージョン番号を指定する文字列を格納しているバッファー。  
+ [out]バージョン番号を指定する文字列を格納するバッファー。  
   
  `cchBuffer`  
  [in]バッファーのバイト単位のサイズ。  
@@ -48,15 +48,15 @@ HRESULT GetCORRequiredVersion (
  `dwLength`  
  [out]バッファー内のバイト数が返されます。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   
  **ライブラリ:** MSCorEE.dll  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- 
-  [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>関連項目
+
+- [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

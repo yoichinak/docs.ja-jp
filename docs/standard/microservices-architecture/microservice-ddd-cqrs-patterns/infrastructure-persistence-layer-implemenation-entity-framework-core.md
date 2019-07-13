@@ -1,15 +1,13 @@
 ---
 title: Entity Framework Core でインフラストラクチャの永続レイヤーを実装する
 description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | Entity Framework Core を使用してインフラストラクチャの永続レイヤーを実装する方法の詳細。'
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 5e0e7adad7ad2d679ccff2f1c6a421922ce2523d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c6b0a022dfecb24c479a0fd3c84dbde719a390a8
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151019"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639522"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Entity Framework Core でインフラストラクチャの永続レイヤーを実装する
 
@@ -26,16 +24,16 @@ EF Core の概要は Microsoft ドキュメントで既に利用可能になっ�
 #### <a name="additional-resources"></a>その他の技術情報
 
 - **Entity Framework Core** \
-  [*https://docs.microsoft.com/ef/core/*](https://docs.microsoft.com/ef/core/)
+  [https://docs.microsoft.com/ef/core/](/ef/core/)
 
 - **Visual Studio を使用した ASP.NET Core と Entity Framework Core の概要** \
-  [*https://docs.microsoft.com/aspnet/core/data/ef-mvc/*](https://docs.microsoft.com/aspnet/core/data/ef-mvc/)
+  [https://docs.microsoft.com/aspnet/core/data/ef-mvc/](/aspnet/core/data/ef-mvc/)
 
 - **DbContext クラス** \
-  [*https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext*](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext)
+  [https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext](xref:Microsoft.EntityFrameworkCore.DbContext)
 
 - **EF Core と EF6.x を比較する** \
-  [*https://docs.microsoft.com/ef/efcore-and-ef6/index*](https://docs.microsoft.com/ef/efcore-and-ef6/index)
+  [https://docs.microsoft.com/ef/efcore-and-ef6/index](/ef/efcore-and-ef6/index)
 
 ## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>DDD の観点から見た Entity Framework Core のインフラストラクチャ
 
@@ -56,7 +54,7 @@ public class Order : Entity
     private DateTime _orderDate;
     // Other fields ...
 
-    private readonly List<OrderItem> _orderItems; 
+    private readonly List<OrderItem> _orderItems;
     public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;
 
     protected Order() { }
@@ -72,7 +70,7 @@ public class Order : Entity
     {
         // Validation logic...
 
-        var orderItem = new OrderItem(productId, productName, 
+        var orderItem = new OrderItem(productId, productName,
                                       unitPrice, discount,
                                       pictureUrl, units);
         _orderItems.Add(orderItem);
@@ -80,7 +78,7 @@ public class Order : Entity
 }
 ```
 
-`OrderItems` プロパティには `IReadOnlyCollection<OrderItem>` を利用して読み取り専用アクセスのみが可能となることに注意してください。 この型は読み取り専用であり、定期的な外部更新から守られます。 
+`OrderItems` プロパティには `IReadOnlyCollection<OrderItem>` を利用して読み取り専用アクセスのみが可能となることに注意してください。 この型は読み取り専用であり、定期的な外部更新から守られます。
 
 EF Core では、ドメイン モデルを "汚染する" ことなく物理データベースにマッピングできます。 マッピング アクションは永続レイヤーで行われるため、純粋な .NET POCO コードになります。 そのマッピング アクションでは、フィールドとデータベースのマッピングを構成する必要があります。 `OrderingContext` からの `OnModelCreating` メソッドと `OrderEntityTypeConfiguration` クラスが出てくる次の例では、`SetPropertyAccessMode` を呼び出すことで、そのフィールドを介して `OrderItems` プロパティにアクセスするように EF Core に伝えます。
 
@@ -101,7 +99,7 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
         orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
         // Other configuration
 
-        var navigation = 
+        var navigation =
               orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems));
 
         //EF access the OrderItem collection property through its backing field
@@ -140,7 +138,7 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
 
         public Buyer Add(Buyer buyer)
         {
-            return _context.Buyers.Add(buyer).Entity; 
+            return _context.Buyers.Add(buyer).Entity;
         }
 
         public async Task<Buyer> FindAsync(string BuyerIdentityGuid)
@@ -235,13 +233,13 @@ DbContext の有効期間が範囲 (InstancePerLifetimeScope) として設定さ
 #### <a name="additional-resources"></a>その他の技術情報
 
 - **ASP.NET MVC アプリケーションでの Repository および Unit of Work パターンの実装** \
-  [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
+  <https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
 
 - **Jonathan Allen。Entity Framework、Dapper、Chain を使用する Repository パターンの実装方法** \
-  [*https://www.infoq.com/articles/repository-implementation-strategies*](https://www.infoq.com/articles/repository-implementation-strategies)
+  <https://www.infoq.com/articles/repository-implementation-strategies>
 
 - **Cesar de la Torre。ASP.NET Core IoC コンテナー サービスの有効期間と Autofac IoC コンテナー インスタンスの範囲の比較** \
-  [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
+  <https://devblogs.microsoft.com/cesardelatorre/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/>
 
 ## <a name="table-mapping"></a>テーブル マッピング
 
@@ -353,11 +351,11 @@ EF Core のシャドウ プロパティは、エンティティ クラス モデ
 
 クエリ仕様パターンによって、オブジェクトのクエリが定義されます。 たとえば、製品を検索するページ クエリをカプセル化するために、必要な入力パラメーター (pageNumber、pageSize、filter など) を受け取る PagedProduct 仕様を作成できます。 その後、Repository の任意のメソッド (通常は List() オーバーロード) 内で、IQuerySpecification を受け取り、その仕様に基づいて予想されるクエリを実行します。
 
-一般的な仕様インターフェイスの例として、[eShopOnweb](https://github.com/dotnet-architecture/eShopOnWeb) から抜粋した次のコードをご覧ください。
+一般的な Specification (仕様) インターフェイスの例として、[eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb) から抜粋した次のコードをご覧ください。
 
 ```csharp
 // GENERIC SPECIFICATION INTERFACE
-// https://github.com/dotnet-architecture/eShopOnWeb 
+// https://github.com/dotnet-architecture/eShopOnWeb
 
 public interface ISpecification<T>
 {
@@ -372,7 +370,7 @@ public interface ISpecification<T>
 ```csharp
 // GENERIC SPECIFICATION IMPLEMENTATION (BASE CLASS)
 // https://github.com/dotnet-architecture/eShopOnWeb
- 
+
 public abstract class BaseSpecification<T> : ISpecification<T>
 {
     public BaseSpecification(Expression<Func<T, bool>> criteria)
@@ -381,16 +379,16 @@ public abstract class BaseSpecification<T> : ISpecification<T>
     }
     public Expression<Func<T, bool>> Criteria { get; }
 
-    public List<Expression<Func<T, object>>> Includes { get; } = 
+    public List<Expression<Func<T, object>>> Includes { get; } =
                                            new List<Expression<Func<T, object>>>();
 
     public List<string> IncludeStrings { get; } = new List<string>();
- 
+
     protected virtual void AddInclude(Expression<Func<T, object>> includeExpression)
     {
         Includes.Add(includeExpression);
     }
-    
+
     // string-based includes allow for including children of children
     // e.g. Basket.Items.Product
     protected virtual void AddInclude(string includeString)
@@ -432,18 +430,19 @@ public IEnumerable<T> List(ISpecification<T> spec)
     var queryableResultWithIncludes = spec.Includes
         .Aggregate(_dbContext.Set<T>().AsQueryable(),
             (current, include) => current.Include(include));
- 
+
     // modify the IQueryable to include any string-based include statements
     var secondaryResult = spec.IncludeStrings
         .Aggregate(queryableResultWithIncludes,
             (current, include) => current.Include(include));
- 
+
     // return the result of the query using the specification's criteria expression
     return secondaryResult
                     .Where(spec.Criteria)
                     .AsEnumerable();
 }
 ```
+
 この仕様はフィルタリング ロジックをカプセル化するだけでなく、データを入力するプロパティなど、返すデータのシェイプも指定できます。
 
 リポジトリから IQueryable を返すことはお勧めできませんが、リポジトリ内で使用し、結果の集まりを作ることには何の問題もありません。 上の List メソッドでこの手法を確認できます。中間の IQueryable 式を利用してクエリのインクルード リストを作成し、それから最後の行にある仕様の基準に合わせてクエリを実行しています。
@@ -451,23 +450,23 @@ public IEnumerable<T> List(ISpecification<T> spec)
 #### <a name="additional-resources"></a>その他の技術情報
 
 - **テーブル マッピング** \
-  [*https://docs.microsoft.com/ef/core/modeling/relational/tables*](https://docs.microsoft.com/ef/core/modeling/relational/tables)
+  [https://docs.microsoft.com/ef/core/modeling/relational/tables](/ef/core/modeling/relational/tables)
 
 - **HiLo を使用して Entity Framework Core でキーを生成する** \
-  [*http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/*](http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/)
+  <https://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/>
 
 - **バッキング フィールド** \
-  [*https://docs.microsoft.com/ef/core/modeling/backing-field*](https://docs.microsoft.com/ef/core/modeling/backing-field)
+  [https://docs.microsoft.com/ef/core/modeling/backing-field](/ef/core/modeling/backing-field)
 
 - **Steve Smith。Entity Framework Core のカプセル化されたコレクション** \
-  [*https://ardalis.com/encapsulated-collections-in-entity-framework-core*](https://ardalis.com/encapsulated-collections-in-entity-framework-core)
+  <https://ardalis.com/encapsulated-collections-in-entity-framework-core>
 
 - **シャドウ プロパティ** \
-  [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
+  [https://docs.microsoft.com/ef/core/modeling/shadow-properties](/ef/core/modeling/shadow-properties)
 
 - **仕様パターン** \
-  [*https://deviq.com/specification-pattern/*](https://deviq.com/specification-pattern/)
+  <https://deviq.com/specification-pattern/>
 
->[!div class="step-by-step"]
->[前へ](infrastructure-persistence-layer-design.md)
->[次へ](nosql-database-persistence-infrastructure.md)
+> [!div class="step-by-step"]
+> [前へ](infrastructure-persistence-layer-design.md)
+> [次へ](nosql-database-persistence-infrastructure.md)

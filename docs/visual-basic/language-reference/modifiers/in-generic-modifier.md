@@ -7,17 +7,17 @@ helpviewer_keywords:
 - contravariance, In keyword [Visual Basic]
 - In keyword [Visual Basic]
 ms.assetid: 59bb13c5-fe96-42b8-8286-86293d1661c5
-ms.openlocfilehash: d1d9209cd583ac96ece59660ad29c76a66d3395a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d8d503f0814a89c977cdc208eced026b2d8cb1fd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802473"
 ---
 # <a name="in-generic-modifier-visual-basic"></a>In (ジェネリック修飾子) (Visual Basic)
 ジェネリック型パラメーターの `In` キーワードは、型パラメーターが反変であることを指定します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  反変性は、ジェネリック パラメーターによって指定された型よりも弱い派生型を使用できるようにする機能です。 これにより、バリアント インターフェイスを実装するクラスの暗黙の型変換とデリゲート型の暗黙の型変換が可能となります。  
   
  詳細については、「[共変性と反変性](../../programming-guide/concepts/covariance-contravariance/index.md)」を参照してください。  
@@ -25,11 +25,11 @@ ms.locfileid: "33597433"
 ## <a name="rules"></a>ルール  
  `In` キーワードは、ジェネリック インターフェイスとデリゲートで使用できます。  
   
- メソッドの引数の型としてのみ使用され、メソッドの戻り値の型として使用されませんが、場合に、型パラメーターが反変のジェネリック インターフェイスまたはデリゲートを宣言することができます。 `ByRef` パラメーターは共変ですることはできませんまたは反変です。  
+ メソッド引数の型としてのみ使用され、メソッドの戻り値の型として使用されない場合に、型パラメーターがジェネリック インターフェイスまたはデリゲートで反変を宣言することができます。 `ByRef` パラメーターを共変にすることはできませんまたは反変です。  
   
  共変性と反変性は参照型のサポートされているし、値の型はサポートされていません。  
   
- Visual basic では、デリゲート型を指定せず反変インターフェイスのイベントを宣言できません。 反変のインターフェイスは、クラス、列挙型、または構造体、入れ子にできませんが、入れ子になんだインターフェイスを持つことができます。  
+ Visual basic では、デリゲート型を指定せず反変のインターフェイスのイベントを宣言できません。 また、反変のインターフェイスは、クラス、列挙型、または構造体、入れ子にできませんが、インターフェイスを入れ子にできます。  
   
 ## <a name="behavior"></a>動作  
  反変の型パラメーターを持つインターフェイスを使用すると、そのインターフェイスのメソッドは、インターフェイス型パラメーターによって指定された型よりも弱い派生型の引数を受け取ることができます。 たとえば、.NET Framework 4 の <xref:System.Collections.Generic.IComparer%601> インターフェイスでは T 型が反変なので、`Person` が `Employee` を継承する場合、特別な変換メソッドを使用しなくても `IComparer(Of Person)` 型のオブジェクトを `IComparer(Of Employee)` 型のオブジェクトに割り当てることができます。  
@@ -39,13 +39,14 @@ ms.locfileid: "33597433"
 ## <a name="example"></a>例  
  次の例では、反変のジェネリック インターフェイスを宣言、拡張、および実装する方法を示します。 また、このインターフェイスを実装するクラスの暗黙的な変換を使用する方法も示します。  
   
- [!code-vb[vbVarianceKeywords#1](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/in-generic-modifier_1.vb)]  
+ [!code-vb[vbVarianceKeywords#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#1)]  
   
 ## <a name="example"></a>例  
  次の例では、反変の汎用デリゲートを宣言、インスタンス化、および呼び出す方法を示します。 また、デリゲート型を暗黙的に変換する方法も示します。  
   
- [!code-vb[vbVarianceKeywords#2](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/in-generic-modifier_2.vb)]  
+ [!code-vb[vbVarianceKeywords#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#2)]  
   
-## <a name="see-also"></a>関連項目  
- [ジェネリック インターフェイスの分散](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+## <a name="see-also"></a>関連項目
+
+- [ジェネリック インターフェイスの分散](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

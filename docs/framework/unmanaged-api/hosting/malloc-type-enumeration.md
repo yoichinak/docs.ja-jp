@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c5e970a1677b1e43821cce9985e32ebd0726686
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f1c3fd9155761528b9203a5c69dee0bde16327f7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442541"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779343"
 ---
 # <a name="malloctype-enumeration"></a>MALLOC_TYPE 列挙体
 割り当てられるメモリの特性を指定する値が含まれています。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum {  
     MALLOC_THREADSAFE = 0x1,  
     MALLOC_EXECUTABLE = 0x2,  
@@ -40,16 +40,17 @@ typedef enum {
 |メンバー|説明|  
 |------------|-----------------|  
 |`MALLOC_EXECUTABLE`|割り当てられたメモリは、実行可能ファイルを含めることができます。|  
-|`MALLOC_THREADSAFE`|割り当てられたメモリは、スレッド セーフです。 つまり、メモリを同期しなくても、複数のスレッドによってアクセスできます。<br /><br /> このフラグが設定されていない場合、オブジェクトの呼び出しをシリアル化する必要があります。|  
+|`MALLOC_THREADSAFE`|割り当てられたメモリは、スレッド セーフです。 つまり、メモリは、同期しなくても、複数のスレッドによってアクセスできます。<br /><br /> このフラグが設定されていない場合は、オブジェクトでの呼び出しをシリアル化する必要があります。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   
  **ライブラリ:** MSCorEE.dll  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ホスティングの列挙型](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>関連項目
+
+- [ホスティングの列挙型](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

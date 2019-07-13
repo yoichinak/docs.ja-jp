@@ -11,20 +11,20 @@ helpviewer_keywords:
 - methods [Visual Basic], partial methods
 - inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
-ms.openlocfilehash: a1708c1d953a60429c1bd87fd858da5c50a3e759
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50d7f24fd9f854d36bb2ed48c2e41a996c29dfe8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651597"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638884"
 ---
 # <a name="partial-methods-visual-basic"></a>部分メソッド (Visual Basic)
-部分メソッドでは、開発者はカスタム ロジックをコードに挿入を有効にします。 通常、コードは、デザイナーで生成されたクラスの一部です。 部分メソッドはコード ジェネレーターによって作成される部分クラスで定義され、何かが変更されたことを通知によく使用されます。 開発者は、変更に応じて、カスタム動作を指定できます。  
+部分メソッドには、カスタム ロジックをコードに挿入する開発者が有効にします。 通常、コードには、デザイナーで生成されたクラスの一部です。 部分メソッドは、コード ジェネレーターによって作成される部分クラスで定義され、何かが変更されたことを通知によく使用されます。 これらの変更に対応するカスタム動作を指定する、開発者が有効にします。  
   
- コード ジェネレーターのデザイナーは、メソッドのシグネチャのみと 1 つまたは複数のメソッドの呼び出しを定義します。 開発者は、生成されたコードの動作をカスタマイズする場合は、メソッドの実装を提供し、できます。 実装を指定しない場合、メソッドの呼び出しは、追加のパフォーマンスのオーバーヘッドなしでその結果、コンパイラによって削除されます。  
+ コード ジェネレーターのデザイナーは、メソッドのシグネチャとメソッドに対する 1 つまたは複数の呼び出しを定義します。 開発者、生成されたコードの動作をカスタマイズする場合、メソッドの実装を用意できます。 実装を指定しない場合、メソッドの呼び出しは追加のパフォーマンスのオーバーヘッドなしでその結果、コンパイラによって削除されます。  
   
 ## <a name="declaration"></a>宣言  
- キーワードを配置することによって、生成されたコードは部分メソッドの定義をマーク`Partial`シグネチャ行の開始時にします。  
+ キーワードを配置することで、生成されたコードは部分メソッドの定義をマーク`Partial`署名行の先頭。  
   
 ```vb  
 Partial Private Sub QuantityChanged()  
@@ -33,14 +33,14 @@ End Sub
   
  定義には、次の条件を満たす必要があります。  
   
--   メソッドである必要があります、`Sub`ではなく、`Function`です。  
+- メソッドである必要があります、`Sub`ではなく、`Function`します。  
   
--   メソッドの本文は空のままにする必要があります。  
+- メソッドの本体は空のままにする必要があります。  
   
--   アクセス修飾子がある必要があります`Private`です。  
+- アクセス修飾子がある必要があります`Private`します。  
   
 ## <a name="implementation"></a>実装  
- 実装では、主に、部分メソッドの本体に入力します。 実装は、定義から別個の部分クラスでは、通常れ、生成されたコードを拡張する必要が開発者によって書き込まれます。  
+ 実装では、主に、部分メソッドの本文を入力します。 この実装は一般に、定義から別の部分クラスを生成されたコードを拡張する必要がある開発者によって書き込まれます。  
   
 ```vb  
 Private Sub QuantityChanged()  
@@ -48,32 +48,33 @@ Private Sub QuantityChanged()
 End Sub  
 ```  
   
- 前の例が、宣言内の署名を正確に複製がバリエーションが可能です。 具体的には、その他の修飾子を追加できるように`Overloads`または`Overrides`です。 1 つだけ`Overrides`修飾子を使用します。 メソッドの修飾子の詳細については、次を参照してください。 [Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)です。  
+ 前の例では、宣言内のシグネチャを正確には、重複するが、バリエーションが可能です。 具体的には、その他の修飾子を追加できるよう`Overloads`または`Overrides`します。 1 つだけ`Overrides`修飾子を使用します。 メソッドの修飾子の詳細については、次を参照してください。 [Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)します。  
   
 ## <a name="use"></a>使用  
- 同じように呼び出します、他の部分メソッドを呼び出す`Sub`プロシージャです。 メソッドが実装されている場合、引数が評価され、メソッドの本体が実行されます。 ただし、部分メソッドの実装が省略可能なことに注意してください。 メソッドが実装されていない場合それへの呼び出しも何も起こりません、およびメソッドに引数として渡された式は評価されません。  
+ 場合とその他の部分メソッドを呼び出す`Sub`プロシージャ。 メソッドが実装されている場合は、引数が評価され、メソッドの本体が実行されます。 ただし、部分メソッドの実装は省略可能です。 メソッドが実装されていない場合は、それへの呼び出しが効果を持たず、メソッドに引数として渡される式は評価されません。  
   
 ## <a name="example"></a>例  
- Product.Designer.vb をという名前のファイル、定義、`Product`を持つクラス、`Quantity`プロパティです。  
+ Product.Designer.vb という名前のファイル、定義、`Product`を持つクラス、`Quantity`プロパティ。  
   
- [!code-vb[VbVbalrPartialMeths#4](./codesnippet/VisualBasic/partial-methods_1.vb)]  
+ [!code-vb[VbVbalrPartialMeths#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#4)]  
   
- 実装を提供 Product.vb をという名前のファイル、`QuantityChanged`です。  
+ 実装を提供 Product.vb という名前のファイル、`QuantityChanged`します。  
   
- [!code-vb[VbVbalrPartialMeths#5](./codesnippet/VisualBasic/partial-methods_2.vb)]  
+ [!code-vb[VbVbalrPartialMeths#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#5)]  
   
- 最後に、プロジェクトの Main メソッドで次のように宣言します。、`Product`インスタンスとの初期値を提供、`Quantity`プロパティです。  
+ 最後に、プロジェクトの Main メソッドでは宣言を`Product`インスタンスし、指定の初期値をその`Quantity`プロパティ。  
   
- [!code-vb[VbVbalrPartialMeths#6](./codesnippet/VisualBasic/partial-methods_3.vb)]  
+ [!code-vb[VbVbalrPartialMeths#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#6)]  
   
- このメッセージが表示されるメッセージ ボックスが表示されます。  
+ このメッセージを表示するメッセージ ボックスが表示する必要があります。  
   
  `Quantity was changed to 100`  
   
-## <a name="see-also"></a>関連項目  
- [Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Sub プロシージャ](./sub-procedures.md)  
- [省略可能なパラメーター](./optional-parameters.md)  
- [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)  
- [LINQ to SQL でのコード生成](../../../../framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
- [部分メソッドによるビジネス ロジックの追加](../../../../framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)
+## <a name="see-also"></a>関連項目
+
+- [Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Sub プロシージャ](./sub-procedures.md)
+- [省略可能なパラメーター](./optional-parameters.md)
+- [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)
+- [LINQ to SQL でのコード生成](../../../../framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
+- [部分メソッドによるビジネス ロジックの追加](../../../../framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)

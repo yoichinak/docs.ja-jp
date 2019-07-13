@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual C#, creating applications
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
-ms.openlocfilehash: 27bd71d4caf59a44a45c70217aa351cf43a5c1c7
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 68d9365e6aed247770eb250f5a2e296b710febc2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349122"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671292"
 ---
 # <a name="developing-client-applications-with-the-net-framework"></a>.NET Framework を使用したクライアント アプリケーションの開発
 
@@ -60,7 +60,7 @@ ASP.NET を使用して Web アプリを開発する方法について説明し�
 
 ## <a name="see-also"></a>関連項目
 
-[.NET Standard](../../docs/standard/net-standard.md)  
-[概要](../../docs/framework/get-started/overview.md)  
-[開発ガイド](../../docs/framework/development-guide.md)  
-[Windows サービス アプリケーション](../../docs/framework/windows-services/index.md)  
+- [.NET Standard](../../docs/standard/net-standard.md)
+- [概要](../../docs/framework/get-started/overview.md)
+- [開発ガイド](../../docs/framework/development-guide.md)
+- [Windows サービス アプリケーション](../../docs/framework/windows-services/index.md)

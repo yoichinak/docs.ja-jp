@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dfda61706af3e1043d271c0aa74264bd99a4076c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5d6220270634dd8e2d15787d717020b8f6f86bb9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508637"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738331"
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess メソッド
 プロセスと、デバッガーの制御下で、プライマリ スレッドを起動します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CreateProcess (  
     [in]  LPCWSTR                     lpApplicationName,  
     [in]  LPWSTR                      lpCommandLine,  
@@ -46,7 +46,7 @@ HRESULT CreateProcess (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `lpApplicationName`  
  [in]実行中のプロセスによって実行されるモジュールを指定する null で終わる文字列へのポインター。 モジュールは、呼び出し元のプロセスのセキュリティ コンテキストで実行されます。  
   
@@ -92,8 +92,8 @@ HRESULT CreateProcess (
   
  IA 64 ベースおよび AMD64 ベースのプラットフォームなどの Win9x と x86 以外のプラットフォームでは、相互運用機能デバッグはサポートされていません。  
   
-## <a name="requirements"></a>要件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -101,5 +101,6 @@ HRESULT CreateProcess (
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICorDebug インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [ICorDebug インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

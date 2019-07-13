@@ -1,25 +1,23 @@
 ---
-title: '&lt;削除&gt;要素&lt;namedCaches&gt;'
+title: <namedCaches> の <remove> 要素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - remove element for namedCaches
 - <remove> element for namedCaches
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: d31caf88e1376025484ed6d65d5277c015e70b5e
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 053e2776153489dfdd61547fdc039980646ae697
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704727"
 ---
-# <a name="ltremovegt-element-for-ltnamedcachesgt"></a>&lt;削除&gt;要素&lt;namedCaches&gt;
+# <a name="remove-element-for-namedcaches"></a><namedCaches> の <remove> 要素
 名前付きキャッシュ エントリを、メモリ キャッシュの `namedCaches` コレクションから削除します。  
   
  \<system.runtime.caching>  
 \<memoryCache>  
-\<namedCaches >  
+\<namedCaches>  
 \<remove>  
   
 ## <a name="syntax"></a>構文  
@@ -52,5 +50,6 @@ ms.locfileid: "53613740"
 ## <a name="remarks"></a>Remarks  
  `remove`要素は、削除、`namedCache`メモリ キャッシュの名前付きキャッシュのコレクションからエントリ。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
+
 - [\<namedCaches > 要素 (キャッシュ設定)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

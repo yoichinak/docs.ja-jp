@@ -1,18 +1,18 @@
 ---
-title: '&lt;example&gt;(Visual Basic)'
+title: <example> (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - example XML tag
 - <example> XML tag
 ms.assetid: 90eeda1c-3fc4-427c-879c-5046d265a97c
-ms.openlocfilehash: 2de91d828fd9706b66f4c810486e54e2d3062de0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 510b00d2220b9c65b0e2b8fa3ead70925a9f54ba
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772504"
 ---
-# <a name="ltexamplegt-visual-basic"></a>&lt;example&gt;(Visual Basic)
+# <a name="example-visual-basic"></a>\<example> (Visual Basic)
 メンバーの例を指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -21,7 +21,7 @@ ms.locfileid: "43524518"
 <example>description</example>  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `description`  
  コード例の説明です。  
   
@@ -33,7 +33,8 @@ ms.locfileid: "43524518"
 ## <a name="example"></a>例  
  この例では、`<example>`タグを含める例を使用するために、`ID`フィールド。  
   
- [!code-vb[VbVbcnXmlDocComments#2](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/example_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#2)]  
   
-## <a name="see-also"></a>関連項目  
- [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>関連項目
+
+- [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)

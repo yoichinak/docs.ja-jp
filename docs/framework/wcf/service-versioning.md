@@ -2,12 +2,12 @@
 title: サービスのバージョン管理
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: 75a19c62f52c1d9468976f7ebea72245d1d341eb
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 6b72558be4a367505ff18f10406785bc21fddd2c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809691"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64606001"
 ---
 # <a name="service-versioning"></a>サービスのバージョン管理
 ビジネス ニーズの変化、情報テクノロジの要件、その他の問題への対処などのさまざまな理由により、サービスの初期導入後と、場合によっては有効期間中に数回、サービス (およびサービスが公開するエンドポイント) を変更することが必要になる場合があります。 変更が発生するたびに、新しいバージョンのサービスが導入されます。 このトピックでは、Windows Communication Foundation (WCF) のバージョン管理を考慮する方法について説明します。  
@@ -15,15 +15,15 @@ ms.locfileid: "33809691"
 ## <a name="four-categories-of-service-changes"></a>サービス変更の 4 つのカテゴリ  
  必要となるサービスの変更は、次の 4 つのカテゴリに分類できます。  
   
--   コントラクトの変更 : 操作を追加する場合や、メッセージ内のデータ要素を追加または変更する場合など。  
+- コントラクトの変更:たとえば、操作を追加する場合や、メッセージ内のデータ要素を追加または変更する可能性があります。  
   
--   アドレスの変更 : エンドポイントが新しいアドレスを持つ別の場所にサービスを移動する場合など。  
+- アドレスの変更。たとえば、サービスは、エンドポイントが新しいアドレスにある別の場所に移動します。  
   
--   バインディングの変更 : セキュリティ機構の変更や、その設定の変更など。  
+- バインディングの変更。たとえば、セキュリティ機構の変更またはその設定を変更します。  
   
--   実装の変更 : 内部メソッド実装を変更する場合など。  
+- 実装の変更:たとえば、内部メソッド実装が変更されたとき。  
   
- これらの変更の中には "互換性に影響する" ものとそうでないものとがあります。 変更は*互換性に影響しない*が正常に処理された以前のバージョンですべてのメッセージは、新しいバージョンで正常に処理された場合。 この条件を満たしていないすべての変更は、*互換性に影響する*を変更します。  
+ これらの変更の中には "互換性に影響する" ものとそうでないものとがあります。 変更が*互換性に影響しない*場合は、新しいバージョンではまだ処理されて正常に以前のバージョンですべてのメッセージが正常に処理されます。 条件を満たしていないすべての変更は、*互換性に影響する*を変更します。  
   
 ## <a name="service-orientation-and-versioning"></a>サービス指向とバージョン管理  
  サービス指向の基本思想の 1 つは、サービスとクライアントが自律 (または独立) しているということです。 これは、サービス開発者が、すべてのサービス クライアントを制御または把握するということを想定できないことを意味します。 これにより、サービスのバージョンが変更されたときに、すべてのクライアントを再構築し、再展開するという選択肢はなくなります。 このトピックでは、この基本思想に従ってサービスを想定しているため、クライアントから独立して、サービスを変更または "バージョン管理" する必要があります。  
@@ -35,7 +35,7 @@ ms.locfileid: "33809691"
   
  サービス コントラクトの場合、互換性は、サービスが公開する新しい操作は追加できても、既存の操作をセマンティックに削除または変更することはできないことを意味します。  
   
- データ コントラクトの場合、互換性は、新しいスキーマの種類の定義は追加できても、既存のスキーマの種類の定義を互換性に影響する方法では変更できないことを意味します。 互換性に影響する変更として、データ メンバーの削除や、データ型の互換性のない変更などがあります。 この特徴により、クライアントの互換性に影響しなければ、サービスはコントラクトのバージョンをある程度自由に変更できます。 次の 2 つのセクションでは、サービス コントラクトと WCF データをに対する互換性に影響しませんまたは最新の変更について説明します。  
+ データ コントラクトの場合、互換性は、新しいスキーマの種類の定義は追加できても、既存のスキーマの種類の定義を互換性に影響する方法では変更できないことを意味します。 互換性に影響する変更として、データ メンバーの削除や、データ型の互換性のない変更などがあります。 この特徴により、クライアントの互換性に影響しなければ、サービスはコントラクトのバージョンをある程度自由に変更できます。 次の 2 つのセクションでは、サービス コントラクトと WCF データをに対する重大な互換性に影響しない変更を説明します。  
   
 ## <a name="data-contract-versioning"></a>データ コントラクトのバージョン管理  
  ここでは、<xref:System.Runtime.Serialization.DataContractSerializer> クラスと <xref:System.Runtime.Serialization.DataContractAttribute> クラスを使用する場合のデータのバージョン管理について説明します。  
@@ -43,9 +43,9 @@ ms.locfileid: "33809691"
 ### <a name="strict-versioning"></a>厳密なバージョン管理  
  バージョンの変更が問題となる多くのシナリオでは、サービス開発者はクライアントを制御できないため、メッセージの XML やスキーマの変更に対処する方法を想定できません。 このような場合、次の 2 つの理由から、新しいメッセージが古いスキーマに対して有効であることを保証する必要があります。  
   
--   スキーマが変更されることはないという前提で旧クライアントが開発されている場合、 クライアントは、その設計で対象としていないメッセージを処理できない可能性があるため。  
+- スキーマが変更されることはないという前提で旧クライアントが開発されている場合、 クライアントは、その設計で対象としていないメッセージを処理できない可能性があるため。  
   
--   旧クライアントがメッセージの処理を試みる前に、実際のスキーマ検証を古いスキーマに対して実行する可能性があるため。  
+- 旧クライアントがメッセージの処理を試みる前に、実際のスキーマ検証を古いスキーマに対して実行する可能性があるため。  
   
  このようなシナリオでは、既存のデータ コントラクトを変更不可として扱い、一意の XML 修飾名を持つ新しいデータ コントラクトを作成することをお勧めします。 この場合、サービス開発者は、既存のサービス コントラクトに新しいメソッドを追加するか、新しいデータ コントラクトを使用するメソッドを含む新しいサービス コントラクトを作成します。  
   
@@ -54,18 +54,18 @@ ms.locfileid: "33809691"
 ### <a name="lax-versioning"></a>厳密でないバージョン管理  
  他の多くのシナリオでは、サービス開発者は、新しい任意のメンバーをデータ コントラクトに追加しても、既存のクライアントの互換性には影響しないという想定を行うことができます。 この場合、サービス開発者は、既存のクライアントがスキーマ検証を実行しないかどうか、また、未知のデータ メンバーを無視するかどうかを調べる必要があります。 このようなシナリオでは、互換性に影響しない方法で新しいメンバーを追加するためのデータ コントラクト機能を利用できます。 サービスの最初のバージョンで、バージョン管理のためのデータ コントラクト機能が既に使用されている場合には、サービス開発者は確信を持ってこの想定を行うことができます。  
   
- WCF、ASP.NET Web サービス、およびその他の多くの Web サービス スタック サポート*厳密でないバージョン管理*: は、例外をスローしないで新しい未知のデータ メンバーの受信データでします。  
+ WCF、ASP.NET Web サービス、およびその他の多くの Web サービス スタックのサポート*厳密でないバージョン管理*: これは、例外をスローしないで新しい未知のデータ メンバーので受信したデータ。  
   
  新しいデータ メンバーを追加しても、既存のクライアントの互換性に影響することはないと誤解しがちです。 すべてのクライアントが厳密でないバージョン管理に対処できるという確信がない場合は、厳密なバージョン管理のガイドラインに従い、データ コントラクトを変更不可として扱うことをお勧めします。  
   
- データ コントラクトの lax と厳密なの両方のバージョン管理の詳細なガイドラインについては、次を参照してください。[ベスト プラクティス: データ コントラクトのバージョン管理](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)です。  
+ データ コントラクトの厳密でないと、厳密なバージョン管理の詳細なガイドラインについては、次を参照してください。[ベスト プラクティス。データ コントラクトのバージョン管理](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)します。  
   
 ### <a name="distinguishing-between-data-contract-and-net-types"></a>データ コントラクトと .NET 型の区別  
  .NET クラスまたは構造体は、<xref:System.Runtime.Serialization.DataContractAttribute> 属性をクラスに適用することにより、データ コントラクトとして投影できます。 .NET 型とそのデータ コントラクト投影は、2 つの異なる要素です。 同じデータ コントラクトが投影された複数の .NET 型を使用できます。 この区別は、投影されたデータ コントラクトを維持することによって、厳密な意味で既存のクライアントとの互換性を保ちながら、.NET 型を変更できるという点で特に有用です。 .NET 型とデータ コントラクトのこの区別を維持するには、次の 2 つのことを必ず行う必要があります。  
   
--   <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> と <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> を指定します。 コントラクトに .NET 型の名前と名前空間が公開されないように、データ コントラクトの名前と名前空間を必ず指定する必要があります。 これにより、後で .NET の名前空間や型名を変更することにした場合でも、データ コントラクトの変更はありません。  
+- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> と <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> を指定します。 コントラクトに .NET 型の名前と名前空間が公開されないように、データ コントラクトの名前と名前空間を必ず指定する必要があります。 これにより、後で .NET の名前空間や型名を変更することにした場合でも、データ コントラクトの変更はありません。  
   
--   <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A> を指定します。 コントラクトに .NET メンバー名が公開されないように、データ メンバーの名前を必ず指定する必要があります。 これにより、後でメンバーの .NET 名を変更することにした場合でも、データ コントラクトの変更はありません。  
+- <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>を指定します。 コントラクトに .NET メンバー名が公開されないように、データ メンバーの名前を必ず指定する必要があります。 これにより、後でメンバーの .NET 名を変更することにした場合でも、データ コントラクトの変更はありません。  
   
 ### <a name="changing-or-removing-members"></a>メンバーの変更または削除  
  厳密でないバージョン管理が許可されている場合でも、メンバーの名前またはデータ型の変更や、データ メンバーの削除は、互換性に影響する変更です。 このような変更が必要な場合は、新しいデータ コントラクトを作成します。  
@@ -119,13 +119,13 @@ ms.locfileid: "33809691"
  サービスのコントラクトに記載されたエラーのリストは、完全なリストとは見なされません。 操作がコントラクトに記載されていないエラーを返す可能性は常にあります。 したがって、コントラクトに記載されたエラーのセットの変更は、互換性に影響しないものと見なされます。 たとえば、<xref:System.ServiceModel.FaultContractAttribute> を使用して新しいエラーをコントラクトに追加する場合や、コントラクトから既存のエラーを削除する場合などです。  
   
 ### <a name="service-contract-libraries"></a>サービス コントラクト ライブラリ  
- 組織では、コントラクトを中央のリポジトリに公開する、コントラクトのライブラリを用意できます。サービス実装側は、このリポジトリからコントラクトを実装します。 この場合、サービス コントラクトをリポジトリに公開すると、そのコントラクトを実装するサービスの作成者を制御することはできません。 したがって、サービス コントラクトを一度公開すると、変更することができないため、実質的にそのコントラクトは変更不可になります。 WCF では、既存のコントラクトを拡張する新しいコントラクトを作成するために使用するコントラクトの継承をサポートします。 この機能を使用するには、古いサービス コントラクト インターフェイスから継承した新しいサービス コントラクト インターフェイスを定義し、この新しいインターフェイスにメソッドを追加します。 次に、古いコントラクトを実装するサービスを変更して新しいコントラクトを実装し、新しいコントラクトを使用するように "versionOld" エンドポイントの定義を変更します。 "versionOld" クライアントには、エンドポイントが "versionOld" コントラクトを引き続き公開しているように見えます。"versionNew" クライアントには、エンドポイントが "versionNew" コントラクトを公開しているように見えます。  
+ 組織では、コントラクトを中央のリポジトリに公開する、コントラクトのライブラリを用意できます。サービス実装側は、このリポジトリからコントラクトを実装します。 この場合、サービス コントラクトをリポジトリに公開すると、そのコントラクトを実装するサービスの作成者を制御することはできません。 したがって、サービス コントラクトを一度公開すると、変更することができないため、実質的にそのコントラクトは変更不可になります。 WCF では、既存のコントラクトを拡張する新しい契約を作成するために使用するコントラクトの継承をサポートします。 この機能を使用するには、古いサービス コントラクト インターフェイスから継承した新しいサービス コントラクト インターフェイスを定義し、この新しいインターフェイスにメソッドを追加します。 次に、古いコントラクトを実装するサービスを変更して新しいコントラクトを実装し、新しいコントラクトを使用するように "versionOld" エンドポイントの定義を変更します。 "versionOld" クライアントには、エンドポイントが "versionOld" コントラクトを引き続き公開しているように見えます。"versionNew" クライアントには、エンドポイントが "versionNew" コントラクトを公開しているように見えます。  
   
 ## <a name="address-and-binding-versioning"></a>アドレスとバインディングのバージョン管理  
  クライアントが新しいエンドポイント アドレスまたはバインディングを動的に検出できない場合、エンドポイント アドレスとバインディングの変更は互換性に影響する変更です。 新しいエンドポイントまたはバインディングを動的に検出する機能を実装する 1 つの方法として、クライアントがエンドポイントとの通信を試みるときに、UDDI (Universal Discovery Description and Integration) レジストリと UDDI 呼び出しパターンを使用します。エラーが発生した場合、現在のエンドポイントのメタデータについて既知の UDDI レジストリに照会します。 クライアントは、このメタデータからアドレスとバインディングを使用して、エンドポイントと通信を行います。 この通信が成功した場合、クライアントは今後使用できるように、そのアドレスとバインディングをキャッシュします。  
   
 ## <a name="routing-service-and-versioning"></a>ルーティング サービスとバージョン管理  
- サービスに対して行った変更が互換性に影響するもので、複数の異なるバージョンのサービスを同時に実行する必要がある場合、WCF ルーティング サービスを使用して、メッセージを適切なサービス インスタンスにルーティングすることができます。 WCF ルーティング サービスは、メッセージの内容に基づくルーティングを使用します。つまり、メッセージ内に含まれる情報に応じて、そのメッセージのルーティング先が特定されます。 WCF ルーティング サービス参照の詳細については[ルーティング サービス](../../../docs/framework/wcf/feature-details/routing-service.md)です。 サービスのバージョン管理の WCF ルーティング サービスを使用する方法の例については、次を参照してください。[操作方法: サービスのバージョン管理](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)です。  
+ サービスに対して行った変更が互換性に影響するもので、複数の異なるバージョンのサービスを同時に実行する必要がある場合、WCF ルーティング サービスを使用して、メッセージを適切なサービス インスタンスにルーティングすることができます。 WCF ルーティング サービスは、メッセージの内容に基づくルーティングを使用します。つまり、メッセージ内に含まれる情報に応じて、そのメッセージのルーティング先が特定されます。 WCF ルーティング サービス参照の詳細については[ルーティング サービス](../../../docs/framework/wcf/feature-details/routing-service.md)します。 WCF ルーティング サービスをサービスのバージョン管理を使用する方法の例については、次を参照してください[How To:。サービスのバージョン管理](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)します。  
   
 ## <a name="appendix"></a>付録  
  厳密なバージョン管理が必要な場合、データ コントラクトのバージョン管理の一般的なガイダンスは、データ コントラクトを変更不可として扱い、変更が必要な場合は新しいデータ コントラクトを作成することです。 新しいデータ コントラクトごとに新しいクラスを作成する必要があります。したがって、古いデータ コントラクト クラスの観点で作成された既存のコードを取得し、新しいデータ コントラクト クラスの観点でコードを書き換える必要がないようにするための方法が必要となります。  
@@ -175,16 +175,17 @@ public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2
   
  `PurchaseOrderV2` の観点で作成された新しい操作を含めるために、サービス コントラクトが更新されます。 `IPurchaseOrderV1` の観点で作成された既存のビジネス ロジックは、`PurchaseOrderV2` で引き続き機能し、`OrderDate` プロパティを必要とする新しいビジネス ロジックが `IPurchaseOrderV2` の観点で作成されます。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>  
- <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>  
- <xref:System.Runtime.Serialization.IExtensibleDataObject>  
- <xref:System.Runtime.Serialization.ExtensionDataObject>  
- <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>  
- <xref:System.Xml.Serialization.XmlSerializer>  
- [データ コントラクトの等価性](../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [バージョン トレラントなシリアル化コールバック](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>
+- <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>
+- <xref:System.Runtime.Serialization.IExtensibleDataObject>
+- <xref:System.Runtime.Serialization.ExtensionDataObject>
+- <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [データ コントラクトの等価性](../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
+- [バージョン トレラントなシリアル化コールバック](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)

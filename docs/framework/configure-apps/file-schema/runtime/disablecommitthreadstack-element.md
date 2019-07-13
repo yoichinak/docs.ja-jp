@@ -1,5 +1,5 @@
 ---
-title: '&lt;disableCommitThreadStack&gt;要素'
+title: <disableCommitThreadStack> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/disableCommitThreadStack
@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 3559d46a-7640-4c72-9a11-7e980768929e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69b2c9f3bbd4fb7562272903d3ab78e3a4312298
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: a5852579758e85bb033af9b6d036fe76444bb8e4
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611647"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583858"
 ---
-# <a name="ltdisablecommitthreadstackgt-element"></a>&lt;disableCommitThreadStack&gt;要素
+# <a name="disablecommitthreadstack-element"></a>\<disableCommitThreadStack > 要素
 スレッドの起動時にスレッド スタック全体をコミットするかどうかを指定します。  
   
  \<configuration>  
-\<ランタイム >  
-\<disableCommitThreadStack >  
+\<runtime>  
+\<disableCommitThreadStack>  
   
 ## <a name="syntax"></a>構文  
   
@@ -53,7 +53,7 @@ ms.locfileid: "53611647"
   
 |要素|説明|  
 |-------------|-----------------|  
-|`configuration`|共通言語ランタイムおよび [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
+|`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
 ## <a name="remarks"></a>Remarks  
@@ -73,6 +73,7 @@ ms.locfileid: "53611647"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>関連項目
+
+- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)

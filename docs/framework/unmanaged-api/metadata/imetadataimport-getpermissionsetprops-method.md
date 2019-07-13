@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: be9b2fa3037dc00bce52d9ff89291d1c02cffc38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 48cd62f89f1112a1007a5661dc55fe2977dace2b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449300"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778908"
 ---
 # <a name="imetadataimportgetpermissionsetprops-method"></a>IMetaDataImport::GetPermissionSetProps メソッド
-関連付けられているメタデータを取得、<xref:System.Security.PermissionSet?displayProperty=nameWithType>指定したアクセス許可のトークンによって表されます。  
+関連付けられているメタデータを取得、<xref:System.Security.PermissionSet?displayProperty=nameWithType>指定した権限のトークンによって表されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetPermissionSetProps (  
    [in]  mdPermission      pm,  
    [out] DWORD             *pdwAction,   
@@ -38,9 +38,9 @@ HRESULT GetPermissionSetProps (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pm`  
- [in]メタデータ プロパティを取得する設定のアクセス許可を表す権限メタデータ トークンです。  
+ [in]アクセス許可セットのメタデータ プロパティの取得を表すアクセス許可のメタデータ トークンです。  
   
  `pdwAction`  
  [out]権限セットへのポインター。  
@@ -49,18 +49,19 @@ HRESULT GetPermissionSetProps (
  [out]アクセス許可セットのバイナリ メタデータ シグネチャへのポインター。  
   
  `pcbPermission`  
- [out]バイト サイズ`ppvPermission`です。  
+ [out]バイト サイズ`ppvPermission`します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Security.PermissionSet>  
- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Security.PermissionSet>
+- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

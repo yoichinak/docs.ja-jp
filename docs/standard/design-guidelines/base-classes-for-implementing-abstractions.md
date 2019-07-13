@@ -7,12 +7,12 @@ helpviewer_keywords:
 - base classes, abstractions
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
 author: KrzysztofCwalina
-ms.openlocfilehash: 411596f342930c9387dc6523d25805bddad18687
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6811423258481fcbae24743c9b17f3f20c379c58
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785542"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>抽象化の実装用の基本クラス
 厳密に言えば、別のクラスがそこから派生する場合、クラスは、基底クラスになります。 ここでは、ただし、基本クラスは、共通の抽象化を提供または一部を再利用するには、他のクラスの既定の実装が継承する主な目的としたクラス。 通常、基底クラスは、階層のルートにある抽象化と下部にあるいくつかのカスタム実装の間の継承階層の途中で配置されています。  
@@ -35,5 +35,5 @@ ms.locfileid: "53148673"
   
 ## <a name="see-also"></a>関連項目
 
-- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)  
+- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)
 - [機能拡張のデザイン](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

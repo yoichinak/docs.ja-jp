@@ -3,13 +3,13 @@ title: ASP.NET Core MVC アプリの開発
 description: ASP.NET Core および Azure での最新の Web アプリケーションの設計 | ASP.NET Core MVC アプリの開発
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: aed0ba4621eab91dd47df9ef760fdf8c39ff1103
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.date: 01/30/2019
+ms.openlocfilehash: 1d58f6ef590e798e52730d79e56b8c16830c1712
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058504"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59128389"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC アプリを開発する
 
@@ -17,6 +17,24 @@ ms.locfileid: "54058504"
 > _- Andrew Hunt、David Thomas_
 
 ASP.NET Core は、最新のクラウド向けに最適化された Web アプリケーションを構築するための、クロス プラットフォームのオープン ソース フレームワークです。 ASP.NET Core アプリは、軽量なモジュール形式であり、依存関係の挿入の組み込みサポートを備え、テストと保守の容易性を大幅に向上させることができます。 ビュー ベースのアプリだけでなく最新の Web API の構築をサポートする MVC と組み合わせて、ASP.NET Core は、エンタープライズ Web アプリケーション構築のための強力なフレームワークになります。
+
+## <a name="mvc-and-razor-pages"></a>MVC と Razor Pages
+
+ASP.NET Core MVC は、Web ベースの API やアプリを構築する際に便利な機能をたくさん備えています。 MVC という用語は "Model-View-Controller" の略です。これは、ユーザーからの要求に応答する責任をいくつかの部分に分割する UI パターンです。 このパターンに従うだけでなく、ASP.NET Core アプリに各種機能を Razor Pages として実装することもできます。 Razor Pages は ASP.NET Core MVC に組み込まれ、経路指定やモデル バインドなどと同じ機能が使用されます。しかしながら、コントローラーやビューなどに個別のフォルダーやファイルを用意したり、属性基準で経路を指定したりする代わりに、Razor Pages は 1 つのフォルダー ("/Pages") に置かれ、このフォルダーの相対的な位置に基づいて経路を指定し、コントローラー アクションの代わりにハンドラーで要求を処理します。
+
+新しい ASP.NET Core App を作成するとき、構築するアプリの書類に関して計画を立ててください。 Visual Studio では、いくつかのテンプレートの中から選択します。 プロジェクト テンプレートとして最も一般的な 3 つは、Web API、Web アプリケーション、Web アプリケーション (Model-View-Controller) です。 これを決定できるのは最初にプロジェクトを作成するときだけですが、取り消し不可能な決定ではありません。 Web API プロジェクトでは、標準の Model-View-Controller コントローラーが使用されます。既定ではビューだけがありません。 同様に、既定の Web アプリケーション テンプレートでは Razor Pages が使用され、Views フォルダーがありません。 このようなプロジェクトには Views フォルダーを後で追加し、ビューを基盤とする動作に対応できます。 Web API プロジェクトと Model-View-Controller プロジェクトには既定で Pages フォルダーがありませんが、後で追加し、Razor Pages を基盤とする動作に対応できます。 以上の 3 つのテンプレートは、データ (Web API)、ページ ベース、ビュー ベースという 3 つの異なるデフォルト ユーザー インタラクションをサポートするものであると考えることができます。 ただし、必要であれば、3 つのいずれかまたは全部を 1 つのプロジェクトに混在させることができます。
+
+### <a name="why-razor-pages"></a>Razor Pages とは
+
+Razor Pages は、Visual Studio における新しい Web アプリケーションの既定の手法です。 Razor Pages では、非 SPA フォームなど、ページ ベースのアプリケーション機能を一層簡単に構築できます。 コントローラーやビューを使用し、さまざまな依存関係やビュー モデルと連動し、さまざまなビューを返す大掛かりなコントローラーをアプリケーションに与えることが一般的でした。 その結果、非常に複雑となり、単一責任の原則または開放/閉鎖の原則にコントローラーが効果的に従わなくなることがありました。 Razor Pages では、その Razor マークアップを使用し、Web アプリケーションで特定の論理 "ページ" に対してサーバー側ロジックをカプセル化することでこの問題に対処しています。 サーバー側ロジックのない Razor ページは単純に 1 つの Razor ファイル ("Index.cshtml" など) から構成されます。 ただし、重要な Razor Pages にはほとんどの場合、ページ モデル クラスが関連付けられます。これには慣例として Razor ファイルと同じ名前と ".cs" 拡張子が付けられます。たとえば、"Index.cshtml.cs" のようになります。
+
+Razor ページのページ モデルでは、MVC コントローラーとビューモデルの責任が組み合わされます。 コントローラー アクションのメソッドで要求を処理する代わりに、"OnGet()" のようなページ モデル ハンドラーが実行され、関連付けられているページが既定でレンダリングされます。 Razor Pages では、ASP.NET Core アプリで個々のページを構築するプロセスが簡単になります。それでありながら、ASP.NET Core MVC のアーキテクチャ機能をすべて備えています。 新しいページ ベース機能の既定の選択肢として最適です。
+
+### <a name="when-to-use-mvc"></a>MVC を使用する場面
+
+Web API を構築する場合、Razor Pages を使用してみるより、MVC パターンの方が合理的です。 プロジェクトで Web API エンドポイントのみを公開する場合、Web API プロジェクト テンプレートから始めることが理想的ですが、そうでなければ、コントローラーや関連 API エンドポイントを ASP.NET Core アプリに追加することは簡単です。 バージョン 5 以前の ASP.NET MVC から ASP.NET Core MVC に既存のアプリケーションを移行するとき、労力を最小限に抑えるなら、ビュー ベースの MVC 手法も利用してください。 最初の移行後、新しい機能のために、さらには大規模な移行として Razor Pages を採用することが合理的かどうかを判断できます。
+
+Web アプリの構築方法として Razor Pages を選択した場合でも MVC ビューを選択した場合でも、アプリの性能は同じようなものになり、依存関係挿入、フィルター、モデル バインド、妥当性確認などのサポートが含まれます。
 
 ## <a name="mapping-requests-to-responses"></a>応答と要求のマッピング
 
@@ -58,6 +76,18 @@ public class ProductsController : Controller
 }
 ```
 
+Razor Pages では、属性経路指定は使用されません。 Razor Pages には、その `@page` ディレクティブの一部として追加の経路テンプレート情報を指定できます。
+
+```csharp
+@page "{id:int}"
+```
+
+前の例の問題のページではルートと整数 `id` パラメーターが一致します。 たとえば、`/Pages` のルートに置かれている *Products.cshtml* ページにはこの経路が与えられます。
+
+```csharp
+"/Products/123"
+```
+
 特定の要求がルートと一致した後、アクション メソッドが呼び出される前に、ASP.NET Core MVC は要求に対して[モデル バインド](/aspnet/core/mvc/models/model-binding)と[モデル検証](/aspnet/core/mvc/models/validation)を実行します。 モデル バインドでは、着信した HTTP データが、呼び出されるアクション メソッドのパラメーターとして指定されている .NET 型に変換されます。 たとえば、アクション メソッドが int 型の ID パラメーターを必要としている場合、モデル バインドは要求の一部として指定された値からこのパラメーターを提供しようとします。 そのために、モデル バインドは、ポストされたフォーム内、ルート自体、クエリ文字列で値を検索します。 ID 値が見つかった場合は、整数に変換されてからアクション メソッドに渡されます。
 
 モデルをバインドした後、アクション メソッドを呼び出す前に、モデルの検証が行われます。 モデルの検証では、モデルの種類に対するオプション属性が使われ、指定されたモデル オブジェクトが特定のデータ要件に準拠していることを確認できます。 特定の値を必須として指定したり、特定の長さや数値範囲に制限したりすることができます。検証属性が指定されていて、モデルがその要件に準拠していない場合は、ModelState.IsValid プロパティが false に設定され、準拠していない検証規則のセットを要求元のクライアントに送信できます。
@@ -65,6 +95,8 @@ public class ProductsController : Controller
 モデルの検証を使う場合は常に、状態変更コマンドを実行する前にモデルが有効であることを確認し、無効なデータによってアプリが破損しないようにする必要があります。 [フィルター](/aspnet/core/mvc/controllers/filters)を使って、すべてのアクションにそのためのコードを追加しなくて済むようにできます。 ASP.NET Core MVC フィルターを使うと、要求のグループをインターセプトして、共通のポリシーや横断的な事柄を特定の対象にだけ適用できます。 フィルターは、個々のアクション、コントローラー全体、またはアプリケーション全体に適用できます。
 
 Web API に対しては、ASP.NET Core MVC は[_コンテンツ ネゴシエーション_](/aspnet/core/mvc/models/formatting)をサポートしており、応答の書式設定方法を要求で指定することができます。 要求で指定されたヘッダーに基づき、データを返すアクションは、XML、JSON、または他のサポートされている形式で応答を書式設定します。 この機能を使うと、同じ API を、データ形式要件が異なる複数のクライアントで使用できます。
+
+Web API プロジェクトでは `[ApiController]` 属性の使用を検討してください。この属性は個々のコントローラー、ベース コントローラー クラス、アセンブリ全体に適用できます。 この属性によって、自動モデル検証が追加されます。アクションのモデルが無効な場合、BadRequest と検証エラーの詳細が返されます。 この属性ではまた、あらゆるアクションに、従来の経路を使用せず、属性経路を与えることが要求され、エラーに対する応答で、さらに詳しい ProblemDetails 情報が返されます。
 
 > ### <a name="references--mapping-requests-to-responses"></a>参照 – 応答と要求のマッピング
 >
@@ -76,6 +108,8 @@ Web API に対しては、ASP.NET Core MVC は[_コンテンツ ネゴシエー�
  > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
 > - **フィルター**
  > <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
+> - **ApiController 属性**
+ > <https://docs.microsoft.com/aspnet/core/web-api/?view=aspnetcore-2.2>
 
 ## <a name="working-with-dependencies"></a>依存関係の使用
 
@@ -132,13 +166,13 @@ Startup クラスは、独自のサービスに対するコントローラーか
 
 永続化を実行する方法や、ユーザーに通知を送信する方法など、実装の詳細は、Infrastructure プロジェクトで保持します。 このプロジェクトは、Entity Framework Core などの実装固有のパッケージを参照しますが、これらの実装に関する詳細をプロジェクトの外部に公開しないようにする必要があります。 インフラストラクチャ サービスとリポジトリは ApplicationCore プロジェクトで定義されているインターフェイスを実装する必要があり、このプロジェクトの永続化の実装が、ApplicationCore で定義されているエンティティの取得と格納を行います。
 
-ASP.NET Core UI プロジェクトは、UI レベルの処理を行いますが、ビジネス ロジックまたはインフラストラクチャの詳細を含まないようにする必要があります。 実際に、理想的なのは Infrastructure プロジェクトに対する依存関係さえ持つべきではなく、これにより 2 つのプロジェクト間に誤って依存関係が発生するのを防ぐことができます。 これは、StructureMap などのサード パーティ製 DI コンテナーを使って実現でき、各プロジェクトの Registry クラスで DI 規則を定義することができます。
+ASP.NET Core UI プロジェクトは、UI レベルの処理を行いますが、ビジネス ロジックまたはインフラストラクチャの詳細を含まないようにする必要があります。 実際に、理想的なのは Infrastructure プロジェクトに対する依存関係さえ持つべきではなく、これにより 2 つのプロジェクト間に誤って依存関係が発生するのを防ぐことができます。 これは、Autofac などのサード パーティ製 DI コンテナーを使って実現でき、各プロジェクトの Module クラスで DI 規則を定義することができます。
 
 実装の詳細からアプリケーションを分離するもう 1 つの方法は、通常は個別の Docker コンテナーで展開されているマイクロサービスをアプリケーションで呼び出すことです。 この方法を使うと、2 つのプロジェクト間に DI を利用する場合より、懸念事項の分離と分割はさらに大きくなりますが、複雑さは増大します。
 
 ### <a name="feature-organization"></a>機能の編成
 
-既定では、ASP.NET Core アプリケーションは、コントローラーとビューさらに多くの場合は ViewModels を含むように、フォルダー構造を編成します。 通常、これらのサーバー側構造をサポートするためのクライアント側のコードは、wwwroot フォルダーに個別に格納されます。 ただし、大規模なアプリケーションでは、特定の機能を使用するためにこれらのフォルダー間を移動する必要があるため、このような編成では問題が発生する可能性があります。 各フォルダー内のファイルとサブフォルダーの数が増えるとますます困難になり、ソリューション エクスプローラーのスクロール量が膨大になります。 この問題の 1 つの解決策は、アプリケーションのコードをファイルの種類別ではなく "_機能_" 別に整理することです。 この編成スタイルは、通常、機能フォルダーまたは機能スライスと呼ばれます ([垂直スライス](https://deviq.com/vertical-slices/)も参照してください)。
+既定では、ASP.NET Core アプリケーションは、コントローラーとビューさらに多くの場合は ViewModels を含むように、フォルダー構造を編成します。 通常、これらのサーバー側構造をサポートするためのクライアント側のコードは、wwwroot フォルダーに個別に格納されます。 ただし、大規模なアプリケーションでは、特定の機能を使用するためにこれらのフォルダー間を移動する必要があるため、このような編成では問題が発生する可能性があります。 各フォルダー内のファイルとサブフォルダーの数が増えるとますます困難になり、ソリューション エクスプローラーのスクロール量が膨大になります。 この問題の 1 つの解決策は、アプリケーションのコードをファイルの種類別ではなく "_機能_" 別に整理することです。 この編成スタイルは、通常、機能フォルダーまたは[機能スライス](https://msdn.microsoft.com/magazine/mt763233.aspx)と呼ばれます ([垂直スライス](https://deviq.com/vertical-slices/)も参照してください)。
 
 ASP.NET Core MVC では、この目的のために区分 (Area) がサポートされています。 区分を使うと、各区分フォルダー内にコントローラー フォルダーとビュー フォルダー (および関連するすべてのモデル) のセットを個別に作成できます。 図 7-1 は、区分を使用したフォルダー構造の例です。
 
@@ -220,7 +254,7 @@ services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 public class AccountController : Controller
 
 {
-    [AllowAnonymous]
+    [AllowAnonymous] // overrides the Authorize attribute
     public async Task<IActionResult> Login() {}
     public async Task<IActionResult> ForgotPassword() {}
 }
@@ -263,6 +297,8 @@ public class ValidateModelAttribute : ActionFilterAttribute
 }
 ```
 
+[Ardalis.ValidateModel](https://www.nuget.org/packages/Ardalis.ValidateModel) パッケージを含めることで、NuGet 依存関係として `ValidateModelAttribute` をプロジェクトに追加できます。 API の場合、`ApiController` 属性を使用することで、別個の `ValidateModel` フィルターがなくてもこの動作を強制できます。
+
 同様に、フィルターを使ってレコードが存在するかどうかをチェックし、アクションが実行される前に 404 を返して、アクションでこれらのチェックを実行する必要がないようにできます。 共通の規則を抽出し、インフラストラクチャ コードとビジネス ロジックを UI から分離するようにソリューションを構成すると、MVC アクション メソッドは非常にスリムになるはずです。
 
 ```csharp
@@ -275,7 +311,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-フィルターの実装について詳しくは、MSDN の記事「[実際の ASP.NET Core MVC フィルター](https://msdn.microsoft.com/magazine/mt767699.aspx)」をご覧ください。動作するサンプルをダウンロードすることもできます。
+フィルターの実装の詳細については、MSDN の記事「[実際の ASP.NET Core MVC フィルター](https://msdn.microsoft.com/magazine/mt767699.aspx)」を参照してください。また、実際に動作するサンプルをダウンロードすることもできます。
 
 > ### <a name="references--structuring-applications"></a>参照 – アプリケーションの構成
 >
@@ -384,6 +420,12 @@ public void ConfigureServices(IServiceCollection services)
 
 **図 7-4.** Web API に対するトークン ベースの認証。
 
+独自の認証サービスを作成したり、Azure AD や OAuth と統合したり、[IdentityServer](https://github.com/IdentityServer) のようなオープン ソースのツールを利用してサービスを実装したりできます。
+
+#### <a name="custom-security"></a>カスタム セキュリティ
+
+暗号化、ユーザー メンバーシップ、トークン生成システムの実装を "独自に展開する" 場合、特別な注意が必要です。 代案がたくさん売られているし、オープン ソースも利用できます。ほぼ間違いなく、カスタム実装よりセキュリティが優れています。
+
 > ### <a name="references--security"></a>参照 – セキュリティ
 >
 > - **セキュリティ ドキュメントの概要**  
@@ -396,12 +438,14 @@ public void ConfigureServices(IServiceCollection services)
 >   <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
 > - **Azure App Service での API Apps に対する認証および承認**  
 >   <https://docs.microsoft.com/azure/app-service-api/app-service-api-authentication>
+> - **Identity Server**  
+>   <https://github.com/IdentityServer>
 
 ## <a name="client-communication"></a>クライアントの通信
 
 Web API によりページを提供してデータの要求に応答するだけでなく、ASP.NET Core アプリは接続されているクライアントと直接通信できます。 この送信通信では、さまざまなトランスポート テクノロジを使うことができ、最も一般的なものは WebSocket です。 ASP.NET Core SignalR は、サーバーとクライアントの間のリアルタイム通信機能をアプリケーションに容易に追加できるようにするライブラリです。 SignalR は、WebSocket などのさまざまなトランスポート テクノロジをサポートしており、多くの実装の詳細を開発者から抽象化します。
 
-ASP.NET Core SignalR は ASP.NET Core 2.1 で使用できます。
+ASP.NET Core SignalR は、バージョン 2.1 以降の ASP.NET Core で利用できます。
 
 WebSocket を直接使うか、他の技法を使うかに関係なく、リアルタイムのクライアント通信は、さまざまなアプリケーション シナリオで役に立ちます。 次に、それらの例の一部を示します。
 

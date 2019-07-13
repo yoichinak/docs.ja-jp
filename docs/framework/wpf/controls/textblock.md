@@ -7,23 +7,23 @@ helpviewer_keywords:
 - controls [WPF], TextBlock
 - TextBlock control [WPF]
 ms.assetid: ea5f7826-7a92-4de9-9eee-10ef700ce7b6
-ms.openlocfilehash: f032476326ac96edbfb7532f30dedd72b78f76fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31ef66ba7e584b88a38185a4d3ad02ca413fad34
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790950"
 ---
 # <a name="textblock"></a>TextBlock
-<xref:System.Windows.Controls.TextBlock>コントロールがテキストの柔軟なサポートを提供[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションです。 この要素は、主として、複数段落のテキストを必要としない、基本的な [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] シナリオを対象にしています。  
+<xref:System.Windows.Controls.TextBlock>コントロールは、柔軟なテキスト サポートを提供します。[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。 この要素は、主として、複数段落のテキストを必要としない、基本的な [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] シナリオを対象にしています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [TextBlock の概要](../../../../docs/framework/wpf/controls/textblock-overview.md)  
+ [TextBlock の概要](textblock-overview.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.Label>  
   
 ## <a name="related-sections"></a>関連項目  
- [WPF のドキュメント](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [WPF のドキュメント](../advanced/documents-in-wpf.md)  
   
- [フロー ドキュメントの概要](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+ [フロー ドキュメントの概要](../advanced/flow-document-overview.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-ms.openlocfilehash: 1100afd89b27e789c0db713291ed3656092fb0c7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 97d08113a37477add9d770b0a680c303fe7e3040
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43802393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638958"
 ---
 # <a name="imports-statement-xml-namespace"></a>Imports ステートメント (XML 名前空間)
 XML リテラルおよび XML 軸のプロパティで使用するための XML 名前空間プレフィックスをインポートします。  
@@ -27,7 +27,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
   
 ## <a name="parts"></a>指定項目  
  `xmlNamespacePrefix`  
- 任意。 XML 要素と属性を参照できます文字列`xmlNamespaceName`します。 いない場合`xmlNamespacePrefix`は既定の XML 名前空間がインポートされた XML 名前空間を指定します。 有効な XML 識別子である必要があります。 詳細については、次を参照してください。[宣言されている XML 要素の名前と属性](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)します。  
+ 省略可能です。 XML 要素と属性を参照できます文字列`xmlNamespaceName`します。 いない場合`xmlNamespacePrefix`は既定の XML 名前空間がインポートされた XML 名前空間を指定します。 有効な XML 識別子である必要があります。 詳細については、次を参照してください。[宣言されている XML 要素の名前と属性](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)します。  
   
  `xmlNamespaceName`  
  必須。 インポートされる XML 名前空間を識別する文字列。  
@@ -48,7 +48,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## <a name="example"></a>例  
  次の例では、既定の XML 名前空間とプレフィックスで識別される XML 名前空間のインポート`ns`します。 両方の名前空間を使用して、XML リテラルが作成されます。  
   
- [!code-vb[VbXMLSamples#45](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_1.vb)]  
+ [!code-vb[VbXMLSamples#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/Module1.vb#45)]  
   
  このコードを実行すると、次のテキストが表示されます。  
   
@@ -64,7 +64,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## <a name="example"></a>例  
  次の例は、XML 名前空間プレフィックスをインポート`ns`します。 名前空間プレフィックスを使用し、要素の最終的なフォームを表示する XML リテラルが作成されます。  
   
- [!code-vb[VbXMLSamples#22](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_2.vb)]  
+ [!code-vb[VbXMLSamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples10.vb#22)]  
   
  このコードを実行すると、次のテキストが表示されます。  
   
@@ -82,14 +82,15 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## <a name="example"></a>例  
  次の例は、XML 名前空間プレフィックスをインポート`ns`します。 その後、この名前空間のプレフィックスを使用して XML リテラルを作成し、修飾名 `ns:name` を持つ最初の子ノードにアクセスします。  
   
- [!code-vb[VbXMLSamples#19](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_3.vb)]  
+ [!code-vb[VbXMLSamples#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples8.vb#19)]  
   
  このコードを実行すると、次のテキストが表示されます。  
   
  `Patrick Hines`  
   
-## <a name="see-also"></a>関連項目  
- [XML 要素リテラル](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [XML 軸プロパティ](../../../visual-basic/language-reference/xml-axis/index.md)  
- [宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)  
- [GetXmlNamespace 演算子](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)
+## <a name="see-also"></a>関連項目
+
+- [XML 要素リテラル](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [XML 軸プロパティ](../../../visual-basic/language-reference/xml-axis/index.md)
+- [宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+- [GetXmlNamespace 演算子](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)

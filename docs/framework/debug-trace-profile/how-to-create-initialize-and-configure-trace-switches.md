@@ -1,5 +1,5 @@
 ---
-title: '方法 : トレース スイッチを作成、初期化、および構成する'
+title: '方法: トレース スイッチを作成、初期化、および構成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4088c74d0ea8e9f2ad70aff37d99870d34b168ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c947dcd3fa3a71d5bbfdf742b106bf56d8444fc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392932"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596747"
 ---
-# <a name="how-to-create-initialize-and-configure-trace-switches"></a>方法 : トレース スイッチを作成、初期化、および構成する
+# <a name="how-to-create-initialize-and-configure-trace-switches"></a>方法: トレース スイッチを作成、初期化、および構成する
 トレース スイッチを使用すると、トレース出力を有効/無効にしたり、トレースの出力をフィルター処理したりできます。  
   
 <a name="create"></a>   
@@ -31,9 +31,9 @@ ms.locfileid: "33392932"
   
 #### <a name="to-create-and-initialize-a-trace-switch"></a>トレース スイッチを作成し、初期化するには  
   
-1.  スイッチを型 <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> または型 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> のいずれかに定義し、スイッチの名前と説明を設定します。  
+1. スイッチを型 <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> または型 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> のいずれかに定義し、スイッチの名前と説明を設定します。  
   
-2.  トレース スイッチを構成します。 詳細については、「[トレース スイッチの構成](#configure)」を参照してください。  
+2. トレース スイッチを構成します。 詳細については、「[トレース スイッチの構成](#configure)」を参照してください。  
   
      次のコードでは、それぞれの種類のスイッチを 1 つずつ作成します。  
   
@@ -71,15 +71,15 @@ ms.locfileid: "33392932"
   
 #### <a name="to-configure-trace-switches"></a>トレース スイッチを構成する  
   
-1.  トレース スイッチを使用するには、「[Creating and initializing a trace switch](#create)」(トレース スイッチの作成と初期化) のセクションで説明されているように、まず、それらを作成してコードに配置する必要があります。  
+1. トレース スイッチを使用するには、「[Creating and initializing a trace switch](#create)」(トレース スイッチの作成と初期化) のセクションで説明されているように、まず、それらを作成してコードに配置する必要があります。  
   
-2.  プロジェクトに構成ファイル (app.config または Web.config) が含まれない場合は、**[プロジェクト]** メニューから **[新しい項目の追加]** を選択します。  
+2. プロジェクトに構成ファイル (app.config または Web.config) が含まれない場合は、**[プロジェクト]** メニューから **[新しい項目の追加]** を選択します。  
   
-    -   **Visual Basic:** **[新しい項目の追加]** ダイアログ ボックスで **[アプリケーション構成ファイル]** を選択します。  
+    - **Visual Basic:** **新しい項目の追加** ダイアログ ボックスで、選択**アプリケーション構成ファイル**します。  
   
          アプリケーション構成ファイルが作成され、開かれます。 これは、XML ドキュメントであり、ルート要素は `<configuration>.` です。  
   
-    -   **Visual C# :** **[新しい項目の追加]** ダイアログ ボックスで **[XML ファイル]** を選択します。 このファイルに **app.config** という名前を付けます。XML エディターで、XML 宣言の後に次の XML を追加します。  
+    - **Visual C#:** **新しい項目の追加** ダイアログ ボックスで、選択**XML ファイル**します。 このファイルに **app.config** という名前を付けます。XML エディターで、XML 宣言の後に次の XML を追加します。  
   
         ```xml  
         <configuration>  
@@ -88,7 +88,7 @@ ms.locfileid: "33392932"
   
          プロジェクトをコンパイルすると、app.config ファイルがプロジェクトの出力フォルダーにコピーされ、名前が *applicationname*.exe.config に変更されます。  
   
-3.  `<configuration>` タグの後、かつ `</configuration>` タグの前に、スイッチを構成する適切な XML を追加します。 次の例では、**DisplayName** プロパティに `DataMessageSwitch` を設定した **BooleanSwitch** と、**DisplayName** プロパティに `TraceLevelSwitch` を設定した **TraceSwitch** を示します。  
+3. `<configuration>` タグの後、かつ `</configuration>` タグの前に、スイッチを構成する適切な XML を追加します。 次の例では、**DisplayName** プロパティに `DataMessageSwitch` を設定した **BooleanSwitch** と、**DisplayName** プロパティに `TraceLevelSwitch` を設定した **TraceSwitch** を示します。  
   
     ```xml  
     <system.diagnostics>  
@@ -101,11 +101,11 @@ ms.locfileid: "33392932"
   
      この構成では、両方のスイッチがオフになっています。  
   
-4.  **BooleanSwitch** (前の例の `DataMessagesSwitch` など) をオンにする必要がある場合は、**Value** を 0 以外の任意の整数に変更します。  
+4. **BooleanSwitch** (前の例の `DataMessagesSwitch` など) をオンにする必要がある場合は、**Value** を 0 以外の任意の整数に変更します。  
   
-5.  **TraceSwitch** (前の例の `TraceLevelSwitch` など) をオンにする必要がある場合は、**Value** を適切なレベル設定 (1 から 4) に変更します。  
+5. **TraceSwitch** (前の例の `TraceLevelSwitch` など) をオンにする必要がある場合は、**Value** を適切なレベル設定 (1 から 4) に変更します。  
   
-6.  .config ファイルにコメントを追加して、スイッチを適切に構成するためにどの値を変更すればよいかをエンドユーザーが明確に理解できるようにします。  
+6. .config ファイルにコメントを追加して、スイッチを適切に構成するためにどの値を変更すればよいかをエンドユーザーが明確に理解できるようにします。  
   
      次の例は、コメントを含む、最終的なコードを示しています。  
   
@@ -125,8 +125,9 @@ ms.locfileid: "33392932"
     </system.diagnostics>  
     ```  
   
-## <a name="see-also"></a>関連項目  
- [アプリケーションのトレースとインストルメント](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
- [方法 : アプリケーション コードにトレース ステートメントを追加する](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
- [トレース スイッチ](../../../docs/framework/debug-trace-profile/trace-switches.md)  
- [トレースおよびデバッグ設定のスキーマ](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>関連項目
+
+- [アプリケーションのトレースとインストルメント](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [方法: アプリケーション コードにトレース ステートメントを追加します。](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [トレース スイッチ](../../../docs/framework/debug-trace-profile/trace-switches.md)
+- [トレースおよびデバッグ設定のスキーマ](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

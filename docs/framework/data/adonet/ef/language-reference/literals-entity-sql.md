@@ -2,12 +2,12 @@
 title: リテラル (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-ms.openlocfilehash: 90c065dff0f81a743cd66e224885de01f6129b56
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bff9b1907d3424dc2e3df80480b6ab12f5ab9261
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760663"
 ---
 # <a name="literals-entity-sql"></a>リテラル (Entity SQL)
 このトピックでは、リテラルに関する [!INCLUDE[esql](../../../../../../includes/esql-md.md)] のサポートについて説明します。  
@@ -15,9 +15,9 @@ ms.locfileid: "32767324"
 ## <a name="null"></a>Null  
  NULL リテラルは、あらゆる型で NULL 値を表す際に使用されます。 NULL リテラルは、すべての型と互換性があります。  
   
- NULL リテラルをキャストすることによって、型指定された NULL を作成できます。 詳細については、次を参照してください。[キャスト](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)です。  
+ NULL リテラルをキャストすることによって、型指定された NULL を作成できます。 詳細については、次を参照してください。[キャスト](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)します。  
   
- 場所に関する規則空き浮動 null リテラルは使用できるを参照してください[Null リテラルと型推論](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md)です。  
+ Null リテラルが使用できるを参照してくださいかの規則については、浮動小数点を無料の[Null リテラルと型推論](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md)します。  
   
 ## <a name="boolean"></a>ブール型  
  ブール型リテラルは、`true` と `false` のキーワードで表されます。  
@@ -45,7 +45,7 @@ N"This is a string!"
 ## <a name="datetime"></a>DateTime  
  datetime リテラルは、日付部分と時刻部分とで構成され、ロケールに依存しません。 日付部分と時刻部分のどちらも省略することはできず、既定値はありません。  
   
- 日付の部分は、形式をいる必要があります: `YYYY` - `MM` -`DD`ここで、 `YYYY` 0001 ~ 9999 の 4 桁の年の値は、`MM`は 1 ~ 12 の月と`DD`は有効では、指定された月の日の値`MM`です。  
+ 日付の部分は、形式が必要: `YYYY` - `MM` -`DD`ここで、 `YYYY` 0001 ~ 9999 の 4 桁の年の値は、`MM`は 1 ~ 12 の月と`DD`は指定された月は有効な日付の値`MM`します。  
   
  時刻部分は `HH`:`MM`[:`SS`[.fffffff]] の形式にする必要があります。ここで、`HH` は 0 ～ 23 時の値、`MM` は 0 ～ 59 分の値、`SS` は 0 ～ 59 秒の値、fffffff は 0 ～ 9999999 の 1 秒未満部分の値を表します。 いずれも両端の値を含みます。 1 秒未満部分は省略可能です。 1 秒未満部分を指定しなければ、秒は省略可能です。1 秒未満部分を指定する場合、秒は必須です。 秒も 1 秒未満部分も指定しない場合は、既定値の 0 が使用されます。  
   
@@ -67,7 +67,7 @@ TIME‘01:01:00.1234567’
 ```  
   
 ## <a name="datetimeoffset"></a>DateTimeOffset  
- datetimeoffset リテラルは、日付部分、時刻部分、およびオフセット部分で構成され、ロケールに依存しません。 日付部分、時刻部分、オフセット部分はすべて必須で、既定値はありません。 日付部分は YYYY-MM-DD の形式にする必要があります。ここで、YYYY は 0001 ～ 9999 の 4 桁の年、MM は 1 ～ 12 の月、DD は特定の月の有効な日付を表します。 時刻部分は HH:MM[:SS[.fffffff]] の形式にする必要があります。ここで、HH は 0 ～ 23 時の値、MM は 0 ～ 59 分の値、SS は 0 ～ 59 秒の値、fffffff は 0 ～ 9999999 の 1 秒未満部分の値を表します。 いずれも両端の値を含みます。 1 秒未満部分は省略可能です。 1 秒未満部分を指定しなければ、秒は省略可能です。1 秒未満部分を指定する場合、秒は必須です。 秒も 1 秒未満部分も指定しない場合は、既定値の 0 が使用されます。 オフセットの部分は、形式をいる必要があります {+&#124;-} HH:MM、HH と MM が時刻部分と同じ意味があります。 オフセットの範囲は -14:00 ～ + 14:00 でなければなりません。  
+ datetimeoffset リテラルは、日付部分、時刻部分、およびオフセット部分で構成され、ロケールに依存しません。 日付部分、時刻部分、オフセット部分はすべて必須で、既定値はありません。 日付部分は YYYY-MM-DD の形式にする必要があります。ここで、YYYY は 0001 ～ 9999 の 4 桁の年、MM は 1 ～ 12 の月、DD は特定の月の有効な日付を表します。 時刻部分は HH:MM[:SS[.fffffff]] の形式にする必要があります。ここで、HH は 0 ～ 23 時の値、MM は 0 ～ 59 分の値、SS は 0 ～ 59 秒の値、fffffff は 0 ～ 9999999 の 1 秒未満部分の値を表します。 いずれも両端の値を含みます。 1 秒未満部分は省略可能です。 1 秒未満部分を指定しなければ、秒は省略可能です。1 秒未満部分を指定する場合、秒は必須です。 秒も 1 秒未満部分も指定しない場合は、既定値の 0 が使用されます。 オフセットの部分は、形式が必要 {0} +&#124;-} HH:MM、HH と MM が時刻部分と同じ意味があります。 オフセットの範囲は -14:00 ～ + 14:00 でなければなりません。  
   
  DATETIMEOFFSET 記号とリテラル ペイロード間の空白の数に制限はありませんが、改行はできません。  
   
@@ -92,7 +92,7 @@ X'' –- empty binary string
 ```  
   
 ## <a name="guid"></a>Guid  
- `GUID` リテラルは、グローバル一意識別子を表します。 キーワードによって形成されるシーケンスは`GUID`と呼ばれる形式の 16 進数字が続く*レジストリ*形式: 8-4-4-4-12 単一引用符で囲みます。 16 進数字の大文字と小文字は区別されません。  
+ `GUID` リテラルは、グローバル一意識別子を表します。 キーワードを使用して形成されたシーケンスが`GUID`と呼ばれる形式で 16 進数の数字が続く*レジストリ*形式。8-4-4-4-12 単一引用符で囲まれています。 16 進数字の大文字と小文字は区別されません。  
   
  GUID 記号とリテラル ペイロード間の空白の数に制限はありませんが、改行はできません。  
   
@@ -101,5 +101,6 @@ Guid'1afc7f5c-ffa0-4741-81cf-f12eAAb822bf'
 GUID  '1AFC7F5C-FFA0-4741-81CF-F12EAAB822BF'  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Entity SQL の概要](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>関連項目
+
+- [Entity SQL の概要](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

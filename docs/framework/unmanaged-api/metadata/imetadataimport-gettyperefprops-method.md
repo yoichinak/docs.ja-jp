@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 25482ee81d5210e5ab69007767aecf01435602d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a4d8829c9cb2818eafe98809c9a0d5fd8109d076
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448597"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778826"
 ---
 # <a name="imetadataimportgettyperefprops-method"></a>IMetaDataImport::GetTypeRefProps メソッド
 関連付けられているメタデータを取得、<xref:System.Type>指定した TypeRef トークンによって参照されています。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetTypeRefProps (  
    [in]  mdTypeRef   tr,  
    [out] mdToken     *ptkResolutionScope,  
@@ -39,31 +39,32 @@ HRESULT GetTypeRefProps (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `tr`  
  [in]メタデータを返す型を表す TypeRef トークンです。  
   
  `ptkResolutionScope`  
- [out]これで、参照が行われるスコープへのポインター。 この値に AssemblyRef または ModuleRef トークンです。  
+ [out]これで、参照が行われるスコープへのポインター。 この値は、AssemblyRef または ModuleRef トークンです。  
   
  `szName`  
- [out]型名を格納しているバッファー。  
+ [out]型名を含むバッファー。  
   
  `cchName`  
- [in]要求されたサイズのワイド文字単位`szName`です。  
+ [in]要求されたサイズのワイド文字単位`szName`します。  
   
  `pchName`  
- [out]ワイド文字で返されるサイズ`szName`です。  
+ [out]ワイド文字で返されるサイズ`szName`します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

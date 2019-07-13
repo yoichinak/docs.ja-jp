@@ -1,6 +1,6 @@
 ---
 title: GetPropertyHandle 関数 (アンマネージ API リファレンス)
-description: GetPropertyHandle 関数では、プロパティの識別子を管理する一意のハンドルを返します。
+description: GetPropertyHandle 関数は、プロパティを識別する一意のハンドルを返します。
 ms.date: 11/06/2017
 api_name:
 - GetPropertyHandle
@@ -16,45 +16,46 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2383003012ce1f6adffe0ad78ab614323840496f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d1397188b38066bac6375da0c76e7d66724a75d7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200416"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636242"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle 関数
+
 プロパティを識別する一意のハンドルが返されます。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a>構文  
-  
-```  
+
+## <a name="syntax"></a>構文
+
+```cpp
 HRESULT GetPropertyHandle (
-   [in] int                  vFunc, 
-   [in] IWbemObjectAccess*   ptr, 
+   [in] int                  vFunc,
+   [in] IWbemObjectAccess*   ptr,
    [in] LPCWSTR              wszPropertyName,
    [out] CIMTYPE*            pType,
    [out] long*               pHandle
-); 
-```  
+);
+```
 
 ## <a name="parameters"></a>パラメーター
 
-`vFunc`  
+`vFunc`\
 [in]このパラメーターは使用されません。
 
-`ptr`  
+`ptr`\
 [in]ポインター、 [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess)インスタンス。
 
-`wszPropertyName`  
-[in]プロパティ名を含む UTF16 でエンコードされた characaters の null で終わる文字列。   
+`wszPropertyName`\
+[in]Null で終わる文字列 UTF16 でエンコードされた文字のプロパティの名前を格納します。
 
-`pType`  
+`pType`\
 [out]ポインターを[ `CIMTYPE` ](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration)プロパティの CIM 型を表す列挙型メンバー。
 
-`pHandle`   
+`pHandle`\
 [out]プロパティのハンドルを格納する整数へのポインター。
 
 ## <a name="return-value"></a>戻り値
@@ -67,7 +68,7 @@ HRESULT GetPropertyHandle (
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが無効です。 |
 |`WBEM_E_NOT_SUPPORTED` | 0x8004100c | 要求されたプロパティの型は、`CIM_OBJECT`または`CIM_ARRAY`します。 |
 |`WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
-  
+
 ## <a name="remarks"></a>Remarks
 
 この関数の呼び出しをラップする、 [IWbemClassObject::GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle)メソッド。
@@ -76,12 +77,14 @@ HRESULT GetPropertyHandle (
 
 ハンドルを以外のすべてのデータ型のプロパティを取得できる`CIM_OBJECT`と`CIM_ARRAY`します。 クラスのすべてのインスタンス ハンドルの作業が返されます。
 
-## <a name="requirements"></a>必要条件  
-**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
-  
- **ヘッダー:** WMINet_Utils.idl  
-  
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
-## <a name="see-also"></a>関連項目  
-[WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+## <a name="requirements"></a>必要条件
+
+**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+
+**ヘッダー:** WMINet_Utils.idl
+
+**.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
+## <a name="see-also"></a>関連項目
+
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;フィルター&gt;要素&lt;追加&gt;の&lt;リスナー&gt;'
+title: <filter> の <add> の <sharedListeners> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add/filter
@@ -10,20 +10,18 @@ helpviewer_keywords:
 - filters, trace listeners
 - trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 5172a2be163e178b9c7115825fa5dba4ff073a96
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 2bef729f179b41509d3c0381b26e38e364dbf86b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673720"
 ---
-# <a name="ltfiltergt-element-for-ltaddgt-for-ltsharedlistenersgt"></a>&lt;フィルター&gt;要素&lt;追加&gt;の&lt;リスナー&gt;
+# <a name="filter-element-for-add-for-sharedlisteners"></a>\<フィルター > 要素の\<追加 > の\<上 sharedListeners >
 `sharedListeners` コレクションのリスナーにフィルターを追加します。  
   
  \<configuration>  
-\<system.diagnostics >  
+\<system.diagnostics>  
 \<上の sharedListeners > 要素  
 \<add>  
 \<フィルター >  
@@ -87,8 +85,9 @@ ms.locfileid: "48027089"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Diagnostics.TraceFilter>  
- <xref:System.Diagnostics.TraceListener>  
- <xref:System.Diagnostics.TraceSource>  
- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Diagnostics.TraceFilter>
+- <xref:System.Diagnostics.TraceListener>
+- <xref:System.Diagnostics.TraceSource>
+- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

@@ -2,25 +2,25 @@
 title: 集計クエリ
 ms.date: 03/30/2017
 ms.assetid: 13ec5580-05ce-4a1f-9d3d-8660be7891a2
-ms.openlocfilehash: 1c8f6191cfb832a71bd32c60db492eafb8ca22ca
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 8a3dd4b80ee8bb09dc0b5a06b6fa603f4b74fdf8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858693"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610158"
 ---
 # <a name="aggregate-queries"></a>集計クエリ
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、`Average`、`Count`、`Max`、`Min`、および `Sum` の各集計演算子をサポートしています。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の集計演算子には、次の特性があります。  
   
--   集計クエリは直ちに実行されます。  
+- 集計クエリは直ちに実行されます。  
   
      詳細については、「[LINQ クエリの概要 (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)」を参照してください。  
   
--   通常、集計クエリはコレクションではなく 1 つの数値を返します。  
+- 通常、集計クエリはコレクションではなく 1 つの数値を返します。  
   
-     詳細については、次を参照してください。[集計操作](https://msdn.microsoft.com/library/36d97c83-5de5-457d-971d-10a69365e7c4)します。  
+     詳細については、次を参照してください。[集計操作](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546138(v=vs.120))します。  
   
--   匿名型に対して集計を呼び出すことはできません。  
+- 匿名型に対して集計を呼び出すことはできません。  
   
  以下のトピックの例は、Northwind サンプル データベースから派生しています。 詳細については、次を参照してください。[サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)します。  
   

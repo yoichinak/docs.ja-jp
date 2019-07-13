@@ -17,28 +17,28 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b9b77b94e466a4aab4a575501ac6922293b3410
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3343710fbe4f1aba8c38e46a0a720f78944a1c10
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424145"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776925"
 ---
 # <a name="isymunmanageddocumentwritersetchecksum-method"></a>ISymUnmanagedDocumentWriter::SetCheckSum メソッド
 チェックサム情報を設定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetCheckSum(  
     [in]  GUID     algorithmId,  
     [in]  ULONG32  checkSumSize,  
     [in, size_is(checkSumSize)]  BYTE checkSum[]);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `algorithmId`  
- [in]アルゴリズム識別子を表す GUID。  
+ [in]アルゴリズムの識別子を表す GUID。  
   
  `checkSumSize`  
  [in]A`ULONG32`のサイズ (バイト単位) を示す、`checkSum`バッファー。  
@@ -47,10 +47,11 @@ HRESULT SetCheckSum(
  [in]チェックサム情報を格納するバッファー。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は S_OK、それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
   
-## <a name="requirements"></a>要件  
- **ヘッダー:** CorSym.idl、CorSym.h  
+## <a name="requirements"></a>必要条件  
+ **ヘッダー:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>関連項目  
- [ISymUnmanagedDocumentWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [ISymUnmanagedDocumentWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)

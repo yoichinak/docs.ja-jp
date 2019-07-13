@@ -11,27 +11,27 @@ helpviewer_keywords:
 - type design guidelines, classes
 ms.assetid: d3646e6d-5c1f-4922-8fb0-ec5effb30d60
 author: KrzysztofCwalina
-ms.openlocfilehash: 1982c7c97802dedd1d49c770be5a7ac00944cbfc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6eec3bb4575b89c6476e6c3410050c705141777f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785555"
 ---
 # <a name="abstract-class-design"></a>抽象クラスのデザイン
-**X DO NOT** 抽象型の public または protected のコンス トラクター内部を定義します。  
+**X** 抽象型に public または protected のコンストラクターを**定義しないでください。  
   
- コンス トラクターは、ユーザーが、型のインスタンスを作成する必要がある場合にのみパブリックである必要があります。 抽象型のインスタンスを作成することはできません、ため、パブリック コンス トラクターを持つ抽象型は正しく設計で、ユーザーに誤解を招きます。  
+ コンストラクターは、ユーザーがその型のインスタンスを作成する必要がないならば public であるべきではありません。 抽象型のインスタンスを作成することはできないので、public なコンストラクターを持つ抽象型は設計が間違っており、ユーザーに誤解を招きます。  
   
- **✓ DO** 抽象クラス内で、保護されているか、内部のコンス トラクターを定義します。  
+ **✓** 抽象クラスには、protected または internal のコンストラクターを**定義してください。  
   
- プロテクト コンス トラクターより一般的なサブタイプが作成されたときに、独自の初期化を実行する基本クラスでは。  
+ protected コンストラクターはより一般的で、派生型が作成された時に基底クラスが独自の初期化を実行できるようにします。  
   
- アセンブリのクラスを定義する抽象クラスの具象実装を制限する、内部コンス トラクターを使用できます。  
+ internal コンストラクターは、その具象実装をアセンブリ内部に制限するために用いることができます。  
   
- **✓ DO** を出荷する各の抽象クラスから継承する少なくとも 1 つの具象型を提供します。  
+ **✓** 出荷する抽象クラスから継承する具象型を少なくとも 1 つ**提供してください。  
   
- これによって、抽象クラスのデザインを検証するを実行します。 たとえば、<xref:System.IO.FileStream?displayProperty=nameWithType>の実装には、<xref:System.IO.Stream?displayProperty=nameWithType>抽象クラス。  
+ こうすることにより、抽象クラスのデザインを検証できます。 たとえば、<xref:System.IO.FileStream?displayProperty=nameWithType>は<xref:System.IO.Stream?displayProperty=nameWithType>の具象実装です。  
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
@@ -39,5 +39,5 @@ ms.locfileid: "53130905"
   
 ## <a name="see-also"></a>関連項目
 
-- [型デザインのガイドライン](../../../docs/standard/design-guidelines/type.md)  
+- [型デザインのガイドライン](../../../docs/standard/design-guidelines/type.md)
 - [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)

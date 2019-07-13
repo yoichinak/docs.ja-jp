@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, data types
 - data types [Visual Basic], improving speed with
 ms.assetid: 5e1b9aaf-c7ca-4b29-9b22-0e82ed8e85e2
-ms.openlocfilehash: 83c3d9976f61513165e917da73dd50e846db3e83
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 192ced1da400372f877cb54aaa29d60fcd0bbcad
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45971839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008268"
 ---
 # <a name="data-types-in-visual-basic"></a>Visual Basic におけるデータ型
 プログラミング要素の*データ型*は、保持できるデータの種類やデータの格納方法を示します。 データ型は、コンピューターのメモリに格納できるすべての値に適用され、式の評価にも関与します。 変数、リテラル、定数、列挙値、プロパティ、プロシージャのパラメーター、プロシージャの引数、およびプロシージャの戻り値にはすべてデータ型があります。  
@@ -34,15 +34,16 @@ ms.locfileid: "45971839"
   
  Visual Basic のデータ型の一覧については、[データ型](../../../../visual-basic/language-reference/data-types/index.md)に関するページをご覧ください。  
   
-## <a name="see-also"></a>関連項目  
- [型文字](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [基本データ型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
- [複合データ型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
- [Visual Basic におけるジェネリック型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [値型と参照型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [構造体](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [タプル](tuples.md)     
- [トラブルシューティング (データ型)](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [データの種類](../../../../visual-basic/language-reference/data-types/index.md)  
- [データ型の有効な使用方法](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>関連項目
+
+- [型文字](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [基本データ型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [複合データ型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
+- [Visual Basic におけるジェネリック型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [値型と参照型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [構造体](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [タプル](tuples.md)
+- [トラブルシューティング (データ型)](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [データの種類](../../../../visual-basic/language-reference/data-types/index.md)
+- [データ型の有効な使用方法](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

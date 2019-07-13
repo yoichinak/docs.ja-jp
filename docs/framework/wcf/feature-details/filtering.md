@@ -2,12 +2,12 @@
 title: フィルター処理
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-ms.openlocfilehash: 49813ac0f493d628a941b3060be93ef19bb1e802
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 46716d1a96da6ddc729992b546be56c2aec0bf5d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836068"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593502"
 ---
 # <a name="filtering"></a>フィルター処理
 Windows Communication Foundation (WCF) のフィルター処理システムは、メッセージと一致し、操作を決定する宣言型のフィルターを使用できます。 フィルターを使用してメッセージの一部を調べることで、そのメッセージで必要な操作を決定できます。 たとえば、キュー プロセスでは、XPath 1.0 クエリを使用して既知のヘッダー優先度要素をチェックし、メッセージをキューの先頭に移動するべきかどうかを決定します。  
@@ -36,13 +36,13 @@ Windows Communication Foundation (WCF) のフィルター処理システムは�
 ### <a name="endpoint-address-filters"></a>エンドポイント アドレス フィルター  
  <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> は、メッセージのヘッダー コレクションに示されるエンドポイント アドレスに基づいて、メッセージおよびメッセージ バッファーのフィルター処理を行います。 メッセージがこのようなフィルターを通過するには、次の条件を満たす必要があります。  
   
--   フィルターのアドレス URI (Uniform Resource Identifier) がメッセージの To ヘッダーのアドレスと同じであること。  
+- フィルターのアドレス URI (Uniform Resource Identifier) がメッセージの To ヘッダーのアドレスと同じであること。  
   
--   フィルターのアドレス (`address.Headers` コレクション) にある各エンドポイント パラメーターが、マッピング対象のヘッダーをメッセージ内で見つけることができること。 メッセージまたはメッセージ バッファーの追加のヘッダーは、一致を `true` の状態にしておくためであれば、許容されます。  
+- フィルターのアドレス (`address.Headers` コレクション) にある各エンドポイント パラメーターが、マッピング対象のヘッダーをメッセージ内で見つけることができること。 メッセージまたはメッセージ バッファーの追加のヘッダーは、一致を `true` の状態にしておくためであれば、許容されます。  
   
 ### <a name="prefix-endpoint-address-filters"></a>プレフィックス エンドポイント アドレス フィルター  
   
-1.  <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> は、メッセージ URI のプレフィックスとも一致できるという点を除けば、<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> フィルターと同じように動作します。 たとえば、アドレスを指定するフィルター`http://www.adatum.com`宛てのメッセージと一致する`http://www.adatum.com/userA`します。  
+1. <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> は、メッセージ URI のプレフィックスとも一致できるという点を除けば、<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> フィルターと同じように動作します。 たとえば、アドレスを指定するフィルター`http://www.adatum.com`宛てのメッセージと一致する`http://www.adatum.com/userA`します。  
   
 ### <a name="xpath-message-filters"></a>XPath メッセージ フィルター  
  <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> は、XPath 式を使用して、XML ドキュメントに特定の要素、属性、テキスト、その他の XML 構文が含まれているかどうかを判定します。 このフィルターは、XPath の厳密なサブセットに対して非常に効率的に処理できるように最適化されています。 XML Path 言語については、「、 [W3C XML Path Language 1.0 specification](https://go.microsoft.com/fwlink/?LinkId=94779)します。  
@@ -79,9 +79,10 @@ Windows Communication Foundation (WCF) のフィルター処理システムは�
 ### <a name="de-multiplexing"></a>分離化  
  複数のエンドポイントがネットワーク上の同じ `ServiceListener` から分散している場合、メッセージを分離化し、メッセージが特定のエンドポイント アドレスに属しているかどうかを確認する唯一の方法は、<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> を使用することです。このフィルターは、ヘッダーに格納されている情報に対して検索を実行して、登録されているエンドポイントに向けられたメッセージを選択します。 このようなフィルターを通過するのは、次の両方に対応する必要なヘッダーをすべて持っているメッセージだけです。  
   
--   `EndpointAddress` にある URI  
+- `EndpointAddress` にある URI  
   
--   `EndpointAddress` で指定された <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> にある残りのエンドポイント パラメーター  
+- `EndpointAddress` で指定された <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> にある残りのエンドポイント パラメーター  
   
-## <a name="see-also"></a>関連項目  
- [データ転送とシリアル化](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)
+## <a name="see-also"></a>関連項目
+
+- [データ転送とシリアル化](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)

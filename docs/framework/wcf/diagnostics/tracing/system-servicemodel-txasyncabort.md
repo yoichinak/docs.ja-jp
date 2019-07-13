@@ -2,12 +2,12 @@
 title: System.ServiceModel.TxAsyncAbort
 ms.date: 03/30/2017
 ms.assetid: bce47ff2-abd0-4b58-8667-ebf1ef3580b8
-ms.openlocfilehash: 6e8c978e708056cf639cca555ccc42f057f38af1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a6989da7b457e819a49d7c27e8732c7f33dc51b8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33482709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768759"
 ---
 # <a name="systemservicemodeltxasyncabort"></a>System.ServiceModel.TxAsyncAbort
 指定したトランザクションが非同期に中止されました。  
@@ -18,7 +18,8 @@ ms.locfileid: "33482709"
 ## <a name="troubleshooting"></a>トラブルシューティング  
  これが予期された中止であるかどうかをすべてのシステム ログで確認し、中止の原因を特定してください。  
   
-## <a name="see-also"></a>関連項目  
- [トレース](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [トレースを使用したアプリケーションのトラブルシューティング](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [管理と診断](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>関連項目
+
+- [トレース](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [トレースを使用したアプリケーションのトラブルシューティング](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [管理と診断](../../../../../docs/framework/wcf/diagnostics/index.md)

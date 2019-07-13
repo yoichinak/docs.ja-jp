@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb1fc266c8451953c8b6a9c686f4a1c1951966e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: af5a200578c34464b5f8d86e568d08d814b46a29
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405399"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742148"
 ---
 # <a name="embedresource-method"></a>EmbedResource メソッド
-埋め込みリソースを宣言します。 このメソッドには、リソースが実際には埋め込まれません。  
+埋め込みリソースを宣言します。 このメソッドは、リソースを実際には埋め込まれません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EmbedResource(  
     mdAssembly  AssemblyID,  
     mdToken     FileToken,  
@@ -39,29 +39,30 @@ HRESULT EmbedResource(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- アセンブリの ID です。  
+ アセンブリの ID。  
   
  `FileToken`  
- ファイルのリソースを格納するファイルのトークンまたはアセンブリの ID。  
+ ファイル リソースを含むファイルのトークンまたはアセンブリの ID。  
   
  `pszResourceName`  
  リソースの名前。  
   
  `dwOffset`  
- RVA からのリソースのオフセット。  
+ リソースの RVA からのオフセット。  
   
  `dwFlags`  
- ユーザー補助機能フラグなど`mrPublic`と`mrPrivate`です。 これらのフラグを渡すこと[DefineExportedType メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)です。  
+ ユーザー補助フラグなど`mrPublic`と`mrPrivate`します。 これらのフラグに渡される[DefineExportedType メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)します。  
   
 ## <a name="return-value"></a>戻り値  
  メソッドが成功した場合は、S_OK を返します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  Alink.h が必要です。  
   
-## <a name="see-also"></a>関連項目  
- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>関連項目
+
+- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

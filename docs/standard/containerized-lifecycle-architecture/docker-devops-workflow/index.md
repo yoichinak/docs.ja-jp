@@ -1,38 +1,36 @@
 ---
-title: Microsoft ツールを使用した Docker アプリケーション devops ワークフロー
-description: Microsoft プラットフォームでのコンテナー化された Docker アプリケーションのライフサイクルと Microsoft ツールでの Toolsdevops ワークフロー
-author: CESARDELATORRE
-ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: a78b6cbae88dcc39d7452a67a2bc5239135dedf9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+title: Microsoft ツールを使用した Docker アプリケーション DevOps ワークフロー
+description: Microsoft プラットフォームでのコンテナー化された Docker アプリケーションのライフサイクルと Microsoft ツールでの Tools DevOps ワークフロー
+ms.date: 02/15/2019
+ms.openlocfilehash: 6b138301a7e6794ce0a7b15957684b3b73e9f89f
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128441"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "65644819"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Microsoft ツールを使用した Docker アプリケーション DevOps ワークフロー
 
-Microsoft Visual Studio、Azure DevOps サービス、Team Foundation Server、および Application Insights での開発と IT 運用チーム プロジェクトを管理し、迅速にビルド、テスト、および展開するツールを提供する包括的なエコシステムを提供します。コンテナー化されたアプリケーション。
+*Microsoft Visual Studio、Azure DevOps Services、Team Foundation Server、Azure Monitor は、開発および IT 操作の包括的なエコシステムを提供します。これにより、チームでは、プロジェクトを管理し、コンテナー化アプリケーションを迅速にビルド、テスト、展開することができます。*
 
-Visual Studio Team Foundation Server、オンプレミス、と共に、クラウドでの Azure DevOps サービスを開発チームできます生産的ビルド、テスト、およびコンテナー化されたアプリケーションを任意のプラットフォーム (Windows または Linux) をリリースします。
+クラウドの Visual Studio と Azure DevOps Services と、オンプレミスの Team Foundation Server により、開発チームは、Windows または Linux を対象にするコンテナー化アプリケーションを生産的に直接ビルド、テスト、リリースできます。
 
-マイクロソフトのツールは、コンテナー化されたアプリケーションの特定の実装のパイプラインを自動化できます: Docker、.NET Core、またはその他のプラットフォームで任意の組み合わせ、グローバル ビルドと継続的インテグレーション (CI) および Azure DevOps サービスまたはチームでのテストからFoundation Server に継続的デプロイ (CD) Docker 環境 (開発、ステージング、運用)、および開発チームが Application Insights でのサービスに関する分析情報を送信します。 すべてのコードのコミットでビルド (CI) を開始して、特定のコンテナー化された環境 (CD) に自動的にサービスを展開できます。
+Microsoft ツールは、Docker、.NET Core、または他のプラットフォームとのあらゆる組み合わせのコンテナー化アプリケーションの特定の実装の、グローバル ビルド、継続的インテグレーション (CI)、Azure DevOps Services または Team Foundation Server でのテストから、Docker 環境 (開発、ステージング、実稼働) への継続的デプロイ (CD) と Azure Monitor を介した開発チームへのサービスに関する分析情報の転送のパイプラインを自動化できます。 すべてのコードのコミットでビルド (CI) を開始して、特定のコンテナー化された環境 (CD) に自動的にサービスを展開できます。
 
 開発者およびテスト担当者は、Microsoft Azure のテンプレートを使用して、Docker に基づく運用環境のような開発とテストの環境を、簡単かつ迅速にプロビジョニングできます。
 
-コンテナー化アプリケーションの開発は、ビジネスが複雑であり、拡張のニーズがあればあるほど、着実に複雑になります。 このよい例は、マイクロサービス アーキテクチャに基づいたアプリケーションです。 プロジェクトには、このような環境で成功のライフ サイクル全体を自動化する必要があります: テレメトリの収集とバージョンを管理する必要がありますも、ビルドと展開、だけでなく、します。 Azure DevOps サービスと Azure は次の機能を提供します。
+コンテナー化アプリケーションの開発は、ビジネスが複雑であり、拡張のニーズがあればあるほど、着実に複雑になります。 この複雑性の良い例は、マイクロサービス アーキテクチャに基づいたアプリケーションです。 このような環境で成功するには、プロジェクトのライフ サイクル全体が自動化される必要があります。ビルドやデプロイのみでなく、製品利用統計情報のコレクションと共に、バージョンも管理される必要があります。 Azure DevOps Services と Azure には、次の機能があります。
 
--   Azure DevOps Services と Team Foundation Server ソース コード管理 (Git または Team Foundation バージョン管理に基づく)、アジャイル計画 (アジャイル、スクラム、CMMI がサポートされています)、CI、リリース管理、およびアジャイル チームの他のツール。
+- (Git または Team Foundation バージョン管理に基づく) Azure DevOps Services と Team Foundation Server のソース コード管理、(アジャイル、スクラム、CMMI がサポートされている) アジャイル計画、CI、リリース管理、アジャイル チーム用の他のツール。
 
--   Azure DevOps Services と Team Foundation Server には、使用して簡単にできます構築 CI、ビルド、テスト、配信、リリース管理パイプライン マイクロ サービスの 1 つ目とサード パーティの拡張機能の増加し、強力なエコシステムが含まれます。
+- Azure DevOps Services と Team Foundation Server にはファースト パーティおよびサード パーティの高性能な拡張機能からなるエコシステムが含まれ、そのエコシステムは増加を続けています。このような拡張機能を使用すると、マイクロサービス用に、CI、ビルド、テスト、配信、リリース管理パイプラインを容易に構成できます。
 
--   Azure DevOps サービスのビルド パイプラインの一部として自動テストを実行します。
+- Azure DevOps Services でビルド パイプラインの一部として、自動テストを実行します。
 
--   Azure DevOps サービスは複数の環境への配信を使用した DevOps ライフ サイクル、実稼働環境でだけでなく、テストに対してもを強化できる A を含む/B 実験、[カナリア リリース](https://martinfowler.com/bliki/CanaryRelease.html)など。
+- Azure DevOps Services では、実稼働環境用のみでなく、A/B 実験、[カナリヤ リリース](https://martinfowler.com/bliki/CanaryRelease.html)など、テスト用を含む複数の環境への配信により、DevOps のライフ サイクルを強化できます。
 
--   組織は、Azure Container Registry に格納されたプライベート イメージから Docker コンテナーを、Azure Resource Manager テンプレートと既に使い慣れているツールを使用して、(Data、PaaS などの) Azure コンポーネントの任意の依存関係と共に簡単にプロビジョニングできます。
+- 組織は、Azure Container Registry に格納されたプライベート イメージから Docker コンテナーを、Azure Resource Manager テンプレートと既に使い慣れているツールを使用して、(Data、PaaS などの) Azure コンポーネントの任意の依存関係と共に簡単にプロビジョニングできます。
 
 >[!div class="step-by-step"]
->[前へ](../design-develop-containerized-apps/set-up-windows-containers-with-powershell.md)
+>[前へ](../design-develop-containerized-apps/build-aspnet-core-applications-linux-containers-aks-kubernetes.md)
 >[次へ](docker-application-outer-loop-devops-workflow.md)

@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 88fcc5959054f1cdf7c9543674584a4bde26d896
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b58832e110f67a54d3bd57a7284b2e26e43d6bf7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402071"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739408"
 ---
 # <a name="coreclrdebugruntimeinfo-structure"></a>CoreClrDebugRuntimeInfo 構造体
 リモート コンピューター上のプロセスに読み込まれる共通言語ランタイム (CLR) インスタンスを表します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 struct  CoreClrDebugRuntimeInfo {  
     DWORD m_dwInternalID;  
 };  
@@ -42,8 +42,8 @@ struct  CoreClrDebugRuntimeInfo {
 |------------|-----------------|  
 |`m_dwInternalID`|対象のコンピューターで実行されているリモート デバッグ プロキシによって割り当てられたランタイム識別子。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CoreClrRemoteDebuggingInterfaces.h  
   

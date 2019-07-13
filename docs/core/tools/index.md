@@ -3,12 +3,12 @@ title: .NET Core コマンドライン インターフェイス (CLI) ツール
 description: .NET Core コマンドライン インターフェイス (CLI) ツールとその機能の概要です。
 ms.date: 08/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: 698e6188d2cc73c30a7003f53199065d1eff2ec0
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: ff96023dd0b161271e146f7a7e69924c9db9e769
+ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170199"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67569514"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET Core コマンドライン インターフェイス (CLI) ツール
 
@@ -43,7 +43,7 @@ ms.locfileid: "53170199"
 * [clean](dotnet-clean.md)
 * [sln](dotnet-sln.md)
 * [help](dotnet-help.md)
-* [ストア](dotnet-store.md)
+* [store](dotnet-store.md)
 
 **プロジェクトの変更コマンド**
 
@@ -99,7 +99,7 @@ CLI では、プロジェクトに追加のツールを指定できるように�
 
 ## <a name="command-structure"></a>コマンド構造
 
-CLI コマンド構造は、[ドライバー ("dotnet")](#driver) と[コマンド (または "動詞")](#command-verb)、また場合によってはコマンドの[引数](#arguments)と[オプション](#options)で構成されます。 *my_app* という名前のディレクトリから実行する場合、次のコマンドで示されているように、新しいコンソール アプリの作成やコマンド ラインからの実行など、ほとんどの CLI 操作でこのパターンが見られます。
+CLI コマンド構造は、[ドライバー ("dotnet")](#driver) と[コマンド](#command)、また場合によってはコマンドの[引数](#arguments)と[オプション](#options)で構成されます。 *my_app* という名前のディレクトリから実行する場合、次のコマンドで示されているように、新しいコンソール アプリの作成やコマンド ラインからの実行など、ほとんどの CLI 操作でこのパターンが見られます。
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
@@ -122,15 +122,21 @@ dotnet /build_output/my_app.dll
 
 ### <a name="driver"></a>ドライバー
 
-ドライバーは [dotnet](dotnet.md) という名前で、2 つの役割 ([フレームワークに依存するアプリ](../deploying/index.md)の実行と、コマンドの実行) があります。 `dotnet` がコマンドなしで使用されるのは、アプリケーションの起動に使用される場合のみです。
+ドライバーは [dotnet](dotnet.md) という名前で、2 つの役割 ([フレームワークに依存するアプリ](../deploying/index.md)の実行と、コマンドの実行) があります。 
 
-フレームワークに依存するアプリを実行するには、`dotnet /path/to/my_app.dll` など、ドライバーの後にアプリを指定します。 アプリの DLL が存在するフォルダーからコマンドを実行する場合は、`dotnet my_app.dll` を実行するだけです。
+フレームワークに依存するアプリを実行するには、`dotnet /path/to/my_app.dll` など、ドライバーの後にアプリを指定します。 アプリの DLL が存在するフォルダーからコマンドを実行する場合は、`dotnet my_app.dll` を実行するだけです。 .NET Core ランタイムの特定のバージョンを使用する場合は、`--fx-version <VERSION>` オプションを使用してください (「[dotnet コマンド](dotnet.md)」リファレンスを参照)。
 
-ドライバーにコマンドを指定すると、`dotnet.exe` は CLI コマンドの実行プロセスを開始します。 最初に、ドライバーは使用する SDK のバージョンを決定します。 コマンド オプションでバージョンが指定されていない場合、ドライバーは使用可能な最新バージョンを使用します。 インストール済みの最新バージョン以外のバージョンを指定するには、`--fx-version <VERSION>` オプションを使用します (「[dotnet コマンド](dotnet.md)」を参照)。 SDK のバージョンが決定されたら、ドライバーはコマンドを実行します。
+ドライバーにコマンドを指定すると、`dotnet.exe` は CLI コマンドの実行プロセスを開始します。 次に例を示します。
 
-### <a name="command-verb"></a>コマンド ("動詞")
+```bash
+> dotnet build
+```
 
-コマンド (または "動詞") は、単にアクションを実行するコマンドです。 たとえば、`dotnet build` はコードをビルドします。 `dotnet publish` はコードを発行します。 コマンドは、`dotnet {verb}` 規則を使用してコンソール アプリケーションとして実装されます。
+最初に、ドライバーは使用する SDK のバージョンを決定します。 ['global.json'](global-json.md) がない場合は、利用可能な SDK の最新バージョンを使用します。 コンピューターで最新のプレビューまたは安定したバージョンになります。  SDK バージョンが決定されたら、コマンドを実行します。
+
+### <a name="command"></a>コマンド
+
+コマンドは、アクションを実行します。 たとえば、`dotnet build` はコードをビルドします。 `dotnet publish` はコードを発行します。 コマンドは、`dotnet {command}` 規則を使用してコンソール アプリケーションとして実装されます。
 
 ### <a name="arguments"></a>引数
 
@@ -142,9 +148,9 @@ dotnet /build_output/my_app.dll
 
 ## <a name="migration-from-projectjson"></a>project.json からの移行
 
-Preview 2 ツールを使用して *project.json* ベースのプロジェクトを生成した場合は、リリース ツールで使用するための MSBuild/*.csproj* へのプロジェクトの移行について、「[dotnet-migrate](dotnet-migrate.md)」トピックを参照してください。 Preview 2 ツールのリリースの前に作成された .NET Core プロジェクトの場合は、「[DNX から .NET Core CLI への移行 (project.json)](../migration/from-dnx.md)」のガイダンスに従って手動でプロジェクトを更新してから `dotnet migrate` を使用するか、プロジェクトを直接アップグレードします。
+Preview 2 ツールを使用して *project.json* ベースのプロジェクトを生成した場合は、リリース ツールで使用するための MSBuild/ *.csproj* へのプロジェクトの移行について、「[dotnet-migrate](dotnet-migrate.md)」トピックを参照してください。 Preview 2 ツールのリリースの前に作成された .NET Core プロジェクトの場合は、「[DNX から .NET Core CLI への移行 (project.json)](../migration/from-dnx.md)」のガイダンスに従って手動でプロジェクトを更新してから `dotnet migrate` を使用するか、プロジェクトを直接アップグレードします。
 
 ## <a name="see-also"></a>関連項目
 
-* [dotnet/CLI GitHub リポジトリ](https://github.com/dotnet/cli/)  
-* [.NET Core のインストール ガイド](https://aka.ms/dotnetcoregs)  
+- [dotnet/CLI GitHub リポジトリ](https://github.com/dotnet/cli/)
+- [.NET Core のインストール ガイド](https://aka.ms/dotnetcoregs)

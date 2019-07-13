@@ -2,12 +2,12 @@
 title: AsymmetricSecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: 7bd3b6be-8f77-4927-93ae-6fa371893cca
-ms.openlocfilehash: 076313548828f1fbce9c68b48c0fa7db9cca095f
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.openlocfilehash: 0f86fc1b410753b5ec100f0a7d43de9badd1401b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61964204"
 ---
 # <a name="asymmetricsecuritybindingelement"></a>AsymmetricSecurityBindingElement
 AsymmetricSecurityBindingElement  
@@ -31,14 +31,14 @@ class AsymmetricSecurityBindingElement : SecurityBindingElement
 ### <a name="messageprotectionorder"></a>MessageProtectionOrder  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  このバインディングのメッセージの暗号化と署名の命令。  
   
 ### <a name="requiresignatureconfirmation"></a>RequireSignatureConfirmation  
  データ型 : boolean  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  バインディングで署名の確認が必要かどうか。  
   
@@ -46,7 +46,8 @@ class AsymmetricSecurityBindingElement : SecurityBindingElement
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
-|Namespace|root\ServiceModel で定義|  
+|名前空間|root\ServiceModel で定義|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>

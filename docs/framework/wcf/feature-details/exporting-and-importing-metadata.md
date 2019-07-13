@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], exporting and importing
 ms.assetid: 614a75bb-e0b0-4c95-b6d8-02cb5e5ddb38
-ms.openlocfilehash: 497feb80d5930a784022877cfaa6e6c76a3047a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 39b964584cde42e6569da35f8653042f6d7432cb
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856467"
 ---
 # <a name="exporting-and-importing-metadata"></a>メタデータのエクスポートとインポート
-Windows Communication Foundation (WCF) では、サービス エンドポイントを記述するそれらを並行してクライアントを使用してサービスを使用する方法を理解する標準化表現のプロセスではメタデータのエクスポートです。 サービス メタデータのインポートは <xref:System.ServiceModel.Description.ServiceEndpoint> インスタンス、またはサービス メタデータの一部を生成するプロセスです。  
+Windows Communication Foundation (WCF) では、サービス エンドポイントを記述して、クライアントを使用してサービスを使用する方法を理解する標準化表現に移し替えたりするプロセスではメタデータをエクスポートします。 サービス メタデータのインポートは <xref:System.ServiceModel.Description.ServiceEndpoint> インスタンス、またはサービス メタデータの一部を生成するプロセスです。  
   
 ## <a name="exporting-metadata"></a>メタデータのエクスポート  
  メタデータを <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> インスタンスからエクスポートするには、<xref:System.ServiceModel.Description.MetadataExporter> 抽象クラスの実装を使用します。 <xref:System.ServiceModel.Description.WsdlExporter>型の実装は、 <xref:System.ServiceModel.Description.MetadataExporter> WCF に含まれているクラスを抽象化します。  
@@ -25,7 +25,7 @@ Windows Communication Foundation (WCF) では、サービス エンドポイン�
 ## <a name="importing-metadata"></a>メタデータのインポート  
   
 ### <a name="importing-wsdl-documents"></a>WSDL ドキュメントのインポート  
- WCF でのサービス メタデータをインポートするには、実装を使用、<xref:System.ServiceModel.Description.MetadataImporter>抽象クラスです。 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>型の実装は、 <xref:System.ServiceModel.Description.MetadataImporter> WCF に含まれているクラスを抽象化します。 <xref:System.ServiceModel.Description.WsdlImporter> 型は、<xref:System.ServiceModel.Description.MetadataSet> オブジェクトにまとめられた、結び付けられているポリシーを使用して WSDL メタデータをインポートします。  
+ Wcf サービス メタデータをインポートするには、実装を使用、<xref:System.ServiceModel.Description.MetadataImporter>抽象クラス。 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>型の実装は、 <xref:System.ServiceModel.Description.MetadataImporter> WCF に含まれているクラスを抽象化します。 <xref:System.ServiceModel.Description.WsdlImporter> 型は、<xref:System.ServiceModel.Description.MetadataSet> オブジェクトにまとめられた、結び付けられているポリシーを使用して WSDL メタデータをインポートします。  
   
  <xref:System.ServiceModel.Description.WsdlImporter> 型を使用すると、メタデータをインポートする方法を制御できます。 すべてのエンドポイント、すべてのバインディング、またはすべてのコントラクトをインポートできます。 特定の WSDL サービス、バインディング、またはポートの種類に関連付けられたすべてのエンドポイントをインポートすることもできます。 また、特定の WSDL ポートのエンドポイント、特定の WSDL バインディングのバインディング、または特定の WSDL ポートの種類のコントラクトをインポートすることもできます。  
   
@@ -38,7 +38,7 @@ Windows Communication Foundation (WCF) では、サービス エンドポイン�
   
  また、ポリシーのインポート ロジックは、ポリシー表現を自動的に正規化します。 入れ子になったポリシー表現や `wsp:Optional` 属性は正規化されません。 実行される正規化処理の量は 4096 ステップに制限されます。各ステップでは、ポリシー アサーション、または `wsp:ExactlyOne` 要素の子要素が生成されます。  
   
- <xref:System.ServiceModel.Description.WsdlImporter> 型は、異なる WSDL ポリシー サブジェクトに結び付けられているポリシー代替手段の組み合わせを最大で 32 組まで試行します。 どの組み合わせを使用しても完全にインポートできない場合は、最初の組み合わせを使用して部分カスタム バインディングが作成されます。  
+ <xref:System.ServiceModel.Description.WsdlImporter> 型は、異なる WSDL ポリシー サブジェクトに結び付けられているポリシー代替手段の組み合わせを最大で 32 組まで試行します。 どの組み合わせを使用しても完全にインポートできない場合は、最初の組み合わせを使用して部分カスタム バインドが作成されます。  
   
 ## <a name="error-handling"></a>エラー処理  
  <xref:System.ServiceModel.Description.MetadataExporter> 型や <xref:System.ServiceModel.Description.MetadataImporter> 型は、どちらも `Errors` プロパティを公開します。このプロパティには、エクスポート プロセスおよびインポート プロセスで発生したエラー メッセージおよび警告メッセージのコレクションを格納でき、ツールの実装時に使用できます。  
@@ -48,16 +48,16 @@ Windows Communication Foundation (WCF) では、サービス エンドポイン�
  <xref:System.ServiceModel.Description.WsdlExporter> 型は、エクスポート プロセスでキャッチされたすべての例外を再スローします。 `Errors` プロパティでは、この例外はエラーとしてキャプチャされません。 <xref:System.ServiceModel.Description.WsdlExporter> は、例外をスローするとエラー状態になるため、再使用できません。 ワイルドカード アクションを使用しているために操作をエクスポートできない場合や、重複したバインディング名を検出した場合、<xref:System.ServiceModel.Description.WsdlExporter> はその `Errors` プロパティに警告を追加します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [方法 : メタデータをサービス エンドポイントにインポートする](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
+ [方法: サービス エンドポイントにメタデータをインポートします。](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
  ダウンロードされたメタデータを説明オブジェクトにインポートする方法について説明します。  
   
- [方法 : メタデータをサービス エンドポイントからエクスポートする](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
+ [方法: サービス エンドポイントからメタデータをエクスポートします。](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
  説明オブジェクトをメタデータにエクスポートする方法について説明します。  
   
  [ServiceDescription と WSDL 参照](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
  説明オブジェクトと WSDL の間のマッピングについて説明します。  
   
- [方法 : Svcutil.exe を使用してコンパイル済みのサービス コードからメタデータをエクスポートする](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
+ [方法: Svcutil.exe を使用して、コンパイル済みサービス コードからメタデータをエクスポートするには](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
  Svcutil.exe を使用して、コンパイル済みアセンブリのサービス型、コントラクト型、およびデータ型のメタデータをエクスポートする方法について説明します。  
   
  [データ コントラクト スキーマの参照](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
@@ -68,6 +68,7 @@ Windows Communication Foundation (WCF) では、サービス エンドポイン�
   
  <xref:System.ServiceModel.Description.WsdlImporter>  
   
-## <a name="see-also"></a>関連項目  
- [WCF 拡張に対するカスタム メタデータのエクスポート](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md)  
- [WCF 拡張に対するカスタム メタデータのインポート](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)
+## <a name="see-also"></a>関連項目
+
+- [WCF 拡張に対するカスタム メタデータのエクスポート](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md)
+- [WCF 拡張に対するカスタム メタデータのインポート](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)

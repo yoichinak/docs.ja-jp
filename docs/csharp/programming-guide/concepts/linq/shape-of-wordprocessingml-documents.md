@@ -2,12 +2,12 @@
 title: WordprocessingML ドキュメントの構造 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3791b5e0-c502-469b-bb75-a7bf6fdd0a94
-ms.openlocfilehash: 11dfd06f6236b2815989b0f7570868e436c7047a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 10f8ceea7651b207dcafe21b66e340ac39c6adf1
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125734"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483439"
 ---
 # <a name="shape-of-wordprocessingml-documents-c"></a>WordprocessingML ドキュメントの構造 (C#)
 このトピックでは、WordprocessingML ドキュメントの XML 構造について説明します。  
@@ -91,9 +91,9 @@ using (Package wdPackage = Package.Open("SampleDoc.docx", FileMode.Open, FileAcc
  [Office (2007) Open XML ファイル形式の概要](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205%28v=office.12%29)  
  [WordprocessingML の概要](https://docs.microsoft.com/previous-versions/office/developer/office-2003/aa212812%28v=office.11%29)  
  [WordProcessingML ファイルの構造](http://officeopenxml.com/anatomyofOOXML.php)  
- [WordprocessingML の概要](http://ericwhite.com/blog/introduction-to-wordprocessingml-series/)  
- [Office 2003: XML リファレンス スキーマのダウンロード ページ](https://www.microsoft.com/en-us/download/details.aspx?id=101)  
+ [WordprocessingML の概要](https://ericwhite.com/blog/introduction-to-wordprocessingml-series/)  
+ [Office 2003:XML リファレンス スキーマのダウンロード ページ](https://www.microsoft.com/download/details.aspx?id=101)  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)

@@ -4,12 +4,12 @@ description: 「project.json 要素と csproj 要素の間のマッピング」�
 author: natemcmaster
 ms.date: 03/13/2017
 ms.custom: seodec18
-ms.openlocfilehash: 581ff7cd3fe02e22d481c8386776317a5251cc5c
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 6ac63f18bd42193e964aaeae3c54c887c9c63163
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168911"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747412"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json プロパティと csproj プロパティの間のマッピング
 
@@ -39,7 +39,7 @@ ms.locfileid: "53168911"
 }
 ```
 
-サポート対象から除外されました。 csproj では、これは、ディレクトリ名により定義される、プロジェクト ファイル名により決定されます。 たとえば、`MyProjectName.csproj` のようにします。
+サポート対象から除外されました。 csproj では、これはプロジェクト ファイル名により決定され、通常はディレクトリ名と一致します。 たとえば、`MyProjectName.csproj` のようにします。
 
 既定では、プロジェクト ファイル名により、`<AssemblyName>` プロパティと `<PackageId>` プロパティの値も指定されます。
 
@@ -674,6 +674,6 @@ MSBuild では、これは[項目](/visualstudio/msbuild/common-msbuild-project-
 </ItemGroup>
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-* [CLI の変更の概要](../tools/cli-msbuild-architecture.md)
+- [CLI の変更の概要](../tools/cli-msbuild-architecture.md)

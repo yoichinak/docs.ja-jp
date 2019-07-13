@@ -2,12 +2,12 @@
 title: SQL Server のサーバー ロールとデータベース ロール
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: 5fd706d886ea050eb578d5f889d55055665c3a44
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e2d0de08f23bc3767e11de31c4ded4a326d060a9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645969"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>SQL Server のサーバー ロールとデータベース ロール
 SQL Server では、すべてのバージョンで、個々のユーザーではなくロール (つまり、ユーザーのグループ) に対して権限を割り当てることのできるロール ベースのセキュリティが使用されています。 固定サーバー ロールおよび固定データベース ロールには、固定された一連の権限が割り当てられています。  
@@ -27,8 +27,8 @@ SQL Server では、すべてのバージョンで、個々のユーザーでは
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[サーバー レベル ロール](/sql/relational-databases/security/authentication-access/server-level-roles)と[固定サーバー ロールの権限](https://msdn.microsoft.com/library/ms175892.aspx)で SQL Server オンライン ブック|固定サーバー ロールと SQL Server に関連付けられている権限について説明します。|  
-|[データベース レベル ロール](/sql/relational-databases/security/authentication-access/database-level-roles)と[固定データベース ロールのアクセス許可](https://msdn.microsoft.com/library/ms189612.aspx)で SQL Server オンライン ブック|固定データベース ロールおよびそれに関連付けられている権限について説明します。|  
+|[サーバー レベルのロール](/sql/relational-databases/security/authentication-access/server-level-roles)|固定サーバー ロールと SQL Server に関連付けられている権限について説明します。|  
+|[データベース レベル ロール](/sql/relational-databases/security/authentication-access/database-level-roles)|固定データベース ロールおよびそれに関連付けられている権限について説明します。|  
   
 ## <a name="database-roles-and-users"></a>データベース ロールおよびユーザー  
  データベース ユーザー アカウントはデータベース オブジェクトを扱う関係上、ログインにマップされている必要があります。 データベース ユーザーをデータベース ロールに追加すると、そのロールに関連付けられたすべての権限セットが継承されます。 すべての権限を付与できます。  
@@ -58,13 +58,14 @@ SQL Server では、すべてのバージョンで、個々のユーザーでは
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[Id およびアクセス制御](https://msdn.microsoft.com/library/bb510418.aspx)で SQL Server オンライン ブック|プリンシパル、ロール、資格情報、セキュリティ保護可能なリソース、および権限について説明したトピックへのリンクが含まれています。|  
-|[プリンシパル](/sql/relational-databases/security/authentication-access/principals-database-engine)で SQL Server オンライン ブック|プリンシパルの説明のほか、サーバー ロールとデータベース ロールについて説明したトピックへのリンクが含まれています。|  
+|[データベース エンジンの権限の概要](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|プリンシパル、ロール、資格情報、セキュリティ保護可能なリソース、および権限について説明したトピックへのリンクが含まれています。|  
+|[プリンシパル](/sql/relational-databases/security/authentication-access/principals-database-engine)|プリンシパルの説明のほか、サーバー ロールとデータベース ロールについて説明したトピックへのリンクが含まれています。|  
   
-## <a name="see-also"></a>関連項目  
- [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server におけるアプリケーション セキュリティのシナリオ](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [SQL Server での認証](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
- [SQL Server における所有権とユーザーとスキーマの分離](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
- [SQL Server の承認とアクセス許可](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [SQL Server におけるアプリケーション セキュリティのシナリオ](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
+- [SQL Server での認証](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
+- [SQL Server における所有権とユーザーとスキーマの分離](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
+- [SQL Server の承認とアクセス許可](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

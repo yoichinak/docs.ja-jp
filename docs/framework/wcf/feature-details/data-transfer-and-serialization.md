@@ -5,15 +5,15 @@ helpviewer_keywords:
 - data serialization [WCF]
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
-ms.openlocfilehash: 53c1421bf14c598611e116c61353c4ecd465f1aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1eefd82a149d0bc215ca441e92c7d737a744b1e0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856558"
 ---
 # <a name="data-transfer-and-serialization"></a>データ転送とシリアル化
-接続されたシステムでは、サービスとクライアントのタスクの実行は、データの交換に依存します。 サービスまたはクライアントの開発者は、効率的で簡単に維持するアプリケーションを作成するために、Windows Communication Foundation (WCF) がデータとデータのシリアル化を処理する方法も理解する必要があります。  
+接続されたシステムでは、サービスとクライアントのタスクの実行は、データの交換に依存します。 サービスまたはクライアントの開発者は、効率的かつ簡単に維持されるアプリケーションを作成するには、Windows Communication Foundation (WCF) がデータとデータのシリアル化を処理する方法も理解する必要があります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [サービス コントラクトでのデータ転送の指定](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
@@ -44,7 +44,7 @@ ms.locfileid: "33489207"
  データの転送とシリアル化をプログラムするときに注意する必要のある項目について説明します。  
   
  [データ転送のアーキテクチャの概要](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)  
- WCF でのデータ転送の全体的な設計のビューについて説明します。  
+ WCF でのデータ転送の設計全体のビューについて説明します。  
   
 ## <a name="reference"></a>参照  
  <xref:System.ServiceModel>  
@@ -60,6 +60,7 @@ ms.locfileid: "33489207"
 ## <a name="related-sections"></a>関連項目  
  [エンコーダーとシリアライザーの拡張](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
   
-## <a name="see-also"></a>関連項目  
- [ベスト プラクティス: データ コントラクトのバージョン管理](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
- [サービスのバージョン管理](../../../../docs/framework/wcf/service-versioning.md)
+## <a name="see-also"></a>関連項目
+
+- [ベスト プラクティス:データ コントラクトのバージョン管理](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+- [サービスのバージョン管理](../../../../docs/framework/wcf/service-versioning.md)

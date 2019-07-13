@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56a49b3d08b58da109924267e6c23c188efefe29
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ca8db6fd1296420011dcbfbbb0e5682f8a484dc9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436073"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768815"
 ---
 # <a name="iclrruntimehostexecuteapplication-method"></a>ICLRRuntimeHost::ExecuteApplication メソッド
-新しいドメインでアクティブにするアプリケーションを指定するマニフェストに基づく ClickOnce の配置シナリオに使用されます。 これらのシナリオの詳細については、次を参照してください。 [ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)です。  
+マニフェスト ベースの ClickOnce 配置のシナリオで使用すると、新しいドメインでアクティブ化するアプリケーションを指定します。 これらのシナリオの詳細については、次を参照してください。 [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment)します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ExecuteApplication(  
     [in] LPCWSTR   pwzAppFullName,  
     [in] DWORD     dwManifestPaths,  
@@ -40,21 +40,21 @@ HRESULT ExecuteApplication(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pwzAppFullName`  
- [in]に対して定義されていると、アプリケーションの完全名<xref:System.ApplicationIdentity>です。  
+ [in]に対して定義されている、アプリケーションの完全名<xref:System.ApplicationIdentity>します。  
   
  `dwManifestPaths`  
  [in]含まれる文字列の数、`ppwzManifestPaths`配列。  
   
  `ppwzManifestPaths`  
- [in] オプション。 アプリケーションのマニフェストのパスを格納する文字列配列。  
+ [in] オプション。 アプリケーションのマニフェストのパスを含む文字列配列。  
   
  `dwActivationData`  
  [in]含まれる文字列の数、`ppwzActivationData`配列。  
   
  `ppwzActivationData`  
- [in] オプション。 Web 経由で配置されたアプリケーションの URL のクエリ文字列部分などのアプリケーションのライセンス認証データを格納する文字列配列。  
+ [in] オプション。 Web 経由でデプロイされたアプリケーションの URL のクエリ文字列部分などのアプリケーションのアクティベーション データを含む文字列配列。  
   
  `pReturnValue`  
  [out]アプリケーションのエントリ ポイントから返される値。  
@@ -64,33 +64,34 @@ HRESULT ExecuteApplication(
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|`ExecuteApplication` 正常に返されます。|  
-|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) が、プロセスに読み込まれていませんまたは CLR は、状態をマネージ コードを実行またはできないの呼び出しは正常に処理します。|  
-|HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
-|HOST_E_NOT_OWNER|呼び出し元は、ロックを所有していません。|  
+|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) は、プロセスに読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。|  
+|HOST_E_TIMEOUT|呼び出しがタイムアウトになりました。|  
+|HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
 |HOST_E_ABANDONED|イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。|  
-|E_FAIL|不明な致命的なエラーが発生しました。 メソッドには、E_FAIL が返された場合、CLR は、プロセス内で使用可能ではなくなりました。 メソッドのホストに以降の呼び出しでは、HOST_E_CLRNOTAVAILABLE を返します。|  
+|E_FAIL|不明な致命的なエラーが発生しました。 メソッドから E_FAIL が返された場合、CLR は、プロセス内で使用可能ではなくなりました。 メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `ExecuteApplication` 新しく作成されたアプリケーション ドメインで ClickOnce アプリケーションをアクティブ化に使用されます。  
   
- `pReturnValue`出力パラメーターは、アプリケーションによって返される値に設定します。 場合は null の値を指定する場合`pReturnValue`、`ExecuteApplication`は失敗しませんが、値を返しません。  
+ `pReturnValue`出力パラメーターが、アプリケーションによって返される値に設定します。 場合は null の値を指定する場合`pReturnValue`、`ExecuteApplication`失敗しませんが、値を返さない。  
   
 > [!IMPORTANT]
->  呼び出す必要はありません、 [Start メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)メソッドを呼び出す前に、`ExecuteApplication`マニフェスト ベースのアプリケーションをアクティブ化するメソッド。 場合、`Start`メソッドが最初と呼ばれる、`ExecuteApplication`メソッドの呼び出しは失敗します。  
+>  呼び出すのではない、 [Start メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)メソッドを呼び出す前に、`ExecuteApplication`マニフェスト ベースのアプリケーションをアクティブ化するメソッド。 場合、`Start`メソッドが最初に、呼び出された、`ExecuteApplication`メソッドの呼び出しが失敗します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれています。  
+ **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ActivationContext>  
- <xref:System.AppDomainManager>  
- <xref:System.ApplicationIdentity>  
- [ICLRRuntimeHost インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)  
- [SetAppDomainManager メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-setappdomainmanager-method.md)  
- [チュートリアル : デザイナーを使用し、ClickOnce 配置 API で必要に応じてアセンブリをダウンロードする](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ActivationContext>
+- <xref:System.AppDomainManager>
+- <xref:System.ApplicationIdentity>
+- [ICLRRuntimeHost インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+- [SetAppDomainManager メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-setappdomainmanager-method.md)
+- [チュートリアル: デザイナーを使用し、ClickOnce 配置 API で必要に応じてアセンブリをダウンロードする](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer)

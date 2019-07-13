@@ -7,12 +7,12 @@ helpviewer_keywords:
 - response files, specifying for compilation [C#]
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
-ms.openlocfilehash: f342f26ee8abe29e6c5a1477469c8b7292cd702e
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 32a06c596c44cdf28e5c1bb3422b9cf8262f2c08
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259809"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738093"
 ---
 # <a name="-c-compiler-options"></a>@ (C# コンパイラ オプション)
 @ オプションを使用すると、コンパイラ オプションおよびコンパイルするソース コード ファイルを含むファイルを指定できます。  
@@ -30,7 +30,7 @@ ms.locfileid: "44259809"
 ## <a name="remarks"></a>コメント  
  コンパイラ オプションとソース コード ファイルは、コマンド ラインで指定した場合と同じように、コンパイラによって処理されます。  
   
- コンパイル時に複数の応答ファイルを指定するには、複数の応答ファイル オプションを指定します。 例:  
+ コンパイル時に複数の応答ファイルを指定するには、複数の応答ファイル オプションを指定します。 次に例を示します。  
   
 ```  
 @file1.rsp @file2.rsp  
@@ -54,6 +54,6 @@ ms.locfileid: "44259809"
 -target:exe -out:MyExe.exe source1.cs source2.cs  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
 
 - [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)

@@ -1,5 +1,5 @@
 ---
-title: 'オブジェクトの有効期間: オブジェクトの作成と破棄 (Visual Basic)'
+title: オブジェクトの有効期間:オブジェクトの作成し、破棄 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Constructor
@@ -22,14 +22,14 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 1782748749df171ec8d6e3bc8873b4a42c83c0e6
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: a63134b966fe6e6cd0cd40f69ac04a7cd986513d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864502"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591547"
 ---
-# <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>オブジェクトの有効期間: オブジェクトの作成と破棄 (Visual Basic)
+# <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>オブジェクトの有効期間:オブジェクトの作成し、破棄 (Visual Basic)
 クラスのインスタンス (オブジェクト) を作成するには、`New` キーワードを使用します。 新しいオブジェクトを使用する前に、多くの場合、そのオブジェクトに対して初期化タスクを実行する必要があります。 一般的な初期化タスクとして、ファイルを開く、データベースに接続する、レジストリ キーの値を読み取る、などがあります。 Visual Basic と呼ばれるプロシージャを使用して新しいオブジェクトの初期化を制御する*コンス トラクター* (初期化を制御する特殊なメソッド)。  
   
  スコープを離れたオブジェクトは、共通言語ランタイム (CLR) によって解放されます。 Visual Basic と呼ばれるプロシージャを使用してシステム リソースの解放を制御する*デストラクター*します。 コンストラクターとデストラクターは共に、堅牢で予測可能なクラス ライブラリの作成をサポートしています。  
@@ -38,15 +38,15 @@ ms.locfileid: "43864502"
  コンストラクターとデストラクターは、オブジェクトの作成および破棄を制御します。 `Sub New`と`Sub Finalize`置き換え; Visual Basic におけるプロシージャの初期化しオブジェクトを破棄する、`Class_Initialize`と`Class_Terminate`Visual Basic 6.0 と以前のバージョンで使用される方法です。  
   
 ### <a name="sub-new"></a>Sub New  
- `Sub New` コンストラクターは、クラスの作成時に 1 回だけ実行できます。 同じクラスまたは派生クラスから別のコンストラクターの最初のコード行以外の任意の場所で、明示的に呼び出すことはできません。 また、`Sub New` メソッド内のコードは常に、クラス内の他のすべてのコードより先に実行されます。 [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] 以降のバージョンを暗黙的に作成し、`Sub New`明示的に定義していない場合、実行時にコンス トラクター、`Sub New`クラスのプロシージャです。  
+ `Sub New` コンストラクターは、クラスの作成時に 1 回だけ実行できます。 同じクラスまたは派生クラスから別のコンストラクターの最初のコード行以外の任意の場所で、明示的に呼び出すことはできません。 また、`Sub New` メソッド内のコードは常に、クラス内の他のすべてのコードより先に実行されます。 Visual Basic および以降のバージョンを暗黙的に作成、`Sub New`明示的に定義していない場合、実行時にコンス トラクター、`Sub New`クラスのプロシージャです。  
   
  クラスのコンストラクターを作成するには、クラス定義の任意の場所に `Sub New` という名前のプロシージャを作成します。 パラメーター化されたコンストラクターを作成するには、次のコードに示すように、他のプロシージャの引数を指定する場合と同じく、`Sub New` に引数の名前とデータ型を指定します。  
   
- [!code-vb[VbVbalrOOP#42](../../../../visual-basic/misc/codesnippet/VisualBasic/object-lifetime-how-objects-are-created-and-destroyed_1.vb)]  
+ [!code-vb[VbVbalrOOP#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/WhidbeyStuff.vb#42)]  
   
  コンストラクターは、次のコードに示すように、頻繁にオーバーロードされます。  
   
- [!code-vb[VbVbalrOOP#116](../../../../visual-basic/misc/codesnippet/VisualBasic/object-lifetime-how-objects-are-created-and-destroyed_2.vb)]  
+ [!code-vb[VbVbalrOOP#116](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/WhidbeyStuff.vb#116)]  
   
  別のクラスから派生したクラスを定義するときは、基本クラスにパラメーターを受け取らないアクセス可能なコンストラクターがある場合を除き、コンストラクターの 1 行目で基本クラスのコンストラクターを呼び出す必要があります。 たとえば、上記のコンストラクターを含む基本クラスの呼び出しは、`MyBase.New(s)` になります。 それ以外の場合、`MyBase.New`オプションですが、暗黙的に呼び出して、Visual Basic ランタイム。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "43864502"
   
  `Finalize` デストラクターは、所属先のクラスまたは派生クラスからのみ呼び出し可能な保護されたメソッドです。 `Finalize` はオブジェクトが破棄されるときに自動的に呼び出されるため、派生クラスの `Finalize` 実装の外部から `Finalize` を明示的に呼び出す必要はありません。  
   
- オブジェクトが nothing に設定されるとすぐに実行される `Class_Terminate` と異なり、通常、オブジェクトがスコープを失ってから Visual Basic が `Finalize` デストラクターを呼び出すまでに遅延が発生します。 [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] およびそれ以降のバージョンでは、2 つ目の種類のデストラクターとして <xref:System.IDisposable.Dispose%2A> が使用可能であり、いつでも明示的に呼び出してすぐにリソースを解放できます。  
+ オブジェクトが nothing に設定されるとすぐに実行される `Class_Terminate` と異なり、通常、オブジェクトがスコープを失ってから Visual Basic が `Finalize` デストラクターを呼び出すまでに遅延が発生します。 Visual Basic と以降のバージョンは、2 つ目の種類のデストラクターとしてを<xref:System.IDisposable.Dispose%2A>、すぐにリソースを解放するには、いつでも明示的に呼び出すします。  
   
 > [!NOTE]
 >  `Finalize` デストラクターからは例外をスローしません。これは、その例外をアプリケーションで処理できないために、アプリケーションが異常終了する可能性があるためです。  
@@ -70,11 +70,11 @@ ms.locfileid: "43864502"
   
  派生クラスのインスタンスが作成されると、まず基本クラスの `Sub New` コンストラクターが実行され、続いて派生クラスのコンストラクターが実行されます。 このように動作するのは、`Sub New` コンストラクターの最初のコード行では、`MyBase.New()` 構文を使用して、クラス階層の自身のすぐ上位にあるクラスのコンストラクターを呼び出すためです。 `Sub New` コンストラクターはその後、基本クラスのコンストラクターに到達するまで、クラス階層のクラスごとに呼び出されます。 その時点で、基本クラスのコンストラクター内のコードが実行され、続いてすべての派生クラスの各コンストラクター内のコードが実行され、最後にほとんどの派生クラス内のコードが実行されます。  
   
- ![コンス トラクターと継承](../../../../visual-basic/programming-guide/language-features/objects-and-classes/media/vaconstructorsinheritance.gif "vaConstructorsInheritance")  
+ ![クラス階層のコンス トラクターと継承を示すスクリーン ショット。](./media/object-lifetime-how-objects-are-created-and-destroyed/subnew-constructor-inheritance.gif)  
   
  オブジェクトが不要になると、CLR はメモリを解放する前にそのオブジェクトに対して <xref:System.Object.Finalize%2A> メソッドを呼び出します。 <xref:System.Object.Finalize%2A> メソッドは、状態情報の保存やファイルおよびデータベース接続の終了などのクリーンアップ タスク、およびオブジェクトを解放する前に行う必要があるその他のタスクを実行するために、`destructor`を呼び出します。  
   
- ![コンス トラクター Inheritance2](../../../../visual-basic/programming-guide/language-features/objects-and-classes/media/vaconstructorsinheritance_2.gif "vaConstructorsInheritance_2")  
+ ![Finalize メソッドのデストラクターを示すスクリーン ショット。](./media/object-lifetime-how-objects-are-created-and-destroyed/finalize-method-destructor.gif)  
   
 ## <a name="idisposable-interface"></a>IDisposable インターフェイス  
  クラスのインスタンスは、多くの場合、Windows ハンドルやデータベース接続など、CLR では管理されないリソースを制御します。 これらのリソースは、オブジェクトがガベージ コレクターによって破棄されるときに解放されるように、クラスの `Finalize` メソッドで破棄する必要があります。 ただし、ガベージ コレクターは、CLR でより多くの空きメモリが必要な場合にのみ、オブジェクトを破棄します。 つまり、オブジェクトがスコープ外になるまで、リソースが解放されない可能性があります。  
@@ -84,13 +84,13 @@ ms.locfileid: "43864502"
 ### <a name="implementing-idisposable"></a>IDisposable の実装  
  <xref:System.IDisposable> インターフェイスを実装するクラスには、次のコード セクションを含める必要があります。  
   
--   オブジェクトが破棄されているかどうかを追跡するためのフィールド。  
+- オブジェクトが破棄されているかどうかを追跡するためのフィールド。  
   
     ```  
     Protected disposed As Boolean = False  
     ```  
   
--   クラスのリソースを解放する <xref:System.IDisposable.Dispose%2A> のオーバーロード。 このメソッドは、基本クラスの <xref:System.IDisposable.Dispose%2A> メソッドおよび `Finalize` メソッドによって呼び出す必要があります。  
+- クラスのリソースを解放する <xref:System.IDisposable.Dispose%2A> のオーバーロード。 このメソッドは、基本クラスの <xref:System.IDisposable.Dispose%2A> メソッドおよび `Finalize` メソッドによって呼び出す必要があります。  
   
     ```  
     Protected Overridable Sub Dispose(ByVal disposing As Boolean)  
@@ -104,7 +104,7 @@ ms.locfileid: "43864502"
     End Sub  
     ```  
   
--   次のコードのみを含む <xref:System.IDisposable.Dispose%2A> の実装。  
+- 次のコードのみを含む <xref:System.IDisposable.Dispose%2A> の実装。  
   
     ```  
     Public Sub Dispose() Implements IDisposable.Dispose  
@@ -113,7 +113,7 @@ ms.locfileid: "43864502"
     End Sub  
     ```  
   
--   次のコードのみを含む `Finalize` メソッドのオーバーライド。  
+- 次のコードのみを含む `Finalize` メソッドのオーバーライド。  
   
     ```  
     Protected Overrides Sub Finalize()  
@@ -140,15 +140,16 @@ End Sub
  派生クラスでは、基本クラスの <xref:System.IDisposable.Dispose%2A> メソッドおよび `Finalize` メソッドをオーバーライドする必要はありません。 これらのメソッドが派生クラスのインスタンスから呼び出されると、基本クラスでのこれらのメソッドの実装によって、派生クラスでの `Dispose(disposing)` メソッドのオーバーライドが呼び出されます。  
   
 ## <a name="garbage-collection-and-the-finalize-destructor"></a>ガベージ コレクションと Finalize デストラクター  
- [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]を使用して、*参照トレース ガベージ コレクション*システムを定期的に未使用のリソースを解放します。 Visual Basic 6.0 と以前のバージョンの使用と呼ばれるさまざまなシステム*参照カウント*リソースを管理します。 どちらのシステムも同じ機能を自動的に実行しますが、いくつかの重要な違いがあります。  
+ .NET Framework を使用して、*参照トレース ガベージ コレクション*システムを定期的に未使用のリソースを解放します。 Visual Basic 6.0 と以前のバージョンの使用と呼ばれるさまざまなシステム*参照カウント*リソースを管理します。 どちらのシステムも同じ機能を自動的に実行しますが、いくつかの重要な違いがあります。  
   
  CLR は、不要と判断したオブジェクトを定期的に破棄します。 オブジェクトは、システム リソースが不足したときには迅速に解放され、それ以外の場合には解放の頻度が低くなります。 オブジェクトがスコープを失ってから CLR が解放するまでに遅延が発生します。つまり、Visual Basic 6.0 とそれ以前のバージョンのオブジェクトとは異なり、オブジェクトがいつ破棄されるかを正確に特定することはできません。 このような場合は、オブジェクト、持つと言います*有効期間が不明確*します。 ほとんどの場合、有効期間が不明確でもアプリケーションの作成方法は変わりません。ただし、オブジェクトがスコープを失ってもすぐには `Finalize` デストラクターが実行されない可能性があることに留意する必要があります。  
   
  ガベージ コレクション システム間の相違点にはこの他、`Nothing` を使用することがあります。 Visual Basic 6.0 とそれ以前のバージョンの参照カウントを利用するために、プログラマはオブジェクト変数に `Nothing` を割り当てて、オブジェクト変数が保持する参照を解放することがありました。 変数がオブジェクトへの最後の参照を保持していた場合、オブジェクトのリソースは直ちに解放されました。 Visual Basic のそれ以降のバージョンでも、このプロシージャが有益な場合がありますが、実行しても、参照したオブジェクトによってリソースが直ちに解放されることはありません。 リソースを直ちに解放するには、オブジェクトの <xref:System.IDisposable.Dispose%2A> メソッドを使用してください (使用可能な場合)。 変数を `Nothing` に設定する必要があるのは、ガベージ コレクターが孤立したオブジェクトを検出するのに要する時間よりも、変数の有効期間が長い場合のみです。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.IDisposable.Dispose%2A>  
- [コンポーネントの初期化と終了](https://msdn.microsoft.com/library/58444076-a9d2-4c91-b3f6-0e180dc0695d)  
- [New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md)  
- [アンマネージ リソースのクリーンアップ](../../../../standard/garbage-collection/unmanaged.md)  
- [Nothing](../../../../visual-basic/language-reference/nothing.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.IDisposable.Dispose%2A>
+- [コンポーネントの初期化と終了](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ws9dc6t6(v=vs.120))
+- [New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md)
+- [アンマネージ リソースのクリーンアップ](../../../../standard/garbage-collection/unmanaged.md)
+- [Nothing](../../../../visual-basic/language-reference/nothing.md)

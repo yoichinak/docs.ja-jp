@@ -7,12 +7,12 @@ helpviewer_keywords:
 - properties [.NET Framework], design guidelines
 ms.assetid: 127cbc0c-cbed-48fd-9c89-7c5d4f98f163
 author: KrzysztofCwalina
-ms.openlocfilehash: 1d119b48f0524b3e997aa2cb9ea2cbbd855afdf0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e4ed4fd39a9ebd63b9d5dbff38dc15647d65934f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026311"
 ---
 # <a name="property-design"></a>プロパティのデザイン
 プロパティはメソッドに厳密にはよく似ていますは、使用シナリオの観点からはまったく異なります。 これらは、スマート フィールドとして認識する必要があります。 呼び出し元のフィールドの構文とメソッドの柔軟性があります。  
@@ -89,5 +89,5 @@ ms.locfileid: "53131457"
   
 ## <a name="see-also"></a>関連項目
 
-- [メンバーのデザインのガイドライン](../../../docs/standard/design-guidelines/member.md)  
+- [メンバーのデザインのガイドライン](../../../docs/standard/design-guidelines/member.md)
 - [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)

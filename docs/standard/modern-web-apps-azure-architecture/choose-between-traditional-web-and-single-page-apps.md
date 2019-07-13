@@ -3,13 +3,13 @@ title: 従来の Web アプリケーションかシングル ページ アプリ
 description: Web アプリケーションを構築しているときに、従来の Web アプリかシングル ページ アプリケーション (SPA) を選択する方法について説明します。
 author: ardalis
 ms.author: wiwagn
-ms.date: 6/28/2018
-ms.openlocfilehash: abeee719c15263fea04a3bcf80a6e41c43b640d2
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.date: 01/30/2019
+ms.openlocfilehash: 5b8569f2abd5160fa8a080c06441a963fb455f6b
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52745304"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825746"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>従来の Web アプリケーションかシングル ページ アプリケーション (SPA) を選択する
 
@@ -37,6 +37,10 @@ ms.locfileid: "52745304"
 さらに、SPA フレームワークには、より高度なアーキテクチャとセキュリティの専門知識が必要です。 従来の Web アプリケーションよりも頻繁な更新と新しいフレームワークにより、チームは大きな変化を経験します。 SPA アプリケーションでは自動化されたビルドおよび展開プロセスを構成し、コンテナーのような展開オプションを利用するので、従来の Web アプリケーションよりも困難です。
 
 SPA モデルで可能になるユーザー エクスペリエンスの改善と、これらの考慮事項を比較して、優先順位を付ける必要があります。
+
+## <a name="razor-components"></a>Razor Components
+
+ASP.NET Core 3.0 には、Razor Components と呼ばれている、機能が豊富で構成可能な対話型 UI を構築するための新しいモデルが導入されています。 Razor Components を利用すれば、開発者はサーバー上に Razor で UI を構築できます。また、WebAssembly という名称の JavaScript ライブラリを使用してこのコードをブラウザーに配信し、クライアント側で実行できます。 ASP.NET Core 3.0 は現在も開発中です。この電子書籍が 3.0 に更新されたとき、このテクノロジに関する情報が増えていることが予想されます。 Razor Components (コードネーム Blazor) に関する詳細については、「[Get started with Blazor](https://blazor.net/docs/get-started.html)」 (Blazor 入門) を参照してください。
 
 ## <a name="when-to-choose-traditional-web-apps"></a>従来の Web アプリケーションを選択する場合
 

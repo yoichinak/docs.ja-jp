@@ -2,12 +2,12 @@
 title: 永続性データベース スキーマ
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-ms.openlocfilehash: 2c8d74413be64cdf88f7f1821c3678b2bcd2e2b1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 38df4b3d629840f1b5def2eafa0d074a2b2397a2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864170"
 ---
 # <a name="persistence-database-schema"></a>永続性データベース スキーマ
 このトピックでは、SQL Workflow Instance Store でサポートされるパブリック ビューについて説明します。  
@@ -40,8 +40,8 @@ ms.locfileid: "43515259"
 |IdentityPackage|Nvarchar(max)|ワークフローが作成されたときに指定されたパッケージの情報 (アセンブリ名など)。|  
 |ビルド|BigInt|ワークフロー バージョンのビルド番号。|  
 |Major|BigInt|ワークフロー バージョンのメジャー番号。|  
-|Minor|BigInt|ワークフロー バージョンのマイナー番号。|  
-|Revision|BigInt|ワークフロー バージョンのリビジョン番号。|  
+|マイナー|BigInt|ワークフロー バージョンのマイナー番号。|  
+|リビジョン|BigInt|ワークフロー バージョンのリビジョン番号。|  
   
 > [!CAUTION]
 >  **インスタンス**ビューに Delete トリガーも含まれています。 適切な権限を持つユーザーは、このビューに対して delete ステートメントを実行して、データベースからワークフロー インスタンスを強制的に削除することができます。 ただし、ワークフロー ランタイムからインスタンスを削除すると意図しない結果を引き起こすことがあるため、ビューから直接削除する方法は最後の手段としてのみ使用することをお勧めします。 代わりに、ワークフロー インスタンス管理エンドポイントを使用して、ワークフロー ランタイムでインスタンスを終了するようにしてください。 ビューから多数のインスタンスを削除する場合は、それらのインスタンスで稼動しているアクティブなランタイムがないことを確認してください。  
@@ -54,15 +54,15 @@ ms.locfileid: "43515259"
 |ServiceDeploymentId|BigInt|このビューの主キー。|  
 |SiteName|Nvarchar(max)|ワークフロー サービスを含む、サイトの名前を表します (例:**既定の Web サイト**)。|  
 |RelativeServicePath|Nvarchar(max)|ワークフロー サービスの仮想パスを、サイトを基準とした相対パスで表します  (例。 **/app1/PurchaseOrderService.svc**)。|  
-|RelativeApplicationPath|Nvarchar(max)|ワークフロー サービスを含むアプリケーションの仮想パスを、サイトを基準とした相対パスで表します。 (例: **/app1**)。|  
+|RelativeApplicationPath|Nvarchar(max)|ワークフロー サービスを含むアプリケーションの仮想パスを、サイトを基準とした相対パスで表します  (例: **/app1**)。|  
 |ServiceName|Nvarchar(max)|ワークフロー サービスの名前を表します  (例: **PurchaseOrderService**)。|  
 |ServiceNamespace|Nvarchar(max)|ワークフロー サービスの名前空間を表します  (例: **MyCompany**)。|  
   
  ServiceDeployments ビューには、Delete トリガーも含まれています。 適切な権限を持つユーザーは、このビューに対して delete ステートメントを実行して、データベースから ServiceDeployment のエントリを削除することができます。 次の点に注意してください。  
   
-1.  このビューからエントリを削除するときは、実行前にデータベース全体をロックしなければならないため、この操作は高コストです。 これは、存在しない ServiceDeployment のエントリをワークフロー インスタンスが参照しないようにするために必要です。 このビューからの削除は、ダウンタイムか保守時間帯のみに行うようにしてください。  
+1. このビューからエントリを削除するときは、実行前にデータベース全体をロックしなければならないため、この操作は高コストです。 これは、存在しない ServiceDeployment のエントリをワークフロー インスタンスが参照しないようにするために必要です。 このビューからの削除は、ダウンタイムか保守時間帯のみに行うようにしてください。  
   
-2.  内のエントリによって参照されている ServiceDeployment 行を削除すると、**インスタンス**ビューは no-op になります。 削除できるのは、参照がない ServiceDeployment 行だけです。  
+2. 内のエントリによって参照されている ServiceDeployment 行を削除すると、**インスタンス**ビューは no-op になります。 削除できるのは、参照がない ServiceDeployment 行だけです。  
   
 ## <a name="instancepromotedproperties-view"></a>InstancePromotedProperties ビュー  
  **InstancePromotedProperties**ビューには、ユーザーが指定されているすべての昇格させたプロパティの情報が含まれています。 昇格されたプロパティはファーストクラスのプロパティとして機能します。ユーザーは、このプロパティをクエリで使用してインスタンスを取得できます。  たとえば、ユーザーを追加で注文のコストを常に格納する PurchaseOrder 昇格、 **Value1**列。 これにより、コストが特定の値を超えるすべての購買発注書を照会することができます。  

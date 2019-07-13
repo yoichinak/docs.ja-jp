@@ -1,15 +1,13 @@
 ---
 title: DDD 指向マイクロサービスの設計
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | DDD 指向の注文マイクロサービスの設計とそのアプリケーション レイヤーを理解する
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 65a1a58d0c70c7e788aea420006c1ad617628f93
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 303f8909d12dddef93b20604a00b9ea8e8493ee5
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145609"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639668"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>DDD 指向マイクロサービスの設計
 
@@ -53,7 +51,7 @@ ms.locfileid: "53145609"
 
 Eric Evans の名著「[Domain Driven Design](https://domainlanguage.com/ddd/)」(ドメイン駆動設計) には、ドメイン モデル レイヤーとアプリケーション レイヤーについて、次のように記述されています。
 
-**ドメイン モデル レイヤー**: ビジネスの概念、ビジネス状況に関する情報、ビジネス ルールの表現を担当します。 ビジネス状況を反映する状態はここで制御および使用されますが、その状態を保管することの技術的な詳細はインフラストラクチャに委任されます。 このレイヤーは、ビジネス ソフトウェアの中核です。
+**ドメイン モデル レイヤー**:ビジネスの概念、ビジネス状況に関する情報、ビジネス ルールの表現を担当します。 ビジネス状況を反映する状態はここで制御および使用されますが、その状態を保管することの技術的な詳細はインフラストラクチャに委任されます。 このレイヤーは、ビジネス ソフトウェアの中核です。
 
 ドメイン モデル レイヤーは、ビジネスを表現する場です。 マイクロサービスのドメイン モデル レイヤーを .NET で実装する場合、そのレイヤーはデータと動作をキャプチャするドメイン エンティティを持つクラス ライブラリとしてコード化されます (ロジックを持つメソッド)。
 
@@ -96,13 +94,13 @@ Entity Framework Core などの最新の ORM フレームワークのほとん�
 #### <a name="additional-resources"></a>その他の技術情報
 
 - **DevIQ。永続性無視の原則** \
-  [*https://deviq.com/persistence-ignorance/*](https://deviq.com/persistence-ignorance/)
+  <https://deviq.com/persistence-ignorance/>
 
 - **Oren Eini。インフラストラクチャの無視** \
-  [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance)
+  <https://ayende.com/blog/3137/infrastructure-ignorance>
 
 - **Angel Lopez。ドメイン駆動設計での階層化アーキテクチャ** \
-  [*https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/*](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
+  <https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/>
 
 >[!div class="step-by-step"]
 >[前へ](cqrs-microservice-reads.md)

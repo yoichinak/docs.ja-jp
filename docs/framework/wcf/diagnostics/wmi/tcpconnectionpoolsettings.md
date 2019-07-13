@@ -2,12 +2,12 @@
 title: TcpConnectionPoolSettings
 ms.date: 03/30/2017
 ms.assetid: 19acfba3-c057-4dbc-bac7-8674d7844d83
-ms.openlocfilehash: f9e1c043579f632f16a7cf36bf34c2467a743e47
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6fa68eed241edaea40b66c31240a4201e05779f4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956573"
 ---
 # <a name="tcpconnectionpoolsettings"></a>TcpConnectionPoolSettings
 TcpConnectionPoolSettings  
@@ -33,28 +33,28 @@ class TcpConnectionPoolSettings
 ### <a name="groupname"></a>GroupName  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  バインド要素により使用される接続プールのグループ名。  
   
 ### <a name="idletimeout"></a>IdleTimeout  
  データ型 : datetime  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  接続が切断されるまでの最大アイドル時間。  
   
 ### <a name="leasetimeout"></a>LeaseTimeout  
  データ型 : datetime  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  リース操作を完了する必要がある、タイムアウトまでの最大時間。  
   
 ### <a name="maxoutboundconnectionsperendpoint"></a>MaxOutboundConnectionsPerEndpoint  
  データ型 : sint32  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  各エンドポイントの発信接続の最大数。  
   
@@ -62,7 +62,8 @@ class TcpConnectionPoolSettings
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
-|Namespace|root\ServiceModel で定義|  
+|名前空間|root\ServiceModel で定義|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings>

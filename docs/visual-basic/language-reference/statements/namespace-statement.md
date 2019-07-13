@@ -12,12 +12,12 @@ helpviewer_keywords:
 - root namespaces
 - declarations [Visual Basic], namespaces
 ms.assetid: a31fbd95-9ace-4c3d-bbb1-51222a2272b2
-ms.openlocfilehash: 28016763b2cef2e8b8954f486bbbdb6930b5364c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7f6b976af7933b3895f6992488d2d1532a8fc2f7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784138"
 ---
 # <a name="namespace-statement"></a>Namespace ステートメント
 名前空間の名前を宣言し、ソース コードがその名前空間内でコンパイルするように宣言します。  
@@ -32,10 +32,10 @@ End Namespace
   
 ## <a name="parts"></a>指定項目  
  Global  
- 任意。 プロジェクトのルート名前空間から名前空間を定義することができます。 参照してください[Visual Basic における名前空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)します。  
+ 省略可能です。 プロジェクトのルート名前空間から名前空間を定義することができます。 参照してください[Visual Basic における名前空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)します。  
   
  `name`  
- 必須。 名前空間を識別する一意の名前。 有効な Visual Basic 識別子である必要があります。 詳細については、次を参照してください。 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)します。  
+ 必須。 名前空間を識別する一意の名前。 有効な Visual Basic 識別子である必要があります。 詳細については、次を参照してください。 [宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
   
  `componenttypes`  
  任意。 名前空間を構成する要素。 これらは、含めるが、列挙体、構造体、インターフェイス、クラス、モジュール、デリゲート、および他の名前空間に限定されません。  
@@ -60,7 +60,7 @@ End Namespace
  つまり、名前空間内の他の任意の要素内部ではなく、名前空間レベルで宣言されたプログラミング要素が`Public`または`Friend`アクセスします。 このようなアクセス レベルの要素を使用して指定しない場合、`Friend`既定。 要素名前空間レベルで宣言するにはには、クラス、構造体、モジュール、インターフェイス、列挙型、およびデリゲートが含まれます。 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。  
   
 ## <a name="root-namespace"></a>ルート Namespace  
- プロジェクト内のすべての名前空間名がに基づいて、*ルート名前空間*します。 Visual Studio では、プロジェクト内のすべてのコードで、既定のルート名前空間としてプロジェクト名が割り当てられます。 たとえば、プロジェクト名が `Payroll` である場合、そのプログラミング要素は `Payroll` 名前空間に属します。 宣言する場合`Namespace funding`、その名前空間の完全名は`Payroll.funding`します。  
+ プロジェクト内のすべての名前空間名がに基づいて、*ルート名前空間*します。 Visual Studio では、プロジェクト内のすべてのコードで、既定のルート名前空間としてプロジェクト名が割り当てられます。 たとえば、プロジェクト名が `Payroll`である場合、そのプログラミング要素は `Payroll`名前空間に属します。 宣言する場合`Namespace funding`、その名前空間の完全名は`Payroll.funding`します。  
   
  既存の名前空間を指定する場合、`Namespace`ステートメントなど、ジェネリック リスト クラスの例では、null 値に、ルート名前空間を設定できます。 これを行うには、次のようにクリックします。**プロジェクト プロパティ**から、**プロジェクト**メニューと、消去、**ルート名前空間**エントリ、ボックスは空にします。 ジェネリック リスト クラスの例ではこれを実行している場合、Visual Basic コンパイラが行う`System.Collections.Generic`プロジェクト内の新しい名前空間として`Payroll`の完全な名前を持つ`Payroll.System.Collections.Generic`します。  
   
@@ -78,17 +78,17 @@ End Namespace
 ## <a name="example"></a>例  
  次の例では、もう一方の入れ子になった 2 つの名前空間を宣言します。  
   
- [!code-vb[VbVbalrStatements#43](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#43)]  
   
 ## <a name="example"></a>例  
  次の例は、1 つの行に複数の入れ子になった名前空間を宣言し、これは、前の例に相当します。  
   
- [!code-vb[VbVbalrStatements#41](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#41)]  
   
 ## <a name="example"></a>例  
  次の例では、前の例で定義されたクラスにアクセスします。  
   
- [!code-vb[VbVbalrStatements#42](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#42)]  
   
 ## <a name="example"></a>例  
  次の例は、新しいジェネリック リスト クラスのスケルトンを定義しに追加します、<xref:System.Collections.Generic?displayProperty=nameWithType>名前空間。  
@@ -102,7 +102,8 @@ Namespace System.Collections.Generic
 End Namespace  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Imports ステートメント (.NET 名前空間および型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [Visual Basic における名前空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+## <a name="see-also"></a>関連項目
+
+- [Imports ステートメント (.NET 名前空間および型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Visual Basic における名前空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)

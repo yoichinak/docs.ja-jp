@@ -4,11 +4,6 @@ ms.date: 04/07/2017
 ms.assetid: 6eb142d5-fc98-40e2-9d90-84733f2a27ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18d8e1e24af73c9521b3a5bb45f1c86fc52ff1e9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
 ---
 # <a name="windows-forms-configuration-section"></a>Windows フォームの構成セクション
 Windows フォームの構成設定により、カスタマイズされたアプリケーション設定に関する情報 (マルチ モニターや高 DPI のサポート、その他の定義済みの構成設定など) を Windows フォームのアプリで格納したり、取得したりできます。
@@ -45,7 +40,7 @@ Windows フォームのアプリケーション構成設定は、アプリケー
 ---------|---------|
 [\<configuration>](../configuration-element.md) | 共通言語ランタイムと Windows フォームのアプリケーションで使用されるすべての構成ファイルのルート要素です |
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 .NET Framework 4.7 を使用すれば、.NET Framework の最近のリリースで追加された機能が利用できる Windows フォームのアプリケーションを、`<System.Windows.Forms.ApplicationConfigurationSection>` 要素で構成できます。 
 
@@ -53,5 +48,5 @@ Windows フォームのアプリケーション構成設定は、アプリケー
 
 ## <a name="see-also"></a>関連項目
 
-[構成ファイル スキーマ](../index.md)   
-[Windows フォームの高 DPI サポート](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)
+- [構成ファイル スキーマ](../index.md)
+- [Windows フォームの高 DPI サポート](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)

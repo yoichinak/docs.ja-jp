@@ -7,20 +7,20 @@ helpviewer_keywords:
 - windows [WPF]
 - WPF application [WPF], windows
 ms.assetid: dc091d04-68cf-4592-9695-75fda037db76
-ms.openlocfilehash: 04622255ea70d3d8161dc18919cb2833fe706639
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 798f8def03cb396224b7ba61bd17974609a5ff54
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971153"
 ---
 # <a name="windows-in-wpf-applications"></a>WPF アプリケーションのウィンドウ
-ユーザーは、windows 経由でアプリケーションと対話します。 ウィンドウの基本的な目的をホストし、コンテンツを表示します。 ウィンドウがホストに依存するデータの種類、アプリケーションが動作する、メディア、Extensible Application Markup Language (XAML) ページ、Web ページ、ドキュメント、データベース テーブルとレコード、およびシステム情報が含まれてコンテンツの種類。  
+ユーザーは、windows でのアプリケーションと対話します。 ウィンドウの基本的な目的をホストし、コンテンツを表示します。 ウィンドウのホストに依存しているデータの種類をアプリケーションが処理、メディア、Extensible Application Markup Language (XAML) ページ、Web ページ、ドキュメント、データベース テーブルとレコード、およびシステム情報が含まれていますコンテンツの種類。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [WPF ウィンドウの概要](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
- [ダイアログ ボックスの概要](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)  
- [方法トピック](../../../../docs/framework/wpf/app-development/window-management-how-to-topics.md)  
+ [WPF ウィンドウの概要](wpf-windows-overview.md)  
+ [ダイアログ ボックスの概要](dialog-boxes-overview.md)  
+ [方法トピック](window-management-how-to-topics.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Window>  
@@ -28,7 +28,7 @@ ms.locfileid: "33550778"
  <xref:System.Windows.Navigation.NavigationWindow>  
   
 ## <a name="related-sections"></a>関連項目  
- [アプリケーション管理の概要](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
-  [ナビゲーションの概要](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
-  [ホスティング](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)  
-  [ビルドと配置](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)
+ [アプリケーション管理の概要](application-management-overview.md)  
+  [ナビゲーションの概要](navigation-overview.md)  
+  [ホスティング](hosting-wpf-applications.md)  
+  [ビルドと配置](building-and-deploying-wpf-applications.md)

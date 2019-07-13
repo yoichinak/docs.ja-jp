@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data type conversion [Visual Basic]
 ms.assetid: 1cdacd21-ba31-4b62-b5be-395e41eeaa17
 ms.openlocfilehash: 026b2a250abfac0782feb0946bc50a94f504f7ed
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663285"
 ---
 # <a name="type-conversions-in-visual-basic"></a>Visual Basic における型変換
 1 つのデータ型から別の型に値を変更するプロセスと呼ばれます*変換*します。 変換は、いずれかの*拡大*または*縮小*、関与する型のデータ容量によって異なります。 *暗黙的な*または*明示的な*、ソース コード内の構文によって異なります。  
@@ -30,7 +30,7 @@ ms.locfileid: "44084469"
  [文字列とその他の型との変換](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
  文字列と数値、間の変換を示しています。 `Boolean`、または日付/時刻値。  
   
- [方法: オブジェクトを Visual Basic で別の型に変換](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
+ [方法: オブジェクトを Visual Basic で別の型に変換します。](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
  変換する方法を示しています、`Object`変数を他のデータ型にします。  
   
  [配列変換](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  

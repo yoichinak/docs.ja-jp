@@ -4,21 +4,22 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID422
 ms.assetid: 127e0f5f-0997-4ac5-b9af-2e6a2eb513a2
-ms.openlocfilehash: c3e8d783767c0c81fe66cc214acb9b44a7ad8b57
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c45c8458e9acb7f168fc9afb6b1979a950a38dc7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33593744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920784"
 ---
 # <a name="property-not-found"></a>プロパティが見つかりません。
 このオブジェクトは、指定したプロパティをサポートしていません。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  プロパティ名のスペルを確認します。  
+1. プロパティ名のスペルを確認します。  
   
-2.  オブジェクトは、「キャプション」または同様の名前プロパティに実際にサポートする場合、"text"プロパティのようなものへのアクセスしようとしていないかどうかを確認するオブジェクトのドキュメントを確認してください。  
+2. "Text"プロパティのようなものを「キャプション」または同様の名前のプロパティを実際には、オブジェクトをサポートする場合にアクセスしようとしていないかどうかを確認する、オブジェクトのドキュメントを確認します。  
   
-## <a name="see-also"></a>関連項目  
- [エラーの種類](../../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>関連項目
+
+- [エラーの種類](../../../visual-basic/programming-guide/language-features/error-types.md)

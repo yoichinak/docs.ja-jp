@@ -2,34 +2,34 @@
 title: インデックス付きプロパティ
 description: インデックス付きプロパティについて説明しますF#、順序付けられたデータを配列に似たアクセスを許可します。
 ms.date: 10/17/2018
-ms.openlocfilehash: 3817290505339803814e981cd5408cd4df6bd283
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 7fc8f46e029255c6ed985a43b92c8f7c2908c428
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611777"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489479"
 ---
 # <a name="indexed-properties"></a>インデックス付きプロパティ
 
-順序付けられたデータを抽象化するクラスを定義するときに基になる実装を公開することがなく、そのデータにインデックス付きのアクセスを提供する便利なあることができます。 これは、`Index`メンバー。
+順序付けられたデータを抽象化するクラスを定義するときに基になる実装を公開することがなく、そのデータにインデックス付きのアクセスを提供する便利なあることができます。 これは、`Item`メンバー。
 
 ## <a name="syntax"></a>構文
 
 ```fsharp
-// Indexed property that has both get and set defined.
-member self-identifier.Index
+// Indexed property that can be read and written to
+member self-identifier.Item
     with get(index-values) =
         get-member-body
     and set index-values values-to-set =
         set-member-body
 
-// Indexed property with get only
-member self-identifier.Index
+// Indexed property can only be read
+member self-identifier.Item
     with get(index-values) =
         get-member-body
 
-// Indexed property that has set only.
-member self-identifier.Index
+// Indexed property that can only be set
+member self-identifier.Item
     with set index-values values-to-set =
         set-member-body
 ```
@@ -58,13 +58,29 @@ ONE first two second three third four fourth five fifth six 6th
 seven seventh eight eighth nine ninth ten tenth
 ```
 
-## <a name="indexed-properties-with-multiple-index-variables"></a>複数のインデックス変数でインデックス付きプロパティ
+## <a name="indexed-properties-with-multiple-index-values"></a>複数のインデックス値を含むインデックス付きプロパティ
 
-インデックス付きプロパティには、1 つ以上のインデックス変数をことができます。 その場合は、変数は、プロパティを使用すると、コンマで区切られます。 このようなプロパティの set メソッドには、キーを含むタプル 1 つ目は、2 番目の値が設定されているは 2 つのカリー化された引数が必要です。
+インデックス付きプロパティには、1 つ以上のインデックス値を持つことができます。 その場合は、プロパティを使用する場合に、値はコンマで区切られます。 このようなプロパティの set メソッドには、キーを含むタプル 1 つ目は、2 番目の値を設定するは 2 つのカリー化された引数が必要です。
 
-次のコードでは、複数のインデックス変数でインデックス付きプロパティの使用を示します。
+次のコードでは、複数のインデックス値を含むインデックス付きプロパティの使用を示します。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3302.fs)]
+```fsharp
+open System.Collections.Generic
+
+/// Basic implementation of a sparse matrix based on a dictionary
+type SparseMatrix() =
+    let table = new Dictionary<(int * int), float>()
+    member __.Item
+        // Because the key is comprised of two values, 'get' has two index values
+        with get(key1, key2) = table.[(key1, key2)]
+
+        // 'set' has two index values and a new value to place in the key's position
+        and set (key1, key2) value = table.[(key1, key2)] <- value
+
+let sm = new SparseMatrix()
+for i in 1..1000 do
+    sm.[i, i] <- float i * float i
+```
 
 ## <a name="see-also"></a>関連項目
 

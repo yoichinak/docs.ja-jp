@@ -2,12 +2,12 @@
 title: '方法: 異種ファイル (LINQ) (Visual Basic) からコンテンツを結合します。'
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: d82e43449651ead5f39ec9c9442d3087b34d10ef
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 0ac91ffaf914a8b799ad1124e9361595d482366b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37072047"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593488"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>方法: 異種ファイル (LINQ) (Visual Basic) からコンテンツを結合します。
 
@@ -15,7 +15,7 @@ ms.locfileid: "37072047"
   
 ## <a name="to-create-the-data-files"></a>データ ファイルを作成するには
   
-1.  次の行を scores.csv という名前のファイルにコピーし、プロジェクト フォルダーに保存します。 このファイルは、スプレッドシートのデータを表しています。 列 1 は学生の ID、列 2 ～ 5 はテストの得点です。  
+1. 次の行を scores.csv という名前のファイルにコピーし、プロジェクト フォルダーに保存します。 このファイルは、スプレッドシートのデータを表しています。 列 1 は学生の ID、列 2 ～ 5 はテストの得点です。  
   
     ```  
     111, 97, 92, 81, 60  
@@ -32,7 +32,7 @@ ms.locfileid: "37072047"
     122, 94, 92, 91, 91  
     ```  
   
-2.  次の行を names.csv という名前のファイルにコピーし、プロジェクト フォルダーに保存します。 このファイルは、学生の姓、名、および学生 ID が含まれるスプレッドシートを表しています。  
+2. 次の行を names.csv という名前のファイルにコピーし、プロジェクト フォルダーに保存します。 このファイルは、学生の姓、名、および学生 ID が含まれるスプレッドシートを表しています。  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -82,8 +82,7 @@ Class JoinStrings
                             From id In scores   
                             Let n2 = id.Split(New Char() {","})   
                             Where Convert.ToInt32(n(2)) = Convert.ToInt32(n2(0))
-                            Select n(0) & "," & n(1) & "," & n2(0) & "," & n2(1) & "," &  
-                              n2(2) & "," & n2(3)  
+                            Select n(0) & "," & n2(1) & "," & n2(2) & "," & n2(3) & "," &  n2(4)
   
         ' Pass a query variable to a Sub and execute it there.  
         ' The query itself is unchanged.  
@@ -121,15 +120,7 @@ End Class
 ' 12 total names in list 
 ```  
 
-## <a name="compiling-the-code"></a>コードのコンパイル
-
-作成し、次のオプションのいずれかを対象とするプロジェクトをコンパイルします。
-
-- .NET framework バージョン 3.5 System.Core.dll への参照。
-- .NET framework 4.0 またはそれ以降のバージョン。
-- .NET core バージョン 1.0 以降。
-  
 ## <a name="see-also"></a>関連項目
 
- [LINQ と文字列 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [LINQ とファイル ディレクトリ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ と文字列 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ とファイル ディレクトリ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

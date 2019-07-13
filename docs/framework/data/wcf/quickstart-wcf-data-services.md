@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, quick-start example
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
-ms.openlocfilehash: f20ffcf356aa0493b1e2356746d9ad7b27d9a1aa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 49d11556d3703331b4cdf5bf83a69f6b15bca8ed
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504563"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881992"
 ---
 # <a name="quickstart-wcf-data-services"></a>クイック スタート (WCF Data Services)
 
@@ -28,13 +28,13 @@ ms.locfileid: "43504563"
 
 - SQL Server のインスタンス。 これは、Visual Studio 2015、またはの一部として既定のインストールに含まれている SQL Server Express が含まれています。、**データ ストレージと処理**Visual Studio 2017 のワークロード。
 
-- Northwind サンプル データベース。 このサンプル データベースをダウンロード、ダウンロード ページを参照してください[SQL Server のサンプル データベース](https://go.microsoft.com/fwlink/?linkid=24758)します。
+- Northwind サンプル データベース。 このサンプル データベースをダウンロードするには、ダウンロード ページ「 [SQL Server 用サンプル データベース](https://go.microsoft.com/fwlink/?linkid=24758)」を参照してください。
 
 ## <a name="wcf-data-services-quickstart-tasks"></a>WCF data services クイック スタートのタスク
 
  [データ サービスを作成します。](../../../../docs/framework/data/wcf/creating-the-data-service.md)
 
- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] アプリケーションの定義、データ モデルの定義、データ サービスの作成、およびリソースへのアクセスの有効化を行います。
+ ASP.NET アプリケーションの定義、データ モデルの定義、データ サービスの作成、およびリソースへのアクセスの有効化を行います。
 
  [Web ブラウザーからサービスへのアクセスします。](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)
 
@@ -45,7 +45,7 @@ ms.locfileid: "43504563"
  OData フィードの使用、Windows のコントロールにデータをバインド、バインドされたコントロールでデータを変更する WPF アプリを作成し、データ サービスにバックアップを作成、変更を送信します。
 
 > [!NOTE]
-> このクイック スタートの完全なバージョンからプロジェクト ファイルをからダウンロードできます、 [WCF Data Services ドキュメント サンプル](https://go.microsoft.com/fwlink/?LinkId=179994)ページ。
+> クイック スタートを完了したプロジェクト ファイルは、「 [WCF Data Services ドキュメントのサンプル](https://go.microsoft.com/fwlink/?LinkId=179994) 」ページからダウンロードできます。
 
 ## <a name="next-steps"></a>次の手順
 

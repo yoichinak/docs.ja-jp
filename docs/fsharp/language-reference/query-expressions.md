@@ -2,12 +2,12 @@
 title: クエリ式
 description: LINQ のクエリ式のサポートについて説明します、F#プログラミング言語。
 ms.date: 05/16/2016
-ms.openlocfilehash: e4a36305b607f573c29744f50a841be078c8061f
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: fc077bfbe25f88104e89508ef6283a5bc42eddbd
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611374"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645343"
 ---
 # <a name="query-expressions"></a>クエリ式
 
@@ -56,11 +56,11 @@ query1
 
 クエリ式では、SQL に変換できる式のみが許可されます。 たとえば、関数呼び出しは許可されません、式で使用すると、`where`クエリ演算子。
 
-表 1 は、使用できるクエリ演算子を示します。 さらに、Table2、SQL クエリと、同等 F# クエリ式では、このトピックで後述の比較を参照してください。 一部のクエリ演算子は、いくつかの型プロバイダーによってサポートされていません。 具体的には、OData 型プロバイダーは、OData の制限によりサポートされるクエリ演算子に制限されます。 詳細については、次を参照してください。 [ODataService 型プロバイダー (F#)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e)します。
+表 1 は、使用できるクエリ演算子を示します。 さらに、Table2、SQL クエリと、同等 F# クエリ式では、このトピックで後述の比較を参照してください。 一部のクエリ演算子は、いくつかの型プロバイダーによってサポートされていません。 具体的には、OData 型プロバイダーは、OData の制限によりサポートされるクエリ演算子に制限されます。 詳細については、[ODataService 型プロバイダー (F#)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e)を参照してください。
 
 このテーブルには、次の形式でデータベース前提としています。
 
-![サンプル データベースのダイアグラム](../media/StudentCourseDB.png)
+![サンプル データベースを示す図。](./media/query-expressions/student-course-database.png)
 
 続くテーブル内のコードでは、次のデータベース接続コードも前提としています。 プロジェクトには、System.Data、System.Data.Linq、FSharp.Data.TypeProviders アセンブリへの参照を追加する必要があります。 このデータベースを作成するコードは、このトピックの最後に含まれています。
 
@@ -501,9 +501,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 ## <a name="comparison-of-transact-sql-and-f-query-expressions"></a>Transact-SQL と F# のクエリ式の比較
 次の表は、F# でいくつかの一般的な TRANSACT-SQL クエリと、対応を示します。 このテーブル内のコードでは、前の表と、型プロバイダーを設定する同じ最初のコードと同じデータベースも前提としています。
 
-
 ### <a name="table-2-transact-sql-and-f-query-expressions"></a>表 2。 Transact-SQL と F# のクエリ式
-
 
 <table style="width:100%">
   <tr>
@@ -511,7 +509,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
     <th>F#クエリ式 (大文字と小文字)</th>
   </tr>
 <tr><td>
-テーブルからすべてのフィールドを選択します。</br>
+テーブルからすべてのフィールドを選択します。<br>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 </code></pre>
@@ -1010,7 +1008,7 @@ query {
     for student in db.Student do
     select
         (if student.Age.HasValue && student.Age.Value = -1 then
-             (student.StudentID, System.Nullable<int>(100), student.Age)
+             (student.StudentID, System.Nullable&lt;int&gt;(100), student.Age)
          else (student.StudentID, student.Age, student.Age))
 }
 </code></pre>
@@ -1034,9 +1032,9 @@ query {
     for student in db.Student do
     select
         (if student.Age.HasValue && student.Age.Value = -1 then
-             (student.StudentID, System.Nullable<int>(100), student.Age)
+             (student.StudentID, System.Nullable&lt;int&gt;(100), student.Age)
          elif student.Age.HasValue && student.Age.Value = 0 then
-             (student.StudentID, System.Nullable<int>(1000), student.Age)
+             (student.StudentID, System.Nullable&lt;int&gt;(1000), student.Age)
          else (student.StudentID, student.Age, student.Age))
 }
 </code></pre>
@@ -1277,7 +1275,6 @@ let num =
     }
 printfn "Last number: %d" num
 
-
 open Microsoft.FSharp.Linq
 
 printfn "\nlastOrDefault query operator."
@@ -1477,7 +1474,6 @@ query {
     select number
 }
 |> Seq.iter (fun number -> printfn "Number = %d" number)
-
 
 printfn "\n sumBy query operator"
 query {
@@ -1869,12 +1865,9 @@ query {
 ```
 --> Referenced 'C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\3.0\Runtime\v4.0\Type Providers\FSharp.Data.TypeProviders.dll'
 
-
 --> Referenced 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Data.dll'
 
-
 --> Referenced 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Data.Linq.dll'
-
 
 contains query operator
 Binding session to 'C:\Users\ghogen\AppData\Local\Temp\tmp5E3C.dll'...

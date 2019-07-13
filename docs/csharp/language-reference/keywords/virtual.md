@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-ms.openlocfilehash: eede3359b195661ff89a387e9b226bc970c27942
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 2568eed5a889f6c03e237875194b8adcb9334ef7
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612577"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401809"
 ---
 # <a name="virtual-c-reference"></a>virtual (C# リファレンス)
 
@@ -28,7 +28,7 @@ public virtual double Area()
 
 仮想メンバーの実装は、派生クラスの[オーバーライド メンバー](override.md)によって変更できます。 `virtual` キーワードの使い方について詳しくは、「[Override キーワードと New キーワードによるバージョン管理](../../programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)」および「[Override キーワードと New キーワードを使用する場合について](../../programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 仮想メソッドが呼び出されると、オブジェクトの実行時の型が、オーバーライドするメンバーに対してチェックされます。 いずれの派生クラスもメンバーをオーバーライドしなかった場合は、最派生クラスのオーバーライド メンバー (元のメンバーである可能性があります) が呼び出されます。
 
@@ -71,4 +71,4 @@ public Cylinder(double r, double h): base(r, h) {}
 - [ポリモーフィズム](../../programming-guide/classes-and-structs/polymorphism.md)
 - [abstract](abstract.md)
 - [override](override.md)
-- [new](new.md)
+- [new (修飾子)](new-modifier.md)

@@ -10,25 +10,25 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
-ms.openlocfilehash: c012eeb7ef7dad8c52b8b9a5f153582710c1fd73
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 76976f1599ecbbaf7405d7941f66aa2c5f955565
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43788166"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598953"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>スタイラスからの入力のインターセプト
 <xref:System.Windows.Input.StylusPlugIns>アーキテクチャに低レベルの制御を実装するためのメカニズムを提供する<xref:System.Windows.Input.Stylus>入力およびデジタル インクの作成<xref:System.Windows.Ink.Stroke>オブジェクト。 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>クラスがカスタム動作を実装し、最適なパフォーマンスのスタイラス デバイスからのデータのストリームに適用するためのメカニズムを提供します。  
   
  このトピックは、次の内容で構成されています。  
   
--   [アーキテクチャ](#Architecture)  
+- [アーキテクチャ](#Architecture)  
   
--   [スタイラス プラグインを実装します。](#ImplementingStylusPlugins)  
+- [スタイラス プラグインを実装します。](#ImplementingStylusPlugins)  
   
--   [InkCanvas にプラグインを追加します。](#AddingYourPluginToAnInkCanvas)  
+- [InkCanvas にプラグインを追加します。](#AddingYourPluginToAnInkCanvas)  
   
--   [まとめ](#Conclusion)  
+- [まとめ](#Conclusion)  
   
 <a name="Architecture"></a>   
 ## <a name="architecture"></a>アーキテクチャ  
@@ -47,10 +47,10 @@ ms.locfileid: "43788166"
   
  次の例で変更することで、スタイラスからの入力を制限するプラグイン、<xref:System.Windows.Input.StylusPoint.X%2A>と<xref:System.Windows.Input.StylusPoint.Y%2A>値、<xref:System.Windows.Input.StylusPoint>からデータを受信、<xref:System.Windows.Input.Stylus>デバイス。  
   
- [!code-csharp[AdvancedInkTopicsSamples#19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
- [!code-vb[AdvancedInkTopicsSamples#19](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
-[!code-csharp[AdvancedInkTopicsSamples#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#3)]
-[!code-vb[AdvancedInkTopicsSamples#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#3)]  
+ [!code-csharp[AdvancedInkTopicsSamples#19](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
+ [!code-vb[AdvancedInkTopicsSamples#19](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
+[!code-csharp[AdvancedInkTopicsSamples#3](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#3)]
+[!code-vb[AdvancedInkTopicsSamples#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#3)]  
   
 <a name="AddingYourPluginToAnInkCanvas"></a>   
 ## <a name="adding-your-plug-in-to-an-inkcanvas"></a>InkCanvas にプラグインを追加します。  
@@ -58,18 +58,19 @@ ms.locfileid: "43788166"
   
  次の例では、カスタム<xref:System.Windows.Controls.InkCanvas>手描き入力をフィルター処理します。  
   
- [!code-csharp[AdvancedInkTopicsSamples#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#4)]  
+ [!code-csharp[AdvancedInkTopicsSamples#4](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#4)]  
   
  追加する場合、`FilterInkCanvas`実行、アプリケーションを表示されます、ユーザーがストロークが完了したらインクはまでの領域に制限されています。 これは、ため、<xref:System.Windows.Controls.InkCanvas>が、<xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A>であるプロパティを<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>のメンバーであると、<xref:System.Windows.UIElement.StylusPlugIns%2A>コレクション。 カスタム<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>に追加した、<xref:System.Windows.UIElement.StylusPlugIns%2A>コレクションには、<xref:System.Windows.Input.StylusPoint>後のデータ<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>データを受信します。 結果として、<xref:System.Windows.Input.StylusPoint>ユーザーがストロークを終了するペン離した後のデータはまでフィルターされません。 ユーザーが描画と手描き入力をフィルターするに挿入する必要があります、`FilterPlugin`する前に、<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>します。  
   
  次の c# コードに示しますカスタム<xref:System.Windows.Controls.InkCanvas>描画されると、手描き入力をフィルター処理します。  
   
- [!code-csharp[AdvancedInkTopicsSamples#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#5)]  
+ [!code-csharp[AdvancedInkTopicsSamples#5](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#5)]  
   
 <a name="Conclusion"></a>   
 ## <a name="conclusion"></a>まとめ  
  独自の派生によって<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>クラスとそれらに挿入する<xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>コレクションのデジタル インクの動作を大幅に向上することができます。 アクセスがある、<xref:System.Windows.Input.StylusPoint>ほどデータの生成をカスタマイズする機会を与える、<xref:System.Windows.Input.Stylus>入力します。 このような低レベルのアクセス権があるため、<xref:System.Windows.Input.StylusPoint>データ、アプリケーションのインクの収集と最適なパフォーマンスの表示を実装することができます。  
   
-## <a name="see-also"></a>関連項目  
- [高度なインク処理](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)  
- [アクセスして、ペン入力を操作します。](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)
+## <a name="see-also"></a>関連項目
+
+- [高度なインク処理](advanced-ink-handling.md)
+- [アクセスして、ペン入力を操作します。](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - compiling source code [Visual Basic], from command line
 - Visual Basic compiler, sample command lines
 ms.assetid: 5bfbb487-5f47-4267-969a-39dfb917beeb
-ms.openlocfilehash: c4c3214c4998afa23032347e08007f2f1933bba8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0771ed41d6c58ce7cc98435b405f5819e45393db
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61916761"
 ---
 # <a name="sample-compilation-command-lines-visual-basic"></a>コンパイル コマンドラインのサンプル (Visual Basic)
 Visual Studio 内から Visual Basic プログラムをコンパイルする代わりに、実行可能ファイル (.exe) ファイルまたはダイナミック リンク ライブラリ (.dll) ファイルを生成するためにコマンドラインからコンパイルすることができます。  
@@ -22,7 +22,7 @@ Visual Studio 内から Visual Basic プログラムをコンパイルする代�
   
  次の表では、独自の用途を変更するサンプルのコマンドラインを示します。  
   
-|終了|使用|  
+|目的|用途|  
 |--------|---------|  
 |.Vb というファイルをコンパイルして File.exe を作成します。|`vbc -reference:Microsoft.VisualBasic.dll File.vb`|  
 |.Vb というファイルをコンパイルして File.dll を作成します。|`vbc -target:library File.vb`|  
@@ -35,6 +35,7 @@ Visual Studio 内から Visual Basic プログラムをコンパイルする代�
 > [!TIP]
 >  関連付けられているに関する情報を表示するには、Visual Studio IDE を使用してプロジェクトをビルドするときに**vbc**出力 ウィンドウでのコンパイラ オプションがコマンド。 この情報を表示するには、開く、[オプション ダイアログ ボックス、プロジェクトとソリューションをビルドおよび実行](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)、し、設定、 **MSBuild プロジェクト ビルドの出力の詳細**に**標準**または、詳細度の高いレベル。   
   
-## <a name="see-also"></a>関連項目  
- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)  
- [条件付きコンパイル](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+## <a name="see-also"></a>関連項目
+
+- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [条件付きコンパイル](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

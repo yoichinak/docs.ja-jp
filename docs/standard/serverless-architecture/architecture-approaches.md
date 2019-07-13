@@ -4,12 +4,12 @@ description: アーキテクチャの概要については、サーバーレス�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 04ad383586f974bb2dccc4623a9a254f5668dab4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ee529abd1f6955d4f542464dd9a2380dd663571f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126746"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638832"
 ---
 # <a name="architecture-approaches"></a>アーキテクチャのアプローチ
 
@@ -21,7 +21,7 @@ ms.locfileid: "53126746"
 
 最新のビジネスアプリケーションは、さまざまなアーキテクチャーパターンに従っています。 このセクションでは、一般的なパターンの調査を表します。 ここで示したパターンでは、必ずしもすべてのベストプラクティスはありませんが、さまざまな方法を示しています。
 
-詳細については、[Azure アプリケーション アーキテクチャ ガイド](https://docs.microsoft.com/azure/architecture/guide/)を参照してください。
+詳細については、次を参照してください。 [Azure アプリケーション アーキテクチャ ガイド](https://docs.microsoft.com/azure/architecture/guide/)します。
 
 ## <a name="monoliths"></a>モノリス
 

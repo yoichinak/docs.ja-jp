@@ -1,6 +1,6 @@
 ---
 title: C# foreach ステートメント
-ms.date: 06/29/2018
+ms.date: 05/17/2019
 f1_keywords:
 - foreach
 - foreach_CSharpKeyword
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: 417a8cefbc9bc7544ae1156992e6e6c549fb828f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: af4850b4c33727c818fb5a67d17fb6146627fa06
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128623"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267736"
 ---
 # <a name="foreach-in-c-reference"></a>foreach、in (C# リファレンス)
 
@@ -27,6 +27,8 @@ C# 7.3 以降、列挙子の `Current` プロパティが、[参照戻り値](re
 
 `foreach` ステートメント ブロック内の任意の位置で、[break](break.md) ステートメントを使ってループから抜けることができます。または、[continue](continue.md) ステートメントを使って、ループ内の次の繰り返しにスキップできます。 また、[goto](goto.md)、[return](return.md)、[throw](throw.md) ステートメントのいずれかを使って `foreach` ループを終了することもできます。
 
+`foreach` ステートメントを `null` に適用した場合、<xref:System.NullReferenceException> がスローされます。 `foreach` ステートメントのソース コレクションが空の場合、`foreach` ループの本体は実行されず、スキップされます。
+
 ## <a name="examples"></a>使用例
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
@@ -37,11 +39,11 @@ C# 7.3 以降、列挙子の `Current` プロパティが、[参照戻り値](re
 
 次の例では、何のインターフェイスも実装していない <xref:System.Span%601?displayProperty=nameWithType> 型のインスタンスを使用して、`foreach` ステートメントを使用します。
 
-[!code-csharp-interactive[span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#2)]
+[!code-csharp[span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#2)]
 
 次の例では、stackalloc 配列内の各項目の値を設定するために、`ref` 繰り返し変数を使用します。 `ref readonly` バージョンは、すべての値を出力するコレクションを反復処理します。 `readonly` 宣言では、暗黙のローカル変数宣言を使用します。 暗黙の変数宣言は、`ref` または `ref readonly` 宣言で使用でき、変数の宣言を明示的に型指定できます。
 
-[!code-csharp-interactive[ref span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#RefSpan)]
+[!code-csharp[ref span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#RefSpan)]
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
@@ -52,6 +54,5 @@ C# 7.3 以降、列挙子の `Current` プロパティが、[参照戻り値](re
 - [C# リファレンス](../index.md)
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
-- [繰り返しステートメント](iteration-statements.md)
 - [配列での foreach の使用](../../programming-guide/arrays/using-foreach-with-arrays.md)
 - [for ステートメント](for.md)

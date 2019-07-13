@@ -1,20 +1,20 @@
 ---
-title: '&lt;etwTracking&gt;'
+title: <etwTracking>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: cb45c82e-6ea1-4c4d-924c-118a25ae1f35
-ms.openlocfilehash: 6defccdd6a81a1c00a4b65fa9214c86e6cccbea2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e7614f158826e3522ac8e17d60c1ea65fefc8612
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790196"
 ---
-# <a name="ltetwtrackinggt"></a>&lt;etwTracking&gt;
-により、サービスを使用して ETW の追跡を使用するサービスの動作、<xref:System.Activities.Tracking.EtwTrackingParticipant>です。  
+# <a name="etwtracking"></a>\<etwTracking >
+サービスを使用して ETW 追跡を利用できるサービス動作、<xref:System.Activities.Tracking.EtwTrackingParticipant>します。  
   
 \<system.ServiceModel >  
-\<ビヘイビアー >  
+\<<behaviors>  
 \<serviceBehaviors>  
 \<behavior>  
 \<etwTracking >  
@@ -49,7 +49,7 @@ ms.locfileid: "32756746"
 |-------------|-----------------|  
 |[\<動作 > の\<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|動作の要素を指定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  サービスの動作構成に追加すると、この構成要素により、ワークフロー サービスの追跡参加要素が構成されます。  
   
  追跡参加要素は、ワークフローから生成される追跡データを取得し、それを別のメディアに保存するために使用します。 同様に、追跡レコードの後処理はすべて、追跡参加要素内でも実行できます。  
@@ -57,7 +57,7 @@ ms.locfileid: "32756746"
 ## <a name="example"></a>例  
  次の構成例は、Web.config ファイルで構成されている標準の ETW 追跡参加要素を示します。  
   
- 追跡レコードを ETW に書き込むため、ETW 追跡参加要素を使用するプロバイダー Id が定義されている、 **\<診断 >** セクションです。 追跡参加要素には、その要素が定期受信した追跡レコードを指定するためのプロファイルが関連付けられています。 これは、 **profileName**の属性、 **\<追加 >** 要素。 これらを定義すると、追跡参加要素に追加されます、  **\<etwTracking >** サービス動作。 これにより、選択した追跡参加要素がワークフロー インスタンスの拡張機能に追加され、追跡レコードの受信が開始されます。  
+ ETW 追跡参加要素が追跡レコードを ETW に書き込むために使用するプロバイダー Id が定義されている、 **\<診断 >** セクション。 追跡参加要素には、その要素が定期受信した追跡レコードを指定するためのプロファイルが関連付けられています。 これは、 **profileName**の属性、 **\<追加 >** 要素。 これらが定義に追跡参加要素が追加、  **\<etwTracking >** サービス動作。 これにより、選択した追跡参加要素がワークフロー インスタンスの拡張機能に追加され、追跡レコードの受信が開始されます。  
   
 ```xml  
 <configuration>   
@@ -84,8 +84,9 @@ ms.locfileid: "32756746"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>  
- <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>  
- [ワークフローの追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [追跡参加要素](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>
+- <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>
+- [ワークフローの追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [追跡参加要素](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)

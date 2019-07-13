@@ -1,22 +1,22 @@
 ---
-title: '&lt;synchronousReceive&gt; 要素'
+title: <synchronousReceive> 要素
 ms.date: 03/30/2017
 ms.assetid: cc070387-3d11-4b02-a952-bc08ad2df05a
-ms.openlocfilehash: bc89470900e50e4d3e522682b39b20e21a66b284
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 20390f747c8beaccba1cfea7a9ea0ed366037ecb
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757925"
 ---
-# <a name="ltsynchronousreceivegt-element"></a>&lt;synchronousReceive&gt; 要素
+# <a name="synchronousreceive-element"></a>\<synchronousReceive > 要素
 この構成要素は、サービスまたはクライアント アプリケーションでメッセージを受信する場合のランタイム動作を指定するために使用されます。 属性や子要素はありません。  
   
  \<system.ServiceModel >  
 \<<behaviors>  
 \<endpointBehaviors>  
 \<behavior>  
-\<synchronousReceive >  
+\<synchronousReceive>  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,6 +42,7 @@ ms.locfileid: "54147383"
 ## <a name="remarks"></a>Remarks  
  この動作を使用して、既定の非同期受信ではなく同期受信を使用するようにチャネル リスナーに指示します。 Windows Communication Foundation (WCF) は、受け入れた各チャネルに対してに新しいスレッドを発行します。 チャネルが多数ある場合は、スレッドが不足する可能性があります。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.SynchronousReceiveElement>  
- <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Configuration.SynchronousReceiveElement>
+- <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>

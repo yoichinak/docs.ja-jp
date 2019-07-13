@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3ee575cacbc51fc910770cca145a4280f97b66db
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 632d9119cf32aab66c87e345ec98c6867ed51592
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144438"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614372"
 ---
 # <a name="loadfromcontext-mda"></a>loadFromContext MDA
 アセンブリが `LoadFrom` コンテキストに読み込まれると、`loadFromContext` マネージド デバッグ アシスタント (MDA) がアクティブになります。 このような状況は、<xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> または他の同様のメソッドを呼び出した結果として発生する可能性があります。  
@@ -28,18 +28,18 @@ ms.locfileid: "53144438"
 ## <a name="resolution"></a>解像度  
  <xref:System.Reflection.Assembly.LoadFrom%2A> の呼び出しが不要になるようにアプリケーションを構成します。 そのためには、次の手法を使用できます。  
   
--   グローバル アセンブリ キャッシュにアセンブリをインストールします。  
+- グローバル アセンブリ キャッシュにアセンブリをインストールします。  
   
--   アセンブリを <xref:System.AppDomain> の <xref:System.AppDomainSetup.ApplicationBase%2A> ディレクトリに配置します。 既定のドメインの場合、<xref:System.AppDomainSetup.ApplicationBase%2A> ディレクトリは、プロセスを開始した実行可能ファイルを含むディレクトリです。 また、アセンブリを移動したくない場合は、必要に応じて新しい <xref:System.AppDomain> を作成します。  
+- アセンブリを <xref:System.AppDomain> の <xref:System.AppDomainSetup.ApplicationBase%2A> ディレクトリに配置します。 既定のドメインの場合、<xref:System.AppDomainSetup.ApplicationBase%2A> ディレクトリは、プロセスを開始した実行可能ファイルを含むディレクトリです。 また、アセンブリを移動したくない場合は、必要に応じて新しい <xref:System.AppDomain> を作成します。  
   
--   依存するアセンブリが、実行可能ファイルの相対的な子ディレクトリ内にある場合、アプリケーション構成 (.config) ファイルまたはセカンダリ アプリケーション ドメインのプローブ パスを追加します。  
+- 依存するアセンブリが、実行可能ファイルの相対的な子ディレクトリ内にある場合、アプリケーション構成 (.config) ファイルまたはセカンダリ アプリケーション ドメインのプローブ パスを追加します。  
   
  いずれの場合でも、<xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> メソッドを使用するようにコードを変更できます。  
   
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
  MDA は、CLR にまったく影響がありません。 MDA では、読み込み要求の結果として使用されたコンテキストが報告されます。  
   
-## <a name="output"></a>出力  
+## <a name="output"></a>Output  
  MDA では、アセンブリが `LoadFrom` コンテキストに読み込まれたことが報告されます。 また、アセンブリの簡易名とパスが指定されます。 `LoadFrom` コンテキストの使用を回避する軽減策も提案されます。  
   
 ## <a name="configuration"></a>構成  
@@ -72,5 +72,6 @@ namespace ConsoleApplication1
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>関連項目
+
+- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

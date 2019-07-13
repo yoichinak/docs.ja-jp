@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -vbruntime compiler option [Visual Basic]
 - /vbruntime compiler option [Visual Basic]
 ms.assetid: 1aa0239e-511a-4c29-957d-fd72877b350a
-ms.openlocfilehash: 9525eb35041d32c65563e88ad64cd17b60b2a29b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 56ea692d6e65d94c497fbc9406e03b40648c55a2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193644"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663492"
 ---
 # <a name="-vbruntime"></a>-vbruntime
 コンパイラが Visual Basic Runtime Library を参照せずにコンパイルするか、特定のランタイム ライブラリを参照してコンパイルするかを指定します。  
@@ -50,35 +50,35 @@ ms.locfileid: "50193644"
   
  次のランタイムのメンバーが埋め込まれます。  
   
--   <xref:Microsoft.VisualBasic.CompilerServices.Conversions> クラス  
+- <xref:Microsoft.VisualBasic.CompilerServices.Conversions> クラス  
   
--   <xref:Microsoft.VisualBasic.Strings.AscW%28System.Char%29> メソッド  
+- <xref:Microsoft.VisualBasic.Strings.AscW%28System.Char%29> メソッド  
   
--   <xref:Microsoft.VisualBasic.Strings.AscW%28System.String%29> メソッド  
+- <xref:Microsoft.VisualBasic.Strings.AscW%28System.String%29> メソッド  
   
--   <xref:Microsoft.VisualBasic.Strings.ChrW%28System.Int32%29> メソッド  
+- <xref:Microsoft.VisualBasic.Strings.ChrW%28System.Int32%29> メソッド  
   
--   <xref:Microsoft.VisualBasic.Constants.vbBack> 定数  
+- <xref:Microsoft.VisualBasic.Constants.vbBack> 定数  
   
--   <xref:Microsoft.VisualBasic.Constants.vbCr> 定数  
+- <xref:Microsoft.VisualBasic.Constants.vbCr> 定数  
   
--   <xref:Microsoft.VisualBasic.Constants.vbCrLf> 定数  
+- <xref:Microsoft.VisualBasic.Constants.vbCrLf> 定数  
   
--   <xref:Microsoft.VisualBasic.Constants.vbFormFeed> 定数  
+- <xref:Microsoft.VisualBasic.Constants.vbFormFeed> 定数  
   
--   <xref:Microsoft.VisualBasic.Constants.vbLf> 定数  
+- <xref:Microsoft.VisualBasic.Constants.vbLf> 定数  
   
--   <xref:Microsoft.VisualBasic.Constants.vbNewLine> 定数  
+- <xref:Microsoft.VisualBasic.Constants.vbNewLine> 定数  
   
--   <xref:Microsoft.VisualBasic.Constants.vbNullChar> 定数  
+- <xref:Microsoft.VisualBasic.Constants.vbNullChar> 定数  
   
--   <xref:Microsoft.VisualBasic.Constants.vbNullString> 定数  
+- <xref:Microsoft.VisualBasic.Constants.vbNullString> 定数  
   
--   <xref:Microsoft.VisualBasic.Constants.vbTab> 定数  
+- <xref:Microsoft.VisualBasic.Constants.vbTab> 定数  
   
--   <xref:Microsoft.VisualBasic.Constants.vbVerticalTab> 定数  
+- <xref:Microsoft.VisualBasic.Constants.vbVerticalTab> 定数  
   
--   一部のオブジェクトの`My`型  
+- 一部のオブジェクトの`My`型  
   
  使用してコンパイルする場合、`-vbruntime*`オプションと、コードは、コア機能に埋め込まれていない Visual Basic ランタイム ライブラリからメンバーを参照、コンパイラには、メンバーが使用できないことを示すエラーが返されます。  
   
@@ -94,8 +94,9 @@ ms.locfileid: "50193644"
 vbc -vbruntime:C:\VBLibraries\CustomVBLibrary.dll  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Visual Basic Core-Visual Studio 2010 SP1 での新しいコンパイル モード](https://blogs.msdn.com/b/vbteam/archive/2011/01/10/vb-core-new-compilation-mode-in-visual-studio-2010-sp1.aspx)  
- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)  
- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)
+## <a name="see-also"></a>関連項目
+
+- [Visual Basic Core-Visual Studio 2010 SP1 での新しいコンパイル モード](https://devblogs.microsoft.com/vbteam/vb-core-new-compilation-mode-in-visual-studio-2010-sp1/)
+- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)

@@ -1,10 +1,11 @@
 ---
 title: SqlChars.Stream プロパティ (System.Data.SqlTypes)
-author: douglaslMS
-ms.author: douglasl
+author: stevestein
+ms.author: sstein
 ms.date: 12/19/2018
-ms.technology:
-- dotnet-data
+ms.technology: dotnet-data
+topic_type:
+- apiref
 api_name:
 - System.Data.SqlTypes.SqlChars.Stream
 - System.Data.SqlTypes.SqlChars.get_Stream
@@ -13,12 +14,12 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: f8b6f4f3a92f1d78e434263c6a7897641867c412
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 7485f462ec19a20a4bc6989c2f1b576b0f991009
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152605"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634393"
 ---
 # <a name="sqlcharsstream-property"></a>SqlChars.Stream プロパティ
 

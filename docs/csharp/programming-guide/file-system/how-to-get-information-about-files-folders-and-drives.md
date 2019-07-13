@@ -5,25 +5,25 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
-ms.openlocfilehash: e3b0834f27fd0673687dc00b861e80752a585737
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ecf07a11b92dccee888fb8113b6f3e2f333cf591
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243960"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595330"
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>方法: ファイル、フォルダー、およびドライブに関する情報を取得する (C# プログラミング ガイド)
 .NET Framework では、次のクラスを使用して、ファイル システム情報にアクセスできます。  
   
--   <xref:System.IO.FileInfo?displayProperty=nameWithType>  
+- <xref:System.IO.FileInfo?displayProperty=nameWithType>  
   
--   <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>  
+- <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>  
   
--   <xref:System.IO.DriveInfo?displayProperty=nameWithType>  
+- <xref:System.IO.DriveInfo?displayProperty=nameWithType>  
   
--   <xref:System.IO.Directory?displayProperty=nameWithType>  
+- <xref:System.IO.Directory?displayProperty=nameWithType>  
   
--   <xref:System.IO.File?displayProperty=nameWithType>  
+- <xref:System.IO.File?displayProperty=nameWithType>  
   
  <xref:System.IO.FileInfo> クラスと <xref:System.IO.DirectoryInfo> クラスはファイルまたはディレクトリを表し、NTFS ファイル システムでサポートされるファイル属性の多くを公開するプロパティを含みます。 また、ファイルとフォルダーを開く、閉じる、移動する、および削除するためのメソッドも含まれます。 コンストラクターに、ファイル、フォルダー、またはドライブの名前を表す文字列を渡すことで、クラスのインスタンスを作成できます。  
   
@@ -38,23 +38,23 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
 ## <a name="example"></a>例  
  次の例では、ファイルとフォルダーに関する情報にアクセスするさまざまな方法を示します。  
   
- [!code-csharp[csFilesandFolders#6](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-get-information-about-files-folders-and-drives_1.cs)]  
+ [!code-csharp[csFilesandFolders#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#6)]  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  ユーザー指定のパス文字列を処理する場合、次の条件の例外も処理する必要があります。  
   
--   ファイル名が不適切である。 たとえば、無効な文字が含まれている場合や、空白のみの場合です。  
+- ファイル名が不適切である。 たとえば、無効な文字が含まれている場合や、空白のみの場合です。  
   
--   ファイル名が NULL である。  
+- ファイル名が NULL である。  
   
--   ファイル名の長さがシステムで定義された最大長を超えている。  
+- ファイル名の長さがシステムで定義された最大長を超えている。  
   
--   ファイル名にコロン (:) が含まれている。  
+- ファイル名にコロン (:) が含まれている。  
   
  指定したファイルの読み取りに必要なアクセス許可がアプリケーションに与えられていない場合、`Exists` メソッドは目的のパスが存在するかどうかに関係なく `false` を返します。ただし、例外はスローされません。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- <xref:System.IO?displayProperty=nameWithType>  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- <xref:System.IO?displayProperty=nameWithType>
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
 - [ファイル システムとレジストリ (C# プログラミング ガイド)](../../../csharp/programming-guide/file-system/index.md)

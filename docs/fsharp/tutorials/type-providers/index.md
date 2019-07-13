@@ -2,12 +2,12 @@
 title: 型プロバイダー
 description: 学習方法、F#型プロバイダーは、型、プロパティ、およびプログラムで使用するメソッドを提供するコンポーネント。
 ms.date: 04/02/2018
-ms.openlocfilehash: 39000fd1ca2af78afd1c333816fe9d5c0e2517cb
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 5fa9de229caa2ec3ba4a248ca5cd1c8aa5adb230
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611634"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645166"
 ---
 # <a name="type-providers"></a>型プロバイダー
 

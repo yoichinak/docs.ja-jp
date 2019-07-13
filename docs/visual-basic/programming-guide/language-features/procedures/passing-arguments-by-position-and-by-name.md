@@ -22,12 +22,12 @@ helpviewer_keywords:
 - argument passing [Visual Basic], by position
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
-ms.openlocfilehash: bdaa0351e288b85a3e35818c0f53ef4d772932e5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b872eda97d1e349ad781b12810e4b166d6e46fe1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791886"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>位置と名前による引数渡し (Visual Basic)
 呼び出すと、`Sub`または`Function`プロシージャの引数を渡すことができます*位置によって*: プロシージャの定義で出現する順序で-渡すことができますか*名前で*、なし配置を考慮します。  
@@ -94,12 +94,13 @@ Visual Basic 15.5 以降では、位置指定引数は、名前付き引数終�
   
 名前では、パラメーター配列を渡すことはできません。 これは、プロシージャを呼び出すときに、不特定数のパラメーター配列のコンマ区切りの引数を指定して、コンパイラは 1 つ以上の引数を 1 つの名前に関連付けることはできません。  
   
-## <a name="see-also"></a>関連項目  
- [手順](./index.md)  
- [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)  
- [操作方法：プロシージャに引数を渡す](./how-to-pass-arguments-to-a-procedure.md)  
- [引数の値渡しと参照渡し](./passing-arguments-by-value-and-by-reference.md)  
- [省略可能なパラメーター](./optional-parameters.md)  
- [パラメーター配列](./parameter-arrays.md)  
- [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)  
- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)
+## <a name="see-also"></a>関連項目
+
+- [プロシージャ](./index.md)
+- [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
+- [方法: プロシージャに引数を渡す](./how-to-pass-arguments-to-a-procedure.md)
+- [引数の値渡しと参照渡し](./passing-arguments-by-value-and-by-reference.md)
+- [省略可能なパラメーター](./optional-parameters.md)
+- [パラメーター配列](./parameter-arrays.md)
+- [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)
+- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)

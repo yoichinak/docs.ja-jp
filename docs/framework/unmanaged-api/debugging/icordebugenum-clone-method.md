@@ -17,33 +17,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da16a22c71c1fac1932f74a9af18fbc30eb326f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 965ce04b02a0eb1ca30aba065b3e372332e08b55
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410833"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752296"
 ---
 # <a name="icordebugenumclone-method"></a>ICorDebugEnum::Clone メソッド
 この ICorDebugEnum オブジェクトのコピーを作成します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Clone (  
     [out] ICorDebugEnum **ppEnum  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ppEnum`  
- [out]アドレスへのポインター、`ICorDebugEnum`のこのコピーであるオブジェクトを`ICorDebugEnum`オブジェクト。  
+ [out]アドレスへのポインター、`ICorDebugEnum`オブジェクトのこのコピーである`ICorDebugEnum`オブジェクト。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -5,12 +5,12 @@ ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: 3b8f9f124943d2092b65718f5dbf17831252a4a5
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: bce8901b4fec4386462ebaa85436b52aedc3f3bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241397"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708442"
 ---
 # <a name="contextual-keywords-c-reference"></a>コンテキスト キーワード (C# リファレンス)
 コンテキスト キーワードを使用して、コード内で特定の意味を付与することができます。ただし C# ではコンテキスト キーワードは予約語ではありません。 このセクションでは、次のコンテキスト キーワードを紹介します。  
@@ -34,8 +34,8 @@ ms.locfileid: "53241397"
   
  C# 3.0 で導入されたすべてのクエリ キーワードもコンテキスト キーワードです。 詳細については「[クエリ キーワード (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)  
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)  
+- [C# リファレンス](../../../csharp/language-reference/index.md)
+- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
 - [C# のキーワード](../../../csharp/language-reference/keywords/index.md)

@@ -1,15 +1,15 @@
 ---
-title: '&lt;transactionFlow&gt;'
+title: <transactionFlow>
 ms.date: 03/30/2017
 ms.assetid: 8c7b4c5b-ace3-4fe3-89ff-7b13c9aacd13
-ms.openlocfilehash: 6f0660ce94fdfbe1ab636aa4197ef31526c21348
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 626ae03d622221ab3e956bd03898b6cc30482c98
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758029"
 ---
-# <a name="lttransactionflowgt"></a>&lt;transactionFlow&gt;
+# <a name="transactionflow"></a>\<transactionFlow >
 カスタム バインドのトランザクション フロー サポートを指定します。  
   
  \<system.serviceModel>  
@@ -31,7 +31,7 @@ ms.locfileid: "54145797"
   
 |属性|説明|  
 |---------------|-----------------|  
-|transactionProtocol|使用されるトランザクション プロトコルを指定します。 以下の値が有効です。<br /><br /> -OleTransactions<br />-WSAtomicTransactionOctober2004<br /><br /> 既定値は OleTransactions です。<br /><br /> この属性は <xref:System.ServiceModel.TransactionProtocol> 型です。|  
+|transactionProtocol|使用されるトランザクション プロトコルを指定します。 以下の値が有効です。<br /><br /> -OleTransactions<br />-   WSAtomicTransactionOctober2004<br /><br /> 既定値は OleTransactions です。<br /><br /> この属性は <xref:System.ServiceModel.TransactionProtocol> 型です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -48,13 +48,14 @@ ms.locfileid: "54145797"
 > [!CAUTION]
 >  `OleTransactions` プロトコルを使用してエンドポイント間でトランザクションをフローさせるとき、フロー先のエンドポイントが `OleTransactions` 以外のプロトコルを使用して再びフローを試みると、トランザクション タイムアウトが失われる場合があります。 その結果、OleTransactions ホップより後のすべてのダウンレベル ノードが、予想より遅くタイムアウトする可能性があります。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Configuration.TransactionFlowElement>  
- <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [ServiceModel トランザクションの構成](../../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md)  
- [トランザクション フローの有効化](../../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)  
- [バインディング](../../../../../docs/framework/wcf/bindings.md)  
- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Configuration.TransactionFlowElement>
+- <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [ServiceModel トランザクションの構成](../../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md)
+- [トランザクション フローの有効化](../../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)
+- [バインディング](../../../../../docs/framework/wcf/bindings.md)
+- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

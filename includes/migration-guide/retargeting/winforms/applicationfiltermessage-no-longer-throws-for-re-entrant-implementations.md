@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 8a1e2ca0790cb62e3c2c879f2ba0bb169ef07d77
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804421"
+---
 ### <a name="applicationfiltermessage-no-longer-throws-for-re-entrant-implementations-of-imessagefilterprefiltermessage"></a>Application.FilterMessage は、IMessageFilter.PreFilterMessage の再入可能な実装についてスローしなくなりました
 
 |   |   |
@@ -8,4 +16,3 @@
 |Version|4.6.1|
 |型|再ターゲット中|
 |影響を受ける API|<ul><li><xref:System.Windows.Forms.Application.FilterMessage(System.Windows.Forms.Message@)?displayProperty=nameWithType></li></ul>|
-

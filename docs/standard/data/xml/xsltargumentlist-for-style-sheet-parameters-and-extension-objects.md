@@ -8,35 +8,35 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1fb973dcde1ca31a57fbc3022d3eb1c92a2a9d0f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2c9a3b43f81f00a7b6a3a0b3a8e1c102aafe0c0e
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988089"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170941"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>スタイル シート パラメーターと拡張オブジェクト用の XsltArgumentList
 <xref:System.Xml.Xsl.XsltArgumentList> クラスには、XSLT (Extensible Stylesheet Language for Transformations) パラメーターと XSLT 拡張オブジェクトが含まれています。 これらのパラメーターと拡張オブジェクトは、<xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドに渡すことで、スタイル シートから呼び出せるようになります。  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> では、<xref:System.Xml.Xsl.XsltArgumentList> クラスと [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] クラスが廃止されています。 <xref:System.Xml.Xsl.XslCompiledTransform> クラスを使用して XSLT 変換を実行できます。 詳しくは、「[XslCompiledTransform クラスの使用](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)」および「[XslTransform クラスからの移行](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)」をご覧ください。  
+>  .NET Framework 2.0 では、<xref:System.Xml.Xsl.XslTransform> クラスと <xref:System.Xml.Xsl.XsltArgumentList> クラスが廃止されています。 <xref:System.Xml.Xsl.XslCompiledTransform> クラスを使用して XSLT 変換を実行できます。 詳しくは、「[XslCompiledTransform クラスの使用](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)」および「[XslTransform クラスからの移行](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)」をご覧ください。  
   
  <xref:System.Xml.Xsl.XsltArgumentList> クラスには、XSLT パラメーターと XSLT 拡張オブジェクトが含まれています。 これらのパラメーターと拡張オブジェクトは、<xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドに渡すことで、スタイル シートから呼び出せるようになります。  
   
  埋め込みスクリプトを使用するのではなく、オブジェクトを渡す利点を次に示します。  
   
--   クラスをより効果的にカプセル化および再利用できます。  
+- クラスをより効果的にカプセル化および再利用できます。  
   
--   スタイル シートを小さくすることができ、管理が簡単になります。  
+- スタイル シートを小さくすることができ、管理が簡単になります。  
   
--   サポートされている <xref:System> 名前空間のセット内で定義されているもの以外の名前空間に属しているクラスのメソッドを呼び出すことができます。  
+- サポートされている <xref:System> 名前空間のセット内で定義されているもの以外の名前空間に属しているクラスのメソッドを呼び出すことができます。  
   
--   <xref:System.Xml.XPath.XPathNodeIterator> を使用して結果ツリー フラグメントをスタイル シートに渡す操作がサポートされます。  
+- <xref:System.Xml.XPath.XPathNodeIterator> を使用して結果ツリー フラグメントをスタイル シートに渡す操作がサポートされます。  
   
 ## <a name="xslt-style-sheet-parameters"></a>XSLT スタイル シートのパラメーター  
  XSLT パラメーターを <xref:System.Xml.Xsl.XsltArgumentList> に追加するには、<xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> メソッドを使用します。 パラメーターが追加された時点で、修飾名と名前空間 URI (Uniform Resource Identifier) がそのパラメーター オブジェクトに関連付けられます。  
   
- パラメーター オブジェクトは、W3C (World Wide Web Consortium) 型に対応している必要があります。 対応する W3C 型、それと同等の [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] のクラス (型)、および W3C 型が XPath (XML Path Language) 型または XSLT 型のどちらかを次の表に示します。  
+ パラメーター オブジェクトは、W3C (World Wide Web Consortium) 型に対応している必要があります。 対応する W3C 型、それと同等の .NET Framework のクラス (型)、および W3C 型が XPath (XML Path Language) 型または XSLT 型のどちらであるかを次の表に示します。  
   
 |W3C 型|対応する .NET Framework クラス (型)|XPath 型または XSLT 型|  
 |--------------|----------------------------------------------|-----------------------------|  
@@ -50,11 +50,11 @@ ms.locfileid: "45988089"
   
 #### <a name="to-use-the-xslt-parameter-the-user-needs-to-do-the-following"></a>XSLT パラメーターを使用するために必要な処理  
   
-1.  <xref:System.Xml.Xsl.XsltArgumentList> を作成し、<xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> を使用してオブジェクトを追加します。  
+1. <xref:System.Xml.Xsl.XsltArgumentList> を作成し、<xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> を使用してオブジェクトを追加します。  
   
-2.  スタイル シートからパラメーターを呼び出します。  
+2. スタイル シートからパラメーターを呼び出します。  
   
-3.  <xref:System.Xml.Xsl.XsltArgumentList> を <xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドに渡します。  
+3. <xref:System.Xml.Xsl.XsltArgumentList> を <xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドに渡します。  
   
 ### <a name="example"></a>例  
  算出された割引日を保持するパラメーターを <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> メソッドを使用して作成する例を次に示します。 割引日は、発注日から 20 日後として算出されます。  
@@ -171,7 +171,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### <a name="output"></a>出力  
+### <a name="output"></a>Output  
   
 ```xml  
 <order>  
@@ -191,11 +191,11 @@ public class Sample
   
 #### <a name="to-use-the-xslt-extension-object-the-user-needs-to-do-the-following"></a>XSLT 拡張オブジェクトを使用するために必要な処理  
   
-1.  <xref:System.Xml.Xsl.XsltArgumentList> を作成し、<xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> を使用して拡張オブジェクトを追加します。  
+1. <xref:System.Xml.Xsl.XsltArgumentList> を作成し、<xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> を使用して拡張オブジェクトを追加します。  
   
-2.  スタイル シートから拡張オブジェクトを呼び出します。  
+2. スタイル シートから拡張オブジェクトを呼び出します。  
   
-3.  <xref:System.Xml.Xsl.XsltArgumentList> を <xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドに渡します。  
+3. <xref:System.Xml.Xsl.XsltArgumentList> を <xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドに渡します。  
   
 ### <a name="example"></a>例  
  半径が指定された円の円周を算出する例を次に示します。  
@@ -343,7 +343,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### <a name="output"></a>出力  
+### <a name="output"></a>Output  
  `<circles xmlns:myObj="urn:myObj">`  
   
  `<circle>`  

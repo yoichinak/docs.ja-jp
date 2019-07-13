@@ -6,12 +6,12 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: 18f9920891e35517efe7adcfd4c03e03ac771478
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 616599e15c0d3d4c2177622d6820269bcff3ea39
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254742"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592799"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>宣言された要素の参照 (Visual Basic)
 宣言された要素をコードが参照されているとき、Visual Basic コンパイラはその名前の適切な宣言に、参照内の名前と一致します。 参照することはそれらの要素を制御するには 1 つ以上の要素が同じ名前で宣言されている場合*条件を満たす*の名前。  
@@ -50,7 +50,7 @@ End Module
   
 #### <a name="to-access-a-declared-element-by-qualifying-its-name"></a>その名前を修飾することによって宣言された要素にアクセスするには  
   
-1.  要素が定義されている場所を決定します。 名前空間、または名前空間の階層も可能性があります。 最下位レベルの名前空間内では、モジュール、クラスまたは構造体の要素を含める必要があります。  
+1. 要素が定義されている場所を決定します。 名前空間、または名前空間の階層も可能性があります。 最下位レベルの名前空間内では、モジュール、クラスまたは構造体の要素を含める必要があります。  
   
     ```vb  
     ' Assume the following hierarchy exists outside your code.  
@@ -66,23 +66,23 @@ End Module
     End Namespace  
     ```  
   
-2.  ターゲット要素の場所に基づく修飾パスを決定します。 最上位レベルの名前空間を持つ開始、最下位レベルの名前空間に進むし、モジュール、クラス、または対象の要素を含む構造体と終了します。 パス内の各要素には、それに続く要素を含める必要があります。  
+2. ターゲット要素の場所に基づく修飾パスを決定します。 最上位レベルの名前空間を持つ開始、最下位レベルの名前空間に進むし、モジュール、クラス、または対象の要素を含む構造体と終了します。 パス内の各要素には、それに続く要素を含める必要があります。  
   
      `outerSpace` → `innerSpace` → `holdsTotals` → `totals`  
   
-3.  ターゲット要素の修飾文字列を準備します。 ピリオドを挿入 (`.`)、パス内のすべての要素の後にします。 アプリケーション、修飾文字列内のすべての要素へのアクセスが必要です。  
+3. ターゲット要素の修飾文字列を準備します。 ピリオドを挿入 (`.`)、パス内のすべての要素の後にします。 アプリケーション、修飾文字列内のすべての要素へのアクセスが必要です。  
   
     ```vb  
     outerSpace.innerSpace.holdsTotals.totals.  
     ```  
   
-4.  式または代入ステートメントの通常の方法で、ターゲット要素に参照を記述します。  
+4. 式または代入ステートメントの通常の方法で、ターゲット要素に参照を記述します。  
   
     ```vb  
     grandTotal = 9000  
     ```  
   
-5.  修飾文字列をターゲット要素名を前します。 名前は、期間直後にする必要があります (`.`) モジュール、クラス、または、要素を含む構造体に依存しています。  
+5. 修飾文字列をターゲット要素名を前します。 名前は、期間直後にする必要があります (`.`) モジュール、クラス、または、要素を含む構造体に依存しています。  
   
     ```vb  
     ' Assume the following module is part of your code.  
@@ -93,7 +93,7 @@ End Module
     End Module  
     ```  
   
-6.  コンパイラでは、修飾文字列を使用して、ターゲット要素の参照を一致する明確であいまいさのない宣言を見つけます。  
+6. コンパイラでは、修飾文字列を使用して、ターゲット要素の参照を一致する明確であいまいさのない宣言を見つけます。  
   
  アプリケーションに同じ名前を持つ 1 つ以上のプログラミング要素へのアクセスがある場合は、名前の参照を修飾するためにもあります。 たとえば、<xref:System.Windows.Forms>と<xref:System.Web.UI.WebControls>両方名前空間が含まれて、`Label`クラス (<xref:System.Windows.Forms.Label?displayProperty=nameWithType>と<xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType>)。 アプリケーションは、両方を使用する場合、または独自に定義している場合`Label`クラス、さまざまなを区別する必要があります`Label`オブジェクト。 変数の宣言には、名前空間やインポート エイリアスを含めます。 次の例では、インポート エイリアスを使用します。  
   
@@ -152,7 +152,7 @@ End Module
 ## <a name="references-to-projects"></a>プロジェクトへの参照  
  使用する[パブリック](../../../../visual-basic/language-reference/modifiers/public.md)別のプロジェクトで定義された要素は、まず、設定、*参照*にそのプロジェクトのアセンブリやタイプ ライブラリ。 参照を設定するには、次のようにクリックします。**参照の追加**上、**プロジェクト**メニュー、または使用して、 [/reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md)コマンド ライン コンパイラ オプション。  
   
- XML オブジェクト モデルを使用するなど、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]します。 参照を設定した場合、<xref:System.Xml>名前空間宣言し、そのクラスのいずれかのように、使う<xref:System.Xml.XmlDocument>します。 次の例では<xref:System.Xml.XmlDocument>します。  
+ たとえば、.NET Framework の XML オブジェクト モデルを使用することができます。 参照を設定した場合、<xref:System.Xml>名前空間宣言し、そのクラスのいずれかのように、使う<xref:System.Xml.XmlDocument>します。 次の例では<xref:System.Xml.XmlDocument>します。  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -193,11 +193,12 @@ Dim xDoc As xD.XmlDocument
 ## <a name="shadowing"></a>シャドウ  
  2 つのプログラミング要素は、同じ名前を共有、うち 1 つが非表示できる、または*シャドウ*、もう 1 つ。 シャドウされた要素は参照できません。代わりに、コードでは、シャドウされた要素名を使用する場合、Visual Basic コンパイラに解決されますがシャドウする要素。 例を含む詳細については、次を参照してください。 [Visual Basic におけるシャドウ](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [宣言された要素の特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
- [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)  
- [変数](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
- [Imports ステートメント (.NET 名前空間および型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md)  
- [Public](../../../../visual-basic/language-reference/modifiers/public.md)
+## <a name="see-also"></a>関連項目
+
+- [宣言された要素の名前](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [宣言された要素の特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
+- [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)
+- [変数](../../../../visual-basic/programming-guide/language-features/variables/index.md)
+- [Imports ステートメント (.NET 名前空間および型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md)
+- [Public](../../../../visual-basic/language-reference/modifiers/public.md)

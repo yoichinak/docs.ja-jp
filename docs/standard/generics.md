@@ -4,16 +4,16 @@ description: 実際のデータ型をいじらずにタイプ セーフなデー
 author: kuhlenh
 ms.author: wiwagn
 ms.date: 10/09/2018
-ms.openlocfilehash: 1d1899d482738bc6cc9f638b6a74eab8d4ca70c1
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 3c1181f5be717f328ae906c6009fc8a34b904c89
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121182"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465426"
 ---
 # <a name="generic-types-overview"></a>ジェネリック型の概要
 
-開発者は、暗黙的か明示的かに関わらず、.NET では常にジェネリックを使用します。 .NET で LINQ を使用していると、<xref:System.Collections.Generic.IEnumerable%601> を操作することがあります。 または、Entity Framework を使用してデータベースと通信するための "汎用リポジトリ" のオンライン サンプルでは、ほとんどのメソッドが IQueryable<T> を返すことに気付きます。 これらの例の **T** とは何で、なぜそこにあるのでしょうか。
+開発者は、暗黙的か明示的かに関わらず、.NET では常にジェネリックを使用します。 .NET で LINQ を使用していると、<xref:System.Collections.Generic.IEnumerable%601> を操作することがあります。 または、Entity Framework を使用してデータベースと通信するための "汎用リポジトリ" のオンライン サンプルでは、ほとんどのメソッドが IQueryable\<T> を返すことに気付きます。 これらの例の **T** とは何で、なぜそこにあるのでしょうか。
 
 **ジェネリック**は、.NET Framework 2.0 で導入され、本質的に "コード テンプレート" であり、開発者は実際のデータ型をいじらずに[タイプ セーフな](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hbzz1a9a(v=vs.100))データ構造を定義できます。 たとえば、<xref:System.Collections.Generic.List%601> は[ジェネリック コレクション](xref:System.Collections.Generic)であり、`List<int>`、`List<string>`、`List<Person>` などの任意の型で宣言および使用できます。
 
@@ -68,5 +68,4 @@ Non-Generic Sort: System.Collections.ArrayList
 
 ## <a name="see-also"></a>関連項目
 
-- [C# のジェネリックの概要](https://msdn.microsoft.com/library/ms379564.aspx)
 - [ジェネリック (C# プログラミング ガイド)](../../docs/csharp/programming-guide/generics/index.md)

@@ -1,15 +1,15 @@
 ---
-title: '&lt;wsDualHttpBinding&gt; の &lt;security&gt;'
+title: <security> の <wsDualHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 869c05e7-4ebe-467d-95ab-c8f8de4e6b9e
-ms.openlocfilehash: 5759e8a3618cd959605b139577bae24c35490ea8
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c6f9e34724ccc3a0d05da3e1886b4f0bcbaae064
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670444"
 ---
-# <a name="ltsecuritygt-of-ltwsdualhttpbindinggt"></a>&lt;wsDualHttpBinding&gt; の &lt;security&gt;
+# <a name="security-of-wsdualhttpbinding"></a>\<セキュリティ > の\<wsDualHttpBinding >
 セキュリティ機能を定義、 [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)します。  
   
  \<system.ServiceModel >  
@@ -39,7 +39,7 @@ ms.locfileid: "54150215"
   
 ## <a name="mode-attribute"></a>Mode 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |なし|セキュリティを無効にします。|  
 |メッセージ|セキュリティは、SOAP メッセージ セキュリティを使用して確保されます。|  
@@ -59,11 +59,12 @@ ms.locfileid: "54150215"
 ## <a name="remarks"></a>Remarks  
  二重バインディングでは、クライアントの IP アドレスをサービスに公開します。 クライアントは、セキュリティを使用して信頼するサービスに対して接続のみを可能にする必要があります。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.WSDualHttpSecurity>  
- <xref:System.ServiceModel.BasicHttpSecurity>  
- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [バインディング](../../../../../docs/framework/wcf/bindings.md)  
- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.WSDualHttpSecurity>
+- <xref:System.ServiceModel.BasicHttpSecurity>
+- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [バインディング](../../../../../docs/framework/wcf/bindings.md)
+- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

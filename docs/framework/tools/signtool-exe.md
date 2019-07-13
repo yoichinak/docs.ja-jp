@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4cece1227b5210cf839aff0658267ae480b23b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 14207dcefe053e596052c9b94078333c1c714641
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196468"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59185576"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (署名ツール)
 署名ツールはコマンド ライン ツールで、ファイルにデジタル署名を添付し、ファイルの署名を検証し、ファイルにタイム スタンプを付けます。  
   
- このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、開発者コマンド プロンプト (または、Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
+ このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
   
  コマンド プロンプトに次のように入力します。  
   
@@ -27,7 +27,7 @@ ms.locfileid: "47196468"
 signtool [command] [options] [file_name | ...]  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
   
 |引数|説明|  
 |--------------|-----------------|  
@@ -129,7 +129,7 @@ signtool [command] [options] [file_name | ...]
 |`/hash` (`SHA1`&#124;`SHA256`)|カタログ内のファイルを検索する場合に使用するオプションのハッシュ アルゴリズムを指定します。|  
 |`/kp`|カーネル モード ドライバーの署名ポリシーを使用して検証を実行するように指定します。|  
 |`/ms`|複数の検証セマンティクスを使用します。 これは、[!INCLUDE[win8](../../../includes/win8-md.md)] 以上での [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) 呼び出しの既定の動作です。|  
-|`/o` *Version*|オペレーティング システムのバージョンでファイルを確認します。 *Version* の形式は、*PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber* です。 *PlatformID* は、<xref:System.PlatformID> 列挙メンバーの基になる値を表します。 **重要:** `/o` スイッチを使用することをお勧めします。 `/o` を指定しない場合、SignTool.exe から予期しない結果が返されることがあります。 たとえば、`/o` スイッチを含めない場合、古いオペレーティング システム上で正しく検証されるシステム カタログが新しいオペレーティング システムで正しく検証されないことがあります。|  
+|`/o` *Version*|オペレーティング システムのバージョンでファイルを確認します。 *バージョン*の書式は、*PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber* になります。 *PlatformID* は、<xref:System.PlatformID> 列挙メンバーの基になる値を表します。 **重要:** `/o` スイッチを使用することをお勧めします。 `/o` を指定しない場合、SignTool.exe から予期しない結果が返されることがあります。 たとえば、`/o` スイッチを含めない場合、古いオペレーティング システム上で正しく検証されるシステム カタログが新しいオペレーティング システムで正しく検証されないことがあります。|  
 |`/p7`|PKCS #7 ファイルを確認します。 PKCS #7 検証で既存のポリシーは使用されません。 署名がチェックされ、署名証明書のチェーンがビルドされます。|  
 |`/pa`|既定の Authenticode 検証ポリシーを使用するように指定します。 `/pa` オプションが指定されていない場合、署名ツールは Windows ドライバー検証ポリシーを使用します。 このオプションは、`catdb` オプションと一緒に使用することはできません。|  
 |`/pg` *PolicyGUID*|GUID により検証ポリシーを指定します。 *PolicyGUID* は検証ポリシーの ActionID に対応しています。 このオプションは、`catdb` オプションと一緒に使用することはできません。|  
@@ -209,6 +209,7 @@ signtool verify /a SystemFile.dll
 signtool verify /c MyCatalog.cat SystemFile.dll  
 ```  
   
-## <a name="see-also"></a>参照  
- [ツール](../../../docs/framework/tools/index.md)  
- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>関連項目
+
+- [ツール](../../../docs/framework/tools/index.md)
+- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

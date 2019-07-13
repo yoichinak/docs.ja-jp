@@ -1,22 +1,22 @@
 ---
-title: '方法: 2 つのフォルダー (LINQ) (Visual Basic) の内容の比較'
+title: '方法: 2 つのフォルダー (LINQ) (Visual Basic) の内容を比較します。'
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
-ms.openlocfilehash: 02f05f540afb9dcb398cc63a16f0fbbb80a7f4cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75283faf25e7a26055b1122eb45e23c510fc6b39
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643914"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593008"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>方法: 2 つのフォルダー (LINQ) (Visual Basic) の内容の比較
+# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>方法: 2 つのフォルダー (LINQ) (Visual Basic) の内容を比較します。
 この例では、2 つのファイル リストを比較する 3 つの方法を示します。  
   
--   2 つのファイル リストが同一であるかどうかを指定するブール値をクエリする方法  
+- 2 つのファイル リストが同一であるかどうかを指定するブール値をクエリする方法  
   
--   両方のフォルダー内にあるファイルを取得するために、共通部分をクエリする方法  
+- 両方のフォルダー内にあるファイルを取得するために、共通部分をクエリする方法  
   
--   1 つのフォルダーにあり、もう 1 つのフォルダーにはないファイルを取得するために、差集合をクエリする方法  
+- 1 つのフォルダーにあり、もう 1 つのフォルダーにはないファイルを取得するために、差集合をクエリする方法  
   
     > [!NOTE]
     >  ここに示す方法は、任意の型のオブジェクトのシーケンスを比較するために適用させることができます。  
@@ -114,8 +114,9 @@ End Module
 ```  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- .NET Framework Version 3.5 以降を対象とするプロジェクトを作成します。System.Core.dll および System.Linq 名前空間の `Imports` ステートメントを参照設定します。  
-  
-## <a name="see-also"></a>関連項目  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
- [LINQ とファイル ディレクトリ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+ VB.NET コンソール アプリケーション プロジェクトを作成、 `Imports` System.Linq 名前空間のステートメント。
+ 
+## <a name="see-also"></a>関連項目
+
+- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ とファイル ディレクトリ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

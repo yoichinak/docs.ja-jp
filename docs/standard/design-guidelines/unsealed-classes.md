@@ -8,12 +8,12 @@ helpviewer_keywords:
 - inheritance, classes
 ms.assetid: 9a3bd505-90f5-4053-9f0d-3cf5fa3d3ebf
 author: KrzysztofCwalina
-ms.openlocfilehash: 8d7b1500506ec73a0d33d5352756cb85039358e5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d7174de7ddf062b829672e04952c1010fcb74058
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778795"
 ---
 # <a name="unsealed-classes"></a>シールされていないクラス
 シール クラスから継承することはできませんし、機能拡張は、します。 これに対し、封印されていないクラスから継承できるクラスと呼びます。  
@@ -30,6 +30,6 @@ ms.locfileid: "53153229"
   
 ## <a name="see-also"></a>関連項目
 
-- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)  
-- [機能拡張のデザイン](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)
+- [機能拡張のデザイン](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
 - [シール](../../../docs/standard/design-guidelines/sealing.md)

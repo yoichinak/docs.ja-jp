@@ -1,5 +1,5 @@
 ---
-title: '方法 : Point4D 構造体が等価かどうかをテストする'
+title: '方法: Point4D 構造体が等価かどうかをテストする'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inequality [WPF], testing Point4D structures for
@@ -9,22 +9,23 @@ helpviewer_keywords:
 - testing [WPF], Point4D structures for inequality
 - Point4D structures [WPF], testing for equality
 ms.assetid: e004a67e-db7f-4af8-a31f-e6b2a44ccf34
-ms.openlocfilehash: 1ec844c8fb0aceaaec6030c2e9d5cb30cf984f43
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ce1188e99ef2b0682427cc2e227aaccd27f7c4f4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33559815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050637"
 ---
-# <a name="how-to-test-point4d-structures-for-equality-and-inequality"></a>方法 : Point4D 構造体が等価かどうかをテストする
-この例をテストする方法を示しています。<xref:System.Windows.Media.Media3D.Point4D>等値演算子および非等値の構造体。  
+# <a name="how-to-test-point4d-structures-for-equality-and-inequality"></a>方法: Point4D 構造体が等価かどうかをテストする
+この例は、テストする方法を示しています。<xref:System.Windows.Media.Media3D.Point4D>構造体が等しいかどうか。  
   
- 次のコードをテストする方法を示しています。<xref:System.Windows.Media.Media3D.Point4D>構造の等値演算子および非等値を使用して、<xref:System.Windows.Media.Media3D.Point4D>等しいかどうかの方法です。  <xref:System.Windows.Media.Media3D.Point4D>構造があるオーバー ロードされた等しいかどうかを使用する等値テスト (`==`) 演算子をオーバー ロードされた非等値を使用して非等値を (`!=`) 演算子、および最後に、<xref:System.Windows.Media.Media3D.Point3D>構造と<xref:System.Windows.Media.Media3D.Point4D>使用して、静的等値の構造がチェックされます<xref:System.Windows.Media.Media3D.Point4D.Equals%2A>メソッドです。  
+ 次のコードをテストする方法を示しています。<xref:System.Windows.Media.Media3D.Point4D>構造体が等しいかどうかと非等値を使用して、<xref:System.Windows.Media.Media3D.Point4D>等しいかどうかの方法です。  <xref:System.Windows.Media.Media3D.Point4D>オーバー ロードされた等値を使用して等しいかどうかの構造を検査 (`==`) 演算子をオーバー ロードされた不等値を使用して非等値の (`!=`) 演算子、および最後に、<xref:System.Windows.Media.Media3D.Point3D>構造と<xref:System.Windows.Media.Media3D.Point4D>構造体は、静的 using に等しいかどうかチェックされます<xref:System.Windows.Media.Media3D.Point4D.Equals%2A>メソッド。  
   
 ## <a name="example"></a>例  
- [!code-csharp[3DGallery_procedural_snip#Point4DEqualityExample_csharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/Misc3DOperationsExample.cs#point4dequalityexample_csharp)]  
+ [!code-csharp[3DGallery_procedural_snip#Point4DEqualityExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/Misc3DOperationsExample.cs#point4dequalityexample_csharp)]  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Media.Media3D.Point4D.op_Equality%2A>  
- <xref:System.Windows.Media.Media3D.Point4D.op_Inequality%2A>  
- <xref:System.Windows.Media.Media3D.Point4D.Equals%2A>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Media.Media3D.Point4D.op_Equality%2A>
+- <xref:System.Windows.Media.Media3D.Point4D.op_Inequality%2A>
+- <xref:System.Windows.Media.Media3D.Point4D.Equals%2A>

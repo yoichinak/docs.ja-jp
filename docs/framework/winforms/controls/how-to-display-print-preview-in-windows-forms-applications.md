@@ -1,5 +1,5 @@
 ---
-title: '方法 : Windows フォーム アプリケーションに印刷プレビューを表示する'
+title: '方法: Windows フォーム アプリケーションに印刷プレビューを表示する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,30 +10,30 @@ helpviewer_keywords:
 - printing [Windows Forms], print preview
 - examples [Windows Forms], print preview
 ms.assetid: e394134c-0886-4517-bd8d-edc4a3749eb5
-ms.openlocfilehash: 1c1291ea675d823fab3052b0fa365cb2d4c31088
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9efccc220bb27706448ae555db8958afb0ccd9fa
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532809"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053604"
 ---
-# <a name="how-to-display-print-preview-in-windows-forms-applications"></a>方法 : Windows フォーム アプリケーションに印刷プレビューを表示する
-使用することができます、<xref:System.Windows.Forms.PrintPreviewDialog>を印刷する前に多くの場合、ドキュメントを表示するユーザーを有効にするコントロール。  
+# <a name="how-to-display-print-preview-in-windows-forms-applications"></a>方法: Windows フォーム アプリケーションに印刷プレビューを表示する
+使用することができます、<xref:System.Windows.Forms.PrintPreviewDialog>印刷する前に多くの場合、ドキュメントを表示するユーザーを有効にするコントロール。  
   
- これを行うには、インスタンスを指定する必要があります、<xref:System.Drawing.Printing.PrintDocument>クラスです。 これは、印刷するドキュメントです。 印刷プレビューでの使用の詳細については、<xref:System.Drawing.Printing.PrintDocument>コンポーネントを参照してください[する方法: Windows フォームを使用して印刷プレビューで印刷](../../../../docs/framework/winforms/advanced/how-to-print-in-windows-forms-using-print-preview.md)です。  
+ これを行うには、インスタンスを指定する必要があります、<xref:System.Drawing.Printing.PrintDocument>クラスです。 これは、印刷するドキュメント。 印刷プレビューでの使用の詳細については、<xref:System.Drawing.Printing.PrintDocument>コンポーネントを参照してください[方法。印刷プレビューを使用して Windows フォームにおける印刷](../advanced/how-to-print-in-windows-forms-using-print-preview.md)します。  
   
 > [!NOTE]
->  使用する、<xref:System.Windows.Forms.PrintPreviewDialog>制御、実行時にユーザーが必要ローカルまたはネットワークを介して、自分のコンピューターにインストールされているプリンターは部分的方法、<xref:System.Windows.Forms.PrintPreviewDialog>コンポーネントは、印刷されたときに、ドキュメントがどのように表示されるかを決定します。  
+>  使用する、<xref:System.Windows.Forms.PrintPreviewDialog>コントロール、実行時にユーザーが必要ローカルまたはネットワークを介してコンピューターにインストールされているプリンターは部分的方法、<xref:System.Windows.Forms.PrintPreviewDialog>コンポーネントは、印刷時にドキュメントがどのように表示されるかを決定します。  
   
- <xref:System.Windows.Forms.PrintPreviewDialog>コントロール、<xref:System.Drawing.Printing.PrinterSettings>クラスです。 さらに、<xref:System.Windows.Forms.PrintPreviewDialog>コントロール、<xref:System.Drawing.Printing.PageSettings>クラスと同様に、<xref:System.Windows.Forms.PrintPreviewDialog>はコンポーネントです。 指定した印刷ドキュメント、<xref:System.Windows.Forms.PrintPreviewDialog>コントロールの<xref:System.Windows.Forms.PrintPreviewControl.Document%2A>プロパティが両方のインスタンスを指す、<xref:System.Drawing.Printing.PrinterSettings>と<xref:System.Drawing.Printing.PageSettings>クラス、およびこれらは、プレビュー ウィンドウ内のドキュメントを表示するために使用します。  
+ <xref:System.Windows.Forms.PrintPreviewDialog>コントロール、<xref:System.Drawing.Printing.PrinterSettings>クラス。 さらに、<xref:System.Windows.Forms.PrintPreviewDialog>コントロール、<xref:System.Drawing.Printing.PageSettings>クラスと同様、<xref:System.Windows.Forms.PrintPreviewDialog>はコンポーネント。 指定された印刷ドキュメント、<xref:System.Windows.Forms.PrintPreviewDialog>コントロールの<xref:System.Windows.Forms.PrintPreviewControl.Document%2A>プロパティが両方のインスタンスを指す、<xref:System.Drawing.Printing.PrinterSettings>と<xref:System.Drawing.Printing.PageSettings>クラス、およびこれらがプレビュー ウィンドウにドキュメントを表示するために使用します。  
   
 ### <a name="to-view-pages-using-the-printpreviewdialog-control"></a>PrintPreviewDialog コントロールを使用してページを表示するには  
   
--   <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> メソッドを使用してダイアログ ボックスを表示し、使用する <xref:System.Drawing.Printing.PrintDocument> を指定します。  
+- <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> メソッドを使用してダイアログ ボックスを表示し、使用する <xref:System.Drawing.Printing.PrintDocument> を指定します。  
   
-     次のコード例では、<xref:System.Windows.Forms.Button>コントロールの<xref:System.Windows.Forms.Control.Click>イベント ハンドラーのインスタンスを開き、<xref:System.Windows.Forms.PrintPreviewDialog>コントロール。 印刷ドキュメントがで指定された、<xref:System.Windows.Forms.PrintDialog.Document%2A>プロパティです。 次の例では、印刷ドキュメントが指定されていません。  
+     次のコード例で、<xref:System.Windows.Forms.Button>コントロールの<xref:System.Windows.Forms.Control.Click>イベント ハンドラーのインスタンスを開き、<xref:System.Windows.Forms.PrintPreviewDialog>コントロール。 印刷ドキュメントがで指定された、<xref:System.Windows.Forms.PrintDialog.Document%2A>プロパティ。 次の例では、印刷ドキュメントは指定されません。  
   
-     この例では、フォームがある必要があります、<xref:System.Windows.Forms.Button>コントロール、<xref:System.Drawing.Printing.PrintDocument>という名前のコンポーネント`myDocument`、および<xref:System.Windows.Forms.PrintPreviewDialog>コントロール。  
+     この例で、フォームに、<xref:System.Windows.Forms.Button>コントロール、<xref:System.Drawing.Printing.PrintDocument>という名前のコンポーネント`myDocument`と<xref:System.Windows.Forms.PrintPreviewDialog>コントロール。  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -70,7 +70,7 @@ ms.locfileid: "33532809"
        }  
     ```  
   
-     (Visual C# の場合、 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)])、イベント ハンドラーを登録するフォームのコンス トラクターに次のコードを追加します。  
+     (Visual C#、Visual C)イベント ハンドラーを登録するフォームのコンス トラクターでは、次のコードを配置します。  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
@@ -81,8 +81,9 @@ ms.locfileid: "33532809"
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>関連項目  
- [PrintDocument コンポーネント](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)  
- [PrintPreviewDialog コントロール](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
- [Windows フォームにおける印刷のサポート](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)  
- [Windows フォーム](../../../../docs/framework/winforms/index.md)
+## <a name="see-also"></a>関連項目
+
+- [PrintDocument コンポーネント](printdocument-component-windows-forms.md)
+- [PrintPreviewDialog コントロール](printpreviewdialog-control-windows-forms.md)
+- [Windows フォームにおける印刷のサポート](../advanced/windows-forms-print-support.md)
+- [Windows フォーム](../index.md)

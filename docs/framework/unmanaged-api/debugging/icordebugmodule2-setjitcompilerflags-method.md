@@ -17,40 +17,40 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e605859a3049abc0c17d9d6792ade78f4ad2bd78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 114f4ff261d9612a81d17bf5b3df2f87323f77f2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417363"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764205"
 ---
 # <a name="icordebugmodule2setjitcompilerflags-method"></a>ICorDebugModule2::SetJITCompilerFlags メソッド
 この ICorDebugModule2 の・ イン タイム (JIT) コンパイルを制御するフラグを設定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetJITCompilerFlags (  
     [in] DWORD dwFlags  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `dwFlags`  
  [in]ビットごとの組み合わせ、 [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md)列挙値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  場合、`dwFlags`値が有効で、`SetJITCompilerFlags`メソッドは失敗します。  
   
- `SetJITCompilerFlags`メソッド内からのみ呼び出すことができます、 [icordebugmanagedcallback::loadmodule](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadmodule-method.md)このモジュールのコールバック。 後の呼び出しを行う、`ICorDebugManagedCallback::LoadModule`コールバックにが配信されて失敗します。  
+ `SetJITCompilerFlags`メソッド内からのみ呼び出すことができます、 [icordebugmanagedcallback::loadmodule](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadmodule-method.md)このモジュールのコールバック。 後の呼び出しを行う、`ICorDebugManagedCallback::LoadModule`コールバック配信されたが失敗します。  
   
- エディット コンティニュは 64 ビット プラットフォームまたは Win9x プラットフォームでサポートされていません。 そのため、呼び出す場合、`SetJITCompilerFlags`これら 2 つのプラットフォームで設定 CORDEBUG_JIT_ENABLE_ENC フラグのいずれかのメソッド`dwFlags`、`SetJITCompilerFlags`エディット コンティニュなどには、メソッドおよびすべてのメソッドを特定[ICorDebugModule2:。ApplyChanges](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md)は失敗します。  
+ 64 ビット プラットフォームまたは Win9x プラットフォームでは、エディット コンティニュはサポートされていません。 そのため、呼び出す場合、 `SetJITCompilerFlags` CORDEBUG_JIT_ENABLE_ENC フラグで設定を使用してこれら 2 つのプラットフォームのいずれかのメソッド`dwFlags`、`SetJITCompilerFlags`メソッドと特定のすべてのメソッドの編集し、続行などを[ICorDebugModule2:。ApplyChanges](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md)は失敗します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

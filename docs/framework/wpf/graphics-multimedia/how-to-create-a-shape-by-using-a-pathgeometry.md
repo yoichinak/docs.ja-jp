@@ -1,36 +1,37 @@
 ---
-title: '方法 : PathGeometry を使用して図形を作成する'
+title: '方法: PathGeometry を使用して図形を作成する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - shapes [WPF], creating with PathGeometry class
 - graphics [WPF], shapes
 ms.assetid: 49a4a8b7-e738-45be-8dac-b54a6d8f5b21
-ms.openlocfilehash: 4c9cd7a1af921a0a547c7dec3afc5f69b29e6aed
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b0ab703596612524881ab892a1095b0f49cd1551
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904315"
 ---
-# <a name="how-to-create-a-shape-by-using-a-pathgeometry"></a>方法 : PathGeometry を使用して図形を作成する
+# <a name="how-to-create-a-shape-by-using-a-pathgeometry"></a>方法: PathGeometry を使用して図形を作成する
 この例を使用して図形を作成する方法を示しています、<xref:System.Windows.Media.PathGeometry>クラス。 <xref:System.Windows.Media.PathGeometry> オブジェクトが 1 つまたは複数で構成される<xref:System.Windows.Media.PathFigure>オブジェクト。 各<xref:System.Windows.Media.PathFigure>異なる"図"または図形を表します。 各<xref:System.Windows.Media.PathFigure>自体は 1 つ以上ので構成されます<xref:System.Windows.Media.PathSegment>それぞれ図や図形の接続されている部分を表すオブジェクトします。 セグメントの種類<xref:System.Windows.Media.LineSegment>、 <xref:System.Windows.Media.ArcSegment>、および<xref:System.Windows.Media.BezierSegment>します。  
   
 ## <a name="example"></a>例  
  次の例では、<xref:System.Windows.Media.PathGeometry>三角形が作成されます。 <xref:System.Windows.Media.PathGeometry>を使用して表示される、<xref:System.Windows.Shapes.Path>要素。  
   
- [!code-xaml[GeometrySample#49](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/pathgeometryexample.xaml#49)]  
+ [!code-xaml[GeometrySample#49](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/pathgeometryexample.xaml#49)]  
   
  前の例で作成した図を次に示します。  
   
- ![PathGeometry](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-pathgeometry-triangle.gif "wcpsdk_graphicsmm_pathgeometry_triangle")  
+ ![PathGeometry](./media/wcpsdk-graphicsmm-pathgeometry-triangle.gif "wcpsdk_graphicsmm_pathgeometry_triangle")  
 PathGeometry で作成された三角形  
   
- 前の例では、比較的単純な図形、三角形を作成する方法を示しました。 A<xref:System.Windows.Media.PathGeometry>円弧、曲線などのより複雑な図形を作成できます。 例については、次を参照してください。[楕円の円弧を作成する](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)、 [3 次ベジエ曲線を作成](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)、および[2 次ベジエ曲線を作成する](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)します。  
+ 前の例では、比較的単純な図形、三角形を作成する方法を示しました。 A<xref:System.Windows.Media.PathGeometry>円弧、曲線などのより複雑な図形を作成できます。 例については、次を参照してください。[楕円の円弧を作成する](how-to-create-an-elliptical-arc.md)、 [3 次ベジエ曲線を作成](how-to-create-a-cubic-bezier-curve.md)、および[2 次ベジエ曲線を作成する](how-to-create-a-quadratic-bezier-curve.md)します。  
   
  この例は、より大きなサンプルの一部です。完全なサンプルについては、「[ジオメトリのサンプル](https://go.microsoft.com/fwlink/?LinkID=159989)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Shapes.Path>  
- <xref:System.Windows.Media.GeometryDrawing>  
- [ジオメトリの概要](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [ジオメトリのサンプル](https://go.microsoft.com/fwlink/?LinkID=159989)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Shapes.Path>
+- <xref:System.Windows.Media.GeometryDrawing>
+- [ジオメトリの概要](geometry-overview.md)
+- [ジオメトリのサンプル](https://go.microsoft.com/fwlink/?LinkID=159989)

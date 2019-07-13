@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9d4b27ca0bf454b42f15b849008e5a3019bb09a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 21fc34add4038d25d60e4728847e0d84914a14e3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402192"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739418"
 ---
 # <a name="coreclrdebugprocinfo-structure"></a>CoreClrDebugProcInfo 構造体
 リモート コンピューターで実行されているプロセスを表します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 struct  CoreClrDebugProcInfo {  
     DWORD m_dwPID;  
     DWORD m_dwInternalID;  
@@ -46,8 +46,8 @@ struct  CoreClrDebugProcInfo {
 |`m_dwInternalID`|対象のコンピューターで実行されているリモート デバッグ プロキシによって割り当てられたプロセス識別子。 この識別子は OS 識別子よりも少ない頻度で再利用されます。|  
 |`m_wszName`|プロセスのコマンド ライン。 このメンバーは切り詰められる場合があります。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CoreClrRemoteDebuggingInterfaces.h  
   

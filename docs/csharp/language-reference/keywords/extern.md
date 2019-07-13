@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DllImport attribute
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
-ms.openlocfilehash: 89c5ec7713c6420060310b5df90acec0cc3b088b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: edc513a31d348dc685ce70aa8e63577473e47d97
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237871"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755891"
 ---
 # <a name="extern-c-reference"></a>extern (C# リファレンス)
 
@@ -43,46 +43,46 @@ extern キーワードの C# での用法は、C++ の場合よりも制限さ�
 
 1. 次の C ファイルを作成し、`cmdll.c` という名前を付けます。
 
-```c
-// cmdll.c
-// Compile with: -LD
-int __declspec(dllexport) SampleMethod(int i)
-{
-  return i*10;
-}
-```
+    ```c
+    // cmdll.c
+    // Compile with: -LD
+    int __declspec(dllexport) SampleMethod(int i)
+    {
+      return i*10;
+    }
+    ```
 
 2. Visual Studio のインストール ディレクトリから Visual Studio x64 (または x32) Native Tools コマンド プロンプト ウィンドウを開き、コマンド プロンプトで「**cl -LD cmdll.c**」と入力して、`cmdll.c` ファイルをコンパイルします。
 
 3. 同じディレクトリに、次の C# ファイルを作成し、`cm.cs` という名前を付けます。
 
-```csharp
-// cm.cs
-using System;
-using System.Runtime.InteropServices;
-public class MainClass
-{
-    [DllImport("Cmdll.dll")]
-      public static extern int SampleMethod(int x);
-
-    static void Main()
+    ```csharp
+    // cm.cs
+    using System;
+    using System.Runtime.InteropServices;
+    public class MainClass
     {
-        Console.WriteLine("SampleMethod() returns {0}.", SampleMethod(5));
+        [DllImport("Cmdll.dll")]
+          public static extern int SampleMethod(int x);
+
+        static void Main()
+        {
+            Console.WriteLine("SampleMethod() returns {0}.", SampleMethod(5));
+        }
     }
-}
-```
+    ```
 
 4. Visual Studio のインストール ディレクトリから Visual Studio x64 (または x32) Native Tools コマンド プロンプト ウィンドウを開き、次のように入力して `cm.cs` ファイルをコンパイルします。
 
-> **csc cm.cs** (x64 コマンド プロンプトの場合) または **csc -platform:x86 cm.cs** (x32 コマンド プロンプトの場合)
+    > **csc cm.cs** (x64 コマンド プロンプトの場合) または **csc -platform:x86 cm.cs** (x32 コマンド プロンプトの場合)
 
-これで、実行可能ファイル `cm.exe` が作成されます。
+    これで、実行可能ファイル `cm.exe` が作成されます。
 
 5. `cm.exe` を実行します。 `SampleMethod` メソッドは、DLL ファイルに値 5 を渡します。DLL は 10 で乗算した値を返します。  このプログラムの出力は、次のようになります。
 
-```
-SampleMethod() returns 50.
-```
+    ```
+    SampleMethod() returns 50.
+    ```
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
@@ -90,8 +90,8 @@ SampleMethod() returns 50.
 
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=nameWithType>  
-- [C# リファレンス](../index.md)  
-- [C# プログラミング ガイド](../../programming-guide/index.md)  
-- [C# のキーワード](index.md)  
-- [修飾子](modifiers.md)  
+- <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=nameWithType>
+- [C# リファレンス](../index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# のキーワード](index.md)
+- [修飾子](modifiers.md)

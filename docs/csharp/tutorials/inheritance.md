@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 1938876bcf72fccd7582ede332d052fb3d759395
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: 644e0bb281525fad12e263b31263bb9caba149f0
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656194"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463814"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# と .NET での継承
 
@@ -61,7 +61,7 @@ C# と .NET は*単一継承*のみをサポートしています。 つまり�
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
 
-派生クラスはまた、代替実装を行うことにより、継承されたメンバーを*オーバーライド*することができます。 メンバーをオーバーライドするためには、基底クラスのメンバーは [virtual](../language-reference/keywords/virtual.md) のキーワードでマークされている必要があります。 既定では基底クラスのメンバーは `virtual` としてマークされていないので、オーバーライドすることはできません。 次の例のように、非仮想メンバーをオーバーライドしようとすると、コンパイラ エラー CS0506 "<member> cannot override inherited member <member> because it is not marked virtual, abstract, or override." ("継承されたメンバー member が virtual、abstract、または override でマークされていないため、member でオーバーライドすることができません") が生成されます。
+派生クラスはまた、代替実装を行うことにより、継承されたメンバーを*オーバーライド*することができます。 メンバーをオーバーライドするためには、基底クラスのメンバーは [virtual](../language-reference/keywords/virtual.md) のキーワードでマークされている必要があります。 既定では基底クラスのメンバーは `virtual` としてマークされていないので、オーバーライドすることはできません。 次の例のように、非仮想メンバーをオーバーライドしようとすると、コンパイラ エラー CS0506 "\<member> cannot override inherited member \<member>" ("継承されたメンバー <member> が virtual、abstract、または override でマークされていないため、<member> でオーバーライドすることができません") が生成されます。
 
 ```csharp
 public class A
@@ -81,7 +81,7 @@ public class B : A
 }
 ```
 
-場合によっては、派生クラスは基底クラスの実装をオーバーライドする*必要があります*。 [abstract](../language-reference/keywords/abstract.md) キーワードでマークされた基底クラスのメンバーは、派生クラスによってオーバーライドされる必要があります。 次の例をコンパイルしようとすると、コンパイラ エラー CS0534 "<class> does not implement inherited abstract member <member>" ("class は継承抽象メンバー member を実装しません") が生成されます。これは、クラス `B` が `A.Method1` の実装を提供していないためです。
+場合によっては、派生クラスは基底クラスの実装をオーバーライドする*必要があります*。 [abstract](../language-reference/keywords/abstract.md) キーワードでマークされた基底クラスのメンバーは、派生クラスによってオーバーライドされる必要があります。 次の例をコンパイルしようとすると、コンパイラ エラー CS0534 (「&lt;クラス&gt; は継承抽象メンバー &lt;メンバー&gt; を実装しません。」) が生成されます。これは、クラス `B` が `A.Method1` の実装を提供していないためです。
 
 ```csharp
 public abstract class A
@@ -194,7 +194,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
  `Publication` クラスには `abstract` メソッドはありませんが、クラス自体が `abstract` になります。
 
-- 派生クラスが継承階層内の最後のクラスを表していて、それ自体が追加の派生クラスの基底クラスとして使用できないかどうか。 既定では、どのクラスも基底クラスとして使用できます。 [sealed](../language-reference/keywords/sealed.md) キーワードを適用すると、クラスが追加クラスの基底クラスとして使用できないことを示すことができます。 sealed クラスからの派生を試みると、コンパイラ エラー CS0509 "cannot derive from sealed type <typeName>" ("シール型 typeName から派生することができません") が生成されます。
+- 派生クラスが継承階層内の最後のクラスを表していて、それ自体が追加の派生クラスの基底クラスとして使用できないかどうか。 既定では、どのクラスも基底クラスとして使用できます。 [sealed](../language-reference/keywords/sealed.md) キーワードを適用すると、クラスが追加クラスの基底クラスとして使用できないことを示すことができます。 sealed クラスからの派生を試みると、コンパイラ エラー CS0509 "cannot derive from sealed type \<typeName>" ("シール型 typeName から派生することができません") が生成されます。
 
   この例では、派生クラスを `sealed` としてマークします。
 
@@ -296,7 +296,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 
-## <a name="see-also"></a>「
+## <a name="see-also"></a>関連項目
 
-- [クラスとオブジェクト](../tour-of-csharp/classes-and-objects.md)   
+- [クラスとオブジェクト](../tour-of-csharp/classes-and-objects.md)
 - [継承 (C# プログラミング ガイド)](../programming-guide/classes-and-structs/inheritance.md)

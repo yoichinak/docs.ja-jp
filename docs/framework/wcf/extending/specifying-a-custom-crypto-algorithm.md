@@ -2,21 +2,21 @@
 title: カスタム暗号アルゴリズムの指定
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: d8fb22daac66c3ef80f148db03703fc5024d3438
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b365c3c8e74adcad03246a227d6593c49f8b3993
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768707"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>カスタム暗号アルゴリズムの指定
 WCF では、データの暗号化やデジタル署名の計算を行う際に使用するカスタム暗号アルゴリズムを指定できます。 そのためには、次の手順に従います。  
   
-1.  <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> の派生クラスを作成します。  
+1. <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> の派生クラスを作成します。  
   
-2.  アルゴリズムを登録します。  
+2. アルゴリズムを登録します。  
   
-3.  <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> の派生クラスを使用してバインディングを構成します。  
+3. <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> の派生クラスを使用してバインディングを構成します。  
   
 ## <a name="derive-a-class-from-securityalgorithmsuite"></a>SecurityAlgorithmSuite の派生クラスの作成  
  <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> は、セキュリティ関連のさまざまな操作を実行する際に使用するアルゴリズムを指定できるようにする抽象基本クラスです。 たとえば、デジタル署名のハッシュ計算やメッセージの暗号化などの操作です。 次のコードは、<xref:System.ServiceModel.Security.SecurityAlgorithmSuite> から派生クラスを作成する方法を示しています。  
@@ -105,7 +105,7 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 </configuration>  
 ```  
   
- 下のセクションで、<`cryptoClasses`> 要素が、SHA256CryptoServiceProvider とエイリアス"SHA256CSP"の間のマッピングを作成します。 <`nameEntry`> 要素は、"SHA256CSP"エイリアスと指定された URL の間のマッピングを作成 (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm )。  
+ 下のセクションで、<`cryptoClasses`> 要素が、SHA256CryptoServiceProvider とエイリアス"SHA256CSP"の間のマッピングを作成します。 <`nameEntry`> 要素は、"SHA256CSP"エイリアスと指定した URL 間のマッピングを作成します (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm )。  
   
  コードでカスタム アルゴリズムを登録するには、<xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])> メソッドを使用します。 このメソッドによって、両方のマッピングを作成します。 次の例は、このメソッドを呼び出す方法を示しています。  
   
@@ -123,10 +123,11 @@ WSHttpBinding binding = new WSHttpBinding();
             binding.Security.Message.AlgorithmSuite = new MyCustomAlgorithmSuite();  
 ```  
   
- 完全なコード例は、次を参照してください。、 [WCF セキュリティの暗号化方式の指定](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md)サンプルです。  
+ 完全なコード例では、次を参照してください。、 [WCF セキュリティ暗号化方式の指定](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md)サンプル。  
   
-## <a name="see-also"></a>関連項目  
- [サービスおよびクライアントのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [サービスのセキュリティ保護](../../../../docs/framework/wcf/securing-services.md)  
- [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [セキュリティの概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+## <a name="see-also"></a>関連項目
+
+- [サービスおよびクライアントのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [サービスのセキュリティ保護](../../../../docs/framework/wcf/securing-services.md)
+- [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [セキュリティの概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)

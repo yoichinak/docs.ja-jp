@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-ms.openlocfilehash: 39b8a44629af42e358d550e0dd7eb6a8895de0ed
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c4ac823b5419d845437ef8e89f5123adafda0c5a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195230"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881354"
 ---
 # <a name="securing-services"></a>サービスのセキュリティ保護
 Windows Communication Foundation (WCF) サービスのセキュリティは、2 つの主要要件で構成されます。 転送セキュリティと承認します。 (3 番目の要件は、「セキュリティのイベントの監査[監査](../../../docs/framework/wcf/feature-details/auditing-security-events.md))。簡単に説明すると、転送セキュリティは、認証 (サーバーとクライアント両方の ID の検証)、機密性 (メッセージの暗号化)、および整合性 (改ざんを検出するためのデジタル署名) で構成されます。 承認は、たとえば、特権のあるユーザーだけがファイルを読み取ることができるなど、リソースへのアクセスを制御することです。 WCF の機能を使用して、2 つの主な要件を簡単に実装します。  
@@ -38,19 +38,19 @@ Windows Communication Foundation (WCF) サービスのセキュリティは、2 
  WCF インフラストラクチャは、これらの Windows セキュリティ メカニズムを使用して設計されています。 したがって、イントラネットに展開するサービスを作成していて、そのクライアントを Windows ドメインのメンバーに限定する場合、セキュリティを簡単に実装できます。 有効なユーザーだけがドメインにログオンできます。 ログオン後、Kerberos コントローラーによって、各ユーザーは他のコンピューターまたはアプリケーションとの間にセキュリティで保護されたコンテキストを確立できます。 ローカル コンピューターでは、グループを簡単に作成でき、特定のフォルダーを保護する場合、そのグループを使用してローカル コンピューター上でアクセス権を割り当てることができます。  
   
 ## <a name="implementing-windows-security-on-intranet-services"></a>イントラネット サービスでの Windows セキュリティの実装  
- Windows ドメインでのみ実行するアプリケーションをセキュリティで保護するには、 <xref:System.ServiceModel.WSHttpBinding> または <xref:System.ServiceModel.NetTcpBinding> バインディングの既定のセキュリティ設定を使用できます。 既定では、だれでも、同じ Windows ドメイン WCF サービスにアクセスできます。 ドメイン内にいるユーザーは、ネットワークにログオン済みなので信頼できます。 サービスとクライアントの間で交換されるメッセージは、機密性を保護するために暗号化され、整合性を保護するために署名されます。 Windows セキュリティを使用するサービスを作成する方法の詳細については、次を参照してください。[方法: Windows 資格情報でサービスをセキュリティで保護された](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)します。  
+ Windows ドメインでのみ実行するアプリケーションをセキュリティで保護するには、 <xref:System.ServiceModel.WSHttpBinding> または <xref:System.ServiceModel.NetTcpBinding> バインディングの既定のセキュリティ設定を使用できます。 既定では、だれでも、同じ Windows ドメイン WCF サービスにアクセスできます。 ドメイン内にいるユーザーは、ネットワークにログオン済みなので信頼できます。 サービスとクライアントの間で交換されるメッセージは、機密性を保護するために暗号化され、整合性を保護するために署名されます。 Windows セキュリティを使用するサービスを作成する方法の詳細については、次を参照してください。[方法。Windows 資格情報でサービスをセキュリティで保護された](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)します。  
   
 ### <a name="authorization-using-the-principalpermissionattribute-class"></a>PrincipalPermissionAttribute クラスを使用した承認  
- コンピューター上のリソースへのアクセスを制限する必要がある場合、最も簡単な方法は <xref:System.Security.Permissions.PrincipalPermissionAttribute> クラスを使用することです。 この属性を使用すると、ユーザーが指定の Windows グループまたはロールに属しているか、特定のユーザーであることを要求して、サービス操作の呼び出しを制限できます。 詳細については、次を参照してください。[方法: PrincipalPermissionAttribute クラスでのアクセスの制限](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)します。  
+ コンピューター上のリソースへのアクセスを制限する必要がある場合、最も簡単な方法は <xref:System.Security.Permissions.PrincipalPermissionAttribute> クラスを使用することです。 この属性を使用すると、ユーザーが指定の Windows グループまたはロールに属しているか、特定のユーザーであることを要求して、サービス操作の呼び出しを制限できます。 詳細については、「[方法 :PrincipalPermissionAttribute クラスでアクセスを制限する](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)します。  
   
 ### <a name="impersonation"></a>偽装  
- 偽装は、リソース アクセスの制御に使用できるもう 1 つの機構です。 既定では、IIS でホストされるサービスは、ASPNET アカウントの ID で実行されます。 ASPNET アカウントは、アクセス許可のあるリソースにだけアクセスできます。 ただし、ASPNET サービス アカウントを除外し、他の特定の ID によるフォルダーへのアクセスを許可するように ACL を設定できます。 ここで問題となるのが、ASPNET アカウントがフォルダーにアクセスできない場合に、他のユーザーがフォルダーにアクセスできるようにする方法です。 これは、偽装を使用することで解決できます。偽装によって、サービスは特定のリソースにアクセスするためにクライアントの資格情報を使用できます。 もう 1 つの例は、特定のユーザーだけがアクセス許可を持つ SQL Server データベースにアクセスする場合です。 権限借用の使用に関する詳細については、次を参照してください。[方法: サービスでクライアントを偽装](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)と[委任と偽装](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)します。  
+ 偽装は、リソース アクセスの制御に使用できるもう 1 つの機構です。 既定では、IIS でホストされるサービスは、ASPNET アカウントの ID で実行されます。 ASPNET アカウントは、アクセス許可のあるリソースにだけアクセスできます。 ただし、ASPNET サービス アカウントを除外し、他の特定の ID によるフォルダーへのアクセスを許可するように ACL を設定できます。 ここで問題となるのが、ASPNET アカウントがフォルダーにアクセスできない場合に、他のユーザーがフォルダーにアクセスできるようにする方法です。 これは、偽装を使用することで解決できます。偽装によって、サービスは特定のリソースにアクセスするためにクライアントの資格情報を使用できます。 もう 1 つの例は、特定のユーザーだけがアクセス許可を持つ SQL Server データベースにアクセスする場合です。 権限借用の使用に関する詳細については、次を参照してください。[方法。サービスのクライアントを偽装](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)と[委任と偽装](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)します。  
   
 ## <a name="security-on-the-internet"></a>インターネット上のセキュリティ  
  インターネット上のセキュリティは、イントラネット上のセキュリティと同じ要件で構成されます。 サービスは、信頼性を証明するために資格情報を提示する必要があり、クライアントは、サービスに対して ID を証明する必要があります。 クライアントの ID が証明されると、サービスは、クライアントによるリソースへのアクセスを制御できます。 ただし、インターネットではさまざまな種類が混在しているので、提示される資格情報は、Windows ドメインで使用される資格情報とは異なります。 Kerberos コントローラーが資格情報のチケットを使用して、ドメインでユーザーの認証を処理するのに対し、インターネットでは、サービスとクライアントは、資格情報を提示するための複数の異なる方法のいずれかに依存します。 このトピックの目的は、インターネットでアクセス可能な WCF サービスを作成することができる一般的なアプローチを提示するただしです。  
   
 ### <a name="using-iis-and-aspnet"></a>IIS と ASP.NET の使用  
- インターネット セキュリティの要件、およびその問題を解決するための機構は、新しいものではありません。 IIS はこの問題に対応する多くのセキュリティ機能があり、インターネット用の Microsoft の Web サーバーさらに、 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] WCF サービスを使用できるセキュリティ機能が含まれています。 これらのセキュリティ機能を利用するには、IIS で、WCF サービスをホストします。  
+ インターネット セキュリティの要件、およびその問題を解決するための機構は、新しいものではありません。 IIS はこの問題に対応する多くのセキュリティ機能があり、インターネット用の Microsoft の Web サーバーさらに、ASP.NET には、WCF サービスを使用できるセキュリティ機能が含まれています。 これらのセキュリティ機能を利用するには、IIS で、WCF サービスをホストします。  
   
 #### <a name="using-aspnet-membership-and-role-providers"></a>ASP.NET メンバーシップとロール プロバイダーの使用  
  ASP.NET には、メンバーシップとロール プロバイダーが用意されています。 プロバイダーは、呼び出し元を認証するためのユーザー名とパスワードの組み合わせのデータベースであり、これによって、各呼び出し元のアクセス特権を指定することもできます。 Wcf では、既存のメンバーシップとロール プロバイダーの構成を簡単に使用できます。 この機能を示すサンプル アプリケーションについては、「 [Membership and Role Provider](../../../docs/framework/wcf/samples/membership-and-role-provider.md) 」のサンプルを参照してください。  
@@ -65,7 +65,7 @@ Windows Communication Foundation (WCF) サービスのセキュリティは、2 
   
  3 番目のモードは、2 つの主要モードのセマンティクスを組み合わせたもので、 *メッセージ資格情報付きトランスポート モード*です。  
   
- セキュリティ モードによって、メッセージをセキュリティで保護する方法が決まります。それぞれのモードには、次に示す利点と欠点があります。 セキュリティ モードを設定する方法についての詳細については、次を参照してください。[方法: セキュリティ モードを設定](../../../docs/framework/wcf/how-to-set-the-security-mode.md)します。  
+ セキュリティ モードによって、メッセージをセキュリティで保護する方法が決まります。それぞれのモードには、次に示す利点と欠点があります。 セキュリティ モードを設定する方法についての詳細については、次を参照してください。[方法。セキュリティ モードを設定](../../../docs/framework/wcf/how-to-set-the-security-mode.md)します。  
   
 #### <a name="transport-mode"></a>トランスポート モード  
  ネットワークとアプリケーションの間には複数の層があります。 この層の 1 つが *トランスポート* 層で *、* エンドポイント間のメッセージ転送を管理します。 存在するために、これは WCF がそれぞれのメッセージの転送をセキュリティで保護できる、いくつかのトランスポート プロトコルを使用することを理解することが必要です。 (トランスポートの詳細については、次を参照してください[トランスポート](../../../docs/framework/wcf/feature-details/transports.md)。)。  
@@ -85,34 +85,35 @@ Windows Communication Foundation (WCF) サービスのセキュリティは、2 
   
  クライアントの認証が必要なサービスを作成している場合、クライアント資格情報の種類の選択肢は、選択したトランスポートとモードによって異なります。 たとえば、HTTP トランスポートを使用して、トランスポート モードを選択する場合、基本、ダイジェストなどのいくつかの選択肢があります (これらの詳細については、資格情報の種類を参照してください[Understanding HTTP Authentication](../../../docs/framework/wcf/feature-details/understanding-http-authentication.md))。  
   
- Windows ドメインで、そのネットワークの他のユーザーだけが利用できるサービスを作成している場合、最も使いやすいのは、Windows クライアント資格情報の種類です。 ただし、場合によっては、サービスにも証明書を提供する必要があります。 詳細については、「 [How to: Specify Client Credential Values](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)」を参照してください。  
+ Windows ドメインで、そのネットワークの他のユーザーだけが利用できるサービスを作成している場合、最も使いやすいのは、Windows クライアント資格情報の種類です。 ただし、場合によっては、サービスにも証明書を提供する必要があります。 これに示した[方法。クライアント資格情報の値を指定](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)します。  
   
 #### <a name="credential-values"></a>資格情報の値  
  *資格情報の値* とは、サービスが使用する実際の資格情報です。 資格情報の種類を指定したら、サービスを実際の資格情報で構成する必要があります。 Windows を選択し、サービスを Windows ドメインで実行する場合は、実際の資格情報の値を指定しません。  
   
 ## <a name="identity"></a>同一。  
- WCF では、用語*identity*サーバーとクライアントに異なる意味を持ちます。 つまり、サービスを実行しているとき、ID は認証後にセキュリティ コンテキストに割り当てられます。 実際の ID を表示するには、 <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> クラスの <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> プロパティと <xref:System.ServiceModel.ServiceSecurityContext> プロパティを確認します。 詳細については、次を参照してください。[方法: セキュリティ コンテキストを調べる](../../../docs/framework/wcf/how-to-examine-the-security-context.md)します。  
+ WCF では、用語*identity*サーバーとクライアントに異なる意味を持ちます。 つまり、サービスを実行しているとき、ID は認証後にセキュリティ コンテキストに割り当てられます。 実際の ID を表示するには、 <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> クラスの <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> プロパティと <xref:System.ServiceModel.ServiceSecurityContext> プロパティを確認します。 詳細については、「[方法 :セキュリティ コンテキストを調べる](../../../docs/framework/wcf/how-to-examine-the-security-context.md)します。  
   
  反対に、クライアントでは、ID はサービスを検証するために使用されます。 デザイン時に、クライアント開発者を設定できます、 [ \<identity >](../../../docs/framework/configure-apps/file-schema/wcf/identity.md)要素をサービスから取得した値にします。 実行時に、クライアントは、要素の値をサービスの実際の ID と照合してチェックします。 チェックが失敗した場合、クライアントは通信を終了します。 特定のユーザー ID でサービスを実行している場合の値はユーザー プリンシパル名 (UPN) で、コンピューター アカウントでサービスを実行している場合の値はサービス プリンシパル名 (SPN) です。 詳細については、次を参照してください。[サービス Id と認証](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)します。 資格情報には、証明書、つまり証明書を識別する証明書内のフィールドも使用できます。  
   
 ## <a name="protection-levels"></a>保護レベル  
- `ProtectionLevel` プロパティは、 <xref:System.ServiceModel.ServiceContractAttribute> クラス、 <xref:System.ServiceModel.OperationContractAttribute> クラスなどのいくつかの属性クラスで使用します。 保護レベルは、サービスをサポートするメッセージ (またはメッセージ部分) が署名されるのか、署名および暗号化されるのか、または署名と暗号化なしで送信されるのかを指定する値です。 プロパティの詳細については、次を参照してください。[について保護レベル](../../../docs/framework/wcf/understanding-protection-level.md)、とプログラミング例については、次を参照してください。[方法: ProtectionLevel プロパティを設定](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)します。 サービス コントラクトの設計の詳細については、`ProtectionLevel`コンテキストでは、次を参照してください。 [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)します。  
+ `ProtectionLevel` プロパティは、 <xref:System.ServiceModel.ServiceContractAttribute> クラス、 <xref:System.ServiceModel.OperationContractAttribute> クラスなどのいくつかの属性クラスで使用します。 保護レベルは、サービスをサポートするメッセージ (またはメッセージ部分) が署名されるのか、署名および暗号化されるのか、または署名と暗号化なしで送信されるのかを指定する値です。 プロパティの詳細については、次を参照してください。[について保護レベル](../../../docs/framework/wcf/understanding-protection-level.md)、およびプログラミング例については、次を参照してください。[方法。ProtectionLevel プロパティを設定](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)します。 サービス コントラクトの設計の詳細については、`ProtectionLevel`コンテキストでは、次を参照してください。 [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel>  
- <xref:System.ServiceModel.Description.ServiceCredentials>  
- <xref:System.ServiceModel.ServiceContractAttribute>  
- <xref:System.ServiceModel.OperationContractAttribute>  
- [サービス ID と認証](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [保護レベルの理解](../../../docs/framework/wcf/understanding-protection-level.md)  
- [委任と偽装](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
- [サービス コントラクトの設計](../../../docs/framework/wcf/designing-service-contracts.md)  
- [セキュリティ](../../../docs/framework/wcf/feature-details/security.md)  
- [セキュリティの概要](../../../docs/framework/wcf/feature-details/security-overview.md)  
- [方法: ProtectionLevel プロパティを設定する](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)  
- [方法: Windows 資格情報でサービスをセキュリティで保護する](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)  
- [方法: セキュリティ モードを設定する](../../../docs/framework/wcf/how-to-set-the-security-mode.md)  
- [方法: クライアントの資格情報の種類を指定する](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)  
- [方法: PrincipalPermissionAttribute クラスでアクセスを制限する](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
- [方法: サービスでクライアントに偽装する](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  
- [方法: セキュリティ コンテキストを調べる](../../../docs/framework/wcf/how-to-examine-the-security-context.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel>
+- <xref:System.ServiceModel.Description.ServiceCredentials>
+- <xref:System.ServiceModel.ServiceContractAttribute>
+- <xref:System.ServiceModel.OperationContractAttribute>
+- [サービス ID と認証](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [保護レベルの理解](../../../docs/framework/wcf/understanding-protection-level.md)
+- [委任と偽装](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
+- [サービス コントラクトの設計](../../../docs/framework/wcf/designing-service-contracts.md)
+- [セキュリティ](../../../docs/framework/wcf/feature-details/security.md)
+- [セキュリティの概要](../../../docs/framework/wcf/feature-details/security-overview.md)
+- [方法: ProtectionLevel プロパティを設定します。](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
+- [方法: Windows 資格情報でサービスをセキュリティで保護します。](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [方法: セキュリティ モードを設定します。](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+- [方法: クライアント資格情報の種類を指定します。](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
+- [方法: PrincipalPermissionAttribute クラスでアクセスを制限します。](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [方法: サービスでのクライアントを偽装します。](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [方法: セキュリティ コンテキストを調べる](../../../docs/framework/wcf/how-to-examine-the-security-context.md)

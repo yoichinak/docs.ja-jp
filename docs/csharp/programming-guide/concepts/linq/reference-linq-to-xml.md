@@ -2,12 +2,12 @@
 title: リファレンス (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 815b45e2-3527-4dee-9986-b1277a693cde
-ms.openlocfilehash: 42bef2a810f47f3358cde562e5531124f9ecad18
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f1233b77ede52cfafef41cadec3316673e9e7599
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529258"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483865"
 ---
 # <a name="reference-linq-to-xml"></a>リファレンス (LINQ to XML)
 このトピックには、LINQ to XML のリファレンス トピックへのリンクが含まれています。  
@@ -19,6 +19,6 @@ ms.locfileid: "43529258"
   
  XML ツリーで XPath クエリを評価するための拡張メソッドに関するリファレンス ドキュメントについては、<xref:System.Xml.XPath.Extensions?displayProperty=nameWithType> を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)
+- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)

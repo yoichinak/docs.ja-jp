@@ -13,29 +13,29 @@ helpviewer_keywords:
 - WPF [WPF], interoperability
 - migration [WPF]
 ms.assetid: d655de05-bf63-4814-bc64-6b3be01c70a2
-ms.openlocfilehash: a94d855a88fafd0f8faf98c98601142802701dd1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7576c8631a39a6dcf234f15b93fd5714f493276e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053328"
 ---
 # <a name="migration-and-interoperability"></a>移行と相互運用性
-このページには、間の相互運用を実装する方法を説明するドキュメントへのリンクが含まれています。[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーションと他の種類の[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]アプリケーションです。  
+このページには、間の相互運用を実装する方法について説明するドキュメントへのリンクが含まれています。[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーションと他の種類の[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]アプリケーション。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [WPF と Windows フォームの相互運用性](../../../../docs/framework/wpf/advanced/wpf-and-windows-forms-interoperation.md)  
- [WPF と Win32 の相互運用性](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  
- [WPF と Direct3D9 の相互運用性](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)  
+ [WPF と Windows フォームの相互運用性](wpf-and-windows-forms-interoperation.md)  
+ [WPF と Win32 の相互運用性](wpf-and-win32-interoperation.md)  
+ [WPF と Direct3D9 の相互運用性](wpf-and-direct3d9-interoperation.md)  
   
 ## <a name="reference"></a>参照  
   
 |用語|定義|  
 |----------|----------------|  
-|<xref:System.Windows.Forms.Integration.WindowsFormsHost>|使用できる要素をホストに、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールの要素として、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ページ。|  
-|<xref:System.Windows.Forms.Integration.ElementHost>|A[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]使用できるコントロールをホストする、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]コントロール。|  
-|<xref:System.Windows.Interop.HwndSource>|ホスト、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内の領域、[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]アプリケーションです。|  
-|<xref:System.Windows.Interop.HwndHost>|基本クラス<xref:System.Windows.Forms.Integration.WindowsFormsHost>、によってホストされているときにすべての HWND ベースのテクノロジを使用して基本的な機能を定義、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションです。 サブクラスをホストする、[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]ウィンドウ内で、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションです。|  
-|<xref:System.Windows.Interop.BrowserInteropHelper>|ブラウザー環境の条件を報告するためのヘルパー クラス、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ブラウザーによってホストされるアプリケーション。|  
+|<xref:System.Windows.Forms.Integration.WindowsFormsHost>|要素に使用できるホストに、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールの要素として、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ページ。|  
+|<xref:System.Windows.Forms.Integration.ElementHost>|A[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]使用できるコントロールをホストに、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]コントロール。|  
+|<xref:System.Windows.Interop.HwndSource>|ホストを[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内の領域を[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]アプリケーション。|  
+|<xref:System.Windows.Interop.HwndHost>|基本クラス<xref:System.Windows.Forms.Integration.WindowsFormsHost>、HWND ベースのすべてのテクノロジがによってホストされている場合に使用するいくつかの基本機能を定義、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。 サブクラスをホストする、[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]ウィンドウ内で、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。|  
+|<xref:System.Windows.Interop.BrowserInteropHelper>|ブラウザー環境の条件を報告するためのヘルパー クラスを[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ブラウザーによってホストされているアプリケーション。|  
   
 ## <a name="related-sections"></a>関連項目

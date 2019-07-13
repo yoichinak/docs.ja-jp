@@ -2,20 +2,20 @@
 title: '方法: 構成ファイルを使用してサービスのメタデータを公開する'
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-ms.openlocfilehash: 94013c69bec0ea37c9260567437aeada3ebe2ae4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3fda88f4ec2f2695d6026d6e4df79243124b7b5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495695"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64643658"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>方法: 構成ファイルを使用してサービスのメタデータを公開する
-これは、Windows Communication Foundation (WCF) サービスのメタデータを公開に示す 2 つの操作方法に関するトピックのいずれかです。 構成ファイルとコードを使用して、サービスがメタデータを公開する手段を指定する方法は 2 つあります。 このトピックでは、構成ファイルを使用してサービスのメタデータを公開する方法について説明します。  
+これは、Windows Communication Foundation (WCF) サービスのメタデータの公開を示す 2 つの操作方法に関するトピックのいずれかです。 構成ファイルとコードを使用して、サービスがメタデータを公開する手段を指定する方法は 2 つあります。 このトピックでは、構成ファイルを使用してサービスのメタデータを公開する方法について説明します。  
   
 > [!CAUTION]
->  このトピックでは、セキュリティで保護されていない方法でメタデータを公開する方法について説明します。 クライアントは、サービスからメタデータを取得できます。 安全な方法でメタデータを公開するようにサービスを必要とする場合は、次を参照してください。[カスタム セキュリティで保護されたメタデータ エンドポイント](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)です。  
+>  このトピックでは、セキュリティで保護されていない方法でメタデータを公開する方法について説明します。 クライアントは、サービスからメタデータを取得できます。 安全な方法でメタデータを公開するサービスを必要とする場合は、次を参照してください。[メタデータ エンドポイントのセキュリティで保護されたカスタム](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)します。  
   
- コードでメタデータの公開の詳細については、次を参照してください。[する方法: サービスを使用してコードのメタデータを公開](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)です。 メタデータを公開すると、クライアントが `?wsdl` クエリ文字列を使用した WS-Transfer GET 要求または HTTP/GET 要求によりメタデータを取得できるようになります。 コードが動作していることを確認するには、基本的な WCF サービスを作成します。 簡略化のため、次のコードに基本的な自己ホスト型サービスが用意されています。  
+ コードでメタデータの公開の詳細については、次を参照してください。[方法。コードを使用してサービスのメタデータを公開](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)します。 メタデータを公開すると、クライアントが `?wsdl` クエリ文字列を使用した WS-Transfer GET 要求または HTTP/GET 要求によりメタデータを取得できるようになります。 コードが動作していることを確認するには、基本的な WCF サービスを作成します。 簡略化のため、次のコードに基本的な自己ホスト型サービスが用意されています。  
   
 ```csharp  
 using System;  
@@ -92,23 +92,15 @@ namespace Metadata.Samples
   
 ### <a name="to-publish-metadata-for-a-wcf-service-using-an-application-configuration-file"></a>アプリケーション構成ファイルを使用して WCF サービスのメタデータを公開するには  
   
-1.  `</services>` 要素を閉じた後、App.config ファイル内に `<behaviors>` 要素を作成します。  
-  
-  
-  
-2.  `<behaviors>` 要素内に `<serviceBehaviors>` 要素を追加します。  
-  
-  
-  
-3.  `<behavior>`要素に `<serviceBehaviors>` 要素を追加し、`name` 要素の `<behavior>` 属性に値を指定します。  
-  
-  
-  
-4.  `<serviceMetadata>` 要素を `<behavior>` 要素に追加します。 `httpGetEnabled` 属性を `true` に設定し、`policyVersion` 属性を Policy15 に設定します。 `httpGetEnabled` により、サービスは HTTP GET 要求からのメタデータ要求に応答できるようになります。 `policyVersion` は、サービスに対して、WS-Policy 1.5 準拠でメタデータを生成するように指示します。  
-  
-  
-  
-5.  次のコード例に示すように、`behaviorConfiguration` 要素に `<service>` 属性を追加し、手順 1. で追加した `name` 要素の `<behavior>` 属性を指定します。  
+1. `</services>` 要素を閉じた後、App.config ファイル内に `<behaviors>` 要素を作成します。  
+
+2. `<behaviors>` 要素内に `<serviceBehaviors>` 要素を追加します。  
+
+3. `<behavior>`要素に `<serviceBehaviors>` 要素を追加し、`name` 要素の `<behavior>` 属性に値を指定します。  
+
+4. `<serviceMetadata>` 要素を `<behavior>` 要素に追加します。 `httpGetEnabled` 属性を `true` に設定し、`policyVersion` 属性を Policy15 に設定します。 `httpGetEnabled` により、サービスは HTTP GET 要求からのメタデータ要求に応答できるようになります。 `policyVersion` は、サービスに対して、WS-Policy 1.5 準拠でメタデータを生成するように指示します。  
+
+5. 次のコード例に示すように、`behaviorConfiguration` 要素に `<service>` 属性を追加し、手順 1. で追加した `name` 要素の `<behavior>` 属性を指定します。  
   
     ```xml  
     <services>  
@@ -127,7 +119,7 @@ namespace Metadata.Samples
     </behaviors>  
     ```  
   
-6.  1 つ以上の `<endpoint>` 要素を追加して、コントラクトを `IMetadataExchange` に設定します。コード例を次に示します。  
+6. 1 つ以上の `<endpoint>` 要素を追加して、コントラクトを `IMetadataExchange` に設定します。コード例を次に示します。  
   
     ```xml  
     <services>  
@@ -146,31 +138,31 @@ namespace Metadata.Samples
     </services>  
     ```  
   
-7.  前の手順で追加したメタデータ エンドポイントについて、`binding` 属性に次のいずれかの値を設定します。  
+7. 前の手順で追加したメタデータ エンドポイントについて、`binding` 属性に次のいずれかの値を設定します。  
   
-    -   HTTP 公開の場合、`mexHttpBinding`  
+    - HTTP 公開の場合、`mexHttpBinding`  
   
-    -   HTTPS 公開の場合、`mexHttpsBinding`  
+    - HTTPS 公開の場合、`mexHttpsBinding`  
   
-    -   名前付きパイプ公開の場合、`mexNamedPipeBinding`  
+    - 名前付きパイプ公開の場合、`mexNamedPipeBinding`  
   
-    -   TCP 公開の場合、`mexTcpBinding`  
+    - TCP 公開の場合、`mexTcpBinding`  
   
-8.  前の手順で追加したメタデータ エンドポイントについて、次のいずれかに等しいアドレスを設定します。  
+8. 前の手順で追加したメタデータ エンドポイントについて、次のいずれかに等しいアドレスを設定します。  
   
-    -   ベース アドレスがメタデータ バインディングと同じ場合に、公開ポイントとしてホスト アプリケーションのベース アドレスを使用するための空の文字列  
+    - ベース アドレスがメタデータ バインディングと同じ場合に、公開ポイントとしてホスト アプリケーションのベース アドレスを使用するための空の文字列  
   
-    -   ホスト アプリケーションにベース アドレスがある場合、相対アドレス  
+    - ホスト アプリケーションにベース アドレスがある場合、相対アドレス  
   
-    -   絶対アドレス  
+    - 絶対アドレス  
   
 9. コンソール アプリケーションのビルドと実行  
   
-10. Internet Explorer を使用して、サービスのベース アドレスを参照 (http://localhost:8001/MetadataSampleこのサンプルでは) し、メタデータの公開の電源が入っていることを確認します。 有効になっていない場合は、"このサービスのメタデータ公開は現在は無効になっています。" というメッセージが結果ページの上部に表示されます。  
+10. Internet Explorer を使用して、サービスのベース アドレスを参照 (http://localhost:8001/MetadataSampleこのサンプルでは) し、メタデータの公開が有効であることを確認します。 ない場合は、結果のページの上部にあるメッセージが表示されます。「このサービスのメタデータの公開は現在無効です。」  
   
 ### <a name="to-use-default-endpoints"></a>既定のエンドポイントを使用するには  
   
-1.  既定のエンドポイントを使用するサービスでメタデータを構成するには、前の例のように、構成ファイルで <xref:System.ServiceModel.Description.ServiceMetadataBehavior> を指定します。ただし、エンドポイントは指定しないでください。 構成ファイルは、次のようになります。  
+1. 既定のエンドポイントを使用するサービスでメタデータを構成するには、前の例のように、構成ファイルで <xref:System.ServiceModel.Description.ServiceMetadataBehavior> を指定します。ただし、エンドポイントは指定しないでください。 構成ファイルは、次のようになります。  
   
     ```xml  
     <configuration>  
@@ -187,10 +179,10 @@ namespace Metadata.Samples
     </configuration>  
     ```  
   
-     サービスの <xref:System.ServiceModel.Description.ServiceMetadataBehavior> では `httpGetEnabled` が `true` に設定されているため、サービスではメタデータの公開が有効になっています。また、エンドポイントが明示的に追加されていないため、ランタイムは既定のエンドポイントを追加します。 既定のエンドポイント、バインディング、および動作の詳細については、次を参照してください。[簡略化された構成](../../../../docs/framework/wcf/simplified-configuration.md)と[WCF サービスの構成を簡略化](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)です。  
+     サービスの <xref:System.ServiceModel.Description.ServiceMetadataBehavior> では `httpGetEnabled` が `true` に設定されているため、サービスではメタデータの公開が有効になっています。また、エンドポイントが明示的に追加されていないため、ランタイムは既定のエンドポイントを追加します。 既定のエンドポイントについては、「[Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md)」 (簡易構成) と「[Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)」 (WCF サービスの簡易構成) を参照してください。  
   
 ## <a name="example"></a>例  
- 次のコード例は、基本的な WCF サービスとサービスのメタデータを公開する構成ファイルの実装を示しています。  
+ 次のコード例では、基本的な WCF サービスとサービスのメタデータを公開する構成ファイルの実装を示します。  
   
 ```csharp  
 using System;  
@@ -261,10 +253,11 @@ namespace Metadata.Samples
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>  
- [方法: マネージ アプリケーションで WCF サービスをホストする](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)  
- [自己ホスト](../../../../docs/framework/wcf/samples/self-host.md)  
- [メタデータ アーキテクチャの概要](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
- [メタデータを使用する](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
- [方法 : コードを使用してサービスのメタデータを公開する](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
+- [方法: マネージ アプリケーションで WCF サービスをホストします。](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [自己ホスト](../../../../docs/framework/wcf/samples/self-host.md)
+- [メタデータ アーキテクチャの概要](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
+- [メタデータを使用する](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+- [方法: コードを使用してサービスのメタデータを公開します。](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)

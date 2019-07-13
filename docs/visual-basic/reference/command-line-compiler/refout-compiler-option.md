@@ -7,12 +7,12 @@ helpviewer_keywords:
 - refout compiler option [Visual Basic]
 - /refout compiler option [Visual Basic]
 - -refout compiler option [Visual Basic]
-ms.openlocfilehash: 8a8068c467f9066af3153434187749fa80d254ca
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f2cdd228d8ce1912abbbe888c29c42f29299ebba
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50048399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788792"
 ---
 # <a name="-refout-visual-basic"></a>/refout (Visual Basic)
 
@@ -41,7 +41,7 @@ Visual Basic は、`-refout`バージョン 15.3 以降を切り替えます。
 `-refout` オプションと [`-refonly`](refonly-compiler-option.md) オプションは同時に指定できません。
 
 ## <a name="see-also"></a>関連項目
-[-refonly](refonly-compiler-option.md)   
-[Visual Basic のコマンド ライン コンパイラ](index.md)  
-[コンパイル コマンド ラインのサンプル](sample-compilation-command-lines.md)  
 
+- [/refonly](refonly-compiler-option.md)
+- [Visual Basic のコマンド ライン コンパイラ](index.md)
+- [コンパイル コマンド ラインのサンプル](sample-compilation-command-lines.md)

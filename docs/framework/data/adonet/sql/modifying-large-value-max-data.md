@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: ea079a0b55dde8df7b3442f3d604b2b6467ba785
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 134759d729d6f291db61e6f64ebd51dfe5a4443b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46584332"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648723"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>ADO.NET での大きい値 (max) データの変更
 ラージ オブジェクト (LOB) データ型は、最大行サイズが 8 KB を超えるデータ型です。 SQL Server では、`max`、`varchar`、および `nvarchar` の各データ型に `varbinary` 指定子が用意されており、2^32 バイトの値を格納できます。 テーブル列および Transact-SQL 変数により、`varchar(max)`、`nvarchar(max)`、または `varbinary(max)` データ型を指定できます。 ADO.NET では、`max` データ型は、`DataReader` によってフェッチすることができ、特殊な処理を行うことなく入力パラメーターと出力パラメーター両方の値として指定することもできます。 サイズの大きい `varchar` データ型の場合は、データを段階的に取得および更新できます。  
@@ -21,16 +21,16 @@ ms.locfileid: "46584332"
   
  **SQL Server オンライン ブック**  
   
-1.  [大きな値データ型の使用](https://go.microsoft.com/fwlink/?LinkId=120498)  
+1. [大きな値データ型の使用](https://go.microsoft.com/fwlink/?LinkId=120498)  
   
 ## <a name="large-value-type-restrictions"></a>大きい値型の制限事項  
  `max` データ型には、小さいデータ型にはない、次の制限事項が適用されます。  
   
--   `sql_variant` に大きい `varchar` データ型を含めることはできません。  
+- `sql_variant` に大きい `varchar` データ型を含めることはできません。  
   
--   大きい `varchar` 列はインデックス内のキー列として指定することはできません。 非クラスター化インデックスに含まれる列で使用できます。  
+- 大きい `varchar` 列はインデックス内のキー列として指定することはできません。 非クラスター化インデックスに含まれる列で使用できます。  
   
--   大きい `varchar` 列はパーティション分割のキー列として使用できません。  
+- 大きい `varchar` 列はパーティション分割のキー列として使用できません。  
   
 ## <a name="working-with-large-value-types-in-transact-sql"></a>Transact-SQL での大きい値型の使用  
  Transact-SQL の `OPENROWSET` 関数は、リモート データへの接続およびアクセスに 1 回だけ使用できます。 この関数には、OLE DB データ ソースからリモート データにアクセスするために必要な、すべての接続情報が含まれています。 `OPENROWSET` は、クエリの FROM 句でテーブル名と同様に参照できます。 OLE DB プロバイダーの機能に従って、INSERT、UPDATE、または DELETE ステートメントのターゲット テーブルとして参照することもできます。  
@@ -68,9 +68,9 @@ FROM OPENROWSET
 |If|Then|  
 |--------|----------|  
 |expression が NULL|`@Length` 無視されますと、値*column_name*が切り捨てられる指定した`@Offset`。|  
-|`@Offset` が NULL|更新操作では、既存の最後に式を追加します。 *column_name*値と`@Length`は無視されます。|  
+|`@Offset` NULL です。|更新操作では、既存の最後に式を追加します。 *column_name*値と`@Length`は無視されます。|  
 |`@Offset` が column_name の値の長さより長い|SQL Server からエラーが返されます。|  
-|`@Length` が NULL|更新操作により `@Offset` の値の `column_name` から最後までのすべてのデータが削除されます。|  
+|`@Length` NULL です。|更新操作により `@Offset` の値の `column_name` から最後までのすべてのデータが削除されます。|  
   
 > [!NOTE]
 >  `@Offset` または `@Length` のいずれにも負数を指定することはできません。  
@@ -249,8 +249,9 @@ WHERE   DocumentID=@DocumentID
  [!code-csharp[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/CS/source.cs#1)]
  [!code-vb[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/VB/source.vb#1)]  
   
-## <a name="see-also"></a>関連項目  
- [SQL Server のバイナリ データと大きな値のデータ](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [SQL Server データ型のマッピング](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
- [ADO.NET における SQL Server データ操作](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [SQL Server のバイナリ データと大きな値のデータ](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
+- [SQL Server データ型のマッピング](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
+- [ADO.NET における SQL Server データ操作](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

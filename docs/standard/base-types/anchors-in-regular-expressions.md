@@ -19,12 +19,12 @@ ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: d5d07dd290a857a0c6dbfcd9074d8d16ff47e6cd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 85e971d3464b6f2a073288e7f8b5406563598f79
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155039"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634753"
 ---
 # <a name="anchors-in-regular-expressions"></a>正規表現のアンカー
 <a name="top"></a> アンカー (アトミック ゼロ幅アサーション) は、文字列が一致する位置を指定します。 検索式でアンカーを使用した場合、正規表現エンジンは、後方の文字列を読み込んだり、文字に一致させたりすることはしません。指定された位置での一致のみが検索されます。 たとえば、 `^` は、行または文字列の先頭に一致する必要があることを指定します。 したがって、正規表現 `^http:` は、"http:" が行の先頭にある場合にのみ一致します。 次の表は、.NET の正規表現でサポートされているアンカーの一覧です。  
@@ -44,11 +44,11 @@ ms.locfileid: "53155039"
 ## <a name="start-of-string-or-line-"></a>文字列または行の先頭: ^  
  既定では、`^` アンカーは、その後に続くパターンが、文字列の最初の文字位置から始まる必要があることを指定します。 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> オプションを指定して `^` を使用した場合は (「[正規表現のオプション](../../../docs/standard/base-types/regular-expression-options.md)」を参照)、各行の先頭に一致します。  
   
- 次の例では、正規表現で `^` アンカーを使用して、プロ野球チームが存続した年数に関する情報を抽出します。 この例では、<xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> メソッドの 2 つのオーバーロードを呼び出しています。  
+ 次の例では、正規表現で `^` アンカーを使用して、プロ野球チームが存続した年数に関する情報を抽出します。 この例では、 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> メソッドの 2 つのオーバーロードを呼び出しています。  
   
--   <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29> オーバーロードの呼び出しでは、入力文字列内で正規表現パターンに一致する最初の部分文字列が検索されます。  
+- <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29> オーバーロードの呼び出しでは、入力文字列内で正規表現パターンに一致する最初の部分文字列が検索されます。  
   
--   <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29> パラメーターを `options` に設定した <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> オーバーロードの呼び出しでは、5 つのすべての部分文字列が検索されます。  
+- <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29> パラメーターを `options` に設定した <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> オーバーロードの呼び出しでは、5 つのすべての部分文字列が検索されます。  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/startofstring1.cs#1)]
  [!code-vb[Conceptual.RegEx.Language.Assertions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/startofstring1.vb#1)]  
@@ -58,7 +58,7 @@ ms.locfileid: "53155039"
 |パターン|説明|  
 |-------------|-----------------|  
 |`^`|入力文字列の先頭から (または、<xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> オプションを指定してメソッドが呼び出された場合は行の先頭から) 照合を開始します。|  
-|`((\w+(\s?)){2,}`|1 個以上の単語文字の後に 0 個または 1 個の空白が続くパターンが、2 回繰り返される部分に一致します。 これが最初のキャプチャ グループです。 この表現は、2 番目と 3 番目のキャプチャ グループも定義します。2 番目のグループはキャプチャされた単語で構成され、3 番目のグループはキャプチャされた空白で構成されます。|  
+|`((\w+(\s?)){2,}`|1 個以上の単語文字の後に 0 個または 1 個の空白が続くパターンが、2 回繰り返される部分に一致します。 これが最初のキャプチャ グループです。 この式では、2 番目と 3 番目のキャプチャ グループも定義されます。2 番目はキャプチャ ワードで、3 番目はキャプチャされたスペースで構成されます。|  
 |`,\s`|コンマおよびそれに続く空白文字に一致します。|  
 |`(\w+\s\w+)`|1 個以上の単語文字の後に 1 個の空白が続き、さらに 1 個以上の単語文字が続くパターンに一致します。 これが 4 番目のキャプチャ グループです。|  
 |`,`|コンマに一致します。|  
@@ -75,7 +75,7 @@ ms.locfileid: "53155039"
   
  `$` オプションを指定して <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> を使用した場合は、行の末尾にも一致します。 `$` は、 `\n` に一致しますが、 `\r\n` (復帰文字と改行文字の組み合わせ、つまり CR/LF) には一致しないことに注意してください。 CR/LF 文字の組み合わせに一致させるには、正規表現パターンに `\r?$` を含めます。  
   
- 次の例では、「 `$` 文字列または行の先頭 [」の例で使用した正規表現パターンに](#Start) アンカーを追加しています。 5 つのテキスト行を含む元の入力文字列に対して使用した場合、 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> メソッドは一致を見つけることができません。これは、最初の行の末尾が `$` パターンに一致しないためです。 元の入力文字列を文字列配列に分割すると、 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> メソッドは 5 つの各行の一致に成功します。 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> パラメーターを `options` に設定して <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> メソッドを呼び出すと、一致は見つかりません。これは、正規表現パターンで復帰要素 (\u+000D) が考慮されないためです。 ただし、 `$` を `\r?$`に置き換え、 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> パラメーターを `options` に設定して <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> メソッドを呼び指すと、正規表現パターンが変更され、再び 5 つの一致が検索されるようになります。  
+ 次の例では、「 `$` 文字列または行の先頭 [」の例で使用した正規表現パターンに](#Start) アンカーを追加しています。 5 つのテキスト行を含む元の入力文字列に対して使用した場合、 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> メソッドは一致を見つけることができません。これは、最初の行の末尾が `$` パターンに一致しないためです。 元の入力文字列を文字列配列に分割すると、 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> メソッドは 5 つの各行の一致に成功します。 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> パラメーターを `options` に設定して <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>メソッドを呼び出すと、一致は見つかりません。これは、正規表現パターンで復帰要素 (\u+000D) が考慮されないためです。 ただし、 `$` を `\r?$`に置き換え、 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> パラメーターを `options` に設定して <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> メソッドを呼び指すと、正規表現パターンが変更され、再び 5 つの一致が検索されるようになります。  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/endofstring1.cs#2)]
  [!code-vb[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring1.vb#2)]  
@@ -95,7 +95,7 @@ ms.locfileid: "53155039"
   
 <a name="EndOrNOnly"></a>   
 ## <a name="end-of-string-or-before-ending-newline-z"></a>文字列の末尾または末尾の改行の前: \Z  
- `\Z` アンカーは、入力文字列の末尾、または入力文字列の末尾にある `\n` の前に一致する必要があることを指定します。 これは `$` アンカーと同じですが、`\Z` では <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> オプションが無視される点が異なります。 したがって、複数行文字列では、最後の行の末尾か、最後の行の `\n` の前にのみ一致することができます。  
+ `\Z` アンカーは、入力文字列の末尾、または入力文字列の末尾にある `\n` の前に一致する必要があることを指定します。 これは `$` アンカーと同じですが、 `\Z` では <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> オプションが無視される点が異なります。 したがって、複数行文字列では、最後の行の末尾か、最後の行の `\n`の前にのみ一致することができます。  
   
  `\Z` は `\n` に一致しますが、 `\r\n` (CR/LF 文字の組み合わせ) には一致しないことに注意してください。 CR/LF と一致させるには、 `\r?\Z` を正規表現パターンに含めます。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "53155039"
   
 <a name="EndOnly"></a>   
 ## <a name="end-of-string-only-z"></a>文字列の末尾のみ: \z  
- `\z` アンカーは、入力文字列の末尾に一致する必要があることを指定します。 `$` 言語要素と同様に、`\z` では <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> オプションが無視されます。 `\Z` 言語要素とは異なり、`\z` は文字列末尾にある `\n` 文字には一致しません。 したがって、入力文字列の最後の行にのみ一致することができます。  
+ `\z` アンカーは、入力文字列の末尾に一致する必要があることを指定します。 `$` 言語要素と同様に、 `\z` では <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> オプションが無視されます。 `\Z` 言語要素とは異なり、 `\z` は文字列末尾にある `\n` 文字には一致しません。 したがって、入力文字列の最後の行にのみ一致することができます。  
   
  次の例では、正規表現で `\z` アンカーを使用して、プロ野球チームが存続した年数に関する情報を抽出します。この正規表現は、アンカーを除けば前のセクションで取り上げた例と同じです。 この例は、文字列配列の 5 つの各要素と正規表現パターン `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+\r?\z`の一致を試みます。 これらのうち、2 つの文字列は復帰文字と改行文字で終わり、別の 1 つの文字列は改行文字で終わっています。残りの 2 つの文字列の末尾には、復帰文字も改行文字もありません。 出力結果が示すように、復帰文字も改行文字もない文字列だけがパターンに一致します。  
   
@@ -178,5 +178,5 @@ ms.locfileid: "53155039"
   
 ## <a name="see-also"></a>関連項目
 
-- [正規表現言語 - クイック リファレンス](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [正規表現言語 - クイック リファレンス](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [正規表現のオプション](../../../docs/standard/base-types/regular-expression-options.md)

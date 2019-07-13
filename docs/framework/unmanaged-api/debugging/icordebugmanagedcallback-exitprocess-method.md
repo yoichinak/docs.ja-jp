@@ -17,43 +17,44 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42330296defe90980dd431ce39765a549057b82a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 04b8ac6751024e64cc866fce1cfe72fb42e41200
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416882"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760435"
 ---
 # <a name="icordebugmanagedcallbackexitprocess-method"></a>ICorDebugManagedCallback::ExitProcess メソッド
 プロセスが終了していることをデバッガーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ExitProcess (  
     [in] ICorDebugProcess *pProcess  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pProcess`  
- [in]ICorDebugProcess を表すオブジェクト、プロセスへのポインター。  
+ [in]プロセスを表す ICorDebugProcess オブジェクトへのポインター。  
   
-## <a name="remarks"></a>コメント  
- 継続することはできません、`ExitProcess`イベント。 このイベントが発生する非同期的に他のイベントに、停止するプロセスが表示されます。 これは、停止している間、通常の外的要因により、プロセスが終了した場合に発生します。  
+## <a name="remarks"></a>Remarks  
+ 継続することはできません、`ExitProcess`イベント。 このイベントは、プロセスが停止するのに見えますが他のイベントに非同期的に発生可能性があります。 これは、停止している間、通常の外的要因により、プロセスが終了した場合に発生します。  
   
  共通言語ランタイム (CLR) では、マネージ コールバックをディスパッチは既に場合、そのコールバックが返された後に、このイベントはまで延期されます。  
   
- `ExitProcess`イベントがシャット ダウン時に呼び出されることが保証する唯一の終了/アンロード イベント。  
+ `ExitProcess`イベントは、シャット ダウン時に呼び出されることが保証される唯一の終了/アンロード イベント。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [ICorDebugManagedCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>関連項目
+
+- [ICorDebugManagedCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

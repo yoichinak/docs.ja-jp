@@ -8,12 +8,12 @@ helpviewer_keywords:
 - win32manifest compiler option [C#]
 - -win32manifest compiler option [C#]
 ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
-ms.openlocfilehash: 88932ad30e30d53312e6d76f70415969b9e86675
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4cdab8c818cf3278c829e2486e89be32bb4ba277
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517981"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593042"
 ---
 # <a name="-win32manifest-c-compiler-options"></a>-win32manifest (C# コンパイラ オプション)
 **-win32manifest** オプションは、プロジェクトのポータブル実行可能 (PE) ファイルに埋め込まれる、ユーザー定義の Win32 アプリケーション マニフェスト ファイルを指定するために使用します。  
@@ -28,7 +28,7 @@ ms.locfileid: "43517981"
  `filename`  
  カスタム マニフェスト ファイルの名前と場所。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  既定では、Visual C# コンパイラは "asInvoker" の要求実行レベルを指定するアプリケーション マニフェストを埋め込みます。 マニフェストは、実行可能ファイルがビルドされたフォルダーと同じフォルダーに作成されます (Visual Studio を使用している場合、通常は bin\Debug または bin\Release フォルダー)。 カスタム マニフェストを指定する場合 (たとえば、"highestAvailable" または "requireAdministrator" の要求実行レベルを指定する場合) は、このオプションを使用してファイルの名前を指定します。  
   
 > [!NOTE]
@@ -38,9 +38,9 @@ ms.locfileid: "43517981"
   
  次の条件のいずれかに該当する場合、アプリケーションは仮想化の対象となります。  
   
--   **-nowin32manifest** オプションを使用していて、後のビルド手順でマニフェストを提供していないか、**-win32res** オプションを使用して Windows リソース (.res) ファイルの一部としていない。  
+- **-nowin32manifest** オプションを使用していて、後のビルド手順でマニフェストを提供していないか、**-win32res** オプションを使用して Windows リソース (.res) ファイルの一部としていない。  
   
--   要求実行レベルが指定されていないカスタム マニフェストを提供している。  
+- 要求実行レベルが指定されていないカスタム マニフェストを提供している。  
   
  Visual Studio は、既定の .manifest ファイルを作成し、それを実行可能ファイルと一緒にデバッグ ディレクトリとリリース ディレクトリに保存します。 カスタム マニフェストを追加するには、任意のテキスト エディターでカスタム マニフェストを作成し、そのファイルをプロジェクトに追加します。 または、**ソリューション エクスプ ローラー**で **[プロジェクト]** アイコンを右クリックし、**[新しい項目の追加]** をクリックして、**[アプリケーション マニフェスト ファイル]** をクリックします。 新規または既存のマニフェスト ファイルを追加すると、そのマニフェストは **[マニフェスト]** ドロップダウン リストに表示されます。 詳しくは、「[[アプリケーション] ページ (プロジェクト デザイナー) (C#)](/visualstudio/ide/reference/application-page-project-designer-csharp)」をご覧ください。  
   
@@ -66,8 +66,8 @@ ms.locfileid: "43517981"
 </assembly>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)  
-- [-nowin32manifest (C# コンパイラ オプション)](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md)  
+- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
+- [-nowin32manifest (C# コンパイラ オプション)](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

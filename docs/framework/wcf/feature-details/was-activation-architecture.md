@@ -2,12 +2,12 @@
 title: WAS アクティベーション アーキテクチャ
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 64219649e7b743b7dd3a67673c3f2409aeeba486
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 063c5e43abf4ddda3edb1de1d9d983bfe8e05706
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197306"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637399"
 ---
 # <a name="was-activation-architecture"></a>WAS アクティベーション アーキテクチャ
 ここでは、Windows プロセス アクティブ化サービス (WAS とも呼ばれます) の各コンポーネントについて説明します。  
@@ -15,19 +15,19 @@ ms.locfileid: "47197306"
 ## <a name="activation-components"></a>アクティベーション コンポーネント  
  WAS は、複数のアーキテクチャ コンポーネントで構成されます。  
   
--   リスナー アダプター :  特定のネットワーク プロトコルでメッセージを受信し、WAS と通信して、受信メッセージを適切なワーカー プロセスにルーティングする Windows サービス。  
+- リスナー アダプター :  特定のネットワーク プロトコルでメッセージを受信し、WAS と通信して、受信メッセージを適切なワーカー プロセスにルーティングする Windows サービス。  
   
--   WAS :  ワーカー プロセスの作成と有効期間を管理する Windows サービス。  
+- WAS :  ワーカー プロセスの作成と有効期間を管理する Windows サービス。  
   
--   汎用ワーカー プロセス実行可能ファイル (w3wp.exe)。  
+- 汎用ワーカー プロセス実行可能ファイル (w3wp.exe)。  
   
--   アプリケーション マネージャー :  ワーカー プロセス内のアプリケーションをホストするアプリケーション ドメインの作成と有効期間を管理します。  
+- アプリケーション マネージャー :  ワーカー プロセス内のアプリケーションをホストするアプリケーション ドメインの作成と有効期間を管理します。  
   
--   プロトコル ハンドラー :  ワーカー プロセスで実行され、ワーカー プロセスと個々のリスナー アダプター間の通信を管理するプロトコル固有のコンポーネント。 プロトコル ハンドラーには、プロセス プロトコル ハンドラーと AppDomain プロトコル ハンドラーの 2 種類があります。  
+- プロトコル ハンドラー :  ワーカー プロセスで実行され、ワーカー プロセスと個々のリスナー アダプター間の通信を管理するプロトコル固有のコンポーネント。 プロトコル ハンドラーには、プロセス プロトコル ハンドラーと AppDomain プロトコル ハンドラーの 2 種類があります。  
   
  ワーカー プロセス インスタンスをアクティブ化する場合、WAS は必要なプロセス プロトコル ハンドラーをワーカー プロセスに読み込み、アプリケーション マネージャーを使用して、アプリケーションをホストするアプリケーション ドメインを作成します。 アプリケーション ドメインは、アプリケーションのコードと、アプリケーションが使用するネットワーク プロトコルに必要な AppDomain プロトコル ハンドラーを読み込みます。  
   
- ![WAS アーキテクチャ](../../../../docs/framework/wcf/feature-details/media/wasarchitecture.gif "WASArchitecture")  
+ ![WAS アーキテクチャを示すスクリーン ショット。](./media/was-activation-architecture/windows-process-application-service-architecture.gif)  
   
 ### <a name="listener-adapters"></a>リスナー アダプター  
  リスナー アダプターは個別の Windows サービスであり、リッスンするネットワーク プロトコルを使用して、メッセージ受信に使用されるネットワーク通信ロジックを実装します。 次の表には、Windows Communication Foundation (WCF) プロトコルのリスナー アダプターが一覧表示します。  
@@ -85,6 +85,7 @@ ms.locfileid: "47197306"
 </system.web>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [WCF で使用するための WAS を設定する](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
- [Windows Server App Fabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>関連項目
+
+- [WCF で使用するための WAS を設定する](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
+- [AppFabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkId=201276)

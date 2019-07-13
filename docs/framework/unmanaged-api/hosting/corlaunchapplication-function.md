@@ -17,21 +17,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a53b0a9cdcec33846f9d491e7d6567bcf9235b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9861de733a9acb43c7e2a4b4941f9945fc5f0ba7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428763"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758380"
 ---
 # <a name="corlaunchapplication-function"></a>CorLaunchApplication 関数
 指定したネットワーク パスのアプリケーションを、指定したマニフェストとその他のアプリケーション データを使用して起動します。  
   
- この関数は、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] では非推奨とされました。  
+ この関数は、.NET Framework 4 では廃止されました。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CorLaunchApplication (  
     [in]  HOST_TYPE                dwClickOnceHost,  
     [in]  LPCWSTR                  pwzAppFullName,  
@@ -43,37 +43,37 @@ HRESULT CorLaunchApplication (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `dwClickOnceHost`  
- [in]値、 [HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md)アプリケーションの起動は、ホストの種類を指定する列挙です。  
+ [in]値、 [HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md)が起動して、アプリケーション ホストの種類を指定する列挙体。  
   
  `pwzAppFullName`  
- [in]起動されるアプリケーションの完全名。  
+ [in]起動しているアプリケーションの完全名。  
   
  `dwManifestPaths`  
  [in]アプリケーションのマニフェストのパスの数。  
   
  `ppwzManifestPaths`  
- [in]それぞれを指定しますが起動されるアプリケーションのマニフェストへのパス、文字列の配列。  
+ [in]起動しているアプリケーションのマニフェストへのパスを指定の文字列の配列。  
   
  `dwActivationData`  
- [in]起動されるアプリケーションのライセンス認証データ項目の数。  
+ [in]起動しているアプリケーションのデータ項目をアクティブ化の数。  
   
  `ppwzActivationData`  
- [in]起動されるアプリケーションのライセンス認証データ項目は、それぞれが、文字列の配列。  
+ [in]起動しているアプリケーションのライセンス認証データ項目は、それぞれの文字列の配列。  
   
  `lpProcessInformation`  
- [out]アプリケーションが読み込まれているプロセスに関する情報へのポインター。  
+ [out]これで、アプリケーションが読み込まれたプロセスに関する情報へのポインター。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   
  **ライブラリ:** MSCorEE.dll  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- 
-  [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>関連項目
+
+- [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

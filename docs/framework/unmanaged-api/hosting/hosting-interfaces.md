@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: cc64cb05-38da-418e-815a-daac8e8e26e5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a32f68566fc6fe53020c4e9b13482355b62ed21
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 46ff6032f2cdbd4a5f294198fe3bf71862c67528
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485955"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490246"
 ---
 # <a name="hosting-interfaces"></a>ホスト インターフェイス
 アンマネージ インターフェイスについて説明をアプリケーションに共通言語ランタイム (CLR) を統合するホストを使用できます。  
@@ -22,7 +22,7 @@ ms.locfileid: "43485955"
   
  .NET Framework バージョン 3.0 および 3.5 では、.NET Framework version 2.0 のホスト インターフェイスを使用し、ホスティング機能は導入されません。  
   
- [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]ホスティング インターフェイスは、.NET Framework 2.0 インターフェイスをより優先されます。
+ .NET Framework 4 ホスト インターフェイスでは、.NET Framework 2.0 インターフェイスを優先します。
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [非推奨の CLR のホスト インターフェイスおよびコクラス](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-interfaces-and-coclasses.md)  
@@ -32,7 +32,7 @@ ms.locfileid: "43485955"
  .NET Framework version 2.0 で導入されたホスティング インターフェイスをについて説明します。  
   
  [.NET Framework 4 および 4.5 で追加された CLR ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
- 導入されたホスティング インターフェイスについて説明します、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]します。  
+ .NET Framework 4 で導入されたホスティング インターフェイスをについて説明します。  
   
 ## <a name="related-sections"></a>関連項目  
  [ホスト コクラス](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  
@@ -45,4 +45,4 @@ ms.locfileid: "43485955"
   
  [ホスティング](../../../../docs/framework/unmanaged-api/hosting/index.md)  
   
- [ランタイム ホスト](https://msdn.microsoft.com/library/99d9246a-b994-4fe5-985c-8588d1d59998)
+ [ランタイム ホスト](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))

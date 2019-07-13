@@ -3,11 +3,11 @@ title: 3558 - ServiceActivationStart
 ms.date: 03/30/2017
 ms.assetid: 9062c6f4-2252-460c-ad29-f8effa72fcd1
 ms.openlocfilehash: cc6a27eddff409eeddb21689525bc7a4cb3d0ebf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33466679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696081"
 ---
 # <a name="3558---serviceactivationstart"></a>3558 - ServiceActivationStart
 ## <a name="properties"></a>プロパティ  
@@ -25,4 +25,4 @@ ms.locfileid: "33466679"
 ## <a name="message"></a>メッセージ  
  サービスのアクティブ化を開始します  
   
-## <a name="details"></a>詳細
+## <a name="details"></a>説明

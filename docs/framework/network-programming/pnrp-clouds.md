@@ -2,12 +2,12 @@
 title: PNRP クラウド
 ms.date: 03/30/2017
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
-ms.openlocfilehash: 22401459a183d8d21e37211d942b24dbc76a6f94
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6e7ec5d88e1053f33b86816fec739aae38cac18c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195360"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623028"
 ---
 # <a name="pnrp-clouds"></a>PNRP クラウド
 PNRP "クラウド" は、ネットワーク経由で相互に通信できるノードのセットを表します。 "クラウド" という用語は、"ピア メッシュ" や "ピアツーピア グラフ" と同義です。  
@@ -18,9 +18,9 @@ PNRP "クラウド" は、ネットワーク経由で相互に通信できるノ
   
  PNRP は 3 つのクラウド "スコープ" を使います。スコープとは、互いに検出可能なコンピューターをグループ化したものです。  
   
--   グローバル クラウドはグローバル IPv6 アドレス スコープとグローバル アドレスに対応し、IPv6 インターネット全体のすべてのコンピューターを表しています。 グローバル クラウドは 1 つしか存在しません。  
+- グローバル クラウドはグローバル IPv6 アドレス スコープとグローバル アドレスに対応し、IPv6 インターネット全体のすべてのコンピューターを表しています。 グローバル クラウドは 1 つしか存在しません。  
   
--   リンクローカル クラウドは、リンクローカル IPv6 アドレス スコープとリンクローカル アドレスに対応します。 リンクローカル クラウドは特定のリンクに使います。このリンクは通常、ローカルにアタッチされているサブネットに相当します。 リンクローカル クラウドは複数存在できます。  
+- リンクローカル クラウドは、リンクローカル IPv6 アドレス スコープとリンクローカル アドレスに対応します。 リンクローカル クラウドは特定のリンクに使います。このリンクは通常、ローカルにアタッチされているサブネットに相当します。 リンクローカル クラウドは複数存在できます。  
   
  3 番目のクラウドであるサイト固有クラウドは、IPv6 アドレス スコープとサイトローカル アドレスに対応します。 サイト固有クラウドは非推奨とされますが、PNRP ではまだサポートされています。  
   
@@ -31,6 +31,7 @@ PNRP "クラウド" は、ネットワーク経由で相互に通信できるノ
   
  クラウド インスタンスを作成または取得した後は、それにピア名を登録して、既知のピアのメッシュを作成できます。  
   
-## <a name="see-also"></a>参照  
- <xref:System.Net.PeerToPeer.Cloud>  
- [ピア名解決プロトコル](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Net.PeerToPeer.Cloud>
+- [ピア名解決プロトコル](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)

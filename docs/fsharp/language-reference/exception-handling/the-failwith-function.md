@@ -2,12 +2,12 @@
 title: 例外:failwith 関数
 description: "'Failwith' 関数は F# の例外を生成する方法について説明します。"
 ms.date: 05/16/2016
-ms.openlocfilehash: 05d385ddfc98a910779a6f59949a7187c38f0812
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 08107966ddc2f55625347deb92d224b286df7761
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610113"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641951"
 ---
 # <a name="exceptions-the-failwith-function"></a>例外:failwith 関数
 
@@ -31,6 +31,6 @@ failwith error-message-string
 
 - [例外処理](index.md)
 - [例外の種類](exception-types.md)
-- [例外処理:`try...with`式](the-try-with-expression.md)
-- [例外処理:`try...finally`式](the-try-finally-expression.md)
+- [例外: `try...with`式](the-try-with-expression.md)
+- [例外: `try...finally`式](the-try-finally-expression.md)
 - [例外: `raise` 関数](the-raise-function.md)

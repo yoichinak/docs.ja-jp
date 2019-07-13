@@ -2,12 +2,12 @@
 title: 識別子名
 description: C# プログラミング言語の有効な識別子名に関する規則について説明します。
 ms.date: 08/21/2018
-ms.openlocfilehash: e5ff83661c9a86273760f32a795f7de6dbc7bf1d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 2147b3846d4ba6d5471b81448489c6d716e3cd61
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877875"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606953"
 ---
 # <a name="identifier-names"></a>識別子名
 
@@ -32,7 +32,7 @@ ms.locfileid: "43877875"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# プログラミング ガイド](../index.md)
 - [インサイド C# プログラム](../inside-a-program/index.md)

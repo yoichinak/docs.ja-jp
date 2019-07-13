@@ -1,5 +1,5 @@
 ---
-title: '&lt;cryptoClass&gt;要素'
+title: <cryptoClass> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping/cryptoClasses/cryptoClass
@@ -8,22 +8,20 @@ helpviewer_keywords:
 - cryptoClass element
 - <cryptoClass> element
 ms.assetid: 03db52ef-010e-44ea-b6fd-b9c900ecad50
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: aec786123357337cbaa6251191a023c092af3049
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: da78140806ab8dbe7b7cb5e321e82755774ff25d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705260"
 ---
-# <a name="ltcryptoclassgt-element"></a>&lt;cryptoClass&gt;要素
+# <a name="cryptoclass-element"></a>\<cryptoClass > 要素
 [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) 要素内の表示名へのマッピングを持つ暗号化クラスを含みます。  
   
  \<configuration>  
-\<mscorlib >  
+\<mscorlib>  
 \<cryptographySettings >  
-\<cryptoNameMapping >  
+\<cryptoNameMapping>  
 \<cryptoClasses >  
 \<cryptoClass >  
   
@@ -77,8 +75,9 @@ ms.locfileid: "53145755"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [暗号化設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)  
+## <a name="see-also"></a>関連項目
+
+- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [暗号化設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
 - [暗号化クラスの設定](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

@@ -2,12 +2,12 @@
 title: SQL Server の承認と権限
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-ms.openlocfilehash: bdf5112e3f0e2cada4885b0b66adf248f0ffe808
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.openlocfilehash: 35aa26ed1afb0006802b703fa0fa3a6076f03ddf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46007325"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649563"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>SQL Server の承認と権限
 データベース オブジェクトを作成する際は、ユーザーがそれらのオブジェクトにアクセスできるように明示的に権限を付与する必要があります。 セキュリティ保護可能なすべてのオブジェクトには、権限ステートメントを使ってプリンシパルに付与することのできる権限が関連付けられています。  
@@ -37,7 +37,7 @@ ms.locfileid: "46007325"
 |REVOKE|権限を取り消します。 これは、新しいオブジェクトの既定の状態です。 ユーザーまたはロールから取り消された権限は、引き続きそのプリンシパルが割り当てられている他のグループまたはロールから継承できます。|  
 |DENY|権限を継承できないように取り消します。 DENY はすべての権限に優先しますが、オブジェクトの所有者または `sysadmin` のメンバーには適用されません。 `public` ロールに対してオブジェクトの権限を拒否 (DENY) した場合、オブジェクトの所有者および `sysadmin` のメンバーを除くすべてのユーザーおよびロールの権限が拒否されます。|  
   
--   GRANT ステートメントでは、データベース ユーザーによる継承が可能な権限をグループまたはロールに割り当てることができます。 ただし、DENY ステートメントは、他のすべての権限ステートメントに優先します。 そのため、権限を拒否されたユーザーが、別のロールからそれを継承することはできません。  
+- GRANT ステートメントでは、データベース ユーザーによる継承が可能な権限をグループまたはロールに割り当てることができます。 ただし、DENY ステートメントは、他のすべての権限ステートメントに優先します。 そのため、権限を拒否されたユーザーが、別のロールからそれを継承することはできません。  
   
 > [!NOTE]
 >  `sysadmin` 固定サーバー ロールのメンバーおよびオブジェクトの所有者の権限を拒否することはできません。  
@@ -58,10 +58,11 @@ ms.locfileid: "46007325"
 |--------------|-----------------|  
 |[アクセス許可](/sql/relational-databases/security/permissions-database-engine)|権限の階層、カタログ ビュー、および固定サーバー ロールと固定データベース ロールの権限について説明します。|
   
-## <a name="see-also"></a>関連項目  
- [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server におけるアプリケーション セキュリティのシナリオ](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [SQL Server での認証](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
- [SQL Server のサーバー ロールとデータベース ロール](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
- [SQL Server における所有権とユーザーとスキーマの分離](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [SQL Server におけるアプリケーション セキュリティのシナリオ](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
+- [SQL Server での認証](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
+- [SQL Server のサーバー ロールとデータベース ロール](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)
+- [SQL Server における所有権とユーザーとスキーマの分離](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -addmodule compiler option [C#]
 - addmodule compiler option [C#]
 ms.assetid: ed604546-0dc2-4bd4-9a3e-610a8d973e58
-ms.openlocfilehash: 39955d86085b49ef503ea9ed531df9feafa648ac
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f45afd277818d7e1658751f2aae0b2153c940eee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524589"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617513"
 ---
 # <a name="-addmodule-c-compiler-options"></a>-addmodule (C# コンパイラ オプション)
 このオプションを使用すると、スイッチで作成されたモジュールが現在のコンパイルに追加されます。  
@@ -25,7 +25,7 @@ ms.locfileid: "43524589"
 ```  
   
 ## <a name="arguments"></a>引数  
- `file`, `file2`  
+ `file`、 `file2`  
  メタデータを含む出力ファイル。 このファイルには、アセンブリ マニフェストを含めることができません。 複数のファイルをインポートするには、コンマかセミコロンでファイル名を区切ります。  
   
 ## <a name="remarks"></a>コメント  
@@ -44,9 +44,9 @@ ms.locfileid: "43524589"
 csc -addmodule:metad1.netmodule;metad2.netmodule -out:out.exe input.cs  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)  
-- [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)  
-- [マルチファイル アセンブリ](../../../framework/app-domains/multifile-assemblies.md)  
+- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
+- [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)
+- [マルチファイル アセンブリ](../../../framework/app-domains/multifile-assemblies.md)
 - [方法: マルチファイル アセンブリをビルドする](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)

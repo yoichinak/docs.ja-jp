@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reserved words, Visual Basic keywords
 - Visual Basic, keywords
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
-ms.openlocfilehash: eaa8813613a0d17b6d1e32cdcdb8361e9b2e8d84
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e00cb8579ba2692acdfbf3fd349e08bb8647e2d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801562"
 ---
 # <a name="keywords-visual-basic"></a>キーワード (Visual Basic)
 次の表には、すべての Visual Basic 言語のキーワードが一覧表示します。  
@@ -56,7 +56,7 @@ ms.locfileid: "33605317"
 |[Not](../../../visual-basic/language-reference/operators/not-operator.md)|[Nothing](../../../visual-basic/language-reference/nothing.md)|[NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)|[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)|  
 |[Object](../../../visual-basic/language-reference/data-types/object-data-type.md)|[Of](../../../visual-basic/language-reference/statements/of-clause.md)|[On](../../../visual-basic/misc/on.md)|[Operator](../../../visual-basic/language-reference/statements/operator-statement.md)|  
 |[Option](../../../visual-basic/language-reference/statements/option-keyword-statement.md)|[Optional](../../../visual-basic/language-reference/modifiers/optional.md)|[Or](../../../visual-basic/language-reference/operators/or-operator.md)|[OrElse](../../../visual-basic/language-reference/operators/orelse-operator.md)|  
-|[Out (ジェネリック修飾子)](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)|[オーバーロード](../../../visual-basic/language-reference/modifiers/overloads.md)|[Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)|[Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)|  
+|[Out (ジェネリック修飾子)](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)|[Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)|[Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)|[Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)|  
 |[ParamArray](../../../visual-basic/language-reference/modifiers/paramarray.md)|[Partial](../../../visual-basic/language-reference/modifiers/partial.md)|[Private](../../../visual-basic/language-reference/modifiers/private.md)|[Property](../../../visual-basic/language-reference/statements/property-statement.md)|  
 |[Protected](../../../visual-basic/language-reference/modifiers/protected.md)|[Public](../../../visual-basic/language-reference/modifiers/public.md)|[RaiseEvent](../../../visual-basic/language-reference/statements/raiseevent-statement.md)|[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)|  
 |[ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|[REM](../../../visual-basic/language-reference/statements/rem-statement.md)|[RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md)|[Resume](../../../visual-basic/language-reference/statements/resume-statement.md)|  
@@ -77,7 +77,7 @@ ms.locfileid: "33605317"
 |[>> 演算子](../../../visual-basic/language-reference/operators/right-shift-operator.md)|[>>= 演算子](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)|[<<](../../../visual-basic/language-reference/operators/left-shift-operator.md)|[<\<=](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)|  
   
 > [!NOTE]
->  `EndIf`、 `GoSub`、 `Variant`、および`Wend`、、Visual Basic では使用されなくが予約されたキーワード、として保持されます。 `Let` キーワードは、意味が変更されました。 `Let` は、LINQ クエリで使用するようになっています。 詳細については、「[Let 句](../../../visual-basic/language-reference/queries/let-clause.md)」を参照してください。  
+>  `EndIf`、 `GoSub`、 `Variant`、および`Wend`Visual Basic では使用されなくが予約されたキーワード、として保持されます。 `Let` キーワードは、意味が変更されました。 `Let` は、LINQ クエリで使用するようになっています。 詳細については、「[Let 句](../../../visual-basic/language-reference/queries/let-clause.md)」を参照してください。  
   
 ## <a name="unreserved-keywords"></a>予約されていないキーワード  
  次のキーワードは予約されていません。したがって、プログラミングの要素の名前として使用できます。 ただし、コードの可読性が低下し、検出しにくい微妙なエラーの原因となる可能性があるため、これらのキーワードを要素の名前として使用することは避けてください。  
@@ -117,5 +117,6 @@ ms.locfileid: "33605317"
 |[レジストリの概要](../../../visual-basic/language-reference/keywords/registry-summary.md)|プログラム設定の読み込み、保存、および削除に使用される関数の一覧を示します。|  
 |[文字列操作の概要](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)|文字列操作に使用される関数の一覧を示します。|  
   
-## <a name="see-also"></a>関連項目  
- [Visual Basic ランタイム ライブラリのメンバー](../../../visual-basic/language-reference/runtime-library-members.md)
+## <a name="see-also"></a>関連項目
+
+- [Visual Basic ランタイム ライブラリのメンバー](../../../visual-basic/language-reference/runtime-library-members.md)

@@ -2,12 +2,12 @@
 title: CompositeDuplexBindingElement
 ms.date: 03/30/2017
 ms.assetid: 05e985aa-6462-431d-a831-0d601f3a3835
-ms.openlocfilehash: 10cc7efbe2bc9f113b94f452dc26df9bcddd3181
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: db3081e5523dc96862a1706d6366a32a3693e88e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61963905"
 ---
 # <a name="compositeduplexbindingelement"></a>CompositeDuplexBindingElement
 CompositeDuplexBindingElement  
@@ -30,7 +30,7 @@ class CompositeDuplexBindingElement : BindingElement
 ### <a name="clientbaseaddress"></a>ClientBaseAddress  
  データ型: string  
   
- アクセスの種類 : 読み取り専用  
+ アクセスの種類:読み取り専用  
   
  クライアントのベース アドレスです。  
   
@@ -38,7 +38,8 @@ class CompositeDuplexBindingElement : BindingElement
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
-|Namespace|root\ServiceModel で定義|  
+|名前空間|root\ServiceModel で定義|  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>
+## <a name="see-also"></a>関連項目
+
+- <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>

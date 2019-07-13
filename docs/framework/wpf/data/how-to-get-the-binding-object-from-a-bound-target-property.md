@@ -1,24 +1,24 @@
 ---
-title: '方法 : バインドされているターゲット プロパティからのバインディング オブジェクトの取得'
+title: '方法: バインドされているターゲット プロパティからのバインディング オブジェクトの取得'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [WPF], getting binding objects from bound target properties
 - properties [WPF], getting binding objects from
 ms.assetid: 87974c5f-136b-4de7-b07d-9285b62ab123
-ms.openlocfilehash: 7cebaf1077fb66420d77d656db32f444dd932b85
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 7c7392bc11af57b2e9f27e2302f36efb59d40e9d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933407"
 ---
-# <a name="how-to-get-the-binding-object-from-a-bound-target-property"></a>方法 : バインドされているターゲット プロパティからのバインディング オブジェクトの取得
+# <a name="how-to-get-the-binding-object-from-a-bound-target-property"></a>方法: バインドされているターゲット プロパティからのバインディング オブジェクトの取得
 この例では、データにバインドされているターゲット プロパティからバインディング オブジェクトを取得する方法を示します。  
   
 ## <a name="example"></a>例  
  取得するには、次を行うことができます、<xref:System.Windows.Data.Binding>オブジェクト。  
   
- [!code-csharp[BindValidation#GetBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml.cs#getbinding)]  
+ [!code-csharp[BindValidation#GetBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml.cs#getbinding)]  
   
 > [!NOTE]
 >  ターゲット オブジェクトの複数のプロパティがデータ バインディングを使用している可能性があるため、バインディングの依存関係プロパティを指定する必要があります。  
@@ -30,6 +30,7 @@ ms.locfileid: "44259880"
 > [!NOTE]
 >  バインドがある場合、<xref:System.Windows.Data.MultiBinding>を使用して、 <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetMultiBinding%2A>します。 ある場合、<xref:System.Windows.Data.PriorityBinding>を使用して、 <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetPriorityBinding%2A>します。 ターゲット プロパティを使用してバインドされているかどうかがない場合、 <xref:System.Windows.Data.Binding>、 <xref:System.Windows.Data.MultiBinding>、または<xref:System.Windows.Data.PriorityBinding>、使用することができます<xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetBindingBase%2A>します。  
   
-## <a name="see-also"></a>関連項目  
- [コードでバインディングを作成する](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md)  
- [方法トピック](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>関連項目
+
+- [コードでバインディングを作成する](how-to-create-a-binding-in-code.md)
+- [方法トピック](data-binding-how-to-topics.md)

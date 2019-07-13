@@ -1,18 +1,18 @@
 ---
-title: '方法 : アクティブな期間の末尾に到達したタイムラインの FillBehavior を指定する'
+title: '方法: アクティブな期間の末尾に到達したタイムラインの FillBehavior を指定する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - FillBehavior property for inactive timelines [WPF]
 - Timelines [WPF], FillBehavior property
 ms.assetid: db805f59-d513-4dac-af15-47005dae3199
-ms.openlocfilehash: c88deeb679a3e8f2027d6bb2e817edc1ade5926d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9f03c5b8d4585c32e0a9f119649dd15a23523033
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45749146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973668"
 ---
-# <a name="how-to-specify-the-fillbehavior-for-a-timeline-that-has-reached-the-end-of-its-active-period"></a>方法 : アクティブな期間の末尾に到達したタイムラインの FillBehavior を指定する
+# <a name="how-to-specify-the-fillbehavior-for-a-timeline-that-has-reached-the-end-of-its-active-period"></a>方法: アクティブな期間の末尾に到達したタイムラインの FillBehavior を指定する
 この例は、指定する方法を示します、 <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 、非アクティブの<xref:System.Windows.Media.Animation.Timeline>アニメーション プロパティの。  
   
 ## <a name="example"></a>例  
@@ -22,17 +22,17 @@ ms.locfileid: "45749146"
   
  1 つ<xref:System.Windows.Media.Animation.Timeline>が、<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>に設定されている<xref:System.Windows.Media.Animation.FillBehavior.Stop>、そのアニメーション化されていないに戻すに四角形の幅を停止するときの値、<xref:System.Windows.Media.Animation.Timeline>が終了します。 他の<xref:System.Windows.Media.Animation.Timeline>が、<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>の<xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>、これにより、幅、末端を維持するときの値、<xref:System.Windows.Media.Animation.Timeline>が終了します。  
   
- [!code-xaml[timingbehaviors_snip#FillBehaviorWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/FillBehaviorExample.xaml#fillbehaviorwholepage)]  
+ [!code-xaml[timingbehaviors_snip#FillBehaviorWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/FillBehaviorExample.xaml#fillbehaviorwholepage)]  
   
  サンプル全体については、次を参照してください。[アニメーション サンプル ギャラリー](https://go.microsoft.com/fwlink/?LinkID=159969)します。  
   
-## <a name="see-also"></a>関連項目  
- <xref:System.Windows.Media.Animation.DoubleAnimation>  
- <xref:System.Windows.FrameworkElement.Width%2A>  
- <xref:System.Windows.Media.Animation.Timeline>  
- <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>  
- <xref:System.Windows.Media.Animation.FillBehavior.Stop>  
- <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>  
- [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [アニメーションとタイミング](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:System.Windows.Media.Animation.DoubleAnimation>
+- <xref:System.Windows.FrameworkElement.Width%2A>
+- <xref:System.Windows.Media.Animation.Timeline>
+- <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>
+- <xref:System.Windows.Media.Animation.FillBehavior.Stop>
+- <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>
+- [アニメーションの概要](animation-overview.md)
+- [アニメーションとタイミングに関するトピック](animation-and-timing-how-to-topics.md)

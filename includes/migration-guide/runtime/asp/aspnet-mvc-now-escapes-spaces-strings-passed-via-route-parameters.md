@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 2278d82d5362fe217ca4bce02a052d4b440843c2
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774264"
+---
 ### <a name="aspnet-mvc-now-escapes-spaces-in-strings-passed-in-via-route-parameters"></a>ASP.NET MVC は、ルート パラメーターで渡された文字列内のスペースをエスケープするようになりました
 
 |   |   |
@@ -8,4 +16,3 @@
 |Version|4.5.2|
 |型|ランタイム|
 |影響を受ける API|<ul><li><xref:System.Web.Mvc.RouteAttribute.%23ctor(System.String)?displayProperty=nameWithType></li></ul>|
-

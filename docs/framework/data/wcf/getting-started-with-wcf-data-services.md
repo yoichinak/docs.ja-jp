@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: c832fa5b-cf86-4690-be5a-a226c0e49530
-ms.openlocfilehash: 5fc37ed215ada6aa35ac8801ef33e5787ba77584
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c4d3ec4ac0dcd02bc7f7a1d28ba383708d1e3f86
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765607"
 ---
 # <a name="getting-started-with-wcf-data-services"></a>WCF Data Services を使用した作業の開始
 このセクションのトピックで簡単に理解できるように[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]を使用する方法と[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]公開および使用する[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]フィードを基になるテクノロジを説明します。 このセクションには、両方の概念的なコンテンツが含まれています。 および[クイック スタート](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)チュートリアル。  
@@ -40,5 +40,6 @@ ms.locfileid: "43523692"
   
  [はじめに](../../../../docs/framework/data/adonet/ef/getting-started.md)  
   
-## <a name="see-also"></a>関連項目  
- [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
+## <a name="see-also"></a>関連項目
+
+- [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185248)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - math routines
 - Atn function
 ms.assetid: 4d2d82e7-6924-42fe-a4a7-b4dd5bebbd0c
-ms.openlocfilehash: da0b612feb5b9a479d50f52cf65e38007ab3b196
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: e5f87a8e367e8c9df65b979fea3781b42ee3ce83
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45746524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801349"
 ---
 # <a name="math-functions-visual-basic"></a>数値演算関数 (Visual Basic)
 メソッド、<xref:System.Math?displayProperty=nameWithType>クラスは三角関数演算、対数演算、およびその他の一般的な数学関数を提供します。  
@@ -159,16 +159,17 @@ Public Function Ctan(ByVal angle As Double) As Double
 End Function  
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **クラス:** <xref:System.Math>  
   
- **Namespace:** <xref:System>  
+ **名前空間:** <xref:System>  
   
  **アセンブリ:** mscorlib (mscorlib.dll 内)  
   
-## <a name="see-also"></a>関連項目  
- <xref:Microsoft.VisualBasic.VBMath.Rnd%2A>  
- <xref:Microsoft.VisualBasic.VBMath.Randomize%2A>  
- <xref:System.Double.NaN>  
- [数値演算関数の導出](../../../visual-basic/language-reference/keywords/derived-math-functions.md)  
- [算術演算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+## <a name="see-also"></a>関連項目
+
+- <xref:Microsoft.VisualBasic.VBMath.Rnd%2A>
+- <xref:Microsoft.VisualBasic.VBMath.Randomize%2A>
+- <xref:System.Double.NaN>
+- [数値演算関数の導出](../../../visual-basic/language-reference/keywords/derived-math-functions.md)
+- [算術演算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)

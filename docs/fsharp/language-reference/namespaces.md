@@ -2,12 +2,12 @@
 title: 名前空間
 description: 学習方法、F#名前空間では、プログラム要素のグループに名前を追加することによって関連する機能の領域にコードを整理できます。
 ms.date: 12/08/2018
-ms.openlocfilehash: 526d7a07e4804751811c15fa91b0c74c1954d591
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: b315d654dad0d36e3584564ad027c68fb3c94cce
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613441"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645265"
 ---
 # <a name="namespaces"></a>名前空間
 

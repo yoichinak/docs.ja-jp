@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - object keyword [C#]
 ms.assetid: 93f60c0b-e17a-40a9-9362-cca5fb77b0e7
-ms.openlocfilehash: a1917a7925d4ed90ede40248fa394f9c45d09b4e
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 99ce5300d06c500d2e45897a6bd57153dc40d34e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238976"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633383"
 ---
 # <a name="object-c-reference"></a>object (C# リファレンス)
 

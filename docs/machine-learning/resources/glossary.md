@@ -1,14 +1,14 @@
 ---
-title: 機械学習の用語集 - ML.NET
+title: 機械学習の用語集
 description: ML.NET でカスタム モデルをビルドする際に役立つ機械学習の重要な用語の用語集。
 ms.custom: seodec18
-ms.date: 12/20/2018
-ms.openlocfilehash: ac0671bbecda93c411d3be82c789f53beb10fbca
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.date: 05/09/2019
+ms.openlocfilehash: 7d098dc9d3dc6cb7bb08b5689b50afff01ba1d7f
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53760394"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557978"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>機械学習の重要な用語の用語集
 
@@ -16,9 +16,7 @@ ML.NET でカスタム モデルをビルドする際に役立つ機械学習の
 
 ## <a name="accuracy"></a>正確度
 
-[分類](#classification)における正確度は、正しく分類された項目の数をテスト セット内の項目の総数で割ったものです。 0 (正確度が最も低い) ～ 1 (正確度が最も高い) の値になります。 正確度は、モデルのパフォーマンスの評価メトリックの 1 つです。 [精度](#precision)、[再現率](#recall)、および [F 値](#f-score)と併せて考慮してください。
-
-関連する ML.NET API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.Accuracy?displayProperty=nameWithType>
+[分類](#classification)における正確度は、正しく分類された項目の数をテスト セット内の項目の総数で割ったものです。 0 (正確度が最も低い) ～ 1 (正確度が最も高い) の値になります。 正確度は、モデル パフォーマンスの評価メトリックの 1 つです。 [精度](#precision)、[再現率](#recall)、および [F 値](#f-score)と併せて考慮してください。
 
 ## <a name="area-under-the-curve-auc"></a>曲線下面積 (AUC)
 
@@ -28,6 +26,16 @@ ML.NET でカスタム モデルをビルドする際に役立つ機械学習の
 
 [ラベル](#label)が 2 つのクラスのうちの 1 つである[分類](#classification)です。 詳細については、トピック「[機械学習のタスク](tasks.md)」のセクションの「[二項分類](tasks.md#binary-classification)」を参照してください。
 
+## <a name="calibration"></a>調整
+
+調整は、二項分類と多クラス分類のために、生のスコアをクラスのメンバーシップにマップするプロセスです。 一部 ML.NET トレーナーには `NonCalibrated` サフィックスがあります。 これらのアルゴリズムからは、後でクラスの確率にマップする必要がある生のスコアが生成されます。 
+
+## <a name="catalog"></a>Catalog 
+
+ML.NET では、カタログは、共通の目的でグループ化された拡張機能のコレクションです。
+
+たとえば、各機械学習タスク (二項分類、回帰、ランキングなど) には、利用できる機械学習アルゴリズム (トレーナー) のカタログがあります。 二項分類トレーナー用のカタログは <xref:Microsoft.ML.BinaryClassificationCatalog.BinaryClassificationTrainers> です。
+
 ## <a name="classification"></a>分類
 
 データを使用してカテゴリを予測する際、[教師あり機械学習](#supervised-machine-learning)タスクが分類と呼ばれます。 [二項分類](#binary-classification)とは、2 つのカテゴリだけを予測する (たとえば、画像を猫または犬の写真として分類する) ことです。 [多クラス分類](#multiclass-classification)とは、複数のカテゴリを予測する (たとえば、画像を特定の犬種の写真として分類する) ことです。
@@ -35,6 +43,25 @@ ML.NET でカスタム モデルをビルドする際に役立つ機械学習の
 ## <a name="coefficient-of-determination"></a>決定係数
 
 [回帰](#regression)における評価メトリックであり、データがモデルにどの程度適合するかを示します。 0 ～ 1 の値になります。 値 0 は、データがランダムであるか、モデルに適合できないことを意味します。 値 1 は、モデルがデータと完全に一致していることを意味します。 多くの場合、これは r<sup>2</sup>、R<sup>2</sup>、または r の 2 乗と呼ばれます。
+
+## <a name="data"></a>データ
+
+データはあらゆる機械学習アプリケーションの中心です。 ML.NET では、データは <xref:Microsoft.ML.IDataView> オブジェクトで表されます。 データ ビュー オブジェクト:
+- 列と行で構成されています
+- 遅延評価されます (つまり、操作によって要求されたときにのみデータが読み込まれます)
+- 各列の型、形式、長さを定義するスキーマが含まれます
+
+## <a name="estimator"></a>エスティメーター
+
+<xref:Microsoft.ML.IEstimator%601> インターフェイスを実装する ML.NET のクラス。
+
+エスティメーターは、変換 (データ準備変換と機械学習モデル トレーニング変換の両方) の仕様です。 エスティメーターを連結して、変換のパイプラインにすることができます。 エスティメーターまたはエスティメーターのパイプラインのパラメーターは、<xref:Microsoft.ML.IEstimator`1.Fit*> が呼び出されたときに学習されます。 <xref:Microsoft.ML.IEstimator`1.Fit*> の結果は[トランスフォーマー](#transformer)です。
+
+## <a name="extension-method"></a>拡張メソッド
+
+クラスの一部ですが、クラスの外部で定義されている .NET メソッドです。 拡張メソッドの最初のパラメーターは、その拡張メソッドが属するクラスへの静的な `this` 参照です。
+
+拡張メソッドは、ML.NET で[エスティメーター](#estimator)のインスタンスを構築するために幅広く使用されています。
 
 ## <a name="feature"></a>機能
 
@@ -59,6 +86,12 @@ ML.NET でカスタム モデルをビルドする際に役立つ機械学習の
 ## <a name="log-loss"></a>対数損失
 
 [分類](#classification)における評価メトリックであり、分類子の正確度を示します。 対数損失が小さいほど、分類子の正確度が高くなります。
+
+## <a name="loss-function"></a>損失関数
+
+損失関数は、トレーニング ラベル値とモデルによって行われた予測との差です。 モデルのパラメーターは、損失関数を最小化することで推定されます。
+
+さまざまな損失関数を使用してさまざまなトレーナーを構成できます。
 
 ## <a name="mean-absolute-error-mae"></a>平均絶対誤差 (MAE)
 
@@ -88,11 +121,16 @@ ML.NET でカスタム モデルをビルドする際に役立つ機械学習の
 
 [分類](#classification)におけるクラスの精度は、そのクラスに属していると正確に予測された項目の数を、クラスに属していると予測された項目の総数で割ったものです。
 
-関連する ML.NET API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.NegativePrecision?displayProperty=nameWithType>、<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.PositivePrecision?displayProperty=nameWithType>
-
 ## <a name="recall"></a>再現率
 
 [分類](#classification)におけるクラスの再現率は、そのクラスに属していると正確に予測された項目の数を、実際にクラスに属している項目の総数で割ったものです。
+
+## <a name="regularization"></a>正則化
+
+ 正則化は、複雑すぎるため、線形モデルには適していません。 正則化には 2 つの種類があります。
+
+- $L_1$ の正則化では、重要でない特徴の重みが 0 になります。 保存されるモデルのサイズは、この種類の正則化の後に小さくなる可能性があります。
+- $L_2$ の正則化では、重要ではない機能の重み範囲が最小限に抑えられます。これはより一般的なプロセスであり、外れ値の影響をあまり受けません。
 
 ## <a name="regression"></a>回帰
 
@@ -118,9 +156,11 @@ ML.NET でカスタム モデルをビルドする際に役立つ機械学習の
 
 特定のトレーニング データ セットの[モデル](#model)を識別するプロセスです。 線形モデルの場合、重みの検出を意味します。 ツリーの場合、分割ポイントの識別が含まれます。
 
-## <a name="transform"></a>変換
+## <a name="transformer"></a>トランスフォーマー
 
-データを変換する[パイプライン](#pipeline) コンポーネントです。 たとえば、数字のテキストからベクトルへの変換などです。
+<xref:Microsoft.ML.ITransformer> インターフェイスを実装する ML.NET クラス。
+
+トランスフォーマーでは、ある <xref:Microsoft.ML.IDataView> が別のものに変換されます。 トランスフォーマーを作成するには、[エスティメーター](#estimator)またはエスティメーター パイプラインをトレーニングします。 
 
 ## <a name="unsupervised-machine-learning"></a>教師なし機械学習
 

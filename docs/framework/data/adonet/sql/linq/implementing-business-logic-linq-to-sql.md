@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-ms.openlocfilehash: d739e4bba96873740c53c07eccf687b060d82003
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9456340834c06e87f977cd784a37f7436523d29e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43798873"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743135"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>ビジネス ロジックの実装 (LINQ to SQL)
 このトピックの「ビジネス ロジック」とは、データベースでデータを挿入、更新、または削除される前にデータに適用されるカスタム規則または検証テストのことです。 ビジネス ロジックは、「ビジネス ルール」または「ドメイン ロジック」とも呼ばれます。 n 層アプリケーションでは、通常、論理層として設計されるため、プレゼンテーション層やデータ アクセス層から独立して変更できます。 データベースのデータを更新、挿入、または削除する前または後に、データ アクセス層によってビジネス ロジックを呼び出すことができます。  
@@ -18,14 +18,14 @@ ms.locfileid: "43798873"
  ビジネス ロジックは、フィールドの型がテーブル列の型と互換性を持つかどうか確認するスキーマ検証のような簡単なものにすることもできます。 または、任意の複雑な方法で相互に影響するオブジェクトのセットから成るビジネス ロジックも可能です。 規則は、データベース上のストアド プロシージャとして、またはメモリ内のオブジェクトとして実装可能です。 ただし、ビジネス ロジックを実装、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]データ アクセス コードからビジネス ロジックを分離する部分クラスと部分メソッドを使用できるようにします。  
   
 ## <a name="how-linq-to-sql-invokes-your-business-logic"></a>LINQ to SQL でビジネス ロジックを呼び出す方法  
- 手動で、または[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]か SQLMetal を使用してデザイン時にエンティティ クラスを生成すると、部分クラスとして定義されます。 つまり、別個のコード ファイル内で、カスタム ビジネス ロジックを格納するエンティティ クラスの別の部分を定義できます。 コンパイル時に 2 つの部分が 1 つのクラスに結合されます。 ただし、[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]または SQLMetal を使ってエンティティ クラスを再生成する必要がある場合には、そうしてもかまいません。その場合、開発者が作成したクラスの部分は変更されません。  
+ 手動でまたはオブジェクト リレーショナル デザイナーまたは SQLMetal を使用して、デザイン時に、エンティティ クラスを生成するときに、部分クラスとして定義されます。 つまり、別個のコード ファイル内で、カスタム ビジネス ロジックを格納するエンティティ クラスの別の部分を定義できます。 コンパイル時に 2 つの部分が 1 つのクラスにマージされます。 これを行うことができますをオブジェクト リレーショナル デザイナーまたは SQLMetal を使用して、エンティティ クラスを再生成した場合は、クラスの部分は変更されません。  
   
  エンティティと <xref:System.Data.Linq.DataContext> を定義する部分クラスには、部分メソッドが含まれます。 これらは機能拡張ポイントであり、これらを使用して、エンティティまたはエンティティ プロパティを更新、挿入、削除する前および後にビジネス ロジックを適用できます。 部分メソッドはコンパイル時のイベントのようなものです。 コード ジェネレーターはメソッド シグネチャを定義して、get および set プロパティ アクセサー内、`DataContext` コンストラクター内、および、場合によっては <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 呼び出し時に背後でメソッドを呼び出します。 ただし、特定の部分メソッドを実装しない場合には、そのメソッドのすべての参照と定義はコンパイル時に削除されます。  
   
  別個のコード ファイル内に作成する実装定義では、必要な任意のカスタム ロジックを実行できます。 部分クラス自体をドメイン層として使用できます。または、部分メソッドの実装定義から別個の 1 つ以上のオブジェクトに呼び出すこともできます。 どちらの場合も、ビジネス ロジックはデータ アクセス コードとプレゼンテーション層コードから明確に分離されています。  
   
 ## <a name="a-closer-look-at-the-extensibility-points"></a>機能拡張ポイントの詳細  
- 次の例によって生成されたコードの一部を示しています、[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]の`DataContext`を 2 つのテーブルを持つクラス:`Customers`と`Orders`します。 このクラスで Insert、Update、および Delete メソッドがテーブルごとに定義されていることに注意してください。  
+ 次の例のオブジェクト リレーショナル デザイナーによって生成されたコードの一部を示しています、`DataContext`を 2 つのテーブルを持つクラス:`Customers`と`Orders`します。 このクラスで Insert、Update、および Delete メソッドがテーブルごとに定義されていることに注意してください。  
   
 ```vb  
 Partial Public Class Northwnd  
@@ -69,7 +69,7 @@ public partial class MyNorthWindDataContext : System.Data.Linq.DataContext
         #endregion  
 ```  
   
- 部分クラス内で Insert、Update、および Delete メソッドを実装すると、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ランタイムは <xref:System.Data.Linq.DataContext.SubmitChanges%2A> の呼び出し時に、既定のメソッドの代わりにこれらのメソッドを呼び出します。 こうすることで、作成、読み取り、更新、削除操作の既定の動作をオーバーライドできます。 詳細については、次を参照してください。[チュートリアル: 更新、およびエンティティ クラスの動作を削除、挿入をカスタマイズするには、](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)します。  
+ 部分クラス内で Insert、Update、および Delete メソッドを実装すると、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ランタイムは <xref:System.Data.Linq.DataContext.SubmitChanges%2A> の呼び出し時に、既定のメソッドの代わりにこれらのメソッドを呼び出します。 こうすることで、作成、読み取り、更新、削除操作の既定の動作をオーバーライドできます。 詳細については、「[チュートリアル:更新、およびエンティティ クラスの動作を削除、挿入をカスタマイズするには、](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)します。  
   
  `OnCreated` メソッドはクラス コンストラクター内で呼び出されます。  
   
@@ -177,14 +177,15 @@ partial class Customer
   
  部分メソッドを使ってビジネス ロジックをアプリケーションに追加する方法の詳細については、以下のトピックを参照してください。  
   
- [方法 : エンティティ クラスに検証を追加する](/visualstudio/data-tools/how-to-add-validation-to-entity-classes)  
+ [方法: エンティティ クラスに検証を追加する](/visualstudio/data-tools/how-to-add-validation-to-entity-classes)  
   
- [チュートリアル : エンティティ クラスの挿入、更新、および削除の動作のカスタマイズ](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
+ [チュートリアル: エンティティ クラスの挿入、更新、および削除の動作のカスタマイズ](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
   
- [チュートリアル: エンティティ クラスに検証を追加します。](https://msdn.microsoft.com/library/85b06a02-b2e3-4534-95b8-d077c8d4c1d7)  
+ [チュートリアル: エンティティ クラスに検証を追加します。](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb629301(v=vs.120))  
   
-## <a name="see-also"></a>関連項目  
- [部分クラスと部分メソッド](~/docs/csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)  
- [部分メソッド](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)  
- [Visual Studio の LINQ to SQL ツール](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
- [SqlMetal.exe (コード生成ツール)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
+## <a name="see-also"></a>関連項目
+
+- [部分クラスと部分メソッド](../../../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)
+- [部分メソッド](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)
+- [Visual Studio の LINQ to SQL ツール](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)
+- [SqlMetal.exe (コード生成ツール)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)

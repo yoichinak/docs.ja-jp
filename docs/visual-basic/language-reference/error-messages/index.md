@@ -7,26 +7,26 @@ helpviewer_keywords:
 - trappable errors
 - errors [Visual Basic], trappable
 ms.assetid: f2dda05b-baef-41f5-8bb1-598bd7cf239f
-ms.openlocfilehash: c326b781222429d68ec4385d95507a6ba99eafcb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 822c0f266e7dd68f063043d98a9f4af308ae93fd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013817"
 ---
 # <a name="error-messages-visual-basic"></a>エラー メッセージ (Visual Basic)
 Visual Basic アプリケーションを作成、コンパイル、実行する際は、次の種類のエラーが発生する可能性があります。  
   
-1.  デザイン時エラー: Visual Studio でアプリケーションを作成するときに発生します。  
+1. デザイン時エラー: Visual Studio でアプリケーションを作成するときに発生します。  
   
-2.  コンパイル時エラー: Visual Studio またはコマンド プロンプトでアプリケーションをコンパイルするときに発生します。  
+2. コンパイル時エラー: Visual Studio またはコマンド プロンプトでアプリケーションをコンパイルするときに発生します。  
   
-3.  実行時エラー: Visual Studio でアプリケーションまたはスタンドアロンの実行可能ファイルを実行するときに発生します。  
+3. 実行時エラー: Visual Studio でアプリケーションまたはスタンドアロンの実行可能ファイルを実行するときに発生します。  
   
  特定のエラーのトラブルシューティング方法については、「[Visual Basic プログラマのための追加リソース](../../../visual-basic/getting-started/additional-resources.md)」を参照してください。  
   
 ## <a name="run-time-errors"></a>実行時エラー  
- Visual Basic アプリケーションでは、システムを実行できないアクションを実行しようとすると、実行時エラーが発生し、Visual Basic をスロー、`Exception`オブジェクト。 Visual Basic には、すべてのデータのカスタム エラーが生成される型を含む`Exception`を使用して、オブジェクト、`Throw`ステートメントです。 アプリケーションは、キャッチされた例外のエラー番号とメッセージを表示して、エラーを識別できます。 エラーがキャッチされない場合、アプリケーションは終了します。  
+ Visual Basic アプリケーションが、システムが実行できないアクションを実行しようとすると、実行時エラーが発生し、Visual Basic のスロー、`Exception`オブジェクト。 Visual Basic では、任意のデータのカスタムのエラーが生成される型を含む`Exception`を使用して、オブジェクト、`Throw`ステートメント。 アプリケーションは、キャッチされた例外のエラー番号とメッセージを表示して、エラーを識別できます。 エラーがキャッチされない場合、アプリケーションは終了します。  
   
  実行時エラーはコードでトラップして調べることができます。 エラーが発生するコードを `Try` ブロックで囲むと、スローされたエラーを対応する `Catch` ブロック内でキャッチできます。 実行時にエラーをトラップしてコードで対処する方法については、「[Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)」を参照してください。  
   

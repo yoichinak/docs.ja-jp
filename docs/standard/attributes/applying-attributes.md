@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d28da0c788d40222ccd689807d6e51f66b4ce78
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 2a2e34d0544c8105b539d36a4231c6efb4df0ee5
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48844307"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59337696"
 ---
 # <a name="applying-attributes"></a>属性の適用
 コードの要素に属性を適用するには、次のプロセスを使用します。  
   
-1.  新しい属性を定義するか、または .NET Framework から名前空間をインポートして既存の属性を使用します。  
+1. 新しい属性を定義するか、または .NET Framework から名前空間をインポートして既存の属性を使用します。  
   
-2.  属性をコード要素の直前に記述することで、その要素に属性を適用します。  
+2. 属性をコード要素の直前に記述することで、その要素に属性を適用します。  
   
      各言語には独自の属性構文があります。 C++ および C# では、属性が角かっこで囲まれ、要素とは空白で区切られます。属性と要素の間には改行を入れることもできます。 Visual Basic では、属性が山かっこで囲まれ、同じ論理行に記述されている必要があります。改行が必要な場合は、行連結文字を使用できます。
   
-3.  属性に、位置指定パラメーターと名前付きパラメーターを指定します。  
+3. 属性に、位置指定パラメーターと名前付きパラメーターを指定します。  
   
      位置指定パラメーターは必須で、名前付きパラメーターの前に指定する必要があります。位置指定パラメーターは、属性のいずれかのコンストラクターのパラメーターに対応します。 名前付きパラメーターは省略可能で、属性の読み取り/書き込みプロパティに対応します。 C++ と C# では、オプションのパラメーターごとに `name`=`value` を指定します。`name` はプロパティの名前です。 Visual Basic では、`name`:=`value` を指定します。  
   
@@ -54,7 +54,8 @@ ms.locfileid: "48844307"
   
 ## <a name="see-also"></a>関連項目
 
-- [属性](../../../docs/standard/attributes/index.md)  
-- [属性に格納されている情報の取得](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)  
-- [概念](/cpp/windows/attributed-programming-concepts)  
-- [属性](https://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)
+- [属性](../../../docs/standard/attributes/index.md)
+- [属性に格納されている情報の取得](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)
+- [概念](/cpp/windows/attributed-programming-concepts)
+- [属性 (C#)](../../csharp/programming-guide/concepts/attributes/index.md)
+- [属性の概要 (Visual Basic)](../../visual-basic/programming-guide/concepts/attributes/index.md)

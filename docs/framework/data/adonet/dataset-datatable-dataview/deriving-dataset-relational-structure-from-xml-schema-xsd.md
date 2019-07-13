@@ -2,17 +2,17 @@
 title: XML スキーマ (XSD) からの DataSet リレーショナル構造の派生
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: 76fd0126f32eb2b22a12ee0b67e1f81794ff9445
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 549579fca0179994191987097c12b6085ee91756
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195295"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59119692"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>XML スキーマ (XSD) からの DataSet リレーショナル構造の派生
 ここでは、XML スキーマ定義言語 (XSD) スキーマ ドキュメントから `DataSet` のリレーショナル スキーマを生成する方法についての概要を説明します。 一般の各`complexType`スキーマ要素の子要素で、テーブルが生成、`DataSet`します。 テーブル構造は、複合型の定義に基づいて決定されます。 作成されるテーブル、`DataSet`のスキーマの最上位の要素。 ただし、テーブルを最上位レベルの作成のみ`complexType`要素と、`complexType`要素が別の内部で入れ子になった`complexType`を要素は、入れ子になった場合`complexType`要素にマップされます、`DataTable`内、`DataSet`します。  
   
- XSD の詳細については、World Wide Web Consortium (W3C) を参照してください[XML Schema Part 0: Primer Recommendation](https://www.w3.org/TR/xmlschema-0/)、 [XML Schema Part 1: Structures Recommendation](https://www.w3.org/TR/xmlschema-1/)、および[XML。Schema Part 2: Datatypes Recommendation](https://www.w3.org/TR/xmlschema-2/)します。  
+ XSD の詳細については、World Wide Web Consortium (W3C) を参照してください。 [XML Schema Part 0。Primer Recommendation](https://www.w3.org/TR/xmlschema-0/)、 [XML Schema Part 1。構造体の推奨事項](https://www.w3.org/TR/xmlschema-1/)、および[XML Schema Part 2。Datatypes Recommendation](https://www.w3.org/TR/xmlschema-2/)します。  
   
  次の例では、XML スキーマ、`customers`の子要素です、`MyDataSet`要素、**データセット**要素。  
   
@@ -96,5 +96,6 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
  [DataSet での XML の使用](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  読み込んで、リレーショナル構造とデータを永続化する方法について説明します、 `DataSet` XML データとして。  
   
-## <a name="see-also"></a>関連項目  
- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>関連項目
+
+- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

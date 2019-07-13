@@ -3,15 +3,15 @@ title: .NET Standard
 description: .NET Standard、そのバージョン、.NET Standard をサポートする .NET 実装について説明します。
 author: mairaw
 ms.author: mairaw
-ms.date: 07/19/2018
+ms.date: 02/25/2019
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: cfc830f50f2e77b85e46ebaf91e3c8658aa86c48
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 16aa1cd43db0b10c4617b4fa92783c75a4ba5303
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613597"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755206"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -27,9 +27,9 @@ ms.locfileid: "53613597"
 
 ## <a name="net-implementation-support"></a>.NET 実装のサポート
 
-次の表は、.NET Standard の各バージョンをサポートするプラットフォームの最小バージョンを一覧表示します。
+次の表は、.NET Standard の各バージョンをサポートするプラットフォームの**最小**バージョンを一覧表示します。 つまり、一覧に示されたプラットフォームの以降のバージョンでは、対応する .NET Standard バージョンもサポートされます。 たとえば、.NET Core 2.2 では、.NET Standard 2.0 以前がサポートされます。
 
-[!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
+[!INCLUDE [net-standard-table](../../includes/net-standard-table.md)]
 
 対象にすることができる最高バージョンの .NET Standard を確認するには、次の手順を実行します。
 
@@ -65,9 +65,9 @@ ms.locfileid: "53613597"
 
 ### <a name="official-artifacts"></a>正式な成果物
 
-正式な仕様は標準に含まれる API を定義する一連の .cs ファイルです。 [dotnet/standard リポジトリ](https://github.com/dotnet/standard)の [ref](https://github.com/dotnet/standard/tree/master/netstandard/ref) ディレクトリに.NET Standard API が定義されています。
+正式な仕様は標準に含まれる API を定義する一連の .cs ファイルです。 [dotnet/standard リポジトリ](https://github.com/dotnet/standard)の [ref](https://github.com/dotnet/standard/tree/master/src/netstandard/ref) ディレクトリに.NET Standard API が定義されています。
 
-[NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) メタパッケージ ([ソース](https://github.com/dotnet/standard/blob/master/netstandard/pkg/NETStandard.Library.dependencies.props)) は、1 つ以上の .NET Standard のバージョンを定義する (一部) ライブラリのセットについて説明しています。
+[NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) メタパッケージ ([ソース](https://github.com/dotnet/standard/blob/master/src/netstandard/pkg/NETStandard.Library.dependencies.props)) は、1 つ以上の .NET Standard のバージョンを定義する (一部) ライブラリのセットについて説明しています。
 
 `System.Runtime` などの特定のコンポーネントは、次のように説明されています。
 
@@ -113,7 +113,7 @@ NuGet パッケージは 1 つまたは複数の[フレームワーク](framewor
 
 ## <a name="net-standard-libraries-and-visual-studio"></a>.NET Standard ライブラリと Visual Studio
 
-Visual Studio で .NET Standard ライブラリを作成するには、Windows の場合 [Visual Studio 2017 バージョン 15.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) 以降、macOS の場合 [Visual Studio for Mac バージョン 7.1](https://visualstudio.microsoft.com/vs/visual-studio-mac/) 以降がインストールされている必要があります。
+Visual Studio で .NET Standard ライブラリを作成するには、Windows の場合 [Visual Studio 2017 バージョン 15.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) 以降、macOS の場合 [Visual Studio for Mac バージョン 7.1](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 以降がインストールされている必要があります。
 
 プロジェクトで .NET Standard 2.0 ライブラリを使用するだけである場合は、Visual Studio 2015 でこれを行うこともできます。 ただし、NuGet クライアント 3.6 以降がインストールされている必要があります。 Visual Studio 2015 用の NuGet クライアントは、[NuGet のダウンロード](https://www.nuget.org/downloads)のページからダウンロードできます。
 

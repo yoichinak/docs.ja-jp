@@ -1,20 +1,20 @@
 ---
-title: '方法: Websocket 経由で通信する WCF サービスを作成します。'
+title: '方法: WebSockets 上で通信する WCF サービスを作成する'
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: bd9b1be3751d499ee3c6ee38ff4cee0e12046e6a
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 5190cdad08087b73eb247dfc236ae7b6f470af69
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030582"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626922"
 ---
-# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>方法: Websocket 経由で通信する WCF サービスを作成します。
+# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>方法: WebSockets 上で通信する WCF サービスを作成する
 WCF サービスと WCF クライアントは、<xref:System.ServiceModel.NetHttpBinding> バインディングを使用することにより、WebSocket 経由で通信できます。  WebSocket が使用されるのは、サービス コントラクトによってコールバック コントラクトが定義されていると <xref:System.ServiceModel.NetHttpBinding> によって判断された場合です。 ここでは、<xref:System.ServiceModel.NetHttpBinding> を使用して WebSocket 経由で通信する WCF サービスと WCF クライアントの実装方法について説明します。  
   
 ### <a name="define-the-service"></a>サービスの定義  
   
-1.  コールバック コントラクトを定義します。  
+1. コールバック コントラクトを定義します。  
   
     ```csharp  
     [ServiceContract]  
@@ -27,7 +27,7 @@ WCF サービスと WCF クライアントは、<xref:System.ServiceModel.NetHtt
   
      このコントラクトは、サービス側からクライアントにメッセージを返すことができるようにクライアント アプリケーションで実装されます。  
   
-2.  サービス コントラクトを定義し、コールバック コントラクトとして `IStockQuoteCallback` インターフェイスを指定します。  
+2. サービス コントラクトを定義し、コールバック コントラクトとして `IStockQuoteCallback` インターフェイスを指定します。  
   
     ```csharp  
     [ServiceContract(CallbackContract = typeof(IStockQuoteCallback))]  
@@ -38,7 +38,7 @@ WCF サービスと WCF クライアントは、<xref:System.ServiceModel.NetHtt
         }  
     ```  
   
-3.  サービス コントラクトを実装します。  
+3. サービス コントラクトを実装します。  
   
     ```  
     public class StockQuoteService : IStockQuoteService  
@@ -61,7 +61,7 @@ WCF サービスと WCF クライアントは、<xref:System.ServiceModel.NetHtt
   
      サービス操作 `StartSendingQuotes` は、非同期呼び出しとして実装されます。 `OperationContext` を使ってコールバック チャネルを取得します。チャネルが開いている場合は、コールバック チャネルで非同期呼び出しを行います。  
   
-4.  サービスの構成  
+4. サービスの構成  
   
     ```xml  
     <configuration>  
@@ -94,7 +94,7 @@ WCF サービスと WCF クライアントは、<xref:System.ServiceModel.NetHtt
   
 ### <a name="define-the-client"></a>クライアントの定義  
   
-1.  コールバック コントラクトを実装します。  
+1. コールバック コントラクトを実装します。  
   
     ```csharp  
     private class CallbackHandler : StockQuoteServiceReference.IStockQuoteServiceCallback  
@@ -108,7 +108,7 @@ WCF サービスと WCF クライアントは、<xref:System.ServiceModel.NetHtt
   
      コールバック コントラクト操作は、非同期メソッドとして実装されます。  
   
-    1.  クライアント コードを実装します。  
+    1. クライアント コードを実装します。  
   
         ```csharp  
         class Program  
@@ -133,7 +133,7 @@ WCF サービスと WCF クライアントは、<xref:System.ServiceModel.NetHtt
   
          ここでは、わかりやすいように CallbackHandler を繰り返しています。 クライアント アプリケーションは、新しい InstanceContext を作成し、コールバック インターフェイスの実装を指定します。 次に、新しく作成された InstanceContext への参照を送信するプロキシ クラスのインスタンスを作成します。 クライアントがサービスを呼び出すと、サービスは、指定されたコールバック コントラクトを使用してクライアントを呼び出します。  
   
-    2.  クライアントの構成  
+    2. クライアントの構成  
   
         ```xml  
         <?xml version="1.0" encoding="utf-8" ?>  
@@ -318,6 +318,7 @@ namespace Client
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [同期操作と非同期操作](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)  
- [NetHttpBinding の使用](../../../../docs/framework/wcf/feature-details/using-the-nethttpbinding.md)
+## <a name="see-also"></a>関連項目
+
+- [同期操作と非同期操作](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)
+- [NetHttpBinding の使用](../../../../docs/framework/wcf/feature-details/using-the-nethttpbinding.md)
