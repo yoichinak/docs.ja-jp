@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0b42e320ba439a4cfc196471fc6dd4b3c15cd9d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f007a2b81820a1d25a2d101b35f3a49e7794fec1
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804362"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859129"
 ---
 ### <a name="workflow-checksums-changed-from-md5-to-sha1"></a>ワークフローのチェックサムが MD5 から SHA1 に変更
 
@@ -15,3 +15,4 @@ ms.locfileid: "59804362"
 |スコープ|マイナー|
 |Version|4.7|
 |型|再ターゲット中|
+

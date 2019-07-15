@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19d9752e1c7cfbc0a7c85e7cf8053c09c5baca7a
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: da73df97524b9e394fac795daf14a3f0fb1f4e3d
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425574"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661383"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework のアクセシビリティの新機能
 
@@ -257,39 +257,39 @@ Windows 10 では 2 つの新しい UIAutomation プロパティである `SizeO
 
 - 依存関係プロパティを使用。
 
-   WPF では 2 つの新しい依存関係プロパティである <xref:System.Windows.Automation.AutomationProperties.SizeOfSet?displayProperty=nameWithType> と <xref:System.Windows.Automation.AutomationProperties.PositionInSet?displayProperty=nameWithType> が追加されました。 開発者は XAML を使用してその値を設定できます。
+  WPF では 2 つの新しい依存関係プロパティである <xref:System.Windows.Automation.AutomationProperties.SizeOfSet?displayProperty=nameWithType> と <xref:System.Windows.Automation.AutomationProperties.PositionInSet?displayProperty=nameWithType> が追加されました。 開発者は XAML を使用してその値を設定できます。
 
-   ```xaml
-   <Button AutomationProperties.SizeOfSet="3"
-     AutomationProperties.PositionInSet="1">Button 1</Button>
+  ```xaml
+  <Button AutomationProperties.SizeOfSet="3"
+    AutomationProperties.PositionInSet="1">Button 1</Button>
 
-   <Button AutomationProperties.SizeOfSet="3"
-     AutomationProperties.PositionInSet="2">Button 2</Button>
+  <Button AutomationProperties.SizeOfSet="3"
+    AutomationProperties.PositionInSet="2">Button 2</Button>
 
-   <Button AutomationProperties.SizeOfSet="3"
-     AutomationProperties.PositionInSet="3">Button 3</Button>
-   ```
+  <Button AutomationProperties.SizeOfSet="3"
+    AutomationProperties.PositionInSet="3">Button 3</Button>
+  ```
 
 - AutomationPeer 仮想メソッドをオーバーライド。
 
-   <xref:System.Windows.Automation.Peers.AutomationPeer.GetSizeOfSetCore> と <xref:System.Windows.Automation.Peers.AutomationPeer.GetPositionInSetCore> 仮想メソッドが、AutomationPeer クラスに追加されました。 次の例に示すように、開発者はこれらのメソッドをオーバーライドすることで、`SizeOfSet` と `PositionInSet` の値を指定できます。
+  <xref:System.Windows.Automation.Peers.AutomationPeer.GetSizeOfSetCore> と <xref:System.Windows.Automation.Peers.AutomationPeer.GetPositionInSetCore> 仮想メソッドが、AutomationPeer クラスに追加されました。 次の例に示すように、開発者はこれらのメソッドをオーバーライドすることで、`SizeOfSet` と `PositionInSet` の値を指定できます。
 
-   ```csharp
-   public class MyButtonAutomationPeer : ButtonAutomationPeer
-   {
-      protected override int GetSizeOfSetCore()
-      {
-         // Call into your own logic to provide a value for SizeOfSet
-         return CalculateSizeOfSet();
-      }
+  ```csharp
+  public class MyButtonAutomationPeer : ButtonAutomationPeer
+  {
+    protected override int GetSizeOfSetCore()
+    {
+        // Call into your own logic to provide a value for SizeOfSet
+        return CalculateSizeOfSet();
+    }
 
-      protected override int GetPositionInSetCore()
-      {
-         // Call into your own logic to provide a value for PositionInSet
-         return CalculatePositionInSet();
-      }
-   }
-   ```
+    protected override int GetPositionInSetCore()
+    {
+        // Call into your own logic to provide a value for PositionInSet
+        return CalculatePositionInSet();
+    }
+  }
+  ```
 
 さらに、<xref:System.Windows.Controls.ItemsControl> インスタンス内の項目により、これらのプロパティの値を自動的に、開発者による追加のアクションなしで指定することができます。 <xref:System.Windows.Controls.ItemsControl> がグループ化されている場合、グループのコレクションはセットとして表されます。各グループは別々のセットとしてカウントされ、グループ内の各項目ではグループ内の自身の位置とグループのサイズが示されます。 自動値は仮想化によって影響を受けません。 項目は実現されていない場合でも、セットの合計サイズに含まれ、その兄弟項目のセット内の位置に影響を与えます。
 
@@ -447,10 +447,10 @@ Windows 10 では 2 つの新しい UIAutomation プロパティである `SizeO
 
 - <xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType> 列挙。次の指定可能 **LiveSetting** 値を定義します。
 
-   - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>。 ライブ領域の内容が変更された場合でも、要素が通知を送信することはありません。
-   - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>。 ライブ領域の内容が変更された場合、要素は非割り込み型の通知を送信します。
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>。 ライブ領域の内容が変更された場合でも、要素が通知を送信することはありません。
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>。 ライブ領域の内容が変更された場合、要素は非割り込み型の通知を送信します。
 
-   - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>。 ライブ領域の内容が変更された場合、要素により割り込み通知が送信されます。
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>。 ライブ領域の内容が変更された場合、要素により割り込み通知が送信されます。
 
 関心のある要素で **AutomationProperties.LiveSetting** プロパティを作成できます。次の例をご覧ください。
 
@@ -478,81 +478,81 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - <xref:System.Windows.Controls.Expander> コントロール
 
-    フォーカスを合わせたとき、<xref:System.Windows.Controls.Expander> コントロールが見やすくなりました。 <xref:System.Windows.Controls.ComboBox>、<xref:System.Windows.Controls.ListBox>、<xref:System.Windows.Controls.RadioButton> コントロールのキーボードも見やすくなりました。 次に例を示します。
+  フォーカスを合わせたとき、<xref:System.Windows.Controls.Expander> コントロールが見やすくなりました。 <xref:System.Windows.Controls.ComboBox>、<xref:System.Windows.Controls.ListBox>、<xref:System.Windows.Controls.RadioButton> コントロールのキーボードも見やすくなりました。 次に例を示します。
 
-    前: 
+  前: 
 
-    ![フォーカスを合わせた Expander コントロール (アクセシビリティ機能改善前)](media/expander-before.png)
+  ![フォーカスを合わせた Expander コントロール (アクセシビリティ機能改善前)](media/expander-before.png)
 
-    後: 
+  後: 
 
-    ![フォーカスを合わせた Expander コントロール (アクセシビリティ機能改善後)](media/expander-after.png)
+  ![フォーカスを合わせた Expander コントロール (アクセシビリティ機能改善後)](media/expander-after.png)
 
 - <xref:System.Windows.Controls.CheckBox> コントロールと <xref:System.Windows.Controls.RadioButton> コントロール
 
-    <xref:System.Windows.Controls.CheckBox> コントロールと <xref:System.Windows.Controls.RadioButton> コントロールのテキストは、ハイ コントラスト テーマで選択されているとき、見やすくなりました。 次に例を示します。
+  <xref:System.Windows.Controls.CheckBox> コントロールと <xref:System.Windows.Controls.RadioButton> コントロールのテキストは、ハイ コントラスト テーマで選択されているとき、見やすくなりました。 次に例を示します。
 
-    前: 
+  前: 
 
-    ![フォーカスを合わせたハイ コントラストのラジオ ボタン (アクセシビリティ機能改善前)](media/radio-button-before.png)
+  ![フォーカスを合わせたハイ コントラストのラジオ ボタン (アクセシビリティ機能改善前)](media/radio-button-before.png)
 
-    後: 
+  後: 
 
-    ![フォーカスを合わせたハイ コントラストのラジオ ボタン (アクセシビリティ機能改善後)](media/radio-button-after.png)
+  ![フォーカスを合わせたハイ コントラストのラジオ ボタン (アクセシビリティ機能改善後)](media/radio-button-after.png)
 
 - <xref:System.Windows.Controls.ComboBox> コントロール
 
-    .NET Framework 4.7.1 以降、無効にした <xref:System.Windows.Controls.ComboBox> コントロールの枠線が無効にしたテキストと同じ色になります。 次に例を示します。
+  .NET Framework 4.7.1 以降、無効にした <xref:System.Windows.Controls.ComboBox> コントロールの枠線が無効にしたテキストと同じ色になります。 次に例を示します。
 
-    前: 
+  前: 
 
-     ![無効にした ComboBox の枠線とテキスト (アクセシビリティ機能改善前)](media/combo-disabled-before.png)
+  ![無効にした ComboBox の枠線とテキスト (アクセシビリティ機能改善前)](media/combo-disabled-before.png)
 
-    後:   
+  後:   
 
-     ![無効にした ComboBox の枠線とテキスト (アクセシビリティ機能改善後)](media/combo-disabled-after.png)
+  ![無効にした ComboBox の枠線とテキスト (アクセシビリティ機能改善後)](media/combo-disabled-after.png)
 
-    また、無効にしているボタンにフォーカスを合わせたとき、正しいテーマ色が使用されます。
+  また、無効にしているボタンにフォーカスを合わせたとき、正しいテーマ色が使用されます。
 
-    前:
+  前:
 
-    ![ボタンのテーマ色 (アクセシビリティ機能改善前)](media/button-themes-before.png) 
+  ![ボタンのテーマ色 (アクセシビリティ機能改善前)](media/button-themes-before.png) 
 
-    後: 
+  後: 
 
-    ![ボタンのテーマ色 (アクセシビリティ機能改善後)](media/button-themes-after.png) 
+  ![ボタンのテーマ色 (アクセシビリティ機能改善後)](media/button-themes-after.png) 
 
-    最後になりますが、.NET Framework 4.7 以前のバージョンでは、<xref:System.Windows.Controls.ComboBox> コントロールのスタイルを `Toolbar.ComboBoxStyleKey` に設定すると、ドロップダウンの矢印が見えなくなりました。 この問題は .NET Framework 4.7.1 以降で修正されています。 次に例を示します。
+  最後になりますが、.NET Framework 4.7 以前のバージョンでは、<xref:System.Windows.Controls.ComboBox> コントロールのスタイルを `Toolbar.ComboBoxStyleKey` に設定すると、ドロップダウンの矢印が見えなくなりました。 この問題は .NET Framework 4.7.1 以降で修正されています。 次に例を示します。
 
-    前: 
+  前: 
 
-    ![Toolbar.ComboBoxStyleKey (アクセシビリティ機能改善前)](media/comboboxstylekey-before.png) 
+  ![Toolbar.ComboBoxStyleKey (アクセシビリティ機能改善前)](media/comboboxstylekey-before.png) 
 
-    後: 
+  後: 
 
-    ![Toolbar.ComboBoxStyleKey (アクセシビリティ機能改善後)](media/comboboxstylekey-after.png) 
+  ![Toolbar.ComboBoxStyleKey (アクセシビリティ機能改善後)](media/comboboxstylekey-after.png) 
 
 - <xref:System.Windows.Controls.DataGrid> コントロール
 
-    .NET Framework 4.7.1 以降、<xref:System.Windows.Controls.DataGrid> コントロールの並べ替えインジケーターで正しいテーマ色が使われるようになりました。 次に例を示します。
+  .NET Framework 4.7.1 以降、<xref:System.Windows.Controls.DataGrid> コントロールの並べ替えインジケーターで正しいテーマ色が使われるようになりました。 次に例を示します。
 
-    前: 
+  前: 
 
-    ![並べ替えインジケーターの矢印 (アクセシビリティ機能改善前)](media/sort-indicator-before.png) 
+  ![並べ替えインジケーターの矢印 (アクセシビリティ機能改善前)](media/sort-indicator-before.png) 
 
-    後:   
+  後:   
 
-    ![並べ替えインジケーターの矢印 (アクセシビリティ機能改善後)](media/sort-indicator-after.png) 
+  ![並べ替えインジケーターの矢印 (アクセシビリティ機能改善後)](media/sort-indicator-after.png) 
 
-    また、.NET Framework 4.7 以前のバージョンでは、ハイ コントラスト モードでカーソルを合わせたとき、既定のリンク スタイルが正しくない色に変化しました。 これは .NET Framework 4.7.1 以降で修正されています。 同様に、.NET Framework 4.7.1 以降、<xref:System.Windows.Controls.DataGrid> チェックボックス列でキーボード フォーカス フィードバックに既定の色が使用されます。
+  また、.NET Framework 4.7 以前のバージョンでは、ハイ コントラスト モードでカーソルを合わせたとき、既定のリンク スタイルが正しくない色に変化しました。 これは .NET Framework 4.7.1 以降で修正されています。 同様に、.NET Framework 4.7.1 以降、<xref:System.Windows.Controls.DataGrid> チェックボックス列でキーボード フォーカス フィードバックに既定の色が使用されます。
 
-    前: 
+  前: 
 
-    ![DataGrid の既定のリンク スタイル (アクセシビリティ機能改善前)](media/default-link-style-before.png) 
+  ![DataGrid の既定のリンク スタイル (アクセシビリティ機能改善前)](media/default-link-style-before.png) 
 
-    後:    
+  後:    
 
-    ![DataGrid の既定のリンク スタイル (アクセシビリティ機能改善後)](media/default-link-style-after.png) 
+  ![DataGrid の既定のリンク スタイル (アクセシビリティ機能改善後)](media/default-link-style-after.png) 
 
 .NET Framework 4.7.1 での WPF アクセシビリティ機能改善の詳細については、「[WPF でのアクセシビリティの向上](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf)」を参照してください。
 
@@ -581,13 +581,13 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - 無効になっているテキストが読みやすくなりました。 次に例を示します。
 
-    前:
+  前:
 
-    ![無効にしたテキスト (アクセシビリティ機能改善前)](media/wf-disabled-before.png) 
+  ![無効にしたテキスト (アクセシビリティ機能改善前)](media/wf-disabled-before.png) 
 
-    後:
+  後:
 
-    ![無効にしたテキスト (アクセシビリティ機能改善後)](media/wf-disabled-after.png) 
+  ![無効にしたテキスト (アクセシビリティ機能改善後)](media/wf-disabled-after.png) 
 
 - スレッド例外ダイアログのハイ コントラストが改善されました。
 

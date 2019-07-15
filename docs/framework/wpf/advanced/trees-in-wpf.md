@@ -6,12 +6,12 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: f9b507c874dfe0ab3feca19e7fcf79df5af93e10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 14ab9b5b36eee607679ee95423c2af912ed02310
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774999"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860003"
 ---
 # <a name="trees-in-wpf"></a>WPF のツリー
 多くのテクノロジ要素とコンポーネントは、開発者は直接レンダリングや、アプリケーションの動作に影響を与える、ツリー内のオブジェクト ノード、操作をツリー構造で編成されています。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] またプログラム要素間のリレーションシップを定義するのにいくつかのツリー構造のメタファを使用します。 WPF 開発者の大部分できますコードでアプリケーションを作成または XAML で概念的には、オブジェクト ツリーの比喩を考えながら、アプリケーションの部分的な定義が、特定の API を呼び出すかをいくつかの一般的なのではなく、その特定のマークアップを使用する方法XML DOM で使用するなどのオブジェクトのツリー操作 API WPF のツリーの比喩ビューを提供する 2 つのヘルパー クラスが公開<xref:System.Windows.LogicalTreeHelper>と<xref:System.Windows.Media.VisualTreeHelper>します。 用語のビジュアル ツリーと論理ツリーも使用されます、WPF ドキュメントのため、同じようなツリーは特定のキーの WPF 機能の動作を理解するのに役立ちます。 このトピックでは、ビジュアル ツリーと論理ツリーが表す内容を定義し、このようなツリーが、全体的なオブジェクトのツリーの概念に関連する方法について説明しますが導入されています<xref:System.Windows.LogicalTreeHelper>と<xref:System.Windows.Media.VisualTreeHelper>秒。  
@@ -51,7 +51,7 @@ ms.locfileid: "61774999"
   
 <a name="override_logical_tree"></a>   
 ### <a name="overriding-the-logical-tree"></a>論理ツリーをオーバーライドします。  
- 高度なコントロールの作成者は、いくつかの操作をオーバーライドすることで、論理ツリーをオーバーライドできます[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]一般的なオブジェクトまたはコンテンツ モデルが追加または論理ツリー内のオブジェクトを削除する方法を定義します。 論理ツリーをオーバーライドする方法の例は、次を参照してください。[論理ツリーをオーバーライド](how-to-override-the-logical-tree.md)します。  
+ 高度なコントロールの作成者は、一般的なオブジェクトまたはコンテンツ モデルが追加または論理ツリー内のオブジェクトを削除する方法を定義するいくつかの Api をオーバーライドすることで、論理ツリーをオーバーライドできます。 論理ツリーをオーバーライドする方法の例は、次を参照してください。[論理ツリーをオーバーライド](how-to-override-the-logical-tree.md)します。  
   
 <a name="pvi"></a>   
 ### <a name="property-value-inheritance"></a>プロパティ値の継承  

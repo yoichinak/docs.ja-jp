@@ -2,12 +2,12 @@
 title: Entity Framework Core でインフラストラクチャの永続レイヤーを実装する
 description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | Entity Framework Core を使用してインフラストラクチャの永続レイヤーを実装する方法の詳細。'
 ms.date: 10/08/2018
-ms.openlocfilehash: c6b0a022dfecb24c479a0fd3c84dbde719a390a8
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7e3480999b115ac13f8d7ebcaed826b407aa7637
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639522"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778056"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Entity Framework Core でインフラストラクチャの永続レイヤーを実装する
 
@@ -21,7 +21,7 @@ Entity Framework (EF) Core は人気の Entity Framework データ アクセス 
 
 EF Core の概要は Microsoft ドキュメントで既に利用可能になっているので、ここではそのリンクのみを掲載しておきます。
 
-#### <a name="additional-resources"></a>その他の技術情報
+### <a name="additional-resources"></a>その他の技術情報
 
 - **Entity Framework Core** \
   [https://docs.microsoft.com/ef/core/](/ef/core/)
@@ -230,7 +230,7 @@ builder.RegisterType<OrderRepository>()
 
 DbContext の有効期間が範囲 (InstancePerLifetimeScope) として設定されているとき (DBContext の既定の有効期間)、リポジトリに単一の有効期間を使用すると、コンカレンシー関連で重大な問題が発生する可能性があります。
 
-#### <a name="additional-resources"></a>その他の技術情報
+### <a name="additional-resources"></a>その他の技術情報
 
 - **ASP.NET MVC アプリケーションでの Repository および Unit of Work パターンの実装** \
   <https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
@@ -447,7 +447,7 @@ public IEnumerable<T> List(ISpecification<T> spec)
 
 リポジトリから IQueryable を返すことはお勧めできませんが、リポジトリ内で使用し、結果の集まりを作ることには何の問題もありません。 上の List メソッドでこの手法を確認できます。中間の IQueryable 式を利用してクエリのインクルード リストを作成し、それから最後の行にある仕様の基準に合わせてクエリを実行しています。
 
-#### <a name="additional-resources"></a>その他の技術情報
+### <a name="additional-resources"></a>その他の技術情報
 
 - **テーブル マッピング** \
   [https://docs.microsoft.com/ef/core/modeling/relational/tables](/ef/core/modeling/relational/tables)

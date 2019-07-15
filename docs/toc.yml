@@ -203,6 +203,14 @@
     - name: チュートリアル
       href: core/tutorials/index.md
       items:
+        - name: CLI のテンプレート
+          items:
+            - name: 1 - 項目テンプレートを作成する
+              href: core/tutorials/cli-templates-create-item-template.md
+            - name: 2 - プロジェクト テンプレートを作成する
+              href: core/tutorials/cli-templates-create-project-template.md
+            - name: 3 - テンプレート パックを作成する
+              href: core/tutorials/cli-templates-create-template-pack.md
         - name: macOS での .NET Core の概要
           href: core/tutorials/using-on-macos.md
         - name: Visual Studio for Mac を使用した macOS での .NET Core の概要
@@ -219,8 +227,6 @@
           href: core/tutorials/aspnet-core.md
         - name: ネイティブ コードからの .NET Core のホスト
           href: core/tutorials/netcore-hosting.md
-        - name: dotnet new のカスタム テンプレートを作成する
-          href: core/tutorials/create-custom-template.md
     - name: パッケージ、メタパッケージ、フレームワーク
       href: core/packages.md
     - name: CLI の変更概要
@@ -1844,7 +1850,7 @@
         - name: エラー メッセージ
           href: visual-basic/language-reference/error-messages/index.md
           items:
-            - name: '''#Else'' の前には、対応する ''#If'' または ''#ElseIf'' が必要です。'
+            - name: "\t'#Else' の前には、対応する '#If' または '#ElseIf' が必要です。"
               href: visual-basic/language-reference/error-messages/elseif-must-be-preceded-by-a-matching-if-or-elseif.md
             - name: '''#Region'' および ''#End Region'' ステートメントは、メソッド本体や複数行ラムダの内部では有効ではありません。'
               href: visual-basic/language-reference/error-messages/region-and-end-region-are-not-valid-within-method-bodies-multiline-lambdas.md

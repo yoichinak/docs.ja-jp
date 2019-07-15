@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 72acd0029d0189de1c724856572957f111b9d18f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dab6b435a885d862d08f94dd31de79625f19bcc0
+ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675897"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67870504"
 ---
-## <a name="installation-instructions"></a>インストール手順 
+## <a name="installation-instructions---visual-studio-installer"></a>インストール手順 - Visual Studio インストーラー
 
 **Visual Studio インストーラー**で **.NET Compiler Platform SDK** を見つけるには、以下の 2 つの異なる方法があります。
 
-### <a name="install-using-the-workloads-view"></a>ワークロード ビューを使用してインストールする
+### <a name="install-using-the-visual-studio-installer---workloads-view"></a>Visual Studio インストーラーを使用したインストール - ワークロード ビュー
 
 .NET Compiler Platform SDK は、Visual Studio 拡張機能の開発ワークロードの一部として自動的に選択されません。 省略可能なコンポーネントとして選択する必要があります。
 
@@ -25,7 +25,7 @@ ms.locfileid: "61675897"
 1. 概要ツリーの **[個別のコンポーネント]** ノードを開きます。
 1. **[DGML エディター]** のチェック ボックスをオンにします。
 
-### <a name="install-using-the-individual-components-tab"></a>[個別のコンポーネント] タブを使用してインストールする
+### <a name="install-using-the-visual-studio-installer---individual-components-tab"></a>Visual Studio インストーラーを使用したインストール - [個別のコンポーネント] タブ
 
 1. **Visual Studio インストーラー**を実行します。 
 1. **[変更]** を選択します。 

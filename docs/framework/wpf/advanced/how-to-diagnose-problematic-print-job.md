@@ -10,15 +10,15 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-ms.openlocfilehash: c9da2e1daff23ef9ba39d8b5d53cb3be67f35a27
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: d64e77b7fc6862eead3cb7e791b3a8f68ac52713
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878205"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859730"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>方法: 問題のある印刷ジョブを診断する
-印刷ジョブで印刷を実行できない、印刷速度が遅い、などのユーザーからの苦情に、ネットワーク管理者が対処することはよくあります。 豊富な一連の印刷ジョブのプロパティで公開されている、 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] Microsoft .NET Framework の印刷ジョブの迅速なリモート診断を実行する手段を提供します。  
+印刷ジョブで印刷を実行できない、印刷速度が遅い、などのユーザーからの苦情に、ネットワーク管理者が対処することはよくあります。 豊富な一連の Api の Microsoft .NET Framework で公開されている印刷ジョブのプロパティは、印刷ジョブの迅速なリモート診断を実行するための手段を提供します。  
   
 ## <a name="example"></a>例  
  このようなユーティリティを作成する主な手順は次のとおりです。  
@@ -35,17 +35,17 @@ ms.locfileid: "65878205"
   
 2. 問題のある印刷ジョブを特定したら、関連するプロパティを調べて、 ジョブがエラー状態になっていないか、キューにサービスを提供しているプリンターがジョブの印刷前にオフラインになっていないか、など、何が問題になっているかを確認します。  
   
- 一連のコード例を以下に示します。 最初のコード例には、印刷キューのループが示されています  (前の手順 1c. を参照)。変数`myPrintQueues`は、<xref:System.Printing.PrintQueueCollection>オブジェクトの現在のプリント サーバー。  
+ 一連のコード例を以下に示します。 最初のコード例には、印刷キューのループが示されています (前の手順 1c. を参照)。変数`myPrintQueues`は、<xref:System.Printing.PrintQueueCollection>オブジェクトの現在のプリント サーバー。  
   
  現在印刷キューのオブジェクトを更新することで、コード例が開始<xref:System.Printing.PrintQueue.Refresh%2A?displayProperty=nameWithType>します。 これにより、オブジェクトのプロパティが、オブジェクトに示される物理プリンターの状態を正確に表すようになります。 アプリケーション コレクションを取得します印刷ジョブの現在の印刷キューを使用して、<xref:System.Printing.PrintQueue.GetPrintJobInfoCollection%2A>します。  
   
- 次に、アプリケーションがループ、<xref:System.Printing.PrintSystemJobInfo>コレクションと比較します<xref:System.Printing.PrintSystemJobInfo.Submitter%2A>苦情を訴えているユーザーのエイリアスを持つプロパティです。 一致した場合、アプリケーションは、ジョブに関する識別情報を、表示される文字列に追加します  (`userName` 変数と `jobList` 変数は、前にアプリケーションで初期化されています)。  
+ 次に、アプリケーションがループ、<xref:System.Printing.PrintSystemJobInfo>コレクションと比較します<xref:System.Printing.PrintSystemJobInfo.Submitter%2A>苦情を訴えているユーザーのエイリアスを持つプロパティです。 一致した場合、アプリケーションは、ジョブに関する識別情報を、表示される文字列に追加します (`userName` 変数と `jobList` 変数は、前にアプリケーションで初期化されています)。  
   
  [!code-cpp[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#enumeratejobsinqueues)]
  [!code-csharp[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#enumeratejobsinqueues)]
  [!code-vb[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#enumeratejobsinqueues)]  
   
- 次のコード例では、手順 2. のアプリケーションを取り上げます  (前の説明を参照)。問題のあるジョブが特定され、その問題に関する情報を入力するように求められます。 この情報から作成<xref:System.Printing.PrintServer>、 <xref:System.Printing.PrintQueue>、および<xref:System.Printing.PrintSystemJobInfo>オブジェクト。  
+ 次のコード例では、手順 2. のアプリケーションを取り上げます (前の説明を参照)。問題のあるジョブが特定され、その問題に関する情報を入力するように求められます。 この情報から作成<xref:System.Printing.PrintServer>、 <xref:System.Printing.PrintQueue>、および<xref:System.Printing.PrintSystemJobInfo>オブジェクト。  
   
  この時点で、アプリケーションは分岐構造になっており、印刷ジョブの状態を確認する 2 つの方法に対応しています。  
   
@@ -61,13 +61,13 @@ ms.locfileid: "65878205"
   
  フラグを使用して印刷ジョブの状態を確認する、<xref:System.Printing.PrintSystemJobInfo.JobStatus%2A>プロパティに設定されているかどうかを参照してください。 各関連フラグを確認します。 1 ビットがビット フラグ セットで設定されているかどうかを確認するには、通常、フラグ セットを 1 つのオペランドとし、フラグ自体をもう 1 つのオペランドとして、論理 AND 演算を行います。 フラグ自体には 1 ビットのみが設定されているため、論理 AND の結果は、その同じビットが上限となります。 それが該当するかどうかを確認するには、論理 AND の結果とフラグ自体を比較します。 詳細については、次を参照してください。 <xref:System.Printing.PrintJobStatus>、 [& 演算子 (C#リファレンス)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)、および<xref:System.FlagsAttribute>します。  
   
- 次のコードでは、ビットが設定されている属性ごとにこの報告をコンソール画面に表示し、場合によっては応答方法を示します  (ジョブまたはキューが一時停止されている場合に呼び出される **HandlePausedJob** メソッドについては、後で説明します)。  
+ 次のコードでは、ビットが設定されている属性ごとにこの報告をコンソール画面に表示し、場合によっては応答方法を示します (ジョブまたはキューが一時停止されている場合に呼び出される **HandlePausedJob** メソッドについては、後で説明します)。  
   
  [!code-cpp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobAttributes](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#spottroubleusingjobattributes)]
  [!code-csharp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobAttributes](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#spottroubleusingjobattributes)]
  [!code-vb[DiagnoseProblematicPrintJob#SpotTroubleUsingJobAttributes](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#spottroubleusingjobattributes)]  
   
- 個別のプロパティを使用して印刷ジョブの状態を確認するには、単に各プロパティを読み取り、プロパティが `true` の場合は報告をコンソール画面に表示し、場合によっては応答方法を示します  (ジョブまたはキューが一時停止されている場合に呼び出される **HandlePausedJob** メソッドについては、後で説明します)。  
+ 個別のプロパティを使用して印刷ジョブの状態を確認するには、単に各プロパティを読み取り、プロパティが `true` の場合は報告をコンソール画面に表示し、場合によっては応答方法を示します (ジョブまたはキューが一時停止されている場合に呼び出される **HandlePausedJob** メソッドについては、後で説明します)。  
   
  [!code-cpp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#spottroubleusingjobproperties)]
  [!code-csharp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#spottroubleusingjobproperties)]
@@ -75,7 +75,7 @@ ms.locfileid: "65878205"
   
  **HandlePausedJob** メソッドを使用すると、アプリケーションのユーザーが、一時停止されているジョブをリモートで再開できます。 印刷キューが正当な理由で一時停止している可能性があるため、まず、印刷キューを再開するかどうかを確認するメッセージが表示されます。 答えが"Y"の場合、<xref:System.Printing.PrintQueue.Resume%2A?displayProperty=nameWithType>メソッドが呼び出されます。  
   
- 次に、ユーザーはジョブ自体を再開するかどうかを確認するよう求められます。これは、そのジョブが印、刷キューとは関係なく一時停止されている可能性もあるためです  (比較<xref:System.Printing.PrintQueue.IsPaused%2A?displayProperty=nameWithType>と<xref:System.Printing.PrintSystemJobInfo.IsPaused%2A?displayProperty=nameWithType>)。答えが"Y"の場合<xref:System.Printing.PrintSystemJobInfo.Resume%2A?displayProperty=nameWithType>がそれ以外の呼び出された<xref:System.Printing.PrintSystemJobInfo.Cancel%2A>が呼び出されます。  
+ 次に、ユーザーはジョブ自体を再開するかどうかを確認するよう求められます。これは、そのジョブが印、刷キューとは関係なく一時停止されている可能性もあるためです (比較<xref:System.Printing.PrintQueue.IsPaused%2A?displayProperty=nameWithType>と<xref:System.Printing.PrintSystemJobInfo.IsPaused%2A?displayProperty=nameWithType>)。答えが"Y"の場合<xref:System.Printing.PrintSystemJobInfo.Resume%2A?displayProperty=nameWithType>がそれ以外の呼び出された<xref:System.Printing.PrintSystemJobInfo.Cancel%2A>が呼び出されます。  
   
  [!code-cpp[DiagnoseProblematicPrintJob#HandlePausedJob](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#handlepausedjob)]
  [!code-csharp[DiagnoseProblematicPrintJob#HandlePausedJob](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#handlepausedjob)]

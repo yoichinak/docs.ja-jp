@@ -11,19 +11,19 @@ helpviewer_keywords:
 - short-circuit evaluation
 - OrElse operator [Visual Basic]
 ms.assetid: 253803d8-05b0-47d7-b213-abd222847779
-ms.openlocfilehash: 28d1481b71979936bb16a2ecfb1140d85a674ef7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 02be78c8f2b7529f1fb0e46e9fe610a3c66b0652
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054992"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860140"
 ---
 # <a name="orelse-operator-visual-basic"></a>OrElse 演算子 (Visual Basic)
 ショート サーキットの 2 つの式の包括的論理和演算を実行します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb
 result = expression1 OrElse expression2  
 ```  
   
@@ -49,7 +49,8 @@ result = expression1 OrElse expression2
 |`False`|`False`|`False`|  
   
 ## <a name="data-types"></a>データの種類  
- `OrElse`のみの演算子が定義されている、[ブール データ型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)します。 Visual Basic の変換を必要に応じて、各オペランド`Boolean`全体での操作を実行および`Boolean`します。 Visual Basic 変換から数値型に結果を割り当てた場合`Boolean`その型にします。 これにより、予期しない動作が生成する可能性があります。 たとえば、`5 OrElse 12`結果`–1`に変換される`Integer`します。  
+ `OrElse`のみの演算子が定義されている、[ブール データ型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)します。 Visual Basic の変換を必要に応じて、各オペランド`Boolean`式を評価する前にします。 数値型に結果を割り当てた場合はこれからの Visual Basic に変換します`Boolean`その型にように`False`なります`0`と`True`なります`-1`。
+詳細については、次を参照してください[ブール型の変換。](../data-types/boolean-data-type.md#type-conversions)
   
 ## <a name="overloading"></a>オーバーロード  
  [または演算子](../../../visual-basic/language-reference/operators/or-operator.md)と[IsTrue 演算子](../../../visual-basic/language-reference/operators/istrue-operator.md)できる*オーバー ロードされた*、ことクラスまたは構造体は動作を再定義オペランドは、そのクラスの型を持つことを意味します。または、構造体。 オーバー ロード、`Or`と`IsTrue`演算子の動作に影響、`OrElse`演算子。 コードで使用する場合`OrElse`クラスまたは構造体をオーバー ロードで`Or`と`IsTrue`、その再定義された動作を確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  

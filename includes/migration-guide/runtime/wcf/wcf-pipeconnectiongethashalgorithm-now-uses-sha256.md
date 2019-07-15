@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 318609c15d2e0b9a7ee59b38463735b33ef87974
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 71f61f23a8b17459610d253766a99e594f09428e
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804386"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67857266"
 ---
 ### <a name="wcf-pipeconnectiongethashalgorithm-now-uses-sha256"></a>WCF PipeConnection.GetHashAlgorithm が SHA256 を使用するようになった
 
@@ -15,3 +15,4 @@ ms.locfileid: "59804386"
 |スコープ|マイナー|
 |Version|4.7.1|
 |型|ランタイム|
+

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - wrappers [WPF], implementing
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
-ms.openlocfilehash: 27554d7e0a7e980d240e0609fe0561c2138f0aa1
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 659497543d40c8eda18b55b4d98feac976c5abf5
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664058"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860242"
 ---
 # <a name="custom-dependency-properties"></a>カスタム依存関係プロパティ
 
@@ -87,7 +87,7 @@ ms.locfileid: "67664058"
 
 ### <a name="registering-the-property-with-the-property-system"></a>プロパティ システムにプロパティを登録する
 
-プロパティを依存関係プロパティにするためには、そのプロパティをプロパティ システムが保持するテーブルに登録し、その後のプロパティ システム操作で修飾子として使用する一意の識別子をプロパティに設定します。 これらの操作は、内部操作にすることも、プロパティ システム [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] を呼び出す独自のコードにすることもできます。 プロパティを登録するを呼び出す、 <xref:System.Windows.DependencyProperty.Register%2A> (、クラス内では、メンバーの定義の外部で)、クラスの本文内のメソッド。 識別子のフィールドがによって提供されることも、<xref:System.Windows.DependencyProperty.Register%2A>メソッドの呼び出し、戻り値として。 理由を<xref:System.Windows.DependencyProperty.Register%2A>呼び出しが行われたその他のメンバーの外部で定義は、この戻り値を割り当てるし、作成するため、 `public` `static` `readonly`型のフィールド<xref:System.Windows.DependencyProperty>クラスの一部として。 このフィールドは、依存関係プロパティの識別子になります。
+プロパティを依存関係プロパティにするためには、そのプロパティをプロパティ システムが保持するテーブルに登録し、その後のプロパティ システム操作で修飾子として使用する一意の識別子をプロパティに設定します。 これらの操作では、内部の操作、または独自のコードがプロパティ システム Api を呼び出す可能性があります。 プロパティを登録するを呼び出す、 <xref:System.Windows.DependencyProperty.Register%2A> (、クラス内では、メンバーの定義の外部で)、クラスの本文内のメソッド。 識別子のフィールドがによって提供されることも、<xref:System.Windows.DependencyProperty.Register%2A>メソッドの呼び出し、戻り値として。 理由を<xref:System.Windows.DependencyProperty.Register%2A>呼び出しが行われたその他のメンバーの外部で定義は、この戻り値を割り当てるし、作成するため、 `public` `static` `readonly`型のフィールド<xref:System.Windows.DependencyProperty>クラスの一部として。 このフィールドは、依存関係プロパティの識別子になります。
 
 [!code-csharp[WPFAquariumSln#RegisterAG](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerag)]
 [!code-vb[WPFAquariumSln#RegisterAG](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerag)]
@@ -174,7 +174,7 @@ ms.locfileid: "67664058"
 
 ## <a name="dependency-property-security-considerations"></a>依存関係プロパティのセキュリティに関する考慮事項
 
-依存関係プロパティは、パブリック プロパティとして宣言する必要があります。 依存関係プロパティ識別子フィールドは、パブリック静的フィールドとして宣言する必要があります。 他のアクセス レベル (プロテクトなど) を宣言しようとした場合でも、依存関係プロパティには、プロパティ システム [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] と組み合わせた識別子を通じて、常にアクセスできます。 メタデータのレポートまたは値の決定したため、保護された識別子フィールドでもに可能性のあるアクセス[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]など、プロパティ システムの一部である<xref:System.Windows.LocalValueEnumerator>します。 詳細については、「[依存関係プロパティのセキュリティ](dependency-property-security.md)」を参照してください。
+依存関係プロパティは、パブリック プロパティとして宣言する必要があります。 依存関係プロパティ識別子フィールドは、パブリック静的フィールドとして宣言する必要があります。 他のアクセスのレベル (プロテクトなど) を宣言しようとした場合でも、依存関係プロパティは、プロパティ システム Api と組み合わせた識別子を通じて常にアクセスできます。 メタデータ報告または値の決定など、プロパティ システムの一部である Api したため、保護された識別子フィールドではさらに可能性のあるアクセス<xref:System.Windows.LocalValueEnumerator>します。 詳細については、「[依存関係プロパティのセキュリティ](dependency-property-security.md)」を参照してください。
 
 <a name="DPCtor"></a>
 

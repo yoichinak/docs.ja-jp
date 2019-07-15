@@ -10,12 +10,12 @@ helpviewer_keywords:
 - C# language, expressions
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
-ms.openlocfilehash: 2f7505051cce3aee99e6b6ea88a6a94498926214
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 7073ddc50b47ff239e8b310c0a5a1fbd84504133
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609629"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743881"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>ステートメント、式、および演算子 (C# プログラミング ガイド)
 
@@ -32,12 +32,6 @@ ms.locfileid: "67609629"
 - [演算子](operators.md)
 
 - [匿名関数](anonymous-functions.md)
-
-- [変換演算子](conversion-operators.md)
-
-  - [変換演算子の使用](using-conversion-operators.md)
-
-  - [方法: 構造体間にユーザー定義の変換を実装する](how-to-implement-user-defined-conversions-between-structs.md)
 
 - [等価比較](equality-comparisons.md)
 

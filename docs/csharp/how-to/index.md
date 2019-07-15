@@ -2,12 +2,12 @@
 title: 方法に関する記事 (C# ガイド)
 description: 簡単なヒントと、焦点を絞った短いコード サンプルのコレクション
 ms.date: 12/20/2017
-ms.openlocfilehash: 062ce64f4f369ae70074fd81f39b60de29e4d7d2
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 63410d687bd09f95a5ce7ce9304f2281b2f8d334
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609262"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859532"
 ---
 # <a name="how-to-c"></a>方法 (C#)
 
@@ -66,7 +66,7 @@ C# の開発者には常識といえるヒントやコツがいくつかあり�
 - [バイト配列を int に変換する](../programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)。
 - [文字列を数値に変換する](../programming-guide/types/how-to-convert-a-string-to-a-number.md)。
 - [パターン マッチングで `as` と `is` の演算子を使用して異なる型に安全にキャストする](../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)。
-- [`struct` 型の変換演算子を定義する](../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)。
+- [カスタムの型変換を定義する](../language-reference/operators/user-defined-conversion-operators.md)。
 - [型が null 許容値型であるかを判断する](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md)。
 - [null 許容値型と null 非許容値型の間で変換する](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-type-to-an-underlying-type)。
 
@@ -98,7 +98,6 @@ C# の開発者には常識といえるヒントやコツがいくつかあり�
 - [インターフェイスで宣言されたイベントを実装する](../programming-guide/events/how-to-implement-interface-events.md)。
 - [コードがイベントを発行するときに .NET Framework ガイドラインに準拠する](../programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)。
 - [派生クラスから基底クラスで定義されているイベントを発生させる](../programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)。
-- [ディクショナリにイベントのインスタンスを格納する](../programming-guide/events/how-to-use-a-dictionary-to-store-event-instances.md)。
 - [カスタム イベント アクセサーを実装する](../programming-guide/events/how-to-implement-custom-event-accessors.md)。
 
 ## <a name="linq-practices"></a>LINQ のプラクティス

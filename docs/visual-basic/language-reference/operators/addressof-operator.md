@@ -8,15 +8,15 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - addresses, passing to API procedures
 ms.assetid: 8105a59d-60d8-4ab5-b221-5899cdfacbf4
-ms.openlocfilehash: 9d8515b6d5b0caf3552ed05a7e0cd4a271efaf54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 098ca95687d8b0e9f4ac90d5c7e0df9a9a0ad950
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608347"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760378"
 ---
 # <a name="addressof-operator-visual-basic"></a>AddressOf 演算子 (Visual Basic)
-特定のプロシージャを参照するプロシージャ デリゲート インスタンスを作成します。  
+特定のプロシージャを参照するデリゲート インスタンスを作成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -26,10 +26,10 @@ AddressOf procedurename
   
 ## <a name="parts"></a>指定項目  
  `procedurename`  
- 必須。 新しく作成されたプロシージャのデリゲートが参照するプロシージャを指定します。  
+ 必須。 新しく作成されたデリゲートが参照するプロシージャを指定します。  
   
 ## <a name="remarks"></a>Remarks  
- `AddressOf`演算子で指定された関数を指す関数デリゲートを作成する`procedurename`します。 ときに、指定したプロシージャは、インスタンス メソッド、関数デリゲートがインスタンスとメソッドの両方を参照します。 次に、関数デリゲートが呼び出されたときに、指定したインスタンスの指定されたメソッドが呼び出されます。  
+ `AddressOf`演算子は、sub またはで指定された関数を指すデリゲートを作成します。`procedurename`します。 ときに、指定したプロシージャは、インスタンス メソッド、デリゲートがインスタンスとメソッドの両方を参照します。 次に、デリゲートが呼び出されたときに、指定したインスタンスの指定されたメソッドが呼び出されます。  
   
  `AddressOf` Delegate コンス トラクターのオペランドとして使用できる演算子またはにおいて、コンパイラによってデリゲートの型を決定するために使用できます。  
   

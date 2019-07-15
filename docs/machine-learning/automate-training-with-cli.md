@@ -4,12 +4,12 @@ description: ML.NET CLI ツールを使用してコマンドラインから最�
 author: CESARDELATORRE
 ms.date: 04/17/2019
 ms.custom: how-to
-ms.openlocfilehash: 33383582140d9df4290a0bbf30659301af837d1d
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: e5f75dc70ea5a76951d8698ea9c0d07cb2d4ddec
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065895"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663922"
 ---
 # <a name="automate-model-training-with-the-mlnet-cli"></a>ML.NET CLI を使用してモデルのトレーニングを自動化する
 
@@ -17,16 +17,16 @@ ML.NET CLI は、ML.NET を学習する .NET 開発者のために ML.NET を "�
 
 (ML.NET AutoML CLI を使用せずに) ML.NET API を単独で使用するには、トレーナー (特定のタスクに対する機械学習アルゴリズムの実装) と、データに適用する一連のデータ変換 (特徴エンジニアリング) を選択する必要があります。 最適なパイプラインはデータセットごとに異なるので、すべての選択肢から最適なアルゴリズムを選択すると、複雑さが増します。 さらに、各アルゴリズムには調整が必要な一連のハイパーパラメーターがあります。 そのため、特徴エンジニアリング、学習アルゴリズム、およびハイパーパラメーターの最適な組み合わせを見つけようとすると、機械学習モデルの最適化に数週間から数か月かかる可能性があります。
 
-このプロセスは、ML.NET AutoML インテリジェント エンジンが実装されている ML.NET CLI を使用して自動化できます。 
+このプロセスは、ML.NET AutoML インテリジェント エンジンが実装されている ML.NET CLI を使用して自動化できます。
 
 > [!NOTE]
-> このトピックは、現在プレビュー段階の ML.NET **CLI** と ML.NET **AutoML** について述べており、内容が変更される場合があります。 
+> このトピックは、現在プレビュー段階の ML.NET **CLI** と ML.NET **AutoML** について述べており、内容が変更される場合があります。
 
 ## <a name="what-is-the-mlnet-command-line-interface-cli"></a>ML.NET コマンドライン インターフェイス (CLI) とは
 
 ML.NET CLI は任意のコマンドプロンプト (Windows、Mac、または Linux) で実行して、トレーニング データセットに基づいて高品質の ML.NET モデルとソース コードを生成できます。
 
-次の図に示すように、高品質の ML.NET モデル (シリアル化されたモデルの .zip ファイル) と、そのモデルを実行/スコア付けするサンプル C# コードを簡単に生成できます。 さらに、そのモデルを作成/トレーニングする C# コードも生成されるので、その生成された "最適なモデル" に使用されるアルゴリズムと設定を調べ、反復処理することができます。 
+次の図に示すように、高品質の ML.NET モデル (シリアル化されたモデルの .zip ファイル) と、そのモデルを実行/スコア付けするサンプル C# コードを簡単に生成できます。 さらに、そのモデルを作成/トレーニングする C# コードも生成されるので、その生成された "最適なモデル" に使用されるアルゴリズムと設定を調べ、反復処理することができます。
 
 ![画像](media/automate-training-with-cli/cli-high-level-process.png "ML.NET CLI 内で動作する AutoML エンジン")
 
@@ -35,7 +35,7 @@ ML.NET CLI は任意のコマンドプロンプト (Windows、Mac、または Li
 現在、ML.NET CLI でサポートされている ML タスクは次のとおりです。
 
 - `binary-classification`
-- `multiclass-classification` 
+- `multiclass-classification`
 - `regression`
 - 予定: `recommendation`、`ranking`、`anomaly-detection`、`clustering` などの他の機械学習タスク
 
@@ -53,15 +53,15 @@ ML.NET CLI は任意のコマンドプロンプト (Windows、Mac、または Li
 
 CLI `auto-train` コマンドを使用すると、出力フォルダーに以下の資産が生成されます。
 
-- 予測を実行する準備が完了したシリアル化されたモデル .zip ("最適なモデル")。 
+- 予測を実行する準備が完了したシリアル化されたモデル .zip ("最適なモデル")。
 - C# ソリューション:
-    - その生成されたモデルを実行/スコア付けする C# コード (そのモデルを使用してエンドユーザー アプリで予測を行うため)。
-    - そのモデルの生成に使用されるトレーニング コードを含む C# コード (学習目的またはモデルの再トレーニングのため)。
+  - その生成されたモデルを実行/スコア付けする C# コード (そのモデルを使用してエンドユーザー アプリで予測を行うため)。
+  - そのモデルの生成に使用されるトレーニング コードを含む C# コード (学習目的またはモデルの再トレーニングのため)。
 - 詳細な構成/パイプラインなど、評価される複数のアルゴリズム全体にわたるすべての反復処理/スイープの情報を含むログ ファイル。
 
 最初の 2 つの資産は、その生成された ML モデルを使用して予測を行うために、エンドユーザー アプリ (ASP.NET Core Web アプリ、サービス、デスクトップ アプリなど) で直接使用できます。
 
-3 つ目の資産のトレーニング コードは、生成されたモデルをトレーニングするために CLI によって使用された ML.NET API コードを示しています。そのため、モデルを再トレーニングし、背後で CLI および ML.NET AutoML エンジンによって選択された特定のトレーナー/アルゴリズムとハイパーパラメーターを調べて反復処理することができます。 
+3 つ目の資産のトレーニング コードは、生成されたモデルをトレーニングするために CLI によって使用された ML.NET API コードを示しています。そのため、モデルを再トレーニングし、背後で CLI および ML.NET AutoML エンジンによって選択された特定のトレーナー/アルゴリズムとハイパーパラメーターを調べて反復処理することができます。
 
 ## <a name="understanding-the-quality-of-the-model"></a>モデルの品質を理解する
 
@@ -71,7 +71,7 @@ CLI ツールを使用して "最適なモデル" を生成すると、対象の
 
 ### <a name="metrics-for-binary-classification-models"></a>二値分類モデルのメトリック
 
- CLI によって検出される上位 5 つのモデルの二項分類 ML タスク メトリック一覧を次に示します。 
+CLI によって検出される上位 5 つのモデルの二項分類 ML タスク メトリック一覧を次に示します。
 
 ![イメージ](media/automate-training-with-cli/cli-binary-classification-metrics.png)
 
@@ -81,7 +81,7 @@ CLI によって出力されるメトリックを調べて理解するには、�
 
 ### <a name="metrics-for-multi-class-classification-models"></a>多クラス分類モデルのメトリック
 
- CLI によって検出される上位 5 つのモデルの多クラス分類 ML タスク メトリック一覧を次に示します。 
+CLI によって検出される上位 5 つのモデルの多クラス分類 ML タスク メトリック一覧を次に示します。
 
 ![イメージ](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
 

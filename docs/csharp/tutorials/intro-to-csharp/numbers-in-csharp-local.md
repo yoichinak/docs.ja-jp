@@ -3,12 +3,12 @@ title: C# における数値 - C# の概要に関するチュートリアル
 description: 数値型とそのプロパティ、およびメソッドを詳しく見ていくことで C# について学習します。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 65b31c29fa9662619f92efb7977577f12d23fb30
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: d95d5ce16abadf441158b7f8af93acc73b154e99
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423421"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661049"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>C\# で整数と浮動小数点数を操作する
 
@@ -321,7 +321,7 @@ decimal 型を使用した演算では、小数点の右側の桁数がより多
 C# の数値の詳細については、次のトピックで学習できます。
 
 - [整数型](../../language-reference/builtin-types/integral-numeric-types.md)
-- [浮動小数点型の一覧表](../../language-reference/keywords/floating-point-types-table.md)
+- [浮動小数点型の一覧表](../../language-reference/builtin-types/floating-point-numeric-types.md)
 - [組み込み型の一覧表](../../language-reference/keywords/built-in-types-table.md)
 - [暗黙的な数値変換の一覧表](../../language-reference/keywords/implicit-numeric-conversions-table.md)
 - [明示的な数値変換の一覧表](../../language-reference/keywords/explicit-numeric-conversions-table.md)

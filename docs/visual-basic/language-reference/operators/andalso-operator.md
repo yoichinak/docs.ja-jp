@@ -11,19 +11,19 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - short-circuit evaluation
 ms.assetid: bbc15191-b374-495b-9b8f-7b8c2f4388eb
-ms.openlocfilehash: 3876fd9c32d486b8ebecc9ee2428486a687a1624
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1cb4d372d3ac228f29c6fa45f124796e5dfb6709
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608321"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859886"
 ---
 # <a name="andalso-operator-visual-basic"></a>AndAlso 演算子 (Visual Basic)
 ショート サーキットの 2 つの式の論理積を実行します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb
 result = expression1 AndAlso expression2  
 ```  
   
@@ -47,7 +47,8 @@ result = expression1 AndAlso expression2
 |`False`|(評価されていません)|`False`|  
   
 ## <a name="data-types"></a>データの種類  
- `AndAlso`のみの演算子が定義されている、[ブール データ型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)します。 Visual Basic の変換を必要に応じて、各オペランド`Boolean`全体での操作を実行および`Boolean`します。 Visual Basic 変換から数値型に結果を割り当てた場合`Boolean`その型にします。 これにより、予期しない動作が生成する可能性があります。 たとえば、`5 AndAlso 12`結果`–1`に変換される`Integer`します。  
+ `AndAlso`のみの演算子が定義されている、[ブール データ型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)します。 Visual Basic の変換を必要に応じて、各オペランド`Boolean`式を評価する前にします。 数値型に結果を割り当てた場合はこれからの Visual Basic に変換します`Boolean`その型にように`False`なります`0`と`True`なります`-1`。
+詳細については、次を参照してください[ブール型の変換。](../data-types/boolean-data-type.md#type-conversions)
   
 ## <a name="overloading"></a>オーバーロード  
  [And 演算子](../../../visual-basic/language-reference/operators/and-operator.md)と[IsFalse 演算子](../../../visual-basic/language-reference/operators/isfalse-operator.md)できる*オーバー ロードされた*、いるクラスまたは構造体を再定義できますの動作はその型つまりクラスまたは構造体。 オーバー ロード、`And`と`IsFalse`演算子の動作に影響、`AndAlso`演算子。 コードで使用する場合`AndAlso`クラスまたは構造体をオーバー ロードで`And`と`IsFalse`、その再定義された動作を確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  

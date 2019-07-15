@@ -20,19 +20,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d2b82bc056acd2e620461081b5f8c9d45fc152c
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 74548df512f68761b006e064a6db968e82b03813
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490644"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779116"
 ---
 # <a name="coeeshutdowncom-function"></a>CoEEShutDownCOM 関数
 共通言語ランタイム (CLR) がランタイム呼び出し可能ラッパー (RCW) 内で保持しているすべてのインターフェイス ポインターを解放するを強制します。 RCW のすべてのキャッシュの解放の効果があります。 このグローバル関数は、.NET Framework 4 では非推奨とされます。 代わりに、特定のランタイムのエントリ ポイントを使用します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void CoEEShutDownCOM ();  
 ```  
   

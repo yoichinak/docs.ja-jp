@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 249de91483117db6b497fa8eae6f97c3eb0a0587
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff298f73f02f148fc389f389ba86fd9a550998c7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045527"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781775"
 ---
 # <a name="cormethodattr-enumeration"></a>CorMethodAttr 列挙型
 メソッドの機能を記述する値が含まれています。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum CorMethodAttr {  
   
     mdMemberAccessMask          =   0x0007,  
@@ -94,7 +94,7 @@ typedef enum CorMethodAttr {
 |`mdRequireSecObject`|メソッドがセキュリティ コードを含む他のメソッドを呼び出すことを指定します。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorHdr.h  
   
