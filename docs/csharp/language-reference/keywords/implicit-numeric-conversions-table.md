@@ -8,12 +8,12 @@ helpviewer_keywords:
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-ms.openlocfilehash: 9c3efe1dbea355e8bc00ef44e08efcc9d0e0bdca
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 516505ccacfd2a8a5c275b0de033e1316fa06d3a
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424176"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661334"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>暗黙的な数値変換の一覧表 (C# リファレンス)
 
@@ -30,11 +30,11 @@ ms.locfileid: "67424176"
 |[uint](../builtin-types/integral-numeric-types.md)|`long`、`ulong`、`float`、`double`、または `decimal`|  
 |[long](../builtin-types/integral-numeric-types.md)|`float`、 `double`、または `decimal`|  
 |[ulong](../builtin-types/integral-numeric-types.md)|`float`、 `double`、または `decimal`|  
-|[float](float.md)|`double`|  
+|[float](../builtin-types/floating-point-numeric-types.md)|`double`|  
   
 ## <a name="remarks"></a>解説  
 
-- [整数型](../builtin-types/integral-numeric-types.md)はすべて、あらゆる[浮動小数点型](floating-point-types-table.md)に暗黙的に変換できます。
+- [整数型](../builtin-types/integral-numeric-types.md)はすべて、あらゆる[浮動小数点型](../builtin-types/floating-point-numeric-types.md)に暗黙的に変換できます。
 
 - `int`、`uint`、`long`、または `ulong` から `float` への変換と `long` から `ulong` または `double` への変換では、有効桁数が失われる場合があります (絶対値ではありません)。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "67424176"
 - [C# リファレンス](../index.md)
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [整数型](../builtin-types/integral-numeric-types.md)
-- [浮動小数点型の一覧表](floating-point-types-table.md)
+- [浮動小数点型の一覧表](../builtin-types/floating-point-numeric-types.md)
 - [組み込み型の一覧表](built-in-types-table.md)
 - [明示的な数値変換の一覧表](explicit-numeric-conversions-table.md)
 - [キャストと型変換](../../programming-guide/types/casting-and-type-conversions.md)

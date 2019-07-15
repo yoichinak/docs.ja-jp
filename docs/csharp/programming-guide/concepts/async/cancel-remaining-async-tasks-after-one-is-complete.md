@@ -2,12 +2,12 @@
 title: 完了後の残りの非同期タスクのキャンセル (C#)
 ms.date: 07/20/2015
 ms.assetid: d3cebc74-c392-497b-b1e6-62a262eabe05
-ms.openlocfilehash: baf757f7f7a71528dd5dc36b0f807eb452577a38
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9b968ec902d9653caa410e917af40c8a521e55b4
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298670"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859620"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-c"></a>完了後の残りの非同期タスクのキャンセル (C#)
 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> メソッドを <xref:System.Threading.CancellationToken> と共に使用すると、1 つのタスクが完了したときに残りのすべてのタスクを取り消しできます。 `WhenAny` メソッドは、タスクのコレクションである引数を受け取ります。 このメソッドは、すべてのタスクを開始し、単一のタスクを返します。 単一のタスクは、コレクションのいずれかのタスクが完了すると完了します。  
@@ -22,11 +22,11 @@ ms.locfileid: "59298670"
   
 1. ダウンロードしたファイルを圧縮解除し、Visual Studio を起動します。  
   
-2. メニュー バーで **[ファイル]**、 **[開く]**、 **[プロジェクト/ソリューション]** の順に選択します。  
+2. メニュー バーで **[ファイル]** 、 **[開く]** 、 **[プロジェクト/ソリューション]** の順に選択します。  
   
 3. **[プロジェクトを開く]** ダイアログ ボックスで、圧縮解除したサンプル コードを含むフォルダーを開き、AsyncFineTuningCS のソリューション (.sln) ファイルを開きます。  
   
-4. **ソリューション エクスプローラー**で、**CancelAfterOneTask** プロジェクトのショートカット メニューを開き、**[スタートアップ プロジェクトに設定]** をクリックします。  
+4. **ソリューション エクスプローラー**で、**CancelAfterOneTask** プロジェクトのショートカット メニューを開き、 **[スタートアップ プロジェクトに設定]** をクリックします。  
   
 5. F5 キーを押してプロジェクトを実行します。  
   
@@ -37,14 +37,14 @@ ms.locfileid: "59298670"
  プロジェクトをダウンロードしない場合は、このトピックの最後の MainWindow.xaml.cs ファイルをレビューできます。  
   
 ## <a name="building-the-example"></a>例のビルド  
- このトピックの例では、「[非同期タスクまたはタスクの一覧のキャンセル (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)」で開発したプロジェクトに追加して、タスクのリストをキャンセルします。 この例では、**[キャンセル]** ボタンは明示的に使用していませんが、同じ UI を使用します。  
+ このトピックの例では、「[非同期タスクまたはタスクの一覧のキャンセル (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)」で開発したプロジェクトに追加して、タスクのリストをキャンセルします。 この例では、 **[キャンセル]** ボタンは明示的に使用していませんが、同じ UI を使用します。  
   
- この例を自分で 1 つずつビルドするには、"例をダウンロードする" セクションの手順に従います。ただし、**[スタートアップ プロジェクト]** として **CancelAListOfTasks** を選択します。 そのプロジェクトに、このトピックでの変更を追加します。  
+ この例を自分で 1 つずつビルドするには、"例をダウンロードする" セクションの手順に従います。ただし、 **[スタートアップ プロジェクト]** として **CancelAListOfTasks** を選択します。 そのプロジェクトに、このトピックでの変更を追加します。  
   
  **CancelAListOfTasks** プロジェクトの MainWindow.xaml.cs ファイルで、各 Web サイトの処理ステップを `AccessTheWebAsync` のループから次の非同期メソッドに移動して、遷移を開始します。  
   
 ```csharp  
-/ ***Bundle the processing steps for a website into one async method.  
+// ***Bundle the processing steps for a website into one async method.  
 async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken ct)  
 {  
     // GetAsync returns a Task<HttpResponseMessage>.   

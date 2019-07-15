@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: C# の分岐とループ
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 047914aad8d5d38c1bf5c00f71be50f54b7124f6
-  ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+  ms.openlocfilehash: 7122bda62465482340ebdd2b1dc37577de9a0e69
+  ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 06/28/2019
-  ms.locfileid: "67423395"
+  ms.lasthandoff: 07/09/2019
+  ms.locfileid: "67661017"
 items:
 - durationInMinutes: 1
   content: >
@@ -420,7 +420,7 @@ items:
 
     - [整数型](../../language-reference/builtin-types/integral-numeric-types.md)
 
-    - [浮動小数点型の一覧表](../../language-reference/keywords/floating-point-types-table.md)
+    - [浮動小数点型の一覧表](../../language-reference/builtin-types/floating-point-numeric-types.md)
 
     - [組み込み型の一覧表](../../language-reference/keywords/built-in-types-table.md)
 

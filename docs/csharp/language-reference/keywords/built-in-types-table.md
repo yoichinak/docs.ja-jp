@@ -7,12 +7,12 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 4a54059f288a432cbaf904626cabf4f7bcba7209
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: e770c305afe098e633700b039efb51770c77ada7
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424387"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661447"
 ---
 # <a name="built-in-types-table-c-reference"></a>組み込み型の一覧表 (C# リファレンス)
 
@@ -24,9 +24,9 @@ ms.locfileid: "67424387"
 |[byte](../builtin-types/integral-numeric-types.md)|<xref:System.Byte?displayProperty=nameWithType>|  
 |[sbyte](../builtin-types/integral-numeric-types.md)|<xref:System.SByte?displayProperty=nameWithType>|  
 |[char](char.md)|<xref:System.Char?displayProperty=nameWithType>|  
-|[decimal](decimal.md)|<xref:System.Decimal?displayProperty=nameWithType>|  
-|[double](double.md)|<xref:System.Double?displayProperty=nameWithType>|  
-|[float](float.md)|<xref:System.Single?displayProperty=nameWithType>|  
+|[decimal](../builtin-types/floating-point-numeric-types.md)|<xref:System.Decimal?displayProperty=nameWithType>|  
+|[double](../builtin-types/floating-point-numeric-types.md)|<xref:System.Double?displayProperty=nameWithType>|  
+|[float](../builtin-types/floating-point-numeric-types.md)|<xref:System.Single?displayProperty=nameWithType>|  
 |[int](../builtin-types/integral-numeric-types.md)|<xref:System.Int32?displayProperty=nameWithType>|  
 |[uint](../builtin-types/integral-numeric-types.md)|<xref:System.UInt32?displayProperty=nameWithType>|  
 |[long](../builtin-types/integral-numeric-types.md)|<xref:System.Int64?displayProperty=nameWithType>|  

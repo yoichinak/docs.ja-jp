@@ -3,12 +3,12 @@ title: C# の型と変数 - C# 言語のツアー
 description: C# における型の定義と変数の宣言について説明します
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: a3f31eca296265c1e7f0c14a9540e267a2165ec1
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: f06894d986973e4394b0586906d67ef41a9d9152
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423451"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661065"
 ---
 # <a name="types-and-variables"></a>型と変数
 
@@ -55,7 +55,7 @@ C# の値型はさらに、*単純型*、*列挙型*、*構造体型*、およ�
 [DelegateTypes]: ../language-reference/keywords/delegate.md
 [ArrayTypes]: ../programming-guide/arrays/index.md
 
-数値型について詳しくは、[整数型](../language-reference/builtin-types/integral-numeric-types.md)および[浮動小数点型の一覧表](../language-reference/keywords/floating-point-types-table.md)に関するページをご覧ください。
+数値型について詳しくは、[整数型](../language-reference/builtin-types/integral-numeric-types.md)および[浮動小数点型の一覧表](../language-reference/builtin-types/floating-point-numeric-types.md)に関するページをご覧ください。
 
 C# の `bool` 型はブール値を表すのに使用します。値は `true` か `false` のどちらかです。
 
