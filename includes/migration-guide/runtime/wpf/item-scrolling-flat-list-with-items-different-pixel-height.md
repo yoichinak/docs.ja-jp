@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 088ebad0f822f791d05a8a8dafb0f7fd74f5581a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: eb3cfdfd39444536f423b65166a3413db67a0e01
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59774198"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802939"
 ---
 ### <a name="item-scrolling-a-flat-list-with-items-of-different-pixel-height"></a>ピクセルの高さが異なる項目を含むフラット リストでの項目スクロール
 
@@ -16,3 +16,4 @@ ms.locfileid: "59774198"
 |Version|4.6.1|
 |型|ランタイム|
 |影響を受ける API|<ul><li><xref:System.Windows.Controls.VirtualizingStackPanel?displayProperty=nameWithType></li></ul>|
+

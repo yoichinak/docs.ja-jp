@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 79b74090a5a443c944df94f9df1c3f4d283df02f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: af266a551a194f55bc4951a8bdb0e9af6f823663
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59214742"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663004"
 ---
 # <a name="language-independence-and-language-independent-components"></a>言語への非依存性、および言語非依存コンポーネント
 
@@ -29,35 +29,35 @@ ms.locfileid: "59214742"
 
 * [CLS 準拠の規則](#cls-compliance-rules)
 
-    * [型および型メンバーのシグネチャ](#types-and-type-member-signatures)
+  * [型および型メンバーのシグネチャ](#types-and-type-member-signatures)
 
-    * [名前付け規則](#naming-conventions)
+  * [名前付け規則](#naming-conventions)
 
-    * [型変換](#type-conversion)
+  * [型変換](#type-conversion)
 
-    * [配列](#arrays)
+  * [配列](#arrays)
 
-    * [インターフェイス](#interfaces)
+  * [インターフェイス](#interfaces)
 
-    * [列挙型](#enumerations)
+  * [列挙型](#enumerations)
 
-    * [一般的な型メンバー](#type-members-in-general)
+  * [一般的な型メンバー](#type-members-in-general)
 
-    * [メンバーのアクセシビリティ](#member-accessibility)
+  * [メンバーのアクセシビリティ](#member-accessibility)
 
-    * [ジェネリック型とメンバー](#generic-types-and-members)
+  * [ジェネリック型とメンバー](#generic-types-and-members)
 
-    * [コンストラクター](#constructors)
+  * [コンストラクター](#constructors)
 
-    * [プロパティ](#properties)
+  * [プロパティ](#properties)
 
-    * [イベント](#events)
+  * [イベント](#events)
 
-    * [Overloads](#overloads)
+  * [Overloads](#overloads)
 
-    * [例外](#exceptions)
+  * [例外](#exceptions)
 
-    * [属性](#attributes)
+  * [属性](#attributes)
 
 * [CLSCompliantAttribute 属性](#the-clscompliantattribute-attribute)
 
@@ -195,12 +195,12 @@ CLS 準拠の規則を次の表に示します。 これらの規則のテキス
 プロパティ | [プロパティ](#properties) | プロパティの型は、getter の戻り値の型であり、かつ setter の最後の引数の型でなければいけない。 プロパティのパラメーターの型は、getter へのパラメーターの型であり、かつ setter の最後のパラメーター以外のすべての型でなければいけない。 すべての型は CLS 準拠でなければならない。また、マネージド ポインターであってはいけない (つまり、参照渡しではいけない)。 | 27
 プロパティ | [プロパティ](#properties) | プロパティは、特定の名前付けパターンに従わなくてはいけない。 CLS 規則 24 で触れられている `SpecialName` 属性は、適切な名前比較で無視され、識別子規則に従わなければいけない。 プロパティには getter メソッド、setter メソッド、またはこの両方が必ずなければいけない。 | 28
 型変換 | [型変換](#type-conversion) | op_Implicit または op_Explicit が指定されている場合は、強制変換のための別の方法を用意する必要がある。 | 39
-種類 | [型および型メンバーのシグネチャ](#types-and-type-member-signatures) | ボックス化された値型は CLS 準拠ではない。 | 3
-種類 | [型および型メンバーのシグネチャ](#types-and-type-member-signatures) | シグネチャに出現するすべての型は CLS 準拠でなければいけない。 ジェネリック型のインスタンスを構成するすべての型は CLS 準拠でなければいけない。 | 11
-種類 | [型および型メンバーのシグネチャ](#types-and-type-member-signatures) | 型指定された参照は CLS 準拠ではありません。 | 14
-種類 | [型および型メンバーのシグネチャ](#types-and-type-member-signatures) | アンマネージ ポインター型は CLS 準拠ではない。 | 17
-種類 | [型および型メンバーのシグネチャ](#types-and-type-member-signatures) | CLS 準拠のクラス、値型、およびインターフェイスでは、CLS に準拠しないメンバーの実装は不要である。 | 20
-種類 | [型および型メンバーのシグネチャ](#types-and-type-member-signatures) | [System.Object](xref:System.Object) は CLS 準拠である。 これ以外のあらゆる CLS 準拠クラスは CLS 準拠クラスの継承でなければならない。 | 23
+型 | [型および型メンバーのシグネチャ](#types-and-type-member-signatures) | ボックス化された値型は CLS 準拠ではない。 | 3
+型 | [型および型メンバーのシグネチャ](#types-and-type-member-signatures) | シグネチャに出現するすべての型は CLS 準拠でなければいけない。 ジェネリック型のインスタンスを構成するすべての型は CLS 準拠でなければいけない。 | 11
+型 | [型および型メンバーのシグネチャ](#types-and-type-member-signatures) | 型指定された参照は CLS 準拠ではありません。 | 14
+型 | [型および型メンバーのシグネチャ](#types-and-type-member-signatures) | アンマネージ ポインター型は CLS 準拠ではない。 | 17
+型 | [型および型メンバーのシグネチャ](#types-and-type-member-signatures) | CLS 準拠のクラス、値型、およびインターフェイスでは、CLS に準拠しないメンバーの実装は不要である。 | 20
+型 | [型および型メンバーのシグネチャ](#types-and-type-member-signatures) | [System.Object](xref:System.Object) は CLS 準拠である。 これ以外のあらゆる CLS 準拠クラスは CLS 準拠クラスの継承でなければならない。 | 23
 
 ### <a name="types-and-type-member-signatures"></a>型および型メンバーのシグネチャ
 
@@ -1307,11 +1307,11 @@ CLS 準拠の列挙型は、次の規則に従う必要があります。
 
 * 列挙体は 2 種類あります。
 
-    * 同時に指定できない一連の名前付き整数値を表す列挙体。 この列挙体の型は、[System.FlagsAttribute](xref:System.FlagsAttribute) カスタム属性が存在しないことによって示されます。
+  * 同時に指定できない一連の名前付き整数値を表す列挙体。 この列挙体の型は、[System.FlagsAttribute](xref:System.FlagsAttribute) カスタム属性が存在しないことによって示されます。
 
-    * 名前のない値を生成するために結合できる一連のビット フラグを表す列挙体。 この列挙体の型は、 [System.FlagsAttribute](xref:System.FlagsAttribute) カスタム属性が存在することによって示されます。
+  * 名前のない値を生成するために結合できる一連のビット フラグを表す列挙体。 この列挙体の型は、 [System.FlagsAttribute](xref:System.FlagsAttribute) カスタム属性が存在することによって示されます。
 
- 詳細については、[Enum](xref:System.Enum) 構造体のドキュメントを参照してください。
+詳細については、[Enum](xref:System.Enum) 構造体のドキュメントを参照してください。
 
 * 列挙体の値は、その列挙体の指定された値に限定されません。 つまり、列挙体の値の範囲は、その列挙体の基になる値の範囲です。 `Enum.IsDefined` メソッドを使用すると、指定された値が列挙体のメンバーかどうかを確認できます。
 
@@ -1620,7 +1620,7 @@ End Module
 '       Outer`1+Inner1B`1[System.String,System.Int32]
 ```
 
-ジェネリック型の名前は、フォーム *name*'*n* でエンコードされます。ここで、*name* は型の名前、*`* は文字リテラル、*n* は型で宣言されたパラメーターの数、入れ子になったジェネリック型の場合は、新しく導入された型パラメーターの数です。 ジェネリック型の名前のエンコーディングは、主に、リフレクションを使用してライブラリ内の CLS 準拠のジェネリック型にアクセスする開発者が使用します。
+ジェネリック型の名前は、フォーム *name*'*n* でエンコードされます。ここで、*name* は型の名前、 *`* は文字リテラル、*n* は型で宣言されたパラメーターの数、入れ子になったジェネリック型の場合は、新しく導入された型パラメーターの数です。 ジェネリック型の名前のエンコーディングは、主に、リフレクションを使用してライブラリ内の CLS 準拠のジェネリック型にアクセスする開発者が使用します。
 
 制約がジェネリック型に適用される場合は、制約として使用されるすべての型も CLS に準拠している必要があります。 次の例では、CLS に準拠していない `BaseClass` という名前のクラスと、型パラメーターが `BaseCollection` から派生しなければならない `BaseClass` という名前のジェネリック クラスを定義します。 ただし、`BaseClass` が CLS に準拠していないので、コンパイラによって警告が生成されます。
 
