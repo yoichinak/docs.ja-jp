@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4e13689e0c8324781b86ae7b9568cb441a31ec70
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: c4f59bdb0537ab6ce404ed0623c40f9f3b31598d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423956"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766826"
 ---
 # <a name="generics-in-net"></a>.NET のジェネリック
 
@@ -83,7 +83,7 @@ ms.locfileid: "66423956"
   
 - ジェネリック型パラメーターの*共変性*と*反変性*を使用すると、型引数がターゲットの構築型よりも強い派生型 (共変性) または弱い派生型 (反変性) である構築ジェネリック型を使用できます。 共変性と反変性は、 *"分散"* と総称されます。 詳細については、「[共変性と反変性](../../../docs/standard/generics/covariance-and-contravariance.md)」を参照してください。  
   
-- *制約* は、ジェネリック型パラメーターに適用される制限です。 たとえば、型パラメーターを、 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> ジェネリック インターフェイスを実装する型に制限して、型のインスタンスを並べ替えることができるようにできます。 また、型パラメーターを、特定の基本クラスや既定のコンストラクターを持つ型、または参照型や値型に制約できます。 ジェネリック型のユーザーは、制約を満たさない型引数に置き換えることはできません。  
+- *制約* は、ジェネリック型パラメーターに適用される制限です。 たとえば、型パラメーターを、 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> ジェネリック インターフェイスを実装する型に制限して、型のインスタンスを並べ替えることができるようにできます。 また、型パラメーターを、特定の基底クラスを持つ型、パラメーターなしのコンストラクターを持つ型、または参照型や値型に制約することもできます。 ジェネリック型のユーザーは、制約を満たさない型引数に置き換えることはできません。  
   
 - *ジェネリック メソッド定義* は、ジェネリック型パラメーターのリストと仮パラメーターのリストの 2 つのパラメーター リストを持つメソッドです。 次のコードに示すように、型パラメーターは、戻り値の型または仮パラメーターの型として指定できます。  
   

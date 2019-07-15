@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5844dbc2c3c89baeb39b69f16846f92ac10e97f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c0a281b05f453b68495e6fa6fca45f3f36a204a3
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804444"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804595"
 ---
 ### <a name="xsd-schema-validation-now-correctly-detects-violations-of-unique-constraints-if-compound-keys-are-used-and-one-key-is-empty"></a>XSD スキーマ検証は、複合キーが使用され、1 つのキーが空の場合に、一意制約の違反を正しく検出するようになりました
 
@@ -15,3 +15,4 @@ ms.locfileid: "59804444"
 |スコープ|エッジ|
 |Version|4.6|
 |型|再ターゲット中|
+

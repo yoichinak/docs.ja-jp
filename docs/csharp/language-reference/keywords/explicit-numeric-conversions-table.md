@@ -10,12 +10,12 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-ms.openlocfilehash: 24f7401538eb1eeb675e6c3de265688780d6b91a
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: d1533872850a953a38800aaeac85b9e6e565d374
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424205"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661364"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>明示的な数値変換の一覧表 (C# リファレンス)
 
@@ -32,9 +32,9 @@ ms.locfileid: "67424205"
 |[long](../builtin-types/integral-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`ulong`、または `char`|  
 |[ulong](../builtin-types/integral-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、または `char`|  
 |[char](char.md)|`sbyte`、 `byte`、または `short`|  
-|[float](float.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`char`、または `decimal`|  
-|[double](double.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`char`、`float`、または `decimal`|  
-|[decimal](decimal.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`char`、`float`、または `double`|  
+|[float](../builtin-types/floating-point-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`char`、または `decimal`|  
+|[double](../builtin-types/floating-point-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`char`、`float`、または `decimal`|  
+|[decimal](../builtin-types/floating-point-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`char`、`float`、または `double`|  
   
 ## <a name="remarks"></a>コメント  
   
@@ -70,6 +70,6 @@ ms.locfileid: "67424205"
 - [キャストと型変換](../../programming-guide/types/casting-and-type-conversions.md)
 - [() 演算子](../operators/type-testing-and-conversion-operators.md#cast-operator-)
 - [整数型](../builtin-types/integral-numeric-types.md)
-- [浮動小数点型の一覧表](floating-point-types-table.md)
+- [浮動小数点型の一覧表](../builtin-types/floating-point-numeric-types.md)
 - [組み込み型の一覧表](built-in-types-table.md)
 - [暗黙的な数値変換の一覧表](implicit-numeric-conversions-table.md)

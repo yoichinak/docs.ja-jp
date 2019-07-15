@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 705e1a22b8a5791c1103dd374a8bab19356cadfb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: bc33266bb2af639d7d0d1cb532ed73abd7f1ba9a
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59774262"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67803214"
 ---
 ### <a name="ef-no-longer-throws-for-queryviews-with-specific-characteristics"></a>EF で特定の特性を持つ QueryViews がスローされなくなった
 
@@ -15,3 +15,4 @@ ms.locfileid: "59774262"
 |スコープ|エッジ|
 |Version|4.5.2|
 |型|ランタイム|
+

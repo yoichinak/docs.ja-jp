@@ -10,19 +10,19 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-ms.openlocfilehash: c68e6a69553f2cb14eb442c31e5138009f3c8411
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ee38caedc5d5a29d2221d6e5a6bf6cf74617bf8c
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619442"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859722"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>方法: 現在、印刷ジョブが印刷可能であるかどうかを検出する
 印刷キューは常に使用できません、1 日 24 時間です。 特定の時間帯で使用できないように設定可能な開始と終了時のプロパティがあります。 たとえば、この機能は、特定の部門午後 5 時以降後に排他的に使用するプリンターを予約するは使用できます。 その部門は、別のキュー サービスの他の部門よりプリンターを使用して、必要があります。 他の部署のキューは午後 5 時以降に設定されます、する部門用のキューに設定できるときに常に利用できます。  
   
  さらに、印刷ジョブ自体は、指定した期間内のみで印刷できるように設定できます。  
   
- <xref:System.Printing.PrintQueue>と<xref:System.Printing.PrintSystemJobInfo>で公開されているクラス、 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] Microsoft .NET Framework の現在のところ、特定のキューで指定した印刷ジョブが印刷できるかどうかをリモートで確認するため手段を提供します。  
+ <xref:System.Printing.PrintQueue>と<xref:System.Printing.PrintSystemJobInfo>Api の Microsoft .NET Framework で公開されるクラスがリモートで、特定の印刷ジョブは、現在のところ、特定のキューに印刷できるかどうかを確認するための手段を提供します。  
   
 ## <a name="example"></a>例  
  次の例では、印刷ジョブに関する問題を診断できるサンプルを示します。  

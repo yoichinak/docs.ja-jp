@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 443ea9ad56d13d26191231104ce3998b2691fc34
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 483710281feafdf97cfef9b72a67af035dcf0efa
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052938"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860172"
 ---
 # <a name="dependency-properties-overview"></a>依存関係プロパティの概要
 
@@ -78,7 +78,7 @@ XAML は、プロパティを設定するためのさまざまな構文形式を
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyget)]
  [!code-vb[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyget)]
 
-プロパティ システムの [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]<xref:System.Windows.DependencyObject.GetValue%2A> と <xref:System.Windows.DependencyObject.SetValue%2A> は直接呼び出すことも可能です。 これは通常、既存のプロパティを使用する場合は不要ですが (ラッパーの方が便利で、開発者ツール用のより優れたプロパティが公開されます)、[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] を直接呼び出す方法は、特定のシナリオに適しています。
+プロパティ システム Api を呼び出すこともできます<xref:System.Windows.DependencyObject.GetValue%2A>と<xref:System.Windows.DependencyObject.SetValue%2A>直接します。 これは (ラッパーより便利ですし、開発者ツールのプロパティのより優れた公開を実現する) の既存のプロパティを使用しているが、特定のシナリオでは、Api を直接呼び出す場合に通常必要ありません。
 
 プロパティは、XAML で設定してから分離コードを介してコードでアクセスすることもできます。 詳細については、「[WPF における分離コードと XAML](code-behind-and-xaml-in-wpf.md)」を参照してください。
 
@@ -108,7 +108,7 @@ XAML は、プロパティを設定するためのさまざまな構文形式を
 
 [!code-xaml[PropertiesOvwSupport#ResourcesReference](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page2.xaml#resourcesreference)]
 
-この特定のリソースは、[DynamicResource マークアップ拡張機能](dynamicresource-markup-extension.md)として参照されます (WPF XAML では、静的リソース参照または動的リソース参照を使用できます)。 動的リソース参照を使用するには、依存関係プロパティに設定している必要があるため、これは具体的には、WPF プロパティ システムによって有効になる動的リソース参照の使用方法になります。 詳しくは、「[XAML リソース](xaml-resources.md)」を参照してください。
+この特定のリソースは、[DynamicResource マークアップ拡張機能](dynamicresource-markup-extension.md)として参照されます (WPF XAML では、静的リソース参照または動的リソース参照を使用できます)。 動的リソース参照を使用するには、依存関係プロパティに設定している必要があるため、これは具体的には、WPF プロパティ システムによって有効になる動的リソース参照の使用方法になります。 詳細については、「[XAML リソース](xaml-resources.md)」を参照してください。
 
 > [!NOTE]
 > リソースはローカル値として扱われます。つまり、別のローカル値を設定すると、リソース参照がなくなります。 詳細については、「[依存関係プロパティ値の優先順位](dependency-property-value-precedence.md)」を参照してください。
@@ -136,7 +136,7 @@ XAML は、プロパティを設定するためのさまざまな構文形式を
 
 詳しくは、「 [スタイルとテンプレート](../controls/styling-and-templating.md)」をご覧ください。
 
-### <a name="animations"></a>Animations
+### <a name="animations"></a>アニメーション
 依存関係プロパティは、アニメーション化することができます。 アニメーションが適用されて実行されると、アニメーション化された値は、それ以外の場合のプロパティの値 (ローカル値など) よりも高い優先順位で動作します。
 
 次の例は、<xref:System.Windows.Controls.Button> プロパティ上の <xref:System.Windows.Controls.Control.Background%2A> をアニメーション化します (技術的には、空白の <xref:System.Windows.Media.SolidColorBrush> を <xref:System.Windows.Controls.Control.Background%2A> として指定するために、プロパティ要素構文を使用して <xref:System.Windows.Controls.Control.Background%2A> がアニメーション化されます。すると、その <xref:System.Windows.Media.SolidColorBrush> の <xref:System.Windows.Media.SolidColorBrush.Color%2A> プロパティが直接アニメーション化されるプロパティになります)。
@@ -168,7 +168,7 @@ XAML は、プロパティを設定するためのさまざまな構文形式を
 詳細については、「[プロパティ値の継承](property-value-inheritance.md)」を参照してください。
 
 ### <a name="wpf-designer-integration"></a>WPF デザイナーの統合
-依存関係プロパティとして実装されるプロパティを使用するカスタム コントロールは、適切な [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] のサポートを受けます。 1 つの例として、**[プロパティ]** ウィンドウで、直接依存関係プロパティと添付依存関係プロパティを編集できる機能が挙げられます。 詳しくは、「[コントロールの作成の概要](../controls/control-authoring-overview.md)」を参照してください。
+依存関係プロパティとして実装されるプロパティを使用するカスタム コントロールは、適切な [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] のサポートを受けます。 1 つの例として、 **[プロパティ]** ウィンドウで、直接依存関係プロパティと添付依存関係プロパティを編集できる機能が挙げられます。 詳しくは、「[コントロールの作成の概要](../controls/control-authoring-overview.md)」を参照してください。
 
 ## <a name="dependency-property-value-precedence"></a>依存関係プロパティ値の優先順位
 依存関係プロパティの値を取得する場合、WPF プロパティ システムに関係する他のプロパティに基づく入力のいずれかを介して、そのプロパティに設定された値を取得する可能性があります。 プロパティの値の取得方法に関するさまざまなシナリオが予測可能な方法で相互作用できるように、依存関係プロパティ値の優先順位が存在しています。

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: fbc39b6e1cc19f6c2846caaabb9a8a721494b4e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d3c6818861f8b0261a9a71a4654029143d928d08
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804437"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67856936"
 ---
 ### <a name="allow-unicode-in-uris-that-resemble-unc-shares"></a>UNC 共有に似た URI での Unicode の許可
 
@@ -16,3 +16,4 @@ ms.locfileid: "59804437"
 |Version|4.7.2|
 |型|ランタイム|
 |影響を受ける API|<ul><li><xref:System.Uri?displayProperty=nameWithType></li></ul>|
+

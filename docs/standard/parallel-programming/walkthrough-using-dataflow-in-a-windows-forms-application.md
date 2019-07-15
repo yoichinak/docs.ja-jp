@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0c9447e53a874da856eb59932ec3871a9a1371d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f4f8e25edb7d61e21406a5f7719f6dc98f686a9e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654425"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755053"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>チュートリアル: Windows フォーム アプリケーションでのデータフローの使用
 このドキュメントでは、Windows フォーム アプリケーションでイメージ処理を実行する、データフロー ブロックのネットワークを作成する方法を説明します。  
@@ -41,7 +41,7 @@ ms.locfileid: "64654425"
 ## <a name="creating-the-windows-forms-application"></a>Windows フォーム アプリケーションの作成  
  このセクションでは、基本的な Windows フォーム アプリケーションを作成し、メイン フォームにコントロールを追加する方法を説明します。  
   
-#### <a name="to-create-the-windows-forms-application"></a>Windows フォーム アプリケーションを作成するには  
+### <a name="to-create-the-windows-forms-application"></a>Windows フォーム アプリケーションを作成するには  
   
 1. Visual Studio で、Visual C# または Visual Basic **Windows フォーム アプリケーション** プロジェクトを作成します。 このドキュメントでは、プロジェクトの名前を `CompositeImages` とします。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "64654425"
 ## <a name="creating-the-dataflow-network"></a>データフロー ネットワークの作成  
  このセクションでは、イメージ処理を実行するデータフロー ネットワークを作成する方法を説明します。  
   
-#### <a name="to-create-the-dataflow-network"></a>データフロー ネットワークを作成するには  
+### <a name="to-create-the-dataflow-network"></a>データフロー ネットワークを作成するには  
   
 1. System.Threading.Tasks.Dataflow.dll への参照をプロジェクトに追加します。  
   
@@ -99,23 +99,23 @@ ms.locfileid: "64654425"
   
  ![イメージ処理ネットワークを示す図。](./media/walkthrough-using-dataflow-in-a-windows-forms-application/dataflow-winforms-image-processing.png)  
   
- `displayCompositeBitmap` と `operationCancelled` のデータフロー ブロックはユーザー インターフェイスで機能するので、これらの操作をユーザー インターフェイス スレッドで実行することが重要です。 これを実現するため、構築時にこれらのオブジェクトは <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> プロパティが <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> に設定された <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions> オブジェクトを提供します。 <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> メソッドは、現行の同期コンテキストで作業を実行する <xref:System.Threading.Tasks.TaskScheduler> オブジェクトを作成します。 ユーザー インターフェイス スレッドで実行される`CreateImageProcessingNetwork` メソッドは、**[フォルダーの選択]** ボタンのハンドラーから呼び出されるため、`displayCompositeBitmap` と`operationCancelled` のデータフロー ブロックのアクションも、ユーザー インターフェイス スレッドで実行されます。  
+ `displayCompositeBitmap` と `operationCancelled` のデータフロー ブロックはユーザー インターフェイスで機能するので、これらの操作をユーザー インターフェイス スレッドで実行することが重要です。 これを実現するため、構築時にこれらのオブジェクトは <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> プロパティが <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> に設定された <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions> オブジェクトを提供します。 <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> メソッドは、現行の同期コンテキストで作業を実行する <xref:System.Threading.Tasks.TaskScheduler> オブジェクトを作成します。 ユーザー インターフェイス スレッドで実行される`CreateImageProcessingNetwork` メソッドは、 **[フォルダーの選択]** ボタンのハンドラーから呼び出されるため、`displayCompositeBitmap` と`operationCancelled` のデータフロー ブロックのアクションも、ユーザー インターフェイス スレッドで実行されます。  
   
  <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> プロパティはデータフロー ブロックの実行を完全にキャンセルするので、この例では、<xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> プロパティを設定する代わりに、共有キャンセル トークンを使います。 キャンセル トークンによって、この例では、ユーザーが 1 つまたは複数の操作をキャンセルしたときにも、同じデータフロー ネットワークを複数回再利用できます。 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> を使ってデータフロー ブロックの実行を完全に取り消す例については、「[方法:データフロー ブロックをキャンセルする](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md)」をご覧ください。  
   
 <a name="ui"></a>   
 ## <a name="connecting-the-dataflow-network-to-the-user-interface"></a>ユーザー インターフェイスへのデータフロー ネットワークの接続  
- このセクションでは、ユーザー インターフェイスにデータフロー ネットワークを接続する方法を説明します。 複合イメージの作成と、操作のキャンセルは、**[フォルダーの選択]** と **[キャンセル]** の各ボタンから開始されます。 ユーザーがこのいずれかのボタンを選択すると、適切な操作が非同期的に開始されます。  
+ このセクションでは、ユーザー インターフェイスにデータフロー ネットワークを接続する方法を説明します。 複合イメージの作成と、操作のキャンセルは、 **[フォルダーの選択]** と **[キャンセル]** の各ボタンから開始されます。 ユーザーがこのいずれかのボタンを選択すると、適切な操作が非同期的に開始されます。  
   
-#### <a name="to-connect-the-dataflow-network-to-the-user-interface"></a>ユーザー インターフェイスにデータフロー ネットワークを接続するには  
+### <a name="to-connect-the-dataflow-network-to-the-user-interface"></a>ユーザー インターフェイスにデータフロー ネットワークを接続するには  
   
-1. メイン フォームのフォーム デザイナーで、**[フォルダーの選択]** ボタンの <xref:System.Windows.Forms.ToolStripItem.Click> イベントのイベント ハンドラーを作成します。  
+1. メイン フォームのフォーム デザイナーで、 **[フォルダーの選択]** ボタンの <xref:System.Windows.Forms.ToolStripItem.Click> イベントのイベント ハンドラーを作成します。  
   
 2. **[フォルダーの選択]** ボタンの <xref:System.Windows.Forms.ToolStripItem.Click> イベントを実装します。  
   
      [!code-csharp[TPLDataflow_CompositeImages#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#6)]  
   
-3. メイン フォームのフォーム デザイナーで、**[キャンセル]** ボタンの <xref:System.Windows.Forms.ToolStripItem.Click> イベントのイベント ハンドラーを作成します。  
+3. メイン フォームのフォーム デザイナーで、 **[キャンセル]** ボタンの <xref:System.Windows.Forms.ToolStripItem.Click> イベントのイベント ハンドラーを作成します。  
   
 4. **[キャンセル]** ボタンの <xref:System.Windows.Forms.ToolStripItem.Click> イベントを実装します。  
   

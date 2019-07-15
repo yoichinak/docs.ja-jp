@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: b761cb699c4677f815835cdab9c6aa3039f5bb38
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 778b6973b0a08e89471f9a4aa31a077da2d30c16
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804345"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67858644"
 ---
-### <a name="listboxitem-isselected-binding-issue-with-observablecollectiontmove"></a>ObservableCollection\<T>.Move に対する ListBoxItem IsSelected のバインディングの問題
+### <a name="listboxitem-isselected-binding-issue-with-observablecollectionlttgtmove"></a>ObservableCollection&lt;T&gt;.Move に対する ListBoxItem IsSelected のバインディングの問題
 
 |   |   |
 |---|---|
@@ -16,3 +16,4 @@ ms.locfileid: "59804345"
 |Version|4.5|
 |型|ランタイム|
 |影響を受ける API|<ul><li><xref:System.Collections.ObjectModel.ObservableCollection%601.Move(System.Int32,System.Int32)?displayProperty=nameWithType></li><li><xref:System.Collections.ObjectModel.ObservableCollection%601.MoveItem(System.Int32,System.Int32)?displayProperty=nameWithType></li></ul>|
+

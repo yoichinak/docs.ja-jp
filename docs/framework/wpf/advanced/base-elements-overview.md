@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
-ms.openlocfilehash: 6fc34c02ab1add0710b65da7d63f444e1628cbc6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3dfcaaf040a766e07eb46a0b943b7e023564fa1c
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64657375"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859951"
 ---
 # <a name="base-elements-overview"></a>基本要素の概要
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] のクラスの大部分は、[!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] のドキュメントで一般に基本要素クラスと呼ばれている 4 つのクラスから派生しています。 これらのクラスは<xref:System.Windows.UIElement>、 <xref:System.Windows.FrameworkElement>、 <xref:System.Windows.ContentElement>、および<xref:System.Windows.FrameworkContentElement>します。 <xref:System.Windows.DependencyObject>クラスも関連が、両方の共通基本クラスであるため<xref:System.Windows.UIElement>と <xref:System.Windows.ContentElement>  
@@ -19,7 +19,7 @@ ms.locfileid: "64657375"
  両方<xref:System.Windows.UIElement>と<xref:System.Windows.ContentElement>から派生<xref:System.Windows.DependencyObject>、若干異なる経路でします。 このレベルで分割が扱う方法、<xref:System.Windows.UIElement>または<xref:System.Windows.ContentElement>点は、アプリケーションでユーザー インターフェイスで使用します。 <xref:System.Windows.UIElement> <xref:System.Windows.Media.Visual>基になる低いレベルのグラフィックス サポートを公開するクラスをそのクラスの階層構造では、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]します。 <xref:System.Windows.Media.Visual> 独立した四角形の画面領域を定義することで、レンダリングのフレームワークを提供します。 実際には、<xref:System.Windows.UIElement>大規模オブジェクト モデルをサポートする要素は、表示するために意図したものとレイアウト領域を四角形の画面領域として記述でき、コンテンツ モデルが意図的に複数開いている、異なるを許可するには要素の組み合わせ。 <xref:System.Windows.ContentElement> 派生していない<xref:System.Windows.Media.Visual>; をそのモデルでは、<xref:System.Windows.ContentElement>リーダーやビューアーが、要素を解釈し、完全な生成などの他のものによって消費は<xref:System.Windows.Media.Visual>の[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]を使用します。 特定<xref:System.Windows.UIElement>クラスは、コンテンツ ホスト: 1 つまたは複数のホスティングとレンダリングを提供する<xref:System.Windows.ContentElement>クラス (<xref:System.Windows.Controls.DocumentViewer>このようなクラスの例を示します)。 <xref:System.Windows.ContentElement> 比較的小さなオブジェクト モデルを持つ要素の基本クラスと、テキスト、情報、対処の詳細はまたはドキュメントのコンテンツ内でホストされるように使用する<xref:System.Windows.UIElement>します。  
   
 ### <a name="framework-level-and-core-level"></a>フレームワークレベルとコアレベル  
- <xref:System.Windows.UIElement> 基本クラスとして機能<xref:System.Windows.FrameworkElement>、および<xref:System.Windows.ContentElement>の基本クラスとして機能<xref:System.Windows.FrameworkContentElement>します。 この次のレベルのクラスが存在する理由は、WPF フレームワーク レベルとは異なる WPF コア レベルをサポートすることです。この区分は、PresentationCore と PresentationFramework アセンブリ間での [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] の区分にも存在します。 WPF フレームワーク レベルは、表示のためのレイアウト マネージャーの実装など、アプリケーションの基本的ニーズに対して、より完全なソリューションを提供します。 WPF コア レベルは、アセンブリの追加によるオーバーヘッドを引き起こすことなく [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の大部分を使用する方法を提供します。 これらのレベルの区別は、ほとんどの通常のアプリケーション開発シナリオでほとんど問題になりません。一般には、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] を 1 つのものと見なして、WPF フレームワーク レベルと WPF コア レベルの違いについて意識する必要はありません。 アプリケーション設計で WPF フレームワーク レベルの機能の大部分を置き換えることにした場合、たとえば開発中のソリューション全体に、独自の[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] の構成およびレイアウトが既に実装されている場合には、これらのレベルの区分に関する理解が必要となる可能性があります。  
+ <xref:System.Windows.UIElement> 基本クラスとして機能<xref:System.Windows.FrameworkElement>、および<xref:System.Windows.ContentElement>の基本クラスとして機能<xref:System.Windows.FrameworkContentElement>します。 このクラスの次のレベルの理由は、PresentationCore と PresentationFramework アセンブリ間の Api を分割する方法にも存在しているこの部門では WPF フレームワーク レベルでは、別の WPF コア レベルをサポートするためにです。 WPF フレームワーク レベルは、表示のためのレイアウト マネージャーの実装など、アプリケーションの基本的ニーズに対して、より完全なソリューションを提供します。 WPF コア レベルは、アセンブリの追加によるオーバーヘッドを引き起こすことなく [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の大部分を使用する方法を提供します。 これらの違いはレベル アプリケーション開発の最も一般的なシナリオでの問題では非常にまれと考えてください一般に、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Api 全体として WPF フレームワーク レベルと WPF のコアの違いを意識しないとレベルです。 アプリケーション設計で WPF フレームワーク レベルの機能の大部分を置き換えることにした場合、たとえば開発中のソリューション全体に、独自の[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] の構成およびレイアウトが既に実装されている場合には、これらのレベルの区分に関する理解が必要となる可能性があります。  
   
 <a name="subclassing_elements"></a>   
 ## <a name="choosing-which-element-to-derive-from"></a>派生元の要素を選択する  

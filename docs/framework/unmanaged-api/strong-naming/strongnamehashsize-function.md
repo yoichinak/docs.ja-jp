@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7e807b502e0905f9ae785203289447c71d25e04
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8093a702069e4ecd4dad761ad0a431abe81d6141
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62041022"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780420"
 ---
 # <a name="strongnamehashsize-function"></a>StrongNameHashSize 関数
 指定したハッシュ アルゴリズムを使用して、ハッシュに必須のバッファー サイズが取得されます。  
@@ -30,7 +30,7 @@ ms.locfileid: "62041022"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 BOOLEAN StrongNameHashSize (  
     [in]  ULONG   ulHashAlg,  
     [out] DWORD   *pcbSize  
@@ -51,7 +51,7 @@ BOOLEAN StrongNameHashSize (
  場合、`StrongNameHashSize`関数が正常に完了、呼び出すしていない、 [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)最後に生成されたエラーを取得します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** StrongName.h  
   

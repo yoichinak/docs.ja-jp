@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: 216de8f70e0ad6856bf5d708347a7e5f852fe4c6
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: dd2968f7ab528fa07ef0c5af85f2a7f07147a76e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591570"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755168"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Visual Basic のオブジェクトとクラス
 
@@ -28,7 +28,7 @@ Visual Basic では、各オブジェクトによって定義されます、*ク
 
 メンバーにアクセスする前に、オブジェクトを作成する必要があります。
 
-#### <a name="to-create-an-object-from-a-class"></a>クラスからオブジェクトを作成するには
+### <a name="to-create-an-object-from-a-class"></a>クラスからオブジェクトを作成するには
 
 1. オブジェクトの作成元となるクラスを決定します。
 
@@ -135,7 +135,7 @@ safetyTimer.Start()
 
 #### <a name="accessing-nonshared-members"></a>非共有メンバーへのアクセス
 
-###### <a name="to-access-a-nonshared-member-of-an-object"></a>オブジェクトの非共有メンバーにアクセスするには
+##### <a name="to-access-a-nonshared-member-of-an-object"></a>オブジェクトの非共有メンバーにアクセスするには
 
 1. オブジェクトがクラスから作成され、オブジェクト変数に割り当てられていることを確認してください。
 
@@ -151,7 +151,7 @@ safetyTimer.Start()
 
 #### <a name="accessing-shared-members"></a>共有メンバーへのアクセス
 
-###### <a name="to-access-a-shared-member-of-an-object"></a>オブジェクトの共有メンバーにアクセスするには
+##### <a name="to-access-a-shared-member-of-an-object"></a>オブジェクトの共有メンバーにアクセスするには
 
 - クラス名に続けて、"*メンバー アクセス演算子*" (`.`) とメンバー名を指定します。 オブジェクトの `Shared` メンバーは、常にクラス名から直接アクセスする必要があります。
 
@@ -204,7 +204,7 @@ End Sub
 
 次の例では、通常の <xref:System.Windows.Forms.Button> と同じように機能しますが、前景と背景の色を逆転させるメソッドも公開する、特殊な <xref:System.Windows.Forms.Button> を定義します。
 
-##### <a name="to-define-a-class-is-derived-from-an-already-existing-class"></a>既に存在するクラスから派生するクラスを定義するのには
+#### <a name="to-define-a-class-is-derived-from-an-already-existing-class"></a>既に存在するクラスから派生するクラスを定義するのには
 
 1. [Class ステートメント](../../../../visual-basic/language-reference/statements/class-statement.md)を使用して、必要なオブジェクトの作成元となるクラスを定義します。
 
@@ -239,7 +239,7 @@ End Sub
 
 派生クラスは、派生元のクラスからメンバーを継承するため、クラス階層が深くなるにつれて、クラスをより複雑にすることができます。 詳細については、「[継承の基本](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)」を参照してください。
 
-#### <a name="compiling-the-code"></a>コードのコンパイル
+### <a name="compiling-the-code"></a>コードのコンパイル
 
 コンパイラが、新しいクラスの派生元となるクラスにアクセスできることを確認します。 これは、上記の例のように名前を完全に修飾するか、名前空間を [Imports ステートメント (.NET 名前空間と型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) で識別することを意味する場合があります。 クラスが別のプロジェクト内にある場合は、そのプロジェクトへの参照の追加が必要になることがあります。 詳細については、「[プロジェクト内の参照の管理](/visualstudio/ide/managing-references-in-a-project)」を参照してください。
 

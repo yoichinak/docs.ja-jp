@@ -11,12 +11,12 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: 70914d63773c6a94ad92cf6301a8e2bc1368e7a1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d2dc80ec689f3e9fd2f36c36c3847ec4e5d1a576
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592709"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783157"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>チュートリアル: Windows API の呼び出し (Visual Basic)
 Windows API は、Windows オペレーティング システムの一部であるダイナミック リンク ライブラリ (Dll) です。 それらを使用するには、独自の同等のプロシージャを記述するのにことは困難である場合は、タスクを実行します。 たとえば、という名前の関数は、Windows`FlashWindowEx`を可能にすること、アプリケーションのタイトル バーを薄いおよび濃い網掛けを切り替える。  
@@ -32,7 +32,7 @@ Windows API は、Windows オペレーティング システムの一部であ�
 ## <a name="api-calls-using-declare"></a>使用して API 呼び出しを宣言します。  
  Windows API を呼び出すための最も一般的な方法を使用して、`Declare`ステートメント。  
   
-#### <a name="to-declare-a-dll-procedure"></a>DLL のプロシージャを宣言するには  
+### <a name="to-declare-a-dll-procedure"></a>DLL のプロシージャを宣言するには  
   
 1. を呼び出そうと関数とその引数、引数の型の名前を特定し、値だけでなく、名前とそれを含んでいる DLL の場所を返します。  
   
@@ -69,7 +69,7 @@ Windows API は、Windows オペレーティング システムの一部であ�
 #### <a name="windows-api-constants"></a>Windows API の定数  
  いくつかの引数は、定数の組み合わせです。 たとえば、`MessageBox`このチュートリアルで示すように API と呼ばれる整数の引数を受け入れる`Typ`メッセージ ボックスを表示する方法を制御します。 調べることで、これらの定数の数値の値を指定できます、 `#define` WinUser.h ファイル内のステートメント。 数値の値は、電卓を使用してそれらを追加して 10 進数に変換するために一般的に 16 進数で表示されます。 感嘆符のスタイルの定数を結合する場合など`MB_ICONEXCLAMATION`0x00000030 し、はい/スタイルなし`MB_YESNO`0x00000004, 番号を追加でき、10 進数、0x00000034 または 52 の結果を取得します。 これらの値をアプリケーションで定数として宣言し、それらを結合することをお勧め、10 進数の結果を直接使用できますを使用して、`Or`演算子。  
   
-###### <a name="to-declare-constants-for-windows-api-calls"></a>Windows API 呼び出しのための定数を宣言するには  
+##### <a name="to-declare-constants-for-windows-api-calls"></a>Windows API 呼び出しのための定数を宣言するには  
   
 1. Windows 関数の呼び出しと、ドキュメントを参照してください。 使用されている定数の名前と、これらの定数の数値を含む .h ファイルの名前を決定します。  
   
@@ -94,7 +94,7 @@ Windows API は、Windows オペレーティング システムの一部であ�
 #### <a name="data-marshaling"></a>データのマーシャ リング  
  Visual Basic では、パラメーターと、Windows API 呼び出しの戻り値のデータ型に自動的に変換しますが、使用することができます、 `MarshalAs` API が必要とするアンマネージ データ型を明示的に指定する属性。 相互運用マーシャ リングの詳細については、次を参照してください。[相互運用マーシャ リング](../../../framework/interop/interop-marshaling.md)します。  
   
-###### <a name="to-use-declare-and-marshalas-in-an-api-call"></a>API 呼び出しで宣言して MarshalAs を使用するには  
+##### <a name="to-use-declare-and-marshalas-in-an-api-call"></a>API 呼び出しで宣言して MarshalAs を使用するには  
   
 1. データの型を引数、呼び出そうと関数の名前を特定し、値を返します。  
   
@@ -111,7 +111,7 @@ Windows API は、Windows オペレーティング システムの一部であ�
   
  使用することができます`DllImport`ほとんどの Windows API を使用した呼び出しの呼び出しは、共有を参照している限り (とも呼ばれる*静的*) メソッドです。 クラスのインスタンスを必要とするメソッドを使用することはできません。 異なり`Declare`ステートメント、`DllImport`呼び出しが使用することはできません、`MarshalAs`属性。  
   
-#### <a name="to-call-a-windows-api-using-the-dllimport-attribute"></a>DllImport 属性を使用して Windows API を呼び出す  
+### <a name="to-call-a-windows-api-using-the-dllimport-attribute"></a>DllImport 属性を使用して Windows API を呼び出す  
   
 1. クリックして、新しい Windows アプリケーション プロジェクトを開く**新規**上、**ファイル** メニューのをクリックして**プロジェクト**します。 **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   

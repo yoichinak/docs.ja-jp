@@ -26,12 +26,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 829ff08fe3805f37bc6189a66a6675b3518da138
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 19988e766d0f9ec895a24dddfcd17d0854aaf8ad
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64601006"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757399"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>方法: 異なるデータ型 (Visual Basic) に同一の機能を提供するクラスを定義します。
 複数の異なるデータ型に同一の機能を提供するオブジェクトを作成するために使用できるクラスを定義できます。 これを行うには、1 つ以上の *型パラメーター* を定義内で指定します。 このようなクラスは、さまざまなデータ型を使用するオブジェクトのテンプレートとして使用できます。 この方法で定義したクラスは、 *ジェネリック クラス*と呼ばれます。  
@@ -62,7 +62,7 @@ ms.locfileid: "64601006"
   
 6. コードでは、 `itemType`に渡される可能性があるすべてのデータ型でサポートされる演算とメソッドだけを使用します。  
   
-     次のコード例は、ごく単純なリストを管理するクラスを定義しています。 このクラスは、リストを内部配列 `items`に格納します。このクラスを使用するコードでは、このリストの要素のデータ型を宣言できます。 パラメーター化されたコンストラクターを使うと、コードで `items`の上限を設定できます。既定のコンストラクターでは、この上限は 9 (合計で 10 アイテム) に設定されます。  
+     次のコード例は、ごく単純なリストを管理するクラスを定義しています。 このクラスは、リストを内部配列 `items`に格納します。このクラスを使用するコードでは、このリストの要素のデータ型を宣言できます。 使用して、パラメーター化されたコンス トラクターは、の上限を設定するコードを`items`、パラメーターなしのコンス トラクターはこれを設定し、(10 個の項目の合計) の 9 にします。  
   
      [!code-vb[VbVbalrDataTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#7)]  
   

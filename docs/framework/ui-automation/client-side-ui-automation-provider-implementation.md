@@ -6,12 +6,12 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
-ms.openlocfilehash: 9e3f0941d2fd92b8657d2d9df5b050e7793eb1d1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 02d77dfeb7a00292639131cad72cff7e079704c5
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647209"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802223"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>クライアント側 UI オートメーション プロバイダーの実装
 > [!NOTE]
@@ -23,7 +23,7 @@ ms.locfileid: "64647209"
   
  ただし、 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] や [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] に含まれているコントロールなどの比較的古いコントロールは、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を直接サポートしていません。 これらのコントロールは、代わりにクライアント プロセス内のプロバイダーによって処理され、プロセス間通信を使用して、たとえば、コントロール間でのウィンドウ メッセージを監視することで、コントロールに関する情報を取得します。 このようなクライアント側プロバイダーは、プロキシと呼ばれることがあります。  
   
- [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] 標準のプロバイダーの提供[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]Windows フォーム コントロールとします。 さらに、サーバー側プロバイダーやプロキシで処理されないコントロールでも、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] が実装されているコントロールに対しては、代替プロバイダーが [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] の部分的なサポートを提供します。 これらすべてのプロバイダーは、自動的に読み込まれ、クライアント アプリケーションから使用できるようになります。  
+ [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] 標準のプロバイダーの提供[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]Windows フォーム コントロールとします。 さらに、フォールバック プロバイダーは、部分的な[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]別のサーバー側プロバイダーから提供されない任意のコントロールをサポートまたはプロキシが、Microsoft Active Accessibility の実装。 これらすべてのプロバイダーは、自動的に読み込まれ、クライアント アプリケーションから使用できるようになります。  
   
  サポートの詳細については[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]Windows フォーム コントロールを参照してくださいと[標準コントロールの UI オートメーションのサポート](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)します。  
   

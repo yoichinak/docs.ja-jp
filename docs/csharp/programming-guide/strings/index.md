@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 668b3b927ac059acf160f5d96e8fbc614f57ddff
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 21ada083f69b0acf49490b331c5a416361a2ee84
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504002"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802311"
 ---
 # <a name="strings-c-programming-guide"></a>文字列 (C# プログラミング ガイド)
 文字列は、値がテキストの <xref:System.String> 型のオブジェクトです。 内部では、テキストは <xref:System.Char> オブジェクトの順次読み取り専用コレクションとして格納されます。 C# の文字列の末尾には null 終端文字はありません。したがって、C# の文字列には任意の数の null 文字 ('\0') を埋め込むことができます。 文字列の <xref:System.String.Length%2A> プロパティは、Unicode 文字の数ではなく、文字列に含まれている `Char` オブジェクトの数を表します。 文字列内の個別の Unicode コード ポイントにアクセスするには、<xref:System.Globalization.StringInfo> オブジェクトを使用します。  
@@ -62,10 +62,10 @@ ms.locfileid: "67504002"
 |\n|改行|0x000A|  
 |\r|キャリッジ リターン|0x000D|  
 |\t|水平タブ|0x0009|  
-|\U|Unicode エスケープ シーケンス (UTF-32)|`\U00nnnnnn` (例: `\U0001F47D` = "&#x1F47D;")|  
-|\u|Unicode エスケープ シーケンス (UTF-16)|`\unnnn` (例: `\u0041` = "A")|  
 |\v|垂直タブ|0x000B|  
-|\x|Unicode エスケープ シーケンス (可変長である点を除き "\u" に類似)|`\x0041` または `\x41` = "A"|  
+|\u|Unicode エスケープ シーケンス (UTF-16)|`\uHHHH` (範囲:0000 - FFFF; 例: `\u00E7` = "ç")|  
+|\U|Unicode エスケープ シーケンス (UTF-32)|`\U00HHHHHH` (範囲:000000 - 10FFFF; 例: `\U0001F47D` = "&#x1F47D;")|  
+|\x|可変長である点を除き "\u" に類似した Unicode エスケープ シーケンス|`\xH[H][H][H]` (範囲:0 - FFFF; 例: `\x00E7`、`\x0E7`、または `\xE7` = "ç")|  
   
 > [!WARNING]
 >  `\x` のエスケープ シーケンスを使用していて、指定している 16 進数が 4 桁未満である場合に、エスケープ シーケンスの直後の文字が有効な 16 進数 (0-9、A-F、a-f) であると、それらはエスケープ シーケンスの一部として解釈されます。 たとえば、`\xA1` はコード ポイント U+00A1 の "&#161;" を生成します。 ただし、次の文字が "A" または "a" である場合、エスケープ シーケンスは代わりに `\xA1A` であると解釈され、コード ポイント U+0A1A の "&#x0A1A;" を生成します。 そのような場合、4 桁の 16 進数すべてを指定する (例: `\x00A1`) と、誤って解釈される可能性がすべて排除されます。  

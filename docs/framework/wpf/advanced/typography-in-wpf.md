@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: eba59f81fa19ee3fe4fbb82682ca986d082e449f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 94937b2c3e6935474d337c62bfd6698441dfcc2e
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621589"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860114"
 ---
 # <a name="typography-in-wpf"></a>WPF のタイポグラフィ
 このトピックでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の主要な文字体裁の機能について説明します。 これらの機能には、テキスト レンダリングの品質とパフォーマンスの向上、[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 文字体裁のサポート、国際対応テキストの強化、フォントのサポートの強化、新しいテキスト API (アプリケーション プログラミング インターフェイス) が含まれます。  
@@ -71,16 +71,16 @@ ClearType の y 方向アンチエイリアシングを適用したテキスト
   
 <a name="New_Text_APIs"></a>   
 ## <a name="new-text-application-programming-interfaces-apis"></a>新しいテキスト API (アプリケーション プログラミング インターフェイス)  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] は、開発者がアプリケーションにテキストを含めるときに使用できるいくつかのテキスト [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] を提供します。 これらの [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] は、次の 3 つのカテゴリに分類されます。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] いくつかのテキスト、アプリケーションにテキストを含めるときに使用する開発者向けの Api を提供します。 これらの Api は、3 つのカテゴリに分類されます。  
   
-- **レイアウトとユーザー インターフェイス**:  [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] に対応した一般的なテキスト コントロールです。  
+- **レイアウトとユーザー インターフェイス**: [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] に対応した一般的なテキスト コントロールです。  
   
-- **軽量テキスト描画**:  オブジェクトにテキストを直接描画できます。  
+- **軽量テキスト描画**: オブジェクトにテキストを直接描画できます。  
   
-- **テキストの高度な書式設定**:  カスタム テキスト エンジンを実装できます。  
+- **テキストの高度な書式設定**: カスタム テキスト エンジンを実装できます。  
   
 ### <a name="layout-and-user-interface"></a>レイアウトとユーザー インターフェイス  
- 最上位レベルの機能、テキスト[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]一般的な提供[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]などのコントロール<xref:System.Windows.Controls.Label>、 <xref:System.Windows.Controls.TextBlock>、および<xref:System.Windows.Controls.TextBox>します。 これらのコントロールは、アプリケーション内に基本的な [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 要素を提供し、テキストの表示や操作を簡単に実行できるようにします。 などのコントロール<xref:System.Windows.Controls.RichTextBox>と<xref:System.Windows.Controls.PasswordBox>より高度なのメッセージまたは専用のテキスト処理を有効にします。 などのクラスと<xref:System.Windows.Documents.TextRange>、 <xref:System.Windows.Documents.TextSelection>、および<xref:System.Windows.Documents.TextPointer>便利なテキスト操作を有効にします。 これら[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]コントロールなどのプロパティを提供<xref:System.Windows.Controls.Control.FontFamily%2A>、 <xref:System.Windows.Controls.Control.FontSize%2A>、および<xref:System.Windows.Controls.Control.FontStyle%2A>テキストを表示するために使用されるフォントを制御できます。  
+ 最高レベルの機能では、テキスト Api 提供共通[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]などのコントロール<xref:System.Windows.Controls.Label>、 <xref:System.Windows.Controls.TextBlock>、および<xref:System.Windows.Controls.TextBox>します。 これらのコントロールは、アプリケーション内に基本的な [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 要素を提供し、テキストの表示や操作を簡単に実行できるようにします。 などのコントロール<xref:System.Windows.Controls.RichTextBox>と<xref:System.Windows.Controls.PasswordBox>より高度なのメッセージまたは専用のテキスト処理を有効にします。 などのクラスと<xref:System.Windows.Documents.TextRange>、 <xref:System.Windows.Documents.TextSelection>、および<xref:System.Windows.Documents.TextPointer>便利なテキスト操作を有効にします。 これら[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]コントロールなどのプロパティを提供<xref:System.Windows.Controls.Control.FontFamily%2A>、 <xref:System.Windows.Controls.Control.FontSize%2A>、および<xref:System.Windows.Controls.Control.FontStyle%2A>テキストを表示するために使用されるフォントを制御できます。  
   
 #### <a name="using-bitmap-effects-transforms-and-text-effects"></a>ビットマップ効果、変換、テキスト効果の使用  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、ビットマップ効果、変換、テキスト効果などの機能を利用して、人の目をひきつけるテキストを作成できます。 テキストに標準タイプのドロップ シャドウ効果を適用した例を次に示します。  
@@ -140,7 +140,7 @@ ClearType の y 方向アンチエイリアシングを適用したテキスト
  詳細については、<xref:System.Windows.Media.FormattedText>オブジェクトを参照してください[書式設定されたテキストの描画](drawing-formatted-text.md)します。  
   
 ### <a name="advanced-text-formatting"></a>テキストの高度な書式設定  
- テキストの高度なレベル、一番[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]を使用してカスタム テキスト レイアウトを作成する機能が提供する、<xref:System.Windows.Media.TextFormatting.TextFormatter>オブジェクトとその他の種類で、<xref:System.Windows.Media.TextFormatting>名前空間。 <xref:System.Windows.Media.TextFormatting.TextFormatter>関連クラスは、ユーザー定義による文字形式、段落のスタイルをサポートするカスタム テキスト レイアウトを実装する線の改行ルール、および他のレイアウトが国際対応テキストの機能を使用するとします。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] テキスト レイアウト サポートに関する既定の実装のオーバーライドが必要となるケースはほとんどありません。 ただし、テキストを編集するコントロールやアプリケーションを作成する場合は、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の既定の実装とは異なる実装が必要になることがあります。  
+ テキスト Api の最も高度なレベル[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]を使用してカスタム テキスト レイアウトを作成する機能が提供する、<xref:System.Windows.Media.TextFormatting.TextFormatter>オブジェクトとその他の種類で、<xref:System.Windows.Media.TextFormatting>名前空間。 <xref:System.Windows.Media.TextFormatting.TextFormatter>関連クラスは、ユーザー定義による文字形式、段落のスタイルをサポートするカスタム テキスト レイアウトを実装する線の改行ルール、および他のレイアウトが国際対応テキストの機能を使用するとします。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] テキスト レイアウト サポートに関する既定の実装のオーバーライドが必要となるケースはほとんどありません。 ただし、テキストを編集するコントロールやアプリケーションを作成する場合は、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の既定の実装とは異なる実装が必要になることがあります。  
   
  従来のテキストとは異なり[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]、<xref:System.Windows.Media.TextFormatting.TextFormatter>一連のコールバック メソッドを介してテキスト レイアウト クライアントと対話します。 クライアントは、これらのメソッドの実装を提供する必要があります、<xref:System.Windows.Media.TextFormatting.TextSource>クラス。 次の図は、クライアント アプリケーション間でテキスト レイアウトの相互作用と<xref:System.Windows.Media.TextFormatting.TextFormatter>します。  
   

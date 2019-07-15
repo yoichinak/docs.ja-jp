@@ -4,12 +4,12 @@ description: .NET Core が開発者のために .NET バージョンをまたい
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/10/2019
-ms.openlocfilehash: b58edd9ff0bd56b12b861162cc92d484a3b36c8b
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: c68a19b8b98a98bb9c64f5b9fa60b378935e6e93
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307551"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736562"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>.NET Core の破壊的変更を評価する
 
@@ -107,7 +107,7 @@ ms.locfileid: "67307551"
 
 - **✔️ 以前にクラスにコンストラクターがなかった場合に、既定の (パラメーターなしの) コンストラクターと共に、クラスにコンストラクターを追加する**
 
-   ただし、既定のコンストラクターを "*追加することなく*" 以前にコンストラクターがなかったクラスにコンストラクターを追加することは許可されていません。
+   ただし、パラメーターなしのコンストラクターを追加 "*せずに*" 以前にコンストラクターがなかったクラスにコンストラクターを追加することは許可されていません。
 
 - **✔️ メンバーを[抽象](../../csharp/language-reference/keywords/abstract.md)から[仮想](../../csharp/language-reference/keywords/virtual.md)に変更する**
 
@@ -174,7 +174,7 @@ ms.locfileid: "67307551"
 
   これで、以前の過負荷にバインドされていた既存のクライアントは互換性がなくなります。 たとえば、クラスに <xref:System.UInt32> を受け取る単一バージョンのメソッドがある場合、既存のコンシューマーは <xref:System.Int32> 値を渡すときにそのオーバーロードに正常にバインドします。 ただし、<xref:System.Int32> を受け取るオーバーロードを追加した場合、再コンパイル時または遅延バインディングの使用時に、コンパイラでは新しいオーバーロードにバインドされるようになりました。 異なる動作結果になる場合、これは破壊的変更です。
 
-- **❌ 既定のコンストラクターを追加することなく以前にコンストラクターがなかったクラスにコンストラクターを追加する**
+- **❌ パラメーターなしのコンストラクターを追加せずに、以前にコンストラクターがなかったクラスにコンストラクターを追加する**
 
 - **❌️ フィールドに[読み取り専用](../../csharp/language-reference/keywords/readonly.md)を追加する**
 

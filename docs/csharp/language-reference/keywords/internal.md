@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: aefb806b452452d4837b29b6ab11ce158ea412bc
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 9cfbea03a305dd17c07f549901bc91be0e05b792
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745422"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661170"
 ---
 # <a name="internal-c-reference"></a>internal (C# リファレンス)
 `internal` キーワードは、型と型のメンバーを示す[アクセス修飾子](../../../csharp/language-reference/keywords/access-modifiers.md)です。 
@@ -25,8 +25,8 @@ internal 型またはメンバーは、次の例のように、同じアセン�
 ```csharp  
 public class BaseClass   
 {  
-    // Only accessible within the same assembly  
-    internal static int x = 0;  
+    // Only accessible within the same assembly.
+    internal static int x = 0;
 }  
 ```  
 
@@ -57,13 +57,13 @@ class TestAccess
 {  
    static void Main()   
    {  
-      BaseClass myBase = new BaseClass();   // CS0122  
+      var myBase = new BaseClass();   // CS0122  
    }  
 }  
 ```  
   
 ## <a name="example"></a>例  
- この例では、例 1 で使用したのと同じファイルを使用し、`BaseClass` のアクセシビリティ レベルを `public` に変更します。 また、メンバー `IntM` のアクセシビリティ レベルを `internal` に変更します。 この場合、クラスのインスタンス化は可能ですが、内部メンバーへのアクセスはできません。  
+ この例では、例 1 で使用したのと同じファイルを使用し、`BaseClass` のアクセシビリティ レベルを `public` に変更します。 また、メンバー `intM` のアクセシビリティ レベルを `internal` に変更します。 この場合、クラスのインスタンス化は可能ですが、内部メンバーへのアクセスはできません。  
   
 ```csharp  
 // Assembly2.cs  
@@ -81,7 +81,7 @@ public class TestAccess
 {  
    static void Main()   
    {  
-      BaseClass myBase = new BaseClass();   // Ok.  
+      var myBase = new BaseClass();   // Ok.  
       BaseClass.intM = 444;    // CS0117  
    }  
 }  

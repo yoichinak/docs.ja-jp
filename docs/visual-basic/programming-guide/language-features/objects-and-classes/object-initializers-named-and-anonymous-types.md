@@ -10,12 +10,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: bf608ebb36a2e8f29e8429b77e023eced67273e1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 151c2f6cbb560d83ef0fcfef518bc50cec246ca2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649771"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783248"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>オブジェクト初期化子:名前付きの匿名型 (Visual Basic)
 オブジェクト初期化子を使用すると、1 つの式を使用して複雑なオブジェクトのプロパティを指定できます。 これらは、匿名型の名前付きの型のインスタンスを作成する使用できます。  
@@ -32,7 +32,7 @@ ms.locfileid: "64649771"
  要件および 2 つの宣言の結果は同じです。 `namedCust`、`Customer`を持つクラス、`Name`プロパティは既に存在する必要があります、および宣言は、そのクラスのインスタンスを作成します。 `anonymousCust`、コンパイラは、1 つのプロパティと呼ばれる文字列が含まれる新しいクラスを定義します。 `Name`、し、そのクラスの新しいインスタンスを作成します。  
   
 ## <a name="named-types"></a>名前付きの型  
- オブジェクト初期化子は、型のコンス トラクターを呼び出すし、単一のステートメントでの一部またはすべてのプロパティの値を設定する簡単な方法を提供します。 コンパイラは、ステートメントの適切なコンス トラクターを呼び出します。 既定のコンス トラクターの引数が何も表示されない場合、または 1 つまたは複数の引数が送信される場合にパラメーター化されたコンス トラクター。 その後、指定したプロパティは、初期化子リストに記載された順序で初期化されます。  
+ オブジェクト初期化子は、型のコンス トラクターを呼び出すし、単一のステートメントでの一部またはすべてのプロパティの値を設定する簡単な方法を提供します。 コンパイラは、ステートメントの適切なコンス トラクターを呼び出します。 パラメーターなしのコンス トラクターの引数が何も表示されない場合、または 1 つまたは複数の引数が送信される場合にパラメーター化されたコンス トラクター。 その後、指定したプロパティは、初期化子リストに記載された順序で初期化されます。  
   
  各初期化子リストの初期化は、クラスのメンバーに、初期値の割り当てで構成されます。 クラスが定義されている場合、名前とメンバーのデータ型が決定されます。 次の例では、`Customer`クラスが存在する必要があります、およびがメンバーという名前の必要があります`Name`と`City`文字列値を受け入れることができます。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "64649771"
   
  [!code-vb[VbVbalrObjectInit#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#4)]  
   
- これらの各宣言には、次の例は、作成に相当する`Customer`既定のコンス トラクターを使用して、オブジェクトし、の初期値を指定し、`Name`と`City`プロパティを使用して、 `With`ステートメント。  
+ これらの各宣言には、次の例は、作成に相当する`Customer`パラメーターなしのコンス トラクターを使用して、オブジェクトし、の初期値を指定し、`Name`と`City`プロパティを使用して、 `With`ステートメント。  
   
  [!code-vb[VbVbalrObjectInit#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#5)]  
   

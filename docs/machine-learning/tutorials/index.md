@@ -2,13 +2,13 @@
 title: ML.NET のチュートリアル
 description: ML.NET のチュートリアルでは、カスタム AI ソリューションを構築し、これを .NET アプリケーションに統合する方法について説明しています。
 ms.custom: seodec18
-ms.date: 04/05/2019
-ms.openlocfilehash: 4530e62a0ac8991f6ece37a0ad9909a4c4d08fe7
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.date: 07/08/2019
+ms.openlocfilehash: 16311a892f9b1da5d6de10f52bec2ad9410966b7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401657"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777970"
 ---
 # <a name="mlnet-tutorials"></a>ML.NET のチュートリアル 
 
@@ -20,6 +20,7 @@ ms.locfileid: "67401657"
 - [アヤメのクラスタ リング](iris-clustering.md): ML.NET を使用して**クラスタ リング**を適用する方法を示します。
 - [推奨](movie-recommendation.md): 以前のユーザー評価に基づき映画の**推奨**を生成します
 - [画像分類](image-classification.md): 既存の TensorFlow モデルを再トレーニングし、ML.NET を使ってカスタム画像分類器を作成する方法を示します。
+- [異常検出](sales-anomaly-detection.md): 製品売上データの解析用に異常検出アプリケーションを構築する方法を示します。
 
 ## <a name="next-steps"></a>次の手順
 

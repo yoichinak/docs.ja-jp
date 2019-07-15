@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c9c46793a0f66894649796d960547848ff5ebf8c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a7a8bd1a9823a621f3a63c6877da9454489b48fd
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804384"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67858441"
 ---
 ### <a name="gridviews-with-allowcustompaging-set-to-true-may-fire-the-pageindexchanging-event-when-leaving-the-final-page-of-the-view"></a>AllowCustomPaging が true に設定された GridView では、ビューの最終ページから他に移動するときに、PageIndexChanging イベントが発生する場合がある
 
@@ -16,3 +16,4 @@ ms.locfileid: "59804384"
 |Version|4.5|
 |型|ランタイム|
 |影響を受ける API|<ul><li><xref:System.Web.UI.WebControls.GridView.AllowCustomPaging?displayProperty=nameWithType></li></ul>|
+

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7238edb35e7fd69c0161adbc3b80b122575bbf75
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: f13a07be13294cc408cd381bef6eec1f9095365f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690313"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742466"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>チュートリアル: 部分信頼シナリオにおけるコード出力
 リフレクション出力は、完全信頼または部分信頼において同じ API セットを使用しますが、部分的に信頼されるコードでは実行する機能によって特定のアクセス許可が必要になります。 リフレクション出力には、匿名でホストされる動的メソッドという機能があります。この機能は、透過的セキュリティ アセンブリによって部分信頼で使用されます。  
@@ -57,7 +57,7 @@ ms.locfileid: "66690313"
   
  次の手順では、部分信頼でコードを実行するサンドボックス化されたアプリケーション ドメインを作成し、出力されるコードが、パブリック型のパブリック メンバーにのみアクセスできるというシナリオをテストします。 後続の手順では、<xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> を追加する方法を説明し、出力されるコードが、同等以下のアクセス許可を付与されたアセンブリ内にある非パブリックな型とメンバーにアクセスできるというシナリオをテストします。  
   
-##### <a name="to-create-an-application-domain-with-partial-trust"></a>部分信頼でアプリケーション ドメインを作成するには  
+#### <a name="to-create-an-application-domain-with-partial-trust"></a>部分信頼でアプリケーション ドメインを作成するには  
   
 1. サンドボックス化されたアプリケーション ドメイン内のアセンブリに付与するアクセス許可セットを作成します。 ここでは、インターネット ゾーンのアクセス許可セットを使用します。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66690313"
 > [!NOTE]
 >  特権の昇格を回避するため、匿名でホストされる動的メソッドの作成時にはアセンブリ出力の履歴情報が含まれます。 メソッドの呼び出し時に履歴情報がチェックされるため、 完全に信頼されたコードから呼び出された、匿名でホストされる動的メソッドは、依然として出力アセンブリの信頼レベルに制限されます。  
   
-##### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>RMA を設定した部分信頼でアプリケーション ドメインを作成するには  
+#### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>RMA を設定した部分信頼でアプリケーション ドメインを作成するには  
   
 1. <xref:System.Security.Permissions.ReflectionPermission> (RMA) フラグを指定した新しい <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> オブジェクトを作成し、<xref:System.Security.PermissionSet.SetPermission%2A?displayProperty=nameWithType> メソッドを使用して、許可セットにアクセス許可を追加します。  
   

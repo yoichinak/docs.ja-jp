@@ -8,73 +8,77 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a1243ad856bc5f8cc104c9f2e08fce515a849d8
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: d8af0f32c676f4438334f7c64b771e237db90dd3
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457059"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663855"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework で互換性のために残されている型
+
 <a name="introduction"></a>この記事の表には、.NET Framework 4.5 および .NET Framework 4.6 で互換性のために残されている型がアセンブリ別にまとめられています。 各アセンブリで互換性のために残されている型と推奨される代替型の一覧を表示するには、以下のリンクを使用してください。 これらの型は廃止されているため、そのメンバーもすべて廃止されます。 .NET Framework クラス ライブラリで互換性のために残されているその他のメンバーの一覧については、[互換性のために残されているメンバー](obsolete-members.md)に関する記事をご覧ください。
 
 - [互換性のために残されているシステム アセンブリの型](#obsolete_types_in_system_assemblies)
 
-    - [mscorlib.dll](#mscorlib)
+  - [mscorlib.dll](#mscorlib)
 
-    - [System.Core.dll](#Core)
+  - [System.Core.dll](#Core)
 
-    - [System.Data.dll](#data)
+  - [System.Data.dll](#data)
 
-    - [System.Data.OracleClient.dll](#oracleclient)
+  - [System.Data.OracleClient.dll](#oracleclient)
 
-    - [System.Design.dll](#design)
+  - [System.Design.dll](#design)
 
-    - [System.dll](#system)
+  - [System.dll](#system)
 
-    - [System.EnterpriseServices.dll](#enterpriseservices)
+  - [System.EnterpriseServices.dll](#enterpriseservices)
 
-    - [System.Net.dll](#net)
+  - [System.Net.dll](#net)
 
-    - [System.ServiceModel.dll](#servicemodel)
+  - [System.ServiceModel.dll](#servicemodel)
 
-    - [System.Web.dll](#web)
+  - [System.Web.dll](#web)
 
-    - [System.Web.Mobile.dll](#mobile)
+  - [System.Web.Mobile.dll](#mobile)
 
-    - [System.Workflow.Activities.dll](#workflow_activities)
+  - [System.Workflow.Activities.dll](#workflow_activities)
 
-    - [System.Workflow.ComponentModel.dll](#workflow_componentmodel)
+  - [System.Workflow.ComponentModel.dll](#workflow_componentmodel)
 
-    - [System.Workflow.Runtime.dll](#workflow_runtime)
+  - [System.Workflow.Runtime.dll](#workflow_runtime)
 
-    - [System.WorkflowServices.dll](#workflowservices)
+  - [System.WorkflowServices.dll](#workflowservices)
 
-    - [System.Xaml.dll](#xaml)
+  - [System.Xaml.dll](#xaml)
 
-    - [System.Xml.dll](#xml)
+  - [System.Xml.dll](#xml)
 
-    - [WindowsBase.dll](#WindowsBase)
+  - [WindowsBase.dll](#WindowsBase)
 
 - [互換性のために残されている Microsoft アセンブリの型](#obsolete_types_in_microsoft_assemblies)
 
-    - [IEHost.dll and IEExec.exe](#IEHost)
+  - [IEHost.dll and IEExec.exe](#IEHost)
 
-    - [Microsoft.Build.Engine.dll](#Engine)
+  - [Microsoft.Build.Engine.dll](#Engine)
 
-    - [Microsoft.JScript.dll](#jscript)
+  - [Microsoft.JScript.dll](#jscript)
 
-    - [Microsoft.VisualBasic.Compatibility.dll](#VBCompat)
+  - [Microsoft.VisualBasic.Compatibility.dll](#VBCompat)
 
-    - [Microsoft.VisualBasic.Compatibility.Data.dll](#VBCompatData)
+  - [Microsoft.VisualBasic.Compatibility.Data.dll](#VBCompatData)
 
-    - [Microsoft.VisualC.dll](#visualc)
+  - [Microsoft.VisualC.dll](#visualc)
 
 <a name="obsolete_types_in_system_assemblies"></a>
+
 ## <a name="obsolete-types-in-system-assemblies"></a>互換性のために残されているシステム アセンブリの型
- 次の表に、システム アセンブリで、互換性のために残されていることが公表されている型を示します。 これらのアセンブリは、.NET Framework を対象とする汎用アプリケーションの開発で使用されます。
+
+次の表に、システム アセンブリで、互換性のために残されていることが公表されている型を示します。 これらのアセンブリは、.NET Framework を対象とする汎用アプリケーションの開発で使用されます。
 
 <a name="mscorlib"></a>
+
 ### <a name="assembly-mscorlibdll"></a>アセンブリ: mscorlib.dll
 
 |型|メッセージ|
@@ -137,18 +141,20 @@ ms.locfileid: "66457059"
 |<xref:System.Security.Policy.PermissionRequestEvidence?displayProperty=nameWithType>|アセンブリ レベルの宣言セキュリティは互換性のために残されていますが、既定では、CLR によって強制されることはなくなりました。|
 |<xref:System.Security.Policy.UnionCodeGroup?displayProperty=nameWithType>|この型は互換性のために残されていますが、.NET Framework の将来のリリースでは削除されます。|
 
- [ページのトップへ](#introduction)
+[ページのトップへ](#introduction)
 
 <a name="Core"></a>
+
 ### <a name="assembly-systemcoredll"></a>アセンブリ:System.Core.dll
 
 |型|メッセージ|
 |----------|-------------|
 |<xref:System.Runtime.CompilerServices.ExecutionScope?displayProperty=nameWithType>|この型を使用すると、コンパイラ エラーが発生します。<br /><br /> この型は使用しないでください。|
 
- [ページのトップへ](#introduction)
+[ページのトップへ](#introduction)
 
 <a name="data"></a>
+
 ### <a name="assembly-systemdatadll"></a>アセンブリ:System.Data.dll
 
 |型|メッセージ|
@@ -158,9 +164,10 @@ ms.locfileid: "66457059"
 |<xref:System.Data.TypedDataSetGenerator?displayProperty=nameWithType>|<xref:System.Data.TypedDataSetGenerator> クラスは、将来のリリースでは削除されます。 System.Design.dll の <xref:System.Data.Design.TypedDataSetGenerator?displayProperty=nameWithType> を使用してください。|
 |<xref:System.Xml.XmlDataDocument?displayProperty=nameWithType>|<xref:System.Xml.XmlDataDocument> クラスは、将来のリリースでは削除されます。|
 
- [ページのトップへ](#introduction)
+[ページのトップへ](#introduction)
 
 <a name="oracleclient"></a>
+
 ### <a name="assembly-systemdataoracleclientdll"></a>アセンブリ:System.Data.OracleClient.dll
 
 |型|メッセージ|
@@ -174,9 +181,10 @@ ms.locfileid: "66457059"
 |<xref:System.Data.OracleClient.OraclePermission?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermission> の使用は非推奨とされました。|
 |<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType> の使用は非推奨とされました。|
 
- [ページのトップへ](#introduction)
+[ページのトップへ](#introduction)
 
 <a name="design"></a>
+
 ### <a name="assembly-systemdesigndll"></a>アセンブリ:System.Design.dll
 
 |型|メッセージ|
@@ -196,9 +204,10 @@ ms.locfileid: "66457059"
 |<xref:System.Web.UI.Design.WebControls.CalendarAutoFormatDialog?displayProperty=nameWithType>|[オートフォーマット] ダイアログ ボックスはデザイナー ホストによって起動されるので、この型の使用は推奨されていません。 使用できる [オートフォーマット] の一覧は、<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> プロパティの <xref:System.Web.UI.Design.ControlDesigner.AutoFormats%2A?displayProperty=nameWithType> に公開されています。|
 |<xref:System.Web.UI.Design.WebControls.PanelDesigner?displayProperty=nameWithType>|別の方法として、コンテンツの編集に <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner?displayProperty=nameWithType> が使用されるので、<xref:System.Web.UI.Design.EditableDesignerRegion?displayProperty=nameWithType> を使用することをお勧めします。 デザイナーの各領域を使用すると、編集する対象のコンテンツの制御を強化できます。|
 
- [ページのトップへ](#introduction)
+[ページのトップへ](#introduction)
 
 <a name="system"></a>
+
 ### <a name="assembly-systemdll"></a>アセンブリ:System.dll
 
 |型|メッセージ|
@@ -211,18 +220,20 @@ ms.locfileid: "66457059"
 |<xref:System.Net.GlobalProxySelection?displayProperty=nameWithType>|このクラスの使用は非推奨とされました。 グローバルな既定のプロキシにアクセスして設定するには、代わりに、<xref:System.Net.WebRequest.DefaultWebProxy%2A?displayProperty=nameWithType> を使用してください。 <xref:System.Net.GlobalProxySelection.GetEmptyWebProxy%2A?displayProperty=nameWithType> の代わりに、'null' を使用してください。|
 |<xref:System.Net.Sockets.SocketClientAccessPolicyProtocol?displayProperty=nameWithType>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> この型を使用すると、コンパイラ エラーが発生します。<br /><br /> この API は、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。|
 
- [ページのトップへ](#introduction)
+[ページのトップへ](#introduction)
 
 <a name="enterpriseservices"></a>
+
 ### <a name="assembly-systementerpriseservicesdll"></a>アセンブリ:System.EnterpriseServices.dll
 
 |型|メッセージ|
 |----------|-------------|
 |<xref:System.EnterpriseServices.RegistrationHelperTx?displayProperty=nameWithType>|<xref:System.EnterpriseServices.RegistrationHelperTx> クラスの使用は非推奨とされました。|
 
- [ページのトップへ](#introduction)
+[ページのトップへ](#introduction)
 
 <a name="net"></a>
+
 ### <a name="assembly-systemnetdll"></a>アセンブリ:System.Net.dll
 
 |型|メッセージ|
@@ -237,9 +248,10 @@ ms.locfileid: "66457059"
 |<xref:System.Net.Sockets.UdpAnySourceMulticastClient?displayProperty=nameWithType>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> この型を使用すると、コンパイラ エラーが発生します。<br /><br /> この API は、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。|
 |<xref:System.Net.Sockets.UdpSingleSourceMulticastClient?displayProperty=nameWithType>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> この型を使用すると、コンパイラ エラーが発生します。<br /><br /> この API は、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。|
 
- [ページのトップへ](#introduction)
+[ページのトップへ](#introduction)
 
 <a name="servicemodel"></a>
+
 ### <a name="assembly-systemservicemodeldll"></a>アセンブリ:System.ServiceModel.dll
 
 |型|メッセージ|
@@ -253,9 +265,10 @@ ms.locfileid: "66457059"
 |<xref:System.ServiceModel.Configuration.PeerTransportElement?displayProperty=nameWithType>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> ピア チャネルの機能は互換性のために残されていますが、今後削除される予定です。|
 |<xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService?displayProperty=nameWithType>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> ピア チャネルの機能は互換性のために残されていますが、今後削除される予定です。|
 
- [ページのトップへ](#introduction)
+[ページのトップへ](#introduction)
 
 <a name="web"></a>
+
 ### <a name="assembly-systemwebdll"></a>アセンブリ:System.Web.dll
 
 |型|メッセージ|
@@ -274,9 +287,10 @@ ms.locfileid: "66457059"
 |<xref:System.Web.Security.PassportPrincipal?displayProperty=nameWithType>|この型は互換性のために残されています。 パスポート認証製品はサポート対象から除外され、[Microsoft アカウント](https://go.microsoft.com/fwlink/?LinkId=733413)に置き換えられました。|
 |<xref:System.Web.UI.ObjectConverter?displayProperty=nameWithType>|別の方法として、<xref:System.Convert?displayProperty=nameWithType> および <xref:System.String.Format%2A?displayProperty=nameWithType> を使用することをお勧めします。|
 
- [ページのトップへ](#introduction)
+[ページのトップへ](#introduction)
 
 <a name="mobile"></a>
+
 ### <a name="assembly-systemwebmobiledll"></a>アセンブリ:System.Data.Entity.dll
 
 |型|メッセージ|
@@ -474,9 +488,10 @@ ms.locfileid: "66457059"
 |<xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlValidationSummaryAdapter?displayProperty=nameWithType>|System.Web.Mobile.dll アセンブリの使用は非推奨とされました。今後は使用しないでください。 ASP.NET モバイル アプリケーションを開発する方法については、[モバイル向け ASP.NET](https://go.microsoft.com/fwlink/?LinkId=157231) に関するページをご覧ください。|
 |<xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlValidatorAdapter?displayProperty=nameWithType>|System.Web.Mobile.dll アセンブリの使用は非推奨とされました。今後は使用しないでください。 ASP.NET モバイル アプリケーションを開発する方法については、[モバイル向け ASP.NET](https://go.microsoft.com/fwlink/?LinkId=157231) に関するページをご覧ください。|
 
- [ページのトップへ](#introduction)
+[ページのトップへ](#introduction)
 
 <a name="workflow_activities"></a>
+
 ### <a name="assembly-systemworkflowactivitiesdll"></a>アセンブリ:System.Workflow.Activities.dll
 
 |型|メッセージ|
@@ -487,9 +502,10 @@ ms.locfileid: "66457059"
 |<xref:System.Workflow.Activities.Rules.RuleConditionReference?displayProperty=nameWithType>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> System.Workflow.\* 型の使用は非推奨とされます。 代わりに、<xref:System.Activities>.\* の新しい型を使用してください。|
 |<xref:System.Workflow.Activities.Rules.RuleSetReference?displayProperty=nameWithType>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> System.Workflow.\* 型の使用は非推奨とされます。 代わりに、<xref:System.Activities>.\* の新しい型を使用してください。|
 
- [ページのトップへ](#introduction)
+[ページのトップへ](#introduction)
 
 <a name="workflow_componentmodel"></a>
+
 ### <a name="assembly-systemworkflowcomponentmodeldll"></a>アセンブリ:System.Workflow.ComponentModel.dll
 
 |型|メッセージ|
@@ -505,9 +521,10 @@ ms.locfileid: "66457059"
 |<xref:System.Workflow.ComponentModel.Serialization.CompositeActivityMarkupSerializer?displayProperty=nameWithType>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> System.Workflow.\* 型の使用は非推奨とされます。 代わりに、<xref:System.Activities>.\* の新しい型を使用してください。|
 |<xref:System.Workflow.ComponentModel.Serialization.DependencyObjectCodeDomSerializer?displayProperty=nameWithType>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> System.Workflow.\* 型の使用は非推奨とされます。 代わりに、<xref:System.Activities>.\* の新しい型を使用してください。|
 
- [ページのトップへ](#introduction)
+[ページのトップへ](#introduction)
 
 <a name="workflow_runtime"></a>
+
 ### <a name="assembly-systemworkflowruntimedll"></a>アセンブリ:System.Workflow.Runtime.dll
 
 |型|メッセージ|
@@ -520,9 +537,10 @@ ms.locfileid: "66457059"
 |<xref:System.Workflow.Runtime.Hosting> を除く<xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback> 名前空間のすべての型|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> System.Workflow.\* 型の使用は非推奨とされます。 代わりに、<xref:System.Activities>.\* の新しい型を使用してください。|
 |<xref:System.Workflow.Runtime.Tracking> 名前空間のすべての型|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> System.Workflow.\* 型の使用は非推奨とされます。 代わりに、<xref:System.Activities>.\* の新しい型を使用してください。|
 
- [ページのトップへ](#introduction)
+[ページのトップへ](#introduction)
 
 <a name="workflowservices"></a>
+
 ### <a name="assembly-systemworkflowservicesdll"></a>アセンブリ:System.WorkflowServices.dll
 
 |型|メッセージ|
@@ -549,18 +567,20 @@ ms.locfileid: "66457059"
 |<xref:System.Workflow.Activities?displayProperty=nameWithType> 名前空間のすべての型|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> WF 3 の型は非推奨とされます。 代わりに、<xref:System.Activities>.\* の新しい WF 4 型を使用してください。|
 |<xref:System.Workflow.Runtime.Hosting.ChannelManagerService?displayProperty=nameWithType>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> WF 3 の型は非推奨とされます。 代わりに、<xref:System.Activities>.\* の新しい WF 4 型を使用してください。|
 
- [ページのトップへ](#introduction)
+[ページのトップへ](#introduction)
 
 <a name="xaml"></a>
+
 ### <a name="assembly-systemxamldll"></a>アセンブリ:System.Xaml.dll
 
 |型|メッセージ|
 |----------|-------------|
 |<xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute?displayProperty=nameWithType>|これは、XAML パーサーでは使用されなくなりました。 <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=nameWithType> を参照してください。|
 
- [ページのトップへ](#introduction)
+[ページのトップへ](#introduction)
 
 <a name="xml"></a>
+
 ### <a name="assembly-systemxmldll"></a>アセンブリ:System.Xml.dll
 
 |型|メッセージ|
@@ -571,28 +591,34 @@ ms.locfileid: "66457059"
 |<xref:System.Xml.XmlXapResolver?displayProperty=nameWithType>|この型を使用すると、コンパイラ エラーが発生します。 この API は、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。|
 |<xref:System.Xml.Xsl.XslTransform?displayProperty=nameWithType>|このクラスの使用は非推奨とされました。 代わりに、<xref:System.Xml.Xsl.XslCompiledTransform?displayProperty=nameWithType> を使用してください。|
 
- [ページのトップへ](#introduction)
+[ページのトップへ](#introduction)
 
 <a name="WindowsBase"></a>
+
 ### <a name="assembly-windowsbasedll"></a>アセンブリ:WindowsBase.dll
 
 |型|メッセージ|
 |----------|-------------|
 |<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType>|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType> の使用は非推奨とされました。 このインターフェイスは、使用されなくなりました。|
 
- [ページのトップへ](#introduction)
+[ページのトップへ](#introduction)
 
 <a name="obsolete_types_in_microsoft_assemblies"></a>
+
 ## <a name="obsolete-types-in-microsoft-assemblies"></a>互換性のために残されている Microsoft アセンブリの型
- 以下のセクションで、互換性のために残されている Microsoft アセンブリの型を示します。 これらのアセンブリは、個別の言語 (たとえば、Microsoft.JScript.dll や Microsoft.VisualC.dll) を対象とした特殊な目的のアセンブリです。
+
+以下のセクションで、互換性のために残されている Microsoft アセンブリの型を示します。 これらのアセンブリは、個別の言語 (たとえば、Microsoft.JScript.dll や Microsoft.VisualC.dll) を対象とした特殊な目的のアセンブリです。
 
 <a name="IEHost"></a>
-### <a name="assembly-iehostdll-and-ieexecexe"></a>アセンブリ:IEHost.dll and IEExec.exe
- IEHost.dll および IEExec.exe アセンブリは .NET Framework から削除されています。 そのすべての型およびメンバーは廃止され、.NET Framework 4 以降はサポートされていません。 これらのアセンブリは Internet Explorer で Windows フォーム コントロールをホストし、実行可能ファイルを実行するために使用されていました。 代替手段としては、ClickOnce、XAML ブラウザー アプリケーション (XBAP)、および Microsoft Silverlight をお勧めします。
 
- [ページのトップへ](#introduction)
+### <a name="assembly-iehostdll-and-ieexecexe"></a>アセンブリ:IEHost.dll and IEExec.exe
+
+IEHost.dll および IEExec.exe アセンブリは .NET Framework から削除されています。 そのすべての型およびメンバーは廃止され、.NET Framework 4 以降はサポートされていません。 これらのアセンブリは Internet Explorer で Windows フォーム コントロールをホストし、実行可能ファイルを実行するために使用されていました。 代替手段としては、ClickOnce、XAML ブラウザー アプリケーション (XBAP)、および Microsoft Silverlight をお勧めします。
+
+[ページのトップへ](#introduction)
 
 <a name="Engine"></a>
+
 ### <a name="assembly-microsoftbuildenginedll"></a>アセンブリ:Microsoft.Build.Engine.dll
 
 |型|メッセージ|
@@ -600,9 +626,10 @@ ms.locfileid: "66457059"
 |<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|このクラスの使用は非推奨とされました。 代わりに、*Microsoft.Build* アセンブリの <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType> を使用してください。|
 |<xref:Microsoft.Build.BuildEngine.Project?displayProperty=nameWithType>|このクラスの使用は非推奨とされました。 代わりに、*Microsoft.Build* アセンブリの <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType> を使用してください。|
 
- [ページのトップへ](#introduction)
+[ページのトップへ](#introduction)
 
 <a name="jscript"></a>
+
 ### <a name="assembly-microsoftjscriptdll"></a>アセンブリ:Microsoft.JScript.dll
 
 |型|メッセージ|
@@ -626,13 +653,14 @@ ms.locfileid: "66457059"
 |<xref:Microsoft.JScript.Vsa.ResInfo?displayProperty=nameWithType>|Visual Studio 2005 で、この型は非推奨となりました。この機能に代わるものはありません。 詳細については、<xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType> のドキュメントを参照してください。|
 |<xref:Microsoft.JScript.Vsa.VsaEngine?displayProperty=nameWithType>|Visual Studio 2005 で、この型は非推奨となりました。この機能に代わるものはありません。 詳細については、<xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType> のドキュメントを参照してください。|
 
- [ページのトップへ](#introduction)
+[ページのトップへ](#introduction)
 
 <a name="VBCompat"></a>
+
 ### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>アセンブリ:Microsoft.VisualBasic.Compatibility.dll
 
 Visual Basic 6 から移行する方法については、「[Visual Basic 6.0 リソース センター](https://docs.microsoft.com/previous-versions/visualstudio/visual-basic-6/visual-basic-6.0-documentation)」を参照してください。
-  
+
 |型|メッセージ|
 |----------|-------------|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray?displayProperty=nameWithType>|このメンバーは使用されなくなりました。|
@@ -703,9 +731,10 @@ Visual Basic 6 から移行する方法については、「[Visual Basic 6.0 �
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.WebItemUnexpectedErrorReadingTemplateFile?displayProperty=nameWithType>|このメンバーは使用されなくなりました。|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.ZOrderConstants?displayProperty=nameWithType>|このメンバーは使用されなくなりました。|
 
- [ページのトップへ](#introduction)
+[ページのトップへ](#introduction)
 
 <a name="VBCompatData"></a>
+
 ### <a name="assembly-microsoftvisualbasiccompatibilitydatadll"></a>アセンブリ:Microsoft.VisualBasic.Compatibility.Data.dll
 
 |型|メッセージ|
@@ -760,9 +789,10 @@ Visual Basic 6 から移行する方法については、「[Visual Basic 6.0 �
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.UNAME?displayProperty=nameWithType>|このメンバーは使用されなくなりました。|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.UpdateMode?displayProperty=nameWithType>|このメンバーは使用されなくなりました。|
 
- [ページのトップへ](#introduction)
+[ページのトップへ](#introduction)
 
 <a name="visualc"></a>
+
 ### <a name="assembly-microsoftvisualcdll"></a>アセンブリ:Microsoft.VisualC.dll
 
 |型|メッセージ|

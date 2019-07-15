@@ -9,7 +9,5 @@
       href: how-to-raise-base-class-events-in-derived-classes.md
     - name: '方法: インターフェイス イベントを実装する'
       href: how-to-implement-interface-events.md
-    - name: '方法: ディクショナリを使用してイベント インスタンスを格納する'
-      href: how-to-use-a-dictionary-to-store-event-instances.md
     - name: '方法: カスタム イベント アクセサーを実装する'
       href: how-to-implement-custom-event-accessors.md

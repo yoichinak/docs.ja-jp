@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6933aa5ee253f78806aba401749256934f490126
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: cb45fc253e24c9770436432d2734ba8fce249453
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833588"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662362"
 ---
 # <a name="packaging-an-assembly-for-com"></a>COM 用のアセンブリのパッケージ化
 
@@ -61,7 +61,7 @@ COM 開発者がアプリケーションに組み込むときに役立つ、マ�
 
   どの機構を選択した場合でも、提供するアセンブリ内で定義されたパブリック型だけが、生成されるタイプ ライブラリに含まれます。
 
-  タイプ ライブラリは、個別のファイルとしてパッケージ化することも、.NET ベースのアプリケーションに Win32 リソースとして埋め込むこともできます。 Microsoft Visual Basic 6.0 ではこの作業は自動的に実行されますが、[!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] を使用する場合は、手動でタイプ ライブラリを埋め込む必要があります。 手順については、「[方法:タイプ ライブラリを Win32 リソースとして .NET ベースのアプリケーションに埋め込む](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))」を参照してください。
+手順については、「[方法:タイプ ライブラリを Win32 リソースとして .NET ベースのアプリケーションに埋め込む](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))」を参照してください。
 
 <a name="cpconpackagingassemblyforcomanchor1"></a>
 
