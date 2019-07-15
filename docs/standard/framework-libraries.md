@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: 1e825efcb2a352c823391fb0dad3d566189da001
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 494ac194fe8dc9554c6e0d1d87ba2ed613d1d16b
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425536"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663227"
 ---
 # <a name="framework-libraries"></a>フレームワーク ライブラリ
 
@@ -30,8 +30,8 @@ BCL は最も基本的な型およびユーティリティの機能を提供し�
 * <xref:System.Object?displayProperty=nameWithType> ([object](../csharp/language-reference/keywords/object.md)): CLR 型システムの最も基本の基底クラス。 型階層のルートです。
 * <xref:System.Int16?displayProperty=nameWithType> ([short](../csharp/language-reference/builtin-types/integral-numeric-types.md)): 16 ビットの符号付き整数型。 符号なしの <xref:System.UInt16> も存在します。
 * <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/builtin-types/integral-numeric-types.md)): 32 ビットの符号付き整数型。 符号なしの [UInt32](../csharp/language-reference/builtin-types/integral-numeric-types.md) も存在します。
-* <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/keywords/float.md)): 32 ビット浮動小数点型。
-* <xref:System.Decimal?displayProperty=nameWithType> ([decimal](../csharp/language-reference/keywords/decimal.md)): 128 ビットの 10 進数型。
+* <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/builtin-types/floating-point-numeric-types.md)): 32 ビット浮動小数点型。
+* <xref:System.Decimal?displayProperty=nameWithType> ([decimal](../csharp/language-reference/builtin-types/floating-point-numeric-types.md)): 128 ビットの 10 進数型。
 * <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/builtin-types/integral-numeric-types.md)): メモリのバイトを表す符号なし 8 ビット整数。
 * <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/keywords/bool.md)): `true` または `false` を表すブール型。
 * <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/keywords/char.md)): Unicode 文字を表す 16 ビットの数値型。

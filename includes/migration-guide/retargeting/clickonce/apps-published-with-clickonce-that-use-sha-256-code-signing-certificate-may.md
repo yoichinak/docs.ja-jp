@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: bc56a3437e16e5d2c9679847bf3a3035b9e34286
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd4e387f798b3f93f3eabccb5357399fbe5a4fc1
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "66379804"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804496"
 ---
 ### <a name="apps-published-with-clickonce-that-use-a-sha-256-code-signing-certificate-may-fail-on-windows-2003"></a>SHA-256 コード署名証明書を使用する ClickOnce で発行されたアプリケーションは、Windows 2003 では失敗することがある
 
@@ -15,3 +15,4 @@ ms.locfileid: "66379804"
 |スコープ|エッジ|
 |Version|4.5|
 |型|再ターゲット中|
+

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 01c0689bbfb102f8f4d9455f9d258e8ea5515d9e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2413e1997b6e729b9d5889677e25254aaa24afea
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235021"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859338"
 ---
 ### <a name="incorrect-implementation-of-memberdescriptorequals"></a>MemberDescriptor.Equals の不適切な実装
 
@@ -16,3 +16,4 @@ ms.locfileid: "59235021"
 |Version|4.6.2|
 |型|再ターゲット中|
 |影響を受ける API|<ul><li><xref:System.ComponentModel.MemberDescriptor.Equals(System.Object)?displayProperty=nameWithType></li></ul>|
+

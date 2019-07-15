@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 85e7f10643c57837cf0b66613825241db94c0065
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 5171b9b9878331069e354eeb17ad57ca9bd594a8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423880"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773665"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>方法: イベントベースの非同期パターンをサポートするコンポーネントを実装する
 顕著な遅延が発生する可能性がある操作を伴うクラスを作成する場合は、[イベント ベースの非同期パターン](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)を実装することによって、非同期機能を与えることを検討します。  
@@ -53,14 +53,14 @@ ms.locfileid: "66423880"
 ## <a name="creating-the-component"></a>コンポーネントの作成  
  最初に、イベント ベースの非同期パターンを実装するコンポーネントを作成します。  
   
-#### <a name="to-create-the-component"></a>コンポーネントを作成するには  
+### <a name="to-create-the-component"></a>コンポーネントを作成するには  
   
 - <xref:System.ComponentModel.Component> を継承する `PrimeNumberCalculator` というクラスを作成します。  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>パブリックの非同期イベントとデリゲートの定義  
  コンポーネントは、イベントを使ってクライアントと通信します。 _MethodName_**Completed** イベントは非同期タスクの完了をクライアントに通知し、_MethodName_**ProgressChanged** イベントは非同期タスクの進行状況をクライアントに通知します。  
   
-#### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>コンポーネントのクライアント用の非同期イベントを定義するには:  
+### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>コンポーネントのクライアント用の非同期イベントを定義するには:  
   
 1. ファイルの先頭で <xref:System.Threading?displayProperty=nameWithType> および <xref:System.Collections.Specialized?displayProperty=nameWithType> 名前空間をインポートします。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "66423880"
 ## <a name="checkpoint"></a>チェックポイント  
  この段階で、コンポーネントをビルドすることができます。  
   
-#### <a name="to-test-your-component"></a>コンポーネントをテストするには  
+### <a name="to-test-your-component"></a>コンポーネントをテストするには  
   
 - コンポーネントをコンパイルします。  
   
@@ -99,9 +99,9 @@ ms.locfileid: "66423880"
      これらの警告は次のセクションでなくなります。  
   
 ## <a name="defining-private-delegates"></a>プライベート デリゲートの定義  
- `PrimeNumberCalculator` コンポーネントの非同期の側面は、<xref:System.Threading.SendOrPostCallback> と呼ばれる特別なデリゲートを使って内部的に実装されます。 <xref:System.Threading.SendOrPostCallback> は、<xref:System.Threading.ThreadPool> スレッドで実行するコールバック メソッドを表します。 コールバック メソッドは、<xref:System.Object> 型のパラメーターを 1 つ受け取るシグネチャを持つ必要があります。つまり、ラッパー クラスでデリゲートに状態を渡す必要があります。 詳細については、「<xref:System.Threading.SendOrPostCallback>」を参照してください。  
+ `PrimeNumberCalculator` コンポーネントの非同期の側面は、<xref:System.Threading.SendOrPostCallback> と呼ばれる特別なデリゲートを使って内部的に実装されます。 <xref:System.Threading.SendOrPostCallback> は、<xref:System.Threading.ThreadPool> スレッドで実行するコールバック メソッドを表します。 コールバック メソッドは、<xref:System.Object> 型のパラメーターを 1 つ受け取るシグネチャを持つ必要があります。つまり、ラッパー クラスでデリゲートに状態を渡す必要があります。 詳細については、<xref:System.Threading.SendOrPostCallback> を参照してください。  
   
-#### <a name="to-implement-your-components-internal-asynchronous-behavior"></a>コンポーネントの内部非同期動作を実装するには:  
+### <a name="to-implement-your-components-internal-asynchronous-behavior"></a>コンポーネントの内部非同期動作を実装するには:  
   
 1. `PrimeNumberCalculator` クラスで <xref:System.Threading.SendOrPostCallback> デリゲートを宣言して作成します。 `InitializeDelegates` という名前のユーティリティ メソッドで <xref:System.Threading.SendOrPostCallback> オブジェクトを作成します。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "66423880"
 ## <a name="implementing-public-events"></a>パブリック イベントの実装  
  イベント ベースの非同期パターンを実装するコンポーネントは、イベントを使ってクライアントに通信します。 これらのイベントは、<xref:System.ComponentModel.AsyncOperation> クラスを使って適切なスレッドで呼び出されます。  
   
-#### <a name="to-raise-events-to-your-components-clients"></a>コンポーネントのクライアントに対するイベントを生成するには:  
+### <a name="to-raise-events-to-your-components-clients"></a>コンポーネントのクライアントに対するイベントを生成するには:  
   
 1. クライアントに報告するためのパブリック イベントを実装します。 進行状況報告用のイベントと、完了報告用のイベントが必要です。  
   
@@ -146,7 +146,7 @@ ms.locfileid: "66423880"
   
  `CompletionMethod` のシグネチャは、非同期操作の結果を記述するために必要なすべての状態を保持する必要があります。 この特定の非同期操作によってテストされた値の状態、その値が素数かどうか、素数の場合は最初の約数を保持しています。 また、発生した例外を記述する状態、およびこの特定のタスクに対応する <xref:System.ComponentModel.AsyncOperation> も保持します。  
   
-#### <a name="to-complete-an-asynchronous-operation"></a>非同期操作を完了するには:  
+### <a name="to-complete-an-asynchronous-operation"></a>非同期操作を完了するには:  
   
 - 完了メソッドを実装します。 このメソッドは 6 つのパラメーターを受け取り、それを使って、クライアントの `CalculatePrimeCompletedEventHandler` によってクライアントに返される `CalculatePrimeCompletedEventArgs` を設定します。 また、クライアントのタスク ID トークンを内部コレクションから削除し、<xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> を呼び出して非同期操作の有効期間を終了します。 <xref:System.ComponentModel.AsyncOperation> は、アプリケーション モデルに適したスレッドまたはコンテキストへの呼び出しをマーシャリングします。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "66423880"
 ## <a name="checkpoint"></a>チェックポイント  
  この段階で、コンポーネントをビルドすることができます。  
   
-#### <a name="to-test-your-component"></a>コンポーネントをテストするには  
+### <a name="to-test-your-component"></a>コンポーネントをテストするには  
   
 - コンポーネントをコンパイルします。  
   
@@ -178,7 +178,7 @@ ms.locfileid: "66423880"
 > [!NOTE]
 >  進行状況の報告は、`BuildPrimeNumberList` メソッドで実装されています。 高速なコンピューターでは、`ProgressChanged` イベントが立て続けに発生する可能性があります。 これらのイベントが生成されるクライアント スレッドは、このような状況を処理できる必要があります。 ユーザー インターフェイスのコードがメッセージであふれ、処理が追いつかなくなり、応答しなくなる可能性があります。 この状況を処理するユーザー インターフェイスの例については、「[方法:イベントベースの非同期パターンのクライアントを実装する](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)」をご覧ください。  
   
-#### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>素数の計算を非同期に実行するには:  
+### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>素数の計算を非同期に実行するには:  
   
 1. `TaskCanceled` ユーティリティ メソッドを実装します。 このメソッドは、タスク有効期間コレクションで指定されたタスク ID をチェックし、タスク ID が見つからない場合は `true` を返します。  
   
@@ -210,7 +210,7 @@ ms.locfileid: "66423880"
 ## <a name="checkpoint"></a>チェックポイント  
  この段階で、コンポーネントをビルドすることができます。  
   
-#### <a name="to-test-your-component"></a>コンポーネントをテストするには  
+### <a name="to-test-your-component"></a>コンポーネントをテストするには  
   
 - コンポーネントをコンパイルします。  
   
@@ -221,7 +221,7 @@ ms.locfileid: "66423880"
   
  特定の保留中操作を取り消すには、対応する <xref:System.ComponentModel.AsyncOperation> で <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> を呼び出します。 このメソッドはその操作を終了するので、それ以降に <xref:System.ComponentModel.AsyncOperation> を呼び出すと例外がスローされます。  
   
-#### <a name="to-implement-start-and-cancel-functionality"></a>開始とキャンセルの機能を実装するには:  
+### <a name="to-implement-start-and-cancel-functionality"></a>開始とキャンセルの機能を実装するには:  
   
 1. `CalculatePrimeAsync` メソッドを実装します。 クライアントが提供したトークン (タスク ID) が、現在保留中のタスクを表すすべてのトークンの間で一意であることを確認します。 クライアントが一意ではないトークンを渡した場合、`CalculatePrimeAsync` は例外を生成します。 一意の場合は、トークンはタスク ID のコレクションに追加されます。  
   
@@ -236,7 +236,7 @@ ms.locfileid: "66423880"
 ## <a name="checkpoint"></a>チェックポイント  
  この段階で、コンポーネントをビルドすることができます。  
   
-#### <a name="to-test-your-component"></a>コンポーネントをテストするには  
+### <a name="to-test-your-component"></a>コンポーネントをテストするには  
   
 - コンポーネントをコンパイルします。  
   

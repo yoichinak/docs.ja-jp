@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 1a1fc91ea2bb81e0f94b64323085ccf99072a1f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e8fcd496b9c1921753ad0e1c2632f29bc5036956
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59236043"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802496"
 ---
 ### <a name="datagridcellspanelbringindexintoview-throws-argumentoutofrangeexception"></a>DataGridCellsPanel.BringIndexIntoView で ArgumentOutOfRangeException がスローされる
 
@@ -16,3 +16,4 @@ ms.locfileid: "59236043"
 |Version|4.6.2|
 |型|ランタイム|
 |影響を受ける API|<ul><li><xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object)?displayProperty=nameWithType></li><li><xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object,System.Windows.Controls.DataGridColumn)?displayProperty=nameWithType></li></ul>|
+

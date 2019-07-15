@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: dbe96abebdc61fae469f7727673e6fcb93cbc739
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 78f4d533f1efdc8d43a9ab96508b84a77e3260bc
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59236645"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67803189"
 ---
 ### <a name="no-longer-able-to-set-enableviewstatemac-to-false"></a>EnableViewStateMac を false に設定できなくなった
 
@@ -15,3 +15,4 @@ ms.locfileid: "59236645"
 |スコープ|Major|
 |Version|4.5.2|
 |型|ランタイム|
+

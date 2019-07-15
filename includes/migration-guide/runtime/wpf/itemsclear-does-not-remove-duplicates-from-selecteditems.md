@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 1545c807e3bef675e63e14d01ab82c1131600f39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2f94ec58e6fdb56cfc5147e74b6ffd6bb657228d
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804375"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67857499"
 ---
 ### <a name="itemsclear-does-not-remove-duplicates-from-selecteditems"></a>Items.Clear で SelectedItems から重複部分が削除されない
 
@@ -16,3 +16,4 @@ ms.locfileid: "59804375"
 |Version|4.5|
 |型|ランタイム|
 |影響を受ける API|<ul><li><xref:System.Windows.Controls.Primitives.MultiSelector.SelectedItems?displayProperty=nameWithType></li></ul>|
+

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a3f5f512fd17ab2b076f868be24e5c73d8698c49
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9d09f598538b9d5ee3f995d6281b8eb4b2668050
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59774230"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802510"
 ---
 ### <a name="objectdisposedexception-thrown-by-wpf-spellchecker"></a>ObjectDisposedException が WPF スペルチェックでスローされる
 
@@ -15,3 +15,4 @@ ms.locfileid: "59774230"
 |スコープ|エッジ|
 |Version|4.6.1|
 |型|ランタイム|
+

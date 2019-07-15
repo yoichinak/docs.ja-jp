@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a573a78109036b87201b53f72aa8dba6755e7a21
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8f4ee44e8432bae3537c6f064f564b9f044a7c33
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804382"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802469"
 ---
 ### <a name="crash-in-selector-when-removing-an-item-from-a-custom-incc-collection"></a>カスタム INCC コレクションから項目を削除すると、セレクターでクラッシュが発生する
 
@@ -15,3 +15,4 @@ ms.locfileid: "59804382"
 |スコープ|マイナー|
 |Version|4.7|
 |型|ランタイム|
+

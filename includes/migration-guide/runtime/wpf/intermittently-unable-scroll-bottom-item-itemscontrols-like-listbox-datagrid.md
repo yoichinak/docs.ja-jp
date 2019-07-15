@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9c2ee4ba66deb7c3b33698963add2b8a7e70069f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2674edc595d8e4e1e4c2ee42b39aa59265127462
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804411"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67803166"
 ---
 ### <a name="intermittently-unable-to-scroll-to-bottom-item-in-itemscontrols-like-listbox-and-datagrid-when-using-custom-datatemplates"></a>カスタム DataTemplate を使用しているとき、断続的に、ItemsControl (ListBox や DataGrid など) 内の最後の項目までスクロールできない
 
@@ -15,3 +15,4 @@ ms.locfileid: "59804411"
 |スコープ|マイナー|
 |Version|4.5|
 |型|ランタイム|
+

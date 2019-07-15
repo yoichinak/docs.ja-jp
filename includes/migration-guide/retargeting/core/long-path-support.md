@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 506218195417548880a9d8d10508a570a7769682
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f672645fb98f511f7e1326c9c584b287a0fae7dc
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804360"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859366"
 ---
 ### <a name="long-path-support"></a>長いパスのサポート
 
@@ -15,3 +15,4 @@ ms.locfileid: "59804360"
 |スコープ|マイナー|
 |Version|4.6.2|
 |型|再ターゲット中|
+

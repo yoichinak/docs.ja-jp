@@ -7,12 +7,12 @@ helpviewer_keywords:
 - types [C#], value types
 - types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-ms.openlocfilehash: 98829f30c2c25c0710cf3fe044359d3c7538fe76
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 2e2897ff647140b58b3a1812e153a44a6fcdaef7
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424047"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859557"
 ---
 # <a name="value-types-table-c-reference"></a>値型の一覧表 (C# リファレンス)
 
@@ -21,21 +21,20 @@ C# の値の型を次の表に示します。
 |値の種類|カテゴリ|型のサフィックス|
 |----------------|--------------|-----------------|
 |[bool](bool.md)|ブール型||
-|[byte](../builtin-types/integral-numeric-types.md)|符号なし、数値、[整数](../builtin-types/integral-numeric-types.md)||
+|`byte`|符号なし、数値、[整数](../builtin-types/integral-numeric-types.md)||
 |[char](char.md)|符号なし、数値、[整数](../builtin-types/integral-numeric-types.md)
-)||
-|[decimal](decimal.md)|数値、[浮動小数点数](floating-point-types-table.md)|M または m|
-|[double](double.md)|数値、[浮動小数点数](floating-point-types-table.md)|D または d|
+|`decimal`|数値、[浮動小数点数](../builtin-types/floating-point-numeric-types.md)|M または m|
+|`double`|数値、[浮動小数点数](../builtin-types/floating-point-numeric-types.md)|D または d|
 |[enum](enum.md)|列挙||
-|[float](float.md)|数値、[浮動小数点数](floating-point-types-table.md)|F または f|
-|[int](../builtin-types/integral-numeric-types.md)|符号付き、数値、[整数](../builtin-types/integral-numeric-types.md)||
-|[long](../builtin-types/integral-numeric-types.md)|符号付き、数値、[整数](../builtin-types/integral-numeric-types.md)|L または l|
-|[sbyte](../builtin-types/integral-numeric-types.md)|符号付き、数値、[整数](../builtin-types/integral-numeric-types.md)||
-|[short](../builtin-types/integral-numeric-types.md)|符号付き、数値、[整数](../builtin-types/integral-numeric-types.md)||
+|`float`|数値、[浮動小数点数](../builtin-types/floating-point-numeric-types.md)|F または f|
+|`int`|符号付き、数値、[整数](../builtin-types/integral-numeric-types.md)||
+|`long`|符号付き、数値、[整数](../builtin-types/integral-numeric-types.md)|L または l|
+|`sbyte`|符号付き、数値、[整数](../builtin-types/integral-numeric-types.md)||
+|`short`|符号付き、数値、[整数](../builtin-types/integral-numeric-types.md)||
 |[struct](struct.md)|ユーザー定義構造体||
-|[uint](../builtin-types/integral-numeric-types.md)|符号なし、数値、[整数](../builtin-types/integral-numeric-types.md)|U または u|
-|[ulong](../builtin-types/integral-numeric-types.md)|符号なし、数値、[整数](../builtin-types/integral-numeric-types.md)|UL、Ul、uL、ul、LU、Lu、lU、または lu|
-|[ushort](../builtin-types/integral-numeric-types.md)|符号なし、数値、[整数](../builtin-types/integral-numeric-types.md)||
+|`uint`|符号なし、数値、[整数](../builtin-types/integral-numeric-types.md)|U または u|
+|`ulong`|符号なし、数値、[整数](../builtin-types/integral-numeric-types.md)|UL、Ul、uL、ul、LU、Lu、lU、または lu|
+|`ushort`|符号なし、数値、[整数](../builtin-types/integral-numeric-types.md)||
 
 ## <a name="remarks"></a>解説
 
