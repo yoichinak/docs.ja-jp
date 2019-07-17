@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 697a3dff663b333ce97e05783df6b163692b5d9e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 2fa2e039d73d079b6dacc9326c64fc2015eecc49
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610350"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238482"
 ---
 # <a name="wpf-architecture"></a>WPF アーキテクチャ
 このトピックでは、Windows Presentation Foundation (WPF) クラスの階層構造のガイド付きツアーを提供します。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]の主要なサブシステムの大半に対応し、それらがどのようにやり取りするかについて説明します。 また、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]の構造設計者によって行われた選択についての幾つかを詳細に説明します。  
@@ -64,7 +64,7 @@ ms.locfileid: "67610350"
 ## <a name="systemwindowsmediavisual"></a>System.Windows.Media.Visual  
  定義されているシステムでは、次の手順は画面に描画されるピクセルになっています。 <xref:System.Windows.Media.Visual>クラスがそれぞれ必要に応じて描画命令とこれらの手順 (クリッピング、変換など) をレンダリングする方法についてのメタデータを含む、ビジュアル オブジェクトのツリーを構築するために提供します。 <xref:System.Windows.Media.Visual> ようにする非常に軽量で柔軟なほとんどの機能のパブリック API に公開がない場合や保護されているコールバック関数に大きく依存して設計されています。  
   
- <xref:System.Windows.Media.Visual> エントリ ポイントは、実際に、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]コンポジション システム。 <xref:System.Windows.Media.Visual> マネージこれらの 2 つサブシステム間の接続ポイントは、[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]まさに、します。  
+ <xref:System.Windows.Media.Visual> エントリ ポイントは、実際に、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]コンポジション システム。 <xref:System.Windows.Media.Visual> これら 2 つのサブシステム、マネージ API と、まさに間の接続ポイントがあります。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] milcore によって管理されるアンマネージ データ構造を走査して、データを表示します。 コンポジションのノードと呼ばれるこれらの構造は、各ノードでレンダリング指示の階層表示にはツリーを表します。 右側にある次の図のように、このツリーはメッセージング プロトコルを介してアクセスできます。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "67610350"
  コントロールのデータ モデルの一般的な側面は、コンテンツ モデルです。 などのコントロールを見る場合<xref:System.Windows.Controls.Button>、型の場合は"Content"という名前のプロパティを使用しているが表示されます<xref:System.Object>します。 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]と[!INCLUDE[TLA#tla_aspnet](../../../../includes/tlasharptla-aspnet-md.md)]、このプロパティは文字列である通常 – ボタンに配置することができますが、コンテンツの種類を制限します。 ボタンのコンテンツか単純な文字列、または指定できます、複雑なデータ オブジェクト全体の要素ツリー。 データ オブジェクトの場合は、データ テンプレートは、表示の構築に使用されます。  
   
 <a name="Summary"></a>   
-## <a name="summary"></a>まとめ  
+## <a name="summary"></a>Summary  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] データ ドリブン プレゼンテーション システムを動的に作成できるように設計されています。 プロパティ セットを通じてオブジェクトを作成するには、動作を制御するには、システムのすべての部分は設計されています。 データ バインディングは、システムの基本的な部分は、され、すべてのレイヤーで統合されます。  
   
  従来のアプリケーションでは、表示を作成し、いくつかのデータにバインドします。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]、何らかの種類のデータ バインディングによって生成されるコントロール、ディスプレイのすべての側面に関するすべてのものです。 ボタンの内側にあるテキストは、ボタンの内部で構成されるコントロールを作成し、その表示をボタンの content プロパティにバインドして表示されます。  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: d40d1636b510fcfe667ab3e728d1688ce38641d4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 13812fa5429bbe33341e51e4b3be14fbbcb361cb
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611939"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238451"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>パフォーマンスの最適化:ハードウェアの活用
 内部アーキテクチャ[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]は、2 つのレンダリング パイプライン、ハードウェアおよびソフトウェア。 このトピックでは、アプリケーションのパフォーマンスの最適化に関する決定を行うためのこれらのレンダリング パイプラインについてを説明します。  
@@ -30,7 +30,7 @@ ms.locfileid: "64611939"
 ### <a name="graphics-rendering-tiers"></a>グラフィックスの描画層  
  アプリケーションを実行するハードウェア構成を予測する非常に困難ですがある可能性があります。 ただし、設計をシームレスに切り替える機能別のハードウェアで実行するときにそれぞれ別のハードウェア構成活用を実行できるように、アプリケーションを検討する可能性があります。  
   
- これを実現する[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]実行時にシステムのグラフィックス機能を判断する機能を提供します。 グラフィックス機能は、3 つの描画層の 1 つとして、ビデオ カードを分類することによって決定されます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 公開、[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]描画機能層を照会するアプリケーションを利用できます。 アプリケーションは、ハードウェアでサポートされている描画層によって実行時に異なるコード パスを受け取ることができます。  
+ これを実現する[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]実行時にシステムのグラフィックス機能を判断する機能を提供します。 グラフィックス機能は、3 つの描画層の 1 つとして、ビデオ カードを分類することによって決定されます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API を使うと、描画機能層を照会するアプリケーションを公開します。 アプリケーションは、ハードウェアでサポートされている描画層によって実行時に異なるコード パスを受け取ることができます。  
   
  描画層に最も影響を与えるグラフィックス ハードウェアの機能:  
   

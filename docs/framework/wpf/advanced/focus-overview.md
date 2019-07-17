@@ -8,12 +8,12 @@ helpviewer_keywords:
 - applications [WPF], focus
 - focus in applications [WPF]
 ms.assetid: 0230c4eb-0c8a-462b-ac4b-ae3e511659f4
-ms.openlocfilehash: 72b866d714e6a77020bdb74843c3aaa0ba0c3278
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8546516124b2156e02446e15d7bdcaf3cdbd717d
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703427"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238608"
 ---
 # <a name="focus-overview"></a>フォーカスの概要
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には、キーボード フォーカスと論理フォーカスという、フォーカスに関する 2 つの主要な概念があります。  キーボード フォーカスはキーボード入力を受け取る要素を指し、論理フォーカスはフォーカスを持つフォーカス範囲内の要素を指します。  これらの概念については、この概要で詳しく説明します。  フォーカスを取得可能な領域を複数持つ複雑なアプリケーションを作成する場合は、これらの概念の違いを理解することが重要です。  
@@ -82,7 +82,7 @@ ms.locfileid: "61703427"
   
 <a name="Manipulating_Focus_Programmatically"></a>   
 ## <a name="navigating-focus-programmatically"></a>プログラムによるフォーカスのナビゲーション  
- 追加[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]を使用するにはフォーカスが<xref:System.Windows.UIElement.MoveFocus%2A>と<xref:System.Windows.UIElement.PredictFocus%2A>します。  
+ フォーカスを使用する追加の API は<xref:System.Windows.UIElement.MoveFocus%2A>と<xref:System.Windows.UIElement.PredictFocus%2A>します。  
   
  <xref:System.Windows.FrameworkElement.MoveFocus%2A> アプリケーションでは、次の要素にフォーカスを変更します。  A<xref:System.Windows.Input.TraversalRequest>方向を指定するために使用します。   <xref:System.Windows.Input.FocusNavigationDirection>に渡される<xref:System.Windows.UIElement.MoveFocus%2A>、さまざまな方向フォーカスを移動できるなどを指定します。 <xref:System.Windows.Input.FocusNavigationDirection.First>、 <xref:System.Windows.Input.FocusNavigationDirection.Last>、<xref:System.Windows.Input.FocusNavigationDirection.Up>と<xref:System.Windows.Input.FocusNavigationDirection.Down>します。  
   

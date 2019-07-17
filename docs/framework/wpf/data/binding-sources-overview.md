@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: fe5cb97b4802c2b638a4b218a27da05468dc50fb
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 99f01983a575e9c6f96fdb66590e9d762eb882f7
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505551"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238433"
 ---
 # <a name="binding-sources-overview"></a>バインディング ソースの概要
 データ バインディングでは、バインディング ソース オブジェクトは、データの取得元のオブジェクトを表します。 このトピックでは、バインディング ソースとして使用できるオブジェクトの型について説明します。  
@@ -24,7 +24,7 @@ ms.locfileid: "67505551"
 |--------------------|-----------------|  
 |[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] オブジェクト|任意の [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] オブジェクトのパブリック プロパティ、サブプロパティ、およびインデクサーにバインドできます。 バインディング エンジンは、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] リフレクションを使用してプロパティの値を取得します。 または、オブジェクトを実装する<xref:System.ComponentModel.ICustomTypeDescriptor>かが登録済み<xref:System.ComponentModel.TypeDescriptionProvider>もバインディング エンジンを使用します。<br /><br /> バインディング ソースとして使用できるクラスを実装する方法の詳細については、このトピックで後述する「[バインディング ソースのクラスの実装](#classes)」を参照してください。|  
 |動的オブジェクト|実装するオブジェクトの使用可能なプロパティとインデクサーにバインドすることができます、<xref:System.Dynamic.IDynamicMetaObjectProvider>インターフェイス。 コード内のメンバーにアクセスできる場合、これにバインドできます。 たとえば、動的オブジェクトを使用して `someObjet.AProperty` を介してコード内のメンバーにアクセスできる場合、バインディング パスを `AProperty` に設定してこのメンバーにバインドできます。|  
-|[!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] オブジェクト|など、ADO.NET オブジェクトにバインドできます<xref:System.Data.DataTable>します。 ADO.NET<xref:System.Data.DataView>実装、<xref:System.ComponentModel.IBindingList>インターフェイスでは、バインディング エンジンが察知する変更通知を提供します。|  
+|ADO.NET オブジェクト|など、ADO.NET オブジェクトにバインドできます<xref:System.Data.DataTable>します。 ADO.NET<xref:System.Data.DataView>実装、<xref:System.ComponentModel.IBindingList>インターフェイスでは、バインディング エンジンが察知する変更通知を提供します。|  
 |[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] オブジェクト|バインドして実行`XPath`でクエリが実行を<xref:System.Xml.XmlNode>、 <xref:System.Xml.XmlDocument>、または<xref:System.Xml.XmlElement>します。 アクセスする便利な手段[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]マークアップでバインディング ソースであるデータは、使用する、<xref:System.Windows.Data.XmlDataProvider>オブジェクト。 詳細については、「[XMLDataProvider と XPath クエリを使用して XML データにバインドする](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)」を参照してください。<br /><br /> バインドすることも、<xref:System.Xml.Linq.XElement>または<xref:System.Xml.Linq.XDocument>、または LINQ to XML を使用してこれらの型のオブジェクトで実行するクエリの結果にバインドします。 LINQ to XML を使用して、マークアップでバインディング ソースである XML データにアクセスする便利な方法は使用する、<xref:System.Windows.Data.ObjectDataProvider>オブジェクト。 詳細については、「[XDocument、XElement、または LINQ for XML クエリの結果にバインドする](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)」を参照してください。|  
 |<xref:System.Windows.DependencyObject> オブジェクト|いずれかの依存関係プロパティにバインドできます<xref:System.Windows.DependencyObject>します。 例については、「[2 つのコントロールのプロパティをバインドする](how-to-bind-the-properties-of-two-controls.md)」を参照してください。|  
   
@@ -76,7 +76,7 @@ ms.locfileid: "67505551"
 |------------------------------------------------|-----------------------------|-----------------------------|------------------|------------------|-------------------------|-------------------------|  
 |**信頼レベル**|**完全信頼**|**部分信頼**|**完全信頼**|**部分信頼**|**完全信頼**|**部分信頼**|  
 |パブリック クラス|[はい]|はい|はい|はい|はい|[はい]|  
-|非パブリック クラス|[はい]|×|はい|×|[はい]|[はい]|  
+|非パブリック クラス|[はい]|×|はい|×|はい|[はい]|  
   
  この表では、データ バインディングのアクセス許可要件について次の重要事項を説明します。  
   
