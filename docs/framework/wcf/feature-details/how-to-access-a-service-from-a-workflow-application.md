@@ -56,7 +56,7 @@ ms.locfileid: "61779644"
 
      ![完全なクライアント ワークフロー](./media/how-to-access-a-service-from-a-workflow-application/complete-client-workflow.jpg)
 
-11. MyWFService ソリューションを右クリックして**スタートアップ プロジェクトの設定.**.選択、**マルチ スタートアップ プロジェクト**ボタンを選択します**開始**内の各プロジェクト、**アクション**列の次の図に示すようにします。
+11. MyWFService ソリューションを右クリックして**スタートアップ プロジェクトの設定.** .選択、**マルチ スタートアップ プロジェクト**ボタンを選択します**開始**内の各プロジェクト、**アクション**列の次の図に示すようにします。
 
      ![スタートアップ プロジェクトのオプション](./media/how-to-access-a-service-from-a-workflow-application/startup-project-options.jpg)
 
@@ -65,5 +65,5 @@ ms.locfileid: "61779644"
 ## <a name="see-also"></a>関連項目
 
 - [ワークフロー サービス](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [メッセージング アクティビティを使用してワークフロー サービスを作成する方法](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)
+- [方法: メッセージング アクティビティを使用してワークフロー サービスを作成する方法](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)
 - [Web プロジェクトでのワークフローから WCF サービスの使用](https://go.microsoft.com/fwlink/?LinkId=207725)
