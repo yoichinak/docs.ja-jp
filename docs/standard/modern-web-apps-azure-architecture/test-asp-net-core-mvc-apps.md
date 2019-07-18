@@ -4,12 +4,12 @@ description: ASP.NET Core および Azure での最新の Web アプリケーシ
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: e93c33ae29268c3968ccb59739e899966ae4339d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 941c73f9a8b7b4c4336adfaec45775feec738f51
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463710"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804721"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>ASP.NET Core MVC アプリのテスト
 
@@ -34,7 +34,7 @@ ms.locfileid: "58463710"
 
 統合テストは多くの場合、セットアップと破棄のプロシージャが単体テストより複雑です。 たとえば、実際のデータベースに対して統合テストを行うとき、データベースをテスト実行前の既知の状態に戻す方法が必要になります。 新しいテストが追加され、運用データベース スキーマが拡大するにつれ、テスト スクリプトのサイズが増加し、より複雑になります。 大規模なシステムの多くでは、共有ソース管理の変更を調べる前に、開発者ワークステーションで完全な統合テスト スイートを実行することは実用的ではありません。 そのような場合、ビルド サーバーで統合テストを実行できることがあります。
 
-実装クラス LocalFileImageService は、ID が与えられるとき、特定のフォルダーから画像ファイル データを取得し、返すロジックを実装します。
+実装クラス `LocalFileImageService` では、指定された ID に対して、特定のフォルダーから画像ファイル データを取得して返すロジックが実装されます。
 
 ```csharp
 public class LocalFileImageService : IImageService
@@ -147,7 +147,7 @@ public IActionResult GetImage(int id)
 }
 ```
 
-このメソッドの単体テストは System.IO.File に直接依存することで難しくなります。System.IO.File はファイル システムから読み込むために利用されます。 この動作をテストし、予想どおり動くことを確認できますが、実際のファイルでそれをするのは統合テストです。 このメソッドのルートを単体テストできない点に注目してください。この後すぐ、機能テストでこれを行う方法について説明します。
+このメソッドの単体テストは、ファイル システムからの読み取りに使われている `System.IO.File` に直接依存することで難しくなります。 この動作をテストし、予想どおり動くことを確認できますが、実際のファイルでそれをするのは統合テストです。 このメソッドのルートを単体テストできない点に注目してください。この後すぐ、機能テストでこれを行う方法について説明します。
 
 ファイル システムの動作の単体テストが直接実行できないために、ルートをテストできない場合、どのようなテストが残されているのでしょうか? 改良して単体テストを可能にすると、テスト ケースや、エラー処理など、足りない動作が見つかることがあります。 ファイルが見つからないとき、メトリックは何を行うのでしょうか? 何をすべきでしょうか? この例では、改良後のメソッドは次のようになります。
 
@@ -175,7 +175,7 @@ public IActionResult GetImage(int id)
 
 ## <a name="integration-testing-aspnet-core-apps"></a>ASP.NET Core Apps を統合テストする
 
-ASP.NET Core アプリのほとんどの統合テストで、インフラストラクチャ プロジェクトに定義されているサービスとその他の種類の実装をテストします。 ASP.NET Core MVC プロジェクトが正しく動作していることをテストする最良の方法は、テスト ホストで実行されているアプリに対して機能テストを実行することです。 データ アクセス クラスの統合テストの例は、この章の「統合テスト」セクションにあります。
+ASP.NET Core アプリのほとんどの統合テストで、インフラストラクチャ プロジェクトに定義されているサービスとその他の種類の実装をテストします。 たとえば、Infrastructure プロジェクト内に存在するデータ アクセス クラスから [EF Core が期待されるデータを正常に更新および取得したことをテストする](https://docs.microsoft.com/ef/core/miscellaneous/testing/)ことができます。 ASP.NET Core MVC プロジェクトが正しく動作していることをテストする最良の方法は、テスト ホストで実行されているアプリに対して機能テストを実行することです。
 
 ## <a name="functional-testing-aspnet-core-apps"></a>ASP.NET Core アプリを機能テストする
 
@@ -308,6 +308,15 @@ namespace Microsoft.eShopWeb.FunctionalTests.WebRazorPages
 ```
 
 この機能テストは、配置されているあらゆるミドルウェア、フィルター、バインダーなど、完全な ASP.NET Core MVC / Razor Pages アプリケーション スタックを行使します。 特定のルート ("/") が想定される正常な状態コードと HTML 出力を返すことを検証します。 これは実際の Web サーバーを設定せずに行い、実際の Web サーバーを利用して不安定になることを回避します (ファイアウォール設定の問題など)。 TestServer に対して実行される機能テストは通常、統合テストや単体テストより遅くなりますが、テスト Web サーバーのネットワークで実行されるテストよりはるかに速くなります。 アプリケーションのフロント エンドのスタックが想定どおりに確実に動作するようにするため、機能テストを使用する必要があります。 これらのテストは、コントローラーやページに重複があり、フィルターを追加して重複に対処するときに特に便利です。 このリファクタリングではアプリケーションの動作を変更せずに、機能テストのスイートによってこの状況を検証することをお勧めします。
+
+> ### <a name="references--test-aspnet-core-mvc-apps"></a>リファレンス – ASP.NET Core MVC アプリのテスト
+>
+> - **ASP.NET Core でのテスト**  
+>   <https://docs.microsoft.com/aspnet/core/testing/>
+> - **単体テストの名前付け規則**  
+>   <https://ardalis.com/unit-test-naming-convention>
+> - **EF Core のテスト**  
+>   <https://docs.microsoft.com/ef/core/miscellaneous/testing/>
 
 >[!div class="step-by-step"]
 >[前へ](work-with-data-in-asp-net-core-apps.md)

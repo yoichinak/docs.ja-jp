@@ -1,65 +1,70 @@
 ---
-title: C# 言語のバージョンの選択 - C# ガイド
-description: 特定のコンパイラ バージョンを使用して構文の検証を実行するコンパイラを構成します。
-ms.date: 02/28/2019
-ms.openlocfilehash: feb3e51a107f9830071b55c7985f202edc842f4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+title: C# 言語のバージョン管理 - C# ガイド
+description: プロジェクトに基づいて C# 言語のバージョンが決定される方法、およびそれを手動で調整できるさまざまな値について説明します。
+ms.date: 07/10/2019
+ms.openlocfilehash: 2d593ca0588f291c61cdf52fbc1eb60a1f3f7ecb
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770881"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859596"
 ---
-# <a name="select-the-c-language-version"></a>C# 言語のバージョンの選択
+# <a name="c-language-versioning"></a>C# 言語のバージョン管理
 
-C# コンパイラでは、プロジェクトのターゲット フレームワーク (1 つまたは複数) に基づいて既定の言語バージョンが決定されます。 ご自分のプロジェクトが、対応するプレビュー バージョンの言語を持つプレビュー フレームワークをターゲットにしている場合、使用される言語バージョンはプレビュー バージョンの言語です。 ご自分のプロジェクトがプレビュー フレームワークをターゲットにしていない場合、使用される言語バージョンは最新のマイナー バージョンです。
+C# コンパイラでは、プロジェクトのターゲット フレームワーク (1 つまたは複数) に基づいて既定の言語バージョンが決定されます。 これは、C# 言語には、.NET のすべての実装では使用できない型またはランタイム コンポーネントに依存する機能が存在する場合があるためです。 また、これにより、プロジェクトのビルド ターゲットが何であっても、互換性が最も高い言語バージョンが既定で選択されることが保証されます。
 
-たとえば、.NET Core 3.0 のプレビュー期間中は、`netcoreapp3.0` または `netstandard2.1` (両方ともプレビュー段階) をターゲットにするすべてのプロジェクトで C# 8.0 言語 (これもプレビュー段階) が使用されます。 リリース バージョンをターゲットにするプロジェクトでは、C# 7.3 (最新リリース バージョン) が使用されます。 この動作は、.NET Framework をターゲットにするすべてのプロジェクトで最新 (C# 7.3) が使用されることを意味しています。 
+## <a name="defaults"></a>[既定値]
 
-この機能によって、開発環境に新しいバージョンの SDK とツールをインストールすることの決定と新しい言語機能をプロジェクトに組み込むことの決定が別になります。 ビルド コンピューターに最新の SDK とツールをインストールできます。 特定バージョンの言語をビルドに使用するように各プロジェクトを構成できます。 既定の動作は、新しい型や CLR の新しい動作に依存する言語機能が、プロジェクトでそれらのフレームワークをターゲットにしている場合にのみ有効になることを意味しています。
+コンパイラでは、以下の規則に基づいて既定値が決定されます。
 
-言語バージョンを指定することで、既定の動作をオーバーライドできます。 言語バージョンを設定する方法はいくつかあります。
+|ターゲット フレーム|version|C# 言語の既定のバージョン|
+|----------------|-------|---------------------------|
+|.NET Core|3.x|C# 8.0|
+|.NET Core|2.x|C# 7.3|
+|.NET Standard|all|C# 7.3|
+|.NET Framework|all|C# 7.3|
 
-- [Visual Studio のクイック アクション](#visual-studio-quick-action)を利用する。
-- [Visual Studio UI](#set-the-language-version-in-visual-studio) で言語バージョンを設定する。
-- [**.csproj** ファイルを手動で編集する](#edit-the-csproj-file)。
+## <a name="default-for-previews"></a>プレビューの既定値
+
+ご自分のプロジェクトが、対応するプレビュー バージョンの言語を持つプレビュー フレームワークをターゲットにしている場合、使用される言語バージョンはプレビュー バージョンの言語です。 これにより、リリースされた .NET Core バージョンをターゲットとするプロジェクトに影響を与えずに、任意の環境においてそのプレビューで動作することが保証されている最新の機能を確実に使用できます。
+
+## <a name="overriding-a-default"></a>既定値のオーバーライド
+
+C# のバージョンを明示的に指定する必要がある場合は、いくつかの方法で実行できます。
+
+- [プロジェクト ファイル](#edit-the-project-file)を手動で編集する。
 - [サブディレクトリ内の複数のプロジェクトに対して](#configure-multiple-projects)言語バージョンを設定する。
 - [`-langversion` コンパイラ オプション](#set-the-langversion-compiler-option)を構成する。
 
-## <a name="visual-studio-quick-action"></a>Visual Studio のクイック アクション
+### <a name="edit-the-project-file"></a>プロジェクト ファイルを編集する
 
-Visual Studio は、必要な言語バージョンを判断するのに役立ちます。 現在構成されているバージョンで使用できない言語機能を使用する場合、Visual Studio は、プロジェクトの言語バージョンを更新する可能性のある修正プログラムを示します。
-
-## <a name="set-the-language-version-in-visual-studio"></a>Visual Studio で言語バージョンを設定する
-
-Visual Studio のバージョンを設定できます。 ソリューション エクスプローラーでプロジェクト ノードを右クリックして、**[プロパティ]** を選択します。 **[ビルド]** タブを選択し、**[詳細設定]** ボタンを選択します。 ドロップダウン リストで、バージョンを選択します。 次の図は "最新の" 設定を示しています。
-
-![言語バージョンを指定できる高度なビルド設定のスクリーン ショット](./media/configure-language-version/advanced-build-settings.png)
-
-> [!NOTE]
-> Visual Studio IDE を使用して csproj ファイルを更新する場合、IDE によって、ビルド構成ごとにノードが作成されます。 一般的に、すべてのビルド構成で同じように値を設定しますが、ビルド構成ごとに明示的に設定する必要があります。あるいは、この設定を変更するとき、"すべての構成" を選択します。 csproj ファイルに次が表示されます。
->
->```xml
-> <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
->  <LangVersion>latest</LangVersion>
-></PropertyGroup>
->
-> <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
->  <LangVersion>latest</LangVersion>
-> </PropertyGroup>
-> ```
->
-
-## <a name="edit-the-csproj-file"></a>csproj ファイルを編集する
-
-**.csproj** ファイルで言語バージョンを設定できます。 次のような要素を追加します。
+プロジェクト ファイルで言語のバージョンを設定できます。 たとえば、プレビュー機能に明示的にアクセスしたい場合は、次のように要素を追加できます。
 
 ```xml
 <PropertyGroup>
-   <LangVersion>latest</LangVersion>
+   <LangVersion>preview</LangVersion>
 </PropertyGroup>
 ```
 
-値 `latest` は、C# 言語の最新のマイナー バージョンを使用します。 次の値を指定できます。
+値 `preview` では、コンパイラでサポートされている使用可能な最新のプレビュー C# 言語が使用されます。
+
+### <a name="configure-multiple-projects"></a>複数のプロジェクトを構成する
+
+複数のディレクトリを構成する `<LangVersion>` 要素を含む **Directory.Build.props** ファイルを作成することができます。 この操作は通常、ソリューション ディレクトリで実行します。 ソリューション ディレクトリ内の **Directory.Build.props** ファイルに以下を追加します。
+
+```xml
+<Project>
+ <PropertyGroup>
+   <LangVersion>preview</LangVersion>
+ </PropertyGroup>
+</Project>
+```
+
+これで、そのファイルが含まれるディレクトリのすべてのサブディレクトリ内のビルドで、プレビュー C# バージョンが使用されます。 詳しくは、「[ビルドのカスタマイズ](/visualstudio/msbuild/customize-your-build)」を参照してください。
+
+## <a name="c-language-version-reference"></a>C# 言語バージョン リファレンス
+
+次の表では、現在のすべての C# 言語バージョンを示します。 コンパイラが古い場合、認識されない値が存在する可能性があります。 .NET Core 3.0 をインストールすれば、一覧のすべての値にアクセスできます。
 
 |[値]|説明|
 |------------|-------------|
@@ -77,21 +82,3 @@ Visual Studio のバージョンを設定できます。 ソリューション �
 |3|コンパイラは、C# 3.0 以下に含まれている構文のみを受け入れます。|
 |ISO-2|コンパイラは、ISO/IEC 23270:2006 C# (2.0) に含まれている構文のみを受け入れます。 |
 |ISO-1|コンパイラは、ISO/IEC 23270:2003 C# (1.0/1.2) に含まれている構文のみを受け入れます。 |
-
-## <a name="configure-multiple-projects"></a>複数のプロジェクトを構成する
-
-複数のディレクトリを構成する `<LangVersion>` 要素を含む **Directory.Build.props** ファイルを作成することができます。 この操作は通常、ソリューション ディレクトリで実行します。 ソリューション ディレクトリ内の **Directory.Build.props** ファイルに以下を追加します。
-
-```xml
-<Project>
- <PropertyGroup>
-   <LangVersion>7.3</LangVersion>
- </PropertyGroup>
-</Project>
-```
-
-これで、そのファイルを含むディレクトリのすべてのサブディレクトリ内のビルドで、C# バージョン 7.3 構文が使用されます。 詳しくは、「[ビルドのカスタマイズ](/visualstudio/msbuild/customize-your-build)」を参照してください。
-
-## <a name="set-the-langversion-compiler-option"></a>言語コンパイラ オプションを設定する
-
-`-langversion` コマンド ライン オプションを使用することができます。 詳しくは、[-langversion](../language-reference/compiler-options/langversion-compiler-option.md) コンパイラ オプションに関する記事を参照してください。 「`csc -langversion:?`」と入力して、有効な値の一覧を確認できます。
