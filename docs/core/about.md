@@ -107,7 +107,7 @@ Windows 実装と Unix 実装はほぼ同じサイズです。 CoreFX は、[Mic
 
 ### <a name="comparison-with-mono"></a>Mono との比較
 
-[Mono](https://www.mono-project.com/) は、オリジナルのクロスプラットフォームおよび[オープン ソース](https://github.com/mono/mono)の .NET 実装であり、2004 年に登場しました。 .NET Framework のコミュニティの複製として考えることができます。 Mono プロジェクト チームは、互換性のある実装を提供するために、Microsoft によって発行されたオープン [.NET standards](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (特に ECMA 335) に依存していました。
+[Mono](https://www.mono-project.com/) は、オリジナルのクロスプラットフォームおよび[オープン ソース](https://github.com/mono/mono)の .NET 実装であり、2004 年に登場しました。.NET Framework のコミュニティの複製として考えることができます。Mono プロジェクト チームは、互換性のある実装を提供するために、Microsoft によって発行されたオープン [.NET standards](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (特に ECMA 335) に依存していました。
 
 .NET Core と .NET Mono の主な違いは、次のとおりです。
 
