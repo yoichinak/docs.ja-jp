@@ -6,12 +6,12 @@ ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 06085091a13ad76dcd554cfe637bcc151bbb8476
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 30e96d85ecc04332bc5e6c8f57badd000f729904
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610178"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660637"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>ML.NET の概要とそのしくみ
 
@@ -163,7 +163,7 @@ ML.NET モデルは、予測される出力に到達するために入力デー�
 
 ML.NET アプリケーションは <xref:Microsoft.ML.MLContext> オブジェクトから始まります。 このシングルトン オブジェクトには**カタログ**が含まれます。 カタログは、データの読み込みと保存、変換、トレーナー、およびモデル運用コンポーネントのためのファクトリです。 各カタログ オブジェクトには、さまざまな種類のコンポーネントを作成するメソッドがあります。
 
-||||
+|||||
 |-|-|-|-|
 |データの読み込みと保存||<xref:Microsoft.ML.DataOperationsCatalog>||
 |データ準備||<xref:Microsoft.ML.TransformsCatalog>||
@@ -171,11 +171,11 @@ ML.NET アプリケーションは <xref:Microsoft.ML.MLContext> オブジェク
 ||多クラス分類|<xref:Microsoft.ML.MulticlassClassificationCatalog>||
 ||異常検出|<xref:Microsoft.ML.AnomalyDetectionCatalog>||
 ||クラスタリング|<xref:Microsoft.ML.ClusteringCatalog>||
-||予測|<xref:Microsoft.ML.Forecasting>||
+||予測|<xref:Microsoft.ML.ForecastingCatalog>||
 ||ランキング|<xref:Microsoft.ML.RankingCatalog>||
 ||回帰|<xref:Microsoft.ML.RegressionCatalog>||
-||推奨事項|<xref:Microsoft.ML.RecommendationCatalog>|Microsoft.ML.Recommender を追加する|
-||TimeSeries|<xref:Microsoft.ML.TimeSeriesCatalog>|Microsoft.ML.TimeSeries を追加する|
+||推奨事項|<xref:Microsoft.ML.RecommendationCatalog>|`Microsoft.ML.Recommender` NuGet パッケージを取得する|
+||TimeSeries|<xref:Microsoft.ML.TimeSeriesCatalog>|`Microsoft.ML.TimeSeries` NuGet パッケージを取得する|
 |モデルの使用法 ||<xref:Microsoft.ML.ModelOperationsCatalog>||
 
 上記の各カテゴリの作成方法に移動できます。 Visual Studio を使用すると、IntelliSense を介してカタログが表示されます。

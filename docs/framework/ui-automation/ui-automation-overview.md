@@ -6,12 +6,12 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: 02700c75152c32ebee3a0898de1e322ddf9b6e17
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: a914f2c54e5e5b368533b686b1926f7f7ef2e12a
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67802231"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68237336"
 ---
 # <a name="ui-automation-overview"></a>UI オートメーションの概要
 > [!NOTE]
@@ -36,7 +36,7 @@ ms.locfileid: "67802231"
   
 |コンポーネント|説明|  
 |---------------|-----------------|  
-|プロバイダー [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] (UIAutomationProvider.dll および UIAutomationTypes.dll)|UI オートメーション プロバイダーによって実装されるインターフェイス定義のセット。 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 要素に関する情報を提供し、プログラムによる入力に応答するオブジェクトです。|  
+|プロバイダー API (UIAutomationProvider.dll および UIAutomationTypes.dll)|UI オートメーション プロバイダーによって実装されるインターフェイス定義のセット。 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 要素に関する情報を提供し、プログラムによる入力に応答するオブジェクトです。|  
 |クライアント API (UIAutomationClient.dll および UIAutomationTypes.dll)|UI オートメーション クライアント アプリケーションが、 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] に関する情報を取得し、コントロールに入力を送信することを可能にする、各種マネージド コードのセット。|  
 |UiAutomationCore.dll|プロバイダーとクライアントの間の通信を処理する、基になるコード ( [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] コアとも呼ばれます)。|  
 |UIAutomationClientsideProviders.dll|従来の標準コントロールに使用する UI オートメーション プロバイダーのセット。 ([!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] コントロールは [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]をネイティブにサポートします)。このサポートは、クライアント アプリケーションに対して自動的に有効になります。|  

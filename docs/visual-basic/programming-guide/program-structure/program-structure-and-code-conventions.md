@@ -21,7 +21,9 @@ ms.lasthandoff: 04/28/2019
 ms.locfileid: "64624331"
 ---
 # <a name="program-structure-and-code-conventions-visual-basic"></a>プログラム構造とコード規則 (Visual Basic)
+
 このセクションでは、一般的な Visual Basic プログラムの構造、シンプルな Visual Basic プログラム "Hello, World"、Visual Basic のコード規則について説明します。コード規則は、プログラムのロジックではなくプログラムの物理的な構造と外観に焦点を合わせた提案です。コード規則に従うと、コードの読み取り、理解、保守が簡単になります。コード規則には、以下の内容が含まれます。  
+
   
 - コードのラベル付けとコメント付けに関する標準化された書式  
   

@@ -1,15 +1,15 @@
 ---
 title: 'チュートリアル: TensorFlow 画像分類器を再トレーニングする - 転移学習'
 description: 転移学習と ML.NET を使用して画像分類 TensorFlow モデルを再トレーニングする方法について説明します。 元のモデルは、個々の画像を分類するようにトレーニングされました。 再トレーニング後、新しいモデルは、画像を広範なカテゴリに整理します。
-ms.date: 06/12/2019
+ms.date: 07/09/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 9344d0757e140995dfd9ce7d1a355910a81c6d31
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 65f94fa5e725703d79d0dddae761cbfbc3f89e0e
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539847"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804757"
 ---
 # <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>チュートリアル: 転移学習と ML.NET を使用して TensorFlow 画像分類子を再トレーニングする
 
@@ -43,7 +43,7 @@ ms.locfileid: "67539847"
 
 * [チュートリアル資産ディレクトリの .ZIP ファイル](https://download.microsoft.com/download/0/E/5/0E5E0136-21CE-4C66-AC18-9917DED8A4AD/image-classifier-assets.zip)
 
-* [InceptionV3 機械学習モデル](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
+* [InceptionV1 機械学習モデル](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
 
 ## <a name="select-the-appropriate-machine-learning-task"></a>適切な機械学習タスクを選択する
 
@@ -77,7 +77,7 @@ ms.locfileid: "67539847"
 
 この画像分類モデルでは [Inception モデル](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)を再利用します。これは、TensorFlow モデルによって画像全体の 1,000 個のクラス ("傘"、"ジャージー"、"皿洗い機" など) への分類を試行する、`ImageNet` データセットに対してトレーニングされた人気のある画像認識モデルです。
 
-`Inception v3 model` は[ディープ畳み込みニューラル ネットワーク](https://en.wikipedia.org/wiki/Convolutional_neural_network)と分類することができます。また、分野によっては、困難な視覚認識タスクで、人間のパフォーマンスに匹敵するかそれを超える妥当なパフォーマンスを達成できます。 モデル/アルゴリズムは、複数の研究者によって開発され、以下の元の論文に基づいています。[「Rethinking the Inception Architecture for Computer Vision (Computer Vision のためのインセプション アーキテクチャの再考)」(Szegedy 他)](https://arxiv.org/abs/1512.00567)
+`Inception v1 model` は[ディープ畳み込みニューラル ネットワーク](https://en.wikipedia.org/wiki/Convolutional_neural_network)と分類することができます。また、分野によっては、困難な視覚認識タスクで、人間のパフォーマンスに匹敵するかそれを超える妥当なパフォーマンスを達成できます。 モデル/アルゴリズムは、複数の研究者によって開発され、以下の元の論文に基づいています。[「Rethinking the Inception Architecture for Computer Vision (Computer Vision のためのインセプション アーキテクチャの再考)」(Szegedy 他)](https://arxiv.org/abs/1512.00567)
 
 `Inception model` は何千種類もの画像に対して事前にトレーニングされているため、画像の識別に必要な[画像の特徴](https://en.wikipedia.org/wiki/Feature_(computer_vision))が含まれています。 以下の画像機能レイヤーは単純な特徴 (端など) を認識し、上のレイヤーはより複雑な特徴 (図形など) を認識します。 最後のレイヤーは、画像の分類方法を既に理解しているトレーニング済みのモデルから始めているため、はるかに小さいデータ セットに対してトレーニングされます。 モデルで 3 つ以上のカテゴリを分類できるので、これは[複数クラス分類器](../resources/tasks.md#multiclass-classification)の一例です。 
 
@@ -172,7 +172,7 @@ toaster2.png    appliance
 
 1. **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[追加]**  >  **[新しい項目]** を選択します。
 
-1. **[新しい項目の追加]** ダイアログ ボックスで、 **[クラス]** を選択し、 **[名前]** フィールドを「*ImageData.cs*」に変更します。 次に、 **[追加]** を選択します。
+1. **[新しい項目の追加]** ダイアログ ボックスで、 **[クラス]** を選択し、 **[名前]** フィールドを「*ImageData.cs*」に変更します。 次に **[追加]** を選択します。
 
     コード エディターで *ImageData.cs* ファイルが開きます。 次の `using` ステートメントを *ImageData.cs* の先頭に追加します。
 
@@ -191,7 +191,7 @@ toaster2.png    appliance
 
 1. **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[追加]**  >  **[新しい項目]** を選択します。
 
-1. **[新しい項目の追加]** ダイアログ ボックスで、 **[クラス]** を選択し、 **[名前]** フィールドを *ImagePrediction.cs* に変更します。 次に、 **[追加]** を選択します。
+1. **[新しい項目の追加]** ダイアログ ボックスで、 **[クラス]** を選択し、 **[名前]** フィールドを *ImagePrediction.cs* に変更します。 次に **[追加]** を選択します。
 
     コード エディターに *ImagePrediction.cs* ファイルが開きます。 *ImagePrediction.cs* の先頭にある `System.Collections.Generic` と `System.Text` `using` の両方のステートメントを削除します。
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: ef9c9bab5c1cebb06edf934254507180e2197349
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 1277b35723777760deebb6606ddc90bd21e654ec
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306562"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744120"
 ---
 # <a name="-operator-c-reference"></a>= 演算子 (C# リファレンス)
 
@@ -64,7 +64,7 @@ x = x op y
 
 ## <a name="operator-overloadability"></a>演算子のオーバーロード可/不可
 
-ユーザー定義型は、代入演算子をオーバー ロードできません。 ただし、ユーザー定義型は、別の型への暗黙的な変換を定義できます。 この方法により、ユーザー定義型の値を、別の型の変数、プロパティ、またはインデクサー要素に割り当てることができます。 詳しくは、[implicit](../keywords/implicit.md) キーワードに関する記事をご覧ください。
+ユーザー定義型は、代入演算子をオーバー ロードできません。 ただし、ユーザー定義型は、別の型への暗黙的な変換を定義できます。 この方法により、ユーザー定義型の値を、別の型の変数、プロパティ、またはインデクサー要素に割り当てることができます。 詳細については、「[User-defined conversion operators](user-defined-conversion-operators.md)」(ユーザー定義の変換演算子) を参照してください。
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 

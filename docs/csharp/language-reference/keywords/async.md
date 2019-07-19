@@ -9,12 +9,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: f902d6a92f9d982dc00c3446f7b516c372f1a30e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 346cfccd076866e9c321974aaa8c8ddd367a17ea
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709521"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859575"
 ---
 # <a name="async-c-reference"></a>async (C# リファレンス)
 `async` 修飾子を使用して、メソッド、[ラムダ式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)、または[匿名メソッド](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)が非同期であることを指定します。 この修飾子が使用されているメソッドまたは式を、"*非同期メソッド*" と呼びます。 次の例では、`ExampleMethodAsync` という名前の非同期メソッドを定義します。 
@@ -70,7 +70,7 @@ Windows ストア アプリとしてコードを実行するには:
 
 - <xref:System.Threading.Tasks.Task>
 - <xref:System.Threading.Tasks.Task%601>
-- [void](../../../csharp/language-reference/keywords/void.md): イベント ハンドラーに対してのみ使用します。
+- [void](../../../csharp/language-reference/keywords/void.md)。 `async void` メソッドは、呼び出し元でそれらのメソッドを `await` できず、正常終了またはエラー状態を報告するために別のメカニズムを実装する必要があるため、一般に、イベント ハンドラー以外のコードには推奨されません。
 - C# 7.0 以降、アクセス可能な `GetAwaiter` を持つ任意の型です。 `System.Threading.Tasks.ValueTask<TResult>` 型はこの実装例で、 NuGet パッケージ `System.Threading.Tasks.Extensions` を追加することで使用できます。 
 
 非同期メソッドでは [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md)、[ref](../../../csharp/language-reference/keywords/ref.md)、[out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) パラメーターを宣言できません。また、[参照戻り値](../../programming-guide/classes-and-structs/ref-returns.md)を指定することもできません。ただし、これらのパラメーターを持つメソッドを呼び出すことはできます。  

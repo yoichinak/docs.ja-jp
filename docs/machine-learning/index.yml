@@ -15,7 +15,7 @@ sections:
   - title: 開始するには
     items:
       - type: paragraph
-        text: ML.NET を使用して機械学習アプリケーションを構築する方法については、「<a href="/dotnet/machine-learning/how-does-mldotnet-work">What is ML.NET and how does it work? (ML.NET の概要とそのしくみ)</a>」を参照してください。 また、<b>Microsoft.ML</b> nuget パッケージをアプリケーションに追加することから始めることもできます。
+        text: ML.NET を使用して機械学習アプリケーションを構築する方法については、「<a href="/dotnet/machine-learning/how-does-mldotnet-work">What is ML.NET and how does it work? (ML.NET の概要とそのしくみ)</a>」を参照してください。 また、<b>Microsoft.ML</b> NuGet パッケージをアプリケーションに追加することから始めることもできます。
   - title: ステップ バイ ステップのチュートリアル
     items:
       - type: paragraph

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: 1c3316fa88d3024af4e81072cbe64c13cfbdb18e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 11c872767b5e3595da1fb4982d3b12e0fc77db98
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610293"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238586"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>WPF アプリケーションへのグラス フレームの拡張
 
@@ -30,7 +30,7 @@ ms.locfileid: "67610293"
 
 ![スクリーン ショットのグラス フレームが IE7 のアドレス バーの背後に拡張します。](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションにグラス フレームを拡張するには、アンマネージ [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] へのアクセスが必要です。 次のコード例は、プラットフォーム呼び出し (pinvoke) は、クライアント領域にフレームを拡張するために必要な 2 つの api。 という名前のクラスで宣言されてこれらの API の各**NonClientRegionAPI**します。
+上のグラス フレームを拡張する、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アプリケーションでは、アンマネージ API へのアクセスが必要です。 次のコード例は、プラットフォーム呼び出し (pinvoke) は、クライアント領域にフレームを拡張するために必要な 2 つの api。 という名前のクラスで宣言されてこれらの API の各**NonClientRegionAPI**します。
 
 ```csharp
 [StructLayout(LayoutKind.Sequential)]

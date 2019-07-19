@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 4ea417b2a922574eb92a07aa845c360f6e843f17
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7d5ff09bb9cc8da45f44cf6fe952411e7cd3f4c4
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663395"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238540"
 ---
 # <a name="dependency-property-value-precedence"></a>依存関係プロパティ値の優先順位
 <a name="introduction"></a>このトピックでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] プロパティ システムの動作が依存関係プロパティの値に与える影響と、システムのさまざまな部分がプロパティの有効な値に適用する優先順位について説明します。  
@@ -43,7 +43,7 @@ ms.locfileid: "64663395"
   
 2. **アクティブなアニメーション、または保留動作のアニメーション。** 実際的な効果を得るためには、プロパティのアニメーションは、基本 (アニメーション化されていない) 値 (ローカルに設定された値であっても) より高い優先順位を持つことができる必要があります。 詳しくは、後の「[強制型変換、アニメーション、基本値](#animations)」をご覧ください。  
   
-3. **ローカル値。** ローカル値を属性またはプロパティ要素として設定することに相当「ラッパー」プロパティの利便性を設定する可能性があります[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]、またはへの呼び出しによって、 <xref:System.Windows.DependencyObject.SetValue%2A> [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]特定のインスタンスのプロパティを使用します。 バインドまたはリソースを使ってローカル値を設定する場合、これらは直接値が設定された場合のように優先されます。  
+3. **ローカル値。** ローカル値を属性またはプロパティ要素として設定することに相当「ラッパー」プロパティの利便性を設定する可能性があります[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]、またはへの呼び出しによって、 <xref:System.Windows.DependencyObject.SetValue%2A> API が特定のインスタンスのプロパティを使用します。 バインドまたはリソースを使ってローカル値を設定する場合、これらは直接値が設定された場合のように優先されます。  
   
 4. **TemplatedParent テンプレート プロパティ。** 要素に、<xref:System.Windows.FrameworkElement.TemplatedParent%2A>テンプレートの一部として作成された場合 (、<xref:System.Windows.Controls.ControlTemplate>または<xref:System.Windows.DataTemplate>)。 これが適用されるケースについて詳しくは、後の「[TemplatedParent](#templatedparent)」をご覧ください。 テンプレート内では、次の優先順位が適用されます。  
   

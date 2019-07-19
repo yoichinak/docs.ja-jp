@@ -72,7 +72,7 @@ ms.locfileid: "59090499"
 主な .NET Core メタパッケージ:
 
 - [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) - .NET Core 配布に含まれるライブラリについて記述します。 [`.NETCoreApp` フレームワーク](https://github.com/dotnet/core-setup/blob/release/1.1.0/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj)を確立します。 よりサイズの小さな `NETStandard.Library` に依存します。
-- [Microsoft.AspNetCore.All](https://www.nuget.org/packages/Microsoft.AspNetCore.App) - ASP.NET Core と Entity Framework Core からのパッケージで、サポートされているすべてのパッケージが含まれます。ただし、サードパーティの依存関係が含まれるものを除きます。 詳細については、「[Microsoft.AspNetCore.All metapackage for ASP.NET Core](/aspnet/core/fundamentals/metapackage)」 (ASP.NET Core 用の Microsoft.AspNetCore.All メタパッケージ) を参照してください。
+- [Microsoft.AspNetCore.App](https://www.nuget.org/packages/Microsoft.AspNetCore.App) - ASP.NET Core と Entity Framework Core からのパッケージで、サポートされているすべてのパッケージが含まれます。ただし、サードパーティの依存関係が含まれるものを除きます。 詳細については、「[ASP.NET Core 2.1 以降に対応した Microsoft.AspNetCore.App メタパッケージ](/aspnet/core/fundamentals/metapackage-app)」を参照してください。
 - [Microsoft.AspNetCore.All](https://www.nuget.org/packages/Microsoft.AspNetCore.All) - ASP.NET Core、Entity Framework Core、および ASP.NET Core と Entity Framework Core によって使用される内部依存関係およびサード パーティの依存関係からの、サポートされるすべてのパッケージが含まれます。 詳しくは、「[ASP.NET Core 2.x 用 Microsoft.AspNetCore.All メタパッケージ](/aspnet/core/fundamentals/metapackage)」をご覧ください。
 - [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) - mscorlib ベースのポータブル クラス ライブラリ (PCL) を .NET Core で実行できるようにするための互換性ファサードのセットです。
 

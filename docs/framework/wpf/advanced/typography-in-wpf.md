@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 94937b2c3e6935474d337c62bfd6698441dfcc2e
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 98dc2899fd2c6a294f9f878ccbf87f60520bbe78
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860114"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238686"
 ---
 # <a name="typography-in-wpf"></a>WPF のタイポグラフィ
 このトピックでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の主要な文字体裁の機能について説明します。 これらの機能には、テキスト レンダリングの品質とパフォーマンスの向上、[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 文字体裁のサポート、国際対応テキストの強化、フォントのサポートの強化、新しいテキスト API (アプリケーション プログラミング インターフェイス) が含まれます。  
@@ -142,7 +142,7 @@ ClearType の y 方向アンチエイリアシングを適用したテキスト
 ### <a name="advanced-text-formatting"></a>テキストの高度な書式設定  
  テキスト Api の最も高度なレベル[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]を使用してカスタム テキスト レイアウトを作成する機能が提供する、<xref:System.Windows.Media.TextFormatting.TextFormatter>オブジェクトとその他の種類で、<xref:System.Windows.Media.TextFormatting>名前空間。 <xref:System.Windows.Media.TextFormatting.TextFormatter>関連クラスは、ユーザー定義による文字形式、段落のスタイルをサポートするカスタム テキスト レイアウトを実装する線の改行ルール、および他のレイアウトが国際対応テキストの機能を使用するとします。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] テキスト レイアウト サポートに関する既定の実装のオーバーライドが必要となるケースはほとんどありません。 ただし、テキストを編集するコントロールやアプリケーションを作成する場合は、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の既定の実装とは異なる実装が必要になることがあります。  
   
- 従来のテキストとは異なり[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]、<xref:System.Windows.Media.TextFormatting.TextFormatter>一連のコールバック メソッドを介してテキスト レイアウト クライアントと対話します。 クライアントは、これらのメソッドの実装を提供する必要があります、<xref:System.Windows.Media.TextFormatting.TextSource>クラス。 次の図は、クライアント アプリケーション間でテキスト レイアウトの相互作用と<xref:System.Windows.Media.TextFormatting.TextFormatter>します。  
+ 従来のテキスト、API とは異なり、<xref:System.Windows.Media.TextFormatting.TextFormatter>一連のコールバック メソッドを介してテキスト レイアウト クライアントと対話します。 クライアントは、これらのメソッドの実装を提供する必要があります、<xref:System.Windows.Media.TextFormatting.TextSource>クラス。 次の図は、クライアント アプリケーション間でテキスト レイアウトの相互作用と<xref:System.Windows.Media.TextFormatting.TextFormatter>します。  
   
  ![テキスト レイアウト クライアントと TextFormatter のダイアグラム](./media/typography-in-wpf/text-layout-text-formatter-interaction.png)  
   

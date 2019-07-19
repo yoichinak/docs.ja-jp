@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-ms.openlocfilehash: 4ed6dd33efd5fdc5e2c61df4173bec5cc2f0d807
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 0d3b44007524f502d8393d1dc1834142090a7a15
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859694"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238654"
 ---
 # <a name="advanced-text-formatting"></a>テキストの高度な書式設定
 Windows Presentation Foundation (WPF) は、テキストを含む、アプリケーションでの堅牢な Api のセットを提供します。 レイアウトと[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]Api など<xref:System.Windows.Controls.TextBlock>、最も一般的な提供および一般的な要素を使用して、テキスト表示にします。 などの Api を描画<xref:System.Windows.Media.GlyphRunDrawing>と<xref:System.Windows.Media.FormattedText>図面の書式設定されたテキストを含めるための手段を提供します。 高度なレベルでは、一番[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]拡張可能なテキストを書式設定テキスト プレゼンテーションでは、テキスト保管管理、テキスト ラン書式設定の管理、および埋め込みオブジェクト管理などのすべての側面を制御するエンジンを提供します。  
@@ -38,7 +38,7 @@ Windows Presentation Foundation (WPF) は、テキストを含む、アプリケ
 ## <a name="using-the-text-formatter"></a>テキスト フォーマッタを使用する  
  <xref:System.Windows.Media.TextFormatting.TextFormatter> [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]テキストの書式設定エンジンし、書式設定して、テキスト行の改行のサービスを提供します。 テキスト フォーマッタは、さまざまなテキスト文字書式や段落スタイルを処理し、国際的なテキスト レイアウトに対応しています。  
   
- 従来のテキストとは異なり[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]、<xref:System.Windows.Media.TextFormatting.TextFormatter>一連のコールバック メソッドを介してテキスト レイアウト クライアントと対話します。 クライアントは、これらのメソッドの実装を提供する必要があります、<xref:System.Windows.Media.TextFormatting.TextSource>クラス。 次の図は、クライアント アプリケーション間でテキスト レイアウトの相互作用と<xref:System.Windows.Media.TextFormatting.TextFormatter>します。  
+ 従来のテキスト、API とは異なり、<xref:System.Windows.Media.TextFormatting.TextFormatter>一連のコールバック メソッドを介してテキスト レイアウト クライアントと対話します。 クライアントは、これらのメソッドの実装を提供する必要があります、<xref:System.Windows.Media.TextFormatting.TextSource>クラス。 次の図は、クライアント アプリケーション間でテキスト レイアウトの相互作用と<xref:System.Windows.Media.TextFormatting.TextFormatter>します。  
   
  ![テキスト レイアウト クライアントと TextFormatter のダイアグラム](./media/advanced-text-formatting/text-layout-textformatter-interaction.png)  
   
