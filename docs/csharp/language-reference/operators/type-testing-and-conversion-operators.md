@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 4468bc86634ad97f2dfbdb5f842eb5206f957a79
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: a9e5139e6d650aa6935bff934ca25502fdc14775
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307514"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744076"
 ---
 # <a name="type-testing-and-conversion-operators-c-reference"></a>型テストおよび変換演算子 (C# リファレンス)
 
@@ -109,7 +109,7 @@ E is T ? (T)(E) : (T)null
 
 [!code-csharp-interactive[cast expression](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#Cast)]
 
-サポートされる明示的な変換については、[C# 言語仕様](~/_csharplang/spec/introduction.md)の「[Explicit conversions (明示的な変換)](~/_csharplang/spec/conversions.md#explicit-conversions)」セクションをご覧ください。 明示的または暗黙的なカスタム型変換を定義する方法については、それぞれ、キーワード [explicit](../keywords/explicit.md) または [implicit](../keywords/implicit.md) の記事をご覧ください。
+サポートされる明示的な変換については、[C# 言語仕様](~/_csharplang/spec/introduction.md)の「[Explicit conversions (明示的な変換)](~/_csharplang/spec/conversions.md#explicit-conversions)」セクションをご覧ください。 カスタムの明示的または暗黙的な型変換を定義する方法については、「[User-defined conversion operators](user-defined-conversion-operators.md)」(ユーザー定義の変換演算子) を参照してください。
 
 ### <a name="other-usages-of-"></a>() の他の使用方法
 
@@ -139,7 +139,7 @@ E is T ? (T)(E) : (T)null
 
 `is`、`as`、および `typeof` 演算子は、オーバーロードできません。
 
-ユーザー定義型で `()` 演算子をオーバーロードすることはできませんが、キャスト式で実行できるカスタム型変換を定義することはできます。 詳しくは、[explicit](../keywords/explicit.md) および [implicit](../keywords/implicit.md) キーワードに関する記事をご覧ください。
+ユーザー定義型で `()` 演算子をオーバーロードすることはできませんが、キャスト式で実行できるカスタム型変換を定義することはできます。 詳細については、「[User-defined conversion operators](user-defined-conversion-operators.md)」(ユーザー定義の変換演算子) を参照してください。
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 

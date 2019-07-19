@@ -56,7 +56,7 @@ C# 7.0 以降、`throw` は、式およびステートメントとして使用�
 
    [!code-csharp[csrefKeyword#4](~/samples/snippets/csharp/language-reference/keywords/throw/conditional.cs#1)]  
   
-- [ull 合体演算子](../operators/null-coalescing-operator.md)。 次の例では、null 合体演算子と共に `throw` 式を使用して、`Name` プロパティに割り当てられた文字列が `null` の場合に例外をスローします。
+- [Null 合体演算子](../operators/null-coalescing-operator.md)。 次の例では、null 合体演算子と共に `throw` 式を使用して、`Name` プロパティに割り当てられた文字列が `null` の場合に例外をスローします。
 
    [!code-csharp[csrefKeyword#5](~/samples/snippets/csharp/language-reference/keywords/throw/coalescing.cs#1)]  
 

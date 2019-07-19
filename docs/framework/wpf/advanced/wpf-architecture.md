@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 697a3dff663b333ce97e05783df6b163692b5d9e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: c214cb39bf51dad2aafe4ec0c9050f355db5b2c5
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610350"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331669"
 ---
 # <a name="wpf-architecture"></a>WPF アーキテクチャ
 このトピックでは、Windows Presentation Foundation (WPF) クラスの階層構造のガイド付きツアーを提供します。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]の主要なサブシステムの大半に対応し、それらがどのようにやり取りするかについて説明します。 また、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]の構造設計者によって行われた選択についての幾つかを詳細に説明します。  
@@ -30,115 +30,115 @@ ms.locfileid: "67610350"
 ## <a name="systemobject"></a>System.Object  
  主要な[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]プログラミング モデルがマネージ コードを通じて公開されます。 初期の設計段階で[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]のさまざまなシステムのマネージ コンポーネントとアンマネージのコンポーネントとの線引きについての論争がありました。 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]は生産性と堅牢性 (メモリ管理、エラー処理、共通型システムなどを含む) のある開発を行う数多くの機能を提供しますが、それらはコストの増加を招きます。  
   
- 主要コンポーネント[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]は次の図のようになります。 (PresentationFramework、PresentationCore、および milcore) の図の赤のセクションではの大規模なコード部分[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]します。 これらのうち、1 つだけは、アンマネージ コンポーネント – milcore です。 緊密な統合を有効にするには Milcore がアンマネージ コードで記述された[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]します。 すべて表示[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]を行う、[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]エンジン、効率的なハードウェアとソフトウェア レンダリングすることができます。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] メモリと実行を細かく制御も必要です。 Milcore 合成エンジンは、非常に機密性の高い、やの多くの利点をあきらめる必要なパフォーマンス、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]パフォーマンスを向上させます。  
+ の主要なコンポーネント[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]を次の図に示します。 図の赤いセクション (プレゼンテーションフレームワーク、プレゼンテーションコア、およびミルコア) は、の[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]主要なコード部分です。 これらのうちの1つだけがアンマネージコンポーネント–ミルコアです。 との緊密な統合を可能にするために、ミルコア[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]はアンマネージコードで記述されています。 で[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]は、すべてのディスプレイが[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]エンジンによって実行されるため、ハードウェアとソフトウェアを効率的にレンダリングできます。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]また、メモリと実行を細かく制御する必要もあります。 密度の高い合成エンジンは、パフォーマンスに大きな影響を与えます。パフォーマンスを向上さ[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]せるには、の多くの利点が必要です。  
   
- ![WPF、.NET Framework 内の位置。](./media/wpf-architect1.PNG "wpf_architect1")  
+ ![.NET Framework 内の WPF の位置。](./media/wpf-architect1.PNG "wpf_architect1")  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]のマネージ コードとアンマネージの部分の間の通信はこのトピックの後半で説明します。 マネージ プログラミング モデルの残りの部分を以下に示します。  
   
 <a name="System_Threading_DispatcherObject"></a>   
 ## <a name="systemthreadingdispatcherobject"></a>System.Threading.DispatcherObject  
- 多くのオブジェクトに[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]から派生<xref:System.Windows.Threading.DispatcherObject>、同時実行を処理して、スレッド処理の基本的な構造を提供します。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ディスパッチャーによって実装されたメッセージング システムに基づいています。 これは非常によく似た、使い慣れた[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]メッセージ ポンプは実際には、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]ディスパッチャーが User32 メッセージをスレッド間の呼び出しを実行するために使用します。  
+ の[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]ほとんどのオブジェクトは<xref:System.Windows.Threading.DispatcherObject>、同時実行とスレッド処理を行うための基本的な構成要素を提供するから派生します。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]は、ディスパッチャーによって実装されるメッセージングシステムに基づいています。 これは、使い慣れ[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]たメッセージポンプとよく似ています。実際には、ディスパッチャーは[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 、user32.dll メッセージを使用して、スレッド間の呼び出しを実行します。  
   
- 本当に 2 つの主要で同時実行を検討する場合を理解する概念がある[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]– ディスパッチャーとスレッド アフィニティ。  
+ での同時実行に[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]ついては、ディスパッチャーとスレッドアフィニティの2つの主要概念を理解しておく必要があります。  
   
- デザイン フェーズ中に[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]目標は、実行の 1 つのスレッドに移動することでしたが、非スレッド「関連付け」モデル。 スレッドの関係は、コンポーネントの状態の保存するために実行中のスレッドの id を使用するときに発生します。 これの最も一般的な形式では、状態を格納する、スレッド ローカル ストア (TLS) を使用します。 スレッドの関係では、実行の各論理スレッドの所有、オペレーティング システム、メモリ集中型になることで、1 つだけの物理スレッドである必要があります。 最後に、WPF のスレッド モデルがスレッドの関係を持つシングル スレッド実行の既存の User32 スレッド モデルとの同期が保持されます。 その理由は、プライマリ相互運用性のされました – などのシステム[!INCLUDE[TLA2#tla_ole2.0](../../../../includes/tla2sharptla-ole2-0-md.md)]クリップボード、および Internet Explorer のすべて 1 つのスレッド アフィニティ (STA) の実行が必要です。  
+ の[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]設計フェーズでは、目標は実行の1つのスレッドに移動しましたが、非スレッド "関連付け済み" モデルに移行することでした。 スレッドアフィニティは、コンポーネントが実行中のスレッドの id を使用して何らかの種類の状態を格納するときに発生します。 最も一般的な形式は、スレッドローカルストア (TLS) を使用して状態を格納することです。 スレッドアフィニティでは、実行の各論理スレッドが、オペレーティングシステムの1つの物理スレッドによって所有されている必要があります。これは、メモリを集中的に使用する可能性があります。 最終的には、WPF のスレッドモデルは、スレッドアフィニティを使用したシングルスレッド実行の既存の User32.dll スレッドモデルと同期した状態に保たれます。 これの主な理由は相互運用性でした[!INCLUDE[TLA2#tla_ole2.0](../../../../includes/tla2sharptla-ole2-0-md.md)]。クリップボードや Internet Explorer のようなシステムでは、すべてシングルスレッドアフィニティ (STA) を実行する必要があります。  
   
- STA スレッドでオブジェクトがあること必要があります、スレッド間で通信および検証する方法、適切なスレッドであります。 ディスパッチャーのロールが生じます。 ディスパッチャーは、複数の優先順位キューでのシステムをディスパッチする基本的なメッセージです。 メッセージの例には、生の入力の通知 (マウスの移動)、framework 関数 (レイアウト)、またはユーザー コマンドが含まれます (このメソッドを実行)。 派生することによって<xref:System.Windows.Threading.DispatcherObject>、作成する、 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] STA の動作を持つオブジェクトし、は指定のポインターをディスパッチャーに作成時にします。  
+ STA スレッドを持つオブジェクトがある場合は、スレッド間で通信を行い、正しいスレッドであることを検証する方法が必要です。 ここでは、ディスパッチャーの役割があります。 ディスパッチャーは、優先順位の高い複数のキューを持つ基本的なメッセージディスパッチシステムです。 メッセージの例としては、未加工の入力通知 (マウス移動)、フレームワーク関数 (レイアウト)、ユーザーコマンド (このメソッドの実行) などがあります。 から<xref:System.Windows.Threading.DispatcherObject>派生することによって[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 、STA の動作を持つオブジェクトを作成し、作成時にディスパッチャーへのポインターを与えます。  
   
 <a name="System_Windows_DependencyObject"></a>   
 ## <a name="systemwindowsdependencyobject"></a>System.Windows.DependencyObject  
- ビルドで使用されるプライマリ アーキテクチャ哲学の 1 つ[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]プロパティの基本設定がメソッドまたはイベントを超えました。 プロパティ宣言を簡単にアクションではなく、インテントを指定できます。 これは、モデル駆動型、またはデータ ドリブンでユーザー インターフェイスのコンテンツを表示するためのシステムにもサポートされます。 この理念は、アプリケーションの動作をより細かく制御するために、バインドが複数のプロパティの作成の目的の効果がありました。  
+ 構築[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]で使用される主要なアーキテクチャ思想の1つは、メソッドまたはイベントのプロパティを優先することでした。 プロパティは宣言型であり、アクションではなく意図を簡単に指定できます。 また、ユーザーインターフェイスのコンテンツを表示するための、モデル駆動型またはデータ駆動型のシステムもサポートされています。 この哲学には、アプリケーションの動作をより適切に制御するために、バインドできるプロパティを作成することを意図した効果がありました。  
   
- 高度なプロパティ システムのプロパティによって駆動システムの詳細を確保するために、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]提供が必要でした。 この豊富な機能の簡単な例では、変更通知です。 双方向バインディングを有効にするには、変更通知をサポートするバインドの両方の側を作成する必要があります。 プロパティの値に関連付けられている動作を確保するためには、プロパティ値が変更されたときに通知する必要があります。 Microsoft .NET Framework には、インターフェイス、 **INotifyPropertyChange**、これは省略可能な変更の通知を発行するオブジェクトを許可します。  
+ プロパティによってより多くのシステムを使用するために、で提供される[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]よりも豊富なプロパティシステムが必要です。 この豊富な例として、変更通知があります。 双方向のバインドを有効にするには、変更通知をサポートするために、バインドの両側が必要です。 プロパティ値に関連付けられた動作を使用するには、プロパティ値が変更されたときに通知を受け取る必要があります。 Microsoft .NET Framework には**INotifyPropertyChange**というインターフェイスがあります。これにより、オブジェクトは変更通知を発行できますが、これは省略可能です。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 派生したより豊富なプロパティ システムの提供、<xref:System.Windows.DependencyObject>型。 プロパティ システムは、プロパティ式間の依存関係の追跡、依存関係を変更するときに、プロパティ値を自動的に再評価という点で、「依存関係」プロパティのシステムでは本当に。 例では、継承したプロパティがある場合 (など<xref:System.Windows.Controls.Control.FontSize%2A>) には、値を継承する要素の親プロパティが変更された場合、システムが自動的に更新します。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]<xref:System.Windows.DependencyObject>型から派生した、豊富なプロパティシステムを提供します。 プロパティシステムは、プロパティ式間の依存関係を追跡し、依存関係が変更されたときにプロパティ値を自動的に再検証するという、本当に "依存関係" プロパティシステムです。 たとえば、(など<xref:System.Windows.Controls.Control.FontSize%2A>の) を継承するプロパティがある場合、値を継承する要素の親でプロパティが変更されると、システムは自動的に更新されます。  
   
- 基盤となる、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]プロパティ システムは、プロパティ式の概念です。 この最初のリリースの[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]プロパティ式のシステムが閉じられるし、式はすべて、framework の一部として提供します。 式は、プロパティ システムがデータ バインディング、スタイル設定がないか、継承はハード コーディングしていますがではなく、framework 内の以降のレイヤーによって提供される理由です。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]プロパティシステムの基礎は、プロパティ式の概念です。 この最初のリリースの[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]では、プロパティ式システムが閉じられており、式はすべてフレームワークの一部として提供されています。 式は、プロパティシステムがデータバインディング、スタイル設定、継承をハードコーディングしていなくても、フレームワーク内の後のレイヤーによって提供されるためです。  
   
- プロパティ システムのプロパティの値のスパース ストレージも提供します。 オブジェクトは、数十 (ない場合は数百) のプロパティを持つことができ、値のほとんどは、既定の状態であるため (など、スタイルで設定を継承) オブジェクトのすべてのインスタンスが定義されたすべてのプロパティの完全な重みは、する必要があります。  
+ プロパティシステムでは、プロパティ値のスパースストレージも提供されます。 オブジェクトは多数のプロパティを持つことができ、ほとんどの値は既定の状態 (継承、スタイルによる設定など) であるため、オブジェクトのすべてのインスタンスで定義されているすべてのプロパティの完全な重みを持つ必要があるわけではありません。  
   
- プロパティ システムの最終的な新しい機能とは、添付プロパティの概念です。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 要素は、構成とコンポーネントの再利用の原則に基づいて構築されます。 多くの場合は、の一部の要素を含む (のように、<xref:System.Windows.Controls.Grid>レイアウト要素) 子要素 (行/列の情報) のような動作を制御する追加のデータが必要です。 すべての要素では、これらすべてのプロパティを関連付ける、代わりに、他のオブジェクトのプロパティの定義を提供する任意のオブジェクトが許可されています。 これは、JavaScript の"expando"機能に似ています。  
+ プロパティシステムの最後の新機能は、添付プロパティの概念です。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]要素は、合成とコンポーネントの再利用の原則に基づいて構築されます。 多くの場合、含まれている要素 ( <xref:System.Windows.Controls.Grid>レイアウト要素など) は、その動作を制御するために子要素の追加データを必要とします (行または列の情報など)。 これらのすべてのプロパティをすべての要素に関連付けるのではなく、すべてのオブジェクトで他のオブジェクトのプロパティ定義を提供できます。 これは、JavaScript の "expando" 機能に似ています。  
   
 <a name="System_Windows_Media_Visual"></a>   
 ## <a name="systemwindowsmediavisual"></a>System.Windows.Media.Visual  
- 定義されているシステムでは、次の手順は画面に描画されるピクセルになっています。 <xref:System.Windows.Media.Visual>クラスがそれぞれ必要に応じて描画命令とこれらの手順 (クリッピング、変換など) をレンダリングする方法についてのメタデータを含む、ビジュアル オブジェクトのツリーを構築するために提供します。 <xref:System.Windows.Media.Visual> ようにする非常に軽量で柔軟なほとんどの機能のパブリック API に公開がない場合や保護されているコールバック関数に大きく依存して設計されています。  
+ システムが定義されている場合、次の手順では画面にピクセルが描画されます。 クラス<xref:System.Windows.Media.Visual>は、ビジュアルオブジェクトのツリーを構築するためのを提供します。各オブジェクトには、必要に応じて、これらの命令 (クリッピング、変換など) のレンダリング方法に関する描画命令とメタデータが含まれています。 <xref:System.Windows.Media.Visual>は、非常に軽量で柔軟性があるように設計されています。そのため、ほとんどの機能はパブリック API を公開せず、保護されたコールバック関数に大きく依存しています。  
   
- <xref:System.Windows.Media.Visual> エントリ ポイントは、実際に、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]コンポジション システム。 <xref:System.Windows.Media.Visual> マネージこれらの 2 つサブシステム間の接続ポイントは、[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]まさに、します。  
+ <xref:System.Windows.Media.Visual>は、実際には[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]コンポジションシステムへのエントリポイントです。 <xref:System.Windows.Media.Visual>は、マネージ API とアンマネージドミルコアの2つのサブシステム間の接続ポイントです。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] milcore によって管理されるアンマネージ データ構造を走査して、データを表示します。 コンポジションのノードと呼ばれるこれらの構造は、各ノードでレンダリング指示の階層表示にはツリーを表します。 右側にある次の図のように、このツリーはメッセージング プロトコルを介してアクセスできます。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]は、ミルコアによって管理されているアンマネージデータ構造を走査することによってデータを表示します。 これらの構造体は、合成ノードと呼ばれ、各ノードでレンダリング命令を含む階層表示ツリーを表します。 次の図の右側に示されているこのツリーは、メッセージングプロトコルを使用してのみアクセスできます。  
   
- プログラミング[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]、作成する<xref:System.Windows.Media.Visual>要素、および派生型は、このメッセージング プロトコルを使って構成ツリーに内部的に通信します。 各<xref:System.Windows.Media.Visual>で[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]1 つのフィルターまたはいくつかの構成ノードを作成することがあります。  
+ プログラミング[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]時には、 <xref:System.Windows.Media.Visual>このメッセージングプロトコルを使用して内部的に合成ツリーに通信する要素と派生型を作成します。 の<xref:System.Windows.Media.Visual>各[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]では、1つ、なし、または複数の合成ノードを作成できます。  
   
- ![Windows Presentation Foundation のビジュアル ツリー。](./media/wpf-architecture2.PNG "wpf_architecture2")  
+ ![Windows Presentation Foundation のビジュアルツリー。](./media/wpf-architecture2.PNG "wpf_architecture2")  
   
- ここでのビジュアル ツリー全体を通知する非常に重要なアーキテクチャの詳細は、描画命令はキャッシュします。 グラフィックスの用語で[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]保持モードのレンダリング システムを使用します。 これにより、高いリフレッシュ レートを合成システムによってユーザー コードにコールバックをブロックせずに再描画するシステムです。 これは、応答しないアプリケーションの外観を回避できます。  
+ ここで注目すべき非常に重要なアーキテクチャの詳細があります。ビジュアルのツリー全体と描画命令がキャッシュされます。 グラフィックス用語では[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 、は保持されたレンダリングシステムを使用します。 これにより、ユーザーコードへのコールバックでコンポジションシステムがブロックされることなく、高いリフレッシュレートでシステムを再描画できます。 これにより、応答しないアプリケーションの外観を防ぐことができます。  
   
- ダイアグラムで非常に顕著ではないもう 1 つの重要な詳細情報は、システムが実際に合成を実行する方法です。  
+ 図には実際にはわかりませんが、実際にはシステムが合成を実行する方法も重要です。  
   
- User32 でと[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]、イミディ エイト モードのクリッピング システムで、システムが動作します。 コンポーネントは、表示する必要があります、システムは、外側には、コンポーネントがタッチ (ピクセル単位) 許可されていないし、コンポーネントがそのボックス内のピクセルの描画によく寄せられる、クリッピングの境界を確立します。 このシステムのメモリの制約があるシステムで非常にうまく動作のみ影響を受けるコンポーネントをタッチする必要がある変更が生じた場合のため – これまでの 1 つのピクセルの色に関与して 2 つのコンポーネントではありません。  
+ User32.dll と[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]では、システムはイミディエイトモードのクリッピングシステムで動作します。 コンポーネントをレンダリングする必要がある場合、システムは、コンポーネントがピクセルに触れることができないクリッピングの範囲を確立し、そのボックス内のピクセルを描画するようにコンポーネントに要求します。 このシステムは、メモリの制約付きシステムで非常に適しています。影響を受けるコンポーネントに触れる必要があるのは、1つのピクセルの色に寄与する2つのコンポーネントがないためです。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] モデルの描画の「ペインタ アルゴリズム」を使用します。 これは、各コンポーネントをクリッピングするには、代わりに各コンポーネントは、表示の前に、バックアップから表示を要求はことを意味します。 これにより、前のコンポーネントの表示を描画するには、各コンポーネントができます。 このモデルの利点は、使用できる、部分的に透明な複雑な図形にあることです。 今日の最新のグラフィックス ハードウェアでは、このモデルは比較的高速な (ケースではないときに User32/[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]作成された)。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]"塗装のアルゴリズム" の描画モデルを使用します。 これは、各コンポーネントをクリッピングするのではなく、各コンポーネントが画面の前面に戻るように求められることを意味します。 これにより、各コンポーネントで前のコンポーネントの表示を描画できます。 このモデルの利点は、複雑で部分的に透明な図形を持つことができることです。 現在の最新のグラフィックスハードウェアでは、このモデルは比較的高速です (user32.dll/ [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]が作成されたときのケースではありません)。  
   
- 以前は、中核となる考え方を説明したように[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]プログラミングより宣言型「プロパティを中心とした」モデルに移動することです。 ビジュアルのシステムでは、これは表示されます興味深い部分はいくつかあります。  
+ 前述のように、の[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中核となる理念は、より宣言的な "プロパティ中心" のプログラミングモデルに移行することです。 ビジュアルシステムでは、これがいくつかの興味深い場所に表示されます。  
   
- 最初に、保持モード グラフィックス システムに関する場合は、これは本当に、命令型の DrawLine/DrawLine 型モデルからモデルへの移行、データ指向 – 新しい行 ()/新しい Line() します。 データ ドリブンのレンダリングには、この移動は、複雑な操作を表すプロパティを使用して描画命令にできます。 派生する型<xref:System.Windows.Media.Drawing>表示オブジェクト モデルでは実質的にします。  
+ まず、保持モードグラフィックシステムについて考えてみると、これは本当に命令型の DrawLine/DrawLine 型モデルからデータ指向モデル (new Line ()/new Line ()) に移動します。 このデータドリブンレンダリングへの移行により、プロパティを使用して描画命令に対する複雑な操作を表すことができます。 から<xref:System.Windows.Media.Drawing>派生する型は、実際にはレンダリングのためのオブジェクトモデルです。  
   
- 次に、アニメーション システムを評価する場合に、ほぼ完全な宣言型であるが表示されます。 次の場所、または次の色を計算する開発者を要求するには、代わりには、アニメーション オブジェクトのプロパティのセットとしてアニメーションを表現できます。 これらのアニメーションは、開発者やデザイナーの意図を表現できます (このボタンをクリックここからに移動が 5 秒間)、システムはこれを実現する最も効率的な方法を決定したりします。  
+ 次に、アニメーションシステムを評価すると、完全に宣言されていることがわかります。 開発者が次の位置または次の色を計算する必要はなく、アニメーションオブジェクトの一連のプロパティとしてアニメーションを表現できます。 これらのアニメーションは、開発者またはデザイナーの意図を表すことができます (このボタンをここから5秒に移動します)。また、システムは、これを実現するための最も効率的な方法を決定できます。  
   
 <a name="System_Windows_UIElement"></a>   
 ## <a name="systemwindowsuielement"></a>System.Windows.UIElement  
- <xref:System.Windows.UIElement> レイアウト、入力、およびイベントを含むコア サブシステムを定義します。  
+ <xref:System.Windows.UIElement>レイアウト、入力、イベントなどのコアサブシステムを定義します。  
   
- レイアウトの中核となる概念は、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]します。 多くのシステムでは、モデルのレイアウトの固定のセット (HTML では、レイアウトの 3 つのモデルがサポートしています。 フロー、絶対、およびテーブル) またはレイアウトのモデルのない (User32 だけでは絶対配置)。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 開発者および設計者が、命令型のロジックではなく、プロパティの値で制御できる、柔軟で拡張性の高いレイアウト モデルを求めていることを想定して開始します。 <xref:System.Windows.UIElement>レベル、レイアウトの基本的なコントラクトが導入 – でモデルをフェーズ 2<xref:System.Windows.UIElement.Measure%2A>と<xref:System.Windows.UIElement.Arrange%2A>を渡します。  
+ レイアウトは、の[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中心的な概念です。 多くのシステムでは、固定されたレイアウトモデルのセットがあります (HTML はレイアウト用に3つのモデル、flow、absolute、テーブル)、またはレイアウトのモデルがありません (User32.dll は絶対配置のみをサポートします)。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]開発者や設計者が、命令型ロジックではなくプロパティ値によって駆動される、柔軟で拡張可能なレイアウトモデルを必要としていることを前提としています。 このレベルでは、レイアウトの基本的なコントラクトが導入されます。これ<xref:System.Windows.UIElement.Measure%2A>は<xref:System.Windows.UIElement.Arrange%2A> 、とが成功する2フェーズモデルです。 <xref:System.Windows.UIElement>  
   
- <xref:System.Windows.UIElement.Measure%2A> により、コンポーネントを実行するどの程度のサイズを決定できます。 これは、別のフェーズから<xref:System.Windows.UIElement.Arrange%2A>が多くの場合の最適な位置とサイズを決定するいくつかの時間を測定する子を親要素が求められます。 親要素が子要素を測定するよう要求するという事実がもう 1 つの重要な理念を示します[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]– コンテンツのサイズ。 すべてのコントロール[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]サイズがコンテンツの通常サイズにする機能をサポートします。 これにより、ローカライズをより簡単と、項目のサイズ変更、要素の動的レイアウトできます。 <xref:System.Windows.UIElement.Arrange%2A>フェーズでは、親を配置し、それぞれの子の最終サイズを決定します。  
+ <xref:System.Windows.UIElement.Measure%2A>必要なサイズをコンポーネントで決定できるようにします。 これは、親要素が<xref:System.Windows.UIElement.Arrange%2A>複数回測定して最適な位置とサイズを判断する必要がある状況が多いため、からの独立したフェーズです。 親要素が measure を要求する子要素は、コンテンツに対する別[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]の重要な理念を示しています。 の[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]すべてのコントロールは、そのコンテンツのサイズに合わせてサイズを変更することをサポートしています。 これにより、ローカライズがはるかに簡単になり、要素のサイズ変更に合わせて動的なレイアウトを行うことができます。 この<xref:System.Windows.UIElement.Arrange%2A>フェーズでは、親が各子の最終的なサイズを配置および決定できます。  
   
- 多くの時間は、出力側の話に費やされた多くの場合、 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] –<xref:System.Windows.Media.Visual>および関連するオブジェクト。 ただしも入力側で大量のイノベーションがあります。 入力モデルで最も基本的な変更ではおそらく[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]はシステムを経由する入力イベントのルーティング、一貫性のあるモデルです。  
+ 多くの場合、 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] <xref:System.Windows.Media.Visual>と関連オブジェクトの出力側について説明します。 しかし、入力側にも非常に多くのイノベーションがあります。 の入力モデルの最も基本的な[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]変更は、入力イベントがシステムを経由してルーティングされる一貫したモデルです。  
   
- 入力は、カーネル モード デバイス ドライバーのシグナルとして開始され、正しいプロセスと Windows カーネルと User32 が関係する複雑なプロセスのスレッドにルーティングされます。 入力に対応する User32 メッセージにルーティングされると[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]に変換されます、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]未加工入力メッセージと、ディスパッチャーに送信します。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 生の入力イベント配信の保証とシステムの低レベルで実装するには、"MouseEnter"などの機能を有効にする、実際の複数のイベントに変換できます。  
+ 入力は、カーネルモードデバイスドライバーの信号として生成され、Windows カーネルと User32.dll を含む複雑なプロセスを通じて、正しいプロセスとスレッドにルーティングされます。 入力に対応する user32.dll メッセージがに[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]ルーティングされると、 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]未加工の入力メッセージに変換され、ディスパッチャーに送信されます。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]生の入力イベントを複数の実際のイベントに変換できます。これにより、"MouseEnter" などの機能を、保証された配信によりシステムの低レベルで実装できます。  
   
- 各入力イベントは、"preview"イベントと、実際のイベントには少なくとも 2 つのイベントに変換されます。 すべてのイベント[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]要素ツリーを通じてルーティングの概念があります。 ルートにツリーをターゲットから走査、ルートで開始し、ターゲットまで走査、使用している「トンネル」と言われています"を"バブル イベントといいます。 ツリーをフィルター処理またはイベントに対してアクションを実行する機会の任意の要素を有効にすると、プレビュー イベントのトンネルを入力します。 通常の (非プレビュー) のイベントは、ルートまでターゲットから、バブルします。  
+ 各入力イベントは、少なくとも2つのイベント ("preview" イベントと実際のイベント) に変換されます。 内のすべて[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]のイベントには、要素ツリーを通じたルーティングの概念があります。 イベントは、ターゲットからツリーをルートまで走査する場合は "バブル" と呼ばれ、ルートから開始してターゲットを走査する場合は "トンネル" と呼ばれます。 入力プレビューイベントトンネル。ツリー内の任意の要素を有効にして、イベントにフィルターを適用したり、アクションを実行したりすることができます。 通常の (非プレビュー) イベントは、ターゲットからルートまでバブルされます。  
   
- この分割トンネルとバブル フェーズの間では、キーボード アクセラレータは、複合の世界で一貫性のある方法で動作などの機能の実装です。 User32 でグローバル含む単一のテーブルをサポートするすべてのアクセラレータ (Ctrl + N の「新規」へのマッピング) することでキーボード アクセラレータを実装します。 呼び出すことは、アプリケーションのディスパッチャーで**TranslateAccelerator**は User32 で入力メッセージを傍受し、登録済みのアクセラレータが一致するかどうかはいずれかを判断します。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]システムが完全に「コンポーザブル」– 任意の要素を処理し、キーボード アクセラレータを使用できますので、これはうまくいきません。 この 2 つのフェーズのモデルの入力を持つことはできますが独自の"TranslateAccelerator"を実装するコンポーネントです。  
+ このトンネルとバブルフェーズを分割することにより、キーボードアクセラレータなどの機能の実装が、複合環境で一貫した方法で実行されます。 User32.dll では、サポートするすべてのアクセラレータを含む単一のグローバルテーブルを使用して、キーボードアクセラレータを実装します (Ctrl + N を "New" にマッピングします)。 アプリケーションのディスパッチャーで、 **TranslateAccelerator**を呼び出します。これは、user32.dll の入力メッセージをスニッフィングし、登録されているアクセラレータに一致したかどうかを判断します。 で[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]は、システムが完全に "コンポーザブル" であるため、この機能は動作しません。すべての要素は、任意のキーボードアクセラレータを処理して使用できます。 この2つのフェーズモデルを入力にすると、コンポーネントは独自の "TranslateAccelerator" を実装できます。  
   
- さらに、この 1 つの手順を実行する<xref:System.Windows.UIElement>も CommandBindings の概念が導入されています。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]コマンド システムにより、開発者は何かのコマンドの終了ポイント – という観点から機能を定義する、実装する<xref:System.Windows.Input.ICommand>します。 コマンド バインディングには、入力ジェスチャ (Ctrl + N) とコマンドを (新規) 間のマッピングを定義する要素が有効にします。 入力ジェスチャとコマンドの定義は拡張可能なおよび使用時にまとめることができます。 これにより、たとえば、エンドユーザーがアプリケーション内で使用すると、キー バインドのカスタマイズを許可します。  
+ もう1つの手順を実行<xref:System.Windows.UIElement>するために、には commandbindings の概念も導入されています。 コマンド[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]システムを使用すると、開発者はコマンドエンドポイント (を実装<xref:System.Windows.Input.ICommand>するもの) の観点から機能を定義できます。 コマンドバインドを使用すると、要素で入力ジェスチャ (Ctrl + N) とコマンド (New) の間のマッピングを定義できます。 入力ジェスチャとコマンド定義はどちらも拡張可能であり、使用時に同時に接続することができます。 これにより、たとえば、エンドユーザーがアプリケーション内で使用するキーバインドをカスタマイズできるようにすることが簡単になります。  
   
- このトピックの時点「コア」機能の[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]– PresentationCore アセンブリに実装されている機能は、フォーカスされています。 構築するときに[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]、基礎となる部分の間の分離のクリーンアップ (などのレイアウトでのコントラクト**メジャー**と**配置**) と (特定の実装などのフレームワーク要素ようなレイアウト<xref:System.Windows.Controls.Grid>) が目的の結果。 目標のために必要な場合は、独自のフレームワークを作成する外部の開発者は、スタックの低い機能拡張ポイントを提供することでした。  
+ トピック「」では、「プレゼンテーションコアアセンブリに実装[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]されている機能」の「コア」機能を中心に説明しました。 構築[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]時には、基本要素 (**メジャー**および**配置**によるレイアウトのコントラクトなど) とフレームワークピース (たとえば、のような<xref:System.Windows.Controls.Grid>特定のレイアウトの実装など) を明確に分離する必要がありました。最終. 目標は、外部の開発者が必要に応じて独自のフレームワークを作成できるようにする、スタックの拡張ポイントを小さくすることでした。  
   
 <a name="System_Windows_FrameworkElement"></a>   
 ## <a name="systemwindowsframeworkelement"></a>System.Windows.FrameworkElement  
- <xref:System.Windows.FrameworkElement> 2 つの方法で参照できます。 ポリシーとの下位層で導入されたサブシステムでのカスタマイズのセットが導入[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]します。 一連の新しいサブシステムも導入されています。  
+ <xref:System.Windows.FrameworkElement>2つの異なる方法で検索できます。 また、の[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]下位層で導入されたサブシステムの一連のポリシーとカスタマイズについて説明します。 また、一連の新しいサブシステムも導入されています。  
   
- 導入されたプライマリ ポリシー<xref:System.Windows.FrameworkElement>アプリケーション レイアウトの周りが。 <xref:System.Windows.FrameworkElement> 導入された基本的なレイアウトのコントラクトに基づいて<xref:System.Windows.UIElement>レイアウト プロパティのレイアウトのセマンティクスを駆動型の一貫性のあるセットがレイアウトの作成者が簡単です「スロット」の概念を追加します。 などのプロパティ<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>、 <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>、 <xref:System.Windows.FrameworkElement.MinWidth%2A>、および<xref:System.Windows.FrameworkElement.Margin%2A>(をいくつかの名前を付ける) から派生したすべてのコンポーネントを提供<xref:System.Windows.FrameworkElement>レイアウト コンテナー内で一貫性のある動作。  
+ によって<xref:System.Windows.FrameworkElement>導入される主なポリシーは、アプリケーションのレイアウトに関するものです。 <xref:System.Windows.FrameworkElement>によって<xref:System.Windows.UIElement>導入された基本的なレイアウトコントラクトに基づいて構築されたレイアウト "スロット" の概念を追加します。これにより、レイアウト作成者が一貫した一連のプロパティドリブンレイアウトセマンティクスを簡単に持つことができます。 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> 、、<xref:System.Windows.FrameworkElement.Margin%2A> <xref:System.Windows.FrameworkElement>、およびのようなプロパティ (いくつかの名前にするため) は、レイアウトコンテナー内の一貫した動作から派生したすべてのコンポーネントを提供します。 <xref:System.Windows.FrameworkElement.MinWidth%2A>  
   
- <xref:System.Windows.FrameworkElement> 基本レイヤーで見つかったさまざまな機能に簡単に API の公開も提供[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]します。 たとえば、<xref:System.Windows.FrameworkElement>アニメーションに直接アクセスできる、<xref:System.Windows.FrameworkElement.BeginStoryboard%2A>メソッド。 A<xref:System.Windows.Media.Animation.Storyboard>プロパティのセットに対して複数のアニメーションのスクリプトを作成する方法を提供します。  
+ <xref:System.Windows.FrameworkElement>また、は、のコアレイヤーにある多くの[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]機能に対する API の公開を容易にします。 たとえば、は<xref:System.Windows.FrameworkElement> 、 <xref:System.Windows.FrameworkElement.BeginStoryboard%2A>メソッドを使用してアニメーションへの直接アクセスを提供します。 は<xref:System.Windows.Media.Animation.Storyboard> 、一連のプロパティに対して複数のアニメーションをスクリプト化する方法を提供します。  
   
- 2 つの最も重要なことを<xref:System.Windows.FrameworkElement>紹介はデータ バインドとスタイル。  
+ 導入される<xref:System.Windows.FrameworkElement>最も重要な2つの要素は、データバインディングとスタイルです。  
   
- データ バインディング サブシステム[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]が使用するユーザーにとって比較的馴染みがある[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]または[!INCLUDE[TLA#tla_aspnet](../../../../includes/tlasharptla-aspnet-md.md)]アプリケーションを作成する[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]します。 これらのシステムの各でのデータにバインドする指定された要素から 1 つまたは複数のプロパティをすることを表現する簡単な方法があります。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] プロパティのバインド、変換、およびリストのバインドを完全にサポートしています。  
+ の[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]データバインディングサブシステムは、アプリケーション[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]を作成するために使用[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]または ASP.NET したすべてのユーザーにとって、比較的なじみのあるものにする必要があります。 これらの各システムでは、特定の要素の1つ以上のプロパティをデータにバインドすることを簡単に表すことができます。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]では、プロパティバインド、変換、およびリストバインドが完全にサポートされています。  
   
- データ バインディングの最も興味深い機能の 1 つ[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]データ テンプレートの導入です。 データ テンプレートを使用して、データを視覚化する方法を宣言によって指定できます。 データにバインドできるカスタム ユーザー インターフェイスを作成する代わりに代わりに問題を有効にし、データが作成される表示を決定できるようにできます。  
+ で[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]のデータバインディングの最も興味深い機能の1つは、データテンプレートの導入です。 データテンプレートを使用すると、データの一部を視覚化する方法を宣言によって指定できます。 データにバインドできるカスタムユーザーインターフェイスを作成する代わりに、問題を解決して、作成される表示をデータが決定できるようにすることができます。  
   
- スタイル設定は、簡易形式のデータ バインディングです。 スタイルを使用するのにバインドできますプロパティのセットを共有定義の要素の 1 つまたは複数のインスタンス。 要素に適用されるスタイルを明示的に参照するか (設定して、<xref:System.Windows.FrameworkElement.Style%2A>プロパティ) のスタイルを関連付けることによって暗黙的にまたは、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]要素の型。  
+ スタイル設定は、実際には軽量な形式のデータバインドです。 スタイルを使用すると、共有定義の一連のプロパティを、要素の1つ以上のインスタンスにバインドできます。 スタイルは、明示的な参照によって (プロパティを<xref:System.Windows.FrameworkElement.Style%2A>設定することによって)、またはスタイルを要素の[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]型に関連付けることによって暗黙的に要素に適用されます。  
   
 <a name="System_Windows_Controls_Control"></a>   
 ## <a name="systemwindowscontrolscontrol"></a>System.Windows.Controls.Control  
- コントロールの最も重要な機能とは、テンプレートです。 保持モードのレンダリング システムとしての WPF のコンポジション システムについて考えると、テンプレートには、パラメーター化された宣言型の方法で、レンダリングを記述するコントロールができるようにします。 A<xref:System.Windows.Controls.ControlTemplate>実際には、コントロールによって提供されるプロパティへのバインドで一連の子要素を作成するスクリプトにすぎません。  
+ コントロールの最も重要な機能は、テンプレートです。 WPF の合成システムを保持モードのレンダリングシステムと考えている場合、テンプレートを使用すると、コントロールは、パラメーター化された宣言型の方法でレンダリングを記述できます。 は、子要素のセットを作成するためのスクリプトにすぎず、コントロールによって提供されるプロパティへのバインドが含まれています。<xref:System.Windows.Controls.ControlTemplate>  
   
- <xref:System.Windows.Controls.Control> ストック プロパティのセットを提供します<xref:System.Windows.Controls.Control.Foreground%2A>、 <xref:System.Windows.Controls.Control.Background%2A>、<xref:System.Windows.Controls.Control.Padding%2A>テンプレートの作成者がコントロールの表示のカスタマイズを使用できる、いくつかの名前。 コントロールの実装では、データ モデルと対話モデルを提供します。 対話モデルでは、(ウィンドウの隅に赤い X 印をクリックする) などのジェスチャを入力するには、(ウィンドウを閉じる) のようなコマンドとバインディングのセットを定義します。 データ モデルでは、相互作用モデルをカスタマイズまたは (テンプレートによって決まります) の表示をカスタマイズするプロパティのセットを提供します。  
+ <xref:System.Windows.Controls.Control>いくつかのストックプロパティ<xref:System.Windows.Controls.Control.Foreground%2A> <xref:System.Windows.Controls.Control.Background%2A> <xref:System.Windows.Controls.Control.Padding%2A>のセットを提供します。ここでは、テンプレート作成者がコントロールの表示をカスタマイズするために使用できます。 コントロールの実装には、データモデルと相互作用モデルが用意されています。 相互作用モデルは、一連のコマンド (ウィンドウの [閉じる] など) と入力ジェスチャへのバインドを定義します (ウィンドウの上隅の赤い X をクリックするなど)。 データモデルには、相互作用モデルをカスタマイズしたり、(テンプレートによって決定される) 表示をカスタマイズしたりするための一連のプロパティが用意されています。  
   
- データ モデル (プロパティ)、相互作用モデル (コマンドとイベント)、および表示モデル (テンプレート) の間には、この分割により、コントロールの外観と動作のカスタマイズを完了します。  
+ これにより、データモデル (プロパティ)、相互作用モデル (コマンドとイベント)、および表示モデル (テンプレート) が分割され、コントロールの外観と動作を完全にカスタマイズできるようになります。  
   
- コントロールのデータ モデルの一般的な側面は、コンテンツ モデルです。 などのコントロールを見る場合<xref:System.Windows.Controls.Button>、型の場合は"Content"という名前のプロパティを使用しているが表示されます<xref:System.Object>します。 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]と[!INCLUDE[TLA#tla_aspnet](../../../../includes/tlasharptla-aspnet-md.md)]、このプロパティは文字列である通常 – ボタンに配置することができますが、コンテンツの種類を制限します。 ボタンのコンテンツか単純な文字列、または指定できます、複雑なデータ オブジェクト全体の要素ツリー。 データ オブジェクトの場合は、データ テンプレートは、表示の構築に使用されます。  
+ コントロールのデータモデルの一般的な側面は、コンテンツモデルです。 のような<xref:System.Windows.Controls.Button>コントロールを表示すると、型<xref:System.Object>の "Content" という名前のプロパティがあることがわかります。 と[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ASP.NET では、通常、このプロパティは文字列になります。ただし、ボタンに配置できるコンテンツの種類が制限されます。 ボタンのコンテンツは、単純な文字列、複雑なデータオブジェクト、または要素ツリー全体のいずれかになります。 データオブジェクトの場合は、データテンプレートを使用して表示を作成します。  
   
 <a name="Summary"></a>   
-## <a name="summary"></a>まとめ  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] データ ドリブン プレゼンテーション システムを動的に作成できるように設計されています。 プロパティ セットを通じてオブジェクトを作成するには、動作を制御するには、システムのすべての部分は設計されています。 データ バインディングは、システムの基本的な部分は、され、すべてのレイヤーで統合されます。  
+## <a name="summary"></a>Summary  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]は、データ駆動型の動的なプレゼンテーションシステムを作成できるように設計されています。 システムのすべての部分は、動作を駆動するプロパティセットを通じてオブジェクトを作成するように設計されています。 データバインディングはシステムの基本的な部分であり、すべてのレイヤーで統合されています。  
   
- 従来のアプリケーションでは、表示を作成し、いくつかのデータにバインドします。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]、何らかの種類のデータ バインディングによって生成されるコントロール、ディスプレイのすべての側面に関するすべてのものです。 ボタンの内側にあるテキストは、ボタンの内部で構成されるコントロールを作成し、その表示をボタンの content プロパティにバインドして表示されます。  
+ 従来のアプリケーションでは、ディスプレイを作成し、いくつかのデータにバインドします。 で[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]は、コントロールに関するすべての側面が、何らかの種類のデータバインディングによって生成されます。 ボタン内に表示されるテキストは、ボタン内に構築されたコントロールを作成し、その表示をボタンのコンテンツプロパティにバインドすることによって表示されます。  
   
- 開発を開始すると、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]ベースのアプリケーションでは、非常によくと考える必要があります。 オブジェクトを使用して、すべてのプロパティを設定することができ、データ バインドで同じ方法を使用できる[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]または[!INCLUDE[TLA#tla_aspnet](../../../../includes/tlasharptla-aspnet-md.md)]します。 アーキテクチャにさらに調査すると[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]、根本的に、アプリケーションの中核となるドライバーとしてデータを処理するより充実したアプリケーションを作成するためにできる可能性があることがわかります。  
+ ベースのアプリケーションの[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]開発を開始すると、非常になじみのあるアプリケーションです。 または ASP.NET を使用[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]する場合とほぼ同じ方法で、プロパティの設定、オブジェクトの使用、およびデータバインドを行うことができます。 の[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アーキテクチャの詳細な調査では、アプリケーションのコアドライバーとしてデータを根本的に処理する、非常に豊富なアプリケーションを作成するための可能性があることがわかります。  
   
 ## <a name="see-also"></a>関連項目
 

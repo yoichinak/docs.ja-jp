@@ -4,12 +4,12 @@ description: Windows、Linux、macOS で .NET Core アプリケーションを�
 author: thraka
 ms.author: adegeo
 ms.date: 06/27/2018
-ms.openlocfilehash: 2ec7f57250db8779552305b2ee69cbcf1db55d0c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b111d464b83f3bc6a4a0da86678c5364bf4a9537
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977170"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802301"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core の概要
 
@@ -34,7 +34,7 @@ dotnet run --project sample1
 Hello World!
 ```
 
-おめでとうございます!  シンプルな .NET Core アプリケーションが作成されました。 [Visual Studio Code](tutorials/with-visual-studio-code.md)、[Visual Studio 2017](tutorials/with-visual-studio.md) (Windows のみ)、または [Visual Studio for Mac](tutorials/using-on-mac-vs.md) (macOS のみ) を使用して、.NET Core アプリケーションを作成することもできます。
+おめでとうございます! シンプルな .NET Core アプリケーションが作成されました。 [Visual Studio Code](tutorials/with-visual-studio-code.md)、[Visual Studio](tutorials/with-visual-studio.md) (Windows のみ)、または [Visual Studio for Mac](tutorials/using-on-mac-vs.md) (macOS のみ) を使用して、.NET Core アプリケーションを作成することもできます。
 
 ## <a name="tutorials"></a>チュートリアル
 

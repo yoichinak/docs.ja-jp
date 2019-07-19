@@ -32,12 +32,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: bde0b7cea52951cd72bde6cfd7d8f1c7dbcb8f46
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 0a1ed01d9e6cb86ea177e8b947627f9dc02eedae
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425597"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744218"
 ---
 # <a name="integral-numeric-types--c-reference"></a>整数数値型 (C# リファレンス)
 
@@ -76,14 +76,14 @@ var binaryLiteral = 0b_0010_1010;
 
 10 進リテラルには、プレフィックスは必要ありません。 `x` または `X` プレフィックスは *16 進数リテラル*を意味します。 `b` または `B` プレフィックスは*バイナリ リテラル*を意味します。 `binaryLiteral` の宣言は、`_` を*桁区切り記号*として使用することを示します。 桁区切り記号は、すべての数値リテラルで使用できます。 バイナリ リテラルと桁区切り記号 `_` は、C# 7.0 以降でサポートされています。
 
-## <a name="literal-suffixes"></a>リテラル サフィックス 
+### <a name="literal-suffixes"></a>リテラル サフィックス 
 
 `l` または `L` サフィックスは、整数リテラルが `long` 型である必要があることを示します。 `ul` または `UL` サフィックスは、`ulong` 型を示します。 `L` サフィックスが 9,223,372,036,854,775,807 (`long` の最大値) より大きいリテラルで使用されている場合、値は `ulong` 型に変換されます。 整数リテラルで表される値が <xref:System.UInt64.MaxValue?displayProperty=nameWithType> を超えると、コンパイル エラー [CS1021](../../misc/cs1021.md) が発生します。 
 
 > [!NOTE]
 > 小文字の "l" はサフィックスとして使用できます。 ただし、文字の "l" は数字の "1" と混同しやすいため、コンパイラから警告が出されます。 明確にするには、"L" を使用します。
 
-## <a name="type-of-an-integral-literal"></a>整数リテラルの型
+### <a name="type-of-an-integral-literal"></a>整数リテラルの型
 
 サフィックスがない整数リテラルの型は、以下の型のうちその値を表すことができる最初のものになります。
 
@@ -118,8 +118,16 @@ var anotherLong = (long)42;
 
 - [C# 言語仕様 - 整数型](~/_csharplang/spec/types.md#integral-types)
 - [C# リファレンス](../index.md)
-- [浮動小数点型の一覧表](../keywords/floating-point-types-table.md)
+- [浮動小数点型](floating-point-numeric-types.md)
 - [既定値の一覧表](../keywords/default-values-table.md)
 - [数値結果テーブルの書式設定](../keywords/formatting-numeric-results-table.md)
 - [組み込み型の一覧表](../keywords/built-in-types-table.md)
 - [.NET における数値](../../../standard/numerics.md)
+- <xref:System.Byte?displayProperty=nameWithType>
+- <xref:System.SByte?displayProperty=nameWithType>
+- <xref:System.Int16?displayProperty=nameWithType>
+- <xref:System.UInt16?displayProperty=nameWithType>
+- <xref:System.Int32?displayProperty=nameWithType>
+- <xref:System.UInt32?displayProperty=nameWithType>
+- <xref:System.Int64?displayProperty=nameWithType>
+- <xref:System.UInt64?displayProperty=nameWithType>

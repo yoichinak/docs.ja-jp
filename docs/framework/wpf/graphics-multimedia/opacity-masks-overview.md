@@ -6,12 +6,12 @@ helpviewer_keywords:
 - masks [WPF], opacity
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
-ms.openlocfilehash: 3ee02eca9719f4ffa3ee0c165ad2541c9ffd085e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7554471d8b812b60e0b1aeb6dd3096b542ca44d6
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625269"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238414"
 ---
 # <a name="opacity-masks-overview"></a>不透明度マスクの概要
 不透明度マスクを使用すると、要素またはビジュアルの一部を透明にするか、部分的に透明にすることができます。 適用する不透明度マスクを作成する、<xref:System.Windows.Media.Brush>を<xref:System.Windows.UIElement.OpacityMask%2A>要素のプロパティまたは<xref:System.Windows.Media.Visual>します。  ブラシが要素またはビジュアルにマップされ、ブラシの各ピクセルの不透明度値を使用して、要素またはビジュアルの対応する各ピクセルの不透明度が決まります。  
@@ -50,7 +50,7 @@ LinearGradientBrush 不透明度マスクの例
      ![ImageBrush 不透明度マスクを含むオブジェクト](./media/wcpsdk-graphicsmm-brushes-imageasopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_imageasopacitymasksingle")  
 LinearGradientBrush 不透明度マスクの例  
   
-- <xref:System.Windows.Media.DrawingBrush>:図形、イメージ、およびグラデーションのパターンから複雑な不透明度マスクを作成するために使用します。  
+- <xref:System.Windows.Media.DrawingBrush> :図形、イメージ、およびグラデーションのパターンから複雑な不透明度マスクを作成するために使用します。  
   
      次の図は、<xref:System.Windows.Media.DrawingBrush>不透明度マスクとして使用します。  
   
@@ -69,15 +69,15 @@ DrawingBrush 不透明度マスクの例
 ## <a name="specifying-gradient-stops-for-an-opacity-mask"></a>不透明度マスクのグラデーションの分岐点の指定  
  前の例では、システム定義の色で<xref:System.Windows.Media.Colors.Black%2A>グラデーションの開始色として使用されます。 ため、すべての色の<xref:System.Windows.Media.Colors>クラスを除く<xref:System.Windows.Media.Colors.Transparent%2A>が完全に不透明で、単にグラデーション不透明度マスクの開始色を定義できます。  
   
- 不透明度マスクを定義するときに、アルファ値をさらに制御を使用して色のアルファ チャネルを指定できます[!INCLUDE[TLA#tla_argb](../../../../includes/tlasharptla-argb-md.md)]マークアップを使用してまたは 16 進数表記、<xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType>メソッド。  
+ 不透明度マスクを定義するときに、アルファ値制御は、マークアップで ARGB 16 進数表記を使用してまたはを使用して色のアルファ チャネルを指定できます、<xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType>メソッド。  
   
 <a name="argbsyntax"></a>   
 ### <a name="specifying-color-opacity-in-xaml"></a>"XAML" でのカラーの不透明度の指定  
- [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] では、[!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] の 16 進表記を使用して、個々の色の不透明度を指定します。 [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] の 16 進表記では、次の構文を使用します。  
+ [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]、ARGB 16 進数表記を使用して個々 の色の不透明度を指定します。 ARGB 16 進数表記では、次の構文を使用します。  
   
  `#` **aa** *rrggbb*  
   
- 前の行の *aa* は、カラーの不透明度を指定するために使用する 2 桁の 16 進値を表します。 *rr*、*gg*、および *bb* は、それぞれ、カラーの赤、緑、および青の量を指定するために使用される 2 桁の 16 進値を表します。 各 16 進数には、0 ～ 9 または A ～ F の値を指定できます。 0 は最小値であり、F は最大値です。 アルファ値 00 は完全に透明なカラーを指定し、アルファ値 FF は完全に不透明なカラーを指定します。  次の例では、[!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] の 16 進表記を使用して、2 つのカラーを指定しています。 1 つ目のカラーは完全に透明であり、2 つ目のカラーは完全に不透明です。  
+ 前の行の *aa* は、カラーの不透明度を指定するために使用する 2 桁の 16 進値を表します。 *rr*、*gg*、および *bb* は、それぞれ、カラーの赤、緑、および青の量を指定するために使用される 2 桁の 16 進値を表します。 各 16 進数には、0 ～ 9 または A ～ F の値を指定できます。 0 は最小値であり、F は最大値です。 アルファ値 00 は完全に透明なカラーを指定し、アルファ値 FF は完全に不透明なカラーを指定します。  次の例では、2 つの色を指定する 16 進数の ARGB 表記を使用します。 1 つ目のカラーは完全に透明であり、2 つ目のカラーは完全に不透明です。  
   
  [!code-xaml[OpacityMasksSnippet#AARRGGBBValueonOpacityMask](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/GradientBrushExample.xaml#aarrggbbvalueonopacitymask)]  
   

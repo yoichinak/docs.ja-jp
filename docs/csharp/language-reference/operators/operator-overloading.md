@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: f9085f2a550dfacc670857a70f5b22de9e028107
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: ec2012a256214dc5f3fb144f1d828634553742c2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610595"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744090"
 ---
 # <a name="operator-overloading-c-reference"></a>演算子のオーバーロード (C# リファレンス)
 
@@ -27,6 +27,10 @@ ms.locfileid: "67610595"
 
 [!code-csharp[fraction example](~/samples/csharp/language-reference/operators/OperatorOverloading.cs)]
 
+`int` から `Fraction` への暗黙的な変換を定義することで、前の例を拡張できます。 その場合、オーバーロードされた演算子はこれら 2 つの型の引数をサポートします。 つまり、整数を分数に足し、結果として分数を取得できるようになります。
+
+また、`operator` キーワードを使用してカスタムの型変換を定義することもできます。 詳細については、「[User-defined conversion operators](user-defined-conversion-operators.md)」(ユーザー定義の変換演算子) を参照してください。
+
 ## <a name="overloadable-operators"></a>オーバーロード可能な演算子
 
 次の表は、C# 演算子のオーバーロード可/不可に関する情報を示します。
@@ -37,7 +41,7 @@ ms.locfileid: "67610595"
 |[+](addition-operator.md)、[-](subtraction-operator.md)、[\*](arithmetic-operators.md#multiplication-operator-)、[/](arithmetic-operators.md#division-operator-)、[%](arithmetic-operators.md#remainder-operator-)、[&](boolean-logical-operators.md#logical-and-operator-)、[&#124;](boolean-logical-operators.md#logical-or-operator-)、[^](boolean-logical-operators.md#logical-exclusive-or-operator-)、[\<\<](bitwise-and-shift-operators.md#left-shift-operator-)、[>>](bitwise-and-shift-operators.md#right-shift-operator-)、[==](equality-operators.md#equality-operator-)、[!=](equality-operators.md#inequality-operator-)、[\<](comparison-operators.md#less-than-operator-)、[>](comparison-operators.md#greater-than-operator-)、[\<=](comparison-operators.md#less-than-or-equal-operator-)、[>=](comparison-operators.md#greater-than-or-equal-operator-)|これらの 2 項演算子はオーバーロードできます。 特定の演算子はペアでオーバーロードする必要があります。詳細については、この表の後にある注を参照してください。|
 |[&&](boolean-logical-operators.md#conditional-logical-and-operator-)、[&#124;&#124;](boolean-logical-operators.md#conditional-logical-or-operator-)|条件付き論理演算子は、オーバーロードできません。 ただし、オーバーロードされた [`true` および `false` 演算子](true-false-operators.md)を含む型が特定の方法で `&` または <code>&#124;</code> もオーバーロードしている場合は、その型のオペランドに対してそれぞれ `&&` または <code>&#124;&#124;</code> 演算子の評価が可能になります。 詳細については、「[C# 言語仕様](~/_csharplang/spec/introduction.md)」の[ユーザー定義型条件論理演算子](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators)に関するセクションを参照してください。|
 |[&#91;&#93;](member-access-operators.md#indexer-operator-)|要素へのアクセスはオーバーロード可能な演算子とは見なされていませんが、[インデクサー](../../programming-guide/indexers/index.md)を定義することができます。|
-|[(T)x](type-testing-and-conversion-operators.md#cast-operator-)|キャスト演算子はオーバーロードできませんが、新しい変換演算子を定義できます (「[explicit](../keywords/explicit.md)」および「[implicit](../keywords/implicit.md)」を参照してください)。|
+|[(T)x](type-testing-and-conversion-operators.md#cast-operator-)|キャスト演算子はオーバーロードできませんが、新しい変換演算子を定義できます。 詳細については、「[User-defined conversion operators](user-defined-conversion-operators.md)」(ユーザー定義の変換演算子) を参照してください。|
 |[+=](arithmetic-operators.md#compound-assignment), [-=](arithmetic-operators.md#compound-assignment), [\*=](arithmetic-operators.md#compound-assignment), [/=](arithmetic-operators.md#compound-assignment), [%=](arithmetic-operators.md#compound-assignment), [&=](boolean-logical-operators.md#compound-assignment), [&#124;=](boolean-logical-operators.md#compound-assignment), [^=](boolean-logical-operators.md#compound-assignment), [\<\<=](bitwise-and-shift-operators.md#compound-assignment), [>>=](bitwise-and-shift-operators.md#compound-assignment)|複合代入演算子を明示的にオーバーロードすることはできません。 ただし、二項演算子をオーバーロードするとき、対応する複合代入演算子がある場合は、それも暗黙的にオーバーロードされます。 たとえば、`+=` は、オーバーロード可能な `+` を使用して評価されます。|
 |[=](assignment-operator.md)、[.](member-access-operators.md#member-access-operator-)、[?:](conditional-operator.md)、[??](null-coalescing-operator.md)、[->](pointer-related-operators.md#pointer-member-access-operator--)、[=>](lambda-operator.md)、[f(x)](member-access-operators.md#invocation-operator-)、[as](type-testing-and-conversion-operators.md#as-operator)、[checked](../keywords/checked.md)、[unchecked](../keywords/unchecked.md)、[default](../../programming-guide/statements-expressions-operators/default-value-expressions.md)、[delegate](../../programming-guide/statements-expressions-operators/anonymous-methods.md)、[is](type-testing-and-conversion-operators.md#is-operator)、[nameof](../keywords/nameof.md)、[new](new-operator.md)、[sizeof](../keywords/sizeof.md)、[typeof](type-testing-and-conversion-operators.md#typeof-operator)|これらの演算子はオーバーロードできません。|
 
@@ -59,4 +63,5 @@ ms.locfileid: "67610595"
 
 - [C# リファレンス](../index.md)
 - [C# 演算子](index.md)
+- [ユーザー定義の変換演算子](user-defined-conversion-operators.md)
 - [C# のオーバーロードされた演算子が常に静的である理由](https://blogs.msdn.microsoft.com/ericlippert/2007/05/14/why-are-overloaded-operators-always-static-in-c/)

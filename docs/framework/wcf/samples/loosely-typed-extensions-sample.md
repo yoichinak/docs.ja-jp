@@ -81,7 +81,7 @@ feed.AttributeExtensions.Add(new XmlQualifiedName("myAttribute", ""), "someValue
 feed.ElementExtensions.Add("simpleString", "", "hello, world!");  
 ```  
   
- この要素の XML 名前空間が空の名前空間 ("")、その値は「こんにちは, world!」を文字列に含まれているテキスト ノード。  
+ この要素の XML 名前空間が空の名前空間 ("")、その値は"hello, world!"を文字列に含まれているテキスト ノード。  
   
  入れ子になった多数の要素で構成される複雑な要素拡張を作成する方法の 1 つに、次の例に示すように、.NET Framework API をシリアル化に使用する方法があります (<xref:System.Runtime.Serialization.DataContractSerializer> と <xref:System.Xml.Serialization.XmlSerializer> の両方がサポートされています)。  
   
