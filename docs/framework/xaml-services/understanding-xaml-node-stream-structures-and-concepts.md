@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: a04cc8c9dd3e36e4866e773861fddce3c10d0e20
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c873961982cd1642d8b354e5d77b06105c0b7a1e
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755150"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364311"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>XAML ノード ストリームの構造と概念について
 
@@ -208,21 +208,21 @@ public class GameBoard {
 
 ## <a name="xaml-and-xml-language-defined-members-in-the-xaml-node-stream"></a>XAML ノード ストリームにおける XAML および XML 言語で定義されたメンバー
 
-明示的な <xref:System.Xaml.XamlMember> の検索または構築を介してではなく、XAML リーダーの解釈と規約のため、特定のメンバーが XAML ノード ストリームに導入されています。 多くの場合、これらのメンバーは XAML ディレクティブです。 場合によっては、XAML ノード ストリームにディレクティブを導入する XAML の読み取りの動作になります。 つまり、XAML テキストは、メンバーのディレクティブを明示的に指定されませんでしたが、XAML リーダーは、情報が失われる前に、XAML ノード ストリームの構造的な XAML 規約とレポート情報を満たすためにディレクティブを挿入元を入力します。
+明示的な <xref:System.Xaml.XamlMember> の検索または構築を介してではなく、XAML リーダーの解釈と規約のため、特定のメンバーが XAML ノード ストリームに導入されています。 多くの場合、これらのメンバーは XAML ディレクティブです。 場合によっては、XAML ノード ストリームにディレクティブを導入する XAML の読み取りの動作になります。 つまり、元の入力 XAML テキストでは、メンバーディレクティブが明示的に指定されていませんでしたが、xaml リーダーは、構造の XAML 規則を満たすためにディレクティブを挿入し、情報が失われる前に XAML ノードストリームの情報を報告します。
 
 次のリストは、XAML リーダーでディレクティブの XAML メンバー ノードの導入が期待されるすべてのケースと、.NET Framework XAML サービスの実装でそのメンバーのノードが識別される方法を記載しています。
 
-- **オブジェクト ノードの初期化テキスト:** このメンバー ノードの名前は`_Initialization`XAML ディレクティブを表し、XAML 言語の XAML 名前空間で定義されています。 その静的なエンティティは <xref:System.Xaml.XamlLanguage.Initialization%2A>から取得できます。
+- **オブジェクトノードの初期化テキスト:** このメンバーノードの名前は`_Initialization`であり、xaml ディレクティブを表し、xaml 言語の xaml 名前空間で定義されています。 その静的なエンティティは <xref:System.Xaml.XamlLanguage.Initialization%2A>から取得できます。
 
-- **マークアップ拡張機能の位置指定パラメーター:** このメンバー ノードの名前は`_PositionalParameters`、XAML 言語の XAML 名前空間で定義されます。 それには常にオブジェクトのジェネリック リストが含まれ、それぞれが入力 XAML で指定される `,` 区切り文字で分割して事前に分離された位置指定パラメーターになっています。 <xref:System.Xaml.XamlLanguage.PositionalParameters%2A>から、位置指定パラメーター ディレクティブの静的なエンティティを取得できます。
+- **マークアップ拡張機能の位置指定パラメーター:** このメンバーノードの名前は`_PositionalParameters`であり、xaml 言語の xaml 名前空間で定義されています。 それには常にオブジェクトのジェネリック リストが含まれ、それぞれが入力 XAML で指定される `,` 区切り文字で分割して事前に分離された位置指定パラメーターになっています。 <xref:System.Xaml.XamlLanguage.PositionalParameters%2A>から、位置指定パラメーター ディレクティブの静的なエンティティを取得できます。
 
-- **不明なコンテンツ:** このメンバー ノードの名前は`_UnknownContent`します。 厳密に言うと、これは <xref:System.Xaml.XamlDirective>で、XAML 言語の XAML 名前空間で定義されます。 このディレクティブは、XAML オブジェクト要素にソース XAML のコンテンツが含まれている場合は sentinel として使用されますが、現在使用できる XAML スキーマ コンテキストで決定できるコンテンツのプロパティはありません。 `_UnknownContent`という名前のメンバーを確認すると、XAML ノード ストリームでこのケースを検出できます。 読み込みパスの XAML ノード ストリームでその他の処理が行われない場合、いずれかのオブジェクトで <xref:System.Xaml.XamlObjectWriter> のメンバーが検出されると、試行した `WriteEndObject` で既定の `_UnknownContent` がスローされます。 既定の <xref:System.Xaml.XamlXmlWriter> はスローされず、メンバーを暗黙の型として処理します。 `_UnknownContent` の静的なエンティティは <xref:System.Xaml.XamlLanguage.UnknownContent%2A>から取得できます。
+- **不明なコンテンツ:** このメンバーノードの名前は`_UnknownContent`です。 厳密に言うと、これは <xref:System.Xaml.XamlDirective>で、XAML 言語の XAML 名前空間で定義されます。 このディレクティブは、XAML オブジェクト要素にソース XAML のコンテンツが含まれている場合は sentinel として使用されますが、現在使用できる XAML スキーマ コンテキストで決定できるコンテンツのプロパティはありません。 `_UnknownContent`という名前のメンバーを確認すると、XAML ノード ストリームでこのケースを検出できます。 読み込みパスの XAML ノード ストリームでその他の処理が行われない場合、いずれかのオブジェクトで <xref:System.Xaml.XamlObjectWriter> のメンバーが検出されると、試行した `WriteEndObject` で既定の `_UnknownContent` がスローされます。 既定の <xref:System.Xaml.XamlXmlWriter> はスローされず、メンバーを暗黙の型として処理します。 `_UnknownContent` の静的なエンティティは <xref:System.Xaml.XamlLanguage.UnknownContent%2A>から取得できます。
 
-- **コレクションの collection プロパティ:** 通常は XAML に使用されるコレクション クラスのバッキング CLR 型は、専用のコレクション アイテムを保持するプロパティをという名前がある、そのプロパティはバッキング型の解決までの XAML 型システムは不明です。 代わりに、XAML ノード ストリームでは、コレクションの XAML 型のメンバーとして `Items` プレース ホルダーを導入します。 .NET Framework XAML サービスの実装では、ノード ストリームのディレクティブまたはメンバーの名前は `_Items`です。 このディレクティブの定数は <xref:System.Xaml.XamlLanguage.Items%2A>から取得できます。
+- **コレクションのコレクションプロパティ:** XAML に使用されるコレクションクラスのバッキング CLR 型には、コレクション項目を保持する専用の名前付きプロパティがありますが、このプロパティは、バッキング型の解決の前に XAML 型システムで認識されません。 代わりに、XAML ノード ストリームでは、コレクションの XAML 型のメンバーとして `Items` プレース ホルダーを導入します。 .NET Framework XAML サービスの実装では、ノード ストリームのディレクティブまたはメンバーの名前は `_Items`です。 このディレクティブの定数は <xref:System.Xaml.XamlLanguage.Items%2A>から取得できます。
 
-    XAML ノード ストリームが解析できないことに項目を含む項目プロパティを含む可能性がありますに注意してください、バッキング型の解決と XAML スキーマ コンテキストに基づいています。 例えば以下のようにします。
+    XAML ノードストリームには、バッキング型の解決と XAML スキーマコンテキストに基づいて解析できない項目を含む Items プロパティが含まれている場合があります。 例えば以下のようにします。
 
-- **XML で定義されたメンバー:** XML で定義された`xml:base`、`xml:lang`と`xml:space`メンバーがという名前の XAML ディレクティブとして報告されます`base`、 `lang`、および`space`.NET Framework XAML サービスの実装にします。 これらの名前空間は、XML 名前空間 `http://www.w3.org/XML/1998/namespace`です。 これらのそれぞれの定数は <xref:System.Xaml.XamlLanguage>から取得できます。
+- **XML で定義されたメンバー:** XML `xml:base`定義`space`の`xml:lang` 、、および`xml:space`の`base`各`lang`メンバーは、.NET Framework xaml サービスの実装では、、およびという名前の xaml ディレクティブとして報告されます。 これらの名前空間は、XML 名前空間 `http://www.w3.org/XML/1998/namespace`です。 これらのそれぞれの定数は <xref:System.Xaml.XamlLanguage>から取得できます。
 
 ## <a name="node-order"></a>ノードの順序
 
@@ -232,7 +232,7 @@ public class GameBoard {
 
 ### <a name="xamlobjectwriter-behavior-and-node-order"></a>XamlObjectWriter の動作とノードの順序
 
-`StartObject` に対する <xref:System.Xaml.XamlObjectWriter> は、すぐにオブジェクト インスタンスを作成するための XAML オブジェクト ライターへのシグナルであるとは限りません。 XAML には、追加の入力を持つオブジェクトを初期化できるようにするとともに、最初のオブジェクトを生成する既定のコンストラクターを呼び出すことに全体的に依存せず、プロパティの設定のみを行えるようにする、いくつかの言語機能が含まれています。 これらの機能には、 <xref:System.Windows.Markup.XamlDeferLoadAttribute>、初期化のテキスト、 [x:TypeArguments](x-typearguments-directive.md)、マークアップ拡張機能の位置指定パラメーター、工場出荷時のメソッド、および関連する [x:Arguments](x-arguments-directive.md) ノード (XAML 2009) などがあります。 これらの各ケースは、実際のオブジェクトの構築を遅らせます。ノード ストリームの順序が変更されるため、XAML オブジェクト ライターは、具体的にはそのオブジェクトの種類の構築ディレクティブではない開始メンバーが検出されるたびに、実際にインスタンスを構築する動作に依存します。
+`StartObject` に対する <xref:System.Xaml.XamlObjectWriter> は、すぐにオブジェクト インスタンスを作成するための XAML オブジェクト ライターへのシグナルであるとは限りません。 XAML には、追加の入力を使用してオブジェクトを初期化できるようにするいくつかの言語機能が用意されています。また、パラメーターなしのコンストラクターを呼び出して初期オブジェクトを生成し、その後でプロパティを設定することもできます。 これらの機能には、 <xref:System.Windows.Markup.XamlDeferLoadAttribute>、初期化のテキスト、 [x:TypeArguments](x-typearguments-directive.md)、マークアップ拡張機能の位置指定パラメーター、工場出荷時のメソッド、および関連する [x:Arguments](x-arguments-directive.md) ノード (XAML 2009) などがあります。 これらの各ケースは、実際のオブジェクトの構築を遅らせます。ノード ストリームの順序が変更されるため、XAML オブジェクト ライターは、具体的にはそのオブジェクトの種類の構築ディレクティブではない開始メンバーが検出されるたびに、実際にインスタンスを構築する動作に依存します。
 
 ### <a name="getobject"></a>GetObject
 

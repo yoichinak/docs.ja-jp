@@ -2,12 +2,12 @@
 title: 状態変更の理解
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-ms.openlocfilehash: 858da2a88c17920910c05966bb3b211d754fb278
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 549620ee5317e68735b392ce35b73c92f2474eab
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424775"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363945"
 ---
 # <a name="understanding-state-changes"></a>状態変更の理解
 ここでは、チャネルの状態と遷移、チャネル状態の構成に使用する型、およびそれらの型の実装方法について説明します。  
@@ -24,14 +24,14 @@ ms.locfileid: "67424775"
 ## <a name="icommunicationobject-communicationobject-and-states-and-state-transition"></a>ICommunicationObject、CommunicationObject、および各状態と状態遷移  
  <xref:System.ServiceModel.ICommunicationObject> は、そのさまざまなプロパティを構成できる Created 状態で開始します。 Opened 状態になると、このオブジェクトは、メッセージを送受信するために利用できるようになりますが、プロパティは不変と見なされます。 Closing 状態になると、このオブジェクトは新しい送受信要求を処理できなくなりますが、既存の要求は、Close タイムアウトに到達するまでに完了する可能性があります。  回復不可能なエラーが発生した場合は、オブジェクトは Faulted 状態に遷移し、そこでエラーに関する情報を点検し、最終的に閉じることができます。 Closed 状態になると、このオブジェクトは、実質的にステート マシンの最後に到達します。 オブジェクトが、ある状態から次の状態に遷移すると、前の状態には戻りません。  
   
- <xref:System.ServiceModel.ICommunicationObject> の各状態と状態遷移を次の図に示します。 状態遷移は、3 つの方法のいずれかを呼び出すことによって発生することができます。Abort、Open、または閉じる。 また、実装固有の他のメソッドを呼び出すことによって発生させることもできます。 Faulted 状態への遷移は、通信オブジェクトを開いている途中または開いた後に発生することがあります。  
+ <xref:System.ServiceModel.ICommunicationObject> の各状態と状態遷移を次の図に示します。 状態遷移は、次の3つのメソッドのいずれかを呼び出すことによって発生する可能性があります。Abort、Open、または Close。 また、実装固有の他のメソッドを呼び出すことによって発生させることもできます。 Faulted 状態への遷移は、通信オブジェクトを開いている途中または開いた後に発生することがあります。  
   
  すべての <xref:System.ServiceModel.ICommunicationObject> は Created 状態から開始します。 この状態では、アプリケーションがプロパティを設定してオブジェクトを構成できます。 オブジェクトが Created 以外の状態になると、オブジェクトは不変と見なされます。  
   
  ![チャネル状態遷移](../../../../docs/framework/wcf/extending/media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
 図 1. ICommunicationObject ステート マシン  
   
- Windows Communication Foundation (WCF) は、という名前の抽象基本クラスを提供します。<xref:System.ServiceModel.Channels.CommunicationObject>を実装する<xref:System.ServiceModel.ICommunicationObject>とチャネル ステート マシン。 次の図は、<xref:System.ServiceModel.Channels.CommunicationObject> に固有の、変更済みの状態図です。 <xref:System.ServiceModel.ICommunicationObject> ステート マシンのほかに、追加の <xref:System.ServiceModel.Channels.CommunicationObject> メソッドが呼び出されるタイミングも示しています。  
+ Windows Communication Foundation (WCF) は、およびチャネルステートマシン<xref:System.ServiceModel.Channels.CommunicationObject>を実装<xref:System.ServiceModel.ICommunicationObject>するという名前の抽象基本クラスを提供します。 次の図は、<xref:System.ServiceModel.Channels.CommunicationObject> に固有の、変更済みの状態図です。 <xref:System.ServiceModel.ICommunicationObject> ステート マシンのほかに、追加の <xref:System.ServiceModel.Channels.CommunicationObject> メソッドが呼び出されるタイミングも示しています。  
   
  ![状態の変更](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure5statetransitionsdetailsc.gif "wcfc_WCFChannelsigure5StateTransitionsDetailsc")  
 図 2. イベントと保護メソッドの呼び出しを含む、ICommunicationObject ステート マシンの CommunicationObject 実装  
@@ -64,7 +64,7 @@ ms.locfileid: "67424775"
   
  <xref:System.ServiceModel.Channels.CommunicationObject> は 3 つのコンストラクターを提供します。これらはすべて、オブジェクトを Created 状態にとどめます。 これらのコンストラクターは、次のように定義されています。  
   
- 最初のコンストラクターは既定のコンストラクターで、オブジェクトを取得するコンストラクター オーバーロードで代行されます。  
+ 1つ目のコンストラクターは、オブジェクトを受け取るコンストラクターのオーバーロードにデリゲートするパラメーターなしのコンストラクターです。  
   
  `protected CommunicationObject() : this(new object()) { … }`  
   
@@ -80,9 +80,9 @@ ms.locfileid: "67424775"
   
  Open メソッド  
   
- 前提条件:状態が作成されます。  
+ Precondition状態が作成されます。  
   
- 事後条件:状態とは、Opened または Faulted です。 例外がスローされる場合があります。  
+ 事後条件:状態が開かれているか、エラーが発生しています。 例外がスローされる場合があります。  
   
  Open() メソッドは通信オブジェクトを開き、状態を Opened に設定しようとします。 エラーが発生した場合は、状態を Faulted に設定します。  
   
@@ -95,30 +95,30 @@ ms.locfileid: "67424775"
   
  Close メソッド  
   
- 前提条件:なし。  
+ Preconditionなし。  
   
- 事後条件:閉じられた状態です。 例外がスローされる場合があります。  
+ 事後条件:状態は Closed です。 例外がスローされる場合があります。  
   
  Close() メソッドはどの状態でも呼び出すことができます。 このメソッドは、オブジェクトを正常に閉じようとします。 エラーが発生した場合は、オブジェクトを終了します。 現在の状態が Closing または Closed の場合、このメソッドは何もしません。 それ以外の場合は、状態を Closing に設定します。 元の状態が Created、Opening、または Faulted の場合は、Abort() を呼び出します (次の図を参照してください)。 元の状態が Opened の場合は、OnClosing() (Closing イベントを発生させます)、OnClose()、および OnClosed() をこの順に呼び出します。 これらのいずれかが例外をスローした場合、Close() は Abort() を呼び出して例外をバブリングさせます。 OnClosed() は状態をクローズに設定し、クローズ イベントを発生させます。 Close プロセスの詳細を次の図に示します。  
   
- ![状態の変更](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsguire7ico-closeflowchartc.gif "wcfc_WCFChannelsguire7ICO CloseFlowChartc")  
+ ![状態の変更](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsguire7ico-closeflowchartc.gif "wcfc_WCFChannelsguire7ICO-CloseFlowChartc")  
 OnClose メソッドをオーバーライドして、カスタム クローズ ロジック (内部通信オブジェクトを閉じるなど) を実装します。 OnClose() はタイムアウト パラメーターを取り、Abort() の一部として呼び出されないため、長時間にわたってブロックできる正常なクロージング ロジック (たとえば、もう一方の側が応答するまで待機するなど) はすべて OnClose() で実装してください。  
   
- [中止]  
+ 中止  
   
- 前提条件:なし。  
-事後条件:閉じられた状態です。 例外がスローされる場合があります。  
+ Preconditionなし。  
+事後条件:状態は Closed です。 例外がスローされる場合があります。  
   
  現在の状態が Closed の場合、またはオブジェクトが既に終了している場合 (Abort() を別のスレッドで実行するなどにより)、Abort() メソッドは何もしません。 それ以外の場合は、状態を Closing に設定し、OnClosing() (Closing イベントを発生させます)、OnAbort()、および OnClosed をこの順に呼び出します (オブジェクトを閉じるのではなく、終了させるので OnClose を呼び出しません)。 OnClosed() は状態をクローズに設定し、クローズ イベントを発生させます。 これらのいずれかが例外をスローした場合は、Abort の呼び出し元に例外が再スローされます。 OnClosing()、OnClosed()、および OnAbort() の実装は、入出力などでブロックしないでください。 Abort プロセスの詳細を次の図に示します。  
   
- ![状態の変更](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure8ico-abortflowchartc.gif "wcfc_WCFChannelsigure8ICO AbortFlowChartc")  
+ ![状態の変更](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure8ico-abortflowchartc.gif "wcfc_WCFChannelsigure8ICO-AbortFlowChartc")  
 カスタム終了ロジック (内部通信オブジェクトを終了するなど) を実装するように OnAbort メソッドをオーバーライドします。  
   
  Fault  
   
  Fault は、<xref:System.ServiceModel.Channels.CommunicationObject> に固有のメソッドであり、<xref:System.ServiceModel.ICommunicationObject> インターフェイスの一部ではありません。 ここで説明するのは、完全性を期してのことです。  
   
- 前提条件:なし。  
+ Preconditionなし。  
   
  事後条件:状態は Faulted です。 例外がスローされる場合があります。  
   
@@ -137,7 +137,7 @@ OnClose メソッドをオーバーライドして、カスタム クローズ �
   
 |状態|Abort を呼び出したか|例外|  
 |-----------|----------------------------|---------------|  
-|作成日時|N/A|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
+|Created|N/A|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Opening|N/A|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Opened|N/A|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Closing|[はい]|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>|  

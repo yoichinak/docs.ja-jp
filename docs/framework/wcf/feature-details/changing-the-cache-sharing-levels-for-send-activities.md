@@ -2,12 +2,12 @@
 title: Send アクティビティのキャッシュ共有レベルの変更
 ms.date: 03/30/2017
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
-ms.openlocfilehash: 079eb037f074155aec3ad5473480bbf5d4d341b2
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: ac4f2e4fe85d6b243999add6bda65f4fb202f79c
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425166"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363841"
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>Send アクティビティのキャッシュ共有レベルの変更
 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 拡張機能により、キャッシュ共有レベルのカスタマイズやチャネル ファクトリ キャッシュの設定のカスタマイズを行えるほか、<xref:System.ServiceModel.Activities.Send> メッセージング アクティビティを使用してサービス エンドポイントにメッセージを送信するワークフローのチャネル キャッシュの設定のカスタマイズも可能になります。 これらのワークフローは、通常はクライアント ワークフローですが、<xref:System.ServiceModel.WorkflowServiceHost> でホストされるワークフロー サービスである場合もあります。 チャネル ファクトリ キャッシュには、<xref:System.ServiceModel.ChannelFactory%601> オブジェクトがキャッシュされます。 チャネル キャッシュには、チャネルがキャッシュされます。  
@@ -20,11 +20,11 @@ ms.locfileid: "67425166"
   
  ワークフローの <xref:System.ServiceModel.Activities.Send> アクティビティに使用可能なさまざまなキャッシュ共有レベルと、推奨される使用方法を次に示します。  
   
-- **ホスト レベル**:ホスト レベルの共有で、キャッシュは、ワークフロー サービス ホストでホストされるワークフロー インスタンスにのみ使用できます。 キャッシュはプロセス全体のキャッシュのワークフロー サービス ホスト間で共有できます。  
+- **ホストレベル**:ホスト共有レベルでは、キャッシュは、ワークフローサービスホストでホストされているワークフローインスタンスでのみ使用できます。 キャッシュはプロセス全体のキャッシュのワークフロー サービス ホスト間で共有できます。  
   
-- **インスタンス レベル**:インスタンス レベルの共有、キャッシュはその有効期間内の特定のワークフロー インスタンスに使用が、キャッシュは他のワークフロー インスタンスを使用できません。  
+- **インスタンスレベル**:インスタンス共有レベルでは、特定のワークフローインスタンスがその有効期間全体にわたってキャッシュを使用できますが、キャッシュは他のワークフローインスタンスでは使用できません。  
   
-- **キャッシュなし**:キャッシュは既定でオフに構成で定義されているエンドポイントを使用するワークフローがある場合。 この場合、キャッシュをオンにすると安全性が損なわれることがあるため、オフにしておくことをお勧めします。 たとえば、送信ごとに異なる ID (異なる資格情報、または偽装の使用) が必要な場合があります。  
+- **キャッシュなし**:構成で定義されているエンドポイントを使用するワークフローがある場合、キャッシュは既定でオフになっています。 この場合、キャッシュをオンにすると安全性が損なわれることがあるため、オフにしておくことをお勧めします。 たとえば、送信ごとに異なる ID (異なる資格情報、または偽装の使用) が必要な場合があります。  
   
 ## <a name="changing-the-cache-sharing-level-for-a-client-workflow"></a>クライアント ワークフローのキャッシュ共有レベルの変更  
  クライアント ワークフローでのキャッシュの共有を設定するには、<xref:System.ServiceModel.Activities.SendMessageChannelCache> クラスのインスタンスを目的のワークフロー インスタンスのセットに拡張として追加します。 この結果、すべてのワークフロー インスタンス間でキャッシュが共有されます。 次のコード例は、この手順を実行する方法を示しています。  
@@ -86,7 +86,7 @@ serviceHost.WorkflowExtensions.Add(() => new SendMessageChannelCache
 ```  
   
 ## <a name="customizing-cache-settings"></a>キャッシュ設定のカスタマイズ  
- チャネル ファクトリ キャッシュおよびチャネル キャッシュのキャッシュ設定をカスタマイズできます。 キャッシュ設定は <xref:System.ServiceModel.Activities.ChannelCacheSettings> クラスで定義されています。 <xref:System.ServiceModel.Activities.SendMessageChannelCache> クラスは、チャネル ファクトリ キャッシュおよびチャネル キャッシュの既定のキャッシュ設定を、その既定のコンストラクターで定義します。 次の表は、これらのキャッシュ設定の既定値をキャッシュのタイプごとに示しています。  
+ チャネル ファクトリ キャッシュおよびチャネル キャッシュのキャッシュ設定をカスタマイズできます。 キャッシュ設定は <xref:System.ServiceModel.Activities.ChannelCacheSettings> クラスで定義されています。 クラス<xref:System.ServiceModel.Activities.SendMessageChannelCache>は、チャネルファクトリキャッシュの既定のキャッシュ設定と、パラメーターなしのコンストラクターのチャネルキャッシュを定義します。 次の表は、これらのキャッシュ設定の既定値をキャッシュのタイプごとに示しています。  
   
 |設定|LeaseTimeout (分)|IdleTimeout (分)|MaxItemsInCache|  
 |-|-|-|-|  
@@ -150,7 +150,7 @@ SendMessageChannelCache customChannelCacheExtension =
 clientInstance.Extensions.Add(customChannelCacheExtension);  
 ```  
   
- ホストされたワークフロー サービスでは、ファクトリ キャッシュとチャネル キャッシュの設定をアプリケーション構成ファイルで指定できます。 これを行うには、ファクトリ キャッシュおよびチャネル キャッシュのキャッシュ設定を含むサービス動作を追加し、そのサービス動作をサービスに追加します。 次の例を含む構成ファイルの内容を示しています、`MyChannelCacheBehavior`サービス動作、カスタム ファクトリ キャッシュおよびチャネル キャッシュの設定をします。 このサービス動作を介してサービスに追加されます、`behaviorConfiguration`属性。  
+ ホストされたワークフロー サービスでは、ファクトリ キャッシュとチャネル キャッシュの設定をアプリケーション構成ファイルで指定できます。 これを行うには、ファクトリ キャッシュおよびチャネル キャッシュのキャッシュ設定を含むサービス動作を追加し、そのサービス動作をサービスに追加します。 次の例は、カスタムファクトリキャッシュとチャネルキャッシュ設定を`MyChannelCacheBehavior`使用したサービス動作を含む構成ファイルの内容を示しています。 このサービス動作は、 `behaviorConfiguration`属性を通じてサービスに追加されます。  
   
 ```xml  
 <configuration>    
