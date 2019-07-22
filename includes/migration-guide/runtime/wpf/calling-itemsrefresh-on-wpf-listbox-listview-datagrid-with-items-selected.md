@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 22c67c687f5581c181acc4aeab8910c4467fd424
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: a14395895c6be586c862d1b49aa6bf6669e4203a
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67858427"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238033"
 ---
 ### <a name="calling-itemsrefresh-on-a-wpf-listbox-listview-or-datagrid-with-items-selected-can-cause-duplicate-items-to-appear-in-the-element"></a>項目が選択されている WPF ListBox、ListView、または DataGrid に対して Items.Refresh を呼び出すと、重複した項目が要素に表示されることがある
 
@@ -16,4 +16,3 @@ ms.locfileid: "67858427"
 |Version|4.5|
 |型|ランタイム|
 |影響を受ける API|<ul><li><xref:System.Windows.Data.CollectionView.Refresh?displayProperty=nameWithType></li></ul>|
-

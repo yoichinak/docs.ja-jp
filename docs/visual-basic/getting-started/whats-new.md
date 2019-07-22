@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 5b1547f596a0ff1c52a402f90457dced6ef604a0
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 49c39e12aa67b1f36fc46c21f5d2b23223b3264d
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611797"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238647"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic の新機能
 
@@ -122,7 +122,7 @@ Dim number As Integer = &H_C305_F860
 
 **追加のコンパイラ スイッチ**
 
-Visual Basic コマンド ライン コンパイラで、参照アセンブリの出力を制御する [**-refout**](../reference/command-line-compiler/refout-compiler-option.md) と [**-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) のコンパイラ オプションがサポートされるようになりました。 **-refout** は、参照アセンブリの出力ディレクトリを定義し、**-refonly** はコンパイルで参照アセンブリだけが出力されるように指定します。
+Visual Basic コマンド ライン コンパイラで、参照アセンブリの出力を制御する [ **-refout**](../reference/command-line-compiler/refout-compiler-option.md) と [ **-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) のコンパイラ オプションがサポートされるようになりました。 **-refout** は、参照アセンブリの出力ディレクトリを定義し、 **-refonly** はコンパイルで参照アセンブリだけが出力されるように指定します。
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
@@ -174,7 +174,7 @@ C# 7.0 以降の C# は参照戻り値に対応しています。 つまり、�
 
 ## <a name="visual-basic-14"></a>Visual Basic 14
 
-[nameof](../../csharp/language-reference/keywords/nameof.md)
+[nameof](../../csharp/language-reference/operators/nameof.md)
 
 文字列をハードコーディングせずにエラー メッセージで使用するための型またはメンバーの非修飾文字列名を取得できます。  これにより、リファクタリングするときにコードは正しい状態を保てます。  この機能は、またモデル-ビュー-コントローラーの MVC のリンクをフックし、プロパティ変更イベントを発生させるためにも役立ちます。
 

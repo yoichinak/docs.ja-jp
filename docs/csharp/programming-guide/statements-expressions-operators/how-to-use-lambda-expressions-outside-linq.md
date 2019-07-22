@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], outside LINQ
 ms.assetid: 2b519274-6ee4-4455-ab2e-aed67dbfd07c
-ms.openlocfilehash: c66dea393ad2351402f54b2391d424701208eba2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 947f80fdaa90b6b5f8176aac01dd8e3cf40e38cc
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619822"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363774"
 ---
 # <a name="how-to-use-lambda-expressions-outside-linq-c-programming-guide"></a>方法: LINQ 以外でラムダ式を使用する (C# プログラミング ガイド)
 ラムダ式の使用は [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリに限定されているわけではありません。 デリゲート値が想定される場面、すなわち匿名メソッドを使用できる場面であれば、どこでもラムダ式を使用できます。 次の例では、Windows フォームのイベント ハンドラーでラムダ式を使用する方法を示します。 なお、入力 (<xref:System.Object> と <xref:System.Windows.Forms.MouseEventArgs>) の型はコンパイラによって推論されるため、ラムダ入力パラメーターで明示的に指定する必要がありません。  
@@ -32,5 +32,4 @@ public partial class Form1 : Form
 ## <a name="see-also"></a>関連項目
 
 - [ラムダ式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
-- [匿名メソッド](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)
 - [統合言語クエリ (LINQ)](../../../csharp/programming-guide/concepts/linq/index.md)

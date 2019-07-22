@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: ec2012a256214dc5f3fb144f1d828634553742c2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2a4e6129c39c624429ecbc45de5cf9b644b28572
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744090"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363047"
 ---
 # <a name="operator-overloading-c-reference"></a>演算子のオーバーロード (C# リファレンス)
 
@@ -43,7 +43,7 @@ ms.locfileid: "67744090"
 |[&#91;&#93;](member-access-operators.md#indexer-operator-)|要素へのアクセスはオーバーロード可能な演算子とは見なされていませんが、[インデクサー](../../programming-guide/indexers/index.md)を定義することができます。|
 |[(T)x](type-testing-and-conversion-operators.md#cast-operator-)|キャスト演算子はオーバーロードできませんが、新しい変換演算子を定義できます。 詳細については、「[User-defined conversion operators](user-defined-conversion-operators.md)」(ユーザー定義の変換演算子) を参照してください。|
 |[+=](arithmetic-operators.md#compound-assignment), [-=](arithmetic-operators.md#compound-assignment), [\*=](arithmetic-operators.md#compound-assignment), [/=](arithmetic-operators.md#compound-assignment), [%=](arithmetic-operators.md#compound-assignment), [&=](boolean-logical-operators.md#compound-assignment), [&#124;=](boolean-logical-operators.md#compound-assignment), [^=](boolean-logical-operators.md#compound-assignment), [\<\<=](bitwise-and-shift-operators.md#compound-assignment), [>>=](bitwise-and-shift-operators.md#compound-assignment)|複合代入演算子を明示的にオーバーロードすることはできません。 ただし、二項演算子をオーバーロードするとき、対応する複合代入演算子がある場合は、それも暗黙的にオーバーロードされます。 たとえば、`+=` は、オーバーロード可能な `+` を使用して評価されます。|
-|[=](assignment-operator.md)、[.](member-access-operators.md#member-access-operator-)、[?:](conditional-operator.md)、[??](null-coalescing-operator.md)、[->](pointer-related-operators.md#pointer-member-access-operator--)、[=>](lambda-operator.md)、[f(x)](member-access-operators.md#invocation-operator-)、[as](type-testing-and-conversion-operators.md#as-operator)、[checked](../keywords/checked.md)、[unchecked](../keywords/unchecked.md)、[default](../../programming-guide/statements-expressions-operators/default-value-expressions.md)、[delegate](../../programming-guide/statements-expressions-operators/anonymous-methods.md)、[is](type-testing-and-conversion-operators.md#is-operator)、[nameof](../keywords/nameof.md)、[new](new-operator.md)、[sizeof](../keywords/sizeof.md)、[typeof](type-testing-and-conversion-operators.md#typeof-operator)|これらの演算子はオーバーロードできません。|
+|[=](assignment-operator.md)、[.](member-access-operators.md#member-access-operator-)、[?:](conditional-operator.md)、[??](null-coalescing-operator.md)、[->](pointer-related-operators.md#pointer-member-access-operator--)、[=>](lambda-operator.md)、[f(x)](member-access-operators.md#invocation-operator-)、[as](type-testing-and-conversion-operators.md#as-operator)、[checked](../keywords/checked.md)、[unchecked](../keywords/unchecked.md)、[default](../../programming-guide/statements-expressions-operators/default-value-expressions.md)、[delegate](delegate-operator.md)、[is](type-testing-and-conversion-operators.md#is-operator)、[nameof](nameof.md)、[new](new-operator.md)、[sizeof](../keywords/sizeof.md)、[typeof](type-testing-and-conversion-operators.md#typeof-operator)|これらの演算子はオーバーロードできません。|
 
 > [!NOTE]
 > 比較演算子は、ペアでオーバーロードする必要があります。 つまり、ペアのどちらかの演算子をオーバーロードする場合、もう一方の演算子もオーバーロードする必要があります。 次のようなペアがこれに該当します。

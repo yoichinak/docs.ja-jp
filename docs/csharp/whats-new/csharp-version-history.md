@@ -3,12 +3,12 @@ title: C# の歴史 - C# ガイド
 description: この言語の最初のバージョンがどのようなものであったか、そしてそれ以降どのように進化してきたかについて説明します。
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 351e4de01a7c3c50cb815a99f0bde546848a9e51
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 8230efcbcdd67cc99f321efc6509df3665d9f2f7
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423241"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363881"
 ---
 # <a name="the-history-of-c"></a>C\# の歴史
 
@@ -56,7 +56,7 @@ Visual Studio 2003 に付属の C# バージョン 1.2 言語に対する細か�
 
 - [ジェネリック](../programming-guide/generics/index.md)
 - [部分型](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
-- [匿名メソッド](../programming-guide/statements-expressions-operators/anonymous-methods.md)
+- [匿名メソッド](../language-reference/operators/delegate-operator.md)
 - [Null 許容型](../programming-guide/nullable-types/index.md)
 - [反復子](../programming-guide/concepts/iterators.md)
 - [共変性と反変性](../programming-guide/concepts/covariance-contravariance/index.md)
