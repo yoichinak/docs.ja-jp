@@ -2,16 +2,16 @@
 title: 方法に関する記事 (C# ガイド)
 description: 簡単なヒントと、焦点を絞った短いコード サンプルのコレクション
 ms.date: 12/20/2017
-ms.openlocfilehash: 63410d687bd09f95a5ce7ce9304f2281b2f8d334
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 09e39e3c9bea5d4b9240039e37d2a5998fe1ebf8
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859532"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400742"
 ---
 # <a name="how-to-c"></a>方法 (C#)
 
-C# ガイドの方法に関するセクションでは、よく寄せられる質問に対する簡単な回答が見つかります。 場合によっては、記事が複数のセクションで表示されることもあります。 複数の検索パスで見つけやすいようにしました。 
+C# ガイドの方法に関するセクションでは、よく寄せられる質問に対する簡単な回答が見つかります。 場合によっては、記事が複数のセクションで表示されることもあります。 複数の検索パスで見つけやすいようにしました。
 
 ## <a name="general-c-concepts"></a>一般的な C# の概念
 
@@ -19,7 +19,6 @@ C# の開発者には常識といえるヒントやコツがいくつかあり�
 
 - [オブジェクト初期化子を使用してオブジェクトを初期化する](../programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md)。
 - [メソッドに構造体を渡す場合とクラスを渡す場合の違いについて理解する](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)。
-- [ラムダ式の使用方法](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md)。
 - [グローバル名前空間のエイリアスを使用して型名の競合を解決する](../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)。
 - [演算子のオーバーロードを使用する](../language-reference/operators/operator-overloading.md)。
 - [カスタム拡張メソッドを実装して呼び出す](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md)。
