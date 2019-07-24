@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-ms.openlocfilehash: 462c8141b84fc8bdda673a45a7841e015b174a32
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9fa9e51e66af6df4d1a6b1ec94c5010651bbb21d
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647990"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401504"
 ---
 # <a name="xstatic-markup-extension"></a>x:Static のマークアップ拡張機能
-定義されている任意の静的な値をコード エンティティを参照、 [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– に準拠した方法。 XAML のプロパティの値を提供する、参照されている静的プロパティを使用できます。  
+共通言語仕様 (CLS: Common Language Specification) に準拠した方法で定義されている静的な値渡しのコードエンティティを参照します。 参照される静的プロパティは、XAML でプロパティの値を指定するために使用できます。  
   
 ## <a name="xaml-attribute-usage"></a>XAML 属性の使用方法  
   
@@ -30,57 +30,57 @@ ms.locfileid: "64647990"
   
 | | |  
 |-|-|  
-|`prefix`|任意。 割り当てられた、既定以外の XAML 名前空間を参照するプレフィックス。 `prefix` 明示的に使用量のため表示から既定の XAML 名前空間を静的プロパティを参照することはほとんどありません。 「解説」を参照してください。|  
-|`typeName`|必須。 必要な静的メンバーを定義する型の名前。|  
-|`staticMemberName`|必須。 (定数、静的プロパティ、フィールド、または列挙値) の静的な値が必要なメンバーの名前。|  
+|`prefix`|任意。 既定以外のマップされた XAML 名前空間を参照するプレフィックス。 `prefix`は、既定の XAML 名前空間からの静的なプロパティを参照することはほとんどないため、を使用して明示的に表示します。 「解説」を参照してください。|  
+|`typeName`|必須。 目的の静的メンバーを定義する型の名前。|  
+|`staticMemberName`|必須。 目的の静的な値のメンバーの名前 (定数、静的プロパティ、フィールド、または列挙値)。|  
   
 ## <a name="remarks"></a>Remarks  
 
-参照されているコード エンティティは、次のいずれかである必要があります。  
+参照されるコードエンティティは、次のいずれかである必要があります。  
   
 - 定数  
 - 静的プロパティ  
 - フィールド  
 - 列挙値
 
-非静的のプロパティなど、他のコード エンティティを指定すると、XAML がコンパイルされると、マークアップまたは XAML 読み込み時の解析の例外の場合は、コンパイル時エラーとします。  
+非静的プロパティなどの他のコードエンティティを指定すると、XAML がマークアップコンパイルされた場合、または XAML 読み込み時の解析例外が発生した場合に、コンパイル時エラーが発生します。  
 
-行うことができます`x:Static`静的フィールドまたは現在の XAML ドキュメントの既定の XAML 名前空間に属さないプロパティへの参照ただし、プレフィックスのマッピングが必要です。 XAML 名前空間は、ほとんどの場合に、XAML ドキュメントのルート要素で定義されます。  
+現在の xaml `x:Static`ドキュメントの既定の xaml 名前空間に含まれていない静的なフィールドまたはプロパティへの参照を作成できます。ただし、これにはプレフィックスマッピングが必要です。 XAML 名前空間は、ほとんどの場合、XAML ドキュメントのルート要素で定義されます。  
 
-既定の XAML スキーマ コンテキストで実行されている場合、.NET Framework XAML サービスおよびその XAML リーダーと XAML ライターによって静的なプロパティの検索操作を実行できます。 この XAML スキーマ コンテキストでは、CLR リフレクションを使用して、オブジェクト グラフの構築のために必要な静的な値を指定します。 `typeName`を指定する実際には XAML 型名を CLR 型名ではなく、これらは基本的に同じ名前、既定の XAML スキーマ コンテキストを使用する場合、または既存のすべての CLR ベース XAML 実装するフレームワークを使用する場合は。  
+静的プロパティの参照操作は、既定の XAML スキーマコンテキストを使用して実行されている場合に、xaml サービスとその XAML リーダーおよび XAML ライター .NET Framework によって実行できます。 この XAML スキーマコンテキストは、CLR リフレクションを使用して、オブジェクトグラフの構築に必要な静的な値を提供できます。 指定`typeName`するは実際には clr 型名ではなく、xaml 型名ですが、既定の xaml スキーマコンテキストを使用する場合、または既存の clr ベースの xaml を実装するすべてのフレームワークを使用する場合は、基本的に同じ名前になります。  
 
-行ったと注意して使用`x:Static`直接プロパティの値の型ではない参照をします。 XAML マークアップ拡張機能で指定した値のシーケンス処理を呼び出さないでください追加の値の変換。 これは、true の場合でも、`x:Static`参照は、文字列を作成し、通常のテキスト文字列に基づく属性値の値の変換は、特定のメンバーまたは戻り値の型のメンバー値のいずれかに発生します。  
+プロパティの値の型`x:Static`を直接参照しない場合は、注意してください。 XAML 処理シーケンスでは、マークアップ拡張機能から指定された値は、追加の値変換を呼び出しません。 これは、参照に`x:Static`よってテキスト文字列が作成され、テキスト文字列に基づく属性値の値変換が、通常、その特定のメンバーまたは戻り値の型のメンバー値に対して行われる場合にも当てはまります。  
 
 属性構文は、このマークアップ拡張機能で使用される最も一般的な構文です。 `x:Static` 識別子文字列の後に設定される文字列トークンは、基になる <xref:System.Windows.Markup.StaticExtension.Member%2A> 拡張クラスの <xref:System.Windows.Markup.StaticExtension> 値として割り当てられます。  
 
-技術的に可能なその他の 2 つの XAML 使用法があります。 ただし、これらの使用方法は、不必要に詳細があまり一般的なは。  
+他にも、技術的には可能な XAML の使用方法が2つあります。 ただし、これらの使用方法は、不必要に冗長であるため、あまり一般的ではありません。  
 
-1. オブジェクト要素構文です。
+1. オブジェクト要素の構文。
 
     ```xaml
     <x:Static Member="prefix:typeName.staticMemberName" ... />
     ```
 
-2. 初期化文字列の明示的なメンバー プロパティの構文を属性します。
+2. 初期化文字列の明示的なメンバープロパティを持つ属性構文。
 
     ```xaml
     <object property="{x:Static Member=prefix:typeName.staticMemberName}" ... />
     ```
 
-このマークアップ拡張機能の処理がによって定義されている、.NET Framework XAML サービス実装、<xref:System.Windows.Markup.StaticExtension>クラス。  
+.NET Framework XAML サービスの実装では、このマークアップ拡張機能の処理は<xref:System.Windows.Markup.StaticExtension>クラスによって定義されます。  
 
 `x:Static` はマークアップ拡張機能です。 XAML のすべてのマークアップ拡張機能は `{`と`}` 文字をそれぞれの属性構文内で使用します。これはマークアップ拡張機能が値を提供する必要があることを XAML プロセッサに認識させるための規則です。 マークアップ拡張機能について詳しくは、「 [XAML のマークアップ拡張機能の概要](markup-extensions-for-xaml-overview.md)」をご覧ください。  
   
 ## <a name="wpf-usage-notes"></a>WPF の使用上の注意  
- WPF プログラミングで使用する既定の XAML 名前空間に多数の便利な静的プロパティが含まれていないと、便利な静的プロパティのほとんどはなどを必要とせず、使用状況を容易にする型コンバーターをサポート`{x:Static}`します。 静的プロパティは、次のいずれかが true の場合、XAML 名前空間のプレフィックスをマップする必要があります。  
+ WPF プログラミングに使用する既定の XAML 名前空間には、便利な静的プロパティが多く含まれていません。便利な静的プロパティのほとんどは、を必要`{x:Static}`としない使用を容易にする型コンバーターなどのサポートがあります。 静的プロパティの場合、次のいずれかに該当する場合は、XAML 名前空間のプレフィックスをマップする必要があります。  
   
-- WPF に存在しますが、WPF の既定の XAML 名前空間の一部でない型を参照している ([!INCLUDE[TLA#tla_wpfxmlnsv1](../../../includes/tlasharptla-wpfxmlnsv1-md.md)])。 これは、非常に一般的なシナリオを使用するため`x:Static`します。 たとえば、使用する場合があります、`x:Static`へのマッピングを XAML 名前空間を持つ参照、<xref:System>の静的プロパティを参照するには CLR 名前空間と mscorlib アセンブリ、<xref:System.Environment>クラス。  
+- WPF に存在する型を参照していますが、WPF ([!INCLUDE[TLA#tla_wpfxmlnsv1](../../../includes/tlasharptla-wpfxmlnsv1-md.md)]) の既定の XAML 名前空間に含まれていません。 これは、を使用`x:Static`するための非常に一般的なシナリオです。 たとえば、 `x:Static` クラス<xref:System.Environment>の静的プロパティを参照するために、 <xref:System> CLR 名前空間と mscorlib アセンブリに対する XAML 名前空間のマッピングを含む参照を使用することができます。  
   
-- カスタム アセンブリから型を参照しています。  
+- カスタムアセンブリから型を参照している。  
   
-- その型が既定の WPF XAML 名前空間の一部としてマップされていませんでしたが CLR 名前空間は WPF アセンブリに存在する型を参照しています。 WPF の既定の XAML 名前空間に CLR 名前空間のマッピングは、さまざまな WPF アセンブリ内の定義によって実行されます (この概念の詳細については、次を参照してください。 [XAML 名前空間および WPF XAML の Namespace マッピング](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md))。 CLR 名前空間のマッピングされていないがその CLR 名前空間が、通常は想定されていません、XAML などのクラス定義のほとんどの場合で構成される場合に存在できる<xref:System.Windows.Threading>します。  
+- WPF アセンブリに存在する型を参照していますが、その型は、WPF の既定の XAML 名前空間の一部としてマップされていない CLR 名前空間内にあります。 WPF の既定の XAML 名前空間への CLR 名前空間のマッピングは、さまざまな WPF アセンブリの定義によって実行されます (この概念の詳細については、「 [WPF xaml の Xaml 名前空間と名前空間のマッピング](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)」を参照してください)。 マップされていない CLR 名前空間は、CLR 名前空間が主に XAML 用ではないクラス定義 (など<xref:System.Windows.Threading>) で構成されている場合に存在する可能性があります。  
   
- WPF のプレフィックスと XAML 名前空間を使用する方法の詳細については、次を参照してください。 [XAML 名前空間および WPF XAML のマッピングの Namespace](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)します。  
+ WPF でプレフィックスと XAML 名前空間を使用する方法の詳細については、「 [WPF xaml の Xaml 名前空間と名前空間のマッピング](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -16,21 +16,21 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: c214cb39bf51dad2aafe4ec0c9050f355db5b2c5
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 987e48f163d35d27f6736464d7497451cca82c0c
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331669"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400862"
 ---
 # <a name="wpf-architecture"></a>WPF アーキテクチャ
 このトピックでは、Windows Presentation Foundation (WPF) クラスの階層構造のガイド付きツアーを提供します。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]の主要なサブシステムの大半に対応し、それらがどのようにやり取りするかについて説明します。 また、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]の構造設計者によって行われた選択についての幾つかを詳細に説明します。  
 
 <a name="System_Object"></a>   
 ## <a name="systemobject"></a>System.Object  
- 主要な[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]プログラミング モデルがマネージ コードを通じて公開されます。 初期の設計段階で[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]のさまざまなシステムのマネージ コンポーネントとアンマネージのコンポーネントとの線引きについての論争がありました。 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]は生産性と堅牢性 (メモリ管理、エラー処理、共通型システムなどを含む) のある開発を行う数多くの機能を提供しますが、それらはコストの増加を招きます。  
+ 主要な[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]プログラミング モデルがマネージ コードを通じて公開されます。 初期の設計段階で[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]のさまざまなシステムのマネージ コンポーネントとアンマネージのコンポーネントとの線引きについての論争がありました。 CLR には、開発の生産性と堅牢性を高めるさまざまな機能が用意されています (メモリ管理、エラー処理、共通型システムなどを含む) が、コストが発生します。  
   
- の主要なコンポーネント[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]を次の図に示します。 図の赤いセクション (プレゼンテーションフレームワーク、プレゼンテーションコア、およびミルコア) は、の[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]主要なコード部分です。 これらのうちの1つだけがアンマネージコンポーネント–ミルコアです。 との緊密な統合を可能にするために、ミルコア[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]はアンマネージコードで記述されています。 で[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]は、すべてのディスプレイが[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]エンジンによって実行されるため、ハードウェアとソフトウェアを効率的にレンダリングできます。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]また、メモリと実行を細かく制御する必要もあります。 密度の高い合成エンジンは、パフォーマンスに大きな影響を与えます。パフォーマンスを向上さ[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]せるには、の多くの利点が必要です。  
+ の主要なコンポーネント[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]を次の図に示します。 図の赤いセクション (プレゼンテーションフレームワーク、プレゼンテーションコア、およびミルコア) は、の[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]主要なコード部分です。 これらのうちの1つだけがアンマネージコンポーネント–ミルコアです。 との緊密な統合を可能にするために、ミルコア[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]はアンマネージコードで記述されています。 で[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]は、すべてのディスプレイが[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]エンジンによって実行されるため、ハードウェアとソフトウェアを効率的にレンダリングできます。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]また、メモリと実行を細かく制御する必要もあります。 密度の高い合成エンジンは、パフォーマンスに大きな影響を与えます。そのため、パフォーマンスを得るためには、CLR の多くの利点が必要です。  
   
  ![.NET Framework 内の WPF の位置。](./media/wpf-architect1.PNG "wpf_architect1")  
   
@@ -44,13 +44,13 @@ ms.locfileid: "68331669"
   
  の[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]設計フェーズでは、目標は実行の1つのスレッドに移動しましたが、非スレッド "関連付け済み" モデルに移行することでした。 スレッドアフィニティは、コンポーネントが実行中のスレッドの id を使用して何らかの種類の状態を格納するときに発生します。 最も一般的な形式は、スレッドローカルストア (TLS) を使用して状態を格納することです。 スレッドアフィニティでは、実行の各論理スレッドが、オペレーティングシステムの1つの物理スレッドによって所有されている必要があります。これは、メモリを集中的に使用する可能性があります。 最終的には、WPF のスレッドモデルは、スレッドアフィニティを使用したシングルスレッド実行の既存の User32.dll スレッドモデルと同期した状態に保たれます。 これの主な理由は相互運用性でした[!INCLUDE[TLA2#tla_ole2.0](../../../../includes/tla2sharptla-ole2-0-md.md)]。クリップボードや Internet Explorer のようなシステムでは、すべてシングルスレッドアフィニティ (STA) を実行する必要があります。  
   
- STA スレッドを持つオブジェクトがある場合は、スレッド間で通信を行い、正しいスレッドであることを検証する方法が必要です。 ここでは、ディスパッチャーの役割があります。 ディスパッチャーは、優先順位の高い複数のキューを持つ基本的なメッセージディスパッチシステムです。 メッセージの例としては、未加工の入力通知 (マウス移動)、フレームワーク関数 (レイアウト)、ユーザーコマンド (このメソッドの実行) などがあります。 から<xref:System.Windows.Threading.DispatcherObject>派生することによって[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 、STA の動作を持つオブジェクトを作成し、作成時にディスパッチャーへのポインターを与えます。  
+ STA スレッドを持つオブジェクトがある場合は、スレッド間で通信を行い、正しいスレッドであることを検証する方法が必要です。 ここでは、ディスパッチャーの役割があります。 ディスパッチャーは、優先順位の高い複数のキューを持つ基本的なメッセージディスパッチシステムです。 メッセージの例としては、未加工の入力通知 (マウス移動)、フレームワーク関数 (レイアウト)、ユーザーコマンド (このメソッドの実行) などがあります。 から<xref:System.Windows.Threading.DispatcherObject>派生することによって、STA の動作を持つ CLR オブジェクトを作成し、作成時にディスパッチャーへのポインターを与えます。  
   
 <a name="System_Windows_DependencyObject"></a>   
 ## <a name="systemwindowsdependencyobject"></a>System.Windows.DependencyObject  
  構築[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]で使用される主要なアーキテクチャ思想の1つは、メソッドまたはイベントのプロパティを優先することでした。 プロパティは宣言型であり、アクションではなく意図を簡単に指定できます。 また、ユーザーインターフェイスのコンテンツを表示するための、モデル駆動型またはデータ駆動型のシステムもサポートされています。 この哲学には、アプリケーションの動作をより適切に制御するために、バインドできるプロパティを作成することを意図した効果がありました。  
   
- プロパティによってより多くのシステムを使用するために、で提供される[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]よりも豊富なプロパティシステムが必要です。 この豊富な例として、変更通知があります。 双方向のバインドを有効にするには、変更通知をサポートするために、バインドの両側が必要です。 プロパティ値に関連付けられた動作を使用するには、プロパティ値が変更されたときに通知を受け取る必要があります。 Microsoft .NET Framework には**INotifyPropertyChange**というインターフェイスがあります。これにより、オブジェクトは変更通知を発行できますが、これは省略可能です。  
+ プロパティによってより多くのシステムを使用するためには、CLR が提供するよりも豊富なプロパティシステムが必要でした。 この豊富な例として、変更通知があります。 双方向のバインドを有効にするには、変更通知をサポートするために、バインドの両側が必要です。 プロパティ値に関連付けられた動作を使用するには、プロパティ値が変更されたときに通知を受け取る必要があります。 Microsoft .NET Framework には**INotifyPropertyChange**というインターフェイスがあります。これにより、オブジェクトは変更通知を発行できますが、これは省略可能です。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]<xref:System.Windows.DependencyObject>型から派生した、豊富なプロパティシステムを提供します。 プロパティシステムは、プロパティ式間の依存関係を追跡し、依存関係が変更されたときにプロパティ値を自動的に再検証するという、本当に "依存関係" プロパティシステムです。 たとえば、(など<xref:System.Windows.Controls.Control.FontSize%2A>の) を継承するプロパティがある場合、値を継承する要素の親でプロパティが変更されると、システムは自動的に更新されます。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "68331669"
   
  で[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]のデータバインディングの最も興味深い機能の1つは、データテンプレートの導入です。 データテンプレートを使用すると、データの一部を視覚化する方法を宣言によって指定できます。 データにバインドできるカスタムユーザーインターフェイスを作成する代わりに、問題を解決して、作成される表示をデータが決定できるようにすることができます。  
   
- スタイル設定は、実際には軽量な形式のデータバインドです。 スタイルを使用すると、共有定義の一連のプロパティを、要素の1つ以上のインスタンスにバインドできます。 スタイルは、明示的な参照によって (プロパティを<xref:System.Windows.FrameworkElement.Style%2A>設定することによって)、またはスタイルを要素の[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]型に関連付けることによって暗黙的に要素に適用されます。  
+ スタイル設定は、実際には軽量な形式のデータバインドです。 スタイルを使用すると、共有定義の一連のプロパティを、要素の1つ以上のインスタンスにバインドできます。 スタイルは、明示的な参照によって (プロパティを<xref:System.Windows.FrameworkElement.Style%2A>設定することによって) 要素に適用されるか、またはスタイルを要素の CLR 型に関連付けることによって暗黙的に適用されます。  
   
 <a name="System_Windows_Controls_Control"></a>   
 ## <a name="systemwindowscontrolscontrol"></a>System.Windows.Controls.Control  
@@ -133,7 +133,7 @@ ms.locfileid: "68331669"
  コントロールのデータモデルの一般的な側面は、コンテンツモデルです。 のような<xref:System.Windows.Controls.Button>コントロールを表示すると、型<xref:System.Object>の "Content" という名前のプロパティがあることがわかります。 と[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ASP.NET では、通常、このプロパティは文字列になります。ただし、ボタンに配置できるコンテンツの種類が制限されます。 ボタンのコンテンツは、単純な文字列、複雑なデータオブジェクト、または要素ツリー全体のいずれかになります。 データオブジェクトの場合は、データテンプレートを使用して表示を作成します。  
   
 <a name="Summary"></a>   
-## <a name="summary"></a>Summary  
+## <a name="summary"></a>まとめ  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]は、データ駆動型の動的なプレゼンテーションシステムを作成できるように設計されています。 システムのすべての部分は、動作を駆動するプロパティセットを通じてオブジェクトを作成するように設計されています。 データバインディングはシステムの基本的な部分であり、すべてのレイヤーで統合されています。  
   
  従来のアプリケーションでは、ディスプレイを作成し、いくつかのデータにバインドします。 で[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]は、コントロールに関するすべての側面が、何らかの種類のデータバインディングによって生成されます。 ボタン内に表示されるテキストは、ボタン内に構築されたコントロールを作成し、その表示をボタンのコンテンツプロパティにバインドすることによって表示されます。  

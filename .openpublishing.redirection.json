@@ -1047,12 +1047,20 @@
             "redirect_url": "/dotnet/csharp/programming-guide/nullable-types/using-nullable-types"
         },
         {
+            "source_path": "docs/csharp/programming-guide/statements-expressions-operators/anonymous-methods.md",
+            "redirect_url": "/dotnet/csharp/language-reference/operators/delegate-operator"
+        },
+        {
             "source_path": "docs/csharp/programming-guide/statements-expressions-operators/conversion-operators.md",
             "redirect_url": "/dotnet/csharp/language-reference/operators/user-defined-conversion-operators"
         },
         {
             "source_path": "docs/csharp/programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md",
             "redirect_url": "/dotnet/csharp/language-reference/operators/user-defined-conversion-operators"
+        },
+        {
+            "source_path": "docs/csharp/programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md",
+            "redirect_url": "/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions"
         },
         {
             "source_path": "docs/csharp/programming-guide/statements-expressions-operators/how-to-use-operator-overloading-to-create-a-complex-number-class.md",

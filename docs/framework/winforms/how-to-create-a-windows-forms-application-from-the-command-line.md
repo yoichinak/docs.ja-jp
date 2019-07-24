@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 72195dd49c163b26a5bcfa739768718f2a32f346
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 6c87419a4d730f72a7ee15fcc3127781a8eaff75
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65588977"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364221"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>方法: コマンド ラインから Windows フォーム アプリケーションを作成する。
 次の手順では、コマンドラインから Windows フォーム アプリケーションを作成して実行するために完了する必要のある基本的な手順について説明します。 Visual Studio では、これらの手順に対する広範なサポートが用意されています。  [チュートリアル: WPF での Windows フォーム コントロールのホスト](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)を参照してください。  
@@ -35,7 +35,7 @@ ms.locfileid: "65588977"
      [!code-csharp[System.Windows.Forms.BasicForm#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.BasicForm#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#3)]  
   
-3. `Form1` の既定のコンストラクターを作成します。  
+3. のパラメーターなしの`Form1`コンストラクターを作成します。  
   
      後続の手順で、コンストラクターにさらにコードを追加します。  
   
@@ -44,9 +44,9 @@ ms.locfileid: "65588977"
   
 4. `Main` メソッドをクラスに追加します。  
   
-    1. 適用、 <xref:System.STAThreadAttribute> c# `Main` Windows フォーム アプリケーションを指定するメソッドは、シングル スレッド アパートメント。 (属性は必要ありません Visual basic で Windows フォーム アプリケーション開発された Visual Basic の使用をシングル スレッド アパートメント モデルを既定であるためです。)  
+    1. <xref:System.STAThreadAttribute>をメソッド`Main`にC#適用して、Windows フォームアプリケーションがシングルスレッドアパートメントであることを指定します。 (Visual Basic で開発された Windows フォームアプリケーションでは、既定でシングルスレッドアパートメントモデルが使用されるため、Visual Basic では属性は必要ありません)。  
   
-    2. 呼び出す<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>アプリケーションにオペレーティング システムのスタイルを適用します。  
+    2. を<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>呼び出して、オペレーティングシステムのスタイルをアプリケーションに適用します。  
   
     3. フォームのインスタンスを作成して実行します。  
   
@@ -59,18 +59,18 @@ ms.locfileid: "65588977"
   
 2. フォームをコンパイルします。  
   
-    - C# を使用している場合は、次のように入力します。 `csc form1.cs`  
+    - を使用してC#いる場合は、次のように入力します。`csc form1.cs`  
   
          `-or-`  
   
-    - Visual Basic を使用している場合は、次のように入力します。 `vbc form1.vb`  
+    - Visual Basic を使用している場合は、次のように入力します。`vbc form1.vb`  
   
-3. コマンド プロンプトで次のように入力します。 `Form1.exe`  
+3. コマンドプロンプトで、次のように入力します。`Form1.exe`  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>コントロールの追加とイベントの処理  
- 前の手順は、コンパイルして実行する基本的な Windows フォームを作成する方法を示しました。 次の手順では、コントロールを作成してフォームに追加し、コントロールのイベントを処理する方法を示します。 Windows フォームに追加することができます、コントロールの詳細については、次を参照してください。 [Windows フォーム コントロール](./controls/index.md)します。  
+ 前の手順は、コンパイルして実行する基本的な Windows フォームを作成する方法を示しました。 次の手順では、コントロールを作成してフォームに追加し、コントロールのイベントを処理する方法を示します。 Windows フォームに追加できるコントロールの詳細については、「[コントロールの Windows フォーム](./controls/index.md)」を参照してください。  
   
- Windows フォーム アプリケーションを作成する方法を理解するだけでなく、イベント ベースのプログラミングとユーザー入力を処理する方法を理解する必要があります。 詳細については、次を参照してください[Windows フォームでのイベント ハンドラーの作成](creating-event-handlers-in-windows-forms.md)、および[ユーザー入力の処理。](./controls/handling-user-input.md)  
+ Windows フォーム アプリケーションを作成する方法を理解するだけでなく、イベント ベースのプログラミングとユーザー入力を処理する方法を理解する必要があります。 詳細については、「 [Windows フォームでのイベントハンドラーの作成](creating-event-handlers-in-windows-forms.md)」および「[ユーザー入力の処理](./controls/handling-user-input.md)」を参照してください。  
   
 #### <a name="to-declare-a-button-control-and-handle-its-click-event"></a>ボタン コントロールを宣言して、クリック イベントを処理するには  
   

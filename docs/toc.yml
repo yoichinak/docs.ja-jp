@@ -296,6 +296,8 @@
           href: core/testing/unit-testing-published-output.md
         - name: Visual Studio を使用した .NET Core プロジェクトの Live Unit Testing
           href: /visualstudio/test/live-unit-testing-start
+    - name: 継続的インテグレーション
+      href: core/tools/using-ci-with-cli.md
     - name: バージョン管理
       href: core/versions/index.md
       items:
@@ -303,86 +305,88 @@
           href: core/versions/selection.md
         - name: 期限切れのランタイムと SDK の削除
           href: core/versions/remove-runtime-sdk-versions.md
-    - name: ランタイム識別子のカタログ
+    - name: ランタイム識別子 (RID) のカタログ
       href: core/rid-catalog.md
     - name: .NET Core SDK 概要
       href: core/sdk.md
-    - name: .NET Core CLI ツール
+    - name: .NET Core CLI
       items:
-        - name: .NET Core CLI の概要
+        - name: 概要
           href: core/tools/index.md
-        - name: テレメトリ
-          href: core/tools/telemetry.md
         - name: グローバル ツール
-          href: core/tools/global-tools.md
+          expanded: true
           items:
+            - name: 概要
+              href: core/tools/global-tools.md
             - name: グローバル ツールを作成する
               href: core/tools/global-tools-how-to-create.md
         - name: 昇格されたアクセス権
           href: core/tools/elevated-access.md
         - name: 機能拡張モデル
           href: core/tools/extensibility.md
-        - name: 継続的インテグレーション
-          href: core/tools/using-ci-with-cli.md
         - name: カスタム テンプレート
           href: core/tools/custom-templates.md
         - name: タブ補完を有効にする
           href: core/tools/enable-tab-autocomplete.md
-        - name: dotnet
-          href: core/tools/dotnet.md
-        - name: dotnet build
-          href: core/tools/dotnet-build.md
-        - name: dotnet build-server
-          href: core/tools/dotnet-build-server.md
-        - name: dotnet clean
-          href: core/tools/dotnet-clean.md
-        - name: dotnet help
-          href: core/tools/dotnet-help.md
-        - name: dotnet の移行
-          href: core/tools/dotnet-migrate.md
-        - name: dotnet msbuild
-          href: core/tools/dotnet-msbuild.md
-        - name: dotnet new
-          href: core/tools/dotnet-new.md
-        - name: dotnet nuget
+        - name: テレメトリ
+          href: core/tools/telemetry.md
+        - name: global.json の概要
+          href: core/tools/global-json.md
+        - name: 関連項目
           items:
-            - name: dotnet nuget delete
-              href: core/tools/dotnet-nuget-delete.md
-            - name: dotnet nuget locals
-              href: core/tools/dotnet-nuget-locals.md
-            - name: dotnet nuget push
-              href: core/tools/dotnet-nuget-push.md
-        - name: dotnet pack
-          href: core/tools/dotnet-pack.md
-        - name: dotnet publish
-          href: core/tools/dotnet-publish.md
-        - name: dotnet restore
-          href: core/tools/dotnet-restore.md
-        - name: dotnet run
-          href: core/tools/dotnet-run.md
-        - name: dotnet sln
-          href: core/tools/dotnet-sln.md
-        - name: dotnet store
-          href: core/tools/dotnet-store.md
-        - name: dotnet test
-          href: core/tools/dotnet-test.md
-        - name: dotnet tool
-          items:
-            - name: dotnet tool install
-              href: core/tools/dotnet-tool-install.md
-            - name: dotnet tool list
-              href: core/tools/dotnet-tool-list.md
-            - name: dotnet tool uninstall
-              href: core/tools/dotnet-tool-uninstall.md
-            - name: dotnet tool update
-              href: core/tools/dotnet-tool-update.md
-        - name: dotnet vstest
-          href: core/tools/dotnet-vstest.md
-        - name: dotnet-install スクリプト
-          href: core/tools/dotnet-install-script.md
-        - name: プロジェクトの変更コマンド
-          items:
-            - name: 関連項目
+            - name: dotnet
+              href: core/tools/dotnet.md
+            - name: dotnet build
+              href: core/tools/dotnet-build.md
+            - name: dotnet build-server
+              href: core/tools/dotnet-build-server.md
+            - name: dotnet clean
+              href: core/tools/dotnet-clean.md
+            - name: dotnet help
+              href: core/tools/dotnet-help.md
+            - name: dotnet の移行
+              href: core/tools/dotnet-migrate.md
+            - name: dotnet msbuild
+              href: core/tools/dotnet-msbuild.md
+            - name: dotnet new
+              href: core/tools/dotnet-new.md
+            - name: dotnet nuget
+              items:
+                - name: dotnet nuget delete
+                  href: core/tools/dotnet-nuget-delete.md
+                - name: dotnet nuget locals
+                  href: core/tools/dotnet-nuget-locals.md
+                - name: dotnet nuget push
+                  href: core/tools/dotnet-nuget-push.md
+            - name: dotnet pack
+              href: core/tools/dotnet-pack.md
+            - name: dotnet publish
+              href: core/tools/dotnet-publish.md
+            - name: dotnet restore
+              href: core/tools/dotnet-restore.md
+            - name: dotnet run
+              href: core/tools/dotnet-run.md
+            - name: dotnet sln
+              href: core/tools/dotnet-sln.md
+            - name: dotnet store
+              href: core/tools/dotnet-store.md
+            - name: dotnet test
+              href: core/tools/dotnet-test.md
+            - name: dotnet tool
+              items:
+                - name: dotnet tool install
+                  href: core/tools/dotnet-tool-install.md
+                - name: dotnet tool list
+                  href: core/tools/dotnet-tool-list.md
+                - name: dotnet tool uninstall
+                  href: core/tools/dotnet-tool-uninstall.md
+                - name: dotnet tool update
+                  href: core/tools/dotnet-tool-update.md
+            - name: dotnet vstest
+              href: core/tools/dotnet-vstest.md
+            - name: dotnet-install スクリプト
+              href: core/tools/dotnet-install-script.md
+            - name: プロジェクト参照のコマンド
               items:
                 - name: dotnet add reference
                   href: core/tools/dotnet-add-reference.md
@@ -390,7 +394,7 @@
                   href: core/tools/dotnet-list-reference.md
                 - name: dotnet remove reference
                   href: core/tools/dotnet-remove-reference.md
-            - name: パッケージ
+            - name: プロジェクト パッケージのコマンド
               items:
                 - name: dotnet add package
                   href: core/tools/dotnet-add-package.md
@@ -398,8 +402,6 @@
                   href: core/tools/dotnet-list-package.md
                 - name: dotnet remove package
                   href: core/tools/dotnet-remove-package.md
-        - name: global.json
-          href: core/tools/global-json.md
     - name: .NET Core の追加ツール
       href: core/additional-tools/index.md
       items:
@@ -1850,7 +1852,7 @@
         - name: エラー メッセージ
           href: visual-basic/language-reference/error-messages/index.md
           items:
-            - name: "\t'#Else' の前には、対応する '#If' または '#ElseIf' が必要です。"
+            - name: '''#Else'' の前には、対応する ''#If'' または ''#ElseIf'' が必要です。'
               href: visual-basic/language-reference/error-messages/elseif-must-be-preceded-by-a-matching-if-or-elseif.md
             - name: '''#Region'' および ''#End Region'' ステートメントは、メソッド本体や複数行ラムダの内部では有効ではありません。'
               href: visual-basic/language-reference/error-messages/region-and-end-region-are-not-valid-within-method-bodies-multiline-lambdas.md

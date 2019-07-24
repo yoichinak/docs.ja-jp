@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 06a21b664ea0981663219a697fbc1bfc9be50287
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 72f907c117748fb19ca0663f24445a8c978afd32
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67859153"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68235540"
 ---
 ### <a name="cspparametersparentwindowhandle-now-expects-hwnd-value"></a>CspParameters.ParentWindowHandle が HWND 値を受け取るようになる
 
@@ -16,4 +16,3 @@ ms.locfileid: "67859153"
 |Version|4.7|
 |型|再ターゲット中|
 |影響を受ける API|<ul><li><xref:System.Security.Cryptography.CspParameters.ParentWindowHandle?displayProperty=nameWithType></li></ul>|
-

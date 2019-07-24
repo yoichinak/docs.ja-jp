@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 8f1251195fdb21ac57030056abc7b5657edb49fa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 68bb3b8cd080e5b454776433e65027b7d18e7c3b
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614620"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331552"
 ---
 # <a name="how-to-localize-an-application"></a>方法: アプリケーションをローカライズする
 このチュートリアルでは、LocBaml ツールを使用して、ローカライズされたアプリケーションを作成する方法について説明します。  
@@ -30,13 +30,13 @@ ms.locfileid: "64614620"
 ## <a name="requirements"></a>必要条件  
  この説明の過程で、コマンド ラインから実行するコンパイラである [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] を使用します。  
   
- また、プロジェクト ファイルを使用するよう指示されます。 使用する方法の詳細について[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]とプロジェクト ファイルを参照してください[をビルドおよび配置](../app-development/building-and-deploying-wpf-applications.md)します。  
+ また、プロジェクト ファイルを使用するよう指示されます。 とプロジェクトファイルの使用[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]方法については、「[ビルドと配置](../app-development/building-and-deploying-wpf-applications.md)」を参照してください。  
   
  この説明のすべての例では、カルチャとして en-US (英語-米国) を使用します。 別の言語をインストールしなくても、この例の手順全体の作業を行えます。  
   
 <a name="create_sample_app"></a>   
 ## <a name="create-a-sample-application"></a>サンプルのアプリケーションの作成  
- このステップでは、ローカリゼーション用のアプリケーションを準備します。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] のサンプルでは、この説明のコード サンプルで使用される HelloApp のサンプルが提供されています。 このサンプルを使用する場合は、ダウンロード、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]ファイルから、 [LocBaml ツール サンプル](https://go.microsoft.com/fwlink/?LinkID=160016)します。  
+ このステップでは、ローカリゼーション用のアプリケーションを準備します。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] のサンプルでは、この説明のコード サンプルで使用される HelloApp のサンプルが提供されています。 このサンプルを使用する場合は、 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] [LocBaml ツールサンプル](https://go.microsoft.com/fwlink/?LinkID=160016)からファイルをダウンロードします。  
   
 1. ローカリゼーションを開始するポイントまで、アプリケーションを開発します。  
   
@@ -44,15 +44,15 @@ ms.locfileid: "64614620"
   
      `<UICulture>en-US</UICulture>`  
   
-3. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイルに UID を追加します。 UID は、ファイルへの変更を追跡して、翻訳する必要がある項目を識別するために使用されます。 Uid をファイルに追加するには、実行**updateuid**プロジェクト ファイルで。  
+3. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイルに UID を追加します。 UID は、ファイルへの変更を追跡して、翻訳する必要がある項目を識別するために使用されます。 ファイルに Uid を追加するには、プロジェクトファイルで**updateuid**を実行します。  
   
      **msbuild -t:updateuid helloapp.csproj**  
   
-     不足していないか、重複する Uid ことを確認するには、実行**checkuid**:  
+     不足している Uid または重複する Uid がないことを確認するには、 **checkuid**を実行します。  
   
      **msbuild -t:checkuid helloapp.csproj**  
   
-     実行後**updateuid**ファイルに Uid を含める必要があります。 たとえば、HelloApp の Pane1.xaml ファイルに、以下の内容があるはずです。  
+     **Updateuid**を実行した後、ファイルには uid が含まれている必要があります。 たとえば、HelloApp の Pane1.xaml ファイルに、以下の内容があるはずです。  
   
      `<StackPanel x:Uid="StackPanel_1">`  
   
@@ -81,7 +81,7 @@ ms.locfileid: "64614620"
 <a name="build_locbaml"></a>   
 ## <a name="build-the-locbaml-tool"></a>LocBaml ツールをビルドする  
   
-1. LocBaml のビルドに必要なすべてのファイルは [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] サンプルに配置されています。 C# ファイルをダウンロード、 [LocBaml ツール サンプル](https://go.microsoft.com/fwlink/?LinkID=160016)します。  
+1. LocBaml のビルドに必要なすべてのファイルは [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] サンプルに配置されています。 C# [LocBaml ツールサンプル](https://go.microsoft.com/fwlink/?LinkID=160016)からファイルをダウンロードします。  
   
 2. ツールをビルドするには、コマンド ラインでプロジェクト ファイル (locbaml.csproj) を実行します。  
   
@@ -91,24 +91,24 @@ ms.locfileid: "64614620"
   
 4. LocBaml を実行するときに指定できるオプションは、次のとおりです。  
   
-    - **解析**または **-p:** 解析 Baml、リソース、または[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)].csv または .txt ファイルを生成するファイル。  
+    - **parse**または **-p:** Baml、リソース、または[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]ファイルを解析して、.csv または .txt ファイルを生成します。  
   
-    - **生成**または **-g:** 翻訳ファイルを使用して、ローカライズされたバイナリ ファイルを生成します。  
+    - または **-g を生成します。** 翻訳されたファイルを使用して、ローカライズされたバイナリファイルを生成します。  
   
     - **out**または **-o** {*filedirectory*] **:** 出力ファイル名。  
   
-    - **カルチャ**または **- cul** {*カルチャ*] **:** 出力アセンブリのロケール。  
+    - **culture**または **-cul** {*culture*] **:** 出力アセンブリのロケール。  
   
-    - **translation** or **-trans** {*translation.csv*] **:** 翻訳またはローカライズされたファイルです。  
+    - **translation**または **-trans** {*translation .csv*] **:** 翻訳またはローカライズされたファイル。  
   
-    - **asmpath**または **- asmpath:** {*filedirectory*] **:** 場合、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]コードには、カスタム コントロールが含まれる、指定する必要があります、 **asmpath**カスタム コントロール アセンブリにします。  
+    - **asmpath**または **-asmpath:** {*filedirectory*] **:** コードに[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]カスタムコントロールが含まれている場合は、カスタムコントロールアセンブリに**asmpath**を指定する必要があります。  
   
-    - **nologo:** ロゴまたは著作権情報は表示されません。  
+    - **nologo**ロゴや著作権情報は表示されません。  
   
-    - **詳細。** 詳細モードの情報が表示されます。  
+    - **な**詳細モードの情報を表示します。  
   
     > [!NOTE]
-    >  入力の場合は、ツールを実行するときは、オプションの一覧を作成する必要があります、 **LocBaml.exe** ENTER キーを押します。  
+    >  ツールの実行時にオプションの一覧が必要な場合は、「 **LocBaml** 」と入力し、enter キーを押します。  
   
 <a name="parse_dll"></a>   
 ## <a name="use-locbaml-to-parse-a-file"></a>LocBaml を使用してファイルを解析する  
@@ -137,27 +137,27 @@ ms.locfileid: "64614620"
   
    2. **リソース キー**。 ローカライズされたリソースの識別子。  
   
-   3. **カテゴリ**。 値の型です。 参照してください[ローカリゼーション属性とコメント](localization-attributes-and-comments.md)します。  
+   3. **カテゴリ**。 値の型です。 「[ローカリゼーション属性とコメント」を](localization-attributes-and-comments.md)参照してください。  
   
-   4. **読みやすさ**。 ローカライザーによって値が読み取れるかどうか。 参照してください[ローカリゼーション属性とコメント](localization-attributes-and-comments.md)します。  
+   4. **読みやすさ**。 ローカライザーによって値が読み取れるかどうか。 「[ローカリゼーション属性とコメント」を](localization-attributes-and-comments.md)参照してください。  
   
-   5. **変更可能性**。 ローカライザーによって値が変更できるかどうか。 参照してください[ローカリゼーション属性とコメント](localization-attributes-and-comments.md)します。  
+   5. **変更可能性**。 ローカライザーによって値が変更できるかどうか。 「[ローカリゼーション属性とコメント」を](localization-attributes-and-comments.md)参照してください。  
   
-   6. **コメント**。 値をローカライズする方法を決定するための値の追加の説明。 参照してください[ローカリゼーション属性とコメント](localization-attributes-and-comments.md)します。  
+   6. **コメント**。 値をローカライズする方法を決定するための値の追加の説明。 「[ローカリゼーション属性とコメント」を](localization-attributes-and-comments.md)参照してください。  
   
    7. **値**。 目的のカルチャに翻訳するテキストの値。  
   
    次の表は、.csv ファイルの区切り記号付きの値にこれらのフィールドをマップする方法を示しています。  
   
-   |BAML 名|リソース キー|カテゴリ|読みやすさ|変更可能性|コメント|[値]|  
+   |BAML 名|リソース キー|Category|読みやすさ|変更可能性|コメント|値|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
-   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Ignore|FALSE|FALSE||#Text1;#Text2|
+   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|無視|FALSE|FALSE||#Text1;#Text2|
    |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|なし|true|true||Hello World|
    |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|なし|true|true||Goodbye World|
   
-   注意のすべての値、**コメント**フィールドに値が含まれていません。 フィールド値をがない場合は空です。 としてまたの最初の行の項目が読み取り可能でも変更できますでもないと、"Ignore"が含まれて、**カテゴリ**値がローカライズ可能ではないことを示しますの値。  
+   **[コメント]** フィールドのすべての値に値が含まれていないことに注意してください。フィールドに値がない場合は、空になります。 また、最初の行の項目は読み取りも変更もできず、**カテゴリ**値として "Ignore" が含まれていることにも注意してください。これらはすべて、値がローカライズ可能ではないことを示します。  
   
-4. 特に、大容量ファイルの解析済みのファイルでローカライズ可能な項目の検出を容易に並べ替えるまたはで項目をフィルター**カテゴリ**、**読みやすさ**、および**Modifiability**. たとえば、読み取りも変更もできない値をフィルター処理することができます。  
+4. 解析されたファイル内のローカライズ可能な項目の検出を容易にするため (特に大規模なファイルの場合)、**カテゴリ**、**読みやすさ**、**変更可能性**で項目を並べ替えたりフィルター処理したりすることができます。 たとえば、読み取りも変更もできない値をフィルター処理することができます。  
   
 <a name="translate_loc_content"></a>   
 ## <a name="translate-the-localizable-content"></a>ローカライズ可能なコンテンツを翻訳する  
@@ -199,7 +199,7 @@ ms.locfileid: "64614620"
 <a name="Some_Tips_for_Using_LocBaml"></a>   
 ## <a name="some-tips-for-using-locbaml"></a>LocBaml を使用するためのヒント  
   
-- カスタム コントロールを定義するすべての依存アセンブリを LocBaml のローカル ディレクトリにコピーするか、GAC にインストールする必要があります。 ローカリゼーション API は、[!INCLUDE[TLA#tla_baml](../../../../includes/tlasharptla-baml-md.md)] を読み取るときに、依存アセンブリにアクセスできる必要があるため、これが必要になります。  
+- カスタム コントロールを定義するすべての依存アセンブリを LocBaml のローカル ディレクトリにコピーするか、GAC にインストールする必要があります。 これは、ローカライズ API がバイナリ XAML (BAML) を読み取るときに、依存アセンブリにアクセスできる必要があるためです。  
   
 - メインのアセンブリが署名済みの場合は、生成されたリソース DLL も読み込むために署名されている必要があります。  
   

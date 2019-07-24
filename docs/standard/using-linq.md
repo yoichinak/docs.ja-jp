@@ -9,12 +9,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: 2ee2ef57385d7fb0a396a1c08110fd810e6b0abd
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 2e4b23b7bf197c9984c53b2f4cc2acaa61731d38
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67857112"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238633"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (統合言語クエリ)
 
@@ -281,7 +281,6 @@ End Class
 ' Gets all the short-haired dogs between two different kennels.
 Dim allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, New DogHairLengthComparer())
 ```
-
 
 * 2 つのセットの積集合:
 

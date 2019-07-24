@@ -3,12 +3,12 @@ title: Windows における .NET Core の前提条件
 description: Windows コンピューターで .NET Core アプリケーションを開発および実行する場合に必要な依存関係について説明します。
 ms.custom: updateeachvsrelease
 ms.date: 04/08/2019
-ms.openlocfilehash: 9c4c15a08e0988955ecdf442307059868cb377d1
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 1921ef565c2d04624009f7684e439ddba1cdf57e
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539356"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331077"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows における .NET Core の前提条件
 
@@ -19,18 +19,6 @@ ms.locfileid: "67539356"
 * [Visual Studio Code](https://code.visualstudio.com/)
 
 また、Visual Studio 2017 を使用して Windows 上で開発している場合、.NET Core 開発でサポートされている最小バージョンの詳細については、「[Visual Studio 2017 の前提条件](#prerequisites-with-visual-studio-2017)」セクションを参照してください。
-
-## <a name="net-core-supported-windows-versions"></a>.NET Core がサポートされている Windows バージョン
-
-.NET Core は、次のバージョンでサポートされています。
-
-* Windows 7 SP1
-* Windows 8.1
-* Windows 10 Anniversary Update (バージョン 1607) 以降のバージョン
-* Windows Server 2008 R2 SP1 (フル サーバーまたは Server Core)
-* Windows Server 2012 SP1 (フル サーバーまたは Server Core)
-* Windows Server 2012 R2 (フル サーバーまたは Server Core)
-* Windows Server 2016 以降のバージョン (フル サーバー、Server Core、または Nano Server)
 
 ## <a name="net-core-supported-operating-systems"></a>.NET Core がサポートされたオペレーティング システム
 

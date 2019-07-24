@@ -8,35 +8,35 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-ms.openlocfilehash: a593839447742ed91d22a397d29b2455ce7a3b2d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b373b33fcc962e49aa220f31e24b1484a0a8cd98
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627409"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401594"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey マークアップ拡張機能
-定義し、外部アセンブリから読み込まれたリソースのキーを参照します。 これにより、アセンブリ内、またはクラスの明示的なリソース ディクショナリではなく、アセンブリでは、対象の型を指定するリソースの検索ができます。  
+外部アセンブリから読み込まれるリソースのキーを定義して参照します。 これにより、リソース検索では、アセンブリ内の明示的なリソースディクショナリやクラスではなく、アセンブリ内の対象の型を指定できます。  
   
-## <a name="xaml-attribute-usage-setting-key-compact"></a>XAML 属性の使用法 (設定キー、compact)  
+## <a name="xaml-attribute-usage-setting-key-compact"></a>XAML 属性の使用法 (キーの設定、コンパクト)  
   
 ```xml  
 <object x:Key="{ComponentResourceKey {x:Type targetTypeName}, targetID}" .../>  
 ```  
   
-## <a name="xaml-attribute-usage-setting-key-verbose"></a>XAML 属性の使用法 (キー、詳細設定)  
+## <a name="xaml-attribute-usage-setting-key-verbose"></a>XAML 属性の使用法 (キーの設定、詳細)  
   
 ```xml  
 <object x:Key="{ComponentResourceKey TypeInTargetAssembly={x:Type targetTypeName}, ResourceID=targetID}" .../>  
 ```  
   
-## <a name="xaml-attribute-usage-requesting-resource-compact"></a>XAML 属性の使用法 (リソース要求、compact)  
+## <a name="xaml-attribute-usage-requesting-resource-compact"></a>XAML 属性の使用法 (要求元のリソース、コンパクト)  
   
 ```xml  
 <object property="{DynamicResource {ComponentResourceKey {x:Type targetTypeName}, targetID}}" .../>  
 ```  
   
-## <a name="xaml-attribute-usage-requesting-resource-verbose"></a>XAML 属性の使用法 (リソース要求、詳細)  
+## <a name="xaml-attribute-usage-requesting-resource-verbose"></a>XAML 属性の使用法 (要求元のリソース、詳細)  
   
 ```xml  
 <object property="{DynamicResource {ComponentResourceKey TypeInTargetAssembly={x:Type targetTypeName}, ResourceID=targetID}}" .../>  
@@ -46,33 +46,33 @@ ms.locfileid: "64627409"
   
 |||  
 |-|-|  
-|`targetTypeName`|パブリック名[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]リソース アセンブリで定義されている型。|  
-|`targetID`|リソースのキー。 リソースの問い合わせがあったときに`targetID`に似ていますが、 [X:key ディレクティブ](../../xaml-services/x-key-directive.md)のリソース。|  
+|`targetTypeName`|リソースアセンブリで定義されているパブリック共通言語ランタイム (CLR) 型の名前。|  
+|`targetID`|リソースのキー。 リソースが検索されると`targetID` 、はリソースの[x:Key ディレクティブ](../../xaml-services/x-key-directive.md)に似ています。|  
   
 ## <a name="remarks"></a>Remarks  
- 使用状況は、上記に示すよう、{`ComponentResourceKey`} マークアップ拡張機能の使用が 2 つの場所が見つかりました。  
+ 上記の使用状況に示されている`ComponentResourceKey`ように、{} マークアップ拡張機能の使用方法は次の2つの場所にあります。  
   
-- コントロールの作成者によって提供される、テーマのリソース ディクショナリ内のキーの定義。  
+- コントロールの作成者によって提供される、テーマリソースディクショナリ内のキーの定義。  
   
-- テーマ リソースにアクセスするアセンブリから、ときにテンプレートを再設定、コントロールがコントロールのテーマによって提供されるリソースから取得したプロパティ値を使用します。  
+- コントロールをテンプレートするときに、コントロールのテーマによって提供されるリソースからのプロパティ値を使用する場合に、アセンブリからテーマリソースにアクセスします。  
   
- テーマに由来するコンポーネントのリソースを参照するには、一般にお勧めを使用すること`{DynamicResource}`なく`{StaticResource}`します。 これは、使用法に表示されます。 `{DynamicResource}` ユーザーがそれ自体のテーマを変更できるためお勧めします。 コンポーネント リソース、テーマをサポートするためのコントロールの作成者の意図に最も一致する場合は、コンポーネントのリソース参照も動的であるが有効にする必要があります。  
+ テーマに由来するコンポーネントリソースを参照する場合は、通常は`{DynamicResource}` `{StaticResource}`ではなくを使用することをお勧めします。 これは、使用法で示されています。 `{DynamicResource}`テーマ自体はユーザーが変更できるため、をお勧めします。 テーマをサポートするために、コントロールの作成者の意図に最も近いコンポーネントリソースが必要な場合は、コンポーネントのリソース参照も動的にできるようにする必要があります。  
   
- <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A>リソースが実際に定義されているターゲット アセンブリ内に存在する型を指定します。 A`ComponentResourceKey`定義して正確に知ることとは無関係に使用できる場所、<xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A>を定義しても、最終的に参照されたアセンブリから型を解決する必要があります。  
+ は<xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> 、リソースが実際に定義されているターゲットアセンブリに存在する型を識別します。 は、<xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A>が定義されている場所を正確に把握することとは別に定義および使用できますが、最終的には参照されるアセンブリを使用して型を解決する必要があります。`ComponentResourceKey`  
   
- 一般的な使用方法<xref:System.Windows.ComponentResourceKey>クラスのメンバーとして、公開されているキーを定義することです。 この方法で使用する、<xref:System.Windows.ComponentResourceKey>クラスのコンス トラクター、マークアップ拡張機能ではありません。 詳細については、次を参照してください。 <xref:System.Windows.ComponentResourceKey>、またはトピックの"定義し、を参照するキーのテーマのリソース"セクション[コントロールの作成の概要](../controls/control-authoring-overview.md)します。  
+ の<xref:System.Windows.ComponentResourceKey>一般的な使用方法は、クラスのメンバーとして公開されるキーを定義することです。 この使用法では、マーク<xref:System.Windows.ComponentResourceKey>アップ拡張機能ではなく、クラスコンストラクターを使用します。 詳細については<xref:System.Windows.ComponentResourceKey>、「[コントロールの作成の概要](../controls/control-authoring-overview.md)」の「」または「テーマリソースのキーの定義と参照」セクションを参照してください。  
   
- 属性構文は、一般に使用するキーを確立してを参照するキーを持つリソース、用、`ComponentResourceKey`マークアップ拡張機能。  
+ キーを確立し、キー付きリソースを参照する場合、通常、 `ComponentResourceKey`マークアップ拡張機能に対して属性構文が使用されます。  
   
- コンパクトな構文に依存、<xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType>コンス トラクターのシグネチャとマークアップ拡張機能の位置指定パラメーターの使用方法。 順序、`targetTypeName`と`targetID`されたことが重要です。 冗語構文に依存、<xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType>既定のコンス トラクターを設定、<xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A>と<xref:System.Windows.ComponentResourceKey.ResourceId%2A>ようには、オブジェクト要素の場合は true。 属性構文に似ています。 詳細な構文では、プロパティが設定されている順序は重要ではありません。 リレーションシップおよびこれら 2 つの選択肢 (compact と詳細な) メカニズムがトピックで詳しく説明されている[マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)します。  
+ 表示される compact 構文は、 <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType>マークアップ拡張機能のコンストラクターシグネチャと位置指定パラメーターの使用に依存します。 `targetTypeName` と`targetID`が指定されている順序は重要です。 Verbose 構文は、 <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType>パラメーターなしのコンストラクターに依存し、オブジェクト要素の真の属性構文に似た方法で<xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A>とを<xref:System.Windows.ComponentResourceKey.ResourceId%2A>設定します。 Verbose 構文では、プロパティが設定される順序は重要ではありません。 この2つの代替手段 (compact および verbose) の関係とメカニズムについては、「[マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)」で詳しく説明されています。  
   
- 値では技術的には、`targetID`任意のオブジェクト、文字列にすることはありません。 ただし、WPF の最も一般的な使用方法は、配置する、`targetID`値、文字列であるし、このような文字列が有効ではフォームで、 [XamlName の文法](../../xaml-services/xamlname-grammar.md)します。  
+ 技術的には、の`targetID`値は任意のオブジェクトにすることができ、文字列である必要はありません。 ただし、WPF での最も一般的な使用方法は、 `targetID`値を文字列であるフォームに揃え、そのような文字列を[XamlName 文法](../../xaml-services/xamlname-grammar.md)で有効にすることです。  
   
- `ComponentResourceKey` オブジェクト要素構文で使用できます。 この場合、両方の値を指定する、<xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A>と<xref:System.Windows.ComponentResourceKey.ResourceId%2A>拡張機能を適切に初期化するプロパティが必要です。  
+ `ComponentResourceKey`オブジェクト要素構文で使用できます。 この場合、拡張機能を正しく初期化するに<xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A>は<xref:System.Windows.ComponentResourceKey.ResourceId%2A> 、プロパティとプロパティの両方の値を指定する必要があります。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]リーダー実装では、このマークアップ拡張機能の処理がによって定義されている、<xref:System.Windows.ComponentResourceKey>クラス。  
+ リーダー実装では、このマークアップ<xref:System.Windows.ComponentResourceKey>拡張機能の処理はクラスによって定義されます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]  
   
- `ComponentResourceKey` はマークアップ拡張機能です。 一般にマークアップ拡張機能を実装するのは、属性値をリテラル値やハンドラー名以外にエスケープする要件が存在し、その要件の適用範囲がグローバルで、特定の型やプロパティに型コンバーターを適用するだけにとどまらない場合です。 すべてのマークアップ拡張機能で[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]を使用して、{および} される規則は、それぞれの属性構文内の文字を[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサを認識するマークアップ拡張機能が、属性を処理する必要があります。 詳細については、次を参照してください。[マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)します。  
+ `ComponentResourceKey` はマークアップ拡張機能です。 一般にマークアップ拡張機能を実装するのは、属性値をリテラル値やハンドラー名以外にエスケープする要件が存在し、その要件の適用範囲がグローバルで、特定の型やプロパティに型コンバーターを適用するだけにとどまらない場合です。 のすべての[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]マークアップ拡張機能は、属性構文で {および} 文字を使用します。これ[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]は、マークアップ拡張機能が属性を処理する必要があることをプロセッサが認識する規則です。 詳細については、「[マークアップ拡張機能」および「WPF XAML](markup-extensions-and-wpf-xaml.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -9,17 +9,17 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: faf2e9bbe23acfd46ee98e1f0fca01b7563ede73
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 861a757effee8d68d1e41682dd91ffadba20c536
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777314"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364380"
 ---
 # <a name="annotations-overview"></a>注釈の概要
 用紙にメモやコメントを書くことは普通の行為であり、人はそれを当たり前のことと思っています。 そのようなメモやコメントが "注釈" です。注釈をドキュメントに追加することで情報に目印を付け、興味のある内容を強調表示し、後で参照します。 印刷したドキュメントにメモを書くことは簡単で一般的な行為ですが、電子ドキュメントに個人的なコメントを追加する機能は利用できるとしても一般的に非常に限定されています。  
   
- このトピックでは、いくつかの一般的な種類の注釈、特に付箋と強調表示、レビューしを示していますが、どのように[!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)]これらの種類の Windows Presentation Foundation (WPF) のドキュメントをアプリケーションで注釈を容易になります。コントロールを表示します。  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 注釈をサポートするドキュメント表示コントロールには、<xref:System.Windows.Controls.FlowDocumentReader>と<xref:System.Windows.Controls.FlowDocumentScrollViewer>コントロールから派生したほか、<xref:System.Windows.Controls.Primitives.DocumentViewerBase>など<xref:System.Windows.Controls.DocumentViewer>と<xref:System.Windows.Controls.FlowDocumentPageViewer>します。  
+ このトピックでは、いくつかの一般的な種類の注釈 (特に付箋と強調表示) について説明します。また、Microsoft Annotations フレームワークが Windows Presentation Foundation を通じてアプリケーションでこれらの種類の注釈を容易にする方法を示します (WPF) ドキュメントの表示コントロール。  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]注釈をサポートするドキュメント表示コントロール<xref:System.Windows.Controls.FlowDocumentReader>に<xref:System.Windows.Controls.FlowDocumentScrollViewer>は、および、 <xref:System.Windows.Controls.DocumentViewer>および<xref:System.Windows.Controls.FlowDocumentPageViewer>などの<xref:System.Windows.Controls.Primitives.DocumentViewerBase>から派生したコントロールが含まれます。  
 
 <a name="caf1_type_stickynotes"></a>   
 ## <a name="sticky-notes"></a>付箋  
@@ -36,19 +36,19 @@ ms.locfileid: "61777314"
   
 <a name="caf1_type_callouts"></a>   
 ## <a name="highlights"></a>強調表示  
- 書面であれば、下線を引いたり、蛍光ペンでなぞったり、ドキュメント内の単語を囲んだり、余白に目印や注釈を付けたりするなど、さまざまな方法で書き込みを行い、興味のある項目を目立たせることができます。  [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] の注釈の強調表示にも同様の機能があります。[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ドキュメント表示コントロールに表示される情報に書き込むことができます。  
+ 書面であれば、下線を引いたり、蛍光ペンでなぞったり、ドキュメント内の単語を囲んだり、余白に目印や注釈を付けたりするなど、さまざまな方法で書き込みを行い、興味のある項目を目立たせることができます。  Microsoft annotations Framework の注釈を強調表示すると、ドキュメント表示コントロールに[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]表示される情報をマークするための同様の機能が提供されます。  
   
  次の図は、注釈の強調表示のサンプルです。  
   
  ![注釈の強調表示](./media/caf-callouts.png "CAF_Callouts")  
   
- 通常、ユーザーは最初にいくつかのテキストや、関心のある項目を選択して表示する右クリックし、注釈を作成、<xref:System.Windows.Controls.ContextMenu>注釈オプション。  次の例は、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]宣言に使用できる、<xref:System.Windows.Controls.ContextMenu>ルーティング コマンドに作成および注釈を管理するユーザーにアクセスできます。  
+ 通常、ユーザーは、最初にテキストまたは目的の項目を選択し、右クリックして注釈の<xref:System.Windows.Controls.ContextMenu>オプションのを表示することで、注釈を作成します。  次の例は、 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]ユーザーが注釈を作成および<xref:System.Windows.Controls.ContextMenu>管理するためにアクセスできるルーティングコマンドを使用してを宣言するために使用できるを示しています。  
   
  [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
   
 <a name="caf1_framework_data_anchoring"></a>   
 ## <a name="data-anchoring"></a>データの固定  
- [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] は、表示レイアウトの特定の位置に注釈を結び付けるだけでなく、ユーザーが選択するデータに注釈を固定します。 そのため、スクロールしたり、表示ウィンドウのサイズを変更したりするなど、ドキュメントの表示が変わっても、注釈はそれが固定されているデータにとどまります。 たとえば、次の図をご覧ください。選択したテキストが蛍光ペンでなぞられています。 ドキュメントの表示が変わると (スクロール、サイズ変更、拡大/縮小、その他の移動)、蛍光ペンは元のデータ選択と一緒に移動します。  
+ 注釈フレームワークは、表示ビュー上の位置だけではなく、ユーザーが選択したデータに注釈をバインドします。 そのため、スクロールしたり、表示ウィンドウのサイズを変更したりするなど、ドキュメントの表示が変わっても、注釈はそれが固定されているデータにとどまります。 たとえば、次の図をご覧ください。選択したテキストが蛍光ペンでなぞられています。 ドキュメントの表示が変わると (スクロール、サイズ変更、拡大/縮小、その他の移動)、蛍光ペンは元のデータ選択と一緒に移動します。  
   
  ![注釈データ固定](./media/caf-dataanchoring.png "CAF_DataAnchoring")  
   
@@ -61,7 +61,7 @@ ms.locfileid: "61777314"
  [!code-csharp[FlowDocumentAnnotatedViewer#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/CSharp/Window1.xaml.cs#handler)]
  [!code-vb[FlowDocumentAnnotatedViewer#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/visualbasic/window1.xaml.vb#handler)]  
   
- もう 1 つのシナリオ例にはでは、注釈や付箋を電子メールでドキュメント リーダー間の交換を有効にするアプリケーションが含まれます。 そのような機能を利用すると、交換された注釈を含むページにドキュメント リーダーで移動できます。  
+ もう1つのシナリオ例では、電子メールを使用してドキュメントリーダー間で注釈と付箋を交換できるアプリケーションが含まれています。 そのような機能を利用すると、交換された注釈を含むページにドキュメント リーダーで移動できます。  
   
 ## <a name="see-also"></a>関連項目
 
@@ -75,4 +75,4 @@ ms.locfileid: "61777314"
 - [ContextMenu の概要](../controls/contextmenu-overview.md)
 - [コマンド実行の概要](commanding-overview.md)
 - [フロー ドキュメントの概要](flow-document-overview.md)
-- [方法: コマンド メニュー アイテムを追加します。](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))
+- [方法: MenuItem にコマンドを追加する](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))
