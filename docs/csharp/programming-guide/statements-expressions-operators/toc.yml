@@ -17,8 +17,6 @@
           href: lambda-expressions.md
         - name: '方法: クエリでラムダ式を使用する'
           href: how-to-use-lambda-expressions-in-a-query.md
-        - name: '方法: LINQ 以外でラムダ式を使用する'
-          href: how-to-use-lambda-expressions-outside-linq.md
     - name: 既定値式
       href: default-value-expressions.md
     - name: 等値と等価比較

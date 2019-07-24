@@ -43,6 +43,8 @@
               href: keywords/void.md
             - name: var
               href: keywords/var.md
+            - name: アンマネージ型
+              href: builtin-types/unmanaged-types.md
             - name: 型のリファレンス表
               items:
                 - name: 組み込み型の一覧表
