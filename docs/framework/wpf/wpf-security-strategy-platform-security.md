@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 0b39fce8bfd89dd11a863993738ef9b4fa64ba91
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 42b1596082fe3e682a6fa806412ab5837b087bf9
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364420"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400717"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF のセキュリティ方針 - プラットフォーム セキュリティ
-Windows Presentation Foundation (WPF) にはさまざまなセキュリティサービスが用意されていますが、オペレーティングシステム、 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]、および[!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]を含む、基になるプラットフォームのセキュリティ機能も活用されています。 これらの層を組み合わせることで、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] に強力な多重防御のセキュリティ モデルが提供されます。このセキュリティ モデルでは、次の図に示すように、単一障害点の回避を試みます。  
+Windows Presentation Foundation (WPF) にはさまざまなセキュリティサービスが用意されていますが、オペレーティングシステム、CLR、および[!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]を含む、基になるプラットフォームのセキュリティ機能も活用されています。 これらの層を組み合わせることで、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] に強力な多重防御のセキュリティ モデルが提供されます。このセキュリティ モデルでは、次の図に示すように、単一障害点の回避を試みます。  
   
  ![WPF のセキュリティモデルを示す図。](./media/wpf-security-strategy-platform-security/windows-presentation-foundation-security.png)  
   
@@ -44,7 +44,7 @@ Windows Presentation Foundation (WPF) にはさまざまなセキュリティサ
 - [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)].  
   
 #### <a name="gs-compilation"></a>/GS のコンパイル  
- [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] は、バッファー オーバーランを軽減するために、[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] など、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] の依存関係のすべてを含む多数のコア システム ライブラリを再コンパイルして、保護を行います。 これは、C や C++ のコマンド ライン コンパイラの /GS パラメーターを使用して実現されます。 バッファー オーバーランを明示的に避ける必要はありますが、/GS コンパイルは、故意であるかないかにかかわらずバッファー オーバーランによって生み出される潜在的な脆弱性に対する多重防御の一例となります。  
+ [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]は、CLR などのすべての[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]依存関係を含む多数のコアシステムライブラリを再コンパイルして、バッファーオーバーランを軽減することで保護を提供します。 これは、C や C++ のコマンド ライン コンパイラの /GS パラメーターを使用して実現されます。 バッファー オーバーランを明示的に避ける必要はありますが、/GS コンパイルは、故意であるかないかにかかわらずバッファー オーバーランによって生み出される潜在的な脆弱性に対する多重防御の一例となります。  
   
  従来、バッファー オーバーランは、影響が大きいセキュリティ攻撃の多くの原因となっていました。 バッファー オーバーランは、バッファーの境界を超えて書き込む、悪意のあるコードの挿入を許すコードの脆弱性を攻撃者が利用するときに発生します。 これにより、攻撃者はプロセスを乗っ取ることができます。この場合、コードは、攻撃者のコードを実行するように関数のリターン アドレスを上書きすることで実行されます。 結果として、乗っ取ったプロセスと同じ特権を持つ任意のコードを実行する悪意のあるコードが生成されます。  
   
@@ -90,13 +90,13 @@ Windows Presentation Foundation (WPF) にはさまざまなセキュリティサ
   
 <a name="Common_Language_Runtime_Security"></a>   
 ## <a name="common-language-runtime-security"></a>共通言語ランタイムのセキュリティ  
- に[!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)]は、検証と検証、コードアクセスセキュリティ (CAS)、セキュリティクリティカルな方法など、多くの重要なセキュリティ上の利点があります。  
+ 共通言語ランタイム (CLR) は、検証と検証、コードアクセスセキュリティ (CAS)、およびセキュリティクリティカルな方法論など、多くの重要なセキュリティ上の利点を提供します。  
   
 <a name="Validation_and_Verification"></a>   
 ### <a name="validation-and-verification"></a>確認と検証  
- アセンブリの分離と整合性を提供するため、[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] は検証のプロセスを使用します。 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] の検証では、アセンブリの外部にポイントするアドレスのポータブル実行可能ファイル (PE) ファイル形式を検証して、アセンブリが分離されていることを確認します。 また、[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] 検証では、アセンブリ内に埋め込まれているメタデータの整合性を検証します。  
+ アセンブリの分離と整合性を提供するために、CLR は検証プロセスを使用します。 CLR 検証では、アセンブリの外部をポイントするアドレスのポータブル実行可能 (PE) ファイル形式を検証することによって、アセンブリが分離されていることを確認します。 CLR 検証では、アセンブリ内に埋め込まれているメタデータの整合性も検証されます。  
   
- タイプセーフを確保し、一般的なセキュリティの問題 (バッファーオーバーランなど) を防止し、サブプロセスの分離を通じ[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]てサンドボックスを有効にするために、セキュリティでは検証の概念を使用します。  
+ 型の安全性を確保し、一般的なセキュリティの問題 (バッファーオーバーランなど) を防止し、サブプロセスの分離を通じてサンドボックスを有効にするために、CLR セキュリティでは検証の概念を使用します。  
   
  マネージド アプリケーションは、Microsoft Intermediate Language (MSIL) にコンパイルされます。 マネージド アプリケーション内のメソッドを実行する際、その MSIL は Just-In-Time (JIT) コンパイルを通じてネイティブ コードにコンパイルされます。 JIT コンパイルには、コードが以下を行わないようにする多数の安全性と堅牢性ルールを適用する検証プロセスがあります。  
   
@@ -172,13 +172,13 @@ Windows Presentation Foundation (WPF) にはさまざまなセキュリティサ
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>ClickOnce 配置  
- [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)]は .NET Framework に含まれる包括的な展開テクノロジであり、と統合[!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)]されています (詳細については、「 [ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)」を参照してください)。 スタンドアロンの [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションは、[!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] を使用して配置できます。一方、ブラウザーでホストされるアプリケーションは [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)] で配置する必要があります。  
+ Clickonce は .NET Framework に含まれる包括的な配置テクノロジであり、と統合[!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)]されています (詳細については、「 [clickonce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)」を参照してください)。 スタンド[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]アロンアプリケーションは clickonce を使用して配置できますが、ブラウザーでホストされるアプリケーションは clickonce で配置する必要があります。  
   
- を使用し[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]て配置されたアプリケーションには、コードアクセスセキュリティ (CAS) に[!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)]対して追加のセキュリティレイヤーが与えられます。基本的に、デプロイされたアプリケーションは、必要なアクセス許可を要求します。 これらのアプリケーションが、アプリケーションの配置元ゾーンのアクセス許可セット数を超えていない場合、これらのアプリケーションには必要なアクセス許可のみが付与されます。 起動ゾーンのアクセス許可セットによって提供されるアクセス許可よりも小さい場合でも、必要なアクセス許可だけを減らすことで、アプリケーションがアクセスできるリソースの数が最小限に抑えられます。 その結果、アプリケーションが乗っ取られた場合、クライアント コンピューターの損傷の可能性が低減します。  
+ ClickOnce を使用してデプロイされたアプリケーションには、コードアクセスセキュリティ (CAS) に対する追加のセキュリティレイヤーが与えられます。基本的に、ClickOnce によって配置されたアプリケーションは、必要なアクセス許可を要求します。 これらのアプリケーションが、アプリケーションの配置元ゾーンのアクセス許可セット数を超えていない場合、これらのアプリケーションには必要なアクセス許可のみが付与されます。 起動ゾーンのアクセス許可セットによって提供されるアクセス許可よりも小さい場合でも、必要なアクセス許可だけを減らすことで、アプリケーションがアクセスできるリソースの数が最小限に抑えられます。 その結果、アプリケーションが乗っ取られた場合、クライアント コンピューターの損傷の可能性が低減します。  
   
 <a name="Security_Critical_Methodology"></a>   
 ### <a name="security-critical-methodology"></a>セキュリティ クリティカルな方法  
- XBAP [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]アプリケーションのインターネットゾーンサンドボックスを有効にするためのアクセス許可を使用するコードは、可能な限り高いレベルのセキュリティ監査および制御に保持する必要があります。 この要件を容易にするために、.NET Framework では、特権を昇格するコードを管理するための新しいサポートを提供しています。 具体的には[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] 、を使用すると、特権を昇格するコードを識別<xref:System.Security.SecurityCriticalAttribute>し、でマークすること<xref:System.Security.SecurityCriticalAttribute>ができます。でマークされていないコードは、この方法で*透過的*になります。 逆に、<xref:System.Security.SecurityCriticalAttribute> でマークされていないマネージド コードは特権の昇格ができなくなります。  
+ XBAP [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]アプリケーションのインターネットゾーンサンドボックスを有効にするためのアクセス許可を使用するコードは、可能な限り高いレベルのセキュリティ監査および制御に保持する必要があります。 この要件を容易にするために、.NET Framework では、特権を昇格するコードを管理するための新しいサポートを提供しています。 具体的には、CLR を使用すると、特権を昇格するコードを識別<xref:System.Security.SecurityCriticalAttribute>し、でマークすること<xref:System.Security.SecurityCriticalAttribute>ができます。でマークされていないコードは、この方法で*透過的*になります。 逆に、<xref:System.Security.SecurityCriticalAttribute> でマークされていないマネージド コードは特権の昇格ができなくなります。  
   
  セキュリティクリティカルな方法では、 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] *セキュリティクリティカルなカーネル*に特権を昇格するコードの編成が可能になり、残りの部分は透過的になります。 セキュリティクリティカルなコードを分離すること[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]により、エンジニアリングチームは、セキュリティクリティカルなカーネルに対する追加のセキュリティ分析とソース管理に重点を置いています (「 [WPF のセキュリティ方針-セキュリティ」を参照してください)。エンジニアリング](wpf-security-strategy-security-engineering.md))。  
   
@@ -202,7 +202,7 @@ Windows Presentation Foundation (WPF) にはさまざまなセキュリティサ
   
  [セキュリティの**保存**] プロンプトを**開く**/ためにも、同じユーザー開始ロジックが適用されます。 ActiveX インストールのダイアログボックスは、以前にインストールされたコントロールからのアップグレードを表す場合を除き、常に情報バーの下にトラップされます。 これらの対策を組み合わせると、より安全かつ制御されたユーザー エクスペリエンスがユーザーに提供されます。ユーザーを攻撃して不要または悪意のあるソフトウェアをインストールさせるサイトからユーザーが保護されるためです。  
   
- これらの機能は、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションのダウンロードとインストールを行えるようにする Web サイトを閲覧するために [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] を使用するお客様も保護します。 特に [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] では、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] を含め、構築にどのテクノロジを使用したかに関係なく、悪意のあるまたは不正なアプリケーションをユーザーがインストールする機会を減らす上でユーザーエクスペリエンスの向上を提供しているからです。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] では、[!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] を使用してこのような保護を追加することで、インターネット経由でアプリケーションをダウンロードしやすくします。 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] はインターネット ゾーンのセキュリティ サンドボックス内で実行するので、シームレスに起動することができます。 一方、スタンドアロンの [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションでは、実行するには完全な信頼が必要になります。 これらのアプリケーションでは、起動プロセス中に [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] はセキュリティに関するダイアログ ボックスを表示して、アプリケーションの追加のセキュリティ要件を使用するよう通知します。 ただし、これはユーザーが開始する必要があり、ユーザーが開始したロジックによって制御されるとともに、キャンセルが可能です。  
+ これらの機能は、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションのダウンロードとインストールを行えるようにする Web サイトを閲覧するために [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] を使用するお客様も保護します。 特に [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] では、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] を含め、構築にどのテクノロジを使用したかに関係なく、悪意のあるまたは不正なアプリケーションをユーザーがインストールする機会を減らす上でユーザーエクスペリエンスの向上を提供しているからです。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]は、ClickOnce を使用して、インターネット経由でのアプリケーションのダウンロードを容易にすることで、これらの保護を強化します。 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] はインターネット ゾーンのセキュリティ サンドボックス内で実行するので、シームレスに起動することができます。 一方、スタンドアロンの [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションでは、実行するには完全な信頼が必要になります。 これらのアプリケーションの場合、ClickOnce は起動プロセス中にセキュリティダイアログボックスを表示して、アプリケーションの追加のセキュリティ要件の使用を通知します。 ただし、これはユーザーが開始する必要があり、ユーザーが開始したロジックによって制御されるとともに、キャンセルが可能です。  
   
  [!INCLUDE[TLA2#tla_ie7](../../../includes/tla2sharptla-ie7-md.md)] は、継続的なセキュリティへの取り組みの一環として、[!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] のセキュリティ機能を強化しています。  
   

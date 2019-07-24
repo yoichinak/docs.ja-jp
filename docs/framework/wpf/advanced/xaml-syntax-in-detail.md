@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 66158d14b7686f520260cd24fbf6c1b0e7dda1d4
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 2c4e7213ddcffdb026d3d6e6b339bfc91b3c27c6
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364098"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400777"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 構文の詳細
 このトピックでは、XAML 構文の要素について説明するために使用される用語を定義します。 これらの用語は、このドキュメントの残りの部分で頻繁に使用されます。 WPF ドキュメントについては、特に、xaml を使用する他のフレームワークの場合と、xaml 言語サポートによってシステム .Xaml レベルで有効になっている基本的な XAML 概念の両方で使用されます。 このトピックでは、「 [XAML の概要 (WPF)](xaml-overview-wpf.md)」で紹介した基本的な用語について説明します。  
@@ -47,7 +47,7 @@ ms.locfileid: "68364098"
   
 <a name="xaml_and_clr"></a>   
 ## <a name="xaml-and-clr"></a>XAML と CLR  
- XAML は、マークアップ言語です。 名前[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]によって示されているように、実行時の実行を有効にします。 XAML は、CLR ランタイムによって直接消費される共通言語の1つではありません。 代わりに、XAML は独自の型システムをサポートするものと考えることができます。 WPF によって使用される特定の XAML 解析システムは、CLR と CLR 型システム上に構築されます。 XAML 型は、WPF の XAML が解析されるときに実行時の表現をインスタンス化するために、CLR 型にマップされます。 このため、このドキュメントの構文に関する残りの部分には、CLR 型システムへの参照が含まれています。ただし、XAML 言語仕様では、同等の構文については説明しません。 (XAML 言語仕様レベルによっては、XAML 型を他の型システムにマップできます。これは CLR である必要はありませんが、別の XAML パーサーの作成と使用が必要になります)。  
+ XAML は、マークアップ言語です。 共通言語ランタイム (CLR) は、名前によって指定されているように、ランタイム実行を可能にします。 XAML は、CLR ランタイムによって直接消費される共通言語の1つではありません。 代わりに、XAML は独自の型システムをサポートするものと考えることができます。 WPF によって使用される特定の XAML 解析システムは、CLR と CLR 型システム上に構築されます。 XAML 型は、WPF の XAML が解析されるときに実行時の表現をインスタンス化するために、CLR 型にマップされます。 このため、このドキュメントの構文に関する残りの部分には、CLR 型システムへの参照が含まれています。ただし、XAML 言語仕様では、同等の構文については説明しません。 (XAML 言語仕様レベルによっては、XAML 型を他の型システムにマップできます。これは CLR である必要はありませんが、別の XAML パーサーの作成と使用が必要になります)。  
   
 #### <a name="members-of-types-and-class-inheritance"></a>型のメンバーとクラスの継承  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]型の XAML メンバーとして表示されるプロパティとイベントは、多くの場合、基本型から継承されます。 たとえば、という`<Button Background="Blue" .../>`例を考えてみます。 クラス定義、リフレクション結果、またはドキュメントを<xref:System.Windows.Controls.Button>参照する場合、プロパティは、クラスですぐに宣言されたプロパティではありません。<xref:System.Windows.Controls.Control.Background%2A> 代わりに、 <xref:System.Windows.Controls.Control.Background%2A>は基本<xref:System.Windows.Controls.Control>クラスから継承されます。  

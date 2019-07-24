@@ -15,15 +15,15 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: fcc5d3aa6d093f1fbf8af19c4f0c65036e1705d7
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 259db84c8ab3b9bbad809b9636ba18537dd6fe62
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364391"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400721"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF 部分信頼セキュリティ
-<a name="introduction"></a>一般に、インターネットアプリケーションは、重要なシステムリソースへの直接アクセスを制限して、悪意のある損害を防ぐ必要があります。 既定では[!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] 、およびクライアント側のスクリプト言語は、重要なシステムリソースにアクセスできません。 Windows Presentation Foundation (WPF) ブラウザーでホストされるアプリケーションは、ブラウザーから起動できるため、同様の制限のセットに準拠している必要があります。 これらの制限を適用[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]するために、はコードアクセスセキュリティ (CAS [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] ) との両方に依存しています (「 [WPF のセキュリティ方針-プラットフォームセキュリティ](wpf-security-strategy-platform-security.md)」を参照してください)。 既定では、ブラウザーでホストされるアプリケーションは、インターネット、ローカルイントラネット、またはローカルコンピューターのどちらから起動するかに関係なく、インターネットゾーンの CA のアクセス許可セットを要求します。 すべてのアクセス許可のセットよりも少ないアプリケーションで実行されるアプリケーションは、部分信頼で実行されていると言います。  
+<a name="introduction"></a>一般に、インターネットアプリケーションは、重要なシステムリソースへの直接アクセスを制限して、悪意のある損害を防ぐ必要があります。 既定では[!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] 、およびクライアント側のスクリプト言語は、重要なシステムリソースにアクセスできません。 Windows Presentation Foundation (WPF) ブラウザーでホストされるアプリケーションは、ブラウザーから起動できるため、同様の制限のセットに準拠している必要があります。 これらの制限を適用[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]するために、はコードアクセスセキュリティ (CAS) と ClickOnce の両方に依存しています (「 [WPF のセキュリティ方針-プラットフォームセキュリティ](wpf-security-strategy-platform-security.md)」を参照してください)。 既定では、ブラウザーでホストされるアプリケーションは、インターネット、ローカルイントラネット、またはローカルコンピューターのどちらから起動するかに関係なく、インターネットゾーンの CA のアクセス許可セットを要求します。 すべてのアクセス許可のセットよりも少ないアプリケーションで実行されるアプリケーションは、部分信頼で実行されていると言います。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]では、部分信頼で安全に使用できるできるだけ多くの機能を、CA と共に安全に使用できるようにするために、部分信頼プログラミングの追加サポートを提供しています。  
   

@@ -5,25 +5,25 @@ helpviewer_keywords:
 - WPF Host application [WPF]
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
-ms.openlocfilehash: 543076c3b00bf7946111df4c18d8c71928ce7ee2
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 16618042324387bfc15f4685f4759378c50a80b7
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487321"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401719"
 ---
 # <a name="wpf-host-presentationhostexe"></a>WPF ホスト (PresentationHost.exe)
-Windows Presentation Foundation (WPF) のホスト (PresentationHost.exe) は、アプリケーションを使用[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]互換性のあるブラウザーでホストされるアプリケーション (を含む[!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)]以降)。 シェルとして既定では、Windows Presentation Foundation (WPF) のホストが登録されていると[!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)]ハンドラーをブラウザーでホストされる[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]コンテンツが含まれます。  
+Windows Presentation Foundation (WPF) ホスト (プレゼンテーションの cluster.exe) は、互換性のあるブラウザー [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] (以降を含む[!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)] ) でアプリケーションをホストできるようにするアプリケーションです。 既定では、Windows Presentation Foundation (WPF) ホストは、ブラウザーでホスト[!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]されるコンテンツのシェルおよびハンドラーとして登録されます。これには次のものが含まれます。  
   
 - Loose (コンパイルされていない) [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイル (.xaml)。  
   
 - [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] (.xbap)。  
   
- これらの型では、Windows Presentation Foundation (WPF) のホストのファイル。  
+ これらの種類のファイルについては、Windows Presentation Foundation (WPF) ホスト:  
   
-- 登録されている起動[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]Windows Presentation Foundation (WPF) コンテンツをホストするハンドラー。  
+- Windows Presentation Foundation (WPF [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] ) コンテンツをホストするために登録されたハンドラーを起動します。  
   
-- 必須の正しいバージョンを読み込みます[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]と Windows Presentation Foundation (WPF) のアセンブリ。  
+- 必要な共通言語ランタイム (CLR) アセンブリと Windows Presentation Foundation (WPF) アセンブリの適切なバージョンを読み込みます。  
   
 - 展開のゾーンに適切なアクセス許可レベルが設定されるようにします。  
   
@@ -41,7 +41,7 @@ Windows Presentation Foundation (WPF) のホスト (PresentationHost.exe) は、
 |-debugSecurityZoneURL \<url>|アプリケーションを、指定した [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] から展開されたものとしてデバッグする必要があることを PresentationHost.exe に指示するために、[!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] 値と共に使用します。 これは、展開ゾーンと起点サイトの両方を決定します。|  
 |-embedding|OLE で必要になります。 `-event` パラメーターまたは `-debug` パラメーターを指定した場合、`-embedding` パラメーターは内部で設定されるため、指定する必要はありません。|  
 |-event \<eventname>|PresentationHost.exe が初期化され、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] コンテンツをホストする準備ができた時点で、この名前のイベントを開き、シグナルを送信します。 PresentationHost.exe は、イベントを開く際にエラーが発生すると (そのイベントがまだ作成されていない場合など) 終了します。|  
-|-launchApplication \<url>|スタンドアロンの指定した URL からの ClickOnce アプリケーションを起動します。 .NET アプリケーションに関する [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] と WinINet のセキュリティ ポリシーが適用されます。|  
+|-launchApplication \<url>|指定された URL からスタンドアロンの ClickOnce アプリケーションを起動します。 .NET アプリケーションに関する [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] と WinINet のセキュリティ ポリシーが適用されます。|  
   
 ## <a name="scenarios"></a>シナリオ  
   

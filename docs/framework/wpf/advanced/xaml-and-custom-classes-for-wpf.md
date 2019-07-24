@@ -6,15 +6,15 @@ helpviewer_keywords:
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-ms.openlocfilehash: c429df440f87110a9059b8f9c40cdf273952f581
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 8b47c43e897004a6c7eb3d2f8b2a2b9bb625e158
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364115"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400831"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>WPF における XAML とカスタム クラス
-フレームワークに[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]実装されている XAML は、任意[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]の言語でカスタムクラスまたは構造体を定義し、そのクラスに xaml マークアップを使用してアクセスする機能をサポートしています。 同じマークアップファイル内で[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]定義された型とカスタム型の組み合わせを使用できます。通常は、カスタム型を XAML 名前空間プレフィックスにマップします。 このトピックでは、カスタムクラスが XAML 要素として使用できるようにするために満たす必要がある要件について説明します。  
+共通言語ランタイム (CLR) フレームワークで実装されている XAML は、任意の共通言語ランタイム (CLR) 言語でカスタムクラスまたは構造体を定義し、そのクラスに XAML マークアップを使用してアクセスする機能をサポートしています。 同じマークアップファイル内で[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]定義された型とカスタム型の組み合わせを使用できます。通常は、カスタム型を XAML 名前空間プレフィックスにマップします。 このトピックでは、カスタムクラスが XAML 要素として使用できるようにするために満たす必要がある要件について説明します。  
 
 <a name="Custom_Classes_in_Applications_vs__in_Assemblies"></a>   
 ## <a name="custom-classes-in-applications-or-assemblies"></a>アプリケーションまたはアセンブリのカスタムクラス  
@@ -37,7 +37,7 @@ ms.locfileid: "68364115"
  オブジェクトの要素の構文を有効にするだけでなく、オブジェクトの定義では、そのオブジェクトを値の型として使用する他のパブリックプロパティのプロパティ要素構文を有効にすることもできます。 これは、オブジェクトをオブジェクト要素としてインスタンス化できるようになり、そのようなプロパティのプロパティ要素の値を埋めることができるためです。  
   
 ### <a name="structures"></a>構造体  
- カスタム型として定義する構造体は、の[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML で常に構築できます。これは、すべて[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]のプロパティ値を既定値に初期化する構造体のパラメーターなしのコンストラクターがコンパイラによって暗黙的に作成されるためです。 場合によっては、構造体の既定の構築動作やオブジェクト要素の使用が望ましくないことがあります。 これは、構造体が値を結合することを意図しており、概念的には共用体として機能します。この場合、含まれる値は相互に排他的な解釈を持つ可能性があるため、そのプロパティは設定できません。 この[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ような構造の例と<xref:System.Windows.GridLength>しては、があります。 通常、このような構造体では、構造体の値のさまざまな解釈やモードを作成する文字列表記規則を使用して、値を属性形式で表現できるように、型コンバーターを実装する必要があります。 また、構造体は、パラメーターなしのコンストラクターを使用してコードを構築する場合にも同様の動作を公開する必要があります。  
+ カスタム型として定義する構造体は、の[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML で常に構築できます。これは、すべてのプロパティ値を既定値に初期化する構造体のパラメーターなしのコンストラクターが CLR コンパイラによって暗黙的に作成されるためです。 場合によっては、構造体の既定の構築動作やオブジェクト要素の使用が望ましくないことがあります。 これは、構造体が値を結合することを意図しており、概念的には共用体として機能します。この場合、含まれる値は相互に排他的な解釈を持つ可能性があるため、そのプロパティは設定できません。 この[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ような構造の例と<xref:System.Windows.GridLength>しては、があります。 通常、このような構造体では、構造体の値のさまざまな解釈やモードを作成する文字列表記規則を使用して、値を属性形式で表現できるように、型コンバーターを実装する必要があります。 また、構造体は、パラメーターなしのコンストラクターを使用してコードを構築する場合にも同様の動作を公開する必要があります。  
   
 <a name="Requirements_for_Properties_of_a_Custom_Class_as_XAML"></a>   
 ## <a name="requirements-for-properties-of-a-custom-class-as-xaml-attributes"></a>XAML 属性としてのカスタムクラスのプロパティの要件  
@@ -57,7 +57,7 @@ ms.locfileid: "68364115"
  属性構文が許可されるプロパティの例ですが、object 要素を含む property 要素構文は、型を<xref:System.Windows.Input.Cursor>受け取るさまざまなプロパティです。 クラス<xref:System.Windows.Input.Cursor>には専用の型コンバーター <xref:System.Windows.Input.CursorConverter>がありますが、パラメーターなしのコンストラクターは公開<xref:System.Windows.FrameworkElement.Cursor%2A>されないため、プロパティを設定できるのは、 <xref:System.Windows.Input.Cursor>実際の型が参照型である場合でも属性構文を使用してのみです。  
   
 ### <a name="per-property-type-converters"></a>プロパティごとの型コンバーター  
- また、プロパティ自体は、プロパティレベルで型コンバーターを宣言できます。 これにより、適切な型に基づいて、属性の受信文字列値を<xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>操作の入力として処理することにより、プロパティの型のオブジェクトをインスタンス化する "ミニ言語" を有効にできます。 これは通常、XAML でプロパティの設定を有効にする唯一の手段としてではなく、便宜的なアクセサーを提供するために行われます。 ただし、パラメーターなしのコンストラクターや属性付きの型コンバーターを提供しない既存[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]の型を使用する属性には、型コンバーターを使用することもできます。 API の[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]例としては、 <xref:System.Globalization.CultureInfo>型を受け取る特定のプロパティがあります。 この例では[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 、既存の Microsoft .NET Framework <xref:System.Globalization.CultureInfo>型を使用して、以前のバージョンのフレームワークで使用されていた互換性<xref:System.Globalization.CultureInfo>と移行のシナリオをより適切に解決しましたが、型は必要なをサポートしていませんでした。コンストラクターまたは型レベルの型変換は、XAML プロパティ値として直接使用できます。  
+ また、プロパティ自体は、プロパティレベルで型コンバーターを宣言できます。 これにより、適切な型に基づいて、属性の受信文字列値を<xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>操作の入力として処理することにより、プロパティの型のオブジェクトをインスタンス化する "ミニ言語" を有効にできます。 これは通常、XAML でプロパティの設定を有効にする唯一の手段としてではなく、便宜的なアクセサーを提供するために行われます。 ただし、パラメーターなしのコンストラクターまたは属性付きの型コンバーターを提供しない既存の CLR 型を使用する属性には、型コンバーターを使用することもできます。 API の[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]例としては、 <xref:System.Globalization.CultureInfo>型を受け取る特定のプロパティがあります。 この例では[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 、既存の Microsoft .NET Framework <xref:System.Globalization.CultureInfo>型を使用して、以前のバージョンのフレームワークで使用されていた互換性<xref:System.Globalization.CultureInfo>と移行のシナリオをより適切に解決しましたが、型は必要なをサポートしていませんでした。コンストラクターまたは型レベルの型変換は、XAML プロパティ値として直接使用できます。  
   
  XAML を使用するプロパティを公開するときは常に、特にコントロールの作成者である場合は、依存関係プロパティを使用してそのプロパティをバックアップすることを強くお勧めします。 これは、バッキングを使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.DependencyProperty>してパフォーマンスを向上できるため、XAML プロセッサの既存の実装を使用する場合に特に当てはまります。 依存関係プロパティは、ユーザーが XAML アクセス可能なプロパティに対して期待するプロパティのプロパティシステム機能を公開します。 これには、アニメーション、データバインディング、スタイルのサポートなどの機能が含まれます。 詳細については、「[カスタム依存関係プロパティ](custom-dependency-properties.md)」および「 [XAML 読み込みと依存関係プロパティ](xaml-loading-and-dependency-properties.md)」を参照してください。  
   
@@ -66,10 +66,10 @@ ms.locfileid: "68364115"
   
 <a name="Requirements_for_Events_of_a_Custom_Class_as_XAML"></a>   
 ## <a name="requirements-for-xaml-event-handler-attribute-syntax-on-events-of-a-custom-class"></a>カスタムクラスのイベントに対する XAML イベントハンドラー属性構文の要件  
- イベントとして[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]使用できるようにするには、イベントを、パラメーターなしのコンストラクターをサポートするクラスのパブリックイベントとして、または派生クラスでイベントにアクセスできる抽象クラスで公開する必要があります。 ルーティングイベントとして簡単に使用するには、 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]イベントに明示的`add`な`remove`メソッドとメソッド[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]を実装する必要があります。このメソッドは、イベントシグネチャのハンドラーを追加および削除し、それらのハンドラー <xref:System.Windows.UIElement.AddHandler%2A>をメソッド<xref:System.Windows.UIElement.RemoveHandler%2A>とメソッド。 これらのメソッドは、イベントがアタッチされているインスタンス上のルーティングイベントハンドラーストアにハンドラーを追加または削除します。  
+ CLR イベントとして使用できるようにするには、イベントを、パラメーターなしのコンストラクターをサポートするクラスのパブリックイベントとして、または派生クラスでイベントにアクセスできる抽象クラスで公開する必要があります。 簡単にルーティングイベントとして使用するためには、clr イベントに明示`add`的`remove`なメソッドとメソッドを実装する必要があります。 <xref:System.Windows.UIElement.RemoveHandler%2A>このメソッドは、clr イベント<xref:System.Windows.UIElement.AddHandler%2A>シグネチャのハンドラーを追加および削除し、それらのハンドラーをに転送します。メソッド. これらのメソッドは、イベントがアタッチされているインスタンス上のルーティングイベントハンドラーストアにハンドラーを追加または削除します。  
   
 > [!NOTE]
->  を使用して<xref:System.Windows.UIElement.AddHandler%2A>、ルーティングイベントのハンドラーを直接登録したり、ルーティングイベントを公開するイベントを[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]意図的に定義したりすることはできません。 通常、この方法は推奨されません。イベントはハンドラーをアタッチするための XAML 属性構文を有効にせず、生成されたクラスはその型の機能の透明度の低い XAML ビューを提供します。  
+>  を使用して<xref:System.Windows.UIElement.AddHandler%2A>、ルーティングイベントのハンドラーを直接登録したり、ルーティングイベントを公開する CLR イベントを意図的に定義したりすることはできません。 通常、この方法は推奨されません。イベントはハンドラーをアタッチするための XAML 属性構文を有効にせず、生成されたクラスはその型の機能の透明度の低い XAML ビューを提供します。  
   
 <a name="Collection_Properties"></a>   
 ## <a name="writing-collection-properties"></a>コレクションのプロパティの書き込み  

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], properties
 - properties [WPF]
 ms.assetid: d6e0197f-f2c4-48ed-b45b-b9cdb64aab1c
-ms.openlocfilehash: 8e65e89fb0406d9d2849e0a1be4b1aa764b935ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c685a5227f4339a094ae74af4e1314d4c47f7585
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62030344"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400870"
 ---
 # <a name="properties-wpf"></a>プロパティ (WPF)
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] には、[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] プロパティの機能を拡張するために使用できる一連のサービスが用意されています。 通常、これらのサービスをまとめて WPF プロパティ システムと呼びます。 [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] プロパティ システムによって使用されるプロパティは、依存関係プロパティと呼ばれています。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]共通言語ランタイム (CLR) プロパティの機能を拡張するために使用できる一連のサービスを提供します。 通常、これらのサービスをまとめて WPF プロパティ システムと呼びます。 [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] プロパティ システムによって使用されるプロパティは、依存関係プロパティと呼ばれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
 - [依存関係プロパティの概要](dependency-properties-overview.md)

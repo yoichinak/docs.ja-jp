@@ -14,19 +14,19 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 483710281feafdf97cfef9b72a67af035dcf0efa
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: b7401cd3e9551b378983193f4c5e8e4107954b74
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860172"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401418"
 ---
 # <a name="dependency-properties-overview"></a>依存関係プロパティの概要
 
 Windows Presentation Foundation (WPF) には、型の[プロパティ](../../../standard/base-types/common-type-system.md#Properties)の機能を拡張するために使用できる一連のサービスが用意されています。 通常、これらのサービスをまとめて WPF プロパティ システムと呼びます。 WPF プロパティ システムによって使用されるプロパティは、依存関係プロパティと呼ばれています。 ここでは、WPF プロパティ システムと、依存関係プロパティの機能について説明します。 この説明では、既存の依存関係プロパティを XAML およびコードで使用する方法を示します。 また、依存関係プロパティ メタデータなどの依存関係プロパティの特殊な側面や、カスタム クラスで独自の依存関係プロパティを作成する方法についても説明します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
-ここでは、.NET 型システムおよびオブジェクト指向プログラミングに関する基礎知識があることを前提にしています。 このトピックの例について理解するには、XAML および WPF アプリケーションの記述方法について知っておく必要もあります。 詳細については、「[チュートリアル:初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)します。  
+ここでは、.NET 型システムおよびオブジェクト指向プログラミングに関する基礎知識があることを前提にしています。 このトピックの例について理解するには、XAML および WPF アプリケーションの記述方法について知っておく必要もあります。 詳細については、「[チュートリアル:初めての WPF デスクトップ](../getting-started/walkthrough-my-first-wpf-desktop-application.md)アプリケーション。  
   
 ## <a name="dependency-properties-and-clr-properties"></a>依存関係プロパティおよび CLR プロパティ
  WPF では通常、プロパティは通常、標準の .NET [プロパティ](../../../standard/base-types/common-type-system.md#Properties)として公開されます。 基本的なレベルでは、これらのプロパティと直接対話でき、これらのプロパティが依存関係として実装されることを認識することはありません。 ただし、WPF プロパティ システムの一部またはすべての機能を利用できるように、これらの機能に精通しておく必要があります。
@@ -40,11 +40,11 @@ SDK リファレンスで、プロパティのマネージド リファレンス
 
 依存関係プロパティで使用される用語を次に示します。
 
-- **依存関係プロパティ:** によってサポートされるプロパティ、<xref:System.Windows.DependencyProperty>します。
+- **依存関係プロパティ:** によって<xref:System.Windows.DependencyProperty>サポートされるプロパティ。
 
-- **依存関係プロパティ識別子。** A<xref:System.Windows.DependencyProperty>依存関係プロパティを登録するときに、戻り値として取得され、クラスの静的メンバーとして格納されているインスタンス。 この識別子は、WPF プロパティ システムと対話する多くの API でパラメーターとして使用されます。
+- **依存関係プロパティの識別子:** <xref:System.Windows.DependencyProperty>インスタンス。依存関係プロパティを登録するときに戻り値として取得され、クラスの静的メンバーとして格納されます。 この識別子は、WPF プロパティ システムと対話する多くの API でパラメーターとして使用されます。
 
-- **CLR「ラッパー」:** 実際の get および set プロパティの実装。 これらの実装では、<xref:System.Windows.DependencyObject.GetValue%2A> と <xref:System.Windows.DependencyObject.SetValue%2A> の呼び出しで使用することにより依存関係プロパティ識別子を組み込んで、WPF プロパティ システムを使用するプロパティを補助します。
+- **CLR "ラッパー":** プロパティの実際の get および set 実装。 これらの実装では、<xref:System.Windows.DependencyObject.GetValue%2A> と <xref:System.Windows.DependencyObject.SetValue%2A> の呼び出しで使用することにより依存関係プロパティ識別子を組み込んで、WPF プロパティ システムを使用するプロパティを補助します。
 
 次の例では、`IsSpinning` 依存関係プロパティを定義し、<xref:System.Windows.DependencyProperty> 識別子とサポートされるプロパティの関係を示します。
 
@@ -68,7 +68,7 @@ XAML は、プロパティを設定するためのさまざまな構文形式を
 [!code-xaml[PropertiesOvwSupport#PESyntaxProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml#pesyntaxproperty)]
 
 ### <a name="setting-properties-in-code"></a>コードでのプロパティの設定
- 依存関係プロパティの値をコードで設定するには、通常、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] "ラッパー" によって公開される set 実装を呼び出すだけで済みます。
+ コードに依存関係プロパティの値を設定するのは、通常、CLR の "ラッパー" によって公開されるセットの実装の呼び出しにすぎません。
 
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertySet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyset)]
 [!code-vb[PropertiesOvwSupport#ProceduralPropertySet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyset)]
@@ -78,7 +78,7 @@ XAML は、プロパティを設定するためのさまざまな構文形式を
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyget)]
  [!code-vb[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyget)]
 
-プロパティ システム Api を呼び出すこともできます<xref:System.Windows.DependencyObject.GetValue%2A>と<xref:System.Windows.DependencyObject.SetValue%2A>直接します。 これは (ラッパーより便利ですし、開発者ツールのプロパティのより優れた公開を実現する) の既存のプロパティを使用しているが、特定のシナリオでは、Api を直接呼び出す場合に通常必要ありません。
+また、プロパティシステム api <xref:System.Windows.DependencyObject.GetValue%2A>とを<xref:System.Windows.DependencyObject.SetValue%2A>直接呼び出すこともできます。 これは通常、既存のプロパティを使用している場合は必要ありません (ラッパーの方が便利で、開発者ツールのプロパティがよりわかりやすくなります) が、Api を直接呼び出すことは、特定のシナリオに適しています。
 
 プロパティは、XAML で設定してから分離コードを介してコードでアクセスすることもできます。 詳細については、「[WPF における分離コードと XAML](code-behind-and-xaml-in-wpf.md)」を参照してください。
 
@@ -190,7 +190,7 @@ XAML は、プロパティを設定するためのさまざまな構文形式を
 
 ## <a name="learning-more-about-dependency-properties"></a>依存関係プロパティの詳細情報  
 
-- 添付プロパティは、XAML で特殊な構文をサポートするプロパティの一種です。 多くの場合、添付プロパティは[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] プロパティとは 1 対 1 で対応せず、依存関係プロパティであるとは限りません。 添付プロパティの一般的な目的は、親要素と子要素がどちらも、クラス メンバー リストの一部としてそのプロパティを処理しない場合でも、子要素が親要素にプロパティ値を報告できるようにすることです。 1 つの主要なシナリオは、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] でどのように表示するかを、子要素を有効にして親に通知します。例については、「<xref:System.Windows.Controls.DockPanel.Dock%2A>」または「<xref:System.Windows.Controls.Canvas.Left%2A>」を参照してください。 詳細については、「[添付プロパティの概要](attached-properties-overview.md)」を参照してください。
+- 添付プロパティは、XAML で特殊な構文をサポートするプロパティの一種です。 添付プロパティは、多くの場合、共通言語ランタイム (CLR) プロパティとの対応が1:1 ではなく、必ずしも依存関係プロパティではありません。 添付プロパティの一般的な目的は、親要素と子要素がどちらも、クラス メンバー リストの一部としてそのプロパティを処理しない場合でも、子要素が親要素にプロパティ値を報告できるようにすることです。 1 つの主要なシナリオは、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] でどのように表示するかを、子要素を有効にして親に通知します。例については、「<xref:System.Windows.Controls.DockPanel.Dock%2A>」または「<xref:System.Windows.Controls.Canvas.Left%2A>」を参照してください。 詳細については、「[添付プロパティの概要](attached-properties-overview.md)」を参照してください。
 
 - コンポーネントまたはアプリケーションの開発者は、データ バインディングやスタイルのサポートなどの機能を有効にするために、または無効化および値の強制のサポートのために、独自の依存関係プロパティを作成できます。 詳細については、「[カスタム依存関係プロパティ](custom-dependency-properties.md)」を参照してください。
 

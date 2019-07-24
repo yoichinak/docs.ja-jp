@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: ebfbb2df3e931690f2ba12f0a2ad868da0212f5d
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 2667417c5d25821f2fed2101e1d485280e171eab
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331626"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400649"
 ---
 # <a name="threading-model"></a>スレッド モデル
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]は、スレッド処理の難しさから開発者を保存するように設計されています。 その結果、多くの[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]開発者は、複数のスレッドを使用するインターフェイスを作成する必要がなくなります。 マルチスレッドプログラムは複雑でデバッグが困難なため、シングルスレッドソリューションが存在する場合は回避する必要があります。  
@@ -203,15 +203,15 @@ ms.locfileid: "68331626"
  このイベントの処理`handler2`には多くの時間がかかる可能性があります。 `handler2`は、 <xref:System.Windows.Threading.Dispatcher.PushFrame%2A>を使用して、時間を返さない入れ子になったメッセージループを開始する場合があります。 が`handler2` 、このメッセージループが完了したときにイベントを処理済みとしてマークしていない場合、イベントは非常に古い場合でも、ツリーに渡されます。  
   
 ### <a name="reentrancy-and-locking"></a>再入とロック  
- のロックメカニズムは、 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]まったく同じように動作しません。ロックを要求するときに、スレッドが完全に操作を停止することが予想される場合があります。 実際には、スレッドは、優先度の高いメッセージを受信して処理し続けます。 これにより、デッドロックを防止し、インターフェイスの応答性を最小限にすることができますが、軽度のバグが生じる可能性があります。  ほとんどの場合、この点について知る必要はありませんが、まれな状況 (通常[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]はウィンドウメッセージや COM STA コンポーネントが関係します) では、このことについて理解しておく価値があります。  
+ 共通言語ランタイム (CLR) のロック機構は、まったく同じように動作しません。ロックを要求するときに、スレッドが操作を完全に停止することが予想される場合があります。 実際には、スレッドは、優先度の高いメッセージを受信して処理し続けます。 これにより、デッドロックを防止し、インターフェイスの応答性を最小限にすることができますが、軽度のバグが生じる可能性があります。  ほとんどの場合、この点について知る必要はありませんが、まれな状況 (通常[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]はウィンドウメッセージや COM STA コンポーネントが関係します) では、このことについて理解しておく価値があります。  
   
  多くのインターフェイスは、 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]が複数のスレッドによってアクセスされることがないという前提で開発者が作業するため、スレッドセーフを考慮して構築されていません。 この場合、1つのスレッドが予期しない時間に環境を変更する可能性があるため<xref:System.Windows.Threading.DispatcherObject> 、相互排他機構が解決されるという不適切な影響が発生する可能性があります。 次の擬似コードを考えてみましょう。  
   
  ![スレッド処理の再入を示す図。](./media/threading-model/threading-reentrancy.png "Threadingreentrancy 入")  
   
- ほとんどの場合、このような予期しない再入に[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]よって問題が発生する可能性があります。 そのため、特定のキー回[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]で<xref:System.Windows.Threading.Dispatcher.DisableProcessing%2A>、はを呼び出します。これにより、通常[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]の[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ロックではなく再入可能なロックを使用するように、そのスレッドのロック命令が変更されます。  
+ ほとんどの場合、このような予期しない再入に[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]よって問題が発生する可能性があります。 そのため、特定のキー回[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]で<xref:System.Windows.Threading.Dispatcher.DisableProcessing%2A>、はを呼び出します。これにより、通常の[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] CLR ロックではなく再入可能なロックを使用するように、そのスレッドのロック命令が変更されます。  
   
- では、チーム[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]がこの動作を選択したのはなぜですか。 これは、COM STA オブジェクトと終了スレッドで実行する必要がありました。 オブジェクトがガベージコレクションされると、 `Finalize`そのメソッドは[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]スレッドではなく、専用のファイナライザースレッドで実行されます。 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]スレッド上で作成された COM STA オブジェクトは[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]スレッド上でのみ破棄されるため、問題が発生しています。 は、に相当<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>します (この場合は Win32's `SendMessage`を使用します)。 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] しかし、 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]スレッドがビジーの場合は、ファイナライザースレッドが停止し、COM STA オブジェクトを破棄できないため、深刻なメモリリークが発生します。 そうする[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]ことで、チームはロックを機能させるための困難な呼び出しを行っていました。  
+ では、CLR チームがこの動作を選択したのはなぜですか。 これは、COM STA オブジェクトと終了スレッドで実行する必要がありました。 オブジェクトがガベージコレクションされると、 `Finalize`そのメソッドは[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]スレッドではなく、専用のファイナライザースレッドで実行されます。 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]スレッド上で作成された COM STA オブジェクトは[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]スレッド上でのみ破棄されるため、問題が発生しています。 CLR は、 <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> (この場合は Win32's `SendMessage`を使用します) に相当します。 しかし、 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]スレッドがビジーの場合は、ファイナライザースレッドが停止し、COM STA オブジェクトを破棄できないため、深刻なメモリリークが発生します。 そのため、CLR チームは、ロックを機能させるための困難な呼び出しを行っていました。  
   
  の[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]タスクでは、メモリリークを再導入ずに、予期しない再入を避けることができます。これは、どこでも再入をブロックしないためです。  
   

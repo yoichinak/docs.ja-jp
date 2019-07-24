@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: 48df7083d990dde157c9b7b2a062c865954cf38a
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 9bb77146a55bae4aed17bdd3ef48eca7890d4807
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364205"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401436"
 ---
 # <a name="binding-sources-overview"></a>バインディング ソースの概要
 データ バインディングでは、バインディング ソース オブジェクトは、データの取得元のオブジェクトを表します。 このトピックでは、バインディング ソースとして使用できるオブジェクトの型について説明します。  
@@ -22,7 +22,7 @@ ms.locfileid: "68364205"
   
 |バインディング ソース|説明|  
 |--------------------|-----------------|  
-|[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] オブジェクト|任意の [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] オブジェクトのパブリック プロパティ、サブプロパティ、およびインデクサーにバインドできます。 バインディング エンジンは、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] リフレクションを使用してプロパティの値を取得します。 または、を実装<xref:System.ComponentModel.ICustomTypeDescriptor>するオブジェクトまたは<xref:System.ComponentModel.TypeDescriptionProvider>が登録されているオブジェクトは、バインディングエンジンでも動作します。<br /><br /> バインディング ソースとして使用できるクラスを実装する方法の詳細については、このトピックで後述する「[バインディング ソースのクラスの実装](#classes)」を参照してください。|  
+|共通言語ランタイム (CLR) オブジェクト|任意の共通言語ランタイム (CLR) オブジェクトのパブリックプロパティ、サブプロパティ、およびインデクサーにバインドできます。 バインディングエンジンは、CLR リフレクションを使用してプロパティの値を取得します。 または、を実装<xref:System.ComponentModel.ICustomTypeDescriptor>するオブジェクトまたは<xref:System.ComponentModel.TypeDescriptionProvider>が登録されているオブジェクトは、バインディングエンジンでも動作します。<br /><br /> バインディング ソースとして使用できるクラスを実装する方法の詳細については、このトピックで後述する「[バインディング ソースのクラスの実装](#classes)」を参照してください。|  
 |動的オブジェクト|<xref:System.Dynamic.IDynamicMetaObjectProvider>インターフェイスを実装するオブジェクトの使用可能なプロパティおよびインデクサーにバインドできます。 コード内のメンバーにアクセスできる場合、これにバインドできます。 たとえば、動的オブジェクトを使用して `someObjet.AProperty` を介してコード内のメンバーにアクセスできる場合、バインディング パスを `AProperty` に設定してこのメンバーにバインドできます。|  
 |ADO.NET オブジェクト|などの<xref:System.Data.DataTable>ADO.NET オブジェクトにバインドできます。 ADO.NET <xref:System.Data.DataView>は、バインディング<xref:System.ComponentModel.IBindingList>エンジンがリッスンする変更通知を提供するインターフェイスを実装します。|  
 |[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] オブジェクト|<xref:System.Xml.XmlNode>、 `XPath` 、また<xref:System.Xml.XmlElement>はに対してクエリをバインドして実行できます。 <xref:System.Xml.XmlDocument> マークアップのバインディングソース[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]であるデータにアクセスする便利な方法は、 <xref:System.Windows.Data.XmlDataProvider>オブジェクトを使用することです。 詳細については、「[XMLDataProvider と XPath クエリを使用して XML データにバインドする](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)」を参照してください。<br /><br /> <xref:System.Xml.Linq.XElement>また、また<xref:System.Xml.Linq.XDocument>はにバインドしたり、LINQ to XML を使用して、これらの型のオブジェクトに対して実行されるクエリの結果にバインドしたりすることもできます。 LINQ to XML を使用して、マークアップのバインディングソースである XML データにアクセスする便利な方法<xref:System.Windows.Data.ObjectDataProvider>は、オブジェクトを使用することです。 詳細については、「[XDocument、XElement、または LINQ for XML クエリの結果にバインドする](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)」を参照してください。|  
@@ -33,9 +33,9 @@ ms.locfileid: "68364205"
  独自のバインディング ソースを作成できます。 このセクションでは、バインディング ソースとして機能するクラスを実装する場合に認識している必要のある事項について説明します。  
   
 ### <a name="providing-change-notifications"></a>変更通知の提供  
- または<xref:System.Windows.Data.BindingMode.OneWay> <xref:System.Windows.Data.BindingMode.TwoWay>のいずれかを使用している場合[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] (バインディングソースのプロパティが動的に変更されたときにを更新する場合) は、適切なプロパティ変更通知機構を実装する必要があります。 インターフェイス<xref:System.ComponentModel.INotifyPropertyChanged>を実装するには[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 、または動的クラスを使用することをお勧めします。 詳細については、「[プロパティの変更通知を実装する](how-to-implement-property-change-notification.md)」を参照してください。  
+ または<xref:System.Windows.Data.BindingMode.OneWay> <xref:System.Windows.Data.BindingMode.TwoWay>のいずれかを使用している場合[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] (バインディングソースのプロパティが動的に変更されたときにを更新する場合) は、適切なプロパティ変更通知機構を実装する必要があります。 CLR または動的クラスを使用して<xref:System.ComponentModel.INotifyPropertyChanged>インターフェイスを実装することをお勧めします。 詳細については、「[プロパティの変更通知を実装する](how-to-implement-property-change-notification.md)」を参照してください。  
   
- を実装[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] <xref:System.ComponentModel.INotifyPropertyChanged>しないオブジェクトを作成する場合は、バインディングで使用されるデータが最新の状態に保たれるように、独自の通知システムを配置する必要があります。 変更通知対象にする各プロパティの `PropertyChanged` パターンをサポートすることによって、変更通知を提供できます。 このパターンをサポートするには、プロパティごとに *PropertyName*Changed イベントを定義します。*PropertyName* はプロパティの名前です。 プロパティが変更されるたびにイベントが発生します。  
+ を実装<xref:System.ComponentModel.INotifyPropertyChanged>しない CLR オブジェクトを作成する場合は、バインディングで使用されるデータが最新の状態に保たれるように、独自の通知システムを配置する必要があります。 変更通知対象にする各プロパティの `PropertyChanged` パターンをサポートすることによって、変更通知を提供できます。 このパターンをサポートするには、プロパティごとに *PropertyName*Changed イベントを定義します。*PropertyName* はプロパティの名前です。 プロパティが変更されるたびにイベントが発生します。  
   
  バインディング ソースがこれらの通知メカニズムの 1 つを実装する場合、ターゲットの更新が自動的に発生します。 何らかの理由でバインドソースが適切なプロパティ変更通知を提供しない場合は、 <xref:System.Windows.Data.BindingExpression.UpdateTarget%2A>メソッドを使用してターゲットプロパティを明示的に更新することができます。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "68364205"
   
  この表では、データ バインディングのアクセス許可要件について次の重要事項を説明します。  
   
-- [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] プロパティでは、バインディング エンジンが、リフレクションを使用してバインディング ソースのプロパティにアクセスできる限り、データ バインディングは機能します。 それ以外の場合、バインディング エンジンは、プロパティを検出できないという警告を発行し、フォールバック値または既定値を使用します (使用できる場合)。  
+- CLR プロパティの場合、バインディングエンジンがリフレクションを使用してバインディングソースプロパティにアクセスできる限り、データバインディングは機能します。 それ以外の場合、バインディング エンジンは、プロパティを検出できないという警告を発行し、フォールバック値または既定値を使用します (使用できる場合)。  
   
 - コンパイル時または実行時に定義されている動的オブジェクトのプロパティにバインドできます。  
   

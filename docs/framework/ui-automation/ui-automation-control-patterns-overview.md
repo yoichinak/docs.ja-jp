@@ -5,16 +5,16 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 5be2ca8b4247fcd6bdc628ae0f4aefff30a11256
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7587c8cd24197252506967208869bd454b4f27f2
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652223"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400675"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI オートメーション コントロール パターンの概要
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 の最新情報[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については[、「Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  この概要では、 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] コントロール パターンについて説明します。 コントロール パターンは、コントロール型や外観に関係なく、コントロールの機能を分類したり公開したりするための手段です。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "64652223"
   
  UI オートメーション クライアントは、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] コントロール パターン クラスのメソッドとプロパティにアクセスし、それらを使用して [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]に関する情報を取得したり、 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]を操作したりします。 これらのコントロール パターン クラスは、 <xref:System.Windows.Automation> 名前空間 (たとえば、 <xref:System.Windows.Automation.InvokePattern> や <xref:System.Windows.Automation.SelectionPattern>) にあります。  
   
- クライアントは <xref:System.Windows.Automation.AutomationElement> メソッド ( <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> や <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>など) または [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] アクセサーを使用して、パターン上の [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティにアクセスします。 各コントロール パターン クラスを持つフィールド メンバー (たとえば、<xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType>または<xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType>) をそのコントロール パターンを識別し、パラメーターとして渡すことができます<xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>または<xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>のパターンを取得する、<xref:System.Windows.Automation.AutomationElement>します。  
+ クライアントは<xref:System.Windows.Automation.AutomationElement> 、メソッド ( <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType>や<xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>など) または共通言語[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]ランタイム (CLR) アクセサーを使用して、パターンのプロパティにアクセスします。 各コントロールパターンクラスには、そのコントロールパターンを識別<xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType>する<xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType>フィールドメンバー (やなど) があります。また、または<xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>にパラメーターとして渡して<xref:System.Windows.Automation.AutomationElement>、そのパターンを取得することもできます。  
   
 <a name="uiautomation_control_patterns_dynamic"></a>   
 ## <a name="dynamic-control-patterns"></a>動的コントロール パターン  
