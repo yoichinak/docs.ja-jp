@@ -6,12 +6,12 @@ helpviewer_keywords:
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-ms.openlocfilehash: fe07b01cfa62d8d1cbc2e4a61cac814425af7da0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 580a6e1caa78ea981b6d2be68a6e7c61e2ad55d7
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639836"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433821"
 ---
 # <a name="visual-basic-coding-conventions"></a>Visual Basic のコーディング規則
 Microsoft は、ここで示すガイドラインに従ってサンプルおよびドキュメントを開発しています。 同じコーディング規則に従うと、次のような利点があります。  
@@ -26,7 +26,7 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
   
 ## <a name="naming-conventions"></a>命名規則  
   
-- 名前付けのガイドラインについては、次を参照してください。[の命名ガイドライン](../../../standard/design-guidelines/naming-guidelines.md)トピック。  
+- 名前付けのガイドラインについては、「[名前付けのガイドライン](../../../standard/design-guidelines/naming-guidelines.md)」を参照してください。  
   
 - "My" または "my" を変数名の一部として使用しないようにします。 `My` オブジェクトとの混同を招くからです。  
   
@@ -75,9 +75,11 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
   
 ### <a name="string-data-type"></a>文字列型 (String)  
   
-- 文字列を連結するアンパサンド (&)。  
+- 次のコードに示すように、短い文字列を連結するときは[文字列補間](https://docs.microsoft.com/dotnet/visual-basic/programming-guide/language-features/strings/interpolated-strings)を使用します。
   
-     [!code-vb[VbVbalrGuidelines#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#4)]  
+     ```vb
+     MsgBox($"hello{vbCrLf}goodbye")
+     ```
   
 - ループ内での文字列の追加には <xref:System.Text.StringBuilder> オブジェクトを使用します。  
   
@@ -127,7 +129,7 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
  `On Error Goto`は使用しないでください。  
   
 ### <a name="use-the-isnot-keyword"></a>IsNot キーワードの使用  
- `Not...Is Nothing` の代わりに `IsNot` キーワードを使用します。   
+ `Not...Is Nothing` の代わりに `IsNot` キーワードを使用します。  
   
 ### <a name="new-keyword"></a>New キーワード  
   

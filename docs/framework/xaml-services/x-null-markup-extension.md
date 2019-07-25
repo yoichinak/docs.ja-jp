@@ -12,15 +12,15 @@ helpviewer_keywords:
 - x:Null markup extension [XAML Services]
 - XAML [XAML Services], x:Null markup extension
 ms.assetid: 2e3ccc21-4996-481d-91b5-3910d8b3bfa3
-ms.openlocfilehash: e46d8561b62d9137d4fed4df447338a97fc0577b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7dbea2c7d4010d8defc572dbdc14a0dfd6d7601e
+ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938914"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68484708"
 ---
 # <a name="xnull-markup-extension"></a>x:Null のマークアップ拡張機能
-指定します`null`XAML メンバーの値として。  
+XAML `null`メンバーの値としてを指定します。  
   
 ## <a name="xaml-attribute-usage"></a>XAML 属性の使用方法  
   
@@ -29,20 +29,20 @@ ms.locfileid: "61938914"
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Null 参照のキーワードC#と[!INCLUDE[TLA#tla_cpp](../../../includes/tlasharptla-cpp-md.md)]が null です。 Null 参照の Microsoft Visual Basic のキーワードは、 `Nothing`、常に使用するが、`{x:Null}`として XAML 使用量に関係なく、XAML と関連付けた分離コード言語。  
+ およびC# C++内の null 参照のキーワードが null です。 Null 参照の Microsoft Visual Basic キーワードはです`Nothing`が、xaml に関連付けた分離コード言語に関係なく、常に xaml の使用法としてを使用`{x:Null}`します。  
   
- `x:Null`マークアップ拡張機能には、設定可能なプロパティがありません。  
+ マーク`x:Null`アップ拡張機能には、設定可能なプロパティはありません。  
   
- Null の使用は、CLR の XAML メンバーの露出を関連付け、<xref:System.Nullable%601>値。  
+ Null 使用は、多くの場合、CLR <xref:System.Nullable%601>値の XAML メンバー公開に関連付けられています。  
   
- `x:Null`マークアップ拡張機能のすべての XAML マークアップ拡張機能のように、中かっこを使用して (`{,}`) 以外のリテラルまたはイベント ハンドラーの参照属性の値の処理をエスケープします。 属性構文は、このマークアップ拡張機能で最もよく使用される構文です。 オブジェクト要素構文`<x:Null />`は技術的には可能ですが、あまり使われないため、`x:Null`マークアップ拡張機能には、位置指定パラメーターまたは構築引数がありません。  
+ マーク`x:Null`アップ拡張機能は、すべての XAML マークアップ拡張機能と`{,}`同様に、中かっこ () を使用して、リテラルまたはイベントハンドラー参照以外の属性値の処理をエスケープします。 属性構文は、このマークアップ拡張機能で最も頻繁に使用される構文です。 オブジェクト要素の構文`<x:Null />`は技術的には可能ですが、 `x:Null`マークアップ拡張機能に位置指定パラメーターも構築引数もないため、ほとんど使用されません。  
   
- マークアップ拡張機能については、次を参照してください。[マークアップ拡張機能と WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)します。  
+ マークアップ拡張機能の詳細については、「[マークアップ拡張機能と WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)」を参照してください。  
   
- このマークアップ拡張機能の処理がによって定義されている .NET Framework XAML サービスを<xref:System.Windows.Markup.NullExtension>クラス。  
+ .NET Framework XAML サービスでは、このマークアップ拡張機能の処理は<xref:System.Windows.Markup.NullExtension>クラスによって定義されます。  
   
 ## <a name="wpf-usage-notes"></a>WPF の使用上の注意  
- なお`null`参照型の依存関係プロパティの初期設定されていない値とは限りません。 既定の初期値は、依存関係プロパティごとに異なることができ、プロパティ固有のメタデータに基づくことができます。 多くの依存関係プロパティが受け入れない`null`マークアップまたはコードの検証コールバックの実装のための値として。 依存関係プロパティの詳細については、次を参照してください。[依存関係プロパティの概要](../wpf/advanced/dependency-properties-overview.md)します。  
+ は必ず`null`しも参照型の依存関係プロパティの最初の未設定値ではないことに注意してください。 初期の既定値は、依存関係プロパティごとに異なる場合があり、プロパティ固有のメタデータに基づいている場合もあります。 多くの依存関係プロパティは`null` 、検証コールバックの実装により、マークアップまたはコードによって値として受け入れられません。 依存関係プロパティの詳細については、「[依存関係プロパティの概要](../wpf/advanced/dependency-properties-overview.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - x:ClassModifier attribute [XAML Services]
 - ClassModifier attribute in XAML [XAML Services]
 ms.assetid: ef30ab78-d334-4668-917d-c9f66c3b6aea
-ms.openlocfilehash: 8f90f56a595fa175d5c48a929fc19ceb81ab0d63
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c3c08f61b49a6367663cf02099dda86d1a692284
+ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617114"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68484745"
 ---
 # <a name="xclassmodifier-directive"></a>x:ClassModifier ディレクティブ
-XAML のコンパイルの動作を変更するときに`x:Class`も提供されます。 部分を作成する代わりに、具体的には、`class`を持つ、`Public`アクセス レベル (既定)、指定された`x:Class`で作成、`NotPublic`アクセス レベル。 この動作では、生成されたアセンブリ内のクラスのアクセス レベルに影響します。  
+が指定されて`x:Class`いる場合に XAML のコンパイル動作を変更します。 `class`具体的には、 `Public`アクセスレベル (既定値) を持つ部分を作成するのでは`x:Class`なく、 `NotPublic`指定されたがアクセスレベルで作成されます。 この動作は、生成されたアセンブリのクラスのアクセスレベルに影響します。  
   
 ## <a name="xaml-attribute-usage"></a>XAML 属性の使用方法  
   
@@ -32,26 +32,26 @@ XAML のコンパイルの動作を変更するときに`x:Class`も提供され
   
 |||  
 |-|-|  
-|*NotPublic*|正確な文字列を指定して渡す<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>と<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>を使用する分離コードのプログラミング言語によって異なります。 「解説」を参照してください。|  
+|*NotPublic*|を指定<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>するために渡す正確な文字列は、使用する分離コードプログラミング言語によって異なります。 「解説」を参照してください。|  
   
 ## <a name="dependencies"></a>依存関係  
- [X:class](x-class-directive.md)も同じ要素に提供される必要があり、その要素は、ページのルート要素である必要があります。 詳細については、次を参照してください。 [ \[MS XAML\]セクション 4.3.1.8](https://go.microsoft.com/fwlink/?LinkId=114525)します。  
+ [x:Class](x-class-directive.md)も同じ要素に指定する必要があり、その要素はページのルート要素である必要があります。 詳細については、「 [ \[4.3.1.8\] 」セクション](https://go.microsoft.com/fwlink/?LinkId=114525)を参照してください。  
   
 ## <a name="remarks"></a>Remarks  
- 値`x:ClassModifier`.NET Framework XAML サービスの使用状況はプログラミング言語によって異なります。 使用する文字列は、各言語の実装に依存、<xref:System.CodeDom.Compiler.CodeDomProvider>よぶ型コンバーターを返しますの意味を定義する<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>と<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>、その言語が、大文字小文字を区別するかどうか。  
+ .NET Framework XAML サービス`x:ClassModifier`の使用におけるの値は、プログラミング言語によって異なります。 使用する文字列は、各言語がを実装<xref:System.CodeDom.Compiler.CodeDomProvider>する方法、およびが返す型コンバーターによって異なります。これにより、との<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>意味が定義され、その言語で大文字と<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>小文字が区別されるかどうかが決まります。  
   
-- C# の場合、文字列を指定する渡す<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>は`internal`します。  
+- C#では、を指定<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>するために渡す`internal`文字列はです。  
   
-- Microsoft Visual Basic .net の指定に渡す文字列<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>は`Friend`します。  
+- Microsoft Visual Basic .net の場合、指定<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>するために渡す文字列は`Friend`です。  
   
-- [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)]ターゲットをサポートする XAML をコンパイルするが存在しない; そのため、に渡す値は指定されていません。  
+- /Cli C++では、XAML のコンパイルをサポートするターゲットは存在しません。したがって、渡す値は指定されていません。  
   
- 指定することも<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>(`public` c# で`Public`Visual Basic で)。 ただし、を指定する<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>ために頻繁に行われます<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>が既に既定の動作。  
+ <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>を指定することも`public`できC#ます`Public` (in、Visual Basic)。ただし<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> 、は、が<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>既に既定の動作であるため、を指定することはあまりありません。  
   
- 対応するユーザー コードでは、その他の値へのアクセス レベルの制限など`private`c# では関連しない`x:ClassModifier`、XAML では、入れ子になったクラスの参照はサポートされていないため、それによって、<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>修飾子のと同じ効果します。  
+ `private`でC#は、入れ子になったクラス参照が XAML `x:ClassModifier` <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>でサポートされていないため、修飾子は同じ効果を持つため、ユーザーコードのアクセスレベルに関する同じ制限を持つその他の値は、には関係ありません.  
   
 ## <a name="security-notes"></a>セキュリティに関する注意事項  
- アクセス レベルで宣言されている`x:ClassModifier`は特定のフレームワークとその機能によって解釈される可能性があります。 WPF に読み込むし、型のインスタンスを作成する機能が含まれています、`x:ClassModifier`は`internal`pack URI 参照を使用して、WPF リソースからそのクラスが参照されている場合、します。 この場合、可能性のある他のフレームワークによって実装されるような結果、管理者はで排他的に依存しない`x:ClassModifier`使用可能なすべてのインスタンス化をブロックしようとします。  
+ で`x:ClassModifier`宣言されているアクセスレベルは、特定のフレームワークとその機能によって解釈されることもあります。 Wpf に`x:ClassModifier`は、の型を読み込んでインスタンス`internal`化する機能が含まれています。これは、そのクラスが、パッケージ URI 参照を通じて WPF リソースから参照されている場合です。 このケースの結果として、他のフレームワークによって実装されている可能性が`x:ClassModifier`ある場合は、を排他的に使用して、可能なすべてのインスタンス化試行をブロックしないでください。  
   
 ## <a name="see-also"></a>関連項目
 
