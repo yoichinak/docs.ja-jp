@@ -4,12 +4,12 @@ description: Web アプリケーションを構築しているときに、従来
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 5b8569f2abd5160fa8a080c06441a963fb455f6b
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: d68c167dce791a31eeb5ca5729b50ec22c64f9b0
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825746"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331597"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>従来の Web アプリケーションかシングル ページ アプリケーション (SPA) を選択する
 
@@ -38,9 +38,9 @@ ms.locfileid: "55825746"
 
 SPA モデルで可能になるユーザー エクスペリエンスの改善と、これらの考慮事項を比較して、優先順位を付ける必要があります。
 
-## <a name="razor-components"></a>Razor Components
+## <a name="blazor"></a>Blazor
 
-ASP.NET Core 3.0 には、Razor Components と呼ばれている、機能が豊富で構成可能な対話型 UI を構築するための新しいモデルが導入されています。 Razor Components を利用すれば、開発者はサーバー上に Razor で UI を構築できます。また、WebAssembly という名称の JavaScript ライブラリを使用してこのコードをブラウザーに配信し、クライアント側で実行できます。 ASP.NET Core 3.0 は現在も開発中です。この電子書籍が 3.0 に更新されたとき、このテクノロジに関する情報が増えていることが予想されます。 Razor Components (コードネーム Blazor) に関する詳細については、「[Get started with Blazor](https://blazor.net/docs/get-started.html)」 (Blazor 入門) を参照してください。
+ASP.NET Core 3.0 には、Blazor と呼ばれる、機能が豊富で構成可能な対話型 UI を構築するための新しいモデルが導入されています。 サーバー側 Blazor を利用すれば、開発者はサーバー上に Razor で UI を構築できます。また、WebAssembly という JavaScript ライブラリを使用してこのコードをブラウザーに配信し、クライアント側で実行できます。 ASP.NET Core 3.0 は現在も開発中です。この電子書籍が 3.0 に更新されたとき、このテクノロジに関する情報が増えていることが予想されます。 Blazor の詳細については、[Blazor の概要](https://blazor.net/docs/get-started.html)に関するページをご覧ください。
 
 ## <a name="when-to-choose-traditional-web-apps"></a>従来の Web アプリケーションを選択する場合
 

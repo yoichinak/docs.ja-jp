@@ -2,12 +2,12 @@
 title: dotnet コマンド
 description: dotnet コマンド (.NET Core CLI ツールの一般的なドライバー) とその使用法について説明します。
 ms.date: 06/04/2018
-ms.openlocfilehash: 2134bf8ed66157619499b027f01d39e03e84411f
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: e1571bea1594b492427bdf5b3a7959733459c54e
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859547"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331015"
 ---
 # <a name="dotnet-command"></a>dotnet コマンド
 
@@ -54,7 +54,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `--additional-deps <PATH>`
 
-追加の *deps.json* ファイルへのパスです。
+追加の *.deps.json* ファイルへのパスです。
 
 `--additionalprobingpath <PATH>`
 
@@ -105,7 +105,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `--additional-deps <PATH>`
 
-追加の *deps.json* ファイルへのパスです。
+追加の *.deps.json* ファイルへのパスです。
 
 `--additionalprobingpath <PATH>`
 

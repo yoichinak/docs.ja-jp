@@ -1,15 +1,15 @@
 ---
 title: .NET Portability Analyzer - .NET
 description: .NET Portability Analyzer ツールを使って、さまざまな .NET の実装 (.NET Core、.NET Standard、UWP、Xamarin など) の間でのコードの移植性を評価する方法について説明します。
-ms.date: 07/10/2019
+ms.date: 07/18/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: f05d4f4a2fce8fa9a4d2e334f44190ea37335038
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 433936480aa1181370a6ebc2bd2ba9914a50dfa2
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859779"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331734"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -52,7 +52,7 @@ Visual Studio でプロジェクト全体を分析するには、**ソリュー�
 
 ![移植性の概要](./media/portability-analyzer/portabilitysummary.png)
 
-レポートの [Portability Summary]\(移植性の概要\) セクションでは、実行に含まれる各アセンブリの移植性の割合が示されます。 前の例では、`ConsoleAppFramework` アプリで使われている .NET Framework API の 89.74% は、.NET Core とプラットフォーム拡張機能 v2.2 で使用できます。 複数のアセンブリに対して .NET Portability Analyzer ツールを実行した場合、移植性の概要レポートでは各アセンブリが 1 行に表示されます。
+レポートの [Portability Summary]\(移植性の概要\) セクションでは、実行に含まれる各アセンブリの移植性の割合が示されます。 前の例では、`svcutil` アプリで使われている .NET Framework API の 71.24% が、.NET Core とプラットフォーム拡張機能で使用できます。 複数のアセンブリに対して .NET Portability Analyzer ツールを実行した場合、移植性の概要レポートでは各アセンブリが 1 行に表示されます。
 
 #### <a name="details"></a>説明
 
@@ -60,11 +60,11 @@ Visual Studio でプロジェクト全体を分析するには、**ソリュー�
 
 レポートの [Details]\(詳細\) セクションには、ターゲット プラットフォームのいずれかにない API が一覧表示されます。 
 
- - [Target type]\(ターゲットの型\): 型にターゲット プラットフォームに存在しない API があります 
- - [Target member]\(ターゲットのメンバー\): メンバーがターゲット プラットフォームにありません 
- - [Assembly name]\(アセンブリ名\): ない API が存在する .NET Framework アセンブリです。 
- - 選択されているターゲット プラットフォームごとに 1 つの列 (".NET Core" など): [Not supported]\(サポートされていません\) という値は、その API がこのターゲット プラットフォームでサポートされていないことを意味します。 
- - [Recommended Changes]\(推奨される変更\): それに変更することが推奨される API またはテクノロジです。 現時点では、このフィールドは、多くの API で空または期限切れです。 API の数が多いので、最新の状態に保つのは大変な作業です。 お客様に役に立つ情報を提供する代わりのソリューションを探しています。
+- [Target type]\(ターゲットの型\): 型にターゲット プラットフォームに存在しない API があります 
+- [Target member]\(ターゲットのメンバー\): メンバーがターゲット プラットフォームにありません 
+- [Assembly name]\(アセンブリ名\): ない API が存在する .NET Framework アセンブリです。 
+- 選択されているターゲット プラットフォームごとに 1 つの列 (".NET Core" など): [Not supported]\(サポートされていません\) という値は、その API がこのターゲット プラットフォームでサポートされていないことを意味します。 
+- [Recommended Changes]\(推奨される変更\): それに変更することが推奨される API またはテクノロジです。 現時点では、このフィールドは、多くの API で空または期限切れです。 API の数が多いので、最新の状態に保つのは大変な作業です。 お客様に役に立つ情報を提供する代わりのソリューションを探しています。
 
 #### <a name="missing-assemblies"></a>足りないアセンブリ
 
@@ -73,5 +73,3 @@ Visual Studio でプロジェクト全体を分析するには、**ソリュー�
 レポートには [Missing Assemblies]\(足りないアセンブリ\) セクションが含まれる場合があります。 そこに示されているアセンブリの一覧は、分析されたアセンブリによって参照されていますが、分析されませんでした。 自分が所有しているアセンブリの場合は、API Portability Analyzer の実行にそれを含めて、そのアセンブリに関する API レベルの詳細な移植性レポートを取得できます。 サード パーティのライブラリである場合は、ターゲット プラットフォームをサポートしている新しいバージョンがあるかどうかを調べます。 ある場合は、新しいバージョンへの移行を検討します。 最終的に、この一覧には、アプリが依存していて、ターゲット プラットフォームをサポートするバージョンがあることが確認された、すべてのサード パーティ アセンブリが含まれることが期待されます。  
 
 .NET Portability Analyzer の詳細については、[GitHub ドキュメント](https://github.com/Microsoft/dotnet-apiport#documentation)にアクセスし、Channel 9 動画の「[A Brief Look at the .NET Portability Analyzer](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer)」 (.NET Portability Analyzer の概要) をご覧ください。
-
-

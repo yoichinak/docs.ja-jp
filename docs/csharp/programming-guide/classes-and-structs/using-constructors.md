@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 14ff272fe940c265dc8984d6b20985bb2d2ba12d
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 018710f753df261fce28e2e1cae1272b36923a05
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398244"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363009"
 ---
 # <a name="using-constructors-c-programming-guide"></a>コンストラクターの使用 (C# プログラミング ガイド)
 
@@ -20,7 +20,7 @@ ms.locfileid: "67398244"
   
  [!code-csharp[csProgGuideObjects#53](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#53)]  
   
- パラメーターを取らないコンストラクターを "*パラメーターなしのコンストラクター*" と呼びます。 `new` 演算子を使用してオブジェクトがインスタンス化される際に `new` に引数が渡されないと、この既定のコンストラクターが呼び出されます。 詳細については、「[インスタンス コンストラクター](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)」を参照してください。  
+ パラメーターを取らないコンストラクターを "*パラメーターなしのコンストラクター*" と呼びます。 `new` 演算子を使ってオブジェクトをインスタンス化する際に `new` に引数を渡さなかった場合、常にパラメーターなしのコンストラクターが呼び出されます。 詳細については、「[インスタンス コンストラクター](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)」を参照してください。  
   
  クラスが[静的](../../../csharp/language-reference/keywords/static.md)である場合を除き、コンストラクターが存在しないクラスには、クラスをインスタンス化できるように、パブリックなパラメーターなしのコンストラクターが C# コンパイラによって割り当てられます。 詳細については、「[静的クラスと静的クラス メンバー](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)」を参照してください。  
   

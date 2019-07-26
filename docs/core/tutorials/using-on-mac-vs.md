@@ -2,14 +2,14 @@
 title: Visual Studio for Mac を使用した macOS での .NET Core の概要
 description: このトピックでは、Visual Studio for Mac と .NET Core を使用して、単純なコンソール アプリケーションをビルドする手順を示します。
 author: mairaw
-ms.date: 06/12/2017
+ms.date: 07/11/2019
 ms.custom: seodec18
-ms.openlocfilehash: 4467842c0b65ea536cc26601981d9fcc2bc68f2d
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: a6d58d2a54ce9742542a3f7e5c9378be89b8f89a
+ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300048"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67870545"
 ---
 # <a name="get-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Visual Studio for Mac を使用した macOS での .NET Core の概要
 
@@ -24,21 +24,25 @@ Visual Studio for Mac では、.NET Core アプリケーション開発用の機
 
 「[Mac における .NET Core の前提条件](../../core/macos-prerequisites.md)」のトピックをご覧ください。
 
+サポートされているバージョンの .NET Core を使用していることを確認するには、「[.NET Core サポート](https://docs.microsoft.com/visualstudio/mac/net-core-support?view=vsmac-2019)」ガイドを参照してください。
+
 ## <a name="get-started"></a>作業開始
 
 必須コンポーネントと Visual Studio for Mac を既にインストールしている場合は、このセクションをスキップして、「[プロジェクトの作成](#creating-a-project)」に進みます。 以下の手順に従って、必須コンポーネントと Visual Studio for Mac をインストールします。
 
-[Visual Studio for Mac インストーラー](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)をダウンロードします。 インストーラーを実行します。 使用許諾契約書を読み、同意します。 インストール中に、Xamarin (クロスプラットフォーム モバイル アプリ開発テクノロジ) をインストールすることができます。 .NET Core の開発の場合、Xamarin とその関連コンポーネントのインストールは省略できます。 Visual Studio for Mac のインストール プロセスのチュートリアルについては、[Visual Studio for Mac のドキュメント](/visualstudio/mac/)をご覧ください。 インストールが完了したら、Visual Studio for Mac IDE を起動します。
+[Visual Studio for Mac インストーラー](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)をダウンロードします。 インストーラーを実行します。 使用許諾契約書を読み、同意します。 インストール時に、.NET Core をインストールするオプションを選択します。 Xamarin (クロスプラットフォーム モバイル アプリ開発テクノロジ) をインストールすることができます。 .NET Core の開発の場合、Xamarin とその関連コンポーネントのインストールは省略できます。 Visual Studio for Mac のインストール プロセスのチュートリアルについては、[Visual Studio for Mac のドキュメント](/visualstudio/mac/)をご覧ください。 インストールが完了したら、Visual Studio for Mac IDE を起動します。
 
 ## <a name="creating-a-project"></a>プロジェクトの作成
 
-1. ようこそ画面で **[新しいプロジェクト]** を選択します。
+1. スタート ウィンドウで **[新規]** を選択します。
 
-   ![Visual Studio for Mac のようこそ画面の [新しいプロジェクト] ボタン](./media/using-on-mac-vs/visual-studio-mac-new-project.png)
+   ![Visual Studio for Mac のスタート ウィンドウの [新規] ボタン](./media/using-on-mac-vs/visual-studio-mac-new-project.png)
 
 1. **[新しいプロジェクト]** ダイアログで、 **[.NET Core]** ノードの下にある **[アプリ]** を選択します。 **[コンソール アプリケーション]** テンプレートを選択してから **[次へ]** を選択します。
 
    ![新しいプロジェクト テンプレートのリスト](./media/using-on-mac-vs/visual-studio-mac-new-dialog.png)
+
+1. 複数のバージョンの .NET Core をインストールしている場合は、プロジェクトのターゲット フレームワークを選択します。
 
 1. **[プロジェクト名]** には「HelloWorld」と入力します。 **[作成]** を選択します。
 
@@ -50,7 +54,7 @@ Visual Studio for Mac では、.NET Core アプリケーション開発用の機
 
 ## <a name="run-the-application"></a>アプリケーションの実行
 
-アプリは、<kbd>F5</kbd> キーを使用する場合はデバッグ モードで、<kbd>Ctrl</kbd> + <kbd>F5</kbd> キーを使用する場合はリリース モードで実行します。
+⌘ ↵ (command + enter) を使用してデバッグ モードで、または ⌥ ⌘ ↵ (option + command + enter) を使用してリリース モードでアプリを実行します。
 
 ![[アプリケーション出力] ウィンドウに Hello World! が表示された状態](./media/using-on-mac-vs/visual-studio-mac-output.png)
 

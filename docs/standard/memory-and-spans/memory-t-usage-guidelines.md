@@ -6,16 +6,16 @@ helpviewer_keywords:
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 380c0eef137eb5142c30e63f5446f5d60723087a
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 5aa778477abf3b91e32d9cb8ffdf50baaca5f001
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834042"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68362908"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Memory\<T> と Span\<T> の使用ガイドライン
 
-.NET Core には、任意の連続したメモリ領域を表す多くの型があります。 .NET Core 2.0 では <xref:System.Span%601> と <xref:System.ReadOnlySpan%601> が導入されました。これらはマネージド メモリまたはアンマネージド メモリでサポートできる軽量のメモリ バッファーです。 このような型はスタックに格納できるため、非同期メソッドの呼び出しを含む多くのシナリオには適していません。 .NET Core 2.1 では、<xref:System.Memory%601>、<xref:System.ReadOnlyMemory%601>、<xref:System.Buffers.IMemoryOwner%601>、<xref:System.Buffers.MemoryPool%601> など、さらに多くの型が追加されています。 <xref:System.Span%601> と同様に、<xref:System.Memory%601> とそれに関連する型は、マネージド メモリとアンマネージド メモリの両方でサポートできます。 <xref:System.Span%601> とは異なり、<xref:System.Memory%601> はマネージド ヒープにのみ格納できます。
+.NET Core には、任意の連続したメモリ領域を表す多くの型があります。 .NET Core 2.0 では <xref:System.Span%601> と <xref:System.ReadOnlySpan%601> が導入されました。これらはマネージド メモリまたはアンマネージド メモリでサポートできる軽量のメモリ バッファーです。 このような型はスタック上にのみ格納できるため、非同期メソッドの呼び出しを含む多くのシナリオには適していません。 .NET Core 2.1 では、<xref:System.Memory%601>、<xref:System.ReadOnlyMemory%601>、<xref:System.Buffers.IMemoryOwner%601>、<xref:System.Buffers.MemoryPool%601> など、さらに多くの型が追加されています。 <xref:System.Span%601> と同様に、<xref:System.Memory%601> とそれに関連する型は、マネージド メモリとアンマネージド メモリの両方でサポートできます。 <xref:System.Span%601> とは異なり、<xref:System.Memory%601> はマネージド ヒープ上に格納できます。
 
 <xref:System.Span%601> と <xref:System.Memory%601> は、どちらもパイプラインで使用できる構造化データのバッファーです。 つまり、データの一部または全部をパイプライン内のコンポーネントに効率的に渡すことができるように設計されています。そのため、データを処理し、必要に応じてバッファーを変更できます。 <xref:System.Memory%601> とその関連する型には、複数のコンポーネントまたは複数のスレッドからアクセスできるため、開発者が標準的な使用ガイドラインに従って堅牢なコードを作成することが重要です。
 

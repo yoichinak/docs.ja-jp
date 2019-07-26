@@ -7,12 +7,12 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: e770c305afe098e633700b039efb51770c77ada7
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 5db982c0a94814bfece087eb4db119a4df246094
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661447"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68330967"
 ---
 # <a name="built-in-types-table-c-reference"></a>組み込み型の一覧表 (C# リファレンス)
 
@@ -40,7 +40,7 @@ ms.locfileid: "67661447"
 
 表内の、`object` と `string` を除くすべての型が、単純型と呼ばれます。  
   
-C# 型のキーワードと別名は相互に交換できます。 たとえば、整数の変数を宣言するには、次のいずれかの宣言を使用します。  
+.NET 型とその C# 型キーワードの別名は、相互に交換可能です。 たとえば、整数の変数を宣言するには、次のいずれかの宣言を使用します。  
 
 ```csharp
 int x = 123;

@@ -2,12 +2,12 @@
 title: C# 8.0 の新機能 - C# ガイド
 description: C# 8.0 で使用できる新しい機能の概要を説明します。 この記事は、プレビュー 5 での最新のものです。
 ms.date: 02/12/2019
-ms.openlocfilehash: 962829b68c5d02c3a7e563a00d391c4698024d47
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: bf67baba926effd012ae01d3d802ba921e41ad5a
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397769"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363894"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 の新機能
 
@@ -265,7 +265,6 @@ static void WriteLinesToFile(IEnumerable<string> lines)
     using var file = new System.IO.StreamWriter("WriteLines2.txt");
     foreach (string line in lines)
     {
-        // If the line doesn't contain the word 'Second', write the line to the file.
         if (!line.Contains("Second"))
         {
             file.WriteLine(line);
@@ -284,7 +283,6 @@ static void WriteLinesToFile(IEnumerable<string> lines)
     {
         foreach (string line in lines)
         {
-            // If the line doesn't contain the word 'Second', write the line to the file.
             if (!line.Contains("Second"))
             {
                 file.WriteLine(line);
@@ -296,7 +294,7 @@ static void WriteLinesToFile(IEnumerable<string> lines)
 
 上の例では、`using` ステートメントに関連付けられている右中かっこに達すると、ファイルは破棄されます。
 
-どちらの場合も、コンパイラでは `Dispose()` の呼び出しが生成されます。 using ステートメント内の式を破棄できない場合、コンパイラでエラーが生成されます。
+どちらの場合も、コンパイラでは `Dispose()` の呼び出しが生成されます。 `using` ステートメント内の式を破棄できない場合、コンパイラによってエラーが生成されます。
 
 ## <a name="static-local-functions"></a>静的ローカル関数
 
@@ -382,7 +380,7 @@ await foreach (var number in GenerateSequence())
 - <xref:System.Index?displayProperty=nameWithType> はシーケンスとしてインデックスを表します。
 - `^` 演算子。シーケンスの末尾から相対的なインデックスを指定します。
 - <xref:System.Range?displayProperty=nameWithType> はシーケンスのサブ範囲を表します。
-- 範囲演算子 (`..`)。範囲の先頭と末尾をオペランドとして指定します。
+- 範囲演算子 (`..`)。範囲の先頭と末尾をそのオペランドとして指定します。
 
 インデックスのルールから始めましょう。 配列 `sequence` を考えます。 `0` インデックスは `sequence[0]` と同じです。 `^0` インデックスは `sequence[sequence.Length]` と同じです。 `sequence[sequence.Length]` と同様に、`sequence[^0]` は例外をスローすることに注意してください。 任意の数値 `n` の場合、インデックス `^n` は `sequence.Length - n` と同じです。
 

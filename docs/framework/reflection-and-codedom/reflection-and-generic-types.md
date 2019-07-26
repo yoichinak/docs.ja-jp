@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0536acbcc71ae7792ec668ac352e95e604bd979
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 05b1d80887186466044acdb088d7f45a386b37f7
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591366"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364034"
 ---
 # <a name="reflection-and-generic-types"></a>リフレクションとジェネリック型
 <a name="top"></a> リフレクションの観点から言えば、ジェネリック型は、それがジェネリック型定義である場合は型パラメーター セットが、構築された型である場合は型引数セットが関連付けられているという点で通常の型と異なります。 ジェネリック メソッドと通常のメソッドの違いも、それと同様です。  
@@ -134,7 +134,7 @@ generic<typename V, typename W> ref class D : B<int, V> {};
  型パラメーターが共変性と反変性のどちらであるかを判定するには、 <xref:System.Reflection.GenericParameterAttributes.VarianceMask?displayProperty=nameWithType> プロパティから返される <xref:System.Reflection.GenericParameterAttributes> 値に <xref:System.Type.GenericParameterAttributes%2A> マスクを適用します。 結果が <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>の場合、型パラメーターはインバリアント (不変) です。 「 [共変性と反変性](../../../docs/standard/generics/covariance-and-contravariance.md)を参照してください。  
   
 #### <a name="special-constraints"></a>特殊な制約  
- 型パラメーターの特殊な制約を判定するには、 <xref:System.Reflection.GenericParameterAttributes.SpecialConstraintMask?displayProperty=nameWithType> プロパティから返される <xref:System.Reflection.GenericParameterAttributes> 値に <xref:System.Type.GenericParameterAttributes%2A> マスクを適用します。 結果が <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>の場合、特殊な制約はありません。 型パラメーターに対する制約としては、参照型であること、null 非許容値型であること、既定のコンストラクターが存在すること、があります。  
+ 型パラメーターの特殊な制約を判定するには、 <xref:System.Reflection.GenericParameterAttributes.SpecialConstraintMask?displayProperty=nameWithType> プロパティから返される <xref:System.Reflection.GenericParameterAttributes> 値に <xref:System.Type.GenericParameterAttributes%2A> マスクを適用します。 結果が <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>の場合、特殊な制約はありません。 型パラメーターには、参照型であること、null 非許容値型であること、およびパラメーターなしのコンストラクターを持っていること、という制約が可能です。  
   
  [ページのトップへ](#top)  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a3de327001f987b6c35d547b7cf3cbe7feeac49
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ed8525cad7dd56fe026070786b0f0cf51c0fec2d
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648525"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363975"
 ---
 # <a name="registration-free-com-interop"></a>登録を必要としない COM 相互運用機能
 登録を必要としない COM 相互運用機能は、アセンブリ情報を格納するために Windows レジストリを使用しないで、コンポーネントをアクティブにします。 展開中にコンピューター上のコンポーネントを登録するのではなく、バインディングとアクティベーションに関する情報を含む Win32 スタイルのマニフェスト ファイルをデザイン時に作成します。 レジストリ キーではなく、これらのマニフェスト ファイルが、オブジェクトのアクティベーションを指示します。  
@@ -41,7 +41,7 @@ ms.locfileid: "64648525"
   
      Windows Server 2003 ファミリも、.NET ベースのアセンブリで、登録を必要としない COM 相互運用機能をサポートしています。  
   
-     NET ベースのクラスが COM からのレジストリを必要としないアクティベーションと互換性を持つためには、そのクラスが既定のコンストラクターを持ち、パブリックであることが必要です。  
+     NET ベースのクラスが COM からの登録を必要としないアクティブ化と互換性を持つためには、そのクラスがパラメーターなしのコンストラクターを持ち、パブリックであることが必要です。  
   
 ### <a name="configuring-com-components-for-registration-free-activation"></a>登録を必要としないアクティベーション用の COM コンポーネントの構成  
   

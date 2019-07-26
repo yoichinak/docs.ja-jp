@@ -3,12 +3,12 @@ title: .NET Core CLI の拡張モデル
 description: コマンド ライン インターフェイス (CLI) ツールを拡張する方法について説明します。
 ms.date: 04/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: ca6bf30fb6aaf815a859a00bc391ef790566acaf
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 784eb50dfdbc0f88050a9f727ddbf53db34d3209
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675096"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331003"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>.NET Core CLI ツールの拡張モデル
 
@@ -69,7 +69,7 @@ CLI ツールは、主に次の 3 つの方法で拡張できます。
 ビルドした後、[`dotnet pack`](dotnet-pack.md) コマンドを使用して、コード、その依存関係に関する情報などを含む NuGet パッケージ (.nupkg ファイル) を作成します。 パッケージには任意の名前を付けることができますが、アプリケーション内 (実際のツール バイナリ) は、`dotnet` から呼び出すことができるように、`dotnet-<command>` の規則に準拠している必要があります。
 
 > [!NOTE]
-> .NET Core コマンドライン ツールの RC3 以前のバージョンでは、`dotnet pack` コマンドにバグがあり、`runtime.config.json` をツールでパックできませんでした。 そのファイルがないことで、実行時にエラーが発生します。 この動作が見られる場合、最新のツールに更新し、`dotnet pack` をもう一度お試しください。
+> .NET Core コマンドライン ツールの RC3 以前のバージョンでは、`dotnet pack` コマンドにバグがあり、 *.runtimeconfig.json* をツールでパックできませんでした。 そのファイルがないことで、実行時にエラーが発生します。 この動作が見られる場合、最新のツールに更新し、`dotnet pack` をもう一度お試しください。
 
 ツールはポータブル アプリケーションであるため、ツールを利用しているユーザーは、ツールを実行するためにツールをビルドするバージョンの .NET Core ライブラリを所有している必要があります。 ツールを使用し、.NET Core ライブラリ内に含まれない任意のその他の依存関係は、NuGet キャッシュに復元および配置されます。 そのため、ツール全体が、.NET Core ライブラリからのアセンブリ、および NuGet キャッシュからのアセンブリを使用して実行されます。
 

@@ -2,12 +2,12 @@
 title: C# 言語のバージョン管理 - C# ガイド
 description: プロジェクトに基づいて C# 言語のバージョンが決定される方法、およびそれを手動で調整できるさまざまな値について説明します。
 ms.date: 07/10/2019
-ms.openlocfilehash: 2d593ca0588f291c61cdf52fbc1eb60a1f3f7ecb
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: e35fdf2bcdb1a31b752c760f3f6df59232e498a4
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859596"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68236097"
 ---
 # <a name="c-language-versioning"></a>C# 言語のバージョン管理
 
@@ -34,7 +34,7 @@ C# のバージョンを明示的に指定する必要がある場合は、い�
 
 - [プロジェクト ファイル](#edit-the-project-file)を手動で編集する。
 - [サブディレクトリ内の複数のプロジェクトに対して](#configure-multiple-projects)言語バージョンを設定する。
-- [`-langversion` コンパイラ オプション](#set-the-langversion-compiler-option)を構成する。
+- [`-langversion` コンパイラ オプション](compiler-options/langversion-compiler-option.md)を構成する
 
 ### <a name="edit-the-project-file"></a>プロジェクト ファイルを編集する
 

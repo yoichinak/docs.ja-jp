@@ -3,19 +3,19 @@ title: モデル ビルダーで回帰を使用して価格を予測する
 description: このチュートリアルでは、ML.NET モデル ビルダーを使用して、価格 (具体的にはニューヨーク市のタクシー運賃) を予測する回帰モデルを構築する方法を示します。
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 06/26/2019
+ms.date: 07/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: d9a6f193d877fc1a679b7a3cafd7491e021cb2ad
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: b4a08a9866bbc8816b57c95bdb22766bd1b07fdc
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539631"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331700"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>モデル ビルダーで回帰を使用して価格を予測する
 
-ML.NET モデル ビルダーを使用して、価格を予測する[回帰モデル](../resources/glossary.md#regression)を構築する方法について説明します。  このチュートリアルで開発する .NET コンソール アプリでは、過去のニューヨーク市のタクシー運賃データに基づいてタクシー運賃を予測します。
+ML.NET モデル ビルダーを使用して、価格を予測する回帰モデル () を構築する方法について説明します。  このチュートリアルで開発する .NET コンソール アプリでは、過去のニューヨーク市のタクシー運賃データに基づいてタクシー運賃を予測します。
 
 モデル ビルダーの価格予測テンプレートは、数値による予測値を必要とするすべてのシナリオで使用できます。 シナリオの例には、住宅価格の予測、需要予測、売上予測などがあります。
 
@@ -39,15 +39,17 @@ ML.NET モデル ビルダーを使用して、価格を予測する[回帰モ�
 
 1. "TaxiFarePrediction" という名前の **.NET Core コンソール アプリケーション**を作成します。
 
-1. **Microsoft.ML** NuGet パッケージをインストールします。
-
-    **ソリューション エクスプローラー**で、 *[TaxiFarePrediction]* プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。 [パッケージ ソース] として [nuget.org] を選択します。 **[参照]** タブを選択し、「**Microsoft.ML**」を検索します。一覧からそのパッケージを選択し、 **[インストール]** ボタンを選択します。 **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、 **[ライセンスの同意]** ダイアログの **[同意する]** を選択します。
-
 ## <a name="prepare-and-understand-the-data"></a>データを準備して理解する
 
 1. プロジェクトに *Data* という名前のディレクトリを作成して、データ セットのファイルを保存します。
 
-1. [taxi-fare-train.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-train.csv) データ セットをダウンロードし、前の手順で作成した *Data* フォルダーに保存します。 このデータ セットは、機械学習モデルのトレーニングと評価に使用されます。 このデータ セットは、[NYC TLC Taxi Trip データ セット](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)から取得したものです。
+1. 機械学習モデルのトレーニングと評価に使用するデータ セットは、NYC TLC Taxi Trip データ セットから取得したものです。
+
+    このデータ セットをダウンロードするには、[taxi-fare-train.csv のダウンロード リンク](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/taxi-fare-train.csv)に移動します。
+
+    ページが読み込まれたら、ページ上の任意の場所を右クリックして、 **[名前を付けて保存]** を選択します。
+
+    **[名前を付けて保存] ダイアログ**を使って、前の手順で作成した *Data* フォルダーにファイルを保存します。
 
 1. **ソリューション エクスプローラー**で、 *[taxi-fare-train.csv]* ファイルを右クリックし、 **[プロパティ]** を選択します。 **[詳細設定]** で、 **[出力ディレクトリにコピー]** の値を **[新しい場合はコピーする]** に変更します。
 
@@ -60,7 +62,7 @@ ML.NET モデル ビルダーを使用して、価格を予測する[回帰モ�
     * **vendor_id:** タクシー会社の ID は特徴です。
     * **rate_code:** タクシー旅行のレートの種類は特徴です。
     * **passenger_count:** 旅行の乗客数は特徴です。
-    * **trip_time_in_secs:** 旅行の所要時間です。 旅行が終わる前に、旅行の運賃を予測したいと考えます。 その時点では、旅行の所要時間はわかりません。 したがって、旅行の所要時間は特徴ではなく、この列はモデルから除外します。
+    * **trip_time_in_secs:** 旅行の所要時間です。
     * **trip_distance:** 旅行距離は特徴です。
     * **payment_type:** 支払い方法 (現金またはクレジット カード) は特徴です。
     * **fare_amount:** 支払った合計タクシー運賃はラベルです。
@@ -69,14 +71,14 @@ ML.NET モデル ビルダーを使用して、価格を予測する[回帰モ�
 
 ## <a name="choose-a-scenario"></a>シナリオを選択する
 
-モデルをトレーニングするには、モデル ビルダーによって提供される機械学習シナリオの一覧から選択する必要があります。 この場合、シナリオは `Price Prediction` です。 より広範な一覧については、[モデル ビルダーの概要記事](../automate-training-with-model-builder.md#scenarios)を参照してください。
+モデルをトレーニングするには、モデル ビルダーによって提供される機械学習シナリオの一覧から選択する必要があります。 この場合、シナリオは `Price Prediction` です。
 
 1. **ソリューション エクスプローラー**で、 *[TaxiFarePrediction]* プロジェクトを右クリックし、 **[追加]**  >  **[機械学習]** を選択します。
 1. モデル ビルダー ツールのシナリオの手順で、*価格の予測*のシナリオを選択します。
 
 ## <a name="load-the-data"></a>データを読み込む
 
-モデル ビルダーは、SQL Server データベースまたはローカル ファイル (csv または tsv ファイル) という 2 つのソースからデータを受け入れます。 データ形式の要件の詳細については、次の[リンク](../how-to-guides/install-model-builder.md#limitations)を参照してください。
+モデル ビルダーは、SQL Server データベースか、csv または tsv 形式のローカル ファイルという 2 つのソースからデータを受け取ることができます。
 
 1. モデル ビルダー ツールのデータの手順で、データ ソースのドロップダウンから *[ファイル]* を選択します。
 1. *[ファイルの選択]* テキスト ボックスの横にあるボタンを選択し、ファイル エクスプローラーを使用して *Data* ディレクトリにある *[taxi-fare-test.csv]* を参照し、選択します
@@ -110,23 +112,21 @@ ML.NET モデル ビルダーを使用して、価格を予測する[回帰モ�
 
 ## <a name="evaluate-the-model"></a>モデルを評価する
 
-トレーニングの手順の結果が、最良のパフォーマンスだった 1 つのモデルになります。 モデル ビルダー ツールの評価の手順の出力セクションには、 *[Best Model]\(最良のモデル\)* エントリの最良のパフォーマンスのモデルで使用されたアルゴリズムと、 *[Best Model Quality (RSquared)]\(最良のモデル品質 (RSquared)\)* のメトリックが含まれます。 また、概要テーブルには上位 5 つのモデルとそのメトリックが含まれています。 モデル評価メトリックの詳細については、[次のリンク](https://docs.microsoft.com/dotnet/machine-learning/resources/metrics)を参照してください。
+トレーニングの手順の結果が、最良のパフォーマンスだった 1 つのモデルになります。 モデル ビルダー ツールの評価の手順の出力セクションには、 *[Best Model]\(最良のモデル\)* エントリの最良のパフォーマンスのモデルで使用されたアルゴリズムと、 *[Best Model Quality (RSquared)]\(最良のモデル品質 (RSquared)\)* のメトリックが含まれます。 また、概要テーブルには上位 5 つのモデルとそのメトリックが含まれています。
 
-精度のメトリックに不満がある場合、モデルのトレーニング時間を増やすか、さらに多くのデータを使用すると、モデルの精度を簡単に高めることができます。
+精度のメトリックに不満がある場合、モデルのトレーニング時間を増やすか、さらに多くのデータを使用すると、モデルの精度を簡単に高めることができます。 そうでない場合は、コードの手順に移動します。
 
-## <a name="use-the-model-for-predictions"></a>モデルを使用して予測を行う
+## <a name="add-the-code-to-make-predictions"></a>予測を行うコードを追加する
 
 トレーニング プロセスの結果として 2 つのプロジェクトが作成されます。
 
-- TaxiFarePredictionML.ConsoleApp: モデルのトレーニングと消費コードが含まれる .NET コンソール アプリケーション。
+- TaxiFarePredictionML.ConsoleApp: モデルのトレーニングと使用に関するコードが含まれる .NET Core コンソール アプリケーション。
 - TaxiFarePredictionML.Model: 入出力モデル データのスキーマを定義するデータ モデルと、トレーニング中にパフォーマンスが最も良かったモデルの永続化バージョンが含まれる .NET Standard クラス ライブラリ。
 
-1. モデル ビルダー ツールのコード セクションで **[Added Projects]\(追加されたプロジェクト\)** を選択して、プロジェクトをソリューションに追加します。
-2. ソリューション エクスプローラーで、 *[TaxiFarePrediction]* プロジェクトを右クリックします。 次に、 **[追加]、[既存の項目]** の順に選択します。 [ファイルの種類] のドロップダウンで `All Files` を選択し、 *[TaxiFarePredictionML.Model]* のプロジェクト ディレクトリに移動して、`MLModel.zip` ファイルを選択します。 最近追加した `MLModel.zip` ファイルを右クリックし、 *[プロパティ]* を選択します。 [出力ディレクトリにコピー] オプションで、 *[新しい場合はコピーする]* をドロップダウンから選択します。
-3. *[TaxiFarePrediction]* プロジェクトを右クリックします。 それから、 **[追加]、[参照]** の順に選択します。 **[プロジェクト]、[ソリューション]** ノードを選択し、一覧で *[TaxiFarePredictionML.Model]* プロジェクトを選択して [OK] を選択します。
-
-4. *[TaxiFarePrediction]* プロジェクトの *[Program.cs]* ファイルを開きます。
-5. 次の using ステートメントを追加します。
+1. モデル ビルダー ツールのコードの手順で、 **[プロジェクトの追加]** を選択して、自動生成されたプロジェクトをソリューションに追加します。
+1. *[TaxiFarePrediction]* プロジェクトを右クリックします。 それから、 **[追加]、[参照]** の順に選択します。 **[プロジェクト]、[ソリューション]** ノードを選択し、一覧で *[TaxiFarePredictionML.Model]* プロジェクトを選択して [OK] を選択します。
+1. *[TaxiFarePrediction]* プロジェクトの *[Program.cs]* ファイルを開きます。
+1. *Microsoft.ML* NuGet パッケージと *TaxiFarePredictionML.Model* プロジェクトを参照するために、次の using ステートメントを追加します。
 
     ```csharp
     using System;
@@ -134,7 +134,7 @@ ML.NET モデル ビルダーを使用して、価格を予測する[回帰モ�
     using TaxiFarePredictionML.Model.DataModels;
     ```
 
-6. `ConsumeModel` メソッドを `Program` クラスに追加します。 `ConsumeModel` で、モデル ビルダーによって生成されたモデルに基づいて新しいデータの予測を行い、コンソールに出力する `PredictionEngine` が作成されます。
+1. `ConsumeModel` メソッドを `Program` クラスに追加します。
 
     ```csharp
     static ModelOutput ConsumeModel(ModelInput input)
@@ -154,7 +154,9 @@ ML.NET モデル ビルダーを使用して、価格を予測する[回帰モ�
     }
     ```
 
-7. `Main` メソッドに次のコードを追加して、アプリケーションを実行します。
+    `ConsumeModel` によって、トレーニング済みのモデルが読み込まれ、モデル用の [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) が作成され、それを使った予測が新しいデータで実行されます。
+
+1. 新しいデータに対してモデルを使った予測を行うには、`ModelInput` クラスの新しいインスタンスを作成し、`ConsumeModel` メソッドを使用します。 運賃額が入力に含まれていないことがわかります。 これは、モデルによってその予測が生成されるためです。 `Main` メソッドに次のコードを追加して、アプリケーションを実行します
 
     ```csharp
     // Create sample data
@@ -195,9 +197,12 @@ ML.NET モデル ビルダーを使用して、価格を予測する[回帰モ�
 > * モデルを評価する
 > * モデルを使用して予測を行う
 
-モデルをデプロイする方法を学習するには、次の How-To 記事のいずれかに進んでください。
+### <a name="additional-resources"></a>その他のリソース
 
-> [!div class="nextstepaction"]
-> [Azure Functions にモデルをデプロイする](../how-to-guides/serve-model-serverless-azure-functions-ml-net.md)
-> [!div class="nextstepaction"]
-> [Web API にモデルをデプロイする](../how-to-guides/serve-model-web-api-ml-net.md)
+このチュートリアルで説明しているトピックについて詳しくは、次のリソースを参照してください。
+
+- [モデル ビルダーのシナリオ](../automate-training-with-model-builder.md#scenarios)
+- [モデル ビルダーのデータ形式](../automate-training-with-model-builder.md#data-formats)
+- [回帰](../resources/glossary.md#regression)
+- [回帰モデルのメトリック](../resources/metrics.md#metrics-for-regression)
+- [NYC TLC Taxi Trip データ セット](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)

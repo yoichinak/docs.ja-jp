@@ -2,12 +2,12 @@
 title: C# 6 の新機能 - C# ガイド
 description: C# バージョン 6 の新機能について説明します
 ms.date: 12/12/2018
-ms.openlocfilehash: 478fd512f6b6facfce6d7f70f9691ce15e418d6e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 49247109bd1acbf697f5700b5cfe9a2b85393b2c
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58920676"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68235717"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 の新機能
 
@@ -137,7 +137,7 @@ var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 
 ## <a name="the-nameof-expression"></a>`nameof` 式
 
-`nameof` 式はシンボルの名前を評価します。 この式は、変数、プロパティ、またはメンバー フィールドの名前が必要なときに便利です。 `nameof` の用途として特に一般的なものの 1 つは、例外の原因となったシンボルの名前を取得することです。
+[nameof](../language-reference/operators/nameof.md) 式では、シンボルの名前が評価されます。 この式は、変数、プロパティ、またはメンバー フィールドの名前が必要なときに便利です。 `nameof` の用途として特に一般的なものの 1 つは、例外の原因となったシンボルの名前を取得することです。
 
 [!code-csharp[nameof](../../../samples/snippets/csharp/new-in-6/NewCode.cs#UsingStaticString)]
 

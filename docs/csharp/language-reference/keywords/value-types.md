@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: fd865f2a9c4a6d2c17f79a21866103a2db982e5f
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 72771ee494b6be7142ce3f9bec43dcb8aa8a8401
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661590"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363084"
 ---
 # <a name="value-types-c-reference"></a>値型 (C# リファレンス)
 
@@ -88,7 +88,7 @@ int myInt = new int();
 int myInt = 0;
 ```
 
-[new](../operators/new-operator.md) 演算子を使用すると、特定の型のパラメーターなしのコンストラクターを呼び出し、既定値を変数に代入します。 前の例では、パラメーターなしのコンス トラクターで値 `0` を `myInt` に代入していました。 既定のコンストラクターの呼び出しにより値を代入する詳細については、「[既定値の一覧表](default-values-table.md)」を参照してください。
+[new](../operators/new-operator.md) 演算子を使用すると、特定の型のパラメーターなしのコンストラクターを呼び出し、既定値を変数に代入します。 前の例では、パラメーターなしのコンス トラクターで値 `0` を `myInt` に代入していました。 パラメーターなしのコンストラクターの呼び出しによって代入される値の詳細については、「[既定値の一覧表](default-values-table.md)」をご覧ください。
 
 ユーザー定義型では、[new](../operators/new-operator.md) を使用してパラメーターなしのコンストラクターを呼び出します。 たとえば、次のステートメントは、`Point` 構造体のパラメーターなしのコンストラクターを呼び出します。
 

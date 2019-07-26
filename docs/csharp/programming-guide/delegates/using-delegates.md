@@ -5,19 +5,19 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: eb5721d1c04ad761821bcdae03159f290a802ec0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 27f47d74a6e0775588e40760fe54c281a7f5e233
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979841"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363790"
 ---
 # <a name="using-delegates-c-programming-guide"></a>デリゲートの使用 (C# プログラミング ガイド)
 [デリゲート](../../../csharp/language-reference/keywords/delegate.md)は、C および C++ の関数ポインターのようなメソッドを安全にカプセル化する型です。 ただし、C 関数ポインターとは異なり、デリゲートはオブジェクト指向で、タイプ セーフで、安全です。 デリゲートの型は、デリゲートの名前によって定義されます。 次の例では、引数として[文字列](../../../csharp/language-reference/keywords/string.md)を受け取り、[void](../../../csharp/language-reference/keywords/void.md) を返すメソッドをカプセル化できる `Del` という名前のデリゲートを宣言しています。  
   
  [!code-csharp[csProgGuideDelegates#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#21)]  
   
- デリゲート オブジェクトは、通常、デリゲートがラップするメソッドの名前を指定して構成されるか、[匿名メソッド](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)を使用して構成されます。 デリゲートがインスタンス化されると、デリゲートに対するメソッドの呼び出しが、デリゲートからメソッドに渡されます。 呼び出し元によってデリゲートに渡されるパラメーターはメソッドに渡され、戻り値がある場合は、デリゲートによってメソッドから呼び出し元に返されます。 これは、デリゲートの呼び出しと呼ばれます。 インスタンス化されたデリゲートは、ラップされたメソッドそのものであるかのように呼び出すことができます。 次に例を示します。  
+ デリゲート オブジェクトは、通常、デリゲートがラップするメソッドの名前を指定して構成されるか、[匿名関数](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)を使用して構成されます。 デリゲートがインスタンス化されると、デリゲートに対するメソッドの呼び出しが、デリゲートからメソッドに渡されます。 呼び出し元によってデリゲートに渡されるパラメーターはメソッドに渡され、戻り値がある場合は、デリゲートによってメソッドから呼び出し元に返されます。 これは、デリゲートの呼び出しと呼ばれます。 インスタンス化されたデリゲートは、ラップされたメソッドそのものであるかのように呼び出すことができます。 次に例を示します。  
   
  [!code-csharp[csProgGuideDelegates#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#22)]  
   
@@ -37,8 +37,7 @@ ms.locfileid: "56979841"
   
  `The number is: 3`  
   
- 抽象化としてデリゲートを使用する場合、`MethodWithCallback` がコンソールを直接呼び出す必要はありません。コンソールに留意して設計する必要はありません。 
-  `MethodWithCallback` は文字列を準備し、文字列を別のメソッドに渡すだけです。 これは、デリゲート メソッドが任意の数のパラメーターを使用できるため、特に強力です。  
+ 抽象化としてデリゲートを使用する場合、`MethodWithCallback` がコンソールを直接呼び出す必要はありません。コンソールに留意して設計する必要はありません。 `MethodWithCallback` は文字列を準備し、文字列を別のメソッドに渡すだけです。 これは、デリゲート メソッドが任意の数のパラメーターを使用できるため、特に強力です。  
   
  インスタンス メソッドをラップするようにデリゲートが構築された場合、デリゲートはインスタンスとメソッドの両方を参照します。 デリゲートはラップするメソッド以外のインスタンス型を認識しないため、デリゲート シグネチャと一致するオブジェクトにメソッドがある限り、どの型のオブジェクトでも参照できます。 静的メソッドをラップするようにデリゲートが構築された場合、デリゲートはそのメソッドのみを参照します。 次に宣言の例を示します。  
   
@@ -50,8 +49,7 @@ ms.locfileid: "56979841"
   
  [!code-csharp[csProgGuideDelegates#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#27)]  
   
- この時点で、`allMethodsDelegate` には、呼び出しリスト内の 3 つのメソッド (`Method1`、`Method2`、`DelegateMethod`) が含まれています。 元の 3 つのデリゲートである `d1`、`d2`、および `d3` は変更されません。 
-  `allMethodsDelegate` が呼び出されると、すべての 3 つのメソッドが順に呼び出されます。 デリゲートで参照パラメーターを使用する場合、参照は、3 つのメソッドに順番に渡され、1 つのメソッドによって行われた変更は、次のメソッドに示されます。 いずれかのメソッドがメソッド内でキャッチされない例外をスローした場合、デリゲートの呼び出し元に例外が渡され、呼び出しリスト内の後続のメソッドは呼び出されません。 デリゲートに戻り値や out パラメーターがある場合、デリゲートは戻り値と最後に呼び出されたメソッドのパラメーターを返します。 呼び出しリストからメソッドを削除するには、デクリメント演算子またはデクリメント代入演算子 ('-' または '-=') を使用します。 次に例を示します。  
+ この時点で、`allMethodsDelegate` には、呼び出しリスト内の 3 つのメソッド (`Method1`、`Method2`、`DelegateMethod`) が含まれています。 元の 3 つのデリゲートである `d1`、`d2`、および `d3` は変更されません。 `allMethodsDelegate` が呼び出されると、すべての 3 つのメソッドが順に呼び出されます。 デリゲートで参照パラメーターを使用する場合、参照は、3 つのメソッドに順番に渡され、1 つのメソッドによって行われた変更は、次のメソッドに示されます。 いずれかのメソッドがメソッド内でキャッチされない例外をスローした場合、デリゲートの呼び出し元に例外が渡され、呼び出しリスト内の後続のメソッドは呼び出されません。 デリゲートに戻り値や out パラメーターがある場合、デリゲートは戻り値と最後に呼び出されたメソッドのパラメーターを返します。 呼び出しリストからメソッドを削除するには、デクリメント演算子またはデクリメント代入演算子 ('-' または '-=') を使用します。 次に例を示します。  
   
  [!code-csharp[csProgGuideDelegates#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#28)]  
   

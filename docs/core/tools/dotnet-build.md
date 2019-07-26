@@ -2,12 +2,12 @@
 title: dotnet build コマンド
 description: dotnet build コマンドは、プロジェクトとそのすべての依存関係をビルドします。
 ms.date: 04/24/2019
-ms.openlocfilehash: df264fe830259832e5c75db9fd71230ba70a9f18
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: db2c859529d3dd21d2cd43445419b99a4256b42e
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959195"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331063"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -32,7 +32,7 @@ dotnet build [-h|--help]
 
 ## <a name="description"></a>説明
 
-`dotnet build` コマンドは、プロジェクトとその依存関係をバイナリ セットにビルドします。 バイナリには、拡張子が *.dll* である中間言語 (IL) ファイルのプロジェクトのコードと、拡張子が *.pdb* でありデバッグに使われるシンボル ファイルが含まれます。 アプリケーションの依存関係を一覧表示する依存関係 JSON ファイル ( *\*.deps.json*) が生成されます。 共有ランタイムと、そのアプリケーションのバージョンを指定する、 *\*.runtimeconfig.json* ファイルが生成されます。
+`dotnet build` コマンドは、プロジェクトとその依存関係をバイナリ セットにビルドします。 バイナリには、拡張子が *.dll* である中間言語 (IL) ファイルのプロジェクトのコードと、拡張子が *.pdb* でありデバッグに使われるシンボル ファイルが含まれます。 アプリケーションの依存関係をリストする依存関係 JSON ファイル ( *.deps.json*) が生成されます。 アプリケーションのための共有ランタイムとそのバージョンを指定する、 *.runtimeconfig.json* ファイルが生成されます。
 
 サードパーティ (NuGet のライブラリなど) との依存関係があるプロジェクトの場合、NuGet キャッシュから解決され、プロジェクトのビルドの出力では使うことができません。 この点を考慮すると、`dotnet build` の生成物は別のコンピューターに転送して実行することはできません。 これは .NET Framework の動作とは対照的です。 .NET Framework の場合、実行可能なプロジェクト (アプリケーション) をビルドすると、.NET Framework がインストールされている任意のコンピューター上で実行できる出力が生成されます。 .NET Core でも同様の動作にするには、[dotnet publish](dotnet-publish.md) コマンドを使用する必要があります。 詳しくは、「[.NET Core アプリケーション展開](../deploying/index.md)」をご覧ください。
 

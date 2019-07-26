@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: 3e5bb96357293c42d4bd2161756260fd849cc099
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 0d2c3f67715b9b2161a6c908576ac9f964ff13d6
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267783"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363122"
 ---
 # <a name="yield-c-reference"></a>yield (C# リファレンス)
 
@@ -46,9 +46,9 @@ Iterator メソッドから返されるシーケンスを、[foreach](foreach-in
 
 `yield` または <xref:System.Collections.IEnumerable> を返す反復子の <xref:System.Collections.IEnumerator> 型は `object` です。  反復子が <xref:System.Collections.Generic.IEnumerable%601> または <xref:System.Collections.Generic.IEnumerator%601> を返す場合、`yield return` ステートメント内の式の型から、ジェネリック型パラメーターへの暗黙的な変換が存在する必要があります。
 
-次の特性を持つメソッドに `yield return` ステートメントまたは `yield break` ステートメントを含めることはできません。
+`yield return` または `yield break` ステートメントを以下に含めることはできません。
 
-- 匿名メソッド。 詳しくは、「[匿名メソッド](../../programming-guide/statements-expressions-operators/anonymous-methods.md)」をご覧ください。
+- [ラムダ式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)および[匿名メソッド](../operators/delegate-operator.md)。
 
 - unsafe ブロックを含むメソッド。 詳しくは、「[unsafe](unsafe.md)」をご覧ください。
 

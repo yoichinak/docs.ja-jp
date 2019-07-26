@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e018d8c83165b3e025ad4db7f3d59b6ba58b72a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 60f48422d23fc5db743eeb05e3eddeb732bff102
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616095"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364021"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (厳密型クラス ジェネレーター)
 厳密型クラス ジェネレーター (Mgmtclassgen.exe) ツールを使用すると、指定した WMI (Windows Management Instrumentation) クラスに対して、事前バインディングされたマネージド クラスをすばやく生成できます。 生成されたクラスを使用すると、WMI クラスのインスタンスにアクセスするために書く必要のあるコードを簡略化できます。  
@@ -83,7 +83,7 @@ WMIClass [options]
   
 - 数値プロパティを **Values** 修飾子および **ValueMaps** 修飾子によって修飾すると、このプロパティには、指定した許容値しか設定できないことを示すことができます。 列挙体は、このような **Values** および **ValueMaps** を使用して生成され、このプロパティは列挙体に割り当てられます。  
   
-- WMI では、インスタンスを 1 つだけを持つことのできるクラスを説明するために、シングルトンという用語を使用します。 シングルトン クラスの既定のコンストラクターは、クラスをそのクラスの唯一のインスタンスに初期化します。  
+- WMI では、インスタンスを 1 つだけを持つことのできるクラスを説明するために、シングルトンという用語を使用します。 したがって、シングルトン クラスのパラメーターなしのコンストラクターは、クラスをそのクラスの唯一のインスタンスに初期化します。  
   
 - WMI クラスは、オブジェクトであるプロパティを持つ場合があります。 そのような型の WMI クラスに対して、厳密に型指定されたクラスを生成する場合は、埋め込まれたオブジェクト プロパティの型それぞれに対して厳密に型指定されたクラスを生成することを検討してください。 これにより、厳密に型指定する方法で、埋め込まれたオブジェクトにアクセスできるようになります。 生成されたコードが、埋め込まれたオブジェクトの型を検出できない場合もあります。 このような場合は、生成されたコード内に、その旨をユーザーに通知するコメントが作成されます。 これに応じて、生成された他のクラスをプロパティの型として指定するように、生成したコードを変更できます。  
   

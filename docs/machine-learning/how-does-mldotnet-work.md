@@ -1,21 +1,21 @@
 ---
 title: ML.NET の概要とそのしくみ
-description: ML.NET を使用すると、.NET アプリケーションに機械学習を追加できます。 この機能により、データを使う自動予測をアプリケーションに利用できるようになります。 この記事では、ML.NET の機械学習の基本について説明します。
-ms.date: 04/10/2019
+description: ML.NET を使用すると、オンラインまたはオフラインのどちらのシナリオでも、.NET アプリケーションに機械学習を追加できます。 この機能により、データを使った自動予測をアプリケーションで利用できるようになります。ML.NET を使うためにネットワークに接続する必要はありません。 この記事では、ML.NET の機械学習の基本について説明します。
+ms.date: 07/17/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 30e96d85ecc04332bc5e6c8f57badd000f729904
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 23e71e86b75854042068b6a68f90cf995749ee58
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660637"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331584"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>ML.NET の概要とそのしくみ
 
-ML.NET を使用すると、.NET アプリケーションに機械学習を追加できます。 この機能により、データを使う自動予測をアプリケーションに利用できるようになります。 この記事では、ML.NET の機械学習の基本について説明します。 
+ML.NET を使用すると、オンラインまたはオフラインのどちらのシナリオでも、.NET アプリケーションに機械学習を追加できます。 この機能により、データを使った自動予測をアプリケーションで利用できるようになります。ネットワークに接続する必要はありません。 この記事では、ML.NET の機械学習の基本について説明します。 
 
 ML.NET を使用して作成できる予測の種類の例を次に示します。
 

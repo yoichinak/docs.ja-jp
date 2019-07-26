@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09eb37fd2c1bf77e981a2eb7952b1fff5110e977
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bed67019fdd3bb81585d08349715a895dfe5a681
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357301"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363958"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>属性付きプログラミング モデルの概要 (MEF)
 
@@ -268,7 +268,7 @@ public class MyLogger : IMyAddin { }
 
 エクスポートされる MEF パートは、通常、直接要求された場合や、一致したインポートを満たす必要がある場合に、合成エンジンによって作成されます。 合成エンジンがパートを作成するとき、既定ではパラメーターなしのコンストラクターが使用されます。 別のコンストラクターが使用されるようにするには、そのコンストラクターを `ImportingConstructor` 属性でマークします。
 
-合成エンジンで使用するコンストラクターは、各パートで 1 つだけ指定できます。 既定のコンストラクターも `ImportingConstructor` 属性も指定されていない場合や、複数の `ImportingConstructor` 属性が指定されている場合は、エラーになります。
+合成エンジンで使用するコンストラクターは、各パートで 1 つだけ指定できます。 パラメーターなしのコンストラクターも `ImportingConstructor` 属性も指定されていない場合、または複数の `ImportingConstructor` 属性が指定されている場合は、エラーが発生します。
 
 `ImportingConstructor` 属性でマークされたコンストラクターでは、パラメーターを設定するために、すべてのパラメーターが自動的にインポートとして宣言されます。 これは、パートの初期化の際に使用されるインポートを宣言するのに便利です。 次のクラスは、 `ImportingConstructor` を使用してインポートを宣言しています。
 
@@ -277,7 +277,7 @@ Public Class MyClass1
 
     Private _theAddin As IMyAddin
 
-    'Default constructor will NOT be used
+    'Parameterless constructor will NOT be used
     'because the ImportingConstructor
     'attribute is present.
     Public Sub New()
@@ -300,7 +300,7 @@ public class MyClass
 {
     private IMyAddin _theAddin;
 
-    //Default constructor will NOT be
+    //Parameterless constructor will NOT be
     //used because the ImportingConstructor
     //attribute is present.
     public MyClass() { }

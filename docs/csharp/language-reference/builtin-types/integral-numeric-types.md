@@ -32,35 +32,40 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 0a1ed01d9e6cb86ea177e8b947627f9dc02eedae
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dfb1298abaff0cfe8eae7536f94511a30012a4a9
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744218"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68236077"
 ---
 # <a name="integral-numeric-types--c-reference"></a>整数数値型 (C# リファレンス)
 
-**整数数値型**は**単純型**のサブセットであり、[*リテラル*](#integral-literals)を使用して初期化できます。 すべての整数型は、値型でもあります。
+**整数数値型**は**単純型**のサブセットであり、[*リテラル*](#integral-literals)を使用して初期化できます。 すべての整数型は、値型でもあります。 すべての整数数値型では [arithmetic](../operators/arithmetic-operators.md)、[bitwise logical](../operators/bitwise-and-shift-operators.md)、[comparison、equality](../operators/equality-operators.md) 演算子がサポートされています。
 
-すべての整数数値型では [arithmetic](../operators/arithmetic-operators.md)、[bitwise logical](../operators/bitwise-and-shift-operators.md)、[comparison、equality](../operators/equality-operators.md) 演算子がサポートされています。
+## <a name="characteristics-of-the-integral-types"></a>整数型の特性
 
-## <a name="sizes-and-ranges"></a>サイズと範囲
+C# では、次の定義済みの整数型がサポートされています。
 
-次の表は、整数型のサイズと範囲を示しています。
+|C# 型/キーワード|範囲|サイズ|.NET 型|
+|----------|-----------|----------|-------------|
+|`sbyte`|-128 ～ 127|符号付き 8 ビット整数|<xref:System.SByte?displayProperty=nameWithType>|
+|`byte`|0 ～ 255|符号なし 8 ビット整数|<xref:System.Byte?displayProperty=nameWithType>|
+|`short`|-32,768 ～ 32,767|符号付き 16 ビット整数|<xref:System.Int16?displayProperty=nameWithType>|
+|`ushort`|0 ～ 65,535|符号なし 16 ビット整数|<xref:System.UInt16?displayProperty=nameWithType>|
+|`int`|-2,147,483,648 ～ 2,147,483,647|符号付き 32 ビット整数|<xref:System.Int32?displayProperty=nameWithType>|
+|`uint`|0 ～ 4,294,967,295|符号なし 32 ビット整数|<xref:System.UInt32?displayProperty=nameWithType>|
+|`long`|-9,223,372,036,854,775,808 から 9,223,372,036,854,775,807|符号付き 64 ビット整数|<xref:System.Int64?displayProperty=nameWithType>|
+|`ulong`|0 ～ 18,446,744,073,709,551,615|符号なし 64 ビット整数|<xref:System.UInt64?displayProperty=nameWithType>|
 
-|型|範囲|サイズ|  
-|----------|-----------|----------|  
-|`sbyte`|-128 ～ 127|符号付き 8 ビット整数|  
-|`byte`|0 ～ 255|符号なし 8 ビット整数|  
-|`short`|-32,768 ～ 32,767|符号付き 16 ビット整数|  
-|`ushort`|0 ～ 65,535|符号なし 16 ビット整数|  
-|`int`|-2,147,483,648 ～ 2,147,483,647|符号付き 32 ビット整数|  
-|`uint`|0 ～ 4,294,967,295|符号なし 32 ビット整数|  
-|`long`|-9,223,372,036,854,775,808 から 9,223,372,036,854,775,807|符号付き 64 ビット整数|  
-|`ulong`|0 ～ 18,446,744,073,709,551,615|符号なし 64 ビット整数|  
+上の表で、左端の列にある各 C# 型のキーワードは、対応する .NET 型の別名です。 これらは交換可能です。 たとえば、次の宣言では同じ型の変数が宣言されています。
 
-すべての整数型の既定値は、`0` です。 各整数型には、型の最小値と最大値に対して、`MinValue` および `MaxValue` という名前の定数があります。
+```csharp
+int a = 123;
+System.Int32 b = 123;
+```
+
+各整数型の既定値はゼロ (`0`) です。 各整数型には、その型の最小値と最大値を指定する `MinValue` および `MaxValue` 定数があります。
 
 <xref:System.Numerics.BigInteger?displayProperty=nameWithType> 構造体を使用して、上限や下限のない符号付き整数を表します。
 
@@ -76,7 +81,7 @@ var binaryLiteral = 0b_0010_1010;
 
 10 進リテラルには、プレフィックスは必要ありません。 `x` または `X` プレフィックスは *16 進数リテラル*を意味します。 `b` または `B` プレフィックスは*バイナリ リテラル*を意味します。 `binaryLiteral` の宣言は、`_` を*桁区切り記号*として使用することを示します。 桁区切り記号は、すべての数値リテラルで使用できます。 バイナリ リテラルと桁区切り記号 `_` は、C# 7.0 以降でサポートされています。
 
-### <a name="literal-suffixes"></a>リテラル サフィックス 
+### <a name="literal-suffixes"></a>リテラル サフィックス
 
 `l` または `L` サフィックスは、整数リテラルが `long` 型である必要があることを示します。 `ul` または `UL` サフィックスは、`ulong` 型を示します。 `L` サフィックスが 9,223,372,036,854,775,807 (`long` の最大値) より大きいリテラルで使用されている場合、値は `ulong` 型に変換されます。 整数リテラルで表される値が <xref:System.UInt64.MaxValue?displayProperty=nameWithType> を超えると、コンパイル エラー [CS1021](../../misc/cs1021.md) が発生します。 
 
@@ -123,11 +128,3 @@ var anotherLong = (long)42;
 - [数値結果テーブルの書式設定](../keywords/formatting-numeric-results-table.md)
 - [組み込み型の一覧表](../keywords/built-in-types-table.md)
 - [.NET における数値](../../../standard/numerics.md)
-- <xref:System.Byte?displayProperty=nameWithType>
-- <xref:System.SByte?displayProperty=nameWithType>
-- <xref:System.Int16?displayProperty=nameWithType>
-- <xref:System.UInt16?displayProperty=nameWithType>
-- <xref:System.Int32?displayProperty=nameWithType>
-- <xref:System.UInt32?displayProperty=nameWithType>
-- <xref:System.Int64?displayProperty=nameWithType>
-- <xref:System.UInt64?displayProperty=nameWithType>
