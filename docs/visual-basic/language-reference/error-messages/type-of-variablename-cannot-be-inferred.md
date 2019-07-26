@@ -7,61 +7,62 @@ f1_keywords:
 helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
-ms.openlocfilehash: 2dc7793a837c588b98365a97ada58c67dc07fa03
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c3086f79fb71693810bc8f14e8c0f493aa1e6515
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664267"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512704"
 ---
-# <a name="type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>型 '\<variablename >' ループの境界とステップの変数が同じ型に変換されないため、推論することはできません
-記述した、`For...Next`をコンパイラを推論できませんループ コントロール変数のデータ型を次の条件に当てはまるため、ループ。  
-  
-- ループ コントロール変数のデータ型が `As` 句で指定されていません。  
-  
-- ループ境界とステップ変数に少なくとも 2 つのデータ型が含まれています。  
-  
-- データ型の間で変換する標準変換が存在しません。  
-  
- そのため、コンパイラはループの制御変数のデータ型を推論できません。  
-  
- 次の例では、ステップの変数は文字であり、ループの境界はいずれも整数。 文字および整数間の標準変換がないため、このエラーが発生します。  
-  
-```vb  
-Dim stepVar = "1"c  
-Dim m = 0  
-Dim n = 20  
-  
-' Not valid.  
-' For i = 1 To 10 Step stepVar  
-    ' Loop processing  
-' Next  
-```  
-  
- **エラー ID:** BC30982  
-  
-## <a name="to-correct-this-error"></a>このエラーを解決するには  
-  
-- 少なくとも 1 つに、他のユーザーに拡大変換する型は、ループの境界と必要に応じて、ステップの変数の型を変更します。 前の例では、変更の種類`stepVar`に`Integer`します。  
-  
-    ```  
-    Dim stepVar = 1  
-    ```  
-  
-     または  
-  
-    ```  
-    Dim stepVar As Integer = 1  
-    ```  
-  
-- ループの境界とステップの変数を適切な型に変換するのにには、明示的な変換関数を使用します。 前の例では、適用、`Val`関数を`stepVar`します。  
-  
-    ```  
-    For i = 1 To 10 Step Val(stepVar)  
-        ' Loop processing  
-    Next  
-    ```  
-  
+# <a name="type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>ループの境界\<とステップの変数が同じ型に拡大変換されないため、' variablename > ' の型を推論できません
+
+次の条件が`For...Next`満たされているため、コンパイラが loop コントロール変数のデータ型を推論できないループが記述されました。
+
+- ループ コントロール変数のデータ型が `As` 句で指定されていません。
+
+- ループ境界とステップ変数に少なくとも 2 つのデータ型が含まれています。
+
+- データ型の間に標準変換は存在しません。
+
+ そのため、コンパイラは、ループのコントロール変数のデータ型を推論できません。
+
+ 次の例では、ステップ変数は文字で、ループの境界は両方とも整数です。 文字と整数の間に標準の変換がないため、このエラーが報告されます。
+
+```vb
+Dim stepVar = "1"c
+Dim m = 0
+Dim n = 20
+
+' Not valid.
+' For i = 1 To 10 Step stepVar
+    ' Loop processing
+' Next
+```
+
+**エラー ID:** BC30982
+
+## <a name="to-correct-this-error"></a>このエラーを解決するには
+
+- ループの境界とステップの変数の型を必要に応じて変更して、そのうち少なくとも1つが、他の型が拡大する型になるようにします。 前の例では、の`stepVar`型をに`Integer`変更します。
+
+  ```vb
+  Dim stepVar = 1
+  ```
+
+  \- または -
+
+  ```vb
+  Dim stepVar As Integer = 1
+  ```
+
+- 明示的な変換関数を使用して、ループの境界とステップ変数を適切な型に変換します。 前の例では、 `Val`関数をに`stepVar`適用します。
+
+  ```vb
+  For i = 1 To 10 Step Val(stepVar)
+      ' Loop processing
+  Next
+  ```
+
 ## <a name="see-also"></a>関連項目
 
 - <xref:Microsoft.VisualBasic.Conversion.Val%2A>

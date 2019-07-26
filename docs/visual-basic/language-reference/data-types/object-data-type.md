@@ -10,62 +10,67 @@ helpviewer_keywords:
 - Object data type
 - Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
-ms.openlocfilehash: 593fda6a4949a55d77ae70edd19159a618cc6b6d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1ac906494c49810e3d389591b1044f412e7320bc
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592080"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68513044"
 ---
 # <a name="object-data-type"></a>Object データ型
-オブジェクトを参照するアドレスを保持します。 参照型 (文字列、配列、クラス、またはインターフェイス) を割り当てることができます、`Object`変数。 `Object`変数は、任意の値型のデータを指すことも (数値、 `Boolean`、 `Char`、 `Date`、構造体、または列挙型)。  
-  
-## <a name="remarks"></a>Remarks  
- `Object`データ型は、アプリケーションが認識済みのオブジェクト インスタンスを含む、任意のデータ型のデータを指すことができます。 使用`Object`コンパイル時にわからない場合をポイントする変数がどのようなデータ型します。  
-  
- 既定値`Object`は`Nothing`(null 参照)。  
-  
-## <a name="data-types"></a>データの種類  
- 変数、定数、またはに任意のデータ型の式を割り当てることができます、`Object`変数。 データ型を決定する、`Object`変数を現在参照して、使用することができます、<xref:System.Type.GetTypeCode%2A>のメソッド、<xref:System.Type?displayProperty=nameWithType>クラス。 次に例を示します。  
-  
-```  
-Dim myObject As Object  
-' Suppose myObject has now had something assigned to it.  
-Dim datTyp As Integer  
-datTyp = Type.GetTypeCode(myObject.GetType())  
-```  
-  
- `Object`データ型が参照型。 ただし、Visual Basic の処理、`Object`変数に値型のデータを参照する場合、値型。  
-  
-## <a name="storage"></a>記憶域  
- 参照するすべてのデータ型、`Object`自体が、値へのポインターではなく、変数がデータ値を含んでいません。 コンピューターのメモリ内で常に 4 バイトを使用しますが、これは、変数の値を表すデータのストレージには含まれません。 ポインターを使用して、データを検索するコードのため`Object`値の型を保持する変数より明示的に型指定された変数へのアクセスをわずかに遅くなります。  
-  
-## <a name="programming-tips"></a>プログラミングのヒント  
-  
-- **相互運用の考慮事項。** オートメーションまたは COM オブジェクトのように、.NET Framework 用に作成されていないコンポーネントとやり取りする場合は、他の環境でのポインター型が、Visual Basic と互換性がないことに留意してください`Object`型。  
-  
-- **パフォーマンス。** 使用して宣言する変数、`Object`型は柔軟なので、任意のオブジェクトへの参照が含まれます。 ただし、メソッドまたはプロパティをこのような変数を呼び出すと常に発生*遅延バインディング*(実行時)。 強制的に*事前バインディング*(コンパイル時) より高いパフォーマンスと、特定のクラスの名前を持つ変数を宣言または特定のデータ型にキャストします。  
-  
-     オブジェクト変数を宣言するときに、特定のクラス型を使用して、たとえばしよう<xref:System.OperatingSystem>ではなく、汎用化された`Object`型。 などに使用できる、最も具体的なクラスを使用することも必要があります。<xref:System.Windows.Forms.TextBox>の代わりに<xref:System.Windows.Forms.Control>、そのプロパティとメソッドにアクセスできるようにします。 通常使用することができます、**クラス**の一覧で、**オブジェクト ブラウザー**利用可能なクラス名を検索します。  
-  
-- **拡大します。** すべてのデータ型とすべての参照型に変換、`Object`データ型。 つまり、任意の種類を変換する`Object`遭遇することがなく、<xref:System.OverflowException?displayProperty=nameWithType>エラー。  
-  
-     ただし、値型の間で変換する場合と`Object`、という操作を実行する Visual Basic*ボックス化*と*ボックス化解除*、実行速度が低下することをします。  
-  
-- **型宣言文字。** `Object` リテラルの型文字または識別子の型文字がありません。  
-  
-- **フレームワークの型。** .NET Framework に対応する型は、<xref:System.Object?displayProperty=nameWithType>クラス。  
-  
-## <a name="example"></a>例  
- 次の例を示しています、`Object`オブジェクトのインスタンスを指す変数。  
-  
-```  
-Dim objDb As Object  
-Dim myCollection As New Collection()  
-' Suppose myCollection has now been populated.  
-objDb = myCollection.Item(1)  
-```  
-  
+
+オブジェクトを参照するアドレスを保持します。 任意の参照型 (文字列、配列、クラス、またはインターフェイス) を`Object`変数に割り当てることができます。 変数`Object`は、任意の値型 (numeric、 `Boolean`、 `Char` `Date`、、structure、または enumeration) のデータを参照することもできます。
+
+## <a name="remarks"></a>Remarks
+
+データ`Object`型は、アプリケーションで認識される任意のデータ型のデータを指すことができます。 コンパイル`Object`時に変数が指している可能性のあるデータ型を把握していない場合は、を使用します。
+
+の`Object`既定値は`Nothing` 、(null 参照) です。
+
+## <a name="data-types"></a>データの種類
+
+任意のデータ型の変数、定数、または式を`Object`変数に割り当てることができます。 `Object`変数で現在参照されているデータ型を確認するには<xref:System.Type.GetTypeCode%2A> 、 <xref:System.Type?displayProperty=nameWithType>クラスのメソッドを使用します。 次に例を示します。
+
+```vb
+Dim myObject As Object
+' Suppose myObject has now had something assigned to it.
+Dim datTyp As Integer
+datTyp = Type.GetTypeCode(myObject.GetType())
+```
+
+`Object`データ型は参照型です。 ただし、Visual Basic は、 `Object`値型のデータを参照するときに、変数を値型として扱います。
+
+## <a name="storage"></a>記憶域
+
+参照先のデータ型にかかわらず`Object` 、変数にはデータ値自体は含まれませんが、値へのポインターが含まれます。 コンピューターのメモリでは常に4バイトを使用しますが、変数の値を表すデータのストレージは含まれません。 ポインターを使用してデータを検索するコードがあるため`Object` 、値型を保持する変数は、明示的に型指定された変数よりもアクセスが多少遅くなります。
+
+## <a name="programming-tips"></a>プログラミングのヒント
+
+- **相互運用に関する考慮事項。** .NET Framework 用に作成されていないコンポーネント (オートメーションや COM オブジェクトなど) とやり取りする場合は、他の環境のポインター型が Visual Basic `Object`型と互換性がないことに注意してください。
+
+- **パフォーマンス。** `Object`型を使用して宣言する変数は、任意のオブジェクトへの参照を格納するのに十分な柔軟性があります。 ただし、このような変数に対してメソッドまたはプロパティを呼び出すと、常に*遅延バインディング*(実行時) が発生します。 (コンパイル時に)*事前バインディング*を強制的に実行し、パフォーマンスを向上させるには、特定のクラス名を持つ変数を宣言するか、特定のデータ型にキャストします。
+
+  オブジェクト変数を宣言するときは、汎用<xref:System.OperatingSystem> `Object`化された型ではなく、特定のクラス型を使用してみてください。 また、の<xref:System.Windows.Forms.Control>代わりに、使用可能な最も具体的な<xref:System.Windows.Forms.TextBox>クラスを使用して、そのプロパティとメソッドにアクセスできるようにする必要があります。 通常は、**オブジェクトブラウザー**の**クラス**の一覧を使用して、使用可能なクラス名を検索できます。
+
+- **広げ.** すべてのデータ型とすべての参照型は`Object` 、データ型に拡大変換されます。 これは、エラーが`Object` <xref:System.OverflowException?displayProperty=nameWithType>発生することなく、任意の型をに変換できることを意味します。
+
+  ただし、値型と`Object`の間で変換を行う場合、Visual Basic によって、*ボックス*化とボックス化*解除*と呼ばれる操作が実行され、実行速度が低下します。
+
+- **文字を入力します。** `Object`にリテラルの型文字または識別子の型文字がありません。
+
+- **フレームワークの種類。** .NET Framework 内の対応する型は<xref:System.Object?displayProperty=nameWithType>クラスです。
+
+## <a name="example"></a>例
+
+次の例は、 `Object`オブジェクトインスタンスを指す変数を示しています。
+
+```vb
+Dim objDb As Object
+Dim myCollection As New Collection()
+' Suppose myCollection has now been populated.
+objDb = myCollection.Item(1)
+```
+
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Object>
@@ -73,5 +78,5 @@ objDb = myCollection.Item(1)
 - [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
-- [方法: 2 つのオブジェクトが関連するかどうかを判断します。](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
-- [方法: 2 つのオブジェクトが同一かどうかを判断します。](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
+- [方法: 2つのオブジェクトが関係しているかどうかを判断する](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
+- [方法: 2つのオブジェクトが同一かどうかを判断する](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
