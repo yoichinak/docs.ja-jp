@@ -68,12 +68,7 @@
     - name: 例外の処理とスロー
       href: standard/exceptions/
     - name: .NET のアセンブリ
-      href: standard/assembly/index.md
-      items:
-        - name: .NET アセンブリ ファイルの形式
-          href: standard/assembly/file-format.md
-        - name: '方法: .NET Core でアセンブリのアンローダビリティを使用およびデバッグする'
-          href: standard/assembly/unloadability-howto.md
+      href: standard/assembly/
     - name: ガベージ コレクション
       href: standard/garbage-collection/
     - name: ジェネリック型

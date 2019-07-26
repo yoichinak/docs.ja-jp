@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: b6a1cc3ced3205037eb5b83ac3841efbfbd1b5b9
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 13ad16ab768cdaee96cab29811e2ed058dee977a
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331218"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512236"
 ---
 # <a name="c-operators-c-reference"></a>C# 演算子 (C# リファレンス)
 
@@ -65,7 +65,7 @@ C# は組み込み型でサポートされている定義済みの演算子を�
 
 [Delegate](delegate-operator.md) – delegate インスタンスを宣言して返します。
 
-[sizeof](../keywords/sizeof.md) – 型オペランドのサイズをバイト単位で返します。
+[sizeof](sizeof.md) – 型オペランドのサイズをバイト単位で返します。
 
 [stackalloc](stackalloc.md) – スタックにメモリ ブロックを割り当てます。
 
