@@ -1,0 +1,11 @@
+- name: .NET のアセンブリ
+  href: index.md
+  items:
+    - name: フレンド アセンブリ
+      items:
+        - name: 概要
+          href: friend-assemblies.md
+    - name: .NET アセンブリ ファイルの形式
+      href: file-format.md
+    - name: .NET Core でアセンブリのアンローダビリティを使用およびデバッグする方法
+      href: unloadability-howto.md

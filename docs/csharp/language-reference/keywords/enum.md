@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 57043963640f3c384b1e1a9aa7aeb65114689e9f
-ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
+ms.openlocfilehash: e33877d2a5e79866bbef12cd9fec5cb11b044240
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67569534"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433859"
 ---
 # <a name="enum-c-reference"></a>enum (C# リファレンス)
 

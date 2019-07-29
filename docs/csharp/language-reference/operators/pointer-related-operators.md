@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 03d6ed19ef01be7712ff2fdde0c1be2a6673e64f
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 830aef8546191df3df4a70e350ba561367a9e474
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401443"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512353"
 ---
 # <a name="pointer-related-operators-c-reference"></a>ポインターに関連する演算子 (C# リファレンス)
 
@@ -124,7 +124,7 @@ x->y
 - 式 `p + n` および `n + p` では、どちらの場合も、`p` によって与えられるアドレスに `n * sizeof(T)` を加算した結果である、`T*` 型のポインターが生成されます。
 - 式 `p - n` では、`p` によって与えられるアドレスから `n * sizeof(T)` を減算した結果である、`T*` 型のポインターが生成されます。
 
-[`sizeof` 演算子](../keywords/sizeof.md)では、型のサイズ (バイト単位) が取得されます。
+[`sizeof` 演算子](sizeof.md)では、型のサイズ (バイト単位) が取得されます。
 
 次の例では、ポインターでの `+` 演算子の使用方法を示します。
 
@@ -193,4 +193,4 @@ x->y
 - [unsafe キーワード](../keywords/unsafe.md)
 - [fixed キーワード](../keywords/fixed-statement.md)
 - [stackalloc 演算子](stackalloc.md)
-- [sizeof 演算子](../keywords/sizeof.md)
+- [sizeof 演算子](sizeof.md)

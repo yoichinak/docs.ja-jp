@@ -7,12 +7,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 3982c97bc56b42237700343b2572d1bba930bbbd
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: bccc22f5362b22540dadf08e6b21a07cbc578327
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422778"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433869"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (ジェネリック型制約) (C# リファレンス)
 
@@ -33,7 +33,7 @@ ms.locfileid: "66422778"
 
 [!code-csharp[using the class and struct constraints](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#3)]
 
-`where` 句には、`unmanaged` 制約を含めることもできます。 `unmanaged` 制約では、**アンマネージド型**と呼ばれる型に対して型パラメーターを制限します。 **アンマネージド型**は参照型ではない型であり、任意の入れ子のレベルに参照型フィールドを含みません。 `unmanaged` 制約を使用すると、C# でローレベルの相互運用コードを記述しやすくなります。 この制約では、すべてのアンマネージド型にわたって再利用可能なルーチンを可能にします。 `unmanaged` 制約は、`class` や `struct` 制約と組み合わせることはできません。 `unmanaged` 制約は `struct` にする必要がある型を適用します。
+`where` 句には、`unmanaged` 制約を含めることもできます。 `unmanaged` 制約では、[アンマネージド型](../builtin-types/unmanaged-types.md)と呼ばれる型に対して型パラメーターを制限します。 `unmanaged` 制約を使用すると、C# でローレベルの相互運用コードを記述しやすくなります。 この制約では、すべてのアンマネージド型にわたって再利用可能なルーチンを可能にします。 `unmanaged` 制約は、`class` や `struct` 制約と組み合わせることはできません。 `unmanaged` 制約は `struct` にする必要がある型を適用します。
 
 [!code-csharp[using the unmanaged constraint](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#4)]
 
