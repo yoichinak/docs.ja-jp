@@ -1,117 +1,117 @@
 ---
 title: F# を使用した Azure Blob Storage の概要
-description: Azure Blob storage を使用してクラウドでは、非構造化データを格納します。
+description: Azure Blob storage を使用して、非構造化データをクラウドに格納します。
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 3d020c2cd9a11db1cd4b7a60113e1be03655f763
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: c8b42339ff1d76f262e956b5e34cc598e0fc855d
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880044"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630512"
 ---
-# <a name="get-started-with-azure-blob-storage-using-f"></a>F を使用した Azure Blob storage を概要します。\#
+# <a name="get-started-with-azure-blob-storage-using-f"></a>F を使用して Azure Blob storage を使ってみる\#
 
 Azure BLOB Storage は、非構造化データをオブジェクト/BLOB としてクラウドに格納するサービスです。 Blob Storage は、ドキュメント、メディア ファイル、アプリケーション インストーラーなど、任意の種類のテキストまたはバイナリ データを格納できます。 Blob Storage は、オブジェクト ストレージとも呼ばれます。
 
-この記事では、Blob storage を使用して一般的なタスクを実行する方法を示します。 サンプルは、.NET 用 Azure Storage クライアント ライブラリを使用した F# を使用して記述します。 対象タスクには、アップロード、一覧表示、ダウンロード、および blob を削除する方法が含まれます。
+この記事では、Blob storage を使用して一般的なタスクを実行する方法について説明します。 サンプルは、.NET 用 Azure Storage クライアント ライブラリを使用した F# を使用して記述します。 説明するタスクには、blob のアップロード、一覧表示、ダウンロード、および削除の方法が含まれます。
 
-Blob storage の概念的概要については、次を参照してください。 [blob ストレージ用の .NET ガイド](/azure/storage/storage-dotnet-how-to-use-blobs)します。
+Blob storage の概念の概要については、「 [.net ガイド](/azure/storage/storage-dotnet-how-to-use-blobs)」を参照してください。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-このガイドを使用するのにはまず[Azure ストレージ アカウントを作成](/azure/storage/storage-create-storage-account)です。 このアカウントのストレージ アクセス キーも必要があります。
+このガイドを使用するには、最初に[Azure ストレージアカウントを作成](/azure/storage/storage-create-storage-account)する必要があります。 また、このアカウントのストレージアクセスキーも必要です。
 
 ## <a name="create-an-f-script-and-start-f-interactive"></a>作成して、F# スクリプトと開始 F# 対話型
 
 この記事のサンプルは、F# アプリケーションまたは F# スクリプトのいずれかで使用できます。 F# スクリプトを作成するには、ファイルを作成、`.fsx`拡張機能の例では、 `blobs.fsx`、F# 開発環境にします。
 
-次に、使用、[パッケージ マネージャー](package-management.md)など[パケット](https://fsprojects.github.io/Paket/)または[NuGet](https://www.nuget.org/)をインストールする、`WindowsAzure.Storage`と`Microsoft.WindowsAzure.ConfigurationManager`パッケージと参照`WindowsAzure.Storage.dll`と`Microsoft.WindowsAzure.Configuration.dll`を使用して、スクリプト、`#r`ディレクティブ。
+次に、[パケット](https://fsprojects.github.io/Paket/)や`WindowsAzure.Storage` [NuGet](https://www.nuget.org/)などの[パッケージマネージャー](package-management.md)を使用して、 `Microsoft.WindowsAzure.ConfigurationManager` `#r`ディレクティブを使用し`Microsoft.WindowsAzure.Configuration.dll`て、パッケージとパッケージをインストールし、スクリプトにおよびを参照`WindowsAzure.Storage.dll`します。
 
-### <a name="add-namespace-declarations"></a>名前空間宣言を追加します。
+### <a name="add-namespace-declarations"></a>名前空間宣言を追加する
 
-次の追加`open`ステートメントの先頭に、`blobs.fsx`ファイル。
+ファイルの先頭`open`に次のステートメントを追加します。 `blobs.fsx`
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L1-L5)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L1-L5)]
 
-### <a name="get-your-connection-string"></a>接続文字列を取得します。
+### <a name="get-your-connection-string"></a>接続文字列を取得する
 
-このチュートリアルに Azure Storage の接続文字列が必要です。 接続文字列の詳細については、次を参照してください。[ストレージ接続文字列を構成](/azure/storage/storage-configure-connection-string)します。
+このチュートリアルでは、Azure Storage 接続文字列が必要です。 接続文字列の詳細については、「[ストレージ接続文字列の構成](/azure/storage/storage-configure-connection-string)」を参照してください。
 
-このチュートリアルでは、次のように、スクリプトで、接続文字列を入力します。
+このチュートリアルでは、次のように、スクリプトに接続文字列を入力します。
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L11-L11)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L11-L11)]
 
-ただし、これは**しないで**の実際のプロジェクト。 ストレージ アカウント キーは、ストレージ アカウントの root パスワードに似ています。 常に、ストレージ アカウント キーを保護するように注意します。 ハード コーディング、または他のユーザーにアクセスできるプレーン テキスト ファイルに保存することは、他のユーザーに配布しないでください。 侵害されていると思われる場合は、Azure Portal を使用して、キーを再生成することができます。
+ただし、実際のプロジェクトではこの方法は**お勧めできません**。 ストレージアカウントキーは、ストレージアカウントのルートパスワードに似ています。 ストレージアカウントキーは常に慎重に保護してください。 他のユーザーに配布したり、ハードコーディングしたり、他のユーザーがアクセスできるプレーンテキストファイルに保存したりしないでください。 侵害された可能性があると思われる場合は、Azure ポータルを使用してキーを再生成することができます。
 
-実際のアプリケーションは、ストレージ接続文字列を維持するために最善の方法は、構成ファイルです。 構成ファイルから接続文字列を取得するには、は、これを行うことができます。
+実際のアプリケーションでは、ストレージ接続文字列を維持する最善の方法は構成ファイルにあります。 構成ファイルから接続文字列を取得するには、次の手順を実行します。
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L13-L15)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L13-L15)]
 
-Azure Configuration Manager の使用は省略可能です。 .NET Framework のなどの API を使用することもできます。`ConfigurationManager`型。
+Azure Configuration Manager の使用は省略可能です。 .NET Framework の`ConfigurationManager`型などの API を使用することもできます。
 
-### <a name="parse-the-connection-string"></a>接続文字列を解析します。
+### <a name="parse-the-connection-string"></a>接続文字列を解析する
 
-接続文字列を解析するには、次のように使用します。
+接続文字列を解析するには、次のように指定します。
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L21-L22)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L21-L22)]
 
-これにより返されます、`CloudStorageAccount`します。
+これにより`CloudStorageAccount`、が返されます。
 
-### <a name="create-some-local-dummy-data"></a>ローカルのダミー データの一部を作成します。
+### <a name="create-some-local-dummy-data"></a>いくつかのローカルダミーデータを作成する
 
-開始する前に、スクリプトのディレクトリにダミーのローカル データの一部を作成します。 後でこのデータをアップロードします。
+開始する前に、スクリプトのディレクトリにダミーのローカルデータを作成します。 後でこのデータをアップロードします。
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L28-L30)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L28-L30)]
 
-### <a name="create-the-blob-service-client"></a>Blob service クライアントを作成します。
+### <a name="create-the-blob-service-client"></a>Blob service クライアントを作成する
 
-`CloudBlobClient`型では、コンテナーと Blob storage に格納されている blob を取得することができます。 サービス クライアントを作成する方法の 1 つを次に示します。
+型`CloudBlobClient`を使用すると、blob ストレージに格納されているコンテナーと blob を取得できます。 サービスクライアントを作成する方法の1つを次に示します。
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L36-L36)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L36-L36)]
 
-データを読み取るし、Blob storage にデータを書き込むコードを記述する準備が整いました。
+これで、Blob storage との間でデータを読み取り、データを書き込むコードを記述する準備ができました。
 
 ## <a name="create-a-container"></a>コンテナーの作成
 
-この例では、存在しない場合は、コンテナーを作成する方法を示します。
+この例では、コンテナーがまだ存在しない場合に作成する方法を示します。
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L42-L46)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L42-L46)]
 
-既定では、新しいコンテナーはプライベートでは、このコンテナーから blob をダウンロードするストレージ アクセス キーを指定することを意味します。 すべてのユーザーがコンテナー内のファイルを使用できるようにする場合は、次のコードを使用して公開するコンテナーを設定できます。
+既定では、新しいコンテナーはプライベートです。つまり、このコンテナーから blob をダウンロードするには、ストレージアクセスキーを指定する必要があります。 コンテナー内のファイルをすべてのユーザーが使用できるようにする場合は、次のコードを使用して、コンテナーをパブリックに設定できます。
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L48-L49)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L48-L49)]
 
-インターネット ユーザー全員、パブリック コンテナー内の blob を表示することができますが、適切なアカウント アクセス キーまたは共有アクセス署名がある場合にのみ、それらを削除または変更できます。
+パブリックコンテナー内の blob は、インターネット上のすべてのユーザーが表示できますが、変更または削除するには、適切なアカウントアクセスキーまたは共有アクセス署名がある必要があります。
 
-## <a name="upload-a-blob-into-a-container"></a>Blob コンテナーをアップロードします。
+## <a name="upload-a-blob-into-a-container"></a>コンテナーへの blob のアップロード
 
-Azure Blob Storage には、ブロック blob とページ blob がサポートしています。 ほとんどの場合、ブロック blob とは、使用する推奨される型です。
+Azure Blob Storage は、ブロック blob とページ blob をサポートしています。 ほとんどの場合、ブロック blob を使用することをお勧めします。
 
-ブロック blob にファイルをアップロードするには、コンテナーの参照を取得し、それを使用して、ブロック blob の参照を取得します。 Blob の参照を作成したら、アップロードできますデータの任意のストリームを呼び出すことによって、`UploadFromFile`メソッド。 この操作は、blob を作成しますしなかった以前存在か存在する場合に上書きします。
+ファイルをブロック blob にアップロードするには、コンテナー参照を取得し、それを使用してブロック blob 参照を取得します。 Blob の参照を取得したら、 `UploadFromFile`メソッドを呼び出すことによって、データの任意のストリームをアップロードできます。 この操作では、blob が既に存在していない場合は作成し、存在する場合は上書きします。
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L55-L59)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L55-L59)]
 
-## <a name="list-the-blobs-in-a-container"></a>コンテナー内の blob を一覧表示します。
+## <a name="list-the-blobs-in-a-container"></a>コンテナー内の blob を一覧表示する
 
-コンテナー内の blob を一覧表示、まずコンテナーの参照を取得します。 コンテナーを使用することができますし、 `ListBlobs` blob やその中のディレクトリを取得します。 プロパティと返されるメソッドの豊富なセットにアクセスする`IListBlobItem`にキャストする必要があります、 `CloudBlockBlob`、 `CloudPageBlob`、または`CloudBlobDirectory`オブジェクト。 型が既知でない場合は、判断にキャストするために型チェックを使用できます。 次のコードを取得して内の各項目の URI を出力する方法を示して、`mydata`コンテナー。
+コンテナー内の blob を一覧表示するには、最初にコンテナー参照を取得します。 その後、コンテナーの`ListBlobs`メソッドを使用して、その中の blob やディレクトリを取得できます。 返される`IListBlobItem`の豊富なプロパティおよびメソッドのセットにアクセスするには`CloudBlockBlob`、それを、 `CloudPageBlob`、または`CloudBlobDirectory`オブジェクトにキャストする必要があります。 型が不明な場合は、型チェックを使用して、キャスト先を決定できます。 次のコードは、 `mydata`コンテナー内の各項目の URI を取得して出力する方法を示しています。
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L67-L80)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L67-L80)]
 
-名前の blob、名前にパス情報を使用することもできます。 これにより、整理して従来のファイル システムと同様に走査する仮想ディレクトリ構造が作成されます。 ディレクトリ構造は仮想のみ - Blob storage で使用できる唯一のリソースはコンテナーと blob のことに注意してください。 ただし、ストレージ クライアント ライブラリが用意されています、`CloudBlobDirectory`オブジェクトの仮想ディレクトリを参照し、この方法で編成されている blob の操作プロセスを簡略化します。
+Blob には、名前にパス情報を指定することもできます。 これにより、従来のファイルシステムと同じように整理および走査できる仮想ディレクトリ構造が作成されます。 ディレクトリ構造は仮想のみであり、Blob storage で使用できるリソースはコンテナーと blob のみであることに注意してください。 ただし、ストレージクライアントライブラリは、仮想`CloudBlobDirectory`ディレクトリを参照するオブジェクトを提供し、この方法で構成されている blob を操作するプロセスを簡略化します。
 
-たとえば、次の一連のブロック blob という名前のコンテナーで`photos`:
+たとえば、という名前`photos`のコンテナー内の次の一連のブロック blob について考えてみます。
 
 *photo1.jpg*\
-*2015/architecture/description.txt*\
+*2015/architecture/description .txt*\
 *2015/architecture/photo3.jpg*\
 *2015/architecture/photo4.jpg*\
 *2016/architecture/photo5.jpg*\
 *2016/architecture/photo6.jpg*\
-*2016/architecture/description.txt*\
+*2016/architecture/description .txt*\
 *2016/photo7.jpg*\
 
-呼び出すと`ListBlobs`(上記のサンプル) のように、コンテナーに対して、階層化された一覧が返されます。 両方が含まれる場合`CloudBlobDirectory`と`CloudBlockBlob`し、次のように、結果の出力ディレクトリと、コンテナー内の blob をそれぞれ表すオブジェクト。
+コンテナーでを`ListBlobs`呼び出すと (上記のサンプルのように)、階層化された一覧が返されます。 コンテナー内のディレクトリ`CloudBlobDirectory`と`CloudBlockBlob` blob をそれぞれ表すオブジェクトとオブジェクトの両方が含まれている場合、結果の出力は次のようになります。
 
 ```console
 Directory: https://<accountname>.blob.core.windows.net/photos/2015/
@@ -119,11 +119,11 @@ Directory: https://<accountname>.blob.core.windows.net/photos/2016/
 Block blob of length 505623: https://<accountname>.blob.core.windows.net/photos/photo1.jpg
 ```
 
-必要に応じて、設定することができます、`UseFlatBlobListing`のパラメーター、`ListBlobs`メソッドを`true`します。 この場合、コンテナー内のすべての blob として返されます、`CloudBlockBlob`オブジェクト。 呼び出し`ListBlobs`を次のようなフラットな一覧を返します。
+必要に応じて、 `UseFlatBlobListing` `ListBlobs`メソッドのパラメーターをに`true`設定できます。 この場合、コンテナー内のすべての blob が`CloudBlockBlob`オブジェクトとして返されます。 フラットリストを`ListBlobs`返すためのの呼び出しは次のようになります。
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L82-L89)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L82-L89)]
 
-また、よう、コンテナーの現在の内容に応じて、結果になります。
+また、コンテナーの現在の内容によっては、結果は次のようになります。
 
 ```console
 Block blob of length 4: https://<accountname>.blob.core.windows.net/photos/2015/architecture/description.txt
@@ -136,115 +136,115 @@ Block blob of length 399751: https://<accountname>.blob.core.windows.net/photos/
 Block blob of length 505623: https://<accountname>.blob.core.windows.net/photos/photo1.jpg
 ```
 
-## <a name="download-blobs"></a>Blob をダウンロードします。
+## <a name="download-blobs"></a>Blob のダウンロード
 
-Blob をダウンロードするには、まず blob の参照を取得を呼び出して、`DownloadToStream`メソッド。 次の例では、`DownloadToStream`ローカル ファイルに保存できるストリーム オブジェクトに blob の内容を転送する方法。
+Blob をダウンロードするには、まず blob の参照を取得`DownloadToStream`してから、メソッドを呼び出します。 次の例では`DownloadToStream` 、メソッドを使用して、ローカルファイルに永続化できるストリームオブジェクトに blob の内容を転送します。
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L95-L101)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L95-L101)]
 
-使用することも、`DownloadToStream`メソッドを文字列としての blob のコンテンツをダウンロードします。
+`DownloadToStream`メソッドを使用して、blob の内容をテキスト文字列としてダウンロードすることもできます。
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L103-L106)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L103-L106)]
 
-## <a name="delete-blobs"></a>Blob を削除します。
+## <a name="delete-blobs"></a>Blob の削除
 
-Blob を削除するには、まず blob の参照を取得を呼び出して、`Delete`メソッド。
+Blob を削除するには、まず blob の参照を取得し`Delete` 、次にそのメソッドを呼び出します。
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L112-L116)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L112-L116)]
 
-## <a name="list-blobs-in-pages-asynchronously"></a>非同期的にページ内の blob を一覧表示します。
+## <a name="list-blobs-in-pages-asynchronously"></a>ページ内の blob を非同期に一覧表示する
 
-大規模な数の blob を一覧表示、または 1 つの一覧作成操作で返される結果の数を制御する場合、結果のページ内の blob を一覧表示できます。 この例は、大量の結果セットを返すを待機中には実行がブロックされないように、ページで、非同期的に結果を返す方法を示します。
+多数の blob を一覧表示する場合、または1つのリスティング操作で返す結果の数を制御する場合は、結果ページに blob を一覧表示できます。 この例では、大量の結果を返すために待機している間に実行がブロックされないように、結果をページ単位で非同期的に返す方法を示します。
 
-この例の一覧を表示すると、blob をフラット、設定して、階層的な一覧についてを実行することもできますが、`useFlatBlobListing`のパラメーター、`ListBlobsSegmentedAsync`メソッドを`false`します。
+この例はフラット blob リストを示していますが、 `useFlatBlobListing` `ListBlobsSegmentedAsync`メソッドのパラメーターをに設定する`false`ことによって、階層化された一覧を作成することもできます。
 
-非同期のメソッドを定義するサンプルを使用して、`async`ブロックします。 ``let!``キーワードは、一覧表示タスクが完了するまでに、サンプル メソッドの実行を中断します。
+このサンプルでは、 `async`ブロックを使用して非同期メソッドを定義します。 キーワード``let!``は、リスティングタスクが完了するまで、サンプルメソッドの実行を中断します。
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L122-L160)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L122-L160)]
 
-この非同期ルーチンを次のように使用できますようになりました。 最初に、一部のダミー データ (このチュートリアルで前に作成されたローカル ファイルを使用) をアップロードします。
+次のように、この非同期ルーチンを使用できるようになりました。 まずダミーデータをアップロードします (このチュートリアルで既に作成したローカルファイルを使用します)。
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L162-L166)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L162-L166)]
 
-ここで、ルーチンを呼び出します。 使用する`Async.RunSynchronously`非同期操作の実行を強制します。
+ここで、ルーチンを呼び出します。 非同期操作`Async.RunSynchronously`の実行を強制するには、を使用します。
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L168-L168)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L168-L168)]
 
 ## <a name="writing-to-an-append-blob"></a>追加 blob への書き込み
 
-追加 blob は、ログ記録などの追加操作のために最適化されます。 ブロック blob、追加 blob はブロックで構成されますが、blob の末尾に必ず追加される追加 blob に新しいブロックを追加するとします。 更新または追加 blob の既存のブロックを削除することはできません。 ブロック blob は、追加 blob のブロック Id は公開されません。
+追加 blob は、ログ記録などの追加操作用に最適化されています。 ブロック blob と同様に、追加 blob はブロックで構成されますが、追加 blob に新しいブロックを追加すると、常に blob の末尾に追加されます。 追加 blob の既存のブロックを更新または削除することはできません。 追加 blob のブロック Id は、ブロック blob のブロック Id として公開されません。
 
-追加 blob 内の各ブロックは、最大 4 MB までのさまざまなサイズ、追加 blob は最大 50,000 のブロックを含めることができます。 追加 blob の最大サイズは 195 GB (4 MB X 50,000 ブロック) よりも少しではそのためです。
+追加 blob 内の各ブロックは、最大 4 MB までの異なるサイズにすることができ、追加 blob には最大5万のブロックを含めることができます。 このため、追加 blob の最大サイズは 195 GB (4 MB X 5万ブロック) よりも少し大きくなります。
 
-次の例では、新しい追加 blob を作成し、簡単なログ記録操作をシミュレートするのには、いくつかのデータを追加します。
+次の例では、新しい追加 blob を作成し、データを追加して、単純なログ記録操作をシミュレートします。
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L174-L203)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L174-L203)]
 
-参照してください[ブロック Blob、ページ Blob、および追加 Blob](https://msdn.microsoft.com/library/azure/ee691964.aspx) blob の 3 つの種類の違いの詳細についてはします。
+3種類の blob の相違点の詳細については、「[ブロック blob、ページ blob、および追加 blob](https://msdn.microsoft.com/library/azure/ee691964.aspx)について」を参照してください。
 
-## <a name="concurrent-access"></a>同時実行のアクセス
+## <a name="concurrent-access"></a>同時アクセス
 
-使用することができますから複数のクライアントまたは複数のプロセス インスタンスを blob への同時アクセスをサポートする**Etag**または**リース**します。
+複数のクライアントまたは複数のプロセスインスタンスからの blob への同時アクセスをサポートするには、 **etag**または**リース**を使用できます。
 
-* **Etag** -blob またはコンテナーが別のプロセスによって変更されたことを検出する手段を提供します。
+* **Etag** -blob またはコンテナーが別のプロセスによって変更されたことを検出する方法を提供します。
 
-* **リース**の取得だけで、更新可能な書き込みまたは一定期間、blob へのアクセスを削除する方法を提供します。
+* **リース**-一定期間、blob への排他、更新、書き込み、または削除のアクセス権を取得する方法を提供します。
 
-詳細については、次を参照してください。 [Microsoft Azure Storage 内の同時実行を管理する](https://azure.microsoft.com/blog/managing-concurrency-in-microsoft-azure-storage-2/)します。
+詳細については、「 [Microsoft Azure Storage での同時実行の管理](https://azure.microsoft.com/blog/managing-concurrency-in-microsoft-azure-storage-2/)」を参照してください。
 
-## <a name="naming-containers"></a>名前付けコンテナー
+## <a name="naming-containers"></a>コンテナーの名前付け
 
-Azure storage 内のすべての blob は、コンテナー内に存在する必要があります。 コンテナーは、blob 名の一部を形成します。 たとえば、`mydata`これらサンプル blob Uri 内のコンテナーの名前を指定します。
+Azure storage 内のすべての blob は、コンテナー内に存在する必要があります。 コンテナーは、blob 名の一部を形成します。 たとえば、は`mydata` 、次のサンプル blob uri のコンテナーの名前です。
 
 - https://storagesample.blob.core.windows.net/mydata/blob1.txt
 - https://storagesample.blob.core.windows.net/mydata/photos/myphoto.jpg
 
-コンテナー名は、次の名前付け規則に準拠している、有効な DNS 名である必要があります。
+コンテナー名は、次の名前付け規則に準拠した有効な DNS 名である必要があります。
 
-1. コンテナー名は英字または数字で始まらなければなりませんし、文字、数字、およびダッシュ (-) 文字のみを含めることができます。
-1. すべてのダッシュ (-) 文字はすぐに前し、後にアルファベットまたは数字; する必要があります。コンテナー名では、連続するダッシュは許可されていません。
-1. コンテナー名のすべての文字を小文字にする必要があります。
-1. コンテナー名は 3 ~ 63 文字にする必要があります。
+1. コンテナー名の先頭には文字または数字を使用する必要があり、文字、数字、ダッシュ (-) 文字のみを含めることができます。
+1. すべてのダッシュ (-) 文字は、その直後に文字または数字を付ける必要があります。連続するダッシュは、コンテナー名では使用できません。
+1. コンテナー名のすべての文字は、小文字にする必要があります。
+1. コンテナー名は、3 ~ 63 文字の長さにする必要があります。
 
-コンテナーの名前が小文字に常にする必要がありますに注意してください。 コンテナー名に、大文字を含めるか、それ以外の場合、コンテナーの名前付け規則に違反した場合 400 (Bad Request) エラーが発生する可能性があります。
+コンテナーの名前は常に小文字にする必要があることに注意してください。 コンテナー名に大文字を含める場合や、コンテナーの名前付け規則に違反する場合は、400エラー (無効な要求) が発生することがあります。
 
-## <a name="managing-security-for-blobs"></a>Blob のセキュリティを管理します。
+## <a name="managing-security-for-blobs"></a>Blob のセキュリティを管理する
 
-既定では、Azure Storage のデータはセキュリティを維持は、アカウント アクセス キーを所有しているユーザー アカウントの所有者へのアクセスを制限することで。 ストレージ アカウント内の blob データを共有する必要がある場合は、アカウント アクセス キーのセキュリティを損なうことがなく行う必要があります。 さらに、ネットワーク経由でと、Azure Storage に安全であることを確認する blob データを暗号化できます。
+既定では、アカウントの所有者にアクセスを制限することで、アカウントのアクセスキーを所有しているユーザーに対して、Azure Storage のデータのセキュリティを保護します。 ストレージアカウントで blob データを共有する必要がある場合は、アカウントアクセスキーのセキュリティを損なうことなくこの操作を行うことが重要です。 さらに、blob データを暗号化して、ネットワーク上および Azure Storage で安全に保護されるようにすることもできます。
 
-### <a name="controlling-access-to-blob-data"></a>Blob データへのアクセスを制御します。
+### <a name="controlling-access-to-blob-data"></a>Blob データへのアクセスの制御
 
-既定では、ストレージ アカウント内の blob データはストレージ アカウント所有者のみがアクセスできます。 Blob storage に対する要求の認証には、既定では、アカウント アクセス キーが必要です。 ただし、特定の blob データを他のユーザーが利用できるようにする場合があります。
+既定では、ストレージアカウントの blob データには、ストレージアカウントの所有者のみがアクセスできます。 Blob ストレージに対する要求の認証には、既定でアカウントアクセスキーが必要です。 ただし、特定の blob データを他のユーザーが使用できるようにすることもできます。
 
 ### <a name="encrypting-blob-data"></a>Blob データの暗号化
 
-Azure Storage では、クライアントとサーバーの両方の blob データの暗号化をサポートします。
+Azure Storage は、クライアントとサーバーの両方で blob データの暗号化をサポートしています。
 
 ## <a name="next-steps"></a>次の手順
 
-これで、Blob storage の基本を学習するは詳細については、これらのリンクに従います。
+これで、Blob storage の基本を学習できました。詳細については、次のリンク先を参照してください。
 
 ### <a name="tools"></a>ツール
 
 - [F#AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/)\
-F#型プロバイダーが Blob、Table、および Azure Storage のキューの資産を探索し、それらに対する CRUD 操作を簡単に適用するために使用できます。
+Blob F# 、テーブル、およびキュー Azure Storage 資産を探索し、それらに対して CRUD 操作を簡単に適用するために使用できる型プロバイダー。
 
-- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage)\
-F# Microsoft Azure Table Storage サービスを使用するための API
+- [Fsharp.core](https://github.com/fsprojects/FSharp.Azure.Storage)\
+Microsoft Azure F# Table Storage サービスを使用するための API
 
-- [Microsoft Azure ストレージ エクスプ ローラー (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer)\
-Microsoft Windows、OS X、Linux で Azure Storage のデータを視覚的に作業することができます、無料のスタンドアロン アプリです。
+- [Microsoft Azure Storage Explorer (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer)\
+Windows、OS X、Linux で Azure Storage データを視覚的に操作できる Microsoft 製の無料のスタンドアロンアプリです。
 
 ### <a name="blob-storage-reference"></a>Blob ストレージのリファレンス
 
-- [.NET 用 azure Storage Api](/dotnet/api/overview/azure/storage)
-- [Azure ストレージ サービス REST API リファレンス](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference)
+- [.NET 用 Api の Azure Storage](/dotnet/api/overview/azure/storage)
+- [Azure Storage Services REST API リファレンス](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference)
 
 ### <a name="related-guides"></a>関連ガイド
 
-- [C# での Azure Blob Storage の概要](https://azure.microsoft.com/resources/samples/storage-blob-dotnet-getting-started/)
-- [Windows 上の AzCopy コマンド ライン ユーティリティを使用したデータを転送します。](/azure/storage/common/storage-use-azcopy)
-- [Linux 上の AzCopy コマンド ライン ユーティリティを使用したデータを転送します。](/azure/storage/common/storage-use-azcopy-linux)
-- [Azure Storage 接続文字列を構成します。](/azure/storage/common/storage-configure-connection-string)
-- [Azure Storage チーム ブログ](https://blogs.msdn.microsoft.com/windowsazurestorage/)
-- [クイック スタート:.NET を使用してオブジェクト ストレージに blob を作成するには](/azure/storage/blobs/storage-quickstart-blobs-dotnet)
+- [Azure Blob Storage でのはじめにC#](https://azure.microsoft.com/resources/samples/storage-blob-dotnet-getting-started/)
+- [Windows で AzCopy コマンドラインユーティリティを使用してデータを転送する](/azure/storage/common/storage-use-azcopy)
+- [Linux で AzCopy コマンドラインユーティリティを使用してデータを転送する](/azure/storage/common/storage-use-azcopy-linux)
+- [Azure Storage 接続文字列を構成する](/azure/storage/common/storage-configure-connection-string)
+- [Azure Storage チームのブログ](https://blogs.msdn.microsoft.com/windowsazurestorage/)
+- [クイック スタート:.NET を使用してオブジェクトストレージに blob を作成する](/azure/storage/blobs/storage-quickstart-blobs-dotnet)

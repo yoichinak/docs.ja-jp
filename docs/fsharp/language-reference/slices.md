@@ -1,25 +1,25 @@
 ---
-title: スライス (F#)
-description: 既存のスライスを使用する方法について説明しますF#データ型と他のデータ型のスライスを定義する方法。
+title: Slice (F#)
+description: 既存F#のデータ型にスライスを使用する方法、およびその他のデータ型用に独自のスライスを定義する方法について説明します。
 ms.date: 01/22/2019
-ms.openlocfilehash: 1d8bb029ad18c8853ab58888959967ed279fb368
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3067982c2b4249312c7e9365bbfb994be840911d
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925995"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627139"
 ---
 # <a name="slices"></a>スライス
 
-F#、スライスがデータ型のサブセットです。 データ型から、スライスを実行できるようにするには、データ型を定義する必要がありますか、`GetSlice`メソッドまたは、[拡張子を入力](type-extensions.md)にスコープされています。 この記事は、既存のファイルからのスライスを実行する方法を説明しますF#型と、独自に定義する方法。
+でF#は、スライスはデータ型のサブセットです。 データ型からスライスを取得できるようにするには、データ型でメソッドを`GetSlice`定義するか、スコープ内にある[型拡張機能](type-extensions.md)を使用する必要があります。 この記事では、既存F#の型からスライスを取得する方法と、独自の型を定義する方法について説明します。
 
-スライスはのような[インデクサー](members/indexed-properties.md)が、基になるデータ構造体から単一の値を生成するのではなく複数の。
+スライスは[インデクサー](./members/indexed-properties.md)に似ていますが、基になるデータ構造から1つの値を生成するのではなく、複数の値を生成します。
 
-F#現在は、文字列、リスト、配列、および 2D 配列のスライスの組み込みサポート。
+F#には、現在、文字列、リスト、配列、および2D 配列のスライスのサポートが組み込まれています。
 
-## <a name="basic-slicing-with-f-lists-and-arrays"></a>基本的なスライスF#リストと配列
+## <a name="basic-slicing-with-f-lists-and-arrays"></a>リストと配列F#を使用した基本的なスライス
 
-スライスは最も一般的なデータ型はF#リストと配列。 次の例では、リストでそれを行う方法を示します。
+スライスされる最も一般的なデータ型はF# 、リストと配列です。 次の例では、リストを使用してこれを行う方法を示します。
 
 ```fsharp
 // Generate a list of 100 integers
@@ -38,7 +38,7 @@ let unboundedEnd = fullList.[94..]
 printfn "Unbounded end slice: %A" unboundedEnd
 ```
 
-リストのスライスと同じように、配列のスライスします。
+配列のスライスは、スライスリストと同じです。
 
 ```fsharp
 // Generate an array of 100 integers
@@ -59,9 +59,9 @@ printfn "Unbounded end slice: %A" unboundedEnd
 
 ## <a name="slicing-multidimensional-arrays"></a>多次元配列のスライス
 
-F#多次元配列をサポートしている、F#コア ライブラリです。 1 次元の配列と多次元配列のスライスにも役立ちます。 ただし、特定の行と列のスライスを実行できるように、追加のディメンションの概要は、構文がやや異なる定められています。
+F#は、コアライブラリのF#多次元配列をサポートしています。 1次元配列の場合と同様に、多次元配列のスライスも役に立ちます。 ただし、追加のディメンションの導入では、特定の行と列のスライスを取得できるように、若干異なる構文が必要になります。
 
-2D 配列のスライスには、次の例に示します。
+次の例は、2D 配列をスライスする方法を示しています。
 
 ```fsharp
 // Generate a 3x3 2D matrix
@@ -89,13 +89,13 @@ let twoByTwo = A.[0..1,0..1]
 printfn "%A" twoByTwo
 ```
 
-F#コア ライブラリを一切定義しません`GetSlice`3D の配列。 定義する必要がありますまたは他の配列以上のディメンションをスライスする場合、`GetSlice`メンバー自分でします。
+コアF#ライブラリでは、の`GetSlice`3d 配列は定義されていません。 その他の次元の配列をスライスする場合は、 `GetSlice`メンバーを自分で定義する必要があります。
 
-## <a name="defining-slices-for-other-data-structures"></a>その他のデータ構造にスライスを定義します。
+## <a name="defining-slices-for-other-data-structures"></a>他のデータ構造のスライスの定義
 
-F#コア ライブラリが限定的なセットの種類のスライスを定義します。 多くのデータ型のスライスを定義する場合は、これを行う型定義自体または型の拡張機能。
+コアF#ライブラリでは、型の限られたセットのスライスが定義されています。 より多くのデータ型に対してスライスを定義する場合は、型定義自体または型拡張機能のいずれかを使用できます。
 
-たとえば、ここではのスライスを定義する方法、<xref:System.ArraySegment%601>便利なデータ操作に許可するクラス。
+たとえば、 <xref:System.ArraySegment%601>クラスのスライスを定義して、便利なデータ操作を可能にする方法を次に示します。
 
 ```fsharp
 open System
@@ -110,9 +110,9 @@ let arr = ArraySegment [| 1 .. 10 |]
 let slice = arr.[2..5] //[ 3; 4; 5]
 ```
 
-### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a>必要がある場合は、ボックス化を回避するためにインライン化の使用
+### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a>インライン展開を使用して、必要に応じてボックス化を回避する
 
-実際には構造体である型のスライスを定義している場合ことをお勧めする`inline`、`GetSlice`メンバー。 F#コンパイラによる最適化のスライスの結果としてヒープ割り当てを回避する、省略可能な引数。 これは非常に重要ですなどの構造をスライス<xref:System.Span%601>をヒープに割り当てることができません。
+実際に構造体である型のスライスを定義する場合は、 `inline` `GetSlice`メンバーを使用することをお勧めします。 コンパイラF#はオプションの引数を最適化し、スライスの結果としてヒープの割り当てを回避します。 これは、ヒープに割り当てることができ<xref:System.Span%601>ないなどのスライス構造では非常に重要です。
 
 ```fsharp
 open System
@@ -137,4 +137,4 @@ printSpan sp.[1..2] // |2; 3|]
 
 ## <a name="see-also"></a>関連項目
 
-- [インデックス付きプロパティ](members/indexed-properties.md)
+- [インデックス付きプロパティ](./members/indexed-properties.md)

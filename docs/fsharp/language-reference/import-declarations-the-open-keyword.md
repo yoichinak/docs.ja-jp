@@ -1,20 +1,20 @@
 ---
-title: インポート宣言:Open キーワード
+title: 'インポート宣言: open キーワード'
 description: 完全修飾名を使用せずに参照できる要素を持つ F# インポート宣言し、モジュールまたは名前空間の指定方法について説明します。
 ms.date: 04/04/2019
-ms.openlocfilehash: ad64190c3243c57a185f3b864270fca80590f079
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 816bac551692c3397290f64c6267ee22e4ce90fb
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937502"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630574"
 ---
-# <a name="import-declarations-the-open-keyword"></a>インポート宣言:`open`キーワード
+# <a name="import-declarations-the-open-keyword"></a>インポート宣言: `open` キーワード
 
 > [!NOTE]
 > この記事の API リファレンスのリンクをクリックすると MSDN に移動します。  docs.microsoft.com API リファレンスは完全ではありません。
 
-*インポート宣言*モジュールまたは名前空間完全修飾名を使用せずに参照できる要素を指定します。
+*インポート宣言*は、完全修飾名を使用せずに参照できる要素を持つモジュールまたは名前空間を指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -24,19 +24,19 @@ open module-or-namespace-name
 
 ## <a name="remarks"></a>Remarks
 
-名前空間またはモジュールの完全修飾パスを使用してコードを参照するたびには、書き込み、読み取り、および管理するが難しいコードを作成できます。 代わりに、使用、`open`キーワードのモジュールや名前空間をそのモジュールまたは名前空間のメンバーを参照する場合は、完全修飾名ではなく、名前の短い形式を使用できるように頻繁に使用します。 このキーワードと似ています、 `using` c# でキーワード`using namespace`の Visual c と`Imports`Visual Basic でします。
+常に完全修飾名前空間またはモジュールパスを使用してコードを参照すると、書き込み、読み取り、および保守が困難なコードを作成できます。 代わりに、頻繁に使用さ`open`れるモジュールと名前空間にキーワードを使用して、そのモジュールまたは名前空間のメンバーを参照するときに、完全修飾名の代わりに短い形式の名前を使用できます。 このキーワードはC#、 `using namespace`のキーワード`using` 、ビジュアルC++、および Visual Basic に似`Imports`ています。
 
-モジュールまたは指定された名前空間は、同じプロジェクト内、または参照されるプロジェクトまたはアセンブリである必要があります。 そうでない場合は、プロジェクトへの参照を追加またはを使用して、`-reference`コマンド`-`ライン オプション (またはその省略形、 `-r`)。 詳細については、「[コンパイラ オプション](compiler-options.md)」を参照してください。
+指定されたモジュールまたは名前空間は、同じプロジェクトまたは参照されるプロジェクトまたはアセンブリ内に存在する必要があります。 そうでない場合は、プロジェクトへの参照を追加するか、 `-reference`コマンド`-`ラインオプション`-r`(またはその省略形) を使用することができます。 詳細については、「[コンパイラ オプション](compiler-options.md)」を参照してください。
 
-インポート宣言は、それを囲む名前空間、モジュール、またはファイルの最後までの宣言を次のコードで使用可能な名前を使用します。
+インポート宣言は、外側の名前空間、モジュール、またはファイルの末尾まで、宣言の後のコードで名前を使用できるようにします。
 
-複数のインポート宣言を使用する場合は、別の行に表示されます。
+複数のインポート宣言を使用する場合は、別々の行に表示する必要があります。
 
-次のコードは、使用、`open`キーワードをコードを簡略化します。
+次のコードは、 `open`キーワードを使用してコードを簡略化する方法を示しています。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6801.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6801.fs)]
 
-F# 、同じ名前が 1 つ以上の開いているモジュールまたは名前空間で発生すると、あいまいさが発生した場合、コンパイラにエラーまたは警告を同時に生成することはできません。 あいまいさが発生すると、F# より最近開いたモジュールまたは名前空間を設定できます。 たとえば、次のコードで`empty`意味`Seq.empty`場合でも、`empty`両方である、`List`と`Seq`モジュール。
+複数F#の開いているモジュールまたは名前空間で同じ名前が発生した場合に、あいまいさが発生すると、コンパイラはエラーまたは警告を生成しません。 あいまいさが発生すると、F# より最近開いたモジュールまたは名前空間を設定できます。 たとえば、次の`empty`コードでは、 `List`と`Seq.empty` `Seq`の両方の`empty`モジュールにがある場合でも、はを意味します。
 
 ```fsharp
 open List
@@ -44,27 +44,27 @@ open Seq
 printfn "%A" empty
 ```
 
-そのため、注意を開くときのモジュールまたは名前空間など`List`または`Seq`を含むメンバーの名前は同じでは、代わりに、修飾名の使用を検討してください。 コードのインポート宣言の順序に依存するすべての状況を避ける必要があります。
+したがって、同じ名前を持つメンバーが含まれて`List` `Seq`いるモジュールまたは名前空間を開く場合は注意が必要です。代わりに、修飾名の使用を検討してください。 コードがインポート宣言の順序に依存している状況を避ける必要があります。
 
 ## <a name="namespaces-that-are-open-by-default"></a>既定で開かれている名前空間
 
-一部の名前空間は、これらの明示的なインポート宣言は必要ありませんが暗黙的に開かれた F# コードで頻繁に使用されます。 次の表では、既定で開かれている名前空間を示します。
+一部の名前空間は、これらの明示的なインポート宣言は必要ありませんが暗黙的に開かれた F# コードで頻繁に使用されます。 次の表は、既定で開かれている名前空間を示しています。
 
 |名前空間|説明|
 |---------|-----------|
 |`Microsoft.FSharp.Core`|基本的な F# の型定義の組み込み型を含む`int`と`float`します。|
-|`Microsoft.FSharp.Core.Operators`|基本的な算術演算を含む`+`と`*`します。|
-|`Microsoft.FSharp.Collections`|変更できないコレクション クラスを含む`List`と`Array`します。|
-|`Microsoft.FSharp.Control`|レイジー評価と非同期ワークフローなどのコントロール構成要素の型が含まれています。|
-|`Microsoft.FSharp.Text`|などの書式設定された IO は、関数を含む、`printf`関数。|
+|`Microsoft.FSharp.Core.Operators`|`+` や`*`などの基本的な算術演算が含まれています。|
+|`Microsoft.FSharp.Collections`|`List` や`Array`などの変更できないコレクションクラスが含まれています。|
+|`Microsoft.FSharp.Control`|レイジー評価や非同期ワークフローなどのコントロール構成要素の型が含まれています。|
+|`Microsoft.FSharp.Text`|関数など、書式設定された`printf` IO 用の関数が含まれています。|
 
 ## <a name="autoopen-attribute"></a>AutoOpen 属性
 
-適用することができます、`AutoOpen`アセンブリに属性をアセンブリが参照されている場合に、名前空間またはモジュールが自動的に開きたい場合。 適用することも、`AutoOpen`親モジュールまたは名前空間が開かれるときに、そのモジュールを自動的に開くモジュールに属性します。 詳細については、次を参照してください。 [Core.AutoOpenAttribute クラス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.autoopenattribute-class-%5bfsharp%5d)します。
+アセンブリが参照さ`AutoOpen`れたときに名前空間またはモジュールを自動的に開く場合は、アセンブリに属性を適用できます。 また、 `AutoOpen`属性をモジュールに適用して、親モジュールまたは名前空間を開いたときに自動的にそのモジュールを開くようにすることもできます。 詳細については、「 [Core. AutoOpenAttribute クラス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.autoopenattribute-class-%5bfsharp%5d)」を参照してください。
 
 ## <a name="requirequalifiedaccess-attribute"></a>RequireQualifiedAccess 属性
 
-一部のモジュール、レコード、または共用体の型を指定できます、`RequireQualifiedAccess`属性。 これらのモジュール、レコード、または共用体の要素を参照する場合は、インポート宣言を含めるかどうかに関係なく、修飾名を使用する必要があります。 この属性を戦略的に使用する場合は、よくを定義する型名を使用する、役立つように名前の競合を回避し、コードより回復力のあるライブラリの変更に。 詳細については、次を参照してください。 [Core.RequireQualifiedAccessAttribute クラス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-%5Bfsharp%5D)します。
+一部のモジュール、レコード、または共用体型で`RequireQualifiedAccess`は、属性を指定できます。 これらのモジュール、レコード、または共用体の要素を参照する場合は、インポート宣言を含めるかどうかに関係なく、修飾名を使用する必要があります。 一般的に使用される名前を定義する型でこの属性を戦略的に使用すると、名前の競合を避けることができるため、ライブラリの変更に対するコードの回復性が向上します。 詳細については、「 [RequireQualifiedAccessAttribute クラス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-%5Bfsharp%5D)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

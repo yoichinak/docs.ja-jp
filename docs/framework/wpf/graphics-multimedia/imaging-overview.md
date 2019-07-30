@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: dc7129e11a82741f5a095d7f1824de3f90421056
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: d1fcf15db750167a93344ff8efd5957933bed6c0
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331766"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629850"
 ---
 # <a name="imaging-overview"></a>イメージングの概要
 このトピックでは、[!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)] の概要を説明します。 開発者は、[!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] を使用して、イメージの表示、変換、および形式設定を実行できます。  
@@ -134,11 +134,11 @@ ms.locfileid: "68331766"
   
 - <xref:System.Windows.Media.Stretch.None>:イメージは、出力領域に合わせて拡大されません。 イメージが出力領域よりも大きい場合は、出力領域に収まらない部分がクリップされたイメージが出力領域に描画されます。  
   
-- <xref:System.Windows.Media.Stretch.Fill>:イメージは、出力領域に合わせて拡大縮小されます。 イメージの高さと幅は個別に拡大縮小されるため、イメージの元の縦横比は保持されないことがあります。 つまり、イメージは、出力コンテナーを完全に埋めるためにゆがんで表示される可能性があります。  
+- <xref:System.Windows.Media.Stretch.Fill> :イメージは、出力領域に合わせて拡大縮小されます。 イメージの高さと幅は個別に拡大縮小されるため、イメージの元の縦横比は保持されないことがあります。 つまり、イメージは、出力コンテナーを完全に埋めるためにゆがんで表示される可能性があります。  
   
-- <xref:System.Windows.Media.Stretch.Uniform>:イメージは、出力領域内に完全に収まるようにスケーリングされます。 イメージの縦横比は保持されます。  
+- <xref:System.Windows.Media.Stretch.Uniform> :イメージは、出力領域内に完全に収まるようにスケーリングされます。 イメージの縦横比は保持されます。  
   
-- <xref:System.Windows.Media.Stretch.UniformToFill>:イメージは、イメージの元の縦横比を維持したまま、出力領域を完全に塗りつぶすようにスケーリングされます。  
+- <xref:System.Windows.Media.Stretch.UniformToFill> :イメージは、イメージの元の縦横比を維持したまま、出力領域を完全に塗りつぶすようにスケーリングされます。  
   
  次の例では、使用可能<xref:System.Windows.Media.Stretch>な各列挙<xref:System.Windows.Controls.Image>をに適用します。  
   
@@ -165,7 +165,7 @@ ms.locfileid: "68331766"
 ## <a name="image-metadata"></a>イメージのメタデータ  
  一部のイメージ ファイルには、ファイルの内容または特性を記述するメタデータが含まれています。 たとえば、ほとんどのデジタル カメラは、イメージをキャプチャするために使用されるカメラの型番に関するメタデータを含むイメージを作成します。 各イメージ形式は、メタデータを異なる方法で処理しますが、[!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] では、サポートしているイメージ形式のメタデータの格納と取得を一律に実行します。  
   
- メタデータへ<xref:System.Windows.Media.Imaging.BitmapSource>のアクセスは、 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>オブジェクトのプロパティを通じて提供されます。 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>イメージに含まれるすべてのメタデータを含むオブジェクトを返します。<xref:System.Windows.Media.Imaging.BitmapMetadata> このデータは、1 つのメタデータ スキーマでも、異なるスキーマの組み合わせでもかまいません。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] では、次のメタデータをサポートします。[!INCLUDE[TLA#tla_exif](../../../../includes/tlasharptla-exif-md.md)]EXt (PNG テキスト データ)、[!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)][!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)]および [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]。  
+ メタデータへ<xref:System.Windows.Media.Imaging.BitmapSource>のアクセスは、 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>オブジェクトのプロパティを通じて提供されます。 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>イメージに含まれるすべてのメタデータを含むオブジェクトを返します。<xref:System.Windows.Media.Imaging.BitmapMetadata> このデータは、1 つのメタデータ スキーマでも、異なるスキーマの組み合わせでもかまいません。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]では、次のイメージメタデータスキーマがサポートされています。イメージファイル (Exif)、テキスト (PNG テキストデータ) [!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)] [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)]、、、および[!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]があります。  
   
  メタデータの読み取りプロセスを簡略化するために<xref:System.Windows.Media.Imaging.BitmapMetadata> 、には、、などの簡単にアクセス<xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A> <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A> <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>できる名前付きプロパティがいくつか用意されています。 これらの名前付きプロパティの多くは、メタデータを書き込むためにも使用できます。 メタデータを読み取るための追加サポートは、メタデータ クエリ リーダーによって提供されます。 メソッド<xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A>は、 *"/app1/exif/"* などの文字列クエリを指定することによって、メタデータクエリリーダーを取得するために使用されます。 次の例では<xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> 、を使用して、 *"/Text/Description"* の場所に格納されているテキストを取得します。  
   

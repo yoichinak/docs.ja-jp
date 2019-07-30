@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: bee1e9b1-50a8-4c89-9cd9-7dd6b2458187
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 628790bb8229dc519589c122235f07a38ba57c1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e6400986d58fcb5f11d06e371a1b58f5256f4c62
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791576"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629371"
 ---
 # <a name="raceonrcwcleanup-mda"></a>raceOnRCWCleanup MDA
-<xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType> メソッドなどのコマンドを使用して [ランタイム呼び出し可能ラッパー](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW: Runtime Callable Wrapper) を解放する呼び出しがなされた時点でその RCW が使用中であることを共通言語ランタイム (CLR: Common Language Runtime) が検出すると、`raceOnRCWCleanup` マネージド デバッグ アシスタント (MDA: Managed Debugging Assistant) がアクティブ化されます。  
+<xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType> メソッドなどのコマンドを使用して [ランタイム呼び出し可能ラッパー](../../../docs/standard/native-interop/runtime-callable-wrapper.md) (RCW: Runtime Callable Wrapper) を解放する呼び出しがなされた時点でその RCW が使用中であることを共通言語ランタイム (CLR: Common Language Runtime) が検出すると、`raceOnRCWCleanup` マネージド デバッグ アシスタント (MDA: Managed Debugging Assistant) がアクティブ化されます。  
   
 ## <a name="symptoms"></a>症状  
  <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> メソッド、または類似メソッドを使用して RCW が解放中または解放後に、アクセス違反またはメモリ破損が発生します。  
@@ -27,13 +27,13 @@ ms.locfileid: "61791576"
 ## <a name="cause"></a>原因  
  別のスレッドまたは解放中のスレッド スタックで、RCW が使用中です。  使用中の RCW は解放できません。  
   
-## <a name="resolution"></a>解像度  
+## <a name="resolution"></a>解決方法  
  現在のスレッドまたは他のスレッドで使用中の可能性がある RCW は、解放しないでください。  
   
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
  この MDA は CLR に影響しません。  
   
-## <a name="output"></a>出力  
+## <a name="output"></a>Output  
  エラーを説明するメッセージです。  
   
 ## <a name="configuration"></a>構成  

@@ -7,51 +7,54 @@ helpviewer_keywords:
 - variables [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: 156872f8-aabc-4454-8e2d-f2253c3c13c9
-ms.openlocfilehash: 9a6e542e297a17f44d929235530ae6058cf13a36
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a86a60def9ac1b8140194ecb6f5e784c62a0e101
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663389"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630968"
 ---
 # <a name="structure-variables-visual-basic"></a>構造体の変数 (Visual Basic)
-構造体を作成すると、その型と、プロシージャ レベルとモジュール レベル変数を宣言できます。 たとえば、コンピューター システムに関する情報を記録する構造体を作成できます。 次に例を示します。  
-  
-```  
-Public Structure systemInfo  
-    Public cPU As String  
-    Public memory As Long  
-    Public purchaseDate As Date  
-End Structure  
-```  
-  
- 型の変数を宣言できます。 次の例を示します。  
-  
-```  
-Dim mySystem, yourSystem As systemInfo  
-```  
-  
+
+構造体を作成したら、その型としてプロシージャレベルとモジュールレベルの変数を宣言できます。 たとえば、コンピューターシステムに関する情報を記録する構造体を作成できます。 次に例を示します。
+
+```vb
+Public Structure systemInfo
+    Public cPU As String
+    Public memory As Long
+    Public purchaseDate As Date
+End Structure
+```
+
+これで、その型の変数を宣言できるようになりました。 次の宣言はこれを示しています。
+
+```vb
+Dim mySystem, yourSystem As systemInfo
+```
+
 > [!NOTE]
->  クラスとモジュールで宣言された構造体を使用して、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)パブリック アクセスに既定値。 構造体をプライベートにする場合を使用して宣言確認、[プライベート](../../../../visual-basic/language-reference/modifiers/private.md)キーワード。  
-  
-## <a name="access-to-structure-values"></a>構造体の値へのアクセス  
- 割り当てし、構造体変数の要素から値を取得に設定し、オブジェクトのプロパティを取得するときに使用同じ構文を使用します。 メンバー アクセス演算子を配置する (`.`) 構造体の変数名と要素名の間。 次の例では、要素型として以前に宣言された変数の`systemInfo`します。  
-  
-```  
-mySystem.cPU = "486"  
-Dim tooOld As Boolean  
-If yourSystem.purchaseDate < #1/1/1992# Then tooOld = True  
-```  
-  
-## <a name="assigning-structure-variables"></a>構造体の変数の代入  
- 両方とも同じ構造体型の場合は、別に 1 つの変数を割り当てることもできます。 これにより、1 つの構造体のすべての要素がもう一方で対応する要素にコピーされます。 次の例を示します。  
-  
-```  
-yourSystem = mySystem  
-```  
-  
- 構造体の要素など、参照型では、かどうか、 `String`、 `Object`、またはデータへのポインター、配列をコピーします。 前の例では場合、`systemInfo`のポインターが前の例をコピーした場合、オブジェクト変数が含まれていた`mySystem`に`yourSystem`、アクセスするときに、1 つの構造をオブジェクトのデータの変更が有効になるとその他の構造をします。  
-  
+> クラスとモジュールでは、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)を使用して宣言された構造体は、既定でパブリックアクセスになります。 構造体をプライベートにする場合は、 [private](../../../../visual-basic/language-reference/modifiers/private.md)キーワードを使用して宣言してください。
+
+## <a name="access-to-structure-values"></a>構造体の値へのアクセス
+
+構造体変数の要素の値を割り当てたり、取得したりするには、オブジェクトのプロパティの設定と取得に使用するのと同じ構文を使用します。 構造体変数名と要素名`.`の間にメンバーアクセス演算子 () を配置します。 次の例では、以前に型`systemInfo`として宣言された変数の要素にアクセスします。
+
+```vb
+mySystem.cPU = "486"
+Dim tooOld As Boolean
+If yourSystem.purchaseDate < #1/1/1992# Then tooOld = True
+```
+
+## <a name="assigning-structure-variables"></a>構造体変数の割り当て
+
+また、両方が同じ構造体型である場合は、1つの変数を別の変数に割り当てることもできます。 これにより、1つの構造体のすべての要素が、他方の内の対応する要素にコピーされます。 次の宣言はこれを示しています。
+
+```vb
+yourSystem = mySystem
+```
+
+構造体要素が`String`、 `Object`、または配列などの参照型である場合、データへのポインターがコピーされます。 前の例で、に`systemInfo`オブジェクト変数が含まれていた場合、前の例ではから`mySystem`へ`yourSystem`のポインターがコピーされ、1つの構造体を通じてオブジェクトのデータへの変更は、アクセス時に有効になります。他の構造体を経由します。
+
 ## <a name="see-also"></a>関連項目
 
 - [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)

@@ -2,12 +2,12 @@
 title: パターン マッチ
 description: 論理構造体を使用してデータを比較または構成要素にデータを分解したり、データから情報を抽出するパターンが F# の使用方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: f76a5fb675f83df87dd896f471a3552495f39e7e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 156bb670e0c494a3d515eab03e2e4672d6743dec
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641765"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627305"
 ---
 # <a name="pattern-matching"></a>パターン マッチ
 
@@ -15,9 +15,9 @@ ms.locfileid: "65641765"
 
 ## <a name="remarks"></a>コメント
 
-パターンは、`match` 式などの多くの言語構成要素で使用されます。 `let` バインディング、ラムダ式、および `try...with` 式に関連付けられている例外ハンドラーで関数の引数を処理する場合に使用されます。 詳細については、次を参照してください[match 式](match-expressions.md)、 [let バインディング](functions/let-bindings.md)、[ラムダ式:、`fun`キーワード](functions/lambda-expressions-the-fun-keyword.md)、および[例外:`try...with`式](exception-handling/the-try-with-expression.md)します。
+パターンは、`match` 式などの多くの言語構成要素で使用されます。 `let` バインディング、ラムダ式、および `try...with` 式に関連付けられている例外ハンドラーで関数の引数を処理する場合に使用されます。 詳細については、次を参照してください[match 式](match-expressions.md)、 [let バインディング](./functions/let-bindings.md)、[ラムダ式:、`fun`キーワード](./functions/lambda-expressions-the-fun-keyword.md)、および[例外:`try...with`式](/.exception-handling/the-try-with-expression.md)します。
 
-たとえば、`match`式、*パターン*はパイプ記号。
+たとえば、 `match`式では、*パターン*がパイプ記号の後に続きます。
 
 ```fsharp
 match expression with
@@ -34,18 +34,18 @@ match expression with
 |定数パターン|数値、文字、リテラル文字列、列挙定数、または定義済みのリテラル識別子|`1.0`, `"test"`, `30`, `Color.Red`|
 |識別子パターン|判別共用体のケース値、例外ラベル、またはアクティブ パターンのケース|`Some(x)`<br /><br />`Failure(msg)`|
 |変数パターン|*identifier*|`a`|
-|`as` パターン|*パターン*として*識別子*|`(a, b) as tuple1`|
-|OR パターン|*pattern1* &#124; *pattern2*|<code>([h] &#124; [h; _])</code>|
-|AND パターン|*pattern1* &amp; *pattern2*|`(a, b) & (_, "test")`|
-|Cons パターン|*識別子*::*一覧識別子*|`h :: t`|
+|`as` パターン|*識別子*としての*パターン*|`(a, b) as tuple1`|
+|OR パターン|*pattern1*&#124; *pattern2*|<code>([h] &#124; [h; _])</code>|
+|AND パターン|*pattern1*&amp; *pattern2*|`(a, b) & (_, "test")`|
+|Cons パターン|*識別子*::*リスト-識別子*|`h :: t`|
 |リスト パターン|[ *pattern_1*; ... ; *pattern_n* ]|`[ a; b; c ]`|
-|配列パターン|[&#124; *pattern_1*;... です。*pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
-|かっこで囲まれたパターン|( *pattern* )|`( a )`|
-|タプル パターン|( *pattern_1*, ... , *pattern_n* )|`( a, b )`|
+|配列パターン|[&#124; *pattern_1*;..;*pattern_n*&#124;]|<code>[&#124; a; b; c &#124;]</code>|
+|かっこで囲まれたパターン|(*パターン*)|`( a )`|
+|タプル パターン|( *pattern_1*,..., *pattern_n* )|`( a, b )`|
 |レコード パターン|{ *identifier1* = *pattern_1*; ... ; *identifier_n* = *pattern_n* }|`{ Name = name; }`|
 |ワイルドカード パターン|_|`_`|
-|型の注釈が指定されたパターン|*パターン*:*型*|`a : int`|
-|型テスト パターン|:? *型*[として*識別子*]|`:? System.DateTime as dt`|
+|型の注釈が指定されたパターン|*pattern* :*型*|`a : int`|
+|型テスト パターン|:? *型*[as*識別子*]|`:? System.DateTime as dt`|
 |null パターン|null|`null`|
 
 ## <a name="constant-patterns"></a>定数パターン
@@ -54,11 +54,11 @@ match expression with
 
 リテラル パターンの使用例を次に示します。変数パターンと OR パターンも使用します。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4801.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4801.fs)]
 
 リテラル パターンにはこの他に、列挙定数に基づくパターンもあります。 列挙定数を使用するときは、列挙型名を指定する必要があります。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4802.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4802.fs)]
 
 ## <a name="identifier-patterns"></a>識別子パターン
 
@@ -68,11 +68,11 @@ match expression with
 
 `option` 型は、`Some` と `None` の 2 つのケースを持つ判別共用体です。 一方のケース (`Some`) には値が含まれますが、もう一方のケース (`None`) は単なる名前付きケースです。 したがって、`Some` には、`Some` ケースに関連付けられた値の変数が必要ですが、`None` は単体で使用する必要があります。 次のコードでは、`var1` 変数に、`Some` ケースとの照合で取得された値が指定されます。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4803.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4803.fs)]
 
 次の例では、`PersonName` 判別共用体に、名前に使用できる形式を表す文字列および文字が混在しています。 判別共用体のケースは `FirstOnly`、`LastOnly`、および `FirstLast` です。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4804.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4804.fs)]
 
 名前付きフィールドがある判別共用体の場合、名前付きフィールドの値を抽出するために等号 (=) を使用します。 たとえば、次のような宣言を持つ判別共用体について検討します。
 
@@ -101,9 +101,9 @@ match shape with
 | _ -> ()
 ```
 
-アクティブ パターンを使用すると、より複雑なカスタム パターン マッチを定義できます。 アクティブ パターンの詳細については、次を参照してください。[アクティブ パターン](active-patterns.md)します。
+アクティブ パターンを使用すると、より複雑なカスタム パターン マッチを定義できます。 アクティブパターンの詳細については、「[アクティブパターン](active-patterns.md)」を参照してください。
 
-識別子が例外であるケースは、例外ハンドラーのコンテキストのパターン マッチで使用されます。 例外処理で一致するパターンについては、次を参照してください。[例外。`try...with`式](exception-handling/the-try-with-expression.md)します。
+識別子が例外であるケースは、例外ハンドラーのコンテキストのパターン マッチで使用されます。 例外処理でのパターンマッチングの詳細につい[ては、「例外:`try...with`式](/.exception-handling/the-try-with-expression.md)します。
 
 ## <a name="variable-patterns"></a>変数パターン
 
@@ -111,7 +111,7 @@ match shape with
 
 タプル パターン内で変数パターンを使用する例を次に示します。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4805.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4805.fs)]
 
 ## <a name="as-pattern"></a>as パターン
 
@@ -119,7 +119,7 @@ match shape with
 
 `as` パターンの使用例を次に示します。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4806.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4806.fs)]
 
 ## <a name="or-pattern"></a>OR パターン
 
@@ -127,39 +127,39 @@ OR パターンは、入力データが複数のパターンと一致する場�
 
 OR パターンの使用例を次に示します。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4807.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4807.fs)]
 
 ## <a name="and-pattern"></a>AND パターン
 
 AND パターンでは、入力が 2 つのパターンと一致する必要があります。 AND パターンの両側の型に互換性があることが必要です。
 
-次の例は似ています`detectZeroTuple`に示すように、[タプル パターン](https://msdn.microsoft.com/library/#tuple)、このトピックではここで後述する「`var1`と`var2`AND パターンを使用して、値として取得していますいます。
+次の例は、 `detectZeroTuple`このトピックで後述する「[組パターン](https://msdn.microsoft.com/library/#tuple)」で示したように`var1`なり`var2`ますが、との両方のパターンを使用して、との両方を値として取得します。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4808.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4808.fs)]
 
 ## <a name="cons-pattern"></a>Cons パターン
 
-Cons パターンは、一覧を最初の要素に分解するために使用、*ヘッド*、および残りの要素を含む一覧、*末尾*します。
+欠点パターンは、リストを最初の要素、*先頭*、および残りの要素 (*末尾*) を含むリストに分解するために使用されます。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4809.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4809.fs)]
 
 ## <a name="list-pattern"></a>リスト パターン
 
 リスト パターンでは、リストをいくつかの要素に分解できます。 リスト パターン自体は、特定の数の要素を含むリストとだけ一致します。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4810.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4810.fs)]
 
 ## <a name="array-pattern"></a>配列パターン
 
 配列パターンはリスト パターンに似ており、特定の長さの配列を分解するために使用できます。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4811.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4811.fs)]
 
 ## <a name="parenthesized-pattern"></a>かっこで囲まれたパターン
 
 かっこでパターンを囲んで、目的の結合規則を得ることができます。 次の例では、かっこを使用して、AND パターンと Cons パターンの間の結合規則を制御します。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4812.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4812.fs)]
 
 ## <a name="tuple-pattern"></a>タプル パターン
 
@@ -167,13 +167,13 @@ Cons パターンは、一覧を最初の要素に分解するために使用、
 
 タプル パターンの使用例を次に示します。リテラル パターン、変数パターン、およびワイルドカード パターンも使用します。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4813.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4813.fs)]
 
 ## <a name="record-pattern"></a>レコード パターン
 
 レコード パターンは、レコードを分解してフィールドの値を抽出するために使用されます。 パターンがレコードのすべてのフィールドを参照する必要はありません。省略されたフィールドは照合に使用されないため、抽出されません。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4814.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4814.fs)]
 
 ## <a name="wildcard-pattern"></a>ワイルドカード パターン
 
@@ -183,7 +183,7 @@ Cons パターンは、一覧を最初の要素に分解するために使用、
 
 パターンには型の注釈を付けることができます。 このコメントはその他の型の注釈と同様に動作し、その他の型の注釈と同様に推論を導きます。 パターンの型の注釈はかっこで囲む必要があります。 型の注釈が付けられたパターンを次のコードに示します。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4815.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4815.fs)]
 
 ## <a name="type-test-pattern"></a>型テスト パターン
 
@@ -191,15 +191,15 @@ Cons パターンは、一覧を最初の要素に分解するために使用、
 
 型テスト パターンの使用例を次に示します。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4816.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4816.fs)]
 
 ## <a name="null-pattern"></a>null パターン
 
-null パターンは null 値と一致します。null 値は、null 値を許可する型を使用しているときに示される可能性があります。 Null パターンは、.NET Framework コードで相互運用するときによく使用されます。 たとえば、.NET API の戻り値が `match` 式への入力である場合が考えられます。 プログラム フローは、戻り値が null であるかどうかと、戻り値のその他の特性に基づいて制御できます。 null パターンを使用すると、null 値が残りのプログラムに反映されるのを防ぐことができます。
+null パターンは null 値と一致します。null 値は、null 値を許可する型を使用しているときに示される可能性があります。 Null パターンは、.NET Framework コードと相互運用する場合によく使用されます。 たとえば、.NET API の戻り値が `match` 式への入力である場合が考えられます。 プログラム フローは、戻り値が null であるかどうかと、戻り値のその他の特性に基づいて制御できます。 null パターンを使用すると、null 値が残りのプログラムに反映されるのを防ぐことができます。
 
 null パターンと変数パターンの使用例を次に示します。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4817.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4817.fs)]
 
 ## <a name="see-also"></a>関連項目
 

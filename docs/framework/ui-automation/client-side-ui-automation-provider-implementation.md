@@ -6,16 +6,16 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
-ms.openlocfilehash: 02d77dfeb7a00292639131cad72cff7e079704c5
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 361d6d684485e07a958e8272997bb989b8e4fc1b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67802223"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629626"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>クライアント側 UI オートメーション プロバイダーの実装
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 の最新情報[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については[、「Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] のオペレーティング システムでは、 [!INCLUDE[TLA#tla_ms](../../../includes/tlasharptla-ms-md.md)] 、 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]、 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]など、いくつかの異なる [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]フレームワークが使用されています。 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] は、UI 要素に関する情報をクライアントに公開します。 ただし、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 自体は、それらのフレームワークに存在する各種のコントロールや、それらから情報を抽出するために必要な手法を認識しているわけではありません。 その代わりに、このタスクをプロバイダーと呼ばれるオブジェクトに任せます。 プロバイダーは、特定のコントロールから情報を抽出し、その情報を [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]に渡します。次に UI オートメーションが、その情報を一貫性のある方法でクライアントに提示します。  
   
@@ -23,9 +23,9 @@ ms.locfileid: "67802223"
   
  ただし、 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] や [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] に含まれているコントロールなどの比較的古いコントロールは、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を直接サポートしていません。 これらのコントロールは、代わりにクライアント プロセス内のプロバイダーによって処理され、プロセス間通信を使用して、たとえば、コントロール間でのウィンドウ メッセージを監視することで、コントロールに関する情報を取得します。 このようなクライアント側プロバイダーは、プロキシと呼ばれることがあります。  
   
- [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] 標準のプロバイダーの提供[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]Windows フォーム コントロールとします。 さらに、フォールバック プロバイダーは、部分的な[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]別のサーバー側プロバイダーから提供されない任意のコントロールをサポートまたはプロキシが、Microsoft Active Accessibility の実装。 これらすべてのプロバイダーは、自動的に読み込まれ、クライアント アプリケーションから使用できるようになります。  
+ [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)]には、標準[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]コントロールと Windows フォームコントロールのプロバイダーが用意されています。 また、フォールバックプロバイダーは、別の[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]サーバー側プロバイダーまたはプロキシによって処理されないが、Microsoft Active Accessibility 実装があるコントロールに対して、部分的なサポートを提供します。 これらすべてのプロバイダーは、自動的に読み込まれ、クライアント アプリケーションから使用できるようになります。  
   
- サポートの詳細については[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]Windows フォーム コントロールを参照してくださいと[標準コントロールの UI オートメーションのサポート](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)します。  
+ および Windows フォームコントロールの[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]サポートの詳細については、「 [UI オートメーションによる標準コントロールのサポート](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)」を参照してください。  
   
  アプリケーションが他のクライアント側プロバイダーを登録することもできます。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "67802223"
   
 <a name="Registering_and_Configuring_Client-Side_Providers"></a>   
 ## <a name="registering-and-configuring-client-side-providers"></a>クライアント側プロバイダーを登録および構成する  
- [!INCLUDE[TLA#tla_dll](../../../includes/tlasharptla-dll-md.md)] 内のクライアント側プロバイダーは、 <xref:System.Windows.Automation.ClientSettings.RegisterClientSideProviderAssembly%2A>を呼び出すことで読み込まれます。 クライアント アプリケーションでは、プロバイダーを利用するために、それ以上のアクションは必要ありません。  
+ ダイナミックリンクライブラリ (DLL) 内のクライアント側プロバイダーは、を呼び出す<xref:System.Windows.Automation.ClientSettings.RegisterClientSideProviderAssembly%2A>ことによって読み込まれます。 クライアント アプリケーションでは、プロバイダーを利用するために、それ以上のアクションは必要ありません。  
   
  クライアント独自のコードで実装されたプロバイダーは、 <xref:System.Windows.Automation.ClientSettings.RegisterClientSideProviders%2A>を使用して登録されます。 このメソッドは引数として、 <xref:System.Windows.Automation.ClientSideProviderDescription> 構造体の配列を受け取ります。各構造体では、次のプロパティが指定されます。  
   

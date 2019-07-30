@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 987e48f163d35d27f6736464d7497451cca82c0c
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 440a6d76e5295613d2887c0a77d9a49e870e580b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400862"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629824"
 ---
 # <a name="wpf-architecture"></a>WPF アーキテクチャ
 このトピックでは、Windows Presentation Foundation (WPF) クラスの階層構造のガイド付きツアーを提供します。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]の主要なサブシステムの大半に対応し、それらがどのようにやり取りするかについて説明します。 また、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]の構造設計者によって行われた選択についての幾つかを詳細に説明します。  
@@ -30,7 +30,7 @@ ms.locfileid: "68400862"
 ## <a name="systemobject"></a>System.Object  
  主要な[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]プログラミング モデルがマネージ コードを通じて公開されます。 初期の設計段階で[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]のさまざまなシステムのマネージ コンポーネントとアンマネージのコンポーネントとの線引きについての論争がありました。 CLR には、開発の生産性と堅牢性を高めるさまざまな機能が用意されています (メモリ管理、エラー処理、共通型システムなどを含む) が、コストが発生します。  
   
- の主要なコンポーネント[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]を次の図に示します。 図の赤いセクション (プレゼンテーションフレームワーク、プレゼンテーションコア、およびミルコア) は、の[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]主要なコード部分です。 これらのうちの1つだけがアンマネージコンポーネント–ミルコアです。 との緊密な統合を可能にするために、ミルコア[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]はアンマネージコードで記述されています。 で[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]は、すべてのディスプレイが[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]エンジンによって実行されるため、ハードウェアとソフトウェアを効率的にレンダリングできます。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]また、メモリと実行を細かく制御する必要もあります。 密度の高い合成エンジンは、パフォーマンスに大きな影響を与えます。そのため、パフォーマンスを得るためには、CLR の多くの利点が必要です。  
+ の主要なコンポーネント[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]を次の図に示します。 図の赤いセクション (プレゼンテーションフレームワーク、プレゼンテーションコア、およびミルコア) は、の[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]主要なコード部分です。 これらのうちの1つだけがアンマネージコンポーネント–ミルコアです。 ミルコアは、DirectX との緊密な統合を可能にするためにアンマネージコードで記述されています。 のすべての[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]ディスプレイは DirectX エンジンによって実行されるため、ハードウェアとソフトウェアを効率的にレンダリングできます。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]また、メモリと実行を細かく制御する必要もあります。 密度の高い合成エンジンは、パフォーマンスに大きな影響を与えます。そのため、パフォーマンスを得るためには、CLR の多くの利点が必要です。  
   
  ![.NET Framework 内の WPF の位置。](./media/wpf-architect1.PNG "wpf_architect1")  
   

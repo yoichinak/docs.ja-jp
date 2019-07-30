@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 3cc8644a-34f3-4082-9ddc-77623e4df2d8
-ms.openlocfilehash: ee260d58cdb4dc971fc32ca5c889b459b6a48489
-ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
+ms.openlocfilehash: 10bdeae8fe46f78e60d278fdbe93883a1c6bd356
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484735"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629887"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>WPF での Win32 コンテンツのホスト
 
@@ -48,11 +48,11 @@ virtual void DestroyWindowCore(HandleRef hwnd) override {
 
 しかし、コード[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]がそれほど自己完結していないとしたら、 その場合は、ダイアログボックスを[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]作成し、その内容をより大きな[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションに埋め込むことができます。 このサンプルでは、 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]とC++でこれを示していますが、別の言語またはコマンドラインでこれを行うこともできます。
 
-[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]プロジェクトにC++コンパイルされた単純なダイアログから始めます。
+まず、 C++ DLL プロジェクトにコンパイルされた単純なダイアログを使用します。
 
 次に、大規模[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]なアプリケーションにダイアログを導入します。
 
-- をマネージ[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] (`/clr`) としてコンパイルします。
+- DLL をマネージ (`/clr`) としてコンパイルします。
 
 - ダイアログをコントロールに変換する
 
@@ -120,7 +120,7 @@ public ref class MyHwndHost : public HwndHost, IKeyboardInputSink {
         }
 ```
 
-ここでは、 `CreateDialog`を使用して、実際にはコントロールであるダイアログボックスを作成します。 これはの[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]内部で呼び出された最初のメソッドの1つであるため、 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]後`InitializeGlobals()`で定義する関数を呼び出すことによって、標準の初期化も実行する必要があります。
+ここでは、 `CreateDialog`を使用して、実際にはコントロールであるダイアログボックスを作成します。 これは DLL 内で呼び出される最初のメソッドの1つであるため、後[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] `InitializeGlobals()`で定義する関数を呼び出すことによって、標準の初期化も実行する必要があります。
 
 ```cpp
 bool initialized = false;

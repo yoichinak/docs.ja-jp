@@ -5,21 +5,21 @@ helpviewer_keywords:
 - Visual Basic code, COM interop
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
-ms.openlocfilehash: dfd256fa7ccd8f089fab6eb1d42579deb2c4a64d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1bcfba25c86c46f986c061241a5d09f9aaa6d248
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022416"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627072"
 ---
 # <a name="com-interop-visual-basic"></a>COM 相互運用 (Visual Basic)
-コンポーネント オブジェクト モデル (COM) では、オブジェクトがその機能を他のコンポーネントに公開し、アプリケーションをホストすることを許可します。 今日のソフトウェアのほとんどに、COM オブジェクトが含まれています。 .NET アセンブリは新しいアプリケーションに最適ですが、時には COM オブジェクトを使用する必要があります。 このセクションでは、いくつかの作成と Visual Basic で COM オブジェクトの使用に関連する問題について説明します。  
+コンポーネント オブジェクト モデル (COM) では、オブジェクトがその機能を他のコンポーネントに公開し、アプリケーションをホストすることを許可します。 今日のソフトウェアのほとんどに、COM オブジェクトが含まれています。 .NET アセンブリは新しいアプリケーションに最適ですが、時には COM オブジェクトを使用する必要があります。 このセクションでは、Visual Basic での COM オブジェクトの作成と使用に関連するいくつかの問題について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [COM 相互運用の概要](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
  COM 相互運用の概要を示します。  
   
- [方法: Visual Basic から COM の参照オブジェクト](../../../visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)  
+ [方法: Visual Basic から COM オブジェクトを参照する](../../../visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)  
  タイプ ライブラリがある COM オブジェクトへの参照を追加する方法を説明します。  
   
  [方法: ActiveX コントロールを操作する](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
@@ -34,7 +34,7 @@ ms.locfileid: "62022416"
  [方法: 符号なしの型を使用する Windows の機能を呼び出す](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
  符号なしの型のパラメーターを持つ Windows 関数を呼び出す方法を示します。  
   
- [チュートリアル: Visual Basic で COM オブジェクトの作成](../../../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  
+ [チュートリアル: Visual Basic を使用した COM オブジェクトの作成](../../../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  
  COM クラス テンプレートを使用した場合と使用しない場合の COM オブジェクトを作成するプロセスの手順を示します。  
   
  [相互運用性のトラブルシューティング](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
@@ -56,5 +56,5 @@ ms.locfileid: "62022416"
  [COM への .NET Framework コンポーネントの公開](../../../framework/interop/exposing-dotnet-components-to-com.md)  
  COM からのマネージド型の準備と使用方法について説明します。  
   
- [相互運用固有の属性の適用](../../../framework/interop/applying-interop-attributes.md)  
+ [相互運用固有の属性の適用](../../../standard/native-interop/apply-interop-attributes.md)  
  アンマネージ コードを操作するときに使用できる属性について説明します。

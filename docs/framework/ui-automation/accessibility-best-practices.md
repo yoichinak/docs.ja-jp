@@ -5,12 +5,12 @@ helpviewer_keywords:
 - best practices for accessibility
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
-ms.openlocfilehash: 0fe09c0c261f36f1e9f241a6a6a8aacf3bf07d29
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: a29c31e93523e0843728d2fd7fa555946b139c55
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331484"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629601"
 ---
 # <a name="accessibility-best-practices"></a>ユーザー補助のベスト プラクティス
 > [!NOTE]
@@ -66,7 +66,7 @@ ms.locfileid: "68331484"
   
 <a name="Ensure_all_UI_Correctly_Scales_by_any_DPI_Setting"></a>   
 ### <a name="ensure-all-ui-correctly-scales-by-any-dpi-setting"></a>すべての DPI 設定によってすべての UI を正しく拡大/縮小する  
- すべての [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 設定によってすべての [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] が正しく拡大/縮小されていることを確認します。 また、 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 要素が  1024 x 768、120 [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)]の画面に合っていることを確認します。  
+ すべて[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]のドット/インチ (dpi) 設定で適切にスケールできることを確認します。 また、要素が[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 1024 x 768 の画面で、120ドット/インチ (dpi) で一致していることを確認します。  
   
 <a name="Navigation"></a>   
 ## <a name="navigation"></a>ナビゲーション  

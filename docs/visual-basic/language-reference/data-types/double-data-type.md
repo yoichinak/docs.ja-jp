@@ -19,42 +19,44 @@ helpviewer_keywords:
 - zeros, trailing
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-ms.openlocfilehash: 6273f6c9e71f286bdbebc3fe1953988b43de3101
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 92adb26702d94dee08e51decd845d019c797e195
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663203"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630099"
 ---
 # <a name="double-data-type-visual-basic"></a>倍精度浮動小数点数型 (Double) (Visual Basic)
--- をから IEEE の 64 ビット (8 バイト) の倍精度浮動小数点数の符号付き 4.94065645841246544E-負の値と 4.94065645841246544E から 324-324 1.79769313486231570 e + 308 ~正の値。 倍精度数値には、実数の概数が格納されます。  
-  
-## <a name="remarks"></a>Remarks  
- `Double`データ型最大および最小の大きさを提供しています。  
-  
- `Double` の既定値は 0 です。  
-  
-## <a name="programming-tips"></a>プログラミングのヒント  
-  
-- **有効桁数です。** 浮動小数点数を使用するときに、常にないことを正確に表現メモリ内に注意してください。 値の比較などの特定の操作から予期しない結果に可能性と`Mod`演算子。 詳細については、次を参照してください。[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)します。  
-  
-- **後続のゼロ。** 浮動小数点データ型には、末尾のゼロの文字の任意の内部表現はありません。 たとえば、これらは区別されません 4.2000 および 4.2 します。 その結果、末尾のゼロは表示されません表示した場合、または印刷の浮動小数点値。  
-  
-- **型宣言文字。** あるリテラルにリテラルの型文字 `R` を付けると、そのリテラルは `Double` に変換されます。 たとえば、整数値が続く場合`R`に値が変更された、`Double`します。  
-  
-    ```  
-    ' Visual Basic expands the 4 in the statement Dim dub As Double = 4R to 4.0:  
-    Dim dub As Double = 4.0R  
-    ```  
-  
-     ある識別子に識別子の型文字 `#` を付けると、その識別子は整数型 (`Double`) に変換されます。 次の例では、変数`num`として型指定された、 `Double`:  
-  
-    ```  
-    Dim num# = 3  
-    ```  
-  
-- **フレームワークの型。** .NET Framework において対応する型は、<xref:System.Double?displayProperty=nameWithType> 構造体です。  
-  
+
+負の値に対して-1.79769313486231570 E + 308 から-4.94065645841246544 E-324 までの値を範囲とする、符号付き IEEE 64 ビット (8 バイト) の倍精度浮動小数点数を保持します。 4.94065645841246544 E-324 から 1.79769313486231570 E + 308 まで正の値。 倍精度数値は、実数の概数を格納します。
+
+## <a name="remarks"></a>Remarks
+
+データ`Double`型は、数値に使用できる最大の大きくなりを提供します。
+
+`Double` の既定値は 0 です。
+
+## <a name="programming-tips"></a>プログラミングのヒント
+
+- **精度.** 浮動小数点数を使用する場合は、メモリ内に常に正確な表現がないという点に注意してください。 これにより、値の比較や`Mod`演算子など、特定の操作によって予期しない結果が生じる可能性があります。 詳細については、「[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)」を参照してください。
+
+- **後続のゼロ。** 浮動小数点データ型には、後続のゼロ文字の内部表現がありません。 たとえば、4.2000 と4.2 を区別しません。 そのため、浮動小数点値を表示または印刷するときに、後続のゼロ文字は表示されません。
+
+- **文字を入力します。** あるリテラルにリテラルの型文字 `R` を付けると、そのリテラルは `Double` に変換されます。 たとえば、整数値の後に`R`を指定した場合、値はに変更`Double`されます。
+
+  ```vb
+  ' Visual Basic expands the 4 in the statement Dim dub As Double = 4R to 4.0:
+  Dim dub As Double = 4.0R
+  ```
+
+  ある識別子に識別子の型文字 `#` を付けると、その識別子は整数型 (`Double`) に変換されます。 次の例では、変数`num`は`Double`として型指定されています。
+
+  ```vb
+  Dim num# = 3
+  ```
+
+- **フレームワークの種類。** .NET Framework において対応する型は、<xref:System.Double?displayProperty=nameWithType> 構造体です。
+
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Double?displayProperty=nameWithType>

@@ -1,17 +1,17 @@
 ---
 title: 参照セル
-description: 学習方法F#参照セルは参照セマンティクスを持つ変更可能な値を作成するための記憶域の場所。
+description: F#参照セルは、参照セマンティクスを使用して変更可能な値を作成できるストレージの場所です。
 ms.date: 05/16/2016
-ms.openlocfilehash: e4fcd3cf1abcf5f5e3b4d5439c9215b79ff8dbcd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: faaa4a6b54ff0366163b6821edff7fa4cb2f5a88
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795403"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627252"
 ---
 # <a name="reference-cells"></a>参照セル
 
-*参照セル*参照セマンティクスを持つ変更可能な値を作成するための記憶域の場所します。
+*参照セル*は、参照セマンティクスを使用して変更可能な値を作成できるストレージの場所です。
 
 ## <a name="syntax"></a>構文
 
@@ -29,7 +29,7 @@ ref expression
 
 次のコード例は、参照セルの宣言と使用方法を示しています。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2201.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2201.fs)]
 
 出力は `50`になります。
 
@@ -62,7 +62,7 @@ let ref x = { contents = x }
 
 `Value` プロパティと `contents` フィールドは、いずれも代入可能な値です。 したがって、次のコードに示すように、これらを使用して基になる値にアクセスしたり、基になる値を変更したりできます。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2203.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2203.fs)]
 
 出力は次のとおりです。
 
@@ -75,13 +75,13 @@ let ref x = { contents = x }
 
 `contents` フィールドは、他のバージョンの ML との互換性のために用意されており、コンパイル中に警告を生成します。 この警告を無効にするには、`--mlcompatibility` コンパイラ オプションを使用します。 詳細については、「[コンパイラ オプション](compiler-options.md)」を参照してください。
 
-C# プログラマことを知っている`ref`と同じものでない (C#) `ref` F# でします。 同等の構成体F#は[byref](byrefs.md)、参照セルから異なる概念であります。
+C# プログラマことを知っている`ref`と同じものでない (C#) `ref` F# でします。 の同等の構成F#体は、参照セルとは異なる概念である[byref](byrefs.md)です。
 
-値がマーク`mutable`に自動的に昇格できる可能性があります`'a ref`; クロージャによってキャプチャされた場合は、次を参照してください。[値](values/index.md)します。
+として`mutable`マーク[された](./values/index.md)値`'a ref`は、クロージャによってキャプチャされた場合に自動的にに昇格される場合があります。
 
 ## <a name="see-also"></a>関連項目
 
 - [F# 言語リファレンス](index.md)
 - [パラメーターと引数](parameters-and-arguments.md)
-- [シンボルと演算子のリファレンス](symbol-and-operator-reference/index.md)
-- [値](values/index.md)
+- [シンボルと演算子のリファレンス](./symbol-and-operator-reference/index.md)
+- [値](./values/index.md)

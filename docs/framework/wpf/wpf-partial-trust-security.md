@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: 259db84c8ab3b9bbad809b9636ba18537dd6fe62
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: b8234dcb33e9d429329c6d68900119382ff2f1cb
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400721"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629795"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF 部分信頼セキュリティ
 <a name="introduction"></a>一般に、インターネットアプリケーションは、重要なシステムリソースへの直接アクセスを制限して、悪意のある損害を防ぐ必要があります。 既定では[!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] 、およびクライアント側のスクリプト言語は、重要なシステムリソースにアクセスできません。 Windows Presentation Foundation (WPF) ブラウザーでホストされるアプリケーションは、ブラウザーから起動できるため、同様の制限のセットに準拠している必要があります。 これらの制限を適用[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]するために、はコードアクセスセキュリティ (CAS) と ClickOnce の両方に依存しています (「 [WPF のセキュリティ方針-プラットフォームセキュリティ](wpf-security-strategy-platform-security.md)」を参照してください)。 既定では、ブラウザーでホストされるアプリケーションは、インターネット、ローカルイントラネット、またはローカルコンピューターのどちらから起動するかに関係なく、インターネットゾーンの CA のアクセス許可セットを要求します。 すべてのアクセス許可のセットよりも少ないアプリケーションで実行されるアプリケーションは、部分信頼で実行されていると言います。  
@@ -113,7 +113,7 @@ ms.locfileid: "68400721"
   
  多くの場合、部分信頼の代替を見つけることができます。  
   
- イントラネットなどの管理された環境では[!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)]、クライアントベース全体でにカスタムマネージフレームワークをインストールできます。 これらのライブラリは、完全な信頼を必要とし、を使用<xref:System.Security.AllowPartiallyTrustedCallersAttribute>して部分信頼のみを許可されているアプリケーションから参照できるコードを実行できます (詳細については、「[セキュリティ](security-wpf.md)と WPF の[セキュリティ戦略-プラットフォームセキュリティ](wpf-security-strategy-platform-security.md)」を参照してください)。  
+ イントラネットなどの管理された環境では、カスタムマネージフレームワークをクライアントベース全体にグローバルアセンブリキャッシュ (GAC) にインストールできます。 これらのライブラリは、完全な信頼を必要とし、を使用<xref:System.Security.AllowPartiallyTrustedCallersAttribute>して部分信頼のみを許可されているアプリケーションから参照できるコードを実行できます (詳細については、「[セキュリティ](security-wpf.md)と WPF の[セキュリティ戦略-プラットフォームセキュリティ](wpf-security-strategy-platform-security.md)」を参照してください)。  
   
 <a name="Browser_Host_Detection"></a>   
 ### <a name="browser-host-detection"></a>ブラウザーホストの検出  

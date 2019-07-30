@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: fd99d97d677ef588c3f7e2a178190377d72c74ce
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 099d6b94f9094ac9baed25e5060d8a166e27573b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400641"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629927"
 ---
 # <a name="globalization-for-wpf"></a>WPF のグローバリゼーション
 このトピックでは、グローバル市場向けのアプリケーションを作成[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]するときに注意する必要がある問題について説明します。 グローバリゼーションプログラミング要素は、ので[!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] `System.Globalization`定義されています。
@@ -127,7 +127,7 @@ ms.locfileid: "68400641"
 
  [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]フォントを使用すると、エンコードを使用[!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)]して大きなグリフセットを処理できます。 このようなエンコードにより、広範な国際対応が可能になり、さまざまなグリフを印刷できます。
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]テキストレンダリングは、解像度[!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]の非依存性をサポートするサブピクセルテクノロジを利用しています。 これにより読みやすさが大幅に向上し、あらゆる書体で高品質の雑誌スタイルの書面を作成できます。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]テキストレンダリングは、解決の独立性をサポートする Microsoft の ClearType サブピクセルテクノロジを利用しています。 これにより読みやすさが大幅に向上し、あらゆる書体で高品質の雑誌スタイルの書面を作成できます。
 
 <a name="intl_layout"></a>
 ### <a name="international-layout"></a>国際対応レイアウト

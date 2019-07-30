@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 68bb3b8cd080e5b454776433e65027b7d18e7c3b
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 749ba2dd9318976289d9d4140cfadd711e0548d4
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331552"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629877"
 ---
 # <a name="how-to-localize-an-application"></a>方法: アプリケーションをローカライズする
 このチュートリアルでは、LocBaml ツールを使用して、ローカライズされたアプリケーションを作成する方法について説明します。  
@@ -66,7 +66,7 @@ ms.locfileid: "68331552"
 ## <a name="create-the-neutral-language-resources-satellite-assembly"></a>ニュートラル言語リソースのサテライト アセンブリを作成する  
  ニュートラル言語リソースのサテライト アセンブリを生成するようにアプリケーションを構成した後、アプリケーションをビルドします。 これにより、メイン アプリケーション アセンブリだけでなく、ローカリゼーションで LocBaml が必要とするニュートラル言語リソースのサテライト アセンブリが生成されます。 アプリケーションをビルドするには  
   
-1. HelloApp をコンパイルして [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)] を作成します。  
+1. Helloapp.resources.dll をコンパイルして、ダイナミックリンクライブラリ (DLL) を作成します。  
   
      **msbuild helloapp.csproj**  
   
@@ -91,7 +91,7 @@ ms.locfileid: "68331552"
   
 4. LocBaml を実行するときに指定できるオプションは、次のとおりです。  
   
-    - **parse**または **-p:** Baml、リソース、または[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]ファイルを解析して、.csv または .txt ファイルを生成します。  
+    - **parse**または **-p:** Baml、リソース、または DLL ファイルを解析して、.csv または .txt ファイルを生成します。  
   
     - または **-g を生成します。** 翻訳されたファイルを使用して、ローカライズされたバイナリファイルを生成します。  
   

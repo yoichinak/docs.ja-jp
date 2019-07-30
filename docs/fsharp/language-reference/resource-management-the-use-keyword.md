@@ -1,62 +1,62 @@
 ---
-title: リソースの管理:Use キーワード
-description: については、F#キーワード 'use' と 'using' の関数は、初期化とリソースの解放を制御できます。
+title: リソース管理:Use キーワード
+description: F#キーワード ' use ' と ' using ' 関数について説明します。この関数は、リソースの初期化と解放を制御できます。
 ms.date: 05/16/2016
-ms.openlocfilehash: 3389f84713ec7cf5459dd0132249970f0e2ef3e0
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5e0838401bee02050343b2f6dcc646a8dc8b4dc0
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641704"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627255"
 ---
-# <a name="resource-management-the-use-keyword"></a>リソースの管理:Use キーワード
+# <a name="resource-management-the-use-keyword"></a>リソース管理:Use キーワード
 
-このトピックで説明、キーワード`use`と`using`関数で、初期化とリソースの解放を制御できます。
+このトピック`use` `using`では、リソースの初期化と解放を制御できるキーワードと関数について説明します。
 
 ## <a name="resources"></a>リソース
 
-用語*リソース*は、複数の方法で使用されます。 はい、リソースが文字列、グラフィックス、like などが、このコンテキストで、アプリケーションが使用するデータを指定できます*リソース*グラフィックス デバイス コンテキスト、ファイル ハンドル、ネットワークなどのソフトウェアやオペレーティング システムのリソースへの参照データベースの接続、待機ハンドルなどの同時実行オブジェクト。 アプリケーションがこれらのリソースの使用には、オペレーティング システムまたは別のアプリケーションに提供するようにプールに、リソースの今後のリリースを続けて、その他のリソース プロバイダーからリソースの取得が含まれます。 アプリケーションが共通のプールに戻すリソースを解放しないと、問題が発生します。
+*リソース*という用語は、複数の方法で使用されます。 はい。リソースは、文字列やグラフィックスなど、アプリケーションで使用されるデータにすることができますが、このコンテキストでは、*リソース*とは、グラフィックスデバイスコンテキスト、ファイルハンドル、ネットワーク、データベースなどのソフトウェアまたはオペレーティングシステムのリソースを指します。接続、待機ハンドルなどの同時実行オブジェクトなど。 これらのリソースをアプリケーションで使用するには、オペレーティングシステムまたは他のリソースプロバイダーからリソースを取得した後、リソースの新しいリリースをプールに渡して、別のアプリケーションに提供できるようにします。 アプリケーションがリソースを共通プールに解放しないと、問題が発生します。
 
 ## <a name="managing-resources"></a>リソースの管理
 
-をアプリケーション内のリソースを効率的に責任を持って管理するには、を予測可能な方法で迅速にリソースを解放する必要があります。 .NET Framework では、このことで実行できます。、`System.IDisposable`インターフェイス。 実装する型`System.IDisposable`が、`System.IDisposable.Dispose`メソッドで、誤ってリソースを解放します。 適切に記述されたアプリケーションを保証する`System.IDisposable.Dispose`限られたリソースを保持する任意のオブジェクトが不要になったときに迅速に呼び出されます。 さいわい、ほとんどの .NET 言語が、簡単に確認するサポートを提供し、F# には例外はありません。 Dispose パターンをサポートする 2 つの便利な言語構造がある:`use`バインドと`using`関数。
+アプリケーションのリソースを効率的かつ確実に管理するには、リソースを迅速かつ予測可能な方法で解放する必要があります。 .NET Framework を使用すると、 `System.IDisposable`インターフェイスを提供してこれを行うことができます。 を実装`System.IDisposable`する型に`System.IDisposable.Dispose`は、リソースを正しく解放するメソッドがあります。 適切に記述された`System.IDisposable.Dispose`アプリケーションは、リソースが制限されているオブジェクトが不要になったときに、すぐに呼び出されることを保証します。 さいわい、ほとんどの .NET 言語が、簡単に確認するサポートを提供し、F# には例外はありません。 Dispose パターンをサポートする便利な言語構成要素`use` `using`として、バインディングと関数の2つがあります。
 
-## <a name="use-binding"></a>バインディングを使用します。
+## <a name="use-binding"></a>バインドを使用する
 
-`use`キーワードには、フォームのような`let`バインド。
+キーワードには、 `let`バインドの形式に似た形式があります。 `use`
 
-使用して、*値* = *式*
+*値* = *式*を使用する
 
-同じ機能を提供します、`let`バインドしますが、への呼び出しを追加します`Dispose`値がスコープ外になる値。 場合に、値は、コンパイラは、値の null チェックを挿入します。 注`null`、への呼び出し`Dispose`は行われません。
+`let`バインディングと同じ機能を提供しますが、値がスコープ`Dispose`外になったときにの呼び出しを値に追加します。 コンパイラは値に null チェックを挿入するため、値が`null`の場合、へ`Dispose`の呼び出しは試行されません。
 
-次の例を使用してファイルを自動的に閉じる方法を示しています、`use`キーワード。
+次の例は、 `use`キーワードを使用してファイルを自動的に閉じる方法を示しています。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6301.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6301.fs)]
 
 > [!NOTE]
-> 使用することができます`use`計算式で、カスタマイズされたバージョンの場合、`use`式を使用します。 詳細については、次を参照してください。[シーケンス](sequences.md)、[非同期ワークフロー](asynchronous-workflows.md)、および[コンピュテーション式](computation-expressions.md)します。
+> コンピュテーション式で`use`を使用できます。この場合、 `use`式のカスタマイズされたバージョンが使用されます。 詳細については、「[シーケンス](sequences.md)、[非同期ワークフロー](asynchronous-workflows.md)、および[コンピュテーション式](computation-expressions.md)」を参照してください。
 
-## <a name="using-function"></a>関数を使用してください。
+## <a name="using-function"></a>関数の使用
 
-`using`関数には、次の形式。
+関数`using`の形式は次のとおりです。
 
-`using` (*expression1*) *function-or-lambda*
+`using`(*expression1*)*関数または-ラムダ*
 
-`using`式、 *expression1*破棄する必要がありますオブジェクトを作成します。 結果*expression1* (破棄する必要がありますオブジェクト) が、引数*値*を*関数またはラムダ*、1 つが必要とする関数によって生成された値に一致する型の引数の残り*expression1*、またはその型の引数を受け取るラムダ式。 ランタイムが呼び出す関数の実行の最後に、`Dispose`リソースを解放し、(値がない限り`null`、後者 Dispose の呼び出しは行われません)。
+式では、expression1 は、破棄する必要があるオブジェクトを作成します。 `using` *Expression1* (破棄する必要があるオブジェクト) の結果は、引数、*値*、*またはラムダ*になります。これは、によって*生成される値に一致する型の1つの残りの引数を期待する関数です。expression1*、またはその型の引数を予期するラムダ式。 関数の実行が終了すると、ランタイムはリソースを呼び出し`Dispose` 、解放します (値が`null`の場合を除きます。この場合、Dispose への呼び出しは試行されません)。
 
-次の例で、`using`ラムダ式を持つ式。
+次の例では`using` 、ラムダ式を含む式を示します。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6302.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6302.fs)]
 
-例を次に示します、`using`関数を使用した式。
+次の例は、 `using`関数を使用した式を示しています。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6303.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6303.fs)]
 
-関数は既に適用されるいくつかの引数を持つ関数である可能性がありますに注意してください。 次のコード例はこの処理方法を示しています。 文字列を含むファイルが作成されます`XYZ`します。
+関数は、いくつかの引数が既に適用されている関数である可能性があることに注意してください。 次のコード例はこの処理方法を示しています。 この例では、文字列`XYZ`を含むファイルを作成します。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6304.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6304.fs)]
 
-`using`関数と`use`バインディングは同じことを実現するほぼ同等の方法です。 `using`キーワードは、時に詳細に制御を提供します。`Dispose`が呼び出されます。 使用すると`using`、`Dispose`を使用するときに、関数またはラムダ式の最後に呼び出されますが、`use`キーワード、`Dispose`要素を含むコード ブロックの最後に呼び出されます。 一般に、使用を希望する必要があります`use`の代わりに、`using`関数。
+`using` 関数`use`とバインディングは、同じことを実現するためのほぼ同じ方法です。 キーワード`using`を使用すると、が`Dispose`呼び出されるタイミングをより細かく制御できます。 を使用`using`すると`Dispose` 、関数またはラムダ式の末尾でが呼び出され`use`ます。キーワードを使用する`Dispose`と、が格納されているコードブロックの末尾でが呼び出されます。 一般に、 `using`関数の代わりにを`use`使用することをお勧めします。
 
 ## <a name="see-also"></a>関連項目
 

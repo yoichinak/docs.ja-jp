@@ -2,12 +2,12 @@
 title: 関数
 description: 関数の F# と、F# が共通の関数型プログラミング構成要素をどのようにがサポートする方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: f68a36de7af2bdb803b0b633929aa472806f61aa
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 6f65ce692169b71abe8d2eff7ef07b66975d478b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645399"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630704"
 ---
 # <a name="functions"></a>関数
 
@@ -42,11 +42,11 @@ let f x = x + 1
 
 モジュール スコープ以外のスコープの任意のレベルでは、値または関数の名前を再利用してもエラーになりません。 名前を再利用する場合、後から宣言した名前が前に宣言した名前をシャドウします。 ただし、モジュールの最上位のスコープでは名前が一意である必要があります。 たとえば次のコードは、モジュール スコープではエラーになりますが、関数内ではエラーになりません。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet101.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet101.fs)]
 
 しかし、次のコードはどのスコープ レベルでも許容されます。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet102.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet102.fs)]
 
 ### <a name="parameters"></a>パラメーター
 
@@ -74,7 +74,7 @@ let f x = (x, x)
 
 関数本体には、ローカル変数と関数の定義を含めることができます。 それらの変数と関数のスコープは、現在の関数の本体内に限られます。 軽量構文オプションを有効にしている場合は、次の例に示すように、定義が関数本体に含まれていることをインデントによって示す必要があります。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet103.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet103.fs)]
 
 詳細については、「[コードのフォーマットに関するガイドライン](../code-formatting-guidelines.md)」および「[Verbose Syntax](../verbose-syntax.md)」 (冗語構文) を参照してください。
 
@@ -84,7 +84,7 @@ let f x = (x, x)
 
 戻り値を明示的に指定するには、次のようにコードを記述します。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet105.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet105.fs)]
 
 上記のコードが書き込まれると、コンパイラは関数全体に **float** を適用します。パラメーターの型にも適用する場合は、次のコードを使用します。
 
@@ -104,17 +104,17 @@ let vol = cylinderVolume 2.0 3.0
 
 指定されている数より少ない数の引数を渡すと、残りの引数を使用する新しい関数が作成されます。 これは、*カリー化*と呼ばれる引数の処理方法で、F# のような関数型プログラミング言語の特徴の 1 つです。 たとえば、半径がそれぞれ **2.0** と **3.0** の 2 つのパイプを使用しているとします。 次のようにして、パイプの体積を特定する関数を作成することができます。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet106.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet106.fs)]
 
 その後、必要に応じて、2 つのサイズのパイプのさまざまな長さを追加の引数として指定します。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet107.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet107.fs)]
 
 ## <a name="recursive-functions"></a>再帰関数
 
-*再帰関数*はそれらの関数自体を呼び出す関数です。 再帰関数を使用するには、**let** キーワードの後に **rec** キーワードを指定する必要があります。 関数の本体から再帰関数を呼び出す方法は、他の関数呼び出しの場合と変わりません。 次のような再帰関数を計算、 *n*<sup>th</sup>フィボナッチ数。 フィボナッチ数列は、古代から知られている数列で、数例の各数値が、前の 2 つの連続する数値の和になります。
+*再帰関数*はそれらの関数自体を呼び出す関数です。 再帰関数を使用するには、**let** キーワードの後に **rec** キーワードを指定する必要があります。 関数の本体から再帰関数を呼び出す方法は、他の関数呼び出しの場合と変わりません。 次の再帰関数は、 *n*<sup>番目</sup>のフィボナッチ数列を計算します。 フィボナッチ数列は、古代から知られている数列で、数例の各数値が、前の 2 つの連続する数値の和になります。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 
 再帰関数は、特殊な手法 (アキュムレータや継続の使用など) を意識して慎重に使用しないと、プログラム スタックのオーバーフローを引き起こしたり、プログラムの実行効率が低下したりする可能性があります。
 
@@ -122,17 +122,17 @@ let vol = cylinderVolume 2.0 3.0
 
 F# では、すべての関数が値と見なされ、実際に、*関数値*と呼ばれています。 関数は値であるため、他の関数の引数として使用したり、値が使用されるその他のコンテキストで使用したりできます。 次に関数値を引数として受け取る関数の例を示します。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet109.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet109.fs)]
 
 関数値の型を指定するには、`->` トークンを使用します。 このトークンの左側に引数の型を、右側に戻り値の型を指定します。 上の例の `apply1` は、関数 `transform` を引数として受け取る関数で、`transform` は、整数を受け取る、別の整数を返す関数です。 `apply1` の使用例を次のコードに示します。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet110.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet110.fs)]
 
 前のコードを実行した後の `result` の値は 101 になります。
 
 複数の引数を指定するには、次の例に示すように、連続する `->` トークンで区切ります。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet111.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet111.fs)]
 
 結果は 200 になります。
 
@@ -140,15 +140,15 @@ F# では、すべての関数が値と見なされ、実際に、*関数値*と
 
 *ラムダ式*とは、名前のない関数です。 前の例では、名前のある関数 **increment** と **mul** を定義しましたが、次のように、代わりにラムダ式を使用することもできます。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
 
-ラムダ式を定義するには、`fun` キーワードを使用します。 ラムダ式は関数定義に似ていますが、引数リストと関数本体の区切りに `=` トークンではなく `->` トークンを使用する点が異なります。 通常の関数定義と同様に、引数の型は、推論されるようにすることも、明示的に指定することもできます。ラムダ式の戻り値の型も、本体の最後の式の型から推論されます。 詳細については、次を参照してください。[ラムダ式。`fun`キーワード](../functions/lambda-expressions-the-fun-keyword.md)します。
+ラムダ式を定義するには、`fun` キーワードを使用します。 ラムダ式は関数定義に似ていますが、引数リストと関数本体の区切りに `=` トークンではなく `->` トークンを使用する点が異なります。 通常の関数定義と同様に、引数の型は、推論されるようにすることも、明示的に指定することもできます。ラムダ式の戻り値の型も、本体の最後の式の型から推論されます。 詳細については[、「ラムダ式:`fun`キーワード](../functions/lambda-expressions-the-fun-keyword.md)します。
 
 ## <a name="function-composition-and-pipelining"></a>関数合成とパイプライン処理
 
 F# の関数は、その他の関数から構成することができます。 **function1** と **function2** という 2 つの関数を合成すると、**function1** に続いて **function2** を適用する別の関数になります。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet113.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet113.fs)]
 
 結果は 202 になります。
 

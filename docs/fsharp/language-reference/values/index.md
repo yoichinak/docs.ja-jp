@@ -1,13 +1,13 @@
 ---
 title: 値
-description: 学習方法で値F#、特定の種類を持つ数量です。
+description: の値が特定F#の型を持つ数量であることを確認します。
 ms.date: 05/16/2016
-ms.openlocfilehash: fe87bb568591b862737456ff92ba202ba7795e3d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ed7a5b069a5a47aacf0cce4cfa754ded46f6e84a
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641629"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630798"
 ---
 # <a name="values"></a>値
 
@@ -17,11 +17,11 @@ F# の値は、特定の型を持つ数量です。値は、整数または浮�
 
 *バインド*とは、名前と定義を関連付けることを意味します。 `let` キーワードは、次の例のように、値のバインディングを行います。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet601.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet601.fs)]
 
 値の型は、定義から推論されます。 整数や浮動小数点数などのプリミティブ型では、型がリテラルの型から判断されます。 したがって、前の例では、コンパイラによって `b` の型が `unsigned int` と推論されるのに対し、`a` の型は `int` と推論されます。 関数値の型は、関数本体の戻り値から判断されます。 関数値の型の詳細については、「[関数](../functions/index.md)」を参照してください。 リテラルの型の詳細については、「[Literals](../literals.md)」を参照してください。
 
-コンパイラは、既定で使用されていないバインドに関する診断を発行しません。 これらのメッセージの受信を有効にコンパイラを呼び出す場合、プロジェクト ファイルまたは 1182 の警告 (を参照してください`--warnon`[コンパイラ オプション](../compiler-options.md))。
+既定では、コンパイラは未使用のバインドに関する診断を発行しません。 これらのメッセージを受信するには、プロジェクトファイルで警告1182を有効にするか`--warnon` 、コンパイラを呼び出したときに (「[コンパイラオプション](../compiler-options.md)」の「」を参照してください)、
 
 ## <a name="why-immutable"></a>変更不可である理由
 
@@ -37,15 +37,15 @@ F# は、純粋な関数型言語ではありませんが、関数型プログ�
 
 変更可能な変数に初期値を割り当てるには、値を定義するときと同じ方法で、`let` キーワードを使用します。 ただし、次の例に示すように、`<-` 演算子を使用して、変更可能な変数に後で新しい値を割り当てることができる点が異なります。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet602.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet602.fs)]
 
-マークされている値`mutable`に自動的に昇格できる可能性があります`'a ref`など、クロージャを作成するフォームを含む場合は、クロージャによってキャプチャされた、`seq`ビルダー。 これが発生したときに通知する場合は、警告を有効にする 3180 プロジェクト ファイル内、またはコンパイラを起動します。
+マーク`mutable`された値は、 `'a ref`クロージャを`seq`作成するフォーム (ビルダーなど) を含む、クロージャによってキャプチャされた場合、自動的にに昇格される可能性があります。 このエラーが発生したときに通知されるようにするには、プロジェクトファイルで警告3180を有効にするか、コンパイラを呼び出してください。
 
 ## <a name="related-topics"></a>関連トピック
 
 |タイトル|説明|
 |-----|-----------|
-|[let バインド](../functions/let-bindings.md)|使用に関する情報、`let`キーワード値および関数に名前をバインドします。|
+|[let バインド](../functions/let-bindings.md)|キーワードを使用して`let` 、名前を値および関数にバインドする方法について説明します。|
 |[関数](../functions/index.md)|F# の関数の概要を説明します。|
 
 ## <a name="see-also"></a>関連項目

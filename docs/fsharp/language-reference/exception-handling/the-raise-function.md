@@ -2,16 +2,16 @@
 title: '例外: raise 関数'
 description: エラーまたは例外条件が発生したことを示す F# の 'raise' 関数を使用する方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 9e2515ad7b85c1025bc3aa0aa2a6929a8d35436d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e0cc8da8310203c537b8081af8a225671bd8c6a3
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641958"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630290"
 ---
 # <a name="exceptions-the-raise-function"></a>例外: raise 関数
 
-`raise`関数は、エラーまたは例外条件が発生したことを示すために使用します。 エラーに関する情報は、例外オブジェクトでキャプチャされます。
+関数`raise`は、エラーまたは例外的な条件が発生したことを示すために使用されます。 エラーに関する情報は、例外オブジェクトでキャプチャされます。
 
 ## <a name="syntax"></a>構文
 
@@ -21,17 +21,17 @@ raise (expression)
 
 ## <a name="remarks"></a>Remarks
 
-`raise`関数は、例外オブジェクトを生成し、スタック アンワインド プロセスを開始します。 スタック アンワインド プロセスは、他の任意の .NET 言語ではこのプロセスの動作は同じように、共通言語ランタイム (CLR) によって管理されます。 スタックのアンワインド プロセスは、生成された例外に一致する例外ハンドラーの検索です。 現在の検索を開始`try...with`式、1 つを使用する必要がある場合。 各パターンで、`with`の順序で、ブロックをチェックします。 一致する例外ハンドラーが見つかると、例外が処理済みと見なされますそれ以外の場合、スタックがアンワインドされますと`with`一致するハンドラーが見つかるまで呼び出しチェーンのブロックがチェックされます。 すべて`finally`スタック アンワインドとして、呼び出しチェーンに含まれるブロックがシーケンスの実行もします。
+関数`raise`は、例外オブジェクトを生成し、スタックアンワインドプロセスを開始します。 スタックアンワインドプロセスは共通言語ランタイム (CLR) によって管理されているため、このプロセスの動作は、他の .NET 言語と同じになります。 スタックアンワインドプロセスは、生成された例外に一致する例外ハンドラーを検索します。 現在`try...with`の式 (存在する場合) で検索が開始されます。 `with`ブロック内の各パターンは順番にチェックされます。 一致する例外ハンドラーが見つかった場合、例外は処理されたと見なされます。それ以外の場合は、スタック`with`がアンワインドされ、一致するハンドラーが見つかるまで呼び出しチェーンのブロックアップがチェックされます。 呼び出し`finally`チェーンで検出されたすべてのブロックも、スタックのアンワインドとして順番に実行されます。
 
-`raise`関数と同等の`throw`c# または C++ でします。 使用`reraise`を同じ例外呼び出しチェーンの上位に伝達する catch ハンドラーにします。
+関数は、 C#またC++はの`throw`と同じです。 `raise` Catch `reraise`ハンドラーでを使用して、同じ例外を呼び出しチェーンの上位に伝達します。
 
-次のコード例は、の使用を示しています、`raise`例外を生成する関数。
+次のコード例は、 `raise`関数を使用して例外を生成する方法を示しています。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5801.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5801.fs)]
 
-`raise`次の例に示すようにも、関数を使用、.NET 例外を発生させることができます。
+関数`raise`は、次の例に示すように、.net の例外を発生させるためにも使用できます。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5802.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5802.fs)]
 
 ## <a name="see-also"></a>関連項目
 

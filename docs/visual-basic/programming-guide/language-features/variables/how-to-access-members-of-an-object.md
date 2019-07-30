@@ -1,75 +1,79 @@
 ---
-title: '方法: オブジェクト (Visual Basic) のメンバーへのアクセス'
+title: '方法: オブジェクトのメンバーにアクセスする (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - members [Visual Basic], accessing
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
-ms.openlocfilehash: 46c5eb9bc79b3a408a5a4fc9f40fee7391937c58
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 882046b829ade2da7c10b3db4c0d6c9ca9f3d579
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663601"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630835"
 ---
-# <a name="how-to-access-members-of-an-object-visual-basic"></a>方法: オブジェクト (Visual Basic) のメンバーへのアクセス
-オブジェクトを参照するオブジェクト変数がある場合は、多くの場合、メソッド、プロパティ、フィールド、イベントなど、そのオブジェクトのメンバーを操作します。 たとえば、1 回作成した新しい<xref:System.Windows.Forms.Form>オブジェクトを設定することがあります、<xref:System.Windows.Forms.Control.Text%2A>プロパティまたは呼び出しの<xref:System.Windows.Forms.Control.Focus%2A>メソッド。  
-  
-## <a name="accessing-members"></a>メンバーへのアクセス  
- オブジェクトのメンバーにアクセスするを参照する変数を使用します。  
-  
-#### <a name="to-access-members-of-an-object"></a>オブジェクトのメンバーにアクセスするには  
-  
-- メンバー アクセス演算子を使用して (`.`) オブジェクトの変数名とメンバー名の間。  
-  
-    ```  
-    currentText = newForm.Text  
-    ```  
-  
-     メンバーが場合[Shared](../../../../visual-basic/language-reference/modifiers/shared.md)変数にアクセスする必要はありません。  
-  
-## <a name="accessing-members-of-an-object-of-known-type"></a>既知の型のオブジェクトのメンバーへのアクセス  
- コンパイル時に、オブジェクトの型を認識する場合を使用できます*事前バインディング*変数に参照されています。  
-  
-#### <a name="to-access-members-of-an-object-for-which-you-know-the-type-at-compile-time"></a>コンパイル時に、型を認識するオブジェクトのメンバーにアクセスするには  
-  
-1. 変数に代入するオブジェクトの型のオブジェクト変数を宣言します。  
-  
-    ```  
-    Dim extraForm As System.Windows.Forms.Form  
-    ```  
-  
-     `Option Strict On`、のみ割り当てることができます<xref:System.Windows.Forms.Form>オブジェクト (から派生した型のオブジェクトまたは<xref:System.Windows.Forms.Form>) に`extraForm`します。 クラスまたは拡大と構造体を定義しているかどうか`CType`への変換<xref:System.Windows.Forms.Form>、そのクラスを割り当てるか、構造体をすることができますも`extraForm`します。  
-  
-2. メンバー アクセス演算子を使用して (`.`) オブジェクトの変数名とメンバー名の間。  
-  
-    ```  
-    extraForm.Show()  
-    ```  
-  
-     メソッドとプロパティに固有のすべてにアクセスすることができます、<xref:System.Windows.Forms.Form>何であっても、クラス、`Option Strict`設定です。  
-  
-## <a name="accessing-members-of-an-object-of-unknown-type"></a>不明な型のオブジェクトのメンバーへのアクセス  
- 使用する必要があるコンパイル時に、オブジェクトの型がわからない場合*遅延バインディング*それを参照しているすべての変数にします。  
-  
-#### <a name="to-access-members-of-an-object-for-which-you-do-not-know-the-type-at-compile-time"></a>対象のわからない型コンパイル時にオブジェクトのメンバーにアクセスするには  
-  
-1. オブジェクト変数を宣言、 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)します。 (として変数を宣言する`Object`として宣言することと同じ<xref:System.Object?displayProperty=nameWithType>)。  
-  
-    ```  
-    Dim someControl As Object  
-    ```  
-  
-     `Option Strict On`で定義されているメンバーのみにアクセスすることができます、<xref:System.Object>クラス。  
-  
-2. メンバー アクセス演算子を使用して (`.`) オブジェクトの変数名とメンバー名の間。  
-  
-    ```  
-    someControl.GetType()  
-    ```  
-  
-     オブジェクト変数に代入する任意のオブジェクトのメンバーにアクセスできるようにするには、設定する必要があります`Option Strict Off`します。 これを行うと、コンパイラが特定のメンバーが、変数に代入するオブジェクトによって公開されることを保証することはできません。 オブジェクトが、アクセスしようとするメンバーを公開しない場合、<xref:System.MemberAccessException>例外が発生します。  
-  
+# <a name="how-to-access-members-of-an-object-visual-basic"></a>方法: オブジェクトのメンバーにアクセスする (Visual Basic)
+
+オブジェクトを参照するオブジェクト変数がある場合は、そのオブジェクトのメソッド、プロパティ、フィールド、イベントなどのメンバーを使用することがよくあります。 たとえば、新しい<xref:System.Windows.Forms.Form>オブジェクトを作成した後で、その<xref:System.Windows.Forms.Control.Text%2A>オブジェクトのプロパティを設定したり、 <xref:System.Windows.Forms.Control.Focus%2A>メソッドを呼び出したりすることができます。
+
+## <a name="accessing-members"></a>メンバーへのアクセス
+
+オブジェクトのメンバーにアクセスするには、それを参照する変数を使用します。
+
+#### <a name="to-access-members-of-an-object"></a>オブジェクトのメンバーにアクセスするには
+
+- オブジェクト変数名とメンバー名の`.`間には、メンバーアクセス演算子 () を使用します。
+
+    ```vb
+    currentText = newForm.Text
+    ```
+
+    メンバーが[共有](../../../../visual-basic/language-reference/modifiers/shared.md)されている場合は、そのメンバーにアクセスするための変数は必要ありません。
+
+## <a name="accessing-members-of-an-object-of-known-type"></a>既知の型のオブジェクトのメンバーへのアクセス
+
+コンパイル時にオブジェクトの型がわかっている場合は、それを参照する変数に*事前バインディング*を使用できます。
+
+#### <a name="to-access-members-of-an-object-for-which-you-know-the-type-at-compile-time"></a>コンパイル時に型がわかっているオブジェクトのメンバーにアクセスするには
+
+1. 変数に割り当てるオブジェクトの型として、オブジェクト変数を宣言します。
+
+    ```vb
+    Dim extraForm As System.Windows.Forms.Form
+    ```
+
+    で`Option Strict On`は、オブジェクト (また<xref:System.Windows.Forms.Form>はから<xref:System.Windows.Forms.Form>派生した型のオブジェクト) のみを`extraForm`に割り当てることができます。 へ`CType` `extraForm`の拡大変換でクラスまたは構造体を定義している場合は、そのクラスまたは構造体をに割り当てることもできます。 <xref:System.Windows.Forms.Form>
+
+2. オブジェクト変数名とメンバー名の`.`間には、メンバーアクセス演算子 () を使用します。
+
+    ```vb
+    extraForm.Show()
+    ```
+
+    設定`Option Strict`がどのようなものであっても、 <xref:System.Windows.Forms.Form>クラスに固有のすべてのメソッドとプロパティにアクセスできます。
+
+## <a name="accessing-members-of-an-object-of-unknown-type"></a>不明な型のオブジェクトのメンバーへのアクセス
+
+コンパイル時にオブジェクトの型がわからない場合は、そのオブジェクトを参照する任意の変数に対して*遅延バインディング*を使用する必要があります。
+
+#### <a name="to-access-members-of-an-object-for-which-you-do-not-know-the-type-at-compile-time"></a>コンパイル時に型がわからないオブジェクトのメンバーにアクセスするには
+
+1. オブジェクトの[データ型](../../../../visual-basic/language-reference/data-types/object-data-type.md)であるオブジェクト変数を宣言します。 (変数をと`Object`して宣言することは、と<xref:System.Object?displayProperty=nameWithType>して宣言するのと同じです)。
+
+    ```vb
+    Dim someControl As Object
+    ```
+
+    で`Option Strict On`は、 <xref:System.Object>クラスで定義されているメンバーのみにアクセスできます。
+
+2. オブジェクト変数名とメンバー名の`.`間には、メンバーアクセス演算子 () を使用します。
+
+    ```vb
+    someControl.GetType()
+    ```
+
+    オブジェクト変数に割り当てるオブジェクトのメンバーにアクセスできるようにするには、を設定`Option Strict Off`する必要があります。 この場合、コンパイラは、変数に割り当てたオブジェクトによって、特定のメンバーが公開されることを保証できません。 アクセスしようとしたメンバーがオブジェクトによって公開され<xref:System.MemberAccessException>ていない場合は、例外が発生します。
+
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Object>

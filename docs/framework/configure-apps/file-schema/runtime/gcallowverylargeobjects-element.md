@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2988b054030df23ae8ccd8840f83c239f0401321
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 70c60461f3ddd6bdabd151f60c7bc81eef18e650
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607261"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629472"
 ---
 # <a name="gcallowverylargeobjects-element"></a>\<gcAllowVeryLargeObjects > 要素
 64 ビット プラットフォームで、合計サイズが 2 GB (ギガバイト) を超える配列を有効にします。  
   
- \<configuration > 要素  
+ \<configuration> 要素  
 \<runtime> 要素  
 \<gcAllowVeryLargeObjects > 要素  
   
@@ -77,6 +77,10 @@ ms.locfileid: "64607261"
 </configuration>  
 ```  
   
+## <a name="supported-in"></a>サポート対象 :
+
+.NET Framework 4.5 以降のバージョン
+
 ## <a name="see-also"></a>関連項目
 
 - [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)

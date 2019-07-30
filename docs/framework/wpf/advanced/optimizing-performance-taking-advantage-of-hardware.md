@@ -9,28 +9,28 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: 13812fa5429bbe33341e51e4b3be14fbbcb361cb
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 7acf5a3f48ac4987037873c63111d988ec3a4979
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238451"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629655"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>パフォーマンスの最適化:ハードウェアの活用
-内部アーキテクチャ[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]は、2 つのレンダリング パイプライン、ハードウェアおよびソフトウェア。 このトピックでは、アプリケーションのパフォーマンスの最適化に関する決定を行うためのこれらのレンダリング パイプラインについてを説明します。  
+の内部アーキテクチャに[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]は、ハードウェアとソフトウェアという2つのレンダリングパイプラインがあります。 このトピックでは、アプリケーションのパフォーマンスの最適化に関する意思決定に役立つ、これらのレンダリングパイプラインについて説明します。  
   
-## <a name="hardware-rendering-pipeline"></a>ハードウェア レンダリング パイプライン  
- 決定に最も重要な要因の 1 つ[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]パフォーマンスが表示範囲である、ピクセルの数が、コストが大きいほどのパフォーマンスをレンダリングする必要があります。 できるレンダリングにオフロードすることができます、ただし、 [!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)]、複数のパフォーマンス上の利点に確認できます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション ハードウェア レンダリング パイプラインを最大限の活用[!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)]の最小値をサポートするハードウェアで機能[!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)]バージョン 7.0。 さらに最適化をサポートするハードウェアによって得られる[!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)]バージョン 7.0 と PixelShader 2.0 以降の機能です。  
+## <a name="hardware-rendering-pipeline"></a>ハードウェアレンダリングパイプライン  
+ パフォーマンスを判断[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]するうえで最も重要な要因の1つは、レンダリングが制限されており、レンダリングする必要があるピクセルが多いほど、パフォーマンスコストが高くなることです。 ただし、に[!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)]オフロードできるレンダリングが多いほど、パフォーマンスが向上します。 アプリケーション[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ハードウェアレンダリングパイプラインは、microsoft directx バージョン7.0 以上をサポートするハードウェアで microsoft directx 機能を最大限に活用します。 Microsoft DirectX バージョン7.0 および PixelShader 2.0 以降の機能をサポートするハードウェアでは、さらに最適化を行うことができます。  
   
-## <a name="software-rendering-pipeline"></a>ソフトウェア レンダリング パイプライン  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ソフトウェア レンダリング パイプラインは完全に CPU バインドします。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] SSE 命令と SSE2 命令を利用は、最適化された、完全に機能を備えたソフトウェア ラスタライザーを実装するために、CPU で設定します。 ソフトウェアへのフォールバックは、シームレス、ハードウェア レンダリング パイプラインを使用して、アプリケーションの機能を表示することはできません。  
+## <a name="software-rendering-pipeline"></a>ソフトウェアレンダリングパイプライン  
+ ソフトウェア[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]レンダリングパイプラインは、完全に CPU にバインドされています。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]は、CPU の SSE および SSE2 命令セットを利用して、最適化された、完全な機能を備えたソフトウェアラスタライザーを実装します。 ソフトウェアへのフォールバックは、ハードウェアレンダリングパイプラインを使用してアプリケーションの機能をレンダリングできないときにシームレスに実行されます。  
   
- 最大のパフォーマンスの問題は発生ソフトウェア モードでのレンダリングに関連するフィル レートでレンダリングするピクセルの数として定義されている場合。 ソフトウェア レンダリング モードでのパフォーマンスに関する懸念がある場合は、ピクセルが再描画される回数を最小限にしてみてください。 たとえば、上にやや透明のイメージをレンダリングし、青色の背景を持つアプリケーションがある場合は、すべてのアプリケーションを 2 回でピクセルがレンダリングされます。 その結果がかかる 2 回青い背景のみにした場合よりも、イメージを使用してアプリケーションを表示するためにします。  
+ ソフトウェアモードで表示するときに発生する最大のパフォーマンスの問題は、塗りつぶし速度に関連しています。これは、レンダリングするピクセル数として定義されています。 ソフトウェアレンダリングモードのパフォーマンスに懸念がある場合は、ピクセルが再描画される回数を最小限に抑えるようにしてください。 たとえば、青色の背景を持つアプリケーションがあり、それによって少し透明な画像がレンダリングされる場合、アプリケーションのすべてのピクセルが2回レンダリングされます。 その結果、背景が青しかない場合と比べて、イメージでアプリケーションをレンダリングするのに2倍の時間がかかります。  
   
 ### <a name="graphics-rendering-tiers"></a>グラフィックスの描画層  
- アプリケーションを実行するハードウェア構成を予測する非常に困難ですがある可能性があります。 ただし、設計をシームレスに切り替える機能別のハードウェアで実行するときにそれぞれ別のハードウェア構成活用を実行できるように、アプリケーションを検討する可能性があります。  
+ アプリケーションが実行されるハードウェア構成を予測することは、非常に困難な場合があります。 ただし、アプリケーションが異なるハードウェアで実行されているときに機能をシームレスに切り替えることができるように設計を検討することもできます。これにより、さまざまなハードウェア構成を最大限に活用することができます。  
   
- これを実現する[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]実行時にシステムのグラフィックス機能を判断する機能を提供します。 グラフィックス機能は、3 つの描画層の 1 つとして、ビデオ カードを分類することによって決定されます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API を使うと、描画機能層を照会するアプリケーションを公開します。 アプリケーションは、ハードウェアでサポートされている描画層によって実行時に異なるコード パスを受け取ることができます。  
+ これを実現する[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ために、には、実行時にシステムのグラフィックス機能を決定する機能が用意されています。 グラフィックス機能を決定するには、ビデオカードを3つのレンダリング機能層の1つとして分類します。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションが表示機能層に対してクエリを実行できるようにする API を公開します。 アプリケーションは、ハードウェアでサポートされているレンダリング層に応じて、実行時にさまざまなコードパスを取得できます。  
   
  描画層に最も影響を与えるグラフィックス ハードウェアの機能:  
   
@@ -42,17 +42,17 @@ ms.locfileid: "68238451"
   
 - **マルチテクスチャ サポート** マルチテクスチャ サポートとは、3D グラフィックス オブジェクトにブレンド操作を実行するとき、2 つ以上の異なるテクスチャを適用できる機能のことです。 マルチテクスチャ サポートの度合いは、グラフィックス ハードウェア上のマルチテクスチャ ユニットの数で決まります。  
   
- ピクセル シェーダー、頂点シェーダー、およびマルチ テクスチャ機能が特定の定義に使用される[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]さらに、さまざまな表示の層の定義に使用するバージョン レベル[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]します。  
+ ピクセルシェーダー、頂点シェーダー、およびマルチテクスチャ機能は、特定の DirectX バージョンレベルを定義するために使用されます。これは、の[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]さまざまなレンダリング層を定義するために使用されます。  
   
  グラフィックス ハードウェアの機能により [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションのレンダリング能力が決まります。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] システムには次の 3 つの描画層があります。  
   
-- **描画層 0** グラフィックス ハードウェアの高速化はありません。 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]バージョン レベルがバージョン 7.0 未満です。  
+- **描画層 0** グラフィックス ハードウェアの高速化はありません。 DirectX のバージョンレベルがバージョン7.0 未満です。  
   
-- **描画層 1**部分的なグラフィックス ハードウェア高速です。 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]バージョン レベルはバージョン 7.0 以上と**より低い**バージョン 9.0 よりもします。  
+- **描画層 1**部分的なグラフィックスハードウェアの高速化。 DirectX のバージョンレベルは、バージョン7.0 以降で、バージョン**9.0 よりも**前のバージョンです。  
   
-- **描画層 2** ほとんどのグラフィックス機能でグラフィックス ハードウェア高速が利用されます。 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] バージョンのレベルはバージョン 9.0 以上です。  
+- **描画層 2** ほとんどのグラフィックス機能でグラフィックス ハードウェア高速が利用されます。 DirectX のバージョンレベルは、バージョン9.0 以上です。  
   
- 詳細については[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]階層を表示するを参照してください[グラフィックスの描画層](graphics-rendering-tiers.md)します。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]描画層の詳細については、「[グラフィックスの描画層](graphics-rendering-tiers.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

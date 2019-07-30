@@ -2,12 +2,12 @@
 title: コンストラクター
 description: 定義および F# で作成し、クラスと構造のオブジェクトを初期化するコンストラクターを使用する方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: ef5dc134ad98179b6a365c4c34a9eca22fe5f7f6
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: c25fdcb95c2873eb69a94f30c87735e5c04d391b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364358"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627598"
 ---
 # <a name="constructors"></a>コンストラクター
 
@@ -23,7 +23,7 @@ ms.locfileid: "68364358"
 
 次のコードは、コンストラクターと、オブジェクトを作成するさまざまな方法を持つクラスを示しています。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3501.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3501.fs)]
 
 出力は次のとおりです。
 
@@ -40,7 +40,7 @@ Initialized object that has coordinates (0, 0, 0)
 
 また、多くの場合、構造体には`val`キーワードを使用して作成されたフィールドがあります。クラスにはこれらのフィールドも含まれます。 `val`キーワードを使用して定義されたフィールドを持つ構造体とクラスは、次のコードに示すように、レコード式を使用して追加のコンストラクターで初期化することもできます。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3502.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3502.fs)]
 
 詳細については、次を参照してください。[明示的なフィールド:`val`キーワード](explicit-fields-the-val-keyword.md)します。
 
@@ -48,7 +48,7 @@ Initialized object that has coordinates (0, 0, 0)
 
 クラスのプライマリコンストラクターは、 `do`バインディングでコードを実行できます。 ただし、 `do`バインドせずに、追加のコンストラクターでコードを実行する必要がある場合はどうすればよいでしょうか。 これを行うには、 `then`キーワードを使用します。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3503.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3503.fs)]
 
 プライマリコンストラクターの副作用は引き続き実行されます。 したがって、出力は次のようになります。
 
@@ -62,11 +62,11 @@ Created an invalid person object.
 
 他のメンバーでは、各メンバーの定義で現在のオブジェクトの名前を指定します。 コンストラクターのパラメーターの直後に`as`キーワードを使用して、クラス定義の最初の行に自己識別子を配置することもできます。 この構文の例を次に示します。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3504.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3504.fs)]
 
 追加のコンストラクターでは、コンストラクターパラメーターの直後に`as`句を配置することで、自己識別子を定義することもできます。 この構文の例を次に示します。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3505.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3505.fs)]
 
 オブジェクトを完全に定義する前に使用しようとすると、問題が発生する可能性があります。 したがって、自己識別子を使用すると、コンパイラが警告を出力し、追加のチェックを挿入して、オブジェクトが初期化される前にオブジェクトのメンバーにアクセスしないようにすることができます。 自己識別子は、プライマリコンストラクターのバインディング、 `do`または追加のコンストラクター内の`then`キーワードの後にのみ使用してください。
 
@@ -76,11 +76,11 @@ Created an invalid person object.
 
 コンストラクターの引数リストにフォーム`property = value`の割り当ての一覧を追加することにより、初期化コードでクラスオブジェクトのプロパティに値を割り当てることができます。 これを次のコード例に示します。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
 
 前のコードの次のバージョンは、1つのコンストラクター呼び出しでの通常の引数、省略可能な引数、およびプロパティ設定の組み合わせを示しています。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3507.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3507.fs)]
 
 ## <a name="constructors-in-inherited-class"></a>継承されたクラスのコンストラクター
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
-ms.openlocfilehash: ca40e6c8dcba3da29bdb68b29c91c852e477f8f7
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 8313c2282a3b4b7b035f9f3b685a786c4471f53a
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512792"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630144"
 ---
 # <a name="char-data-type-visual-basic"></a>文字型 (Char) (Visual Basic)
 
@@ -37,16 +37,22 @@ Unicode の最初の128コードポイント (0 ~ 127) は、標準の U.S. キ�
 
 Visual Basic は、と数値型`Char`の間で直接変換されません。 関数<xref:Microsoft.VisualBasic.Strings.Asc%2A>または<xref:Microsoft.VisualBasic.Strings.AscW%2A>関数を使用すると、 `Char`そのコードポイント`Integer`を表すに値を変換できます。 関数<xref:Microsoft.VisualBasic.Strings.Chr%2A>または<xref:Microsoft.VisualBasic.Strings.ChrW%2A>関数を使用すると、 `Integer`そのコードポイント`Char`を持つに値を変換できます。
 
-型チェックスイッチ ([Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)) がオンになっている場合は、リテラル型の文字を`Char`データ型として識別するために、1文字の文字列リテラルに追加する必要があります。 次に例を示します。
+型チェックスイッチ ( [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)) がオンになっている場合は、リテラル型の文字を`Char`データ型として識別するために、1文字の文字列リテラルに追加する必要があります。 次に例を示します。 が on になって`charVar`いるため`Option Strict` 、変数への最初の代入によってコンパイラエラー [BC30512](../../misc/bc30512.md)が生成されます。 リテラルの型文字によっ`c` `Char`てリテラルが値として識別されるため、2番目のが正常にコンパイルされます。
 
 ```vb
 Option Strict On
-Dim charVar As Char
-' The following statement attempts to convert a String literal to Char.
-' Because Option Strict is On, it generates a compiler error.
-charVar = "Z"
-' The following statement succeeds because it specifies a Char literal.
-charVar = "Z"C
+
+Module CharType
+    Public Sub Main()
+        Dim charVar As Char
+
+        ' This statement generates compiler error BC30512 because Option Strict is On.  
+        charVar = "Z"  
+
+        ' The following statement succeeds because it specifies a Char literal.  
+        charVar = "Z"c
+    End Sub
+End Module
 ```
 
 ## <a name="programming-tips"></a>プログラミングのヒント
@@ -55,7 +61,7 @@ charVar = "Z"C
 
 - **相互運用に関する考慮事項。** .NET Framework 用に作成されていないコンポーネント (オートメーションや COM オブジェクトなど) とのインターフェイスを使用する場合は、文字型のデータ幅が異なる (8 ビット) ことに注意してください。 このようなコンポーネントに8ビットの引数を渡す場合は、新しい Visual Basic `Byte`コードで`Char`ではなく、として宣言します。
 
-- **広げ.** データ`Char`型はに`String`拡大変換されます。 これは、に`Char` `String`変換でき<xref:System.OverflowException?displayProperty=nameWithType> 、エラーが発生しないことを意味します。
+- **広げ.** データ`Char`型はに`String`拡大変換されます。 これは、 `Char` `String` に<xref:System.OverflowException?displayProperty=nameWithType>変換でき、が発生しないことを意味します。
 
 - **文字を入力します。** リテラル型の文字`C`を1文字の文字列リテラルに追加すると、強制的`Char`にデータ型になります。 `Char`に識別子の型文字がありません。
 

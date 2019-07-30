@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: b1c61aa333c428e5cb811a5d19469516cbb813e3
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: c3544769480a45068be0ca64e90f91253daf3e16
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663155"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629776"
 ---
 # <a name="graphics-rendering-registry-settings"></a>グラフィックス レンダリングのレジストリ設定
 ここでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションに影響を与える [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] グラフィックス レンダリングのレジストリ設定の概要を示します。  
@@ -33,7 +33,7 @@ ms.locfileid: "67663155"
 |設定|説明|  
 |-------------|-----------------|  
 |**Disable Hardware Acceleration Option (ハードウェア高速化オプションを無効にする)**|ハードウェア高速化を有効にするかどうかを指定します。|  
-|**Maximum Multisample Value (最大マルチサンプル値)**|アンチエイリアシングの 3-D コンテンツのマルチ サンプリングの度合いを指定します。|  
+|**Maximum Multisample Value (最大マルチサンプル値)**|アンチエイリアシング3-d コンテンツのマルチサンプリングの次数を指定します。|  
 |**Required Video Driver Date Setting (ビデオ ドライバーの日付設定が必須)**|2004 年 11 月より前にリリースされたドライバーについて、ハードウェア高速化を無効にするかどうかを指定します。|  
 |**Use Reference Rasterizer Option (リファレンス ラスタライザー オプションを使用する)**|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] でリファレンス ラスタライザーを使用するかどうかを指定します。|  
   
@@ -42,7 +42,7 @@ ms.locfileid: "67663155"
 <a name="disablehardwareacceleration"></a>   
 ## <a name="disable-hardware-acceleration-option"></a>Disable Hardware Acceleration Option (ハードウェアの高速化オプションを無効にする)  
   
-|レジストリ キー|値の種類|  
+|レジストリ キー|[値の型]|  
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\DisableHWAcceleration`|DWORD|  
   
@@ -53,20 +53,20 @@ ms.locfileid: "67663155"
 <a name="maxmultisample"></a>   
 ## <a name="maximum-multisample-value"></a>Maximum Multisample Value (最大マルチサンプル値)  
   
-|レジストリ キー|値の種類|  
+|レジストリ キー|[値の型]|  
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\MaxMultisampleType`|DWORD|  
   
- **最大マルチ サンプル値**3-D コンテンツのアンチエイリアシングの最大量を調整することができます。 このレベルを使用して 3-D のアンチエイリアシングで無効にする[!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)]で有効にまたは[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]します。  
+ **最大マルチサンプル値**を使用すると、3-d コンテンツのアンチエイリアシングの最大量を調整できます。 このレベルを使用して、で[!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] 3-d アンチエイリアシングを無効にするか、で[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]有効にします。  
   
- **[maximum multisample value]** (最大マルチサンプル値) は 0 から 16 の DWORD 値です。 値 0 は、3-D コンテンツのマルチサンプル アンチエイリアシングが無効になることを指定し、値 16 では、ビデオ カードでサポートされる場合に最大で 16 倍のマルチサンプル アンチエイリアシングの使用が試行されます。 レンダリングのエラーと安定性が発生する可能性があり XPDM ドライバーを使用するコンピューターでこのレジストリ値を設定すると、大量の追加のビデオ メモリを使用して、3-D のレンダリングのパフォーマンスが低下するアプリケーションによってことに注意してください。問題があります。  
+ **[maximum multisample value]** (最大マルチサンプル値) は 0 から 16 の DWORD 値です。 値 0 は、3-D コンテンツのマルチサンプル アンチエイリアシングが無効になることを指定し、値 16 では、ビデオ カードでサポートされる場合に最大で 16 倍のマルチサンプル アンチエイリアシングの使用が試行されます。 XPDM ドライバーを使用しているコンピューターにこのレジストリキー値を設定すると、アプリケーションで大量の追加ビデオメモリが使用され、3-d レンダリングのパフォーマンスが低下し、レンダリングエラーと安定性が発生する可能性があることに注意してください。問題.  
   
  このレジストリ キーを設定しないと、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の既定値は、XPDM ドライバーでは 0、WDDM ドライバーでは 4 になります。  
   
 <a name="requiredvideodriverdatesetting"></a>   
 ## <a name="required-video-driver-date-setting"></a>Required Video Driver Date Setting (ビデオ ドライバーの日付設定が必須)  
   
-|レジストリ キー|値の種類|  
+|レジストリ キー|[値の型]|  
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|String|  
   
@@ -85,11 +85,11 @@ ms.locfileid: "67663155"
 <a name="usereferencerasterizeroption"></a>   
 ## <a name="use-reference-rasterizer-option"></a>Use Reference Rasterizer Option (リファレンス ラスタライザー オプションを使用する)  
   
-|レジストリ キー|値の種類|  
+|レジストリ キー|[値の型]|  
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\UseReferenceRasterizer`|DWORD|  
   
- **[Use Reference Rasterizer Option]** (リファレンス ラスタライザー オプションを使用する) では、強制的に [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] をデバッグ用のシミュレートされたハードウェア レンダリング モードにすることができます。[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] はハードウェア モードになりますが、実際のハードウェア デバイスの代わりに、[!INCLUDE[TLA#tla_d3d](../../../../includes/tlasharptla-d3d-md.md)] リファレンス ソフトウェア ラスタライザー d3dref9.dll を使用します。  
+ [**参照ラスタライザーを使用する] オプション**を[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用すると、デバッグのためにシミュレート[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]されたハードウェアレンダリングモードにすることができます。ハードウェアモードになりますが、Microsoft Direct3D リファレンスソフトウェアラスタライザー d3dref9.dll を使用します。実際のハードウェアデバイスの代わりに。  
   
  リファレンス ラスタライザーは非常に低速ですが、ビデオ ドライバーをバイパスし、ドライバーの問題によって発生するレンダリングの問題を回避します。 このため、リファレンス ラスタライザーを使用すると、レンダリングの問題の原因がビデオ ドライバーかどうかを判断できます。 d3dref9.dll ファイルは、システム パス内の場所やアプリケーションのローカル ディレクトリなど、アプリケーションがアクセスできる場所に存在する必要があります。  
   

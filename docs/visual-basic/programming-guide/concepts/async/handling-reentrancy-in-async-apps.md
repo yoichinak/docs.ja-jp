@@ -1,20 +1,20 @@
 ---
-title: (Visual Basic) の非同期アプリにおける再入の処理
+title: 非同期アプリでの再入の処理 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 35d2b75e14d6223463b45d585c6742e62cdad2a6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bc8156b1d2baa53255870364e680d62d7b93a50f
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751022"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630941"
 ---
-# <a name="handling-reentrancy-in-async-apps-visual-basic"></a>(Visual Basic) の非同期アプリにおける再入の処理
+# <a name="handling-reentrancy-in-async-apps-visual-basic"></a>非同期アプリでの再入の処理 (Visual Basic)
 
 非同期コードをアプリに含める場合は、再入を考慮し、場合によっては回避することをお勧めします。これは、完了前に非同期操作の再入力を参照します。 再入の可能性を特定して処理しないと、予期しない結果が発生する可能性があります。
 
 > [!NOTE]
->  この例を実行するには、Visual Studio 2012 以降と .NET Framework 4.5 以降が、コンピューターにインストールされている必要があります。
+> この例を実行するには、Visual Studio 2012 以降と .NET Framework 4.5 以降が、コンピューターにインストールされている必要があります。
 
 ## <a name="BKMK_RecognizingReentrancy"></a>再入を認識する
 
@@ -94,7 +94,7 @@ TOTAL bytes returned:  890591
 
 処理の実行中に **[Start]** ボタンを利用できないようにするには、`StartButton_Click` イベント ハンドラーの上部にあるボタンを無効にします。 処理が完了しユーザーが再度アプリを実行できるようになったら、`Finally` ブロック内からこのボタンを再度有効にできます。
 
-次のコードはこの変更を示しています。変更の部分にはアスタリスクが付いています。 変更内容を追加するには、このトピックの最後にコードをまたはから完成したアプリをダウンロードする[非同期サンプル。Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)」 (非同期の例: .NET デスクトップ アプリでの再入) からダウンロードします。 プロジェクト名は DisableStartButton です。
+次のコードはこの変更を示しています。変更の部分にはアスタリスクが付いています。 このトピックの最後にあるコードに変更を追加することも、完成したアプリを非同期のサンプル[からダウンロードすることもできます。Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)」 (非同期の例: .NET デスクトップ アプリでの再入) からダウンロードします。 プロジェクト名は DisableStartButton です。
 
 ```vb
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
@@ -123,7 +123,7 @@ End Sub
 
 **[Start]** ボタンを無効にせず、有効の状態を保持できますが、ユーザーがボタンを再度クリックしたときに、実行中の処理を取り消し、最後に開始された処理を続行できます。
 
-キャンセルの詳細については、次を参照してください。[非同期アプリケーションの微調整 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)します。
+キャンセルの詳細については、「[非同期アプリケーションの微調整 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)」を参照してください。
 
 このシナリオを設定するには、「[例のアプリをレビューして実行する](#BKMD_SettingUpTheExample)」に用意されている基本コードを次のように変更します。 また、完成したアプリを「[Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)」 (非同期の例: .NET デスクトップ アプリでの再入) からダウンロードします。 このプロジェクトの名前は CancelAndRestart です。
 
@@ -136,7 +136,7 @@ End Sub
         Dim cts As CancellationTokenSource
     ```
 
-2. `StartButton_Click` で、処理が既に実行されているかどうかを確認します。 場合の値`cts`は`Nothing`操作は既にアクティブです。 値がない場合`Nothing`、既に実行されている操作が取り消されました。
+2. `StartButton_Click` で、処理が既に実行されているかどうかを確認します。 の値が`Nothing`の`cts`場合、操作は既にアクティブになっていません。 値がでない`Nothing`場合、既に実行されている操作は取り消されます。
 
     ```vb
     ' *** If a download process is already underway, cancel it.
@@ -153,7 +153,7 @@ End Sub
     cts = newCTS
     ```
 
-4. 末尾に`StartButton_Click`、現在のプロセスが完了したら、設定の値`cts`に`Nothing`します。
+4. の`StartButton_Click`最後に、現在のプロセスが完了したので、の`cts`値をに`Nothing`設定します。
 
     ```vb
     ' *** When the process completes, signal that another process can proceed.
@@ -283,7 +283,7 @@ TOTAL bytes returned:  890591
 
 この例を実行するには、変更を「[アプリケーションをビルドする](#BKMK_BuildingTheApp)」のコードに貼り付けます。また、「[アプリをダウンロードする](#BKMK_DownloadingTheApp)」の手順に従って、サンプルをダウンロードし、QueueResults プロジェクトを実行することもできます。
 
-次の出力は、ユーザーが 1 度だけ **[Start]** ボタンをクリックした場合の結果を示しています。 文字ラベル A は、**[Start]** ボタンが最初にクリックされた結果であることを示しています。 数字は、ダウンロード対象の一覧における URL の順序を示しています。
+次の出力は、ユーザーが 1 度だけ **[Start]** ボタンをクリックした場合の結果を示しています。 文字ラベル A は、 **[Start]** ボタンが最初にクリックされた結果であることを示しています。 数字は、ダウンロード対象の一覧における URL の順序を示しています。
 
 ```
 #Starting group A.
@@ -513,7 +513,7 @@ End Function
   TOTAL bytes returned:  915908
   ```
 
-- `pendingWork`タスクが`Nothing`の開始時`FinishOneGroupAsync`グループ A についてのみ最初に開始しました。 `FinishOneGroupAsync` に達したとき、グループ A はまだ await 式を完了していません。 したがって、コントロールは `AccessTheWebAsync` に戻っておらず、`pendingWork` への最初の割り当ては発生していません。
+- このタスクは`Nothing` 、最初に開始`FinishOneGroupAsync`したグループ A に対してのみ開始されます。 `pendingWork` `FinishOneGroupAsync` に達したとき、グループ A はまだ await 式を完了していません。 したがって、コントロールは `AccessTheWebAsync` に戻っておらず、`pendingWork` への最初の割り当ては発生していません。
 
 - 次の 2 行は、出力に必ず同時に表示されます。 `StartButton_Click` のグループ操作が開始してから、グループのタスクが `pendingWork` に割り当てられるまでの間、コードが中断されることは決してありません。
 
@@ -537,11 +537,11 @@ End Function
 
 2. ダウンロードしたファイルを圧縮解除し、Visual Studio を起動します。
 
-3. メニュー バーで **[ファイル]**、 **[開く]**、 **[プロジェクト/ソリューション]** の順に選択します。
+3. メニュー バーで **[ファイル]** 、 **[開く]** 、 **[プロジェクト/ソリューション]** の順に選択します。
 
 4. 圧縮解除したサンプル コードが含まれるフォルダーに移動し、ソリューション (.sln) ファイルを開きます。
 
-5. **ソリューション エクスプローラー**で、実行するプロジェクトのショートカット メニューを開き、**[スタートアップ プロジェクトに設定]** を選択します。
+5. **ソリューション エクスプローラー**で、実行するプロジェクトのショートカット メニューを開き、 **[スタートアップ プロジェクトに設定]** を選択します。
 
 6. Ctrl キーを押しながら F5 キーを押してプロジェクトをビルドし、実行します。
 
@@ -553,11 +553,11 @@ End Function
 
 1. Visual Studio を起動します。
 
-2. メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]** の順にクリックします。
+2. メニュー バーで、 **[ファイル]** 、 **[新規作成]** 、 **[プロジェクト]** の順にクリックします。
 
      **[新しいプロジェクト]** ダイアログ ボックスが表示されます。
 
-3. **インストールされたテンプレート**ウィンドウで、展開**Visual Basic**、順に展開**Windows**します。
+3. **[インストールされたテンプレート]** ペインで、 **[Visual Basic]** を展開し、 **[Windows]** を展開します。
 
 4. プロジェクトの種類の一覧の **[WPF アプリケーション]** をクリックします。
 
@@ -567,7 +567,7 @@ End Function
 
 6. Visual Studio コード エディターで、 **[MainWindow.xaml]** タブをクリックします。
 
-     タブが表示されない場合は、**ソリューション エクスプローラー**で MainWindow.xaml のショートカット メニューを開き、**[コードの表示]** を選択します。
+     タブが表示されない場合は、**ソリューション エクスプローラー**で MainWindow.xaml のショートカット メニューを開き、 **[コードの表示]** を選択します。
 
 7. MainWindow.xaml の **XAML** ビューで、コードを次のコードに置き換えます。
 
@@ -591,9 +591,9 @@ End Function
 
 8. <xref:System.Net.Http> への参照を追加します。
 
-9. **ソリューション エクスプ ローラー**MainWindow.xaml.vb のショートカット メニューを開き、選択し、**コードの表示**します。
+9. **ソリューションエクスプローラー**で、mainwindow.xaml のショートカットメニューを開き、 **[コードの表示]** を選択します。
 
-10. MainWindow.xaml.vb でのコードを次のコードに置き換えます。
+10. Mainwindow.xaml で、コードを次のコードに置き換えます。
 
     ```vb
     ' Add the following Imports statements, and add a reference for System.Net.Http.
@@ -671,11 +671,11 @@ End Function
     End Class
     ```
 
-11. Ctrl キーを押しながら F5 キーを押してプログラムを実行し、**[Start]** ボタンを複数回クリックします。
+11. Ctrl キーを押しながら F5 キーを押してプログラムを実行し、 **[Start]** ボタンを複数回クリックします。
 
 12. 「[[Start] ボタンを無効にする](#BKMK_DisableTheStartButton)」、「[操作を取り消して再開する](#BKMK_CancelAndRestart)」、または「[複数の操作を実行して出力をキューに登録する](#BKMK_RunMultipleOperations)」の変更を行って再入を処理します。
 
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル: 非同期を使用して、Web にアクセスして、Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [チュートリアル: Async および Await を使用した Web へのアクセス (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Async および Await を使用した非同期プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

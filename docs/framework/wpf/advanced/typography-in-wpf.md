@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: ffbd59cb398d417a36d75ff0ef9ef4ef143c30c0
-ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
+ms.openlocfilehash: 743b9ec45c138053fcfcb5cbb1ea9c8490ba919e
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484648"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629908"
 ---
 # <a name="typography-in-wpf"></a>WPF のタイポグラフィ
 このトピックでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の主要な文字体裁の機能について説明します。 これらの機能には、テキスト レンダリングの品質とパフォーマンスの向上、[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 文字体裁のサポート、国際対応テキストの強化、フォントのサポートの強化、新しいテキスト API (アプリケーション プログラミング インターフェイス) が含まれます。  
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>テキストに関する品質とパフォーマンスの向上  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のテキストは、テキストのわかりやすさと読みやすさを高める [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] を使用して描画されます。 ClearType は、によって[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]開発されたソフトウェアテクノロジで、ラップトップの画面、Pocket PC の画面、フラットパネルモニターなど、既存の lcd (液晶ディスプレイ) でのテキストの読みやすさを向上させます。 ClearType では、ピクセルレンダリングが使用されます。これにより、ピクセルの小数部に文字を配置することで、実際の図形に対する忠実度の高いテキストを表示できます。 解像度が上がるとテキスト表示の微細部の鮮明度が高くなるため、長時間にわたって読んでも苦になりません。 で[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]の ClearType のもう1つの改良点は、y 方向のアンチエイリアシングです。これにより、テキスト文字での浅い曲線の上部および下部を滑らかにすることができます。 ClearType 機能の詳細については、「 [cleartype の概要](cleartype-overview.md)」を参照してください。  
+ の[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]テキストは Microsoft ClearType を使用してレンダリングされます。これにより、テキストの明瞭さと読みやすさが向上します。 ClearType は、によって[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]開発されたソフトウェアテクノロジで、ラップトップの画面、Pocket PC の画面、フラットパネルモニターなど、既存の lcd (液晶ディスプレイ) でのテキストの読みやすさを向上させます。 ClearType では、ピクセルレンダリングが使用されます。これにより、ピクセルの小数部に文字を配置することで、実際の図形に対する忠実度の高いテキストを表示できます。 解像度が上がるとテキスト表示の微細部の鮮明度が高くなるため、長時間にわたって読んでも苦になりません。 で[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]の ClearType のもう1つの改良点は、y 方向のアンチエイリアシングです。これにより、テキスト文字での浅い曲線の上部および下部を滑らかにすることができます。 ClearType 機能の詳細については、「 [cleartype の概要](cleartype-overview.md)」を参照してください。  
   
  ![ClearType y 方向アンチエイリアシングを含むテキスト](./media/typography-in-wpf/text-y-direction-antialiasing.gif)  
 ClearType の y 方向アンチエイリアシングを適用したテキスト  

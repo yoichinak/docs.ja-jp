@@ -5,16 +5,16 @@ helpviewer_keywords:
 - UI Automation, providers
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-ms.openlocfilehash: 9312f386198459d0d2dac110827cc6c0029eb247
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1ffb8101ba0182c8ff11667f59d9bc10c5ffe670
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033034"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629562"
 ---
 # <a name="ui-automation-providers-overview"></a>UI オートメーション プロバイダーの概要
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 の最新情報[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については[、「Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  UI オートメーション プロバイダーを使用すれば、コントロールで UI オートメーション クライアント アプリケーションと通信することができます。 一般に、各コントロールまたは [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 内のその他の要素はプロバイダーによって表現されます。 プロバイダーは、要素に関する情報を公開し、必要に応じて、クライアント アプリケーションがコントロールと対話できるようにするコントロール パターンを実装します。  
   
@@ -27,12 +27,12 @@ ms.locfileid: "62033034"
  UI オートメーション プロバイダーは、クライアント側プロバイダーとサーバー側プロバイダーの 2 つのカテゴリに分類されます。  
   
 ### <a name="client-side-providers"></a>クライアント側プロバイダー  
- クライアント側プロバイダーは、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]をサポートしていないか部分的にサポートしているアプリケーションと通信する UI オートメーション クライアントによって実装されます。 クライアント側プロバイダーは、通常サーバーと通信プロセス境界を越えて Windows メッセージを送受信することで。  
+ クライアント側プロバイダーは、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]をサポートしていないか部分的にサポートしているアプリケーションと通信する UI オートメーション クライアントによって実装されます。 通常、クライアント側プロバイダーは、Windows メッセージを送受信することによって、プロセス境界を越えてサーバーと通信します。  
   
- ため、UI オートメーション プロバイダーでのコントロールの[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]、Windows フォーム、または[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]アプリケーションがオペレーティング システムの一部として提供される、クライアント アプリケーションは、独自のプロバイダーを実装することはほとんどありませんが、この概要では扱いませんさらにします。  
+ 、Windows フォーム、または[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]アプリケーションのコントロール用の UI オートメーションプロバイダーはオペレーティングシステムの一部として提供されるため、クライアントアプリケーションは、ほとんどの場合、独自のプロバイダーを実装する必要がありません。この概要では、これらのプロバイダーについては説明しません。一歩.  
   
 ### <a name="server-side-providers"></a>サーバー側プロバイダー  
- サーバー側プロバイダーは、カスタム コントロールや UI フレームワークに基づく以外のアプリケーションによって、実装[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]、Windows フォーム、または[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]します。  
+ サーバー側プロバイダーは、、Windows フォーム、または[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]以外の UI フレームワークに基づくカスタムコントロールまたはアプリケーションによって実装されます。  
   
  また、サーバー側プロバイダーは、サーバーからクライアントに要求するインターフェイスを [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] コア システムに公開することにより、プロセス境界を越えてクライアント アプリケーションと通信します。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62033034"
 ### <a name="navigation"></a>ナビゲーション  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要素は、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーとしてクライアントに公開されます。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は、要素間を移動することによって、ツリーを構成します。 ナビゲーションは、親、兄弟、または子を指す要素ごとに、プロバイダーによって有効にされます。  
   
- クライアントの表示の詳細については、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]ツリーを参照してください[UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)します。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]ツリーのクライアントビューの詳細については、「 [UI オートメーションツリーの概要](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)」を参照してください。  
   
 ### <a name="views"></a>Views  
  次の表に示すように、クライアントは 3 つのプリンシパル ビューで [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーを表示できます。  
@@ -57,16 +57,16 @@ ms.locfileid: "62033034"
 |コントロール ビュー|コントロールである要素が含まれます。|  
 |コンテンツ ビュー|コンテンツである要素が含まれます。|  
   
- クライアント ビューの詳細については、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]ツリーを参照してください[UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)します。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]ツリーのクライアントビューの詳細については、「 [UI オートメーションツリーの概要](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)」を参照してください。  
   
  コンテンツ要素またはコントロール要素としての要素の定義はプロバイダー実装で行う必要があります。 コントロール要素はコンテンツ要素であることもないこともありますが、コンテンツ要素はすべてコントロール要素です。  
   
-### <a name="frameworks"></a>フレームワーク  
+### <a name="frameworks"></a>Frameworks  
  フレームワークは、画面のある領域で子コントロール、ヒット テスト、およびレンダリングを管理するコンポーネントです。 たとえば、HWND とも呼ばれる [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] ウィンドウは、メニュー バー、ステータス バー、ボタンなどの [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要素が複数含まれるフレームワークとして機能することができます。  
   
  リスト ボックスやツリー ビューなどの[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] コンテナー コントロールは、子項目をレンダリングしたり、それらに対してヒット テストを実行したりするための独自のコードが含まれているため、フレームワークと見なされます。 これに対して、 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] リスト ボックスは、包含する [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] ウィンドウによってレンダリングやヒット テストが処理されるため、フレームワークではありません。  
   
- アプリケーション内の [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] はさまざまなフレームワークで構成することができます。 たとえば、HWND アプリケーション ウィンドウには、HWND 内のコンボ ボックスなどのコンポーネントを含む [!INCLUDE[TLA#tla_dhtml](../../../includes/tlasharptla-dhtml-md.md)] を含めることができます。  
+ アプリケーション内の [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] はさまざまなフレームワークで構成することができます。 たとえば、HWND アプリケーションウィンドウには、ダイナミック HTML (DHTML) が含まれている場合があります。 DHTML には、コンボボックスなどのコンポーネントが含まれています。  
   
 ### <a name="fragments"></a>フラグメント  
  フラグメントは、特定のフレームワーク内の要素のサブツリー全体です。 サブツリーのルート ノードにある要素はフラグメント ルートと呼ばれます。 フラグメント ルートは、親がありませんが、他の何らかのフレームワーク (通常は [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] ウィンドウ (HWND)) 内でホストされます。  

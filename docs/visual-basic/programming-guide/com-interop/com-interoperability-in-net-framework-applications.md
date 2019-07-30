@@ -6,27 +6,27 @@ helpviewer_keywords:
 - COM interop [Visual Basic]
 - shared components
 ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
-ms.openlocfilehash: 76c953941d2b8e7af5e4894fd1c521d62e64860f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 758f065d2e0e7f8200529ef171dc89f94950b46e
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642127"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627092"
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>.NET Framework アプリケーションにおける COM 相互運用性 (Visual Basic)
 
-同じアプリケーションで COM オブジェクトと .NET Framework オブジェクトを使用する場合は、メモリ内のオブジェクトの存在の違いに対処する必要があります。 .NET Framework のオブジェクトは、マネージ メモリにある、共通言語ランタイムによって制御されるメモリ:、必要に応じて、ランタイムによって移動することがあります。 COM オブジェクトでは、アンマネージ メモリ内にあるし、別のメモリ位置に移動する必要はありません。 Visual Studio と .NET Framework は、これらのマネージ コードとアンマネージ コンポーネントの相互作用を制御するためのツールを提供します。 マネージ コードの詳細については、次を参照してください。[共通言語ランタイム](../../../standard/clr.md)します。
+COM オブジェクトと .NET Framework オブジェクトを同じアプリケーションで使用する場合は、オブジェクトがメモリ内に存在する方法の違いに対処する必要があります。 .NET Framework オブジェクトはマネージメモリ (共通言語ランタイムによって制御されるメモリ) にあり、必要に応じてランタイムによって移動される場合があります。 COM オブジェクトはアンマネージメモリに配置されており、別のメモリ位置に移動することは想定されていません。 Visual Studio と .NET Framework には、これらのマネージコンポーネントとアンマネージコンポーネントの相互作用を制御するツールが用意されています。 マネージコードの詳細については、「[共通言語ランタイム](../../../standard/clr.md)」を参照してください。
 
-.NET アプリケーションで COM オブジェクトを使用するだけでなくすることも Visual Basic を使用して、COM 経由のアンマネージ コードからアクセスできるオブジェクトを開発するには
+.NET アプリケーションで COM オブジェクトを使用するだけでなく、Visual Basic を使用して、COM を介してアンマネージコードからアクセスできるオブジェクトを開発することもできます。
 
-このページのリンクでは、COM と .NET Framework のオブジェクト間の相互作用の詳細を提供します。
+このページのリンクを使用すると、COM オブジェクトと .NET Framework オブジェクトの間の相互作用についての詳細が表示されます。
 
 ## <a name="related-sections"></a>関連項目
 
 | | |
 |---------|---------|
-| [COM 相互運用](../../../visual-basic/programming-guide/com-interop/index.md) | COM オブジェクト、ActiveX コントロール、Win32 の Dll、管理対象のオブジェクト、および COM オブジェクトの継承をなど、Visual Basic における COM 相互運用性を説明するトピックへのリンクを提供します。 |
-| [アンマネージ コードとの相互運用](../../../framework/interop/index.md) | 簡単な説明、マネージとアンマネージ コード間の相互作用の問題の一部と、詳細情報へのリンクを示します。 |
-| [COM ラッパー](../../../framework/interop/com-wrappers.md) | マネージ コードから COM メソッドを呼び出すには、ランタイム呼び出し可能ラッパーを .NET オブジェクトのメソッドを呼び出す COM クライアントを許可する COM 呼び出し可能ラッパーについて説明します。 |
-| [高度な COM 相互運用性](../../../framework/interop/index.md) | ラッパー、例外、継承、スレッド処理、イベント、変換、およびマーシャ リングに対して COM 相互運用性を説明するトピックへのリンクを提供します。 |
-| [Tlbimp.exe (タイプ ライブラリ インポーター)](../../../framework/tools/tlbimp-exe-type-library-importer.md) | 共通言語ランタイム アセンブリで等価な定義に COM タイプ ライブラリ内で見つかった種類の定義の変換に使用できるツールについて説明します。 |
+| [COM 相互運用](../../../visual-basic/programming-guide/com-interop/index.md) | Com オブジェクト、ActiveX コントロール、Win32 Dll、マネージオブジェクト、COM オブジェクトの継承など、Visual Basic の COM 相互運用性に関するトピックへのリンクを示します。 |
+| [アンマネージ コードとの相互運用](../../../framework/interop/index.md) | マネージコードとアンマネージコードの間の相互作用の問題について簡単に説明し、さらに学習するためのリンクを示します。 |
+| [COM ラッパー](../../../standard/native-interop/com-wrappers.md) | マネージコードが COM メソッドを呼び出すことができるランタイム呼び出し可能ラッパー、および com クライアントが .NET オブジェクトメソッドを呼び出すことができるようにする COM 呼び出し可能ラッパーについて説明します。 |
+| [高度な COM 相互運用性](../../../framework/interop/index.md) | ラッパー、例外、継承、スレッド処理、イベント、変換、およびマーシャリングに関して、COM の相互運用性に関するトピックへのリンクを示します。 |
+| [Tlbimp.exe (タイプ ライブラリ インポーター)](../../../framework/tools/tlbimp-exe-type-library-importer.md) | COM タイプライブラリ内の型定義を共通言語ランタイムアセンブリで等価な定義に変換するために使用できるツールについて説明します。 |
