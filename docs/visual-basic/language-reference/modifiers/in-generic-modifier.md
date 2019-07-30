@@ -48,5 +48,5 @@ ms.locfileid: "61802473"
   
 ## <a name="see-also"></a>関連項目
 
-- [ジェネリック インターフェイスの分散](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [ジェネリック インターフェイスの変性](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
 - [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
