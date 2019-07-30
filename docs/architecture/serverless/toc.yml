@@ -1,0 +1,35 @@
+- name: サーバーレス アプリの電子書籍
+  href: index.md
+  items:
+    - name: アーキテクチャのアプローチ
+      href: architecture-approaches.md
+      items:
+        - name: アーキテクチャのデプロイ方法
+          href: architecture-deployment-approaches.md
+    - name: サーバーレス アーキテクチャ
+      href: serverless-architecture.md
+      items:
+        - name: サーバーレス アーキテクチャの考慮事項
+          href: serverless-architecture-considerations.md
+        - name: サーバーレス設計の例
+          href: serverless-design-examples.md
+    - name: Azure のサーバーレス プラットフォーム
+      href: azure-serverless-platform.md
+      items:
+        - name: Azure Functions
+          href: azure-functions.md
+        - name: Application Insights
+          href: application-insights.md
+        - name: Azure Logic Apps
+          href: logic-apps.md
+        - name: Azure Event Grid
+          href: event-grid.md
+    - name: 永続的な Azure Functions
+      href: durable-azure-functions.md
+      items:
+        - name: オーケストレーションのパターン
+          href: orchestration-patterns.md
+    - name: サーバーレスのビジネス シナリオとユース ケース
+      href: serverless-business-scenarios.md
+    - name: まとめ
+      href: serverless-conclusion.md
