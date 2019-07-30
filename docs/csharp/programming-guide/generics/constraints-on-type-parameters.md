@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 44ab9766bead15c97a1397ef1f47de75f72643a3
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: f09f93f27aa4f50cfb7e09b9d6d4f98f22e1ac9a
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423543"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433552"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>型パラメーターの制約 (C# プログラミング ガイド)
 
@@ -22,7 +22,7 @@ ms.locfileid: "66423543"
 |----------------|-----------------|
 |`where T : struct`|この型引数は値の型である必要があります。 <xref:System.Nullable%601> を除く任意の値の型を指定できます。 null 許容型の詳細については、「[null 許容型](../nullable-types/index.md)」をご覧ください。|
 |`where T : class`|この型引数は参照型である必要があります。 この制約は、任意のクラス、インターフェイス、デリゲート、または配列型にも適用されます。|
-|`where T : unmanaged`|この型引数は、参照型である必要はなく、任意の入れ子のレベルに参照型メンバーを含める必要はありません。|
+|`where T : unmanaged`|この型引数は[アンマネージド型](../../language-reference/builtin-types/unmanaged-types.md)である必要があります。|
 |`where T : new()`|この型引数には、パラメーターなしのパブリック コンストラクターが必要です。 `new()` 制約を別の制約と併用する場合、この制約を最後に指定する必要があります。|
 |`where T :` *\<基底クラス名>*|この型引数は、指定された基底クラスであるか、そのクラスから派生している必要があります。|
 |`where T :` *\<インターフェイス名>*|この型引数は、指定されたインターフェイスであるか、そのインターフェイスを実装している必要があります。 複数のインターフェイス制約を指定することができます。 制約のインターフェイスを汎用的にすることもできます。|
@@ -78,7 +78,7 @@ ms.locfileid: "66423543"
 
 ## <a name="unmanaged-constraint"></a>アンマネージド制約
 
-C# 7.3 以降、`unmanaged` 制約を指定して、型パラメーターが **アンマネージド制約**である必要があることを指定できます。 **アンマネージド型**は参照型ではない型であり、任意の入れ子のレベルに参照型フィールドを含みません。 `unmanaged` 制約では、次の例のように、メモリのブロックとして操作できる型を処理する再利用可能なルーチンを記述できます。
+C# 7.3 以降、`unmanaged` 制約を指定して、型パラメーターが [アンマネージド制約](../../language-reference/builtin-types/unmanaged-types.md)である必要があることを指定できます。 `unmanaged` 制約では、次の例のように、メモリのブロックとして操作できる型を処理する再利用可能なルーチンを記述できます。
 
 [!code-csharp[using the unmanaged constraint](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#15)]
 

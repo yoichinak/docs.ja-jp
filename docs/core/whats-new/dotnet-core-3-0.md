@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 06/14/2019
-ms.openlocfilehash: a808a35876df8d2f6cee3c240c606b7bd979e9ee
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: b1dd243d754bfc3b682c084820547f6b7846f0ea
+ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539276"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68484656"
 ---
 # <a name="whats-new-in-net-core-30-preview-6"></a>.NET Core 3.0 (Preview 6) の新機能
 
@@ -33,7 +33,7 @@ ms.locfileid: "67539276"
 
 ## <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows インストーラー
 
-Windows 用の MSI インストーラーは、.NET Core 3.0 から変更されました。 SDK インストーラーは、SDK 機能帯リリースのアップグレードを実行するようになります。 機能帯は、バージョン番号の "*パッチ*" セクションの *100* 番台のグループで定義されます。 たとえば、**3.0.*101*** と **3.0.*201*** は 2 つの異なる機能帯のバージョンですが、**3.0.*101*** と **3.0.*199*** は同じ機能帯に含まれます。 また、.NET Core SDK **3.0.*101*** をインストールすると、.NET Core SDK **3.0.*100*** が存在する場合はマシンから削除されます。 同じマシンに .NET Core SDK **3.0.*200*** をインストールすると、.NET Core SDK **3.0.*101*** は削除されません。
+Windows 用の MSI インストーラーは、.NET Core 3.0 から変更されました。 SDK インストーラーは、SDK 機能帯リリースのアップグレードを実行するようになります。 機能帯は、バージョン番号の "*パッチ*" セクションの *100* 番台のグループで定義されます。 たとえば、**3.0._101_** と **3.0._201_** は 2 つの異なる機能帯のバージョンですが、**3.0._101_** と **3.0._199_** は同じ機能帯に含まれます。 また、.NET Core SDK **3.0._101_** をインストールすると、.NET Core SDK **3.0._100_** が存在する場合はマシンから削除されます。 同じマシンに .NET Core SDK **3.0._200_** をインストールすると、.NET Core SDK **3.0._101_** は削除されません。
 
 バージョン管理の詳細については、「[.NET Core をバージョン管理する方法の概要](../versions/index.md)」を参照してください。
 

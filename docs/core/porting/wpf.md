@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/27/2019
 ms.custom: ''
-ms.openlocfilehash: 5c7e3aca0a473abb831693244d1b194985f2ef7f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 9885f666e68b795b9b6aba9cf31f9750e30fd170
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59342207"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512281"
 ---
 # <a name="how-to-port-a-wpf-desktop-app-to-net-core"></a>方法: WPF デスクトップ アプリを .NET Core に移植する
 
@@ -25,6 +25,9 @@ ms.locfileid: "59342207"
 | **MyWPFCore.csproj** | 作成する新しい .NET Core プロジェクトの名前。 |
 | **MyAppCore.exe** | .NET Core WPF アプリの実行可能ファイル。 |
 
+>[!IMPORTANT]
+>この記事では C# をターゲット言語として使用しますが、VB.NET でも手順は同じです。ただし、VB.NET では、 *.csproj* ファイルと *.cs* ファイルの代わりに、それぞれ *.vbproj* ファイルと *.vb* ファイルを使用します。
+
 ## <a name="prerequisites"></a>必須コンポーネント
 
 - 実行したいデザイナー作業用の [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。
@@ -34,11 +37,10 @@ ms.locfileid: "59342207"
   - .NET クロスプラットフォーム開発
 
 - 問題なくビルドされて実行されているソリューション内の作業用 WPF プロジェクト。
-- プロジェクトは C# でコーディングされている必要があります。 
 - 最新の [.NET Core 3.0](https://aka.ms/netcore3download) のプレビューをインストールします。
 
 >[!NOTE]
->**Visual Studio 2017** では、.NET Core 3.0 プロジェクトはサポートされていません。 **Visual Studio 2019** では .NET Core 3.0 プロジェクトはサポートされていますが、.NET Core 3.0 WPF プロジェクト用のビジュアル デザイナーはまだサポートされていません。 ビジュアル デザイナーを使用するには、.NET Core プロジェクトとそのファイルを共有するソリューション内に .NET WPF プロジェクトを配置する必要です。
+>**Visual Studio 2017** では、.NET Core 3.0 プロジェクトはサポートされていません。 **Visual Studio 2019** では .NET Core 3.0 プロジェクトがサポートされますが、.NET Core WPF ビジュアル デザイナーのサポートは制限されています。 完全にサポートされるビジュアル デザイナーを使用するには、.NET Core プロジェクトとそのファイルを共有するソリューション内に .NET Framework WPF プロジェクトが必要です。
 
 ### <a name="consider"></a>次の例を考えてみましょう
 
@@ -54,7 +56,7 @@ ms.locfileid: "59342207"
 
 01. [Windows 互換機能パック][compat-pack]が移行に役立つ可能性がある。
 
-    .NET Framework で利用できる一部の API は、.NET Core 3.0 では利用できません。 [Windows 互換機能パック][compat-pack]によって多数の API が追加され、WPF アプリに .NET Core との互換性を持たせるために役立つ可能性があります。
+    .NET Framework で利用できる一部の API は、.NET Core 3.0 では利用できません。 [Windows 互換機能パック][compat-pack]によってその多くの API が追加され、WPF アプリに .NET Core との互換性を持たせるために役立つ可能性があります。
 
 01. 自分のプロジェクトで使用されている NuGet パッケージを更新する。
 
@@ -218,10 +220,10 @@ dotnet add .\MyWPFAppCore\MyWPFCore.csproj package Microsoft.Windows.Compatibili
 この記事で説明したように、Visual Studio 2019 では、.NET Framework プロジェクトでのみ WPF デザイナーがサポートされます。 サイドバイサイドの .NET Core プロジェクトを作成することで、.NET Framework プロジェクトを使用してフォームをデザインしながら、.NET Core でプロジェクトをテストできます。 ソリューション ファイルには、.NET Framework と .NET Core の両方のプロジェクトが含まれます。 .NET Framework プロジェクトにフォームとコントロールを追加してデザインし、.NET Core プロジェクトに追加されたファイルの glob パターンに基づいて、新しいファイルまたは変更されたファイルが、.NET Core プロジェクトに自動的に追加されます。
 
 Visual Studio 2019 で WPF デザイナーがサポートされるようになったら、.NET Core プロジェクト ファイルの内容を .NET Framework プロジェクト ファイルにコピーして貼り付けることができます。 その後、`<Source>` と `<EmbeddedResource>` 項目を使用して追加されたファイルの glob パターンを削除します。 アプリで使用されるすべてのプロジェクト参照のパスを修正します。 これにより、.NET Framework プロジェクトが .NET Core プロジェクトに効率的にアップグレードされます。
- 
+
 ## <a name="next-steps"></a>次の手順
 
-* [Windows 互換機能パック][compat-pack]の詳細を確認する。
-* .NET Framework WPF プロジェクトの .NET Core への[移植に関するビデオ](https://www.youtube.com/watch?v=5MomsgkWkVw&list=PLS__JrkRveTMiWxG-Lv4cBwYfMQ6m2gmt)を視聴する。
+- [Windows 互換機能パック][compat-pack]の詳細を確認する。
+- .NET Framework WPF プロジェクトの .NET Core への[移植に関するビデオ](https://www.youtube.com/watch?v=5MomsgkWkVw&list=PLS__JrkRveTMiWxG-Lv4cBwYfMQ6m2gmt)を視聴する。
 
 [compat-pack]: windows-compat-pack.md

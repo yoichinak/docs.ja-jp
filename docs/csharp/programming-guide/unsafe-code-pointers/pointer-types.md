@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 59846affb1eea5bd9d6a80c623eab5e3aa9db87c
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 704af9aae23571abdb82ae851066e3c03dbe7161
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661083"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433541"
 ---
 # <a name="pointer-types-c-programming-guide"></a>ポインター型 (C# プログラミング ガイド)
 
@@ -21,16 +21,7 @@ type* identifier;
 void* identifier; //allowed but not recommended
 ```
 
-ポインター型の `*` の前に指定された型は、**参照型**と呼ばれます。 次の型はいずれも参照型になります。
-
-- 任意の整数型: [sbyte](../../language-reference/builtin-types/integral-numeric-types.md)、[byte](../../language-reference/builtin-types/integral-numeric-types.md)、[short](../../language-reference/builtin-types/integral-numeric-types.md)、[ushort](../../language-reference/builtin-types/integral-numeric-types.md)、[int](../../language-reference/builtin-types/integral-numeric-types.md)、[uint](../../language-reference/builtin-types/integral-numeric-types.md)、[long](../../language-reference/builtin-types/integral-numeric-types.md)、[ulong](../../language-reference/builtin-types/integral-numeric-types.md)。
-- 任意の浮動小数点型: [float](../../language-reference/builtin-types/floating-point-numeric-types.md)、[double](../../language-reference/builtin-types/floating-point-numeric-types.md)。
-- [char](../../language-reference/keywords/char.md)。
-- [bool](../../language-reference/keywords/bool.md)。
-- [decimal](../../language-reference/builtin-types/floating-point-numeric-types.md)。
-- 任意の[列挙](../../language-reference/keywords/enum.md)型。
-- 任意のポインター型。 `void**` などの式を使用できます。
-- アンマネージ型のフィールドのみを含むユーザー定義の struct 型。
+ポインター型の `*` の前に指定された型は、**参照型**と呼ばれます。 参照型にできるのは[アンマネージド型](../../language-reference/builtin-types/unmanaged-types.md)だけです。
 
 ポインター型は [object](../../language-reference/keywords/object.md) を継承せず、ポインター型と `object` の間で変換を行う方法はありません。 また、ボックス化とボックス化解除もポインターをサポートしません。 ただし、異なるポインター型の間で変換したり、ポインター型と整数型の間で変換したりすることはできます。
 

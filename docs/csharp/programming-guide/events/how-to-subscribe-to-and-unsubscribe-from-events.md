@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 365ea55a112a4a04964a8271f2f7e5591a3b0d5d
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 777eb3be5cbefe0a136bf49f826ad67685a8456d
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301038"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401076"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>方法: イベント サブスクリプションとサブスクリプションの解除 (C# プログラミング ガイド)
 別のクラスによってパブリッシュされるイベントが発生したときに呼び出されるカスタム コードを作成するときは、そのイベントをサブスクライブします。 たとえば、ユーザーがボタンをクリックしたらアプリケーションで何かを行うには、ボタンの `click` イベントをサブスクライブします。  
@@ -58,19 +58,18 @@ ms.locfileid: "66301038"
     publisher.RaiseCustomEvent += new CustomEventHandler(HandleCustomEvent);  
     ```  
   
-     イベント ハンドラーは、ラムダ式を使って追加することもできます。  
+     また、[ラムダ式](../statements-expressions-operators/lambda-expressions.md)を使用してイベント ハンドラーを指定することもできます。
   
     ```csharp
     public Form1()  
     {  
         InitializeComponent();  
-        // Use a lambda expression to define an event handler.  
-        this.Click += (s,e) => { MessageBox.Show(  
-           ((MouseEventArgs)e).Location.ToString());};  
+        this.Click += (s,e) =>
+            {
+                MessageBox.Show(((MouseEventArgs)e).Location.ToString());
+            };
     }  
     ```  
-  
-     詳細については、「[方法 :LINQ 以外でラムダ式を使用する](../../../csharp/programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md)」をご覧ください。  
   
 ### <a name="to-subscribe-to-events-by-using-an-anonymous-method"></a>匿名メソッドを使ってイベントをサブスクライブするには  
   
