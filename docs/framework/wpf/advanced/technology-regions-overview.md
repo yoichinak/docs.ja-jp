@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability [WPF], airspace
 - Win32 code [WPF], window regions
 ms.assetid: b7cc350f-b9e2-48b1-be14-60f3d853222e
-ms.openlocfilehash: e2c93f4471db2d72851a5d5bd8806b59a3e5ee28
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a169064052a567694b1cbd1e2f8ac2f00b047a68
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629862"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671831"
 ---
 # <a name="technology-regions-overview"></a>技術領域の概要
 WPF、Win32、DirectX などのアプリケーションで複数のプレゼンテーションテクノロジが使用されている場合は、一般的なトップレベルウィンドウ内でレンダリング領域を共有する必要があります。 このトピックでは、WPF 相互運用アプリケーションのプレゼンテーションと入力に影響する可能性がある問題について説明します。  
@@ -52,13 +52,13 @@ WPF、Win32、DirectX などのアプリケーションで複数のプレゼン�
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]HRGNs をサポートします。ただし、この機能にはマネージ Api はありません。 プラットフォーム呼び出しおよびを使用し<xref:System.Windows.Interop.HwndSource>て、関連[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]する api を呼び出すことができます。 詳細については、「[マネージコードからのネイティブ関数の呼び出し](/cpp/dotnet/calling-native-functions-from-managed-code)」を参照してください。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]階層化されたウィンドウの機能は、オペレーティングシステムによって異なります。 これは、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]が directx を使用してレンダリングするためです。また[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 、レイヤーウィンドウは、主に directx レンダリングではなくレンダリング用に設計されています。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]階層化されたウィンドウの機能は、オペレーティングシステムによって異なります。 これは、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]が directx を使用してレンダリングするためです。また、レイヤー化されたウィンドウは、主に directx レンダリングではなく GDI レンダリング用に設計されています。  
   
 - [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]以降では、ハードウェアアクセラレータ[!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)]によるレイヤードウィンドウをサポートしています。 ハードウェアアクセラレータに[!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)]よるレイヤードウィンドウは、microsoft directx のサポートを必要とします。そのため、機能は、そのコンピューター上の microsoft directx のバージョンによって異なります。  
   
 - [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]は透明色キーをサポートして[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]いません。これは、特にレンダリングがハードウェアアクセラレータを使用する場合に、要求した色が正確にレンダリングされることを保証できないためです。  
   
-- アプリケーションがで[!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)]実行されている場合、directx アプリケーションがレンダリングされると、directx サーフェイス上のレイヤードウィンドウがちらつきます。  (実際のレンダリングシーケンスでは[!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] 、レイヤードウィンドウが非表示になり、DirectX が[!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)]描画された後、レイヤーウィンドウが戻ります)。  階層化[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]されていないウィンドウにもこの制限があります。  
+- アプリケーションがで[!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)]実行されている場合、directx アプリケーションがレンダリングされると、directx サーフェイス上のレイヤードウィンドウがちらつきます。  (実際の表示順序は、Microsoft Windows グラフィックスデバイスインターフェイス (GDI) によってレイヤードウィンドウが非表示になり、DirectX が描画され、Microsoft Windows グラフィックスデバイスインターフェイス (GDI) によって階層化されたウィンドウが元に戻されるということです。  階層化[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]されていないウィンドウにもこの制限があります。  
   
 ## <a name="see-also"></a>関連項目
 

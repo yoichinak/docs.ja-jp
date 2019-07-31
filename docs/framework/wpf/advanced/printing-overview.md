@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 31574df75ebd8ecde11f45dbcce86550bbb8c107
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 4f8fd92105bd5ae09e0c1daa2e0db48b74cde77c
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629688"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68672039"
 ---
 # <a name="printing-overview"></a>印刷の概要
 Microsoft .NET Framework を使用すると、Windows Presentation Foundation (WPF) を使用するアプリケーション開発者は、豊富な新しい印刷および印刷システム管理 Api を利用できます。 また、[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] によって、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] アプリケーションを作成する開発者と、アンマネージ コードを使用する開発者も、これらの印刷システム拡張機能の一部を使用できます。 この新しい機能の中核となるのが、新しい [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] ファイル形式と [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 印刷パスです。  
@@ -39,7 +39,7 @@ Microsoft .NET Framework を使用すると、Windows Presentation Foundation (W
   
  Xps 印刷パスは xps プリンタードライバーモデル (XPSDrv) に基づいて構築されています。これにより[!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)] 、印刷、カラーサポートの向上、および大幅に改善された印刷パフォーマンスなど、開発者にとっていくつかの利点が得られます。 (XPSDrv の詳細については、 [Windows Driver Kit のドキュメント](/windows-hardware/drivers/)を参照してください)。  
   
- XPS ドキュメントの印刷スプーラの操作は、基本的に以前のバージョンの Windows と同じです。 ただし、既存[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]の印刷パスに加えて XPS 印刷パスをサポートするように強化されています。 新しい印刷パスは、ネイティブで XPS スプールファイルを使用します。 以前のバージョンの用に記述されたユーザー [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]モードのプリンタードライバーは引き続き機能しますが、xps 印刷パスを使用するには xps プリンタードライバー (XPSDrv) が必要です。  
+ XPS ドキュメントの印刷スプーラの操作は、基本的に以前のバージョンの Windows と同じです。 ただし、既存の GDI 印刷パスに加えて XPS 印刷パスをサポートするように強化されています。 新しい印刷パスは、ネイティブで XPS スプールファイルを使用します。 以前のバージョンの用に記述されたユーザー [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]モードのプリンタードライバーは引き続き機能しますが、xps 印刷パスを使用するには xps プリンタードライバー (XPSDrv) が必要です。  
   
  XPS 印刷パスの利点は、次のとおりです。  
   
@@ -60,9 +60,9 @@ Microsoft .NET Framework を使用すると、Windows Presentation Foundation (W
 - 拡張可能なフィルター パイプライン。 XPS プリンタードライバー (XPSDrv) フィルターパイプラインは、XPS ドキュメントの直接およびスケーラブルな印刷を有効にするように設計されています。 詳細については、「 [XPSDrv Printer Drivers](/windows-hardware/drivers/print/xpsdrv-printer-drivers)」を参照してください。 
   
 ### <a name="print-path-architecture"></a>印刷パスのアーキテクチャ  
- と .NET Framework [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]の両方のアプリケーションで xps [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]がサポートされます[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]が、Windows フォームのアプリケーションは xps プリンタードライバー (XPSDrv) 用の xps 形式のコンテンツを作成するために xps 変換を使用します。 これらのアプリケーションは XPS 印刷パスを使用する必要がなく、拡張メタファイル (EMF) ベースの印刷を引き続き使用できます。 ただし、ほとんどの XPS 機能と拡張機能は、XPS 印刷パスを対象とするアプリケーションでのみ使用できます。  
+ と .NET Framework [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]の両方のアプリケーションで xps [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]がサポートされますが、Windows フォームアプリケーションでは、xps プリンタードライバー (XPSDrv) 用の xps 形式のコンテンツを作成するために、GDI から xps への変換を使用します。 これらのアプリケーションは XPS 印刷パスを使用する必要がなく、拡張メタファイル (EMF) ベースの印刷を引き続き使用できます。 ただし、ほとんどの XPS 機能と拡張機能は、XPS 印刷パスを対象とするアプリケーションでのみ使用できます。  
   
- および Windows フォームアプリケーションで[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] XPSDrv ベースのプリンターを使用できるようにするために、xps プリンタードライバー (XPSDrv) は xps 形式への[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]変換をサポートしています。 XPSDrv モデルでは、 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]アプリケーションがドキュメントを印刷[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]できるように、XPS 形式のコンバーターも提供されています。 アプリケーション[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]の場合、XPS から形式[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]への変換<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>は、書き込み操作の対象の<xref:System.Windows.Xps.XpsDocumentWriter>印刷キューに XPSDrv ドライバーがない場合に、クラスのメソッドと<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>メソッドによって自動的に行われます。 (Windows フォームアプリケーションはドキュメント[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]を印刷できません。)  
+ および Windows フォームアプリケーションで[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] XPSDrv ベースのプリンターを使用できるようにするために、xps プリンタードライバー (XPSDrv) は、GDI から xps 形式への変換をサポートしています。 XPSDrv モデルでは、 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]アプリケーションがドキュメントを印刷[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]できるように、XPS から GDI 形式のコンバーターも提供されています。 アプリケーション[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]の場合、XPS 形式から GDI 形式への変換は、書き込み<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>操作の対象<xref:System.Windows.Xps.XpsDocumentWriter>の印刷キューに XPSDrv ドライバーがない場合は常に、クラスのメソッド<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>とメソッドによって自動的に行われます。 (Windows フォームアプリケーションはドキュメント[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]を印刷できません。)  
   
  次の図は、印刷サブシステムを示し、によっ[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]て提供される部分と、ソフトウェアとハードウェアのベンダーによって定義される部分を定義しています。  
   
@@ -106,17 +106,17 @@ Microsoft .NET Framework を使用すると、Windows Presentation Foundation (W
   
 <a name="GDI_Print_Path_intro"></a>   
 ## <a name="gdi-print-path"></a>GDI 印刷パス  
- アプリケーションでは xps 印刷[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]パスがネイティブにサポートされていますが、Windows フォームアプリケーションも一部の xps 機能を利用できます。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Xps プリンタードライバー (XPSDrv) は、ベース[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]の出力を xps 形式に変換できます。 高度なシナリオでは、 [MICROSOFT XPS Document Converter (MXDC)](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-)を使用して、コンテンツのカスタム変換がサポートされます。 同様に[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 、アプリケーションで<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>は、 <xref:System.Windows.Xps.XpsDocumentWriter>クラス[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]のメソッドまたは<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>メソッドのいずれかを呼び出して、XpsDrv 以外のプリンターをターゲットの印刷キューとして指定することによって、印刷パスに出力することもできます。  
+ アプリケーションでは xps 印刷[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]パスがネイティブにサポートされていますが、Windows フォームアプリケーションも一部の xps 機能を利用できます。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] XPS プリンタードライバー (XPSDrv) は、GDI ベースの出力を XPS 形式に変換できます。 高度なシナリオでは、 [MICROSOFT XPS Document Converter (MXDC)](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-)を使用して、コンテンツのカスタム変換がサポートされます。 同様に[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 、アプリケーションで<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>は、 <xref:System.Windows.Xps.XpsDocumentWriter>クラスのメソッドまたは<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>メソッドのいずれかを呼び出し、XpsDrv 以外のプリンターをターゲットの印刷キューとして指定することによって、GDI 印刷パスに出力することもできます。  
 
-XPS の機能やサポートを必要としないアプリケーションでは[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 、現在の印刷パスは変更されません。  
+XPS の機能やサポートを必要としないアプリケーションでは、現在の GDI 印刷パスは変更されません。  
   
-- [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]印刷パスおよびさまざまな xps 変換オプションに関するその他の参照資料については、「 [Microsoft xps Document Converter (mxdc)](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-) 」および「 [XPSDrv Printer Drivers](/windows-hardware/drivers/print/xpsdrv-printer-drivers)」を参照してください。  
+- GDI 印刷パスおよびさまざまな XPS 変換オプションに関するその他の参照情報については、「 [MICROSOFT Xps Document Converter (MXDC)](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-) 」および「 [XPSDrv プリンタードライバー](/windows-hardware/drivers/print/xpsdrv-printer-drivers)」を参照してください。  
   
 <a name="XPS_Driver_Model_intro"></a>   
 ## <a name="xpsdrv-driver-model"></a>XPSDrv ドライバー モデル  
  Xps 印刷パスを使用すると、xps 対応のプリンターまたはドライバーに印刷するときに、ネイティブの印刷スプール形式として XPS を使用することでスプーラの効率性が向上します。 簡略化されたスプールプロセスにより、ドキュメントをスプールする前に、EMF データファイルなどの中間スプールファイルを生成する必要がなくなります。 スプールファイルのサイズを小さくすることで、XPS の印刷パスを使用してネットワークトラフィックを削減し、印刷のパフォーマンスを向上させることができます。  
   
- EMF は、アプリケーション出力を、レンダリングサービス[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]のための一連の呼び出しとして表すクローズ形式です。 EMF とは異なり、XPS スプール形式は、XPS ベースのプリンタードライバー (XPSDrv) に出力するときに、さらに解釈する必要なく、実際のドキュメントを表します。 ドライバーは、その形式のデータを直接操作できます。 この機能により、EMF ファイルと[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]ベースの印刷ドライバーを使用するときに必要なデータと色空間の変換が不要になります。  
+ EMF は、アプリケーションの出力を、レンダリングサービスの GDI への一連の呼び出しとして表すクローズ形式です。 EMF とは異なり、XPS スプール形式は、XPS ベースのプリンタードライバー (XPSDrv) に出力するときに、さらに解釈する必要なく、実際のドキュメントを表します。 ドライバーは、その形式のデータを直接操作できます。 この機能により、EMF ファイルおよび GDI ベースの印刷ドライバーを使用するときに必要なデータと色空間の変換が不要になります。  
   
  通常は、XPS プリンタードライバー (XPSDrv) を対象とする XPS ドキュメントを EMF と同等のものと比較すると、スプールファイルのサイズが小さくなります。ただし、例外があります。  
   

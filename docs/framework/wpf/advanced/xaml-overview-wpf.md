@@ -19,19 +19,20 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: 4f3d8a9f275a41b96b6518d63552ce9873cca0fb
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: ee5318b8ba1284f2805b80b3e41fab3ae739158c
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400820"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68672006"
 ---
 # <a name="xaml-overview-wpf"></a>XAML の概要 (WPF)
+
 このトピックでは、xaml 言語の機能について説明し、xaml を使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]してアプリケーションを記述する方法を示します。 このトピックでは、によっ[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]て実装される XAML について説明します。 XAML 自体は、よりも[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]大きな言語の概念です。  
 
 <a name="what_is_xaml"></a>   
 ## <a name="what-is-xaml"></a>XAML とは  
- XAML は、宣言型マークアップ言語です。 .NET Framework プログラミングモデルに適用されているように、 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] XAML を使用すると、.NET Framework アプリケーションのを簡単に作成できます。 宣言型の XAML [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]マークアップで可視要素を作成し、分離コード[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]ファイルを使用して、その定義をランタイムロジックから分離します。これは、部分クラス定義を通じてマークアップに結合されます。 XAML は、アセンブリで定義されている特定のバッキング型のセットに含まれるオブジェクトのインスタンス化を直接表します。 これは、多くの他のマークアップ言語とは異なります。通常、これは、バッキング型システムに直接関連付けることなく、解釈される言語です。 XAML を使用すると、独立したパーティが[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 、異なるツールを使用して、アプリケーションのロジックを操作できるワークフローを有効にすることができます。  
+ XAML は、宣言型マークアップ言語です。 .NET Framework プログラミングモデルに適用されているように、 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] XAML を使用すると、.NET Framework アプリケーションのを簡単に作成できます。 宣言型の XAML [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]マークアップで可視要素を作成し、部分クラス[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]定義を通じてマークアップに結合された分離コードファイルを使用して、ランタイムロジックから定義を分離することができます。 XAML は、アセンブリで定義されている特定のバッキング型のセットに含まれるオブジェクトのインスタンス化を直接表します。 これは、多くの他のマークアップ言語とは異なります。通常、これは、バッキング型システムに直接関連付けることなく、解釈される言語です。 XAML を使用すると、独立したパーティが[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 、異なるツールを使用して、アプリケーションのロジックを操作できるワークフローを有効にすることができます。  
   
  XAML ファイルは、テキストとして表現された場合、 `.xaml`通常は拡張子を持つ XML ファイルです。 ファイルは任意の XML エンコーディングでエンコードできますが、UTF-8 としてエンコードするのが一般的です。  
   
@@ -104,7 +105,7 @@ ms.locfileid: "68400820"
   
  XAML 言語の規則として、XAML コンテンツプロパティの値は、そのオブジェクト要素の他のプロパティ要素の前または全体のいずれかに指定する必要があります。 たとえば、次のマークアップはコンパイルされません。  
   
-```  
+```xaml
 <Button>I am a   
   <Button.Background>Blue</Button.Background>  
   blue button</Button>  
@@ -188,7 +189,7 @@ ms.locfileid: "68400820"
  [!code-xaml[XAMLOvwSupport#MarginVerbose](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#marginverbose)]  
   
 > [!NOTE]
->  型自体にパラメーターなしのコンストラクターがないため、型変換がサブクラスを使用せずにその型にプロパティを設定する唯一のパブリックな方法であるオブジェクトの数も制限されています。 たとえば、の<xref:System.Windows.Input.Cursor>ようになります。  
+> 型自体にパラメーターなしのコンストラクターがないため、型変換がサブクラスを使用せずにその型にプロパティを設定する唯一のパブリックな方法であるオブジェクトの数も制限されています。 たとえば、の<xref:System.Windows.Input.Cursor>ようになります。  
   
  型変換と属性構文の使用方法の詳細については、「 [TypeConverters AND XAML](typeconverters-and-xaml.md)」を参照してください。  
   
@@ -228,7 +229,7 @@ ms.locfileid: "68400820"
   
  次に、XAML マークアップでのカスタムプレフィックスの動作の基本的な例を示します。 プレフィックス`custom`は、ルート要素タグで定義され、アプリケーションでパッケージ化され、使用可能な特定のアセンブリにマップされます。 このアセンブリには型`NumericUpDown`が含まれています。この型は、xaml の一般的な使用をサポートするために実装されています。また、WPF xaml コンテンツモデルの特定のポイントで挿入を許可するクラスの継承を使用することもできます。 この`NumericUpDown`コントロールのインスタンスは、オブジェクト要素として宣言されます。これは、xaml パーサーがどの xaml 名前空間に型が含まれているかを認識し、そのためバッキングアセンブリに型定義が含まれていることを示します。  
   
-```  
+```xaml
 <Page  
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"   
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"   

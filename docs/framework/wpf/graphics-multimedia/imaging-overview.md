@@ -21,25 +21,25 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: d1fcf15db750167a93344ff8efd5957933bed6c0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: b6fb530bbc4132b09cc17ad692e6e9e23cd75598
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629850"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671851"
 ---
 # <a name="imaging-overview"></a>イメージングの概要
 このトピックでは、[!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)] の概要を説明します。 開発者は、[!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] を使用して、イメージの表示、変換、および形式設定を実行できます。  
 
 <a name="_wpfImaging"></a>   
 ## <a name="wpf-imaging-component"></a>WPF Imaging Component  
- [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] は、[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 内のイメージング機能を大幅に強化します。 ビットマップの表示や一般的なコントロールでのイメージの使用などのイメージング機能は、これまでは [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] または [!INCLUDE[TLA#tla_gdiplus](../../../../includes/tlasharptla-gdiplus-md.md)] ライブラリに頼っていました。 これらの API は、ベースラインイメージング機能を提供しますが、コーデック拡張機能や忠実度の高いイメージのサポートなどの機能を備えていません。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]は、および[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)]の欠点を克服するように設計されており、アプリケーション内でイメージを表示および使用するための新しい API のセットを提供します。  
+ [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] は、[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 内のイメージング機能を大幅に強化します。 ビットマップの表示や一般的なコントロールでのイメージの使用などのイメージング機能は、以前は Microsoft Windows グラフィックスデバイスインターフェイス (GDI) または Microsoft Windows GDI + ライブラリに依存していました。 これらの API は、ベースラインイメージング機能を提供しますが、コーデック拡張機能や忠実度の高いイメージのサポートなどの機能を備えていません。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]は、GDI と GDI + の欠点を克服し、アプリケーション内でイメージを表示して使用するための新しい API のセットを提供するように設計されています。  
   
  [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] API にアクセスするには、マネージコンポーネントとアンマネージコンポーネントの2つの方法があります。 アンマネージ コンポーネントは、次の機能を提供します。  
   
 - 新規または独自のイメージ形式の機能拡張モデル。  
   
-- ビットマップ (BMP)、 [!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)] [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)] [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]、 [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)]、、、、およびアイコン (.ico) を含むネイティブイメージ形式のパフォーマンスとセキュリティが向上しました。 [!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)]  
+- ビットマップ (BMP [!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)])、 [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)]、 [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)] [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)]、、、グラフィックスインターチェンジ形式 (GIF)、アイコン (.ico) などのネイティブイメージ形式のパフォーマンスとセキュリティが向上しました。  
   
 - チャネルあたり最大 8 ビットのビット深度の高いイメージ データの保存 (ピクセルあたり 32 ビット)。  
   
@@ -57,11 +57,11 @@ ms.locfileid: "68629850"
   
 <a name="_imageformats"></a>   
 ## <a name="wpf-image-formats"></a>WPF イメージ形式  
- コーデックは、特定のメディア形式をデコードまたはエンコードするために使用されます。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]には、BMP、 [!INCLUDE[TLA2#tla_jpeg](../../../../includes/tla2sharptla-jpeg-md.md)]、 [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)]、 [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)] 、、、およびアイコンイメージ形式のコーデックが含まれています。[!INCLUDE[TLA2#tla_gif](../../../../includes/tla2sharptla-gif-md.md)] アプリケーションは、これらのコーデックを使用して、対応するイメージ形式をデコードでき、ICON を除くイメージ形式をエンコードできます。  
+ コーデックは、特定のメディア形式をデコードまたはエンコードするために使用されます。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]に[!INCLUDE[TLA2#tla_jpeg](../../../../includes/tla2sharptla-jpeg-md.md)]は、BMP、、 [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)]、 [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)]、、GIF、およびアイコンイメージ形式のコーデックが含まれています。 アプリケーションは、これらのコーデックを使用して、対応するイメージ形式をデコードでき、ICON を除くイメージ形式をエンコードできます。  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>は、イメージのデコードとエンコードで使用される重要なクラスです。 それは、[!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] パイプラインの基本ビルディング ブロックであり、ピクセルの単一の定数セットを特定のサイズと解像度で表現します。 には、複数のフレームイメージの個別のフレームを指定する<xref:System.Windows.Media.Imaging.BitmapSource>ことも、に対して実行される変換の結果にすることもできます。<xref:System.Windows.Media.Imaging.BitmapSource> これは、のよう[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] <xref:System.Windows.Media.Imaging.BitmapFrame>なイメージングで使用される主なクラスの多くの親です。  
   
- は<xref:System.Windows.Media.Imaging.BitmapFrame> 、イメージ形式の実際のビットマップデータを格納するために使用されます。 イメージ形式の多くは、1 <xref:System.Windows.Media.Imaging.BitmapFrame>つのをサポートし[!INCLUDE[TLA2#tla_gif](../../../../includes/tla2sharptla-gif-md.md)] [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)]ています。ただし、などの形式では、イメージごとに複数のフレームがサポートされます。 フレームは、デコーダーによって入力データとして使用され、イメージ ファイルを作成するためにエンコーダーに渡されます。  
+ は<xref:System.Windows.Media.Imaging.BitmapFrame> 、イメージ形式の実際のビットマップデータを格納するために使用されます。 多くのイメージ形式でサポートさ<xref:System.Windows.Media.Imaging.BitmapFrame>れるのは1つだけです[!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] 。ただし、GIF などの形式では、イメージごとに複数のフレームがサポートされます。 フレームは、デコーダーによって入力データとして使用され、イメージ ファイルを作成するためにエンコーダーに渡されます。  
   
  次の例は、を<xref:System.Windows.Media.Imaging.BitmapFrame> <xref:System.Windows.Media.Imaging.BitmapSource>から作成[!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)]し、イメージに追加する方法を示しています。  
   
@@ -132,13 +132,13 @@ ms.locfileid: "68629850"
 #### <a name="stretching-images"></a>イメージの引き伸ばし  
  プロパティ<xref:System.Windows.Controls.Image.Stretch%2A>は、コンテナーを埋めるためにイメージをどのように拡大するかを制御します。 プロパティ<xref:System.Windows.Controls.Image.Stretch%2A>は、 <xref:System.Windows.Media.Stretch>列挙体で定義されている次の値を受け入れます。  
   
-- <xref:System.Windows.Media.Stretch.None>:イメージは、出力領域に合わせて拡大されません。 イメージが出力領域よりも大きい場合は、出力領域に収まらない部分がクリップされたイメージが出力領域に描画されます。  
+- <xref:System.Windows.Media.Stretch.None> :イメージは、出力領域に合わせて拡大されません。 イメージが出力領域よりも大きい場合は、出力領域に収まらない部分がクリップされたイメージが出力領域に描画されます。  
   
-- <xref:System.Windows.Media.Stretch.Fill> :イメージは、出力領域に合わせて拡大縮小されます。 イメージの高さと幅は個別に拡大縮小されるため、イメージの元の縦横比は保持されないことがあります。 つまり、イメージは、出力コンテナーを完全に埋めるためにゆがんで表示される可能性があります。  
+- <xref:System.Windows.Media.Stretch.Fill>:イメージは、出力領域に合わせて拡大縮小されます。 イメージの高さと幅は個別に拡大縮小されるため、イメージの元の縦横比は保持されないことがあります。 つまり、イメージは、出力コンテナーを完全に埋めるためにゆがんで表示される可能性があります。  
   
-- <xref:System.Windows.Media.Stretch.Uniform> :イメージは、出力領域内に完全に収まるようにスケーリングされます。 イメージの縦横比は保持されます。  
+- <xref:System.Windows.Media.Stretch.Uniform>:イメージは、出力領域内に完全に収まるようにスケーリングされます。 イメージの縦横比は保持されます。  
   
-- <xref:System.Windows.Media.Stretch.UniformToFill> :イメージは、イメージの元の縦横比を維持したまま、出力領域を完全に塗りつぶすようにスケーリングされます。  
+- <xref:System.Windows.Media.Stretch.UniformToFill>:イメージは、イメージの元の縦横比を維持したまま、出力領域を完全に塗りつぶすようにスケーリングされます。  
   
  次の例では、使用可能<xref:System.Windows.Media.Stretch>な各列挙<xref:System.Windows.Controls.Image>をに適用します。  
   

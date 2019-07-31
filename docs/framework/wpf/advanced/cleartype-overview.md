@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: c9d86cadd5f2115d0214d9a1b1dce7e6682341e0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 405d06a8da8ec5c428c1565bcd08236de0f1fa88
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629731"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68672055"
 ---
 # <a name="cleartype-overview"></a>ClearType の概要
 このトピックでは、 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]で検出された Microsoft の ClearType テクノロジの概要について説明します。  
@@ -19,11 +19,11 @@ ms.locfileid: "68629731"
 ## <a name="technology-overview"></a>テクノロジの概要  
  ClearType は、によって[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]開発されたソフトウェアテクノロジで、ラップトップの画面、Pocket PC の画面、フラットパネルモニターなど、既存の lcd (液晶ディスプレイ) でのテキストの読みやすさを向上させます。  ClearType は、LCD 画面のすべてのピクセルで個々の垂直色のストライプ要素にアクセスすることによって機能します。 ClearType より前は、コンピューターが表示できる最小の詳細レベルは1ピクセルですが、LCD モニターで ClearType が実行されているため、テキストの特徴をピクセルの幅で表示できるようになりました。 解像度が上がるとテキスト表示の微細部の鮮明度が高くなるため、長時間にわたって読んでも苦になりません。  
   
- で[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]使用できる cleartype は、最新世代の cleartype であり、で検出された[!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)]バージョンに対していくつかの機能強化が行われています。  
+ で[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]使用できる cleartype は、Microsoft Windows グラフィックスデバイスインターフェイス (GDI) で見つかったバージョンに対していくつかの機能強化が施された最新世代の cleartype です。  
   
 <a name="sub-pixel_positioning"></a>   
 ## <a name="sub-pixel-positioning"></a>サブピクセル ポジショニング  
- 以前のバージョンの ClearType よりも大幅に改善された点は、サブピクセルの配置を使用することです。 で[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]見つかった cleartype の実装とは異なり、の[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] cleartype では、ピクセルの開始境界だけでなく、ピクセル内でもグリフを開始できます。 グリフの配置の解像度が上がることにより、グリフの間隔や比率の正確さや一貫性が増します。  
+ 以前のバージョンの ClearType よりも大幅に改善された点は、サブピクセルの配置を使用することです。 GDI の cleartype 実装とは異なり、の[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] cleartype では、ピクセルの開始境界だけでなく、ピクセル内でグリフを開始することができます。 グリフの配置の解像度が上がることにより、グリフの間隔や比率の正確さや一貫性が増します。  
   
  次の 2 つの例は、サブピクセル ポジショニングを使用した場合にサブピクセル境界でグリフを開始できることを示しています。 左側の例は、サブピクセルの配置を使用していない以前のバージョンの ClearType レンダラーを使用してレンダリングされます。 右側の例は、サブピクセルの配置を使用して、新しいバージョンの ClearType レンダラーを使用してレンダリングされます。 右側のイメージの **e** と **l** が、それぞれ異なるサブピクセルから開始しているために若干異なってレンダリングされていることに注意してください。 グリフ イメージはハイ コントラストであるため、テキストを標準サイズで画面に表示したときは、この違いはわかりません。 これは、ClearType に組み込まれている高度な色のフィルター処理が原因でのみ可能です。  
   
@@ -37,7 +37,7 @@ ClearType の以前のバージョンと新しいバージョンを使用した�
   
 <a name="y-direction_antialiasing"></a>   
 ## <a name="y-direction-antialiasing"></a>Y 方向のアンチエイリアシング  
- で[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]の ClearType のもう1つの改良点は、y 方向のアンチエイリアシングです。 Y 方向の[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]アンチエイリアシングを使用しないの ClearType では、y 軸ではなく x 軸での解像度が向上しています。 緩やかな曲線部分の上下では、境界がギザギザになって読みにくくなります。  
+ で[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]の ClearType のもう1つの改良点は、y 方向のアンチエイリアシングです。 Y 方向のアンチエイリアシングを使用しない GDI の ClearType では、y 軸ではなく x 軸での解像度が向上しています。 緩やかな曲線部分の上下では、境界がギザギザになって読みにくくなります。  
   
  次の例では、y 方向のアンチエイリアシングを使用しない場合の効果を示します。 この場合、文字の上下で境界がギザギザになっていることがよくわかります。  
   
