@@ -1,0 +1,15 @@
+- name: .NET アプリケーション アーキテクチャ ガイド
+  href: index.yml
+- name: 電子書籍
+  expanded: true
+  items:
+    - name: ASP.NET Core および Microsoft Azure で最新の Web アプリケーションを設計する
+      href: modern-web-apps-azure/
+    - name: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを最新化する
+      href: modernize-with-azure-containers/
+    - name: Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル
+      href: containerized-lifecycle/
+    - name: '.NET マイクロサービス:コンテナー化された .NET アプリケーションのアーキテクチャ'
+      href: microservices/
+    - name: 'サーバーレス アプリ: アーキテクチャ、パターン、および Azure の実装'
+      href: serverless/
