@@ -23,6 +23,8 @@
       href: tutorials/image-classification.md
     - name: 製品売上分析 (異常検出)
       href: tutorials/sales-anomaly-detection.md
+    - name: 画像内のオブジェクトを検出 (オブジェクト検出)
+      href: tutorials/object-detection-onnx.md
 - name: 使い方ガイド
   items:
     - name: データの読み込み
