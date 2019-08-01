@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 743b9ec45c138053fcfcb5cbb1ea9c8490ba919e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 818d013356c3ca8151e9b5bb675bce4726759f6c
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629908"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710347"
 ---
 # <a name="typography-in-wpf"></a>WPF のタイポグラフィ
 このトピックでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の主要な文字体裁の機能について説明します。 これらの機能には、テキスト レンダリングの品質とパフォーマンスの向上、[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 文字体裁のサポート、国際対応テキストの強化、フォントのサポートの強化、新しいテキスト API (アプリケーション プログラミング インターフェイス) が含まれます。  
@@ -73,7 +73,7 @@ ClearType の y 方向アンチエイリアシングを適用したテキスト
 ## <a name="new-text-application-programming-interfaces-apis"></a>新しいテキスト API (アプリケーション プログラミング インターフェイス)  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]には、開発者がアプリケーションにテキストを含めるときに使用するテキスト Api がいくつか用意されています。 これらの Api は、次の3つのカテゴリに分類されます。  
   
-- **レイアウトとユーザー インターフェイス**: [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] に対応した一般的なテキスト コントロールです。  
+- **レイアウトとユーザー インターフェイス**: グラフィカルユーザーインターフェイス (GUI) 用の一般的なテキストコントロール。  
   
 - **軽量テキスト描画**: オブジェクトにテキストを直接描画できます。  
   

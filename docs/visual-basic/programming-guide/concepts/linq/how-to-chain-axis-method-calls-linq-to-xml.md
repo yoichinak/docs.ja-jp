@@ -1,15 +1,15 @@
 ---
-title: '方法: チェーンの軸メソッドの呼び出し (LINQ to XML) (Visual Basic)'
+title: '方法: チェーン軸のメソッド呼び出し (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: e4e22942-39bd-460f-b3c0-9f09e53d3aa9
-ms.openlocfilehash: 2b74bcd9b9b61ddbfddcdbdf4c48af6b2fbd68a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c607915d83c49958e3aa86c9625fa1311a2274b
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855271"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709833"
 ---
-# <a name="how-to-chain-axis-method-calls-linq-to-xml-visual-basic"></a>方法: チェーンの軸メソッドの呼び出し (LINQ to XML) (Visual Basic)
+# <a name="how-to-chain-axis-method-calls-linq-to-xml-visual-basic"></a>方法: チェーン軸のメソッド呼び出し (LINQ to XML) (Visual Basic)
 コードで使用する一般的なパターンでは、軸メソッドを呼び出してから、拡張メソッド軸のいずれかを呼び出します。  
   
  要素のコレクションを返す `Elements` という名前の軸には、<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> メソッドと <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> メソッドの 2 つがあります。 この 2 つの軸を組み合わせて、ツリー内の指定した深さで指定した名前を持つ要素をすべて検索できます。  
@@ -86,7 +86,7 @@ Next
 ```  
   
 ## <a name="example"></a>例  
- 次の例は名前空間に含まれている XML 用の手法です。これらの手法は上の例と同じ機能を表しています。 詳細については、次を参照してください。 [XML 名前空間 (Visual Basic) の使用](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)します。  
+ 次の例は名前空間に含まれている XML 用の手法です。これらの手法は上の例と同じ機能を表しています。 詳細については、「[名前空間の概要」 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)を参照してください。  
   
  この例では、次の XML ドキュメントを使用します: [サンプル XML ファイル:名前空間内の複数の購買発注書](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md)を使用します。  
   

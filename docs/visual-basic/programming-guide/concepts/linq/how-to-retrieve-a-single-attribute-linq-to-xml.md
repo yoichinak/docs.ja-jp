@@ -1,15 +1,15 @@
 ---
-title: '方法: 1 つの属性 (LINQ to XML) を取得する (Visual Basic)'
+title: '方法: 単一の属性を取得する (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 11b938d7-c011-4048-900e-8b9183c41c94
-ms.openlocfilehash: f56bdf86e4b63bc952c1d139aac9ee619b5a5f6c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 635644783153765d61aff3c00fe16860642c29f1
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051287"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710520"
 ---
-# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>方法: 1 つの属性 (LINQ to XML) を取得する (Visual Basic)
+# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>方法: 単一の属性を取得する (LINQ to XML) (Visual Basic)
 このトピックでは、属性名を指定して要素の単一の属性を取得する方法について説明します。 これは、特定の属性を持つ要素を検索するクエリ式を記述する場合に便利です。  
   
  <xref:System.Xml.Linq.XElement.Attribute%2A> クラスの <xref:System.Xml.Linq.XElement> メソッドは、指定された名前を持つ <xref:System.Xml.Linq.XAttribute> を返します。  
@@ -63,7 +63,7 @@ work
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] では、`string`、`bool`、`bool?`、`int`、`int?`、`uint`、`uint?`、`long`、`long?`、`ulong`、`ulong?`、`float`、`float?`、`double`、`double?`、`decimal`、`decimal?`、`DateTime`、`DateTime?`、`TimeSpan`、`TimeSpan?`、`GUID`、および `GUID?` に対する <xref:System.Xml.Linq.XAttribute> クラスのための明示的なキャスト演算子が用意されています。  
   
 ## <a name="example"></a>例  
- 上記と同じコードを使用して、名前空間内の属性を取得する例を次に示します。 詳細については、次を参照してください。 [XML 名前空間 (Visual Basic) の使用](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)します。  
+ 上記と同じコードを使用して、名前空間内の属性を取得する例を次に示します。 詳細については、「[名前空間の概要」 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)を参照してください。  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  

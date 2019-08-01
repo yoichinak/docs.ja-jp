@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 2667417c5d25821f2fed2101e1d485280e171eab
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 6bea25fbd321eead9137caaeb212b76a9d528e88
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400649"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710392"
 ---
 # <a name="threading-model"></a>スレッド モデル
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]は、スレッド処理の難しさから開発者を保存するように設計されています。 その結果、多くの[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]開発者は、複数のスレッドを使用するインターフェイスを作成する必要がなくなります。 マルチスレッドプログラムは複雑でデバッグが困難なため、シングルスレッドソリューションが存在する場合は回避する必要があります。  
@@ -56,7 +56,7 @@ ms.locfileid: "68400649"
   
 <a name="prime_number"></a>   
 ### <a name="a-single-threaded-application-with-a-long-running-calculation"></a>実行時間の長い計算を含むシングルスレッドアプリケーション  
- 多く[!INCLUDE[TLA#tla_gui#plural](../../../../includes/tlasharptla-guisharpplural-md.md)]の場合、ユーザーの操作に応じて生成されたイベントを待機している間、時間の大部分が費やされます。 プログラムを注意深くプログラミングすると、 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]の応答性に影響を与えることなく、このアイドル時間を constructively に使用できます。 スレッド[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]処理モデルでは、入力を使用して[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]スレッドで発生する操作を中断することはできません。 これは、保留中の入力イベントが古く<xref:System.Windows.Threading.Dispatcher>なる前に処理するために、定期的にに戻る必要があることを意味します。  
+ ほとんどのグラフィカルユーザーインターフェイス (Gui) は、ユーザーの操作に応じて生成されたイベントを待機している間、時間の長い部分を消費します。 プログラムを注意深くプログラミングすると、 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]の応答性に影響を与えることなく、このアイドル時間を constructively に使用できます。 スレッド[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]処理モデルでは、入力を使用して[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]スレッドで発生する操作を中断することはできません。 これは、保留中の入力イベントが古く<xref:System.Windows.Threading.Dispatcher>なる前に処理するために、定期的にに戻る必要があることを意味します。  
   
  次に例を示します。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "68400649"
   
 <a name="weather_sim"></a>   
 ### <a name="handling-a-blocking-operation-with-a-background-thread"></a>バックグラウンドスレッドを使用したブロッキング操作の処理  
- グラフィカルアプリケーションでのブロック操作の処理は困難な場合があります。 アプリケーションがフリーズしているように見えるため、イベントハンドラーからブロックメソッドを呼び出す必要はありません。 これらの操作を処理するために別のスレッドを使用できますが、完了したら、ワーカースレッド[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] [!INCLUDE[TLA2#tla_gui](../../../../includes/tla2sharptla-gui-md.md)]からを直接変更することはできないため、スレッドと同期する必要があります。 <xref:System.Windows.Threading.Dispatcher.Invoke%2A>または<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>を使用して、 <xref:System.Windows.Threading.Dispatcher> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]スレッドのにデリゲートを挿入できます。 最終的には、これらのデリゲートは、要素を[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]変更するためのアクセス許可を使用して実行されます。  
+ グラフィカルアプリケーションでのブロック操作の処理は困難な場合があります。 アプリケーションがフリーズしているように見えるため、イベントハンドラーからブロックメソッドを呼び出す必要はありません。 これらの操作を処理するために別のスレッドを使用できますが、完了したら、ワーカースレッド[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]から GUI を直接変更することはできないため、スレッドと同期する必要があります。 <xref:System.Windows.Threading.Dispatcher.Invoke%2A>または<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>を使用して、 <xref:System.Windows.Threading.Dispatcher> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]スレッドのにデリゲートを挿入できます。 最終的には、これらのデリゲートは、要素を[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]変更するためのアクセス許可を使用して実行されます。  
   
  この例では、天気予報を取得するリモートプロシージャ呼び出しを模倣しています。 この呼び出しを実行するために別のワーカースレッドを使用し、終了時に<xref:System.Windows.Threading.Dispatcher> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]スレッドのに更新メソッドをスケジュールします。  
   

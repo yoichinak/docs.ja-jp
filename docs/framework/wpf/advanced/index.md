@@ -9,27 +9,31 @@ helpviewer_keywords:
 - WPF programming model [WPF]
 - XAML [WPF], content models
 ms.assetid: 58843391-b28c-4d32-adf5-87acaf6578a1
-ms.openlocfilehash: 13225779cb3ed844e6ea8622ad559db83fadc166
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 800711df51326e09546f559a9d4d1d84af173d4c
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942806"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710209"
 ---
 # <a name="advanced-windows-presentation-foundation"></a>詳細設定 (Windows Presentation Foundation)
 このセクションでは、WPF の高度な領域について説明します。  
   
-## <a name="in-this-section"></a>このセクションの内容  
- [WPF アーキテクチャ](wpf-architecture.md)  
- [基本要素](base-elements.md)  
- [要素のツリーおよびシリアル化](element-tree-and-serialization.md)  
- [ドラッグ アンド ドロップ](drag-and-drop.md)  
- [ドキュメント](documents.md)  
- [グローバライズとローカライズ](globalization-and-localization.md)  
- [移行と相互運用性](migration-and-interoperability.md)  
- [パフォーマンス](performance.md)  
- [スレッド モデル](threading-model.md)  
- [WPF アドインの概要](../app-development/wpf-add-ins-overview.md)  
- [WPF のアンマネージ API リファレンス](wpf-unmanaged-api-reference.md)  
-  
-## <a name="related-sections"></a>関連項目
+## <a name="in-this-section"></a>このセクションの内容
+
+[WPF アーキテクチャ](wpf-architecture.md)  
+[WPF の XAML](xaml-in-wpf.md)  
+[基本要素クラス](base-elements.md)  
+[要素のツリーおよびシリアル化](element-tree-and-serialization.md)  
+[WPF プロパティシステム](properties-wpf.md)  
+[WPF のイベント](events-wpf.md)  
+[入力](input-wpf.md)  
+[ドラッグ アンド ドロップ](drag-and-drop.md)  
+[リソース](resources-wpf.md)  
+[ドキュメント](documents.md)  
+[グローバライズとローカライズ](globalization-and-localization.md)  
+[レイアウト](layout.md)  
+[移行と相互運用性](migration-and-interoperability.md)  
+[パフォーマンス](performance.md)  
+[スレッド モデル](threading-model.md)  
+[WPF のアンマネージ API リファレンス](wpf-unmanaged-api-reference.md)  

@@ -1,15 +1,15 @@
 ---
-title: Visual Basic での既定の名前空間のスコープ
+title: Visual Basic の既定の名前空間のスコープ
 ms.date: 07/20/2015
 ms.assetid: d4cce80c-342f-4097-be8b-40ab0bfa90ba
-ms.openlocfilehash: e33505dd8e8ad94e3c758f15f245d0cbaf6987bc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af868454c9d1dce7d8bf5a1902f64eff8db8780c
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786803"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710352"
 ---
-# <a name="scope-of-default-namespaces-in-visual-basic"></a>Visual Basic での既定の名前空間のスコープ
+# <a name="scope-of-default-namespaces-in-visual-basic"></a>Visual Basic の既定の名前空間のスコープ
 XML ツリーで表される既定の名前空間は、クエリのスコープ内にありません。 既定の名前空間に含まれる XML が存在する場合は、<xref:System.Xml.Linq.XNamespace> 変数を宣言し、この変数をローカル名と組み合わせて作成した修飾名をクエリで使用する必要があります。  
   
  XML ツリーのクエリにおける最も一般的な問題の 1 つは、XML ツリーに既定の名前空間がある場合に、XML が名前空間に含まれていないものとして開発者がクエリを記述してしまうことです。  
@@ -58,7 +58,7 @@ End of result set
 ## <a name="example"></a>例  
  この例では、名前空間内にある XML の作成と、適切に記述されたクエリを示します。  
   
- 上記の正しくないコード化された例とは対照的 Visual Basic を使用する場合は、適切なアプローチを宣言して既定のグローバル名前空間の初期化は。 これにより、すべての XML プロパティが既定の名前空間に配置されます。 この例を正しく動作させるために必要な変更はこれだけです。  
+ 上記の不適切なコード例とは対照的に、Visual Basic を使用する場合の正しい方法は、グローバルな既定の名前空間を宣言して初期化することです。 これにより、すべての XML プロパティが既定の名前空間に配置されます。 この例を正しく動作させるために必要な変更はこれだけです。  
   
 ### <a name="code"></a>コード  
   
@@ -101,4 +101,4 @@ End of result set
   
 ## <a name="see-also"></a>関連項目
 
-- [XML 名前空間 (Visual Basic) の使用](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+- [名前空間の概要 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

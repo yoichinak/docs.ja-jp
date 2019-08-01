@@ -1,15 +1,15 @@
 ---
-title: '方法: 1 つの子要素 (LINQ to XML) を取得 (Visual Basic)'
+title: '方法: 単一の子要素を取得する (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 0033e258-d9c4-4569-86f6-79b7c06d1204
-ms.openlocfilehash: e3b8c9d90f494330b30fe1b35a7fe64f882cae95
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a1b4e5e0a6668258cef7b474c416fc572bdf2625
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920199"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710514"
 ---
-# <a name="how-to-retrieve-a-single-child-element-linq-to-xml-visual-basic"></a>方法: 1 つの子要素 (LINQ to XML) を取得 (Visual Basic)
+# <a name="how-to-retrieve-a-single-child-element-linq-to-xml-visual-basic"></a>方法: 単一の子要素を取得する (LINQ to XML) (Visual Basic)
 このトピックでは、子要素名を指定して単一の子要素を取得する方法について説明します。 子要素の名前が既知であり、この名前を持つ要素が 1 つしか存在しない場合は、コレクションの代わりに 1 つの要素だけを取得する方が便利な場合があります。  
   
  <xref:System.Xml.Linq.XContainer.Element%2A> メソッドは、指定された <xref:System.Xml.Linq.XElement> を持つ最初の子 <xref:System.Xml.Linq.XName> を返します。  
@@ -36,7 +36,7 @@ Console.WriteLine(e)
 ```  
   
 ## <a name="example"></a>例  
- 上記と同じコードを使用して、名前空間内の XML から要素を取得する例を次に示します。 詳細については、次を参照してください。 [XML 名前空間 (Visual Basic) の使用](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)します。  
+ 上記と同じコードを使用して、名前空間内の XML から要素を取得する例を次に示します。 詳細については、「[名前空間の概要」 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)を参照してください。  
   
  この例では、次の XML ドキュメントを使用します: [サンプル XML ファイル: 名前空間内の一般的な購買発注書](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)を使用します。  
   

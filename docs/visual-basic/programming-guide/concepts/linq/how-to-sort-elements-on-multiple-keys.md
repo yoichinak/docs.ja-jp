@@ -1,15 +1,15 @@
 ---
-title: '方法: 複数のキー (Visual Basic) に要素の並べ替え'
+title: '方法: 複数のキーの要素の並べ替え (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 0c4c1462-3047-4766-b9e2-7e0e9cc7f421
-ms.openlocfilehash: d423505a5b47189b9de556675d4b71f428a6bdc6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dfb70a0ea4430d6771c319ab8ed351e8507bd89d
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614211"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710295"
 ---
-# <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a>方法: 複数のキー (Visual Basic) に要素の並べ替え
+# <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a>方法: 複数のキーの要素の並べ替え (Visual Basic)
 このトピックでは、複数のキーに基づく並べ替えの方法について説明します。  
   
 ## <a name="example"></a>例  
@@ -62,7 +62,7 @@ CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 ```  
   
 ## <a name="example"></a>例  
- 次の例は名前空間に含まれている XML 用のクエリです。これらのクエリは上の例と同じ機能を表しています。 詳細については、次を参照してください。 [XML 名前空間 (Visual Basic) の使用](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)します。  
+ 次の例は名前空間に含まれている XML 用のクエリです。これらのクエリは上の例と同じ機能を表しています。 詳細については、「[名前空間の概要」 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)を参照してください。  
   
  この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:名前空間内の顧客と注文](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)」。  
   

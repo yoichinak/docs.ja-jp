@@ -9,18 +9,18 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: 7acf5a3f48ac4987037873c63111d988ec3a4979
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a47a4aae785d817904c30fe7c865a1c033eb3cca
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629655"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709221"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>パフォーマンスの最適化:ハードウェアの活用
 の内部アーキテクチャに[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]は、ハードウェアとソフトウェアという2つのレンダリングパイプラインがあります。 このトピックでは、アプリケーションのパフォーマンスの最適化に関する意思決定に役立つ、これらのレンダリングパイプラインについて説明します。  
   
 ## <a name="hardware-rendering-pipeline"></a>ハードウェアレンダリングパイプライン  
- パフォーマンスを判断[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]するうえで最も重要な要因の1つは、レンダリングが制限されており、レンダリングする必要があるピクセルが多いほど、パフォーマンスコストが高くなることです。 ただし、に[!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)]オフロードできるレンダリングが多いほど、パフォーマンスが向上します。 アプリケーション[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ハードウェアレンダリングパイプラインは、microsoft directx バージョン7.0 以上をサポートするハードウェアで microsoft directx 機能を最大限に活用します。 Microsoft DirectX バージョン7.0 および PixelShader 2.0 以降の機能をサポートするハードウェアでは、さらに最適化を行うことができます。  
+ パフォーマンスを判断[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]するうえで最も重要な要因の1つは、レンダリングが制限されており、レンダリングする必要があるピクセルが多いほど、パフォーマンスコストが高くなることです。 ただし、グラフィックス処理装置 (GPU) にオフロードできるレンダリングが多いほど、パフォーマンスが向上します。 アプリケーション[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ハードウェアレンダリングパイプラインは、microsoft directx バージョン7.0 以上をサポートするハードウェアで microsoft directx 機能を最大限に活用します。 Microsoft DirectX バージョン7.0 および PixelShader 2.0 以降の機能をサポートするハードウェアでは、さらに最適化を行うことができます。  
   
 ## <a name="software-rendering-pipeline"></a>ソフトウェアレンダリングパイプライン  
  ソフトウェア[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]レンダリングパイプラインは、完全に CPU にバインドされています。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]は、CPU の SSE および SSE2 命令セットを利用して、最適化された、完全な機能を備えたソフトウェアラスタライザーを実装します。 ソフトウェアへのフォールバックは、ハードウェアレンダリングパイプラインを使用してアプリケーションの機能をレンダリングできないときにシームレスに実行されます。  
