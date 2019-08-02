@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ed41d7739822d531986d65faa820ab7100c6651
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4c86ab618f6434a6a9ce4f056eeb001cacc84bc
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026563"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709202"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>DateTime、DateTimeOffset、TimeSpan、および TimeZoneInfo の使い分け
 
@@ -32,7 +32,7 @@ ms.locfileid: "62026563"
 
 * 特定の時刻と場所に関連付けられていない抽象日時を反映する (たとえば、国際的チェーンのほとんどのストアは週中の午前 9:00 にオープンする)。
 
-* .NET の外部ソースから日付と時刻の情報を取得するには、シンプルな日付と時刻の情報が格納される場所に通常のデータを入力します。
+* .NET 以外のソースから日付と時刻の情報を取得する場合は。通常、日付と時刻の情報は単純なデータ型に格納されます。
 
 * 単一の時点を一意かつ明確に識別する。 ホスト システムでのみ日付と時刻を明確にする必要があるアプリケーションもあれば、システム全体で明確にする必要があるアプリケーションもあります (つまり、1 つのシステムでシリアル化される日付は有意に逆シリアル化し、世界中のどの場所においても別のシステムで使用できます)。
 
@@ -40,14 +40,14 @@ ms.locfileid: "62026563"
 
 * 日付と時刻の演算を実行する (これにより、おそらく単一時点が一意かつ明確に識別される)。
 
-.NET が含まれています、 <xref:System.DateTime>、 <xref:System.DateTimeOffset>、 <xref:System.TimeSpan>、および<xref:System.TimeZoneInfo>型、すべての日付と時刻を使用するアプリケーションの構築に使用できます。
+.Net には<xref:System.DateTime> <xref:System.DateTimeOffset> <xref:System.TimeZoneInfo> 、、、 、およびの各型が含まれており、これらすべてを使用して、日付と時刻を操作するアプリケーションを構築できます。<xref:System.TimeSpan>
 
 > [!NOTE]
 > このトピックには 4 番目の型の <xref:System.TimeZone>については説明されません。その機能は、 <xref:System.TimeZoneInfo> クラスに完全に組み込まれているからです。 開発者は可能な限り、 <xref:System.TimeZoneInfo> クラスの代わりに <xref:System.TimeZone> クラスを使用する必要があります。
 
 ## <a name="the-datetime-structure"></a>DateTime 構造体
 
-<xref:System.DateTime> 値は、特定の日付と時刻を定義します。 含まれています、<xref:System.DateTime.Kind%2A>プロパティを提供する制限については、タイム ゾーンその日付と時刻が属する。 <xref:System.DateTimeKind> プロパティによって返される <xref:System.DateTime.Kind%2A> 値は、 <xref:System.DateTime> 値が現地時刻 (<xref:System.DateTimeKind.Local?displayProperty=nameWithType>)、世界協定時刻 (UTC) (<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>)、指定されていない時刻 (<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>) のうちのどれを表すかを示します。
+<xref:System.DateTime> 値は、特定の日付と時刻を定義します。 これには<xref:System.DateTime.Kind%2A> 、その日付と時刻が属するタイムゾーンに関する限られた情報を提供するプロパティが含まれます。 <xref:System.DateTimeKind> プロパティによって返される <xref:System.DateTime.Kind%2A> 値は、 <xref:System.DateTime> 値が現地時刻 (<xref:System.DateTimeKind.Local?displayProperty=nameWithType>)、世界協定時刻 (UTC) (<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>)、指定されていない時刻 (<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>) のうちのどれを表すかを示します。
 
 <xref:System.DateTime> 構造体は、次の操作を実行するアプリケーションに適しています。
 
@@ -61,7 +61,7 @@ ms.locfileid: "62026563"
 
 * UTC 日時のみを使用するアプリケーション。
 
-* SQL データベースなどの .NET では、外部ソースから日付と時刻の情報を取得します。 通常、これらのソースは、 <xref:System.DateTime> 構造体と互換性のある単純な形式で日時情報を格納します。
+* SQL データベースなど、.NET の外部のソースから日付と時刻の情報を取得します。 通常、これらのソースは、 <xref:System.DateTime> 構造体と互換性のある単純な形式で日時情報を格納します。
 
 * 日付と時刻の演算を実行しますが、これは一般的な結果に関するものです。 たとえば、6 カ月を特定の日付と時刻に加算する加算演算では、多くの場合、結果を夏時間に合わせて調整するかどうかは重要ではありません。
 
@@ -74,7 +74,7 @@ ms.locfileid: "62026563"
 
 <xref:System.DateTimeOffset> 構造体は、日付と時刻の値、およびその値と UTC との差異を示すオフセットを表します。 そのため、値は常に明確に単一時点を識別します。
 
-<xref:System.DateTimeOffset> 型には、 <xref:System.DateTime> 型のすべての機能に加え、タイム ゾーンの処理機能が含まれます。 これにより、次のようなアプリケーションには適しません。
+<xref:System.DateTimeOffset> 型には、 <xref:System.DateTime> 型のすべての機能に加え、タイム ゾーンの処理機能が含まれます。 これは、次の操作を実行するアプリケーションに適しています。
 
 * 単一の時点を一意かつ明確に識別する。 <xref:System.DateTimeOffset> 型を使用して、「現在」の意味を明確に定義し、トランザクションの時刻を記録し、システム イベントまたはアプリケーション イベントの時刻を記録し、ファイル作成時刻とファイル変更時刻を記録することができます。
 
@@ -98,9 +98,9 @@ ms.locfileid: "62026563"
 
 * 2 つの日付と時刻の値の間の時間を反映する。 たとえば、ある値から <xref:System.DateTime> 値を減算すると、 <xref:System.TimeSpan> 値が返されます。
 
-* 経過時間を測定する。 たとえば、<xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType>プロパティが返す、<xref:System.TimeSpan>値のいずれかへの呼び出しから経過した時間間隔を反映する、<xref:System.Diagnostics.Stopwatch>経過時間の測定を開始するメソッド。
+* 経過時間を測定する。 たとえば、プロパティは<xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType> 、経過時間<xref:System.TimeSpan>の計測を開始する<xref:System.Diagnostics.Stopwatch>メソッドの1つを呼び出した後に経過した時間間隔を反映する値を返します。
 
-値が特定時刻への参照がない値が時間を反映する際、 <xref:System.TimeSpan> 値の代わりに <xref:System.DateTime> 値を使用することもできます。 この使用法と似ています、<xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType>と<xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType>返すプロパティを<xref:System.TimeSpan>日付への参照なしの時間を表す値です。 たとえば、 <xref:System.TimeSpan> 構造体を使用して、ストアの開店時刻または閉店時刻を反映したり、標準イベントが発生したときの時刻を表したりするために使用できます。
+値が特定<xref:System.DateTime>の日を参照せずに時間を反映している場合は、値の置換として値を使用することもできます。 <xref:System.TimeSpan> この使用方法は、 <xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType> <xref:System.TimeSpan>プロパティと<xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType>プロパティに似ています。このプロパティは、日付への参照なしで時間を表す値を返します。 たとえば、 <xref:System.TimeSpan> 構造体を使用して、ストアの開店時刻または閉店時刻を反映したり、標準イベントが発生したときの時刻を表したりするために使用できます。
 
 以下の例では、開店時刻と閉店時刻用の `StoreInfo` オブジェクト、およびストアのタイム ゾーンを表す <xref:System.TimeSpan> オブジェクトを含む <xref:System.TimeZoneInfo> 構造体を定義します。 構造体には、 `IsOpenNow` 、 `IsOpenAt`という 2 つのメソッドも含まれます。これは、ローカル タイム ゾーンにいると想定されるユーザーによって指定された時刻にストアがオープンするかどうかを示します。
 
@@ -114,9 +114,9 @@ ms.locfileid: "62026563"
 
 ## <a name="the-timezoneinfo-class"></a>TimeZoneInfo クラス
 
- <xref:System.TimeZoneInfo> class represents any of the Earth's time zones, and enables the conversion of any date and time in one time zone to its equivalent in another time zone. <xref:System.TimeZoneInfo> クラスにより、日付と時刻を使用して、どの日付と時刻の値も明確に単一時点を識別できるようにすることができます。 <xref:System.TimeZoneInfo> クラスを拡張することもできます。 Windows システムで提供され、レジストリで定義されているタイム ゾーン情報に依存していますが、カスタムのタイム ゾーンの作成もサポートされています。 また、タイム ゾーン情報のシリアル化と逆シリアル化もサポートされています。
+<xref:System.TimeZoneInfo> class represents any of the Earth's time zones, and enables the conversion of any date and time in one time zone to its equivalent in another time zone. <xref:System.TimeZoneInfo> クラスにより、日付と時刻を使用して、どの日付と時刻の値も明確に単一時点を識別できるようにすることができます。 <xref:System.TimeZoneInfo> クラスを拡張することもできます。 Windows システムで提供され、レジストリで定義されているタイム ゾーン情報に依存していますが、カスタムのタイム ゾーンの作成もサポートされています。 また、タイム ゾーン情報のシリアル化と逆シリアル化もサポートされています。
 
-場合によっては、 <xref:System.TimeZoneInfo> クラスをフル活用するために、開発作業をさらに実行する必要が生じることもあります。 日付と時刻の値がタイム ゾーンを属していることがさらに作業を密結合しない場合は、必要があります。 アプリケーションが、日付と時刻とその関連タイム ゾーンをリンクするメカニズムを提供しない限り、そのタイム ゾーンから解除するには、特定の日付と時刻の値の簡単です。 この情報をリンクする 1 つの方法は、日付と時刻の値とその関連タイム ゾーン オブジェクトの両方を含むクラスまたは構造体を定義するという方法です。
+場合によっては、 <xref:System.TimeZoneInfo> クラスをフル活用するために、開発作業をさらに実行する必要が生じることもあります。 日付と時刻の値が属するタイムゾーンと密接に結び付いていない場合は、さらに作業が必要になります。 アプリケーションで、日付と時刻を関連付けられたタイムゾーンとリンクするメカニズムが提供されていない限り、特定の日付と時刻の値がそのタイムゾーンとの関連付けを解除するのは簡単です。 この情報をリンクする 1 つの方法は、日付と時刻の値とその関連タイム ゾーン オブジェクトの両方を含むクラスまたは構造体を定義するという方法です。
 
 日付と時刻のオブジェクトをインスタンスするときにその日付と時刻の値が属するタイム ゾーンがわかっている場合のみ、.NET でタイム ゾーンのサポートを利用できます。 特に Web またはネットワーク アプリケーションでは、これは該当しません。
 
