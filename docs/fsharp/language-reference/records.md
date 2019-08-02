@@ -1,17 +1,17 @@
 ---
 title: レコード
-description: 学習方法F#レコードはオプションでメンバーの名前付きの値の単純な集計を表します。
+description: レコードがF#名前付きの値の単純な集計を表す方法について説明します。メンバーを使用することもできます。
 ms.date: 06/09/2019
-ms.openlocfilehash: cfb8de8272b479571119ae4cf91ea1d6fd5db73c
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: d92a1a7517e5b05ee687926df29f33fab123b4dd
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816194"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627286"
 ---
 # <a name="records"></a>レコード
 
-レコードは、名前付きの値の単純な集合を表しており、オプションでメンバーを含みます。 構造体または参照型かできます。  これが、既定では参照型です。
+レコードは、名前付きの値の単純な集合を表しており、オプションでメンバーを含みます。 構造体と参照型のどちらでもかまいません。  既定では、これらは参照型です。
 
 ## <a name="syntax"></a>構文
 
@@ -26,55 +26,55 @@ type [accessibility-modifier] typename =
 
 ## <a name="remarks"></a>Remarks
 
-前の構文で*typename*レコードの種類の名前を指定*label1*と*label2*と呼ばれる値の名前は*ラベル*、*type1*と*type2*これらの値の種類を示します。 *メンバー リスト*省略可能な型のメンバーの一覧を示します。  使用することができます、`[<Struct>]`参照型であるレコードではなく、構造体のレコードを作成する属性。
+前の構文では、 *typename*はレコード型の名前、 *label1*と*label2*は*ラベル*と呼ばれる値の名前、type1 と*type1*はこれらの値の型です。 *メンバーリスト*は、型のメンバーの省略可能なリストです。  属性を使用し`[<Struct>]`て、参照型であるレコードではなく、構造体レコードを作成できます。
 
-いくつかの例を次に示します。
+次に例をいくつか示します。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1901.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1901.fs)]
 
-各ラベルは、個別の行には、セミコロンを省略できます。
+各ラベルが個別の行にある場合、セミコロンは省略可能です。
 
-値を設定するには式と呼ばれるで*式を記録*します。 コンパイラでは、(ラベルが十分に区別されるその他のレコードの種類の場合) を使用するラベルから型を推測します。 中かっこ ({}) は、レコードの式を囲みます。 次のコードはラベルが付いた 3 つの浮動要素を持つレコードを初期化するレコード式`x`、`y`と`z`します。
+*レコード式*と呼ばれる式に値を設定できます。 コンパイラは、使用されているラベルから型を推測します (ラベルが他のレコードの種類とは十分に異なる場合)。 中かっこ ({}) は、レコード式を囲みます。 次のコードは、 `x` `y`とと`z`いうラベルを持つ3つの float 要素を持つレコードを初期化するレコード式を示しています。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1907.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1907.fs)]
 
-同じラベルも別の型がある場合は、短縮形を使用しないでください。
+同じラベルを持つ別の型が存在する可能性がある場合は、短縮形を使用しないでください。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1903.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1903.fs)]
 
-最後に宣言された型のラベルの以前に宣言された型よりも優先で、前の例では、`mypoint3D`推論されます`Point3D`します。 次のコードのように、レコードの種類を明示的に指定することができます。
+最後に宣言された型のラベルは、以前に宣言された型よりも`mypoint3D` `Point3D`優先されます。したがって、前の例では、はと推論されます。 レコードの種類は、次のコードのように明示的に指定できます。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1908.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1908.fs)]
 
-クラス型と同様、レコードの種類のメソッドを定義することができます。
+メソッドは、クラス型の場合と同様に、レコード型に対して定義できます。
 
-## <a name="creating-records-by-using-record-expressions"></a>レコード式を使用してレコードを作成します。
+## <a name="creating-records-by-using-record-expressions"></a>レコード式を使用したレコードの作成
 
-レコードはレコードで定義されているラベルを使用して初期化できます。 これを行う式として参照されます、*記録式*します。 レコード式を囲むし、区切り記号としてセミコロンを使用するには、中かっこを使用します。
+レコードで定義されているラベルを使用して、レコードを初期化できます。 これを行う式は、*レコード式*と呼ばれます。 中かっこを使用してレコード式を囲み、セミコロンを区切り記号として使用します。
 
 次の例では、レコードを作成する方法を示します。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1904.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1904.fs)]
 
-レコード式には、型定義では、最後のフィールドの後のセミコロンは、1 つの行ですべてのフィールドがあるかどうかに関係なく、省略可能です。
+レコード式の最後のフィールドの後のセミコロン、および型定義では、フィールドがすべて1行にあるかどうかにかかわらず、省略可能です。
 
-レコードを作成するときに各フィールドの値を指定する必要があります。 任意のフィールドの初期化式では、他のフィールドの値を参照することはできません。
+レコードを作成するときは、各フィールドに値を指定する必要があります。 任意のフィールドについて、初期化式の他のフィールドの値を参照することはできません。
 
-次のコードの種類で`myRecord2`フィールドの名前から推測されます。 必要に応じて、型名を明示的に指定できます。
+次のコードでは、の`myRecord2`型はフィールドの名前から推論されます。 必要に応じて、型名を明示的に指定できます。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1905.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1905.fs)]
 
-レコード構築の別の形式は、既存のレコードをコピーし、フィールドの値の一部を変更したりするときに役に立ちます。 次のコード行を示します。
+別の形式のレコードの構築は、既存のレコードをコピーする必要があり、フィールド値の一部を変更する必要がある場合に便利です。 次のコード行はこれを示しています。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1906.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1906.fs)]
 
-レコード式のこのフォームと呼ばれる、*コピーして更新するレコード式*。
+この形式のレコード式は、レコードの*コピーと更新の式*と呼ばれます。
 
-レコードは既定では変更できません。ただし、コピーと更新の式を使用して簡単に変更されたレコードを作成することができます。 変更可能なフィールドを明示的に指定できます。
+既定では、レコードは変更できません。ただし、コピーと更新の式を使用して、変更されたレコードを簡単に作成できます。 また、変更可能なフィールドを明示的に指定することもできます。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1909.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1909.fs)]
 
-レコードのフィールドでは、DefaultValue 属性を使用しないでください。 既定値に初期化されるフィールドを持つレコードの既定のインスタンスの定義、およびコピーを使用して、既定値と異なる任意のフィールドを設定する式をレコードを更新にことをお勧めします。
+レコードフィールドで DefaultValue 属性を使用しないでください。 より適切な方法は、既定値に初期化されるフィールドを持つレコードの既定のインスタンスを定義し、コピーと更新のレコード式を使用して、既定値とは異なるフィールドを設定することです。
 
 ```fsharp
 // Rather than use [<DefaultValue>], define a default record.
@@ -90,13 +90,13 @@ let defaultRecord2 = { Field1 = 1; Field2 = 25 }
 let rr3 = { defaultRecord1 with Field2 = 42 }
 ```
 
-## <a name="creating-mutually-recursive-records"></a>相互に再帰的なレコードを作成します。
+## <a name="creating-mutually-recursive-records"></a>相互再帰的なレコードの作成
 
-レコードを作成するときにいずれかの時点に後で定義するには別の型に依存する可能性があります。 これは、再帰的に相互にレコードの種類を定義する場合を除き、コンパイル エラーです。
+レコードを作成するときに、後で定義する別の型に依存するように設定することもできます。 レコードの種類が相互に再帰的に定義されている場合を除き、コンパイルエラーになります。
 
-相互に再帰的なレコードを定義するのには、`and`キーワード。 これにより 2 つまたは複数のレコードの種類をまとめてリンクできます。
+同時に再帰的なレコードを定義`and`するには、キーワードを使用します。 これにより、2つ以上のレコードの種類をリンクすることができます。
 
-たとえば、次のコードの定義、`Person`と`Address`相互に再帰の種類。
+たとえば、次のコードでは、 `Person`と`Address`型が相互に再帰的に定義されています。
 
 ```fsharp
 // Create a Person type and use the Address type that is not defined
@@ -111,15 +111,15 @@ and Address =
     PostCode: string }
 ```
 
-せず、前の例を定義した場合、`and`キーワード、その後はコンパイルされません。 `and`キーワードが相互に再帰的な定義に必要です。
+`and`キーワードを使用せずに前の例を定義すると、コンパイルされません。 相互再帰的な定義にはキーワードが必要です。`and`
 
-## <a name="pattern-matching-with-records"></a>レコードを使用したパターン マッチ
+## <a name="pattern-matching-with-records"></a>レコードを使用したパターンマッチ
 
-レコードは、パターン マッチングで使用できます。 一部のフィールドを明示的に指定し、一致が発生したときに割り当てられる他のフィールドの変数を指定できます。 これを次のコード例に示します。
+レコードは、パターンマッチングで使用できます。 一部のフィールドを明示的に指定し、一致が発生したときに割り当てられる他のフィールドの変数を指定できます。 これを次のコード例に示します。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1910.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1910.fs)]
 
-このコードの出力は次のとおりです。
+このコードの出力は次のようになります。
 
 ```
 Point is at the origin.
@@ -127,13 +127,13 @@ Point is on the x-axis. Value is 100.000000.
 Point is at (10.000000, 0.000000, -1.000000).
 ```
 
-## <a name="differences-between-records-and-classes"></a>レコードとクラス間の違い
+## <a name="differences-between-records-and-classes"></a>レコードとクラスの違い
 
-レコード フィールドは、プロパティとして自動的に公開されているし、それらが作成時に使用され、レコードのコピーで、クラスとは異なります。 レコードの作成は、クラスの構築からも異なります。 レコードの種類では、コンス トラクターを定義できません。 代わりに、このトピックで説明した構築の構文が適用されます。 クラスは、コンス トラクターのパラメーター、フィールド、およびプロパティ間の直接の関係のあるありません。
+レコードフィールドは、プロパティとして自動的に公開され、レコードの作成とコピーに使用されるという点でクラスとは異なります。 レコードの構築も、クラスの構築とは異なります。 レコード型では、コンストラクターを定義することはできません。 代わりに、このトピックで説明する構築構文が適用されます。 クラスには、コンストラクターのパラメーター、フィールド、およびプロパティの間に直接的な関係はありません。
 
-共用体と構造体の型と同様には、レコードは、構造的等値セマンティクスを持ちます。 クラスの参照がある等値セマンティクスです。 次のコード例はこの処理方法を示しています。
+Union 型や structure 型と同様に、レコードには構造的等価性のセマンティクスがあります。 クラスには参照等値セマンティクスがあります。 次のコード例はこの処理方法を示しています。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1911.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1911.fs)]
 
 このコードの出力は次のとおりです。
 
@@ -141,14 +141,14 @@ Point is at (10.000000, 0.000000, -1.000000).
 The records are equal.
 ```
 
-クラスと同じコードを記述する場合、2 つのクラスのオブジェクトが等しくならない 2 つの値は、ヒープ上の 2 つのオブジェクトを表しますであり、アドレスだけが比較 (クラス型のオーバーライドしない限り、`System.Object.Equals`メソッド)。
+クラスを使用して同じコードを記述した場合、2つのクラスオブジェクトは等しくなります。これは、2つの値がヒープ上の2つのオブジェクトを表し、 `System.Object.Equals`アドレスのみが比較されるためです (クラス型がメソッドをオーバーライドする場合を除きます)。
 
-レコードの等価性を参照する必要がある場合、属性を追加`[<ReferenceEquality>]`レコード上。
+レコードの参照の等価性が必要な場合は`[<ReferenceEquality>]` 、レコードの上に属性を追加します。
 
 ## <a name="see-also"></a>関連項目
 
 - [F# の型](fsharp-types.md)
 - [クラス](classes.md)
 - [F# 言語リファレンス](index.md)
-- [参照の等価性](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
+- [参照-等値](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
 - [パターン一致](pattern-matching.md)

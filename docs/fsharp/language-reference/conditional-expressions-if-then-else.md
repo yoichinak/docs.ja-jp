@@ -1,17 +1,17 @@
 ---
-title: '条件式: if... then... else'
-description: 条件式を記述する方法について説明しますF#コードの別の分岐を実行します。
+title: '条件式: if...そうしたら。。。さも'
+description: でF#条件式を記述して、異なるコードの分岐を実行する方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: db2d5ce5b75ecda171f2623c986878dcee1cf4d9
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 825149bf296eded3cc2b4d8847ba4d82bea40cdc
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641987"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630398"
 ---
-# <a name="conditional-expressions-ifthenelse"></a>条件式: `if...then...else`
+# <a name="conditional-expressions-ifthenelse"></a>条件式:`if...then...else`
 
-`if...then...else`式は、コードの別の分岐を実行し、指定されたブール式に応じて異なる値に評価されます。
+式`if...then...else`は、コードの異なる分岐を実行し、指定されたブール式に応じて別の値に評価されます。
 
 ## <a name="syntax"></a>構文
 
@@ -21,15 +21,15 @@ if boolean-expression then expression1 [ else expression2 ]
 
 ## <a name="remarks"></a>Remarks
 
-前の構文で*expression1*ブール式を評価するときに実行される`true`、それ以外の*expression2*を実行します。
+前の構文では 、ブール式がに`true`評価されると、expression1 が実行されます。それ以外の場合は、 *expression2*が実行されます。
 
-異なり、他の言語で、`if...then...else`コンストラクトは式、ステートメントではありません。 つまり、実行する分岐の最後の式の値では、値が生成されます。 各分岐で生成された値の型が一致する必要があります。 明示的ながある場合`else`ブランチ、その型は、`unit`します。 そのため場合の種類、`then`分岐以外の任意の型は、 `unit`、必要があります、`else`ブランチと同じ戻り値の型。 チェーンと`if...then...else`キーワードを使用することができます、併せて式`elif`の代わりに`else if`; が等しい。
+他の言語`if...then...else`とは異なり、コンストラクトはステートメントではなく、式です。 つまり、値が生成されます。これは、が実行される分岐の最後の式の値です。 各分岐で生成される値の型が一致している必要があります。 明示的`else`な分岐がない場合、その型`unit`はになります。 したがって、 `then`分岐の型が以外`unit`の型である場合は、同じ戻り値`else`の型を持つ分岐が存在する必要があります。 式を連結する場合は、の`else if`代わりに`elif`キーワードを使用できます。これらは等価です。 `if...then...else`
 
 ## <a name="example"></a>例
 
-次の例を使用する方法を示しています、`if...then...else`式。
+次の例は、式の`if...then...else`使用方法を示しています。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4501.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4501.fs)]
 
 ```
 10 is less than 20

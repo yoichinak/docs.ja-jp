@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 8d01e018e570a1ab530f476368d80f4082a73bda
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: ec026fd9273e99c88ec2e30cf46c3147419ace94
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400794"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629810"
 ---
 # <a name="security-wpf"></a>セキュリティ (WPF)
 <a name="introduction"></a>Windows Presentation Foundation (WPF) のスタンドアロンアプリケーションとブラウザーでホストされるアプリケーションを開発する場合は、セキュリティモデルを考慮する必要があります。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]スタンドアロンアプリケーションは、Windows インストーラー (.msi)、XCopy、または ClickOnce を使用してデプロイされているかどうかにかかわらず、無制限のアクセス許可 (CAS**FullTrust**アクセス許可セット) で実行されます。 部分的に信頼されたスタンドアロンの WPF アプリケーションを ClickOnce で展開することはサポートされていません。 ただし、完全に信頼されたホストアプリケーションでは、.NET Framework <xref:System.AppDomain>アドインモデルを使用して部分信頼を作成できます。 詳細については、「 [WPF アドインの概要](./app-development/wpf-add-ins-overview.md)」を参照してください。  
@@ -216,9 +216,9 @@ ms.locfileid: "68400794"
   
 <a name="APTCA"></a>   
 ## <a name="disabling-aptca-assemblies-for-partially-trusted-client-applications"></a>部分信頼クライアント アプリケーションに対する APTCA の無効化  
- マネージアセンブリがにインストール[!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)]されると、ユーザーはそれらをインストールするための明示的なアクセス許可を提供する必要があるため、完全に信頼されます。 完全に信頼されているため、これらを使用できるのは完全信頼マネージド クライアント アプリケーションのみです。 部分的に信頼されたアプリケーションでそれらを使用できるようにする<xref:System.Security.AllowPartiallyTrustedCallersAttribute>には、(APTCA) でマークする必要があります。 この属性は、部分信頼で実行しても安全であるとテストで確認されたアセンブリだけに設定します。  
+ マネージアセンブリがグローバルアセンブリキャッシュ (GAC) にインストールされると、ユーザーはそれらをインストールするための明示的なアクセス許可を提供する必要があるため、完全に信頼されます。 完全に信頼されているため、これらを使用できるのは完全信頼マネージド クライアント アプリケーションのみです。 部分的に信頼されたアプリケーションでそれらを使用できるようにする<xref:System.Security.AllowPartiallyTrustedCallersAttribute>には、(APTCA) でマークする必要があります。 この属性は、部分信頼で実行しても安全であるとテストで確認されたアセンブリだけに設定します。  
   
- ただし、APTCA アセンブリがにインストール[!INCLUDE[TLA2#tla_gac](../../../includes/tla2sharptla-gac-md.md)]された後にセキュリティの欠陥を発生させる可能性があります。 セキュリティ上の欠陥が検出されたら、アセンブリの発行者は、既存のインストールでの問題を解決し、問題発見後に発生する可能性があるインストールに備えるため、セキュリティ更新プログラムを作成できます。 更新プログラムの 1 つのオプションとして、アセンブリのアンインストールが考えられますが、その場合はこのアセンブリを使用する他の完全信頼クライアント アプリケーションを破損するおそれがあります。  
+ ただし、APTCA アセンブリを GAC にインストールした後にセキュリティの欠陥が発生する可能性があります。 セキュリティ上の欠陥が検出されたら、アセンブリの発行者は、既存のインストールでの問題を解決し、問題発見後に発生する可能性があるインストールに備えるため、セキュリティ更新プログラムを作成できます。 更新プログラムの 1 つのオプションとして、アセンブリのアンインストールが考えられますが、その場合はこのアセンブリを使用する他の完全信頼クライアント アプリケーションを破損するおそれがあります。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]aptca アセンブリをアンインストールせずに部分信頼[!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]の aptca アセンブリを無効にできる機構を提供します。  
   
