@@ -2,12 +2,12 @@
 title: キーワード リファレンス
 description: すべての F# 言語のキーワードに関する情報へのリンクを検索します。
 ms.date: 05/16/2016
-ms.openlocfilehash: f845db74fd7ffd4164cc74acd192e39df7d2d6b1
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 680b270a99eff7aa98652579d2fd31b4b05080ca
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627621"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733482"
 ---
 # <a name="keyword-reference"></a>キーワード リファレンス
 
@@ -35,10 +35,10 @@ ms.locfileid: "68627621"
 |`elif`|[条件式: `if...then...else`](conditional-expressions-if-then-else.md)|条件分岐で使用されます。 の`else if`短縮形。|
 |`else`|[条件式: `if...then...else`](conditional-expressions-if-then-else.md)|条件分岐で使用されます。|
 |`end`|[構造体](structures.md)<br /><br />[判別共用体](discriminated-unions.md)<br /><br />[レコード](records.md)<br /><br />[型拡張](type-extensions.md)<br /><br />[冗語構文](verbose-syntax.md)|型定義と型拡張機能では、メンバー定義のセクションの末尾を示します。<br /><br />Verbose 構文で、 `begin`キーワードで始まるコードブロックの末尾を指定するために使用されます。|
-|`exception`|[例外処理](/.exception-handling/index.md)<br /><br />[例外の種類](/.exception-handling/exception-types.md)|例外の種類を宣言するために使用します。|
+|`exception`|[例外処理](./exception-handling/index.md)<br /><br />[例外の種類](./exception-handling/exception-types.md)|例外の種類を宣言するために使用します。|
 |`extern`|[外部関数](./functions/external-functions.md)|宣言されたプログラム要素が別のバイナリまたはアセンブリで定義されていることを示します。|
 |`false`|[プリミティブ型](primitive-types.md)|ブール型のリテラルとして使用されます。|
-|`finally`|[例外: `try...finally`式](/.exception-handling/the-try-finally-expression.md)|と`try`共に使用して、例外が発生したかどうかに関係なく実行されるコードのブロックを導入します。|
+|`finally`|[例外: `try...finally`式](./exception-handling/the-try-finally-expression.md)|と`try`共に使用して、例外が発生したかどうかに関係なく実行されるコードのブロックを導入します。|
 |`fixed`|[固定](fixed.md)|ガベージコレクションが行われないように、スタックにポインターを "ピン留め" するために使用されます。|
 |`for`|[For`for...to`条件](loops-for-to-expression.md)<br /><br />[ループ: for...in 式](loops-for-in-expression.md)|ループ構造で使用されます。|
 |`fun`|[ラムダ式:`fun`キーワード](./functions/lambda-expressions-the-fun-keyword.md)|ラムダ式で使用されます。匿名関数とも呼ばれます。|
@@ -62,7 +62,7 @@ ms.locfileid: "68627621"
 |`new`|[コンストラクター](./members/constructors.md)<br /><br />[制約](./generics/constraints.md)|を作成するか、オブジェクトを作成できるコンストラクターを宣言、定義、または呼び出すために使用します。<br /><br />ジェネリックパラメーター制約でも、型が特定のコンストラクターを持つ必要があることを示すために使用されます。|
 |`not`|[シンボルと演算子のリファレンス](./symbol-and-operator-reference/index.md)<br /><br />[制約](./generics/constraints.md)|実際にはキーワードではありません。 ただし、 `not struct`の組み合わせは、ジェネリックパラメーターの制約として使用されます。|
 |`null`|[null 値](./values/null-values.md)<br /><br />[制約](./generics/constraints.md)|オブジェクトが存在しないことを示します。<br /><br />ジェネリックパラメーター制約でも使用されます。|
-|`of`|[判別共用体](discriminated-unions.md)<br /><br />[デリゲート](delegates.md)<br /><br />[例外の種類](/.exception-handling/exception-types.md)|判別共用体で、値のカテゴリの型、およびデリゲートおよび例外の宣言を示すために使用されます。|
+|`of`|[判別共用体](discriminated-unions.md)<br /><br />[デリゲート](delegates.md)<br /><br />[例外の種類](./exception-handling/exception-types.md)|判別共用体で、値のカテゴリの型、およびデリゲートおよび例外の宣言を示すために使用されます。|
 |`open`|[インポート宣言: `open`キーワード](import-declarations-the-open-keyword.md)|名前空間またはモジュールの内容を修飾なしで使用できるようにするために使用します。|
 |`or`|[シンボルと演算子のリファレンス](./symbol-and-operator-reference/index.md)<br /><br />[制約](./generics/constraints.md)|ブール値`or`演算子としてブール条件と共に使用されます。 これは、`||` に相当します。<br /><br />メンバーの制約でも使用されます。|
 |`override`|[メンバー](./members/index.md)|基本バージョンとは異なる抽象メソッドまたは仮想メソッドのバージョンを実装するために使用されます。|
@@ -77,7 +77,7 @@ ms.locfileid: "68627621"
 |`then`|[条件式: `if...then...else`](conditional-expressions-if-then-else.md)<br /><br />[コンストラクター](./members/constructors.md)|条件式で使用されます。<br /><br />オブジェクトの構築後に副作用を実行するためにも使用されます。|
 |`to`|[For`for...to`条件](loops-for-to-expression.md)|ループで`for`範囲を示すために使用されます。|
 |`true`|[プリミティブ型](primitive-types.md)|ブール型のリテラルとして使用されます。|
-|`try`|[例外: 試行しています...with 式](/.exception-handling/the-try-with-expression.md)<br /><br />[例外: 試行しています...finally 式](/.exception-handling/the-try-finally-expression.md)|例外を生成する可能性のあるコードブロックを導入するために使用されます。 または`with` `finally`と共に使用します。|
+|`try`|[例外: 試行しています...with 式](./exception-handling/the-try-with-expression.md)<br /><br />[例外: 試行しています...finally 式](./exception-handling/the-try-finally-expression.md)|例外を生成する可能性のあるコードブロックを導入するために使用されます。 または`with` `finally`と共に使用します。|
 |`type`|[F# の型](fsharp-types.md)<br /><br />[クラス](classes.md)<br /><br />[レコード](records.md)<br /><br />[構造体](structures.md)<br /><br />[列挙型](enumerations.md)<br /><br />[判別共用体](discriminated-unions.md)<br /><br />[型略称](type-abbreviations.md)<br /><br />[測定単位](units-of-measure.md)|クラス、レコード、構造体、判別共用体、列挙型、測定単位、または型略称を宣言するために使用されます。|
 |`upcast`|[キャストと変換](casting-and-conversions.md)|継承チェーンの上位にある型に変換するために使用します。|
 |`use`|[リソース管理:`use`キーワード](resource-management-the-use-keyword.md)|リソースを解放`let`するためにを`Dispose`呼び出す必要がある値に対して、の代わりに使用されます。|
@@ -86,7 +86,7 @@ ms.locfileid: "68627621"
 |`void`|[プリミティブ型](primitive-types.md)|.Net `void`型を示します。 他の .NET 言語と相互運用するときに使用します。|
 |`when`|[制約](./generics/constraints.md)|パターンに一致する場合、ブール条件 (*場合*によっては) に使用され、ジェネリック型パラメーターの制約句を導入します。|
 |`while`|[For`while...do`条件](loops-while-do-expression.md)|では、ループ構造が導入されています。|
-|`with`|[match 式](match-expressions.md)<br /><br />[オブジェクト式](object-expressions.md)<br /><br />[レコード式のコピーと更新](copy-and-update-record-expressions.md)<br /><br />[型拡張](type-extensions.md)<br /><br />[例外: `try...with`式](/.exception-handling/the-try-with-expression.md)|パターン一致式で`match`キーワードと共に使用されます。 オブジェクト式、レコードコピー式、および型拡張でも使用され、メンバー定義を導入したり、例外ハンドラーを導入したりします。|
+|`with`|[match 式](match-expressions.md)<br /><br />[オブジェクト式](object-expressions.md)<br /><br />[レコード式のコピーと更新](copy-and-update-record-expressions.md)<br /><br />[型拡張](type-extensions.md)<br /><br />[例外: `try...with`式](./exception-handling/the-try-with-expression.md)|パターン一致式で`match`キーワードと共に使用されます。 オブジェクト式、レコードコピー式、および型拡張でも使用され、メンバー定義を導入したり、例外ハンドラーを導入したりします。|
 |`yield`|[シーケンス](sequences.md)|シーケンスの値を生成するために、シーケンス式で使用されます。|
 |`yield!`|[コンピュテーション式](computation-expressions.md)<br /><br />[非同期ワークフロー](asynchronous-workflows.md)|コンピュテーション式で使用され、指定されたコンピュテーション式の結果を、それを含むコンピュテーション式の結果のコレクションに追加します。|
 

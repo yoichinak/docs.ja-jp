@@ -2,12 +2,12 @@
 title: パターン マッチ
 description: 論理構造体を使用してデータを比較または構成要素にデータを分解したり、データから情報を抽出するパターンが F# の使用方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 156bb670e0c494a3d515eab03e2e4672d6743dec
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 60e0d6cd550724bc8448fddd7b163c2c9f1637be
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627305"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733463"
 ---
 # <a name="pattern-matching"></a>パターン マッチ
 
@@ -15,7 +15,7 @@ ms.locfileid: "68627305"
 
 ## <a name="remarks"></a>コメント
 
-パターンは、`match` 式などの多くの言語構成要素で使用されます。 `let` バインディング、ラムダ式、および `try...with` 式に関連付けられている例外ハンドラーで関数の引数を処理する場合に使用されます。 詳細については、次を参照してください[match 式](match-expressions.md)、 [let バインディング](./functions/let-bindings.md)、[ラムダ式:、`fun`キーワード](./functions/lambda-expressions-the-fun-keyword.md)、および[例外:`try...with`式](/.exception-handling/the-try-with-expression.md)します。
+パターンは、`match` 式などの多くの言語構成要素で使用されます。 `let` バインディング、ラムダ式、および `try...with` 式に関連付けられている例外ハンドラーで関数の引数を処理する場合に使用されます。 詳細については、次を参照してください[match 式](match-expressions.md)、 [let バインディング](./functions/let-bindings.md)、[ラムダ式:、`fun`キーワード](./functions/lambda-expressions-the-fun-keyword.md)、および[例外:`try...with`式](./exception-handling/the-try-with-expression.md)します。
 
 たとえば、 `match`式では、*パターン*がパイプ記号の後に続きます。
 
@@ -103,7 +103,7 @@ match shape with
 
 アクティブ パターンを使用すると、より複雑なカスタム パターン マッチを定義できます。 アクティブパターンの詳細については、「[アクティブパターン](active-patterns.md)」を参照してください。
 
-識別子が例外であるケースは、例外ハンドラーのコンテキストのパターン マッチで使用されます。 例外処理でのパターンマッチングの詳細につい[ては、「例外:`try...with`式](/.exception-handling/the-try-with-expression.md)します。
+識別子が例外であるケースは、例外ハンドラーのコンテキストのパターン マッチで使用されます。 例外処理でのパターンマッチングの詳細につい[ては、「例外:`try...with`式](./exception-handling/the-try-with-expression.md)します。
 
 ## <a name="variable-patterns"></a>変数パターン
 

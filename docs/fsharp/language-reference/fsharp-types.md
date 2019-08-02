@@ -2,12 +2,12 @@
 title: F# の型
 description: でF#使用される型、および型の名前F#付けと記述方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 44bd9d985e0ce1afa1bf2a8457dcd9470b13dfe1
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 826bcb56aad3b50fbfcf8f807bb34e9cdcdecaf7
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630220"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733500"
 ---
 # <a name="f-types"></a>F# の型
 
@@ -69,4 +69,4 @@ F#関数型プログラミングを念頭に置いて設計された便利なコ
 |[デリゲート](delegates.md)|関数をオブジェクトとして表すデリゲート型について説明します。|
 |[列挙型](enumerations.md)|名前付きの値のセットに値が属する列挙型について説明します。|
 |[属性](attributes.md)|別の型のメタデータを指定するために使用される属性について説明します。|
-|[例外の種類](/.exception-handling/exception-types.md)|エラー情報を指定する例外について説明します。|
+|[例外の種類](./exception-handling/exception-types.md)|エラー情報を指定する例外について説明します。|
