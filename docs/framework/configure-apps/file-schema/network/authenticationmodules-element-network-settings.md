@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61674715"
 ---
-# <a name="authenticationmodules-element-network-settings"></a>\<authenticationModules > 要素 (ネットワーク設定)
+# <a name="authenticationmodules-element-network-settings"></a>\<authenticationModules> 要素 (ネットワーク設定)
 ネットワーク要求の認証に使用されるモジュールを指定します。  
   
  \<configuration>  
