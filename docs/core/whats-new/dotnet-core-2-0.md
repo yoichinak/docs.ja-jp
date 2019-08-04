@@ -4,12 +4,12 @@ description: .NET Core の新機能について。
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 2d0f6a9faaec4d4438452054624751a40c96c8e5
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: f48b8e88a716df0f07a5626bdc8f66000cfaeed8
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464074"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626365"
 ---
 # <a name="whats-new-in-net-core-20"></a>.NET Core 2.0 の新機能
 
@@ -132,7 +132,7 @@ Visual Studio 2017 バージョン 15.3 (場合によって Visual Studio for Ma
 
 .NET Core 2.0 SDK がインストールされていれば、.NET Core 1.x プロジェクトを .NET Core 2.0 に、.NET Standard 1.x ライブラリを .NET Standard 2.0 に再ターゲットすることができます。
 
-Visual Studio のプロジェクトを再ターゲットするには、そのプロジェクトのプロパティ ダイアログの **[アプリケーション]** タブを開き、**[ターゲット フレームワーク]** の値を「**.NET Core 2.0**」または「**.NET Standard 2.0**」に変更します。 プロジェクトを右クリックして**編集\*.csproj ファイル** オプションを選択することで、変更することもできます。 詳細については、前述の「[ツール](#tooling)」セクションをご覧ください。
+Visual Studio のプロジェクトを再ターゲットするには、そのプロジェクトのプロパティ ダイアログの **[アプリケーション]** タブを開き、 **[ターゲット フレームワーク]** の値を「 **.NET Core 2.0**」または「 **.NET Standard 2.0**」に変更します。 プロジェクトを右クリックして**編集\*.csproj ファイル** オプションを選択することで、変更することもできます。 詳細については、前述の「[ツール](#tooling)」セクションをご覧ください。
 
 ### <a name="live-unit-testing-support-for-net-core"></a>.NET Core のライブ単体テスト対応
 
@@ -156,8 +156,8 @@ Visual Studio のプロジェクトを再ターゲットするには、そのプ
 
 .NET を使用して次のものをビルドする際は、[.NET アプリケーション アーキテクチャ](https://www.microsoft.com/net/learn/architecture)にある、ガイダンス、ベスト プラクティス、サンプル アプリケーションを掲載した電子ブックをご覧ください。
 
-- [マイクロサービスと Docker コンテナー](../../standard/microservices-architecture/index.md)
-- [ASP.NET を使用した Web アプリケーション](../../standard/modern-web-apps-azure-architecture/index.md)
+- [マイクロサービスと Docker コンテナー](../../architecture/microservices/index.md)
+- [ASP.NET を使用した Web アプリケーション](../../architecture/modern-web-apps-azure/index.md)
 - [Xamarin を使用したモバイル アプリケーション](/xamarin/xamarin-forms/enterprise-application-patterns/index)
 - [Azure Cloud にデプロイされたアプリケーション](/azure/architecture/reference-architectures/index)
 

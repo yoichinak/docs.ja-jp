@@ -3,12 +3,12 @@ title: Docker の概要
 description: この記事では、.NET Core アプリケーションのコンテキストでの Docker の基本と概要について説明します。
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: d0bce09d7acdcf474fbb8849c8fc82dae4a69598
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5da71215e3b539f10993677d23d89e2b8a49cb39
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753302"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626480"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET および Docker の概要
 
@@ -32,7 +32,7 @@ Docker をインストールする方法について詳しくは、次のダウ�
 
 ### <a name="registries"></a>レジストリ
 
-コンテナー レジストリはイメージ リポジトリのコレクションです。 レジストリのイメージに基づいて自分のイメージを作成できます。 レジストリ内のイメージから直接コンテナーを作成できます。 [Docker コンテナー、イメージ、およびレジストリの相互の関係](../../standard/microservices-architecture/container-docker-introduction/docker-containers-images-registries.md)は、[コンテナー化されたアプリケーションやマイクロサービスの設計および構築](../../standard/microservices-architecture/architect-microservice-container-applications/index.md)を行う際に重要となる概念です。 この手法を用いると開発および配置にかかる時間を大幅に短縮できます。
+コンテナー レジストリはイメージ リポジトリのコレクションです。 レジストリのイメージに基づいて自分のイメージを作成できます。 レジストリ内のイメージから直接コンテナーを作成できます。 [Docker コンテナー、イメージ、およびレジストリの相互の関係](../../architecture/microservices/container-docker-introduction/docker-containers-images-registries.md)は、[コンテナー化されたアプリケーションやマイクロサービスの設計および構築](../../architecture/microservices/architect-microservice-container-applications/index.md)を行う際に重要となる概念です。 この手法を用いると開発および配置にかかる時間を大幅に短縮できます。
 
 Docker には、自分が使用できる [Docker Hub](https://hub.docker.com/) でホストされているパブリック レジストリが含まれます。 [.NET Core 関連イメージ](https://hub.docker.com/_/microsoft-dotnet-core/)は Docker Hub に一覧表示されます。 
 
