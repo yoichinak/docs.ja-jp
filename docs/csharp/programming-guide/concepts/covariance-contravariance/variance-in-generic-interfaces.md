@@ -1,5 +1,5 @@
 ---
-title: ジェネリック インターフェイスの分散 (C#)
+title: ジェネリック インターフェイスの変性 (C#)
 ms.date: 06/06/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
 ms.openlocfilehash: 9cbbea35003e86e05d618f5e6000ba2788359cb0
@@ -9,9 +9,9 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/03/2019
 ms.locfileid: "67539492"
 ---
-# <a name="variance-in-generic-interfaces-c"></a>ジェネリック インターフェイスの分散 (C#)
+# <a name="variance-in-generic-interfaces-c"></a>ジェネリック インターフェイスの変性 (C#)
 
-.NET Framework 4 では、既存のいくつかのジェネリック インターフェイスに対して、分散のサポートが導入されています。 分散のサポートにより、これらのインターフェイスを実装するクラスの暗黙的な変換が可能になりました。 
+.NET Framework 4 では、既存のいくつかのジェネリック インターフェイスに対して、変性のサポートが導入されています。 変性のサポートにより、これらのインターフェイスを実装するクラスの暗黙的な変換が可能になりました。 
 
 .NET Framework 4 以降では、次のインターフェイスがバリアントです。
 
@@ -76,9 +76,9 @@ class Program
 }
 ```
 
-詳しくは、「[ジェネリック コレクションに対するインターフェイスでの分散の使用 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)」をご覧ください。
+詳しくは、「[ジェネリック コレクションに対するインターフェイスでの変性の使用 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)」をご覧ください。
 
-ジェネリック インターフェイスでの分散がサポートされるのは参照型だけです。 値型は変性をサポートしていません。 たとえば、整数は値型によって表されるため、`IEnumerable<int>` を暗黙的に `IEnumerable<object>` に変換することはできません。
+ジェネリック インターフェイスでの変性がサポートされるのは参照型だけです。 値型は変性をサポートしていません。 たとえば、整数は値型によって表されるため、`IEnumerable<int>` を暗黙的に `IEnumerable<object>` に変換することはできません。
 
 ```csharp
 IEnumerable<int> integers = new List<int>();
@@ -100,7 +100,7 @@ IEnumerable<Object> listObjects = new List<String>();
 
 ## <a name="see-also"></a>関連項目
 
-- [ジェネリック コレクションに対するインターフェイスでの分散の使用 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)
+- [ジェネリック コレクションに対するインターフェイスでの変性の使用 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)
 - [バリアント ジェネリック インターフェイスの作成 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)
 - [ジェネリック インターフェイス](../../../../standard/generics/interfaces.md)
-- [デリゲートの分散 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+- [デリゲートの変性 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)

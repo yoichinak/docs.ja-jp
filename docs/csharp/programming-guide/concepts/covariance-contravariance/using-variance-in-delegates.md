@@ -1,5 +1,5 @@
 ---
-title: デリゲートの分散の使用 (C#)
+title: デリゲートの変性の使用 (C#)
 ms.date: 07/20/2015
 ms.assetid: 1638c95d-dc8b-40c1-972c-c2dcf84be55e
 ms.openlocfilehash: 44a6153a9a1c0aa0aebb18710ea9e770fd4e57fe
@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/23/2019
 ms.locfileid: "54667276"
 ---
-# <a name="using-variance-in-delegates-c"></a>デリゲートの分散の使用 (C#)
+# <a name="using-variance-in-delegates-c"></a>デリゲートの変性の使用 (C#)
 メソッドをデリゲートに割り当てると、"*共変性*" と "*反変性*" により、デリゲート型をメソッドのシグネチャに柔軟に一致させることができます。 共変性により、メソッドの戻り値の型の派生を、デリゲートに定義されている型よりも強くできます。 また、反変性により、メソッドのパラメーター型の派生をデリゲート型よりも弱くできます。  
   
 ## <a name="example-1-covariance"></a>例 1:共変性  
@@ -79,5 +79,5 @@ public Form1()
   
 ## <a name="see-also"></a>関連項目
 
-- [デリゲートの分散 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
-- [Func および Action 汎用デリゲートでの分散の使用 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [デリゲートの変性 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+- [Func および Action 汎用デリゲートでの変性の使用 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
