@@ -17,7 +17,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61674611"
 ---
-# <a name="clear-element-for-authenticationmodules-network-settings"></a>\<クリア > authenticationModules (ネットワーク設定) の要素
+# <a name="clear-element-for-authenticationmodules-network-settings"></a>\authenticationModules の <clear> 要素 (ネットワーク設定)
 アプリケーションからのすべての認証モジュールを削除します。  
   
  \<configuration>  
