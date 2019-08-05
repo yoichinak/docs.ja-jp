@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b7e9401cbd26c62f88ccb4a4b8c2caeb78768d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 69cc2459f1944c8101be9c58b1462217ee7ac78f
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119198"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629571"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Windows フォーム ActiveX コントロール インポーター)
 ActiveX コントロール インポーターは、ActiveX コントロール用の COM タイプ ライブラリに属する型定義を Windows フォーム コントロールに変換します。  
@@ -49,7 +49,7 @@ aximp [options]{file.dll | file.ocx}
 |`/nologo`|Microsoft 著作権情報を表示しません。|  
 |`/out:` *filename*|作成するアセンブリの名前を指定します。|  
 |`/publickey:` *filename*|*filename* で指定されたファイルの公開キーを使用して、生成されたコントロールに厳密な名前で署名します。|  
-|`/rcw:` *filename*|新しいものを生成する代わりに、指定したランタイム呼び出し可能ラッパーを使用します。 複数のインスタンスを指定できます。 現在のディレクトリは相対パスに使用されます。 詳細については、「[Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md)」 (ランタイム呼び出し可能ラッパー) を参照してください。|  
+|`/rcw:` *filename*|新しいものを生成する代わりに、指定したランタイム呼び出し可能ラッパーを使用します。 複数のインスタンスを指定できます。 現在のディレクトリは相対パスに使用されます。 詳細については、「[Runtime Callable Wrapper](../../../docs/standard/native-interop/runtime-callable-wrapper.md)」 (ランタイム呼び出し可能ラッパー) を参照してください。|  
 |`/silent`|成功メッセージを表示しません。|  
 |`/source`|Windows フォーム ラッパーの C# ソース コードを生成します。|  
 |`/verbose`|詳細出力モードを指定します。進行状況に関する追加情報が表示されます。|  

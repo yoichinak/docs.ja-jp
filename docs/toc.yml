@@ -595,14 +595,16 @@
       items:
         - name: 'C# の型システム'
           href: csharp/programming-guide/types/index.md
+        - name: null 許容参照型
+          href: csharp/nullable-references.md
+        - name: 属性と制約を使用した null 許容 API の記述
+          href: csharp/nullable-attributes.md
         - name: 名前空間
           href: csharp/programming-guide/namespaces/index.md
         - name: 基本型
           href: csharp/basic-types.md
         - name: クラス
           href: csharp/programming-guide/classes-and-structs/classes.md
-        - name: null 許容参照型
-          href: csharp/nullable-references.md
         - name: 構造体
           href: csharp/structs.md
         - name: タプル

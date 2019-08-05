@@ -8,21 +8,21 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b2b2f550b21a8d64968c6280cc1a29c1d18bfabd
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: c88466df32a4167b2b32a7cc0f64eb306e392611
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364013"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629334"
 ---
 # <a name="exposing-net-framework-components-to-com"></a>COM への .NET Framework コンポーネントの公開
 .NET 型の記述とその型をアンマネージ コードから使用することは、開発者にとっては個別のアクティビティです。 このセクションでは、COM クライアントと相互運用するマネージド コードの記述のためのいくつかのヒントについて説明します。  
   
-- [相互運用のための .NET 型の要件を満たす](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)。  
+- [相互運用のための .NET 型の要件を満たす](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)。  
   
      COM に対して公開するすべてのマネージド型、マネージド メソッド、マネージド プロパティ、マネージド フィールド、およびマネージド イベントは、パブリックとしてください。 型には、パラメーターなしのパブリック コンストラクターが含まれている必要があります。これは COM を通じて呼び出すことができる唯一のコンストラクターです。  
   
-- [相互運用属性を適用する](../../../docs/framework/interop/applying-interop-attributes.md)。  
+- [相互運用属性を適用する](../../../docs/standard/native-interop/apply-interop-attributes.md)。  
   
      マネージド コード内のカスタム属性は、コンポーネントの相互運用性を強化できます。  
   

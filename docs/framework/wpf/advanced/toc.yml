@@ -1,4 +1,4 @@
-- name: 詳細設定
+- name: WPF の高度な領域
   href: index.md
   items:
     - name: WPF アーキテクチャ
@@ -56,7 +56,7 @@
               href: mc-ignorable-attribute.md
             - name: 'mc:ProcessContent 属性'
               href: mc-processcontent-attribute.md
-    - name: 基本要素
+    - name: 基本要素クラス
       href: base-elements.md
       items:
         - name: 基本要素の概要
@@ -104,7 +104,7 @@
               href: how-to-find-an-element-by-its-name.md
             - name: 論理ツリーをオーバーライドする
               href: how-to-override-the-logical-tree.md
-    - name: プロパティ
+    - name: WPF プロパティ システム
       href: properties-wpf.md
       items:
         - name: 依存関係プロパティの概要

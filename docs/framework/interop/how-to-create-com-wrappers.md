@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e10b6fd7df003de739b57bbb3e17deb46215763f
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: f4ae9710b99c85cfcbe3de2669c7ee85d0d24ef4
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363991"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629344"
 ---
 # <a name="how-to-create-com-wrappers"></a>方法: COM ラッパーを作成する
 
 Visual Studio 2005 の機能または .NET Framework のツールである Tlbimp.exe と Regasm.exe を使用して、COM (コンポーネント オブジェクト モデル) ラッパーを作成することができます。 どちらの方法でも以下の 2 種類の COM ラッパーが作成されます。
 
-- タイプ ライブラリからの[ランタイム呼び出し可能ラッパー](../../../docs/framework/interop/runtime-callable-wrapper.md)。マネージド コードで COM オブジェクトを実行します。
+- タイプ ライブラリからの[ランタイム呼び出し可能ラッパー](../../../docs/standard/native-interop/runtime-callable-wrapper.md)。マネージド コードで COM オブジェクトを実行します。
 
-- 必要なレジストリ設定を含む [COM 呼び出し可能ラッパー](../../../docs/framework/interop/com-callable-wrapper.md)。ネイティブ アプリケーションでマネージド オブジェクトを実行します。
+- 必要なレジストリ設定を含む [COM 呼び出し可能ラッパー](../../../docs/standard/native-interop/com-callable-wrapper.md)。ネイティブ アプリケーションでマネージド オブジェクトを実行します。
 
 Visual Studio 2005 では、プロジェクトに参照として COM ラッパーを追加できます。
 
@@ -75,5 +75,5 @@ Visual Studio 2005 では、プロジェクトに参照として COM ラッパ�
   
 ## <a name="see-also"></a>関連項目
 
-- [ランタイム呼び出し可能ラッパー](../../../docs/framework/interop/runtime-callable-wrapper.md)
-- [COM 呼び出し可能ラッパー](../../../docs/framework/interop/com-callable-wrapper.md)
+- [ランタイム呼び出し可能ラッパー](../../../docs/standard/native-interop/runtime-callable-wrapper.md)
+- [COM 呼び出し可能ラッパー](../../../docs/standard/native-interop/com-callable-wrapper.md)
