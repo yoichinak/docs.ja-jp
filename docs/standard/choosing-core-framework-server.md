@@ -4,12 +4,12 @@ description: .NET でのサーバー アプリのビルド時に考慮する必�
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 3034f77fe8ee136011a523f6882ffa09ed2758d6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 6bdcb002c2e37f45c298259c2867a631b38152ca
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641157"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630866"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>サーバー アプリ用 .NET Core と .NET Framework の選択
 
@@ -46,7 +46,7 @@ ms.locfileid: "65641157"
 
 使用できるインフラストラクチャ プラットフォームは多数あります。 [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) は、大規模で複雑なマイクロサービス システム向けに設計されています。 [Azure App Service](https://azure.microsoft.com/services/app-service/) は、ステートレス マイクロサービスに推奨されます。 「[コンテナー](#containers)」セクションで説明するように、Docker ベースのマイクロサービスの代替手段は、どのような種類のマイクロサービスのアプローチにも適しています。 これらすべてのプラットフォームでは .NET Core がサポートされるため、マイクロサービスをホストするには最適です。
 
-マイクロサービス アーキテクチャの詳細については、「[.NET Microservices:Architecture for Containerized .NET Applications](microservices-architecture/index.md)」(.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ) を参照してください。
+マイクロサービス アーキテクチャの詳細については、「[.NET Microservices:Architecture for Containerized .NET Applications](../architecture/microservices/index.md)」(.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ) を参照してください。
 
 ### <a name="containers"></a>コンテナー
 
@@ -110,4 +110,4 @@ Microsoft やサードパーティ製のプラットフォームの中には、.
 - [.NET Framework から .NET Core への移植](../core/porting/index.md)
 - [.NET および Docker の概要](../core/docker/intro-net-docker.md)
 - [.NET コンポーネントの概要](components.md)
-- [.NET マイクロサービス:コンテナー化された .NET アプリケーションのアーキテクチャ](microservices-architecture/index.md)
+- [.NET マイクロサービス:コンテナー化された .NET アプリケーションのアーキテクチャ](../architecture/microservices/index.md)
