@@ -17,7 +17,7 @@ ms.locfileid: "67410544"
 
 XML シリアル化を制御する最上位の要素です。 構成ファイルの詳細については、「[構成ファイル スキーマ](../../../docs/framework/configure-apps/file-schema/index.md)」を参照してください。
 
-\<configuration>
+\<configuration>\
 \<system.xml.serialization>
 
 ## <a name="syntax"></a>構文
