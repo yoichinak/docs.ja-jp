@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: b6fb530bbc4132b09cc17ad692e6e9e23cd75598
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: 9adceb78f53d9c855ec05859a0b3449a1623e62b
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671851"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796848"
 ---
 # <a name="imaging-overview"></a>イメージングの概要
 このトピックでは、[!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)] の概要を説明します。 開発者は、[!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] を使用して、イメージの表示、変換、および形式設定を実行できます。  
@@ -132,9 +132,9 @@ ms.locfileid: "68671851"
 #### <a name="stretching-images"></a>イメージの引き伸ばし  
  プロパティ<xref:System.Windows.Controls.Image.Stretch%2A>は、コンテナーを埋めるためにイメージをどのように拡大するかを制御します。 プロパティ<xref:System.Windows.Controls.Image.Stretch%2A>は、 <xref:System.Windows.Media.Stretch>列挙体で定義されている次の値を受け入れます。  
   
-- <xref:System.Windows.Media.Stretch.None> :イメージは、出力領域に合わせて拡大されません。 イメージが出力領域よりも大きい場合は、出力領域に収まらない部分がクリップされたイメージが出力領域に描画されます。  
+- <xref:System.Windows.Media.Stretch.None>:イメージは、出力領域に合わせて拡大されません。 イメージが出力領域よりも大きい場合は、出力領域に収まらない部分がクリップされたイメージが出力領域に描画されます。  
   
-- <xref:System.Windows.Media.Stretch.Fill>:イメージは、出力領域に合わせて拡大縮小されます。 イメージの高さと幅は個別に拡大縮小されるため、イメージの元の縦横比は保持されないことがあります。 つまり、イメージは、出力コンテナーを完全に埋めるためにゆがんで表示される可能性があります。  
+- <xref:System.Windows.Media.Stretch.Fill> :イメージは、出力領域に合わせて拡大縮小されます。 イメージの高さと幅は個別に拡大縮小されるため、イメージの元の縦横比は保持されないことがあります。 つまり、イメージは、出力コンテナーを完全に埋めるためにゆがんで表示される可能性があります。  
   
 - <xref:System.Windows.Media.Stretch.Uniform>:イメージは、出力領域内に完全に収まるようにスケーリングされます。 イメージの縦横比は保持されます。  
   
@@ -165,7 +165,7 @@ ms.locfileid: "68671851"
 ## <a name="image-metadata"></a>イメージのメタデータ  
  一部のイメージ ファイルには、ファイルの内容または特性を記述するメタデータが含まれています。 たとえば、ほとんどのデジタル カメラは、イメージをキャプチャするために使用されるカメラの型番に関するメタデータを含むイメージを作成します。 各イメージ形式は、メタデータを異なる方法で処理しますが、[!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] では、サポートしているイメージ形式のメタデータの格納と取得を一律に実行します。  
   
- メタデータへ<xref:System.Windows.Media.Imaging.BitmapSource>のアクセスは、 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>オブジェクトのプロパティを通じて提供されます。 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>イメージに含まれるすべてのメタデータを含むオブジェクトを返します。<xref:System.Windows.Media.Imaging.BitmapMetadata> このデータは、1 つのメタデータ スキーマでも、異なるスキーマの組み合わせでもかまいません。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]では、次のイメージメタデータスキーマがサポートされています。イメージファイル (Exif)、テキスト (PNG テキストデータ) [!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)] [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)]、、、および[!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]があります。  
+ メタデータへ<xref:System.Windows.Media.Imaging.BitmapSource>のアクセスは、 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>オブジェクトのプロパティを通じて提供されます。 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>イメージに含まれるすべてのメタデータを含むオブジェクトを返します。<xref:System.Windows.Media.Imaging.BitmapMetadata> このデータは、1 つのメタデータ スキーマでも、異なるスキーマの組み合わせでもかまいません。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]では、次のイメージメタデータスキーマがサポートされています。イメージファイル (Exif)、テキスト (PNG テキストデータ)、イメージファイルディレクトリ (IFD)、 [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)]、および。 [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]  
   
  メタデータの読み取りプロセスを簡略化するために<xref:System.Windows.Media.Imaging.BitmapMetadata> 、には、、などの簡単にアクセス<xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A> <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A> <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>できる名前付きプロパティがいくつか用意されています。 これらの名前付きプロパティの多くは、メタデータを書き込むためにも使用できます。 メタデータを読み取るための追加サポートは、メタデータ クエリ リーダーによって提供されます。 メソッド<xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A>は、 *"/app1/exif/"* などの文字列クエリを指定することによって、メタデータクエリリーダーを取得するために使用されます。 次の例では<xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> 、を使用して、 *"/Text/Description"* の場所に格納されているテキストを取得します。  
   

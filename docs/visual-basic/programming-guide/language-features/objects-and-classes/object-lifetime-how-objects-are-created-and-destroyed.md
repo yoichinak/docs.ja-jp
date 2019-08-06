@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 5b092f50ddff5c432fbd6396b5fedafe7a6acba0
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 932f56a9a277360b11c551aaa1faf819f8e07fe6
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512842"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796675"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>オブジェクトの有効期間:オブジェクトの作成方法と破棄方法 (Visual Basic)
 
@@ -41,7 +41,7 @@ ms.locfileid: "68512842"
 
 ### <a name="sub-new"></a>Sub New
 
-`Sub New` コンストラクターは、クラスの作成時に 1 回だけ実行できます。 同じクラスまたは派生クラスから別のコンストラクターの最初のコード行以外の任意の場所で、明示的に呼び出すことはできません。 また、`Sub New` メソッド内のコードは常に、クラス内の他のすべてのコードより先に実行されます。 クラスのプロシージャを`Sub New` `Sub New`明示的に定義していない場合、Visual Basic 以降のバージョンでは、実行時にコンストラクターが暗黙的に作成されます。
+`Sub New` コンストラクターは、クラスの作成時に 1 回だけ実行できます。 同じクラスまたは派生クラスから別のコンストラクターの最初のコード行以外の任意の場所で、明示的に呼び出すことはできません。 また、`Sub New` メソッド内のコードは常に、クラス内の他のすべてのコードより先に実行されます。 クラスのプロシージャを`Sub New` `Sub New`明示的に定義していない場合、Visual Basic は実行時にコンストラクターを暗黙的に作成します。
 
 クラスのコンストラクターを作成するには、クラス定義の任意の場所に `Sub New` という名前のプロシージャを作成します。 パラメーター化されたコンストラクターを作成するには、次のコードに示すように、他のプロシージャの引数を指定する場合と同じく、`Sub New` に引数の名前とデータ型を指定します。
 
@@ -64,7 +64,7 @@ ms.locfileid: "68512842"
 
 `Finalize` デストラクターは、所属先のクラスまたは派生クラスからのみ呼び出し可能な保護されたメソッドです。 `Finalize` はオブジェクトが破棄されるときに自動的に呼び出されるため、派生クラスの `Finalize` 実装の外部から `Finalize` を明示的に呼び出す必要はありません。
 
-オブジェクトが nothing に設定されるとすぐに実行される `Class_Terminate` と異なり、通常、オブジェクトがスコープを失ってから Visual Basic が `Finalize` デストラクターを呼び出すまでに遅延が発生します。 Visual Basic 以降のバージョンでは、2つ目の種類<xref:System.IDisposable.Dispose%2A>のデストラクターを使用できます。これは、いつでも明示的に呼び出して、リソースをすぐに解放できます。
+オブジェクトが nothing に設定されるとすぐに実行される `Class_Terminate` と異なり、通常、オブジェクトがスコープを失ってから Visual Basic が `Finalize` デストラクターを呼び出すまでに遅延が発生します。 Visual Basic .net では、2つ目の種類<xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>のデストラクターを使用できます。これは、いつでも明示的に呼び出してリソースをすぐに解放できます。
 
 > [!NOTE]
 > `Finalize` デストラクターからは例外をスローしません。これは、その例外をアプリケーションで処理できないために、アプリケーションが異常終了する可能性があるためです。

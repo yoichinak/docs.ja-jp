@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 4679a114f4b6d0bc2b3773d46a4dffa774d38918
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 2d3a72dad6a4e139288bf3c1fa9f4cde5124586f
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401678"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796764"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>WPF アプリケーションの配置 (WPF)
 Windows Presentation Foundation (WPF) アプリケーションを構築した後は、アプリケーションを配置する必要があります。 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].NET Framework には、いくつかの展開テクノロジが含まれています。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションの配置に使用される配置テクノロジは、アプリケーションの種類によって決まります。 このトピックでは、それぞれの配置テクノロジの概要と使用法を、それぞれの [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションの種類の配置要件に関連して説明します。  
@@ -77,7 +77,7 @@ Windows Presentation Foundation (WPF) アプリケーションを構築した後
   
 <a name="Deploying_Markup_Only_XAML_Applications"></a>   
 ### <a name="deploying-markup-only-xaml-applications"></a>マークアップのみの XAML アプリケーションの配置  
- マークアップのみの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページは、通常、[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] ページと同様に Web サーバーに公開され、[!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] を使用して表示できます。 マークアップのみの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページは、部分信頼セキュリティ サンドボックス内で実行され、インターネット ゾーン アクセス許可セットによって定義された制約が適用されます。 これにより、[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] ベースの Web アプリケーションと同等のセキュリティ サンドボックスが提供されます。  
+ マークアップのみ[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]のページは、通常、HTML ページなどの Web サーバーに発行され、 [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)]を使用して表示できます。 マークアップのみの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページは、部分信頼セキュリティ サンドボックス内で実行され、インターネット ゾーン アクセス許可セットによって定義された制約が適用されます。 これにより、HTML ベースの Web アプリケーションに対する同等のセキュリティサンドボックスが提供されます。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションのセキュリティの詳細については、「[セキュリティ](../security-wpf.md)」を参照してください。  
   

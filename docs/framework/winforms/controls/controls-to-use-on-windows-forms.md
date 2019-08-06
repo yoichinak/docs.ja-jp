@@ -5,22 +5,22 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: 3d8e6d37a5c27eac6af303819fb50b28acd225c6
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 114b9a6db7b41c5aac24bcd1badcf5f5b4b2fb08
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589048"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796276"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Windows フォームで使用するコントロール
 Windows フォームで使うことができるコントロールとコンポーネントのアルファベット順の一覧を次に示します。 このセクションで説明する Windows フォーム コントロールに加えて、ActiveX コントロールとカスタム コントロールを Windows フォームに追加できます。 必要なコントロールがここで見つからない場合は、独自に作成することもできます。 詳しくは、「[デザイン時の Windows フォーム コントロールの開発](developing-windows-forms-controls-at-design-time.md)」をご覧ください。 必要なコントロールの選択について詳しくは、「[Windows フォーム コントロールの機能別一覧](windows-forms-controls-by-function.md)」をご覧ください。  
   
 > [!NOTE]
->  Visual Basic のコントロールは、.NET Framework によって提供されるクラスに基づいています。  
+>  Visual Basic コントロールは、.NET Framework によって提供されるクラスに基づいています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [Windows フォーム コントロールの機能別一覧](windows-forms-controls-by-function.md)  
- .NET Framework に基づく Windows フォーム コントロールを示しています。  
+ .NET Framework に基づいて Windows フォームコントロールの一覧と説明を行います。  
   
  [組み込みのオーナー描画サポートを備えたコントロール](controls-with-built-in-owner-drawing-support.md)  
  コントロールの外観のうち、プロパティでは使用できない部分を変更する方法について説明します。  
@@ -50,10 +50,10 @@ Windows フォームで使うことができるコントロールとコンポー
  ドロップダウン コンボ ボックスにデータを表示します。  
   
  [ContextMenu コンポーネント](contextmenu-component-windows-forms.md)  
- 選択したオブジェクトに関連付けられた、頻繁に使われるコマンドに簡単にアクセスできるメニューをユーザーを提供します。 <xref:System.Windows.Forms.ContextMenuStrip>が置換および追加する機能、 <xref:System.Windows.Forms.ContextMenu> 、以前のバージョン コントロール<xref:System.Windows.Forms.ContextMenu>必要な場合に、旧バージョンとの互換性と将来の使用のため保持されます。  
+ 選択したオブジェクトに関連付けられた、頻繁に使われるコマンドに簡単にアクセスできるメニューをユーザーを提供します。 は、以前のバージョンの<xref:System.Windows.Forms.ContextMenu>コントロールに<xref:System.Windows.Forms.ContextMenu> 代わる機能を追加しますが、必要に応じて、下位互換性と将来の使用の両方のために保持されます。<xref:System.Windows.Forms.ContextMenuStrip>  
   
  [ContextMenuStrip コントロール](contextmenustrip-control.md)  
- ショートカット メニューを表します。 <xref:System.Windows.Forms.ContextMenuStrip>が置換および追加する機能、 <xref:System.Windows.Forms.ContextMenu> 、以前のバージョン コントロール<xref:System.Windows.Forms.ContextMenu>必要な場合に、旧バージョンとの互換性と将来の使用のため保持されます。  
+ ショートカット メニューを表します。 は、以前のバージョンの<xref:System.Windows.Forms.ContextMenu>コントロールに<xref:System.Windows.Forms.ContextMenu> 代わる機能を追加しますが、必要に応じて、下位互換性と将来の使用の両方のために保持されます。<xref:System.Windows.Forms.ContextMenuStrip>  
   
  [DataGrid コントロール](datagrid-control-windows-forms.md)  
  データセットの表形式データを表示し、データ ソースを更新できます。  
@@ -73,7 +73,7 @@ Windows フォームで使うことができるコントロールとコンポー
  [ErrorProvider コンポーネント](errorprovider-component-windows-forms.md)  
  非侵入型の方法でユーザーにエラー情報を表示します。  
   
- [FileDialog クラス](filedialog-class.md)ファイル ダイアログ ボックスの基本クラスの機能を提供します。
+ [FileDialog クラス](filedialog-class.md)ファイルダイアログボックスの基本クラスの機能を提供します。
 
  [FlowLayoutPanel コントロール](flowlayoutpanel-control-windows-forms.md)  
  水平方向または垂直方向に内容を動的にレイアウトするパネルを表します。  
@@ -109,13 +109,13 @@ Windows フォームで使うことができるコントロールとコンポー
  Windows エクスプローラーの形式で、アイコン付きの項目一覧を表示します。  
   
  [MainMenu コンポーネント](mainmenu-component-windows-forms.md)  
- 実行時にメニューを表示します。 <xref:System.Windows.Forms.MenuStrip>が置換および追加する機能、 <xref:System.Windows.Forms.MainMenu> 、以前のバージョン コントロール<xref:System.Windows.Forms.MainMenu>を選択した場合に、旧バージョンとの互換性と将来の使用のため保持されます。  
+ 実行時にメニューを表示します。 は、以前のバージョンの<xref:System.Windows.Forms.MainMenu>コントロールに<xref:System.Windows.Forms.MainMenu> 代わる機能を追加していますが、旧バージョンとの互換性を保つために残されています。<xref:System.Windows.Forms.MenuStrip>  
   
  [MaskedTextBox コントロール](maskedtextbox-control-windows-forms.md)  
  フォームでのユーザー入力の形式を制限します。  
   
  [MenuStrip コントロール](menustrip-control-windows-forms.md)  
- フォーム用のメニュー システムを提供します。 <xref:System.Windows.Forms.MenuStrip>が置換および追加する機能、 <xref:System.Windows.Forms.MainMenu> 、以前のバージョン コントロール<xref:System.Windows.Forms.MainMenu>を選択した場合に、旧バージョンとの互換性と将来の使用のため保持されます。  
+ フォーム用のメニュー システムを提供します。 は、以前のバージョンの<xref:System.Windows.Forms.MainMenu>コントロールに<xref:System.Windows.Forms.MainMenu> 代わる機能を追加していますが、旧バージョンとの互換性を保つために残されています。<xref:System.Windows.Forms.MenuStrip>  
   
  [MonthCalendar コントロール](monthcalendar-control-windows-forms.md)  
  ユーザーが日付情報を表示して設定するための直感的なグラフィカル インターフェイスを提供します。  
@@ -162,13 +162,13 @@ Windows フォームで使うことができるコントロールとコンポー
  [SaveFileDialog コンポーネント](savefiledialog-component-windows-forms.md)  
  保存するファイルとそれらの保存先を選択します。  
   
- [SoundPlayer クラス](soundplayer-class.md)アプリケーションにサウンドを簡単に追加することができます。
+ [SoundPlayer クラス](soundplayer-class.md)を使用すると、アプリケーションにサウンドを簡単に組み込むことができます。
   
  [SplitContainer コントロール](splitcontainer-control-windows-forms.md)  
  ドッキングされたコントロールのサイズを変更できます。  
   
  [Splitter コントロール](splitter-control-windows-forms.md)  
- ドッキングされたコントロールのサイズを変更するユーザーは、(.NET Framework のバージョン 1.x)。  
+ ドッキングされたコントロールのサイズをユーザーが変更できるようにします (.NET Framework バージョン 1.x)。  
   
  [StatusBar コントロール](statusbar-control-windows-forms.md)  
  フォーカスを持つコントロールに関するステータス情報を表示します。 <xref:System.Windows.Forms.StatusStrip> コントロールは、以前のバージョンの <xref:System.Windows.Forms.StatusBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.StatusBar> コントロールも、下位互換性を保つ目的および必要に応じて将来使用する目的で保持されます。  
@@ -189,19 +189,19 @@ Windows フォームで使うことができるコントロールとコンポー
  一定の間隔でイベントを発生させます。  
   
  [ToolBar コントロール](toolbar-control-windows-forms.md)  
- コマンドをアクティブ化するメニューとビットマップのボタンを表示します。 コントロールの機能を拡張し、その外観と動作を変更できます。 <xref:System.Windows.Forms.ToolStrip>が置換および追加する機能、 <xref:System.Windows.Forms.ToolBar> 、以前のバージョン コントロール<xref:System.Windows.Forms.ToolBar>を選択した場合に、旧バージョンとの互換性と将来の使用のため保持されます。  
+ コマンドをアクティブ化するメニューとビットマップのボタンを表示します。 コントロールの機能を拡張し、その外観と動作を変更できます。 は、以前のバージョンの<xref:System.Windows.Forms.ToolBar>コントロールに<xref:System.Windows.Forms.ToolBar> 代わる機能を追加していますが、旧バージョンとの互換性を保つために残されています。<xref:System.Windows.Forms.ToolStrip>  
   
  [ToolStrip コントロール](toolstrip-control-windows-forms.md)  
- Windows フォーム アプリケーションにカスタムのツールバーとメニューを作成します。 <xref:System.Windows.Forms.ToolStrip>が置換および追加する機能、 <xref:System.Windows.Forms.ToolBar> 、以前のバージョン コントロール<xref:System.Windows.Forms.ToolBar>を選択した場合に、旧バージョンとの互換性と将来の使用のため保持されます。  
+ Windows フォーム アプリケーションにカスタムのツールバーとメニューを作成します。 は、以前のバージョンの<xref:System.Windows.Forms.ToolBar>コントロールに<xref:System.Windows.Forms.ToolBar> 代わる機能を追加していますが、旧バージョンとの互換性を保つために残されています。<xref:System.Windows.Forms.ToolStrip>  
   
  [ToolStripContainer コントロール](toolstripcontainer-control.md)  
- ドッキング、ラフティング、配置のフォームの両側のパネルを提供します。<xref:System.Windows.Forms.ToolStrip>コントロール、および中央<xref:System.Windows.Forms.ToolStripContentPanel>の従来型のコントロール。  
+ ドッキング、ラフティング、および配置<xref:System.Windows.Forms.ToolStrip>を行うためのフォームの各面にパネルを用意し、従来のコントロールの中心<xref:System.Windows.Forms.ToolStripContentPanel>となるようにします。  
   
  [ToolStripPanel コントロール](toolstrippanel-control.md)  
- 1 つのパネルをドッキング、ラフティング、配置の提供<xref:System.Windows.Forms.ToolStrip>コントロール。  
+ ドッキング、ラフティング、および配置<xref:System.Windows.Forms.ToolStrip>のコントロールに1つのパネルを提供します。  
   
  [ToolStripProgressBar コントロールの概要](toolstripprogressbar-control-overview.md)  
- 処理の進行状況をグラフィカルに示します。 <xref:System.Windows.Forms.ToolStripProgressBar>に含まれる代表的な<xref:System.Windows.Forms.StatusStrip>します。  
+ 処理の進行状況をグラフィカルに示します。 は<xref:System.Windows.Forms.ToolStripProgressBar> 、通常、 <xref:System.Windows.Forms.StatusStrip>に含まれています。  
   
  [ToolStripStatusLabel コントロール](toolstripstatuslabel-control.md)  
  <xref:System.Windows.Forms.StatusStrip> コントロールのパネルを表します。  
@@ -229,7 +229,7 @@ Windows フォームで使うことができるコントロールとコンポー
  手順トピックへのリンク、作成するコントロールの種類に関する推奨事項、および独自のコントロールの作成に関する他の情報を提供します。  
   
  [各言語およびライブラリにおける、コントロールとプログラミング可能オブジェクトの比較](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))  
- Visual Basic では、対応するコントロールを Visual Basic 6.0 でコントロールをマップするテーブルを提供します。 コントロールは、.NET Framework のクラスではようになりましたことに注意してください。  
+ Visual Basic 6.0 のコントロールを Visual Basic .NET の対応するコントロールにマップするテーブルを提供します。 コントロールは .NET Framework のクラスになっていることに注意してください。  
   
- [方法: Windows フォームに ActiveX コントロールを追加します。](how-to-add-activex-controls-to-windows-forms.md)  
+ [方法: Windows フォームに ActiveX コントロールを追加する](how-to-add-activex-controls-to-windows-forms.md)  
  Windows フォームで ActiveX コントロールを使う方法について説明します。

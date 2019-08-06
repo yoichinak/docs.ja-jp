@@ -8,16 +8,16 @@ helpviewer_keywords:
 - properties, UI Automation clients
 - UI Automation, client properties
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
-ms.openlocfilehash: 5fe988ab94584f79bf3a27257e521ee3a11babc5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e687533d618cef3fcc59b3ecd2b205b80b13b97d
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624270"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796664"
 ---
 # <a name="ui-automation-properties-for-clients"></a>クライアントの UI オートメーション プロパティ
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 の最新情報[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については[、「Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  ここでは、UI オートメーション クライアント アプリケーションに公開される [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティについて説明します。  
   
@@ -27,17 +27,17 @@ ms.locfileid: "64624270"
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティは読み取り専用です。 コントロールのプロパティを設定するには、適切なコントロール パターンのメソッドを使用する必要があります。 たとえば、スクロール ウィンドウの位置の値を変更する場合は、 <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> を使用します。  
   
- パフォーマンスを向上させるために、 <xref:System.Windows.Automation.AutomationElement> オブジェクトを取得したときに、コントロールおよびコントロール パターンのプロパティ値をキャッシュできます。 詳細については、次を参照してください。 [UI オートメーション クライアントにおけるキャッシュ](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)します。  
+ パフォーマンスを向上させるために、 <xref:System.Windows.Automation.AutomationElement> オブジェクトを取得したときに、コントロールおよびコントロール パターンのプロパティ値をキャッシュできます。 詳細については、「 [UI オートメーションクライアントでのキャッシュ](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)」を参照してください。  
   
 <a name="Property_IDs"></a>   
 ## <a name="property-ids"></a>プロパティ ID  
- プロパティ [!INCLUDE[TLA#tla_id#plural](../../../includes/tlasharptla-idsharpplural-md.md)] は、 <xref:System.Windows.Automation.AutomationProperty> オブジェクトにカプセル化される一意の定数値です。 UI オートメーション クライアント アプリケーションは、これらの [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] を <xref:System.Windows.Automation.AutomationElement> クラスまたは適切なコントロール パターン クラス ( <xref:System.Windows.Automation.ScrollPattern>など) から取得します。 UI オートメーション プロバイダーは、 <xref:System.Windows.Automation.AutomationElementIdentifiers> またはコントロール パターン識別子クラスの 1 つ ( <xref:System.Windows.Automation.ScrollPatternIdentifiers>など) からこれらを取得します。  
+ プロパティ識別子 (IDs) は、オブジェクトに<xref:System.Windows.Automation.AutomationProperty>カプセル化される一意の定数値です。 UI オートメーションクライアントアプリケーションは、 <xref:System.Windows.Automation.AutomationElement>クラスまたは適切なコントロールパターンクラス (など<xref:System.Windows.Automation.ScrollPattern>) からこれらの id を取得します。 UI オートメーション プロバイダーは、 <xref:System.Windows.Automation.AutomationElementIdentifiers> またはコントロール パターン識別子クラスの 1 つ ( <xref:System.Windows.Automation.ScrollPatternIdentifiers>など) からこれらを取得します。  
   
  <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> の数値 <xref:System.Windows.Automation.AutomationProperty> は、 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A?displayProperty=nameWithType> メソッドで照会するプロパティを識別するために、プロバイダーによって使用されます。 通常、クライアント アプリケーションで <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>を調べる必要はありません。 <xref:System.Windows.Automation.AutomationIdentifier.ProgrammaticName%2A> は、デバッグと診断の目的のみに使用されます。  
   
 <a name="Property_Conditions"></a>   
 ## <a name="property-conditions"></a>プロパティ条件  
- プロパティ [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] は、 <xref:System.Windows.Automation.PropertyCondition> オブジェクトの検出に使用する <xref:System.Windows.Automation.AutomationElement> オブジェクトを構築する際に使用されます。 たとえば、特定の名前を持つ <xref:System.Windows.Automation.AutomationElement> を検出したい場合や、すべての有効なコントロールを検出したい場合があります。 各 <xref:System.Windows.Automation.PropertyCondition> では、 <xref:System.Windows.Automation.AutomationProperty> 識別子と、そのプロパティが一致する必要がある値を指定します。  
+ プロパティ id は、オブジェクトの検索<xref:System.Windows.Automation.PropertyCondition> <xref:System.Windows.Automation.AutomationElement>に使用するオブジェクトの構築に使用されます。 たとえば、特定の名前を持つ <xref:System.Windows.Automation.AutomationElement> を検出したい場合や、すべての有効なコントロールを検出したい場合があります。 各 <xref:System.Windows.Automation.PropertyCondition> では、 <xref:System.Windows.Automation.AutomationProperty> 識別子と、そのプロパティが一致する必要がある値を指定します。  
   
  詳細については、次のリファレンス トピックを参照してください。  
   

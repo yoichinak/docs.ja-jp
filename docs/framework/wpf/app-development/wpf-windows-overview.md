@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: ffb397c673333b26649a815fce7a5d4e63e5b987
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 519afa7f39f669b184ccc269546ef930c114c404
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401727"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796775"
 ---
 # <a name="wpf-windows-overview"></a>WPF ウィンドウの概要
 ユーザーは、Windows を通じて Windows Presentation Foundation (WPF) スタンドアロンアプリケーションと対話します。 ウィンドウの主な目的は、データを視覚化してユーザーがデータと対話できるコンテンツをホストすることです。 スタンド[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アロンアプリケーションは、 <xref:System.Windows.Window>クラスを使用して独自のウィンドウを提供します。 このトピックで<xref:System.Windows.Window>は、スタンドアロンアプリケーションでのウィンドウの作成と管理の基礎について説明します。  
@@ -167,7 +167,7 @@ ms.locfileid: "68401727"
   
 - もう一方のウィンドウに影響を与えずに、最小化/最大化し、元のサイズに戻す。  
   
- 一部のウィンドウには、そのウィンドウを開いたウィンドウとの関係が必要です。 たとえば、 [!INCLUDE[TLA#tla_ide](../../../../includes/tlasharptla-ide-md.md)]アプリケーションでは、プロパティウィンドウとツールウィンドウを開くことができます。このウィンドウは、通常の動作が、そのウィンドウを作成するウィンドウをカバーするために使用されます。 また、そのようなウィンドウは、必ず作成元のウィンドウと一緒に閉じ、最小化/最大化し、元のサイズに戻す必要があります。 このような関係を確立するには、1つのウィンドウ*を別の*ウィンドウに<xref:System.Windows.Window.Owner%2A>し、所有*ウィンドウ*のプロパティに*オーナーウィンドウ*への参照を設定します。 これを次の例に示します。  
+ 一部のウィンドウには、そのウィンドウを開いたウィンドウとの関係が必要です。 たとえば、統合開発環境 (IDE: Integrated Development Environment) アプリケーションでは、プロパティウィンドウとツールウィンドウを開くことができます。このウィンドウは、通常の動作が、そのウィンドウを作成するウィンドウをカバーするために使用されます。 また、そのようなウィンドウは、必ず作成元のウィンドウと一緒に閉じ、最小化/最大化し、元のサイズに戻す必要があります。 このような関係を確立するには、 1 つのウィンドウを別のウィンドウに<xref:System.Windows.Window.Owner%2A>し、所有*ウィンドウ*のプロパティに*オーナーウィンドウ*への参照を設定します。 これを次の例に示します。  
   
  [!code-csharp[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/CSharp/MainWindow.xaml.cs#setwindowownercode)]
  [!code-vb[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/visualbasic/mainwindow.xaml.vb#setwindowownercode)]  
@@ -372,9 +372,9 @@ ms.locfileid: "68401727"
 ## <a name="window-state"></a>ウィンドウの状態  
  サイズを変更できるウィンドウには、有効期間中、通常、最小化、最大化の 3 つの状態があります。 *通常*の状態のウィンドウは、ウィンドウの既定の状態です。 この状態のウィンドウは、サイズ変更グリップ、またはサイズ変更可能な場合は境界線を使用して、ユーザーが移動したりサイズ変更したりできます。  
   
- がに<xref:System.Windows.Window.ShowInTaskbar%2A>  設定されている場合、最小化された状態のウィンドウは、タスクバーボタンに折りたたまれます。それ以外の場合は、可能な限り小さいサイズに縮小され、デスクトップの左下隅に再配置され`true`ます。 最小化されたウィンドウはいずれの種類も、境界線またはサイズ変更グリップを使用してサイズ変更できません。ただし、タスク バーに表示されていない最小化されたウィンドウはデスクトップの任意の場所にドラッグできます。  
+ がに<xref:System.Windows.Window.ShowInTaskbar%2A> 設定されている場合、最小化された状態のウィンドウは、タスクバーボタンに折りたたまれます。それ以外の場合は、可能な限り小さいサイズに縮小され、デスクトップの左下隅に再配置され`true`ます。 最小化されたウィンドウはいずれの種類も、境界線またはサイズ変更グリップを使用してサイズ変更できません。ただし、タスク バーに表示されていない最小化されたウィンドウはデスクトップの任意の場所にドラッグできます。  
   
- 最大化され*た状態の*ウィンドウは、最大サイズに拡張されます。これは、 <xref:System.Windows.FrameworkElement.MaxHeight%2A>、、 <xref:System.Windows.FrameworkElement.MaxWidth%2A>および<xref:System.Windows.Window.SizeToContent%2A>の各プロパティによって決まります。 最小化されたウィンドウと同様、最大化されたウィンドウは、サイズ変更グリップを使用したり、境界線をドラッグしたりすることによってサイズ変更できません。  
+ 最大化された状態のウィンドウは、最大サイズに拡張されます。これは、 <xref:System.Windows.FrameworkElement.MaxHeight%2A>、、 <xref:System.Windows.FrameworkElement.MaxWidth%2A>および<xref:System.Windows.Window.SizeToContent%2A>の各プロパティによって決まります。 最小化されたウィンドウと同様、最大化されたウィンドウは、サイズ変更グリップを使用したり、境界線をドラッグしたりすることによってサイズ変更できません。  
   
 > [!NOTE]
 >  ウィンドウが現在最大化<xref:System.Windows.Window.Top%2A>または<xref:System.Windows.FrameworkElement.Width%2A>最小化されている場合でも、ウィンドウの、 <xref:System.Windows.Window.Left%2A>、、および<xref:System.Windows.FrameworkElement.Height%2A>の各プロパティの値は、常に通常の状態の値を表します。  

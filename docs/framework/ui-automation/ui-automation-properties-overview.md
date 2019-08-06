@@ -5,16 +5,16 @@ helpviewer_keywords:
 - UI Automation, properties
 - properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
-ms.openlocfilehash: 154ddb91e8a87c513dd1568a7f83b626dba98c20
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0468a2f47b9f270e37ad800b83d70c475cbed2c6
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652182"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796625"
 ---
 # <a name="ui-automation-properties-overview"></a>UI オートメーション プロパティの概要
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
+>  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 の最新情報[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については[、「Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  UI オートメーション プロバイダーは、 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 要素のプロパティを公開します。 これらのプロパティにより、UI オートメーション クライアント アプリケーションは、静的データと動的データを含め、 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]の構成部分 (特にコントロール) に関する情報を探索できます。  
   
@@ -26,11 +26,11 @@ ms.locfileid: "64652182"
   
 <a name="Property_Identifiers"></a>   
 ## <a name="property-identifiers"></a>プロパティ識別子  
- すべてのプロパティは、番号と名前によって識別されます。 プロパティの名前を使用するのは、デバッグおよび診断を行う場合のみです。 プロバイダーは、数値の [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] を使用して、着信プロパティ要求を識別します。 ただし、クライアント アプリケーションは、番号と名前をカプセル化した <xref:System.Windows.Automation.AutomationProperty>だけを使用して、取得したいプロパティを識別します。  
+ すべてのプロパティは、番号と名前によって識別されます。 プロパティの名前を使用するのは、デバッグおよび診断を行う場合のみです。 プロバイダーは、数値 Id を使用して、受信プロパティ要求を識別します。 ただし、クライアント アプリケーションは、番号と名前をカプセル化した <xref:System.Windows.Automation.AutomationProperty>だけを使用して、取得したいプロパティを識別します。  
   
  特定のプロパティを表す<xref:System.Windows.Automation.AutomationProperty> オブジェクトは、さまざまなクラスでフィールドとして使用できます。 セキュリティ上の理由から、UI オートメーション プロバイダーは、Uiautomationtypes.dll に含まれている別のクラスのセットから、これらのオブジェクトを取得します。  
   
- 次の表に、 <xref:System.Windows.Automation.AutomationProperty>[!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)]」を参照してください。  
+ 次の表は、 <xref:System.Windows.Automation.AutomationProperty>id を含むクラスによってプロパティを分類しています。  
   
 |プロパティの種類|クライアントが ID を取得する場所|プロバイダーが ID を取得する場所|  
 |-------------------------|--------------------------|----------------------------|  
@@ -53,7 +53,7 @@ ms.locfileid: "64652182"
   
 <a name="Properties_by_Category"></a>   
 ## <a name="properties-by-category"></a>カテゴリ別プロパティ  
- 次の表に、 [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] および <xref:System.Windows.Automation.AutomationElement> に <xref:System.Windows.Automation.AutomationElementIdentifiers>があるプロパティを分類します。 これらのプロパティは、すべてのコントロールに共通です。 一部の例外を除き、ほとんどのプロパティがプロバイダー アプリケーションの有効期間にわたって静的です。動的プロパティのほとんどは、コントロール パターンに関連付けられています。  
+ 次の表は、と<xref:System.Windows.Automation.AutomationElement> <xref:System.Windows.Automation.AutomationElementIdentifiers>で id が見つかったプロパティを分類したものです。 これらのプロパティは、すべてのコントロールに共通です。 一部の例外を除き、ほとんどのプロパティがプロバイダー アプリケーションの有効期間にわたって静的です。動的プロパティのほとんどは、コントロール パターンに関連付けられています。  
   
  **「プロパティ アクセス」** 列には、 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> と <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>だけでなく、各プロパティのすべてのアクセサーを示しています。 クライアント アプリケーションでプロパティを取得する方法の詳細については、「 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)」を参照してください。  
   
