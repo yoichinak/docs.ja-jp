@@ -17,7 +17,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61674669"
 ---
-# <a name="add-element-for-bypasslist-network-settings"></a>\<追加 > bypasslist (ネットワーク設定) の要素
+# <a name="add-element-for-bypasslist-network-settings"></a>\bypasslist の <add> 要素 (ネットワーク設定)
 プロキシ バイ パスの一覧には、IP アドレスまたは DNS 名を追加します。  
   
  \<configuration>  
