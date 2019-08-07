@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 1149a70fc723a82144d13cbd079e3287b52ec4fb
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 8fa9f2dd668efca6a3108973ff792cc17b37b410
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401484"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68818043"
 ---
 # <a name="input-overview"></a>入力の概要
 <a name="introduction"></a>サブ[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]システムは、マウス、キーボード、タッチ、スタイラスなど、さまざまなデバイスからの入力を取得するための強力な API を提供します。 このトピックでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] で提供されるサービスと、入力システムのアーキテクチャについて説明します。
@@ -116,7 +116,7 @@ ms.locfileid: "68401484"
  キーボード入力の場合、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]は、
 まず適切な<xref:System.Windows.ContentElement.KeyDown>/ <xref:System.Windows.ContentElement.KeyUp>イベントを発生させます。 これらのイベントが処理されず、かつキーが方向キーやファンクション キーなどではなくテキストである場合、
 <xref:System.Windows.ContentElement.TextInput>イベントが発生します。  <xref:System.Windows.ContentElement.KeyDown>/ <xref:System.Windows.ContentElement.KeyUp>と<xref:System.Windows.ContentElement.TextInput>イベントの間には、常に単純な1対1のマッピングがあるわけではありません。
-複数のキーストロークが1つの文字を入力したり、単一のキーストロークで複数の文字から成る文字列を入力したりできるからです。  これは、中国語、日本語、韓国語のように、[!INCLUDE[TLA#tla_ime#plural](../../../../includes/tlasharptla-imesharpplural-md.md)]を使用して幾千の文字をローマ字入力するような言語の場合に特に当てはまります。
+複数のキーストロークが1つの文字を入力したり、単一のキーストロークで複数の文字から成る文字列を入力したりできるからです。  これは、中国語、日本語、韓国語などの言語で、入力方式エディター (Ime) を使用して、対応するアルファベットで何千もの文字を生成する場合に特に当てはまります。
 
  が[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]イベントを<xref:System.Windows.ContentElement.KeyUp> <xref:System.Windows.Input.Key.System?displayProperty=nameWithType> <xref:System.Windows.Input.KeyEventArgs.Key%2A> <xref:System.Windows.ContentElement.TextInput>送信する場合、キーストロークがイベントの一部になる (たとえば、ALT + S キーが押されている) 場合、はに設定されます。 / <xref:System.Windows.ContentElement.KeyDown> これにより、 <xref:System.Windows.ContentElement.KeyDown>イベントハンドラー内のコードが<xref:System.Windows.Input.Key.System?displayProperty=nameWithType>確認され、見つかった場合は、その後に発生<xref:System.Windows.ContentElement.TextInput>したイベントのハンドラーの処理を終了します。 このような場合は、 <xref:System.Windows.Input.TextCompositionEventArgs>引数のさまざまなプロパティを使用して、元のキー入力を決定できます。 同様に、が[!INCLUDE[TLA2#tla_ime](../../../../includes/tla2sharptla-ime-md.md)] <xref:System.Windows.Input.Key>アクティブである場合、はの<xref:System.Windows.Input.Key.ImeProcessed?displayProperty=nameWithType>値を<xref:System.Windows.Input.KeyEventArgs.ImeProcessedKey%2A>持ち、元のキーストロークまたはキーストロークを与えます。
 

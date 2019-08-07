@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: c28fc87a71a1262ed5b3a6a04f615efc58e685ab
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: d5bcd5b06f6d922b29c2a494f1f63da1217e2b2d
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663348"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817874"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>WPF のセキュリティ方針 - セキュリティ エンジニアリング
 信頼できるコンピューティングは、セキュリティで保護されたコードの実稼働環境を確保するための Microsoft イニシアチブです。 信頼できるコンピューティング イニシアチブの重要な要素は、[!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)] です。 [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] は、セキュリティで保護されたコードの配信を容易にする標準のエンジニアリング プロセスと組み合わせて使用するエンジニアリングの方法です。 [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] は、ベスト プラクティスと形式化、測定可能性、追加の構造を組み合わせた 10 のフェーズで構成しています。それらは次のとおりです。  
@@ -67,27 +67,27 @@ ms.locfileid: "67663348"
 ### <a name="source-analysis-and-editing-tools"></a>ソースの分析および編集ツール  
  [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] の手動セキュリティ コード レビュー要素に加えて、[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] チームは、ソースの分析と関連する編集のためのいくつかのツールを使用してセキュリティの脆弱性を低減します。 さまざまなソースのツールを使用できます。それらは次のとおりです。  
   
-- **FXCop**:継承ルールからコード アクセス セキュリティと安全にアンマネージ コードと相互運用する方法の使用法に至るまで、マネージ コードでは、一般的なセキュリティ問題を検索します。 [FXCop](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/bb429476%28v=vs.80%29) を参照してください。  
+- **FXCop**:継承規則からコードアクセスセキュリティの使用まで、アンマネージコードと安全に相互運用する方法に至るまで、マネージコードの一般的なセキュリティの問題を検出します。 [FXCop](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/bb429476%28v=vs.80%29) を参照してください。  
   
-- **Prefix/prefast**:バッファー オーバーラン、書式文字列の問題、エラー チェックなどのアンマネージ コードでは、セキュリティの脆弱性および一般的なセキュリティ問題を検索します。  
+- **Prefix/Prefast**:バッファーオーバーラン、書式設定文字列の問題、エラーチェックなど、アンマネージコードのセキュリティの脆弱性および一般的なセキュリティの問題を検出します。  
   
-- **Banned APIs**:ソースのセキュリティ問題の原因としてなどのよく知られている関数の偶発的な使用を識別するためにコードを検索`strcpy`します。 識別されると、これらの関数は、安全な代替手段に置き換えられます。  
+- **禁止 api**:ソースコードを検索して、などのセキュリティの問題の原因としてよく知られて`strcpy`いる関数を誤って使用していないかを特定します。 特定されると、これらの関数はより安全な代替手段に置き換えられます。  
   
 <a name="techniques"></a>   
 ### <a name="testing-techniques"></a>テスト手法  
  [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] では、さまざまなテスト手法を使用します。それらは次のとおりです。  
   
-- **ホワイト ボックス テスト**:テスト担当者は、ソース コードを表示して、脆弱性攻撃のテストをビルドします。
+- **ホワイトボックスのテスト**:テスト担当者はソースコードを表示し、exploit テストをビルドします。
   
-- **ブラック ボックス テスト**:テスト担当者は、API と機能を調査してセキュリティの悪用を検索しようし、製品を攻撃ましょう。  
+- **ブラックボックステスト**:テスト担当者は、API と機能を調査してセキュリティの悪用を検出してから、製品の攻撃を試みます。  
   
-- **その他の製品から問題を再現セキュリティ**:該当する場合、関連する製品からのセキュリティの問題がテストされます。 たとえば、[!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)] の約 60 のセキュリティの問題に適した変種を特定して、それが [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] に適用できるかどうかを試します。  
+- **他の製品からのセキュリティの問題を回帰**:関連する製品からのセキュリティ上の問題がテストされます。 たとえば、Internet Explorer について約60のセキュリティ問題の適切な亜種が特定され、の[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]適用性が試されています。  
   
-- **ツール ベースの侵入テストを通じたファイルのファジー テスト**:ファイルのファジー化は、ファイル リーダーの悪用のさまざまな入力からの範囲を入力します。 この手法が使用される [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] の一例は、イメージ デコード コードでエラーを確認することです。  
+- **ファイルのファジー化を通じたツールベースの侵入テスト**:ファイルのファジー化は、さまざまな入力によってファイルリーダーの入力範囲を悪用することです。 この手法が使用される [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] の一例は、イメージ デコード コードでエラーを確認することです。  
   
 <a name="critical_code"></a>   
 ### <a name="critical-code-management"></a>クリティカル コードの管理  
- [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)]、[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]マークおよび特権を昇格させるセキュリティ クリティカルなコードを追跡するための .NET Framework のサポートを使用してセキュリティ サンド ボックスをビルド (を参照してください**セキュリティ クリティカルな手法**で[WPFセキュリティ方針 - プラットフォーム セキュリティ](wpf-security-strategy-platform-security.md))。 セキュリティ クリティカルなコードに対して高度なセキュリティの品質要件を指定すると、このようなコードは、追加レベルのソース管理の制御とセキュリティの監査を受けします。 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] の約 5 ～ 10% はセキュリティ クリティカルなコードで構成され、専用のレビュー チームによって確認されます。 ソース コードとチェックイン プロセスの管理は、セキュリティ クリティカルなコードを追跡し、各クリティカル エンティティ (重要なコードを含むメソッド) をサイン オフ状態にマップすることにより行われています。 サイン オフ状態には、1 つ以上のレビュー担当者の名前が含まれています。 毎日の [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] のビルドは、前のビルドのクリティカル コードと比較されて、承認されていない変更がチェックされます。 エンジニアがレビュー チームからの承認を得ずにクリティカル コードを変更すると、そのクリティカル コードはすぐに識別および修正されます。 このプロセスでは、[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] サンドボックス コードで特に高いレベルの監視の適用と維持が可能になります。  
+ では[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 、特権を昇格させるセキュリティクリティカルなコードをマークおよび追跡するための .NET Framework サポートを使用してセキュリティサンドボックスを構築します (「WPF セキュリティ戦略の**セキュリティクリティカルな方法**-プラットフォーム」を参照してください)。 [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] [セキュリティ](wpf-security-strategy-platform-security.md))。 セキュリティ クリティカルなコードに対して高度なセキュリティの品質要件を指定すると、このようなコードは、追加レベルのソース管理の制御とセキュリティの監査を受けします。 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] の約 5 ～ 10% はセキュリティ クリティカルなコードで構成され、専用のレビュー チームによって確認されます。 ソース コードとチェックイン プロセスの管理は、セキュリティ クリティカルなコードを追跡し、各クリティカル エンティティ (重要なコードを含むメソッド) をサイン オフ状態にマップすることにより行われています。 サイン オフ状態には、1 つ以上のレビュー担当者の名前が含まれています。 毎日の [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] のビルドは、前のビルドのクリティカル コードと比較されて、承認されていない変更がチェックされます。 エンジニアがレビュー チームからの承認を得ずにクリティカル コードを変更すると、そのクリティカル コードはすぐに識別および修正されます。 このプロセスでは、[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] サンドボックス コードで特に高いレベルの監視の適用と維持が可能になります。  
   
 ## <a name="see-also"></a>関連項目
 

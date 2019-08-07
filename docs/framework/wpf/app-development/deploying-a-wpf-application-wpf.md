@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 2d3a72dad6a4e139288bf3c1fa9f4cde5124586f
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 924553bf457a6668143785c78871ebac6e01efa4
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796764"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68818030"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>WPF アプリケーションの配置 (WPF)
 Windows Presentation Foundation (WPF) アプリケーションを構築した後は、アプリケーションを配置する必要があります。 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].NET Framework には、いくつかの展開テクノロジが含まれています。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションの配置に使用される配置テクノロジは、アプリケーションの種類によって決まります。 このトピックでは、それぞれの配置テクノロジの概要と使用法を、それぞれの [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションの種類の配置要件に関連して説明します。  
@@ -77,11 +77,11 @@ Windows Presentation Foundation (WPF) アプリケーションを構築した後
   
 <a name="Deploying_Markup_Only_XAML_Applications"></a>   
 ### <a name="deploying-markup-only-xaml-applications"></a>マークアップのみの XAML アプリケーションの配置  
- マークアップのみ[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]のページは、通常、HTML ページなどの Web サーバーに発行され、 [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)]を使用して表示できます。 マークアップのみの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページは、部分信頼セキュリティ サンドボックス内で実行され、インターネット ゾーン アクセス許可セットによって定義された制約が適用されます。 これにより、HTML ベースの Web アプリケーションに対する同等のセキュリティサンドボックスが提供されます。  
+ マークアップのみ[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]のページは、通常、HTML ページなどの Web サーバーに発行され、Internet Explorer を使用して表示できます。 マークアップのみの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページは、部分信頼セキュリティ サンドボックス内で実行され、インターネット ゾーン アクセス許可セットによって定義された制約が適用されます。 これにより、HTML ベースの Web アプリケーションに対する同等のセキュリティサンドボックスが提供されます。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションのセキュリティの詳細については、「[セキュリティ](../security-wpf.md)」を参照してください。  
   
- マークアップのみの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページは、XCopy または [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] を使用してローカル ファイル システムにインストールできます。 これらのページは、また[!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)]はエクスプローラーを使用して表示できます。  
+ マークアップのみの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページは、XCopy または [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] を使用してローカル ファイル システムにインストールできます。 これらのページは、Internet Explorer またはエクスプローラーを使用して表示できます。  
   
  XAML の詳細については、「[XAML の概要 (WPF)](../advanced/xaml-overview-wpf.md)」を参照してください。  
   
@@ -98,7 +98,7 @@ Windows Presentation Foundation (WPF) アプリケーションを構築した後
 > [!NOTE]
 >  配置マニフェストおよびアプリケーション マニフェストの詳細については、「[WPF アプリケーションのビルド](building-a-wpf-application-wpf.md)」を参照してください。  
   
- これらのファイルは、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] がビルドされるときに生成されます。 詳細については、「[方法 :新しい WPF ブラウザーアプリケーションプロジェクト](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))を作成します。 マークアップのみの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページと同様に、[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] は、通常、Web サーバーに更改され、[!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] を使用して表示されます。  
+ これらのファイルは、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] がビルドされるときに生成されます。 詳細については、「[方法 :新しい WPF ブラウザーアプリケーションプロジェクト](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))を作成します。 マークアップのみ[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]のページと[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]同様に、は通常、Web サーバーに発行され、Internet Explorer を使用して表示されます。  
   
  [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] は、任意の配置技術を使用してクライアントに配置できます。 ただし、次の機能が用意されているため、ClickOnce を使用することをお勧めします。  
   
@@ -112,13 +112,11 @@ Windows Presentation Foundation (WPF) アプリケーションを構築した後
   
 <a name="Installing__NET_Framework_3_0"></a>   
 ## <a name="installing-the-net-framework"></a>.NET Framework のインストール  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アプリケーションを実行するには、クライアントに Microsoft .NET Framework がインストールされている必要があります。 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]ブラウザーでホストされるアプリケーションを表示する[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]ときに、クライアントが .NET Framework と共にインストールされているかどうかを自動的に検出します。 .NET Framework がインストールされてい[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]ない場合は、ユーザーにインストールを求めるメッセージが表示されます。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アプリケーションを実行するには、クライアントに Microsoft .NET Framework がインストールされている必要があります。 Internet Explorer は、ブラウザーでホストされるアプリケーションを[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]表示するときに、クライアントが .NET Framework と共にインストールされるかどうかを自動的に検出します。 .NET Framework がインストールされていない場合、Internet Explorer はユーザーにインストールを促すメッセージを表示します。  
   
- .NET Framework がインストールされているか[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]どうかを検出するために、には[!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] 、.xaml、.xps、xbap、およびアプリケーションという拡張子を持つコンテンツファイルのフォールバックハンドラーとして登録されているブートストラップアプリケーションが含まれています。 これらのファイルの種類に移動したときに、.NET Framework がクライアントにインストールされていない場合、ブートストラップアプリケーションは、インストールするためのアクセス許可を要求します。 アクセス許可が指定されていない場合は、.NET Framework もアプリケーションもインストールされません。  
+ .NET Framework がインストールされているかどうかを検出するために、Internet Explorer には[!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] 、次の拡張子を持つコンテンツファイルのフォールバックハンドラーとして登録されたブートストラップアプリケーションが含まれています: .xaml、.xps、xbap、およびアプリケーション。 これらのファイルの種類に移動したときに、.NET Framework がクライアントにインストールされていない場合、ブートストラップアプリケーションは、インストールするためのアクセス許可を要求します。 アクセス許可が指定されていない場合は、.NET Framework もアプリケーションもインストールされません。  
   
- アクセス許可が付与さ[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]れている場合、は Microsoft バックグラウンドインテリジェント転送サービス (BITS) を使用して .NET Framework をダウンロードしてインストールします。 .NET Framework が正常にインストールされると、最初に要求されたファイルが新しいブラウザーウィンドウで開かれます。  
-  
- .NET Framework の自動検出は、以降[!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)]が[!INCLUDE[TLA#tla_winxpsp2](../../../../includes/tlasharptla-winxpsp2-md.md)] [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)]インストールさ[!INCLUDE[TLA#tla_winnetsvrfamsp1](../../../../includes/tlasharptla-winnetsvrfamsp1-md.md)]れている、、およびクライアントで使用できます。  
+ アクセス許可が付与されている場合、Internet Explorer は Microsoft バックグラウンドインテリジェント転送サービス (BITS) を使用して .NET Framework をダウンロードしてインストールします。 .NET Framework が正常にインストールされると、最初に要求されたファイルが新しいブラウザーウィンドウで開かれます。  
   
  詳細については、「[.NET Framework およびアプリケーションの配置](../../deployment/index.md)」を参照してください。  
   

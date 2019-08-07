@@ -331,6 +331,9 @@
         - name: ':: 演算子'
           href: operators/namespace-alias-qualifier.md
           displayName: namespace alias qualifier
+        - name: 既定の演算子
+          href: operators/default.md
+          displayName: 'default value, default literal, type default'
         - name: delegate 演算子
           href: operators/delegate-operator.md
           displayName: anonymous

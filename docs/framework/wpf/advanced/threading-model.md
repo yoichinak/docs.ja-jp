@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 6bea25fbd321eead9137caaeb212b76a9d528e88
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: da9eaf127a4db02cddbb36e53a0d0ddb5b28b841
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710392"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68818054"
 ---
 # <a name="threading-model"></a>スレッド モデル
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]は、スレッド処理の難しさから開発者を保存するように設計されています。 その結果、多くの[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]開発者は、複数のスレッドを使用するインターフェイスを作成する必要がなくなります。 マルチスレッドプログラムは複雑でデバッグが困難なため、シングルスレッドソリューションが存在する場合は回避する必要があります。  
@@ -143,7 +143,7 @@ ms.locfileid: "68710392"
   
  [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]エクスプローラーでは、この方法で動作します。 新しいエクスプローラーウィンドウはそれぞれ元のプロセスに属していますが、独立したスレッドの制御下に作成されます。  
   
- <xref:System.Windows.Controls.Frame>コントロールを使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]して、Web ページを表示できます。 簡単な[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]代替を簡単に作成できます。 まず、重要な機能である、新しいエクスプローラーウィンドウを開く機能について説明します。 ユーザーが [新しいウィンドウ] ボタンをクリックすると、ウィンドウのコピーが別のスレッドで起動されます。 これにより、windows の1つで実行時間の長い操作またはブロック操作によって、他のウィンドウがすべてロックされることはありません。  
+ <xref:System.Windows.Controls.Frame>コントロールを使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]して、Web ページを表示できます。 簡単な Internet Explorer の代替を簡単に作成できます。 まず、重要な機能である、新しいエクスプローラーウィンドウを開く機能について説明します。 ユーザーが [新しいウィンドウ] ボタンをクリックすると、ウィンドウのコピーが別のスレッドで起動されます。 これにより、windows の1つで実行時間の長い操作またはブロック操作によって、他のウィンドウがすべてロックされることはありません。  
   
  実際には、Web ブラウザーモデルには独自の複雑なスレッドモデルがあります。 これは、ほとんどの閲覧者にとって理解しておく必要があるため、選択しました。  
   

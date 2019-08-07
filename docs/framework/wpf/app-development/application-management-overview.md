@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: d8e26ff197e22ffa18b4acdd020b80879023c0f7
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: a5808261ec9fe957ee993177590446389f219609
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364094"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68818009"
 ---
 # <a name="application-management-overview"></a>アプリケーション管理の概要
 すべてのアプリケーションは、アプリケーションの実装と管理に適用される機能を共有することがよくあります。 このトピックでは、アプリケーションを作成および管理<xref:System.Windows.Application>するためのクラスの機能の概要について説明します。  
@@ -187,7 +187,7 @@ ms.locfileid: "68364094"
  [!code-csharp[ApplicationStartupSnippets#HandleStartupCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml.cs#handlestartupcodebehind)]
  [!code-vb[ApplicationStartupSnippets#HandleStartupCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationStartupSnippets/visualbasic/application.xaml.vb#handlestartupcodebehind)]  
   
- このコードは<xref:System.Windows.Application.Startup> **、コマンドライン**引数が指定されているかどうかを確認するためにを処理します。指定<xref:System.Windows.WindowState>さ<xref:System.Windows.WindowState.Minimized>れている場合は、のを使用してメインウィンドウを開きます。 プロパティは<xref:System.Windows.Window.WindowState%2A>プログラムによって設定する必要があるため<xref:System.Windows.Window> 、コードで main を明示的に開く必要があることに注意してください。  
+ このコードは<xref:System.Windows.Application.Startup> 、コマンドライン引数が指定されているかどうかを確認するためにを処理します。指定<xref:System.Windows.WindowState>さ<xref:System.Windows.WindowState.Minimized>れている場合は、のを使用してメインウィンドウを開きます。 プロパティは<xref:System.Windows.Window.WindowState%2A>プログラムによって設定する必要があるため<xref:System.Windows.Window> 、コードで main を明示的に開く必要があることに注意してください。  
   
  Xbap は ClickOnce 配置を使用して起動されるため、コマンドライン引数を取得して処理することはできません (「 [WPF アプリケーションの配置](deploying-a-wpf-application-wpf.md)」を参照してください)。 ただし、起動に使用される URL のクエリ文字列パラメーターを取得して処理することはできます。  
   
@@ -293,7 +293,7 @@ ms.locfileid: "68364094"
   
 - XBAP は移動されません。  
   
-- で[!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)]は、XBAP をホストしているタブが閉じられています。  
+- Internet Explorer で、XBAP をホストしているタブを閉じます。  
   
 - ブラウザーが閉じられた。  
   

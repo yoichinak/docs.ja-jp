@@ -2,12 +2,12 @@
 title: アクセス制御
 description: 型、メソッド、および F# のプログラミング言語で、関数などのプログラミング要素へのアクセスを制御する方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: ed77a09cf87aabf9a4134276e89e84aa42abd3c3
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 38f8f3fd4114c0428fbe8baca71594cd07740b2c
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629961"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817858"
 ---
 # <a name="access-control"></a>アクセス制御
 
@@ -40,7 +40,7 @@ F# での署名は、F# プログラム要素へのアクセスを制御する�
 
 - 判別共用体の個々のケースのアクセシビリティは、判別共用体自体のアクセシビリティによって決まります。 つまり、特定の共用体ケースは、共用体自体よりもアクセシビリティが低くなります。
 
-- レコード型の個々のフィールドのアクセシビリティは、レコード自体のアクセシビリティによって決定することはできません。 つまり、特定のレコードラベルは、レコード自体よりもアクセスできなくなります。
+- レコード型の個々のフィールドのアクセシビリティは、レコード自体のアクセシビリティによって決まります。 つまり、特定のレコードラベルは、レコード自体よりもアクセスできなくなります。
 
 ## <a name="example"></a>例
 

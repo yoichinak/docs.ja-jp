@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 42b1596082fe3e682a6fa806412ab5837b087bf9
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 65725851cb413e28ceff0d1c9c4b62b76c4fff18
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400717"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817885"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF のセキュリティ方針 - プラットフォーム セキュリティ
-Windows Presentation Foundation (WPF) にはさまざまなセキュリティサービスが用意されていますが、オペレーティングシステム、CLR、および[!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]を含む、基になるプラットフォームのセキュリティ機能も活用されています。 これらの層を組み合わせることで、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] に強力な多重防御のセキュリティ モデルが提供されます。このセキュリティ モデルでは、次の図に示すように、単一障害点の回避を試みます。  
+Windows Presentation Foundation (WPF) にはさまざまなセキュリティサービスが用意されていますが、オペレーティングシステム、CLR、Internet Explorer など、基になるプラットフォームのセキュリティ機能も活用されています。 これらの層を組み合わせることで、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] に強力な多重防御のセキュリティ モデルが提供されます。このセキュリティ モデルでは、次の図に示すように、単一障害点の回避を試みます。  
   
  ![WPF のセキュリティモデルを示す図。](./media/wpf-security-strategy-platform-security/windows-presentation-foundation-security.png)  
   
@@ -75,15 +75,8 @@ Windows Presentation Foundation (WPF) にはさまざまなセキュリティサ
   
 <a name="Limited_Rights_Process_for_Browser_Hosted_Applications"></a>   
 ### <a name="limited-rights-process-for-browser-hosted-applications"></a>ブラウザーでホストされるアプリケーションの制限付き権限のプロセス  
- ブラウザーでホストされる [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションは、インターネット ゾーンのサンド ボックス内で実行します。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] と [!INCLUDE[TLA#tla_ie](../../../includes/tlasharptla-ie-md.md)] を統合すると、この保護が追加のサポートで拡張されます。  
+ ブラウザーでホストされる [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションは、インターネット ゾーンのサンド ボックス内で実行します。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]Microsoft Internet Explorer との統合により、この保護は追加のサポートによって拡張されます。  
   
-#### <a name="internet-explorer-6-service-pack-2-and-internet-explorer-7-for-xp"></a>Internet Explorer 6 Service Pack 2 および XP 用の Internet Explorer 7  
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] は、オペレーティング システムのセキュリティを利用して、[!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] のプロセスの特権を制限してさらに保護します。 ブラウザーでホストされる [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションを起動する前に、オペレーティング システムは、プロセス トークンから不要な特権を取り除くホスト プロセスを作成します。 取り除かれる特権のいくつかの例として、ユーザーのコンピューターのシャット ダウン機能、ドライバーの読み込み、およびコンピューター上の全ファイルに対する読み取りアクセスがあります。  
-  
-#### <a name="internet-explorer-7-for-vista"></a>Vista 用 Internet Explorer 7  
- [!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)] では、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションは保護モードで実行します。 具体的には、[!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] は中レベルの整合性で実行します。  
-  
-#### <a name="defense-in-depth-layer"></a>多重防御層  
  [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] は一般に、インターネット ゾーン アクセス許可セットによってセキュリティで保護されるため、互換性の観点から、これらの特権を取り除いても、[!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] には害を及ぼしません。 代わりに、追加の多重防御層が作成されます。セキュリティで保護されたアプリケーションが他のレイヤーを利用してプロセスを乗っ取ることができる場合、プロセスの特権は制限されたままとなります。  
   
  「[最小特権のユーザーアカウントを使用](https://docs.microsoft.com/previous-versions/tn-archive/cc700846%28v=technet.10%29)する」を参照してください。  
@@ -186,9 +179,9 @@ Windows Presentation Foundation (WPF) にはさまざまなセキュリティサ
   
 <a name="Microsoft_Internet_Explorer_Security"></a>   
 ## <a name="microsoft-internet-explorer-security"></a>Microsoft Internet Explorer のセキュリティ  
- セキュリティ上の問題を減らし、セキュリティの構成を簡素化するだけでなく、[!INCLUDE[TLA#tla_ie6sp2](../../../includes/tlasharptla-ie6sp2-md.md)] には、[!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] のユーザーのセキュリティを強化するようセキュリティが向上した複数の機能が含まれています。 これらの機能の推進により、ユーザーが閲覧の制御を拡大できるようにしています。  
+ Microsoft Internet Explorer 6 (SP2) には、セキュリティの問題を減らし、セキュリティの構成を簡素化するだけではありません[!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]が、のユーザーのセキュリティ強化によってセキュリティが強化された機能がいくつかあります。 これらの機能の推進により、ユーザーが閲覧の制御を拡大できるようにしています。  
   
- [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] の前のバージョンでは、ユーザーは次のいずれかの影響を受ける可能性がありました。  
+ IE6 SP2 より前では、ユーザーは次のいずれかの影響を受ける可能性がありました。  
   
 - ランダムなポップアップ ウィンドウ。  
   
@@ -198,13 +191,13 @@ Windows Presentation Foundation (WPF) にはさまざまなセキュリティサ
   
  場合によっては、信頼されていない Web サイトは[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 、インストールをスプーフィングしたり、ユーザーがキャンセルした場合でも Microsoft ActiveX のインストールダイアログボックスを繰り返し表示したりすることによって、ユーザーのトリックを試みます。 これらの方法によって、大多数のユーザーが騙されて不適切な判断を行い、スパイウェア アプリケーションのインストールにつながる可能性があります。  
   
- [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] には、ユーザーによる開始の概念にまつわるこのような問題を軽減するいくつかの機能があります。 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)]ユーザーがアクションの前に、ユーザーがリンクまたはページ要素をクリックしたことを検出します。これは、*ユーザーの開始*と呼ばれ、ページ上のスクリプトによって同様のアクションがトリガーされた場合とは異なる方法で扱われます。 たとえば、には[!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 、ページがポップアップを作成する前にユーザーがボタンをクリックしたことを検出する**ポップアップブロック**が組み込まれています。 これにより、[!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] は何の問題もないポップアップを許可する一方、ユーザーが要求も希望もしていないポップアップを防ぎます。 ブロックされたポップアップは、新しい**情報バー**の下にトラップされます。これにより、ユーザーは手動でブロックをオーバーライドしてポップアップを表示できます。  
+ IE6 SP2 には、ユーザーによる開始の概念を中心とした、こうした種類の問題を軽減するための機能がいくつか用意されています。 ユーザーがアクションの前にリンクまたはページ要素をクリックしたことがユーザーによって検出された場合 (*ユーザーの開始*と呼ばれます)、ページ上のスクリプトによって同様のアクションがトリガーされる場合とは異なる方法で処理されます。 たとえば、IE6 SP2 には、ページがポップアップを作成する前にユーザーがボタンをクリックしたことを検出する**ポップアップブロック**が組み込まれています。 これにより、ユーザーが要求したり希望したりしないポップアップを防止しながら、ほとんど無害なポップアップを許可することができます。 ブロックされたポップアップは、新しい**情報バー**の下にトラップされます。これにより、ユーザーは手動でブロックをオーバーライドしてポップアップを表示できます。  
   
  [セキュリティの**保存**] プロンプトを**開く**/ためにも、同じユーザー開始ロジックが適用されます。 ActiveX インストールのダイアログボックスは、以前にインストールされたコントロールからのアップグレードを表す場合を除き、常に情報バーの下にトラップされます。 これらの対策を組み合わせると、より安全かつ制御されたユーザー エクスペリエンスがユーザーに提供されます。ユーザーを攻撃して不要または悪意のあるソフトウェアをインストールさせるサイトからユーザーが保護されるためです。  
   
- これらの機能は、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションのダウンロードとインストールを行えるようにする Web サイトを閲覧するために [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] を使用するお客様も保護します。 特に [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] では、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] を含め、構築にどのテクノロジを使用したかに関係なく、悪意のあるまたは不正なアプリケーションをユーザーがインストールする機会を減らす上でユーザーエクスペリエンスの向上を提供しているからです。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]は、ClickOnce を使用して、インターネット経由でのアプリケーションのダウンロードを容易にすることで、これらの保護を強化します。 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] はインターネット ゾーンのセキュリティ サンドボックス内で実行するので、シームレスに起動することができます。 一方、スタンドアロンの [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションでは、実行するには完全な信頼が必要になります。 これらのアプリケーションの場合、ClickOnce は起動プロセス中にセキュリティダイアログボックスを表示して、アプリケーションの追加のセキュリティ要件の使用を通知します。 ただし、これはユーザーが開始する必要があり、ユーザーが開始したロジックによって制御されるとともに、キャンセルが可能です。  
+ また、これらの機能により、IE6 SP2 を使用するお客様は、アプリケーションをダウンロード[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]してインストールできる web サイトを参照できます。 これは特に、IE6 SP2 ではユーザーエクスペリエンスが向上しているため、の構築に使用されたテクノロジ (など) [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]に関係なく、悪意のあるアプリケーションや不正なアプリケーションをユーザーがインストールする機会が減ります。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]は、ClickOnce を使用して、インターネット経由でのアプリケーションのダウンロードを容易にすることで、これらの保護を強化します。 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] はインターネット ゾーンのセキュリティ サンドボックス内で実行するので、シームレスに起動することができます。 一方、スタンドアロンの [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションでは、実行するには完全な信頼が必要になります。 これらのアプリケーションの場合、ClickOnce は起動プロセス中にセキュリティダイアログボックスを表示して、アプリケーションの追加のセキュリティ要件の使用を通知します。 ただし、これはユーザーが開始する必要があり、ユーザーが開始したロジックによって制御されるとともに、キャンセルが可能です。  
   
- [!INCLUDE[TLA2#tla_ie7](../../../includes/tla2sharptla-ie7-md.md)] は、継続的なセキュリティへの取り組みの一環として、[!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] のセキュリティ機能を強化しています。  
+ Internet Explorer 7 には、セキュリティに対する継続的なコミットメントの一環として、IE6 SP2 のセキュリティ機能が組み込まれ、拡張されています。  
   
 ## <a name="see-also"></a>関連項目
 
