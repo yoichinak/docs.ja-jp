@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61674689"
 ---
-# <a name="clear-element-for-schemesettings-uri-settings"></a>\<クリア > schemeSettings (Uri 設定) の要素
+# <a name="clear-element-for-schemesettings-uri-settings"></a>\schemeSettings の <clear> 要素 (Uri 設定)
 既存のすべての構成設定をクリアします。  
   
  \<configuration>  
