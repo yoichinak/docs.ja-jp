@@ -17,7 +17,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61674598"
 ---
-# <a name="clear-element-for-webrequestmodules-network-settings"></a>\<クリア > webRequestModules (ネットワーク設定) の要素
+# <a name="clear-element-for-webrequestmodules-network-settings"></a>\webRequestModules の <clear> 要素 (ネットワーク設定)
 アプリケーションから登録済みのすべての Web 要求モジュールを削除します。  
   
  \<configuration>  
