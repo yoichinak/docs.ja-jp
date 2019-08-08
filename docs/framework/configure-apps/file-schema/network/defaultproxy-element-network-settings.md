@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/20/2019
 ms.locfileid: "68363865"
 ---
-# <a name="defaultproxy-element-network-settings"></a>\<defaultProxy > 要素 (ネットワーク設定)
+# <a name="defaultproxy-element-network-settings"></a>\<defaultProxy> 要素 (ネットワーク設定)
 ハイパーテキスト転送プロトコル (HTTP: Hypertext Transfer Protocol) プロキシ サーバーを構成します。  
   
  \<configuration>  
