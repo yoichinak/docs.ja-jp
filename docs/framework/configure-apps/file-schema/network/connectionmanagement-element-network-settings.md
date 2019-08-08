@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61674585"
 ---
-# <a name="connectionmanagement-element-network-settings"></a>\<connectionManagement > 要素 (ネットワーク設定)
+# <a name="connectionmanagement-element-network-settings"></a>\<connectionManagement> 要素 (ネットワーク設定)
 ネットワーク ホストへの接続の最大数を指定します。  
   
  \<configuration>  
