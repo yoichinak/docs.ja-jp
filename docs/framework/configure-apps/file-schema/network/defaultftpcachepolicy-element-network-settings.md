@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61674559"
 ---
-# <a name="defaultftpcachepolicy-element-network-settings"></a>\<defaultFtpCachePolicy > 要素 (ネットワーク設定)
+# <a name="defaultftpcachepolicy-element-network-settings"></a>\<defaultFtpCachePolicy> 要素 (ネットワーク設定)
 FTP キャッシュがアクティブでかどうかし、既定のキャッシュ ポリシーを記述について説明します。  
   
  \<configuration>  
