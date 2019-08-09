@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61674624"
 ---
-# <a name="bypasslist-element-network-settings"></a>\<bypasslist > 要素 (ネットワーク設定)
+# <a name="bypasslist-element-network-settings"></a>\<bypasslist> 要素 (ネットワーク設定)
 一連のプロキシを使用しないアドレスを記述する正規表現を提供します。  
   
  \<configuration>  
