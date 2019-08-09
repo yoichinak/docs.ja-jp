@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64592741"
 ---
-# <a name="httplistener-element-network-settings"></a>\<httpListener > 要素 (ネットワーク設定)
+# <a name="httplistener-element-network-settings"></a>\<httpListener> 要素 (ネットワーク設定)
 <xref:System.Net.HttpListener>クラスで使用されるパラメータをカスタマイズします。  
   
  \<configuration>  
