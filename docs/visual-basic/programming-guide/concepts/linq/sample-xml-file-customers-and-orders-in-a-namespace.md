@@ -1,13 +1,13 @@
 ---
-title: サンプル XML ファイル:顧客と注文 Namespace1 内
+title: サンプル XML ファイル:名前空間内の顧客と注文
 ms.date: 07/20/2015
 ms.assetid: 9fe81dbb-e51f-4e80-a49b-e34ac0b1f980
-ms.openlocfilehash: ca12478ab81d114759c07b5d44749aee5a620bbb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 63bb6cf5065e2189380bbcd67812c5ae8d6dd372
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787083"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68869116"
 ---
 # <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a>サンプル XML ファイル:名前空間内の顧客と注文
 次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。 このファイルには顧客と注文が含まれています。 XML は名前空間に含まれています。  

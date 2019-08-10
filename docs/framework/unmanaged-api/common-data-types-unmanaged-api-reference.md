@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aab6dad369b751b1d6a61214569cbb7d79b0e11d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b56840ce68caa3eed50773668c64e2622a646ddf
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651637"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892083"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>共有のデータ型 (アンマネージ API リファレンス)
 このトピックでは、C/C++ `typedef` ステートメントで定義される .NET Framework のアンマネージ API で使用する、簡単なデータ型について示します。 これらのデータ型は通常、C/C++ のプリミティブ データ型のエイリアスです。 一般的にこれらのデータ型の値は不透明です。これらのデータ型の値は他の関数またはメソッドに対して変更なしで渡せるように、特定の関数またはメソッドによって返されるためです。  
@@ -19,8 +19,8 @@ ms.locfileid: "61651637"
 |AppDomainID|`typedef UINT_PTR AppDomainID;`|corprof.h|アプリケーション ドメインの識別子。|  
 |AssemblyID|`typedef UINT_PTR AssemblyID;`|corprof.h|アセンブリの識別子。|  
 |ClassID|`typedef UINT_PTR ClassID;`|corprof.h|マネージド クラスの識別子。|  
-|CLRDATA_ADDRESS|`typedef ULONG64 CLRDATA_ADDRESS;`|clrdata.h|64 ビットのメモリ アドレス。|
-|CLRDATA_ENUM|`typedef ULONG64 CLRDATA_ADDRESS;`|使用できません。|64 ビットのメモリ アドレス。|
+|CLRDATA_ADDRESS|`typedef ULONG64 CLRDATA_ADDRESS;`|clrdata. h|64ビットのメモリアドレス。|
+|CLRDATA_ENUM|`typedef ULONG64 CLRDATA_ADDRESS;`|使用できません。|64ビットのメモリアドレス。|
 |CONNID|`typedef DWORD CONNID;`|cordebug.h、mscoree.h|Microsoft SQL Server のインスタンスへ接続されるスレッドの接続識別子。|  
 |ContextID|`typedef UINT_PTR ContextID;`|corprof.h|特定のマネージド スレッドに関連付けられているコンテキストの識別子。|  
 |COR_PRF_ELT_INFO|`typedef UINT_PTR COR_PRF_ELT_INFO;`|corprof.h|特定のスタック フレームに関する情報を表す不透明なハンドル。|  
@@ -30,13 +30,15 @@ ms.locfileid: "61651637"
 |CORDB_REGISTER|`typedef ULONG64 CORDB_REGISTER;`|cordebug.h|CPU レジスタの値。|
 |FunctionID|`typedef UINT_PTR FunctionID;`|corprof.h|関数またはメソッドの識別子。|  
 |GCHandleID|`typedef UINT_PTR GCHandleID;`|corprof.h|ガベージ コレクション ハンドル。|  
-|mdMethodDef|`typedef mdToken mdMethodDef;`|cordebug.h|メソッドの定義トークンです。|
-|mdToken|`typedef UINT32 mdToken;`|corprof.h|メタデータ トークン (メタデータ テーブルの行)。|  
+|mdMethodDef|`typedef mdToken mdMethodDef;`|cordebug.h|メソッド定義トークン。|
+|mdToken|`typedef UINT32 mdToken;`|corprof.h|メタデータトークン (メタデータテーブル内の行)。|  
 |ModuleID|`typedef UINT_PTR ModuleID;`|corprof.h|アセンブリ モジュールの識別子。|  
 |ObjectID|`typedef UINT_PTR ObjectID;`|corprof.h|オブジェクトの識別子。|  
+|PCCOR_SIGNATURE|`typedef SIZE_T PCCOR_SIGNATURE;`|cordebug.h|メンバーまたはメタデータシグネチャへのポインター。|
 |ProcessID|`typedef UINT_PTR ProcessID;`|corprof.h|マネージド プロセスの識別子。|  
 |ReJITID|`typedef UINT_PTR ReJITID;`|corprof.h|JIT コンパイルされた関数の識別子。|  
-|TASKID|`typedef UINT64 TASKID;`|cordebug.h、mscoree.h|識別子、 [ICLRTask](../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)インスタンス。|  
+|SIZE_T|`typedef ULONG_PTR SIZE_T;`|corsym .h|64ビットメモリアドレスへのポインター。|
+|TASKID|`typedef UINT64 TASKID;`|cordebug.h、mscoree.h|[ICLRTask](../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)インスタンスの識別子。|  
 |ThreadID|`typedef UINT_PTR ThreadID;`|corprof.h|マネージド スレッドの識別子。|  
   
 ## <a name="see-also"></a>関連項目

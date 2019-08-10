@@ -1,13 +1,13 @@
 ---
-title: サンプル XML ファイル:Namespace1 内の数値データ
+title: サンプル XML ファイル:名前空間内の数値データ
 ms.date: 07/20/2015
 ms.assetid: f01cc0a1-fb55-4b42-8380-16f4be47d6f4
-ms.openlocfilehash: 09954798615954d238273b3d4ed71b5ff475394f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a067afc6d59c76a50c7c9f91673bb631edd085b
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786972"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68869096"
 ---
 # <a name="sample-xml-file-numerical-data-in-a-namespace"></a>サンプル XML ファイル:名前空間内の数値データ
 次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。 このファイルには、集計、平均、およびグループ化用の数値データが含まれています。 XML は名前空間に含まれています。  
