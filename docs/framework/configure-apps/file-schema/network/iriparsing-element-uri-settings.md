@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61674520"
 ---
-# <a name="iriparsing-element-uri-settings"></a>\<iriParsing > 要素 (Uri 設定)
+# <a name="iriparsing-element-uri-settings"></a>\<iriParsing> 要素 (Uri 設定)
 International Resource Identifier (IRI) 解析が、<xref:System.Uri> に適用されるかどうか、および IRI の解析規則が適用されるどうかを指定します。  
   
 ## <a name="schema-hierarchy"></a>スキーマの階層  
