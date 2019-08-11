@@ -1,7 +1,7 @@
 ---
 title: ラムダ式 - C# プログラミング ガイド
 ms.custom: seodec18
-ms.date: 03/14/2019
+ms.date: 07/29/2019
 helpviewer_keywords:
 - lambda expressions [C#]
 - outer variables [C#]
@@ -9,38 +9,44 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 546feb6f3c4515ceecdb5b5afa14c0fc99ab7020
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 36dab520d67d08d1b3304f1453bfb2c07a2f1c32
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363903"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671707"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>ラムダ式 (C# プログラミング ガイド)
 
-"*ラムダ式*" は、オブジェクトとして扱われるコード ブロック (式またはステートメント ブロック) です。 これは、引数としてメソッドに渡すことができるほか、メソッドの呼び出しによって返すこともできます。 ラムダ式は、次の処理によく使用されます。
+"*ラムダ式*" は、次の 2 つのいずれかの形式を持つ式です。
 
-- <xref:System.Threading.Tasks.Task.Run(System.Action)?displayProperty=nameWithType> など、非同期メソッドに対して実行されるコードを渡す。
+- [式形式のラムダ](#expression-lambdas)は、式本体に式が含まれます。
 
-- [LINQ クエリ式](../../linq/index.md)を記述する。
+  ```csharp
+  (input-parameters) => expression
+  ```
 
-- [式ツリー](../concepts/expression-trees/index.md)を作成する。
+- [ステートメント形式のラムダ](#statement-lambdas)は、式本体にステートメント ブロックが含まれます。
 
-ラムダ式は、デリゲート、またはデリゲートにコンパイルされる式ツリーとして表現できるコードです。 ラムダ式の特定のデリゲート型は、パラメーターや戻り値によって異なります。 値を返さないラムダ式は、そのパラメーター数に応じて、特定の `Action` デリゲートに対応します。 値を返すラムダ式は、そのパラメーター数に応じて、特定の `Func` デリゲートに対応します。 たとえば、2 つのパラメーターがあっても値を返さないラムダ式は、<xref:System.Action%602> デリゲートに対応します。 パラメーターが 1 つあり、値を返すラムダ式は、<xref:System.Func%602> デリゲートに対応します。
+  ```csharp  
+  (input-parameters) => { <sequence-of-statements> }
+  ```
 
-ラムダ式は、`=>` ([ラムダ宣言演算子](../../language-reference/operators/lambda-operator.md)) を使用して、ラムダのパラメーター リストを実行可能コードから分離します。 ラムダ式を作成するには、ラムダ演算子の左側に入力パラメーター (ある場合) を指定し、反対側に式またはステートメント ブロックを置きます。 たとえば、1 行のラムダ式 `x => x * x` は、`x` という名前のパラメーターを指定し、`x` を 2 乗した値を返します。 次の例に示すように、この式をデリゲート型に割り当てることもできます。
+[ラムダ宣言演算子`=>`](../../language-reference/operators/lambda-operator.md)を使用して、ラムダのパラメーター リストを式本体から分離します。 ラムダ式を作成するには、ラムダ演算子の左辺に入力パラメーターを指定し (ある場合)、右辺に式またはステートメント ブロックを指定します。
+
+ラムダ式は、[デリゲート](../../language-reference/builtin-types/reference-types.md#the-delegate-type)型に変換できます。 ラムダ式を変換できるデリゲート型は、パラメータと戻り値の型で定義されます。 ラムダ式が値を返さない場合は `Action` デリゲート型のいずれかに変換でき、値を返す場合は`Func` デリゲート型のいずれかに変換できます。 たとえば、2 つのパラメーターがあり、値を返さないラムダ式は、<xref:System.Action%602> デリゲートに変換できます。 1 つのパラメーターがあり、値を返すラムダ式は、<xref:System.Func%602> デリゲートに変換できます。 次の例では、`x` という名前のパラメーターを指定し、`x` の二乗値を返すラムダ式 `x => x * x` をデリゲート型の変数に割り当てます。
 
 [!code-csharp-interactive[lambda is delegate](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Delegate)]
 
-さらに、ラムダ式を式ツリー型に代入することもできます。
+式形式のラムダは、次の例に示すように、[式ツリー](../concepts/expression-trees/index.md)型にも変換できます。
 
 [!code-csharp-interactive[lambda is expression tree](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#ExpressionTree)]
 
-また、メソッドの引数として直接渡すこともできます。
+ラムダ式は、デリゲート型または式ツリーのインスタンスを必要とするすべてのコードで使用できます。たとえば、<xref:System.Threading.Tasks.Task.Run(System.Action)?displayProperty=nameWithType> メソッドの引数として使用すると、バックグラウンドで実行する必要があるコードを渡すことができます。 また、次の例に示すように、[LINQ クエリ式](../../linq/index.md)を作成する場合にもラムダ式を使用できます。
 
-[!code-csharp-interactive[lambda is argument](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Argument)]
+[!code-csharp-interactive[lambda is argument in LINQ](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Argument)]
 
-メソッド ベースの構文を使用して (LINQ to Objects および LINQ to XML の場合と同様に) <xref:System.Linq.Enumerable?displayProperty=nameWithType> クラスの <xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType> メソッドを呼び出すと、パラメーターはデリゲート型 <xref:System.Func%602?displayProperty=nameWithType> になります。 ラムダ式はデリゲートを作成するための最も便利な方法です。 メソッド ベースの構文を使用して (LINQ to XML の場合と同様に) <xref:System.Linq.Queryable?displayProperty=nameWithType> クラスの <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType> メソッドを呼び出すと、パラメーターは式ツリー型 [`Expression<Func<TSource,TResult>>`](<xref:System.Linq.Expressions.Expression%601>) になります。 ラムダ式は、こうした式ツリーを構築するための非常に簡潔な方法でもあります。 ラムダを使用すると `Select` 呼び出しの外観を似たものにできますが、ラムダから実際に作成されるオブジェクトの型は異なります。
+メソッド ベースの構文を使用して <xref:System.Linq.Enumerable?displayProperty=nameWithType> クラス (たとえば、LINQ to Objects、LINQ to XML など) の <xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType> メソッドを呼び出すと、パラメーターはデリゲート型 <xref:System.Func%602?displayProperty=nameWithType> になります。 <xref:System.Linq.Queryable?displayProperty=nameWithType> クラス (たとえば、LINQ to SQL など) の <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType> メソッドを呼び出すと、パラメーター型は式ツリー型 [`Expression<Func<TSource,TResult>>`](<xref:System.Linq.Expressions.Expression%601>) になります。 どちらの場合も、同じラムダ式を使用してパラメーター値を指定できます。 これにより、2 つの `Select` 呼び出しは外観が似ていますが、ラムダから実際に作成されるオブジェクトの型は異なります。
   
 ## <a name="expression-lambdas"></a>式形式のラムダ
 
@@ -73,7 +79,7 @@ ms.locfileid: "68363903"
 ステートメント形式のラムダは式形式のラムダに似ていますが、ステートメントが中かっこで囲まれる点が異なります。
 
 ```csharp  
-(input-parameters) => { statement; }
+(input-parameters) => { <sequence-of-statements> }
 ```
 
 ステートメント形式のラムダの本体は任意の数のステートメントで構成できますが、実際面では通常、2、3 個以下にします。

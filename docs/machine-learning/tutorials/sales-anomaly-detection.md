@@ -4,12 +4,12 @@ description: 製品売上データの異常検出アプリケーションを構�
 ms.date: 07/17/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: e87034733b048153202bc11ab94ed7605749f60c
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 4228a68ad43416c6e32684441593d92dfdbfd808
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331701"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733282"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>チュートリアル: ML.NET で製品売上の異常を検出する
 
@@ -18,10 +18,10 @@ ms.locfileid: "68331701"
 このチュートリアルでは、次の作業を行う方法について説明します。
 > [!div class="checklist"]
 > * データを読み込む
-> * スパイクの異常検出のためにモデルをトレーニングする
-> * トレーニング済みモデルを使用してスパイクの異常を検出する
-> * 変化点の異常検出のためにモデルをトレーニングする
-> * トレーニング済みモデルを使用して変化点の異常を検出する
+> * スパイクの異常検出のために変換を作成する
+> * 変換を使用してスパイクの異常を検出する
+> * 変化点の異常検出のために変換を作成する
+> * 変換を使用して変化点の異常を検出する
 
 このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/ProductSalesAnomalyDetection) リポジトリで確認できます。
 
@@ -32,7 +32,8 @@ ms.locfileid: "68331701"
 * [product-sales.csv データセット](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)
 
 >[!NOTE]
-> `product-sales.csv` のデータ形式は、DataMarket が出典であるデータセット "Shampoo Sales Over a Three Year Period" (過去 3 年間のシャンプーの売上) に基づいており、Rob Hyndman が作成した Time Series Data Library (TSDL) で提供されています。 "Shampoo Sales Over a Three Year Period" データセットは、DataMarket Default Open License の下でライセンスを受けています。
+> `product-sales.csv` のデータ形式は、DataMarket が出典であるデータセット "Shampoo Sales Over a Three Year Period" (過去 3 年間のシャンプーの売上) に基づいており、Rob Hyndman が作成した Time Series Data Library (TSDL) で提供されています。
+> "Shampoo Sales Over a Three Year Period" データセットは、DataMarket Default Open License の下でライセンスを受けています。
 
 ## <a name="create-a-console-application"></a>コンソール アプリケーションを作成する
 
@@ -70,7 +71,7 @@ ms.locfileid: "68331701"
 
 ### <a name="create-classes-and-define-paths"></a>クラスを作成してパスを定義する
 
-次に、入力クラスのデータ構造を定義します。
+次に、入力クラスと予測クラスのデータ構造を定義します。
 
 プロジェクトに新しいクラスを追加します。
 
@@ -78,48 +79,50 @@ ms.locfileid: "68331701"
 
 2. **[新しい項目の追加] ダイアログ ボックス**で、 **[クラス]** を選択し、 **[名前]** フィールドを「*ProductSalesData.cs*」に変更します。 次に **[追加]** を選択します。
 
-コード エディターで *ProductSalesData.cs* ファイルが開きます。 次の `using` ステートメントを *ProductSalesData.cs* の先頭に追加します。
+   コード エディターで *ProductSalesData.cs* ファイルが開きます。
 
-```csharp
-using Microsoft.ML.Data;
-```
+3. 次の `using` ステートメントを *ProductSalesData.cs* の先頭に追加します。
 
-既存のクラス定義を削除し、`ProductSalesData` と `ProductSalesPrediction` の 2 つのクラスを含む次のコードを *ProductSalesData.cs* ファイルに追加します。
+   ```csharp
+   using Microsoft.ML.Data;
+   ```
 
-[!code-csharp[DeclareTypes](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/ProductSalesData.cs#DeclareTypes "Declare data record types")]
+4. 既存のクラス定義を削除し、`ProductSalesData` と `ProductSalesPrediction` の 2 つのクラスを含む次のコードを *ProductSalesData.cs* ファイルに追加します。
 
-`ProductSalesData` は入力データ クラスを指定します。 [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) 属性は、データセット内のどの列 (列インデックス) を読み込むかを指定します。 
+    [!code-csharp[DeclareTypes](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/ProductSalesData.cs#DeclareTypes "Declare data record types")]
 
-次に示す追加の `using` ステートメントを *Program.cs* ファイルの先頭に追加します。
+    `ProductSalesData` は入力データ クラスを指定します。 [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) 属性は、データセット内のどの列 (列インデックス) を読み込むかを指定します。
 
-[!code-csharp[AddUsings](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddUsings "Add necessary usings")]
+    `ProductSalesPrediction` では予測データ クラスを指定します。 異常検出の場合、予測は異常、生スコア、p 値があるかどうかを示すアラートで構成されます。 p 値が 0 に近いほど、異常が発生する可能性が高くなります。
 
-最近ダウンロードしたデータセット ファイルのパスと保存したモデル ファイルのパスを保持するために、2 つのグローバル フィールドを作成する必要があります。
+5. 最近ダウンロードしたデータセット ファイルのパスと保存したモデル ファイルのパスを保持するために、2 つのグローバル フィールドを作成します。
 
-* `_dataPath` には、モデルのトレーニングに使用するデータ セットのパスが含まれます。
-* `_docsize` はデータセット ファイル内のレコード数です。 これを `pvalueHistoryLength` の計算に使用します。
+    * `_dataPath` には、モデルのトレーニングに使用するデータ セットのパスが含まれます。
+    * `_docsize` はデータセット ファイル内のレコード数です。 `_docSize` を `pvalueHistoryLength` の計算に使用します。
 
-`Main` メソッドのすぐ上にある行に次のコードを追加して、それらのパスを指定します。
+6. `Main` メソッドのすぐ上にある行に次のコードを追加して、それらのパスを指定します。
 
-[!code-csharp[Declare global variables](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#DeclareGlobalVariables "Declare global variables")]
-
-[MLContext クラス](xref:Microsoft.ML.MLContext)は、すべての ML.NET 操作の開始点で、`mlContext` を初期化することで、モデル作成ワークフローのオブジェクト間で共有できる新しい ML.NET 環境が作成されます。 これは Entity Framework における `DBContext` と概念的には同じです。
+    [!code-csharp[Declare global variables](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#DeclareGlobalVariables "Declare global variables")]
 
 ### <a name="initialize-variables-in-main"></a>Main で変数を初期化する
 
-`Main` メソッドの `Console.WriteLine("Hello World!")` の行は、`mlContext` 変数を宣言して初期化する次のコードに置き換えます。
+1. `Main` メソッドの `Console.WriteLine("Hello World!")` の行は、`mlContext` 変数を宣言して初期化する次のコードに置き換えます。
 
-[!code-csharp[CreateMLContext](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#CreateMLContext "Create the ML Context")]
+    [!code-csharp[CreateMLContext](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#CreateMLContext "Create the ML Context")]
+
+    [MLContext クラス](xref:Microsoft.ML.MLContext)は、すべての ML.NET 操作の開始点で、`mlContext` を初期化することで、モデル作成ワークフローのオブジェクト間で共有できる新しい ML.NET 環境が作成されます。 これは Entity Framework における `DBContext` と概念的には同じです。
 
 ### <a name="load-the-data"></a>データを読み込む
 
-ML.NET 内のデータは、[IDataView クラス](xref:Microsoft.ML.IDataView)として表されます。 `IDataView` は、表形式のデータ (数値とテキスト) を表すための柔軟で効率的な方法です。 データはテキスト ファイルから、またはリアルタイムで (SQL データベースやログ ファイルなど) `IDataView` オブジェクトに読み込むことができます。 `Main()` メソッドの次の行として次のコードを追加します。
+ML.NET 内のデータは、[IDataView クラス](xref:Microsoft.ML.IDataView)として表されます。 `IDataView` は、表形式のデータ (数値とテキスト) を表すための柔軟で効率的な方法です。 データはテキスト ファイルから、または他のソース (SQL データベースやログ ファイルなど) から `IDataView` オブジェクトに読み込むことができます。
 
-[!code-csharp[LoadData](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#LoadData "loading dataset")]
+1. `Main()` メソッドの次の行として次のコードを追加します。
 
-[LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) は、データ スキーマを定義し、ファイルを読み取ります。 データ パス変数を取得して、`IDataView` を返します。
+    [!code-csharp[LoadData](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#LoadData "loading dataset")]
 
-## <a name="ml-task---time-series-anomaly-detection"></a>ML タスク - 時系列の異常検出 
+    [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) は、データ スキーマを定義し、ファイルを読み取ります。 データ パス変数を取得して、`IDataView` を返します。
+
+## <a name="time-series-anomaly-detection"></a>時系列の異常検出
 
 異常検出によって、予期しない、または通常とは異なるイベントや動作にフラグが立てられます。 これは、問題を探す場所の手がかりとなり、"これはおかしいだろうか" という問いの答えを見つけるために役立ちます。
 
@@ -127,87 +130,93 @@ ML.NET 内のデータは、[IDataView クラス](xref:Microsoft.ML.IDataView)�
 
 異常検出は、時系列データの異常値 (指定された入力の時系列上で、動作が予期されたものではない点、つまり "おかしい" 点) を検出するプロセスです。
 
-これはさまざまな方法で役に立ちます。 たとえば、次のようになります。
+異常検出は、さまざまな場面で役立ちます。 たとえば、次のようになります。
 
 車を持っている場合に知りたいこと:このオイル ゲージの表示値は正常か。それとも漏れがあるか。
 電力消費量を監視している場合に知りたいこと:停電はあるか。
 
-検出できる時系列の異常には 2 つの種類があります。 
+検出できる時系列の異常には 2 つの種類があります。
 
-* **スパイク**は、システム内の異常動作の一時的なバーストを示します。 
+* **スパイク**は、システム内の異常動作の一時的なバーストを示します。
 
-* **変化点**は、システム内での長期にわたる永続的な変化の始まりを示します。 
+* **変化点**は、システム内での長期にわたる永続的な変化の始まりを示します。
 
-ML.NET では、[独立した同一分散のデータセット](https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables)には IID Spike Detection (IID スパイク検出) アルゴリズムまたは IID Change point Detection (IID 変化点検出) アルゴリズムが適しています。 
+ML.NET では、[独立した同一分散のデータセット](https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables)には IID Spike Detection (IID スパイク検出) アルゴリズムまたは IID Change point Detection (IID 変化点検出) アルゴリズムが適しています。
+
+他のチュートリアルのモデルとは異なり、時系列の異常検出器の変換は入力データで直接操作されます。 `IEstimator.Fit()` メソッドでは、変換を生成するためにトレーニング データを必要としません。 データ スキーマは必要ですが、`ProductSalesData` の空のリストから生成されたデータ ビューによって提供されます。
 
 スパイクと変化点の検出には、同じ製品売上データを分析します。 構築とトレーニング モデル プロセスは、スパイク検出と変化点検出で同じです。主な違いは、使用される具体的な検出アルゴリズムです。
 
-## <a name="spike-detection"></a>スパイク検出 
+## <a name="spike-detection"></a>スパイク検出
 
 スパイク検出の目的は、時系列データ値の大部分と大きく異なる突然の一時的なバーストを特定することです。 このような疑わしいまれな項目、イベント、または観測値を適時に検出して最小限に抑えることが重要です。 次のようなアプローチを利用すると、停電、サイバー攻撃、バイラル Web コンテンツなど、さまざまな異常を検出できます。 次の図は、時系列データセットのスパイクの例です。
 
 ![SpikeDetection](./media/sales-anomaly-detection/SpikeDetection.png)
 
+### <a name="add-the-createemptydataview-method"></a>CreateEmptyDataView () メソッドを追加する
+
+次のメソッドを `Program.cs` に追加します。
+
+[!code-csharp[CreateEmptyDataView](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#CreateEmptyDataView)]
+
+`CreateEmptyDataView()` では、`IEstimator.Fit()` メソッドへの入力として使用される正しいスキーマで、空のデータ ビュー オブジェクトを生成します。
+
 ### <a name="create-the-detectspike-method"></a>DetectSpike() メソッドを作成します。
 
-`Main()` メソッドの次のコード行として、`DetectSpike()` メソッドに次の呼び出しを追加します。
+`DetectSpike()` メソッド:
 
-[!code-csharp[CallDetectSpike](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#CallDetectSpike)]
-
-`DetectSpike()` メソッドは次のタスクを実行します。
-
-* モデルをトレーニングする。
+* エスティメーターから変換を作成します。
 * 売上データ履歴に基づいてスパイクを検出します。
 * 結果を表示します。
 
-`Main()` メソッドの直後に、次のコードを使用して `DetectSpike()` メソッドを作成します。
+1. `Main()` メソッドの直後に、次のコードを使用して `DetectSpike()` メソッドを作成します。
 
-```csharp
-static void DetectSpike(MLContext mlContext, int docSize, IDataView productSales)
-{
+    ```csharp
+    static void DetectSpike(MLContext mlContext, int docSize, IDataView productSales)
+    {
 
-}
-```
+    }
+    ```
 
-スパイク検出のために、[IidSpikeEstimator](xref:Microsoft.ML.Transforms.TimeSeries.IidSpikeEstimator) を使用してモデルをトレーニングします。 それを次のコードを使用して `DetectSpike()` メソッドに追加します。
+1. スパイク検出のために、[IidSpikeEstimator](xref:Microsoft.ML.Transforms.TimeSeries.IidSpikeEstimator) を使用してモデルをトレーニングします。 それを次のコードを使用して `DetectSpike()` メソッドに追加します。
 
-[!code-csharp[AddSpikeTrainer](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddSpikeTrainer)]
+    [!code-csharp[AddSpikeTrainer](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddSpikeTrainer)]
 
-`DetectSpike()` メソッドの次のコード行として以下を追加して、モデルを `productSales` データに適合させます。
+1. `DetectSpike()` メソッドの次のコード行として以下を追加して、スパイク検出の変換を作成します。
 
-[!code-csharp[TrainModel1](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TrainModel1)]
+    [!code-csharp[TrainModel1](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TrainModel1)]
 
-[Fit()](xref:Microsoft.ML.Data.TrivialEstimator%601.Fit%2A) メソッドでは、データセットを変換して、トレーニングを適用することにより、モデルがトレーニングされます。
+1. 次のコード行を追加して、`productSales` データを `DetectSpike()` メソッドの次の行に変換します。
 
-次のコード行を追加して、`productSales` データを `DetectSpike()` メソッドの次の行に変換します。
+    [!code-csharp[TransformData1](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TransformData1)]
 
-[!code-csharp[TransformData1](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TransformData1)]
+    前のコードでは、[Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) メソッドを使用して、データセットの複数の入力行の予測を行います。
 
-前のコードでは、[Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) メソッドを使用して、テスト データセットの指定した複数の入力行に対して予測しています。
+1. 表示を簡単にするために、次のコードを使用し、[CreateEnumerable()](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A) メソッドを使って `transformedData` を厳密に型指定された `IEnumerable` に変換します。
 
-表示を簡単にするために、次のコードを使用し、[CreateEnumerable()](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A) メソッドを使って `transformedData` を厳密に型指定された `IEnumerable` に変換します。
+    [!code-csharp[CreateEnumerable1](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#CreateEnumerable1)]
 
-[!code-csharp[CreateEnumerable1](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#CreateEnumerable1)]
+1. 次の <xref:System.Console.WriteLine?displayProperty=nameWithType> コードを使用して表示ヘッダー行を作成します。
 
-次の <xref:System.Console.WriteLine?displayProperty=nameWithType> コードを使用して表示ヘッダー行を作成します。
+    [!code-csharp[DisplayHeader1](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#DisplayHeader1)]
 
-[!code-csharp[DisplayHeader1](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#DisplayHeader1)]
+    スパイクの検出結果には、次の情報が表示されます。
 
-スパイクの検出結果には、次の情報が表示されます。
+    * `Alert` は、特定のデータ ポイントに対するスパイク アラートを示します。
+    * `Score`は、データセット内の特定のデータ ポイントに対する `ProductSales` 値です。
+    * `P-Value` "P" は確率を表します。 p 値が 0 に近いほど、データ ポイントが異常になる可能性が高くなります。
 
-* `Alert` は、特定のデータ ポイントに対するスパイク アラートを示します。
+1. 次のコードを使用して `predictions` `IEnumerable` を反復処理し、結果を表示します。
 
-* `Score`は、データセット内の特定のデータ ポイントに対する `ProductSales` 値です。
+    [!code-csharp[DisplayResults1](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#DisplayResults1)]
 
-* `P-Value` "P" は確率を表します。 これは、このデータ ポイントが異常である可能性の程度を示します。 
+1. `DetectSpike()` メソッドに対する呼び出しを `Main()` メソッドに追加します。
 
-次のコードを使用して `predictions` `IEnumerable` を反復処理し、結果を表示します。
-
-[!code-csharp[DisplayResults1](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#DisplayResults1)]
+    [!code-csharp[CallDetectSpike](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#CallDetectSpike)]
 
 ## <a name="spike-detection-results"></a>スパイクの検出結果
 
-結果は以下のようになるはずです。 処理中にメッセージが表示されます。 警告または処理メッセージが表示されることがありますが、 わかりやすくするために、それらは次の結果から削除してあります。
+結果は以下のようになるはずです。 処理中にメッセージが表示されます。 警告または処理メッセージが表示されることがありますが、 わかりやすくするために、一部のメッセージは次の結果から削除してあります。
 
 ```console
 Detect temporary changes in pattern
@@ -260,59 +269,59 @@ Alert   Score   P-Value
 
 ### <a name="create-the-detectchangepoint-method"></a>DetectChangepoint() メソッドを作成します。
 
-`Main()` メソッドの次のコード行として、`DetectChangepoint()` メソッドに次の呼び出しを追加します。
-
-[!code-csharp[CallDetectChangepoint](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#CallDetectChangepoint)]
-
 `DetectChangepoint()` メソッドは次のタスクを実行します。
 
-* モデルをトレーニングする。
+* エスティメーターから変換を作成します。
 * 売上データ履歴に基づいて変更点を検出します。
 * 結果を表示します。
 
-`Main()` メソッドの直後に、次のコードを使用して `DetectChangepoint()` メソッドを作成します。
+1. `Main()` メソッドの直後に、次のコードを使用して `DetectChangepoint()` メソッドを作成します。
 
-```csharp
-static void DetectChangepoint(MLContext mlContext, int docSize, IDataView productSales)
-{
+    ```csharp
+    static void DetectChangepoint(MLContext mlContext, int docSize, IDataView productSales)
+    {
 
-}
-```
+    }
+    ```
 
-[iidChangePointEstimator](xref:Microsoft.ML.Transforms.TimeSeries.IidChangePointEstimator) は、変化点検出のモデルをトレーニングするために使用されます。 それを次のコードを使用して `DetectChangepoint()` メソッドに追加します。
+1. 次のコードを使って `DetectChangepoint()` メソッドで [iidChangePointEstimator](xref:Microsoft.ML.Transforms.TimeSeries.IidChangePointEstimator) を作成します。
 
-[!code-csharp[AddChangepointTrainer](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddChangepointTrainer)]
+    [!code-csharp[AddChangepointTrainer](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddChangepointTrainer)]
 
-前述の方法と同様に、`DetectChangePoint()` メソッドの次のコード行として以下を追加して、モデルを `productSales` データに適合させます。
+1. 前に行ったように、`DetectChangePoint()` メソッドに次のコード行を追加して、エスティメーターから変換を作成します。
 
-[!code-csharp[TrainModel2](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TrainModel2)]
+    [!code-csharp[TrainModel2](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TrainModel2)]
 
-`Transform()` メソッドを使用して、次のコードを `DetectChangePoint()` に追加して `Training` データを変換します。
+1. `Transform()` メソッドを使用して、次のコードを `DetectChangePoint()` に追加してデータを変換します。
 
-[!code-csharp[TransformData2](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TransformData2)]
+    [!code-csharp[TransformData2](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TransformData2)]
 
-以前と同様に、表示を簡単にするために、次のコードを使用し、`CreateEnumerable()` メソッドを使って `transformedData` を厳密に型指定された `IEnumerable` に変換します。
+1. 以前と同様に、表示を簡単にするために、次のコードを使用し、`CreateEnumerable()` メソッドを使って `transformedData` を厳密に型指定された `IEnumerable` に変換します。
 
-[!code-csharp[CreateEnumerable2](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#CreateEnumerable2)]
+    [!code-csharp[CreateEnumerable2](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#CreateEnumerable2)]
 
-`DetectChangePoint()` メソッドの次の行として次のコードを使用して、表示ヘッダーを作成します。
+1. `DetectChangePoint()` メソッドの次の行として次のコードを使用して、表示ヘッダーを作成します。
 
-[!code-csharp[DisplayHeader2](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#DisplayHeader2)]
+    [!code-csharp[DisplayHeader2](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#DisplayHeader2)]
 
-変化点の検出結果には、次の情報が表示されます。
+    変化点の検出結果には、次の情報が表示されます。
 
-* `Alert` は、特定のデータ ポイントに対する変化点アラートを示します。
-* `Score`は、データセット内の特定のデータ ポイントに対する `ProductSales` 値です。
-* `P-Value` "P" は確率を表します。 これは、このデータ ポイントが異常である可能性の程度を示します。 
-* `Martingale value` は、一連の P 値に基づいて、データ ポイントがどの程度 "おかしい" かを特定するために使用されます。  
+    * `Alert` は、特定のデータ ポイントに対する変化点アラートを示します。
+    * `Score`は、データセット内の特定のデータ ポイントに対する `ProductSales` 値です。
+    * `P-Value` "P" は確率を表します。 P 値が 0 に近いほど、データ ポイントが異常になる可能性が高くなります。
+    * `Martingale value` は、一連の P 値に基づいて、データ ポイントがどの程度 "おかしい" かを特定するために使用されます。
 
-次のコードを使用して `predictions` `IEnumerable` を反復処理し、結果を表示します。
+1. 次のコードを使用して `predictions` `IEnumerable` を反復処理し、結果を表示します。
 
-[!code-csharp[DisplayResults2](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#DisplayResults2)]
+    [!code-csharp[DisplayResults2](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#DisplayResults2)]
+
+1. 次の `DetectChangepoint()` メソッドに対する呼び出しを `Main()` メソッドに追加します。
+
+    [!code-csharp[CallDetectChangepoint](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#CallDetectChangepoint)]
 
 ## <a name="change-point-detection-results"></a>変化点の検出結果
 
-結果は以下のようになるはずです。 処理中にメッセージが表示されます。 警告または処理メッセージが表示されることがありますが、 わかりやすくするために、それらは次の結果から削除してあります。
+結果は以下のようになるはずです。 処理中にメッセージが表示されます。 警告または処理メッセージが表示されることがありますが、 わかりやすくするために、一部のメッセージは次の結果から削除してあります。
 
 ```console
 Detect Persistent changes in pattern

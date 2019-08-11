@@ -2,12 +2,12 @@
 title: dotnet restore コマンド
 description: dotnet restore コマンドを使用して、依存関係とプロジェクト固有のツールを復元する方法について説明します。
 ms.date: 05/29/2018
-ms.openlocfilehash: 3ddb9f679cfcab972483a4cb53ffe2b075867614
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 17bbbe33e7cb7b13d6fb1c0e44bb77dd2bbe7020
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613971"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626355"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -43,13 +43,29 @@ dotnet restore [-h|--help]
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-依存関係を復元するには、NuGet で、パッケージを配置するフィードが必要になります。 フィードは、通常、*NuGet.config* 構成ファイルを通じて提供されます。 既定の構成ファイルは、CLI ツールがインストールされている場合に提供されます。 プロジェクト ディレクトリに独自の *NuGet.config* ファイルを作成して、さらにフィードを指定します。 コマンド プロンプトで呼び出すごとにフィードをさらに指定することもできます。
+依存関係を復元するには、NuGet で、パッケージを配置するフィードが必要になります。 フィードは、通常、"*nuget.config*" 構成ファイルを通じて提供されます。 既定の構成ファイルは、CLI ツールがインストールされている場合に提供されます。 プロジェクト ディレクトリに独自の "*nuget.config*" ファイルを作成して、さらにフィードを指定します。 コマンド プロンプトで呼び出すごとにフィードをさらに指定することもできます。
 
 依存関係については、`--packages` 引数を使用して、復元操作中に復元されたパッケージの配置場所を指定します。 指定されていない場合は、既定の NuGet パッケージ キャッシュが使用されます。これは、すべてのオペレーティング システムのユーザーのホーム ディレクトリ内の `.nuget/packages` ディレクトリにあります。 たとえば、Linux の場合は */home/user1*、Windows の場合は *C:\Users\user1* です。
 
 プロジェクト固有のツールについては、`dotnet restore` はまず、ツールがパックされているパッケージを復元し、プロジェクト ファイルに指定されているツールの依存関係の復元に進みます。
 
-*Nuget.Config* がある場合、`dotnet restore` コマンドの動作はその設定の一部に影響を受けます。 たとえば、*NuGet.Config* に `globalPackagesFolder` を設定すると、指定されたフォルダーに NuGet パッケージが復元されます。 これは `dotnet restore` コマンドで `--packages` オプションを指定する操作の代替方法です。 詳細については、「[NuGet.Config reference](/nuget/schema/nuget-config-file)」(NuGet.Config リファレンス) を参照してください。
+### <a name="nugetconfig-differences"></a>nuget.config の相違点
+
+"*nuget.config*" がある場合、`dotnet restore` コマンドの動作はその設定に影響を受けます。 たとえば、"*nuget.config*" に `globalPackagesFolder` を設定すると、指定されたフォルダーに NuGet パッケージが復元されます。 これは `dotnet restore` コマンドで `--packages` オプションを指定する操作の代替方法です。 詳細については、「[nuget の .config リファレンス](/nuget/schema/nuget-config-file)」を参照してください。
+
+`dotnet restore` によって無視される、特定の設定が 3 つあります。
+
+* [bindingRedirects](/nuget/schema/nuget-config-file#bindingredirects-section)
+
+  バインド リダイレクトは、`<PackageReference>` 要素では機能しません。また、.NET Core では、NuGet パッケージの `<PackageReference>` 要素のみサポートされます。
+
+* [solution](/nuget/schema/nuget-config-file#solution-section)
+
+  これは、Visual Studio 固有の設定であり、.NET Core には適用されません。 .NET Core では、`packages.config` ファイルは使用されず、代わりに NuGet パッケージの `<PackageReference>` 要素が使用されます。
+
+* [trustedSigners](/nuget/schema/nuget-config-file#trustedsigners-section)
+
+  この設定は、信頼できるパッケージの[クロスプラットフォーム検証が NuGet でまだサポートされていない](https://github.com/NuGet/Home/issues/7939)ため、適用されません。
 
 ## <a name="implicit-dotnet-restore"></a>暗黙的 `dotnet restore`
 
@@ -79,7 +95,7 @@ dotnet restore [-h|--help]
 
 `--configfile <FILE>`
 
-復元操作で使用する NuGet 構成ファイル (*NuGet.config*) です。
+復元操作で使用する NuGet 構成ファイル ("*nuget.config*") です。
 
 `--disable-parallel`
 
@@ -111,11 +127,11 @@ dotnet restore [-h|--help]
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-パッケージの復元用のランタイムを指定します。 これは、*.csproj* ファイルの `<RuntimeIdentifiers>` タグに明示的にリストされていないランタイムのパッケージを復元するために使用されます。 ランタイム ID (RID) の一覧については、[RID カタログ](../rid-catalog.md)に関するページをご覧ください。 このオプションを複数回指定して、複数の RID を指定します。
+パッケージの復元用のランタイムを指定します。 これは、 *.csproj* ファイルの `<RuntimeIdentifiers>` タグに明示的にリストされていないランタイムのパッケージを復元するために使用されます。 ランタイム ID (RID) の一覧については、[RID カタログ](../rid-catalog.md)に関するページをご覧ください。 このオプションを複数回指定して、複数の RID を指定します。
 
 `-s|--source <SOURCE>`
 
-復元操作時に使用する NuGet パッケージのソースを指定します。 この設定により、*NuGet.config* ファイルに指定されているすべてのソースがオーバーライドされます。 このオプションを複数回指定することによって、複数のソースを指定できます。
+復元操作時に使用する NuGet パッケージのソースを指定します。 この設定により、"*nuget.config*" ファイルに指定されているすべてのソースがオーバーライドされます。 このオプションを複数回指定することによって、複数のソースを指定できます。
 
 `--verbosity <LEVEL>`
 
@@ -129,7 +145,7 @@ dotnet restore [-h|--help]
 
 `--configfile <FILE>`
 
-復元操作で使用する NuGet 構成ファイル (*NuGet.config*) です。
+復元操作で使用する NuGet 構成ファイル ("*nuget.config*") です。
 
 `--disable-parallel`
 
@@ -157,11 +173,11 @@ dotnet restore [-h|--help]
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-パッケージの復元用のランタイムを指定します。 これは、*.csproj* ファイルの `<RuntimeIdentifiers>` タグに明示的にリストされていないランタイムのパッケージを復元するために使用されます。 ランタイム ID (RID) の一覧については、[RID カタログ](../rid-catalog.md)に関するページをご覧ください。 このオプションを複数回指定して、複数の RID を指定します。
+パッケージの復元用のランタイムを指定します。 これは、 *.csproj* ファイルの `<RuntimeIdentifiers>` タグに明示的にリストされていないランタイムのパッケージを復元するために使用されます。 ランタイム ID (RID) の一覧については、[RID カタログ](../rid-catalog.md)に関するページをご覧ください。 このオプションを複数回指定して、複数の RID を指定します。
 
 `-s|--source <SOURCE>`
 
-復元操作時に使用する NuGet パッケージのソースを指定します。 これにより、*NuGet.config* ファイルに指定されているすべてのソースがオーバーライドされます。 このオプションを複数回指定することによって、複数のソースを指定できます。
+復元操作時に使用する NuGet パッケージのソースを指定します。 これにより、"*nuget.config*" ファイルに指定されているすべてのソースがオーバーライドされます。 このオプションを複数回指定することによって、複数のソースを指定できます。
 
 `--verbosity <LEVEL>`
 

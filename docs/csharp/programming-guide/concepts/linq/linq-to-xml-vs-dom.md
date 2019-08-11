@@ -2,12 +2,12 @@
 title: LINQ to XML およびDOM (C#)
 ms.date: 07/20/2015
 ms.assetid: 51c0e3d2-c047-4e6a-a423-d61a882400b7
-ms.openlocfilehash: 3cd6edf9e950611d4e0ed205b89c7c7b073955c8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 65dff4dc1c2faa1cd17e640d0c1a0e1d2a514fbe
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484322"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710019"
 ---
 # <a name="linq-to-xml-vs-dom-c"></a>LINQ to XML およびDOM (C#)
 このセクションでは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] と、現在主流の XML プログラミング API である W3C ドキュメント オブジェクト モデル (DOM) との主な違いについて説明します。  
@@ -100,7 +100,7 @@ doc.AppendChild(name);
  LINQ to XML を使用する場合、<xref:System.Xml.Linq.XDocument> クラスを使用するのは、ドキュメントのルート レベルにコメントや処理命令を追加する場合だけです。  
   
 ## <a name="simplified-handling-of-names-and-namespaces"></a>名前と名前空間の処理の単純化  
- 一般に XML プログラミングでは、名前、名前空間、および名前空間プレフィックスの処理が複雑になります。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用すると、名前空間プレフィックスを処理する必要がなくなるため、名前と名前空間が単純化されます。 必要に応じて名前空間プレフィックスを制御することはできますが、 明示的に制御しないようにすることもできます。その場合、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] がシリアル中に名前空間プレフィックスを必要に応じて割り当てます。必要ない場合は、既定の名前空間を使用してシリアル化します。 既定の名前空間が使用された場合は、結果のドキュメントには名前空間プレフィックスは含まれません。 詳細については、「[XML 名前空間の使用 (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)」を参照してください。  
+ 一般に XML プログラミングでは、名前、名前空間、および名前空間プレフィックスの処理が複雑になります。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用すると、名前空間プレフィックスを処理する必要がなくなるため、名前と名前空間が単純化されます。 必要に応じて名前空間プレフィックスを制御することはできますが、 明示的に制御しないようにすることもできます。その場合、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] がシリアル中に名前空間プレフィックスを必要に応じて割り当てます。必要ない場合は、既定の名前空間を使用してシリアル化します。 既定の名前空間が使用された場合は、結果のドキュメントには名前空間プレフィックスは含まれません。 詳細については、「[名前空間の概要 (LINQ to XML)](namespaces-overview-linq-to-xml.md)」を参照してください。  
   
  DOM にはその他に、ノードの名前を変更できないという問題もあります。 ノード名の変更が必要な場合は、新しいノードを作成し、そこにすべての子ノードをコピーする必要があります。この場合、元のノード固有の特性は失われます。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] では、この問題を回避するために、ノードに対して <xref:System.Xml.Linq.XName> プロパティを設定できます。  
   
@@ -114,7 +114,7 @@ doc.AppendChild(name);
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] には、`XmlDocumentFragment` クラスに対応する要素はありません。 ただし、`XmlDocumentFragment` の概念は、多くの場合、<xref:System.Xml.Linq.XNode> の <xref:System.Collections.Generic.IEnumerable%601> または <xref:System.Xml.Linq.XElement> の <xref:System.Collections.Generic.IEnumerable%601> として型指定されたクエリの結果によって処理できます。  
   
 ## <a name="support-for-xpathnavigator"></a>XPathNavigator のサポート  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] では、<xref:System.Xml.XPath?displayProperty=nameWithType> 名前空間の拡張メソッドによって <xref:System.Xml.XPath.XPathNavigator> がサポートされています。 詳細については、「<xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>」を参照してください。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] では、<xref:System.Xml.XPath?displayProperty=nameWithType> 名前空間の拡張メソッドによって <xref:System.Xml.XPath.XPathNavigator> がサポートされています。 詳細については、<xref:System.Xml.XPath.Extensions?displayProperty=nameWithType> を参照してください。  
   
 ## <a name="support-for-white-space-and-indentation"></a>空白とインデントのサポート  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] では、空白の処理が DOM より単純化されています。  

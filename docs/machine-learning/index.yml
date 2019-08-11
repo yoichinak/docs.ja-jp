@@ -29,10 +29,11 @@ sections:
           - html: <a href="/dotnet/machine-learning/tutorials/iris-clustering">クラスタリングを使用して花を特徴別に分類する</a>
           - html: <a href="/dotnet/machine-learning/tutorials/movie-recommendation">行列の因数分解を使用して映画レコメンダーを作成する</a>
           - html: <a href="/dotnet/machine-learning/tutorials/image-classification">TensorFlow を使用してカスタム画像分類子を構築する</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/object-detection-onnx">ONNX を使用して画像内のオブジェクトを検出する</a>
   - title: 参照とリソース
     items:
       - type: paragraph
-        text: ML.NET API には、リリース コンポーネントとプレビュー コンポーネントという 2 セットのパッケージがあります。 リリース API には、データ処理、二項分類、多クラス分類、回帰、異常の検出とランキング、モデルの保存と読み込みのためのアルゴリズムなどが含まれています。 プレビュー API には、ONNX と TensorFlow のモデル処理、推奨タスクのアルゴリズム、および時系列データを処理するためのコンポーネントが含まれています。
+        text: ML.NET API には、リリース コンポーネントとプレビュー コンポーネントという 2 セットのパッケージがあります。 リリース API には、データ処理用のコンポーネントや、二項分類、多クラス分類、回帰、異常の検出、時系列と予測、ランキング、モデルの保存と読み込み、ONNX モデルと TensorFlow モデルの処理のためのアルゴリズムなどが含まれています。 プレビュー API には、推奨タスク用のアルゴリズムと標準のディープ ラーニング モデル向けのサポートが含まれています。
       - type: list
         style: unordered
         items:

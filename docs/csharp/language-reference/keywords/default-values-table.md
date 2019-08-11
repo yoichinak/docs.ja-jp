@@ -1,49 +1,32 @@
 ---
 title: 既定値の一覧表 - C# リファレンス
 ms.custom: seodec18
-description: C# の値型における既定値について説明します。
-ms.date: 08/23/2018
+description: C# の型における既定値について説明します。
+ms.date: 07/29/2019
 helpviewer_keywords:
-- constructors [C#], return values
-- keywords [C#], new
+- default [C#]
 - parameterless constructor [C#]
-- defaults [C#]
-- value types [C#], initializing
-- variables [C#], value types
-- constructors [C#], parameterless constructor
-- types [C#], parameterless constructor return values
-ms.openlocfilehash: ec5fb4681f0e0562c5aefdf336841416f96bdf98
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 23fba8269670156000cb68b3aa07ae7c770eada1
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661414"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627747"
 ---
 # <a name="default-values-table-c-reference"></a>既定値の一覧表 (C# リファレンス)
 
-次の表では、[値型](value-types.md)の既定値を示します。
+次の表では、C# の型の既定値を示します。
 
-|値の種類|既定値|
-|----------------|-------------------|
+|型|既定値|
+|---------|------------------|
+|すべての参照型|`null`|
+|任意の[組み込み整数数値型](../builtin-types/integral-numeric-types.md)|0 (ゼロ)|
+|任意の[組み込み浮動小数点数値型](../builtin-types/floating-point-numeric-types.md)|0 (ゼロ)|
 |[bool](bool.md)|`false`|
-|[byte](../builtin-types/integral-numeric-types.md)|0|
-|[char](char.md)|'\0'|
-|[decimal](../builtin-types/floating-point-numeric-types.md)|0M|
-|[double](../builtin-types/floating-point-numeric-types.md)|0.0D|
+|[char](char.md)|`'\0'` (U+0000)|
 |[enum](enum.md)|式 `(E)0` によって生成される値。`E` は列挙型識別子です。|
-|[float](../builtin-types/floating-point-numeric-types.md)|0.0F|
-|[int](../builtin-types/integral-numeric-types.md)|0|
-|[long](../builtin-types/integral-numeric-types.md)|0L|
-|[sbyte](../builtin-types/integral-numeric-types.md)|0|
-|[short](../builtin-types/integral-numeric-types.md)|0|
 |[struct](struct.md)|すべての値型フィールドが既定値に設定され、すべての参照型フィールドが `null` に設定された値。|
-|[uint](../builtin-types/integral-numeric-types.md)|0|
-|[ulong](../builtin-types/integral-numeric-types.md)|0|
-|[ushort](../builtin-types/integral-numeric-types.md)|0|
-
-## <a name="remarks"></a>解説
-
-C# で初期化されていない変数を使用することはできません。 変数はその型の既定値に初期化することができます。 また、型の既定値を使用して、メソッドの[省略可能な引数](../../programming-guide/classes-and-structs/named-and-optional-arguments.md#optional-arguments)の既定値を指定することもできます。
+|任意の [null 許容値型](../../programming-guide/nullable-types/index.md)|<xref:System.Nullable%601.HasValue%2A> プロパティが `false` で、<xref:System.Nullable%601.Value%2A> プロパティが未定義のインスタンス。 その規定値は、null 許容値型の "*null*" 値とも呼ばれます。|
 
 [既定の値式](../../programming-guide/statements-expressions-operators/default-value-expressions.md)を使用して、次の例に示すように、型の既定値を生成します。
 
@@ -57,19 +40,23 @@ C# 7.1 以降、[`default` リテラル](../../programming-guide/statements-expr
 int a = default;
 ```
 
-また、次の例に示すように、パラメーターなしのコンストラクターまたは暗黙的なパラメーターなしのコンストラクターを使用して、値型の既定値を生成することもできます。 コンストラクターの詳細については、[コンストラクター](../../programming-guide/classes-and-structs/constructors.md)に関する記事を参照してください。
+値の型については、次の例が示すように、暗黙的なパラメーターなしのコンストラクターによっても、型の既定値が生成されます。
 
-```csharp
-int a = new int();
+```csharp-interactive
+var n = new System.Numerics.Complex();
+Console.WriteLine(n);  // output: (0, 0)
 ```
 
-[参照型](reference-types.md)の既定値は `null` です。 [null 許容型](../../programming-guide/nullable-types/index.md)の既定値は、<xref:System.Nullable%601.HasValue%2A> プロパティが `false` で、<xref:System.Nullable%601.Value%2A> プロパティが未定義のインスタンスです。
+## <a name="c-language-specification"></a>C# 言語仕様
+
+詳細については、「[C# 言語仕様](~/_csharplang/spec/introduction.md)」の次のセクションを参照してください。
+
+- [既定値](~/_csharplang/spec/variables.md#default-values)
+- [既定のコンストラクター](~/_csharplang/spec/types.md#default-constructors)
 
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
-- [C# のキーワード](index.md)
-- [値型](value-types.md)
-- [値型の一覧表](value-types-table.md)
+- [C# キーワード](index.md)
 - [組み込み型の一覧表](built-in-types-table.md)
+- [コンストラクター](../../programming-guide/classes-and-structs/constructors.md)

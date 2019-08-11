@@ -1,5 +1,5 @@
 ---
-title: COM 用のアセンブリのパッケージ化
+title: COM 用の .NET Framework アセンブリのパッケージ化
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exposing .NET Framework components to COM
@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb45fc253e24c9770436432d2734ba8fce249453
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 1ca87d688d6802df967ea81b8297b099350f1c86
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662362"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629328"
 ---
-# <a name="packaging-an-assembly-for-com"></a>COM 用のアセンブリのパッケージ化
+# <a name="packaging-a-net-framework-assembly-for-com"></a>COM 用の .NET Framework アセンブリのパッケージ化
 
 COM 開発者がアプリケーションに組み込むときに役立つ、マネージド型に関する情報を次に示します。
 
@@ -33,13 +33,13 @@ COM 開発者がアプリケーションに組み込むときに役立つ、マ�
 
   マネージド型には、COM から参照できない型、参照可能だが作成できない型、および参照と作成の両方が可能な型があります。 アセンブリは、参照できない型、参照できる型、作成できない型、作成できる型を任意に組み合わせて構成できます。 完全を期すために、COM に公開するアセンブリ内の型を識別する必要があります。特に COM に公開するアセンブリ内の型が .NET Framework に公開されている型のサブセットである場合に型の識別が必要になります。
 
-  追加情報については、「[相互運用のための .NET 型の要件](qualifying-net-types-for-interoperation.md)」を参照してください。
+  追加情報については、「[相互運用のための .NET 型の要件](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)」を参照してください。
 
 - バージョン管理に関する注意事項
 
   クラス インターフェイス (COM 相互運用機能により生成されたインターフェイス) を実装したマネージド クラスには、バージョン管理に関する制約が生じる場合があります。
 
-  クラス インターフェイスの使用に関するガイドラインについては、「[クラス インターフェイスの概要](com-callable-wrapper.md#introducing-the-class-interface)」をご覧ください。
+  クラス インターフェイスの使用に関するガイドラインについては、「[クラス インターフェイスの概要](../../../docs/standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)」をご覧ください。
 
 - 配置に関する注意事項
 
@@ -94,8 +94,8 @@ COM 開発者がアプリケーションに組み込むときに役立つ、マ�
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - <xref:System.Runtime.InteropServices.ITypeLibConverter>
 - [COM への .NET Framework コンポーネントの公開](exposing-dotnet-components-to-com.md)
-- [要件 (相互運用のための .NET 型の)](qualifying-net-types-for-interoperation.md)
-- [クラス インターフェイスの概要](com-callable-wrapper.md#introducing-the-class-interface)
+- [要件 (相互運用のための .NET 型の)](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)
+- [クラス インターフェイスの概要](../../../docs/standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
 - [アセンブリのセキュリティに関する考慮事項](../app-domains/assembly-security-considerations.md)
 - [Tlbexp.exe (タイプ ライブラリ エクスポーター)](../tools/tlbexp-exe-type-library-exporter.md)
 - [COM へのアセンブリの登録](registering-assemblies-with-com.md)

@@ -1,14 +1,14 @@
 ---
 title: ファイルとその他のソースからデータを読み込む
 description: このハウツーでは、処理とトレーニング用のデータを ML.NET に読み込む方法について説明します。 データは、もともとはファイルか、またはデータベース、JSON、XML、メモリ内コレクションなどのその他のデータソースに格納されています。
-ms.date: 06/25/2019
+ms.date: 08/01/2019
 ms.custom: mvc,how-to, title-hack-0625
-ms.openlocfilehash: fafbe3fed9e3f0b509eda4f9d8967965bde19767
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: d5f3aab14a60a8c9860dc67f1cc98f3b1b3188ed
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397744"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733369"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>ファイルとその他のソースからデータを読み込む
 
@@ -55,7 +55,7 @@ public class HousingData
 - `HousingData` クラスの `Size` や `CurrentPrices` のように個々の列。
 - `HousingData` クラスの `HistoricalPrices` のようにベクター形式で一度に複数の列。
 
-ベクター プロパティがある場合は、データ モデルのプロパティに [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) 属性を適用します。 ベクター内のすべての要素は同じ型にする必要がある点に注意してください。
+ベクター プロパティがある場合は、データ モデルのプロパティに [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) 属性を適用します。 ベクター内のすべての要素は同じ型にする必要がある点に注意してください。 列を分割したままにすると、特徴エンジニアリングが容易になり、柔軟性が向上しますが、列数が非常に多い場合、個々の列を操作するとトレーニング速度に影響します。
 
 ML.NET は列名を介して動作します。 列の名前をプロパティ名以外に変更する場合は、[`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) 属性を使用します。 メモリ内オブジェクトを作成するときも、プロパティ名を使ってオブジェクトを作成します。 ただし、データ処理と機械学習モデルの構築の場合、ML.NET では [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) 属性に指定された値でプロパティがオーバーライドされ、参照されます。
 
@@ -139,6 +139,9 @@ HousingData[] inMemoryCollection = new HousingData[]
 ```
 
 [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) メソッドを使用してメモリ内コレクションを [`IDataView`](xref:Microsoft.ML.IDataView) に読み込みます。
+
+> [!IMPORTANT]
+> [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) では、この読み込み元の [`IEnumerable`](xref:System.Collections.IEnumerable) がスレッドセーフであると想定されています。 
 
 ```csharp
 // Create MLContext

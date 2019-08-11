@@ -2,12 +2,12 @@
 title: '方法: 空のクエリ結果セットをデバッグする (C#)'
 ms.date: 07/20/2015
 ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
-ms.openlocfilehash: ba82e37ef4f57c78e7ba66676ba90312c2a9400f
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 06c878a7751a14a3043b450d9242037ca91ad754
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485768"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710130"
 ---
 # <a name="how-to-debug-empty-query-results-sets-c"></a>方法: 空のクエリ結果セットをデバッグする (C#)
 XML ツリーのクエリにおける最も一般的な問題の 1 つは、XML ツリーに既定の名前空間がある場合に、XML が名前空間に含まれていないものとして開発者がクエリを記述してしまうことです。  
@@ -16,7 +16,7 @@ XML ツリーのクエリにおける最も一般的な問題の 1 つは、XML 
   
  2 番目に示す一連の例では、名前空間内の XML に対してクエリを実行できるようにするために必要な修正を示しています。  
   
- 詳細については、「[XML 名前空間の使用 (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)」を参照してください。  
+ 詳細については、「[名前空間の概要 (LINQ to XML)](namespaces-overview-linq-to-xml.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  この例では、名前空間内にある XML の作成、および空の結果セットを返すクエリを示します。  

@@ -2,13 +2,14 @@
 title: 機械学習の用語集
 description: ML.NET でカスタム モデルをビルドする際に役立つ機械学習の重要な用語の用語集。
 ms.custom: seodec18
-ms.date: 05/09/2019
-ms.openlocfilehash: 7d098dc9d3dc6cb7bb08b5689b50afff01ba1d7f
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.topic: reference
+ms.date: 07/31/2019
+ms.openlocfilehash: 1c979d2c4567285146ab87f359116efb506815a1
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557978"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710536"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>機械学習の重要な用語の用語集
 
@@ -20,7 +21,7 @@ ML.NET でカスタム モデルをビルドする際に役立つ機械学習の
 
 ## <a name="area-under-the-curve-auc"></a>曲線下面積 (AUC)
 
-[二項分類](#binary-classification)における評価メトリックであり、偽陽性率 (x 軸上) に対する真陽性率 (y 軸上) を描画する曲線下面積の値です。 0.5 (最低) ～ 1 (最高) の値になります。 ROC 曲線 (受信者操作特性曲線) 下面積とも呼ばれます。 詳しくは、Wikipedia の[受信者操作特性](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)の記事を参照してください。
+[二項分類](#binary-classification)における評価メトリックであり、偽陽性率 (x 軸上) に対する真陽性率 (y 軸上) を描画する曲線下面積の値です。 0\.5 (最低) ～ 1 (最高) の値になります。 ROC 曲線 (受信者操作特性曲線) 下面積とも呼ばれます。 詳しくは、Wikipedia の[受信者操作特性](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)の記事を参照してください。
 
 ## <a name="binary-classification"></a>二項分類
 
@@ -109,6 +110,10 @@ ML.NET では、カタログは、共通の目的でグループ化された拡�
 
 テキスト データの特徴抽出スキームです。N 個の単語のシーケンスが[特徴](#feature)値になります。
 
+## <a name="normalization"></a>正規化
+
+正規化とは、浮動小数点データを 0 から 1 の間の値にスケーリングするプロセスです。 ML.NET で使用されるトレーニング アルゴリズムの多くで、入力機能データを正規化する必要があります。 ML.NET では、[正規化のために一連の変換](transforms.md#normalization-and-scaling)を提供します。
+
 ## <a name="numerical-feature-vector"></a>数値特徴ベクトル
 
 数値でのみ構成される[特徴](#feature)ベクトルです。 これは `double[]` に似ています。
@@ -147,6 +152,10 @@ ML.NET では、カタログは、共通の目的でグループ化された拡�
 ## <a name="root-of-mean-squared-error-rmse"></a>平均平方誤差の平方根 (RMSE)
 
 [回帰](#regression)における評価メトリックであり、誤差を 2 乗した値の平均値の平方根です。
+
+## <a name="scoring"></a>スコア付け
+
+スコアリングは、トレーニング済みの機械学習モデルに新しいデータを適用し、予測を生成するプロセスです。 スコアリングは推論とも呼ばれます。 モデルの種類に応じて、スコアは場合によって、未処理の値、確率、またはカテゴリになります。
 
 ## <a name="supervised-machine-learning"></a>教師あり機械学習
 

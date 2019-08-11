@@ -1,15 +1,15 @@
 ---
 title: 'チュートリアル: サポートの問題の分類 - 多クラス分類'
 description: GitHub の問題を分類し、それを特定の領域に割り当てるための多クラス分類シナリオで、ML.NET を使用する方法について説明します。
-ms.date: 05/16/2019
+ms.date: 07/31/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: da4f82c1b2c4ebdc8ccc8f307722c2719909cf56
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 3bb556cc591ee35fc14c548e7f53bad58a786e99
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195587"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710302"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>チュートリアル: ML .NET での多クラス分類を使用したサポートの問題の分類
 
@@ -80,7 +80,7 @@ ms.locfileid: "66195587"
 
 1. **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[追加]**  >  **[新しい項目]** を選択します。
 
-1. **[新しい項目の追加]** ダイアログ ボックスで、 **[クラス]** を選択し、 **[名前]** フィールドを「*GitHubIssueData.cs*」に変更します。 次に、 **[追加]** を選択します。
+1. **[新しい項目の追加]** ダイアログ ボックスで、 **[クラス]** を選択し、 **[名前]** フィールドを「*GitHubIssueData.cs*」に変更します。 次に **[追加]** を選択します。
 
     コード エディターで *GitHubIssueData.cs* ファイルが開きます。 *GitHubIssueData.cs* の先頭に次の `using` ステートメントを追加します。
 
@@ -285,6 +285,25 @@ public static void Evaluate(DataViewSchema trainingDataViewSchema)
 
 [!code-csharp[DisplayMetrics](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#DisplayMetrics)]
 
+### <a name="save-the-model-to-a-file"></a>モデルをファイルに保存する
+
+モデルに問題がなければ、後で、または別のアプリケーションで予測を行うために、そのモデルをファイルに保存します。 `Evaluate` メソッドに次のコードを追加します。 
+
+[!code-csharp[SnippetCallSaveModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetCallSaveModel)]
+
+`Evaluate` メソッドの下に `SaveModelAsFile` メソッドを作成します。
+
+```csharp
+private static void SaveModelAsFile(MLContext mlContext,DataViewSchema trainingDataViewSchema, ITransformer model)
+{
+
+}
+```
+
+次のコードを `SaveModelAsFile` メソッドに追加します。 このコードでは [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) メソッドを使用して、トレーニング済みのモデルを zip ファイルとしてシリアル化し、格納します。
+
+[!code-csharp[SnippetSaveModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetSaveModel)]
+
 ## <a name="deploy-and-predict-with-a-model"></a>モデルによるデプロイと予測
 
 `Evaluate` メソッドの呼び出しのすぐ下に、次のコードを使用して、`Main` メソッドからの新しいメソッドの呼び出しを追加します。
@@ -302,10 +321,15 @@ private static void PredictIssue()
 
 `PredictIssue` メソッドは次のタスクを実行します。
 
+* 保存されたモデルを読み込む
 * テスト データの問題を 1 つ作成します。
 * テスト データに基づいて区分を予測します。
 * テスト データと予測をレポート用に結合する。
 * 予測された結果を表示する。
+
+`PredictIssue` メソッドに次のコードを追加して、保存されたモデルをアプリケーションに読み込みます。
+
+[!code-csharp[SnippetLoadModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetLoadModel)]
 
 GitHub の問題を追加して、`Predict` メソッドでトレーニングされたモデルの予測をテストします。これには `GitHubIssue` のインスタンスを作成します。
 

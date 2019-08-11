@@ -4,12 +4,12 @@ description: ML.NET でサポートされる機械学習のさまざまなタス
 ms.custom: seodec18
 ms.date: 04/23/2019
 author: natke
-ms.openlocfilehash: ed6361fdcbca11c100ee5cae4ca76e152ddfba11
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: bcd967c11156ca9b837631560e78722b13fc7ae0
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063547"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630056"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>ML.NET での機械学習のタスク
 
@@ -47,7 +47,7 @@ ms.locfileid: "65063547"
 
 ### <a name="binary-classification-inputs-and-outputs"></a>二項分類の入力と出力
 
-二値分類で最適な結果を得るには、バランスの取れた (つまり、正と負のトレーニング データの数が等しい) トレーニング データを使用します。 不足や値はトレーニングの前に処理しておきます。
+二値分類で最適な結果を得るには、バランスの取れた (すなわち、正と負のトレーニング データの数が等しい) トレーニング データを使用します。 欠損値はトレーニングの前に処理しておきます。
 
 入力ラベル列データは <xref:System.Boolean> にする必要があります。
 入力特徴列データは、<xref:System.Single> の固定サイズ ベクターにする必要があります。
@@ -70,7 +70,7 @@ ms.locfileid: "65063547"
 詳しくは、Wikipedia の[多クラス分類](https://en.wikipedia.org/wiki/Multiclass_classification)の記事を参照してください。
 
 >[!NOTE]
->一対全では、多クラス データセットに対して機能するように[二項分類学習器](#binary-classification)がアップグレードされます。 詳細については、[Wikipedia] (https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest)) を参照してください。
+>一対全では、多クラス データセットに対して機能するように[二項分類学習器](#binary-classification)がアップグレードされます。 詳細については、[Wikipedia] (https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest) ) を参照してください。
 
 ### <a name="multiclass-classification-trainers"></a>多クラス分類トレーナー
 
