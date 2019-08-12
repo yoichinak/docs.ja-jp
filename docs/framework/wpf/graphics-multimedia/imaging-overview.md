@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 9adceb78f53d9c855ec05859a0b3449a1623e62b
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 845095567459fc486dd2f1c52e575444612c7bb8
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796848"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68869121"
 ---
 # <a name="imaging-overview"></a>イメージングの概要
 このトピックでは、[!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)] の概要を説明します。 開発者は、[!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] を使用して、イメージの表示、変換、および形式設定を実行できます。  
@@ -57,7 +57,7 @@ ms.locfileid: "68796848"
   
 <a name="_imageformats"></a>   
 ## <a name="wpf-image-formats"></a>WPF イメージ形式  
- コーデックは、特定のメディア形式をデコードまたはエンコードするために使用されます。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]に[!INCLUDE[TLA2#tla_jpeg](../../../../includes/tla2sharptla-jpeg-md.md)]は、BMP、、 [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)]、 [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)]、、GIF、およびアイコンイメージ形式のコーデックが含まれています。 アプリケーションは、これらのコーデックを使用して、対応するイメージ形式をデコードでき、ICON を除くイメージ形式をエンコードできます。  
+ コーデックは、特定のメディア形式をデコードまたはエンコードするために使用されます。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]には、BMP、JPEG、 [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)] [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)]、 [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)]、、GIF、およびアイコンイメージ形式のコーデックが含まれています。 アプリケーションは、これらのコーデックを使用して、対応するイメージ形式をデコードでき、ICON を除くイメージ形式をエンコードできます。  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>は、イメージのデコードとエンコードで使用される重要なクラスです。 それは、[!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] パイプラインの基本ビルディング ブロックであり、ピクセルの単一の定数セットを特定のサイズと解像度で表現します。 には、複数のフレームイメージの個別のフレームを指定する<xref:System.Windows.Media.Imaging.BitmapSource>ことも、に対して実行される変換の結果にすることもできます。<xref:System.Windows.Media.Imaging.BitmapSource> これは、のよう[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] <xref:System.Windows.Media.Imaging.BitmapFrame>なイメージングで使用される主なクラスの多くの親です。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "68796848"
   
 - <xref:System.Windows.Media.Stretch.None>:イメージは、出力領域に合わせて拡大されません。 イメージが出力領域よりも大きい場合は、出力領域に収まらない部分がクリップされたイメージが出力領域に描画されます。  
   
-- <xref:System.Windows.Media.Stretch.Fill> :イメージは、出力領域に合わせて拡大縮小されます。 イメージの高さと幅は個別に拡大縮小されるため、イメージの元の縦横比は保持されないことがあります。 つまり、イメージは、出力コンテナーを完全に埋めるためにゆがんで表示される可能性があります。  
+- <xref:System.Windows.Media.Stretch.Fill>:イメージは、出力領域に合わせて拡大縮小されます。 イメージの高さと幅は個別に拡大縮小されるため、イメージの元の縦横比は保持されないことがあります。 つまり、イメージは、出力コンテナーを完全に埋めるためにゆがんで表示される可能性があります。  
   
 - <xref:System.Windows.Media.Stretch.Uniform>:イメージは、出力領域内に完全に収まるようにスケーリングされます。 イメージの縦横比は保持されます。  
   

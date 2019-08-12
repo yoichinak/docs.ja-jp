@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: 4d1acc758f0121e7450351c63538fd47f28ef732
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 5577a5042ba77e133e3c6ee7760f7c3a4cce0537
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398060"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796587"
 ---
 # <a name="using-structs-c-programming-guide"></a>構造体の使用 (C# プログラミング ガイド)
 `struct` 型は、 `Point`、 `Rectangle`、 `Color`などの軽量のオブジェクトを表すのに適しています。 点を表すには [自動実装プロパティ](../../../csharp/language-reference/keywords/class.md) がある [クラス](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)を使用するのと同じくらい便利ですが、シナリオによっては [構造体](../../../csharp/language-reference/keywords/struct.md) を使用する方がより効率的です。 たとえば、1,000 個の `Point` オブジェクトから成る配列を宣言する場合は、各オブジェクトの参照用に追加のメモリを割り当てます。この場合、構造体であれば処理上の負荷を抑えることができます。 .NET Framework には <xref:System.Drawing.Point> という名前のオブジェクトが含まれているため、この例の構造体には代わりに "Coords" という名前が付けられています。  
@@ -21,7 +21,7 @@ ms.locfileid: "67398060"
   
  [new](../../../csharp/language-reference/operators/new-operator.md) 演算子を使用して struct オブジェクトを作成すると、[コンストラクター シグネチャ](../../../csharp/programming-guide/classes-and-structs/constructors.md#constructor-syntax)に基づき、オブジェクトが作成されて適切なコンストラクターが呼び出されます。 クラスとは異なり、構造体は `new` 演算子を使用せずにインスタンス化できます。 このような場合、コンストラクターの呼び出しが行われないため、割り当てがより効率的になります。 ただし、各フィールドは未割り当てのままになり、すべてのフィールドが初期化されるまではオブジェクトを使用できません。 たとえば、プロパティから値を取得または設定することができません。
 
- 既定の、パラメーターのないコンストラクターを利用して構造体オブジェクトを初期化する場合、その[既定値](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md)に基づいてすべてのメンバーが割り当てられます。
+ 既定の、パラメーターのないコンストラクターを利用して構造体オブジェクトを初期化する場合、その[既定値](../../../csharp/language-reference/keywords/default-values-table.md)に基づいてすべてのメンバーが割り当てられます。
   
  構造体のパラメーターを使用してコンストラクターを記述するとき、すべてのメンバーを明示的に初期化する必要があります。それをしない場合、1 つまたは複数のメンバーが未割り当てのままとなり、構造体を使用できず、コンパイラ エラー CS0171 が出ます。  
   

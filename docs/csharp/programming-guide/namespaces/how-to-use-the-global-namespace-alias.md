@@ -7,12 +7,12 @@ helpviewer_keywords:
 - namespaces [C#], global namespace qualifier
 - global namespace [C#]
 ms.assetid: 98a1d89b-3c5a-44f7-8400-c4a3c0ec22a9
-ms.openlocfilehash: f44bb1f010f154973fc6982882c9b5a09528da76
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: b163981d3cf6d56ab953757931b0b386a47263ff
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629449"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796283"
 ---
 # <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>方法: グローバル名前空間エイリアスを使用する (C# プログラミング ガイド)
 グローバル[名前空間](../../../csharp/language-reference/keywords/namespace.md)のメンバーにアクセスできると、そのメンバーが同名の別のエンティティによって隠される可能性がある場合に役立ちます。  
@@ -37,15 +37,6 @@ ms.locfileid: "68629449"
   
  当然ながら、`System` という名前の独自の名前空間を作成することはお勧めしません。そのようなコードに遭遇することはほとんどありません。 ただし、大型のプロジェクトでは、フォームによっては名前空間の重複が実際に発生する可能性があります。 そのような場合は、グローバル名前空間修飾子によって、ルート名前空間を指定できます。  
   
-## <a name="example"></a>例  
- 次の例では、`System` 名前空間を使用して `TestClass` クラスを格納しています。そのため、`System` クラスによって隠されている `System.Console` クラスを参照するのに `global::System.Console` を使用する必要があります。 また、`System.Collections` 名前空間を参照するのに `colAlias` エイリアスを使用するため、名前空間の代わりにこのエイリアスを使用して <xref:System.Collections.Hashtable?displayProperty=nameWithType> のインスタンスを作成しています。  
-  
- [!code-csharp[csProgGuideNamespaces#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#5)]  
-  
-**A 1**
-**B 2**
-**C 3**
-
 ## <a name="see-also"></a>関連項目
 
 - [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)

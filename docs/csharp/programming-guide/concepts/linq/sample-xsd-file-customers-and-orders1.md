@@ -1,13 +1,13 @@
 ---
-title: サンプル XSD ファイル:顧客と注文1
+title: サンプル XSD ファイル:顧客と注文
 ms.date: 07/20/2015
 ms.assetid: ef9911a3-7ac4-44fd-b36e-a0c0ad0a157d
-ms.openlocfilehash: 59b5d116d1e89267ba36066e2de644dee0bf514c
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 56ebc33b0c0be3204029a49123bd56fe8da18d03
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487213"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868678"
 ---
 # <a name="sample-xsd-file-customers-and-orders"></a>サンプル XSD ファイル:顧客と注文
 次の XSD ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。 このファイルには、「サンプル XML ファイル[: 顧客と注文 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)」のスキーマ定義が含まれています。 このスキーマは、XSD の `xs:key` 機能と `xs:keyref` 機能を使用して、`CustomerID` 要素の `Customer` 属性がキーであることを確立し、各 `CustomerID` 要素の `Order` 要素と各 `CustomerID` 要素の `Customer` 属性の間にリレーションシップを確立します。  

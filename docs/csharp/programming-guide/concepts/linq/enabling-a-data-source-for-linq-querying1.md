@@ -1,13 +1,13 @@
 ---
-title: データ ソースの LINQ クエリの有効化1
+title: データ ソースの LINQ クエリの有効化
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-ms.openlocfilehash: 4d7922c5dbe4f6185777dba4f33662eb2e4aee61
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 54175195be69f743e57967338b252025f9f1f4ff
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64597157"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868876"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>データ ソースの LINQ クエリの有効化
 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] を拡張して、データ ソースを [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] パターンでクエリできるようにする方法はいくつかあります。 データ ソースは、いくつか例を挙げると、データ構造体、Web サービス、ファイル システム、またはデータベースの場合があります。 クエリの構文とパターンは変わらないため、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] パターンを使用すると、クライアントは [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリが有効になっているデータ ソースを簡単にクエリできます。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] は、次の方法によってこれらのデータ ソースに拡張することができます。  

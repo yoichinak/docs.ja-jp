@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9f911f3a2783ec538ef628e10d5c1a4f9b06d0f
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 4c0dea7950f86da3d812783abd00d69e5bc38198
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469478"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796884"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>方法: イベント プロパティを使用して複数のイベントを処理する
 イベント プロパティを使用するには、イベントを発生させるクラスにイベント プロパティを定義し、そのイベントを処理するクラスにイベント プロパティのデリゲートを設定します。 1 つのクラスにイベント プロパティを複数実装するには、そのクラス内部に、各イベント用に定義されたデリゲートを格納および保持する必要があります。 通常は、イベント キーをインデックスとするデリゲート コレクションを実装することによってこれを実現します。  
@@ -43,9 +43,6 @@ ms.locfileid: "65469478"
 ## <a name="example"></a>例  
  各イベントのデリゲートを格納するために `MouseDown` を使用して、`MouseUp` イベント プロパティおよび <xref:System.ComponentModel.EventHandlerList> イベント プロパティを実装する C# コードの例を次に示します。 イベント プロパティ コンストラクトのキーワードは、太字で示されています。  
   
-> [!NOTE]
->  イベント プロパティは Visual Basic ではサポートされていません。  
-  
  [!code-cpp[Conceptual.Events.Other#31](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.events.other/cpp/example3.cpp#31)]
  [!code-csharp[Conceptual.Events.Other#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.events.other/cs/example3.cs#31)]
  [!code-vb[Conceptual.Events.Other#31](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.events.other/vb/example3.vb#31)]  
@@ -54,5 +51,5 @@ ms.locfileid: "65469478"
 
 - <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>
 - [イベント](../../../docs/standard/events/index.md)
-- <xref:System.Web.UI.Control.Events%2A>
+- <xref:System.Web.UI.Control.Events%2A?displayProperty=nameWithType>
 - [方法: カスタム イベントを宣言してメモリを節約する](~/docs/visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)

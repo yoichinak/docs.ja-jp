@@ -6,24 +6,25 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 06/14/2019
-ms.openlocfilehash: b1dd243d754bfc3b682c084820547f6b7846f0ea
-ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
+ms.date: 07/25/2019
+ms.openlocfilehash: 29e62f01ab6a749c252aa488dfbccd5b27cb9dba
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484656"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733370"
 ---
-# <a name="whats-new-in-net-core-30-preview-6"></a>.NET Core 3.0 (Preview 6) の新機能
+# <a name="whats-new-in-net-core-30-preview-7"></a>.NET Core 3.0 (Preview 7) の新機能
 
-この記事では、.NET Core 3.0 (Preview 6 まで) の新機能について説明します。 最も大きな強化点の 1 つは、Windows デスクトップ アプリケーションのサポートです (Windows のみ)。 .NET Core 3.0 SDK コンポーネントの Windows デスクトップを使用して、Windows フォームおよび Windows Presentation Foundation (WPF) アプリケーションを移植することができます。 誤解のないように言うと、Windows Desktop コンポーネントは Windows でのみサポートされており、Windows にのみ含まれています。 詳細については、この記事で後述する「[Windows デスクトップ](#windows-desktop)」を参照してください。
+この記事では、.NET Core 3.0 (Preview 7 まで) の新機能について説明します。 最も大きな強化点の 1 つは、Windows デスクトップ アプリケーションのサポートです (Windows のみ)。 .NET Core 3.0 SDK コンポーネントの Windows デスクトップを使用して、Windows フォームおよび Windows Presentation Foundation (WPF) アプリケーションを移植することができます。 誤解のないように言うと、Windows Desktop コンポーネントは Windows でのみサポートされており、Windows にのみ含まれています。 詳細については、この記事で後述する「[Windows デスクトップ](#windows-desktop)」を参照してください。
 
 .NET Core 3.0 では C# 8.0 のサポートが追加されています。 [最新リリースの Visual Studio Preview](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview) または OmniSharp 拡張機能を含む Visual Studio Code を使用することを強くお勧めします。
 
-[.NET Core 3.0 Preview 6 を今すぐダウンロード](https://aka.ms/netcore3download)して Windows、Mac、Linux 上で使い始めましょう。
+[.NET Core 3.0 Preview 7 を今すぐダウンロード](https://aka.ms/netcore3download)して Windows、Mac、Linux 上で使い始めましょう。
 
 各プレビュー リリースの詳細については、次の発表を参照してください。
 
+- [.NET Core 3.0 Preview 7 の発表](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)
 - [.NET Core 3.0 Preview 6 の発表](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-6/)
 - [.NET Core 3.0 Preview 5 の発表](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-5/)
 - [.NET Core 3.0 Preview 4 の発表](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-4/)
@@ -31,9 +32,13 @@ ms.locfileid: "68484656"
 - [.NET Core 3.0 Preview 2 の発表](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-2/)
 - [.NET Core 3.0 Preview 1 の発表](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
 
+## <a name="production-supported-preview"></a>運用環境でサポートされているプレビュー
+
+.NET Core Preview 7 は、Microsoft による運用の準備ができていると見なされており、完全にサポートされています。 Preview 7 以降、リリースでは、新機能を追加するのではなく、.NET Core 3.0 を洗練させることに焦点を当てています。 Preview 7 で変更された内容の詳細については、[Preview 7 の発表](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)に関する記事を参照してください。
+
 ## <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows インストーラー
 
-Windows 用の MSI インストーラーは、.NET Core 3.0 から変更されました。 SDK インストーラーは、SDK 機能帯リリースのアップグレードを実行するようになります。 機能帯は、バージョン番号の "*パッチ*" セクションの *100* 番台のグループで定義されます。 たとえば、**3.0._101_** と **3.0._201_** は 2 つの異なる機能帯のバージョンですが、**3.0._101_** と **3.0._199_** は同じ機能帯に含まれます。 また、.NET Core SDK **3.0._101_** をインストールすると、.NET Core SDK **3.0._100_** が存在する場合はマシンから削除されます。 同じマシンに .NET Core SDK **3.0._200_** をインストールすると、.NET Core SDK **3.0._101_** は削除されません。
+Windows 用の MSI インストーラーは、.NET Core 3.0 から変更されました。 SDK インストーラーは、SDK 機能帯リリースのアップグレードを実行するようになります。 機能帯は、バージョン番号の "*パッチ*" セクションの *100* 番台のグループで定義されます。 たとえば、**3.0. _** と **3.0. _** は 2 つの異なる機能帯のバージョンですが、**3.0. _** と **3.0. _** は同じ機能帯に含まれます。 また、.NET Core SDK **3.0. _** をインストールすると、.NET Core SDK **3.0. _** が存在する場合はマシンから削除されます。 同じマシンに .NET Core SDK **3.0. _** をインストールすると、.NET Core SDK **3.0. _** は削除されません。
 
 バージョン管理の詳細については、「[.NET Core をバージョン管理する方法の概要](../versions/index.md)」を参照してください。
 
@@ -174,23 +179,23 @@ TC を完全に無効にするには、プロジェクト ファイルでこの�
 
 アプリケーション アセンブリを ReadyToRun (R2R) 形式としてコンパイルすることで、.NET Core アプリケーションの起動時間を向上させることができます。 R2R とは、Ahead-Of-Time (AOT) コンパイルの一種です。
 
-R2R バイナリでは、アプリケーションの読み込み時に Just-In-Time (JIT) コンパイラで行う必要がある作業量を減らすことにより、起動時のパフォーマンスが向上します。 バイナリには、JIT で生成されるものと似たネイティブ コードが含まれます。
+R2R バイナリでは、アプリケーションの読み込み時に Just-In-Time (JIT) コンパイラで行う必要がある作業量を減らすことにより、起動時のパフォーマンスが向上します。 バイナリには、JIT で生成されるものと似たネイティブ コードが含まれます。 ただし、R2R バイナリは、中間言語 (IL) コード (一部のシナリオでまだ必要です) と同じコードのネイティブ バージョンの両方が含まれるため、大きくなります。 R2R は、Linux x64 や Windows x64 などの特定のランタイム環境 (RID) をターゲットとする自己完結型アプリを発行するときにのみ使用できます。
 
-R2R バイナリは、中間言語 (IL) コード (一部のシナリオでまだ必要です) と同じコードのネイティブ バージョンの両方が含まれるため、大きくなります。 R2R は、Linux x64 や Windows x64 などの特定のランタイム環境 (RID) をターゲットとする自己完結型アプリを発行するときにのみ使用できます。
+ReadyToRun としてプロジェクトをコンパイルするには、次の手順を行います。
 
-アプリを R2R としてコンパイルするには、`<PublishReadyToRun>` の設定を追加します。
+01. `<PublishReadyToRun>` 設定をプロジェクトに追加します。
 
-```xml
-<PropertyGroup>
-  <PublishReadyToRun>true</PublishReadyToRun>
-</PropertyGroup>
-```
+    ```xml
+    <PropertyGroup>
+      <PublishReadyToRun>true</PublishReadyToRun>
+    </PropertyGroup>
+    ```
 
-自己完結型アプリを発行します。 たとえば、次のコマンドでは、Windows の 64 ビット版向けの自己完結型アプリが作成されます。
+01. 自己完結型アプリを発行します。 たとえば、次のコマンドでは、Windows の 64 ビット版向けの自己完結型アプリが作成されます。
 
-```console
-dotnet publish -c Release -r win-x64 --self-contained true
-```
+    ```console
+    dotnet publish -c Release -r win-x64 --self-contained true
+    ```
 
 ### <a name="cross-platformarchitecture-restrictions"></a>クロス プラットフォーム/アーキテクチャの制限
 
@@ -406,7 +411,7 @@ Visual Studio Code で作成された [**launch.json**](https://github.com/dotne
 
 ### <a name="jsonserializer"></a>JsonSerializer
 
-<xref:System.Text.Json.Serialization.JsonSerializer?displayProperty=nameWithType> は <xref:System.Text.Json.Utf8JsonReader> と <xref:System.Text.Json.Utf8JsonWriter> に基づいて構築されており、JSON ドキュメントとフラグメントを使用するときに高速で低メモリのシリアル化オプションを提供します。
+<xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType> は <xref:System.Text.Json.Utf8JsonReader> と <xref:System.Text.Json.Utf8JsonWriter> に基づいて構築されており、JSON ドキュメントとフラグメントを使用するときに高速で低メモリのシリアル化オプションを提供します。
 
 確認: この記事への移植例については https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/docs/SerializerProgrammingModel.md
 

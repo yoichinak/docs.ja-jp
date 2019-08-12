@@ -2,12 +2,12 @@
 title: マイクロサービスを基にしている複合 UI を作成する
 description: マイクロサービス アーキテクチャは、バックエンド専用ではありません。 フロントエンドで使用してピーク ビューを取得します。
 ms.date: 09/20/2018
-ms.openlocfilehash: 55cb2a8096cc8122c94cae50af4384e9392868cf
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0d1825d6183b79a0e10f70fc6cfee6ca79a837d8
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672999"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817833"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>マイクロサービスを基にしている複合 UI を作成する
 
@@ -43,7 +43,7 @@ ms.locfileid: "68672999"
   <https://github.com/Particular/Workshop/tree/master/demos/asp-net-core>
 
 - **Ruben Oostinga。マイクロサービス アーキテクチャでのモノリシック フロントエンド** \
-  <https://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/>
+  <https://xebia.com/blog/the-monolithic-frontend-in-the-microservices-architecture/>
 
 - **Mauro Servienti。優れた UI コンポジションの秘密** \
   <https://particular.net/blog/secret-of-better-ui-composition>

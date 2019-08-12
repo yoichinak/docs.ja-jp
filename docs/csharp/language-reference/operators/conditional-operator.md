@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 2717505a0a09b9ac1c6ad43153c52771c13f7b5c
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 923591634599a6bbac74d43b105f4e46b492fa1a
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025204"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796467"
 ---
 # <a name="-operator-c-reference"></a>?: 演算子 (C# リファレンス)
 
@@ -72,7 +72,7 @@ ref 条件演算子の使用例を次に示します。
 
 [!code-csharp-interactive[conditional ref](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#ConditionalRef)]
 
-詳細については、[機能提案メモ](../../../../_csharplang/proposals/csharp-7.2/conditional-ref.md)を参照してください。
+詳細については、[機能提案メモ](~/_csharplang/proposals/csharp-7.2/conditional-ref.md)を参照してください。
 
 ## <a name="conditional-operator-and-an-ifelse-statement"></a>条件演算子と `if..else` ステートメント
 

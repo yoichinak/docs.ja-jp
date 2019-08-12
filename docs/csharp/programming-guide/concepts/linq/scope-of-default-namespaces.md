@@ -1,13 +1,13 @@
 ---
-title: C# での既定の名前空間のスコープ 1
+title: C# での既定の名前空間のスコープ
 ms.date: 07/20/2015
 ms.assetid: fe826236-830f-457a-9027-7ad62c909fae
-ms.openlocfilehash: 29d7da9638f1c551894937a179abfa923b538252
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 0c5f5cccda6ba6a75a8631ed095921b90b02916b
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709984"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868871"
 ---
 # <a name="scope-of-default-namespaces-in-c"></a>C\# での既定の名前空間のスコープ
 XML ツリーで表される既定の名前空間は、クエリのスコープ内にありません。 既定の名前空間に含まれる XML が存在する場合は、<xref:System.Xml.Linq.XNamespace> 変数を宣言し、この変数をローカル名と組み合わせて作成した修飾名をクエリで使用する必要があります。  

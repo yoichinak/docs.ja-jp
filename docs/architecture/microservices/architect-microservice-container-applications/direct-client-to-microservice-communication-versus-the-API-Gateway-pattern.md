@@ -2,12 +2,12 @@
 title: API ゲートウェイ パターンと、クライアントからマイクロサービスへの直接通信との比較
 description: API ゲートウェイ パターンと、クライアントからマイクロサービスへの直接通信との相違点およびそれぞれの用途について説明します。
 ms.date: 01/07/2019
-ms.openlocfilehash: 4b169d5a9542b10726a36b65328bc6a3dc3839ef
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9ebd544bdc137a68f03d1ab38cf23bf0d02c420c
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673169"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892232"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API ゲートウェイ パターンと、クライアントからマイクロサービスへの直接通信との比較
 
@@ -128,7 +128,7 @@ API ゲートウェイ製品の実装によっては、さらに幅広い横断�
 
 [Azure API Management](https://azure.microsoft.com/services/api-management/) (図 4-14 を参照) では、API ゲートウェイのニーズを解決するだけでなく、API からの分析情報の収集などの機能も提供されます。 API 管理ソリューションを使用している場合、API ゲートウェイはその完全な API 管理ソリューション内の単なるコンポーネントです。
 
-![Azure API Management では、ログ記録、セキュリティ、使用状況測定など、API ゲートウェイおよび管理の両方のニーズが解決されます。](./media/image14.png)
+![Azure API Management では、ログ記録、セキュリティ、使用状況測定など、API ゲートウェイおよび管理の両方のニーズが解決されます。](./media/api-gateway-azure-api-management.png)
 
 **図 4-14**. API ゲートウェイでの Azure API Management の使用
 
