@@ -16,7 +16,7 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "61705065"
 ---
 # <a name="ipv6-element-network-settings"></a>\<ipv6> 要素 (ネットワーク設定)
-により、インターネット プロトコル バージョン 6 (IPv6) の廃止されたメンバーからの応答、<xref:System.Net.Dns>クラス。  
+<xref:System.Net.Dns> クラスの廃止されたメンバーからインターネット プロトコル バージョン 6 (IPv6) 応答を有効にします。  
   
  \<configuration>  
 \<system.net>  
