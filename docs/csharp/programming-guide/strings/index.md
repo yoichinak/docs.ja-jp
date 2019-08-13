@@ -7,10 +7,10 @@ helpviewer_keywords:
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
 ms.openlocfilehash: 21ada083f69b0acf49490b331c5a416361a2ee84
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 08/12/2019
 ms.locfileid: "67802311"
 ---
 # <a name="strings-c-programming-guide"></a>文字列 (C# プログラミング ガイド)

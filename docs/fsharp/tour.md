@@ -17,7 +17,7 @@ F# について学習する最善の方法は、F# コードを読み書きす�
 
 ## <a name="executing-the-code-online"></a>コードをオンラインで実行する
 
-コンピューターに F# がインストールされていない場合は、[WebAssembly におけるF# の使用](https://tryfsharp.fsbolero.io/) をブラウザーですべてのサンプルを実行します。 Fable は、ブラウザーで直接実行されるF# の言語です。 REPL の後に続くサンプルを確認するには、Fable REPL の左側のメニューバーにある ** サンプル**> **学習 **> **F＃のツアー** を参照してください。
+コンピューターに F# がインストールされていない場合は、[WebAssembly におけるF# の使用](https://tryfsharp.fsbolero.io/) をブラウザーですべてのサンプルを実行します。 Fable は、ブラウザーで直接実行されるF# の言語です。 REPL の後に続くサンプルを確認するには、Fable REPL の左側のメニューバーにある  **サンプル> 学習 > F＃のツアー** を参照してください。
 
 ## <a name="functions-and-modules"></a>関数とモジュール
 
