@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 924553bf457a6668143785c78871ebac6e01efa4
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 16a0436accfb031ddd0bb413e519d80e550786b4
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68818030"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972270"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>WPF アプリケーションの配置 (WPF)
 Windows Presentation Foundation (WPF) アプリケーションを構築した後は、アプリケーションを配置する必要があります。 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].NET Framework には、いくつかの展開テクノロジが含まれています。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションの配置に使用される配置テクノロジは、アプリケーションの種類によって決まります。 このトピックでは、それぞれの配置テクノロジの概要と使用法を、それぞれの [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションの種類の配置要件に関連して説明します。  
@@ -114,7 +114,7 @@ Windows Presentation Foundation (WPF) アプリケーションを構築した後
 ## <a name="installing-the-net-framework"></a>.NET Framework のインストール  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アプリケーションを実行するには、クライアントに Microsoft .NET Framework がインストールされている必要があります。 Internet Explorer は、ブラウザーでホストされるアプリケーションを[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]表示するときに、クライアントが .NET Framework と共にインストールされるかどうかを自動的に検出します。 .NET Framework がインストールされていない場合、Internet Explorer はユーザーにインストールを促すメッセージを表示します。  
   
- .NET Framework がインストールされているかどうかを検出するために、Internet Explorer には[!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] 、次の拡張子を持つコンテンツファイルのフォールバックハンドラーとして登録されたブートストラップアプリケーションが含まれています: .xaml、.xps、xbap、およびアプリケーション。 これらのファイルの種類に移動したときに、.NET Framework がクライアントにインストールされていない場合、ブートストラップアプリケーションは、インストールするためのアクセス許可を要求します。 アクセス許可が指定されていない場合は、.NET Framework もアプリケーションもインストールされません。  
+ .NET Framework がインストールされているかどうかを検出するために、Internet Explorer には、次の拡張子を持つコンテンツファイルのフォールバック Multipurpose Internet Mail Extensions (MIME) ハンドラーとして登録されたブートストラップアプリケーションが含まれています。 .xaml、.xps、xbap、、および. アプリケーション。 これらのファイルの種類に移動したときに、.NET Framework がクライアントにインストールされていない場合、ブートストラップアプリケーションは、インストールするためのアクセス許可を要求します。 アクセス許可が指定されていない場合は、.NET Framework もアプリケーションもインストールされません。  
   
  アクセス許可が付与されている場合、Internet Explorer は Microsoft バックグラウンドインテリジェント転送サービス (BITS) を使用して .NET Framework をダウンロードしてインストールします。 .NET Framework が正常にインストールされると、最初に要求されたファイルが新しいブラウザーウィンドウで開かれます。  
   

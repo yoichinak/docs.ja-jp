@@ -3,22 +3,22 @@ title: '方法: フォームベースの認証を使用するクレーム対応 
 ms.date: 03/30/2017
 ms.assetid: 98a3e029-1a9b-4e0c-b5d0-29d3f23f5b15
 author: BrucePerlerMS
-ms.openlocfilehash: ecaf1de0b806d5568d81fac2ddb2b39b697135ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 75db96a621d7863ef445efb24814111b34da6960
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792751"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971833"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a>方法: フォームベースの認証を使用するクレーム対応 ASP.NET アプリケーションをビルドする
 
-## <a name="applies-to"></a>対象
+## <a name="applies-to"></a>適用対象
 
 - Microsoft® Windows® Identity Foundation (WIF)
 
 - ASP.NET® Web フォーム
 
-## <a name="summary"></a>まとめ
+## <a name="summary"></a>Summary
 
 この操作方法では、フォーム認証を使用する簡単なクレーム対応 ASP.NET Web フォーム アプリケーションを作成するための詳細な手順を示します。 また、フォーム認証を使用してユーザーがサインインするときにクレームが表示されることを確認するために、アプリケーションをテストする方法についても説明します。
 
@@ -60,19 +60,19 @@ ms.locfileid: "61792751"
 
 この手順では、新しい ASP.NET Web フォーム アプリケーションを作成します。
 
-#### <a name="to-create-a-simple-aspnet-application"></a>簡単な ASP.NET アプリケーションを作成するには
+### <a name="to-create-a-simple-aspnet-application"></a>簡単な ASP.NET アプリケーションを作成するには
 
-1. Visual Studio を起動し、**[ファイル]**、**[新規作成]**、**[プロジェクト]** の順にクリックします。
+1. Visual Studio を起動し、 **[ファイル]** 、 **[新規作成]** 、 **[プロジェクト]** の順にクリックします。
 
-2. **[新しいプロジェクト]** ウィンドウで、**[ASP.NET Web フォーム アプリケーション]** をクリックします。
+2. **[新しいプロジェクト]** ウィンドウで、 **[ASP.NET Web フォーム アプリケーション]** をクリックします。
 
-3. **[名前]** で、「`TestApp`」と入力し、**[OK]** をクリックします。
+3. **[名前]** で、「`TestApp`」と入力し、 **[OK]** をクリックします。
 
 ## <a name="step-2--configure-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>手順 2 – フォーム認証を使用してクレーム用の ASP.NET Web フォーム アプリケーションを構成する
 
 この手順では、構成エントリを *Web.config* 構成ファイルに追加し、アカウントのクレーム情報を表示するように *Default.aspx* ファイルを編集します。
 
-#### <a name="to-configure-aspnet-application-for-claims-using-forms-authentication"></a>フォーム認証を使用してクレーム用の ASP.NET アプリケーションを構成するには
+### <a name="to-configure-aspnet-application-for-claims-using-forms-authentication"></a>フォーム認証を使用してクレーム用の ASP.NET アプリケーションを構成するには
 
 1. *Default.aspx* ファイルの既存のマークアップを次のように置き換えます。
 
@@ -126,10 +126,10 @@ ms.locfileid: "61792751"
 
 この手順では、ASP.NET Web フォーム アプリケーションをテストし、ユーザーがフォーム認証を使用してサインインするときに、クレームが表示されることを確認します。
 
-#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>フォーム認証を使用してクレーム用の ASP.NET Web フォーム アプリケーションをテストするには
+### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>フォーム認証を使用してクレーム用の ASP.NET Web フォーム アプリケーションをテストするには
 
-1. **F5** キーを押してアプリケーションをビルドし、実行します。 ページの右上には、**[登録]** と **[ログイン]** のリンクが表示される *Default.aspx* が表示されます。 **[登録]** をクリックします。
+1. **F5** キーを押してアプリケーションをビルドし、実行します。 ページの右上には、 **[登録]** と **[ログイン]** のリンクが表示される *Default.aspx* が表示されます。 **[登録]** をクリックします。
 
-2. **[登録]** ページで、ユーザーアカウントを作成し、**[登録]** をクリックします。 フォーム認証を使用してアカウントが作成され、自動的にサインインされます。
+2. **[登録]** ページで、ユーザーアカウントを作成し、 **[登録]** をクリックします。 フォーム認証を使用してアカウントが作成され、自動的にサインインされます。
 
 3. ホーム ページにリダイレクトされたら、**Your Claims** 見出しの下の表に、アカウントに関する **Issuer**、**OriginalIssuer**、**Type**、**Value**、および **ValueType** 要求情報が表示されます。

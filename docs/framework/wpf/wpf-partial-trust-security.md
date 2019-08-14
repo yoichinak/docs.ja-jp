@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: 34beee309f080c53ecb16436beb0c4c6be7733e5
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 683d0a28fa151cf2116b4125dfb7a604605c7c4a
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796791"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972243"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF 部分信頼セキュリティ
 <a name="introduction"></a>一般に、インターネットアプリケーションは、重要なシステムリソースへの直接アクセスを制限して、悪意のある損害を防ぐ必要があります。 既定では、HTML およびクライアント側のスクリプト言語は、重要なシステムリソースにアクセスできません。 Windows Presentation Foundation (WPF) ブラウザーでホストされるアプリケーションは、ブラウザーから起動できるため、同様の制限のセットに準拠している必要があります。 これらの制限を適用[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]するために、はコードアクセスセキュリティ (CAS) と ClickOnce の両方に依存しています (「 [WPF のセキュリティ方針-プラットフォームセキュリティ](wpf-security-strategy-platform-security.md)」を参照してください)。 既定では、ブラウザーでホストされるアプリケーションは、インターネット、ローカルイントラネット、またはローカルコンピューターのどちらから起動するかに関係なく、インターネットゾーンの CA のアクセス許可セットを要求します。 すべてのアクセス許可のセットよりも少ないアプリケーションで実行されるアプリケーションは、部分信頼で実行されていると言います。  
@@ -50,7 +50,7 @@ ms.locfileid: "68796791"
 |編集|スペルチェック<br /><br /> RichTextBox<br /><br /> プレーンテキストとインククリップボードのサポート<br /><br /> ユーザーが開始した貼り付け<br /><br /> 選択したコンテンツのコピー|  
 |コントロール|一般的なコントロール|  
   
- この表では[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 、これらの機能について大まかに説明します。 詳細については[!INCLUDE[TLA#tla_lhsdk](../../../includes/tlasharptla-lhsdk-md.md)] 、「」 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]を参照してください。 また、次の機能には、特別な考慮事項など、部分的な信頼の実行に関する詳細情報が含まれています。  
+ この表では[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 、これらの機能について大まかに説明します。 詳細については、Windows ソフトウェア開発キット (SDK) によって、の[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]各メンバーが必要とするアクセス許可がドキュメントに記載されています。 また、次の機能には、特別な考慮事項など、部分的な信頼の実行に関する詳細情報が含まれています。  
   
 - [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)](「 [XAML の概要 (WPF)](./advanced/xaml-overview-wpf.md)」を参照してください)。  
   

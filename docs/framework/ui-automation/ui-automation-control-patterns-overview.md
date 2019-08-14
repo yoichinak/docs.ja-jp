@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 6e2b5eaff3ee80434d5cdf39391273685da9faf0
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 259594858e96897cb377cde4104e17b748f902c4
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68434072"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971810"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI オートメーション コントロール パターンの概要
 > [!NOTE]
@@ -70,7 +70,7 @@ ms.locfileid: "68434072"
 |<xref:System.Windows.Automation.TogglePattern>|<xref:System.Windows.Automation.Provider.IToggleProvider>|状態を切り替えることができるコントロールに使用されます。 たとえば、チェック ボックスやチェック可能なメニュー項目。|  
 |<xref:System.Windows.Automation.TransformPattern>|<xref:System.Windows.Automation.Provider.ITransformProvider>|サイズ変更、移動、または回転を行えるコントロールに使用されます。 Transform コントロール パターンの一般的な用途は、デザイナー、フォーム、グラフィカル エディター、および描画アプリケーションでの使用です。|  
 |<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.Provider.IValueProvider>|クライアントで、値の範囲をサポートしないコントロールで値を取得したり、設定したりできます。 たとえば、日時指定のピッカーなどがあります。|  
-|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|[!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] オペレーティング システムの基本概念であるウィンドウに固有の情報を公開します。 ウィンドウのコントロールの例として、最上位のアプリケーション ウィンドウ ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]や [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]など)、 [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)] 子ウィンドウ、ダイアログがあります。|  
+|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|[!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] オペレーティング システムの基本概念であるウィンドウに固有の情報を公開します。 ウィンドウであるコントロールの例としては、トップレベル[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]アプリケーション[!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]ウィンドウ (、など)、マルチドキュメントインターフェイス (MDI) 子ウィンドウ、およびダイアログがあります。|  
   
 ## <a name="see-also"></a>関連項目
 
