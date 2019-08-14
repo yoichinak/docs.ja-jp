@@ -57,11 +57,11 @@ Yield expression
  反復子関数では、匿名関数を指定できます。 詳細については、「 [反復子](../../programming-guide/concepts/iterators.md)」を参照してください。  
   
 ## <a name="exception-handling"></a>例外処理  
- A`Yield`内でステートメントを使用できます、`Try`のブロックを[お試しください.キャッチしてください.Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)します。 A`Try`を持つブロックを`Yield`ステートメントを持つことができます`Catch`ブロック、および、持つことができます、`Finally`ブロックします。  
+ `Yield`内でステートメントを使用できます、`Try`のブロックを[お試しください.キャッチしてください.Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)します。 `Try`を持つブロックを`Yield`ステートメントを持つことができます`Catch`ブロック、および、持つことができます、`Finally`ブロックします。  
   
- A`Yield`内でステートメントを使用できない、`Catch`ブロックまたは`Finally`ブロックします。  
+ `Yield`内でステートメントを使用できない、`Catch`ブロックまたは`Finally`ブロックします。  
   
- 場合、`For Each`本体 (関数の外側で、反復子)、例外がスロー、`Catch`反復子関数のブロックは実行されませんが、`Finally`反復子関数でのブロックが実行されます。 A`Catch`反復子関数の内側のブロックは、反復子関数内で発生する例外のみをキャッチします。  
+ 場合、`For Each`本体 (関数の外側で、反復子)、例外がスロー、`Catch`反復子関数のブロックは実行されませんが、`Finally`反復子関数でのブロックが実行されます。 `Catch`反復子関数の内側のブロックは、反復子関数内で発生する例外のみをキャッチします。  
   
 ## <a name="technical-implementation"></a>技術的な実装  
  次のコードを返します、`IEnumerable (Of String)`を反復子関数からの要素を反復処理し、`IEnumerable (Of String)`します。  
