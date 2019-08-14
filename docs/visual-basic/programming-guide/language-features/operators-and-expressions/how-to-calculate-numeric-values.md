@@ -1,5 +1,5 @@
 ---
-title: '方法: 数値 (Visual Basic) を計算します。'
+title: '方法: 数値を計算する (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operator precedence
@@ -18,8 +18,8 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64649728"
 ---
-# <a name="how-to-calculate-numeric-values-visual-basic"></a>方法: 数値 (Visual Basic) を計算します。
-数値式を使用して数値を計算することができます。 A*数値式*リテラル、定数、および数値の値を表す変数を含む式とそれらの値に対して作用する演算子です。  
+# <a name="how-to-calculate-numeric-values-visual-basic"></a>方法: 数値を計算する (Visual Basic)
+数値式を使用して数値を計算することができます。 *数値式*リテラル、定数、および数値の値を表す変数を含む式とそれらの値に対して作用する演算子です。  
   
 ## <a name="calculating-numeric-values"></a>数値の計算  
   
