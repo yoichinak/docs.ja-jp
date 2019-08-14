@@ -6,12 +6,12 @@ title: .NET ドキュメント
 description: .NET で、C#、Visual Basic、および F# を使用して任意のプラットフォームでさまざまなアプリケーションを作成する方法を説明します。 API リファレンス、サンプル コード、チュートリアルなどを参照します。
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: 7cf46b0c4d88b7657a5c82c7aa0ae30655c9d5ce
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a6f6bc91a3055ffd0efe9f6b89ba0499921ed1d4
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589986"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972388"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -80,7 +80,7 @@ ms.locfileid: "65589986"
                 <a data-default="true" href="#docs">ドキュメント</a>
                 <ul id="docs">
                     <li>
-                        <a href="#getstarted">開始するには</a>
+                        <a href="#getstarted">概要</a>
                         <ul id="getstarted" class="cardsF">
                             <li>
                                 <div class="cardSize">
@@ -309,7 +309,7 @@ ms.locfileid: "65589986"
                                 </a>
                             </li>
                             <li>
-                                <a href="/aspnet/overview">
+                                <a href="/aspnet/core/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -319,8 +319,8 @@ ms.locfileid: "65589986"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>ASP.NET とは何ですか?</h3>
-                                                    <p>ASP.NET Web アプリケーションを構築する方法を説明します。</p>
+                                                    <h3>ASP.NET Core とは何ですか?</h3>
+                                                    <p>ASP.NET Core Web アプリケーションを構築する方法を説明します。</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -682,7 +682,7 @@ ms.locfileid: "65589986"
                         </ul>
                     </li>
                     <li>
-                        <a href="#ml-ai">Machine Learning と AI</a>
+                        <a href="#ml-ai">機械学習と AI</a>
                         <ul id="ml-ai" class="cardsC">
                             <li>
                                 <a href="/dotnet/machine-learning">

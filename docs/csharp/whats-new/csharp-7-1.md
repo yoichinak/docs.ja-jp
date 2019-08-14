@@ -2,12 +2,12 @@
 title: C# 7.1 の新機能
 description: C# 7.1 の新機能の概要。
 ms.date: 04/09/2019
-ms.openlocfilehash: a95111b6f217a2ca5c520c2d4d70efa0e23742f9
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 18306da709ea30f03f6c42b4a917e9b39695eb16
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347620"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796598"
 ---
 # <a name="whats-new-in-c-71"></a>C# 7.1 の新機能
 
@@ -86,9 +86,7 @@ Func<string, bool> whereClause = default(Func<string, bool>);
 Func<string, bool> whereClause = default;
 ```
 
-この拡張の詳細は、C# プログラミング ガイドの[既定の値式](../programming-guide/statements-expressions-operators/default-value-expressions.md)に関する記事にあります。
-
-この拡張では、[既定のキーワード](../language-reference/keywords/default.md)の解析ルールも一部変更されています。
+詳しくは、「[default 演算子](../language-reference/operators/default.md)」記事の「[default リテラル](../language-reference/operators/default.md#default-literal)」セクションをご覧ください。
 
 ## <a name="inferred-tuple-element-names"></a>推論されたタプル要素の名前
 
