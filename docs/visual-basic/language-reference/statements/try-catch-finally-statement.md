@@ -155,9 +155,9 @@ A`Finally`ブロックは、例外がある場合でも実行する必要があ�
 
 ## <a name="examples"></a>使用例
 
-### <a name="the-structure-of-trycatchfinally"></a>Try の構造をしています.キャッチしてください.最終的に
+### <a name="the-structure-of-trycatchfinally"></a>Try...Catch...Finallyの構造
 
-次の例の構造を示しています、`Try...Catch...Finally`ステートメント。
+次の例は`Try...Catch...Finally`ステートメントの構造を示しています。
 
 [!code-vb[VbVbalrStatements#86](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#86)]  
 
