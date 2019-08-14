@@ -85,7 +85,7 @@ Next [ counter ]
   
  内で他のさまざまな種類の制御構造を入れ子にすることもできます。 詳細については、次を参照してください。[制御構造の入れ子になった](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)します。  
   
-## <a name="exit-for-and-continue-for"></a>終了しの続行  
+## <a name="exit-for-and-continue-for"></a>Exit For と Continue For  
  `Exit For`ステートメントがすぐに終了させる、 `For`.`Next` これに続くステートメントにループと転送の制御、`Next`ステートメント。  
   
  `Continue For`ステートメント コントロールに直ちに移します、ループの次の反復処理します。 詳細については、次を参照してください。 [Continue ステートメント](../../../visual-basic/language-reference/statements/continue-statement.md)します。  

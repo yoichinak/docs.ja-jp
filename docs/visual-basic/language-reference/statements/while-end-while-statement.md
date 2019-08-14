@@ -53,7 +53,7 @@ End While
   
  `condition`が 2 つの値の比較からの結果に評価される任意の式は、通常、[Boolean データ型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)値 (`True`または`False`)。 この式は、数値型に変換されているなどの別のデータ型の値を含めることができます`Boolean`します。  
   
- 入れ子にすることができます`While`内に別の 1 つのループを配置することでループします。 さまざまな種類の制御構造を入れ子にすることもできます。 詳細については、次を参照してください。[入れ子になった制御構造](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)します。  
+ 入れ子にすることができます`While`内に別の 1 つのループを配置することでループします。 さまざまな種類の制御構造を入れ子にすることもできます。 詳細については、次を参照してください。[制御構造の入れ子になった](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)します。  
   
 ## <a name="exit-while"></a>Exit While  
  [Exit While](../../../visual-basic/language-reference/statements/exit-statement.md)ステートメントが終了する別の方法を提供する`While`ループします。 `Exit While` すぐに続くステートメントに制御を転送、`End While`ステートメント。  
