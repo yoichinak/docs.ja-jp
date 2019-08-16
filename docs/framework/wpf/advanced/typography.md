@@ -8,15 +8,15 @@ helpviewer_keywords:
 - text [WPF], typography
 - typography [WPF]
 ms.assetid: e4ef38db-b7d1-4bda-87ab-8bb738440ddc
-ms.openlocfilehash: 144b137550ff44a8ea4927e6cf611d4761fcb01a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: bbefaba4491fca1b21b6a214048d9db1394c4bc7
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629619"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545333"
 ---
 # <a name="typography"></a>タイポグラフィ
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]には、テキストコンテンツの豊富な表現がサポートされています。 の[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]テキストは Microsoft ClearType を使用してレンダリングされます。これにより、テキストの明瞭さと読みやすさが向上します。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] は[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] 、形式で定義されている以外の機能を提供するフォントもサポートしています。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]には、テキストコンテンツの豊富な表現がサポートされています。 の[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]テキストは Microsoft ClearType を使用してレンダリングされます。これにより、テキストの明瞭さと読みやすさが向上します。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]は[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] 、形式で定義されている以外の機能を提供する OpenType フォントもサポートしています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [WPF のタイポグラフィ](typography-in-wpf.md)  
