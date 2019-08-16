@@ -3,7 +3,5 @@
   items:
     - name: 名前空間の使用
       href: using-namespaces.md
-    - name: '方法: グローバル名前空間エイリアスを使用する'
-      href: how-to-use-the-global-namespace-alias.md
     - name: '方法: My 名前空間を使用する'
       href: how-to-use-the-my-namespace.md
