@@ -6,31 +6,28 @@ helpviewer_keywords:
 - tab controls [Windows Forms], tab order
 - tab pages [Windows Forms], adding controls
 ms.assetid: 7ee734e1-e31e-4ed0-bbc0-a7e8a1f20fef
-ms.openlocfilehash: f30db784a51c98aebaa8b95926bc8c62003ee390
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1b7ea0fc953be5360e38bef9439347529986908f
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011243"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039763"
 ---
 # <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a>方法: デザイナーを使ってタブ ページにコントロールを追加する
-Windows フォームの使用<xref:System.Windows.Forms.TabControl>組織的に他のコントロールを表示することです。 これらの手順を使用すると、タブ ページの本体に画像を表示します。 タブ ページのラベルの部分にアイコンを追加する方法の詳細については、次を参照してください。[方法。Windows フォーム TabControl の外観を変更する](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)します。  
-  
- 次の手順が必要です、 **Windows アプリケーション**プロジェクトが含まれているフォームを<xref:System.Windows.Forms.TabControl>コントロール。 このようなプロジェクトの設定の詳細については、次を参照してください。[方法。Windows フォーム アプリケーション プロジェクトを作成](/visualstudio/ide/step-1-create-a-windows-forms-application-project)と[方法。Windows フォームにコントロールを追加](how-to-add-controls-to-windows-forms.md)します。  
-  
-> [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
-  
-### <a name="to-add-a-control-using-the-designer"></a>デザイナーを使用してコントロールを追加するには  
-  
-1. 上部に表示されるように、適切なタブ ページをクリックします。  
-  
-2. タブ ページにコントロールを描画します。  
-  
+Windows フォーム<xref:System.Windows.Forms.TabControl>を使用すると、他のコントロールが整理された形で表示されます。 これらの手順を使用すると、タブページのメイン部分に画像を表示できます。 タブページのラベル部分にアイコンを追加する方法については、 [「方法:Windows フォーム TabControl](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)の外観を変更します。
+
+ 次の手順では、 <xref:System.Windows.Forms.TabControl>コントロールを含むフォームを含む**Windows アプリケーション**プロジェクトが必要です。 このようなプロジェクトの設定の詳細につい[ては、「方法:Windows フォームアプリケーションプロジェクト](/visualstudio/ide/step-1-create-a-windows-forms-application-project)を作成し[、次の操作を行います。Windows フォーム](how-to-add-controls-to-windows-forms.md)にコントロールを追加します。
+
+## <a name="to-add-a-control-using-the-designer"></a>デザイナーを使用してコントロールを追加するには
+
+1. 適切なタブページをクリックして、上部に表示されるようにします。
+
+2. タブページにコントロールを描画します。
+
 ## <a name="see-also"></a>関連項目
 
 - [TabControl コントロール](tabcontrol-control-windows-forms.md)
 - [TabControl コントロールの概要](tabcontrol-control-overview-windows-forms.md)
-- [方法: Windows フォーム TabControl の外観を変更します。](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
-- [方法: タブ ページを無効にします。](how-to-disable-tab-pages.md)
-- [方法: Windows フォーム tabcontrol のタブ追加および削除](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [方法: Windows フォーム TabControl の外観を変更する](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [方法: タブページを無効にする](how-to-disable-tab-pages.md)
+- [方法: Windows フォーム TabControl を使用してタブを追加および削除する](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)

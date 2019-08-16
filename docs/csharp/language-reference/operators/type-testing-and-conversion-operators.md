@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: a9e5139e6d650aa6935bff934ca25502fdc14775
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 81e7678bc21529c159b8137b06b93774af0ff434
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744076"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796506"
 ---
 # <a name="type-testing-and-conversion-operators-c-reference"></a>型テストおよび変換演算子 (C# リファレンス)
 
@@ -119,7 +119,7 @@ E is T ? (T)(E) : (T)null
 
 ## <a name="typeof-operator"></a>typeof 演算子
 
-`typeof` 演算子では、型の <xref:System.Type?displayProperty=nameWithType> インスタンスが取得されます。 `typeof` 演算子の引数では、次の例で示すように、型または型パラメーターの名前を指定する必要があります。
+`typeof` 演算子では、型の <xref:System.Type?displayProperty=nameWithType> インスタンスが取得されます。 `typeof` 演算子への引数では、次の例で示すように、型または型パラメーターの名前を指定する必要があります。
 
 [!code-csharp-interactive[typeof operator](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#TypeOf)]
 

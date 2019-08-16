@@ -6,46 +6,43 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], using the designer
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
-ms.openlocfilehash: 9f3350e32c0fbff58678052d26be954d30d512a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f96124f7d97e733b1f0e2559320ce2e09ba5ff21
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011516"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039953"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>方法: デザイナーを使用して Windows フォームでマルチペイン ユーザー インターフェイスを作成する
-Microsoft Outlook で使用される次のようなマルチペイン ユーザー インターフェイスを作成する次の手順で、**フォルダー**  ボックスの一覧を**メッセージ**ウィンドウで、および**プレビュー**ウィンドウ。 この配置は、主に、コントロールをフォームにドッキングして実現されます。  
-  
- コントロールをドッキングするときに、親コンテナーの端にコントロールを固定を決定します。 そのため、設定した場合、<xref:System.Windows.Forms.SplitContainer.Dock%2A>プロパティを<xref:System.Windows.Forms.DockStyle.Right>コントロールの右端が親コントロールの右端にドッキングされます。 さらに、ドッキングされたコントロールの端は、コンテナー コントロールの一致するようにサイズ変更します。 方法の詳細については<xref:System.Windows.Forms.SplitContainer.Dock%2A>プロパティを参照してください[方法。Windows フォーム上のコントロールをドッキング](how-to-dock-controls-on-windows-forms.md)します。  
-  
- 配置でこの手順に重点を置いています、<xref:System.Windows.Forms.SplitContainer>とその他のコントロール、フォームではなく、アプリケーションを Microsoft Outlook を模倣する機能を追加します。  
-  
- 内のすべてのコントロールを配置するこのユーザー インターフェイスを作成する、<xref:System.Windows.Forms.SplitContainer>を格納する、<xref:System.Windows.Forms.TreeView>左側のパネルでコントロール。 右側のパネル、<xref:System.Windows.Forms.SplitContainer>コントロールには、2 つ目が含まれている<xref:System.Windows.Forms.SplitContainer>コントロールを<xref:System.Windows.Forms.ListView>コントロール上を<xref:System.Windows.Forms.RichTextBox>コントロール。 これら<xref:System.Windows.Forms.SplitContainer>コントロールがフォーム上の他のコントロールの独立したサイズ変更を有効にします。 独自のカスタム ユーザー インターフェイスを作成するには、この手順で手法を適用できます。  
-  
-> [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
-  
-### <a name="to-create-an-outlook-style-user-interface-at-design-time"></a>デザイン時に Outlook のようなユーザー インターフェイスを作成するには  
-  
-1. 新しい Windows アプリケーション プロジェクトを作成 (**ファイル** > **新規** > **プロジェクト** > **Visual c#** または**Visual Basic** > **クラシック デスクトップ** > **Windows フォーム アプリケーション**)。  
-  
-2. ドラッグ、<xref:System.Windows.Forms.SplitContainer>コントロールから、**ツールボックス**をフォームにします。 **[プロパティ]** ウィンドウで、 <xref:System.Windows.Forms.SplitContainer.Dock%2A> プロパティを <xref:System.Windows.Forms.DockStyle.Fill>に設定します。  
-  
-3. ドラッグ、<xref:System.Windows.Forms.TreeView>コントロールから、**ツールボックス**の左側のパネルに、<xref:System.Windows.Forms.SplitContainer>コントロール。 **プロパティ**ウィンドウで、設定、<xref:System.Windows.Forms.SplitContainer.Dock%2A>プロパティを<xref:System.Windows.Forms.DockStyle.Left>を示す下向きの矢印がクリックされたときの値エディターで、左側のパネルをクリックします。  
-  
-4. もう 1 つドラッグ<xref:System.Windows.Forms.SplitContainer>コントロールから、**ツールボックス**; の右側のパネルに配置、<xref:System.Windows.Forms.SplitContainer>をフォームに追加されたコントロール。 **プロパティ**ウィンドウで、設定、<xref:System.Windows.Forms.SplitContainer.Dock%2A>プロパティを<xref:System.Windows.Forms.DockStyle.Fill>と<xref:System.Windows.Forms.SplitContainer.Orientation%2A>プロパティを<xref:System.Windows.Forms.Orientation.Horizontal>します。  
-  
-5. ドラッグ、<xref:System.Windows.Forms.ListView>コントロールから、**ツールボックス**、2 つ目の上側のパネルに<xref:System.Windows.Forms.SplitContainer>をフォームに追加されたコントロール。 <xref:System.Windows.Forms.SplitContainer.Dock%2A> プロパティの <xref:System.Windows.Forms.ListView> コントロールを <xref:System.Windows.Forms.DockStyle.Fill>に設定します。  
-  
-6. ドラッグ、<xref:System.Windows.Forms.RichTextBox>コントロールから、**ツールボックス**、2 つ目の下部のパネルに<xref:System.Windows.Forms.SplitContainer>コントロール。 <xref:System.Windows.Forms.SplitContainer.Dock%2A> プロパティの <xref:System.Windows.Forms.RichTextBox> コントロールを <xref:System.Windows.Forms.DockStyle.Fill>に設定します。  
-  
-     この時点では、アプリケーションの実行に f5 キーを押すと、フォームは Microsoft Outlook のような 3 つの部分のユーザー インターフェイスを表示します。  
-  
+次の手順では、Microsoft Outlook で使用されているものと同様のマルチペインユーザーインターフェイスを作成します。これは、**フォルダー**リスト、**メッセージ**ペイン、および**プレビュー**ウィンドウで使用します。 この配置は、フォームを使用してドッキングコントロールを主することで実現されます。
+
+ コントロールをドッキングすると、コントロールが固定されている親コンテナーの端が決まります。 したがって<xref:System.Windows.Forms.SplitContainer.Dock%2A> 、プロパティをに<xref:System.Windows.Forms.DockStyle.Right>設定すると、コントロールの右端が親コントロールの右端にドッキングされます。 さらに、ドッキングしたコントロールの端は、コンテナーコントロールの端に合わせて変更されます。 プロパティの<xref:System.Windows.Forms.SplitContainer.Dock%2A>動作の詳細については、 [「方法:Windows フォーム](how-to-dock-controls-on-windows-forms.md)にコントロールをドッキングします。
+
+ この手順では<xref:System.Windows.Forms.SplitContainer> 、アプリケーションが Microsoft Outlook を模倣するように機能を追加するのではなく、フォーム上のと他のコントロールを配置する方法に焦点を当てます。
+
+ このユーザーインターフェイスを作成するには、すべてのコントロールを<xref:System.Windows.Forms.SplitContainer>コントロール内に配置し<xref:System.Windows.Forms.TreeView>ます。コントロールには、左側のパネルにコントロールが含まれています。 コントロールの<xref:System.Windows.Forms.SplitContainer>右側のパネルには、コントロールの上<xref:System.Windows.Forms.SplitContainer> <xref:System.Windows.Forms.RichTextBox>にコントロールを<xref:System.Windows.Forms.ListView>持つ2つ目のコントロールが含まれています。 これら<xref:System.Windows.Forms.SplitContainer>のコントロールを使用すると、フォーム上の他のコントロールのサイズを個別に変更できます。 この手順の手法を調整して、独自のカスタムユーザーインターフェイスを作成することができます。
+
+## <a name="to-create-an-outlook-style-user-interface-at-design-time"></a>デザイン時に Outlook スタイルのユーザーインターフェイスを作成するには
+
+1. 新しい Windows アプリケーションプロジェクトを作成します ([**ファイル** > ] [**新しい** > **プロジェクト** > ] **[ビジュアルC# ]** または**Visual Basic** > **クラシックデスクトップ** > ) **Windows フォームアプリケーション**)。
+
+2. コントロールを<xref:System.Windows.Forms.SplitContainer> **[ツールボックス]** からフォームにドラッグします。 **[プロパティ]** ウィンドウで、 <xref:System.Windows.Forms.SplitContainer.Dock%2A> プロパティを <xref:System.Windows.Forms.DockStyle.Fill>に設定します。
+
+3. コントロールを<xref:System.Windows.Forms.TreeView> **[ツールボックス]** から<xref:System.Windows.Forms.SplitContainer>コントロールの左側のパネルにドラッグします。 **[プロパティ]** ウィンドウで、下<xref:System.Windows.Forms.SplitContainer.Dock%2A>矢印がクリックされたときに表示される値エディターで左側のパネルをクリックして、プロパティをに<xref:System.Windows.Forms.DockStyle.Left>設定します。
+
+4. <xref:System.Windows.Forms.SplitContainer> **ツールボックス**から別のコントロールをドラッグし、フォームに追加した<xref:System.Windows.Forms.SplitContainer>コントロールの右側のパネルに配置します。 **[プロパティ]** ウィンドウで、 <xref:System.Windows.Forms.SplitContainer.Dock%2A> <xref:System.Windows.Forms.SplitContainer.Orientation%2A>プロパティをに<xref:System.Windows.Forms.DockStyle.Fill>設定し、プロパティ<xref:System.Windows.Forms.Orientation.Horizontal>をに設定します。
+
+5. フォームに<xref:System.Windows.Forms.ListView>追加した2つ目<xref:System.Windows.Forms.SplitContainer>のコントロールの上のパネルに、**ツールボックス**からコントロールをドラッグします。 <xref:System.Windows.Forms.SplitContainer.Dock%2A> プロパティの <xref:System.Windows.Forms.ListView> コントロールを <xref:System.Windows.Forms.DockStyle.Fill>に設定します。
+
+6. <xref:System.Windows.Forms.RichTextBox> **ツールボックス**からコントロールを2番目<xref:System.Windows.Forms.SplitContainer>のコントロールの下のパネルにドラッグします。 <xref:System.Windows.Forms.SplitContainer.Dock%2A> プロパティの <xref:System.Windows.Forms.RichTextBox> コントロールを <xref:System.Windows.Forms.DockStyle.Fill>に設定します。
+
+     この時点で、F5 キーを押してアプリケーションを実行すると、Microsoft Outlook のような3部構成のユーザーインターフェイスがフォームに表示されます。
+
     > [!NOTE]
-    >  内でスプリッターのいずれかにマウス ポインターを配置すると、<xref:System.Windows.Forms.SplitContainer>コントロール内部のディメンションのサイズを変更することができます。  
-  
-     この時点でアプリケーションの開発では、高度なユーザー インターフェイスを作成します。 接続することで、次の手順は、アプリケーション自体のプログラミングを進める、<xref:System.Windows.Forms.TreeView>コントロールと<xref:System.Windows.Forms.ListView>いくつかの種類のデータ ソースへのコントロール。 コントロールをデータに接続する方法の詳細については、次を参照してください。[データ連結と Windows フォーム](../data-binding-and-windows-forms.md)します。  
-  
+    >  <xref:System.Windows.Forms.SplitContainer>コントロール内のいずれかのスプリッターの上にマウスポインターを置くと、内部ディメンションのサイズを変更できます。
+
+アプリケーション開発のこの時点で、洗練されたユーザーインターフェイスを作成しました。 次の手順では、アプリケーション自体のプログラミングに進みます。たとえば、 <xref:System.Windows.Forms.TreeView>コントロールと<xref:System.Windows.Forms.ListView>コントロールを何らかの種類のデータソースに接続します。 コントロールをデータに接続する方法の詳細については、「[データバインディングと Windows フォーム](../data-binding-and-windows-forms.md)」を参照してください。
+
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.SplitContainer>

@@ -31,7 +31,7 @@ ms.locfileid: "64665335"
   
  <xref:System.String.IndexOf%2A>メソッドは大文字であり、現在のカルチャを使用します。  
   
- 最適なエラーに制御するために文字列の検索をする可能性があります、`Try`のブロックを[お試しください.キャッチしてください.Finally ステートメント](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)構築します。  
+ 最適なエラーに制御するために文字列の検索をする可能性があります、`Try`のブロックを[Try...Catch...Finally ステートメント](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)構築します。  
   
 ## <a name="see-also"></a>関連項目
 

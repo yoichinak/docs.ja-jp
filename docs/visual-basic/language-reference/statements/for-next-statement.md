@@ -74,7 +74,9 @@ Next [ counter ]
  [!code-vb[VbVbalrStatements#112](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#112)]  
   
 > [!TIP]
+
 > [While...End While ステートメント](../../../visual-basic/language-reference/statements/while-end-while-statement.md)または[Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)は、ループ内でステートメントを実行する回数が事前にわからない場合にうまく機能します。 ただし、特定回数だけループを実行する場合は`For`.`Next`ループの方が適しています。 ループを最初に入力するときに、イテレーションの数を決定します。  
+
   
 ## <a name="nesting-loops"></a>ループの入れ子  
  入れ子にすることができます`For`内に別の 1 つのループを配置することでループします。 次の例で入れ子になった`For`.`Next`異なるステップ値を持つ構造体。 外側のループは、ループのイテレーションごとに文字列を作成します。 内側のループのイテレーションごとのループ カウンター変数をデクリメントをループします。  
@@ -85,7 +87,7 @@ Next [ counter ]
   
  さまざまな種類の制御構造を入れ子にすることもできます。 詳細については、[入れ子になった制御構造](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)を参照してください。  
   
-## <a name="exit-for-and-continue-for"></a>終了しの続行  
+## <a name="exit-for-and-continue-for"></a>Exit For と Continue For  
  `Exit For`ステートメントがすぐに終了させる、 `For`.`Next` これに続くステートメントにループと転送の制御、`Next`ステートメント。  
   
  `Continue For`ステートメント コントロールに直ちに移します、ループの次の反復処理します。 詳細については、次を参照してください。 [Continue ステートメント](../../../visual-basic/language-reference/statements/continue-statement.md)します。  
@@ -96,11 +98,13 @@ Next [ counter ]
   
  任意の数を配置する`Exit For`内のステートメントを`For`.`Next` ループします。 使用すると内で入れ子になった`For`.`Next` ループ、`Exit For`最も内側のループを終了し、入れ子の上位のレベルに制御を転送します。  
   
+
   `Exit For` は何らかの条件 (たとえば、 `If`...`Then`...`Else`構造) を評価した後によく使用されます。次の条件の場合、`Exit For`を使用できます。 
   
 - 反復処理を続けることは不要なか不可能です。 エラー値や終了要求は、この条件を作成可能性があります。  
   
 - `Try`...`Catch`...`Finally`ステートメントは例外をキャッチします。`Finally`ブロックの最後に`Exit For`を使用できます。   
+
   
 - 何度も長時間または無限でも実行できるループ、無限ループがあります。 このような条件を検出した場合は`Exit For`を使用してループをエスケープすることができます。 詳細については、[Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)を参照してください。  
   

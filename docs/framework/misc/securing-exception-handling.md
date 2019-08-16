@@ -19,7 +19,7 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "61868804"
 ---
 # <a name="securing-exception-handling"></a>例外処理の保護
-Visual C と Visual Basic では、スタックをさらにフィルター式の実行前に、**finally**ステートメント。 **キャッチ**に関連付けられているブロックの後にそのフィルターが実行される、**finally**ステートメント。 詳細については、次を参照してください。[ユーザー フィルター例外](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md)します。 このセクションでは、この注文のセキュリティへの影響を調べます。 フィルター ステートメントで順序を示す次の擬似コード例を検討してくださいと**finally**ステートメントを実行します。  
+Visual C と Visual Basic では、スタックをさらにフィルター式の実行前に、**finally**ステートメント。 **catch**に関連付けられているブロックの後にそのフィルターが実行される、**finally**ステートメント。 詳細については、次を参照してください。[ユーザー フィルター例外](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md)します。 このセクションでは、この注文のセキュリティへの影響を調べます。 フィルター ステートメントで順序を示す次の擬似コード例を検討してくださいと**finally**ステートメントを実行します。  
   
 ```cpp  
 void Main()   

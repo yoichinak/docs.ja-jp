@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: 4852e1166a975b1a45c5bd905123a35fc846aa28
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: c455804923f4d0e7cc8f556bb9b9df34b6332d82
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68513126"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796518"
 ---
 # <a name="sizeof-operator-c-reference"></a>sizeof 演算子 (C# リファレンス)
 
-`sizeof` は、指定された型の変数が占有しているバイト数を返します。 `sizeof` 演算子の引数は、[アンマネージド型](../builtin-types/unmanaged-types.md)の名前、またはアンマネージド型に[制限される](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint)型パラメーターである必要があります。
+`sizeof` は、指定された型の変数が占有しているバイト数を返します。 `sizeof` 演算子への引数は、[アンマネージド型](../builtin-types/unmanaged-types.md)の名前、またはアンマネージド型に[制限される](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint)型パラメーターである必要があります。
 
 `sizeof` 演算子には [unsafe](../keywords/unsafe.md) コンテキストが必要です。 ただし、次の表に示す式は、コンパイル時に対応する定数値に評価され、unsafe コンテキストを必要としません。
 

@@ -6,31 +6,28 @@ helpviewer_keywords:
 - controls [Windows Forms], grouping
 - Windows Forms controls, grouping
 ms.assetid: 7e1cd708-fdb1-49d8-9ca2-5640b276bf2e
-ms.openlocfilehash: 662343af42f72816a5a673d2cd6d839a5dca9190
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cadfa715b140c63b216ec0ca2e6d6a6589ae3458
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971302"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040388"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>方法: デザイナーを使用して Windows フォーム Panel コントロールでコントロールをグループ化する
-Windows フォーム<xref:System.Windows.Forms.Panel>コントロールを使用すると、その他のコントロールをグループ化します。 コントロールをグループ化の 3 つの理由があります。 視覚的にわかりやすいユーザー インターフェイスです。 関連するフォーム要素のグループ化もう 1 つは、プログラムによるグループ化、ラジオ ボタンの例です。最後には、単位としてデザイン時にコントロールを移動するためです。  
-  
-> [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
-  
-### <a name="to-create-a-group-of-controls"></a>コントロールのグループを作成するには  
-  
-1. ドラッグ、<xref:System.Windows.Forms.Panel>コントロールから、 **Windows フォーム**フォームには、ツールボックスのタブ。  
-  
-2. その他のコントロール、パネル、パネル内の各描画を追加します。  
-  
-     既存のコントロール パネルにする場合は、すべてのコントロールを選択する、選択、クリップボードに切り取ります、<xref:System.Windows.Forms.Panel>を制御して、パネルに貼り付けます。 パネルにもドラッグできます。  
-  
-3. (省略可能)パネルに罫線を追加する場合は、設定、<xref:System.Windows.Forms.BorderStyle>プロパティ。 次の 3 つの選択肢があります: <xref:System.Windows.Forms.BorderStyle.Fixed3D>、 <xref:System.Windows.Forms.BorderStyle.FixedSingle>、および<xref:System.Windows.Forms.BorderStyle.None>します。  
-  
+Windows フォーム<xref:System.Windows.Forms.Panel>コントロールは、他のコントロールをグループ化するために使用されます。 コントロールをグループ化する理由は3つあります。 1つは、明確なユーザーインターフェイスに関連するフォーム要素を視覚的にグループ化することです。また、オプションボタンのプログラムによるグループ化もあります。次に例を示します。最後に、デザイン時にコントロールを1つの単位として移動します。
+
+## <a name="to-create-a-group-of-controls"></a>コントロールのグループを作成するには
+
+1. ツールボックス<xref:System.Windows.Forms.Panel>の **[Windows フォーム]** タブからフォームにコントロールをドラッグします。
+
+2. パネルに他のコントロールを追加し、各コントロールをパネル内に描画します。
+
+     パネルに表示する既存のコントロールがある場合は、すべてのコントロールを選択し、クリップボードに切り取って、 <xref:System.Windows.Forms.Panel>コントロールを選択して、パネルに貼り付けることができます。 また、パネルにドラッグすることもできます。
+
+3. Optionalパネルに罫線を追加する場合は、その<xref:System.Windows.Forms.BorderStyle>プロパティを設定します。 <xref:System.Windows.Forms.BorderStyle.Fixed3D> 、<xref:System.Windows.Forms.BorderStyle.FixedSingle>、および<xref:System.Windows.Forms.BorderStyle.None>の3つの選択肢があります。
+
 ## <a name="see-also"></a>関連項目
 
 - [Panel コントロール](panel-control-windows-forms.md)
 - [Panel コントロールの概要](panel-control-overview-windows-forms.md)
-- [方法: パネルの背景を設定します。](how-to-set-the-background-of-a-windows-forms-panel.md)
+- [方法: パネルの背景を設定する](how-to-set-the-background-of-a-windows-forms-panel.md)

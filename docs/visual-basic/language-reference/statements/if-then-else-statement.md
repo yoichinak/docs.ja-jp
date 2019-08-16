@@ -89,7 +89,7 @@ If condition Then [ statements ] [ Else [ elsestatements ] ]
  複数行の構文では、`If`ステートメントは、最初の行での唯一のステートメントである必要があります。 `ElseIf`、 `Else`、および`End If`ステートメントのみで、行ラベルを付けることができます。 `If`.`Then`...`Else`ブロックの最後に使用する必要があります、`End If`ステートメント。  
   
 > [!TIP]
->  [を選択しています.Case ステートメント](../../../visual-basic/language-reference/statements/select-case-statement.md)をいくつかの値を持つ 1 つの式を評価するときにさらに便利な場合があります。  
+>  [Select...Case ステートメント](../../../visual-basic/language-reference/statements/select-case-statement.md)をいくつかの値を持つ 1 つの式を評価するときにさらに便利な場合があります。  
   
 ### <a name="single-line-syntax"></a>単一行の構文  
  True の場合に実行するコードを 1 つの条件の単一行構文を使用できます。 ただし、複数行の構文は、詳細の構造と柔軟性を提供、読み取り、保守、およびデバッグする方が簡単です。  
