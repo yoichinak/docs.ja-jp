@@ -60,7 +60,7 @@ Next [ counter ]
 |`Next`|必須。 定義を終了、`For`ループします。|  
   
 > [!NOTE]
->  `To`キーワードは、カウンターの範囲を指定するこのステートメントで使用されます。 このキーワードを使用することも、[を選択しています.Case ステートメント](../../../visual-basic/language-reference/statements/select-case-statement.md)と配列の宣言。 配列の宣言に関する詳細については、次を参照してください。 [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)します。  
+> このステートメントでは、`To`キーワードを使用して、カウンターの範囲を指定します。 このキーワードは [Select...Case ステートメント](../../../visual-basic/language-reference/statements/select-case-statement.md) と配列の宣言でも使用できます。 配列の宣言に関する詳細については、[Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md) を参照してください。  
   
 ## <a name="simple-examples"></a>簡単な例  
  使用する、 `For`.`Next`時間数の一連のステートメントを繰り返し表示するときに構造体します。  
@@ -74,7 +74,9 @@ Next [ counter ]
  [!code-vb[VbVbalrStatements#112](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#112)]  
   
 > [!TIP]
->  [While...End While ステートメント](../../../visual-basic/language-reference/statements/while-end-while-statement.md)または[Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)は、ループ内でステートメントを実行する回数が事前にわからない場合にうまく機能します。 ただし、特定回数だけループを実行する場合は`For`.`Next`ループの方が適しています。 ループを最初に入力するときに、イテレーションの数を決定します。  
+
+> [While...End While ステートメント](../../../visual-basic/language-reference/statements/while-end-while-statement.md)または[Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)は、ループ内でステートメントを実行する回数が事前にわからない場合にうまく機能します。 ただし、特定回数だけループを実行する場合は`For`.`Next`ループの方が適しています。 ループを最初に入力するときに、イテレーションの数を決定します。  
+
   
 ## <a name="nesting-loops"></a>ループの入れ子  
  入れ子にすることができます`For`内に別の 1 つのループを配置することでループします。 次の例で入れ子になった`For`.`Next`異なるステップ値を持つ構造体。 外側のループは、ループのイテレーションごとに文字列を作成します。 内側のループのイテレーションごとのループ カウンター変数をデクリメントをループします。  
@@ -83,7 +85,7 @@ Next [ counter ]
   
  ループを入れ子にする場合は、各ループが一意必要があります`counter`変数。  
   
- 内で他のさまざまな種類の制御構造を入れ子にすることもできます。 詳細については、次を参照してください。[制御構造の入れ子になった](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)します。  
+ さまざまな種類の制御構造を入れ子にすることもできます。 詳細については、[入れ子になった制御構造](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)を参照してください。  
   
 ## <a name="exit-for-and-continue-for"></a>Exit For と Continue For  
  `Exit For`ステートメントがすぐに終了させる、 `For`.`Next` これに続くステートメントにループと転送の制御、`Next`ステートメント。  
@@ -96,11 +98,13 @@ Next [ counter ]
   
  任意の数を配置する`Exit For`内のステートメントを`For`.`Next` ループします。 使用すると内で入れ子になった`For`.`Next` ループ、`Exit For`最も内側のループを終了し、入れ子の上位のレベルに制御を転送します。  
   
- `Exit For` は何らかの条件 (たとえば、 `If`...`Then`...`Else`構造) を評価した後によく使用されます。 次の条件の場合、`Exit For`を使用できます。  
+
+  `Exit For` は何らかの条件 (たとえば、 `If`...`Then`...`Else`構造) を評価した後によく使用されます。次の条件の場合、`Exit For`を使用できます。 
   
 - 反復処理を続けることは不要なか不可能です。 エラー値や終了要求は、この条件を作成可能性があります。  
   
-- `Try`...`Catch`...`Finally`ステートメントは例外をキャッチします。 `Finally`ブロックの最後に`Exit For`を使用できます。  
+- `Try`...`Catch`...`Finally`ステートメントは例外をキャッチします。`Finally`ブロックの最後に`Exit For`を使用できます。   
+
   
 - 何度も長時間または無限でも実行できるループ、無限ループがあります。 このような条件を検出した場合は`Exit For`を使用してループをエスケープすることができます。 詳細については、[Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)を参照してください。  
   
