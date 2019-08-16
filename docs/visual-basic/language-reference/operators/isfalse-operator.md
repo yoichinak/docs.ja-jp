@@ -32,5 +32,5 @@ ms.locfileid: "62013544"
 ## <a name="see-also"></a>関連項目
 
 - [IsTrue 演算子](../../../visual-basic/language-reference/operators/istrue-operator.md)
-- [方法: 定義の演算子](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [演算子を定義する方法](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
 - [AndAlso 演算子](../../../visual-basic/language-reference/operators/andalso-operator.md)
