@@ -1,5 +1,5 @@
 ---
-title: '方法: 定義の演算子 (Visual Basic)'
+title: '方法: 演算子を定義する (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], defining
@@ -20,7 +20,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61863846"
 ---
-# <a name="how-to-define-an-operator-visual-basic"></a>方法: 定義の演算子 (Visual Basic)
+# <a name="how-to-define-an-operator-visual-basic"></a>方法: 演算子を定義する (Visual Basic)
 標準の演算子の動作を定義するクラスまたは構造体を定義している場合 (など`*`、 `<>`、または`And`) 1 つまたは両方のオペランドがクラスまたは構造体の型であるとき。  
   
  演算子プロシージャ内でクラスまたは構造体として標準の演算子を定義します。 演算子のすべてのプロシージャである必要があります`Public``Shared`します。  
