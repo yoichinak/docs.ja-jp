@@ -39,7 +39,7 @@ ms.locfileid: "61863846"
 ## <a name="see-also"></a>関連項目
 
 - [演算子プロシージャ](./operator-procedures.md)
-- [方法: 変換演算子を定義します。](./how-to-define-a-conversion-operator.md)
+- [方法: 変換演算子を定義する](./how-to-define-a-conversion-operator.md)
 - [方法: 演算子プロシージャを呼び出す](./how-to-call-an-operator-procedure.md)
 - [方法: 演算子を定義するクラスを使用する](./how-to-use-a-class-that-defines-operators.md)
 - [Operator ステートメント](../../../../visual-basic/language-reference/statements/operator-statement.md)
