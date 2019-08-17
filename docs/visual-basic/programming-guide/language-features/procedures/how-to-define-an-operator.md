@@ -41,7 +41,7 @@ ms.locfileid: "61863846"
 - [演算子プロシージャ](./operator-procedures.md)
 - [方法: 変換演算子を定義します。](./how-to-define-a-conversion-operator.md)
 - [方法: 演算子プロシージャを呼び出す](./how-to-call-an-operator-procedure.md)
-- [方法: 演算子を定義するクラスを使用して、](./how-to-use-a-class-that-defines-operators.md)
+- [方法: 演算子を定義するクラスを使用する](./how-to-use-a-class-that-defines-operators.md)
 - [Operator ステートメント](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Structure ステートメント](../../../../visual-basic/language-reference/statements/structure-statement.md)
 - [方法: 構造体を宣言する](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
