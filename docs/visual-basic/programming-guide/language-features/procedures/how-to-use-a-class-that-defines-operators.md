@@ -1,5 +1,5 @@
 ---
-title: '方法: 演算子 (Visual Basic) を定義するクラスを使用して、'
+title: '方法: 演算子を定義するクラスを使用する (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operator procedures [Visual Basic], calling
@@ -18,7 +18,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61863494"
 ---
-# <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>方法: 演算子 (Visual Basic) を定義するクラスを使用して、
+# <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>方法: 演算子を定義するクラスを使用する (Visual Basic)
 クラスまたは独自の演算子を定義する構造体を使用している場合は、これらの演算子を Visual Basic からアクセスできます。  
   
  クラスまたは構造体で演算子を定義が呼び出されますも*オーバー ロード*演算子。  
@@ -42,8 +42,8 @@ ms.locfileid: "61863494"
 ## <a name="see-also"></a>関連項目
 
 - [演算子プロシージャ](./operator-procedures.md)
-- [方法: 演算子を定義します。](./how-to-define-an-operator.md)
-- [方法: 変換演算子を定義します。](./how-to-define-a-conversion-operator.md)
+- [方法: 演算子を定義する](./how-to-define-an-operator.md)
+- [方法: 変換演算子を定義する](./how-to-define-a-conversion-operator.md)
 - [方法: 演算子プロシージャを呼び出す](./how-to-call-an-operator-procedure.md)
 - [Widening](../../../../visual-basic/language-reference/modifiers/widening.md)
 - [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)
