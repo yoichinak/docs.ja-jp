@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f046341b1b02c3552ecf8db7d38d2a0c7bc74fba
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 440debe875a0d00d240849ba4b60b548f46e2c0e
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306370"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567051"
 ---
 # <a name="serialization-and-metadata"></a>シリアル化とメタデータ
 
@@ -39,15 +39,15 @@ ms.locfileid: "67306370"
   
 ### <a name="typeof-used-in-the-constructor"></a>コンストラクターで使用される typeof
 
- これらのシリアル化クラスのコンス トラクターの呼び出しを含めたかどうか、 C# [typeof](~/docs/csharp/language-reference/operators/type-testing-and-conversion-operators.md#typeof-operator)演算子メソッドの呼び出しで **、追加の作業を実行する必要はありません**します。 たとえば、シリアル化クラス コンストラクターに対する次の各呼び出しでは、`typeof` キーワードがコンストラクターに渡される式の一部として使用されます。  
+ これらのシリアル化クラスのコンストラクターを呼び出し、メソッド呼び出しC#に[typeof](~/docs/csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator)演算子を含めると、**追加の作業を行う必要はありません**。 たとえば、シリアル化クラス コンストラクターに対する次の各呼び出しでは、`typeof` キーワードがコンストラクターに渡される式の一部として使用されます。  
   
  [!code-csharp[ProjectN#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#5)]  
   
- .NET ネイティブ コンパイラでは、このコードは自動的に処理します。  
+ このコードは、.NET ネイティブコンパイラによって自動的に処理されます。  
   
 ### <a name="typeof-used-outside-the-constructor"></a>コンストラクターの外部で使用される typeof
 
- これらのシリアル化クラスのコンス トラクターの呼び出しを使用したかどうか、 C# [typeof](~/docs/csharp/language-reference/operators/type-testing-and-conversion-operators.md#typeof-operator) 、コンス トラクターに提供する式から外の演算子<xref:System.Type>パラメーターは、次のコードでは、.NET ネイティブ コンパイラ型を解決することはできません。  
+ 次のコードのように、これらのシリアル化クラスC#のコンストラクターを呼び出し、コンストラクターの<xref:System.Type>パラメーターに指定された式の外側で[typeof](~/docs/csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator)演算子を使用した場合、.NET ネイティブコンパイラは型を解決できません。  
   
  [!code-csharp[ProjectN#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#6)]  
   
@@ -57,7 +57,7 @@ ms.locfileid: "67306370"
 <Type Name="DataSet" Browse="Required Public" />  
 ```  
   
- 同様に、コンス トラクターを呼び出すことがある場合<xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType>その他の配列を指定<xref:System.Type>オブジェクトをシリアル化、ように、.NET ネイティブ コンパイラでは、次のコードでは、これらの型を解決することはできません。  
+ 同様に、のような<xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType>コンストラクターを呼び出し、次のコードのように、シリアル化する追加<xref:System.Type>のオブジェクトの配列を指定すると、.NET ネイティブコンパイラはこれらの型を解決できません。  
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   
@@ -73,5 +73,5 @@ ms.locfileid: "67306370"
 
 - [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [\<型 > 要素](../../../docs/framework/net-native/type-element-net-native.md)
+- [\<> 要素を入力します](../../../docs/framework/net-native/type-element-net-native.md)
 - [\<Namespace > 要素](../../../docs/framework/net-native/namespace-element-net-native.md)

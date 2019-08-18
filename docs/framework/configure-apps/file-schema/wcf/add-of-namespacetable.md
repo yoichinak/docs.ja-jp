@@ -2,19 +2,19 @@
 title: <add> の <namespaceTable>
 ms.date: 03/30/2017
 ms.assetid: cf7b5b75-63bd-49a6-abac-4bfdab377e36
-ms.openlocfilehash: 7e65b66170465a8b3bb60754feebb7730b959d9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 32eff2e7bfdf1aee4c7d37a0e06166afba3cb398
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673668"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566736"
 ---
-# <a name="add-of-namespacetable"></a>\<add> of \<namespaceTable>
+# <a name="add-of-namespacetable"></a>\<namespaceTable > の\<> の追加
 名前空間とプレフィックスのマッピングを含む構成要素を表します。これは、ルーティングの XPath フィルターで使用されます。  
   
  \<system.serviceModel>  
 \<ルーティング >  
-\<namespaceTable>  
+\<namespaceTable >  
 \<add>  
   
 ## <a name="syntax"></a>構文  
@@ -28,9 +28,6 @@ ms.locfileid: "61673668"
 </routing>
 ```  
   
-```csharp  
-```  
-  
 ## <a name="attributes-and-elements"></a>属性および要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
@@ -38,7 +35,7 @@ ms.locfileid: "61673668"
   
 |属性|説明|  
 |---------------|-----------------|  
-|namespace|名前空間を示す文字列。|  
+|名前空間|名前空間を示す文字列。|  
 |prefix|この名前空間のプレフィックスを示す文字列。|  
   
 ### <a name="child-elements"></a>子要素  

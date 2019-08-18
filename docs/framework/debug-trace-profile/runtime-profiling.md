@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7214fa0342d0946044861c4e375c7797ad6a06b1
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: a31a42362e934d14b9cb66724618814e2b232c06
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833760"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567285"
 ---
 # <a name="runtime-profiling"></a>ランタイム プロファイリング
 プロファイリングは、任意の開発シナリオまたは配置シナリオでパフォーマンス データを収集する方法の 1 つです。 このセクションは、アプリケーションのパフォーマンスに関する情報の収集を必要とする開発者およびシステム管理者を対象にしています。  
   
 ## <a name="tracking-performance-using-the-performance-monitor-perfmonexe"></a>パフォーマンス モニター (Perfmon.exe) を使用したパフォーマンスの追跡  
- パフォーマンス モニターは、.NET Framework アプリケーションにプロファイルを使用する最も簡単なツールです。 パフォーマンス モニターは、共通言語ランタイムと Windows ソフトウェア開発キット (SDK) にインストールされている .NET Framework のパフォーマンス カウンター内のデータをグラフィカルに表示します。 これらのカウンターを使用することにより、メモリ管理から Just-In-Time (JIT) コンパイラのパフォーマンスまで、あらゆる情報を監視できます。 .NET パフォーマンス カウンターは、アプリケーションが使用するリソースに関する情報を提供します。この情報は、アプリケーションのパフォーマンスを判断するための間接的な指標となります。 これらのカウンターは、アプリケーション内部の動作状況を把握するために使用します。  
+ パフォーマンスモニターは、.NET Framework アプリケーションのプロファイリングに使用する最も簡単なツールです。 パフォーマンスモニターは、共通言語ランタイムおよび Windows SDK と共にインストールされた .NET Framework パフォーマンスカウンター内のデータをグラフィカルに表示します。 これらのカウンターを使用することにより、メモリ管理から Just-In-Time (JIT) コンパイラのパフォーマンスまで、あらゆる情報を監視できます。 .NET パフォーマンス カウンターは、アプリケーションが使用するリソースに関する情報を提供します。この情報は、アプリケーションのパフォーマンスを判断するための間接的な指標となります。 これらのカウンターは、アプリケーション内部の動作状況を把握するために使用します。  
   
 #### <a name="to-run-perfmonexe-on-windows-vista-and-later-versions"></a>perfmon.exe を Windows Vista 以降のバージョンで実行するには  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66833760"
   
 6. **[選択したオブジェクトのインスタンス]** リスト ボックスで、 **[\<すべてのインスタンス>]** をクリックして、共通言語ランタイムのパフォーマンス カウンターをグローバルに (つまり、システム全体で) 監視するように指定します。  
   
-     - または -  
+     \- または -  
   
      **[選択したオブジェクトのインスタンス]** リスト ボックスで、アプリケーション名をクリックして、そのアプリケーションのパフォーマンス カウンターを監視します。  
   
@@ -54,10 +54,10 @@ ms.locfileid: "66833760"
  特定のゾーンまたはリモート共有に存在するアセンブリをプロファイリングする場合は、リモート アセンブリがパフォーマンス カウンターを実行するコンピューターに対して完全な信頼関係を持っていることを確認してください。 アセンブリが十分な信頼関係を持っていない場合、パフォーマンス カウンターは機能しません。 さまざまなゾーンへの信頼の付与については、「[Caspol.exe (コード アクセス セキュリティ ポリシー ツール)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)」を参照してください。  
   
 > [!NOTE]
->  .NET Framework 4 がインストールされているシステムでパフォーマンス モニター表示されないパフォーマンス カウンターのデータが一部のカテゴリでなど **.NET CLR データ**と **.NET CLR Networking**の.NET Framework 1.1 を使用して開発されたアプリケーション。 このような場合、[\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) 要素をアプリケーションの構成ファイルに追加することで、このデータを表示するようにパフォーマンス モニターを構成できます。  
+>  .NET Framework 4 がインストールされているシステムでは、.net を使用して開発されたアプリケーションのパフォーマンスカウンターのデータが、 **.NET Clr データ**や **.net clr ネットワーク**などの一部のカテゴリに表示されない場合があります。フレームワーク1.1。 このような場合、[\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) 要素をアプリケーションの構成ファイルに追加することで、このデータを表示するようにパフォーマンス モニターを構成できます。  
   
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>プログラムを使用したパフォーマンス カウンターの読み取りと作成  
- .NET Framework では、パフォーマンス コンソールで使用できるのと同じパフォーマンス情報をプログラムでアクセスするために使用できるクラスを提供します。 また、これらのクラスを使用すると、カスタム パフォーマンス カウンターを作成できます。 次の表では、.NET Framework に用意されているクラスの監視パフォーマンスの一部について説明します。  
+ .NET Framework には、パフォーマンスコンソールで使用できるのと同じパフォーマンス情報にプログラムでアクセスするために使用できるクラスが用意されています。 また、これらのクラスを使用すると、カスタム パフォーマンス カウンターを作成できます。 次の表では、.NET Framework に用意されているパフォーマンス監視クラスの一部について説明します。  
   
 |クラス|説明|  
 |-----------|-----------------|  
