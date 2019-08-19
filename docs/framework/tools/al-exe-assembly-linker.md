@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 87fcf4221dc5b334c6e9342c2aaac04a417a9f46
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: d75412394ce42f786da88f3d334853b99f266aca
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832774"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567195"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (アセンブリ リンカー)
 
@@ -108,7 +108,7 @@ al sources options
 |al1015|メッセージ ファイル 'alinkui.dll' が見つかりません<br /><br /> *Al.exe* には *Alinkui.dll* が必要です。 このファイルがパス上にあるかどうかを確認してください。 必要な場合は、製品 CD から Alinkui.dll をコピーしてください。|
 |al1016|有効な入力ファイルが指定されませんでした<br /><br /> *Al.exe* には、アセンブリ情報を含んでいない 1 つ以上の入力ファイルを指定する必要があります。|
 |al1017|ターゲット ファイル名が指定されませんでした<br /><br /> ターゲット ファイル名の指定に必要な **/out** オプションが存在しませんでした。|
-|al1018|必要なファイル 'file' を読み込めませんでした<br /><br /> 特定の DLL ファイルを読み込めません。 Visual Studio または Windows Software Development Kit (SDK) を再インストールします。|
+|al1018|必要なファイル 'file' を読み込めませんでした<br /><br /> 特定の DLL ファイルを読み込めません。 Visual Studio または Windows SDK を再インストールしてください。|
 |al1019|アセンブリを作成中にメタデータが失敗しました — 理由<br /><br /> メッセージに示された原因により、アセンブリの生成が中断されました。 たとえば、 **/win32res** オプションで指定したファイルが見つからない場合に、このエラーが発生します。|
 |al1020|含まれているアセンブリ 'file' を無視します<br /><br /> 指定した入力ファイルにアセンブリが含まれています。 アセンブリを含むファイルを *Al.exe* 入力ファイルとして指定することはできません。|
 |al1021|'設定' : 今までの設定をオーバーライドしています<br /><br /> モジュールには、カスタム属性によって割り当てられた可能性のある特定の設定について値が指定されていましたが、*Al.exe* コマンド ライン オプションを使用して渡された値によって、この値がオーバーライドされました。|
