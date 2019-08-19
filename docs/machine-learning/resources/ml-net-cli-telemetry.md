@@ -4,12 +4,12 @@ description: 分析のために使用状況の情報を収集する ML.NET CLI �
 ms.topic: conceptual
 ms.date: 05/05/2019
 ms.custom: ''
-ms.openlocfilehash: eab1e37d7d0d47251c4f92422730b105cf2db265
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: b9f6ccf7ff76f0cf4ce806f39909b7607a20b9f6
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433794"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567495"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>ML.NET CLI によるテレメトリ収集
 
@@ -36,7 +36,7 @@ ms.locfileid: "68433794"
 
 ML.NET CLI のテレメトリ機能は既定で有効です。
 
-`DOTNET_CLI_TELEMETRY_OPTOUT` 環境変数を `1` または `true` に設定して、製品利用統計情報の機能をオプトアウトします。 この環境変数は、.NET CLI ツールにグローバルに適用されます。
+`MLDOTNET_CLI_TELEMETRY_OPTOUT` 環境変数を `1` または `true` に設定して、製品利用統計情報の機能をオプトアウトします。 この環境変数は、.NET CLI ツールにグローバルに適用されます。
 
 ## <a name="data-points-collected"></a>収集されるデータ ポイント
 

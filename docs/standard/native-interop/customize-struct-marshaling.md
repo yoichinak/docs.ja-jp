@@ -7,12 +7,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: da36f2a703fe817c171e192b9c94e473c93447a3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 6e3dcaeb71ae32812d3b022fff2bdc4e3e0691bf
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065985"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040151"
 ---
 # <a name="customizing-structure-marshaling"></a>構造体のマーシャリングのカスタマイズ
 
@@ -319,7 +319,7 @@ struct DefaultString
 
 ## <a name="customizing-decimal-field-marshaling"></a>10 進数フィールドのマーシャリングのカスタマイズ
 
-Windows を使用している場合は、ネイティブの [`CY` または `CURRENCY`](/windows/desktop/api/wtypes/ns-wtypes-tagcy) 構造体を使用する API がいくつかあります。 既定で、.NET の `decimal` 型はネイティブの [`DECIMAL`](/windows/desktop/api/wtypes/ns-wtypes-tagdec) 構造体にマーシャリングされます。 ただし、値が <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> の <xref:System.Runtime.InteropServices.MarshalAsAttribute> を使用して、`decimal` 値をネイティブの `CY` 値に変換するようにマーシャラーに指示することができます。
+Windows を使用している場合は、ネイティブの [`CY` または `CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy~r1) 構造体を使用する API がいくつかあります。 既定で、.NET の `decimal` 型はネイティブの [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) 構造体にマーシャリングされます。 ただし、値が <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> の <xref:System.Runtime.InteropServices.MarshalAsAttribute> を使用して、`decimal` 値をネイティブの `CY` 値に変換するようにマーシャラーに指示することができます。
 
 ```csharp
 public struct Currency
@@ -339,7 +339,7 @@ struct Currency
 ## <a name="marshaling-systemobjects"></a>`System.Object` のマーシャリング
 
 Windows では、`object` 型のフィールドをネイティブ コードにマーシャリングできます。 このようなフィールドは、次の 3 つの型のいずれかにマーシャリングできます。
-- [`VARIANT`](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)
+- [`VARIANT`](/windows/win32/api/oaidl/ns-oaidl-variant)
 - [`IUnknown*`](/windows/desktop/api/unknwn/nn-unknwn-iunknown)
 - [`IDispatch*`](/windows/desktop/api/oaidl/nn-oaidl-idispatch)
 

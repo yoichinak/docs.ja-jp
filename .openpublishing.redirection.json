@@ -836,6 +836,10 @@
             "redirect_url": "/dotnet/csharp/language-reference/operators/arithmetic-operators#compound-assignment"
         },
         {
+            "source_path": "docs/csharp/language-reference/operators/type-testing-and-conversion-operators.md",
+            "redirect_url": "/dotnet/csharp/language-reference/operators/type-testing-and-cast"
+        },
+        {
             "source_path": "docs/csharp/language-reference/operators/xor-assignment-operator.md",
             "redirect_url": "/dotnet/csharp/language-reference/operators/boolean-logical-operators#compound-assignment"
         },
@@ -1114,6 +1118,10 @@
         {
             "source_path": "docs/csharp/programming-guide/main-and-command-args/main-and-command-line-arguments.md",
             "redirect_url": "/dotnet/csharp/programming-guide/main-and-command-args/index"
+        },
+        {
+            "source_path": "docs/csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md",
+            "redirect_url": "/dotnet/csharp/language-reference/operators/namespace-alias-qualifier"
         },
         {
             "source_path": "docs/csharp/programming-guide/nullable-types/boxing-nullable-types.md",

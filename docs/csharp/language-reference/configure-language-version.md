@@ -2,12 +2,12 @@
 title: C# 言語のバージョン管理 - C# ガイド
 description: プロジェクトに基づいて C# 言語のバージョンが決定される方法、およびそれを手動で調整できるさまざまな値について説明します。
 ms.date: 07/10/2019
-ms.openlocfilehash: e35fdf2bcdb1a31b752c760f3f6df59232e498a4
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 744cec0aac21f743648cccbdc93cf2977c32d644
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68236097"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796532"
 ---
 # <a name="c-language-versioning"></a>C# 言語のバージョン管理
 
@@ -28,7 +28,7 @@ C# コンパイラでは、プロジェクトのターゲット フレームワ�
 
 ご自分のプロジェクトが、対応するプレビュー バージョンの言語を持つプレビュー フレームワークをターゲットにしている場合、使用される言語バージョンはプレビュー バージョンの言語です。 これにより、リリースされた .NET Core バージョンをターゲットとするプロジェクトに影響を与えずに、任意の環境においてそのプレビューで動作することが保証されている最新の機能を確実に使用できます。
 
-## <a name="overriding-a-default"></a>既定値のオーバーライド
+## <a name="override-a-default"></a>既定値のオーバーライド
 
 C# のバージョンを明示的に指定する必要がある場合は、いくつかの方法で実行できます。
 
@@ -38,7 +38,7 @@ C# のバージョンを明示的に指定する必要がある場合は、い�
 
 ### <a name="edit-the-project-file"></a>プロジェクト ファイルを編集する
 
-プロジェクト ファイルで言語のバージョンを設定できます。 たとえば、プレビュー機能に明示的にアクセスしたい場合は、次のように要素を追加できます。
+プロジェクト ファイルで言語のバージョンを設定できます。 たとえば、プレビュー機能に明示的にアクセスしたい場合は、次のように要素を追加します。
 
 ```xml
 <PropertyGroup>
@@ -46,7 +46,7 @@ C# のバージョンを明示的に指定する必要がある場合は、い�
 </PropertyGroup>
 ```
 
-値 `preview` では、コンパイラでサポートされている使用可能な最新のプレビュー C# 言語が使用されます。
+値 `preview` では、コンパイラでサポートされている使用可能な最新のプレビュー C# 言語バージョンが使用されます。
 
 ### <a name="configure-multiple-projects"></a>複数のプロジェクトを構成する
 

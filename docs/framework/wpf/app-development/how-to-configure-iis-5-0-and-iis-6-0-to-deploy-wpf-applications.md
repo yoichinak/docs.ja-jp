@@ -13,12 +13,12 @@ helpviewer_keywords:
 - file extensions [WPF], registering
 - registering MIME types [WPF]
 ms.assetid: c6e8c2cb-9ba2-4e75-a0d5-180ec9639433
-ms.openlocfilehash: a1e58aef6d02b6cf05a126b6afd25ab2a6004002
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 3179679abcf32e40374c7f02e64466a326a73195
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972292"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69013017"
 ---
 # <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>方法: WPF アプリケーションを配置するように IIS 5.0 および IIS 6.0 を構成する
 
@@ -128,7 +128,7 @@ End Sub
 > [!NOTE]
 > このスクリプトを複数回実行すると、または[!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)]メタベースに複数の MIME マップエントリが作成されます。
 
-このスクリプトを実行すると、 [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)]または[!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] [!INCLUDE[TLA#tla_mmc](../../../../includes/tlasharptla-mmc-md.md)]から追加の MIME の種類が表示されない場合があります。 ただし、これらの MIME の[!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)]種類は、または[!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)]メタベースに追加されています。 次のスクリプトで[!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)]は、または[!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)]メタベースのすべての MIME の種類が表示されます。
+このスクリプトを実行すると、 [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)]または[!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] Microsoft 管理コンソール (MMC) から追加の MIME の種類が表示されない場合があります。 ただし、これらの MIME の[!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)]種類は、または[!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)]メタベースに追加されています。 次のスクリプトで[!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)]は、または[!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)]メタベースのすべての MIME の種類が表示されます。
 
 ```vb
 ' This script lists the MIME types for an IIS Server.

@@ -1,5 +1,5 @@
 ---
-title: My.Response オブジェクト (Visual Basic)
+title: My.settings オブジェクト (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - My.MyWebExtension.Response
@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - My.Response object
 ms.assetid: 626359bc-3165-40b4-bfaf-2c610e26eb5b
-ms.openlocfilehash: 0e49a3b5732ee1a3626666ce06e366c4940eca05
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: a50701998011c25c600c2a3763459c1aba3cc59a
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881962"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567454"
 ---
 # <a name="myresponse-object"></a>My.Response オブジェクト
-取得、<xref:System.Web.HttpResponse>オブジェクトに関連付けられている、<xref:System.Web.UI.Page>します。 このオブジェクトでは、HTTP 応答データをクライアントに送信し、その応答に関する情報を含めることができます。  
+に関連付けられた<xref:System.Web.HttpResponse>オブジェクトを取得します。 <xref:System.Web.UI.Page> このオブジェクトでは、HTTP 応答データをクライアントに送信し、その応答に関する情報を含めることができます。  
   
 ## <a name="remarks"></a>Remarks  
- `My.Response`オブジェクトには、現在が含まれています。<xref:System.Web.HttpResponse>ページに関連付けられているオブジェクト。  
+ オブジェクト`My.Response`には、ページ<xref:System.Web.HttpResponse>に関連付けられている現在のオブジェクトが格納されます。  
   
- `My.Response`オブジェクトは、ASP.NET アプリケーションの使用のみ。  
+ オブジェクト`My.Response`は、ASP.NET アプリケーションでのみ使用できます。  
   
 ## <a name="example"></a>例  
- 次の例からヘッダーのコレクションを取得、`My.Request`オブジェクトと使用、 `My.Response` ASP.NET ページに書き込むオブジェクト。  
+ 次の例では、 `My.Request`オブジェクトからヘッダーコレクションを取得し、 `My.Response`オブジェクトを使用して ASP.NET ページに書き込みます。  
   
- [!code-vb[VbVbalrMyWeb#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWeb/VB/Default.aspx#1)]  
+ [!code-aspx-vb[VbVbalrMyWeb#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWeb/VB/Default.aspx#1)]  
   
 ## <a name="see-also"></a>関連項目
 

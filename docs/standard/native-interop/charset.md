@@ -4,12 +4,12 @@ description: CharSet の値によって、.NET でデータをネイティブ �
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: c50c58ad639b1efb29c13e5124fe3c32e8af96fc
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: cac71c5d09514dfe1244d16224944e05826edfa9
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063334"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817842"
 ---
 # <a name="charsets-and-marshaling"></a>文字セットとマーシャリング
 
@@ -19,7 +19,7 @@ ms.locfileid: "65063334"
 
 | `CharSet` の値 | Windows            | Unix 上での .NET Core 2.2 以前 | Unix 上での .NET Core 3.0 以降および Mono |
 |-----------------|--------------------|-----------------------------------|------------------------------------------|
-| Ansi            | `char` (ANSI)      | `char` (UTF-8)                    | `char` (UTF-8)                           |
+| Ansi            | `char` (システム既定の [Windows (ANSI) コード ページ](/windows/win32/intl/code-pages))      | `char` (UTF-8)                    | `char` (UTF-8)                           |
 | Unicode         | `wchar_t` (UTF-16) | `char16_t` (UTF-16)               | `char16_t` (UTF-16)                      |
 | 自動            | `wchar_t` (UTF-16) | `char16_t` (UTF-16)               | `char` (UTF-8)                           |
 

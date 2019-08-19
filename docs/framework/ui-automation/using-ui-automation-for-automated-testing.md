@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: 47cba2344071ecf9b85f4b0235e02ea88deb6498
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 3fb5d1107a2dacdc4dfd2210322c312becdfd90b
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710233"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566943"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>UI オートメーションによる自動テスト
 > [!NOTE]
@@ -103,7 +103,7 @@ ms.locfileid: "68710233"
 ## <a name="related-tools-and-technologies"></a>関連ツールと関連技術  
  複数の関連ツールや関連技術で、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を使用した自動テストがサポートされています。  
   
-- Sn.exe は、プロバイダーとクライアントの両方の開発とデバッグに関する情報を収集[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]するために使用できるグラフィカルユーザーインターフェイス (GUI) アプリケーションです。 には、という[!INCLUDE[TLA#tla_winfxsdk](../../../includes/tlasharptla-winfxsdk-md.md)]検査が含まれています。  
+- Sn.exe は、プロバイダーとクライアントの両方の開発とデバッグに関する情報を収集[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]するために使用できるグラフィカルユーザーインターフェイス (GUI) アプリケーションです。 Windows SDK には、setup.exe が含まれています。  
   
 - MSAABridge は[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 、Active Accessibility クライアントに情報を公開します。 Active Accessibility にブリッジング[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]する主な目的は、既存の Active Accessibility クライアントが、実装[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]されている任意のフレームワークと対話できるようにすることです。  
   

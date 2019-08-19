@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 58dc070e1642773f39f9ab2a9037ca60175b27cf
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 4f54596e1ce3ed40f3a029ea6703147a97be992f
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401291"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545273"
 ---
 # <a name="panels-overview"></a>パネルの概要
 <xref:System.Windows.Controls.Panel>要素は、要素のサイズと大きさ、位置、および子コンテンツの配置を制御するコンポーネントです。 に[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]は、いくつかの<xref:System.Windows.Controls.Panel>定義済み要素と、カスタム<xref:System.Windows.Controls.Panel>要素を作成する機能が用意されています。  
@@ -118,7 +118,7 @@ ms.locfileid: "68401291"
 ### <a name="dockpanel"></a>DockPanel  
  要素<xref:System.Windows.Controls.DockPanel>は、子<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>コンテンツ要素で設定されている添付プロパティを使用して、コンテナーの端に沿ってコンテンツを配置します。 が<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>または<xref:System.Windows.Controls.Dock.Top> に設定されている場合は、子要素を互いに上または下に<xref:System.Windows.Controls.Dock.Bottom>配置します。 が<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>または<xref:System.Windows.Controls.Dock.Left> に<xref:System.Windows.Controls.Dock.Right>設定されている場合は、子要素が互いの左側または右側に配置されます。 プロパティ<xref:System.Windows.Controls.DockPanel.LastChildFill%2A>は、 <xref:System.Windows.Controls.DockPanel>の子として追加された最後の要素の位置を決定します。  
   
- を使用<xref:System.Windows.Controls.DockPanel>すると、一連のボタンなど、関連するコントロールのグループを配置できます。 または、これを使用して、[!INCLUDE[TLA#tla_outlook](../../../../includes/tlasharptla-outlook-md.md)] に見られるのと同様の "ウィンドウ形式の" [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] を作成できます。  
+ を使用<xref:System.Windows.Controls.DockPanel>すると、一連のボタンなど、関連するコントロールのグループを配置できます。 または、これを使用して、Microsoft Outlook と[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]同様の "ペイン" を作成することもできます。  
   
 #### <a name="sizing-to-content"></a>コンテンツに合わせたサイズの変更  
  <xref:System.Windows.FrameworkElement.Height%2A>プロパティと<xref:System.Windows.FrameworkElement.Width%2A>プロパティが指定されて<xref:System.Windows.Controls.DockPanel>いない場合、のコンテンツにサイズが調整されます。 サイズは、子要素のサイズに合うように、増減させることができます。 ただし、これらのプロパティが指定されていて、次に指定された子<xref:System.Windows.Controls.DockPanel>要素の領域がなくなった場合、はその子要素または後続の子要素を表示せず、後続の子要素を測定しません。  

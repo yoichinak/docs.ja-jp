@@ -42,21 +42,21 @@ End While
 |`End While`|必須。 `While` ブロックの定義を終了します。|  
   
 ## <a name="remarks"></a>Remarks  
- 使用して、`While...End While`条件が残っている限りを一連の回数、不特定数のステートメントを繰り返し表示するときに`True`します。 お勧めのその条件をテストするか、結果の判定をより柔軟にテストする場合、[の操作を行います.ステートメントをループ](../../../visual-basic/language-reference/statements/do-loop-statement.md)します。 設定された数の時間、ステートメントを繰り返し表示する場合、[をしています.次のステートメントの](../../../visual-basic/language-reference/statements/for-next-statement.md)は、通常のことをお勧めします。  
+ 使用して、`While...End While`条件が残っている限りを一連の回数、不特定数のステートメントを繰り返し表示するときに`True`します。 お勧めのその条件をテストするか、結果の判定をより柔軟にテストする場合、[Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)します。 設定された数の時間、ステートメントを繰り返し表示する場合、[For...Next ステートメント](../../../visual-basic/language-reference/statements/for-next-statement.md)は、通常のことをお勧めします。  
   
 > [!NOTE]
->  `While`でキーワードを使用しても、[の操作を行います.ステートメントをループ](../../../visual-basic/language-reference/statements/do-loop-statement.md)、 [Skip While 句](../../../visual-basic/language-reference/queries/skip-while-clause.md)と[Take While 句](../../../visual-basic/language-reference/queries/take-while-clause.md)します。  
+>  `While`でキーワードを使用しても、[Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)、 [Skip While 句](../../../visual-basic/language-reference/queries/skip-while-clause.md)と[Take While 句](../../../visual-basic/language-reference/queries/take-while-clause.md)します。  
   
  場合`condition`は`True`、すべての`statements`まで実行、`End While`ステートメントが見つかりました。 制御を返します、`While`ステートメント、および`condition`が再度チェックします。 場合`condition`が`True`プロセスが繰り返されます。 `False`、コントロールに続くステートメントに渡す、`End While`ステートメント。  
   
  `While`ステートメントは常に、ループを開始する前に、条件を確認します。 条件がループが継続`True`します。 場合`condition`は`False`一度も実行されない、ループを最初に入力するとします。  
   
- `condition`が 2 つの値の比較からの結果に評価される任意の式は、通常、[ブール データ型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)値 (`True`または`False`)。 この式は、数値型に変換されているなどの別のデータ型の値を含めることができます`Boolean`します。  
+ `condition`が 2 つの値の比較からの結果に評価される任意の式は、通常、[Boolean データ型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)値 (`True`または`False`)。 この式は、数値型に変換されているなどの別のデータ型の値を含めることができます`Boolean`します。  
   
  入れ子にすることができます`While`内に別の 1 つのループを配置することでループします。 さまざまな種類の制御構造を入れ子にすることもできます。 詳細については、次を参照してください。[制御構造の入れ子になった](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)します。  
   
-## <a name="exit-while"></a>中に終了  
- [終了中に](../../../visual-basic/language-reference/statements/exit-statement.md)ステートメントが終了する別の方法を提供する`While`ループします。 `Exit While` すぐに続くステートメントに制御を転送、`End While`ステートメント。  
+## <a name="exit-while"></a>Exit While  
+ [Exit While](../../../visual-basic/language-reference/statements/exit-statement.md)ステートメントが終了する別の方法を提供する`While`ループします。 `Exit While` すぐに続くステートメントに制御を転送、`End While`ステートメント。  
   
  通常使用する`Exit While`いくつかの条件が評価された後 (たとえば、`If...Then...Else`構造)。 不要なまたは不可能なエラー値や終了要求など、反復処理を続行する条件を検出した場合、ループを終了する可能性があります。 使用することができます`Exit While`の考えられる原因の条件をテストするとき、*無限ループ*、これは、非常に大規模または無限も可能回数だけ実行できるループします。 使用することができますし、`Exit While`ループを抜けます。  
   

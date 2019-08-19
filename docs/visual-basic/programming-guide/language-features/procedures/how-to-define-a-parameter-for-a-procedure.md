@@ -1,5 +1,5 @@
 ---
-title: '方法: プロシージャ (Visual Basic) のパラメーターを定義します。'
+title: '方法: プロシージャにパラメーターを定義する (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedure parameters [Visual Basic], defining data types for
@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64665380"
 ---
-# <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>方法: プロシージャ (Visual Basic) のパラメーターを定義します。
+# <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>方法: プロシージャにパラメーターを定義する (Visual Basic)
 A*パラメーター*それを呼び出すときに、プロシージャに値を渡すコードの呼び出しを許可します。 プロシージャの各パラメーターは、変数を宣言すると、その名前とデータ型を指定することと同じ方法で宣言します。 渡す方法を指定するかどうか、パラメーターは省略可能です。  
   
  詳細については、次を参照してください。[プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)します。  

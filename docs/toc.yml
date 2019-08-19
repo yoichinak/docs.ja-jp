@@ -267,6 +267,14 @@
           href: core/docker/build-container.md
         - name: Visual Studio のコンテナー ツール
           href: /visualstudio/containers/overview
+    - name: 診断ツール
+      items:
+        - name: 概要
+          href: core/diagnostics/index.md
+        - name: マネージド デバッガー
+          href: core/diagnostics/managed-debuggers.md
+        - name: ログとトレース
+          href: core/diagnostics/logging-tracing.md
     - name: 単体テスト
       href: core/testing/index.md
       items:
