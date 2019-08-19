@@ -1,5 +1,5 @@
 ---
-title: '方法: 演算子プロシージャ (Visual Basic) を呼び出す'
+title: '方法: 演算子プロシージャを呼び出す (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operator procedures [Visual Basic], calling
@@ -18,7 +18,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61863936"
 ---
-# <a name="how-to-call-an-operator-procedure-visual-basic"></a>方法: 演算子プロシージャ (Visual Basic) を呼び出す
+# <a name="how-to-call-an-operator-procedure-visual-basic"></a>方法: 演算子プロシージャを呼び出す (Visual Basic)
 演算子プロシージャを呼び出すには、式で演算子記号を使用します。 場合は、変換演算子を呼び出す、 [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)に値を別の 1 つのデータ型に変換します。  
   
  演算子プロシージャを明示的に呼び出すことはありません。 同様に、演算子を使用する、または`CType`代入ステートメントまたは式、演算子に通常使用する同じ方法での関数。 Visual Basic では、演算子プロシージャ呼び出しを行います。  
@@ -56,8 +56,8 @@ ms.locfileid: "61863936"
 ## <a name="see-also"></a>関連項目
 
 - [演算子プロシージャ](./operator-procedures.md)
-- [方法: 演算子を定義します。](./how-to-define-an-operator.md)
-- [方法: 変換演算子を定義します。](./how-to-define-a-conversion-operator.md)
+- [方法: 演算子を定義する](./how-to-define-an-operator.md)
+- [方法: 変換演算子を定義する](./how-to-define-a-conversion-operator.md)
 - [Operator ステートメント](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Widening](../../../../visual-basic/language-reference/modifiers/widening.md)
 - [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)
