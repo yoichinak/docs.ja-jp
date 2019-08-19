@@ -6,16 +6,16 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 2e81628930afaca62a8614df8ca0f458238c23d6
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 764a69869b8a5b8f76e2f58aced51761af73e50e
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306360"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566280"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>方法: パターン マッチング、is 演算子、as 演算子を使用して安全にキャストする
 
-オブジェクトはポリモーフィックであるため、基本クラス型の変数で派生[型](../programming-guide/types/index.md)を保持できます。 派生型のインスタンス メンバーにアクセスするには、値を[キャスト](../programming-guide/types/casting-and-type-conversions.md)して派生型に戻す必要があります。 ただし、キャストでは、<xref:System.InvalidCastException> がスローされるリスクが生まれます。 C# には、[パターン マッチング](../pattern-matching.md) ステートメントがあります。これは成功する場合のみという条件でキャストを実行します。 C# には、値が特定の型であることをテストする [is](../language-reference/operators/type-testing-and-conversion-operators.md#is-operator) 演算子と [as](../language-reference/operators/type-testing-and-conversion-operators.md#as-operator) 演算子もあります。
+オブジェクトはポリモーフィックであるため、基本クラス型の変数で派生[型](../programming-guide/types/index.md)を保持できます。 派生型のインスタンス メンバーにアクセスするには、値を[キャスト](../programming-guide/types/casting-and-type-conversions.md)して派生型に戻す必要があります。 ただし、キャストでは、<xref:System.InvalidCastException> がスローされるリスクが生まれます。 C# には、[パターン マッチング](../pattern-matching.md) ステートメントがあります。これは成功する場合のみという条件でキャストを実行します。 C# には、値が特定の型であることをテストする [is](../language-reference/operators/type-testing-and-cast.md#is-operator) 演算子と [as](../language-reference/operators/type-testing-and-cast.md#as-operator) 演算子もあります。
 
 次のコードは、パターン マッチング `is` ステートメントを示しています。 メソッド引数をテストし、それが可能な派生型セットの 1 つであるかどうかを判断するメソッドが含まれています。
 

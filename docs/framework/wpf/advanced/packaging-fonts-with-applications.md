@@ -10,26 +10,26 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: d5101d19cd250d96ba183fa14bd9db6692f05484
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b5ad2280c832b62e043a1f65f082d5475697c38c
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611858"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545361"
 ---
 # <a name="packaging-fonts-with-applications"></a>アプリケーションでのフォントのパッケージング
-このトピックでは、フォントをパッケージングする方法の概要を示します、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション。  
+このトピックでは、 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーションでフォントをパッケージ化する方法の概要について説明します。  
   
 > [!NOTE]
->  多くの種類のソフトウェアと同様に、フォント ファイルは、販売されるのではなくライセンスされます。 フォントの使用を管理するライセンス異なるベンダーが、一般に、フォントをカバーするものも含め、ほとんどのライセンス[!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)]連携してアプリケーションと[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]アプリケーション内で埋め込みまたはそれ以外の場合にフォントを許可しません。再配布します。 したがって、開発者としては、フォントをアプリケーション内に埋め込む場合や別の方法でフォントを再頒布する場合、それらフォントに必要なライセンス権限を取得する責任があります。  
+>  多くの種類のソフトウェアと同様に、フォント ファイルは、販売されるのではなくライセンスされます。 フォントの使用を制御するライセンスはベンダーによって異なりますが、一般に、 [!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)] [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]アプリケーションで提供されているフォントをカバーするライセンスや、アプリケーション内にフォントを埋め込むことはできません。分布. したがって、開発者としては、フォントをアプリケーション内に埋め込む場合や別の方法でフォントを再頒布する場合、それらフォントに必要なライセンス権限を取得する責任があります。  
 
 <a name="introduction_to_packaging_fonts"></a>   
 ## <a name="introduction-to-packaging-fonts"></a>フォントのパッケージングの概要  
- 内のリソースとしてフォントをパッケージ化することが簡単に、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ベースのアプリケーションにユーザー インターフェイス テキストとその他の種類のテキストを表示するコンテンツ。 フォントは、アプリケーションのアセンブリ ファイルと別にすることも、その中に埋め込むこともできます。 アプリケーションから参照できる、リソース専用のフォント ライブラリを作成することもできます。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション内のリソースとしてフォントを簡単にパッケージ化して、ユーザーインターフェイステキストやその他の種類のテキストベースのコンテンツを表示することができます。 フォントは、アプリケーションのアセンブリ ファイルと別にすることも、その中に埋め込むこともできます。 アプリケーションから参照できる、リソース専用のフォント ライブラリを作成することもできます。  
   
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]フォントには、型フラグ fsType、フォントのフォント埋め込みライセンス権利を示すが含まれます。 しかし、この型フラグはドキュメントに格納された埋め込みフォントのみを参照し、アプリケーションに埋め込まれたフォントは参照しません。 フォントの埋め込みを作成して、フォントの権限を取得することができます、<xref:System.Windows.Media.GlyphTypeface>オブジェクトとを参照するその<xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A>プロパティ。 「Os/2 と Windows メトリック」セクションを参照してください、 [OpenType の仕様](https://www.microsoft.com/typography/otspec/os2.htm)fsType フラグの詳細についてはします。  
+ OpenType と[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]フォントには、フォントの埋め込みライセンス権限を示す type フラグ fstype が含まれています。 しかし、この型フラグはドキュメントに格納された埋め込みフォントのみを参照し、アプリケーションに埋め込まれたフォントは参照しません。 フォントの埋め込み権限を取得するには、オブジェクトを<xref:System.Windows.Media.GlyphTypeface>作成し、その<xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A>プロパティを参照します。 FsType フラグの詳細については、 [OpenType 仕様](https://www.microsoft.com/typography/otspec/os2.htm)の「OS/2 および Windows メトリック」セクションを参照してください。  
   
- [Microsoft タイポグラフィ](https://docs.microsoft.com/typography/)Web サイトには、特定のフォント ベンダーを検索またはカスタムの作業のフォント ベンダーを検索するのに役立つ連絡先の情報が含まれています。  
+ [Microsoft タイポグラフィ](https://docs.microsoft.com/typography/)Web サイトには、特定のフォントベンダの検索や、カスタム作業のためのフォントベンダの検索に役立つ連絡先情報が含まれています。  
   
 <a name="adding_fonts_as_content_items"></a>   
 ## <a name="adding-fonts-as-content-items"></a>コンテンツ項目としてのフォントの追加  
@@ -47,7 +47,7 @@ ms.locfileid: "64611858"
 </Project>  
 ```  
   
- アプリケーションが実行時にフォントを使用できるようにするには、アプリケーションの展開ディレクトリでフォントをアクセス可能にする必要があります。 `<CopyToOutputDirectory>`アプリケーションのプロジェクト ファイル内の要素を使用すると、ビルド プロセス中に、アプリケーションの展開ディレクトリにフォントを自動的にコピーします。 展開ディレクトリにフォントをコピーする方法を次のプロジェクト ファイル例に示します。  
+ アプリケーションが実行時にフォントを使用できるようにするには、アプリケーションの展開ディレクトリでフォントをアクセス可能にする必要があります。 アプリケーションのプロジェクトファイルの要素を使用すると、ビルド処理中にフォントをアプリケーション配置ディレクトリに自動的にコピーできます。`<CopyToOutputDirectory>` 展開ディレクトリにフォントをコピーする方法を次のプロジェクト ファイル例に示します。  
   
 ```xml  
 <ItemGroup>  
@@ -81,19 +81,19 @@ ms.locfileid: "64611858"
 ```  
   
 > [!NOTE]
->  アプリケーションにリソースとしてフォントを追加するときに設定して確認、`<Resource>`要素、および not、`<EmbeddedResource>`アプリケーションのプロジェクト ファイル内の要素。 `<EmbeddedResource>`ビルド アクションで要素がサポートされていません。  
+>  フォントをリソースとしてアプリケーションに追加するときは、アプリケーションのプロジェクト`<Resource>`ファイルの`<EmbeddedResource>`要素ではなく、要素を設定していることを確認してください。 ビルドアクションの要素はサポートされていません。 `<EmbeddedResource>`  
   
  アプリケーションのフォント リソースを参照する方法を次のマークアップ例に示します。  
   
  [!code-xaml[FontSnippets#FontPackageSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml#fontpackagesnippet1)]  
   
 ### <a name="referencing-font-resource-items-from-code"></a>コードからのフォント リソース項目の参照  
- コードからフォント リソース項目を参照するためには、リソースの参照を 2 つの部分のフォントを指定する必要があります。 基本[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]; とフォントの場所の参照。 これらの値のパラメーターとして使用する、<xref:System.Windows.Media.FontFamily.%23ctor%2A>メソッド。 次のコード例と呼ばれるプロジェクトのサブディレクトリに、アプリケーションのフォント リソースを参照する方法を示しています。`resources`します。  
+ コードからフォントリソース項目を参照するには、2つの部分で構成されるフォントリソース参照 ( [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]基本) とフォントの場所の参照を指定する必要があります。 これらの値は、 <xref:System.Windows.Media.FontFamily.%23ctor%2A>メソッドのパラメーターとして使用されます。 次のコード例は、という名前`resources`のプロジェクトサブディレクトリでアプリケーションのフォントリソースを参照する方法を示しています。  
   
  [!code-csharp[FontSnippets#FontPackageSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet2)]
  [!code-vb[FontSnippets#FontPackageSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet2)]  
   
- 基本[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]フォント リソースが存在するアプリケーションのサブディレクトリを含めることができます。 この場合は、フォントの場所の参照はディレクトリを指定する必要はありませんが、主要なを含める必要があります"`./`"、ベースで指定した同じディレクトリには、フォント リソースを示す[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]します。 次のコード例は、フォント リソース項目を参照する別の方法を示しています。これは前のコード例と同等です。  
+ ベース[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]には、フォントリソースが存在するアプリケーションサブディレクトリを含めることができます。 この場合、フォントの場所の参照ではディレクトリを指定する必要はありませんが、先頭に "`./`" を含める必要があります。これは、フォントリソースがベース[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]によって指定された同じディレクトリにあることを示します。 次のコード例は、フォント リソース項目を参照する別の方法を示しています。これは前のコード例と同等です。  
   
  [!code-csharp[FontSnippets#FontPackageSnippet5](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet5)]
  [!code-vb[FontSnippets#FontPackageSnippet5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet5)]  
@@ -119,12 +119,12 @@ ms.locfileid: "64611858"
  [!code-vb[FontSnippets#FontPackageSnippet4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/pages/homepage.xaml.vb#fontpackagesnippet4)]  
   
 ### <a name="enumerating-fonts-in-an-application"></a>アプリケーションでのフォントの列挙  
- アプリケーション内のリソース項目としてフォントを列挙するためにいずれかの操作を使用して、<xref:System.Windows.Media.Fonts.GetFontFamilies%2A>または<xref:System.Windows.Media.Fonts.GetTypefaces%2A>メソッド。 次の例は、使用する方法を示します、<xref:System.Windows.Media.Fonts.GetFontFamilies%2A>メソッドのコレクションを返す<xref:System.Windows.Media.FontFamily>アプリケーション フォントの場所からのオブジェクト。 ここでは、アプリケーションに "resources" という名前のサブディレクトリが含まれています。  
+ アプリケーションのリソース項目としてフォントを列挙するに<xref:System.Windows.Media.Fonts.GetFontFamilies%2A>は、メソッドまたは<xref:System.Windows.Media.Fonts.GetTypefaces%2A>メソッドを使用します。 次の例は、 <xref:System.Windows.Media.Fonts.GetFontFamilies%2A>メソッドを使用して、アプリケーションのフォントの場所からオブジェクトの<xref:System.Windows.Media.FontFamily>コレクションを返す方法を示しています。 ここでは、アプリケーションに "resources" という名前のサブディレクトリが含まれています。  
   
  [!code-csharp[FontSnippets#FontsSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontssnippet3)]
  [!code-vb[FontSnippets#FontsSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontssnippet3)]  
   
- 次の例は、使用する方法を示します、<xref:System.Windows.Media.Fonts.GetTypefaces%2A>メソッドのコレクションを返す<xref:System.Windows.Media.Typeface>アプリケーション フォントの場所からのオブジェクト。 ここでは、アプリケーションに "resources" という名前のサブディレクトリが含まれています。  
+ 次の例は、 <xref:System.Windows.Media.Fonts.GetTypefaces%2A>メソッドを使用して、アプリケーションのフォントの場所からオブジェクトの<xref:System.Windows.Media.Typeface>コレクションを返す方法を示しています。 ここでは、アプリケーションに "resources" という名前のサブディレクトリが含まれています。  
   
  [!code-csharp[FontSnippets#FontsSnippet7](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontssnippet7)]
  [!code-vb[FontSnippets#FontsSnippet7](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontssnippet7)]  
@@ -152,19 +152,19 @@ ms.locfileid: "64611858"
  [!code-xaml[OpenTypeFontsSample#OpenTypeFontsSample1](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontsSample/CS/Kootenay.xaml#opentypefontssample1)]  
   
 > [!NOTE]
->  この SDK には、一連サンプルにはが含まれています。[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]で使用できるフォント[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。 フォントはリソース専用ライブラリで定義されています。 詳細については、「[OpenType フォント パックのサンプル](sample-opentype-font-pack.md)」をご覧ください。  
+>  この SDK には、アプリケーションで[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用できる一連のサンプル OpenType フォントが含まれています。 フォントはリソース専用ライブラリで定義されています。 詳細については、「[OpenType フォント パックのサンプル](sample-opentype-font-pack.md)」をご覧ください。  
   
 <a name="limitations_on_font_usage"></a>   
 ## <a name="limitations-on-font-usage"></a>フォントの使用に関する制限事項  
- 次の一覧でフォントの使用、パッケージでいくつかの制限をについて説明します[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。  
+ 次の一覧では、アプリケーションで[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]のフォントのパッケージ化と使用に関するいくつかの制限事項について説明します。  
   
-- **フォント埋め込みアクセス許可ビット:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションはフォント埋め込みアクセス許可ビットのチェックも確認もしません。 参照してください、[フォントのパッケージングの概要](#introduction_to_packaging_fonts)詳細についてはします。  
+- **フォント埋め込みアクセス許可ビット:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションはフォント埋め込みアクセス許可ビットのチェックも確認もしません。 詳細については、「 [Introduction_to_Packing Fonts](#introduction_to_packaging_fonts) 」セクションを参照してください。  
   
-- **フォントの起点サイト:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションには、http または ftp へのフォント参照は許可しない[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]します。  
+- **起点サイトフォント:** アプリケーションでは、http または ftp [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]へのフォント参照は許可されません。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]  
   
-- **パックを使用して絶対 URI: 表記:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションでは作成することはできません、<xref:System.Windows.Media.FontFamily>オブジェクトを使用してプログラムで"pack:"、絶対パスの一部として[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]フォントへの参照。 たとえば、`"pack://application:,,,/resources/#Pericles Light"`は無効なフォント参照です。  
+- **Pack: 表記を使用した絶対 URI** :アプリケーションでは、フォントへの絶対<xref:System.Windows.Media.FontFamily> [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]参照の一部として "pack:" を使用してプログラムによってオブジェクトを作成することはできません。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] たとえば、 `"pack://application:,,,/resources/#Pericles Light"`は無効なフォント参照です。  
   
-- **自動フォント埋め込み:** 設計時に、アプリケーションのフォントの使用を検索して、自動的にアプリケーションのリソースで、フォントの埋め込みのサポートはありません。  
+- **フォントの自動埋め込み:** デザイン時に、アプリケーションのフォントの使用を検索したり、アプリケーションのリソースにフォントを自動的に埋め込んだりすることはできません。  
   
 - **フォント サブセット:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションでは、固定ドキュメント以外でフォント サブセットの作成はサポートされていません。  
   
@@ -174,7 +174,7 @@ ms.locfileid: "64611858"
 
 - <xref:System.Windows.Documents.Typography>
 - <xref:System.Windows.Media.FontFamily>
-- [Microsoft タイポグラフィ:リンク、ニュース、および連絡先](https://docs.microsoft.com/typography/)
-- [OpenType の仕様](https://www.microsoft.com/typography/otspec/)
+- [Microsoft タイポグラフィ:リンク、ニュース、連絡先](https://docs.microsoft.com/typography/)
+- [OpenType 仕様](https://www.microsoft.com/typography/otspec/)
 - [OpenType フォントの機能](opentype-font-features.md)
 - [OpenType フォント パックのサンプル](sample-opentype-font-pack.md)

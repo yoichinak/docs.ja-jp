@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: cb2dd26d3f111e8de0dc9c7904837d9b053d17bb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f3b0fe20ae9f6eb50f26d044f18e02214ce97757
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724714"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038471"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework でのトランスポート層セキュリティ (TLS) のベスト プラクティス
 
@@ -86,7 +86,7 @@ TCP ソケット ネットワークで、.NET Framework 4.7 以降のバージ�
 
 WCF は、.NET Framework の他の部分と同じネットワーク スタックを使います。
 
-4.7.1 が対象で、次の方法により明示的に構成されていない場合、WCF は既定で OS が最適なセキュリティ プロトコルを選択できるように構成されます。
+4\.7.1 が対象で、次の方法により明示的に構成されていない場合、WCF は既定で OS が最適なセキュリティ プロトコルを選択できるように構成されます。
 
 - アプリケーション構成ファイル。
 - **または**、アプリケーションのソース コード。
@@ -242,7 +242,7 @@ Windows Registry Editor Version 5.00
 有効になっている場合 (既定では、`AppContext` スイッチまたは Windows レジストリにより)、アプリが TLS セキュリティ プロトコルを要求すると、.NET Framework は `SCH_USE_STRONG_CRYPTO` フラグを使います。 `SCH_USE_STRONG_CRYPTO` フラグは、`AppContext` スイッチまたはレジストリを使って、既定で有効にすることができます。 OS は `Schannel` にフラグを渡して、既知の脆弱な暗号アルゴリズム、暗号スイート、および相互運用性向上のために他で有効になっている可能性のある TLS/SSL プロトコルのバージョンを無効にするよう指示します。 詳細については次を参照してください:
 
 - [セキュリティで保護されたチャネル](/windows/desktop/SecAuthN/secure-channel)
-- [SCHANNEL_CRED 構造体](/windows/desktop/api/schannel/ns-schannel-_schannel_cred)
+- [SCHANNEL_CRED 構造体](/windows/win32/api/schannel/ns-schannel-schannel_cred)
 
 `SCH_USE_STRONG_CRYPTO` フラグは、ユーザーが <xref:System.Net.SecurityProtocolType> または <xref:System.Security.Authentication.SslProtocols> の `Tls` (TLS 1.0)、`Tls11`、または `Tls12` 列挙値を明示的に使ったときも、`Schannel` に渡されます。
 

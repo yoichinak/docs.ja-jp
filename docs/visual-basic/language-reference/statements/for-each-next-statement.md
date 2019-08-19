@@ -60,7 +60,7 @@ Next [ element ]
  使用して、 `For Each`.`Next`コレクションまたは配列の各要素の一連のステートメントを繰り返し表示するときにループ処理します。  
   
 > [!TIP]
->  A[をしています.次のステートメントの](../../../visual-basic/language-reference/statements/for-next-statement.md)うまくときに、ループの各繰り返しを制御変数に関連付けるし、その変数の最初と最後の値を決定します。 ただし、コレクションを扱う場合は、最初と最後の値の概念は意味のあると、コレクションは、要素の数がわからないとは限りません。 このような場合で、 `For Each`.`Next`ループは、多くの場合、ことをお勧めします。  
+>  [For...Next ステートメント](../../../visual-basic/language-reference/statements/for-next-statement.md)うまくときに、ループの各繰り返しを制御変数に関連付けるし、その変数の最初と最後の値を決定します。 ただし、コレクションを扱う場合は、最初と最後の値の概念は意味のあると、コレクションは、要素の数がわからないとは限りません。 このような場合で、 `For Each`.`Next`ループは、多くの場合、ことをお勧めします。  
   
  次の例では、 `For Each`.`Next` ステートメントは、リスト コレクションのすべての要素を反復処理します。  
   
@@ -79,7 +79,7 @@ Next [ element ]
   
  さまざまな種類を 1 つの制御構造の入れ子にすることもできます。 詳細については、次を参照してください。[制御構造の入れ子になった](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)します。  
   
-## <a name="exit-for-and-continue-for"></a>終了しの続行  
+## <a name="exit-for-and-continue-for"></a>Exit For と Continue For  
  [Exit For](../../../visual-basic/language-reference/statements/exit-statement.md)ステートメントは、実行を終了する、 `For`.`Next` これに続くステートメントにループと転送の制御、`Next`ステートメント。  
   
  `Continue For`ステートメント コントロールに直ちに移します、ループの次の反復処理します。 詳細については、次を参照してください。 [Continue ステートメント](../../../visual-basic/language-reference/statements/continue-statement.md)します。  
@@ -96,14 +96,14 @@ Next [ element ]
   
 - 例外がキャッチされました、 `Try`.`Catch`...`Finally`.使用する場合があります`Exit For`の最後に、`Finally`ブロックします。  
   
-- 何度も長時間または無限でも実行できるループ、無限ループがあります。 このような条件を検出した場合は使用できます`Exit For`ループを抜けます。 詳細については、次を参照してください[操作を行います...ステートメントをループ](../../../visual-basic/language-reference/statements/do-loop-statement.md)です。  
+- 何度も長時間または無限でも実行できるループ、無限ループがあります。 このような条件を検出した場合は使用できます`Exit For`ループを抜けます。 詳細については、[Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)を参照してください。  
   
-## <a name="iterators"></a>Iterators  
+## <a name="iterators"></a>反復子  
  使用する、*反復子*コレクションに対するカスタム イテレーションを実行します。 関数は、反復子または`Get`アクセサー。 使用して、`Yield`ステートメントを一度に 1 つのコレクションの各要素を返します。  
   
  使用して、反復子を呼び出す、`For Each...Next`ステートメント。 `For Each` ループの各イテレーションは、反復子を呼び出します。 ときに、`Yield`ステートメントが反復子の式に到達、`Yield`ステートメントが返され、コードの現在の場所が保持されます。 次回、反復子が呼び出されると、この位置から実行が再開されます。  
   
- 次の例では、反復子関数を使用します。 Iterator 関数が、`Yield`内にあるステートメント、[をしています.[次へ]](../../../visual-basic/language-reference/statements/for-next-statement.md)ループします。 `ListEvenNumbers`メソッドは、の各反復処理、`For Each`ステートメント本体は、次に進みますこの反復子関数の呼び出しを作成します。`Yield`ステートメント。  
+ 次の例では、反復子関数を使用します。 Iterator 関数が、`Yield`内にあるステートメント、[For…Next](../../../visual-basic/language-reference/statements/for-next-statement.md)ループします。 `ListEvenNumbers`メソッドは、の各反復処理、`For Each`ステートメント本体は、次に進みますこの反復子関数の呼び出しを作成します。`Yield`ステートメント。  
   
  [!code-vb[VbVbalrStatements#127](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#127)]  
   

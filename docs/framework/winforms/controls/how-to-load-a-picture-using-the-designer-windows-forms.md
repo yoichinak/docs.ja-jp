@@ -8,33 +8,30 @@ helpviewer_keywords:
 - forms [Windows Forms], displaying images
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 4dc7b973-afb1-4276-8322-20825af96655
-ms.openlocfilehash: 1d95d5baafa42c7dea40933ba837b684d90b7b2b
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 818bc63b5b3bea6c73804f716a72ba3cd1a62b4c
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972372"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039681"
 ---
 # <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>方法: デザイナーを使用して画像を読み込む (Windows フォーム)
 
 Windows フォーム<xref:System.Windows.Forms.PictureBox>コントロールを使用すると、プロパティを<xref:System.Windows.Forms.PictureBox.Image%2A>有効な画像に設定することによって、デザイン時にフォームの画像を読み込んで表示することができます。 次の表に、許容されるファイルの種類を示します。
 
 |種類|ファイル名の拡張子|
-|----------|-------------------------|
+|---|---|
 |ビットマップ|.bmp|
 |アイコン|.ico|
 |GIF|.gif|
 |ピクチャ|.wmf|
 |JPEG|.jpg|
 
-> [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。
-
 ## <a name="to-display-a-picture-at-design-time"></a>デザイン時に画像を表示するには
 
 1. フォーム上<xref:System.Windows.Forms.PictureBox>にコントロールを描画します。
 
-2. プロパティウィンドウで、 <xref:System.Windows.Forms.PictureBox.Image%2A>プロパティを選択し、省略記号ボタンをクリックして **開く** ダイアログボックスを表示します。
+2. **[プロパティ]** ウィンドウで、 <xref:System.Windows.Forms.PictureBox.Image%2A>プロパティを選択し、省略記号ボタンを選択して **[開く]** ダイアログボックスを表示します。
 
 3. 特定のファイルの種類 (.gif ファイルなど) を探している場合は、 **[ファイルの種類]** ボックスでそれを選択します。
 
@@ -42,7 +39,7 @@ Windows フォーム<xref:System.Windows.Forms.PictureBox>コントロールを�
 
 ## <a name="to-clear-the-picture-at-design-time"></a>デザイン時に画像をクリアするには
 
-1. **[プロパティ]** ウィンドウで、 <xref:System.Windows.Forms.PictureBox.Image%2A>プロパティを選択し、イメージオブジェクトの名前の左側に表示される小さいサムネイル画像を右クリックします。 **[リセット]** を選択します。
+1. **[プロパティ]** ウィンドウで、 <xref:System.Windows.Forms.PictureBox.Image%2A>プロパティを選択します。 イメージオブジェクトの名前の左側に表示される小さいサムネイル画像を右クリックし、 **[リセット]** を選択します。
 
 ## <a name="see-also"></a>関連項目
 

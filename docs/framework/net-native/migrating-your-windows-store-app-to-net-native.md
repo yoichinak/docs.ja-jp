@@ -5,10 +5,10 @@ ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c830b7097d12017348d8669071ec6d7c122bfe44
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2019
+ms.lasthandoff: 07/26/2019
 ms.locfileid: "68364080"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Windows ストア アプリの .NET ネイティブへの移行
@@ -159,7 +159,7 @@ Windows ストアアプリ用 .NET と .NET ネイティブの動作には、リ
 
 **その他の API**
 
-- 属性[](xref:System.Type.GUID) <xref:System.PlatformNotSupportedException> が<xref:System.Runtime.InteropServices.GuidAttribute>型に適用されていない場合、TypeInfo プロパティは例外をスローします。 GUID は主に COM サポートで使用されます。
+- <xref:System.Runtime.InteropServices.GuidAttribute> 属性が型に適用されていない場合、[TypeInfo.GUID](xref:System.Type.GUID) プロパティは <xref:System.PlatformNotSupportedException> 例外をスローします。 GUID は主に COM サポートで使用されます。
 
 - メソッド<xref:System.DateTime.Parse%2A?displayProperty=nameWithType>は、.NET ネイティブの短い日付を含む文字列を正しく解析します。 ただし、Microsoft サポート技術情報の記事 [KB2803771](https://support.microsoft.com/kb/2803771) と [KB2803755](https://support.microsoft.com/kb/2803755)で説明されている日付と時刻の解析の変更に対する互換性は保持されません。
 

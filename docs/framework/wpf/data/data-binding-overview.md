@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: e1fbb46c76fbc729818b6ff24b55c0d18f6b05df
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 44a35131273c6f191ab5da5bc1639d97bd961ff1
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400698"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567522"
 ---
 # <a name="data-binding-overview"></a>データ バインディングの概要
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] データ バインディングは、データを表示したり操作するための単純で一貫した方法をアプリケーションに提供します。 要素は、共通言語ランタイム (CLR) オブジェクトおよび[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]の形式で、さまざまなデータソースのデータにバインドできます。 <xref:System.Windows.Controls.ContentControl>などの <xref:System.Windows.Controls.Button>と<xref:System.Windows.Controls.ItemsControl>など <xref:System.Windows.Controls.ListBox>と<xref:System.Windows.Controls.ListView>を 1 つのデータ項目の柔軟なスタイルまたはデータ項目のコレクションを有効にする機能が組み込まれました。 並べ替えビュー、フィルター ビュー、およびグループ ビューは、データの上に生成できます。  
@@ -70,7 +70,7 @@ ms.locfileid: "68400698"
   
 - 図には指定されていませんが、バインディングソースオブジェクトはカスタム CLR オブジェクトに限定されないことに注意してください。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]データバインディングは、CLR オブジェクトと[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]の形式のデータをサポートします。 いくつかの例を示す<xref:System.Windows.UIElement>ために、バインディングソースは、、すべてのリストオブジェクト、ADO.NET data または Web サービスに関連付けられている CLR オブジェクト、または[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]データを含む XmlNode にすることができます。 詳しくは、「[バインディング ソースの概要](binding-sources-overview.md)」をご覧ください。  
   
- 他の [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] トピックを読みながら、バインディングを確立すると、バインディング ターゲットをバインディング ソース*に*バインドしていることを理解することが重要です。 たとえば[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 、データバインディングを<xref:System.Windows.Controls.ListBox>使用しての基になるデータをいくつか表示する場合は<xref:System.Windows.Controls.ListBox> 、を[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]データにバインドします。  
+ 他の SDK のトピックを参照するときは、バインドを確立するときにバインディングターゲットをバインディングソース*に*バインドすることを忘れないように注意する必要があります。 たとえば[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 、データバインディングを<xref:System.Windows.Controls.ListBox>使用しての基になるデータをいくつか表示する場合は<xref:System.Windows.Controls.ListBox> 、を[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]データにバインドします。  
   
  バインディングを確立するには、 <xref:System.Windows.Data.Binding>オブジェクトを使用します。 このトピックの残りの部分では、に関連するさまざまな概念と、 <xref:System.Windows.Data.Binding>オブジェクトのプロパティと使用方法について説明します。  
   
@@ -393,7 +393,7 @@ ms.locfileid: "68400698"
   
  ![データ バインディングの検証エラー](./media/databindingdemo-validation.PNG "DataBindingDemo_Validation")  
   
- に<xref:System.Windows.Data.Binding>検証規則が関連付けられているが、バインド<xref:System.Windows.Controls.Validation.ErrorTemplate%2A>されたコントロールにを指定<xref:System.Windows.Controls.Validation.ErrorTemplate%2A>していない場合は、検証エラーが発生したときにユーザーに通知するための既定値が使用されます。 既定値<xref:System.Windows.Controls.Validation.ErrorTemplate%2A>は、装飾レイヤーの赤い枠線を定義するコントロールテンプレートです。 <xref:System.Windows.Controls.Validation.ErrorTemplate%2A>既定の<xref:System.Windows.Controls.TextBox> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]およびでは、検証エラーが発生すると、StartPriceEntryForm のは次のようになります。  <xref:System.Windows.Controls.ToolTip>  
+ に<xref:System.Windows.Data.Binding>検証規則が関連付けられているが、バインド<xref:System.Windows.Controls.Validation.ErrorTemplate%2A>されたコントロールにを指定<xref:System.Windows.Controls.Validation.ErrorTemplate%2A>していない場合は、検証エラーが発生したときにユーザーに通知するための既定値が使用されます。 既定値<xref:System.Windows.Controls.Validation.ErrorTemplate%2A>は、装飾レイヤーの赤い枠線を定義するコントロールテンプレートです。 <xref:System.Windows.Controls.Validation.ErrorTemplate%2A>既定の<xref:System.Windows.Controls.TextBox> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]およびでは、検証エラーが発生すると、StartPriceEntryForm のは次のようになります。 <xref:System.Windows.Controls.ToolTip>  
   
  ![データ バインディングの検証エラー](./media/databindingdemo-validationdefault.PNG "DataBindingDemo_ValidationDefault")  
   

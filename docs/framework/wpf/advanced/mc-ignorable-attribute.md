@@ -9,12 +9,12 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-ms.openlocfilehash: 40c1a8513608728a84b6b605f9ad18603123ea2e
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: e99ca09d51f3ba6c01b9e400bfba00749faf62b3
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401532"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567439"
 ---
 # <a name="mcignorable-attribute"></a>mc:Ignorable 属性
 マークアップファイルで検出された[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 名前空間プレフィックスがプロセッサによって無視される可能性があるかどうかを指定します。[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 属性`mc:Ignorable`は、カスタム名前空間マッピング[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]とバージョン管理の両方で、マークアップ互換性をサポートしています。  
@@ -63,7 +63,7 @@ ms.locfileid: "68401532"
   
  属性では、1つ以上の空白文字を区切り記号として使用することで、複数のプレフィックス`mc:Ignorable="ignore1 ignore2"`を指定できます。たとえば、のようになります。  
 
- 名前[!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)]空間は、 [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)]のこの領域内に記載されていない他の要素と属性を定義します。 詳細については、「 [XML マークアップ互換性の仕様](/office/open-xml/introduction-to-markup-compatibility#markup-compatibility-in-the-open-xml-file-formats-specification)」を参照してください。  
+ 名前[!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)]空間は、SDK のこの領域内には記載されていない他の要素と属性を定義します。 詳細については、「 [XML マークアップ互換性の仕様](/office/open-xml/introduction-to-markup-compatibility#markup-compatibility-in-the-open-xml-file-formats-specification)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

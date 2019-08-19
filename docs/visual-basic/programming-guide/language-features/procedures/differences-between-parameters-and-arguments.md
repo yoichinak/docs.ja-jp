@@ -44,7 +44,7 @@ ms.locfileid: "61864248"
 - [Function プロシージャ](./function-procedures.md)
 - [Property プロシージャ](./property-procedures.md)
 - [演算子プロシージャ](./operator-procedures.md)
-- [方法: プロシージャのパラメーターを定義します。](./how-to-define-a-parameter-for-a-procedure.md)
+- [方法: プロシージャにパラメーターを定義する](./how-to-define-a-parameter-for-a-procedure.md)
 - [方法: プロシージャに引数を渡す](./how-to-pass-arguments-to-a-procedure.md)
 - [引数の値渡しと参照渡し](./passing-arguments-by-value-and-by-reference.md)
 - [再帰プロシージャ](./recursive-procedures.md)
