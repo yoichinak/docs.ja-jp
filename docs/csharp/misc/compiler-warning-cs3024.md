@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CS3024
 ms.assetid: fef9db31-9a7f-42d5-ad37-3e7faf661f95
-ms.openlocfilehash: 7515fdd7bc8f57890e3f1aac6303ed4607cc2249
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6147fc1aafc06d7c844cfc39eafebbd737d89610
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61688255"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69601960"
 ---
 # <a name="compiler-warning-cs3024"></a>コンパイラの警告 CS3024
 制約型 'type' が CLS に準拠していません。  
@@ -57,4 +57,4 @@ public class Test
   
 ## <a name="see-also"></a>関連項目
 
-- [型パラメーターの制約](../../csharp/programming-guide/generics/constraints-on-type-parameters.md)
+- [型パラメーターの制約](../programming-guide/generics/constraints-on-type-parameters.md)
