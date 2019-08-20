@@ -1,5 +1,5 @@
 ---
-title: '方法: 変換演算子 (Visual Basic) を定義します。'
+title: '方法: 変換演算子を定義する (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], defining
@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61863715"
 ---
-# <a name="how-to-define-a-conversion-operator-visual-basic"></a>方法: 変換演算子 (Visual Basic) を定義します。
+# <a name="how-to-define-a-conversion-operator-visual-basic"></a>方法: 変換演算子を定義する (Visual Basic)
 クラスまたは構造体を定義している場合は、クラスまたは構造体の型と別のデータ型の間の型変換演算子を定義することができます (など`Integer`、 `Double`、または`String`)。  
   
  として型の変換を定義、 [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)クラスまたは構造内のプロシージャです。 変換のすべてのプロシージャである必要があります`Public Shared`、いずれかを指定する必要がありますそれぞれ[Widening](../../../../visual-basic/language-reference/modifiers/widening.md)または[Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)します。  
@@ -35,9 +35,9 @@ ms.locfileid: "61863715"
 ## <a name="see-also"></a>関連項目
 
 - [演算子プロシージャ](./operator-procedures.md)
-- [方法: 演算子を定義します。](./how-to-define-an-operator.md)
+- [方法: 演算子を定義する](./how-to-define-an-operator.md)
 - [方法: 演算子プロシージャを呼び出す](./how-to-call-an-operator-procedure.md)
-- [方法: 演算子を定義するクラスを使用して、](./how-to-use-a-class-that-defines-operators.md)
+- [方法: 演算子を定義するクラスを使用する](./how-to-use-a-class-that-defines-operators.md)
 - [Operator ステートメント](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Structure ステートメント](../../../../visual-basic/language-reference/statements/structure-statement.md)
 - [方法: 構造体を宣言する](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
