@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: ebaa5c2f3a2e1770a50a401fb6771d8c5ad3ba63
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 8017895450c989683b7fb246c9c1fb7c23fa9e5e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972225"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611472"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML ブラウザー アプリケーションの概要
 <a name="introduction"></a>
@@ -52,7 +52,7 @@ ms.locfileid: "68972225"
 |アプリケーション マニフェスト (.manifest)|アプリケーションに関連付けられたメタデータが含まれます。拡張子は .manifest です。|  
 |配置マニフェスト (.xbap)|このファイルには、ClickOnce がアプリケーションの配置に使用する情報が含まれており、拡張子は xbap です。|  
   
- XBAP は Web サーバー ([!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] 以降など) に配置します。 Web サーバーに .NET Framework をインストールする必要はありませんが、Multipurpose Internet Mail Extensions (MIME) の[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]種類とファイル名拡張子を登録する必要があります。 詳細については、[WPF アプリケーションを配置するための IIS 5.0 および IIS 6.0 の構成](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)に関するページをご覧ください。  
+ Xbap は、Microsoft インターネットインフォメーションサービス (IIS) 5.0 以降のバージョンなど、Web サーバーに展開します。 Web サーバーに .NET Framework をインストールする必要はありませんが、Multipurpose Internet Mail Extensions (MIME) の[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]種類とファイル名拡張子を登録する必要があります。 詳細については、[WPF アプリケーションを配置するための IIS 5.0 および IIS 6.0 の構成](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)に関するページをご覧ください。  
   
  XBAP を配置用に準備するには、.exe および関連付けられたマニフェストを Web サーバーにコピーします。 配置マニフェスト (拡張子が .xbap のファイル) を開くために、ハイパーリンクを含む HTML ページを作成します。 ユーザーが xbap ファイルへのリンクをクリックすると、アプリケーションをダウンロードして起動するメカニズムが ClickOnce によって自動的に処理されます。 次のコード例は、XBAP を指定するハイパーリンクを含む HTML ページを示しています。  
   
