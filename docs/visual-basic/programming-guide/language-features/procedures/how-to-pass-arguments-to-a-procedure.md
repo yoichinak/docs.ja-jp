@@ -1,5 +1,5 @@
 ---
-title: '方法: (Visual Basic)、プロシージャに引数を渡す'
+title: '方法: プロシージャに引数を渡す (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arguments [Visual Basic], passing to procedures
@@ -18,7 +18,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61863442"
 ---
-# <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>方法: (Visual Basic)、プロシージャに引数を渡す
+# <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>方法: プロシージャに引数を渡す (Visual Basic)
 プロシージャを呼び出すときに、引数リストをかっこで、プロシージャ名に従ってください。 プロシージャに定義されたすべての必須パラメーターに対応する引数を指定して、引数を指定することができます必要に応じて、`Optional`パラメーター。 指定しない場合、`Optional`呼び出しのパラメーターは、すべての後続の引数を指定している場合、引数リスト内の場所をマークする、コンマを含める必要があります。  
   
  など、対応するパラメーターの異なるに渡すには、データ型の引数にするかどうかに`Byte`に`String`、型チェック スイッチを設定することができます ([Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) に`Off`します。 場合`Option Strict`は`On`、いずれかを使用する必要がありますまたはキーワードの明示的な変換の変換を拡大します。 詳細については、次を参照してください。 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)と[型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)します。  
@@ -51,7 +51,7 @@ ms.locfileid: "61863442"
 - [Function プロシージャ](./function-procedures.md)
 - [Property プロシージャ](./property-procedures.md)
 - [演算子プロシージャ](./operator-procedures.md)
-- [方法: プロシージャのパラメーターを定義します。](./how-to-define-a-parameter-for-a-procedure.md)
+- [方法: プロシージャにパラメーターを定義する](./how-to-define-a-parameter-for-a-procedure.md)
 - [引数の値渡しと参照渡し](./passing-arguments-by-value-and-by-reference.md)
 - [再帰プロシージャ](./recursive-procedures.md)
 - [プロシージャのオーバーロード](./procedure-overloading.md)
