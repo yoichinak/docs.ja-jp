@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generics
 - generics [C#]
 ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
-ms.openlocfilehash: e32eb7c60e01ca72824ffb3a1e1269cf34650f5a
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 7d212aeaa7d7a8c3f152f8610a7ef3fe5de0fe23
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423392"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589595"
 ---
 # <a name="generics-c-programming-guide"></a>ジェネリック (C# プログラミング ガイド)
 ジェネリックは、バージョン 2.0 の C# 言語と共通言語ランタイム (CLR) に追加されたものです。 ジェネリックは、.NET Framework に型パラメーターという概念を導入します。型パラメーターを使用すると、クラスやメソッドがクライアント コードで宣言され、インスタンス化されるまで、1 つ以上の型の指定を遅延させるクラスとメソッドを設計できます。 たとえば、ジェネリック型パラメーター T を使用すると、次に示すようにランタイムのキャストやボックス化操作のコストやリスクを負わずに他のクライアント コードで使用できる単一のクラスを記述できます。  
@@ -53,23 +53,23 @@ ms.locfileid: "66423392"
 ## <a name="related-sections"></a>関連項目  
  詳細情報  
   
-- [ジェネリック型パラメーター](../../../csharp/programming-guide/generics/generic-type-parameters.md)  
+- [ジェネリック型パラメーター](./generic-type-parameters.md)  
   
-- [型パラメーターの制約](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)  
+- [型パラメーターの制約](./constraints-on-type-parameters.md)  
   
-- [ジェネリック クラス](../../../csharp/programming-guide/generics/generic-classes.md)  
+- [ジェネリック クラス](./generic-classes.md)  
   
-- [ジェネリック インターフェイス](../../../csharp/programming-guide/generics/generic-interfaces.md)  
+- [ジェネリック インターフェイス](./generic-interfaces.md)  
   
-- [ジェネリック メソッド](../../../csharp/programming-guide/generics/generic-methods.md)  
+- [ジェネリック メソッド](./generic-methods.md)  
   
-- [汎用デリゲート](../../../csharp/programming-guide/generics/generic-delegates.md)  
+- [汎用デリゲート](./generic-delegates.md)  
   
-- [C++ テンプレートと C# ジェネリックの違い](../../../csharp/programming-guide/generics/differences-between-cpp-templates-and-csharp-generics.md)  
+- [C++ テンプレートと C# ジェネリックの違い](./differences-between-cpp-templates-and-csharp-generics.md)  
   
-- [ジェネリックとリフレクション](../../../csharp/programming-guide/generics/generics-and-reflection.md)  
+- [ジェネリックとリフレクション](./generics-and-reflection.md)  
   
-- [ランタイムのジェネリック](../../../csharp/programming-guide/generics/generics-in-the-run-time.md)  
+- [ランタイムのジェネリック](./generics-in-the-run-time.md)  
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
  詳細については、「[C# 言語の仕様](~/_csharplang/spec/types.md#constructed-types)」を参照してください。  
@@ -77,8 +77,8 @@ ms.locfileid: "66423392"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Collections.Generic>
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [型](../../../csharp/programming-guide/types/index.md)
-- [\<typeparam>](../../../csharp/programming-guide/xmldoc/typeparam.md)
-- [\<typeparamref>](../../../csharp/programming-guide/xmldoc/typeparamref.md)
+- [C# プログラミング ガイド](../index.md)
+- [型](../types/index.md)
+- [\<typeparam>](../xmldoc/typeparam.md)
+- [\<typeparamref>](../xmldoc/typeparamref.md)
 - [.NET のジェネリック](../../../standard/generics/index.md)

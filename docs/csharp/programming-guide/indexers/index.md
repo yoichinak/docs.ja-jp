@@ -8,23 +8,23 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 43cc051eda8c3458d3dc5c529b52104bcd9b807a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 130cc68906be433afc906cfb22759f4ae3dba447
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596121"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589451"
 ---
 # <a name="indexers-c-programming-guide"></a>インデクサー (C# プログラミング ガイド)
 
-インデクサーを使用すると、配列と同じようにクラスまたは構造体のインスタンスにインデックスを作成することができます。 インデックス値は、型またはインスタンス メンバーの明示的な指定なしで設定または取得できます。 インデクサーは[プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)と似ていますが、そのアクセサーがパラメーターを取る点が異なります。  
+インデクサーを使用すると、配列と同じようにクラスまたは構造体のインスタンスにインデックスを作成することができます。 インデックス値は、型またはインスタンス メンバーの明示的な指定なしで設定または取得できます。 インデクサーは[プロパティ](../classes-and-structs/properties.md)と似ていますが、そのアクセサーがパラメーターを取る点が異なります。  
  
- 次の例は、値の割り当てと取得を行う単純な [get](../../../csharp/language-reference/keywords/get.md) アクセサー メソッドと [set](../../../csharp/language-reference/keywords/set.md) アクセサー メソッドを持つジェネリック クラスを定義します。 `Program` クラスは、文字列の格納用にこのクラスのインスタンスを作成します。  
+ 次の例は、値の割り当てと取得を行う単純な [get](../../language-reference/keywords/get.md) アクセサー メソッドと [set](../../language-reference/keywords/set.md) アクセサー メソッドを持つジェネリック クラスを定義します。 `Program` クラスは、文字列の格納用にこのクラスのインスタンスを作成します。  
   
  [!code-csharp[indexers#1](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-1.cs)]  
   
 > [!NOTE]
->  その他の例については、「[関連セクション](../../../csharp/programming-guide/indexers/index.md#BKMK_RelatedSections)」を参照してください。  
+>  その他の例については、「[関連セクション](./index.md#BKMK_RelatedSections)」を参照してください。  
   
 ## <a name="expression-body-definitions"></a>式の本文の定義  
  
@@ -44,9 +44,9 @@ C# 7.0 以降、get アクセサーと set アクセサーのどちらも、式�
   
 - `get` アクセサーは値を返します。 `set` アクセサーは値を割り当てます。  
   
-- [this](../../../csharp/language-reference/keywords/this.md) キーワードは、インデクサーの定義に使用されます。  
+- [this](../../language-reference/keywords/this.md) キーワードは、インデクサーの定義に使用されます。  
   
-- [value](../../../csharp/language-reference/keywords/value.md) キーワードは、`set` インデクサーによって割り当てられる値の定義に使用されます。  
+- [value](../../language-reference/keywords/value.md) キーワードは、`set` インデクサーによって割り当てられる値の定義に使用されます。  
   
 - インデクサーは、整数値でインデックスを指定する必要はありません。個々の検索メカニズムの定義方法によります。  
   
@@ -56,13 +56,13 @@ C# 7.0 以降、get アクセサーと set アクセサーのどちらも、式�
   
 ## <a name="BKMK_RelatedSections"></a> 関連セクション  
   
-- [インデクサーの使用](../../../csharp/programming-guide/indexers/using-indexers.md)  
+- [インデクサーの使用](./using-indexers.md)  
   
-- [インターフェイスのインデクサー](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
+- [インターフェイスのインデクサー](./indexers-in-interfaces.md)  
   
-- [プロパティとインデクサーの比較](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [プロパティとインデクサーの比較](./comparison-between-properties-and-indexers.md)  
   
-- [アクセサーのアクセシビリティの制限](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [アクセサーのアクセシビリティの制限](../classes-and-structs/restricting-accessor-accessibility.md)  
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
 
@@ -70,5 +70,5 @@ C# 7.0 以降、get アクセサーと set アクセサーのどちらも、式�
   
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [C# プログラミング ガイド](../index.md)
+- [プロパティ](../classes-and-structs/properties.md)

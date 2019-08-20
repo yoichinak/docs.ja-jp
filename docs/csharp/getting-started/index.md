@@ -8,12 +8,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: 0c97a5b843d27258f58d654d35420a262d5b741a
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: ba5d2a9fb74b877c9b847343a9012ccb9624335e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65062959"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69604228"
 ---
 # <a name="get-started-with-c"></a>C\# の使用を開始する
 
@@ -43,15 +43,15 @@ ms.locfileid: "65062959"
 
 ## <a name="related-sections"></a>関連項目
 
-* [C# プログラミング ガイド](../../csharp/programming-guide/index.md)
+* [C# プログラミング ガイド](../programming-guide/index.md)
 
     C# プログラミングの概念に関する情報を提供し、C# でさまざまなタスクを実行する方法について説明します。
 
-* [C# リファレンス](../../csharp/language-reference/index.md)
+* [C# リファレンス](../language-reference/index.md)
 
     C# のキーワード、演算子、プリプロセッサ ディレクティブ、コンパイラ オプション、およびコンパイラのエラーと警告に関する詳細なリファレンス情報を紹介します。
 
-* [チュートリアル](../../csharp/walkthroughs.md)
+* [チュートリアル](../walkthroughs.md)
 
     C# を使用するプログラミングのチュートリアルと、各チュートリアルに関する簡単な説明へのリンクを示します。
 

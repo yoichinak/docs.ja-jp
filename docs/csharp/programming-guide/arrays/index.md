@@ -6,12 +6,12 @@ helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-ms.openlocfilehash: 258ade63ab7c9008f6c892ed109bf5ea5ab974f3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 24c6d54c3fe92ada661e732adec582e87ab62417
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584607"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597533"
 ---
 # <a name="arrays-c-programming-guide"></a>配列 (C# プログラミング ガイド)
 
@@ -27,7 +27,7 @@ ms.locfileid: "64584607"
 
  配列には、次の特徴があります。  
   
-- 配列は、[1 次元配列](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)、[多次元配列](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)、または[ジャグ配列](../../../csharp/programming-guide/arrays/jagged-arrays.md)のいずれかになります。  
+- 配列は、[1 次元配列](./single-dimensional-arrays.md)、[多次元配列](./multidimensional-arrays.md)、または[ジャグ配列](./jagged-arrays.md)のいずれかになります。  
   
 - 次元数と各次元の長さは、配列インスタンスの作成時に設定されます。 インスタンスの有効期間中にこれらの値を変更することはできません。  
   
@@ -39,15 +39,15 @@ ms.locfileid: "64584607"
   
 - 配列の要素および配列型は、どのような型でもかまいません。  
   
-- 配列型は、抽象基本型 <xref:System.Array> から派生した[参照型](../../../csharp/language-reference/keywords/reference-types.md)です。 この型は <xref:System.Collections.IEnumerable> と <xref:System.Collections.Generic.IEnumerable%601> を実装するので、C# のすべての配列で [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 反復処理を使用できます。  
+- 配列型は、抽象基本型 <xref:System.Array> から派生した[参照型](../../language-reference/keywords/reference-types.md)です。 この型は <xref:System.Collections.IEnumerable> と <xref:System.Collections.Generic.IEnumerable%601> を実装するので、C# のすべての配列で [foreach](../../language-reference/keywords/foreach-in.md) 反復処理を使用できます。  
   
 ## <a name="related-sections"></a>関連項目  
   
-- [オブジェクトとしての配列](../../../csharp/programming-guide/arrays/arrays-as-objects.md)  
+- [オブジェクトとしての配列](./arrays-as-objects.md)  
   
-- [配列での foreach の使用](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)  
+- [配列での foreach の使用](./using-foreach-with-arrays.md)  
   
-- [引数としての配列の受け渡し](../../../csharp/programming-guide/arrays/passing-arrays-as-arguments.md)  
+- [引数としての配列の受け渡し](./passing-arrays-as-arguments.md)  
   
 ## <a name="c-language-specification"></a>C# 言語仕様
 
@@ -55,5 +55,5 @@ ms.locfileid: "64584607"
   
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [コレクション](../../../csharp/programming-guide/concepts/collections.md)
+- [C# プログラミング ガイド](../index.md)
+- [コレクション](../concepts/collections.md)

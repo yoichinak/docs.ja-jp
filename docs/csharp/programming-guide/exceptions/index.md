@@ -7,19 +7,19 @@ helpviewer_keywords:
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: 34357ac313e20c5bab5505984f92ea06df80a5c2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c2b991a45a53ce4a8295d6181da11cb09fda6ddb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595402"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590196"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>例外と例外処理 (C# プログラミング ガイド)
 C# 言語の例外処理機能は、プログラムの実行時に発生する予期しない状況や例外的な状況を扱うのに役立ちます。 例外処理では、キーワード `try`、`catch`、および `finally` を使用して、成功しない可能性があるアクションを試行し、適切な場合はエラーを処理して、後からリソースをクリーンアップします。 例外の発生元は、共通言語ランタイム (CLR)、.NET Framework、または任意のサード パーティ ライブラリ、またはアプリケーション コードなどさまざまです。 例外は、`throw` キーワードを使用して作成されます。  
   
  コードが直接呼び出したメソッドではなく、呼び出し履歴の下の方にある別のメソッドによって例外がスローされることも多くあります。 その場合、CLR は履歴をアンワインドし、`catch` ブロックを持つメソッドを探して特定の例外の種類がないかを調べ、もしあれば最初に見つかった `catch` ブロックを実行します。 適切な `catch` ブロックが呼び出し履歴にない場合は、プロセスが終了し、ユーザーにメッセージが表示されます。  
   
- この例では、メソッドが 0 による除算をテストしてエラーをキャッチします。 例外処理せずにプログラムは終了し、"**DivideByZeroException はハンドルされませんでした。**" というエラーが表示されます。  
+ この例では、メソッドが 0 による除算をテストしてエラーをキャッチします。 例外処理せずにプログラムは終了し、"**DivideByZeroException はハンドルされませんでした。** " というエラーが表示されます。  
   
  [!code-csharp[csProgGuideExceptions#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#18)]  
   
@@ -49,17 +49,17 @@ C# 言語の例外処理機能は、プログラムの実行時に発生する�
 ## <a name="related-sections"></a>関連項目  
  例外と例外処理の詳細については、次のトピックを参照してください。  
   
-- [例外の使用](../../../csharp/programming-guide/exceptions/using-exceptions.md)  
+- [例外の使用](./using-exceptions.md)  
   
-- [例外処理](../../../csharp/programming-guide/exceptions/exception-handling.md)  
+- [例外処理](./exception-handling.md)  
   
-- [例外の作成とスロー](../../../csharp/programming-guide/exceptions/creating-and-throwing-exceptions.md)  
+- [例外の作成とスロー](./creating-and-throwing-exceptions.md)  
   
-- [コンパイラにより生成された例外](../../../csharp/programming-guide/exceptions/compiler-generated-exceptions.md)  
+- [コンパイラにより生成された例外](./compiler-generated-exceptions.md)  
   
-- [方法: try-catch を使用して例外を処理する (C# プログラミング ガイド)](../../../csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md)  
+- [方法: try-catch を使用して例外を処理する (C# プログラミング ガイド)](./how-to-handle-an-exception-using-try-catch.md)  
   
-- [方法: finally を使用してクリーンアップ コードを実行する](../../../csharp/programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md)  
+- [方法: finally を使用してクリーンアップ コードを実行する](./how-to-execute-cleanup-code-using-finally.md)  
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
 
@@ -68,10 +68,10 @@ C# 言語の例外処理機能は、プログラムの実行時に発生する�
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.SystemException>
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)
-- [throw](../../../csharp/language-reference/keywords/throw.md)
-- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)
-- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)
-- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)
+- [C# プログラミング ガイド](../index.md)
+- [C# のキーワード](../../language-reference/keywords/index.md)
+- [throw](../../language-reference/keywords/throw.md)
+- [try-catch](../../language-reference/keywords/try-catch.md)
+- [try-finally](../../language-reference/keywords/try-finally.md)
+- [try-catch-finally](../../language-reference/keywords/try-catch-finally.md)
 - [例外](../../../standard/exceptions/index.md)

@@ -7,30 +7,30 @@ helpviewer_keywords:
 - preprocessor directives [C#]
 - keywords [C#], preprocessor directives
 ms.assetid: f2406090-b244-4f7e-ab72-3698fefed724
-ms.openlocfilehash: 54067777ed2e92eea263b17cce0d4cdf13ed731d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f63ba3e0bd89a88ad04b14c2f359a8cde65e8f12
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61689321"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608601"
 ---
 # <a name="c-preprocessor-directives"></a>C# プリプロセッサ ディレクティブ
 このセクションでは、次の C# プリプロセッサ ディレクティブについて説明します。
 
-- [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)
-- [#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md)
-- [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md)
-- [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md)
-- [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md)
-- [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)
-- [#warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-warning.md)
-- [#error](../../../csharp/language-reference/preprocessor-directives/preprocessor-error.md)
-- [#line](../../../csharp/language-reference/preprocessor-directives/preprocessor-line.md)
-- [#region](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md)
-- [#endregion](../../../csharp/language-reference/preprocessor-directives/preprocessor-endregion.md)
-- [#pragma](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma.md)
-- [#pragma warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)
-- [#pragma checksum](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-checksum.md)
+- [#if](./preprocessor-if.md)
+- [#else](./preprocessor-else.md)
+- [#elif](./preprocessor-elif.md)
+- [#endif](./preprocessor-endif.md)
+- [#define](./preprocessor-define.md)
+- [#undef](./preprocessor-undef.md)
+- [#warning](./preprocessor-warning.md)
+- [#error](./preprocessor-error.md)
+- [#line](./preprocessor-line.md)
+- [#region](./preprocessor-region.md)
+- [#endregion](./preprocessor-endregion.md)
+- [#pragma](./preprocessor-pragma.md)
+- [#pragma warning](./preprocessor-pragma-warning.md)
+- [#pragma checksum](./preprocessor-pragma-checksum.md)
 
 詳細および例については、個々のトピックを参照してください。
 
@@ -40,5 +40,5 @@ ms.locfileid: "61689321"
 
 ## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [C# リファレンス](../index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)

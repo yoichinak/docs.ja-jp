@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 0bf9fe8124578ba9bd192e10d517e3b0df7e5982
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2e820a4d08e938aaf21e4f57db63e6b4f1b5225a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744256"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608291"
 ---
 # <a name="c-guide"></a>C# のガイド
 
@@ -52,16 +52,16 @@ C# ガイドにはいくつかのセクションがあります。 順番に読�
   * The .NET Compiler Platform SDK enables you to write components that analyze code, and suggest or make improvements to that code. In this section, you'll learn how the APIs are organized, and how you can create code that enables rules and practices for your team. You'll also see samples, end-to-end scenarios, and links to other libraries with more examples using these APIs.
 -->
 
-* [C# プログラミングガイド](../csharp/programming-guide/index.md)
+* [C# プログラミングガイド](./programming-guide/index.md)
   * C# 言語構成要素の使用方法に関する情報および実際の例を提供します。
 
-* [チュートリアル](../csharp/walkthroughs.md)
+* [チュートリアル](./walkthroughs.md)
   * C# を使用するプログラミングのチュートリアルと、各チュートリアルに関する簡単な説明へのリンクを示します。
 
 * [言語リファレンス](language-reference/index.md)
   * C# 言語に関するリファレンス資料が含まれています。 この資料は、C# の構文とセマンティクスを理解するのに役立ちます。 型、演算子、属性、プリプロセッサ ディレクティブ、コンパイラ スイッチ、およびコンパイラのエラーと警告に関するリファレンス情報も含まれています。
 
-* [C# 言語仕様](../csharp/language-reference/language-specification/index.md)
+* [C# 言語仕様](./language-reference/language-specification/index.md)
   * C# 言語仕様の最新バージョンへのリンク。
 
 ## <a name="see-also"></a>関連項目

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 330e4e8b36f03b028786920422cd325b31d814e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 30c44b9f98bcc61d54b8103b6b40d14fd35715f4
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61711201"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589183"
 ---
 # <a name="interfaces-c-programming-guide"></a>インターフェイス (C# プログラミング ガイド)
 
@@ -31,7 +31,7 @@ ms.locfileid: "61711201"
   
 抽象クラスの詳細については、「[抽象クラスとシール クラス、およびクラス メンバー](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md)」を参照してください。  
   
-インターフェイスには、メソッド、プロパティ、イベント、インデクサー、またはこれらの 4 種類のメンバーの任意の組み合わせを含めることができます。 例へのリンクについては、「[関連項目](../interfaces/index.md#BKMK_RelatedSections)」を参照してください。 インターフェイスには、定数、フィールド、演算子、インスタンス コンストラクター、ファイナライザー、または型を含めることはできません。 インターフェイスのメンバーは、自動的にパブリックに設定され、アクセス修飾子を含むことはできません。 メンバーを [static](../../language-reference/keywords/static.md) として宣言することもできません。  
+インターフェイスには、メソッド、プロパティ、イベント、インデクサー、またはこれらの 4 種類のメンバーの任意の組み合わせを含めることができます。 例へのリンクについては、「[関連項目](./index.md#BKMK_RelatedSections)」を参照してください。 インターフェイスには、定数、フィールド、演算子、インスタンス コンストラクター、ファイナライザー、または型を含めることはできません。 インターフェイスのメンバーは、自動的にパブリックに設定され、アクセス修飾子を含むことはできません。 メンバーを [static](../../language-reference/keywords/static.md) として宣言することもできません。  
   
 インターフェイスのメンバーを実装するには、実装するクラスの対応するメンバーがパブリックかつ非静的であり、インターフェイスのメンバーと同じ名前および署名を持つ必要があります。  
   

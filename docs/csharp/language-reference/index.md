@@ -8,33 +8,33 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: 45352d97372e556627ead75d969f088de9c85bd0
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 96fd360342a3bc0f82df37761abb372bdcaa8d7a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833246"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606117"
 ---
 # <a name="c-reference"></a>C# リファレンス
 このセクションでは、C# のキーワード、演算子、特殊文字、プリプロセッサ ディレクティブ、コンパイラ オプション、およびコンパイラのエラーと警告に関する参考資料を紹介します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [C# のキーワード](../../csharp/language-reference/keywords/index.md)  
+ [C# のキーワード](./keywords/index.md)  
  C# のキーワードと構文に関する情報へのリンクを示します。  
   
- [C# 演算子](../../csharp/language-reference/operators/index.md)  
+ [C# 演算子](./operators/index.md)  
  C# の演算子と構文に関する情報へのリンクを示します。  
 
- [C# 特殊文字](../../csharp/language-reference/tokens/index.md)  
+ [C# 特殊文字](./tokens/index.md)  
  C# のコンテキスト特殊文字とその使用方法に関する情報へのリンクを提供します。  
 
- [C# プリプロセッサ ディレクティブ](../../csharp/language-reference/preprocessor-directives/index.md)  
+ [C# プリプロセッサ ディレクティブ](./preprocessor-directives/index.md)  
  C# ソース コード内に埋め込むためのコンパイラ コマンドに関する情報へのリンクを提供します。  
   
- [C# コンパイラ オプション](../../csharp/language-reference/compiler-options/index.md)  
+ [C# コンパイラ オプション](./compiler-options/index.md)  
  コンパイラ オプションとその使用方法について取り上げます。  
   
- [C# コンパイラ エラー](../../csharp/language-reference/compiler-messages/index.md)  
+ [C# コンパイラ エラー](./compiler-messages/index.md)  
  C# コンパイラのエラーや警告の原因と修正法を示すコード スニペットを示します。  
   
  [C# 言語仕様](../../../_csharplang/spec/introduction.md)  
@@ -58,11 +58,11 @@ C# 6.0 より後のバージョンで実装された機能は、言語仕様の�
   
 ## <a name="related-sections"></a>関連項目  
 
- [C# のガイド](../../csharp/index.md)  
+ [C# のガイド](../index.md)  
  Visual C# ドキュメントへのポータルを提供します。  
   
  [Visual C# 開発環境の使用](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
  IDE およびエディターについて説明する概念トピックおよびタスク トピックへのリンクを提供します。  
   
- [C# プログラミング ガイド](../../csharp/programming-guide/index.md)  
+ [C# プログラミング ガイド](../programming-guide/index.md)  
  C# プログラミング言語の使用方法について説明します。
