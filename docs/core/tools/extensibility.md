@@ -3,12 +3,12 @@ title: .NET Core CLI の拡張モデル
 description: コマンド ライン インターフェイス (CLI) ツールを拡張する方法について説明します。
 ms.date: 04/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 784eb50dfdbc0f88050a9f727ddbf53db34d3209
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 400d47f9d5bca53a23d09eb4eb94519f9824b473
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331003"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69012986"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>.NET Core CLI ツールの拡張モデル
 
@@ -44,7 +44,7 @@ CLI ツールは、主に次の 3 つの方法で拡張できます。
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-実行するためにプロジェクトのビルド出力を読み込む必要があるツールの場合、通常、別の依存関係がプロジェクト ファイル内の標準の依存関係に一覧されています。 CLI では、ビルド エンジンとして MSBuild を使用するため、ツールのこれらの部分はカスタム MSBuild の[ターゲット](/visualstudio/msbuild/msbuild-targets)および[タスク](/visualstudio/msbuild/msbuild-tasks)として記述することを推奨します。これは、ビルド プロセス全体に参加できるようになるためです。 さらに、出力ファイルの場所、現在ビルドされている構成といった、ビルドによって生成されるすべてのデータを簡単に取得できます。この情報はすべて、どのターゲットからも読み取り可能な一連の MSBuild プロパティになります。 このドキュメントでは、後ほど NuGet を使用してカスタム ターゲットを追加する方法を説明します。
+実行するためにプロジェクトのビルド出力を読み込む必要があるツールの場合、通常、別の依存関係がプロジェクト ファイル内の標準の依存関係に一覧されています。 CLI では、ビルド エンジンとして MSBuild を使用するため、ツールのこれらの部分はカスタム MSBuild の[ターゲット](/visualstudio/msbuild/msbuild-targets)および[タスク](/visualstudio/msbuild/msbuild-tasks)として記述することを推奨します。これは、ビルド プロセス全体に参加できるようになるためです。 さらに、出力ファイルの場所、ビルドされている現在の構成といった、ビルドによって生成されるすべてのデータを簡単に取得できます。 この情報はすべて、どのターゲットからも読み取り可能な一連の MSBuild プロパティになります。 このドキュメントでは、後ほど NuGet を使用してカスタム ターゲットを追加する方法を説明します。
 
 単純なツールだけのツールを単純なプロジェクトに追加する例を確認してみましょう。 指定された API の NuGet パッケージを使用して検索できる `dotnet-api-search` というコマンドの例を仮定すると、そのツールを使用するコンソール アプリケーションのプロジェクト ファイルは、次のようになります。
 
@@ -79,7 +79,8 @@ CLI ツールは、主に次の 3 つの方法で拡張できます。
 また、同じリポジトリで[使用されたツールの実装](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestPackages)を確認することもできます。
 
 ## <a name="custom-targets"></a>カスタム ターゲット
-NuGet には、[カスタム MSBuild ターゲット ファイルとプロパティ ファイルをパッケージ化](/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package)する機能があります。 .NET Core CLI ツールが MSBuild を使用するようになり、同じ拡張機能のメカニズムが .NET Core プロジェクトに適用されています。 このような拡張機能は、ビルド プロセスの拡張が必要な場合、生成されたファイルなどのビルド プロセスの成果物にアクセスする必要がある場合、またはビルドが呼び出される構成を検査する場合などに使用します。
+
+NuGet には、[カスタム MSBuild ターゲット ファイルとプロパティ ファイルをパッケージ化](/nuget/create-packages/creating-a-package#include-msbuild-props-and-targets-in-a-package)する機能があります。 .NET Core CLI ツールが MSBuild を使用するようになり、同じ拡張機能のメカニズムが .NET Core プロジェクトに適用されています。 このような拡張機能は、ビルド プロセスの拡張が必要な場合や、生成されたファイルなどのビルド プロセスの成果物にアクセスする必要がある場合、またはビルドが呼び出される構成を検査する場合などに使用できます。
 
 次の例では、ターゲットのプロジェクト ファイルで `csproj` 構文を使用しています。 これは、[`dotnet pack`](dotnet-pack.md) コマンドにパッケージ対象を指示し、ターゲット ファイルだけでなくアセンブリをパッケージ内の *build* フォルダーに格納する例です。 `Label` プロパティが `dotnet pack instructions` に設定された `<ItemGroup>` 要素があり、その下に Target が定義されています。
 

@@ -297,9 +297,9 @@
     - name: メンバー アクセス演算子
       href: operators/member-access-operators.md
       displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation'
-    - name: 型テストおよび変換演算子
-      href: operators/type-testing-and-conversion-operators.md
-      displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), cast'
+    - name: 型テストとキャスト演算子
+      href: operators/type-testing-and-cast.md
+      displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), conversion'
     - name: ユーザー定義の変換演算子
       href: operators/user-defined-conversion-operators.md
       displayName: 'implicit, explicit'

@@ -2,21 +2,21 @@
 title: '方法: CSV テキスト ファイルの列値を計算する (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 07fb81b474bd967d73dc9ff6a08e0c67e6ec0122
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0bc212ab40bccf5612ef6dea85608c439d2105f4
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585780"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69012943"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>方法: CSV テキスト ファイルの列値を計算する (LINQ) (C#)
 この例では、合計、平均、最小、最大などの集計計算を .csv ファイルの列に対して実行する方法について説明します。 ここで説明する例の原則は、他の種類の構造化テキストにも適用できます。  
   
-### <a name="to-create-the-source-file"></a>ソース ファイルを作成するには  
+## <a name="to-create-the-source-file"></a>ソース ファイルを作成するには  
   
 1. 次の行を scores.csv という名前のファイルにコピーし、プロジェクト フォルダーに保存します。 最初の列は学生 ID、それに続く列は 4 つの試験の点数を表していると仮定します。  
   
-    ```  
+    ```csv
     111, 97, 92, 81, 60  
     112, 75, 84, 91, 39  
     113, 88, 94, 65, 91  

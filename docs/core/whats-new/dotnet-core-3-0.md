@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 07/25/2019
-ms.openlocfilehash: 29e62f01ab6a749c252aa488dfbccd5b27cb9dba
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: f1fce2899e9e11b1007d6c270180b27a29eaa167
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733370"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039446"
 ---
 # <a name="whats-new-in-net-core-30-preview-7"></a>.NET Core 3.0 (Preview 7) の新機能
 
@@ -38,7 +38,7 @@ ms.locfileid: "68733370"
 
 ## <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows インストーラー
 
-Windows 用の MSI インストーラーは、.NET Core 3.0 から変更されました。 SDK インストーラーは、SDK 機能帯リリースのアップグレードを実行するようになります。 機能帯は、バージョン番号の "*パッチ*" セクションの *100* 番台のグループで定義されます。 たとえば、**3.0. _** と **3.0. _** は 2 つの異なる機能帯のバージョンですが、**3.0. _** と **3.0. _** は同じ機能帯に含まれます。 また、.NET Core SDK **3.0. _** をインストールすると、.NET Core SDK **3.0. _** が存在する場合はマシンから削除されます。 同じマシンに .NET Core SDK **3.0. _** をインストールすると、.NET Core SDK **3.0. _** は削除されません。
+Windows 用の MSI インストーラーは、.NET Core 3.0 から変更されました。 SDK インストーラーは、SDK 機能帯リリースのアップグレードを実行するようになります。 機能帯は、バージョン番号の "*パッチ*" セクションの *100* 番台のグループで定義されます。 たとえば、**3.0._101_** と **3.0._201_** は 2 つの異なる機能帯のバージョンですが、**3.0._101_** と **3.0._199_** は同じ機能帯に含まれます。 また、.NET Core SDK **3.0._101_** をインストールすると、.NET Core SDK **3.0._100_** が存在する場合はマシンから削除されます。 同じマシンに .NET Core SDK **3.0._200_** をインストールすると、.NET Core SDK **3.0._101_** は削除されません。
 
 バージョン管理の詳細については、「[.NET Core をバージョン管理する方法の概要](../versions/index.md)」を参照してください。
 
@@ -159,7 +159,7 @@ IL リンカー ツールについて詳しくは、[ドキュメント](https:/
 
 .NET Core 3.0 では、[階層型コンパイル](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) (TC) が既定で有効になりました。 この機能により、ランタイムが状況に応じて Just-In-Time (JIT) コンパイラを使用してパフォーマンスを向上できるようになりました。
 
-TC の主な利点は、(再) JIT メソッドとして、低速でもコード生成は高速なもの、または高品質でもコード生成は低速なもの有効にできることです。 これは、起動から安定した状態まで、さまざまな実行段階を経るときに、アプリケーションのパフォーマンスを向上するために役立ちます。 これは、すべてのメソッドが 1 つの方法 (高品質階層と同じ) でコンパイルされ、起動時のパフォーマンスよりも安定した状態に偏っている非 TC アプローチとは対照的です。
+TC の主な利点は、低品質で高速な階層または高品質で低速な階層を使った (再) JIT メソッドが可能になることです。 これは、起動から安定した状態まで、さまざまな実行段階を経るときに、アプリケーションのパフォーマンスを向上するために役立ちます。 これは、すべてのメソッドが 1 つの方法 (高品質階層と同じ) でコンパイルされ、起動時のパフォーマンスよりも安定した状態に偏っている非 TC アプローチとは対照的です。
 
 Quick JIT (階層 0 の JIT 済みコード) を有効にするには、プロジェクト ファイルで次の設定を使用します。
 
@@ -291,7 +291,7 @@ COM コンポーネントを作成して使用する方法の例については�
 <RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
 ```
 
-## <a name="winforms-highdpi"></a>WinForms HighDPI
+## <a name="winforms-high-dpi"></a>WinForms の高 DPI
 
 .NET Core Windows フォーム アプリケーションでは、<xref:System.Windows.Forms.Application.SetHighDpiMode(System.Windows.Forms.HighDpiMode)?displayProperty=nameWithType> を使用して高 DPI モードを設定できます。 `Application.Run` の前の `App.Manifest` や P/Invoke などの他の方法で設定を指定しない限り、`SetHighDpiMode` メソッドによって、対応する高 DPI モードが設定されます。
 
@@ -303,9 +303,9 @@ COM コンポーネントを作成して使用する方法の例については�
 * `PerMonitorV2`
 * `DpiUnawareGdiScaled`
 
-高 DPI モードの詳細については、「[High DPI Desktop Application Development on Windows (Windows での高 DPI デスクトップ アプリケーション開発)](/windows/desktop/hidpi/high-dpi-desktop-application-development-on-windows)」を参照してください。
+高 DPI モードの詳細については、「[Windows での高 DPI デスクトップ アプリケーション開発](/windows/desktop/hidpi/high-dpi-desktop-application-development-on-windows)」をご覧ください。
 
-### <a name="ranges-and-indices"></a>範囲とインデックス
+## <a name="ranges-and-indices"></a>範囲とインデックス
 
 新しい <xref:System.Index?displayProperty=nameWithType> 型はインデックス作成に使用できます。 先頭からカウントする `int` か、末尾からカウントするプレフィックス `^` 演算子 (C#) を使用して作成することができます。
 
@@ -324,7 +324,7 @@ var slice = a[i1..i2]; // { 3, 4, 5 }
 
 詳細については、[範囲とインデックスのチュートリアル](../../csharp/tutorials/ranges-indexes.md)を参照してください。
 
-### <a name="async-streams"></a>非同期ストリーム
+## <a name="async-streams"></a>非同期ストリーム
 
 <xref:System.Collections.Generic.IAsyncEnumerable%601> 型は、<xref:System.Collections.Generic.IEnumerable%601> の新しい非同期バージョンです。 この言語では、その要素を使用するために `IAsyncEnumerable<T>` よりも `await foreach` を行い、要素を生成するために `yield return` を使用することができます。
 
@@ -403,17 +403,15 @@ Visual Studio Code で作成された [**launch.json**](https://github.com/dotne
 
 出発点として使用できる `JsonDocument` および `JsonElement` の使用例を次に示します。
 
-Visual Studio Code で作成された [**launch.json**](https://github.com/dotnet/samples/blob/master/snippets/core/whats-new/whats-new-in-30/cs/launch.json) ファイルを読み取る C# 8.0 の例を次に示します。
-
 [!CODE-csharp[JsonDocument](~/samples/snippets/core/whats-new/whats-new-in-30/cs/program.cs#ReadJson)]
+
+Visual Studio Code で作成された [**launch.json**](https://github.com/dotnet/samples/blob/master/snippets/core/whats-new/whats-new-in-30/cs/launch.json) ファイルを読み取る C# 8.0 の例を次に示します。
 
 [!CODE-csharp[JsonDocument](~/samples/snippets/core/whats-new/whats-new-in-30/cs/program.cs#ReadJsonCall)]
 
 ### <a name="jsonserializer"></a>JsonSerializer
 
-<xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType> は <xref:System.Text.Json.Utf8JsonReader> と <xref:System.Text.Json.Utf8JsonWriter> に基づいて構築されており、JSON ドキュメントとフラグメントを使用するときに高速で低メモリのシリアル化オプションを提供します。
-
-確認: この記事への移植例については https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/docs/SerializerProgrammingModel.md
+<xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType> は <xref:System.Text.Json.Utf8JsonReader> と <xref:System.Text.Json.Utf8JsonWriter> に基づいて構築されており、JSON ドキュメントやフラグメントを操作する際に高速で低メモリのシリアル化オプションを提供します。
 
 オブジェクトを JSON にシリアル化する例を次に示します。
 
