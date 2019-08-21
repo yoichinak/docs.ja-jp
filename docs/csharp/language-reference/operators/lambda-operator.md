@@ -8,12 +8,12 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: a7fea9810cb02269278638ec71cd106463b029e9
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 3b3a5c2e96e92271da66cbd8f1039a9ec97544fa
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025016"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971232"
 ---
 # <a name="-operator-c-reference"></a>=> 演算子 (C# リファレンス)
 
@@ -45,7 +45,7 @@ ms.locfileid: "67025016"
 member => expression;
 ```
 
-この *expression* には有効な式を指定します。 メンバーの戻り値の型が `void` の場合か、メンバーがコンストラクター、ファイナライザー、またはプロパティ `set` アクセサーの場合にのみ、*式*は*ステートメント式*になります。
+ここで、`expression` には有効な式を指定します。 `expression` の戻り値の型は、メンバーの戻り値の型に暗黙的に変換可能である必要があります。 メンバーの戻り値の型が `void` の場合や、メンバーがコンストラクター、ファイナライザー、またはプロパティ `set` のアクセサーの場合、`expression` は ["*ステートメント式*"](~/_csharplang/spec/statements.md#expression-statements) である必要があります。この場合は任意の型を指定できます。
 
 次の例は、`Person.ToString` メソッドの式本体の定義を示しています。
 

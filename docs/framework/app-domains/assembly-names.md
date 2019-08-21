@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36993a13ed085f59fd6002f33e7884bdb1b5db8d
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 499a64362f7a23f0c4c595469fceaa1612bf44dd
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832893"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567349"
 ---
 # <a name="assembly-names"></a>アセンブリ名
 アセンブリの名前は、メタデータに保存され、アセンブリのスコープに重大な影響があり、アプリケーションによって使用されます。 厳密な名前のアセンブリには、アセンブリの名前、カルチャ、公開キー、バージョン番号を含む、完全修飾名があります。 これは、表示名として、また、<xref:System.Reflection.Assembly.FullName%2A> プロパティを使用して取得できる読み込まれたアセンブリに対して、頻繁に参照されます。  
@@ -45,7 +45,7 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 ```  
   
 > [!NOTE]
->  アセンブリをバインドするときに、ランタイムは大文字と小文字を区別せずにアセンブリ名を扱いますが、アセンブリ名に使用されている大文字と小文字を保持します。 Windows Software Development Kit (SDK) のいくつかのツールでは、アセンブリ名の大文字小文字を区別して処理します。 最適な結果を得るには、大文字と小文字を区別するものとして、アセンブリ名を管理します。  
+>  アセンブリをバインドするときに、ランタイムは大文字と小文字を区別せずにアセンブリ名を扱いますが、アセンブリ名に使用されている大文字と小文字を保持します。 Windows SDK のいくつかのツールでは、アセンブリ名の大文字小文字を区別して処理します。 最適な結果を得るには、大文字と小文字を区別するものとして、アセンブリ名を管理します。  
   
 ## <a name="naming-application-components"></a>名前付けアプリケーション コンポーネント  
  アセンブリの ID を特定するときに、ランタイムではファイル名が考慮されません。 アセンブリ名、バージョン、カルチャ、厳密な名前で構成されるアセンブリ ID は、ランタイムに対して明確である必要があります。  

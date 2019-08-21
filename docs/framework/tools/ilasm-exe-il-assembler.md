@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78a601e8b2da4fda0951c1d4f7b565753f0ca03a
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 36de7dd2d97eb532717d52bd3903d3e5acd19d2d
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833887"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567069"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL アセンブラー)
 
@@ -104,7 +104,7 @@ IL アセンブラーは、すべての既存メタデータ、およびラン�
 > [!NOTE]
 > *Ildasm.exe* はディスク上のファイルについてだけ動作します。 グローバル アセンブリ キャッシュ内にインストールされたファイルについては動作しません。
 
-IL の文法の詳細については、Windows Software Development Kit (SDK) の asmparse.grammar ファイルを参照してください。
+IL の文法の詳細については、Windows SDK の asmparse.grammar ファイルを参照してください。
 
 ## <a name="version-information"></a>バージョン情報
 
@@ -137,7 +137,7 @@ IL の文法の詳細については、Windows Software Development Kit (SDK) �
         Test(object A_1) cil managed
 ```
 
-IL の文法の詳細については、Windows Software Development Kit (SDK) の asmparse.grammar ファイルを参照してください。
+IL の文法の詳細については、Windows SDK の asmparse.grammar ファイルを参照してください。
 
 ## <a name="examples"></a>使用例
 

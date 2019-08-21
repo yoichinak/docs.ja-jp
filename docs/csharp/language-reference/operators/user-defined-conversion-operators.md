@@ -10,12 +10,12 @@ helpviewer_keywords:
 - implicit keyword [C#]
 - conversion operator [C#]
 - user-defined conversion [C#]
-ms.openlocfilehash: 5d1882048b2af12c29a3771055cbeba9565b7dab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8788883a6c60032de2ffab658fcf2721654fc6f7
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67787398"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566678"
 ---
 # <a name="user-defined-conversion-operators-c-reference"></a>ユーザー定義の変換演算子 (C# リファレンス)
 
@@ -23,7 +23,7 @@ ms.locfileid: "67787398"
 
 暗黙的変換では特別な構文を呼び出す必要はなく、代入やメソッド呼び出しなど、さまざまな状況で発生する可能性があります。 事前に定義された C# の暗黙的な変換は常に成功し、例外がスローされたり、情報が失われたりすることはありません。 ユーザー定義の暗黙的な変換も同様に動作します。 カスタムの変換によって例外がスローされたり情報が失われたりする可能性がある場合は、明示的な変換として定義します。
 
-ユーザー定義の変換は、[is](type-testing-and-conversion-operators.md#is-operator) および [as](type-testing-and-conversion-operators.md#as-operator) 演算子からは考慮されません。 ユーザー定義の明示的な変換を呼び出すには、[キャスト演算子 ()](type-testing-and-conversion-operators.md#cast-operator-) を使用します。
+ユーザー定義の変換は、[is](type-testing-and-cast.md#is-operator) および [as](type-testing-and-cast.md#as-operator) 演算子からは考慮されません。 ユーザー定義の明示的な変換を呼び出すには、[キャスト演算子 ()](type-testing-and-cast.md#cast-operator-) を使用します。
 
 暗黙的または明示的な変換を定義するには、`operator` とそれぞれ `implicit` または `explicit` のキーワードを使用します。 変換を定義する型は、その変換のソース型またはターゲット型のいずれかである必要があります。 2 つのユーザー定義型間の変換は、2 つの型のどちらでも定義できます。
 
@@ -47,6 +47,6 @@ ms.locfileid: "67787398"
 - [C# リファレンス](../index.md)
 - [C# 演算子](index.md)
 - [演算子のオーバーロード](operator-overloading.md)
-- [型テストおよび変換演算子](type-testing-and-conversion-operators.md)
+- [型テストとキャスト演算子](type-testing-and-cast.md)
 - [キャストと型変換](../../programming-guide/types/casting-and-type-conversions.md)
 - [Chained user-defined explicit conversions in C#](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/) (C# でのユーザー定義の明示的変換の連結)

@@ -3,12 +3,12 @@ title: C# で既定のインターフェイス メンバーを使用してイン
 description: この高度なチュートリアルでは、既存のインターフェイスを実装するすべてのクラスと構造体を損なうことなく、そのインターフェイスの定義に新しい機能を安全に追加する方法について説明します。
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: 2daa40ead5902454c6d45390233e1491fe6d369b
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 2d7265b7705fc931d356a3b7fe3504ab7f21c0b3
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877918"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971435"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>チュートリアル: C# 8.0 で既定のインターフェイス メンバーを使用してインターフェイスを更新する
 
@@ -87,6 +87,6 @@ ms.locfileid: "65877918"
 
 [!code-csharp[VersionTwoImplementation](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/SampleCustomer.cs?name=SnippetOverrideAndExtend)]
 
-[GitHub のサンプル リポジトリ] で、全体の完成したコードを確認できます ([GitHub のサンプル リポジトリ](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/finished/customer-relationship)でスターター アプリケーションを入手できます)。
+[GitHub 上の サンプル リポジトリ](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/finished/customer-relationship)で完成したコード全体を確認できます。 [GitHub 上の サンプル リポジトリ](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/starter/customer-relationship)でスターター アプリケーションを入手できます。
 
 これらの新機能は、新しいメンバーに妥当な既定の実装がある場合に、インターフェイスを安全に更新できることを意味します。 複数のクラスから実装できる 1 つの機能的なアイデアを表現するように、慎重にインターフェイスを設計してください。 その結果、同じ機能的なアイデアに対して新しい要件が見つかったときに、そのインターフェイス定義を簡単にアップグレードできるようになります。

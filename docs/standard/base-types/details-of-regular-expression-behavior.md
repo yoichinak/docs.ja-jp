@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd0611cc8a6d257192b389b023c4dcda8f1b7ec3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bb43554d53051ce02a296f225c68c74352add5ed
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634421"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567476"
 ---
 # <a name="details-of-regular-expression-behavior"></a>正規表現の動作の詳細
 .NET Framework の正規表現エンジンはバックトラッキング型の正規表現マッチャーであり、Perl、Python、Emacs、および Tcl で使われているのと同じ従来型の非決定性有限オートマトン (NFA) エンジンを採用しています。 このエンジンは、awk、egrep、または lex に見られるような、より高速であるが制限が多い、純粋な正規表現決定性有限オートマトン (DFA) エンジンとは異なります。 また、標準化されているが低速な POSIX NFA とも異なります。 次のセクションでは、これら 3 種類の正規表現エンジンについて説明し、.NET Framework の正規表現が従来型 NFA エンジンを使って実装されている理由について説明します。  
@@ -43,7 +43,7 @@ ms.locfileid: "64634421"
      [!code-csharp[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lazy1.cs#1)]
      [!code-vb[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lazy1.vb#1)]  
   
-     この正規表現の最長一致バージョンと最短一致バージョンは、次の表に示すように定義されています。  
+     この正規表現の最長一致バージョンと最短一致バージョンは、次の表に示すように定義されています。
   
     |パターン|説明|  
     |-------------|-----------------|  
@@ -129,13 +129,13 @@ ms.locfileid: "64634421"
      [!code-csharp[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookbehind1.cs#5)]
      [!code-vb[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookbehind1.vb#5)]  
   
-     正規表現 `^[A-Z0-9]([-!#$%&'.*+/=?^`{}|~\w])*(?<=[A-Z0-9])$` は、次の表に示すように定義されています。  
+     正規表現 ``^[A-Z0-9]([-!#$%&'.*+/=?^`{}|~\w])*(?<=[A-Z0-9])$`` は、次の表に示すように定義されています。  
   
     |パターン|説明|  
     |-------------|-----------------|  
     |`^`|文字列の先頭から照合を開始します。|  
     |`[A-Z0-9]`|任意の数字または英数字と一致します。 (比較では、大文字と小文字を区別しません。)|  
-    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])*<code>|Match zero or more occurrences of any word character, or any of the following characters:  -, !, #, $, %, &, ', ., *, +, /, =, ?, ^, \`, {, }, &#124;, or ~.|  
+    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])\*</code>|任意の単語文字の 0 回以上の繰り返し、または次の文字のいずれかと一致します: -、!、#、$、%、&、'、.、\*、+、/、=、?、^、\`、{、}、&#124;、~。|  
     |`(?<=[A-Z0-9])`|前の文字を後読みします。これは数字または英数字である必要があります。 (比較では、大文字と小文字を区別しません。)|  
     |`$`|入力文字列の末尾で照合を終了します。|  
   

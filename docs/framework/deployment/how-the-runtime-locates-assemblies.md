@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2d69fd06f4048667a05ddbfec571067c16f9e86a
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: ceae33501330719a27e2d0015c21249dca62d551
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833728"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566855"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>ランタイムがアセンブリを検索する方法
 .NET Framework アプリケーションを正しく配置するには、アプリケーションを構成するアセンブリを共通言語ランタイムがどのように検索し、バインドするかを理解している必要があります。 既定では、ランタイムはアプリケーションを構成するアセンブリの正しいバージョンをバインドしようとします。 この既定の動作は、構成ファイルの設定によってオーバーライドできます。  
@@ -24,7 +24,7 @@ ms.locfileid: "66833728"
  共通言語ランタイムは、アセンブリを検索し、アセンブリの参照を解決しようとするときにいくつかの手順を実行します。 それぞれの手順については、後続のセクションで説明します。 ランタイムがアセンブリを検索する方法の説明では、「プローブ」という用語が頻繁に使用されます。プローブとは、アセンブリの名前およびカルチャに基づいてアセンブリを特定するための一連のヒューリスティックです。  
   
 > [!NOTE]
->  Windows Software Development Kit (SDK) に含まれている[アセンブリ バインディング ログ ビューアー (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) を使用して、ログ ファイル内のバインディング情報を表示できます。  
+>  Windows SDK に含まれている[アセンブリ バインディング ログ ビューアー (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) を使用すると、ログ ファイル内のバインディング情報を表示できます。  
   
 ## <a name="initiating-the-bind"></a>バインドの開始  
  アセンブリを検索し、バインドするプロセスは、ランタイムが別のアセンブリへの参照を解決しようとしたときに開始します。 この参照は、静的参照または動的参照のいずれかです。 コンパイラは、ビルド時に静的参照をアセンブリ マニフェストのメタデータに記録します。 動的参照は、 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>など、各種のメソッド呼び出しの結果として実行時に生成されます。  

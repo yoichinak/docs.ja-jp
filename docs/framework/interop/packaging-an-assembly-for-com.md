@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ca87d688d6802df967ea81b8297b099350f1c86
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 11777f21d34da8b529352122bbf185f1938d3eb5
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629328"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567233"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>COM 用の .NET Framework アセンブリのパッケージ化
 
@@ -49,7 +49,7 @@ COM 開発者がアプリケーションに組み込むときに役立つ、マ�
 
 - タイプ ライブラリのインクルード
 
-  大部分の型は、COM アプリケーションで処理されるときにタイプ ライブラリが必要です。 タイプ ライブラリの生成は、自分で行うことも、COM 開発者に任せることもできます。 Windows Software Development Kit (SDK) には、タイプ ライブラリを生成するための次のオプションが用意されています。
+  大部分の型は、COM アプリケーションで処理されるときにタイプ ライブラリが必要です。 タイプ ライブラリの生成は、自分で行うことも、COM 開発者に任せることもできます。 Windows SDK には、タイプ ライブラリを生成するための次のオプションが用意されています。
 
   - [タイプ ライブラリ エクスポーター](#cpconpackagingassemblyforcomanchor1)
 
