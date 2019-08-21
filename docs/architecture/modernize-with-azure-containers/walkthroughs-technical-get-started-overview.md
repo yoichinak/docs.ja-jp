@@ -2,12 +2,12 @@
 title: チュートリアルと技術的な概要
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを最新化する |チュートリアルと技術入門概要
 ms.date: 04/28/2018
-ms.openlocfilehash: 81f7d9fbf596a23b83e2dc9251788b33a8817e16
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 190b33c4307b09bab0543d481e66ac9328074a0d
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577855"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660884"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>チュートリアルと技術的な概要
 
@@ -308,4 +308,4 @@ Windows コンテナーを使用する単純なコンテナー化されたアプ
 
 > [!div class="step-by-step"]
 > [前へ](modernize-existing-apps-to-cloud-optimized/migrate-to-hybrid-cloud-scenarios.md)
-> [次へ](conclusions.md)
+> [次へ](conclusions.md) <!-- Next Chapter -->

@@ -28,18 +28,18 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4f59bdb0537ab6ce404ed0623c40f9f3b31598d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 32a4f4f3735c8952cf1458c63655eb56a82fd18f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766826"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666432"
 ---
 # <a name="generics-in-net"></a>.NET のジェネリック
 
 <a name="top"></a> ジェネリックを使用すると、操作対象のデータ型に厳密に合わせてメソッド、クラス、構造体、またはインターフェイスを調整できます。 たとえば、任意の型のキーと値が許可される <xref:System.Collections.Hashtable> クラスを使用する代わりに、 <xref:System.Collections.Generic.Dictionary%602> ジェネリック クラスを使用して、キーに使用できる型と、値に使用できる型を指定できます。 ジェネリックの利点として、コードの再利用性やタイプ セーフの向上などを挙げることができます。  
   
- このトピックでは、.NET におけるジェネリックの概要と、ジェネリック型またはジェネリック メソッドの概要について説明します。 このチュートリアルは、次のセクションで構成されています。  
+ このトピックでは、.NET におけるジェネリックの概要と、ジェネリック型またはジェネリック メソッドの概要について説明します。 次のセクションが含まれます。  
   
 - [ジェネリックの定義と使用](#defining_and_using_generics)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "67766826"
   
 - [関連トピック](#related_topics)  
   
-- [参照](#reference)  
+- [リファレンス](#reference)  
   
 <a name="defining_and_using_generics"></a>   
 ## <a name="defining-and-using-generics"></a>ジェネリックの定義と使用  
@@ -81,7 +81,7 @@ ms.locfileid: "67766826"
   
 - 一般的な用語である *ジェネリック型* には、構築型とジェネリック型定義の両方が含まれます。  
   
-- ジェネリック型パラメーターの*共変性*と*反変性*を使用すると、型引数がターゲットの構築型よりも強い派生型 (共変性) または弱い派生型 (反変性) である構築ジェネリック型を使用できます。 共変性と反変性は、 *"変性"* と総称されます。 詳細については、「[共変性と反変性](../../../docs/standard/generics/covariance-and-contravariance.md)」を参照してください。  
+- ジェネリック型パラメーターの*共変性*と*反変性*を使用すると、型引数がターゲットの構築型よりも強い派生型 (共変性) または弱い派生型 (反変性) である構築ジェネリック型を使用できます。 共変性と反変性は、 *"分散"* と総称されます。 詳細については、「[共変性と反変性](../../../docs/standard/generics/covariance-and-contravariance.md)」を参照してください。  
   
 - *制約* は、ジェネリック型パラメーターに適用される制限です。 たとえば、型パラメーターを、 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> ジェネリック インターフェイスを実装する型に制限して、型のインスタンスを並べ替えることができるようにできます。 また、型パラメーターを、特定の基底クラスを持つ型、パラメーターなしのコンストラクターを持つ型、または参照型や値型に制約することもできます。 ジェネリック型のユーザーは、制約を満たさない型引数に置き換えることはできません。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "67766826"
  [!code-csharp[Conceptual.Generics.Overview#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#5)]
  [!code-vb[Conceptual.Generics.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#5)]  
   
- [ページのトップへ](#top)  
+ [先頭に戻る](#top)  
   
 <a name="advantages_limitations"></a>   
 ## <a name="advantages-and-disadvantages-of-generics"></a>ジェネリックの利点と欠点  
@@ -115,7 +115,7 @@ ms.locfileid: "67766826"
   
 - 汎用デリゲートによって、複数のデリゲート クラスを作成せずにタイプ セーフなコールバックを使用できます。 たとえば、 <xref:System.Predicate%601> 汎用デリゲートを使用すると、特定の型を対象とした独自の検索条件を実装するメソッドを作成し、 <xref:System.Array> 、 <xref:System.Array.Find%2A>、 <xref:System.Array.FindLast%2A>などの <xref:System.Array.FindAll%2A>型のメソッドと共に自分のメソッドを使用することができます。  
   
-- ジェネリックによって、動的に生成されるコードが簡略化されます。 動的に生成されるコードでジェネリックを使用する場合、型を生成する必要がありません。 これにより、アセンブリ全体を生成する代わりに軽量の動的メソッドを使用できるシナリオの数が増えます。 詳細については、「[方法 :動的メソッドを定義および実行する](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)」と <xref:System.Reflection.Emit.DynamicMethod> をご覧ください。  
+- ジェネリックによって、動的に生成されるコードが簡略化されます。 動的に生成されるコードでジェネリックを使用する場合、型を生成する必要がありません。 これにより、アセンブリ全体を生成する代わりに軽量の動的メソッドを使用できるシナリオの数が増えます。 詳細については、[方法:動的メソッドを定義および実行する](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)」と <xref:System.Reflection.Emit.DynamicMethod> をご覧ください。  
   
  ジェネリックの制限事項を次に示します。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "67766826"
   
      詳細については、「 <xref:System.Type.MakeGenericType%2A>」の「入れ子にされた型」を参照してください。  
   
- [ページのトップへ](#top)  
+ [先頭に戻る](#top)  
   
 <a name="class_library_and_language_support"></a>   
 ## <a name="class-library-and-language-support"></a>クラス ライブラリと言語サポート  
@@ -148,15 +148,15 @@ ms.locfileid: "67766826"
   
  共通言語ランタイムでは、Microsoft Intermediate Language (MSIL) のジェネリック型をサポートするために、新しいオペコードとプレフィックスを提供しています ( <xref:System.Reflection.Emit.OpCodes.Stelem>、 <xref:System.Reflection.Emit.OpCodes.Ldelem>、 <xref:System.Reflection.Emit.OpCodes.Unbox_Any>、 <xref:System.Reflection.Emit.OpCodes.Constrained>、 <xref:System.Reflection.Emit.OpCodes.Readonly>など)。  
   
- Visual C++、C#、および Visual Basic のすべてで、ジェネリックの定義と使用が完全にサポートされています。 言語サポートの詳細については、「[Visual Basic におけるジェネリック型](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md)」、「[ジェネリックの概要](~/docs/csharp/programming-guide/generics/index.md)」、および「[Overview of Generics in Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp)」 (Visual C++ のジェネリックの概要) を参照してください。  
+ Visual C++、C#、および Visual Basic のすべてで、ジェネリックの定義と使用が完全にサポートされています。 言語サポートの詳細については、「[Visual Basic におけるジェネリック型](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)」、「[ジェネリックの概要](../../csharp/programming-guide/generics/index.md)」、および「[Overview of Generics in Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp)」 (Visual C++ のジェネリックの概要) を参照してください。  
   
- [ページのトップへ](#top)  
+ [先頭に戻る](#top)  
   
 <a name="nested_types_and_generics"></a>   
 ## <a name="nested-types-and-generics"></a>入れ子にされた型とジェネリック  
  ジェネリック型に入れ子にされている型は、外側のジェネリック型の型パラメーターに依存している可能性があります。 共通言語ランタイムでは、独自のジェネリック型パラメーターがない場合でも、入れ子にされた型をジェネリックと見なします。 入れ子にされた型のインスタンスを作成するときに、外側のすべてのジェネリック型の型引数を指定する必要があります。  
   
- [ページのトップへ](#top)  
+ [先頭に戻る](#top)  
   
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>関連トピック  
@@ -170,8 +170,8 @@ ms.locfileid: "67766826"
 |[ 一般的に使用されるコレクション型](../../../docs/standard/collections/commonly-used-collection-types.md)|ジェネリック型など、.NET のコレクション型の特性と使用シナリオの概要について説明します。|  
 |[ジェネリック コレクションを使用する状況](../../../docs/standard/collections/when-to-use-generic-collections.md)|ジェネリック コレクション型を使用するケースを決定するための一般的な規則について説明します。|  
 |[方法: リフレクション出力を使用してジェネリック型を定義する](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|ジェネリック型とジェネリック メソッドを含む動的アセンブリの生成方法について説明します。|  
-|[Generic Types in Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md)|ジェネリック型の使用方法や定義方法に関するトピックなど、Visual Basic ユーザー向けにジェネリック機能について説明します。|  
-|[ジェネリックの概要](~/docs/csharp/programming-guide/generics/index.md)|C# ユーザー向けにジェネリック型の定義方法や使用方法の概要について説明します。|  
+|[Visual Basic におけるジェネリック型](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)|ジェネリック型の使用方法や定義方法に関するトピックなど、Visual Basic ユーザー向けにジェネリック機能について説明します。|  
+|[ジェネリックの概要](../../csharp/programming-guide/generics/index.md)|C# ユーザー向けにジェネリック型の定義方法や使用方法の概要について説明します。|  
 |[Visual C++ のジェネリックの概要](/cpp/windows/overview-of-generics-in-visual-cpp)|ジェネリックとテンプレートの違いなど、C++ ユーザー向けにジェネリック機能について説明します。|  
   
 <a name="reference"></a>   
@@ -182,4 +182,4 @@ ms.locfileid: "67766826"
   
  <xref:System.Reflection.Emit.OpCodes?displayProperty=nameWithType>  
   
- [ページのトップへ](#top)
+ [先頭に戻る](#top)

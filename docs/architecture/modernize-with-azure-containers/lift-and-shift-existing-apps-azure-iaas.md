@@ -2,12 +2,12 @@
 title: 既存の .NET アプリを Azure IaaS にリフトアンドシフトする (クラウドインフラストラクチャの準備完了)
 description: Azure クラウドおよび Windows コンテナーを使用して、既存の .NET アプリケーションを最新化します。
 ms.date: 04/28/2018
-ms.openlocfilehash: cda316ad01a58f26661395c804547de04e20d052
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: e25ddbf9b6e62c264f3f4d4580d7df3553d262ea
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578395"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660750"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>既存の .NET アプリを Azure IaaS にリフトアンドシフトする (クラウドインフラストラクチャの準備完了)
 
@@ -107,4 +107,4 @@ Site Recovery は、一部がオンプレミスで、一部が Azure 上にあ�
 
 >[!div class="step-by-step"]
 >[前へ](index.md)
->[次へ](migrate-your-relational-databases-to-azure.md)
+>[次へ](migrate-your-relational-databases-to-azure.md) <!-- Next Chapter -->
