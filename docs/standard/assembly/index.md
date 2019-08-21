@@ -2,12 +2,12 @@
 title: .NET のアセンブリ
 ms.date: 07/10/2018
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
-ms.openlocfilehash: 4a92eea623abc8aaad170dafc4bc3c917a36a474
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 09dc44141a4eea7601df3f918e8740efdb99aeda
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61627825"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666589"
 ---
 # <a name="assemblies-in-net"></a>.NET のアセンブリ
 
@@ -25,7 +25,7 @@ ms.locfileid: "61627825"
 
 - リフレクションを使用して、アセンブリに関する情報をプログラムによって取得できます。 詳細については、「[リフレクション (C#)](../../csharp/programming-guide/concepts/reflection.md)」または「[リフレクション (Visual Basic)](../../visual-basic/programming-guide/concepts/reflection.md)」をご覧ください。
 
-- アセンブリの読み込みは、<xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> メソッドを呼び出してそれを検査するためにのみ実行できます。
+- アセンブリは、<xref:System.Reflection.MetadataLoadContext> クラスを使用して検査するためにのみ読み込むことができます。
 
 ## <a name="assembly-manifest"></a>アセンブリ マニフェスト
 
@@ -53,7 +53,7 @@ C# では、1 つのアプリケーションで同じアセンブリの 2 つの
 アプリケーションをコンパイルするには、それを Visual Studio でビルドするか、.NET Core コマンド ライン インターフェイス (CLI) ツールを使ってコマンド ラインからそれをビルドするか、またはコマンド ライン コンパイラを使って .NET Framework アセンブリをビルドします。 .NET CLI ツールを使ったアセンブリのビルドについて詳しくは、「[.NET Core コマンドライン インターフェイス (CLI) ツール](../../core/tools/index.md)」をご覧ください。 コマンド ライン コンパイラを使ったアセンブリのビルドについては、「[csc.exe を使用したコマンド ラインからのビルド](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)」(C#)、および[コマンド ラインからのビルド](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) (Visual Basic) に関する記事をご覧ください。
 
 > [!NOTE]
-> Visual Studio でアセンブリをビルドするには、**[ビルド]** メニューの **[ビルド]** を選択します。
+> Visual Studio でアセンブリをビルドするには、 **[ビルド]** メニューの **[ビルド]** を選択します。
 
 ## <a name="see-also"></a>関連項目
 
