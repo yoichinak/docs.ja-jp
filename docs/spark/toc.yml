@@ -15,7 +15,7 @@
       href: tutorials/amazon-emr-spark-deployment.md
     - name: Databricks のデプロイする
       href: tutorials/databricks-deployment.md
-- name: ハウツー ガイド
+- name: 使い方ガイド
   items:
     - name: アプリケーションをデバッグする
       href: how-to-guides/debug.md
