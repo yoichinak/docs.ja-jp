@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5df7ab070cc0a40f4e2f3d0545c5bc40ccb07f4d
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 61b4076a72dbc17ffc800a1a8d37a22d1435e02b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378036"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663682"
 ---
 # <a name="gcserver-element"></a>\<gcServer > 要素
 共通言語ランタイムがサーバーのガベージ コレクションを実行するかどうかを指定します。  
   
  \<configuration>  
-\<runtime>  
+\<ランタイム >  
 \<gcServer>  
   
 ## <a name="syntax"></a>構文  
@@ -65,7 +65,7 @@ ms.locfileid: "66378036"
  この要素は、アプリケーション構成ファイルでのみ使用できます。要素がマシン構成ファイルにある場合には無視されます。  
   
 > [!NOTE]
->  .NET Framework 4 以前のバージョンでは、サーバー ガベージ コレクションを有効にすると同時実行ガベージ コレクションが使用できません。 以降、.NET Framework 4.5 では、サーバーのガベージ コレクションは、同時実行します。 非同時実行サーバー ガベージ コレクションを使用する設定、`<gcServer>`要素`true`と[ \<gcConcurrent > 要素](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)に`false`します。  
+>  .NET Framework 4 以前のバージョンでは、サーバー ガベージ コレクションを有効にすると同時実行ガベージ コレクションが使用できません。 .NET Framework 4.5 以降では、サーバーのガベージコレクションは同時に実行されます。 非同時サーバーガベージコレクションを使用するには、 `<gcServer>`要素を`true`に`false` [ \<設定し、gcConcurrent > 要素](gcconcurrent-element.md)をに設定します。  
   
 ## <a name="example"></a>例  
  サーバー ガベージ コレクションを有効にする方法を次の例に示します。  
@@ -81,6 +81,6 @@ ms.locfileid: "66378036"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [同時実行ガベージ コレクションを無効にするには](gcconcurrent-element.md#to-disable-background-garbage-collection)
+- [ランタイム設定スキーマ](index.md)
+- [構成ファイル スキーマ](../index.md)
+- [同時実行ガベージコレクションを無効にするには](gcconcurrent-element.md#to-disable-background-garbage-collection)

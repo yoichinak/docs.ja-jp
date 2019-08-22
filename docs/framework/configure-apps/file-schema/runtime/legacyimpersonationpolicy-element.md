@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c39ee551dde19d87a75403f3db7433d1ef829f3b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4cf997c8ff13e0a6a4664ea3b538ac0def1baacf
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704636"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663627"
 ---
 # <a name="legacyimpersonationpolicy-element"></a>\<legacyImpersonationPolicy > 要素
 Windows ID が、現在のスレッドの実行コンテキストのフロー設定に関係なく、非同期ポイント間でフローしないことを指定します。  
   
  \<configuration>  
-\<runtime>  
+\<ランタイム >  
 \<legacyImpersonationPolicy>  
   
 ## <a name="syntax"></a>構文  
@@ -38,14 +38,14 @@ Windows ID が、現在のスレッドの実行コンテキストのフロー設
   
 |属性|説明|  
 |---------------|-----------------|  
-|`enabled`|必須の属性です。<br /><br /> 指定します、<xref:System.Security.Principal.WindowsIdentity>が非同期ポイント間をフローしないに関係なく、<xref:System.Threading.ExecutionContext>フローの現在のスレッドで設定します。|  
+|`enabled`|必須の属性です。<br /><br /> 現在のスレッド<xref:System.Security.Principal.WindowsIdentity>の<xref:System.Threading.ExecutionContext>フロー設定に関係なく、が非同期ポイント間でフローしないように指定します。|  
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
 |値|説明|  
 |-----------|-----------------|  
-|`false`|<xref:System.Security.Principal.WindowsIdentity> に応じて非同期ポイント間のフロー、<xref:System.Threading.ExecutionContext>フロー、現在のスレッドを設定します。 既定値です。|  
-|`true`|<xref:System.Security.Principal.WindowsIdentity> 非同期ポイント間をフローしないに関係なく、<xref:System.Threading.ExecutionContext>フローの現在のスレッドで設定します。|  
+|`false`|<xref:System.Security.Principal.WindowsIdentity>現在のスレッドのフロー設定に<xref:System.Threading.ExecutionContext>応じて、非同期ポイント間をフローします。 既定値です。|  
+|`true`|<xref:System.Security.Principal.WindowsIdentity>は、現在のスレッドの<xref:System.Threading.ExecutionContext>フロー設定に関係なく、非同期ポイント間ではフローしません。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -58,31 +58,31 @@ Windows ID が、現在のスレッドの実行コンテキストのフロー設
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
 ## <a name="remarks"></a>Remarks  
- .NET Framework バージョン 1.0 および 1.1 で、<xref:System.Security.Principal.WindowsIdentity>任意のユーザー定義の非同期ポイント間をフローしません。 以降、.NET Framework version 2.0 では、ある、<xref:System.Threading.ExecutionContext>と現在実行中のスレッドに関する情報を含むオブジェクトがアプリケーション ドメイン内での非同期ポイント間でフローします。 <xref:System.Security.Principal.WindowsIdentity>この実行コンテキストが用意されており、したがってもポイント間をフロー、非同期、つまり、権限借用コンテキストが存在する場合、これがフローするもします。  
+ .NET Framework バージョン1.0 および1.1 では、は<xref:System.Security.Principal.WindowsIdentity>ユーザー定義の非同期ポイント間ではフローしません。 .NET Framework バージョン2.0 以降では、現在実行中<xref:System.Threading.ExecutionContext>のスレッドに関する情報を格納するオブジェクトが存在し、アプリケーションドメイン内の非同期ポイント間をフローします。 は<xref:System.Security.Principal.WindowsIdentity> 、この実行コンテキストに含まれているため、非同期ポイント間でもフローします。つまり、権限借用コンテキストが存在する場合は、同様にフローが行われます。  
   
- 以降、.NET Framework 2.0 を使えば、`<legacyImpersonationPolicy>`ことを指定する要素<xref:System.Security.Principal.WindowsIdentity>非同期ポイント間をフローしません。  
+ .NET Framework 2.0 以降では、 `<legacyImpersonationPolicy>`要素を使用して、が非同期ポイント間でフローしないこと<xref:System.Security.Principal.WindowsIdentity>を指定できます。  
   
 > [!NOTE]
->  共通言語ランタイム (CLR) は、プラットフォームを通じてなど、マネージ コードの外部で実行する権限借用のではありませんのマネージ コードを使用して実行される操作は、アンマネージ コードに、または Win32 関数への直接の呼び出しを呼び出す権限借用に注意してください。 マネージのみ<xref:System.Security.Principal.WindowsIdentity>しない限り、非同期ポイント間でオブジェクトが流れることができる、`alwaysFlowImpersonationPolicy`要素が設定されているを true に (`<alwaysFlowImpersonationPolicy enabled="true"/>`)。 設定、 `alwaysFlowImpersonationPolicy` true 要素では、Windows id が偽装の実行方法に関係なく、非同期ポイント間で常にフローを指定します。 詳細についてはフローの情報では、権限借用をアンマネージ非同期ポイント間を参照してください[ \<alwaysFlowImpersonationPolicy > 要素](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)します。  
+>  共通言語ランタイム (CLR) は、マネージコードの外部で実行される偽装操作 (アンマネージコードへのプラットフォーム呼び出し、Win32 関数への直接呼び出しなど) を使用して実行される偽装操作を認識します。 要素が<xref:System.Security.Principal.WindowsIdentity> true(`<alwaysFlowImpersonationPolicy enabled="true"/>`) に設定されていない限り、非同期のポイント間でフローできるのはマネージオブジェクトだけです。 `alwaysFlowImpersonationPolicy` `alwaysFlowImpersonationPolicy`要素を true に設定すると、偽装がどのように実行されたかに関係なく、Windows id が常に非同期のポイントでフローすることを指定します。 非同期ポイント間でアンマネージ偽装をフローする方法の詳細については、「 [ \<alwaysFlowImpersonationPolicy > 要素](alwaysflowimpersonationpolicy-element.md)」を参照してください。  
   
- 他の 2 つの方法でこの既定の動作を変更することができます。  
+ この既定の動作は、次の2つの方法で変更できます。  
   
-1. スレッドごとにマネージ コードは。  
+1. マネージコード内で、スレッド単位で。  
   
-     スレッドごとのフローを抑制するには変更することによって、<xref:System.Threading.ExecutionContext>と<xref:System.Security.SecurityContext>設定を使用して、 <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>、<xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType>または<xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType>メソッド。  
+     <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>、、 <xref:System.Threading.ExecutionContext> または<xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType>メソッドを使用してと<xref:System.Security.SecurityContext>の設定を変更することで、スレッド単位でフローを抑制できます。 <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType>  
   
-2. で、共通言語ランタイム (CLR) を読み込むアンマネージ ホスト インターフェイスへの呼び出し。  
+2. アンマネージホストインターフェイスを呼び出して、共通言語ランタイム (CLR) を読み込みます。  
   
-     呼び出しで特別なフラグを指定するには、CLR を読み込めません (単純なマネージ実行可能ファイル) ではなく、アンマネージ ホスト インターフェイスを使用する場合、 [CorBindToRuntimeEx 関数](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)関数。 プロセス全体の互換モードを有効にするには設定、`flags`パラメーター [CorBindToRuntimeEx 関数](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)STARTUP_LEGACY_IMPERSONATION にします。  
+     アンマネージホストインターフェイス (単純なマネージ実行可能ファイルではなく) を使用して CLR を読み込む場合は、 [Corbindtoruntimeex 関数](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)関数の呼び出しで特別なフラグを指定できます。 プロセス全体で互換モードを有効にするには、 `flags` [corbindtoruntimeex 関数](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)のパラメーターを STARTUP_LEGACY_IMPERSONATION に設定します。  
   
- 詳細については、次を参照してください。、 [ \<alwaysFlowImpersonationPolicy > 要素](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)します。  
+ 詳細については、「 [ \<alwaysFlowImpersonationPolicy > 要素](alwaysflowimpersonationpolicy-element.md)」を参照してください。  
   
 ## <a name="configuration-file"></a>構成ファイル  
- .NET Framework アプリケーションでは、この要素は、アプリケーション構成ファイルでのみ使用できます。  
+ .NET Framework アプリケーションでは、この要素はアプリケーション構成ファイルでのみ使用できます。  
   
- 見つかった aspnet.config ファイルで、ASP.NET アプリケーションの権限借用のフローを構成できます、 \<Windows フォルダー > \Microsoft.NET\Framework\vx.x.xxxx ディレクトリ。  
+ ASP.NET アプリケーションの場合、偽装フローは、 \<Windows フォルダー > \Microsoft.NET\Framework\vx.x.xxxx ディレクトリにある aspnet ファイルで構成できます。  
   
- 既定では ASP.NET では、次の構成設定を使用して、aspnet.config ファイルで権限借用のフローを無効にします。  
+ ASP.NET は、既定では、次の構成設定を使用して、aspnet ファイル内の偽装フローを無効にします。  
   
 ``` xml
 <configuration>  
@@ -93,7 +93,7 @@ Windows ID が、現在のスレッドの実行コンテキストのフロー設
 </configuration>  
 ```  
   
- ASP.NET では、代わりに、権限借用のフローを許可する場合は、する必要があります明示的に使用する次の構成設定。  
+ ASP.NET で、代わりに偽装のフローを許可する場合は、次の構成設定を明示的に使用する必要があります。  
   
 ```xml  
 <configuration>  
@@ -105,7 +105,7 @@ Windows ID が、現在のスレッドの実行コンテキストのフロー設
 ```  
   
 ## <a name="example"></a>例  
- 次の例では、非同期ポイント間、Windows id をフローしない従来の動作を指定する方法を示します。  
+ 次の例は、非同期ポイント間で Windows id をフローしない従来の動作を指定する方法を示しています。  
   
 ```xml  
 <configuration>  
@@ -117,6 +117,6 @@ Windows ID が、現在のスレッドの実行コンテキストのフロー設
   
 ## <a name="see-also"></a>関連項目
 
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [\<alwaysFlowImpersonationPolicy > 要素](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)
+- [ランタイム設定スキーマ](index.md)
+- [構成ファイル スキーマ](../index.md)
+- [\<alwaysFlowImpersonationPolicy > 要素](alwaysflowimpersonationpolicy-element.md)

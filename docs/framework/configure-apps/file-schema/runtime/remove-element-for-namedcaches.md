@@ -5,14 +5,14 @@ helpviewer_keywords:
 - remove element for namedCaches
 - <remove> element for namedCaches
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
-ms.openlocfilehash: 053e2776153489dfdd61547fdc039980646ae697
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e9b126cee83bc8109606d915ea48549beea970c9
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704727"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663468"
 ---
-# <a name="remove-element-for-namedcaches"></a><namedCaches> の <remove> 要素
+# <a name="remove-element-for-namedcaches"></a>\<namedCaches> の \<remove> 要素
 名前付きキャッシュ エントリを、メモリ キャッシュの `namedCaches` コレクションから削除します。  
   
  \<system.runtime.caching>  
@@ -45,11 +45,11 @@ ms.locfileid: "61704727"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|名前付きの構成設定のコレクションを含む<xref:System.Runtime.Caching.MemoryCache>インスタンス。|  
+|[\<namedCaches>](namedcaches-element-cache-settings.md)|名前付き<xref:System.Runtime.Caching.MemoryCache>インスタンスの構成設定のコレクションを格納します。|  
   
 ## <a name="remarks"></a>Remarks  
- `remove`要素は、削除、`namedCache`メモリ キャッシュの名前付きキャッシュのコレクションからエントリ。  
+ 要素`remove`は、メモリ`namedCache`キャッシュの名前付きキャッシュコレクションからエントリを削除します。  
   
 ## <a name="see-also"></a>関連項目
 
-- [\<namedCaches > 要素 (キャッシュ設定)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+- [\<namedCaches > 要素 (キャッシュ設定)](namedcaches-element-cache-settings.md)

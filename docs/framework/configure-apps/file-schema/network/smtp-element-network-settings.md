@@ -8,15 +8,15 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-ms.openlocfilehash: 1b5f7406f995a86f0a192dbf3249c067dff570ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac9405fdc6123a5a1352de06f94fefb6d7d4014b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674403"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659121"
 ---
 # <a name="smtp-element-network-settings"></a>\<smtp > 要素 (ネットワーク設定)
-構成の配信形式、配信方法、および送信者の電子メールを送信するためのアドレス。  
+電子メールの送信に使用する配信形式、配信方法、差出人アドレスを構成します。  
   
  \<configuration>  
 \<system.net>  
@@ -43,8 +43,8 @@ ms.locfileid: "61674403"
 |属性|説明|  
 |---------------|-----------------|  
 |`deliveryFormat`|送信電子メールの配信形式を指定します。 指定できる値は SevenBit および International です。|  
-|`deliveryMethod`|電子メールの配信方法を指定します。 使用可能な値は、Network、PickupDirectoryFromIis、および specifiedpickupdirectory です。|  
-|`from`|指定します、送信電子メールの差出人アドレス。|  
+|`deliveryMethod`|電子メールの配信方法を指定します。 使用可能な値は、Network、ピックアップディレクトリ Fromiis、および指定された指定された Updirectory です。|  
+|`from`|送信メールの差出人アドレスを指定します。|  
   
 ### <a name="child-elements"></a>子要素  
   
@@ -57,10 +57,10 @@ ms.locfileid: "61674403"
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[\<mailSettings> 要素 (ネットワーク設定)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|電子メールの送信オプションを設定します。|  
+|[\<mailSettings> 要素 (ネットワーク設定)](mailsettings-element-network-settings.md)|電子メールの送信オプションを設定します。|  
   
 ## <a name="example"></a>例  
- 次の例では、既定のネットワーク資格情報を使用して電子メールを送信する適切な SMTP パラメーターを指定します。  
+ 次の例では、既定のネットワーク資格情報を使用して電子メールを送信するための適切な SMTP パラメーターを指定しています。  
   
 ```xml  
 <configuration>  
@@ -84,4 +84,4 @@ ms.locfileid: "61674403"
 - <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
 - <xref:System.Net.Mail.SmtpDeliveryFormat>
 - <xref:System.Net.Mail.SmtpDeliveryMethod>
-- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [ネットワーク設定スキーマ](index.md)

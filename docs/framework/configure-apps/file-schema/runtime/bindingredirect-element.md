@@ -9,21 +9,21 @@ helpviewer_keywords:
 - container tags, <bindingRedirect> element
 - bindingRedirect element
 ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
-ms.openlocfilehash: dda99bb4b96efbdd274e24e7cd548e4ed4df8b66
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7cdea10cc6e0562f6062470240b01743aa439bde
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704896"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658938"
 ---
 # <a name="bindingredirect-element"></a>\<bindingRedirect > 要素
 1 つのアセンブリ バージョンを別のバージョンにリダイレクトします。  
   
  \<configuration>  
-\<runtime>  
+\<ランタイム >  
 \<assemblyBinding>  
-\<dependentAssembly>  
-\<bindingRedirect>  
+\<dependentAssembly >  
+\<bindingRedirect >  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,8 +40,8 @@ newVersion="new assembly version"/>
   
 |属性|説明|  
 |---------------|-----------------|  
-|`oldVersion`|必須の属性です。<br /><br /> 初めに要求されていたアセンブリのバージョンを指定します。 アセンブリのバージョン番号の形式が*major.minor.build.revision*します。 このバージョン番号の各部分で有効値は、0 ～ 65535 です。<br /><br /> バージョン範囲は、次の形式でも指定できます。<br /><br /> *n.n.n.n - n.n.n.n*|  
-|`newVersion`|必須の属性です。<br /><br /> 形式で最初に要求されたバージョンの代わりに使用するアセンブリのバージョンを指定します: *n.n.n.n*<br /><br /> この値では `oldVersion` より前のバージョンを指定できます。|  
+|`oldVersion`|必須の属性です。<br /><br /> 初めに要求されていたアセンブリのバージョンを指定します。 アセンブリバージョン番号の形式は major. *minor. build. revision*です。 このバージョン番号の各部分で有効値は、0 ～ 65535 です。<br /><br /> バージョン範囲は、次の形式でも指定できます。<br /><br /> *n. n. n. n. n. n. n. n. n*|  
+|`newVersion`|必須の属性です。<br /><br /> 最初に要求されたバージョンの代わりに、次の形式で使用するアセンブリのバージョンを指定します。 n. n. n. n<br /><br /> この値では `oldVersion` より前のバージョンを指定できます。|  
   
 ### <a name="child-elements"></a>子要素  
   
@@ -59,11 +59,11 @@ newVersion="new assembly version"/>
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
 ## <a name="remarks"></a>Remarks  
- 厳密な名前付きアセンブリに対して .NET Framework アプリケーションを構築すると、実行時に新しいバージョンが利用できる場合でも、既定で、アプリケーションの構築時に使用したアセンブリのバージョンが使用されます。 ただし、新しいバージョンのアセンブリで実行するようにもアプリケーションを構成できます。 ランタイムがこれらのファイルを使用して、使用するアセンブリ バージョンを決定する方法について詳しくは、次を参照してください。[ランタイムがアセンブリを検索する方法](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)します。  
+ 厳密な名前付きアセンブリに対して .NET Framework アプリケーションを構築すると、実行時に新しいバージョンが利用できる場合でも、既定で、アプリケーションの構築時に使用したアセンブリのバージョンが使用されます。 ただし、新しいバージョンのアセンブリで実行するようにもアプリケーションを構成できます。 ランタイムがこれらのファイルを使用して、使用するアセンブリバージョンを決定する方法の詳細については、「[ランタイムがアセンブリを検索する方法](../../../deployment/how-the-runtime-locates-assemblies.md)」を参照してください。  
   
  複数の `bindingRedirect` 要素を `dependentAssembly` 要素に含めることによって、複数のアセンブリ バージョンをリダイレクトできます。 また、アセンブリの新しいバージョンから古いバージョンにリダイレクトすることもできます。  
   
- アプリケーション構成ファイルで明示的にアセンブリ バインディングをリダイレクトするには、セキュリティ アクセス許可が必要です。 これは、.NET Framework アセンブリおよびサードパーティ製アセンブリに適用されます。 許可を設定して、<xref:System.Security.Permissions.SecurityPermissionFlag>にフラグ、<xref:System.Security.Permissions.SecurityPermission>します。 詳細については、次を参照してください。[アセンブリ バインド リダイレクトのセキュリティ権限](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)します。  
+ アプリケーション構成ファイルで明示的にアセンブリ バインディングをリダイレクトするには、セキュリティ アクセス許可が必要です。 これは、.NET Framework アセンブリおよびサードパーティ製アセンブリに適用されます。 権限は、 <xref:System.Security.Permissions.SecurityPermissionFlag> <xref:System.Security.Permissions.SecurityPermission>にフラグを設定することによって付与されます。 詳細については、「[アセンブリバインディングリダイレクトのセキュリティアクセス許可](../../assembly-binding-redirection-security-permission.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  あるアセンブリ バージョンを別のバージョンにリダイレクトする例を示します。  
@@ -86,6 +86,6 @@ newVersion="new assembly version"/>
   
 ## <a name="see-also"></a>関連項目
 
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [アセンブリ バージョンのリダイレクト](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [ランタイム設定スキーマ](index.md)
+- [構成ファイル スキーマ](../index.md)
+- [アセンブリ バージョンのリダイレクト](../../redirect-assembly-versions.md)

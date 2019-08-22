@@ -2,21 +2,21 @@
 title: <add> の <entries>
 ms.date: 03/30/2017
 ms.assetid: 3af4805b-dc72-4f68-b168-da4fba8c6170
-ms.openlocfilehash: 1324803d7c0f127cfee9eadebff2672955780eda
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3052a7570d1d93836603454817be921b37d26060
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673642"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658839"
 ---
-# <a name="add-of-entries"></a>\<追加 > の\<エントリ >
+# <a name="add-of-entries"></a>\<エントリの > \<を追加 >
 以前に定義されたクライアント エンドポイントにフィルターをマップするルーティング エントリを表します。 このフィルターに一致するメッセージは、この宛先に送信されます。  
   
  \<system.serviceModel>  
 \<ルーティング >  
-\<filterTables>  
-\<filterTable>  
-\<entries>  
+\<filterTables >  
+\<filterTable >  
+\<エントリ >  
 \<add>  
   
 ## <a name="syntax"></a>構文  
@@ -36,9 +36,6 @@ ms.locfileid: "61673642"
 </routing>
 ```  
   
-```csharp  
-```  
-  
 ## <a name="attributes-and-elements"></a>属性および要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
@@ -49,7 +46,7 @@ ms.locfileid: "61673642"
 |backupList|エンドポイントのバックアップ リストへの参照を指定する文字列。|  
 |エンドポイント|`filterName` 属性で指定されたフィルターに一致するメッセージを受信するクライアント エンドポイントへの参照を指定する文字列。|  
 |filterName|フィルター要素への参照を指定する文字列。|  
-|priority|このエントリの優先順位を指定する整数。<br /><br /> ルーティング テーブルのエントリは、優先順位に基づいて評価されます。0 が最下位の優先順位です。 特定の優先順位について、すべてのエントリが同時に評価されます。現在の優先順位について一致するエントリが見つからない場合は、次の優先順位が評価されます。<br /><br /> この値はオプションです。|  
+|priority|このエントリの優先順位を指定する整数。<br /><br /> ルーティング テーブルのエントリは、優先順位に基づいて評価されます。0 が最下位の優先順位です。 特定の優先順位について、すべてのエントリが同時に評価されます。現在の優先順位について一致するエントリが見つからない場合は、次の優先順位が評価されます。<br /><br /> この値は省略可能です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  

@@ -6,26 +6,21 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: 32ca9658ddf4ab6e8690f29797b7ac7b09df2ca7
-ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 287ed08db8a4266e5044a81d47a697949257e113
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69012960"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658481"
 ---
 # <a name="walkthrough-style-wpf-content"></a>チュートリアル: WPF コンテンツのスタイルを適用する
 
-このチュートリアルでは、Windows フォームでホストされている Windows Presentation Foundation (WPF) コントロールにスタイルを適用する方法について説明します。
+この記事では、Windows フォームでホストされている Windows Presentation Foundation (WPF) コントロールにスタイルを適用する方法について説明します。
 
- このチュートリアルでは次のタスクを行います。
-
-- プロジェクトを作成します。
-
-- WPF コントロール型を作成します。
-
-- WPF コントロールにスタイルを適用します。
-
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 このチュートリアルを完了するには Visual Studio が必要です。
 
@@ -42,9 +37,9 @@ Visual Studio を開き、Visual Basic またはC#という名前`StylingWpfCont
 
 1. 新しい WPF <xref:System.Windows.Controls.UserControl> プロジェクトをソリューションに追加します。 コントロール型の既定の名前である `UserControl1.xaml` を使用します。 詳細については、「[チュートリアル:デザイン時](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)に WINDOWS フォームに新しい WPF コンテンツを作成する。
 
-2. デザイン ビューで `UserControl1` が選択されていることを確認します。 詳細については、「[方法 :デザインサーフェイス](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))上の要素を選択して移動します。
+2. デザイン ビューで `UserControl1` が選択されていることを確認します。
 
-3. **[プロパティ]** ウィンドウで、プロパティ<xref:System.Windows.FrameworkElement.Width%2A>と<xref:System.Windows.FrameworkElement.Height%2A>プロパティの値をに`200`設定します。
+3. **[プロパティ]** ウィンドウで、プロパティ<xref:System.Windows.FrameworkElement.Width%2A>と<xref:System.Windows.FrameworkElement.Height%2A>プロパティの値を**200**に設定します。
 
 4. にコントロール<xref:System.Windows.Controls.Button?displayProperty=nameWithType>を追加<xref:System.Windows.Controls.ContentControl.Content%2A>し、プロパティの値を Cancel に設定します。 <xref:System.Windows.Controls.UserControl>
 
@@ -60,15 +55,13 @@ Visual Studio を開き、Visual Basic またはC#という名前`StylingWpfCont
 
 1. **ツールボックス**で、をダブルクリック`UserControl1`して、フォーム上`UserControl1`にのインスタンスを作成します。
 
-       `UserControl1` のインスタンスは、`elementHost1` という名前の新しい <xref:System.Windows.Forms.Integration.ElementHost> コントロールでホストされます。
+   `UserControl1` のインスタンスは、`elementHost1` という名前の新しい <xref:System.Windows.Forms.Integration.ElementHost> コントロールでホストされます。
 
 1. の`elementHost1`スマートタグパネルで、ドロップダウンリストから [ホストされている**コンテンツの編集**] をクリックします。
 
-     `UserControl1` が [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] で開きます。
+   `UserControl1`WPF デザイナーでを開きます。
 
-1. XAML ビューで、次の XAML を `<UserControl>` の開始タグの後に挿入します。
-
-     この XAML は、明暗のあるグラデーション境界を持つグラデーションを作成します。 このコントロールをクリックすると、グラデーションが変わり、ボタンを押したような外観が生成されます。 詳しくは、「 [スタイルとテンプレート](../../wpf/controls/styling-and-templating.md)」をご覧ください。
+1. XAML ビューで、次の XAML を `<UserControl>` の開始タグの後に挿入します。 この XAML は、明暗のあるグラデーション境界を持つグラデーションを作成します。 このコントロールをクリックすると、グラデーションが変わり、ボタンを押したような外観が生成されます。 詳しくは、「 [スタイルとテンプレート](../../wpf/controls/styling-and-templating.md)」をご覧ください。
 
    ```xaml
    <UserControl.Resources>
@@ -118,7 +111,7 @@ Visual Studio を開き、Visual Basic またはC#という名前`StylingWpfCont
    </UserControl.Resources>
    ```
 
-1. [Cancel] ボタンの `<Button>` タグに次の XAML を挿入することで、前の手順で定義した `SimpleButton` スタイルを [Cancel] ボタンに適用します。
+1. **[キャンセル**] ボタンの`<Button>`タグに次の XAML を挿入して、前の手順で定義したスタイルを[キャンセル]ボタンに適用します。`SimpleButton`
 
    ```xaml
    Style="{StaticResource SimpleButton}
@@ -139,7 +132,7 @@ Visual Studio を開き、Visual Basic またはC#という名前`StylingWpfCont
 
 1. **[デバッグ]** メニューの **[デバッグ開始]** をクリックして、アプリケーションを実行します。
 
-1. [OK] ボタンと [Cancel] ボタンをクリックして、違いを確認します。
+1. [ **OK]** ボタンと **[キャンセル**] ボタンをクリックして、相違点を確認します。
 
 ## <a name="see-also"></a>関連項目
 

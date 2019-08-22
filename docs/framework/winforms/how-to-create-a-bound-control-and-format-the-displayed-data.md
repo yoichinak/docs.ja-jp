@@ -6,17 +6,16 @@ helpviewer_keywords:
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: 052e619acb23fb2e25f42daf7b4eaaacb0688f31
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: b5ad85a9477ca32cd28f246abe4ece3cace43182
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039423"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666781"
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>方法: バインド コントロールを作成して表示データの書式を設定する
 
 Windows フォームデータバインディングでは、 **[書式設定と詳細バインド]** ダイアログボックスを使用して、データバインドコントロールに表示されるデータの書式を設定できます。
-
 
 ### <a name="to-bind-a-control-and-format-the-displayed-data"></a>コントロールをバインドして表示データの書式を設定するには
 

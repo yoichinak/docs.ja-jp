@@ -9,18 +9,18 @@ helpviewer_keywords:
 - container tags, <codeBase> element
 - codeBase element
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
-ms.openlocfilehash: b5825efcc613689e73fb56b6695fe7c75ff09136
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a06daa0b2aa5374c9959cbbe778d62856819a40e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674195"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663867"
 ---
 # <a name="codebase-element"></a>\<codeBase > 要素
 
-共通言語ランタイムがアセンブリを検索する場所を指定します。
+共通言語ランタイムがアセンブリを検索できる場所を指定します。
 
-\<configuration> \<runtime> \<assemblyBinding> \<dependentAssembly> \<codeBase>
+\<構成 > \<ランタイム > \<assemblybinding > \<dependentAssembly > \<codeBase >
 
 ## <a name="syntax"></a>構文
 
@@ -38,14 +38,14 @@ ms.locfileid: "61674195"
 
 |属性|説明|
 |---------------|-----------------|
-|`href`|必須の属性です。<br /><br /> ランタイムがアセンブリの指定したバージョンを検索できる URL を指定します。|
-|`version`|必須の属性です。<br /><br /> コードベースを適用するアセンブリのバージョンを指定します。 アセンブリのバージョン番号の形式が*major.minor.build.revision*します。|
+|`href`|必須の属性です。<br /><br /> ランタイムが指定されたバージョンのアセンブリを検索できる URL を指定します。|
+|`version`|必須の属性です。<br /><br /> コードベースが適用されるアセンブリのバージョンを指定します。 アセンブリバージョン番号の形式は major. *minor. build. revision*です。|
 
-## <a name="version-attribute"></a>バージョン属性
+## <a name="version-attribute"></a>version 属性
 
-|[値]|説明|
+|値|説明|
 |-----------|-----------------|
-|バージョン番号の各部分の有効な値は、0 ~ 65535 です。|該当なし。|
+|バージョン番号の各部分の有効な値は 0 ~ 65535 です。|適用できません。|
 
 ### <a name="child-elements"></a>子要素
 
@@ -56,21 +56,21 @@ ms.locfileid: "61674195"
 |要素|説明|
 |-------------|-----------------|
 |`buildproviders`|カスタム リソース ファイルをコンパイルするためのビルド プロバイダーのコレクションを定義します。 ビルド プロバイダーの数は任意です。|
-|`compilation`|ASP.NET で使用されるすべてのコンパイルの設定を構成します。|
+|`compilation`|ASP.NET が使用するすべてのコンパイル設定を構成します。|
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|
 |`System.web`|ASP.NET 構成セクションのルート要素を指定します。|
 
 ## <a name="remarks"></a>Remarks
 
-ランタイムを使用するため、  **\<codeBase >** マシン構成ファイルまたは発行者ポリシー ファイルで設定をファイルする必要がありますも、アセンブリ バージョンをリダイレクトします。 アプリケーション構成ファイルでは、アセンブリのバージョンをリダイレクトせずコードベースの設定を持つことができます。 使用するアセンブリ バージョンを決定した後は、ランタイムは、バージョンを決定するファイルのコードベースの設定を適用します。 コードベースが示されていない場合、ランタイムは、通常の方法でアセンブリをプローブします。
+ランタイムで、コンピューター構成ファイルまたは発行者ポリシーファイルの **\<コードベース >** 設定を使用するには、アセンブリのバージョンもリダイレクトする必要があります。 アプリケーション構成ファイルには、アセンブリのバージョンをリダイレクトせずにコードベースを設定できます。 使用するアセンブリバージョンを決定した後、ランタイムは、バージョンを決定するファイルのコードベース設定を適用します。 コードベースが指定されていない場合、ランタイムは通常の方法でアセンブリをプローブします。
 
-アセンブリに厳密な名前がある場合は、コードベースの設定はローカル イントラネットまたはインターネットの任意の場所します。 アセンブリがプライベート アセンブリの場合は、コードベースの設定は、アプリケーションのディレクトリの相対パスである必要があります。
+アセンブリに厳密な名前が付いている場合、コードベースの設定は、ローカルイントラネットまたはインターネット上の任意の場所に置くことができます。 アセンブリがプライベートアセンブリの場合、コードベースの設定は、アプリケーションのディレクトリに対する相対パスである必要があります。
 
-厳密な名前のないアセンブリでは、バージョンは無視され、ローダーは最初の外観\<codebase > 内で\<dependentAssembly >。 別のアセンブリへのバインディングをリダイレクトするアプリケーション構成ファイルにエントリがある場合、アセンブリのバージョンは、バインド要求と一致しない場合でもはリダイレクトが優先されます。
+厳密な名前のないアセンブリの場合、バージョンは無視され、ローダーは dependentAssembly \<> 内部\<のコードベース > の最初の外観を使用します。 バインドを別のアセンブリにリダイレクトするエントリがアプリケーション構成ファイルにある場合、アセンブリのバージョンがバインド要求と一致しない場合でも、リダイレクトが優先されます。
 
 ## <a name="example"></a>例
 
-次の例では、ランタイムがアセンブリを検索する場所を指定する方法を示します。
+次の例は、ランタイムがアセンブリを検索する場所を指定する方法を示しています。
 
 ```xml
 <configuration>
@@ -90,7 +90,7 @@ ms.locfileid: "61674195"
 
 ## <a name="see-also"></a>関連項目
 
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [アセンブリの場所の指定](../../../../../docs/framework/configure-apps/specify-assembly-location.md)
-- [ランタイムがアセンブリを検索する方法](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [ランタイム設定スキーマ](index.md)
+- [構成ファイル スキーマ](../index.md)
+- [アセンブリの場所の指定](../../specify-assembly-location.md)
+- [ランタイムがアセンブリを検索する方法](../../../deployment/how-the-runtime-locates-assemblies.md)

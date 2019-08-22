@@ -6,17 +6,16 @@ helpviewer_keywords:
 - ImageList component [Windows Forms], removing images
 - images [Windows Forms], adding to ImageList component
 ms.assetid: 5699b244-e37c-4d20-bc35-7441e55c1e3a
-ms.openlocfilehash: 63692a797ad49f0adc3a0c5b0bfff1aebbc65257
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: be17d5e6a12824c1c9edc867c99e77a6a1437a36
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038269"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658580"
 ---
 # <a name="how-to-add-or-remove-imagelist-images-with-the-designer"></a>方法: デザイナーを使って ImageList イメージを追加または削除する
 
 <xref:System.Windows.Forms.ImageList>コンポーネントにイメージを追加するには、さまざまな方法があります。 に関連付けられ<xref:System.Windows.Forms.ImageList>たスマートタグを使用すると、イメージをすばやく追加できます。また、 <xref:System.Windows.Forms.ImageList>で他のプロパティをいくつか設定する場合は、プロパティウィンドウで画像を追加する方が便利な場合があります。 コードを使用してイメージを追加することもできます。 コードを使用してイメージを追加する方法の詳細[については、「」を参照してください。Windows フォーム ImageList コンポーネント](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)を使用してイメージを追加または削除します。 通常は、コントロール<xref:System.Windows.Forms.ImageList>に関連付けられる前にコンポーネントにイメージを設定しますが、これは必須ではありません。
-
 
 ### <a name="to-add-or-remove-images-by-using-the-properties-window"></a>プロパティウィンドウを使用してイメージを追加または削除するには
 

@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fdf840035150f08c894c984213af9a0abe6e95af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7c7f866cdbcd39194d61a3db821bf973b4e057e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704766"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663817"
 ---
 # <a name="developmentmode-element"></a>\<developmentMode > 要素
 DEVPATH 環境変数によって指定されたディレクトリで、ランタイムがアセンブリの検索を行うかどうかを指定します。  
   
  \<configuration>  
-\<runtime>  
-\<developmentMode>  
+\<ランタイム >  
+\<developmentMode >  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,10 +42,10 @@ DEVPATH 環境変数によって指定されたディレクトリで、ランタ
   
 ## <a name="developerinstallation-attribute"></a>developerInstallation 属性  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**true**|DEVPATH 環境変数によって指定されたディレクトリ内のアセンブリを検索します。|  
-|**false**|DEVPATH 環境変数によって指定されたディレクトリ内のアセンブリを検索しません。 これは、既定値です。|  
+|**false**|は、DEVPATH 環境変数によって指定されたディレクトリ内のアセンブリを検索しません。 これは既定値です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -58,10 +58,10 @@ DEVPATH 環境変数によって指定されたディレクトリで、ランタ
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
 ## <a name="remarks"></a>Remarks  
- 開発時にのみ、この設定を使用します。 ランタイムは、DEVPATH に厳密な名前のアセンブリのバージョンをチェックしません。 単に最初に見つかったアセンブリを使用します。  
+ この設定は、開発時にのみ使用してください。 ランタイムは、DEVPATH で見つかった厳密な名前のアセンブリのバージョンをチェックしません。 単純に、最初に見つかったアセンブリを使用します。  
   
 ## <a name="example"></a>例  
- 次の例では、ランタイムが DEVPATH 環境変数で指定されたディレクトリでアセンブリを検索する方法を示します。  
+ 次の例は、DEVPATH 環境変数によって指定されたディレクトリ内のアセンブリをランタイムが検索する方法を示しています。  
   
 ```xml  
 <configuration>  
@@ -73,6 +73,6 @@ DEVPATH 環境変数によって指定されたディレクトリで、ランタ
   
 ## <a name="see-also"></a>関連項目
 
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [方法: DEVPATH を使用してアセンブリを検索します。](../../../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)
+- [ランタイム設定スキーマ](index.md)
+- [構成ファイル スキーマ](../index.md)
+- [方法: DEVPATH を使用してアセンブリを検索する](../../how-to-locate-assemblies-by-using-devpath.md)

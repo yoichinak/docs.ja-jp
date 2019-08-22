@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <oidEntry> element
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
-ms.openlocfilehash: c686d2b99ad66aec753a356b09fa3c7151193808
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 013994e36c4c63410a753967cbac92c38783ae62
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674754"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659586"
 ---
 # <a name="oidentry-element"></a>\<oidEntry > 要素
 ASN.1 オブジェクト識別子 (OID) を表示名にマップします。  
   
  \<configuration>  
-\<mscorlib>  
+\<mscorlib >  
 \<cryptographySettings >  
 \<oidMap>  
-\<oidEntry>  
+\<oidEntry >  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,8 +37,8 @@ ASN.1 オブジェクト識別子 (OID) を表示名にマップします。
   
 |属性|説明|  
 |---------------|-----------------|  
-|**OID**|必須の属性です。<br /><br /> クラスで実装されているアルゴリズムに対応する ASN.1 OID を指定します。|  
-|**name**|必須の属性です。<br /><br /> 値を指定します、**名前**属性、 [ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md)タグ。|  
+|**ドーナツ**|必須の属性です。<br /><br /> クラスによって実装されたアルゴリズムに対応する asn.1 OID を指定します。|  
+|**name**|必須の属性です。<br /><br /> Nameentry > タグの**name**属性[の値を指定します。 \<](nameentry-element.md)|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -50,13 +50,13 @@ ASN.1 オブジェクト識別子 (OID) を表示名にマップします。
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`cryptographySettings`|暗号設定を含みます。|  
 |`mscorlib`|`cryptographySettings`要素を含んでいます。|  
-|`oidMap`|クラスへの ASN.1 オブジェクト識別子 (OID) のマッピングが含まれています。|  
+|`oidMap`|クラスに対する asn.1 オブジェクト識別子 (OID) マッピングが含まれています。|  
   
 ## <a name="remarks"></a>Remarks  
- ASN.1 オブジェクト識別子では、いくつかの暗号化形式でアルゴリズムを識別します。 オブジェクト識別子を特定するアルゴリズムの表示名にマップします。  
+ Asn.1 オブジェクト識別子は、一部の暗号化形式でアルゴリズムを識別します。 オブジェクト識別子を、識別するアルゴリズムのフレンドリ名にマップします。  
   
 ## <a name="example"></a>例  
- 次の例は、使用する方法を示します、  **\<oidEntry >** ripemd-160 のハッシュ アルゴリズムのオブジェクト識別子をそのハッシュ アルゴリズムの実装にマップする要素。  
+ 次の例は、  **\<oidEntry >** 要素を使用して、RIPEMD 160 ハッシュアルゴリズムのオブジェクト識別子をそのハッシュアルゴリズムの実装にマップする方法を示しています。  
   
 ```xml  
 <configuration>  
@@ -80,8 +80,8 @@ ASN.1 オブジェクト識別子 (OID) を表示名にマップします。
   
 ## <a name="see-also"></a>関連項目
 
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [暗号化設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [構成ファイル スキーマ](../index.md)
+- [暗号化設定スキーマ](index.md)
 - [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
-- [暗号化クラスの設定](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
-- [暗号化アルゴリズムへのオブジェクト ID の割り当て](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
+- [暗号化クラスの設定](../../configure-cryptography-classes.md)
+- [暗号化アルゴリズムへのオブジェクト ID の割り当て](../../map-object-identifiers-to-cryptography-algorithms.md)

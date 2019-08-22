@@ -2,22 +2,22 @@
 title: <idn> 要素 (Uri 設定)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
-ms.openlocfilehash: 369decf8551c76293ca513b8a3e58b4142a74773
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5fe2eafee702be96bfdca80a06af4a040d9ef0f6
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592758"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664118"
 ---
 # <a name="idn-element-uri-settings"></a>\<idn> 要素 (Uri 設定)
-ドメイン名に国際化ドメイン名 (IDN) 解析が適用されるかどうかを指定します。  
+国際化ドメイン名 (IDN) の解析がドメイン名に適用されるかどうかを指定します。  
   
 ## <a name="schema-hierarchy"></a>スキーマの階層  
- [\<configuration> 要素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [\<configuration> 要素](../configuration-element.md)  
   
- [\<Uri> 要素 (Uri 設定)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
+ [\<Uri> 要素 (Uri 設定)](uri-element-uri-settings.md)  
   
- [\<idn>](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)  
+ [\<idn>](idn-element-uri-settings.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,7 +34,7 @@ ms.locfileid: "64592758"
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|`enabled`|国際化ドメイン名 (IDN) 解析がドメイン名に適用される場合、既定値は none を指定します。|  
+|`enabled`|国際化ドメイン名 (IDN) の解析がドメイン名に適用されるかどうかを指定します。既定値は none です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし  
@@ -43,34 +43,34 @@ ms.locfileid: "64592758"
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[Uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|.NET Framework での uniform resource identifier (Uri) を使用して表現された web アドレスの処理方法を指定する設定が含まれています。|  
+|[uri](uri-element-uri-settings.md)|.NET Framework が、uniform resource identifier (Uri) を使用して表された web アドレスを処理する方法を指定する設定が含まれます。|  
   
 ## <a name="remarks"></a>Remarks  
- 既存の<xref:System.Uri>クラスは、.NET Framework 3.5 で拡張されています。 3.0 SP1、および 2.0 SP1 国際リソース識別子 (IRI) および国際化ドメイン名 (IDN) をサポートします。 IRI と IDN 明確には、現在のユーザーに、.NET Framework 2.0 の動作から変更は表示されないをサポートします。 これにより、.NET Framework の以前のバージョンとのアプリケーションの互換性を保証します。  
+ 既存<xref:System.Uri>のクラスは .NET Framework 3.5 で拡張されています。 3.0 SP1 および 2.0 SP1 (国際リソース識別子 (IRI) と国際化ドメイン名 (IDN) をサポート)。 現在のユーザーには、IRI と IDN のサポートを明示的に有効にしない限り、.NET Framework 2.0 の動作からの変更は表示されません。 これにより、.NET Framework の以前のバージョンとのアプリケーションの互換性を保証します。  
   
- IRI のサポートを有効にするのには、次の 2 つの変更が必要です。  
+ IRI のサポートを有効にするには、次の2つの変更が必要です。  
   
-1. .NET Framework 2.0 のディレクトリの machine.config ファイルに次の行を追加します。  
+1. Machine.config ファイルの .NET Framework 2.0 ディレクトリの下に次の行を追加します。  
   
     ```xml  
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2. 国際化ドメイン名 (IDN) 解析のドメイン名に適用するかどうか、および IRI 解析規則を適用する必要があるかどうかを指定します。 これは、machine.config ファイルまたは app.config ファイルで指定できます。  
+2. 国際化ドメイン名 (IDN) の解析をドメイン名に適用するかどうか、および IRI 解析規則を適用するかどうかを指定します。 これは、machine.config ファイルまたは app.config ファイルで指定できます。  
   
- IDN を使用する DNS サーバーによって可能な値は 3 つです。  
+ IDN には、使用する DNS サーバーに応じて、次の3つの値を指定できます。  
   
-- idn を有効になっている = All  
+- idn enabled = すべて  
   
-     この値は、任意の Unicode ドメイン名を等価の Punycode (IDN 名) に変換されます。  
+     この値により、すべての Unicode ドメイン名が Punycode に相当する (IDN 名) に変換されます。  
   
-- idn を有効になっている AllExceptIntranet を =  
+- idn enabled = AllExceptIntranet  
   
-     この値は、等価の Punycode (IDN 名) を使用するローカルのイントラネットではなく、すべての Unicode ドメイン名に変換されます。 ここでローカルのイントラネットで国際名を処理するために、イントラネットに使用される DNS サーバーは、Unicode の名前解決をサポートする必要があります。  
+     この値を指定すると、ローカルイントラネット上にないすべての Unicode ドメイン名が、Punycode に相当する (IDN 名) を使用するように変換されます。 この場合は、イントラネットで使用される DNS サーバーが Unicode 名前解決をサポートする必要があります。  
   
-- idn を有効になっている = なし  
+- idn enabled = なし  
   
-     この値は Punycode を使用する Unicode ドメイン名を変換できません。 これは、.NET Framework 2.0 の動作と一貫した既定値です。  
+     この値では、Unicode ドメイン名を変換して Punycode を使用することはできません。 これは、.NET Framework 2.0 の動作と一貫性のある既定値です。  
   
  IDN を有効にすると、ドメイン名に含まれるすべての Unicode のラベルが Punycode のラベルに変換されます。 Punycode 名には ASCII 文字のみが含まれ、常に xn-- プレフィックスで始まります。 この理由は、ほとんどの DNS サーバーは ASCII 文字しかサポートしていないため、インターネットで既存の DNS サーバーをサポートするためです (RFC 3940 を参照)。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "64592758"
 ## <a name="example"></a>例  
   
 ### <a name="description"></a>説明  
- 次の例で使用する構成を示しています、<xref:System.Uri>解析する IRI と IDN 名をサポートするクラス。  
+ 次の例は、IRI 解析と IDN <xref:System.Uri>名をサポートするためにクラスによって使用される構成を示しています。  
   
 ### <a name="code"></a>コード  
   
@@ -97,4 +97,4 @@ ms.locfileid: "64592758"
 
 - <xref:System.Configuration.IdnElement?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>
-- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [ネットワーク設定スキーマ](index.md)

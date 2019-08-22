@@ -10,18 +10,18 @@ helpviewer_keywords:
 - compiler configuration attributes
 - compiler element
 ms.assetid: 7a151659-b803-4c27-b5ce-1c4aa0d5a823
-ms.openlocfilehash: 34753d538ff37ac4ae621f653d47ac92ac6749a0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80eea3373e2f4b7e45ebeb31dd6552ea02c109e1
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705377"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659730"
 ---
 # <a name="compiler-element"></a>\<compiler> 要素
 
 言語プロバイダーのコンパイラ構成属性を指定します。
 
-\<configuration 要素 > \<system.codedom 要素 > \<compilers 要素 >\<コンパイラ > 要素
+\<構成要素 > \<> \<コンパイラ要素 > \<コンパイラ要素の > 要素
 
 ## <a name="syntax"></a>構文
 
@@ -43,33 +43,33 @@ ms.locfileid: "61705377"
 
 |属性|説明|
 |---------------|-----------------|
-|`compilerOptions`|省略可能な属性です。<br /><br /> コンパイルのコンパイラ固有の追加の引数を指定します。 値、`compilerOptions`属性は、コンパイラ オプションには、コンパイラのトピックの「通常挙げます。|
-|`extension`|必須の属性です。<br /><br /> 言語プロバイダーのソース ファイルによって使用されるファイル名拡張子のセミコロン区切りの一覧を示します。 たとえば、".cs"とします。|
-|`language`|必須の属性です。<br /><br /> 言語プロバイダーがサポートする言語名のセミコロン区切りの一覧を示します。 たとえば、「c#; cs; csharp」。|
-|`type`|必須の属性です。<br /><br /> プロバイダーの実装を含むアセンブリの名前を含む言語プロバイダーの型名を指定します。 型名で定義されている要件を満たす必要があります[完全修飾型名の指定](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)します。|
-|`warningLevel`|省略可能な属性です。<br /><br /> 既定のコンパイラ警告レベルを指定します言語プロバイダーがエラーとしてコンパイルの警告を扱いますが、レベルを決定します。|
+|`compilerOptions`|省略可能な属性です。<br /><br /> コンパイル用の追加のコンパイラ固有の引数を指定します。 `compilerOptions`属性の値は、通常、コンパイラのコンパイラオプションのトピックに示されています。|
+|`extension`|必須の属性です。<br /><br /> 言語プロバイダーのソースファイルで使用されるファイル名拡張子のセミコロン区切りのリストを提供します。 たとえば、".cs" のようになります。|
+|`language`|必須の属性です。<br /><br /> 言語プロバイダーでサポートされている言語名のセミコロン区切りのリストを提供します。 たとえば、"c#; cs; csharp" のようになります。|
+|`type`|必須の属性です。<br /><br /> プロバイダーの実装を含むアセンブリの名前を含む、言語プロバイダーの型名を指定します。 型名は、 [「完全修飾型名の指定](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)」で定義されている要件を満たしている必要があります。|
+|`warningLevel`|省略可能な属性です。<br /><br /> 既定のコンパイラの警告レベルを指定します。言語プロバイダーがコンパイル警告をエラーとして扱うレベルを決定します。|
 
 ### <a name="child-elements"></a>子要素
 
 |要素|説明|
 |-------------|-----------------|
-|[\<providerOption > 要素](../../../../../docs/framework/configure-apps/file-schema/compiler/provideroption-element.md)|言語プロバイダーのコンパイラ バージョン属性を指定します。|
+|[\<providerOption > 要素](provideroption-element.md)|言語プロバイダーのコンパイラバージョン属性を指定します。|
 
 ### <a name="parent-elements"></a>親要素
 
 |要素|説明|
 |-------------|-----------------|
-|[\<configuration> 要素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|
-|[\<system.codedom > 要素](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|使用可能な言語プロバイダーのコンパイラ構成設定を指定します。|
-|[\<compilers> 要素](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|コンパイラ構成要素のコンテナー0 個以上含む`<compiler>`要素。|
+|[\<configuration> 要素](../configuration-element.md)|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|
+|[\<system.string > 要素](system-codedom-element.md)|使用可能な言語プロバイダーのコンパイラ構成設定を指定します。|
+|[\<compilers> 要素](compilers-element.md)|コンパイラ構成要素のコンテナー0 個以上含む`<compiler>`要素。|
 
 ## <a name="remarks"></a>Remarks
 
-各`<compiler>`要素は、特定の言語プロバイダーのコンパイラ構成属性を指定します。 プロバイダーでは、 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> ; 特定の言語のクラス、`<compiler>`要素は、コンパイラおよび言語プロバイダー用のコード ジェネレーターの設定を定義します。
+各`<compiler>`要素は、特定の言語プロバイダーのコンパイラ構成属性を指定します。 プロバイダーは、特定<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>の言語のクラスを拡張し`<compiler>`ます。要素は、言語プロバイダーのコンパイラとコードジェネレーターの設定を定義します。
 
 .NET Framework は、マシン構成ファイル (Machine.config) 内でコンパイラの初期設定を定義します。 開発者やコンパイラ ベンダーは、新しい <xref:System.CodeDom.Compiler.CodeDomProvider> の実装のために構成設定を追加することができます。 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> メソッドを使用して、プログラムによってコンピューターの言語プロバイダーとコンパイラ構成の設定を列挙します。
 
-アプリケーションまたは Web 構成ファイルで要素をコンパイラでは、補完したり、コンピューターの構成ファイルで設定を上書きすることができます。 同じ言語の名前または同じファイルの拡張機能の 1 つ以上のプロバイダーの実装を構成する場合、最後の一致する構成は、その言語名またはファイル拡張子の前の構成済みのプロバイダーをオーバーライドします。
+アプリケーションまたは Web 構成ファイル内のコンパイラ要素は、マシン構成ファイル内の設定を補完またはオーバーライドできます。 同じ言語名または同じファイル拡張子に対して複数のプロバイダー実装が構成されている場合、最後に一致した構成によって、その言語名またはファイル拡張子に対して以前に構成されたすべてのプロバイダーがオーバーライドされます。
 
 ## <a name="configuration-file"></a>構成ファイル
 
@@ -77,7 +77,7 @@ ms.locfileid: "61705377"
 
 ## <a name="example"></a>例
 
-次の例は、通常のコンパイラ構成要素を示しています。
+次の例は、一般的なコンパイラ構成要素を示しています。
 
 ```xml
 <configuration>
@@ -101,7 +101,7 @@ ms.locfileid: "61705377"
 
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [\<compilers> 要素](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)
-- [完全修飾型名の指定](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)
-- [(ASP.NET 設定スキーマ) compilation の compilers の compiler 要素](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a15ebt6c(v=vs.100))
+- [構成ファイル スキーマ](../index.md)
+- [\<compilers> 要素](compilers-element.md)
+- [完全修飾型名の指定](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)
+- [コンパイル用コンパイラのコンパイラ要素 (ASP.NET Settings スキーマ)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a15ebt6c(v=vs.100))

@@ -13,17 +13,16 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-ms.openlocfilehash: 540226dbbada0373854144ac874d2164208ad943
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: d80f8e3bc729689b274af520bc37fda8417b0407
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039923"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658569"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>チュートリアル: デザイナーを使用した、ListView コントロールと TreeView コントロールを含むエクスプローラー スタイルのインターフェイスの作成
 
 Visual Studio の利点の1つは、プロフェッショナルな外観の Windows フォームアプリケーションを短時間で作成できることです。 一般的なシナリオでは、windows オペレーティングシステムの windows エクスプローラー <xref:System.Windows.Forms.ListView>機能<xref:System.Windows.Forms.TreeView>に似たコントロールとコントロールを使用して、ユーザーインターフェイス (UI) を作成します。 エクスプローラーには、ユーザーのコンピューター上のファイルとフォルダーの階層構造が表示されます。
-
 
 ### <a name="to-create-the-form-containing-a-listview-and-treeview-control"></a>ListView コントロールと TreeView コントロールを含むフォームを作成するには
 
@@ -31,7 +30,7 @@ Visual Studio の利点の1つは、プロフェッショナルな外観の Wind
 
 2. **[新しいプロジェクト]** ダイアログボックスで、次の操作を行います。
 
-    1. [カテゴリ] で、 **[Visual Basic]** または **[ビジュアルC# ]** を選択します。
+    1. カテゴリ で、 **Visual Basic** または **ビジュアルC#**  を選択します。
 
     2. テンプレートの一覧で、 **[Windows フォームアプリケーション]** を選択します。
 
@@ -45,7 +44,7 @@ Visual Studio の利点の1つは、プロフェッショナルな外観の Wind
 
     1. <xref:System.Windows.Forms.Control.Dock%2A> プロパティを <xref:System.Windows.Forms.DockStyle.Fill>に設定します。
 
-    2.   <xref:System.Windows.Forms.TreeView.ImageList%2A> プロパティを `imagelist1.` に設定します。
+    2. <xref:System.Windows.Forms.TreeView.ImageList%2A> プロパティを `imagelist1.` に設定します。
 
 7. という<xref:System.Windows.Forms.ListView>名前`listView1`のコントロールをフォームに追加し、 <xref:System.Windows.Forms.SplitContainer>コントロールの右側に配置します。 の`listview1`プロパティウィンドウで、次の操作を行います。
 
@@ -55,9 +54,9 @@ Visual Studio の利点の1つは、プロフェッショナルな外観の Wind
 
     3. [![ ] <xref:System.Windows.Forms.ListView.Columns%2A>プロパティの省略記号 (省略記号ボタン ([...] プロパティウィンドウ](./media/visual-studio-ellipsis-button.png)) をクリックして、columnheader コレクションエディターを開きます。 3つの列を追加<xref:System.Windows.Forms.ColumnHeader.Text%2A>し、それぞれ`Type`のプロパティ`Last Modified`を、、およびに`Name`それぞれ設定します。 **[OK]** をクリックしてダイアログ ボックスを閉じます。
 
-    4.   <xref:System.Windows.Forms.ListView.SmallImageList%2A> プロパティを `imageList1.` に設定します。
+    4. <xref:System.Windows.Forms.ListView.SmallImageList%2A> プロパティを `imageList1.` に設定します。
 
-8. ノードとサブノードを<xref:System.Windows.Forms.TreeView>に設定するコードを実装します。   `Form1` クラスに次のコードを追加します。
+8. ノードとサブノードを<xref:System.Windows.Forms.TreeView>に設定するコードを実装します。 `Form1` クラスに次のコードを追加します。
 
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#1)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#1)]
@@ -72,7 +71,7 @@ Visual Studio の利点の1つは、プロフェッショナルな外観の Wind
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#2)]
 
-11. <xref:System.Windows.Forms.TreeView.NodeMouseClick>の `listview1`イベントを処理し、ノードがクリックされたときにノードの内容を設定するコードを実装します。 `treeview1`   `Form1` クラスに次のコードを追加します。
+11. <xref:System.Windows.Forms.TreeView.NodeMouseClick>の `listview1`イベントを処理し、ノードがクリックされたときにノードの内容を設定するコードを実装します。 `treeview1` `Form1` クラスに次のコードを追加します。
 
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#3)]

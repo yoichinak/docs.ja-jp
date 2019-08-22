@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29932eb27bcd13876ea6982982e67341edb8e0de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c8f8744d3ef1ca30eb05a4c8c3290d8a514714b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674078"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663514"
 ---
-# <a name="publisherpolicy-element"></a>\<publisherPolicy > 要素
+# <a name="publisherpolicy-element"></a>\<Publisherpolicy apply > 要素
 ランタイムが発行元ポリシーを適用するかどうかを指定します。  
   
  \<configuration>  
-\<runtime>  
+\<ランタイム >  
 \<assemblyBinding>  
-\<dependentAssembly>  
-\<publisherPolicy>  
+\<dependentAssembly >  
+\<Publisherpolicy apply >  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,12 +43,12 @@ ms.locfileid: "61674078"
 |---------------|-----------------|  
 |`apply`|発行者ポリシーを適用するかどうかを指定します。|  
   
-## <a name="apply-attribute"></a>属性を適用します。  
+## <a name="apply-attribute"></a>属性の適用  
   
 |[値]|説明|  
 |-----------|-----------------|  
 |`yes`|発行者ポリシーを適用します。 これは、既定の設定です。|  
-|`no`|発行元ポリシーは適用されません。|  
+|`no`|発行者ポリシーは適用されません。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -61,14 +61,14 @@ ms.locfileid: "61674078"
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
 ## <a name="remarks"></a>Remarks  
- コンポーネント ベンダーは、アセンブリの新しいバージョンをリリースするとき、ベンダーは、古いバージョンを今すぐ使用するアプリケーションが新しいバージョンを使用するように発行者ポリシーを含めることができます。 特定のアセンブリに発行者ポリシーを適用するかどうかを指定するには、配置、  **\<publisherPolicy >** 内の要素、  **\<dependentAssembly >** 要素。  
+ コンポーネントベンダーがアセンブリの新しいバージョンをリリースする場合、ベンダーには発行者ポリシーを含めることができるため、以前のバージョンを使用するアプリケーションでは新しいバージョンが使用されるようになりました。 特定のアセンブリに対して発行者ポリシーを適用するかどうかを指定するには、  **\<publisherpolicy apply >** 要素を **\<dependentAssembly >** 要素に配置します。  
   
- 既定の設定、**適用**属性が**はい**します。 設定、**適用**属性を**ありません**上書き前**はい**アセンブリの設定。  
+ **適用**属性の既定の設定は **[はい]** です。 **適用**属性を [**いいえ** **]** に設定すると、アセンブリの以前のすべての設定がオーバーライドされます。  
   
- アクセス許可が明示的にポリシーを使用してパブリッシャーを無視するアプリケーションに必要な[ \<publisherPolicy 適用 ="no"/>](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md)アプリケーション構成ファイル内の要素。 許可を設定して、<xref:System.Security.Permissions.SecurityPermissionFlag>にフラグ、<xref:System.Security.Permissions.SecurityPermission>します。 詳細については、次を参照してください。[アセンブリ バインド リダイレクトのセキュリティ権限](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)します。  
+ アプリケーション構成ファイルの[ \<publisherpolicy apply apply = "no"/>](publisherpolicy-element.md)要素を使用して、アプリケーションが発行者ポリシーを明示的に無視するためのアクセス許可が必要です。 権限は、 <xref:System.Security.Permissions.SecurityPermissionFlag> <xref:System.Security.Permissions.SecurityPermission>にフラグを設定することによって付与されます。 詳細については、「[アセンブリバインディングリダイレクトのセキュリティアクセス許可](../../assembly-binding-redirection-security-permission.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例が、アセンブリの発行者ポリシーをオフに`myAssembly`します。  
+ 次の例では、アセンブリの発行者ポリシー `myAssembly`をオフにします。  
   
 ```xml  
 <configuration>  
@@ -87,7 +87,7 @@ ms.locfileid: "61674078"
   
 ## <a name="see-also"></a>関連項目
 
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [ランタイムがアセンブリを検索する方法](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [アセンブリ バージョンのリダイレクト](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [ランタイム設定スキーマ](index.md)
+- [構成ファイル スキーマ](../index.md)
+- [ランタイムがアセンブリを検索する方法](../../../deployment/how-the-runtime-locates-assemblies.md)
+- [アセンブリ バージョンのリダイレクト](../../redirect-assembly-versions.md)

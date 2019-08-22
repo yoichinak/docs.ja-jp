@@ -10,14 +10,14 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-ms.openlocfilehash: c57e2849d608b1706c41beca91ff8026ebd9ca45
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 20a586e945a889d1fd8a8d4c5c09c8b790c56fc3
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705026"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664017"
 ---
-# <a name="remove-element-for-webrequestmodules-network-settings"></a>\<削除 > webRequestModules (ネットワーク設定) の要素
+# <a name="remove-element-for-webrequestmodules-network-settings"></a>\<webRequestModules の > 要素の削除 (ネットワーク設定)
 アプリケーションからカスタム Web 要求モジュールを削除します。  
   
  \<configuration>  
@@ -49,19 +49,19 @@ ms.locfileid: "61705026"
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|使用してネットワークのホストから情報を要求するモジュールを指定します。|  
+|[webRequestModules](webrequestmodules-element-network-settings.md)|ネットワークホストから情報を要求するために使用するモジュールを指定します。|  
   
 ## <a name="remarks"></a>Remarks  
- `remove`要素が指定された URI のプレフィックスの登録済みの Web 要求モジュールを削除します。  
+ 要素`remove`は、指定された URI プレフィックスの登録済み Web 要求モジュールを削除します。  
   
- 値、`prefix`属性はたとえば、- 有効な URI の先頭の文字をする必要があります"`http`"、または"`http://www.contoso.com`"。  
+ `prefix`属性の値は、有効な URI の先頭の文字 ("`http`"、`http://www.contoso.com`"" など) にする必要があります。  
   
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
 
-次の例は、HTTP の場合、既存の Web 要求モジュールを削除し、レジスタ HTTP の新しいカスタム Web 要求モジュールを要求する`www.contoso.com`します。
+次の例では、HTTP 用の既存の Web 要求モジュールを削除し、HTTP 要求用の新しいカスタム`www.contoso.com`web 要求モジュールをに登録します。
   
 ```xml  
 <configuration>  
@@ -80,4 +80,4 @@ ms.locfileid: "61705026"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Net.WebRequest>
-- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [ネットワーク設定スキーマ](index.md)

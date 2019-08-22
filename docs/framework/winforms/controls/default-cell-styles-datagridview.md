@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data formats
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
-ms.openlocfilehash: 53faf31c8dd3be1606c491e95594c4aae5aedf98
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 6d7d867b7c9e83b68589e046565bfb0199692f5f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039673"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658512"
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>方法: デザイナーを使用して Windows フォーム DataGridView コントロールの既定のセル スタイルとデータ形式を設定する
 
@@ -23,7 +23,6 @@ ms.locfileid: "69039673"
 また、 <xref:System.Windows.Forms.DataGridView.RowTemplate%2A>プロパティを使用してスタイルを設定し、コントロールに追加されるすべての行に影響を与えることもできます。 行テンプレートの詳細については、 [「方法:行テンプレートを使用して、Windows フォーム DataGridView コントロール](use-the-row-template-to-customize-rows-in-the-datagrid.md)で行をカスタマイズします。
 
 次の手順では、 <xref:System.Windows.Forms.DataGridView>コントロールを含むフォームを含む**Windows アプリケーション**プロジェクトが必要です。 このようなプロジェクトの設定の詳細につい[ては、「方法:Windows フォームアプリケーションプロジェクト](/visualstudio/ide/step-1-create-a-windows-forms-application-project)を作成し[、次の操作を行います。Windows フォーム](how-to-add-controls-to-windows-forms.md)にコントロールを追加します。
-
 
 ### <a name="to-set-default-styles-for-all-cells-in-the-control"></a>コントロール内のすべてのセルに既定のスタイルを設定するには
 

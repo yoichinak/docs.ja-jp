@@ -9,15 +9,15 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 1aa182ced462e5fc90b22019aaf424d400bb4fd5
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 648adb34664ccb2a475e32aba4d0d76d99cf49d8
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629661"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666765"
 ---
 # <a name="layout"></a>レイアウト
-このトピックでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] レイアウト システムについて説明します。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] でユーザー インターフェイスを作成するには、レイアウトの計算が発生するタイミングと方法を理解することが非常に重要です。  
+このトピックでは、Windows Presentation Foundation (WPF) レイアウトシステムについて説明します。 WPF でユーザーインターフェイスを作成するには、レイアウトの計算がどのように行われるかを理解することが不可欠です。  
   
  このトピックは、次のセクションで構成されています。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68629661"
   
 <a name="LayoutSystem_BoundingBox"></a>   
 ## <a name="element-bounding-boxes"></a>要素の境界ボックス  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] でレイアウトについて考えるときは、すべての要素を囲む境界ボックスを理解することが重要です。 レイアウト<xref:System.Windows.FrameworkElement>システムによって使用される各は、レイアウトにスロット分割される四角形と考えることができます。 クラス<xref:System.Windows.Controls.Primitives.LayoutInformation>は、要素のレイアウト割り当て (スロット) の境界を返します。 四角形のサイズは、使用可能な画面領域、制約のサイズ、レイアウト固有のプロパティ (余白や埋め込みなど)、および親<xref:System.Windows.Controls.Panel>要素の個々の動作を計算することによって決定されます。 レイアウトシステムは、このデータを処理することで、特定<xref:System.Windows.Controls.Panel>ののすべての子の位置を計算できます。 の<xref:System.Windows.Controls.Border>ように、親要素で定義されているサイズ設定特性は、その子に影響を与えることに注意してください。  
+ WPF でのレイアウトについて考えるときは、すべての要素を囲む境界ボックスについて理解しておくことが重要です。 レイアウト<xref:System.Windows.FrameworkElement>システムによって使用される各は、レイアウトにスロット分割される四角形と考えることができます。 クラス<xref:System.Windows.Controls.Primitives.LayoutInformation>は、要素のレイアウト割り当て (スロット) の境界を返します。 四角形のサイズは、使用可能な画面領域、制約のサイズ、レイアウト固有のプロパティ (余白や埋め込みなど)、および親<xref:System.Windows.Controls.Panel>要素の個々の動作を計算することによって決定されます。 レイアウトシステムは、このデータを処理することで、特定<xref:System.Windows.Controls.Panel>ののすべての子の位置を計算できます。 の<xref:System.Windows.Controls.Border>ように、親要素で定義されているサイズ設定特性は、その子に影響を与えることに注意してください。  
   
  次の図は、シンプルなレイアウトを示しています。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "68629661"
   
 <a name="LayoutSystem_PanelsCustom"></a>   
 ## <a name="panel-elements-and-custom-layout-behaviors"></a>パネル要素とカスタム レイアウトの動作  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]は、から<xref:System.Windows.Controls.Panel>派生する要素のグループを含みます。 これら<xref:System.Windows.Controls.Panel>の要素により、多数の複雑なレイアウトが可能になります。 たとえば、 <xref:System.Windows.Controls.StackPanel>要素を使用すると、積み重ねる要素を簡単に実現できます。一方、を<xref:System.Windows.Controls.Canvas>使用すると、より複雑でフリーのフローレイアウトが可能になります。  
+WPF には、から<xref:System.Windows.Controls.Panel>派生する要素のグループが含まれています。 これら<xref:System.Windows.Controls.Panel>の要素により、多数の複雑なレイアウトが可能になります。 たとえば、 <xref:System.Windows.Controls.StackPanel>要素を使用すると、積み重ねる要素を簡単に実現できます。一方、を<xref:System.Windows.Controls.Canvas>使用すると、より複雑でフリーのフローレイアウトが可能になります。  
   
  次の表は、使用可能<xref:System.Windows.Controls.Panel>なレイアウト要素をまとめたものです。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "68629661"
 |<xref:System.Windows.Controls.VirtualizingPanel>|子データコレクションを<xref:System.Windows.Controls.Panel>仮想化する要素のフレームワークを提供します。 これは抽象クラスです。|  
 |<xref:System.Windows.Controls.WrapPanel>|左から右へ順に子要素を配置し、ボックスの端で改行してコンテンツを次の行へ送ります。 後続の順序は、 <xref:System.Windows.Controls.WrapPanel.Orientation%2A>プロパティの値に応じて、上から下または右から左に順番に行われます。|  
   
- 定義済み<xref:System.Windows.Controls.Panel>の要素のいずれかを使用しても不可能なレイアウトを必要とするアプリケーションでは、を<xref:System.Windows.Controls.Panel>継承し、メソッド<xref:System.Windows.FrameworkElement.MeasureOverride%2A>と<xref:System.Windows.FrameworkElement.ArrangeOverride%2A>メソッドをオーバーライドすることにより、カスタムレイアウト動作を実現できます。 例については、「[Custom Radial Panel Sample](https://go.microsoft.com/fwlink/?LinkID=159982)」 (カスタム放射状パネルのサンプル) を参照してください。  
+ 定義済み<xref:System.Windows.Controls.Panel>の要素のいずれかを使用しても不可能なレイアウトを必要とするアプリケーションでは、を<xref:System.Windows.Controls.Panel>継承し、メソッド<xref:System.Windows.FrameworkElement.MeasureOverride%2A>と<xref:System.Windows.FrameworkElement.ArrangeOverride%2A>メソッドをオーバーライドすることにより、カスタムレイアウト動作を実現できます。  
   
 <a name="LayoutSystem_Performance"></a>   
 ## <a name="layout-performance-considerations"></a>レイアウトのパフォーマンスの考慮事項  
@@ -138,7 +138,7 @@ ms.locfileid: "68629661"
   
 <a name="LayoutSystem_LayoutRounding"></a>   
 ## <a name="sub-pixel-rendering-and-layout-rounding"></a>サブピクセル レンダリングとレイアウトの丸め処理  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] グラフィックス システムでは、デバイスに依存しない単位を使用して、解像度とデバイスの独立性を可能にします。 デバイスに依存しない各ピクセルは、システムのドット/インチ (dpi) 設定に応じて自動的にスケーリングされます。 これに[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]より、さまざまな dpi 設定の適切なスケーリングがアプリケーションに提供され、アプリケーションが自動的に dpi に対応するようになります。  
+ WPF グラフィックスシステムでは、デバイスに依存しない単位を使用して、解像度とデバイスに依存しないようにします。 デバイスに依存しない各ピクセルは、システムのドット/インチ (dpi) 設定に応じて自動的にスケーリングされます。 これにより、さまざまな dpi 設定に対して WPF アプリケーションの適切なスケーリングが提供され、アプリケーションが自動的に dpi に対応するようになります。  
   
  ただし、この dpi に依存しない場合は、アンチエイリアシングのために不規則なエッジレンダリングが作成できます。 これらの成果物 (通常はぼやけたエッジや半透明のエッジが見られます) は、エッジの場所がデバイス ピクセルの間ではなく、デバイス ピクセルの中間にある場合に発生します。 レイアウト システムは、レイアウトの丸め処理でこれを調整する方法を提供します。 レイアウトの丸め処理では、レイアウト システムがレイアウト パスの実行中に任意の整数以外のピクセル値を丸めます。  
   
@@ -146,7 +146,7 @@ ms.locfileid: "68629661"
   
 <a name="LayoutSystem_whatsnext"></a>   
 ## <a name="whats-next"></a>次の内容  
- 要素の測定方法と配置方法を理解することが、レイアウトを理解する最初のステップです。 使用可能な<xref:System.Windows.Controls.Panel>要素の詳細については、「[パネルの概要](../controls/panels-overview.md)」を参照してください。 レイアウトに影響を与えるさまざまな配置プロパティをより理解するには、「[配置、余白、パディングの概要](alignment-margins-and-padding-overview.md)」を参照してください。 カスタム<xref:System.Windows.Controls.Panel>要素の例については、「[カスタム放射状パネルのサンプル](https://go.microsoft.com/fwlink/?LinkID=159982)」を参照してください。 軽量のアプリケーションにまとめて配置する準備ができたら、「 [チュートリアル:初めての WPF デスクトップ](../getting-started/walkthrough-my-first-wpf-desktop-application.md)アプリケーション。  
+ 要素の測定方法と配置方法を理解することが、レイアウトを理解する最初のステップです。 使用可能な<xref:System.Windows.Controls.Panel>要素の詳細については、「[パネルの概要](../controls/panels-overview.md)」を参照してください。 レイアウトに影響を与えるさまざまな配置プロパティをより理解するには、「[配置、余白、パディングの概要](alignment-margins-and-padding-overview.md)」を参照してください。 軽量のアプリケーションにまとめて配置する準備ができたら、「 [チュートリアル:初めての WPF デスクトップ](../getting-started/walkthrough-my-first-wpf-desktop-application.md)アプリケーション。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -2,40 +2,40 @@
 title: LINQ to SQL でのコード生成
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: fbc70669b9c03b59468f4f6a67c1f73432883193
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63ac0f50b34a5e5d8739adbeb70f2412960227c3
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743604"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666131"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>LINQ to SQL でのコード生成
-オブジェクト リレーショナル デザイナーまたは SQLMetal コマンド ライン ツールを使用して、データベースを表すコードを生成することができます。 どちらの場合も、エンド ツー エンドのコード生成が次の 3 段階で行われます。  
+オブジェクトリレーショナルデザイナーまたは SQLMetal コマンドラインツールのいずれかを使用して、データベースを表すコードを生成できます。 どちらの場合も、エンド ツー エンドのコード生成が次の 3 段階で行われます。  
   
-1. *DBML Extractor*データベースからスキーマ情報を抽出し、XML 形式の DBML ファイルに情報を再アセンブルします。  
+1. *DBML エクストラクター*は、データベースからスキーマ情報を抽出し、その情報を XML 形式の DBML ファイルに変換します。  
   
-2. DBML ファイルがスキャン、 *DBML Validator*エラー。  
+2. Dbml ファイルは、エラーのために*Dbml バリデーター*によってスキャンされます。  
   
 3. 検証エラーが見つからない場合、ファイルはコード ジェネレーターに渡されます。  
   
- 詳しくは、「[SqlMetal.exe (コード生成ツール)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)」をご覧ください。 Visual Studio を使用している開発者は、オブジェクト リレーショナル デザイナーを使用してもコードを生成します。 参照してください[LINQ to Visual Studio での SQL ツール](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)します。  
+ 詳しくは、「[SqlMetal.exe (コード生成ツール)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)」をご覧ください。 Visual Studio を使用する開発者は、オブジェクトリレーショナルデザイナーを使用してコードを生成することもできます。 「 [Visual Studio の LINQ to SQL ツール」を](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)参照してください。  
   
 ## <a name="dbml-extractor"></a>DBML Extractor  
- DBML Extractor は、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]コンポーネントを入力としてのデータベースのメタデータを受け取り、DBML ファイルを出力として生成します。  
+ Dbml エクストラクターは[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 、データベースメタデータを入力として受け取り、dbml ファイルを出力として生成するコンポーネントです。  
   
 ## <a name="code-generator"></a>コード ジェネレーター  
- コード ジェネレーターが、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]を Visual Basic の場合は、DBML ファイルに変換するコンポーネントC#、または XML マッピング ファイル。  
+ コードジェネレーターは[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 、DBML ファイルを Visual Basic、 C#、または XML マッピングファイルに変換するコンポーネントです。  
   
 ## <a name="xml-schema-definition-file"></a>XML スキーマ定義ファイル  
  DBML ファイルは、以下のような XSD ファイルのスキーマ定義に対して有効である必要があります。  
   
- このスキーマ定義ファイルを、外部マッピング ファイルの検証に使われるスキーマ定義ファイルと区別してください。 詳細については、次を参照してください。[外部マッピング](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md))。  
+ このスキーマ定義ファイルを、外部マッピング ファイルの検証に使われるスキーマ定義ファイルと区別してください。 詳細については、「[外部マッピング](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)」を参照してください。  
   
 > [!NOTE]
->  Visual Studio のユーザーはこの XSD ファイルを「DbmlSchema.xsd」として XML スキーマ ダイアログ ボックスで検索もされます。 DBML ファイルを検証するため、XSD ファイルを正しく使用するを参照してください。[方法。DBML ファイルおよび外部マッピング ファイルを検証](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)です。  
+>  また、Visual Studio ユーザーは、この XSD ファイルを [XML スキーマ] ダイアログボックスの "DbmlSchema" として検索します。 DBML ファイルを検証するために XSD ファイルを正しく使用する[方法については、「方法:DBML ファイルと外部マッピングファイル](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)を検証します。  
   
-```  
-?<?xml version="1.0" encoding="utf-16"?>  
+```xml  
+<?xml version="1.0" encoding="utf-16"?>  
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.microsoft.com/linqtosql/dbml/2007" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007"  
 elementFormDefault="qualified" >  
   <xs:element name="Database" type="Database" />  
@@ -243,7 +243,7 @@ elementFormDefault="qualified" >
 ```  
   
 ## <a name="sample-dbml-file"></a>サンプル DBML ファイル  
- 次のコードは、Northwind サンプル データベースから作成された DBML ファイルの抜粋です。 SQLMetal でを使用して、ファイル全体を生成することができます、 **/xml**オプション。 詳しくは、「[SqlMetal.exe (コード生成ツール)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)」をご覧ください。  
+ 次のコードは、Northwind サンプル データベースから作成された DBML ファイルの抜粋です。 SQLMetal と **/xml**オプションを使用して、ファイル全体を生成できます。 詳しくは、「[SqlMetal.exe (コード生成ツール)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)」をご覧ください。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  
@@ -273,6 +273,6 @@ elementFormDefault="qualified" >
 
 - [背景情報](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
 - [外部マップ](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [方法: 外部ファイルとしてのオブジェクト モデルを生成します。](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+- [方法: 外部ファイルとしてオブジェクトモデルを生成する](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
 - [サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [参照](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [リファレンス](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

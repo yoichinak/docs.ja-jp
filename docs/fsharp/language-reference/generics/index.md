@@ -2,12 +2,12 @@
 title: ジェネリック
 description: ジェネリック関数とジェネリックF#型を使用する方法について説明します。これにより、コードを繰り返さなくても、さまざまな型で動作するコードを記述できます。
 ms.date: 05/16/2016
-ms.openlocfilehash: 47eed0b8e074cfb591e6d8e2c382b9ea6a6e97f0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5d6e57762095e44836425f90d21a6c1dc71edaaa
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630616"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666704"
 ---
 # <a name="generics"></a>ジェネリック
 
@@ -97,6 +97,6 @@ F# プログラムで使用できる型パラメーターには、2 つの種類
 - [言語リファレンス](../index.md)
 - [型](../fsharp-types.md)
 - [静的に解決される型パラメーター](statically-resolved-type-parameters.md)
-- [.NET Framework におけるジェネリック](~/docs/standard/generics/index.md)
+- [ジェネリック](../../../standard/generics/index.md)
 - [自動ジェネリック化](automatic-generalization.md)
 - [制約](constraints.md)

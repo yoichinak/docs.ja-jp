@@ -8,18 +8,18 @@ helpviewer_keywords:
 - cryptographySettings element
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
-ms.openlocfilehash: ec3a5a73caa901a21e22dbec7500af9153e01ef4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 572a5856c9f92f105e727df1ecd8eb2e0a92fc09
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705221"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664278"
 ---
 # <a name="cryptographysettings-element"></a>\<cryptographySettings > 要素
 暗号設定を含みます。  
   
  \<configuration>  
-\<mscorlib>  
+\<mscorlib >  
 \<cryptographySettings >  
   
 ## <a name="syntax"></a>構文  
@@ -39,8 +39,8 @@ ms.locfileid: "61705221"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<cryptoNameMapping>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptonamemapping-element.md)|表示名へのクラスのマッピングを含みます。|  
-|[\<oidMap>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|クラスへの ASN.1 オブジェクト識別子 (OID) のマッピングが含まれています。|  
+|[\<cryptoNameMapping>](cryptonamemapping-element.md)|表示名へのクラスのマッピングを含みます。|  
+|[\<oidMap>](oidmap-element.md)|クラスに対する asn.1 オブジェクト識別子 (OID) マッピングが含まれています。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -50,7 +50,7 @@ ms.locfileid: "61705221"
 |`mscorlib`|`cryptographySettings`要素を含んでいます。|  
   
 ## <a name="example"></a>例  
- 次の例では、  **\<cryptographySettings >** 暗号名のマッピングおよび OID マッピングを格納する要素。 この例では、ランタイムように<xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType>を返します、`MyHashClass`オブジェクトと`MyCryptoClass`クラスのオブジェクト識別子 1.3.36.2.1 にマップされます。  
+ 次の例では、  **\<cryptographysettings >** 要素を使用して、暗号化名マッピングと OID マッピングを含める方法を示します。 この例では、が<xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> `MyHashClass`オブジェクトを返すようにランタイム`MyCryptoClass`を構成し、クラスをオブジェクト識別子1.3.36.2.1 にマップします。  
   
 ```xml  
 <configuration>  
@@ -78,6 +78,6 @@ ms.locfileid: "61705221"
   
 ## <a name="see-also"></a>関連項目
 
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [暗号化設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [構成ファイル スキーマ](../index.md)
+- [暗号化設定スキーマ](index.md)
 - [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)

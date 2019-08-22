@@ -8,30 +8,23 @@ helpviewer_keywords:
 - ElementHost control
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
-ms.openlocfilehash: 889e81053d4e2264755468446a4e1681216ae22e
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: e3fb6e42270cc0a530646b656470ec99fcfc7f1f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040376"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666247"
 ---
 # <a name="walkthrough-create-new-wpf-content-on-windows-forms-at-design-time"></a>チュートリアル: デザイン時に Windows フォームに新しい WPF コンテンツを作成する
 
 この記事では、Windows フォームベースのアプリケーションで使用するための Windows Presentation Foundation (WPF) コントロールを作成する方法について説明します。
 
-このチュートリアルでは次のタスクを実行します。
-
-- プロジェクトを作成する。
-
-- 新しい WPF コントロールを作成する。
-
-- 新しい WPF コントロールを Windows フォームに追加する。 WPF コントロールは <xref:System.Windows.Forms.Integration.ElementHost> コントロールでホストされます。
-
 ## <a name="prerequisites"></a>必須コンポーネント
 
-このチュートリアルを実行するには、次のコンポーネントが必要です。
-
-- Visual Studio
+このチュートリアルを完了するには Visual Studio が必要です。
 
 ## <a name="create-the-project"></a>プロジェクトの作成
 
@@ -51,26 +44,26 @@ ms.locfileid: "69040376"
 
 1. **ソリューションエクスプローラー**で、新しい**WPF ユーザーコントロールライブラリ (.NET Framework)** プロジェクトをソリューションに追加します。 このコントロール ライブラリの既定の名前である `WpfControlLibrary1` を使用します。 既定のコントロールの名前は `UserControl1.xaml` です。
 
-     新しいコントロールを追加すると、次のような効果があります。
+   新しいコントロールを追加すると、次のような効果があります。
 
-    - ファイル UserControl1.xaml が追加されます。
+   - ファイル UserControl1.xaml が追加されます。
 
-    - ファイル UserControl1.xaml.cs または UserControl1.xaml.vb のいずれかが追加されます。 このファイルには、イベント ハンドラーとその他の実装のための分離コードが含まれています。
+   - UserControl1.xaml.cs ファイル (または UserControl1) が追加されます。 このファイルには、イベント ハンドラーとその他の実装のための分離コードが含まれています。
 
-    - WPF アセンブリへの参照が追加されます。
+   - WPF アセンブリへの参照が追加されます。
 
-    - ファイル UserControl1.xaml が [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] で開きます。
+   - UserControl1 ファイルは、Visual Studio の WPF デザイナーで開きます。
 
-2. デザイン ビューで `UserControl1` が選択されていることを確認します。 詳細については、「[方法 :デザインサーフェイス](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))上の要素を選択して移動します。
+2. デザイン ビューで `UserControl1` が選択されていることを確認します。
 
-3. [**プロパティ**] ウィンドウで、プロパティ<xref:System.Windows.FrameworkElement.Width%2A>と<xref:System.Windows.FrameworkElement.Height%2A>プロパティの値を**200**に設定します。
+3. **[プロパティ]** ウィンドウで、プロパティ<xref:System.Windows.FrameworkElement.Width%2A>と<xref:System.Windows.FrameworkElement.Height%2A>プロパティの値を**200**に設定します。
 
-4. [**ツールボックス**] からコントロール<xref:System.Windows.Controls.TextBox?displayProperty=nameWithType>をデザイン画面にドラッグします。
+4. **[ツールボックス]** からコントロール<xref:System.Windows.Controls.TextBox?displayProperty=nameWithType>をデザイン画面にドラッグします。
 
-5. [**プロパティ**] ウィンドウで、 <xref:System.Windows.Controls.TextBox.Text%2A>プロパティの値を [ホストされた**コンテンツ**] に設定します。
+5. **[プロパティ]** ウィンドウで、 <xref:System.Windows.Controls.TextBox.Text%2A>プロパティの値を ホストされた **[コンテンツ]** に設定します。
 
-    > [!NOTE]
-    > 一般的には、もう少し高度な WPF コンテンツをホストしてください。 ここでは、説明する目的でのみ <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> コントロールを使用しています。
+   > [!NOTE]
+   > 一般的には、もう少し高度な WPF コンテンツをホストしてください。 ここでは、説明する目的でのみ <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> コントロールを使用しています。
 
 6. プロジェクトをビルドします。
 
@@ -82,7 +75,7 @@ WPF コントロールを Windows フォームに追加するには、次のよ�
 
 1. Windows フォーム デザイナーで `Form1` を開きます。
 
-2. **ツールボックス**で、[ **WPFUserControlLibrary WPF User Controls**] というラベルのタブを探します。
+2. **ツールボックス**で、 **[WPFUserControlLibrary WPF User Controls]** というラベルのタブを探します。
 
 3. `UserControl1` のインスタンスをフォームにドラッグします。
 
@@ -94,7 +87,7 @@ WPF コントロールを Windows フォームに追加するには、次のよ�
 
     - `elementHost1` コントロールに、使用可能なホスティング オプションを示すスマート タグ パネルがあります。
 
-4. [**エンティティタスク**] スマートタグパネルで、[**親コンテナーにドッキング**する] を選択します。
+4. **[エンティティタスク]** スマートタグパネルで、 **[親コンテナーにドッキング]** する を選択します。
 
 5. **F5** キーを押してアプリケーションをビルドし、実行します。
 

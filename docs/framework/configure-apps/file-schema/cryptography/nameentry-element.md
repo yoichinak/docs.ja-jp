@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <nameEntry> element
 - nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
-ms.openlocfilehash: 97521ba9073820beeea62f5fc7cab480b5422fb0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9270552245b3867f0f09741ded3f9da6a8b6c135
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705182"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664265"
 ---
 # <a name="nameentry-element"></a>\<nameEntry > 要素
 アルゴリズムの表示名にクラス名をマップして、1 つのクラスが多くの表示名を持つことを許可します。  
   
  \<configuration>  
-\<mscorlib>  
+\<mscorlib >  
 \<cryptographySettings >  
-\<cryptoNameMapping>  
-\<nameEntry>  
+\<cryptoNameMapping >  
+\<nameEntry >  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,8 +37,8 @@ ms.locfileid: "61705182"
   
 |属性|説明|  
 |---------------|-----------------|  
-|**name**|必須の属性です。<br /><br /> 暗号化クラスを実装するアルゴリズムのフレンドリ名を指定します。|  
-|**class**|必須の属性です。<br /><br /> 値を指定します、**名前**属性、 [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)要素。|  
+|**name**|必須の属性です。<br /><br /> 暗号化クラスが実装するアルゴリズムのフレンドリ名を指定します。|  
+|**class**|必須の属性です。<br /><br /> Cryptoclass > 要素の**name**属性[の値を指定します。 \<](cryptoclass-element.md)|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -51,10 +51,10 @@ ms.locfileid: "61705182"
 |`system.web`|ASP.NET 構成セクションのルート要素を指定します。|  
   
 ## <a name="remarks"></a>Remarks  
- **名前**属性は、抽象クラスのいずれかの名前を指定できます、<xref:System.Security.Cryptography>名前空間。 呼び出すと、**作成**抽象暗号化クラスのメソッドは、抽象クラスの名前に渡される、<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>メソッド。 **CreateFromName**で示される型のインスタンスを返します、**クラス**属性。 場合、**名前**属性は、短い名前では、RSA などを呼び出すときに、その名前を使用できます、 **CreateFromName**メソッド。  
+ **Name**属性には、名前<xref:System.Security.Cryptography>空間で見つかった抽象クラスの1つの名前を指定できます。 抽象暗号化クラスで**Create**メソッドを呼び出すと、抽象クラス名が<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>メソッドに渡されます。 **CreateFromName**は、 **class**属性で示される型のインスタンスを返します。 **Name**属性が RSA などの短い名前である場合は、 **CreateFromName**メソッドを呼び出すときにその名前を使用できます。  
   
 ## <a name="example"></a>例  
- 次の例は、使用する方法を示します、  **\<nameEntry >** 暗号化クラスを参照して、ランタイムを構成する要素。 文字列"RSA"を渡すことができますし、<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>メソッドを使用して、<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>を返すメソッドを`MyCryptoRSAClass`オブジェクト。  
+ 次の例は、  **\<nameentry >** 要素を使用して、暗号化クラスを参照し、ランタイムを構成する方法を示しています。 その後、文字列 "RSA" を<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>メソッドに渡し、 <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>メソッドを使用してオブジェクトを`MyCryptoRSAClass`返すことができます。  
   
 ```xml  
 <configuration>  
@@ -77,7 +77,7 @@ ms.locfileid: "61705182"
   
 ## <a name="see-also"></a>関連項目
 
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [暗号化設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [構成ファイル スキーマ](../index.md)
+- [暗号化設定スキーマ](index.md)
 - [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
-- [暗号化クラスの設定](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [暗号化クラスの設定](../../configure-cryptography-classes.md)
