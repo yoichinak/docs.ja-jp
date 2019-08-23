@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f6f0cbc9-f7bf-4d6e-875f-ad1ba0b4aa62
-ms.openlocfilehash: bf40d0963c29209d4e8f7e4850f0c99b6702a6bb
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: fb27e11f81451d6a982edcf5b88b23861bef3c37
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487625"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938436"
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>トランザクションとバルク コピー操作
 バルク コピー操作は、単独の操作として、または、手順が複数あるトランザクションの 1 手順として実行されます。 手順が複数あるトランザクションの 1 手順として実行する場合、同一トランザクション内でバルク コピー操作を複数回実行することができます。また、挿入、更新、削除などの他のデータベース操作を実行していても、トランザクション全体をコミットまたはロールバックできます。  
   
- 既定では、バルク コピー操作は単独の操作として実行されます。 このバルク コピー操作は非トランザクション方式で処理され、ロールバックできません。 使用することができますをロールバックする一括コピーの一部またはすべてエラーが発生する必要がある場合、 <xref:System.Data.SqlClient.SqlBulkCopy>-トランザクションの管理、既存のトランザクション内でバルク コピー操作を実行またはに参加させる、 **System.Transactions** <xref:System.Transactions.Transaction>.  
+ 既定では、バルク コピー操作は単独の操作として実行されます。 このバルク コピー操作は非トランザクション方式で処理され、ロールバックできません。 エラーが発生したときに一括コピーのすべてまたは一部をロールバックする必要がある場合<xref:System.Data.SqlClient.SqlBulkCopy>は、管理されたトランザクションを使用するか、既存のトランザクション内で一括コピー操作を実行するか、または**システムトランザクション**<xref:System.Transactions.Transaction>に参加することができます。  
   
 ## <a name="performing-a-non-transacted-bulk-copy-operation"></a>非トランザクション処理のバルク コピー操作の実行  
  次のコンソール アプリケーションでは、非トランザクション処理のバルク コピー操作で処理中にエラーが検出されたときに、そのエラーの内容を表示します。  
   
- 例では、ソース テーブルと変換先テーブルが含まれて、`Identity`という名前の列**ProductID**します。 コードは、すべての行を削除することによって、変換先テーブルを準備する最初といる行を 1 つを挿入する**ProductID**ソース テーブルに存在しています。 既定では、`Identity` 列の新しい値は追加した各行のコピー先のテーブル内で生成されます。 この例では、代わりに、コピー元のテーブルからの `Identity` 値を使用するバルク ロード処理を強制的に行う接続が開かれている場合、オプションが設定されます。  
+ この例では、基になるテーブルとターゲットテーブルに`Identity`それぞれ、 **ProductID**という名前の列が含まれています。 このコードでは、まず、すべての行を削除し、ソーステーブルに存在することがわかっている単一の行を挿入することによって、変換先テーブルを準備します。 既定では、`Identity` 列の新しい値は追加した各行のコピー先のテーブル内で生成されます。 この例では、代わりに、コピー元のテーブルからの `Identity` 値を使用するバルク ロード処理を強制的に行う接続が開かれている場合、オプションが設定されます。  
   
  このバルク コピー操作は、<xref:System.Data.SqlClient.SqlBulkCopy.BatchSize%2A> プロパティを 10 に設定して実行されます。 処理中に無効な行が検出されると、例外がスローされます。 この最初の例では、バルク コピー操作はトランザクション処理ではありません。 エラー発生ポイントまでにコピーされたバッチはすべてコミットされ、重複キーが含まれるバッチはロールバックされます。また、バルク コピー操作は、他のバッチを処理する前に中止されます。  
   
 > [!NOTE]
->  このサンプルでは」の説明に従って、作業テーブルを作成していない限りは実行されません[バルク コピー サンプルのセットアップ](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)します。 使用する構文を示すためにこのコードが提供される**SqlBulkCopy**のみです。 簡単かつ迅速に、TRANSACT-SQL を使用して、同じ SQL Server インスタンスには、ソースとレプリケーション先のテーブルが存在する場合は`INSERT … SELECT`ステートメント、データをコピーします。  
+> このサンプルは、「[一括コピーの例のセットアップ](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)」で説明されているように作業テーブルを作成しない限り、実行されません。 このコードは、 **SqlBulkCopy**のみを使用する構文を示すために用意されています。 コピー元とコピー先のテーブルが同じ SQL Server インスタンスに配置されている場合は、transact-sql`INSERT … SELECT`ステートメントを使用してデータをコピーする方が簡単で高速です。  
   
  [!code-csharp[DataWorks SqlBulkCopy.DefaultTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.DefaultTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.DefaultTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.DefaultTransaction/VB/source.vb#1)]  
@@ -36,12 +36,12 @@ ms.locfileid: "66487625"
  <xref:System.Data.SqlClient.SqlBulkCopyOptions.UseInternalTransaction> クラス コンストラクターの <xref:System.Data.SqlClient.SqlBulkCopy> オプションを明示的に指定することで、バルク コピー操作を専用のトランザクションで実行でき、バルク コピー操作の各バッチを別々のトランザクション内で実行できます。  
   
 > [!NOTE]
->  異なるバッチは別々のトランザクション内で実行されます。このため、バルク コピー操作中にエラーが発生した場合、現在処理中のバッチの行はすべてロールバックされますが、エラーの発生前にバッチでコピーされた行はデータベースに残ります。  
+> 異なるバッチは別々のトランザクション内で実行されます。このため、バルク コピー操作中にエラーが発生した場合、現在処理中のバッチの行はすべてロールバックされますが、エラーの発生前にバッチでコピーされた行はデータベースに残ります。  
   
- 次のコンソール アプリケーションは、前の例の 1 つの例外と同様です。この例では、一括コピー操作は、独自のトランザクションを管理します。 エラー発生ポイントまでにコピーされたバッチはすべてコミットされ、重複キーが含まれるバッチはロールバックされます。また、バルク コピー操作は、他のバッチを処理する前に中止されます。  
+ 次のコンソールアプリケーションは、前の例と似ていますが、例外が1つあります。この例では、一括コピー操作で独自のトランザクションを管理しています。 エラー発生ポイントまでにコピーされたバッチはすべてコミットされ、重複キーが含まれるバッチはロールバックされます。また、バルク コピー操作は、他のバッチを処理する前に中止されます。  
   
 > [!IMPORTANT]
->  このサンプルでは」の説明に従って、作業テーブルを作成していない限りは実行されません[バルク コピー サンプルのセットアップ](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)します。 使用する構文を示すためにこのコードが提供される**SqlBulkCopy**のみです。 簡単かつ迅速に、TRANSACT-SQL を使用して、同じ SQL Server インスタンスには、ソースとレプリケーション先のテーブルが存在する場合は`INSERT … SELECT`ステートメント、データをコピーします。  
+> このサンプルは、「[一括コピーの例のセットアップ](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)」で説明されているように作業テーブルを作成しない限り、実行されません。 このコードは、 **SqlBulkCopy**のみを使用する構文を示すために用意されています。 コピー元とコピー先のテーブルが同じ SQL Server インスタンスに配置されている場合は、transact-sql`INSERT … SELECT`ステートメントを使用してデータをコピーする方が簡単で高速です。  
   
  [!code-csharp[DataWorks SqlBulkCopy.InternalTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.InternalTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.InternalTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.InternalTransaction/VB/source.vb#1)]  
@@ -54,7 +54,7 @@ ms.locfileid: "66487625"
  次のコンソール アプリケーションは最初の (トランザクションのない) 例とほぼ同じですが、バルク コピー操作がより大きな外部トランザクションに含まれている点が異なります。 主キーの違反エラーが発生した場合、トランザクションはすべてロールバックされ、コピー先のテーブルに行は追加されません。  
   
 > [!IMPORTANT]
->  このサンプルでは」の説明に従って、作業テーブルを作成していない限りは実行されません[バルク コピー サンプルのセットアップ](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)します。 使用する構文を示すためにこのコードが提供される**SqlBulkCopy**のみです。 簡単かつ迅速に、TRANSACT-SQL を使用して、同じ SQL Server インスタンスには、ソースとレプリケーション先のテーブルが存在する場合は`INSERT … SELECT`ステートメント、データをコピーします。  
+> このサンプルは、「[一括コピーの例のセットアップ](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)」で説明されているように作業テーブルを作成しない限り、実行されません。 このコードは、 **SqlBulkCopy**のみを使用する構文を示すために用意されています。 コピー元とコピー先のテーブルが同じ SQL Server インスタンスに配置されている場合は、transact-sql`INSERT … SELECT`ステートメントを使用してデータをコピーする方が簡単で高速です。  
   
  [!code-csharp[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/VB/source.vb#1)]  

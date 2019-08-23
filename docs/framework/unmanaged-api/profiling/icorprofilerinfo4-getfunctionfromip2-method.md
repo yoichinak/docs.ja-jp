@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7281f1aa0da417eba618b748ac68ba1fefb4907d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8c133338ec0edac19f49d435df41e3081c486f51
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780852"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948460"
 ---
 # <a name="icorprofilerinfo4getfunctionfromip2-method"></a>ICorProfilerInfo4::GetFunctionFromIP2 メソッド
-マネージ コードの命令ポインターを関数の JIT 再コンパイル バージョンにマップします。  
+マネージコード命令ポインターを JIT 再コンパイルされた関数のバージョンにマップします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,26 +38,26 @@ HRESULT GetFunctionFromIP2(
   
 ## <a name="parameters"></a>パラメーター  
  `ip`  
- [in]マネージ コードで命令ポインター。  
+ からマネージコード内の命令ポインター。  
   
  `pFunctionId`  
- [out]関数の id です。  
+ 入出力関数 ID。  
   
  `pReJitId`  
- [out]関数の JIT 再コンパイル バージョンの id。  
+ 入出力関数の JIT 再コンパイルバージョンの id。  
   
 ## <a name="remarks"></a>Remarks  
- `GetFunctionFromIP2` ような`GetFunctionFromIP`を指定した IP アドレスを含む関数の関数の ID ではなく、JIT 再コンパイルの ID を取得する点を除いて、します。  
+ `GetFunctionFromIP2`はと似`GetFunctionFromIP`ていますが、指定された IP アドレスを含む関数の関数 id ではなく、JIT 再コンパイルされた id を取得する点が異なります。  
   
 > [!NOTE]
->  `GetFunctionFromIP2` 一方、ガベージ コレクションをトリガーできる`GetFunctionFromIP`されません。  詳細については、次を参照してください。 [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md)します。  
+> `GetFunctionFromIP2``GetFunctionFromIP`はガベージコレクションをトリガーできますが、では発生しません。  詳細については、「 [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md)」を参照してください。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー:** Corprof.idl、Corprof.idl  
   
- **ライブラリ:** CorGuids.lib  
+ **ライブラリ**CorGuids .lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

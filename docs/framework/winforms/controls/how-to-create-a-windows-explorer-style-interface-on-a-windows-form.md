@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], Explorer-style interface
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-ms.openlocfilehash: db2c5431dfb0156c1508a18ef13d2af80eb4981b
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 34a5cd735c350688d9e83003806668e213932c85
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039534"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960623"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>方法: Windows フォームで Windows エクスプローラー スタイルのインターフェイスを作成する
 Windows Explorer は、アプリケーションのユーザーインターフェイスの一般的な選択肢であり、その準備が整っているためです。
@@ -35,7 +35,7 @@ Windows Explorer は、アプリケーションのユーザーインターフェ
 3. CTRL キーを押しながら3つのコントロールをすべて選択し、順番にクリックします。 <xref:System.Windows.Forms.SplitContainer>コントロールを選択するときは、パネルではなくスプリッターバーをクリックします。
 
     > [!NOTE]
-    >  **[編集]** メニューの **[すべて選択]** コマンドを使用しないでください。 その場合、次の手順で必要なプロパティは、 **[プロパティ]** ウィンドウに表示されません。
+    > **[編集]** メニューの **[すべて選択]** コマンドを使用しないでください。 その場合、次の手順で必要なプロパティは、 **[プロパティ]** ウィンドウに表示されません。
 
 4. **[プロパティ]** ウィンドウで、 <xref:System.Windows.Forms.SplitContainer.Dock%2A> プロパティを <xref:System.Windows.Forms.DockStyle.Fill>に設定します。
 
@@ -44,7 +44,7 @@ Windows Explorer は、アプリケーションのユーザーインターフェ
      フォームには、Windows エクスプローラーと同様の2つの部分で構成されるユーザーインターフェイスが表示されます。
 
     > [!NOTE]
-    >  スプリッターをドラッグすると、パネル自体のサイズが変更されます。
+    > スプリッターをドラッグすると、パネル自体のサイズが変更されます。
 
 ## <a name="see-also"></a>関連項目
 

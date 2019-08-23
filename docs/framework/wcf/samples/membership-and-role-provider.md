@@ -2,30 +2,30 @@
 title: メンバーシップとロール プロバイダー
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: c172402f95b137117941381fd4803b8b6e4a5d61
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 894fcef0cbb25f85043aa6f5c55c45bae5161546
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876742"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948547"
 ---
 # <a name="membership-and-role-provider"></a>メンバーシップとロール プロバイダー
-メンバーシップとロール プロバイダーのサンプルでは、どのサービスが使用できる、ASP.NET メンバーシップとロール プロバイダーを認証およびクライアントの承認を示します。  
+メンバーシップとロールプロバイダーのサンプルでは、サービスが ASP.NET のメンバーシップとロールプロバイダーを使用して、クライアントを認証および承認する方法を示します。  
   
  この例では、クライアントはコンソール アプリケーション (.exe) であり、サービスはインターネット インフォメーション サービス (IIS) によってホストされます。  
   
 > [!NOTE]
->  このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
+> このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
   
  このサンプルでは、次の方法を示します。  
   
 - クライアントがユーザー名とパスワードの組み合わせを使用して認証する。  
   
-- サーバーは、ASP.NET メンバーシップ プロバイダーに対するクライアントの資格情報を検証できます。  
+- サーバーは、ASP.NET メンバーシッププロバイダーに対してクライアント資格情報を検証できます。  
   
 - サーバーがそのサーバーの X.509 証明書を使用して認証される。  
   
-- サーバーは、ASP.NET ロール プロバイダーを使用して、ロールに、認証されたクライアントをマップできます。  
+- サーバーは、ASP.NET ロールプロバイダーを使用して、認証されたクライアントをロールにマップできます。  
   
 - サーバーが `PrincipalPermissionAttribute` を使用して、サービスによって公開される特定メソッドへのアクセスを制御する。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "65876742"
 </system.web>  
 ```  
   
- サービスは、そのサービスとの通信に使用する単一エンドポイントを公開します。エンドポイントは Web.config 構成ファイルで定義します。 エンドポイントは、アドレス、バインディング、およびコントラクトがそれぞれ 1 つずつで構成されます。 バインディングの構成には、標準の `wsHttpBinding` が使用されます。既定では、Windows 認証が使用されます。 このサンプルは、標準の `wsHttpBinding` を設定してユーザー名認証を使用します。 この動作により、サービス認証でサーバー証明書が使用されることが指定されます。 サーバー証明書が同じ値を含める必要があります、`SubjectName`として、`findValue`属性、 [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)構成要素。 さらに、動作は、ユーザー名とパスワードの組み合わせの認証は、ASP.NET メンバーシップ プロバイダーによって実行し、ロール マッピングが 2 つのプロバイダーに定義した名前を指定することで、ASP.NET ロール プロバイダーで実行されることを指定します。  
+ サービスは、そのサービスとの通信に使用する単一エンドポイントを公開します。エンドポイントは Web.config 構成ファイルで定義します。 エンドポイントは、アドレス、バインディング、およびコントラクトがそれぞれ 1 つずつで構成されます。 バインディングの構成には、標準の `wsHttpBinding` が使用されます。既定では、Windows 認証が使用されます。 このサンプルは、標準の `wsHttpBinding` を設定してユーザー名認証を使用します。 この動作により、サービス認証でサーバー証明書が使用されることが指定されます。 サーバー証明書には、 `SubjectName` [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)構成要素の`findValue`属性と同じ値が含まれている必要があります。 また、この動作によって、ASP.NET メンバーシッププロバイダーによってユーザー名とパスワードの組み合わせの認証が実行されることが指定され、2つのプロバイダーに対して定義されている名前を指定することによって、ASP.NET ロールプロバイダーによってロールマッピングが実行されます。  
   
 ```xml  
 <system.serviceModel>  
@@ -114,19 +114,19 @@ ms.locfileid: "65876742"
 </system.serviceModel>  
 ```  
   
- サンプルを実行するときに、クライアントはの 3 つの異なるユーザー アカウント、さまざまなサービス操作を呼び出します。Alice、Bob、および Charlie します。 操作要求と応答は、クライアントのコンソール ウィンドウに表示されます。 ユーザー "Alice" として行われた 4 つの呼び出しはすべて正常に終了します。 ユーザー "Bob" には、Divide メソッドの呼び出しを試行したときにアクセス拒否エラーが通知されます。 ユーザー "Charlie" には、Multiply メソッドの呼び出しを試行したときにアクセス拒否エラーが通知されます。 クライアントをシャットダウンするには、クライアント ウィンドウで Enter キーを押します。  
+ サンプルを実行すると、クライアントは、次の3つの異なるユーザーアカウントでさまざまなサービス操作を呼び出します。Alice、Bob、および Charlie。 操作要求と応答は、クライアントのコンソール ウィンドウに表示されます。 ユーザー "Alice" として行われた 4 つの呼び出しはすべて正常に終了します。 ユーザー "Bob" には、Divide メソッドの呼び出しを試行したときにアクセス拒否エラーが通知されます。 ユーザー "Charlie" には、Multiply メソッドの呼び出しを試行したときにアクセス拒否エラーが通知されます。 クライアントをシャットダウンするには、クライアント ウィンドウで Enter キーを押します。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1. ソリューションの c# または Visual Basic .NET 版をビルドする手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
+1. ソリューションの .NET C#エディションまたは Visual Basic をビルドするには、「 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)」の手順に従います。  
   
-2. 構成したことを確認、 [ASP.NET アプリケーション サービス データベース](https://go.microsoft.com/fwlink/?LinkId=94997)します。  
-  
-    > [!NOTE]
-    >  SQL Server Express Edition を実行している場合、サーバー名は .\SQLEXPRESS になります。 ASP.NET アプリケーション サービス データベースにも、Web.config 接続文字列のように構成するときに、このサーバーを使用する必要があります。  
+2. [ASP.NET アプリケーションサービスデータベース](https://go.microsoft.com/fwlink/?LinkId=94997)が構成されていることを確認します。  
   
     > [!NOTE]
-    >  ASP.NET のワーカー プロセス アカウントはこの手順で作成されるデータベースに対するアクセス許可が必要です。 これを実行するには、sqlcmd ユーティリティまたは SQL Server Management Studio を使用します。  
+    >  SQL Server Express Edition を実行している場合、サーバー名は .\SQLEXPRESS になります。 ASP.NET アプリケーションサービスデータベースおよび web.config 接続文字列を構成する場合は、このサーバーを使用する必要があります。  
+  
+    > [!NOTE]
+    >  ASP.NET ワーカープロセスアカウントは、この手順で作成するデータベースに対する権限を持っている必要があります。 これを実行するには、sqlcmd ユーティリティまたは SQL Server Management Studio を使用します。  
   
 3. サンプルを単一コンピューター構成で実行するか、複数コンピューター構成で実行するかに応じて、次の手順に従います。  
   
@@ -134,11 +134,11 @@ ms.locfileid: "65876742"
   
 1. Makecert.exe が存在するフォルダーがパスに含まれていることを確認します。  
   
-2. 管理者特権で実行する Visual Studio 用開発者コマンド プロンプトでサンプルのインストール フォルダーから Setup.bat を実行します。 これにより、サンプルの実行に必要なサービス証明書がインストールされます。  
+2. Visual Studio の開発者コマンドプロンプトのサンプルのインストールフォルダーから、管理者特権で実行します。 これにより、サンプルの実行に必要なサービス証明書がインストールされます。  
   
 3. Client.exe を \client\bin で起動します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。  
   
-4. クライアントとサービスが通信できるようにされていない場合[WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))します。  
+4. クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。  
   
 ### <a name="to-run-the-sample-across-computers"></a>サンプルを複数のコンピューターで実行するには  
   
@@ -150,24 +150,24 @@ ms.locfileid: "65876742"
   
 4. クライアント プログラム ファイルを、クライアント コンピューターに作成したクライアント ディレクトリにコピーします。 Setup.bat、Cleanup.bat、ImportServiceCert.bat の各ファイルもクライアントにコピーします。  
   
-5. サーバーで、管理者特権で Visual Studio の開発者コマンド プロンプトを開き、実行`setup.bat service`します。 実行している`setup.bat`で、`service`引数が、コンピューターの完全修飾ドメイン名でサービス証明書を作成し、Service.cer というファイルに、サービス証明書をエクスポートします。  
+5. サーバーで、管理者特権を使用して Visual Studio の開発者コマンドプロンプトを`setup.bat service`開き、を実行します。 引数を指定してを実行`setup.bat`すると、コンピューターの完全修飾ドメイン名を使用してサービス証明書が作成され、service .cer という名前のファイルにエクスポートされます。 `service`  
   
-6. 新しい証明書名を反映するように Web.config を編集 (で、`findValue`属性、 [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md))、これは、コンピューターの完全修飾ドメイン名と同じです。  
+6. Web.config を編集して、新しい証明書名 ( `findValue` [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)の属性) を反映します。これは、コンピューターの完全修飾ドメイン名と同じです。  
   
 7. Service.cer ファイルを、サービス ディレクトリからクライアント コンピューターのクライアント ディレクトリにコピーします。  
   
 8. クライアント コンピューターの Client.exe.config ファイルで、エンドポイントのアドレス値をサービスの新しいアドレスに合わせます。  
   
-9. クライアントでは、管理者特権で Visual Studio の開発者コマンド プロンプトを開き、ImportServiceCert.bat を実行します。 これにより、サービス証明書が Service.cer ファイルから CurrentUser - TrustedPeople ストアにインポートされます。  
+9. クライアントで、管理者特権を使用して Visual Studio の開発者コマンドプロンプトを開き、Importservicecert.bat を実行します。 これにより、サービス証明書が Service.cer ファイルから CurrentUser - TrustedPeople ストアにインポートされます。  
   
-10. クライアント コンピューターで、コマンド プロンプトから Client.exe を起動します。 クライアントとサービスが通信できるようにされていない場合[WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))します。  
+10. クライアント コンピューターで、コマンド プロンプトから Client.exe を起動します。 クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。  
   
 ### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには  
   
 - サンプルの実行が終わったら、サンプル フォルダーにある Cleanup.bat を実行します。  
   
 > [!NOTE]
->  このサンプルを複数のコンピューターで実行している場合、このスクリプトはサービス証明書をクライアントから削除しません。 コンピューター間で証明書を使用する Windows Communication Foundation (WCF) サンプルを実行すると、必ず、CurrentUser - TrustedPeople ストアにインストールされているサービス証明書をオフにします。 これを行うには、次のコマンドを使用します。`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 例:`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`します。  
+> このサンプルを複数のコンピューターで実行している場合、このスクリプトはサービス証明書をクライアントから削除しません。 コンピューター間で証明書を使用する Windows Communication Foundation (WCF) サンプルを実行した場合は、CurrentUser-TrustedPeople ストアにインストールされているサービス証明書を必ずオフにしてください。 これを行うには、次のコマンドを使用します。`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`たとえば、の`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`ようになります。  
   
 ## <a name="the-setup-batch-file"></a>セットアップ バッチ ファイル  
  このサンプルに用意されている Setup.bat バッチ ファイルを使用すると、適切な証明書を使用してサーバーを構成し、サーバー証明書ベースのセキュリティを必要とする自己ホスト型アプリケーションを実行できるようになります。 このバッチ ファイルは、複数のコンピューターを使用する場合またはホストなしの場合に応じて変更する必要があります。  

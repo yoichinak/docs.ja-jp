@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: 3ce6c250fadbb56b341d5e8dec3a9cb9d28940fe
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: MT
+ms.openlocfilehash: 8ac1ba6b8121aabea3c992ca5b943f231fc19ce2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040253"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950072"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>チュートリアル: スナップ線を使用した Windows フォーム上のコントロールの配置
 フォーム上のコントロールを正確に配置することは、多くのアプリケーションで優先度の高い作業です。 Windows フォームデザイナーには、これを実現するための多数のレイアウトツールが用意されています。 最も重要なものの1つ<xref:System.Windows.Forms.Design.Behavior.SnapLine>は、機能です。
@@ -87,7 +87,7 @@ ms.locfileid: "69040253"
 1. <xref:System.Windows.Forms.Button>コントロールの1つを選択し、スナップ線が表示されるまで、フォームの右の境界線の近くに移動します。 右の境界線からのスナップ線の距離は、コントロールの<xref:System.Windows.Forms.Control.Margin%2A>プロパティとフォームの<xref:System.Windows.Forms.Control.Padding%2A>プロパティ値の合計です。
 
 > [!NOTE]
->  フォームの<xref:System.Windows.Forms.Control.Padding%2A>プロパティが0、0、0、0に設定されている場合、Windows フォームデザイナーによって<xref:System.Windows.Forms.Control.Padding%2A> 、フォームには9、9、9、9の影付きの値が与えられます。 この動作をオーバーライドするには、0、0、0、0以外の値を割り当てます。
+> フォームの<xref:System.Windows.Forms.Control.Padding%2A>プロパティが0、0、0、0に設定されている場合、Windows フォームデザイナーによって<xref:System.Windows.Forms.Control.Padding%2A> 、フォームには9、9、9、9の影付きの値が与えられます。 この動作をオーバーライドするには、0、0、0、0以外の値を割り当てます。
 
 1. [プロパティ] ウィンドウで<xref:System.Windows.Forms.Button> <xref:System.Windows.Forms.Control.Margin%2A> <xref:System.Windows.Forms.Control.Margin%2A>エントリを展開し、 プロパティを0に設定して、コントロールのプロパティの値を変更します。<xref:System.Windows.Forms.Padding.All%2A> 詳細について[は、「チュートリアル:埋め込み、余白、AutoSize プロパティ](windows-forms-controls-padding-autosize.md)を使用して Windows フォームコントロールをレイアウトします。
 

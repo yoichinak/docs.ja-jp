@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: caec297f8d0f6febad5cf46adb0a2658960c6bb1
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: a5314fe5927abf2d3855acb45c763507ab6cb3c8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663667"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920748"
 ---
 # <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence > 要素
 ランタイムがコードアクセスセキュリティ<xref:System.Security.Policy.Publisher> (CAS) の証拠を作成するかどうかを指定します。  
@@ -57,12 +57,12 @@ ms.locfileid: "69663667"
 ## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  .NET Framework 4 以降では、この要素はアセンブリの読み込み時間に影響しません。 詳細については、「セキュリティの[変更](../../../security/security-changes.md)」の「セキュリティポリシーの簡略化」を参照してください。  
+> .NET Framework 4 以降では、この要素はアセンブリの読み込み時間に影響しません。 詳細については、「セキュリティの[変更](../../../security/security-changes.md)」の「セキュリティポリシーの簡略化」を参照してください。  
   
  共通言語ランタイム (CLR) は、読み込み時に Authenticode 署名を検証して、 <xref:System.Security.Policy.Publisher>アセンブリの証拠を作成しようとします。 ただし、既定では、ほとんどのアプリケーションは<xref:System.Security.Policy.Publisher>証拠を必要としません。 標準の CAS ポリシーは、 <xref:System.Security.Policy.PublisherMembershipCondition>に依存しません。 カスタム CAS ポリシーを使用しているコンピューターでアプリケーションを実行する場合や、部分信頼環境での<xref:System.Security.Permissions.PublisherIdentityPermission>要求を満たす場合を除き、発行元の署名の検証に関連する不要な起動コストを回避する必要があります。 (Id 権限の要求は、完全に信頼された環境では常に成功します)。  
   
 > [!NOTE]
->  サービスでは、 `<generatePublisherEvidence>`要素を使用して起動時のパフォーマンスを向上させることをお勧めします。  また、この要素を使用すると、タイムアウトを発生させたり、サービスの開始をキャンセルしたりする可能性がある遅延を回避することもできます。  
+> サービスでは、 `<generatePublisherEvidence>`要素を使用して起動時のパフォーマンスを向上させることをお勧めします。  また、この要素を使用すると、タイムアウトを発生させたり、サービスの開始をキャンセルしたりする可能性がある遅延を回避することもできます。  
   
 ## <a name="configuration-file"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルでのみ使用できます。  

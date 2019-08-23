@@ -4,32 +4,32 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 6f677d067ea0a93310036b13dba90e43731e8094
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: 9677e516ef6c91ef344e10bc8f608a397a4ed157
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606496"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966134"
 ---
 # <a name="how-to-use-the-com-service-model-configuration-tool"></a>方法: COM+ サービス モデル構成ツールを使用する
 適切なホスト モードを選択したら、COM+ サービス モデル構成コマンド ライン ツール (ComSvcConfig.exe) を使用して、Web サービスとして公開されるアプリケーション インターフェイスを構成します。  
   
 > [!NOTE]
->  以下の各タスクを実行するには、コンピューターの管理者である必要があります。  
+> 以下の各タスクを実行するには、コンピューターの管理者である必要があります。  
   
  Windows 7 コンピューターで ComSvcConfig.exe を使用して、最新のサービス モデル バージョン (現在 v4.5) を使用するように Web サービスを構成する場合は、次の手順を実行します。  
   
-1. レジストリ キー設定`[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR`DWORD 値 0x00000001 に  
+1. レジストリキー `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR`を DWORD 値0x00000001 に設定します。  
   
 2. comsvcconfig.exe を実行します。  
   
 3. 手順 1. で追加したレジストリ キーを元の値に戻すか、存在しない場合は削除します。  
   
 > [!IMPORTANT]
->  このレジストリ キーを元に戻すことは重要です。 これは互換性のキーです。 この変更を元に戻さないと、コンピューターで実行している他の .NET アプリケーションで問題が発生する可能性があります。  
+> このレジストリ キーを元に戻すことは重要です。 これは互換性のキーです。 この変更を元に戻さないと、コンピューターで実行している他の .NET アプリケーションで問題が発生する可能性があります。  
   
 > [!WARNING]
->  示す/install Windows 8 コンピューターのダイアログが表示されます ComSvcConfig.exe の使用時に"お使いの PC 上のアプリには、次の Windows 機能が必要があります: .NET Framework 3.5 (.NET 2.0 と .NET 3.0 が含まれています".NET Framework 3.5 がインストールされていない場合。 このダイアログは無視してもかまいません。 また、OnlyUseLatestCLR レジストリ キーを DWORD 値 0x00000001 に設定することもできます。  
+>  Windows 8 コンピューターで Comsvcconfig.exe/install を使用すると、ダイアログが表示されます。 "PC 上のアプリには、次の Windows 機能が必要です: .NET Framework 3.5 (.NET Framework 3.5 がインストールされていない場合は、.NET 2.0 と .NET 3.0 が含まれています。 このダイアログは無視してもかまいません。 また、OnlyUseLatestCLR レジストリ キーを DWORD 値 0x00000001 に設定することもできます。  
   
 ### <a name="to-add-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-com-hosting-mode"></a>COM+ ホスト モードを使用して、Web サービスとして公開されるインターフェイスのセットにインターフェイスを追加するには  
   

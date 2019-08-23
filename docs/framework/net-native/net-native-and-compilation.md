@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 711b4c79b32aa3db4d3681d29e08dbd3d2ddbd02
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1cb53818d0e12d625b0609a80b4d8473713525d0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660268"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941644"
 ---
 # <a name="net-native-and-compilation"></a>.NET Native とコンパイル
 .NET Framework を対象にした Windows 8.1 アプリケーションと Windows デスクトップ アプリケーションは特定のプログラミング言語で記述し、中間言語 (IL: Intermediate Language) にコンパイルされます。 実行時には、メソッドが初めて実行される直前に JIT (Just-In-Time) コンパイラによって IL がローカル コンピューターのネイティブ コードにコンパイルされます。 それとは対照的に、.NET ネイティブ ツール チェーンでは、コンパイル時にソース コードをネイティブ コードに変換します。 このトピックでは、.NET ネイティブを、.NET Framework アプリをコンパイルする他のテクノロジと比較します。また、.NET ネイティブがネイティブ コードをどのように生成するのかについて実践的な概要を説明しますので、.NET ネイティブでコンパイルしたコードで発生する例外が JIT でコンパイルしたコードでは発生しない理由を理解するために役立ちます。  
   
-## <a name="net-native-generating-native-binaries"></a>.NET ネイティブ:ネイティブ バイナリを生成します。  
+## <a name="net-native-generating-native-binaries"></a>.NET ネイティブ:ネイティブバイナリの生成  
  .NET Framework を対象にしていても、.NET ネイティブ ツール チェーンを使用してコンパイルされないアプリケーションは、次のようなアプリケーション アセンブリで構成されます。  
   
-- アセンブリ、その依存関係、それに含まれる型、そのメンバーを記述した[メタデータ](../../../docs/standard/metadata-and-self-describing-components.md)。 メタデータは、リフレクションと遅延バインディング アクセスのために使用され、場合によってはコンパイラとビルド ツールによって使用されることもあります。  
+- アセンブリ、その依存関係、それに含まれる型、そのメンバーを記述した[メタデータ](../../standard/metadata-and-self-describing-components.md)。 メタデータは、リフレクションと遅延バインディング アクセスのために使用され、場合によってはコンパイラとビルド ツールによって使用されることもあります。  
   
 - 実装コード。 これは、中間言語 (IL) オペコードで構成されます。 実行時には、JIT (Just-In-Time) コンパイラが IL コードを対象のプラットフォームのネイティブ コードに変換します。  
   
@@ -50,16 +50,16 @@ ms.locfileid: "64660268"
 - 完全な CLR を、主としてガベージ コレクターを含む、リファクタリングされたランタイムに置き換えます。 リファクタリングされたランタイムは、アプリに対してローカルで、サイズがわずか数百キロバイトの mrt100_app.dll という名前のライブラリに含まれます。 これが可能になるのは、静的リンクを使用することにより、共通言語ランタイムによって実行されるサービスの多くが不要になるためです。  
   
     > [!NOTE]
-    >  .NET ネイティブでは、標準の共通言語ランタイムと同じガベージ コレクターが使用されます。 .NET ネイティブのガベージ コレクターでは、既定でバックグラウンド ガベージ コレクションが既定で有効になります。 ガベージ コレクションの詳細については、「[ガベージ コレクションの基礎](../../../docs/standard/garbage-collection/fundamentals.md)」を参照してください。  
+    > .NET ネイティブでは、標準の共通言語ランタイムと同じガベージ コレクターが使用されます。 .NET ネイティブのガベージ コレクターでは、既定でバックグラウンド ガベージ コレクションが既定で有効になります。 ガベージ コレクションの詳細については、「[ガベージ コレクションの基礎](../../standard/garbage-collection/fundamentals.md)」を参照してください。  
   
 > [!IMPORTANT]
->  .NET ネイティブは、アプリケーション全体をネイティブ アプリケーションにコンパイルします。 ネイティブ コードに対するクラス ライブラリを含む 1 つのアセンブリをコンパイルして、マネージド コードから独立して呼び出せるようにすることはできません。  
+> .NET ネイティブは、アプリケーション全体をネイティブ アプリケーションにコンパイルします。 ネイティブ コードに対するクラス ライブラリを含む 1 つのアセンブリをコンパイルして、マネージド コードから独立して呼び出せるようにすることはできません。  
   
  .NET ネイティブ ツール チェーンによって生成される結果のアプリは、プロジェクト ディレクトリの Debug または Release ディレクトリ内の ilc.out という名前のディレクトリに出力されます。 これは次のようなファイルで構成されます。  
   
-- *\<アプリ名>*.exe。*\<アプリ名>*.dll 内の特殊な `Main` エクスポートに制御を移すだけのスタブ実行可能ファイルです。  
+- *\<アプリ名>* .exe。 *\<アプリ名>* .dll 内の特殊な `Main` エクスポートに制御を移すだけのスタブ実行可能ファイルです。  
   
-- *\<アプリ名>*.dll。すべてのアプリケーション コードのほか、依存関係のある .NET Framework クラス ライブラリおよびサード パーティ製のライブラリを格納した Windows のダイナミック リンク ライブラリです。  さらに、たとえば Windows と相互運用するために必要なコードや、アプリ内のオブジェクトをシリアル化するために必要なコードなどのサポート コードも格納しています。  
+- *\<アプリ名>* .dll。すべてのアプリケーション コードのほか、依存関係のある .NET Framework クラス ライブラリおよびサード パーティ製のライブラリを格納した Windows のダイナミック リンク ライブラリです。  さらに、たとえば Windows と相互運用するために必要なコードや、アプリ内のオブジェクトをシリアル化するために必要なコードなどのサポート コードも格納しています。  
   
 - mrt100_app.dll。リファクタリングしたランタイムであり、ガベージ コレクションなどのランタイム サービスを提供します。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "64660268"
   
 ## <a name="see-also"></a>関連項目
 
-- [メタデータと自己言及的なコンポーネント](../../../docs/standard/metadata-and-self-describing-components.md)
-- [インサイド .NET ネイティブ (Channel 9 ビデオ)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
+- [メタデータと自己言及的なコンポーネント](../../standard/metadata-and-self-describing-components.md)
+- [.NET ネイティブ内 (Channel 9 ビデオ)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
 - [リフレクションおよび .NET ネイティブ](../../../docs/framework/net-native/reflection-and-net-native.md)
 - [.NET ネイティブの一般的なトラブルシューティング](../../../docs/framework/net-native/net-native-general-troubleshooting.md)

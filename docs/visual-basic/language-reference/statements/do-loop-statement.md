@@ -20,15 +20,15 @@ helpviewer_keywords:
 - loops, exiting
 - Loop keyword [Visual Basic], Do...Loop statement
 ms.assetid: 892f9096-b3e2-4aee-834d-83bc4e2c379d
-ms.openlocfilehash: 3ff3d67f38f510b798da3e470de066cff1e98f29
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 75a2129a9f332024831d97021e381f1b3d4fa048
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638776"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942994"
 ---
 # <a name="doloop-statement-visual-basic"></a>Do...Loop ステートメント (Visual Basic)
-中にステートメント ブロックを繰り返します、`Boolean`条件が`True`まで、このような条件または`True`します。  
+`Boolean`条件がで`True` ある`True`か、条件がになるまで、ステートメントのブロックを繰り返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -54,55 +54,55 @@ Loop { While | Until } condition
   
 |用語|定義|  
 |---|---|  
-|`Do`|必須。 定義を開始、`Do`ループします。|  
-|`While`|`Until` を使用しない場合に、必ず指定します。 までループを繰り返す`condition`は`False`します。|  
-|`Until`|`While` を使用しない場合に、必ず指定します。 までループを繰り返す`condition`は`True`します。|  
-|`condition`|省略可能です。 `Boolean` 式。 場合`condition`は`Nothing`、Visual Basic として扱います`False`します。|  
-|`statements`|省略可能です。 1 つまたは複数のステートメント、まで、または while、繰り返される`condition`は`True`します。|  
-|`Continue Do`|省略可能です。 次のイテレーションに制御を転送、`Do`ループします。|  
-|`Exit Do`|省略可能です。 うちに制御を転送、`Do`ループします。|  
-|`Loop`|必須。 定義を終了、`Do`ループします。|  
+|`Do`|必須。 `Do`ループの定義を開始します。|  
+|`While`|`Until` を使用しない場合に、必ず指定します。 がに`condition` `False`なるまでループを繰り返します。|  
+|`Until`|`While` を使用しない場合に、必ず指定します。 がに`condition` `True`なるまでループを繰り返します。|  
+|`condition`|省略可能です。 `Boolean`条件. `False`が`condition` の場合、VisualBasicはとし`Nothing`て扱います。|  
+|`statements`|省略可能です。 または`condition`の間に繰り返される1つ以上のステートメントが`True`です。|  
+|`Continue Do`|省略可能です。 `Do`ループの次の反復処理に制御を転送します。|  
+|`Exit Do`|省略可能です。 制御を`Do`ループの外に転送します。|  
+|`Loop`|必須。 `Do`ループの定義を終了します。|  
   
 ## <a name="remarks"></a>Remarks  
- 使用して、`Do...Loop`一連の条件が満たされるまで何度で不特定数のステートメントを繰り返し表示するときに構造体します。 設定された数の時間、ステートメントを繰り返し表示する場合、[をしています.次のステートメントの](../../../visual-basic/language-reference/statements/for-next-statement.md)は、通常のことをお勧めします。  
+ 条件が`Do...Loop`満たされるまで、一連のステートメントを不特定の回数繰り返し繰り返す場合は、構造体を使用します。 設定された数の時間、ステートメントを繰り返し表示する場合、[For...Next ステートメント](../../../visual-basic/language-reference/statements/for-next-statement.md)は、通常のことをお勧めします。  
   
- いずれかを使用する`While`または`Until`を指定する`condition`、両方ではないです。  
+ または`While` `Until`のいずれかを使用`condition`して、両方を指定することはできません。  
   
- テストすることができます`condition`先頭またはループの終了のいずれか 1 つだけの時間。 テストする場合`condition`、ループの先頭 (で、`Do`ステートメント)、ループでも 1 回を実行しない可能性があります。 ループの最後にテストする場合 (で、`Loop`ステートメント)、ループは、1 つ以上の時間を常に実行されます。  
+ ループの開始`condition`時または終了時に1回だけテストできます。 ループの開始`condition`時 ( `Do`ステートメント内) にテストした場合、ループは一度も実行されない可能性があります。 ループの最後 ( `Loop`ステートメント内) でテストした場合、ループは常に少なくとも1回は実行されます。  
   
- 条件は、通常は 2 つの値の比較から結果しますが、任意に評価される式を[ブール データ型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)値 (`True`または`False`)。 これにより、数値型に変換されたなどの他のデータ型の値が含まれます。`Boolean`します。  
+ 通常、この条件は2つの値の比較によって得られますが、[ブールデータ型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)の値 (`True`また`False`は) に評価される任意の式を指定できます。 これには、に`Boolean`変換された他のデータ型 (数値型など) の値が含まれます。  
   
- 入れ子にすることができます`Do`内に別の 1 つのループを配置することでループします。 さまざまな種類を 1 つの制御構造の入れ子にすることもできます。 詳細については、次を参照してください。[制御構造の入れ子になった](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)します。  
+ ループを入れ子`Do`にするには、ループを別のループ内に配置します。 また、さまざまな種類の制御構造を相互に入れ子にすることもできます。 詳細については、「[入れ子になったコントロール構造](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)」を参照してください。  
   
 > [!NOTE]
->  `Do...Loop`構造より柔軟性、[中.End While ステートメント](../../../visual-basic/language-reference/statements/while-end-while-statement.md)、ループを終了するかどうかを決定することもできるため、ときに`condition`停止されている`True`がそのときまたは`True`します。 テストすることもできます`condition`先頭またはループの終了のいずれか。  
+> `Do...Loop`構造体によって、より高い柔軟性が得られます。 [End while ステートメント](../../../visual-basic/language-reference/statements/while-end-while-statement.md)を使用すると、ループが停止`condition` `True`したとき、または最初`True`に発生したときに、ループを終了するかどうかを決定できます。 また、ループの開始時`condition`または終了時にテストすることもできます。  
   
-## <a name="exit-do"></a>操作を終了します。  
- [Exit Do](../../../visual-basic/language-reference/statements/exit-statement.md)ステートメントが終了する別の方法を提供する`Do…Loop`します。 `Exit Do` 続くステートメントに直ちに制御を移します、`Loop`ステートメント。  
+## <a name="exit-do"></a>終了  
+ [Exit Do](../../../visual-basic/language-reference/statements/exit-statement.md)ステートメントは、を終了する別の`Do…Loop`方法を提供できます。 `Exit Do``Loop`ステートメントの後にあるステートメントに制御を直ちに転送します。  
   
- `Exit Do` 例では、いくつかの条件が評価された後に多くの場合に使用される、`If...Then...Else`構造体。 不要なまたは不可能なエラー値や終了要求など、反復処理を続行する条件を検出した場合、ループを終了する可能性があります。 用途の 1 つ`Exit Do`を引き起こす可能性のある条件をテストするには、*無限ループ*、これは、何度も長時間または無限でも実行できるループします。 使用することができます`Exit Do`ループを抜けます。  
+ `Exit Do`は、 `If...Then...Else`構造体などの条件を評価した後に頻繁に使用されます。 誤った値や終了要求など、反復処理を続行することが不要または不可能な条件を検出した場合は、ループを終了することができます。 の1つ`Exit Do`の用途は、*無限ループ*の原因となる可能性のある条件をテストすることです。これは、大規模または無限の回数実行されるループです。 を使用`Exit Do`すると、ループをエスケープできます。  
   
- 任意の数を含めることができます`Exit Do`でステートメントを任意の場所、`Do…Loop`します。  
+ 内の任意の場所に`Exit Do`任意の数のステートメントを含めることができます。`Do…Loop`  
   
- 使用すると内で入れ子になった`Do`ループ、`Exit Do`上位レベルの入れ子にして、最も内側のループからコントロールを転送します。  
+ 入れ子になっ`Do`たループ内`Exit Do`で使用すると、最も内側のループから、入れ子の次の上位レベルに制御を転送します。  
   
 ## <a name="example"></a>例  
- 次の例では、ループ内のステートメントの続行までを実行する、`index`変数が 10 より大きい。 `Until`句は、ループの最後に、します。  
+ 次の例では、 `index`変数が10を超えるまで、ループ内のステートメントが実行され続けます。 `Until`句はループの最後にあります。  
   
  [!code-vb[VbVbalrStatements#131](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#131)]  
   
 ## <a name="example"></a>例  
- 次の例では、`While`句の代わりに、`Until`句と`condition`は最後の代わりに、ループの先頭にテストします。  
+ 次の例では`While` 、 `Until`句ではなく句を`condition`使用して、末尾ではなくループの開始時にテストします。  
   
  [!code-vb[VbVbalrStatements#132](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#132)]  
   
 ## <a name="example"></a>例  
- 次の例では、`condition`ループを停止するときに、`index`変数が 100 より大きい。 `If`ループでは、ステートメントがただし、により、`Exit Do`インデックス変数が 10 より大きい場合は、ループを停止するステートメント。  
+ 次の例では`condition` 、 `index`変数が100より大きい場合、はループを停止します。 ただし、ループ内の`Exit Do` ステートメントを指定すると、インデックス変数が10を超える場合、ステートメントによってループが停止します。`If`  
   
  [!code-vb[VbVbalrStatements#133](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#133)]  
   
 ## <a name="example"></a>例  
- 次の例では、テキスト ファイルのすべての行を読み取ります。 <xref:System.IO.File.OpenText%2A>メソッドは、ファイルを開くし、取得、<xref:System.IO.StreamReader>文字を読み取る。 `Do...Loop`条件、<xref:System.IO.StreamReader.Peek%2A>のメソッド、`StreamReader`追加の文字があるかどうかを決定します。  
+ 次の例では、テキストファイル内のすべての行を読み取ります。 メソッド<xref:System.IO.File.OpenText%2A>は、ファイルを開き、文字<xref:System.IO.StreamReader>を読み取るを返します。 条件では、 `StreamReader`のメソッドによって、追加の文字があるかどうかが判断されます。<xref:System.IO.StreamReader.Peek%2A> `Do...Loop`  
   
  [!code-vb[VbVbalrStatements#134](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#134)]  
   

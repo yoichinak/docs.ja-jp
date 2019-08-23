@@ -3,20 +3,20 @@ title: <certificateValidator>
 ms.date: 03/30/2017
 ms.assetid: 86161897-c20f-4ad8-9d7f-050c247251bf
 author: BrucePerlerMS
-ms.openlocfilehash: df52212305e0865b8c03fdd49068cb7c7da4fa38
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c25f183679f41f51ffee4f482bfe7a64763647d9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667367"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941901"
 ---
-# <a name="certificatevalidator"></a>\<certificateValidator >
-証明書の検証のカスタム型を指定します。 場合にのみ、この型が使用される、`certificateValidationMode`の属性、 [ \<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)要素が"Custom"に設定します。  
+# <a name="certificatevalidator"></a>\<certificateValidator の >
+証明書の検証に使用するカスタムの種類を指定します。 この型は、 `certificateValidationMode` [ \<certificatevalidation >](certificatevalidation.md)要素の属性が "Custom" に設定されている場合にのみ使用されます。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<certificateValidation>  
-\<certificateValidator >  
+\<certificateValidation >  
+\<certificateValidator の >  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,7 +38,7 @@ ms.locfileid: "61667367"
   
 |属性|説明|  
 |---------------|-----------------|  
-|種類|派生したカスタム型を指定します、<xref:System.IdentityModel.Selectors.X509CertificateValidator>クラス。 設定、`certificateValidationMode`の属性、 [ \<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)要素がこの型を使用するには、"Custom"にします。 詳細を指定する方法については、`type`属性は、「[カスタム型の参照](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)します。 任意。|  
+|種類|<xref:System.IdentityModel.Selectors.X509CertificateValidator>クラスから派生するカスタム型を指定します。 この型を使用するには、 [ \<certificatevalidation >](certificatevalidation.md)要素の属性を"Custom"に設定します。`certificateValidationMode` `type`属性を指定する方法の詳細については、「[カスタム型参照](../windows-workflow-foundation/index.md)」を参照してください。 任意。|  
   
 ### <a name="child-elements"></a>子要素  
  なし  
@@ -47,7 +47,7 @@ ms.locfileid: "61667367"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<certificateValidation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|トークン ハンドラーを使用して証明書の検証の設定を制御します。|  
+|[\<certificateValidation >](certificatevalidation.md)|トークンハンドラーが証明書を検証するために使用する設定を制御します。|  
   
 ## <a name="example"></a>例  
   

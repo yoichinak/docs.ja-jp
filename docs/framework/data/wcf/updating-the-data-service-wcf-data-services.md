@@ -8,26 +8,26 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: 4b351b2a69d2829b67c80839f3257fa8e218b55d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f65e3775c260eedc1d76f209d5cb76524d61b939
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660633"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953213"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>データ サービスの更新 (WCF Data Services)
-使用すると、[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]を使用するクライアント ライブラリ、 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 、フィード、ライブラリはクライアント データ サービス クラスのインスタンスにフィードのエントリは変換します。 これらのデータ サービス クラスは、<xref:System.Data.Services.Client.DataServiceContext> が属する <xref:System.Data.Services.Client.DataServiceQuery%601> を使用して追跡されます。 クライアントでは、<xref:System.Data.Services.Client.DataServiceContext> にメソッドを使用して報告する、エンティティへの変更が追跡されます。 これらのメソッドを使用すると、クライアントは、追加および削除されたエンティティの追跡に加えて、プロパティ値に対して行われた変更やエンティティ インスタンス間のリレーションシップに対して行われた変更を追跡できます。 追跡されたこれらの変更は、<xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> メソッドが呼び出されたときに、REST ベースの操作としてデータ サービスに送り返されます。  
+クライアントライブラリ[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]を使用してフィードを使用すると、ライブラリはフィードのエントリをクライアントデータサービスクラスのインスタンスに変換します。 これらのデータ サービス クラスは、<xref:System.Data.Services.Client.DataServiceContext> が属する <xref:System.Data.Services.Client.DataServiceQuery%601> を使用して追跡されます。 クライアントでは、<xref:System.Data.Services.Client.DataServiceContext> にメソッドを使用して報告する、エンティティへの変更が追跡されます。 これらのメソッドを使用すると、クライアントは、追加および削除されたエンティティの追跡に加えて、プロパティ値に対して行われた変更やエンティティ インスタンス間のリレーションシップに対して行われた変更を追跡できます。 追跡されたこれらの変更は、<xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> メソッドが呼び出されたときに、REST ベースの操作としてデータ サービスに送り返されます。  
   
 > [!NOTE]
->  <xref:System.Data.Services.Client.DataServiceCollection%601> のインスタンスを使用してデータをコントロールにバインドする場合、バインドされたコントロールのデータに対して行われた変更は <xref:System.Data.Services.Client.DataServiceContext> に自動的に報告されます。 詳細については、次を参照してください。[データ コントロールをバインド](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)します。  
+> <xref:System.Data.Services.Client.DataServiceCollection%601> のインスタンスを使用してデータをコントロールにバインドする場合、バインドされたコントロールのデータに対して行われた変更は <xref:System.Data.Services.Client.DataServiceContext> に自動的に報告されます。 詳細については、「[コントロールへのデータのバインド](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)」を参照してください。  
   
 ## <a name="adding-modifying-and-changing-entities"></a>エンティティの追加および変更  
- 使用すると、**サービス参照の追加**への参照を追加する Visual Studio でのダイアログ、 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 、フィード、結果として得られるクライアント データ サービス クラスにはそれぞれがある静的な*作成*をいずれかを受け取るメソッドnull 非許容のエンティティ プロパティごとのパラメーターです。 このメソッドを使用すると、次の例に示すように、エンティティ型クラスのインスタンスを作成できます。  
+ Visual Studio の **[サービス参照の追加]** ダイアログボックスを使用して[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]フィードへの参照を追加すると、生成されるクライアントデータサービスクラスにはそれぞれ、null 非許容のエンティティプロパティごとに1つのパラメーターを受け取る静的*Create*メソッドがあります. このメソッドを使用すると、次の例に示すように、エンティティ型クラスのインスタンスを作成できます。  
   
  [!code-csharp[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#createnewproduct)]
  [!code-vb[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#createnewproduct)]  
   
- エンティティ インスタンスを追加するには、適切な呼び出し*AddTo*メソッドを<xref:System.Data.Services.Client.DataServiceContext>によって生成されるクラス、**サービス参照の追加** ダイアログ ボックスで、次の例のように。  
+ エンティティインスタンスを追加するには、次の例に示すよう<xref:System.Data.Services.Client.DataServiceContext>に、 **[サービス参照の追加]** ダイアログボックスで生成されたクラスで適切な*addto*メソッドを呼び出します。  
   
  [!code-csharp[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addproductspecific)]
  [!code-vb[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addproductspecific)]  
@@ -44,7 +44,7 @@ ms.locfileid: "64660633"
  [!code-csharp[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#deleteproductspecific)]
  [!code-vb[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#deleteproductspecific)]  
   
- 詳細については、「[方法 :追加、変更、およびエンティティの削除](../../../../docs/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services.md)します。  
+ 詳細については、「[方法 :エンティティ](../../../../docs/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services.md)を追加、変更、および削除します。  
   
 ## <a name="attaching-entities"></a>エンティティのアタッチ  
  クライアント ライブラリでは、クエリを実行してエンティティを <xref:System.Data.Services.Client.DataServiceContext> に読み込むことなく、エンティティに対して行った変更を保存できます。 <xref:System.Data.Services.Client.DataServiceContext.AttachTo%2A> メソッドを使用して、既存のオブジェクトを <xref:System.Data.Services.Client.DataServiceContext> の特定のエンティティ セットにアタッチします。 その後、オブジェクトを変更して、変更内容をデータ サービスに保存できます。 次の例では、変更された顧客オブジェクトがコンテキストにアタッチされた後、<xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> が呼び出される前に、<xref:System.Data.Services.Client.EntityStates.Modified> が呼び出され、アタッチされたオブジェクトが <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> としてマークされます。  
@@ -62,18 +62,18 @@ ms.locfileid: "64660633"
   
 - eTag 値と一緒に受け取ったエンティティ オブジェクトをアタッチした場合は、<xref:System.Data.Services.Client.DataServiceContext.AttachTo%28System.String%2CSystem.Object%2CSystem.String%29> メソッドの、`etag` パラメーターを受け取るオーバーロードが使用されます。 この eTag 値は、アタッチされたオブジェクトへの変更を保存したときに、コンカレンシーをチェックするために使用されます。  
   
- 詳細については、「[方法 :既存のエンティティを DataServiceContext にアタッチ](../../../../docs/framework/data/wcf/attach-an-existing-entity-to-dc-wcf-data.md)します。  
+ 詳細については、「[方法 :既存のエンティティを DataServiceContext](../../../../docs/framework/data/wcf/attach-an-existing-entity-to-dc-wcf-data.md)にアタッチします。  
   
 ## <a name="creating-and-modifying-relationship-links"></a>リレーションシップ リンクの作成および変更  
- いずれかを使用して新しいエンティティを追加すると、<xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>メソッドまたは適切な*AddTo*のメソッド、<xref:System.Data.Services.Client.DataServiceContext>クラス、**サービス参照の追加**ダイアログが生成されると、すべてのリレーションシップ新しいエンティティと関連エンティティの間は自動的に定義されていません。  
+ <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> **サービス参照の追加**ダイアログが生成する<xref:System.Data.Services.Client.DataServiceContext>クラスのメソッドまたは適切な*addto*メソッドを使用して新しいエンティティを追加する場合、新しいエンティティと関連エンティティの間のリレーションシップは、自動的に定義されません。  
   
- エンティティ インスタンス間のリレーションシップを作成および変更し、クライアント ライブラリを使用して、これらの変更をデータ サービスに反映できます。 エンティティ間のリレーションシップは、モデル内の関連付けとして定義されています。また、<xref:System.Data.Services.Client.DataServiceContext> は、各リレーションシップをコンテキスト内のリンク オブジェクトとして追跡します。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 次のメソッドを提供します、<xref:System.Data.Services.Client.DataServiceContext>クラスを作成、変更、およびこれらのリンクを削除します。  
+ エンティティ インスタンス間のリレーションシップを作成および変更し、クライアント ライブラリを使用して、これらの変更をデータ サービスに反映できます。 エンティティ間のリレーションシップは、モデル内の関連付けとして定義されています。また、<xref:System.Data.Services.Client.DataServiceContext> は、各リレーションシップをコンテキスト内のリンク オブジェクトとして追跡します。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<xref:System.Data.Services.Client.DataServiceContext>クラスに次のメソッドを提供し、これらのリンクを作成、変更、および削除します。  
   
 |メソッド|説明|  
 |------------|-----------------|  
 |<xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A>|関連付けられた 2 つのエンティティ オブジェクトの間に新しいリンクを作成します。 このメソッドを呼び出すことは、<xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> と <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> を呼び出して、新しいオブジェクトを作成すること、および既存のオブジェクトへのリレーションシップを定義することと同じです。|  
 |<xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>|関連付けられた 2 つのエンティティ オブジェクトの間に新しいリンクを作成します。|  
-|<xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>|関連付けられた 2 つのエンティティ オブジェクト間の既存のリンクを更新します。 また、<xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> は、0 または 1 対 1 (`0..1:1`) および 1 対 1 (`1:1`) の基数を持つリンクの削除にも使用します。 これを行うには、関連付けられたオブジェクトを `null` に設定します。|  
+|<xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>|関連付けられた 2 つのエンティティ オブジェクト間の既存のリンクを更新します。 また、<xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> は、0 または 1 対 1 (`0.1:1`) および 1 対 1 (`1:1`) の基数を持つリンクの削除にも使用します。 これを行うには、関連付けられたオブジェクトを `null` に設定します。|  
 |<xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A>|<xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> メソッドが呼び出されたときに、コンテキストが追跡するリンクに削除のマークを付けます。 このメソッドは、関連付けられたオブジェクトを削除する場合、または既存のオブジェクトへのリンクを削除した後に関連付けられた新しいオブジェクトへのリンクを追加してリレーションシップを変更する場合に使用します。|  
 |<xref:System.Data.Services.Client.DataServiceContext.AttachLink%2A>|2 つのエンティティ オブジェクトの間の既存のリンクのコンテキストを通知します。 コンテキストでは、このリレーションシップがデータ サービス内に既に存在するものと見なされるので、<xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> メソッドを呼び出してもリンクは作成されません。 このメソッドは、2 つのオブジェクトをコンテキストにアタッチして、オブジェクト間のリンクもアタッチする必要がある場合に使用します。 新しいリレーションシップを定義する場合は、<xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> を使用してください。|  
 |<xref:System.Data.Services.Client.DataServiceContext.DetachLink%2A>|コンテキストでの指定リンクの追跡を停止します。 このメソッドは、一対多 (`*:*`) のリレーションシップの削除に使用します。 基数が 1 のリレーションシップ リンクの場合は、<xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> を代わりに使用する必要があります。|  
@@ -88,10 +88,10 @@ ms.locfileid: "64660633"
  [!code-csharp[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#setnavprops)]
  [!code-vb[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#setnavprops)]  
   
- 詳細については、「[方法 :エンティティ リレーションシップを定義](../../../../docs/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services.md)します。  
+ 詳細については、「[方法 :エンティティリレーションシップ](../../../../docs/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services.md)を定義します。  
   
 ## <a name="saving-changes"></a>変更の保存  
- 変更は、<xref:System.Data.Services.Client.DataServiceContext> インスタンスで追跡されますが、サーバーには直ちに送信されません。 指定されたアクティビティに対して必要な変更が完了した後、<xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> を呼び出して、すべての変更をデータ サービスに送信します。 詳細については、次を参照してください。[データ サービス コンテキストの管理](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)します。 変更は、<xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A> および <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A> メソッドを使用して、非同期で保存することもできます。 詳細については、次を参照してください。[非同期操作](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)します。  
+ 変更は、<xref:System.Data.Services.Client.DataServiceContext> インスタンスで追跡されますが、サーバーには直ちに送信されません。 指定されたアクティビティに対して必要な変更が完了した後、<xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> を呼び出して、すべての変更をデータ サービスに送信します。 詳細については、「[データサービスコンテキストの管理](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)」を参照してください。 変更は、<xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A> および <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A> メソッドを使用して、非同期で保存することもできます。 詳細については、「[非同期操作](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -2,12 +2,12 @@
 title: <add> の <namespaceTable>
 ms.date: 03/30/2017
 ms.assetid: cf7b5b75-63bd-49a6-abac-4bfdab377e36
-ms.openlocfilehash: 32eff2e7bfdf1aee4c7d37a0e06166afba3cb398
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 7e2a2e26099f2d31116e4a89297fc1ac984c480d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566736"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920076"
 ---
 # <a name="add-of-namespacetable"></a>\<namespaceTable > の\<> の追加
 名前空間とプレフィックスのマッピングを含む構成要素を表します。これは、ルーティングの XPath フィルターで使用されます。  
@@ -45,7 +45,7 @@ ms.locfileid: "69566736"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<namespaceTable>](../../../../../docs/framework/configure-apps/file-schema/wcf/namespacetable.md)|名前空間とプレフィックスのマッピングを含む要素セットを定義する構成セクションを表します。これは、ルーティングの XPath フィルターで使用されます。|  
+|[\<namespaceTable>](namespacetable.md)|名前空間とプレフィックスのマッピングを含む要素セットを定義する構成セクションを表します。これは、ルーティングの XPath フィルターで使用されます。|  
   
 ## <a name="see-also"></a>関連項目
 

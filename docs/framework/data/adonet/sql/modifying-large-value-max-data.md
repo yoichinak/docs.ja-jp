@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: 134759d729d6f291db61e6f64ebd51dfe5a4443b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 19d0c78221f35bd36edce85a60a4a7a2f985bc38
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648723"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947009"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>ADO.NET での大きい値 (max) データの変更
 ラージ オブジェクト (LOB) データ型は、最大行サイズが 8 KB を超えるデータ型です。 SQL Server では、`max`、`varchar`、および `nvarchar` の各データ型に `varbinary` 指定子が用意されており、2^32 バイトの値を格納できます。 テーブル列および Transact-SQL 変数により、`varchar(max)`、`nvarchar(max)`、または `varbinary(max)` データ型を指定できます。 ADO.NET では、`max` データ型は、`DataReader` によってフェッチすることができ、特殊な処理を行うことなく入力パラメーターと出力パラメーター両方の値として指定することもできます。 サイズの大きい `varchar` データ型の場合は、データを段階的に取得および更新できます。  
@@ -21,7 +21,7 @@ ms.locfileid: "64648723"
   
  **SQL Server オンライン ブック**  
   
-1. [大きな値データ型の使用](https://go.microsoft.com/fwlink/?LinkId=120498)  
+1. [大きな値のデータ型の使用](https://go.microsoft.com/fwlink/?LinkId=120498)  
   
 ## <a name="large-value-type-restrictions"></a>大きい値型の制限事項  
  `max` データ型には、小さいデータ型にはない、次の制限事項が適用されます。  
@@ -37,9 +37,9 @@ ms.locfileid: "64648723"
   
  `OPENROWSET` 関数には、`BULK` 行セット プロバイダーが含まれており、データをターゲット テーブルに読み込むことなく、ファイルから直接読み取ることができます。 これにより、`OPENROWSET` を単純な INSERT SELECT ステートメントで使用できます。  
   
- `OPENROWSET BULK`オプション引数が位置を開始およびデータの読み取りを終了のエラーを処理する方法、およびデータを解釈する方法に大幅な制御を提供します。 たとえば、データ ファイルを 1 行として、あるいは `varbinary`、`varchar`、または `nvarchar` 型の 1 列の行セットとして読み取るように指定できます。 完全な構文とオプションについては、SQL Server オンライン ブックを参照してください。  
+ オプション`OPENROWSET BULK`の引数を使用すると、データの読み取りを開始および終了する場所、エラーを処理する方法、およびデータを解釈する方法を大幅に制御できます。 たとえば、データ ファイルを 1 行として、あるいは `varbinary`、`varchar`、または `nvarchar` 型の 1 列の行セットとして読み取るように指定できます。 完全な構文とオプションについては、SQL Server オンライン ブックを参照してください。  
   
- 次の例では、AdventureWorks サンプル データベースの ProductPhoto テーブルに写真を挿入しています。 使用する場合、`BULK OPENROWSET`プロバイダーは、すべての列に値を挿入しない場合でも、列の名前付きのリストを指定する必要があります。 この場合の主キーは ID 列として定義され、列リストから省略することもできます。 ただし、`OPENROWSET` ステートメントの最後に相関関係名 (この場合は ThumbnailPhoto) を指定する必要があります。 これにより、ファイルが読み込まれる `ProductPhoto` テーブルの列との相関関係が定義されます。  
+ 次の例では、AdventureWorks サンプル データベースの ProductPhoto テーブルに写真を挿入しています。 `BULK OPENROWSET`プロバイダーを使用する場合は、すべての列に値を挿入しない場合でも、列の名前付きリストを指定する必要があります。 この場合の主キーは ID 列として定義され、列リストから省略することもできます。 ただし、`OPENROWSET` ステートメントの最後に相関関係名 (この場合は ThumbnailPhoto) を指定する必要があります。 これにより、ファイルが読み込まれる `ProductPhoto` テーブルの列との相関関係が定義されます。  
   
 ```  
 INSERT Production.ProductPhoto (  
@@ -63,17 +63,17 @@ FROM OPENROWSET
   
  { *column_name* = { .WRITE ( *expression* , @Offset , @Length ) }  
   
- WRITE メソッドを指定するセクションの値の*column_name*が変更されます。 式が値にコピーされる、 *column_name*、`@Offset`位置、式が記述を開始点は、および`@Length`引数が列のセクションの長さ。  
+ WRITE メソッドは、 *column_name*の値のセクションが変更されることを指定します。 式は、 *column_name* `@Offset`にコピーされる値です。は式が`@Length`書き込まれる開始位置であり、引数は列のセクションの長さを示しています。  
   
 |If|Then|  
 |--------|----------|  
-|expression が NULL|`@Length` 無視されますと、値*column_name*が切り捨てられる指定した`@Offset`。|  
-|`@Offset` NULL です。|更新操作では、既存の最後に式を追加します。 *column_name*値と`@Length`は無視されます。|  
+|expression が NULL|`@Length`は無視され、 *column_name*の値は指定した`@Offset`で切り捨てられます。|  
+|`@Offset`NULL である|更新操作では、既存の*column_name*値`@Length`の末尾に式が追加され、無視されます。|  
 |`@Offset` が column_name の値の長さより長い|SQL Server からエラーが返されます。|  
-|`@Length` NULL です。|更新操作により `@Offset` の値の `column_name` から最後までのすべてのデータが削除されます。|  
+|`@Length`NULL である|更新操作により `@Offset` の値の `column_name` から最後までのすべてのデータが削除されます。|  
   
 > [!NOTE]
->  `@Offset` または `@Length` のいずれにも負数を指定することはできません。  
+> `@Offset` または `@Length` のいずれにも負数を指定することはできません。  
   
 ## <a name="example"></a>例  
  この Transact-SQL の例では、AdventureWorks データベースの Document テーブルの `nvarchar(max)` 列である DocumentSummary の値の一部が更新されます。 置換後の単語、置換する単語の既存データ内での開始位置 (オフセット)、置換する文字数 (長さ) を指定することで、'components' という単語が 'features' という単語に置換されます。 この例では、結果を比較するために、UPDATE ステートメントの前後に SELECT ステートメントを指定しています。  
@@ -104,7 +104,7 @@ GO
 ```  
   
 ## <a name="working-with-large-value-types-in-adonet"></a>ADO.NET での大きい値型の使用  
- ADO.NET での大きな値型を使用するには、大きな値の型として指定することによって<xref:System.Data.SqlClient.SqlParameter>内のオブジェクトを<xref:System.Data.SqlClient.SqlDataReader>セット、またはを使用して結果を返す、<xref:System.Data.SqlClient.SqlDataAdapter>を埋める、 `DataSet` / `DataTable`。 大きい値型と、関連する小さい値型の使用方法に違いはありません。  
+ ADO.NET で大きな値の型を使用するに<xref:System.Data.SqlClient.SqlParameter>は、 <xref:System.Data.SqlClient.SqlDataReader>大きな値の型を内のオブジェクトとして指定して結果セット<xref:System.Data.SqlClient.SqlDataAdapter>を返すか`DataSet`、を/ `DataTable`使用してにデータを格納します。 大きい値型と、関連する小さい値型の使用方法に違いはありません。  
   
 ### <a name="using-getsqlbytes-to-retrieve-data"></a>GetSqlBytes を使用したデータの取得  
  `GetSqlBytes` の <xref:System.Data.SqlClient.SqlDataReader> メソッドを使用して、`varbinary(max)` 列の内容を取得できます。 次のコード フラグメントでは、<xref:System.Data.SqlClient.SqlCommand> という名前の `cmd` オブジェクトによってテーブルから `varbinary(max)` データが選択され、<xref:System.Data.SqlClient.SqlDataReader> という名前の `reader` オブジェクトによってデータが <xref:System.Data.SqlTypes.SqlBytes> として取得されることを想定しています。  
@@ -222,13 +222,13 @@ while (reader.Read())
 ```  
   
 ### <a name="example"></a>例  
- 次のコードでは、`LargePhoto` データベースの `ProductPhoto` テーブルから名前と `AdventureWorks` オブジェクトが取得され、ファイルに保存されます。 このアセンブリは、<xref:System.Drawing> 名前空間への参照を指定してコンパイルする必要があります。  <xref:System.Data.SqlClient.SqlDataReader.GetSqlBytes%2A> の <xref:System.Data.SqlClient.SqlDataReader> メソッドにより、<xref:System.Data.SqlTypes.SqlBytes> プロパティを公開する `Stream` オブジェクトが返されます。 コードでは、これを使用して、新しい作成`Bitmap`オブジェクト、し、gif、保存`ImageFormat`します。  
+ 次のコードでは、`LargePhoto` データベースの `ProductPhoto` テーブルから名前と `AdventureWorks` オブジェクトが取得され、ファイルに保存されます。 このアセンブリは、<xref:System.Drawing> 名前空間への参照を指定してコンパイルする必要があります。  <xref:System.Data.SqlClient.SqlDataReader.GetSqlBytes%2A> の <xref:System.Data.SqlClient.SqlDataReader> メソッドにより、<xref:System.Data.SqlTypes.SqlBytes> プロパティを公開する `Stream` オブジェクトが返されます。 このコードでは、これを使用`Bitmap`して新しいオブジェクトを作成し、Gif `ImageFormat`に保存します。  
   
  [!code-csharp[DataWorks LargeValueType.Photo#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks LargeValueType.Photo/CS/source.cs#1)]
  [!code-vb[DataWorks LargeValueType.Photo#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Photo/VB/source.vb#1)]  
   
 ## <a name="using-large-value-type-parameters"></a>大きな値型パラメーターの使用  
- 大きい値型は、<xref:System.Data.SqlClient.SqlParameter> オブジェクト内の小さい値型と同じ方法で、<xref:System.Data.SqlClient.SqlParameter> オブジェクト内で使用できます。 として大きな値の型を取得する<xref:System.Data.SqlClient.SqlParameter>値は、次の例に示すようにします。 このコードでは、次の GetDocumentSummary ストアド プロシージャが、AdventureWorks サンプル データベースに存在することが想定されています。 名前付き入力パラメーターとして受け取り、ストアド プロシージャ@DocumentIDである DocumentSummary 列の内容を返します、@DocumentSummary出力パラメーター。  
+ 大きい値型は、<xref:System.Data.SqlClient.SqlParameter> オブジェクト内の小さい値型と同じ方法で、<xref:System.Data.SqlClient.SqlParameter> オブジェクト内で使用できます。 次の例に示すように<xref:System.Data.SqlClient.SqlParameter> 、大きな値の型は値として取得できます。 このコードでは、次の GetDocumentSummary ストアド プロシージャが、AdventureWorks サンプル データベースに存在することが想定されています。 ストアドプロシージャは、という名前@DocumentIDの入力パラメーターを受け取り、 @DocumentSummary出力パラメーターの documentsummary 列の内容を返します。  
   
 ```  
 CREATE PROCEDURE GetDocumentSummary   
@@ -244,7 +244,7 @@ WHERE   DocumentID=@DocumentID
 ```  
   
 ### <a name="example"></a>例  
- ADO.NET コードにより、<xref:System.Data.SqlClient.SqlConnection> および <xref:System.Data.SqlClient.SqlCommand> オブジェクトが作成され、GetDocumentSummary ストアド プロシージャが実行されることで、ドキュメントの概要が取得され、大きい値型として格納されます。 コード値を渡す、@DocumentID入力パラメーター、およびに再び渡される結果が表示されます、@DocumentSummaryコンソール ウィンドウでパラメーターを出力します。  
+ ADO.NET コードにより、<xref:System.Data.SqlClient.SqlConnection> および <xref:System.Data.SqlClient.SqlCommand> オブジェクトが作成され、GetDocumentSummary ストアド プロシージャが実行されることで、ドキュメントの概要が取得され、大きい値型として格納されます。 このコードは、 @DocumentID入力パラメーターの値を渡し、コンソールウィンドウの@DocumentSummary出力パラメーターに返される結果を表示します。  
   
  [!code-csharp[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/CS/source.cs#1)]
  [!code-vb[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/VB/source.vb#1)]  

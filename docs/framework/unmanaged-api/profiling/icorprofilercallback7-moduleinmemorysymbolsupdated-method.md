@@ -11,17 +11,17 @@ api_type:
 ms.assetid: f362a896-3247-4894-9727-e48dbbcd2c78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a6e00d55157046679ee1de0a7ff8e2764c1e357
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 860ecde22dead112a42b6ac868e34f0e9cd3531d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758051"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916196"
 ---
 # <a name="icorprofilercallback7moduleinmemorysymbolsupdated-method"></a>ICorProfilerCallback7::ModuleInMemorySymbolsUpdated Method
 [.NET Framework 4.6.1 以降のバージョンでのみでサポート]  
   
- メモリ内のモジュールに関連付けられているシンボルのストリームが更新されるたびに、プロファイラーに通知します。  
+ メモリ内モジュールに関連付けられているシンボルストリームが更新されるたびに、プロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,22 +33,22 @@ HRESULT ModuleInMemorySymbolsUpdated(
   
 ## <a name="parameters"></a>パラメーター  
  [入力] `moduleId`  
- シンボルのストリームが更新されたメモリ内モジュールの識別子。  
+ シンボルストリームが更新されるメモリ内モジュールの識別子。  
   
 ## <a name="remarks"></a>Remarks  
- このコールバックは設定によって制御されます、 [COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED](../../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)イベント マスク フラグを呼び出すときに、 [ICorProfilerCallback5::SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)メソッド。  
+ このコールバックは、 [ICorProfilerCallback5:: SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)メソッドを呼び出すときに、 [COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED](../../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)イベントマスクフラグを設定することによって制御されます。  
   
 > [!NOTE]
->  このイベントは、現在のシンボルを暗黙的に作成または使用して変更は発生しません<xref:System.Reflection.Emit>Api。  
+> このイベントは、api を使用<xref:System.Reflection.Emit>して暗黙的に作成または変更されたシンボルに対しては、現在発生していません。  
   
- でもとシンボルで提供される事前、管理対象のオーバー ロードの 1 つの呼び出し<xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType>メソッドを含む、`rawSymbolStore`ランタイム アセンブリのシンボルを指定する引数では実際にシンボリック データをモジュールに関連付けるいない可能性がありますまで後、 [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)コールバックが発生しました。 このイベントは、このようなモジュールのシンボルを収集する以降の機会を提供します。  
+ アセンブリのシンボルを指定する引数を<xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> `rawSymbolStore`含むマネージメソッドのオーバーロードのいずれかを呼び出すことによって、シンボルが事前に提供されている場合でも、ランタイムは実際にはシンボリックデータをモジュールに関連付けていない可能性があります。[Moduleloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)コールバックが発生するまで実行されます。 このイベントは、後でこのようなモジュールのシンボルを収集する機会を提供します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー:** Corprof.idl、Corprof.idl  
   
- **ライブラリ:** CorGuids.lib  
+ **ライブラリ**CorGuids .lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   

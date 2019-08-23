@@ -2,31 +2,30 @@
 title: サンプル
 ms.date: 03/30/2017
 ms.assetid: 3fcc0c4a-b952-4cfe-9e09-0c0cf874ba2c
-ms.openlocfilehash: a4f51c59791b0d65e99987e0e14a6fbedf1ee0a0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ac5298fd781d617b8a9c8cd637232b344a04f530
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616209"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945163"
 ---
 # <a name="samples"></a>サンプル
-このトピックでは、Visual Basic および c# ソリューションが含まれているへのリンク[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]サンプル コード。  
+このトピックでは、サンプルコードをC#含む[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Basic およびソリューションへのリンクを示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  SampleQueries ソリューションの Visual Basic バージョン  
- [サンプル クエリ (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [サンプルクエリ (Visual Basic)](../../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
   
  SampleQueries ソリューションの C# バージョン  
- [サンプル クエリ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb397972(v=vs.90))  
+ [サンプルクエリ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb397972(v=vs.90))  
   
- 
-  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] コードおよびアプリケーションの他の例を参照するには、次の手順に従います。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] コードおよびアプリケーションの他の例を参照するには、次の手順に従います。  
   
 - Microsoft Docs で特定の問題を検索します。  
   
-- 参加、 [LINQ フォーラム](https://go.microsoft.com/fwlink/?LinkId=76488)専門家とより複雑なトピックを説明できます。  
+- [LINQ フォーラム](https://go.microsoft.com/fwlink/?LinkId=76488)に参加してください。ここでは、より複雑なトピックについての専門家の詳細について説明します。  
   
-- 詳細を示すホワイト ペーパー[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]テクノロジ、Visual Basic と c# のコード例を完了します。 詳細については、次を参照してください。 [LINQ to SQL: リレーショナル データ用 .net 統合言語クエリ](https://go.microsoft.com/fwlink/?LinkId=93205)します。  
+- Visual Basic とC#コード例を使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]して、テクノロジについて詳しく説明したホワイトペーパーをご確認ください。 詳細については、「 [LINQ to SQL: リレーショナルデータ用の .Net 統合言語クエリ](https://go.microsoft.com/fwlink/?LinkId=93205)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

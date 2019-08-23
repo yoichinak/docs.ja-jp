@@ -6,20 +6,20 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: f888923736d384af2c6d955a126bacacb16113af
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a5fcceb3c39092deaa4a9dca258ba60117019c36
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651148"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961215"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>サーバー側 UI オートメーション プロバイダーの実装
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 の最新情報[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については[、「Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  このセクションでは、カスタム コントロールのサーバー側 UI オートメーション プロバイダーを実装する方法について説明します。  
   
- Windows Presentation Foundation (WPF) 要素および以外の実装-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]要素 (用に設計されたものなど[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) は基本的に異なります。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 要素は、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] から派生したクラスを使用して <xref:System.Windows.Automation.Peers.AutomationPeer>をサポートします。 非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 要素は、プロバイダー インターフェイスの実装を通じてサポートを提供します。  
+ Windows Presentation Foundation (WPF) 要素の実装と非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]要素 (向けに[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]設計された要素など) の実装は、根本的に異なります。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 要素は、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] から派生したクラスを使用して <xref:System.Windows.Automation.Peers.AutomationPeer>をサポートします。 非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 要素は、プロバイダー インターフェイスの実装を通じてサポートを提供します。  
   
 <a name="Security_Considerations"></a>   
 ## <a name="security-considerations"></a>セキュリティの考慮事項  
@@ -102,7 +102,7 @@ ms.locfileid: "64651148"
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty>  
   
 > [!NOTE]
->  単純な要素またはウィンドウでホストされているフラグメント ルートの <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> は、ウィンドウから取得されます。ただし、ルートの下にあるフラグメント要素 (リスト ボックス内のリスト項目など) は独自の識別子を提供する必要があります。 詳細については、「 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>」を参照してください。  
+> 単純な要素またはウィンドウでホストされているフラグメント ルートの <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> は、ウィンドウから取得されます。ただし、ルートの下にあるフラグメント要素 (リスト ボックス内のリスト項目など) は独自の識別子を提供する必要があります。 詳細については、「 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>」を参照してください。  
 >   
 >  <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> は、 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] コントロールでホストされるプロバイダーに返される必要があります。 この場合、ウィンドウの既定のプロバイダーは適切な値を取得できないことがあります。  
 >   
@@ -134,7 +134,7 @@ ms.locfileid: "64651148"
  ウィンドウでホストされる (HWND) カスタム ボタンなどの単純なコントロールのプロバイダーは、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー内のナビゲーションをサポートする必要はありません。 要素間のナビゲーションは、ホスト ウィンドウの既定のプロバイダーによって処理されます。これは、 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>の実装で指定されます。 ただし、複雑なカスタム コントロール用のプロバイダーを実装する場合は、フラグメントのルート ノードと子孫ノード、および兄弟ノード間のナビゲーションをサポートする必要があります。  
   
 > [!NOTE]
->  ルート以外のフラグメントの要素は、 `null` から <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>参照を返す必要があります。これらが直接ウィンドウでホストされておらず、これらの間のナビゲーションをサポートできる既定のプロバイダーがないためです。  
+> ルート以外のフラグメントの要素は、 `null` から <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>参照を返す必要があります。これらが直接ウィンドウでホストされておらず、これらの間のナビゲーションをサポートできる既定のプロバイダーがないためです。  
   
  フラグメントの構造は、 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.Navigate%2A>の実装によって決まります。 このメソッドは、各フラグメントから可能なそれぞれの方向に対して、その方向の要素に対するプロバイダー オブジェクトを返します。 その方向に要素がない場合、メソッドは `null` 参照を返します。  
   

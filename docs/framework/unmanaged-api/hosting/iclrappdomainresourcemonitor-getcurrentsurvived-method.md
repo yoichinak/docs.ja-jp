@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10df17f2f21928ab89c65be7fd07afe81c468a07
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bf285b6e1f703c8776937fa33c7ab5801f04f80f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766548"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950160"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentsurvived-method"></a>ICLRAppDomainResourceMonitor::GetCurrentSurvived メソッド
-最後の完全なブロッキング ガベージ コレクション後に残っていると、現在のアプリケーション ドメインによって参照されるバイト数を取得します。  
+最後の完全なブロッキングガベージコレクションの後に残った、現在のアプリケーションドメインによって参照されているバイト数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,13 +38,13 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
   
 ## <a name="parameters"></a>パラメーター  
  `dwAppDomainId`  
- [in]要求されたアプリケーション ドメインの ID。  
+ から要求されたアプリケーションドメインの ID。  
   
  `pAppDomainBytesSurvived`  
- [out]このアプリケーション ドメインによって保持されている最後のガベージ コレクションの後に残ったバイト数へのポインター。 完全なコレクションの後は、この番号は正確で完全なは。 短期コレクションの後にこの数は完全な可能性があります。 このパラメーターは、`null` に設定できます。  
+ 入出力このアプリケーションドメインによって保持されている最後のガベージコレクションの後に残ったバイト数へのポインター。 完全なコレクションの後、この数値は正確で完全になります。 短期コレクションの後、この数値は不完全になる可能性があります。 このパラメーターは、`null` に設定できます。  
   
  `pRuntimeBytesSurvived`  
- [out]最後のガベージ コレクションの後に残っているバイトの総数へのポインター。 完全なコレクションの後は、この数は、マネージ ヒープに保持されているバイト数を表します。 短期コレクションの後は、この数は、短期のジェネレーションにライブで保持されているバイト数を表します。 このパラメーターは、`null` に設定できます。  
+ 入出力最後のガベージコレクションから残された合計バイト数へのポインター。 完全なコレクションの後、この数値はマネージヒープに保持されているバイト数を表します。 短期コレクションの後、この数は短期のジェネレーションでライブに保持されているバイト数を表します。 このパラメーターは、`null` に設定できます。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。  
@@ -52,25 +52,25 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
-|COR_E_APPDOMAINUNLOADED|アプリケーション ドメインがアンロードされたか、存在しません。|  
+|COR_E_APPDOMAINUNLOADED|アプリケーションドメインがアンロードされているか、または存在しません。|  
   
 ## <a name="remarks"></a>Remarks  
- 統計がフル ブロッキング ガベージ コレクション後にのみ更新されます。つまり、コレクションの中に、アプリケーションが停止するを含むすべてのジェネレーションのコレクションが発生します。 たとえば、<xref:System.GC.Collect?displayProperty=nameWithType>メソッドのオーバー ロードは、完全なブロッキング コレクションを実行します。 同時実行ガベージ コレクションでは、バック グラウンドで行われ、アプリケーションはブロックされません。  
+ 統計は、完全なブロッキングガベージコレクションの後にのみ更新されます。つまり、コレクションの実行中にアプリケーションを停止する、すべてのジェネレーションを含むコレクションです。 たとえば、メソッドオーバーロード<xref:System.GC.Collect?displayProperty=nameWithType>は、完全なブロッキングコレクションを実行します。 同時実行ガベージコレクションはバックグラウンドで発生し、アプリケーションをブロックしません。  
   
- `GetCurrentSurvived`メソッドはアンマネージと同等のマネージ<xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType>プロパティ。  
+ メソッドは、マネージ<xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType>プロパティに対応するアンマネージドプロパティです。 `GetCurrentSurvived`  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** MetaHost.h  
+ **ヘッダー:** メタホスト .h  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ**Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
 - [ICLRAppDomainResourceMonitor インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
-- [アプリケーション ドメインのリソース監視](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)
+- [アプリケーション ドメインのリソース監視](../../../standard/garbage-collection/app-domain-resource-monitoring.md)
 - [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [ホスティング](../../../../docs/framework/unmanaged-api/hosting/index.md)

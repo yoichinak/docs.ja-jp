@@ -8,15 +8,15 @@ helpviewer_keywords:
 - XML processing instruction literal [Visual Basic]
 - processing instruction literal [Visual Basic]
 ms.assetid: cef4f7f8-0011-4f64-8602-795077ad4f15
-ms.openlocfilehash: 3fbb16a4d47801b671d37566573215d3a57afff1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c589d3f4ac6bbb9aa9b2b8f2535888bddbf9c934
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938607"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958477"
 ---
 # <a name="xml-processing-instruction-literal-visual-basic"></a>XML 処理命令リテラル (Visual Basic)
-リテラルを表す、<xref:System.Xml.Linq.XProcessingInstruction>オブジェクト。  
+<xref:System.Xml.Linq.XProcessingInstruction>オブジェクトを表すリテラル。  
   
 ## <a name="syntax"></a>構文  
   
@@ -29,10 +29,10 @@ ms.locfileid: "61938607"
  必須。 XML 処理命令リテラルの開始を示します。  
   
  `piName`  
- 必須。 アプリケーションを示す処理命令のターゲットを名前します。 "Xml"または"XML"で始めることはできません。  
+ 必須。 処理命令が対象とするアプリケーションを示す名前。 "Xml" または "XML" で始めることはできません。  
   
  `piData`  
- 省略可能です。 アプリケーションの対象を示す文字列`piName`XML ドキュメントを処理する必要があります。  
+ 省略可能です。 `piName`が対象とするアプリケーションで XML ドキュメントを処理する方法を示す文字列。  
   
  `?>`  
  必須。 処理命令の終了を示します。  
@@ -41,22 +41,22 @@ ms.locfileid: "61938607"
  <xref:System.Xml.Linq.XProcessingInstruction> オブジェクト。  
   
 ## <a name="remarks"></a>Remarks  
- XML 処理命令リテラルは、アプリケーションが XML ドキュメントを処理する方法を示します。 アプリケーションでは、XML ドキュメントが読み込まれる、アプリケーションは、ドキュメントを処理する方法を決定する XML 処理命令を確認できます。 アプリケーションの意味を解釈する`piName`と`piData`します。  
+ XML 処理命令リテラルは、アプリケーションで XML ドキュメントを処理する方法を示します。 アプリケーションで XML ドキュメントが読み込まれると、アプリケーションは XML 処理命令を確認して、ドキュメントの処理方法を決定できます。 アプリケーションは、と`piName` `piData`の意味を解釈します。  
   
- XML ドキュメント リテラルには、XML 処理命令の次のような構文が使用されます。 詳細については、次を参照してください。 [XML ドキュメント リテラル](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)します。  
-  
-> [!NOTE]
->  `piName`要素は、XML 1.0 仕様は、これらの id を予約するため、文字列"xml"または"XML"で始めることはできません。  
-  
- 変数に XML 処理命令リテラルを割り当てるまたは XML ドキュメント リテラルに含めることができます。  
+ XML ドキュメントリテラルでは、XML 処理命令と同様の構文を使用します。 詳細については、「 [XML ドキュメントリテラル](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)」を参照してください。  
   
 > [!NOTE]
->  XML リテラルでは、行継続文字をしなくても、複数の行をまたがることができます。 これにより、XML ドキュメントの内容をコピーし、Visual Basic プログラムに直接貼り付けることができます。  
+> Xml `piName` 1.0 仕様ではこれらの識別子が予約されているため、要素の先頭に文字列 "xml" または "xml" を指定することはできません。  
   
- Visual Basic コンパイラへの呼び出しにリテラルの XML 処理命令を変換する、<xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A>コンス トラクター。  
+ XML 処理命令リテラルを変数に割り当てるか、XML ドキュメントリテラルに含めることができます。  
+  
+> [!NOTE]
+> XML リテラルは、行連結文字を必要とせずに、複数の行にまたがることができます。 これにより、XML ドキュメントからコンテンツをコピーし、Visual Basic プログラムに直接貼り付けることができます。  
+  
+ Visual Basic コンパイラは、XML 処理命令のリテラルをコンストラクターの<xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A>呼び出しに変換します。  
   
 ## <a name="example"></a>例  
- 次の例では、XML ドキュメントのスタイル シートを識別する処理命令を作成します。  
+ 次の例では、XML ドキュメントのスタイルシートを識別する処理命令を作成します。  
   
  [!code-vb[VbXMLSamples#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#28)]  
   

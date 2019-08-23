@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4686710c105ef002fe30f8b6e167d760088913ce
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: afc0929b8f1b12f4e0b4551d826b8a1d59990154
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586991"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952887"
 ---
 # <a name="functiontailcall-function"></a>FunctionTailcall 関数
-現在実行中の関数が別の関数の末尾呼び出しを実行しようとすることをプロファイラーに通知します。  
+現在実行中の関数が別の関数の末尾呼び出しを実行しようとしていることをプロファイラーに通知します。  
   
 > [!NOTE]
->  `FunctionTailcall`関数が、.NET Framework version 2.0 で非推奨とされます。 引き続き、動作しますが、パフォーマンスの低下が発生します。 使用して、 [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)関数を使用します。  
+> `FunctionTailcall`関数は .NET Framework バージョン2.0 では非推奨とされます。 これは引き続き機能しますが、パフォーマンスが低下します。 代わりに、 [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)関数を使用してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,31 +39,31 @@ void __stdcall FunctionTailcall (
   
 ## <a name="parameters"></a>パラメーター  
  `funcID`  
- [in]Tail の呼び出しを行うには、現在実行中の関数の識別子です。  
+ から末尾呼び出しを実行しようとしている現在実行中の関数の識別子。  
   
 ## <a name="remarks"></a>Remarks  
- 末尾呼び出しの対象の関数は、現在のスタック フレームを使用し、直接 tail 呼び出しを行った関数の呼び出し元に戻ります。 つまり、 [FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md)末尾呼び出しの対象となっている関数のコールバックは発行されません。  
+ Tail 呼び出しの対象となる関数は、現在のスタックフレームを使用し、末尾呼び出しを行った関数の呼び出し元に直接戻ります。 これは、tail 呼び出しの対象である関数に対して[Functionleave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md)コールバックが発行されないことを意味します。  
   
- `FunctionTailcall`関数は、コールバックは、これを実装する必要があります。 実装を使用する必要があります、 `__declspec`(`naked`) ストレージ クラス属性。  
+ `FunctionTailcall`関数はコールバックであるため、実装する必要があります。 実装では、 `__declspec`(`naked`) ストレージクラス属性を使用する必要があります。  
   
- 実行エンジンは、この関数を呼び出す前に、レジスタを保存できません。  
+ この関数を呼び出す前に、実行エンジンはレジスタを保存しません。  
   
-- 項目で、浮動小数点ユニット (FPU) にあるなど、使用するすべてのレジスタを保存する必要があります。  
+- 入力時には、浮動小数点単位 (FPU) に含まれるすべてのレジスタを含め、使用するすべてのレジスタを保存する必要があります。  
   
-- 終了時に、その呼び出し元によってプッシュされたすべてのパラメーターをポップしてスタックを復元する必要があります。  
+- 終了時に、呼び出し元によってプッシュされたすべてのパラメーターをポップして、スタックを復元する必要があります。  
   
- 実装`FunctionTailcall`ガベージ コレクションは延期されますブロックしないでください。 実装は、ガベージ コレクションをしないで、スタックはガベージ コレクションに適した状態ではない可能性が。 ランタイムがまでブロックはガベージ コレクションが試行されると、`FunctionTailcall`を返します。  
+ の`FunctionTailcall`実装は、ガベージコレクションを遅延させるため、ブロックしないでください。 スタックがガベージコレクションに対応していない可能性があるため、この実装ではガベージコレクションを実行しないようにしてください。 ガベージコレクションが試行された場合、ランタイムはが`FunctionTailcall`返されるまでブロックします。  
   
- また、`FunctionTailcall`関数を呼び出してはならないようにまたはマネージ コードにマネージ メモリの割り当て。  
+ また、関数`FunctionTailcall`はマネージコードを呼び出さないようにするか、マネージメモリ割り当てを発生させることはできません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** CorProf.idl  
+ **ヘッダー:** Corprof.idl  
   
- **ライブラリ:** CorGuids.lib  
+ **ライブラリ**CorGuids .lib  
   
- **.NET framework のバージョン:** 1.1, 1.0  
+ **.NET Framework のバージョン:** 1.1、1.0  
   
 ## <a name="see-also"></a>関連項目
 

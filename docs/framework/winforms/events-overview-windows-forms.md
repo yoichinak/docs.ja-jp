@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: fddb51bfe998c360ca418374b119ec12f25b0fad
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 92942066b5f08ada0154781ae54b5d8494944ca1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052291"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963473"
 ---
 # <a name="events-overview-windows-forms"></a>イベントの概要 (Windows フォーム)
 イベントとは、プログラマが応答できる、つまり、コードを使って "処理" できるアクションのことです。 イベントは、マウスのクリックやキーを押すなどのユーザー アクション、プログラム コードまたはシステムによって生成されます。
@@ -24,16 +24,16 @@ ms.locfileid: "66052291"
  オブジェクトが発生させるイベントにはさまざまな種類がありますが、その多くがほとんどのコントロールで共通です。 たとえば、<xref:System.Windows.Forms.Control.Click> イベントは、ほとんどのオブジェクトで処理されます。 ユーザーがフォームをクリックすると、フォームの <xref:System.Windows.Forms.Control.Click> イベント ハンドラー内のコードが実行されます。
 
 > [!NOTE]
->  イベントの多くは、他のイベントと共に発生します。 たとえば、<xref:System.Windows.Forms.Control.DoubleClick> イベントが発生する場合は、<xref:System.Windows.Forms.Control.MouseDown>、<xref:System.Windows.Forms.Control.MouseUp>、および <xref:System.Windows.Forms.Control.Click> の各イベントが発生します。
+> イベントの多くは、他のイベントと共に発生します。 たとえば、<xref:System.Windows.Forms.Control.DoubleClick> イベントが発生する場合は、<xref:System.Windows.Forms.Control.MouseDown>、<xref:System.Windows.Forms.Control.MouseUp>、および <xref:System.Windows.Forms.Control.Click> の各イベントが発生します。
 
- させて、イベントを処理する方法については、次を参照してください。[イベント](../../standard/events/index.md)します。
+ イベントを発生させて使用する方法の詳細については、「 [Events](../../standard/events/index.md)」を参照してください。
 
 ## <a name="delegates-and-their-role"></a>デリゲートとその役割
- デリゲートは、イベント処理機構を作成する .NET Framework 内でよく使用されるクラスです。 デリゲートはビジュアルで通常使用される、関数ポインターに似てC++やその他のオブジェクト指向言語です。 ただし、関数ポインターとは異なり、デリゲートはオブジェクト指向で、タイプ セーフで、安全です。 また、関数ポインターには特定の関数への参照だけが含まれていますが、デリゲートはオブジェクトへの参照、およびそのオブジェクト内の 1 つ以上のメソッドへの参照で構成されています。
+ デリゲートは、イベント処理機構を構築するために .NET Framework 内で一般的に使用されるクラスです。 デリゲートは、通常、ビジュアルC++やその他のオブジェクト指向言語で使用される関数ポインターとほぼ同等です。 ただし、関数ポインターとは異なり、デリゲートはオブジェクト指向で、タイプ セーフで、安全です。 また、関数ポインターには特定の関数への参照だけが含まれていますが、デリゲートはオブジェクトへの参照、およびそのオブジェクト内の 1 つ以上のメソッドへの参照で構成されています。
 
- このイベント モデルを使用して*デリゲート*それらを処理するために使用されるメソッドにイベントをバインドします。 デリゲートを使用すると、ハンドラーのメソッドを指定することにより、イベント通知のための他のクラスを登録できます。 イベントが発生すると、デリゲートは関連付けられたメソッドを呼び出します。 デリゲートを定義する方法の詳細については、次を参照してください。[イベント](../../standard/events/index.md)します。
+ このイベントモデルでは、*デリゲート*を使用して、イベントを処理するために使用されるメソッドにイベントをバインドします。 デリゲートを使用すると、ハンドラーのメソッドを指定することにより、イベント通知のための他のクラスを登録できます。 イベントが発生すると、デリゲートは関連付けられたメソッドを呼び出します。 デリゲートを定義する方法の詳細については、「[イベント](../../standard/events/index.md)」を参照してください。
 
- デリゲートは、単一のメソッドまたは複数のメソッドに関連付けることができます。後者は、マルチキャストと呼ばれます。 通常、ユーザー (または、Windows) イベントのデリゲートを作成するときに、マルチキャスト イベントを作成します。 例外は、1 回のイベントで複数回実行されることが論理的にあり得ないような特定のプロシージャ (ダイアログ ボックスの表示など) を呼び出すイベントです。 マルチキャスト デリゲートを作成する方法については、次を参照してください。[方法。デリゲート (マルチキャスト デリゲート) を結合](~/docs/csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)します。
+ デリゲートは、単一のメソッドまたは複数のメソッドに関連付けることができます。後者は、マルチキャストと呼ばれます。 イベントのデリゲートを作成する場合、ユーザー (または Windows) は通常、マルチキャストイベントを作成します。 例外は、1 回のイベントで複数回実行されることが論理的にあり得ないような特定のプロシージャ (ダイアログ ボックスの表示など) を呼び出すイベントです。 マルチキャストデリゲートを作成する方法の詳細につい[ては、「」を参照してください。デリゲート (マルチキャストデリゲート)](../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)を結合します。
 
  マルチキャスト デリゲートは、関連付けられたメソッドの呼び出しリストを保持します。 マルチキャスト デリゲートでは、呼び出しリストにメソッドを追加する <xref:System.Delegate.Combine%2A> メソッド、およびリストからメソッドを削除する <xref:System.Delegate.Remove%2A> メソッドがサポートされています。
 

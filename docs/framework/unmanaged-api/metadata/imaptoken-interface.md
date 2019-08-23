@@ -16,31 +16,31 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a50f8b13979426b8ea04f1952216afe5de337386
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3fed44fe814ec873cffb1aa4006e11445f8e03db
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111671"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965768"
 ---
 # <a name="imaptoken-interface"></a>IMapToken インターフェイス
 アセンブリ間のマッピング機能を提供します。  
   
 > [!NOTE]
->  `IMapToken`クライアントによってインターフェイスを実装する必要があります。  
+> インターフェイス`IMapToken`は、クライアントによって実装される必要があります。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Map メソッド](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|メタデータ署名を使用して 2 つのアセンブリ間のリレーションシップをマップします。|  
+|[Map メソッド](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|メタデータシグネチャを使用して、2つのアセンブリ間のリレーションシップをマップします。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **ライブラリ**Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

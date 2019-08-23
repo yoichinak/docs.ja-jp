@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 137459acc275629bb4608218772ae969e3fcf99a
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: a5be728cbeb0c3378bb35765787b299167069f57
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052688"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910623"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>例:データ バインド時の例外の処理
 > [!NOTE]
->  このトピックでは、プレリリース ソフトウェアである .NET Native Developer Preview について述べています。 プレビュー版は、[Microsoft Connect Web サイト](https://go.microsoft.com/fwlink/?LinkId=394611)からダウンロードできます (登録が必要です)。  
+> このトピックでは、プレリリース ソフトウェアである .NET Native Developer Preview について述べています。 プレビュー版は、[Microsoft Connect Web サイト](https://go.microsoft.com/fwlink/?LinkId=394611)からダウンロードできます (登録が必要です)。  
   
- 次の例では、解決する方法を示しています、 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) .NET ネイティブ ツール チェーンでコンパイルされたアプリがデータ バインドを試みるとスローされる例外です。 例外情報は次のとおりです。  
+ 次の例は、.NET ネイティブツールチェーンを使用してコンパイルされたアプリがデータをバインドしようとしたときにスローされる[MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)例外を解決する方法を示しています。 例外情報は次のとおりです。  
   
 ```  
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:   
@@ -39,7 +39,7 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ```  
   
 ## <a name="what-was-the-app-doing"></a>アプリが行っていた動作は何か  
- スタックのベース、フレーム、<xref:Windows.UI.Xaml?displayProperty=nameWithType>名前空間は、XAML レンダリング エンジンが実行されていることを示します。   <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> メソッドの使用は、そのメタデータが削除された型での、プロパティ値のリフレクション ベースのルックアップを示します。  
+ スタックのベースでは、 <xref:Windows.UI.Xaml?displayProperty=nameWithType>名前空間のフレームは、XAML レンダリングエンジンが実行されていたことを示します。   <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> メソッドの使用は、そのメタデータが削除された型での、プロパティ値のリフレクション ベースのルックアップを示します。  
   
  メタデータ ディレクティブを提供するための最初の手順は、型の `serialize` メタデータを追加して、そのプロパティすべてをアクセス可能にすることです。  
   
@@ -57,9 +57,9 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ## <a name="could-the-code-be-rewritten-to-not-use-reflection"></a>リフレクションを使用しないようにコードを書き換えることができるか  
  データ バインディングではリフレクションが多用されるため、リフレクションを使用しないようにコードを変更することはできません。  
   
- ただし、`ViewModel` を XAML ページに指定して、ツール チェーンがコンパイル時にプロパティ バインディングを正しい型に関連付けて、ランタイム ディレクティブを使用せずにメタデータを保持できるようにする方法はあります。  たとえば、適用する可能性があります、<xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType>プロパティの属性。 これにより、XAML コンパイラが必要なルックアップ情報を生成するようになり、Default.rd.xml ファイルのランタイム ディレクティブが不要になります。  
+ ただし、`ViewModel` を XAML ページに指定して、ツール チェーンがコンパイル時にプロパティ バインディングを正しい型に関連付けて、ランタイム ディレクティブを使用せずにメタデータを保持できるようにする方法はあります。  たとえば、プロパティに<xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType>属性を適用できます。 これにより、XAML コンパイラが必要なルックアップ情報を生成するようになり、Default.rd.xml ファイルのランタイム ディレクティブが不要になります。  
   
 ## <a name="see-also"></a>関連項目
 
 - [はじめに](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [例:動的プログラミングのトラブルシューティング](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)
+- [例:トラブルシューティング (動的プログラミング)](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法: ラベル ステートメント (Visual Basic)'
+title: '方法: ラベルステートメント (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - colons (:)
@@ -7,30 +7,30 @@ helpviewer_keywords:
 - ': separator character'
 - Visual Basic code, labeling statements
 ms.assetid: 38f1ff43-2054-42cb-963b-1998e60c6ed4
-ms.openlocfilehash: cbb80d94dc8280aa67859c89daad1520ce4e9669
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6b442b5a0ad731cfc490a7387c78ac9279dddaf0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648743"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961319"
 ---
-# <a name="how-to-label-statements-visual-basic"></a>方法: ラベル ステートメント (Visual Basic)
-ステートメント ブロックはコロンで区切られたコードの行で構成をされます。 行の識別文字列または整数に続くコードがあると言われますは*というラベルの付いた*します。 ステートメント ラベルは識別するために、使用するためのステートメントでなどのコード行をマークするために使用`On Error Goto`します。  
+# <a name="how-to-label-statements-visual-basic"></a>方法: ラベルステートメント (Visual Basic)
+ステートメントブロックは、コロンで区切られたコード行で構成されます。 識別文字列または整数で始まるコード行には、ラベルが*付け*られています。 ステートメントラベルは、など`On Error Goto`のステートメントで使用するために、コード行をマークするために使用されます。  
   
- ラベルとして使用できるは、有効な Visual Basic 識別子、プログラミング要素を識別するようなまたは整数リテラル。 ラベルは、ソース コードの行の先頭に表示する必要があり、かどうかに続くステートメントで同じ行に関係なく、コロンの後にする必要があります。  
+ ラベルは、プログラミング要素を識別する Visual Basic 識別子や、整数リテラルなど、有効な識別子である場合があります。 ラベルは、ソースコードの行の先頭に記述する必要があります。また、同じ行にステートメントが続くかどうかに関係なく、コロンで続ける必要があります。  
   
- コンパイラは、行の先頭に任意に定義済みの識別子が一致するかどうかをチェックして、ラベルを識別します。 そうでない場合、コンパイラでは、ラベルが前提としています。  
+ コンパイラは、行の先頭が既に定義されている識別子と一致するかどうかをチェックすることによって、ラベルを識別します。 そうでない場合、コンパイラはこれがラベルであると見なします。  
   
- ラベルは、独自の宣言領域があるし、他の識別子に干渉することはできません。 ラベルのスコープは、メソッドの本体です。 ラベルの宣言は、あいまいな場合でも優先されます。  
+ ラベルには独自の宣言領域があり、他の識別子に干渉することはありません。 ラベルのスコープは、メソッドの本体です。 ラベル宣言は、あいまいな状況で優先されます。  
   
 > [!NOTE]
->  ラベルは、メソッド内で実行可能ステートメントでのみ使用できます。  
+> ラベルは、メソッド内の実行可能なステートメントでのみ使用できます。  
   
-### <a name="to-label-a-line-of-code"></a>ラベルのコード行に  
+### <a name="to-label-a-line-of-code"></a>コード行にラベルを付けるには  
   
-- 識別子の後にソース コードの行の先頭のコロンを配置します。  
+- ソースコード行の先頭に、識別子、コロン、コロンの順に配置します。  
   
-     たとえば、次のコード行ラベルが付けられます`Jump`と`120`、それぞれします。  
+     たとえば、次のコード行は、それぞれ`Jump`および`120`でラベル付けされています。  
   
      [!code-vb[VbVbalrStatements#708](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#708)]  
   

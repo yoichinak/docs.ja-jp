@@ -5,20 +5,20 @@ helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-ms.openlocfilehash: 76d074d2870a2d7efa62516b5868cdd7faaacd79
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 65b4f5633e589ae02e9ed495074000181864428a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586709"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956358"
 ---
 # <a name="events-visual-basic"></a>イベント (Visual Basic)
-ほとんどのプログラムを実際には、シーケンスで実行するプロシージャのデータ系列として Visual Studio プロジェクトを視覚化する可能性がありますはイベント ドリブン-つまりの実行フローは外部の出現回数と呼ばれるによって決まります*イベント*します。  
+Visual Studio プロジェクトは、シーケンス内で実行される一連の手順として視覚化することができますが、実際には、ほとんどのプログラムはイベントドリブンであるということです。つまり、実行フローは、*イベント*と呼ばれる外部オカレンスによって決定されます。  
   
  イベントは、何らかの重要な出来事が発生したことをアプリケーションに通知するシグナルです。 たとえば、ユーザーがフォーム上のコントロールをクリックすると、フォームは、`Click` イベントを発生させて、そのイベントを処理するプロシージャを呼び出すことができます。 イベントは、複数のタスク間の通信を可能にすることもできます。 たとえば、メインのアプリケーションとは別のアプリケーションで並べ替えタスクを実行するとします。 ユーザーが並べ替えを取り消した場合、アプリケーションは並べ替え処理の停止を指示するキャンセル イベントを送信できます。  
   
 ## <a name="event-terms-and-concepts"></a>イベントの用語と概念  
- このセクションでは、用語と Visual Basic でのイベントで使用する概念について説明します。  
+ ここでは、Visual Basic のイベントで使用される用語と概念について説明します。  
   
 ### <a name="declaring-events"></a>イベントの宣言  
  イベントは、次の例に示すように、`Event` キーワードを使用して、クラス、構造体、モジュール、およびインターフェイス内で宣言します。  
@@ -26,7 +26,7 @@ ms.locfileid: "65586709"
  [!code-vb[VbVbalrEvents#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#24)]  
   
 ### <a name="raising-events"></a>イベントの発生  
- イベントは、重要な出来事が発生したことを通知するメッセージに似ています。 メッセージをブロードキャストする動作は、"*イベントの発生*" と呼ばれます。 Visual basic でのイベントを発生させる、`RaiseEvent`ステートメントでは、次の例のように。  
+ イベントは、重要な出来事が発生したことを通知するメッセージに似ています。 メッセージをブロードキャストする動作は、"*イベントの発生*" と呼ばれます。 Visual Basic では、次の例に`RaiseEvent`示すように、ステートメントを使用してイベントを発生させます。  
   
  [!code-vb[VbVbalrEvents#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#25)]  
   
@@ -38,10 +38,10 @@ ms.locfileid: "65586709"
 ### <a name="event-handlers"></a>イベント ハンドラー  
  "*イベント ハンドラー*" は、対応するイベントが発生したときに呼び出されるプロシージャです。 イベント ハンドラーと一致するシグネチャを持つ任意の有効なサブルーチンを使用できます。 ただし、関数はイベント ソースに値を返すことができないため、イベント ハンドラーとして使用することはできません。  
   
- Visual Basic では、イベントの送信元、アンダー スコア、およびイベントの名前の名前の組み合わせのイベント ハンドラーの標準的な名前付け規則を使用します。 たとえば、`button1` という名前のボタンの `Click` イベントには、`Sub button1_Click` という名前が付けられます。  
+ Visual Basic は、イベントの送信元の名前、アンダースコア、およびイベントの名前を組み合わせたイベントハンドラーに、標準的な名前付け規則を使用します。 たとえば、`button1` という名前のボタンの `Click` イベントには、`Sub button1_Click` という名前が付けられます。  
   
 > [!NOTE]
->  独自のイベントに対するイベント ハンドラーを定義するときは、この名前付け規則を使用することをお勧めしますが、使用は必須ではありません。任意の有効なサブルーチン名を付けることができます。  
+> 独自のイベントに対するイベント ハンドラーを定義するときは、この名前付け規則を使用することをお勧めしますが、使用は必須ではありません。任意の有効なサブルーチン名を付けることができます。  
   
 ## <a name="associating-events-with-event-handlers"></a>イベントとイベント ハンドラーの関連付け  
  イベント ハンドラーを使用する前に、`Handles` ステートメントまたは `AddHandler` ステートメントを使用して、イベントをイベント ハンドラーに関連付けておく必要があります。  
@@ -55,7 +55,7 @@ ms.locfileid: "65586709"
   
 - `WithEvents` 変数をオブジェクト変数として使用することはできません。 つまり、`Object` として宣言することはできません。変数を宣言するときは、クラス名を指定する必要があります。  
   
-- 共有イベントがクラスのインスタンスに関連付けられていないために、使用できません`WithEvents`を宣言によって共有されているイベントを処理します。 同様に、`WithEvents` または`Handles` を使用して `Structure` からイベントを処理することはできません。 どちらの場合も、`AddHandler` ステートメント使用して、これらのイベントを処理することができます。  
+- 共有イベントはクラスインスタンスに関連付けられていない`WithEvents`ため、を使用して共有イベントを宣言によって処理することはできません。 同様に、`WithEvents` または`Handles` を使用して `Structure` からイベントを処理することはできません。 どちらの場合も、`AddHandler` ステートメント使用して、これらのイベントを処理することができます。  
   
 - `WithEvents` 変数の配列を作成することはできません。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "65586709"
   
  `Handles` 句は、イベントをイベント ハンドラーに関連付けるための標準的な方法ですが、イベントをイベント ハンドラーに関連付ける動作はコンパイル時に限定されます。  
   
- 場合によってなど、フォームやコントロールに関連付けられたイベントを Visual Basic に自動的に空のイベント ハンドラーのスタブが作成およびイベントに関連付けます。 たとえば、フォームのデザイン モードでコマンド ボタンをダブルクリックすると、Visual Basic は作成、空のイベント ハンドラーと`WithEvents`次のコードのように、コマンド ボタンの変数。  
+ フォームやコントロールに関連付けられたイベントなど、場合によっては、Visual Basic 自動的に空のイベントハンドラーをスタブアウトし、イベントに関連付けます。 たとえば、デザインモードでフォームのコマンドボタンをダブルクリックすると、次のコードに示すように、Visual Basic によっ`WithEvents`て、空のイベントハンドラーとコマンドボタンの変数が作成されます。  
   
  [!code-vb[VbVbalrEvents#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#26)]  
   
@@ -99,9 +99,9 @@ ms.locfileid: "65586709"
   
 |タイトル|説明|  
 |-----------|-----------------|  
-|[チュートリアル: 宣言とイベントの発生](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)|クラスのイベントを宣言して発生させる方法を手順を追って説明します。|  
+|[チュートリアル: イベントの宣言と発生](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)|クラスのイベントを宣言して発生させる方法を手順を追って説明します。|  
 |[チュートリアル: イベントの処理](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)|イベント ハンドラー プロシージャの記述方法を示します。|  
-|[方法: ブロックを回避するためにカスタム イベントを宣言します。](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)|イベント ハンドラーを非同期に呼び出すことができるカスタム イベントの定義方法を示します。|  
+|[方法: カスタムイベントを宣言してブロックを回避する](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)|イベント ハンドラーを非同期に呼び出すことができるカスタム イベントの定義方法を示します。|  
 |[方法: カスタム イベントを宣言してメモリを節約する](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|イベントを処理するときにのみ、メモリを使用するカスタム イベントを定義する方法を示します。|  
 |[Visual Basic での継承されたイベント ハンドラーのトラブルシューティング](../../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)|継承されたコンポーネントのイベント ハンドラーで生じる一般的な問題を一覧表示します。|  
 |[イベント](../../../../standard/events/index.md)|.NET Framework のイベント モデルについて概説します。|  

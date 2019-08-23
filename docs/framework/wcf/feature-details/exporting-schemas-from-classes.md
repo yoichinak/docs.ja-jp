@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
-ms.openlocfilehash: 5365c5274d2810f8fd93f81f10bbedf903756e0b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 3db3cc1c529ab40bf775c06a5128e4dabf3c8a56
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586670"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963649"
 ---
 # <a name="exporting-schemas-from-classes"></a>クラスからのスキーマのエクスポート
 データ コントラクト モデルで使用されているクラスから XML スキーマ定義言語 (XSD) スキーマを生成するには、 <xref:System.Runtime.Serialization.XsdDataContractExporter> クラスを使います。 このトピックでは、スキーマの作成手順を説明します。  
@@ -21,7 +21,7 @@ ms.locfileid: "65586670"
 ## <a name="the-export-process"></a>エクスポート処理  
  スキーマのエクスポート処理では、まず型の定義をエクスポートするので、型定義を XML 形式で記述した <xref:System.Xml.Schema.XmlSchemaSet> を生成します。  
   
- `XmlSchemaSet`は XSD スキーマ ドキュメントのセットを表す .NET Framework のスキーマ オブジェクト モデル (SOM) の一部です。 XSD ドキュメントを `XmlSchemaSet`から生成するために、 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> クラスの `XmlSchemaSet` プロパティから取得した、スキーマのコレクションを使います。 次に各 <xref:System.Xml.Schema.XmlSchema> オブジェクトを、 <xref:System.Xml.Serialization.XmlSerializer>を使ってシリアル化します。  
+ は`XmlSchemaSet` 、XSD スキーマドキュメントのセットを表す .NET Framework のスキーマオブジェクトモデル (SOM) の一部です。 XSD ドキュメントを `XmlSchemaSet`から生成するために、 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> クラスの `XmlSchemaSet` プロパティから取得した、スキーマのコレクションを使います。 次に各 <xref:System.Xml.Schema.XmlSchema> オブジェクトを、 <xref:System.Xml.Serialization.XmlSerializer>を使ってシリアル化します。  
   
 #### <a name="to-export-schemas"></a>スキーマをエクスポートするには  
   
@@ -36,16 +36,16 @@ ms.locfileid: "65586670"
      `Export` メソッドを何度も呼び出すと、同じ `XmlSchemaSet`に複数の項目が追加されます。 `XmlSchemaSet` に既に存在する型は生成されません。 したがって、 `Export` クラスのインスタンスを複数作成するのではなく、同じ `XsdDataContractExporter` に対して `XsdDataContractExporter` を複数回呼び出すようにします。 これにより、同じスキーマ型が重複して生成される状況を回避できます。  
   
     > [!NOTE]
-    >  エクスポート処理中に障害が発生した場合、 `XmlSchemaSet` は予測できない状態になります。  
+    > エクスポート処理中に障害が発生した場合、 `XmlSchemaSet` は予測できない状態になります。  
   
 5. <xref:System.Xml.Schema.XmlSchemaSet> プロパティを介して、 <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> にアクセスします。  
   
 ## <a name="export-options"></a>エクスポート オプション  
  <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> の <xref:System.Runtime.Serialization.XsdDataContractExporter> プロパティとして <xref:System.Runtime.Serialization.ExportOptions> クラスのインスタンスを設定することにより、エクスポート処理の方法を制御できます。 具体的には、次のオプションを設定できます。  
   
-- <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>。 `Type` のコレクションであり、エクスポートされる型に対応する既知の型を表します (詳細については、次を参照してください[Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。)。これらの既知の型は、`Export` メソッドに渡された型と共に、`Export` 呼び出しが行われるたびにエクスポートされます。  
+- <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>。 `Type` のコレクションであり、エクスポートされる型に対応する既知の型を表します (詳細については、「[データコントラクトの既知の型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)」を参照してください)。これらの既知の型は、`Export` メソッドに渡された型と共に、`Export` 呼び出しが行われるたびにエクスポートされます。  
   
-- <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>。 このプロパティを介して <xref:System.Runtime.Serialization.IDataContractSurrogate> を渡すことにより、エクスポート処理をカスタマイズできます。 詳細については、次を参照してください。[データ コントラクト サロゲート](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)します。 既定では、サロゲートは使用されません。  
+- <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>。 このプロパティを介して <xref:System.Runtime.Serialization.IDataContractSurrogate> を渡すことにより、エクスポート処理をカスタマイズできます。 詳細については、「[データコントラクトサロゲート](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)」を参照してください。 既定では、サロゲートは使用されません。  
   
 ## <a name="helper-methods"></a>ヘルパー メソッド  
  `XsdDataContractExporter` には、主要な機能であるスキーマのエクスポート処理に加え、型に関する情報を調べるためのヘルパー メソッドが定義されています。 以下に例を示します。  

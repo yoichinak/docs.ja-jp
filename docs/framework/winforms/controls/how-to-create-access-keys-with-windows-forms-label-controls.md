@@ -17,30 +17,30 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], creating for controls
 - access keys [Windows Forms], Windows Forms
 ms.assetid: 5ee8f823-80be-4a4f-96a4-412671e2e306
-ms.openlocfilehash: ffe4bf6fb29e82b04938e2ba9a2d9d21e5eabcde
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd7f238f8c20ba990158f23344e36376d3b1cb7a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747109"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950531"
 ---
 # <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>方法: Windows フォームの Label コントロールでアクセス キーを作成する
-Windows フォーム<xref:System.Windows.Forms.Label>他のコントロールのアクセス キーを定義するコントロールを使用できます。 ラベル コントロールにアクセス キーを定義するときに、ユーザーは、ALT キーとそれに続くタブ オーダー内でコントロールにフォーカスを移動する指定した文字に押すことができます。 ラベルは、フォーカスを受け取ることはできません、ために、タブ オーダー内で次のコントロールに自動的にフォーカスが移動します。 この手法を使用して、テキスト ボックス、コンボ ボックス、リスト ボックス、およびデータ グリッドをアクセス キーを割り当てます。  
+Windows フォーム<xref:System.Windows.Forms.Label>コントロールを使用して、他のコントロールのアクセスキーを定義できます。 ラベルコントロールでアクセスキーを定義すると、ユーザーは ALT キーと指定した文字を押して、タブオーダーでその後のコントロールにフォーカスを移動できます。 ラベルはフォーカスを受け取ることができないため、フォーカスはタブオーダーの次のコントロールに自動的に移動します。 この手法を使用すると、テキストボックス、コンボボックス、リストボックス、およびデータグリッドにアクセスキーを割り当てることができます。  
   
-### <a name="to-assign-an-access-key-to-a-control-with-a-label"></a>ラベルを持つコントロールに、アクセス キーを割り当てるには  
+### <a name="to-assign-an-access-key-to-a-control-with-a-label"></a>ラベルを持つコントロールにアクセスキーを割り当てるには  
   
-1. 最初に、ラベルを描画し、その他のコントロールを描きます。  
+1. まず、ラベルを描画してから、もう一方のコントロールを描画します。  
   
-     - または -  
+     \- または -  
   
-     任意の順序で、コントロールを描画し、設定、<xref:System.Windows.Forms.Control.TabIndex%2A>を他のコントロールより 1 少ない数のラベルのプロパティ。  
+     コントロールを任意の順序で描画し、 <xref:System.Windows.Forms.Control.TabIndex%2A>ラベルのプロパティを他のコントロールよりも1小さい値に設定します。  
   
-2. ラベルの設定<xref:System.Windows.Forms.Label.UseMnemonic%2A>プロパティを`true`します。  
+2. ラベルの<xref:System.Windows.Forms.Label.UseMnemonic%2A>プロパティをに`true`設定します。  
   
-3. アンパサンド (&) は、ラベルの<xref:System.Windows.Forms.Label.Text%2A>ラベルのアクセス キーを割り当てるプロパティを。 詳細については、次を参照してください。 [Windows のフォーム コントロールのアクセス キーを作成する](how-to-create-access-keys-for-windows-forms-controls.md)します。  
+3. ラベルの<xref:System.Windows.Forms.Label.Text%2A>プロパティにアンパサンド (&) を使用して、ラベルのアクセスキーを割り当てます。 詳細については、「 [Windows フォームコントロールのアクセスキーの作成](how-to-create-access-keys-for-windows-forms-controls.md)」を参照してください。  
   
     > [!NOTE]
-    >  アクセス キーの作成に使用するのではなく、ラベル コントロールにアンパサンドを表示することがあります。 これは、アンパサンドがデータに含まれるレコード セット内のフィールドにラベル コントロールをバインドする場合に発生する可能性があります。 ラベル コントロールでは、アンパサンドを表示するには、設定、<xref:System.Windows.Forms.Label.UseMnemonic%2A>プロパティを`false`します。 アンパサンドを表示しても、アクセス キーがある場合は、設定、<xref:System.Windows.Forms.Label.UseMnemonic%2A>プロパティを`true`とアクセス キーは 1 つのアンパサンド (&)、アンパサンドを 2 つのアンパサンドを表示します。  
+    > アンパサンドは、アクセスキーの作成に使用するのではなく、ラベルコントロールに表示することができます。 これは、データにアンパサンドが含まれているレコードセット内のフィールドにラベルコントロールをバインドした場合に発生する可能性があります。 ラベルコントロールにアンパサンドを表示するには、 <xref:System.Windows.Forms.Label.UseMnemonic%2A>プロパティを`false`に設定します。 アンパサンドを表示し、アクセスキーも持っている場合は、 <xref:System.Windows.Forms.Label.UseMnemonic%2A>プロパティをに`true`設定し、1つのアンパサンド (&) とアンパサンドを2つのアンパサンドで表示するようにアクセスキーを指定します。  
   
     ```vb  
     Label1.UseMnemonic = True  
@@ -65,6 +65,6 @@ Windows フォーム<xref:System.Windows.Forms.Label>他のコントロールの
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: 内容に合わせて Windows フォーム Label コントロールをサイズします。](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
+- [方法: コンテンツに合わせて Windows フォーム Label コントロールのサイズを変更する](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
 - [Label コントロールの概要](label-control-overview-windows-forms.md)
 - [Label コントロール](label-control-windows-forms.md)

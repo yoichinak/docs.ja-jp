@@ -6,16 +6,16 @@ helpviewer_keywords:
 ms.assetid: 87a9cff5-d86f-4e44-a06e-d12764d0dce2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 85ca55e976a010a4875d260b3da30f5bc3cf2ffb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 611ad0a6f4ec8b8c63010938372b733a0ac66052
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723616"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955758"
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>タスク並列ライブラリおよび PLINQ での ETW イベント
 
-タスク並列ライブラリおよび PLINQ は、どちらも Windows イベント トレーシング (ETW) イベントを生成します。ETW イベントは、Windows パフォーマンス アナライザーなどのツールを使用して、アプリケーションのプロファイルやトラブルシューティングに使用できます。 ただし、ほとんどの場合、並列アプリケーション コードをプロファイルする最善の方法は使用する、[同時実行ビジュアライザー](/visualstudio/profiling/concurrency-visualizer) Visual Studio でします。
+タスク並列ライブラリおよび PLINQ は、どちらも Windows イベント トレーシング (ETW) イベントを生成します。ETW イベントは、Windows パフォーマンス アナライザーなどのツールを使用して、アプリケーションのプロファイルやトラブルシューティングに使用できます。 ただし、ほとんどのシナリオでは、並列アプリケーションコードをプロファイリングする最良の方法は、Visual Studio で[同時実行ビジュアライザー](/visualstudio/profiling/concurrency-visualizer)を使用することです。
 
 ## <a name="task-parallel-library-etw-events"></a>タスク並列ライブラリの ETW イベント
 
@@ -33,7 +33,7 @@ EVENT_DESCRIPTOR.Id = 1
 
 #### <a name="user-data"></a>ユーザー データ
 
-|**Name**|**Type**|**説明**|
+|**名前**|**Type**|**説明**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|ループを開始した TaskScheduler の ID。|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|ループを開始したタスクの ID。|
@@ -49,7 +49,7 @@ EVENT_DESCRIPTOR.Id = 1
 
 #### <a name="user-data"></a>ユーザー データ
 
-|**Name**|**Type**|**説明**|
+|**名前**|**Type**|**説明**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|ループを開始した TaskScheduler の ID。|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|ループを開始したタスクの ID。|
@@ -99,7 +99,7 @@ EVENT_DESCRIPTOR.Id = 1
 
 #### <a name="user-data"></a>ユーザー データ
 
-|**Name**|**Type**|**説明**|
+|**名前**|**Type**|**説明**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|ループを開始した TaskScheduler の ID。|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|ループを開始したタスクの ID。|
@@ -112,7 +112,7 @@ EVENT_DESCRIPTOR.Id = 1
 
 #### <a name="user-data"></a>ユーザー データ
 
-|**Name**|**Type**|**説明**|
+|**名前**|**Type**|**説明**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|ループを開始した TaskScheduler の ID。|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|ループを開始したタスクの ID。|
@@ -121,5 +121,5 @@ EVENT_DESCRIPTOR.Id = 1
 ## <a name="see-also"></a>関連項目
 
 - [.NET Framework の ETW イベント](../../../docs/framework/performance/etw-events.md)
-- [タスク並列ライブラリ (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [タスク並列ライブラリ (TPL)](../../standard/parallel-programming/task-parallel-library-tpl.md)
+- [Parallel LINQ (PLINQ)](../../standard/parallel-programming/parallel-linq-plinq.md)

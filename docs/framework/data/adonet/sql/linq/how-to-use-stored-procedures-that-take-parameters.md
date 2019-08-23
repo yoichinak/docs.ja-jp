@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: 8dd463c895efcddfe288fe1dc8571981872d9d80
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 17ae74a430df4d4a4670c2390ce7b2ee25b67c7a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033609"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938713"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>方法: パラメーターを受け取るストアド プロシージャを使用する
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、出力パラメーターを参照パラメーターに対応付け、値型はパラメーターを null 許容型として宣言します。  
   
- 入力パラメーターの行セットを返すクエリで使用する方法の例は、次を参照してください。[方法。行セットを返す](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md)します。  
+ 行セットを返すクエリで入力パラメーターを使用する方法の例については、 [「」を参照してください。行セット](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md)を返します。  
   
 ## <a name="example"></a>例  
  次の例は、単一の入力パラメーター (顧客 ID) を受け取り、出力パラメーター (その顧客の売上合計) を返します。  
@@ -43,5 +43,5 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
 
 - [ストアド プロシージャ](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
 - [サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [Null 許容型の使用](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)
-- [null 許容値型](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [Null 許容型の使用](../../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
+- [null 許容値型](../../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

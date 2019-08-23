@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 145c4e33bd601fa61750df56b949bda5d43cc372
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 574449f95ee9632d37f277d61806802457494df0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68818000"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964587"
 ---
 # <a name="navigation-overview"></a>ナビゲーションの概要
 
@@ -106,7 +106,7 @@ Windows Presentation Foundation (WPF) では、スタンドアロンアプリケ
 
 マークアップ ファイルと分離コード ファイルを連携させるには、次の構成が必要です。
 
-- マークアップでは`Page` 、要素に属性`x:Class`を含める必要があります。 アプリケーションがビルドされると、マークアップ`x:Class`ファイルにが存在する[!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)]ことにより`partial` 、は、から<xref:System.Windows.Controls.Page>派生したクラスを作成し、 `x:Class`属性で指定された名前を持ちます。 その[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] ためには、`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`スキーマ( ) の名前空間宣言を追加する必要があります。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 生成さ`partial`れた`InitializeComponent`クラスはを実装します。これは、イベントを登録し、マークアップで実装されるプロパティを設定するために呼び出されます。
+- マークアップでは`Page` 、要素に属性`x:Class`を含める必要があります。 アプリケーションがビルドされると、マークアップ`x:Class`ファイルにが存在することにより、Microsoft build engine (MSBuild `partial` ) によって<xref:System.Windows.Controls.Page> 、から派生するクラス`x:Class`が作成され、属性によって指定された名前になります。 その[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] ためには、`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`スキーマ( ) の名前空間宣言を追加する必要があります。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 生成さ`partial`れた`InitializeComponent`クラスはを実装します。これは、イベントを登録し、マークアップで実装されるプロパティを設定するために呼び出されます。
 
 - 分離コードでは、クラスは、マークアップ`partial`で`x:Class`属性によって指定された名前と同じ名前を持つクラスである必要<xref:System.Windows.Controls.Page>があり、から派生する必要があります。 これにより、分離コードファイルは、アプリケーションのビルド`partial`時にマークアップファイル用に生成されたクラスに関連付けることができます (「 [WPF アプリケーションのビルド](building-a-wpf-application-wpf.md)」を参照してください)。
 
@@ -123,7 +123,7 @@ Windows Presentation Foundation (WPF) では、スタンドアロンアプリケ
 
 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] では、一定の量のアプリケーション インフラストラクチャをブラウザーでホストする必要があります。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] では、<xref:System.Windows.Application> クラスは、必要なアプリケーションインフラストラクチャを確立するアプリケーション定義の一部です (「[アプリケーション管理の概要](application-management-overview.md)」を参照してください)。
 
-通常、アプリケーション定義はマークアップと分離コードの両方を使用して実装され、マーク[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]アップファイルは`ApplicationDefinition`項目として構成されます。 のアプリケーション定義を次に示し[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]ます。
+通常、アプリケーション定義はマークアップと分離コードの両方を使用して実装され、マークアップ`ApplicationDefinition`ファイルは MSBuild 項目として構成されます。 のアプリケーション定義を次に示し[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]ます。
 
 [!code-xaml[XBAPAppDefSnippets#XBAPApplicationDefinitionMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppDefSnippets/CSharp/App.xaml#xbapapplicationdefinitionmarkup)]
 
@@ -527,7 +527,7 @@ Internet [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbaps
 
 *NAME* `=` *VALUE* `; expires=DAY, DD-MMM-YYYY HH:MM:SS GMT`
 
-有効期限が切れたクッキーは、cookie の有効[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]期限が切れるまで、現在のインストールのインターネット一時ファイルフォルダーに格納されます。 このような cookie は、アプリケーションセッション間で保持されるため、*永続的なクッキー*と呼ばれます。
+有効期限が切れたクッキーは、cookie の有効期限が切れるまで、現在の Windows インストールのインターネット一時ファイルフォルダーに格納されます。 このような cookie は、アプリケーションセッション間で保持されるため、*永続的なクッキー*と呼ばれます。
 
 <xref:System.Windows.Application.GetCookie%2A>メソッドを呼び出して、セッションと永続的な cookie の両方を取得<xref:System.Uri>し、 <xref:System.Windows.Application.SetCookie%2A>メソッドを使用して cookie が設定されている場所のを渡します。
 

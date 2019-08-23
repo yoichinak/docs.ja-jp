@@ -10,12 +10,12 @@ helpviewer_keywords:
 - bypasslist, remove element
 - remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
-ms.openlocfilehash: 0fd8de9af00aa861d92c8c201ef89545e108c790
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 99c18bd5b779845d52831b4a9591eaf4d5e5530b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659240"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920964"
 ---
 # <a name="remove-element-for-bypasslist-network-settings"></a>\<bypasslist の > 要素の削除 (ネットワーク設定)
 
@@ -61,7 +61,7 @@ ms.locfileid: "69659240"
 
 `address`属性の値は、一連の IP アドレスまたはホスト名を表す正規表現である必要があります。
 
-正規表現の詳細については、「」を参照してください。[正規表現を .NET Framework](../../../../../docs/standard/base-types/regular-expressions.md)します。
+正規表現の詳細については、「」を参照してください。[正規表現を .NET Framework](../../../../standard/base-types/regular-expressions.md)します。
 
 ## <a name="configuration-files"></a>構成ファイル
 

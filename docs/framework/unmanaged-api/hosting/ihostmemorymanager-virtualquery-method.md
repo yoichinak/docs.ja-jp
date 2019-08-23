@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 684d5e41e1d7cee2775aa0988d33a974315eac4e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 16d146766786f129d6da38bde1126ce8afe5e70f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772744"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963690"
 ---
 # <a name="ihostmemorymanagervirtualquery-method"></a>IHostMemoryManager::VirtualQuery メソッド
-対応する Win32 関数の論理ラッパーとして機能します。 Win32 実装`VirtualQuery`呼び出し元のプロセス仮想アドレス空間内のページの範囲に関する情報を取得します。  
+対応する Win32 関数の論理ラッパーとして機能します。 の`VirtualQuery` Win32 実装では、呼び出し元プロセスの仮想アドレス空間にあるページの範囲に関する情報を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,40 +40,40 @@ HRESULT VirtualQuery (
   
 ## <a name="parameters"></a>パラメーター  
  `lpAddress`  
- [in]クエリを実行する仮想メモリ アドレスへのポインター。  
+ から照会される仮想メモリ内のアドレスへのポインター。  
   
  `lpBuffer`  
- [out]指定したメモリ領域に関する情報を格納する構造体へのポインター。  
+ 入出力指定されたメモリ領域に関する情報を格納している構造体へのポインター。  
   
  `dwLength`  
- [in]バッファーのバイト単位のサイズを`lpBuffer`を指します。  
+ からが`lpBuffer`指すバッファーのサイズ (バイト単位)。  
   
  `pResult`  
- [out]情報バッファーによって返されたバイト数へのポインター。  
+ 入出力情報バッファーによって返されたバイト数へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`VirtualQuery` 正常に返されます。|  
-|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) は、プロセスに読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。|  
-|HOST_E_TIMEOUT|呼び出しがタイムアウトになりました。|  
+|S_OK|`VirtualQuery`正常に返されました。|  
+|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
+|HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
-|HOST_E_ABANDONED|イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。|  
-|E_FAIL|不明な致命的なエラーが発生しました。 メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。 メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。|  
+|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
+|E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドから E_FAIL が返された場合、そのプロセス内で CLR は使用できなくなります。 後続のホストメソッドの呼び出しでは、HOST_E_CLRNOTAVAILABLE が返されます。|  
   
 ## <a name="remarks"></a>Remarks  
- `VirtualQuery` 呼び出し元のプロセス仮想アドレス空間内のページの範囲について説明します。 この実装の値の設定、`pResult`バイト数のパラメーター情報バッファーに返され、HRESULT 値を返します。 Win32 で`VirtualQuery`関数、戻り値は、バッファー サイズ。 詳細については、Windows プラットフォームのドキュメントを参照してください。  
+ `VirtualQuery`呼び出しプロセスの仮想アドレス空間にあるページの範囲に関する情報を提供します。 この実装は、 `pResult`パラメーターの値を、情報バッファーで返されるバイト数に設定し、HRESULT 値を返します。 Win32 `VirtualQuery`関数では、戻り値はバッファーサイズです。 詳細については、Windows プラットフォームのドキュメントを参照してください。  
   
 > [!IMPORTANT]
->  オペレーティング システムの実装の`VirtualQuery`デッドロックは発生しませんし、ユーザー コードで中断されているランダムなスレッドで完了するまで実行できます。 このメソッドのホストされたバージョンを実装する場合は、注意を使用します。  
+> の`VirtualQuery`オペレーティングシステムの実装では、デッドロックは発生せず、ユーザーコード内で中断されたランダムスレッドで完了まで実行できます。 このメソッドのホストされたバージョンを実装する場合は、細心の注意を払ってください。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ**Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

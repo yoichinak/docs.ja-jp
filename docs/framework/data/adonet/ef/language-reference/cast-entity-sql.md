@@ -2,12 +2,12 @@
 title: CAST (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
-ms.openlocfilehash: 743c90cd9bc77a89051c59a217befa4275b28572
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 253dcf092deadd1049d0556af4ea0630602110d0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489949"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935824"
 ---
 # <a name="cast-entity-sql"></a>CAST (Entity SQL)
 あるデータ型の式を別のデータ型に変換します。  
@@ -29,7 +29,7 @@ CAST ( expression AS data_type )
  `data_type`と同じ値を返します。  
   
 ## <a name="remarks"></a>Remarks  
- キャスト式は、TRANSACT-SQL に変換式に類似したセマンティクスです。 キャスト式は、ある型の値を別の型の値に変換する場合に使用します。  
+ キャスト式のセマンティクスは、Transact-sql の CONVERT 式と似ています。 キャスト式は、ある型の値を別の型の値に変換する場合に使用します。  
   
 ```  
 CAST( e as T )  
@@ -48,12 +48,12 @@ CAST( e as T )
  キャスト式の使用は明示的な変換と見なされます。 明示的な変換では、データが切り捨てられたり、精度が失われたりする場合があります。  
   
 > [!NOTE]
->  CAST はプリミティブ型と列挙メンバー型のみでサポートされています。  
+> CAST はプリミティブ型と列挙メンバー型のみでサポートされています。  
   
 ## <a name="example"></a>例  
  次の [!INCLUDE[esql](../../../../../../includes/esql-md.md)] クエリは CAST 演算子を使用して、あるデータ型の式を別のデータ型にキャストします。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
-1. 」の手順に従って[方法。PrimitiveType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)します。  
+1. [「方法:PrimitiveType の結果](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)を返すクエリを実行します。  
   
 2. 次のクエリを引数として `ExecutePrimitiveTypeQuery` メソッドに渡します。  
   
