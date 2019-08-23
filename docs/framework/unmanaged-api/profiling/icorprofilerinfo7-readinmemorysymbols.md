@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo7::ReadInMemorySymbols
+title: 'ICorProfilerInfo7:: ReadInMemorySymbols'
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerInfo7.ReadInMemorySymbols
@@ -12,17 +12,17 @@ api_type:
 ms.assetid: 1745a0b9-8332-4777-a670-b549bff3b901
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2a878ccf94fb4f6d67daa3a4dd42fcf98faf34a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 95b463b23c230d620d746e48da49d75238ef2cb7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748643"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955371"
 ---
-# <a name="icorprofilerinfo7readinmemorysymbols"></a>ICorProfilerInfo7::ReadInMemorySymbols
+# <a name="icorprofilerinfo7readinmemorysymbols"></a>ICorProfilerInfo7:: ReadInMemorySymbols
 [.NET Framework 4.6.1 以降のバージョンでのみでサポート]  
   
- メモリ内のシンボルのストリームからバイトを読み取ります。  
+ メモリ内シンボルストリームからバイトを読み取ります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,37 +38,37 @@ HRESULT ReadInMemorySymbols(
   
 ## <a name="parameters"></a>パラメーター  
  `moduleId`  
- [in]メモリ内のストリームを含むモジュールの識別子です。  
+ からメモリ内ストリームを格納しているモジュールの識別子。  
   
  `symbolsReadOffset`  
- [in]バイトの読み取りを開始する位置のメモリ内ストリーム内のオフセット。  
+ からメモリ内ストリーム内でバイトの読み取りを開始する位置のオフセット。  
   
  `pSymbolBytes`  
- [out]データのコピー先バッファーへのポインター。 バッファーがあります`countSymbolBytes`使用可能な領域。  
+ 入出力データがコピーされるバッファーへのポインター。 バッファーには、 `countSymbolBytes`使用可能な領域が必要です。  
   
  `countSymbolBytes`  
- [in]コピーするバイト数。  
+ からコピーするバイト数。  
   
  `pCountSymbolBytesRead`  
- [out]メソッドが戻るとき、実際に読み取られたバイト数を格納します。  
+ 入出力メソッドから制御が戻るときに、実際に読み取られたバイト数を格納します。  
   
 ## <a name="return-value"></a>戻り値  
- `S_OK`、読み取られたバイト数を 0 以外の場合。  
+ `S_OK`0以外のバイト数が読み取られた場合は。  
   
- `CORPROF_E_MODULE_IS_DYNAMIC`を使用して、モジュールが作成された場合<xref:System.Reflection.Emit>します。  
+ `CORPROF_E_MODULE_IS_DYNAMIC`モジュールがを使用して<xref:System.Reflection.Emit>作成された場合は。  
   
 ## <a name="remarks"></a>Remarks  
- `ReadInMemorySymbols`メソッドの読み取りを試みます`countSymbolBytes`オフセットから始まるデータの`symbolsReadOffset`メモリ内ストリーム内で。 データをコピー`pSymbolBytes`が想定されています`countSymbolBytes`使用可能な領域。     `pCountSymbolsBytesRead` 実際の少ない可能性がありますが、読み取られたバイト数を含むより`countSymbolBytes`ストリームの末尾に達した場合。  
+ メソッド`ReadInMemorySymbols`は、インメモリ`countSymbolBytes`ストリーム内のオフセット`symbolsReadOffset`を開始位置として、データの読み取りを試みます。 データはに`pSymbolBytes`コピーされます。これには`countSymbolBytes` 、使用可能な領域があることが予想されます。     `pCountSymbolsBytesRead`実際に読み取られたバイト数を格納します。ストリーム`countSymbolBytes`の末尾に到達した場合よりも小さくなることがあります。  
   
 > [!NOTE]
->  現在の実装は、Reflection.Emit をサポートしていません。 かどうか、モジュールは、Reflection.Emit を使用して作成された、メソッドを返します`CORPROF_E_MODULE_IS_DYNAMIC`します。  
+> 現在の実装では、リフレクションはサポートされていません。 モジュールがリフレクションを使用して作成された場合、メソッド`CORPROF_E_MODULE_IS_DYNAMIC`はを返します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー:** Corprof.idl、Corprof.idl  
   
- **ライブラリ:** CorGuids.lib  
+ **ライブラリ**CorGuids .lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   

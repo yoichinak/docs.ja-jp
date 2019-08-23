@@ -2,14 +2,14 @@
 title: <windows> <clientCredentials>要素
 ms.date: 03/30/2017
 ms.assetid: 793e41c2-31ea-4159-abbc-2123bf097233
-ms.openlocfilehash: b5e92745b9e39534d2a0bc35504c2dbc8346d2ca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e9f0ed9879cc42ea25b83e6b626139a40a593112
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769721"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940309"
 ---
-# <a name="windows-of-clientcredentials-element"></a>\<windows > の\<clientCredentials > 要素
+# <a name="windows-of-clientcredentials-element"></a>\<clientCredentials > 要素\<の windows >
 クライアントを表すために使用される Windows 資格情報の設定を指定します。  
   
  \<system.ServiceModel >  
@@ -17,7 +17,7 @@ ms.locfileid: "61769721"
 \<endpointBehaviors>  
 \<behavior>  
 \<clientCredentials>  
-\<windows>  
+\<windows >  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,8 +33,8 @@ ms.locfileid: "61769721"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`allowedImpersonationLevel`|クライアントがサーバーと通信する偽装設定を設定します。 クライアントが選択する偽装モードは、サーバーでは適用されません。 以下の値が有効です。<br /><br /> 識別します。サーバーは、id およびクライアントの権限を取得できますが、クライアントを偽装できません。<br />-Impersonation:サーバーは、ローカル システム上のクライアントのセキュリティ コンテキストを偽装できます。<br />委任します。サーバーは、リモート システム上のクライアントのセキュリティ コンテキストを偽装できます。<br />匿名。サーバーは、権限を借用またはクライアントを識別できません。<br />-None。偽装レベルが割り当てられていません。<br /><br /> 既定値は Identification です。 この属性は <xref:System.Security.Principal.TokenImpersonationLevel> 型です。|  
-|`allowNtlm`|このプロパティを `true` に設定すると、Kerberos 認証を利用できない場合、NTLM 認証にダウングレードできます。<br /><br /> このプロパティを設定`false`させるベスト エフォートで NTLM が使用されている場合に例外をスローするように、Windows Communication Foundation (WCF) が発生します。 ただし、このプロパティを `false` に設定しても、ネットワーク経由で NTLM 資格情報が送信されなくなるとは限りません。|  
+|`allowedImpersonationLevel`|クライアントがサーバーと通信する偽装設定を設定します。 クライアントが選択する偽装モードは、サーバーでは適用されません。 以下の値が有効です。<br /><br /> 番号サーバーはクライアントの id と特権を取得できますが、クライアントの権限を借用することはできません。<br />偽造サーバーは、ローカルシステム上のクライアントのセキュリティコンテキストを偽装できます。<br />-委任:サーバーは、リモートシステム上のクライアントのセキュリティコンテキストを偽装できます。<br />非同期サーバーは、クライアントの権限を借用または識別できません。<br />存在偽装レベルが割り当てられていません。<br /><br /> 既定値は Identification です。 この属性は <xref:System.Security.Principal.TokenImpersonationLevel> 型です。|  
+|`allowNtlm`|このプロパティを `true` に設定すると、Kerberos 認証を利用できない場合、NTLM 認証にダウングレードできます。<br /><br /> このプロパティをに`false`設定すると、NTLM が使用されている場合に Windows Communication Foundation (WCF) がベストエフォートで例外をスローするようになります。 ただし、このプロパティを `false` に設定しても、ネットワーク経由で NTLM 資格情報が送信されなくなるとは限りません。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -43,7 +43,7 @@ ms.locfileid: "61769721"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|サービスに対するクライアントの認証に使用される資格情報を指定します。|  
+|[\<clientCredentials>](clientcredentials.md)|サービスに対するクライアントの認証に使用される資格情報を指定します。|  
   
 ## <a name="see-also"></a>関連項目
 
@@ -54,6 +54,6 @@ ms.locfileid: "61769721"
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
-- [クライアントのセキュリティ保護](../../../../../docs/framework/wcf/securing-clients.md)
-- [証明書の使用](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [クライアントのセキュリティ保護](../../../wcf/securing-clients.md)
+- [証明書の使用](../../../wcf/feature-details/working-with-certificates.md)
+- [サービスおよびクライアントのセキュリティ保護](../../../wcf/feature-details/securing-services-and-clients.md)

@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b7380556e13e17e26ffb2f8c5fbbc7136a1fb5e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7da023c5ab9247cde0ccd1126d4d639c6f355e7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771864"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910970"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>.NET Framework およびアプリケーションの配置
 
-ここでは、アプリケーションと共に .NET Framework を配置する方法についての概要を示します。 情報のほとんどは、開発者、OEM、およびエンタープライズ管理者を対象としています。 コンピュータに .NET Framework をインストールするユーザーは、「[.NET Framework のインストール](~/docs/framework/install/index.md)」をご覧ください。
+ここでは、アプリケーションと共に .NET Framework を配置する方法についての概要を示します。 情報のほとんどは、開発者、OEM、およびエンタープライズ管理者を対象としています。 コンピュータに .NET Framework をインストールするユーザーは、「[.NET Framework のインストール](../install/index.md)」をご覧ください。
 
 ## <a name="key-deployment-resources"></a>主な配置リソース
 
@@ -32,9 +32,9 @@ ms.locfileid: "61771864"
 
   - インストーラー オプション:
 
-    - [Web インストーラー](~/docs/framework/install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
+    - [Web インストーラー](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
-    - [オフライン インストーラー](~/docs/framework/install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
+    - [オフライン インストーラー](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
   - インストール モード:
 
@@ -44,7 +44,7 @@ ms.locfileid: "61771864"
 
   - [.NET Framework 4.5 のインストール中のシステム再起動の削減](../../../docs/framework/deployment/reducing-system-restarts.md)
 
-  - [.NET Framework のインストールおよびアンインストールのブロックのトラブルシューティング](~/docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+  - [.NET Framework のインストールおよびアンインストールのブロックのトラブルシューティング](../install/troubleshoot-blocked-installations-and-uninstallations.md)
 
 - .NET Framework とクライアント アプリケーションの配置 (開発者向け):
 

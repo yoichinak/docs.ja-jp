@@ -2,20 +2,20 @@
 title: <servicePrincipalName>
 ms.date: 03/30/2017
 ms.assetid: 3f3b85d3-20f2-4cd8-8a6a-ee18befbd165
-ms.openlocfilehash: 75e95bcbaee229f19bdfdd119b548ed612f4ddaa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 28ae27481ea9cb86c31b5be1f12b5491f8ca143e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758185"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936153"
 ---
-# <a name="serviceprincipalname"></a>\<servicePrincipalName>
+# <a name="serviceprincipalname"></a>\<servicePrincipalName >
 サービスの ID をサービス プリンシパル名 (SPN) により指定します。  
   
- SPN を設定する方法についての詳細については、次を参照してください。[サービス Id と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)します。  
+ SPN の設定の詳細については、「[サービス id と認証](../../../wcf/feature-details/service-identity-and-authentication.md)」を参照してください。  
   
  \<identity>  
-\<servicePrincipalName>  
+\<servicePrincipalName >  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,10 +39,10 @@ ms.locfileid: "61758185"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|クライアントで認証するサービスの ID を指定します。|  
+|[\<identity>](identity.md)|クライアントで認証するサービスの ID を指定します。|  
   
 ## <a name="remarks"></a>Remarks  
- この id を持つエンドポイントに接続するセキュリティで保護された Windows Communication Foundation (WCF) クライアントは、エンドポイントの SSPI 認証を実行するときに SPN を使用します。  
+ この id を持つエンドポイントに接続するセキュリティで保護された Windows Communication Foundation (WCF) クライアントは、エンドポイントで SSPI 認証を実行するときに SPN を使用します。  
   
 ## <a name="see-also"></a>関連項目
 
@@ -50,5 +50,5 @@ ms.locfileid: "61758185"
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
 - <xref:System.ServiceModel.SpnEndpointIdentity>
-- [サービス ID と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [サービス ID と認証](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [\<identity>](identity.md)

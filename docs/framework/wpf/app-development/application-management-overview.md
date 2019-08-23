@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: a5808261ec9fe957ee993177590446389f219609
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 448c212e4afe547dc6342b000fe06d5340db112c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68818009"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958742"
 ---
 # <a name="application-management-overview"></a>アプリケーション管理の概要
 すべてのアプリケーションは、アプリケーションの実装と管理に適用される機能を共有することがよくあります。 このトピックでは、アプリケーションを作成および管理<xref:System.Windows.Application>するためのクラスの機能の概要について説明します。  
@@ -74,7 +74,7 @@ ms.locfileid: "68818009"
 - 分離コードでは、クラスは、マークアップ`partial`で`x:Class`属性によって指定された名前と同じ名前を持つクラスで<xref:System.Windows.Application>ある必要があり、から派生する必要があります。 これにより、分離コードファイルは、アプリケーションのビルド`partial`時にマークアップファイル用に生成されたクラスに関連付けることができます (「 [WPF アプリケーションのビルド](building-a-wpf-application-wpf.md)」を参照してください)。  
   
 > [!NOTE]
->  Visual Studio を使用して新しい WPF アプリケーションプロジェクトまたは WPF ブラウザーアプリケーションプロジェクトを作成すると、アプリケーション定義が既定で含まれ、マークアップと分離コードの両方を使用して定義されます。  
+> Visual Studio を使用して新しい WPF アプリケーションプロジェクトまたは WPF ブラウザーアプリケーションプロジェクトを作成すると、アプリケーション定義が既定で含まれ、マークアップと分離コードの両方を使用して定義されます。  
   
  このコードは、アプリケーション定義を実装するために最低限必要です。 ただし、アプリケーションをビルドして実行する前に、追加の MSBuild 構成をアプリケーション定義に対して行う必要があります。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "68818009"
  [!code-vb[AppShowWindowHardSnippets#StartupEventCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AppShowWindowHardSnippets/VisualBasic/Application.xaml.vb#startupeventcodebehind)]  
   
 > [!NOTE]
->  既定で<xref:System.Windows.Window>は、スタンドアロンアプリケーションで最初にインスタンス化されるがメインアプリケーションウィンドウになります。 この<xref:System.Windows.Window>オブジェクトは、 <xref:System.Windows.Application.MainWindow%2A?displayProperty=nameWithType>プロパティによって参照されます。 最初にインスタンス化<xref:System.Windows.Application.MainWindow%2A> <xref:System.Windows.Window>されたウィンドウとは異なるウィンドウがメインウィンドウに表示される場合は、プロパティの値をプログラムで変更できます。  
+> 既定で<xref:System.Windows.Window>は、スタンドアロンアプリケーションで最初にインスタンス化されるがメインアプリケーションウィンドウになります。 この<xref:System.Windows.Window>オブジェクトは、 <xref:System.Windows.Application.MainWindow%2A?displayProperty=nameWithType>プロパティによって参照されます。 最初にインスタンス化<xref:System.Windows.Application.MainWindow%2A> <xref:System.Windows.Window>されたウィンドウとは異なるウィンドウがメインウィンドウに表示される場合は、プロパティの値をプログラムで変更できます。  
   
  XBAP が最初に起動すると、最も多くの<xref:System.Windows.Controls.Page>場合、に移動します。 これを次のコードに示します。  
   
@@ -170,7 +170,7 @@ ms.locfileid: "68818009"
  このマークアップは、ウィンドウを開くことについて、前のコードと同じ効果があります。  
   
 > [!NOTE]
->  ナビゲーションの詳細については、「[ナビゲーションの概要](navigation-overview.md)」を参照してください。  
+> ナビゲーションの詳細については、「[ナビゲーションの概要](navigation-overview.md)」を参照してください。  
   
  パラメーター化され<xref:System.Windows.Application.Startup>ていないコンストラクターを使用してインスタンス化する必要がある場合、またはイベントを表示する前にそのイベントをサブスクライブする必要がある場合、またはコマンドライン引数を処理する必要がある場合は、イベントを処理してを<xref:System.Windows.Window>開く必要があります。アプリケーションの起動時に指定された。  
   
@@ -219,7 +219,7 @@ ms.locfileid: "68818009"
  は<xref:System.Windows.Window> 、アクティブ化および非アクティブ化することもできます。 詳細については、「<xref:System.Windows.Window.Activated?displayProperty=nameWithType>」および「<xref:System.Windows.Window.Deactivated?displayProperty=nameWithType>」を参照してください。  
   
 > [!NOTE]
->  Xbap に対しても<xref:System.Windows.Application.Activated?displayProperty=nameWithType> が発生しません。<xref:System.Windows.Application.Deactivated?displayProperty=nameWithType>  
+> Xbap に対しても<xref:System.Windows.Application.Activated?displayProperty=nameWithType> が発生しません。<xref:System.Windows.Application.Deactivated?displayProperty=nameWithType>  
   
 <a name="Application_Shutdown"></a>   
 ### <a name="application-shutdown"></a>アプリケーションのシャットダウン  
@@ -236,7 +236,7 @@ ms.locfileid: "68818009"
  アプリケーションのシャットダウンを管理するため<xref:System.Windows.Application>に、 <xref:System.Windows.Application.Shutdown%2A>には、 <xref:System.Windows.Application.ShutdownMode%2A>メソッド、プロパティ、 <xref:System.Windows.Application.SessionEnding>および<xref:System.Windows.Application.Exit>イベントとイベントが用意されています。  
   
 > [!NOTE]
->  <xref:System.Windows.Application.Shutdown%2A>は、を持つ<xref:System.Security.Permissions.UIPermission>アプリケーションからのみ呼び出すことができます。 スタンドアロン WPF アプリケーションは、常にこのアクセス許可を持っています。 ただし、インターネットゾーンの部分信頼セキュリティサンドボックスで実行されている Xbap では実行されません。  
+> <xref:System.Windows.Application.Shutdown%2A>は、を持つ<xref:System.Security.Permissions.UIPermission>アプリケーションからのみ呼び出すことができます。 スタンドアロン WPF アプリケーションは、常にこのアクセス許可を持っています。 ただし、インターネットゾーンの部分信頼セキュリティサンドボックスで実行されている Xbap では実行されません。  
   
 #### <a name="shutdown-mode"></a>シャットダウン モード  
  ほとんどのアプリケーションは、すべてのウィンドウが閉じられるか、メイン ウィンドウが閉じられたときにシャットダウンします。 ただし、場合によっては、他のアプリケーションに固有の条件によって、アプリケーションがシャット ダウンするタイミングに影響します。 <xref:System.Windows.Application.ShutdownMode%2A> 次<xref:System.Windows.ShutdownMode>のいずれかの列挙値を使用してを設定することにより、アプリケーションがシャットダウンする条件を指定できます。  
@@ -254,7 +254,7 @@ ms.locfileid: "68818009"
  アプリケーション固有のシャットダウン条件がある場合は、を<xref:System.Windows.Application.ShutdownMode%2A>に<xref:System.Windows.ShutdownMode.OnExplicitShutdown>設定します。 この場合、 <xref:System.Windows.Application.Shutdown%2A>メソッドを明示的に呼び出すことによってアプリケーションをシャットダウンする必要があります。それ以外の場合は、すべてのウィンドウが閉じられている場合でも、アプリケーションの実行は継続されます。 が<xref:System.Windows.ShutdownMode.OnLastWindowClose>また<xref:System.Windows.Application.Shutdown%2A> <xref:System.Windows.Application.ShutdownMode%2A> は<xref:System.Windows.ShutdownMode.OnMainWindowClose>の場合、は暗黙的に呼び出されることに注意してください。  
   
 > [!NOTE]
->  <xref:System.Windows.Application.ShutdownMode%2A>は XBAP から設定できますが、無視されます。XBAP は、ブラウザーから移動したとき、または XBAP をホストしているブラウザーを閉じたときに常にシャットダウンされます。 詳細については、「[ナビゲーションの概要](navigation-overview.md)」を参照してください。  
+> <xref:System.Windows.Application.ShutdownMode%2A>は XBAP から設定できますが、無視されます。XBAP は、ブラウザーから移動したとき、または XBAP をホストしているブラウザーを閉じたときに常にシャットダウンされます。 詳細については、「[ナビゲーションの概要](navigation-overview.md)」を参照してください。  
   
 #### <a name="session-ending"></a>セッションの終了  
  <xref:System.Windows.Application.ShutdownMode%2A>プロパティによって示されるシャットダウン条件は、アプリケーションに固有のものです。 ただし、場合によっては、アプリケーションは、外部条件の結果としてシャットダウンすることもあります。 最も一般的な外部条件は、ユーザーが次の操作によって Windows セッションを終了したときに発生します。  
@@ -277,7 +277,7 @@ ms.locfileid: "68818009"
  この例では、コードが<xref:System.Windows.SessionEndingCancelEventArgs.ReasonSessionEnding%2A>プロパティを調べて、Windows セッションがどのように終了しているかを確認します。 この値を使用して、ユーザーに確認メッセージを表示します。 ユーザーがセッションを終了したくない場合、コードはをに<xref:System.ComponentModel.CancelEventArgs.Cancel%2A> `true`設定して、Windows セッションが終了しないようにします。  
   
 > [!NOTE]
->  <xref:System.Windows.Application.SessionEnding>Xbap に対しては発生しません。
+> <xref:System.Windows.Application.SessionEnding>Xbap に対しては発生しません。
 
 #### <a name="exit"></a>終了  
  アプリケーションがシャット ダウンするときには、アプリケーション状態の保存など、いくつかの最終処理を実行しなければならない場合があります。 このような状況では、イベント<xref:System.Windows.Application.Exit>ハンドラーが次の`App_Exit`例に示すように、イベントを処理できます。 これは、 *app.xaml*ファイルのイベントハンドラーとして定義されます。 その実装は、 *App.xaml.cs*ファイルと*app.xaml*ファイルで強調表示されています。
@@ -301,7 +301,7 @@ ms.locfileid: "68818009"
  ほとんどのアプリケーションは、ユーザー要求に応じてオペレーティング システムから起動されます。 ただし、アプリケーションは、特定のタスクを実行するために、別のアプリケーションに起動されることもあります。 起動されたアプリケーションがシャット ダウンするとき、起動元のアプリケーションは、起動されたアプリケーションのシャット ダウン条件を知ならなければならないことがあります。 このような状況では、アプリケーションがシャットダウン時にアプリケーションの終了コードを返すことができます。 既定では、WPF アプリケーションは終了コード値0を返します。  
   
 > [!NOTE]
->  Visual Studio からデバッグする場合、アプリケーションの終了コードは、次のようなメッセージで、アプリケーションのシャットダウン時に**出力**ウィンドウに表示されます。  
+> Visual Studio からデバッグする場合、アプリケーションの終了コードは、次のようなメッセージで、アプリケーションのシャットダウン時に**出力**ウィンドウに表示されます。  
 >   
 >  `The program '[5340] AWPFApp.vshost.exe: Managed' has exited with code 0 (0x0).`  
 >   
@@ -315,7 +315,7 @@ ms.locfileid: "68818009"
  終了コードの値を検出し、 <xref:System.Windows.Application.Exit>イベントを処理することによって変更できます。 イベントハンドラーには、 <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A>プロパティ<xref:System.Windows.ExitEventArgs>を使用して終了コードへのアクセスを提供するが渡されます。 <xref:System.Windows.Application.Exit> 詳細については、「 <xref:System.Windows.Application.Exit> 」を参照してください。  
   
 > [!NOTE]
->  終了コードは、スタンドアロンアプリケーションと Xbap の両方で設定できます。 ただし、Xbap の場合、終了コードの値は無視されます。  
+> 終了コードは、スタンドアロンアプリケーションと Xbap の両方で設定できます。 ただし、Xbap の場合、終了コードの値は無視されます。  
   
 <a name="Unhandled_Exceptions"></a>   
 ### <a name="unhandled-exceptions"></a>未処理の例外  

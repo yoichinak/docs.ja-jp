@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: 2114efcc4d39cb4d2ea9ca33d7ff244c81a7097f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 97df0bee10440dd03f07b980589d9dda85ce121e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650572"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69909881"
 ---
 # <a name="large-udts"></a>大きな UDT
 開発者は、ユーザー定義型 (UDT) を使用すると、SQL Server データベースに共通言語ランタイム (CLR) オブジェクトを格納して、サーバーのスカラー型システムを拡張することができます。 UDT は複数の要素を持つことができ、動作を定義できます。この点は、1 つの SQL Server システム データ型から構成される従来の別名データ型と異なります。  
   
 > [!NOTE]
->  大きな UDT に対する SqlClient のサポート強化を利用するには、.NET Framework 3.5 SP1 以降をインストールする必要があります。  
+> 大きな UDT に対する SqlClient のサポート強化を利用するには、.NET Framework 3.5 SP1 以降をインストールする必要があります。  
   
  従来は、UDT の最大サイズが 8 KB に制限されていました。 SQL Server 2008 では、<xref:Microsoft.SqlServer.Server.Format.UserDefined> 形式の UDT に対するこの制限が廃止されています。  
   
@@ -27,7 +27,7 @@ ms.locfileid: "64650572"
 1. [CLR ユーザー定義型](https://go.microsoft.com/fwlink/?LinkId=98366)  
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>GetSchema による UDT スキーマの取得  
- <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> の <xref:System.Data.SqlClient.SqlConnection> メソッドは、データベース スキーマ情報を <xref:System.Data.DataTable> に返します。 詳細については、次を参照してください。 [SQL Server スキーマ コレクション](../../../../../docs/framework/data/adonet/sql-server-schema-collections.md)します。  
+ <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> の <xref:System.Data.SqlClient.SqlConnection> メソッドは、データベース スキーマ情報を <xref:System.Data.DataTable> に返します。 詳細については、「 [SQL Server スキーマコレクション](../../../../../docs/framework/data/adonet/sql-server-schema-collections.md)」を参照してください。  
   
 ### <a name="getschematable-column-values-for-udts"></a>UDT の GetSchemaTable 列値  
  <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> の <xref:System.Data.SqlClient.SqlDataReader> メソッドは、列メタデータを記述する <xref:System.Data.DataTable> を返します。 次の表は、SQL Server 2005 と SQL Server 2008 における、大きな UDT の列メタデータの違いを示しています。  
@@ -41,7 +41,7 @@ ms.locfileid: "64650572"
 |`ProviderSpecificDataType`|`SqlTypes.SqlBinary`|UDT インスタンス|  
 |`ProviderType`|21 (`SqlDbType.VarBinary`)|29 (`SqlDbType.Udt`)|  
 |`NonVersionedProviderType`|29 (`SqlDbType.Udt`)|29 (`SqlDbType.Udt`)|  
-|`DataTypeName`|`SqlDbType.VarBinary`|3 つの部分として指定された名前*Database.SchemaName.TypeName*します。|  
+|`DataTypeName`|`SqlDbType.VarBinary`|*SchemaName*として指定された3つの部分で構成される名前。|  
 |`IsLong`|可変|可変|  
   
 ## <a name="sqldatareader-considerations"></a>SqlDataReader に関する注意点  

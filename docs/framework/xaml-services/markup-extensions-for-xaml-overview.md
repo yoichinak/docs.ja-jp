@@ -5,12 +5,12 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: 29cf4e03c1e4f91cd4390b84dd62c07268fe0189
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 5c29899846e7210c02b6bcc2b677b05581a5c6b1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364316"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939705"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>XAML のマークアップ拡張機能の概要
 マークアップ拡張機能は、プリミティブでも特定の XAML 型でもない値を取得するための XAML の手法です。 属性による使用では、マークアップ拡張機能は、左中かっこ `{` でマークアップ拡張機能スコープに入り、右中かっこ `}` で終了するという、既知の文字シーケンスを使用します。 .NET Framework XAML サービスを使用する場合は、System.Xaml アセンブリから XAML 言語の定義済みのマークアップ拡張機能をいくつか使用できます。 また、System.Xaml で定義された <xref:System.Windows.Markup.MarkupExtension> クラスからサブクラスを作成し、独自のマークアップ拡張機能を定義することもできます。 あるいは、特定のフレームワークを既に参照している場合は、そのフレームワークによって定義されたマークアップ拡張機能を使用することができます。  
@@ -22,7 +22,7 @@ ms.locfileid: "68364316"
  XAML 言語をサポートするため、.NET Framework XAML サービスによっていくつかのマークアップ拡張機能が実装されています。 これらのマークアップ拡張機能は、言語としての XAML の仕様の部分に対応しています。 これらは、通常、一般的に使用される構文では `x:` プレフィックスによって識別できます。 これらの XAML 言語要素に対する .NET Framework XAML サービスの実装は、すべて  <xref:System.Windows.Markup.MarkupExtension> 基底クラスから派生します。  
   
 > [!NOTE]
->  `x:` プレフィックスは、XAML 稼働環境のルート要素で、XAML 言語の名前空間を標準的な XAML 名前空間にマッピングするために使用します。 たとえば、さまざまな特定のフレームワークの Visual Studio プロジェクトとページテンプレートでは、この`x:`マッピングを使用して XAML ファイルが開始されます。 独自の XAML 名前空間のマッピングに別のプレフィックス トークンを選択することもできますが、このドキュメントでは、既定の `x:` マッピングを、独自の固有なフレームワークの既定の XAML 名前空間や他の任意の CLR 名前空間または XML 名前空間ではなく、XAML 言語の XAML 名前空間の一部として定義されているエンティティを識別する手段と想定します。  
+> `x:` プレフィックスは、XAML 稼働環境のルート要素で、XAML 言語の名前空間を標準的な XAML 名前空間にマッピングするために使用します。 たとえば、さまざまな特定のフレームワークの Visual Studio プロジェクトとページテンプレートでは、この`x:`マッピングを使用して XAML ファイルが開始されます。 独自の XAML 名前空間のマッピングに別のプレフィックス トークンを選択することもできますが、このドキュメントでは、既定の `x:` マッピングを、独自の固有なフレームワークの既定の XAML 名前空間や他の任意の CLR 名前空間または XML 名前空間ではなく、XAML 言語の XAML 名前空間の一部として定義されているエンティティを識別する手段と想定します。  
   
 ### <a name="xtype"></a>x:Type  
  `x:Type` は、名前を指定した型の <xref:System.Type> オブジェクトを提供します。 この機能は、基になる CLR 型やそれから派生した型をグループ化のモニカーまたは識別子として使用する遅延メカニズムの中で最も頻繁に使用されます。 具体的な例には、WPF のスタイルとテンプレート、およびそれらにおける `TargetType` プロパティの使用があります。 詳細については、「 [x:Type Markup Extension](x-type-markup-extension.md)」を参照してください。  

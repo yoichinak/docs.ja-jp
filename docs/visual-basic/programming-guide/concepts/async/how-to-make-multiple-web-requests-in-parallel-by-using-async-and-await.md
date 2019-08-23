@@ -1,16 +1,16 @@
 ---
-title: '方法: 並列で非同期を使用して複数の Web 要求を行うし、Await (Visual Basic)'
+title: '方法: Async と Await を使用して複数の Web 要求を並列で作成する (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-ms.openlocfilehash: e306722fca4e0215cf7b67d85763858d459a171a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 70eab3fb8014e26435b73e217889ba3e6c58ca92
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642439"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958050"
 ---
-# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>方法: 並列で非同期を使用して複数の Web 要求を行うし、Await (Visual Basic)
-非同期メソッドでは、タスクは作成されると開始されます。 [Await](../../../../visual-basic/language-reference/operators/await-operator.md)演算子は、処理できませんが、タスクが完了するまで続行メソッド内の位置にタスクに適用されます。 次の例に示すように、タスクは多くの場合、作成されるとすぐに待機します。  
+# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>方法: Async と Await を使用して複数の Web 要求を並列で作成する (Visual Basic)
+非同期メソッドでは、タスクは作成されると開始されます。 [Await](../../../../visual-basic/language-reference/operators/await-operator.md)演算子は、タスクが終了するまで処理を続行できないメソッドのポイントでタスクに適用されます。 次の例に示すように、タスクは多くの場合、作成されるとすぐに待機します。  
   
 ```vb  
 Dim result = Await someWebAccessMethodAsync(url)  
@@ -36,27 +36,27 @@ Dim result = Await myTask
  次のプログラムは 3 つの非同期的な Web ダウンロードを開始し、次に呼び出した順にそれを待機します。 プログラムを実行する場合、タスクは必ずしも作成して待機した順には終了しないことに注意します。 タスクは作成されると実行され、メソッドが await 式に到達する前に 1 つまたは複数のタスクが終了する場合もあります。  
   
 > [!NOTE]
->  このプロジェクトを完成させるには、Visual Studio 2012 以降および .NET Framework 4.5 以降がコンピューターにインストールされている必要があります。  
+> このプロジェクトを完成させるには、Visual Studio 2012 以降および .NET Framework 4.5 以降がコンピューターにインストールされている必要があります。  
   
- 複数のタスクを同時に開始する別の例については、「[方法: Task.WhenAll (Visual Basic) を使用して Async Walkthrough を拡張](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)します。  
+ 複数のタスクを同時に開始する別の例については、「[方法: Task.whenall (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)を使用して非同期のチュートリアルを拡張します。  
   
  この例のコードは、[開発者コード サンプル](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)のページからダウンロードできます。  
   
 ### <a name="to-set-up-the-project"></a>プロジェクトを設定するには  
   
-1. WPF アプリケーションを設定するには、次の手順を実行します。 これらの手順の詳細については、「[チュートリアル: 非同期を使用して、Web にアクセスして、Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)します。  
+1. WPF アプリケーションを設定するには、次の手順を実行します。 これらの手順の詳細については、「[チュートリアル: Async と Await を使用した Web へのアクセス](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)(Visual Basic)。  
   
     - テキスト ボックスとボタンを含む WPF アプリケーションを作成します。 ボタンに `startButton` という名前を付け、テキスト ボックスに `resultsTextBox` という名前を付けます。  
   
     - <xref:System.Net.Http> への参照を追加します。  
   
-    - MainWindow.xaml.vb ファイルで、追加、`Imports`ステートメント`System.Net.Http`します。  
+    - Mainwindow.xaml ファイルで、の`Imports` `System.Net.Http`ステートメントを追加します。  
   
 ### <a name="to-add-the-code"></a>コードを追加するには  
   
-1. デザイン ウィンドウの MainWindow.xaml で作成するボタンをダブルクリックして、 `startButton_Click` MainWindow.xaml.vb 内のイベント ハンドラー。  
+1. デザインウィンドウの mainwindow.xaml で、ボタンをダブルクリックして、mainwindow.xaml に`startButton_Click`イベントハンドラーを作成します。  
   
-2. 次のコードをコピーしの本文に貼り付けます`startButton_Click`MainWindow.xaml.vb でします。  
+2. 次のコードをコピーし、mainwindow.xaml のの`startButton_Click`本文に貼り付けます。  
   
     ```vb  
     resultsTextBox.Clear()  
@@ -72,7 +72,7 @@ Dim result = Await myTask
   
     - `DisplayResults` は各 URL のバイト配列内のバイトの数を表示します。 この表示は、各タスクがいつダウンロードを完了したかを示します。  
   
-     次のメソッドをコピーし、後に貼り付けます、 `startButton_Click` MainWindow.xaml.vb 内のイベント ハンドラー。  
+     次のメソッドをコピーし、mainwindow.xaml のイベント`startButton_Click`ハンドラーの後に貼り付けます。  
   
     ```vb  
     Private Async Function ProcessURLAsync(url As String, client As HttpClient) As Task(Of Integer)  
@@ -205,6 +205,6 @@ End Class
   
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル: 非同期を使用して、Web にアクセスして、Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [チュートリアル: Async および Await を使用した Web へのアクセス (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Async および Await を使用した非同期プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [方法: Task.WhenAll (Visual Basic) を使用して Async Walkthrough を拡張します。](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [方法: Task.whenall (Visual Basic) を使用して非同期のチュートリアルを拡張する](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)

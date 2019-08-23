@@ -9,56 +9,56 @@ helpviewer_keywords:
 - transformations [Windows Forms], global
 - transformations [Windows Forms], local
 ms.assetid: b601d66d-d572-4f11-9d2e-92f0dc8893f3
-ms.openlocfilehash: e4ed103e781cc2e59d62c11f3233357c77b81cb9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f62efb31e95b0797272997fadbc28459579a0de0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004580"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955186"
 ---
 # <a name="global-and-local-transformations"></a>グローバル変換とローカル変換
-グローバル変換によって描画されるすべての項目に適用される変換とは、指定された<xref:System.Drawing.Graphics>オブジェクト。 これに対し、ローカルの変換は、描画する特定の項目に適用される変換です。  
+グローバル変換は、特定<xref:System.Drawing.Graphics>のオブジェクトによって描画されるすべてのアイテムに適用される変換です。 一方、ローカル変換は、描画される特定の項目に適用される変換です。  
   
 ## <a name="global-transformations"></a>グローバル変換  
- グローバル変換を作成するには、構築、<xref:System.Drawing.Graphics>オブジェクト、し、操作、<xref:System.Drawing.Graphics.Transform%2A>プロパティ。 <xref:System.Drawing.Graphics.Transform%2A>プロパティは、<xref:System.Drawing.Drawing2D.Matrix>オブジェクト、アフィン変換の任意のシーケンスを保持できるようにします。 格納されている、変換、<xref:System.Drawing.Graphics.Transform%2A>プロパティはワールド変換と呼ばれます。 <xref:System.Drawing.Graphics>クラスは、複合ワールド変換を構築するためのいくつかのメソッドを提供します。 <xref:System.Drawing.Graphics.MultiplyTransform%2A>、 <xref:System.Drawing.Graphics.RotateTransform%2A>、 <xref:System.Drawing.Graphics.ScaleTransform%2A>、および<xref:System.Drawing.Graphics.TranslateTransform%2A>します。 次の例では、2 回楕円を描きます。 ワールド変換と後に 1 回作成する前に 1 回です。 変換は、y 方向に 0.5 倍でスケーリングし、x 方向で 50 ユニットを変換し、30 度を回転します。  
+ グローバル変換を作成するには、 <xref:System.Drawing.Graphics>オブジェクトを構築し、その<xref:System.Drawing.Graphics.Transform%2A>プロパティを操作します。 <xref:System.Drawing.Graphics.Transform%2A> プロパティ<xref:System.Drawing.Drawing2D.Matrix>はオブジェクトであるため、アフィン変換の任意のシーケンスを保持できます。 <xref:System.Drawing.Graphics.Transform%2A>プロパティに格納されている変換は、ワールド変換と呼ばれます。 クラス<xref:System.Drawing.Graphics>には<xref:System.Drawing.Graphics.MultiplyTransform%2A>、、 <xref:System.Drawing.Graphics.RotateTransform%2A> <xref:System.Drawing.Graphics.TranslateTransform%2A>、、およびという複合ワールド変換を構築するためのメソッドがいくつか用意されています。 <xref:System.Drawing.Graphics.ScaleTransform%2A> 次の例では、楕円を2回描画します。ワールド変換を作成する前に1回、その後に1回です。 変換は、最初に y 方向の0.5 係数で拡大縮小し、次に x 方向に50単位を変換してから30°回転します。  
   
  [!code-csharp[System.Drawing.CoordinateSystems#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.CoordinateSystems#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#21)]  
   
- 次の図は、変換に関連する行列を示しています。  
+ 次の図は、変換に関係するマトリックスを示しています。  
   
- ![Transformations](./media/aboutgdip05-art14.gif "AboutGdip05_art14")  
+ ![変換](./media/aboutgdip05-art14.gif "AboutGdip05_art14")  
   
 > [!NOTE]
->  前の例ではクライアント領域の左上隅にある座標系の原点の楕円を回転します。 これには、楕円の中心を回転する場合は、異なる結果が生成されます。  
+> 前の例では、楕円は、クライアント領域の左上隅にある座標系の原点を中心に回転しています。 これにより、独自の中心点について楕円を回転する場合とは異なる結果が生成されます。  
   
-## <a name="local-transformations"></a>ローカルの変換  
- 描画する特定の項目にローカルの変換が適用されます。 など、<xref:System.Drawing.Drawing2D.GraphicsPath>オブジェクトには、<xref:System.Drawing.Drawing2D.GraphicsPath.Transform%2A>メソッドをそのパスのデータ ポイントを変換することができます。 次の例では、変換を使用して四角形と回転変換を使用したパスを描画します。 (詳しくは、ワールド変換がないことを想定しています)。  
+## <a name="local-transformations"></a>ローカル変換  
+ ローカル変換は、描画される特定の項目に適用されます。 たとえば、 <xref:System.Drawing.Drawing2D.GraphicsPath>オブジェクトには、その<xref:System.Drawing.Drawing2D.GraphicsPath.Transform%2A>パスのデータポイントを変換できるメソッドがあります。 次の例では、変換なしの四角形と回転変換を含むパスを描画します。 (ワールド変換がないと仮定します)。  
   
  [!code-csharp[System.Drawing.CoordinateSystems#22](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#22)]
  [!code-vb[System.Drawing.CoordinateSystems#22](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#22)]  
   
- ワールド変換と、さまざまな結果を実現するためにローカルの変換を組み合わせることができます。 たとえば、ワールド変換を使用して、座標系を修正して、ローカルの変換を使用して回転新しい座標システムで描画されるオブジェクトを拡大/縮小することができます。  
+ ワールド変換とローカル変換を組み合わせて、さまざまな結果を得ることができます。 たとえば、ワールド変換を使用して座標系を変更し、ローカル変換を使用して、新しい座標系で描画されたオブジェクトの回転と拡大縮小を行うことができます。  
   
- クライアント領域の左端からの配信元の 200 ピクセルとクライアント領域の上端から 150 ピクセル座標システムを必要とします。 さらに、測定単位が、x 軸が右と上向きの y 軸を参照する、ピクセルにすることを想定しています。 既定の座標系は、水平軸の反転を実行する必要があるために、下向き、y 軸が。 次の図は、このようなリフレクションのマトリックスを示します。  
+ クライアント領域の左端から200ピクセルの原点を持つ座標系と、クライアント領域の上端から150ピクセルを使用するとします。 さらに、測定単位をピクセルにする必要があるとします。 x 軸は右を指し、y 軸は上向きになります。 既定の座標系では y 軸が下向きになっているため、横軸全体で反射を行う必要があります。 次の図は、このようなリフレクションのマトリックスを示しています。  
   
- ![Transformations](./media/aboutgdip05-art15.gif "AboutGdip05_art15")  
+ ![変換](./media/aboutgdip05-art15.gif "AboutGdip05_art15")  
   
- 次に、右側に翻訳 200 単位と 150 の単位を実行する必要があると仮定します。  
+ 次に、200ユニットを右および150単位に変換する必要があるとします。  
   
- 次の例では、確立のワールド変換を設定して上記で説明した座標系、<xref:System.Drawing.Graphics>オブジェクト。  
+ 次の例では、 <xref:System.Drawing.Graphics>オブジェクトのワールド変換を設定することによって、記述した座標系を確立します。  
   
  [!code-csharp[System.Drawing.CoordinateSystems#23](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#23)]
  [!code-vb[System.Drawing.CoordinateSystems#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#23)]  
   
- (前の例の末尾に配置)、次のコードは、新しい座標系の原点を注視の左下隅を含む 1 つの四角形で構成されるパスを作成します。 ローカル変換と変換をローカルに 1 回、1 回、四角形が塗りつぶされます。 ローカルの変換後に 30 度回転して、2 の倍数で水平方向のスケーリングで構成されます。  
+ 次のコード (前の例の最後にあります) では、新しい座標系の原点の左下隅にある単一の四角形で構成されるパスを作成します。 四角形は、ローカル変換なしで1回、ローカル変換で1回入力します。 ローカル変換は、係数2の後に30度回転する水平方向のスケーリングで構成されます。  
   
  [!code-csharp[System.Drawing.CoordinateSystems#24](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#24)]
  [!code-vb[System.Drawing.CoordinateSystems#24](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#24)]  
   
- 次の図は、新しい座標系と 2 つの四角形を示します。  
+ 次の図は、新しい座標系と2つの四角形を示しています。  
   
- ![Transformations](./media/aboutgdip05-art16.gif "AboutGdip05_art16")  
+ ![変換](./media/aboutgdip05-art16.gif "AboutGdip05_art16")  
   
 ## <a name="see-also"></a>関連項目
 

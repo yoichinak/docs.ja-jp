@@ -2,18 +2,18 @@
 title: <serviceHostingEnvironment>
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
-ms.openlocfilehash: 16dacee89576b4ede0f2f80255ba8a0dcbc8c0dc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b81c9f3c4260f415f057cd74b6f113d88f635978
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610185"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936287"
 ---
-# <a name="servicehostingenvironment"></a>\<serviceHostingEnvironment>
+# <a name="servicehostingenvironment"></a>\<serviceHostingEnvironment >
 この要素は、環境をホストするサービスがインスタンス化する特定のトランスポートの型を定義します。 この要素が空の場合は、既定の型が使用されます。 この要素は、アプリケーション レベルまたはコンピューター レベルの構成ファイルでのみ使用できます。  
   
  \<system.ServiceModel >  
-\<serviceHostingEnvironment >  
+\<ServiceHostingEnvironment >  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,17 +42,17 @@ ms.locfileid: "64610185"
   
 |属性|説明|  
 |---------------|-----------------|  
-|aspNetCompatibilityEnabled|ASP.NET の互換モードが現在のアプリケーションに対して有効になっているかどうかを示すブール値。 既定値は `false` です。<br /><br /> この属性を設定すると`true`、Windows Communication Foundation (WCF) サービスへの要求を ASP.NET HTTP パイプラインを通過し、非 HTTP プロトコルを介した通信は禁止されています。 詳細については、次を参照してください。 [WCF サービスと ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)します。|  
-|minFreeMemoryPercentageToActivateService|WCF サービスをアクティブにする前に、システムに利用できるように、空きメモリの最小量を指定する整数。 **注意:** WCF サービスの web.config ファイルで部分信頼と共にこの属性を指定するが、<xref:System.Security.SecurityException>サービスを実行するとします。|  
-|multipleSiteBindingsEnabled|1 つのサイトで複数の IIS バインディングが有効になっているかどうかを指定するブール値。<br /><br /> IIS は、仮想ディレクトリを含む仮想アプリケーションのコンテナーとしての Web サイトで構成されています。 サイト内のアプリケーションに、1 つ以上の IIS バインディングからアクセスできます。 IIS バインディングは、バインディング プロトコルとバインディング情報という 2 つの情報を提供します。 バインディング プロトコルは通信を行うスキームを定義するもので、バインディング情報はサイトにアクセスするために使用する情報です。 バインディング プロトコルの例には HTTP があり、一方、バインディング情報には IP アドレス、ポート、ホスト ヘッダーなどを含めることができます。<br /><br /> IIS ではサイトごとに複数の IIS バインディングを指定でき、これによりスキームごとに複数のベース アドレスをサポートできます。 ただし、サイトでホストされている Windows Communication Foundation (WCF) サービスは、スキームごとの 1 つのみの baseAddress へのバインドを許可します。<br /><br /> Windows Communication Foundation (WCF) サービスの 1 つのサイトの複数の IIS バインディングを有効にするのにはこの属性設定`true`します。 複数のサイト バインディングは HTTP プロトコルに対してのみサポートされています。 構成ファイル内のエンドポイントのアドレスには完全な URI を指定する必要があります。|  
+|aspNetCompatibilityEnabled|ASP.NET の互換モードが現在のアプリケーションに対して有効になっているかどうかを示すブール値。 既定値は `false` です。<br /><br /> この属性がに`true`設定されている場合、Windows Communication Foundation (WCF) サービスへの要求は ASP.NET http パイプラインを通過し、http 以外のプロトコルでの通信は禁止されます。 詳細については、「 [WCF Services と ASP.NET](../../../wcf/feature-details/wcf-services-and-aspnet.md)」を参照してください。|  
+|minFreeMemoryPercentageToActivateService|WCF サービスをアクティブ化する前に、システムで使用可能にする必要がある最小空きメモリ容量を指定する整数です。 **注意:** この属性を、WCF サービスの web.config ファイルで部分信頼と共に指定すると、 <xref:System.Security.SecurityException>サービスが実行されたときにが発生します。|  
+|multipleSiteBindingsEnabled|1 つのサイトで複数の IIS バインディングが有効になっているかどうかを指定するブール値。<br /><br /> IIS は、仮想ディレクトリを含む仮想アプリケーションのコンテナーとしての Web サイトで構成されています。 サイト内のアプリケーションに、1 つ以上の IIS バインディングからアクセスできます。 IIS バインディングは、バインディング プロトコルとバインディング情報という 2 つの情報を提供します。 バインディング プロトコルは通信を行うスキームを定義するもので、バインディング情報はサイトにアクセスするために使用する情報です。 バインディング プロトコルの例には HTTP があり、一方、バインディング情報には IP アドレス、ポート、ホスト ヘッダーなどを含めることができます。<br /><br /> IIS ではサイトごとに複数の IIS バインディングを指定でき、これによりスキームごとに複数のベース アドレスをサポートできます。 ただし、サイトでホストされている Windows Communication Foundation (WCF) サービスでは、スキームごとに1つの baseAddress にしかバインドできません。<br /><br /> Windows Communication Foundation (WCF) サービス用にサイトごとに複数の IIS バインドを有効にするに`true`は、この属性をに設定します。 複数のサイト バインディングは HTTP プロトコルに対してのみサポートされています。 構成ファイル内のエンドポイントのアドレスには完全な URI を指定する必要があります。|  
   
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<baseAddressPrefixFilters>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|サービス ホストによって使用されるベース アドレスのプレフィックス フィルターを指定する構成要素のコレクション。|  
-|[\<serviceActivations>](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceactivations.md)|アクティベーション設定を記述する構成セクション。|  
-|[\<transportConfigurationTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|特定のトランスポートの型を識別する構成要素のコレクション。|  
+|[\<baseAddressPrefixFilters>](baseaddressprefixfilters.md)|サービス ホストによって使用されるベース アドレスのプレフィックス フィルターを指定する構成要素のコレクション。|  
+|[\<serviceActivations のアクティブ化](serviceactivations.md)|アクティベーション設定を記述する構成セクション。|  
+|[\<transportConfigurationTypes>](transportconfigurationtypes.md)|特定のトランスポートの型を識別する構成要素のコレクション。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -96,5 +96,5 @@ ms.locfileid: "64610185"
 
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>
-- [ホスティング](../../../../../docs/framework/wcf/feature-details/hosting.md)
-- [WCF サービスと ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
+- [ホスティング](../../../wcf/feature-details/hosting.md)
+- [WCF サービスと ASP.NET](../../../wcf/feature-details/wcf-services-and-aspnet.md)

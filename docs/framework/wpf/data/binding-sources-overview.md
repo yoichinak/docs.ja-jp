@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: 9bb77146a55bae4aed17bdd3ef48eca7890d4807
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: eee10cbf3bbfc6f66ec9e0c3f35b27fdc485764b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401436"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944680"
 ---
 # <a name="binding-sources-overview"></a>バインディング ソースの概要
 データ バインディングでは、バインディング ソース オブジェクトは、データの取得元のオブジェクトを表します。 このトピックでは、バインディング ソースとして使用できるオブジェクトの型について説明します。  
@@ -88,7 +88,7 @@ ms.locfileid: "68401436"
   
  [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] バインディングのアクセス許可要件は同様です。 部分信頼サンドボックスでは、 <xref:System.Windows.Data.XmlDataProvider>指定されたデータにアクセスするためのアクセス許可がない場合、は失敗します。  
   
- 匿名型のオブジェクトは内部です。 完全信頼で実行されている場合にのみ、匿名型のプロパティにバインドできます。 匿名型の詳細については、「[Anonymous Types (C# Programming Guide)](~/docs/csharp/programming-guide/classes-and-structs/anonymous-types.md)」または「[Anonymous Types (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)」を参照してください。  
+ 匿名型のオブジェクトは内部です。 完全信頼で実行されている場合にのみ、匿名型のプロパティにバインドできます。 匿名型の詳細については、「[Anonymous Types (C# Programming Guide)](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)」または「[Anonymous Types (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)」を参照してください。  
   
  部分信頼セキュリティの詳細については、「[WPF 部分信頼セキュリティ](../wpf-partial-trust-security.md)」を参照してください。  
   

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 02a86ea8d8d6b481044d6ca25d29df7edd2c73ee
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: a5254de07029e53dd6b72bd2c096c38525a661b6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401683"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958717"
 ---
 # <a name="building-a-wpf-application-wpf"></a>WPF アプリケーション (WPF) のビルド
 
@@ -24,7 +24,7 @@ Windows Presentation Foundation (WPF) アプリケーションは、.NET Framewo
 
 WPF アプリケーションは、次の方法でコンパイルできます。
 
-- コマンド ライン。 アプリケーションには、コード (XAML ではない) とアプリケーション定義ファイルだけを含める必要があります。 詳細については、「[csc.exe を使用したコマンド ラインからのビルド](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)」または「[コマンド ラインからのビルド (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)」を参照してください。
+- コマンド ライン。 アプリケーションには、コード (XAML ではない) とアプリケーション定義ファイルだけを含める必要があります。 詳細については、「[csc.exe を使用したコマンド ラインからのビルド](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)」または「[コマンド ラインからのビルド (Visual Basic)](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)」を参照してください。
 
 - Microsoft Build Engine (MSBuild)。 コードと XAML ファイルに加えて、アプリケーションには MSBuild プロジェクト ファイルを含める必要があります。 詳細については、「MSBuild」を参照してください。
 
@@ -42,7 +42,7 @@ WPF アプリケーションは、次の方法でコンパイルできます。
 
 ### <a name="pre-build-initializations"></a>ビルド前の初期化
 
-ビルドの前に、[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] は、次のような重要なツールとライブラリの場所を確認します。
+ビルドする前に、MSBuild は次のような重要なツールとライブラリの場所を決定します。
 
 - .NET Framework。
 
@@ -52,7 +52,7 @@ WPF アプリケーションは、次の方法でコンパイルできます。
 
 - アセンブリ検索パスのプロパティ。
 
-[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] がアセンブリを最初に検索する場所は、参照アセンブリ ディレクトリ (%ProgramFiles%\Reference Assemblies\Microsoft\Framework\v3.0\\) です。 この手順では、ビルド プロセスはさまざまなプロパティと項目グループを初期化し、必要なクリーンアップ作業も実行します。
+MSBuild がアセンブリを検索する最初の場所は、参照アセンブリディレクトリ (%ProgramFiles%\Reference\\Assemblies\Microsoft\Framework\v3.0) です。 この手順では、ビルド プロセスはさまざまなプロパティと項目グループを初期化し、必要なクリーンアップ作業も実行します。
 
 <a name="Resolving_references"></a>
 
@@ -108,7 +108,7 @@ Public Sub InitializeComponent() _
 End Sub
 ```
 
-既定では、マークアップコンパイルは<xref:System.AppDomain> [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]エンジンと同じ方法で実行されます。 これにより、パフォーマンスが大幅に向上します。 この動作は、`AlwaysCompileMarkupFilesInSeparateDomain` プロパティで切り替えることができます。 これには、個別<xref:System.AppDomain>のをアンロードすることによって、すべての参照アセンブリをアンロードするという利点があります。
+既定では、マークアップコンパイルは MSBuild <xref:System.AppDomain>エンジンと同じで実行されます。 これにより、パフォーマンスが大幅に向上します。 この動作は、`AlwaysCompileMarkupFilesInSeparateDomain` プロパティで切り替えることができます。 これには、個別<xref:System.AppDomain>のをアンロードすることによって、すべての参照アセンブリをアンロードするという利点があります。
 
 <a name="Pass_2_of_Markup_Compilation"></a>
 

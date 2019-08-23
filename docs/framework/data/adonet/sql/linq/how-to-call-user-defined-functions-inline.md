@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f80d4327-b6a5-4aa8-a743-e95d09a2a02e
-ms.openlocfilehash: ed8071352902b8f97445cbfa5ff0ebe8fead9bb9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26eafb9a6ea1a0b416d205e94b0e420b0f4059d1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903254"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941071"
 ---
 # <a name="how-to-call-user-defined-functions-inline"></a>方法: ユーザー定義関数をインラインで呼び出す
-ユーザー定義関数はインラインで呼び出すことができますが、遅延実行のクエリに含まれる関数は、そのクエリが実行されるまで実行されません。 詳細については、「[LINQ クエリの概要 (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)」を参照してください。  
+ユーザー定義関数はインラインで呼び出すことができますが、遅延実行のクエリに含まれる関数は、そのクエリが実行されるまで実行されません。 詳細については、「[LINQ クエリの概要 (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)」を参照してください。  
   
  同じ関数をクエリの外部で呼び出すと、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] によって、メソッド呼び出し式から単純なクエリが作成されます。 この SQL 構文を次に示します (`@p0` パラメーターは渡される定数にバインドされます)。  
   
@@ -27,7 +27,7 @@ SELECT dbo.ReverseCustName(@p0)
  [!code-vb[DLinqUDFS#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/Module1.vb#4)]  
   
 ## <a name="example"></a>例  
- 次に[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]クエリ、生成されたユーザー定義関数メソッドの呼び出しをインラインにご覧`ReverseCustName`します。 クエリは遅延実行されるので、この関数は即座には実行されません。 このクエリ用に作成される SQL は、データベース内のユーザー定義関数の呼び出しに変換されます (クエリの後の SQL コードを参照してください)。  
+ 次[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]のクエリでは、生成されたユーザー定義関数メソッド`ReverseCustName`のインライン呼び出しを確認できます。 クエリは遅延実行されるので、この関数は即座には実行されません。 このクエリ用に作成される SQL は、データベース内のユーザー定義関数の呼び出しに変換されます (クエリの後の SQL コードを参照してください)。  
   
  [!code-csharp[DLinqUDFS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqUDFS/cs/Program.cs#5)]
  [!code-vb[DLinqUDFS#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/Module1.vb#5)]  

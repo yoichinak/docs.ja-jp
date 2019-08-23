@@ -2,15 +2,15 @@
 title: WCF WEB HTTP サービスのキャッシュ サポート
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: 6c601b19a0b3b9b3eddbd686c316ce7e2cdf7778
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: a6a03f20fa6a853f813dc9eff3a4202ab18cad90
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857663"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952665"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>WCF WEB HTTP サービスのキャッシュ サポート
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] ASP.NET、WCF Web HTTP サービスで既に提供宣言によるキャッシュ機構を使用できます。 これにより、WCF Web HTTP サービス操作からの応答をキャッシュできます。 キャッシュ用に構成されているサービスに対してユーザーが HTTP GET を送信すると、ASP.NET は、キャッシュされた応答を送り返し、サービス メソッドは呼び出されません。 キャッシュの有効期限が切れると、ユーザーが次回に HTTP GET を送信したときに、サービス メソッドが呼び出され、応答が再度キャッシュされます。 ASP.NET のキャッシュの詳細については、次を参照してください[ASP.NET のキャッシュの概要。](https://go.microsoft.com/fwlink/?LinkId=152534)  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]WCF Web HTTP サービスの ASP.NET で既に提供されている宣言型キャッシュ機構を使用できるようにします。 これにより、WCF Web HTTP サービス操作からの応答をキャッシュできます。 キャッシュ用に構成されているサービスに対してユーザーが HTTP GET を送信すると、ASP.NET は、キャッシュされた応答を送り返し、サービス メソッドは呼び出されません。 キャッシュの有効期限が切れると、ユーザーが次回に HTTP GET を送信したときに、サービス メソッドが呼び出され、応答が再度キャッシュされます。 ASP.NET キャッシュの詳細については、「 [ASP.NET キャッシュの概要](https://go.microsoft.com/fwlink/?LinkId=152534)」を参照してください。  
   
 ## <a name="basic-web-http-service-caching"></a>基本的な Web HTTP サービスのキャッシュ  
  WEB HTTP サービスのキャッシュを有効にするには、まず、<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> の <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A> を <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> または <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required> に設定してサービスに適用し、ASP.NET との互換性を有効にする必要があります。  
@@ -42,7 +42,7 @@ public class Service
 > [!WARNING]
 >  ASP.NET 互換性モードが有効にされていない場合は、<xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> が使用されて、例外がスローされます。  
   
- <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> によって指定されたキャッシュ プロファイル名によって、Web.config 構成ファイルに追加されるキャッシュ プロファイルが特定されます。 キャッシュ プロファイルで定義は、<`outputCacheSetting`> 要素の次の構成例に示すようにします。  
+ <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> によって指定されたキャッシュ プロファイル名によって、Web.config 構成ファイルに追加されるキャッシュ プロファイルが特定されます。 キャッシュプロファイルは、次の構成例に`outputCacheSetting`示すように、< > 要素で定義されています。  
   
 ```xml
 <!-- ...  -->
@@ -58,10 +58,10 @@ public class Service
 </system.web>  
 ```  
   
- これは、ASP.NET アプリケーションで使用できる構成要素と同じです。 ASP.NET キャッシュ プロファイルの詳細については、次を参照してください。<xref:System.Web.Configuration.OutputCacheProfile>します。 Web HTTP サービスの場合、キャッシュ プロファイルで最も重要な属性は `cacheDuration` と `varyByParam` です。 この 2 つの属性はどちらも必要です。 `cacheDuration` は、応答がキャッシュに保持される時間 (秒数) を設定します。 `varyByParam` では、応答のキャッシュに使用されるクエリ文字列パラメーターを指定できます。 異なるクエリ文字列パラメーターの値を使用する要求は、すべて個別にキャッシュされます。 たとえば、最初の要求に確立されると`http://MyServer/MyHttpService/MyOperation?param=10`、同じ URI を使用したすべての後続の要求が返されます、キャッシュされた応答 (限りキャッシュの存続期間が経過していない)。 クエリ文字列パラメーターの値が異なることを除いて同じである同様の要求に対する応答は、個別にキャッシュされます。 このような個別のキャッシングを行わない場合は、`varyByParam` を "none" に設定します。  
+ これは、ASP.NET アプリケーションで使用できる構成要素と同じです。 ASP.NET cache プロファイルの詳細については<xref:System.Web.Configuration.OutputCacheProfile>、「」を参照してください。 Web HTTP サービスの場合、キャッシュ プロファイルで最も重要な属性は `cacheDuration` と `varyByParam` です。 この 2 つの属性はどちらも必要です。 `cacheDuration` は、応答がキャッシュに保持される時間 (秒数) を設定します。 `varyByParam` では、応答のキャッシュに使用されるクエリ文字列パラメーターを指定できます。 異なるクエリ文字列パラメーターの値を使用する要求は、すべて個別にキャッシュされます。 たとえば、最初の要求がに`http://MyServer/MyHttpService/MyOperation?param=10`対して行われると、同じ URI で行われる後続のすべての要求は、キャッシュされた応答を返します (キャッシュ期間が経過していない限り)。 クエリ文字列パラメーターの値が異なることを除いて同じである同様の要求に対する応答は、個別にキャッシュされます。 このような個別のキャッシングを行わない場合は、`varyByParam` を "none" に設定します。  
   
 ## <a name="sql-cache-dependency"></a>SQL キャッシュ依存関係  
- Web HTTP サービスの応答も、SQL キャッシュ依存関係と併せてキャッシュできます。 SQL データベースに格納されているデータに応じて WCF Web HTTP サービスが異なる場合は、サービスの応答をキャッシュして、キャッシュした応答を、SQL データベース テーブル内のデータの変更時に無効にすることもできます。 この動作は、すべて Web.config ファイル内で構成します。 内の接続文字列を定義する必要があります最初に、<`connectionStrings`> 要素。  
+ Web HTTP サービスの応答も、SQL キャッシュ依存関係と併せてキャッシュできます。 SQL データベースに格納されているデータに応じて WCF Web HTTP サービスが異なる場合は、サービスの応答をキャッシュして、キャッシュした応答を、SQL データベース テーブル内のデータの変更時に無効にすることもできます。 この動作は、すべて Web.config ファイル内で構成します。 最初に、<`connectionStrings`> 要素で接続文字列を定義する必要があります。  
   
 ```xml
 <connectionStrings>
@@ -71,7 +71,7 @@ public class Service
 </connectionStrings>
 ```  
   
- 内の SQL キャッシュ依存関係を有効にする必要があり、<`caching`> 内の要素、<`system.web`> 要素の次の構成例で示す。  
+ 次に、次の構成例に示すよう`caching`に、<`system.web`> 要素内の < > 要素内で SQL キャッシュの依存関係を有効にする必要があります。  
   
 ```xml  
 <system.web>
@@ -87,7 +87,7 @@ public class Service
 </system.web>
 ```  
   
- ここでは、SQL キャッシュ依存関係を有効にし、ポーリング タイムを 1000 ミリ秒に設定しています。 ポーリング タイムが経過するたびに、データベース テーブルで更新の有無が確認されます。 変更が検出されると、キャッシュの内容が削除され、次にサービス操作が呼び出されたときに、新しい応答がキャッシュされます。 内で、<`sqlCacheDependency`> 要素は、データベースを追加し、接続文字列内の参照、<`databases`> 要素の次の例に示すようにします。  
+ ここでは、SQL キャッシュ依存関係を有効にし、ポーリング タイムを 1000 ミリ秒に設定しています。 ポーリング タイムが経過するたびに、データベース テーブルで更新の有無が確認されます。 変更が検出されると、キャッシュの内容が削除され、次にサービス操作が呼び出されたときに、新しい応答がキャッシュされます。 次の例`sqlCacheDependency`に示すように、< の > 要素内にデータベースを`databases`追加し、< > 要素内の接続文字列を参照します。  
   
 ```xml  
 <system.web>
@@ -103,7 +103,7 @@ public class Service
 </system.web>  
 ```  
   
- 次に、内で出力キャッシュ設定を構成する必要があります、<`caching`> 要素の次の例に示すようにします。  
+ 次に、次の例に示すように、`caching`< > 要素内に出力キャッシュ設定を構成する必要があります。  
   
 ```xml
 <system.web>
@@ -122,16 +122,16 @@ public class Service
  ここでは、キャッシュ期間が 60 秒に、`varyByParam` が none に設定されており、`sqlDependency` が、コロン区切りのデータベース名とテーブルのペアをセミコロンで区切ったリストに設定されています。 `MyTable` のデータが変更されると、キャッシュされているサービス操作への応答が削除されます。この操作が呼び出されると、新しい応答が (サービス操作の呼び出しによって) 生成され、キャッシュされて、クライアントに返されます。  
   
 > [!IMPORTANT]
->  SQL データベースにアクセスする asp.net は、使用する必要があります、 [ASP.NET SQL Server の登録ツール](https://go.microsoft.com/fwlink/?LinkId=152536)します。 また、適切なユーザー アカウントに、データベースおよびテーブルへのアクセスを許可する必要があります。 詳細については、次を参照してください。 [Web アプリケーションからの SQL Server へのアクセス](https://go.microsoft.com/fwlink/?LinkId=178988)します。  
+> ASP.NET が SQL database にアクセスするには、 [ASP.NET SQL Server 登録ツール](https://go.microsoft.com/fwlink/?LinkId=152536)を使用する必要があります。 また、適切なユーザー アカウントに、データベースおよびテーブルへのアクセスを許可する必要があります。 詳細については、「 [Web アプリケーションからの SQL Server へのアクセス](https://go.microsoft.com/fwlink/?LinkId=178988)」を参照してください。  
   
 ## <a name="conditional-http-get-based-caching"></a>条件付きの HTTP GET ベースのキャッシュ  
- Web HTTP シナリオで、条件付き HTTP GET は多くの場合、サービスで使用」の説明に従って、インテリジェントな HTTP キャッシュを実装するために、 [HTTP 仕様](https://go.microsoft.com/fwlink/?LinkId=165800)します。 そのためには、サービスが ETag ヘッダーの値を HTTP 応答に設定する必要があります。 また、HTTP 要求の If-None-Match ヘッダーの値を確認して、指定されている ETag が現在の ETag と一致するかどうかを調べる必要もあります。  
+ Web HTTP シナリオでは、 [Http 仕様](https://go.microsoft.com/fwlink/?LinkId=165800)で説明されているように、インテリジェントな http キャッシュを実装するために、条件付き http GET がサービスによって使用されることがよくあります。 そのためには、サービスが ETag ヘッダーの値を HTTP 応答に設定する必要があります。 また、HTTP 要求の If-None-Match ヘッダーの値を確認して、指定されている ETag が現在の ETag と一致するかどうかを調べる必要もあります。  
   
  GET および HEAD 要求の場合、<xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalRetrieve%2A> は ETag 値を取得し、この値と要求内の If-None-Match ヘッダーとを比較します。 ヘッダーが存在し、一致が見つかった場合は、HTTP ステータス コード 304 (変更なし) が設定された <xref:System.ServiceModel.Web.WebFaultException> がスローされ、一致する ETag が設定されている応答に ETag ヘッダーが追加されます。  
   
  <xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalRetrieve%2A> メソッドのオーバーロードの 1 つは、最終更新日を取得し、これを、要求の If-Modified-Since ヘッダーと比較します。 ヘッダーが存在し、リソースが変更されていない場合は、HTTP ステータス コード 304 (変更なし) が設定された <xref:System.ServiceModel.Web.WebFaultException> がスローされます。  
   
- PUT、POST、および DELETE の各要求の場合、<xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalUpdate%2A> は、リソースの現在の ETag 値を取得します。 現在の ETag 値が null の場合、メソッドが None-If-match ヘッダーの値を持つことを確認します"*"。  現在の ETag 値が既定値ではない場合、メソッドは、現在の ETag 値と要求の If-None- Match ヘッダーを比較します。 どちらの場合も、求められるヘッダーが要求内に存在しない、またはヘッダーの値がチェック条件を満たしていないと、メソッドは、HTTP ステータス コード 412 (必須条件に失敗しました) が設定された <xref:System.ServiceModel.Web.WebFaultException> をスローし、応答の ETag ヘッダーを現在の ETag 値に設定します。  
+ PUT、POST、および DELETE の各要求の場合、<xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalUpdate%2A> は、リソースの現在の ETag 値を取得します。 現在の ETag 値が null の場合、メソッドは、If-match ヘッダーの値が "*" であることを確認します。  現在の ETag 値が既定値ではない場合、メソッドは、現在の ETag 値と要求の If-None- Match ヘッダーを比較します。 どちらの場合も、求められるヘッダーが要求内に存在しない、またはヘッダーの値がチェック条件を満たしていないと、メソッドは、HTTP ステータス コード 412 (必須条件に失敗しました) が設定された <xref:System.ServiceModel.Web.WebFaultException> をスローし、応答の ETag ヘッダーを現在の ETag 値に設定します。  
   
  `CheckConditional` メソッドも <xref:System.ServiceModel.Web.OutgoingWebResponseContext.SetETag%2A> メソッドも、応答ヘッダーに設定される ETag 値が、確実に HTTP 仕様に沿った有効な ETag になるようにします。 これには、ETag 値を囲む二重引用符がない場合に二重引用符を付ける処理や、二重引用符内の文字を適切にエスケープする処理が含まれます。 ETag の弱い比較はサポートされていません。  
   

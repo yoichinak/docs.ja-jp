@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: a7a39677bbd975ac384357481ef419f57b96d977
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 59c6732dacf225097e22957ebe6536308a2798d4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489805"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938450"
 ---
 # <a name="table-valued-parameters"></a>テーブル値パラメーター
 テーブル値パラメーターを使用すると、ラウンド トリップを何度も繰り返したり、サーバー側にデータを処理するための特殊なロジックを組み込んだりすることなく、複数行のデータをクライアント アプリケーションから SQL Server へと簡単にマーシャリングできます。 テーブル値パラメーターを使用すると、クライアント アプリケーションのデータ行をカプセル化して単一のパラメーター化コマンドでサーバーに送ることができます。 受信データ行はテーブル変数に格納され、Transact-SQL によって操作できるようになります。  
@@ -18,17 +18,17 @@ ms.locfileid: "66489805"
  テーブル値パラメーターの列値には、Transact-SQL の標準的な SELECT ステートメントを使ってアクセスできます。 テーブル値パラメーターは厳密に型指定されており、その構造は自動的に検証されます。 テーブル値パラメーターのサイズは、サーバーのメモリによってのみ制限されます。  
   
 > [!NOTE]
->  テーブル値パラメーターにデータを取得することはできません。 テーブル値パラメーターは入力専用です。OUTPUT キーワードはサポートされません。  
+> テーブル値パラメーターにデータを取得することはできません。 テーブル値パラメーターは入力専用です。OUTPUT キーワードはサポートされません。  
   
  テーブル値パラメーターの詳細については、次のリソースを参照してください。  
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[テーブル値パラメーター (データベース エンジン)](https://go.microsoft.com/fwlink/?LinkId=98363)で SQL Server オンライン ブック|テーブル値パラメーターの作成方法および使用方法について説明します。|  
-|[ユーザー定義テーブル型](https://go.microsoft.com/fwlink/?LinkId=98364)で SQL Server オンライン ブック|テーブル値パラメーターを宣言する際に使用するユーザー定義テーブル型について説明します。|  
+|SQL Server オンラインブックの[テーブル値パラメーター (データベースエンジン)](https://go.microsoft.com/fwlink/?LinkId=98363)|テーブル値パラメーターの作成方法および使用方法について説明します。|  
+|SQL Server オンラインブックでの[ユーザー定義テーブル型](https://go.microsoft.com/fwlink/?LinkId=98364)|テーブル値パラメーターを宣言する際に使用するユーザー定義テーブル型について説明します。|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>旧バージョンの SQL Server での複数行の受け渡し  
- テーブル値パラメーターは、SQL Server 2008 に導入された、前に、ストアド プロシージャまたはパラメーター化 SQL コマンドに複数行のデータを渡すためのオプションは限られていました。 複数行をサーバーに渡す方法には、次のオプションがありました。  
+ SQL Server 2008 にテーブル値パラメーターが導入される前に、複数行のデータをストアドプロシージャまたはパラメーター化 SQL コマンドに渡すオプションは限られていました。 複数行をサーバーに渡す方法には、次のオプションがありました。  
   
 - 複数のデータ列およびデータ行の値を表す一連の個別パラメーターを使用する。 この方法で渡すことのできるデータの量は、使用可能なパラメーターの数によって制限されます。 SQL Server プロシージャが持つことのできるパラメーター数は最大 2,100 です。 これらの個々の値をテーブル変数または一時テーブルにまとめて処理するには、サーバー側のロジックが必要です。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66489805"
 - `bcp` ユーティリティ プログラムまたは <xref:System.Data.SqlClient.SqlBulkCopy> オブジェクトを使用して、多数行のデータをテーブルに読み込む。 この方法は効率的ですが、データが一時テーブルまたはテーブル変数に読み込まれなければ、サーバー側での処理がサポートされません。  
   
 ## <a name="creating-table-valued-parameter-types"></a>テーブル値パラメーター型の作成  
- テーブル値パラメーターは、Transact-SQL の CREATE TYPE ステートメントを使用して定義された厳密に型指定されたテーブルの構造に基づいています。 クライアント アプリケーションでテーブル値パラメーターを使用するには、まず SQL Server でテーブル型を作成し、その構造を定義する必要があります。 テーブル型の作成の詳細については、次を参照してください。[ユーザー定義テーブル型](https://go.microsoft.com/fwlink/?LinkID=98364)SQL Server オンライン ブックの「します。  
+ テーブル値パラメーターは、Transact-SQL の CREATE TYPE ステートメントを使用して定義された厳密に型指定されたテーブルの構造に基づいています。 クライアント アプリケーションでテーブル値パラメーターを使用するには、まず SQL Server でテーブル型を作成し、その構造を定義する必要があります。 テーブル型の作成の詳細については、「SQL Server オンラインブックの[ユーザー定義テーブル型](https://go.microsoft.com/fwlink/?LinkID=98364)」を参照してください。  
   
  次のステートメントは、CategoryID と CategoryName 列から成る CategoryTableType というテーブル型を作成します。  
   
@@ -77,7 +77,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 ## <a name="limitations-of-table-valued-parameters"></a>テーブル値パラメーターの制限  
  テーブル値パラメーターにはいくつかの制限があります。  
   
-- テーブル値パラメーターを渡すことはできません[CLR ユーザー定義関数](/sql/relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions)します。  
+- テーブル値パラメーターを[CLR ユーザー定義関数](/sql/relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions)に渡すことはできません。  
   
 - テーブル値パラメーターでは、UNIQUE 制約または PRIMARY KEY 制約をサポートするためにのみ、インデックスを付けることができます。 SQL Server はテーブル値パラメーターの統計を保持しません。  
   
@@ -86,9 +86,9 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 - ALTER TABLE ステートメントをテーブル値パラメーターの設計変更に使用することはできません。  
   
 ## <a name="configuring-a-sqlparameter-example"></a>SqlParameter の構成例  
- <xref:System.Data.SqlClient> では、テーブル値パラメーターからのデータ<xref:System.Data.DataTable>、<xref:System.Data.Common.DbDataReader>または<xref:System.Collections.Generic.IEnumerable%601>  \  <xref:Microsoft.SqlServer.Server.SqlDataRecord>オブジェクト。 <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> の <xref:System.Data.SqlClient.SqlParameter> プロパティを使用して、テーブル値パラメーターの型名を指定する必要があります。 `TypeName` は、既にサーバー上に作成されている、互換性のある型の名前と一致していることが必要です。 次のコード フラグメントは、データを挿入するための <xref:System.Data.SqlClient.SqlParameter> の構成方法を示しています。  
+ <xref:System.Data.SqlClient>、、 <xref:System.Data.DataTable>または<xref:System.Collections.Generic.IEnumerable%601> <xref:System.Data.Common.DbDataReader> オブジェクトから<xref:Microsoft.SqlServer.Server.SqlDataRecord>のテーブル値パラメーターの設定をサポートします。  \  <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> の <xref:System.Data.SqlClient.SqlParameter> プロパティを使用して、テーブル値パラメーターの型名を指定する必要があります。 `TypeName` は、既にサーバー上に作成されている、互換性のある型の名前と一致していることが必要です。 次のコード フラグメントは、データを挿入するための <xref:System.Data.SqlClient.SqlParameter> の構成方法を示しています。  
  
-次の例では、`addedCategories`変数が含まれる、<xref:System.Data.DataTable>します。 変数を設定する方法を表示するには、次のセクションで例を参照してください。[ストアド プロシージャにテーブル値パラメーターを渡す](#passing)します。
+次の例`addedCategories`では、変数にが<xref:System.Data.DataTable>含まれています。 変数がどのように設定されているかを確認するには、次のセクションの例を参照してください。[テーブル値パラメーターをストアドプロシージャに渡し](#passing)ます。
 
 ```csharp  
 // Configure the command and parameter.  
@@ -128,7 +128,7 @@ Dim tvpParam As SqlParameter = _
 tvpParam.SqlDbType = SqlDbType.Structured  
 ```  
   
-## <a name="passing"></a> ストアド プロシージャに、テーブル値パラメーターを渡す  
+## <a name="passing"></a>ストアドプロシージャへのテーブル値パラメーターの引き渡し  
  この例は、テーブル値パラメーターのデータをストアド プロシージャに渡す方法を示しています。 このコードは、<xref:System.Data.DataTable> メソッドを使用して、追加された行を新しい <xref:System.Data.DataTable.GetChanges%2A> に抽出します。 次に <xref:System.Data.SqlClient.SqlCommand> を定義し、<xref:System.Data.SqlClient.SqlCommand.CommandType%2A> プロパティを <xref:System.Data.CommandType.StoredProcedure> に設定します。 <xref:System.Data.SqlClient.SqlParameter> へのデータ入力には <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> メソッドが使用され、<xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> は `Structured` に設定されます。 次に <xref:System.Data.SqlClient.SqlCommand> メソッドを使用して <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> が実行されます。  
   
 ```csharp  
@@ -174,7 +174,7 @@ End Using
  次の例は、データ ソースとしてテーブル値パラメーターを持つ SELECT サブクエリ付きの INSERT ステートメントを使用して、dbo.Categories テーブルにデータを挿入する方法を示しています。 テーブル値パラメーターをパラメーター化 SQL ステートメントに渡すときは、<xref:System.Data.SqlClient.SqlParameter.TypeName%2A> の新しい <xref:System.Data.SqlClient.SqlParameter> プロパティを使用して、テーブル値パラメーターの型名を指定する必要があります。 この `TypeName` は、既にサーバー上に作成されている、互換性のある型の名前と一致している必要があります。 このコード例では、dbo.CategoryTableType で定義されている型の構造を参照するために `TypeName` プロパティが使用されています。  
   
 > [!NOTE]
->  テーブル値パラメーターで ID 列の値を指定する場合は、そのセッションの SET IDENTITY_INSERT ステートメントを実行する必要があります。  
+> テーブル値パラメーターで ID 列の値を指定する場合は、そのセッションの SET IDENTITY_INSERT ステートメントを実行する必要があります。  
   
 ```csharp  
 // Assumes connection is an open SqlConnection.  

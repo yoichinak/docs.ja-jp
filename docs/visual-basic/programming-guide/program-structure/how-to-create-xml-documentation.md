@@ -1,40 +1,40 @@
 ---
-title: '方法: Visual Basic での XML ドキュメントを作成します。'
+title: '方法: Visual Basic で XML ドキュメントを作成する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments
 - XML documentation [Visual Basic], creating
 ms.assetid: 27b5b06c-09b9-496a-8245-f9542d846230
-ms.openlocfilehash: 95f6c5b23deadc16eb1e81f274e2cc5149598fb7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9380c23ab6cfdbecd519926229b45ed863f07f9e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050436"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947716"
 ---
-# <a name="how-to-create-xml-documentation-in-visual-basic"></a>方法: Visual Basic での XML ドキュメントを作成します。
-この例では、コードに XML ドキュメントのコメントを追加する方法を示します。  
+# <a name="how-to-create-xml-documentation-in-visual-basic"></a>方法: Visual Basic で XML ドキュメントを作成する
+この例では、XML ドキュメントコメントをコードに追加する方法を示します。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-create-xml-documentation-for-a-type-or-member"></a>型またはメンバーの XML ドキュメントを作成するには  
   
-1. **コード エディター**ドキュメントを作成する型またはメンバー上の行にカーソルを置きます。  
+1. **コードエディター**で、ドキュメントを作成する型またはメンバーの上の行にカーソルを置きます。  
   
-2. 型`'''`(3 つ単一引用符は含みません)。  
+2. 「 `'''` 」と入力します (3 つの単一引用符)。  
   
-     型またはメンバーの XML スケルトンが追加された、**コード エディター**します。  
+     型またはメンバーの XML スケルトンが**コードエディター**に追加されます。  
   
-3. 適切なタグの間のわかりやすい情報を追加します。  
+3. 適切なタグの間に説明情報を追加します。  
   
     > [!NOTE]
-    >  それぞれの行が始まる必要があります、XML ドキュメントのブロック内で行を追加する場合`'''`します。  
+    > XML ドキュメントブロック内に行を追加する場合、各行はで`'''`始まる必要があります。  
   
-4. 新しい XML ドキュメント コメントを含む型またはメンバーを使用する追加のコードを追加します。  
+4. 新しい XML ドキュメントコメントと共に型またはメンバーを使用するコードを追加します。  
   
-     テキストを表示する IntelliSense、\<概要 > 型またはメンバーのタグ。  
+     IntelliSense では、型また\<はメンバーの概要 > タグのテキストが表示されます。  
   
-5. ドキュメントのコメントを含む XML ファイルを生成するコードをコンパイルします。 詳細については、「[/doc](../../../visual-basic/reference/command-line-compiler/doc.md)」を参照してください。  
+5. コードをコンパイルして、ドキュメントコメントを含む XML ファイルを生成します。 詳細については、「[/doc](../../../visual-basic/reference/command-line-compiler/doc.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

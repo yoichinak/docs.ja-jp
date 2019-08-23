@@ -2,18 +2,18 @@
 title: サンプル XML ドキュメント (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: a734cc4e-d95d-4631-91a2-81618c8ad894
-ms.openlocfilehash: d8567d8129dd7ba32e847b8c1e28ffc992d10b1f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c50abcc6ef4c23bcd78c5ab0e5e5deb4a369b164
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787141"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916538"
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a>サンプル XML ドキュメント (LINQ to XML)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメント全体にわたって、コード例とコード スニペットで使用されているサンプル ファイルは次のとおりです。  
   
 > [!NOTE]
->  例として登場する企業、組織、製品、ドメイン名、電子メール アドレス、ロゴ、人物、場所、およびイベントはすべて架空のものです。 実在する会社、組織、製品、ドメイン名、電子メールアドレス、ロゴ、人物、場所、イベントなどとは一切関係ありません。  
+> 例として登場する企業、組織、製品、ドメイン名、電子メール アドレス、ロゴ、人物、場所、およびイベントはすべて架空のものです。 実在する会社、組織、製品、ドメイン名、電子メールアドレス、ロゴ、人物、場所、イベントなどとは一切関係ありません。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -35,4 +35,4 @@ ms.locfileid: "61787141"
   
 ## <a name="see-also"></a>関連項目
 
-- [プログラミング ガイド (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+- [プログラミングガイド (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

@@ -2,19 +2,19 @@
 title: <add> の <transportConfigurationType>
 ms.date: 03/30/2017
 ms.assetid: 03d79db9-571d-4534-acef-d05e5467b257
-ms.openlocfilehash: c71a58b13e89bedb5eed24d784c82fb1525f7625
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 483ede53df13c896b88171910031dbe9793d66dc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701438"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920033"
 ---
-# <a name="add-of-transportconfigurationtype"></a>\<add> of \<transportConfigurationType>
+# <a name="add-of-transportconfigurationtype"></a>\<transportConfigurationType > の\<> の追加
 この要素は、特定のトランスポートの種類を識別するキーと値のペアです。  
   
  \<system.ServiceModel >  
-\<serviceHostingEnvironment >  
-\<transportConfigurationTypes>  
+\<ServiceHostingEnvironment >  
+\<transportConfigurationTypes >  
 \<add>  
   
 ## <a name="syntax"></a>構文  
@@ -45,7 +45,7 @@ ms.locfileid: "61701438"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<transportConfigurationTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|特定のトランスポートを実装する型のコレクション。|  
+|[\<transportConfigurationTypes>](transportconfigurationtypes.md)|特定のトランスポートを実装する型のコレクション。|  
   
 ## <a name="example"></a>例  
   
@@ -63,4 +63,4 @@ ms.locfileid: "61701438"
 - <xref:System.ServiceModel.Configuration.TransportConfigurationTypeElement>
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>
-- [ホスティング](../../../../../docs/framework/wcf/feature-details/hosting.md)
+- [ホスティング](../../../wcf/feature-details/hosting.md)

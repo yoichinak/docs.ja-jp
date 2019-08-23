@@ -2,14 +2,14 @@
 title: <byteStreamMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: bbadd8dd-60a2-4007-b959-89373a8a7d60
-ms.openlocfilehash: ce9f282ea1101befe3bf99762efa61e9b47b74cf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b11f472c0e33003e50be4b45bb49196c64ecb70d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673375"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919729"
 ---
-# <a name="bytestreammessageencoding"></a>\<byteStreamMessageEncoding>
+# <a name="bytestreammessageencoding"></a>\<byteStreamMessageEncoding >
 文字エンコーディングを指定するオプションを使用し、メッセージ エンコーディングをバイト ストリームとして指定します。  
   
  \<system.serviceModel>  
@@ -43,7 +43,7 @@ ms.locfileid: "61673375"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|カスタム バインドのすべてのバインド機能を定義します。|  
+|[\<binding>](../../../misc/binding.md)|カスタム バインドのすべてのバインド機能を定義します。|  
   
 ## <a name="see-also"></a>関連項目
 
@@ -51,9 +51,9 @@ ms.locfileid: "61673375"
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>
-- [メッセージ エンコーディング](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
-- [メッセージ エンコーダーを選択する](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
-- [バインディング](../../../../../docs/framework/wcf/bindings.md)
-- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [メッセージ エンコーディング](message-encoding.md)
+- [メッセージ エンコーダーを選択する](../../../wcf/feature-details/choosing-a-message-encoder.md)
+- [バインディング](../../../wcf/bindings.md)
+- [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
+- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

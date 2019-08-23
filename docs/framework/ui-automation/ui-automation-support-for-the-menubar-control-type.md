@@ -6,16 +6,16 @@ helpviewer_keywords:
 - control types, Menu Bar
 - Menu Bar control type
 ms.assetid: c1202b21-c1f0-4560-853c-7b99bd73ad97
-ms.openlocfilehash: d577f053e2865462a32349baba97edeff89cb585
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 72223fd10d6dd856973a5f33c4b4257bb24936ec
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651929"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69954933"
 ---
 # <a name="ui-automation-support-for-the-menubar-control-type"></a>UI オートメーションによる MenuBar コントロール型のサポート
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 の最新情報[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については[、「Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  このトピックでは、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] コントロール型に対する <xref:System.Windows.Automation.ControlType.MenuBar> のサポートについて説明します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]でのコントロール型とは、コントロールが <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> プロパティを使用するために満たす必要がある一連の条件のことです。 これらの条件には、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のプロパティ値、およびコントロール パターンに関する特定のガイドラインが含まれます。  
   
@@ -29,13 +29,13 @@ ms.locfileid: "61651929"
   
 |コントロール ビュー|コンテンツ ビュー|  
 |------------------|------------------|  
-|メニュー バー<br /><br /> -MenuItem (1 つ以上)<br />-その他のコントロール (0 以上)|メニュー バー<br /><br /> -MenuItem (1 つ以上)<br />-その他のコントロール (0 以上)|  
+|メニュー バー<br /><br /> -MenuItem (1 以上)<br />-その他のコントロール (0 以上)|メニュー バー<br /><br /> -MenuItem (1 以上)<br />-その他のコントロール (0 以上)|  
   
  メニュー バー コントロールの構造には、エディット コントロールやコンボ ボックスなどの他のコントロールを含めることができます。 これらの追加コントロールは、コントロール ビューおよびコンテンツ ビューに含まれる、上記に一覧した「その他のコントロール」に対応します。  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>必須の UI オートメーション プロパティ  
- 次の表に、メニュー バー コントロールに特に関連する値または定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。 詳細については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]プロパティを参照してください[クライアントの UI オートメーション プロパティ](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)します。  
+ 次の表に、メニュー バー コントロールに特に関連する値または定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]プロパティの詳細については、「[クライアントの UI オートメーションのプロパティ](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)」を参照してください。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティ|[値]|メモ|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
@@ -47,7 +47,7 @@ ms.locfileid: "61651929"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|メニュー バー コントロールは、常に [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコンテンツ ビューに組み込まれます。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|メニュー バー コントロールは、常に [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューに組み込まれます。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>|「ノート」をご覧ください。|このプロパティの値は、コントロールを画面に表示できるかどうかによって異なります。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|状況に依存|このプロパティは、メニュー バー コントロールが水平または垂直のいずれかであるかを公開します。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|依存|このプロパティは、メニュー バー コントロールが水平または垂直のいずれかであるかを公開します。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|True|メニュー バー コントロールに含まれるコントロールはキーボード フォーカスを受け取ることができるため、メニュー バー コントロールはキーボード フォーカスを受け取ることができます。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|「ノート」をご覧ください。|メニュー バー コントロールにヘルプ テキストが必要になるシナリオはありません。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>|`Null`|メニュー バーでアクセラレータ キーを使用することは決してありません。|  
@@ -59,9 +59,9 @@ ms.locfileid: "61651929"
   
 |コントロール パターン|サポート|メモ|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|状況に依存|コントロールを展開または折りたたむことができる場合は、 <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>を実装します。|  
-|<xref:System.Windows.Automation.Provider.IDockProvider>|状況に依存|コントロールを画面のさまざまな部分にドッキングできる場合は、 <xref:System.Windows.Automation.Provider.IDockProvider>を実装します。|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider>|状況に依存|コントロールのサイズ変更、回転、移動が可能な場合は、 <xref:System.Windows.Automation.Provider.ITransformProvider>を実装する必要があります。|  
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|依存|コントロールを展開または折りたたむことができる場合は、 <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>を実装します。|  
+|<xref:System.Windows.Automation.Provider.IDockProvider>|依存|コントロールを画面のさまざまな部分にドッキングできる場合は、 <xref:System.Windows.Automation.Provider.IDockProvider>を実装します。|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider>|依存|コントロールのサイズ変更、回転、移動が可能な場合は、 <xref:System.Windows.Automation.Provider.ITransformProvider>を実装する必要があります。|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>必須の UI オートメーション イベント  
@@ -72,7 +72,7 @@ ms.locfileid: "61651929"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> プロパティ変更イベント。|必須|なし|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> プロパティ変更イベント。|必須|なし|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> プロパティ変更イベント。|必須|なし|  
-|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> プロパティ変更イベント。|状況に依存|なし|  
+|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> プロパティ変更イベント。|依存|なし|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必須|なし|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必須|なし|  
   

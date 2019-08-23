@@ -4,28 +4,28 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], exporting and importing
 ms.assetid: 614a75bb-e0b0-4c95-b6d8-02cb5e5ddb38
-ms.openlocfilehash: 39b964584cde42e6569da35f8653042f6d7432cb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 692382de81459ad52d306ca7fd05546b4e36294d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856467"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963666"
 ---
 # <a name="exporting-and-importing-metadata"></a>メタデータのエクスポートとインポート
-Windows Communication Foundation (WCF) では、サービス エンドポイントを記述して、クライアントを使用してサービスを使用する方法を理解する標準化表現に移し替えたりするプロセスではメタデータをエクスポートします。 サービス メタデータのインポートは <xref:System.ServiceModel.Description.ServiceEndpoint> インスタンス、またはサービス メタデータの一部を生成するプロセスです。  
+Windows Communication Foundation (WCF) では、メタデータのエクスポートは、サービスエンドポイントを記述し、それらを並列的に投影するプロセスであり、クライアントがサービスの使用方法を理解するために使用できます。 サービス メタデータのインポートは <xref:System.ServiceModel.Description.ServiceEndpoint> インスタンス、またはサービス メタデータの一部を生成するプロセスです。  
   
 ## <a name="exporting-metadata"></a>メタデータのエクスポート  
- メタデータを <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> インスタンスからエクスポートするには、<xref:System.ServiceModel.Description.MetadataExporter> 抽象クラスの実装を使用します。 <xref:System.ServiceModel.Description.WsdlExporter>型の実装は、 <xref:System.ServiceModel.Description.MetadataExporter> WCF に含まれているクラスを抽象化します。  
+ メタデータを <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> インスタンスからエクスポートするには、<xref:System.ServiceModel.Description.MetadataExporter> 抽象クラスの実装を使用します。 型は、WCF に含まれる<xref:System.ServiceModel.Description.MetadataExporter>抽象クラスの実装です。 <xref:System.ServiceModel.Description.WsdlExporter>  
   
  <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> 型は Web サービス記述言語 (WSDL: Web Services Description Language) メタデータを生成します。このメタデータには、<xref:System.ServiceModel.Description.MetadataSet> インスタンス内にカプセル化されたポリシー表現が関連付けられています。 <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> インスタンスを使用すると、<xref:System.ServiceModel.Description.ContractDescription> オブジェクトと <xref:System.ServiceModel.Description.ServiceEndpoint> オブジェクトのメタデータを反復してエクスポートできます。 <xref:System.ServiceModel.Description.ServiceEndpoint> オブジェクトのコレクションをエクスポートして、特定のサービス名に関連付けることもできます。  
   
 > [!NOTE]
->  `WsdlExporter` は、`ContractDescription` メソッドを使用するか、`ContractDescription` インスタンスの `ContractDescription.GetContract` の一部として作成された `ServiceDescription` インスタンスなど、共通言語ランタイム (CLR) の型情報を含む `ServiceHost` インスタンスからメタデータをエクスポートする場合にのみ使用できます。 `WsdlExporter` インスタンスをサービス メタデータからインポートした場合や、型情報を使用せずに作成した場合は、`ContractDescription` を使用してメタデータをエクスポートできません。  
+> `WsdlExporter` は、`ContractDescription` メソッドを使用するか、`ContractDescription` インスタンスの `ContractDescription.GetContract` の一部として作成された `ServiceDescription` インスタンスなど、共通言語ランタイム (CLR) の型情報を含む `ServiceHost` インスタンスからメタデータをエクスポートする場合にのみ使用できます。 `WsdlExporter` インスタンスをサービス メタデータからインポートした場合や、型情報を使用せずに作成した場合は、`ContractDescription` を使用してメタデータをエクスポートできません。  
   
 ## <a name="importing-metadata"></a>メタデータのインポート  
   
 ### <a name="importing-wsdl-documents"></a>WSDL ドキュメントのインポート  
- Wcf サービス メタデータをインポートするには、実装を使用、<xref:System.ServiceModel.Description.MetadataImporter>抽象クラス。 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>型の実装は、 <xref:System.ServiceModel.Description.MetadataImporter> WCF に含まれているクラスを抽象化します。 <xref:System.ServiceModel.Description.WsdlImporter> 型は、<xref:System.ServiceModel.Description.MetadataSet> オブジェクトにまとめられた、結び付けられているポリシーを使用して WSDL メタデータをインポートします。  
+ WCF でサービスメタデータをインポートするには、 <xref:System.ServiceModel.Description.MetadataImporter>抽象クラスの実装を使用します。 型は、WCF に含まれる<xref:System.ServiceModel.Description.MetadataImporter>抽象クラスの実装です。 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> <xref:System.ServiceModel.Description.WsdlImporter> 型は、<xref:System.ServiceModel.Description.MetadataSet> オブジェクトにまとめられた、結び付けられているポリシーを使用して WSDL メタデータをインポートします。  
   
  <xref:System.ServiceModel.Description.WsdlImporter> 型を使用すると、メタデータをインポートする方法を制御できます。 すべてのエンドポイント、すべてのバインディング、またはすべてのコントラクトをインポートできます。 特定の WSDL サービス、バインディング、またはポートの種類に関連付けられたすべてのエンドポイントをインポートすることもできます。 また、特定の WSDL ポートのエンドポイント、特定の WSDL バインディングのバインディング、または特定の WSDL ポートの種類のコントラクトをインポートすることもできます。  
   
@@ -48,16 +48,16 @@ Windows Communication Foundation (WCF) では、サービス エンドポイン�
  <xref:System.ServiceModel.Description.WsdlExporter> 型は、エクスポート プロセスでキャッチされたすべての例外を再スローします。 `Errors` プロパティでは、この例外はエラーとしてキャプチャされません。 <xref:System.ServiceModel.Description.WsdlExporter> は、例外をスローするとエラー状態になるため、再使用できません。 ワイルドカード アクションを使用しているために操作をエクスポートできない場合や、重複したバインディング名を検出した場合、<xref:System.ServiceModel.Description.WsdlExporter> はその `Errors` プロパティに警告を追加します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [方法: サービス エンドポイントにメタデータをインポートします。](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
+ [方法: サービスエンドポイントへのメタデータのインポート](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
  ダウンロードされたメタデータを説明オブジェクトにインポートする方法について説明します。  
   
- [方法: サービス エンドポイントからメタデータをエクスポートします。](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
+ [方法: サービスエンドポイントからメタデータをエクスポートする](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
  説明オブジェクトをメタデータにエクスポートする方法について説明します。  
   
  [ServiceDescription と WSDL 参照](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
  説明オブジェクトと WSDL の間のマッピングについて説明します。  
   
- [方法: Svcutil.exe を使用して、コンパイル済みサービス コードからメタデータをエクスポートするには](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
+ [方法: Svcutil.exe を使用してコンパイル済みのサービスコードからメタデータをエクスポートする](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
  Svcutil.exe を使用して、コンパイル済みアセンブリのサービス型、コントラクト型、およびデータ型のメタデータをエクスポートする方法について説明します。  
   
  [データ コントラクト スキーマの参照](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  

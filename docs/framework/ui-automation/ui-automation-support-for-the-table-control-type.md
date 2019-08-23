@@ -6,16 +6,16 @@ helpviewer_keywords:
 - control types, Table
 - UI Automation, Table control type
 ms.assetid: 9050dde5-6469-4c83-abb7-f861c24ff985
-ms.openlocfilehash: 0c9286ff65c84a8d20532fd119ecd335ad90ee7b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 618727e33d539cafea8d62618ac2f81ef52d5220
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996568"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69954418"
 ---
 # <a name="ui-automation-support-for-the-table-control-type"></a>UI オートメーションによる Table コントロール型のサポート
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 の最新情報[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については[、「Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  このトピックでは、Table コントロール型の [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] サポートに関する情報を提供します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]でのコントロール型とは、コントロールが <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> プロパティを使用するために満たす必要がある一連の条件のことです。 これらの条件には、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のプロパティ値、およびコントロール パターンに関する特定のガイドラインが含まれます。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "61996568"
   
 |コントロール ビュー|コンテンツ ビュー|  
 |------------------|------------------|  
-|テーブル<br /><br /> -(0 または 1) ヘッダー<br />-(0 または 1) テキスト<br />-さまざまなコントロール (0 以上)|テーブル<br /><br /> -(0 以上) テキスト<br />-さまざまなコントロール (0 以上)|  
+|テーブル<br /><br /> -Header (0 または 1)<br />-Text (0 または 1)<br />-さまざまなコントロール (0 以上)|テーブル<br /><br /> -Text (0 以上)<br />-さまざまなコントロール (0 以上)|  
   
  テーブル コントロールに行ヘッダーまたは列ヘッダーが含まれている場合は、それらを UI オートメーション ツリーのコントロール ビューで公開する必要があります。 コンテンツ ビューは、TablePattern を使用してアクセスできるため、この情報を公開する必要がありません。  
   
@@ -57,9 +57,9 @@ ms.locfileid: "61996568"
   
 |コントロール パターン|サポート|メモ|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider>|はい|テーブルに格納される項目にはグリッドに表示されるデータが含まれるため、テーブル コントロールはこのコントロール パターンを常にサポートします。|  
+|<xref:System.Windows.Automation.Provider.IGridProvider>|[はい]|テーブルに格納される項目にはグリッドに表示されるデータが含まれるため、テーブル コントロールはこのコントロール パターンを常にサポートします。|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider>|はい (子オブジェクトでは必須)|テーブルの内部オブジェクトは、GridItem と TableItem の両方のコントロール パターンをサポートする必要があります。 テーブル自体では、それが別のテーブルの一部である場合を除いて、GridItem コントロール パターンも TableItem コントロール パターンもサポートする必要がありません。|  
-|<xref:System.Windows.Automation.Provider.ITableProvider>|はい|テーブル コントロールは、常に、ヘッダーとコンテンツを関連付けることができます。|  
+|<xref:System.Windows.Automation.Provider.ITableProvider>|[はい]|テーブル コントロールは、常に、ヘッダーとコンテンツを関連付けることができます。|  
 |<xref:System.Windows.Automation.Provider.ITableItemProvider>|はい (子オブジェクトでは必須)|テーブルの内部オブジェクトは、GridItem と TableItem の両方のコントロール パターンをサポートする必要があります。 テーブル自体では、それが別のテーブルの一部である場合を除いて、GridItem コントロール パターンも TableItem コントロール パターンもサポートする必要がありません。|  
   
 <a name="Required_UI_Automation_Events"></a>   

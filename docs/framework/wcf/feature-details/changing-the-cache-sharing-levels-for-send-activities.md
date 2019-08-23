@@ -2,18 +2,18 @@
 title: Send アクティビティのキャッシュ共有レベルの変更
 ms.date: 03/30/2017
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
-ms.openlocfilehash: ac4f2e4fe85d6b243999add6bda65f4fb202f79c
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 587440bd343513aeff51f1ed0947573fbe612f22
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363841"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952590"
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>Send アクティビティのキャッシュ共有レベルの変更
 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 拡張機能により、キャッシュ共有レベルのカスタマイズやチャネル ファクトリ キャッシュの設定のカスタマイズを行えるほか、<xref:System.ServiceModel.Activities.Send> メッセージング アクティビティを使用してサービス エンドポイントにメッセージを送信するワークフローのチャネル キャッシュの設定のカスタマイズも可能になります。 これらのワークフローは、通常はクライアント ワークフローですが、<xref:System.ServiceModel.WorkflowServiceHost> でホストされるワークフロー サービスである場合もあります。 チャネル ファクトリ キャッシュには、<xref:System.ServiceModel.ChannelFactory%601> オブジェクトがキャッシュされます。 チャネル キャッシュには、チャネルがキャッシュされます。  
   
 > [!NOTE]
->  ワークフローは <xref:System.ServiceModel.Activities.Send> メッセージング アクティビティを使用してメッセージまたはパラメーターを送信できます。 このワークフローのランタイムはチャネル ファクトリをキャッシュに追加しますが、チャネル ファクトリで作成されるチャネルは、<xref:System.ServiceModel.Channels.IRequestChannel> アクティビティを <xref:System.ServiceModel.Activities.ReceiveReply> アクティビティと共に使用したときは <xref:System.ServiceModel.Activities.Send> 型で、<xref:System.ServiceModel.Channels.IOutputChannel> アクティビティだけを (<xref:System.ServiceModel.Activities.Send> なしで) 使用したときは <xref:System.ServiceModel.Activities.ReceiveReply> 型です。  
+> ワークフローは <xref:System.ServiceModel.Activities.Send> メッセージング アクティビティを使用してメッセージまたはパラメーターを送信できます。 このワークフローのランタイムはチャネル ファクトリをキャッシュに追加しますが、チャネル ファクトリで作成されるチャネルは、<xref:System.ServiceModel.Channels.IRequestChannel> アクティビティを <xref:System.ServiceModel.Activities.ReceiveReply> アクティビティと共に使用したときは <xref:System.ServiceModel.Activities.Send> 型で、<xref:System.ServiceModel.Channels.IOutputChannel> アクティビティだけを (<xref:System.ServiceModel.Activities.Send> なしで) 使用したときは <xref:System.ServiceModel.Activities.ReceiveReply> 型です。  
   
 ## <a name="the-cache-sharing-levels"></a>キャッシュ共有レベル  
  既定では、<xref:System.ServiceModel.WorkflowServiceHost> によってホストされるワークフローにおいて、<xref:System.ServiceModel.Activities.Send> メッセージング アクティビティが使用するキャッシュは <xref:System.ServiceModel.WorkflowServiceHost> のすべてのワークフロー インスタンス間で共有されます (ホストレベルのキャッシュ)。 <xref:System.ServiceModel.WorkflowServiceHost> によってホストされないクライアント ワークフローの場合、キャッシュを使用できるのはワークフロー インスタンスだけです (インスタンスレベルのキャッシュ)。 このキャッシュは、アンセーフ キャッシュが有効になっている場合を除き、構成で定義されているエンドポイントを使用しない <xref:System.ServiceModel.Activities.Send> アクティビティに対してのみ使用可能です。  

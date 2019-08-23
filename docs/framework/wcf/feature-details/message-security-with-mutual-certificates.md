@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-ms.openlocfilehash: 263ec73af7f4a6f52c4570e17cd140b6afb53601
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bd64531116b1588683c2f5c8964e78e41e371ecf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637834"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955342"
 ---
 # <a name="message-security-with-mutual-certificates"></a>メッセージ セキュリティと相互の証明書
-次のシナリオでは、Windows Communication Foundation (WCF) サービスとクライアントのメッセージ セキュリティ モードを使用して保護を示しています。 クライアントとサービスは、証明書を使用して認証されます。  
+次のシナリオは、メッセージセキュリティモードを使用してセキュリティで保護された Windows Communication Foundation (WCF) サービスとクライアントを示しています。 クライアントとサービスは、証明書を使用して認証されます。  
   
  このシナリオは、X.509 証明書トークン プロファイルと共に WS-Security を使用するため、相互運用性があります。  
   
 > [!NOTE]
->  このシナリオでは、サービス証明書のネゴシエーションは実行されません。 通信を開始する前に、サービス証明書をクライアントに提供しておく必要があります。 サーバー証明書は、アプリケーションと共に配布したり、帯域外通信で提供できます。  
+> このシナリオでは、サービス証明書のネゴシエーションは実行されません。 通信を開始する前に、サービス証明書をクライアントに提供しておく必要があります。 サーバー証明書は、アプリケーションと共に配布したり、帯域外通信で提供できます。  
   
- ![メッセージ セキュリティと相互の証明書](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")  
+ ![相互証明書を使用したメッセージセキュリティ](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")  
   
-|特徴|説明|  
+|特性|説明|  
 |--------------------|-----------------|  
 |セキュリティ モード|メッセージ|  
 |相互運用性|○ WS-Security および X.509 証明書トークン プロファイルと互換性があるクライアントとサービスで相互運用性があります。|  
@@ -107,7 +107,7 @@ ms.locfileid: "64637834"
  [!code-vb[C_SecurityScenarios#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#20)]  
   
 ### <a name="configuration"></a>構成  
- 次のコードは、クライアントを構成します。 使用してクライアント証明書を指定する必要があります、 [ \<clientCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)します。 また、サービス証明書が指定されてを使用して、 [ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)します。  
+ 次のコードは、クライアントを構成します。 クライアント証明書は、 [ \<clientCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)を使用して指定する必要があります。 また、サービス証明書は、 [ \<defaultcertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)を使用して指定されます。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -161,5 +161,5 @@ ms.locfileid: "64637834"
 ## <a name="see-also"></a>関連項目
 
 - [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
-- [方法: 作成し、開発中にトランスポート セキュリティのための WCF で一時的な証明書をインストール](https://go.microsoft.com/fwlink/?LinkId=244264)
+- [Windows Server App Fabric のセキュリティモデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [方法: 開発時にトランスポートセキュリティのために WCF に一時的な証明書を作成してインストールする](https://go.microsoft.com/fwlink/?LinkId=244264)

@@ -2,12 +2,12 @@
 title: <useRequestHeadersForMetadataAddress>
 ms.date: 03/30/2017
 ms.assetid: 679f0eae-f353-44d1-b42d-a9e247509774
-ms.openlocfilehash: 969461d0e5bdc9f8c49b7a019a6000af5af77eec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 84310d4ae5e04e76e4484f4fc606c9896239c776
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788727"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940553"
 ---
 # <a name="userequestheadersformetadataaddress"></a>\<useRequestHeadersForMetadataAddress >
 メタデータのアドレス情報を要求メッセージ ヘッダーから取得できるようにします。  
@@ -39,13 +39,13 @@ ms.locfileid: "61788727"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<defaultPorts>](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultports.md)|クライアント アプリケーションがリッスンする既定の通信エンドポイントの一覧を表示する既定のポートのコレクション。|  
+|[\<defaultPorts>](defaultports.md)|クライアント アプリケーションがリッスンする既定の通信エンドポイントの一覧を表示する既定のポートのコレクション。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|動作の要素を指定します。|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|動作の要素を指定します。|  
   
 ## <a name="see-also"></a>関連項目
 

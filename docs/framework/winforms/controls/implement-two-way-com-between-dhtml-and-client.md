@@ -14,12 +14,12 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], communication between DHTML and client application
 - DHTML [Windows Forms], embedding in Windows Forms
 ms.assetid: 55353a32-b09e-4479-a521-ff3a5ff9a708
-ms.openlocfilehash: 45df54b3a590078eff6ddc1197db5b0124663cf5
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 26cbc995a749c4c129729be700dee588d1033a05
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971914"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953436"
 ---
 # <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a>方法: DHTML コードとクライアント アプリケーション コード間の双方向の通信を実装する
 
@@ -49,7 +49,7 @@ ms.locfileid: "68971914"
      次のコードは、スクリプト オブジェクトに、フォーム クラス自体を使用します。
 
     > [!NOTE]
-    >  コンポーネント オブジェクト モデル (COM) は、スクリプト オブジェクトにアクセスできる必要があります。 フォームが COM から参照できるようにするには<xref:System.Runtime.InteropServices.ComVisibleAttribute> 属性をフォーム クラスに追加します。
+    > コンポーネント オブジェクト モデル (COM) は、スクリプト オブジェクトにアクセスできる必要があります。 フォームが COM から参照できるようにするには<xref:System.Runtime.InteropServices.ComVisibleAttribute> 属性をフォーム クラスに追加します。
 
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#4)]

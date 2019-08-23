@@ -2,12 +2,12 @@
 title: LINQ to SQL でのコード生成
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: 63ac0f50b34a5e5d8739adbeb70f2412960227c3
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 12470a8c14e0a41eb6e06fc5d4ba63c12924330b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666131"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939170"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>LINQ to SQL でのコード生成
 オブジェクトリレーショナルデザイナーまたは SQLMetal コマンドラインツールのいずれかを使用して、データベースを表すコードを生成できます。 どちらの場合も、エンド ツー エンドのコード生成が次の 3 段階で行われます。  
@@ -32,7 +32,7 @@ ms.locfileid: "69666131"
  このスキーマ定義ファイルを、外部マッピング ファイルの検証に使われるスキーマ定義ファイルと区別してください。 詳細については、「[外部マッピング](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)」を参照してください。  
   
 > [!NOTE]
->  また、Visual Studio ユーザーは、この XSD ファイルを [XML スキーマ] ダイアログボックスの "DbmlSchema" として検索します。 DBML ファイルを検証するために XSD ファイルを正しく使用する[方法については、「方法:DBML ファイルと外部マッピングファイル](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)を検証します。  
+> また、Visual Studio ユーザーは、この XSD ファイルを [XML スキーマ] ダイアログボックスの "DbmlSchema" として検索します。 DBML ファイルを検証するために XSD ファイルを正しく使用する[方法については、「方法:DBML ファイルと外部マッピングファイル](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)を検証します。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  

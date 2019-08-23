@@ -10,12 +10,12 @@ helpviewer_keywords:
 - C# language, expressions
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
-ms.openlocfilehash: 29d8b11cb82fe795c332afadeda8215cc660abd5
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2b3b4a760ac16f55b6b9bcb808c6515548165297
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588675"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921835"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>ステートメント、式、および演算子 (C# プログラミング ガイド)
 
@@ -28,8 +28,6 @@ ms.locfileid: "69588675"
 - [式](expressions.md)
 
   - [式形式のメンバー](expression-bodied-members.md)
-
-- [演算子](operators.md)
 
 - [匿名関数](anonymous-functions.md)
 

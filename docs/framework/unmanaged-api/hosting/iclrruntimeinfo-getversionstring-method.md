@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20c7d6a1fd9c1f75f43e42ece59b7fbabd150564
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a886106e5da49e7124dac5c8ea7416859aa441da
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765501"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929851"
 ---
 # <a name="iclrruntimeinfogetversionstring-method"></a>ICLRRuntimeInfo::GetVersionString メソッド
-関連付けられている共通言語ランタイム (CLR) バージョン情報を取得する指定された[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)インターフェイス。  
+指定した[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)インターフェイスに関連付けられている共通言語ランタイム (CLR) のバージョン情報を取得します。  
   
- このメソッドは、次の関数よりも優先されます。  
+ このメソッドは、次の関数を置き換えます。  
   
 - [GetRequestedRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
   
@@ -43,15 +43,15 @@ HRESULT GetVersionString(
   
 ## <a name="parameters"></a>パラメーター  
  `pwzBuffer`  
- [out].NET Framework のコンパイル バージョン形式で"v*A*.*B*[.*X*]"。 *A*、 *B*、および*X*はメジャー バージョン、マイナー バージョン、およびビルド番号に対応する 10 進数。 *X*は省略可能です。 場合*X*が存在しない場合は末尾のピリオドです。  
+ 入出力.NET Framework のコンパイルバージョンを "v*A*" という形式で指定します。*B*[.*X*] " *A*、 *B*、および*X*は、メジャーバージョン、マイナーバージョン、およびビルド番号に対応する10進数です。 *X*は省略可能です。 *X*が存在しない場合、末尾のピリオドはありません。  
   
 > [!NOTE]
->  このパラメーターは、C:\Windows\Microsoft.NET\Framework 下に表示されます、.NET Framework のバージョンのディレクトリ名を一致する必要があります。  
+> このパラメーターは、C:\Windows\Microsoft.NET\Framework. の下に表示される .NET Framework バージョンのディレクトリ名と一致する必要があります。  
   
- 例の値は、"v1.0.3705"、"v1.1.4322"、"v2.0.50727"および"v4.0 です。*x*"ここで、 *x*インストールされているビルドの数によって異なります。 "V"プレフィックスが必須であるに注意してください。  
+ 値の例としては、"v v1.0.3705"、"v 1.1.4322"、"v v2.0.50727"、および "v4.0" があります。*x*"。ここで*x*は、インストールされているビルド番号に依存します。 "V" プレフィックスが必須であることに注意してください。  
   
  `pchBuffer`  
- [入力、出力]サイズを示す`pwzBuffer`バッファー オーバーランを回避します。 場合`pwzBuffer`は`null`、`pchBuffer`の必要なサイズを返します`pwzBuffer`事前割り当てを許可します。  
+ [入力、出力]バッファーオーバーランを回避`pwzBuffer`するためののサイズを指定します。 が`pwzBuffer`の`null` `pchBuffer`場合、は、割り当てを許可するために必要なサイズを返します。`pwzBuffer`  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。  
@@ -62,11 +62,11 @@ HRESULT GetVersionString(
 |E_POINTER|`pwzBuffer` または `pchBuffer` が null です。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** MetaHost.h  
+ **ヘッダー:** メタホスト .h  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ**Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

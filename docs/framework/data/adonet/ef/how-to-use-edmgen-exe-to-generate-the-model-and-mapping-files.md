@@ -2,12 +2,12 @@
 title: '方法: EdmGen.exe を使用してモデル ファイルとマッピング ファイルを生成する'
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
-ms.openlocfilehash: f5781b49817054923cbbbf4d52205b9280ea131a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 37234d8f0631ea11ea0d9c7d4e8f027a7266814e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64632208"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958456"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>方法: EdmGen.exe を使用してモデル ファイルとマッピング ファイルを生成する
 このトピックでは、EDM ジェネレーター (EdmGen.exe) ツールを使用して、School データベースに基づく次のファイルを生成する方法について説明します。  
@@ -22,16 +22,16 @@ ms.locfileid: "64632208"
   
 - ビュー ファイル  
   
- EdmGen.exe ツールでは、/mode:FullGeneration を使用して上記のファイルを生成します。 EdmGen.exe コマンドの詳細については、次を参照してください。 [EDM ジェネレーター (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md)します。  
+ EdmGen.exe ツールでは、/mode:FullGeneration を使用して上記のファイルを生成します。 Edmgen.exe コマンドの詳細については、「 [EDM Generator (edmgen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md)」を参照してください。  
   
- 引き続き使用する Visual Studio プロジェクトを構成する必要があります EdmGen.exe を使用して、モデルとマッピング ファイルを生成する場合、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]します。 詳細については、「[方法 :Entity Framework プロジェクトを手動で構成](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))します。  
+ Edmgen.exe を使用してモデルファイルとマッピングファイルを生成する場合でも、 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]を使用するように Visual Studio プロジェクトを構成する必要があります。 詳細については、「[方法 :Entity Framework プロジェクト](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))を手動で構成します。  
   
 > [!NOTE]
->  EdmGen.exe によって生成された概念モデルには、データベース内のすべてのオブジェクトが含まれています。 特定のオブジェクトだけを含んだ概念モデルを生成する場合は、Entity Data Model ウィザードを使用してください。 詳細については、「[方法 :エンティティ データ モデル ウィザードを使用して](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))します。  
+> EdmGen.exe によって生成された概念モデルには、データベース内のすべてのオブジェクトが含まれています。 特定のオブジェクトだけを含んだ概念モデルを生成する場合は、Entity Data Model ウィザードを使用してください。 詳細については、「[方法 :Entity Data Model ウィザード](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))を使用します。  
   
 ### <a name="to-generate-the-school-model-for-a-visual-basic-project-using-edmgenexe"></a>EdmGen.exe を使用して Visual Basic プロジェクト用の School モデルを生成するには  
   
-1. School データベースを作成します。 詳細については、次を参照してください。 [School サンプル データベースを作成する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))します。  
+1. School データベースを作成します。 詳細については、「 [School サンプルデータベースの作成](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))」を参照してください。  
   
 2. コマンド プロンプトで、次のコマンド (改行なし) を実行します。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "64632208"
   
 ### <a name="to-generate-the-school-model-for-a-c-project-using-edmgenexe"></a>EdmGen.exe を使用して C# プロジェクト用の School モデルを生成するには  
   
-1. School データベースを作成します。 詳細については、次を参照してください。 [School サンプル データベースを作成する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))します。  
+1. School データベースを作成します。 詳細については、「 [School サンプルデータベースの作成](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))」を参照してください。  
   
 2. コマンド プロンプトで、次のコマンド (改行なし) を実行します。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "64632208"
 ## <a name="see-also"></a>関連項目
 
 - [モデリングとマッピング](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)
-- [方法: Entity Framework プロジェクトを手動で構成します。](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))
-- [方法: クエリのパフォーマンスを向上させるためにビューを事前に生成します。](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))
+- [方法: Entity Framework プロジェクトを手動で構成する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))
+- [方法: クエリのパフォーマンスを向上させるためのビューを事前に生成する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))
 - [ADO.NET Entity Data Model ツール](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
-- [方法: EdmGen.exe を使用してモデル ファイルとマッピング ファイルを検証するには](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)
+- [方法: Edmgen.exe を使用してモデルファイルとマッピングファイルを検証する](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)

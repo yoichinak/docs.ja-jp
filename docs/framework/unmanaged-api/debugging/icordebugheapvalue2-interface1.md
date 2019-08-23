@@ -16,34 +16,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 870de1d3db1e415792437e9763dc13bf8066913f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fa872453ed72a3095c135aa25e81284610ad2436
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700918"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910221"
 ---
 # <a name="icordebugheapvalue2-interface"></a>ICorDebugHeapValue2 インターフェイス
 
-拡張機能を処理する共通言語ランタイム (CLR) のサポートを提供します。  
+共通言語ランタイム (CLR) ハンドルのサポートを提供する、コンポーネントの拡張機能。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[CreateHandle メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-createhandle-method.md)|これは、指定した型のハンドルを作成`ICorDebugHeapValue2`オブジェクト。|  
+|[CreateHandle メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-createhandle-method.md)|この`ICorDebugHeapValue2`オブジェクトに対して指定された型のハンドルを作成します。|  
   
 ## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** CorDebug.idl、CorDebug.h  
+ **ヘッダー:** CorDebug .idl、CorDebug. h  
   
- **ライブラリ:** CorGuids.lib  
+ **ライブラリ**CorGuids .lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

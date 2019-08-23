@@ -2,12 +2,12 @@
 title: クエリの概念
 ms.date: 03/30/2017
 ms.assetid: 9a125749-ccb5-49d5-999d-d2db7171d74d
-ms.openlocfilehash: 62af37399cda5220c429fae2d9ab619989050b00
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: be564ae6fe6dc887b77ea4ae213d56d11f309369
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767521"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938558"
 ---
 # <a name="query-concepts"></a>クエリの概念
 このセクションでは、[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] で [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] クエリを設計するうえでの主要な概念について説明します。  
@@ -32,5 +32,5 @@ ms.locfileid: "61767521"
  [オブジェクト ID](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のオブジェクト識別子の概念について説明します。  
   
- [LINQ クエリの概要 (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
+ [LINQ クエリの概要 (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
  [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] のクエリ操作の概要について説明します。

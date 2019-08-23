@@ -1,5 +1,5 @@
 ---
-title: < System.diagnostics > 要素
+title: < diagnostics > 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.diagnostics
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <system.diagnostics> element
 - system.diagnostics element
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
-ms.openlocfilehash: 026805ffb9b89aa55e84cf9a5c4afb8ed63cec09
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3b4238a8d7028d47122a420526b38ee4f327332
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673694"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926945"
 ---
-# <a name="systemdiagnostics-element"></a>\<system.diagnostics > 要素
+# <a name="systemdiagnostics-element"></a>\<system. diagnostics > 要素
 メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。  
   
  \<configuration>  
@@ -38,12 +38,12 @@ ms.locfileid: "61673694"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<assert>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/assert-element.md)|<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> メソッドの呼び出し時にメッセージ ボックスを表示するかどうかを指定し、メッセージの書き込み先のファイルの名前も指定します。|  
-|[\<performanceCounters>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/performancecounters-element.md)|パフォーマンス カウンターが共有するグローバル メモリのサイズを指定します。|  
-|[\<sharedListeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)|任意の source 要素または trace 要素が参照できるリスナーを含みます。 共有リスナーとして識別されたリスナーは、名前によってソースまたはトレースに追加できます。|  
-|[\<sources>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sources-element.md)|トレース メッセージを開始するトレース ソースを指定します。|  
-|[\<switches>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/switches-element.md)|トレース スイッチとトレース スイッチを設定するレベルが含まれています。|  
-|[\<trace>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|トレース メッセージを収集、格納、およびルーティングするリスナーを保持します。|  
+|[\<assert>](assert-element.md)|<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> メソッドの呼び出し時にメッセージ ボックスを表示するかどうかを指定し、メッセージの書き込み先のファイルの名前も指定します。|  
+|[\<performanceCounters>](performancecounters-element.md)|パフォーマンス カウンターが共有するグローバル メモリのサイズを指定します。|  
+|[\<sharedListeners>](sharedlisteners-element.md)|任意の source 要素または trace 要素が参照できるリスナーを含みます。 共有リスナーとして識別されるリスナーは、名前を指定してソースまたはトレースに追加できます。|  
+|[\<sources>](sources-element.md)|トレースメッセージを開始するトレースソースを指定します。|  
+|[\<switches>](switches-element.md)|トレーススイッチと、トレーススイッチが設定されているレベルを格納します。|  
+|[\<trace>](trace-element.md)|トレース メッセージを収集、格納、およびルーティングするリスナーを保持します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -52,10 +52,10 @@ ms.locfileid: "61673694"
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
   
 ## <a name="example"></a>例  
- 次の例では、トレース スイッチおよびトレース リスナーを埋め込む方法を示しています、  **\<system.diagnostics >** 要素。 `General`トレース スイッチに設定されている、<xref:System.Diagnostics.TraceLevel>レベル。 トレース リスナー`myListener`という名前のファイルを作成します。`MyListener.log`し、ファイルに出力を書き込みます。  
+ 次の例は、トレーススイッチとトレースリスナーを、  **\<システムの診断 >** 要素内に埋め込む方法を示しています。 トレース`General`スイッチが<xref:System.Diagnostics.TraceLevel>レベルに設定されています。 トレースリスナー `myListener`は、という`MyListener.log`ファイルを作成し、ファイルに出力を書き込みます。  
   
 > [!NOTE]
->  .NET Framework バージョン 2.0 では、スイッチの値を指定するためにテキストを使用できます。 たとえば、指定`true`の<xref:System.Diagnostics.BooleanSwitch>などの列挙値を表すテキストを使用または`Error`の<xref:System.Diagnostics.TraceSwitch>します。 `<add name="myTraceSwitch" value="Error" />` という行は、`<add name="myTraceSwitch" value="1" />` と同じです。  
+> .NET Framework バージョン 2.0 では、スイッチの値を指定するためにテキストを使用できます。 たとえば、 `true` `Error`に対してを指定<xref:System.Diagnostics.TraceSwitch>したり、のような列挙値を表すテキストを使用したりできます。<xref:System.Diagnostics.BooleanSwitch> `<add name="myTraceSwitch" value="Error" />` という行は、`<add name="myTraceSwitch" value="1" />` と同じです。  
   
 ```xml  
 <configuration>  
@@ -76,4 +76,4 @@ ms.locfileid: "61673694"
 
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.Debug>
-- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [トレースおよびデバッグ設定のスキーマ](index.md)

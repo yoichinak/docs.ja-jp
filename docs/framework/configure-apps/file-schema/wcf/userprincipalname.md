@@ -2,17 +2,17 @@
 title: <userPrincipalName>
 ms.date: 03/30/2017
 ms.assetid: 68032f69-149e-4613-bae4-18314d4fd294
-ms.openlocfilehash: 9e7b845d39495dba1d1a19af95faf308b8b8c0fa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 423a3249a9298675517f0cff08566c3735fa35f1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769812"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940509"
 ---
 # <a name="userprincipalname"></a>\<userPrincipalName>
 クライアントで認証するサービスのユーザー プリンシパル名 (UPN) を指定します。  
   
- UPN を設定する方法についての詳細については、次を参照してください。[サービス Id と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)します。  
+ UPN の設定の詳細については、「[サービス id と認証](../../../wcf/feature-details/service-identity-and-authentication.md)」を参照してください。  
   
 \<identity>  
 \<userPrincipalName>  
@@ -30,7 +30,7 @@ ms.locfileid: "61769812"
   
 |属性|説明|  
 |---------------|-----------------|  
-|value|ユーザー アカウント名 (ユーザー ログイン名と呼ばれることもある) と、ユーザー アカウントの検索範囲のドメインを識別するドメイン名です。 これは、Windows ドメインにログオンするための標準的使用方法です。 形式: someone@example.com (電子メール アドレス) です。|  
+|value|ユーザー アカウント名 (ユーザー ログイン名と呼ばれることもある) と、ユーザー アカウントの検索範囲のドメインを識別するドメイン名です。 これは、Windows ドメインにログオンするための標準的使用方法です。 形式はsomeone@example.com 、(電子メールアドレスの場合) です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -39,10 +39,10 @@ ms.locfileid: "61769812"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|クライアントで認証するサービスの ID を指定します。|  
+|[\<identity>](identity.md)|クライアントで認証するサービスの ID を指定します。|  
   
 ## <a name="remarks"></a>Remarks  
- この id を持つエンドポイントに接続するセキュリティで保護された Windows Communication Foundation (WCF) クライアントは、エンドポイントの SSPI 認証を実行するときに、UPN を使用します。  
+ この id を持つエンドポイントに接続するセキュリティで保護された Windows Communication Foundation (WCF) クライアントは、エンドポイントで SSPI 認証を実行するときに UPN を使用します。  
   
 ## <a name="example"></a>例  
  次の構成コードは、クライアントで認証するサービスの UPN を指定します。  
@@ -59,5 +59,5 @@ ms.locfileid: "61769812"
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
 - <xref:System.ServiceModel.UpnEndpointIdentity>
-- [サービス ID と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [サービス ID と認証](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [\<identity>](identity.md)

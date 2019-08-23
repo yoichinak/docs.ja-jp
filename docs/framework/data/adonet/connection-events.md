@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5a29de74-acfc-4134-8616-829dd7ce0710
-ms.openlocfilehash: a71758781511f18ddf5451feaf0d308af1b4a652
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8ed62d0193639b434d66c446e3b9d0c184577a80
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879932"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949561"
 ---
 # <a name="connection-events"></a>接続イベント
-すべての .NET Framework データ プロバイダーが**接続**データ ソースから情報メッセージを取得するかどうかを判断に使用できる 2 つのイベントを持つオブジェクトの状態、**接続**が変更されました。 次の表のイベント、**接続**オブジェクト。  
+すべての .NET Framework データプロバイダーには、データソースから情報メッセージを取得したり、**接続**の状態が変更されたかどうかを確認したりするために使用できる、2つのイベントを持つ**接続**オブジェクトがあります。 次の表では、**接続**オブジェクトのイベントについて説明します。  
   
-|event|説明|  
+|イベント|説明|  
 |-----------|-----------------|  
 |**InfoMessage**|データ ソースから情報メッセージが返されたときに発生します。 情報メッセージはデータ ソースからのメッセージであり、例外はスローされません。|  
-|**StateChange**|発生したときの状態、**接続**変更します。|  
+|**StateChange**|**接続**の状態が変化したときに発生します。|  
   
 ## <a name="working-with-the-infomessage-event"></a>InfoMessage イベントの使用  
- <xref:System.Data.SqlClient.SqlConnection.InfoMessage> オブジェクトの <xref:System.Data.SqlClient.SqlConnection> イベントを使用して、SQL Server データ ソースから警告や情報メッセージを取得できます。 重大度レベルが 11 から 16 のエラーがデータ ソースから返されると、例外がスローされます。 <xref:System.Data.SqlClient.SqlConnection.InfoMessage> イベントを使用して、エラーに関連付けられていないメッセージをデータ ソースから取得することもできます。 Microsoft SQL Server の場合は、重大度レベルが 10 以下のエラーは情報メッセージと見なされ、<xref:System.Data.SqlClient.SqlConnection.InfoMessage> イベントでキャプチャされます。 詳細については、次を参照してください。、[データベース エンジン エラーの重大度](/sql/relational-databases/errors-events/database-engine-error-severities)記事。
+ <xref:System.Data.SqlClient.SqlConnection.InfoMessage> オブジェクトの <xref:System.Data.SqlClient.SqlConnection> イベントを使用して、SQL Server データ ソースから警告や情報メッセージを取得できます。 重大度レベルが 11 から 16 のエラーがデータ ソースから返されると、例外がスローされます。 <xref:System.Data.SqlClient.SqlConnection.InfoMessage> イベントを使用して、エラーに関連付けられていないメッセージをデータ ソースから取得することもできます。 Microsoft SQL Server の場合は、重大度レベルが 10 以下のエラーは情報メッセージと見なされ、<xref:System.Data.SqlClient.SqlConnection.InfoMessage> イベントでキャプチャされます。 詳細については、[データベースエンジンエラーの重大度](/sql/relational-databases/errors-events/database-engine-error-severities)に関する記事を参照してください。
   
- <xref:System.Data.SqlClient.SqlConnection.InfoMessage>イベントを受け取る、<xref:System.Data.SqlClient.SqlInfoMessageEventArgs>オブジェクトを含むでその**エラー**プロパティ、データ ソースからのメッセージのコレクション。 クエリを実行することができます、**エラー**エラー番号とメッセージ テキストとエラーの原因には、このコレクション内のオブジェクト。 .NET Framework Data Provider for SQL Server には、データベースの詳細情報、ストアド プロシージャ、およびメッセージ送信元の行番号も含まれます。  
+ イベント<xref:System.Data.SqlClient.SqlConnection.InfoMessage>は、その<xref:System.Data.SqlClient.SqlInfoMessageEventArgs> **Errors**プロパティに、データソースからのメッセージのコレクションを含むオブジェクトを受け取ります。 エラー番号とメッセージテキスト、およびエラーの原因については、このコレクション内の**error**オブジェクトに対してクエリを実行できます。 .NET Framework Data Provider for SQL Server には、データベースの詳細情報、ストアド プロシージャ、およびメッセージ送信元の行番号も含まれます。  
   
 ### <a name="example"></a>例  
  <xref:System.Data.SqlClient.SqlConnection.InfoMessage> イベントのイベント ハンドラーを追加する方法を次のコード サンプルに示します。  
@@ -66,17 +66,17 @@ protected static void OnInfoMessage(
 ```  
   
 ## <a name="handling-errors-as-infomessages"></a>InfoMessages としてのエラー処理  
- <xref:System.Data.SqlClient.SqlConnection.InfoMessage> イベントは通常、サーバーが情報メッセージまたは警告メッセージを送信した場合に限り発生します。 ただし、ときに実際のエラーが発生したの実行、 **ExecuteNonQuery**または**ExecuteReader**サーバー操作を開始したメソッドは停止され、例外がスローされます。  
+ <xref:System.Data.SqlClient.SqlConnection.InfoMessage> イベントは通常、サーバーが情報メッセージまたは警告メッセージを送信した場合に限り発生します。 ただし、実際のエラーが発生すると、サーバー操作を開始した**ExecuteNonQuery**または**ExecuteReader**メソッドの実行が停止し、例外がスローされます。  
   
  サーバーでエラーが発生してもコマンド内の残りのステートメントの処理を続行する場合は、<xref:System.Data.SqlClient.SqlConnection.FireInfoMessageEventOnUserErrors%2A> の <xref:System.Data.SqlClient.SqlConnection> プロパティを `true` に設定します。 このように設定すると、エラーが発生したとき、接続は例外をスローして処理を中断する代わりに、<xref:System.Data.SqlClient.SqlConnection.InfoMessage> イベントを発生させます。 クライアント アプリケーションは、このイベントを処理し、エラーに応答できます。  
   
 > [!NOTE]
->  重大度レベルが 17 以上のエラーが発生すると、サーバーのコマンド処理が停止します。このエラーは、例外として処理する必要があります。 この場合、<xref:System.Data.SqlClient.SqlConnection.InfoMessage> イベントによるエラー処理の方法にかかわらず例外がスローされます。  
+> 重大度レベルが 17 以上のエラーが発生すると、サーバーのコマンド処理が停止します。このエラーは、例外として処理する必要があります。 この場合、<xref:System.Data.SqlClient.SqlConnection.InfoMessage> イベントによるエラー処理の方法にかかわらず例外がスローされます。  
   
 ## <a name="working-with-the-statechange-event"></a>StateChange イベントの使用  
- **StateChange**イベントが発生したときの状態、**接続**変更します。 **StateChange**イベントを受け取る<xref:System.Data.StateChangeEventArgs>の状態の変更が決定できるようにする、**接続**を使用して、 **OriginalState**と**CurrentState**プロパティ。 **OriginalState**プロパティは、<xref:System.Data.ConnectionState>の状態を示す列挙体、**接続**変更される前に、です。 **CurrentState**は、<xref:System.Data.ConnectionState>の状態を示す列挙体、**接続**変更後。  
+ **StateChange**イベントは、**接続**の状態が変化したときに発生します。 **StateChange**イベントは、 <xref:System.Data.StateChangeEventArgs> **originalstate**プロパティと設定されたプロパティを使用して、**接続**の状態の変化を確認できるようにを受け取ります。 **Originalstate**プロパティは、変更<xref:System.Data.ConnectionState>前の**接続**の状態を示す列挙体です。 "状態" <xref:System.Data.ConnectionState>は、変更後の**接続**の状態を示す列挙体です。  
   
- 次のコード例では、 **StateChange**コンソールにメッセージを書き込むイベントをときの状態、**接続**変更します。  
+ 次のコード例では、 **StateChange**イベントを使用して、**接続**の状態が変化したときにコンソールにメッセージを書き込みます。  
   
 ```vb  
 ' Assumes connection represents a SqlConnection object.  

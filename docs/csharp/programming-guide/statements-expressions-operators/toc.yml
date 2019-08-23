@@ -7,8 +7,6 @@
       href: expressions.md
     - name: 式形式のメンバー
       href: expression-bodied-members.md
-    - name: 演算子
-      href: operators.md
     - name: 匿名関数
       items:
         - name: 概要

@@ -8,20 +8,20 @@ helpviewer_keywords:
 - controlling clocks interactively [WPF]
 - clocks [WPF], controlling interactively
 ms.assetid: d0b520e0-2f18-4cef-977f-2909e709548a
-ms.openlocfilehash: 05989b6a03e03fb5723a70c9c36d5e32f9117049
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d18f395974750a6b85458f636a27f6101e7978f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947239"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951346"
 ---
 # <a name="how-to-interactively-control-a-clock"></a>方法: クロックを対話的に制御する
-A<xref:System.Windows.Media.Animation.Clock>オブジェクトの<xref:System.Windows.Media.Animation.ClockController>プロパティでは、対話形式で開始、一時停止、再開、シーク、塗りつぶし期間、クロックを進みおよびクロックを停止することができます。 タイミング ツリーのルート クロックのみを対話的に制御できます。  
+オブジェクト<xref:System.Windows.Media.Animation.Clock> の<xref:System.Windows.Media.Animation.ClockController>プロパティを使用すると、対話形式で開始、一時停止、再開、シーク、時計をその塗りつぶし期間に進め、時計を止めることができます。 タイミングツリーのルートクロックだけを対話式で制御できます。  
   
 > [!NOTE]
->  クロックを直接操作する必要がないアニメーションを対話的に制御するには、その他の方法はあります。 ストーリー ボードを使用することもできます。 ストーリー ボードは、マークアップとコードの両方でサポートされます。 例については、次を参照してください。[ストーリー ボードを使用してプロパティをアニメーション化する](how-to-animate-a-property-by-using-a-storyboard.md)または[アニメーションの概要](animation-overview.md)します。  
+> クロックを直接操作する必要のないアニメーションを対話的に制御する方法は他にもあります。ストーリーボードを使用することもできます。 ストーリーボードは、マークアップとコードの両方でサポートされています。 例については、「ストーリーボードまたは[アニメーションの概要](animation-overview.md)を使用して[プロパティをアニメーション化](how-to-animate-a-property-by-using-a-storyboard.md)する」を参照してください。  
   
- 次の例では、いくつかのボタンは、アニメーション クロックを対話的に制御に使用されます。  
+ 次の例では、いくつかのボタンを使用して、アニメーションクロックを対話的に制御しています。  
   
 ## <a name="example"></a>例  
  [!code-csharp[timingbehaviors_procedural_snip#GraphicsMMClockControllerExample](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/ClockControllerExample.cs#graphicsmmclockcontrollerexample)]

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-ms.openlocfilehash: 4565781dd6e30bd88c899a9c098c28e3fd5b3870
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: c0b7e52cbbf0b49dee3598239f96e113ba929a80
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596633"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922257"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>クラスと構造体 (C# プログラミング ガイド)
 クラスと構造体は、.NET Framework の共通型システムの 2 つの基本構成です。 クラスと構造体は、どちらも基本的にはデータと動作のセットを 1 つの論理単位としてカプセル化するデータ構造です。 データと動作はクラスまたは構造体の "*メンバー*" です。このトピックで後述するように、メソッド、プロパティ、イベントなどが含まれます。  
@@ -60,7 +60,7 @@ ms.locfileid: "69596633"
   
 - [インデクサー](../indexers/index.md)  
   
-- [演算子](../statements-expressions-operators/operators.md)  
+- [演算子](../../language-reference/operators/index.md)  
   
 - [入れ子にされた型](./nested-types.md)  
   

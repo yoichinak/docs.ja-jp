@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b44daee-874a-4bd1-954e-83bf53565590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91a97807d45d3cafdac0c0608dc9590533b185dc
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 67ead643afd34b4c3422d85e6f7876879de477ba
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663432"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927245"
 ---
 # <a name="systemruntimecaching-element-cache-settings"></a>\<system.string > 要素 (キャッシュ設定)
 
@@ -55,7 +55,7 @@ ms.locfileid: "69663432"
 この名前空間のクラスは、ASP.NET のキャッシュ機能と同様のキャッシュ機能を使用する方法を提供しますが、 `System.Web` アセンブリに依存しません。 詳細については、「 [Caching in .NET Framework Applications](../../../performance/caching-in-net-framework-applications.md)」を参照してください。  
   
 > [!NOTE]
->  <xref:System.Runtime.Caching>名前空間の出力キャッシュ機能と型は .NET Framework 4 で新たに追加されています。  
+> <xref:System.Runtime.Caching>名前空間の出力キャッシュ機能と型は .NET Framework 4 で新たに追加されています。  
   
 ## <a name="example"></a>例
 
