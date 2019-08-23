@@ -6,20 +6,20 @@ helpviewer_keywords:
 - pages [WPF], setting window height from
 - height of window [WPF], setting from a page
 ms.assetid: 4e4488ff-ab5c-4ee9-81a4-e1addb55c5cc
-ms.openlocfilehash: c99ea134478635f368b71443f43e4d8f772cb5aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1041af88241011b51c96d7b61423344a32b25ca
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007311"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940800"
 ---
 # <a name="how-to-set-the-height-of-a-window-from-a-page"></a>方法: ページからウィンドウの高さを設定する
-この例からウィンドウの高さを設定する方法を示しています、<xref:System.Windows.Controls.Page>します。  
+この例は、 <xref:System.Windows.Controls.Page>からウィンドウの高さを設定する方法を示しています。  
   
 ## <a name="example"></a>例  
- A<xref:System.Windows.Controls.Page>を設定して、そのホスト ウィンドウの高さを設定できます<xref:System.Windows.Controls.Page.WindowHeight%2A>します。 このプロパティにより、<xref:System.Windows.Controls.Page>をそれをホストするウィンドウの種類の明示的な知識を持たない。  
+ では、を設定<xref:System.Windows.Controls.Page.WindowHeight%2A>することによって、ホストウィンドウの高さを設定できます。<xref:System.Windows.Controls.Page> このプロパティを使用<xref:System.Windows.Controls.Page>すると、は、それをホストするウィンドウの種類に関する明示的な知識を持つことができません。  
   
 > [!NOTE]
->  使用してウィンドウの高さを設定する<xref:System.Windows.Controls.Page.WindowHeight%2A>、<xref:System.Windows.Controls.Page>ウィンドウの子である必要があります。  
+> を使用して<xref:System.Windows.Controls.Page.WindowHeight%2A> <xref:System.Windows.Controls.Page>ウィンドウの高さを設定するには、がウィンドウの子である必要があります。  
   
  [!code-xaml[HOWTONavigationSnippets#SetPageWindowHeightXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/SetWindowHeightPage.xaml#setpagewindowheightxaml)]

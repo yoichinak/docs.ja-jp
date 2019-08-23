@@ -2,14 +2,14 @@
 title: <security> の <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 243a5148-bbd1-447f-a8a5-6e7792c0a3f1
-ms.openlocfilehash: ffe791d495a4e06c9649dd0c37d0fd010e2c64bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 89fb1f766906c02a5e3ef9a9cdd1aef94ede80fa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670585"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936714"
 ---
-# <a name="security-of-custombinding"></a>\<セキュリティ > の\<customBinding >
+# <a name="security-of-custombinding"></a>\<customBinding の\<セキュリティ > >
 カスタム バインドのセキュリティ オプションを指定します。  
   
  \<system.serviceModel>  
@@ -51,9 +51,9 @@ ms.locfileid: "61670585"
 |authenticationMode|省略可能です。 イニシエーターとレスポンダーの間で使用される認証モードを指定します。 すべての値については、以下を参照してください。<br /><br /> 既定値は、`sspiNegotiated` です。|  
 |defaultAlgorithmSuite|省略可能です。 メッセージの暗号化とキー ラップ アルゴリズムを設定します。 アルゴリズムとキー サイズは、<xref:System.ServiceModel.Security.SecurityAlgorithmSuite> クラスにより決まります。 これらのアルゴリズムは、Security Policy Language (WS-SecurityPolicy) の仕様で指定されているアルゴリズムに対応付けられています。<br /><br /> 指定できる値を以下に示します。 既定値は `Basic256` です。<br /><br /> この属性は、既定とは異なるアルゴリズムのセットを選択する別のプラットフォームで操作するときに使用されます。 この設定を修正する場合、関連するアルゴリズムの強さと脆弱性に注意する必要があります。 この属性は <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 型です。|  
 |includeTimestamp|各メッセージにタイム スタンプが含まれるかどうかを指定するブール値です。 既定値は、`true` です。|  
-|keyEntropyMode|メッセージをセキュリティで保護するキーを計算する方法を指定します。 キーは、クライアント キー マテリアルのみ、サービス キー マテリアルのみ、または両方の組み合わせに基づいて生成できます。 有効な値は、次のとおりです。<br /><br /> -   `ClientEntropy`:セッション キーは、クライアントによって提供されるキー データに基づきます。<br />-   `ServerEntropy`:セッション キーは、サーバーによって提供されるキー データに基づきます。<br />-   `CombinedEntropy`:セッション キーは、クライアントとサービスによって提供されるキー データに基づきます。<br /><br /> 既定値は `CombinedEntropy` です。<br /><br /> この属性は <xref:System.ServiceModel.Security.SecurityKeyEntropyMode> 型です。|  
-|messageProtectionOrder|メッセージ レベルのセキュリティ アルゴリズムをメッセージに適用する順序を設定します。 以下の値が有効です。<br /><br /> -   `SignBeforeEncrypt`:最初に、サインインし、暗号化します。<br />-   `SignBeforeEncryptAndEncryptSignature`:最初にサインインし、暗号化、署名を暗号化します。<br />-   `EncryptBeforeSign`:まず暗号化し、記号。<br /><br /> 既定値は、使用している WS-Security のバージョンによって異なります。 WS-Security 1.1 を使用する場合、既定値は `SignBeforeEncryptAndEncryptSignature` です。 WS-Security 1.0 を使用する場合、既定値は `SignBeforeEncrypt` です。<br /><br /> この属性は <xref:System.ServiceModel.Security.MessageProtectionOrder> 型です。|  
-|messageSecurityVersion|省略可能です。 使用される WS-Security のバージョンを設定します。 以下の値が有効です。<br /><br /> -   WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11<br />-   WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br />-   WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br /><br /> 既定は、WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11 であり、単純に `Default` として XML で表現できます。 この属性は <xref:System.ServiceModel.MessageSecurityVersion> 型です。|  
+|keyEntropyMode|メッセージをセキュリティで保護するキーを計算する方法を指定します。 キーは、クライアント キー マテリアルのみ、サービス キー マテリアルのみ、または両方の組み合わせに基づいて生成できます。 有効な値は、次のとおりです。<br /><br /> -   `ClientEntropy`:セッションキーは、クライアントによって提供されるキーデータに基づいています。<br />-   `ServerEntropy`:セッションキーは、サーバーによって提供されるキーデータに基づいています。<br />-   `CombinedEntropy`:セッションキーは、クライアントとサービスによって提供されるキーデータに基づいています。<br /><br /> 既定値は `CombinedEntropy` です。<br /><br /> この属性は <xref:System.ServiceModel.Security.SecurityKeyEntropyMode> 型です。|  
+|messageProtectionOrder|メッセージ レベルのセキュリティ アルゴリズムをメッセージに適用する順序を設定します。 以下の値が有効です。<br /><br /> -   `SignBeforeEncrypt`:最初に署名してから、暗号化します。<br />-   `SignBeforeEncryptAndEncryptSignature`:最初に署名し、次に署名を暗号化します。<br />-   `EncryptBeforeSign`:最初に暗号化し、次に署名します。<br /><br /> 既定値は、使用している WS-Security のバージョンによって異なります。 WS-Security 1.1 を使用する場合、既定値は `SignBeforeEncryptAndEncryptSignature` です。 WS-Security 1.0 を使用する場合、既定値は `SignBeforeEncrypt` です。<br /><br /> この属性は <xref:System.ServiceModel.Security.MessageProtectionOrder> 型です。|  
+|messageSecurityVersion|省略可能です。 使用される WS-Security のバージョンを設定します。 以下の値が有効です。<br /><br /> - WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11<br />- WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br />- WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br /><br /> 既定は、WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11 であり、単純に `Default` として XML で表現できます。 この属性は <xref:System.ServiceModel.MessageSecurityVersion> 型です。|  
 |requireDerivedKeys|キーを元の証明キーから派生できる場合に指定するブール値。 既定値は、`true` です。|  
 |requireSecurityContextCancellation|省略可能です。 セキュリティ コンテキストが不要になったときにそれをキャンセルして終了する必要がある場合に指定するブール値。 既定値は、`true` です。|  
 |requireSignatureConfirmation|省略可能です。 WS-Security 署名確認を有効にするかどうかを指定するブール値です。 `true` に設定されている場合、メッセージ署名が応答側で確認されます。  カスタム バインディングが相互証明書に対して構成されているか、発行されたトークンを使用するように構成されている場合 (WSS 1.1 バインド)、この属性の既定値は `true` です。 それ以外の場合、既定値は `false` になります。<br /><br /> サービスが要求を完全に認識して応答していることを確認するために、署名確認を使用します。|  
@@ -90,26 +90,26 @@ ms.locfileid: "61670585"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|現在発行されているトークンを指定します。 この要素は <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement> 型です。|  
-|[\<localClientSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)|このバインディングのローカル クライアントのセキュリティ設定を指定します。 この要素は <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement> 型です。|  
-|[\<localServiceSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)|このバインディングのローカル サービスのセキュリティ設定を指定します。 この要素は <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement> 型です。|  
-|[\<secureConversationBootstrap>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|セキュリティで保護されたメッセージ交換サービスの開始に使用される既定値を指定します。|  
+|[\<issuedTokenParameters>](issuedtokenparameters.md)|現在発行されているトークンを指定します。 この要素は <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement> 型です。|  
+|[\<localClientSettings>](localclientsettings-element.md)|このバインディングのローカル クライアントのセキュリティ設定を指定します。 この要素は <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement> 型です。|  
+|[\<localServiceSettings>](localservicesettings-element.md)|このバインディングのローカル サービスのセキュリティ設定を指定します。 この要素は <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement> 型です。|  
+|[\<secureConversationBootstrap>](secureconversationbootstrap.md)|セキュリティで保護されたメッセージ交換サービスの開始に使用される既定値を指定します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|カスタム バインドのすべてのバインド機能を定義します。|  
+|[\<binding>](../../../misc/binding.md)|カスタム バインドのすべてのバインド機能を定義します。|  
   
 ## <a name="remarks"></a>Remarks  
- この要素の使い方の詳細については、次を参照してください。 [SecurityBindingElement 認証モード](../../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)と[方法。SecurityBindingElement を使用してカスタム バインディングを作成する](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)します。  
+ この要素の使用方法の詳細については、「 [[認証モードの認証](../../../wcf/feature-details/securitybindingelement-authentication-modes.md)」および「方法:の設定を使用してカスタム](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)バインディングを作成します。  
   
 ## <a name="example"></a>例  
  次の例では、カスタム バインドを使用してセキュリティを構成する方法を示します。 カスタム バインディングを使用して、セキュリティで保護されたトランスポートと共にメッセージ レベルのセキュリティを有効にする方法を示します。 これは、クライアントとサービス間でメッセージを転送する際にセキュリティで保護されたトランスポートが必要であると同時に、そのメッセージをメッセージ レベルでセキュリティ保護する必要がある場合に便利です。 この構成は、システム指定のバインディングではサポートされていません。  
   
- サービス構成では、TLS/SSL プロトコルを使用して保護される TCP 通信、および Windows メッセージ セキュリティをサポートするカスタム バインディングが定義されます。 カスタム バインドはサービス証明書を使用して、トランスポート レベルでサービスを認証し、クライアントとサービス間で転送中のメッセージを保護します。 これは、 [ \<sslStreamSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)バインド要素。 サービスの証明書は、サービス動作を使用して構成されます。  
+ サービス構成では、TLS/SSL プロトコルを使用して保護される TCP 通信、および Windows メッセージ セキュリティをサポートするカスタム バインディングが定義されます。 カスタム バインドはサービス証明書を使用して、トランスポート レベルでサービスを認証し、クライアントとサービス間で転送中のメッセージを保護します。 これは、 [ \<sslstreamsecurity >](sslstreamsecurity.md) binding 要素によって実現されます。 サービスの証明書は、サービス動作を使用して構成されます。  
   
- さらに、カスタム バインドは Windows 資格情報の種類 (既定の資格情報の種類) によるメッセージ セキュリティを使用します。 これは、[セキュリティ](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)バインド要素。 Kerberos 認証機構が利用できる場合は、クライアントとサービスはどちらもメッセージ レベルのセキュリティを使用して認証されます。 Kerberos 認証機構が利用できない場合は、NTLM 認証が使用されます。 NTLM はサービスに対してクライアントを認証しますが、クライアントに対するサービスの認証は行いません。 [セキュリティ](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)バインド要素が使用するよう構成`SecureConversation`authenticationType で、クライアントとサービスの両方でセキュリティ セッションが作成されます。 これは、サービスの双方向コントラクトを動作させるために必要です。 この例の実行の詳細については、次を参照してください。[カスタム バインド セキュリティ](../../../../../docs/framework/wcf/samples/custom-binding-security.md)します。  
+ さらに、カスタム バインドは Windows 資格情報の種類 (既定の資格情報の種類) によるメッセージ セキュリティを使用します。 これは、[セキュリティ](security-of-custombinding.md)バインド要素によって実現されます。 Kerberos 認証機構が利用できる場合は、クライアントとサービスはどちらもメッセージ レベルのセキュリティを使用して認証されます。 Kerberos 認証機構が利用できない場合は、NTLM 認証が使用されます。 NTLM はサービスに対してクライアントを認証しますが、クライアントに対するサービスの認証は行いません。 [セキュリティ](security-of-custombinding.md)バインド要素は、authenticationType を使用`SecureConversation`するように構成されています。これにより、クライアントとサービスの両方でセキュリティセッションが作成されます。 これは、サービスの双方向コントラクトを動作させるために必要です。 この例の実行の詳細については、「[カスタムバインディングセキュリティ](../../../wcf/samples/custom-binding-security.md)」を参照してください。  
   
 ```xml  
 <configuration>
@@ -171,9 +171,9 @@ ms.locfileid: "61670585"
 - <xref:System.ServiceModel.Configuration.SecurityElement>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [バインディング](../../../../../docs/framework/wcf/bindings.md)
-- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [方法: SecurityBindingElement を使用してカスタム バインディングを作成します。](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [カスタム バインド セキュリティ](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+- [バインディング](../../../wcf/bindings.md)
+- [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
+- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)
+- [方法: 設定を使用してカスタムバインディングを作成する](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [カスタム バインド セキュリティ](../../../wcf/samples/custom-binding-security.md)

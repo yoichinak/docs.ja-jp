@@ -17,12 +17,12 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-ms.openlocfilehash: 983860c680b7c9bcf36406f61582a6b641fd26a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bd0010ccd3c7f6b2f4433fe8ce234bc806754260
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645298"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916242"
 ---
 # <a name="custom-serialization"></a>カスタムのシリアル化
 カスタムのシリアル化は、型のシリアル化と逆シリアル化を制御するプロセスです。 シリアル化を制御することで、シリアル化の互換性を保証できます。つまり、型のコア機能を損なうことなく、1 つの型の複数のバージョン間でシリアル化および逆シリアル化を行うことができます。 たとえば、最初のバージョンの型では、フィールドが 2 つだけあるとします。 新しいバージョンでは、これにいくつかのフィールドが追加されています。 この場合、2 番目のバージョンのアプリケーションでは、両方の型をシリアル化および逆シリアル化できる必要があります。 以下のセクションでは、シリアル化の制御方法について説明します。
@@ -30,7 +30,7 @@ ms.locfileid: "64645298"
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
   
 > [!IMPORTANT]
->  .NET Framework 4.0 よりも前のバージョンでは、部分的に信頼されたアセンブリでのカスタム ユーザー データのシリアル化は GetObjectData を使用して実行していました。 バージョン 4.0 以降では、そのメソッドは、部分的に信頼されたアセンブリで実行できないようにする <xref:System.Security.SecurityCriticalAttribute> 属性でマークされています。 この状況に対処するには、<xref:System.Runtime.Serialization.ISafeSerializationData> インターフェイスを実装します。  
+> .NET Framework 4.0 よりも前のバージョンでは、部分的に信頼されたアセンブリでのカスタム ユーザー データのシリアル化は GetObjectData を使用して実行していました。 バージョン 4.0 以降では、そのメソッドは、部分的に信頼されたアセンブリで実行できないようにする <xref:System.Security.SecurityCriticalAttribute> 属性でマークされています。 この状況に対処するには、<xref:System.Runtime.Serialization.ISafeSerializationData> インターフェイスを実装します。  
   
 ## <a name="running-custom-methods-during-and-after-serialization"></a>シリアル化時およびシリアル化後のカスタム メソッドの実行  
  ベスト プラクティスかつ最も簡単な方法 (.Net Framework Version 2.0 で導入されました) は、シリアル化時およびシリアル化後にデータを修正するための各メソッドに、以下の属性を適用することです。  

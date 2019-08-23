@@ -8,119 +8,119 @@ helpviewer_keywords:
 - interoperability [WPF], Windows Forms
 - hybrid control [WPF interoperability]
 ms.assetid: 9e8aa6b6-112c-4579-98d1-c974917df499
-ms.openlocfilehash: b2e0ee85a7edd07e7372b04c3a26a06416fb39d9
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 0326f283cb271d1578e94b648e423c6f88c579f0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859880"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917403"
 ---
 # <a name="wpf-and-windows-forms-interoperation"></a>WPF と Windows フォームの相互運用性
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]アプリケーション インターフェイスを作成するための 2 つの異なるアーキテクチャを提供します。 <xref:System.Windows.Forms.Integration?displayProperty=nameWithType>名前空間は、一般的な相互運用シナリオを有効にするクラスを提供します。 相互運用機能を実装する 2 つのキー クラスは<xref:System.Windows.Forms.Integration.WindowsFormsHost>と<xref:System.Windows.Forms.Integration.ElementHost>します。 このトピックでは、相互運用シナリオがサポートされているし、するシナリオはサポートされていませんがについて説明します。  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]と[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]には、アプリケーションインターフェイスを作成するための2つの異なるアーキテクチャがあります。 名前<xref:System.Windows.Forms.Integration?displayProperty=nameWithType>空間には、一般的な相互運用シナリオを可能にするクラスが用意されています。 相互運用機能を実装する2つの<xref:System.Windows.Forms.Integration.WindowsFormsHost>主要<xref:System.Windows.Forms.Integration.ElementHost>なクラスは、とです。 このトピックでは、サポートされている相互運用シナリオとサポートされていないシナリオについて説明します。  
   
 > [!NOTE]
->  特別な考慮事項が指定された、*ハイブリッド コントロール*シナリオ。 ハイブリッド コントロールには、その他のテクノロジからのコントロールに入れ子になった 1 つのテクノロジからのコントロールがあります。 これもと呼ばれる、*入れ子になった相互運用*します。 A*複数レベルのハイブリッド コントロール*ハイブリッドの 1 つ以上のレベルは入れ子を制御します。 複数レベルの入れ子になった相互運用性の例は、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールを含む、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]別に格納する[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロール。 複数レベルのハイブリッド コントロールがサポートされていません。  
+> *ハイブリッド制御*のシナリオには、特別な考慮事項があります。 ハイブリッドコントロールには、他のテクノロジのコントロールで入れ子になった1つのテクノロジからのコントロールがあります。 これは、入れ子に*なった相互運用*とも呼ばれます。 複数レベルの*ハイブリッドコントロール*には、複数レベルのハイブリッドコントロールの入れ子があります。 入れ子になった複数レベルの相互運用[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]の例とし[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]て、別[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]のコントロールを含むコントロールを含むコントロールがあります。 複数レベルのハイブリッドコントロールはサポートされていません。  
 
 <a name="Windows_Presentation_Foundation_Application_Hosting"></a>   
-## <a name="hosting-windows-forms-controls-in-wpf"></a>WPF でのフォーム コントロールの Windows のホスト  
- 次の相互運用シナリオがサポートされているときに、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コントロール Windows フォーム コントロールをホストします。  
+## <a name="hosting-windows-forms-controls-in-wpf"></a>WPF での Windows フォームコントロールのホスト  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コントロールが Windows フォームコントロールをホストする場合、次の相互運用シナリオがサポートされます。  
   
-- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コントロールは、1 つまたは複数をホストできます[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]XAML の使用を制御します。  
+- コントロール[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]は、XAML を使用し[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]て1つ以上のコントロールをホストできます。  
   
-- 1 つまたは複数をホストできます[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コードの使用を制御します。  
+- コードを使用して 1 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]つ以上のコントロールをホストできます。  
   
-- ホストできます[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]他を含むコンテナー コントロール[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロール。  
+- これは、 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]他の[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールを含むコンテナーコントロールをホストする場合があります。  
   
-- マスター/詳細フォームをホストすること、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]マスターと[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]詳細。  
+- マスター/詳細形式のフォーム[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]をホストし[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]ている場合があります。  
   
-- マスター/詳細フォームをホストすること、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]マスターと[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]詳細。  
+- マスター/詳細形式のフォーム[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]をホストし[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ている場合があります。  
   
-- 1 つ以上の ActiveX コントロールをホストできます。  
+- 1つ以上の ActiveX コントロールをホストできます。  
   
-- 1 つまたは複数の複合コントロールをホストできます。  
+- 1つ以上の複合コントロールをホストできます。  
   
-- 使用してハイブリッド コントロールをホストできます[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]します。  
+- これは、を使用し[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]てハイブリッドコントロールをホストする場合があります。  
   
-- コードを使用してハイブリッド コントロールをホストできます。  
+- コードを使用してハイブリッドコントロールをホストする場合があります。  
   
 ### <a name="layout-support"></a>レイアウトのサポート  
- 次の一覧が既知の制限事項について説明しますと、<xref:System.Windows.Forms.Integration.WindowsFormsHost>要素が、そのホスト型統合しようとしています。[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]にコントロールを、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]レイアウト システム。  
+ 次の一覧では、要素が<xref:System.Windows.Forms.Integration.WindowsFormsHost>ホスト[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]されるコントロールを[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]レイアウトシステムに統合しようとした場合の既知の制限事項について説明します。  
   
-- 場合によっては、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールのサイズを変更できない、または特定のディメンションにのみサイズを設定することができます。 たとえば、 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.ComboBox>コントロールにのみ、1 つの高さ、コントロールのフォント サイズで定義されているがサポートしています。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]動的のレイアウトは、要素のホスト型が垂直方向に拡張できますを前提としています。<xref:System.Windows.Forms.ComboBox>期待どおりに、コントロールは拡張されません。  
+- 場合によって[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]は、コントロールのサイズを変更したり、特定の大きさに合わせてサイズを変更したりすることはできません。 たとえば、コントロールは[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.ComboBox> 、コントロールのフォントサイズによって定義される1つの高さのみをサポートします。 動的レイアウトでは、要素が垂直方向に引き伸ばすことができると<xref:System.Windows.Forms.ComboBox>想定しているため、ホストされているコントロールは期待どおりに拡大されません。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]  
   
-- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロールを回転または傾斜ことはできません。 たとえば、ユーザー インターフェイスを 90 度回転するときにホスト[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールの垂直位置が維持されます。  
+- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールを回転または傾斜させることはできません。 たとえば、ユーザーインターフェイスを90度回転させると、ホスト[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]されたコントロールの位置が維持されます。  
   
-- ほとんどの場合、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールは比例してスケーリングをサポートしません。 コントロールの全体的なディメンションのスケーラビリティが子コントロールとコントロールのコンポーネント要素可能性がありますのサイズ変更されない期待どおりにします。 この制限はどの程度各依存[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールがスケーリングをサポートします。  
+- ほとんどの場合、 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールは比例スケールをサポートしていません。 コントロールの全体の次元はスケーリングされますが、コントロールの子コントロールとコンポーネント要素は、予期したとおりにサイズ変更されない可能性があります。 この制限は、各[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールがどの程度スケーリングをサポートするかによって異なります。  
   
-- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ユーザー インターフェイスの動作が重複する制御する要素の z オーダーを変更することができます。 ホストされた[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]の上に常に描画するために個別の HWND では、コントロールが描画される[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]要素。  
+- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ユーザーインターフェイスでは、要素の z オーダーを変更して、重なり合う動作を制御できます。 ホスト[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]されるコントロールは別の HWND で描画されるので、常に要素[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]の上に描画されます。  
   
-- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロールは、フォント サイズに基づいた自動スケールをサポートします。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]個々 の要素を動的に変更可能性がありますが、ユーザー インターフェイス、フォント サイズを変更するは全体のレイアウトのサイズを変更できません。  
+- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールは、フォントサイズに基づいて自動スケールをサポートします。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ユーザーインターフェイスでは、フォントサイズを変更してもレイアウト全体のサイズは変更されませんが、個々の要素のサイズは動的に変更される可能性があります。  
   
-### <a name="ambient-properties"></a>アンビエント プロパティ  
- 一部のアンビエント プロパティの[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コントロールが[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]対応します。 これらのアンビエント プロパティを反映する、ホストされている[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]を制御し、上のパブリック プロパティとして公開、<xref:System.Windows.Forms.Integration.WindowsFormsHost>コントロール。 <xref:System.Windows.Forms.Integration.WindowsFormsHost>コントロールにそれぞれ変換[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アンビエント プロパティにその[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]と同じです。  
+### <a name="ambient-properties"></a>アンビエントプロパティ  
+ コントロールの[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アンビエントプロパティには、同等[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]のものがあります。 これらのアンビエントプロパティは、ホスト[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]されるコントロールに反映され、 <xref:System.Windows.Forms.Integration.WindowsFormsHost>コントロールのパブリックプロパティとして公開されます。 コントロール<xref:System.Windows.Forms.Integration.WindowsFormsHost>は、各[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アンビエントプロパティを等価[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]のに変換します。  
   
- 詳細については、次を参照してください。 [Windows フォームと WPF プロパティのマッピング](windows-forms-and-wpf-property-mapping.md)します。  
+ 詳細については、「 [Windows フォームと WPF プロパティのマッピング](windows-forms-and-wpf-property-mapping.md)」を参照してください。  
   
 ### <a name="behavior"></a>動作  
  次の表では、相互運用の動作について説明します。  
   
 |動作|サポート状況|サポートなし|  
 |--------------|---------------|-------------------|  
-|[透明度]|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロールのレンダリングでは、透明性をサポートします。 親の背景[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コントロールの背景になれるホステッド[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロール。|いくつか[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールは透明度をサポートしません。 たとえば、<xref:System.Windows.Forms.TextBox>と<xref:System.Windows.Forms.ComboBox>コントロールをによってホストされているときに透明にすることはできません[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]します。|  
-|Tab キーによる移動|タブ オーダーがホストされている[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールは、それらのコントロールがでホストされている場合と同じ、 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-ベースのアプリケーション。<br /><br /> Tab、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]への制御、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]通常どおりに動作を TAB キーと shift キーを押しながら TAB キーを制御します。<br /><br /> [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロールを持つ、<xref:System.Windows.Forms.Control.TabStop%2A>プロパティの値`false`ときに、ユーザーがタブ コントロール内にフォーカスを受け取るされません。<br /><br /> -各<xref:System.Windows.Forms.Integration.WindowsFormsHost>コントロールが、<xref:System.Windows.Forms.Integration.WindowsFormsHost.TabIndex%2A>値で、タイミングを決定する<xref:System.Windows.Forms.Integration.WindowsFormsHost>コントロールがフォーカスを受け取る。<br />-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロール内に含まれる、<xref:System.Windows.Forms.Integration.WindowsFormsHost>コンテナーで指定された順序に従う、<xref:System.Windows.Forms.Control.TabIndex%2A>プロパティ。 フォーカスを次に設定する最後のタブ インデックスから tab キーによる移動[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]が存在する場合は、制御します。 その他のフォーカス[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]を返します。 最初のタブ コントロールが存在する[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]タブ オーダーでコントロールできます。<br />-   <xref:System.Windows.Forms.Integration.WindowsFormsHost.TabIndex%2A> コントロール内の値、<xref:System.Windows.Forms.Integration.WindowsFormsHost>は兄弟を基準と[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールに含まれている、<xref:System.Windows.Forms.Integration.WindowsFormsHost>コントロール。<br />-コントロール固有の動作は、のタブ移動されます。 TAB キーを押すなど、<xref:System.Windows.Forms.TextBox>を持つコントロールを<xref:System.Windows.Forms.TextBoxBase.AcceptsTab%2A>プロパティ値の`true`フォーカスを移動する代わりにテキスト ボックスにタブを入力します。|該当なし。|  
-|方向キーを使用したナビゲーション|矢印の付いたナビゲーション キー、<xref:System.Windows.Forms.Integration.WindowsFormsHost>コントロールは、通常と同じ[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コンテナー コントロール。上向き矢印と左方向キーは、前のコントロールを選択し、下向き矢印と右矢印キーが次のコントロールを選択します。<br />-最初のコントロールに含まれているからと左方向キーを<xref:System.Windows.Forms.Integration.WindowsFormsHost>コントロールは、SHIFT キーを押しながら TAB キーのキーボード ショートカットと同じアクションを実行します。 フォーカスを設定できる場合[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]外部コントロール、フォーカスの移動、<xref:System.Windows.Forms.Integration.WindowsFormsHost>コントロール。 この動作は、標準<xref:System.Windows.Forms.ContainerControl>その動作は行われません、最後にコントロールをラップします。 その他のフォーカス[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コントロールが存在すると、フォーカスが戻ります最後[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]タブ オーダーでコントロール。<br />-最後のコントロールに含まれている矢印および右矢印キーを<xref:System.Windows.Forms.Integration.WindowsFormsHost>コントロールは、TAB キーと同じアクションを実行します。 フォーカスを設定できる場合[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]外部コントロール、フォーカスの移動、<xref:System.Windows.Forms.Integration.WindowsFormsHost>コントロール。 この動作は、標準<xref:System.Windows.Forms.ContainerControl>動作を最初のコントロールに折り返しは行われません。 その他のフォーカス[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]にフォーカスが戻りますコントロールが存在する最初の[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]タブ オーダーでコントロール。|該当なし。|  
-|アクセラレータ|アクセラレータは、「サポートされていません」の列に示されている場合を除き、通常どおりに動作します。|通常のアクセラレータが重複しないようなテクノロジの間で重複するアクセラレータは機能しません。 アクセラレータに少なくとも 1 つのテクノロジで複製されるときに、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールと上、その他の[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コントロール、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールが常に、アクセラレータを受け取ります。 重複するアクセラレータが押されたときに、コントロール間でフォーカスが切り替わりません。|  
-|ショートカット キー|ショートカット キーは、「サポートされていません」の列に示されている場合を除き、通常どおりに動作します。|-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ショートカット キーは、前処理段階で常に処理するよりも優先[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ショートカット キー。 ある場合など、<xref:System.Windows.Forms.ToolStrip>で定義されている場合、CTRL + S ショートカット キーの制御し、は、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] CTRL + S にバインドされているコマンド、<xref:System.Windows.Forms.ToolStrip>フォーカスに関係なくコントロール ハンドラーが最初に、常に呼び出されます。<br />-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ショートカット キーによって処理される、<xref:System.Windows.Forms.Control.KeyDown>イベントが最後に処理されて[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]します。 この動作をオーバーライドすることで防ぐことができます、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールの<xref:System.Windows.Forms.Control.IsInputKey%2A>メソッドまたは処理、<xref:System.Windows.Forms.Control.PreviewKeyDown>イベント。 返す`true`から、<xref:System.Windows.Forms.Control.IsInputKey%2A>メソッド、またはの値を設定、<xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A?displayProperty=nameWithType>プロパティを`true`で、<xref:System.Windows.Forms.Control.PreviewKeyDown>イベント ハンドラー。|  
-|AcceptsReturn、AcceptsTab、およびその他のコントロールに固有の動作|既定のキーボード動作を変更するプロパティの動作を通常どおり、あると仮定して、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]上書きを制御、<xref:System.Windows.Forms.Control.IsInputKey%2A>メソッドを返す`true`します。|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 既定値を変更するコントロールが処理することによって動作をキーボード、<xref:System.Windows.Forms.Control.KeyDown>イベントは、ホストで最後に処理[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コントロール。 これらのコントロールは最後に処理されるため、予期しない動作する可能性があります。|  
-|Enter および Leave イベント|ときにフォーカスを格納しているに送られない<xref:System.Windows.Forms.Integration.ElementHost>を制御する、」と入力しのままにイベントが通常どおり 1 つのフォーカスが変更されたときに発生<xref:System.Windows.Forms.Integration.WindowsFormsHost>コントロール。|入力し、次のフォーカスの変更が発生すると終了イベントは発生しません。<br /><br /> 元の外部の内側に、<xref:System.Windows.Forms.Integration.WindowsFormsHost>コントロール。<br />外部の内、<xref:System.Windows.Forms.Integration.WindowsFormsHost>コントロール。<br />-外部、<xref:System.Windows.Forms.Integration.WindowsFormsHost>コントロール。<br />[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]でホストされているコントロールを<xref:System.Windows.Forms.Integration.WindowsFormsHost>への制御、<xref:System.Windows.Forms.Integration.ElementHost>同じ内でホストされるコントロール<xref:System.Windows.Forms.Integration.WindowsFormsHost>。|  
-|マルチスレッド|さまざまなマルチ スレッドがサポートされています。|両方の[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]と[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]テクノロジは、シングル スレッドの同時実行モデルを想定しています。 デバッグ中に、他のスレッドから framework のオブジェクトへの呼び出しでこの要件を強制する例外が発生します。|  
-|セキュリティ|すべての相互運用シナリオでは、完全な信頼が必要です。|部分信頼では、相互運用シナリオは許可されません。|  
-|ユーザー補助|すべてのユーザー補助のシナリオがサポートされています。 両方を含むハイブリッド アプリケーションを使用している場合に、支援技術製品が正常に機能[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]と[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コントロール。|該当なし。|  
-|クリップボードのトピック|すべてのクリップボード操作は通常どおりに動作します。 これは、カット アンド ペーストとの間に含まれます[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]と[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コントロール。|該当なし。|  
-|ドラッグ アンド ドロップ機能|すべてのドラッグ アンド ドロップ操作が通常どおりに動作します。 間での操作が含まれます[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]と[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コントロール。|該当なし。|  
+|[透明度]|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールのレンダリングは透明度をサポートします。 親[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コントロールの背景が、ホスト[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]されているコントロールの背景になる場合があります。|一部[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]のコントロールは、透明度をサポートしていません。 たとえば<xref:System.Windows.Forms.TextBox> 、コントロールと<xref:System.Windows.Forms.ComboBox>コントロールは、でホストされて[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]いる場合は透過的になりません。|  
+|インデント|ホスト[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]されたコントロールのタブオーダーは、これらのコントロールがベースの[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]アプリケーションでホストされている場合と同じです。<br /><br /> Tab キーおよび[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] SHIFT + TAB [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]キーを使用してコントロールからコントロールに tab キーを押すと、通常どおりに動作します。<br /><br /> [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.TabStop%2A> の`false`プロパティ値を持つコントロールは、ユーザーがコントロールを使用してタブを表示してもフォーカスを受け取りません。<br /><br /> -各<xref:System.Windows.Forms.Integration.WindowsFormsHost>コントロール<xref:System.Windows.Forms.Integration.WindowsFormsHost.TabIndex%2A>には、その<xref:System.Windows.Forms.Integration.WindowsFormsHost>コントロールがフォーカスを受け取るタイミングを決定する値があります。<br />-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Integration.WindowsFormsHost>コンテナー内に含まれるコントロールは、 <xref:System.Windows.Forms.Control.TabIndex%2A>プロパティで指定された順序に従います。 最後のタブインデックスから tab キーを置くと、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]次のコントロール (存在する場合) にフォーカスが移動します。 フォーカス[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]がある他のコントロールが存在しない場合は[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 、タブオーダーの最初のコントロールに戻ります。<br />-   <xref:System.Windows.Forms.Integration.WindowsFormsHost.TabIndex%2A>内<xref:System.Windows.Forms.Integration.WindowsFormsHost>のコントロールの値は、 <xref:System.Windows.Forms.Integration.WindowsFormsHost>コントロールに[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]含まれる兄弟コントロールに対して相対的です。<br />-Tab キーを指定すると、コントロール固有の動作が受け入れます。 たとえば、 <xref:System.Windows.Forms.TextBox> <xref:System.Windows.Forms.TextBoxBase.AcceptsTab%2A>プロパティ値`true`がであるコントロールで tab キーを押すと、フォーカスを移動するのではなく、テキストボックスにタブが表示されます。|該当なし。|  
+|方向キーを使用したナビゲーション|- <xref:System.Windows.Forms.Integration.WindowsFormsHost>コントロールの方向キーを使用したナビゲーションは、通常[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]のコンテナーコントロールの場合と同じです。上方向キーと左方向キーは、前のコントロールを選択し、下方向キーと右方向キーは次のコントロールを選択します。<br />- <xref:System.Windows.Forms.Integration.WindowsFormsHost>コントロールに含まれている最初のコントロールの上方向キーと左方向キーは、SHIFT + TAB キーショートカットと同じ操作を実行します。 フォーカスがある[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コントロールがある場合、フォーカスはコントロール<xref:System.Windows.Forms.Integration.WindowsFormsHost>の外に移動します。 この動作は、最後の<xref:System.Windows.Forms.ContainerControl>コントロールがラップされていないという点で、標準の動作とは異なります。 フォーカスがある他[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]のコントロールが存在しない場合は[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 、タブオーダーの最後のコントロールにフォーカスが戻ります。<br />- <xref:System.Windows.Forms.Integration.WindowsFormsHost>コントロールに含まれている最後のコントロールの下方向キーと右方向キーは、TAB キーと同じ操作を実行します。 フォーカスがある[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コントロールがある場合、フォーカスはコントロール<xref:System.Windows.Forms.Integration.WindowsFormsHost>の外に移動します。 この動作は、最初の<xref:System.Windows.Forms.ContainerControl>コントロールのラップが行われないという点で、標準の動作とは異なります。 フォーカスがある他[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]のコントロールが存在しない場合は[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 、タブオーダーの最初のコントロールにフォーカスが戻ります。|該当なし。|  
+|アクセラレータ|アクセラレータは、"サポートされていません" 列に記載されている場合を除き、通常どおりに動作します。|テクノロジ間の重複するアクセラレータは、通常の重複アクセラレータと同じようには機能しません。 複数のテクノロジにわたってアクセラレータが複製され、コントロール上[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]に少なくと[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]も1つのコントロールが[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]ある場合、コントロールは常にアクセラレータを受け取ります。 重複するアクセラレータが押されている場合、フォーカスは切り替えられません。|  
+|ショートカットキー|ショートカットキーは、"サポートされていません" 列に記載されている場合を除き、通常どおりに動作します。|-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]前処理段階で処理されるショートカットキーは、常に[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ショートカットキーよりも優先されます。 たとえば、ctrl + s ショートカット<xref:System.Windows.Forms.ToolStrip>キーが定義されているコントロールがあり、 <xref:System.Windows.Forms.ToolStrip> ctrl + [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] s にバインドされたコマンドがある場合、フォーカスに関係なく、常にコントロールハンドラーが最初に呼び出されます。<br />-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.KeyDown>イベントによって処理されるショートカットキーは、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]で最後に処理されます。 この動作を回避するには、 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールの<xref:System.Windows.Forms.Control.IsInputKey%2A>メソッドをオーバーライドする<xref:System.Windows.Forms.Control.PreviewKeyDown>か、イベントを処理します。 `true` <xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A?displayProperty=nameWithType> `true`メソッドからを返すか、 <xref:System.Windows.Forms.Control.PreviewKeyDown>イベントハンドラーでプロパティの値をに設定します。 <xref:System.Windows.Forms.Control.IsInputKey%2A>|  
+|AcceptsReturn、AcceptsTab、およびその他のコントロール固有の動作|既定のキーボード動作を変更するプロパティは、コントロールが[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]メソッドを<xref:System.Windows.Forms.Control.IsInputKey%2A>オーバーライドしてを返す`true`ことを想定して、通常どおりに動作します。|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]イベントを<xref:System.Windows.Forms.Control.KeyDown>処理することによって既定のキーボード動作を変更するコントロール[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]は、ホストコントロールで最後に処理されます。 これらのコントロールは最後に処理されるため、予期しない動作が発生する可能性があります。|  
+|イベントの開始と終了|フォーカスが格納<xref:System.Windows.Forms.Integration.ElementHost>しているコントロールに移動しない場合、1つ<xref:System.Windows.Forms.Integration.WindowsFormsHost>のコントロールでフォーカスが変更されると、Enter イベントと Leave イベントが通常どおりに発生します。|次のような変更が発生すると、Enter イベントと Leave イベントは発生しません。<br /><br /> -内部からコントロールの<xref:System.Windows.Forms.Integration.WindowsFormsHost>外部へ。<br />-外側から<xref:System.Windows.Forms.Integration.WindowsFormsHost>コントロール内へ。<br />-コントロールの<xref:System.Windows.Forms.Integration.WindowsFormsHost>外側。<br />- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロール<xref:System.Windows.Forms.Integration.WindowsFormsHost>でホストされているコントロールから<xref:System.Windows.Forms.Integration.ElementHost> 、同じ<xref:System.Windows.Forms.Integration.WindowsFormsHost>内でホストされているコントロールへの。|  
+|マルチスレッド|すべての種類のマルチスレッドがサポートされています。|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] と[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]テクノロジはどちらも、シングルスレッドの同時実行モデルを想定しています。 デバッグ中に、他のスレッドからフレームワークオブジェクトを呼び出すと、例外が発生し、この要件が適用されます。|  
+|セキュリティ|すべての相互運用シナリオには、完全な信頼が必要です。|部分信頼では、相互運用シナリオは許可されません。|  
+|ユーザー補助|すべてのユーザー補助シナリオがサポートされています。 との両方[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]のコントロールを含むハイブリッドアプリケーションでは、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]支援技術製品が正しく機能します。|該当なし。|  
+|クリップボードのトピック|すべてのクリップボード操作は通常どおりに動作します。 これには、コントロールと[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コントロールの間の切り取りと貼り付けが含まれます。|該当なし。|  
+|ドラッグアンドドロップ機能|すべてのドラッグアンドドロップ操作は通常どおりに動作します。 これには、 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロール[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]とコントロールの間の操作が含まれます。|該当なし。|  
   
 <a name="Windows_Forms_Application_Hosting_Windows"></a>   
 ## <a name="hosting-wpf-controls-in-windows-forms"></a>Windows フォームでの WPF コントロールのホスト  
- Windows フォーム コントロールのホスト時に、次の相互運用シナリオがサポートされて、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コントロール。  
+ Windows フォームコントロールがコントロールを[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ホストする場合、次の相互運用シナリオがサポートされます。  
   
-- 1 つまたは複数のホスト[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コードの使用を制御します。  
+- コードを使用し[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]て1つ以上のコントロールをホストする。  
   
-- 1 つのシートまたはよりホストのプロパティを関連付ける[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コントロール。  
+- プロパティシートと1つ以上のホスト[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]されるコントロールとの関連付け。  
   
-- 1 つまたは複数のホスト[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]フォーム内のページ。  
+- 1つ[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]以上のページをフォームでホストする。  
   
-- 以降、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ウィンドウ。  
+- ウィンドウを[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]起動しています。  
   
-- マスター/詳細フォームをホストしている、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]マスターと[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]詳細。  
+- マスター/詳細を含む[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]フォームをホストする。  
   
-- マスター/詳細フォームをホストしている、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]マスターと[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]詳細。  
+- マスター/詳細を含む[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]フォームをホストする。  
   
-- カスタム ホスト[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コントロール。  
+- カスタム[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コントロールをホストしています。  
   
-- ハイブリッド コントロールをホストします。  
+- ハイブリッドコントロールをホストする。  
   
-### <a name="ambient-properties"></a>アンビエント プロパティ  
- 一部のアンビエント プロパティの[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールが[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]対応します。 これらのアンビエント プロパティを反映する、ホストされている[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]を制御し、上のパブリック プロパティとして公開、<xref:System.Windows.Forms.Integration.ElementHost>コントロール。 <xref:System.Windows.Forms.Integration.ElementHost>コントロールにそれぞれ変換[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]アンビエント プロパティをその[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]と同じです。  
+### <a name="ambient-properties"></a>アンビエントプロパティ  
+ コントロールの[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]アンビエントプロパティには、同等[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]のものがあります。 これらのアンビエントプロパティは、ホスト[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]されるコントロールに反映され、 <xref:System.Windows.Forms.Integration.ElementHost>コントロールのパブリックプロパティとして公開されます。 コントロール<xref:System.Windows.Forms.Integration.ElementHost>は、各[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]アンビエントプロパティを等価[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]のに変換します。  
   
- 詳細については、次を参照してください。 [Windows フォームと WPF プロパティのマッピング](windows-forms-and-wpf-property-mapping.md)します。  
+ 詳細については、「 [Windows フォームと WPF プロパティのマッピング](windows-forms-and-wpf-property-mapping.md)」を参照してください。  
   
 ### <a name="behavior"></a>動作  
  次の表では、相互運用の動作について説明します。  
   
 |動作|サポート状況|サポートなし|  
 |--------------|---------------|-------------------|  
-|[透明度]|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コントロールのレンダリングでは、透明性をサポートします。 親の背景[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールの背景になれるホステッド[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コントロール。|該当なし。|  
-|マルチスレッド|さまざまなマルチ スレッドがサポートされています。|両方の[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]と[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]テクノロジは、シングル スレッドの同時実行モデルを想定しています。 デバッグ中に、他のスレッドから framework のオブジェクトへの呼び出しでこの要件を強制する例外が発生します。|  
-|セキュリティ|すべての相互運用シナリオでは、完全な信頼が必要です。|部分信頼では、相互運用シナリオは許可されません。|  
-|ユーザー補助|すべてのユーザー補助のシナリオがサポートされています。 両方を含むハイブリッド アプリケーションを使用している場合に、支援技術製品が正常に機能[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]と[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コントロール。|該当なし。|  
-|クリップボードのトピック|すべてのクリップボード操作は通常どおりに動作します。 これは、カット アンド ペーストとの間に含まれます[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]と[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コントロール。|該当なし。|  
-|ドラッグ アンド ドロップ機能|すべてのドラッグ アンド ドロップ操作が通常どおりに動作します。 間での操作が含まれます[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]と[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コントロール。|該当なし。|  
+|[透明度]|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コントロールのレンダリングは透明度をサポートします。 親[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールの背景が、ホスト[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]されているコントロールの背景になる場合があります。|該当なし。|  
+|マルチスレッド|すべての種類のマルチスレッドがサポートされています。|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] と[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]テクノロジはどちらも、シングルスレッドの同時実行モデルを想定しています。 デバッグ中に、他のスレッドからフレームワークオブジェクトを呼び出すと、例外が発生し、この要件が適用されます。|  
+|セキュリティ|すべての相互運用シナリオには、完全な信頼が必要です。|部分信頼では、相互運用シナリオは許可されません。|  
+|ユーザー補助|すべてのユーザー補助シナリオがサポートされています。 との両方[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]のコントロールを含むハイブリッドアプリケーションでは、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]支援技術製品が正しく機能します。|該当なし。|  
+|クリップボードのトピック|すべてのクリップボード操作は通常どおりに動作します。 これには、コントロールと[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コントロールの間の切り取りと貼り付けが含まれます。|該当なし。|  
+|ドラッグアンドドロップ機能|すべてのドラッグアンドドロップ操作は通常どおりに動作します。 これには、 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロール[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]とコントロールの間の操作が含まれます。|該当なし。|  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [チュートリアル: WPF での Windows フォーム コントロールのホスト](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
-- [チュートリアル: WPF で Windows フォーム複合コントロールのホスト](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [チュートリアル: Windows フォームでの WPF 複合コントロールをホストしています。](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [チュートリアル: WPF での Windows フォームコントロールのホスト](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [チュートリアル: WPF での Windows フォーム複合コントロールのホスト](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [チュートリアル: Windows フォームでの WPF 複合コントロールのホスト](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
 - [Windows フォームと WPF プロパティの割り当て](windows-forms-and-wpf-property-mapping.md)

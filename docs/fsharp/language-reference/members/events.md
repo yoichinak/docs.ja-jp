@@ -2,12 +2,12 @@
 title: イベント
 description: イベントをF#使用して関数呼び出しをユーザーアクションに関連付ける方法について説明します。これは GUI プログラミングで重要です。
 ms.date: 05/16/2016
-ms.openlocfilehash: eed2caff569638ea5aa972a000dfa71a3b64f60b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7c3f16204b762609323fc2bcdc05f80e85a298e8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627570"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917278"
 ---
 # <a name="events"></a>イベント
 
@@ -175,7 +175,7 @@ Application.Run(appForm)
 ## <a name="see-also"></a>関連項目
 
 - [メンバー](index.md)
-- [イベントの処理と発生](../../../../docs/standard/events/index.md)
+- [イベントの処理と発生](../../../standard/events/index.md)
 - [ラムダ式:`fun`キーワード](../functions/lambda-expressions-the-fun-keyword.md)
 - [コントロール. イベントモジュール](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event-module-%5bfsharp%5d)
 - [Control. イベント&#60;t&#62;クラス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)

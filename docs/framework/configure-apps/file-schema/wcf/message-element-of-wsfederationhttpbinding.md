@@ -1,16 +1,16 @@
 ---
-title: <message> 要素 <wsFederationHttpBinding>
+title: <message>の要素<wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
-ms.openlocfilehash: 79739dd715d7982555e5577c921cb65156af5923
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4730d7e573eefdfcd5704621d0a7ccaa15f76d3a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769877"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931578"
 ---
-# <a name="message-element-of-wsfederationhttpbinding"></a>\<メッセージ > 要素の\<wsFederationHttpBinding >
-メッセージ レベル セキュリティの設定を定義、 [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)します。  
+# <a name="message-element-of-wsfederationhttpbinding"></a>\<wsFederationHttpBinding > の\<メッセージ > 要素
+[ \<WsFederationHttpBinding >](wsfederationhttpbinding.md)のメッセージレベルセキュリティの設定を定義します。  
   
  \<system.ServiceModel >  
 \<bindings>  
@@ -86,14 +86,14 @@ ms.locfileid: "61769877"
   
 |属性|説明|  
 |---------------|-----------------|  
-|algorithmSuite|メッセージの暗号化とキー ラップ アルゴリズムを設定します。 この属性の有効な値については、「algorithmSuite 属性」の表を参照してください。 既定値は `Basic256` です。<br /><br /> この属性は <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 型です。 これらのアルゴリズムは、Security Policy Language (WS-SecurityPolicy) の仕様で指定されているアルゴリズムに対応付けられています。|  
-|issuedKeyType|発行されるキーの種類を指定します。 以下の値が有効です。<br /><br /> SymmetricKey<br />-公開鍵<br /><br /> 既定値は `SymmetricKey` です。 この属性は <xref:System.IdentityModel.Tokens.SecurityKeyType> 型です。|  
+|algorithmSuite|メッセージの暗号化とキー ラップ アルゴリズムを設定します。 この属性の有効な値については、「algorithmSuite 属性」の表を参照してください。 既定値は `Basic256` です。<br /><br /> この属性は <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 型です。 これらのアルゴリズムは、セキュリティ ポリシー言語 (WS-SecurityPolicy) 仕様で指定されたアルゴリズムにマップされます。|  
+|issuedKeyType|発行されるキーの種類を指定します。 有効な値は次のとおりです。<br /><br /> -SymmetricKey<br />-PublicKey<br /><br /> 既定値は `SymmetricKey` です。 この属性は <xref:System.IdentityModel.Tokens.SecurityKeyType> 型です。|  
 |issuedTokenType|発行されるトークンの型を指定する URI を含む文字列。 既定値は `null` です。|  
 |negotiateServiceCredential|サービス資格情報がネゴシエーションの一部として交換されるか、帯域外で使用できるかを指定するブール値。 既定値は `true` で、サービス資格情報がネゴシエートされます。|  
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite 属性  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |Basic128|Basic128 暗号化を使用し、メッセージ ダイジェストには Sha1 を、キー ラップには Rsa-oaep-mgf1p を使用します。|  
 |Basic192|Basic192 暗号化を使用し、メッセージ ダイジェストには Sha1 を、キー ラップには Rsa-oaep-mgf1p を使用します。|  
@@ -116,16 +116,16 @@ ms.locfileid: "61769877"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|このバインディングのクレームの種類のコレクションを指定します。 各要素は <xref:System.ServiceModel.Configuration.ClaimTypeElement> 型です。|  
+|[\<claimTypeRequirements>](claimtyperequirements-element.md)|このバインディングのクレームの種類のコレクションを指定します。 各要素は <xref:System.ServiceModel.Configuration.ClaimTypeElement> 型です。|  
 |issuer|セキュリティ トークンを発行するエンドポイントを指定します。 この要素は <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement> 型です。|  
 |issuerMetadata|発行者のエンドポイント アドレスを指定します。|  
-|[\<tokenRequestParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|トークン要求パラメーターのコレクション。 各パラメーターは、XML 要素です。|  
+|[\<tokenRequestParameters>](tokenrequestparameters.md)|トークン要求パラメーターのコレクション。 各パラメーターは、XML 要素です。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md)|バインディングのセキュリティ設定を定義します。|  
+|[\<security>](security-of-wsfederationhttpbinding.md)|バインディングのセキュリティ設定を定義します。|  
   
 ## <a name="see-also"></a>関連項目
 
@@ -133,8 +133,8 @@ ms.locfileid: "61769877"
 - <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>
-- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [バインディング](../../../../../docs/framework/wcf/bindings.md)
-- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [サービスおよびクライアントのセキュリティ保護](../../../wcf/feature-details/securing-services-and-clients.md)
+- [バインディング](../../../wcf/bindings.md)
+- [システムが提供するバインディングの構成](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [サービスとクライアントを構成するためのバインディングの使用](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

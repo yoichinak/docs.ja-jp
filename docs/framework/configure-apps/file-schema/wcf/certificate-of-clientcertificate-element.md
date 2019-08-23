@@ -2,12 +2,12 @@
 title: <certificate> <clientCertificate>要素
 ms.date: 03/30/2017
 ms.assetid: 00297efb-a7f2-4e03-bc2b-943d545610fc
-ms.openlocfilehash: 98e60d750dad1529ffb35055d26e278ceb7c873a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1af56280397e7d8924656f2f7cda5af4e30e91e3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704350"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926185"
 ---
 # <a name="certificate-of-clientcertificate-element"></a>\<証明書 > の\<clientCertificate > 要素
 メッセージの署名と暗号化に使用される X.509 証明書を指定します。  
@@ -48,10 +48,10 @@ ms.locfileid: "61704350"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<clientCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)||  
+|[\<clientCertificate>](clientcertificate-of-servicecredentials.md)||  
   
 ## <a name="remarks"></a>Remarks  
- `<certificate>` 要素は、サービスがクライアントと安全に通信するために、サービスが前もってクライアントの証明書を持っている必要がある場合に使用します。 このような状況は、双方向通信パターンを使用する場合に生じます。 より一般的な要求/応答パターンでは、クライアントは自身の証明書を要求に含め、サービスはそれを使用してクライアントへの応答を暗号化し、署名します。 一方、双方向通信パターンでは、サービスにはクライアントからの要求が来ないので、クライアントの証明書をあらかじめ取得することで、クライアント宛のメッセージのセキュリティを保護する必要があります。 このため、クライアントの証明書を帯域外のネゴシエーションで取得し、この要素を使用して証明書を指定する必要があります。 双方向サービスの詳細については、次を参照してください。[方法。双方向コントラクトを作成する](../../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)します。  
+ `<certificate>` 要素は、サービスがクライアントと安全に通信するために、サービスが前もってクライアントの証明書を持っている必要がある場合に使用します。 このような状況は、双方向通信パターンを使用する場合に生じます。 より一般的な要求/応答パターンでは、クライアントは自身の証明書を要求に含め、サービスはそれを使用してクライアントへの応答を暗号化し、署名します。 一方、双方向通信パターンでは、サービスにはクライアントからの要求が来ないので、クライアントの証明書をあらかじめ取得することで、クライアント宛のメッセージのセキュリティを保護する必要があります。 このため、クライアントの証明書を帯域外のネゴシエーションで取得し、この要素を使用して証明書を指定する必要があります。 双方向サービスの詳細については、次を参照してください。[方法。双方向コントラクトを作成する](../../../wcf/feature-details/how-to-create-a-duplex-contract.md)します。  
   
 ## <a name="example"></a>例  
  次のコードは、`<authentication>` 要素の適切な X.509 証明書とカスタム検証タイプの検索方法を指定します。  
@@ -79,6 +79,6 @@ ms.locfileid: "61704350"
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.Certificate%2A>
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement.Certificate%2A>
 - <xref:System.ServiceModel.Configuration.X509ClientCertificateCredentialsElement>
-- [セキュリティ動作](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [方法: カスタム証明書の検証を使用するサービスを作成します。](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)
-- [証明書の使用](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [セキュリティ動作](../../../wcf/feature-details/security-behaviors-in-wcf.md)
+- [方法: カスタム証明書の検証を使用するサービスを作成します。](../../../wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)
+- [証明書の使用](../../../wcf/feature-details/working-with-certificates.md)

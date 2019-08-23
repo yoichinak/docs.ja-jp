@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keyfile compiler option [Visual Basic]
 - -keyfile compiler option [Visual Basic]
 ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
-ms.openlocfilehash: c13f34c23cad9c909c2c5bd3447f1a8fa53f9b4d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b2084a1c0ee30478cdc9193cdfcb19476499ee93
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793963"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924867"
 ---
 # <a name="-keyfile"></a>-keyfile
 アセンブリに厳密な名前を付けるキーまたはキー ペアを含むファイルを指定します。  
@@ -24,28 +24,28 @@ ms.locfileid: "61793963"
   
 ## <a name="arguments"></a>引数  
  `file`  
- 必須。 キーを含むファイルです。 ファイル名にスペースが含まれている場合は、名前を引用符で囲みます ("")。  
+ 必須。 キーを含むファイル。 ファイル名にスペースが含まれている場合は、名前を引用符 ("") で囲みます。  
   
 ## <a name="remarks"></a>Remarks  
- コンパイラはアセンブリ マニフェストに公開キーを挿入し、秘密キーで最終アセンブリに署名します。 キー ファイルを生成するには、コマンド ラインで「`sn -k file`」と入力します。 詳細については、次を参照してください。 [Sn.exe (厳密名ツール)](../../../framework/tools/sn-exe-strong-name-tool.md))。  
+ コンパイラは公開キーをアセンブリマニフェストに挿入し、秘密キーを使用して最終的なアセンブリに署名します。 キー ファイルを生成するには、コマンド ラインで「`sn -k file`」と入力します。 詳細については、「 [sn.exe (厳密名ツール)](../../../framework/tools/sn-exe-strong-name-tool.md)」を参照してください。  
   
- 使用してコンパイルする場合`-target:module`、キー ファイルの名前がモジュールに保持され、使用してアセンブリをコンパイルするときに作成されるアセンブリに組み込まれます[/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)します。  
+ を指定して`-target:module`コンパイルすると、キーファイルの名前がモジュールに保持され、 [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)を使用してアセンブリをコンパイルするときに作成されるアセンブリに組み込まれます。  
   
  また、暗号化情報を [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md) でコンパイラに渡すことができます。 部分的に署名されたアセンブリを作成する場合は、[-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md) を使います。  
   
- カスタム属性として、このオプションを指定することもできます (<xref:System.Reflection.AssemblyKeyFileAttribute>) 任意の Microsoft intermediate language モジュールのソース コードにします。  
+ このオプションは、Microsoft 中間言語モジュールのソースコード<xref:System.Reflection.AssemblyKeyFileAttribute>でカスタム属性 () として指定することもできます。  
   
- 場合両方`-keyfile`と[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)がで指定された (コマンド ライン オプションまたはカスタム属性によって)、同じコンパイル時に、コンパイラが最初にキー コンテナーを試みます。 それが成功すると、アセンブリはキー コンテナーの情報で署名されます。 指定したファイルがしようと、コンパイラがキー コンテナーを見つけられない場合`-keyfile`します。 これが成功すると、アセンブリは、キー ファイルの情報で署名およびキーの情報がキー コンテナーにインストールされている場合 (のような`sn -i`) 次のコンパイル時にキー コンテナーが有効になるようにします。  
+ 同じコンパイルで`-keyfile` (コマンドラインオプションまたはカスタム属性によって) と[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)の両方が指定されている場合、コンパイラは最初にキーコンテナーを試行します。 それが成功すると、アセンブリはキー コンテナーの情報で署名されます。 キーコンテナーが見つからない場合、コンパイラはで`-keyfile`指定されたファイルを試行します。 これが成功した場合、アセンブリはキーファイルの情報で署名され、キー情報はキーコンテナー (に`sn -i`似ています) にインストールされるため、次のコンパイル時にキーコンテナーが有効になります。  
   
  キー ファイルには公開キーだけが含まれる場合があることに注意してください。  
   
- 参照してください[の作成と using strong-named Assemblies](../../../framework/app-domains/create-and-use-strong-named-assemblies.md)アセンブリへの署名の詳細についてはします。  
+ アセンブリに署名する方法の詳細については、「[厳密な名前付きアセンブリの作成と使用](../../../framework/app-domains/create-and-use-strong-named-assemblies.md)」を参照してください。  
   
 > [!NOTE]
->  `-keyfile`オプションは、Visual Studio 開発環境内からは使用できません。 コマンドラインからコンパイルする場合にのみ使用可能なです。  
+> この`-keyfile`オプションは、Visual Studio 開発環境内からは使用できません。コマンドラインからコンパイルする場合にのみ使用できます。  
   
 ## <a name="example"></a>例  
- 次のコードは、ソース ファイルをコンパイル`Input.vb`キー ファイルを指定します。  
+ 次のコードでは、 `Input.vb`ソースファイルをコンパイルし、キーファイルを指定しています。  
   
 ```console  
 vbc -keyfile:myfile.sn input.vb  
@@ -55,5 +55,5 @@ vbc -keyfile:myfile.sn input.vb
 
 - [.NET のアセンブリ](../../../standard/assembly/index.md)
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-参照 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+- [-reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
 - [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

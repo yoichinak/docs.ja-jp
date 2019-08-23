@@ -6,12 +6,12 @@ helpviewer_keywords:
 - masks [WPF], opacity
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
-ms.openlocfilehash: 76ec595b1d2cc732e1c8bc2dc2ca6def904bf94c
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: d0fea1aac4efb17811404ce45769615bb2e7234f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545346"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929655"
 ---
 # <a name="opacity-masks-overview"></a>不透明度マスクの概要
 不透明度マスクを使用すると、要素またはビジュアルの一部を透明にするか、部分的に透明にすることができます。 不透明度マスクを作成するには<xref:System.Windows.Media.Brush> 、要素<xref:System.Windows.UIElement.OpacityMask%2A>または<xref:System.Windows.Media.Visual>のプロパティにを適用します。  ブラシが要素またはビジュアルにマップされ、ブラシの各ピクセルの不透明度値を使用して、要素またはビジュアルの対応する各ピクセルの不透明度が決まります。  
@@ -25,7 +25,7 @@ ms.locfileid: "69545346"
  不透明度マスクは、要素またはビジュアルにその内容をマッピングすることによって機能します。 各ブラシのピクセルのアルファ チャネルを使用して、要素またはビジュアルの対応するピクセルの最終的な不透明度が決定され、ブラシの実際の色は無視されます。 ブラシの特定の部分が透明な場合、要素またはビジュアルの対応する部分は透明になります。 ブラシの特定の部分が不透明な場合、要素またはビジュアルの対応する部分は変化しません。 不透明度マスクによって指定された不透明度は、要素またはビジュアルに指定されている不透明度の設定と組み合わされます。 たとえば、要素の不透明度が 25% であるときに、完全に不透明な状態から完全に透明な状態に遷移する不透明度マスクが適用された場合、要素は、25% の不透明度から完全に透明な状態に遷移します。  
   
 > [!NOTE]
->  この概要の例では、イメージ要素の不透明マスクの使用方法を示していますが、不透明度マスクは<xref:System.Windows.Media.Visual>、パネルやコントロールを含む任意の要素またはに適用できます。  
+> この概要の例では、イメージ要素の不透明マスクの使用方法を示していますが、不透明度マスクは<xref:System.Windows.Media.Visual>、パネルやコントロールを含む任意の要素またはに適用できます。  
   
  不透明度マスクは、徐々に消えていくイメージやボタンの作成、要素へのテクスチャの追加、グラデーションと組み合わせたガラスのような表面の生成などの注意を引き付ける視覚効果を作成するために使用します。 次の図は、不透明度マスクの使用例を示しています。 チェックの背景を使用して、マスクの透明な部分を表示しています。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "69545346"
      ![System.windows.media.lineargradientbrush> opacity マスクを持つオブジェクト](./media/wcpsdk-graphicsmm-brushes-lineagradientopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_lineagradientopacitymasksingle")  
 LinearGradientBrush 不透明度マスクの例  
   
-- <xref:System.Windows.Media.ImageBrush> :テクスチャ、ソフト、または破損したエッジ効果を作成するために使用されます。  
+- <xref:System.Windows.Media.ImageBrush>:テクスチャ、ソフト、または破損したエッジ効果を作成するために使用されます。  
   
      次の図は、 <xref:System.Windows.Media.ImageBrush>不透明度マスクとして使用されるを示しています。  
   

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - listeners element for <source>
 - <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
-ms.openlocfilehash: b15a30fb6d356f92312bf33bc1964c7922ba1383
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 853bc94978218fd4d426e6070b3a36e20435cd6d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673759"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920493"
 ---
-# <a name="listeners-element-for-source"></a>\<リスナー > 要素の\<ソース >
-追加または内のリスナーを削除します、<xref:System.Diagnostics.TraceSource.Listeners%2A>のコレクションを<xref:System.Diagnostics.TraceSource>します。 ログ、ウィンドウ、またはテキスト ファイルなど、適切なターゲットへのトレース出力をリスナーに指示します。  
+# <a name="listeners-element-for-source"></a>\<ソース > の\<リスナー > 要素
+のコレクション<xref:System.Diagnostics.TraceSource.Listeners%2A>内のリスナーを追加または削除します。<xref:System.Diagnostics.TraceSource> リスナーは、ログ、ウィンドウ、テキストファイルなど、適切なターゲットにトレース出力を送信します。  
   
  \<configuration>  
 \<system.diagnostics>  
@@ -43,9 +43,9 @@ ms.locfileid: "61673759"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-source.md)|`Listeners` コレクションにリスナーを追加します。|  
-|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|リスナーを削除、`Listeners`コレクション。|  
-|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)|トレース ソースの `Listeners` コレクションを消去します。|  
+|[\<add>](add-element-for-listeners-for-source.md)|`Listeners` コレクションにリスナーを追加します。|  
+|[\<remove>](remove-element-for-listeners-for-source.md)|`Listeners`コレクションからリスナーを削除します。|  
+|[\<clear>](clear-element-for-listeners-for-source.md)|トレース ソースの `Listeners` コレクションを消去します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -59,10 +59,10 @@ ms.locfileid: "61673759"
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="configuration-file"></a>構成ファイル  
- この要素は、マシン構成ファイル (Machine.config) と、アプリケーション構成ファイルで使用できます。  
+ この要素は、コンピューターの構成ファイル (machine.config) とアプリケーション構成ファイルで使用できます。  
   
 ## <a name="example"></a>例  
- 次の例は、使用する方法を示します、`<listeners>`コンソール トレース リスナーを追加する要素、`mySource`ソースおよび既定のトレース リスナーを削除します。  
+ 次の例は、 `<listeners>`要素を使用して、コンソールトレースリスナーを`mySource`ソースに追加し、既定のトレースリスナーを削除する方法を示しています。  
   
 ```xml  
 <configuration>  
@@ -90,5 +90,5 @@ ms.locfileid: "61673759"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Diagnostics.TraceListener>
-- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [トレース リスナー](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [トレースおよびデバッグ設定のスキーマ](index.md)
+- [トレース リスナー](../../../debug-trace-profile/trace-listeners.md)

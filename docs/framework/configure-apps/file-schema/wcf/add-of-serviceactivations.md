@@ -2,19 +2,19 @@
 title: <add> の <serviceActivations>
 ms.date: 03/30/2017
 ms.assetid: e5b01fc8-ee84-48b7-95fd-95ab54fa871f
-ms.openlocfilehash: 2a3ba6d41059a480fe610254c0407df16d149e3b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 929773fcb6b6a3ee5c75aa970147277d9dbe7b45
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701464"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920024"
 ---
-# <a name="add-of-serviceactivations"></a>\<add> of \<serviceActivations>
+# <a name="add-of-serviceactivations"></a>\<serviceactivations の\<アクティブ化の追加 >
 
-仮想サービス アクティベーション設定を定義することができます、Windows Communication Foundation (WCF) サービスの型にマップする構成要素。 これにより、.svc ファイルを使用せずに、WAS/IIS でホストされているサービスをアクティブ化できます。
+Windows Communication Foundation (WCF) サービスの種類にマップする仮想サービスのアクティブ化の設定を定義できるようにする構成要素。 これにより、.svc ファイルを使用せずに、WAS/IIS でホストされているサービスをアクティブ化できます。
 
 \<system.ServiceModel>\
-\<serviceHostingEnvironment>
+\<serviceHostingEnvironment >
 
 ## <a name="syntax"></a>構文
 
@@ -47,7 +47,7 @@ ms.locfileid: "61701464"
 
 |要素|説明|
 |-------------|-----------------|
-|[\<serviceHostingEnvironment>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|アクティベーション設定を記述する構成セクション。|
+|[\<serviceHostingEnvironment >](servicehostingenvironment.md)|アクティベーション設定を記述する構成セクション。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -67,9 +67,9 @@ web.config ファイルでアクティベーション設定を構成する方法
 
 この構成を使用して、.svc ファイルを使用せずに、GreetingService をアクティブ化できます。
 
-`<serviceHostingEnvironment>` はアプリケーション レベルの構成であることに注意してください。 構成を格納した `web.config` は、仮想アプリケーションのルートの下に配置する必要があります。 さらに、`serviceHostingEnvironment`は machineToApplication の継承可能なセクションです。 コンピューターのルートに単一のサービスを登録すると、アプリケーションの各サービスはこのサービスを継承します。
+`<serviceHostingEnvironment>` はアプリケーション レベルの構成であることに注意してください。 構成を格納した `web.config` は、仮想アプリケーションのルートの下に配置する必要があります。 また、 `serviceHostingEnvironment`は machineToApplication 継承可能なセクションです。 コンピューターのルートに単一のサービスを登録すると、アプリケーションの各サービスはこのサービスを継承します。
 
-構成ベースのアクティベーションは、http および非 http プロトコル経由のアクティベーションをサポートします。 RelativeAddress、.svc、.xoml、.xamlx などの拡張機能が必要です。 既知の buildProviders に対して独自の拡張子をマップできます。これにより、任意の拡張子を使用してサービスをアクティブ化できるようになります。 競合が発生した場合には、`<serviceActivations>` セクションにより、.svc の登録がオーバーライドされます。
+構成ベースのアクティベーションは、http および非 http プロトコル経由のアクティベーションをサポートします。 RelativeAddress の拡張機能、つまり .svc、xoml、または .xamlx が必要です。 既知の buildProviders に対して独自の拡張子をマップできます。これにより、任意の拡張子を使用してサービスをアクティブ化できるようになります。 競合が発生した場合には、`<serviceActivations>` セクションにより、.svc の登録がオーバーライドされます。
 
 ## <a name="see-also"></a>関連項目
 

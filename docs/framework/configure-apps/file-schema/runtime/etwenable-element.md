@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f24e9a06137744dbc97d5f34cda7ad6eab873700
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3510cbf0a63a8031669bb7a819a8b3c7321aaea4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663739"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920764"
 ---
 # <a name="etwenable-element"></a>\<etwEnable > 要素
 共通言語ランタイム イベントで Windows イベント トレーシング (ETW) を有効にするかどうかを指定します。  
@@ -57,7 +57,7 @@ ms.locfileid: "69663739"
  Windows Vista 以降では、ETW は既定で有効になっています。 アプリケーションの ETW を無効にするには、この要素を使用します。 以前のバージョンの Windows では、この要素を使用して、アプリケーションの ETW を有効にします。  
   
 > [!NOTE]
->  ETW は、レジストリ設定を使用して、サーバー上でグローバルに有効または無効にすることができます。 「 [.NET Framework のログ記録の制御](../../../performance/controlling-logging.md)」を参照してください。  
+> ETW は、レジストリ設定を使用して、サーバー上でグローバルに有効または無効にすることができます。 「 [.NET Framework のログ記録の制御](../../../performance/controlling-logging.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例は、アプリケーションの ETW トレースを有効にする方法を示しています。  

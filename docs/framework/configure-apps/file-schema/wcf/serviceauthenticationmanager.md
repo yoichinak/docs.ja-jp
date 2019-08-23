@@ -2,21 +2,21 @@
 title: <serviceAuthenticationManager>
 ms.date: 03/30/2017
 ms.assetid: 5d69e64f-f325-4d55-8e2d-0fb30f222dda
-ms.openlocfilehash: 0940248364488bb38a329c5e461d72463c574e74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 65488c34931f6d7c424ece58a4855e746ea455bc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670379"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936420"
 ---
-# <a name="serviceauthenticationmanager"></a>\<serviceAuthenticationManager>
+# <a name="serviceauthenticationmanager"></a>\<serviceAuthenticationManager >
 サービス レベルで転送、メッセージ、または送信元の有効性を確立するワークフロー構成要素を提供します。  
   
 \<system.ServiceModel >  
 \<<behaviors>  
 \<serviceBehaviors>  
 \<behavior>  
-\<serviceAuthenticationManager>  
+\<serviceAuthenticationManager >  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,7 +46,7 @@ ms.locfileid: "61670379"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|動作の要素を指定します。|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|動作の要素を指定します。|  
   
 ## <a name="see-also"></a>関連項目
 

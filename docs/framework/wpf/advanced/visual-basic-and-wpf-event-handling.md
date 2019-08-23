@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-ms.openlocfilehash: 4ff006099dd2fa706cb575eec18e135d6e74ad46
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 8407958ec76be7e402025ece57371e67581e5291
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972320"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942127"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic と WPF のイベント処理
 Microsoft Visual Basic .net 言語では、言語固有`Handles`のキーワードを使用して、イベントハンドラーを属性にアタッチしたり、 <xref:System.Windows.UIElement.AddHandler%2A>メソッドを使用したりする代わりに、イベントハンドラーをインスタンスに関連付けることができます。 ただし、インスタンスにハンドラーをアタッチする`Handles` [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 方法にはいくつかの制限があります。この構文では、イベントシステムの特定のルーティングイベント機能の一部がサポートされ`Handles`ないためです。  
@@ -34,13 +34,13 @@ Microsoft Visual Basic .net 言語では、言語固有`Handles`のキーワー�
  `Handles`既に処理済みとしてマークされているイベントに対して呼び出されるハンドラーをアタッチすることはできません。 代わりに、コードを使用し、の`handledEventsToo` <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>オーバーロードを呼び出す必要があります。  
   
 > [!NOTE]
->  XAML で同じイベント`Handles`に対してイベントハンドラーを指定する場合は、Visual Basic コードで構文を使用しないでください。 この場合、イベントハンドラーは2回呼び出されます。  
+> XAML で同じイベント`Handles`に対してイベントハンドラーを指定する場合は、Visual Basic コードで構文を使用しないでください。 この場合、イベントハンドラーは2回呼び出されます。  
   
 ## <a name="how-wpf-implements-handles-functionality"></a>WPF が "ハンドル" 機能を実装する方法  
  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ページがコンパイルされると、中間ファイルは、<xref:System.Windows.FrameworkContentElement.Name%2A> プロパティが設定されている (または [x:Name Directive](../../xaml-services/x-name-directive.md) が宣言されている) ページ上のすべての要素への `Friend` `WithEvents` 参照を宣言します。 各名前付きインスタンスは、によって`Handles`ハンドラーに割り当てることができる要素である可能性があります。  
   
 > [!NOTE]
->  で[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]は、IntelliSense で、ページ内の`Handles`参照に使用できる要素の完了を確認できます。 ただし、この場合、中間ファイルがすべての`Friends`参照を設定できるように、1つのコンパイルパスが必要になることがあります。  
+> で[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]は、IntelliSense で、ページ内の`Handles`参照に使用できる要素の完了を確認できます。 ただし、この場合、中間ファイルがすべての`Friends`参照を設定できるように、1つのコンパイルパスが必要になることがあります。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -9,28 +9,28 @@ helpviewer_keywords:
 - attributes [Windows Forms], applying
 - Windows Forms controls, applying attributes
 ms.assetid: af0a3f7f-155b-4ba1-83c4-9cf721331a06
-ms.openlocfilehash: 720172e9fcb13837b527d72176a35d366d83c948
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 273d32927582f4467a92cd3b8f87e699c1f167d7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64612830"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922793"
 ---
 # <a name="how-to-apply-attributes-in-windows-forms-controls"></a>方法: Windows フォーム コントロールに属性を適用する
-デザイン環境を正しく操作しを実行時に正しく実行するコンポーネントとコントロールを開発するには、クラスとメンバーに属性を正しく適用する必要があります。  
+デザイン環境と正しく対話し、実行時に正常に実行されるコンポーネントとコントロールを開発するには、クラスおよびメンバーに属性を正しく適用する必要があります。  
   
 ## <a name="example"></a>例  
- 次のコード例では、カスタム コントロールでいくつかの属性を使用する方法を示します。 コントロールでは、単純なログ記録機能を示します。 コントロールがデータ ソースにバインドされると、内のデータ ソースから送信された値が表示されます、<xref:System.Windows.Forms.DataGridView>コントロール。 値で指定された値を超えた場合、`Threshold`プロパティ、`ThresholdExceeded`イベントが発生します。  
+ 次のコード例は、カスタムコントロールでいくつかの属性を使用する方法を示しています。 このコントロールは、単純なログ記録機能を示しています。 コントロールがデータソースにバインドされると、 <xref:System.Windows.Forms.DataGridView>コントロールにデータソースから送信された値が表示されます。 値が`Threshold`プロパティで指定された値を超えると`ThresholdExceeded` 、イベントが発生します。  
   
- `AttributesDemoControl`値をログに記録する`LogEntry`クラス。 `LogEntry`クラスは、ログを記録する型でパラメーター化されたことを意味するテンプレート クラスです。 たとえば場合、`AttributesDemoControl`型の値をログ記録は、 `float`、それぞれ`LogEntry`インスタンスが宣言され、次のように使用します。  
+ は`AttributesDemoControl` 、クラスを`LogEntry`使用して値をログに記録します。 `LogEntry`クラスはテンプレートクラスであり、これはログに記録される型でパラメーター化されることを意味します。 たとえば、 `AttributesDemoControl`が型`float`の値をログに記録して`LogEntry`いる場合、各インスタンスは次のように宣言され、使用されます。  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#110](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/form1.cs#110)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#110](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/form1.vb#110)]  
   
 > [!NOTE]
->  `LogEntry`パラメーター化された任意の型によって、パラメーターの型を操作する、リフレクションを使用する必要がありますに。 しきい値機能するには、パラメーターの型を`T`実装する必要があります、<xref:System.IComparable>インターフェイス。  
+> は`LogEntry`任意の型によってパラメーター化されるため、パラメーターの型を操作するにはリフレクションを使用する必要があります。 しきい値機能を機能させるには、 `T`パラメーターの型<xref:System.IComparable>がインターフェイスを実装する必要があります。  
   
- フォームをホストする、`AttributesDemoControl`パフォーマンス カウンターを定期的に照会します。 パッケージ化された各値を`LogEntry`適切な種類のフォームの追加と<xref:System.Windows.Forms.BindingSource>。 `AttributesDemoControl` 、データ バインディングを使用値を受け取っての値を表示、<xref:System.Windows.Forms.DataGridView>コントロール。  
+ をホスト`AttributesDemoControl`するフォームは、パフォーマンスカウンターを定期的に照会します。 各値は、 `LogEntry`適切な型のにパッケージ化され、フォームの<xref:System.Windows.Forms.BindingSource>に追加されます。 は`AttributesDemoControl` 、データバインディングを通じて値を受け取り、 <xref:System.Windows.Forms.DataGridView>コントロールの値を表示します。  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#1)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#1)]  
@@ -38,34 +38,34 @@ ms.locfileid: "64612830"
  [!code-csharp[System.ComponentModel.AttributesDemoControl#100](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/form1.cs#100)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/form1.vb#100)]  
   
- 最初のコード例は、`AttributesDemoControl`実装します。 2 番目のコード例に示しますを使用する形式、`AttributesDemoControl`します。  
+ 最初のコード例は`AttributesDemoControl` 、の実装です。 2番目のコード例は、 `AttributesDemoControl`を使用するフォームを示しています。  
   
-## <a name="class-level-attributes"></a>クラス レベルの属性  
- いくつかの属性は、クラス レベルで適用されます。 次のコード例では、一般的に、Windows フォーム コントロールに適用される属性を示します。  
+## <a name="class-level-attributes"></a>クラスレベルの属性  
+ 一部の属性はクラスレベルで適用されます。 次のコード例は、Windows フォームコントロールに一般的に適用される属性を示しています。  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#20)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#20)]  
   
 ### <a name="typeconverter-attribute"></a>TypeConverter 属性  
- <xref:System.ComponentModel.TypeConverterAttribute> 一般的に使用されるもう 1 つのクラス レベル属性です。 次のコード例の使用を示しています、`LogEntry`クラス。 この例では、実装も示しています、<xref:System.ComponentModel.TypeConverter>の`LogEntry`と呼ばれる型`LogEntryTypeConverter`します。  
+ <xref:System.ComponentModel.TypeConverterAttribute>は、一般的に使用されるもう1つのクラスレベルの属性です。 `LogEntry`クラスの使用例を次のコード例に示します。 この例では、という<xref:System.ComponentModel.TypeConverter> `LogEntry` `LogEntryTypeConverter`型のの実装も示しています。  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#5)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#5)]  
   
-## <a name="member-level-attributes"></a>メンバー レベルの属性  
- いくつかの属性は、メンバー レベルで適用されます。 次のコード例では、一般的に Windows フォーム コントロールのプロパティに適用されるいくつかの属性を示します。  
+## <a name="member-level-attributes"></a>メンバーレベルの属性  
+ 一部の属性は、メンバーレベルで適用されます。 次のコード例は、Windows フォームコントロールのプロパティに一般的に適用されるいくつかの属性を示しています。  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#21)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#21)]  
   
 ### <a name="ambientvalue-attribute"></a>AmbientValue 属性  
- 次の例で、<xref:System.ComponentModel.AmbientValueAttribute>し、デザイン環境とのやり取りをサポートするコードを示しています。 この操作を呼び出す*アンビエンス*します。  
+ 次の例は、 <xref:System.ComponentModel.AmbientValueAttribute>を示し、デザイン環境との対話をサポートするコードを示しています。 この相互作用は、"*アンビエント*" と呼ばれます。  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#23](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#23)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#23)]  
   
-### <a name="databinding-attributes"></a>データ バインド属性  
- 次の例では、複合データ バインディングの実装を示します。 クラス レベル<xref:System.ComponentModel.ComplexBindingPropertiesAttribute>のように、以前を指定します、`DataSource`と`DataMember`データ バインドに使用するプロパティ。 <xref:System.ComponentModel.AttributeProviderAttribute>対象の型を指定します、`DataSource`プロパティにバインドされます。  
+### <a name="databinding-attributes"></a>Databinding 属性  
+ 次の例は、複合データバインディングの実装を示しています。 前に示した<xref:System.ComponentModel.ComplexBindingPropertiesAttribute>クラスレベルでは、データ`DataSource`バインディング`DataMember`に使用するプロパティとプロパティを指定します。 は<xref:System.ComponentModel.AttributeProviderAttribute> 、 `DataSource`プロパティがバインドされる型を指定します。  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#25](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#25)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#25](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#25)]  
@@ -75,7 +75,7 @@ ms.locfileid: "64612830"
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
   
-- フォームをホストする、`AttributesDemoControl`への参照が必要です、`AttributesDemoControl`アセンブリをビルドするためにします。  
+- をホスト`AttributesDemoControl`するフォームは、ビルドするために`AttributesDemoControl`アセンブリへの参照を必要とします。  
   
 ## <a name="see-also"></a>関連項目
 
@@ -83,4 +83,4 @@ ms.locfileid: "64612830"
 - <xref:System.Windows.Forms.DataGridView>
 - [.NET Framework を使用したカスタム Windows フォーム コントロールの開発](developing-custom-windows-forms-controls.md)
 - [Windows フォーム コントロールの属性](attributes-in-windows-forms-controls.md)
-- [方法: Designerserializationvisibilityattribute を使用、基本データ型のコレクションをシリアル化します。](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))
+- [方法: DesignerSerializationVisibilityAttribute を使用して標準型のコレクションをシリアル化する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))

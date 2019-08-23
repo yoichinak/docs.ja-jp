@@ -5,28 +5,28 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: eecf9d78-60e3-4fdc-8de0-e56c13a89414
-ms.openlocfilehash: 272976d3c581d3e8a5860ba5cf3f9695ca370d8c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b56d2f8cd46f3184f1001c8bd6a70dbfc4968968
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034412"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937030"
 ---
 # <a name="creating-a-datatable"></a>DataTable の作成
 <xref:System.Data.DataTable> は 1 つのインメモリ リレーショナル データのテーブルを表します。DataTable は単独で作成および使用することも、他の .NET Framework オブジェクトから <xref:System.Data.DataSet> のメンバーとして使用することもできます。  
   
- 作成することができます、 **DataTable** 、適切なを使用してオブジェクト**DataTable**コンス トラクター。 追加することができます、**データセット**を使用して、**追加**メソッドに追加する、 **DataTable**オブジェクトの**テーブル**コレクション。  
+ **Datatable**オブジェクトを作成するには、適切な**datatable**コンストラクターを使用します。 これを**DataSet**に追加するには、 **add**メソッドを使用してそれを**DataTable**オブジェクトの**Tables**コレクションに追加します。  
   
- 作成することも**DataTable**内のオブジェクトは、**データセット**を使用して、**入力**または**FillSchema**のメソッド、 **DataAdapter**オブジェクト、または、定義済みまたは推論されたスキーマを使用して XML から、 **ReadXml**、 **ReadXmlSchema**、または**InferXmlSchema**メソッド、**データセット**します。 注意を追加した後、 **DataTable**のメンバーとして、**テーブル**いずれかのコレクション**データセット**、他の任意ののテーブルのコレクションに追加することはできません**データセット**します。  
+ **データセット**内に**DataTable**オブジェクトを作成するには、 **DataAdapter**オブジェクトの**Fill**メソッドまたは**FillSchema**メソッドを使用するか、または、 **ReadXml**, readxmlschema を使用して、定義済みまたは推論された XML スキーマから作成することもできます。**データセット**の、、または**InferXmlSchema**メソッド。 DataTable を1つの**データセット**の**tables**コレクションのメンバーとして追加した後は、その**DataTable**を他の**データセット**のテーブルのコレクションに追加することはできないことに注意してください。  
   
- 作成するとき、 **DataTable**スキーマ (構造) はありません。 テーブルのスキーマを定義するには必要がありますを作成し、追加<xref:System.Data.DataColumn>オブジェクトを**列**テーブルのコレクション。 テーブルの主キー列を定義および作成して追加**制約**オブジェクトを**制約**テーブルのコレクション。 スキーマを定義した後、 **DataTable**、行のデータをテーブルに追加するには追加することで**DataRow**オブジェクトを**行**テーブルのコレクション。  
+ 最初に**DataTable**を作成するときには、スキーマ (つまり構造体) はありません。 テーブルのスキーマを定義するには、テーブルの**Columns**コレクション<xref:System.Data.DataColumn>にオブジェクトを作成し、追加する必要があります。 テーブルの主キー列を定義し、テーブルの**制約**コレクションに**制約**オブジェクトを作成して追加することもできます。 **DataTable**のスキーマを定義した後は、 **DataRow**オブジェクトをテーブルの**rows**コレクションに追加することによって、データ行をテーブルに追加できます。  
   
- 値を指定する必要はありません、<xref:System.Data.DataTable.TableName%2A>プロパティを作成するとき、 **DataTable**; プロパティを指定するには、別の時に、または空ままことができます。 ただし、なしのテーブルを追加すると、 **TableName**値を**データセット**、テーブルがテーブルのインクリメンタル既定名を指定する*N*table0"Table"以降の。  
+ <xref:System.Data.DataTable.TableName%2A> **DataTable**を作成するときにプロパティの値を指定する必要はありません。プロパティを別の時点で指定することも、空のままにすることもできます。 ただし、 **TableName**値を持たないテーブルを**データセット**に追加すると、テーブルには、Table0 の "Table" で始まるテーブル*N*の増分既定の名前が与えられます。  
   
 > [!NOTE]
->  避けることをお勧め、"テーブル*N*"名前付け規則を指定するときに、 **TableName**値を指定した名前の既存の既定のテーブル名と競合する可能性があるため、**データセット**. 指定した名前が既に存在する場合は、例外がスローされます。  
+> **TableName**値を指定するときは、"Table*N*" という名前付け規則を使用しないことをお勧めします。これは、指定した名前が**データセット**内の既存の既定のテーブル名と競合する可能性があるためです。 指定した名前が既に存在する場合は、例外がスローされます。  
   
- 次の例のインスタンスを作成する、 **DataTable**オブジェクトし、"Customers"という名前を割り当て。  
+ 次の例では、 **DataTable**オブジェクトのインスタンスを作成し、"Customers" という名前を割り当てます。  
   
 ```vb  
 Dim workTable as DataTable = New DataTable("Customers")  
@@ -36,7 +36,7 @@ Dim workTable as DataTable = New DataTable("Customers")
 DataTable workTable = new DataTable("Customers");  
 ```  
   
- 次の例のインスタンスを作成する、 **DataTable**に追加することによって、**テーブル**のコレクションを**データセット**します。  
+ 次の例では、**データセット**の**Tables**コレクションに追加することによって、 **DataTable**のインスタンスを作成します。  
   
 ```vb  
 Dim customers As DataSet = New DataSet  

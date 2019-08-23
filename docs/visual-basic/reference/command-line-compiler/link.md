@@ -1,5 +1,5 @@
 ---
-title: -リンク (Visual Basic)
+title: -link (Visual Basic)
 ms.date: 03/10/2018
 helpviewer_keywords:
 - l compiler option [Visual Basic]
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: b13d8266d0702d831a0f5ebb3a9586864fe22ccb
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: fbce22755b3732896a226c00bbf8e068dc1f098e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586533"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929397"
 ---
-# <a name="-link-visual-basic"></a>-リンク (Visual Basic)
+# <a name="-link-visual-basic"></a>-link (Visual Basic)
 指定したアセンブリ内の COM 型情報を、現在のコンパイル対象のプロジェクトで使用できるようにします。  
   
 ## <a name="syntax"></a>構文  
@@ -43,7 +43,7 @@ ms.locfileid: "65586533"
  `-link` オプションで埋め込まれるのは、インターフェイス、構造体、デリゲートのみです。 COM クラスの埋め込みはサポートされていません。  
   
 > [!NOTE]
->  コードで埋め込み COM 型のインスタンスを作成する際は、適切なインターフェイスを使用してインスタンスを作成する必要があります。 コクラスを使用して埋め込み COM 型のインスタンスを作成しようとすると、エラーが発生します。  
+> コードで埋め込み COM 型のインスタンスを作成する際は、適切なインターフェイスを使用してインスタンスを作成する必要があります。 コクラスを使用して埋め込み COM 型のインスタンスを作成しようとすると、エラーが発生します。  
   
  Visual Studio で `-link` オプションを設定するには、アセンブリ参照を追加し、`Embed Interop Types` プロパティを **true** に設定します。 `Embed Interop Types` プロパティの既定値は **false** です。  
   
@@ -53,9 +53,9 @@ ms.locfileid: "65586533"
   
 - アセンブリ B の戻り値の型またはパラメーターの型を使用するフィールド、プロパティ、イベント、またはメソッドが呼び出される。  
   
- 使用[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)を 1 つ以上のアセンブリ参照があるディレクトリを指定します。  
+ アセンブリ参照が1つ以上存在するディレクトリを指定するには、 [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)を使用します。  
   
- ように、 [/reference](../../../visual-basic/reference/command-line-compiler/reference.md)コンパイラ オプション、`-link`コンパイラ オプションは頻繁に使用される .NET Framework アセンブリを参照する、Vbc.rsp 応答ファイルを使用します。 使用して、 [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)コンパイラ オプション、コンパイラが Vbc.rsp ファイルを使用したくない場合。  
+ [/Reference](../../../visual-basic/reference/command-line-compiler/reference.md)コンパイラオプションと同様に、 `-link`コンパイラオプションは vbc.exe ファイルを使用します。このファイルは、頻繁に使用される .NET Framework アセンブリを参照します。 コンパイラで Vbc.exe ファイルを使用しない場合は、 [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)コンパイラオプションを使用します。  
   
  `-link` の省略形は `-l` です。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "65586533"
  [!code-vb[VbLinkCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vblinkcompiler/vb/module1.vb#5)]  
   
 ## <a name="example"></a>例  
- 次のコマンドラインは、ソース ファイルをコンパイル`OfficeApp.vb`からの参照アセンブリと`COMData1.dll`と`COMData2.dll`を生成する`OfficeApp.exe`します。  
+ 次のコマンドラインは、および`OfficeApp.vb` `COMData2.dll`からの`COMData1.dll`ソースファイルと参照アセンブリ`OfficeApp.exe`をコンパイルし、を生成します。  
   
 ```console  
 vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  
@@ -89,7 +89,7 @@ vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb
 
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [チュートリアル: マネージド アセンブリからの型の埋め込み](../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
-- [-参照 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+- [-reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
 - [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
 - [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)
 - [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

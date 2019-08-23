@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4cf997c8ff13e0a6a4664ea3b538ac0def1baacf
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: da01d0dac2e67d6c0131a2b5965472bbd19213fe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663627"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927328"
 ---
 # <a name="legacyimpersonationpolicy-element"></a>\<legacyImpersonationPolicy > 要素
 Windows ID が、現在のスレッドの実行コンテキストのフロー設定に関係なく、非同期ポイント間でフローしないことを指定します。  
@@ -63,7 +63,7 @@ Windows ID が、現在のスレッドの実行コンテキストのフロー設
  .NET Framework 2.0 以降では、 `<legacyImpersonationPolicy>`要素を使用して、が非同期ポイント間でフローしないこと<xref:System.Security.Principal.WindowsIdentity>を指定できます。  
   
 > [!NOTE]
->  共通言語ランタイム (CLR) は、マネージコードの外部で実行される偽装操作 (アンマネージコードへのプラットフォーム呼び出し、Win32 関数への直接呼び出しなど) を使用して実行される偽装操作を認識します。 要素が<xref:System.Security.Principal.WindowsIdentity> true(`<alwaysFlowImpersonationPolicy enabled="true"/>`) に設定されていない限り、非同期のポイント間でフローできるのはマネージオブジェクトだけです。 `alwaysFlowImpersonationPolicy` `alwaysFlowImpersonationPolicy`要素を true に設定すると、偽装がどのように実行されたかに関係なく、Windows id が常に非同期のポイントでフローすることを指定します。 非同期ポイント間でアンマネージ偽装をフローする方法の詳細については、「 [ \<alwaysFlowImpersonationPolicy > 要素](alwaysflowimpersonationpolicy-element.md)」を参照してください。  
+> 共通言語ランタイム (CLR) は、マネージコードの外部で実行される偽装操作 (アンマネージコードへのプラットフォーム呼び出し、Win32 関数への直接呼び出しなど) を使用して実行される偽装操作を認識します。 要素が<xref:System.Security.Principal.WindowsIdentity> true(`<alwaysFlowImpersonationPolicy enabled="true"/>`) に設定されていない限り、非同期のポイント間でフローできるのはマネージオブジェクトだけです。 `alwaysFlowImpersonationPolicy` `alwaysFlowImpersonationPolicy`要素を true に設定すると、偽装がどのように実行されたかに関係なく、Windows id が常に非同期のポイントでフローすることを指定します。 非同期ポイント間でアンマネージ偽装をフローする方法の詳細については、「 [ \<alwaysFlowImpersonationPolicy > 要素](alwaysflowimpersonationpolicy-element.md)」を参照してください。  
   
  この既定の動作は、次の2つの方法で変更できます。  
   

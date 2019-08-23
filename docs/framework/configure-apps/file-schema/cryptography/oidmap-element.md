@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-ms.openlocfilehash: e01cdd942237141b8ef35495d3b74d6b2282a865
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: d2929167f5a7de96a868cd1ac884d2203d09dfb6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664257"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927530"
 ---
 # <a name="oidmap-element"></a>\<oidMap > 要素
 クラスに対する asn.1 オブジェクト識別子 (OID) マッピングが含まれています。  
@@ -77,6 +77,6 @@ ms.locfileid: "69664257"
 
 - [構成ファイル スキーマ](../index.md)
 - [暗号化設定スキーマ](index.md)
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
+- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
 - [暗号化クラスの設定](../../configure-cryptography-classes.md)
 - [暗号化アルゴリズムへのオブジェクト ID の割り当て](../../map-object-identifiers-to-cryptography-algorithms.md)

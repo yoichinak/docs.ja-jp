@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c34f531d-4b9b-4071-b2d7-342c402aa586
-ms.openlocfilehash: 57f51ada00bf24617ca3e295a010aae64f0aa849
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c80294c4bc879e6a1df4c9d1170eef14b8b83de
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879867"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915815"
 ---
 # <a name="datarow-deletion"></a>DataRow の削除
-2 つのメソッドを使用して削除できます、<xref:System.Data.DataRow>オブジェクトから、<xref:System.Data.DataTable>オブジェクト:**削除**のメソッド、<xref:System.Data.DataRowCollection>オブジェクト、および<xref:System.Data.DataRow.Delete%2A>のメソッド、 **DataRow**オブジェクト。 一方、<xref:System.Data.DataRowCollection.Remove%2A>メソッドの削除、 **DataRow**から、 **DataRowCollection**、<xref:System.Data.DataRow.Delete%2A>メソッドは、行の削除をマークするだけです。 実際の削除は、アプリケーションを呼び出すときに発生します。、 **AcceptChanges**メソッド。 <xref:System.Data.DataRow.Delete%2A> を使用すると、行を実際に削除する前に、削除対象としてどの行がマークされているかをプログラムによってチェックできます。 削除対象としてマークされている行の <xref:System.Data.DataRow.RowState%2A> プロパティは、<xref:System.Data.DataRow.Delete%2A> に設定されています。  
+<xref:System.Data.DataRow>オブジェクト<xref:System.Data.DataRowCollection> <xref:System.Data.DataRow.Delete%2A>からオブジェクトを削除するには、オブジェクトの Remove メソッドと DataRow オブジェクトのメソッドの2つのメソッドを使用できます。 <xref:System.Data.DataTable> メソッドは**DataRowCollection**から DataRow を削除しますが、 <xref:System.Data.DataRow.Delete%2A>メソッドは行を削除対象としてマークするだけです。 <xref:System.Data.DataRowCollection.Remove%2A> 実際の削除は、アプリケーションが**AcceptChanges**メソッドを呼び出したときに発生します。 <xref:System.Data.DataRow.Delete%2A> を使用すると、行を実際に削除する前に、削除対象としてどの行がマークされているかをプログラムによってチェックできます。 削除対象としてマークされている行の <xref:System.Data.DataRow.RowState%2A> プロパティは、<xref:System.Data.DataRow.Delete%2A> に設定されています。  
   
  <xref:System.Data.DataRow.Delete%2A> オブジェクトを反復処理している間は、foreach ループで <xref:System.Data.DataRowCollection.Remove%2A> も <xref:System.Data.DataRowCollection> も呼び出すことはできません。 <xref:System.Data.DataRow.Delete%2A> または <xref:System.Data.DataRowCollection.Remove%2A> はコレクションの状態を変更します。  
   
- 使用する場合、<xref:System.Data.DataSet>または**DataTable**と組み合わせて、 **DataAdapter**とリレーショナル データ ソース、使用、**削除**のメソッド、 **DataRow**行を削除します。 **削除**メソッドとしての行をマークする**Deleted**で、**データセット**または**DataTable**は削除されません。 代わりに、 **DataAdapter**としてマークされている行を検出する**Deleted**が実行されます、 **DeleteCommand**メソッドは、データ ソースで行を削除します。 行のできますし、完全に削除するを使用して、 **AcceptChanges**メソッド。 使用する場合**削除**行を削除する、行は、テーブルから完全に削除されますが、 **DataAdapter**データ ソースの行は削除されません。  
+ DataAdapter およびリレーショナル<xref:System.Data.DataSet>データソースと共にまたは**DataTable**を使用する場合は、 **DataRow**の**Delete**メソッドを使用して行を削除します。 **Delete**メソッドは、行を**DataSet**または**DataTable**で**削除済み**としてマークしますが、削除はしません。 代わりに、 **DataAdapter**が**削除済み**としてマークされた行を検出すると、 **DeleteCommand**メソッドを実行してデータソースの行を削除します。 この行は、 **AcceptChanges**メソッドを使用して完全に削除できます。 **Remove**を使用して行を削除すると、その行はテーブルから完全に削除されますが、 **DataAdapter**はデータソースの行を削除しません。  
   
- **削除**のメソッド、 **DataRowCollection**は、 **DataRow**を引数としてし、次の例に示すように、コレクションから削除します。  
+ **DataRowCollection**の**Remove**メソッドは、次の例に示すように、 **DataRow**を引数として受け取り、コレクションから削除します。  
   
 ```vb  
 workTable.Rows.Remove(workRow)  
@@ -29,7 +29,7 @@ workTable.Rows.Remove(workRow)
 workTable.Rows.Remove(workRow);  
 ```  
   
- これに対し、次の例に示しますを呼び出す方法、**削除**メソッドを**DataRow**を変更するその**RowState**に**Deleted**.  
+ これに対して、次の例では、 **DataRow**の**Delete**メソッドを呼び出して、その**RowState**を**Deleted**に変更する方法を示しています。  
   
 ```vb  
 workRow.Delete  
@@ -39,10 +39,10 @@ workRow.Delete
 workRow.Delete();  
 ```  
   
- 行は削除対象としてマークしを呼び出す場合、 **AcceptChanges**のメソッド、 **DataTable**オブジェクトから行を削除、 **DataTable**します。 呼び出す場合とは異なり、 **RejectChanges**、 **RowState**行としてマークされる前に戻ります**Deleted**します。  
+ 行が削除対象としてマークされていて、 **datatable**オブジェクトの**AcceptChanges**メソッドを呼び出すと、その行が**datatable**から削除されます。 これに対し、 **RejectChanges**を呼び出すと、行の**RowState**は、**削除済み**としてマークされる前の行に戻ります。  
   
 > [!NOTE]
->  場合、 **RowState**の**DataRow**は**Added**つまりが追加された直後に、テーブルとしてマークされているし、 **Deleted**はテーブルから削除します。  
+> **DataRow**の**RowState**が**追加**された場合、これはテーブルに追加されたばかりであることを意味し、**削除済み**としてマークされ、テーブルから削除されます。  
   
 ## <a name="see-also"></a>関連項目
 

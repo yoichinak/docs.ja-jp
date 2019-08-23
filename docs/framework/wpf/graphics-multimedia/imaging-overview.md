@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 6d3dce5c8a34257f8509f239ece4bae3efa02b84
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 13d5ea2735a799332edd8e552198de0f2b970dad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545365"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914103"
 ---
 # <a name="imaging-overview"></a>イメージングの概要
 このトピックでは、[!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)] の概要を説明します。 開発者は、[!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] を使用して、イメージの表示、変換、および形式設定を実行できます。  
@@ -99,7 +99,7 @@ ms.locfileid: "69545365"
  次の例は、コードを使用して幅 200 ピクセルのイメージをレンダリングする方法を示しています。  
   
 > [!NOTE]
->  <xref:System.Windows.Media.Imaging.BitmapImage>インターフェイスを<xref:System.ComponentModel.ISupportInitialize>実装して、複数のプロパティの初期化を最適化します。 プロパティの変更は、オブジェクトの初期化中にのみ実行できます。 を<xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A>呼び出して、初期化が開始さ<xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A>れたことを通知し、初期化が完了したことを通知します。 初期化の完了後は、プロパティの変更は無視されます。  
+> <xref:System.Windows.Media.Imaging.BitmapImage>インターフェイスを<xref:System.ComponentModel.ISupportInitialize>実装して、複数のプロパティの初期化を最適化します。 プロパティの変更は、オブジェクトの初期化中にのみ実行できます。 を<xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A>呼び出して、初期化が開始さ<xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A>れたことを通知し、初期化が完了したことを通知します。 初期化の完了後は、プロパティの変更は無視されます。  
   
  [!code-csharp[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml.cs#imagesimpleexampleinlinecode1)]
  [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
@@ -135,9 +135,9 @@ ms.locfileid: "69545365"
   
 - <xref:System.Windows.Media.Stretch.Fill>:イメージは、出力領域に合わせて拡大縮小されます。 イメージの高さと幅は個別に拡大縮小されるため、イメージの元の縦横比は保持されないことがあります。 つまり、イメージは、出力コンテナーを完全に埋めるためにゆがんで表示される可能性があります。  
   
-- <xref:System.Windows.Media.Stretch.Uniform>:イメージは、出力領域内に完全に収まるようにスケーリングされます。 イメージの縦横比は保持されます。  
+- <xref:System.Windows.Media.Stretch.Uniform> :イメージは、出力領域内に完全に収まるようにスケーリングされます。 イメージの縦横比は保持されます。  
   
-- <xref:System.Windows.Media.Stretch.UniformToFill>:イメージは、イメージの元の縦横比を維持したまま、出力領域を完全に塗りつぶすようにスケーリングされます。  
+- <xref:System.Windows.Media.Stretch.UniformToFill> :イメージは、イメージの元の縦横比を維持したまま、出力領域を完全に塗りつぶすようにスケーリングされます。  
   
  次の例では、使用可能<xref:System.Windows.Media.Stretch>な各列挙<xref:System.Windows.Controls.Image>をに適用します。  
   
@@ -185,7 +185,7 @@ ms.locfileid: "69545365"
  機能拡張 API のサンプルについては、 [Win32 サンプルコーデック](https://go.microsoft.com/fwlink/?LinkID=160052)を参照してください。 このサンプルは、カスタム イメージ形式用のデコーダーとエンコーダーの作成方法を示しています。  
   
 > [!NOTE]
->  システムで認識するは、コーデックをデジタル署名する必要があります。  
+> システムで認識するは、コーデックをデジタル署名する必要があります。  
   
 ## <a name="see-also"></a>関連項目
 

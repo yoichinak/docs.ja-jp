@@ -7,18 +7,18 @@ helpviewer_keywords:
 - assemblyBinding Element
 - <assemblyBinding> Element
 ms.assetid: 6cc55983-b894-449b-8e26-b258e53939cd
-ms.openlocfilehash: f5992a6085c32d37f56319cf8b2c361542c441e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e0b83c4b3573ab6819654e72cac1bf3e4a0ba637
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674832"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921275"
 ---
-# <a name="assemblybinding-element-for-configuration"></a>\<assemblyBinding > 要素の\<構成 >
+# <a name="assemblybinding-element-for-configuration"></a>\<構成 > の\<assemblybinding > 要素
 
 構成レベルでのアセンブリ バインディング ポリシーを指定します。
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+[ **\<configuration>** ](configuration-element.md)   
 &nbsp;&nbsp; **\<assemblyBinding >**
 
 ## <a name="syntax"></a>構文
@@ -39,24 +39,24 @@ ms.locfileid: "61674832"
 
 |     | 説明 |
 | --- | ----------- |
-| [ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) | 共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。 |
+| [ **\<configuration>** ](configuration-element.md) | 共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。 |
 
 ## <a name="child-element"></a>子要素
 
 |     | 説明 |
 | --- | ----------- |
-| [ **\<linkedConfiguration>** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | インクルードする構成ファイルを指定します。 |
+| [ **\<linkedConfiguration >** ](linkedconfiguration-element.md) | インクルードする構成ファイルを指定します。 |
 
 ## <a name="remarks"></a>Remarks
 
-[  **\<LinkedConfiguration >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md)要素は、構成ファイルをアプリケーション構成ファイルにアセンブリを含めるようにすることでコンポーネントのアセンブリの管理を簡略化既知の場所ではなく複製アセンブリの構成設定。
+[ **\<Linkedconfiguration >** ](linkedconfiguration-element.md)要素は、アセンブリを複製するのではなく、既知の場所にアセンブリ構成ファイルを含めることをアプリケーション構成ファイルに許可することで、コンポーネントアセンブリの管理を簡略化します。構成設定。
 
 > [!NOTE]
-> **\<LinkedConfiguration >** Windows サイド バイ サイドでマニフェストを使用するアプリケーションの要素がサポートされていません。
+> **\<Linkedconfiguration >** 要素は、Windows サイドバイサイドマニフェストを持つアプリケーションではサポートされていません。
 
 ## <a name="example"></a>例
 
-次の例では、ローカルのハード ディスク上の構成ファイルを含める方法を示します。
+次の例は、ローカルのハードディスクに構成ファイルを含める方法を示しています。
 
 ```xml
 <configuration>
@@ -68,4 +68,4 @@ ms.locfileid: "61674832"
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Framework の構成ファイル スキーマ](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework の構成ファイルスキーマ](index.md)

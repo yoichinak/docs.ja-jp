@@ -2,15 +2,15 @@
 title: SQL Server でのバルク コピー操作
 ms.date: 03/30/2017
 ms.assetid: 83a7a0d2-8018-4354-97b9-0b1d99f8342b
-ms.openlocfilehash: e538e48400d955a0013a12dbf2d10f1f96c3ddfe
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: efa13eb1633fce3b59040ef8da79dba0f6ea81d5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649544"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918060"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>SQL Server でのバルク コピー操作
-Microsoft SQL Server には、という一般的なコマンド ライン ユーティリティが含まれています。 **bcp**の高速で一括 SQL Server データベースのテーブルまたはビューに大きなファイルをコピーします。 <xref:System.Data.SqlClient.SqlBulkCopy> クラスを使用すると、同様の機能を備えたマネージド コード ソリューションを作成できます。 SQL Server のテーブルにデータを読み込むには、INSERT ステートメントを使用するなどの方法もありますが、<xref:System.Data.SqlClient.SqlBulkCopy> を使用すれば他の方法よりもパフォーマンス面で大幅に有利になります。  
+Microsoft SQL Server には、大量のファイルを SQL Server データベース内のテーブルまたはビューに一括コピーするための**bcp**という一般的なコマンドラインユーティリティが含まれています。 <xref:System.Data.SqlClient.SqlBulkCopy> クラスを使用すると、同様の機能を備えたマネージド コード ソリューションを作成できます。 SQL Server のテーブルにデータを読み込むには、INSERT ステートメントを使用するなどの方法もありますが、<xref:System.Data.SqlClient.SqlBulkCopy> を使用すれば他の方法よりもパフォーマンス面で大幅に有利になります。  
   
  <xref:System.Data.SqlClient.SqlBulkCopy> クラスを使用すると、SQL Server のテーブルにのみデータを書き込むことができます。 ただし、データ ソースについては SQL Server に限定されているわけではありません。<xref:System.Data.DataTable> インスタンスのデータの読み込み、または、<xref:System.Data.IDataReader> インスタンスによるデータの読み取りであれば、任意のデータ ソースを使用することができます。  
   
@@ -23,7 +23,7 @@ Microsoft SQL Server には、という一般的なコマンド ライン ユー
 - トランザクション内でのバルク コピー操作  
   
 > [!NOTE]
->  .NET Framework バージョン 1.1 以前を使用する場合 (サポートされていません、<xref:System.Data.SqlClient.SqlBulkCopy>クラス)、SQL Server TRANSACT-SQL を実行できる**BULK INSERT**ステートメントを使用して、<xref:System.Data.SqlClient.SqlCommand>オブジェクト。  
+> .NET Framework バージョン1.1 またはそれ以前 ( <xref:System.Data.SqlClient.SqlBulkCopy>クラスをサポートしていません) を使用している場合は、 <xref:System.Data.SqlClient.SqlCommand>オブジェクトを使用して SQL Server transact-sql **BULK INSERT**ステートメントを実行できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [バルク コピー サンプルのセットアップ](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)  

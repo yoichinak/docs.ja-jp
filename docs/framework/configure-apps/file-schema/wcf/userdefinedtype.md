@@ -2,20 +2,20 @@
 title: <userDefinedType>
 ms.date: 03/30/2017
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-ms.openlocfilehash: 46beb88cedf051ed1683161b6ed9b37273ed01f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d1a48fa2ed90999a66f4c1f84b7cfaa9a0e79f6a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769838"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940579"
 ---
-# <a name="userdefinedtype"></a>\<userDefinedType>
+# <a name="userdefinedtype"></a>\<userDefinedType >
 サービス コントラクトに含まれるユーザー定義型 (UDT) を表します。  
   
  \<system.ServiceModel >  
 \<comContracts>  
-\<comContract>  
-\<userDefinedTypes>  
+\<comContract >  
+\<userDefinedTypes >  
   
 ## <a name="syntax"></a>構文  
   
@@ -59,7 +59,7 @@ ms.locfileid: "61769838"
   
  この問題を回避するには、UDT を構成ファイルに追加して、適切なサービス コントラクトで既知の型として含まれるようにすることができます。 このためには、UDT およびコントラクト、つまりそれを使用する元の COM インターフェイスを一意に識別する必要があります。  
   
- 次の例を 2 つの特定の Udt を追加、<`userDefinedTypes`> この目的の構成ファイルのセクション。  
+ 次の例では、この目的のために`userDefinedTypes`、構成ファイルの < > セクションに2つの特定の udt を追加する方法を示します。  
   
 ```xml  
 <comContracts>
@@ -95,6 +95,6 @@ ms.locfileid: "61769838"
 - <xref:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes%2A>
 - <xref:System.ServiceModel.Configuration.ComUdtElementCollection>
 - <xref:System.ServiceModel.Configuration.ComUdtElement>
-- [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
-- [COM+ アプリケーションとの統合](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [方法: COM + サービス設定を構成します。](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [\<comContracts>](comcontracts.md)
+- [COM+ アプリケーションとの統合](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [方法: COM + サービス設定の構成](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

@@ -16,34 +16,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a9a647a9c77a3c1f82ae3691e2a5e5b2f544cad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c21e5bb70815fa54d1b458894ca33becde204758
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645410"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912921"
 ---
 # <a name="icordebugboxvalue-interface"></a>ICorDebugBoxValue インターフェイス
 
-ボックス化された値クラスのオブジェクトを表す"ICorDebugHeapValue"のサブクラスです。  
+ボックス化された値クラスオブジェクトを表す "" "のサブクラスです。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetObject メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-getobject-method.md)|ボックス化された"ICorDebugObjectValue"インスタンスにインターフェイス ポインターを取得します。|  
+|[GetObject メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-getobject-method.md)|ボックス化された "の" のインスタンスへのインターフェイスポインターを取得します。|  
   
 ## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** CorDebug.idl、CorDebug.h  
+ **ヘッダー:** CorDebug .idl、CorDebug. h  
   
- **ライブラリ:** CorGuids.lib  
+ **ライブラリ**CorGuids .lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -2,21 +2,21 @@
 title: <sslStreamSecurity>
 ms.date: 03/30/2017
 ms.assetid: 430a378b-a742-4858-8a12-9f9b235fd627
-ms.openlocfilehash: 67ec30b2bf3c322b949700789ce942e4281b77a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ed87adfb3963513602844fc69afce8f7994fa8e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757990"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932423"
 ---
-# <a name="sslstreamsecurity"></a>\<sslStreamSecurity>
+# <a name="sslstreamsecurity"></a>\<sslStreamSecurity >
 SSL ストリームを使用するチャネル セキュリティをサポートするカスタム バインディング要素を表します。  
   
  \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
 \<binding>  
-\<sslStreamSecurity>  
+\<sslStreamSecurity >  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,7 +33,7 @@ SSL ストリームを使用するチャネル セキュリティをサポート
 |属性|説明|  
 |---------------|-----------------|  
 |requireClientCertificate|クライアント証明書がこのバインディングに必要かどうかを指定するブール値。 既定値は `false` です。|  
-|sslProtocols|どの SslProtocols がサポートされているのかを指定する SslProtocols 列挙型フラグの値。 既定値は Ssl3&#124;Tls&#124;Tls11&#124;tls12 です。|  
+|sslProtocols|どの SslProtocols がサポートされているのかを指定する SslProtocols 列挙型フラグの値。 既定値は、&#124;Ssl3&#124;Tls&#124;Tls11 Tls12 です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -42,14 +42,14 @@ SSL ストリームを使用するチャネル セキュリティをサポート
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|カスタム バインドのすべてのバインド機能を定義します。|  
+|[\<binding>](../../../misc/binding.md)|カスタム バインドのすべてのバインド機能を定義します。|  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>
-- [バインディング](../../../../../docs/framework/wcf/bindings.md)
-- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [バインディング](../../../wcf/bindings.md)
+- [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
+- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

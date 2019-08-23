@@ -2,18 +2,18 @@
 title: <dynamicEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 929f223d-176d-4205-9505-234ddb6dbff4
-ms.openlocfilehash: e1a53869faa1997d2e79c3d2869a15001ee29626
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3dc7fb19c5c7729620a5d9f3df1111b2dbdacf78
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673161"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925836"
 ---
-# <a name="dynamicendpoint"></a>\<dynamicEndpoint>
+# <a name="dynamicendpoint"></a>\<dynamicEndpoint >
 この構成要素は、アプリケーションが、実行時に動的にエンドポイント アドレスを検索するクライアント プログラムとして機能するための情報を格納する標準エンドポイントを定義します。  
   
 \<system.ServiceModel >  
-\<standardEndpoints>  
+\<standardEndpoints >  
   
 ## <a name="syntax"></a>構文  
   
@@ -52,13 +52,13 @@ ms.locfileid: "61673161"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<discoveryClientSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryclientsettings.md)|サービス探索プロセスにクライアントとして参加するためにアプリケーションが必要とする設定を格納します。|  
+|[\<discoveryClientSettings>](discoveryclientsettings.md)|サービス探索プロセスにクライアントとして参加するためにアプリケーションが必要とする設定を格納します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|1 つ以上のプロパティ (アドレス、バインディング、コントラクト) が固定されている、あらかじめ定義されたエンドポイントである標準エンドポイントのコレクション。|  
+|[\<standardEndpoints>](standardendpoints.md)|1 つ以上のプロパティ (アドレス、バインディング、コントラクト) が固定されている、あらかじめ定義されたエンドポイントである標準エンドポイントのコレクション。|  
   
 ## <a name="see-also"></a>関連項目
 

@@ -9,26 +9,26 @@ helpviewer_keywords:
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 46e2e1c327a683782b68069ace2ad6c40bbc856e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb5727bab8e06decde6ccff8b84515f82c3d491a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868993"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910700"
 ---
 # <a name="security-and-remoting-considerations"></a>セキュリティとリモート処理の考慮事項
 リモート処理を使用すると、アプリケーション ドメイン、プロセス、コンピューターの間で透過的な呼び出しを設定できます。 ただし、コード アクセス セキュリティのスタック ウォークがプロセスやコンピューターの境界を超えることはできません (これは、同一プロセスのアプリケーション ドメイン間に当てはまります)。  
   
  リモート処理可能な (<xref:System.MarshalByRefObject> クラスから派生した) クラスの場合、セキュリティに関する責任を負う必要があります。 呼び出し元のコードを暗黙的に信頼できる閉じた環境でのみコードを使用するか、あるいは、保護対象コードが悪意を持って使用される可能性のある外部エントリの影響を受けないようにリモート呼び出しを設計する必要があります。  
   
- 一般に、必要がありますしない公開するメソッド、プロパティ、またはイベント宣言によって保護されている[LinkDemand](../../../docs/framework/misc/link-demands.md)と<xref:System.Security.Permissions.SecurityAction.InheritanceDemand>セキュリティ チェック。 リモート処理では、こうしたチェックは実施されません。 などの他のセキュリティ チェック<xref:System.Security.Permissions.SecurityAction.Demand>、 [Assert](../../../docs/framework/misc/using-the-assert-method.md)で、プロセス内のアプリケーション ドメイン間での作業が、プロセス間またはコンピューター間のシナリオでは機能しません。  
+ 一般に、宣言型の[LinkDemand](../../../docs/framework/misc/link-demands.md)と<xref:System.Security.Permissions.SecurityAction.InheritanceDemand>セキュリティチェックで保護されているメソッド、プロパティ、またはイベントを公開しないようにする必要があります。 リモート処理では、こうしたチェックは実施されません。 <xref:System.Security.Permissions.SecurityAction.Demand>、 [Assert](../../../docs/framework/misc/using-the-assert-method.md)などの他のセキュリティチェックは、プロセス内のアプリケーションドメイン間で機能しますが、プロセス間またはコンピューター間のシナリオでは機能しません。  
   
 ## <a name="protected-objects"></a>保護されているオブジェクト  
  一部のオブジェクトはそれ自体でセキュリティ状態を保持します。 これらのオブジェクトを信頼されていないコードに渡してはなりません。こうしたコードに渡すと、独自の権限を超えるセキュリティ承認が取得されかねません。  
   
  <xref:System.IO.FileStream> オブジェクトの作成がその例です。 <xref:System.Security.Permissions.FileIOPermission> は作成時に要求され、成功すると、ファイル オブジェクトが返されます。 ただし、このオブジェクト参照がファイルのアクセス許可を持たないコードに渡されると、オブジェクトでこの特定のファイルに対する読み書きが行えるようになります。  
   
- このようなオブジェクトの最も簡単な防御方法は同じ、 **FileIOPermission**のパブリック API 要素を介してオブジェクト参照を取得しようとするすべてのコード。  
+ このようなオブジェクトの最も単純な防御は、パブリック API 要素を介してオブジェクト参照を取得するためにシークするコードの同じ**FileIOPermission**を要求することです。  
   
 ## <a name="application-domain-crossing-issues"></a>アプリケーション ドメインを越える問題  
  管理対象ホスト環境にコードを隔離する場合、各種アセンブリのアクセス許可レベルを減らす明示的なポリシーを使用して、複数の子アプリケーション ドメインを生成するというのが一般的です。 ただし、既定のアプリケーション ドメインでそれらのアセンブリのポリシーは変更されません。 いずれかの子アプリケーション ドメインによって既定のアプリケーション ドメインがアセンブリを読み込むように強制されると、コードの隔離の効果が失われ、強制的に読み込まれたアセンブリにある型がより高いレベルの信頼でコードを実行できることになります。  
@@ -39,4 +39,4 @@ ms.locfileid: "61868993"
   
 ## <a name="see-also"></a>関連項目
 
-- [安全なコーディングのガイドライン](../../../docs/standard/security/secure-coding-guidelines.md)
+- [安全なコーディングのガイドライン](../../standard/security/secure-coding-guidelines.md)

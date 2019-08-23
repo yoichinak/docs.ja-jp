@@ -7,22 +7,22 @@ dev_langs:
 ms.assetid: eab4bcf8-9f5f-4731-87d8-842748a6062a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 803709c97309f9766b6a441f5521cdcd7504862f
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 3b8d84f8ea9cf8f94cb7a2b155c5d40c6de2979a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052504"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941697"
 ---
 # <a name="missinginteropdataexception-class-net-native"></a>MissingInteropDataException クラス (.NET ネイティブ)
-**Windows 10、.NET ネイティブのみの Windows アプリ用 .NET**  
+**Windows アプリ用 .NET (Windows 10 用)、.NET ネイティブのみ**  
   
  この例外は、手動マーシャリング メソッドが呼び出されたが、型のメタデータがスタティック分析でも、ランタイム ディレクティブ ファイルにも見つからない場合にスローされます。  
   
  **名前空間:** System.Runtime.CompilerServices  
   
 > [!IMPORTANT]
->  `MissingInteropDataException`クラスが、.NET ネイティブ ツール チェーンによって内部使用のみを対象としています。 サード パーティのコードで使用することを目的としていません。また、アプリケーション コードで、例外を処理する必要はありません。 代わりに、[ランタイム ディレクティブ ファイル](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)にエントリを追加することにより、例外を除去します。 詳細については、「解説」を参照してください。  
+> `MissingInteropDataException`クラスは、.NET ネイティブツールチェーンによる内部使用のみを目的としています。 サード パーティのコードで使用することを目的としていません。また、アプリケーション コードで、例外を処理する必要はありません。 代わりに、[ランタイム ディレクティブ ファイル](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)にエントリを追加することにより、例外を除去します。 詳細については、「解説」を参照してください。  
   
 ## <a name="syntax"></a>構文  
  [!code-csharp[ProjectN#21](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missinginteropdataexception_syntax1.cs#21)]
@@ -34,7 +34,7 @@ ms.locfileid: "66052504"
   
 |コンストラクター|説明|  
 |-----------------|-----------------|  
-|`public MissingInteropDataException(String resourceId, Type pertinentType)`|エラーとデータが欠落している型について説明するシステム提供のメッセージの ID を使用して、`MissingInteropDataException` クラスの新しいインスタンスを初期化します。 このコンス トラクターは、.NET ネイティブ ツール チェーンでのみによって内部的に使用します。|  
+|`public MissingInteropDataException(String resourceId, Type pertinentType)`|エラーとデータが欠落している型について説明するシステム提供のメッセージの ID を使用して、`MissingInteropDataException` クラスの新しいインスタンスを初期化します。 このコンストラクターは、.NET ネイティブツールチェーンのみによって内部で使用されます。|  
   
 ## <a name="properties"></a>プロパティ  
   
@@ -72,10 +72,10 @@ ms.locfileid: "66052504"
 ## <a name="usage-details"></a>使用方法の詳細  
  `MissingInteropDataException` 例外は、型情報が使用できないために COM または Windows ランタイム コンポーネントへのメソッド呼び出しが正常に行えない場合にスローされます。  
   
- 実行時にアプリで使用できるメタデータは、ランタイム ディレクティブ (XML 構成) ファイルの *.rd.xml により定義されます。 アプリからこの例外がスローされないようにするには、このファイルを変更して、実行時に存在する必要があるメタデータを定義する必要があります。 このエラーに対する最も一般的な対処法は、ランタイム ディレクティブ ファイルの適切なプログラム要素に `MarshalObject`、`MarshalDelegate`、または `MarshalStructure` 属性を追加することです。 このファイルの形式の詳細については、「[Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)」(ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス) を参照してください。  
+ 実行時にアプリで使用できるメタデータは、ランタイムディレクティブ (xml 構成) ファイル\*(.xml) によって定義されます。 アプリからこの例外がスローされないようにするには、このファイルを変更して、実行時に存在する必要があるメタデータを定義する必要があります。 このエラーに対する最も一般的な対処法は、ランタイム ディレクティブ ファイルの適切なプログラム要素に `MarshalObject`、`MarshalDelegate`、または `MarshalStructure` 属性を追加することです。 このファイルの形式の詳細については、「[Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)」(ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス) を参照してください。  
   
 > [!IMPORTANT]
->  この例外はアプリケーションで必要なメタデータを実行時に使用できないことを示しているため、この例外に `try`/`catch` ブロックで対処しないでください。 代わりに、例外の原因を診断し、その原因を解消するために、ランタイム ディレクティブ ファイルに適切なエントリを追加します。  
+> この例外はアプリケーションで必要なメタデータを実行時に使用できないことを示しているため、この例外に `try`/`catch` ブロックで対処しないでください。 代わりに、例外の原因を診断し、その原因を解消するために、ランタイム ディレクティブ ファイルに適切なエントリを追加します。  
   
  `MissingInteropDataException` クラスには、正常なメソッド呼び出しのためにどの型のメタデータが必要かを示す、1 つの一意メンバーである `MissingType` プロパティが含まれています。 その他のメンバーはすべて基底クラス <xref:System.Exception?displayProperty=nameWithType> から継承されます。  
   

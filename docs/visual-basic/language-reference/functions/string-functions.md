@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 645d19219481d22ade90f44aaecb62471eb915d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f6203fd6ae69315e7efaaa3c17bb4132bd175d8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802002"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930857"
 ---
 # <a name="string-functions-visual-basic"></a>文字列関数 (Visual Basic)
 Visual Basic で文字列の検索と操作のために用意されている関数の一覧を次の表に示します。  
@@ -46,7 +46,7 @@ Visual Basic で文字列の検索と操作のために用意されている関�
 |<xref:Microsoft.VisualBasic.Strings.Trim%2A>|指定された文字列から、先頭または末尾の空白を除いたコピーを格納する文字列を返します。|  
 |<xref:Microsoft.VisualBasic.Strings.UCase%2A>|指定された文字列を大文字に変換して文字列型または char 型の値を返します。|  
   
- 使用することができます、 [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)文字列の大文字のテキストを使用して比較するかどうかを設定するステートメントの並べ替え順序は、システムのロケールによって決まります (`Text`) または文字 (の内部バイナリ表現`Binary`). 既定のテキスト比較方法は `Binary` です。  
+ [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)ステートメントを使用すると、システムのロケール (`Text`) または文字の内部バイナリ表現 (`Binary`) によって決定される、大文字と小文字を区別しないテキストの並べ替え順序を使用して文字列を比較するかどうかを設定できます。 既定のテキスト比較方法は `Binary` です。  
   
 ## <a name="example"></a>例  
  `UCase` 関数を使って文字列を大文字に変換して返す例を次に示します。  
@@ -77,7 +77,7 @@ Visual Basic で文字列の検索と操作のために用意されている関�
  `Format` の書式指定とユーザー定義の書式指定の両方を使って値の書式を指定する、`String` 関数のさまざまな使用例を次に示します。 日付の区切り記号 (`/`)、時刻の区切り記号 (`:`)、および午前/午後を示す文字 (`t` および `tt`) について、システムで実際に表示される書式は、コードが使用するロケール設定によって決まります。 時刻と日付を開発環境で表示する場合は、コード ロケールの短い時刻書式と短い日付書式が使用されます。  
   
 > [!NOTE]
->  24 時間制を使用するロケールでは、午前/午後を示す記号 (`t` および `tt`) では何も表示されません。  
+> 24 時間制を使用するロケールでは、午前/午後を示す記号 (`t` および `tt`) では何も表示されません。  
   
  [!code-vb[VbVbalrStrings#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#27)]  
   

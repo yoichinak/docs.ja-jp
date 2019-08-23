@@ -1,19 +1,19 @@
 ---
-title: <activityScheduledQuery> WCF の
+title: <activityScheduledQuery>WCF の
 ms.date: 03/30/2017
 ms.assetid: 25f6eee1-3d98-4c39-b517-c0813f03f106
-ms.openlocfilehash: 5087d56092296f8c68b719ec0945993adeb3de0a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7787ada68210ff832ff3fd1ec93c9d346e4d2eaa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704720"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926925"
 ---
-# <a name="activityscheduledquery-of-wcf"></a>\<activityScheduledQuery > の WCF
+# <a name="activityscheduledquery-of-wcf"></a>\<WCF の activityScheduledQuery >
 
 親アクティビティによる実行がスケジュールされているアクティビティを追跡するために使用する、クエリのコレクションを表します。 アクティビティがスケジュールされたレコードを追跡参加要素が定期受信するには、このクエリが必要です。  
   
-追跡プロファイルのクエリの詳細については、次を参照してください[追跡プロファイル。](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+追跡プロファイルのクエリの詳細については、「[追跡プロファイル](../../../windows-workflow-foundation/tracking-profiles.md)」を参照してください。  
   
 \<system.serviceModel>  
 \<追跡 >  
@@ -59,11 +59,11 @@ ms.locfileid: "61704720"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<activityScheduledQueries>](activityscheduledqueries-of-wcf.md)|親アクティビティによる実行のスケジュールされたアクティビティを追跡するために使用されるクエリのコレクション。|  
+|[\<activityScheduledQueries>](activityscheduledqueries-of-wcf.md)|親アクティビティによって実行されるようにスケジュールされたアクティビティを追跡するために使用されるクエリのコレクション。|  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElement>
 - <xref:System.Activities.Tracking.ActivityScheduledQuery>
-- [ワークフローの追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [ワークフローの追跡とトレース](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [追跡プロファイル](../../../windows-workflow-foundation/tracking-profiles.md)

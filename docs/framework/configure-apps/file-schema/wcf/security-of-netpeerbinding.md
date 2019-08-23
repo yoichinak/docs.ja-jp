@@ -2,15 +2,15 @@
 title: <security> の <netPeerBinding>
 ms.date: 03/30/2017
 ms.assetid: 1ef40d8c-f903-4426-9b08-da81462766d8
-ms.openlocfilehash: 6348bc6f6c0d3a9656fbe57bf71f531d1287a949
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: be5ebacec466caf8d8a77bf552f42da1861e77a1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670483"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936625"
 ---
-# <a name="security-of-netpeerbinding"></a>\<セキュリティ > の\<netPeerBinding >
-セキュリティ設定を定義、 [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)メッセージ トランスポートで使用されるセキュリティ、認証の種類などを使用します。  
+# <a name="security-of-netpeerbinding"></a>\<netpeerbinding \<> のセキュリティ >
+[ \<Netpeertcpbinding >](netpeertcpbinding.md)のセキュリティ設定を定義します。これには、使用する認証の種類や、メッセージトランスポートに使用するセキュリティなどが含まれます。  
   
  \<system.ServiceModel >  
 \<bindings>  
@@ -37,13 +37,13 @@ ms.locfileid: "61670483"
   
 |属性|説明|  
 |---------------|-----------------|  
-|モード|省略可能です。 このバインディングで構成されたピアが使用するセキュリティの種類を指定します。 既定値は `Message` です。 この属性は <xref:System.ServiceModel.SecurityMode> 型です。|  
+|モード|任意。 このバインディングで構成されたピアが使用するセキュリティの種類を指定します。 既定値は `Message` です。 この属性は <xref:System.ServiceModel.SecurityMode> 型です。|  
   
 ## <a name="mode-attribute"></a>mode 属性  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
-|メッセージ|SOAP セキュリティにより、認証、整合性、および機密性が実現します。|  
+|Message|SOAP セキュリティにより、認証、整合性、および機密性が実現します。|  
 |なし|セキュリティを無効にします。|  
 |Transport|セキュリティは、HTTPS を使用して確保されます。|  
 |TransportWithMessageCredential|HTTPS により、認証および機密性が実現します。 SOAP メッセージには、豊富な資格情報の種類が用意されています。|  
@@ -52,13 +52,13 @@ ms.locfileid: "61670483"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-netpeertcpbinding.md)|このバインディングで構成されたピアが送信するセキュリティで保護されたメッセージのトランスポートの型を定義します。 この要素は <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement> 型です。|  
+|[\<transport>](transport-of-netpeertcpbinding.md)|このバインディングで構成されたピアが送信するセキュリティで保護されたメッセージのトランスポートの型を定義します。 この要素は <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement> 型です。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|すべてのバインド機能を定義、 [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)します。|  
+|[\<binding>](../../../misc/binding.md)|Netpeertcpbinding > のすべてのバインド機能を[ \<](netpeertcpbinding.md)定義します。|  
   
 ## <a name="remarks"></a>Remarks  
  セキュリティは、メッセージ固有にすることも、トランスポート固有にすることもできます。  
@@ -69,9 +69,9 @@ ms.locfileid: "61670483"
 - <xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement.Security%2A>
 - <xref:System.ServiceModel.PeerSecuritySettings>
-- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [資格情報の種類の選択](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
-- [バインディング](../../../../../docs/framework/wcf/bindings.md)
-- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [サービスおよびクライアントのセキュリティ保護](../../../wcf/feature-details/securing-services-and-clients.md)
+- [資格情報の種類の選択](../../../wcf/feature-details/selecting-a-credential-type.md)
+- [バインディング](../../../wcf/bindings.md)
+- [システムが提供するバインディングの構成](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [サービスとクライアントを構成するためのバインディングの使用](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

@@ -2,14 +2,14 @@
 title: <bindingExtensions>
 ms.date: 03/30/2017
 ms.assetid: 8373f94d-d095-486f-8f1e-4ac2f72b58c7
-ms.openlocfilehash: ed55701e45d8580e37cf4776de6b9c5241e0548c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34ba198de33ae4aa1882d13f74bd2d538999a0c9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673478"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919788"
 ---
-# <a name="bindingextensions"></a>\<bindingExtensions>
+# <a name="bindingextensions"></a>\<bindingExtensions >
 このセクションは、コンピューターまたはアプリケーションの構成ファイルからユーザー定義のバインディングを使用できます。 このコレクションにユーザー定義のバインディングを追加するには、`add` キーワードを使用し、要素の `type` 属性をユーザー定義のバインディングに設定して、`name` 属性をユーザー定義のバインディングの名前に設定します。  
   
  バインディングの拡張により、ユーザーは、エンドポイント構成の一部として使用するユーザー定義のバインディングを作成できます。 プログラムではバインディング拡張は、抽象クラス <xref:System.ServiceModel.Channels.Binding> を実装する型です。  
@@ -43,4 +43,4 @@ ms.locfileid: "61673478"
   
 ## <a name="see-also"></a>関連項目
 
-- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [バインディングの拡張](../../../wcf/extending/extending-bindings.md)

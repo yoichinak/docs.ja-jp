@@ -9,64 +9,64 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-ms.openlocfilehash: 5e59b0284ad1c05c16c33d520bc4c223e6ddace1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e688beac18e782367bf39ddec8339df2b2735225
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623254"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928897"
 ---
 # <a name="lambda-expressions-visual-basic"></a>ラムダ式 (Visual Basic)
-A*ラムダ式*は関数またはサブルーチン デリゲートは、有効な場所で使用できる名前のないです。 ラムダ式は関数またはサブルーチンを指定でき、単一行または複数行を指定できます。 ラムダ式に現在のスコープから値を渡すことができます。  
+*ラムダ式*は、デリゲートが有効な場所であれば使用できる名前のない関数またはサブルーチンです。 ラムダ式は関数またはサブルーチンにすることができ、単一行または複数行にすることができます。 現在のスコープからラムダ式に値を渡すことができます。  
   
 > [!NOTE]
->  `RemoveHandler`ステートメントは例外です。 デリゲート パラメーターのラムダ式を渡すことはできません`RemoveHandler`します。  
+> `RemoveHandler`ステートメントは例外です。 の`RemoveHandler`デリゲートパラメーターに対してラムダ式を渡すことはできません。  
   
- 使用してラムダ式を作成する、`Function`または`Sub`キーワード、標準の関数またはサブルーチンを作成すると同じようにします。 ただし、ステートメントでは、ラムダ式が含まれます。  
+ ラムダ式を作成するに`Function`は、標準の関数またはサブルーチンを作成する場合と同様に、キーワードまたは`Sub`キーワードを使用します。 ただし、ラムダ式はステートメントに含まれています。  
   
- 次の例は、ラムダ式を引数をインクリメントし、値を返します。 この例では、単一行および複数行のラムダ式の両方の構文、関数を示します。  
+ 次の例は、引数をインクリメントして値を返すラムダ式です。 この例では、関数の単一行と複数行のラムダ式の構文の両方を示しています。  
   
  [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]  
   
- 次の例では、値をコンソールに出力するラムダ式です。 この例では、サブルーチンの両方の単一行および複数行のラムダ式構文を示します。  
+ 次の例は、値をコンソールに書き込むラムダ式です。 この例では、サブルーチンの単一行と複数行のラムダ式の構文の両方を示しています。  
   
  [!code-vb[VbVbalrLambdas#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#15)]  
   
- 前の例では、変数名にラムダ式が割り当てられてに注意してください。 変数を参照するには、ラムダ式を呼び出します。 宣言し、同時に、ラムダ式を呼び出す次の例に示すようにできます。  
+ 前の例では、ラムダ式は変数名に割り当てられていることに注意してください。 変数を参照するときは常に、ラムダ式を呼び出します。 次の例に示すように、同時にラムダ式を宣言して呼び出すこともできます。  
   
  [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
   
- ラムダ式は関数呼び出しの結果値として返されることができます (例では、のように、[コンテキスト](#context)このトピックで後述する「)、またはパラメーターに渡される引数として、デリゲート型を受け取る次に示すように例です。  
+ ラムダ式は、次の例に示すように、関数呼び出しの値として返すことができます (このトピックで後述する[コンテキスト](#context)セクションの例に示すように)。または、デリゲート型を受け取るパラメーターに引数として渡されます。  
   
  [!code-vb[VbVbalrLambdas#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class2.vb#8)]  
   
 ## <a name="lambda-expression-syntax"></a>ラムダ式の構文  
- 標準の関数またはサブルーチンのラムダ式の構文に似ています。 相違点は次のとおりです。  
+ ラムダ式の構文は、標準の関数またはサブルーチンの構文に似ています。 違いは次のとおりです。  
   
-- ラムダ式の名前ではありません。  
+- ラムダ式に名前がありません。  
   
-- ラムダ式などで、修飾子を含めることはできません`Overloads`または`Overrides`します。  
+- ラムダ式に`Overloads`は、や`Overrides`などの修飾子を含めることはできません。  
   
-- 単一行のラムダ関数は使用しないでください、`As`戻り値の型を指定する句。 代わりに、型は、ラムダ式の本体に評価される値から推論されます。 たとえば、ラムダ式の本体が`cust.City = "London"`、戻り値の型は`Boolean`します。  
+- 単一行のラムダ関数は、 `As`句を使用して戻り値の型を指定することはありません。 代わりに、ラムダ式の本体が評価される値から型が推論されます。 たとえば、ラムダ式の本体が`cust.City = "London"`の場合、その戻り値の型は`Boolean`になります。  
   
-- 複数行ラムダの関数にするかを指定できます戻り値の型を使用して、`As`句、または省略、`As`句戻り値の型を推論できるようにします。 ときに、`As`複数行ラムダ関数の句を省略すると、すべての主要な型と戻り値の型が推論されます、`Return`複数行ラムダの関数内のステートメント。 *優先型*は一意の型に拡大変換できるその他のすべての種類です。 この一意の型を決定できない場合に絞り込むことが、配列内の他のすべての型を一意の型は、主要な型。 これらの一意の型をどちらも特定できない場合は、 `Object`が最も優先度の高い型になります。 この場合は場合、`Option Strict`に設定されている`On`、コンパイラ エラーが発生します。  
+- 複数行のラムダ関数では、 `As`句を使用して戻り値の型を指定することも、戻り値の型が推論されるように`As`句を省略することもできます。 複数行のラムダ関数に対して`Return` 句を省略した場合、戻り値の型は、複数行のラムダ関数内のすべてのステートメントから最も優先的な型になります。`As` 最も優先される*型*は、他のすべての型の幅を広げることができる一意の型です。 この一意の型を特定できない場合、最も優先される型は、配列内の他のすべての型を絞り込むことができる一意の型になります。 これらの一意の型をどちらも特定できない場合は、 `Object`が最も優先度の高い型になります。 この場合、がに`Option Strict` `On`設定されていると、コンパイラエラーが発生します。  
   
-     式が指定された場合など、`Return`ステートメントは、型の値を含めることが`Integer`、 `Long`、および`Double`、結果の配列の型は`Double`します。 両方`Integer`と`Long`に拡大変換`Double`とのみ`Double`します。 そのため、 `Double` が最も優先度の高い型になります。 詳細については、「 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。  
+     たとえば`Return` 、ステートメントに指定された式に、 `Long`、、および`Integer` `Double`型の値が含まれている場合、 `Double`結果の配列は型になります。 と`Integer` `Double` の両方`Double`がに拡大変換されます。 `Long` そのため、 `Double` が最も優先度の高い型になります。 詳細については、「 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。  
   
-- 単一行の関数の本体は、ステートメントではなく、値を返す式を指定する必要があります。 ない`Return`関数の単一行ステートメント。 単一行の関数によって返される値は、関数の本体での式の値です。  
+- 単一行関数の本体は、ステートメントではなく、値を返す式である必要があります。 単一行関数`Return`のステートメントはありません。 単一行関数によって返される値は、関数本体の式の値です。  
   
-- 単一行のサブルーチンの本文は、単一行ステートメントである必要があります。  
+- 単一行のサブルーチンの本体は単一行ステートメントである必要があります。  
   
-- 単一行の関数とサブルーチンは含まれません、`End Function`または`End Sub`ステートメント。  
+- 単一行関数とサブルーチンには、 `End Function`ステートメントまたは`End Sub`ステートメントは含まれません。  
   
-- 使用して、ラムダ式のパラメーターのデータ型を指定することができます、`As`キーワード、またはパラメーターのデータ型を推論することができます。 すべてのパラメーターまたはすべてのデータ型を推論する必要があります指定する必要があります。  
+- ラムダ式のパラメーターのデータ型は、 `As`キーワードを使用して指定できます。また、パラメーターのデータ型を推論することもできます。 すべてのパラメーターのデータ型が指定されているか、すべてのパラメーターが推論される必要があります。  
   
-- `Optional` `Paramarray`パラメーターは使用できません。  
+- `Optional`パラメーター `Paramarray`とパラメーターは使用できません。  
   
-- ジェネリック パラメーターを指定することはできません。  
+- ジェネリックパラメーターは使用できません。  
   
 ## <a name="async-lambdas"></a>非同期ラムダ  
- 使用して非同期処理を組み込んだするラムダ式およびステートメントを簡単に作成することができます、 [Async](../../../../visual-basic/language-reference/modifiers/async.md)と[Await 演算子](../../../../visual-basic/language-reference/operators/await-operator.md)キーワード。 たとえば、次に示す Windows フォーム例には、非同期メソッド `ExampleMethodAsync`を呼び出して待機するイベント ハンドラーが含まれています。  
+ [Async](../../../../visual-basic/language-reference/modifiers/async.md)および[Await 演算子](../../../../visual-basic/language-reference/operators/await-operator.md)キーワードを使用して、非同期処理を組み込むラムダ式およびステートメントを簡単に作成できます。 たとえば、次に示す Windows フォーム例には、非同期メソッド `ExampleMethodAsync`を呼び出して待機するイベント ハンドラーが含まれています。  
   
 ```vb  
 Public Class Form1  
@@ -85,7 +85,7 @@ Public Class Form1
 End Class  
 ```  
   
- 非同期のラムダを使用して、同じイベント ハンドラーを追加することができます、 [AddHandler ステートメント](../../../../visual-basic/language-reference/statements/addhandler-statement.md)します。 次の例に示すように、このハンドラーを追加するには、ラムダ パラメーター リストの前に `Async` 修飾子を追加します。  
+ [AddHandler ステートメント](../../../../visual-basic/language-reference/statements/addhandler-statement.md)で非同期ラムダを使用して、同じイベントハンドラーを追加できます。 次の例に示すように、このハンドラーを追加するには、ラムダ パラメーター リストの前に `Async` 修飾子を追加します。  
   
 ```vb  
 Public Class Form1  
@@ -107,43 +107,43 @@ Public Class Form1
 End Class  
 ```  
   
- 作成して、非同期メソッドを使用する方法の詳細については、次を参照してください。 [Async および Await を使用した非同期プログラミング](../../../../visual-basic/programming-guide/concepts/async/index.md)します。  
+ 非同期メソッドを作成して使用する方法の詳細については、「 [async および Await を使用した非同期プログラミング](../../../../visual-basic/programming-guide/concepts/async/index.md)」を参照してください。  
   
-## <a name="context"></a> コンテキスト  
- ラムダ式が定義されている外側のスコープとコンテキストを共有します。 コンテナーのスコープで記述された任意のコードと同じアクセス権を持ちます。 これにより、メンバー変数、関数とサブへのアクセスが含まれます。 `Me`、コンテナーのスコープ内のローカル変数やパラメーター。  
+## <a name="context"></a>関連  
+ ラムダ式は、そのコンテキストを定義されているスコープと共有します。 コンテナースコープで記述されたコードと同じアクセス権を持っています。 これには、コンテナースコープ内のメンバー変数、 `Me`関数、および sub、、およびパラメーターとローカル変数へのアクセスが含まれます。  
   
- ローカル変数とスコープのパラメーターへのアクセスは、そのスコープの有効期間を超えて拡張できます。 ラムダ式を参照するデリゲートがガベージ コレクションを使用できない場合に限り、元の環境変数へのアクセスは保持されます。 次の例で変数`target`のローカル`makeTheGame`をメソッド、ラムダ式`playTheGame`が定義されています。 返されたラムダ式が割り当てられているので注意`takeAGuess`で`Main`、ローカル変数へのアクセスにまだ`target`します。  
+ 外側のスコープ内のローカル変数とパラメーターへのアクセスは、そのスコープの有効期間を超えて拡張できます。 ラムダ式を参照するデリゲートがガベージコレクションに使用できない限り、元の環境の変数へのアクセスは保持されます。 次の例では、 `target`変数は、 `makeTheGame`ラムダ式`playTheGame`が定義されているメソッドであるに対してローカルです。 返されたラムダ式は、の`takeAGuess` `Main`に割り当てられていますが、ローカル`target`変数には引き続きアクセスできます。  
   
  [!code-vb[VbVbalrLambdas#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class6.vb#12)]  
   
- 次の例では、さまざまな入れ子になったラムダ式のアクセス権を示します。 返されたラムダ式が実行されると`Main`として`aDel`、これらの要素にアクセスします。  
+ 次の例は、入れ子になったラムダ式の幅広いアクセス権を示しています。 返されたラムダ式が as `Main` `aDel`から実行されると、次の要素にアクセスします。  
   
-- 定義されているクラスのフィールド: `aField`  
+- 定義されているクラスのフィールド:`aField`  
   
-- 定義されているクラスのプロパティ: `aProp`  
+- 定義されているクラスのプロパティ:`aProp`  
   
-- メソッドのパラメーター `functionWithNestedLambda`、それが定義されています。 `level1`  
+- メソッド`functionWithNestedLambda`のパラメーター。定義されています。`level1`  
   
-- ローカル変数`functionWithNestedLambda`: `localVar`  
+- ローカル変数`functionWithNestedLambda`:`localVar`  
   
-- 入れ子になったラムダ式のパラメーター: `level2`  
+- 入れ子になっているラムダ式のパラメーター。`level2`  
   
  [!code-vb[VbVbalrLambdas#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class3.vb#9)]  
   
-## <a name="converting-to-a-delegate-type"></a>デリゲート型に変換します。  
- ラムダ式は、互換性のあるデリゲート型に暗黙的に変換できます。 互換性のための一般的な要件については、次を参照してください。[厳密でないデリゲート変換](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)します。 たとえば、次のコード例に暗黙的に変換されるラムダ式を示しています。`Func(Of Integer, Boolean)`またはデリゲートのシグネチャが一致します。  
+## <a name="converting-to-a-delegate-type"></a>デリゲート型への変換  
+ ラムダ式は、互換性のあるデリゲート型に暗黙的に変換できます。 互換性に関する一般的な要件の詳細については、「厳密でない[デリゲート変換](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)」を参照してください。 たとえば、次のコード例は、または一致するデリゲートシグネチャに`Func(Of Integer, Boolean)`暗黙的に変換されるラムダ式を示しています。  
   
  [!code-vb[VbVbalrLambdas#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#16)]  
   
- 次のコード例に暗黙的に変換されるラムダ式を示しています。`Sub(Of Double, String, Double)`またはデリゲートのシグネチャが一致します。  
+ 次のコード例は、または一致するデリゲートシグネチャ`Sub(Of Double, String, Double)`に暗黙的に変換されるラムダ式を示しています。  
   
  [!code-vb[VbVbalrLambdas#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/class7.vb#23)]  
   
- ラムダ式をデリゲートに割り当てるまたはプロシージャに引数として渡したりするときに、パラメーター名を指定は、データ型、型がデリゲートから取得されるを省略できます。  
+ デリゲートにラムダ式を割り当てたり、プロシージャに引数として渡したりする場合は、パラメーター名を指定し、データ型を省略して、デリゲートから型を取得することができます。  
   
 ## <a name="examples"></a>使用例  
   
-- 次の例を返すラムダ式を定義する`True`null 許容型の引数に値が割り当てられる場合と`False`場合、その値は`Nothing`します。  
+- 次の例では、null 許容型`True`の引数に値が割り当てられて`False`いる場合はを返し`Nothing`、値がの場合はを返すラムダ式を定義します。  
   
      [!code-vb[VbVbalrLambdas#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#4)]  
   
@@ -159,6 +159,6 @@ End Class
 - [Function ステートメント](../../../../visual-basic/language-reference/statements/function-statement.md)
 - [Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [null 許容値型](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
-- [方法: Visual Basic での別のプロシージャに渡す](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
-- [方法: ラムダ式を作成します。](./how-to-create-a-lambda-expression.md)
+- [方法: Visual Basic でプロシージャを別のプロシージャに渡す](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
+- [方法: ラムダ式を作成する](./how-to-create-a-lambda-expression.md)
 - [厳密でないデリゲート変換](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)

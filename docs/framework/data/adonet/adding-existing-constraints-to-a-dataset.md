@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 307d2809-208b-4cf8-b6a9-5d16f15fc16c
-ms.openlocfilehash: 18c391e97baa170b78dcfe0165fb38b6c6d739f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05f95a9c4f250100ca97e3ab52e4073d027df1b8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607285"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932191"
 ---
 # <a name="adding-existing-constraints-to-a-dataset"></a>DataSet への既存の制約の追加
-**入力**のメソッド、 **DataAdapter**塗りつぶします、<xref:System.Data.DataSet>では、テーブルの列と、データ ソースからの行のみが制約は一般設定、データ ソースによって、 **の塗りつぶし**メソッドにこのスキーマ情報を追加できません、**データセット**既定。 設定する、**データセット**いずれかの呼び出しでは、データ ソースから既存の主キー制約情報できます、 **FillSchema**のメソッド、 **DataAdapter**、設定や、**MissingSchemaAction**のプロパティ、 **DataAdapter**に**AddWithKey**呼び出す前に**入力**します。 これにより、その主キー制約、**データセット**データ ソースに反映します。 外部キー制約情報が含まれていないのように、明示的に作成する必要があります[DataTable の制約](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)します。  
+**DataAdapter**の<xref:System.Data.DataSet> **Fill**メソッドは、データソースのテーブルの列と行だけを格納します。制約は通常、データソースによって設定されますが、このスキーマ情報 **は Fill メソッドによって**既定ではデータセットです。 データソースからの既存の primary key 制約情報を**DataSet**に設定するには、 **dataadapter**の**FillSchema**メソッドを呼び出すか、 **dataadapter**の**MissingSchemaAction**プロパティを設定します。**Fill**を呼び出す前に、 **addwithkey**に設定します。 これにより、データ**セット**内の primary key 制約がデータソースの主キー制約を反映するようになります。 外部キー制約情報は含まれていません。 [DataTable 制約](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)に示すように、明示的に作成する必要があります。  
   
- スキーマ情報を追加、**データセット**主キー制約に含まれているデータで塗りつぶすことにより、前に、<xref:System.Data.DataTable>内のオブジェクト、**データセット**します。 その結果、追加時に入力への呼び出し、**データセット**が終わったら、プライマリ キー列の情報がそれぞれ現在の行のデータ ソースから新しい行を一致させる**DataTable**と現在のデータをテーブルは、データ ソースのデータで上書きされます。 スキーマ情報がないデータ ソースからの新しい行の追加、**データセット**、重複する行の結果として得られる。  
+ データを格納する前に、データ**セット**にスキーマ情報を追加することで、主キー <xref:System.Data.DataTable>制約が**dataset**のオブジェクトに含まれるようになります。 その結果、データ**セット**への追加の呼び出しが行われたときに、主キー列の情報が使用され、データソースからの新しい行と各**DataTable**の現在の行が一致します。テーブル内の現在のデータは、データソース。 スキーマ情報がない場合、データソースからの新しい行がデータ**セット**に追加され、行が重複します。  
   
 > [!NOTE]
->  データ ソース内の列が自動インクリメントとして識別された場合、 **FillSchema**メソッド、または**入力**メソッドを**MissingSchemaAction**の**AddWithKey**、作成、 **DataColumn**で、 **AutoIncrement**プロパティに設定`true`します。 ただし、設定する必要がありますには、 **AutoIncrementStep**と**AutoIncrementSeed**値します。 自動インクリメント列の詳細については、次を参照してください。 [AutoIncrement 列の作成](../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md)です。  
+> データソース内の列が自動インクリメントとして識別された場合、 **FillSchema**メソッド、または**MissingSchemaAction**が**Addwithkey**である**Fill**メソッドによって、 **autoincrement**プロパティを持つ**DataColumn**が作成されます。をに`true`設定します。 ただし、 **AutoIncrementStep**と**AutoIncrementSeed**の値を自分で設定する必要があります。 自動インクリメント列の詳細については、「自動[インクリメント列の作成](../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md)」を参照してください。  
   
- 使用して**FillSchema**またはの設定、 **MissingSchemaAction**に**AddWithKey**主キー列情報を確認するデータ ソースで余分な処理が必要です。 この追加の処理によりパフォーマンスが低下する場合があります。 デザイン時に主キー情報がわかっている場合は、最適のパフォーマンスを得るために主キー列 (複数の場合もある) を明示的に指定することをお勧めします。 テーブルの主キーの情報を明示的に設定する方法については、次を参照してください。[主キーを定義する](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)します。  
+ **FillSchema**を使用するか、 **MissingSchemaAction**を**addwithkey**に設定するには、主キー列の情報を決定するためにデータソースで追加の処理が必要です。 この追加の処理によりパフォーマンスが低下する場合があります。 デザイン時に主キー情報がわかっている場合は、最適のパフォーマンスを得るために主キー列 (複数の場合もある) を明示的に指定することをお勧めします。 テーブルの主キー情報を明示的に設定する方法については、「[主キーの定義](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)」を参照してください。  
   
- 次のコード例は、スキーマ情報を追加する方法を示しています、**データセット**を使用して**FillSchema**します。  
+ 次のコード例では、 **FillSchema**を使用して**データセット**にスキーマ情報を追加する方法を示します。  
   
 ```vb  
 Dim custDataSet As DataSet = New DataSet()  
@@ -38,7 +38,7 @@ custAdapter.FillSchema(custDataSet, SchemaType.Source, "Customers");
 custAdapter.Fill(custDataSet, "Customers");  
 ```  
   
- 次のコード例は、スキーマ情報を追加する方法を示しています、**データセット**を使用して、 **MissingSchemaAction.AddWithKey**のプロパティ、**入力**メソッド。  
+ 次のコード例では、 **Fill**メソッドの**MissingSchemaAction**プロパティを使用して、**データセット**にスキーマ情報を追加する方法を示します。  
   
 ```vb  
 Dim custDataSet As DataSet = New DataSet()  
@@ -55,10 +55,10 @@ custAdapter.Fill(custDataSet, "Customers");
 ```  
   
 ## <a name="handling-multiple-result-sets"></a>複数の結果セットの処理  
- 場合、 **DataAdapter**から返された複数の結果セットが発生した、 **SelectCommand**、複数のテーブルが作成されます、**データセット**します。 テーブルの 0 から始まるインクリメンタル既定名が与えられます**テーブル** *N*以降の**テーブル**したがって"Table0"ではなく。 テーブル名がへの引数として渡されたかどうか、 **FillSchema**メソッドでは、テーブルがあるの 0 から始まるインクリメンタル名**TableName** *N*以降の**TableName** "TableName0"ではなく。  
+ データ**アダプター**が**SelectCommand**から返された複数の結果セットを検出すると、**データセット**内に複数のテーブルが作成されます。 テーブルには、インデックス番号が0から始まる既定の**テーブル** *N*が割り当てられます。この名前は、"Table0" の代わりに**table**で始まります。 テーブル名が**FillSchema**メソッドに引数として渡された場合、テーブルには、"TableName0" ではなく**Tablename**で始まる**tablename** *N*の0から始まる増分名が割り当てられます。  
   
 > [!NOTE]
->  場合、 **FillSchema**のメソッド、 **OleDbDataAdapter**オブジェクトが複数の結果セットを返すコマンドに対して呼び出されると、最初の結果セットからスキーマ情報のみが返されます。 設定した場合の複数の結果のスキーマ情報を返すを使用して、 **OleDbDataAdapter**を指定することをお勧め、 **MissingSchemaAction**の**AddWithKey**呼び出すときに、スキーマ情報を取得し、**入力**メソッド。  
+> 複数の結果セットを返すコマンドに対して**OleDbDataAdapter**オブジェクトの**FillSchema**メソッドを呼び出すと、最初の結果セットのスキーマ情報のみが返されます。 **OleDbDataAdapter**を使用して複数の結果セットのスキーマ情報を返す場合は、 **addwithkey**の**MissingSchemaAction**を指定し、 **Fill**を呼び出すときにスキーマ情報を取得することをお勧めします。b.  
   
 ## <a name="see-also"></a>関連項目
 

@@ -2,14 +2,14 @@
 title: <transport> の <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 3b180006-1661-43bf-a699-96fd3da469af
-ms.openlocfilehash: 44e334c3313f93a23ca7df15ba377c5568a92397
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9f784329081f6a18560991378a4527c731f4d31
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788376"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934717"
 ---
-# <a name="transport-of-nethttpbinding"></a>\<トランスポート > の\<netHttpBinding >
+# <a name="transport-of-nethttpbinding"></a>\<netHttpBinding の\<トランスポート > >
 HTTP トランスポートの認証パラメーターを制御するプロパティを定義します。  
   
 \<system.serviceModel>  
@@ -47,14 +47,14 @@ HTTP トランスポートの認証パラメーターを制御するプロパテ
 |属性|説明|  
 |---------------|-----------------|  
 |clientCredentialType|-HTTP 認証を使用してクライアント認証を実行するときに使用される資格情報の種類を指定します。  既定値は `None` です。 この属性は <xref:System.ServiceModel.HttpClientCredentialType> 型です。|  
-|proxyCredentialType|-HTTP 経由でプロキシを使用してドメイン内からクライアント認証を実行するときに使用される資格情報の種類を指定します。 この属性は、親 `mode` 要素の `security` 属性が `Transport` または `TransportCredentialsOnly` の場合にだけ適用されます。 この属性は <xref:System.ServiceModel.HttpProxyCredentialType> 型です。|  
+|proxyCredentialType|-HTTP 経由のプロキシを使用してドメイン内からクライアント認証を実行するときに使用される資格情報の種類を指定します。 この属性は、親 `mode` 要素の `security` 属性が `Transport` または `TransportCredentialsOnly` の場合にだけ適用されます。 この属性は <xref:System.ServiceModel.HttpProxyCredentialType> 型です。|  
 |realm|ダイジェストまたは基本認証の HTTP 認証方式によって使用されるレルムを指定する文字列。 既定値は空の文字列です。|  
-|policyEnforcement|この列挙体は、<xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> を適用するタイミングを指定します。<br /><br /> 1.Never – ポリシーが適用されることはありません (拡張保護は無効になります)。<br />2.WhenSupported – ポリシーが適用されるのは、クライアントが拡張保護をサポートしている場合のみです。<br />3.Always – ポリシーは常に適用されます。 拡張保護をサポートしていないクライアントは認証に失敗します。|  
+|policyEnforcement|この列挙体は、<xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> を適用するタイミングを指定します。<br /><br /> 1. Never – ポリシーが適用されることはありません (拡張保護は無効になります)。<br />2. WhenSupported – ポリシーが適用されるのは、クライアントが拡張保護をサポートしている場合のみです。<br />3.Always – ポリシーは常に適用されます。 拡張保護をサポートしていないクライアントは認証に失敗します。|  
 |protectionScenario|この列挙体は、ポリシーによって適用される保護シナリオを指定します。|  
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 属性  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |なし|メッセージは、転送中はセキュリティで保護されません。|  
 |Basic|基本認証を指定します。|  
@@ -64,11 +64,11 @@ HTTP トランスポートの認証パラメーターを制御するプロパテ
   
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType 属性  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
-|なし|メッセージの数は、転送中にセキュリティ保護されません。|  
-|Basic|RFC 2617 – HTTP Authentication で定義されている基本認証を指定します。基本認証とダイジェスト認証です。|  
-|Digest|RFC 2617 – HTTP Authentication で定義されている、ダイジェスト認証を指定します。基本認証とダイジェスト認証です。|  
+|なし|-メッセージは、転送中にセキュリティ保護されません。|  
+|Basic|RFC 2617 – HTTP 認証による定義に従った基本認証を指定します。基本認証とダイジェスト認証。|  
+|Digest|RFC 2617 – HTTP 認証で定義されているダイジェスト認証を指定します。基本認証とダイジェスト認証。|  
 |Ntlm|Windows 認証に失敗した場合で可能な場合は、NTLM 認証を指定します。|  
 |Windows|Windows 統合認証を指定します。|  
 |証明書|証明書を使用したクライアント認証を実行します。 このオプションは、親要素の `Mode` の `security` 属性が Transport に設定されている場合のみ機能し、TransportCredentialOnly に設定されている場合は機能しません。|  
@@ -80,7 +80,7 @@ HTTP トランスポートの認証パラメーターを制御するプロパテ
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nethttpbinding.md)|セキュリティ機能を定義、 [ \<netHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nethttpbinding.md)します。|  
+|[\<security>](security-of-nethttpbinding.md)|[ \<NetHttpBinding >](nethttpbinding.md)のセキュリティ機能を定義します。|  
   
 ## <a name="example"></a>例  
  基本的なバインディングを使用した SSL トランスポート セキュリティの使用例を次に示します。 既定で、基本的なバインディングは HTTP 通信をサポートします。  
@@ -122,8 +122,8 @@ HTTP トランスポートの認証パラメーターを制御するプロパテ
 - <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>
 - <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>
 - <xref:System.ServiceModel.HttpTransportSecurity>
-- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [バインディング](../../../../../docs/framework/wcf/bindings.md)
-- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [サービスおよびクライアントのセキュリティ保護](../../../wcf/feature-details/securing-services-and-clients.md)
+- [バインディング](../../../wcf/bindings.md)
+- [システムが提供するバインディングの構成](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [サービスとクライアントを構成するためのバインディングの使用](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

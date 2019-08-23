@@ -7,20 +7,20 @@ helpviewer_keywords:
 - <listeners> element
 - listeners element
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
-ms.openlocfilehash: f9f12d9e61e2472b897169727bbb4fbf9833efd6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4550d4c4cd9ff37c5937ad366cccf91387c0e3f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701347"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927021"
 ---
-# <a name="listeners-element-for-trace"></a>\<リスナー > 要素の\<トレース >
-収集、するリスナーをストアを指定し、メッセージをルーティングします。 リスナーでは、適切なターゲットのトレースを出力します。  
+# <a name="listeners-element-for-trace"></a>\<トレース > の\<リスナー > 要素
+メッセージを収集、格納、およびルーティングするリスナーを指定します。 リスナーは、適切なターゲットにトレース出力を送信します。  
   
- \<configuration > 要素  
-\<system.diagnostics > 要素  
+ \<configuration> 要素  
+\<system. diagnostics > 要素  
 \<トレース > 要素  
-\<リスナー > 要素の\<トレース >  
+\<トレース > の\<リスナー > 要素  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,9 +42,9 @@ ms.locfileid: "61701347"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|`Listeners` コレクションにリスナーを追加します。|  
-|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md)|トレースの `Listeners` コレクションを削除します。|  
-|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)|リスナーを削除、`Listeners`コレクション。|  
+|[\<add>](add-element-for-listeners-for-trace.md)|`Listeners` コレクションにリスナーを追加します。|  
+|[\<clear>](clear-element-for-listeners-for-trace.md)|トレースの `Listeners` コレクションを削除します。|  
+|[\<remove>](remove-element-for-listeners-for-trace.md)|`Listeners`コレクションからリスナーを削除します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -55,13 +55,13 @@ ms.locfileid: "61701347"
 |`trace`|トレース メッセージを収集、格納、およびルーティングするリスナーを保持します。|  
   
 ## <a name="remarks"></a>Remarks  
- <xref:System.Diagnostics.Debug>と<xref:System.Diagnostics.Trace>クラスが同じ共有**リスナー**コレクション。 これらのクラスのいずれかで、コレクションにリスナー オブジェクトを追加する場合、その他のクラスは、同一のリスナーを使用します。 .NET Framework に付属するリスナー クラスから派生、<xref:System.Diagnostics.TraceListener>クラス。  
+ クラス<xref:System.Diagnostics.Debug>と<xref:System.Diagnostics.Trace>クラスは、同じ**Listeners**コレクションを共有します。 これらのクラスのいずれかのコレクションにリスナーオブジェクトを追加すると、他のクラスは同じリスナーを使用します。 .NET Framework に付属しているリスナークラスは、 <xref:System.Diagnostics.TraceListener>クラスから派生します。  
   
 ## <a name="configuration-file"></a>構成ファイル  
- この要素は、マシン構成ファイル (Machine.config) と、アプリケーション構成ファイルで使用できます。  
+ この要素は、コンピューターの構成ファイル (machine.config) とアプリケーション構成ファイルで使用できます。  
   
 ## <a name="example"></a>例  
- 次の例は、使用する方法を示します、 **\<リスナー >** リスナーを追加する要素`MyListener`と`MyEventListener`を**リスナー**コレクション。 `MyListener` という名前のファイルを作成します。`MyListener.log`し、ファイルに出力を書き込みます。 `MyEventListener` イベント ログにエントリを作成します。  
+ 次の例では、listeners  **\<>** 要素を使用してリスナー `MyListener`および`MyEventListener`リスナーコレクションに追加する方法を示します。 `MyListener`という名前`MyListener.log`のファイルを作成し、その出力をファイルに書き込みます。 `MyEventListener`イベントログにエントリを作成します。  
   
 ```xml  
 <configuration>  
@@ -87,4 +87,4 @@ ms.locfileid: "61701347"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Diagnostics.TraceListener>
-- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [トレースおよびデバッグ設定のスキーマ](index.md)

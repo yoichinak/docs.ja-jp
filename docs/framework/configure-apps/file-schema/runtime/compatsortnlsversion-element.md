@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ebc4bf703bc22b642b0950fd60471342a615a5c
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e3a348ac8da855e458b6208c51f9c51b48da3134
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663845"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927444"
 ---
 # <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion > 要素
 文字列比較の実行時に、ランタイムがレガシ並べ替え順序を使用するように指定します。  
@@ -60,7 +60,7 @@ ms.locfileid: "69663845"
  .NET Framework 4 の<xref:System.Globalization.CompareInfo?displayProperty=nameWithType>クラスによって実行される文字列比較、並べ替え、および大文字と小文字の区別の操作は Unicode 5.1 標準に準拠して<xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType>いるため、やなど<xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType>の文字列比較メソッドの結果は、以前のバージョンの .NET Framework。 アプリケーションが従来の動作に依存している場合は、アプリケーションの構成ファイルに要素を`<CompatSortNLSVersion>`含めることによって、.NET Framework 3.5 以前のバージョンで使用されている文字列比較規則および並べ替え規則を復元できます。  
   
 > [!IMPORTANT]
->  文字列の比較および並べ替えのレガシ規則を復元する場合は、ローカル システムで sort00001000.dll ダイナミック リンク ライブラリも使用できるようにする必要があります。  
+> 文字列の比較および並べ替えのレガシ規則を復元する場合は、ローカル システムで sort00001000.dll ダイナミック リンク ライブラリも使用できるようにする必要があります。  
   
  アプリケーション ドメインを作成するときに、文字列 "NetFx40_Legacy20SortingBehavior" を <xref:System.AppDomainSetup.SetCompatibilitySwitches%2A> メソッドに渡すことで、文字列の比較および並べ替えのレガシ規則を特定のアプリケーション ドメインで使用することもできます。  
   

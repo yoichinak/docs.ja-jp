@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 5c57d86b2f08733dc4a729bf6091eab23c6035f2
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: MT
+ms.openlocfilehash: 7ee603fa5350ef81c6d32d2f22119bbe526295df
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039707"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912626"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>方法: Windows フォームにコントロールを追加する
 ほとんどのフォームは、ユーザーインターフェイス (UI) を定義するためにフォームの画面にコントロールを追加することによって設計されています。 *コントロール*は、情報の表示やユーザー入力の受け入れに使用されるフォーム上のコンポーネントです。 コントロールの詳細については、「 [Windows フォームコントロール](index.md)」を参照してください。
@@ -30,7 +30,7 @@ ms.locfileid: "69039707"
      コントロールが、指定された位置とサイズでフォームに追加されます。
 
     > [!NOTE]
-    >  各コントロールには、既定のサイズが定義されています。 コントロールを**ツールボックス**からフォームにドラッグすると、コントロールの既定のサイズでコントロールをフォームに追加できます。
+    > 各コントロールには、既定のサイズが定義されています。 コントロールを**ツールボックス**からフォームにドラッグすると、コントロールの既定のサイズでコントロールをフォームに追加できます。
 
 ## <a name="to-drag-a-control-to-a-form"></a>コントロールをフォームにドラッグするには
 
@@ -41,12 +41,12 @@ ms.locfileid: "69039707"
      コントロールは、既定のサイズで指定された位置にフォームに追加されます。
 
     > [!NOTE]
-    >  **ツールボックス**のコントロールをダブルクリックすると、既定のサイズでフォームの左上隅に追加できます。
+    > **ツールボックス**のコントロールをダブルクリックすると、既定のサイズでフォームの左上隅に追加できます。
 
      また、実行時にコントロールをフォームに動的に追加することもできます。 次のコード例<xref:System.Windows.Forms.TextBox>では、コントロールがクリックさ<xref:System.Windows.Forms.Button>れると、コントロールがフォームに追加されます。
 
     > [!NOTE]
-    >  次の手順では、**ボタン**コントロール`Button1`が既に配置されているフォームが存在する必要があります。
+    > 次の手順では、**ボタン**コントロール`Button1`が既に配置されているフォームが存在する必要があります。
 
 ## <a name="to-add-a-control-to-a-form-programmatically"></a>プログラムによってフォームにコントロールを追加するには
 
@@ -81,7 +81,7 @@ ms.locfileid: "69039707"
     ```
 
     > [!NOTE]
-    >  また、コントロールの他のプロパティを初期化するコードを追加することもできます。
+    > また、コントロールの他のプロパティを初期化するコードを追加することもできます。
 
     > [!IMPORTANT]
     >  悪意`UserControl`のあるを参照することにより、ネットワーク経由でローカルコンピューターをセキュリティ上のリスクにさらすことがあります。 これは、悪意のあるユーザーが有害なカスタムコントロールを作成した後、誤ってプロジェクトに追加した場合にのみ問題になります。

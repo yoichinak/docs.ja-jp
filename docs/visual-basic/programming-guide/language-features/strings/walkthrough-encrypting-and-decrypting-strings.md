@@ -1,5 +1,5 @@
 ---
-title: Visual Basic における文字列の暗号化および暗号化
+title: Visual Basic での文字列の暗号化と復号化
 ms.date: 07/20/2015
 helpviewer_keywords:
 - encryption [Visual Basic], strings
@@ -7,72 +7,72 @@ helpviewer_keywords:
 - decryption [Visual Basic], strings
 - strings [Visual Basic], decrypting
 ms.assetid: 1f51e40a-2f88-43e2-a83e-28a0b5c0d6fd
-ms.openlocfilehash: 1d003df87327e14a6cbd65222f86c3dc4df169ff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ee8691fedb537d1aa588eaac61624b445da64d1f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024483"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944424"
 ---
-# <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a>チュートリアル: Visual Basic における文字列の暗号化および暗号化
-このチュートリアルは、使用する方法を示します、<xref:System.Security.Cryptography.DESCryptoServiceProvider>暗号化し、Triple Data Encryption Standard の暗号化サービス プロバイダー (CSP) のバージョンを使用して文字列を復号化するクラス (<xref:System.Security.Cryptography.TripleDES>) アルゴリズム。 最初の手順では、3 des アルゴリズムをカプセル化して、base 64 エンコード文字列として、暗号化されたデータを格納する単純なラッパー クラスを作成します。 次に、そのラッパーを使用して、ユーザーの個人データをパブリックにアクセスできるテキスト ファイルを安全に格納します。  
+# <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a>チュートリアル: Visual Basic での文字列の暗号化と復号化
+このチュートリアルでは、 <xref:System.Security.Cryptography.DESCryptoServiceProvider>クラスを使用して、トリプルデータ暗号化標準 (<xref:System.Security.Cryptography.TripleDES>) アルゴリズムの暗号化サービスプロバイダー (CSP) バージョンを使用して文字列を暗号化および復号化する方法について説明します。 最初の手順では、3DES アルゴリズムをカプセル化し、暗号化されたデータを base-64 エンコード文字列として格納する単純なラッパークラスを作成します。 次に、このラッパーを使用して、プライベートユーザーデータをパブリックにアクセスできるテキストファイルに安全に格納します。  
   
- ユーザー シークレット (パスワードなど) の保護を承認されていないユーザーの資格情報を解読できないようにするには、暗号化を使用することができます。 これは、ユーザーの資産を保護して、否認不可を提供する承認されたユーザーの id が盗まれないを保護できます。 また、暗号化は、承認されていないユーザーへのアクセスをユーザーのデータを保護できます。  
+ 暗号化を使用してユーザーシークレット (パスワードなど) を保護し、承認されていないユーザーが資格情報を読み取れないようにすることができます。 これにより、承認されたユーザーの id を盗難から保護し、ユーザーの資産を保護し、否認不可を提供できます。 また、暗号化を使用すると、承認されていないユーザーがユーザーのデータにアクセスするのを防ぐことができます。  
   
  詳細については、「[暗号サービス](../../../../standard/security/cryptographic-services.md)」をご覧ください。  
   
 > [!IMPORTANT]
->  (Advanced Encryption Standard [AES] として参照されるようになりました) Rijndael と Triple Data Encryption Standard (3 des) アルゴリズム詳細いるため、DES よりも優れたセキュリティを提供負荷の大きい計算します。 詳細については、次のトピックを参照してください。 <xref:System.Security.Cryptography.DES> および <xref:System.Security.Cryptography.Rijndael>  
+> Rijndael (現時点では Advanced Encryption Standard [AES]) と Triple Data Encryption Standard (3DES) アルゴリズムは、計算に負荷がかかるため、DES よりも強力なセキュリティを提供します。 詳細については、次のトピックを参照してください。 <xref:System.Security.Cryptography.DES> および <xref:System.Security.Cryptography.Rijndael>  
   
 ### <a name="to-create-the-encryption-wrapper"></a>暗号化ラッパーを作成するには  
   
-1. 作成、`Simple3Des`暗号化と復号化メソッドをカプセル化するクラス。  
+1. クラスを`Simple3Des`作成して、暗号化と復号化の方法をカプセル化します。  
   
      [!code-vb[VbVbalrStrings#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#38)]  
   
-2. 含むファイルの先頭に、暗号化の名前空間のインポートを追加、`Simple3Des`クラス。  
+2. 暗号化名前空間のインポートを、 `Simple3Des`クラスを含むファイルの先頭に追加します。  
   
      [!code-vb[VbVbalrStrings#77](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#77)]  
   
-3. `Simple3Des`クラスに 3 des 暗号化サービス プロバイダーを格納するプライベート フィールドを追加します。  
+3. `Simple3Des`クラスに、3des 暗号化サービスプロバイダーを格納するためのプライベートフィールドを追加します。  
   
      [!code-vb[VbVbalrStrings#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#39)]  
   
-4. 指定したキーのハッシュから指定した長さのバイト配列を作成するプライベート メソッドを追加します。  
+4. 指定したキーのハッシュから、指定した長さのバイト配列を作成するプライベートメソッドを追加します。  
   
      [!code-vb[VbVbalrStrings#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#41)]  
   
-5. 3 des 暗号化サービス プロバイダーを初期化するコンス トラクターを追加します。  
+5. 3DES 暗号化サービスプロバイダーを初期化するコンストラクターを追加します。  
   
-     `key`パラメーター コントロール、`EncryptData`と`DecryptData`メソッド。  
+     パラメーター `key`は、メソッド`EncryptData`および`DecryptData`メソッドを制御します。  
   
      [!code-vb[VbVbalrStrings#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#40)]  
   
-6. 文字列を暗号化するパブリック メソッドを追加します。  
+6. 文字列を暗号化するパブリックメソッドを追加します。  
   
      [!code-vb[VbVbalrStrings#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#42)]  
   
-7. 文字列を復号化するパブリック メソッドを追加します。  
+7. 文字列を復号化するパブリックメソッドを追加します。  
   
      [!code-vb[VbVbalrStrings#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#43)]  
   
-     ラッパー クラスは、ユーザーの資産を保護するようになりました使用できます。 この例では、パブリックにアクセスできるテキスト ファイルにユーザーの個人データを安全に保管する使用されます。  
+     これで、ラッパークラスを使用してユーザー資産を保護できるようになりました。 この例では、プライベートユーザーデータをパブリックにアクセスできるテキストファイルに安全に格納するために使用されます。  
   
-### <a name="to-test-the-encryption-wrapper"></a>暗号化のラッパーをテストするには  
+### <a name="to-test-the-encryption-wrapper"></a>暗号化ラッパーをテストするには  
   
-1. 別のクラスのラッパーを使用するメソッドを追加`EncryptData`メソッドは文字列の暗号化をユーザーに書き込むことのマイ ドキュメント フォルダー。  
+1. 別のクラスで、ラッパーの`EncryptData`メソッドを使用して文字列を暗号化し、それをユーザーの [マイドキュメント] フォルダーに書き込むメソッドを追加します。  
   
      [!code-vb[VbVbalrStrings#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#78)]  
   
-2. ユーザーから、暗号化された文字列を読み取るメソッドのマイ ドキュメント フォルダーと、ラッパーの文字列を復号化を追加`DecryptData`メソッド。  
+2. 暗号化された文字列をユーザーのマイドキュメントフォルダーから読み取り、その文字列をラッパーの`DecryptData`メソッドで復号化するメソッドを追加します。  
   
      [!code-vb[VbVbalrStrings#79](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#79)]  
   
-3. 呼び出すユーザー インターフェイスのコードを追加、`TestEncoding`と`TestDecoding`メソッド。  
+3. メソッド`TestEncoding` と`TestDecoding`メソッドを呼び出すユーザーインターフェイスコードを追加します。  
   
 4. アプリケーションを実行します。  
   
-     アプリケーションをテストする場合は、こと、暗号化は解除されません、データ、間違ったパスワードを指定する場合に注意してください。  
+     アプリケーションをテストするときに、間違ったパスワードを指定した場合、データの暗号化が解除されないことに注意してください。  
   
 ## <a name="see-also"></a>関連項目
 

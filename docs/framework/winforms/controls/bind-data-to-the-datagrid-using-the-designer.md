@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to Windows Forms controls
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-ms.openlocfilehash: 51e18555a322e32f0877167d42cd30776068c746
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 609878416be26786ce865168c996c78e18b1897f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040038"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917885"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>方法: デザイナーを使用してデータを Windows フォーム DataGridView コントロールにバインドする
 デザイナーを使用すると、データベース、 <xref:System.Windows.Forms.DataGridView>ビジネスオブジェクト、Web サービスなど、さまざまな種類のデータソースにコントロールを接続できます。 デザイナーを使用してコントロールをデータソースにバインドすると、コントロールはデータソースを表す<xref:System.Windows.Forms.BindingSource>コンポーネントに自動的にバインドされます。 さらに、データ ソースによって提供されるスキーマ情報に対応するように、このコントロールの列が自動的に生成されます。
@@ -39,7 +39,7 @@ ms.locfileid: "69040038"
 6. マスター/詳細リレーションシップを作成するには、 **[データソースの選択]** ドロップダウンウィンドウ<xref:System.Windows.Forms.DataGridView>で、親テーブル用に<xref:System.Windows.Forms.BindingSource>作成したを展開し、表示されている一覧から関連する子テーブルを選択します。
 
     > [!NOTE]
-    >  プロジェクトにデータ ソースが既にある場合は、 **[データソース]** ウィンドウを使用してデータ フォームを作成することもできます。 詳細については、「[[データ ソース] ウィンドウ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))」を参照してください。
+    > プロジェクトにデータ ソースが既にある場合は、 **[データソース]** ウィンドウを使用してデータ フォームを作成することもできます。 詳細については、「[[データ ソース] ウィンドウ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

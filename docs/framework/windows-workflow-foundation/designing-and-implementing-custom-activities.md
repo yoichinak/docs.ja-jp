@@ -2,18 +2,18 @@
 title: カスタム アクティビティの設計と実装
 ms.date: 03/30/2017
 ms.assetid: 4e30e63d-6e33-4842-a7a4-ce807cef1fad
-ms.openlocfilehash: 61a5de5a15835c728c18c0136952cf7ffdbaf000
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b0d04572c65fd4e3e0ae96241217c9ae9aa0e2c5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945848"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915362"
 ---
 # <a name="designing-and-implementing-custom-activities"></a>カスタム アクティビティの設計と実装
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] のカスタム アクティビティを作成するには、システム標準アクティビティを複合アクティビティにアセンブルするか、<xref:System.Activities.CodeActivity>、<xref:System.Activities.AsyncCodeActivity>、または <xref:System.Activities.NativeActivity> から派生する新しい型を作成します。 ここでは、いずれかのメソッドを使用してカスタム アクティビティを作成する方法について説明します。  
   
 > [!IMPORTANT]
->  既定では、カスタム アクティビティは、ワークフロー デザイナー内で、アクティビティ名を含む単純な四角形として表示されます。 ワーク フロー デザイナーでアクティビティのカスタム ビジュアル表現を指定するには、カスタム デザイナーを作成する必要があります。 詳細については、次を参照してください。[を使用してカスタム アクティビティ デザイナーおよびテンプレート](using-custom-activity-designers-and-templates.md)します。  
+> 既定では、カスタム アクティビティは、ワークフロー デザイナー内で、アクティビティ名を含む単純な四角形として表示されます。 ワーク フロー デザイナーでアクティビティのカスタム ビジュアル表現を指定するには、カスタム デザイナーを作成する必要があります。 詳細については、「[カスタムアクティビティデザイナーおよびテンプレートの使用](using-custom-activity-designers-and-templates.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [アクティビティ作成オプション](activity-authoring-options-in-wf.md)  

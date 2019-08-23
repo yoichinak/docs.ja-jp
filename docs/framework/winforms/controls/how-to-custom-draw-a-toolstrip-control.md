@@ -16,12 +16,12 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
-ms.openlocfilehash: fee3ee901f3f882091464d7c450f4f144d69a6e7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 810a680a1a9d9065e80ed87453a728fe628a953d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666400"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935365"
 ---
 # <a name="how-to-custom-draw-a-toolstrip-control"></a>方法: ToolStrip コントロールをカスタム描画する
 <xref:System.Windows.Forms.ToolStrip> コントロールに、次のレンダリング (描画) クラスが関連付けられています。  
@@ -47,7 +47,7 @@ ms.locfileid: "64666400"
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=nameWithType> をオーバーライドしますが、基本クラスは呼び出しません。  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStripRenderer>、<xref:System.Windows.Forms.ToolStripSystemRenderer>、および <xref:System.Windows.Forms.ToolStripProfessionalRenderer> に対して、このメソッドのバージョンがあります。  
+> <xref:System.Windows.Forms.ToolStripRenderer>、<xref:System.Windows.Forms.ToolStripSystemRenderer>、および <xref:System.Windows.Forms.ToolStripProfessionalRenderer> に対して、このメソッドのバージョンがあります。  
   
 ### <a name="to-change-the-professionalcolortable"></a>ProfessionalColorTable を変更するには  
   
@@ -139,5 +139,5 @@ ms.locfileid: "64666400"
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
 - <xref:System.Windows.Forms.ToolStripRenderer>
 - [組み込みのオーナー描画サポートを備えたコントロール](controls-with-built-in-owner-drawing-support.md)
-- [方法: 作成し、Windows フォームで ToolStrip コントロールのカスタム レンダラーを設定](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
+- [方法: Windows フォームで ToolStrip コントロールのカスタムレンダラーを作成して設定する](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
 - [ToolStrip コントロールの概要](toolstrip-control-overview-windows-forms.md)

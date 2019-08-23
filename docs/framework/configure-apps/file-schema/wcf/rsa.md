@@ -2,18 +2,18 @@
 title: <rsa>
 ms.date: 03/30/2017
 ms.assetid: ae1f2267-e40d-42ff-8abf-06ab7067bdb9
-ms.openlocfilehash: 0e307069bd3a98153cc66147ba7bcf511cf13a8e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd8e5ab11a7c019a8fe967f1c14b88a922a16c33
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670659"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934737"
 ---
-# <a name="rsa"></a>\<rsa>
+# <a name="rsa"></a>\<rsa >
 この ID のエンドポイントに接続するセキュリティで保護された WCF クライアントは、サーバーから提示されたクレームに、この ID を構築するために使用された RSA 公開キーを含むクレームが含まれていることを検証します。  
   
  \<identity>  
-\<rsa>  
+\<rsa >  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,12 +37,12 @@ ms.locfileid: "61670659"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|クライアントで認証するサービスの ID を指定します。|  
+|[\<identity>](identity.md)|クライアントで認証するサービスの ID を指定します。|  
   
 ## <a name="remarks"></a>Remarks  
  RSA チェックを行うと、その RSA キーまたは生成された独自の RSA キー値に基づいて、単一の証明書の認証を明確に制限できます。 これにより、RSA キーが変更された場合に既存のクライアントで使用できなくなるサービスを犠牲にして、特定の RSA キーをより厳しく認証できます。  
   
- Identity を使用して、クライアントにサービスを検証する方法の詳細については、次を参照してください。[サービス Id と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)します。  
+ Id を使用してクライアントに対するサービスを検証する方法の詳細については、「[サービス id と認証](../../../wcf/feature-details/service-identity-and-authentication.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の構成コードは、サーバーの認証に使用される X.509 証明書の公開キー値を指定します。  
@@ -59,5 +59,5 @@ ms.locfileid: "61670659"
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
 - <xref:System.ServiceModel.RsaEndpointIdentity>
-- [サービス ID と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [サービス ID と認証](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [\<identity>](identity.md)

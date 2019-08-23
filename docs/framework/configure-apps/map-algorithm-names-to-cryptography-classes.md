@@ -7,12 +7,12 @@ helpviewer_keywords:
 - cryptographic algorithms
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
-ms.openlocfilehash: 49f4b5b4b3634df5e648b5208448d644168e9d19
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 513000169504473aa6dd46feaca214f58502ffd0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566728"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912863"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>暗号化クラスへのアルゴリズム名の割り当て
 Windows SDK を使用して、開発者が暗号化オブジェクトを作成するには、次の4つの方法があります。  
@@ -58,16 +58,16 @@ Windows SDK を使用して、開発者が暗号化オブジェクトを作成�
 </configuration>  
 ```  
   
- [< Cryptoclass\>要素](../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)で属性の名前を指定できます (前の例では、属性`MySHA1Hash`に名前を指定します)。 Cryptoclass > 要素の属性 **\<** の値は、共通言語ランタイムがクラスを検索するために使用する文字列です。 [「完全修飾型名の指定](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)」で指定した要件を満たす任意の文字列を使用できます。  
+ [< Cryptoclass\>要素](./file-schema/cryptography/cryptoclass-element.md)で属性の名前を指定できます (前の例では、属性`MySHA1Hash`に名前を指定します)。 Cryptoclass > 要素の属性 **\<** の値は、共通言語ランタイムがクラスを検索するために使用する文字列です。 [「完全修飾型名の指定](../reflection-and-codedom/specifying-fully-qualified-type-names.md)」で指定した要件を満たす任意の文字列を使用できます。  
   
- 多くのアルゴリズム名は、同じクラスにマップできます。 [ \<Nameentry > 要素](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md)は、クラスを1つのわかりやすいアルゴリズム名にマップします。 **Name**属性には、 **CryptoConfig**メソッドを呼び出すときに使用される文字列、または<xref:System.Security.Cryptography>名前空間の抽象暗号化クラスの名前を指定できます。 **Class**属性の値は、  **\<cryptoclass >** 要素の属性の名前です。  
+ 多くのアルゴリズム名は、同じクラスにマップできます。 [ \<Nameentry > 要素](./file-schema/cryptography/nameentry-element.md)は、クラスを1つのわかりやすいアルゴリズム名にマップします。 **Name**属性には、 **CryptoConfig**メソッドを呼び出すときに使用される文字列、または<xref:System.Security.Cryptography>名前空間の抽象暗号化クラスの名前を指定できます。 **Class**属性の値は、  **\<cryptoclass >** 要素の属性の名前です。  
   
 > [!NOTE]
->  Sha1 アルゴリズムを取得するには、 <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType>または**CryptoConfig CreateFromName ("SHA1")** メソッドを呼び出します。 各メソッドは、SHA1 アルゴリズムを実装するオブジェクトを返すことだけを保証します。 アルゴリズムの各フレンドリ名を、構成ファイル内の同じクラスにマップする必要はありません。  
+> Sha1 アルゴリズムを取得するには、 <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType>または**CryptoConfig CreateFromName ("SHA1")** メソッドを呼び出します。 各メソッドは、SHA1 アルゴリズムを実装するオブジェクトを返すことだけを保証します。 アルゴリズムの各フレンドリ名を、構成ファイル内の同じクラスにマップする必要はありません。  
   
  既定の名前とマップ先のクラスの一覧については<xref:System.Security.Cryptography.CryptoConfig>、「」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
-- [暗号化クラスの設定](../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [Cryptographic Services](../../standard/security/cryptographic-services.md)
+- [暗号化クラスの設定](configure-cryptography-classes.md)

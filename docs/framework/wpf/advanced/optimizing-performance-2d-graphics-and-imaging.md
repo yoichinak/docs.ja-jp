@@ -12,61 +12,61 @@ helpviewer_keywords:
 - 2-D graphics [WPF]
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
-ms.openlocfilehash: 25803bd772832cd22e855f530d10a3f3639c180c
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 764e7e802ccaff50b76229b9441380bfe77fefb5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348442"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933347"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>パフォーマンスの最適化:2D グラフィックスとイメージング
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には、アプリケーションの要件に合わせて最適化できる広範な 2D グラフィックス機能とイメージング機能が用意されています。 このトピックでは、この領域でのパフォーマンスの最適化に関する情報を提供します。  
 
 <a name="Drawing_and_Shapes"></a>   
 ## <a name="drawing-and-shapes"></a>描画と図形  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 用意されています<xref:System.Windows.Media.Drawing>と<xref:System.Windows.Shapes.Shape>グラフィカルな描画コンテンツを表すオブジェクト。 ただし、<xref:System.Windows.Media.Drawing>オブジェクトより簡単なコンストラクト<xref:System.Windows.Shapes.Shape>オブジェクトし、パフォーマンス特性を提供します。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]には<xref:System.Windows.Media.Drawing> 、 <xref:System.Windows.Shapes.Shape>グラフィック描画コンテンツを表すオブジェクトとオブジェクトの両方が用意されています。 ただし、 <xref:System.Windows.Media.Drawing>オブジェクトはオブジェクトよりも<xref:System.Windows.Shapes.Shape>単純なコンストラクトであり、より優れたパフォーマンス特性を提供します。  
   
- A<xref:System.Windows.Shapes.Shape>画面にグラフィカルな図形を描画することができます。 派生しているため、<xref:System.Windows.FrameworkElement>クラス、<xref:System.Windows.Shapes.Shape>オブジェクトは、パネルおよびほとんどのコントロール内で使用できます。  
+ を<xref:System.Windows.Shapes.Shape>使用すると、画面にグラフィカルな図形を描画できます。 これらは<xref:System.Windows.FrameworkElement>クラスから派生するため、 <xref:System.Windows.Shapes.Shape>オブジェクトは、パネルやほとんどのコントロール内で使用できます。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には、グラフィックス サービスやレンダリング サービスへのアクセスのレイヤーがいくつか用意されています。 最上位のレイヤー<xref:System.Windows.Shapes.Shape>オブジェクトは、簡単に使用し、レイアウトやイベント処理など、多くの便利な機能を提供します。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には、すぐに使用できるさまざまな図形オブジェクトが用意されています。 すべての図形オブジェクトの継承、<xref:System.Windows.Shapes.Shape>クラス。 使用可能な図形オブジェクトには、 <xref:System.Windows.Shapes.Ellipse>、 <xref:System.Windows.Shapes.Line>、 <xref:System.Windows.Shapes.Path>、 <xref:System.Windows.Shapes.Polygon>、 <xref:System.Windows.Shapes.Polyline>、および<xref:System.Windows.Shapes.Rectangle>します。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には、グラフィックス サービスやレンダリング サービスへのアクセスのレイヤーがいくつか用意されています。 最上位のレイヤーで<xref:System.Windows.Shapes.Shape>は、オブジェクトは簡単に使用でき、レイアウトやイベント処理などの多くの便利な機能を提供します。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には、すぐに使用できるさまざまな図形オブジェクトが用意されています。 すべての図形オブジェクトは、 <xref:System.Windows.Shapes.Shape>クラスから継承されます。 使用できる図形オブジェクト<xref:System.Windows.Shapes.Ellipse> <xref:System.Windows.Shapes.Line> <xref:System.Windows.Shapes.Polygon> <xref:System.Windows.Shapes.Polyline>には、、、 <xref:System.Windows.Shapes.Rectangle>、、、およびがあります。 <xref:System.Windows.Shapes.Path>  
   
- <xref:System.Windows.Media.Drawing> オブジェクト、その一方から派生していない、<xref:System.Windows.FrameworkElement>クラスし、レンダリングの図形、イメージ、およびテキストの軽量な実装を提供します。  
+ <xref:System.Windows.Media.Drawing>一方、オブジェクトは<xref:System.Windows.FrameworkElement>クラスから派生せず、形状、画像、およびテキストをレンダリングするための軽量な実装を提供します。  
   
- 4 つの種類があります<xref:System.Windows.Media.Drawing>オブジェクト。  
+ オブジェクトには、次<xref:System.Windows.Media.Drawing>の4種類があります。  
   
-- <xref:System.Windows.Media.GeometryDrawing> 図形を描画します。  
+- <xref:System.Windows.Media.GeometryDrawing>図形を描画します。  
   
-- <xref:System.Windows.Media.ImageDrawing> イメージを描画します。  
+- <xref:System.Windows.Media.ImageDrawing>イメージを描画します。  
   
-- <xref:System.Windows.Media.GlyphRunDrawing> テキストを描画します。  
+- <xref:System.Windows.Media.GlyphRunDrawing>テキストを描画します。  
   
-- <xref:System.Windows.Media.DrawingGroup> 他の描画を描画します。 他の描画を 1 つの複合描画に結合するには、描画グループを使用します。  
+- <xref:System.Windows.Media.DrawingGroup>他の描画を描画します。 他の描画を 1 つの複合描画に結合するには、描画グループを使用します。  
   
- <xref:System.Windows.Media.GeometryDrawing>オブジェクトは、ジオメトリ コンテンツをレンダリングするために使用します。 <xref:System.Windows.Media.Geometry>クラスとなど、そこから派生する具象クラス<xref:System.Windows.Media.CombinedGeometry>、 <xref:System.Windows.Media.EllipseGeometry>、および<xref:System.Windows.Media.PathGeometry>、2D グラフィックスのレンダリングの手段を提供するだけでなくヒット テストとクリッピングのサポートを提供します。 ジオメトリ オブジェクトを使用すると、たとえば、コントロールの領域を定義したり、イメージに適用するクリップ領域を定義したりすることができます。 ジオメトリ オブジェクトは、四角形や円などの単純な領域にすることも、2 つ以上のジオメトリ オブジェクトから作成された複合的な領域にすることもできます。 複雑な幾何学領域を結合して作成できる<xref:System.Windows.Media.PathSegment>-など、オブジェクトの派生<xref:System.Windows.Media.ArcSegment>、 <xref:System.Windows.Media.BezierSegment>、および<xref:System.Windows.Media.QuadraticBezierSegment>します。  
+ オブジェクト<xref:System.Windows.Media.GeometryDrawing>は、ジオメトリの内容を表示するために使用されます。 クラス<xref:System.Windows.Media.Geometry>およびそれから派生した具象クラス ( <xref:System.Windows.Media.CombinedGeometry>、 <xref:System.Windows.Media.EllipseGeometry>、 <xref:System.Windows.Media.PathGeometry>など) は、2d グラフィックスをレンダリングするための手段と、ヒットテストとクリッピングサポートを提供します。 ジオメトリ オブジェクトを使用すると、たとえば、コントロールの領域を定義したり、イメージに適用するクリップ領域を定義したりすることができます。 ジオメトリ オブジェクトは、四角形や円などの単純な領域にすることも、2 つ以上のジオメトリ オブジェクトから作成された複合的な領域にすることもできます。 <xref:System.Windows.Media.ArcSegment>、 <xref:System.Windows.Media.PathSegment> 、<xref:System.Windows.Media.BezierSegment>などの派生オブジェクトを組み合わせることによって、より複雑なジオメトリック領域を<xref:System.Windows.Media.QuadraticBezierSegment>作成できます。  
   
- 画面で、<xref:System.Windows.Media.Geometry>クラスおよび<xref:System.Windows.Shapes.Shape>クラスはよく似ています。 2D グラフィックスのレンダリングで両方使用しているなど、そこから派生する具象クラスを類似<xref:System.Windows.Media.EllipseGeometry>と<xref:System.Windows.Shapes.Ellipse>します。 ただし、この 2 つのクラスのセットの間には重要な違いがいくつかあります。 1 つは、<xref:System.Windows.Media.Geometry>クラスがいくつかの機能のない、<xref:System.Windows.Shapes.Shape>自体を描画する機能などのクラス。 ジオメトリ オブジェクトを描画するには、DrawingContext、Drawing、Path (Path が Shape であることは注目に値します) などの別のクラスを使用して描画操作を実行する必要があります。 塗りつぶし、ストローク、ストロークの太さなどの描画プロパティは、ジオメトリ オブジェクトを描画するクラスにあります。一方、図形オブジェクトにはこれらのプロパティが含まれています。 この違いは、ジオメトリ オブジェクトが円などの領域を定義するのに対し、図形オブジェクトは領域を定義するとともに、その領域の塗りつぶしやアウトラインも定義し、レイアウト システムに参加する、と考えることができます。  
+ サーフェイス<xref:System.Windows.Media.Geometry>では、クラス<xref:System.Windows.Shapes.Shape>とクラスは非常に似ています。 両方とも2d グラフィックスのレンダリングで使用されます。 <xref:System.Windows.Media.EllipseGeometry>また、と<xref:System.Windows.Shapes.Ellipse>など、これらのクラスから派生する類似の具象クラスもあります。 ただし、この 2 つのクラスのセットの間には重要な違いがいくつかあります。 1つ<xref:System.Windows.Media.Geometry>のクラスには、クラス自体を描画する<xref:System.Windows.Shapes.Shape>機能など、クラスの機能の一部が不足しています。 ジオメトリ オブジェクトを描画するには、DrawingContext、Drawing、Path (Path が Shape であることは注目に値します) などの別のクラスを使用して描画操作を実行する必要があります。 塗りつぶし、ストローク、ストロークの太さなどの描画プロパティは、ジオメトリ オブジェクトを描画するクラスにあります。一方、図形オブジェクトにはこれらのプロパティが含まれています。 この違いは、ジオメトリ オブジェクトが円などの領域を定義するのに対し、図形オブジェクトは領域を定義するとともに、その領域の塗りつぶしやアウトラインも定義し、レイアウト システムに参加する、と考えることができます。  
   
- <xref:System.Windows.Shapes.Shape>オブジェクトから取得、<xref:System.Windows.FrameworkElement>それらを使用して、クラスは、アプリケーションで非常に多くのメモリ消費量を追加できます。 本当に必要としない場合、 <xref:System.Windows.FrameworkElement> 、グラフィカル コンテンツのための機能は、軽量の使用を検討<xref:System.Windows.Media.Drawing>オブジェクト。  
+ オブジェクト<xref:System.Windows.Shapes.Shape>は<xref:System.Windows.FrameworkElement>クラスから派生するため、それらを使用すると、アプリケーションのメモリ消費量が大幅に増加する可能性があります。 グラフィカルコンテンツの<xref:System.Windows.FrameworkElement>機能が不要な場合は、軽量<xref:System.Windows.Media.Drawing>のオブジェクトを使用することを検討してください。  
   
- 詳細については<xref:System.Windows.Media.Drawing>、オブジェクトを参照してください[Drawing オブジェクトの概要](../graphics-multimedia/drawing-objects-overview.md)します。  
+ オブジェクトの<xref:System.Windows.Media.Drawing>詳細については、「 [Drawing オブジェクトの概要](../graphics-multimedia/drawing-objects-overview.md)」を参照してください。  
   
 <a name="StreamGeometry_Objects"></a>   
 ## <a name="streamgeometry-objects"></a>StreamGeometry オブジェクト  
- <xref:System.Windows.Media.StreamGeometry>オブジェクトは、軽量版を<xref:System.Windows.Media.PathGeometry>幾何学的図形を作成するためです。 使用して、<xref:System.Windows.Media.StreamGeometry>複雑なジオメトリを記述する必要がある場合。 <xref:System.Windows.Media.StreamGeometry> 多くを処理するために最適化された<xref:System.Windows.Media.PathGeometry>オブジェクトし、多くの個々 の使用と比べてパフォーマンスが向上します<xref:System.Windows.Media.PathGeometry>オブジェクト。  
+ オブジェクト<xref:System.Windows.Media.StreamGeometry>は、幾何学図形を<xref:System.Windows.Media.PathGeometry>作成するための軽量の代替です。 複雑な<xref:System.Windows.Media.StreamGeometry>ジオメトリを記述する必要がある場合は、を使用します。 <xref:System.Windows.Media.StreamGeometry>は、多数<xref:System.Windows.Media.PathGeometry>のオブジェクトを処理するために最適化されており<xref:System.Windows.Media.PathGeometry> 、多くの個別のオブジェクトを使用する場合と比較してパフォーマンスが向上します。  
   
- 次の例では、属性構文を使用して、三角形を作成する<xref:System.Windows.Media.StreamGeometry>で[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]します。  
+ 次の例では、属性構文を使用<xref:System.Windows.Media.StreamGeometry>し[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]て、に三角形を作成します。  
   
  [!code-xaml[GeometriesMiscSnippets_snip#StreamGeometryTriangleExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/StreamGeometryExample.xaml#streamgeometrytriangleexamplewholepage)]  
   
- 詳細については<xref:System.Windows.Media.StreamGeometry>、オブジェクトを参照してください[方法: StreamGeometry を使用して図形を作成](../graphics-multimedia/how-to-create-a-shape-using-a-streamgeometry.md)です。  
+ オブジェクトの<xref:System.Windows.Media.StreamGeometry>詳細については、「 [streamgeometry を使用して図形を作成](../graphics-multimedia/how-to-create-a-shape-using-a-streamgeometry.md)する」を参照してください。  
   
 <a name="DrawingVisual_Objects"></a>   
 ## <a name="drawingvisual-objects"></a>DrawingVisual オブジェクト  
- <xref:System.Windows.Media.DrawingVisual>オブジェクトは、軽量の描画図形、画像、またはテキストを表示するために使用されるクラス。 このクラスが軽量と見なされる理由は、レイアウトやイベントの処理を行わないことで、パフォーマンスが向上するからです。 そのため、背景やクリップ アートの描画に適しています。 詳しくは、「[DrawingVisual オブジェクトの使用](../graphics-multimedia/using-drawingvisual-objects.md)」を参照してください。  
+ <xref:System.Windows.Media.DrawingVisual>オブジェクトは、図形、画像、またはテキストを表示するために使用される軽量の描画クラスです。 このクラスが軽量と見なされる理由は、レイアウトやイベントの処理を行わないことで、パフォーマンスが向上するからです。 そのため、背景やクリップ アートの描画に適しています。 詳しくは、「[DrawingVisual オブジェクトの使用](../graphics-multimedia/using-drawingvisual-objects.md)」を参照してください。  
   
 <a name="Images"></a>   
-## <a name="images"></a>イメージ  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のイメージング機能は、以前のバージョンの [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] のイメージング機能から大幅に強化されています。 イメージング機能 (ビットマップの表示や一般的なコントロール上でのイメージの使用など) は、以前は主に Microsoft Windows Graphics Device Interface (GDI) または Microsoft Windows GDI+ のアプリケーション プログラミング インターフェイス (API) によって処理されていました。 これらの API では、基本的なイメージング機能は提供されていましたが、コーデック拡張機能のサポートや高品質なイメージのサポートなどの機能が不足していました。 WPF Imaging API は、GDI および GDI+ の欠点を克服し、アプリケーション内でイメージを表示および使用するための新しい API のセットを提供するために再設計されています。  
+## <a name="images"></a>画像  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]イメージングを使用すると、以前のバージョンの Windows では、イメージング機能が大幅に向上します。 イメージング機能 (ビットマップの表示や一般的なコントロール上でのイメージの使用など) は、以前は主に Microsoft Windows Graphics Device Interface (GDI) または Microsoft Windows GDI+ のアプリケーション プログラミング インターフェイス (API) によって処理されていました。 これらの API では、基本的なイメージング機能は提供されていましたが、コーデック拡張機能のサポートや高品質なイメージのサポートなどの機能が不足していました。 WPF Imaging API は、GDI および GDI+ の欠点を克服し、アプリケーション内でイメージを表示および使用するための新しい API のセットを提供するために再設計されています。  
   
  イメージを使用する際には、パフォーマンスを向上させるために以下の推奨事項をご検討ください。  
   
@@ -79,21 +79,21 @@ ms.locfileid: "67348442"
 - 詳しくは、「 [イメージングの概要](../graphics-multimedia/imaging-overview.md)」をご覧ください。  
   
 ### <a name="bitmapscalingmode"></a>BitmapScalingMode  
- ビットマップのスケーリングをアニメーション化する場合、既定の高品質イメージの再サンプリング アルゴリズムは、フレーム レートを低下させるほどシステム リソースを消費する場合があり、実際にはアニメーションの動きが滑らかでなくなることがあります。 設定して、<xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A>のプロパティ、<xref:System.Windows.Media.RenderOptions>オブジェクトを<xref:System.Windows.Media.BitmapScalingMode.LowQuality>ビットマップをスケーリングするときより滑らかなアニメーションを作成することができます。 <xref:System.Windows.Media.BitmapScalingMode.LowQuality> モードでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]イメージを処理するときに、品質に最適化されたアルゴリズムから速度に最適化されたアルゴリズムに切り替えるにレンダリング エンジン。  
+ ビットマップのスケーリングをアニメーション化する場合、既定の高品質イメージの再サンプリング アルゴリズムは、フレーム レートを低下させるほどシステム リソースを消費する場合があり、実際にはアニメーションの動きが滑らかでなくなることがあります。 オブジェクトのプロパティをに<xref:System.Windows.Media.BitmapScalingMode.LowQuality>設定すると、ビットマップをスケーリングするときに、より滑らかなアニメーションを作成できます。 <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A> <xref:System.Windows.Media.RenderOptions> <xref:System.Windows.Media.BitmapScalingMode.LowQuality>モードは、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]イメージを処理するときに品質最適化アルゴリズムから速度最適化アルゴリズムに切り替えるようにレンダリングエンジンに指示します。  
   
- 次の例は、設定する方法を示します、<xref:System.Windows.Media.BitmapScalingMode>イメージ オブジェクト。  
+ 次の例は、 <xref:System.Windows.Media.BitmapScalingMode>イメージオブジェクトのを設定する方法を示しています。  
   
  [!code-csharp[RenderOptions#RenderOptionsSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet2)]
  [!code-vb[RenderOptions#RenderOptionsSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet2)]  
   
 ### <a name="cachinghint"></a>CachingHint  
- 既定では、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]の描画された内容をキャッシュしません<xref:System.Windows.Media.TileBrush>などのオブジェクト<xref:System.Windows.Media.DrawingBrush>と<xref:System.Windows.Media.VisualBrush>します。 静的なシナリオで、内容もの使用、<xref:System.Windows.Media.TileBrush>でシーンを変更する、理にかなっていますビデオ メモリが節約されるためです。 ようにずっとときに検出を行いません、<xref:System.Windows.Media.TileBrush>静的コンテンツとは静的でない方法で使用 — たとえば、静的<xref:System.Windows.Media.DrawingBrush>または<xref:System.Windows.Media.VisualBrush>回転する 3D オブジェクトの表面にマップされます。 既定の動作[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]のコンテンツ全体が再表示するためには、<xref:System.Windows.Media.DrawingBrush>または<xref:System.Windows.Media.VisualBrush>、フレームごとの場合でも、コンテンツが変化しません。  
+ 既定[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]では、は、 <xref:System.Windows.Media.DrawingBrush>や<xref:System.Windows.Media.VisualBrush>などのオブジェクト<xref:System.Windows.Media.TileBrush>の表示内容をキャッシュしません。 シーン<xref:System.Windows.Media.TileBrush>内のの内容も使用も変更されていない静的なシナリオでは、ビデオメモリを節約するため、これは理にかなっています。 静的なコンテンツ<xref:System.Windows.Media.TileBrush>を含むが静的な方法で使用されている場合 (たとえば、回転する3d オブジェクトの表面に静的<xref:System.Windows.Media.DrawingBrush>また<xref:System.Windows.Media.VisualBrush>はが割り当てられている場合)、あまり意味がありません。 の[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]既定の動作では、コンテンツが変更されてい<xref:System.Windows.Media.DrawingBrush>ない場合でも、すべてのフレームに対してまたは<xref:System.Windows.Media.VisualBrush>のコンテンツ全体が再レンダリングされます。  
   
- 設定して、<xref:System.Windows.Media.RenderOptions.CachingHint%2A>のプロパティ、<xref:System.Windows.Media.RenderOptions>オブジェクトを<xref:System.Windows.Media.CachingHint.Cache>並べて表示されたブラシ オブジェクトのキャッシュされたバージョンを使用してパフォーマンスを向上させることができます。  
+ オブジェクトのプロパティをに<xref:System.Windows.Media.CachingHint.Cache>設定すると、タイル化されたブラシオブジェクトのキャッシュされたバージョンを使用してパフォーマンスを向上させることができます。 <xref:System.Windows.Media.RenderOptions.CachingHint%2A> <xref:System.Windows.Media.RenderOptions>  
   
- <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMinimum%2A>と<xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum%2A>プロパティの値は、タイミングを決定する相対的なサイズ値、<xref:System.Windows.Media.TileBrush>スケールが変更されたのため、オブジェクトを再生成する必要があります。 設定してなど、 <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum%2A> 2.0 では、キャッシュするプロパティ、<xref:System.Windows.Media.TileBrush>だけのサイズが現在のキャッシュのサイズの 2 倍を超えると、再生成する必要があります。  
+ プロパティ<xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMinimum%2A>値<xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum%2A>とプロパティ値は、スケールの変更によっ<xref:System.Windows.Media.TileBrush>てオブジェクトを再生成するタイミングを決定する相対サイズ値です。 たとえば、 <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum%2A>プロパティを2.0 に設定すると、そのサイズが現在<xref:System.Windows.Media.TileBrush>のキャッシュのサイズの2倍を超える場合にのみ、のキャッシュを再生成する必要があります。  
   
- 次の例では、キャッシュ ヒント オプションを使用する方法を示しています、<xref:System.Windows.Media.DrawingBrush>します。  
+ 次の例は、の<xref:System.Windows.Media.DrawingBrush>キャッシュヒントオプションを使用する方法を示しています。  
   
  [!code-csharp[RenderOptions#RenderOptionsSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet3)]
  [!code-vb[RenderOptions#RenderOptionsSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet3)]  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-ms.openlocfilehash: 6494a154b9b4bd5bf29fc0e2fbd0b4e5e84550ff
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: c05e849705f851b51a362d3a1d1d3f81a9eaf0e4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364167"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923596"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>コントロールとコンポーネントの作成時のトラブルシューティング
 このトピックでは、コンポーネントとコントロールの開発時に発生する次の一般的な問題について説明します。 詳細については、「[コンポーネントによるプログラミング](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120))」を参照してください。  
@@ -96,7 +96,7 @@ ms.locfileid: "68364167"
  デバッグの詳細については、「 [Visual Studio でのデバッグ](/visualstudio/debugger/debugging-in-visual-studio)」および[「チュートリアル:デザイン時](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)にカスタム Windows フォームコントロールをデバッグする。  
   
 ## <a name="event-is-raised-twice-in-inherited-control-or-component"></a>継承されたコントロールまたはコンポーネントでイベントが 2 回発生する  
- `Handles` 句が重複していることが原因と考えられます。 詳細については、「[Visual Basic での継承されたイベント ハンドラーのトラブルシューティング](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)」を参照してください。  
+ `Handles` 句が重複していることが原因と考えられます。 詳細については、「[Visual Basic での継承されたイベント ハンドラーのトラブルシューティング](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)」を参照してください。  
   
 ## <a name="design-time-error-failed-to-create-component-component-name"></a>デザイン時エラー:"コンポーネント ' コンポーネント名 ' を作成できませんでした"  
  コンポーネントまたはコントロールは、パラメーターなしのパラメーターなしのコンストラクターを提供する必要があります。 デザイン環境では、コンポーネントまたはコントロールのインスタンスを作成するときに、パラメーターを受け取るコンストラクター オーバーロードにパラメーターを提供しません。  

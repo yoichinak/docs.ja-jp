@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eacd10eecf2a8a2fc1b73a7f97eef5cb5eabafd4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 25e40103a2925cbd2a181b8e39c3873e4d7c842c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995203"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940045"
 ---
 # <a name="icordebugmanagedcallback-interface"></a>ICorDebugManagedCallback インターフェイス
 デバッガーのコールバックを処理するメソッドを提供します。  
@@ -30,49 +30,49 @@ ms.locfileid: "61995203"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Break メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-break-method.md)|デバッガーに通知時に、<xref:System.Reflection.Emit.OpCodes.Break>コード ストリームに命令を実行します。|  
-|[Breakpoint メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-breakpoint-method.md)|ブレークポイントが発生した場合に、デバッガーに通知します。|  
-|[BreakpointSetError メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-breakpointseterror-method.md)|共通言語ランタイム (CLR) が関数の just-in-time (JIT) コンパイル前に設定されたブレークポイントを正確にバインドできなかったことをデバッガーに通知します。|  
-|[ControlCTrap メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-controlctrap-method.md)|CTRL + C がデバッグ中のプロセスでトラップされたことをデバッガーに通知します。|  
-|[CreateAppDomain メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createappdomain-method.md)|アプリケーション ドメインが作成されたことをデバッガーに通知します。|  
-|[CreateProcess メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md)|プロセスにアタッチまたは最初に起動された場合に、デバッガーに通知します。|  
-|[CreateThread メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md)|スレッドのマネージ コードの実行が開始されたことをデバッガーに通知します。|  
-|[DebuggerError メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-debuggererror-method.md)|CLR からのイベントの処理を試行中にエラーが発生したことをデバッガーに通知します。|  
-|[EditAndContinueRemap メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md)|非推奨。 IDE に再割り当てイベントが送信されたことをデバッガーに通知します。|  
+|[Break メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-break-method.md)|コードストリーム内の<xref:System.Reflection.Emit.OpCodes.Break>命令が実行されたときに、デバッガーに通知します。|  
+|[Breakpoint メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-breakpoint-method.md)|ブレークポイントが検出されたときにデバッガーに通知します。|  
+|[BreakpointSetError メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-breakpointseterror-method.md)|関数が just-in-time (JIT) コンパイルされる前に設定されたブレークポイントを共通言語ランタイム (CLR) が正しくバインドできなかったことをデバッガーに通知します。|  
+|[ControlCTrap メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-controlctrap-method.md)|デバッグ中のプロセスで CTRL + C がトラップされることをデバッガーに通知します。|  
+|[CreateAppDomain メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createappdomain-method.md)|アプリケーションドメインが作成されたことをデバッガーに通知します。|  
+|[CreateProcess メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md)|プロセスが初めてアタッチまたは開始されたときにデバッガーに通知します。|  
+|[CreateThread メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md)|スレッドがマネージコードの実行を開始したことをデバッガーに通知します。|  
+|[DebuggerError メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-debuggererror-method.md)|CLR からのイベントを処理しようとしたときにエラーが発生したことをデバッガーに通知します。|  
+|[EditAndContinueRemap メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md)|使用しないでください。 リマップイベントが IDE に送信されたことをデバッガーに通知します。|  
 |[EvalComplete メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-evalcomplete-method.md)|評価が完了したことをデバッガーに通知します。|  
-|[EvalException メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-evalexception-method.md)|ハンドルされない例外で、評価が終了されたことをデバッガーに通知します。|  
-|[Exception メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exception-method.md)|マネージ コードから例外がスローされたことをデバッガーに通知します。|  
-|[ExitAppDomain メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md)|アプリケーション ドメインが終了していることをデバッガーに通知します。|  
-|[ExitProcess メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)|プロセスが終了していることをデバッガーに通知します。|  
-|[ExitThread メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitthread-method.md)|マネージ コードが実行しているスレッドが終了していることをデバッガーに通知します。|  
+|[EvalException メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-evalexception-method.md)|ハンドルされない例外で評価が終了したことをデバッガーに通知します。|  
+|[Exception メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exception-method.md)|マネージコードから例外がスローされたことをデバッガーに通知します。|  
+|[ExitAppDomain メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md)|アプリケーションドメインが終了したことをデバッガーに通知します。|  
+|[ExitProcess メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)|プロセスが終了したことをデバッガーに通知します。|  
+|[ExitThread メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitthread-method.md)|マネージコードを実行していたスレッドが終了したことをデバッガーに通知します。|  
 |[LoadAssembly メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadassembly-method.md)|CLR アセンブリが正常に読み込まれたことをデバッガーに通知します。|  
 |[LoadClass メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md)|クラスが読み込まれたことをデバッガーに通知します。|  
 |[LoadModule メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadmodule-method.md)|CLR モジュールが正常に読み込まれたことをデバッガーに通知します。|  
-|[LogMessage メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md)|CLR マネージド スレッドがメソッドを呼び出すことをデバッガーに通知、<xref:System.Diagnostics.EventLog>クラスをイベント ログに記録します。|  
-|[LogSwitch メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logswitch-method.md)|CLR マネージド スレッドがメソッドを呼び出すことをデバッガーに通知、<xref:System.Diagnostics.Switch>クラスを作成、変更、またはデバッグとトレース スイッチを削除します。|  
-|[NameChange メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-namechange-method.md)|アプリケーション ドメインまたはスレッドのいずれかの名前が変更されたことをデバッガーに通知します。|  
+|[LogMessage メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md)|CLR マネージスレッドがイベントをログに記録するためにクラスの<xref:System.Diagnostics.EventLog>メソッドを呼び出したことをデバッガーに通知します。|  
+|[LogSwitch メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logswitch-method.md)|CLR マネージスレッドが、デバッグ/トレーススイッチを作成、変更、 <xref:System.Diagnostics.Switch>または削除するために、クラスのメソッドを呼び出したことをデバッガーに通知します。|  
+|[NameChange メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-namechange-method.md)|アプリケーションドメインまたはスレッドの名前が変更されたことをデバッガーに通知します。|  
 |[StepComplete メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md)|ステップが完了したことをデバッガーに通知します。|  
 |[UnloadAssembly メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadassembly-method.md)|CLR アセンブリがアンロードされたことをデバッガーに通知します。|  
-|[UnloadClass メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md)|クラスがアンロードされることをデバッガーに通知します。|  
+|[UnloadClass メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md)|クラスがアンロードされていることをデバッガーに通知します。|  
 |[UnloadModule メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadmodule-method.md)|CLR モジュール (DLL) がアンロードされたことをデバッガーに通知します。|  
 |[UpdateModuleSymbols メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-updatemodulesymbols-method.md)|CLR モジュールのシンボルが変更されたことをデバッガーに通知します。|  
   
 ## <a name="remarks"></a>Remarks  
- すべてのコールバックはシリアル化、同じスレッドで呼び出されるされ、同期された状態では、プロセスと呼ばれます。  
+ すべてのコールバックがシリアル化され、同じスレッドで呼び出され、プロセスと同期された状態で呼び出されます。  
   
- 各コールバックの実装を呼び出す必要があります[icordebugcontroller::continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)実行を再開します。 場合`ICorDebugController::Continue`を前に、コールバックを返します、プロセスが停止したまままで発生しない複数のイベントのコールバックは呼び出されません`ICorDebugController::Continue`が呼び出されます。  
+ 各コールバックの実装では、実行を再開するために、「いいね! [:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) 」を呼び出します。 コール`ICorDebugController::Continue`バックが戻る前にが呼び出されなかった場合、プロセスは停止したままになり、 `ICorDebugController::Continue`が呼び出されるまで、これ以上イベントコールバックは実行されません。  
   
- デバッガーを実装する必要があります[ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)場合、.NET Framework バージョン 2.0 のアプリケーションのデバッグします。 インスタンス`ICorDebugManagedCallback`または`ICorDebugManagedCallback2`をコールバック オブジェクトとして渡される[icordebug::setmanagedhandler](../../../../docs/framework/unmanaged-api/debugging/icordebug-setmanagedhandler-method.md)します。  
+ デバッガーが .NET Framework バージョン2.0 のアプリケーションをデバッグしている場合は、 [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)を実装する必要があります。 または`ICorDebugManagedCallback` `ICorDebugManagedCallback2`のインスタンスは、コールバックオブジェクトとして[ICorDebug:: setmanagedhandler](../../../../docs/framework/unmanaged-api/debugging/icordebug-setmanagedhandler-method.md)に渡されます。  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** CorDebug.idl、CorDebug.h  
+ **ヘッダー:** CorDebug .idl、CorDebug. h  
   
- **ライブラリ:** CorGuids.lib  
+ **ライブラリ**CorGuids .lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

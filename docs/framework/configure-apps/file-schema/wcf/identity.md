@@ -2,15 +2,15 @@
 title: <identity>
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: 0f5eace346fd0ed2c0532fb602585c4593d97291
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: d5d06953c67b90e8367f2c0d01a670a46f487526
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756690"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925424"
 ---
 # <a name="identity"></a>\<identity>
-ID 要素を使用すると、クライアント開発者は予想されるサービスの ID をデザイン時に指定できます。 クライアントとサービス間のハンドシェイク プロセスで Windows Communication Foundation (WCF) インフラストラクチャが予期されるサービスと一致する、この要素の値の id を保証して、そのため、認証されたことができます。 詳細については、次を参照してください。[サービス Id と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)します。  
+ID 要素を使用すると、クライアント開発者は予想されるサービスの ID をデザイン時に指定できます。 クライアントとサービスの間のハンドシェイクプロセスでは、Windows Communication Foundation (WCF) インフラストラクチャによって、予期されるサービスの id がこの要素の値と一致することが保証されるため、認証することができます。 詳細については、「[サービス id と認証](../../../wcf/feature-details/service-identity-and-authentication.md)」を参照してください。  
   
  \<system.ServiceModel >  
 \<client>  
@@ -48,24 +48,24 @@ ID 要素を使用すると、クライアント開発者は予想されるサ�
 |dns|サービスの認証に使用される X.509 証明書の DNS を指定します。 この要素には、実際の ID を含む文字列の `value` 属性が含まれています。|  
 |rsa|クライアントに対するサービスの認証に使用される X.509 証明書の RSA フィールドの値を指定します。 この要素には、実際の ID を含む文字列の `value` 属性が含まれています|  
 |servicePrincipalName|サーバー プリンシパル名 (SPN) ID を指定します。これは、サービスのインスタンスを一意に識別するために、クライアントにより使用されるプリンシパル名です。 この要素には、実際のプリンシパル名が文字列で含まれている `value` 属性が含まれています。 この要素は <xref:System.ServiceModel.Configuration.ServicePrincipalNameElement> 型です。|  
-|userPrincipalName|ユーザー プリンシパル名 (UPN) ID を指定します。これは、ネットワーク上のユーザーのログオン名の種類です。 ユーザー プリンシパル名から成る後に、Active Directory で使用されるユーザー オブジェクト名、アット マーク (\@) およびドメインを親通常は、次に、ドメイン ネーム システム。 たとえば、Fabrikam.com ドメイン ツリーの Jeff のユーザー プリンシパル名がある[ jeff@fabrikam.com](mailto:jeffsmith@fabrikam.com)します。  この要素には、実際のプリンシパル名が文字列で含まれている `value` 属性が含まれています。 この要素は <xref:System.ServiceModel.Configuration.UserPrincipalNameElement> 型です。|  
+|userPrincipalName|ユーザー プリンシパル名 (UPN) ID を指定します。これは、ネットワーク上のユーザーのログオン名の種類です。 ユーザープリンシパル名は、Active Directory で使用されるユーザーオブジェクト名の後にアットマーク (\@) が続き、通常はドメイン名システムの親ドメインで構成されます。 たとえば、Fabrikam.com ドメインツリーの Jeff には、ユーザープリンシパル名[jeff@fabrikam.com](mailto:jeffsmith@fabrikam.com)が含まれている場合があります。  この要素には、実際のプリンシパル名が文字列で含まれている `value` 属性が含まれています。 この要素は <xref:System.ServiceModel.Configuration.UserPrincipalNameElement> 型です。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<custom>](../../../../../docs/framework/configure-apps/file-schema/wcf/custom.md)|netPeerTcpBinding のカスタム ピア リゾルバーを指定します。|  
-|[\<endpoint>](endpoint-element.md)|サービス エンドポイントを構成します。|  
-|[\<エンドポイント > の\<クライアント >](endpoint-of-client.md)|チャネルのエンドポイントを構成します。|  
-|[\<issuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|フェデレーション サービスのセキュリティ トークン サービス (STS) を指定します。|  
-|[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|フェデレーション サービスのセキュリティ トークン サービス (STS) のメタデータ エンドポイントを指定します。|  
-|[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|カスタム バインドで発行済みトークンのパラメーターを定義します。|  
-|[\<localIssuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md)|ローカル セキュリティ トークン サービス (STS) を指定します。|  
+|[\<custom>](custom.md)|netPeerTcpBinding のカスタム ピア リゾルバーを指定します。|  
+|[\<endpoint>](endpoint-element.md)|サービスエンドポイントを構成します。|  
+|[\<クライアント > の\<エンドポイント >](endpoint-of-client.md)|チャネルエンドポイントを構成します。|  
+|[\<issuer>](issuer.md)|フェデレーション サービスのセキュリティ トークン サービス (STS) を指定します。|  
+|[\<issuerMetadata>](issuermetadata.md)|フェデレーション サービスのセキュリティ トークン サービス (STS) のメタデータ エンドポイントを指定します。|  
+|[\<issuedTokenParameters>](issuedtokenparameters.md)|カスタム バインドで発行済みトークンのパラメーターを定義します。|  
+|[\<localIssuer>](localissuer.md)|ローカル セキュリティ トークン サービス (STS) を指定します。|  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.ServiceModel.Configuration.IdentityElement>
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
-- [サービス ID と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [エンドポイント:アドレス、バインディング、およびコントラクト](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [サービス ID と認証](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [アドレス、バインディング、およびコントラクト](../../../wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

@@ -3,14 +3,14 @@ title: ワークフローの <system.serviceModel>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
-ms.openlocfilehash: 5580bf570c4c728b526bd62109b48c3ccc18943a
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: faa8154c4d7ac5c6aa2f9f1707cf8f0d39eefad5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422888"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947360"
 ---
-# <a name="systemservicemodel-of-workflow"></a>\<system.serviceModel > のワークフロー
+# <a name="systemservicemodel-of-workflow"></a>\<ワークフローの System.servicemodel >
 この構成セクションには、すべてのワークフロー構成要素が含まれます。  
   
 ## <a name="syntax"></a>構文  
@@ -101,8 +101,8 @@ ms.locfileid: "67422888"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<behaviors>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behaviors-of-workflow.md)|このセクションで定義、 **serviceBehaviors**コレクション。  各コレクション内の要素は、サービスによって使用されるそれぞれの動作要素を定義します。 各動作要素が、一意で識別される**名前**属性。|  
-|[\<tracking>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|ワークフロー サービスの追跡設定を定義する構成セクションを表します。<br /><br /> ワークフロー追跡とその構成の詳細については、次を参照してください。[ワークフロー追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)と[ワークフローの追跡を構成する](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)します。|  
+|[\<behaviors>](behaviors-of-workflow.md)|このセクションでは、 **Servicebehaviors**コレクションを定義します。  各コレクション内の要素は、サービスによって使用されるそれぞれの動作要素を定義します。 各動作要素は、一意の**name**属性によって識別されます。|  
+|[\<tracking>](tracking.md)|ワークフロー サービスの追跡設定を定義する構成セクションを表します。<br /><br /> ワークフロー追跡とその構成の詳細については、「ワークフローの[追跡とトレース](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)」と「ワークフロー[の追跡の構成](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md)」を参照してください。|  
   
 ### <a name="parent-elements"></a>親要素  
   

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f38f9a3ebd88e0a5abb7a6bc8cb4026dc7d0f068
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 21da325ee58df65ac449464f8292f2ba94d99338
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736939"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943294"
 ---
 # <a name="icordebugprocess2getreferencevaluefromgchandle-method"></a>ICorDebugProcess2::GetReferenceValueFromGCHandle メソッド
-ガベージ コレクション ハンドルが、指定した管理対象のオブジェクト参照ポインターを取得します。  
+ガベージコレクションハンドルを持つ指定したマネージオブジェクトへの参照ポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,24 +38,24 @@ HRESULT GetReferenceValueFromGCHandle (
   
 ## <a name="parameters"></a>パラメーター  
  `handle`  
- [in]ガベージ コレクション ハンドルを持つマネージ オブジェクトへのポインター。 この値は、<xref:System.IntPtr>オブジェクトおよびから取得できます、<xref:System.Runtime.InteropServices.GCHandle>マネージ オブジェクト。  
+ からガベージコレクションハンドルを持つマネージオブジェクトへのポインター。 この値はオブジェクト<xref:System.IntPtr>であり、マネージオブジェクト<xref:System.Runtime.InteropServices.GCHandle>のから取得できます。  
   
  `pOutValue`  
- [out]指定したマネージ オブジェクトへの参照を表す ICorDebugReferenceValue オブジェクトのアドレスへのポインター。  
+ 入出力指定したマネージオブジェクトへの参照を表す、値オブジェクトのアドレスへのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- ガベージ コレクションの参照を値で返される参照値を混同しないでください。  
+ 返された参照値とガベージコレクション参照値を混同しないようにしてください。  
   
- 返される参照は、通常の参照のように動作します。 ブレークポイントの後でコードが実行が継続する場合に無効です。 ターゲット オブジェクトの有効期間は参照値の有効期間の影響を受けません。  
+ 返される参照は、通常の参照のように動作します。 ブレークポイント後にコードの実行が続行される場合は無効になります。 ターゲットオブジェクトの有効期間は、参照値の有効期間の影響を受けません。  
   
 > [!NOTE]
->  `GetReferenceValueFromGCHandle`メソッドは、ハンドルは検証されません。 そのため、`GetReferenceValueFromGCHandle`デバッガーと無効なハンドルが渡された場合にデバッグ中のコードの両方、メソッドは破損可能性があることができます。  
+> `GetReferenceValueFromGCHandle`メソッドでは、ハンドルは検証されません。 したがって、 `GetReferenceValueFromGCHandle`メソッドは、無効なハンドルが渡された場合に、デバッガーとデバッグされているコードの両方を破損する可能性があります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** CorDebug.idl、CorDebug.h  
+ **ヘッダー:** CorDebug .idl、CorDebug. h  
   
- **ライブラリ:** CorGuids.lib  
+ **ライブラリ**CorGuids .lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

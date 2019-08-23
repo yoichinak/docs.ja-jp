@@ -2,14 +2,14 @@
 title: <filters>
 ms.date: 03/30/2017
 ms.assetid: 37a87222-ec78-4728-8105-9ca1bd961f0c
-ms.openlocfilehash: b840e17c2dccabce9e58cb658d757b0a98e1ffcf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4ce0452cc46a8f29334fa67f51f14b83290b1c8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703999"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918886"
 ---
-# <a name="filters"></a>\<filters>
+# <a name="filters"></a>\<フィルター >
 
 `filters` 要素は、ログに記録されるメッセージの種類の制御に使用される XPath フィルターのコレクションを保持します。
 
@@ -45,5 +45,5 @@ SOAP ヘッダー セクションがあるメッセージだけを記録する�
 - <xref:System.ServiceModel.Configuration.XPathMessageFilterElementCollection>
 - <xref:System.ServiceModel.Configuration.XPathMessageFilterElement>
 - <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>
-- [メッセージ ログの構成](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
-- [\<messageLogging>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
+- [メッセージ ログの構成](../../../wcf/diagnostics/configuring-message-logging.md)
+- [\<messageLogging >](messagelogging.md)
