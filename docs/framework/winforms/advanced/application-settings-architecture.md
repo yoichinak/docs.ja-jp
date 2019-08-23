@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: b5d5a4456bef925cd8093fe9c696145aff83660e
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: c3858cfab59b63761f43f6b3eaad9bf8ca4c1dbc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039416"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916693"
 ---
 # <a name="application-settings-architecture"></a>アプリケーション設定アーキテクチャ
 このトピックでは、アプリケーション設定アーキテクチャのしくみについて説明します。また、グループ化された設定や設定キーなど、アーキテクチャの高度な機能についても説明します。
@@ -142,7 +142,7 @@ ms.locfileid: "69039416"
  プロバイダーを複数のスレッドから同時に呼び出すことができますが、プロバイダーは常に同じ格納場所に書き込みを行います。したがって、アプリケーション設定アーキテクチャによってインスタンス化されるカスタム プロバイダー クラスのインスタンスは 1 つに限られます。
 
 > [!IMPORTANT]
->  カスタム プロバイダーがスレッドセーフであり、構成ファイルへの書き込みを実行できるスレッドが一度に 1 つだけであることを確認する必要があります。
+> カスタム プロバイダーがスレッドセーフであり、構成ファイルへの書き込みを実行できるスレッドが一度に 1 つだけであることを確認する必要があります。
 
  プロバイダーは、 <xref:System.Configuration?displayProperty=nameWithType>名前空間で定義されているすべての設定属性をサポートする必要はありませんが、 <xref:System.Configuration.UserScopedSettingAttribute>最小のサポート<xref:System.Configuration.ApplicationScopedSettingAttribute>とで<xref:System.Configuration.DefaultSettingValueAttribute>もサポートする必要があります。 サポートされていない属性がある場合、カスタム プロバイダーは通知なしに失敗します。例外をスローする必要はありません。 ただし、設定クラスで属性の無効な組み合わせが使用されている<xref:System.Configuration.ApplicationScopedSettingAttribute>場合<xref:System.Configuration.UserScopedSettingAttribute> (およびを同じ設定に適用する場合など)、プロバイダーは例外をスローして操作を中止する必要があります。
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], changing column type
 - data [Windows Forms], displaying
 ms.assetid: 7f994d45-600d-4190-a187-35803214b40c
-ms.openlocfilehash: f40ab6fe000f9104b10d5841f52eadf102a91a6b
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: e0b0b01a3c6da0680a3ec5fcd591344e04658a37
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040481"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917620"
 ---
 # <a name="how-to-change-the-type-of-a-windows-forms-datagridview-column-using-the-designer"></a>方法: デザイナーを使用して Windows フォーム DataGridView 列の種類を変更する
 Windows フォーム<xref:System.Windows.Forms.DataGridView>コントロールに既に追加されている列の型を変更することが必要になる場合があります。 たとえば、データソースにコントロールをバインドするときに自動的に生成されるいくつかの列の型を変更することができます。 これは、表示するテーブルに、関連テーブル内の行に対する外部キーを含む列がある場合に便利です。 この場合は、これらの外部キーを表示するテキストボックスの列を、関連するテーブルの意味のある値を表示するコンボボックスの列に置き換えることができます。
@@ -28,7 +28,7 @@ Windows フォーム<xref:System.Windows.Forms.DataGridView>コントロール�
 3. **[列のプロパティ]** グリッドで、 `ColumnType`プロパティを新しい列の種類に設定します。
 
     > [!NOTE]
-    >  `ColumnType`プロパティは、列の型を表すクラスを示すデザイン時専用のプロパティです。 これは、列クラスで定義された実際のプロパティではありません。
+    > `ColumnType`プロパティは、列の型を表すクラスを示すデザイン時専用のプロパティです。 これは、列クラスで定義された実際のプロパティではありません。
 
 ## <a name="see-also"></a>関連項目
 

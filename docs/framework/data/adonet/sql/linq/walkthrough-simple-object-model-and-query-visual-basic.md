@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-ms.openlocfilehash: a7d278dd424fbb3167a30d627379f78d0c65476f
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: e0840adba62e10640ef16908db6b57519191f7f7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971788"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946778"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>チュートリアル: 簡単なオブジェクト モデルとクエリ (Visual Basic)
 
@@ -67,11 +67,11 @@ ms.locfileid: "68971788"
 
 1. **ソリューションエクスプローラー**で、 **[参照]** を右クリックし、 **[参照の追加]** をクリックします。
 
-2. **参照の追加** ダイアログボックスで **.net** をクリックし、system.string アセンブリをクリックして、**OK** をクリックします。
+2. **[参照の追加]** ダイアログボックスで **[.net]** をクリックし、system.string アセンブリをクリックして、 **[OK]** をクリックします。
 
      アセンブリがプロジェクトに追加されます。
 
-3. また、**参照の追加** ダイアログボックスで、 **.net** をクリックし、にスクロールして system.string をクリックし、**OK** をクリックします。
+3. また、 **[参照の追加]** ダイアログボックスで、 **[.net]** をクリックし、にスクロールして system.string をクリックし、 **[OK]** をクリックします。
 
      このチュートリアルで使用するメッセージ ボックスをサポートするアセンブリがプロジェクトに追加されます。
 
@@ -121,7 +121,7 @@ ms.locfileid: "68971788"
 
 ## <a name="creating-a-simple-query"></a>簡単なクエリの作成
 
-この手順では、データベースの Customers テーブルから、住所が London の顧客を検索するクエリを作成します。 この手順で作成するクエリ コードは、クエリを指定するだけです。 実行は行いません。 この方法は、*遅延実行*と呼ばれます。 詳細については、「[LINQ クエリの概要 (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)」を参照してください。
+この手順では、データベースの Customers テーブルから、住所が London の顧客を検索するクエリを作成します。 この手順で作成するクエリ コードは、クエリを指定するだけです。 実行は行いません。 この方法は、*遅延実行*と呼ばれます。 詳細については、「[LINQ クエリの概要 (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)」を参照してください。
 
 また、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] が生成した SQL コマンドをログに出力します。 <xref:System.Data.Linq.DataContext.Log%2A> を使用したこのログ機能は、デバッグに有効で、データベースに送信されたコマンドが目的のクエリを正確に表しているかどうかを確認するのに役立ちます。
 

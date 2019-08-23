@@ -6,16 +6,16 @@ helpviewer_keywords:
 - UI Automation, Tab control type
 - control types, Tab
 ms.assetid: f8be2732-836d-4e4d-85e2-73aa39479bf4
-ms.openlocfilehash: be562b3abd03bd7f166fdc29acaee3a447cd8f55
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 829bd90b14c5c958e51da6d4a7ab9ccf66bc577a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996594"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69954549"
 ---
 # <a name="ui-automation-support-for-the-tab-control-type"></a>UI オートメーションによる Tab コントロール型のサポート
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 の最新情報[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については[、「Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  このトピックでは、Tab コントロール型に対する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のサポートについて説明します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]でのコントロール型とは、コントロールが <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> プロパティを使用するために満たす必要がある一連の条件のことです。 これらの条件には、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のプロパティ値、および [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. コントロール パターンに関する特定のガイドラインが含まれます。  
   
@@ -29,17 +29,17 @@ ms.locfileid: "61996594"
   
 |コントロール ビュー|コンテンツ ビュー|  
 |------------------|------------------|  
-|タブ<br /><br /> <ul><li>TabItem (1 以上)</li><li>ScrollBar (0 または 1)<br /><br /> <ul><li>Button (0 または 2)</li></ul></li></ul>|タブ<br /><br /> -TabItem (1 つ以上)|  
+|Tab<br /><br /> <ul><li>TabItem (1 以上)</li><li>ScrollBar (0 または 1)<br /><br /> <ul><li>Button (0 または 2)</li></ul></li></ul>|Tab<br /><br /> -TabItem (1 以上)|  
   
  タブ コントロールには、Tab Item コントロール型に基づく子 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要素があります。 タブ項目がグループ化されている場合 (たとえば、Microsoft Office 2007 アプリケーションでのように)、Tab コントロール型では、次のツリー構造に示すように、グループ化されたタブ項目の Group コントロール型もホストできます。  
   
 |コントロール ビュー|コンテンツ ビュー|  
 |------------------|------------------|  
-|タブ<br /><br /> <ul><li>TabItem (1 以上)</li><li>Group (0 以上)<br /><br /> <ul><li>TabItem (0 以上)</li></ul></li><li>ScrollBar (0 以上)<br /><br /> <ul><li>Button (0 または 2)</li></ul></li></ul>|タブ<br /><br /> <ul><li>TabItem (1 以上)</li><li>Group (0 以上)<br /><br /> <ul><li>TabItem (0 以上)</li></ul></li></ul>|  
+|Tab<br /><br /> <ul><li>TabItem (1 以上)</li><li>Group (0 以上)<br /><br /> <ul><li>TabItem (0 以上)</li></ul></li><li>ScrollBar (0 以上)<br /><br /> <ul><li>Button (0 または 2)</li></ul></li></ul>|Tab<br /><br /> <ul><li>TabItem (1 以上)</li><li>Group (0 以上)<br /><br /> <ul><li>TabItem (0 以上)</li></ul></li></ul>|  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>必須の UI オートメーション プロパティ  
- 次の表に、Tab コントロール型に特に関連する値または定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。 詳細については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]プロパティを参照してください[クライアントの UI オートメーション プロパティ](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)します。  
+ 次の表に、Tab コントロール型に特に関連する値または定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]プロパティの詳細については、「[クライアントの UI オートメーションのプロパティ](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)」を参照してください。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティ|[値]|メモ|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
@@ -49,7 +49,7 @@ ms.locfileid: "61996594"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|「ノート」をご覧ください。|タブ コントロールで、Name プロパティが必要になることはほとんどありません。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|いいえ|タブ コントロールには、クリックできるポイントはありません。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|「ノート」をご覧ください。|タブ コントロールには、通常、このプロパティで公開される静的なテキスト ラベルがあります。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|タブ|この値は、すべての UI フレームワークで同じです。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Tab|この値は、すべての UI フレームワークで同じです。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"タブ"|Tab コントロール型に対応する、ローカライズされた文字列。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|True|Tab コントロール型は、キーボード フォーカスを受け取ることができる必要があります。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] クライアントは、通常タブ コントロールの SetFocus を呼び出し、その項目の 1 つが、キーボード フォーカスをタブ コントロールに送ります。 タブ コンテナーによっては、その項目の 1 つにフォーカスを設定することなく、フォーカスを受け取ることができます。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|タブ コントロールは、常に [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコンテンツ ビューに含まれます。|  
@@ -65,7 +65,7 @@ ms.locfileid: "61996594"
 |<xref:System.Windows.Automation.Provider.ISelectionProvider>|[はい]|すべてのタブ コントロールが、Selection パターンをサポートする必要があります。|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|True|タブ コントロールで、常に選択が行われる必要があります。|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|False|タブ コントロールは、常に単一選択コンテナーです。|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider>|状況に依存|Scroll パターンは、一連のタブ項目全体をスクロールできるようにするウィジェットを持つタブ コントロールでサポートされる必要があります。|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider>|依存|Scroll パターンは、一連のタブ項目全体をスクロールできるようにするウィジェットを持つタブ コントロールでサポートされる必要があります。|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>必須の UI オートメーション イベント  
@@ -76,12 +76,12 @@ ms.locfileid: "61996594"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> プロパティ変更イベント。|必須|なし|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> プロパティ変更イベント。|必須|なし|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> プロパティ変更イベント。|必須|なし|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> プロパティ変更イベント。|状況に依存|なし|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> プロパティ変更イベント。|状況に依存|なし|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> プロパティ変更イベント。|状況に依存|なし|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> プロパティ変更イベント。|状況に依存|なし|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> プロパティ変更イベント。|状況に依存|なし|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> プロパティ変更イベント。|状況に依存|なし|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> プロパティ変更イベント。|依存|なし|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> プロパティ変更イベント。|依存|なし|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> プロパティ変更イベント。|依存|なし|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> プロパティ変更イベント。|依存|なし|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> プロパティ変更イベント。|依存|なし|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> プロパティ変更イベント。|依存|なし|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必須|なし|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必須|なし|  
   

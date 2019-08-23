@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e7c1de620979b387e969f4b8c9f17f493e7bcb8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 539f69c33b67ad1a8a514062c5d777deaced1599
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776548"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965008"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>ICLRMetaHost::RequestRuntimeLoadedNotification メソッド
-共通言語ランタイム (CLR) バージョンが初めて読み込まれるが、開始していないときに呼び出されることが保証されるコールバック関数を提供します。 このメソッドは、 [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)関数。  
+共通言語ランタイム (CLR) のバージョンが最初に読み込まれたが、まだ開始されていないときに呼び出されることが保証されているコールバック関数を提供します。 このメソッドは、 [Lockclrversion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)関数よりも優先されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,7 +36,7 @@ HRESULT RequestRuntimeLoadedNotification (
   
 ## <a name="parameters"></a>パラメーター  
  `pCallbackFunction`  
- [in]新しいランタイムが読み込まれたときに呼び出されるコールバック関数。  
+ から新しいランタイムが読み込まれたときに呼び出されるコールバック関数。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。  
@@ -47,15 +47,15 @@ HRESULT RequestRuntimeLoadedNotification (
 |E_POINTER|`pCallbackFunction` が null です。|  
   
 ## <a name="remarks"></a>Remarks  
- コールバックは、次のように動作します。  
+ コールバックは、次のように機能します。  
   
-- 最初に、ランタイムが読み込まれる場合にのみ、コールバックが呼び出されます。  
+- コールバックは、ランタイムが初めて読み込まれるときにのみ呼び出されます。  
   
-- 同じランタイムの再入可能な負荷、コールバックは呼び出されません。  
+- 同じランタイムの再入可能な読み込みに対してコールバックが呼び出されません。  
   
-- 再入不可能なランタイムの読み込み、コールバック関数の呼び出しがシリアル化します。  
+- 再入可能でないランタイムの読み込みでは、コールバック関数の呼び出しがシリアル化されます。  
   
- コールバック関数では、次のプロトタイプを持ちます。  
+ コールバック関数のプロトタイプは次のとおりです。  
   
 ```cpp  
 typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(  
@@ -78,23 +78,23 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
     typedef HRESULT (__stdcall *CallbackThreadUnsetFnPtr)();  
     ```  
   
- ホストが読み込みまたは再入可能の方法で読み込まれる別のランタイムが発生する場合、`pfnCallbackThreadSet`と`pfnCallbackThreadUnset`コールバック内で次のように関数を使用する必要がありますに用意されているパラメーター。  
+ ホストの読み込みまたは再入によって別のランタイムの読み込みが発生する場合`pfnCallbackThreadSet`は`pfnCallbackThreadUnset` 、コールバック関数で指定されたパラメーターとパラメーターを次のように使用する必要があります。  
   
-- `pfnCallbackThreadSet` このような負荷が試みられる前に、実行時の負荷を引き起こす可能性のあるスレッドから呼び出す必要があります。  
+- `pfnCallbackThreadSet`このような読み込みが試行される前に、ランタイムの読み込みを発生させる可能性のあるスレッドによって呼び出される必要があります。  
   
-- `pfnCallbackThreadUnset` スレッドは実行時の負荷が発生しない場合 (および初期コールバックから戻る前に) 呼び出す必要があります。  
+- `pfnCallbackThreadUnset`は、スレッドがこのようなランタイム読み込みを行わなくなる場合 (および最初のコールバックから戻る前) に呼び出す必要があります。  
   
-- `pfnCallbackThreadSet` `pfnCallbackThreadUnset`はどちらも再入不可能な。  
+- `pfnCallbackThreadSet`と`pfnCallbackThreadUnset`はどちらも再入不可能です。  
   
 > [!NOTE]
->  ホスト アプリケーションを呼び出してはならない`pfnCallbackThreadSet`と`pfnCallbackThreadUnset`の範囲外の`pCallbackFunction`パラメーター。  
+> ホストアプリケーションは、 `pfnCallbackThreadSet` `pCallbackFunction`パラメーターの`pfnCallbackThreadUnset`スコープ外でおよびを呼び出すことはできません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** MetaHost.h  
+ **ヘッダー:** メタホスト .h  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ**Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

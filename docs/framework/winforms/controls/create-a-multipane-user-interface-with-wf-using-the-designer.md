@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], using the designer
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
-ms.openlocfilehash: f96124f7d97e733b1f0e2559320ce2e09ba5ff21
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 97888a77dfc731be591d5f0284e87f45ef7dc437
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039953"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930178"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>方法: デザイナーを使用して Windows フォームでマルチペイン ユーザー インターフェイスを作成する
 次の手順では、Microsoft Outlook で使用されているものと同様のマルチペインユーザーインターフェイスを作成します。これは、**フォルダー**リスト、**メッセージ**ペイン、および**プレビュー**ウィンドウで使用します。 この配置は、フォームを使用してドッキングコントロールを主することで実現されます。
@@ -39,7 +39,7 @@ ms.locfileid: "69039953"
      この時点で、F5 キーを押してアプリケーションを実行すると、Microsoft Outlook のような3部構成のユーザーインターフェイスがフォームに表示されます。
 
     > [!NOTE]
-    >  <xref:System.Windows.Forms.SplitContainer>コントロール内のいずれかのスプリッターの上にマウスポインターを置くと、内部ディメンションのサイズを変更できます。
+    > <xref:System.Windows.Forms.SplitContainer>コントロール内のいずれかのスプリッターの上にマウスポインターを置くと、内部ディメンションのサイズを変更できます。
 
 アプリケーション開発のこの時点で、洗練されたユーザーインターフェイスを作成しました。 次の手順では、アプリケーション自体のプログラミングに進みます。たとえば、 <xref:System.Windows.Forms.TreeView>コントロールと<xref:System.Windows.Forms.ListView>コントロールを何らかの種類のデータソースに接続します。 コントロールをデータに接続する方法の詳細については、「[データバインディングと Windows フォーム](../data-binding-and-windows-forms.md)」を参照してください。
 

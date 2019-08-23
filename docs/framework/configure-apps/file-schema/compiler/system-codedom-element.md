@@ -9,12 +9,12 @@ helpviewer_keywords:
 - system.codedom element
 - <system.codedom> element
 ms.assetid: 672a68f7-e69f-4479-ac30-e980085ec4fe
-ms.openlocfilehash: 2bbd81867b3c20d8ac16bdd79fcc9a3cc7bbb55c
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 43bc3c40bfc0b0ce4c0b18683092faf8b67e1c04
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659696"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927692"
 ---
 # <a name="systemcodedom-element"></a>\<system.string > 要素
 使用可能な言語プロバイダーのコンパイラ構成設定を指定します。  
@@ -56,7 +56,7 @@ ms.locfileid: "69659696"
  開発者やコンパイラベンダーは、新しい<xref:System.CodeDom.Compiler.CodeDomProvider>実装のために構成設定をマシン構成ファイル (machine.config) に追加できます。 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType>メソッドを使用して、コンピューター上のコンパイラ構成設定によって識別される既定の言語プロバイダーと言語プロバイダーの両方をプログラムによって列挙します。  
   
 > [!NOTE]
->  .NET Framework バージョン1.0 および1.1 では、.NET Framework によって提供される既定の言語プロバイダーは、 [ \<コンパイラの >](compilers-element.md)要素で識別されます。 .NET Framework バージョン2.0 では、 [ \<コンパイラの >](compilers-element.md)要素で既定の言語プロバイダーは識別されませんが、 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A>メソッドを使用して列挙できます。  
+> .NET Framework バージョン1.0 および1.1 では、.NET Framework によって提供される既定の言語プロバイダーは、 [ \<コンパイラの >](compilers-element.md)要素で識別されます。 .NET Framework バージョン2.0 では、 [ \<コンパイラの >](compilers-element.md)要素で既定の言語プロバイダーは識別されませんが、 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A>メソッドを使用して列挙できます。  
   
 ## <a name="net-framework-versions-10-and-11"></a>.NET Framework バージョン1.0 および1.1  
  System.string > 要素には、コンピューター上の言語プロバイダーのコンパイラ構成設定が含まれています。 [ \<](system-codedom-element.md) [ \<コンパイラの >](compilers-element.md)要素には、0個以上[ \<のコンパイラ >](compiler-element.md)要素が含まれています。 [各\<コンパイラ >](compiler-element.md)要素は、特定の言語プロバイダーのコンパイラ構成属性を指定します。  

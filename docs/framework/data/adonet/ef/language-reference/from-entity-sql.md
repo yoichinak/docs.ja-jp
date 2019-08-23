@@ -2,15 +2,15 @@
 title: FROM (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-ms.openlocfilehash: 69a6af868ace384a63d08d705c395b58a173ca8e
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 77e22a64310959f66af14137f312b225d42fe56f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662164"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950366"
 ---
 # <a name="from-entity-sql"></a>FROM (Entity SQL)
-使用されるコレクションを指定します[選択](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)ステートメント。  
+[SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)ステートメントで使用するコレクションを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,7 +46,7 @@ LOB.Customers
  別名を指定しない場合、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] はコレクション式に基づいて別名の生成を試みます。  
   
 ### <a name="join-from-clause-item"></a>JOIN FROM 句の項目  
- `JOIN FROM` 句項目は、2 つの `FROM` 句項目の間の結合を表します。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] では、クロス結合、内部結合、左外部結合、右外部結合、および完全外部結合をサポートしています。 これらすべての結合には、Transact SQL でサポートされているのと同様はサポートされています。 Transact SQL では、2 つのように`FROM`に関連する句の項目、`JOIN`独立系である必要があります。 つまり、相互に関連付けられた項目は使用できません。 このような場合には、`CROSS APPLY` または `OUTER APPLY` を使用できます。  
+ `JOIN FROM` 句項目は、2 つの `FROM` 句項目の間の結合を表します。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] では、クロス結合、内部結合、左外部結合、右外部結合、および完全外部結合をサポートしています。 これらすべての結合は、Transact-sql でサポートされているのと同様にサポートされています。 Transact-sql と同様に、 `FROM` `JOIN`に含まれる2つの句の項目は独立している必要があります。 つまり、相互に関連付けられた項目は使用できません。 このような場合には、`CROSS APPLY` または `OUTER APPLY` を使用できます。  
   
 #### <a name="cross-joins"></a>クロス結合  
  次の例に示すように、`CROSS JOIN` クエリ式は 2 つのコレクションのデカルト積を生成します。  
@@ -77,7 +77,7 @@ LOB.Customers
  上記のクエリ式では、`ON` 条件が指定されており、右のコレクションの各要素と対になっている左のコレクションの各要素を結合して処理します。 `ON` 条件が指定されていない場合、式は、NULL 値を使用して、右の要素と対になっている左の要素のインスタンスを 1 つ処理します。 また、NULL 値を使用して、左の要素と対になっている右の要素のインスタンスも 1 つ処理します。  
   
 > [!NOTE]
->  TRANSACT-SQL での sql-92 との互換性を保持するために、OUTER キーワードは省略可能です。 したがって、`LEFT JOIN`、`RIGHT JOIN`、および `FULL JOIN` は、`LEFT OUTER JOIN`、`RIGHT OUTER JOIN`、および `FULL OUTER JOIN` のシノニムです。  
+> SQL-92 との互換性を維持するために、Transact-sql では、OUTER キーワードは省略可能です。 したがって、`LEFT JOIN`、`RIGHT JOIN`、および `FULL JOIN` は、`LEFT OUTER JOIN`、`RIGHT OUTER JOIN`、および `FULL OUTER JOIN` のシノニムです。  
   
 ### <a name="apply-clause-item"></a>APPLY 句の項目  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] は、`APPLY` と `CROSS APPLY` という 2 種類の `OUTER APPLY` をサポートしています。  
@@ -93,17 +93,17 @@ LOB.Customers
  `SELECT c, f FROM C AS c OUTER APPLY c.Assoc AS f`  
   
 > [!NOTE]
->  異なり、Transact SQL で必要はありませんで明示的なネスト解除の手順について[!INCLUDE[esql](../../../../../../includes/esql-md.md)]します。  
+> Transact-sql とは異なり、で[!INCLUDE[esql](../../../../../../includes/esql-md.md)]入れ子になっていない明示的な手順は必要ありません。  
   
 > [!NOTE]
->  `CROSS` `OUTER APPLY`演算子は、SQL Server 2005 で導入されました。 場合によっては、クエリ パイプラインにより、`CROSS APPLY` 演算子または `OUTER APPLY` 演算子を含む Transact-SQL が生成されることがあります。 SQL Server 2005 より前のバージョンの SQL Server を含む、一部のバックエンド プロバイダーはこれらの演算子がサポートされないために、これらのバックエンド プロバイダーでこのようなクエリを実行できません。  
+> `CROSS`および`OUTER APPLY`演算子は SQL Server 2005 で導入されました。 場合によっては、クエリ パイプラインにより、`CROSS APPLY` 演算子または `OUTER APPLY` 演算子を含む Transact-SQL が生成されることがあります。 SQL Server 2005 より前の SQL Server のバージョンを含む一部のバックエンドプロバイダーは、これらの演算子をサポートしていないため、これらのバックエンドプロバイダーでクエリを実行することはできません。  
 >   
 >  `CROSS APPLY` 演算子または `OUTER APPLY` 演算子を含むクエリの生成につながる可能性がある一般的なシナリオとしては、ページングを使用した相関サブクエリ、相関サブクエリ全体またはナビゲーションによって生成されたコレクション全体を対象とした AnyElement、要素セレクターを受け取るグループ化メソッドを使用した LINQ クエリ、`CROSS APPLY` 演算子または `OUTER APPLY` 演算子が明示的に指定されたクエリ、`DEREF` コンストラクターを引数に取る `REF` コンストラクターを含むクエリなどがあります。  
   
 ## <a name="multiple-collections-in-the-from-clause"></a>FROM 句での複数のコレクション  
  `FROM` 句には、複数のコレクションをコンマで区切って含めることができます。 この場合、これらのコレクションは 1 つに結合されるものと見なされます。 これは、n 方向の CROSS JOIN と考えることができます。  
   
- 次の例では、`C`と`D`は独立したコレクションが`c.Names`が依存`C`します。  
+ 次の例では`C` 、 `D`とは独立した`c.Names`コレクションですが`C`、はに依存しています。  
   
 ```  
 FROM C AS c, D AS d, c.Names AS e  
@@ -137,7 +137,7 @@ from (C as c join D as d) cross apply c.Names as e
 from (C as c join D as d) cross apply c.Names as e  
 ```  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] (TRANSACT-SQL) とは異なり、`FROM`句がスコープにのみ、エイリアスを説明します。 これらのコレクションの列 (プロパティ) への参照は、別名を使用して修飾する必要があります。  
+ ( [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Transact-sql とは異なり) `FROM`では、句では、エイリアスのみがスコープに導入されます。 これらのコレクションの列 (プロパティ) への参照は、別名を使用して修飾する必要があります。  
   
 ## <a name="pulling-up-keys-from-nested-queries"></a>入れ子になったクエリからのキーの抽出  
  入れ子になったクエリからのキーの抽出を必要とする特定の種類のクエリはサポートされていません。 たとえば、次のクエリは有効です。  

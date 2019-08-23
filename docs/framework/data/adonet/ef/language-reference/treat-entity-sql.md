@@ -2,12 +2,12 @@
 title: TREAT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b77f156-55de-4cb4-8154-87f707d4c635
-ms.openlocfilehash: e1382c4daa513477011a1d1c2132840dfae84de0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 15664da02189dd618784d55c07aaf4db38a2f656
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879568"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929288"
 ---
 # <a name="treat-entity-sql"></a>TREAT (Entity SQL)
 特定の基本データ型のオブジェクトを指定の派生型のオブジェクトとして処理します。  
@@ -23,13 +23,13 @@ TREAT ( expression as type)
  エンティティを返す任意の有効なクエリ式。  
   
 > [!NOTE]
->  指定の式の型は、特定のデータ型のサブタイプである必要があります。または、データ型は式の型のサブタイプである必要があります。  
+> 指定の式の型は、特定のデータ型のサブタイプである必要があります。または、データ型は式の型のサブタイプである必要があります。  
   
  `type`  
  エンティティ型。 型は名前空間で修飾する必要があります。  
   
 > [!NOTE]
->  指定の式は、特定のデータ型のサブタイプである必要があります。または、データ型は式のサブタイプである必要があります。  
+> 指定の式は、特定のデータ型のサブタイプである必要があります。または、データ型は式のサブタイプである必要があります。  
   
 ## <a name="return-value"></a>戻り値  
  指定されたデータ型の値。  
@@ -48,7 +48,7 @@ WHERE p IS OF (NamespaceName.Employee)
  このクエリは、 `Person` エンティティを `Employee` 型にキャストします。 p の値が実際には `Employee`型でない場合、この式は `null`値を返します。  
   
 > [!NOTE]
->  指定された式`Employee`指定したデータ型のサブタイプである必要があります`Person`データ型の式のサブタイプである必要があります。 そうでない場合は、コンパイル時にエラーが発生します。  
+> 指定され`Employee`た式は、指定されたデータ`Person`型のサブタイプであるか、または式のサブタイプである必要があります。 そうでない場合は、コンパイル時にエラーが発生します。  
   
  次の表に、いくつかの通常パターンと一般的でないパターンにおける TREAT の動作を示します。 すべての例外はクライアント側にスローされてから、プロバイダーが呼び出されます。  
   

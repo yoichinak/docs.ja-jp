@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column hiding
 - data [Windows Forms], displaying
 ms.assetid: a81c38e6-2527-426a-bcb1-be691403be04
-ms.openlocfilehash: d502a89913e108254848151e9058ac6ae83a9638
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 35aa1cdeef919d4267cb27da79f183c4c52aefa2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039771"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916387"
 ---
 # <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>方法: デザイナーを使用して Windows フォーム DataGridView コントロールの列を非表示にする
 Windows フォームの <xref:System.Windows.Forms.DataGridView> コントロールで使用できる列の一部のみを表示したいときがあります。 たとえば、管理資格情報を持つユーザーに employee salary 列を表示し、他のユーザーには表示しないようにすることができます。 または、いくつかの列を含むデータソースにコントロールをバインドし、その一部のみを表示することもできます。 この場合、通常は、表示されていない列を非表示にするのではなく、削除します。 詳細については、「[方法 :デザイナー](add-and-remove-columns-in-the-datagrid-using-the-designer.md)を使用して Windows フォーム DataGridView コントロールの列を追加および削除します。
@@ -28,7 +28,7 @@ Windows フォームの <xref:System.Windows.Forms.DataGridView> コントロー
 3. 列の**プロパティ**グリッドで、 <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A>プロパティをに`false`設定します。
 
     > [!NOTE]
-    >  **[列の追加]** ダイアログボックスの **[表示]** チェックボックスをオフにすることで、列を追加するときに非表示にすることもできます。
+    > **[列の追加]** ダイアログボックスの **[表示]** チェックボックスをオフにすることで、列を追加するときに非表示にすることもできます。
 
 ## <a name="see-also"></a>関連項目
 

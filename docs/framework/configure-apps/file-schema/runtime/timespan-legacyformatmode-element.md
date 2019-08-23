@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bd74460c7d5d077686c723936d140b07ac21dd0
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: f16a2bbd2470b4aec9e95ab67ccb0e736c4c6d02
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663396"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920688"
 ---
 # <a name="timespan_legacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode > 要素
 
@@ -64,7 +64,7 @@ ms.locfileid: "69663396"
 
 .NET Framework 4 以降では、構造<xref:System.TimeSpan?displayProperty=nameWithType>体は<xref:System.IFormattable>インターフェイスを実装し、標準およびカスタムの書式指定文字列を使用した書式設定操作をサポートします。 解析メソッドで、サポートさ<xref:System.FormatException>れていない書式指定子または書式指定文字列が検出されると、がスローされます。
 
-以前のバージョンの .NET Framework では、 <xref:System.TimeSpan>構造体がを<xref:System.IFormattable>実装しておらず、書式指定文字列をサポートしていませんでした。 しかし、多くの開発者は<xref:System.TimeSpan> 、書式指定文字列のセットをサポートし、など<xref:System.String.Format%2A?displayProperty=nameWithType>のメソッドを使用して[複合書式指定操作](../../../../../docs/standard/base-types/composite-formatting.md)で使用したことを誤って想定していました。 通常、型がを実装<xref:System.IFormattable>し、書式指定文字列をサポートする場合、サポートされていない<xref:System.FormatException>書式指定文字列を使用した書式指定メソッドの呼び出しは、通常、をスローします。 ただし、が<xref:System.TimeSpan>実装<xref:System.IFormattable>されていないため、ランタイムは書式指定文字列を<xref:System.TimeSpan.ToString?displayProperty=nameWithType>無視し、代わりにメソッドを呼び出しました。 これは、書式指定文字列が書式設定操作に影響を与えないことを意味し<xref:System.FormatException>ますが、その存在はになりませんでした。
+以前のバージョンの .NET Framework では、 <xref:System.TimeSpan>構造体がを<xref:System.IFormattable>実装しておらず、書式指定文字列をサポートしていませんでした。 しかし、多くの開発者は<xref:System.TimeSpan> 、書式指定文字列のセットをサポートし、など<xref:System.String.Format%2A?displayProperty=nameWithType>のメソッドを使用して[複合書式指定操作](../../../../standard/base-types/composite-formatting.md)で使用したことを誤って想定していました。 通常、型がを実装<xref:System.IFormattable>し、書式指定文字列をサポートする場合、サポートされていない<xref:System.FormatException>書式指定文字列を使用した書式指定メソッドの呼び出しは、通常、をスローします。 ただし、が<xref:System.TimeSpan>実装<xref:System.IFormattable>されていないため、ランタイムは書式指定文字列を<xref:System.TimeSpan.ToString?displayProperty=nameWithType>無視し、代わりにメソッドを呼び出しました。 これは、書式指定文字列が書式設定操作に影響を与えないことを意味し<xref:System.FormatException>ますが、その存在はになりませんでした。
 
 レガシコードによって複合書式指定メソッドと無効な書式指定文字列が渡され、そのコードを再コンパイルできない場合は`<TimeSpan_LegacyFormatMode>` 、要素を使用し<xref:System.TimeSpan>て従来の動作を復元できます。 `enabled`この要素の属性をに<xref:System.TimeSpan.ToString?displayProperty=nameWithType> `true`設定すると、複合書式指定メソッドによってではなく<xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> <xref:System.FormatException>が呼び出され、がスローされません。
 

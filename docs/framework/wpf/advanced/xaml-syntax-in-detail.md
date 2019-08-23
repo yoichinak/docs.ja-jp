@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 2c4e7213ddcffdb026d3d6e6b339bfc91b3c27c6
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 3ac7d79660830601ca69951e56763fc923692b0e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400777"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958786"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 構文の詳細
 このトピックでは、XAML 構文の要素について説明するために使用される用語を定義します。 これらの用語は、このドキュメントの残りの部分で頻繁に使用されます。 WPF ドキュメントについては、特に、xaml を使用する他のフレームワークの場合と、xaml 言語サポートによってシステム .Xaml レベルで有効になっている基本的な XAML 概念の両方で使用されます。 このトピックでは、「 [XAML の概要 (WPF)](xaml-overview-wpf.md)」で紹介した基本的な用語について説明します。  
@@ -86,7 +86,7 @@ ms.locfileid: "68400777"
  属性構文は、既存のオブジェクト要素の属性を宣言することによってプロパティの値を設定する XAML マークアップ構文です。 属性名は、関連するオブジェクト要素をバッキングするクラスのプロパティの CLR メンバー名と一致している必要があります。 属性名の後に代入演算子 (=) が付きます。 属性値は、引用符で囲まれた文字列である必要があります。  
   
 > [!NOTE]
->  代替引用符を使用して、属性内にリテラル引用符を配置できます。 たとえば、二重引用符で囲まれた文字列を宣言する手段として単一引用符を使用できます。 単一引用符と二重引用符のどちらを使用する場合でも、属性値の文字列を開いたり閉じたりするには、一致するペアを使用する必要があります。 また、特定の XAML 構文によって課される文字制限を回避するために使用できるエスケープシーケンスやその他の手法もあります。 「 [XML 文字エンティティと XAML」を](../../xaml-services/xml-character-entities-and-xaml.md)参照してください。  
+> 代替引用符を使用して、属性内にリテラル引用符を配置できます。 たとえば、二重引用符で囲まれた文字列を宣言する手段として単一引用符を使用できます。 単一引用符と二重引用符のどちらを使用する場合でも、属性値の文字列を開いたり閉じたりするには、一致するペアを使用する必要があります。 また、特定の XAML 構文によって課される文字制限を回避するために使用できるエスケープシーケンスやその他の手法もあります。 「 [XML 文字エンティティと XAML」を](../../xaml-services/xml-character-entities-and-xaml.md)参照してください。  
   
  属性構文を使用して設定するには、プロパティはパブリックである必要があり、書き込み可能である必要があります。 バッキング型システムのプロパティの値は、値型であるか、または関連するバッキング型にアクセスするときに XAML プロセッサによってインスタンス化または参照できる参照型である必要があります。  
   
@@ -169,7 +169,7 @@ ms.locfileid: "68400777"
  暗黙的なコレクション要素は、マークアップに要素として表示されない場合でも、論理ツリー表現にメンバーを作成します。 通常、親型のコンストラクターは、そのプロパティの1つであるコレクションのインスタンス化を実行します。最初に空のコレクションがオブジェクトツリーの一部になります。  
   
 > [!NOTE]
->  ジェネリックリストおよびディクショナリインターフェイス (<xref:System.Collections.Generic.IList%601>および<xref:System.Collections.Generic.IDictionary%602>) は、コレクションの検出ではサポートされていません。 ただし、 <xref:System.Collections.Generic.List%601>クラスは、直接実装するか<xref:System.Collections.Generic.Dictionary%602> 、基底クラス<xref:System.Collections.IDictionary>として<xref:System.Collections.IList>直接実装するため、基底クラスとして使用できます。  
+> ジェネリックリストおよびディクショナリインターフェイス (<xref:System.Collections.Generic.IList%601>および<xref:System.Collections.Generic.IDictionary%602>) は、コレクションの検出ではサポートされていません。 ただし、 <xref:System.Collections.Generic.List%601>クラスは、直接実装するか<xref:System.Collections.Generic.Dictionary%602> 、基底クラス<xref:System.Collections.IDictionary>として<xref:System.Collections.IList>直接実装するため、基底クラスとして使用できます。  
   
  コレクション型の .NET 参照ページでは、コレクションの object 要素を意図的に省略したこの構文は、XAML 構文のセクションで暗黙のコレクション構文として示されることがあります。  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: aa3d428d311fd954d092c3859cf8ad273e8a5c1f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 234c8a1f57af4030186afd48f727621713531b17
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613815"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915538"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>規模が大きく、応答性の高い .NET Framework アプリの作成
 この記事では、大規模な .NET Framework アプリや、ファイルやデータベースなど大量のデータを処理するアプリのパフォーマンス改善のヒントを説明します。 説明するヒントは C# および Visual Basic コンパイラを マネージド コードで作成し直した際に得られたものです。この記事では C# コンパイラでの実際の例をいくつか紹介します。 
@@ -23,34 +23,34 @@ ms.locfileid: "64613815"
   
  エンド ユーザはアプリを操作するときに、アプリが応答するものであると期待します。 入力またはコマンドの処理がブロックされることがあってはなりません。 ヘルプはすぐにポップアップ表示され、またユーザーが入力を続けるときには閉じる必要があります。 処理時間がかかっている UI スレッドがあり、これが原因でアプリの動作が遅くなっていると判断される場合でも、アプリがその UI スレッドをブロックしないようにする必要があります。 
   
- Roslyn コンパイラの詳細については、次を参照してください。 [.NET コンパイラ プラットフォーム SDK](../../csharp/roslyn-sdk/index.md)します。
+ Roslyn コンパイラの詳細については、 [.NET COMPILER PLATFORM SDK](../../csharp/roslyn-sdk/index.md)を参照してください。
   
 ## <a name="just-the-facts"></a>.NET Framework についての事実  
  パフォーマンスを調整し、応答性のある .NET Framework アプリを作成する際には、次に説明する事実を考慮してください。 
   
-### <a name="fact-1-dont-prematurely-optimize"></a>事実 1:不完全な最適化します。  
+### <a name="fact-1-dont-prematurely-optimize"></a>ファクト 1:早期に最適化しない  
  必要以上に複雑なコードを記述すると、保守、デバッグ、細かな調整に伴うコストが発生します。 経験豊富なプログラマは、コーディングの問題の解決方法を直観的に把握し、より効率的なコードを記述します。 しかし、コードの最適化が不完全になることがあります。 たとえば、単純な配列で十分な場合にハッシュ テーブルを使用したり、単に値を再計算する代わりに、メモリ リークが発生する恐れのある複雑なキャッシュを使用したりします。 経験豊富なプログラマであっても、パフォーマンスを確認するテストを実施し、問題がある場合にはコードを分析してください。 
   
-### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>事実 2:推測したかどうかは測定していない、  
- プロファイルと測定は嘘をつきません。 プロファイルから、CPU の負荷が上限になっているかどうか、またはディスク I/O でブロックされているかどうかがわかります。 プロファイルは、割り当てるメモリのサイズと種類、[ガベージ コレクション](../../../docs/standard/garbage-collection/index.md) (GC) の処理に CPU が長い時間を取られていないか示します。 
+### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>ファクト 2:測定していない場合は、  
+ プロファイルと測定は嘘をつきません。 プロファイルから、CPU の負荷が上限になっているかどうか、またはディスク I/O でブロックされているかどうかがわかります。 プロファイルは、割り当てるメモリのサイズと種類、[ガベージ コレクション](../../standard/garbage-collection/index.md) (GC) の処理に CPU が長い時間を取られていないか示します。 
   
  アプリでの主要な顧客エクスペリエンスやシナリオについてパフォーマンスの目標を設定し、パフォーマンスを測定するテストを作成してください。 テスト失敗の調査には科学的な手法を使用します。ガイドとなるプロファイルを使用して、どのような問題が発生しているかを仮定し、実験やコード変更によってその仮定を検証します。 定期的にテストを実施して、時間の経過と共にベースライン パフォーマンス測定を確立します。これにより、パフォーマンス後退を引き起こしている変更を切り分けることができます。 パフォーマンス測定を厳密に実施することで、不要なコード更新に時間をかけることを回避できます。 
   
-### <a name="fact-3-good-tools-make-all-the-difference"></a>事実 3:優れたツールにすべての違い  
- 優れたツールを使用すれば、最も大きなパフォーマンスの問題 (CPU、メモリ、またはディスク) の詳細を迅速に確認し、このようなボトルネックを引き起こしているコードを特定できます。 Microsoft はなどのさまざまなパフォーマンス ツールを出荷[Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling)と[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)します。 
+### <a name="fact-3-good-tools-make-all-the-difference"></a>ファクト 3:優れたツールですべての違いを実現  
+ 優れたツールを使用すれば、最も大きなパフォーマンスの問題 (CPU、メモリ、またはディスク) の詳細を迅速に確認し、このようなボトルネックを引き起こしているコードを特定できます。 Microsoft には、 [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling)や[perfview](https://www.microsoft.com/download/details.aspx?id=28567)などのさまざまなパフォーマンスツールが付属しています。 
   
  PerfView は、ディスク I/O、GC イベント、メモリなどの深刻な問題に取り組む際に役立つ極めて強力な無償のツールです。 パフォーマンスに関連する [Windows イベント トレーシング](../../../docs/framework/wcf/samples/etw-tracing.md) (ETW) イベントをキャプチャし、アプリ別、プロセス別、スタック別、およびスレッド別に情報を容易に確認できます。 PerfView は、アプリによって割り当てられるメモリの種類と量、そしてメモリの割り当てにどの関数またはコール スタックがどの程度関与しているのかを示します。 詳細については、ツールに付属している詳しいヘルプ トピック、デモ、ビデオ (Channel 9 の [PerfView チュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial) など) を参照してください。 
   
-### <a name="fact-4-its-all-about-allocations"></a>事実 4:割り当て情報します。  
+### <a name="fact-4-its-all-about-allocations"></a>ファクト 4:すべての割り当てについて  
  応答性の高い .NET Framework アプリ開発の要となるのはアルゴリズム (例: バブル ソートの代わりにクイック ソートを使用) であると思うかもしれませんが、それは正しくありません。 応答性の高いアプリを開発する上で最も重要なのは、メモリの割り当てです。これは特に、アプリが非常に大規模であり大量データを処理する場合に該当します。 
   
- 新しいコンパイラ API の応答性の高い IDE 機能のほとんどの開発作業には、割り当てを回避し、キャッシュ ストラテジを管理することが関連していました。 PerfView トレースから、新しい C# および Visual Basic コンパイラのパフォーマンスはほとんど CPU とは関連していないことが判明しています。 これらのコンパイラは、数十万行から数百万行のコード行の読み取り、メタデータの読み取り、または生成されたコードの出力の時点では I/O と関連しています。 UI スレッドの遅延の原因は、ほぼガベージ コレクションにあります。 .NET Framework GC は、パフォーマンスのために高度に調整されており、その処理のほとんどはアプリ コードの実行中に同時に実行されます。 ただし、1 回の割り当てによって負荷の高い [gen2](../../../docs/standard/garbage-collection/fundamentals.md) コレクションが実行され、これによってすべてのスレッドが停止されることがあります。 
+ 新しいコンパイラ API の応答性の高い IDE 機能のほとんどの開発作業には、割り当てを回避し、キャッシュ ストラテジを管理することが関連していました。 PerfView トレースから、新しい C# および Visual Basic コンパイラのパフォーマンスはほとんど CPU とは関連していないことが判明しています。 これらのコンパイラは、数十万行から数百万行のコード行の読み取り、メタデータの読み取り、または生成されたコードの出力の時点では I/O と関連しています。 UI スレッドの遅延の原因は、ほぼガベージ コレクションにあります。 .NET Framework GC は、パフォーマンスのために高度に調整されており、その処理のほとんどはアプリ コードの実行中に同時に実行されます。 ただし、1 回の割り当てによって負荷の高い [gen2](../../standard/garbage-collection/fundamentals.md) コレクションが実行され、これによってすべてのスレッドが停止されることがあります。 
   
 ## <a name="common-allocations-and-examples"></a>一般的な割り当てと例  
  このセクションの例の式では、小規模な割り当てについては特に問題になりません。 ただし、大きなアプリが式をかなりの回数にわたって実行すると、数百メガバイトまたはギガバイトのメモリが割り当てられることがあります。 たとえば、開発者によるエディターへの入力をシミュレーションする 1 分間のテストを実行したところ、ギガバイト単位のメモリが割り当てられたため、パフォーマンス チームは入力に関するシナリオに重点を置いて取り組みました。 
   
 ### <a name="boxing"></a>ボックス化  
- 通常はスタックまたはデータ構造体内にある値型がオブジェクトでラップされると、[ボックス化](~/docs/csharp/programming-guide/types/boxing-and-unboxing.md)が発生します。 つまり、データを保持するオブジェクトを割り当て、そのオブジェクトを指すポインタを返します。 .NET Framework では、メソッドのシグネチャや格納場所の種類が原因で、値がボックス化されることがあります。 オブジェクト内で値型がラップされると、メモリ割り当てが行われます。 多くのボックス化操作を実行すると、アプリへメガバイト単位またはギガバイト単位のメモリが割り当てられ、アプリがさらに多くの GC の原因になります。 .NET Framework と言語コンパイラでは可能な限りボックス化を回避しますが、場合によっては、ほとんど予期していない状況でボックス化が行われることがあります。 
+ 通常はスタックまたはデータ構造体内にある値型がオブジェクトでラップされると、[ボックス化](../../csharp/programming-guide/types/boxing-and-unboxing.md)が発生します。 つまり、データを保持するオブジェクトを割り当て、そのオブジェクトを指すポインタを返します。 .NET Framework では、メソッドのシグネチャや格納場所の種類が原因で、値がボックス化されることがあります。 オブジェクト内で値型がラップされると、メモリ割り当てが行われます。 多くのボックス化操作を実行すると、アプリへメガバイト単位またはギガバイト単位のメモリが割り当てられ、アプリがさらに多くの GC の原因になります。 .NET Framework と言語コンパイラでは可能な限りボックス化を回避しますが、場合によっては、ほとんど予期していない状況でボックス化が行われることがあります。 
   
  PerｆView でボックス化を確認するには、トレースを開き、アプリのプロセス名の下の [GC Heap Alloc Stacks (GC ヒープ割り当てスタック)] を参照します (PerfView はすべてのプロセスについて報告する点に注意してください)。 <xref:System.Int32?displayProperty=nameWithType> や <xref:System.Char?displayProperty=nameWithType> のような型が割り当ての下に表示される場合は、値型をボックス化しています。 このような型のいずれか 1 つを選択すると、型がボックス化されているスタックと関数が表示されます。 
   
@@ -195,7 +195,7 @@ private bool TrimmedStringStartsWith(string text, int start, string prefix) {
 // etc... 
 ```  
   
- `WriteFormattedDocComment()` の最初のバージョンでは、配列、複数の部分文字列、トリミングされた部分文字列と空の `params` 配列が割り当てられました。 また、「//」にもチェックされます。 修正後のコードは、インデックス作成のみを使用し、割り当てを行いません。 文字列が「//」で始まるかどうか、空白でないし、文字の文字をチェックする最初の文字を検索します。 新しいコードを使用して`IndexOfFirstNonWhiteSpaceChar`の代わりに<xref:System.String.TrimStart%2A>を空白以外の文字が発生します (指定した開始インデックス) の後に最初のインデックスを返します。 この修正は完全ではありませんが、完全な解決策として類似の修正を適用する方法がわかります。 コード全体でこの方法を適用することで、`WriteFormattedDocComment()` 内のすべての割り当てを削除できます。 
+ `WriteFormattedDocComment()` の最初のバージョンでは、配列、複数の部分文字列、トリミングされた部分文字列と空の `params` 配列が割り当てられました。 また、"///" もチェックされています。 修正後のコードは、インデックス作成のみを使用し、割り当てを行いません。 このメソッドは、空白ではない最初の文字を検索し、文字を文字でチェックして、文字列が "///" で始まるかどうかを確認します。 新しいコードは、 `IndexOfFirstNonWhiteSpaceChar`の<xref:System.String.TrimStart%2A>代わりにを使用して、空白以外の文字が出現する最初のインデックス (指定した開始インデックスの後) を返します。 この修正は完全ではありませんが、完全な解決策として類似の修正を適用する方法がわかります。 コード全体でこの方法を適用することで、`WriteFormattedDocComment()` 内のすべての割り当てを削除できます。 
   
  **例 4:StringBuilder**  
   
@@ -276,9 +276,9 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
  サイズ制限があるため、この単純なキャッシュ対策は適切なキャッシュ設計に準拠しています。 ただし、元のバージョンよりもコードが増えたため、保守コストも増加します。 このキャッシュ対策を取り入れるのは、パフォーマンスの問題を検出し、PerfView で <xref:System.Text.StringBuilder> 割り当てがその問題の大きな原因であることが示されている場合だけにしてください。 
   
 ### <a name="linq-and-lambdas"></a>LINQ とラムダ  
-統合言語クエリ (LINQ)、ラムダ式と組み合わせて、生産性向上機能の例に示します。 ただし、その使用は時間の経過と共にパフォーマンスに大きな影響を与える可能性があり、コードを書き直す必要がある場合があります。
+ラムダ式と組み合わせた統合言語クエリ (LINQ) は、生産性機能の一例です。 ただし、その用途は、時間の経過と共にパフォーマンスに大きな影響を与える可能性があり、コードの書き直しが必要になる場合があります。
   
- **例 5:ラムダ、リスト\<T >、および IEnumerable\<T >**  
+ **例 5:ラムダ、List\<T >、および IEnumerable\<T >**  
   
  この例では、[LINQ と関数スタイルのコード](https://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx)を利用し、与えられた名前文字列で、コンパイラのモデルで記号を探します。  
   
@@ -304,7 +304,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- 最初の行で、[ラムダ式](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [閉じ込め](https://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx)ローカル変数`name`します。 つまり、このコードは `predicate` が保持している[デリゲート](~/docs/csharp/language-reference/keywords/delegate.md)にオブジェクトを割り当てる以外に、`name` の値をキャプチャする環境を保持する静的クラスを割り当てます。 コンパイラは次のようなコードを生成します。  
+ 最初の行では、[ラムダ式](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name`はローカル変数`name`に[対して閉じ](https://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx)ます。 つまり、このコードは `predicate` が保持している[デリゲート](../../csharp/language-reference/keywords/delegate.md)にオブジェクトを割り当てる以外に、`name` の値をキャプチャする環境を保持する静的クラスを割り当てます。 コンパイラは次のようなコードを生成します。  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -408,11 +408,11 @@ class Compilation { /*...*/
 }  
 ```  
   
- キャッシュに関する新しいコードには `SyntaxTree` という名前の `cachedResult` フィールドがあります。 このフィールドが Null の場合、`GetSyntaxTreeAsync()` が処理を行い、キャッシュに結果が保存されます。 `GetSyntaxTreeAsync()` 返します、`SyntaxTree`オブジェクト。 ここで問題となるのは、`async` 型の `Task<SyntaxTree>` 関数があり、`SyntaxTree` 型の値を返す場合、コンパイラが、(`Task<SyntaxTree>.FromResult()` を使用して) 結果を保持するために Task を割り当てるコードを出力することです。 Task は完了済みとしてマークされ、結果が即時に利用可能になります。 新しいコンパイラのコードでは、既に完了している <xref:System.Threading.Tasks.Task> オブジェクトが頻繁に発生するため、このような割り当てを修正すると応答性が著しく向上することがよくありました。 
+ キャッシュに関する新しいコードには `SyntaxTree` という名前の `cachedResult` フィールドがあります。 このフィールドが Null の場合、`GetSyntaxTreeAsync()` が処理を行い、キャッシュに結果が保存されます。 `GetSyntaxTreeAsync()``SyntaxTree`オブジェクトを返します。 ここで問題となるのは、`async` 型の `Task<SyntaxTree>` 関数があり、`SyntaxTree` 型の値を返す場合、コンパイラが、(`Task<SyntaxTree>.FromResult()` を使用して) 結果を保持するために Task を割り当てるコードを出力することです。 Task は完了済みとしてマークされ、結果が即時に利用可能になります。 新しいコンパイラのコードでは、既に完了している <xref:System.Threading.Tasks.Task> オブジェクトが頻繁に発生するため、このような割り当てを修正すると応答性が著しく向上することがよくありました。 
   
  **例 6 の修正**  
   
- 完成したを削除する<xref:System.Threading.Tasks.Task>割り当て、完了した結果とともに Task オブジェクトをキャッシュすることができます。  
+ 完了<xref:System.Threading.Tasks.Task>した割り当てを削除するには、完了した結果を含むタスクオブジェクトをキャッシュします。  
   
 ```csharp  
 class Compilation { /*...*/  
@@ -463,10 +463,10 @@ class Compilation { /*...*/
   
 ## <a name="see-also"></a>関連項目
 
-- [このトピックのプレゼンテーションのビデオ](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
+- [このトピックのプレゼンテーションビデオ](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
 - [パフォーマンス プロファイリングのビギナーズ ガイド](/visualstudio/profiling/beginners-guide-to-performance-profiling)
 - [パフォーマンス](../../../docs/framework/performance/index.md)
 - [.NET のパフォーマンスに関するヒント](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v%3dmsdn.10))
-- [Channel 9 PerfView チュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial)
+- [Channel 9 PerfView のチュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [.NET Compiler Platform SDK](../../csharp/roslyn-sdk/index.md)
 - [GitHub の dotnet/roslyn リポジトリ](https://github.com/dotnet/roslyn)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
-ms.openlocfilehash: 47f27b71b282fad9d285143bf8306d7bdbb60da2
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: d13f4ce37dba45dc99f0481043d80640e73d833d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671925"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917471"
 ---
 # <a name="wpf-and-win32-interoperation"></a>WPF と Win32 の相互運用性
 このトピックでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] および [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] コードを相互運用する方法の概要について説明します。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、アプリケーションの作成に適した環境を提供します。 ただし、[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] コードに多くの投資を行った場合は、そのコードの一部を再利用する方がより効率的である場合があります。  
@@ -44,7 +44,7 @@ ms.locfileid: "68671925"
  これらの中で最適な方法を使用してください。  
   
 > [!NOTE]
->  以前に/cli を使用C++したことがない場合は、相互運用のコード例`gcnew`で`nullptr` 、やなどの "新しい" キーワードが表示されることがあります。 これらのキーワードは、古い2つのアンダースコア`__gc`の構文 () を置き換え、でC++マネージコードにより自然な構文を提供します。  /Cli で管理されC++ている機能の詳細については、「[ランタイムプラットフォームのコンポーネント拡張](/cpp/windows/component-extensions-for-runtime-platforms)」および「 [Hello C++,/cli](https://go.microsoft.com/fwlink/?LinkId=98739)」を参照してください。  
+> 以前に/cli を使用C++したことがない場合は、相互運用のコード例`gcnew`で`nullptr` 、やなどの "新しい" キーワードが表示されることがあります。 これらのキーワードは、古い2つのアンダースコア`__gc`の構文 () を置き換え、でC++マネージコードにより自然な構文を提供します。  /Cli で管理されC++ている機能の詳細については、「[ランタイムプラットフォームのコンポーネント拡張](/cpp/windows/component-extensions-for-runtime-platforms)」および「 [Hello C++,/cli](https://go.microsoft.com/fwlink/?LinkId=98739)」を参照してください。  
   
 <a name="hwnds"></a>   
 ## <a name="how-wpf-uses-hwnds"></a>WPF での Hwnd の使用方法  
@@ -83,7 +83,7 @@ ms.locfileid: "68671925"
 8. 静的フィールドに格納した参照を使用してプロパティの設定やメソッドの呼び出しなどを行い、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツ オブジェクトと通信します。  
   
 > [!NOTE]
->  個別のアセンブリを生成して参照する場合は、手順 1 の [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツ クラスの一部またはすべてについて、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] でコンテンツ クラスの既定の部分クラスを使用して定義できます。 通常は、<xref:System.Windows.Application> オブジェクトを [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] のコンパイルの一部としてアセンブリに含めますが、その <xref:System.Windows.Application> を相互運用の一部として使用することにはなりません。単に、アプリケーションによって参照される [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイルの 1 つ以上のルート クラスを使用し、その部分クラスを参照します。 手順の残りの部分は、基本的に前述の手順と同様です。  
+> 個別のアセンブリを生成して参照する場合は、手順 1 の [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツ クラスの一部またはすべてについて、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] でコンテンツ クラスの既定の部分クラスを使用して定義できます。 通常は、<xref:System.Windows.Application> オブジェクトを [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] のコンパイルの一部としてアセンブリに含めますが、その <xref:System.Windows.Application> を相互運用の一部として使用することにはなりません。単に、アプリケーションによって参照される [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイルの 1 つ以上のルート クラスを使用し、その部分クラスを参照します。 手順の残りの部分は、基本的に前述の手順と同様です。  
 >   
 >  これらの各手順については、「 [チュートリアル:Win32](walkthrough-hosting-wpf-content-in-win32.md)で WPF コンテンツをホストしています。  
   

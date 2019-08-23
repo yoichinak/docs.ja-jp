@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-ms.openlocfilehash: b6c8ec4052d834d410df7fef12e59434f5fdfb44
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 19c6fcb04a373d782db3deafc732f69bf20e7f0e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039977"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962774"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Visual Basic の Main プロシージャ
 すべての Visual Basic アプリケーションには、と`Main`いうプロシージャが含まれている必要があります。 この手順は、アプリケーションの開始点と全体的な制御として機能します。 .NET Framework は、アプリケーション`Main`を読み込んだときにプロシージャを呼び出し、そのプロシージャに制御を渡す準備ができています。 Windows フォームアプリケーションを作成する場合を除き、独自に実行`Main`するアプリケーション用の手順を記述する必要があります。
@@ -33,7 +33,7 @@ ms.locfileid: "69039977"
  プロシージャを宣言するには、 `Main`次の4つの方法があります。 引数を受け取ることも、それ以外の値を返すこともできます。
 
 > [!NOTE]
->  クラスでを`Main`宣言する場合は、 `Shared`キーワードを使用する必要があります。 モジュールでは、 `Main`はである必要`Shared`はありません。
+> クラスでを`Main`宣言する場合は、 `Shared`キーワードを使用する必要があります。 モジュールでは、 `Main`はである必要`Shared`はありません。
 
 - 最も簡単な方法は、引数`Sub`を取らず、値を返さないプロシージャを宣言することです。
 

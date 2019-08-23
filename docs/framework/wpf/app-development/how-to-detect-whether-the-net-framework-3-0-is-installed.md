@@ -6,22 +6,22 @@ helpviewer_keywords:
 - presence of WPT [WPF], detecting
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-ms.openlocfilehash: 27f856b895f48dc2365a1721dbc90294269899c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e307125a2a8de3edc4df2fc1022c6e3de1904879
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947824"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960243"
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>方法: .NET Framework 3.0 がインストールされているかどうかを確認する
-管理者がシステム上の Microsoft .NET Framework アプリケーションを展開できる前にまず、.NET Framework ランタイムが存在するを確認する必要があります。 このトピックでは、HTML または JavaScript で記述されたスクリプトを提供します。 管理者は、.NET Framework が、システム上に存在するかどうかを使用できます。  
+管理者が Microsoft .NET Framework アプリケーションをシステムに配置するには、まず、.NET Framework ランタイムが存在することを確認する必要があります。 このトピックでは、.NET Framework がシステムに存在するかどうかを確認するために管理者が使用できる HTML/JavaScript で記述されたスクリプトについて説明します。  
   
 > [!NOTE]
->  配置、および Microsoft .NET Framework の検出が、説明を参照してインストールする方法についての詳細、[を展開する Microsoft .NET Framework バージョン 3.0](https://go.microsoft.com/fwlink/?LinkId=96739)します。  
+> Microsoft .NET Framework のインストール、配置、および検出の詳細については、 [Microsoft .NET Framework バージョン3.0 の展開](https://go.microsoft.com/fwlink/?LinkId=96739)に関するトピックを参照してください。  
   
 <a name="content_expiration"></a>   
-## <a name="detect-the-net-clr-user-agent-string"></a>".NET CLR"のユーザー エージェント文字列を検出します。  
- .NET Framework がインストールされている場合、MSI は、".NET CLR"とバージョン番号を UserAgent 文字列に追加します。 次の例では、単純な HTML ページに埋め込まれたスクリプトを示します。 スクリプトでは、.NET Framework がインストールされているし、検索の結果のステータス メッセージが表示されるかどうかを判断する UserAgent 文字列を検索します。  
+## <a name="detect-the-net-clr-user-agent-string"></a>".NET CLR" ユーザーエージェント文字列の検出  
+ .NET Framework がインストールされている場合、MSI は UserAgent 文字列に ".NET CLR" とバージョン番号を追加します。 次の例は、単純な HTML ページに埋め込まれたスクリプトを示しています。 このスクリプトは、UserAgent 文字列を検索して .NET Framework がインストールされているかどうかを確認し、検索結果にステータスメッセージを表示します。  
   
 ```  
 <HTML>  
@@ -113,13 +113,13 @@ ms.locfileid: "61947824"
 </HTML>  
 ```  
   
- ".NET CLR"バージョンの検索が成功した場合は、次のようなステータス メッセージが表示されます。  
+ ".NET CLR" バージョンの検索に成功すると、次の種類のステータスメッセージが表示されます。  
   
  `This machine has the correct version of the .NET Framework 3.0: 3.0.04425.00`  
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 1.1.4322; InfoPath.1; .NET CLR 2.0.50727; .NET CLR 3.0.04425.00).`  
   
- それ以外の場合、次のようなステータス メッセージが表示されます。  
+ それ以外の場合は、次の種類のステータスメッセージが表示されます。  
   
  `This machine does not have correct version of the .NET Framework 3.0.`  
   

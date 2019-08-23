@@ -6,12 +6,12 @@ dev_langs:
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: 9ab046c6f7c070ade9d3e474309b33afbf78370e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 03a35d26fd1917d926f9a26d25ae8a8e32c476f4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629636"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917629"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>チュートリアル: Win32 での WPF コンテンツのホスト
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、アプリケーションの作成に適した環境を提供します。 ただし、[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] コードにかなりの投資がある場合は、元のコードを書き換えるより、アプリケーションに [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の機能を追加するほうがより効果的であることがあります。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ウィンドウでコンテンツをホスト[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]するための簡単なメカニズムを提供します。 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]  
@@ -25,7 +25,7 @@ ms.locfileid: "68629636"
  このチュートリアルに付属するサンプルは/Cli でC++実装されているので、このチュートリアルでC++は、を使用して Windows API をプログラミングする方法とマネージコードプログラミングについて理解していることを前提としています。 /Cli にC++関する知識は役に立ちますが、必須ではありません。  
   
 > [!NOTE]
->  このチュートリアルには、関連するサンプルからのコード例が多数含まれています。 しかし、読みやすくするため、完全なサンプル コードは含まれていません。 完全なサンプルコードについては、「 [Win32 ウィンドウでの WPF コンテンツのホスト](https://go.microsoft.com/fwlink/?LinkID=160004)」のサンプルを参照してください。  
+> このチュートリアルには、関連するサンプルからのコード例が多数含まれています。 しかし、読みやすくするため、完全なサンプル コードは含まれていません。 完全なサンプルコードについては、「 [Win32 ウィンドウでの WPF コンテンツのホスト](https://go.microsoft.com/fwlink/?LinkID=160004)」のサンプルを参照してください。  
   
 <a name="basic_procedure"></a>   
 ## <a name="the-basic-procedure"></a>基本手順  
@@ -58,7 +58,7 @@ ms.locfileid: "68629636"
 8. 静的フィールドに格納した参照を使用して [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツと通信し、プロパティの設定などを行います。  
   
 > [!NOTE]
->  また、を使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]して[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツを実装することもできます。 ただし、ダイナミックリンクライブラリ (dll) として個別にコンパイルし、その dll を[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]アプリケーションから参照する必要があります。 手順の残りの部分は、前述の手順と同様です。
+> また、を使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]して[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツを実装することもできます。 ただし、ダイナミックリンクライブラリ (dll) として個別にコンパイルし、その dll を[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]アプリケーションから参照する必要があります。 手順の残りの部分は、前述の手順と同様です。
 
 <a name="implementing_the_application"></a>
 ## <a name="implementing-the-host-application"></a>ホスト アプリケーションの実装
@@ -77,13 +77,13 @@ ms.locfileid: "68629636"
 ### <a name="the-basic-application"></a>基本的なアプリケーション
  ホストアプリケーションの開始点は、Visual Studio 2005 テンプレートを作成することでした。
 
-1. Visual Studio 2005 を開き、[**ファイル**] メニューの [**新しいプロジェクト**] をクリックします。
+1. Visual Studio 2005 を開き、 **[ファイル]** メニューの **[新しいプロジェクト]** をクリックします。
 
 2. プロジェクトの種類の[!INCLUDE[TLA2#tla_visualcpp](../../../../includes/tla2sharptla-visualcpp-md.md)]一覧から [Win32] を選択します。 既定の言語がでないC++場合は、これらのプロジェクトの種類が [**その他の言語] の**下に表示されます。
 
-3. **Win32 プロジェクト**テンプレートを選択し、プロジェクトに名前を割り当てて、[ **OK** ] をクリックして、 **win32 アプリケーションウィザード**を起動します。
+3. **Win32 プロジェクト**テンプレートを選択し、プロジェクトに名前を割り当てて、 **[OK]** をクリックして、 **win32 アプリケーションウィザード**を起動します。
 
-4. ウィザードの既定の設定をそのまま使用し、[**完了**] をクリックしてプロジェクトを開始します。
+4. ウィザードの既定の設定をそのまま使用し、 **[完了]** をクリックしてプロジェクトを開始します。
 
  このテンプレートは、次のような基本的な [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] アプリケーションを作成します。
 
@@ -91,22 +91,22 @@ ms.locfileid: "68629636"
 
 - 関連するウィンドウ プロシージャ (WndProc) を含むウィンドウ。
 
-- **ファイル**と**ヘルプ**の見出しを持つメニュー。 [**ファイル**] メニューには、アプリケーションを閉じる [**終了**] 項目があります。 [**ヘルプ**] メニューには、簡単なダイアログボックスを起動する [ **About** ] 項目があります。
+- **ファイル**と**ヘルプ**の見出しを持つメニュー。 **[ファイル]** メニューには、アプリケーションを閉じる **[終了]** 項目があります。 **[ヘルプ]** メニューには、簡単なダイアログボックスを起動する **[About]** 項目があります。
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツをホストするコードの記述を開始する前に、基本テンプレートに2つの変更を加える必要があります。
 
  1 つ目は、プロジェクトをマネージド コードとしてコンパイルすることです。 既定では、プロジェクトはアンマネージ コードとしてコンパイルされます。 ただし、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] はマネージド コードで実装されているため、プロジェクトは状況に応じてコンパイルする必要があります。
 
-1. **ソリューションエクスプローラー**でプロジェクト名を右クリックし、コンテキストメニューの [**プロパティ**] をクリックして、[**プロパティページ**] ダイアログボックスを開きます。
+1. **ソリューションエクスプローラー**でプロジェクト名を右クリックし、コンテキストメニューの **[プロパティ]** をクリックして、 **[プロパティページ]** ダイアログボックスを開きます。
 
-2. 左側のウィンドウのツリービューで、[**構成プロパティ**] を選択します。
+2. 左側のウィンドウのツリービューで、 **[構成プロパティ]** を選択します。
 
-3. 右ペインの [**プロジェクトの既定値**] の一覧から [**共通言語ランタイム**サポート] を選択します。
+3. 右ペインの **[プロジェクトの既定値]** の一覧から **[共通言語ランタイム]** サポート を選択します。
 
-4. ドロップダウンリストボックスから [**共通言語ランタイムサポート (/clr)** ] を選択します。
+4. ドロップダウンリストボックスから **[共通言語ランタイムサポート (/clr)]** を選択します。
 
 > [!NOTE]
->  このコンパイラ フラグを使用すると、アプリケーションでマネージド コードを使用できますが、アンマネージド コードは以前と同様にコンパイルされます。
+> このコンパイラ フラグを使用すると、アプリケーションでマネージド コードを使用できますが、アンマネージド コードは以前と同様にコンパイルされます。
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] は、シングル スレッド アパートメント (STA) スレッド処理モデルを使用します。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツコードを正しく操作するには、エントリポイントに属性を適用して、アプリケーションのスレッドモデルを STA に設定する必要があります。
 
@@ -123,7 +123,7 @@ ms.locfileid: "68629636"
  メソッド`GetHwnd`は、サイズと位置の情報と親ウィンドウハンドルを取得し、ホスト[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]されたコンテンツのウィンドウハンドルを返します。
 
 > [!NOTE]
->  `#using` 名前空間に `System::Windows::Interop` ディレクティブを使用することはできません。 使用すると、その名前空間の <xref:System.Windows.Interop.MSG> 構造体と winuser.h で宣言した MSG 構造体の間で名前の競合が発生します。 代わりに、その名前空間のコンテンツにアクセスするための完全修飾名を使用する必要があります。
+> `#using` 名前空間に `System::Windows::Interop` ディレクティブを使用することはできません。 使用すると、その名前空間の <xref:System.Windows.Interop.MSG> 構造体と winuser.h で宣言した MSG 構造体の間で名前の競合が発生します。 代わりに、その名前空間のコンテンツにアクセスするための完全修飾名を使用する必要があります。
 
  [!code-cpp[Win32HostingWPFPage#GetHwnd](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#gethwnd)]
 

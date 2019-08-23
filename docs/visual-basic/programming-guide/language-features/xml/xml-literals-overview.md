@@ -7,50 +7,50 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], XML literals
 - literals [Visual Basic], XML
 ms.assetid: 37987c15-4ab8-471b-bd45-399816bfb57f
-ms.openlocfilehash: a7b70669131ae35135088418e4b33b3ae289d322
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4024f4ad2b2aa8cb1897e83d87a7a00b1ba25e67
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761755"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964702"
 ---
 # <a name="xml-literals-overview-visual-basic"></a>XML リテラルの概要 (Visual Basic)
-*XML リテラル*Visual Basic のコードに直接 XML を組み込むことができます。 XML リテラルの構文を表します[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]オブジェクト、およびそれには、XML 1.0 の構文に似ています。 これにより、簡単に、コードは、最終的な XML と同じ構造を持つため、XML 要素やドキュメントをプログラムで作成します。  
+*Xml リテラル*を使用すると、xml を Visual Basic コードに直接組み込むことができます。 Xml リテラル構文は、 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]オブジェクトを表します。これは、xml 1.0 構文に似ています。 これにより、コードが最終的な XML と同じ構造を持つため、XML 要素とドキュメントをプログラムによって簡単に作成できます。  
   
- Visual Basic XML リテラルをコンパイルする[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]オブジェクト。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 統合し、簡単なオブジェクト モデルを作成すると、XML を操作し、このモデルを提供します。[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]します。 詳細については、「 <xref:System.Xml.Linq.XElement> 」を参照してください。  
+ Visual Basic は、XML リテラル[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]をオブジェクトにコンパイルします。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]には、XML を作成および操作するための簡単なオブジェクトモデルが用意[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]されており、このモデルはと密接に統合されています。 詳細については、「 <xref:System.Xml.Linq.XElement> 」を参照してください。  
   
- XML リテラルでは、Visual Basic の式を埋め込むことができます。 アプリケーションを作成、実行時に、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]各リテラルは、埋め込み式の値を組み込むためのオブジェクト。 これにより、XML リテラル内での動的なコンテンツを指定できます。 詳細については、次を参照してください。 [XML での埋め込み式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)します。  
+ XML リテラルに Visual Basic 式を埋め込むことができます。 実行時に、アプリケーションは、埋め[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]込み式の値を組み込んで、各リテラルのオブジェクトを作成します。 これにより、XML リテラル内に動的コンテンツを指定できます。 詳細については、「 [XML での埋め込み式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)」を参照してください。  
   
- XML リテラルの構文と XML 1.0 の構文の違いの詳細については、次を参照してください。 [XML リテラルと XML 1.0 仕様](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)します。  
+ Xml リテラル構文と XML 1.0 構文の違いの詳細については、「 [Xml リテラルと xml 1.0 仕様](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)」を参照してください。  
   
 ## <a name="simple-literals"></a>単純なリテラル  
- 作成することができます、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]を入力するか、有効な XML に貼り付けることによって、Visual Basic コード内のオブジェクト。 リテラル XML 要素を返します、<xref:System.Xml.Linq.XElement>オブジェクト。 詳細については、次を参照してください。 [XML 要素リテラル](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)と[XML リテラルと XML 1.0 仕様](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)します。 次の例では、いくつかの子要素を持つ XML 要素を作成します。  
+ Visual Basic コードにオブジェクト[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]を作成するには、有効な XML を入力するか、貼り付けます。 XML 要素リテラルは<xref:System.Xml.Linq.XElement>オブジェクトを返します。 詳細については、「 [Xml 要素リテラル](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)と xml リテラル」と「Xml [1.0 仕様](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)」を参照してください。 次の例では、複数の子要素を持つ XML 要素を作成します。  
   
  [!code-vb[VbXMLSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
- XML ドキュメントを作成するには、XML リテラルを起動して`<?xml version="1.0"?>`次の例のようにします。 XML ドキュメント リテラルを返します、<xref:System.Xml.Linq.XDocument>オブジェクト。 詳細については、次を参照してください。 [XML ドキュメント リテラル](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)します。  
+ 次の例に示すように、を使用`<?xml version="1.0"?>`して xml リテラルを開始することで、xml ドキュメントを作成できます。 XML ドキュメントリテラルは<xref:System.Xml.Linq.XDocument>オブジェクトを返します。 詳細については、「 [XML ドキュメントリテラル](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)」を参照してください。  
   
  [!code-vb[VbXMLSamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#6)]  
   
 > [!NOTE]
->  Visual Basic で XML リテラルの構文は、XML 1.0 仕様での構文と同じです。 詳細については、次を参照してください。 [XML リテラルと XML 1.0 仕様](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)します。  
+> Visual Basic の XML リテラル構文は、XML 1.0 仕様の構文と同一ではありません。 詳細については、「 [Xml リテラル」と「xml 1.0 仕様](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)」を参照してください。  
   
 ## <a name="line-continuation"></a>行の連結  
- XML リテラルは、行継続文字 (空白のアンダー スコアを入力してシーケンス) を使用せず複数の行にまたがることができます。 これにより、簡単に XML リテラルの XML ドキュメントを使用したコードを比較します。  
+ XML リテラルは、行連結文字を使用せずに、複数の行にまたがることができます (スペース-アンダースコア-入力シーケンス)。 これにより、コード内の XML リテラルを XML ドキュメントと比較しやすくなります。  
   
- コンパイラは、XML リテラルの一部として行継続文字を処理します。 属する場合にのみ空白-アンダー スコアを入力してシーケンスを使用する必要があります、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]オブジェクト。  
+ コンパイラは、行連結文字を XML リテラルの一部として扱います。 したがって、space-アンダースコア-enter シーケンスは、 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]オブジェクトに属している場合にのみ使用してください。  
   
- ただし、組み込み式に複数行の式がある場合は、行継続文字を必要がありますの操作を行います。 詳細については、次を参照してください。 [XML での埋め込み式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)します。  
+ ただし、埋め込み式に複数行式がある場合は、行連結文字が必要になります。 詳細については、「 [XML での埋め込み式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)」を参照してください。  
   
-## <a name="embedding-queries-in-xml-literals"></a>XML リテラルでクエリの埋め込み  
- 埋め込み式の中では、クエリを使用できます。 これを行うときに、クエリによって返される要素が XML 要素に追加されます。 これにより、XML リテラルには、ユーザーのクエリの結果などの動的なコンテンツを追加できます。  
+## <a name="embedding-queries-in-xml-literals"></a>XML リテラルへのクエリの埋め込み  
+ 埋め込み式では、クエリを使用できます。 この操作を行うと、クエリによって返される要素が XML 要素に追加されます。 これにより、ユーザーのクエリの結果などの動的なコンテンツを XML リテラルに追加できます。  
   
- 次のコードは、埋め込みクエリを使用して、メンバーからの XML 要素を作成するなど、`phoneNumbers2`配列し、し、それらの要素の子として追加`contact2`します。  
+ たとえば、次のコードでは、埋め込みクエリを使用して、 `phoneNumbers2`配列のメンバーから XML 要素を作成し、それらの要素をの`contact2`子として追加しています。  
   
  [!code-vb[VbXMLSamples#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#7)]  
   
 ## <a name="how-the-compiler-creates-objects-from-xml-literals"></a>コンパイラが XML リテラルからオブジェクトを作成する方法  
- Visual Basic コンパイラでは、XML リテラルを変換と同等の呼び出しに[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]を構築するコンス トラクター、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]オブジェクト。 Visual Basic コンパイラの呼び出しに次のコード例を変換できるなど、<xref:System.Xml.Linq.XProcessingInstruction>の XML バージョン命令は、コンス トラクターを呼び出し、<xref:System.Xml.Linq.XElement>のコンス トラクター、 `<contact>`、`<name>`と`<phone>`要素、およびへの呼び出し、<xref:System.Xml.Linq.XAttribute>のコンス トラクター、`type`属性。 具体的には、属性を指定すると、次のサンプルでは、Visual Basic コンパイラが呼び出す、<xref:System.Xml.Linq.XAttribute.%23ctor%28System.Xml.Linq.XName%2CSystem.Object%29>コンス トラクターを 2 回クリックします。 最初は値を渡す`type`の`name`パラメーターと値を`home`の`value`パラメーター。 2 つ目は、値を渡すことも`type`の`name`パラメーターが、値`work`の`value`パラメーター。  
+ Visual Basic コンパイラは、 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]オブジェクトを構築するために、XML リテラルを同等のコンストラクターの呼び出しに変換します。 たとえば、Visual Basic コンパイラは、次のコード例を、 <xref:System.Xml.Linq.XProcessingInstruction> XML version 命令のコンストラクターの呼び出し、、、のコンストラクター <xref:System.Xml.Linq.XElement> `<contact>` `<name>` `<phone>`の呼び出しに変換します。要素、および`type`属性のコンストラクター <xref:System.Xml.Linq.XAttribute>の呼び出し。 具体的には、次のサンプルの属性を指定すると、Visual Basic コンパイラ<xref:System.Xml.Linq.XAttribute.%23ctor%28System.Xml.Linq.XName%2CSystem.Object%29>はコンストラクターを2回呼び出します。 `type`最初のは、 `name`パラメーターの値`value`とパラメーターの値`home`を渡します。 2番`type`目のは、 `name`パラメーターの値も渡します`value`が、 `work`パラメーターの値を渡します。  
   
  [!code-vb[VbXMLSamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#6)]  
   

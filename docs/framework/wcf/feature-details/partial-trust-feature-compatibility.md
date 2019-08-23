@@ -2,24 +2,24 @@
 title: 部分信頼機能の互換性
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: 1ff3b6e4d54dcbc6cc884c9bcd1bf5aa4fb3a526
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: adeef7a8fa12751c53e2096ae6bf844f091a5545
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603691"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965313"
 ---
 # <a name="partial-trust-feature-compatibility"></a>部分信頼機能の互換性
-Windows Communication Foundation (WCF) では、部分信頼環境で実行されている場合、機能の限定されたサブセットがサポートされます。 部分信頼でサポートされる機能は、「 [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) 」のトピックで説明される特定のシナリオを念頭にデザインされています。  
+Windows Communication Foundation (WCF) は、部分的に信頼された環境で実行される場合に、限られた機能のサブセットをサポートします。 部分信頼でサポートされる機能は、「 [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) 」のトピックで説明される特定のシナリオを念頭にデザインされています。  
   
 ## <a name="minimum-permission-requirements"></a>最小のアクセス許可の要件  
- WCF には、次の標準の名前付き権限セットのいずれかで実行されるアプリケーションの機能のサブセットがサポートされています。  
+ WCF では、次の標準の名前付きアクセス許可セットのいずれかで実行されるアプリケーションの機能のサブセットをサポートしています。  
   
 - 中程度の信頼アクセス許可  
   
 - インターネット ゾーン アクセス許可  
   
- 制限の厳しいアクセス許可が部分的に信頼されたアプリケーションで WCF を使用しようと、実行時にセキュリティ例外が発生する可能性があります。  
+ 部分的に信頼されたアプリケーションで、より制限の厳しいアクセス許可を持つ WCF を使用しようとすると、実行時にセキュリティ例外が発生する可能性があります。  
   
 ## <a name="contracts"></a>コントラクト  
  部分信頼で実行される場合、コントラクトには次の制限があります。  
@@ -53,7 +53,7 @@ Windows Communication Foundation (WCF) では、部分信頼環境で実行さ�
  MTOM (Message Transmission Optimization Mechanism) エンコーダーはサポートされていません。  
   
 ### <a name="security"></a>セキュリティ  
- 部分的に信頼されたアプリケーションでは、ユーザーが通信を保護するため、WCF のトランスポート レベルのセキュリティ機能を使用できます。 メッセージ レベルのセキュリティはサポートされていません。 メッセージ レベルのセキュリティを使用するようにバインディングを構成すると、実行時に例外が発生します。  
+ 部分的に信頼されたアプリケーションでは、WCF のトランスポートレベルのセキュリティ機能を使用して、通信をセキュリティで保護することができます。 メッセージ レベルのセキュリティはサポートされていません。 メッセージ レベルのセキュリティを使用するようにバインディングを構成すると、実行時に例外が発生します。  
   
 ### <a name="unsupported-bindings"></a>サポートされないバインディング  
  信頼できるメッセージング、トランザクション、またはメッセージ レベルのセキュリティを使用するバインディングはサポートされません。  
@@ -63,7 +63,7 @@ Windows Communication Foundation (WCF) では、部分信頼環境で実行さ�
   
 - シリアル化可能なすべての `[DataContract]` 型は `public`である必要があります。  
   
-- `[DataMember]` 型にあるシリアル化可能なすべての `[DataContract]` フィールドまたはプロパティは、パブリックで読み書き可能である必要があります。 シリアル化および逆シリアル化の[readonly](https://go.microsoft.com/fwlink/?LinkID=98854)部分信頼アプリケーションで WCF を実行する場合、フィールドがサポートされていません。  
+- `[DataMember]` 型にあるシリアル化可能なすべての `[DataContract]` フィールドまたはプロパティは、パブリックで読み書き可能である必要があります。 部分的に信頼されたアプリケーションで WCF を実行する場合、[読み取り専用](https://go.microsoft.com/fwlink/?LinkID=98854)フィールドのシリアル化と逆シリアル化はサポートされません。  
   
 - 部分信頼環境では、 `[Serializable]`/ISerializable プログラミング モデルはサポートされていません。  
   
@@ -76,7 +76,7 @@ Windows Communication Foundation (WCF) では、部分信頼環境で実行さ�
 ### <a name="collection-types"></a>コレクション型  
  コレクション型の中には、 <xref:System.Collections.Generic.IEnumerable%601> と <xref:System.Collections.IEnumerable>の両方を実装するものがあります。 たとえば、 <xref:System.Collections.Generic.ICollection%601>を実装する型がこれに当たります。 このような型では、 `public` の `GetEnumerator()`な実装と、 `GetEnumerator()`の明示的な実装を実装できます。 この場合、 <xref:System.Runtime.Serialization.DataContractSerializer> は `public` の `GetEnumerator()`な実装を呼び出し、 `GetEnumerator()`の明示的な実装は呼び出しません。 `GetEnumerator()` 実装のいずれも `public` ではなく、すべてが明示的な実装である場合、 <xref:System.Runtime.Serialization.DataContractSerializer> は `IEnumerable.GetEnumerator()`を呼び出します。  
   
- WCF が none の場合、部分信頼環境で実行されている場合、コレクション型の`GetEnumerator()`実装は`public`、またはそれらのいずれも、明示的なインターフェイスを実装し、セキュリティ例外がスローされます。  
+ WCF が部分信頼環境で実行されている場合、コレクション型の場合`GetEnumerator()` 、 `public`実装のいずれもでない場合、または明示的なインターフェイスの実装でない場合は、セキュリティ例外がスローされます。  
   
 ### <a name="netdatacontractserializer"></a>NetDataContractSerializer  
  部分信頼の場合、 <xref:System.Collections.Generic.List%601>、 <xref:System.Collections.ArrayList>、 <xref:System.Collections.Generic.Dictionary%602> 、および <xref:System.Collections.Hashtable> などの、.NET Framework コレクション型の多くは、 <xref:System.Runtime.Serialization.NetDataContractSerializer> によってサポートされていません。 これらの型には `[Serializable]` 属性セットがあり、シリアル化のセクションで説明したように、この属性は部分信頼ではサポートされません。 <xref:System.Runtime.Serialization.DataContractSerializer> はコレクションを特殊な方法で扱うため、この制限を回避できますが、 <xref:System.Runtime.Serialization.NetDataContractSerializer> には、この制限の適用を避けるメカニズムはありません。  
@@ -86,21 +86,21 @@ Windows Communication Foundation (WCF) では、部分信頼環境で実行さ�
  部分信頼で実行するときは、( <xref:System.Runtime.Serialization.NetDataContractSerializer> メカニズムを使用して) <xref:System.Runtime.Serialization.SurrogateSelector> でサロゲートを使用できません。 この制限は、シリアル化ではなく、サロゲートの使用に適用されることに注意してください。  
   
 ## <a name="enabling-common-behaviors-to-run"></a>実行する共通動作の有効化  
- マークされていないサービスまたはエンドポイントの動作、<xref:System.Security.AllowPartiallyTrustedCallersAttribute>属性 (APTCA) に追加される、 [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)アプリケーションが部分信頼で実行すると、構成ファイルのセクションでは実行されませんこれが発生すると、環境と例外がスローされます。 共通動作を強制的に実行するには、次のいずれかを行う必要があります。  
+ 構成ファイルの[ \<commonbehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)セクションに<xref:System.Security.AllowPartiallyTrustedCallersAttribute>追加された属性 (APTCA) でマークされていないサービスまたはエンドポイントの動作は、アプリケーションが部分信頼環境で実行されている場合は実行されません。このエラーが発生すると、例外がスローされます。 共通動作を強制的に実行するには、次のいずれかを行う必要があります。  
   
 - 共通動作を <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 属性でマークし、部分信頼アプリケーションとして展開したときに実行できるようにします。 APTCA でマークされたアセンブリを実行できないように、コンピューターでレジストリ エントリを設定できます。 である必要があります。  
   
-- アプリケーションが完全信頼アプリケーションとして配置されている場合に、ユーザーが部分信頼環境でアプリケーションを実行するようにコード アクセス セキュリティ設定を変更できないことを確認します。 ユーザーがこのような変更を行うことができる場合、動作は実行されず、例外もスローされません。 これを確実に、次を参照してください。、 **levelfinal**オプションを使用して[Caspol.exe (コード アクセス セキュリティ ポリシー ツール)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)します。  
+- アプリケーションが完全信頼アプリケーションとして配置されている場合に、ユーザーが部分信頼環境でアプリケーションを実行するようにコード アクセス セキュリティ設定を変更できないことを確認します。 ユーザーがこのような変更を行うことができる場合、動作は実行されず、例外もスローされません。 これを確認するには、 [caspol.exe (コードアクセスセキュリティポリシーツール)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)を使用して、 **levelfinal**オプションを参照してください。  
   
- 一般的な動作の例は、次を参照してください。[方法。企業内のエンドポイントをロックダウン](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)します。  
+ 一般的な動作の例については[、「方法:企業](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)内のエンドポイントをロックダウンします。  
   
 ## <a name="configuration"></a>構成  
- 1 つの例外を除き、部分信頼コードではのみ、ローカルの WCF 構成セクションを読み込む`app.config`ファイル。 WCF のセクションでは machine.config またはルートを参照している WCF 構成セクションを読み込むには、web.config ファイルには、configurationpermission (unrestricted) が必要です。 この権限がない、構成が読み込まれるときに、例外が、結果のローカル構成ファイルの外部での WCF 構成セクション (behaviors、bindings) への参照します。  
+ 1つの例外を除き、部分信頼コードは、ローカル`app.config`ファイルの WCF 構成セクションのみを読み込むことができます。 Machine.config またはルートの web.config ファイル内の WCF セクションを参照する WCF 構成セクションを読み込むには、ConfigurationPermission (無制限) が必要です。 このアクセス許可がない場合、ローカル構成ファイルの外部にある WCF 構成セクション (動作、バインド) を参照すると、構成の読み込み時に例外が発生します。  
   
  例外は、このトピックのシリアル化のセクションで説明したように、シリアル化の既知の型の構成です。  
   
 > [!IMPORTANT]
->  構成の拡張は、完全信頼で実行される場合にのみサポートされます。  
+> 構成の拡張は、完全信頼で実行される場合にのみサポートされます。  
   
 ## <a name="diagnostics"></a>診断  
   
@@ -108,10 +108,10 @@ Windows Communication Foundation (WCF) では、部分信頼環境で実行さ�
  部分信頼では、限定されたイベント ログがサポートされます。 イベント ログには、サービス アクティベーション エラーおよびトレース/メッセージ ログ エラーのみが記録されます。 イベント ログに過剰な数のメッセージが書き込まれないように、ログに記録できるイベントの最大数は 5 つです。  
   
 ### <a name="message-logging"></a>メッセージ ログ  
- メッセージ ログでは、部分信頼環境で WCF の実行時に機能しません。 部分信頼環境下で有効になっても、サービスのアクティブ化には失敗しませんが、メッセージはログに記録されません。  
+ WCF が部分信頼環境で実行されている場合、メッセージログは機能しません。 部分信頼環境下で有効になっても、サービスのアクティブ化には失敗しませんが、メッセージはログに記録されません。  
   
 ### <a name="tracing"></a>トレース  
- 部分信頼環境で実行される場合、利用できるトレース機能には制限があります。 <`listeners`> 構成ファイル内の要素、追加できる唯一の種類は<xref:System.Diagnostics.TextWriterTraceListener>と新しい<xref:System.Diagnostics.EventSchemaTraceListener>します。 標準の <xref:System.Diagnostics.XmlWriterTraceListener> を使用すると、ログが不完全または不正確になります。  
+ 部分信頼環境で実行される場合、利用できるトレース機能には制限があります。 構成ファイルの`listeners`< > 要素では、追加できる型は<xref:System.Diagnostics.TextWriterTraceListener>と新しい<xref:System.Diagnostics.EventSchemaTraceListener>だけです。 標準の <xref:System.Diagnostics.XmlWriterTraceListener> を使用すると、ログが不完全または不正確になります。  
   
  次のトレース ソースがサポートされています。  
   
@@ -127,7 +127,7 @@ Windows Communication Foundation (WCF) では、部分信頼環境で実行さ�
   
 - <xref:System.IO.Log>  
 
-- [System.ServiceModel.Internal.TransactionBridge](https://docs.microsoft.com/previous-versions/aa346556(v=vs.110))]
+- [System.servicemodel. 内部. TransactionBridge](https://docs.microsoft.com/previous-versions/aa346556(v=vs.110))]
   
  <xref:System.Diagnostics.TraceOptions> 列挙体の次のメンバーは指定できません。  
   
@@ -138,13 +138,13 @@ Windows Communication Foundation (WCF) では、部分信頼環境で実行さ�
  部分信頼環境でトレースを使用する場合は、アプリケーションにトレース リスナーの出力を保存するための十分なアクセス許可があることを確認します。 たとえば、 <xref:System.Diagnostics.TextWriterTraceListener> を使用してトレース出力をテキスト ファイルに書き込む場合は、アプリケーションにトレース ファイルを書き込むために必要な FileIOPermission があることを確認します。  
   
 > [!NOTE]
->  重複するエラーがあるトレース ファイルの混雑を避けるためには、WCF では、リソースまたは最初のセキュリティ エラーの後にアクションのトレースが無効にします。 リソースへのアクセスまたはアクションの実行が初めて行われようとしたとき、例外トレースはリソース アクセスの各失敗に対して、1 回だけ行われます。  
+> 重複したエラーによってトレースファイルのフラッディングを回避するために、最初のセキュリティエラーが発生した後、WCF はリソースまたはアクションのトレースを無効にします。 リソースへのアクセスまたはアクションの実行が初めて行われようとしたとき、例外トレースはリソース アクセスの各失敗に対して、1 回だけ行われます。  
   
 ## <a name="wcf-service-host"></a>WCF サービス ホスト  
- WCF サービス ホストは、部分信頼をサポートしていません。 部分信頼で WCF サービスを使用する場合は、使わない WCF サービス ライブラリ プロジェクト テンプレート Visual Studio で、サービスを構築します。 代わりに、部分信頼の WCF がサポートされている Web サーバーでサービスをホストできる WCF サービス Web サイト テンプレートを選択して Visual Studio で新しい Web サイトを作成します。  
+ WCF サービスホストは部分信頼をサポートしていません。 部分信頼で WCF サービスを使用する場合は、サービスをビルドするために Visual Studio で WCF サービスライブラリプロジェクトテンプレートを使用しないでください。 代わりに、wcf 部分信頼がサポートされている Web サーバーでサービスをホストできる WCF サービス Web サイトテンプレートを選択して、Visual Studio で新しい Web サイトを作成します。  
   
 ## <a name="other-limitations"></a>他の制約  
- WCF では、一般に、それに基づいて、ホスト アプリケーションによって課されるセキュリティの考慮事項に制限されます。 たとえば、WCF が XAML ブラウザー アプリケーション (XBAP) で、ホストされている場合は、XBAP の制限が適用」の説明に従って[Windows Presentation Foundation 部分信頼セキュリティ](https://go.microsoft.com/fwlink/?LinkId=89138)します。  
+ WCF は、一般に、ホスティングアプリケーションによって課せられるセキュリティ上の考慮事項に限定されます。 たとえば、WCF が XAML ブラウザーアプリケーション (XBAP) でホストされている場合、「 [Windows Presentation Foundation 部分信頼セキュリティ](https://go.microsoft.com/fwlink/?LinkId=89138)」で説明されているように、xbap の制限が適用されます。  
   
  次の追加機能は indigo2 が部分信頼環境で実行されていると有効になりません。  
   
@@ -154,10 +154,10 @@ Windows Communication Foundation (WCF) では、部分信頼環境で実行さ�
   
 - パフォーマンス カウンター  
   
- 部分信頼環境でサポートされていない WCF 機能を使用すると、ランタイムで例外が発生する可能性がありますが、  
+ 部分信頼環境でサポートされていない WCF 機能を使用すると、実行時に例外が発生する可能性があります。  
   
 ## <a name="unlisted-features"></a>記載されていない機能  
- 部分信頼環境で利用できない情報やアクションを見つけ出す最善の方法は、リソースへのアクセスまたはアクションの実行を `try` ブロックの内側で試みて、エラーを `catch` することです。 重複するエラーがあるトレース ファイルの混雑を避けるためには、WCF では、リソースまたは最初のセキュリティ エラーの後にアクションのトレースが無効にします。 リソースへのアクセスまたはアクションの実行が初めて行われようとしたとき、例外トレースはリソース アクセスの各失敗に対して、1 回だけ行われます。  
+ 部分信頼環境で利用できない情報やアクションを見つけ出す最善の方法は、リソースへのアクセスまたはアクションの実行を `try` ブロックの内側で試みて、エラーを `catch` することです。 重複したエラーによってトレースファイルのフラッディングを回避するために、最初のセキュリティエラーが発生した後、WCF はリソースまたはアクションのトレースを無効にします。 リソースへのアクセスまたはアクションの実行が初めて行われようとしたとき、例外トレースはリソース アクセスの各失敗に対して、1 回だけ行われます。  
   
 ## <a name="see-also"></a>関連項目
 

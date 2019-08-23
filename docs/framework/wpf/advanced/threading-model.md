@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: da9eaf127a4db02cddbb36e53a0d0ddb5b28b841
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 703fafad283c11e6ee5e6d9c9da3760ea4a36361
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68818054"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966146"
 ---
 # <a name="threading-model"></a>スレッド モデル
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]は、スレッド処理の難しさから開発者を保存するように設計されています。 その結果、多くの[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]開発者は、複数のスレッドを使用するインターフェイスを作成する必要がなくなります。 マルチスレッドプログラムは複雑でデバッグが困難なため、シングルスレッドソリューションが存在する場合は回避する必要があります。  
@@ -31,7 +31,7 @@ ms.locfileid: "68818054"
  しかし、どのように設計されて[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]いても、どのような種類の問題に対しても、シングルスレッドソリューションを提供できるフレームワークはありません。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]これで終わりですが、複数のスレッドが応答性[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]やアプリケーションのパフォーマンスを向上させる状況もあります。 いくつかの背景情報について説明した後、この記事ではこのような状況をいくつか紹介した後、いくつかの下位レベルの詳細について説明します。  
 
 > [!NOTE]
->  このトピックでは、非同期呼び出し<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>のメソッドを使用したスレッド処理について説明します。 <xref:System.Action>また<xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A> は<xref:System.Func%601>をパラメーターとして受け取るメソッドを呼び出すことにより、非同期呼び出しを行うこともできます。  メソッドは、プロパティ<xref:System.Windows.Threading.DispatcherOperation> <xref:System.Windows.Threading.DispatcherOperation%601>を<xref:System.Windows.Threading.DispatcherOperation.Task%2A>持つまたはを返します。 <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A> `await`キーワードは、 <xref:System.Windows.Threading.DispatcherOperation>またはに関連付けられ<xref:System.Threading.Tasks.Task>たで使用できます。 <xref:System.Threading.Tasks.Task> または <xref:System.Windows.Threading.DispatcherOperation> によって返される <xref:System.Windows.Threading.DispatcherOperation%601> を同期的に待機する必要がある場合、<xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A> 拡張メソッドを呼び出します。  を<xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>呼び出すと、デッドロックが発生します。 を使用した<xref:System.Threading.Tasks.Task>非同期操作の実行の詳細については、「タスクの並列化」を参照してください。  メソッド<xref:System.Windows.Threading.Dispatcher.Invoke%2A>に<xref:System.Action>は、パラメーターとしてまた<xref:System.Func%601>はを受け取るオーバーロードもあります。  <xref:System.Windows.Threading.Dispatcher.Invoke%2A>メソッドを使用して、 <xref:System.Action>デリゲートまたは<xref:System.Func%601>を渡すことによって同期呼び出しを行うことができます。  
+> このトピックでは、非同期呼び出し<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>のメソッドを使用したスレッド処理について説明します。 <xref:System.Action>また<xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A> は<xref:System.Func%601>をパラメーターとして受け取るメソッドを呼び出すことにより、非同期呼び出しを行うこともできます。  メソッドは、プロパティ<xref:System.Windows.Threading.DispatcherOperation> <xref:System.Windows.Threading.DispatcherOperation%601>を<xref:System.Windows.Threading.DispatcherOperation.Task%2A>持つまたはを返します。 <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A> `await`キーワードは、 <xref:System.Windows.Threading.DispatcherOperation>またはに関連付けられ<xref:System.Threading.Tasks.Task>たで使用できます。 <xref:System.Threading.Tasks.Task> または <xref:System.Windows.Threading.DispatcherOperation> によって返される <xref:System.Windows.Threading.DispatcherOperation%601> を同期的に待機する必要がある場合、<xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A> 拡張メソッドを呼び出します。  を<xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>呼び出すと、デッドロックが発生します。 を使用した<xref:System.Threading.Tasks.Task>非同期操作の実行の詳細については、「タスクの並列化」を参照してください。  メソッド<xref:System.Windows.Threading.Dispatcher.Invoke%2A>に<xref:System.Action>は、パラメーターとしてまた<xref:System.Func%601>はを受け取るオーバーロードもあります。  <xref:System.Windows.Threading.Dispatcher.Invoke%2A>メソッドを使用して、 <xref:System.Action>デリゲートまたは<xref:System.Func%601>を渡すことによって同期呼び出しを行うことができます。  
   
 <a name="threading_overview"></a>   
 ## <a name="overview-and-the-dispatcher"></a>概要とディスパッチャー  
@@ -43,7 +43,7 @@ ms.locfileid: "68818054"
   
  アプリケーションでビッグ[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]操作を処理するにはどうすればよいでしょうか。 コードに大きな計算が含まれている場合、またはリモートサーバー上のデータベースに対してクエリを実行する必要がある場合は、どうすればよいでしょうか。 通常は、大きな操作を別のスレッド[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]で処理することで、スレッドを<xref:System.Windows.Threading.Dispatcher>キュー内の項目に対して自由に解放できます。 大規模な操作が完了すると、結果を表示のために[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]スレッドに報告できます。  
   
- これまで[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 、 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]では、作成したスレッドだけが要素にアクセスできるようになりました。 これは、長時間実行されているタスクを実行するバックグラウンドスレッドが、完了時にテキストボックスを更新できないことを意味します。 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]は、コンポーネントの[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]整合性を確保するためにこれを行います。 コンテンツが描画中にバックグラウンドスレッドによって更新された場合、リストボックスは奇妙に見える可能性があります。  
+ 従来、Windows で[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]は、要素には、それを作成したスレッドだけがアクセスできます。 これは、長時間実行されているタスクを実行するバックグラウンドスレッドが、完了時にテキストボックスを更新できないことを意味します。 これは、コンポーネントの[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]整合性を確保するために Windows によって行われます。 コンテンツが描画中にバックグラウンドスレッドによって更新された場合、リストボックスは奇妙に見える可能性があります。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]には、この調整を強制する組み込みの相互排他機構があります。 のほとんどの[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]クラスは<xref:System.Windows.Threading.DispatcherObject>、から派生します。 構築時に、 <xref:System.Windows.Threading.DispatcherObject>は現在実行中の<xref:System.Windows.Threading.Dispatcher>スレッドにリンクされているへの参照を格納します。 実際には、 <xref:System.Windows.Threading.DispatcherObject>は、それを作成するスレッドに関連付けられます。 プログラムの実行中、 <xref:System.Windows.Threading.DispatcherObject>はパブリック<xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>メソッドを呼び出すことができます。 <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>現在の<xref:System.Windows.Threading.Dispatcher>スレッドに関連付けられているを調べ<xref:System.Windows.Threading.Dispatcher> 、構築中に格納されている参照と比較します。 一致しない場合、 <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>は例外をスローします。 <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>は、 <xref:System.Windows.Threading.DispatcherObject>に属するすべてのメソッドの先頭で呼び出されることを意図しています。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "68818054"
 ### <a name="multiple-windows-multiple-threads"></a>複数のウィンドウ、複数のスレッド  
  アプリケーション[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]によっては、複数のトップレベルウィンドウが必要になる場合があります。 1つのスレッド/<xref:System.Windows.Threading.Dispatcher>組み合わせで複数のウィンドウを管理することは完全に許容されますが、複数のスレッドがより適切なジョブを実行する場合もあります。 これは特に、いずれかのウィンドウがスレッドを独占する可能性がある場合に当てはまります。  
   
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]エクスプローラーでは、この方法で動作します。 新しいエクスプローラーウィンドウはそれぞれ元のプロセスに属していますが、独立したスレッドの制御下に作成されます。  
+ Windows Explorer はこの方法で動作します。 新しいエクスプローラーウィンドウはそれぞれ元のプロセスに属していますが、独立したスレッドの制御下に作成されます。  
   
  <xref:System.Windows.Controls.Frame>コントロールを使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]して、Web ページを表示できます。 簡単な Internet Explorer の代替を簡単に作成できます。 まず、重要な機能である、新しいエクスプローラーウィンドウを開く機能について説明します。 ユーザーが [新しいウィンドウ] ボタンをクリックすると、ウィンドウのコピーが別のスレッドで起動されます。 これにより、windows の1つで実行時間の長い操作またはブロック操作によって、他のウィンドウがすべてロックされることはありません。  
   

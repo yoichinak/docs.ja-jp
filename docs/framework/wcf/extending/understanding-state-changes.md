@@ -2,12 +2,12 @@
 title: 状態変更の理解
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-ms.openlocfilehash: 549620ee5317e68735b392ce35b73c92f2474eab
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 154f49e7da059d20d0751a73c664aa2a0f89be12
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363945"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963085"
 ---
 # <a name="understanding-state-changes"></a>状態変更の理解
 ここでは、チャネルの状態と遷移、チャネル状態の構成に使用する型、およびそれらの型の実装方法について説明します。  
@@ -58,7 +58,7 @@ ms.locfileid: "68363945"
  <xref:System.ServiceModel.Channels.CommunicationObject> は、Abort、Close、および Open の実装を提供します。 また、Faulted 状態への状態遷移を引き起こす Fault メソッドも提供します。 図 2 では、遷移の原因となったメソッドを各遷移に付記して <xref:System.ServiceModel.ICommunicationObject> ステート マシンを示しています (メソッドが付記されていない遷移は、メソッドが付記されている直前の遷移を発生させたメソッドの実装内部で発生します)。  
   
 > [!NOTE]
->  通信状態の取得/設定の <xref:System.ServiceModel.Channels.CommunicationObject> 実装はすべて、スレッド同期されます。  
+> 通信状態の取得/設定の <xref:System.ServiceModel.Channels.CommunicationObject> 実装はすべて、スレッド同期されます。  
   
  コンストラクター  
   

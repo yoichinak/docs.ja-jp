@@ -15,23 +15,23 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms], linking to object or Web page
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 6c91c975-3cb7-4504-82f0-fc6255f8fb85
-ms.openlocfilehash: edebfaee6f0da6826f4b757568408662f3208d41
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1ed27826b92d34f05055ab7fdda2a16eb4a79b17
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012863"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952173"
 ---
 # <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>方法: Windows フォーム LinkLabel コントロールでオブジェクトまたは Web ページにリンクする
-Windows フォーム<xref:System.Windows.Forms.LinkLabel>コントロールをフォーム上で Web スタイルのリンクを作成できます。 リンクがクリックされたときに、リンクにアクセスしたかを示す色を変更できます。 色の変更の詳細については、次を参照してください。[方法。Windows フォーム LinkLabel コントロールの外観を変更する](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)します。  
+Windows フォーム<xref:System.Windows.Forms.LinkLabel>コントロールを使用すると、フォーム上に Web スタイルのリンクを作成できます。 リンクをクリックすると、その色を変更してリンクがアクセスされたことを示すことができます。 色の変更の詳細については[、「方法:Windows フォーム LinkLabel コントロール](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)の外観を変更します。  
   
-## <a name="linking-to-another-form"></a>別のフォームへのリンク  
+## <a name="linking-to-another-form"></a>リンク (別のフォームに)  
   
-#### <a name="to-link-to-another-form-with-a-linklabel-control"></a>LinkLabel コントロールで別のフォームにリンクするには  
+#### <a name="to-link-to-another-form-with-a-linklabel-control"></a>LinkLabel コントロールを使用して別のフォームにリンクするには  
   
-1. 設定、<xref:System.Windows.Forms.LinkLabel.Text%2A>プロパティに適切なキャプション。  
+1. <xref:System.Windows.Forms.LinkLabel.Text%2A>プロパティを適切なキャプションに設定します。  
   
-2. 設定、<xref:System.Windows.Forms.LinkLabel.LinkArea%2A>プロパティのキャプションのどの部分がリンクとして示されます。 示される方法は、リンク ラベルの外観に関連するプロパティに依存します。 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>によって表される値、 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 2 つの数値、文字の開始位置および文字の数を含むオブジェクト。 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>プロパティ ウィンドウで、または、次のような方法でのコードでプロパティを設定することができます。  
+2. <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>プロパティを設定して、キャプションのどの部分がリンクとして示されるかを決定します。 どのように表示されるかは、リンクラベルの外観に関連するプロパティによって異なります。 値は、2つの<xref:System.Windows.Forms.LinkLabel.LinkArea%2A>数値、開始文字の位置、および文字数を含むオブジェクトによって表されます。 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>プロパティは、次のような方法でプロパティウィンドウまたはコードで設定できます。  
   
     ```vb  
     ' In this code example, the link area has been set to begin  
@@ -54,10 +54,10 @@ Windows フォーム<xref:System.Windows.Forms.LinkLabel>コントロールを�
     linkLabel1->LinkArea = LinkArea(0,8);  
     ```  
   
-3. <xref:System.Windows.Forms.LinkLabel.LinkClicked>イベント ハンドラーを呼び出す、<xref:System.Windows.Forms.Form.Show%2A>プロジェクトで、別のフォームを開き、設定する方法、<xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>プロパティを`true`します。  
+3. イベントハンドラーで、 <xref:System.Windows.Forms.Form.Show%2A>メソッドを呼び出して、 <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>プロジェクト内の別のフォームを開き、プロパティをに`true`設定します。 <xref:System.Windows.Forms.LinkLabel.LinkClicked>  
   
     > [!NOTE]
-    >  インスタンス、<xref:System.Windows.Forms.LinkLabelLinkClickedEventArgs>クラスへの参照を実行する、<xref:System.Windows.Forms.LinkLabel>にキャストする必要はありませんが、クリックしてされたコントロール、`sender`オブジェクト。  
+    > <xref:System.Windows.Forms.LinkLabelLinkClickedEventArgs>クラスのインスタンスは、クリックされた<xref:System.Windows.Forms.LinkLabel>コントロールへの参照を保持しているため、 `sender`オブジェクトをキャストする必要はありません。  
   
     ```vb  
     Protected Sub LinkLabel1_LinkClicked(ByVal Sender As System.Object, _  
@@ -93,18 +93,18 @@ Windows フォーム<xref:System.Windows.Forms.LinkLabel>コントロールを�
     ```  
   
 ## <a name="linking-to-a-web-page"></a>Web ページへのリンク  
- <xref:System.Windows.Forms.LinkLabel>コントロールが既定のブラウザーで Web ページを表示することもできます。  
+ <xref:System.Windows.Forms.LinkLabel>コントロールを使用して、既定のブラウザーで Web ページを表示することもできます。  
   
-#### <a name="to-start-internet-explorer-and-link-to-a-web-page-with-a-linklabel-control"></a>LinkLabel コントロールで Internet Explorer と Web ページへのリンクを開始するには  
+#### <a name="to-start-internet-explorer-and-link-to-a-web-page-with-a-linklabel-control"></a>Internet Explorer を起動し、LinkLabel コントロールを使用して Web ページにリンクするには  
   
-1. 設定、<xref:System.Windows.Forms.LinkLabel.Text%2A>プロパティに適切なキャプション。  
+1. <xref:System.Windows.Forms.LinkLabel.Text%2A>プロパティを適切なキャプションに設定します。  
   
-2. 設定、<xref:System.Windows.Forms.LinkLabel.LinkArea%2A>プロパティのキャプションのどの部分がリンクとして示されます。  
+2. <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>プロパティを設定して、キャプションのどの部分がリンクとして示されるかを決定します。  
   
-3. <xref:System.Windows.Forms.LinkLabel.LinkClicked>例外処理ブロックでは、途中のイベント ハンドラーを設定する 2 番目のプロシージャを呼び出す、<xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>プロパティを`true`を使用して、 <xref:System.Diagnostics.Process.Start%2A> URL を使用して、既定のブラウザーを開始する方法。 使用する、<xref:System.Diagnostics.Process.Start%2A>メソッドへの参照を追加する必要がある、<xref:System.Diagnostics?displayProperty=nameWithType>名前空間。  
+3. イベントハンドラーでは、例外処理ブロックの途中で、2番目のプロシージャを呼び出します。この<xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>プロシージャは`true` 、 <xref:System.Diagnostics.Process.Start%2A>プロパティをに設定し、メソッドを使用して URL で既定のブラウザーを起動します。 <xref:System.Windows.Forms.LinkLabel.LinkClicked> <xref:System.Diagnostics.Process.Start%2A>メソッドを使用するには、 <xref:System.Diagnostics?displayProperty=nameWithType>名前空間への参照を追加する必要があります。  
   
     > [!IMPORTANT]
-    >  部分信頼環境で次のコードを実行するかどうか (など、共有ドライブ上)、JIT コンパイラが失敗したときに、`VisitLink`メソッドが呼び出されます。 `System.Diagnostics.Process.Start`ステートメントが失敗した、リンク確認要求があるとします。 例外をキャッチするときに、`VisitLink`メソッドが呼び出されると、次のコードにより、JIT コンパイラに失敗した場合、エラー適切に処理されます。  
+    >  以下のコードを部分信頼環境 (共有ドライブなど) で実行すると、 `VisitLink`メソッドが呼び出されたときに JIT コンパイラが失敗します。 ステートメント`System.Diagnostics.Process.Start`により、リンク確認要求が失敗します。 `VisitLink`メソッドが呼び出されたときに例外をキャッチすることにより、次のコードは、JIT コンパイラが失敗した場合にエラーが適切に処理されることを確認します。  
   
     ```vb  
     Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, _  
@@ -182,5 +182,5 @@ Windows フォーム<xref:System.Windows.Forms.LinkLabel>コントロールを�
 
 - <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>
 - [LinkLabel コントロールの概要](linklabel-control-overview-windows-forms.md)
-- [方法: Windows フォーム LinkLabel コントロールの外観を変更します。](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
+- [方法: Windows フォーム LinkLabel コントロールの外観を変更する](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
 - [LinkLabel コントロール](linklabel-control-windows-forms.md)

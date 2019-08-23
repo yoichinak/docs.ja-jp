@@ -2,18 +2,18 @@
 title: クエリの例
 ms.date: 03/30/2017
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
-ms.openlocfilehash: 74664dd98ac067153894edc934c8f15eec407261
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7be01abf568ed089089b1bc25d2a175f78ae7f7f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783111"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962739"
 ---
 # <a name="query-examples"></a>クエリの例
-このセクションでは、一般的な Visual Basic と c# の例を提供します。[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]クエリ。 Visual Studio を使用している開発者は、「サンプル」セクションで使用可能なサンプル ソリューションでより多く例を見つけることができます。 詳細については、次を参照してください。[サンプル](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)します。  
+ここでは、一般的C# [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]なクエリの Visual Basic と例について説明します。 Visual Studio を使用する開発者は、「サンプル」セクションで紹介されているサンプルソリューションの多くの例を見つけることができます。 詳細については、「[サンプル](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)」を参照してください。  
   
 > [!IMPORTANT]
->  *db*でのコード例でよく使用されて[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]ドキュメント。 *db*のインスタンスであると見なされますが、 *Northwind*クラスから継承<xref:System.Data.Linq.DataContext>します。  
+> *db*は、ドキュメントの[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]コード例でよく使用されます。 *db*は、から<xref:System.Data.Linq.DataContext>継承される*Northwind*クラスのインスタンスであると見なされます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [集計クエリ](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)  
@@ -62,14 +62,14 @@ ms.locfileid: "61783111"
  `from` 句、`where` 句、および `select` 句で外部キーを移動する方法の例を示して説明します。  
   
  [射影の作成](../../../../../../docs/framework/data/adonet/sql/linq/formulate-projections.md)  
- 結合の例を示します`select`と他の機能 (たとえば、*匿名型*) クエリ射影を作成します。  
+ クエリプロジェクションを形成`select`するために、他の機能 (*匿名型*など) と組み合わせて使用する例を示します。  
   
 ## <a name="related-sections"></a>関連項目  
  [標準クエリ演算子の概要 (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- 使用して、標準クエリ演算子の概念を説明C#します。  
+ を使用C#した標準クエリ演算子の概念について説明します。  
   
  [標準クエリ演算子の概要 (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- Visual Basic を使用して、標準クエリ演算子の概念について説明します。  
+ Visual Basic を使用した標準クエリ演算子の概念について説明します。  
   
  [クエリの概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
  クエリに関する概念が [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] でどのように使用されるかを説明します。  

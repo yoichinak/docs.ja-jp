@@ -7,20 +7,20 @@ helpviewer_keywords:
 - clear element for <listeners> for <trace>
 - <clear> element for <listeners> for <trace>
 ms.assetid: b44732a8-271f-4a06-ba9e-fe3298d6f192
-ms.openlocfilehash: 97b18f9d6baa618b0f535955b232e2119c758b11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9816ba0f8e4ddd4c38537eb4e014a4240ff20407
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701321"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927180"
 ---
-# <a name="clear-element-for-listeners-for-trace"></a>\<クリア > 要素の\<リスナー > の\<トレース >
+# <a name="clear-element-for-listeners-for-trace"></a>\<トレース > の\<リスナー \<> の > 要素をクリアします
 トレースの `Listeners` コレクションを削除します。  
   
  \<configuration>  
 \<system.diagnostics>  
 \<トレース >  
-\<listeners>  
+\<リスナー >  
 \<clear>  
   
 ## <a name="syntax"></a>構文  
@@ -45,20 +45,20 @@ ms.locfileid: "61701321"
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`system.diagnostics`|メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。|  
 |`trace`|トレース メッセージを収集、格納、およびルーティングするリスナーを保持します。|  
-|`listeners`|収集、格納、およびメッセージをルーティングするリスナーが含まれています。 リスナーでは、適切なターゲットのトレースを出力します。|  
+|`listeners`|メッセージを収集、格納、およびルーティングするリスナーを格納します。 リスナーは、適切なターゲットにトレース出力を送信します。|  
   
 ## <a name="remarks"></a>Remarks  
- `<clear>`要素からすべてのリスナーを削除して、`Listeners`トレースのコレクション。 使用することができます、`<clear>`要素を使用する前に、`<add>`要素をコレクション内の他のアクティブなリスナーが存在しないことを特定します。  
+ 要素`<clear>`は、トレースの`Listeners`コレクションからすべてのリスナーを削除します。 要素を使用`<add>`し`<clear>`て、コレクション内に他のアクティブなリスナーが存在しないことを特定することができます。  
   
- オフにすることができます、`Listeners`呼び出すことによってプログラムでのコレクション、<xref:System.Diagnostics.TraceListenerCollection.Clear%2A>メソッドを<xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType>プロパティ (`System.Diagnostics.Trace.Listeners.Clear()`)。  
+ コレクションは、 `Listeners` <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType>プロパティ ( <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> )でメソッドを呼び出すことで、プログラムによって消去できます。`System.Diagnostics.Trace.Listeners.Clear()`  
   
- この要素は、マシン構成ファイル (Machine.config) と、アプリケーション構成ファイルで使用できます。  
+ この要素は、コンピューターの構成ファイル (machine.config) とアプリケーション構成ファイルで使用できます。  
   
 > [!NOTE]
->  `<clear>`要素は、削除、<xref:System.Diagnostics.DefaultTraceListener>から、`Listeners`の動作を変更するコレクション、 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>、 <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>、 <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>、および<xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType>メソッド。 呼び出す、`Assert`または`Fail`メソッドは、通常、メッセージ ボックスの表示になります。 場合、メッセージ ボックスが表示されません、<xref:System.Diagnostics.DefaultTraceListener>内にない、`Listeners`コレクション。  
+> 要素`<clear>`は、、 <xref:System.Diagnostics.DefaultTraceListener> 、 <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>、 `Listeners`および<xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>の各メソッドの動作を変更して、をコレクションから削除します。<xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> 通常、 `Assert`メソッド`Fail`またはメソッドを呼び出すと、メッセージボックスが表示されます。 ただし、 <xref:System.Diagnostics.DefaultTraceListener>が`Listeners`コレクションに含まれていない場合、メッセージボックスは表示されません。  
   
 ## <a name="example"></a>例  
- 次の例は、使用する方法を示します、`<clear>`要素を使用する前に、`<add>`リスナーを追加する要素`console`を`Listeners`トレースのコレクション。  
+ 次の例では、要素を`<clear>`使用し`<add>`て、トレースの`Listeners`コレクションにリスナー `console`を追加する前に、要素を使用する方法を示します。  
   
 ```xml  
 <configuration>  
@@ -83,6 +83,6 @@ ms.locfileid: "61701321"
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.Debug>
 - <xref:System.Diagnostics.TraceSource>
-- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)
-- [トレース リスナー](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [トレースおよびデバッグ設定のスキーマ](index.md)
+- [\<remove>](remove-element-for-listeners-for-trace.md)
+- [トレース リスナー](../../../debug-trace-profile/trace-listeners.md)

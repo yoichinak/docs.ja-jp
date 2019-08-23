@@ -8,41 +8,41 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
-ms.openlocfilehash: 8de673fae16da8189589e20b6d9a66b96e1823ba
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 988fc79f71b670f5eaed1a305f54cc90374e4b17
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487106"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950629"
 ---
 # <a name="how-to-create-a-federated-client"></a>方法: フェデレーション クライアントを作成する
-Windows Communication Foundation (WCF) でのクライアントの作成、*フェデレーション サービス*の 3 つの主な手順で構成されます。  
+Windows Communication Foundation (WCF) では、*フェデレーションサービス*用のクライアントの作成は、次の3つの主要な手順で構成されます。  
   
-1. 構成、 [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)または同様のカスタム バインディング。 適切なバインディングを作成する方法の詳細については、次を参照してください。[方法。WSFederationHttpBinding を作成](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)です。 代わりに、実行、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)フェデレーション サービスと 1 つ以上と通信するための構成ファイルを生成するフェデレーション サービスのメタデータ エンドポイントに対してセキュリティ トークン サービスです。  
+1. [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)または同様のカスタムバインドを構成します。 適切なバインディングを作成する方法の詳細に[ついては、「方法:WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)を作成します。 または、フェデレーションサービスのメタデータエンドポイントに対して[ServiceModel メタデータユーティリティツール (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)を実行して、フェデレーションサービスと1つまたは複数のセキュリティトークンサービスと通信するための構成ファイルを生成します。  
   
 2. クライアントがセキュリティ トークン サービスと対話する際のさまざまな側面を制御する <xref:System.ServiceModel.Security.IssuedTokenClientCredential> のプロパティを設定します。  
   
 3. セキュリティ トークン サービスなど、特定のエンドポイントとのセキュリティ保護された通信に必要な証明書を許可する <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential> のプロパティを設定します。  
   
 > [!NOTE]
->  クライアントが、偽装された資格情報、<xref:System.Security.Cryptography.CryptographicException> バインディングやカスタムの発行済みトークン、および非対称キーを使用すると、<xref:System.ServiceModel.WSFederationHttpBinding> がスローされる可能性があります。 <xref:System.ServiceModel.WSFederationHttpBinding> プロパティと <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType%2A> プロパティをそれぞれ <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeyType%2A> に設定すると、<xref:System.IdentityModel.Tokens.SecurityKeyType.AsymmetricKey> バインディングとカスタムの発行済みトークンで非対称キーが使用されます。 クライアントがメッセージを送信しようとするときに、クライアントが偽装している ID のユーザー プロファイルが存在しないと、<xref:System.Security.Cryptography.CryptographicException> がスローされます。 この問題を回避するには、クライアント コンピューターにログオンした後、または `LoadUserProfile` を呼び出した後に、メッセージを送信します。  
+> クライアントが、偽装された資格情報、<xref:System.Security.Cryptography.CryptographicException> バインディングやカスタムの発行済みトークン、および非対称キーを使用すると、<xref:System.ServiceModel.WSFederationHttpBinding> がスローされる可能性があります。 <xref:System.ServiceModel.WSFederationHttpBinding> プロパティと <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType%2A> プロパティをそれぞれ <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeyType%2A> に設定すると、<xref:System.IdentityModel.Tokens.SecurityKeyType.AsymmetricKey> バインディングとカスタムの発行済みトークンで非対称キーが使用されます。 クライアントがメッセージを送信しようとするときに、クライアントが偽装している ID のユーザー プロファイルが存在しないと、<xref:System.Security.Cryptography.CryptographicException> がスローされます。 この問題を回避するには、クライアント コンピューターにログオンした後、または `LoadUserProfile` を呼び出した後に、メッセージを送信します。  
   
- ここでは、これらの手順について詳しく説明します。 適切なバインディングを作成する方法の詳細については、次を参照してください。[方法。WSFederationHttpBinding を作成](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)です。 フェデレーション サービスの動作方法の詳細については、次を参照してください。[フェデレーション](../../../../docs/framework/wcf/feature-details/federation.md)します。  
+ ここでは、これらの手順について詳しく説明します。 適切なバインディングを作成する方法の詳細に[ついては、「方法:WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)を作成します。 フェデレーションサービスのしくみの詳細については、「 [Federation](../../../../docs/framework/wcf/feature-details/federation.md)」を参照してください。  
   
 ### <a name="to-generate-and-examine-the-configuration-for-a-federated-service"></a>フェデレーション サービスの構成を生成し、確認するには  
   
-1. 実行、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)コマンド ライン パラメーターとしてサービスのメタデータ URL のアドレスを使用します。  
+1. サービスのメタデータ URL のアドレスをコマンドラインパラメーターとして指定して、 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)を実行します。  
   
 2. 生成された構成ファイルを適切なエディターで開きます。  
   
-3. 属性と生成されたすべてのコンテンツを調べる[\<発行者 >](../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)と[ \<issuerMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)要素。 これらは、内にある、 [\<セキュリティ >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md)の要素、 [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)またはカスタム バインド要素。 予期されたドメイン名やその他のアドレス情報がアドレスに含まれていることを確認します。 この情報をチェックすることは重要です。それは、クライアントがこれらのアドレスに対して認証を行い、ユーザー名とパスワードの組み合わせなどの情報を公開する可能性があるためです。 アドレスが予期されたアドレスではない場合、意図しない受信者に情報が公開されるおそれがあります。  
+3. 生成された[ \<発行者 >](../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)と[ \<issuermetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)要素の属性と内容を確認します。 これらは[ \<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md) [、 wsFederationHttpBinding\<>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)またはカスタムバインド要素のセキュリティ > 要素内にあります。 予期されたドメイン名やその他のアドレス情報がアドレスに含まれていることを確認します。 この情報をチェックすることは重要です。それは、クライアントがこれらのアドレスに対して認証を行い、ユーザー名とパスワードの組み合わせなどの情報を公開する可能性があるためです。 アドレスが予期されたアドレスではない場合、意図しない受信者に情報が公開されるおそれがあります。  
   
-4. 確認、追加[ \<issuedTokenParameters >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md) 、コメント内の要素を <`alternativeIssuedTokenParameters`> 要素。 Svcutil.exe ツールを使用してフェデレーション サービスの構成を生成するときに、フェデレーション サービスまたは任意の中間セキュリティ トークン サービスが、発行者アドレスを指定せずに、複数のエンドポイントを公開するセキュリティ トークン サービスのメタデータ アドレスを指定している場合、生成された構成ファイルは最初のエンドポイントを参照します。 追加のエンドポイントはコメント アウトとして、構成ファイルで <`alternativeIssuedTokenParameters`> 要素。  
+4. コメントアウトされた <`alternativeIssuedTokenParameters`> 要素内の追加[ \<の issuedTokenParameters >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)要素を調べます。 Svcutil.exe ツールを使用してフェデレーション サービスの構成を生成するときに、フェデレーション サービスまたは任意の中間セキュリティ トークン サービスが、発行者アドレスを指定せずに、複数のエンドポイントを公開するセキュリティ トークン サービスのメタデータ アドレスを指定している場合、生成された構成ファイルは最初のエンドポイントを参照します。 追加のエンドポイントは、構成ファイル内の <`alternativeIssuedTokenParameters`> 要素としてコメントアウトされます。  
   
-     1 つかどうかを判断します。 これらの <`issuedTokenParameters`> は 1 つの構成に既に存在することをお勧めします。 たとえば、クライアントは、ユーザー名/パスワードの組み合わせではなく、Windows CardSpace のトークンを使用してセキュリティ トークン サービスに対する認証にもできます。  
+     これらの <`issuedTokenParameters`> のいずれかが、構成に既に存在するものよりも適しているかどうかを判断します。 たとえば、クライアントは、ユーザー名とパスワードの組み合わせではなく、Windows CardSpace トークンを使用して Security Token Service に対して認証を行うことができます。  
   
     > [!NOTE]
-    >  サービスと通信するまでに複数のセキュリティ トークン サービスをたどる必要がある場合は、中間セキュリティ トークン サービスがクライアントを不適切なセキュリティ トークン サービスにダイレクトする可能性があります。 そのため、いることを確認でセキュリティ トークン サービスのエンドポイント、 [ \<issuedTokenParameters >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)予期されるセキュリティ トークン サービスは、不明なセキュリティ トークン サービスではなく、します。  
+    > サービスと通信するまでに複数のセキュリティ トークン サービスをたどる必要がある場合は、中間セキュリティ トークン サービスがクライアントを不適切なセキュリティ トークン サービスにダイレクトする可能性があります。 したがって、 [ \<issuedTokenParameters >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)内の Security Token Service のエンドポイントが予期される Security Token Service であり、不明な Security Token Service でないことを確認してください。  
   
 ### <a name="to-configure-an-issuedtokenclientcredential-in-code"></a>コードで IssuedTokenClientCredential を構成するには  
   
@@ -65,13 +65,13 @@ Windows Communication Foundation (WCF) でのクライアントの作成、*フ�
   
      トークンの有効期間と `IssuedTokenRenewalThresholdPercentage` 値によって決まる更新間隔は、キャッシュ時間が更新しきい時間よりも短い場合には、`MaxIssuedTokenCachingTime` 値によってオーバーライドされます。 たとえば、`IssuedTokenRenewalThresholdPercentage` とトークンの有効期間を掛けた積が 8 時間であり、`MaxIssuedTokenCachingTime` 値が 10 分の場合、クライアントは、トークンの更新のために 10 分ごとにセキュリティ トークン サービスに連絡します。  
   
-5. <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.CombinedEntropy> 以外のキー エントロピ モードが、メッセージ セキュリティやメッセージ資格情報付きトランスポート セキュリティを使用しないバインディング (たとえば、 バインディングに <xref:System.ServiceModel.Channels.SecurityBindingElement> が存在しない場合) で必要な場合は、<xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A> プロパティに適切な値を設定します。 *エントロピ*モードを使用して対称キーを制御できるかどうかを決定する、<xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A>プロパティ。 この既定値は <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.CombinedEntropy> であり、この場合、クライアントとトークン発行者の両方から、実際のキーを生成する際に組み合わせるデータが提供されます。 これ以外の値は <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.ClientEntropy> と <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.ServerEntropy> であり、それぞれクライアントまたはサーバーによってキー全体が指定されます。 サーバーのデータのみを使用してキーを指定するよう、このプロパティを設定する例を次に示します。  
+5. <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.CombinedEntropy> 以外のキー エントロピ モードが、メッセージ セキュリティやメッセージ資格情報付きトランスポート セキュリティを使用しないバインディング (たとえば、 バインディングに <xref:System.ServiceModel.Channels.SecurityBindingElement> が存在しない場合) で必要な場合は、<xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A> プロパティに適切な値を設定します。 *エントロピ*モードは、 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A>プロパティを使用して対称キーを制御できるかどうかを決定します。 この既定値は <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.CombinedEntropy> であり、この場合、クライアントとトークン発行者の両方から、実際のキーを生成する際に組み合わせるデータが提供されます。 これ以外の値は <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.ClientEntropy> と <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.ServerEntropy> であり、それぞれクライアントまたはサーバーによってキー全体が指定されます。 サーバーのデータのみを使用してキーを指定するよう、このプロパティを設定する例を次に示します。  
   
      [!code-csharp[c_CreateSTS#17](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#17)]
      [!code-vb[c_CreateSTS#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#17)]  
   
     > [!NOTE]
-    >  セキュリティ トークン サービスまたはサービス バインディングに <xref:System.ServiceModel.Channels.SecurityBindingElement> が存在する場合、<xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A> で設定された <xref:System.ServiceModel.Security.IssuedTokenClientCredential> は、<xref:System.ServiceModel.Channels.SecurityBindingElement.KeyEntropyMode%2A> の `SecurityBindingElement` プロパティによってオーバーライドされます。  
+    > セキュリティ トークン サービスまたはサービス バインディングに <xref:System.ServiceModel.Channels.SecurityBindingElement> が存在する場合、<xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A> で設定された <xref:System.ServiceModel.Security.IssuedTokenClientCredential> は、<xref:System.ServiceModel.Channels.SecurityBindingElement.KeyEntropyMode%2A> の `SecurityBindingElement` プロパティによってオーバーライドされます。  
   
 6. <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuerChannelBehaviors%2A> プロパティによって返されるコレクションに発行者固有のエンドポイント動作を追加して、これらの動作を構成します。  
   
@@ -80,14 +80,14 @@ Windows Communication Foundation (WCF) でのクライアントの作成、*フ�
   
 ### <a name="to-configure-the-issuedtokenclientcredential-in-configuration"></a>構成で IssuedTokenClientCredential を構成するには  
   
-1. 作成、 [ \<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)要素の子として、 [ \<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)エンドポイントの動作の要素。  
+1. エンドポイント動作で、 [ \<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)要素の子として[ issuedToken>要素を作成します。\<](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)  
   
-2. トークンのキャッシュが必須でない場合は、設定、`cacheIssuedTokens`属性 (の <`issuedToken`> 要素) を`false`します。  
+2. トークンキャッシュが不要な場合は、 `cacheIssuedTokens`属性 (<`issuedToken`> 要素) をに`false`設定します。  
   
-3. キャッシュされたトークンの制限時間が必要な場合は、設定、`maxIssuedTokenCachingTime`属性を <`issuedToken`> 要素に適切な値。 例:  
+3. キャッシュされたトークンに時間制限が必要な場合`maxIssuedTokenCachingTime`は、<`issuedToken`> 要素の属性を適切な値に設定します。 例:  
     `<issuedToken maxIssuedTokenCachingTime='00:10:00' />`  
   
-4. 既定以外の値が優先される場合は、設定、`issuedTokenRenewalThresholdPercentage`属性を <`issuedToken`> 要素例については、適切な値。  
+4. 既定値以外の値が優先される場合は、 `issuedTokenRenewalThresholdPercentage` <`issuedToken`> 要素の属性を適切な値に設定します。次に例を示します。  
   
     ```xml  
     <issuedToken issuedTokenRenewalThresholdPercentage = "80" />  
@@ -99,7 +99,7 @@ Windows Communication Foundation (WCF) でのクライアントの作成、*フ�
     <issuedToken defaultKeyEntropyMode = "ServerEntropy" />  
     ```  
   
-6. 任意。 作成して、発行者固有のカスタム エンドポイント動作を構成する <`issuerChannelBehaviors`> 要素の子として、<`issuedToken`> 要素。 各動作では、作成、<`add`> 要素の子として、<`issuerChannelBehaviors`> 要素。 設定して、動作の発行者アドレスを指定、`issuerAddress`属性を <`add`> 要素。 設定して、動作自体を指定、`behaviorConfiguration`属性を <`add`> 要素。  
+6. 任意。 `issuerChannelBehaviors`<`issuedToken`> 要素の子として < > 要素を作成することによって、発行者固有のカスタムエンドポイント動作を構成します。 各動作に対して、<`add``issuerChannelBehaviors`> 要素の子として < > 要素を作成します。 `issuerAddress` <`add`> 要素の属性を設定して、動作の発行者アドレスを指定します。 `behaviorConfiguration` <`add`> 要素の属性を設定して、動作自体を指定します。  
   
     ```xml  
     <issuerChannelBehaviors>  
@@ -126,7 +126,7 @@ Windows Communication Foundation (WCF) でのクライアントの作成、*フ�
   
 ### <a name="to-configure-an-x509certificaterecipientclientcredential-in-configuration"></a>構成で X509CertificateRecipientClientCredential を構成するには  
   
-1. 作成、 [ \<scopedCertificates >](../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md)要素の子として、 [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)はそれ自体の子要素、 [ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)エンドポイントの動作の要素。  
+1. エンドポイント動作[の\<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)要素の子である[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)要素の子として、 [ \<scopedCertificates >](../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md)要素を作成します。  
   
 2. `<add>` 要素の子要素として `<scopedCertificates>` 要素を作成します。 適切な証明書を参照するように `storeLocation`、`storeName`、`x509FindType`、`findValue` の各属性の値を指定します。 次の例に示すように、`targetUri` 属性を、証明書が使用されるエンドポイントのアドレスを指定する値に設定します。  
   
@@ -152,20 +152,20 @@ Windows Communication Foundation (WCF) でのクライアントの作成、*フ�
 ## <a name="localissuer-required"></a>LocalIssuer が必要な場合  
  チェーン内の 2 番目から最後までのセキュリティ トークン サービスによって発行者アドレスまたは発行者メタデータ アドレスが指定されている場合、Svcutil.exe の既定の出力では、ローカル発行者が使用されません。クライアントで常にローカル発行者を使用する場合は、この点に注意が必要です。  
   
- 設定の詳細については、 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A>、 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A>、および<xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A>のプロパティ、<xref:System.ServiceModel.Security.IssuedTokenClientCredential>クラスを参照してください[方法。ローカル発行者を構成する](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)します。  
+ <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A> <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A> <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A>クラスの、 [、およびの各プロパティの設定の詳細については、「」を参照してください。 <xref:System.ServiceModel.Security.IssuedTokenClientCredential>ローカル発行者](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)を構成します。  
   
 ## <a name="scoped-certificates"></a>範囲指定された証明書  
  証明書ネゴシエーションを使用しないという一般的な理由により、任意のセキュリティ トークン サービスとの通信用のサービス証明書を指定する必要がある場合は、<xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> クラスの <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential> プロパティを使用して指定できます。 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetDefaultCertificate%2A> メソッドは、パラメーターとして <xref:System.Uri> と <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> を受け取ります。 指定した証明書は、指定した URI のエンドポイントと通信するときに使用されます。 または、<xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetScopedCertificate%2A> メソッドを使用して、<xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> プロパティによって返されるコレクションに証明書を追加することもできます。  
   
 > [!NOTE]
->  特定の URI に範囲指定された証明書というクライアントの概念は、該当する URI でエンドポイントを公開するサービスへの送信呼び出しを行うアプリケーションにだけ適用されます。 によって返されるコレクション内のサーバーで構成されているものなど、発行済みトークンの署名に使用される証明書には適用されません、<xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>の<xref:System.ServiceModel.Security.IssuedTokenServiceCredential>クラス。 詳細については、「[方法 :フェデレーション サービスで資格情報を構成](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)します。  
+> 特定の URI に範囲指定された証明書というクライアントの概念は、該当する URI でエンドポイントを公開するサービスへの送信呼び出しを行うアプリケーションにだけ適用されます。 発行されたトークンの署名に使用される証明書には適用されません。たとえば、 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>クラスのによって返されるコレクション内のサーバーで構成されている証明書です。 詳細については、「[方法 :フェデレーションサービス](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)で資格情報を構成します。  
   
 ## <a name="see-also"></a>関連項目
 
 - [フェデレーション サンプル](../../../../docs/framework/wcf/samples/federation-sample.md)
-- [方法: WSFederationHttpBinding のセキュリティで保護されたセッションを無効にします。](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
-- [方法: WSFederationHttpBinding を作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
-- [方法: フェデレーション サービスで資格情報を構成します。](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [方法: ローカル発行者を構成します。](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [方法: WSFederationHttpBinding でのセキュリティで保護されたセッションの無効化](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [方法: WSFederationHttpBinding を作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+- [方法: フェデレーションサービスで資格情報を構成する](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [方法: ローカル発行者を構成する](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
 - [メタデータを使用する場合のセキュリティ上の考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
-- [方法: メタデータ エンドポイントをセキュリティで保護します。](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+- [方法: セキュリティで保護されたメタデータエンドポイント](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)

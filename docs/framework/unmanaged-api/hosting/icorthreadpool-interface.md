@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a30f10e322961d52c1fa726d5fd81e4c710a5835
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8d245afe2d34c06a5bb9ca39b1c0dd4924fadada
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699631"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911248"
 ---
 # <a name="icorthreadpool-interface"></a>ICorThreadpool インターフェイス
-スレッド プールにアクセスするためのメソッドを提供します。  
+スレッドプールにアクセスするためのメソッドを提供します。  
   
 > [!NOTE]
->  このインターフェイスは、内部使用専用に予約されています。  
+> このインターフェイスは、内部使用専用に予約されています。  
   
 ## <a name="methods"></a>メソッド  
   
@@ -46,11 +46,11 @@ ms.locfileid: "61699631"
 |[CorGetAvailableThreads メソッド](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corgetavailablethreads-method.md)|内部使用専用に予約されています。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ**Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

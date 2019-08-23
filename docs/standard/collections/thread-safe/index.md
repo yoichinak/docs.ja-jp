@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0bc333a828a9d18cd5ad98af42a91c1d53c2569b
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 4c7ffa98aec115db2d8c9a40e977f8cb7d33441a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816211"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962991"
 ---
 # <a name="thread-safe-collections"></a>スレッド セーフなコレクション
 .NET Framework 4 では、スレッド セーフかつスケーラブルなコレクション クラスをいくつか含む <xref:System.Collections.Concurrent?displayProperty=nameWithType> 名前空間が導入されています。 ユーザー コードで同期を追加することなく、複数のスレッドでこのようなコレクションの項目を安全かつ効率的に追加または削除できます。 新しいコードを記述する場合、コレクションに対して複数のスレッドが同時に書き込みを行うときは常に同時実行コレクション クラスを使用します。 共有コレクションの読み取りのみを行う場合は、<xref:System.Collections.Generic?displayProperty=nameWithType> 名前空間のクラスを使用できます。 .NET Framework 1.1 以前のランタイムを対象にする必要がない場合は、1.0 コレクション クラスを使用しないことをお勧めします。  
@@ -30,7 +30,7 @@ ms.locfileid: "66816211"
  <xref:System.Collections.Concurrent.ConcurrentQueue%601> クラスと <xref:System.Collections.Concurrent.ConcurrentStack%601> クラスでは、ロックは使用されません。 代わりに、<xref:System.Threading.Interlocked> 操作によってスレッド セーフを確保します。  
   
 > [!NOTE]
->  同時実行コレクション クラスでは <xref:System.Collections.ICollection> がサポートされるので、<xref:System.Collections.ICollection.IsSynchronized%2A> プロパティと <xref:System.Collections.ICollection.SyncRoot%2A> プロパティの実装が、これらのプロパティが無関係の場合でも提供されます。 `IsSynchronized` は常に `false` を返し、`SyncRoot` は常に `null` (Visual Basic の場合は `Nothing`) になります。  
+> 同時実行コレクション クラスでは <xref:System.Collections.ICollection> がサポートされるので、<xref:System.Collections.ICollection.IsSynchronized%2A> プロパティと <xref:System.Collections.ICollection.SyncRoot%2A> プロパティの実装が、これらのプロパティが無関係の場合でも提供されます。 `IsSynchronized` は常に `false` を返し、`SyncRoot` は常に `null` (Visual Basic の場合は `Nothing`) になります。  
   
  <xref:System.Collections.Concurrent?displayProperty=nameWithType> 名前空間に属するコレクション型を次の表に示します。  
   

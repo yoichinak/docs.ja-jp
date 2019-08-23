@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3adeb57e853d26415c53b5ac2579f14187e45969
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 5a71277c6e5183f855ef07a6fc3a20e29b06998f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658972"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920920"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > 要素
 <xref:System.AppContext> クラスで使用される、新機能に対するオプトアウト メカニズムを指定するスイッチを 1 つまたは複数定義します。  
@@ -138,7 +138,7 @@ ms.locfileid: "69658972"
 |`System.Xml.`<br /><br /> `IgnoreEmptyKeySequences`|複合キーの空のキーシーケンスが XSD スキーマ検証によって無視されるかどうかを制御します。 詳細については、「[軽減策:XML スキーマの](../../../migration-guide/mitigation-xml-schema-validation.md)検証。|.NET Framework 4.6|  
   
 > [!NOTE]
->  `AppContextSwitchOverrides`要素をアプリケーション構成ファイルに追加する代わりに、 `static` (でC#は) または`Shared` (Visual Basic) <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType>メソッドを呼び出すことによって、スイッチをプログラムで設定することもできます。  
+> `AppContextSwitchOverrides`要素をアプリケーション構成ファイルに追加する代わりに、 `static` (でC#は) または`Shared` (Visual Basic) <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType>メソッドを呼び出すことによって、スイッチをプログラムで設定することもできます。  
   
  ライブラリ開発者はカスタムスイッチを定義して、新しいバージョンのライブラリで導入された機能の変更を呼び出し元がオプトアウトできるようにすることもできます。 詳細については、<xref:System.AppContext> クラスを参照してください。  
   

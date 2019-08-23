@@ -8,12 +8,12 @@ helpviewer_keywords:
 - base forms
 - inheritance [Windows Forms], forms
 ms.assetid: 1c3f2b29-a05c-4c6f-aa1a-4e66b94f343a
-ms.openlocfilehash: 5239017eb63ca6360ae8811a76497256fafbd1b1
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: b24bd2db564c7acb0a748c47095ee0777ea1eb88
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040143"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955145"
 ---
 # <a name="effects-of-modifying-a-base-forms-appearance"></a>基本フォームの外観を変更した場合の影響
 
@@ -25,6 +25,6 @@ ms.locfileid: "69040143"
 
 ## <a name="see-also"></a>関連項目
 
-- [base](~/docs/csharp/language-reference/keywords/base.md)
+- [base](../../../csharp/language-reference/keywords/base.md)
 - [方法: Windows フォームを継承する](how-to-inherit-windows-forms.md)
 - [Windows フォームのビジュアルの継承](windows-forms-visual-inheritance.md)

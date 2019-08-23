@@ -10,18 +10,18 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: b5ad2280c832b62e043a1f65f082d5475697c38c
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: dfc1f023e9d1adce73a28f475f3796b4f7231ff8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545361"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960331"
 ---
 # <a name="packaging-fonts-with-applications"></a>アプリケーションでのフォントのパッケージング
 このトピックでは、 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーションでフォントをパッケージ化する方法の概要について説明します。  
   
 > [!NOTE]
->  多くの種類のソフトウェアと同様に、フォント ファイルは、販売されるのではなくライセンスされます。 フォントの使用を制御するライセンスはベンダーによって異なりますが、一般に、 [!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)] [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]アプリケーションで提供されているフォントをカバーするライセンスや、アプリケーション内にフォントを埋め込むことはできません。分布. したがって、開発者としては、フォントをアプリケーション内に埋め込む場合や別の方法でフォントを再頒布する場合、それらフォントに必要なライセンス権限を取得する責任があります。  
+> 多くの種類のソフトウェアと同様に、フォント ファイルは、販売されるのではなくライセンスされます。 フォントの使用を制御するライセンスはベンダーによって異なりますが、一般に、アプリケーションや Windows で[!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)]フォントをカバーするライセンスも含め、ほとんどのライセンスでは、フォントをアプリケーションに埋め込むことはできません。分布. したがって、開発者としては、フォントをアプリケーション内に埋め込む場合や別の方法でフォントを再頒布する場合、それらフォントに必要なライセンス権限を取得する責任があります。  
 
 <a name="introduction_to_packaging_fonts"></a>   
 ## <a name="introduction-to-packaging-fonts"></a>フォントのパッケージングの概要  
@@ -81,7 +81,7 @@ ms.locfileid: "69545361"
 ```  
   
 > [!NOTE]
->  フォントをリソースとしてアプリケーションに追加するときは、アプリケーションのプロジェクト`<Resource>`ファイルの`<EmbeddedResource>`要素ではなく、要素を設定していることを確認してください。 ビルドアクションの要素はサポートされていません。 `<EmbeddedResource>`  
+> フォントをリソースとしてアプリケーションに追加するときは、アプリケーションのプロジェクト`<Resource>`ファイルの`<EmbeddedResource>`要素ではなく、要素を設定していることを確認してください。 ビルドアクションの要素はサポートされていません。 `<EmbeddedResource>`  
   
  アプリケーションのフォント リソースを参照する方法を次のマークアップ例に示します。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "69545361"
  [!code-xaml[OpenTypeFontsSample#OpenTypeFontsSample1](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontsSample/CS/Kootenay.xaml#opentypefontssample1)]  
   
 > [!NOTE]
->  この SDK には、アプリケーションで[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用できる一連のサンプル OpenType フォントが含まれています。 フォントはリソース専用ライブラリで定義されています。 詳細については、「[OpenType フォント パックのサンプル](sample-opentype-font-pack.md)」をご覧ください。  
+> この SDK には、アプリケーションで[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用できる一連のサンプル OpenType フォントが含まれています。 フォントはリソース専用ライブラリで定義されています。 詳細については、「[OpenType フォント パックのサンプル](sample-opentype-font-pack.md)」をご覧ください。  
   
 <a name="limitations_on_font_usage"></a>   
 ## <a name="limitations-on-font-usage"></a>フォントの使用に関する制限事項  

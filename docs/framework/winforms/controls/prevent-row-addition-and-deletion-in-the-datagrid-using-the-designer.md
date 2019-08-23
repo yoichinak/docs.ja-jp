@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], preventing row addition or deletion
 ms.assetid: a17722bd-9400-41e6-8dcc-c9c151f0a749
-ms.openlocfilehash: 20f9b85dc48ccd634468d0fed000120723f8ee5c
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: f47eb29bf9ae077555f352d10c667bac4ade9373
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038190"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968330"
 ---
 # <a name="how-to-prevent-row-addition-and-deletion-in-the-windows-forms-datagridview-control-using-the-designer"></a>方法: デザイナーを使用して Windows フォーム DataGridView コントロールで行が追加および削除されないようにする
 場合によっては、ユーザーが <xref:System.Windows.Forms.DataGridView> コントロールに新しいデータ行を入力したり、既存の行を削除したりできないようにする必要があります。 コントロールの下部に新しいレコードがある場合は、新しい行が特別な行に入力されます。 行の追加を無効にした場合、新しいレコードの行は表示されません。 行の削除とセルの編集を無効にすることで、コントロールを完全に読み取り専用にすることができます。
@@ -21,7 +21,7 @@ ms.locfileid: "69038190"
 - スマート タグ グリフをクリックします (![スマート タグ グリフ](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) の右上隅で、 <xref:System.Windows.Forms.DataGridView> 、制御し、オフ、 **追加を有効にする** **削除を有効にする** チェック ボックス。
 
     > [!NOTE]
-    >  コントロールを完全に読み取り専用にするには、[**編集を有効に**する] チェックボックスもオフにします。
+    > コントロールを完全に読み取り専用にするには、[**編集を有効に**する] チェックボックスもオフにします。
 
 ## <a name="see-also"></a>関連項目
 

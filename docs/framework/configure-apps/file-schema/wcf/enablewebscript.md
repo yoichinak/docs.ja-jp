@@ -2,21 +2,21 @@
 title: <enableWebScript>
 ms.date: 03/30/2017
 ms.assetid: 9c7e96e1-af70-4e6e-ac5c-d67929dddbaa
-ms.openlocfilehash: b2cdd29cda7f82ce555b0f6c1a963567b41ff81b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 123f58ee3d77bf605db21fa0d9537b3196d56468
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673252"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919114"
 ---
-# <a name="enablewebscript"></a>\<enableWebScript>
+# <a name="enablewebscript"></a>\<enableWebScript >
 この要素は、ASP.NET AJAX Web ページからサービスを使用できるようにするエンドポイントの動作を有効にします。  
   
  \<system.ServiceModel >  
 \<<behaviors>  
 \<endpointBehaviors>  
 \<behavior>  
-\<enableWebScript>  
+\<enableWebScript >  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,14 +37,14 @@ ms.locfileid: "61673252"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|エンドポイントの動作のセットを指定します。|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|エンドポイントの動作のセットを指定します。|  
   
 ## <a name="remarks"></a>Remarks  
- この動作は、いずれかと組み合わせてのみ使用する必要があります、 [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)標準バインディングまたは[ \<webMessageEncoding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webmessageencoding.md)バインド要素。  この動作の詳細については、「<xref:System.ServiceModel.Description.WebScriptEnablingBehavior>」を参照してください。  
+ この動作は、 [ \<webHttpBinding >](webhttpbinding.md)標準[ \<](webmessageencoding.md)バインディング、または webMessageEncoding > binding 要素と組み合わせて使用する必要があります。  この動作の詳細については、「<xref:System.ServiceModel.Description.WebScriptEnablingBehavior>」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.ServiceModel.Configuration.WebScriptEnablingElement>
 - <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>
-- [AJAX の統合と JSON のサポート](../../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)
-- [\<webHttp>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)
+- [AJAX の統合と JSON のサポート](../../../wcf/feature-details/ajax-integration-and-json-support.md)
+- [\<webHttp>](webhttp.md)

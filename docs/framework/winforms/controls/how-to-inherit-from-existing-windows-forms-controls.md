@@ -8,12 +8,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], Windows Forms custom controls
 - custom controls [Windows Forms], inheritance
 ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
-ms.openlocfilehash: 198dd630a08ae454ad1d9d9af460b1f288b2a1d8
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 9ac18fae126425126712dafeb80f05663dfc2ebc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69037773"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966587"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>方法: 既存の Windows フォーム コントロールから継承する
 既存のコントロールの機能を拡張する場合は、継承によって既存のコントロールから派生したコントロールを作成できます。 既存のコントロールから継承すると、そのコントロールのすべての機能およびビジュアル プロパティが引き継がれます。 たとえば、から<xref:System.Windows.Forms.Button>継承されたコントロールを作成した場合、新しいコントロールは標準<xref:System.Windows.Forms.Button>コントロールとまったく同じように見え、動作します。 その後で、カスタム メソッドやカスタム プロパティの実装によって、新しいコントロールの機能を拡張または変更できます。 一部のコントロールでは、 <xref:System.Windows.Forms.Control.OnPaint%2A>メソッドをオーバーライドすることによって、継承されたコントロールの外観を変更することもできます。
@@ -56,7 +56,7 @@ ms.locfileid: "69037773"
 10. コントロールのグラフィカルな外観を変更する場合は、 <xref:System.Windows.Forms.Control.OnPaint%2A>メソッドをオーバーライドします。
 
     > [!NOTE]
-    >  を<xref:System.Windows.Forms.Control.OnPaint%2A>オーバーライドしても、すべてのコントロールの外観を変更することはできません。 Windows によって実行されるすべての描画 (たとえば、 <xref:System.Windows.Forms.TextBox>) を持つコントロールは、 <xref:System.Windows.Forms.Control.OnPaint%2A>メソッドを呼び出すことがないため、カスタムコードは使用されません。 <xref:System.Windows.Forms.Control.OnPaint%2A>メソッドが使用可能かどうかを確認するには、変更する特定のコントロールのヘルプドキュメントを参照してください。 すべての Windows フォーム コントロールの一覧については、「[Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)」を参照してください。 コントロールがメンバーメソッドとし<xref:System.Windows.Forms.Control.OnPaint%2A>てリストされていない場合は、このメソッドをオーバーライドすることによって外観を変更することはできません。 カスタム描画の詳細については、「[コントロールのカスタム描画およびレンダリング](custom-control-painting-and-rendering.md)」を参照してください。
+    > を<xref:System.Windows.Forms.Control.OnPaint%2A>オーバーライドしても、すべてのコントロールの外観を変更することはできません。 Windows によって実行されるすべての描画 (たとえば、 <xref:System.Windows.Forms.TextBox>) を持つコントロールは、 <xref:System.Windows.Forms.Control.OnPaint%2A>メソッドを呼び出すことがないため、カスタムコードは使用されません。 <xref:System.Windows.Forms.Control.OnPaint%2A>メソッドが使用可能かどうかを確認するには、変更する特定のコントロールのヘルプドキュメントを参照してください。 すべての Windows フォーム コントロールの一覧については、「[Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)」を参照してください。 コントロールがメンバーメソッドとし<xref:System.Windows.Forms.Control.OnPaint%2A>てリストされていない場合は、このメソッドをオーバーライドすることによって外観を変更することはできません。 カスタム描画の詳細については、「[コントロールのカスタム描画およびレンダリング](custom-control-painting-and-rendering.md)」を参照してください。
 
     ```vb
     Protected Overrides Sub OnPaint(ByVal e As _
@@ -86,6 +86,6 @@ ms.locfileid: "69037773"
 - [方法: コントロールクラスから継承する](how-to-inherit-from-the-control-class.md)
 - [方法: UserControl クラスを継承する](how-to-inherit-from-the-usercontrol-class.md)
 - [方法: Windows フォームの作成者コントロール](how-to-author-controls-for-windows-forms.md)
-- [Visual Basic での継承されたイベント ハンドラーのトラブルシューティング](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+- [Visual Basic での継承されたイベント ハンドラーのトラブルシューティング](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
 - [チュートリアル: Visual Basic を使用した Windows フォームコントロールからの継承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
 - [チュートリアル: ビジュアルを使用した Windows フォームコントロールからの継承C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

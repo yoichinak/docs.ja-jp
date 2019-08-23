@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: be82b64581ee178b463950d4b8cdae1f98949161
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 43b0ddc8f683e7069207bbb1c47af73976bc4a5a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545307"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958556"
 ---
 # <a name="printing-overview"></a>印刷の概要
 Microsoft .NET Framework を使用すると、Windows Presentation Foundation (WPF) を使用するアプリケーション開発者は、豊富な新しい印刷および印刷システム管理 Api を利用できます。 また、[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] によって、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] アプリケーションを作成する開発者と、アンマネージ コードを使用する開発者も、これらの印刷システム拡張機能の一部を使用できます。 この新しい機能の中核となるのが、新しい [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] ファイル形式と [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 印刷パスです。  
@@ -35,11 +35,11 @@ Microsoft .NET Framework を使用すると、Windows Presentation Foundation (W
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>XPS 印刷パス  
- XML Paper Specification (XPS) の印刷パスは、Windows [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]アプリケーションでの印刷の処理方法を再定義する新機能です。 は[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 、ドキュメントのプレゼンテーション言語 (RTF など)、印刷スプーラの形式 (WMF など)、およびページ記述言語 (PCL や Postscript など) を置き換えることができるため、新しい印刷パスでは、アプリケーションパブリケーションからの XPS 形式を印刷ドライバーまたはデバイスでの最終処理。  
+ XML Paper Specification (XPS) の印刷パスは、Windows アプリケーションでの印刷の処理方法を再定義する新しい Windows 機能です。 は[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 、ドキュメントのプレゼンテーション言語 (RTF など)、印刷スプーラの形式 (WMF など)、およびページ記述言語 (PCL や Postscript など) を置き換えることができるため、新しい印刷パスでは、アプリケーションパブリケーションからの XPS 形式を印刷ドライバーまたはデバイスでの最終処理。  
   
  Xps 印刷パスは xps プリンタードライバーモデル (XPSDrv) に基づいて構築されています。これにより[!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)] 、印刷、カラーサポートの向上、および大幅に改善された印刷パフォーマンスなど、開発者にとっていくつかの利点が得られます。 (XPSDrv の詳細については、 [Windows Driver Kit のドキュメント](/windows-hardware/drivers/)を参照してください)。  
   
- XPS ドキュメントの印刷スプーラの操作は、基本的に以前のバージョンの Windows と同じです。 ただし、既存の GDI 印刷パスに加えて XPS 印刷パスをサポートするように強化されています。 新しい印刷パスは、ネイティブで XPS スプールファイルを使用します。 以前のバージョンの用に記述されたユーザー [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]モードのプリンタードライバーは引き続き機能しますが、xps 印刷パスを使用するには xps プリンタードライバー (XPSDrv) が必要です。  
+ XPS ドキュメントの印刷スプーラの操作は、基本的に以前のバージョンの Windows と同じです。 ただし、既存の GDI 印刷パスに加えて XPS 印刷パスをサポートするように強化されています。 新しい印刷パスは、ネイティブで XPS スプールファイルを使用します。 以前のバージョンの Windows 用に記述されたユーザーモードのプリンタードライバーは引き続き機能しますが、XPS 印刷パスを使用するには XPS プリンタードライバー (XPSDrv) が必要です。  
   
  XPS 印刷パスの利点は、次のとおりです。  
   

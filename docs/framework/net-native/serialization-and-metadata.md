@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 440debe875a0d00d240849ba4b60b548f46e2c0e
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 937577f86ec854f5a458fe6067836a85a540695a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567051"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913802"
 ---
 # <a name="serialization-and-metadata"></a>シリアル化とメタデータ
 
@@ -39,7 +39,7 @@ ms.locfileid: "69567051"
   
 ### <a name="typeof-used-in-the-constructor"></a>コンストラクターで使用される typeof
 
- これらのシリアル化クラスのコンストラクターを呼び出し、メソッド呼び出しC#に[typeof](~/docs/csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator)演算子を含めると、**追加の作業を行う必要はありません**。 たとえば、シリアル化クラス コンストラクターに対する次の各呼び出しでは、`typeof` キーワードがコンストラクターに渡される式の一部として使用されます。  
+ これらのシリアル化クラスのコンストラクターを呼び出し、メソッド呼び出しC#に[typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator)演算子を含めると、**追加の作業を行う必要はありません**。 たとえば、シリアル化クラス コンストラクターに対する次の各呼び出しでは、`typeof` キーワードがコンストラクターに渡される式の一部として使用されます。  
   
  [!code-csharp[ProjectN#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#5)]  
   
@@ -47,7 +47,7 @@ ms.locfileid: "69567051"
   
 ### <a name="typeof-used-outside-the-constructor"></a>コンストラクターの外部で使用される typeof
 
- 次のコードのように、これらのシリアル化クラスC#のコンストラクターを呼び出し、コンストラクターの<xref:System.Type>パラメーターに指定された式の外側で[typeof](~/docs/csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator)演算子を使用した場合、.NET ネイティブコンパイラは型を解決できません。  
+ 次のコードのように、これらのシリアル化クラスC#のコンストラクターを呼び出し、コンストラクターの<xref:System.Type>パラメーターに指定された式の外側で[typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator)演算子を使用した場合、.NET ネイティブコンパイラは型を解決できません。  
   
  [!code-csharp[ProjectN#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#6)]  
   

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: abcbfaf803e930baaaf798986a585a7da5f9134d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b9bb5a2629e435d76691d48feef6689191b66373
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780796"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957899"
 ---
 # <a name="icorprofilerinfo4initializecurrentthread-method"></a>ICorProfilerInfo4::InitializeCurrentThread メソッド
-後続のプロファイラー API は、デッドロックを回避するため、同じスレッドで呼び出しの前に、現在のスレッドを初期化します。  
+デッドロックを回避できるように、同じスレッドで、後続のプロファイラー API 呼び出しの前に現在のスレッドを初期化します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,17 +34,17 @@ HRESULT InitializeCurrentThread ();
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 呼び出すことをお勧めします。 `InitializeCurrentThread` API はありますが、プロファイラーを呼び出す任意のスレッドでスレッドが中断されます。 このメソッドは通常を呼び出す独自のスレッドの作成サンプリング プロファイラーで使用、 [icorprofilerinfo 2::dostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)対象スレッドが中断されている間、スタックを実行する方法について説明します。 呼び出して`InitializeCurrentThread`プロファイラーが CLR をそれ以外の場合、最初の呼び出し中に実行するスレッドごとの遅延初期化のことを確認できる場合、プロファイラーでは、まずサンプリング スレッドを作成した後`DoStackSnapshot`他のスレッドがない場合に安全に発生することができますようになりました中断されています。  
+ 中断されたスレッド`InitializeCurrentThread`がある間は、profiler API を呼び出すスレッドでを呼び出すことをお勧めします。 このメソッドは、通常、 [ICorProfilerInfo2::D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)メソッドを呼び出して、ターゲットスレッドが中断されている間にスタックウォークを実行する独自のスレッドを作成する、サンプリングプロファイラーによって使用されます。 プロファイラーで`InitializeCurrentThread`は、最初にサンプリングスレッドを作成するときにを呼び出すことによって、他のスレッドがない場合に、CLR がの`DoStackSnapshot`最初の呼び出し時に実行するような、スレッドごとの遅延初期化を安全に行うことができます。状態.  
   
 > [!NOTE]
->  `InitializeCurrentThread` ロック、およびデッドロックが発生するタスクを完了するには、事前に初期化します。 呼び出す`InitializeCurrentThread`中断されたスレッドがない場合にのみです。  
+> `InitializeCurrentThread`は、ロックを受け取るタスクを完了するために事前に初期化し、デッドロックが発生する可能性があります。 中断`InitializeCurrentThread`されたスレッドが存在しない場合にのみ、を呼び出します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー:** Corprof.idl、Corprof.idl  
   
- **ライブラリ:** CorGuids.lib  
+ **ライブラリ**CorGuids .lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

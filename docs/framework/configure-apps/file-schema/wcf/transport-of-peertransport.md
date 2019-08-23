@@ -2,14 +2,14 @@
 title: <transport> の <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
-ms.openlocfilehash: 9b6f548515afbba5068659bd5c6f7f2b33f80cda
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5dbc55db25c0c49d72ec2cd8dd1041a3f8705d8e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788285"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940644"
 ---
-# <a name="transport-of-peertransport"></a>\<トランスポート > の\<peerTransport >
+# <a name="transport-of-peertransport"></a>\<peertransport > \<のトランスポート >
 このバインドで構成されたピアが送信する、セキュリティで保護されたメッセージのトランスポートの型を指定します。  
   
  \<system.serviceModel>  
@@ -35,14 +35,14 @@ ms.locfileid: "61788285"
   
 |属性|説明|  
 |---------------|-----------------|  
-|credentialType|省略可能です。 ピア トランスポートにより送信されるメッセージの検証に使用される資格情報の種類を指定します。 この属性は <xref:System.ServiceModel.PeerTransportCredentialType> 型です。|  
+|credentialType|任意。 ピア トランスポートにより送信されるメッセージの検証に使用される資格情報の種類を指定します。 この属性は <xref:System.ServiceModel.PeerTransportCredentialType> 型です。|  
   
 ## <a name="credentialtype-attribute"></a>credentialType 属性  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |証明書|ピア チャネル トランスポートの認証には X 509 証明書が必要です。|  
-|[Password]|ピア チャネル トランスポートの認証には正しいパスワードが必要です。|  
+|Password|ピア チャネル トランスポートの認証には正しいパスワードが必要です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし  
@@ -51,10 +51,10 @@ ms.locfileid: "61788285"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|ピア トランスポートのセキュリティ設定を定義します。|  
+|[\<security>](security-of-peertransport.md)|ピア トランスポートのセキュリティ設定を定義します。|  
   
 ## <a name="remarks"></a>Remarks  
- 場合にのみこの要素は、設定の mode 属性[\<セキュリティ >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)に設定されている`Transport`または`TransportWithMessageCredential`します。  
+ この要素は、 [ \<security >](security-of-peertransport.md)の mode 属性がまたは`TransportWithMessageCredential`に`Transport`設定されている場合にのみ設定されます。  
   
 ## <a name="see-also"></a>関連項目
 
@@ -62,10 +62,10 @@ ms.locfileid: "61788285"
 - <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>
 - <xref:System.ServiceModel.PeerTransportSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [トランスポート セキュリティ](../../../../../docs/framework/wcf/feature-details/transport-security.md)
-- [トランスポート](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [トランスポートの選択](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
-- [バインディング](../../../../../docs/framework/wcf/bindings.md)
-- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [トランスポート セキュリティ](../../../wcf/feature-details/transport-security.md)
+- [トランスポート](../../../wcf/feature-details/transports.md)
+- [トランスポートの選択](../../../wcf/feature-details/choosing-a-transport.md)
+- [バインディング](../../../wcf/bindings.md)
+- [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
+- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

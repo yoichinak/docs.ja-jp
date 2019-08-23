@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 8f1c4415a834f7eb7c3048a89ab81de6921b7bf6
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f4b5a0c3764c173afe03adb67fd3df9d17d9fdcb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629944"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964893"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType レジストリの設定
 このトピックでは、WPF アプリケーションで使用される Microsoft ClearType レジストリ設定の概要について説明します。  
@@ -36,12 +36,12 @@ ms.locfileid: "68629944"
 |ピクセル構造|ディスプレイ デバイスのピクセルの配置を示します。|  
 |テキストのコントラスト レベル|表示されるテキストのコントラストのレベルを示します。|  
   
- これらの設定には、特定[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]の ClearType レジストリ設定を参照する方法を認識する外部構成ユーティリティを使用してアクセスできます。 これらの設定は、[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] レジストリ エディターを使用して値に直接アクセスして作成または変更することもできます。  
+ これらの設定には、特定[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]の ClearType レジストリ設定を参照する方法を認識する外部構成ユーティリティを使用してアクセスできます。 これらの設定は、Windows レジストリエディターを使用して値に直接アクセスすることによって作成または変更することもできます。  
   
- ClearType レジストリ設定が設定されていない場合 (既定の状態)、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションはフォント[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]スムージング設定のシステムパラメーター情報を照会します。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]  
+ ClearType レジストリ設定が設定されていない場合 (既定の状態)、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションは Windows システムパラメーター情報に対してフォントスムージング設定を照会します。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]  
   
 > [!NOTE]
->  表示デバイス名の列挙の詳細について`SystemParametersInfo`は、 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]関数を参照してください。  
+> 表示デバイス名の列挙の詳細について`SystemParametersInfo`は、 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]関数を参照してください。  
   
 <a name="ClearType_level"></a>   
 ## <a name="cleartype-level"></a>ClearType レベル  
@@ -59,7 +59,7 @@ ms.locfileid: "68629944"
  ![レジストリエディターの ClearType 設定。](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションは、ClearType の有無にかかわらず、2つのモードのいずれかでテキストを表示します。 ClearType を使用せずにテキストを表示する場合は、グレースケールレンダリングと呼ばれます。  
+> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションは、ClearType の有無にかかわらず、2つのモードのいずれかでテキストを表示します。 ClearType を使用せずにテキストを表示する場合は、グレースケールレンダリングと呼ばれます。  
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>ガンマ レベル  
@@ -89,7 +89,7 @@ ms.locfileid: "68629944"
  ピクセル構造は、0 から 2 の範囲の整数値に対応します。 既定のレベルは 0 です。これは、フラット ピクセル構造を表します。  
   
 > [!NOTE]
->  表示デバイス名の列挙の詳細について`EnumDisplayDevices`は、 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]関数を参照してください。  
+> 表示デバイス名の列挙の詳細について`EnumDisplayDevices`は、 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]関数を参照してください。  
   
 ### <a name="registry-setting"></a>レジストリ設定  
  ピクセル構造のレジストリ設定は、特定のディスプレイ デバイス名に対応するローカル マシン設定の場所にあります。  

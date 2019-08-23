@@ -10,25 +10,25 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: f4399d8548eff76aaa4effae6da7239cd3b0284b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a7a2475891488d1fdd60f0db4a483c144a73f0d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966916"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947841"
 ---
 # <a name="how-to-send-data-to-the-active-mdi-child"></a>方法: アクティブな MDI 子フォームにデータを送信する
-コンテキスト内で多くの場合、[マルチ ドキュメント インターフェイス (MDI) アプリケーション](multiple-document-interface-mdi-applications.md)ユーザーが MDI アプリケーションに、クリップボードからデータを貼り付けるときなど、アクティブな子ウィンドウにデータを送信する必要があります。  
+多くの場合、[マルチドキュメントインターフェイス (mdi) アプリケーション](multiple-document-interface-mdi-applications.md)のコンテキスト内で、ユーザーがクリップボードから mdi アプリケーションにデータを貼り付けるときなど、アクティブな子ウィンドウにデータを送信する必要があります。  
   
 > [!NOTE]
->  どの子ウィンドウがフォーカスを確認して、その内容をクリップボードに送信する方法については、次を参照してください。[アクティブな MDI 子を決定する](how-to-determine-the-active-mdi-child.md)します。  
+> フォーカスがある子ウィンドウを確認し、その内容をクリップボードに送信する方法については、「[アクティブな MDI 子の決定](how-to-determine-the-active-mdi-child.md)」を参照してください。  
   
-### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>アクティブな MDI 子ウィンドウに、クリップボードからデータを送信するには  
+### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>クリップボードからアクティブな MDI 子ウィンドウにデータを送信するには  
   
-1. メソッド内には、アクティブな子フォームのアクティブなコントロールをクリップボードにテキストをコピーします。  
+1. メソッド内で、アクティブな子フォームのアクティブなコントロールにクリップボードのテキストをコピーします。  
   
     > [!NOTE]
-    >  この例では、MDI 親フォームがある (`Form1`) を含む 1 つまたは複数の MDI 子ウィンドウを持つ、<xref:System.Windows.Forms.RichTextBox>コントロール。 詳細については、次を参照してください。 [MDI 親フォームを作成する](how-to-create-mdi-parent-forms.md)します。  
+    > この例では、`Form1` <xref:System.Windows.Forms.RichTextBox>コントロールを含む mdi 子ウィンドウが1つ以上ある mdi 親フォーム () があることを前提としています。 詳細については、「 [MDI 親フォームの作成](how-to-create-mdi-parent-forms.md)」を参照してください。  
   
     ```vb  
     Public Sub mniPaste_Click(ByVal sender As Object, _  
@@ -94,7 +94,7 @@ ms.locfileid: "61966916"
 ## <a name="see-also"></a>関連項目
 
 - [マルチ ドキュメント インターフェイス (MDI) アプリケーション](multiple-document-interface-mdi-applications.md)
-- [方法: MDI 親フォームを作成します。](how-to-create-mdi-parent-forms.md)
-- [方法: MDI 子フォームを作成します。](how-to-create-mdi-child-forms.md)
-- [方法: アクティブな MDI 子を決定します。](how-to-determine-the-active-mdi-child.md)
-- [方法: MDI 子フォームを配置します。](how-to-arrange-mdi-child-forms.md)
+- [方法: MDI 親フォームを作成する](how-to-create-mdi-parent-forms.md)
+- [方法: MDI 子フォームを作成する](how-to-create-mdi-child-forms.md)
+- [方法: アクティブな MDI 子フォームを特定する](how-to-determine-the-active-mdi-child.md)
+- [方法: MDI 子フォームを配置する](how-to-arrange-mdi-child-forms.md)

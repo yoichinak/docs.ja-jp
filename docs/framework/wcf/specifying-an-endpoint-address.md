@@ -7,45 +7,45 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: b570d07639846e67c4e352debc2314140b40faff
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1a2d15f3c13d75d4e1e27ae561749ce8444cba2b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592508"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922959"
 ---
 # <a name="specifying-an-endpoint-address"></a>エンドポイント アドレスの指定
-Windows Communication Foundation (WCF) サービスとすべての通信は、そのエンドポイントを介して行われます。 各 <xref:System.ServiceModel.Description.ServiceEndpoint> は、<xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>、<xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A>、および <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A> で構成されます。 コントラクトでは、使用できる操作を指定します。 バインディングでは、サービスとの通信方法を指定し、アドレスでは、サービスの場所を指定します。 各エンドポイントには、一意のアドレスを設定する必要があります。 エンドポイント アドレスは、<xref:System.ServiceModel.EndpointAddress> クラスによって表します。このクラスは、サービスのアドレスを表す URI (Uniform Resource Identifier)、サービスのセキュリティ ID を表す <xref:System.ServiceModel.EndpointAddress.Identity%2A>、およびオプションの <xref:System.ServiceModel.EndpointAddress.Headers%2A> のコレクションで構成されます。 オプション ヘッダーは、エンドポイントの識別または対話のために、より詳細なアドレス指定情報を提供します。 たとえば、ヘッダーを使用して、受信メッセージの処理方法や、エンドポイントからの応答メッセージの送信先を指定できるほか、複数のサービス インスタンスが使用できる場合に、特定ユーザーからの受信メッセージの処理に使用するインスタンスを指定できます。  
+Windows Communication Foundation (WCF) サービスとの通信はすべて、エンドポイントを介して行われます。 各 <xref:System.ServiceModel.Description.ServiceEndpoint> は、<xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>、<xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A>、および <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A> で構成されます。 コントラクトでは、使用できる操作を指定します。 バインディングでは、サービスとの通信方法を指定し、アドレスでは、サービスの場所を指定します。 各エンドポイントには、一意のアドレスを設定する必要があります。 エンドポイント アドレスは、<xref:System.ServiceModel.EndpointAddress> クラスによって表します。このクラスは、サービスのアドレスを表す URI (Uniform Resource Identifier)、サービスのセキュリティ ID を表す <xref:System.ServiceModel.EndpointAddress.Identity%2A>、およびオプションの <xref:System.ServiceModel.EndpointAddress.Headers%2A> のコレクションで構成されます。 オプション ヘッダーは、エンドポイントの識別または対話のために、より詳細なアドレス指定情報を提供します。 たとえば、ヘッダーを使用して、受信メッセージの処理方法や、エンドポイントからの応答メッセージの送信先を指定できるほか、複数のサービス インスタンスが使用できる場合に、特定ユーザーからの受信メッセージの処理に使用するインスタンスを指定できます。  
   
 ## <a name="definition-of-an-endpoint-address"></a>エンドポイント アドレスの定義  
- WCF では、 <xref:System.ServiceModel.EndpointAddress> Ws-addressing 標準で定義されているエンドポイント参照 (EPR) をモデル化します。  
+ WCF では、 <xref:System.ServiceModel.EndpointAddress>は ws-addressing 標準で定義されているエンドポイント参照 (EPR) をモデル化します。  
   
- ほとんどのトランスポートの URI アドレスは、4 つの部分から構成されます。 たとえば、この URI、`http://www.fabrikam.com:322/mathservice.svc/secureEndpoint`は次の 4 つの部分があります。  
+ ほとんどのトランスポートの URI アドレスは、4 つの部分から構成されます。 たとえば、この URI `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint`には、次の4つの部分があります。  
   
 - スキーム : http:  
   
-- マシンの場合: `www.fabrikam.com`  
+- 装置`www.fabrikam.com`  
   
-- (省略可能)ポート:322  
+- Optionalポート322  
   
 - パス : /mathservice.svc/secureEndpoint  
   
- EPR モデルの一部では、各エンドポイント参照は、追加の識別情報を追加する複数の参照パラメーターを伝達できます。 WCF では、これらの参照パラメーターがのインスタンスとしてモデル化、<xref:System.ServiceModel.Channels.AddressHeader>クラス。  
+ EPR モデルの一部では、各エンドポイント参照は、追加の識別情報を追加する複数の参照パラメーターを伝達できます。 WCF では、これらの参照パラメーターは<xref:System.ServiceModel.Channels.AddressHeader>クラスのインスタンスとしてモデル化されます。  
   
  サービスのエンドポイント アドレスはコードを使用して強制的に指定するか、構成を介して宣言として指定できます。 設置済みサービスのバインドおよびアドレスは一般的に、サービスの開発中に使用されるものとは異なるので、コード内でエンドポイントを定義することは通常、実用的ではありません。 一般に、サービス エンドポイントの定義にはコードではなく、構成を使用する方がより実用的です。 バインディング情報とアドレス情報をコードに含めないことで、変更時にアプリケーションの再コンパイルや再展開を行う必要がなくなります。 エンドポイントがコードまたは構成で指定されていない場合、ランタイムは、サービスで実装されたコントラクトごとに、1 つの既定のエンドポイントを各ベース アドレスに追加します。  
   
- WCF では、サービスのエンドポイント アドレスを指定する 2 つの方法はあります。 サービスに関連付けられた各エンドポイントに対して絶対アドレスを指定する方法と、<xref:System.ServiceModel.ServiceHost> のベース アドレスを設定して、このベース アドレスから相対的に定義されるアドレスをサービスに関連付けられた各エンドポイントに対して指定する方法です。 サービスのエンドポイント アドレスを指定するには、構成とコードのいずれかで、これらの各方法を使用します。 相対アドレスを指定しない場合、サービスはベース アドレスを使用します。 サービスに対して複数のベース アドレスを設定することもできますが、サービスが各トランスポートに対して設定できるベース アドレスは 1 つに限られます。 複数のエンドポイントがある場合、各エンドポイントには異なるバインディングで構成されるため、それぞれのアドレスは一意になります。 異なるコントラクトで同じバインディングを使用するエンドポイントは同じアドレスを使用できます。  
+ WCF でサービスのエンドポイントアドレスを指定するには、2つの方法があります。 サービスに関連付けられた各エンドポイントに対して絶対アドレスを指定する方法と、<xref:System.ServiceModel.ServiceHost> のベース アドレスを設定して、このベース アドレスから相対的に定義されるアドレスをサービスに関連付けられた各エンドポイントに対して指定する方法です。 サービスのエンドポイント アドレスを指定するには、構成とコードのいずれかで、これらの各方法を使用します。 相対アドレスを指定しない場合、サービスはベース アドレスを使用します。 サービスに対して複数のベース アドレスを設定することもできますが、サービスが各トランスポートに対して設定できるベース アドレスは 1 つに限られます。 複数のエンドポイントがある場合、各エンドポイントには異なるバインディングで構成されるため、それぞれのアドレスは一意になります。 異なるコントラクトで同じバインディングを使用するエンドポイントは同じアドレスを使用できます。  
   
- IIS でホストする場合、ユーザーは <xref:System.ServiceModel.ServiceHost> インスタンスを管理できません。 IIS でホストしているサービスでは、サービスの .svc ファイルで指定されているアドレスが常にベース アドレスになります。 そのため、IIS でホストされるサービスのエンドポイントでは、相対エンドポイント アドレスを使用する必要があります。 完全修飾されたエンドポイント アドレスを指定すると、サービスの展開時にエラーとなる可能性があります。 詳細については、次を参照してください。[インターネット WCF サービスの展開](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)します。  
+ IIS でホストする場合、ユーザーは <xref:System.ServiceModel.ServiceHost> インスタンスを管理できません。 IIS でホストしているサービスでは、サービスの .svc ファイルで指定されているアドレスが常にベース アドレスになります。 そのため、IIS でホストされるサービスのエンドポイントでは、相対エンドポイント アドレスを使用する必要があります。 完全修飾されたエンドポイント アドレスを指定すると、サービスの展開時にエラーとなる可能性があります。 詳細については、「[インターネットインフォメーションサービスでホストされる WCF サービスの配置](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)」を参照してください。  
   
 ## <a name="defining-endpoint-addresses-in-configuration"></a>構成によるエンドポイント アドレスの定義  
- 構成ファイルでエンドポイントを定義するには、使用、 [\<エンドポイント >](../configure-apps/file-schema/wcf/endpoint-element.md)要素。  
+ 構成ファイルでエンドポイントを定義するには、 [ \<エンドポイント >](../configure-apps/file-schema/wcf/endpoint-element.md)要素を使用します。  
   
  [!code-xml[S_UEHelloWorld#5](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp2.config#5)]  
   
- ときに、<xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>メソッドが呼び出されます (つまり、ホスト アプリケーションでは、サービスを開始しようとして)、システムは、 [\<サービス >](../../../docs/framework/configure-apps/file-schema/wcf/service.md) "UE を指定する name 属性を持つ要素。Samples.HelloService"。 場合、 [\<サービス >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)要素が見つかると、システム指定したクラスの読み込みし、構成ファイルで提供されるエンドポイントの定義を使用してエンドポイントを作成します。 このしくみによって、2 行のコードでサービスを読み込んで開始でき、バインディングとアドレス指定情報をコード外に維持することができます。 この方法の利点は、アプリケーションを再度コンパイルしたり、展開したりすることなく、この 2 つの情報を変更できる点です。  
+ メソッドが呼び出されると (つまり、ホストアプリケーションがサービスを開始しようとしたとき)、システムは "ue-v" を指定する name 属性を持つ[ \<サービス >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)要素を検索します。 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>HelloService ". サービス > 要素が見つかった場合、システムは指定されたクラスを読み込み、構成ファイルに指定されているエンドポイント定義を使用してエンドポイントを作成します。 [ \<](../../../docs/framework/configure-apps/file-schema/wcf/service.md) このしくみによって、2 行のコードでサービスを読み込んで開始でき、バインディングとアドレス指定情報をコード外に維持することができます。 この方法の利点は、アプリケーションを再度コンパイルしたり、展開したりすることなく、この 2 つの情報を変更できる点です。  
   
- 省略可能なヘッダーがで宣言されている、 [\<ヘッダー >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)します。 2 つのヘッダーを区別する、構成ファイルで、サービスのエンドポイントを指定するために使用する要素の例を次に示します。"Gold"クライアントから`http://tempuri1.org/`と"Standard"のクライアントから`http://tempuri2.org/`します。 このサービスを呼び出すクライアントが、適切なあります[\<ヘッダー >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)構成ファイルでします。  
+ 省略可能なヘッダーは[ \<> ヘッダー](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)で宣言されます。 2つのヘッダーを区別する構成ファイル内のサービスのエンドポイントを指定するために使用される要素の例を次に示します。からの "Gold" `http://tempuri1.org/`クライアントと "標準" `http://tempuri2.org/`クライアント。 このサービスを呼び出すクライアントは、構成ファイルに > 適切な[ \<ヘッダー](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)を持っている必要があります。  
   
  [!code-xml[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]  
   
@@ -69,7 +69,7 @@ Windows Communication Foundation (WCF) サービスとすべての通信は、�
  [!code-csharp[S_UEHelloWorld#3](../../../samples/snippets/csharp/VS_Snippets_CFX/s_uehelloworld/cs/snippet.cs#3)]  
   
 > [!NOTE]
->  <xref:System.ServiceModel.Description.ServiceDescription> の <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A> メソッドの後で、サービス アプリケーションの <xref:System.ServiceModel.ServiceHostBase> の各プロパティを変更しないでください。 このメソッドの後で変更すると、<xref:System.ServiceModel.ServiceHostBase.Credentials%2A> および `AddServiceEndpoint` の <xref:System.ServiceModel.ServiceHostBase> プロパティや <xref:System.ServiceModel.ServiceHost> メソッドなどの一部のメンバーは例外をスローします。 変更を許可するメンバーもありますが、結果は未定義の状態になります。  
+> <xref:System.ServiceModel.Description.ServiceDescription> の <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A> メソッドの後で、サービス アプリケーションの <xref:System.ServiceModel.ServiceHostBase> の各プロパティを変更しないでください。 このメソッドの後で変更すると、<xref:System.ServiceModel.ServiceHostBase.Credentials%2A> および `AddServiceEndpoint` の <xref:System.ServiceModel.ServiceHostBase> プロパティや <xref:System.ServiceModel.ServiceHost> メソッドなどの一部のメンバーは例外をスローします。 変更を許可するメンバーもありますが、結果は未定義の状態になります。  
 >   
 >  同様に、クライアントで、<xref:System.ServiceModel.Description.ServiceEndpoint> の <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A> 呼び出しの後で、<xref:System.ServiceModel.ChannelFactory> 値を変更しないでください。 この呼び出しの後で変更すると、<xref:System.ServiceModel.ChannelFactory.Credentials%2A> プロパティは例外をスローします。 その他のクライアント記述値は、エラーを発生させずに変更できますが、結果は未定義の状態になります。  
 >   

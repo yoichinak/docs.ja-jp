@@ -10,30 +10,30 @@ helpviewer_keywords:
 - custom controls [Windows Forms], graphics resources
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
-ms.openlocfilehash: 76506e504fdaca83fee502111dbadab5cb41d9b9
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: b24fbefac0dcfb666e25ad1d1726ef2cf8a5d84e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67506180"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968275"
 ---
 # <a name="rendering-a-windows-forms-control"></a>Windows フォーム コントロールのレンダリング
-レンダリングは、ユーザーの画面にビジュアル表現を作成するプロセスを指します。 Windows フォームでは、レンダリングの GDI (新しい Windows グラフィックス ライブラリ) を使用します。 GDI へのアクセスを提供するマネージ クラスは、<xref:System.Drawing?displayProperty=nameWithType>名前空間とその下位の名前空間。  
+レンダリングとは、ユーザーの画面で視覚的表現を作成するプロセスを指します。 Windows フォームは、GDI (新しい Windows グラフィックスライブラリ) を使用してレンダリングを行います。 GDI へのアクセスを提供するマネージクラスは、 <xref:System.Drawing?displayProperty=nameWithType>名前空間とその副名前空間にあります。  
   
- コントロールのレンダリングで、次の要素が含まれます。  
+ コントロールのレンダリングには、次の要素が含まれます。  
   
-- 基本クラスによって提供される描画機能<xref:System.Windows.Forms.Control?displayProperty=nameWithType>します。  
+- 基本クラス<xref:System.Windows.Forms.Control?displayProperty=nameWithType>によって提供される描画機能。  
   
-- GDI グラフィックス ライブラリの重要な要素です。  
+- GDI グラフィックスライブラリの重要な要素。  
   
 - 描画領域のジオメトリ。  
   
-- グラフィックス リソースを解放するプロシージャです。  
+- グラフィックスリソースを解放する手順。  
   
-## <a name="drawing-functionality-provided-by-control"></a>描画コントロールによって提供される機能  
- 基本クラス<xref:System.Windows.Forms.Control>を通じて描画機能を提供します。 その<xref:System.Windows.Forms.Control.Paint>イベント。 コントロールを有効に、<xref:System.Windows.Forms.Control.Paint>イベントの表示を更新する必要があるたびにします。 .NET Framework のイベントの詳細については、次を参照してください。[処理とイベントの発生](../../../standard/events/index.md)します。  
+## <a name="drawing-functionality-provided-by-control"></a>コントロールによって提供される描画機能  
+ 基底クラス<xref:System.Windows.Forms.Control>は、 <xref:System.Windows.Forms.Control.Paint>イベントを通じて描画機能を提供します。 コントロールは、表示<xref:System.Windows.Forms.Control.Paint>を更新する必要があるときに常にイベントを発生させます。 .NET Framework のイベントの詳細については、「[イベントの処理と発生](../../../standard/events/index.md)」を参照してください。  
   
- イベント データ クラスに対する、<xref:System.Windows.Forms.Control.Paint>イベント、<xref:System.Windows.Forms.PaintEventArgs>コントロールを描画するために必要なデータを保持する — グラフィック オブジェクト、および描画する領域を表す四角形オブジェクトを識別するハンドル。 これらのオブジェクトが示すように、次のコード フラグメントでは太字です。  
+ <xref:System.Windows.Forms.Control.Paint>イベントのイベントデータクラスは、コントロールを描画するために必要なデータ (グラフィックスオブジェクトへのハンドル、および描画する領域を表す四角形オブジェクトを保持します) を保持します。 <xref:System.Windows.Forms.PaintEventArgs> これらのオブジェクトは、次のコードフラグメントに太字で示されています。  
   
 ```vb  
 Public Class PaintEventArgs  
@@ -61,9 +61,9 @@ public System.Drawing.Graphics Graphics {get;}
 }  
 ```  
   
- <xref:System.Drawing.Graphics> このトピックの「GDI の説明」の説明に従って、描画機能をカプセル化するマネージ クラスは、します。 <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>のインスタンスである、<xref:System.Drawing.Rectangle>構造体であり、コントロールの描画に使用できる使用可能な領域を定義します。 コントロールの開発者が計算できる、<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>を使用して、 <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> geometry このトピックの後半の説明」の説明に従って、コントロールのプロパティ。  
+ <xref:System.Drawing.Graphics>は、このトピックの後半の「GDI の説明」で説明されているように、描画機能をカプセル化するマネージクラスです。 <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>は<xref:System.Drawing.Rectangle>構造体のインスタンスであり、コントロールが描画できる領域を定義します。 コントロール開発者は、この<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>トピックで<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>後述する「ジオメトリの説明」で説明されているように、コントロールのプロパティを使用してを計算できます。  
   
- コントロールは、オーバーライドすることでレンダリング ロジックを提供する必要があります、<xref:System.Windows.Forms.Control.OnPaint%2A>メソッドから継承した<xref:System.Windows.Forms.Control>します。 <xref:System.Windows.Forms.Control.OnPaint%2A> グラフィックス オブジェクトと経由描画する四角形へのアクセスを取得、<xref:System.Drawing.Design.PaintValueEventArgs.Graphics%2A>と<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>のプロパティ、<xref:System.Windows.Forms.PaintEventArgs>にインスタンスが渡されます。  
+ コントロールは、継承元<xref:System.Windows.Forms.Control.OnPaint%2A> <xref:System.Windows.Forms.Control>のメソッドをオーバーライドすることにより、レンダリングロジックを提供する必要があります。 <xref:System.Windows.Forms.Control.OnPaint%2A>グラフィックスオブジェクトと、 <xref:System.Drawing.Design.PaintValueEventArgs.Graphics%2A> <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>に渡される<xref:System.Windows.Forms.PaintEventArgs>インスタンスのプロパティを通じて描画する四角形へのアクセスを取得します。  
   
 ```vb  
 Protected Overridable Sub OnPaint(pe As PaintEventArgs)  
@@ -73,12 +73,12 @@ Protected Overridable Sub OnPaint(pe As PaintEventArgs)
 protected virtual void OnPaint(PaintEventArgs pe);  
 ```  
   
- <xref:System.Windows.Forms.Control.OnPaint%2A>メソッド ベースの<xref:System.Windows.Forms.Control>クラスは、描画機能を実装していませんが、単に登録されているイベントのデリゲートを呼び出す、<xref:System.Windows.Forms.Control.Paint>イベント。 オーバーライドする場合<xref:System.Windows.Forms.Control.OnPaint%2A>、通常、呼び出す必要があります、<xref:System.Windows.Forms.Control.OnPaint%2A>デリゲートを登録するための基本クラスのメソッドの受信、<xref:System.Windows.Forms.Control.Paint>イベント。 ただし、コントロールの表面全体を描画するには、基本クラスが呼び出す必要がない<xref:System.Windows.Forms.Control.OnPaint%2A>ちらつきが導入されます。 オーバーライドする例については、<xref:System.Windows.Forms.Control.OnPaint%2A>イベントを参照してください、[方法。進行状況を示す Windows フォーム コントロールを作成する](how-to-create-a-windows-forms-control-that-shows-progress.md)します。  
+ 基底<xref:System.Windows.Forms.Control.OnPaint%2A> <xref:System.Windows.Forms.Control.Paint>クラスのメソッドは描画機能を実装しませんが、イベントに登録されているイベントデリゲートを呼び出すだけです。 <xref:System.Windows.Forms.Control> をオーバーライド<xref:System.Windows.Forms.Control.OnPaint%2A>する場合は、通常、基本<xref:System.Windows.Forms.Control.OnPaint%2A>クラスのメソッドを呼び出して、登録されて<xref:System.Windows.Forms.Control.Paint>いるデリゲートがイベントを受け取るようにする必要があります。 ただし、画面全体を描画するコントロールでは、基本クラスの<xref:System.Windows.Forms.Control.OnPaint%2A>を呼び出さないでください。これにより、ちらつきが発生します。 <xref:System.Windows.Forms.Control.OnPaint%2A>イベントをオーバーライドする例につい[ては、「方法:進行状況](how-to-create-a-windows-forms-control-that-shows-progress.md)を表示する Windows フォームコントロールを作成します。  
   
 > [!NOTE]
->  呼び出さないでください<xref:System.Windows.Forms.Control.OnPaint%2A>を直接コントロールの代わりに、起動、<xref:System.Windows.Forms.Control.Invalidate%2A>メソッド (から継承された<xref:System.Windows.Forms.Control>) または他の方法を呼び出す<xref:System.Windows.Forms.Control.Invalidate%2A>します。 <xref:System.Windows.Forms.Control.Invalidate%2A>メソッドが呼び出されます<xref:System.Windows.Forms.Control.OnPaint%2A>します。 <xref:System.Windows.Forms.Control.Invalidate%2A>メソッドをオーバー ロードしてに渡される引数に応じて<xref:System.Windows.Forms.Control.Invalidate%2A> `e`、一部またはすべての画面領域のコントロールを再描画します。  
+> コントロールから直接<xref:System.Windows.Forms.Control.OnPaint%2A>呼び出すのではなく、(から<xref:System.Windows.Forms.Control>継承<xref:System.Windows.Forms.Control.Invalidate%2A>された) メソッドまたはを呼び出す<xref:System.Windows.Forms.Control.Invalidate%2A>他のメソッドを呼び出します。 メソッド<xref:System.Windows.Forms.Control.Invalidate%2A>が呼び出さ<xref:System.Windows.Forms.Control.OnPaint%2A>れます。 メソッドはオーバーロードされており、に<xref:System.Windows.Forms.Control.Invalidate%2A> `e`指定された引数によっては、コントロールが画面領域の一部またはすべてを再描画します。 <xref:System.Windows.Forms.Control.Invalidate%2A>  
   
- 基本<xref:System.Windows.Forms.Control>クラス描画のために役立つもう 1 つのメソッドを定義する —、<xref:System.Windows.Forms.Control.OnPaintBackground%2A>メソッド。  
+ 基底<xref:System.Windows.Forms.Control>クラスは、描画に便利な別のメソッド<xref:System.Windows.Forms.Control.OnPaintBackground%2A> (メソッド) を定義します。  
   
 ```vb  
 Protected Overridable Sub OnPaintBackground(pevent As PaintEventArgs)  
@@ -88,25 +88,25 @@ Protected Overridable Sub OnPaintBackground(pevent As PaintEventArgs)
 protected virtual void OnPaintBackground(PaintEventArgs pevent);  
 ```  
   
- <xref:System.Windows.Forms.Control.OnPaintBackground%2A> 背景を描画 (これにより、図形) ウィンドウの中に、高速にすることが保証されます<xref:System.Windows.Forms.Control.OnPaint%2A>詳細を描画し、個々 の描画要求が 1 つに結合されますので、遅い場合があります<xref:System.Windows.Forms.Control.Paint>に必要なすべての領域をカバーするイベント再描画されます。 呼び出したい場合があります、<xref:System.Windows.Forms.Control.OnPaintBackground%2A>コントロールのグラデーションの色の背景を描画する場合。  
+ <xref:System.Windows.Forms.Control.OnPaintBackground%2A>ウィンドウの背景 (およびその図形) を描画し<xref:System.Windows.Forms.Control.OnPaint%2A>ます。また、個々の描画要求が1つ<xref:System.Windows.Forms.Control.Paint>のイベントに結合され、その結果、すべての領域を対象とするすべての領域をカバーします。描画. たとえば、コントロールのグラデーションカラー <xref:System.Windows.Forms.Control.OnPaintBackground%2A>の背景を描画する必要がある場合は、を呼び出すことができます。  
   
- 中に<xref:System.Windows.Forms.Control.OnPaintBackground%2A>、イベントのような命名規則がありと同じ引数を受け取り、`OnPaint`メソッド、 <xref:System.Windows.Forms.Control.OnPaintBackground%2A> true イベント メソッドではありません。 ない`PaintBackground`イベントと<xref:System.Windows.Forms.Control.OnPaintBackground%2A>イベント デリゲートは呼び出されません。 オーバーライドする場合、<xref:System.Windows.Forms.Control.OnPaintBackground%2A>メソッドでは、派生クラスに呼び出す必要はありません、<xref:System.Windows.Forms.Control.OnPaintBackground%2A>基底クラスのメソッド。  
+ に<xref:System.Windows.Forms.Control.OnPaintBackground%2A>はイベントのような用語があり、 `OnPaint`メソッドと同じ引数を取り<xref:System.Windows.Forms.Control.OnPaintBackground%2A>ますが、は true のイベントメソッドではありません。 イベントは存在`PaintBackground`せず<xref:System.Windows.Forms.Control.OnPaintBackground%2A> 、イベントデリゲートを呼び出しません。 <xref:System.Windows.Forms.Control.OnPaintBackground%2A>メソッドをオーバーライドする場合、派生クラスは基底クラスの<xref:System.Windows.Forms.Control.OnPaintBackground%2A>メソッドを呼び出す必要がありません。  
   
-## <a name="gdi-basics"></a>GDI + の基本  
- <xref:System.Drawing.Graphics>クラスには、円、三角形、弧、および楕円などのさまざまな図形を描画するためのメソッドとテキストを表示するためのメソッドが用意されています。 <xref:System.Drawing?displayProperty=nameWithType>名前空間とそのサブ図形 (円、四角形、弧、および他のユーザー)、色、フォント、ブラシなどのグラフィックス要素をカプセル化するクラスが含まれています。 GDI の詳細については、次を参照してください。[マネージ グラフィックス クラスを使用して](../advanced/using-managed-graphics-classes.md)します。 GDI の要点が記載されても、[方法。進行状況を示す Windows フォーム コントロールを作成する](how-to-create-a-windows-forms-control-that-shows-progress.md)します。  
+## <a name="gdi-basics"></a>GDI + の基礎  
+ クラス<xref:System.Drawing.Graphics>には、円、三角形、円弧、楕円などのさまざまな図形を描画するためのメソッドと、テキストを表示するためのメソッドが用意されています。 名前<xref:System.Drawing?displayProperty=nameWithType>空間とその副名前空間には、図形 (円、四角形、円弧など)、色、フォント、ブラシなどのグラフィックス要素をカプセル化するクラスが含まれています。 GDI の詳細については、「[マネージグラフィックスクラスの使用](../advanced/using-managed-graphics-classes.md)」を参照してください。 GDI の基本事項については、 [「方法:進行状況](how-to-create-a-windows-forms-control-that-shows-progress.md)を表示する Windows フォームコントロールを作成します。  
   
 ## <a name="geometry-of-the-drawing-region"></a>描画領域のジオメトリ  
- <xref:System.Windows.Forms.Control.ClientRectangle%2A>コントロールのプロパティは、ユーザーの画面で、コントロールで使用できる四角形の領域を指定します中に、<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>プロパティの<xref:System.Windows.Forms.PaintEventArgs>が実際に描画される領域を指定します。 (で描画を行うことに注意してください、<xref:System.Windows.Forms.Control.Paint>を受け取るイベント メソッドを<xref:System.Windows.Forms.PaintEventArgs>インスタンスの引数として)。 コントロールは、コントロールの表示の変更の場合と小さいセクションと同様、使用可能な領域では、一部だけを描画する必要があります。 これらの状況では、コントロールの開発者が実際の四角形を描画しに渡さを計算する必要があります<xref:System.Windows.Forms.Control.Invalidate%2A>します。 オーバー ロードされたバージョンの<xref:System.Windows.Forms.Control.Invalidate%2A>を受け取る、<xref:System.Drawing.Rectangle>または<xref:System.Drawing.Region>を引数としてその引数を使用して生成する、<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>プロパティの<xref:System.Windows.Forms.PaintEventArgs>します。  
+ コントロール<xref:System.Windows.Forms.Control.ClientRectangle%2A>のプロパティは、ユーザーの画面上のコントロールで使用できる四角形の領域を指定します<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 。また<xref:System.Windows.Forms.PaintEventArgs> 、のプロパティは、実際に描画される領域を指定します。 (描画は、引数として<xref:System.Windows.Forms.Control.Paint>インスタンスを<xref:System.Windows.Forms.PaintEventArgs>受け取るイベントメソッドで行われることに注意してください)。 コントロールは、コントロールの表示の小さいセクションが変更された場合のように、使用可能な領域の一部だけを描画する必要がある場合があります。 このような状況では、コントロール開発者は、描画する実際の四角形を計算<xref:System.Windows.Forms.Control.Invalidate%2A>してに渡す必要があります。 引数として<xref:System.Windows.Forms.Control.Invalidate%2A>または<xref:System.Drawing.Region>を<xref:System.Drawing.Rectangle>受け取るのオーバーロードされたバージョンは、その<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>引数を<xref:System.Windows.Forms.PaintEventArgs>使用してプロパティを生成します。  
   
- 次のコード フラグメントを示していますが、どのように`FlashTrackBar`カスタム コントロールを描画する四角形の領域を計算します。 `client`変数を表します、<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>プロパティ。 完全なサンプルを参照してください。[方法。進行状況を示す Windows フォーム コントロールを作成する](how-to-create-a-windows-forms-control-that-shows-progress.md)します。  
+ 次のコードフラグメントは、カスタム`FlashTrackBar`コントロールが四角形の領域を計算して描画する方法を示しています。 変数`client`は、プロパティ<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>を表します。 完全なサンプルについて[は、「方法:進行状況](how-to-create-a-windows-forms-control-that-shows-progress.md)を表示する Windows フォームコントロールを作成します。  
   
  [!code-csharp[System.Windows.Forms.FlashTrackBar#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#6)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#6)]  
   
-## <a name="freeing-graphics-resources"></a>グラフィックス リソースの解放  
- グラフィックス オブジェクトは、システム リソースを使用するために高価です。 このようなオブジェクトのインスタンスを含む、<xref:System.Drawing.Graphics?displayProperty=nameWithType>クラスのインスタンスと<xref:System.Drawing.Brush?displayProperty=nameWithType>、 <xref:System.Drawing.Pen?displayProperty=nameWithType>、およびその他のグラフィックス クラス。 必要がありますが、リリースする場合にのみ、グラフィックス リソースを作成することが重要になりますがそれを使用して終了するとすぐにします。 実装する型を作成する場合、<xref:System.IDisposable>インターフェイスを呼び出してその<xref:System.IDisposable.Dispose%2A>リソースを解放するために操作を終了したらメソッド。  
+## <a name="freeing-graphics-resources"></a>グラフィックスリソースの解放  
+ グラフィックスオブジェクトは、システムリソースを使用するため、コストが高くなります。 このようなオブジェクトには<xref:System.Drawing.Graphics?displayProperty=nameWithType> 、クラスのインスタンスだけで<xref:System.Drawing.Brush?displayProperty=nameWithType>なく<xref:System.Drawing.Pen?displayProperty=nameWithType>、、、およびその他のグラフィックスクラスのインスタンスが含まれます。 グラフィックスリソースは、必要なときにのみ作成し、使用が終了したらすぐにリリースすることが重要です。 <xref:System.IDisposable>インターフェイスを実装する型を作成する場合は、リソース<xref:System.IDisposable.Dispose%2A>を解放するために、メソッドの使用が終了したときにメソッドを呼び出します。  
   
- 次のコード フラグメントを示しています、`FlashTrackBar`カスタム コントロールを作成して、解放、<xref:System.Drawing.Brush>リソース。 完全なソース コードでは、次を参照してください。[方法。進行状況を示す Windows フォーム コントロールを作成する](how-to-create-a-windows-forms-control-that-shows-progress.md)します。  
+ 次のコードフラグメントは、カスタム`FlashTrackBar`コントロールがリソースを<xref:System.Drawing.Brush>作成および解放する方法を示しています。 完全なソースコードについて[は、「方法:進行状況](how-to-create-a-windows-forms-control-that-shows-progress.md)を表示する Windows フォームコントロールを作成します。  
   
  [!code-csharp[System.Windows.Forms.FlashTrackBar#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#5)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#5)]  
@@ -119,4 +119,4 @@ protected virtual void OnPaintBackground(PaintEventArgs pevent);
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: 進行状況を示す Windows フォーム コントロールを作成します。](how-to-create-a-windows-forms-control-that-shows-progress.md)
+- [方法: 進行状況を表示する Windows フォームコントロールを作成する](how-to-create-a-windows-forms-control-that-shows-progress.md)
