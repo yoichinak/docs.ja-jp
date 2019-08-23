@@ -1156,6 +1156,10 @@
             "redirect_url": "/dotnet/csharp/language-reference/operators/operator-overloading"
         },
         {
+            "source_path": "docs/csharp/programming-guide/statements-expressions-operators/operators.md",
+            "redirect_url": "/dotnet/csharp/language-reference/operators/index"
+        },
+        {
             "source_path": "docs/csharp/programming-guide/statements-expressions-operators/overloadable-operators.md",
             "redirect_url": "/dotnet/csharp/language-reference/operators/operator-overloading#overloadable-operators"
         },
@@ -2184,6 +2188,18 @@
         {
             "source_path": "docs/framework/windows-workflow-foundation/using-the-interop-activity-in-a-net-framework-4-workflow.md",
             "redirect_url": "/previous-versions/dotnet/netframework-4.0/ee264174(v%3dvs.100)"
+        },
+        {
+            "source_path": "docs/framework/winforms/controls/how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms.md",
+            "redirect_url": "/dotnet/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines"
+        },
+        {
+            "source_path": "docs/framework/winforms/controls/how-to-copy-controls-between-windows-forms.md",
+            "redirect_url": "/dotnet/framework/winforms/controls/how-to-align-multiple-controls-on-windows-forms"
+        },
+        {
+            "source_path": "docs/framework/winforms/controls/arranging-controls-on-windows-forms.md",
+            "redirect_url": "/dotnet/framework/winforms/controls/how-to-align-multiple-controls-on-windows-forms"
         },
         {
             "source_path": "docs/framework/winforms/disable-dpi-awareness-visual-studio.md",
