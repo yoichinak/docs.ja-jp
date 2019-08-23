@@ -6,20 +6,20 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: d79ce0d189fc88310594f356f1901d93b3e1e06f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61befdcaf1381120dba6f72ba592dade09d0490a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954974"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968339"
 ---
 # <a name="impersonating-the-client"></a>クライアントの偽装
 偽装のサンプルでは、サービスで呼び出し元のアプリケーションを偽装し、サービスが呼び出し元の代わりにシステム リソースにアクセスできるようにする方法を示します。  
   
- このサンプルがに基づいて、[セルフホスト](../../../../docs/framework/wcf/samples/self-host.md)サンプル。 サービスとクライアントの構成ファイルはいるのと同じ、[セルフホスト](../../../../docs/framework/wcf/samples/self-host.md)サンプル。  
+ このサンプルは、[自己ホスト](../../../../docs/framework/wcf/samples/self-host.md)のサンプルに基づいています。 サービスとクライアントの構成ファイルは、[自己ホスト](../../../../docs/framework/wcf/samples/self-host.md)のサンプルと同じです。  
   
 > [!NOTE]
->  このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
+> このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
   
  サービス コードは、サービスの `Add` メソッドが <xref:System.ServiceModel.OperationBehaviorAttribute> を使用して呼び出し元を偽装するように変更されています。次のサンプル コードを参照してください。  
   
@@ -102,18 +102,18 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  このサンプルを実行すると、操作要求と応答がサービスとクライアントの両方のコンソール ウィンドウに表示されます。 どちらかのコンソールで Enter キーを押すと、サービスとクライアントがどちらもシャットダウンされます。  
   
 > [!NOTE]
->  サービスの管理者アカウントで実行する必要がありますまたはそれを実行するアカウントに登録する権限を付与する必要があります、 `http://localhost:8000/ServiceModelSamples` HTTP 層を持つ URI です。 設定することによってこのような権限を付与する、 [Namespace 予約](https://go.microsoft.com/fwlink/?LinkId=95012)を使用して、 [Httpcfg.exe ツール](https://go.microsoft.com/fwlink/?LinkId=95010)します。  
+> サービスは、管理者アカウントで実行するか、または実行するアカウントに HTTP レイヤーを使用し`http://localhost:8000/ServiceModelSamples`て URI を登録する権限が付与されている必要があります。 このような権限は、 [httpcfg.exe ツール](https://go.microsoft.com/fwlink/?LinkId=95010)を使用して[名前空間の予約](https://go.microsoft.com/fwlink/?LinkId=95012)を設定することによって付与できます。  
   
 > [!NOTE]
->  [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] を実行しているコンピューターでは、Host.exe アプリケーションに偽装特権がある場合にのみ偽装がサポートされます  (既定では、管理者のみがこれを許可できます)。として、サービスが実行されているアカウントにこの特権を追加するには**管理ツール**、オープン**ローカル セキュリティ ポリシー**オープン**ローカル ポリシー** をクリックして**ユーザー権利の割り当て**、選択と**認証後にクライアントを偽装** をダブルクリックします**プロパティ**ユーザーまたはグループに追加します。  
+> [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] を実行しているコンピューターでは、Host.exe アプリケーションに偽装特権がある場合にのみ偽装がサポートされます (既定では、管理者のみがこれを許可できます)。サービスを実行しているアカウントにこの特権を追加するには、 **[管理ツール]** 、 **[ローカルセキュリティポリシー]** 、 **[ローカルポリシー]** の順に選択し、 **[ユーザー権利の割り当て]** をクリックしてから [**クライアントの偽装後] を選択します。[認証**] をクリックし、 **[プロパティ]** をダブルクリックして、ユーザーまたはグループを追加します。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1. 実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
+1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。  
   
 2. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
-3. 1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
+3. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)」の手順に従います。  
   
 4. サービスが呼び出し元を偽装していることを示すため、サービスが実行されているアカウントとは異なるアカウントでクライアントを実行します。 これを行うには、コマンド プロンプトに次のコマンドを入力します。  
   

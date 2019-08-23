@@ -10,12 +10,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
-ms.openlocfilehash: 0891b64fdb26953ab90f3da931f04513ac9e8bcf
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 378d7b0c67791e6c48e9859e0546594df3ccc85e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040210"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931014"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>チュートリアル: Visual Basic による Windows フォーム コントロールからの継承
 Visual Basic を使用すると、*継承*によって強力なカスタムコントロールを作成できます。 継承を使用すると、標準の Windows フォーム コントロールの固有の機能をすべて保持しながら、カスタム機能も組み込んだコントロールを作成できます。 このチュートリアルでは、`ValueButton` という単純な継承されたコントロールを作成します。 このボタンは、標準の Windows フォーム<xref:System.Windows.Forms.Button>コントロールから機能を継承し、と呼ば`ButtonValue`れるカスタムプロパティを公開します。
@@ -29,7 +29,7 @@ Visual Basic を使用すると、*継承*によって強力なカスタムコ�
 
 2. Visual Basic プロジェクトの一覧から **[Windows フォームコントロールライブラリ]** プロジェクトテンプレートを選択し、 `ValueButtonLib` **[名前]** ボックスに「」と入力します。
 
-     プロジェクト名 `ValueButtonLib` は、既定でルート名前空間にも割り当てられます。 ルート名前空間は、アセンブリ内のコンポーネント名の修飾に使用されます。 たとえば、`ValueButton` という名前のコンポーネントが 2 つのアセンブリに含まれている場合、`ValueButtonLib.ValueButton` を使用して目的の `ValueButton` コンポーネントを指定できます。 詳細については、「[Visual Basic における名前空間](~/docs/visual-basic/programming-guide/program-structure/namespaces.md)」を参照してください。
+     プロジェクト名 `ValueButtonLib` は、既定でルート名前空間にも割り当てられます。 ルート名前空間は、アセンブリ内のコンポーネント名の修飾に使用されます。 たとえば、`ValueButton` という名前のコンポーネントが 2 つのアセンブリに含まれている場合、`ValueButtonLib.ValueButton` を使用して目的の `ValueButton` コンポーネントを指定できます。 詳細については、「[Visual Basic における名前空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)」を参照してください。
 
 3. **ソリューション エクスプローラー**で、 **[UserControl1.vb]** を右クリックし、ショートカット メニューの **[名前の変更]** をクリックします。 ファイル名を `ValueButton.vb` に変更します。 コード要素 "UserControl1" へのすべての参照の名前を変更するかどうかをたずねられたら、 **[はい]** をクリックします。
 
@@ -46,7 +46,7 @@ Visual Basic を使用すると、*継承*によって強力なカスタムコ�
      ビジュアル デザイナーは使用できなくなっていることに注意してください。 コントロールは<xref:System.Windows.Forms.Button>独自の描画を行うため、デザイナーで外観を変更することはできません。 ビジュアル表現は、コード内で変更されない限り、から継承したクラス (つまり<xref:System.Windows.Forms.Button>、) とまったく同じになります。
 
 > [!NOTE]
->  UI 要素のないコンポーネントをデザイン サーフェイスに追加することは可能です。
+> UI 要素のないコンポーネントをデザイン サーフェイスに追加することは可能です。
 
 ## <a name="adding-a-property-to-your-inherited-control"></a>継承されたコントロールへのプロパティの追加
  継承された Windows フォーム コントロールの考えられる用途の 1 つとして、外観と動作 (ルック アンド フィール) は標準の Windows フォーム コントロールと同じでありながら、カスタム プロパティを公開するコントロールの作成があります。 このセクションでは、`ButtonValue` というプロパティをコントロールに追加します。
@@ -91,7 +91,7 @@ Visual Basic を使用すると、*継承*によって強力なカスタムコ�
 
 1. **[ファイル]** メニューの **[追加]** をポイントし、 **[新しいプロジェクト]** をクリックして **[新しいプロジェクトの追加]** ダイアログ ボックスを開きます。
 
-2. [Visual Basic プロジェクト] ノードを選択し、 **[Windows フォームアプリケーション]** をクリックします。
+2. Visual Basic プロジェクト ノードを選択し、 **Windows フォームアプリケーション** をクリックします。
 
 3. **[名前]** ボックスに「 `Test`」と入力します。
 
@@ -148,4 +148,4 @@ Visual Basic を使用すると、*継承*によって強力なカスタムコ�
 - [チュートリアル: Visual Basic による複合コントロールの作成](walkthrough-authoring-a-composite-control-with-visual-basic.md)
 - [方法: [ツールボックスアイテムの選択] ダイアログボックスにコントロールを表示する](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
 - [.NET Framework を使用したカスタム Windows フォーム コントロールの開発](developing-custom-windows-forms-controls.md)
-- [継承の基本 (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [継承の基本 (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

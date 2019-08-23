@@ -6,16 +6,16 @@ helpviewer_keywords:
 - Calendar control type
 - control types, Calendar
 ms.assetid: e91a7393-a7f9-4838-a1a6-857438b24bc9
-ms.openlocfilehash: 747e1112046b6882b1a3bef0c1bfdb25f0e83f53
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 082325aede46501ade15fce60e6ef06e3d3ecf39
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787986"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914203"
 ---
 # <a name="ui-automation-support-for-the-calendar-control-type"></a>UI オートメーションによる Calendar コントロール型のサポート
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 の最新情報[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については[、「Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  このトピックでは、Calendar コントロール型に対する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のサポートについて説明します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]でのコントロール型とは、コントロールが <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> プロパティを使用するために満たす必要がある一連の条件のことです。 条件には、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティの値、コントロール パターン、および [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントに関する特定のガイドラインが含まれます。  
   
@@ -29,13 +29,13 @@ ms.locfileid: "61787986"
   
 |コントロール ビュー|コンテンツ ビュー|  
 |------------------|------------------|  
-|予定表<br /><br /> <ul><li>DataGrid<br /><br /> <ul><li>Header (0 または 1)</li><li>HeaderItem (0 または 7、数量は列に表示される日数によって異なる)</li><li>ListItem (数量は表示される日数によって異なる)</li><li>Button (0 または 2、カレンダー ビューのページ移動用)</li></ul></li></ul>|予定表<br /><br /> -ListItem (数量によって異なります日数が表示されます)|  
+|予定表<br /><br /> <ul><li>DataGrid<br /><br /> <ul><li>Header (0 または 1)</li><li>HeaderItem (0 または 7、数量は列に表示される日数によって異なる)</li><li>ListItem (数量は表示される日数によって異なる)</li><li>Button (0 または 2、カレンダー ビューのページ移動用)</li></ul></li></ul>|予定表<br /><br /> -ListItem (数量は表示される日数によって異なります)|  
   
  Calendar コントロールは、ユーザー インターフェイスのさまざまな形式で表すことができます。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューに含まれることが保証されるコントロールは、データ グリッド、ヘッダー、ヘッダー項目、およびリスト項目のコントロールだけです。  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>必須の UI オートメーション プロパティ  
- 次の表に、カレンダー コントロールに特に関連する値または定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。 詳細については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]プロパティを参照してください[クライアントの UI オートメーション プロパティ](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)します。  
+ 次の表に、カレンダー コントロールに特に関連する値または定義を持つ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティを示します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]プロパティの詳細については、「[クライアントの UI オートメーションのプロパティ](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)」を参照してください。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティ|[値]|メモ|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
@@ -57,8 +57,8 @@ ms.locfileid: "61787986"
 |コントロール パターン/パターン プロパティ|サポート|メモ|  
 |---------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IGridProvider>|[はい]|1 か月の中に含まれる日付が空間的に移動できる項目になるため、カレンダー コントロールは必ず Grid パターンをサポートします。|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider>|状況に依存|ほとんどのカレンダー コントロールはページごとのビューのフリッピングをサポートしています。 ページ移動をサポートするために、Scroll パターンを使用することをお勧めします。|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider>|状況に依存|ほとんどのカレンダー コントロールは、特定の日付、月、または年を、サブ要素の選択内容の形で保存します。 複数選択が可能なカレンダーもあれば、1 つしか選択できないカレンダーもあります。|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider>|依存|ほとんどのカレンダー コントロールはページごとのビューのフリッピングをサポートしています。 ページ移動をサポートするために、Scroll パターンを使用することをお勧めします。|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider>|依存|ほとんどのカレンダー コントロールは、特定の日付、月、または年を、サブ要素の選択内容の形で保存します。 複数選択が可能なカレンダーもあれば、1 つしか選択できないカレンダーもあります。|  
 |<xref:System.Windows.Automation.Provider.ITableProvider>|[はい]|カレンダー コントロールには曜日のサブツリー内に常にヘッダーがあるため、Table パターンがサポートされる必要があります。|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|いいえ|カレンダー コントロールでは値を直接設定できないため、このコントロールに Value コントロール パターンは必要ありません。 特定の日付がコントロールに関連付けられている場合は、Selection コントロール パターンによって情報を提供する必要があります。|  
   
@@ -74,13 +74,13 @@ ms.locfileid: "61787986"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> プロパティ変更イベント。|必須|なし|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LayoutInvalidatedEvent>|必須|なし|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必須|なし|  
-|<xref:System.Windows.Automation.MultipleViewPatternIdentifiers.CurrentViewProperty> プロパティ変更イベント。|状況に依存|なし|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> プロパティ変更イベント。|状況に依存|コントロールで Scroll コントロール パターンをサポートする場合は、このイベントをサポートする必要があります。|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> プロパティ変更イベント。|状況に依存|コントロールで Scroll コントロール パターンをサポートする場合は、このイベントをサポートする必要があります。|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> プロパティ変更イベント。|状況に依存|コントロールで Scroll コントロール パターンをサポートする場合は、このイベントをサポートする必要があります。|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> プロパティ変更イベント。|状況に依存|コントロールで Scroll コントロール パターンをサポートする場合は、このイベントをサポートする必要があります。|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> プロパティ変更イベント。|状況に依存|コントロールで Scroll コントロール パターンをサポートする場合は、このイベントをサポートする必要があります。|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> プロパティ変更イベント。|状況に依存|コントロールで Scroll コントロール パターンをサポートする場合は、このイベントをサポートする必要があります。|  
+|<xref:System.Windows.Automation.MultipleViewPatternIdentifiers.CurrentViewProperty> プロパティ変更イベント。|依存|なし|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> プロパティ変更イベント。|依存|コントロールで Scroll コントロール パターンをサポートする場合は、このイベントをサポートする必要があります。|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> プロパティ変更イベント。|依存|コントロールで Scroll コントロール パターンをサポートする場合は、このイベントをサポートする必要があります。|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> プロパティ変更イベント。|依存|コントロールで Scroll コントロール パターンをサポートする場合は、このイベントをサポートする必要があります。|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> プロパティ変更イベント。|依存|コントロールで Scroll コントロール パターンをサポートする場合は、このイベントをサポートする必要があります。|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> プロパティ変更イベント。|依存|コントロールで Scroll コントロール パターンをサポートする場合は、このイベントをサポートする必要があります。|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> プロパティ変更イベント。|依存|コントロールで Scroll コントロール パターンをサポートする場合は、このイベントをサポートする必要があります。|  
 |<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|必須|なし|  
   
 ## <a name="see-also"></a>関連項目

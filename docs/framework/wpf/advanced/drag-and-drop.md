@@ -8,20 +8,20 @@ helpviewer_keywords:
 - drag and drop [WPF]
 - drag-and-drop [WPF]
 ms.assetid: 77c48920-8c8b-41eb-8fe8-b411962c8623
-ms.openlocfilehash: 4a0e7cac9262908e4683aebeb653559c1513d4d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a610d41d9db7f205d868713a6e1cd59c311ea916
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010411"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964824"
 ---
 # <a name="drag-and-drop"></a>ドラッグ アンド ドロップ
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 非常に柔軟なドラッグ アンド ドロップ インフラストラクチャ内の両方のデータのドラッグ アンド ドロップのサポートを提供します。[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションだけでなく他[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]アプリケーション。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]は、柔軟性の高いドラッグアンドドロップインフラストラクチャを提供します。このインフラストラクチャは[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 、両方のアプリケーションおよび他の Windows アプリケーション内のデータのドラッグアンドドロップをサポートします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ドラッグ アンド ドロップの概要](drag-and-drop-overview.md)  
  [データとデータ オブジェクト](data-and-data-objects.md)  
- [チュートリアル: 有効にするドラッグ アンド ドロップ ユーザー コントロールで](walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
+ [チュートリアル: ユーザーコントロールでのドラッグアンドドロップの有効化](walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
  [方法トピック](drag-and-drop-how-to-topics.md)  
   
 ## <a name="reference"></a>参照  

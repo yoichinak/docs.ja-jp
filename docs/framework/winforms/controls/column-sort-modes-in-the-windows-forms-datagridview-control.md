@@ -5,58 +5,58 @@ helpviewer_keywords:
 - data grids [Windows Forms], sort modes
 - DataGridView control [Windows Forms], sort mode
 ms.assetid: 43715887-2df9-4da7-bcf1-b9c7c842b2bf
-ms.openlocfilehash: b8f6048946d367dd79b1ce0d23d84446ffdb1115
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0d743ccae38d101eda5bb9780b33ae18dfb608a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956222"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918449"
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロール内の列の並べ替えモード
-<xref:System.Windows.Forms.DataGridView> 列では、次の 3 つの並べ替えモードがあります。 使用して各列の並べ替えモードを指定、<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>プロパティは、次のいずれかに設定することができる列の<xref:System.Windows.Forms.DataGridViewColumnSortMode>列挙値。  
+<xref:System.Windows.Forms.DataGridView>列には3つの並べ替えモードがあります。 各列の並べ替えモードは、次<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> <xref:System.Windows.Forms.DataGridViewColumnSortMode>の列挙値のいずれかに設定できる、列のプロパティによって指定されます。  
   
 |`DataGridViewColumnSortMode` の値|説明|  
 |----------------------------------------|-----------------|  
-|<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>|テキスト ボックスの列の既定値します。 選択範囲の列ヘッダーは使用しないと、列ヘッダーをクリックすると、自動的に並べ替えます、<xref:System.Windows.Forms.DataGridView>この列で並べ替え順序を示すグリフを表示します。|  
-|<xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>|非テキスト ボックスの列の既定値します。 プログラムでこの列を並べ替えることができます。ただし、ものではありません、並べ替えのため、並べ替えグリフの領域が予約されていません。|  
-|<xref:System.Windows.Forms.DataGridViewColumnSortMode.Programmatic>|プログラムでは、この列を並べ替えることができ、並べ替えグリフの領域を予約します。|  
+|<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>|テキストボックスの列の既定値。 列ヘッダーを選択に使用しない限り、列ヘッダーをクリックする<xref:System.Windows.Forms.DataGridView>と、自動的にこの列によってが並べ替えられ、並べ替え順序を示すグリフが表示されます。|  
+|<xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>|テキストボックス以外の列の既定値。 この列はプログラムで並べ替えることができます。ただし、並べ替えのためのものではないため、並べ替えグリフ用の領域は予約されていません。|  
+|<xref:System.Windows.Forms.DataGridViewColumnSortMode.Programmatic>|この列はプログラムで並べ替えることができ、領域は並べ替えグリフ用に予約されています。|  
   
- 既定値は列の並べ替えモードを変更する<xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>明確注文可能な値が含まれている場合。 項目の状態を表す数値を含むデータベースの列があれば、たとえば、image 列をデータベース列にバインドすることによってこれらの数値として対応するアイコンに表示できます。 ハンドラーでイメージの表示値に数値のセルの値を変更し、<xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType>イベント。 この場合、設定、<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>プロパティを<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>列の並べ替えにユーザーを有効になります。 自動並べ替えにより、ユーザーは、番号に対応する状態が自然な順序を持っていない場合でも同じ状態になっているアイテムをグループ化します。 列のチェック ボックスは、自動並べ替えが同じ状態で項目をグループ化するために役立ちます別の例です。  
+ 意味のある順序付けが可能な値が含まれている<xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>場合は、既定の列の並べ替えモードを変更することができます。 たとえば、アイテムの状態を表す数値を含むデータベース列がある場合は、データベース列に画像列をバインドすることで、これらの数値を対応するアイコンとして表示できます。 その後、 <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType>イベントのハンドラーで数値セル値を画像表示値に変更できます。 この場合、 <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>プロパティをに設定する<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>と、ユーザーが列を並べ替えることができるようになります。 自動並べ替えを使用すると、ユーザーは、数値に対応する状態に自然な順序が設定されていない場合でも、同じ状態の項目をグループ化できます。 チェックボックスの列は、同じ状態の項目をグループ化するために自動並べ替えが役立つもう1つの例です。  
   
- 並べ替えることができます、<xref:System.Windows.Forms.DataGridView>プログラムの任意の列またはに関係なく、複数の列の値によって、<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>設定します。 プログラムによる並べ替えは、並べ替え、独自のユーザー インターフェイス (UI) を提供する場合、またはカスタムの並べ替え機能を実装する場合に便利です。 並べ替えの UI は役立ちますが、提供するなど、設定すると、<xref:System.Windows.Forms.DataGridView>列ヘッダーの選択を有効にするモードを選択します。 ここでは、並べ替え、列ヘッダーを使用することはできませんするため、設定は、適切な並べ替えグリフを表示するヘッダー、<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>プロパティを<xref:System.Windows.Forms.DataGridViewColumnSortMode.Programmatic>します。  
+ <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>設定に関係なく<xref:System.Windows.Forms.DataGridView> 、任意の列または複数の列の値によって、プログラムによってを並べ替えることができます。 プログラムによる並べ替えは、並べ替えに独自のユーザーインターフェイス (UI) を提供したり、カスタムの並べ替えを実装したりする場合に便利です。 列ヘッダーの選択を有効にするように<xref:System.Windows.Forms.DataGridView>選択モードを設定する場合などに、独自の並べ替え UI を提供すると便利です。 この場合、列ヘッダーは並べ替えに使用できませんが、ヘッダーに適切な並べ替えグリフが表示されるようにするには、 <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>プロパティをに<xref:System.Windows.Forms.DataGridViewColumnSortMode.Programmatic>設定します。  
   
- プログラムによる並べ替えモードに設定された列は、自動的に並べ替えグリフを表示しません。 これらの列にする必要があります、グリフ自分で設定して表示する、<xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType>プロパティ。 これは、カスタムの並べ替えを柔軟にする場合に必要です。 たとえば、並べ替える場合、<xref:System.Windows.Forms.DataGridView>を複数の列で複数の並べ替えグリフまたはない並べ替えグリフを表示したい場合があります。  
+ プログラムによる並べ替えモードに設定されている列は、並べ替えグリフを自動的に表示しません。 これらの列では、 <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType>プロパティを設定することによって、自分でグリフを表示する必要があります。 これは、カスタムの並べ替えの柔軟性を必要とする場合に必要です。 たとえば、複数の列でを<xref:System.Windows.Forms.DataGridView>並べ替える場合は、複数の並べ替えグリフを表示するか、並べ替えグリフを使用しないようにすることができます。  
   
- プログラムで並べ替えることができますが、<xref:System.Windows.Forms.DataGridView>列を指定してボタンの列などのいくつかの列では、可能性がありますが含まれていない明確注文可能な値には。 これらの列に対して、<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>プロパティの設定の<xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>並べ替えグリフ用のヘッダー領域を予約する必要がないことには使用されず、並べ替えを示します。  
+ プログラムを使用して、 <xref:System.Windows.Forms.DataGridView>任意の列でを並べ替えることができますが、ボタン列などの一部の列には、意味のある順序付けが可能な値が含まれていない場合があります。 これらの列の場合<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> 、の<xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>プロパティ設定は、並べ替えに使用されないことを示します。したがって、並べ替えグリフのヘッダーに領域を予約する必要はありません。  
   
- ときに、<xref:System.Windows.Forms.DataGridView>は、並べ替えを指定できます、並べ替え列と並べ替え順序の両方の値をチェックして、<xref:System.Windows.Forms.DataGridView.SortedColumn%2A>と<xref:System.Windows.Forms.DataGridView.SortOrder%2A>プロパティ。 カスタムの並べ替え操作の後にこれらの値を意味することができません。 カスタムの並べ替えの詳細については、このトピックの「カスタムの並べ替え」を参照してください。  
+ が並べ替えられている場合は、プロパティ<xref:System.Windows.Forms.DataGridView.SortedColumn%2A>と<xref:System.Windows.Forms.DataGridView.SortOrder%2A>プロパティの値を確認することで、並べ替え列と並べ替え順序の両方を確認できます。 <xref:System.Windows.Forms.DataGridView> これらの値は、カスタムの並べ替え操作の後に意味がありません。 カスタム並べ替えの詳細については、このトピックで後述する「カスタム並べ替え」セクションを参照してください。  
   
- ときに、<xref:System.Windows.Forms.DataGridView>バインドとバインドされていない列を含むコントロールが並べ替えられ、非バインド列の値を自動的に維持することはできません。 これらの値を維持するために設定して仮想モードを実装する必要があります、<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>プロパティを`true`と処理、<xref:System.Windows.Forms.DataGridView.CellValueNeeded>と<xref:System.Windows.Forms.DataGridView.CellValuePushed>イベント。 詳細については、「[方法 :仮想モードを実装で、Windows フォーム DataGridView コントロール](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)します。 バインド モードでバインドされていない列による並べ替えはサポートされていません。  
+ バインドされた列とバインドされていない列の両方を含むコントロールを並べ替える場合、バインドされていない列の値は自動的に保持されません。<xref:System.Windows.Forms.DataGridView> これらの値を維持<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>するには、プロパティをに`true`設定し、イベント<xref:System.Windows.Forms.DataGridView.CellValueNeeded>と<xref:System.Windows.Forms.DataGridView.CellValuePushed>イベントを処理することによって、仮想モードを実装する必要があります。 詳細については、「[方法 :Windows フォーム DataGridView コントロール](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)で仮想モードを実装します。 バインドモードでの非バインド列による並べ替えはサポートされていません。  
   
 ## <a name="programmatic-sorting"></a>プログラムによる並べ替え  
- 並べ替えることができます、<xref:System.Windows.Forms.DataGridView>プログラムで呼び出してその<xref:System.Windows.Forms.DataGridView.Sort%2A>メソッド。  
+ メソッド<xref:System.Windows.Forms.DataGridView.Sort%2A>を呼び出す<xref:System.Windows.Forms.DataGridView>ことによって、プログラムでを並べ替えることができます。  
   
- `Sort(DataGridViewColumn,ListSortDirection)`のオーバー ロード、<xref:System.Windows.Forms.DataGridView.Sort%2A>メソッドは、<xref:System.Windows.Forms.DataGridViewColumn>と<xref:System.ComponentModel.ListSortDirection>パラメーターとしての列挙値。 このオーバー ロードは、値を明確注文することができますが、自動並べ替えを構成するたくないを列で並べ替える場合に便利です。 このオーバー ロードを呼び出すし、列に渡す、<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>プロパティ値の<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic?displayProperty=nameWithType>、<xref:System.Windows.Forms.DataGridView.SortedColumn%2A>と<xref:System.Windows.Forms.DataGridView.SortOrder%2A>プロパティが自動的に設定して、列ヘッダーに適切な並べ替えグリフが表示されます。  
-  
-> [!NOTE]
->  ときに、<xref:System.Windows.Forms.DataGridView>コントロールが設定して、外部データ ソースにバインドされて、<xref:System.Windows.Forms.DataGridView.DataSource%2A>プロパティ、`Sort(DataGridViewColumn,ListSortDirection)`非バインド列のメソッドのオーバー ロードは機能しません。 さらに、ときに、<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>プロパティは`true`、バインドされた列に対してのみ、このオーバー ロードを呼び出すことができます。 列のデータ バインドがあるかどうかを確認するには<xref:System.Windows.Forms.DataGridViewColumn.IsDataBound%2A>プロパティの値。 バインド モードでバインドされていない列の並べ替えはサポートされていません。  
-  
-## <a name="custom-sorting"></a>カスタムの並べ替え  
- カスタマイズできる<xref:System.Windows.Forms.DataGridView>を使用して、`Sort(IComparer)`のオーバー ロード、<xref:System.Windows.Forms.DataGridView.Sort%2A>メソッドまたは処理することによって、<xref:System.Windows.Forms.DataGridView.SortCompare>イベント。  
-  
- `Sort(IComparer)`メソッドのオーバー ロードが実装するクラスのインスタンスを受け取り、<xref:System.Collections.IComparer>インターフェイスをパラメーターとして。 このオーバー ロードは、カスタムの並べ替え; を提供する場合に役立ちますたとえば、列の値を持っていない場合、自然な並べ替え順序またはと自然に並べ替え順序が適切です。 ここで、自動並べ替えを使用することはできませんが、ユーザーが列見出しをクリックして並べ替えする可能性があります。 ハンドラーでこのオーバー ロードを呼び出すことができます、<xref:System.Windows.Forms.DataGridView.ColumnHeaderMouseClick>イベントの選択範囲の列ヘッダーを使用しない場合。  
+ メソッドのオーバーロードは`Sort(DataGridViewColumn,ListSortDirection)` 、パラメーターと<xref:System.Windows.Forms.DataGridViewColumn>してと列挙値を受け取ります。<xref:System.ComponentModel.ListSortDirection> <xref:System.Windows.Forms.DataGridView.Sort%2A> このオーバーロードは、意味のある順序を指定できるが、自動並べ替えを構成しない値を持つ列で並べ替える場合に便利です。 このオーバーロードを呼び出し<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> 、プロパティ値がの<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic?displayProperty=nameWithType>列を渡すと、 <xref:System.Windows.Forms.DataGridView.SortedColumn%2A>プロパティと<xref:System.Windows.Forms.DataGridView.SortOrder%2A>プロパティが自動的に設定され、適切な並べ替えグリフが列ヘッダーに表示されます。  
   
 > [!NOTE]
->  `Sort(IComparer)`メソッドのオーバー ロードの動作の場合にのみ、<xref:System.Windows.Forms.DataGridView>コントロールは、外部データ ソースにバインドされていないと、<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>プロパティの値が`false`します。 外部データ ソースにバインドされている列の並べ替えをカスタマイズするには、データ ソースによって提供される並べ替え操作を使用する必要があります。 仮想モードでは、バインドされていない列に対して独自の並べ替え操作を提供する必要があります。  
+> プロパティを設定して、 `Sort(DataGridViewColumn,ListSortDirection)` コントロールが外部データソースにバインドされている場合、バインドされていない列に対してはメソッドオーバーロードは機能しません。<xref:System.Windows.Forms.DataGridView> <xref:System.Windows.Forms.DataGridView.DataSource%2A> また、 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>プロパティが`true`の場合は、バインドされた列に対してのみこのオーバーロードを呼び出すことができます。 列がデータバインドされて<xref:System.Windows.Forms.DataGridViewColumn.IsDataBound%2A>いるかどうかを判断するには、プロパティ値を確認します。 バインドモードでの非バインド列の並べ替えはサポートされていません。  
   
- 使用する、`Sort(IComparer)`メソッド オーバー ロードで実装するクラスを作成する必要があります、<xref:System.Collections.IComparer>インターフェイス。 このインターフェイスを実装するクラスが必要です、<xref:System.Collections.IComparer.Compare%2A?displayProperty=nameWithType>先のメソッド、<xref:System.Windows.Forms.DataGridView>渡します<xref:System.Windows.Forms.DataGridViewRow>オブジェクトとして入力ときに、`Sort(IComparer)`メソッドのオーバー ロードが呼び出されます。 これにより、任意の列の値に基づいて適切な行の順序を計算できます。  
+## <a name="custom-sorting"></a>カスタム並べ替え  
+ をカスタマイズ<xref:System.Windows.Forms.DataGridView>するには、 `Sort(IComparer)` <xref:System.Windows.Forms.DataGridView.Sort%2A>メソッドのオーバーロードを使用するか、 <xref:System.Windows.Forms.DataGridView.SortCompare>イベントを処理します。  
   
- `Sort(IComparer)`メソッドのオーバー ロードが設定されていない、<xref:System.Windows.Forms.DataGridView.SortedColumn%2A>と<xref:System.Windows.Forms.DataGridView.SortOrder%2A>プロパティ、常に設定する必要がありますので、<xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType>並べ替えグリフを表示するプロパティ。  
-  
- 代替方法として、`Sort(IComparer)`メソッド オーバー ロードで行うことができますのハンドラーを実装することによってカスタムの並べ替え、<xref:System.Windows.Forms.DataGridView.SortCompare>イベント。 このイベントは、ユーザーは、自動並べ替えに対してを呼び出したときに構成された列のヘッダーをクリックしたときに発生します。、`Sort(DataGridViewColumn,ListSortDirection)`のオーバー ロード、<xref:System.Windows.Forms.DataGridView.Sort%2A>メソッド。 正しい順序を計算できるように、コントロール内の行のペアごとに、イベントが発生します。  
+ メソッド`Sort(IComparer)`オーバーロードは、インターフェイスを<xref:System.Collections.IComparer>実装するクラスのインスタンスをパラメーターとして受け取ります。 このオーバーロードは、カスタムの並べ替えを提供する場合に便利です。たとえば、列の値に自然な並べ替え順序が設定されていない場合や、自然な並べ替え順序が適切でない場合などです。 この場合、自動並べ替えを使用することはできませんが、列ヘッダーをクリックしてユーザーが並べ替えられるようにすることもできます。 列ヘッダーを選択に使用しない場合は<xref:System.Windows.Forms.DataGridView.ColumnHeaderMouseClick> 、イベントのハンドラーでこのオーバーロードを呼び出すことができます。  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView.SortCompare>イベントは発生しないときに、<xref:System.Windows.Forms.DataGridView.DataSource%2A>プロパティを設定またはときに、<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>プロパティの値が`true`します。  
+> メソッド`Sort(IComparer)`オーバーロードは、 <xref:System.Windows.Forms.DataGridView>コントロールが<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>外部データソースにバインドされておらず、プロパティ値が`false`の場合にのみ機能します。 外部データソースにバインドされている列の並べ替えをカスタマイズするには、データソースによって提供される並べ替え操作を使用する必要があります。 仮想モードでは、バインドされていない列に対して独自の並べ替え操作を提供する必要があります。  
+  
+ `Sort(IComparer)`メソッドオーバーロードを使用するには、 <xref:System.Collections.IComparer>インターフェイスを実装する独自のクラスを作成する必要があります。 このインターフェイスで<xref:System.Collections.IComparer.Compare%2A?displayProperty=nameWithType>は、メソッドのオーバーロードが呼び出されたとき<xref:System.Windows.Forms.DataGridView> `Sort(IComparer)`に<xref:System.Windows.Forms.DataGridViewRow>がオブジェクトを入力として渡すメソッドを実装するために、クラスが必要です。 これにより、任意の列の値に基づいて、正しい行の順序を計算できます。  
+  
+ メソッドのオーバーロードでは、 <xref:System.Windows.Forms.DataGridView.SortedColumn%2A> <xref:System.Windows.Forms.DataGridView.SortOrder%2A>プロパティとプロパティが設定されないため、並べ替えグリフを表示するようにプロパティを常に設定する必要があります。<xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType> `Sort(IComparer)`  
+  
+ メソッドオーバーロードの`Sort(IComparer)`代わりに、 <xref:System.Windows.Forms.DataGridView.SortCompare>イベントのハンドラーを実装することによって、カスタムの並べ替えを行うことができます。 このイベントは、自動並べ替えを行うように構成された列のヘッダーをユーザー `Sort(DataGridViewColumn,ListSortDirection)`がクリックし<xref:System.Windows.Forms.DataGridView.Sort%2A>たとき、またはメソッドのオーバーロードを呼び出したときに発生します。 イベントは、コントロール内の行の各ペアに対して発生し、正しい順序を計算できるようにします。  
+  
+> [!NOTE]
+> プロパティが設定さ<xref:System.Windows.Forms.DataGridView.SortCompare>れている場合、`true`またはプロパティの値がの場合、イベントは発生しません。<xref:System.Windows.Forms.DataGridView.VirtualMode%2A> <xref:System.Windows.Forms.DataGridView.DataSource%2A>  
   
 ## <a name="see-also"></a>関連項目
 
@@ -67,5 +67,5 @@ ms.locfileid: "61956222"
 - <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType>
 - [Windows フォームの DataGridView コントロールでのデータの並べ替え](sorting-data-in-the-windows-forms-datagridview-control.md)
-- [方法: Windows フォームの DataGridView コントロール内の列の並べ替えモードを設定します。](set-the-sort-modes-for-columns-wf-datagridview-control.md)
-- [方法: Windows フォームの DataGridView コントロールでの並べ替えをカスタマイズします。](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)
+- [方法: Windows フォーム DataGridView コントロールの列の並べ替えモードを設定する](set-the-sort-modes-for-columns-wf-datagridview-control.md)
+- [方法: Windows フォーム DataGridView コントロールでの並べ替えのカスタマイズ](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)

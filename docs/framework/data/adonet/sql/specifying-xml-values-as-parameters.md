@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-ms.openlocfilehash: 4551e8f193ffc9799b57a660f05add888b330484
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 40cdf3efe1ad3ec2db433f68599b87bfeb7908cf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876578"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964735"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>パラメーターとしての XML 値の指定
-クエリには、値を持つ XML 文字列のパラメーターが必要な場合は、開発者がのインスタンスを使用してその値を提供できます、 **SqlXml**データ型。 特別な処理はありません。SQL Server の XML 列では、他のデータ型とまったく同じ方法でパラメーター値をそのまま使用します。  
+XML 文字列の値を持つパラメーターがクエリに必要な場合、開発者は、 **SqlXml**データ型のインスタンスを使用してその値を指定できます。 実際にはトリックがありません。SQL Server の XML 列では、他のデータ型とまったく同じ方法でパラメーター値を受け取ることができます。  
   
 ## <a name="example"></a>例  
- 次のコンソール アプリケーションで新しいテーブルを作成し、 **AdventureWorks**データベース。 新しいテーブルには、という名前の列が含まれています。 **SalesID**という名前の XML 列と**SalesInfo**します。  
+ 次のコンソールアプリケーションでは、 **AdventureWorks**データベースに新しいテーブルを作成します。 新しいテーブルには、 **Salesid**という名前の列と、 **salesid**という名前の XML 列が含まれています。  
   
 > [!NOTE]
->  **AdventureWorks**既定では、SQL Server をインストールするときにサンプル データベースはインストールされません。 SQL Server Setup を実行してインストールします。  
+> SQL Server をインストールした場合、既定では、 **AdventureWorks**サンプルデータベースはインストールされません。 SQL Server Setup を実行してインストールします。  
   
- この例では、新しいテーブルに行を挿入するために <xref:System.Data.SqlClient.SqlCommand> オブジェクトを準備します。 保存したファイルに必要な XML データを提供する、 **SalesInfo**列。  
+ この例では、新しいテーブルに行を挿入するために <xref:System.Data.SqlClient.SqlCommand> オブジェクトを準備します。 保存されたファイルは、 **Salesinfo**列に必要な XML データを提供します。  
   
  この例を実行させるために必要なファイルを作成するには、プロジェクトと同じフォルダー内に新しいテキスト ファイルを作成します。 ファイルに MyTestStoreData.xml という名前を付けます。 ファイルをメモ帳で開き、次のテキストをコピーして貼り付けます。  
   

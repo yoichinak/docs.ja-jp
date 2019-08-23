@@ -1,5 +1,5 @@
 ---
-title: NameValueSectionHandler および DictionarySectionHandler のカスタム要素
+title: NameValueSectionHandler および DictionarySectionHandler の Custom 要素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName
@@ -8,18 +8,18 @@ helpviewer_keywords:
 ms.assetid: 2303031f-4c1d-4df4-bca1-e9bd96ca40dc
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 8636050b2618d1b2c2da0c08c756b0ed221c7f6f
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 890269857aaa00ce62195ccb2f4cb184b363b61e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300769"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921035"
 ---
-# <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>NameValueSectionHandler および DictionarySectionHandler のカスタム要素
+# <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>NameValueSectionHandler および DictionarySectionHandler の Custom 要素
 
-使用して、カスタム構成セクションの設定を定義、<xref:System.Configuration.NameValueSectionHandler>と<xref:System.Configuration.DictionarySectionHandler>クラス。
+クラス<xref:System.Configuration.NameValueSectionHandler> および<xref:System.Configuration.DictionarySectionHandler>クラスを使用するカスタム構成セクションの設定を定義します。
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)\
+[ **\<configuration>** ](configuration-element.md)\
 &nbsp;&nbsp; **\<sectionName>**
 
 ## <a name="attributes"></a>属性
@@ -30,32 +30,32 @@ ms.locfileid: "66300769"
 
 |     | 説明 |
 | --- | ----------- |
-| [ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) | 共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。 |
+| [ **\<configuration>** ](configuration-element.md) | 共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。 |
 
 ## <a name="child-elements"></a>子要素
 
 |     | 説明 |
 | --- | ----------- |
-| [ **\<追加 >** ](~/docs/framework/configure-apps/file-schema/add-element-for-custom-2.md)の<xref:System.Configuration.NameValueSectionHandler>と <xref:System.Configuration.DictionarySectionHandler>  | カスタム アプリケーションの設定を追加します。 |
-| [ **\<削除 >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md)の<xref:System.Configuration.NameValueSectionHandler>と <xref:System.Configuration.DictionarySectionHandler> | 以前に定義された設定を削除します。 |
-| [ **\<クリア >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-custom-2.md)の<xref:System.Configuration.NameValueSectionHandler>と <xref:System.Configuration.DictionarySectionHandler> | セクション内のすべての以前に定義された設定をクリアします。 |
+| およびの<xref:System.Configuration.NameValueSectionHandler> > を[ **\<追加**](add-element-for-custom-2.md)します。<xref:System.Configuration.DictionarySectionHandler>  | カスタムアプリケーション設定を追加します。 |
+| およびの<xref:System.Configuration.NameValueSectionHandler> > を[ **\<削除**](remove-element-for-custom-2.md)します。<xref:System.Configuration.DictionarySectionHandler> | 以前に定義した設定を削除します。 |
+| およびの<xref:System.Configuration.NameValueSectionHandler> > を[ **\<クリア**](clear-element-for-custom-2.md)します。<xref:System.Configuration.DictionarySectionHandler> | セクションで以前に定義したすべての設定を消去します。 |
 
 ## <a name="remarks"></a>Remarks
 
- **\<SectionName>** 要素がによって定義されるカスタム要素、  **\<セクション>** にタグを付ける、  **\<configSections>** 要素。
+**\<SectionName>** 要素がによって定義されるカスタム要素、  **\<セクション>** にタグを付ける、  **\<configSections>** 要素。
 
-次の表は、各構成セクション ハンドラー オブジェクト ConfigurationSettings.GetConfig メソッドの型を返します。
+次の表は、ConfigurationSettings. GetConfig メソッドが各構成セクションハンドラーに対して返すオブジェクトの種類を示しています。
 
-| 構成セクション ハンドラー                        | 戻り値の型                                                |
+| 構成セクションハンドラー                        | 戻り値の型                                                |
 | ---------------------------------------------------- | ---------------------------------------------------------- |
 | <xref:System.Configuration.NameValueSectionHandler>  | <xref:System.Collections.Specialized.NameValueCollection>  |
 | <xref:System.Configuration.DictionarySectionHandler> | <xref:System.Collections.IDictionary>                      |
 
 ## <a name="example"></a>例
 
-次の例を使用するセクションを宣言する方法を示しています、<xref:System.Configuration.DictionarySectionHandler>と<xref:System.Configuration.NameValueSectionHandler>クラス。
+次の例は、クラス<xref:System.Configuration.DictionarySectionHandler>と<xref:System.Configuration.NameValueSectionHandler>クラスを使用するセクションを宣言する方法を示しています。
 
-最初のカスタム要素は **\<dictionarySample >** 、によって読み取られた設定を含む、<xref:System.Configuration.DictionarySectionHandler>クラス、`System.dll`アセンブリ。 2 番目のカスタム要素は **\<mySection >** 、によって読み取られた設定を含む、<xref:System.Configuration.NameValueSectionHandler>クラス、`System.dll`アセンブリ。
+最初のカスタム要素は、 `System.dll`アセンブリ内の<xref:System.Configuration.DictionarySectionHandler>クラスによって読み取られた設定を含む **\<dictionarySample >** です。 2番目のカスタム要素は **\<mysection >** です。この要素に<xref:System.Configuration.NameValueSectionHandler>は、 `System.dll`アセンブリのクラスによって読み込まれる設定が含まれます。
 
 ```xml
 <configuration>
@@ -78,8 +78,8 @@ ms.locfileid: "66300769"
 
 ## <a name="configuration-file"></a>構成ファイル
 
-この要素は、アプリケーション構成ファイル、マシン構成ファイルで使用できます (*Machine.config*)、および*Web.config*アプリケーション ディレクトリ レベルではないファイル。
+この要素は、アプリケーション構成ファイル、コンピューター構成ファイル (machine.config)、およびアプリケーションディレクトリレベルではない web.config ファイルで使用できます。
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Framework の構成ファイル スキーマ](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework の構成ファイルスキーマ](index.md)

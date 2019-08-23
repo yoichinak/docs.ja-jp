@@ -10,12 +10,12 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: dd8790efa14018817c9e51e688b17c22d31d482f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: da234402c6ec7e2c1f85e4bd674517b1147f0d18
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659570"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927492"
 ---
 # <a name="add-element-for-bypasslist-network-settings"></a>\<bypasslist の > 要素の追加 (ネットワーク設定)
 プロキシバイパス一覧に IP アドレスまたは DNS 名を追加します。  
@@ -59,7 +59,7 @@ ms.locfileid: "69659570"
   
  この要素に正規表現を指定する場合は、注意が必要です。 正規表現 "[a-z] +\\. contoso\\.com" は、contoso.com ドメイン内の任意のホストと一致しますが、contoso.com.cpandl.com ドメイン内の任意のホストとも一致します。 Contoso.com ドメイン内のホストのみを一致させるには、アンカー ("$"): "[a-z] +\\. contoso\\.com $" を使用します。  
   
- 正規表現の詳細については、「」を参照してください。[正規表現を .NET Framework](../../../../../docs/standard/base-types/regular-expressions.md)します。  
+ 正規表現の詳細については、「」を参照してください。[正規表現を .NET Framework](../../../../standard/base-types/regular-expressions.md)します。  
   
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  

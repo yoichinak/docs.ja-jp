@@ -2,14 +2,14 @@
 title: <defaultPorts>
 ms.date: 03/30/2017
 ms.assetid: 725d4ee5-bd46-4f0e-9c20-30ba75d6eb2c
-ms.openlocfilehash: 4d7fdfb1cccb14f03d11864f1939cb578c79880a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 462a06e5a773310b6364838ae2ebc14da0a2ee1b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704116"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925887"
 ---
-# <a name="defaultports"></a>\<defaultPorts>
+# <a name="defaultports"></a>\<defaultPorts >
 クライアント アプリケーションがリッスンする既定の通信エンドポイントの一覧を表示する既定のポートのコレクション。  
   
 \<system.ServiceModel >  
@@ -17,7 +17,7 @@ ms.locfileid: "61704116"
 \<serviceBehaviors>  
 \<behavior>  
 \<useRequestHeadersForMetadataAddress >  
-\<defaultPorts>  
+\<defaultPorts >  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,13 +40,13 @@ ms.locfileid: "61704116"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<追加 > の\<defaultPorts >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-defaultports.md)|クライアント アプリケーションがリッスンする既定の通信エンドポイント。|  
+|[\<defaultports の\<> を追加し >](add-of-defaultports.md)|クライアント アプリケーションがリッスンする既定の通信エンドポイント。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<useRequestHeadersForMetadataAddress >](../../../../../docs/framework/configure-apps/file-schema/wcf/userequestheadersformetadataaddress.md)|既定のポートの一覧。|  
+|[\<useRequestHeadersForMetadataAddress >](userequestheadersformetadataaddress.md)|既定のポートの一覧。|  
   
 ## <a name="see-also"></a>関連項目
 

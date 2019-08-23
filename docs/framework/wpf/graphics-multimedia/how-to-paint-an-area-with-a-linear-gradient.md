@@ -6,15 +6,15 @@ helpviewer_keywords:
 - brushes [WPF], painting with linear gradients
 - painting [WPF], with linear gradients
 ms.assetid: 00e0cd04-48c0-4ec5-850e-d321beb37a34
-ms.openlocfilehash: c48ff13811d784ecc7042b73b964a9e6f2d42a34
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92c9ccd846dbbce043d13e6ba82b9fa8e72fa8b5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921920"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916172"
 ---
 # <a name="how-to-paint-an-area-with-a-linear-gradient"></a>方法: 線形グラデーションを使用して領域を塗りつぶす
-この例は、使用する方法を示します、<xref:System.Windows.Media.LinearGradientBrush>線形グラデーションを使用して領域を描画するクラス。 次の例では、<xref:System.Windows.Shapes.Shape.Fill%2A>の<xref:System.Windows.Shapes.Rectangle>が黄色から緑に青に赤に遷移対角線方向の線形グラデーションで塗りつぶされます。  
+この例では、 <xref:System.Windows.Media.LinearGradientBrush>クラスを使用して、線状グラデーションで領域を塗りつぶす方法を示します。 次の例では、 <xref:System.Windows.Shapes.Shape.Fill%2A> <xref:System.Windows.Shapes.Rectangle>のは、黄色から赤、青から黄緑に遷移する対角線の線形グラデーションで塗りつぶされています。  
   
 ## <a name="example"></a>例  
  [!code-xaml[GradientBrushExamples_snip#DiagonalGradient1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#diagonalgradient1xaml)]  
@@ -25,7 +25,7 @@ ms.locfileid: "61921920"
   
  ![対角線方向の線形グラデーション](./media/graphicsmm-diagonallgb.jpg "graphicsmm_DiagonalLGB")  
   
- 水平方向の線形グラデーションを作成するには、変更、<xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A>と<xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A>の<xref:System.Windows.Media.LinearGradientBrush>(0,0.5) に (1,0.5) とします。 次の例では、<xref:System.Windows.Shapes.Rectangle>が水平方向の線形グラデーションで塗りつぶされます。  
+ 水平方向の線形グラデーションを作成するに<xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A>は<xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> 、の<xref:System.Windows.Media.LinearGradientBrush>およびのを (0, 0.5) と (1, 0.5) に変更します。 次の例では、 <xref:System.Windows.Shapes.Rectangle>は水平線形グラデーションで塗りつぶされています。  
   
  [!code-xaml[GradientBrushExamples_snip#HorizontalGradient1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#horizontalgradient1xaml)]  
   
@@ -35,7 +35,7 @@ ms.locfileid: "61921920"
   
  ![水平方向の線形グラデーション](./media/graphicsmm-horizontallgb.jpg "graphicsmm_HorizontalLGB")  
   
- 垂直方向の線形グラデーションを作成するには、変更、<xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A>と<xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A>の<xref:System.Windows.Media.LinearGradientBrush>(0.5,0) に (0.5,1) とします。 次の例では、<xref:System.Windows.Shapes.Rectangle>が垂直方向の線形グラデーションで塗りつぶされます。  
+ 垂直方向の線形グラデーションを作成するに<xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A>は<xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> 、の<xref:System.Windows.Media.LinearGradientBrush>とのを (0.5, 0) および (0.5, 1) に変更します。 次の例<xref:System.Windows.Shapes.Rectangle>では、が垂直方向の線形グラデーションで塗りつぶされています。  
   
  [!code-xaml[GradientBrushExamples_snip#VerticalGradient1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#verticalgradient1xaml)]  
   
@@ -43,9 +43,9 @@ ms.locfileid: "61921920"
   
  次の図は、前の例で作成したグラデーションを示しています。  
   
- ![垂直方向の線形グラデーション](./media/graphicsmm-verticallgb.jpg "graphicsmm_VerticalLGB")  
+ ![垂直方向の線状グラデーション](./media/graphicsmm-verticallgb.jpg "graphicsmm_VerticalLGB")  
   
 > [!NOTE]
->  このトピックの例では、始点と終点を設定するための既定の座標系を使用します。 既定の座標系は、境界ボックスに対して相対的です。0、境界ボックスの 0% を示し、1 は境界ボックスの 100% を示します。 この座標系を設定して変更することができます、<xref:System.Windows.Media.GradientBrush.MappingMode%2A>プロパティ値を<xref:System.Windows.Media.BrushMappingMode.Absolute?displayProperty=nameWithType>します。 絶対座標系は、境界ボックスに相対しません。 値は、ローカル空間に直接変換されます。  
+> このトピックの例では、開始点と終了点を設定するための既定の座標系を使用します。 既定の座標系は、境界ボックスに対して相対的です。0 は境界ボックスの 0% を示し、1 は境界ボックスの 100% を示します。 この座標系を変更するには、 <xref:System.Windows.Media.GradientBrush.MappingMode%2A>プロパティを値<xref:System.Windows.Media.BrushMappingMode.Absolute?displayProperty=nameWithType>に設定します。 絶対座標系は、境界ボックスに相対しません。 値は、ローカル空間に直接変換されます。  
   
  さらに別の例については、「[ブラシのサンプル](https://go.microsoft.com/fwlink/?LinkID=159973)」を参照してください。 グラデーションおよびその他の種類のブラシの詳細については、「[純色およびグラデーションによる塗りつぶしの概要](painting-with-solid-colors-and-gradients-overview.md)」を参照してください。

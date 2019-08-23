@@ -9,18 +9,18 @@ helpviewer_keywords:
 - user controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: e5a8e088-7ec8-4fd9-bcb3-9078fd134829
-ms.openlocfilehash: 641a6c1c99169c6836c33b3e84b2ae02aba298d2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 11c3d9d6e7faa4741365316339d38f9fda69d059
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972238"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965702"
 ---
 # <a name="developing-windows-forms-controls-at-design-time"></a>デザイン時の Windows フォーム コントロールの開発
 コントロールの作成者は、.NET Framework のさまざまなコントロール作成テクノロジを利用できます。 既存のコントロールを組み合わせた複合コントロールしかデザインできないといった制約はなくなりました。 継承により、既存の複合コントロールや既存の Windows フォーム コントロールから、独自のコントロールを作成できます。 カスタム描画を実装する独自のコントロールを設計することもできます。 これらのオプションを使うと、非常に柔軟にビジュアル インターフェイスのデザインと機能を決めることができます。 これらの機能を利用するには、オブジェクト ベースのプログラミング概念について理解しておく必要があります。  
   
 > [!NOTE]
->  継承、十分に理解する必要はありませんを参照する役に立つ場合があります[継承の基本 (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)します。  
+> 継承について十分に理解している必要はありませんが、[継承の基本 (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)を参照すると役立つ場合があります。  
   
  Web フォームで使うカスタム コントロールを作る場合は、「[カスタム ASP.NET サーバー コントロールの開発](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100))」をご覧ください。  
   
@@ -28,52 +28,52 @@ ms.locfileid: "61972238"
  [チュートリアル: Visual Basic による複合コントロールの作成](walkthrough-authoring-a-composite-control-with-visual-basic.md)  
  Visual Basic で簡単な複合コントロールを作る方法を示します。  
   
- [チュートリアル: ビジュアルを含む複合コントロールの作成C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
+ [チュートリアル: ビジュアルを使用した複合コントロールの作成C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
  C# で簡単な複合コントロールを作る方法を示します。  
   
- [チュートリアル: Visual Basic による Windows フォーム コントロールから継承します。](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
+ [チュートリアル: Visual Basic を使用した Windows フォームコントロールからの継承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
  Visual Basic で継承を使って簡単な Windows フォーム コントロールを作る方法を示します。  
   
- [チュートリアル: ビジュアルを含む Windows フォーム コントロールからの継承C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
+ [チュートリアル: ビジュアルを使用した Windows フォームコントロールからの継承C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
  C# で継承を使って簡単な Windows フォーム コントロールを作る方法を示します。  
   
- [チュートリアル: スマートを使用して一般的なタスクを実行する Windows フォーム コントロールをタグ](performing-common-tasks-using-smart-tags-on-wf-controls.md)  
+ [チュートリアル: Windows フォームコントロールでのスマートタグを使用した一般的なタスクの実行](performing-common-tasks-using-smart-tags-on-wf-controls.md)  
  Windows フォーム コントロールでスマート タグ機能を使う方法を示します。  
   
- [チュートリアル: Designerserializationvisibilityattribute を使用、基本データ型のコレクションをシリアル化します。](serializing-collections-designerserializationvisibilityattribute.md)  
- 使用する方法を示しています、<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content?displayProperty=nameWithType>コレクションをシリアル化する属性。  
+ [チュートリアル: DesignerSerializationVisibilityAttribute を使用した標準型のコレクションのシリアル化](serializing-collections-designerserializationvisibilityattribute.md)  
+ 属性を使用して<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content?displayProperty=nameWithType>コレクションをシリアル化する方法について説明します。  
   
  [チュートリアル: カスタム Windows フォーム コントロールのデザイン時のデバッグ](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
  Windows フォーム コントロールのデザイン時動作をデバッグする方法を示します。  
   
- [チュートリアル: Visual Studio のデザイン時機能を活用した Windows フォーム コントロールの作成](creating-a-wf-control-design-time-features.md)  
+ [チュートリアル: Visual Studio のデザイン時機能を利用する Windows フォームコントロールの作成](creating-a-wf-control-design-time-features.md)  
  デザイン環境に複合コントロールを緊密に統合する方法を示します。  
   
- [方法: Windows フォームのコントロールの作成](how-to-author-controls-for-windows-forms.md)  
+ [方法: Windows フォームの作成者コントロール](how-to-author-controls-for-windows-forms.md)  
  Windows フォーム コントロールの実装に関する考慮事項の概要を説明します。  
   
- [方法: 複合コントロールを作成](how-to-author-composite-controls.md)  
+ [方法: 複合コントロールの作成](how-to-author-composite-controls.md)  
  複合コントロールから継承することでコントロールを作る方法を示します。  
   
- [方法: UserControl クラスを継承します。](how-to-inherit-from-the-usercontrol-class.md)  
+ [方法: UserControl クラスを継承する](how-to-inherit-from-the-usercontrol-class.md)  
  複合コントロール作成手順の概要を説明します。  
   
- [方法: 継承可能な既存の Windows フォーム コントロール](how-to-inherit-from-existing-windows-forms-controls.md)  
- 継承することにより拡張コントロールを作成する方法を示しています、<xref:System.Windows.Forms.Button>クラスを制御します。  
+ [方法: 既存の Windows フォームコントロールから継承する](how-to-inherit-from-existing-windows-forms-controls.md)  
+ <xref:System.Windows.Forms.Button>コントロールクラスから継承することによって拡張コントロールを作成する方法について説明します。  
   
- [方法: コントロール クラスから継承します。](how-to-inherit-from-the-control-class.md)  
+ [方法: コントロールクラスから継承する](how-to-inherit-from-the-control-class.md)  
  拡張コントロールの作成の概要を説明します。  
   
- [方法: デザイン時にコントロールをフォームの端を揃える](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
- 使用する方法を示しています、<xref:System.Windows.Forms.Control.Dock%2A>プロパティを合わせて、フォームの端にコントロールを配置します。  
+ [方法: デザイン時にコントロールをフォームの端に揃える](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
+ <xref:System.Windows.Forms.Control.Dock%2A>プロパティを使用して、コントロールをフォームの端に揃える方法を示します。  
   
- [方法: 内のコントロールを表示、ツールボックス項目 ダイアログ ボックスの選択](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
+ [方法: [ツールボックスアイテムの選択] ダイアログボックスにコントロールを表示する](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
  **ツールボックスのカスタマイズ** ダイアログ ボックスに表示されるようにコントロールをインストールする手順を示します。  
   
- [方法: コントロールにツールボックス ビットマップを指定します。](how-to-provide-a-toolbox-bitmap-for-a-control.md)  
- 使用する方法を示しています、<xref:System.Drawing.ToolboxBitmapAttribute>で、カスタム コントロールの横にあるアイコンを表示する、**ツールボックス**します。  
+ [方法: コントロールのツールボックスビットマップを指定する](how-to-provide-a-toolbox-bitmap-for-a-control.md)  
+ を使用して、 <xref:System.Drawing.ToolboxBitmapAttribute> **ツールボックス**のカスタムコントロールの横にアイコンを表示する方法について説明します。  
   
- [方法: UserControl の実行時の動作をテストします。](how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
+ [方法: UserControl の実行時の動作をテストする](how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
  **UserControl テスト コンテナー**を使って複合コントロールの動作をテストする方法を示します。  
   
  [Windows フォーム デザイナーでのデザイン時エラー](design-time-errors-in-the-windows-forms-designer.md)  
@@ -96,5 +96,5 @@ ms.locfileid: "61972238"
  [言語への非依存性、および言語非依存コンポーネント](../../../standard/language-independence-and-language-independent-components.md)  
  コンポーネントの作成と使用を簡略化するように設計されている共通言語ランタイムの概要について説明します。 この簡略化の重要な側面は、さまざまなプログラミング言語で記述されたコンポーネント間の相互運用性の拡張です。 共通言語仕様 (CLS) を使うと、複数のプログラミング言語で動作するツールやコンポーネントを作ることができます。  
   
- [チュートリアル: カスタム コンポーネントでツールボックスが自動的に入力](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
+ [チュートリアル: ツールボックスへのカスタムコンポーネントの自動設定](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
  コンポーネントやコントロールを**ツールボックスのカスタマイズ** ダイアログ ボックスに表示できるようにする方法を説明します。

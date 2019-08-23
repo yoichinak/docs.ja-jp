@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b84b852-3cad-41a7-8077-149a70d50c8b
-ms.openlocfilehash: f82e347ecdb3c69cee3749855d1e4cb457a460f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f68db5a5a0092fc4cf37746f2a4dc81e40ee4a9d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033614"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938677"
 ---
 # <a name="how-to-turn-off-deferred-loading"></a>方法: 遅延読み込みをオフにする
-<xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> を `false` に設定すると、遅延読み込みをオフにできます。 詳細については、次を参照してください。[遅延読み込みと即時読み込み](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)します。  
+<xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> を `false` に設定すると、遅延読み込みをオフにできます。 詳細については、「[遅延読み込みと即時読み込み](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)」を参照してください。  
   
 > [!NOTE]
->  遅延読み込みは、オブジェクト トラッキングをオフにすると暗黙でオフになります。 詳細については、「[方法 :情報を読み取り専用として取得](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-information-as-read-only.md)します。  
+> 遅延読み込みは、オブジェクト トラッキングをオフにすると暗黙でオフになります。 詳細については、「[方法 :情報を読み取り](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-information-as-read-only.md)専用として取得します。  
   
 ## <a name="example"></a>例  
  <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> を `false` に設定して、遅延読み込みをオフにする方法を次の例に示します。  

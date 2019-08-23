@@ -22,12 +22,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: 170cc4a42eda0b54d1e252104a702e008af7a336
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: df2bd232a870e17eeb5106cf0b60a9e77641969d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671819"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963530"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error ステートメント (Visual Basic)
 エラー処理ルーチンを有効にし、プロシージャ内でルーチンの場所を指定します。は、エラー処理ルーチンを無効にするためにも使用できます。 ステートメント`On Error`は、構造化されていないエラー処理で使用され、構造化例外処理の代わりに使用できます。 [構造化例外処理](../../../standard/exceptions/index.md)は .net に組み込まれているので、一般に効率が向上するため、アプリケーションで実行時エラーを処理する場合に推奨されます。
@@ -35,7 +35,7 @@ ms.locfileid: "68671819"
  エラー処理または例外処理を使用しない場合、発生したすべての実行時エラーは致命的なエラーであり、エラーメッセージが表示され、実行が停止します。
 
 > [!NOTE]
->  キーワードは、旧バージョンとの互換性のためにサポートされている[Error ステートメント](../../../visual-basic/language-reference/statements/error-statement.md)でも使用されます。 `Error`
+> キーワードは、旧バージョンとの互換性のためにサポートされている[Error ステートメント](../../../visual-basic/language-reference/statements/error-statement.md)でも使用されます。 `Error`
 
 ## <a name="syntax"></a>構文
 
@@ -55,7 +55,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 ## <a name="remarks"></a>Remarks
 
 > [!NOTE]
->  構造化例外処理は、構造化されていない例外処理と`On Error`ステートメントを使用するのではなく、可能な限りコードで使用することをお勧めします。 詳細については、[Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)を参照してください。
+> 構造化例外処理は、構造化されていない例外処理と`On Error`ステートメントを使用するのではなく、可能な限りコードで使用することをお勧めします。 詳細については、[Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)を参照してください。
 
  "Enabled" エラーハンドラーは、 `On Error`ステートメントによって有効にされているものです。 "アクティブ" エラーハンドラーは、エラーを処理するための有効なハンドラーです。
 
@@ -66,7 +66,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  エラーハンドラーが呼び出し元のプロシージャに制御を戻すたびに、そのプロシージャが現在のプロシージャになります。 任意のプロシージャのエラーハンドラーによってエラーが処理されると、 `Resume`ステートメントで指定された時点で、現在のプロシージャで実行が再開されます。
   
 > [!NOTE]
->  エラー処理ルーチンは、プロシージャ`Sub` `Function`またはプロシージャではありません。 これは、行ラベルまたは行番号でマークされたコードのセクションです。
+> エラー処理ルーチンは、プロシージャ`Sub` `Function`またはプロシージャではありません。 これは、行ラベルまたは行番号でマークされたコードのセクションです。
   
 ## <a name="number-property"></a>Number プロパティ
  エラー処理ルーチンは、エラーの原因を特定`Number`するために`Err` 、オブジェクトのプロパティの値に依存します。 ルーチンは、他のエラーが発生する前、 `Err`またはエラーが発生する可能性のあるプロシージャが呼び出される前に、オブジェクト内の関連するプロパティ値をテストまたは保存する必要があります。 `Err`オブジェクトのプロパティ値は、最新のエラーのみを反映します。 に関連付けられ`Err.Number`ているエラー `Err.Description`メッセージは、に含まれています。  
@@ -82,7 +82,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  `On Error Resume Next`実行は、実行時エラーの原因となったステートメントの直後のステートメント、またはステートメントを含む`On Error Resume Next`プロシージャからの最新の呼び出しの直後のステートメントによって続行されます。 このステートメントを使用すると、実行時エラーが発生しても実行を続行できます。 プロシージャ内の別の場所に制御を転送するのではなく、エラーが発生するエラー処理ルーチンを配置できます。 別`On Error Resume Next`のプロシージャが呼び出されると、ステートメントは非アクティブになります`On Error Resume Next` 。そのため、ルーチン内でインラインエラー処理が必要な場合は、呼び出された各ルーチンでステートメントを実行する必要があります。
   
 > [!NOTE]
->  他`On Error Resume Next`のオブジェクトへのアクセス`On Error GoTo`中に発生したエラーを処理する場合は、コンストラクトの方が適している場合があります。 オブジェクト`Err`を操作するたびに、コードによってアクセスされたオブジェクトがあいまいになるのを確認します。 エラーコード`Err.Number`を配置したオブジェクトと、最初にエラーを生成したオブジェクト (で`Err.Source`指定されたオブジェクト) を確認できます。
+> 他`On Error Resume Next`のオブジェクトへのアクセス`On Error GoTo`中に発生したエラーを処理する場合は、コンストラクトの方が適している場合があります。 オブジェクト`Err`を操作するたびに、コードによってアクセスされたオブジェクトがあいまいになるのを確認します。 エラーコード`Err.Number`を配置したオブジェクトと、最初にエラーを生成したオブジェクト (で`Err.Source`指定されたオブジェクト) を確認できます。
 
 ## <a name="on-error-goto-0"></a>On Error GoTo 0
  `On Error GoTo 0`現在のプロシージャでのエラー処理を無効にします。 プロシージャに行番号0が含まれている場合でも、エラー処理コードの先頭として行0が指定されていません。 `On Error GoTo 0`ステートメントを使用しない場合、プロシージャが終了すると、エラーハンドラーが自動的に無効になります。

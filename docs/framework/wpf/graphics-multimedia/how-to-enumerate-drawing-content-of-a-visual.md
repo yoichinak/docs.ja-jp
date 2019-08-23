@@ -5,21 +5,21 @@ helpviewer_keywords:
 - retrieving the DrawingGroup value of a Visual [WPF]
 - enumerating the contents of a Visual [WPF]
 ms.assetid: 2974ddb3-2997-4713-8fd2-e93d549c58a8
-ms.openlocfilehash: 4f0afc1075fe66c7f154fcef3cd883709db55316
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 25aa0c3706005c1e16cedd7e06914db764545ebb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947473"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930072"
 ---
 # <a name="how-to-enumerate-drawing-content-of-a-visual"></a>方法: ビジュアルの描画コンテンツを列挙する
-<xref:System.Windows.Media.Drawing>オブジェクトの内容を列挙するためのオブジェクト モデルの提供、<xref:System.Windows.Media.Visual>します。  
+オブジェクト<xref:System.Windows.Media.Drawing>は、 <xref:System.Windows.Media.Visual>のコンテンツを列挙するためのオブジェクトモデルを提供します。  
   
 ## <a name="example"></a>例  
- 次の例では、<xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A>を取得するメソッド、<xref:System.Windows.Media.DrawingGroup>の値を<xref:System.Windows.Media.Visual>し、それを列挙します。  
+ 次の例では<xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A> 、メソッドを使用<xref:System.Windows.Media.DrawingGroup>しての<xref:System.Windows.Media.Visual>値を取得し、それを列挙します。  
   
 > [!NOTE]
->  ビジュアルの内容を列挙するときは、取得する<xref:System.Windows.Media.Drawing>オブジェクト、およびしない、ベクター グラフィックス命令リストとしてのレンダリング データの基になる表現。 詳しくは、「[WPF グラフィックス レンダリングの概要](wpf-graphics-rendering-overview.md)」をご覧ください。  
+> ビジュアルの内容を列挙する場合、ベクターグラフィックス命令リストと<xref:System.Windows.Media.Drawing>してレンダリングデータの基になる表現ではなく、オブジェクトを取得します。 詳しくは、「[WPF グラフィックス レンダリングの概要](wpf-graphics-rendering-overview.md)」をご覧ください。  
   
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMRetrieveDrawings](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/EnumerateDrawingsExample.xaml.cs#graphicsmmretrievedrawings)]  
   

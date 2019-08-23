@@ -9,108 +9,108 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: c37a42a5905e34a995efbd73d332b7ef8f90e51d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8399a56fca87704e10456a4cf8109d7c80d4db45
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603255"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964403"
 ---
 # <a name="how-to-create-a-path-gradient"></a>方法: パス グラデーションを作成する
-<xref:System.Drawing.Drawing2D.PathGradientBrush>クラスでは、徐々 に変化する色に図形を塗りつぶす方法をカスタマイズできます。 たとえば、パスの中央の 1 つの色とパスの境界に別の色を指定できます。 各パスの境界に沿って複数ポイントの別の色を指定することもできます。  
+クラス<xref:System.Drawing.Drawing2D.PathGradientBrush>を使用すると、徐々に変化する色で図形を塗りつぶす方法をカスタマイズできます。 たとえば、パスの中心に色を1つ、パスの境界に別の色を指定できます。 パスの境界に沿って複数のポイントごとに個別の色を指定することもできます。  
   
 > [!NOTE]
->  GDI + でのパスには一連の直線と曲線によって管理される、<xref:System.Drawing.Drawing2D.GraphicsPath>オブジェクト。 GDI + のパスの詳細については、次を参照してください。 [GDI + でのグラフィックス パス](graphics-paths-in-gdi.md)と[描画パスの作成および](constructing-and-drawing-paths.md)します。  
+> Gdi + では、パスは、 <xref:System.Drawing.Drawing2D.GraphicsPath>オブジェクトによって維持される直線と曲線のシーケンスです。 GDI + パスの詳細については、「 [GDI + でのグラフィックスのパス](graphics-paths-in-gdi.md)」と「[パスの構築と描画](constructing-and-drawing-paths.md)」を参照してください。  
 
-この記事の例では、コントロールから呼び出されるメソッド<xref:System.Windows.Forms.Control.Paint>イベント ハンドラー。  
+この記事の例は、コントロールの<xref:System.Windows.Forms.Control.Paint>イベントハンドラーから呼び出されるメソッドです。  
 
-### <a name="to-fill-an-ellipse-with-a-path-gradient"></a>パス グラデーションを使用して楕円の塗りつぶしを  
+### <a name="to-fill-an-ellipse-with-a-path-gradient"></a>楕円にパスグラデーションを入力するには  
   
-- 次の例では、パスのグラデーション ブラシを使用して楕円を塗りつぶします。 中心の色を青に設定し、境界の色を水色に設定します。 次の図は、塗りつぶされた楕円を示します。  
+- 次の例では、楕円にパスグラデーションブラシを設定します。 中央の色は青に、境界の色は水色に設定されています。 次の図は、塗りつぶされた楕円を示しています。  
   
-     ![グラデーション パスでは、楕円を塗りつぶします。](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse.png)  
+     ![グラデーションパスは楕円を塗りつぶします。](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse.png)  
   
-     既定では、パスのグラデーション ブラシは、パスの境界の外側には拡張されません。 パスの境界を越える図形を塗りつぶすパス グラデーション ブラシを使用する場合、パスの外側の画面の領域は埋められません。  
+     既定では、パスグラデーションブラシはパスの境界の外側では拡張されません。 パスグラデーションブラシを使用して、パスの境界を越える図形を塗りつぶす場合、パスの外側にある画面の領域は塗りつぶされません。  
   
-     変更する場合、次の図は、<xref:System.Drawing.Graphics.FillEllipse%2A?displayProperty=nameWithType>で次のコードを呼び出す`e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
+     次の図は、次のコードの<xref:System.Drawing.Graphics.FillEllipse%2A?displayProperty=nameWithType>呼び出しをに変更した場合の動作を`e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`示しています。  
   
-     ![グラデーション パス、パスの境界を超えて拡張します。](./media/how-to-create-a-path-gradient/gradient-path-extended-beyond-boundary.png)  
+     ![パスの境界を超えて拡張されたグラデーションパス。](./media/how-to-create-a-path-gradient/gradient-path-extended-beyond-boundary.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#11)]
      [!code-vb[System.Drawing.UsingaGradientBrush#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#11)]  
   
-     上記のコード例が、Windows フォームで使用するために設計されており、必要があります、 <xref:System.Windows.Forms.PaintEventArgs> e で、パラメーターの<xref:System.Windows.Forms.PaintEventHandler>します。  
+     上記のコード例は、Windows フォームで使用するように設計され<xref:System.Windows.Forms.PaintEventArgs>ています。これは、 <xref:System.Windows.Forms.PaintEventHandler>のパラメーターである e を必要とします。  
   
-### <a name="to-specify-points-on-the-boundary"></a>境界でポイントを指定するには  
+### <a name="to-specify-points-on-the-boundary"></a>境界上にポイントを指定するには  
   
-- 次の例では、星型のパスからのパスのグラデーション ブラシを作成します。 コードのセット、<xref:System.Drawing.Drawing2D.PathGradientBrush.CenterColor%2A>プロパティで、赤色の星の重心で色を設定します。 コード セットし、<xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A>さまざまな色を指定するプロパティ (に格納されている、`colors`配列) の個々 のポイントで、`points`配列。 最後のコード ステートメントは、パスのグラデーション ブラシで星型のパスを設定します。  
+- 次の例では、星形のパスからパスグラデーションブラシを構築します。 このコードは、 <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterColor%2A>星の重心の色を赤に設定するプロパティを設定します。 次に、コードは<xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A>プロパティを設定して、 `points`配列内の`colors`個々の点に (配列に格納されている) さまざまな色を指定します。 最後のコードステートメントは、星形のパスをパスグラデーションブラシで塗りつぶします。  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#12)]
      [!code-vb[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#12)]  
   
-- 次の例では、描画せずパス グラデーションを<xref:System.Drawing.Drawing2D.GraphicsPath>コード内のオブジェクト。 特定<xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A>コンス トラクターの例では、点の配列を受け取りますは必要ありません、<xref:System.Drawing.Drawing2D.GraphicsPath>オブジェクト。 また、<xref:System.Drawing.Drawing2D.PathGradientBrush>パスではなく、四角形の塗りつぶしに使用します。 四角形は四角形の一部は、ブラシによって描画されませんので、ブラシを定義するために使用する閉じたパスを超えています。 次の図は、(点線) 四角形とパスのグラデーション ブラシで塗りつぶされた四角形の部分を示しています。 
+- 次の例では、コードにオブジェクト<xref:System.Drawing.Drawing2D.GraphicsPath>を含まないパスグラデーションを描画します。 この例<xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A>の特定のコンストラクターは、ポイントの配列を受け取りますが、 <xref:System.Drawing.Drawing2D.GraphicsPath>オブジェクトは必要ありません。 また、 <xref:System.Drawing.Drawing2D.PathGradientBrush>はパスではなく四角形を塗りつぶすために使用されることに注意してください。 四角形は、ブラシを定義するために使用される閉じたパスよりも大きいため、四角形の一部がブラシによって描画されません。 次の図は、四角形 (点線) と、パスグラデーションブラシによって描画される四角形の部分を示しています。 
   
-     ![パス グラデーション ブラシで描画されたグラデーション部分です。](./media/how-to-create-a-path-gradient/gradient-painted-path-gradient-brush.png)  
+     ![パスグラデーションブラシで塗りつぶされたグラデーション部分。](./media/how-to-create-a-path-gradient/gradient-painted-path-gradient-brush.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#13)]
      [!code-vb[System.Drawing.UsingaGradientBrush#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#13)]  
   
-### <a name="to-customize-a-path-gradient"></a>パス グラデーションをカスタマイズするには  
+### <a name="to-customize-a-path-gradient"></a>パスのグラデーションをカスタマイズするには  
   
-- パス グラデーション ブラシをカスタマイズする方法の 1 つを設定するのにはその<xref:System.Drawing.Drawing2D.PathGradientBrush.FocusScales%2A>プロパティ。 フォーカスのスケールでは、メインのパスの内側にある内部のパスを指定します。 中心点だけでなく、その内部のパス内で、すべての場所で中心の色が表示されます。  
+- パスグラデーションブラシをカスタマイズする方法の1つは、 <xref:System.Drawing.Drawing2D.PathGradientBrush.FocusScales%2A>そのプロパティを設定することです。 フォーカススケールは、メインパス内にある内部パスを指定します。 中心の色は、中心点だけではなく、内部パス内のすべての場所に表示されます。  
   
-     次の例では、楕円のパスに基づくパス グラデーション ブラシを作成します。 コードは、境界の色を青に設定を水色に中心の色を設定し、パス グラデーション ブラシを使用して、楕円のモーション パスを入力します。  
+     次の例では、楕円のパスに基づいてパスグラデーションブラシを作成します。 このコードでは、境界の色を青に設定し、中心の色を水色に設定して、パスグラデーションブラシを使用して楕円のパスを塗りつぶします。  
   
-     次に、コードは、パスのグラデーション ブラシのフォーカスのスケールを設定します。 X フォーカス スケールは、0.3 に設定され、y のフォーカスのスケールが 0.8 に設定されます。 コードの呼び出し、<xref:System.Drawing.Graphics.TranslateTransform%2A>のメソッド、<xref:System.Drawing.Graphics>オブジェクトように後続の呼び出し<xref:System.Drawing.Graphics.FillPath%2A>最初の楕円の右側に配置される楕円を塗りつぶします。  
+     次に、コードはパスグラデーションブラシのフォーカススケールを設定します。 X フォーカススケールが0.3 に設定され、y フォーカススケールが0.8 に設定されています。 このコードは、 <xref:System.Drawing.Graphics.TranslateTransform%2A> <xref:System.Drawing.Graphics>オブジェクトのメソッドを呼び出します。これにより<xref:System.Drawing.Graphics.FillPath%2A> 、への後続の呼び出しによって、最初の楕円の右側にある楕円が塗りつぶされます。  
   
-     フォーカスのスケールの効果を表示するには、メインの楕円の中心を共有する小さな楕円を想像してください。 小規模 (内部) 楕円は、メインの楕円の 0.3 の係数を使用して、垂直方向に 0.8 の係数 (の中心) 水平方向に拡張です。 内側の楕円の境界線の外側の楕円の境界から移動すると、色が徐々 に変化青からを水色にします。 内部の楕円の境界を水色、色は、共有のセンターに移動します。  
+     フォーカススケールの効果を確認するには、中心をメイン楕円と共有する小さな楕円を想像してください。 小さい (内側の) 楕円は、メインの楕円 (中心の中心) を0.3 の係数で水平方向に0.8 の係数で水平方向にスケーリングしたものです。 外側の楕円の境界から内側の楕円の境界に移動すると、色が青から水色に徐々に変化します。 内側の楕円の境界から共有センターに移動すると、色は水色のままになります。  
   
-     以下のコードの出力を次の図に示します。 左側の楕円は、中心点にのみ aqua です。 右側の楕円は、内部のパス内ですべての場所で aqua です。  
+     以下のコードの出力を次の図に示します。 左側の楕円は、中心点でのみ水色です。 右側の楕円は、内側のパスのどこでも水色です。  
   
- ![フォーカスの規模のグラデーション効果](./media/how-to-create-a-path-gradient/focus-scales-aqua-inner-outer-ellipse.png)  
+ ![フォーカススケールのグラデーション効果](./media/how-to-create-a-path-gradient/focus-scales-aqua-inner-outer-ellipse.png)  
   
  [!code-csharp[System.Drawing.UsingaGradientBrush#14](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#14)]
  [!code-vb[System.Drawing.UsingaGradientBrush#14](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#14)]  
   
-### <a name="to-customize-with-interpolation"></a>補間でカスタマイズするには  
+### <a name="to-customize-with-interpolation"></a>補間を使用してカスタマイズするには  
   
-- パス グラデーション ブラシをカスタマイズする別の方法では、補間の色の配列と、補間の位置の配列を指定します。  
+- パスグラデーションブラシをカスタマイズするもう1つの方法は、補間の色の配列と補間の位置の配列を指定することです。  
   
-     次の例では、三角形に基づくパス グラデーション ブラシを作成します。 コードのセット、<xref:System.Drawing.Drawing2D.PathGradientBrush.InterpolationColors%2A>補間の色 (濃い緑、aqua、青) の配列と、補間の位置 (0, 0.25, 1) の配列を指定するパスのグラデーション ブラシのプロパティ。 中心点にある三角形の境界から移動すると、色が徐々 に変化濃い緑からを水色に、青に aqua から。 濃い緑から青からの距離の 25% でを水色に濃い緑から変更が行われます。  
+     次の例では、三角形に基づくパスグラデーションブラシを作成します。 このコードは、 <xref:System.Drawing.Drawing2D.PathGradientBrush.InterpolationColors%2A>パスグラデーションブラシのプロパティを設定して、補間の色 (濃い緑、水色、青) と補間位置 (0、0.25、1) の配列を指定します。 三角形の境界から中心点に移動すると、色が濃い緑から水色に徐々に変化し、次に水色から青色に変わります。 濃い緑から水色への変更は、濃い緑から青への距離の 25% で行われます。  
   
-     次の図は、カスタム パスのグラデーション ブラシで塗りつぶした三角形を示します。  
+     次の図は、カスタムパスグラデーションブラシで塗りつぶされた三角形を示しています。  
   
-     ![三角形は、カスタム パス グラデーション ブラシで塗りつぶされます。](./media/how-to-create-a-path-gradient/gradient-brush-filled-triangle.png)  
+     ![カスタムパスグラデーションブラシで塗りつぶされた三角形。](./media/how-to-create-a-path-gradient/gradient-brush-filled-triangle.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#15](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#15)]
      [!code-vb[System.Drawing.UsingaGradientBrush#15](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#15)]  
   
 ### <a name="to-set-the-center-point"></a>中心点を設定するには  
   
-- 既定では、パスのグラデーション ブラシの中心点は、ブラシを作成するために使用するパスの重心では。 中心点の位置を設定して変更することができます、<xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A>のプロパティ、<xref:System.Drawing.Drawing2D.PathGradientBrush>クラス。  
+- 既定では、パスグラデーションブラシの中心点は、ブラシの構築に使用されるパスの重心にあります。 中心点の位置を変更するには、 <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> <xref:System.Drawing.Drawing2D.PathGradientBrush>クラスのプロパティを設定します。  
   
-     次の例では、楕円に基づくパス グラデーション ブラシを作成します。 楕円の中心 (70、35) に設定されているパスのグラデーション ブラシの中心点が (120, 40)。  
+     次の例では、楕円に基づくパスグラデーションブラシを作成します。 楕円の中心は (70, 35) ですが、パスグラデーションブラシの中心点は (120, 40) に設定されています。  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#16](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#16)]
      [!code-vb[System.Drawing.UsingaGradientBrush#16](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#16)]  
   
-     次の図は、塗りつぶされた楕円とパスのグラデーション ブラシの中心点を示しています。  
+     次の図は、塗りつぶされた楕円とパスグラデーションブラシの中心点を示しています。  
   
-     ![塗りつぶされた楕円と center ポイントとグラデーションのパス。](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse-center-point.png)  
+     ![塗りつぶされた楕円と中心点を含むグラデーションパス。](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse-center-point.png)  
   
-- パス グラデーション ブラシの中心点は、ブラシを作成するために使用されたパスの外部の場所に設定できます。 次の例では、置換を設定する呼び出し、<xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A>上記のコードでのプロパティ。  
+- パスグラデーションブラシの中心点を、ブラシの作成に使用されたパスの外側の位置に設定できます。 次の例では、呼び出しを置き換え<xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A>て、前のコードでプロパティを設定します。  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#17)]
      [!code-vb[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#17)]  
   
-     次の図は、この変更により、出力を示しています。  
+     次の図は、この変更による出力を示しています。  
   
-     ![パスの外側の中心点でグラデーションのパス。](./media/how-to-create-a-path-gradient/gradient-path-center-point-outside.png)  
+     ![パスの外側の中心点を持つグラデーションパス。](./media/how-to-create-a-path-gradient/gradient-path-center-point-outside.png)  
   
-     前の図では、楕円の右端にある点のない純粋な青 (ただし、これらはよく似ています)。 グラデーションの色は、塗りつぶし色が純粋な青 (0, 0, 255) をすると、点 (145, 35) に達するかのように配置されます。 塗りつぶしに決して到達しませんが、(145, 35) ため、そのパス内でのみパス グラデーション ブラシを描画します。  
+     前の図では、楕円の右端にある点は純粋な青ではありません (ただし、非常に閉じています)。 グラデーションの色は、塗りつぶしがポイント (145, 35) に達した場合と同じように配置されます。この場合、色は純粋な青 (0, 0, 255) になります。 ただし、パスグラデーションブラシはパス内でのみ描画されるため、塗りつぶしは (145, 35) に到達しません。  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- 上記の例は、Windows フォームで使用するために設計されていて、必要な<xref:System.Windows.Forms.PaintEventArgs>`e`はのパラメーター、<xref:System.Windows.Forms.Control.Paint>イベント ハンドラー。  
+ 前の例は、Windows フォームで使用するように設計さ<xref:System.Windows.Forms.PaintEventArgs>れており、 <xref:System.Windows.Forms.Control.Paint>イベントハンドラーのパラメーターであるを必要`e`とします。  
   
 ## <a name="see-also"></a>関連項目
 

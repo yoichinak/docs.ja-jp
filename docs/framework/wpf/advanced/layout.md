@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 648adb34664ccb2a475e32aba4d0d76d99cf49d8
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: eb254503f5ce2240a03179da693c66f7ada876be
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666765"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918300"
 ---
 # <a name="layout"></a>レイアウト
 このトピックでは、Windows Presentation Foundation (WPF) レイアウトシステムについて説明します。 WPF でユーザーインターフェイスを作成するには、レイアウトの計算がどのように行われるかを理解することが不可欠です。  
@@ -89,7 +89,7 @@ ms.locfileid: "69666765"
  2番目の方法と<xref:System.Windows.FrameworkElement>して、に定義されて`constraintSize`いるフレームワークプロパティが処理され、の値に影響します。 これらの<xref:System.Windows.UIElement>プロパティは<xref:System.Windows.FrameworkElement.Height%2A>、 <xref:System.Windows.FrameworkElement.Width%2A>通常、<xref:System.Windows.FrameworkElement.Style%2A>、、 、など、基になるのサイズ設定特性を記述します。<xref:System.Windows.FrameworkElement.Margin%2A> これらの各プロパティは、要素を表示するために必要な領域を変更できます。 <xref:System.Windows.FrameworkElement.MeasureOverride%2A>は、パラメーターと`constraintSize`してで呼び出されます。  
   
 > [!NOTE]
->  と<xref:System.Windows.FrameworkElement.Height%2A>のプロパティとの<xref:System.Windows.FrameworkElement.Width%2A> <xref:System.Windows.FrameworkElement.ActualHeight%2A>間には違いがあります。<xref:System.Windows.FrameworkElement.ActualWidth%2A> たとえば<xref:System.Windows.FrameworkElement.ActualHeight%2A> 、プロパティは、他の高さ入力およびレイアウトシステムに基づく計算値です。 値は、実際のレンダリングパスに基づいてレイアウトシステム自体によって設定されます。したがって、入力の変更の基礎となる<xref:System.Windows.FrameworkElement.Height%2A>、などのプロパティの設定値よりも少し遅れが生じることがあります。  
+> と<xref:System.Windows.FrameworkElement.Height%2A>のプロパティとの<xref:System.Windows.FrameworkElement.Width%2A> <xref:System.Windows.FrameworkElement.ActualHeight%2A>間には違いがあります。<xref:System.Windows.FrameworkElement.ActualWidth%2A> たとえば<xref:System.Windows.FrameworkElement.ActualHeight%2A> 、プロパティは、他の高さ入力およびレイアウトシステムに基づく計算値です。 値は、実際のレンダリングパスに基づいてレイアウトシステム自体によって設定されます。したがって、入力の変更の基礎となる<xref:System.Windows.FrameworkElement.Height%2A>、などのプロパティの設定値よりも少し遅れが生じることがあります。  
 >   
 >  は<xref:System.Windows.FrameworkElement.ActualHeight%2A>計算値であるため、レイアウトシステムによるさまざまな操作の結果として、複数のまたは増分の報告される変更がある可能性があることに注意してください。 レイアウト システムが、子要素に必要な測定スペース、親要素による制約などを計算している場合があります。  
   

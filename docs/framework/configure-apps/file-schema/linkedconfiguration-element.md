@@ -11,20 +11,20 @@ helpviewer_keywords:
 - linked configuration files
 - linkedConfiguration Element
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
-ms.openlocfilehash: 909ee7cbb7cd31cf213f305b23237cb69e295882
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a0b56ac66302f11c59c149197a84bb96691282a5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674650"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921013"
 ---
 # <a name="linkedconfiguration-element"></a>\<linkedConfiguration > 要素
 
 インクルードする構成ファイルを指定します。
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<assemblyBinding >** ](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<linkedConfiguration>**
+[ **\<configuration>** ](configuration-element.md)   
+&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<linkedConfiguration >**
 
 ## <a name="syntax"></a>構文
 
@@ -36,13 +36,13 @@ ms.locfileid: "61674650"
 
 |           | 説明 |
 | --------- | ----------- |
-| **href**  | 必須の属性です。<br><br>含める構成ファイルの URL。 唯一の形式のサポート、 **href**属性が`file://`します。 ローカル ファイルと UNC ファイルがサポートされています。 |
+| **href**  | 必須の属性です。<br><br>含める構成ファイルの URL。 **Href**属性でサポートされている形式`file://`はのみです。 ローカルファイルと UNC ファイルがサポートされています。 |
 
 ## <a name="parent-element"></a>親要素
 
 |     | 説明 |
 | --- | ----------- |
-| [ **\<assemblyBinding >** 要素](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | 構成レベルでのアセンブリ バインディング ポリシーを指定します。 |
+| [assemblybinding > 要素 **\<** ](assemblybinding-element-for-configuration.md) | 構成レベルでのアセンブリ バインディング ポリシーを指定します。 |
 
 ## <a name="child-elements"></a>子要素
 
@@ -50,28 +50,28 @@ ms.locfileid: "61674650"
 
 ## <a name="remarks"></a>Remarks
 
-**\<LinkedConfiguration >** 要素は、サービス コンポーネントのアセンブリを簡略化します。 1 つまたは複数のアプリケーションでは、既知の場所に存在する構成ファイルを持つアセンブリを使用する場合、アセンブリを使用するアプリケーションの構成ファイルを使用できます、  **\<linkedConfiguration >** 構成情報を直接含むのではなく、アセンブリの構成ファイルを含める要素。 コンポーネント アセンブリが処理されるときに一般的な構成ファイルの更新、アセンブリを使用するすべてのアプリケーションに最新の構成情報を提供します。
+**\<Linkedconfiguration >** 要素は、コンポーネントアセンブリのサービスを簡略化します。 既知の場所に構成ファイルが存在するアセンブリが1つ以上のアプリケーションで使用されている場合、そのアセンブリを使用するアプリケーションの構成ファイルでは、  **\<linkedconfiguration >** 要素を使用して、構成情報を直接含めるのではなく、アセンブリ構成ファイル。 コンポーネントアセンブリがサービスされている場合、共通構成ファイルを更新すると、そのアセンブリを使用するすべてのアプリケーションに対して、更新された構成情報が提供されます。
 
 > [!NOTE]
-> **\<LinkedConfiguration >** Windows サイド バイ サイドでマニフェストを使用するアプリケーションの要素がサポートされていません。
+> **\<Linkedconfiguration >** 要素は、Windows サイドバイサイドマニフェストを持つアプリケーションではサポートされていません。
 
 次の規則は、リンクされた構成ファイルの使用を制御します。
 
-- 含まれる構成ファイルの設定は、ローダーのバインディング ポリシーの影響を与えるし、のみローダーでのみ使用されます。 含まれる構成ファイルではバインディング ポリシー以外の設定を使用できますが、これらの設定は、影響はありません。
+- インクルードされる構成ファイルの設定は、ローダーバインドポリシーにのみ影響し、ローダーによってのみ使用されます。 含まれる構成ファイルには、バインドポリシー以外の設定を含めることができますが、これらの設定は何の効果もありません。
 
-- 唯一の形式のサポート、`href`属性が`file://`します。 ローカル ファイルと UNC ファイルがサポートされています。
+- `href`属性でサポートされている形式`file://`はのみです。 ローカルファイルと UNC ファイルがサポートされています。
 
-- 構成ファイルごとにリンクされている構成の数に制約はありません。
+- 構成ファイルごとにリンクされる構成の数に制限はありません。
 
-- すべてのリンクされた構成ファイルを結合し、1 つのファイルの動作と同様に、 `#include` C と C++ のディレクティブ。
+- C/ `#include` C++のディレクティブの動作と同様に、すべてのリンクされた構成ファイルが1つのファイルに結合されます。
 
-- **\<LinkedConfiguration >** 要素がアプリケーション構成ファイルにのみ使用できます。 以外では無視されます*Machine.config*します。
+- **\<Linkedconfiguration >** 要素は、アプリケーション構成ファイル内でのみ許可されます。 *machine.config*では無視されます。
 
-- 循環参照が検出され、終了します。 つまり場合、  **\<linkedConfiguration >** ループを形成する一連の構成ファイルの要素、ループが検出され、停止します。
+- 循環参照が検出され、終了します。 つまり、  **\<** 一連の構成ファイルの linkedconfiguration > 要素がループを形成すると、ループが検出され、停止されます。
 
 ## <a name="example"></a>例
 
-次の例では、ローカルのハード ディスクから構成ファイルをインクルードする方法を示します。
+次の例は、ローカルハードディスクの構成ファイルを含める方法を示しています。
 
 ```xml
 <configuration>
@@ -83,5 +83,5 @@ ms.locfileid: "61674650"
 
 ## <a name="see-also"></a>関連項目
 
-- [ **\<assemblyBinding >** 要素](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)
-- [.NET Framework の構成ファイル スキーマ](~/docs/framework/configure-apps/file-schema/index.md)
+- [assemblybinding > 要素 **\<** ](assemblybinding-element-for-configuration.md)
+- [.NET Framework の構成ファイルスキーマ](index.md)

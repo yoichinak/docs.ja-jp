@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms], examples [C#]
 - ComboBox control [Windows Forms], drawing custom text
 ms.assetid: ce39b9ea-e626-49fe-bd5a-f567f6d157df
-ms.openlocfilehash: 1fa9b04063d8f606f674cc54190dad5a669adbeb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7c0dc40f6cac0af1f88e72089865caa3a17fcf2a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666420"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914747"
 ---
 # <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>方法: ComboBox コントロールにサイズ変更可能なテキストを作成する
-この例は、内のテキストのカスタム描画を<xref:System.Windows.Forms.ComboBox>コントロール。 項目が、特定の条件を満たしている場合は、大きいフォントで描画され、赤になっています。  
+この例は、 <xref:System.Windows.Forms.ComboBox>コントロール内のテキストのカスタム描画を示しています。 項目が特定の条件を満たしている場合は、大きいフォントで描画され、赤色になります。  
   
 ## <a name="example"></a>例  
   
@@ -58,12 +58,12 @@ End Sub
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
-- Windows フォームです。  
+- Windows フォーム。  
   
-- A<xref:System.Windows.Forms.ComboBox>という名前のコントロール`ListBox1`で 3 つの項目を含む、<xref:System.Windows.Forms.ComboBox.Items%2A>プロパティ。 この例では、3 つの項目の名前は`"One", Two", and Three"`します。 <xref:System.Windows.Forms.ComboBox.DrawMode%2A>プロパティの`ComboBox1`に設定する必要があります<xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>します。  
+- プロパティに 3 `ListBox1`つの項目<xref:System.Windows.Forms.ComboBox>を持つという名前<xref:System.Windows.Forms.ComboBox.Items%2A>のコントロール。 この例では、3つの項目`"One", Two", and Three"`に名前が付けられています。 <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>の<xref:System.Windows.Forms.ComboBox.DrawMode%2A> プロパティ`ComboBox1`は、に設定する必要があります。  
   
     > [!NOTE]
-    >  この手法も適用できます、<xref:System.Windows.Forms.ListBox>コントロール-代わりに使用することができます、<xref:System.Windows.Forms.ListBox>の<xref:System.Windows.Forms.ComboBox>します。  
+    > この手法は<xref:System.Windows.Forms.ListBox>コントロールにも適用でき<xref:System.Windows.Forms.ComboBox>ます。のを<xref:System.Windows.Forms.ListBox>に置き換えることができます。  
   
 - <xref:System.Windows.Forms?displayProperty=nameWithType> 名前空間と <xref:System.Drawing?displayProperty=nameWithType> 名前空間への参照。  
   

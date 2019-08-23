@@ -2,21 +2,21 @@
 title: コンテキスト交換プロトコル
 ms.date: 03/30/2017
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
-ms.openlocfilehash: cb6e52b5622316cfaa9c56b26c3aac6764c71cca
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 19780cccc74f8c3615dc844e47be7613ca5f8bc1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651110"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911202"
 ---
 # <a name="context-exchange-protocol"></a>コンテキスト交換プロトコル
-このセクションでは、Windows Communication Foundation (WCF) リリースの .NET Framework version 3.5 で導入されたコンテキスト交換プロトコルについて説明します。 このプロトコルを使用すると、クライアント チャネルはサービスから送られたコンテキストを受け入れ、以降はそのコンテキストを、同じクライアント チャネル インスタンス経由でそのサービスに送信されるすべての要求に適用できます。 コンテキスト交換プロトコルの実装は、次の 2 つのメカニズムのいずれかを使用、サーバーとクライアントの間でコンテキストを伝達できます。HTTP クッキーまたは SOAP ヘッダー。  
+このセクションでは、Windows Communication Foundation (WCF) リリース .NET Framework バージョン3.5 で導入されたコンテキスト交換プロトコルについて説明します。 このプロトコルを使用すると、クライアント チャネルはサービスから送られたコンテキストを受け入れ、以降はそのコンテキストを、同じクライアント チャネル インスタンス経由でそのサービスに送信されるすべての要求に適用できます。 コンテキスト交換プロトコルの実装では、次の2つのメカニズムのいずれかを使用して、サーバーとクライアント間のコンテキストを伝達できます。HTTP クッキーまたは SOAP ヘッダー。  
   
  コンテキスト交換プロトコルは、カスタム チャネル層に実装されます。 チャネルでは <xref:System.ServiceModel.Channels.ContextMessageProperty> プロパティを使用して、アプリケーション層とコンテキストを送受信します。 エンドポイント間の転送については、コンテキストの値は、チャネル層で SOAP ヘッダーとしてシリアル化されるか、HTTP 要求および応答を表すメッセージ プロパティとの間で双方向に変換されます。 後者の場合、下位のチャネル層のいずれか 1 つで、HTTP 要求および応答のメッセージ プロパティをそれぞれ HTTP クッキーとの間で双方向に変換する必要があります。 コンテキスト交換に使用する機構の選択は、<xref:System.ServiceModel.Channels.ContextExchangeMechanism> の <xref:System.ServiceModel.Channels.ContextBindingElement> プロパティを使用します。 有効な値は、`HttpCookie` または `SoapHeader` です。  
   
  クライアントでは、チャネルのインスタンスは <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> チャネル プロパティの設定値に基づいて 2 つのモードで動作します。  
   
-## <a name="mode-1-channel-context-management"></a>モード 1:チャネル コンテキスト管理  
+## <a name="mode-1-channel-context-management"></a>モード 1:チャネルコンテキスト管理  
  これは、<xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> を `true` に設定した場合の既定のモードです。 このモードでは、コンテキスト チャネルはコンテキストを管理し、その有効期間中、コンテキストをキャッシュします。 コンテキストは、`IContextManager` メソッドを呼び出して、`GetContext` チャネル プロパティ経由でチャネルから取得できます。 チャネルを開く前に、チャネル プロパティで `SetContext` メソッドを呼び出して、事前に特定のコンテキストで初期化できます。 チャネルは一度コンテキストで初期化すると、リセットできません。  
   
  このモードのインバリアントの一覧を次に示します。  
@@ -28,11 +28,11 @@ ms.locfileid: "64651110"
 - 特定のコンテキストを持つサーバーからメッセージを受信する場合に、チャネルが既に特定のコンテキストで初期化されていると、<xref:System.ServiceModel.ProtocolException> が発生します。  
   
     > [!NOTE]
-    >  明示的にコンテキストが設定されていないチャネルを開いている場合に限り、サーバーから初期コンテキストを受信するのが適切です。  
+    > 明示的にコンテキストが設定されていないチャネルを開いている場合に限り、サーバーから初期コンテキストを受信するのが適切です。  
   
 - 受信メッセージの <xref:System.ServiceModel.Channels.ContextMessageProperty> は常に null です。  
   
-## <a name="mode-2-application-context-management"></a>モード 2:アプリケーション コンテキスト管理  
+## <a name="mode-2-application-context-management"></a>モード 2:アプリケーションコンテキストの管理  
  これは、<xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> を `false` に設定した場合のモードです。 このモードでは、コンテキスト チャネルでコンテキストを管理しません。 コンテキストの取得、管理、および適用は、<xref:System.ServiceModel.Channels.ContextMessageProperty> を使用してアプリケーションで行う必要があります。 `GetContext` または `SetContext` を呼び出そうとすると、<xref:System.InvalidOperationException> が発生します。  
   
  どちらのモードを選択しても、クライアント チャネル ファクトリは、<xref:System.ServiceModel.Channels.IRequestChannel>、<xref:System.ServiceModel.Channels.IRequestSessionChannel>、および <xref:System.ServiceModel.Channels.IDuplexSessionChannel> の各メッセージ交換パターンをサポートします。  

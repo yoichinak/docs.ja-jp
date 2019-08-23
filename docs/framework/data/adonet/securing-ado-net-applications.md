@@ -2,12 +2,12 @@
 title: ADO.NET アプリケーションのセキュリティ保護
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: 32d3de15242aaf9cfacd9371289a5a0a675f884b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d4c9c21f4d1f4a08ca6d676ee7b4c9e80709ba19
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664195"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963123"
 ---
 # <a name="securing-adonet-applications"></a>ADO.NET アプリケーションのセキュリティ保護
 ユーザー入力の検証を怠るなど、コーディング時に陥りやすい基本的なミスを防ぐだけでは、安全な ADO.NET アプリケーションを作成することはできません。 データにアクセスするアプリケーションには、機密データの取得、操作、破壊など、攻撃者に攻略される可能性がある障害点が多数あります。 そのため、アプリケーションの設計フェーズで行う脅威のモデリングのプロセスから、アプリケーションの最終的な配置と継続的な保守に至るまで、セキュリティのすべての側面を理解することが重要です。  
@@ -39,7 +39,7 @@ ms.locfileid: "61664195"
  [セキュリティの考慮事項](../../../../docs/framework/data/adonet/ef/security-considerations.md)  
  Entity Framework アプリケーションのセキュリティについて説明します。  
   
- [セキュリティ](../../../../docs/standard/security/index.md)  
+ [セキュリティ](../../../standard/security/index.md)  
  .NET のセキュリティをあらゆる観点から説明したトピックへのリンクが含まれています。  
   
  [セキュリティ ツール](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/7w3fd0wb(v=vs.90))  

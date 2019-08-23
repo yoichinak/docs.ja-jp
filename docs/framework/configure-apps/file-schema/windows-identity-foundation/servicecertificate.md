@@ -3,15 +3,15 @@ title: <serviceCertificate>
 ms.date: 03/30/2017
 ms.assetid: 42c7f291-2ec3-43c5-8872-35897ff3c660
 author: BrucePerlerMS
-ms.openlocfilehash: 328d074f9edc5ddf871308a7e3d694bf94adea78
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a3aba5618855f7225dc8a427516eaa72b45f6e8b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793823"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942412"
 ---
 # <a name="servicecertificate"></a>\<serviceCertificate>
-暗号化し、トークン暗号化解除に使用される X.509 証明書を構成します。  
+トークンの暗号化と復号化に使用される x.509 証明書を構成します。  
   
  \<system.identityModel.services>  
 \<federationConfiguration>  
@@ -38,16 +38,16 @@ ms.locfileid: "61793823"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<certificateReference>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatereference.md)|検索して、証明書ストアに X.509 証明書の検証に使用される設定を指定します。|  
+|[\<certificateReference >](certificatereference.md)|証明書ストアの x.509 証明書を検索して検証するために使用する設定を指定します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|構成設定が含まれています、 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) と<xref:System.IdentityModel.Services.SessionAuthenticationModule>(SAM)。|  
+|[\<federationConfiguration>](federationconfiguration.md)|<xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (Wsfam) <xref:System.IdentityModel.Services.SessionAuthenticationModule>と (SAM) を構成する設定が含まれています。|  
   
 ## <a name="example"></a>例  
- 次の XML の使用を示しています、 \<serviceCertificate > 要素。 XML から取得されますが、`CustomToken`サンプル。  
+ 次の XML は、 \<serviceCertificate > 要素の使用方法を示しています。 XML は、「」の`CustomToken`サンプルから抜粋したものです。  
   
 ```xml  
 <serviceCertificate>  

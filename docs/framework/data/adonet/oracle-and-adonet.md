@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: 012a5b55d052f5f06da5c152da79f4676b2bff4e
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 381f796bec31bece354001ad46bf5079381d1b3d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877947"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914554"
 ---
 # <a name="oracle-and-adonet"></a>Oracle および ADO.NET
 > [!NOTE]
->  <xref:System.Data.OracleClient> の型は非推奨とされました。 これらの型は、.NET Framework の現在のバージョンでは引き続きサポートされていますが、今後のリリースでは削除される予定です。 サードパーティの Oracle プロバイダーを使用することをお勧めします。  
+> <xref:System.Data.OracleClient> の型は非推奨とされました。 これらの型は、.NET Framework の現在のバージョンでは引き続きサポートされていますが、今後のリリースでは削除される予定です。 サードパーティの Oracle プロバイダーを使用することをお勧めします。  
   
- このセクションでは、.NET Framework Data Provider for Oracle に固有の機能および動作について説明します。  
+ このセクションでは、Oracle の .NET Framework Data Provider に固有の機能と動作について説明します。  
   
- .NET Framework Data Provider for Oracle では、Oracle クライアント ソフトウェアによって提供される Oracle Call Interface (OCI) を使用して Oracle データベースへのアクセスを提供します。 データ プロバイダーの機能は、SQL Server、OLE DB および ODBC 用の .NET Framework データ プロバイダーのように設計されています。  
+ Oracle 用の .NET Framework Data Provider では、oracle クライアントソフトウェアによって提供される oracle Call Interface (OCI) を使用して Oracle データベースにアクセスできます。 データプロバイダーの機能は、SQL Server、OLE DB、および ODBC の .NET Framework データプロバイダーに似たものになるように設計されています。  
   
- .NET Framework Data Provider for Oracle を使用するアプリケーションを参照する必要があります、<xref:System.Data.OracleClient>次のように名前空間。  
+ Oracle で .NET Framework Data Provider を使用するには、アプリケーションで次<xref:System.Data.OracleClient>のように名前空間を参照する必要があります。  
   
 ```vb  
 Imports System.Data.OracleClient  
@@ -38,7 +38,7 @@ csc /r:System.Data.OracleClient.dll
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [システム要件](../../../../docs/framework/data/adonet/system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
- Oracle の場合、.NET Framework Data Provider を使用するための要件について説明し、さまざまなことを使用する場合は、注意すべき問題について説明します。  
+ Oracle 用の .NET Framework Data Provider を使用するための要件について説明し、その使用時に注意する必要があるいくつかの問題について説明します。  
   
  [Oracle BFILE](../../../../docs/framework/data/adonet/oracle-bfiles.md)  
  <xref:System.Data.OracleClient.OracleBFile> クラスについて説明します。このクラスは、Oracle BFILE データ型を操作するために使用されます。  

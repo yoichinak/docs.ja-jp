@@ -2,12 +2,12 @@
 title: <add> の <backupList>
 ms.date: 03/30/2017
 ms.assetid: bc5939fc-314a-4ea4-a533-c96958da7173
-ms.openlocfilehash: 53af01a519c244376b262db1f6515a438dcc554f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: c590dbd671807b32e08ad5d871d376a0dc51e611
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663373"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926877"
 ---
 # <a name="add-of-backuplist"></a>\<backupList > の\<> の追加
 バックアップ エンドポイント要素を定義する構成要素を表します。  
@@ -46,7 +46,7 @@ ms.locfileid: "69663373"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<ルーティング >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|プライマリエンドポイントに到達できない場合に、ルーティングサービスで使用するエンドポイントの一覧が含まれています。|  
+|[\<ルーティング >](routing.md)|プライマリエンドポイントに到達できない場合に、ルーティングサービスで使用するエンドポイントの一覧が含まれています。|  
   
 ## <a name="see-also"></a>関連項目
 

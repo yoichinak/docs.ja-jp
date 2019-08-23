@@ -8,12 +8,12 @@ helpviewer_keywords:
 - history [WPF], navigating back
 - navigation [WPF], through navigation history (back)
 ms.assetid: 9343234b-d864-441d-b8a7-d895cba80a87
-ms.openlocfilehash: 86590c2794339ac22cbc8ec5e11224736133e870
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 53b32e145390d7052262042c7a793699c163b373
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817980"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969350"
 ---
 # <a name="how-to-navigate-back-through-navigation-history"></a>方法: 移動履歴を遡る
 この例は、"戻る" ナビゲーション履歴のエントリに移動する方法を示しています。  
@@ -29,4 +29,4 @@ ms.locfileid: "68817980"
  **CanGoBack**と**GoBack**は、、 <xref:System.Windows.Navigation.NavigationWindow> <xref:System.Windows.Controls.Frame>、および<xref:System.Windows.Navigation.NavigationService>によって実装されます。  
   
 > [!NOTE]
->  **GoBack**を呼び出し、[戻る] ナビゲーション履歴<xref:System.InvalidOperationException>にエントリがない場合は、が発生します。
+> **GoBack**を呼び出し、[戻る] ナビゲーション履歴<xref:System.InvalidOperationException>にエントリがない場合は、が発生します。

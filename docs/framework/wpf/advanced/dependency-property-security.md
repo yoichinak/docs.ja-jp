@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dependency properties [WPF], access
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
-ms.openlocfilehash: 2f9de32eb8637e58c17aba2309eed33dcfdd42a7
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: d9dd9306980b80f7845c10e8c0ccb59f29821245
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400771"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940839"
 ---
 # <a name="dependency-property-security"></a>依存関係プロパティのセキュリティ
 依存関係プロパティは、一般に、パブリック プロパティと考える必要があります。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] のプロパティ システムの性質のため、依存関係プロパティの値に関してセキュリティを保証することはできません。  
@@ -29,7 +29,7 @@ ms.locfileid: "68400771"
  カスタム依存関係プロパティの場合は、プロパティを読み取り専用の依存関係プロパティとして登録できます。これにより、 <xref:System.Windows.DependencyPropertyKey>プロパティのへの参照を保持していないすべてのユーザーによってプロパティが設定されるのを防ぐことができます。 詳細については、「[読み取り専用の依存関係プロパティ](read-only-dependency-properties.md)」を参照してください。  
   
 > [!NOTE]
->  <xref:System.Windows.DependencyProperty>識別子フィールド private の宣言は禁止されていないため、カスタムクラスのすぐに公開される名前空間を減らすために使用される場合がありますが、このようなプロパティは、共通言語と同じ意味で "プライベート" と見なされないようにする必要があります。ランタイム (CLR) 言語定義では、次のセクションで説明する理由により、そのアクセスレベルが定義されます。  
+> <xref:System.Windows.DependencyProperty>識別子フィールド private の宣言は禁止されていないため、カスタムクラスのすぐに公開される名前空間を減らすために使用される場合がありますが、このようなプロパティは、共通言語と同じ意味で "プライベート" と見なされないようにする必要があります。ランタイム (CLR) 言語定義では、次のセクションで説明する理由により、そのアクセスレベルが定義されます。  
   
 <a name="PropertySystemExposure"></a>   
 ## <a name="property-system-exposure-of-dependency-properties"></a>プロパティ システムによる依存関係プロパティの公開  

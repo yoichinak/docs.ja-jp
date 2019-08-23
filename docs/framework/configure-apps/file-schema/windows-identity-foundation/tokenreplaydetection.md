@@ -3,19 +3,19 @@ title: <tokenReplayDetection>
 ms.date: 03/30/2017
 ms.assetid: ac3f588e-5f75-4275-b969-2d492ecc3b47
 author: BrucePerlerMS
-ms.openlocfilehash: 4deeb1d84f2621adb7ff1b649a505138b6856ec1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2e2159a73ca79fc362a8138eea95dbd173dafb11
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790495"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944297"
 ---
-# <a name="tokenreplaydetection"></a>\<tokenReplayDetection>
-トークン リプレイ検出が有効にし、トークンの有効期限を指定します。  
+# <a name="tokenreplaydetection"></a>\<tokenReplayDetection >
+トークンリプレイ検出を有効にし、トークンの有効期限を指定します。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<tokenReplayDetection>  
+\<tokenReplayDetection >  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,8 +38,8 @@ ms.locfileid: "61790495"
   
 |属性|説明|  
 |---------------|-----------------|  
-|enabled|トークン リプレイ検出が有効かどうかを指定する値トークンを有効にするには"true"にリプレイ検出を示します。|  
-|expirationPeriod|A<xref:System.TimeSpan>項目は期限切れになり、キャッシュから削除されたと見なされますまでの最大時間を指定します。  指定する方法の詳細についての<xref:System.TimeSpan>値を参照してください[Timespan 値](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)します。|  
+|enabled|トークンリプレイ検出が有効かどうかを示す値です。"true" を使用してトークンリプレイ検出を有効にします。|  
+|expirationPeriod|項目が期限切れと見なされ、キャッシュから削除されるまでの最大時間を指定する。<xref:System.TimeSpan>  値を指定<xref:System.TimeSpan>する方法の詳細については、「 [Timespan values](../windows-workflow-foundation/index.md)」を参照してください。|  
   
 ### <a name="child-elements"></a>子要素  
  なし  
@@ -48,10 +48,10 @@ ms.locfileid: "61790495"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|サービス レベルの id の設定を指定します。|  
-|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|トークン ハンドラー コレクションのセキュリティの構成を提供します。|  
+|[\<identityConfiguration>](identityconfiguration.md)|サービスレベルの id 設定を指定します。|  
+|[\<securityTokenHandlerConfiguration >](securitytokenhandlerconfiguration.md)|セキュリティトークンハンドラーのコレクションの構成を提供します。|  
   
 ## <a name="remarks"></a>Remarks  
- A`<tokenReplayDetection>`下で、サービス レベルで要素を指定することができます、`<identityConfiguration>`要素またはセキュリティ トークン ハンドラー コレクション レベルの下で、`<securityTokenHandlerConfiguration>`要素。 トークン ハンドラー コレクションの設定は、サービスに指定されているものをオーバーライドします。  
+ 要素は、要素の`<identityConfiguration>`下のサービスレベルで指定することも、 `<securityTokenHandlerConfiguration>`要素の下のセキュリティトークンハンドラーコレクションレベルで指定することもできます。 `<tokenReplayDetection>` トークンハンドラーコレクションの設定は、サービスで指定された設定よりも優先されます。  
   
- トークン再生キャッシュの型がで指定された、 [ \<tokenReplayCache >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md)要素。
+ トークン再生キャッシュの種類は、 [ \<tokenreplaycache >](tokenreplaycache.md)要素によって指定されます。

@@ -19,24 +19,24 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-ms.openlocfilehash: e2dbbd63be07a19c6e05c7ec8f94bdcd8f50c902
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 858b2b2e154b659470fa61b21f25ab61eabda012
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586304"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965654"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>拡大変換と縮小変換 (Visual Basic)
-型変換で重要な考慮事項は、変換の結果が変換先のデータ型の範囲内かどうか。  
+型変換に関する重要な考慮事項は、変換の結果が変換先のデータ型の範囲内にあるかどうかです。  
   
- A*拡大変換*元のデータのすべての値の許容されるデータ型に値を変更します。  拡大変換では、ソース値を保持するが、その表現を変更できます。 これは、型から整数型へ変換する場合に発生`Decimal`からまたは`Char`に`String`します。  
+ *拡大変換*では、元のデータの任意の値を使用できるデータ型に値が変更されます。  拡大変換ではソース値が保持されますが、その表現を変更することができます。 これは`Decimal`、整数型からに変換するか、から`Char`に`String`変換する場合に発生します。  
   
- *縮小変換* により、有効値の一部を保持できない可能性のあるデータ型に値が変更されます。 たとえば、小数部の値は整数型、およびに変換する数値型に変換されるときに丸められます`Boolean`がいずれかに減少する`True`または`False`します。  
+ *縮小変換* により、有効値の一部を保持できない可能性のあるデータ型に値が変更されます。 たとえば、小数値を整数型に変換すると丸められ、変換先`Boolean`の数値型はまたは`False`のいずれか`True`に縮小されます。  
   
 ## <a name="widening-conversions"></a>拡大変換  
- 次の表では、標準の拡大変換を示します。  
+ 次の表は、標準の拡大変換を示しています。  
   
-|データの種類|データ型に拡大変換されます<sup>1</sup>|  
+|データの種類|データ型への拡大変換<sup>1</sup>|  
 |---|---|  
 |[SByte](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|`SByte`, `Short`, `Integer`, `Long`, `Decimal`, `Single`, `Double`|  
 |[Byte](../../../../visual-basic/language-reference/data-types/byte-data-type.md)|`Byte`、`Short`、`UShort`、`Integer`、`UInteger`、`Long`、`ULong`、`Decimal`、`Single`、`Double`|  
@@ -49,54 +49,54 @@ ms.locfileid: "65586304"
 |[Decimal](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)|`Decimal`, `Single`, `Double`<sup>2</sup>|  
 |[Single](../../../../visual-basic/language-reference/data-types/single-data-type.md)|`Single`, `Double`|  
 |[Double](../../../../visual-basic/language-reference/data-types/double-data-type.md)|`Double`|  
-|いずれかの列挙型 ([Enum](../../../../visual-basic/language-reference/statements/enum-statement.md))|基になる整数型と任意の型を基になる型拡大変換されます。|  
+|任意の列挙型 ([列挙](../../../../visual-basic/language-reference/statements/enum-statement.md)型)|基になる整数型と、基になる型が拡大変換される任意の型。|  
 |[Char](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`Char`, `String`|  
-|`Char` 配列|`Char` 配列、 `String`|  
+|`Char` 配列|`Char`配列`String`|  
 |任意の型|[Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)|  
-|すべての派生型|いずれかの基本データ型の派生元である<sup>3</sup>します。|  
-|任意の型|任意のインターフェイスを実装します。|  
-|[Nothing](../../../../visual-basic/language-reference/nothing.md)|任意のデータ型またはオブジェクトの種類。|  
+|任意の派生型|派生された<sup>3</sup>の基本型。|  
+|任意の型|実装する任意のインターフェイス。|  
+|[Nothing](../../../../visual-basic/language-reference/nothing.md)|任意のデータ型またはオブジェクト型。|  
   
- <sup>1</sup>定義では、すべてのデータ型は自動的に拡大します。  
+ <sup>1</sup>定義により、すべてのデータ型がそれ自体に拡大変換されます。  
   
- <sup>2</sup>から変換`Integer`、 `UInteger`、 `Long`、 `ULong`、または`Decimal`に`Single`または`Double`大きさが失われることはありませんが、精度が失われる可能性があります。 この意味ではない情報の損失がかかります。  
+ <sup>2</sup> `Integer`、 `UInteger` `Double` 、、 、また`Decimal`はからまたはへ`Single`の変換では、精度は失われますが、マグニチュードが失われることはありません。 `ULong` `Long` この意味では、情報の損失は発生しません。  
   
- <sup>3</sup>派生型からその基本型のいずれかへの変換を広げることは驚くかもしれません。 理由は、派生型には、基本型のインスタンスとして扱うことのように、基本の型のすべてのメンバーが含まれています。 方向が逆に、基本データ型では、派生型によって定義されたメンバーは含まれません。  
+ <sup>3</sup>派生型からその基本型の1つへの変換が拡大しているように思えるかもしれません。 理由は、派生型には基本型のすべてのメンバーが含まれているため、基本型のインスタンスとして修飾されます。 逆方向では、基本型には派生型によって定義された新しいメンバーは含まれません。  
   
- 拡大変換では、実行時に常に成功して、データの損失が発生することはありません。 暗黙的に常に実行して、かどうか、 [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)型チェック スイッチを設定`On`または`Off`します。  
+ 拡大変換は実行時に常に成功し、データ損失は発生しません。 [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)によって型チェック`On`がまたはに`Off`設定されているかどうかにかかわらず、常に暗黙的に実行できます。  
   
 ## <a name="narrowing-conversions"></a>縮小変換  
- 標準の縮小変換を以下に示します。  
+ 標準的な縮小変換には、次のようなものがあります。  
   
-- (すべての型は、自動的に拡大) する点を除いて、前の拡大変換の逆の方向がテーブルにします。  
+- 前の表の拡大変換の逆方向 (すべての型がそれ自体に拡大変換される点を除く)  
   
-- いずれかの方向との間で変換[ブール](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)と任意の数値型  
+- [ブール](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)型と任意の数値型の間の双方向の変換  
   
-- 列挙型の任意の数値型からいずれかへの変換 (`Enum`)  
+- 任意の数値型から任意の列挙型へ`Enum`の変換 ()  
   
-- いずれかの方向との間で変換[文字列](../../../../visual-basic/language-reference/data-types/string-data-type.md)と任意の数値型`Boolean`、または[日付](../../../../visual-basic/language-reference/data-types/date-data-type.md)  
+- [文字列](../../../../visual-basic/language-reference/data-types/string-data-type.md)と任意の数値型、 `Boolean`、または[日付](../../../../visual-basic/language-reference/data-types/date-data-type.md)の間の双方向の変換  
   
-- それから派生した型にデータ型またはオブジェクトからの変換の入力します。  
+- データ型またはオブジェクト型から派生した型への変換  
   
- 縮小変換は常にではありません、実行時に成功し失敗したり、データ損失が発生できます。 エラーは、先のデータ型に変換される値を受信できない場合に発生します。 たとえば、数値変換が、オーバーフローがあります。 コンパイラでは許可しない限り、暗黙的に縮小変換を実行することできません、 [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)型チェック スイッチを設定`Off`します。  
+ 縮小変換は実行時に必ず成功するわけではないため、失敗したり、データ損失が発生したりする可能性があります。 変換先のデータ型が変換されている値を受け取ることができない場合、エラーが発生します。 たとえば、数値変換でオーバーフローが発生する場合があります。 [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)で型チェックスイッチがに`Off`設定されていない限り、コンパイラでは、暗黙的に縮小変換を実行することはできません。  
   
 > [!NOTE]
->  `For Each…Next`のコレクション内の要素からループ コントロール変数への変換では、縮小変換エラーが抑制されます。 詳細と例については、[For Each...Next ステートメント](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)の"縮小変換"セクションを参照してください。  
+> `For Each…Next`のコレクション内の要素からループ コントロール変数への変換では、縮小変換エラーが抑制されます。 詳細と例については、[For Each...Next ステートメント](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)の"縮小変換"セクションを参照してください。  
   
 ### <a name="when-to-use-narrowing-conversions"></a>縮小変換を使用する場合  
- 元の値は、エラーまたはデータ損失のない変換先のデータ型に変換できることがわかっている場合は、縮小変換を使用します。 ある場合など、`String`使用できますがわかっている"True"または"False"のいずれかが含まれています、`CBool`に変換キーワード`Boolean`します。  
+ 変換元の値が変換先のデータ型に変換できることがわかっている場合は、縮小変換を使用します。エラーやデータの損失は発生しません。 たとえば、に "True" また`String`は "False" が含まれていることがわかっている場合は、 `CBool`キーワードを使用して`Boolean`に変換できます。  
   
-## <a name="exceptions-during-conversion"></a>変換中に例外  
- 拡大変換を常にあるため、成功しますが、例外をスローしないでください。 失敗したときに、縮小変換は、最もよく、次の例外をスローします。  
+## <a name="exceptions-during-conversion"></a>変換中の例外  
+ 拡大変換は常に成功するため、例外はスローされません。 縮小変換では、エラーが発生した場合、通常、次の例外がスローされます。  
   
-- <xref:System.InvalidCastException> -2 つの型の間で変換が定義されていない場合  
+- <xref:System.InvalidCastException>—2つの型の間に変換が定義されていない場合  
   
-- <xref:System.OverflowException> -(整数型の場合のみ)、指定した型の変換後の値が大きすぎる場合  
+- <xref:System.OverflowException>(整数型のみ) 変換後の値が、対象の型に対して大きすぎる場合  
   
- クラスまたは構造体が定義されている場合、 [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)そのクラスまたは構造体、または変換演算子として機能するを`CType`適切と見なされるすべての例外をスローすることができます。 さらを`CType`Visual Basic の関数またはさらに、さまざまな例外をスローする可能性があります .NET Framework のメソッドを呼び出すことができます。  
+ クラスまたは構造体が、そのクラスまたは構造体への変換演算子として機能する[CType 関数](../../../../visual-basic/language-reference/functions/ctype-function.md)を定義している場合は、 `CType`適切な例外をスローできます。 また、 `CType` Visual Basic 関数または .NET Framework メソッドを呼び出す可能性があります。これらのメソッドでは、さまざまな例外がスローされる可能性があります。  
   
-## <a name="changes-during-reference-type-conversions"></a>参照型の変換中の変更  
- 変換、*参照型*ポインターだけが、値をコピーします。 値そのものがコピーも、何らかの方法で変更します。 変更できることだけでは、ポインターを保持する変数のデータ型です。 次の例では、データ型は、派生クラスから、その基底クラスに変換されますが、両方の変数をポイントするようになりましたオブジェクトは変更されません。  
+## <a name="changes-during-reference-type-conversions"></a>参照型変換中の変更  
+ *参照型*からの変換では、ポインターだけが値にコピーされます。 値自体は、どのような方法でもコピーも変更もされません。 変更できるのは、ポインターを保持している変数のデータ型だけです。 次の例では、データ型は派生クラスから基本クラスに変換されますが、両方の変数が参照するオブジェクトは変更されません。  
   
 ```  
 ' Assume class cSquare inherits from class cShape.  
@@ -110,10 +110,10 @@ shape = square
 ## <a name="see-also"></a>関連項目
 
 - [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic での型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [暗黙の型変換と明示的な型変換](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
 - [文字列とその他の型との変換](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
-- [方法: オブジェクトを Visual Basic で別の型に変換します。](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [方法: オブジェクトを Visual Basic 内の別の型に変換する](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
 - [配列変換](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
 - [データの種類](../../../../visual-basic/language-reference/data-types/index.md)
 - [データ型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

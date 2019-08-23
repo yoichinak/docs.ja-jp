@@ -8,12 +8,12 @@ helpviewer_keywords:
 - event handlers [WPF], adding
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
-ms.openlocfilehash: 00b12d9dc25e0704eb73d8bc727ae6647493f494
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 017b32dc07f62cc4553a84f7b91687fb34a53c65
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401172"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937472"
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>方法: コードを使用してイベント ハンドラーを追加する
 この例では、コードを使用して、イベントハンドラーを要素に追加する方法を示します。  
@@ -35,7 +35,7 @@ ms.locfileid: "68401172"
  [!code-vb[RoutedEventAddRemoveHandler#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/VisualBasic/default.xaml.vb#handler)]  
   
 > [!NOTE]
->  最初に解析[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]されたページにイベントハンドラーを追加する方がはるかに簡単です。 イベントハンドラーを追加するオブジェクト要素内で、処理するイベントの名前と一致する属性を追加します。 次に、その属性の値を、 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ページの分離コードファイルで定義したイベントハンドラーメソッドの名前として指定します。 詳細については、「 [XAML の概要 (WPF)](xaml-overview-wpf.md) 」または「[ルーティングイベントの概要](routed-events-overview.md)」を参照してください。  
+> 最初に解析[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]されたページにイベントハンドラーを追加する方がはるかに簡単です。 イベントハンドラーを追加するオブジェクト要素内で、処理するイベントの名前と一致する属性を追加します。 次に、その属性の値を、 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ページの分離コードファイルで定義したイベントハンドラーメソッドの名前として指定します。 詳細については、「 [XAML の概要 (WPF)](xaml-overview-wpf.md) 」または「[ルーティングイベントの概要](routed-events-overview.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
