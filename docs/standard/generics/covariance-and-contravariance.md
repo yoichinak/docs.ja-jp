@@ -65,7 +65,7 @@ ms.locfileid: "66490746"
   
 - 分散が適用されるのは参照型のみです。バリアント型パラメーターに対して値型を指定すると、その型パラメーターが、結果の構築型で不変になります。  
   
-- 分散は、デリゲートの組み合わせには適用されません。 つまり、 `Action<Derived>` 型と `Action<Base>` 型 (Visual Basic では`Action(Of Derived)` と `Action(Of Base)` ) の 2 つのデリゲートがある場合、結果はタイプ セーフになりますが、2 つ目のデリゲートに 1 つ目のデリゲートを組み合わせることはできません。 分散によって 2 つ目のデリゲートを `Action<Derived>`型の変数に代入できますが、デリゲートを組み合わせることができるのは、それらの型が完全に一致している場合だけです。  
+- 変性は、デリゲートの組み合わせには適用されません。 つまり、 `Action<Derived>` 型と `Action<Base>` 型 (Visual Basic では`Action(Of Derived)` と `Action(Of Base)` ) の 2 つのデリゲートがある場合、結果はタイプ セーフになりますが、2 つ目のデリゲートに 1 つ目のデリゲートを組み合わせることはできません。 変性によって 2 つ目のデリゲートを `Action<Derived>`型の変数に代入できますが、デリゲートを組み合わせることができるのは、それらの型が完全に一致している場合だけです。  
   
  以降では、共変と反変の型パラメーターについて詳しく説明します。  
   
@@ -132,10 +132,10 @@ ms.locfileid: "66490746"
  [!code-csharp[CoContravarianceDelegates#5](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravariancedelegates/cs/example.cs#5)]
  [!code-vb[CoContravarianceDelegates#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravariancedelegates/vb/example.vb#5)]  
   
-### <a name="variance-in-generic-and-non-generic-delegates"></a>汎用デリゲートと非汎用デリゲートの分散  
+### <a name="variance-in-generic-and-non-generic-delegates"></a>汎用デリゲートと非汎用デリゲートの変性  
  上のコードでは、 `MyMethod` のシグネチャが、構築された汎用デリゲート `Func<Base, Derived>` (Visual Basic では`Func(Of Base, Derived)` ) のシグネチャと厳密に一致しています。 この例から、より強い派生型のパラメーターとより弱い派生型の戻り値を持つ変数やメソッド パラメーターにこの汎用デリゲートを格納できることと、そのためには、すべてのデリゲート型が汎用デリゲート型 <xref:System.Func%602>から構築されている必要があることがわかります。  
   
- これは重要なポイントです。 汎用デリゲートの型パラメーターにおける共変性と反変性の効果は、通常のデリゲート バインディングにおける共変性と反変性の効果 (「[デリゲートの分散 (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)」および「[デリゲートの分散 (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)」を参照) に似ていますが、 デリゲート バインディングの分散は、バリアント型パラメーターを持つ汎用デリゲート型だけでなく、すべてのデリゲート型で使用できます。 さらに、デリゲート バインディングの変性では、より限定的なパラメーターの型とより限定的でない戻り値の型を持つ任意のデリゲートにメソッドをバインドできますが、汎用デリゲートの代入を使用できるのは、両方のデリゲート型が同じジェネリック型定義から構築されている場合のみです。  
+ これは重要なポイントです。 汎用デリゲートの型パラメーターにおける共変性と反変性の効果は、通常のデリゲート バインディングにおける共変性と反変性の効果 (「[デリゲートの分散 (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)」および「[デリゲートの分散 (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)」を参照) に似ていますが、 デリゲート バインディングの分散は、バリアント型パラメーターを持つ汎用デリゲート型だけでなく、すべてのデリゲート型で使用できます。 さらに、デリゲート バインディングの分散では、より限定的なパラメーターの型とより限定的でない戻り値の型を持つ任意のデリゲートにメソッドをバインドできますが、汎用デリゲートの代入を使用できるのは、両方のデリゲート型が同じジェネリック型定義から構築されている場合のみです。  
   
  デリゲート バインディングの分散とジェネリック型パラメーターの分散の両方の効果を組み合わせた例を以下に示します。 ここでは、3 つの型を含む型階層を定義しています。`Type1`が最も弱い派生型で、`Type3`が最も強い派生型です。 通常のデリゲート バインディングの分散を使用して、パラメーターの型が `Type1` で戻り値の型が `Type3` のメソッドを、パラメーターの型が `Type2` で戻り値の型が `Type2`の汎用デリゲートにバインドしています。 その結果、得られた汎用デリゲートを、ジェネリック型パラメーターの共変性と反変性を使用して、 `Type3` 型のパラメーターと `Type1`型の戻り値を持つ汎用デリゲート型の変数に代入しています。 2 回目の代入では、変数型とデリゲート型の両方が同じジェネリック型定義 (この場合は <xref:System.Func%602>) から構築されている必要があります。  
   

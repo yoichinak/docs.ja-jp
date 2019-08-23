@@ -69,7 +69,7 @@ ms.locfileid: "68868834"
 
 - [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
 - [デリゲート](../../../csharp/programming-guide/delegates/index.md)
-- [デリゲートの分散の使用](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)
-- [デリゲートの分散](../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
-- [Func および Action 汎用デリゲートでの分散の使用](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [デリゲートの変性の使用](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)
+- [デリゲートの変性](../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+- [Func および Action 汎用デリゲートでの変性の使用](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
 - [イベント](../../../csharp/programming-guide/events/index.md)

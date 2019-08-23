@@ -45,7 +45,7 @@ object[] array = new String[10];
 // array[0] = 10;  
 ```  
   
- メソッド グループの共変性と反変性のサポートにより、メソッド シグネチャをデリゲート型と一致させることができます。 これにより、一致するシグネチャを持つメソッドだけでなく、デリゲート型で指定された型よりも強い派生型 (共変性) を返すメソッドや、弱い派生型 (反変性) のパラメーターを受け取るメソッドを、デリゲートに割り当てることができます。 詳細については、「[デリゲートの分散 (C#)](./variance-in-delegates.md)」および「[デリゲートの分散の使用 (C#)](./using-variance-in-delegates.md)」を参照してください。  
+ メソッド グループの共変性と反変性のサポートにより、メソッド シグネチャをデリゲート型と一致させることができます。 これにより、一致するシグネチャを持つメソッドだけでなく、デリゲート型で指定された型よりも強い派生型 (共変性) を返すメソッドや、弱い派生型 (反変性) のパラメーターを受け取るメソッドを、デリゲートに割り当てることができます。 詳細については、「[デリゲートの変性 (C#)](./variance-in-delegates.md)」および「[デリゲートの変性の使用 (C#)](./using-variance-in-delegates.md)」を参照してください。  
   
  次のコード例は、メソッド グループでの共変性と反変性のサポートを示しています。  
   
@@ -68,7 +68,7 @@ static void Test()
 }  
 ```  
   
- .NET Framework 4 以降では、C# でジェネリック インターフェイスと汎用デリゲートでの共変性と反変性がサポートされ、ジェネリック型パラメーターの暗黙の型変換が可能になっています。 詳細については、「[ジェネリック インターフェイスの分散 (C#)](./variance-in-generic-interfaces.md)」および「[デリゲートの分散 (C#)](./variance-in-delegates.md)」を参照してください。  
+ .NET Framework 4 以降では、C# でジェネリック インターフェイスと汎用デリゲートでの共変性と反変性がサポートされ、ジェネリック型パラメーターの暗黙の型変換が可能になっています。 詳細については、「[ジェネリック インターフェイスの変性 (C#)](./variance-in-generic-interfaces.md)」および「[デリゲートの変性 (C#)](./variance-in-delegates.md)」を参照してください。  
   
  次のコード例は、ジェネリック インターフェイスの暗黙の参照変換を示しています。  
   
@@ -77,15 +77,15 @@ IEnumerable<String> strings = new List<String>();
 IEnumerable<Object> objects = strings;  
 ```  
   
- ジェネリック インターフェイスや汎用デリゲートは、そのジェネリック パラメーターが共変または反変として宣言されている場合、*バリアント*と呼ばれます。 C# では、独自のバリアント インターフェイスおよびデリゲートを作成できます。 詳細については、「[バリアント ジェネリック インターフェイスの作成 (C#)](./creating-variant-generic-interfaces.md)」および「[デリゲートの分散 (C#)](./variance-in-delegates.md)」を参照してください。  
+ ジェネリック インターフェイスや汎用デリゲートは、そのジェネリック パラメーターが共変または反変として宣言されている場合、*バリアント*と呼ばれます。 C# では、独自のバリアント インターフェイスおよびデリゲートを作成できます。 詳細については、「[バリアント ジェネリック インターフェイスの作成 (C#)](./creating-variant-generic-interfaces.md)」および「[デリゲートの変性 (C#)](./variance-in-delegates.md)」を参照してください。  
   
 ## <a name="related-topics"></a>関連トピック  
   
 |Title|説明|  
 |-----------|-----------------|  
-|[ジェネリック インターフェイスの分散 (C#)](./variance-in-generic-interfaces.md)|ジェネリック インターフェイスでの共変性と反変性について説明し、.NET Framework でのバリアント ジェネリック インターフェイスの一覧を示します。|  
+|[ジェネリック インターフェイスの変性 (C#)](./variance-in-generic-interfaces.md)|ジェネリック インターフェイスでの共変性と反変性について説明し、.NET Framework でのバリアント ジェネリック インターフェイスの一覧を示します。|  
 |[バリアント ジェネリック インターフェイスの作成 (C#)](./creating-variant-generic-interfaces.md)|カスタムのバリアント インターフェイスを作成する方法を示します。|  
-|[ジェネリック コレクションに対するインターフェイスでの分散の使用 (C#)](./using-variance-in-interfaces-for-generic-collections.md)|<xref:System.Collections.Generic.IEnumerable%601> および <xref:System.IComparable%601> インターフェイスでの共変性と反変性のサポートがコードの再利用にどのように役立つかを示します。|  
-|[デリゲートの分散 (C#)](./variance-in-delegates.md)|汎用および非汎用デリゲートでの共変性と反変性について説明し、.NET Framework でのバリアント汎用デリゲートの一覧を示します。|  
-|[デリゲートの分散の使用 (C#)](./using-variance-in-delegates.md)|非汎用デリゲートでの共変性と反変性のサポートを使用して、メソッド シグネチャをデリゲート型に一致させる方法について説明します。|  
-|[Func および Action 汎用デリゲートでの分散の使用 (C#)](./using-variance-for-func-and-action-generic-delegates.md)|`Func` および `Action` デリゲートでの共変性と反変性のサポートがコードの再利用にどのように役立つかを示します。|
+|[ジェネリック コレクションに対するインターフェイスでの変性の使用 (C#)](./using-variance-in-interfaces-for-generic-collections.md)|<xref:System.Collections.Generic.IEnumerable%601> および <xref:System.IComparable%601> インターフェイスでの共変性と反変性のサポートがコードの再利用にどのように役立つかを示します。|  
+|[デリゲートの変性 (C#)](./variance-in-delegates.md)|汎用および非汎用デリゲートでの共変性と反変性について説明し、.NET Framework でのバリアント汎用デリゲートの一覧を示します。|  
+|[デリゲートの変性の使用 (C#)](./using-variance-in-delegates.md)|非汎用デリゲートでの共変性と反変性のサポートを使用して、メソッド シグネチャをデリゲート型に一致させる方法について説明します。|  
+|[Func および Action 汎用デリゲートでの変性の使用 (C#)](./using-variance-for-func-and-action-generic-delegates.md)|`Func` および `Action` デリゲートでの共変性と反変性のサポートがコードの再利用にどのように役立つかを示します。|
