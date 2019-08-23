@@ -6,12 +6,12 @@ helpviewer_keywords:
 - win32manifest compiler option [Visual Basic]
 - -win32manifest compiler option [Visual Basic]
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
-ms.openlocfilehash: 15fe62457ed11ffcd08a1db3aa8be57080f22869
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6eb9d50a3ecd80acb0349f1ba315d9cf8ccc6dc2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774778"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937235"
 ---
 # <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
 プロジェクトのポータブル実行可能 (PE) ファイルに埋め込まれる、ユーザー定義の Win32 アプリケーション マニフェスト ファイルを識別します。  
@@ -26,31 +26,31 @@ ms.locfileid: "61774778"
   
 |用語|定義|  
 |---|---|  
-|`fileName`|カスタム マニフェスト ファイルのパス。|  
+|`fileName`|カスタムマニフェストファイルのパス。|  
   
 ## <a name="remarks"></a>Remarks  
- 既定では、Visual Basic コンパイラは asInvoker の要求実行レベルを指定するアプリケーション マニフェストを埋め込みます。 実行可能ファイルが組み込まれている、通常は bin \debug または bin \release フォルダー Visual Studio を使用すると、同じフォルダーにマニフェストを作成します。 HighestAvailable または requireAdministrator の要求実行レベルを指定する例については、カスタム マニフェストを指定する場合は、ファイルの名前を指定するこのオプションを使用します。  
+ 既定では、Visual Basic コンパイラは、asInvoker の要求実行レベルを指定するアプリケーションマニフェストを埋め込みます。 実行可能ファイルがビルドされたフォルダー (通常は、Visual Studio を使用する場合は bin\Debug または bin\Release フォルダー) にマニフェストが作成されます。 HighestAvailable または requireAdministrator の要求実行レベルを指定するなど、カスタムマニフェストを指定する場合は、このオプションを使用してファイルの名前を指定します。  
   
 > [!NOTE]
->  このオプションと[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)オプションは相互に排他的です。 同じコマンド行で両方のオプションを使用しようとする場合は、ビルド エラーが表示されます。  
+> このオプションと[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)オプションは同時に指定できません。 同じコマンドラインで両方のオプションを使用しようとすると、ビルドエラーが発生します。  
   
  アプリケーション マニフェストを持たないアプリケーションは、要求実行レベルを指定した場合、Windows Vista のユーザー アカウント制御機能によって、ファイルまたはレジストリの仮想化の対象となります。 仮想化について詳しくは、「[Windows Vista の ClickOnce 配置](/visualstudio/deployment/clickonce-deployment-on-windows-vista)」を参照してください。  
   
- アプリケーションは、次の条件のいずれかが true の場合、仮想化されます。  
+ 次のいずれかの条件に該当する場合、アプリケーションは仮想化の対象になります。  
   
-1. 使用する、`-nowin32manifest`オプションを渡さないように後のビルド手順で、または Windows リソース (.res) ファイルの一部としてマニフェストを使用して、`-win32resource`オプション。  
+1. オプションを使用`-nowin32manifest`して、後のビルド手順でマニフェストを提供したり、 `-win32resource`オプションを使用して Windows リソース (.res) ファイルの一部として指定したりすることはできません。  
   
 2. 要求実行レベルが指定されていないカスタム マニフェストを提供している。  
   
- Visual Studio は、既定の .manifest ファイルを作成し、それを実行可能ファイルと一緒にデバッグ ディレクトリとリリース ディレクトリに保存します。 表示したり、クリックして既定のアプリケーション マニフェスト ファイルを編集**UAC 設定の表示**上、**アプリケーション**プロジェクト デザイナー タブ。 詳細については、「[[アプリケーション] ページ (プロジェクト デザイナー) (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)」を参照してください。  
+ Visual Studio は、既定の .manifest ファイルを作成し、それを実行可能ファイルと一緒にデバッグ ディレクトリとリリース ディレクトリに保存します。 既定のアプリケーションマニフェストファイルを表示または編集するには、プロジェクトデザイナーの **[アプリケーション]** タブで **[UAC 設定の表示]** をクリックします。 詳細については、「[[アプリケーション] ページ (プロジェクト デザイナー) (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)」を参照してください。  
   
- 行うことができます、アプリケーション マニフェストまたはカスタムのビルド後の手順として、Win32 リソース ファイルの一部としてを使用して、`-nowin32manifest`オプション。 アプリケーションを Windows Vista でファイルまたはレジストリの仮想化の対象にする場合は、これと同じオプションを使用します。 これにより、コンパイラからの作成と、PE ファイルの既定のマニフェストを埋め込むことができなくなります。  
+ アプリケーションマニフェストは、カスタムのビルド後の手順として提供することも、 `-nowin32manifest`オプションを使用して Win32 リソースファイルの一部として指定することもできます。 アプリケーションを Windows Vista でファイルまたはレジストリの仮想化の対象にする場合は、これと同じオプションを使用します。 これにより、コンパイラは既定のマニフェストを作成し、PE ファイルに埋め込むことができなくなります。  
   
 ## <a name="example"></a>例  
- 次の例では、Visual Basic コンパイラが PE に挿入される既定のマニフェストを示しています。  
+ 次の例は、Visual Basic コンパイラによって PE に挿入される既定のマニフェストを示しています。  
   
 > [!NOTE]
->  コンパイラは、XML マニフェストに標準のアプリケーション名 MyApplication.app を挿入します。 これは、アプリケーションを Windows Server 2003 Service Pack 3 で実行できるようにするための回避策です。  
+> コンパイラは、標準のアプリケーション名 MyApplication をマニフェスト XML に挿入します。 これは、アプリケーションを Windows Server 2003 Service Pack 3 で実行できるようにするための回避策です。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  

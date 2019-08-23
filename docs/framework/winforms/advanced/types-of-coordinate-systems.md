@@ -15,84 +15,84 @@ helpviewer_keywords:
 - coordinate systems
 - transformations [Windows Forms], world
 ms.assetid: c61ff50a-eb1d-4e6c-83cd-f7e9764cfa9f
-ms.openlocfilehash: 24079f24bdae5fefd785a20dda9b29a190fb4068
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 23d9374f1f46c4480079eb4ad5269a197a13a5bf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505252"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963891"
 ---
 # <a name="types-of-coordinate-systems"></a>座標系の種類
-GDI + で 3 つの座標空間を使用します。 世界、ページ、およびデバイス。 ワールド座標は特定のグラフィック ワールドをモデル化するために使用する座標は、.NET Framework のメソッドに渡す座標です。 ページ座標は、フォームやコントロールなどの描画サーフェイスで使用される座標系を参照してください。 デバイス座標は、画面や紙など、描画されている物理デバイスで使用される座標です。 呼び出しを行うとき`myGraphics.DrawLine(myPen, 0, 0, 160, 80)`、ポイントに渡す、<xref:System.Drawing.Graphics.DrawLine%2A>メソッド:`(0, 0)`と`(160, 80)`: ワールド座標空間では。 GDI +、画面上に線を描画できます、前に、座標変換のシーケンスを通過します。 ワールド変換と呼ばれる 1 つの変換は、ページ座標にワールド座標を変換し、ページの変換と呼ばれる別の変換は、ページ座標をデバイス座標に変換します。  
+GDI + では、ワールド、ページ、デバイスという3つの座標空間が使用されます。 ワールド座標は、特定のグラフィックワールドをモデル化するために使用される座標であり、.NET Framework のメソッドに渡す座標です。 ページ座標は、フォームやコントロールなど、描画サーフェイスによって使用される座標系を表します。 デバイス座標は、画面や用紙など、描画される物理デバイスで使用される座標です。 この呼び出し`myGraphics.DrawLine(myPen, 0, 0, 160, 80)`を行うと、 <xref:System.Drawing.Graphics.DrawLine%2A>メソッドに渡す点 (`(0, 0)`と`(160, 80)`) がワールド座標空間にあります。 GDI + が画面上に線を描画する前に、座標は一連の変換を通過します。 ワールド変換と呼ばれる1つの変換は、ワールド座標をページ座標に変換し、ページ変換と呼ばれる別の変換はページ座標をデバイス座標に変換します。  
   
-## <a name="transforms-and-coordinate-systems"></a>座標系と変換  
- 左上隅ではなく、クライアント領域の本体でに原点がある座標系を使用するとします。 たとえば、クライアント領域の上部から 50 ピクセルとクライアント領域の左端から 100 ピクセルにする配信元にするとします。 次の図は、このような座標系を示します。  
+## <a name="transforms-and-coordinate-systems"></a>変換と座標系  
+ 左上隅ではなく、クライアント領域の本体に原点がある座標系を操作するとします。 たとえば、原点をクライアント領域の左端から100ピクセル、クライアント領域の上端から50ピクセルにする必要があるとします。 次の図は、このような座標系を示しています。  
   
- ![Coordinate System](./media/aboutgdip05-art01.gif "AboutGdip05_art01")  
+ ![座標系](./media/aboutgdip05-art01.gif "AboutGdip05_art01")  
   
- 呼び出しを行うとき`myGraphics.DrawLine(myPen, 0, 0, 160, 80)`、次の図に示すように行を取得します。  
+ 呼び出し`myGraphics.DrawLine(myPen, 0, 0, 160, 80)`を行うと、次の図に示すような行が表示されます。  
   
- ![Coordinate System](./media/aboutgdip05-art02.gif "AboutGdip05_art02")  
+ ![座標系](./media/aboutgdip05-art02.gif "AboutGdip05_art02")  
   
- 次の 3 つの座標空間で、行の端点の座標は次のとおりです。  
+ 3つの座標空間における直線の終点の座標は、次のようになります。  
   
 |||  
 |-|-|  
-|World|(0, 0) に (160, 80)|  
-|ページ|(100, 50) を (260、130)|  
-|デバイス|(100, 50) を (260、130)|  
+|World|(0, 0) ~ (160, 80)|  
+|ページ|(100, 50) から (260、130)|  
+|デバイス|(100, 50) から (260、130)|  
   
- ページ座標空間がクライアント領域の左上隅にある原点を持つことに注意してください。これは、大文字と小文字を常になります。 測定単位がピクセルであるため、デバイス座標がページ座標と同じにも注意してください。 測定単位をピクセル (たとえば、インチ) 以外に設定した場合は、デバイス座標がページ座標から別になります。  
+ ページ座標空間の原点がクライアント領域の左上隅にあることに注意してください。常にこれが当てはまります。 また、測定単位はピクセルであるため、デバイス座標はページ座標と同じであることに注意してください。 測定単位をピクセル以外の値 (インチなど) に設定した場合、デバイス座標はページ座標とは異なります。  
   
- ワールド座標をマップ ページ座標、ワールド変換に保持されている、<xref:System.Drawing.Graphics.Transform%2A>のプロパティ、<xref:System.Drawing.Graphics>クラス。 前の例では、ワールド変換は x 方向に翻訳 100 単位と y 軸方向で 50 ユニット。 次の例のワールド変換の設定、<xref:System.Drawing.Graphics>オブジェクトを使用して<xref:System.Drawing.Graphics>上記の図に示すように行を描画するオブジェクト。  
+ ワールド座標をページ座標にマップするワールド変換は、 <xref:System.Drawing.Graphics.Transform%2A> <xref:System.Drawing.Graphics>クラスのプロパティに保持されます。 前の例では、ワールド変換は、x 方向の平行移動100単位と y 方向の50単位です。 次の例では、 <xref:System.Drawing.Graphics>オブジェクトのワールド変換を設定し、そのオブジェクトを<xref:System.Drawing.Graphics>使用して、前の図に示した線を描画します。  
   
  [!code-csharp[System.Drawing.CoordinateSystems#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.CoordinateSystems#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#31)]  
   
- ページの変換は、デバイス座標にページ座標をマップします。 <xref:System.Drawing.Graphics>クラスには、<xref:System.Drawing.Graphics.PageUnit%2A>と<xref:System.Drawing.Graphics.PageScale%2A>ページ変換を操作するためのプロパティ。 <xref:System.Drawing.Graphics>クラスでは、2 つの読み取り専用のプロパティも提供します<xref:System.Drawing.Graphics.DpiX%2A>と<xref:System.Drawing.Graphics.DpiY%2A>、ディスプレイ デバイスの 1 インチあたりのドット数水平および垂直方向を確認するためです。  
+ ページ変換は、ページ座標をデバイス座標にマップします。 クラス<xref:System.Drawing.Graphics>には、 <xref:System.Drawing.Graphics.PageUnit%2A>ページ<xref:System.Drawing.Graphics.PageScale%2A>変換を操作するためのプロパティとプロパティが用意されています。 また<xref:System.Drawing.Graphics> 、クラスには、2つの読み取り<xref:System.Drawing.Graphics.DpiX%2A>専用<xref:System.Drawing.Graphics.DpiY%2A>プロパティと、ディスプレイデバイスの1インチあたりの水平および垂直のドットを調べるためのプロパティも用意されています。  
   
- 使用することができます、<xref:System.Drawing.Graphics.PageUnit%2A>のプロパティ、<xref:System.Drawing.Graphics>ピクセル以外のメジャーの単位を指定するクラス。  
+ クラスのプロパティ<xref:System.Drawing.Graphics.PageUnit%2A>を使用して、ピクセル以外の測定単位を指定できます。 <xref:System.Drawing.Graphics>  
   
 > [!NOTE]
->  設定することはできません、<xref:System.Drawing.Graphics.PageUnit%2A>プロパティを<xref:System.Drawing.GraphicsUnit.World>をこの物理単位でないし、例外が発生します。  
+> この<xref:System.Drawing.Graphics.PageUnit%2A>プロパティをに<xref:System.Drawing.GraphicsUnit.World>設定することはできません。これは物理単位ではないため、例外が発生します。  
   
- 次の例から線を描画します (0, 0) に (2, 1)、ここ 2 インチ右側に、点 (0, 0) からダウン 1 インチは、ポイント (2, 1)。  
+ 次の例では、(0, 0) から (2, 1) までの線を描画します。ここで、点 (2, 1) は右に2インチ、ポイント (0, 0) から1インチ下になります。  
   
  [!code-csharp[System.Drawing.CoordinateSystems#32](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.CoordinateSystems#32](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#32)]  
   
 > [!NOTE]
->  ペンの幅を指定しないのは、ペンを構築するときに、前の例は 1 インチ幅の線を描画します。 ペンの幅を指定するには、2 番目の引数で、<xref:System.Drawing.Pen>コンス トラクター。  
+> ペンを作成するときにペンの幅を指定しなかった場合、前の例では1インチ幅の線が描画されます。 コンストラクターの<xref:System.Drawing.Pen> 2 番目の引数には、ペンの幅を指定できます。  
   
  [!code-csharp[System.Drawing.CoordinateSystems#33](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#33)]
  [!code-vb[System.Drawing.CoordinateSystems#33](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#33)]  
   
- ディスプレイ デバイスが 96 ドット/インチで水平方向と垂直方向の 1 インチあたり 96 ドットであると、想定した場合、3 つの座標空間に次座標がある前の例では行のエンドポイント。  
+ ディスプレイデバイスの水平方向には96ドット/インチ、垂直方向には96ドットがあると想定している場合、前の例の線の端点には、3つの座標空間に次の座標があります。  
   
 |||  
 |-|-|  
-|World|(0, 0) に (2, 1)|  
-|ページ|(0, 0) に (2, 1)|  
-|デバイス|(0, 0, に (192, 96)|  
+|World|(0, 0) ~ (2, 1)|  
+|ページ|(0, 0) ~ (2, 1)|  
+|デバイス|(0、0、~ (192、96)|  
   
- ワールド座標の原点がクライアント領域の左上隅にあるため、ページ座標がワールド座標と同じに注意してください。  
+ ワールド座標空間の原点がクライアント領域の左上隅にあるため、ページ座標はワールド座標と同じであることに注意してください。  
   
- さまざまな効果を実現するために世界とページの変換を組み合わせることができます。 たとえば、メジャーの単位として (インチ) を使用して、クライアント領域の上端からの 1/2 インチ、クライアント領域の左端から 2 インチ、座標系の原点します。 次の例の世界とページの変換の設定、<xref:System.Drawing.Graphics>オブジェクトし、後から線を描画します (0, 0) に (2, 1)。  
+ 世界およびページの変換を組み合わせて、さまざまな効果を実現できます。 たとえば、ミリメートルを測定単位として使用する場合に、座標系の原点をクライアント領域の左端から2インチ、クライアント領域の上端から1/2 インチにする必要があるとします。 次の例では、 <xref:System.Drawing.Graphics>オブジェクトのワールド変換とページ変換を設定し、(0, 0) から (2, 1) までの線を描画します。  
   
  [!code-csharp[System.Drawing.CoordinateSystems#34](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#34)]
  [!code-vb[System.Drawing.CoordinateSystems#34](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#34)]  
   
- 次の図は、行と座標系を示します。  
+ 次の図は、線と座標系を示しています。  
   
  ![座標系](./media/aboutgdip05-art03.gif "AboutGdip05_art03")  
   
- ディスプレイ デバイスが 96 ドット/インチで水平方向と垂直方向の 1 インチあたり 96 ドットであると、想定した場合、3 つの座標空間に次座標がある前の例では行のエンドポイント。  
+ ディスプレイデバイスの水平方向には96ドット/インチ、垂直方向には96ドットがあると想定している場合、前の例の線の端点には、3つの座標空間に次の座標があります。  
   
 |||  
 |-|-|  
-|World|(0, 0) に (2, 1)|  
-|ページ|(2, 0.5) に (4, 1.5)|  
-|デバイス|(192, 48) に (384、144)|  
+|World|(0, 0) ~ (2, 1)|  
+|ページ|(2, 0.5) から (4, 1.5)|  
+|デバイス|(192, 48) から (384、144)|  
   
 ## <a name="see-also"></a>関連項目
 

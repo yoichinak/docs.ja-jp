@@ -5,36 +5,36 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
-ms.openlocfilehash: 0c53e3a15bcbe61db7da1edb31ecd3fd562603f5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 24b962edc15c04cf1f68b73a7da960857658309c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785464"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928453"
 ---
 # <a name="loading-a-dataset-from-xml"></a>XML からの DataSet の読み込み
 ADO.NET では、XML ストリームまたは XML ドキュメントから <xref:System.Data.DataSet> の内容を作成できます。 また、.NET Framework では、XML から読み込まれる情報と <xref:System.Data.DataSet> のスキーマまたはリレーショナル構造の作成方法を柔軟に変更できます。  
   
- 入力する、 <xref:System.Data.DataSet> 、XML からデータを使用して、 **ReadXml**のメソッド、<xref:System.Data.DataSet>オブジェクト。 **ReadXml**メソッドは、ファイル、ストリームから読み取りますまたは**XmlReader**、XML と省略可能なソースを引数として受け取ります**XmlReadMode**引数。 詳細については、 **XmlReader**を参照してください[XmlTextReader による XML データの読み取り](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/tfz3cz6w(v=vs.100))します。 **ReadXml**メソッドは、XML ストリームまたはドキュメントと負荷の内容を読み取り、<xref:System.Data.DataSet>データ。 リレーショナル スキーマは作成も、<xref:System.Data.DataSet>に応じて、 **XmlReadMode**指定し、リレーショナル スキーマが既に存在するかどうか。  
+ に XML の<xref:System.Data.DataSet>データを格納するには、 <xref:System.Data.DataSet>オブジェクトの ReadXml メソッドを使用します。 **ReadXml**メソッドは、ファイル、ストリーム、または**XmlReader**から読み取り、XML のソースと省略可能な**XmlReadMode**引数を引数として受け取ります。 **XmlReader**の詳細については、「 [XmlTextReader を使用した XML データの読み取り](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/tfz3cz6w(v=vs.100))」を参照してください。 **ReadXml**メソッドは、XML ストリームまたはドキュメントの内容を読み取り、データ<xref:System.Data.DataSet>を使用してを読み込みます。 また、指定された**XmlReadMode**と、 <xref:System.Data.DataSet>リレーショナルスキーマが既に存在するかどうかに応じて、のリレーショナルスキーマも作成されます。  
   
- 次の表のオプション、 **XmlReadMode**引数。  
+ 次の表では、 **XmlReadMode**引数のオプションについて説明します。  
   
 |オプション|説明|  
 |------------|-----------------|  
-|**Auto**|既定値です。 XML を調べ、次の順序で最適なオプションを選択します。<br /><br /> 場合、XML が DiffGram、 **DiffGram**使用されます。<br />If、<xref:System.Data.DataSet>スキーマを含むまたは XML にインライン スキーマが含まれている**ReadSchema**使用されます。<br />If、<xref:System.Data.DataSet>スキーマが含まれていない XML にインライン スキーマが含まれていない**InferSchema**使用されます。<br /><br /> 読み取られる XML の形式がわかっている場合最適なパフォーマンスは勧めを明示的に設定すること**XmlReadMode**ではなく、そのまま使用よりも、**自動**既定。|  
-|**ReadSchema**|インライン スキーマを読み取り、データとスキーマを読み込みます。<br /><br /> <xref:System.Data.DataSet> に既にスキーマが含まれている場合には、読み取るインライン スキーマの新しいテーブルが <xref:System.Data.DataSet> の既存のスキーマに追加されます。 インライン スキーマのテーブルが既に <xref:System.Data.DataSet> に存在している場合には、例外がスローされます。 使用して既存のテーブルのスキーマを変更することはできません**XmlReadMode.ReadSchema**します。<br /><br /> <xref:System.Data.DataSet> にスキーマが含まれておらず、インライン スキーマが存在しない場合には、データは読み取られません。<br /><br /> インライン スキーマを定義するには、XML スキーマ定義言語 (XSD) スキーマを使用します。 XML スキーマとしてのインライン スキーマを書き込む方法の詳細については、次を参照してください。[派生 DataSet リレーショナル構造の XML スキーマ (XSD) から](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)します。|  
-|**IgnoreSchema**|インライン スキーマを無視し、データを既存の <xref:System.Data.DataSet> スキーマへ読み込みます。 既存のスキーマに一致しないデータは破棄されます。 <xref:System.Data.DataSet> にスキーマがない場合には、データは読み込まれません。<br /><br /> 場合は、データが DiffGram、 **IgnoreSchema**と同じ機能を持つ**DiffGram** *します。*|  
-|**InferSchema**|インライン スキーマを無視し、XML データ構造ごとにスキーマを推論し、データを読み込みます。<br /><br /> <xref:System.Data.DataSet> に既にスキーマが含まれている場合、既存のテーブルに列を追加することによって現在のスキーマが拡張されます。 既存のテーブルが存在しない場合、余分なテーブルは追加されません。 推論されたテーブルが他の名前空間に既に存在している場合、または推論された列と既存の列が矛盾する場合には、例外がスローされます。<br /><br /> 方法の詳細について**ReadXmlSchema**スキーマの推論、XML ドキュメントから、次を参照してください。[への推論からの DataSet リレーショナル構造 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)します。|  
-|**DiffGram**|DiffGram を読み取り、現在のスキーマへデータを追加します。 **DiffGram**一意識別子値が一致する既存の行を含む新しい行をマージします。 このトピックの最後にある「XML のデータの結合」の説明を参照してください。 Diffgram の詳細については、次を参照してください。 [Diffgram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)します。|  
-|**フラグメント**|ストリームの終わりに達するまで、複数 XML フラグメントの読み取りを続行します。 <xref:System.Data.DataSet> スキーマに一致するフラグメントが適切なテーブルに追加されます。 <xref:System.Data.DataSet> スキーマに一致しないフラグメントは破棄されます。|  
+|**Auto**|既定値です。 XML を調べ、次の順序で最適なオプションを選択します。<br /><br /> -XML が DiffGram の場合は、 **diffgram**が使用されます。<br />-に<xref:System.Data.DataSet>スキーマが含まれている場合、または XML にインラインスキーマが含まれている場合は、 **readschema**が使用されます。<br />-に<xref:System.Data.DataSet>スキーマが含まれておらず、XML にインラインスキーマが含まれていない場合は、 **InferSchema**が使用されます。<br /><br /> 読み取り中の XML の形式がわかっている場合は、最適なパフォーマンスを得るために、**自動**既定値をそのまま使用するのではなく、明示的な**XmlReadMode**を設定することをお勧めします。|  
+|**ReadSchema**|インライン スキーマを読み取り、データとスキーマを読み込みます。<br /><br /> <xref:System.Data.DataSet> に既にスキーマが含まれている場合には、読み取るインライン スキーマの新しいテーブルが <xref:System.Data.DataSet> の既存のスキーマに追加されます。 インライン スキーマのテーブルが既に <xref:System.Data.DataSet> に存在している場合には、例外がスローされます。 **XmlReadMode**を使用して、既存のテーブルのスキーマを変更することはできません。<br /><br /> <xref:System.Data.DataSet> にスキーマが含まれておらず、インライン スキーマが存在しない場合には、データは読み取られません。<br /><br /> インライン スキーマを定義するには、XML スキーマ定義言語 (XSD) スキーマを使用します。 インラインスキーマを XML スキーマとして記述する方法の詳細については、「 [Xml スキーマ (XSD) からの DataSet リレーショナル構造の派生](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)」を参照してください。|  
+|**IgnoreSchema**|インライン スキーマを無視し、データを既存の <xref:System.Data.DataSet> スキーマへ読み込みます。 既存のスキーマに一致しないデータは破棄されます。 <xref:System.Data.DataSet> にスキーマがない場合には、データは読み込まれません。<br /><br /> データが DiffGram の場合、 **IgnoreSchema**には**diffgram**と同じ機能があり*ます。*|  
+|**InferSchema**|インライン スキーマを無視し、XML データ構造ごとにスキーマを推論し、データを読み込みます。<br /><br /> <xref:System.Data.DataSet> に既にスキーマが含まれている場合、既存のテーブルに列を追加することによって現在のスキーマが拡張されます。 既存のテーブルが存在しない場合、余分なテーブルは追加されません。 推論されたテーブルが他の名前空間に既に存在している場合、または推論された列と既存の列が矛盾する場合には、例外がスローされます。<br /><br /> **Readxmlschema**が xml ドキュメントからスキーマを推論する方法の詳細については、「 [Xml からの DataSet リレーショナル構造の推論](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)」を参照してください。|  
+|**DiffGram**|DiffGram を読み取り、現在のスキーマへデータを追加します。 **DiffGram**では、一意の識別子の値が一致する既存の行と新しい行がマージされます。 このトピックの最後にある「XML のデータの結合」の説明を参照してください。 Diffgram の詳細については、「 [Diffgram グラム](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)」を参照してください。|  
+|**抜粋**|ストリームの終わりに達するまで、複数 XML フラグメントの読み取りを続行します。 <xref:System.Data.DataSet> スキーマに一致するフラグメントが適切なテーブルに追加されます。 <xref:System.Data.DataSet> スキーマに一致しないフラグメントは破棄されます。|  
   
 > [!NOTE]
->  渡す場合、 **XmlReader**に**ReadXml** 、XML ドキュメントに配置されている一部である**ReadXml**は次の要素ノードに読み取りし、ルートとして扱うことこの要素では、要素ノードのみが終わるまで読み取り。 指定した場合は当てはまりません**XmlReadMode.Fragment**します。  
+> XML ドキュメントに配置されている**readxml**に**XmlReader**を渡すと、 **readxml**は次の要素ノードを読み取り、それをルート要素として扱い、要素ノードの最後まで読み取ります。 **XmlReadMode**を指定した場合、この設定は適用されません。  
   
 ## <a name="dtd-entities"></a>DTD エンティティ  
- 読み込もうとした場合、例外がスローされます、XML にドキュメント型定義 (DTD) スキーマで定義されたエンティティが含まれている場合、<xref:System.Data.DataSet>ファイルを渡すことによって名、ストリーム、または非検証**XmlReader**に**ReadXml**します。 代わりに、作成する必要があります、 **XmlValidatingReader**で**EntityHandling**に設定**EntityHandling.ExpandEntities**を渡すと、 **XmlValidatingReader**に**ReadXml**します。 **XmlValidatingReader**によって読み取られる前にエンティティを拡張し、<xref:System.Data.DataSet>します。  
+ XML にドキュメント型定義 (DTD) スキーマで定義されているエンティティが含まれている場合、ファイル名、ストリーム<xref:System.Data.DataSet> 、または非検証**XmlReader**を**ReadXml**に渡すことによってを読み込もうとすると、例外がスローされます。 代わりに、 **Entityhandling**を**Entityhandling. expandentities**に設定して、 **XmlValidatingReader**を**ReadXml**に渡す必要があります。 **XmlValidatingReader**は、 <xref:System.Data.DataSet>によって読み取られる前にエンティティを拡張します。  
   
- XML ストリームから <xref:System.Data.DataSet> を読み込むコード サンプルを次に示します。 最初の例に渡されたファイル名、 **ReadXml**メソッド。 2 番目の例では、XML が含まれている文字列が <xref:System.IO.StringReader> によって読み込まれます。  
+ XML ストリームから <xref:System.Data.DataSet> を読み込むコード サンプルを次に示します。 最初の例は、 **ReadXml**メソッドに渡されるファイル名を示しています。 2 番目の例では、XML が含まれている文字列が <xref:System.IO.StringReader> によって読み込まれます。  
   
 ```vb  
 Dim dataSet As DataSet = New DataSet  
@@ -73,7 +73,7 @@ dataSet.ReadXml(xmlSR, XmlReadMode.IgnoreSchema);
 ```  
   
 > [!NOTE]
->  呼び出す場合**ReadXml**非常に大きなファイルを読み込むには、パフォーマンスの低下が発生する可能性があります。 最適なパフォーマンスを確保する**ReadXml**、大きなファイルの場合は、呼び出し、<xref:System.Data.DataTable.BeginLoadData%2A>メソッド内の各テーブルに対して、<xref:System.Data.DataSet>を呼び出して**ReadXml**します。 最後に、次の例に示すように、<xref:System.Data.DataTable.EndLoadData%2A> のテーブルごとに <xref:System.Data.DataSet> を呼び出します。  
+> **ReadXml**を呼び出して非常に大きなファイルを読み込むと、パフォーマンスが低下する可能性があります。 **Readxml**で最適なパフォーマンスを得るには、大きなファイルで、 <xref:System.Data.DataTable.BeginLoadData%2A>の<xref:System.Data.DataSet>各テーブルに対してメソッドを呼び出し、 **readxml**を呼び出します。 最後に、次の例に示すように、<xref:System.Data.DataTable.EndLoadData%2A> のテーブルごとに <xref:System.Data.DataSet> を呼び出します。  
   
 ```vb  
 Dim dataTable As DataTable  
@@ -100,7 +100,7 @@ foreach (DataTable dataTable in dataSet.Tables)
 ```  
   
 > [!NOTE]
->  場合の XSD スキーマ、<xref:System.Data.DataSet>が含まれています、 **targetNamespace**データが読み取られず、呼び出し時に、例外が発生する可能性があります**ReadXml**を読み込む、<xref:System.Data.DataSet>を含む xml修飾名前空間のない要素。 この場合、修飾されていない要素を読み取り、次のように設定します。 **elementFormDefault**を"qualified"に XSD スキーマ内のと同じです。 例:  
+> の<xref:System.Data.DataSet> XSD スキーマに**targetNamespace**が含まれている場合は、 **ReadXml**を呼び出して、 <xref:System.Data.DataSet>修飾された名前空間を持たない要素を含む XML を読み込むと、データが読み取られず、例外が発生する可能性があります。 この場合、修飾されていない要素を読み取るには、XSD スキーマで**elementFormDefault**を "qualified" に設定します。 例:  
   
 ```xml  
 <xsd:schema id="customDataSet"   
@@ -113,7 +113,7 @@ foreach (DataTable dataTable in dataSet.Tables)
 ```  
   
 ## <a name="merging-data-from-xml"></a>XML のデータの結合  
- 既に、<xref:System.Data.DataSet> にデータが含まれている場合には、<xref:System.Data.DataSet> の既存のデータに XML の新しいデータが追加されます。 **ReadXml**に XML からマージされない、<xref:System.Data.DataSet>行の主キーが一致する情報。 XML から新しい情報で既存の行情報を上書きするには使用**ReadXml**新たに作成する<xref:System.Data.DataSet>、し<xref:System.Data.DataSet.Merge%2A>新しい<xref:System.Data.DataSet>既存<xref:System.Data.DataSet>します。 使用して DiffGram を読み込む**ReadXML**で、 **XmlReadMode**の**DiffGram**を同じ一意の識別子を持つ行が結合されます。  
+ 既に、<xref:System.Data.DataSet> にデータが含まれている場合には、<xref:System.Data.DataSet> の既存のデータに XML の新しいデータが追加されます。 **ReadXml**では、XML から、一致する<xref:System.Data.DataSet>主キーを持つ行情報にはマージされません。 既存の行情報を XML の新しい情報で上書きするには、 **ReadXml**を<xref:System.Data.DataSet>使用して<xref:System.Data.DataSet.Merge%2A>新しいを作成した<xref:System.Data.DataSet>後、 <xref:System.Data.DataSet>既存のに新しいを作成します。 **XmlReadMode**が**diffgram**の**ReadXML**を使用して diffgram を読み込むと、同じ一意の識別子を持つ行がマージされることに注意してください。  
   
 ## <a name="see-also"></a>関連項目
 

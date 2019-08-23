@@ -3,17 +3,17 @@ title: <workflowInstanceQueries>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 4fe7ce85-cf9a-4dbf-a8f7-bc9b1fc2fe35
-ms.openlocfilehash: fc92b030e8f6643a856446142842c492db703253
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0a32e6ee22cdf984e64c1b8fa16836c4c56d0380
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624796"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932740"
 ---
 # <a name="workflowinstancequeries"></a>\<workflowInstanceQueries>
 開始したイベントや完了したイベントなど、ワークフロー インスタンスのライフサイクルの変化を追跡する構成要素のコレクションを表します。  
   
- 追跡プロファイルのクエリの詳細については、次を参照してください[追跡プロファイル。](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+ 追跡プロファイルのクエリの詳細については、「[追跡プロファイル](../../../windows-workflow-foundation/tracking-profiles.md)」を参照してください。  
   
 \<system.serviceModel>  
 \<追跡 >  
@@ -49,13 +49,13 @@ ms.locfileid: "64624796"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<workflowInstanceQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|ワークフロー インスタンスのライフサイクルの変化を追跡するために使用されるクエリ。|  
+|[\<workflowInstanceQuery>](workflowinstancequery.md)|ワークフロー インスタンスのライフサイクルの変化を追跡するために使用されるクエリ。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<workflow>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|識別される特定のワークフローのすべてのクエリを格納する構成要素、 **activityDefinitionId**プロパティ。|  
+|[\<workflow>](workflow.md)|**ActivityDefinitionId**プロパティによって識別される特定のワークフローのすべてのクエリを格納する構成要素。|  
   
 ## <a name="remarks"></a>Remarks  
  <xref:System.Activities.Tracking.WorkflowInstanceQuery> は、次の <xref:System.Activities.Tracking.TrackingRecord> オブジェクトの定期受信に使用されます。  
@@ -87,5 +87,5 @@ ms.locfileid: "64624796"
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
-- [ワークフローの追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [ワークフローの追跡とトレース](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [追跡プロファイル](../../../windows-workflow-foundation/tracking-profiles.md)

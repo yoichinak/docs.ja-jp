@@ -5,23 +5,23 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 259594858e96897cb377cde4104e17b748f902c4
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 30e8619e70da46cb510fbe28ab2e8bcf27621e19
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971810"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963299"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI オートメーション コントロール パターンの概要
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 の最新情報[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については[、「Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 の最新情報[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については[、「Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  この概要では、 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] コントロール パターンについて説明します。 コントロール パターンは、コントロール型や外観に関係なく、コントロールの機能を分類したり公開したりするための手段です。  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は、コントロールの一般的な動作を表すコントロール パターンを使用します。 たとえば、呼び出し可能なコントロール (ボタンなど) には Invoke コントロール パターンを使用し、スクロール バーを持つコントロール (リスト ボックス、リスト ビュー、コンボ ボックスなど) には Scroll コントロール パターンを使用します。 コントロール パターンごとに別の機能を表すため、コントロール パターンを組み合わせて、特定のコントロールでサポートされる機能の完全なセットを表すことができます。  
   
 > [!NOTE]
->  集約コントロール (親によって公開される機能のために [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] を提供する子コントロールで構築されるもの) は、各子コントロールに通常関連付けられるすべてのコントロール パターンを実装する必要があります。 一方、これらの同じコントロール パターンを子コントロールで実装する必要はありません。  
+> 集約コントロール (親によって公開される機能のために [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] を提供する子コントロールで構築されるもの) は、各子コントロールに通常関連付けられるすべてのコントロール パターンを実装する必要があります。 一方、これらの同じコントロール パターンを子コントロールで実装する必要はありません。  
   
 <a name="uiautomation_control_pattern_includes"></a>   
 ## <a name="ui-automation-control-pattern-components"></a>UI オートメーションのコントロール パターン コンポーネント  

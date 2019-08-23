@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fonts [WPF], OpenType font pack
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-ms.openlocfilehash: e2b3dc3b95cf81a60494f7a02488067717938e97
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 76438b85a12d75efa0fc106a645fb592b3205fad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545229"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960971"
 ---
 # <a name="sample-opentype-font-pack"></a>OpenType フォント パックのサンプル
 このトピックでは、 [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]で配布されるサンプル OpenType フォントの概要について説明します。 サンプルフォントでは、アプリケーションで[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]使用できる拡張 OpenType 機能がサポートされています。  
@@ -38,11 +38,11 @@ ms.locfileid: "69545229"
  サンプル フォントは、Ascender Corporation のライセンスを受けて提供されています。 Ascender は、高度なフォント製品を提供する企業です。 サンプル フォントの拡張版またはカスタム版のライセンスを受けるには、[Ascender Corporation の Web サイト](https://go.microsoft.com/fwlink/?LinkId=182627)を参照してください。  
   
 > [!NOTE]
->  アプリケーションに埋め込む、または別の方法で再頒布するフォントについて、必要なライセンス権限を取得することは、開発者であるユーザーの責任で行ってください。  
+> アプリケーションに埋め込む、または別の方法で再頒布するフォントについて、必要なライセンス権限を取得することは、開発者であるユーザーの責任で行ってください。  
   
 <a name="installing_the_fonts"></a>   
 ## <a name="installing-the-fonts"></a>フォントのインストール  
- 既定[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]のフォントディレクトリ **\WINDOWS\Fonts**にサンプル OpenType フォントをインストールするオプションがあります。 フォントをインストールするには、コントロール パネルの [フォント] を使用します。 これらのフォントをコンピューターにインストールすると、既定の [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] フォントを参照するすべてのアプリケーションからアクセスできるようになります。 フォント ファイルをダブルクリックして、各フォントの文字を異なるいくつかのフォント サイズで表示できます。 次のスクリーン ショットは、Lindsey フォント ファイル (Linds.ttf) を表示したものです。  
+ 既定の Windows フォントディレクトリである **\WINDOWS\Fonts**にサンプルの OpenType フォントをインストールするオプションがあります。 フォントをインストールするには、コントロール パネルの [フォント] を使用します。 これらのフォントは、コンピューター上にあると、既定の Windows フォントを参照するすべてのアプリケーションからアクセスできるようになります。 フォント ファイルをダブルクリックして、各フォントの文字を異なるいくつかのフォント サイズで表示できます。 次のスクリーン ショットは、Lindsey フォント ファイル (Linds.ttf) を表示したものです。  
   
  ![Lindsey フォント&#40;OpenType&#41; ](./media/typographyinwpf-04.png "TypographyInWPF_04")  
 Lindsey フォントの表示  

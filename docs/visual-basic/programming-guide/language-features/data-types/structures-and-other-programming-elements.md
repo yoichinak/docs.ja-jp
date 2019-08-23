@@ -8,21 +8,21 @@ helpviewer_keywords:
 - arrays [Visual Basic], structure elements
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-ms.openlocfilehash: a943bbdec617ba6c95685df3a4fcdb36b52def22
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec65c75fcfd907097f1cd1e0d3092a547272a782
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906452"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933246"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>構造体およびその他のプログラミング要素 (Visual Basic)
-構造体は、配列、オブジェクト、および手順については、相互に組み合わせて使用できます。 相互作用は、これらの要素を個別に使用するように同じ構文を使用します。  
+構造体は、配列、オブジェクト、およびプロシージャと組み合わせて使用することも、相互に使用することもできます。 相互作用は、これらの要素が個別に使用するのと同じ構文を使用します。  
   
 > [!NOTE]
->  構造体の宣言で構造体の要素を初期化することはできません。 値は、構造体型として宣言された変数の要素にのみ割り当てることができます。  
+> 構造体の宣言で構造体の要素を初期化することはできません。 値は、構造体型として宣言されている変数の要素にのみ割り当てることができます。  
   
 ## <a name="structures-and-arrays"></a>構造体と配列  
- 構造体は、1 つまたは複数の要素として配列を含めることができます。 次に例を示します。  
+ 構造体には、配列を1つ以上の要素として含めることができます。 次に例を示します。  
   
 ```vb  
 Public Structure systemInfo  
@@ -33,7 +33,7 @@ Public Structure systemInfo
 End Structure   
 ```  
   
- 構造体の配列の値は、オブジェクトのプロパティにアクセスする同じ方法でアクセスします。 次に例を示します。  
+ 構造体内の配列の値には、オブジェクトのプロパティにアクセスするのと同じ方法でアクセスします。 次に例を示します。  
   
 ```vb  
 Dim mySystem As systemInfo  
@@ -47,7 +47,7 @@ mySystem.diskDrives(0) = "1.44 MB"
 Dim allSystems(100) As systemInfo  
 ```  
   
- このデータ アーキテクチャのコンポーネントへのアクセスに同じ規則に従います。 次に例を示します。  
+ このデータアーキテクチャのコンポーネントにアクセスするには、同じ規則に従います。 次に例を示します。  
   
 ```vb  
 ReDim allSystems(5).diskDrives(3)  
@@ -56,7 +56,7 @@ allSystems(5).diskDrives(2) = "100M SCSI"
 ```  
   
 ## <a name="structures-and-objects"></a>構造体とオブジェクト  
- 構造体には、オブジェクトを 1 つまたは複数の要素として含めることができます。 次に例を示します。  
+ 構造体には、オブジェクトを1つ以上の要素として含めることができます。 次に例を示します。  
   
 ```vb  
 Protected Structure userInput  
@@ -66,10 +66,10 @@ Protected Structure userInput
 End Structure  
 ```  
   
- このような宣言で特定のオブジェクト クラスを使用する必要がなく`Object`します。  
+ このような宣言では、ではなく`Object`特定のオブジェクトクラスを使用する必要があります。  
   
-## <a name="structures-and-procedures"></a>構造体と手順  
- 構造体は、プロシージャの引数として渡すことができます。 次に例を示します。  
+## <a name="structures-and-procedures"></a>構造体とプロシージャ  
+ プロシージャ引数として構造体を渡すことができます。 次に例を示します。  
   
 ```vb  
 Public currentCPUName As String = "700MHz Pentium compatible"  
@@ -81,9 +81,9 @@ Public Sub fillSystem(ByRef someSystem As systemInfo)
 End Sub  
 ```  
   
- 前の例は、構造体を渡して*参照によって*プロシージャを呼び出し元のコードの変更が反映されるように、その要素を変更することができます。 このような変更に対して構造体を保護する場合は、値によって渡します。  
+ 前の例では、*参照によって*構造体を渡しています。これにより、プロシージャは、呼び出し元のコードで変更が有効になるように要素を変更できます。 このような変更に対して構造体を保護する場合は、値で渡します。  
   
- 構造体を返すこともできます、`Function`プロシージャ。 次に例を示します。  
+ また、 `Function`プロシージャから構造体を返すこともできます。 次に例を示します。  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
@@ -96,8 +96,8 @@ Function findByDate(ByVal searchDate As Date) As systemInfo
 End Function  
 ```  
   
-## <a name="structures-within-structures"></a>構造内の構造  
- 構造体は、その他の構造を含めることができます。 次に例を示します。  
+## <a name="structures-within-structures"></a>構造体内の構造体  
+ 構造体には他の構造体を含めることができます。 次に例を示します。  
   
 ```vb  
 Public Structure driveInfo  
@@ -118,9 +118,9 @@ ReDim allSystems(1).diskDrives(3)
 allSystems(1).diskDrives(0).type = "Floppy"  
 ```  
   
- 別のモジュールで定義された構造内の 1 つのモジュールで定義された構造をカプセル化するのにこの手法を使用することもできます。  
+ また、この方法を使用して、あるモジュールで定義されている構造体を、別のモジュールで定義されている構造体内にカプセル化することもできます。  
   
- 構造体は、任意の深さを他の構造体を含めることができます。  
+ 構造体には、任意の深さの他の構造体を含めることができます。  
   
 ## <a name="see-also"></a>関連項目
 

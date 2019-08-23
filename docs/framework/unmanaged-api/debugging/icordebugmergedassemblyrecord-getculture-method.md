@@ -1,17 +1,17 @@
 ---
-title: Icordebugmergedassemblyrecord::getculture メソッド
+title: 'ICorDebugMergedAssemblyRecord:: GetCulture メソッド'
 ms.date: 03/30/2017
 ms.assetid: 030b2f8c-8c21-40b7-855d-3afa78975a17
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0472a52d0893bfd487cd6daa6548ec1ce0c44a9b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f0f3ecee5a003587771871a178356d6dbfd8a636
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762211"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936841"
 ---
-# <a name="icordebugmergedassemblyrecordgetculture-method"></a>Icordebugmergedassemblyrecord::getculture メソッド
+# <a name="icordebugmergedassemblyrecordgetculture-method"></a>ICorDebugMergedAssemblyRecord:: GetCulture メソッド
 アセンブリのカルチャ名文字列を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -38,14 +38,14 @@ HRESULT GetCulture(
  カルチャ名は、"en-US" (英語 (米国) カルチャ)、"neutral" (ニュートラル カルチャ) など、カルチャを識別する一意の文字列です。  
   
 > [!NOTE]
->  このメソッドは .NET ネイティブでのみ使用できます。  
+> このメソッドは .NET ネイティブでのみ使用できます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** CorDebug.idl、CorDebug.h  
+ **ヘッダー:** CorDebug .idl、CorDebug. h  
   
- **ライブラリ:** CorGuids.lib  
+ **ライブラリ**CorGuids .lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

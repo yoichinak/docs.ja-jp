@@ -2,12 +2,12 @@
 title: <add> の <entries>
 ms.date: 03/30/2017
 ms.assetid: 3af4805b-dc72-4f68-b168-da4fba8c6170
-ms.openlocfilehash: 3052a7570d1d93836603454817be921b37d26060
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 690fd07159e07b7e037f7330b31fdcba423e80f9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658839"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920128"
 ---
 # <a name="add-of-entries"></a>\<エントリの > \<を追加 >
 以前に定義されたクライアント エンドポイントにフィルターをマップするルーティング エントリを表します。 このフィルターに一致するメッセージは、この宛先に送信されます。  
@@ -55,7 +55,7 @@ ms.locfileid: "69658839"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<ルーティング >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|ルーティング マッピング エントリを含む構成セクション。|  
+|[\<ルーティング >](routing.md)|ルーティング マッピング エントリを含む構成セクション。|  
   
 ## <a name="see-also"></a>関連項目
 

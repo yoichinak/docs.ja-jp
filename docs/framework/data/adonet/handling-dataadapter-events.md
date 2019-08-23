@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-ms.openlocfilehash: 864a9072b38054557b2583f505e6e7827c02d2de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a63e65289a51a7647270a978cec11ef6bc201e45
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667068"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962755"
 ---
 # <a name="handling-dataadapter-events"></a>DataAdapter のイベント処理
 ADO.NET <xref:System.Data.Common.DataAdapter> は、データ ソースのデータに対して行われた変更に応答するときに使用できる 3 つのイベントを公開します。 `DataAdapter` のイベントを次の表に示します。  
   
-|event|説明|  
+|イベント|説明|  
 |-----------|-----------------|  
 |`RowUpdating`|行に対する UPDATE、INSERT、または DELETE の各操作が (`Update` メソッドの 1 つの呼び出しによって) 開始しようとしています。|  
 |`RowUpdated`|行に対する UPDATE、INSERT、DELETE の各操作が (`Update` メソッドの 1 つの呼び出しによって) 完了しました。|  
@@ -39,7 +39,7 @@ ADO.NET <xref:System.Data.Common.DataAdapter> は、データ ソースのデー
   
  `ContinueUpdateOnError` プロパティを使用して更新行に関するエラーを処理することもできます。 `DataAdapter.ContinueUpdateOnError` を `true` に設定すると、行を更新した結果、例外がスローされようとしているときに、例外のテキストをその行の `RowError` 情報の中に格納し、例外をスローせずに処理を続行できます。 これにより、`Update` が完了した時点でエラーに応答できるようになります。これに対して `RowUpdated` イベントを使用すると、エラーが発生した時点でエラーに応答できます。  
   
- イベント ハンドラーを追加および削除する方法を次のコード サンプルに示します。 `RowUpdating` イベント ハンドラーは、削除されたすべてのレコードのログをタイムスタンプと共に記録します。 `RowUpdated`イベント ハンドラーの追加エラー情報を`RowError`内の行のプロパティ、 `DataSet`、例外を抑制および処理を続行 (の動作をミラーリング`ContinueUpdateOnError`  =  `true`)。  
+ イベント ハンドラーを追加および削除する方法を次のコード サンプルに示します。 `RowUpdating` イベント ハンドラーは、削除されたすべてのレコードのログをタイムスタンプと共に記録します。 イベント`RowUpdated`ハンドラーは、 `RowError` `ContinueUpdateOnError`  =  `true`の行のプロパティにエラー情報を追加し、例外を抑制して、処理を続行します (の動作をミラーリングします)。 `DataSet`  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection object.  
@@ -191,5 +191,5 @@ protected static void FillError(object sender, FillErrorEventArgs args)
 - [DataAdapter と DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [DataSet のイベント処理](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
 - [DataTable イベントの処理](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
-- [イベント](../../../../docs/standard/events/index.md)
+- [イベント](../../../standard/events/index.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

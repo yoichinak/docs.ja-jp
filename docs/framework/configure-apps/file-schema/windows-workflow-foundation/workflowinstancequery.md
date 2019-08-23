@@ -3,24 +3,24 @@ title: <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 9096e812-626a-409a-9eda-c31a60b84c55
-ms.openlocfilehash: 88ad61dca6c0f756a14538e7b207532ff7173ec5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f0a3c3a27b40000432b40b7008f81251fe771ca2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624749"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913140"
 ---
-# <a name="workflowinstancequery"></a>\<workflowInstanceQuery>
+# <a name="workflowinstancequery"></a>\<workflowInstanceQuery >
 開始したイベントや完了したイベントなど、ワークフロー インスタンスのライフサイクルの変化を追跡するクエリを表します。  
   
- 追跡プロファイルのクエリの詳細については、次を参照してください[追跡プロファイル。](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+ 追跡プロファイルのクエリの詳細については、「[追跡プロファイル](../../../windows-workflow-foundation/tracking-profiles.md)」を参照してください。  
   
 \<system.serviceModel>  
 \<追跡 >  
 \<trackingProfile>  
 \<ワークフロー >  
 \<workflowInstanceQueries>  
-\<workflowInstanceQuery>  
+\<workflowInstanceQuery >  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,13 +50,13 @@ ms.locfileid: "64624749"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<states>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|追跡レコードが作成されたときの追跡ワークフロー インスタンスの定期受信済み状態のコレクション。|  
+|[\<状態 >](states.md)|追跡レコードが作成されたときの追跡ワークフロー インスタンスの定期受信済み状態のコレクション。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<workflowInstanceQueries>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequeries.md)|開始したイベントや完了したイベントなど、ワークフロー インスタンスのライフサイクルの変化を追跡する構成要素のコレクションを表します。|  
+|[\<workflowInstanceQueries>](workflowinstancequeries.md)|開始したイベントや完了したイベントなど、ワークフロー インスタンスのライフサイクルの変化を追跡する構成要素のコレクションを表します。|  
   
 ## <a name="remarks"></a>Remarks  
  <xref:System.Activities.Tracking.WorkflowInstanceQuery> は、次の <xref:System.Activities.Tracking.TrackingRecord> オブジェクトの定期受信に使用されます。  
@@ -88,5 +88,5 @@ ms.locfileid: "64624749"
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
-- [ワークフローの追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [ワークフローの追跡とトレース](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [追跡プロファイル](../../../windows-workflow-foundation/tracking-profiles.md)

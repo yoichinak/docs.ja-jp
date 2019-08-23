@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37041764ad37221ea80cefa12adfb214287d8248
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e51ff64115ce3417087eee6845aa802ad64f2a72
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764006"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961005"
 ---
 # <a name="icordebugmodule3-interface"></a>ICorDebugModule3 インターフェイス
 動的モジュールのシンボル リーダーを作成します。  
@@ -43,22 +43,22 @@ interface ICorDebugModule3 : IUnknown
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[ICorDebugModule3::CreateReaderForInMemorySymbols メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule3-createreaderforinmemorysymbols-method.md)|シンボル リーダーを作成します (通常[ISymUnmanagedReader インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) の動的モジュール。|  
+|[ICorDebugModule3::CreateReaderForInMemorySymbols メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule3-createreaderforinmemorysymbols-method.md)|動的モジュールのシンボルリーダー (通常は[ISymUnmanagedReader インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) を作成します。|  
   
 ## <a name="remarks"></a>Remarks  
- このインターフェイスは、"ICorDebugModule"および"ICorDebugModule2"インターフェイスを論理的に拡張します。  
+ このインターフェイスは、"ICorDebugModule2" インターフェイスと "" インターフェイスを論理的に拡張します。  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** CorDebug.idl、CorDebug.h  
+ **ヘッダー:** CorDebug .idl、CorDebug. h  
   
- **ライブラリ:** CorGuids.lib  
+ **ライブラリ**CorGuids .lib  
   
- **.NET framework のバージョン:** 4.5、4、3.5 SP1
+ **.NET Framework のバージョン:** 4.5、4、3.5 SP1
   
 ## <a name="see-also"></a>関連項目
 

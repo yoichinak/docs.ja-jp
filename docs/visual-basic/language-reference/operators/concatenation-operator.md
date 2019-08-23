@@ -1,5 +1,5 @@
 ---
-title: '&amp; 演算子 (Visual Basic)'
+title: '&amp;演算子 (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.&
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - concatenation operators [Visual Basic], syntax
 - strings [Visual Basic], concatenating
 ms.assetid: fefc3d00-cbf1-475c-8c5e-6fb213b3f85a
-ms.openlocfilehash: dd85363447e9b405241d608550d9484b4760a739
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d387b2dfdbb3fefe357364f7b2a3dde155cbd489
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778587"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968352"
 ---
-# <a name="amp-operator-visual-basic"></a>&amp; 演算子 (Visual Basic)
-2 つの式の文字列の連結を生成します。  
+# <a name="amp-operator-visual-basic"></a>&amp;演算子 (Visual Basic)
+2つの式の文字列連結を生成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -28,27 +28,27 @@ result = expression1 & expression2
   
 ## <a name="parts"></a>指定項目  
  `result`  
- 必須。 すべて`String`または`Object`変数。  
+ 必須。 `String`または`Object`変数。  
   
  `expression1`  
- 必須。 任意の式を拡張するデータ型を持つ`String`します。  
+ 必須。 変換後のデータ型`String`を持つ任意の式。  
   
  `expression2`  
- 必須。 任意の式を拡張するデータ型を持つ`String`します。  
+ 必須。 変換後のデータ型`String`を持つ任意の式。  
   
 ## <a name="remarks"></a>Remarks  
- データ型の場合`expression1`または`expression2`ない`String`に拡大変換されますが、`String`に変換されます`String`します。 かどうか、データ型のいずれかが拡大変換されないに`String`、コンパイラ エラーが発生します。  
+ `expression1`または`String` `String`のデータ型`String`がでない場合は、に変換されます。 `expression2` データ型のいずれかがに`String`拡大変換されない場合、コンパイラはエラーを生成します。  
   
- データ型`result`は`String`します。 1 つまたは両方の式に評価される場合[Nothing](../../../visual-basic/language-reference/nothing.md)またはの値に<xref:System.DBNull.Value?displayProperty=nameWithType>の値を文字列として扱われます""です。  
-  
-> [!NOTE]
->  `&`演算子は、*オーバー ロードされた*、つまり、ことクラスまたは構造体を再定義できますその動作はそのクラスまたは構造体の型。 コードは、このようなクラスまたは構造体に、この演算子を使用する場合は、再定義された動作を確認ください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+ の`result`データ型が`String`です。 一方または両方の式が、 [Nothing](../../../visual-basic/language-reference/nothing.md)に評価される<xref:System.DBNull.Value?displayProperty=nameWithType>場合、または値がの場合は、値が "" である文字列として扱われます。  
   
 > [!NOTE]
->  型として変数を識別するために、アンパサンド (&) 文字を使用することができますも`Long`します。 詳細については、次を参照してください。[型文字](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)します。  
+> 演算子はオーバーロードできます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体がその動作を再定義できます。 `&` コードでこのようなクラスまたは構造体に対してこの演算子を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+  
+> [!NOTE]
+> アンパサンド (&) 文字を使用して、変数を型`Long`として識別することもできます。 詳細については、「[型文字](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- この例では、`&`文字列の連結を強制する演算子。 結果は、2 つの文字列オペランドの連結を表す文字列値です。  
+ この例では`&` 、演算子を使用して文字列の連結を強制的に実行します。 結果は、2つの文字列オペランドの連結を表す文字列値です。  
   
  [!code-vb[VbVbalrOperators#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#2)]  
   
@@ -58,4 +58,4 @@ result = expression1 & expression2
 - [連結演算子](../../../visual-basic/language-reference/operators/concatenation-operators.md)
 - [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Visual Basic の連結演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [Visual Basic での連結演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)

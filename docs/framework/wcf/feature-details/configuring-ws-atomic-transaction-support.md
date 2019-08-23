@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 2ec4fd65b97808fbf1a8401f5c0913face5835f0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 986481cb2ee52cd1d5737f7422bf2fc4eea70f33
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651142"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911228"
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>WS-AtomicTransaction サポートの構成
 ここでは、WS-AtomicTransaction (WS-AT) 構成ユーティリティを使用して WS-AT サポートを構成する方法について説明します。  
@@ -21,11 +21,11 @@ ms.locfileid: "64651142"
   
  コマンド ライン ウィンドウは、Windows SDK のインストール場所の "%WINDIR%\Microsoft.NET\Framework\v3.0\Windows Communication Foundation" で使用できます。  
   
- コマンド ライン ツールの詳細については、次を参照してください。 [WS-AtomicTransaction 構成ユーティリティ (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)します。  
+ コマンドラインツールの詳細については、「ws-atomictransaction[構成ユーティリティ (wsatConfig .exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)」を参照してください。  
   
- 実行している場合[!INCLUDE[wxp](../../../../includes/wxp-md.md)]または[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]に移動して、MMC スナップインにアクセスできる**コントロール パネル]、[管理ツール]、[コンポーネント サービス**右クリックし、**マイ コンピューター**と選択**プロパティ**します。 この場所では、Microsoft 分散トランザクション コーディネーター (MSDTC) を構成することもできます。 構成できるオプションは、グループ化されて、 **WS-AT**タブです。Windows Vista を実行している場合または[!INCLUDE[lserver](../../../../includes/lserver-md.md)]、MMC スナップインをクリックして参照して、**開始**ボタン、および入力`dcomcnfg.exe`で、**検索**ボックス。 MMC が開いているときに移動、**マイ Computer\Distributed トランザクション コーディネーター DTC**ノードを右クリックし、**プロパティ**です。 構成できるオプションは、グループ化されて、 **WS-AT**タブです。  
+ または[!INCLUDE[wxp](../../../../includes/wxp-md.md)] [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]を実行している場合、MMC スナップインにアクセスするには、 **[コントロールパネル]** 、管理ツール、コンポーネントサービス の順に移動し、**マイコンピューター**を右クリックして、 **[プロパティ]** を選択します。 この場所では、Microsoft 分散トランザクション コーディネーター (MSDTC) を構成することもできます。 構成できるオプションは、グループ化されて、 **WS-AT**タブです。Windows Vista また[!INCLUDE[lserver](../../../../includes/lserver-md.md)]はを実行している場合は、 **[スタート]** ボタンをクリックし、**検索**ボックスに「 `dcomcnfg.exe` 」と入力すると、MMC スナップインが表示されます。 MMC が開いているときに移動、**マイ Computer\Distributed トランザクション コーディネーター DTC**ノードを右クリックし、**プロパティ**です。 構成できるオプションは、グループ化されて、 **WS-AT**タブです。  
   
- スナップインの詳細については、次を参照してください。、 [WS-AtomicTransaction 構成 MMC スナップインで](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)します。  
+ スナップインの詳細については、「ws-atomictransaction[構成 MMC スナップ](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)イン」を参照してください。  
   
  ツールのユーザー インターフェイスを有効にするには、WsatUI.dll ファイルを登録しておく必要があります。このファイルは、次のパスにあります。  
   
@@ -52,9 +52,9 @@ ms.locfileid: "64651142"
  次の例では、A と B という 2 台のコンピューター間で信頼を確立する手順を示します。  
   
 ### <a name="creating-and-exporting-certificates"></a>証明書の作成とエクスポート  
- この手順では、MMC 証明書スナップインを使用する必要があります。 このスナップインにアクセスするには、[スタート] ボタンをクリックして [ファイル名を指定して実行] をクリックし、入力ボックスに「mmc」と入力して [OK] をクリックします。 次に、 **Console1**ウィンドウに移動します**ファイル追加と削除**スナップインを追加 をクリックし、選択**証明書**から、**利用できるスタンドアロンスナップイン**一覧。 最後に、選択**コンピューター アカウント**を管理し、をクリックして**OK**します。 **証明書**ノード スナップイン コンソールに表示されます。  
+ この手順では、MMC 証明書スナップインを使用する必要があります。 このスナップインにアクセスするには、[スタート] ボタンをクリックして [ファイル名を指定して実行] をクリックし、入力ボックスに「mmc」と入力して [OK] をクリックします。 次に、**コンソール**1 ウィンドウで、**ファイル、追加**、削除 スナップインの順に移動し、追加 をクリックして、**使用可能なスタンドアロンスナップイン** ボックスの一覧から **証明書** を選択します。 最後に、管理する **[コンピューターアカウント]** を選択し、 **[OK]** をクリックします。 スナップインコンソールに **[証明書]** ノードが表示されます。  
   
- 信頼を確立するために必要な証明書は、あらかじめ用意されている必要があります。 作成し、次の手順の前に新しい証明書をインストールする方法については、次を参照してください。[方法。作成し、開発時に WCF の一時的なクライアント証明書をインストール](https://go.microsoft.com/fwlink/?LinkId=158925)します。  
+ 信頼を確立するために必要な証明書は、あらかじめ用意されている必要があります。 次の手順の前に新しい証明書を作成してインストールする方法[については、「」を参照してください。開発](https://go.microsoft.com/fwlink/?LinkId=158925)時に WCF に一時的なクライアント証明書を作成してインストールします。  
   
 1. コンピューター A で、MMC 証明書スナップインを使用して、既存の証明書 (certA) を LocalMachine\MY (Personal Node) ストアと LocalMachine\ROOT (信頼されたルート証明機関のノード) ストアにインポートします。 特定のノードに証明書をインポートするノードを右クリックし **すべてのタスク/インポート**です。  
   
@@ -75,36 +75,36 @@ ms.locfileid: "64651142"
 ### <a name="configuring-msdtc-to-use-certificates"></a>MSDTC での証明書の使用の構成  
  WS-AT プロトコル サービスは、クライアントとサーバーの両方として機能するので、このサービスは、受信接続のリッスンと送信接続の開始を実行する必要があります。 このため、外部の通信相手と通信するときに使用する証明書と、受信接続を受け入れるときに承認する証明書を MSDTC に設定する必要があります。  
   
- これを構成するには、MMC WS-AT スナップインを使用します。 このツールの詳細については、次を参照してください。、 [WS-AtomicTransaction 構成 MMC スナップインで](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)トピック。 次の手順では、MSDTC を実行している 2 台のコンピューター間に信頼を確立する方法を説明します。  
+ これを構成するには、MMC WS-AT スナップインを使用します。 このツールの詳細については、「ws-atomictransaction[構成 MMC スナップ](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)イン」を参照してください。 次の手順では、MSDTC を実行している 2 台のコンピューター間に信頼を確立する方法を説明します。  
   
-1. コンピューター A の設定を構成します。 [エンドポイント証明書] certA を選択します。 "承認された証明書"で、certB を選択します。  
+1. コンピューター A の設定を構成します。 [エンドポイント証明書] で、[certA] を選択します。 "承認された証明書" の場合は、certB を選択します。  
   
-2. コンピューター B の設定を構成します。 「エンドポイントの証明書」certB を選択します。 "承認された証明書"で、certA を選択します。  
+2. コンピューター B の設定を構成します。 [エンドポイント証明書] で、[certB] を選択します。 "承認された証明書" の場合は、certA を選択します。  
   
 > [!NOTE]
->  一方のコンピューターからもう一方のコンピューターにメッセージを送信する場合、送信側は、受信側の証明書のサブジェクト名と受信側のコンピューターの名前が一致することを確認します。 これらが一致しないと、証明書の確認が失敗し、2 台のコンピューターは通信できなくなります。  
+> 一方のコンピューターからもう一方のコンピューターにメッセージを送信する場合、送信側は、受信側の証明書のサブジェクト名と受信側のコンピューターの名前が一致することを確認します。 これらが一致しないと、証明書の確認が失敗し、2 台のコンピューターは通信できなくなります。  
 >   
 >  ドメインに参加しているコンピューターの名前は完全修飾ドメイン名です。 既定では、ワークグループ上のコンピューターの名前は、コンピューターの NetBIOS 名です。 ただし、2 台のコンピューター間で使用されている接続用のドメイン ネーム システム (DNS) サフィックスが存在する場合は、名前に DNS サフィックス含めることもできます。  
 >   
 >  ワークグループ コンピューターがドメインに参加するときなどにコンピューターの名前を変更した場合は、証明書を再発行するか、DNS サフィックスを手動で構成する必要があります。  
   
 ## <a name="security"></a>セキュリティ  
- 一部の MSDTC と WS-AT 関連の設定はそれぞれ、レジストリ HKLM\Software\Microsoft\MSDTC と HKLM\Software\Microsoft\WSAT に格納されるので、必ずこのレジストリ キーをセキュリティで保護し、管理者だけがそのキーに書き込めるようにします。 レジストリ エディター ツールでは、セキュリティで保護し、選択するキーを右クリックして**権限**適切なアクセス制御を設定します。 重要なキーを特権の低いユーザーに対して読み取り専用にしておくことが、システムのセキュリティと整合性を確保するために重要です。  
+ 一部の MSDTC と WS-AT 関連の設定はそれぞれ、レジストリ HKLM\Software\Microsoft\MSDTC と HKLM\Software\Microsoft\WSAT に格納されるので、必ずこのレジストリ キーをセキュリティで保護し、管理者だけがそのキーに書き込めるようにします。 レジストリエディターツールで、セキュリティで保護するキーを右クリックし、 **[アクセス許可]** を選択して適切なアクセス制御を設定します。 重要なキーを特権の低いユーザーに対して読み取り専用にしておくことが、システムのセキュリティと整合性を確保するために重要です。  
   
  MSDTC を展開する場合、管理者は、すべての MSDTC データの交換がセキュリティで保護されるようにする必要があります。 ワークグループの展開では、トランザクションのインフラストラクチャを悪質なユーザーから隔離してください。クラスターの展開では、クラスター レジストリをセキュリティで保護してください。  
   
 ## <a name="tracing"></a>トレース  
- WS-AT プロトコル サービスがサポートが統合されて、特定のトレースを有効にして管理できるを使用すると、トランザクション、 [WS-AtomicTransaction 構成 MMC スナップインから](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)ツール。  トレースには、特定のトランザクションに参加した時刻、トランザクションが終了状態に到達した時刻、各トランザクション参加で受け取った結果などを示すデータを含めることができます。 使用してすべてのトレースを表示できる、[サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)ツール。  
+ WS-AT プロトコルサービスは、ws-atomictransaction[構成 MMC スナップ](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)インツールを使用して有効化および管理できる、統合されたトランザクション固有のトレースをサポートしています。  トレースには、特定のトランザクションに参加した時刻、トランザクションが終了状態に到達した時刻、各トランザクション参加で受け取った結果などを示すデータを含めることができます。 すべてのトレースは、[サービストレースビューアーツール (svctraceviewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)ツールを使用して表示できます。  
   
  WS-AT プロトコル サービスは、ETW トレース セッションを通じて統合 ServiceModel トレースもサポートします。 これにより、既存のトランザクション トレースに加えて、より詳細な通信固有のトレースが得られます。  これらの追加トレースを有効にするには、次の手順を実行します。  
   
 1. 開く、**開始/実行** メニューの [入力] ボックスに「regedit」を入力し、、選択**OK**です。  
   
-2. **レジストリ エディター**Hkey_Local_Machine\SOFTWARE\Microsoft\WSAT\3.0\、左側のウィンドウで次のフォルダーに移動します  
+2. **レジストリエディター**で、左ペインの次のフォルダー Hkey_Local_Machine\SOFTWARE\Microsoft\WSAT\3.0\ に移動します。  
   
-3. 右クリックして、`ServiceModelDiagnosticTracing`値の右側のウィンドウで、選択**変更**します。  
+3. 右ペインで`ServiceModelDiagnosticTracing`値を右クリックし、 **[変更]** を選択します。  
   
-4. **値データ**入力ボックスに、有効にするトレース レベルを指定する有効な値は次のいずれかを入力します。  
+4. [**値のデータ**入力] ボックスに、次の有効な値のいずれかを入力して、有効にするトレースレベルを指定します。  
   
 - 0 : オフ  
   

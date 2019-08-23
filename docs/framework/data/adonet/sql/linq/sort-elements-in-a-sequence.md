@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d59b93a9-50c8-4770-a114-d902f6a0ea76
-ms.openlocfilehash: 8f645232d2ae9d9bad8c26a5b9fec2243c6cf9d0
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: f6f112a63dd976a1d6ae91f2fafd6678a9f40846
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380024"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945090"
 ---
 # <a name="sort-elements-in-a-sequence"></a>シーケンスの要素の並べ替え
 1 つ以上のキーに従ってシーケンスを並べ替えるには、<xref:System.Linq.Enumerable.OrderBy%2A> 演算子を使用します。  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] などの単純なプリミティブ型による順序付けをサポートするように設計が`string`、`int`など。 匿名型のように複数の値を持つ複雑なクラスでの順序付けはサポートされていません。 また、`byte` データ型もサポートされていません。  
+> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]は`string`、、 `int`など、単純なプリミティブ型による順序付けをサポートするように設計されています。 匿名型のように複数の値を持つ複雑なクラスでの順序付けはサポートされていません。 また、`byte` データ型もサポートされていません。  
   
 ## <a name="example"></a>例  
  次の例は、`Employees` を入社日の順に並べ替えます。  
@@ -43,7 +43,7 @@ ms.locfileid: "66380024"
  [!code-vb[DLinqQueryExamples#24](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#24)]  
   
 ## <a name="example"></a>例  
- 次の例からの注文を並べ替えます`EmployeeID 1`によって`ShipCountry`、運送料の高い順にしてからです。  
+ 次の例では`EmployeeID 1` `ShipCountry`、からの注文を並べ替え、次に最高から最低の運送料に並べ替えます。  
   
  [!code-csharp[DLinqQueryExamples#25](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#25)]
  [!code-vb[DLinqQueryExamples#25](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#25)]  

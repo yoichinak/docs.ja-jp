@@ -6,16 +6,16 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: 3fb5d1107a2dacdc4dfd2210322c312becdfd90b
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: d973dd59c1f0612962b89775e1fb2cf6bdd756ad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566943"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953928"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>UI オートメーションによる自動テスト
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 の最新情報[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については[、「Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 の最新情報[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については[、「Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  ここでは、自動テストのシナリオで、プログラムによるアクセスのためのフレームワークとして [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] がどのように役立つかについて説明します。  
   
@@ -26,7 +26,7 @@ ms.locfileid: "69566943"
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] を自動テスト ツールとして利用するには、プロバイダーとクライアントの両方にこれを実装する必要があります。 UI オートメーション プロバイダーは、Microsoft Word、Excel やその他のサードパーティ アプリケーションなどのアプリケーション、または [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] オペレーティング システムに基づくコントロールです。 UI オートメーション クライアントは、自動テスト スクリプトや支援 (補助) 技術アプリケーションなどです。  
   
 > [!NOTE]
->  この概要の目的は、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の、自動テストに関する新機能と強化された機能について説明することです。 この概要はユーザー補助機能に関する情報の提供を目的とするものではなく、必要な場合以外、ユーザー補助については説明しません。  
+> この概要の目的は、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の、自動テストに関する新機能と強化された機能について説明することです。 この概要はユーザー補助機能に関する情報の提供を目的とするものではなく、必要な場合以外、ユーザー補助については説明しません。  
   
 <a name="Using_UI_Automation_During_Development"></a>   
 ## <a name="ui-automation-in-a-provider"></a>プロバイダーにおける UI オートメーション  
@@ -35,7 +35,7 @@ ms.locfileid: "69566943"
  これらの主要なアクションを特定したら、対応する [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] コントロール パターン (つまり、 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 要素の機能と動作をミラー化するコントロール パターン) をコントロール上に実装します。 たとえば、コンボ ボックス コントロール (実行用のダイアログなど) でのユーザー操作には、通常、項目の一覧を非表示にしたり表示したりするためのコンボ ボックスの展開と折りたたみ、一覧からの項目の選択、またはキーボード入力による新しい値の追加が含まれます。  
   
 > [!NOTE]
->  他のユーザー補助モデルでは、開発者が直接、個々のボタン、メニューなどのコントロールから情報を収集する必要があります。 しかも、各コントロール型には、細部の異なるバリエーションが多数存在します。 つまり、あるプッシュボタンに 10 個のバリエーションが存在すると、それらすべての動作と機能が同じであっても、それぞれを別個のコントロールとして扱う必要があります。 これらのコントロールが機能的に同等であることを知る方法はありません。 コントロール パターンは、こうした共通のコントロール動作を表すために開発されました。 詳細については、「 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)」を参照してください。  
+> 他のユーザー補助モデルでは、開発者が直接、個々のボタン、メニューなどのコントロールから情報を収集する必要があります。 しかも、各コントロール型には、細部の異なるバリエーションが多数存在します。 つまり、あるプッシュボタンに 10 個のバリエーションが存在すると、それらすべての動作と機能が同じであっても、それぞれを別個のコントロールとして扱う必要があります。 これらのコントロールが機能的に同等であることを知る方法はありません。 コントロール パターンは、こうした共通のコントロール動作を表すために開発されました。 詳細については、「 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)」を参照してください。  
   
 <a name="Implementing_UI_Automation"></a>   
 ### <a name="implementing-ui-automation"></a>UI オートメーションの実装  
@@ -79,7 +79,7 @@ ms.locfileid: "69566943"
  オートメーション要素をその兄弟から一意に識別します。 製品が複数言語で出荷される場合に通常ローカライズされる<xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> などのプロパティとは異なり、 <xref:System.Windows.Automation.AutomationElement.NameProperty> はローカライズされません。 「 [Use the AutomationID Property](../../../docs/framework/ui-automation/use-the-automationid-property.md)」を参照してください。  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> では、オートメーション ツリー全体にわたって一意に識別できるとは限りません。 たとえば、アプリケーションには複数のトップレベルのメニュー項目を持つメニュー コントロールが含まれ、さらに、それらのメニュー項目に複数の子メニュー項目が含まれている場合があります。 これらの 2 次メニュー項目は、Item1、Item2、Item3 などの汎用スキームで識別され、トップレベルのメニュー項目間で子の識別子が重複することがあります。  
+> <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> では、オートメーション ツリー全体にわたって一意に識別できるとは限りません。 たとえば、アプリケーションには複数のトップレベルのメニュー項目を持つメニュー コントロールが含まれ、さらに、それらのメニュー項目に複数の子メニュー項目が含まれている場合があります。 これらの 2 次メニュー項目は、Item1、Item2、Item3 などの汎用スキームで識別され、トップレベルのメニュー項目間で子の識別子が重複することがあります。  
   
 #### <a name="controltype"></a>ControlType  
  オートメーション要素によって表されるコントロール型を識別します。 コントロール型がわかると、そこから多くの情報を推測できます。 「 [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)」を参照してください。  

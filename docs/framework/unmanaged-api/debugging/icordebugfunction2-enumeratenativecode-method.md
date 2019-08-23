@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61dcf014a65f524d2b2e7b92bcc7f007d1a47125
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fb7e2ed7b076cfa20064902b3592c8f958efc0ee
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754499"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917047"
 ---
 # <a name="icordebugfunction2enumeratenativecode-method"></a>ICorDebugFunction2::EnumerateNativeCode メソッド
-ICorDebugFunction2 オブジェクトによって参照されている関数内のネイティブ コードのステートメントを含む ICorDebugCodeEnum オブジェクトへのインターフェイス ポインターを取得します。  
+この ICorDebugFunction2 オブジェクトによって参照される関数内のネイティブコードステートメントを格納している、コードのオブジェクトへのインターフェイスポインターを取得します。  
   
 > [!NOTE]
->  `EnumerateNativeCode` .NET Framework の現在のバージョンで実装されていません。  
+> `EnumerateNativeCode`は、.NET Framework の現在のバージョンでは実装されていません。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,4 +39,4 @@ HRESULT EnumerateNativeCode (
 ```  
   
 ## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorDebug.idl、CorDebug.h
+ **ヘッダー:** CorDebug .idl、CorDebug. h

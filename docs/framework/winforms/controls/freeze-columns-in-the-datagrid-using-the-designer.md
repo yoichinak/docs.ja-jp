@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column freezing
 - data [Windows Forms], displaying
 ms.assetid: 87412dd2-478f-4751-af87-dafc591fc215
-ms.openlocfilehash: d38c8d73bc70e7e521b476ca78c8f102d003c538
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 7ebdf7a1598ac3cd61005ae607e5bfbe7cb49059
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040335"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933713"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>方法: デザイナーを使用して Windows フォーム DataGridView コントロールの列を固定する
 ユーザーが Windows フォームの <xref:System.Windows.Forms.DataGridView> コントロールに表示されるデータを確認するときに、1 つの列または列のセットを頻繁に参照しなければならないことがあります。 たとえば、多数の列が含まれている顧客情報のテーブルを表示する場合、他の列を表示可能な領域の外側にスクロールできるようにしながら、常に顧客名を表示すると便利です。
@@ -30,7 +30,7 @@ ms.locfileid: "69040335"
 3. 列の**プロパティ**グリッドで、 <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A>プロパティをに`true`設定します。
 
     > [!NOTE]
-    >  **[列の追加]** ダイアログボックスで**固定**されたボックスを選択して、列を追加するときに固定することもできます。
+    > **[列の追加]** ダイアログボックスで**固定**されたボックスを選択して、列を追加するときに固定することもできます。
 
 ## <a name="see-also"></a>関連項目
 

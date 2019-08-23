@@ -3,17 +3,17 @@ title: <participants>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 560dd0bb-f9fb-423c-8857-2101a3654b06
-ms.openlocfilehash: ffc16f78b266b69e80023f177f10ad6f367b5623
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f04a5ee3940986cabc08895452c12ebcfd631694
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794473"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947570"
 ---
 # <a name="participants"></a>\<参加者 >
 ランタイムから直接出力される追跡レコードをリッスンし、追跡レコードの構成方法に従って処理を行う追跡参加要素の一覧を構成します。 これには、特定の出力 (ファイル、コンソール、ETW など) への書き込み、レコードの処理や集計、またはその他の必要な組み合わせが含まれます。  
   
- ワークフロー追跡と追跡参加要素の詳細については、次を参照してください。[ワークフロー追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)と[追跡参加要素](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)します。  
+ ワークフロー追跡と追跡参加要素の詳細については、「[ワークフローの追跡とトレース](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)」と「[追跡参加要素](../../../windows-workflow-foundation/tracking-participants.md)」を参照してください。  
   
 \<system.serviceModel>  
 \<追跡 >  
@@ -41,13 +41,13 @@ ms.locfileid: "61794473"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/add-of-participants.md)|追跡参加要素を処理するための設定が含まれます。|  
+|[\<add>](add-of-participants.md)|追跡参加要素を処理するための設定が含まれます。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<tracking>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|ワークフロー サービスの追跡設定を定義する構成セクションを表します。|  
+|[\<tracking>](tracking.md)|ワークフロー サービスの追跡設定を定義する構成セクションを表します。|  
   
 ## <a name="remarks"></a>Remarks  
  追跡参加要素は、ワークフローから生成される追跡データを取得し、それを別のメディアに保存するために使用します。 同様に、追跡レコードの後処理はすべて、追跡参加要素内でも実行できます。  
@@ -59,7 +59,7 @@ ms.locfileid: "61794473"
 ## <a name="example"></a>例  
  次の構成例は、Web.config ファイルで構成されている標準の ETW 追跡参加要素を示します。  
   
- ETW 追跡参加要素が追跡レコードを ETW に書き込むために使用するプロバイダー Id が定義されている、 **\<診断 >** セクション。 追跡参加要素には、その要素が定期受信した追跡レコードを指定するためのプロファイルが関連付けられています。 これは、 **profileName**の属性、 **\<追加 >** 要素。 これらが定義に追跡参加要素が追加、  **\<etwTracking >** サービス動作。 これにより、選択した追跡参加要素がワークフロー インスタンスの拡張機能に追加され、追跡レコードの受信が開始されます。  
+ Etw 追跡参加要素が追跡レコードを etw に書き込むために使用するプロバイダー Id は、[  **\<診断 >** ] セクションで定義されます。 追跡参加要素には、その要素が定期受信した追跡レコードを指定するためのプロファイルが関連付けられています。 これは、  **\<add >** 要素の**profileName**属性によって定義されます。 これらが定義されると、追跡参加要素は **\<etwtracking >** サービスの動作に追加されます。 これにより、選択した追跡参加要素がワークフロー インスタンスの拡張機能に追加され、追跡レコードの受信が開始されます。  
   
 ```xml
 <configuration>   
@@ -91,5 +91,5 @@ ms.locfileid: "61794473"
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>
 - <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>
 - <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>
-- [ワークフローの追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [追跡参加要素](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)
+- [ワークフローの追跡とトレース](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [追跡参加要素](../../../windows-workflow-foundation/tracking-participants.md)

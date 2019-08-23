@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 16a0436accfb031ddd0bb413e519d80e550786b4
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: cfb617fde514c93596d52b0ca70da39c6e5be301
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972270"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958643"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>WPF アプリケーションの配置 (WPF)
-Windows Presentation Foundation (WPF) アプリケーションを構築した後は、アプリケーションを配置する必要があります。 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].NET Framework には、いくつかの展開テクノロジが含まれています。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションの配置に使用される配置テクノロジは、アプリケーションの種類によって決まります。 このトピックでは、それぞれの配置テクノロジの概要と使用法を、それぞれの [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションの種類の配置要件に関連して説明します。  
+Windows Presentation Foundation (WPF) アプリケーションを構築した後は、アプリケーションを配置する必要があります。 Windows と .NET Framework には、いくつかの展開テクノロジが含まれています。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションの配置に使用される配置テクノロジは、アプリケーションの種類によって決まります。 このトピックでは、それぞれの配置テクノロジの概要と使用法を、それぞれの [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションの種類の配置要件に関連して説明します。  
 
 <a name="Deployment_Technologies"></a>   
 ## <a name="deployment-technologies"></a>配置テクノロジ  
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].NET Framework には、次のようないくつかの展開テクノロジが含まれています。  
+ Windows と .NET Framework には、次のようないくつかの展開テクノロジが含まれています。  
   
 - XCopy による配置。  
   
@@ -39,7 +39,7 @@ Windows Presentation Foundation (WPF) アプリケーションを構築した後
   
 <a name="Windows_Installer"></a>   
 ### <a name="windows-installer"></a>Windows インストーラー  
- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] を使用すると、アプリケーションを自己完結型の実行可能ファイルとしてパッケージ化でき、容易にクライアントに配布して、実行できます。 さらに、[!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] は [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] と共にインストールされるため、デスクトップ、[スタート] メニュー、および [プログラム] コントロール パネルとの統合が可能です。  
+ [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] を使用すると、アプリケーションを自己完結型の実行可能ファイルとしてパッケージ化でき、容易にクライアントに配布して、実行できます。 さらに[!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] 、は Windows と共にインストールされ、デスクトップ、[スタート] メニュー、および [プログラム] コントロールパネルとの統合を可能にします。  
   
  [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] は、アプリケーションのインストールとアンインストールを単純化しますが、インストールされたアプリケーションをバージョン管理の観点から最新に保つ機能を提供しません。  
   
@@ -96,7 +96,7 @@ Windows Presentation Foundation (WPF) アプリケーションを構築した後
 - *ApplicationName*.manifest:アプリケーション マニフェスト。  
   
 > [!NOTE]
->  配置マニフェストおよびアプリケーション マニフェストの詳細については、「[WPF アプリケーションのビルド](building-a-wpf-application-wpf.md)」を参照してください。  
+> 配置マニフェストおよびアプリケーション マニフェストの詳細については、「[WPF アプリケーションのビルド](building-a-wpf-application-wpf.md)」を参照してください。  
   
  これらのファイルは、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] がビルドされるときに生成されます。 詳細については、「[方法 :新しい WPF ブラウザーアプリケーションプロジェクト](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))を作成します。 マークアップのみ[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]のページと[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]同様に、は通常、Web サーバーに発行され、Internet Explorer を使用して表示されます。  
   

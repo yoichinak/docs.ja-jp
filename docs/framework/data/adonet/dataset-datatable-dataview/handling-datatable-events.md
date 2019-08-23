@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 414be4a5bdbd1fe5d65475efcd5e72606b73685f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 4007a04bf3bd2b130e978415722b0e5b7769cc25
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034308"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953262"
 ---
 # <a name="handling-datatable-events"></a>DataTable イベントの処理
 <xref:System.Data.DataTable> オブジェクトは、アプリケーションが処理できる一連のイベントを提供します。 `DataTable` のイベントを次の表に示します。  
   
-|event|説明|  
+|イベント|説明|  
 |-----------|-----------------|  
 |<xref:System.Data.DataTable.Initialized>|<xref:System.Data.DataTable.EndInit%2A> の `DataTable` メソッドが呼び出された後に発生します。 このイベントは、主にデザイン時のシナリオをサポートすることを目的としています。|  
 |<xref:System.Data.DataTable.ColumnChanged>|<xref:System.Data.DataColumn> で値が正常に変更された後に発生します。|  
@@ -30,7 +30,7 @@ ms.locfileid: "62034308"
 |<xref:System.ComponentModel.MarshalByValueComponent.Disposed>|`DataTable` が破棄 (`Disposed`) されたときに発生します。 このプロパティは、<xref:System.ComponentModel.MarshalByValueComponent> から継承されています。|  
   
 > [!NOTE]
->  行の追加または削除を行う操作の多くは、`ColumnChanged` イベントも `ColumnChanging` イベントも生成しません。 ただし、`ReadXml` メソッドでは、`ColumnChanged` が `ColumnChanging` または `XmlReadMode` (読み込む XML ドキュメントが `DiffGram` の場合) に設定されていない限り、`Auto` イベントおよび `DiffGram` イベントが生成されます。  
+> 行の追加または削除を行う操作の多くは、`ColumnChanged` イベントも `ColumnChanging` イベントも生成しません。 ただし、`ReadXml` メソッドでは、`ColumnChanged` が `ColumnChanging` または `XmlReadMode` (読み込む XML ドキュメントが `DiffGram` の場合) に設定されていない限り、`Auto` イベントおよび `DiffGram` イベントが生成されます。  
   
 > [!WARNING]
 >  `DataSet` イベントの生成元の `RowChanged` でデータが変更されると、データが破損する可能性があります。 このようなデータの破損が起きた場合、例外は発生しません。  
@@ -68,7 +68,7 @@ ms.locfileid: "62034308"
 10. 式列の制約をチェックします。  
   
 > [!NOTE]
->  式列に対する変更で `DataTable` のイベントが発生することはありません。 式列に対する変更で発生するのは、`DataView` と `DataRowView` のイベントだけです。 式列には他の複数の列に対する依存関係が存在することもあるため、1 回の `DataRow` 操作で複数回、評価される場合もあります。 イベントは式が評価されるたびに発生するため、式列が変更された場合、1 回の `DataRow` 操作で複数の `ListChanged` イベントおよび `PropertyChanged` イベントが発生し、同じ式列に対して複数のイベントが発生する場合もあります。  
+> 式列に対する変更で `DataTable` のイベントが発生することはありません。 式列に対する変更で発生するのは、`DataView` と `DataRowView` のイベントだけです。 式列には他の複数の列に対する依存関係が存在することもあるため、1 回の `DataRow` 操作で複数回、評価される場合もあります。 イベントは式が評価されるたびに発生するため、式列が変更された場合、1 回の `DataRow` 操作で複数の `ListChanged` イベントおよび `PropertyChanged` イベントが発生し、同じ式列に対して複数のイベントが発生する場合もあります。  
   
 > [!WARNING]
 >  <xref:System.NullReferenceException> を `RowChanged` イベント ハンドラー内でスローしないでください。 <xref:System.NullReferenceException> が `RowChanged` の `DataTable` イベント内でスローされると、`DataTable` が破損します。  

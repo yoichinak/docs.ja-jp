@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <nameEntry> element
 - nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
-ms.openlocfilehash: 9270552245b3867f0f09741ded3f9da6a8b6c135
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: d8f4d4aa9c80990cdf858da9fcdf6465438866cf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664265"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927569"
 ---
 # <a name="nameentry-element"></a>\<nameEntry > 要素
 アルゴリズムの表示名にクラス名をマップして、1 つのクラスが多くの表示名を持つことを許可します。  
@@ -79,5 +79,5 @@ ms.locfileid: "69664265"
 
 - [構成ファイル スキーマ](../index.md)
 - [暗号化設定スキーマ](index.md)
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
+- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
 - [暗号化クラスの設定](../../configure-cryptography-classes.md)

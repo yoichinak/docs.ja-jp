@@ -10,19 +10,19 @@ helpviewer_keywords:
 - filters, trace listeners
 - trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
-ms.openlocfilehash: 2bef729f179b41509d3c0381b26e38e364dbf86b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 571a3add232f3e4f9747040dc104b85e8cc3085e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673720"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920509"
 ---
-# <a name="filter-element-for-add-for-sharedlisteners"></a>\<フィルター > 要素の\<追加 > の\<上 sharedListeners >
+# <a name="filter-element-for-add-for-sharedlisteners"></a>\<sharedListeners > の\<add \<> の > 要素をフィルター処理します
 `sharedListeners` コレクションのリスナーにフィルターを追加します。  
   
  \<configuration>  
 \<system.diagnostics>  
-\<上の sharedListeners > 要素  
+\<sharedListeners > 要素  
 \<add>  
 \<フィルター >  
   
@@ -40,8 +40,8 @@ ms.locfileid: "61673720"
   
 |属性|説明|  
 |---------------|-----------------|  
-|**type**|必須の属性です。<br /><br /> フィルターの種類を指定します。 型の完全な名前のみを使用することができます (の形式で、<xref:System.Type.FullName%2A?displayProperty=nameWithType>プロパティ)、アセンブリ情報を含む完全修飾型名を使用することも (の形式で、<xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>プロパティ)。 完全修飾型名を作成する方法の詳細については、次を参照してください。[完全修飾型名の指定](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)します。|  
-|**initializeData**|省略可能な属性です。<br /><br /> 指定したクラスのコンス トラクターに渡された文字列。|  
+|**type**|必須の属性です。<br /><br /> フィルターの種類を指定します。 型の完全な名前 ( <xref:System.Type.FullName%2A?displayProperty=nameWithType>プロパティの形式) のみを使用することも、アセンブリ情報を含む完全修飾型名 ( <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>プロパティの形式) を使用することもできます。 完全修飾型名の作成の詳細については、「[完全修飾型名の指定](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)」を参照してください。|  
+|**initializeData**|省略可能な属性です。<br /><br /> 指定したクラスのコンストラクターに渡される文字列。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -52,16 +52,16 @@ ms.locfileid: "61673720"
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`system.diagnostics`|メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。|  
-|`sharedListeners`|任意のソースまたは trace 要素を参照できるリスナーのコレクション。|  
-|`add`|リスナーを追加、**上 sharedListeners**コレクション。|  
+|`sharedListeners`|任意のソースまたはトレース要素が参照できるリスナーのコレクション。|  
+|`add`|リスナーを**sharedListeners**コレクションに追加します。|  
   
 ## <a name="remarks"></a>Remarks  
- リスナーがで定義されている場合、`<add>`の要素、`<sharedListeners>`要素、リスナーのフィルターで定義する必要があります、`<filter>`要素の子である、`<add>`要素。  
+ `<add>`リスナーが`<sharedListeners>`要素の要素で定義されている場合、そのリスナーのフィルターは、要素の`<add>`子`<filter>`である要素で定義されている必要があります。  
   
- この要素は、マシン構成ファイル (Machine.config) と、アプリケーション構成ファイルで使用できます。  
+ この要素は、コンピューターの構成ファイル (machine.config) とアプリケーション構成ファイルで使用できます。  
   
 ## <a name="example"></a>例  
- 次の例は、使用する方法を示します、`<filter>`トレース リスナーにフィルターを追加する要素`console`で、`sharedListeners`コレクション。  
+ 次の例は、 `<filter>`要素を使用して、 `sharedListeners`コレクション内のトレースリスナー `console`にフィルターを追加する方法を示しています。  
   
 ```xml  
 <configuration>  
@@ -90,4 +90,4 @@ ms.locfileid: "61673720"
 - <xref:System.Diagnostics.TraceFilter>
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.TraceSource>
-- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [トレースおよびデバッグ設定のスキーマ](index.md)

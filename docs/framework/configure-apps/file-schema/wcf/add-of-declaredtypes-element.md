@@ -7,20 +7,20 @@ helpviewer_keywords:
 - DataContractSerializer
 - DataContractAttribute
 ms.assetid: c3d37ae4-8f1c-463f-b195-658c5a7e90a1
-ms.openlocfilehash: 9b280a63e85beac3231bc1a414430239bea4a1f8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1ea008dcc72d555b00e9648ace95bb9522ffc2c8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701113"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920184"
 ---
-# <a name="add-of-declaredtypes-element"></a>\<追加 > の\<declaredTypes > 要素
+# <a name="add-of-declaredtypes-element"></a>\<declaredTypes > 要素\<の > の追加
 逆シリアル化中に、<xref:System.Runtime.Serialization.DataContractSerializer> で使用される型を追加します。 各宣言型は、宣言型のフィールドまたはプロパティとして返される既知の型を含みます。  
   
  system.runtime.serialization  
 \<dataContractSerializer >  
-\<declaredTypes>  
-\<add> of \<declaredTypes>  
+\<declaredTypes >  
+\<declaredTypes > の\<> の追加  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,21 +46,21 @@ ms.locfileid: "61701113"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<knownType>](../../../../../docs/framework/configure-apps/file-schema/wcf/knowntype.md)|追加される宣言型の既知の型を指定します。 宣言型がジェネリック型の場合は、既知の型を返すために使用されるジェネリック パラメーターを指定するために、`<knownType>` にパラメーター要素も追加する必要があります。|  
+|[\<knownType >](knowntype.md)|追加される宣言型の既知の型を指定します。 宣言型がジェネリック型の場合は、既知の型を返すために使用されるジェネリック パラメーターを指定するために、`<knownType>` にパラメーター要素も追加する必要があります。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<declaredTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/declaredtypes.md)|<xref:System.Runtime.Serialization.DataContractSerializer> による逆シリアル化中に既知のタイプを必要とするタイプが含まれています。|  
+|[\<declaredTypes>](declaredtypes.md)|<xref:System.Runtime.Serialization.DataContractSerializer> による逆シリアル化中に既知のタイプを必要とするタイプが含まれています。|  
   
 ## <a name="remarks"></a>Remarks  
- 既知の型の詳細については、次を参照してください。 [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)と<xref:System.Runtime.Serialization.DataContractSerializer>します。  
+ 既知の型の詳細については、「[データコントラクトの既知の型](../../../wcf/feature-details/data-contract-known-types.md)」と<xref:System.Runtime.Serialization.DataContractSerializer>「」を参照してください。  
   
- 参照してください、 [ \<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)この要素の使用例についてはします。  
+ この要素の使用例については、 [ \<dataContractSerializer >](datacontractserializer-element.md)を参照してください。  
   
 > [!NOTE]
->  <xref:System.Object> 型を `<declaredType>` として追加すると、<xref:System.Configuration.ConfigurationErrorsException> がスローされます。 これは、構成で <xref:System.Object> 型を宣言型として使用できないためです。  
+> <xref:System.Object> 型を `<declaredType>` として追加すると、<xref:System.Configuration.ConfigurationErrorsException> がスローされます。 これは、構成で <xref:System.Object> 型を宣言型として使用できないためです。  
   
 ## <a name="example"></a>例  
   
@@ -78,6 +78,6 @@ ms.locfileid: "61701113"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
-- [既知のデータ コントラクト型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
-- [\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)
-- [\<追加 > の\<declaredTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)
+- [既知のデータ コントラクト型](../../../wcf/feature-details/data-contract-known-types.md)
+- [\<dataContractSerializer >](datacontractserializer-element.md)
+- [\<declaredTypes > の\<> の追加](add-of-declaredtypes-element.md)

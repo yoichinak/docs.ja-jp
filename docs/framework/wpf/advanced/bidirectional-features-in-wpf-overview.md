@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: d2b35a50d9d09bffd69ae8b8217d6e778ce66ea0
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: b009c2503c7cbf6aca847fc7318135842a060f69
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796405"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965040"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF の双方向機能の概要
 他の開発プラットフォームとは[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]異なり、には、双方向のコンテンツの迅速な開発をサポートする多くの機能があります。たとえば、左から右へ、および同じドキュメント内の右から左へのデータの配置をサポートします。 また、は、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アラビア語やヘブライ語圏のユーザーなどの双方向機能を必要とするユーザーに優れたエクスペリエンスを提供します。  
@@ -154,9 +154,9 @@ ms.locfileid: "68796405"
   
 <a name="NumberSubstitution"></a>   
 ## <a name="number-substitution"></a>数字の置換  
- 従来、 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]では、数値の置換がサポートされています。これにより、さまざまなカルチャを同じ数字で表現できるようになり、数字の内部ストレージを異なるロケール間で統合できるようになりました。たとえば、数値はに格納されます。既知の16進値0x40、0x41 は、選択した言語に従って表示されます。  
+ 従来、Windows では数字の置換がサポートされています。これにより、さまざまなカルチャを同じ数字で表現できるようになり、数字の内部ストレージを異なるロケール間で統合できるようになりました。たとえば、数値はよく知られている16進値0x40、0x41。ただし、選択した言語に従って表示されます。  
   
- これにより、アプリケーションで数値を処理できるようになりました。これらの値を1つの言語から別の[!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)]言語に変換する必要[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]はありません。たとえば、ユーザーはローカライズされたアラビア語でスプレッドシートを開き、アラビア語で整形された数字を表示できますが、の[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]欧州バージョンであり、同じ数値を欧州で表現しています。 これは、コンマ区切りやパーセント記号などの他の記号でも必要です。これらの記号は、通常同じドキュメント内で数字を伴っているからです。  
+ これにより、アプリケーションで数値を処理できるようになりました。これらの値は、ある言語から別の言語[!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)]に変換する必要がありません。たとえば、ローカライズされたアラビア語ウィンドウでスプレッドシートを開き、アラビア語の数字を表示し、Windows の欧州バージョンと、同じ数値の欧州表現を参照してください。 これは、コンマ区切りやパーセント記号などの他の記号でも必要です。これらの記号は、通常同じドキュメント内で数字を伴っているからです。  
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は引き続きこの機能を備え、置換を使用するタイミングと方法をユーザーがさらに制御できるようにこの機能のサポートが強化されています。 この機能はすべての言語向けに設計されていますが、アプリケーションが実行される可能性のあるカルチャが多岐にわたるために特定の言語に合わせて数字の形状を設定することがアプリケーション開発者にとって通常は問題となる双方向コンテンツに対して特に有用です。  
   
@@ -180,7 +180,7 @@ ms.locfileid: "68796405"
   
  このプロパティは、実行する数字の置換の種類を指定します。 次<xref:System.Windows.Media.NumberSubstitutionMethod>の列挙値のいずれかを取得します。  
   
-- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>:置換メソッドは、数値カルチャの<xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType>プロパティに基づいて決定されます。 既定値です。  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture> :置換メソッドは、数値カルチャの<xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType>プロパティに基づいて決定されます。 既定値です。  
   
 - <xref:System.Windows.Media.NumberSubstitutionMethod.Context> :数字カルチャがアラビア語またはペルシャ語のカルチャである場合は、数字がコンテキストに依存することを指定します。  
   
@@ -190,7 +190,7 @@ ms.locfileid: "68796405"
   
 - <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional> :数値は、数字カルチャに対して従来の数字を使用してレンダリングされます。 ほとんどのカルチャでは、これはと<xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>同じです。 ただし、 <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>アラビア語カルチャによってはラテン数字が使用されますが、この値はすべてのアラビアカルチャでアラビア数字になります。  
   
- これらの値は双方向コンテンツ開発者にとってどういった意味があるのでしょうか。 ほとんどの場合、開発者は、 <xref:System.Windows.FlowDirection>各テキスト[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]要素の言語を定義するだけで済みます。 `Language="ar-SA"`たとえば、 <xref:System.Windows.Media.NumberSubstitution>ロジックは正しい[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]値に従って数値を表示します。 アラビア語版の[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]で実行されているアプリケーションでアラビア数字と英語番号を使用する例を次に示します。  
+ これらの値は双方向コンテンツ開発者にとってどういった意味があるのでしょうか。 ほとんどの場合、開発者は、 <xref:System.Windows.FlowDirection>各テキスト[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]要素の言語を定義するだけで済みます。 `Language="ar-SA"`たとえば、 <xref:System.Windows.Media.NumberSubstitution>ロジックは正しい[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]値に従って数値を表示します。 アラビア語版の Windows で実行されている[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーションでアラビア数字と英語番号を使用する例を次に示します。  
   
  [!code-xaml[Numbers#Numbers](~/samples/snippets/csharp/VS_Snippets_Wpf/Numbers/CS/Window1.xaml#numbers)]  
   

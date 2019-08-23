@@ -2,20 +2,20 @@
 title: '方法: チャネルのセキュリティ資格情報を指定する'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: 0bfbb71ade3822b9f504c2f89a41145ce0d435f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3d6131a7488d9932118a988095791dd06fd46c49
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038871"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933458"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>方法: チャネルのセキュリティ資格情報を指定する
-Windows Communication Foundation (WCF) サービス モニカーでは、COM アプリケーションで WCF サービスを呼び出すができます。 ほとんどの WCF サービスでは、クライアント認証と承認のための資格情報を指定する必要があります。 WCF クライアントから WCF サービスを呼び出すときに、マネージ コードで、またはアプリケーション構成ファイルで、これらの資格情報を指定できます。 COM アプリケーションから WCF サービスを呼び出すときに使用できます、<xref:System.ServiceModel.ComIntegration.IChannelCredentials>資格情報を指定するインターフェイス。 ここでは、<xref:System.ServiceModel.ComIntegration.IChannelCredentials> インターフェイスを使用して資格情報を指定するさまざまな方法を説明します。  
+Windows Communication Foundation (WCF) サービスモニカーを使用すると、COM アプリケーションから WCF サービスを呼び出すことができます。 ほとんどの WCF サービスでは、クライアントが認証と承認のための資格情報を指定する必要があります。 Wcf クライアントから WCF サービスを呼び出すときに、これらの資格情報をマネージコードまたはアプリケーション構成ファイルで指定できます。 COM アプリケーションから WCF サービスを呼び出す場合は、インターフェイスを使用<xref:System.ServiceModel.ComIntegration.IChannelCredentials>して資格情報を指定できます。 ここでは、<xref:System.ServiceModel.ComIntegration.IChannelCredentials> インターフェイスを使用して資格情報を指定するさまざまな方法を説明します。  
   
 > [!NOTE]
->  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> は IDispatch ベースのインターフェイスです。Visual Studio 環境で IntelliSense 機能を取得することはできません。  
+> <xref:System.ServiceModel.ComIntegration.IChannelCredentials> は IDispatch ベースのインターフェイスです。Visual Studio 環境で IntelliSense 機能を取得することはできません。  
   
- この記事で定義されている WCF サービスを使用する、[メッセージ セキュリティ サンプル](../../../../docs/framework/wcf/samples/message-security-sample.md)します。  
+ この記事では、[メッセージセキュリティのサンプル](../../../../docs/framework/wcf/samples/message-security-sample.md)で定義されている WCF サービスを使用します。  
   
 ### <a name="to-specify-a-client-certificate"></a>クライアント証明書を指定するには  
   
@@ -23,11 +23,11 @@ Windows Communication Foundation (WCF) サービス モニカーでは、COM ア
   
 2. メッセージ セキュリティのプロジェクトを開きます。  
   
-3. 追加`[ServiceBehavior(Namespace="http://Microsoft.ServiceModel.Samples")]`を`ICalculator`インターフェイス定義です。  
+3. をインターフェイス定義に追加`[ServiceBehavior(Namespace="http://Microsoft.ServiceModel.Samples")]`します。 `ICalculator`  
   
-4. 追加`bindingNamespace="http://Microsoft.ServiceModel.Samples"`サービスの App.config にエンドポイント タグにします。  
+4. サービス`bindingNamespace="http://Microsoft.ServiceModel.Samples"`の app.config のエンドポイントタグにを追加します。  
   
-5. メッセージ セキュリティ サンプルをビルドし、Service.exe を実行します。 Internet Explorer を使用し、サービスの URI を参照 (http://localhost:8000/ServiceModelSamples/Service)サービスが動作していることを確認します。  
+5. メッセージ セキュリティ サンプルをビルドし、Service.exe を実行します。 Internet Explorer を使用して、サービスの URI を http://localhost:8000/ServiceModelSamples/Service) 参照します (サービスが動作していることを確認します)。  
   
 6. Visual Basic 6.0 を開き、新しい標準 .exe ファイルを作成します。 フォームにボタンを追加し、追加したボタンをダブルクリックして次のコードをクリック ハンドラーに追加します。  
   
@@ -57,10 +57,10 @@ Windows Communication Foundation (WCF) サービス モニカーでは、COM ア
     ```  
   
 > [!NOTE]
->  この呼び出しを機能させるには、クライアントが実行されているコンピューターでクライアント証明書を信頼する必要があります。  
+> この呼び出しを機能させるには、クライアントが実行されているコンピューターでクライアント証明書を信頼する必要があります。  
   
 > [!NOTE]
->  モニカーの形式が正しくないか、`GetObject` を呼び出せない場合は、"構文が無効です" というメッセージが返されます。 このエラーが発生した場合は、使用しているモニカーが正しく、サービスが使用可能であることを確認してください。  
+> モニカーの形式が正しくないか、`GetObject` を呼び出せない場合は、"構文が無効です" というメッセージが返されます。 このエラーが発生した場合は、使用しているモニカーが正しく、サービスが使用可能であることを確認してください。  
   
 ### <a name="to-specify-user-name-and-password"></a>ユーザー名とパスワードを指定するには  
   
@@ -87,7 +87,7 @@ Windows Communication Foundation (WCF) サービス モニカーでは、COM ア
 4. Visual Basic アプリケーションを実行し、結果を確認します。 Visual Basic アプリケーションに Add(3,4) の結果を示すメッセージ ボックスが表示されます。  
   
     > [!NOTE]
-    >  この例のサービス モニカーに指定されたバインディングは、WSHttpBinding_ICalculator に変更されました。 また、<xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetUserNameCredential%28System.String%2CSystem.String%29> の呼び出しにも有効なユーザー名とパスワードを指定する必要があります。  
+    > この例のサービス モニカーに指定されたバインディングは、WSHttpBinding_ICalculator に変更されました。 また、<xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetUserNameCredential%28System.String%2CSystem.String%29> の呼び出しにも有効なユーザー名とパスワードを指定する必要があります。  
   
 ### <a name="to-specify-windows-credentials"></a>Windows 資格情報を指定するには  
   
@@ -111,11 +111,11 @@ Windows Communication Foundation (WCF) サービス モニカーでは、COM ア
 3. Visual Basic アプリケーションを実行し、結果を確認します。 Visual Basic アプリケーションに Add(3,4) の結果を示すメッセージ ボックスが表示されます。  
   
     > [!NOTE]
-    >  "ドメイン"、"ユーザー ID"、"パスワード" を有効な値に置き換える必要があります。  
+    > "ドメイン"、"ユーザー ID"、"パスワード" を有効な値に置き換える必要があります。  
   
 ### <a name="to-specify-an-issue-token"></a>発行トークンを指定するには  
   
-1. 発行トークンは、フェデレーション セキュリティを使用するアプリケーションのみが使用します。 フェデレーション セキュリティの詳細については、次を参照してください。[フェデレーションと発行されたトークン](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)と[フェデレーション サンプル](../../../../docs/framework/wcf/samples/federation-sample.md)します。  
+1. 発行トークンは、フェデレーション セキュリティを使用するアプリケーションのみが使用します。 フェデレーションセキュリティの詳細については、「[フェデレーションと発行済みトークン](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)および[フェデレーションのサンプル](../../../../docs/framework/wcf/samples/federation-sample.md)」を参照してください。  
   
      <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29> メソッドを呼び出す方法を次の Visual Basic コード例に示します。  
   
@@ -134,7 +134,7 @@ Windows Communication Foundation (WCF) サービス モニカーでは、COM ア
 ## <a name="see-also"></a>関連項目
 
 - [フェデレーション](../../../../docs/framework/wcf/feature-details/federation.md)
-- [方法: フェデレーション サービスで資格情報を構成します。](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [方法: フェデレーション クライアントを作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [方法: フェデレーションサービスで資格情報を構成する](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [方法: フェデレーションクライアントを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [メッセージのセキュリティ](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
 - [バインディングとセキュリティ](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

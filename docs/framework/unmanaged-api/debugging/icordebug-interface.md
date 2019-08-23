@@ -16,47 +16,47 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 193232ce1006a9cf209db9330343386404948440
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afbf480d69e97662b5963706bb8c192aec0325a2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786335"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966290"
 ---
 # <a name="icordebug-interface"></a>ICorDebug インターフェイス
-開発者は、共通言語ランタイム (CLR) 環境でアプリケーションをデバッグできるようにするメソッドを提供します。  
+開発者が共通言語ランタイム (CLR) 環境でアプリケーションをデバッグできるようにするメソッドを提供します。  
   
 > [!NOTE]
->  Windows 95、Windows 98、または Windows ME、または x86 以外のプラットフォーム (IA64、AMD64 など)、(マネージとネイティブ コード) を混合モード デバッグはサポートされていません。  
+> 混合モード (マネージコードとネイティブコード) のデバッグは、Windows 95、Windows 98、または Windows ME ではサポートされておらず、x86 以外のプラットフォーム (IA64 や AMD64 など) ではサポートされていません。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[CanLaunchOrAttach メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebug-canlaunchorattach-method.md)|現在のコンピューターとランタイムの構成のコンテキスト内で、新しいプロセスの起動または特定のプロセスへのアタッチを実行するかどうかを判断します。|  
-|[CreateProcess メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)|プロセスと、デバッガーの制御下で、プライマリ スレッドを起動します。|  
-|[DebugActiveProcess メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebug-debugactiveprocess-method.md)|既存のプロセスにデバッガーをアタッチします。|  
+|[CanLaunchOrAttach メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebug-canlaunchorattach-method.md)|現在のコンピューターおよびランタイム構成のコンテキスト内で、新しいプロセスを起動するか、指定したプロセスにアタッチするかを決定します。|  
+|[CreateProcess メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)|デバッガーの制御下でプロセスとそのプライマリスレッドを起動します。|  
+|[DebugActiveProcess メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebug-debugactiveprocess-method.md)|デバッガーを既存のプロセスにアタッチします。|  
 |[EnumerateProcesses メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebug-enumerateprocesses-method.md)|デバッグ中のプロセスの列挙子を取得します。|  
-|[GetProcess メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebug-getprocess-method.md)|特定のプロセス ID を持つ"ICorDebugProcess"オブジェクトを返します|  
+|[GetProcess メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebug-getprocess-method.md)|指定されたプロセス ID を持つ "いいプロセス" オブジェクトを返します。|  
 |[Initialize メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebug-initialize-method.md)|`ICorDebug` オブジェクトを初期化します。|  
-|[SetManagedHandler メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebug-setmanagedhandler-method.md)|管理対象のイベントのイベント ハンドラー オブジェクトを指定します。|  
-|[SetUnmanagedHandler メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebug-setunmanagedhandler-method.md)|非管理対象のイベントのイベント ハンドラー オブジェクトを指定します。|  
-|[Terminate メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md)|終了、`ICorDebug`オブジェクト。|  
+|[SetManagedHandler メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebug-setmanagedhandler-method.md)|マネージイベントのイベントハンドラーオブジェクトを指定します。|  
+|[SetUnmanagedHandler メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebug-setunmanagedhandler-method.md)|アンマネージイベントのイベントハンドラーオブジェクトを指定します。|  
+|[Terminate メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md)|オブジェクトを`ICorDebug`終了します。|  
   
 ## <a name="remarks"></a>Remarks  
- `ICorDebug` デバッガー プロセスのイベント処理のループを表します。 デバッガーが待機する必要があります、 [icordebugmanagedcallback::exitprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)このインターフェイスを解放する前に、デバッグ中のすべてのプロセスからのコールバック。  
+ `ICorDebug`デバッガープロセスのイベント処理ループを表します。 デバッガーは、このインターフェイスを解放する前に、デバッグされているすべてのプロセスからの "ExitProcess" コール[バック](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)を待機する必要があります。  
   
- `ICorDebug`オブジェクトは、初期のオブジェクトをさらに管理されているすべてのデバッグを制御します。 .NET Framework version 1.0 および 1.1 では、このオブジェクトは、 `CoClass` COM から作成されたオブジェクト .NET Framework version 2.0 では、このオブジェクトが不要になった、`CoClass`オブジェクト。 これで作成する必要があります、 [CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md)関数で、複数のバージョンに対応します。 この新しい作成機能により、クライアントはの特定の実装を取得する`ICorDebug`もに、デバッグ API の特定のバージョンをエミュレートします。  
+ `ICorDebug`オブジェクトは、さらに管理されているすべてのデバッグを制御するための初期オブジェクトです。 .NET Framework バージョン1.0 および1.1 では、このオブジェクトは COM `CoClass`から作成されたオブジェクトでした。 .NET Framework バージョン2.0 では、このオブジェクトは`CoClass`オブジェクトではなくなりました。 これは、バージョンを認識する[CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md)関数によって作成される必要があります。 この新しい作成関数を使用すると、クライアントは特定`ICorDebug`のバージョンのデバッグ API もエミュレートするの特定の実装を取得できます。  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** CorDebug.idl、CorDebug.h  
+ **ヘッダー:** CorDebug .idl、CorDebug. h  
   
- **ライブラリ:** CorGuids.lib  
+ **ライブラリ**CorGuids .lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 4f54596e1ce3ed40f3a029ea6703147a97be992f
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 5fe464f2b79fa1f7b0674c049110d32f2ad32335
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545273"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944819"
 ---
 # <a name="panels-overview"></a>パネルの概要
 <xref:System.Windows.Controls.Panel>要素は、要素のサイズと大きさ、位置、および子コンテンツの配置を制御するコンポーネントです。 に[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]は、いくつかの<xref:System.Windows.Controls.Panel>定義済み要素と、カスタム<xref:System.Windows.Controls.Panel>要素を作成する機能が用意されています。  
@@ -149,7 +149,7 @@ ms.locfileid: "69545273"
  で定義されている<xref:System.Windows.Controls.Grid>列と行で<xref:System.Windows.GridUnitType.Star>は、残りの領域を均等に分散するためにサイズ変更を利用できます。 行<xref:System.Windows.GridUnitType.Star>または列の高さまたは幅としてが選択されている場合、その列または行は使用可能な残りの領域の重み付け比率を受け取ります。 これは、列また<xref:System.Windows.GridUnitType.Auto>は行内のコンテンツのサイズに基づいて領域を均等に分散するとは対照的です。 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] を使用する場合、この値は `*` または `2*` と表現されます。 最初のケースでは、行または列は使用可能なスペース領域を 1 回受け取り、2 番目のケースでは 2 回受け取ることになります。 この手法を組み合わせて、 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>と<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>の`Stretch`値を使用して領域を均等に分散することにより、レイアウト領域を画面領域の割合でパーティション分割することができます。 <xref:System.Windows.Controls.Grid>は、この方法で領域を分散できる唯一のレイアウトパネルです。  
   
 #### <a name="defining-and-using-a-grid"></a>グリッドの定義と使用  
- 次の例に、[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] スタート メニューで使用可能な [ファイル名を指定して実行] ダイアログ ボックスに見られるのと同様の [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] を構築する方法を示します。  
+ 次の例では、Windows の[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] [スタート] メニューにある [実行] ダイアログにあるのと同様のをビルドする方法を示します。  
   
  [!code-csharp[GridRunDialog#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridRunDialog/CSharp/window1.xaml.cs#1)]
  [!code-vb[GridRunDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  

@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: 8c021e3b3de1dbe000ab328f7a09d79a4bc966fe
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e6fd84d9cc1f7df397e26e41c55f51d45406228d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592229"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942168"
 ---
 # <a name="ws-transaction-flow"></a>WS トランザクション フロー
-このサンプルでは、クライアントによって調整されるトランザクションの使用方法と、WS-AtomicTransaction プロトコルまたは OleTransactions プロトコルを使用するトランザクション フローに関するクライアントとサーバーのオプションの使用方法を示します。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)電卓サービスを実装するが、操作に起因するの使い方を示していますが、`TransactionFlowAttribute`で、 **TransactionFlowOption**どの程度のトランザクションをフローが有効になっているかを決定する列挙です。 フローされたトランザクションのスコープ内では、要求された操作のログがデータベースに書き込まれ、クライアント調整トランザクションが完了するまで保持されます。クライアント トランザクションが完了しない場合は、データベースに対する該当する更新はコミットされません。  
+このサンプルでは、クライアントによって調整されるトランザクションの使用方法と、WS-AtomicTransaction プロトコルまたは OleTransactions プロトコルを使用するトランザクション フローに関するクライアントとサーバーのオプションの使用方法を示します。 このサンプルは、電卓サービスを実装する[はじめに](../../../../docs/framework/wcf/samples/getting-started-sample.md)に基づいていますが、操作には、 **TransactionFlowOption**列挙`TransactionFlowAttribute`体を使用してを使用する方法を示しています。トランザクションフローが有効になっています。 フローされたトランザクションのスコープ内では、要求された操作のログがデータベースに書き込まれ、クライアント調整トランザクションが完了するまで保持されます。クライアント トランザクションが完了しない場合は、データベースに対する該当する更新はコミットされません。  
   
 > [!NOTE]
->  このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
+> このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
   
  サービスとトランザクションへの接続を開始した後で、クライアントは複数のサービス操作にアクセスします。 サービスのコントラクトは次のように定義されています。操作はそれぞれ、`TransactionFlowOption` の設定が異なります。  
 
@@ -47,7 +47,7 @@ public interface ICalculator
   
 - `Divide` (除算) 操作要求には、フローされたトランザクションが含まれてはならないことが、`TransactionFlow` 属性の省略によって指定されています。  
   
- バインディングでトランザクション フローを有効にする、 [ \<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)プロパティを有効には、適切な操作の属性に加えて使用する必要があります。 このサンプルでは、サービスの構成は Metadata Exchange エンドポイントのほかに TCP エンドポイントと HTTP エンドポイントを公開します。 TCP エンドポイントと HTTP エンドポイントがどちらも、次のバインドを使用して、 [ \<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)プロパティを有効にします。  
+ トランザクションフローを有効にするには、 [ \<transactionflow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)プロパティが有効になっているバインドを、適切な操作属性に加えて使用する必要があります。 このサンプルでは、サービスの構成は Metadata Exchange エンドポイントのほかに TCP エンドポイントと HTTP エンドポイントを公開します。 TCP エンドポイントと HTTP エンドポイントは、 [ \<transactionflow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)プロパティが有効になっている次のバインドを使用します。  
   
 ```xml  
 <bindings>  
@@ -64,12 +64,12 @@ public interface ICalculator
 ```  
   
 > [!NOTE]
->  システムで提供される netTcpBinding では transactionProtocol を指定できるのに対し、システムで提供される wsHttpBinding では、相互運用性に優れた WSAtomicTransactionOctober2004 プロトコルのみが使用されます。 Windows Communication Foundation (WCF) クライアントによって、OleTransactions プロトコルはの使用のみを使用します。  
+> システムで提供される netTcpBinding では transactionProtocol を指定できるのに対し、システムで提供される wsHttpBinding では、相互運用性に優れた WSAtomicTransactionOctober2004 プロトコルのみが使用されます。 OleTransactions プロトコルは、Windows Communication Foundation (WCF) クライアントでのみ使用できます。  
   
  `ICalculator` インターフェイスを実装するクラスでは、すべてのメソッドの属性で <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> プロパティが `true` に設定されています。 この設定は、メソッド内で実行されるすべてのアクションがトランザクションのスコープ内で実行されることを宣言するものです。 この場合、実行されるアクションには、ログ データベースへの記録が含まれます。 操作要求の中に、フローされたトランザクションが含まれている場合は、受信トランザクションのスコープ内でアクションが実行されるか、新しいトランザクションが自動生成されます。  
   
 > [!NOTE]
->  <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> プロパティは、サービス メソッド実装固有の動作を定義しますが、トランザクションをフローさせるためのクライアントの機能や要件は定義しません。  
+> <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> プロパティは、サービス メソッド実装固有の動作を定義しますが、トランザクションをフローさせるためのクライアントの機能や要件は定義しません。  
 
 ```csharp
 // Service class that implements the service contract.  
@@ -117,7 +117,7 @@ CalculatorClient client = new CalculatorClient("WSAtomicTransaction_endpoint");
 ```
 
 > [!NOTE]
->  このサンプルを実行したときの動作は、選択したプロトコルとトランスポートの種類にかかわらず同一です。  
+> このサンプルを実行したときの動作は、選択したプロトコルとトランスポートの種類にかかわらず同一です。  
   
  サービスへの接続を開始した後で、クライアントは次のように、サービス操作の呼び出しを囲む新しい `TransactionScope` を作成します。  
 
@@ -223,60 +223,60 @@ Press <ENTER> to terminate the service.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1. C# または Visual Basic .NET のバージョンのソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)  
+1. C#または Visual Basic .net バージョンのソリューションをビルドするには、「 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
 2. SQL Server Express Edition または SQL Server がインストールされ、接続文字列が、サービスのアプリケーション構成ファイルで正しく設定されていることを確認します。 データベースを使用せずにサンプルを実行するには、サービスのアプリケーション構成ファイルで `usingSql` の値を `false` に設定します。  
   
-3. 1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
+3. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)」の手順に従います。  
   
     > [!NOTE]
-    >  複数コンピューター構成の場合は、次の説明に従って分散トランザクション コーディネーターを有効にし、Windows SDK の WsatConfig.exe ツールを使用して WCF トランザクション ネットワークのサポートを有効にします。 参照してください[Ws-atomic トランザクションのサポートを構成する](https://go.microsoft.com/fwlink/?LinkId=190370)WsatConfig.exe のセットアップについて。  
+    >  複数コンピューター構成の場合は、次の説明に従って分散トランザクション コーディネーターを有効にし、Windows SDK の WsatConfig.exe ツールを使用して WCF トランザクション ネットワークのサポートを有効にします。 WsatConfig の設定の詳細については、「 [ws-atomictransaction のサポートの構成](https://go.microsoft.com/fwlink/?LinkId=190370)」を参照してください。  
   
- 同じコンピューターまたは別のコンピューター上にサンプルを実行するかどうか、Microsoft 分散トランザクション コーディネーター (MSDTC) ネットワーク トランザクション フローを有効にし、WsatConfig.exe ツールを使用して WCF トランザクション ネットワーク サポートを有効にするを構成する必要があります。  
+ サンプルを同じコンピューターで実行するか、別のコンピューターで実行するかにかかわらず、ネットワークトランザクションフローを有効にするために Microsoft 分散トランザクションコーディネーター (MSDTC) を構成し、WsatConfig .exe ツールを使用して WCF トランザクションネットワークサポートを有効にする必要があります。  
   
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample"></a>Microsoft 分散トランザクション コーディネーター (MSDTC) を構成してサンプルを実行できるようにするには  
   
 1. Windows Server 2003 または Windows XP が動作するサービス コンピューターで、次の説明に従い、受信ネットワーク トランザクションを許可するよう MSDTC を構成します。  
   
-    1. **開始** メニューに移動します**コントロール パネル**、し**管理ツール**、し**コンポーネント サービス**します。  
+    1. **[スタート]** メニューから、 **[コントロールパネル]** 、 **[管理ツール]** 、 **[コンポーネントサービス]** の順に移動します。  
   
-    2. 展開**コンポーネント サービス**します。 開く、**コンピューター**フォルダー。  
+    2. **[コンポーネントサービス]** を展開します。 **[コンピューター]** フォルダーを開きます。  
   
-    3. 右クリック**マイ コンピューター**選択**プロパティ**します。  
+    3. **マイコンピューター**を右クリックし、 **[プロパティ]** を選択します。  
   
-    4. **MSDTC** ] タブで [**セキュリティ構成**します。  
+    4. **[MSDTC]** タブで、 **[セキュリティの構成]** をクリックします。  
   
-    5. 確認**ネットワーク DTC アクセス**と**を許可する受信**します。  
+    5. **ネットワーク DTC アクセス**を確認し、**受信を許可**します。  
   
-    6. をクリックして **[ok]**、順にクリックします**はい**MSDTC サービスを再起動します。  
+    6. **[OK]** をクリックし、 **[はい]** をクリックして MSDTC サービスを再起動します。  
   
     7. **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   
 2. Windows Server 2008 または Windows Vista が動作するサービス コンピューターで、次の説明に従い、受信ネットワーク トランザクションを許可するよう MSDTC を構成します。  
   
-    1. **開始** メニューに移動します**コントロール パネル**、し**管理ツール**、し**コンポーネント サービス**します。  
+    1. **[スタート]** メニューから、 **[コントロールパネル]** 、 **[管理ツール]** 、 **[コンポーネントサービス]** の順に移動します。  
   
-    2. 展開**コンポーネント サービス**します。 開く、**コンピューター**フォルダー。 選択**分散トランザクション コーディネーター**します。  
+    2. **[コンポーネントサービス]** を展開します。 **[コンピューター]** フォルダーを開きます。 **[分散トランザクションコーディネーター]** を選択します。  
   
-    3. 右クリック**DTC コーディネーター**選択**プロパティ**します。  
+    3. **[DTC コーディネーター]** を右クリックし、 **[プロパティ]** を選択します。  
   
-    4. **セキュリティ** タブで、チェック**ネットワーク DTC アクセス**と**受信を許可する**します。  
+    4. **[セキュリティ]** タブで、[**ネットワーク DTC アクセス**と**受信を許可する**] をオンにします。  
   
-    5. をクリックして **[ok]**、順にクリックします**はい**MSDTC サービスを再起動します。  
+    5. **[OK]** をクリックし、 **[はい]** をクリックして MSDTC サービスを再起動します。  
   
     6. **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   
 3. クライアント コンピューターで、送信ネットワーク トランザクションを許可するよう MSDTC を構成します。  
   
-    1. **開始** メニューに移動します`Control Panel`、し**管理ツール**、し**コンポーネント サービス**します。  
+    1. **[スタート]** メニューから、[ `Control Panel`**管理ツール**]、 **[コンポーネントサービス]** の順に移動します。  
   
-    2. 右クリック**マイ コンピューター**選択**プロパティ**します。  
+    2. **マイコンピューター**を右クリックし、 **[プロパティ]** を選択します。  
   
-    3. **MSDTC** ] タブで [**セキュリティ構成**します。  
+    3. **[MSDTC]** タブで、 **[セキュリティの構成]** をクリックします。  
   
-    4. 確認**ネットワーク DTC アクセス**と**送信を許可する**します。  
+    4. **ネットワーク DTC アクセス**を確認し、**送信を許可**します。  
   
-    5. をクリックして **[ok]**、順にクリックします**はい**MSDTC サービスを再起動します。  
+    5. **[OK]** をクリックし、 **[はい]** をクリックして MSDTC サービスを再起動します。  
   
     6. **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   
@@ -285,6 +285,6 @@ Press <ENTER> to terminate the service.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
+>  このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780)にアクセスして、すべての[!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (wcf) とサンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\TransactionFlow`

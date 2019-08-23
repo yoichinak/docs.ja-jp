@@ -3,21 +3,21 @@ title: <issuerNameRegistry>
 ms.date: 03/30/2017
 ms.assetid: 58b39d12-c953-40c4-88af-d7eb3343ca28
 author: BrucePerlerMS
-ms.openlocfilehash: ae263a4590cc523c64306ff5d53e54b5190ca510
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0a1f8dd0c29aaee56c2ca1162cc70cc1e5ed106
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791647"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942664"
 ---
-# <a name="issuernameregistry"></a>\<issuerNameRegistry>
-トークン ハンドラー コレクションのハンドラーによって使用される発行者名レジストリを構成します。  
+# <a name="issuernameregistry"></a>\<issuerNameRegistry >
+トークンハンドラーコレクションのハンドラーによって使用される発行者名レジストリを構成します。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
 \<securityTokenHandlers>  
-\<securityTokenHandlerConfiguration>  
-\<issuerNameRegistry>  
+\<securityTokenHandlerConfiguration >  
+\<issuerNameRegistry >  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,32 +42,32 @@ ms.locfileid: "61791647"
   
 |属性|説明|  
 |---------------|-----------------|  
-|型|派生した型、<xref:System.IdentityModel.Tokens.IssuerNameRegistry>クラス。 詳細については、ユーザー設定を指定する方法についての`type`、[カスタム型の参照] を参照してください。|  
+|型|<xref:System.IdentityModel.Tokens.IssuerNameRegistry>クラスから派生する型。 カスタム`type`を指定する方法の詳細については、「[カスタム型参照]」を参照してください。|  
   
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<trustedIssuers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)|ときに、`type`属性が構成ベースの発行者名レジストリを指定します (、<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>クラス)、 [ \<trustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)要素を指定する必要があります。 [ \<TrustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)要素がかかる`<add>`、 `<clear>`、または`<remove>`要素の子要素として。|  
+|[\<trustedIssuers >](trustedissuers.md)|属性で`type`構成ベースの発行者名レジストリ<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> (クラス) [ \<](trustedissuers.md)を指定する場合は、trustedIssuers > 要素を指定する必要があります。 TrustedIssuers > 要素は、、 `<add>` `<clear>`、または`<remove>`要素を子要素として受け取ることができます。 [ \<](trustedissuers.md)|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|トークン ハンドラー コレクションのセキュリティの構成を提供します。|  
+|[\<securityTokenHandlerConfiguration >](securitytokenhandlerconfiguration.md)|セキュリティトークンハンドラーのコレクションの構成を提供します。|  
   
 ## <a name="remarks"></a>Remarks  
- すべての発行者トークンは、発行者名レジストリを使用して検証されます。 これはオブジェクトから派生した、<xref:System.IdentityModel.Tokens.IssuerNameRegistry>クラス。 発行者名レジストリを使用して、対応する発行者によって生成されたトークンの署名を検証するために必要な暗号化マテリアルにニーモニック名を関連付けます。 発行者名レジストリは、証明書利用者 (RP) アプリケーションによって信頼されている発行者の一覧を保持します。 使用して、発行者名レジストリの種類を指定、`type`属性。 `<issuerNameRegistry>`要素は、指定した型の構成を提供する 1 つまたは複数の子要素を持つことができます。 これらの子要素をオーバーライドすることで処理するロジックを提供する、<xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A>メソッド。  
+ 発行者のトークンはすべて、発行者名レジストリを使用して検証されます。 これは、 <xref:System.IdentityModel.Tokens.IssuerNameRegistry>クラスから派生するオブジェクトです。 発行者名レジストリは、対応する発行者によって生成されるトークンの署名を検証するために必要な暗号マテリアルにニーモニック名を関連付けるために使用されます。 発行者名レジストリは、証明書利用者 (RP) アプリケーションによって信頼されている発行者の一覧を保持します。 発行者名レジストリの種類は、 `type`属性を使用して指定されます。 要素`<issuerNameRegistry>`は、指定された型の構成を提供する1つ以上の子要素を持つことができます。 これらの子要素を処理するロジックは、 <xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A>メソッドをオーバーライドすることによって指定します。  
   
- WIF には単一の発行者名レジストリの種類をすぐに使える、<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>クラス。 このクラスは、一連の構成で指定されている信頼された発行者の証明書を使用します。 構成の子要素に要する`<trustedIssuers>`、信頼された発行者の証明書のコレクションが構成されています。 証明書が指定の ASN.1 を使用してエンコードされた証明書の拇印の形式とが追加または削除、コレクションからを使用して信頼された`<add>`、 `<clear>`、または`<remove>`要素。  
+ WIF では、単一の発行者名のレジストリの<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>種類が、クラスのすぐに使用できます。 このクラスは、構成で指定された信頼された発行者証明書のセットを使用します。 これには、信頼され`<trustedIssuers>`た発行元の証明書のコレクションを構成する子構成要素が必要です。 信頼された証明書は、asn.1 でエンコードされた証明書の拇印を使用して指定され`<add>`、 `<clear>`、、 `<remove>`または要素を使用してコレクションに追加または削除されます。  
   
- `<issuerNameRegistry>`要素が表される、<xref:System.IdentityModel.Configuration.IssuerNameRegistryElement>クラス。  
+ 要素は、 <xref:System.IdentityModel.Configuration.IssuerNameRegistryElement>クラスによって表されます。 `<issuerNameRegistry>`  
   
 > [!NOTE]
->  指定する、`<issuerNameRegistry>`要素の子要素として、 [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)要素は非推奨とされましたが、旧バージョンとの互換性もサポートします。 上の設定、`<securityTokenHandlerConfiguration>`要素のオーバーライド、`<identityConfiguration>`要素。  
+> 要素を、指定した[ \<>](identityconfiguration.md)要素の子要素として指定することは推奨されていませんが、旧バージョンとの互換性のためにサポートされています。 `<issuerNameRegistry>` 要素の設定`<securityTokenHandlerConfiguration>`は、要素の設定`<identityConfiguration>`よりも優先されます。  
   
 ## <a name="example"></a>例  
- 次の XML では、名前のレジストリをベースの構成の発行者を指定する方法を示します。  
+ 次の XML は、構成ベースの発行者名レジストリを指定する方法を示しています。  
   
 ```xml  
 <issuerNameRegistry type="System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">  

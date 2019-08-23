@@ -8,57 +8,57 @@ helpviewer_keywords:
 - configuring Visual Studio to debug XAML browser applications [WPF]
 - configuring Visual Studio to debug XBAPs [WPF]
 ms.assetid: fd1db082-a7bb-4c4b-9331-6ad74a0682d0
-ms.openlocfilehash: dcaabf9ecd47bc88095e92aa8ed28ad5f13fd1dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e41dd46e4ddbdcde6448c68b4f9fb2e073baca43
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757055"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958686"
 ---
 # <a name="how-to-configure-visual-studio-to-debug-a-xaml-browser-application-to-call-a-web-service"></a>方法: Visual Studio を構成して Web サービスを呼び出す XAML ブラウザー アプリケーションをデバッグする
-[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] インターネット ゾーン アクセス許可のセットに制限されている部分信頼セキュリティ サンド ボックス内で実行します。 このアクセス許可セットのみであるサービスを Web に Web サービス呼び出しを制限する、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]アプリケーションの起点サイト。 ときに、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]は、デバッグ、Visual Studio 2005 とは見なされません起点のサイトと同じように、Web サービスが参照にします。 ときに発生します。 このエラーの原因のセキュリティ例外、 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Web サービスを呼び出すしようとしています。 ただし、Visual Studio 2005[!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)]プロジェクトは、デバッグ中に呼び出す Web サービスと同じサイトの配信元をシミュレートするように構成できます。 これにより、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]を安全にセキュリティ例外を発生させることがなく、Web サービスを呼び出します。
+[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]インターネットゾーンのアクセス許可セットに制限されている部分信頼セキュリティサンドボックス内で実行します。 このアクセス許可セットは、web サービスの呼び出しを、 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]アプリケーションの起点サイトにある web サービスのみに制限します。 ただし、 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]が Visual Studio 2005 からデバッグされている場合、参照している Web サービスと同じサイトの元のサイトがあるとは見なされません。 これにより、が Web サービスを呼び出そう[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]とすると、セキュリティ例外が発生します。 ただし、Visual Studio 2005 [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)]プロジェクトは、デバッグ中に呼び出し元の Web サービスと同じサイトがあることをシミュレートするように構成できます。 これにより[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 、はセキュリティ例外を発生させることなく、Web サービスを安全に呼び出すことができます。
 
 ## <a name="configuring-visual-studio"></a>Visual Studio の構成
- デバッグを Visual Studio 2005 を構成する、 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Web サービスを呼び出します。
+ Web サービスを呼び出すをデバッグ[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]するように Visual Studio 2005 を構成するには、次のようにします。
 
 1. **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。
 
-2. **プロジェクト デザイナー**、クリックして、**デバッグ**タブ。
+2. **プロジェクトデザイナー**で、 **[デバッグ]** タブをクリックします。
 
-3. **開始動作**セクションで、**外部プログラムの開始**」と入力します。
+3. **[開始アクション]** セクションで、 **[外部プログラムの開始]** を選択し、次のように入力します。
 
      `C:\WINDOWS\System32\PresentationHost.exe`
 
-4. **開始オプション**セクションで、次の点を入力してください、**コマンドライン引数**テキスト ボックス。
+4. **[開始オプション]** セクションで、 **[コマンドライン引数]** ボックスに次の内容を入力します。
 
-     `-debug`  *filename*
+     `-debug`  */db*
 
-     *ファイル名*の値、 **-デバッグ**パラメーターが .xbap ファイル名。 例。
+     **-Debug**パラメーターの*filename*値は、. xbap ファイル名です。例えば：
 
      `-debug c:\example.xbap`
 
 > [!NOTE]
->  これは、Visual Studio 2005 で作成したソリューションの既定の構成は、[!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)]プロジェクト テンプレート。
+> これは、Visual Studio 2005 [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)]プロジェクトテンプレートを使用して作成されたソリューションの既定の構成です。
 
 1. **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。
 
-2. **プロジェクト デザイナー**、クリックして、**デバッグ**タブ。
+2. **プロジェクトデザイナー**で、 **[デバッグ]** タブをクリックします。
 
-3. **開始オプション**セクションで、次のコマンド ライン パラメーターを追加、**コマンドライン引数**テキスト ボックス。
+3. **[開始オプション]** セクションで、次のコマンドラインパラメーターを **[コマンドライン引数]** テキストボックスに追加します。
 
      `-debugSecurityZoneURL`  *URL*
 
-     *URL*値、 **- debugSecurityZoneURL**パラメーターは、[!INCLUDE[TLA#tla_url](../../../../includes/tlasharptla-url-md.md)]の場所として、アプリケーションの起点のサイトをシミュレートします。
+     **-Debugsecurityゾーン url**パラメーターの[!INCLUDE[TLA#tla_url](../../../../includes/tlasharptla-url-md.md)] *url*値は、アプリケーションの起点サイトとしてシミュレートする場所のになります。
 
- たとえばを検討してください、[!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]に次の Web サービスを使用する[!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)]:
+ 例として、次[!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)]のような Web サービスを使用するについて考えてみます。
 
  `http://services.msdn.microsoft.com/ContentServices/ContentService.asmx`
 
- 起点サイト[!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)]この Web サービスは。
+ この Web サービスの[!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)]起点サイトは次のとおりです。
 
  `http://services.msdn.microsoft.com`
 
- その結果、完全な **- debugSecurityZoneURL**コマンド ライン パラメーターと値には。
+ その結果、完全な**debugsecurityゾーン url**コマンドラインパラメーターと値は次のようになります。
 
  `-debugSecurityZoneURL http://services.msdn.microsoft.com`
 

@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 97a0e6cbbd8972f58f9eedcfeb8aff1f93694064
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5fcadb708638efb0b7946426c538e01661505dfa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765669"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912242"
 ---
 # <a name="iclrruntimehoststop-method"></a>ICLRRuntimeHost::Stop メソッド
-共通言語ランタイム (CLR) では、コードの実行を停止します。  
+共通言語ランタイム (CLR) によるコードの実行を停止します。  
   
 > [!IMPORTANT]
->  このメソッドによって、ホストにリソースを解放されたり、アプリケーション ドメインのアンロードまたは、スレッドの破棄されたりすることはできません。 これらのリソースを解放するプロセスを終了する必要があります。  
+> このメソッドは、ホストへのリソースの解放、アプリケーションドメインのアンロード、またはスレッドの破棄を行いません。 これらのリソースを解放するには、プロセスを終了する必要があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,19 +40,19 @@ HRESULT Stop();
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`Stop` 正常に返されます。|  
-|HOST_E_CLRNOTAVAILABLE|プロセスに CLR が読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。|  
-|HOST_E_TIMEOUT|呼び出しがタイムアウトになりました。|  
+|S_OK|`Stop`正常に返されました。|  
+|HOST_E_CLRNOTAVAILABLE|CLR がプロセスに読み込まれていないか、CLR がマネージドコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
+|HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
-|HOST_E_ABANDONED|イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。|  
-|E_FAIL|不明な致命的なエラーが発生しました。 メソッドから E_FAIL が返された場合、CLR は、プロセス内で使用可能ではなくなりました。 メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。|  
+|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
+|E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドから E_FAIL が返された場合、そのプロセス内で CLR は使用できなくなります。 後続のホストメソッドの呼び出しでは、HOST_E_CLRNOTAVAILABLE が返されます。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ**Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cd337ca6d7b03ad22f178c9c7084cfa2585da73c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ad2092c902b137df0dfe108743ef4081ca5f04d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782749"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948113"
 ---
 # <a name="icorprofilerinfogetobjectsize-method"></a>ICorProfilerInfo::GetObjectSize メソッド
 指定したオブジェクトのサイズを取得します。  
@@ -37,30 +37,30 @@ HRESULT GetObjectSize(
   
 ## <a name="parameters"></a>パラメーター  
  `objectId`  
- [in]オブジェクトの ID。  
+ からオブジェクトの ID です。  
   
  `pcSize`  
- [out]オブジェクトのサイズ (バイト) へのポインター。  
+ 入出力オブジェクトのサイズへのポインター (バイト単位)。  
   
 ## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]
->  このメソッドは、互換性のために残されています。 返されます COR_E_OVERFLOW オブジェクト 4 GB より大きい 64 ビット プラットフォームで。 使用して、 [icorprofilerinfo 4::getobjectsize2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getobjectsize2-method.md)メソッド代わりにします。  
+> このメソッドは、互換性のために残されています。 64ビットプラットフォームで 4 GB を超えるオブジェクトの COR_E_OVERFLOW を返します。 代わりに[ICorProfilerInfo4:: GetObjectSize2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getobjectsize2-method.md)メソッドを使用してください。  
   
- 多くの場合、同じ種類の異なるオブジェクトと同じサイズである場合します。 ただし、配列や文字列など、一部の種類には、オブジェクトごとに別のサイズがあります。  
+ 多くの場合、同じ種類の異なるオブジェクトのサイズは同じです。 ただし、配列や文字列など、一部の型では、オブジェクトごとにサイズが異なる場合があります。  
   
- によって返されるサイズ、`GetObjectSize`メソッドにオブジェクトがガベージ コレクション ヒープに後に表示される配置の埋め込みは含まれません。 使用する場合、`GetObjectSize`オブジェクトからオブジェクトをガベージ コレクション ヒープで切り替わるようにメソッドが配置を手動で、必要に応じてパディングを追加します。  
+ `GetObjectSize`メソッドによって返されるサイズには、オブジェクトがガベージコレクションヒープに配置された後に表示されるアラインメントの埋め込みは含まれません。 `GetObjectSize`メソッドを使用してオブジェクトからガベージコレクションヒープ上のオブジェクトに進む場合は、必要に応じて、手動でアラインメントのパディングを追加します。  
   
-- 32 ビットの Windows では、COR_PRF_GC_GEN_0、COR_PRF_GC_GEN_1、および COR_PRF_GC_GEN_2 4 バイトのアラインメントを使用して、COR_PRF_GC_LARGE_OBJECT_HEAP が 8 バイト アラインメントを使用します。  
+- 32ビット Windows、COR_PRF_GC_GEN_0、COR_PRF_GC_GEN_1、および COR_PRF_GC_GEN_2 では、4バイトのアラインメントが使用され、COR_PRF_GC_LARGE_OBJECT_HEAP では8バイトのアラインメントが使用されます。  
   
-- 64 ビットの Windows では、配置と、8 バイトでは常にします。  
+- 64ビットの Windows では、アラインメントは常に8バイトです。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー:** Corprof.idl、Corprof.idl  
   
- **ライブラリ:** CorGuids.lib  
+ **ライブラリ**CorGuids .lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
