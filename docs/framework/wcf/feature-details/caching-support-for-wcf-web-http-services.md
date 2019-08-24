@@ -2,12 +2,12 @@
 title: WCF WEB HTTP サービスのキャッシュ サポート
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: a6a03f20fa6a853f813dc9eff3a4202ab18cad90
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 655e8807a78d542cd7fa586eca3750507891f74b
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952665"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988771"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>WCF WEB HTTP サービスのキャッシュ サポート
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]WCF Web HTTP サービスの ASP.NET で既に提供されている宣言型キャッシュ機構を使用できるようにします。 これにより、WCF Web HTTP サービス操作からの応答をキャッシュできます。 キャッシュ用に構成されているサービスに対してユーザーが HTTP GET を送信すると、ASP.NET は、キャッシュされた応答を送り返し、サービス メソッドは呼び出されません。 キャッシュの有効期限が切れると、ユーザーが次回に HTTP GET を送信したときに、サービス メソッドが呼び出され、応答が再度キャッシュされます。 ASP.NET キャッシュの詳細については、「 [ASP.NET キャッシュの概要](https://go.microsoft.com/fwlink/?LinkId=152534)」を参照してください。  
@@ -40,7 +40,7 @@ public class Service
 ```
   
 > [!WARNING]
->  ASP.NET 互換性モードが有効にされていない場合は、<xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> が使用されて、例外がスローされます。  
+> ASP.NET 互換性モードが有効にされていない場合は、<xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> が使用されて、例外がスローされます。  
   
  <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> によって指定されたキャッシュ プロファイル名によって、Web.config 構成ファイルに追加されるキャッシュ プロファイルが特定されます。 キャッシュプロファイルは、次の構成例に`outputCacheSetting`示すように、< > 要素で定義されています。  
   

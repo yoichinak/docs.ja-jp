@@ -2,12 +2,12 @@
 title: 複数の IIS サイト バインディングのサポート
 ms.date: 03/30/2017
 ms.assetid: 40440495-254d-45c8-a8c6-b29f364892ba
-ms.openlocfilehash: 3a4c9a55a8479980bd12333278d8a1e28f2ca775
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: a1fc2de3a10641dfc1c6181c7258bd4160f900e2
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943051"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988644"
 ---
 # <a name="supporting-multiple-iis-site-bindings"></a>複数の IIS サイト バインディングのサポート
 インターネットインフォメーションサービス (IIS) 7.0 で Windows Communication Foundation (WCF) サービスをホストする場合、同じサイトで同じプロトコルを使用する複数のベースアドレスを指定することができます。 これにより、同じサービスで多数の異なる URI に応答できます。 リッスンするサービスをホストする場合に便利ですが `http://www.contoso.com` と `http://contoso.com` です。 また、内部ユーザー用に 1 つのベース アドレスを持ち、外部ユーザー用に別のベース アドレスを持つサービスを作成するのにも役立ちます。 例: `http://internal.contoso.com` と `http://www.contoso.com` です。  
@@ -27,4 +27,4 @@ ms.locfileid: "69943051"
  同じサイトに複数のベースアドレスを指定すると、WCF ヘルプページの内容、インポートスキーマ、およびサービスによって生成される WSDL/MEX 情報が影響を受けます。 WCF ヘルプページには、サービスと通信できる WCF クライアントを生成するために使用するコマンドラインが表示されます。 このコマンド ラインには、その Web サイト用の IIS バインディングで指定された最初のアドレスだけが含まれています。 同様に、スキーマをインポートするときには、IIS バインディングで指定された最初のベース アドレスだけが使用されます。 WSDL および MEX データには、IIS バインディングで指定されたすべてのベース アドレスが含まれています。  
   
 > [!WARNING]
->  つまり、サービスに 2 つのベース アドレス (1 つは内部ユーザー用、もう 1 つは外部ユーザー用) がある場合、サービスによって生成される WSDL/MEX 情報では、両方のベース アドレスが指定されます。
+> つまり、サービスに 2 つのベース アドレス (1 つは内部ユーザー用、もう 1 つは外部ユーザー用) がある場合、サービスによって生成される WSDL/MEX 情報では、両方のベース アドレスが指定されます。

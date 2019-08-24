@@ -3,12 +3,12 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: 53d6bdb34ded52e49fcc8c5de98fcd45ddabadaa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: c4dbb31bb7961f0d33df9d1faee8fe36ecb520a3
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942775"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988327"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 Ws-federation プロトコル<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>を介してフェデレーション認証を<xref:System.IdentityModel.Services.SessionAuthenticationModule>使用する場合、(wsfam) と (SAM) を構成します。 <xref:System.IdentityModel.Services.ClaimsPrincipalPermission>また<xref:System.Security.Claims.ClaimsAuthorizationManager> は<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>クラスを使用してクレームベースのアクセス制御を提供するときに、を構成します。  
@@ -74,7 +74,7 @@ Ws-federation プロトコル<xref:System.IdentityModel.Services.WSFederationAut
  次の XML は、 `<federationConfiguration>` wsfam の設定を指定する要素を示し、既定の cookie ハンドラー ( <xref:System.IdentityModel.Services.ChunkedCookieHandler>クラスのインスタンス) が SAM によって使用されることを指定します。  
   
 > [!WARNING]
->  この例では、cookie ハンドラーも WSFAM も HTTPS を使用する必要はありません。 これは、 `<wsFederation>`要素`requireHttps`の属性と`requireSsl`の`<cookieHandlerElement>`属性が`false`であるためです。 ほとんどの運用環境では、セキュリティ上のリスクが生じる可能性があるため、これらの設定は推奨されません。  
+> この例では、cookie ハンドラーも WSFAM も HTTPS を使用する必要はありません。 これは、 `<wsFederation>`要素`requireHttps`の属性と`requireSsl`の`<cookieHandlerElement>`属性が`false`であるためです。 ほとんどの運用環境では、セキュリティ上のリスクが生じる可能性があるため、これらの設定は推奨されません。  
   
 ```xml  
 <system.identityModel.services>  

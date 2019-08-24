@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: 345b5028ccc5c24bd60cf7ecbd2610b27f44b8b9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 463d2fc374870661185a625a0b07a102aa54498c
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968682"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988621"
 ---
 # <a name="transport-security-overview"></a>トランスポート セキュリティの概要
 Windows Communication Foundation (WCF) のトランスポートセキュリティ機構は、使用されているバインディングとトランスポートによって異なります。 たとえば、<xref:System.ServiceModel.WSHttpBinding> クラスを使用する場合、トランスポートは HTTP であり、トランスポートをセキュリティで保護するための主要機構は SSL (Secure Sockets Layer) over HTTP (一般に HTTPS と呼ばれます) です。 このトピックでは、WCF システム指定のバインディングで使用される主要なトランスポートセキュリティ機構について説明します。  
@@ -19,7 +19,7 @@ Windows Communication Foundation (WCF) のトランスポートセキュリテ�
 > .NET Framework 3.5 以降で SSL セキュリティが使用されている場合、WCF クライアントは、証明書ストア内の中間証明書と SSL ネゴシエーション中に受信した中間証明書の両方を使用して、サービスの証明書チェーンの検証を実行します。証明. .NET Framework 3.0 では、ローカルの証明書ストアにインストールされている中間証明書のみが使用されます。  
   
 > [!WARNING]
->  トランスポート セキュリティを使用した場合、<xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> プロパティが上書きされることがあります。 この問題が発生しないよう<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType>に<xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>するには、をに設定します。 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> は、サービスの説明で設定できる、サービスの動作です。  
+> トランスポート セキュリティを使用した場合、<xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> プロパティが上書きされることがあります。 この問題が発生しないよう<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType>に<xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>するには、をに設定します。 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> は、サービスの説明で設定できる、サービスの動作です。  
   
 ## <a name="basichttpbinding"></a>BasicHttpBinding  
  既定では、<xref:System.ServiceModel.BasicHttpBinding> クラスはセキュリティを提供しません。 このバインディングは、セキュリティを実装していない Web サービス プロバイダーとの相互運用性のためにデザインされています。 ただし、<xref:System.ServiceModel.BasicHttpSecurity.Mode%2A> プロパティを <xref:System.ServiceModel.BasicHttpSecurityMode.None> 以外の値に設定することにより、セキュリティを有効にすることができます。 トランスポート セキュリティを有効にするには、このプロパティを <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> に設定します。  

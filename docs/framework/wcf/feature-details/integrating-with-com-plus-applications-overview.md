@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: fbe1617aa8ade89258bb7f4b46180b5e18805e3a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 75711ea534907e5692d97e0ec5f290e03fb75235
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590539"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69988699"
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM+ アプリケーションとの統合の概要
-Windows Communication Foundation (WCF) は、分散アプリケーションを作成するための豊富な環境を提供します。 COM + でホストされるコンポーネント ベースのアプリケーション ロジックを既に使用している場合は、既存のロジックを修正することがなく拡張する WCF を使用できます。 既存の COM+ サービスまたはエンタープライズ サービスの業務ロジックを、Web サービスを介して公開する場合に役立ちます。  
+Windows Communication Foundation (WCF) は、分散アプリケーションを作成するための豊富な環境を提供します。 COM + でホストされているコンポーネントベースのアプリケーションロジックを既に使用している場合は、WCF を使用して、既存のロジックを書き直すのではなく、拡張できます。 既存の COM+ サービスまたはエンタープライズ サービスの業務ロジックを、Web サービスを介して公開する場合に役立ちます。  
   
  COM+ コンポーネントのインターフェイスを Web サービスとして公開する場合、その仕様やコントラクトは、アプリケーションの初期化の際に実行される自動マッピングによって決まります。 このマッピングの概念モデルを次に示します。  
   
@@ -28,7 +28,7 @@ Windows Communication Foundation (WCF) は、分散アプリケーションを�
  サービスのアドレス既定値やトランスポート バインディングは、サービス構成ファイルに記述しますが、必要に応じて再設定も可能です。  
   
 > [!NOTE]
->  公開した Web サービスのコントラクトは、COM+ インターフェイスや構成を変更しない限り変わりません。 また、複数のインターフェイスを変更しても、利用できるサービスが自動的に更新されることはありません。COM+ サービス モデル構成ツール (ComSvcConfig.exe) を再実行する必要があります。  
+> 公開した Web サービスのコントラクトは、COM+ インターフェイスや構成を変更しない限り変わりません。 また、複数のインターフェイスを変更しても、利用できるサービスが自動的に更新されることはありません。COM+ サービス モデル構成ツール (ComSvcConfig.exe) を再実行する必要があります。  
   
  COM+ アプリケーションおよびそのコンポーネントの認証/承認要求は、Web サービスを使う場合でもやはり必要です。  
   
@@ -40,16 +40,16 @@ Windows Communication Foundation (WCF) は、分散アプリケーションを�
   
 2. 適切なホスティング モードを選択します。  
   
-3. COM+ サービス モデル構成ツール (ComSvcConfig.exe) を使用して、当該インターフェイスを公開するための Web サービスを追加します。 ComSvcConfig.exe を使用する方法の詳細については、次を参照してください。[方法。COM + サービス モデル構成ツールを使用して](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)します。  
+3. COM+ サービス モデル構成ツール (ComSvcConfig.exe) を使用して、当該インターフェイスを公開するための Web サービスを追加します。 Comsvcconfig.exe の使用方法の詳細については、「 [」を参照してください。COM + サービスモデル構成ツール](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)を使用します。  
   
-4. アプリケーション構成ファイルで、追加のサービス設定を構成します。 コンポーネントを構成する方法の詳細については、次を参照してください。[方法。COM + サービス設定の構成](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)します。  
+4. アプリケーション構成ファイルで、追加のサービス設定を構成します。 コンポーネントの構成方法の詳細については、 [「」を参照してください。COM + サービスの](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)設定を構成します。  
   
 ## <a name="supported-interfaces"></a>公開可能なインターフェイス  
  Web サービスとして公開できるインターフェイスの種類に関して、いくつか制約があります。 次のようなインターフェイスは公開できません。  
   
 - オブジェクト参照をパラメーターとして渡すインターフェイス。ただし、「オブジェクト参照を渡せる場合」で説明されているようにいくつか例外があります。  
   
-- .NET Framework の COM 相互運用性の変換を使用した互換性のない型を渡すインターフェイス。  
+- .NET Framework COM 相互運用性変換と互換性のない型を渡すインターフェイス。  
   
 - COM+ でサービスを提供する場合にアプリケーション プールが有効になるアプリケーションに対するインターフェイス。  
   
@@ -64,14 +64,14 @@ Windows Communication Foundation (WCF) は、分散アプリケーションを�
 ### <a name="limited-object-reference-support"></a>オブジェクト参照を渡せる場合  
  展開済みの COM+ コンポーネントの多くが、ADO Recordset オブジェクトを返す場合などに、パラメーターとしてオブジェクト参照を渡すようになっているため、COM+ 統合においても、一定の条件を満たす場合には、オブジェクト参照をパラメーターとして渡せるようになっています。 オブジェクト参照を渡せるのは、`IPersistStream` COM インターフェイスを実装しているオブジェクトに限ります。 たとえば ADO Recordset オブジェクトがそうで、アプリケーション固有の COM オブジェクトについてはオブジェクト参照を実装できます。  
   
- ComSvcConfig.exe ツールにより、このサポートを有効にする、 **allowreferences**スイッチを通常のメソッド シグネチャのパラメーターが無効になり、オブジェクト参照のパラメーターが使用されていないことを確認するツールを実行することを確認します. さらに、パラメーターとして渡すオブジェクトの種類をという名前し、内で識別する必要があります、<`persistableTypes`> 構成要素の子である、<`comContract`> 要素。  
+ このサポートを有効にするために、Comsvcconfig.exe ツールには、通常のメソッドシグネチャパラメーターを無効にする**allowreferences**スイッチが用意されています。これにより、オブジェクト参照パラメーターが使用されていないことを確認するためにツールが実行されることが確認されます。 さらに、パラメーターとして渡すオブジェクトの種類の名前を指定し、<`persistableTypes``comContract`> 要素の子である < > 構成要素内で識別する必要があります。  
   
  この機能を使用する場合、COM+ 統合サービスは、`IPersistStream` インターフェイスを使用してオブジェクト インスタンスのシリアル化および逆シリアル化を行います。 オブジェクト インスタンスが `IPersistStream` インターフェイスを実装していない場合、例外がスローされます。  
   
  クライアント アプリケーションがサービスとの間でオブジェクトをやり取りするためには、<xref:System.ServiceModel.ComIntegration.PersistStreamTypeWrapper> オブジェクトの該当するメソッドを使用できます。  
   
 > [!NOTE]
->  シリアル化アプローチのカスタムとプラットフォーム固有の性質によりこれは、WCF クライアントと WCF サービスの間で使用するために最も適しています。  
+> シリアル化の方法には、カスタムおよびプラットフォーム固有の性質があるため、WCF クライアントと WCF サービスの間での使用に適しています。  
   
 ## <a name="selecting-the-hosting-mode"></a>ホスティング モードの選択  
  COM+ が Web サービスを公開する際のホスティング モードには、次のようなものがあります。  
@@ -82,22 +82,22 @@ Windows Communication Foundation (WCF) は、分散アプリケーションを�
   
 - Web ホスト  
   
-     Web サービスを Web サーバーのワーカー プロセス内で提供します。 最初の要求が届いた時点で、あらかじめ COM+ がアクティブになっている必要はありません。 必要に応じ、自動的にアクティブ化してから要求を処理するようになっています。 このモードでも、サーバー アプリケーションから Web サービスと DCOM アクセスの両方を利用できますが、Web サービス要求の転送が発生するため、プロセス ホップが発生します。 通常、クライアント側で偽装が必要になります。 WCF では、これで、<xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A>のプロパティ、<xref:System.ServiceModel.Security.WindowsClientCredential>クラスは、ジェネリックのプロパティとしてアクセスされる<xref:System.ServiceModel.ChannelFactory%601>クラスだけでなく<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>列挙値。  
+     Web サービスを Web サーバーのワーカー プロセス内で提供します。 最初の要求が届いた時点で、あらかじめ COM+ がアクティブになっている必要はありません。 必要に応じ、自動的にアクティブ化してから要求を処理するようになっています。 このモードでも、サーバー アプリケーションから Web サービスと DCOM アクセスの両方を利用できますが、Web サービス要求の転送が発生するため、プロセス ホップが発生します。 通常、クライアント側で偽装が必要になります。 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> WCF では、 <xref:System.ServiceModel.Security.WindowsClientCredential>クラスのプロパティを使用してこれを行うことができます。このプロパティは、 <xref:System.ServiceModel.ChannelFactory%601>ジェネリッククラスのプロパティとし<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>て、および列挙値としてアクセスされます。  
   
 - Web ホスト (インプロセス)  
   
      Web サービスと COM+ アプリケーション ロジックの両方を Web サーバーのワーカー プロセス内で提供します。 Web サービス要求を転送することなく、自動的に Web ホスト モードにすることができます。 ただし、サーバー アプリケーションに DCOM でアクセスできない、という短所があります。  
   
 ### <a name="security-considerations"></a>セキュリティの考慮事項  
- その他の WCF サービスと同様に、公開されているサービスのセキュリティ設定は、WCF チャネルの構成設定を通じて管理されます。 従来の DCOM セキュリティ設定には、コンピューター全体のアクセス権限設定などがありましたが、これは必須ではありません。 COM+ アプリケーション ロールを強制する場合、コンポーネントの "コンポーネント レベルのアクセス確認" 承認を有効にする必要があります。  
+ 他の WCF サービスと同様に、公開されたサービスのセキュリティ設定は、WCF チャネルの構成設定を通じて管理されます。 従来の DCOM セキュリティ設定には、コンピューター全体のアクセス権限設定などがありましたが、これは必須ではありません。 COM+ アプリケーション ロールを強制する場合、コンポーネントの "コンポーネント レベルのアクセス確認" 承認を有効にする必要があります。  
   
  セキュリティ保護されていないバインディングは改ざんや情報漏洩を招くので、 セキュリティ保護されたバインディングを使用することをお勧めします。  
   
- "COM+ ホスト" モードおよび "Web ホスト" モードの場合、クライアント アプリケーション側で、サーバー プロセスによるクライアント ユーザーの偽装を許可する必要があります。 これ行う WCF クライアントの偽装のレベルを設定して<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>します。  
+ "COM+ ホスト" モードおよび "Web ホスト" モードの場合、クライアント アプリケーション側で、サーバー プロセスによるクライアント ユーザーの偽装を許可する必要があります。 これは、WCF クライアントで、偽装レベルをに設定する<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>ことによって行うことができます。  
   
  インターネット インフォメーション サービス (IIS) または Windows プロセス アクティブ化サービス (WAS) で HTTP トランスポートを使用する場合、Httpcfg.exe ツールでトランスポート エンドポイントのアドレスを確保し、他の用途には使用しないように予約することができます。 他の構成では、正当なサービスのように機能する不正なサービスからの防御が重要です。 接続先のエンドポイントで不正なサービスが起動されるのを防ぐため、正当なサービスは NT サービスとして動作するよう設定するとよいでしょう。 これにより、正当なサービスは、他の不正なサービスに優先してエンドポイント アドレスを確保できるようになります。  
   
- Web でホストされるサービスとして構成されている COM + ロールの COM + アプリケーションを公開するときに、アプリケーションのロールのいずれかに"Launch IIS Process Account"を追加する必要があります。 このアカウントは通常、IWAM_machinename という形の名前で、オブジェクトの使用後、安全にシャットダウンできるようにするために必要です。 ただし、このアカウントにその他の権限は与えないでください。  
+ COM + アプリケーションを Web ホストサービスとして構成された COM + ロールで公開する場合は、アプリケーションのロールの1つに "IIS プロセスアカウントの起動" を追加する必要があります。 このアカウントは通常、IWAM_machinename という形の名前で、オブジェクトの使用後、安全にシャットダウンできるようにするために必要です。 ただし、このアカウントにその他の権限は与えないでください。  
   
  COM+ のプロセス リサイクル機能は、統合アプリケーションでは使えません。 アプリケーションがこの機能を使用するよう設定されている場合、コンポーネントが COM+ ホスト プロセスとして動作していると、サービスを起動できません。 "Web ホスト (インプロセス)" モードであれば、プロセス リサイクル設定は適用されないので問題ありません。  
   

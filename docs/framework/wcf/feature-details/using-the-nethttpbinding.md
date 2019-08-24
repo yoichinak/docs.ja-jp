@@ -2,26 +2,26 @@
 title: NetHttpBinding の使用
 ms.date: 03/30/2017
 ms.assetid: fe134acf-ceca-49de-84a9-05a37e3841f1
-ms.openlocfilehash: 5090cfdfeb068acda1e1092e408f3cd747c574c2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f908361c5f9152d333daaf5e3ee90de3b1b89e9
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932562"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988625"
 ---
 # <a name="using-the-nethttpbinding"></a>NetHttpBinding の使用
 <xref:System.ServiceModel.NetHttpBinding> は、HTTP や WebSocket のサービスを使用するために設計されたバインドで、既定ではバイナリ エンコードを使用します。 <xref:System.ServiceModel.NetHttpBinding> は、要求-応答コントラクトと二重のコントラクトのどちらで使用されているかを検出し、一致するように動作を変更します。要求-応答コントラクトには HTTP、二重のコントラクトには Websocket を使用します。 この動作は、<xref:System.ServiceModel.Channels.WebSocketTransportUsage> 設定を使用してオーバーライドできます。  
   
-1. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Always> -これは、要求/応答コントラクトにも使用される websocket です。  
+1. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Always>-これにより、要求/応答コントラクトでも Websocket が強制的に使用されます。  
   
-2. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Never> -これは Websocket が使用することを防ぎます。 この設定で二重のコントラクトを使用しようとすると、例外が発生します。  
+2. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Never>-Websocket が使用されないようにします。 この設定で二重のコントラクトを使用しようとすると、例外が発生します。  
   
-3. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.WhenDuplex> -これにより、既定値は、し、前述のように動作します。  
+3. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.WhenDuplex>-これは既定値で、前述のように動作します。  
   
  <xref:System.ServiceModel.NetHttpBinding> は、HTTP モードと WebSocket モードの両方で信頼できるセッションをサポートします。 WebSocket モードでは、セッションがトランスポートによって提供されます。  
   
 > [!WARNING]
->  <xref:System.ServiceModel.NetHttpBinding> を使用していて、バインドの TransferMode が TransferMode.Streamed に設定されている場合、大きいストリームによってデッドロックが発生する可能性があり、呼び出しがタイムアウトします。 この問題を回避するには、小さいメッセージを送信するか、TransferMode.Buffered を使用してください。  
+> <xref:System.ServiceModel.NetHttpBinding> を使用していて、バインドの TransferMode が TransferMode.Streamed に設定されている場合、大きいストリームによってデッドロックが発生する可能性があり、呼び出しがタイムアウトします。 この問題を回避するには、小さいメッセージを送信するか、TransferMode.Buffered を使用してください。  
   
 ## <a name="configuring-a-service-to-use-nethttpbinding"></a>NetHttpBinding を使用するサービスの構成  
  <xref:System.ServiceModel.NetHttpBinding> は、他のバインドと同様に構成できます。 次の構成スニペットは、<xref:System.ServiceModel.NetHttpBinding> を使用して WCF サービスを構成する方法を示しています。  

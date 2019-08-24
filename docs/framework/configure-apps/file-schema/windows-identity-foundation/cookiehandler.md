@@ -3,12 +3,12 @@ title: <cookieHandler>
 ms.date: 03/30/2017
 ms.assetid: bfdc127f-8d94-4566-8bef-f583c6ae7398
 author: BrucePerlerMS
-ms.openlocfilehash: 6c62100b2445ae10a83ebd9e7d154a6e2aa14e0b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 1c044f7346fabc77d7744f42c5bfd3d86d72402e
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942801"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988339"
 ---
 # <a name="cookiehandler"></a>\<cookieHandler >
 (SAM) が<xref:System.IdentityModel.Services.SessionAuthenticationModule> cookie の読み取りと書き込みに使用するを構成します。<xref:System.IdentityModel.Services.CookieHandler>  
@@ -77,7 +77,7 @@ ms.locfileid: "69942801"
  次の XML は、 `<cookieHandler>`要素を示しています。 この例では、 `mode`属性が指定されていないため、既定の cookie ハンドラーが SAM によって使用されます。 これは<xref:System.IdentityModel.Services.ChunkedCookieHandler>クラスのインスタンスです。 `<chunkedCookieHandler>`子要素が指定されていないため、既定のチャンクサイズが使用されます。 属性が設定`requireSsl` `false`されているため、HTTPS は必要ありません。  
   
 > [!WARNING]
->  この例では、セッション cookie を書き込むために HTTPS は必要ありません。 これは、 `<cookieHandler>`要素`requireSsl`の属性がに`false`設定されているためです。 ほとんどの運用環境では、セキュリティ上のリスクが生じる可能性があるため、この設定は推奨されません。  
+> この例では、セッション cookie を書き込むために HTTPS は必要ありません。 これは、 `<cookieHandler>`要素`requireSsl`の属性がに`false`設定されているためです。 ほとんどの運用環境では、セキュリティ上のリスクが生じる可能性があるため、この設定は推奨されません。  
   
 ```xml  
 <cookieHandler requireSsl="false" />  

@@ -2,12 +2,12 @@
 title: 再ホストされたワークフロー デザイナーにおける Workflow Foundation 4.5 の新機能のサポート
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 69c3577c82c7a0899fb94461255721f4b2ab3ecd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 20623c8d2f6bf66d2668fd07b0acae67865a3235
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913704"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987232"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>再ホストされたワークフロー デザイナーにおける Workflow Foundation 4.5 の新機能のサポート
 .NET Framework 4.5 の Windows Workflow Foundation (WF) では、ワークフローデザイナーのエクスペリエンスに対するいくつかの機能強化など、多くの新機能が導入されました。 このトピックでは、このような新機能のうち、再ホストされたデザイナーでサポートされている機能と現時点ではサポートされていない機能について詳しく説明します。
@@ -22,7 +22,7 @@ ms.locfileid: "69913704"
  .NET Framework 4.5 より前では、ワークフロー内のすべての式は Visual Basic でのみ記述できました。 .NET Framework 4.5 では、Visual Basic 式は Visual Basic を使用して作成されたプロジェクトにのみ使用されます。 Visual C# プロジェクトでは、式に C# が使用されるようになりました。 Visual Studio 2012 でワークフローを作成する場合、完全C#に機能する式エディターには、文法の強調表示や intellisense などの機能が用意されています。 以前のバージョンで作成された、Visual Basic の式を使用する C# ワークフロー プロジェクトは引き続き動作します。
 
 > [!WARNING]
->  C# の式は、再ホストされたデザイナーではサポートされていません。
+> C# の式は、再ホストされたデザイナーではサポートされていません。
 
 ## <a name="new-designer-capabilities"></a>デザイナーの新機能
 
@@ -30,7 +30,7 @@ ms.locfileid: "69913704"
  .NET Framework 4.5 で導入された [[クイック検索](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind)] 機能と[[フォルダーを](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles)使用して検索] 機能は、再ホストされたデザイナーではサポートされていません。 `Toolbox` による検索は、再ホストされたデザイナーでもサポートされています。 これらの機能の詳細については、「[デザイナー検索](whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch)」を参照してください。
 
 > [!WARNING]
->  [[クイック検索](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind)] と[[フォルダーを検索](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles)する] は、再ホストされたデザイナーではサポートされていません。
+> [[クイック検索](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind)] と[[フォルダーを検索](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles)する] は、再ホストされたデザイナーではサポートされていません。
 
 ### <a name="delete-context-menu-item-in-variable-and-argument-designer"></a>変数デザイナーと引数デザイナーのコンテキスト メニューの [削除]
  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] では、変数および引数を削除できるのは、デザイナーでキーボードを使用した場合のみでした。 .NET Framework 4.5 以降では、コンテキストメニューを使用して変数と引数を削除できます。 この機能は、再ホストされたデザイナーでサポートされています。
@@ -103,7 +103,7 @@ ms.locfileid: "69913704"
  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] では、ワークフローの検証エラーが、ワークフロー プロジェクトのビルド中のビルド エラーとして数えられていませんでした。 つまり、ワークフローの検証エラーが発生した場合でも、ワークフロー プロジェクトのビルドは成功している可能性があります。 .NET Framework 4.5 では、ワークフローの検証エラーによってビルドが失敗します。
 
 > [!WARNING]
->  ビルド時の検証は、再ホストされたデザイナーではサポートされていません。  
+> ビルド時の検証は、再ホストされたデザイナーではサポートされていません。  
   
 ### <a name="design-time-background-validation"></a>デザイン時バックグラウンド検証  
  で[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]は、ワークフローがフォアグラウンドプロセスとして検証されました。これにより、複雑な、または時間のかかる検証プロセス中に UI がブロックされる可能性があります。 現在、ワークフローの検証はバックグラウンド スレッドで実行されるため、UI がブロックされることはありません。  
@@ -142,4 +142,4 @@ ms.locfileid: "69913704"
  コントラクト優先ワークフロー開発ツールを使用すると、開発者は code first でコントラクトをデザインできます。 Visual Studio で数回クリックするだけで、各操作を表すアクティビティテンプレートがツールボックスに自動的に生成されます。 これらのアクティビティは、コントラクトで定義された操作を実装するワークフローを作成するために使用されます。 ワークフロー デザイナーは、ワークフロー サービスを検証し、これらの操作が実装され、ワークフローの署名がコントラクトの署名と一致することを確認します。 また、開発者は、ワークフロー サービスを、実装済みコントラクトのコレクションと関連付けることもできます。 コントラクト優先ワークフローサービスの開発の詳細については[、「方法:既存のサービスコントラクト](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)を使用するワークフローサービスを作成します。  
   
 > [!WARNING]
->  コントラクト優先ワークフローの開発は、ワークフロー デザイナーではサポートされていません。
+> コントラクト優先ワークフローの開発は、ワークフロー デザイナーではサポートされていません。

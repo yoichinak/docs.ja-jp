@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-ms.openlocfilehash: 966c3c17c3c42e20ad55681e1c17b13d3f466fa3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 665ede5b5a46c4093382bed5ed28a0d2bba979be
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967816"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988607"
 ---
 # <a name="using-the-xmlserializer-class"></a>XmlSerializer クラスの使用
 Windows Communication Foundation (WCF) では、2つの異なるシリアル化テクノロジを使用して、アプリケーション内のデータを、クライアントとサービスの間で送信される XML に変換できます。これは、シリアル化と呼ばれるプロセスです。  
@@ -97,7 +97,7 @@ Windows Communication Foundation (WCF) では、2つの異なるシリアル化�
  `IXmlSerializable` インターフェイスを実装する型は、`DataContractSerializer` で完全にサポートされます。 これらの型には、スキーマを制御するために必ず <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 属性を適用する必要があります。  
   
 > [!WARNING]
->  ポリモーフィック型をシリアル化する場合、<xref:System.Xml.Serialization.XmlSchemaProviderAttribute> を型に適用して、正しい型がシリアル化されるようにする必要があります。  
+> ポリモーフィック型をシリアル化する場合、<xref:System.Xml.Serialization.XmlSchemaProviderAttribute> を型に適用して、正しい型がシリアル化されるようにする必要があります。  
   
  `IXmlSerializable` を実装する型には、任意のコンテンツを表す型、1 つの要素を表す型、および従来の <xref:System.Data.DataSet> 型の 3 種類があります。  
   

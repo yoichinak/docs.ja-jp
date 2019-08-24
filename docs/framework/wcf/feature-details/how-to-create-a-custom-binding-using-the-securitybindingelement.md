@@ -7,25 +7,25 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-ms.openlocfilehash: 76fd6ad954b2cf004c6fdfcf51ef0c619e8c3892
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: da67d923b36d673c87c90ba79b72ad4e1fc64a0c
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662779"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988764"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>方法: SecurityBindingElement を使用してカスタム バインドを作成する
-Windows Communication Foundation (WCF) には、複数のシステムで指定されたバインド構成できますが、WCF がサポートするすべてのセキュリティ オプションを構成するときに完全な柔軟性を提供しないにはが含まれています。 ここでは、個別のバインド要素からカスタム バインドを直接作成する方法を説明し、このようなバインディングを作成する場合に指定できるセキュリティ設定のいくつかに焦点を当てます。 カスタム バインディングの作成の詳細については、次を参照してください。[バインディングの拡張](../../../../docs/framework/wcf/extending/extending-bindings.md)します。  
+Windows Communication Foundation (WCF) には、構成できるシステム指定のバインディングがいくつか用意されていますが、WCF がサポートするすべてのセキュリティオプションを構成するときに完全な柔軟性は提供されません。 ここでは、個別のバインド要素からカスタム バインドを直接作成する方法を説明し、このようなバインディングを作成する場合に指定できるセキュリティ設定のいくつかに焦点を当てます。 カスタムバインディングの作成の詳細については、「[バインディングの拡張](../../../../docs/framework/wcf/extending/extending-bindings.md)」を参照してください。  
   
 > [!WARNING]
->  <xref:System.ServiceModel.Channels.SecurityBindingElement> では、<xref:System.ServiceModel.Channels.IDuplexSessionChannel> が <xref:System.ServiceModel.TransferMode> に設定されている場合に TCP トランスポートによって使用される既定のチャネル形状である <xref:System.ServiceModel.TransferMode.Buffered> チャネル形状をサポートしていません。 このシナリオで <xref:System.ServiceModel.TransferMode> を使用するには、<xref:System.ServiceModel.TransferMode.Streamed> を <xref:System.ServiceModel.Channels.SecurityBindingElement> に設定する必要があります。  
+> <xref:System.ServiceModel.Channels.SecurityBindingElement> では、<xref:System.ServiceModel.Channels.IDuplexSessionChannel> が <xref:System.ServiceModel.TransferMode> に設定されている場合に TCP トランスポートによって使用される既定のチャネル形状である <xref:System.ServiceModel.TransferMode.Buffered> チャネル形状をサポートしていません。 このシナリオで <xref:System.ServiceModel.TransferMode> を使用するには、<xref:System.ServiceModel.TransferMode.Streamed> を <xref:System.ServiceModel.Channels.SecurityBindingElement> に設定する必要があります。  
   
 ## <a name="creating-a-custom-binding"></a>カスタム バインドの作成  
- WCF ですべてのバインドで構成されて*バインド要素*します。 各バインド要素は <xref:System.ServiceModel.Channels.BindingElement> クラスから派生します。 標準のシステム指定のバインディングの場合、バインド要素は自動的に作成および構成されます。ただし、プロパティ設定の一部はカスタマイズが可能です。  
+ WCF では、すべてのバインドは*バインド要素*で構成されます。 各バインド要素は <xref:System.ServiceModel.Channels.BindingElement> クラスから派生します。 標準のシステム指定のバインディングの場合、バインド要素は自動的に作成および構成されます。ただし、プロパティ設定の一部はカスタマイズが可能です。  
   
  これに対し、カスタム バインドを作成する場合は、バインド要素が作成および構成され、そのバインド要素から <xref:System.ServiceModel.Channels.CustomBinding> が作成されます。  
   
- これを行うには、<xref:System.ServiceModel.Channels.BindingElementCollection> クラスのインスタンスによって表されるコレクションに個別のバインド要素を追加し、`Elements` の `CustomBinding` プロパティをそのオブジェクトと同じにします。 次の順序でバインド要素を追加する必要があります。トランザクション フロー、信頼できるセッション、セキュリティ、複合二重、一方向、Stream のセキュリティ、メッセージ エンコーディング、およびトランスポート。 どのバインディングでも、これらすべてのバインド要素が必要になるとは限りません。  
+ これを行うには、<xref:System.ServiceModel.Channels.BindingElementCollection> クラスのインスタンスによって表されるコレクションに個別のバインド要素を追加し、`Elements` の `CustomBinding` プロパティをそのオブジェクトと同じにします。 次の順序でバインド要素を追加する必要があります。トランザクションフロー、信頼できるセッション、セキュリティ、複合二重、一方向、ストリームセキュリティ、メッセージエンコーディング、トランスポート。 どのバインディングでも、これらすべてのバインド要素が必要になるとは限りません。  
   
 ## <a name="securitybindingelement"></a>SecurityBindingElement  
  3 つのバインド要素がメッセージ レベルのセキュリティに関連しており、これらはすべて <xref:System.ServiceModel.Channels.SecurityBindingElement> クラスから派生します。 この 3 つのバインディングとは、<xref:System.ServiceModel.Channels.TransportSecurityBindingElement>、<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>、および <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> です。 <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> は混合モード セキュリティを提供するために使用されます。 他の 2 つの要素は、メッセージ層でセキュリティを提供する場合に使用します。  
@@ -75,9 +75,9 @@ Windows Communication Foundation (WCF) には、複数のシステムで指定�
 |||SSL または Windows StreamSecurityBindingElement|SSL または Windows StreamSecurityBindingElement|SSL または Windows StreamSecurityBindingElement|  
 |||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
   
- SecurityBindingElements には構成可能な設定が多数あることに注意してください。 詳細については、次を参照してください。 [SecurityBindingElement 認証モード](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)します。  
+ SecurityBindingElements には構成可能な設定が多数あることに注意してください。 詳細については、「[認証モード](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)の使用」を参照してください。  
   
- 詳細については、次を参照してください。[メッセージ交換をセキュリティで保護およびセキュリティで保護されたセッション](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)します。  
+ 詳細については、「[セキュリティで保護された通信とセッション](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)」を参照してください。  
   
 ## <a name="procedures"></a>手順  
   

@@ -2,18 +2,18 @@
 title: ワークフロー サービスへのトランザクションのフロー
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: 7926c5a8ce1ca1ba3e24c4d1681ae12c18039924
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: ae99c53bbb859f3ade075d4d60ad2ae7e5e7272b
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963334"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988805"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>ワークフロー サービスへのトランザクションのフロー
 ワークフロー サービスとワークフロー クライアントはトランザクションに参加できます。  サービス操作をアンビエント トランザクションの一部にするには、<xref:System.ServiceModel.Activities.Receive> アクティビティを <xref:System.ServiceModel.Activities.TransactedReceiveScope> アクティビティの中に配置します。 <xref:System.ServiceModel.Activities.Send> 内の <xref:System.ServiceModel.Activities.SendReply> または <xref:System.ServiceModel.Activities.TransactedReceiveScope> アクティビティによる呼び出しが行われると、アンビエント トランザクション内でも呼び出しが行われます。 ワークフロー クライアント アプリケーションでは、<xref:System.Activities.Statements.TransactionScope> アクティビティを使用してアンビエント トランザクションを作成し、そのアンビエント トランザクションを使用してサービス操作を呼び出すことができます。 ここでは、トランザクションに参加するワークフロー サービスとワークフロー クライアントを作成する手順について説明します。  
   
 > [!WARNING]
->  ワークフローサービスインスタンスがトランザクション内に読み込まれ、ワークフローに<xref:System.Activities.Statements.Persist>アクティビティが含まれている場合、ワークフローインスタンスは、トランザクションがタイムアウトするまでブロックします。  
+> ワークフローサービスインスタンスがトランザクション内に読み込まれ、ワークフローに<xref:System.Activities.Statements.Persist>アクティビティが含まれている場合、ワークフローインスタンスは、トランザクションがタイムアウトするまでブロックします。  
   
 > [!IMPORTANT]
 > <xref:System.ServiceModel.Activities.TransactedReceiveScope> を使用する場合は、ワークフロー内のすべての受信を <xref:System.ServiceModel.Activities.TransactedReceiveScope> アクティビティに配置することをお勧めします。  

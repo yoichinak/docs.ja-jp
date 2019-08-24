@@ -2,18 +2,18 @@
 title: <baseAddressPrefixFilters>
 ms.date: 03/30/2017
 ms.assetid: 8cab2a9a-c51f-4283-bb60-2ad0c274fd46
-ms.openlocfilehash: 8a59f651318e18411b1485fc4eebeb7a550afca0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 55ffcfb5c0c84d68033d082cbe451696bd3c9dc2
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919852"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988361"
 ---
 # <a name="baseaddressprefixfilters"></a>\<baseAddressPrefixFilters>
 パススルーフィルターを指定する構成要素のコレクションを表します。パススルーフィルターは、IIS で Windows Communication Foundation (WCF) アプリケーションをホストするときに適切なインターネットインフォメーションサービス (IIS) バインドを選択するメカニズムを提供します。  
   
 > [!WARNING]
->  \<baseAddressPrefixFilters > は "localhost" を認識しません。代わりに、完全修飾コンピューター名を使用してください。  
+> \<baseAddressPrefixFilters > は "localhost" を認識しません。代わりに、完全修飾コンピューター名を使用してください。  
   
  \<system.ServiceModel >  
 \<ServiceHostingEnvironment >  

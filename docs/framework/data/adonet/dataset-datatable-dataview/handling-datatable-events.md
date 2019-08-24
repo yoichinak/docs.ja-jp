@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 4007a04bf3bd2b130e978415722b0e5b7769cc25
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 210d15187cd539cdae6e38fdcb708b4b9f81c073
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953262"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988308"
 ---
 # <a name="handling-datatable-events"></a>DataTable イベントの処理
 <xref:System.Data.DataTable> オブジェクトは、アプリケーションが処理できる一連のイベントを提供します。 `DataTable` のイベントを次の表に示します。  
@@ -33,7 +33,7 @@ ms.locfileid: "69953262"
 > 行の追加または削除を行う操作の多くは、`ColumnChanged` イベントも `ColumnChanging` イベントも生成しません。 ただし、`ReadXml` メソッドでは、`ColumnChanged` が `ColumnChanging` または `XmlReadMode` (読み込む XML ドキュメントが `DiffGram` の場合) に設定されていない限り、`Auto` イベントおよび `DiffGram` イベントが生成されます。  
   
 > [!WARNING]
->  `DataSet` イベントの生成元の `RowChanged` でデータが変更されると、データが破損する可能性があります。 このようなデータの破損が起きた場合、例外は発生しません。  
+> `DataSet` イベントの生成元の `RowChanged` でデータが変更されると、データが破損する可能性があります。 このようなデータの破損が起きた場合、例外は発生しません。  
   
 ## <a name="additional-related-events"></a>その他の関連イベント  
  <xref:System.Data.DataTable.Constraints%2A> プロパティは <xref:System.Data.ConstraintCollection> インスタンスを保持します。 <xref:System.Data.ConstraintCollection> クラスは、<xref:System.Data.ConstraintCollection.CollectionChanged> イベントを公開します。 このイベントは、`ConstraintCollection` に対して制約の追加、変更、または削除が実行されたときに発生します。  
@@ -71,7 +71,7 @@ ms.locfileid: "69953262"
 > 式列に対する変更で `DataTable` のイベントが発生することはありません。 式列に対する変更で発生するのは、`DataView` と `DataRowView` のイベントだけです。 式列には他の複数の列に対する依存関係が存在することもあるため、1 回の `DataRow` 操作で複数回、評価される場合もあります。 イベントは式が評価されるたびに発生するため、式列が変更された場合、1 回の `DataRow` 操作で複数の `ListChanged` イベントおよび `PropertyChanged` イベントが発生し、同じ式列に対して複数のイベントが発生する場合もあります。  
   
 > [!WARNING]
->  <xref:System.NullReferenceException> を `RowChanged` イベント ハンドラー内でスローしないでください。 <xref:System.NullReferenceException> が `RowChanged` の `DataTable` イベント内でスローされると、`DataTable` が破損します。  
+> <xref:System.NullReferenceException> を `RowChanged` イベント ハンドラー内でスローしないでください。 <xref:System.NullReferenceException> が `RowChanged` の `DataTable` イベント内でスローされると、`DataTable` が破損します。  
   
 ### <a name="example"></a>例  
  次の例では、`RowChanged`、`RowChanging`、`RowDeleted`、`RowDeleting`、`ColumnChanged`、`ColumnChanging`、`TableNewRow`、`TableCleared`、`TableClearing` の各イベントについてイベント ハンドラーを作成しています。 イベントが発生すると、各イベント ハンドラーによって、出力結果がコンソール ウィンドウに表示されます。  

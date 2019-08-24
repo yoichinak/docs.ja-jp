@@ -2,12 +2,12 @@
 title: Windows ストア クライアント アプリを使用した WCF サービスへのアクセス
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: a2f1ef37914c932801699bb2f9c2323dd0408e7f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 9316a46f809eec21f73e8eeadb49baf1748c6ca0
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964968"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988250"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Windows ストア クライアント アプリを使用した WCF サービスへのアクセス
 Windows 8 では、Windows ストア アプリケーションと呼ばれる新しい種類のアプリケーションが導入されています。 これらのアプリケーションはタッチ スクリーンのインターフェイスを念頭にデザインされています。 .NET Framework 4.5 により、Windows ストア アプリケーションから WCF サービスを呼び出すことができます。  
@@ -19,7 +19,7 @@ Windows 8 では、Windows ストア アプリケーションと呼ばれる新�
 > WCF で公開される API ではなく、WinRT 配信 API を使用してください。 詳細については、「 [Windows.Web.Syndication 名前空間](https://go.microsoft.com/fwlink/?LinkId=236265)」を参照してください。  
   
 > [!WARNING]
->  サービス参照の追加を使用して Windows ランタイム コンポーネントへの Web サービス参照を追加することはサポートされていません。  
+> サービス参照の追加を使用して Windows ランタイム コンポーネントへの Web サービス参照を追加することはサポートされていません。  
   
 ### <a name="supported-bindings"></a>サポートされているバインド  
  Windows ストア アプリケーションでは、以下の WCF バインドがサポートされています。  
@@ -104,7 +104,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 3. XmlSerializer  
   
 > [!WARNING]
->  XmlDictionaryWriter.Write(DateTime) は、DateTime オブジェクトを文字列として出力するようになりました。  
+> XmlDictionaryWriter.Write(DateTime) は、DateTime オブジェクトを文字列として出力するようになりました。  
   
 ### <a name="security"></a>セキュリティ  
 
@@ -154,7 +154,7 @@ Windows ストアアプリケーションでは、次のクライアント資格
  非同期サービス操作の定義には、タスク ベースの非同期パターンのみを使用することをお勧めします。 これにより、サービス操作の呼び出し中も、Windows ストア アプリケーションの応答が維持されます。  
   
 > [!WARNING]
->  同期操作を定義した場合でも例外はスローされませんが、非同期操作のみを定義することを強くお勧めします。  
+> 同期操作を定義した場合でも例外はスローされませんが、非同期操作のみを定義することを強くお勧めします。  
   
 ### <a name="calling-wcf-services-from-windows-store-applications"></a>Windows ストア アプリケーションからの WCF サービスの呼び出し  
  既に説明したように、すべての構成は、生成されたプロキシ クラスの GetBindingForEndpoint メソッドのコード内で行う必要があります。 次のコードに示すように、サービス操作の呼び出しは、タスク ベースの非同期メソッドの呼び出しと同じように実行されます。  

@@ -11,12 +11,12 @@ ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: e3fb6e42270cc0a530646b656470ec99fcfc7f1f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 5e5112aa0b025648ce68a93f0f3da026ec99fe89
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666247"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987144"
 ---
 # <a name="walkthrough-create-new-wpf-content-on-windows-forms-at-design-time"></a>チュートリアル: デザイン時に Windows フォームに新しい WPF コンテンツを作成する
 
@@ -28,7 +28,7 @@ ms.locfileid: "69666247"
 
 ## <a name="create-the-project"></a>プロジェクトの作成
 
-まず、Windows フォーム プロジェクトを作成します。 Visual Studio を開き、`HostingWpf` という新しい **Windows フォーム アプリ (.NET Framework)** プロジェクトを Visual Basic または Visual C# で作成します。
+Visual Studio を開き、`HostingWpf` という新しい **Windows フォーム アプリ (.NET Framework)** プロジェクトを Visual Basic または Visual C# で作成します。
 
 > [!NOTE]
 > WPF コンテンツをホストする場合は、C# プロジェクトと Visual Basic プロジェクトのみがサポートされます。

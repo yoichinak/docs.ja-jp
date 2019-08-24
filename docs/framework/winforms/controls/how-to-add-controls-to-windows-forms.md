@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 7ee603fa5350ef81c6d32d2f22119bbe526295df
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: d20afc6e8a950035cc3c0bf010504d42f401bfbb
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912626"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987510"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>方法: Windows フォームにコントロールを追加する
 ほとんどのフォームは、ユーザーインターフェイス (UI) を定義するためにフォームの画面にコントロールを追加することによって設計されています。 *コントロール*は、情報の表示やユーザー入力の受け入れに使用されるフォーム上のコンポーネントです。 コントロールの詳細については、「 [Windows フォームコントロール](index.md)」を参照してください。
@@ -89,7 +89,6 @@ ms.locfileid: "69912626"
 ## <a name="see-also"></a>関連項目
 
 - [Windows フォーム コントロール](index.md)
-- [Windows フォームでのコントロールの配置](arranging-controls-on-windows-forms.md)
 - [方法: Windows フォームのコントロールのサイズを変更する](how-to-resize-controls-on-windows-forms.md)
 - [方法: Windows フォームコントロールによって表示されるテキストを設定する](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)

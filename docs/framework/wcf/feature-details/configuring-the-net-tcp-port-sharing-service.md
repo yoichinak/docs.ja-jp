@@ -2,12 +2,12 @@
 title: Net.TCP ポート共有サービスを構成する
 ms.date: 03/30/2017
 ms.assetid: b6dd81fa-68b7-4e1b-868e-88e5901b7ea0
-ms.openlocfilehash: c5dc80391ec5f655fadd31c59eef76015b9965d8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 70ebaeb8b41b0191e0352b5ef6a4b1913994100c
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949618"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988221"
 ---
 # <a name="configuring-the-nettcp-port-sharing-service"></a>Net.TCP ポート共有サービスを構成する
 Net.TCP トランスポートを使用する自己ホスト型サービスは、`ListenBacklog` や `MaxPendingAccepts` など、いくつかの高度な設定を制御できます。これらは、ネットワーク通信で使用される、ベースである TCP ソケットの動作をコンロトールします。 ただし、各ソケットに対するこれらの設定は、トランスポート バインディングでポート共有が無効化されている場合 (既定では有効) に、バインディング レベルでのみ適用されます。  
@@ -59,7 +59,7 @@ Net.TCP トランスポートを使用する自己ホスト型サービスは、
 > ユーザー アカウント コントロール (UAC) が有効化されている [!INCLUDE[wv](../../../../includes/wv-md.md)] システムでは、アカウントが管理者グループのメンバーであっても、ローカル ユーザーには昇格されたアクセス許可が必要です。 これらのユーザーが昇格せずにポート共有サービスを使用できるようにするには、ユーザーの sid (または、ユーザーがメンバーとなっているグループの sid) を smsvchost の > セクションに\<明示的に追加する必要があります。  
   
 > [!WARNING]
->  既定の SMSvcHost.exe.config ファイルは、カスタムの `etwProviderId` を指定することによって、SMSvcHost.exe のトレースの影響がサービス トレースに及ぶのを防ぎます。  
+> 既定の SMSvcHost.exe.config ファイルは、カスタムの `etwProviderId` を指定することによって、SMSvcHost.exe のトレースの影響がサービス トレースに及ぶのを防ぎます。  
   
 ## <a name="see-also"></a>関連項目
 

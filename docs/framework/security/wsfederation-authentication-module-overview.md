@@ -3,12 +3,12 @@ title: WSFederation 認証モジュールの概要
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: 0873e878fca3fe9723c23f78d647aa443f6d0152
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 9ade6b0d9e4aadb353ca148f868d548fbaacfbc3
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915512"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987698"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation 認証モジュールの概要
 Windows Identity Foundation (WIF) は、WS-Federated Authentication Module (WS-FAM) を通じて ASP.NET アプリケーションでのフェデレーション認証をサポートします。 このトピックは、フェデレーション認証の動作とその使用方法の理解に役立ちます。  
@@ -99,7 +99,7 @@ Windows Identity Foundation (WIF) は、WS-Federated Authentication Module (WS-F
  次の XML は、ASP.NET の証明書利用者 (RP) アプリケーションの構成を示します。 <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> および <xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection> 構成セクションは `<configSections>` 要素の下に追加されます。 SAM および WS-FAM は、`<system.webServer>`/`<modules>` 要素の下にある HTTP モジュールに追加されます。 最後に、WIF コンポーネントは `<system.identityModel>`/`<identityConfiguration>` および `<system.identityModel.services>`/`<federationConfiguration>` 要素の下に構成されます。 この構成では、既定のクッキー ハンドラーであり、`<cookieHandler>` 要素で指定されたクッキー ハンドラー型ではない、チャンクされたクッキー ハンドラーを指定します。  
   
 > [!WARNING]
->  次の例では、`requireHttps` 要素の `<wsFederation>` 属性と `requireSsl` 要素の `<cookieHandler>` 属性は `false` です。 これは、セキュリティ上の脅威になる可能性があります。 稼働環境では、これらの値は両方とも `true` に設定する必要があります。  
+> 次の例では、`requireHttps` 要素の `<wsFederation>` 属性と `requireSsl` 要素の `<cookieHandler>` 属性は `false` です。 これは、セキュリティ上の脅威になる可能性があります。 稼働環境では、これらの値は両方とも `true` に設定する必要があります。  
   
 ```xml  
 <configuration>  

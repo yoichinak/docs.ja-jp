@@ -2,12 +2,12 @@
 title: ルーティングの概要
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: cc9298c96a5d1dc60ae1f9982b21ce7a160aacbd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: eaf09c0d724521c3c69fde0e90ecd7cd5aadb253
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933969"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988666"
 ---
 # <a name="routing-introduction"></a>ルーティングの概要
 ルーティング サービスは、メッセージの内容を基にメッセージをルーティングできる、プラグ可能な汎用の SOAP 中継局を提供します。 ルーティング サービスを使用すると、サービスの集計、サービスのバージョン管理、優先度ルーティング、マルチキャスト ルーティングなどのシナリオを実装できる複雑なルーティング ロジックを作成できます。 また、ルーティング サービスは、バックアップ エンドポイントのリストを設定できるエラー処理機能も提供します。バックアップ エンドポイントは、プライマリ送信先エンドポイントへの送信時に障害が発生した場合に、メッセージの送信先になります。  
@@ -395,7 +395,7 @@ using (ServiceHost serviceHost =
  ルーティング サービスでの偽装には、ASP.NET 互換モードで ASP.NET の偽装を使用するか、偽装を許可するように構成された Windows 資格情報を使用する必要があります。 ASP.NET 互換モードの詳細については、「 [WCF Services と ASP.NET](wcf-services-and-aspnet.md)」を参照してください。  
   
 > [!WARNING]
->  WCF ルーティング サービスは、基本認証での偽装をサポートしません。  
+> WCF ルーティング サービスは、基本認証での偽装をサポートしません。  
   
  ルーティング サービスで ASP.NET の偽装を使用するには、サービス ホスティング環境で ASP.NET 互換モードを有効にします。 ルーティング サービスは既に ASP.NET 互換モードを許可するようにマークされているため、偽装が自動的に有効になります。 偽装は、ルーティング サービスとの ASP.NET 統合で唯一サポートされている用法です。  
   

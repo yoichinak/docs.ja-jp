@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: c66ca9356d1db157688349dfeea4270001513e0b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: a6bbc2fe4bf68b50153075a251d23deebda78de5
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949205"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988655"
 ---
 # <a name="serialization-and-deserialization"></a>シリアル化と逆シリアル化
 Windows Communication Foundation (WCF) には、新しいシリアル化エンジン<xref:System.Runtime.Serialization.DataContractSerializer>、が含まれています。 は<xref:System.Runtime.Serialization.DataContractSerializer> 、.NET Framework のオブジェクトと XML を双方向に変換します。 ここでは、シリアライザーのしくみについて説明します。  
@@ -22,7 +22,7 @@ Windows Communication Foundation (WCF) には、新しいシリアル化エン�
  また、WCF には、コンパニオンシリアライザー <xref:System.Runtime.Serialization.NetDataContractSerializer>であるも含まれています。 は<xref:System.Runtime.Serialization.NetDataContractSerializer> 、シリアル化さ<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>れ<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>たデータの一部として .NET Framework 型名も出力するため、とのシリアライザーに似ています。 このシリアライザーは、シリアル化と逆シリアル化の終了時に、同じ型を共有する場合に使用します。 <xref:System.Runtime.Serialization.DataContractSerializer> と <xref:System.Runtime.Serialization.NetDataContractSerializer> は、共通の基本クラスである <xref:System.Runtime.Serialization.XmlObjectSerializer>から派生します。  
   
 > [!WARNING]
->  <xref:System.Runtime.Serialization.DataContractSerializer> は、20 未満の 16 進数値と制御文字を含む文字列を XML エンティティとしてシリアル化します。 このため、WCF サービスにそのようなデータを送信するときに、WCF 以外のクライアントに問題が発生する可能性があります。  
+> <xref:System.Runtime.Serialization.DataContractSerializer> は、20 未満の 16 進数値と制御文字を含む文字列を XML エンティティとしてシリアル化します。 このため、WCF サービスにそのようなデータを送信するときに、WCF 以外のクライアントに問題が発生する可能性があります。  
   
 ## <a name="creating-a-datacontractserializer-instance"></a>DataContractSerializer インスタンスの作成  
  <xref:System.Runtime.Serialization.DataContractSerializer> のインスタンスの作成は重要な手順です。 インスタンスの作成後に、設定を変更することはできません。  
