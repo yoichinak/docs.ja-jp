@@ -8,65 +8,67 @@ helpviewer_keywords:
 - UserControl Test Container
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
-ms.openlocfilehash: 48531ab1ef3b30b6516e3f2e7b5858a8884cbfe8
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 1be79d52be3b5b84938d8548a8f101e965fa9dbb
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211704"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015776"
 ---
-# <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>方法: UserControl の実行時の動作をテストします。
+# <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>方法: UserControl の実行時の動作をテストする
 
-開発する際に、<xref:System.Windows.Forms.UserControl>実行時の動作をテストする必要があります。 別の Windows ベースのアプリケーション プロジェクトを作成し、テスト フォーム上にコントロールを配置することができますが、この手順は便利です。 速くて簡単方法は使用する、 **UserControl Test Container** Visual Studio で提供します。 このテスト コンテナーは、Windows コントロール ライブラリ プロジェクトから直接開始します。
+を開発<xref:System.Windows.Forms.UserControl>するときは、実行時の動作をテストする必要があります。 別個の Windows ベースのアプリケーションプロジェクトを作成し、テストフォームにコントロールを配置することはできますが、この手順は不便です。 Visual Studio によって提供される**UserControl テストコンテナー**を使用する方が、より高速で簡単な方法です。 このテストコンテナーは、Windows コントロールライブラリプロジェクトから直接開始します。
 
 > [!IMPORTANT]
-> テスト コンテナーを読み込む、<xref:System.Windows.Forms.UserControl>コントロールには、少なくとも 1 つのパブリック コンス トラクターが必要です。
+> テストコンテナーでを読み込む<xref:System.Windows.Forms.UserControl>には、コントロールに少なくとも1つのパブリックコンストラクターが必要です。
 
 > [!NOTE]
 > **UserControl Test Container**を使用して、Visual C++ のコントロールをテストすることはできません。
 
-## <a name="test-the-run-time-behavior-of-a-usercontrol"></a>UserControl の実行時の動作をテストします。
+## <a name="test-the-run-time-behavior-of-a-usercontrol"></a>UserControl の実行時の動作をテストする
 
-1. Visual Studio と呼ばれる Windows コントロール ライブラリ プロジェクトを作成**ファイルを開く**します。 詳細については、次を参照してください。 [Windows コントロール ライブラリ テンプレート](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100))します。
+1. Visual Studio で、Windows コントロールライブラリプロジェクトを作成し、 **TestContainerExample**という名前を指定します。
 
-2. **Windows フォーム デザイナー**、ドラッグ、<xref:System.Windows.Forms.Label>コントロールから、**ツールボックス**コントロールのデザイン サーフェイスにします。
+2. **Windows フォームデザイナー**で、コントロールを<xref:System.Windows.Forms.Label> **ツールボックス** からコントロールのデザイン画面にドラッグします。
 
-3. キーを押して**F5**プロジェクトをビルドして実行する、 **UserControl Test Container**します。 テスト コンテナーが表示されます、<xref:System.Windows.Forms.UserControl>で、**プレビュー**ウィンドウ。
+3. **F5**キーを押してプロジェクトをビルドし、 **UserControl テストコンテナー**を実行します。 <xref:System.Windows.Forms.UserControl> **プレビュー**ウィンドウに、テストコンテナーがと共に表示されます。
 
-4. 選択、<xref:System.Windows.Forms.Control.BackColor%2A>に表示されるプロパティ、<xref:System.Windows.Forms.PropertyGrid>コントロールの右側に、**プレビュー**ウィンドウ。 その値を変更`ControlDark`します。 コントロールが暗い色に変わることを確認します。 その他のプロパティ値を変更してみてくださいをコントロールへの影響を確認します。
+4. **プレビューウィンドウ**の右側にある<xref:System.Windows.Forms.PropertyGrid>コントロールに表示されるプロパティを選択します。<xref:System.Windows.Forms.Control.BackColor%2A> 値を**ControlDark**に変更します。 コントロールが濃い色に変化することを確認します。 他のプロパティ値を変更し、コントロールに対する影響を確認します。
 
-5. をクリックして、**ユーザー入力コントロールのドッキング**下のチェック ボックス、**プレビュー**ウィンドウ。 コントロールのサイズのウィンドウに入力することを確認します。 テスト コンテナーのサイズを変更し、ペイン コントロールのサイズをことを確認します。
+5. **プレビュー**ウィンドウの下にある **[Dock Fill User Control]** チェックボックスをクリックします。 ウィンドウに合わせてコントロールのサイズが変更されていることを確認します。 テストコンテナーのサイズを変更し、ウィンドウのサイズが変更されたことを確認します。
 
-6. テスト コンテナーを閉じます。
+6. テストコンテナーを閉じます。
 
-7. 別のユーザー コントロールを追加、**ファイルを開く**プロジェクト。 詳細については、「[方法: 既存の項目をプロジェクトに追加](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))します。
+7. **TestContainerExample**プロジェクトに別のユーザーコントロールを追加します。
 
-8. **Windows フォーム デザイナー**、ドラッグ、<xref:System.Windows.Forms.Button>コントロールから、**ツールボックス**コントロールのデザイン サーフェイスにします。
+8. **Windows フォームデザイナー**で、コントロールを<xref:System.Windows.Forms.Button> **ツールボックス** からコントロールのデザイン画面にドラッグします。
 
-9. F5 キーを押してプロジェクトをビルドし、テスト コンテナーを実行します。
+9. **F5**キーを押してプロジェクトをビルドし、テストコンテナーを実行します。
 
-10. をクリックして、**ユーザー コントロールの選択**<xref:System.Windows.Forms.ComboBox>を 2 つのユーザー コントロールを切り替えます。
+10. 2つのユーザーコントロールを切り替えるには、[**ユーザーの選択] コントロール**<xref:System.Windows.Forms.ComboBox>をクリックします。
 
-## <a name="test-user-controls-from-another-project"></a>別のプロジェクトからのテスト ユーザーのコントロール
+## <a name="test-user-controls-from-another-project"></a>別のプロジェクトからユーザーコントロールをテストする
 
-現在のプロジェクトのテスト コンテナーでは、他のプロジェクトからユーザー コントロールをテストできます。
+現在のプロジェクトのテストコンテナー内の他のプロジェクトからユーザーコントロールをテストできます。
 
-1. 呼ばれる Windows コントロール ライブラリ プロジェクトを作成**TestContainerExample2**します。 詳細については、次を参照してください。 [Windows コントロール ライブラリ テンプレート](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100))します。
+1. Visual Studio で、Windows コントロールライブラリプロジェクトを作成し、 **TestContainerExample2**という名前を指定します。
 
-2. **Windows フォーム デザイナー**、ドラッグ、<xref:System.Windows.Forms.RadioButton>コントロールから、**ツールボックス**コントロールのデザイン サーフェイスにします。
+2. **Windows フォームデザイナー**で、コントロールを<xref:System.Windows.Forms.RadioButton> **ツールボックス** からコントロールのデザイン画面にドラッグします。
 
-3. F5 キーを押してプロジェクトをビルドし、テスト コンテナーを実行します。 テスト コンテナーが表示されます、<xref:System.Windows.Forms.UserControl>で、**プレビュー**ウィンドウ。
+3. **F5**キーを押してプロジェクトをビルドし、テストコンテナーを実行します。 <xref:System.Windows.Forms.UserControl> **プレビュー**ウィンドウに、テストコンテナーがと共に表示されます。
 
-4. をクリックして、**ロード**ボタンをクリックします。
+4. **[読み込み]** ボタンをクリックします。
 
-5. **オープン** ダイアログ ボックスに移動**ファイルを開く**.dll で、前の手順で作成しました。 選択**ファイルを開く**.dll をクリックして、**オープン** ボタンをユーザー コントロールを読み込む
+5. **[開く]** ダイアログボックスで、前の手順で作成した**TestContainerExample**に移動します。 **TestContainerExample**を選択し、 **[開く]** ボタンをクリックしてユーザーコントロールを読み込みます。
 
-6. 使用して、**ユーザー コントロールの選択**<xref:System.Windows.Forms.ComboBox>から 2 つのユーザー コントロール間を切り替える、**ファイルを開く**プロジェクト。
+6. **TestContainerExample**プロジェクトから2つのユーザーコントロールを切り替えるには、 **[ユーザーの選択] コントロール**<xref:System.Windows.Forms.ComboBox>を使用します。
 
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.UserControl>
-- [方法: 複合コントロールを作成](how-to-author-composite-controls.md)
-- [チュートリアル: Visual Basic による複合コントロールの作成](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [チュートリアル: ビジュアルを含む複合コントロールの作成C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
-- [ユーザー コントロール デザイナー](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/183c3hth(v=vs.100))
+- [方法: 複合コントロールの作成](how-to-author-composite-controls.md)
+- [チュートリアル: 複合コントロールの作成](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [ユーザーコントロールデザイナー](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/183c3hth(v=vs.100))

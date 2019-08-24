@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 8b33ac800144577ba5f8610afdc50a1ba56eec0f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 948d147a0990961a8706298f1112f85882e30119
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937703"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015613"
 ---
 # <a name="globalization-for-wpf"></a>WPF のグローバリゼーション
 このトピックでは、グローバル市場向けのアプリケーションを作成[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]するときに注意する必要がある問題について説明します。 グローバリゼーションプログラミング要素は、ので[!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] `System.Globalization`定義されています。
@@ -143,7 +143,7 @@ ms.locfileid: "69937703"
 
 <a name="mui"></a>
 ### <a name="multilingual-user-interface"></a>多言語ユーザー インターフェイス
- 多言語ユーザーインターフェイス (MUI) は[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 、ある言語[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]から別の言語への切り替えをサポートしています。 アプリケーション[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]は、アセンブリモデルを使用して、MUI をサポートします。 1 つのアプリケーションに言語に依存しないアセンブリと言語に依存するサテライト リソース アセンブリが含まれます。 エントリ ポイントはメイン アセンブリのマネージド .EXE です。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]リソースローダーは、 [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]リソースマネージャーを利用してリソースの参照とフォールバックをサポートします。 多言語サテライト アセンブリは同じメイン アセンブリと連動します。 読み込まれるリソースアセンブリは、現在<xref:System.Globalization.CultureInfo.CurrentUICulture%2A>のスレッドのによって異なります。
+ 多言語ユーザーインターフェイス (MUI) は、ある言語から[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]別の言語に切り替えるための Microsoft サポートです。 アプリケーション[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]は、アセンブリモデルを使用して、MUI をサポートします。 1 つのアプリケーションに言語に依存しないアセンブリと言語に依存するサテライト リソース アセンブリが含まれます。 エントリ ポイントはメイン アセンブリのマネージド .EXE です。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]リソースローダーは、 [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]リソースマネージャーを利用してリソースの参照とフォールバックをサポートします。 多言語サテライト アセンブリは同じメイン アセンブリと連動します。 読み込まれるリソースアセンブリは、現在<xref:System.Globalization.CultureInfo.CurrentUICulture%2A>のスレッドのによって異なります。
 
 <a name="localizable_ui"></a>
 ### <a name="localizable-user-interface"></a>ローカライズ可能なユーザー インターフェイス

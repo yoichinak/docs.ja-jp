@@ -8,19 +8,23 @@ helpviewer_keywords:
 - inheritance [Windows Forms], Windows Forms custom controls
 - custom controls [Windows Forms], inheritance
 ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
-ms.openlocfilehash: 9ac18fae126425126712dafeb80f05663dfc2ebc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 0571bd6b169b94b1626bffb0d0793bbb22a93ba0
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966587"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015864"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>方法: 既存の Windows フォーム コントロールから継承する
+
 既存のコントロールの機能を拡張する場合は、継承によって既存のコントロールから派生したコントロールを作成できます。 既存のコントロールから継承すると、そのコントロールのすべての機能およびビジュアル プロパティが引き継がれます。 たとえば、から<xref:System.Windows.Forms.Button>継承されたコントロールを作成した場合、新しいコントロールは標準<xref:System.Windows.Forms.Button>コントロールとまったく同じように見え、動作します。 その後で、カスタム メソッドやカスタム プロパティの実装によって、新しいコントロールの機能を拡張または変更できます。 一部のコントロールでは、 <xref:System.Windows.Forms.Control.OnPaint%2A>メソッドをオーバーライドすることによって、継承されたコントロールの外観を変更することもできます。
 
 ## <a name="to-create-an-inherited-control"></a>継承したコントロールを作成するには
 
-1. 新しい **Windows フォーム アプリケーション プロジェクト**を作成します。
+1. Visual Studio で、新しい**Windows フォームアプリケーション**プロジェクトを作成します。
 
 2. **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。
 
@@ -30,9 +34,10 @@ ms.locfileid: "69966587"
 
      新しいカスタム コントロールがプロジェクトに追加されます。
 
-4. Visual Basic を使用している場合は、**ソリューション エクスプローラー**の上部にある **[すべてのファイルを表示]** をクリックします。 CustomControl1.vb を展開し、コード エディターで CustomControl1.Designer.vb を開きます。
+4. 以下を使用する場合:
 
-5. C# を使用している場合は、コード エディターで CustomControl1.cs を開きます。
+   - Visual Basic、**ソリューションエクスプローラー**の上部にある **[すべてのファイルを表示]** をクリックします。 CustomControl1.vb を展開し、コード エディターで CustomControl1.Designer.vb を開きます。
+   - C#で、コードエディターで CustomControl1.cs を開きます。
 
 6. から<xref:System.Windows.Forms.Control>継承するクラス宣言を探します。
 
@@ -86,6 +91,5 @@ ms.locfileid: "69966587"
 - [方法: コントロールクラスから継承する](how-to-inherit-from-the-control-class.md)
 - [方法: UserControl クラスを継承する](how-to-inherit-from-the-usercontrol-class.md)
 - [方法: Windows フォームの作成者コントロール](how-to-author-controls-for-windows-forms.md)
-- [Visual Basic での継承されたイベント ハンドラーのトラブルシューティング](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
-- [チュートリアル: Visual Basic を使用した Windows フォームコントロールからの継承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [チュートリアル: ビジュアルを使用した Windows フォームコントロールからの継承C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [Visual Basic での継承されたイベント ハンドラーのトラブルシューティング](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+- [チュートリアル: Windows フォームコントロールからの継承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

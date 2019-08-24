@@ -10,18 +10,18 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: dfc1f023e9d1adce73a28f475f3796b4f7231ff8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f7d69f299b0b7638d6f8052e6aa0e77fac39c8e4
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960331"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016100"
 ---
 # <a name="packaging-fonts-with-applications"></a>アプリケーションでのフォントのパッケージング
 このトピックでは、 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーションでフォントをパッケージ化する方法の概要について説明します。  
   
 > [!NOTE]
-> 多くの種類のソフトウェアと同様に、フォント ファイルは、販売されるのではなくライセンスされます。 フォントの使用を制御するライセンスはベンダーによって異なりますが、一般に、アプリケーションや Windows で[!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)]フォントをカバーするライセンスも含め、ほとんどのライセンスでは、フォントをアプリケーションに埋め込むことはできません。分布. したがって、開発者としては、フォントをアプリケーション内に埋め込む場合や別の方法でフォントを再頒布する場合、それらフォントに必要なライセンス権限を取得する責任があります。  
+> 多くの種類のソフトウェアと同様に、フォント ファイルは、販売されるのではなくライセンスされます。 フォントの使用を管理するライセンスはベンダーによって異なりますが、Microsoft がアプリケーションや Windows で提供しているフォントをカバーするライセンスも含めて、ほとんどのライセンスでは、フォントをアプリケーションに埋め込んだり、別の方法で再頒布したりすることはできません。 したがって、開発者としては、フォントをアプリケーション内に埋め込む場合や別の方法でフォントを再頒布する場合、それらフォントに必要なライセンス権限を取得する責任があります。  
 
 <a name="introduction_to_packaging_fonts"></a>   
 ## <a name="introduction-to-packaging-fonts"></a>フォントのパッケージングの概要  

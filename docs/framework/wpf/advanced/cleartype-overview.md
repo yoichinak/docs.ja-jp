@@ -5,19 +5,19 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: 11019d564e7e658b745aec4254ad9a0c582b8416
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dbef816a995d9f4909a887f017da29bab6fc3702
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964927"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015648"
 ---
 # <a name="cleartype-overview"></a>ClearType の概要
 このトピックでは、 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]で検出された Microsoft の ClearType テクノロジの概要について説明します。  
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>テクノロジの概要  
- ClearType は、によって[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]開発されたソフトウェアテクノロジで、ラップトップの画面、Pocket PC の画面、フラットパネルモニターなど、既存の lcd (液晶ディスプレイ) でのテキストの読みやすさを向上させます。  ClearType は、LCD 画面のすべてのピクセルで個々の垂直色のストライプ要素にアクセスすることによって機能します。 ClearType より前は、コンピューターが表示できる最小の詳細レベルは1ピクセルですが、LCD モニターで ClearType が実行されているため、テキストの特徴をピクセルの幅で表示できるようになりました。 解像度が上がるとテキスト表示の微細部の鮮明度が高くなるため、長時間にわたって読んでも苦になりません。  
+ ClearType は、Microsoft によって開発されたソフトウェアテクノロジで、ラップトップの画面、Pocket PC の画面、フラットパネルモニターなど、既存の Lcd (液晶ディスプレイ) でのテキストの読みやすさを向上させます。  ClearType は、LCD 画面のすべてのピクセルで個々の垂直色のストライプ要素にアクセスすることによって機能します。 ClearType より前は、コンピューターが表示できる最小の詳細レベルは1ピクセルですが、LCD モニターで ClearType が実行されているため、テキストの特徴をピクセルの幅で表示できるようになりました。 解像度が上がるとテキスト表示の微細部の鮮明度が高くなるため、長時間にわたって読んでも苦になりません。  
   
  で[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]使用できる cleartype は、Microsoft Windows グラフィックスデバイスインターフェイス (GDI) で見つかったバージョンに対していくつかの機能強化が施された最新世代の cleartype です。  
   

@@ -5,22 +5,22 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: ed1d0e423a3cdf77a242ec3214720f1466f65897
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: df87f00e6e03de67c3fb1adc28472c96f4a47ef4
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039505"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015633"
 ---
-# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>方法: Windows フォームに単純バインド コントロールを作成する
+# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>方法: Windows フォームに単純バインドコントロールを作成する
 
 *単純なバインド*では、データセットテーブルの列値など、1つのデータ要素をコントロールに表示できます。 コントロールの任意のプロパティをデータ値に単純にバインドできます。
 
-### <a name="to-simple-bind-a-control"></a>コントロールを単純にバインドするには
+## <a name="to-simple-bind-a-control"></a>コントロールを単純にバインドするには
 
 1. データ ソースに接続します。 詳細については、「[データソースへの接続](../data/adonet/connecting-to-a-data-source.md)」を参照してください。
 
-2. フォームでコントロールを選択し、 **[プロパティ]** ウィンドウを表示します。
+2. Visual Studio でフォーム上のコントロールを選択し、 **[プロパティ]** ウィンドウを表示します。
 
 3. **[(連結)]** プロパティを展開します。
 

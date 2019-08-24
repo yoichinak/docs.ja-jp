@@ -6,19 +6,19 @@ helpviewer_keywords:
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-ms.openlocfilehash: 0804b9824b84a32bdd79c763031a3de4ffa54099
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 45a6ae68102204ad8506027065c2676e02fdd7a3
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039876"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015920"
 ---
-# <a name="how-to-author-controls-for-windows-forms"></a>方法: Windows フォームのコントロールを作成する
+# <a name="how-to-author-controls-for-windows-forms"></a>方法: Windows フォームの作成者コントロール
 
 コントロールは、ユーザーとプログラムの間のグラフィカルなリンクを表します。 コントロールは、データの提供または処理、ユーザー入力の受け付け、イベントへの応答、ユーザーとアプリケーションを接続する他の任意の数の関数の実行を行うことができます。 コントロールは、基本的にグラフィカル インターフェイスを持つコンポーネントであるため、ユーザーとの対話だけでなく、コンポーネントが実行するあらゆる機能を果たします。 コントロールは特定の目的に使用するために作成します。コントロールの作成は、まったく別のプログラミング タスクです。 このことを念頭に、次の手順では、コントロールの作成手順の概要を示します。 個々の手順のリンクで追加情報を提供します。
-
-> [!NOTE]
-> Web フォームで使用するカスタム コントロールを作成する場合は、「[カスタム ASP.NET サーバー コントロールの開発](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100))」を参照してください。
 
 ## <a name="to-author-a-control"></a>コントロールを作成するには
 
@@ -42,7 +42,7 @@ ms.locfileid: "69039876"
 
 6. コントロールがから<xref:System.Windows.Forms.UserControl>継承されている場合は、コントロールプロジェクトをビルドし、 **UserControl テストコンテナー**で実行することによって、実行時の動作をテストできます。 詳細については、「[方法 :UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)の実行時の動作をテストします。
 
-7. Windows アプリケーションなどの新しいプロジェクトを作成してコンテナーに配置することで、コントロールをテストしてデバッグすることができます。 このプロセスは、チュートリアルの[一部として示されています。Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)による複合コントロールの作成。
+7. Windows アプリケーションなどの新しいプロジェクトを作成してコンテナーに配置することで、コントロールをテストしてデバッグすることができます。 このプロセスは、チュートリアルの[一部として示されています。複合コントロール](walkthrough-authoring-a-composite-control-with-visual-csharp.md)を作成する。
 
 8. 各機能を追加するときは、テスト プロジェクトに機能を追加して新しい機能を実行します。
 
@@ -52,8 +52,6 @@ ms.locfileid: "69039876"
 
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル: Visual Basic による複合コントロールの作成](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [チュートリアル: Visual Basic を使用した Windows フォームコントロールからの継承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
 - [方法: UserControl クラスを継承する](how-to-inherit-from-the-usercontrol-class.md)
 - [方法: コントロールクラスから継承する](how-to-inherit-from-the-control-class.md)
 - [方法: 既存の Windows フォームコントロールから継承する](how-to-inherit-from-existing-windows-forms-controls.md)

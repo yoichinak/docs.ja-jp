@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 7c83cfa22770695861b07e3bff29a38fcd125dd2
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: b4ae0d03c0207413d826e62de1d157f938b4d775
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545237"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016125"
 ---
 # <a name="typography-in-wpf"></a>WPF のタイポグラフィ
 このトピックでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の主要な文字体裁の機能について説明します。 これらの機能には、テキストレンダリングの品質とパフォーマンスの向上、OpenType 文字体裁のサポート、強化されたインターナショナルテキスト、フォントサポートの強化、および新しいテキストアプリケーションプログラミングインターフェイス (Api) が含まれます。  
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>テキストに関する品質とパフォーマンスの向上  
- の[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]テキストは Microsoft ClearType を使用してレンダリングされます。これにより、テキストの明瞭さと読みやすさが向上します。 ClearType は、によって[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]開発されたソフトウェアテクノロジで、ラップトップの画面、Pocket PC の画面、フラットパネルモニターなど、既存の lcd (液晶ディスプレイ) でのテキストの読みやすさを向上させます。 ClearType では、ピクセルレンダリングが使用されます。これにより、ピクセルの小数部に文字を配置することで、実際の図形に対する忠実度の高いテキストを表示できます。 解像度が上がるとテキスト表示の微細部の鮮明度が高くなるため、長時間にわたって読んでも苦になりません。 で[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]の ClearType のもう1つの改良点は、y 方向のアンチエイリアシングです。これにより、テキスト文字での浅い曲線の上部および下部を滑らかにすることができます。 ClearType 機能の詳細については、「 [cleartype の概要](cleartype-overview.md)」を参照してください。  
+ の[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]テキストは Microsoft ClearType を使用してレンダリングされます。これにより、テキストの明瞭さと読みやすさが向上します。 ClearType は、Microsoft によって開発されたソフトウェアテクノロジで、ラップトップの画面、Pocket PC の画面、フラットパネルモニターなど、既存の Lcd (液晶ディスプレイ) でのテキストの読みやすさを向上させます。 ClearType では、ピクセルレンダリングが使用されます。これにより、ピクセルの小数部に文字を配置することで、実際の図形に対する忠実度の高いテキストを表示できます。 解像度が上がるとテキスト表示の微細部の鮮明度が高くなるため、長時間にわたって読んでも苦になりません。 で[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]の ClearType のもう1つの改良点は、y 方向のアンチエイリアシングです。これにより、テキスト文字での浅い曲線の上部および下部を滑らかにすることができます。 ClearType 機能の詳細については、「 [cleartype の概要](cleartype-overview.md)」を参照してください。  
   
  ![ClearType y 方向アンチエイリアシングを含むテキスト](./media/typography-in-wpf/text-y-direction-antialiasing.gif)  
 ClearType の y 方向アンチエイリアシングを適用したテキスト  
@@ -29,7 +29,7 @@ ClearType の y 方向アンチエイリアシングを適用したテキスト
   
 <a name="Rich_Typography"></a>   
 ## <a name="rich-typography"></a>多彩な文字体裁  
- OpenType フォント形式は、 [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]フォント形式の拡張子です。 OpenType フォント形式は、および Adobe に[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]よって共同で開発され、高度な文字体裁機能が豊富に用意されています。 オブジェクト<xref:System.Windows.Documents.Typography>は、スタイルの代替や巻きひげなど、OpenType フォントの高度な機能の多くを公開します。 Windows SDK には、Pericles や Pescadero フォントなどの豊富な機能を使用して設計されたサンプルの OpenType フォントのセットが用意されています。 詳細については、「[OpenType フォント パックのサンプル](sample-opentype-font-pack.md)」をご覧ください。  
+ OpenType フォント形式は、 [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]フォント形式の拡張子です。 OpenType フォント形式は、Microsoft と Adobe が共同で開発したものであり、高度な文字体裁機能が豊富に用意されています。 オブジェクト<xref:System.Windows.Documents.Typography>は、スタイルの代替や巻きひげなど、OpenType フォントの高度な機能の多くを公開します。 Windows SDK には、Pericles や Pescadero フォントなどの豊富な機能を使用して設計されたサンプルの OpenType フォントのセットが用意されています。 詳細については、「[OpenType フォント パックのサンプル](sample-opentype-font-pack.md)」をご覧ください。  
   
  Pericles OpenType フォントには、グリフの標準セットに対してスタイルの代替を提供する追加のグリフが含まれています。 次のテキストでは、スタイル代替グリフが表示されています。  
   

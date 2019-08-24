@@ -7,23 +7,23 @@ helpviewer_keywords:
 - user controls [Windows Forms], inheriting from
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
-ms.openlocfilehash: 7b0ee8efa62175e2ced2a810ca6dd76e8adc103b
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 08cb07ceebf08b3096415f9b7370e2d955152cb6
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039897"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015934"
 ---
-# <a name="how-to-author-composite-controls"></a>方法: 複合コントロールを作成する
+# <a name="how-to-author-composite-controls"></a>方法: 複合コントロールの作成
 
 複合コントロールはさまざまな方法で使用できます。 Windows デスクトップ アプリケーション プロジェクトの一部として複合コントロールを作成し、プロジェクト内のフォーム上でのみ使用することができます。 または、Windows コントロール ライブラリ プロジェクトで複合コントロールを作成し、プロジェクトをアセンブリにコンパイルして、他のプロジェクトで使用することもできます。 また、それらを継承し、ビジュアル継承を使用して、特殊な目的ですばやくカスタマイズすることもできます。
 
-> [!NOTE]
-> Web フォームで使用する複合コントロールを作成する場合は、「[カスタム ASP.NET サーバー コントロールの開発](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100))」を参照してください。
-
 ## <a name="to-author-a-composite-control"></a>複合コントロールを作成するには
 
-1. Visual Studio で、という名前`DemoControlHost`の新しい**Windows アプリケーション**プロジェクトを作成します。
+1. Visual Studio で、新しい**Windows アプリケーション**プロジェクトを作成し、 **democontrolhost**という名前を指定します。
 
 2. **[プロジェクト]** メニューの **[ユーザー コントロールの追加]** をクリックします。
 
@@ -79,10 +79,8 @@ ms.locfileid: "69039897"
 
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル: Visual Basic による複合コントロールの作成](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [チュートリアル: ビジュアルを使用した複合コントロールの作成C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
-- [チュートリアル: Visual Basic を使用した Windows フォームコントロールからの継承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [チュートリアル: ビジュアルを使用した Windows フォームコントロールからの継承C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [チュートリアル: 複合コントロールの作成](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [チュートリアル: Windows フォームコントロールからの継承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
 - [コントロールの種類に関するアドバイス](control-type-recommendations.md)
 - [方法: Windows フォームの作成者コントロール](how-to-author-controls-for-windows-forms.md)
 - [さまざまなカスタム コントロール](varieties-of-custom-controls.md)
