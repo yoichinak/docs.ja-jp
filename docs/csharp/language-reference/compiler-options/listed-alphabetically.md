@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: 1e7b19999ab8536e9a1b05c1ad5d548c8da2cbd6
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 37eedc6d41867a6d5e6a49b8df5040c657bb2689
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58037701"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602758"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>アルファベット順の C# コンパイラ オプションの一覧
 
@@ -77,7 +77,7 @@ ms.locfileid: "58037701"
 |-ruleset:\<file>|特定の診断を無効にするルールセット ファイルを指定します。|
 |[-subsystemversion](subsystemversion-compiler-option.md)|実行可能ファイルが使用できるサブシステムの最低限のバージョンを指定します。|
 |[-target](target-compiler-option.md)|6 つのオプション ([-target:appcontainerexe](target-appcontainerexe-compiler-option.md)、[-target:exe](target-exe-compiler-option.md)、[-target:library](target-library-compiler-option.md)、[-target:module](target-module-compiler-option.md)、[-target:winexe](target-winexe-compiler-option.md)、[-target:winmdobj](target-winmdobj-compiler-option.md)) のいずれかを使用して、出力ファイルの形式を指定します。|
-|[/unsafe](unsafe-compiler-option.md)|[アンセーフ](../../../csharp/language-reference/keywords/unsafe.md) コードを許可します。|
+|[/unsafe](unsafe-compiler-option.md)|[アンセーフ](../keywords/unsafe.md) コードを許可します。|
 |[-utf8output](utf8output-compiler-option.md)|UTF-8 エンコードでコンパイラのメッセージを出力します。|
 |-version|コンパイラのバージョン番号を表示して終了します。|
 |[/warn](warn-compiler-option.md)|警告レベル (0 ～ 4) を設定します。|

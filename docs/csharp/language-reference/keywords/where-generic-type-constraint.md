@@ -7,12 +7,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: bccc22f5362b22540dadf08e6b21a07cbc578327
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 1608cd7b888a67af3ccb98b16323e74a9c5ad4a9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433869"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608402"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (ジェネリック型制約) (C# リファレンス)
 
@@ -37,7 +37,7 @@ ms.locfileid: "68433869"
 
 [!code-csharp[using the unmanaged constraint](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#4)]
 
-`where` 句には、コンストラクター制約 `new()` を含めることもできます。 その制約では、`new` 演算子を使用して型パラメーターのインスタンスを作成できるようにします。 [new() 制約](new-constraint.md)に基づいて、コンパイラは、指定されている型引数には、アクセス可能なパラメーターなしの (または既定の) コンストラクターが必要であることを認識します。 次に例を示します。
+`where` 句には、コンストラクター制約 `new()` を含めることもできます。 その制約では、`new` 演算子を使用して型パラメーターのインスタンスを作成できるようにします。 [new() 制約](new-constraint.md)に基づいて、コンパイラは、指定されている型引数には、アクセス可能なパラメーターなしの (または既定の) コンストラクターが必要であることを認識します。 例:
 
 [!code-csharp[using the new constraint](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#5)]
 
@@ -55,9 +55,9 @@ ms.locfileid: "68433869"
 
 [!code-csharp[where constraints with generic methods](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#8)]
 
-汎用デリゲートについては、「[汎用デリゲート](../../../csharp/programming-guide/generics/generic-delegates.md)」を参照してください。
+汎用デリゲートについては、「[汎用デリゲート](../../programming-guide/generics/generic-delegates.md)」を参照してください。
 
-制約の構文と使用方法の詳細については、「[型パラメーターの制約](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)」を参照してください。
+制約の構文と使用方法の詳細については、「[型パラメーターの制約](../../programming-guide/generics/constraints-on-type-parameters.md)」を参照してください。
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
@@ -65,8 +65,8 @@ ms.locfileid: "68433869"
 
 ## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [ジェネリックの概要](../../../csharp/programming-guide/generics/index.md)
-- [new 制約](../../../csharp/language-reference/keywords/new-constraint.md)
-- [型パラメーターの制約](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)
+- [C# リファレンス](../index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [ジェネリックの概要](../../programming-guide/generics/index.md)
+- [new 制約](./new-constraint.md)
+- [型パラメーターの制約](../../programming-guide/generics/constraints-on-type-parameters.md)

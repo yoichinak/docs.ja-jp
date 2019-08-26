@@ -2,12 +2,12 @@
 title: オブジェクト指向プログラミング (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 8bf02cbfca30d6dfc29c4e5e6c30a5013931e71b
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 50b38833582ebe46836ccfab4e1ebeb98b53a96e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398063"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659877"
 ---
 # <a name="object-oriented-programming-c"></a>オブジェクト指向プログラミング (C#)
 
@@ -49,7 +49,7 @@ C# は、カプセル化、継承、ポリモーフィズムなど、オブジ�
 
   - [メンバーのオーバーライド](#Overriding)
 
-- [インターフェイス](#Interfaces)
+- "[インターフェイス](#Interfaces)"
 
 - [ジェネリック](#Generics)
 
@@ -77,11 +77,11 @@ struct SampleStruct
 }
 ```
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 
-- [class](../../../csharp/language-reference/keywords/class.md)
+- [class](../../language-reference/keywords/class.md)
 
-- [struct](../../../csharp/language-reference/keywords/struct.md)
+- [struct](../../language-reference/keywords/struct.md)
 
 ### <a name="Members"></a> クラス メンバー
 
@@ -131,11 +131,11 @@ class SampleClass
 
 ほとんどのプロパティには、プロパティ値の設定と取得を行うための両方のメソッドまたはプロシージャがあります。 ただし、読み取り専用または書き込み専用のプロパティを作成して、プロパティの変更や読み取りを制限することもできます。 C# では、`get` プロパティ メソッドまたは `set` プロパティ メソッドを省略します。 ただし、自動実装プロパティを読み取り専用または書き込み専用にすることはできません。
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 
-- [get](../../../csharp/language-reference/keywords/get.md)
+- [get](../../language-reference/keywords/get.md)
 
-- [set](../../../csharp/language-reference/keywords/set.md)
+- [set](../../language-reference/keywords/set.md)
 
 #### <a name="Methods"></a> メソッド
 
@@ -164,11 +164,11 @@ public int sampleMethod(int sampleParam) {}
 
 ほとんどの場合、メソッドはクラス定義内で宣言します。 ただし、C# では、既存のクラスの実際の定義の外部にメソッドを追加できる "*拡張メソッド*" がサポートされています。
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 
-- [メソッド](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [メソッド](../classes-and-structs/methods.md)
 
-- [拡張メソッド](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+- [拡張メソッド](../classes-and-structs/extension-methods.md)
 
 #### <a name="Constructors"></a> コンストラクター
 
@@ -186,9 +186,9 @@ public class SampleClass
 }
 ```
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 
-「[コンストラクター](../../../csharp/programming-guide/classes-and-structs/constructors.md)」。
+「[コンストラクター](../classes-and-structs/constructors.md)」。
 
 #### <a name="Finalizers"></a> ファイナライザー
 
@@ -200,7 +200,7 @@ public class SampleClass
 
 クラスやオブジェクトは、何か重要なことが起こった場合に、イベントを使用して他のクラスまたはオブジェクトに通知を送ります。 イベントを送信する (発生させる) クラスは "*パブリッシャー*" と呼ばれ、イベントを受信する (処理する) クラスは "*サブスクライバー*" と呼ばれます。 イベント、およびイベントの発生と処理の詳細については、「[イベント](../../../standard/events/index.md)」をご覧ください。
 
-- クラスでイベントを宣言するには、[event](../../../csharp/language-reference/keywords/event.md) キーワードを使います。
+- クラスでイベントを宣言するには、[event](../../language-reference/keywords/event.md) キーワードを使います。
 
 - イベントを発生させるには、イベント デリゲートを呼び出します。
 
@@ -234,14 +234,14 @@ Container.Nested nestedInstance = new Container.Nested()
 
 |C# の修飾子|定義|
 |------------------|----------------|
-|[public](../../../csharp/language-reference/keywords/public.md)|この型またはメンバーには、同じアセンブリ内の他のコードや、そのアセンブリを参照する別のアセンブリ内の任意のコードからアクセスできます。|
-|[private](../../../csharp/language-reference/keywords/private.md)|この型またはメンバーには、同じクラスのコードのみがアクセスできます。|
-|[protected](../../../csharp/language-reference/keywords/protected.md)|この型またはメンバーには、同じクラスまたは派生クラスのコードのみがアクセスできます。|
-|[internal](../../../csharp/language-reference/keywords/internal.md)|この型またはメンバーには、同じアセンブリ内の任意のコードからアクセスできますが、別のアセンブリからはアクセスできません。|
-|[protected internal](../../../csharp/language-reference/keywords/protected-internal.md)|この型またはメンバーには、同じアセンブリ内の任意のコード、または別のアセンブリ内の任意の派生クラスからアクセスできます。|
-|[private protected](../../../csharp/language-reference/keywords/private-protected.md)|この型またはメンバーには、基底クラス アセンブリ内の同じクラスまたは派生クラスのコードがアクセスできます。|
+|[public](../../language-reference/keywords/public.md)|この型またはメンバーには、同じアセンブリ内の他のコードや、そのアセンブリを参照する別のアセンブリ内の任意のコードからアクセスできます。|
+|[private](../../language-reference/keywords/private.md)|この型またはメンバーには、同じクラスのコードのみがアクセスできます。|
+|[protected](../../language-reference/keywords/protected.md)|この型またはメンバーには、同じクラスまたは派生クラスのコードのみがアクセスできます。|
+|[internal](../../language-reference/keywords/internal.md)|この型またはメンバーには、同じアセンブリ内の任意のコードからアクセスできますが、別のアセンブリからはアクセスできません。|
+|[protected internal](../../language-reference/keywords/protected-internal.md)|この型またはメンバーには、同じアセンブリ内の任意のコード、または別のアセンブリ内の任意の派生クラスからアクセスできます。|
+|[private protected](../../language-reference/keywords/private-protected.md)|この型またはメンバーには、基底クラス アセンブリ内の同じクラスまたは派生クラスのコードがアクセスできます。|
 
-詳細については、「[アクセス修飾子](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)」を参照してください。
+詳細については、「[アクセス修飾子](../classes-and-structs/access-modifiers.md)」を参照してください。
 
 ### <a name="InstantiatingClasses"></a> クラスのインスタンス化
 
@@ -268,11 +268,11 @@ SampleClass sampleObject = new SampleClass
     { FirstProperty = "A", SecondProperty = "B" };
 ```
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 
-- [new 演算子](../../../csharp/language-reference/operators/new-operator.md)
+- [new 演算子](../../language-reference/operators/new-operator.md)
 
-- [オブジェクト初期化子とコレクション初期化子](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [オブジェクト初期化子とコレクション初期化子](../classes-and-structs/object-and-collection-initializers.md)
 
 ### <a name="Static"></a> 静的クラスとメンバー
 
@@ -295,7 +295,7 @@ Console.WriteLine(SampleClass.SampleString);
 
 C# の静的クラスには静的メンバーだけがあり、インスタンス化することはできません。 また、静的メンバーから、非静的のプロパティ、フィールド、またはメソッドにアクセスすることもできません。
 
-詳しくは、「[static](../../../csharp/language-reference/keywords/static.md)」をご覧ください。
+詳しくは、「[static](../../language-reference/keywords/static.md)」をご覧ください。
 
 ### <a name="AnonymousTypes"></a> 匿名型
 
@@ -309,7 +309,7 @@ var sampleObject =
     new { FirstProperty = "A", SecondProperty = "B" };
 ```
 
-詳細については次を参照してください:[匿名型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。
+詳細については、次を参照してください。[匿名型](../classes-and-structs/anonymous-types.md)。
 
 ## <a name="Inheritance"></a> 継承
 
@@ -338,11 +338,11 @@ public sealed class A { }
 public abstract class B { }
 ```
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 
-- [sealed](../../../csharp/language-reference/keywords/sealed.md)
+- [sealed](../../language-reference/keywords/sealed.md)
 
-- [abstract](../../../csharp/language-reference/keywords/abstract.md)
+- [abstract](../../language-reference/keywords/abstract.md)
 
 ### <a name="Overriding"></a> メンバーのオーバーライド
 
@@ -352,10 +352,10 @@ public abstract class B { }
 
 |C# の修飾子|定義|
 |------------------|----------------|
-|[virtual](../../../csharp/language-reference/keywords/virtual.md)|派生クラスでのクラス メンバーのオーバーライドを許可します。|
-|[override](../../../csharp/language-reference/keywords/override.md)|基底クラスで定義されている仮想メンバー (オーバーライドできるメンバー) をオーバーライドします。|
-|[abstract](../../../csharp/language-reference/keywords/abstract.md)|派生クラスでのクラス メンバーのオーバーライドを必須にします。|
-|[new 修飾子](../../../csharp/language-reference/keywords/new-modifier.md)|基底クラスから継承されたメンバーを隠ぺいします。|
+|[virtual](../../language-reference/keywords/virtual.md)|派生クラスでのクラス メンバーのオーバーライドを許可します。|
+|[override](../../language-reference/keywords/override.md)|基底クラスで定義されている仮想メンバー (オーバーライドできるメンバー) をオーバーライドします。|
+|[abstract](../../language-reference/keywords/abstract.md)|派生クラスでのクラス メンバーのオーバーライドを必須にします。|
+|[new 修飾子](../../language-reference/keywords/new-modifier.md)|基底クラスから継承されたメンバーを隠ぺいします。|
 
 ## <a name="Interfaces"></a> インターフェイス
 
@@ -382,11 +382,11 @@ class SampleClass : ISampleInterface
 }
 ```
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 
-[インターフェイス](../../../csharp/programming-guide/interfaces/index.md)
+"[インターフェイス](../interfaces/index.md)"
 
-[interface](../../../csharp/language-reference/keywords/interface.md)
+[interface](../../language-reference/keywords/interface.md)
 
 ## <a name="Generics"></a> ジェネリック
 
@@ -408,11 +408,11 @@ SampleGeneric<string> sampleObject = new SampleGeneric<string>();
 sampleObject.Field = "Sample string";
 ```
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 
-- [ジェネリック](~/docs/standard/generics/index.md)
+- [ジェネリック](../../../standard/generics/index.md)
 
-- [ジェネリック](../../../csharp/programming-guide/generics/index.md)
+- [ジェネリック](../generics/index.md)
 
 ## <a name="Delegates"></a> デリゲート
 
@@ -446,12 +446,12 @@ class SampleClass
 }
 ```
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 
-- [デリゲート](../../../csharp/programming-guide/delegates/index.md)
+- [デリゲート](../delegates/index.md)
 
-- [delegate](../../../csharp/language-reference/keywords/delegate.md)
+- [delegate](../../language-reference/keywords/delegate.md)
 
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [C# プログラミング ガイド](../index.md)

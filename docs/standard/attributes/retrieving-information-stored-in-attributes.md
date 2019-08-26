@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6939c215633be10e487f9cd5bd25856c0c611921
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 298ac8eae0a8b125ddf5f1ff35658f426f6b10aa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623666"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968581"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>属性に格納されている情報の取得
 カスタム属性の取得は簡単なプロセスです。 まず、取得する属性のインスタンスを宣言します。 次に、<xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> メソッドを使用して、取得する属性の値に新しい属性を初期化します。 新しい属性が初期化されたら、そのプロパティを使用して値を取得できるようになります。  
   
 > [!IMPORTANT]
->  このトピックでは、実行コンテキストに読み込まれるコードのカスタム属性を取得する方法について説明します。 リフレクションのみのコンテキストに読み込まれたコードの属性を取得するには、「[方法: リフレクションのみのコンテキストにアセンブリを読み込む」で説明されているように、<xref:System.Reflection.CustomAttributeData> クラスを使用する必要があります。リフレクションのみのコンテキストにアセンブリを読み込む](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)」を参照してください。  
+> このトピックでは、実行コンテキストに読み込まれるコードのカスタム属性を取得する方法について説明します。 リフレクションのみのコンテキストに読み込まれたコードの属性を取得するには、「[方法: リフレクションのみのコンテキストにアセンブリを読み込む」で説明されているように、<xref:System.Reflection.CustomAttributeData> クラスを使用する必要があります。リフレクションのみのコンテキストにアセンブリを読み込む](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)」を参照してください。  
   
  このセクションでは、以下の属性の取得方法について説明します。  
   

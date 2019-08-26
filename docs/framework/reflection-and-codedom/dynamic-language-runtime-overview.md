@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c624866a23eb32f57953847e8a229f6fa5e7b4bb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b550f504ecbc05e6790652ee1432da3a26ceacb6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632965"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915575"
 ---
 # <a name="dynamic-language-runtime-overview"></a>動的言語ランタイムの概要
 
@@ -95,7 +95,7 @@ DLR では、呼び出しサイトのバインダーを使用して、.NET Frame
 
 - <xref:System.Dynamic.ExpandoObject>
 - <xref:System.Dynamic.DynamicObject>
-- [共通言語ランタイム](../../../docs/standard/clr.md)
+- [共通言語ランタイム](../../standard/clr.md)
 - [式ツリー (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md)
 - [式ツリー (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md)
-- [チュートリアル: 動的オブジェクトの作成と使用](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+- [チュートリアル: 動的オブジェクトの作成と使用](../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

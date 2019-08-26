@@ -1,15 +1,15 @@
 ---
-title: '方法: CSV テキスト ファイルの列値を計算する (LINQ) (C#)'
+title: 方法:CSV テキスト ファイルの列値を計算する (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 0bc212ab40bccf5612ef6dea85608c439d2105f4
-ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
+ms.openlocfilehash: 08b4f936532b3ba3744ec31dc691b166e7ba7109
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69012943"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594031"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>方法: CSV テキスト ファイルの列値を計算する (LINQ) (C#)
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>方法:CSV テキスト ファイルの列値を計算する (LINQ) (C#)
 この例では、合計、平均、最小、最大などの集計計算を .csv ファイルの列に対して実行する方法について説明します。 ここで説明する例の原則は、他の種類の構造化テキストにも適用できます。  
   
 ## <a name="to-create-the-source-file"></a>ソース ファイルを作成するには  
@@ -163,5 +163,5 @@ class SumColumns
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ と文字列 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ とファイル ディレクトリ (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ と文字列 (C#)](./linq-and-strings.md)
+- [LINQ とファイル ディレクトリ (C#)](./linq-and-file-directories.md)

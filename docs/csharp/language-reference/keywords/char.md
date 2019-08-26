@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: b58730d945582ded7b76fcd5c4c65bc1dd9324da
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 754c04bfc3b4090906420d55d55e51606b72f187
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661454"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605955"
 ---
 # <a name="char-c-reference"></a>char (C# リファレンス)
 
@@ -21,7 +21,7 @@ ms.locfileid: "67661454"
 
  Unicode 文字は、世界各国の文字言語の大半を表すために使用されます。
 
-|型|範囲|サイズ|.NET 型|
+|Type|Range|Size|.NET 型|
 |----------|-----------|----------|-------------------------|
 |`char`|U+0000 ～ U+FFFF|Unicode 16 ビット文字|<xref:System.Char?displayProperty=nameWithType>|
 
@@ -44,12 +44,12 @@ ms.locfileid: "67661454"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Char>
-- [C# リファレンス](../../../csharp/language-reference/index.md)
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)
-- [整数型](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
-- [組み込み型の一覧表](../../../csharp/language-reference/keywords/built-in-types-table.md)
-- [暗黙的な数値変換の一覧表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
-- [明示的な数値変換の一覧表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
-- [Null 許容型](../../../csharp/programming-guide/nullable-types/index.md)
-- [文字列](../../../csharp/programming-guide/strings/index.md)
+- [C# リファレンス](../index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# のキーワード](./index.md)
+- [整数型](../builtin-types/integral-numeric-types.md)
+- [組み込み型の一覧表](./built-in-types-table.md)
+- [暗黙的な数値変換の一覧表](./implicit-numeric-conversions-table.md)
+- [明示的な数値変換の一覧表](./explicit-numeric-conversions-table.md)
+- [Null 許容型](../../programming-guide/nullable-types/index.md)
+- [文字列](../../programming-guide/strings/index.md)

@@ -1,15 +1,15 @@
 ---
-title: '方法: XSD を使用して検証する (LINQ to XML) (C#)'
+title: 方法:XSD を使用して検証する (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 6a7f83a9-2d74-4c2b-8417-0a8595879516
-ms.openlocfilehash: 99ff764c5e5ae51720d257bcb2ff0bb8e2591243
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 47704a5aa06bb837c9d76516762330e4aa24e074
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484766"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592242"
 ---
-# <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>方法: XSD を使用して検証する (LINQ to XML) (C#)
+# <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>方法:XSD を使用して検証する (LINQ to XML) (C#)
 <xref:System.Xml.Schema> 名前空間には、XML スキーマ定義言語 (XSD) ファイルに対して XML ツリーを簡単に検証できる拡張メソッドが含まれています。 詳細については、<xref:System.Xml.Schema.Extensions.Validate%2A> メソッドのドキュメントを参照してください。  
   
 ## <a name="example"></a>例  
@@ -76,11 +76,11 @@ doc2 did not validate
 ```  
   
 ## <a name="example"></a>例  
- 次の例では、「[サンプル XML ファイル: 顧客と注文 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)」の XML ドキュメントが「[サンプル XSD ファイル: 顧客と注文](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md)」のスキーマに従った有効なものであるかどうかを検証します。 次に、ソース XML ドキュメントを変更します。 変更するのは最初の顧客の `CustomerID` 属性です。 変更が完了すると、存在しない顧客を注文が参照するようになります。したがって、この XML ドキュメントは有効ではなくなります。  
+ 次の例では、「[サンプル XML ファイル: 顧客と注文 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)」の XML ドキュメントが「[サンプル XSD ファイル: 顧客と注文](./sample-xsd-file-customers-and-orders1.md)」のスキーマに従った有効なものであるかどうかを検証します。 次に、ソース XML ドキュメントを変更します。 変更するのは最初の顧客の `CustomerID` 属性です。 変更が完了すると、存在しない顧客を注文が参照するようになります。したがって、この XML ドキュメントは有効ではなくなります。  
   
- この例では、XML ドキュメント、「[サンプル XML ファイル:顧客と注文 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)」。  
+ この例では、XML ドキュメント、「[サンプル XML ファイル:顧客と注文 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)」。  
   
- この例では、XSD スキーマ、[サンプル XSD ファイル: 顧客と注文](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md)を使用します。  
+ この例では、XSD スキーマ、[サンプル XSD ファイル: 顧客と注文](./sample-xsd-file-customers-and-orders1.md)を使用します。  
   
 ```csharp  
 XmlSchemaSet schemas = new XmlSchemaSet();  

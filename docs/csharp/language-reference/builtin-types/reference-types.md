@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: fcfe2dafe588dce57628bff63e3519f70d7a7725
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: a5a32fa0a98cda37d7f599b20ef2b507cadd730c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566255"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69604213"
 ---
 # <a name="built-in-reference-types-c-reference"></a>組み込みの参照型 (C# リファレンス)
 
@@ -105,7 +105,7 @@ Console.WriteLine(a);
 > [!NOTE]
 > エスケープ コード `\udddd` (`dddd` は 4 桁の数字) は、Unicode 文字 U +`dddd` を表します。 8 桁の Unicode エスケープ コード `\Udddddddd` も認識できます。
 
-[verbatim 文字列リテラル](../tokens/verbatim.md)の場合は、先頭に `@` を付け、さらに前後に二重引用符を付けます。 次に例を示します。
+[verbatim 文字列リテラル](../tokens/verbatim.md)の場合は、先頭に `@` を付け、さらに前後に二重引用符を付けます。 例:
 
 ```csharp
 @"good morning"  // a string literal
@@ -172,7 +172,7 @@ obj = obj + 3;
 
 - [C# リファレンス](../index.md)
 - [C# のキーワード](../keywords/index.md)
-- [イベント](../../../csharp/programming-guide/events/index.md)
+- [イベント](../../programming-guide/events/index.md)
 - [dynamic 型の使用](../../programming-guide/types/using-type-dynamic.md)
 - [文字列を使用するためのベスト プラクティス](../../../standard/base-types/best-practices-strings.md)
 - [基本的な文字列操作](../../../standard/base-types/basic-string-operations.md)

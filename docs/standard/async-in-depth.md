@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 79154713e370029ff31591523525fb05422571d8
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 6f1900eaabafe2931d88959bf79bf4ca1f5bc98b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57844737"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666582"
 ---
 # <a name="async-in-depth"></a>非同期の詳細
 
@@ -30,7 +30,7 @@ Task は、[Promise Model of Concurrency](https://en.wikipedia.org/wiki/Futures_
 
 `await` を使用すると、アプリケーションまたはサービスで、タスク完了まで呼び出し元に制御を渡すことによって、タスクの実行中に有用な作業を実行できます。 コードは、タスク完了後に実行を続けるために、コールバックまたはイベントに依存する必要はありません。 言語とタスクの API 統合によって処理されます。 `Task<T>` を使用する場合、`await` キーワードはさらに、タスク完了時に返された値を "ラップ解除" します。  この動作の詳細について次に詳しく説明します。
 
-タスクと、タスクを処理するさまざまな方法については、[タスクベースの非同期パターン (TAP) に関するトピック](~/docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)を参照してください。
+タスクと、タスクを処理するさまざまな方法については、[タスクベースの非同期パターン (TAP) に関するトピック](./asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)を参照してください。
 
 ## <a name="deeper-dive-into-tasks-for-an-io-bound-operation"></a>I/O バインド操作に関するタスクの詳細
 
@@ -146,7 +146,7 @@ public async Task<int> CalculateResult(InputData data)
 
 ## <a name="see-also"></a>関連項目
 
-- [C# の非同期プログラミング](~/docs/csharp/async.md)
+- [C# の非同期プログラミング](../csharp/async.md)
 - [Async および Await を使用した非同期プログラミング (C#)](../csharp/programming-guide/concepts/async/index.md)
-- [F# の非同期プログラミング](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
-- [Async および Await を使用した非同期プログラミング (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
+- [F# の非同期プログラミング](../fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
+- [Async および Await を使用した非同期プログラミング (Visual Basic)](../visual-basic/programming-guide/concepts/async/index.md)

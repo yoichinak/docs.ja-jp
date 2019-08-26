@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: c7374b77526a31c2c508516d5a3cb7cc3e29339a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dec4d4239fd1a953da6e64a1e1aff9593e2863e2
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583065"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596155"
 ---
 # <a name="properties-c-programming-guide"></a>プロパティ (C# プログラミング ガイド)
 
@@ -23,12 +23,12 @@ ms.locfileid: "64583065"
   
 - プロパティを使えば、実装や検査コードを隠したままで、値の取得と設定についてパブリックな方法をクラスが公開できます。  
   
-- [get](../../../csharp/language-reference/keywords/get.md) プロパティ アクセサーはプロパティ値を取得するために使用し、[set](../../../csharp/language-reference/keywords/set.md) プロパティ アクセサーは新しい値を割り当てるために使用します。 これらのアクセサーには異なるアクセス レベルを指定できます。 詳細については、「[アクセサーのアクセシビリティの制限](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)」を参照してください。  
+- [get](../../language-reference/keywords/get.md) プロパティ アクセサーはプロパティ値を取得するために使用し、[set](../../language-reference/keywords/set.md) プロパティ アクセサーは新しい値を割り当てるために使用します。 これらのアクセサーには異なるアクセス レベルを指定できます。 詳細については、「[アクセサーのアクセシビリティの制限](./restricting-accessor-accessibility.md)」を参照してください。  
   
-- `set` アクセサーで割り当てる値は [value](../../../csharp/language-reference/keywords/value.md) キーワードを使用して定義します。  
+- `set` アクセサーで割り当てる値は [value](../../language-reference/keywords/value.md) キーワードを使用して定義します。  
 - プロパティの種類には、*読み取り/書き込み* (`get` アクセサーと `set` アクセサーの両方を備える)、*読み取り専用* (`get` アクセサーのみで `set` アクセサーはない)、*書き込み専用* (`set` アクセサーのみで `get` アクセサーはない) があります。 書き込み専用のプロパティの使用頻度は低く、ほとんどの場合、機密データへのアクセスを制限するために使用されます。
 
-- カスタムのアクセサー コードを必要としない単純なプロパティは、式本体の定義として、または[自動実装プロパティ](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)として実装できます。
+- カスタムのアクセサー コードを必要としない単純なプロパティは、式本体の定義として、または[自動実装プロパティ](./auto-implemented-properties.md)として実装できます。
  
 ## <a name="properties-with-backing-fields"></a>バッキング フィールドを持つプロパティ
 
@@ -60,15 +60,15 @@ ms.locfileid: "64583065"
 
 ## <a name="related-sections"></a>関連項目  
   
-- [プロパティの使用](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+- [プロパティの使用](./using-properties.md)  
   
-- [インターフェイスのプロパティ](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
+- [インターフェイスのプロパティ](./interface-properties.md)  
   
-- [プロパティとインデクサーの比較](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [プロパティとインデクサーの比較](../indexers/comparison-between-properties-and-indexers.md)  
   
-- [アクセサーのアクセシビリティの制限](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [アクセサーのアクセシビリティの制限](./restricting-accessor-accessibility.md)  
   
-- [自動実装プロパティ](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
+- [自動実装プロパティ](./auto-implemented-properties.md)  
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
 
@@ -76,8 +76,8 @@ ms.locfileid: "64583065"
   
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [プロパティの使用](../../../csharp/programming-guide/classes-and-structs/using-properties.md)
-- [インデクサー](../../../csharp/programming-guide/indexers/index.md)
-- [get キーワード](../../../csharp/language-reference/keywords/get.md)
-- [set キーワード](../../../csharp/language-reference/keywords/set.md)
+- [C# プログラミング ガイド](../index.md)
+- [プロパティの使用](./using-properties.md)
+- [インデクサー](../indexers/index.md)
+- [get キーワード](../../language-reference/keywords/get.md)
+- [set キーワード](../../language-reference/keywords/set.md)

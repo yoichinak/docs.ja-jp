@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a75534bdfb1eef5902d3cd5071b4f5b4bfba8caa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fb6e3677d79f3131432c3daebeee4d166b5450b2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647954"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916670"
 ---
 # <a name="compiled-xpath-expressions"></a>コンパイルされた XPath 式
 <xref:System.Xml.XPath.XPathExpression> オブジェクトは、<xref:System.Xml.XPath.XPathExpression.Compile%2A> クラスの静的 <xref:System.Xml.XPath.XPathExpression> メソッドまたは <xref:System.Xml.XPath.XPathNavigator.Compile%2A> クラスの <xref:System.Xml.XPath.XPathNavigator> メソッドから返されるコンパイル済み XPath クエリを表します。  
@@ -45,7 +45,7 @@ ms.locfileid: "64647954"
 |`String`|<xref:System.String>|UCS 文字のシーケンス。|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
   
 > [!NOTE]
->  <xref:System.Xml.XPath.XPathNavigator.Matches%2A> メソッドは、XPath 式をパラメーターとして受け取ります。 <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> メソッドは W3C XPath の戻り型の 1 つではなく、1 つの <xref:System.Xml.XPath.XPathNavigator> オブジェクトを返します。  
+> <xref:System.Xml.XPath.XPathNavigator.Matches%2A> メソッドは、XPath 式をパラメーターとして受け取ります。 <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> メソッドは W3C XPath の戻り型の 1 つではなく、1 つの <xref:System.Xml.XPath.XPathNavigator> オブジェクトを返します。  
   
 ### <a name="the-returntype-property"></a>戻り型のプロパティ  
  XPath クエリが <xref:System.Xml.XPath.XPathExpression> オブジェクトにコンパイルされた後、<xref:System.Xml.XPath.XPathExpression.ReturnType%2A> オブジェクトの <xref:System.Xml.XPath.XPathExpression> プロパティを使用して、XPath クエリで何が返されるかを知ることができます。  

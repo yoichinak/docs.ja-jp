@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3f87fb330fbea1344cc8532519d358fe8580a9fd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f283aad7c6727aff111aaaf78beb1e8da4b45898
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592706"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988372"
 ---
 # <a name="strong-named-assemblies"></a>厳密な名前付きアセンブリ
 アセンブリの厳格な名前付けにより、アセンブリに対して一意の ID を作成し、アセンブリの競合を防ぐことができます。  
@@ -25,7 +25,7 @@ ms.locfileid: "64592706"
  厳格に名前付けされたアセンブリには、アセンブリの単純テキスト名、バージョン番号、カルチャ情報 (省略可能)、デジタル署名、および署名に使用する秘密キーに対応した公開キーが含まれています。  
   
 > [!WARNING]
->  セキュリティに関しては、厳格な名前に依存しないでください。 厳格な名前は、一意の ID を提供するだけです。  
+> セキュリティに関しては、厳格な名前に依存しないでください。 厳格な名前は、一意の ID を提供するだけです。  
   
 ## <a name="why-strong-name-your-assemblies"></a>アセンブリに厳格な名前を付ける理由  
  厳密な名前付きのアセンブリを参照すると、バージョン管理や名前の一意性を保護できるなどの利点を期待できます。 厳密な名前付きのアセンブリは、一部のシナリオを有効にするために必要な、グローバル アセンブリ キャッシュにインストールできます。  

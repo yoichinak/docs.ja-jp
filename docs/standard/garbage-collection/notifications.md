@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc4850ff87d9ea827e86a16ee6b3a6953c1e3552
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: edf519621c2113843b89d96948243e9c095d2a57
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622707"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988868"
 ---
 # <a name="garbage-collection-notifications"></a>ガベージ コレクションの通知
 共通言語ランタイムによるフル ガベージ コレクション (つまり、ジェネレーション 2 のコレクション) がパフォーマンスに悪影響を及ぼす場合があります。 これは、特に要求を大量に処理するサーバーで問題となることがあります。この例では、長時間のガベージ コレクションによって、要求のタイムアウトが発生します。重要な期間にフル ガベージ コレクションが発生しないようにするには、フル ガベージ コレクションが近づいていることの通知を受けたら、ワークロードを別のサーバー インスタンスにリダイレクトするアクションを取ります。 現在のサーバー インスタンスで要求を処理する必要がない場合、自分でコレクションを強制実行することもできます。  
@@ -24,7 +24,7 @@ ms.locfileid: "64622707"
  ランタイムがフル ガーベッジ コレクションが近づいていることを検出すると、<xref:System.GC.RegisterForFullGCNotification%2A> メソッドによって通知の発生が登録されます。 この通知には、フル ガベージ コレクションが近づいている場合と、フル ガベージ コレクションが完了した場合の 2 つがあります。  
   
 > [!WARNING]
->  通知は、ガベージ コレクションをブロックすることによってのみ発生します。 [\<gcConcurrent>](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) 構成要素が有効になっている場合、バック グラウンドのガベージ コレクションでは、通知は発生しません。  
+> 通知は、ガベージ コレクションをブロックすることによってのみ発生します。 [\<gcConcurrent>](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) 構成要素が有効になっている場合、バック グラウンドのガベージ コレクションでは、通知は発生しません。  
   
  通知が発生したことを判断するには、<xref:System.GC.WaitForFullGCApproach%2A> と <xref:System.GC.WaitForFullGCComplete%2A> メソッドを使用します。 通常、これらのメソッドは、通知の状態を示す <xref:System.GCNotificationStatus> 列挙体を継続的に取得する `while` ループで使用します。 その値が <xref:System.GCNotificationStatus.Succeeded> の場合、次を行うことができます。  
   

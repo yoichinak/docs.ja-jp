@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 07/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: b4a08a9866bbc8816b57c95bdb22766bd1b07fdc
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 4471e4feffb23b7f256ada2116444aaa7899e209
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331700"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611447"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>モデル ビルダーで回帰を使用して価格を予測する
 
@@ -202,7 +202,6 @@ ML.NET モデル ビルダーを使用して、価格を予測する回帰モデ
 このチュートリアルで説明しているトピックについて詳しくは、次のリソースを参照してください。
 
 - [モデル ビルダーのシナリオ](../automate-training-with-model-builder.md#scenarios)
-- [モデル ビルダーのデータ形式](../automate-training-with-model-builder.md#data-formats)
 - [回帰](../resources/glossary.md#regression)
 - [回帰モデルのメトリック](../resources/metrics.md#metrics-for-regression)
 - [NYC TLC Taxi Trip データ セット](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)

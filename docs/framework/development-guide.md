@@ -6,18 +6,18 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 032958c24e03025fc3fc3eee2aae40bdd4491e7b
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: efbb99027004221bff1985bba8372c4415c02d4f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052733"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950303"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework の開発ガイド
 ここでは、.NET Framework アプリの作成、構成、デバッグ、保護、および配置を行う方法について説明します。 また、動的プログラミング、相互運用性、拡張性、メモリ管理、スレッド処理などの技術領域に関する情報も提供します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [アプリケーションの基本事項](../../docs/standard/application-essentials.md)  
+ [アプリケーションの基本事項](../standard/application-essentials.md)  
  アプリ ドメインとアセンブリを利用したプログラミング、属性の使用、基本型の書式指定と解析、コレクションの使用、イベントおよび例外の処理、ファイルおよびデータ ストリームの使用、ジェネリックの使用など、基本的なアプリ開発タスクについて説明します。  
   
  [データとモデリング](../../docs/framework/data/index.md)  
@@ -38,7 +38,7 @@ ms.locfileid: "66052733"
  [Windows サービス アプリケーション](../../docs/framework/windows-services/index.md)  
  Visual Studio および .NET Framework を使用して、サービスとしてインストールされるアプリを作成し、その動作を開始、停止、制御する方法について説明します。  
   
- [.NET での並列処理、コンカレンシー、および非同期プログラミング](../../docs/standard/parallel-processing-and-concurrency.md)  
+ [.NET での並列処理、コンカレンシー、および非同期プログラミング](../standard/parallel-processing-and-concurrency.md)  
  マネージド スレッド処理、並列プログラミング、および非同期プログラミングのデザイン パターンについて説明します。  
   
  [.NET Framework のネットワーク プログラミング](../../docs/framework/network-programming/index.md)  
@@ -50,13 +50,13 @@ ms.locfileid: "66052733"
  [.NET ネイティブによるアプリのコンパイル](../../docs/framework/net-native/index.md)  
  .NET Native プリコンパイル テクノロジを使用して、Windows ストア アプリをビルドおよび配置する方法について説明します。 .NET Native は、マネージド コード (C#) で記述され、.NET Framework を対象とするアプリをネイティブ コードにコンパイルします。  
   
- [セキュリティ](../../docs/standard/security/index.md)  
+ [セキュリティ](../standard/security/index.md)  
  .NET Framework において安全なアプリの開発を促進するクラスおよびサービスに関する情報を示します。  
   
  [デバッグ、トレース、およびプロファイリング](../../docs/framework/debug-trace-profile/index.md)  
  .NET Framework アプリとアプリ環境のテスト、最適化、およびプロファイリングを行う方法について説明します。 開発者向けの情報だけでなく、管理者向けの情報も記載されています。  
   
- [複数のプラットフォームの開発](../../docs/standard/cross-platform/index.md)  
+ [複数のプラットフォームの開発](../standard/cross-platform/index.md)  
  .NET Framework を使用して複数のプラットフォームおよび複数のデバイス (電話、デスクトップ、Web など) で共有できるアセンブリを作成する方法に関する情報を示します。  
   
  [配置](../../docs/framework/deployment/index.md)  

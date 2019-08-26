@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 2ec18f9afed04882f26b5d2f34f64c25be042ed5
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 19b4ec08cc8790df0e9a99204c0401b1b873eb20
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566868"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588425"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>キャストと型変換 (C# プログラミング ガイド)
 
@@ -32,17 +32,17 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 - **明示的な変換 (キャスト)** : 明示的な変換には、キャスト演算子が必要です。 変換時に情報が失われる可能性がある場合や、その他の理由によって変換が成功しない可能性がある場合には、キャストが必要です。  典型的な例としては、より精度の低い型 (または、より範囲が狭い型) に数値を変換する場合や、基底クラスのインスタンスを派生クラスに変換する場合が挙げられます。  
   
-- **ユーザー定義の変換**: ユーザー定義の変換は特殊なメソッドによって実行されます。これを定義することで、基本クラスと派生クラスの関係がないカスタム型間の明示的および暗黙的な変換が可能になります。 詳細については、「[User-defined conversion operators](../../../csharp/language-reference/operators/user-defined-conversion-operators.md)」(ユーザー定義の変換演算子) を参照してください。  
+- **ユーザー定義の変換**: ユーザー定義の変換は特殊なメソッドによって実行されます。これを定義することで、基本クラスと派生クラスの関係がないカスタム型間の明示的および暗黙的な変換が可能になります。 詳細については、「[User-defined conversion operators](../../language-reference/operators/user-defined-conversion-operators.md)」(ユーザー定義の変換演算子) を参照してください。  
   
-- **ヘルパー クラスを使用する変換**: 整数と <xref:System.DateTime?displayProperty=nameWithType> オブジェクトの間、16 進文字列とバイト配列の間など、互換性のない型の間で変換を行うには、<xref:System.BitConverter?displayProperty=nameWithType> クラス、<xref:System.Convert?displayProperty=nameWithType> クラス、および組み込み数値型の `Parse` メソッド (<xref:System.Int32.Parse%2A?displayProperty=nameWithType> など) を使用できます。 詳細については、「[方法 :バイト配列を int に変換する](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)」、「[方法: 文字列を数値に変換する](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)」、および「[方法: 16 進文字列と数値型の間で変換する](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)」をご覧ください。  
+- **ヘルパー クラスを使用する変換**: 整数と <xref:System.DateTime?displayProperty=nameWithType> オブジェクトの間、16 進文字列とバイト配列の間など、互換性のない型の間で変換を行うには、<xref:System.BitConverter?displayProperty=nameWithType> クラス、<xref:System.Convert?displayProperty=nameWithType> クラス、および組み込み数値型の `Parse` メソッド (<xref:System.Int32.Parse%2A?displayProperty=nameWithType> など) を使用できます。 詳細については、[方法:バイト配列を int に変換する](./how-to-convert-a-byte-array-to-an-int.md)」、「[方法: 文字列を数値に変換する](./how-to-convert-a-string-to-a-number.md)」、および「[方法: 16 進文字列と数値型の間で変換する](./how-to-convert-between-hexadecimal-strings-and-numeric-types.md)」をご覧ください。  
   
 ## <a name="implicit-conversions"></a>暗黙の変換
 
- 組み込みの数値型の場合、格納される値を切り捨てたり丸めたりしなくても変数に収めることができるのであれば、暗黙的な変換を実行できます。 整数型の場合、これは、ソースの型の範囲が、ターゲットの型の範囲の適切なサブセットであるという意味です。 たとえば、[long](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) 型の変数 (64 ビットの整数) は、[int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) (32 ビットの整数) が格納できる任意の値を格納できます。 次の例の場合、コンパイラは右側の `num` の値を `bigNum` に代入する前に、この値を `long` 型へと暗黙的に変換します。  
+ 組み込みの数値型の場合、格納される値を切り捨てたり丸めたりしなくても変数に収めることができるのであれば、暗黙的な変換を実行できます。 整数型の場合、これは、ソースの型の範囲が、ターゲットの型の範囲の適切なサブセットであるという意味です。 たとえば、[long](../../language-reference/builtin-types/integral-numeric-types.md) 型の変数 (64 ビットの整数) は、[int](../../language-reference/builtin-types/integral-numeric-types.md) (32 ビットの整数) が格納できる任意の値を格納できます。 次の例の場合、コンパイラは右側の `num` の値を `bigNum` に代入する前に、この値を `long` 型へと暗黙的に変換します。  
   
  [!code-csharp[csProgGuideTypes#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#34)]  
   
- 暗黙的な数値変換をすべてまとめた一覧については、「[暗黙的な数値変換の一覧表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)」をご覧ください。  
+ 暗黙的な数値変換をすべてまとめた一覧については、「[暗黙的な数値変換の一覧表](../../language-reference/keywords/implicit-numeric-conversions-table.md)」をご覧ください。  
   
  参照型の場合は、特定のクラスから、その直接または間接的な基底クラスやインターフェイスに対して、常に暗黙的な変換が存在します。 派生クラスには常に基底クラスのすべてのメンバーが含まれるため、特別な構文は必要ありません。  
   
@@ -53,11 +53,11 @@ Base b = d; // Always OK.
   
 ## <a name="explicit-conversions"></a>明示的な変換
 
- 変換によって情報が失われるリスクがある場合は、コンパイラで明示的な変換を実行する必要があります。これを*キャスト*と呼びます。 キャストとは、変換を行う意図があることと、データ損失が発生する可能性があることを、コンパイラに明示的に知らせるための方法です。 キャストを実行するには、変換する値または変数の前に、キャストする型をかっこで囲んで指定します。 次のプログラでは、[double](../../../csharp/language-reference/builtin-types/floating-point-numeric-types.md) を [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) にキャストしています。このプログラムは、キャストなしではコンパイルされません。  
+ 変換によって情報が失われるリスクがある場合は、コンパイラで明示的な変換を実行する必要があります。これを*キャスト*と呼びます。 キャストとは、変換を行う意図があることと、データ損失が発生する可能性があることを、コンパイラに明示的に知らせるための方法です。 キャストを実行するには、変換する値または変数の前に、キャストする型をかっこで囲んで指定します。 次のプログラでは、[double](../../language-reference/builtin-types/floating-point-numeric-types.md) を [int](../../language-reference/builtin-types/integral-numeric-types.md) にキャストしています。このプログラムは、キャストなしではコンパイルされません。  
   
  [!code-csharp[csProgGuideTypes#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#2)]  
   
- 許可される明示的数値変換の一覧については、「[明示的な数値変換の一覧表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)」をご覧ください。  
+ 許可される明示的数値変換の一覧については、「[明示的な数値変換の一覧表](../../language-reference/keywords/explicit-numeric-conversions-table.md)」をご覧ください。  
   
  参照型の場合は、基本型から派生型に変換する必要がある場合に、明示的なキャストが必要です。  
   
@@ -75,7 +75,7 @@ Animal a = g;
 Giraffe g2 = (Giraffe) a;  
 ```  
   
- 参照型の間でキャスト操作を行っても、基になるオブジェクトの実行時の型は変わりません。そのオブジェクトへの参照として使用される値の型だけが変更されます。 詳細については、「[ポリモーフィズム](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)」を参照してください。  
+ 参照型の間でキャスト操作を行っても、基になるオブジェクトの実行時の型は変わりません。そのオブジェクトへの参照として使用される値の型だけが変更されます。 詳細については、「[ポリモーフィズム](../classes-and-structs/polymorphism.md)」を参照してください。  
   
 ## <a name="type-conversion-exceptions-at-run-time"></a>実行時に発生する型変換の例外
 
@@ -91,9 +91,9 @@ Giraffe g2 = (Giraffe) a;
 
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [型](../../../csharp/programming-guide/types/index.md)
-- [() キャスト演算子](../../../csharp/language-reference/operators/type-testing-and-cast.md#cast-operator-)
-- [ユーザー定義の変換演算子](../../../csharp/language-reference/operators/user-defined-conversion-operators.md)
+- [C# プログラミング ガイド](../index.md)
+- [型](./index.md)
+- [() キャスト演算子](../../language-reference/operators/type-testing-and-cast.md#cast-operator-)
+- [ユーザー定義の変換演算子](../../language-reference/operators/user-defined-conversion-operators.md)
 - [一般的な型変換](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/yy580hbd(v=vs.120))
-- [方法: 文字列を数値に変換する](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)
+- [方法: 文字列を数値に変換する](./how-to-convert-a-string-to-a-number.md)

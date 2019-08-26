@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd41051bd770d3579137aa158e70cef41aed49f8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d1334f8c8e1b5898e93697461f609429d4aae764
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607839"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921700"
 ---
 # <a name="assembly-contents"></a>アセンブリの内容
 一般に、静的アセンブリは次の 4 つの要素から構成されます。  
@@ -40,7 +40,7 @@ ms.locfileid: "64607839"
  ![マルチファイル アセンブリを示す図。](./media/assembly-contents/multifile-assembly-diagram.gif) 
   
 > [!NOTE]
->  マルチファイル アセンブリを構成する各ファイルは、ファイル システムによって物理的にリンクされるわけではありません。 これらのファイルはアセンブリ マニフェストによってリンクされ、共通言語ランタイムがこれらのファイルをまとめて管理します。  
+> マルチファイル アセンブリを構成する各ファイルは、ファイル システムによって物理的にリンクされるわけではありません。 これらのファイルはアセンブリ マニフェストによってリンクされ、共通言語ランタイムがこれらのファイルをまとめて管理します。  
   
  この例では、MyAssembly.dll に含まれるアセンブリ マニフェストに記述されているように、3 つのファイルがすべて 1 つのアセンブリに属しています。 ファイル システムにとっては、これらは 3 つの独立したファイルです。 Util.netmodule というファイルは、アセンブリ情報を含んでいないため、モジュールとしてコンパイルされています。 アセンブリの作成時に、アセンブリ マニフェストが MyAssembly.dll に追加され、その Util.netmodule および Graphic.bmp との関係が示されます。  
   

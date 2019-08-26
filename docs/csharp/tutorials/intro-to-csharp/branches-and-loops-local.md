@@ -3,12 +3,12 @@ title: 分岐とループ - C# の概要に関するチュートリアル
 description: 分岐とループに関するこのチュートリアルでは、C# のコードを記述して、この言語における、ステートメントを繰り返し実行するための条件付き分岐とループに対応している構文について学習します。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 4a116ae5294915770dec742c147cf2ba1bf6e284
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0da446a71f5d7a7183a8323c470087c8726bc02f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427254"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587216"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>分岐およびループ ステートメントを使用した条件付きロジックについて説明します
 
@@ -143,6 +143,7 @@ namespace BranchesAndLoops
                 Console.WriteLine("The answer is not greater than 10");
             }
 
+            int c = 4;
             if ((a + b + c > 10) && (a > b))
             {
                 Console.WriteLine("The answer is greater than 10");
@@ -205,7 +206,7 @@ while (counter < 10)
 `while` ループは、条件を判定してから `while` に続くコードを実行します。 `do` ... `while` ループは、最初にコードを実行してからその条件を確認します。 do while ループを次のコードで示します。
 
 ```csharp
-counter = 0;
+int counter = 0;
 do
 {
     Console.WriteLine($"Hello World! The counter is {counter}");
@@ -220,7 +221,7 @@ do
 C# では **for** ループがよく使用されます。 Main() メソッドで次のコードを試してみてください。
 
 ```csharp
-for(int index = 0; index < 10; index++)
+for (int index = 0; index < 10; index++)
 {
     Console.WriteLine($"Hello World! The index is {index}");
 }

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: a8b09061157c45b865613c31ae1425e5820687f4
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 708ed7582c353160ce15c5b5429951e12a0a3fed
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170399"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596663"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>方法: Office プログラミングで名前付き引数と省略可能な引数を使用する (C# プログラミング ガイド)
 C# 4 で導入された名前付き引数と省略可能な引数を使うと、C# プログラミングの便利さ、柔軟性、読みやすさが向上します。 さらに、Microsoft Office オートメーション API などの COM インターフェイスへのアクセスが大幅に楽になります。  
@@ -108,4 +108,4 @@ C# 4 で導入された名前付き引数と省略可能な引数を使うと、
   
 ## <a name="see-also"></a>関連項目
 
-- [名前付き引数と省略可能な引数](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
+- [名前付き引数と省略可能な引数](./named-and-optional-arguments.md)

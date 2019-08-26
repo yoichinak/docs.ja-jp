@@ -2,12 +2,12 @@
 title: 名前と値のペアの保持 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7b04b0f1-af64-42eb-8737-83f8861b5915
-ms.openlocfilehash: 06fe6932b6eb0ff470367ccf6471da6937ec7746
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9c42a154a4c3ed1463e428faab4c7d33197ef4a5
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484270"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591708"
 ---
 # <a name="maintaining-namevalue-pairs-c"></a>名前と値のペアの保持 (C#)
 多くのアプリケーションでは、情報を名前と値のペアとして保持するのが最適な場合があります。 このような情報には、構成情報やグローバル設定などがあります。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] には、名前と値のペアのセットを簡単に保持できるようにするメソッドがあります。 情報を属性として保持することも、子要素のセットとして保持することもできます。  
@@ -122,4 +122,4 @@ Console.WriteLine(root);
 
 - <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>
 - <xref:System.Xml.Linq.XElement.SetElementValue%2A>
-- [XML ツリーの変更 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md)
+- [XML ツリーの変更 (LINQ to XML) (C#)](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md)

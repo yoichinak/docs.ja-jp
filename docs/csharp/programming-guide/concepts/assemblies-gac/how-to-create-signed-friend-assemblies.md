@@ -1,15 +1,15 @@
 ---
-title: '方法: 署名されたフレンド アセンブリを作成する (C#)'
+title: 方法:署名されたフレンド アセンブリを作成する (C#)
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-ms.openlocfilehash: df04f6f5a006c7eea7984004e20578c85e51efe0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7715726a200150b044fb8e97216fa02d0e784838
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582979"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595928"
 ---
-# <a name="how-to-create-signed-friend-assemblies-c"></a>方法: 署名されたフレンド アセンブリを作成する (C#)
+# <a name="how-to-create-signed-friend-assemblies-c"></a>方法:署名されたフレンド アセンブリを作成する (C#)
 この例では、厳密な名前を持つアセンブリと共にフレンド アセンブリを使用する方法を示します。 両方のアセンブリに厳密な名前が付けられている必要があります。 この例のアセンブリは両方とも同じキーを使用していますが、2 つのアセンブリそれぞれが別々のキーを使用することもできます。  
   
 ### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a>署名付きアセンブリとフレンド アセンブリを作成するには  
@@ -79,7 +79,7 @@ ms.locfileid: "64582979"
     csc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll /out:friend_signed_B.exe friend_signed_B.cs  
     ```  
   
-     コンパイラによって生成されたアセンブリの名前は、<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性に渡されたフレンド アセンブリ名と一致している必要があります。 `/out` コンパイラ オプションを使用して、出力アセンブリ (.exe または .dll) の名前を明示的に指定する必要があります。  詳しくは、「[/out (C# コンパイラ オプション)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md)」をご覧ください。  
+     コンパイラによって生成されたアセンブリの名前は、<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性に渡されたフレンド アセンブリ名と一致している必要があります。 `/out` コンパイラ オプションを使用して、出力アセンブリ (.exe または .dll) の名前を明示的に指定する必要があります。  詳しくは、「[/out (C# コンパイラ オプション)](../../../language-reference/compiler-options/out-compiler-option.md)」をご覧ください。  
   
 7. friend_signed_B.exe ファイルを実行します。  
   
@@ -93,8 +93,8 @@ ms.locfileid: "64582979"
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [.NET のアセンブリ](../../../../standard/assembly/index.md)
 - [フレンド アセンブリ](../../../../standard/assembly/friend-assemblies.md)
-- [方法: 署名のないフレンド アセンブリを作成する (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
-- [/keyfile](../../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
+- [方法: 署名のないフレンド アセンブリを作成する (C#)](./how-to-create-unsigned-friend-assemblies.md)
+- [/keyfile](../../../language-reference/compiler-options/keyfile-compiler-option.md)
 - [Sn.exe (厳密名ツール)](../../../../framework/tools/sn-exe-strong-name-tool.md)
-- [厳密な名前付きアセンブリの作成と使用](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
-- [C# プログラミング ガイド](../../../../csharp/programming-guide/index.md)
+- [厳密な名前付きアセンブリの作成と使用](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [C# プログラミング ガイド](../../index.md)

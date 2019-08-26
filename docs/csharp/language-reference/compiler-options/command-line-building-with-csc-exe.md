@@ -5,19 +5,19 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: 0ebc4fa3029e16c5ee89da7d9af8b89924b2c4dc
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 54306c79bc2856996925756ee4261fbe67692aea
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833355"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606979"
 ---
 # <a name="command-line-build-with-cscexe"></a>csc.exe を使用したコマンド ラインからのビルド
 C# コンパイラは、その実行可能ファイルの名前 (*csc.exe*) をコマンド プロンプトに入力することによって呼び出します。
 
 **Visual Studio 用開発者コマンド プロンプト** ウィンドウを使用した場合、必要なすべての環境変数が設定されます。 このツールを表示する方法については、「[Visual Studio 用開発者コマンド プロンプト](../../../framework/tools/developer-command-prompt-for-vs.md)」トピックをご覧ください。 
 
-標準のコマンド プロンプト ウィンドウを使用する場合は、コンピューター上の任意のサブディレクトリから *csc.exe* を呼び出すことができるようにパスを修正する必要があります。 また、*vsvars32.bat* を実行して、コマンド ライン ビルドをサポートするための適切な環境変数を設定する必要があります。 *vsvars32.bat* について、その検索および実行方法に関する手順など、詳細情報については「[方法:Visual Studio のコマンドラインのための環境変数を設定する](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)」をご覧ください。
+標準のコマンド プロンプト ウィンドウを使用する場合は、コンピューター上の任意のサブディレクトリから *csc.exe* を呼び出すことができるようにパスを修正する必要があります。 また、*vsvars32.bat* を実行して、コマンド ライン ビルドをサポートするための適切な環境変数を設定する必要があります。 *vsvars32.bat* について、その検索および実行方法に関する手順など、詳細情報については「[方法:Visual Studio のコマンドラインのための環境変数を設定する](./how-to-set-environment-variables-for-the-visual-studio-command-line.md)」をご覧ください。
 
 Windows Software Development Kit (SDK) のみがインストールされているコンピューターでは、**SDK コマンド プロンプト** ( **[Microsoft .NET Framework SDK]** メニュー オプションから開くことができます) で C# コンパイラを使用できます。
 
@@ -97,10 +97,10 @@ C# コンパイラを起動してもオブジェクト ( *.obj*) ファイルは
 
 ## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
-- [アルファベット順の C# コンパイラ オプションの一覧](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
-- [カテゴリ別の C# コンパイラ オプションの一覧](../../../csharp/language-reference/compiler-options/listed-by-category.md)
-- [Main() とコマンドライン引数](../../../csharp/programming-guide/main-and-command-args/index.md)
-- [コマンド ライン引数](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)
-- [方法: コマンド ライン引数の表示に関するページ](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-- [Main() の戻り値](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
+- [C# コンパイラ オプション](./index.md)
+- [アルファベット順の C# コンパイラ オプションの一覧](./listed-alphabetically.md)
+- [カテゴリ別の C# コンパイラ オプションの一覧](./listed-by-category.md)
+- [Main() とコマンドライン引数](../../programming-guide/main-and-command-args/index.md)
+- [コマンド ライン引数](../../programming-guide/main-and-command-args/command-line-arguments.md)
+- [方法: コマンド ライン引数の表示に関するページ](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [Main() の戻り値](../../programming-guide/main-and-command-args/main-return-values.md)

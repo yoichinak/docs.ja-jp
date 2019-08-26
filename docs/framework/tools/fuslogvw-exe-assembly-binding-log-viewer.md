@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80a07e389f84c56f6fa3f718b8ba7e0504201ba7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8a04c56391b70ddc887b0ff2f7bcd6a169887d2f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591526"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933670"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (アセンブリ バインディング ログ ビューアー)
 アセンブリ バインディング ログ ビューアーは、アセンブリ バインドの詳細を表示します。 この情報は、.NET Framework が実行時にアセンブリを見つけられない原因を診断する場合に役立ちます。 通常、このようなエラーは、アセンブリが間違った位置に配置されているか、無効になったネイティブ イメージが存在するか、バージョン番号またはカルチャの不一致が存在する場合に発生します。 通常、共通言語ランタイムによるアセンブリ検出エラーは、アプリケーション内で <xref:System.TypeLoadException> として示されます。  
   
 > [!IMPORTANT]
->  fuslogvw.exe は、管理者特権で実行する必要があります。  
+> fuslogvw.exe は、管理者特権で実行する必要があります。  
   
  このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、管理者の資格情報で Visual Studio 用開発者コマンド プロンプト (または、Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
   
@@ -38,10 +38,10 @@ fuslogvw
   
 1. **[Default]** を選択すると、すべてのアプリケーションの種類のバインド エラーが表示されます。 既定では、ログ エントリは wininet キャッシュのディスクのユーザーごとのディレクトリに格納されます。  
   
-2. **[Custom]** を選択すると、指定したカスタム ディレクトリのバインド エラーが表示されます。 **[ログ設定]** ダイアログのカスタム ログのパス を使用して、ランタイムがログを格納するカスタムの場所を有効なディレクトリ名に指定する必要があります。 このディレクトリはクリーンで、ランタイムが生成するファイルだけが含まれている必要があります。 このディレクトリに、ログに記録するエラーを生成する実行可能ファイルが含まれている場合は、その実行可能ファイルと同じ名前でディレクトリの作成が試行されるため、そのエラーはログに記録されません。 また、ログの位置から実行可能ファイルを実行しようとすると、失敗します。  
+2. **[Custom]** を選択すると、指定したカスタム ディレクトリのバインド エラーが表示されます。 **ログ設定** ダイアログの カスタム ログのパス を使用して、ランタイムがログを格納するカスタムの場所を有効なディレクトリ名に指定する必要があります。 このディレクトリはクリーンで、ランタイムが生成するファイルだけが含まれている必要があります。 このディレクトリに、ログに記録するエラーを生成する実行可能ファイルが含まれている場合は、その実行可能ファイルと同じ名前でディレクトリの作成が試行されるため、そのエラーはログに記録されません。 また、ログの位置から実行可能ファイルを実行しようとすると、失敗します。  
   
     > [!NOTE]
-    >  カスタム バインド位置ではなく、既定のバインド位置を使用することをお勧めします。 ランタイムは wininet キャッシュに既定のバインド位置を格納するので、この位置は自動的に消去されます。カスタム バインド位置を指定する場合は、この位置を削除する手段を独自に組み込む必要があります。  
+    > カスタム バインド位置ではなく、既定のバインド位置を使用することをお勧めします。 ランタイムは wininet キャッシュに既定のバインド位置を格納するので、この位置は自動的に消去されます。カスタム バインド位置を指定する場合は、この位置を削除する手段を独自に組み込む必要があります。  
   
 ### <a name="to-view-details-about-a-specific-failure"></a>特定のエラーの詳細を表示するには  
   
@@ -109,7 +109,7 @@ LOG: All probing URLs attempted and failed.
   
 ### <a name="to-refresh-the-user-interface"></a>ユーザー インターフェイスに最新の情報を表示するには  
   
-- **[最新の情報に更新]** をクリックします。 ビューアーの実行中に新しいログ エントリが自動的に検出されることはありません。 新しいログ エントリを表示するには、**[Refresh]** を使用する必要があります。  
+- **[最新の情報に更新]** をクリックします。 ビューアーの実行中に新しいログ エントリが自動的に検出されることはありません。 新しいログ エントリを表示するには、 **[Refresh]** を使用する必要があります。  
   
 ### <a name="to-change-the-log-settings"></a>ログ設定を変更するには、次の処理手順に従います。  
   
@@ -124,7 +124,7 @@ LOG: All probing URLs attempted and failed.
   
 #### <a name="to-log-assembly-binds-for-native-images"></a>ネイティブ イメージのアセンブリ バインドをログに記録するには  
   
-- **[ログのカテゴリ]** グループで、**[ネイティブ イメージ]** をクリックします。  
+- **[ログのカテゴリ]** グループで、 **[ネイティブ イメージ]** をクリックします。  
   
  次のログは、アプリケーションのネイティブ イメージの作成時には存在しなかった依存関係が原因で発生したエラーを示しています。 実行時の依存関係が Ngen.exe を実行したときの依存関係と異なる場合、ネイティブ イメージへのバインドはできません。  
   
@@ -206,7 +206,7 @@ Discarding native image.
      ドメインに中立的に読み込まれたアセンブリに関する「重要」メモを参照してください。  
   
 > [!IMPORTANT]
->  アセンブリがドメインに中立的に読み込まれた場合 (<xref:System.AppDomainSetup.LoaderOptimization%2A> プロパティを <xref:System.LoaderOptimization.MultiDomain?displayProperty=nameWithType> または <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=nameWithType> に設定した場合など)、ログが有効になっているとメモリがリークすることがあります。 これが起こるのは、ドメインに中立的なモジュールがアプリケーション ドメインに読み込まれているときにログ エントリが作成され、その後でアプリケーション ドメインがアンロードされた場合です。 このログ エントリは、プロセスが終了するまで解放されません。 一部のデバッガーは、自動的にログを有効にします。  
+> アセンブリがドメインに中立的に読み込まれた場合 (<xref:System.AppDomainSetup.LoaderOptimization%2A> プロパティを <xref:System.LoaderOptimization.MultiDomain?displayProperty=nameWithType> または <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=nameWithType> に設定した場合など)、ログが有効になっているとメモリがリークすることがあります。 これが起こるのは、ドメインに中立的なモジュールがアプリケーション ドメインに読み込まれているときにログ エントリが作成され、その後でアプリケーション ドメインがアンロードされた場合です。 このログ エントリは、プロセスが終了するまで解放されません。 一部のデバッガーは、自動的にログを有効にします。  
   
 #### <a name="to-enable-a-custom-log-path"></a>カスタムのログ パスを有効にするには  
   
@@ -215,7 +215,7 @@ Discarding native image.
 2. **[カスタム ログのパス]** テキスト ボックスにパスを入力します。  
   
 > [!NOTE]
->  [アセンブリ バインディング ログ ビューアー (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) では、バインディング ログの格納に Internet Explorer (IE) のキャッシュを使用します。 IE キャッシュは時折破損することがあるため、[アセンブリ バインディング ログ ビューアー (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) の表示ウィンドウに新しいバインディング ログが表示されなくなることがあります。 IE キャッシュが破損した場合、.NET バインディング インフラストラクチャ (fusion) ではバインディング ログの読み書きができなくなります (この問題はカスタム ログ パスを使用している場合は発生しません)。破損を修復し、fusion でバインディング ログが再度表示されるようにするには、IE の [インターネット オプション] ダイアログで一時インターネット ファイルを削除して IE キャッシュを消去します。  
+> [アセンブリ バインディング ログ ビューアー (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) では、バインディング ログの格納に Internet Explorer (IE) のキャッシュを使用します。 IE キャッシュは時折破損することがあるため、[アセンブリ バインディング ログ ビューアー (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) の表示ウィンドウに新しいバインディング ログが表示されなくなることがあります。 IE キャッシュが破損した場合、.NET バインディング インフラストラクチャ (fusion) ではバインディング ログの読み書きができなくなります (この問題はカスタム ログ パスを使用している場合は発生しません)。破損を修復し、fusion でバインディング ログが再度表示されるようにするには、IE の [インターネット オプション] ダイアログで一時インターネット ファイルを削除して IE キャッシュを消去します。  
 >   
 >  アンマネージ アプリケーションが、`IHostAssemblyManager` インターフェイスと `IHostAssemblyStore` インターフェイスを実装して共通言語ランタイムをホストしている場合、ログ エントリを wininet キャッシュに格納できません。  これらのインターフェイスを実装したカスタム ホストのログ エントリを表示するには、別のログ パスを指定する必要があります。  
   
@@ -226,7 +226,7 @@ Discarding native image.
 2. **[没入型のログを有効にします]** チェック ボックスをオンにします。  
   
     > [!NOTE]
-    >  このチェック ボックスは、Windows 8 以降でのみ有効になります。  
+    > このチェック ボックスは、Windows 8 以降でのみ有効になります。  
   
 ## <a name="see-also"></a>関連項目
 

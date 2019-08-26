@@ -2,17 +2,17 @@
 title: LINQ to XML およびその他の XML テクノロジ3
 ms.date: 07/20/2015
 ms.assetid: 01b8e746-12d3-471d-b811-7539e4547784
-ms.openlocfilehash: 345e777b93497f483ca30f5c42fbf5a5c146dea3
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1cafa8b690afb753dfdb0301dc6a19f5f257e9c0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484316"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591871"
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML およびその他の XML テクノロジ
 ここでは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を他の XML テクノロジ (<xref:System.Xml.XmlReader>、XSLT、MSXML、および XmlLite) と比較します。 使用するテクノロジを決定するときに、ここで説明する情報を参照してください。  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] とドキュメント オブジェクト モデル (DOM) の比較については、「[LINQ to XML およびDOM (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)」を参照してください。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] とドキュメント オブジェクト モデル (DOM) の比較については、「[LINQ to XML およびDOM (C#)](./linq-to-xml-vs-dom.md)」を参照してください。  
   
 ## <a name="linq-to-xml-vs-xmlreader"></a>LINQ to XML およびXmlReader  
  <xref:System.Xml.XmlReader> は、高速、前方参照専用、非キャッシュのパーサーです。  
@@ -54,4 +54,4 @@ ms.locfileid: "66484316"
   
 ## <a name="see-also"></a>関連項目
 
-- [はじめに (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [はじめに (LINQ to XML)](./linq-to-xml-overview.md)

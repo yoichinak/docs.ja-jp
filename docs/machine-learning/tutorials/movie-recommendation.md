@@ -2,16 +2,15 @@
 title: 'チュートリアル: 映画レコメンダーをビルドする - マトリックス因子分解'
 description: このチュートリアルでは、.NET Core コンソール アプリケーションにおいて ML.NET によって映画レコメンダーを構築する方法を示します。 手順では C# と Visual Studio 2019 を使用します。
 author: briacht
-ms.author: johalex
 ms.date: 07/09/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: b58afca0671468d3e981c7615e0af1c0f8ae632f
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 82da512d437ed2c5c28601c34687494b8be4d046
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331656"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666681"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>チュートリアル: ML.NET でマトリックス因子分解を使用して映画レコメンダーをビルドする
 

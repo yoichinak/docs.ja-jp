@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -target compiler options [C#], /target:winexe
 - target compiler options [C#], /target:winexe
 ms.assetid: b5a0619c-8caa-46a5-a743-1cf68408ad7a
-ms.openlocfilehash: 3c16bf8aed0d281b2b5a3f9c6ae06f343b1eff7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 981f1b0b6ca9f708bb022a3662ab181a4f472040
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307314"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606382"
 ---
 # <a name="-targetwinexe-c-compiler-options"></a>-target:winexe (C# コンパイラ オプション)
 **-target:winexe** オプションを使用すると、実行可能な (EXE) Windows プログラムがコンパイラによって作成されます。  
@@ -27,13 +27,13 @@ ms.locfileid: "59307314"
 ## <a name="remarks"></a>解説  
  実行可能ファイルは、.exe という拡張子で作成されます。 Windows プログラムは、.NET Framework ライブラリまたは Windows API のユーザー インターフェイスを提供するプログラムです。  
   
- コンソール アプリケーションを作成するには、[-target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md) を使用します。  
+ コンソール アプリケーションを作成するには、[-target:exe](./target-exe-compiler-option.md) を使用します。  
   
- [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) オプションで指定しない限り、出力ファイル名は [Main](../../../csharp/programming-guide/main-and-command-args/index.md) メソッドを含む入力ファイルと同じになります。  
+ [-out](./out-compiler-option.md) オプションで指定しない限り、出力ファイル名は [Main](../../programming-guide/main-and-command-args/index.md) メソッドを含む入力ファイルと同じになります。  
   
- コマンド ラインで指定すると、次の **-out** オプションまたは [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) オプションまでのすべてのファイルが、Windows プログラムの作成に使用されます。  
+ コマンド ラインで指定すると、次の **-out** オプションまたは [-target](./target-compiler-option.md) オプションまでのすべてのファイルが、Windows プログラムの作成に使用されます。  
   
- **Main** メソッドは、.exe ファイルにコンパイルされるソース コード ファイル内に 1 つだけ必要です。 コードに **Main** メソッドを含むクラスが複数ある場合は、[-main](../../../csharp/language-reference/compiler-options/main-compiler-option.md) オプションを使用して、**Main** メソッドを含めるクラスを指定できます。  
+ **Main** メソッドは、.exe ファイルにコンパイルされるソース コード ファイル内に 1 つだけ必要です。 コードに **Main** メソッドを含むクラスが複数ある場合は、[-main](./main-compiler-option.md) オプションを使用して、**Main** メソッドを含めるクラスを指定できます。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
   
@@ -54,5 +54,5 @@ csc -target:winexe in.cs
   
 ## <a name="see-also"></a>関連項目
 
-- [-target (C# コンパイラ オプション)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
+- [-target (C# コンパイラ オプション)](./target-compiler-option.md)
+- [C# コンパイラ オプション](./index.md)

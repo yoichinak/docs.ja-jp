@@ -18,12 +18,12 @@ ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 61f1b93d2f54923f0dfc4832a79fe35dc319d0f6
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 560597770d667cf8c7668bf2338ac4bac3eb192f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331756"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968569"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>正規表現での代替構成体
 <a name="top"></a> 代替構成体は、択一条件または条件一致を有効にするように正規表現を変更します。 .NET では、次の 3 つの代替構成体がサポートされています。  
@@ -80,7 +80,7 @@ ms.locfileid: "68331756"
  ここで、`(?=`*expression*`)` はゼロ幅アサーションの構成体として解釈されます (詳しくは、「[正規表現でのグループ化構成体](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)」をご覧ください)。正規表現エンジンによって *expression* はアンカー (ゼロ幅アサーション) として解釈されるので、*expression* は、ゼロ幅アサーション (詳しくは「[正規表現のアンカー](../../../docs/standard/base-types/anchors-in-regular-expressions.md)」を参照) か、*yes* にも含まれている部分式のいずれかである必要があります。 それ以外の場合、*yes* パターンには一致しません。  
   
 > [!NOTE]
->  *expression*が名前付きキャプチャ グループや番号付きキャプチャ グループである場合、代替構成体はキャプチャ テストとして解釈されます。詳しくは、次のセクション「 [有効なキャプチャ グループに基づく条件一致](#Conditional_Group)」をご覧ください。 つまり、正規表現エンジンは、キャプチャした部分文字列を照合しようとはせず、代わりにグループが存在するかどうかをテストします。  
+> *expression*が名前付きキャプチャ グループや番号付きキャプチャ グループである場合、代替構成体はキャプチャ テストとして解釈されます。詳しくは、次のセクション「 [有効なキャプチャ グループに基づく条件一致](#Conditional_Group)」をご覧ください。 つまり、正規表現エンジンは、キャプチャした部分文字列を照合しようとはせず、代わりにグループが存在するかどうかをテストします。  
   
  次の例は、前の「[&#124; を使用したパターン マッチング](#Either_Or)」セクションで説明した例を少し変更したものです。 条件一致を使用して、ワード境界の後の最初の 3 文字が「2 桁の数字の後にハイフン」であるかどうかを判定します。 一致した場合は、米国の雇用者番号 (EIN) との照合を試みます。 一致しない場合は、米国の社会保険番号 (SSN) との照合を試みます。  
   

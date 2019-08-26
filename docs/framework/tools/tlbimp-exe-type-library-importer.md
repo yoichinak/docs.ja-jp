@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f9741944dcf8a5fcc05c169a1c3c3f679902474
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: f9c34b237655eb49b6a44c366586b3cabb5a684f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859681"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937978"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (タイプ ライブラリ インポーター)
 タイプ ライブラリ インポーターは、COM タイプ ライブラリにある型定義を共通言語ランタイム アセンブリで等価な定義に変換します。 Tlbimp.exe の出力は、元のタイプ ライブラリで定義された型のランタイム メタデータを格納するバイナリ ファイル (アセンブリ) です。 このファイルは [ildasm.exe](ildasm-exe-il-disassembler.md) などのツールでチェックできます。  
@@ -71,7 +71,7 @@ tlbimp tlbFile [options]
 |**/?**|このツールのコマンド構文とオプションを表示します。|  
   
 > [!NOTE]
->  Tlbimp.exe のコマンド ライン オプションでは、大文字と小文字が区別されません。また、これらのオプションは任意の順序で指定できます。 オプションを一意に識別するために十分である場合は、オプションの一部を指定するだけでもかまいません。 したがって、 **/n** と指定した場合は **/nologo**、 **/ou:** *outfile.dll* と指定した場合は **/out:** *outfile.dll* であると見なされます。  
+> Tlbimp.exe のコマンド ライン オプションでは、大文字と小文字が区別されません。また、これらのオプションは任意の順序で指定できます。 オプションを一意に識別するために十分である場合は、オプションの一部を指定するだけでもかまいません。 したがって、 **/n** と指定した場合は **/nologo**、 **/ou:** *outfile.dll* と指定した場合は **/out:** *outfile.dll* であると見なされます。  
   
 ## <a name="remarks"></a>解説  
  Tlbimp.exe は、タイプ ライブラリ全体の変換を一括して実行します。 このツールを使用しても、単一のタイプ ライブラリで定義されている型のサブセットに関する型情報は生成できません。  

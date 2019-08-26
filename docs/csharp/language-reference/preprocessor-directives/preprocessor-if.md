@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: 12ef0926665103e739ed4a8ee83ff895b439fffc
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: d0297094fbb8098b706cb8c6338fa123afc0753b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300075"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605690"
 ---
 # <a name="if-c-reference"></a>#if (C# リファレンス)
 
-C# コンパイラでは、`#if` ディレクティブ、次いで [#endif](preprocessor-endif.md) ディレクティブが検出されると、これらのディレクティブ間のコードがコンパイルされます (指定されたシンボルが定義されている場合に限る)。 C および C++ とは異なり、シンボルに数値を割り当てることはできません。 C# の #if ステートメントはブール値で、シンボルが定義されているかどうかのみをテストします。 次に例を示します。
+C# コンパイラでは、`#if` ディレクティブ、次いで [#endif](preprocessor-endif.md) ディレクティブが検出されると、これらのディレクティブ間のコードがコンパイルされます (指定されたシンボルが定義されている場合に限る)。 C および C++ とは異なり、シンボルに数値を割り当てることはできません。 C# の #if ステートメントはブール値で、シンボルが定義されているかどうかのみをテストします。 例:
 
 ```csharp
 #if DEBUG
@@ -46,7 +46,7 @@ C# コンパイラでは、`#if` ディレクティブ、次いで [#endif](prep
 
 他の定義済みシンボルとしては、DEBUG 定数と TRACE 定数があります。 `#define` を使用して、プロジェクトに設定された値をオーバーライドできます。 たとえば、DEBUG シンボルは、ビルド構成プロパティ ("デバッグ" モードまたは "リリース" モード) に応じて自動的に設定されます。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 次の例は、ファイルで MYTEST シンボルを定義し、MYTEST シンボルと DEBUG シンボルの値をテストする方法を示しています。 この例の出力は、プロジェクトをデバッグとリリースのどちらの構成モードでビルドするかによって異なります。
 
@@ -89,7 +89,7 @@ public class MyClass
 
 ## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [C# リファレンス](../index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# プリプロセッサ ディレクティブ](index.md)
 - [方法: トレースとデバッグを指定して条件付きコンパイルを実行する](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)

@@ -6,18 +6,18 @@ helpviewer_keywords:
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
 author: ghogen
-ms.openlocfilehash: 124e8a0dff18f02c178b56167cd12faa1fc97992
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 960d30f4e484238e9e7c23741578650a8c3005c8
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649412"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987151"
 ---
 # <a name="how-to-create-windows-services"></a>方法: Windows サービスを作成する
 サービスを作成するときには、**Windows サービス**と呼ばれる、Visual Studio プロジェクトのテンプレートを使用できます。 このテンプレートを使用すると、作業の多くを自動化できます。この自動化は、適切なクラスと名前空間を参照し、サービスの基底クラスからの継承を設定し、メソッドのいくつかをオーバーライドすることで実現されます。  
   
 > [!WARNING]
->  Windows サービスのプロジェクト テンプレートは、Visual Studio の Express Edition では使用できません。  
+> Windows サービスのプロジェクト テンプレートは、Visual Studio の Express Edition では使用できません。  
   
  実用的なサービスを作成するには、少なくとも以下の作業を行う必要があります。  
   
@@ -32,14 +32,14 @@ ms.locfileid: "64649412"
 1. **Windows サービス** プロジェクトを作成します。  
   
     > [!NOTE]
-    >  テンプレートを使用せずにサービスを記述する方法については、「[方法: プログラムでサービスを作成する](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)」を参照してください。  
+    > テンプレートを使用せずにサービスを記述する方法については、「[方法: プログラムでサービスを作成する](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)」を参照してください。  
   
 2. **[プロパティ]** ウィンドウで、サービスの <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> プロパティを設定します。  
   
      ![ServiceName プロパティを設定する。](../../../docs/framework/windows-services/media/windowsservice-servicename.PNG "WindowsService_ServiceName")  
   
     > [!NOTE]
-    >  <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> プロパティの値は、各インストーラー クラスに記録されている名前と一致する必要があります。 このプロパティを変更した場合は、インストーラー クラスの <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> プロパティも変更する必要があります。  
+    > <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> プロパティの値は、各インストーラー クラスに記録されている名前と一致する必要があります。 このプロパティを変更した場合は、インストーラー クラスの <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> プロパティも変更する必要があります。  
   
 3. 次のいずれかのプロパティを設定して、サービスの動作を決定します。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "64649412"
     |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|サービスがアクションを実行したときにアプリケーション イベント ログに情報を入力する場合は `True` を設定します。この機能を無効にする場合は `false` を設定します。 詳細については、「[方法 :サービスに関する情報のログを記録する](../../../docs/framework/windows-services/how-to-log-information-about-services.md)」を参照してください。 **注:** 既定では、<xref:System.ServiceProcess.ServiceBase.AutoLog%2A> は `true` に設定されています。|  
   
     > [!NOTE]
-    >  <xref:System.ServiceProcess.ServiceBase.CanStop%2A> または <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> を `false` に設定すると、**サービス コントロール マネージャー**は、対応するメニュー オプション (サービスの停止、一時停止、または継続) を無効にします。  
+    > <xref:System.ServiceProcess.ServiceBase.CanStop%2A> または <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> を `false` に設定すると、**サービス コントロール マネージャー**は、対応するメニュー オプション (サービスの停止、一時停止、または継続) を無効にします。  
   
 4. コード エディターを起動し、<xref:System.ServiceProcess.ServiceBase.OnStart%2A> プロシージャと <xref:System.ServiceProcess.ServiceBase.OnStop%2A> プロシージャの処理を記述します。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "64649412"
 7. **[ビルド]** メニューの **[ソリューションのビルド]** をクリックして、プロジェクトを作成します。  
   
     > [!NOTE]
-    >  F5 キーを押してプロジェクトを実行しないでください。この方法ではサービス プロジェクトを実行できません。  
+    > F5 キーを押してプロジェクトを実行しないでください。この方法ではサービス プロジェクトを実行できません。  
   
 8. サービスをインストールします。 詳細については、「[方法 :サービスをインストールおよびアンインストールする](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)」を参照してください。  
   

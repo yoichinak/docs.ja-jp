@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: 1277b35723777760deebb6606ddc90bd21e654ec
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f30b48fc6bd1e896658a7234a58409ea9a0f5e6f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744120"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69601944"
 ---
 # <a name="-operator-c-reference"></a>= 演算子 (C# リファレンス)
 
-代入演算子 `=` は、右辺オペランドの値を、左辺オペランドに指定された変数、[プロパティ](../../programming-guide/classes-and-structs/properties.md)、または[インデクサー](../../../csharp/programming-guide/indexers/index.md)要素に割り当てます。 代入式の結果は、左辺のオペランドに割り当てられる値です。 右辺のオペランドの型は、左辺のオペランドの型と同じであるか、暗黙に変換できる必要があります。
+代入演算子 `=` は、右辺オペランドの値を、左辺オペランドに指定された変数、[プロパティ](../../programming-guide/classes-and-structs/properties.md)、または[インデクサー](../../programming-guide/indexers/index.md)要素に割り当てます。 代入式の結果は、左辺のオペランドに割り当てられる値です。 右辺のオペランドの型は、左辺のオペランドの型と同じであるか、暗黙に変換できる必要があります。
 
 代入演算子は右結合です。つまり、次の形式の式があるとします。
 

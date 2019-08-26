@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: e52ff26c-c5d3-4fab-9fec-c937fb387963
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c67b23da6742af3cb65da6da49dbab982a0248bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 705b6bc364e2ecf00c3629814228157c90017a8b
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694621"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988450"
 ---
 # <a name="how-to-specify-the-execution-mode-in-plinq"></a>方法: PLINQ の実行モードを指定する
 この例では、PLINQ に既定のヒューリスティックをバイパスさせ、クエリのシェイプに関係なくクエリを並列化する方法を示します。  
   
 > [!WARNING]
->  この例は、使用方法を示すことを意図したものであるため、同等の順次的な LINQ to Objects クエリほど高速ではない可能性があります。 高速化の詳細については、「[PLINQ での高速化について](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)」を参照してください。  
+> この例は、使用方法を示すことを意図したものであるため、同等の順次的な LINQ to Objects クエリほど高速ではない可能性があります。 高速化の詳細については、「[PLINQ での高速化について](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  [!code-csharp[PLINQ#22](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#22)]

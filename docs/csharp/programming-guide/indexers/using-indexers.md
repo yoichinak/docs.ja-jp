@@ -5,18 +5,18 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: 6b129177e6eb916982a27ba76aca517b0642344c
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 4411fe0ffe7dc136b4e74adeba3e5596af3aa1db
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203299"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589429"
 ---
 # <a name="using-indexers-c-programming-guide"></a>インデクサーの使用 (C# プログラミング ガイド)
 
-インデクサーは構文を簡略化します。これを使用すると、[クラス](../../../csharp/language-reference/keywords/class.md)、[構造体](../../../csharp/language-reference/keywords/struct.md)、または[インターフェイス](../../../csharp/language-reference/keywords/interface.md)を作成でき、クライアント アプリケーションは配列と同じようにアクセスできます。 インデクサーは、内部コレクションまたは配列をカプセル化することが主な目的である型で最も多く実装されます。 たとえば、24 時間のうちの異なる 10 回の時刻で記録した温度を華氏で表す `TempRecord` クラスがあるとします。 このクラスには、温度値を格納する `float[]` 型の配列 `temps` が含まれています。 このクラスにインデクサーを実装することで、クライアントは、`float temp = tr.temps[4]` ではなく `float temp = tr[4]` として `TempRecord` インスタンスの温度にアクセスできます。 インデクサーはクライアント アプリケーションの構文を簡略化するだけでなく、クラスとその目的を、他の開発者たちにとってわかりやすい、より直感的なものにします。  
+インデクサーは構文を簡略化します。これを使用すると、[クラス](../../language-reference/keywords/class.md)、[構造体](../../language-reference/keywords/struct.md)、または[インターフェイス](../../language-reference/keywords/interface.md)を作成でき、クライアント アプリケーションは配列と同じようにアクセスできます。 インデクサーは、内部コレクションまたは配列をカプセル化することが主な目的である型で最も多く実装されます。 たとえば、24 時間のうちの異なる 10 回の時刻で記録した温度を華氏で表す `TempRecord` クラスがあるとします。 このクラスには、温度値を格納する `float[]` 型の配列 `temps` が含まれています。 このクラスにインデクサーを実装することで、クライアントは、`float temp = tr.temps[4]` ではなく `float temp = tr[4]` として `TempRecord` インスタンスの温度にアクセスできます。 インデクサーはクライアント アプリケーションの構文を簡略化するだけでなく、クラスとその目的を、他の開発者たちにとってわかりやすい、より直感的なものにします。  
   
-クラスまたは構造体でインデクサーを宣言するには、次の例のように [this](../../../csharp/language-reference/keywords/this.md) キーワードを使用します。
+クラスまたは構造体でインデクサーを宣言するには、次の例のように [this](../../language-reference/keywords/this.md) キーワードを使用します。
 
 ```csharp
 public int this[int index]    // Indexer declaration  
@@ -27,13 +27,13 @@ public int this[int index]    // Indexer declaration
 
 ## <a name="remarks"></a>解説
 
-インデクサーの型とそのパラメーターの型は、少なくとも、インデクサー自体と同程度にアクセス可能である必要があります。 アクセシビリティ レベルの詳細については、「[アクセス修飾子 (C# リファレンス)](../../../csharp/language-reference/keywords/access-modifiers.md)」を参照してください。  
+インデクサーの型とそのパラメーターの型は、少なくとも、インデクサー自体と同程度にアクセス可能である必要があります。 アクセシビリティ レベルの詳細については、「[アクセス修飾子 (C# リファレンス)](../../language-reference/keywords/access-modifiers.md)」を参照してください。  
   
- インターフェイスでインデクサーを使用する方法の詳細については、「[インターフェイスのインデクサー (C# プログラミング ガイド)](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)」を参照してください。  
+ インターフェイスでインデクサーを使用する方法の詳細については、「[インターフェイスのインデクサー (C# プログラミング ガイド)](./indexers-in-interfaces.md)」を参照してください。  
   
  インデクサーのシグネチャは、その仮パラメーターの数と型で構成されます。 これには、インデクサーの型や仮パラメーターの名前は含まれません。 同じクラス内に複数のインデクサーを宣言する場合は、異なるシグネチャが必要です。  
   
- インデクサーの値は変数として分類されないため、インデクサーの値を [ref](../../../csharp/language-reference/keywords/ref.md) や [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) パラメーターとして渡すことはできません。  
+ インデクサーの値は変数として分類されないため、インデクサーの値を [ref](../../language-reference/keywords/ref.md) や [out](../../language-reference/keywords/out-parameter-modifier.md) パラメーターとして渡すことはできません。  
   
  他の言語が使用できる名前をインデクサーに指定するには、次の例のように <xref:System.Runtime.CompilerServices.IndexerNameAttribute?displayProperty=nameWithType> を使用します。  
 
@@ -49,9 +49,9 @@ public int this[int index]   // Indexer declaration
   
 ## <a name="example-1"></a>例 1  
   
-次の例は、プライベートな配列フィールド `temps` とインデクサーの宣言方法を示しています。 インデクサーを使用すれば、インスタンス `tempRecord[i]` に直接アクセスできます。 インデクサーを使用しない場合は、配列を [public](../../../csharp/language-reference/keywords/public.md) メンバーとして宣言し、そのメンバー `tempRecord.temps[i]` に直接アクセスします。  
+次の例は、プライベートな配列フィールド `temps` とインデクサーの宣言方法を示しています。 インデクサーを使用すれば、インスタンス `tempRecord[i]` に直接アクセスできます。 インデクサーを使用しない場合は、配列を [public](../../language-reference/keywords/public.md) メンバーとして宣言し、そのメンバー `tempRecord.temps[i]` に直接アクセスします。  
   
- `Console.Write` ステートメントなどでインデクサーのアクセスが評価されると、[get](../../../csharp/language-reference/keywords/get.md) アクセサーが呼び出されることに注意してください。 したがって、`get` アクセサーが存在しない場合は、コンパイル時エラーが発生します。  
+ `Console.Write` ステートメントなどでインデクサーのアクセスが評価されると、[get](../../language-reference/keywords/get.md) アクセサーが呼び出されることに注意してください。 したがって、`get` アクセサーが存在しない場合は、コンパイル時エラーが発生します。  
   
  [!code-csharp[csProgGuideIndexers#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#1)]  
   
@@ -71,10 +71,10 @@ C# では、インデクサー パラメーター型は整数に制限されま�
   
 - クライアント コードが無効なインデックス値を渡しても、それを処理できるように必ずエラー処理戦略を組み込んでください。 このトピックの最初の例の TempRecord クラスには Length プロパティが用意されており、入力がインデクサーに渡される前にクライアント コードで検証できるようになっています。 インデクサー自体にエラー処理コードを配置することもできます。 インデクサーのアクセサー内部でスローされる例外はすべて、ユーザーのために文書化してください。  
   
-- [get](../../../csharp/language-reference/keywords/get.md) および [set](../../../csharp/language-reference/keywords/set.md) アクセサーのアクセシビリティを設定し、適切な制限を指定します。 これは、`set` アクセサーの場合、特に重要です。 詳細については、「[アクセサーのアクセシビリティの制限](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)」を参照してください。  
+- [get](../../language-reference/keywords/get.md) および [set](../../language-reference/keywords/set.md) アクセサーのアクセシビリティを設定し、適切な制限を指定します。 これは、`set` アクセサーの場合、特に重要です。 詳細については、「[アクセサーのアクセシビリティの制限](../classes-and-structs/restricting-accessor-accessibility.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [インデクサー](../../../csharp/programming-guide/indexers/index.md)
-- [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [C# プログラミング ガイド](../index.md)
+- [インデクサー](./index.md)
+- [プロパティ](../classes-and-structs/properties.md)

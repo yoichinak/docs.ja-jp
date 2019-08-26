@@ -2,15 +2,15 @@
 title: LINQ to Objects (C#)
 ms.date: 07/20/2015
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
-ms.openlocfilehash: c66a818d48316279817fdc6b7919a7667b6b8eb8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9e20b2c7278787671c7a27646b7cbaac78b57d5f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484463"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591855"
 ---
 # <a name="linq-to-objects-c"></a>LINQ to Objects (C#)
-"LINQ to Objects" という用語は、[LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md) や [LINQ to XML](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) などの中間 LINQ プロバイダーまたは API を使用せずに、LINQ クエリを任意の <xref:System.Collections.IEnumerable> コレクションまたは <xref:System.Collections.Generic.IEnumerable%601> コレクションと直接組み合わせて使用することを意味します。 LINQ を使用して、<xref:System.Collections.Generic.List%601>、<xref:System.Array>、<xref:System.Collections.Generic.Dictionary%602> などの任意の列挙可能なコレクションを照会できます。 このコレクションは、ユーザー定義のコレクションでも、.NET Framework API から返されたコレクションでもかまいません。  
+"LINQ to Objects" という用語は、[LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md) や [LINQ to XML](./linq-to-xml-overview.md) などの中間 LINQ プロバイダーまたは API を使用せずに、LINQ クエリを任意の <xref:System.Collections.IEnumerable> コレクションまたは <xref:System.Collections.Generic.IEnumerable%601> コレクションと直接組み合わせて使用することを意味します。 LINQ を使用して、<xref:System.Collections.Generic.List%601>、<xref:System.Array>、<xref:System.Collections.Generic.Dictionary%602> などの任意の列挙可能なコレクションを照会できます。 このコレクションは、ユーザー定義のコレクションでも、.NET Framework API から返されたコレクションでもかまいません。  
   
  本質的に、LINQ to Objects は、コレクションを扱うための新しい方法です。 従来の方法では、複雑な `foreach` ループを記述して、コレクションからデータを取得する方法を指定する必要がありました。 LINQ を使用する場合は、何を取得するかを表す宣言コードを記述します。  
   
@@ -27,20 +27,20 @@ ms.locfileid: "66484463"
  このセクションでは、いくつか例を挙げながら、LINQ を使った方法を具体的に説明します。 ただし、すべてを網羅したものではありません。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [LINQ と文字列 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+ [LINQ と文字列 (C#)](./linq-and-strings.md)  
  LINQ を使用して、文字列および文字列のコレクションの照会と変換を行う方法について説明します。 これらの基本原則を具体的に示すトピックへのリンクも含まれます。  
   
- [LINQ とリフレクション (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-reflection.md)  
+ [LINQ とリフレクション (C#)](./linq-and-reflection.md)  
  LINQ でリフレクションを使用する方法を示すサンプルへのリンクを示します。  
   
- [LINQ とファイル ディレクトリ (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
+ [LINQ とファイル ディレクトリ (C#)](./linq-and-file-directories.md)  
  LINQ を使用して、ファイル システムとやり取りする方法について説明します。 これらの概念を具体的に示すトピックへのリンクも含まれます。  
   
- [方法: LINQ を使用して ArrayList を照会する (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)  
+ [方法: LINQ を使用して ArrayList を照会する (C#)](./how-to-query-an-arraylist-with-linq.md)  
  C# で ArrayList を照会する方法を示します。  
   
- [方法: LINQ クエリのカスタム メソッドを追加する (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md)  
+ [方法: LINQ クエリのカスタム メソッドを追加する (C#)](./how-to-add-custom-methods-for-linq-queries.md)  
  <xref:System.Collections.Generic.IEnumerable%601> インターフェイスに拡張メソッドを追加して、LINQ クエリに使用できるメソッド セットを拡張する方法について説明します。  
   
- [統合言語クエリ (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
+ [統合言語クエリ (LINQ) (C#)](./index.md)  
  LINQ について説明しているトピックへのリンクと、クエリを実行するコードの例を示します。

@@ -2,20 +2,20 @@
 title: 純粋関数によるリファクタリング (C#)
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
-ms.openlocfilehash: 093374c848a9792d8c184ddc210bbcc8171d3374
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: d1c4b1fc59e52fbd72dec1ee0e73e7198a083868
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483999"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591311"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>純粋関数によるリファクタリング (C#)
-次の例では、前の例 (「[拡張メソッドを使用したリファクタリング (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)」) をリファクタリングして、純粋関数を使用するようにします。この例では、段落のテキストを検索するコードが純粋静的メソッド `ParagraphText` に移動されています。  
+次の例では、前の例 (「[拡張メソッドを使用したリファクタリング (C#)](./refactoring-using-an-extension-method.md)」) をリファクタリングして、純粋関数を使用するようにします。この例では、段落のテキストを検索するコードが純粋静的メソッド `ParagraphText` に移動されています。  
   
 ## <a name="example"></a>例  
  この例では、WordprocessingML ドキュメントを処理して、WordprocessingML ドキュメントから段落ノードを取得します。 それぞれの段落のスタイルも特定します。 この例は、このチュートリアルのこれまでの例に基づいています。 リファクタリングされたコードについては、以下のコード内にあるコメントで説明が示されています。  
   
- この例のソース ドキュメントを作成する方法の詳細については、「[ソースとなる Office Open XML ドキュメントの作成 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)」を参照してください。  
+ この例のソース ドキュメントを作成する方法の詳細については、「[ソースとなる Office Open XML ドキュメントの作成 (C#)](./creating-the-source-office-open-xml-document.md)」を参照してください。  
   
  この例では、WindowsBase アセンブリのクラスを使用します。 また、<xref:System.IO.Packaging?displayProperty=nameWithType> 名前空間内の型を使用します。  
   
@@ -177,10 +177,10 @@ StyleName:Code >Hello World<
 ### <a name="next-steps"></a>次の手順  
  次の例では、XML を別の形式に射影する方法を示します。  
   
-- [異なる構造の XML の射影 (C#)](../../../../csharp/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+- [異なる構造の XML の射影 (C#)](./projecting-xml-in-a-different-shape.md)  
   
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)
-- [拡張メソッドを使用したリファクタリング (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)
-- [純粋関数へのリファクタリング (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [チュートリアル:WordprocessingML ドキュメント内のコンテンツの操作 (C#)](./shape-of-wordprocessingml-documents.md)
+- [拡張メソッドを使用したリファクタリング (C#)](./refactoring-using-an-extension-method.md)
+- [純粋関数へのリファクタリング (C#)](./refactoring-into-pure-functions.md)

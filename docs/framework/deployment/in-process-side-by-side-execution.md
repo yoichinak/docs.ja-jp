@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b7964b2a59c67380d7f19077c01efa0a4a636cff
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 5d9d77ef20090e007e22a0d2f90b29f32ff94b46
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170510"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911112"
 ---
 # <a name="in-process-side-by-side-execution"></a>インプロセスの side-by-side 実行
 .NET Framework 4 以降では、インプロセスの side-by-side ホスティングを使用して、1 つのプロセスで複数のバージョンの共通言語ランタイム (CLR) を実行できます。 既定では、マネージド COM コンポーネントは、プロセスに読み込まれている .NET Framework のバージョンに関係なく、コンポーネントがビルドされた .NET Framework のバージョンで実行されます。  
@@ -45,7 +45,7 @@ ms.locfileid: "67170510"
     |4|[はい]|はい|利用不可|  
   
 > [!NOTE]
->  .NET Framework バージョン 3.0 および 3.5 はバージョン 2.0 に対して増分的にビルドされているため、side-by-side で実行する必要はありません。 これらは、本質的に同じバージョンです。  
+> .NET Framework バージョン 3.0 および 3.5 はバージョン 2.0 に対して増分的にビルドされているため、side-by-side で実行する必要はありません。 これらは、本質的に同じバージョンです。  
   
 <a name="scenarios"></a>   
 ## <a name="common-side-by-side-hosting-scenarios"></a>side-by-side ホスティングの一般的なシナリオ  

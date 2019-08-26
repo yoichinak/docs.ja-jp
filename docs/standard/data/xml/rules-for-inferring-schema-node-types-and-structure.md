@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c2f28490203bcc4853bc6736ce7089f308bc275
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6c68cd98b496143e6b964383f8fa0c3af5d2c87d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338710"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939640"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>スキーマのノード型および構造を推論するときの規則
 このトピックでは、スキーマ推論プロセスで、XML ドキュメント内のノード型を XML スキーマ定義言語 (XSD) 構造に変換する方法を説明します。  
@@ -35,7 +35,7 @@ ms.locfileid: "59338710"
 8. 子要素のシーケンスと choice を持つ要素  
   
 > [!NOTE]
->  すべての `complexType` 宣言は匿名型として推論されます。 推論されるグローバル要素はルート要素だけであり、その他すべての要素はローカル要素です。  
+> すべての `complexType` 宣言は匿名型として推論されます。 推論されるグローバル要素はルート要素だけであり、その他すべての要素はローカル要素です。  
   
  スキーマ推論プロセスの詳細については、「[XML ドキュメントからのスキーマの推論](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)」を参照してください。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "59338710"
  <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> メソッドへの XML 入力と、生成される XML スキーマを次の表に示します。 太字になっている要素は、子要素のシーケンスを持つ要素から推論されるスキーマです。  
   
 > [!NOTE]
->  要素が子要素を 1 つしか持っていない場合でも、子要素はシーケンスとして扱われます。  
+> 要素が子要素を 1 つしか持っていない場合でも、子要素はシーケンスとして扱われます。  
   
  スキーマ推論プロセスの詳細については、「[XML ドキュメントからのスキーマの推論](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)」を参照してください。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "59338710"
  <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> メソッドへの XML 入力と、生成される XML スキーマを次の表に示します。 太字になっている要素は、子要素のシーケンスと属性を持つ要素から推論されるスキーマです。  
   
 > [!NOTE]
->  要素が子要素を 1 つしか持っていない場合でも、子要素はシーケンスとして扱われます。  
+> 要素が子要素を 1 つしか持っていない場合でも、子要素はシーケンスとして扱われます。  
   
  スキーマ推論プロセスの詳細については、「[XML ドキュメントからのスキーマの推論](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)」を参照してください。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "59338710"
  <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> メソッドへの XML 入力と、生成される XML スキーマを次の表に示します。 太字になっているスキーマは、子要素のシーケンスと choice を持つ要素から推論されるスキーマです。  
   
 > [!NOTE]
->  `maxOccurs` 要素の `xs:choice` 属性は、推論されるスキーマでは `"unbounded"` に設定されます。  
+> `maxOccurs` 要素の `xs:choice` 属性は、推論されるスキーマでは `"unbounded"` に設定されます。  
   
  スキーマ推論プロセスの詳細については、「[XML ドキュメントからのスキーマの推論](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)」を参照してください。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "59338710"
  <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> メソッドへの XML 入力と、生成される XML スキーマを次の表に示します。 太字になっている要素は、子要素のシーケンスと choice および属性を持つ要素から推論されるスキーマです。  
   
 > [!NOTE]
->  `maxOccurs` 要素の `xs:choice` 属性は、推論されるスキーマでは `"unbounded"` に設定されます。  
+> `maxOccurs` 要素の `xs:choice` 属性は、推論されるスキーマでは `"unbounded"` に設定されます。  
   
  スキーマ推論プロセスの詳細については、「[XML ドキュメントからのスキーマの推論](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)」を参照してください。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "59338710"
  ノード内で新しい属性が検出されるたびに、その属性は推論されるノードの定義に `use="required"` として追加されます。 そのインスタンスで同じノードが再び検出されると、推論プロセスでは、現在のインスタンスの属性と、既に推論されている属性を比較します。 既に推論されている属性の一部がインスタンスにない場合は、属性の定義に `use="optional"` が追加されます。 新しい属性は、既存の宣言に `use="optional"` として追加されます。  
   
 ### <a name="occurrence-constraints"></a>出現回数に関する制約  
- スキーマ推論プロセスでは、推論されるスキーマのコンポーネントに対して、値が `minOccurs` または `maxOccurs` の `"0"` 属性と、値が `"1"` または `"1"` の `"unbounded"` 属性が生成されます。  値 `"1"` および `"unbounded"` は、値 `"0"` および `"1"` では XML ドキュメントを検証できない場合にのみ使われます (たとえば、`MinOccurs="0"` では要素を正確に記述できない場合は、`minOccurs="1"` が使われます)。  
+ スキーマ推論プロセスでは、推論されるスキーマのコンポーネントに対して、値が `minOccurs` または `maxOccurs` の `"0"` 属性と、値が `"1"` または `"1"` の `"unbounded"` 属性が生成されます。 値 `"1"` および `"unbounded"` は、値 `"0"` および `"1"` では XML ドキュメントを検証できない場合にのみ使われます (たとえば、`MinOccurs="0"` では要素を正確に記述できない場合は、`minOccurs="1"` が使われます)。  
   
 ### <a name="mixed-content"></a>混合コンテンツ  
  テキストに要素が混じっているなど、要素に混合コンテンツが含まれている場合は、推論される複合型の定義に対して `mixed="true"` 属性が生成されます。  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generics [C#], arrays
 - arrays [C#], generics
 ms.assetid: 7d956536-3851-41b5-94ad-3e7c0a5fe485
-ms.openlocfilehash: 145203d259b943bea1f43a9e49db2c7889bf914a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: fee66cf7bd0ab3c051ea67acc323efa02a21a017
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978914"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659792"
 ---
 # <a name="generics-and-arrays-c-programming-guide"></a>ジェネリックと配列 (C# プログラミング ガイド)
 C# 2.0 以降、下限が 0 の一次元配列は自動的に <xref:System.Collections.Generic.IList%601> を実装します。 これにより、同じコードで配列や他のコレクション型を反復処理できるジェネリック メソッドを作成できます。 この手法は主に、コレクションのデータを読み込むときに便利です。 <xref:System.Collections.Generic.IList%601> インターフェイスを使用して配列の要素を追加したり、削除したりすることはできません。 このコンテキストの配列で、<xref:System.Collections.Generic.IList%601.RemoveAt%2A> のような、<xref:System.Collections.Generic.IList%601> メソッドを呼び出そうとすると、例外がスローされます。  
@@ -23,7 +23,7 @@ C# 2.0 以降、下限が 0 の一次元配列は自動的に <xref:System.Colle
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Collections.Generic>
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [ジェネリック](../../../csharp/programming-guide/generics/index.md)
-- [配列](../../../csharp/programming-guide/arrays/index.md)
-- [ジェネリック](~/docs/standard/generics/index.md)
+- [C# プログラミング ガイド](../index.md)
+- [ジェネリック](./index.md)
+- [配列](../arrays/index.md)
+- [ジェネリック](../../../standard/generics/index.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: f09f93f27aa4f50cfb7e09b9d6d4f98f22e1ac9a
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 4f0277ef5883a238cf2579d2d9ea956bc06061e2
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433552"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589876"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>型パラメーターの制約 (C# プログラミング ガイド)
 
@@ -113,7 +113,7 @@ C# 7.3 以降、基底クラスの制約として <xref:System.Enum?displayPrope
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Collections.Generic>
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [ジェネリックの概要](../../../csharp/programming-guide/generics/index.md)
-- [ジェネリック クラス](../../../csharp/programming-guide/generics/generic-classes.md)
-- [new 制約](../../../csharp/language-reference/keywords/new-constraint.md)
+- [C# プログラミング ガイド](../index.md)
+- [ジェネリックの概要](./index.md)
+- [ジェネリック クラス](./generic-classes.md)
+- [new 制約](../../language-reference/keywords/new-constraint.md)

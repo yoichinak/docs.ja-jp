@@ -8,12 +8,12 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: 0cb0b78396731a9b8e127430cd06a9e71812d4fd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 51c66d6bc2064d8051415de2ac083da478355a99
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593028"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602601"
 ---
 # <a name="-out-c-compiler-options"></a>-out (C# コンパイラ オプション)
 **-out** オプションは、出力ファイルの名前を指定します。  
@@ -29,7 +29,7 @@ ms.locfileid: "64593028"
  コンパイラによって作成された出力ファイルの名前です。  
   
 ## <a name="remarks"></a>解説  
- コマンド ラインでは、コンパイル用に複数の出力ファイルを指定することができます。 コンパイラは、**-out** オプションの後に 1 つまたは複数のソース コード ファイルがあることを想定しています。 そしてすべてのソース コード ファイルがその **-out** オプションで指定された出力ファイルにコンパイルされます。  
+ コマンド ラインでは、コンパイル用に複数の出力ファイルを指定することができます。 コンパイラは、 **-out** オプションの後に 1 つまたは複数のソース コード ファイルがあることを想定しています。 そしてすべてのソース コード ファイルがその **-out** オプションで指定された出力ファイルにコンパイルされます。  
   
  作成するファイルの完全な名前と拡張子を指定します。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "64593028"
   
  1 つの出力ファイルをコンパイルするために使用されるソース コード ファイルは、別の出力ファイルのコンパイルの同じコンパイルでは使用できません。  
   
- コマンド ラインのコンパイルで複数の出力ファイルを生成する場合は、出力ファイルのいずれか 1 つだけがアセンブリになれること、および (**-out** で暗黙的または明示的に) 指定された最初の出力ファイルだけがアセンブリになれることに留意してください。  
+ コマンド ラインのコンパイルで複数の出力ファイルを生成する場合は、出力ファイルのいずれか 1 つだけがアセンブリになれること、および ( **-out** で暗黙的または明示的に) 指定された最初の出力ファイルだけがアセンブリになれることに留意してください。  
   
  コンパイルの一部として生成されるすべてのモジュールが、同じくコンパイルで作成されるアセンブリに関連付けらるファイルになります。 [ildasm.exe](../../../framework/tools/ildasm-exe-il-disassembler.md) を使用して、アセンブリ マニフェストを表示し、関連付けられているファイルを確認します。  
   
@@ -66,6 +66,6 @@ csc t.cs -out:mymodule.netmodule -target:module t2.cs
   
 ## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
+- [C# コンパイラ オプション](./index.md)
 - [フレンド アセンブリ](../../../standard/assembly/friend-assemblies.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

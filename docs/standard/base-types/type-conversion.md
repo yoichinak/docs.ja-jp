@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 519b92cd24d75dd8e98fc28dbce3701c521a041d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a8fc6f59b7a295cb73489a644da80976345cb172
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593523"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922690"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>.NET Framework における型変換
 <a name="top"></a> すべての値には関連付けられた型があり、その値に割り振られる容量、可能な値の範囲、使用できるメンバーなどの属性を定義しています。 多くの値は複数の型として表現できます。 たとえば、値 4 は整数または浮動小数点数として表現できます。 型変換を実行すると、変換元の型の値と等価な値が新しい型で作成されますが、それが元のオブジェクトと同一である (値が正確に一致する) とは限りません。  
@@ -63,7 +63,7 @@ ms.locfileid: "65593523"
  拡大変換では、変換後の型より範囲の制限が厳しい既存の型またはメンバー リストが制限されている既存の型の値から新しい値が作成されます。 拡大変換でデータ損失が発生することはありません (ただし、精度が失われることはあります)。 データが失われないため、コンパイラは明示的な変換メソッドまたはキャスト演算子を使用するように要求する必要がなく、暗黙的または透過的に変換を処理できます。  
   
 > [!NOTE]
->  暗黙的な変換を実行するコードで変換メソッドを呼び出したり、キャスト演算子を使用したりすることはできますが、暗黙的な変換がサポートされるコンパイラでは必要ありません。  
+> 暗黙的な変換を実行するコードで変換メソッドを呼び出したり、キャスト演算子を使用したりすることはできますが、暗黙的な変換がサポートされるコンパイラでは必要ありません。  
   
  たとえば、<xref:System.Decimal> 型については、<xref:System.Byte>、<xref:System.Char>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.SByte>、<xref:System.UInt16>、<xref:System.UInt32>、および <xref:System.UInt64> の各型の値からの暗黙的な変換がサポートされます。 <xref:System.Decimal> 変数への値の代入時に、これらの暗黙的な変換の一部が実行される例を次に示します。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "65593523"
  縮小変換では、変換後の型より範囲が広い既存の型またはメンバー リストが多い既存の型の値から新しい値が作成されます。 縮小変換ではデータ損失が発生する可能性があるため、コンパイラでは多くの場合、変換メソッドの呼び出しまたはキャスト演算子を通じて変換を明示的に行うことが要求されます。 つまり、変換は、開発者のコード内で明示的に処理する必要があります。  
   
 > [!NOTE]
->  縮小変換で変換メソッドまたはキャスト演算子を必須とする主な目的は、コード内で処理できるように、データ損失の可能性または <xref:System.OverflowException>  について開発者に認識してもらうことにあります。 ただし、一部のコンパイラでは、この要件が緩和されている場合もあります。 たとえば、Visual Basic で `Option Strict` がオフの場合 (既定の設定)、Visual Basic コンパイラは縮小変換を暗黙的に実行します。  
+> 縮小変換で変換メソッドまたはキャスト演算子を必須とする主な目的は、コード内で処理できるように、データ損失の可能性または <xref:System.OverflowException>  について開発者に認識してもらうことにあります。 ただし、一部のコンパイラでは、この要件が緩和されている場合もあります。 たとえば、Visual Basic で `Option Strict` がオフの場合 (既定の設定)、Visual Basic コンパイラは縮小変換を暗黙的に実行します。  
   
  たとえば、<xref:System.UInt32>、<xref:System.Int64>、および <xref:System.UInt64> の各データ型の範囲は、次の表に示すように、<xref:System.Int32> データ型より広くなっています。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "65593523"
  ほとんどのコンパイラでは、チェックを行う形でも行わない形でも明示的な変換を実行できます。 チェックを行う変換を実行すると、変換する型の値が変換先の型の範囲外になる場合に <xref:System.OverflowException> がスローされます。 チェックを行わない変換を同じ条件で実行した場合、例外がスローされることがなくても、実際の動作は不定となり、結果が正しくない値になる可能性があります。  
   
 > [!NOTE]
->  C# では、キャスト演算子と共に `checked` キーワードを使用するか、または `/checked+` コンパイラ オプションを指定することで、チェックを行う変換を実行できます。 反対に、チェックを行わない変換を実行する場合は、キャスト演算子と共に `unchecked` キーワードを使用するか、または `/checked-` コンパイラ オプションを指定します。 既定では、明示的な変換はチェックされません。 Visual Basic では、プロジェクトの **[コンパイラの詳細設定]** ダイアログ ボックスで **[整数オーバーフローのチェックを解除]** チェック ボックスをオフにするか、または `/removeintchecks-` コンパイラ オプションを指定することで、チェックを行う変換を実行できます。 反対に、チェックを行わない変換を実行する場合は、プロジェクトの **[コンパイラの詳細設定]** ダイアログ ボックスで **[整数オーバーフローのチェックを解除]** チェック ボックスをオンにするか、または `/removeintchecks+` コンパイラ オプションを指定します。 既定では、明示的な変換のチェックが行われます。  
+> C# では、キャスト演算子と共に `checked` キーワードを使用するか、または `/checked+` コンパイラ オプションを指定することで、チェックを行う変換を実行できます。 反対に、チェックを行わない変換を実行する場合は、キャスト演算子と共に `unchecked` キーワードを使用するか、または `/checked-` コンパイラ オプションを指定します。 既定では、明示的な変換はチェックされません。 Visual Basic では、プロジェクトの **[コンパイラの詳細設定]** ダイアログ ボックスで **[整数オーバーフローのチェックを解除]** チェック ボックスをオフにするか、または `/removeintchecks-` コンパイラ オプションを指定することで、チェックを行う変換を実行できます。 反対に、チェックを行わない変換を実行する場合は、プロジェクトの **[コンパイラの詳細設定]** ダイアログ ボックスで **[整数オーバーフローのチェックを解除]** チェック ボックスをオンにするか、または `/removeintchecks+` コンパイラ オプションを指定します。 既定では、明示的な変換のチェックが行われます。  
   
  次の C# の例では、`checked` キーワードと `unchecked` キーワードを使用して、<xref:System.Byte> の範囲外の値を <xref:System.Byte> に変換したときの動作の違いを示しています。 チェックを行う変換では例外がスローされますが、チェックを行わない変換では <xref:System.Byte.MaxValue?displayProperty=nameWithType> 変数に <xref:System.Byte> が代入されます。  
   
@@ -143,7 +143,7 @@ ms.locfileid: "65593523"
  実装する型ではなく、そのインターフェイス上で変換メソッドを呼び出すという要件があるため、明示的なインターフェイスの実装の負荷は相対的に大きくなります。 代わりに、<xref:System.Convert> クラスの適切なメンバーを呼び出して共通言語ランタイムの基本型間の変換を行うことをお勧めします。 詳細については、次のセクションの「[Convert クラス](#Convert)」を参照してください。  
   
 > [!NOTE]
->  .NET Framework で提供される <xref:System.IConvertible> インターフェイスおよび <xref:System.Convert> クラスに加えて、各言語独自の変換方法が提供されている場合もあります。 たとえば C# ではキャスト演算子が使用され、Visual Basic ではコンパイラで実装された `CType`、`CInt`、`DirectCast` などの変換関数が使用されます。  
+> .NET Framework で提供される <xref:System.IConvertible> インターフェイスおよび <xref:System.Convert> クラスに加えて、各言語独自の変換方法が提供されている場合もあります。 たとえば C# ではキャスト演算子が使用され、Visual Basic ではコンパイラで実装された `CType`、`CInt`、`DirectCast` などの変換関数が使用されます。  
   
  一般に、<xref:System.IConvertible> インターフェイスは、.NET Framework の基本型間の変換をサポートするために設計されています。 ただし、このインターフェイスをカスタム型に実装して、その型から他のカスタム型への変換をサポートすることもできます。 詳細については、このトピックの「[ChangeType メソッドを使用するカスタム変換](#ChangeType)」を参照してください。  
   
@@ -157,7 +157,7 @@ ms.locfileid: "65593523"
  <xref:System.Convert> クラスは、言語に依存しない方法で基本型どうしの変換を実行し、共通言語ランタイムに対応するすべての言語で使用できます。 このクラスには、拡大変換と縮小変換のための一連のメソッドがすべて用意されています。また、サポートされない変換 (<xref:System.InvalidCastException> 値から整数値への変換など) に対しては <xref:System.DateTime> がスローされます。 縮小変換は checked コンテキストで実行され、変換が失敗すると <xref:System.OverflowException> がスローされます。  
   
 > [!IMPORTANT]
->  <xref:System.Convert> クラスには各基本型どうしの変換を実行するメソッドが含まれているため、各基本型の明示的な <xref:System.IConvertible> インターフェイス実装を呼び出す必要はありません。  
+> <xref:System.Convert> クラスには各基本型どうしの変換を実行するメソッドが含まれているため、各基本型の明示的な <xref:System.IConvertible> インターフェイス実装を呼び出す必要はありません。  
   
  <xref:System.Convert?displayProperty=nameWithType> クラスを使用して .NET Framework 基本型どうしの拡大変換および縮小変換を実行する例を次に示します。  
   
@@ -176,7 +176,7 @@ ms.locfileid: "65593523"
  <xref:System.Convert> クラスは、各基本型どうしの変換をサポートするだけでなく、カスタム型を 1 つ以上の定義済みの型に変換できます。 この変換は <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> メソッドによって実行されます。さらに、このメソッドが、<xref:System.IConvertible.ToType%2A?displayProperty=nameWithType> パラメーターの `value` メソッドに対する呼び出しをラップします。 したがって、`value` パラメーターで指定されるオブジェクトに、<xref:System.IConvertible> インターフェイスが実装されている必要があります。  
   
 > [!NOTE]
->  <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%29?displayProperty=nameWithType> および <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> メソッドは <xref:System.Type> オブジェクトを使用して `value` の変換後の型を指定するため、コンパイル時には型がわからないオブジェクトへの動的な変換に使用することができます。 ただし、<xref:System.IConvertible> の `value` の実装も、この変換をサポートする必要があることに注意してください。  
+> <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%29?displayProperty=nameWithType> および <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> メソッドは <xref:System.Type> オブジェクトを使用して `value` の変換後の型を指定するため、コンパイル時には型がわからないオブジェクトへの動的な変換に使用することができます。 ただし、<xref:System.IConvertible> の `value` の実装も、この変換をサポートする必要があることに注意してください。  
   
  <xref:System.IConvertible> オブジェクトから `TemperatureCelsius` オブジェクトへの変換およびその逆の変換を実行できる `TemperatureFahrenheit` インターフェイスとして考えられる実装を次の例に示します。 この例では、`Temperature` インターフェイスを実装し、<xref:System.IConvertible> メソッドをオーバーライドする基本クラス <xref:System.Object.ToString%2A?displayProperty=nameWithType> を定義します。 派生クラスの `TemperatureCelsius` および `TemperatureFahrenheit` クラスが、基本クラスの `ToType` メソッドおよび `ToString` メソッドをそれぞれオーバーライドします。  
   
@@ -195,7 +195,7 @@ ms.locfileid: "65593523"
  .NET Framework では、<xref:System.ComponentModel.TypeConverter?displayProperty=nameWithType> クラスを拡張し、<xref:System.ComponentModel.TypeConverterAttribute?displayProperty=nameWithType> 属性を使用して型コンバーターを型に関連付けることによって、カスタム型の型コンバーターも定義できます。 次の表に、この方法と、カスタム型に対して <xref:System.IConvertible> インターフェイスを実装する方法の相違点をまとめます。  
   
 > [!NOTE]
->  カスタム型に対してデザイン時サポートが有効になるのは、そのカスタム型の型コンバーターが定義されている場合だけです。  
+> カスタム型に対してデザイン時サポートが有効になるのは、そのカスタム型の型コンバーターが定義されている場合だけです。  
   
 |TypeConverter を使用した変換|IConvertible を使用した変換|  
 |------------------------------------|-----------------------------------|  

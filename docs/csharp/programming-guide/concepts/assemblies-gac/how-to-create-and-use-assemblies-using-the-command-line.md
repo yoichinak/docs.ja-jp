@@ -1,15 +1,15 @@
 ---
-title: '方法: コマンド ラインを使用してアセンブリを作成および使用する (C#)'
+title: 方法:コマンド ラインを使用してアセンブリを作成および使用する (C#)
 ms.date: 07/20/2015
 ms.assetid: 408ddce3-89e3-4e12-8353-34a49beeb72b
-ms.openlocfilehash: 12d23816b740816bd357c3c2ac57583f31bf3cb3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0a8db22a05d834d15f6e6b7f049f59f86bc1fe1d
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586029"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595968"
 ---
-# <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>方法: コマンド ラインを使用してアセンブリを作成および使用する (C#)
+# <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>方法:コマンド ラインを使用してアセンブリを作成および使用する (C#)
 アセンブリとは、ダイナミック リンク ライブラリ (DLL) のことで、実行時にプログラムにリンクされます。 DLL のビルド例および使用例として、次に示すシナリオを考えてみます。  
   
 - `MathLibrary.DLL`:実行時に呼び出されるメソッドが格納されているライブラリ ファイル。 この例では、DLL には 2 つのメソッド `Add` と `Multiply` が含まれています。  
@@ -98,13 +98,13 @@ MultiplyClass.Multiply(num1, num2);
 UtilityMethods.MultiplyClass.Multiply(num1, num2);  
 ```  
   
-## <a name="execution"></a>実行  
+## <a name="execution"></a>Execution  
  プログラムを実行するには、次のように、EXE ファイルの名前と 2 つの数値を順に入力します。  
   
  `TestCode 1234 5678`  
   
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../../csharp/programming-guide/index.md)
+- [C# プログラミング ガイド](../../index.md)
 - [.NET のアセンブリ](../../../../standard/assembly/index.md)
 - [DLL 関数を保持するクラスの作成](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

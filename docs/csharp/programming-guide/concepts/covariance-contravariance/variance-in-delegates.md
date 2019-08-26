@@ -2,12 +2,12 @@
 title: デリゲートの変性 (C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: 835b19b191bd3cb193bf4ba12d689b962c8603ec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 213c295782c10d15f0515eeb653322eafdb390d9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598059"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924377"
 ---
 # <a name="variance-in-delegates-c"></a>デリゲートの変性 (C#)
 .NET Framework 3.5 では、C# のすべてのデリゲートで、メソッド シグネチャとデリゲート型を一致させるために変性 (共変性と反変性) のサポートが導入されました。 つまり、シグネチャが一致するメソッドだけでなく、デリゲート型で指定された型よりも強い派生型を返す (共変性) メソッドや、弱い派生型のパラメーターを受け取る (反変性) メソッドを、デリゲートに割り当てることができます。 これには、汎用デリゲートと非汎用デリゲートの両方が含まれます。  
@@ -62,7 +62,7 @@ SampleGenericDelegate<Second, First> dGeneric = ASecondRFirst;
 SampleGenericDelegate<Second, First> dGenericConversion = AFirstRSecond;  
 ```  
   
- その他の例については、「[デリゲートの変性の使用 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)」および「[Func および Action 汎用デリゲートでの変性の使用 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)」を参照してください。  
+ その他の例については、「[デリゲートの変性の使用 (C#)](./using-variance-in-delegates.md)」および「[Func および Action 汎用デリゲートでの変性の使用 (C#)](./using-variance-for-func-and-action-generic-delegates.md)」を参照してください。  
   
 ## <a name="variance-in-generic-type-parameters"></a>ジェネリック型パラメーターの変性  
  .NET Framework 4 以降では、デリゲート間の暗黙的な変換を有効にできるため、ジェネリック型パラメーターによって汎用デリゲートにさまざまな型が指定されていても、型が変性の要件を満たすように相互に継承されていれば、それらの汎用デリゲートは相互に割り当てることができます。  
@@ -122,7 +122,7 @@ public static void Test()
   
 - <xref:System.Converter%602> デリゲート  
   
- 使用例を含む詳細については、「[Func および Action 汎用デリゲートでの変性の使用 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)」を参照してください。  
+ 使用例を含む詳細については、「[Func および Action 汎用デリゲートでの変性の使用 (C#)](./using-variance-for-func-and-action-generic-delegates.md)」を参照してください。  
   
 ### <a name="declaring-variant-type-parameters-in-generic-delegates"></a>汎用デリゲートのバリアント型パラメーターの宣言  
  汎用デリゲートに共変または反変のジェネリック型パラメーターがある場合、そのデリゲートは "*バリアント汎用デリゲート*" と呼ばれます。  
@@ -140,7 +140,7 @@ public delegate void DContravariant<in A>(A a);
 ```  
   
 > [!IMPORTANT]
->  C# の `ref`、`in`、`out` パラメーターを、バリアントとしてマークすることはできません。  
+> C# の `ref`、`in`、`out` パラメーターを、バリアントとしてマークすることはできません。  
   
  同じデリゲートで、型パラメーターが異なる場合は、変性と共変性の両方をサポートすることもできます。 これを次の例に示します。  
   
@@ -198,6 +198,6 @@ public static void Test()
   
 ## <a name="see-also"></a>関連項目
 
-- [ジェネリック](~/docs/standard/generics/index.md)
-- [Func および Action 汎用デリゲートでの変性の使用 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
-- [方法: デリゲートを結合する (マルチキャスト デリゲート)](../../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
+- [ジェネリック](../../../../standard/generics/index.md)
+- [Func および Action 汎用デリゲートでの変性の使用 (C#)](./using-variance-for-func-and-action-generic-delegates.md)
+- [方法: デリゲートを結合する (マルチキャスト デリゲート)](../../delegates/how-to-combine-delegates-multicast-delegates.md)

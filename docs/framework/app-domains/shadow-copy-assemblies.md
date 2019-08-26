@@ -8,25 +8,25 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30e013d39d403bef5fe060fd1c64dc435de5be06
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 531e8f576dcbe0fc272c61a57a689d993fb03445
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347389"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927896"
 ---
 # <a name="shadow-copying-assemblies"></a>アセンブリのシャドウ コピー
 シャドウ コピーにより、アプリケーション ドメインをアンロードしなくても、アプリケーション ドメインで使用されるアセンブリを更新できます。 これは、ASP.NET サイトなど、継続的に使用可能であることが必要なアプリケーションで特に役立ちます。  
   
 > [!IMPORTANT]
->  シャドウ コピーは、[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリではサポートされていません。  
+> シャドウ コピーは、[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリではサポートされていません。  
   
  共通言語ランタイムは、アセンブリがアンロードされるまでファイルを更新できないように、アセンブリがロードされるときにアセンブリ ファイルをロックします。 アプリケーション ドメインからアセンブリをアンロードする唯一の方法は、アプリケーション ドメインをアンロードすることなので、通常の状況では、アセンブリを使用しているすべてのアプリケーション ドメインがアンロードされるまで、そのアセンブリをディスク上で更新することはできません。  
   
  ファイルをシャドウ コピーするようにアプリケーション ドメインが構成されると、アプリケーション パスからのアセンブリが別の場所にコピーされて、その場所から読み込まれます。 コピーはロックされますが、元のアセンブリ ファイルはロック解除されて、更新可能になります。  
   
 > [!IMPORTANT]
->  シャドウ コピーが可能な唯一のアセンブリは、アプリケーション ドメインの構成時に <xref:System.AppDomainSetup.ApplicationBase%2A> または <xref:System.AppDomainSetup.PrivateBinPath%2A> プロパティで指定された、アプリケーション ディレクトリやそのサブディレクトリに保存されているものです。 グローバル アセンブリ キャッシュに格納されているアセンブリは、シャドウ コピーされません。  
+> シャドウ コピーが可能な唯一のアセンブリは、アプリケーション ドメインの構成時に <xref:System.AppDomainSetup.ApplicationBase%2A> または <xref:System.AppDomainSetup.PrivateBinPath%2A> プロパティで指定された、アプリケーション ディレクトリやそのサブディレクトリに保存されているものです。 グローバル アセンブリ キャッシュに格納されているアセンブリは、シャドウ コピーされません。  
   
  この記事は、次のセクションで構成されています。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "67347389"
      この場所の基本パスは、<xref:System.AppDomainSetup.ApplicationName%2A> プロパティに <xref:System.AppDomainSetup.CachePath%2A> プロパティをサブディレクトリとして連結することにより形成されます。 アセンブリは、基本パス自体ではなく、このパスのサブディレクトリにシャドウ コピーされます。  
   
     > [!NOTE]
-    >  <xref:System.AppDomainSetup.ApplicationName%2A> プロパティが設定されていない場合、<xref:System.AppDomainSetup.CachePath%2A> プロパティは無視されて、ダウンロード キャッシュが使用されます。 例外をスローすることはありません。  
+    > <xref:System.AppDomainSetup.ApplicationName%2A> プロパティが設定されていない場合、<xref:System.AppDomainSetup.CachePath%2A> プロパティは無視されて、ダウンロード キャッシュが使用されます。 例外をスローすることはありません。  
   
      カスタムの場所を指定する場合は、不要になったときに、ディレクトリとコピー済みファイルをユーザーがクリーンアップする必要があります。 それらは自動的には削除されません。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "67347389"
      アプリケーション ドメインのシャドウ コピーを有効にすると、既定では、アプリケーション パス内の、つまり <xref:System.AppDomainSetup.ApplicationBase%2A> と <xref:System.AppDomainSetup.PrivateBinPath%2A> プロパティで指定されたディレクトリ内の、すべてのアセンブリがコピーされます。 シャドウ コピーするディレクトリのみを含む文字列を作成して、その文字列を <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> プロパティに割り当てることにより、コピー操作を選択したディレクトリに制限できます。 ディレクトリをセミコロンで区切ります。 シャドウ コピーされるアセンブリは、選択したディレクトリ内のものだけです。  
   
     > [!NOTE]
-    >  文字列を <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> プロパティに割り当てない場合、またはこのプロパティを `null` に設定した場合は、<xref:System.AppDomainSetup.ApplicationBase%2A> と <xref:System.AppDomainSetup.PrivateBinPath%2A> プロパティで指定したディレクトリ内のすべてのアセンブリがシャドウ コピーされます。  
+    > 文字列を <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> プロパティに割り当てない場合、またはこのプロパティを `null` に設定した場合は、<xref:System.AppDomainSetup.ApplicationBase%2A> と <xref:System.AppDomainSetup.PrivateBinPath%2A> プロパティで指定したディレクトリ内のすべてのアセンブリがシャドウ コピーされます。  
   
     > [!IMPORTANT]
     >  セミコロンは区切り文字なので、ディレクトリ パスにはセミコロンを含めないでください。 セミコロンのためのエスケープ文字はありません。  

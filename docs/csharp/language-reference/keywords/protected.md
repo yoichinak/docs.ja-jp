@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - protected keyword [C#]
 ms.assetid: 05ce3794-6675-4025-bddb-eaaa0ec22892
-ms.openlocfilehash: 55fbcf6fbc5148143e2d559ab8192e3ea10ab43c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a0420dd10d81c4ae893ab0447244a611091ed7b0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633302"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69601976"
 ---
 # <a name="protected-c-reference"></a>protected (C# リファレンス)
 
@@ -53,8 +53,8 @@ protected メンバーは、そのクラス内部と、派生クラスのイン�
 
 ## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [C# リファレンス](../index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
 - [アクセス修飾子](access-modifiers.md)
 - [アクセシビリティ レベル](accessibility-levels.md)

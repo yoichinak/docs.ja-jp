@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
-ms.openlocfilehash: 36e5602f0a0b872a4aa6cdac64b49b1d1c708795
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 4103b6262fc5085c1204f423a36c9c5c2053b497
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877520"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605655"
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma checksum (C# リファレンス)
 ASP.NET ページのデバッグに使用するソース ファイルのチェックサムを生成します。  
@@ -23,7 +23,7 @@ ASP.NET ページのデバッグに使用するソース ファイルのチェ�
 #pragma checksum "filename" "{guid}" "checksum bytes"  
 ```  
   
-## <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>parameters  
  `"filename"`  
  変更または更新を監視する必要があるファイルの名前。  
   
@@ -56,6 +56,6 @@ class TestClass
   
 ## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [C# プリプロセッサ ディレクティブ](../../../csharp/language-reference/preprocessor-directives/index.md)
+- [C# リファレンス](../index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# プリプロセッサ ディレクティブ](./index.md)

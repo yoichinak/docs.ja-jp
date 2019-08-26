@@ -2,12 +2,12 @@
 title: 静的にコンパイルされたクエリ (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 3bf558fe-0705-479d-86d4-00188f5fcf9c
-ms.openlocfilehash: ee5d5fbc9bf2aa90635e75c5c8cbf52b16e3f349
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9f10d93e0e5add02dbfb8c8867031ce68e58c0f4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483462"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924158"
 ---
 # <a name="statically-compiled-queries-linq-to-xml-c"></a>静的にコンパイルされたクエリ (LINQ to XML) (C#)
 <xref:System.Xml.XmlDocument> に対し、LINQ to XML で最も重要なパフォーマンスの利点の 1 つは、XPath のクエリは実行時に解釈する必要がある一方で LINQ to XML のクエリは静的にコンパイルされるという点です。 この機能は LINQ to XML に組み込まれているので、追加の手順を実行することなく利用できますが、その違いを理解しておくと、この 2 つの技術のどちらかを選ぶときに役立ちます。 このトピックでは、相違点について説明します。  
@@ -47,7 +47,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- <xref:System.Linq.Enumerable.Where%2A> メソッドは拡張メソッドです。 詳細については、「[拡張メソッド](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)」を参照してください。 <xref:System.Linq.Enumerable.Where%2A> は拡張メソッドであるため、上記のクエリは次のように書かれたかのようにコンパイルされます。  
+ <xref:System.Linq.Enumerable.Where%2A> メソッドは拡張メソッドです。 詳細については、「[拡張メソッド](../../classes-and-structs/extension-methods.md)」を参照してください。 <xref:System.Linq.Enumerable.Where%2A> は拡張メソッドであるため、上記のクエリは次のように書かれたかのようにコンパイルされます。  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -61,10 +61,10 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- この例では、前の 2 つの例と同じ結果が生成されます。 これは、静的にリンクされたメソッド呼び出しにクエリが効果的にコンパイルされたことを示します。 これと反復子の遅延実行セマンティクスが組み合わさることで、パフォーマンスが向上します。 反復子の遅延実行セマンティクスの詳細については、「[LINQ to XML における遅延実行とレイジー評価 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)」を参照してください。  
+ この例では、前の 2 つの例と同じ結果が生成されます。 これは、静的にリンクされたメソッド呼び出しにクエリが効果的にコンパイルされたことを示します。 これと反復子の遅延実行セマンティクスが組み合わさることで、パフォーマンスが向上します。 反復子の遅延実行セマンティクスの詳細については、「[LINQ to XML における遅延実行とレイジー評価 (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)」を参照してください。  
   
 > [!NOTE]
->  これらは、コンパイラが書き込むコードの例です。 実際の実装はこれらの例と若干異なる可能性がありますが、パフォーマンスは同じか類似したものになります。  
+> これらは、コンパイラが書き込むコードの例です。 実際の実装はこれらの例と若干異なる可能性がありますが、パフォーマンスは同じか類似したものになります。  
   
 ## <a name="executing-xpath-expressions-with-xmldocument"></a>XmlDocument を使用した XPath 式の実行  
  次の例では、<xref:System.Xml.XmlDocument> を使用して前の例と同じ結果を達成します。  

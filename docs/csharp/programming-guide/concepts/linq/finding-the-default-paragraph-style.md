@@ -2,12 +2,12 @@
 title: 既定の段落スタイルの検索 (C#)
 ms.date: 07/20/2015
 ms.assetid: be102177-8ab0-444a-b671-7023e555ffdb
-ms.openlocfilehash: 5cbe1ad7b3a384448a4e570156b45f57446e73e6
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 702d3906f51b996f59dcd15067702b6de07c60a5
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485990"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594365"
 ---
 # <a name="finding-the-default-paragraph-style-c"></a>既定の段落スタイルの検索 (C#)
 「WordprocessingML ドキュメント内の情報の操作」チュートリアルでの最初のタスクは、ドキュメント内にある段落の既定のスタイルを検索することです。  
@@ -15,7 +15,7 @@ ms.locfileid: "66485990"
 ## <a name="example"></a>例  
   
 ### <a name="description"></a>説明  
- 次の例では、Office Open XML WordprocessingML ドキュメントを開き、パッケージのドキュメント パーツとスタイル パーツを検索した後、既定のスタイル名を検索するクエリを実行します。 Office Open XML ドキュメント パッケージおよびその構成パーツについて詳しくは、「[Office Open XML WordprocessingML ドキュメントの詳細 (C#)](../../../../csharp/programming-guide/concepts/linq/wordprocessingml-document-with-styles.md)」をご覧ください。  
+ 次の例では、Office Open XML WordprocessingML ドキュメントを開き、パッケージのドキュメント パーツとスタイル パーツを検索した後、既定のスタイル名を検索するクエリを実行します。 Office Open XML ドキュメント パッケージおよびその構成パーツについて詳しくは、「[Office Open XML WordprocessingML ドキュメントの詳細 (C#)](./wordprocessingml-document-with-styles.md)」をご覧ください。  
   
  このクエリは、値が "paragraph" である `w:style` という名前の属性と、値が "1" である `w:type` という名前の属性を持つ `w:default` という名前のノードを検索します。 これらの属性を持つ XML ノードは 1 つしかないため、このクエリは、<xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> 演算子を使用してコレクションをシングルトンに変換します。 次に、`w:styleId` という名前の属性の値を取得します。  
   
@@ -76,7 +76,7 @@ string defaultStyle =
 Console.WriteLine("The default style is: {0}", defaultStyle);  
 ```  
   
-### <a name="comments"></a>コメント  
+### <a name="comments"></a>説明  
  この例を実行すると、次の出力が生成されます。  
   
 ```  
@@ -86,5 +86,5 @@ The default style is: Normal
 ## <a name="next-steps"></a>次の手順  
  次の例では、ドキュメント内のすべての段落およびそのスタイルを検索する同様のクエリを記述します。  
   
-- [段落とそのスタイルの取得 (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
+- [段落とそのスタイルの取得 (C#)](./retrieving-the-paragraphs-and-their-styles.md)  
   

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: a6aae34433ee6f5d141d95f0c434af1825e9bf4b
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 3e4e83b52cd6b275e68039693c774f6490f2b88f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424432"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606059"
 ---
 # <a name="bool-c-reference"></a>bool (C# リファレンス)
 
@@ -52,10 +52,10 @@ C++ では、`bool` 型の値を `int` 型の値に変換できます。つま�
 
 ## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)
-- [整数型](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
-- [組み込み型の一覧表](../../../csharp/language-reference/keywords/built-in-types-table.md)
-- [暗黙的な数値変換の一覧表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
-- [明示的な数値変換の一覧表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+- [C# リファレンス](../index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# のキーワード](./index.md)
+- [整数型](../builtin-types/integral-numeric-types.md)
+- [組み込み型の一覧表](./built-in-types-table.md)
+- [暗黙的な数値変換の一覧表](./implicit-numeric-conversions-table.md)
+- [明示的な数値変換の一覧表](./explicit-numeric-conversions-table.md)

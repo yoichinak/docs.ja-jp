@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 81fa0e41-d9c9-46f0-b22b-50da839c77f5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 335e6578767c130760f322aa2b015ea7b0f317f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0199efb172466305af22c4ade7c47115a5cefd8f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557938"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939621"
 ---
 # <a name="schema-validation-using-xpathnavigator"></a>XPathNavigator を使用したスキーマ検証
 <xref:System.Xml.XmlDocument> クラスを使用して、<xref:System.Xml.XmlDocument> オブジェクトに含まれる XML コンテンツを 2 つの方法で検証することができます。 最初の方法は、検証型 <xref:System.Xml.XmlReader> オブジェクトを使用して XML コンテンツを検証する方法で、2 番目の方法は、<xref:System.Xml.XmlDocument.Validate%2A> クラスの <xref:System.Xml.XmlDocument> メソッドを使用する方法です。 <xref:System.Xml.XPath.XPathDocument> クラスを使用して XML コンテンツの読み取り専用の検証を行うこともできます。  
@@ -129,7 +129,7 @@ class ValidatingReaderExample
  <xref:System.Xml.Schema.XmlSchemaInfo.Validity%2A> を使用して属性または要素にアクセスするとき、<xref:System.Xml.XPath.XPathNavigator> プロパティを使用して、個々の属性または要素が有効かどうかを判断できます。  
   
 > [!NOTE]
->  XML ドキュメントが既定値を定義した関連付けられたスキーマと共に <xref:System.Xml.XmlDocument> オブジェクトに読み込まれる場合、<xref:System.Xml.XmlDocument> オブジェクトは、これらの既定値があたかも XML ドキュメント内にあるかのように扱います。 これは、XML ドキュメントで空要素として書かれていても、スキーマから既定値を得た要素に対して <xref:System.Xml.XPath.XPathNavigator.IsEmptyElement%2A> プロパティは常に `false` を返すことを意味します。  
+> XML ドキュメントが既定値を定義した関連付けられたスキーマと共に <xref:System.Xml.XmlDocument> オブジェクトに読み込まれる場合、<xref:System.Xml.XmlDocument> オブジェクトは、これらの既定値があたかも XML ドキュメント内にあるかのように扱います。 これは、XML ドキュメントで空要素として書かれていても、スキーマから既定値を得た要素に対して <xref:System.Xml.XPath.XPathNavigator.IsEmptyElement%2A> プロパティは常に `false` を返すことを意味します。  
   
 ### <a name="validating-a-document-using-the-validate-method"></a>Validate メソッドを使用したドキュメントの検証  
  <xref:System.Xml.XmlDocument.Validate%2A> クラスの <xref:System.Xml.XmlDocument> メソッドは、<xref:System.Xml.XmlDocument> オブジェクトの <xref:System.Xml.XmlDocument> プロパティで指定されたスキーマに対して、<xref:System.Xml.XmlDocument.Schemas%2A> オブジェクトに含まれる XML ドキュメントを検証し、情報セットの拡大を実施します。 結果として、<xref:System.Xml.XmlDocument> オブジェクト中の以前は型指定されていない XML ドキュメントは型指定されたドキュメントに置き換わります。  

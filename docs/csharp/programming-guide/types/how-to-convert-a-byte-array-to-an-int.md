@@ -6,17 +6,17 @@ helpviewer_keywords:
 - conversions [C#], byte array to int
 - byte arrays [C#], converting to int
 ms.assetid: d6ac20e2-448e-4aea-99b9-faf04c6f1e79
-ms.openlocfilehash: 82ed87bbcbc741695afc49069c413ae440bd147b
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: ffb00325bc04aad79d61558925546e0aa8544551
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423551"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921758"
 ---
 # <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>方法: バイト配列を int に変換する (C# プログラミング ガイド)
-次の例では、<xref:System.BitConverter> クラスを使用して、バイト配列を [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) に変換する方法、またバイト配列に戻す方法を示しています。 たとえば、ネットワークからバイトを読み込んだ後、バイトから組み込みデータ型への変換が必要になる場合があります。 この例の [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) メソッド以外にも、バイト列を (バイト配列から) 他の組み込み型に変換する <xref:System.BitConverter> クラスのメソッドがあります。次の表にそれらのメソッドを示します。  
+次の例では、<xref:System.BitConverter> クラスを使用して、バイト配列を [int](../../language-reference/builtin-types/integral-numeric-types.md) に変換する方法、またバイト配列に戻す方法を示しています。 たとえば、ネットワークからバイトを読み込んだ後、バイトから組み込みデータ型への変換が必要になる場合があります。 この例の [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) メソッド以外にも、バイト列を (バイト配列から) 他の組み込み型に変換する <xref:System.BitConverter> クラスのメソッドがあります。次の表にそれらのメソッドを示します。  
   
-|返される型|メソッド|  
+|返される型|Method|  
 |-------------------|------------|  
 |`bool`|[ToBoolean(Byte\[\], Int32)](xref:System.BitConverter.ToBoolean(System.Byte[],System.Int32))|  
 |`char`|[ToChar(Byte\[\], Int32)](xref:System.BitConverter.ToChar(System.Byte[],System.Int32))|  
@@ -33,7 +33,7 @@ ms.locfileid: "67423551"
  この例では、バイトの配列を初期化して、コンピューター アーキテクチャがリトル エンディアンである場合 (つまり、下位バイトから先に格納する場合) は、配列を反転します。次に、[ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) メソッドを呼び出して、配列内の 4 バイトを `int` に変換します。 [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) の 2 番目の引数は、バイト配列の開始インデックスを指定します。  
   
 > [!NOTE]
->  出力は、コンピューター アーキテクチャのエンディアンによって異なる場合があります。  
+> 出力は、コンピューター アーキテクチャのエンディアンによって異なる場合があります。  
   
  [!code-csharp[csProgGuideTypes#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#22)]  
   
@@ -41,7 +41,7 @@ ms.locfileid: "67423551"
  この例では、<xref:System.BitConverter> クラスの <xref:System.BitConverter.GetBytes%28System.Int32%29> メソッドを呼び出して、`int` をバイト配列に変換します。  
   
 > [!NOTE]
->  出力は、コンピューター アーキテクチャのエンディアンによって異なる場合があります。  
+> 出力は、コンピューター アーキテクチャのエンディアンによって異なる場合があります。  
   
  [!code-csharp[csProgGuideTypes#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#23)]  
   
@@ -49,4 +49,4 @@ ms.locfileid: "67423551"
 
 - <xref:System.BitConverter>
 - <xref:System.BitConverter.IsLittleEndian>
-- [型](../../../csharp/programming-guide/types/index.md)
+- [型](./index.md)

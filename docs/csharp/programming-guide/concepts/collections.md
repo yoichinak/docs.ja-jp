@@ -2,18 +2,18 @@
 title: コレクション (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: a256b2f23bca973d1ed489724bf4d34ab35449f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 712ae4c9b4cf577ab728e4b78582445070e08049
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481107"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595297"
 ---
 # <a name="collections-c"></a>コレクション (C#)
 
 多くのアプリケーションで、関連するオブジェクトのグループの作成および管理が必要になります。 オブジェクトをグループ化するには、オブジェクトの配列を作成する方法と、オブジェクトのコレクションを作成する方法があります。
 
-配列は、数が固定されている厳密に型指定されたオブジェクトの作成および処理に最も適しています。 配列の詳細については、「[配列](../../../csharp/programming-guide/arrays/index.md)」を参照してください。
+配列は、数が固定されている厳密に型指定されたオブジェクトの作成および処理に最も適しています。 配列の詳細については、「[配列](../arrays/index.md)」を参照してください。
 
 コレクションは、オブジェクトのグループをより柔軟に処理できます。 配列の場合とは違って、コレクションで扱うオブジェクトのグループは、アプリケーションの変更に伴う必要に応じて動的に拡大および縮小できます。 コレクションによっては、コレクションに含まれるオブジェクトのキーを割り当てると、そのキーを使用してオブジェクトを迅速に取り出すことができます。
 
@@ -22,7 +22,7 @@ ms.locfileid: "59481107"
 含まれる要素が 1 つのデータ型だけのコレクションの場合は、<xref:System.Collections.Generic?displayProperty=nameWithType> 名前空間のクラスのいずれかを使用できます。 ジェネリック コレクションでは、タイプ セーフが強制されるため、他のデータ型を追加することはできません。 ジェネリック コレクションから要素を取得する場合は、データ型を判断したり、変換したりする必要はありません。
 
 > [!NOTE]
-> このトピックの例には、`System.Collections.Generic` 名前空間および `System.Linq` 名前空間の [using](../../../csharp/language-reference/keywords/using-directive.md) ディレクティブがあります。
+> このトピックの例には、`System.Collections.Generic` 名前空間および `System.Linq` 名前空間の [using](../../language-reference/keywords/using-directive.md) ディレクティブがあります。
 
  **このトピックの内容**
 
@@ -52,7 +52,7 @@ ms.locfileid: "59481107"
 
 このセクションの例は、厳密に型指定されたオブジェクトの一覧を使用できる、ジェネリックの <xref:System.Collections.Generic.List%601> クラスを使用します。
 
-次の例は、文字列の一覧を作成した後、[foreach](../../../csharp/language-reference/keywords/foreach-in.md) ステートメントを使用して文字列を反復処理します。
+次の例は、文字列の一覧を作成した後、[foreach](../../language-reference/keywords/foreach-in.md) ステートメントを使用して文字列を反復処理します。
 
 ```csharp
 // Create a list of strings.
@@ -70,7 +70,7 @@ foreach (var salmon in salmons)
 // Output: chinook coho pink sockeye
 ```
 
-コレクションのコンテンツが既知の場合、コレクションの初期化に*コレクション初期化子*を使用できます。 詳細については、「[オブジェクト初期化子とコレクション初期化子](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)」を参照してください。
+コレクションのコンテンツが既知の場合、コレクションの初期化に*コレクション初期化子*を使用できます。 詳細については、「[オブジェクト初期化子とコレクション初期化子](../classes-and-structs/object-and-collection-initializers.md)」を参照してください。
 
 次の例は、コレクションへの要素の追加にコレクション初期化子を使用する以外、前の例と同じです。
 
@@ -87,7 +87,7 @@ foreach (var salmon in salmons)
 // Output: chinook coho pink sockeye
 ```
 
-コレクションを反復処理するには、`foreach` ステートメントの代わりに、[for](../../../csharp/language-reference/keywords/for.md) ステートメントを使用できます。 インデックス位置によってコレクションの要素にアクセスすることで、これを実現します。 要素のインデックスは、0 から開始し、要素の数から 1 少ない値で終了します。
+コレクションを反復処理するには、`foreach` ステートメントの代わりに、[for](../../language-reference/keywords/for.md) ステートメントを使用できます。 インデックス位置によってコレクションの要素にアクセスすることで、これを実現します。 要素のインデックスは、0 から開始し、要素の数から 1 少ない値で終了します。
 
 次の例は、`for` の代わりに `foreach` を使用して、コレクションの要素を反復処理します。
 
@@ -122,7 +122,7 @@ foreach (var salmon in salmons)
 // Output: chinook pink sockeye
 ```
 
-次の例では、ジェネリック リストからすべての要素を削除します。 `foreach` ステートメントの代わりに、降順に反復する [for](../../../csharp/language-reference/keywords/for.md) ステートメントを使用します。 これは、<xref:System.Collections.Generic.List%601.RemoveAt%2A> メソッドを実行すると、削除された要素の後にある各要素のインデックス値が小さくなるためです。
+次の例では、ジェネリック リストからすべての要素を削除します。 `foreach` ステートメントの代わりに、降順に反復する [for](../../language-reference/keywords/for.md) ステートメントを使用します。 これは、<xref:System.Collections.Generic.List%601.RemoveAt%2A> メソッドを実行すると、削除された要素の後にある各要素のインデックス値が小さくなるためです。
 
 ```csharp
 var numbers = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -351,7 +351,7 @@ private static void FindInDictionary2(string symbol)
 
 ## <a name="using-linq-to-access-a-collection"></a>LINQ を使用してコレクションにアクセスする
 
-統合言語クエリ (LINQ) を使用してコレクションにアクセスできます。 LINQ クエリは、フィルター処理、並べ替え、およびグループ化の機能を提供します。 詳細については、「[Getting Started with LINQ in C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)」 (C# での LINQ の概要) を参照してください。
+統合言語クエリ (LINQ) を使用してコレクションにアクセスできます。 LINQ クエリは、フィルター処理、並べ替え、およびグループ化の機能を提供します。 詳細については、「[Getting Started with LINQ in C#](./linq/getting-started-with-linq.md)」 (C# での LINQ の概要) を参照してください。
 
 次の例では、ジェネリック `List` に対して LINQ クエリを実行します。 LINQ クエリは、結果が格納されている別のコレクションを戻します。
 
@@ -563,13 +563,13 @@ public class Color
 
 ## <a name="iterators"></a>Iterators
 
-*反復子*は、コレクションに対するカスタム イテレーションを実行するために使用されます。 反復子は、メソッドまたは `get` アクセサーのいずれかです。 反復子は、[yield return](../../../csharp/language-reference/keywords/yield.md) ステートメントを使用して、コレクションの各要素を 1 回に 1 つ返します。
+*反復子*は、コレクションに対するカスタム イテレーションを実行するために使用されます。 反復子は、メソッドまたは `get` アクセサーのいずれかです。 反復子は、[yield return](../../language-reference/keywords/yield.md) ステートメントを使用して、コレクションの各要素を 1 回に 1 つ返します。
 
-[foreach](../../../csharp/language-reference/keywords/foreach-in.md) ステートメントを使用して、反復子を呼び出します。 `foreach` ループの各イテレーションは、反復子を呼び出します。 `yield return` ステートメントが反復子に到達すると、式が戻され、コードの現在の位置が保持されます。 次回、反復子が呼び出されると、この位置から実行が再開されます。
+[foreach](../../language-reference/keywords/foreach-in.md) ステートメントを使用して、反復子を呼び出します。 `foreach` ループの各イテレーションは、反復子を呼び出します。 `yield return` ステートメントが反復子に到達すると、式が戻され、コードの現在の位置が保持されます。 次回、反復子が呼び出されると、この位置から実行が再開されます。
 
-詳細については、「[反復子 (C#)](../../../csharp/programming-guide/concepts/iterators.md)」を参照してください。
+詳細については、「[反復子 (C#)](./iterators.md)」を参照してください。
 
-次の例は、反復子メソッドを使用します。 反復子メソッドには、[for](../../../csharp/language-reference/keywords/for.md) ループ内に `yield return` ステートメントがあります。 `ListEvenNumbers` メソッドでは、`foreach` ステートメント本文の各イテレーションが、反復子メソッドの呼び出しを作成し、これが次の `yield return` ステートメントに続行されます。
+次の例は、反復子メソッドを使用します。 反復子メソッドには、[for](../../language-reference/keywords/for.md) ループ内に `yield return` ステートメントがあります。 `ListEvenNumbers` メソッドでは、`foreach` ステートメント本文の各イテレーションが、反復子メソッドの呼び出しを作成し、これが次の `yield return` ステートメントに続行されます。
 
 ```csharp
 private static void ListEvenNumbers()
@@ -598,10 +598,10 @@ private static IEnumerable<int> EvenSequence(
 
 ## <a name="see-also"></a>関連項目
 
-- [オブジェクト初期化子とコレクション初期化子](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
-- [プログラミングの概念 (C#)](../../../csharp/programming-guide/concepts/index.md)
+- [オブジェクト初期化子とコレクション初期化子](../classes-and-structs/object-and-collection-initializers.md)
+- [プログラミングの概念 (C#)](./index.md)
 - [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ to Objects (C#)](./linq/linq-to-objects.md)
 - [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
 - [コレクションとデータ構造体](../../../standard/collections/index.md)
 - [コレクション クラスの選択](../../../standard/collections/selecting-a-collection-class.md)

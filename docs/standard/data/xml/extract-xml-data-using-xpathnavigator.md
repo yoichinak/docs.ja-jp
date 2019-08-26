@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 095b0987-ee4b-4595-a160-da1c956ad576
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f25fa9706d43dd69da233e474127543dfdf83fb1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f789317defe3f4b44b37e6d94d37b974d003bcae
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595631"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966993"
 ---
 # <a name="extract-xml-data-using-xpathnavigator"></a>XpathNavigator を使用した XML データの抽出
 Microsoft .NET Framework において XML ドキュメントを表現する方法はいくつかあります。 これには、<xref:System.String> を使用する方法、または <xref:System.Xml.XmlReader>、<xref:System.Xml.XmlWriter>、<xref:System.Xml.XmlDocument>、<xref:System.Xml.XPath.XPathDocument> クラスを使用する方法があります。 XML ドキュメントの異なる表現の間での移行を容易にするため、<xref:System.Xml.XPath.XPathNavigator> クラスは、<xref:System.String>, <xref:System.Xml.XmlReader> オブジェクトまたは <xref:System.Xml.XmlWriter> オブジェクトとして XML を抽出するためのメソッドおよびプロパティを多数提供しています。  
@@ -22,7 +22,7 @@ Microsoft .NET Framework において XML ドキュメントを表現する方�
  <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> クラスの <xref:System.Xml.XPath.XPathNavigator> プロパティは、XML ドキュメント全体のマークアップ、または 1 つのノードとその子ノードのマークアップだけを取得するために使用されます。  
   
 > [!NOTE]
->  <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> プロパティは、ノードの子ノードのマークアップだけを取得します。  
+> <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> プロパティは、ノードの子ノードのマークアップだけを取得します。  
   
  以下は、1 つのノードとその子ノードを保存する方法と、<xref:System.Xml.XPath.XPathNavigator> オブジェクトに含まれる XML ドキュメント全体を <xref:System.String> として保存する方法について説明するサンプル コードです。  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e476e92ba4a9366a8a380c53d7dcd0d4dddb16e4
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 38a6b27ea0ba8b9d9e2af883db1fc3350d60494a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567307"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912490"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL 逆アセンブラー)
 
@@ -53,7 +53,7 @@ ildasm [options] [PEfilename] [options]
 |**/linenum**|元のソース行への参照を組み込みます。|
 |**/nobar**|逆アセンブルのプログレス インジケーター ポップアップ ウィンドウの表示を中止します。|
 |**/noca**|カスタム属性の出力を抑止します。|
-|**/project**|ネイティブ Windows ランタイムに表示される方法ではなく、マネージド コードに表示される方法でメタデータを示します。 `PEfilename` が Windows メタデータ ( *.winmd*) ファイルではない場合、このオプションは無効になります。 「[Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)」を参照してください。|
+|**/project**|ネイティブ Windows ランタイムに表示される方法ではなく、マネージド コードに表示される方法でメタデータを示します。 `PEfilename` が Windows メタデータ ( *.winmd*) ファイルではない場合、このオプションは無効になります。 「[Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)」を参照してください。|
 |**/pubonly**|パブリックな型とメンバーだけを逆アセンブルします。 **/visibility:PUB**と等価です。|
 |**/quoteallnames**|すべての名前を単一引用符で囲みます。|
 |**/raweh**|例外処理句を生の形式で表示します。|
@@ -188,5 +188,5 @@ ildasm /item:"MyClass::MyMethod(class [mscorlib]System.AppDomain(class [mscorlib
 
 - [ツール](../../../docs/framework/tools/index.md)
 - [Ilasm.exe (IL アセンブラー)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)
-- [マネージド実行プロセス](../../../docs/standard/managed-execution-process.md)
+- [マネージド実行プロセス](../../standard/managed-execution-process.md)
 - [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

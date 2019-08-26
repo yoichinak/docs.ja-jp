@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36de7dd2d97eb532717d52bd3903d3e5acd19d2d
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 13b0ab04eba75a322d584bcc20cc6e90a54fb6fc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567069"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933666"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL アセンブラー)
 
-IL アセンブラーは、ポータブル実行可能 (PE) ファイルを IL (Intermediate Language) から生成します (IL の詳細については、「[マネージド実行プロセス](../../../docs/standard/managed-execution-process.md)」を参照してください)。IL と必要なメタデータを含む実行可能ファイルを実行すると、IL が予測どおりに動作するかどうかを確認できます。
+IL アセンブラーは、ポータブル実行可能 (PE) ファイルを IL (Intermediate Language) から生成します (IL の詳細については、「[マネージド実行プロセス](../../standard/managed-execution-process.md)」を参照してください)。IL と必要なメタデータを含む実行可能ファイルを実行すると、IL が予測どおりに動作するかどうかを確認できます。
 
 このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。
 
@@ -231,5 +231,5 @@ public class Hello
 
 - [ツール](../../../docs/framework/tools/index.md)
 - [*Ildasm.exe* (IL 逆アセンブラー)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
-- [マネージド実行プロセス](../../../docs/standard/managed-execution-process.md)
+- [マネージド実行プロセス](../../standard/managed-execution-process.md)
 - [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

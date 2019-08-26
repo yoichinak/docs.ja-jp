@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: e77db451103919df5809b2558fcb53a3d7fba71c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 26241dab70a3b6a0cf80b374868fa759647cd8d9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479962"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588002"
 ---
 # <a name="include-c-programming-guide"></a>\<include> (C# プログラミング ガイド)
 ## <a name="syntax"></a>構文  
@@ -23,7 +23,7 @@ ms.locfileid: "57479962"
 <include file='filename' path='tagpath[@name="id"]' />  
 ```  
   
-## <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>parameters  
  `filename`  
  文書を含む XML ファイルの名前。 ファイル名は、ソース コード ファイルの相対パスを使用して修飾することができます。 `filename` を単一引用符 (' ') で囲みます。  
   
@@ -92,5 +92,5 @@ The summary for this other type.
   
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [ドキュメント コメントとして推奨されるタグ](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [C# プログラミング ガイド](../index.md)
+- [ドキュメント コメントとして推奨されるタグ](./recommended-tags-for-documentation-comments.md)

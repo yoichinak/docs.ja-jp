@@ -2,12 +2,12 @@
 title: 関数型プログラミングと命令型プログラミング (C#)
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
-ms.openlocfilehash: 2b6a53943ea2363869530ae773c19a52b5578b56
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a163a62912ed2a44d6ea8cad5bc536f03343f15c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596705"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594317"
 ---
 # <a name="functional-programming-vs-imperative-programming-c"></a>関数型プログラミングと命令型プログラミング (C#)
 このトピックでは、関数型プログラミングを従来の命令型 (手続き型) プログラミングと比較対照します。  
@@ -20,7 +20,7 @@ ms.locfileid: "64596705"
 |特徴|命令型の方法|関数型の方法|  
 |--------------------|-------------------------|-------------------------|  
 |プログラミングの焦点|タスク (アルゴリズム) の実行方法と状態の変化の追跡方法。|目的となる情報と必要な変換。|  
-|状態変更|重要。|存在しない。|  
+|状態の変化|重要。|存在しない。|  
 |実行の順序|重要。|あまり重要ではない。|  
 |主要なフロー制御|ループ、条件、および関数 (メソッド) 呼び出し。|関数呼び出し (再帰を含む)。|  
 |主要な操作単位|構造体またはクラスのインスタンス。|ファーストクラス オブジェクトとしての関数とデータ コレクション。|  
@@ -52,6 +52,6 @@ ms.locfileid: "64596705"
   
 ## <a name="see-also"></a>関連項目
 
-- [純粋関数型変換の概要 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [純粋関数型変換の概要 (C#)](./introduction-to-pure-functional-transformations.md)
 - [XSLT 変換](../../../../standard/data/xml/xslt-transformations.md)
-- [純粋関数へのリファクタリング (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [純粋関数へのリファクタリング (C#)](./refactoring-into-pure-functions.md)

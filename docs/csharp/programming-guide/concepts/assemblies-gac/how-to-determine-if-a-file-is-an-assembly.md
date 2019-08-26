@@ -1,16 +1,16 @@
 ---
-title: '方法: ファイルがアセンブリであるかどうかを確認する (C#)'
+title: 方法:ファイルがアセンブリであるかどうかを確認する (C#)
 ms.date: 07/20/2015
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
-ms.openlocfilehash: e8026ab5fa44b7601e54b5e76ebf9eb434596a07
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 803159eed25a7785b1a2b4433e6950fa65e0a734
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340140"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595864"
 ---
-# <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>方法: ファイルがアセンブリであるかどうかを確認する (C#)
-ファイルが管理されていて、ファイルのメタデータにアセンブリ エントリが含まれている場合、そのファイルはアセンブリです。 アセンブリとメタデータの詳細については、「[アセンブリ マニフェスト](../../../../../docs/framework/app-domains/assembly-manifest.md)」を参照してください。  
+# <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>方法:ファイルがアセンブリであるかどうかを確認する (C#)
+ファイルが管理されていて、ファイルのメタデータにアセンブリ エントリが含まれている場合、そのファイルはアセンブリです。 アセンブリとメタデータの詳細については、「[アセンブリ マニフェスト](../../../../framework/app-domains/assembly-manifest.md)」を参照してください。  
   
 ### <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>ファイルがアセンブリかどうかを手動で確認する方法  
   
@@ -69,5 +69,5 @@ class TestAssembly
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Reflection.AssemblyName>
-- [C# プログラミング ガイド](../../../../csharp/programming-guide/index.md)
+- [C# プログラミング ガイド](../../index.md)
 - [.NET のアセンブリ](../../../../standard/assembly/index.md)

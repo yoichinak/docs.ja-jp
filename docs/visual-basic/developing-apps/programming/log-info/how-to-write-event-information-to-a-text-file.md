@@ -6,12 +6,12 @@ helpviewer_keywords:
 - text files [Visual Basic], writing event information to a text file
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
-ms.openlocfilehash: f9abf99a06437f08c65eca69e54760e44a217023
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4a34b57eb0a22dcf206456775cdd5817431292e8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665754"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956833"
 ---
 # <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>方法: イベント情報をテキスト ファイルに書き込む (Visual Basic)
 `My.Application.Log` オブジェクトおよび `My.Log` オブジェクトを使用すると、アプリケーション内で発生したイベントに関する情報をログに記録できます。 この例では、`My.Application.Log.WriteEntry` メソッドを使ってトレース情報をログ ファイルに記録する方法を示します。  
@@ -57,7 +57,7 @@ ms.locfileid: "64665754"
      `customlocation` 属性の値をログ ディレクトリに変更します。  
   
     > [!NOTE]
-    >  リスナー プロパティの値を設定するには、プロパティと同じ名前ですべてが英小文字の属性を使います。 たとえば、`location` 属性と `customlocation` 属性では、<xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> プロパティと <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> プロパティの値が設定されます。  
+    > リスナー プロパティの値を設定するには、プロパティと同じ名前ですべてが英小文字の属性を使います。 たとえば、`location` 属性と `customlocation` 属性では、<xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> プロパティと <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> プロパティの値が設定されます。  
   
 ### <a name="to-write-event-information-to-the-file-log"></a>イベント情報をファイル ログに書き込むには  
   

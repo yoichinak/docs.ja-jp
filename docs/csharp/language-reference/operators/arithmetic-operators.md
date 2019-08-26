@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 02b27270c93550278308900382ae05091edb2543
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: ac04ba72ed0c25aa576bf10150fc80410890eda0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661535"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608372"
 ---
 # <a name="arithmetic-operators-c-reference"></a>算術演算子 (C# リファレンス)
 
@@ -45,7 +45,7 @@ ms.locfileid: "67661535"
 
 ## <a name="increment-operator-"></a>インクリメント演算子 ++
 
-単項インクリメント演算子 `++` は、オペランドを 1 ずつインクリメントします。 このオペランドは、変数、[プロパティ](../../programming-guide/classes-and-structs/properties.md)のアクセス、または[インデクサー](../../../csharp/programming-guide/indexers/index.md)のアクセスである必要があります。
+単項インクリメント演算子 `++` は、オペランドを 1 ずつインクリメントします。 このオペランドは、変数、[プロパティ](../../programming-guide/classes-and-structs/properties.md)のアクセス、または[インデクサー](../../programming-guide/indexers/index.md)のアクセスである必要があります。
 
 インクリメント演算子は、後置インクリメント演算子である `x++` と、前置インクリメント演算子である`++x` という 2 つの形式でサポートされます。
 
@@ -63,7 +63,7 @@ ms.locfileid: "67661535"
 
 ## <a name="decrement-operator---"></a>デクリメント演算子 --
 
-単項デクリメント演算子 `--` は、オペランドを 1 ずつデクリメントします。 このオペランドは、変数、[プロパティ](../../programming-guide/classes-and-structs/properties.md)のアクセス、または[インデクサー](../../../csharp/programming-guide/indexers/index.md)のアクセスである必要があります。
+単項デクリメント演算子 `--` は、オペランドを 1 ずつデクリメントします。 このオペランドは、変数、[プロパティ](../../programming-guide/classes-and-structs/properties.md)のアクセス、または[インデクサー](../../programming-guide/indexers/index.md)のアクセスである必要があります。
 
 デクリメント演算子は、後置デクリメント演算子である `x--` と、前置デクリメント演算子である `--x` という 2 つの形式でサポートされます。
 
@@ -171,7 +171,7 @@ ms.locfileid: "67661535"
 x op= y
 ```
 
-上記の式は、次の式と同じです。
+は次と同等
 
 ```csharp
 x = x op y

@@ -1,15 +1,15 @@
 ---
-title: '方法: 署名のないフレンド アセンブリを作成する (C#)'
+title: 方法:署名のないフレンド アセンブリを作成する (C#)
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-ms.openlocfilehash: 6bc2d807b3d1cf6c82a9ba6303139b9758581f35
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5dadd725234048c4b6a4f9a0fa9b38dbf92671aa
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318235"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595910"
 ---
-# <a name="how-to-create-unsigned-friend-assemblies-c"></a>方法: 署名のないフレンド アセンブリを作成する (C#)
+# <a name="how-to-create-unsigned-friend-assemblies-c"></a>方法:署名のないフレンド アセンブリを作成する (C#)
 この例では、署名のないアセンブリと共にフレンド アセンブリを使用する方法を示します。  
   
 ### <a name="to-create-an-assembly-and-a-friend-assembly"></a>署名のないアセンブリとフレンド アセンブリを作成するには  
@@ -81,7 +81,7 @@ ms.locfileid: "59318235"
     csc /r:friend_unsigned_A.dll /out:friend_unsigned_B.exe friend_unsigned_B.cs  
     ```  
   
-     コンパイラによって生成されるアセンブリの名前は、<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性に渡されるフレンド アセンブリ名と一致している必要があります。 `/out` コンパイラ オプションを使用して、出力アセンブリ (.exe または .dll) の名前を明示的に指定する必要があります。 詳しくは、「[/out (C# コンパイラ オプション)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md)」をご覧ください。  
+     コンパイラによって生成されるアセンブリの名前は、<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性に渡されるフレンド アセンブリ名と一致している必要があります。 `/out` コンパイラ オプションを使用して、出力アセンブリ (.exe または .dll) の名前を明示的に指定する必要があります。 詳しくは、「[/out (C# コンパイラ オプション)](../../../language-reference/compiler-options/out-compiler-option.md)」をご覧ください。  
   
 6. friend_unsigned_B.exe ファイルを実行します。  
   
@@ -95,5 +95,5 @@ ms.locfileid: "59318235"
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [.NET のアセンブリ](../../../../standard/assembly/index.md)
 - [フレンド アセンブリ](../../../../standard/assembly/friend-assemblies.md)
-- [方法: 署名されたフレンド アセンブリを作成する (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
-- [C# プログラミング ガイド](../../../../csharp/programming-guide/index.md)
+- [方法: 署名されたフレンド アセンブリを作成する (C#)](./how-to-create-signed-friend-assemblies.md)
+- [C# プログラミング ガイド](../../index.md)

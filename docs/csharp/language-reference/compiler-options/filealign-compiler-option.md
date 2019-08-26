@@ -16,12 +16,12 @@ helpviewer_keywords:
 - -alignment compiler option [C#]
 - section alignment [C#]
 ms.assetid: 15cf1c98-3798-4ced-9f08-60619308a073
-ms.openlocfilehash: f3ce1bb864c4cb0b1c330de7d96649f9870231e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: aed8b412ea1580f7dfa4f87333598d76a85b5e64
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328700"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69603010"
 ---
 # <a name="-filealign-c-compiler-options"></a>-filealign (C# コンパイラ オプション)
 **-filealign** オプションを使用すると、出力ファイル内のセクションのサイズを指定できます。  
@@ -37,7 +37,7 @@ ms.locfileid: "59328700"
  出力ファイル内のセクションのサイズを指定する値です。 有効値は 512、1024、2048、4096、および 8192 です。 これらの値はバイト単位です。  
   
 ## <a name="remarks"></a>解説  
- 各セクションは、**-filealign** 値の倍数である境界上にアラインされます。 固定の既定値はありません。 **-filealign** が指定されていない場合、共通言語ランタイムはコンパイル時に既定値を選択します。  
+ 各セクションは、 **-filealign** 値の倍数である境界上にアラインされます。 固定の既定値はありません。 **-filealign** が指定されていない場合、共通言語ランタイムはコンパイル時に既定値を選択します。  
   
  セクションのサイズを指定すると、出力ファイルのサイズに影響します。 セクションのサイズ変更は、比較的小さなデバイスで実行されるプログラムに対して有効な場合があります。  
   
@@ -57,5 +57,5 @@ ms.locfileid: "59328700"
   
 ## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
+- [C# コンパイラ オプション](./index.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C#]
 ms.assetid: be2571ed-efb0-4965-b122-81e5b09db0b9
-ms.openlocfilehash: 15b193d9f294c01826b6b60587678ad76248e976
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 77d18d12cd0fabb26906a5b58dc3939da6214a29
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422064"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602248"
 ---
 # <a name="break-c-reference"></a>break (C# リファレンス)
 
-`break` ステートメントは、これを囲むループまたは [switch](../../../csharp/language-reference/keywords/switch.md) ステートメントのうち、最も内側のものを終了させます。 終了したステートメントの次にステートメントがある場合は、そこに制御が移動します。
+`break` ステートメントは、これを囲むループまたは [switch](./switch.md) ステートメントのうち、最も内側のものを終了させます。 終了したステートメントの次にステートメントがある場合は、そこに制御が移動します。
 
 ## <a name="example"></a>例
 
@@ -33,7 +33,7 @@ ms.locfileid: "66422064"
 
 ## <a name="example"></a>例
 
-次に示すのは、[switch](../../../csharp/language-reference/keywords/switch.md) ステートメントで `break` を使用する例です。
+次に示すのは、[switch](./switch.md) ステートメントで `break` を使用する例です。
 
 [!code-csharp[csrefKeywordsJump#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#2)]
 
@@ -50,7 +50,7 @@ Sorry, invalid selection.
 
 ## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)
-- [switch](../../../csharp/language-reference/keywords/switch.md)
+- [C# リファレンス](../index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# のキーワード](./index.md)
+- [switch](./switch.md)

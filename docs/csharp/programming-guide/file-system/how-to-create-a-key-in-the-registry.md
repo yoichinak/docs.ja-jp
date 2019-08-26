@@ -1,19 +1,19 @@
 ---
-title: '方法: レジストリにキーを作成する (Visual C#)'
+title: 方法:レジストリにキーを作成する (Visual C#)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry, adding keys and values [C#]
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-ms.openlocfilehash: 0982baea2327daf23726ef269d53388d6011703d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e67a80fa8f9a088f0eefe2dd2eeaa983e0a5a2c3
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596147"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590041"
 ---
-# <a name="how-to-create-a-key-in-the-registry-visual-c"></a>方法: レジストリにキーを作成する (Visual C#)
+# <a name="how-to-create-a-key-in-the-registry-visual-c"></a>方法:レジストリにキーを作成する (Visual C#)
 現在のユーザーのレジストリに存在する "Names" というキーの下に "Name" と "Isabella" という値のペアを追加する例を次に示します。  
   
 ## <a name="example"></a>例  
@@ -51,13 +51,13 @@ key.Close();
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  ローカル コンピューター (`Microsoft.Win32.Registry.CurrentUser`) よりもユーザー フォルダー (`Microsoft.Win32.Registry.LocalMachine`) にデータを書き込む方が安全です。  
   
- レジストリの値を作成するときは、その値が既存の値である場合の処理を決めておく必要があります。 悪意のあるユーザーによって作成された別のプロセスが既に値を作成し、アクセス権を持っている可能性があります。 レジストリ値にデータを設定すると、そのデータを他のプロセスから利用できるようになります。 これを回避するには、`Overload:Microsoft.Win32.RegistryKey.GetValue`  メソッドをオーバーライドします。 このメソッドは、キーがまだ存在しない場合、null を返します。  
+ レジストリの値を作成するときは、その値が既存の値である場合の処理を決めておく必要があります。 悪意のあるユーザーによって作成された別のプロセスが既に値を作成し、アクセス権を持っている可能性があります。 レジストリ値にデータを設定すると、そのデータを他のプロセスから利用できるようになります。 これを回避するには、`Overload:Microsoft.Win32.RegistryKey.GetValue` メソッドをオーバーライドします。 このメソッドは、キーがまだ存在しない場合、null を返します。  
   
  レジストリ キーがアクセス制御リスト (ACL: Access Control List) によって保護されていても、パスワードなど他人に知られたくないデータをプレーン テキストでレジストリに格納するのは危険です。  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [ファイル システムとレジストリ (C# プログラミング ガイド)](../../../csharp/programming-guide/file-system/index.md)
+- [C# プログラミング ガイド](../index.md)
+- [ファイル システムとレジストリ (C# プログラミング ガイド)](./index.md)
 - [C# によるレジストリからの読み取り、書き込み、および削除](https://www.codeproject.com/Articles/3389/Read-write-and-delete-from-registry-with-C)

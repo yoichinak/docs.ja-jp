@@ -3,12 +3,12 @@ title: LINQ の使用
 description: このチュートリアルでは、LINQ を使用してシーケンスを生成し、LINQ クエリで使用するためのメソッドを作成し、先行評価と遅延評価を区別する方法を説明します。
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: e37c013add02f651875db7b908ae2b49711d996d
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 3cbafbb6aeed3abdd6d83ead613b29de738d5604
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609308"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587178"
 ---
 # <a name="working-with-linq"></a>LINQ の使用
 
@@ -142,7 +142,7 @@ public static void Main(string[] args)
 
 ただし、標準ライブラリの中には利用できるシャッフル メソッドがないので、自分で作成する必要があります。 作成するシャッフル メソッドには、LINQ ベースのプログラムで使用できるさまざまなテクニックが例示されているので、このプロセスの各部分を手順を追って説明します。
 
-LINQ クエリから返される <xref:System.Collections.Generic.IEnumerable%601> を操作する方法に対していくつかの機能を追加するには、[拡張メソッド](../../csharp/programming-guide/classes-and-structs/extension-methods.md)と呼ばれる特別な種類のメソッドをいくつか記述する必要があります。 手短に言うと、拡張メソッドとは、既に存在する型に機能を追加する際に、元の型を変更せずに新しい機能を追加するという特別な目的を持つ*静的メソッド*です。
+LINQ クエリから返される <xref:System.Collections.Generic.IEnumerable%601> を操作する方法に対していくつかの機能を追加するには、[拡張メソッド](../programming-guide/classes-and-structs/extension-methods.md)と呼ばれる特別な種類のメソッドをいくつか記述する必要があります。 手短に言うと、拡張メソッドとは、既に存在する型に機能を追加する際に、元の型を変更せずに新しい機能を追加するという特別な目的を持つ*静的メソッド*です。
 
 `Extensions.cs` という名前の新しい *static* クラス ファイルをプログラムに追加した後、最初の拡張メソッドをビルドすることで、自分の拡張メソッドに新しいホームを与えます。
 

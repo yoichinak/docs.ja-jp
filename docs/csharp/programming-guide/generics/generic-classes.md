@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: cc2beb78cc6594a3de594b50c1c45d23b30966f6
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 6eb4df4489f4b377c68c5d49d1bf0bb01b835e85
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423488"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589764"
 ---
 # <a name="generic-classes-c-programming-guide"></a>ジェネリック クラス (C# プログラミング ガイド)
 ジェネリック クラスは、特定のデータ型に固有ではない操作をカプセル化します。 ジェネリック クラスは最も一般的に、リンク リスト、ハッシュ テーブル、スタック、キュー、ツリーなどのコレクションと共に使用されます。 コレクションの項目を追加または削除するなどの操作は、保存されているデータの型に関係なく、基本的に同じように実行されます。  
@@ -24,7 +24,7 @@ ms.locfileid: "66423488"
   
      通例、パラメーター化できる型が多ければ多いほど、コードの柔軟性が上がり、再利用しやすくなります。 ただし、汎用化が多すぎると、他の開発者にとって読みにくい、理解しにくいコードが生成されます。  
   
-- 型パラメーターに適用する制約 (制約がある場合) (「[型パラメーターの制約](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)」を参照)。  
+- 型パラメーターに適用する制約 (制約がある場合) (「[型パラメーターの制約](./constraints-on-type-parameters.md)」を参照)。  
   
      処理しなければならない型を処理できる範囲で最大の制約を適用することが推奨されます。 たとえば、ジェネリック クラスが参照型でのみ使用される場合、クラス制約を適用します。 それにより、意図しない、値型でのクラスの使用が回避され、`T` で `as` 演算子を使用したり、null 値を確認したりできます。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66423488"
   
      たとえば、ジェネリック基盤のコレクションで項目を作成するために使用されるクラスを設計するとき、場合によっては、<xref:System.IComparable%601> のようなインターフェイスを実装する必要があります。ここで `T` はクラスの型です。  
   
- 単純なジェネリック クラスの例については、「[ジェネリックの概要](../../../csharp/programming-guide/generics/index.md)」を参照してください。  
+ 単純なジェネリック クラスの例については、「[ジェネリックの概要](./index.md)」を参照してください。  
   
  型パラメーターや制約のルールは、特に継承とメンバーのアクセシビリティに関して、ジェネリック クラスの動作と密接な関係があります。 続行する前に、いくつかの用語を理解してください。 ジェネリック クラス `Node<T>,` の場合、型引数を指定することで、クライアント コードはクラスを参照し、構築されたクローズ型を作成できます (`Node<int>`)。 あるいは、ジェネリック基底クラスを指定するときなど、型パラメーターを指定せず、構築されたオープン型を作成できます (`Node<T>`)。 ジェネリック クラスは、具象、構築されたクローズ型、または構築されたオープン型の基底クラスから継承できます。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66423488"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Collections.Generic>
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [ジェネリック](../../../csharp/programming-guide/generics/index.md)
+- [C# プログラミング ガイド](../index.md)
+- [ジェネリック](./index.md)
 - [列挙子の状態を保存する](https://blogs.msdn.microsoft.com/wesdyer/2006/01/13/saving-the-state-of-enumerators/)
 - [継承パズル、パート 1](https://blogs.msdn.microsoft.com/ericlippert/2007/07/27/an-inheritance-puzzle-part-one/)

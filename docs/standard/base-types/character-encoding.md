@@ -14,12 +14,12 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: ac4de843b3a134b840fc37e3c1d8327fe0010d79
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 82b936b753dff4230be6162583a50524e8c5254b
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960322"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987183"
 ---
 # <a name="character-encoding-in-net"></a>.NET での文字エンコード
 文字は、さまざまな方法で表現できる抽象エンティティです。 文字エンコーディングとは、サポートされている文字セットの各文字を、その文字を表す値と組み合わせる体系です。 たとえばモールス符号は、ローマ字の各文字を、電信線での送信に適したドットとダッシュのパターンと組み合わせる文字エンコーディングです。 コンピューターの文字エンコーディングは、サポートされている文字セットの各文字を、その文字を表す数値と組み合わせます。 文字エンコーディングには、次の 2 つの異なるコンポーネントがあります。  
@@ -31,7 +31,7 @@ ms.locfileid: "65960322"
  文字エンコーディングは、エンコーダーとデコーダーの動作を決める規則を表します。 たとえば、 <xref:System.Text.UTF8Encoding> クラスは、1 ～ 4 バイトを使用して 1 つの Unicode 文字を表現する UTF-8 (8-bit Unicode Transformation Format) をエンコードおよびデコードするための規則を表します。 エンコードとデコードに検証を含めることもできます。 たとえば、 <xref:System.Text.UnicodeEncoding> クラスは、すべてのサロゲートを検証して、有効なサロゲート ペアが構成されていることを確認します (サロゲート ペアは、U+D800 ～ U+DBFF の範囲のコード ポイントを持つ文字と、それに続く U+DC00 ～ U+DFFF の範囲のコード ポイントを持つ文字で構成されます)。エンコーダーが無効な文字を処理する方法や、デコーダーが無効なバイトを処理する方法は、フォールバック ストラテジによって決まります。  
   
 > [!WARNING]
->  .NET のエンコーディング クラスは、文字データを格納および変換するためのものです。 バイナリ データを文字列形式で格納する目的では使用しないでください。 エンコーディング クラスを使用してバイナリ データを文字列形式に変換すると、使用されているエンコーディングによっては、予期しない動作が発生したり、不正確なデータや破損したデータが生成されたりする可能性があります。 バイナリ データを文字列形式に変換するには、 <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> メソッドを使用します。  
+> .NET のエンコーディング クラスは、文字データを格納および変換するためのものです。 バイナリ データを文字列形式で格納する目的では使用しないでください。 エンコーディング クラスを使用してバイナリ データを文字列形式に変換すると、使用されているエンコーディングによっては、予期しない動作が発生したり、不正確なデータや破損したデータが生成されたりする可能性があります。 バイナリ データを文字列形式に変換するには、 <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> メソッドを使用します。  
   
  .NET では (<xref:System.Text.UnicodeEncoding> クラスによって表される) UTF-16 エンコーディングを使って、文字と文字列を表します。 共通言語ランタイムをターゲットとするアプリケーションは、エンコーダーを使用して、共通言語ランタイムによってサポートされている Unicode 文字表現を他のエンコーディング方式に変換し、 デコーダーを使用して、Unicode 以外のエンコーディングの文字を Unicode に変換します。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "65960322"
 - <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> メソッドを呼び出します。このメソッドは、.NET で使用できる任意のエンコーディング (標準、コード ページ、または DBCS) を返します。 オーバーロードを使用すると、エンコーダーおよびデコーダーの両方のフォールバック オブジェクトを指定できます。  
   
 > [!NOTE]
->  Unicode 規格では、サポートされるすべてのスクリプトについて、各文字にコード ポイント (数値) と名前を割り当てています。 たとえば、文字 "A" は U+0041 というコード ポイントと、"LATIN CAPITAL LETTER A" という名前で表されます。 UTF (Unicode Transformation Format) エンコーディングは、そのコード ポイントを 1 つ以上のバイトのシーケンスにエンコードする方法を定義します。 Unicode エンコーディング方式を使用すると、任意の文字セットの文字を 1 つのエンコーディング方式で表現できるため、国際対応アプリケーションの開発が簡素化されます。 これにより、アプリケーション開発者が、特定の言語または書記体系の文字を表すために使用されるエンコーディング方式を追跡する必要はなくなります。また、データを破損することなく、各国のシステム間でデータを共有できます。  
+> Unicode 規格では、サポートされるすべてのスクリプトについて、各文字にコード ポイント (数値) と名前を割り当てています。 たとえば、文字 "A" は U+0041 というコード ポイントと、"LATIN CAPITAL LETTER A" という名前で表されます。 UTF (Unicode Transformation Format) エンコーディングは、そのコード ポイントを 1 つ以上のバイトのシーケンスにエンコードする方法を定義します。 Unicode エンコーディング方式を使用すると、任意の文字セットの文字を 1 つのエンコーディング方式で表現できるため、国際対応アプリケーションの開発が簡素化されます。 これにより、アプリケーション開発者が、特定の言語または書記体系の文字を表すために使用されるエンコーディング方式を追跡する必要はなくなります。また、データを破損することなく、各国のシステム間でデータを共有できます。  
 >   
 >  .NET では、Unicode 規格によって定義されている UTF-8、UTF-16、UTF-32 の 3 つのエンコーディングをサポートしています。 詳しくは、[Unicode ホーム ページ](https://www.unicode.org/)の Unicode 標準をご覧ください。  
   
@@ -137,19 +137,19 @@ ms.locfileid: "65960322"
 - Exception Fallback  
   
 > [!IMPORTANT]
->  エンコード操作で最も一般的な問題は、Unicode 文字を特定のコード ページ エンコーディングにマップできない場合に発生します。 デコード操作で最も一般的な問題は、無効なバイト シーケンスを有効な Unicode 文字に変換できない場合に発生します。 そのため、個々のエンコーディング オブジェクトで使用されるフォールバック ストラテジを把握しておく必要があります。 エンコーディング オブジェクトをインスタンス化するときには、可能な限り、そのオブジェクトで使用されるフォールバック ストラテジを指定するようにしてください。  
+> エンコード操作で最も一般的な問題は、Unicode 文字を特定のコード ページ エンコーディングにマップできない場合に発生します。 デコード操作で最も一般的な問題は、無効なバイト シーケンスを有効な Unicode 文字に変換できない場合に発生します。 そのため、個々のエンコーディング オブジェクトで使用されるフォールバック ストラテジを把握しておく必要があります。 エンコーディング オブジェクトをインスタンス化するときには、可能な限り、そのオブジェクトで使用されるフォールバック ストラテジを指定するようにしてください。  
   
 <a name="BestFit"></a>   
 ### <a name="best-fit-fallback"></a>Best-Fit Fallback  
  ターゲット エンコード内に厳密な一致がない文字について、エンコーダーは類似した文字へのマッピングを試みることができます (最適フォールバックは主にエンコード時の問題であり、デコード時の問題ではありません。 Unicode に正常にマッピングできない文字を含むコード ページはほとんどありません)。最適フォールバックは、<xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> および <xref:System.Text.Encoding.GetEncoding%28System.String%29?displayProperty=nameWithType> の各オーバーロードによって取得されるコード ページ エンコーディングと 2 バイト文字セット エンコーディングの既定のフォールバック ストラテジです。  
   
 > [!NOTE]
->  .NET の Unicode エンコーディング クラス (<xref:System.Text.UTF8Encoding>、<xref:System.Text.UnicodeEncoding>、および <xref:System.Text.UTF32Encoding>) では、理論上すべての文字セットのすべての文字がサポートされているため、これらのクラスを使用すると最適フォールバックの問題を解消できます。  
+> .NET の Unicode エンコーディング クラス (<xref:System.Text.UTF8Encoding>、<xref:System.Text.UnicodeEncoding>、および <xref:System.Text.UTF32Encoding>) では、理論上すべての文字セットのすべての文字がサポートされているため、これらのクラスを使用すると最適フォールバックの問題を解消できます。  
   
  最適なストラテジはコード ページごとに異なります。 たとえば、全角のアルファベットがより一般的な半角のアルファベットにマッピングされるコード ページもあれば、 そのようなマッピングが行われないコード ページもあります。 積極的な最適ストラテジでも、一部のエンコーディングの一部の文字には可能な対応がない場合があります。 たとえば、中国語の漢字からコード ページ 1252 への適切なマッピングはありません。 その場合は、置換文字列が使用されます。 既定では、この文字列は単一の QUESTION MARK (疑問符) (U+003F) です。  
   
 > [!NOTE]
->  最適なストラテジは、詳細には文書化されていません。 ただし、いくつかのコード ページは、[Unicode コンソーシアム](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/)の Web サイトで文書化されています。 マッピング ファイルを解釈する方法について詳しくは、そのフォルダーの **readme.txt** ファイルをご覧ください。
+> 最適なストラテジは、詳細には文書化されていません。 ただし、いくつかのコード ページは、[Unicode コンソーシアム](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/)の Web サイトで文書化されています。 マッピング ファイルを解釈する方法について詳しくは、そのフォルダーの **readme.txt** ファイルをご覧ください。
   
  次の例では、コード ページ 1252 (西ヨーロッパ言語の Windows コード ページ) を使用して、最適マッピングとその欠点を示しています。 まず、 <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> メソッドを使用して、コード ページ 1252 のエンコーディング オブジェクトを取得します。 このエンコーディング オブジェクトは、サポートされていない Unicode 文字に対して既定で最適マッピングを使用します。 次に、スペースで区切られた 3 つの非 ASCII 文字 (CIRCLED LATIN CAPITAL LETTER S (U+24C8)、SUPERSCRIPT FIVE (U+2075)、および INFINITY (U+221E)) を含む文字列をインスタンス化します。 出力を見るとわかるように、この文字列をエンコードすると、スペースを除く元の 3 つの文字が、QUESTION MARK (U+003F)、DIGIT FIVE (U+0035)、および DIGIT EIGHT (U+0038) に置き換えられます。 DIGIT EIGHT は、サポートされていない INFINITY 文字の代替として最適とは言えません。QUESTION MARK は、元の文字に対応するマッピングがなかったことを示します。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "65960322"
  最適マッピングは、Unicode データをコード ページ データにエンコードする <xref:System.Text.Encoding> オブジェクトの既定の動作です。レガシ アプリケーションの中には、この動作に依存するものがあります。 ただし、ほとんどの新しいアプリケーションでは、セキュリティ上の理由から、最適動作の使用を避ける必要があります。 たとえば、アプリケーションで、最適エンコードを使用してドメイン名を付けないでください。  
   
 > [!NOTE]
->  エンコーディングに対してカスタムの最適フォールバック マッピングを実装することもできます。 詳しくは、「 [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) 」セクションをご覧ください。  
+> エンコーディングに対してカスタムの最適フォールバック マッピングを実装することもできます。 詳しくは、「 [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) 」セクションをご覧ください。  
   
  エンコーディング オブジェクトの既定のフォールバック ストラテジが最適フォールバックである場合、 <xref:System.Text.Encoding> オブジェクトを取得するときに別のフォールバック ストラテジを選択することもできます。そのためには、 <xref:System.Text.Encoding.GetEncoding%28System.Int32%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType> または <xref:System.Text.Encoding.GetEncoding%28System.String%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType> のオーバーロードを呼び出します。 次のセクションでは、コード ページ 1252 にマップできない文字をアスタリスク (*) に置き換える例を紹介します。  
   
@@ -179,7 +179,7 @@ ms.locfileid: "65960322"
  [!code-vb[Conceptual.Encoding#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/bestfit1a.vb#3)]  
   
 > [!NOTE]
->  エンコーディング用の置換クラスを実装することもできます。 詳しくは、「 [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) 」セクションをご覧ください。  
+> エンコーディング用の置換クラスを実装することもできます。 詳しくは、「 [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) 」セクションをご覧ください。  
   
  置換文字列としては、QUESTION MARK (U+003F) のほか、特に Unicode 文字列に正しく変換できないバイト シーケンスをデコードする場合に、Unicode REPLACEMENT CHARACTER (U+FFFD) がよく使用されます。 ただし、置換文字列は自由に選択できます。置換文字列に複数の文字を含めることもできます。  
   
@@ -191,7 +191,7 @@ ms.locfileid: "65960322"
  [!code-vb[Conceptual.Encoding#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/exceptionascii.vb#4)]  
   
 > [!NOTE]
->  エンコード操作用のカスタム例外ハンドラーを実装することもできます。 詳しくは、「 [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) 」セクションをご覧ください。  
+> エンコード操作用のカスタム例外ハンドラーを実装することもできます。 詳しくは、「 [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) 」セクションをご覧ください。  
   
  <xref:System.Text.EncoderFallbackException> オブジェクトと <xref:System.Text.DecoderFallbackException> オブジェクトは、例外を引き起こした状況について以下の情報を提供します。  
   

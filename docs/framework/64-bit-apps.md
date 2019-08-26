@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11295f4b0d1a425fd3859c904b8ebc7830c64d1f
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 4ff02c5856e4ee48c8e5cf375cc68d92c76737c7
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66815948"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988389"
 ---
 # <a name="64-bit-applications"></a>64 ビット アプリケーション
 アプリケーションをコンパイルするときに、Windows 64 ビット オペレーティング システム上で、ネイティブ アプリケーションとして実行するか、WOW64 (Windows 64 ビット上の Windows 32 ビット) の制御下で実行するかを指定できます。 WOW64 は互換環境であり、32 ビット アプリケーションを 64 ビット オペレーティング システム上で実行できるようにします。 WOW64 は、Windows オペレーティング システムのすべての 64 ビット バージョンに含まれています。  
@@ -24,7 +24,7 @@ ms.locfileid: "66815948"
  Visual Studio は、x86 コンピューターには 32 ビット版の CLR をインストールし、64 ビットの Windows コンピューターには、32 ビット版の CLR と適切な 64 ビット版の CLR の両方をインストールします (Visual Studio は 32 ビット アプリケーションであるため、64 ビット システムにインストールすると WOW64 の制御下で実行されます)。  
   
 > [!NOTE]
->  x86 エミュレーションと、Itanium プロセッサ ファミリ向け WOW64 サブシステムの設計のために、アプリケーションの実行は単一のプロセッサ上に制限されます。 これらの要因により、Itanium ベースのシステム上で実行する 32 ビット .NET Framework アプリケーションのパフォーマンスとスケーラビリティは低下します。 パフォーマンスおよびスケーラビリティを向上させるために、Itanium ベースのシステム用のネイティブ 64 ビット サポートを含む .NET Framework 4 を使用することをお勧めします。  
+> x86 エミュレーションと、Itanium プロセッサ ファミリ向け WOW64 サブシステムの設計のために、アプリケーションの実行は単一のプロセッサ上に制限されます。 これらの要因により、Itanium ベースのシステム上で実行する 32 ビット .NET Framework アプリケーションのパフォーマンスとスケーラビリティは低下します。 パフォーマンスおよびスケーラビリティを向上させるために、Itanium ベースのシステム用のネイティブ 64 ビット サポートを含む .NET Framework 4 を使用することをお勧めします。  
   
  既定では、64 ビット Windows オペレーティング システムで 64 ビット マネージド アプリケーションを実行するときに、最大 2 GB のオブジェクトを作成できます。 ただし、.NET Framework 4.5 ではこの制限を上げることができます。  詳細については、「[\<gcAllowVeryLargeObjects> 要素](../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md)」を参照してください。  
   
@@ -56,8 +56,8 @@ ms.locfileid: "66815948"
   
 |コンパイラ|コンパイラ オプション|  
 |--------------|---------------------|  
-|Visual Basic|[/platform (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/platform.md)|  
-|Visual C#|[-platform (C# コンパイラ オプション)](~/docs/csharp/language-reference/compiler-options/platform-compiler-option.md)|  
+|Visual Basic|[/platform (Visual Basic)](../visual-basic/reference/command-line-compiler/platform.md)|  
+|Visual C#|[-platform (C# コンパイラ オプション)](../csharp/language-reference/compiler-options/platform-compiler-option.md)|  
 |Visual C++|**/clr:safe** を使用すると、プラットフォームに依存しない、Microsoft Intermediate Language (MSIL) アプリケーションを作成できます。 詳細については、「[/clr (共通言語ランタイムのコンパイル)](/cpp/build/reference/clr-common-language-runtime-compilation)」を参照してください。<br /><br /> Visual C++ には、それぞれの 64 ビット オペレーティング システムを対象とする個別のコンパイラが含まれます。 Visual C++ を使用して 64 ビット Windows オペレーティング システム上で実行するネイティブ アプリケーションを作成する方法の詳細については、「[Visual C++ による 64 ビット プログラミング](/cpp/build/configuring-programs-for-64-bit-visual-cpp)」を参照してください。|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>.exe ファイルまたは .dll ファイルのステータスの特定  

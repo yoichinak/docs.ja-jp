@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 596ea34dce17d21a151007cad3ebb0ccb615d136
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4bf0669b94f925052ad5f139cce049018ce7da4f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590411"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666530"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>方法: アセンブリを使用して XSLT 変換を実行する
 XSLT コンパイラ (xsltc.exe) は、XSLT スタイル シートをコンパイルしてアセンブリを生成します。 このアセンブリを <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> メソッドに直接渡すことができます。  
@@ -186,4 +186,4 @@ xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"))
 - <xref:System.Xml.Xsl.XslCompiledTransform>
 - [XSLT コンパイラ (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)
 - [XSLT 変換](../../../../docs/standard/data/xml/xslt-transformations.md)
-- [csc.exe を使用したコマンド ラインからのビルド](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+- [csc.exe を使用したコマンド ラインからのビルド](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

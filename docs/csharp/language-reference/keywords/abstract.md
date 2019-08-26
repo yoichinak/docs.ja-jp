@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: 3a4d29ae4814ccceb7b405d9c1749150059a24a0
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 547ecd9ff823f61bf3995c02959235b65a4a3979
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859589"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606146"
 ---
 # <a name="abstract-c-reference"></a>abstract (C# リファレンス)
 `abstract` 修飾子は、その修飾対象の実装が不足しているか、不完全であることを示します。 クラスやメソッド、プロパティ、インデクサー、イベントと組み合わせて abstract 修飾子を使用することができます。 クラス宣言に `abstract` 修飾子を使用して、クラスは他のクラスの基底クラスとしてのみ使用することを意図し、それ自体ではインスタンス化されないことを示します。 abstract としてマークされたメンバーは、その抽象クラスから派生した非抽象クラスによって実装される必要があります。
@@ -29,7 +29,7 @@ ms.locfileid: "67859589"
   
 - 抽象クラスには抽象メソッドとアクセサーを記述することができます。  
   
-- [sealed](../../../csharp/language-reference/keywords/sealed.md) 修飾子を使って抽象クラスを修飾することはできません。2 つの修飾子が逆の意味を持つためです。 `sealed` 修飾子を指定したクラスは継承が禁止されるのに対し、`abstract` 修飾子を指定したクラスは継承による使用が強制されます。  
+- [sealed](./sealed.md) 修飾子を使って抽象クラスを修飾することはできません。2 つの修飾子が逆の意味を持つためです。 `sealed` 修飾子を指定したクラスは継承が禁止されるのに対し、`abstract` 修飾子を指定したクラスは継承による使用が強制されます。  
   
 - 抽象クラスから派生した具象クラスには、継承されたすべての抽象メソッドとアクセサーの実際の機能を実装する必要があります。  
   
@@ -41,27 +41,27 @@ ms.locfileid: "67859589"
   
 - 抽象メソッドの宣言は、抽象クラスでしか認められません。  
   
-- 抽象メソッドの宣言には実際の機能が実装されないため、メソッドの本体はありません。つまり、メソッドの宣言は、末尾のセミコロンがあるだけで、シグネチャの後ろに中かっこ ({ }) は存在しません。 次に例を示します。  
+- 抽象メソッドの宣言には実際の機能が実装されないため、メソッドの本体はありません。つまり、メソッドの宣言は、末尾のセミコロンがあるだけで、シグネチャの後ろに中かっこ ({ }) は存在しません。 例:  
   
     ```csharp  
     public abstract void MyMethod();  
     ```  
   
-     実際の機能は、メソッド (具象クラスのメンバー) に [override](../../../csharp/language-reference/keywords/override.md) を指定して実装します。  
+     実際の機能は、メソッド (具象クラスのメンバー) に [override](./override.md) を指定して実装します。  
   
-- 抽象メソッドの宣言に [static](../../../csharp/language-reference/keywords/static.md) 修飾子や [virtual](../../../csharp/language-reference/keywords/virtual.md) 修飾子を使うのは誤りです。  
+- 抽象メソッドの宣言に [static](./static.md) 修飾子や [virtual](./virtual.md) 修飾子を使うのは誤りです。  
   
  抽象プロパティは、宣言と呼び出しの構文の違いを除けば、抽象メソッドと似た働きを持ちます。  
   
 - `abstract` 修飾子を静的プロパティに対して使うのは誤りです。  
   
-- 継承する抽象プロパティは、派生クラス内で [override](../../../csharp/language-reference/keywords/override.md) 修飾子を使ったプロパティ宣言を記述することでオーバーライドすることができます。  
+- 継承する抽象プロパティは、派生クラス内で [override](./override.md) 修飾子を使ったプロパティ宣言を記述することでオーバーライドすることができます。  
   
- 抽象クラスの詳細については、「[抽象クラスとシール クラス、およびクラス メンバー](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)」を参照してください。  
+ 抽象クラスの詳細については、「[抽象クラスとシール クラス、およびクラス メンバー](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)」を参照してください。  
   
  すべてのインターフェイス メンバーの機能は、抽象クラスで実装する必要があります。  
   
- インターフェイスを実装する抽象クラスで、インターフェイス メソッドを抽象メソッドにマップすることもできます。 次に例を示します。  
+ インターフェイスを実装する抽象クラスで、インターフェイス メソッドを抽象メソッドにマップすることもできます。 例:  
   
 [!code-csharp[csrefKeywordsModifiers#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#2)]
   
@@ -83,9 +83,9 @@ BaseClass bc = new BaseClass();   // Error
   
 ## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [修飾子](../../../csharp/language-reference/keywords/modifiers.md)
-- [virtual](../../../csharp/language-reference/keywords/virtual.md)
-- [override](../../../csharp/language-reference/keywords/override.md)
-- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)
+- [C# リファレンス](../index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [修飾子](./modifiers.md)
+- [virtual](./virtual.md)
+- [override](./override.md)
+- [C# のキーワード](./index.md)

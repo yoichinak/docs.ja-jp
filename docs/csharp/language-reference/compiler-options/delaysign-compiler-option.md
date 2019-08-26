@@ -8,12 +8,12 @@ helpviewer_keywords:
 - delaysign compiler option [C#]
 - /delaysign compiler option [C#]
 ms.assetid: bcb058eb-2933-4e7f-b356-5c941db4de75
-ms.openlocfilehash: 1d49733531507fc80165e034fde1969305cfd2e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae309a8de6c4691f0009e5beb8ac2adc8772805b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681730"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69603028"
 ---
 # <a name="-delaysign-c-compiler-options"></a>-delaysign (C# コンパイラ オプション)
 
@@ -29,17 +29,17 @@ ms.locfileid: "54681730"
 
 `+` &#124; `-`
 
-完全署名されたアセンブリを作成する場合は、**-delaysign-** を使用します。 アセンブリに公開キーだけを含める場合は、**-delaysign+** を使用します。 既定値は **-delaysign-** です。
+完全署名されたアセンブリを作成する場合は、 **-delaysign-** を使用します。 アセンブリに公開キーだけを含める場合は、 **-delaysign+** を使用します。 既定値は **-delaysign-** です。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-**-delaysign** オプションは、[-keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md) または [-keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md) と共に使用しない場合、無効になります。
+**-delaysign** オプションは、[-keyfile](./keyfile-compiler-option.md) または [-keycontainer](./keycontainer-compiler-option.md) と共に使用しない場合、無効になります。
 
 **-delaysign** オプションと **-publicsign** オプションは相互に排他的です。
 
 アセンブリに完全に署名するように指定すると、コンパイラはマニフェスト (アセンブリ メタデータ) を含むファイルをハッシュし、秘密キーでそのハッシュに署名します。 その処理により、マニフェストを含むファイルに格納されるデジタル署名が作成されます。 アセンブリを遅延署名に設定すると、コンパイラは署名の計算も格納も行いませんが、後で署名を追加できるようにファイルに領域を確保します。
 
-たとえば、**-delaysign+** を指定すると、テスト時にはアセンブリをグローバル キャッシュに格納できます。 テスト後に、[アセンブリ リンカー](../../../framework/tools/al-exe-assembly-linker.md) ユーティリティを使用してアセンブリに秘密キーを配置することにより、そのアセンブリに完全署名できます。
+たとえば、 **-delaysign+** を指定すると、テスト時にはアセンブリをグローバル キャッシュに格納できます。 テスト後に、[アセンブリ リンカー](../../../framework/tools/al-exe-assembly-linker.md) ユーティリティを使用してアセンブリに秘密キーを配置することにより、そのアセンブリに完全署名できます。
 
 詳細については、「[厳密な名前付きアセンブリの作成と使用](../../../framework/app-domains/create-and-use-strong-named-assemblies.md)」および「[アセンブリへの遅延署名](../../../framework/app-domains/delay-sign-assembly.md)」をご覧ください。
 

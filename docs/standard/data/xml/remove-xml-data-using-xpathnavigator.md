@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 9f436bca-1b96-494b-a6d2-e102c7551752
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b9a94e0db3598cb5e2d00298144fa4826035a8e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27c19c82270b9d67b6cd308386aa93c6112d59ee
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674142"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69909682"
 ---
 # <a name="remove-xml-data-using-xpathnavigator"></a>XPathNavigator による XML データの削除
 <xref:System.Xml.XPath.XPathNavigator> クラスは、XML ドキュメントからノードを削除するためのメソッドのセットを提供します。 これらのメソッドを使用するには、<xref:System.Xml.XPath.XPathNavigator> オブジェクトが編集可能である必要があります。つまり、その <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> プロパティを `true` にする必要があります。  
@@ -33,7 +33,7 @@ ms.locfileid: "54674142"
  削除操作により、削除されたノード上に位置していた <xref:System.Xml.XPath.XPathNavigator> オブジェクトの位置に影響はありません。 これらの <xref:System.Xml.XPath.XPathNavigator> オブジェクトは削除されたサブツリー内を移動できるという点で有効ですが、<xref:System.Xml.XPath.XPathNavigator> クラスの通常のノード セットの移動メソッドを使用して、主ノード ツリーには移動できません。  
   
 > [!NOTE]
->  <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A> クラスの <xref:System.Xml.XPath.XPathNavigator> メソッドは、これらの <xref:System.Xml.XPath.XPathNavigator> オブジェクトを主ノード ツリーに戻したり、主ノード ツリーから削除されたサブツリーに移動したりするために使用できます。  
+> <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A> クラスの <xref:System.Xml.XPath.XPathNavigator> メソッドは、これらの <xref:System.Xml.XPath.XPathNavigator> オブジェクトを主ノード ツリーに戻したり、主ノード ツリーから削除されたサブツリーに移動したりするために使用できます。  
   
  次の例では、`price` ファイルの最初の `book` 要素の `contosoBooks.xml` 要素を、<xref:System.Xml.XPath.XPathNavigator.DeleteSelf%2A> メソッドを使用して削除します。 <xref:System.Xml.XPath.XPathNavigator> 要素が削除された後の `price` オブジェクトの位置は、親の `book` 要素上です。  
   

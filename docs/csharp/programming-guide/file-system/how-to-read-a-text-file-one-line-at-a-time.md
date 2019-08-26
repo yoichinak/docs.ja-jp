@@ -1,19 +1,19 @@
 ---
-title: '方法: テキスト ファイルを一度に 1 行読み込む (Visual C#)'
+title: 方法:テキスト ファイルを一度に 1 行読み込む (Visual C#)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - ReadLine method [C#]
 - reading text files, line by line
 - text files [C#]
 ms.assetid: d62e22c5-a13c-48db-af9b-f10c801b0cb1
-ms.openlocfilehash: 4e6c4cfce1b5e97f70040b318eb68ee78ee4a953
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 75274d93ee29feb5f79dfc29c24109f25fd98a5c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595387"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589965"
 ---
-# <a name="how-to-read-a-text-file-one-line-at-a-time-visual-c"></a>方法: テキスト ファイルを一度に 1 行読み込む (Visual C#)
+# <a name="how-to-read-a-text-file-one-line-at-a-time-visual-c"></a>方法:テキスト ファイルを一度に 1 行読み込む (Visual C#)
 次の例では、`StreamReader` クラスの `ReadLine` メソッドを使用して、テキスト ファイルの内容を一度に 1 行ずつ文字列に読み込みます。 各テキスト行は文字列 `line` に格納され、画面に表示されます。  
   
 ## <a name="example"></a>例  
@@ -53,5 +53,5 @@ System.Console.ReadLine();
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [ファイル システムとレジストリ (C# プログラミング ガイド)](../../../csharp/programming-guide/file-system/index.md)
+- [C# プログラミング ガイド](../index.md)
+- [ファイル システムとレジストリ (C# プログラミング ガイド)](./index.md)

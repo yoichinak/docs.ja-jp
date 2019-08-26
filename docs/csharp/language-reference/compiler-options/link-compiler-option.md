@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -link compiler option [C#]
 - link compiler option [C#]
 ms.assetid: 00da70c6-9ea1-43c2-86f2-aa7f26c03475
-ms.openlocfilehash: 049d1ce7a27a812b58fb09802e1ce520e96ed925
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 724a848d4c31b2c4f6fc3427d70fc84f4fd944c6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586019"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924761"
 ---
 # <a name="-link-c-compiler-options"></a>-link (C# コンパイラ オプション)
 指定したアセンブリ内の COM 型情報を、現在のコンパイル対象のプロジェクトで使用できるようにします。  
@@ -31,7 +31,7 @@ ms.locfileid: "65586019"
   
 ## <a name="arguments"></a>引数  
  `fileList`  
- 必須です。 アセンブリ ファイル名のコンマ区切りリスト。 ファイル名に空白が含まれている場合は、名前を二重引用符で囲みます。  
+ 必須。 アセンブリ ファイル名のコンマ区切りリスト。 ファイル名に空白が含まれている場合は、名前を二重引用符で囲みます。  
   
 ## <a name="remarks"></a>解説  
  `-link` オプションを使用すると、埋め込み型情報を含むアプリケーションを配置できます。 その後、このアプリケーションは、埋め込み型情報を実装する、ランタイム アセンブリ内の型を使用できます。その際、ランタイム アセンブリへの参照は必要ありません。 ランタイム アセンブリのさまざまなバージョンが公開されている場合、埋め込み型情報を含むアプリケーションは、再コンパイルする必要なく、各種バージョンで動作できます。 例については、「[チュートリアル:マネージド アセンブリからの型の埋め込み](../../programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)」をご覧ください。  
@@ -41,7 +41,7 @@ ms.locfileid: "65586019"
  `-link` オプションで埋め込まれるのは、インターフェイス、構造体、デリゲートのみです。 COM クラスの埋め込みはサポートされていません。  
   
 > [!NOTE]
->  コードで埋め込み COM 型のインスタンスを作成する際は、適切なインターフェイスを使用してインスタンスを作成する必要があります。 コクラスを使用して埋め込み COM 型のインスタンスを作成しようとすると、エラーが発生します。  
+> コードで埋め込み COM 型のインスタンスを作成する際は、適切なインターフェイスを使用してインスタンスを作成する必要があります。 コクラスを使用して埋め込み COM 型のインスタンスを作成しようとすると、エラーが発生します。  
   
  Visual Studio で `-link` オプションを設定するには、アセンブリ参照を追加し、`Embed Interop Types` プロパティを **true** に設定します。 `Embed Interop Types` プロパティの既定値は **false** です。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "65586019"
   
 - アセンブリ B の戻り値の型またはパラメーターの型を使用するフィールド、プロパティ、イベント、またはメソッドが呼び出される。  
   
- [-reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) コンパイラ オプションと同様、`-link` コンパイラ オプションでは、使用頻度の高い .NET Framework アセンブリを参照する Csc.rsp 応答ファイルを使用します。 コンパイラで Csc.rsp ファイルを使用しない場合は、[-noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) コンパイラ オプションを使用してください。  
+ [-reference](./reference-compiler-option.md) コンパイラ オプションと同様、`-link` コンパイラ オプションでは、使用頻度の高い .NET Framework アセンブリを参照する Csc.rsp 応答ファイルを使用します。 コンパイラで Csc.rsp ファイルを使用しない場合は、[-noconfig](./noconfig-compiler-option.md) コンパイラ オプションを使用してください。  
   
  `-link` の省略形は `-l` です。  
   
@@ -83,9 +83,9 @@ csc -link:COMData1.dll,COMData2.dll -out:OfficeApp.exe OfficeApp.cs
   
 ## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
-- [チュートリアル: マネージド アセンブリからの型の埋め込み](../../programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
-- [-reference (C# コンパイラ オプション)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)
-- [-noconfig (C# コンパイラ オプション)](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)
-- [csc.exe を使用したコマンド ラインからのビルド](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
-- [相互運用性の概要](../../../csharp/programming-guide/interop/interoperability-overview.md)
+- [C# コンパイラ オプション](./index.md)
+- [チュートリアル:マネージド アセンブリからの型の埋め込み](../../programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
+- [-reference (C# コンパイラ オプション)](./reference-compiler-option.md)
+- [-noconfig (C# コンパイラ オプション)](./noconfig-compiler-option.md)
+- [csc.exe を使用したコマンド ラインからのビルド](./command-line-building-with-csc-exe.md)
+- [相互運用性の概要](../../programming-guide/interop/interoperability-overview.md)

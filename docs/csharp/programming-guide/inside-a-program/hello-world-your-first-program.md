@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 62aaf8785b0dfb646ea804dab6918940f1e33346
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9a50de0bb583a1dfccfa609be1cca732868505ba
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635294"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589374"
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- 最初のプログラム (C# プログラミング ガイド)
 
@@ -28,19 +28,19 @@ ms.locfileid: "65635294"
 
 1. Visual Studio を起動します。
 
-2. メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]** の順にクリックします。
+2. メニュー バーで、 **[ファイル]** 、 **[新規作成]** 、 **[プロジェクト]** の順にクリックします。
 
      **[新しいプロジェクト]** ダイアログ ボックスが表示されます。
 
-3. **[インストール済み]**、**[テンプレート]**、**[Visual C#]** の順に展開し、**[コンソール アプリケーション]** を選択します。
+3. **[インストール済み]** 、 **[テンプレート]** 、 **[Visual C#]** の順に展開し、 **[コンソール アプリケーション]** を選択します。
 
-4. **[名前]** ボックスにプロジェクト名を指定し、**[OK]** をクリックします。
+4. **[名前]** ボックスにプロジェクト名を指定し、 **[OK]** をクリックします。
 
      **ソリューション エクスプローラー**に新しいプロジェクトが表示されます。
 
-5. **コード エディター**で Program.cs が開いていない場合は、**ソリューション エクスプローラー**で **Program.cs** のショートカットメニューを開き、**[コードの表示]** をクリックします。
+5. **コード エディター**で Program.cs が開いていない場合は、**ソリューション エクスプローラー**で **Program.cs** のショートカットメニューを開き、 **[コードの表示]** をクリックします。
 
-6. Program.cs の内容を次のコードで置き換えます。
+6. Program.cs の内容を次のコードに置き換えます。
 
      [!code-csharp[csProgGuide#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#21)]
 
@@ -48,7 +48,7 @@ ms.locfileid: "65635294"
 
 次に、このプログラムの重要な部分を調べます。
 
-## <a name="comments"></a>コメント
+## <a name="comments"></a>説明
 
 最初の行はコメントになっています。 「`//`」という文字があると、これ以降その行はコメントになります。
 
@@ -62,7 +62,7 @@ ms.locfileid: "65635294"
 
 C# コンソールアプリケーションには、`Main` メソッドが必要です。このメソッドの中で制御を開始して終了します。 `Main` メソッドでは、オブジェクトを作成し、ほかのメソッドを実行します。
 
-`Main` メソッドはクラスまたは構造体の中に存在する [static](../../../csharp/language-reference/keywords/static.md) メソッドです。 前の "Hello World!" の 例では、`Hello` という名前のクラスに存在していました。 次の方法のいずれかで `Main` メソッドを宣言できます。
+`Main` メソッドはクラスまたは構造体の中に存在する [static](../../language-reference/keywords/static.md) メソッドです。 前の "Hello World!" の 例では、`Hello` という名前のクラスに存在していました。 次の方法のいずれかで `Main` メソッドを宣言できます。
 
 - `void` 型を返すことができます。
 
@@ -76,13 +76,13 @@ C# コンソールアプリケーションには、`Main` メソッドが必要�
 
      [!code-csharp[csProgGuideMain#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#19)]
 
-     - または -
+     または
 
      [!code-csharp[csProgGuideMain#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#18)]
 
 `Main` メソッドのパラメーターである `args` は、`string` の配列で、プログラムの実行時に使用したコマンドライン引数を含みます。 C++ とは異なり、この配列には実行可能 (exe) ファイルの名前は含まれていません。
 
-コマンドライン引数の使用方法の詳細については、「[Main() とコマンドライン引数](../../../csharp/programming-guide/main-and-command-args/index.md)」および「[方法: コマンドラインを使用してアセンブリを作成および使用する](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)」に記載されている例をご覧ください。
+コマンドライン引数の使用方法の詳細については、「[Main() とコマンドライン引数](../main-and-command-args/index.md)」および「[方法: コマンドラインを使用してアセンブリを作成および使用する](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)」に記載されている例をご覧ください。
 
 <xref:System.Console.ReadKey%2A> メソッドの末尾で `Main` を呼び出すと、F5 キーを押してデバッグモードでプログラムを実行するときに、出力を読み取る前にコンソールウィンドウが終了することを回避できます。
 
@@ -106,17 +106,17 @@ C# プログラムは、普通、.NET Framework のランタイムライブラ�
 
 2. 次のいずれかの手順を実行してコマンド プロンプト ウィンドウを開きます。
 
-    - Windows 10 の場合、**[スタート]** メニューで `Developer Command Prompt` を検索し、**[開発者コマンド プロンプト for VS 2017]** をタップまたは選択します。
+    - Windows 10 の場合、 **[スタート]** メニューで `Developer Command Prompt` を検索し、 **[開発者コマンド プロンプト for VS 2017]** をタップまたは選択します。
 
          [開発者コマンド プロンプト] ウィンドウが表示されます。
 
-    - Windows 7 の場合、**[スタート]** メニューを開き、Visual Studio の現在のバージョンのフォルダーを展開し、**[Visual Studio Tools]** のショートカット メニューを開いて、**[開発者コマンド プロンプト for VS 2017]** をクリックします。
+    - Windows 7 の場合、 **[スタート]** メニューを開き、Visual Studio の現在のバージョンのフォルダーを展開し、 **[Visual Studio Tools]** のショートカット メニューを開いて、 **[開発者コマンド プロンプト for VS 2017]** をクリックします。
 
          [開発者コマンド プロンプト] ウィンドウが表示されます。
 
     - 標準のコマンドプロンプトウィンドウからコマンド ライン ビルドを有効にします。
 
-         「[方法 : Visual Studio のコマンドラインのための環境変数を設定する](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)」をご覧ください。
+         「[方法 : Visual Studio のコマンドラインのための環境変数を設定する](../../language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)」をご覧ください。
 
 3. コマンドプロンプトウィンドウで、`Hello.cs` ファイルが格納されているフォルダーに移動します。
 
@@ -130,14 +130,14 @@ C# プログラムは、普通、.NET Framework のランタイムライブラ�
 
      `Hello`
 
- C# コンパイラとそのオプションの詳細については、「[C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)」を参照してください。
+ C# コンパイラとそのオプションの詳細については、「[C# コンパイラ オプション](../../language-reference/compiler-options/index.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [インサイド C# プログラム](../../../csharp/programming-guide/inside-a-program/index.md)
-- [文字列](../../../csharp/programming-guide/strings/index.md)
+- [C# プログラミング ガイド](../index.md)
+- [インサイド C# プログラム](./index.md)
+- [文字列](../strings/index.md)
 - [サンプルおよびチュートリアル](../../../samples-and-tutorials/index.md)
-- [C# リファレンス](../../../csharp/language-reference/index.md)
-- [Main() とコマンドライン引数](../../../csharp/programming-guide/main-and-command-args/index.md)
+- [C# リファレンス](../../language-reference/index.md)
+- [Main() とコマンドライン引数](../main-and-command-args/index.md)
 - [Visual C# と Visual Basic の概要](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

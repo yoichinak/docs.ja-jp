@@ -8,18 +8,18 @@ helpviewer_keywords:
 - errorreport compiler option [C#]
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
-ms.openlocfilehash: 4797f35a3738955f620fad7a93f8695685d21057
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: dc876f609643b7112c0f54574bd202c7c19cb119
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345093"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924769"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport (C# コンパイラ オプション)
 このオプションは、C# 内部コンパイラ エラーを Microsoft に報告する方法として便利です。  
   
 > [!NOTE]
->  Windows Vista と Windows Server 2008 の場合、Windows エラー報告 (WER) 経由で行った設定が Visual Studio のエラー報告設定によってオーバーライドされることはありません。 WER 設定は、常に Visual Studio のエラー報告設定よりも優先されます。  
+> Windows Vista と Windows Server 2008 の場合、Windows エラー報告 (WER) 経由で行った設定が Visual Studio のエラー報告設定によってオーバーライドされることはありません。 WER 設定は、常に Visual Studio のエラー報告設定よりも優先されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -28,7 +28,7 @@ ms.locfileid: "59345093"
 ```  
   
 ## <a name="arguments"></a>引数  
- **none**  
+ "**なし**"  
  内部コンパイラ エラーに関するレポートは、収集されず、マイクロソフトに送信されません。  
   
  **prompt**  
@@ -63,4 +63,4 @@ ms.locfileid: "59345093"
   
 ## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
+- [C# コンパイラ オプション](./index.md)

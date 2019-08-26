@@ -2,12 +2,12 @@
 title: Word 文書内のテキストの検索 (C#)
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
-ms.openlocfilehash: 9f81795c00c29da34bb5f229afb557eb89af6509
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 99a6bc2bb08af47ab725ef94ae8cd77d54cbad0a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487497"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594342"
 ---
 # <a name="finding-text-in-word-documents-c"></a>Word 文書内のテキストの検索 (C#)
 このトピックでは、以前のクエリを拡張して、ドキュメント内で特定の文字列の出現箇所をすべて検索します。  
@@ -15,7 +15,7 @@ ms.locfileid: "66487497"
 ## <a name="example"></a>例  
  この例では、WordprocessingML ドキュメントを処理して、ドキュメント内で特定のテキストの出現箇所をすべて検索します。 ここではそのために、"Hello" という文字列を検索するクエリを使用します。 この例は、このチュートリアルのこれまでの例に基づいています。 新しいクエリについては、以下のコード内にあるコメントで説明が示されています。  
   
- この例のソース ドキュメントを作成する方法の詳細については、「[ソースとなる Office Open XML ドキュメントの作成 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)」を参照してください。  
+ この例のソース ドキュメントを作成する方法の詳細については、「[ソースとなる Office Open XML ドキュメントの作成 (C#)](./creating-the-source-office-open-xml-document.md)」を参照してください。  
   
  この例では、WindowsBase アセンブリに含まれるクラスを使用します。 また、<xref:System.IO.Packaging?displayProperty=nameWithType> 名前空間内の型を使用します。  
   
@@ -320,15 +320,15 @@ StyleName:Code ><
   
  この例はさまざまな形で強化できます。 たとえば、正規表現を使用してテキストを検索したり、特定のディレクトリにあるすべての Word ファイルを反復処理したりすることができます。  
   
- この例は、1 つのクエリとして記述された場合とほぼ同程度のパフォーマンスを発揮します。 各クエリはレイジー遅延方式で実装されているため、反復処理されるまで結果は生成されません。 実行とレイジー評価について詳しくは、「[LINQ to XML における遅延実行とレイジー評価 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)」をご覧ください。  
+ この例は、1 つのクエリとして記述された場合とほぼ同程度のパフォーマンスを発揮します。 各クエリはレイジー遅延方式で実装されているため、反復処理されるまで結果は生成されません。 実行とレイジー評価について詳しくは、「[LINQ to XML における遅延実行とレイジー評価 (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)」をご覧ください。  
   
 ## <a name="next-steps"></a>次の手順  
  次のセクションでは、WordprocessingML ドキュメントについて詳細に説明します。  
   
-- [Office Open XML WordprocessingML ドキュメントの詳細 (C#)](../../../../csharp/programming-guide/concepts/linq/wordprocessingml-document-with-styles.md)  
+- [Office Open XML WordprocessingML ドキュメントの詳細 (C#)](./wordprocessingml-document-with-styles.md)  
   
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)
-- [純粋関数によるリファクタリング (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)
-- [LINQ to XML における遅延実行とレイジー評価 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [チュートリアル:WordprocessingML ドキュメント内のコンテンツの操作 (C#)](./shape-of-wordprocessingml-documents.md)
+- [純粋関数によるリファクタリング (C#)](./refactoring-using-a-pure-function.md)
+- [LINQ to XML における遅延実行とレイジー評価 (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

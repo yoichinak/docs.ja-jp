@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 000a6cae-5972-40d6-bd6c-a9b7d9649b3c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b1c48e42e55025aff0ce1a24a3ef45ddf8005eab
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e512f2077c2e6b9feba5024c4eabc2568357ecab
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44204322"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965912"
 ---
 # <a name="entity-references-are-preserved"></a>保持されるエンティティ参照
 エンティティ参照を展開せずに保持する場合、XML ドキュメント オブジェクト モデル (DOM) は、エンティティ参照を検出すると **XmlEntityReference** ノードを構築します。  
@@ -30,7 +30,7 @@ ms.locfileid: "44204322"
  **XmlEntityReference** の子ノードは、エンティティ宣言が検出されたときに **XmlEntity** ノードから作成されたすべての子ノードのコピーです。  
   
 > [!NOTE]
->  **XmlEntity** からコピーされたノードは、エンティティ参照ノードの下に配置されると、必ずしも元のノードの完全なコピーにはなりません。 エンティティ参照ノードが現れた位置のスコープに名前空間が適用されていると、それが子ノードの最終的な構成に影響する可能性があります。  
+> **XmlEntity** からコピーされたノードは、エンティティ参照ノードの下に配置されると、必ずしも元のノードの完全なコピーにはなりません。 エンティティ参照ノードが現れた位置のスコープに名前空間が適用されていると、それが子ノードの最終的な構成に影響する可能性があります。  
   
  既定では、`&abc;` のような一般エンティティは保持され、常に **XmlEntityReference** ノードが作成されます。  
   

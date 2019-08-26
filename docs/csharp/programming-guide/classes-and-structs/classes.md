@@ -7,17 +7,17 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: ad19099242a3bedbb7283219dfd7733db13231ec
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 193446ff98edce3b7c078c6eeba07cf9acdadaf0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398587"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597174"
 ---
 # <a name="classes-c-programming-guide"></a>クラス (C# プログラミング ガイド)
 
 ## <a name="reference-types"></a>参照型  
-[class](../../../csharp/language-reference/keywords/class.md) として定義された型は、*参照型*です。 実行時には、参照型の変数を宣言すると、[new](../../../csharp/language-reference/operators/new-operator.md) 演算子を使用してクラスのインスタンスを明示的に作成するまで、変数には値 [null](../../../csharp/language-reference/keywords/null.md) が格納されています。または、次の例に示すように、別の場所で作成された可能性がある、互換性のある型のオブジェクトを代入することもできます。
+[class](../../language-reference/keywords/class.md) として定義された型は、*参照型*です。 実行時には、参照型の変数を宣言すると、[new](../../language-reference/operators/new-operator.md) 演算子を使用してクラスのインスタンスを明示的に作成するまで、変数には値 [null](../../language-reference/keywords/null.md) が格納されています。または、次の例に示すように、別の場所で作成された可能性がある、互換性のある型のオブジェクトを代入することもできます。
 
 ```csharp
 //Declaring an object of type MyClass.
@@ -31,7 +31,7 @@ MyClass mc2 = mc;
   
 ## <a name="declaring-classes"></a>クラスの宣言
 
- クラスは、次の例に示すように、[class](../../../csharp/language-reference/keywords/class.md) キーワードと、その後に続ける一意の識別子を使用して宣言します。
+ クラスは、次の例に示すように、[class](../../language-reference/keywords/class.md) キーワードと、その後に続ける一意の識別子を使用して宣言します。
 
  ```csharp
 //[access modifier] - [class] - [identifier]
@@ -70,7 +70,7 @@ MyClass mc2 = mc;
   
 ## <a name="class-inheritance"></a>クラスの継承  
 
-クラスは、オブジェクト指向プログラミングの基本的な特性である "*継承*" を完全にサポートします。 クラスを作成するときは、[sealed](../../../csharp/language-reference/keywords/sealed.md) として定義されているものを除く、他のすべてのインターフェイスまたはクラスから継承できます。また、作成したクラスから他のクラスを継承し、クラスの仮想メソッドをオーバーライドすることもできます。
+クラスは、オブジェクト指向プログラミングの基本的な特性である "*継承*" を完全にサポートします。 クラスを作成するときは、[sealed](../../language-reference/keywords/sealed.md) として定義されているものを除く、他のすべてのインターフェイスまたはクラスから継承できます。また、作成したクラスから他のクラスを継承し、クラスの仮想メソッドをオーバーライドすることもできます。
 
 継承は、*派生*を使用して行われます。派生とは、データの動作の継承元である*基底クラス*を使用してクラスを宣言することを意味します。 基底クラスは、派生クラス名の後に、コロンと基底クラス名を追加して指定します。次に例を示します。  
 

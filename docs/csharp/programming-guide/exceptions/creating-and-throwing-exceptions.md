@@ -8,15 +8,15 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: e569742943e121faeae340512544956b674da083
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 605a28f8f804c11a9a6636c7a17ec5782cc5a429
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595354"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590318"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>例外の作成とスロー (C# プログラミング ガイド)
-例外は、プログラムの実行中にエラーが発生したことを示すために使われます。 エラーを説明する例外オブジェクトが作成された後、[throw](../../../csharp/language-reference/keywords/throw.md) キーワードで "*スロー*" されます。 そのとき、ランタイムは最も互換性のある例外ハンドラーを検索します。  
+例外は、プログラムの実行中にエラーが発生したことを示すために使われます。 エラーを説明する例外オブジェクトが作成された後、[throw](../../language-reference/keywords/throw.md) キーワードで "*スロー*" されます。 そのとき、ランタイムは最も互換性のある例外ハンドラーを検索します。  
   
  プログラマは、以下の条件が 1 つでも該当するときは、例外をスローする必要があります。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "64595354"
 - デバッグ モードではスローでき、リリース モードではスローできない例外は、作成しないでください。 開発フェーズ中に実行時エラーを識別するには、代わりにデバッグ アサートを使ってください。  
   
 ## <a name="defining-exception-classes"></a>例外クラスの定義  
- プログラムでは、<xref:System> 名前空間で事前定義された例外クラスをスローするか (上記の場合を除きます)、<xref:System.Exception> から派生することで独自の例外クラスを作成することができます。 派生クラスでは、少なくとも 4 つのコンストラクターを必ず定義します。パラメータ―なしのコンストラクター、メッセージ プロパティを設定するコンストラクター、<xref:System.Exception.Message%2A> プロパティと <xref:System.Exception.InnerException%2A> プロパティの両方を設定するコンストラクター、 そして 4 番目は例外のシリアル化に使われるコンストラクターです。 新しい例外クラスは、シリアル化可能にする必要があります。 次に例を示します。  
+ プログラムでは、<xref:System> 名前空間で事前定義された例外クラスをスローするか (上記の場合を除きます)、<xref:System.Exception> から派生することで独自の例外クラスを作成することができます。 派生クラスでは、少なくとも 4 つのコンストラクターを必ず定義します。パラメータ―なしのコンストラクター、メッセージ プロパティを設定するコンストラクター、<xref:System.Exception.Message%2A> プロパティと <xref:System.Exception.InnerException%2A> プロパティの両方を設定するコンストラクター、 そして 4 番目は例外のシリアル化に使われるコンストラクターです。 新しい例外クラスは、シリアル化可能にする必要があります。 例:  
   
  [!code-csharp[csProgGuideExceptions#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#15)]  
   
@@ -68,7 +68,7 @@ ms.locfileid: "64595354"
   
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [例外と例外処理](../../../csharp/programming-guide/exceptions/index.md)
+- [C# プログラミング ガイド](../index.md)
+- [例外と例外処理](./index.md)
 - [例外階層](../../../standard/exceptions/index.md)
-- [例外処理](../../../csharp/programming-guide/exceptions/exception-handling.md)
+- [例外処理](./exception-handling.md)

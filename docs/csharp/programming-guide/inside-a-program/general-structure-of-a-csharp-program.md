@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, program structure
 ms.assetid: 5ae964a5-0ef0-40fe-88fb-6d1793371d0d
-ms.openlocfilehash: 80f9fd4e86abbdcc316ff22090cc980bbb8245d1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1cb6af4b43e04b231feca2f996eca0f8dc60da6c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595445"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589369"
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>C# プログラムの一般構造 (C# プログラミング ガイド)
 C# プログラムは、1 つ以上のファイルで構成できます。 各ファイルには、0 個以上の名前空間を含めることができます。 名前空間には、その他の名前空間以外に、クラス、構造体、インターフェイス、列挙型、デリゲートなどの型を含めることができます。 次に示すのは、これら要素をすべて含む C# プログラムのスケルトンです。  
@@ -20,15 +20,15 @@ C# プログラムは、1 つ以上のファイルで構成できます。 各�
 ## <a name="related-sections"></a>関連項目  
  詳細情報  
   
-- [クラス](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+- [クラス](../classes-and-structs/classes.md)  
   
-- [構造体](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+- [構造体](../classes-and-structs/structs.md)  
   
-- [名前空間](../../../csharp/programming-guide/namespaces/index.md)  
+- [名前空間](../namespaces/index.md)  
   
-- [インターフェイス](../../../csharp/programming-guide/interfaces/index.md)  
+- "[インターフェイス](../interfaces/index.md)"  
   
-- [デリゲート](../../../csharp/programming-guide/delegates/index.md)  
+- [デリゲート](../delegates/index.md)  
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
 
@@ -36,6 +36,6 @@ C# プログラムは、1 つ以上のファイルで構成できます。 各�
   
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [インサイド C# プログラム](../../../csharp/programming-guide/inside-a-program/index.md)
-- [C# リファレンス](../../../csharp/language-reference/index.md)
+- [C# プログラミング ガイド](../index.md)
+- [インサイド C# プログラム](./index.md)
+- [C# リファレンス](../../language-reference/index.md)

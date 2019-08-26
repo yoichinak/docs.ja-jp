@@ -2,17 +2,17 @@
 title: 段落とそのスタイルの取得 (C#)
 ms.date: 07/20/2015
 ms.assetid: c2f767f8-57b1-4b4b-af04-89ffb1f7067d
-ms.openlocfilehash: 9edbaaf004018a26b84539d1e8ab133af5dca934
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 4accbf3325ad4db95c028249c7071cb9fedd19cd
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483888"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591199"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-c"></a>段落とそのスタイルの取得 (C#)
 この例では、WordprocessingML ドキュメントから段落ノードを取得するクエリを記述します。 それぞれの段落のスタイルも特定します。  
   
- このクエリの基になった前の例「[既定の段落スタイルの検索 (C#)](../../../../csharp/programming-guide/concepts/linq/finding-the-default-paragraph-style.md)」のクエリでは、スタイルの一覧から既定のスタイルを取得しています。 スタイルが明示的に設定されていない段落のスタイルをクエリで特定するには、この情報が必要です。 段落のスタイルは、`w:pPr` 要素を通して設定されます。この要素が含まれていない段落は、既定のスタイルを使用して書式設定されます。  
+ このクエリの基になった前の例「[既定の段落スタイルの検索 (C#)](./finding-the-default-paragraph-style.md)」のクエリでは、スタイルの一覧から既定のスタイルを取得しています。 スタイルが明示的に設定されていない段落のスタイルをクエリで特定するには、この情報が必要です。 段落のスタイルは、`w:pPr` 要素を通して設定されます。この要素が含まれていない段落は、既定のスタイルを使用して書式設定されます。  
   
  このトピックでは、クエリを構成するいくつかの要素の意味を説明し、完全な作業例の一部分であるクエリを紹介します。  
   
@@ -23,7 +23,7 @@ ms.locfileid: "66483888"
 xDoc.Root.Element(w + "body").Descendants(w + "p")  
 ```  
   
- この式は、前の例「[既定の段落スタイルの検索 (C#)](../../../../csharp/programming-guide/concepts/linq/finding-the-default-paragraph-style.md)」のクエリのソースと似ています。 主な違いは、<xref:System.Xml.Linq.XContainer.Descendants%2A> 軸の代わりに <xref:System.Xml.Linq.XContainer.Elements%2A> 軸を使用している点です。 クエリで <xref:System.Xml.Linq.XContainer.Descendants%2A> 軸を使用しているのは、セクションが含まれているドキュメントの場合、段落が本文要素の直接の子とならず、階層内で 2 つ下のレベルに位置するためです。 コードで <xref:System.Xml.Linq.XContainer.Descendants%2A> 軸を使用すると、ドキュメントでセクションが使用されているかどうかにかかわらず機能するようになります。  
+ この式は、前の例「[既定の段落スタイルの検索 (C#)](./finding-the-default-paragraph-style.md)」のクエリのソースと似ています。 主な違いは、<xref:System.Xml.Linq.XContainer.Descendants%2A> 軸の代わりに <xref:System.Xml.Linq.XContainer.Elements%2A> 軸を使用している点です。 クエリで <xref:System.Xml.Linq.XContainer.Descendants%2A> 軸を使用しているのは、セクションが含まれているドキュメントの場合、段落が本文要素の直接の子とならず、階層内で 2 つ下のレベルに位置するためです。 コードで <xref:System.Xml.Linq.XContainer.Descendants%2A> 軸を使用すると、ドキュメントでセクションが使用されているかどうかにかかわらず機能するようになります。  
   
 ## <a name="example"></a>例  
  クエリで `let` 句を使用して、スタイル ノードが含まれる要素を特定します。 要素がない場合は、`styleNode` が `null` に設定されます。  
@@ -39,7 +39,7 @@ let styleNode = para.Elements(w + "pPr").Elements(w + "pStyle").FirstOrDefault()
 ## <a name="example"></a>例  
  この例では、WordprocessingML ドキュメントを処理して、WordprocessingML ドキュメントから段落ノードを取得します。 それぞれの段落のスタイルも特定します。 この例は、このチュートリアルのこれまでの例に基づいています。 新しいクエリについては、以下のコード内にあるコメントで説明が示されています。  
   
- この例のソース ドキュメントを作成する手順については、「[ソースとなる Office Open XML ドキュメントの作成 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)」を参照してください。  
+ この例のソース ドキュメントを作成する手順については、「[ソースとなる Office Open XML ドキュメントの作成 (C#)](./creating-the-source-office-open-xml-document.md)」を参照してください。  
   
  この例では、WindowsBase アセンブリに含まれるクラスを使用します。 また、<xref:System.IO.Packaging?displayProperty=nameWithType> 名前空間内の型を使用します。  
   
@@ -109,7 +109,7 @@ foreach (var p in paragraphs)
     Console.WriteLine("StyleName:{0}", p.StyleName);  
 ```  
   
- この例を「[ソースとなる Office Open XML ドキュメントの作成 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)」で説明されているドキュメントに適用すると、次の出力が生成されます。  
+ この例を「[ソースとなる Office Open XML ドキュメントの作成 (C#)](./creating-the-source-office-open-xml-document.md)」で説明されているドキュメントに適用すると、次の出力が生成されます。  
   
 ```  
 StyleName:Heading1  
@@ -130,8 +130,8 @@ StyleName:Code
 ```  
   
 ## <a name="next-steps"></a>次の手順  
- 次のトピック (「[段落のテキストの取得 (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)」) では、段落のテキストを取得するクエリを記述します。  
+ 次のトピック (「[段落のテキストの取得 (C#)](./retrieving-the-text-of-the-paragraphs.md)」) では、段落のテキストを取得するクエリを記述します。  
   
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)
+- [チュートリアル:WordprocessingML ドキュメント内のコンテンツの操作 (C#)](./shape-of-wordprocessingml-documents.md)

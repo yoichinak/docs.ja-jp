@@ -6,15 +6,15 @@ helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: f277758a10b045a6365adfe931ce95d64eb8e445
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cea8d157e89597ddf4633cf7f7d3df7044db9ec7
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608573"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589447"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>インターフェイスのインデクサー (C# プログラミング ガイド)
-[interface](../../../csharp/language-reference/keywords/interface.md) でインデクサーを宣言することができます。 インターフェイスのインデクサーのアクセサーは、[クラス](../../../csharp/language-reference/keywords/class.md)のインデクサーのアクセサーと次の点で異なります。  
+[interface](../../language-reference/keywords/interface.md) でインデクサーを宣言することができます。 インターフェイスのインデクサーのアクセサーは、[クラス](../../language-reference/keywords/class.md)のインデクサーのアクセサーと次の点で異なります。  
   
 - インターフェイスのアクセサーは、修飾子は使用しません。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "64608573"
   
  [!code-csharp[csProgGuideIndexers#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#4)]  
   
- 前の例では、インターフェイス メンバーの完全修飾名を使用して明示的なインターフェイス メンバーの実装を使用することができます。 次に例を示します。  
+ 前の例では、インターフェイス メンバーの完全修飾名を使用して明示的なインターフェイス メンバーの実装を使用することができます。 例:  
   
 ```  
 string ISomeInterface.this[int index]   
@@ -61,7 +61,7 @@ string ICitizen.this[int index]
   
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [インデクサー](../../../csharp/programming-guide/indexers/index.md)
-- [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)
-- [インターフェイス](../../../csharp/programming-guide/interfaces/index.md)
+- [C# プログラミング ガイド](../index.md)
+- [インデクサー](./index.md)
+- [プロパティ](../classes-and-structs/properties.md)
+- "[インターフェイス](../interfaces/index.md)"

@@ -2,12 +2,12 @@
 title: ジェネリック インターフェイスの変性 (C#)
 ms.date: 06/06/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: 9cbbea35003e86e05d618f5e6000ba2788359cb0
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 12a8b58983256be0ca2b56ea6ed09e724e0814c8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539492"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595163"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>ジェネリック インターフェイスの変性 (C#)
 
@@ -35,7 +35,7 @@ ms.locfileid: "67539492"
 
 - <xref:System.Collections.Generic.IReadOnlyCollection%601> (T は共変です)
 
-共変性により、メソッドの戻り値の型の派生を、インターフェイスのジェネリック型パラメーターで定義されている型よりも強くすることができます。 ここでは、共変性機能について説明するために、`IEnumerable<Object>` および `IEnumerable<String>` というジェネリック インターフェイスについて考えます。 `IEnumerable<String>` インターフェイスは、`IEnumerable<Object>` インターフェイスを継承しません。 ただし、`String` 型は `Object` 型を継承します。場合によっては、これらのインターフェイスのオブジェクトを、相互に割り当てる必要が生じることもあるでしょう。 これを次のコード例に示します。
+共変性により、メソッドの戻り値の型の派生を、インターフェイスのジェネリック型パラメーターで定義されている型よりも強くすることができます。 ここでは、共変性機能について説明するために、`IEnumerable<Object>` および `IEnumerable<String>` というジェネリック インターフェイスについて考えます。 `IEnumerable<String>` インターフェイスは、`IEnumerable<Object>` インターフェイスを継承しません。 ただし、`String` 型は `Object` 型を継承します。場合によっては、これらのインターフェイスのオブジェクトを、相互に割り当てる必要が生じることもあるでしょう。 このコードの例を次に示します。
 
 ```csharp
 IEnumerable<String> strings = new List<String>();
@@ -44,7 +44,7 @@ IEnumerable<Object> objects = strings;
 
 .NET Framework の以前のバージョンでは、C# ではこのコードを実行するとコンパイル エラーが発生し、Visual Basic では `Option Strict` がオンの場合にエラーが発生します。 今後は、<xref:System.Collections.Generic.IEnumerable%601> インターフェイスが共変になったので、上記の例のように、`objects` の代わりに `strings` を使用できるようになりました。
 
-反変性により、メソッドの引数の型の派生を、インターフェイスのジェネリック パラメーターで指定されている型よりも弱くすることができます。 ここでは、反変性について説明するために、`BaseClass` クラスのインスタンスを比較するための `BaseComparer` クラスを作成した場合について考えます。 `BaseComparer` クラスは、`IEqualityComparer<BaseClass>` インターフェイスを実装します。 <xref:System.Collections.Generic.IEqualityComparer%601> インターフェイスが反変になったので、`BaseComparer` を使用して、`BaseClass` クラスを継承するクラスのインスタンスを比較することができます。 これを次のコード例に示します。
+反変性により、メソッドの引数の型の派生を、インターフェイスのジェネリック パラメーターで指定されている型よりも弱くすることができます。 ここでは、反変性について説明するために、`BaseClass` クラスのインスタンスを比較するための `BaseComparer` クラスを作成した場合について考えます。 `BaseComparer` クラスによって、`IEqualityComparer<BaseClass>` インターフェイスが実装されます。 <xref:System.Collections.Generic.IEqualityComparer%601> インターフェイスが反変になったので、`BaseComparer` を使用して、`BaseClass` クラスを継承するクラスのインスタンスを比較することができます。 このコードの例を次に示します。
 
 ```csharp
 // Simple hierarchy of classes.
@@ -76,7 +76,7 @@ class Program
 }
 ```
 
-詳しくは、「[ジェネリック コレクションに対するインターフェイスでの変性の使用 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)」をご覧ください。
+詳しくは、「[ジェネリック コレクションに対するインターフェイスでの変性の使用 (C#)](./using-variance-in-interfaces-for-generic-collections.md)」をご覧ください。
 
 ジェネリック インターフェイスでの変性がサポートされるのは参照型だけです。 値型は変性をサポートしていません。 たとえば、整数は値型によって表されるため、`IEnumerable<int>` を暗黙的に `IEnumerable<object>` に変換することはできません。
 
@@ -100,7 +100,7 @@ IEnumerable<Object> listObjects = new List<String>();
 
 ## <a name="see-also"></a>関連項目
 
-- [ジェネリック コレクションに対するインターフェイスでの変性の使用 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)
-- [バリアント ジェネリック インターフェイスの作成 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)
+- [ジェネリック コレクションに対するインターフェイスでの変性の使用 (C#)](./using-variance-in-interfaces-for-generic-collections.md)
+- [バリアント ジェネリック インターフェイスの作成 (C#)](./creating-variant-generic-interfaces.md)
 - [ジェネリック インターフェイス](../../../../standard/generics/interfaces.md)
-- [デリゲートの変性 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+- [デリゲートの変性 (C#)](./variance-in-delegates.md)

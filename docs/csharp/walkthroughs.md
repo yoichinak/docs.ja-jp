@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: 77ecab9738afd7ff5cfd4f8ef0cd0e49a302eb27
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 0c666d62c21d3e4f7b1041c1d5360ac43d2cf03f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025403"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587059"
 ---
 # <a name="c-walkthroughs"></a>C# チュートリアル
 チュートリアルでは、製品や特定の機能領域について学習を開始するのに適した一般的なシナリオについて詳細な手順を示します。  
@@ -21,33 +21,33 @@ ms.locfileid: "67025403"
 ## <a name="in-this-section"></a>このセクションの内容  
 
  [Async と Await を使用した Web へのアクセス](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [async](../csharp/language-reference/keywords/async.md) と [await](../csharp/language-reference/keywords/await.md) を使用して非同期ソリューションを作成する方法を示します。  
+ [async](./language-reference/keywords/async.md) と [await](./language-reference/keywords/await.md) を使用して非同期ソリューションを作成する方法を示します。  
   
  [Creating a Windows Runtime Component in C# or Visual Basic and Calling it from JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript) (C# および Visual Basic での Windows ランタイム コンポーネントの作成および JavaScript による呼び出し)  
  Windows ランタイム型を作成し、Windows ランタイム コンポーネントにパッケージ化した後、JavaScript を使用して Windows 用に作成された [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] アプリからコンポーネントを呼び出す方法を示します。  
   
- [Office のプログラミング (C# および Visual Basic)](../csharp/programming-guide/interop/walkthrough-office-programming.md)  
+ [Office のプログラミング (C# および Visual Basic)](./programming-guide/interop/walkthrough-office-programming.md)  
  C# および Visual Basic を使用して、Excel ブックや Word 文書を作成する方法を示します。  
   
- [動的オブジェクトの作成と使用 (C# および Visual Basic)](../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)  
+ [動的オブジェクトの作成と使用 (C# および Visual Basic)](./programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)  
  テキスト ファイルの内容を動的に公開するカスタム オブジェクトを作成する方法、および `IronPython` ライブラリを使用するプロジェクトを作成する方法を示します。  
    
- [Visual C# による複合コントロールの作成](../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
+ [Visual C# による複合コントロールの作成](../framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
  簡単な複合コントロールを作成し、継承によってその機能を拡張する例を示します。  
   
- [Visual Studio のデザイン時機能を活用した Windows フォーム コントロールの作成](../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
+ [Visual Studio のデザイン時機能を活用した Windows フォーム コントロールの作成](../framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
  カスタム コントロールのカスタム デザイナーを作成する方法を示します。  
   
- [Visual C# による Windows フォーム コントロールからの継承](../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
+ [Visual C# による Windows フォーム コントロールからの継承](../framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
  単純な継承されたボタン コントロールを作成する例を示します。 このボタンは、標準 Windows フォーム ボタンから機能を継承し、カスタム メンバーを公開します。  
   
- [カスタム Windows フォーム コントロールのデザイン時のデバッグ](../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
+ [カスタム Windows フォーム コントロールのデザイン時のデバッグ](../framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
  カスタム コントロールのデザイン時動作をデバッグする方法について説明します。
 
- [Windows フォーム コントロールのスマート タグを使用した共通タスクの実行](../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)  
+ [Windows フォーム コントロールのスマート タグを使用した共通タスクの実行](../framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)  
  `TabControl` でのタブの追加や削除、コントロールの親コントロールへのドッキング、`SplitContainer` コントロールの方向の変更など、よく実行されるタスクの例を示します。  
   
- [C# でのクエリの作成 (LINQ)](../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+ [C# でのクエリの作成 (LINQ)](./programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
  [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリ式の記述に使用される C# 言語機能を示します。  
   
  [データの操作 (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)  
@@ -71,5 +71,5 @@ ms.locfileid: "67025403"
   
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../csharp/programming-guide/index.md)
+- [C# プログラミング ガイド](./programming-guide/index.md)
 - [Visual Studio のサンプル](/visualstudio/ide/visual-studio-samples)

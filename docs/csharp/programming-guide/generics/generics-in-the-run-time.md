@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], at run time
 ms.assetid: 119df7e6-9ceb-49df-af36-24f8f8c0747f
-ms.openlocfilehash: c739ae9b9804ffcb27d6bdc969bf7b5c0fe90512
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: a627ac51399b67aeb7da8c3d98a4530248a84703
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423326"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659748"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>ランタイムのジェネリック (C# プログラミング ガイド)
 ジェネリック型またはメソッドが Microsoft 中間言語 (MSIL) にコンパイルされるとき、型パラメーターありとして識別するメタデータが追加されます。 ジェネリック型の MSIL の使われ方は、指定した型パラメーターの種類 (値型または参照型) によって異なります。  
@@ -50,6 +50,6 @@ ms.locfileid: "66423326"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Collections.Generic>
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [ジェネリックの概要](../../../csharp/programming-guide/generics/index.md)
-- [ジェネリック](~/docs/standard/generics/index.md)
+- [C# プログラミング ガイド](../index.md)
+- [ジェネリックの概要](./index.md)
+- [ジェネリック](../../../standard/generics/index.md)

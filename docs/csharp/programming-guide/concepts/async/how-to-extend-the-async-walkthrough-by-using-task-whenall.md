@@ -1,29 +1,29 @@
 ---
-title: '方法: Task.WhenAll を使用して AsyncWalkthrough を拡張する (C#)'
+title: 方法:Task.WhenAll を使用して AsyncWalkthrough を拡張する (C#)
 ms.date: 07/20/2015
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-ms.openlocfilehash: 8e1f617040bd902ab53500fbfeeafff35677280a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5915a09123e6abb1bfb846c200a500a51302a104
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583421"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924418"
 ---
-# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>方法: Task.WhenAll を使用して AsyncWalkthrough を拡張する (C#)
-「[チュートリアル: Async と Await を使用した Web へのアクセス (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)」の非同期ソリューションのパフォーマンスを <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> メソッドを使用して向上させることができます。 このメソッドは、タスクのコレクションとして表される、複数の非同期操作を非同期に待機します。  
+# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>方法:Task.WhenAll を使用して AsyncWalkthrough を拡張する (C#)
+「[チュートリアル: Async と Await を使用した Web へのアクセス (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)」の非同期ソリューションのパフォーマンスを <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> メソッドを使用して向上させることができます。 このメソッドは、タスクのコレクションとして表される、複数の非同期操作を非同期に待機します。  
   
  このチュートリアルでは、Web サイトが異なる速度でダウンロードされることに気付きます。 Web サイトの 1 つが非常に低速な場合があります。これは残りのすべてのダウンロードを遅延させます。 このチュートリアルで構築した非同期ソリューションを実行すると、プログラムを待たない場合には簡単に終了することができますが、よりよい方法は、すべてのダウンロードを同時に開始して、遅延したダウンロードを待たずに早いダウンロードが継続できるようにすることです。  
   
  タスクのコレクションに `Task.WhenAll` メソッドを適用します。 `WhenAll` を適用すると、コレクション内のすべてのタスクが完了するまで完了しない 1 つのタスクを返します。 タスクは並列で実行されるように見えますが、追加のスレッドは作成されません。 タスクは任意の順序で完了します。  
   
 > [!IMPORTANT]
->  次の手順では、「[チュートリアル: Async と Await を使用した Web へのアクセス (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)」で開発した非同期アプリケーションの拡張機能について説明します。 チュートリアルを完了するか、[開発者コード サンプル](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)からコードをダウンロードして、アプリケーションを開発できます。  
+> 次の手順では、「[チュートリアル: Async と Await を使用した Web へのアクセス (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)」で開発した非同期アプリケーションの拡張機能について説明します。 チュートリアルを完了するか、[開発者コード サンプル](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)からコードをダウンロードして、アプリケーションを開発できます。  
 >   
 >  例を実行するには、Visual Studio 2012 以降がコンピューターにインストールされている必要があります。  
   
 ### <a name="to-add-taskwhenall-to-your-geturlcontentsasync-solution"></a>GetURLContentsAsync ソリューションに Task.WhenAll を追加するには  
   
-1. `ProcessURLAsync` メソッドを「[チュートリアル: Async と Await を使用した Web へのアクセス (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)」で開発した最初のアプリケーションに追加します。  
+1. `ProcessURLAsync` メソッドを「[チュートリアル: Async と Await を使用した Web へのアクセス (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)」で開発した最初のアプリケーションに追加します。  
   
     - コードを[開発者コード サンプル](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)からダウンロードした場合は、AsyncWalkthrough プロジェクトを開き、`ProcessURLAsync` を MainWindow.xaml.cs ファイルに追加します。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "64583421"
     //}  
     ```  
   
-3. タスクのコレクションを作成します。 次のコードは、<xref:System.Linq.Enumerable.ToArray%2A> メソッドによって実行されるときに、各 Web サイトのコンテンツをダウンロードするタスクのコレクションを作成する[クエリ](../../../../csharp/programming-guide/concepts/linq/index.md)を定義します。 タスクは、クエリが評価されるときに開始されます。  
+3. タスクのコレクションを作成します。 次のコードは、<xref:System.Linq.Enumerable.ToArray%2A> メソッドによって実行されるときに、各 Web サイトのコンテンツをダウンロードするタスクのコレクションを作成する[クエリ](../linq/index.md)を定義します。 タスクは、クエリが評価されるときに開始されます。  
   
      `SumPageSizesAsync` の宣言の後の `urlList` メソッドに、次のコードを追加します。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "64583421"
   
 ### <a name="to-add-taskwhenall-to-the-httpclientgetbytearrayasync-solution"></a>HttpClient.GetByteArrayAsync ソリューションに Task.WhenAll を追加するには  
   
-1. `ProcessURLAsync` の次のバージョンを「[チュートリアル: Async と Await を使用した Web へのアクセス (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)」で開発した 2 番目のアプリケーションに追加します。  
+1. `ProcessURLAsync` の次のバージョンを「[チュートリアル: Async と Await を使用した Web へのアクセス (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)」で開発した 2 番目のアプリケーションに追加します。  
   
     - コードを[開発者コード サンプル](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)からダウンロードした場合は、AsyncWalkthrough_HttpClient プロジェクトを開き、`ProcessURLAsync` を MainWindow.xaml.cs ファイルに追加します。  
   
@@ -136,7 +136,7 @@ ms.locfileid: "64583421"
     //}  
     ```  
   
-3. <xref:System.Linq.Enumerable.ToArray%2A> メソッドによって実行されるときに、各 Web サイトのコンテンツをダウンロードするタスクのコレクションを作成する[クエリ](../../../../csharp/programming-guide/concepts/linq/index.md)を定義します。 タスクは、クエリが評価されるときに開始されます。  
+3. <xref:System.Linq.Enumerable.ToArray%2A> メソッドによって実行されるときに、各 Web サイトのコンテンツをダウンロードするタスクのコレクションを作成する[クエリ](../linq/index.md)を定義します。 タスクは、クエリが評価されるときに開始されます。  
   
      `SumPageSizesAsync` および `client` の宣言の後の `urlList` メソッドに、次のコードを追加します。  
   
@@ -170,7 +170,7 @@ ms.locfileid: "64583421"
   
 ### <a name="to-test-the-taskwhenall-solutions"></a>Task.WhenAll ソリューションをテストするには  
   
-- 各ソリューションで、F5 キーを押してプログラムを実行し、**[Start]** を複数回クリックします。 出力は「[チュートリアル: Async と Await を使用した Web へのアクセス (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)」の非同期ソリューションからの出力に似たものになります。 ただし、Web サイトは毎回、異なる順序で表示されることに注意してください。  
+- 各ソリューションで、F5 キーを押してプログラムを実行し、 **[Start]** を複数回クリックします。 出力は「[チュートリアル: Async と Await を使用した Web へのアクセス (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)」の非同期ソリューションからの出力に似たものになります。 ただし、Web サイトは毎回、異なる順序で表示されることに注意してください。  
   
 ## <a name="example"></a>例  
  次のコードは、`GetURLContentsAsync` メソッドを使用して Web からコンテンツをダウンロードするプロジェクトの拡張機能を示します。  
@@ -437,4 +437,4 @@ namespace AsyncExampleWPF_HttpClient_WhenAll
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>
-- [チュートリアル: Async と Await を使用した Web へのアクセス (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [チュートリアル:Async と Await を使用した Web へのアクセス (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)

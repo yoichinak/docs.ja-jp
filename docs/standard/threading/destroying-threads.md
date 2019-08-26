@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93832a296f9b80a5374bc729c04e19d1f178e99f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 986b4dee17c41928327e7b2672d641bbb8b16f1d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502547"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960087"
 ---
 # <a name="destroying-threads"></a>スレッドの破棄
-マネージド スレッドを完全に停止するには、<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> メソッドを使用します。 <xref:System.Threading.Thread.Abort%2A> を呼び出すと、共通言語ランタイムが対象スレッドで <xref:System.Threading.ThreadAbortException> をスローし、対象スレッドはそれをキャッチできます。 詳細については、「<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>」を参照してください。  
+マネージド スレッドを完全に停止するには、<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> メソッドを使用します。 <xref:System.Threading.Thread.Abort%2A> を呼び出すと、共通言語ランタイムが対象スレッドで <xref:System.Threading.ThreadAbortException> をスローし、対象スレッドはそれをキャッチできます。 詳細については、<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> を参照してください。  
   
 > [!NOTE]
->  スレッドが <xref:System.Threading.Thread.Abort%2A> メソッドの呼び出し時にアンマネージ コードを実行する場合、ランタイムはそれを <xref:System.Threading.ThreadState.AbortRequested?displayProperty=nameWithType> としてマークします。 スレッドがマネージド コードに戻ると、例外がスローされます。  
+> スレッドが <xref:System.Threading.Thread.Abort%2A> メソッドの呼び出し時にアンマネージ コードを実行する場合、ランタイムはそれを <xref:System.Threading.ThreadState.AbortRequested?displayProperty=nameWithType> としてマークします。 スレッドがマネージド コードに戻ると、例外がスローされます。  
   
  スレッドが中止されると、再起動することはできません。  
   

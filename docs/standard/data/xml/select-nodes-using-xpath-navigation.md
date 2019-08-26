@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 8e4450dc-56b3-472b-b467-32f5694f83ad
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9e02dd304893e4d9354144c5b412dfd145161c6e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: b2fc0846b3f3801d64ee3bf1f1dc4b347034ad38
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45596950"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939566"
 ---
 # <a name="select-nodes-using-xpath-navigation"></a>XPath ナビゲーションによるノードの選択
 XML ドキュメント オブジェクト モデル (DOM) には、DOM 内の情報を照会するための XPath (XML Path Language) ナビゲーションに使用できるメソッドが含まれています。 XPath を使用すると、特定の単一ノードを見つけたり、条件に一致するすべてのノードを検索したりできます。  
@@ -121,13 +121,13 @@ this doc.DocumentElement.FirstChild.SelectNodes(. . .);
  すべての <xref:System.Xml.XmlNodeList> オブジェクトは、元のドキュメントに同期されます。 そのため、ノード リストを反復処理してノードの値を変更すると、そのノードは元のドキュメントにおいても更新されます。 前の例で、選択した <xref:System.Xml.XmlNodeList> でノードが変更されると、基になっているドキュメントも変更されることに注意してください。  
   
 > [!NOTE]
->  元のドキュメントが変更された場合は、選択を再実行するのが適切です。 変更されたノードが、以前はノード リストに含まれておらず、ノード リストに追加されるものであったり、ノード リストから削除されるものであったりした場合は、ノード リストの正確さは保証されなくなります。  
+> 元のドキュメントが変更された場合は、選択を再実行するのが適切です。 変更されたノードが、以前はノード リストに含まれておらず、ノード リストに追加されるものであったり、ノード リストから削除されるものであったりした場合は、ノード リストの正確さは保証されなくなります。  
   
 ## <a name="namespaces-in-xpath-expressions"></a>XPath 式の名前空間  
  XPath 式は名前空間を含むことができます。 名前空間の解決は <xref:System.Xml.XmlNamespaceManager> を使用してサポートされます。 XPath 式にプレフィックスが含まれる場合は、プレフィックスと名前空間 URI のペアを <xref:System.Xml.XmlNamespaceManager> に追加して、<xref:System.Xml.XmlNamespaceManager> を <xref:System.Xml.XmlNode.SelectNodes%28System.String%2CSystem.Xml.XmlNamespaceManager%29> メソッド、または <xref:System.Xml.XmlNode.SelectSingleNode%28System.String%2CSystem.Xml.XmlNamespaceManager%29> メソッドに渡す必要があります。 前のコード例では、<xref:System.Xml.XmlNamespaceManager> を使用して bookstore.xml ドキュメントの名前空間を解決しています。  
   
 > [!NOTE]
->  XPath 式にプレフィックスが含まれない場合は、名前空間 URI は空の名前空間であると仮定されます。 XML に既定の名前空間が含まれる場合でも、プレフィックスと名前空間 URI を <xref:System.Xml.XmlNamespaceManager> に追加する必要があります。そうしないと、ノードは選択されません。  
+> XPath 式にプレフィックスが含まれない場合は、名前空間 URI は空の名前空間であると仮定されます。 XML に既定の名前空間が含まれる場合でも、プレフィックスと名前空間 URI を <xref:System.Xml.XmlNamespaceManager> に追加する必要があります。そうしないと、ノードは選択されません。  
   
 #### <a name="input-file"></a>入力ファイル  
  次に示すのは、このトピックの例で入力ファイルとして使用している bookstore.xml ファイルです。  

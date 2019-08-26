@@ -2,12 +2,12 @@
 title: 射影操作 (C#)
 ms.date: 07/20/2015
 ms.assetid: 98df573a-aad9-4b8c-9a71-844be2c4fb41
-ms.openlocfilehash: 74792c1a58aa17c65f3a153216d50c672e0b6cf6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 4b34f3e578e746d75bdad7baaf731d743830713c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411214"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591562"
 ---
 # <a name="projection-operations-c"></a>射影操作 (C#)
 射影とは、オブジェクトを、必要なプロパティだけで構成された別の形式に変換する操作のことをいいます。 射影を使用することにより、個々のオブジェクトから構築された新しい型を作成できます。 プロパティを投影し、それに対して数値演算関数を実行できます。 また、元のオブジェクトを変更せずに射影することもできます。  
@@ -16,7 +16,7 @@ ms.locfileid: "58411214"
   
 ## <a name="methods"></a>メソッド  
   
-|メソッド名|説明|C# のクエリ式の構文|説明|  
+|メソッド名|説明|C# のクエリ式の構文|詳細情報|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |選択|変換関数に基づいて値を射影します。|`select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|  
 |SelectMany|変換関数に基づいて値のシーケンスを射影し、それを 1 つのシーケンスに平坦化します。|複数の `from` 句を使用|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=nameWithType>|  
@@ -162,7 +162,7 @@ static void SelectVsSelectMany()
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Linq>
-- [標準クエリ演算子の概要 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [select 句](../../../../csharp/language-reference/keywords/select-clause.md)
-- [方法: 複数のソースからオブジェクト コレクションにデータを設定する (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
-- [方法: グループを使用して 1 つのファイルを複数のファイルに分割する (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [標準クエリ演算子の概要 (C#)](./standard-query-operators-overview.md)
+- [select 句](../../../language-reference/keywords/select-clause.md)
+- [方法: 複数のソースからオブジェクト コレクションにデータを設定する (LINQ) (C#)](./how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [方法: グループを使用して 1 つのファイルを複数のファイルに分割する (LINQ) (C#)](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)

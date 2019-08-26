@@ -2,19 +2,19 @@
 title: ジェネリック コレクションに対するインターフェイスでの変性の使用 (C#)
 ms.date: 07/20/2015
 ms.assetid: a44f0708-10fa-4c76-82cd-daa6e6b31e8e
-ms.openlocfilehash: 6119d8756295606fc2ef66f5157e815b4d903659
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53aaf49ee0802c0d207e0b0a29661cee7c628b4d
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562116"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595208"
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-c"></a>ジェネリック コレクションに対するインターフェイスでの変性の使用 (C#)
 共変のインターフェイスのメソッドでは、そのインターフェイスで指定された型よりも強い派生型を返すことができます。 反変のインターフェイスのメソッドでは、そのインターフェイスで指定された型よりも弱い派生型のパラメーターを受け取ることができます。  
   
  .NET Framework 4 では、既存のいくつかのインターフェイスが共変および反変になります。 その中には、<xref:System.Collections.Generic.IEnumerable%601> や <xref:System.IComparable%601> があります。 これにより、派生型のコレクションに対して、基本型のジェネリック コレクションを操作するメソッドを再利用できます。  
   
- .NET Framework のバリアント インターフェイスの一覧については、「[Variance in Generic Interfaces (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)」 (ジェネリック インターフェイスの変性 (C#)) を参照してください。  
+ .NET Framework のバリアント インターフェイスの一覧については、「[Variance in Generic Interfaces (C#)](./variance-in-generic-interfaces.md)」 (ジェネリック インターフェイスの変性 (C#)) を参照してください。  
   
 ## <a name="converting-generic-collections"></a>ジェネリック コレクションの変換  
  次の例は、<xref:System.Collections.Generic.IEnumerable%601> インターフェイスにおける共変性のサポートの利点を示しています。 `PrintFullName` メソッドは、パラメーターとして `IEnumerable<Person>` 型のコレクションを受け取ります。 ただし、`Employee` は `Person` を継承しているため、`IEnumerable<Employee>` 型のコレクションで再利用できます。  
@@ -55,7 +55,7 @@ class Program
 ```  
   
 ## <a name="comparing-generic-collections"></a>ジェネリック コレクションの比較  
- 次の例は、<xref:System.Collections.Generic.IComparer%601> インターフェイスにおける反変性のサポートの利点を示しています。 `PersonComparer` クラスは、`IComparer<Person>` インターフェイスを実装します。 ただし、`Employee` は `Person` を継承しているため、`Employee` 型の一連のオブジェクトを比較するためにこのクラスを再利用できます。  
+ 次の例は、<xref:System.Collections.Generic.IComparer%601> インターフェイスにおける反変性のサポートの利点を示しています。 `PersonComparer` クラスによって、`IComparer<Person>` インターフェイスが実装されます。 ただし、`Employee` は `Person` を継承しているため、`Employee` 型の一連のオブジェクトを比較するためにこのクラスを再利用できます。  
   
 ```csharp  
 // Simple hierarchy of classes.  
@@ -115,4 +115,4 @@ class Program
   
 ## <a name="see-also"></a>関連項目
 
-- [ジェネリック インターフェイスの変性 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [ジェネリック インターフェイスの変性 (C#)](./variance-in-generic-interfaces.md)

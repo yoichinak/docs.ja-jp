@@ -1,15 +1,15 @@
 ---
-title: '方法: 指定された属性または名前のファイルをクエリする (C#)'
+title: 方法:指定された属性または名前のファイルをクエリする (C#)
 ms.date: 07/20/2015
 ms.assetid: 560e3879-b0b3-4549-ad02-0a53aff2f83c
-ms.openlocfilehash: 94642ff500cb065ffcb28d6099c3f9f50d43d124
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: c1ecaad7e4fb4538331ba8f8076c9795acc52877
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584329"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592902"
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a>方法: 指定された属性または名前のファイルをクエリする (C#)
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a>方法:指定された属性または名前のファイルをクエリする (C#)
 この例では、指定されたディレクトリ ツリーで、指定されたファイル名拡張子 (".txt" など) を持つすべてのファイルを検索する方法を示します。 また、ファイルの作成日時に基づいて、ツリー内の最も新しいファイルまたは最も古いファイルを返す方法も示します。  
   
 ## <a name="example"></a>例  
@@ -68,5 +68,5 @@ class FindFileByExtension
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ とファイル ディレクトリ (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects (C#)](./linq-to-objects.md)
+- [LINQ とファイル ディレクトリ (C#)](./linq-and-file-directories.md)

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: fbf93a87cede753ebd41c148f4fb4bb761846954
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 247fb222eaacdb5ee60df2dded3a857f0395eb34
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593082"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606577"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference (C# コンパイラ オプション)
-**-reference** オプションを指定すると、コンパイラは指定されたファイルの [public](../../../csharp/language-reference/keywords/public.md) 型の情報を現在のプロジェクトにインポートし、指定されたアセンブリ ファイルからメタデータを参照できるようにします。  
+**-reference** オプションを指定すると、コンパイラは指定されたファイルの [public](../keywords/public.md) 型の情報を現在のプロジェクトにインポートし、指定されたアセンブリ ファイルからメタデータを参照できるようにします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,11 +40,11 @@ ms.locfileid: "64593082"
 ## <a name="remarks"></a>解説  
  複数のファイルからインポートするには、ファイルごとに **-reference** オプションを指定します。  
   
- インポートするファイルは、マニフェストが含まれている必要があります。出力ファイルは、[-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) 以外のいずれかの [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) オプションでコンパイルされている必要があります。  
+ インポートするファイルは、マニフェストが含まれている必要があります。出力ファイルは、[-target:module](./target-module-compiler-option.md) 以外のいずれかの [-target](./target-compiler-option.md) オプションでコンパイルされている必要があります。  
   
  **-r** は **-reference** の省略形です。  
   
- アセンブリ マニフェストを含まない出力ファイルからメタデータをインポートするには、[-addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md) を使います。  
+ アセンブリ マニフェストを含まない出力ファイルからメタデータをインポートするには、[-addmodule](./addmodule-compiler-option.md) を使います。  
   
  あるアセンブリ (アセンブリ A) を参照していて、そのアセンブリが別のアセンブリ (アセンブリ B) を参照している場合は、以下の条件が当てはまる場合はアセンブリ B を参照する必要があります。  
   
@@ -52,19 +52,19 @@ ms.locfileid: "64593082"
   
 - アセンブリ B の戻り値の型またはパラメーターの型を使用するフィールド、プロパティ、イベント、またはメソッドを呼び出す。  
   
- アセンブリ参照が存在するディレクトリを指定するには、[-lib](../../../csharp/language-reference/compiler-options/lib-compiler-option.md) を使います。 **-lib** のトピックでは、コンパイラがアセンブリを検索するディレクトリについても説明されています。  
+ アセンブリ参照が存在するディレクトリを指定するには、[-lib](./lib-compiler-option.md) を使います。 **-lib** のトピックでは、コンパイラがアセンブリを検索するディレクトリについても説明されています。  
   
  モジュールではなくアセンブリ内の型をコンパイラで認識するには、型の解決を強制する必要があります。そのためには、型のインスタンスを定義します。 アセンブリの型名を解決する方法は他にもあります。たとえば、アセンブリの型を継承すると、コンパイラで型名が認識されます。  
   
  1 つのアセンブリ内から、同じコンポーネントの 2 つの異なるバージョンを参照することが必要になる場合があります。 そのためには、ファイルごとに **-reference** スイッチの alias サブオブションを使って、2 つのファイルを区別します。 この別名は、コンポーネント名の修飾子として使われ、いずれかのファイルのコンポーネントに解決されます。  
   
- 既定では、よく使われる .NET Framework アセンブリを参照する csc 応答 (.rsp) ファイルが使われます。 コンパイラが csc.rsp を使わないようにする場合は、[-noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) を指定します。  
+ 既定では、よく使われる .NET Framework アセンブリを参照する csc 応答 (.rsp) ファイルが使われます。 コンパイラが csc.rsp を使わないようにする場合は、[-noconfig](./noconfig-compiler-option.md) を指定します。  
   
 > [!NOTE]
-> Visual Studio では、**[参照の追加]** ダイアログ ボックスを使います。 詳細については、「[方法 :参照マネージャーを使用して参照を追加または削除する](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager) `-reference` を使った場合と **[参照の追加]** ダイアログ ボックスを使った場合で、参照の追加の動作が同じになるようにするには、追加するアセンブリの **[相互運用型の埋め込み]** プロパティを **[False]** に設定します。 このプロパティの既定値は **[True]** です。  
+> Visual Studio では、 **[参照の追加]** ダイアログ ボックスを使います。 詳細については、[方法:参照マネージャーを使用して参照を追加または削除する](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager) `-reference` を使った場合と **[参照の追加]** ダイアログ ボックスを使った場合で、参照の追加の動作が同じになるようにするには、追加するアセンブリの **[相互運用型の埋め込み]** プロパティを **[False]** に設定します。 このプロパティの既定値は **[True]** です。  
   
 ## <a name="example"></a>例  
- この例では、[extern alias](../../../csharp/language-reference/keywords/extern-alias.md) 機能を使う方法を示します。  
+ この例では、[extern alias](../keywords/extern-alias.md) 機能を使う方法を示します。  
   
  ソース ファイルをコンパイルし、`grid.dll` と `grid20.dll` からメタデータをインポートします。これらは事前にコンパイルしておきます。 2 つの DLL には同じコンポーネントの異なるバージョンが含まれており、ソース ファイルをコンパイルするには 2 つの **-reference** と別名オプションを使います。 オプションは次のようになります。  
 
@@ -94,5 +94,5 @@ GridV2::Grid
   
 ## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
+- [C# コンパイラ オプション](./index.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

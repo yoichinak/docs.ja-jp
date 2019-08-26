@@ -6,12 +6,12 @@ helpviewer_keywords:
 - object initializers [C#]
 - collection initializers [C#]
 ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
-ms.openlocfilehash: bd49834c45f6e07a99be5a1f4293e938eed2cc77
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: f6977fa6c5a8909d6108a5ccfc140b89a4fdd5a4
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267724"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596563"
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>オブジェクト初期化子とコレクション初期化子 (C# プログラミング ガイド)
 
@@ -58,7 +58,7 @@ public string this[char c, int i] {  set { ... }; }
 
 ## <a name="object-initializers-with-anonymous-types"></a>オブジェクト初期化子と匿名型
 
-オブジェクト初期化子は、どのような場合にも使うことができますが、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリ式で使うと特に有用です。 クエリ式では、次の宣言に示すように、オブジェクト初期化子を使うことによってのみ初期化できる[匿名型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)が頻繁に使われます。  
+オブジェクト初期化子は、どのような場合にも使うことができますが、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリ式で使うと特に有用です。 クエリ式では、次の宣言に示すように、オブジェクト初期化子を使うことによってのみ初期化できる[匿名型](./anonymous-types.md)が頻繁に使われます。  
 
 ```csharp
 var pet = new { Age = 10, Name = "Fluffy" };  

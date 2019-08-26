@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a7e4493fca5b73cfd0bdc59ceab9de097de799aa
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 08e6458f0a14b78c6d05f706afa710931d60094a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490746"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948799"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>ジェネリックの共変性と反変性
 <a name="top"></a> 共変性と反変性は、元の指定よりも強い派生型 (具体性が高い) と弱い派生型 (具体性が低い) を使用する能力を示す用語です。 ジェネリック型パラメーターは、ジェネリック型の代入と使用の柔軟性を向上させるために、共変性と反変性をサポートしています。 型システムにおいて、共変性、反変性、および不変性は、次のように定義されます。 各例では、基底クラスが `Base` という名前であり、派生クラスが `Derived`という名前であるとします。  
@@ -41,7 +41,7 @@ ms.locfileid: "66490746"
   
      `List<Base>` (Visual Basic では `List(Of Base)`) のインスタンスを `List<Derived>` 型の変数に割り当てることはできず、その逆もできません。  
   
- 共変の型パラメーターでは、次のコードで示されているように、通常の[ポリモーフィズム](~/docs/csharp/programming-guide/classes-and-structs/polymorphism.md)と非常によく似た代入を行うことができます。  
+ 共変の型パラメーターでは、次のコードで示されているように、通常の[ポリモーフィズム](../../csharp/programming-guide/classes-and-structs/polymorphism.md)と非常によく似た代入を行うことができます。  
   
  [!code-csharp[CoContraSimpleIEnum#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontrasimpleienum/cs/example.cs#1)]
  [!code-vb[CoContraSimpleIEnum#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontrasimpleienum/vb/example.vb#1)]  
@@ -110,7 +110,7 @@ ms.locfileid: "66490746"
  .NET Framework 4 には、<xref:System.Func%602> などの `Func` 汎用デリゲートに、共変の戻り値の型と反変のパラメーターの型があります。 `Action` などの <xref:System.Action%602>汎用デリゲートには、反変のパラメーターの型があります。 したがって、より強い派生型のパラメーターと、より弱い派生型の戻り値 ( `Func` 汎用デリゲートの場合) を持つ変数に、デリゲートを代入できます。  
   
 > [!NOTE]
->  `Func` 汎用デリゲートの最後のジェネリック型パラメーターは、デリゲート シグネチャの戻り値の型を指定します。 他のジェネリック型パラメーターは反変 (`out` キーワード) ですが、この最後のジェネリック型パラメーターは共変 (`in` キーワード) です。  
+> `Func` 汎用デリゲートの最後のジェネリック型パラメーターは、デリゲート シグネチャの戻り値の型を指定します。 他のジェネリック型パラメーターは反変 (`out` キーワード) ですが、この最後のジェネリック型パラメーターは共変 (`in` キーワード) です。  
   
  次に例を示します。 コードの最初の部分では、 `Base`という名前のクラスと、 `Derived` を継承する `Base`という名前のクラスを定義しています。その他に、 `static` という名前の`Shared` (Visual Basic では `MyMethod`) メソッドを持つクラスも定義されています。 このメソッドは、`Base` のインスタンスを受け取り、`Derived` のインスタンスを返します (引数が `Derived` のインスタンスの場合は、それが `MyMethod` によって返されます。引数が `Base` のインスタンスの場合は、`MyMethod` によって `Derived` の新しいインスタンスが返されます)。`Main()` では、`Func<Base, Derived>` を表す `Func(Of Base, Derived)` (Visual Basic では `MyMethod`) のインスタンスを作成して、変数 `f1` に格納しています。  
   
@@ -149,12 +149,12 @@ ms.locfileid: "66490746"
  .NET Framework 4 以降では、Visual Basic と C# の両方で、インターフェイスやデリゲートのジェネリック型パラメーターを共変または反変としてマークするためのキーワードが提供されています。  
   
 > [!NOTE]
->  ジェネリック型パラメーターの分散注釈は .NET Framework Version 2.0 以降の共通言語ランタイムでサポートされていますが、 .NET Framework 4 より前で、これらの注釈を含むジェネリック クラスを定義するには、クラスを [Ilasm.exe (IL Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) を使ってコンパイル、またはそれを動的アセンブリに出力することで、Microsoft Intermediate Language (MSIL) を使用する方法しかありませんでした。  
+> ジェネリック型パラメーターの分散注釈は .NET Framework Version 2.0 以降の共通言語ランタイムでサポートされていますが、 .NET Framework 4 より前で、これらの注釈を含むジェネリック クラスを定義するには、クラスを [Ilasm.exe (IL Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) を使ってコンパイル、またはそれを動的アセンブリに出力することで、Microsoft Intermediate Language (MSIL) を使用する方法しかありませんでした。  
   
  共変の型パラメーターをマークするには、 `out` キーワード (Visual Basic では`Out` キーワード、 `+` MSIL アセンブラー [では](../../../docs/framework/tools/ilasm-exe-il-assembler.md)) を使用します。 共変の型パラメーターは、インターフェイスに属するメソッドの戻り値として使用したり、デリゲートの戻り値の型として使用したりできます。 インターフェイス メソッドのジェネリック型制約として使用することはできません。  
   
 > [!NOTE]
->  インターフェイスのメソッドに汎用デリゲート型のパラメーターがある場合は、インターフェイス型の共変の型パラメーターを使用してデリゲート型の反変の型パラメーターを指定できます。  
+> インターフェイスのメソッドに汎用デリゲート型のパラメーターがある場合は、インターフェイス型の共変の型パラメーターを使用してデリゲート型の反変の型パラメーターを指定できます。  
   
  反変の型パラメーターをマークするには、 `in` キーワード (Visual Basic では`In` キーワード、 `-` MSIL アセンブラー [では](../../../docs/framework/tools/ilasm-exe-il-assembler.md)) を使用します。 反変の型パラメーターは、インターフェイスに属するメソッドのパラメーターの型として使用したり、デリゲートのパラメーターの型として使用したりできます。 インターフェイス メソッドのジェネリック型制約として使用することもできます。  
   
@@ -192,5 +192,5 @@ ms.locfileid: "66490746"
 
 - [共変性と反変性 (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)
 - [共変性と反変性 (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
-- [デリゲートの分散 (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+- [デリゲートの変性 (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
 - [デリゲートの分散 (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)

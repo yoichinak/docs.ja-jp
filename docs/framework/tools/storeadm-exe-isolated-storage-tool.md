@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a4b0f66d692a60590e4f301f1d31ff379078e2c4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b947ea2bfabe1c3fa9afb43cb5ecc41ab92be89
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647250"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929905"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (分離ストレージ ツール)
 分離ストレージ ツールは、現在のユーザーに関するすべての既存ストアの一覧表示または削除を行います。  
@@ -45,7 +45,7 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
 ## <a name="remarks"></a>解説  
  オプションを指定せずにコマンド ラインから Storeadm.exe を実行すると、Storeadm.exe に関する構文とオプションが表示されます。  
   
- 一般に、**/list** オプションと **/remove** オプションは同時に使用されますが、2 つ以上のオプションを指定した場合、それらのオプションはコマンド ラインに表示されている順序で実行されます。  
+ 一般に、 **/list** オプションと **/remove** オプションは同時に使用されますが、2 つ以上のオプションを指定した場合、それらのオプションはコマンド ラインに表示されている順序で実行されます。  
   
  アプリケーションは、ユーザー ストアまたはコンピューター ストアのいずれかを選択して保存できます。  
   
@@ -56,12 +56,12 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
 - コンピューター ストアは、コンピューターのすべてのユーザーに共通で、コンピューターの共通ディレクトリに格納されます。  
   
     > [!NOTE]
-    >  コンピューター ストアは .NET Framework Version 2.0 で新たに追加されました。  
+    > コンピューター ストアは .NET Framework Version 2.0 で新たに追加されました。  
   
  ユーザーに対してローミングが実際に有効になっているかどうかは、Storeadm.exe の管理に影響を与えません。 オプションを指定せずに Storeadm.exe を実行した場合、すべてのアクションがローカル ストアに適用されます。 **/roaming** オプションを指定した場合は、すべてのアクションが、ローミングできるストアに適用されます。 **/machine** オプションを指定してこのツールを実行すると、すべてのアクションがコンピューター ストアに適用されます。  
   
 ## <a name="see-also"></a>関連項目
 
 - [ツール](../../../docs/framework/tools/index.md)
-- [分離ストレージ](../../../docs/standard/io/isolated-storage.md)
+- [分離ストレージ](../../standard/io/isolated-storage.md)
 - [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

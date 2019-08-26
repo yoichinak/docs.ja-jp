@@ -1,15 +1,15 @@
 ---
-title: '方法: 要素の値を取得する (LINQ to XML) (C#)'
+title: 方法:要素の値を取得する (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
-ms.openlocfilehash: 52eb246f5f95354f470aadf0cfe7f93f4b6e27ea
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 821c387bf1e3a2d58686465e5562fde9457127bf
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485013"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592481"
 ---
-# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>方法: 要素の値を取得する (LINQ to XML) (C#)
+# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>方法:要素の値を取得する (LINQ to XML) (C#)
 このトピックでは、要素の値を取得する方法について説明します。 これには主に 2 つの方法があります。 1 つは <xref:System.Xml.Linq.XElement> または <xref:System.Xml.Linq.XAttribute> を目的の型にキャストする方法です。 その後、明示的な変換演算子によって、要素または属性のコンテンツが指定した型に変換され、変数に代入されます。 もう 1 つは、<xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> プロパティまたは <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> プロパティを使用する方法です。  
   
  ただし C# では、通常、キャストがより適切な方法です。 要素または属性を NULL 値が許容される型にキャストすると、存在が不明確な要素 (または属性) の値を取得する場合にコードをより簡単に記述できます。 このトピックの最後の例では、この動作について説明します。 ただし、<xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> プロパティの場合とは異なり、キャストを通じて要素のコンテンツを設定することはできません。  
@@ -147,4 +147,4 @@ v4:element does not exist
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to XML 軸 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes-overview.md)
+- [LINQ to XML 軸 (C#)](./linq-to-xml-axes-overview.md)

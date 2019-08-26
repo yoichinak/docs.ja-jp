@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48331c1b62fa536b905f1288ebb1632f8da15615
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: dd5ec18147c074400457581618bacba11d9ee40a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053588"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963418"
 ---
 # <a name="comparing-strings-in-net"></a>.NET で文字列を比較する
 .NET は、文字列の値を比較するためのメソッドをいくつか提供します。 これらの値の比較メソッドとその説明を次の表に示します。  
@@ -46,12 +46,12 @@ ms.locfileid: "66053588"
   
 |戻り値|条件|  
 |------------------|---------------|  
-|負の整数|最初の文字列は、並べ替え順序が 2 番目の文字列の前に置かれます。<br /><br /> - または -<br /><br /> 最初の文字列は `null`です。|  
-|0|最初の文字列と 2 番目の文字列は等価です。<br /><br /> - または -<br /><br /> 両方の文字列が `null`です。|  
-|正の整数<br /><br /> - または -<br /><br /> 1|最初の文字列は、並べ替え順序が 2 番目の文字列の後に続きます。<br /><br /> - または -<br /><br /> 第 2 文字列は `null`です。|  
+|負の整数|最初の文字列は、並べ替え順序が 2 番目の文字列の前に置かれます。<br /><br /> または<br /><br /> 最初の文字列は `null`です。|  
+|0|最初の文字列と 2 番目の文字列は等価です。<br /><br /> または<br /><br /> 両方の文字列が `null`です。|  
+|正の整数<br /><br /> または<br /><br /> 1|最初の文字列は、並べ替え順序が 2 番目の文字列の後に続きます。<br /><br /> または<br /><br /> 第 2 文字列は `null`です。|  
   
 > [!IMPORTANT]
->  <xref:System.String.Compare%2A?displayProperty=nameWithType> メソッドは、主に文字列の並べ替えに使用するものです。 等価性をテストする (つまり、ある文字列が別の文字列より大きいか小さいかを問題にせずに戻り値 0 を明示的に検索する) 目的では、 <xref:System.String.Compare%2A?displayProperty=nameWithType> メソッドを使用しないでください。 2 つの文字列が等価かどうかを判断するには、 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> メソッドを使用してください。  
+> <xref:System.String.Compare%2A?displayProperty=nameWithType> メソッドは、主に文字列の並べ替えに使用するものです。 等価性をテストする (つまり、ある文字列が別の文字列より大きいか小さいかを問題にせずに戻り値 0 を明示的に検索する) 目的では、 <xref:System.String.Compare%2A?displayProperty=nameWithType> メソッドを使用しないでください。 2 つの文字列が等価かどうかを判断するには、 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> メソッドを使用してください。  
   
  <xref:System.String.Compare%2A?displayProperty=nameWithType> メソッドを使用して、2 つの文字列の相対値を確認する例を次に示します。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66053588"
  <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> メソッドは、ローカル カルチャを考慮せずに 2 つの文字列オブジェクトを比較します。 このメソッドの戻り値は、上の表で示した **Compare** メソッドによって返される値と同じです。  
   
 > [!IMPORTANT]
->  <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> メソッドは、主に文字列の並べ替えに使用するものです。 等価性をテストする (つまり、ある文字列が別の文字列より大きいか小さいかを問題にせずに戻り値 0 を明示的に検索する) 目的では、 <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> メソッドを使用しないでください。 2 つの文字列が等価かどうかを判断するには、 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> メソッドを使用してください。  
+> <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> メソッドは、主に文字列の並べ替えに使用するものです。 等価性をテストする (つまり、ある文字列が別の文字列より大きいか小さいかを問題にせずに戻り値 0 を明示的に検索する) 目的では、 <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> メソッドを使用しないでください。 2 つの文字列が等価かどうかを判断するには、 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> メソッドを使用してください。  
   
  **CompareOrdinal** メソッドを使用して、2 つの文字列の値を比較する例を次に示します。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "66053588"
  <xref:System.String.CompareTo%2A?displayProperty=nameWithType> メソッドは、現在の文字列オブジェクトがカプセル化している文字列を別の文字列またはオブジェクトと比較します。 このメソッドの戻り値は、上の表で示した <xref:System.String.Compare%2A?displayProperty=nameWithType> メソッドによって返される値と同じです。  
   
 > [!IMPORTANT]
->  <xref:System.String.CompareTo%2A?displayProperty=nameWithType> メソッドは、主に文字列の並べ替えに使用するものです。 等価性をテストする (つまり、ある文字列が別の文字列より大きいか小さいかを問題にせずに戻り値 0 を明示的に検索する) 目的では、 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> メソッドを使用しないでください。 2 つの文字列が等価かどうかを判断するには、 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> メソッドを使用してください。  
+> <xref:System.String.CompareTo%2A?displayProperty=nameWithType> メソッドは、主に文字列の並べ替えに使用するものです。 等価性をテストする (つまり、ある文字列が別の文字列より大きいか小さいかを問題にせずに戻り値 0 を明示的に検索する) 目的では、 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> メソッドを使用しないでください。 2 つの文字列が等価かどうかを判断するには、 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> メソッドを使用してください。  
   
  <xref:System.String.CompareTo%2A?displayProperty=nameWithType> メソッドを使用して、 `string1` オブジェクトを `string2` オブジェクトと比較する例を次に示します。  
   

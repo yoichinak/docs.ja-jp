@@ -6,22 +6,22 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: f9884f353e58ff6119e3bc3b95aa55f0f60d0ad5
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 4cbed8145487325d8b06882bbab843321a49d0d3
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398492"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596907"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>方法: 自動実装するプロパティを使用して簡易クラスを実装する (C# プログラミング ガイド)
 
 この例では、一連の自動実装プロパティのカプセル化のみを行う、変更できない簡易クラスの作成方法を示します。 参照型のセマンティクスを使用する必要がある場合は、構造体ではなく次のようなコンストラクトを使用します。
 
 変更できないプロパティの作成方法は 2 つあります。
-- [set](../../../csharp/language-reference/keywords/set.md) アクセサーは、[private](../../../csharp/language-reference/keywords/private.md) として宣言することができます。  プロパティは型の中のみで設定可能で、コンシューマーは変更できません。
+- [set](../../language-reference/keywords/set.md) アクセサーは、[private](../../language-reference/keywords/private.md) として宣言することができます。  プロパティは型の中のみで設定可能で、コンシューマーは変更できません。
 
   `set` アクセサーを private で宣言した場合、オブジェクト初期化子を使用してプロパティを初期化することはできません。 コンストラクターまたはファクトリ メソッドを使用する必要があります。
-- [get](../../../csharp/language-reference/keywords/get.md) アクセサーのみを宣言し、型のコンストラクターを除くすべての場所でプロパティを変更できないようにすることができます。
+- [get](../../language-reference/keywords/get.md) アクセサーのみを宣言し、型のコンストラクターを除くすべての場所でプロパティを変更できないようにすることができます。
 
 ## <a name="example"></a>例
 
@@ -120,6 +120,6 @@ public class Program
 
 ## <a name="see-also"></a>関連項目
 
-- [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)
-- [struct](../../../csharp/language-reference/keywords/struct.md)
-- [オブジェクト初期化子とコレクション初期化子](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [プロパティ](./properties.md)
+- [struct](../../language-reference/keywords/struct.md)
+- [オブジェクト初期化子とコレクション初期化子](./object-and-collection-initializers.md)

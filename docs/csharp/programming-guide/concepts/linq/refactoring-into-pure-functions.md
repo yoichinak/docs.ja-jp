@@ -2,19 +2,19 @@
 title: 純粋関数へのリファクタリング (C#)
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
-ms.openlocfilehash: 0ddf3eb937f0ff9ee6b0ce289d73be7640499ba4
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 453b128ecaea62fd58c54bfb383091f65a082370
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483988"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924195"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>純粋関数へのリファクタリング (C#)
 
 純粋関数型変換で重要なのは、純粋関数を使用してコードをリファクターする方法を理解することです。  
   
 > [!NOTE]
->  関数型プログラミングでの命名には、一般に純粋関数を使用してプログラムをリファクターする方法が使用されます。 Visual Basic および C++ では、この処理がそれぞれの言語の関数を使用して行われます。 ただし C# では、関数がメソッドと呼ばれます。 ここでは、純粋関数が C# のメソッドとして実装されます。  
+> 関数型プログラミングでの命名には、一般に純粋関数を使用してプログラムをリファクターする方法が使用されます。 Visual Basic および C++ では、この処理がそれぞれの言語の関数を使用して行われます。 ただし C# では、関数がメソッドと呼ばれます。 ここでは、純粋関数が C# のメソッドとして実装されます。  
   
  このセクションで既に説明したように、純粋関数には 2 つの実用的な特性があります。  
   
@@ -24,7 +24,7 @@ ms.locfileid: "66483988"
   
  関数型プログラミングに移行するには、既存のコードをリファクターして不要な副作用や外部依存関係を排除するのが 1 つの方法です。 この方法で、既存のコードの純粋関数バージョンを作成できます。  
   
- このトピックでは、純粋関数の特徴とそれ以外の関数の特徴について説明します。 「[チュートリアル:WordprocessingML ドキュメント内のコンテンツの操作 (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)」チュートリアルでは、WordprocessingML ドキュメントの操作方法を説明し、純粋関数を使用してリファクターする方法を示す 2 つの例を紹介しています。  
+ このトピックでは、純粋関数の特徴とそれ以外の関数の特徴について説明します。 「[チュートリアル:WordprocessingML ドキュメント内のコンテンツの操作 (C#)](./shape-of-wordprocessingml-documents.md)」チュートリアルでは、WordprocessingML ドキュメントの操作方法を説明し、純粋関数を使用してリファクターする方法を示す 2 つの例を紹介しています。  
   
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>副作用と外部依存関係の排除  
  次の例に示す 2 つの非純粋関数と 1 つの純粋関数を参照して、その違いを確認してください。  
@@ -81,7 +81,7 @@ public class Program
  このバージョンのプログラムは、最初のバージョンと同じ出力を生成します。これは、`HyphenatedConcat` 関数が <xref:System.Text.StringBuilder.Append%2A> メンバー関数を呼び出して最初のパラメーターの値 (状態) を変更したためです。 `HyphenatedConcat` はパラメーターを値で渡しますが、それでもこの変更は行われるので注意してください。  
   
 > [!IMPORTANT]
->  参照型の場合、パラメーターを値で渡すと、渡されるオブジェクトへの参照がコピーされて渡されます。 このコピーは、参照変数が新しいオブジェクトに割り当てられるまで、元の参照と同じインスタンス データに関連付けられたままとなります。 パラメーターを変更する場合に、必ずしも関数に参照を渡す必要はありません。  
+> 参照型の場合、パラメーターを値で渡すと、渡されるオブジェクトへの参照がコピーされて渡されます。 このコピーは、参照変数が新しいオブジェクトに割り当てられるまで、元の参照と同じインスタンス データに関連付けられたままとなります。 パラメーターを変更する場合に、必ずしも関数に参照を渡す必要はありません。  
   
 ### <a name="pure-function"></a>純粋関数  
 次のバージョンのプログラムは、`HyphenatedConcat` 関数を純粋関数として実装する方法を示しています。  
@@ -110,9 +110,9 @@ class Program
 ## <a name="standard-query-operators"></a>標準クエリ演算子  
  標準クエリ演算子の重要な特性は、純粋関数として実装される点です。  
   
- 詳細については、「[標準クエリ演算子の概要 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)」を参照してください。  
+ 詳細については、「[標準クエリ演算子の概要 (C#)](./standard-query-operators-overview.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [純粋関数型変換の概要 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [関数型プログラミングと命令型プログラミング (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+- [純粋関数型変換の概要 (C#)](./introduction-to-pure-functional-transformations.md)
+- [関数型プログラミングと命令型プログラミング (C#)](./functional-programming-vs-imperative-programming.md)

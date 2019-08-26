@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /win32icon compiler option [C#]
 - -win32icon compiler option [C#]
 ms.assetid: 756d9b6d-ab07-41b7-ba58-5bd88f711138
-ms.openlocfilehash: 7bc7da8121ec1190908d9b94fc7c987f9888c020
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f3df92d8d0b0135eac1a055afafffa0015fecc2b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317455"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606283"
 ---
 # <a name="-win32icon-c-compiler-options"></a>-win32icon (C# コンパイラ オプション)
 **-win32icon** オプションは、エクスプローラーで出力ファイルを適切に表示する .ico ファイルを出力ファイルに挿入します。  
@@ -31,7 +31,7 @@ ms.locfileid: "59317455"
 ## <a name="remarks"></a>解説  
  .ico ファイルは[リソース コンパイラ](/windows/desktop/menurc/resource-compiler)で作成できます。 リソース コンパイラは、Visual C++ プログラムをコンパイルするときに呼び出されます。 .ico ファイルは .rc ファイルから作成されます。  
   
- .NET Framework リソース ファイルの [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) (参照) または [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) (アタッチ) をご覧ください。 .res ファイルのインポートについては、[-win32res](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md) をご覧ください。  
+ .NET Framework リソース ファイルの [-linkresource](./linkresource-compiler-option.md) (参照) または [-resource](./resource-compiler-option.md) (アタッチ) をご覧ください。 .res ファイルのインポートについては、[-win32res](./win32res-compiler-option.md) をご覧ください。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
   
@@ -52,5 +52,5 @@ csc -win32icon:rf.ico in.cs
   
 ## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
+- [C# コンパイラ オプション](./index.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

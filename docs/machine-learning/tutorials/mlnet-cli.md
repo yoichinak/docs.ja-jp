@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 029685be9d44ad947d4291912d7da1d8ce73d52a
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 403b1759164d588cb5af49c6cb05e001b030235f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053645"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963596"
 ---
 # <a name="auto-generate-a-binary-classifier-using-the-cli"></a>CLI を使用して二項分類子を自動生成する
 
@@ -47,7 +47,7 @@ ML.NET CLI は任意のコマンドプロンプト (Windows、Mac、または Li
 1. [UCI Sentiment Labeled Sentences データセット zip ファイル (次の注の引用を参照してください)](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) をダウンロードし、任意のフォルダーに展開します。
 
     > [!NOTE]
-    > このチュートリアルで使用されるデータセットでは、「From Group to Individual Labels using Deep Features」 (Kotzias 他 KDD 2015) のものであり、UCI 機械学習リポジトリ (Dua, D. and Karra Taniskidou, E.(2017)) でホストされています。 UCI 機械学習リポジトリ [http://archive.ics.uci.edu/ml]。 カリフォルニア州アーバイン: カリフォルニア大学情報コンピュータサイエンス学部。
+    > このチュートリアルで使用されるデータセットでは、「From Group to Individual Labels using Deep Features」 (Kotzias 他 KDD 2015) のものであり、UCI 機械学習リポジトリ (Dua, D. and Karra Taniskidou, E.(2017)) でホストされています。 UCI 機械学習リポジトリ [http://archive.ics.uci.edu/ml ]。 カリフォルニア州アーバイン: カリフォルニア大学情報コンピュータサイエンス学部。
 
 2. `yelp_labelled.txt` ファイルを以前に作成した任意のフォルダー (`/cli-test` など) にコピーします。
 
@@ -116,7 +116,7 @@ ML.NET CLI は任意のコマンドプロンプト (Windows、Mac、または Li
     追加のメトリックや、さまざまなモデルの評価に使用される**メトリックに関するより詳細な情報** (正確度、AUC、AUCPR、F1 スコアなど) については、[ML.NET のメトリックの概要](../resources/metrics.md)に関する記事を参照してください。
 
     > [!NOTE]
-    >  これと同じデータセットを試し、`--max-exploration-time` に数分間 (たとえば 180 秒を指定するので 3 分間) を指定すると、このデータセット (かなり小規模で 1,000 行) に対して、トレーニング パイプライン構成が異なる優れた "最適なモデル" が自動的に検出されます。 
+    > これと同じデータセットを試し、`--max-exploration-time` に数分間 (たとえば 180 秒を指定するので 3 分間) を指定すると、このデータセット (かなり小規模で 1,000 行) に対して、トレーニング パイプライン構成が異なる優れた "最適なモデル" が自動的に検出されます。 
         
     大規模なデータセットを対象とした "運用環境対応モデル" である "最高/高品質" なモデルを見つけるには、通常、データセットのサイズに応じて、はるかに長い探索時間を指定して、CLI を使用した実験を行う必要があります。 実際のところ、多くの場合、特に行と列のデータセットが大きいと、数時間の探索時間が必要になることがあります。 
 

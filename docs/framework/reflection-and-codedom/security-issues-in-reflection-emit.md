@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4579e00bdaf89b4cf5d0da24a343fb5070609863
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: f7b1f6798f1aaa778eaf95de996584848c672351
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347310"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956678"
 ---
 # <a name="security-issues-in-reflection-emit"></a>リフレクション出力のセキュリティ関連事項
 .NET Framework には、Microsoft Intermediate Language (MSIL) を出力する方法が 3 種類ありますが、それぞれに固有のセキュリティ問題があります。  
@@ -32,19 +32,19 @@ ms.locfileid: "67347310"
  動的コードの生成方法に関係なく、生成済みコードを実行するには、生成済みコードで使用される型やメソッドに必要なすべてのアクセス許可が必要です。  
   
 > [!NOTE]
->  コードでのリフレクションとコードの出力に必要なアクセス許可は、.NET Framework のリリースによって異なります。 このトピックの「[バージョン情報](#Version_Information)」をご覧ください。  
+> コードでのリフレクションとコードの出力に必要なアクセス許可は、.NET Framework のリリースによって異なります。 このトピックの「[バージョン情報](#Version_Information)」をご覧ください。  
   
 <a name="Dynamic_Assemblies"></a>   
 ## <a name="dynamic-assemblies"></a>動的アセンブリ  
  動的アセンブリを作成するには、<xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> メソッドのオーバーロードを使用します。 コンピューター全体のセキュリティ ポリシーが削除されたため、このメソッドのほとんどのオーバーロードは .NET Framework 4 では推奨されていません。 (「[セキュリティの変更](../../../docs/framework/security/security-changes.md)」をご覧ください。)残りのオーバーロードは、信頼レベルに関係なく、任意のコードによって実行できます。 これらのオーバーロードは 2 つのグループに分けられます。1 つは、動的アセンブリの作成時に適用する属性の一覧を指定するグループで、もう 1 つは属性の一覧を指定しないグループです。 アセンブリの透過性モデルを指定しない場合は、アセンブリの作成時に <xref:System.Security.SecurityRulesAttribute> 属性を適用することによって、出力アセンブリから透過性モデルが継承されます。  
   
 > [!NOTE]
->  <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A> メソッドを使用すると、動的アセンブリの作成後に適用する属性は、そのアセンブリがディスクに保存され、メモリに再び読み込まれるまでは有効になりません。  
+> <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A> メソッドを使用すると、動的アセンブリの作成後に適用する属性は、そのアセンブリがディスクに保存され、メモリに再び読み込まれるまでは有効になりません。  
   
  動的アセンブリのコードからは、参照できる型と他のアセンブリのメンバーのみにアクセスできます。  
   
 > [!NOTE]
->  動的アセンブリでは、動的メソッドが非パブリックな型とメンバーにアクセスすることを許可する <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> フラグと <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> フラグが使用されません。  
+> 動的アセンブリでは、動的メソッドが非パブリックな型とメンバーにアクセスすることを許可する <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> フラグと <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> フラグが使用されません。  
   
  一時動的アセンブリはメモリ内に作成され、ディスクに保存されることがないため、ファイルへのアクセス許可は不要です。 動的アセンブリをディスクに保存するには、<xref:System.Security.Permissions.FileIOPermission> に適切なフラグを指定する必要があります。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "67347310"
  ただし、匿名でホストされる動的メソッドが作成されるとき、コール スタックがキャプチャされます。 メソッドの作成時に、キャプチャされたコール スタックに対してセキュリティ要求がなされます。  
   
 > [!NOTE]
->  概念的には、メソッドの作成中に要求がなされます。 つまり、MSIL 命令が生成されるたびに要求を実行できます。 現在の実装では、<xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A?displayProperty=nameWithType> メソッドが呼び出されたとき (<xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> を呼び出さずにこのメソッドが呼び出される場合)、または Just-In-Time (JIT) コンパイラが呼び出されたときに、すべての要求がなされます。  
+> 概念的には、メソッドの作成中に要求がなされます。 つまり、MSIL 命令が生成されるたびに要求を実行できます。 現在の実装では、<xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A?displayProperty=nameWithType> メソッドが呼び出されたとき (<xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> を呼び出さずにこのメソッドが呼び出される場合)、または Just-In-Time (JIT) コンパイラが呼び出されたときに、すべての要求がなされます。  
   
  アプリケーション ドメインで許可されている場合、匿名でホストされる動的メソッドでは、JIT の参照範囲チェックを省略できますが、制限があります。匿名でホストされる動的メソッドによりアクセスされる非パブリックの型とメンバーがアセンブリに含まれ、そのアセンブリの許可セットが、出力元のコール スタックの許可セットに等しいか、または、そのサブセットであることが必要です。 アプリケーション ドメインで <xref:System.Security.Permissions.ReflectionPermission> に <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> フラグが指定されている場合は、この制限付き機能を使って JIT 参照範囲チェックを省略できます。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "67347310"
 - 動的メソッドで使用されるすべての型およびメンバーで必要なアクセス許可が、部分信頼のアセンブリの許可セットに含まれている。  
   
 > [!NOTE]
->  動的メソッドではデバッグ シンボルがサポートされていません。  
+> 動的メソッドではデバッグ シンボルがサポートされていません。  
   
 <a name="Dynamic_Methods_Associated_with_Existing_Assemblies"></a>   
 ## <a name="dynamic-methods-associated-with-existing-assemblies"></a>既存のアセンブリに関連付けられている動的メソッド  
@@ -113,7 +113,7 @@ ms.locfileid: "67347310"
 - 動的メソッドに別のアセンブリの型またはモジュールを関連付ける場合、コンストラクターでは 2 つの操作が必要です。それは、<xref:System.Security.Permissions.ReflectionPermission> に <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> フラグを指定することと、他方のモジュールを含むアセンブリの許可セットを用意することです。 つまり、対象のモジュールの許可セットにあるすべてのアクセス許可に加えて、<xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> がコール スタックに含まれる必要があります。  
   
     > [!NOTE]
-    >  下位互換性を確保するために、対象の許可セットと <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> の両方の要件が満たされなかった場合、コンストラクターでは <xref:System.Security.Permissions.SecurityPermission> に <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType> フラグを指定する必要があります。  
+    > 下位互換性を確保するために、対象の許可セットと <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> の両方の要件が満たされなかった場合、コンストラクターでは <xref:System.Security.Permissions.SecurityPermission> に <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType> フラグを指定する必要があります。  
   
  この一覧の項目は出力アセンブリの許可セットの観点から書かれていますが、要求はコール スタック全体 (アプリケーション ドメイン境界を含む) に対してなされることに注意してください。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "67347310"
 ### <a name="generating-dynamic-methods-from-partially-trusted-code"></a>部分信頼コードからの動的メソッドの生成  
   
 > [!NOTE]
->  部分的に信頼されるコードから動的メソッドを生成する方法として推奨されるのは、[匿名でホストされる動的メソッドを使用する方法](#Anonymously_Hosted_Dynamic_Methods)です。  
+> 部分的に信頼されるコードから動的メソッドを生成する方法として推奨されるのは、[匿名でホストされる動的メソッドを使用する方法](#Anonymously_Hosted_Dynamic_Methods)です。  
   
  インターネット アクセス許可が設定されたアセンブリで、動的メソッドを生成し、それを実行するための条件を考えてみましょう。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "67347310"
 - 動的メソッドで JIT 参照範囲チェックを省略しない。  
   
 > [!NOTE]
->  動的メソッドではデバッグ シンボルがサポートされていません。  
+> 動的メソッドではデバッグ シンボルがサポートされていません。  
   
 <a name="Version_Information"></a>   
 ## <a name="version-information"></a>バージョン情報  
@@ -144,7 +144,7 @@ ms.locfileid: "67347310"
  .NET Framework 2.0 Service Pack 1 以降では、動的アセンブリと動的メソッドを出力するときに、<xref:System.Security.Permissions.ReflectionPermission> に <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> フラグを指定する必要がなくなりました。 このフラグは、それ以前のすべてのバージョンの .NET Framework では必要となります。  
   
 > [!NOTE]
->  `FullTrust` および `LocalIntranet` の名前付きアクセス許可セットでは、既定で <xref:System.Security.Permissions.ReflectionPermission> に <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> フラグが指定されますが、`Internet` アクセス許可セットでは指定されません。 そのため、以前のバージョンの .NET Framework では、<xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> に対して <xref:System.Security.PermissionSet.Assert%2A> を実行する場合にのみ、インターネット アクセス許可でライブラリを使用できます。 このようなライブラリでは、コーディング エラーがあるとセキュリティ ホールが発生するおそれがあるため、セキュリティを慎重にレビューする必要があります。 コードの生成は本質的に特権を必要とする操作ではないため、.NET Framework 2.0 SP1 はセキュリティ確認要求を発行せずに部分信頼シナリオでコードを出力できます。 これは、生成されたコードには、コードを出力したアセンブリと同等以下のアクセス許可しかないことを意味します。 これにより、コードを出力するライブラリは透過的セキュリティになるため、<xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> を要求する必要がなくなります。そのため、安全なライブラリを簡単に作成できるようになります。  
+> `FullTrust` および `LocalIntranet` の名前付きアクセス許可セットでは、既定で <xref:System.Security.Permissions.ReflectionPermission> に <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> フラグが指定されますが、`Internet` アクセス許可セットでは指定されません。 そのため、以前のバージョンの .NET Framework では、<xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> に対して <xref:System.Security.PermissionSet.Assert%2A> を実行する場合にのみ、インターネット アクセス許可でライブラリを使用できます。 このようなライブラリでは、コーディング エラーがあるとセキュリティ ホールが発生するおそれがあるため、セキュリティを慎重にレビューする必要があります。 コードの生成は本質的に特権を必要とする操作ではないため、.NET Framework 2.0 SP1 はセキュリティ確認要求を発行せずに部分信頼シナリオでコードを出力できます。 これは、生成されたコードには、コードを出力したアセンブリと同等以下のアクセス許可しかないことを意味します。 これにより、コードを出力するライブラリは透過的セキュリティになるため、<xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> を要求する必要がなくなります。そのため、安全なライブラリを簡単に作成できるようになります。  
   
  さらに、.NET Framework 2.0 SP1 では部分的に信頼される動的メソッドの非パブリックの型およびメンバーにアクセスできるように、<xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> フラグが導入されています。 以前のバージョンの .NET Framework では、動的メソッドで非パブリックの型およびメンバーにアクセスするには <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> フラグが必要でした。これは、部分信頼のコードには付与されないアクセス許可です。  
   

@@ -1,15 +1,15 @@
 ---
-title: '方法: ディレクトリ ツリーで重複するファイルをクエリする (LINQ) (C#)'
+title: 方法:ディレクトリ ツリーで重複するファイルをクエリする (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 1ff5562b-0d30-46d1-b426-a04e8f78c840
-ms.openlocfilehash: a4d7ece3c69db294437ac0ca41ed5b1a3307e524
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f9d045aa2e9cc11fdb4de202d03f76f85bac6500
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584346"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592879"
 ---
-# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>方法: ディレクトリ ツリーで重複するファイルをクエリする (LINQ) (C#)
+# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>方法:ディレクトリ ツリーで重複するファイルをクエリする (LINQ) (C#)
 同じ名前のファイルが複数のフォルダーに存在することがあります。 たとえば、Visual Studio インストール フォルダーでは、複数のフォルダーに readme.htm ファイルが含まれています。 次の例は、指定したルート フォルダーの下で、このような重複したファイル名をクエリする方法を示しています。 また、2 番目の例では、名前のほかにサイズと作成時刻が一致するファイルをクエリする方法を示します。  
   
 ## <a name="example"></a>例  
@@ -174,5 +174,5 @@ class QueryDuplicateFileNames
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ とファイル ディレクトリ (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects (C#)](./linq-to-objects.md)
+- [LINQ とファイル ディレクトリ (C#)](./linq-and-file-directories.md)

@@ -1,15 +1,15 @@
 ---
-title: '方法: グループを使用して 1 つのファイルを複数のファイルに分割する (LINQ) (C#)'
+title: 方法:グループを使用して 1 つのファイルを複数のファイルに分割する (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: f38cfebae17ea6db9df2445f71852f7f4e6f201f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 171d0aababfe4ff4ba5be4c8d307c917474671fc
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584337"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592384"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>方法: グループを使用して 1 つのファイルを複数のファイルに分割する (LINQ) (C#)
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>方法:グループを使用して 1 つのファイルを複数のファイルに分割する (LINQ) (C#)
 この例では、2 つのファイルの内容をマージし、新しい方法でデータを整理する一連の新しいファイルを作成するための、1 つの方法を示します。  
   
 ### <a name="to-create-the-data-files"></a>データ ファイルを作成するには  
@@ -130,5 +130,5 @@ System.Linq 名前空間と System.IO 名前空間に `using` ディレクティ
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ と文字列 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ とファイル ディレクトリ (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ と文字列 (C#)](./linq-and-strings.md)
+- [LINQ とファイル ディレクトリ (C#)](./linq-and-file-directories.md)
