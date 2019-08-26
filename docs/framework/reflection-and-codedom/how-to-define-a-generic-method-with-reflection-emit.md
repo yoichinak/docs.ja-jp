@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bf8610a1e2ad11d12acd55c69fbb98d078f7cc9
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a16f51408de5ed7b2a0a7d45af81113fe8c7b386
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586148"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928294"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>方法: リフレクション出力を使用してジェネリック メソッドを定義する
 最初の手順では、2 つの型パラメーターを持つ単純なジェネリック メソッドを作成する方法と、クラスの制約、インターフェイスの制約、および特殊な制約を型パラメーターに適用する方法を示します。  
@@ -26,7 +26,7 @@ ms.locfileid: "65586148"
  3 番目の手順では、ジェネリック メソッドを呼び出す方法を示します。  
   
 > [!IMPORTANT]
->  メソッドはジェネリック型に属し、その型の型パラメーターを使用するだけであるため、ジェネリックではありません。 メソッドがジェネリックになるのは、そのメソッドが独自の型パラメーター リストを持つ場合だけです。 この例のように、ジェネリック メソッドは非ジェネリック型で表すことができます。 ジェネリック型の非ジェネリック メソッドの例については、「[方法:リフレクション出力を使用してジェネリック型を定義する](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)」をご覧ください。  
+> メソッドはジェネリック型に属し、その型の型パラメーターを使用するだけであるため、ジェネリックではありません。 メソッドがジェネリックになるのは、そのメソッドが独自の型パラメーター リストを持つ場合だけです。 この例のように、ジェネリック メソッドは非ジェネリック型で表すことができます。 ジェネリック型の非ジェネリック メソッドの例については、「[方法:リフレクション出力を使用してジェネリック型を定義する](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)」をご覧ください。  
   
 ### <a name="to-define-a-generic-method"></a>ジェネリック メソッドを定義するには  
   
@@ -155,7 +155,7 @@ ms.locfileid: "65586148"
  コードを実行すると、動的アセンブリが DemoGenericMethod1.dll という名前で保存され、[Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) を使用してチェックできます。  
   
 > [!NOTE]
->  コードを出力する方法を習得するためのよい方法は、出力しようとしているタスクを実行するプログラムを Visual Basic、C#、または Visual C++ で記述し、逆アセンブラーを使用して、コンパイラによって生成された MSIL をチェックすることです。  
+> コードを出力する方法を習得するためのよい方法は、出力しようとしているタスクを実行するプログラムを Visual Basic、C#、または Visual C++ で記述し、逆アセンブラーを使用して、コンパイラによって生成された MSIL をチェックすることです。  
   
  このコード例には、出力されたメソッドに相当するソース コードが含まれています。 出力されたメソッドは、遅延バインディングによって呼び出されます。また、このコード例で宣言された汎用デリゲートを使用することによっても呼び出されます。  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11777f21d34da8b529352122bbf185f1938d3eb5
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: df8f82605118f1af0f085aef6e76c1e4bedb2904
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567233"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69988158"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>COM 用の .NET Framework アセンブリのパッケージ化
 
@@ -33,13 +33,13 @@ COM 開発者がアプリケーションに組み込むときに役立つ、マ�
 
   マネージド型には、COM から参照できない型、参照可能だが作成できない型、および参照と作成の両方が可能な型があります。 アセンブリは、参照できない型、参照できる型、作成できない型、作成できる型を任意に組み合わせて構成できます。 完全を期すために、COM に公開するアセンブリ内の型を識別する必要があります。特に COM に公開するアセンブリ内の型が .NET Framework に公開されている型のサブセットである場合に型の識別が必要になります。
 
-  追加情報については、「[相互運用のための .NET 型の要件](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)」を参照してください。
+  追加情報については、「[相互運用のための .NET 型の要件](../../standard/native-interop/qualify-net-types-for-interoperation.md)」を参照してください。
 
 - バージョン管理に関する注意事項
 
   クラス インターフェイス (COM 相互運用機能により生成されたインターフェイス) を実装したマネージド クラスには、バージョン管理に関する制約が生じる場合があります。
 
-  クラス インターフェイスの使用に関するガイドラインについては、「[クラス インターフェイスの概要](../../../docs/standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)」をご覧ください。
+  クラス インターフェイスの使用に関するガイドラインについては、「[クラス インターフェイスの概要](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)」をご覧ください。
 
 - 配置に関する注意事項
 
@@ -94,8 +94,8 @@ COM 開発者がアプリケーションに組み込むときに役立つ、マ�
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - <xref:System.Runtime.InteropServices.ITypeLibConverter>
 - [COM への .NET Framework コンポーネントの公開](exposing-dotnet-components-to-com.md)
-- [要件 (相互運用のための .NET 型の)](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)
-- [クラス インターフェイスの概要](../../../docs/standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
+- [要件 (相互運用のための .NET 型の)](../../standard/native-interop/qualify-net-types-for-interoperation.md)
+- [クラス インターフェイスの概要](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
 - [アセンブリのセキュリティに関する考慮事項](../app-domains/assembly-security-considerations.md)
 - [Tlbexp.exe (タイプ ライブラリ エクスポーター)](../tools/tlbexp-exe-type-library-exporter.md)
 - [COM へのアセンブリの登録](registering-assemblies-with-com.md)

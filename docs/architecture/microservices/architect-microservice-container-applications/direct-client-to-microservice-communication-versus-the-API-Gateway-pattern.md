@@ -2,12 +2,12 @@
 title: API ゲートウェイ パターンと、クライアントからマイクロサービスへの直接通信との比較
 description: API ゲートウェイ パターンと、クライアントからマイクロサービスへの直接通信との相違点およびそれぞれの用途について説明します。
 ms.date: 01/07/2019
-ms.openlocfilehash: 9ebd544bdc137a68f03d1ab38cf23bf0d02c420c
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: c54287ea3e99ff7fe9faf02898b8c322b756e26f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892232"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914671"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API ゲートウェイ パターンと、クライアントからマイクロサービスへの直接通信との比較
 
@@ -170,7 +170,7 @@ Azure API Management では、キー、トークン、および IP フィルタ�
 
 ## <a name="additional-resources"></a>その他の技術情報
 
-- **Charles Richardson。パターン: API ゲートウェイ/Backend for Front-End** \
+- **Chris Richardson。パターン: API ゲートウェイ/Backend for Front-End** \
   <https://microservices.io/patterns/apigateway.html>
 
 - **API ゲートウェイ パターン** \

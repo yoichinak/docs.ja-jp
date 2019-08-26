@@ -2,17 +2,17 @@
 title: Func および Action 汎用デリゲートでの変性の使用 (C#)
 ms.date: 07/20/2015
 ms.assetid: 1826774f-2b7a-470f-b110-17cfdd6abdae
-ms.openlocfilehash: f517eea07588bb01ef903c8311126eab872bd735
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bbfc41fb8ab3e7d800f1eb03098e02056e694872
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540599"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659909"
 ---
 # <a name="using-variance-for-func-and-action-generic-delegates-c"></a>Func および Action 汎用デリゲートでの変性の使用 (C#)
 以下の例では、`Func` 汎用デリゲートと `Action` 汎用デリゲートの共変性と反変性を使用して、メソッドの再利用を可能にし、コードの柔軟性を高める方法を示します。  
   
- 共変性と反変性の詳細については、「[デリゲートの変性 (C# )](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)」を参照してください。  
+ 共変性と反変性の詳細については、「[デリゲートの変性 (C# )](./variance-in-delegates.md)」を参照してください。  
   
 ## <a name="using-delegates-with-covariant-type-parameters"></a>デリゲートと共変の型パラメーターの使用  
  次の例は、`Func` 汎用デリゲートにおける共変性のサポートの利点を示しています。 `FindByTitle` メソッドは、`String` 型のパラメーターを受け取り、`Employee` 型のオブジェクトを返します。 ただし、このメソッドは `Func<String, Person>` デリゲートに割り当てることもできます。これは `Employee` が `Person` を継承するためです。  
@@ -83,5 +83,5 @@ class Program
   
 ## <a name="see-also"></a>関連項目
 
-- [共変性と反変性 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/index.md)
-- [ジェネリック](~/docs/standard/generics/index.md)
+- [共変性と反変性 (C#)](./index.md)
+- [ジェネリック](../../../../standard/generics/index.md)

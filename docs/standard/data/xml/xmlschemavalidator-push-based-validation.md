@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8e2b6ca8ef04ad6ff637a59f03f3b4cf04cb06ad
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e37a6657c9fc6315b6b77ed3cfc07d969317fc5c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615365"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966943"
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>XmlSchemaValidator のプッシュ ベースの検証
 <xref:System.Xml.Schema.XmlSchemaValidator> は、プッシュ ベース方式で、XML スキーマを基準として XML データを検証する、効率的かつ高性能なしくみを提供します。 たとえば、<xref:System.Xml.Schema.XmlSchemaValidator> クラスでは、XML 情報セットを XML ドキュメントにシリアル化してから検証型 XML リーダーを使用してドキュメントを再解析する必要なしに、情報セットをそのまま検証することができます。  
@@ -23,7 +23,7 @@ ms.locfileid: "64615365"
  次は、<xref:System.Xml.Schema.XmlSchemaValidator> クラスを使用して、`contosoBooks.xml` ファイルを `contosoBooks.xsd` スキーマに対して検証する一例です。 この例では、<xref:System.Xml.Serialization.XmlSerializer> クラスを使用して、`contosoBooks.xml` ファイルを逆シリアル化し、ノードの値を <xref:System.Xml.Schema.XmlSchemaValidator> クラスのメソッドに渡します。  
   
 > [!NOTE]
->  この例は、このトピックの各セクションを通じて使用されます。  
+> この例は、このトピックの各セクションを通じて使用されます。  
   
  [!code-csharp[XmlSchemaValidatorExamples#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaValidatorExamples/CS/XmlSchemaValidatorExamples.cs#1)]
  [!code-vb[XmlSchemaValidatorExamples#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaValidatorExamples/VB/XmlSchemaValidatorExamples.vb#1)]  
@@ -137,7 +137,7 @@ validator.ValidateEndElement(null);
  <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> クラスの <xref:System.Xml.Schema.XmlSchemaValidator> メソッドは、検証中に使用するスキーマ セットに 1 つの XML スキーマを追加するために使用します。 <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> メソッドは、XML 情報セットの検証中に、インライン XML スキーマに遭遇した場合の効果をシミュレートするために使用できます。  
   
 > [!NOTE]
->  <xref:System.Xml.Schema.XmlSchema> パラメーターの対象名前空間は、<xref:System.Xml.Schema.XmlSchemaValidator> オブジェクトが既に遭遇したすべての要素と属性の名前空間と一致してはなりません。  
+> <xref:System.Xml.Schema.XmlSchema> パラメーターの対象名前空間は、<xref:System.Xml.Schema.XmlSchemaValidator> オブジェクトが既に遭遇したすべての要素と属性の名前空間と一致してはなりません。  
 >   
 >  <xref:System.Xml.Schema.XmlSchemaValidationFlags.ProcessInlineSchema?displayProperty=nameWithType> コンストラクターに <xref:System.Xml.Schema.XmlSchemaValidator.%23ctor%2A> 値がパラメーターとして渡されなかった場合、<xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> メソッドは何も行いません。  
   
@@ -160,7 +160,7 @@ validator.ValidateEndElement(null);
 |<xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|検証を終了し、<xref:System.Xml.Schema.XmlSchemaValidationFlags.ProcessIdentityConstraints> 検証オプションが設定されている場合は XML ドキュメント全体について ID 制約をチェックします。|  
   
 > [!NOTE]
->  <xref:System.Xml.Schema.XmlSchemaValidator> クラスには、上の表で定義された各メソッド呼び出しの発生と順序を強制する、定義済みの状態遷移があります。 <xref:System.Xml.Schema.XmlSchemaValidator> クラスの状態遷移の詳細は、このトピックの「XmlSchemaValidator の状態遷移」セクションで説明されています。  
+> <xref:System.Xml.Schema.XmlSchemaValidator> クラスには、上の表で定義された各メソッド呼び出しの発生と順序を強制する、定義済みの状態遷移があります。 <xref:System.Xml.Schema.XmlSchemaValidator> クラスの状態遷移の詳細は、このトピックの「XmlSchemaValidator の状態遷移」セクションで説明されています。  
   
  XML 情報セット内の要素、属性、およびコンテンツの検証に使用されるメソッドの例については、前のセクションの例を参照してください。 これらのメソッドの詳細については、<xref:System.Xml.Schema.XmlSchemaValidator> クラスのリファレンス ドキュメントを参照してください。  
   
@@ -243,7 +243,7 @@ static XmlValueGetter dateTimeGetter(DateTime dateTime)
  コンテンツ モデルのコンポジターが `xs:sequence` の場合、シーケンス中の次のパーティクルのみが返されます。 コンテンツ モデルのコンポジターが `xs:all` または `xs:choice` の場合、現在の要素コンテキストに続くことができる有効なパーティクルすべてが返されます。  
   
 > [!NOTE]
->  <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> メソッドが <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> メソッドの呼び出し直後に呼ばれると、<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> メソッドはすべてのグローバル要素を返します。  
+> <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> メソッドが <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> メソッドの呼び出し直後に呼ばれると、<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> メソッドはすべてのグローバル要素を返します。  
   
  たとえば、XSD (XML スキーマ定義言語) スキーマと続く XML ドキュメントで、`book` 要素の検証後、`book` 要素は現在の要素コンテキストになります。 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> メソッドは、<xref:System.Xml.Schema.XmlSchemaElement> 要素を表す単一の `title` オブジェクトを含む配列を返します。 検証コンテキストが `title` 要素の場合、<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> メソッドは空の配列を返します。 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> メソッドが `title` 要素の検証後で `description` 要素の検証前に呼び出されると、このメソッドは <xref:System.Xml.Schema.XmlSchemaElement> 要素を表す単一の `description` オブジェクトを含む配列を返します。 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> メソッドが `description` 要素の検証後に呼び出されると、メソッドはワイルドカードを表す単一の <xref:System.Xml.Schema.XmlSchemaAny> オブジェクトを含む配列を返します。  
   
@@ -370,7 +370,7 @@ validator.ValidateEndElement(null);
  `</book>`  
   
 > [!NOTE]
->  <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> クラスの <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A>、<xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A>、および <xref:System.Xml.Schema.XmlSchemaValidator> メソッドの結果は、検証中の現在のコンテキストに依存します。 詳細については、このトピックの「検証コンテキスト」を参照してください。  
+> <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> クラスの <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A>、<xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A>、および <xref:System.Xml.Schema.XmlSchemaValidator> メソッドの結果は、検証中の現在のコンテキストに依存します。 詳細については、このトピックの「検証コンテキスト」を参照してください。  
   
  <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> メソッドの例については、最初の例を参照してください。 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> メソッドの詳細については、<xref:System.Xml.Schema.XmlSchemaValidator> クラスのリファレンス ドキュメントを参照してください。  
   
@@ -382,7 +382,7 @@ validator.ValidateEndElement(null);
  <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> メソッドを <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> メソッドの直後に呼び出すと、その XML ドキュメントで使用可能なすべての属性が返されます。 ただし、<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> メソッドを <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> メソッドの 1 回以上の呼び出し後に呼び出すと、現在の要素でまだ検証されていない属性が返されます。  
   
 > [!NOTE]
->  <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> クラスの <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A>、<xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A>、および <xref:System.Xml.Schema.XmlSchemaValidator> メソッドの結果は、検証中の現在のコンテキストに依存します。 詳細については、このトピックの「検証コンテキスト」を参照してください。  
+> <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> クラスの <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A>、<xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A>、および <xref:System.Xml.Schema.XmlSchemaValidator> メソッドの結果は、検証中の現在のコンテキストに依存します。 詳細については、このトピックの「検証コンテキスト」を参照してください。  
   
  <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> メソッドの例については、最初の例を参照してください。 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> メソッドの詳細については、<xref:System.Xml.Schema.XmlSchemaValidator> クラスのリファレンス ドキュメントを参照してください。  
   
@@ -442,7 +442,7 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
 |Content|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; Element|  
   
 > [!NOTE]
->  <xref:System.InvalidOperationException> オブジェクトの現在の状態に従って、メソッドの呼び出しが正しい順序で行われないと、上表の各メソッドによって <xref:System.Xml.Schema.XmlSchemaValidator> がスローされます。  
+> <xref:System.InvalidOperationException> オブジェクトの現在の状態に従って、メソッドの呼び出しが正しい順序で行われないと、上表の各メソッドによって <xref:System.Xml.Schema.XmlSchemaValidator> がスローされます。  
   
  上の状態遷移表では、<xref:System.Xml.Schema.XmlSchemaValidator> クラスの状態遷移の各状態で呼び出せるメソッドと他の状態を説明するために、記号が使われています。 使用される記号は、ドキュメント型定義 (DTD) の XML 標準リファレンスで見られる記号と同一です。  
   
@@ -452,7 +452,7 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
 |------------|-----------------|  
 |&#124;|メソッドと状態 (縦棒の前後の項目) のいずれかを呼び出し可能です。|  
 |?|疑問符の前のメソッドか状態はオプションです。呼び出す場合は 1 回しか呼べません。|  
-|*|* 記号の前のメソッドか状態はオプションです。複数回の呼び出しが可能です。|  
+|*|\* 記号の前のメソッドか状態はオプションです。複数回の呼び出しが可能です。|  
   
 ## <a name="validation-context"></a>検証コンテキスト  
  XML 情報セット内の要素、属性、コンテンツの検証に使用される <xref:System.Xml.Schema.XmlSchemaValidator> クラスのメソッドは、<xref:System.Xml.Schema.XmlSchemaValidator> オブジェクトの検証コンテキストを変更します。 たとえば、<xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> メソッドは、現在の要素コンテンツの検証をスキップし、親要素のコンテキスト中のコンテンツを検証するために <xref:System.Xml.Schema.XmlSchemaValidator> オブジェクトを準備します。これは、現在の要素のすべての子要素の検証をスキップして <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> メソッドを呼ぶのと同じです。  
@@ -475,7 +475,7 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
 |<xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|空の配列を返します。|空の配列を返します。|上と同じ。|  
   
 > [!NOTE]
->  <xref:System.Xml.Schema.XmlSchemaValidator> クラスの各種プロパティで返される値は、上の表のどのメソッドを呼び出しても変わることはありません。  
+> <xref:System.Xml.Schema.XmlSchemaValidator> クラスの各種プロパティで返される値は、上の表のどのメソッドを呼び出しても変わることはありません。  
   
 ## <a name="see-also"></a>関連項目
 

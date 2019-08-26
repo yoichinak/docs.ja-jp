@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2b2d5a935c2608b2315633538fc93dd62595558
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9e9308d6bf0eefaa60af17a721cd1c26827469eb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340036"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946846"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>アンマネージ DLL 関数の処理
 プラットフォーム呼び出しは、マネージド コードがダイナミック リンク ライブラリ (DLL) に実装されたアンマネージド関数 (Windows API に含まれているものなど) を呼び出すことを可能にするサービスです。 これはエクスポートされた関数を見つけて呼び出し、必要に応じて相互運用の境界を越えて、その引数 (整数、文字列、配列、構造体、その他) をマーシャリングします。  
@@ -65,7 +65,7 @@ ms.locfileid: "59340036"
 3. メモリ内の関数のアドレスを検索し、その引数をスタックにプッシュし、必要に応じてデータをマーシャリングします。  
   
     > [!NOTE]
-    >  DLL の検索と読み込み、およびメモリ内の関数のアドレスの検索は、その関数を初めて呼び出したときにのみ生じます。  
+    > DLL の検索と読み込み、およびメモリ内の関数のアドレスの検索は、その関数を初めて呼び出したときにのみ生じます。  
   
 4. アンマネージ関数に制御を移します。  
   

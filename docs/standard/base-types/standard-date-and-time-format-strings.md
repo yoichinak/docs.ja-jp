@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddf4b84d44abb353cb9a5e025291690fb14b9461
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: efa3abdcb7aa9db6dee4f772c1c1564947151c96
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267918"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949596"
 ---
 # <a name="standard-date-and-time-format-strings"></a>標準の日時書式指定文字列
 標準の日時書式指定文字列は、単一の書式指定子を使用して日付と時刻の値のテキスト表現を定義します。 空白を含む複数の文字で構成される日時書式指定文字列は、カスタム日時書式指定文字列として解釈されます。詳細については、「[カスタム日時書式指定文字列](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)」をご覧ください。 標準またはカスタムの書式指定文字列には、次の 2 とおりの使用方法があります。  
@@ -79,7 +79,7 @@ ms.locfileid: "67267918"
      [!code-vb[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#3)]  
   
 > [!NOTE]
->  日付と時刻の値の書式設定に使用するパターンまたは文字列のカスタマイズの詳細については、<xref:System.Globalization.NumberFormatInfo> クラスに関するトピックを参照してください。  
+> 日付と時刻の値の書式設定に使用するパターンまたは文字列のカスタマイズの詳細については、<xref:System.Globalization.NumberFormatInfo> クラスに関するトピックを参照してください。  
   
  標準書式指定文字列には、長いカスタム書式指定文字列に代わる、不変の省略形としての利用価値もあります。 このカテゴリに該当する標準書式指定文字列は、"O" (または "o")、"R" (または "r")、"s"、"u" の 4 つです。 これらの文字列は、インバリアント カルチャで定義されたカスタム書式指定文字列に対応します。 これらの書式指定文字列によって生成される日時値の文字列形式は、カルチャに関係なく一定です。 次の表で、この 4 つの標準日時書式指定文字列について説明します。  
   

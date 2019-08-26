@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c48a7f93-83bb-4a06-aea0-d8e7bd1502ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6851ac334d439f2e5c0f6056f5226e3faa1503d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b47abc2adb7b515e4d1d76da58c150703a8693d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392578"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957438"
 ---
 # <a name="composition-analysis-tool-mefx"></a>コンポジション分析ツール (Mefx)
 合成分析ツール (Mefx) は、Managed Extensibility Framework (MEF) のパートが含まれたライブラリ (.dll) ファイルとアプリケーション (.exe) ファイルを分析するコマンド ライン アプリケーションです。 Mefx の主な目的は、開発者が煩雑なトレース コードをアプリケーション自体に追加することなく、MEF アプリケーションの合成エラーを診断できるようにすることです。 また、Mefx は、サード パーティが提供するライブラリのパートについて理解する際にも役立ちます ここでは、Mefx の使用方法について説明し、構文のリファレンスを示します。  
@@ -37,7 +37,7 @@ mefx /file:MyAddIn.dll /directory:Program\AddIns [action...]
 ```  
   
 > [!NOTE]
->  各 .dll または .exe は一度だけ読み込むようにしてください。 1 つのファイルを何度も読み込むと、ツールから間違った情報が返されることがあります。  
+> 各 .dll または .exe は一度だけ読み込むようにしてください。 1 つのファイルを何度も読み込むと、ツールから間違った情報が返されることがあります。  
   
  ファイルとディレクトリを指定した後、コマンドと、そのコマンドのオプションを指定する必要があります。  
   
@@ -114,7 +114,7 @@ from: ClassLibrary1.ChainOne from: AssemblyCatalog (Assembly="ClassLibrary1, Ver
  前の例で `/causes` アクションを使用すると、 `ChainOne`に関する情報だけが示されます。このパートのインポートが満たされなかったことが、 `AddIn`が拒否された根本原因であるためです。 `/causes` アクションは、通常のオプションと `/verbose` オプションの両方で使用できます。  
   
 > [!NOTE]
->  ほとんどの場合、連鎖するエラーの根本原因を Mefx で診断できます。 ただし、パートがプログラムによってコンテナーに追加される場合、階層コンテナーが関係している場合、またはカスタムの `ExportProvider` 実装が関係している場合には、Mefx によって原因を診断することができません これらの状況では一般にエラーの診断が難しいため、できるだけ避けることをお勧めします。  
+> ほとんどの場合、連鎖するエラーの根本原因を Mefx で診断できます。 ただし、パートがプログラムによってコンテナーに追加される場合、階層コンテナーが関係している場合、またはカスタムの `ExportProvider` 実装が関係している場合には、Mefx によって原因を診断することができません これらの状況では一般にエラーの診断が難しいため、できるだけ避けることをお勧めします。  
   
 <a name="white_lists"></a>   
 ## <a name="white-lists"></a>ホワイト リスト  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: 56fed00ec049fd2746d5b07b9926b8abda998260
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f435c93f68feb564aaca0f52842e567aa688ac64
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742439"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938009"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (コード生成ツール)
 SqlMetal コマンドライン ツールは、.NET Framework の [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] コンポーネント用のコードとマッピングを生成します。 このトピックで後述するオプションを適用することにより、次のようなアクションを SqlMetal で実行できます。  
@@ -28,7 +28,7 @@ SqlMetal コマンドライン ツールは、.NET Framework の [!INCLUDE[vbtec
  このツールは、Visual Studio と共に自動的にインストールされます。 既定では、このファイルは `drive`:\Program Files\Microsoft SDKs\Windows\v`n.nn`\bin にあります。 Visual Studio をインストールしない場合は、 [Windows SDK](https://go.microsoft.com/fwlink/?LinkId=142225)をダウンロードすることによって SQLMetal ファイルを入手することもできます。  
   
 > [!NOTE]
->  Visual Studio を使用する開発者は、オブジェクト リレーショナル デザイナーを使用してエンティティ クラスを生成することもできます。 コマンド ライン方式は、大きなデータベースにも適切に対応できます。 SqlMetal はコマンド ライン ツールであるため、ビルド プロセスでこれを使用できます。  
+> Visual Studio を使用する開発者は、オブジェクト リレーショナル デザイナーを使用してエンティティ クラスを生成することもできます。 コマンド ライン方式は、大きなデータベースにも適切に対応できます。 SqlMetal はコマンド ライン ツールであるため、ビルド プロセスでこれを使用できます。  
   
  このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。コマンド プロンプトで、次のように入力します。  
   
@@ -130,7 +130,7 @@ sqlmetal [options] [<input file>]
  **sqlmetal /server:myserver /database:northwind /namespace:nwind /code:nwind.cs /language:csharp**  
   
 > [!NOTE]
->  サンプル データベース Northwind で **/pluralize** オプションを使用する場合には、注意を必要とする動作があります。 SqlMetal がテーブルのために行型の名前を生成するとき、テーブル名は単数形です。 テーブルに関する <xref:System.Data.Linq.DataContext> プロパティを生成するときには、テーブル名は複数形です。 偶然にも、サンプル データベース Northwind 内のテーブルには既に複数形が使われています。 このため、この部分はうまく機能しません。 データベース テーブルの名前は単数形にするのが一般的ですが、.NET では、コレクションの名前を複数形にすることも一般的です。  
+> サンプル データベース Northwind で **/pluralize** オプションを使用する場合には、注意を必要とする動作があります。 SqlMetal がテーブルのために行型の名前を生成するとき、テーブル名は単数形です。 テーブルに関する <xref:System.Data.Linq.DataContext> プロパティを生成するときには、テーブル名は複数形です。 偶然にも、サンプル データベース Northwind 内のテーブルには既に複数形が使われています。 このため、この部分はうまく機能しません。 データベース テーブルの名前は単数形にするのが一般的ですが、.NET では、コレクションの名前を複数形にすることも一般的です。  
   
 ## <a name="see-also"></a>関連項目
 

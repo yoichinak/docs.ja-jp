@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d266cbd8-bf91-41d1-baf0-afbc481a741f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5df468b87c62f454f6a42fa7a80d92e5ec199fd1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d3424e7a412a79266d3bd9f20061ff4a0cd89115
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151542"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965758"
 ---
 # <a name="configuring-assembly-binding-redirection"></a>アセンブリ バインディングのリダイレクトの構成
 既定では、アプリケーションは、アプリケーションのコンパイルに使用したランタイム バージョンと共に出荷された .NET Framework アセンブリのセットを使用します。 アプリケーション構成ファイルで .NET Framework アセンブリの特定のバージョンのアセンブリ バインディング参照をリダイレクトするには [\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) 要素の **appliesTo** 属性を使用できます。 このオプションの属性は、.NET Framework のバージョン番号を使用して、どのバージョンに適用するのかを示します。 **appliesTo** 属性が指定されていない場合、 **\<assemblyBinding>** 要素は、.NET Framework のすべてのバージョンに適用されます。  
@@ -20,7 +20,7 @@ ms.locfileid: "59151542"
  **appliesTo** 属性は .NET Framework Version 1.1 で導入されたものであり、.NET Framework Version 1.0 では無視されます。 これは **appliesTo** 属性が指定されている場合でも、.NET Framework version 1.0 を使用している場合 **\<assemblyBinding>** のすべての要素が適用されることを意味します。  
   
 > [!NOTE]
->  **appliesTo** 属性は、アセンブリ バインディングのリダイレクトをランタイムの特定のバージョンに制限するために使用します。  
+> **appliesTo** 属性は、アセンブリ バインディングのリダイレクトをランタイムの特定のバージョンに制限するために使用します。  
   
  たとえば、.NET Framework Version 1.0 アセンブリのアセンブリ バインディングをリダイレクトするには、アプリケーション構成ファイルに次の XML コードを追加します。  
   

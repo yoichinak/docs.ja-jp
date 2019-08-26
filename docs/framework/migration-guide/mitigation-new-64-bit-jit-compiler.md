@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 22c98e41624abc931bd03e4ddea09ed55d0d3f39
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6df750872e90572b00cdf427461b4a9782c47d63
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648476"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968523"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>軽減策:新しい 64 ビット JIT コンパイラ
 .NET Framework 4.6 以降では、ランタイムに Just-In-Time コンパイル用の新しい 64 ビット JIT コンパイラが含まれています。 この変更は、32 ビット JIT コンパイラでのコンパイルには影響しません。  
@@ -22,7 +22,7 @@ ms.locfileid: "64648476"
  場合によっては、新しい 64 ビット JIT コンパイラでのコンパイルの結果、古い 64 ビット JIT コンパイラでコンパイルされたコードの実行時に監視されない動作が発生したり、ランタイム例外が発生したりすることがあります。 既知の相違には次のようなものがあります。  
   
 > [!IMPORTANT]
->  これらの既知の問題はすべて、.NET Framework 4.6.2 と共にリリースされた新しい 64 ビット コンパイラで対処済みです。 また、Windows 更新プログラムに含まれる .NET Framework 4.6 および 4.6.1 のサービス リリースでも大部分に対処済みです。 使用している Windows のバージョンが最新のものであることを確認するか、.NET Framework 4.6.2 にアップグレードすることで、これらの問題を解消できます。  
+> これらの既知の問題はすべて、.NET Framework 4.6.2 と共にリリースされた新しい 64 ビット コンパイラで対処済みです。 また、Windows 更新プログラムに含まれる .NET Framework 4.6 および 4.6.1 のサービス リリースでも大部分に対処済みです。 使用している Windows のバージョンが最新のものであることを確認するか、.NET Framework 4.6.2 にアップグレードすることで、これらの問題を解消できます。  
   
 - 特定の条件下では、最適化が有効なリリース ビルドの <xref:System.NullReferenceException> がボックス化解除操作でスローされる場合があります。  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c9a14c2ea2d7d817aacca1fa25b04ac643f16bf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 775a8b63a0ba7cd021c9e5072ef98c20f6ab2e81
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296655"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937930"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Windows Resource Localization Editor)
 
@@ -59,7 +59,7 @@ Winres.exe では、対応する .resources ファイルに .resx ファイル�
 
 Winres.exe はグラフィカル アプリケーションであり、ソース コードにアクセスすることなく、リソース ファイルだけを使用して、Windows フォームのデザイン時バージョンを再作成できます。 Winres.exe では、Visual Studio の **Windows フォーム デザイナー**および **[プロパティ]** ウィンドウがホストされます。 この機能を使用すると、Windows フォームが含まれている .resources ファイルや .resx ファイルをビジュアル編集できます。 通常、ローカライズ ツールでは Winres.exe を使用して、コントロールのラベルが編集されると共に、ターゲット カルチャのラベルが納まるようにコントロールの位置とサイズが調整されます。
 
-Winres.exe がコントロールの型を解決できない場合、ローカライズされた .resx ファイルまたは .resources ファイルには、プレースホルダー コントロールが作成されます。 このプレースホルダー コントロールは、Windows フォーム上にハッチ ウィンドウとして表示されます。 このハッチ ウィンドウのサイズおよび位置は、実際のコントロールのサイズおよび位置と一致します。 プレースホルダー コントロールのプロパティでローカライズできるプロパティはすべて、**[プロパティ]** ウィンドウに表示されます。 プレースホルダー コントロールに対して行ったすべての変更内容が、実際のコントロールに保存されます。
+Winres.exe がコントロールの型を解決できない場合、ローカライズされた .resx ファイルまたは .resources ファイルには、プレースホルダー コントロールが作成されます。 このプレースホルダー コントロールは、Windows フォーム上にハッチ ウィンドウとして表示されます。 このハッチ ウィンドウのサイズおよび位置は、実際のコントロールのサイズおよび位置と一致します。 プレースホルダー コントロールのプロパティでローカライズできるプロパティはすべて、 **[プロパティ]** ウィンドウに表示されます。 プレースホルダー コントロールに対して行ったすべての変更内容が、実際のコントロールに保存されます。
 
 ## <a name="winresexe-versus-visual-studio"></a>Winres.exe と Visual Studio の比較
 
@@ -84,7 +84,7 @@ Winres.exe には、以下の機能があります。
 
 - エラー レポート ウィンドウがメイン ウィンドウの左下にドッキングされます。
 
-- ホット キーの重複をチェックできます。**[書式]** メニューの **[ホット キーの確認]** コマンドをクリックします。
+- ホット キーの重複をチェックできます。 **[書式]** メニューの **[ホット キーの確認]** コマンドをクリックします。
 
 ## <a name="version-compatibility"></a>バージョンの互換性
 
@@ -108,9 +108,9 @@ Winres.exe には、以下の機能があります。
 
 1. 開発者コマンド プロンプトで「`winres`」と入力して、Winres.exe を実行します。
 
-2. ローカライズするフォームの既定のリソースを開くには、**[ファイル]** メニューの **[開く]** をクリックし、開くファイルを指定します。
+2. ローカライズするフォームの既定のリソースを開くには、 **[ファイル]** メニューの **[開く]** をクリックし、開くファイルを指定します。
 
-     - または -
+     または
 
      Winres.exe を起動するときに、コマンド ラインで開くファイルを指定します。
 
@@ -131,9 +131,9 @@ Winres.exe には、以下の機能があります。
 
 3. フォーム上のコントロールを選択し、このコントロールの <xref:System.Windows.Forms.Control.Text%2A> などのプロパティを変更して、ローカライズ後のカルチャおよび言語を反映します。 ローカライズされたテキストが納まるように、必要に応じてコントロールを移動したりそのサイズを変更したりします。
 
-4. ローカライズしたバージョンの .resx ファイルや .resources ファイルを保存するには、**[上書き保存]** ボタンをクリックするか、**[ファイル]** メニューの [上書き保存] をクリックします。 **[カルチャを選択する]** ウィンドウが表示されます。
+4. ローカライズしたバージョンの .resx ファイルや .resources ファイルを保存するには、 **[上書き保存]** ボタンをクリックするか、 **[ファイル]** メニューの [上書き保存] をクリックします。 **[カルチャを選択する]** ウィンドウが表示されます。
 
-5. 適切なカルチャおよびファイル モードを選択し、**[OK]** をクリックします。
+5. 適切なカルチャおよびファイル モードを選択し、 **[OK]** をクリックします。
 
    ツールによってファイルが保存される場合は、ローカライズされたリソース ファイルに対してランタイムが予測した名前付け規則が使用されます。 たとえば、`TestApp.resources` をドイツのドイツ語用にローカライズする場合、ファイルは `TestApp.de-DE.resources` という名前で保存されます。 `TestApp.resx` をドイツのドイツ語用にローカライズする場合、ファイルは `TestApp.de-DE.resx` という名前で保存されます。 リソースの名前付け規則について詳しくは、「[リソースのパッケージ化と配置](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)」を参照してください。 ランタイムで使用される定義済みカルチャ名の一覧については、「<xref:System.Globalization.CultureInfo> クラス」を参照してください。
 
@@ -146,4 +146,4 @@ Winres.exe には、以下の機能があります。
 - <xref:System.Resources.ResourceWriter>
 - [ツール](../../../docs/framework/tools/index.md)
 - [デスクトップ アプリケーションのリソース](../../../docs/framework/resources/index.md)
-- [グローバライズとローカライズ](../../../docs/standard/globalization-localization/index.md)
+- [グローバライズとローカライズ](../../standard/globalization-localization/index.md)

@@ -21,12 +21,12 @@ ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 68bcc9321d5a97620d0e8d24befbd24f4f350f94
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: 50127f24bfee0c2fe49da8f285e5052d2f753696
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66250814"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934938"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>.NET の文字列を使用するためのベスト プラクティス
 <a name="top"></a> .NET には、ローカライズされたアプリケーションやグローバル化されたアプリケーションを開発するための広範なサポートが用意されており、文字列の並べ替えや表示などの一般的な操作を実行するときに、現在のカルチャの規則や特定のカルチャの規則を簡単に適用できるようになっています。 しかし、文字列の並べ替えや比較の操作は、必ずしもカルチャに依存するとは限りません。 たとえば、アプリケーションが内部で使用する文字列は、通常、すべてのカルチャで同じように処理される必要があります。 XML タグ、HTML タグ、ユーザー名、ファイル パス、システム オブジェクトの名前などのカルチャに依存しない文字列データがカルチャに依存するかのように解釈されると、アプリケーション コードで軽度のバグが発生したり、パフォーマンスが低下したり、場合によってはセキュリティの問題を引き起こしたりする可能性があります。  
@@ -185,7 +185,7 @@ ms.locfileid: "66250814"
  .NET の文字列には、null 文字が埋め込まれる場合があります。 序数に基づく比較とカルチャに依存した比較 (インバリアント カルチャを使用する比較を含む) の最も明白な違いの 1 つは、文字列に埋め込まれた null 文字の処理に関連しています。 これらの文字は、<xref:System.String.Compare%2A?displayProperty=nameWithType> メソッドや <xref:System.String.Equals%2A?displayProperty=nameWithType> メソッドを使用して、カルチャに依存した比較 (インバリアント カルチャを使用する比較を含む) を実行する場合には無視されます。 その結果、カルチャに依存した比較では、null 文字が埋め込まれた文字列と null 文字が埋め込まれていない文字列が等価と見なされる可能性があります。  
   
 > [!IMPORTANT]
->  埋め込まれた null 文字は、文字列比較メソッドでは無視されますが、文字列検索メソッド (<xref:System.String.Contains%2A?displayProperty=nameWithType>、<xref:System.String.EndsWith%2A?displayProperty=nameWithType>、<xref:System.String.IndexOf%2A?displayProperty=nameWithType>、<xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>、<xref:System.String.StartsWith%2A?displayProperty=nameWithType> など) では無視されません。  
+> 埋め込まれた null 文字は、文字列比較メソッドでは無視されますが、文字列検索メソッド (<xref:System.String.Contains%2A?displayProperty=nameWithType>、<xref:System.String.EndsWith%2A?displayProperty=nameWithType>、<xref:System.String.IndexOf%2A?displayProperty=nameWithType>、<xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>、<xref:System.String.StartsWith%2A?displayProperty=nameWithType> など) では無視されません。  
   
  次の例では、文字列 "Aa" と、"A" と "a" の間にいくつかの null 文字が埋め込まれた類似の文字列とのカルチャに依存した比較を実行して、2 つの文字列が等価と見なされることを示しています。  
   
@@ -210,7 +210,7 @@ ms.locfileid: "66250814"
  とはいえ、これらの比較はどちらも非常に高速です。  
   
 > [!NOTE]
->  ファイル システム、レジストリのキーと値、および環境変数の文字列の動作は、<xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> によって最もよく表現されます。  
+> ファイル システム、レジストリのキーと値、および環境変数の文字列の動作は、<xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> によって最もよく表現されます。  
   
  <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> と <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> は、どちらもバイナリ値を直接使用するため、照合に最適です。 比較の設定について確信を持てない場合は、この 2 つのいずれかの値を使用してください。 ただし、これらの値を使用するとバイトごとの比較が行われるため、言語的な順序 (英語の辞書のような順序) ではなくバイナリの順序で並べ替えが行われます。 したがって、結果をユーザーに表示すると、ほとんどの場合不自然に見えます。  
   
@@ -244,8 +244,8 @@ ms.locfileid: "66250814"
 |----------|--------------|-----------------------------------------------------|  
 |大文字と小文字が区別される内部識別子。<br /><br /> XML や HTTP などの標準の、大文字と小文字が区別される識別子。<br /><br /> 大文字と小文字が区別されるセキュリティ関連の設定。|バイトが正確に一致する非言語的識別子。|<xref:System.StringComparison.Ordinal>|  
 |大文字と小文字が区別されない内部識別子。<br /><br /> XML や HTTP などの標準の、大文字と小文字が区別されない識別子。<br /><br /> ファイル パス。<br /><br /> レジストリのキーと値。<br /><br /> 環境変数。<br /><br /> リソース識別子 (ハンドル名など)。<br /><br /> 大文字と小文字が区別されないセキュリティ関連の設定。|大文字と小文字が区別されない、言語的な意味を持たない識別子 (ほとんどの Windows システム サービスで格納されるデータなど)。|<xref:System.StringComparison.OrdinalIgnoreCase>|  
-|永続化される、言語的な意味を持つデータの一部。<br /><br /> 一定の並べ替え順序を必要とする言語的なデータの表示。|カルチャに依存しないが、言語的な意味を持つデータ。|<xref:System.StringComparison.InvariantCulture><br /><br /> - または -<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|  
-|ユーザーに表示されるデータ。<br /><br /> ほとんどのユーザー入力。|特定の言語の規則を必要とするデータ。|<xref:System.StringComparison.CurrentCulture><br /><br /> - または -<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|  
+|永続化される、言語的な意味を持つデータの一部。<br /><br /> 一定の並べ替え順序を必要とする言語的なデータの表示。|カルチャに依存しないが、言語的な意味を持つデータ。|<xref:System.StringComparison.InvariantCulture><br /><br /> \- または -<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|  
+|ユーザーに表示されるデータ。<br /><br /> ほとんどのユーザー入力。|特定の言語の規則を必要とするデータ。|<xref:System.StringComparison.CurrentCulture><br /><br /> \- または -<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|  
   
  [ページのトップへ](#top)  
   

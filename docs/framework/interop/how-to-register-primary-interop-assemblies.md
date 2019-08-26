@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e599696b75ed1a0186276dfa47baef2cdf9d7097
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: e61ae55673cbf745ea4c637c5206efe41d8ab276
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629393"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946675"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>方法: プライマリ相互運用機能アセンブリを登録する
 
-クラスは、COM 相互運用でのみマーシャリングすることができ、常にインターフェイスとしてマーシャリングされます。 クラスをマーシャリングするために使用されるインターフェイスが、クラス インターフェイスと呼ばれる場合があります。 クラス インターフェイスを任意のインターフェイスでオーバーライドする方法の詳細については、「[COM 呼び出し可能ラッパー](../../../docs/standard/native-interop/com-callable-wrapper.md)」を参照してください。
+クラスは、COM 相互運用でのみマーシャリングすることができ、常にインターフェイスとしてマーシャリングされます。 クラスをマーシャリングするために使用されるインターフェイスが、クラス インターフェイスと呼ばれる場合があります。 クラス インターフェイスを任意のインターフェイスでオーバーライドする方法の詳細については、「[COM 呼び出し可能ラッパー](../../standard/native-interop/com-callable-wrapper.md)」を参照してください。
 
  .NET Framework アプリケーションから COM の型を使用するすべての開発者は相互運用機能アセンブリを生成できますが、そのようにすると問題が発生します。 開発者が COM タイプ ライブラリをインポートして署名するたびに、その開発者は、別の開発者によってインポートされて署名されたものとは互換性のない一意の型のセットを作成することになります。 この型の非互換性の問題を解決する方法は、各開発者が、ベンダーによって提供されて署名されたプライマリ相互運用機能アセンブリを取得することです。
 

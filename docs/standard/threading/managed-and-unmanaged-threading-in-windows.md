@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04ef2ea6bf9d10baabea39133b2e0a9a72a6ce4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da32d514b19424487cebc1d113388cfa9a2dbdf0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674847"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913229"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Windows でのマネージド スレッド処理とアンマネージド スレッド処理
 
@@ -27,7 +27,7 @@ ms.locfileid: "54674847"
  マネージド スレッド処理では、 <xref:System.Threading.Thread.GetHashCode%2A?displayProperty=nameWithType> は安定したマネージド スレッド ID です。 この値は、取得されたアプリケーション ドメインに関係なく、スレッドの有効期間にわたって他のスレッドの値と競合することはありません。  
   
 > [!NOTE]
->  オペレーティング システム **ThreadId** とマネージド スレッドの間には固定的な関係はありません。これは、アンマネージド ホストがマネージド スレッドとアンマネージド スレッドの間の関係を制御できるためです。 特に、高度なホストはファイバー API を使用して、多数のマネージド スレッドを同一オペレーティング システム スレッドに対してスケジュールしたり、マネージド スレッドを異なるオペレーティング システム スレッド間で移動したりできます。  
+> オペレーティング システム **ThreadId** とマネージド スレッドの間には固定的な関係はありません。これは、アンマネージド ホストがマネージド スレッドとアンマネージド スレッドの間の関係を制御できるためです。 特に、高度なホストはファイバー API を使用して、多数のマネージド スレッドを同一オペレーティング システム スレッドに対してスケジュールしたり、マネージド スレッドを異なるオペレーティング システム スレッド間で移動したりできます。  
   
 ## <a name="mapping-from-win32-threading-to-managed-threading"></a>Win32 スレッド処理とマネージド スレッド処理の対応付け
 
@@ -40,7 +40,7 @@ ms.locfileid: "54674847"
 |**SuspendThread**|<xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType>|  
 |**ResumeThread**|<xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType>|  
 |**Sleep**|<xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>|  
-|スレッド ハンドルの**WaitForSingleObject** |<xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>|  
+|スレッド ハンドルの**WaitForSingleObject**|<xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>|  
 |**ExitThread**|同等の機能がありません|  
 |**GetCurrentThread**|<xref:System.Threading.Thread.CurrentThread%2A?displayProperty=nameWithType>|  
 |**SetThreadPriority**|<xref:System.Threading.Thread.Priority%2A?displayProperty=nameWithType>|  
@@ -50,14 +50,14 @@ ms.locfileid: "54674847"
   
 ## <a name="managed-threads-and-com-apartments"></a>マネージド スレッドと COM アパートメント
 
-マネージド スレッドには、[シングル スレッド](/windows/desktop/com/single-threaded-apartments) アパートメントをホストするか、[マルチ スレッド](/windows/desktop/com/multithreaded-apartments) アパートメントをホストするかを示すようマークすることができます  (COM スレッド アーキテクチャの詳細については、「[Processes, Threads, and Apartments](/windows/desktop/com/processes--threads--and-apartments)」(プロセス、スレッド、アパートメント) を参照してください。)<xref:System.Threading.Thread.GetApartmentState%2A> クラスの <xref:System.Threading.Thread.SetApartmentState%2A>、<xref:System.Threading.Thread.TrySetApartmentState%2A>、および <xref:System.Threading.Thread> の各スレッドは、スレッドのアパートメント状態を返して割り当てます。 状態が設定されていない場合、<xref:System.Threading.Thread.GetApartmentState%2A> は <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType> を返します。  
+マネージド スレッドには、[シングル スレッド](/windows/desktop/com/single-threaded-apartments) アパートメントをホストするか、[マルチ スレッド](/windows/desktop/com/multithreaded-apartments) アパートメントをホストするかを示すようマークすることができます (COM スレッド アーキテクチャの詳細については、「[Processes, Threads, and Apartments](/windows/desktop/com/processes--threads--and-apartments)」(プロセス、スレッド、アパートメント) を参照してください。)<xref:System.Threading.Thread.GetApartmentState%2A> クラスの <xref:System.Threading.Thread.SetApartmentState%2A>、<xref:System.Threading.Thread.TrySetApartmentState%2A>、および <xref:System.Threading.Thread> の各スレッドは、スレッドのアパートメント状態を返して割り当てます。 状態が設定されていない場合、<xref:System.Threading.Thread.GetApartmentState%2A> は <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType> を返します。  
   
  プロパティは、スレッドが <xref:System.Threading.ThreadState.Unstarted?displayProperty=nameWithType> 状態の場合にのみ設定することができます。設定できるのは、1 つのスレッドにつき 1 回だけです。  
   
  スレッド開始前にアパートメントの状態が設定されていない場合、このスレッドはマルチスレッド アパートメント (MTA) として初期化されます。 ファイナライザー スレッドと、 <xref:System.Threading.ThreadPool> により制御されるすべてのスレッドは MTA です。  
   
 > [!IMPORTANT]
->  アプリケーションのスタートアップ コードでは、アパートメントの状態を制御する方法は、 <xref:System.MTAThreadAttribute> または <xref:System.STAThreadAttribute> をエントリ ポイント プロシージャに適用する方法だけです。 .NET Framework 1.0 と 1.1 では、 <xref:System.Threading.Thread.ApartmentState%2A> プロパティを最初のコード行として設定できます。 .NET Framework 2.0 ではこの設定は許可されていません。  
+> アプリケーションのスタートアップ コードでは、アパートメントの状態を制御する方法は、 <xref:System.MTAThreadAttribute> または <xref:System.STAThreadAttribute> をエントリ ポイント プロシージャに適用する方法だけです。 .NET Framework 1.0 と 1.1 では、 <xref:System.Threading.Thread.ApartmentState%2A> プロパティを最初のコード行として設定できます。 .NET Framework 2.0 ではこの設定は許可されていません。  
   
  COM に対して公開されるマネージド オブジェクトは、フリー スレッド マーシャラーを集約した場合と同様に動作します。 つまり、フリースレッドな方法ですべての COM アパートメントから呼び出すことができます。 このフリー スレッドな動作を示さないマネージド オブジェクトは、<xref:System.EnterpriseServices.ServicedComponent> または <xref:System.Runtime.InteropServices.StandardOleMarshalObject> から派生したオブジェクトだけです。  
   

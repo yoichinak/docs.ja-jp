@@ -16,12 +16,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: dfc8e1cfa6050a6e45373ad023ee8f358e388735
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 7dba7afe9ab0348082ec9538b268a387b64ad050
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423869"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950695"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>イベントベースの非同期パターンの概要
 多数のタスクを同時に実行しながら、ユーザーの操作にも応答するアプリケーションには、通常、複数のスレッドを使用するデザインが必要です。 <xref:System.Threading> 名前空間は、高性能なマルチスレッド アプリケーションを作成するのに必要なすべてのツールを提供します。ただし、これらのツールを効果的に使用するには、マルチスレッド ソフトウェア エンジニアリングの豊富な経験が必要です。 比較的単純なマルチスレッド アプリケーションの場合は、<xref:System.ComponentModel.BackgroundWorker> コンポーネントが簡単なソリューションを提供します。 より高度な非同期アプリケーションの場合は、イベント ベースの非同期パターンに準拠したクラスの実装を検討してください。  
@@ -115,7 +115,7 @@ public class AsyncExample
  複数呼び出しのオーバーロードを使用する場合は、保留中のタスクの `userState` オブジェクト (タスク ID) を追跡する必要があります。 `Method1Async(string param, object userState)` の呼び出しごとに、通常は新しい一意な `userState` オブジェクトを生成し、それをコレクションに追加します。 この `userState` オブジェクトに対応するタスクが完了イベントを発生させると、完了メソッドの実装は <xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A?displayProperty=nameWithType> を調べて、それをコレクションから削除します。 このように使用すると、`userState` パラメーターはタスク ID の役割を果たします。  
   
 > [!NOTE]
->  複数呼び出しのオーバーロードの呼び出しでは、`userState` に一意な値を指定するように注意が必要です。 タスク ID が一意でないと、非同期クラスが <xref:System.ArgumentException> をスローします。  
+> 複数呼び出しのオーバーロードの呼び出しでは、`userState` に一意な値を指定するように注意が必要です。 タスク ID が一意でないと、非同期クラスが <xref:System.ArgumentException> をスローします。  
   
 ### <a name="canceling-pending-operations"></a>保留中の操作のキャンセル  
  非同期操作を完了前にいつでもキャンセルできることは重要です。 イベント ベースの非同期パターンを実装するクラスには、`CancelAsync` メソッド (非同期メソッドが 1 つだけの場合) または _MethodName_**AsyncCancel** メソッド (複数の非同期メソッドがある場合) が含まれます。  

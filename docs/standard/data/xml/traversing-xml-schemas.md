@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f444dd512dc27f1b7cda017e2c2848ac41eb56de
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5fd81a7eaf299217a17cd8051d77cd7a3695441e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305040"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939456"
 ---
 # <a name="traversing-xml-schemas"></a>XML スキーマの走査
 スキーマ オブジェクト モデル (SOM) API を使用して XML スキーマを走査すると、SOM に格納されている要素、属性、および型にアクセスできます。 また、SOM API を使用して XML スキーマを編集する際には、最初に SOM に読み込まれた XML スキーマを走査します。  
@@ -35,7 +35,7 @@ ms.locfileid: "59305040"
 |<xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A>|<xref:System.Xml.XmlAttribute> (スキーマの名前空間に属さない属性にアクセスできる)|  
   
 > [!NOTE]
->  上記の表に記載されているすべてのプロパティ (<xref:System.Xml.Schema.XmlSchema.Items%2A> プロパティを除く) は、スキーマのコンパイル後の情報セット (PSCI) プロパティで、スキーマがコンパイルされるまで使用できません。 <xref:System.Xml.Schema.XmlSchema.Items%2A> プロパティは、スキーマのコンパイル前のプロパティで、スキーマがコンパイルされる前に使用できます。このプロパティを使用すると、グローバル レベルのすべての要素、属性、および型にアクセスできます。  
+> 上記の表に記載されているすべてのプロパティ (<xref:System.Xml.Schema.XmlSchema.Items%2A> プロパティを除く) は、スキーマのコンパイル後の情報セット (PSCI) プロパティで、スキーマがコンパイルされるまで使用できません。 <xref:System.Xml.Schema.XmlSchema.Items%2A> プロパティは、スキーマのコンパイル前のプロパティで、スキーマがコンパイルされる前に使用できます。このプロパティを使用すると、グローバル レベルのすべての要素、属性、および型にアクセスできます。  
 >   
 >  <xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A> プロパティを使用すると、スキーマの名前空間に属さないすべての属性にアクセスできます。 これらの属性はスキーマ プロセッサで処理されません。  
   

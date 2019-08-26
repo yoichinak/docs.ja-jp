@@ -2,12 +2,12 @@
 title: 完了後の残りの非同期タスクのキャンセル (C#)
 ms.date: 07/20/2015
 ms.assetid: d3cebc74-c392-497b-b1e6-62a262eabe05
-ms.openlocfilehash: 9b968ec902d9653caa410e917af40c8a521e55b4
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 81aed54d4854ad505971fbf85cf9a080a7c392d1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859620"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922013"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-c"></a>完了後の残りの非同期タスクのキャンセル (C#)
 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> メソッドを <xref:System.Threading.CancellationToken> と共に使用すると、1 つのタスクが完了したときに残りのすべてのタスクを取り消しできます。 `WhenAny` メソッドは、タスクのコレクションである引数を受け取ります。 このメソッドは、すべてのタスクを開始し、単一のタスクを返します。 単一のタスクは、コレクションのいずれかのタスクが完了すると完了します。  
@@ -15,7 +15,7 @@ ms.locfileid: "67859620"
  この例では、キャンセル トークンを `WhenAny` と共に使用して、タスクのコレクションから最初のタスクを終了まで保持し、残りのタスクを取り消す方法を示しています。 各タスクは、Web サイトのコンテンツをダウンロードします。 この例は最初のダウンロードが完了したコンテンツの長さを表示し、他のダウンロードを取り消します。  
   
 > [!NOTE]
->  この例を実行するには、コンピューターに Visual Studio 2012 以降および .NET Framework 4.5 以降がインストールされている必要があります。  
+> この例を実行するには、コンピューターに Visual Studio 2012 以降および .NET Framework 4.5 以降がインストールされている必要があります。  
   
 ## <a name="downloading-the-example"></a>例をダウンロードする  
  完全な Windows Presentation Foundation (WPF) プロジェクトは、「[Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)」(非同期のサンプル: アプリケーションの微調整) からダウンロードできます。その後、次の手順に従います。  
@@ -37,7 +37,7 @@ ms.locfileid: "67859620"
  プロジェクトをダウンロードしない場合は、このトピックの最後の MainWindow.xaml.cs ファイルをレビューできます。  
   
 ## <a name="building-the-example"></a>例のビルド  
- このトピックの例では、「[非同期タスクまたはタスクの一覧のキャンセル (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)」で開発したプロジェクトに追加して、タスクのリストをキャンセルします。 この例では、 **[キャンセル]** ボタンは明示的に使用していませんが、同じ UI を使用します。  
+ このトピックの例では、「[非同期タスクまたはタスクの一覧のキャンセル (C#)](./cancel-an-async-task-or-a-list-of-tasks.md)」で開発したプロジェクトに追加して、タスクのリストをキャンセルします。 この例では、 **[キャンセル]** ボタンは明示的に使用していませんが、同じ UI を使用します。  
   
  この例を自分で 1 つずつビルドするには、"例をダウンロードする" セクションの手順に従います。ただし、 **[スタートアップ プロジェクト]** として **CancelAListOfTasks** を選択します。 そのプロジェクトに、このトピックでの変更を追加します。  
   
@@ -260,6 +260,6 @@ namespace CancelAfterOneTask
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
-- [非同期アプリケーションの微調整 (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [Async および Await を使用した非同期プログラミング (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
+- [非同期アプリケーションの微調整 (C#)](./fine-tuning-your-async-application.md)
+- [Async および Await を使用した非同期プログラミング (C#)](./index.md)
 - [Async Sample:Fine Tuning Your Application (非同期のサンプル: アプリケーションの微調整)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

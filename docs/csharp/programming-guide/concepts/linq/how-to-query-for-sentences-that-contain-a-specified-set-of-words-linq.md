@@ -1,15 +1,15 @@
 ---
-title: '方法: 指定された単語のセットを含む文章を照会する (LINQ) (C#)'
+title: 方法:指定された単語のセットを含む文章を照会する (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 0724b429-4b87-4d26-a7b1-409358f3fc20
-ms.openlocfilehash: 11f065594ed6b6c162ac95e0a1e6c502c1ad8de5
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e478364f07c08a334692ba54ae1a95880b95519e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584292"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592771"
 ---
-# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>方法: 指定された単語のセットを含む文章を照会する (LINQ) (C#)
+# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>方法:指定された単語のセットを含む文章を照会する (LINQ) (C#)
 この例は、指定された一連の単語と一致する文言を含む文をテキスト ファイルから検索する方法を示しています。 この例では検索語句の配列をハードコーディングしていますが、実行時に動的に設定することもできます。 この例のクエリを実行すると、"Historically"、"data"、"integrated" という単語をすべて含んだ文が返されます。  
   
 ## <a name="example"></a>例  
@@ -71,4 +71,4 @@ System.Linq 名前空間と System.IO 名前空間に `using` ディレクティ
 
 ## <a name="see-also"></a>関連項目
 
-- [LINQ と文字列 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ と文字列 (C#)](./linq-and-strings.md)

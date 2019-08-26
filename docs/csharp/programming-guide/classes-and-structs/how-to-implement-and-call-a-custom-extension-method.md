@@ -5,27 +5,27 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-ms.openlocfilehash: 2fe07f8e4311417980caccc9c286b4f94c7ea994
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 26ad1d2251388237e186d1ba0e885fd7def66467
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585960"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596882"
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>方法: カスタム拡張メソッドを実装して呼び出す (C# プログラミング ガイド)
-このトピックでは、あらゆる .NET 型を対象に独自の拡張メソッドを実装する方法について説明します。 クライアント コードで拡張メソッドを使用するには、拡張メソッドが格納されている DLL への参照を追加し、拡張メソッドが定義されている名前空間を指定する [using](../../../csharp/language-reference/keywords/using-directive.md) ディレクティブを追加します。  
+このトピックでは、あらゆる .NET 型を対象に独自の拡張メソッドを実装する方法について説明します。 クライアント コードで拡張メソッドを使用するには、拡張メソッドが格納されている DLL への参照を追加し、拡張メソッドが定義されている名前空間を指定する [using](../../language-reference/keywords/using-directive.md) ディレクティブを追加します。  
   
 ## <a name="to-define-and-call-the-extension-method"></a>拡張メソッドを定義して呼び出すには  
   
-1. 拡張メソッドを格納するための静的[クラス](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)を定義します。  
+1. 拡張メソッドを格納するための静的[クラス](./static-classes-and-static-class-members.md)を定義します。  
   
-     このクラスは、クライアント コードから参照できる必要があります。 アクセシビリティの規則の詳細については、「[アクセス修飾子](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)」を参照してください。  
+     このクラスは、クライアント コードから参照できる必要があります。 アクセシビリティの規則の詳細については、「[アクセス修飾子](./access-modifiers.md)」を参照してください。  
   
 2. 拡張メソッドを静的メソッドとして実装します。メソッドの可視性は、包含クラスと同レベル以上を指定します。  
   
-3. メソッドの最初のパラメーターでは、メソッドが操作する型を指定します。型名の前には [this](../../../csharp/language-reference/keywords/this.md) 修飾子を付加します。  
+3. メソッドの最初のパラメーターでは、メソッドが操作する型を指定します。型名の前には [this](../../language-reference/keywords/this.md) 修飾子を付加します。  
   
-4. 呼び出し元のコードで、`using` ディレクティブを追加して、拡張メソッドのクラスを含む[名前空間](../../../csharp/language-reference/keywords/namespace.md)を指定します。  
+4. 呼び出し元のコードで、`using` ディレクティブを追加して、拡張メソッドのクラスを含む[名前空間](../../language-reference/keywords/namespace.md)を指定します。  
   
 5. 型のインスタンス メソッドと同じようにメソッドを呼び出します。  
   
@@ -41,12 +41,12 @@ ms.locfileid: "65585960"
   
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [拡張メソッド](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
-- [統合言語クエリ (LINQ)](../../../csharp/linq/linq-in-csharp.md)
-- [静的クラスと静的クラス メンバー](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
-- [protected](../../../csharp/language-reference/keywords/protected.md)
-- [internal](../../../csharp/language-reference/keywords/internal.md)
-- [public](../../../csharp/language-reference/keywords/public.md)
-- [this](../../../csharp/language-reference/keywords/this.md)
-- [namespace](../../../csharp/language-reference/keywords/namespace.md)
+- [C# プログラミング ガイド](../index.md)
+- [拡張メソッド](./extension-methods.md)
+- [統合言語クエリ (LINQ)](../../linq/linq-in-csharp.md)
+- [静的クラスと静的クラス メンバー](./static-classes-and-static-class-members.md)
+- [protected](../../language-reference/keywords/protected.md)
+- [internal](../../language-reference/keywords/internal.md)
+- [public](../../language-reference/keywords/public.md)
+- [this](../../language-reference/keywords/this.md)
+- [namespace](../../language-reference/keywords/namespace.md)

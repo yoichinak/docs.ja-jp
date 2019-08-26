@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f50a469327a06eabdb6a80821203f2222dcd2921
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 46dd9c0c1f9f5759bc9160aadeb0538b5403fb52
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878026"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917970"
 ---
 # <a name="overview-of-the-net-framework"></a>.NET Framework の概要
 
@@ -75,7 +75,7 @@ ms.locfileid: "65878026"
 
 他のオブジェクト指向クラス ライブラリの場合と同様に、.NET Framework の型を使用することで、文字列の管理、データ コレクション、データベース接続、ファイル アクセスなどを含む、共通性のあるさまざまなプログラミング作業を行うことができます。 これらの共通の作業の他に、クラス ライブラリにはさまざまな特別の開発シナリオをサポートする型も含まれています。 次のような種類のアプリケーションやサービスを開発する場合に .NET Framework を使用してください。
 
-- コンソール アプリ。 「[コンソール アプリケーションの構築](../../../docs/standard/building-console-apps.md)」を参照してください。
+- コンソール アプリ。 「[コンソール アプリケーションの構築](../../standard/building-console-apps.md)」を参照してください。
 
 - Windows GUI アプリケーション (Windows フォーム)。 「[Windows フォーム](../../../docs/framework/winforms/index.md)」を参照してください。
 

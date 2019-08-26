@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 97ea5c7389cf30f7f58c944c95e095ebe4146192
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 135459f84cee0a3c356882b193ff561befb43145
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590592"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963360"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>方法: 日付および時刻の値のミリ秒部分を表示する
 <xref:System.DateTime.ToString?displayProperty=nameWithType> などの既定の日付および時刻書式指定メソッドは時刻値の時間、分、秒を含めますが、ミリ秒の部分は含めません。 ここでは、書式設定された日付および時刻文字列の中にミリ秒部分を含める方法について説明します。  
@@ -49,7 +49,7 @@ ms.locfileid: "65590592"
  [!code-vb[Formatting.HowTo.Millisecond#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.Millisecond/vb/Millisecond.vb#3)]  
   
 > [!NOTE]
->  1/10000 秒、1/100000 秒などの非常に小さな端数単位を表示することが可能です。 ただし、このような値を表示してもあまり意味がない可能性があります。 日付および時刻の値の精度は、システム クロックの分解能に依存します。 Windows NT 3.5 以降および [!INCLUDE[windowsver](../../../includes/windowsver-md.md)] オペレーティング システムでは、クロックの分解能は約 10 ～ 15 ミリ秒です。  
+> 1/10000 秒、1/100000 秒などの非常に小さな端数単位を表示することが可能です。 ただし、このような値を表示してもあまり意味がない可能性があります。 日付および時刻の値の精度は、システム クロックの分解能に依存します。 Windows NT 3.5 以降および [!INCLUDE[windowsver](../../../includes/windowsver-md.md)] オペレーティング システムでは、クロックの分解能は約 10 ～ 15 ミリ秒です。  
   
 ## <a name="see-also"></a>関連項目
 

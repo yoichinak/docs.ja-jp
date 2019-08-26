@@ -1,16 +1,16 @@
 ---
-title: '方法: async と await を使用して複数の Web 要求を並列実行する (C#)'
+title: 方法:async と await を使用して複数の Web 要求を並列実行する (C#)
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: 57c40626fcaf0c52d09fa3a2c8b74ba8b7816677
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: edba5ed5026c16ca1f1b09e8504ecfdf408ae5ef
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600241"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922005"
 ---
-# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>方法: async と await を使用して複数の Web 要求を並列実行する (C#)
-非同期メソッドでは、タスクは作成されると開始されます。 [await](../../../../csharp/language-reference/keywords/await.md) 演算子は、メソッド内でタスクが終了するまで処理が続行できなくなった時点で、タスクに適用されます。 次の例に示すように、タスクは多くの場合、作成されるとすぐに待機します。  
+# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>方法:async と await を使用して複数の Web 要求を並列実行する (C#)
+非同期メソッドでは、タスクは作成されると開始されます。 [await](../../../language-reference/keywords/await.md) 演算子は、メソッド内でタスクが終了するまで処理が続行できなくなった時点で、タスクに適用されます。 次の例に示すように、タスクは多くの場合、作成されるとすぐに待機します。  
   
 ```csharp  
 var result = await someWebAccessMethodAsync(url);  
@@ -35,15 +35,15 @@ var result = await myTask;
  次のプログラムは 3 つの非同期的な Web ダウンロードを開始し、次に呼び出した順にそれを待機します。 プログラムを実行する場合、タスクは必ずしも作成して待機した順には終了しないことに注意します。 タスクは作成されると実行され、メソッドが await 式に到達する前に 1 つまたは複数のタスクが終了する場合もあります。  
   
 > [!NOTE]
->  このプロジェクトを完成させるには、Visual Studio 2012 以降および .NET Framework 4.5 以降がコンピューターにインストールされている必要があります。  
+> このプロジェクトを完成させるには、Visual Studio 2012 以降および .NET Framework 4.5 以降がコンピューターにインストールされている必要があります。  
   
- 複数のタスクを同時に開始する別の例については、「[方法: Task.WhenAll を使用して AsyncWalkthrough を拡張する (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)」を参照してください。  
+ 複数のタスクを同時に開始する別の例については、「[方法: Task.WhenAll を使用して AsyncWalkthrough を拡張する (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)」を参照してください。  
   
  この例のコードは、[開発者コード サンプル](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)のページからダウンロードできます。  
   
 ### <a name="to-set-up-the-project"></a>プロジェクトを設定するには  
   
-1. WPF アプリケーションを設定するには、次の手順を実行します。 これらの手順の詳細については、「[チュートリアル: Async と Await を使用した Web へのアクセス (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)」を参照してください。  
+1. WPF アプリケーションを設定するには、次の手順を実行します。 これらの手順の詳細については、「[チュートリアル: Async と Await を使用した Web へのアクセス (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)」を参照してください。  
   
     - テキスト ボックスとボタンを含む WPF アプリケーションを作成します。 ボタンに `startButton` という名前を付け、テキスト ボックスに `resultsTextBox` という名前を付けます。  
   
@@ -226,6 +226,6 @@ namespace AsyncExample_MultipleTasks
   
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル: Async と Await を使用した Web へのアクセス (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Async および Await を使用した非同期プログラミング (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
-- [方法: Task.WhenAll を使用して AsyncWalkthrough を拡張する (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [チュートリアル:Async と Await を使用した Web へのアクセス (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Async および Await を使用した非同期プログラミング (C#)](./index.md)
+- [方法: Task.WhenAll を使用して AsyncWalkthrough を拡張する (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)

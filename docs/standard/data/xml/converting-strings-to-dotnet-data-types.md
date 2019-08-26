@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 376dd9df4666193f8e5a6be83f3fcaf5dc32f1a6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31f277d11cba8191c326d56f017b8acc6503c6b7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544602"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968710"
 ---
 # <a name="converting-strings-to-net-framework-data-types"></a>文字列の .NET Framework データ型への変換
 文字列を .NET Framework データ型に変換するには、アプリケーションの要件に適合する **XmlConvert** メソッドを使用します。 **XmlConvert** クラスで利用可能なすべての変換メソッドの一覧については、「<xref:System.Xml.XmlConvert>」を参照してください。  
@@ -33,7 +33,7 @@ ms.locfileid: "54544602"
 |Timespan|PnYnMnTnHnMnS の形式。つまり、`P2Y10M15DT10H30M20S` は 2 年 10 か月 15 日 10 時間 30 分 20 秒の期間です。|  
   
 > [!NOTE]
->  表中の .NET Framework 型を **ToString** メソッドを使用して文字列に変換したときに返される文字列は基本型ではなく、XML スキーマ (XSD) 文字列型です。  
+> 表中の .NET Framework 型を **ToString** メソッドを使用して文字列に変換したときに返される文字列は基本型ではなく、XML スキーマ (XSD) 文字列型です。  
   
  **DateTime** 値型と **Timespan** 値型の違いは、**DateTime** が瞬間を表すのに対して、**TimeSpan** が時間間隔を表すことです。 **DateTime** および **Timespan** の形式は、XML スキーマ (XSD) のデータ型仕様で指定されています。 次に例を示します。  
   

@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fabd95d8fee6f6d8590036001ce2b0c7c23b12da
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2ea3bdea9c65b326953d16d7824114763ff4d017
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589861"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939408"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>DOM における XML ドキュメントの検証
 既定では、<xref:System.Xml.XmlDocument> クラスは、ドキュメント オブジェクト モデル (DOM) 内の XML ドキュメントを XML スキーマ定義言語 (XSD) スキーマまたはドキュメント型定義 (DTD) に対して検証しません。XML が整形式であることだけが検証されます。  
@@ -76,7 +76,7 @@ ms.locfileid: "64589861"
  検証エラーは <xref:System.Xml.Schema.ValidationEventHandler> によって処理されます。 <xref:System.Xml.Schema.ValidationEventHandler> が <xref:System.Xml.XmlReaderSettings> インスタンスに割り当てられているか、<xref:System.Xml.XmlDocument.Validate%2A> クラスの <xref:System.Xml.XmlDocument> メソッドに渡されている場合、<xref:System.Xml.Schema.ValidationEventHandler> がスキーマ検証エラーを処理します。それ以外の場合は、スキーマ検証エラーの検出時に <xref:System.Xml.Schema.XmlSchemaValidationException> が発生します。  
   
 > [!NOTE]
->  <xref:System.Xml.Schema.ValidationEventHandler> がプロセスを停止する例外を生成しない限り、スキーマ検証エラーが発生しても XML データは DOM に読み込まれます。  
+> <xref:System.Xml.Schema.ValidationEventHandler> がプロセスを停止する例外を生成しない限り、スキーマ検証エラーが発生しても XML データは DOM に読み込まれます。  
 >   
 >  <xref:System.Xml.Schema.XmlSchemaValidationFlags.ReportValidationWarnings> フラグが <xref:System.Xml.XmlReaderSettings> オブジェクトに指定されていない場合、スキーマ検証警告は報告されません。  
   

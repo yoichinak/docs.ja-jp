@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d6ddc2978078fd307ad79cffe14d53619d8be9e
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 20766f4f7971d8aa304c7c3eead94f089f059d64
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469709"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946716"
 ---
 # <a name="interop-marshaling"></a>相互運用マーシャリング
 <a name="top"></a> 相互運用マーシャリングは、メソッド引数と戻り値によって、呼び出し中にマネージド メモリとアンマネージド メモリの間でデータを渡す方法を制御します。 相互運用マーシャリングは、共通言語ランタイムのマーシャリング サービスによって実行される、ランタイム アクティビティです。  
@@ -91,7 +91,7 @@ ms.locfileid: "65469709"
 - クライアント スレッドを STA または MTA に設定して、メイン スレッドを変更します。 たとえば、C# クライアントが多くの STA COM コンポーネントを呼び出す場合には、メイン スレッドを STA に設定してアパートメント間のマーシャリングを回避できます。  
   
     > [!NOTE]
-    >  C# クライアントのスレッドを STA に設定すると、MTA COM コンポーネントへの呼び出しにはアパートメント間のマーシャリングが必要となります。  
+    > C# クライアントのスレッドを STA に設定すると、MTA COM コンポーネントへの呼び出しにはアパートメント間のマーシャリングが必要となります。  
   
  アパートメント モデルを明示的に選択する方法については、「[マネージドとアンマネージド スレッド](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))」を参照してください。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "65469709"
 - マネージド クライアントは、マネージド オブジェクトへの参照を、リモート ホストからその参照を取得している COM オブジェクトから取得します。 リモート処理のメカニズムは DCOM です。  
   
     > [!NOTE]
-    >  マネージド サーバーのエクスポート済みタイプ ライブラリを登録する必要があります。  
+    > マネージド サーバーのエクスポート済みタイプ ライブラリを登録する必要があります。  
   
  呼び出し元と呼び出し先の間のプロセス境界の数は関連していません。同じ直接参照が、イン プロセスおよびアウト プロセスの呼び出しで発生します。  
   

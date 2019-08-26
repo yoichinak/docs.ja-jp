@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 25918b15-701d-42c7-95fc-c290d08648d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6a20a2e678c10157fed7da6f5de9f3ffee0c9ad
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f427e2260fb26be7db0a29c47f38a3cb32dd34e9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751871"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921433"
 ---
 # <a name="programming-with-assemblies"></a>アセンブリを使用したプログラミング
 アセンブリは .NET Framework の構成要素であり、配置、バージョン管理、再利用、アクティブ化のスコープの指定、およびセキュリティ アクセス許可の基本単位となります。 共通言語ランタイムは、型の実装に関して必要な情報をアセンブリから取得します。 アセンブリは、相互に連携して 1 つの論理的な機能単位を形成するように構築された型やリソースの集合です。 共通言語ランタイムにとって、型はアセンブリのコンテキストの外部には存在しません。  
@@ -20,7 +20,7 @@ ms.locfileid: "32751871"
  このセクションでは、モジュールを作成する方法、モジュールからアセンブリを作成する方法、キー ペアを作成して厳密な名前でアセンブリに署名する方法、およびグローバル アセンブリ キャッシュにアセンブリをインストールする方法について説明します。 さらに、[MSIL 逆アセンブラー (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) を使ってアセンブリ マニフェストの情報を表示する方法も説明します。  
   
 > [!NOTE]
->  .NET Framework Version 2.0 以降では、現在読み込まれているランタイムよりもバージョン番号が新しい .NET Framework のバージョンでコンパイルされたアセンブリは、ランタイムに読み込まれないようになりました。 これはメジャー コンポーネントとマイナー コンポーネントの組み合わせたバージョン番号に適用されます。  
+> .NET Framework Version 2.0 以降では、現在読み込まれているランタイムよりもバージョン番号が新しい .NET Framework のバージョンでコンパイルされたアセンブリは、ランタイムに読み込まれないようになりました。 これはメジャー コンポーネントとマイナー コンポーネントの組み合わせたバージョン番号に適用されます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [アセンブリの作成](../../../docs/framework/app-domains/create-assemblies.md)  
@@ -65,7 +65,7 @@ ms.locfileid: "32751871"
  [共通言語ランタイムでの型の転送](../../../docs/framework/app-domains/type-forwarding-in-the-common-language-runtime.md)  
  型の転送を使うことで、既存のアプリケーションを壊さずに異なるアセンブリに型を移動する方法について説明します。  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>関連項目  
  <xref:System.Reflection.Assembly>  
  アセンブリを表す .NET Framework クラス。  
   

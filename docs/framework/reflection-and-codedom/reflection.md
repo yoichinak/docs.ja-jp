@@ -23,17 +23,17 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7cd9fb96f69da977efd2eee6f740cc93ad58e6ea
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c8d34c5386d0ede578fec097279e9de135f4b6cc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591478"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940029"
 ---
 # <a name="reflection-in-the-net-framework"></a>.NET Framework のリフレクション
 <xref:System.Reflection> 名前空間のクラスを <xref:System.Type?displayProperty=nameWithType> と共に使用すると、読み込まれた[アセンブリ](../app-domains/assemblies-in-the-common-language-runtime.md)についての情報、およびそのアセンブリ内に定義されている[クラス](../../standard/base-types/common-type-system.md#classes)、[インターフェイス](../../standard/base-types/common-type-system.md#interfaces)、[値型](../../csharp/language-reference/keywords/value-types.md)などの型を取得できます。 また、リフレクションを使用すると、実行時に型インスタンスを作成したり、作成した型インスタンスを呼び出したり、アクセスしたりできます。 リフレクションのさまざまな面に関するトピックについては、この概要の最後の「[関連トピック](#related_topics)」を参照してください。
   
- [共通言語ランタイム](../../../docs/standard/clr.md) ローダーは、[アプリケーション ドメイン](../../../docs/framework/app-domains/application-domains.md)を管理します。アプリケーション ドメインは、同じアプリケーション スコープのオブジェクトの周りに定義された境界を構成します。 アプリケーション ドメインの管理には、該当アプリケーション ドメインへの各アセンブリの読み込み、および各アセンブリ内の型階層のメモリ レイアウトの制御などが含まれます。  
+ [共通言語ランタイム](../../standard/clr.md) ローダーは、[アプリケーション ドメイン](../../../docs/framework/app-domains/application-domains.md)を管理します。アプリケーション ドメインは、同じアプリケーション スコープのオブジェクトの周りに定義された境界を構成します。 アプリケーション ドメインの管理には、該当アプリケーション ドメインへの各アセンブリの読み込み、および各アセンブリ内の型階層のメモリ レイアウトの制御などが含まれます。  
   
  [アセンブリ](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)には、モジュールが含まれています。モジュールには、型が含まれています。また、型にはメンバーが含まれています。 リフレクションは、アセンブリ、モジュール、および型をカプセル化するオブジェクトを提供します。 リフレクションを使用すると、動的に型のインスタンスを作成したり、その型を既存のオブジェクトにバインドしたり、既存のオブジェクトから型を取得できます。 その後で、型のメソッドを呼び出したり、型のフィールドやプロパティにアクセスしたりできます。 リフレクションの代表的な用途は、次のとおりです。  
   

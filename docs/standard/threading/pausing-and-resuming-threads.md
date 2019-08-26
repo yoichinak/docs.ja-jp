@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b39f91c5fabcfb5d7929a645b438b5db77f70956
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f3dcee9c45cdbf029ccba90a963c9cea0a9c7ad4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644918"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963574"
 ---
 # <a name="pausing-and-interrupting-threads"></a>スレッドの一時中断および中断
 
@@ -41,7 +41,7 @@ ms.locfileid: "64644918"
  待機中のスレッドを中断するには、ブロックされているスレッドに対して <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> メソッドを呼び出して <xref:System.Threading.ThreadInterruptedException> をスローさせます。これにより、スレッドは中断され、ブロックしている呼び出しから抜け出します。 スレッドは、<xref:System.Threading.ThreadInterruptedException> をキャッチし、操作を継続するために適切な処理を行う必要があります。 スレッドがこの例外を無視した場合は、ランタイムがこの例外をキャッチし、そのスレッドを停止します。  
   
 > [!NOTE]
->  <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> が呼び出されたときに対象となるスレッドがブロックされていない場合、スレッドはブロックされるまで中断されません。 スレッドがまったくブロックされない場合は、中断されることなく完了することがあります。  
+> <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> が呼び出されたときに対象となるスレッドがブロックされていない場合、スレッドはブロックされるまで中断されません。 スレッドがまったくブロックされない場合は、中断されることなく完了することがあります。  
   
  待機がマネージド待機である場合、<xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> と <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> はどちらもすぐにスレッドを起動します。 待機がアンマネージ待機の場合 (プラットフォームが Win32 [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) 関数を呼び出した場合など)、<xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> と <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> はどちらも、スレッドがマネージド コードに戻るか、またはマネージド コードを呼び出すまで、そのスレッドを制御できません。 マネージド コードの動作は次のとおりです。  
   

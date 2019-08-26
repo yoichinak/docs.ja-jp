@@ -12,12 +12,12 @@ helpviewer_keywords:
 - compiler optimization [C#]
 - o compiler option [C#]
 ms.assetid: 6dd5b6f2-cd1d-4593-a9f4-1c2ed9404ca0
-ms.openlocfilehash: 25a9ee1b27836dfb00dcbc72712ed068639fa2fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: bec99ca582070a99fd8b734ef8a7b9e71d945488
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320033"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606600"
 ---
 # <a name="-optimize-c-compiler-options"></a>-optimize (C# コンパイラ オプション)
 **-optimize** オプションは、コンパイラで実行する最適化を有効または無効にします。最適化を実行すると、出力ファイルのサイズが小さくなり、速度と効率が向上します。  
@@ -37,7 +37,7 @@ ms.locfileid: "59320033"
   
  **-o** は **-optimize** の省略形です。  
   
- **-optimize** オプションと [-debug](../../../csharp/language-reference/compiler-options/debug-compiler-option.md) オプションを結合することができます。  
+ **-optimize** オプションと [-debug](./debug-compiler-option.md) オプションを結合することができます。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
   
@@ -58,5 +58,5 @@ csc t2.cs -optimize
   
 ## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
+- [C# コンパイラ オプション](./index.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

@@ -5,18 +5,18 @@ ms.technology: dotnet-standard
 ms.assetid: f9b074f6-d6f4-49dd-a093-df510bf0cf7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ce9a06c14141bb658eb665e643d8da27e18dd94f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a524b80d8789567dc2aa943d7321fd49fe3c7c33
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590370"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939420"
 ---
 # <a name="using-the-xslcompiledtransform-class"></a>XslCompiledTransform クラスの使用
 <xref:System.Xml.Xsl.XslCompiledTransform> クラスは Microsoft .NET Framework XSLT プロセッサです。 このクラスは、スタイル シートをコンパイルし、XSLT 変換を実行するために使用されます。  
   
 > [!NOTE]
->  全体的なパフォーマンスは <xref:System.Xml.Xsl.XslCompiledTransform> クラスの方が <xref:System.Xml.Xsl.XslTransform> クラスより優れていますが、<xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> クラスの <xref:System.Xml.Xsl.XslCompiledTransform> メソッドが変換で初めて呼び出されたときは、<xref:System.Xml.Xsl.XslTransform.Load%2A> クラスの <xref:System.Xml.Xsl.XslTransform> メソッドよりパフォーマンスが劣る場合があります。 これは、XSLT ファイルを読み込む前にコンパイルする必要があるためです。 詳細については、ブログ記事「[XslCompiledTransform Slower than XslTransform?](https://blogs.msdn.microsoft.com/antosha/2006/07/16/xslcompiledtransform-slower-than-xsltransform/)」(XslCompiledTransform は XslTransform よりも遅いか?) を参照してください。  
+> 全体的なパフォーマンスは <xref:System.Xml.Xsl.XslCompiledTransform> クラスの方が <xref:System.Xml.Xsl.XslTransform> クラスより優れていますが、<xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> クラスの <xref:System.Xml.Xsl.XslCompiledTransform> メソッドが変換で初めて呼び出されたときは、<xref:System.Xml.Xsl.XslTransform.Load%2A> クラスの <xref:System.Xml.Xsl.XslTransform> メソッドよりパフォーマンスが劣る場合があります。 これは、XSLT ファイルを読み込む前にコンパイルする必要があるためです。 詳細については、ブログ記事「[XslCompiledTransform Slower than XslTransform?](https://blogs.msdn.microsoft.com/antosha/2006/07/16/xslcompiledtransform-slower-than-xsltransform/)」(XslCompiledTransform は XslTransform よりも遅いか?) を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [XslCompiledTransform クラスへの入力](../../../../docs/standard/data/xml/inputs-to-the-xslcompiledtransform-class.md)  

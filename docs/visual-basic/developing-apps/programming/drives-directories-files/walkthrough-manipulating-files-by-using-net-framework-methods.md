@@ -15,12 +15,12 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-ms.openlocfilehash: fc96baaff3b70fcb32e19e2ce08bdb0187c86c01
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0b9a899a579a1a38cee3be7b742fd9f0dfa197fb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783198"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966046"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>チュートリアル: .NET Framework のメソッドによるファイル操作 (Visual Basic)
 このチュートリアルでは、<xref:System.IO.StreamReader> クラスを使用してファイルを開いて読み取り、ファイルがアクセスされているかどうかをチェックし、<xref:System.IO.StreamReader> クラスのインスタンスを使用したファイル読み取り内の文字列を検索し、<xref:System.IO.StreamWriter> クラスを使用してファイルにデータを書き込む方法について説明します。  
@@ -66,7 +66,7 @@ ms.locfileid: "67783198"
      [!code-vb[VbVbcnMyFileSystem#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#36)]  
   
 > [!NOTE]
->  Visual Studio 統合開発環境 (IDE) の画面がコード エディターに戻り、コードを追加するイベント ハンドラー内にカーソルが配置されます。  
+> Visual Studio 統合開発環境 (IDE) の画面がコード エディターに戻り、コードを追加するイベント ハンドラー内にカーソルが配置されます。  
   
 1. ファイルへの書き込みを行うには、<xref:System.IO.StreamWriter> クラスの <xref:System.IO.StreamWriter.Write%2A> メソッドを使用します。 `Dim fw As StreamWriter` の直後に次のコードを追加します。 ファイルが見つからない場合に例外がスローされることを心配する必要はありません。ファイルまだ存在しない場合は、新規に作成されます。  
   

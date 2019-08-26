@@ -10,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: 2096103c-22f7-420d-b631-f102bc33a6dd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d13f123953c32cae01df501c0e251ec29b0478b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 10fa77f6948a10959db5f79c37692eba67d47ecd
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367506"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666539"
 ---
 # <a name="how-to-use-foreach-to-remove-items-in-a-blockingcollection"></a>方法: ForEach を使用して BlockingCollection 内の項目を削除する
 
-<xref:System.Collections.Concurrent.BlockingCollection%601.Take%2A> と <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A> メソッドを使用して <xref:System.Collections.Concurrent.BlockingCollection%601> から項目を取得するだけでなく、[foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) (Visual Basic では [For Each](~/docs/visual-basic/language-reference/statements/for-each-next-statement.md)) を使用して、追加が完了してコレクションが空になるまで項目を削除することもできます。 これは、通常の `foreach` (`For Each`) ループとは異なり、この列挙子が項目を削除することでソース コレクションを変更するので、*変更列挙*または*消費列挙*と呼ばれます。
+<xref:System.Collections.Concurrent.BlockingCollection%601.Take%2A> と <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A> メソッドを使用して <xref:System.Collections.Concurrent.BlockingCollection%601> から項目を取得するだけでなく、[foreach](../../../csharp/language-reference/keywords/foreach-in.md) (Visual Basic では [For Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md)) を使用して、追加が完了してコレクションが空になるまで項目を削除することもできます。 これは、通常の `foreach` (`For Each`) ループとは異なり、この列挙子が項目を削除することでソース コレクションを変更するので、*変更列挙*または*消費列挙*と呼ばれます。
 
 ## <a name="example"></a>例
 

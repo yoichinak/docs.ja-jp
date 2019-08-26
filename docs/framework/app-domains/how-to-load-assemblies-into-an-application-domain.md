@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4d785ae9b3bce0b5c77414057ef063d6e9d3e14a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f21126361ce69ab14d18e12d2787b2c264116b02
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593590"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921537"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>方法: アプリケーション ドメインにアセンブリを読み込む
 アプリケーション ドメインにアセンブリを読み込むには、いくつかの方法があります。 推奨されているのは、<xref:System.Reflection.Assembly?displayProperty=nameWithType> クラスの `static` (Visual Basic では `Shared`) <xref:System.Reflection.Assembly.Load%2A> メソッドを使用する方法です。 それ以外には、以下の方法でアセンブリを読み込むことができます。  
@@ -26,7 +26,7 @@ ms.locfileid: "64593590"
 - <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> メソッドと <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> メソッドは、リフレクション専用コンテキストにアセンブリを読み込みます。 このコンテキストに読み込まれたアセンブリは検査できますが、実行することはできません。その結果、他のプラットフォームをターゲットにしているアセンブリを検査できます。 「[方法:リフレクションのみのコンテキストにアセンブリを読み込む](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)」を参照してください。  
   
 > [!NOTE]
->  リフレクション専用コンテキストは、.NET Framework Version 2.0 で新たに追加されました。  
+> リフレクション専用コンテキストは、.NET Framework Version 2.0 で新たに追加されました。  
   
 - <xref:System.AppDomain> クラスの <xref:System.AppDomain.CreateInstance%2A> や <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> などのメソッドは、アプリケーション ドメインにアセンブリを読み込むことができます。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "64593590"
 - <xref:System.AppDomain?displayProperty=nameWithType> クラスの <xref:System.AppDomain.Load%2A> メソッドは、アセンブリを読み込むことができますが、主に COM の相互運用性のために使用されます。 このメソッドの呼び出し元であるアプリケーション ドメイン以外のアプリケーション ドメインにアセンブリを読み込む場合は、このメソッドを使用しないでください。  
   
 > [!NOTE]
->  .NET Framework Version 2.0 以降では、現在読み込まれているランタイムよりもバージョン番号が新しい .NET Framework のバージョンでコンパイルされたアセンブリは、ランタイムに読み込まれないようになりました。 これはメジャー コンポーネントとマイナー コンポーネントの組み合わせたバージョン番号に適用されます。  
+> .NET Framework Version 2.0 以降では、現在読み込まれているランタイムよりもバージョン番号が新しい .NET Framework のバージョンでコンパイルされたアセンブリは、ランタイムに読み込まれないようになりました。 これはメジャー コンポーネントとマイナー コンポーネントの組み合わせたバージョン番号に適用されます。  
   
  読み込まれたアセンブリの Just-In-Time (JIT) コンパイル コードがアプリケーション ドメイン間で共有される方法を指定できます。 詳細については、「[アプリケーション ドメインとアセンブリ](application-domains.md#application-domains-and-assemblies)」を参照してください。  
   

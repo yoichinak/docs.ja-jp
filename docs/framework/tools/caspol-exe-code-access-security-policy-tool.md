@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccb1d78f939d2faf90013392fc60d5597bc3922e
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: f70682150905c411be5618ab368a87e71d0e8e13
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489682"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959067"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (コード アクセス セキュリティ ポリシー ツール)
 ユーザーと管理者は、コード アクセス セキュリティ (CAS) ポリシー ツール (Caspol.exe) を使用して、コンピューター ポリシー レベル、ユーザー ポリシー レベル、およびエンタープライズ ポリシー レベルのセキュリティ ポリシーを変更できます。  
   
 > [!IMPORTANT]
->  .NET Framework 4 以降では、[\<legacyCasPolicy> 要素](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)が `true` に設定されていない限り、Caspol.exe は CAS ポリシーに影響を与えません。 CasPol.exe によって表示または変更された設定は、CAS ポリシーの使用が選択されているアプリケーションにのみ影響します。 詳細については、「[セキュリティの変更点](../../../docs/framework/security/security-changes.md)」を参照してください。  
+> .NET Framework 4 以降では、[\<legacyCasPolicy> 要素](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)が `true` に設定されていない限り、Caspol.exe は CAS ポリシーに影響を与えません。 CasPol.exe によって表示または変更された設定は、CAS ポリシーの使用が選択されているアプリケーションにのみ影響します。 詳細については、「[セキュリティの変更点](../../../docs/framework/security/security-changes.md)」を参照してください。  
   
 > [!NOTE]
->  64 ビット コンピューターには、64 ビット バージョンと 32 ビット バージョンの両方のセキュリティ ポリシーが含まれます。 32 ビット アプリケーションと 64 ビット アプリケーションの両方にポリシーの変更を適用するには、Caspol.exe の 32 ビット バージョンと 64 ビット バージョンの両方を実行します。  
+> 64 ビット コンピューターには、64 ビット バージョンと 32 ビット バージョンの両方のセキュリティ ポリシーが含まれます。 32 ビット アプリケーションと 64 ビット アプリケーションの両方にポリシーの変更を適用するには、Caspol.exe の 32 ビット バージョンと 64 ビット バージョンの両方を実行します。  
   
  コード アクセス セキュリティ ポリシー ツールは、.NET Framework および Visual Studio と共に自動的にインストールされます。 Caspol.exe は、32 ビット システムでは %windir%\Microsoft.NET\Framework\\*version* に、64 ビット システムでは %windir%\Microsoft.NET\Framework64\\*version* にあります。 (たとえば、場所は、64 ビット システムの .NET Framework 4 では %windir%\Microsoft.NET\Framework64\v4.030319\caspol.exe)。コンピューターで複数のバージョンの .NET Framework を side-by-side で実行している場合は、複数のバージョンのツールがインストールされると考えられます。 インストール ディレクトリからツールを実行できます。 ただし、インストール フォルダーに移動する必要のない[コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)を使用することをお勧めします。  
   

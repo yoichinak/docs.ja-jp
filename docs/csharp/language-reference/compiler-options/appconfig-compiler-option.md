@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -appconfig compiler option [C#]
 - appconfig compiler option [C#]
 ms.assetid: 1cdbcbcc-7813-4010-b5b8-e67c107c5a98
-ms.openlocfilehash: 102ed3977d56ace0dab63b1f066cc10a6fc5dfbf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a7e8e61f65704a2e99385a1be320048d950324c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514063"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922520"
 ---
 # <a name="-appconfig-c-compiler-options"></a>-appconfig (C# コンパイラ オプション)
 **-appconfig** コンパイラ オプションを利用すると、C# アプリケーションで、アセンブリのバインド時に共通言語ランタイム (CLR) にアセンブリのアプリケーション構成 (app.config) ファイルの場所を指定できます。  
@@ -26,9 +26,9 @@ ms.locfileid: "54514063"
   
 ## <a name="arguments"></a>引数  
  `file`  
- 必須です。 アセンブリ バインド設定を含むアプリケーション構成ファイル。  
+ 必須。 アセンブリ バインド設定を含むアプリケーション構成ファイル。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **-appconfig** の用途の 1 つは、1 つのアセンブリが特定の参照アセンブリの .NET Framework バージョンと .NET Framework for Silverlight バージョンの両方を同時に参照する必要がある高度なシナリオです。 たとえば、WPF (Windows Presentation Foundation) で作成された XAML デザイナーにおいて、デザイナーのユーザー インターフェイスとして WPF デスクトップを参照すると共に、Silverlight に組み込まれている WPF のサブセットも参照する必要がある場合があります。 同じデザイナー アセンブリで両方のアセンブリにアクセスする必要があります。 既定では、この 2 つのアセンブリはアセンブリ バインディングで同等と見なされるため、別々に参照するとコンパイラ エラーが発生します。  
   
  **-appconfig** コンパイラ オプションを利用すると、`<supportPortability>` タグを利用して既定の動作を無効にする app.config ファイルの場所を指定できます。次の例をご覧ください。  
@@ -38,7 +38,7 @@ ms.locfileid: "54514063"
  このコンパイラは、CLR のアセンブリ バインド ロジックにファイルの場所を渡します。  
   
 > [!NOTE]
->  Microsoft Build Engine (MSBuild) を利用してアプリケーションを構築する場合、プロパティ タグを .csproj ファイルに追加し、**-appconfig** コンパイラ オプションを設定できます。 プロジェクトに既に設定されている app.config ファイルを使用するには、プロパティ タグ `<UseAppConfigForCompiler>` を .csproj ファイルに追加し、その値を `true` に設定します。 異なる app.config ファイルを指定するには、プロパティ タグ `<AppConfigForCompiler>` を追加し、その値をファイルの場所に設定します。  
+> Microsoft Build Engine (MSBuild) を利用してアプリケーションを構築する場合、プロパティ タグを .csproj ファイルに追加し、 **-appconfig** コンパイラ オプションを設定できます。 プロジェクトに既に設定されている app.config ファイルを使用するには、プロパティ タグ `<UseAppConfigForCompiler>` を .csproj ファイルに追加し、その値を `true` に設定します。 異なる app.config ファイルを指定するには、プロパティ タグ `<AppConfigForCompiler>` を追加し、その値をファイルの場所に設定します。  
   
 ## <a name="example"></a>例  
  .NET Framework と .NET Framework for Silverlight の両方の実装に存在する .NET Framework アセンブリについて、その両方の実装をアプリケーションで参照できるようにする app.config ファイルの例を次に示します。 **-appconfig** コンパイラ オプションにより、この app.config ファイルの場所が指定されます。  
@@ -57,4 +57,4 @@ ms.locfileid: "54514063"
 ## <a name="see-also"></a>関連項目
 
 - [\<supportPortability> 要素](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)
-- [アルファベット順の C# コンパイラ オプションの一覧](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
+- [アルファベット順の C# コンパイラ オプションの一覧](./listed-alphabetically.md)

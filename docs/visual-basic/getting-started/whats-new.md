@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 49c39e12aa67b1f36fc46c21f5d2b23223b3264d
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 20d403e4a6410257068cc3414fcb8dc1e45709e9
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238647"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666863"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic の新機能
 
@@ -51,7 +51,7 @@ Visual Basic / Visual Studio .NET 2002 Visual Basic .NET の最初のリリー�
 
 **浮動小数点から整数への変換の最適化**
 
-以前のバージョンの Visual Basic では、[倍精度浮動小数点型](../language-reference/data-types/double-data-type.md)と[単精度浮動小数点型](../language-reference/data-types/single-data-type.md)の値の整数への変換で比較的低いパフォーマンスが提供されていました。 Visual Basic 15.8 では、次のいずれかのメソッドによって返された値を[固有の Visual Basic 整数変換の関数](../language-reference/functions/type-conversion-functions.md) (CByte、CShort、CInt、CLng、CSByte、CUShort、CUInt、CULng) の 1 つに渡すとき、または [Option Strict](~/docs/visual-basic/language-reference/statements/option-strict-statement.md) が `Off` に設定されているときに、値が整数型に暗黙的にキャストされる次のいずれかのメソッドによって返されるときに、浮動小数点の整数への変換のパフォーマンスが大幅に向上します。
+以前のバージョンの Visual Basic では、[倍精度浮動小数点型](../language-reference/data-types/double-data-type.md)と[単精度浮動小数点型](../language-reference/data-types/single-data-type.md)の値の整数への変換で比較的低いパフォーマンスが提供されていました。 Visual Basic 15.8 では、次のいずれかのメソッドによって返された値を[固有の Visual Basic 整数変換の関数](../language-reference/functions/type-conversion-functions.md) (CByte、CShort、CInt、CLng、CSByte、CUShort、CUInt、CULng) の 1 つに渡すとき、または [Option Strict](../language-reference/statements/option-strict-statement.md) が `Off` に設定されているときに、値が整数型に暗黙的にキャストされる次のいずれかのメソッドによって返されるときに、浮動小数点の整数への変換のパフォーマンスが大幅に向上します。
 
 - <xref:Microsoft.VisualBasic.Conversion.Fix(System.Double)?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Conversion.Fix(System.Object)?displayProperty=nameWithType>

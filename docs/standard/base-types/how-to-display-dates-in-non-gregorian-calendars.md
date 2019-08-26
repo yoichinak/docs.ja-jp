@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea8b47e7d5c794ea1b33eaaae52a3f8250f80a82
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: cdd500d8eda81708d67254cbc5dc8da701ae4e09
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65588831"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963354"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>方法: グレゴリオ暦以外の暦の日付を表示する
 <xref:System.DateTime> 型と <xref:System.DateTimeOffset> 型は既定の暦としてグレゴリオ暦を使用しています。 つまり、日付と時刻値の `ToString` メソッドを呼び出すと、その日付の時刻が別の暦を使用して作成された場合でも、その日付の時刻はグレゴリオ暦の文字列形式で表示されます。 これを次の例で示します。この例では、2 つの方法を使用してペルシャ暦で日付と時刻の値を作成していますが、<xref:System.DateTime.ToString%2A> メソッドを呼び出すと、これらの日付と時刻の値はグレゴリオ暦で表示されます。 この例では、一般的に使われているものの、特定の暦で日付を表示するには正しくない 2 つの手法が反映されています。  
@@ -39,7 +39,7 @@ ms.locfileid: "65588831"
 4. <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> プロパティから返される <xref:System.Globalization.DateTimeFormatInfo> オブジェクトの <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> プロパティに暦オブジェクトを割り当てます。  
   
     > [!NOTE]
-    >  <xref:System.Globalization.CultureInfo> クラスには <xref:System.Globalization.CultureInfo.Calendar%2A> プロパティもあります。 ただし、これは読み取り専用で定数のため、<xref:System.Globalization.DateTimeFormatInfo.Calendar%2A?displayProperty=nameWithType> プロパティに割り当てられた新しい既定の暦を反映するために変更されることはありません。  
+    > <xref:System.Globalization.CultureInfo> クラスには <xref:System.Globalization.CultureInfo.Calendar%2A> プロパティもあります。 ただし、これは読み取り専用で定数のため、<xref:System.Globalization.DateTimeFormatInfo.Calendar%2A?displayProperty=nameWithType> プロパティに割り当てられた新しい既定の暦を反映するために変更されることはありません。  
   
 5. <xref:System.DateTime.ToString%2A> と <xref:System.DateTime.ToString%2A> メソッドのいずれかを呼び出し、前の手順で既定の暦を変更した <xref:System.Globalization.CultureInfo> オブジェクトを渡します。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "65588831"
   
 2. 日付と時刻の値の文字列形式で表示する日付と時刻の要素を決定します。  
   
-3. 表示する日付と時刻の要素ごとに、暦オブジェクトの `Get`  メソッドをオーバーライドします。 次のメソッドが使用できます。  
+3. 表示する日付と時刻の要素ごとに、暦オブジェクトの `Get` メソッドをオーバーライドします。 次のメソッドが使用できます。  
   
     - <xref:System.Globalization.Calendar.GetYear%2A>: 適切な暦で年を表示します。  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7058e7857c03a2fc82a3d978ef7c8066a9e272bc
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8fc88b06ee1e206208e6d6950f640966f53df3a1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589652"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924918"
 ---
 # <a name="dataflow-task-parallel-library"></a>データフロー (タスク並列ライブラリ)
 <a name="top"></a> タスク並列ライブラリ (TPL) はデータ フロー コンポーネントを提供し、コンカレンシー対応アプリケーションの堅牢性を強化します。 これらのデータ フロー コンポーネントは *TPL データ フロー ライブラリ*と総称されます。 データ フロー モデルは、粒度の粗いデータ フローおよびパイプライン処理タスクのためのインプロセス メッセージ パッシングを提供し、アクター ベースのプログラミング モデルを推進します。 データ フロー コンポーネントは、TPL の種類とスケジュール インフラストラクチャの上でビルドされ、非同期プログラミングをサポートするために C#、Visual Basic、および F# 言語と統合されています。 相互に非同期通信を行う必要がある複数の操作を行う場合、またはデータが使用可能になったときにデータを処理する場合に、これらのデータ フロー コンポーネントは役立ちます。 たとえば、Web カメラからのイメージ データを処理するアプリケーションを考えてみます。 データ フロー モデルを使用すると、イメージ フレームが使用可能になったときに、それをアプリケーションで処理できます。 たとえば、アプリケーションが輝度修正や赤目補正などを実行してイメージ フレームを向上させる場合、データ フロー コンポーネントの*パイプライン*を作成できます。 パイプラインの各ステージは、イメージを変換するために、TPL が提供する機能のような、粒度の粗い並列機能を使用する場合があります。  
@@ -53,7 +53,7 @@ ms.locfileid: "65589652"
  <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A?displayProperty=nameWithType> メソッドを呼び出してソースをターゲットにリンクする場合、デリゲートを指定して、ターゲット ブロックがメッセージの値に基づいて、メッセージを受け入れるか拒否するかを決めることができます。 このフィルター機構は、データ フロー ブロックが特定の値のみを確実に受信するために便利な方法です。 定義済みのデータ フロー ブロックの型のほとんどの場合に、ソース ブロックが複数のターゲット ブロックに接続されている場合は、ターゲット ブロックがメッセージを拒否すると、ソースはそのメッセージを次のターゲットに提供します。 ソースがターゲットにメッセージを提供する順序はソースによって定義され、ソースの種類によって異なる場合があります。 1 つのターゲットがメッセージを受け入れると、ほとんどのソース ブロックの型がメッセージの提供を停止します。 この規則の 1 つの例外は、<xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> クラスです。いくつかのターゲットがメッセージを拒否した場合でも、各メッセージをすべてのターゲットに提供します。 フィルター処理を使って、特定のメッセージのみを処理する例については、「[チュートリアル:Windows フォーム アプリケーションでのデータフローの使用](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)」を参照してください。  
   
 > [!IMPORTANT]
->  それぞれの定義済みのソースのデータ フロー ブロックの型は、メッセージを受信した順にそれが伝達されることを保証するため、ソース ブロックは各メッセージを読み取ってから、次のメッセージを処理する必要があります。 したがって、フィルター処理を使用して複数のターゲットをソースに接続する場合、各メッセージを少なくとも 1 つのターゲット ブロックが受信するようにします。 そうしない場合、アプリケーションでデッドロックが発生する可能性があります。  
+> それぞれの定義済みのソースのデータ フロー ブロックの型は、メッセージを受信した順にそれが伝達されることを保証するため、ソース ブロックは各メッセージを読み取ってから、次のメッセージを処理する必要があります。 したがって、フィルター処理を使用して複数のターゲットをソースに接続する場合、各メッセージを少なくとも 1 つのターゲット ブロックが受信するようにします。 そうしない場合、アプリケーションでデッドロックが発生する可能性があります。  
   
 ### <a name="message-passing"></a>メッセージ パッシング  
  データ フロー プログラミング モデルは、プログラムの独立したコンポーネントがメッセージの送信によって相互に通信する、*メッセージ パッシング*の概念に関連しています。 アプリケーション コンポーネントの間でメッセージを伝達する方法の 1 つは、<xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> および <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A?displayProperty=nameWithType> メソッドを呼び出して、ターゲット データ フロー ブロック ポストにメッセージを送信し (<xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> は同期的に動作し、<xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> は非同期的に動作します)、<xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A>、<xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A>、および <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A> メソッドを呼び出して、ソース ブロックからメッセージを受け取ることです。 入力データをヘッド ノード (ターゲット ブロック) に送信し、出力データをパイプラインのターミナル ノードまたはネットワーク (1 つ以上のソース ブロック) のターミナル ノードから受信することにより、これらのメソッドとデータ フロー パイプラインまたはネットワークを結合することができます。 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Choose%2A> メソッドを使用して、データが使用可能な、指定されたソースの先頭から読み取り、そのデータにアクションを実行することもできます。  
@@ -111,7 +111,7 @@ ms.locfileid: "65589652"
  <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> を使って複数のターゲット ブロックにメッセージをブロードキャストする方法を示す詳しい例については、「[方法:データフロー ブロックのタスク スケジューラを指定する](../../../docs/standard/parallel-programming/how-to-specify-a-task-scheduler-in-a-dataflow-block.md)」を参照してください。  
   
 #### <a name="writeonceblockt"></a>WriteOnceBlock(T)  
- <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> クラスは <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> クラスに似ていますが、<xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> オブジェクトに 1 回しか書き込むことができない点が異なります。 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> は C# の [readonly](~/docs/csharp/language-reference/keywords/readonly.md) (Visual Basic では [ReadOnly](~/docs/visual-basic/language-reference/modifiers/readonly.md)) キーワードと似ていると考えることができますが、構築時でなく、値を読み取った後は、<xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> オブジェクトを変更できなくなる点が異なります。 <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> クラスと同様に、ターゲットが <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> オブジェクトからメッセージを受信しても、そのメッセージはそのオブジェクトから削除されません。 そのため、複数のターゲットがメッセージのコピーを受信します。 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> のクラスは、複数のメッセージの最初のメッセージだけを伝達する場合に便利です。  
+ <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> クラスは <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> クラスに似ていますが、<xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> オブジェクトに 1 回しか書き込むことができない点が異なります。 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> は C# の [readonly](../../csharp/language-reference/keywords/readonly.md) (Visual Basic では [ReadOnly](../../visual-basic/language-reference/modifiers/readonly.md)) キーワードと似ていると考えることができますが、構築時でなく、値を読み取った後は、<xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> オブジェクトを変更できなくなる点が異なります。 <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> クラスと同様に、ターゲットが <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> オブジェクトからメッセージを受信しても、そのメッセージはそのオブジェクトから削除されません。 そのため、複数のターゲットがメッセージのコピーを受信します。 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> のクラスは、複数のメッセージの最初のメッセージだけを伝達する場合に便利です。  
   
  次の基本的な例は、<xref:System.String> オブジェクトに複数の <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> の値をポストし、その値をそのオブジェクトから読み込みます。 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> オブジェクトには 1 回だけ書き込むことができるため、<xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> オブジェクトは 1 つのメッセージを受信した後は、それ以降のメッセージを破棄します。  
   
@@ -235,7 +235,7 @@ ms.locfileid: "65589652"
  <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.MaxDegreeOfParallelism%2A> の既定値は 1 で、これはデータ フロー ブロックが一度に 1 つのメッセージを処理することを保証します。 このプロパティに 1 を超える値に設定すると、データ フロー ブロックは複数のメッセージを同時に処理できます。 このプロパティを <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.Unbounded?displayProperty=nameWithType> に設定すると、基になるタスク スケジューラは最大のコンカレンシーの程度を管理することができます。  
   
 > [!IMPORTANT]
->  並列処理の最大範囲に 1 を超える数を指定すると、複数のメッセージを同時に処理するため、メッセージが受信した順序で処理されない場合があります。 ただし、ブロックからのメッセージが出力される順序は、メッセージが受信された順序と同じです。  
+> 並列処理の最大範囲に 1 を超える数を指定すると、複数のメッセージを同時に処理するため、メッセージが受信した順序で処理されない場合があります。 ただし、ブロックからのメッセージが出力される順序は、メッセージが受信された順序と同じです。  
   
  <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.MaxDegreeOfParallelism%2A> プロパティは並列処理の最大範囲を表すため、データ フロー ブロックは、指定より低い並列化の度合いで実行される場合があります。 機能要件を満たすため、または使用可能なシステム リソースの不足のため、データ フロー ブロックは、より低い並列化の度合いを使う場合があります。 データ フロー ブロックは、指定より大きな並列化を選択することはありません。  
   

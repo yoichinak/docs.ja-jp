@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c694a9d0ba0d6c7d41a9ce3b932b88519fcddfeb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9bc165c6f1a7cdc6b8a03db0b7648583d75cd7a0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626327"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946657"
 ---
 # <a name="default-marshaling-for-objects"></a>オブジェクトに対する既定のマーシャリング
 <xref:System.Object?displayProperty=nameWithType> として型指定されているパラメーターおよびフィールドを、次のいずれかの型としてアンマネージ コードに公開できます。  
@@ -87,7 +87,7 @@ interface MarshalObject {
 ```  
   
 > [!NOTE]
->  相互運用マーシャラーは、バリアント内に割り当てられたオブジェクトがある場合は、呼び出しの後で自動的にそのオブジェクトを解放します。  
+> 相互運用マーシャラーは、バリアント内に割り当てられたオブジェクトがある場合は、呼び出しの後で自動的にそのオブジェクトを解放します。  
   
  次の例は、フォーマットされた値型を示しています。  
   
@@ -115,7 +115,7 @@ struct ObjectHolder {
 ```  
   
 ## <a name="marshaling-object-to-interface"></a>インターフェイスへのオブジェクトのマーシャリング  
- オブジェクトがインターフェイスとして COM に公開される場合、そのインターフェイスはマネージド型 <xref:System.Object> 用のクラス インターフェイス (**_Object** インターフェイス) となります。 このインターフェイスは、結果のタイプ ライブラリでは、**IDispatch** (<xref:System.Runtime.InteropServices.UnmanagedType>) または **IUnknown** (**UnmanagedType.IUnknown**) として型指定されます。 COM クライアントは、マネージド クラスのメンバー、または派生クラスによって実装されるメンバーを **_Object** インターフェイス経由で動的に呼び出すことができます。 クライアントは **QueryInterface** を呼び出して、マネージド型によって明示的に実装された他の任意のインターフェイスを取得することもできます。  
+ オブジェクトがインターフェイスとして COM に公開される場合、そのインターフェイスはマネージド型 <xref:System.Object> 用のクラス インターフェイス ( **_Object** インターフェイス) となります。 このインターフェイスは、結果のタイプ ライブラリでは、**IDispatch** (<xref:System.Runtime.InteropServices.UnmanagedType>) または **IUnknown** (**UnmanagedType.IUnknown**) として型指定されます。 COM クライアントは、マネージド クラスのメンバー、または派生クラスによって実装されるメンバーを **_Object** インターフェイス経由で動的に呼び出すことができます。 クライアントは **QueryInterface** を呼び出して、マネージド型によって明示的に実装された他の任意のインターフェイスを取得することもできます。  
   
 ## <a name="marshaling-object-to-variant"></a>バリアントへのオブジェクトのマーシャリング  
  オブジェクトがバリアントにマーシャリングされる場合、内部バリアント型は次の規則に従って実行時に決定されます。  
@@ -266,7 +266,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |**VT_BSTR**|<xref:System.String?displayProperty=nameWithType>|  
 |**VT_INT**|<xref:System.Int32?displayProperty=nameWithType>|  
 |**VT_UINT**|<xref:System.UInt32?displayProperty=nameWithType>|  
-|**VT_ARRAY** &#124; **VT_**\*|<xref:System.Array?displayProperty=nameWithType>|  
+|**VT_ARRAY** &#124; **VT_** \*|<xref:System.Array?displayProperty=nameWithType>|  
 |**VT_CY**|<xref:System.Decimal?displayProperty=nameWithType>|  
 |**VT_RECORD**|対応するボックス化された値型。|  
 |**VT_VARIANT**|サポートされていません。|  

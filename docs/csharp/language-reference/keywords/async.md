@@ -9,16 +9,16 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 3bf71bbe0e3f4e14f140f5a1b98a662ceaaea419
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: e0c8f52193639c067252878127ee95a0897b9582
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68362997"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922440"
 ---
 # <a name="async-c-reference"></a>async (C# リファレンス)
 
-`async` 修飾子を使用して、メソッド、[ラムダ式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)、または[匿名メソッド](../../../csharp/language-reference/operators/delegate-operator.md)が非同期であることを指定します。 この修飾子が使用されているメソッドまたは式を、"*非同期メソッド*" と呼びます。 次の例では、`ExampleMethodAsync` という名前の非同期メソッドを定義します。
+`async` 修飾子を使用して、メソッド、[ラムダ式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)、または[匿名メソッド](../operators/delegate-operator.md)が非同期であることを指定します。 この修飾子が使用されているメソッドまたは式を、"*非同期メソッド*" と呼びます。 次の例では、`ExampleMethodAsync` という名前の非同期メソッドを定義します。
   
 ```csharp  
 public async Task<int> ExampleMethodAsync()  
@@ -27,7 +27,7 @@ public async Task<int> ExampleMethodAsync()
 }  
 ```  
 
-非同期プログラミングに慣れていない場合、または、非同期メソッドで `await` キーワードを使って、実行時間が長くなる可能性のある処理を、呼び出し元のスレッドをブロックすることなく実行する方法を理解していない場合は、「[Async および Await を使用した非同期プログラミング](../../../csharp/programming-guide/concepts/async/index.md)」の概要をご覧ください。 次のコードは、非同期メソッド内のコードで、<xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType> メソッドを呼び出します。 
+非同期プログラミングに慣れていない場合、または、非同期メソッドで `await` キーワードを使って、実行時間が長くなる可能性のある処理を、呼び出し元のスレッドをブロックすることなく実行する方法を理解していない場合は、「[Async および Await を使用した非同期プログラミング](../../programming-guide/concepts/async/index.md)」の概要をご覧ください。 次のコードは、非同期メソッド内のコードで、<xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType> メソッドを呼び出します。 
   
 ```csharp  
 string contents = await httpClient.GetStringAsync(requestUrl);  
@@ -35,7 +35,7 @@ string contents = await httpClient.GetStringAsync(requestUrl);
   
 非同期メソッドは、最初の `await` 式に到達するまで同期的に実行されますが、この時点で、待機していたタスクが完了するまで中断されます。 次のセクションの例で示すように、その間はメソッドの呼び出し元に制御が戻ります。  
   
-`async` キーワードで修飾されているメソッドに `await` 式またはステートメントが含まれていない場合、メソッドは同期的に実行されます。 `await` ステートメントが含まれていない非同期メソッドが存在する場合は、その状態がエラーを示す可能性があるため、コンパイラによって警告が通知されます。 「[コンパイラの警告 (レベル 1) CS4014](../../../csharp/language-reference/compiler-messages/cs4014.md)」をご覧ください。  
+`async` キーワードで修飾されているメソッドに `await` 式またはステートメントが含まれていない場合、メソッドは同期的に実行されます。 `await` ステートメントが含まれていない非同期メソッドが存在する場合は、その状態がエラーを示す可能性があるため、コンパイラによって警告が通知されます。 「[コンパイラの警告 (レベル 1) CS4014](../compiler-messages/cs4014.md)」をご覧ください。  
   
  `async` は、メソッド、ラムダ式、または匿名メソッドを修飾する場合にのみキーワードとなるため、コンテキスト キーワードです。 それ以外の場合は、識別子として解釈されます。  
   
@@ -64,29 +64,29 @@ Windows ストア アプリとしてコードを実行するには:
 [!code-csharp[wpf-async](../../../../samples/snippets/csharp/language-reference/keywords/async/wpf/mainwindow.xaml.cs#1)]
   
 > [!IMPORTANT]
->  タスクの詳細、およびタスクを待機している間に実行されるコードの詳細については、「[Async および Await を使用した非同期プログラミング](../../../csharp/programming-guide/concepts/async/index.md)」をご覧ください。 同様の要素を使用する WPF 例の完全版については、「[チュートリアル: Async と Await を使用した Web へのアクセス](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)」をご覧ください。  
+> タスクの詳細、およびタスクを待機している間に実行されるコードの詳細については、「[Async および Await を使用した非同期プログラミング](../../programming-guide/concepts/async/index.md)」をご覧ください。 同様の要素を使用する WPF 例の完全版については、「[チュートリアル: Async と Await を使用した Web へのアクセス](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)」をご覧ください。  
   
 ## <a name="return-types"></a>戻り値の型  
 非同期メソッドの戻り値の型を次に示します。
 
 - <xref:System.Threading.Tasks.Task>
 - <xref:System.Threading.Tasks.Task%601>
-- [void](../../../csharp/language-reference/keywords/void.md)。 `async void` メソッドは、呼び出し元でそれらのメソッドを `await` できず、正常終了またはエラー状態を報告するために別のメカニズムを実装する必要があるため、一般に、イベント ハンドラー以外のコードには推奨されません。
+- [void](./void.md)。 `async void` メソッドは、呼び出し元でそれらのメソッドを `await` できず、正常終了またはエラー状態を報告するために別のメカニズムを実装する必要があるため、一般に、イベント ハンドラー以外のコードには推奨されません。
 - C# 7.0 以降、アクセス可能な `GetAwaiter` を持つ任意の型です。 `System.Threading.Tasks.ValueTask<TResult>` 型はこの実装例で、 NuGet パッケージ `System.Threading.Tasks.Extensions` を追加することで使用できます。 
 
-非同期メソッドでは [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md)、[ref](../../../csharp/language-reference/keywords/ref.md)、[out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) パラメーターを宣言できません。また、[参照戻り値](../../programming-guide/classes-and-structs/ref-returns.md)を指定することもできません。ただし、これらのパラメーターを持つメソッドを呼び出すことはできます。  
+非同期メソッドでは [in](./in-parameter-modifier.md)、[ref](./ref.md)、[out](./out-parameter-modifier.md) パラメーターを宣言できません。また、[参照戻り値](../../programming-guide/classes-and-structs/ref-returns.md)を指定することもできません。ただし、これらのパラメーターを持つメソッドを呼び出すことはできます。  
   
-メソッドの [return](../../../csharp/language-reference/keywords/return.md) ステートメントで `TResult` 型のオペランドを指定している場合、非同期メソッドの戻り値の型として `Task<TResult>` を指定します。 メソッドの完了時に意味のある値を返さない場合は、`Task` を使用します。 これにより、メソッドの呼び出しでは `Task` が返されますが、`Task` の完了時に、`await` を待機している `Task` 式はすべて、`void` に評価されます。  
+メソッドの [return](./return.md) ステートメントで `TResult` 型のオペランドを指定している場合、非同期メソッドの戻り値の型として `Task<TResult>` を指定します。 メソッドの完了時に意味のある値を返さない場合は、`Task` を使用します。 これにより、メソッドの呼び出しでは `Task` が返されますが、`Task` の完了時に、`await` を待機している `Task` 式はすべて、`void` に評価されます。  
   
 戻り値の型 `void` は主として、その戻り値の型が要求されるイベント ハンドラーの定義に使用されます。 `void` を返す非同期メソッドの呼び出し元は、このメソッドを待機できず、このメソッドがスローする例外をキャッチできません。  
 
 C# 7.0 以降、`GetAwaiter` メソッドを持つ別の型 (通常は値の型) を返して、コードのパフォーマンスが重要なセクションでメモリ割り当てを最小限に抑えます。 
 
-使用例を含む詳細については、「[非同期の戻り値の型](../../../csharp/programming-guide/concepts/async/async-return-types.md)」をご覧ください。  
+使用例を含む詳細については、「[非同期の戻り値の型](../../programming-guide/concepts/async/async-return-types.md)」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>
-- [await](../../../csharp/language-reference/keywords/await.md)
-- [チュートリアル: Async と Await を使用した Web へのアクセス](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Async および Await を使用した非同期プログラミング](../../../csharp/programming-guide/concepts/async/index.md)
+- [await](./await.md)
+- [チュートリアル:Async と Await を使用した Web へのアクセス](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Async および Await を使用した非同期プログラミング](../../programming-guide/concepts/async/index.md)

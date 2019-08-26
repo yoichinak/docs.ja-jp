@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d75412394ce42f786da88f3d334853b99f266aca
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 9674e4d3f465cd3bad55a32d0a13136e6cff974d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567195"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946375"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (アセンブリ リンカー)
 
 アセンブリ リンカーは、モジュールまたはリソース ファイルのいずれかである 1 つ以上のファイルから、アセンブリのマニフェストを含むファイルを生成します。 モジュールとは、アセンブリ マニフェストを含まない中間言語 (IL: Intermediate Language) ファイルのことです。
 
 > [!NOTE]
-> Visual Studio 2008 以降では、C# と Visual Basic のどちらのコンパイラを使用しても、Win32 マニフェストはアセンブリに自動的に埋め込まれます。 詳細については、「[/win32manifest (C# コンパイラ オプション)](~/docs/csharp/language-reference/compiler-options/win32manifest-compiler-option.md)」を参照してください。
+> Visual Studio 2008 以降では、C# と Visual Basic のどちらのコンパイラを使用しても、Win32 マニフェストはアセンブリに自動的に埋め込まれます。 詳細については、「[/win32manifest (C# コンパイラ オプション)](../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md)」を参照してください。
 
 このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。
 
@@ -41,7 +41,7 @@ al sources options
 | ------ | ----------- |
 |`file`[,`target`]|`file` (モジュール) の内容を `target` で名前が指定されたファイルにコピーします。 コピーが完了すると、*Al.exe* は `target` をコンパイルしてアセンブリを生成します。|
 |**/embed[resource]:** `file`[,`name`[,`private`]]|`file` で指定したリソースをアセンブリ マニフェストを含むイメージに埋め込みます。*Al.exe* は、`file` の内容をポータブル実行可能 (PE) イメージにコピーします。<br /><br /> `name` パラメーターは、リソースの内部識別子です。 既定では、リソースはアセンブリでパブリックに指定されており、他のアセンブリから参照できます。 `private` を指定すると、そのリソースを他のアセンブリから参照できなくなります。<br /><br /> `file` が[リソース ファイル ジェネレーター (*Resgen.exe*)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) や開発環境などで作成された .NET Framework リソース ファイルである場合は、<xref:System.Resources> のメンバーを使用してそのファイルにアクセスできます。 詳細については、<xref:System.Resources.ResourceManager> を参照してください。 それ以外のすべてのリソースに対しては、`GetManifestResource` の <xref:System.Reflection.Assembly>* メソッドを使用して、実行時にリソースにアクセスします。<br /><br /> リソース ファイルだけが *Al.exe* に渡された場合は、出力ファイルはサテライト リソース アセンブリになります。|
-|**/link[resource]:** `file`[,`name`[,`target`[,`private`]]]|リソース ファイルをアセンブリにリンクします。 `file` によって指定されたリソースがアセンブリの一部になります。ファイルはコピーされません。 `file` パラメーターには、任意のファイル形式を指定できます。 たとえば、`file` パラメーターとしてネイティブ DLL を指定できます。 このようにすると、ネイティブ DLL はアセンブリの一部になるので、グローバル アセンブリ キャッシュにインストールして、アセンブリ内のマネージド コードからアクセスできます。 **/linkresource** コンパイラ オプションを使用して、これを実行することもできます。 詳しくは、「[/linkresource (C# コンパイラ オプション)](~/docs/csharp/language-reference/compiler-options/linkresource-compiler-option.md)」をご覧ください。<br /><br /> `name` パラメーターは、リソースの内部識別子です。 `target` パラメーターは、*Al.exe* が `file` をコピーする対象のパスおよびファイル名を指定します *。* コピーが完了すると、*Al.exe* は `target` をコンパイルしてアセンブリを生成します。 既定では、リソースはアセンブリでパブリックに指定されており、他のアセンブリから参照できます。 `private` を指定すると、そのリソースを他のアセンブリから参照できなくなります。<br /><br /> `file` がリソース ファイル ジェネレーター (*Resgen.exe*) や開発環境などで作成された .NET Framework リソース ファイルである場合は、<xref:System.Resources> 名前空間のメンバーを使用してそのファイルにアクセスできます。 詳細については、<xref:System.Resources.ResourceManager> を参照してください。 それ以外のすべてのリソースに対しては、`GetManifestResource` クラスの <xref:System.Reflection.Assembly>* メソッドを使用して、実行時にリソースにアクセスします。<br /><br /> リソース ファイルだけが *Al.exe* に渡された場合は、出力ファイルはサテライト リソース アセンブリになります。|
+|**/link[resource]:** `file`[,`name`[,`target`[,`private`]]]|リソース ファイルをアセンブリにリンクします。 `file` によって指定されたリソースがアセンブリの一部になります。ファイルはコピーされません。 `file` パラメーターには、任意のファイル形式を指定できます。 たとえば、`file` パラメーターとしてネイティブ DLL を指定できます。 このようにすると、ネイティブ DLL はアセンブリの一部になるので、グローバル アセンブリ キャッシュにインストールして、アセンブリ内のマネージド コードからアクセスできます。 **/linkresource** コンパイラ オプションを使用して、これを実行することもできます。 詳しくは、「[/linkresource (C# コンパイラ オプション)](../../csharp/language-reference/compiler-options/linkresource-compiler-option.md)」をご覧ください。<br /><br /> `name` パラメーターは、リソースの内部識別子です。 `target` パラメーターは、*Al.exe* が `file` をコピーする対象のパスおよびファイル名を指定します *。* コピーが完了すると、*Al.exe* は `target` をコンパイルしてアセンブリを生成します。 既定では、リソースはアセンブリでパブリックに指定されており、他のアセンブリから参照できます。 `private` を指定すると、そのリソースを他のアセンブリから参照できなくなります。<br /><br /> `file` がリソース ファイル ジェネレーター (*Resgen.exe*) や開発環境などで作成された .NET Framework リソース ファイルである場合は、<xref:System.Resources> 名前空間のメンバーを使用してそのファイルにアクセスできます。 詳細については、<xref:System.Resources.ResourceManager> を参照してください。 それ以外のすべてのリソースに対しては、`GetManifestResource` クラスの <xref:System.Reflection.Assembly>* メソッドを使用して、実行時にリソースにアクセスします。<br /><br /> リソース ファイルだけが *Al.exe* に渡された場合は、出力ファイルはサテライト リソース アセンブリになります。|
 
 指定できる `options` を次に示します。 **/out** オプションは必ず指定する必要があります。
 

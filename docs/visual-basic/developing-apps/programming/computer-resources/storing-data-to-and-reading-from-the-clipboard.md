@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data [Visual Basic], Clipboard
 - reading data, from Clipboard
 ms.assetid: f690119a-4378-4f7d-b20e-d9377ef49496
-ms.openlocfilehash: 19d0fcafb76c40a00939de59968dfaf2e6bd683c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d7693f6b5dc74e17686cd7d2667f32adbde9df80
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816884"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916519"
 ---
 # <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a>クリップボードのデータの格納と読み取り (Visual Basic)
 クリップボードは、テキスト、イメージなどのデータの格納に使用できます。 アクティブなプロセスすべてがこのクリップボードを共有しているため、クリップボードを使ってデータをプロセス間で転送することができます。 `My.Computer.Clipboard` オブジェクトを使用すると、クリップボードに簡単にアクセスして、読み込みや書き込みを実行できます。  
@@ -24,13 +24,13 @@ ms.locfileid: "58816884"
   
  [!code-vb[VbVbcnMyClipboard#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#4)]  
   
- このコード例は、IntelliSense コード スニペットとしても利用できます。 コード スニペット ピッカーでこのスニペットにアクセスするには、**[Windows フォーム アプリケーション]、[クリップボード]** の順に移動します。 詳細については、「[Code Snippets](/visualstudio/ide/code-snippets)」を参照してください。  
+ このコード例は、IntelliSense コード スニペットとしても利用できます。 コード スニペット ピッカーでこのスニペットにアクセスするには、 **[Windows フォーム アプリケーション]、[クリップボード]** の順に移動します。 詳細については、「[Code Snippets](/visualstudio/ide/code-snippets)」を参照してください。  
   
  <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetImage%2A> メソッドを使用すると、クリップボードからイメージを取得できます。 この例では、イメージを取得して `PictureBox1` に割り当てる前に、そのイメージがクリップボードにあるかどうかを確認します。  
   
  [!code-vb[VbResourceTasks#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#16)]  
   
- このコード例は、IntelliSense コード スニペットとしても利用できます。 コード スニペット ピッカーでこのスニペットにアクセスするには、**[Windows フォーム アプリケーション]、[クリップボード]** の順に移動します。詳細については、「[コード スニペット](/visualstudio/ide/code-snippets)」を参照してください。  
+ このコード例は、IntelliSense コード スニペットとしても利用できます。 コード スニペット ピッカーでこのスニペットにアクセスするには、 **[Windows フォーム アプリケーション]、[クリップボード]** の順に移動します。詳細については、「[コード スニペット](/visualstudio/ide/code-snippets)」を参照してください。  
   
  クリップボード内のアイテムは、アプリケーションの終了後も保持されます。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "58816884"
  [!code-vb[VbResourceTasks#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#5)]  
   
 > [!IMPORTANT]
->  クリップボードには他のユーザーもアクセスできるため、パスワード、機密データなどの機密情報は格納しないでください。  
+> クリップボードには他のユーザーもアクセスできるため、パスワード、機密データなどの機密情報は格納しないでください。  
   
 ## <a name="see-also"></a>関連項目
 

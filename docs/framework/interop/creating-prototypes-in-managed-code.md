@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42aa63c20e1643bc3f5377fa0ad66b63c1d4433a
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: e8d51149c01b4c8018609ca9313cc4eea2afbb5a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422606"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946567"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>マネージド コードでのプロトタイプの作成
 このトピックは、アンマネージド 関数にアクセスする方法について説明し、マネージド コードでメソッドの定義の注釈を設定するいくつかの属性フィールドを紹介しています。 プラットフォーム呼び出しで使用する .NET ベースの宣言を作成する方法を示す例については、「[プラットフォーム呼び出しによるデータのマーシャリング](marshaling-data-with-platform-invoke.md)」を参照してください。  
@@ -32,7 +32,7 @@ ms.locfileid: "67422606"
  マネージド コードからアンマネージド DLL 関数にアクセスする前に、関数の名前とエクスポートする DLL の名前を知っている必要があります。 この情報を使用すると、マネージド DLL に実装されているアンマネージド 関数の定義の作成を開始できます。 さらに、プラットフォーム呼び出しが関数を作成し、関数間でデータをマーシャリングする方法を調整できます。  
   
 > [!NOTE]
->  文字列を割り当てる Windows API 関数を使用して、`LocalFree` などのメソッドを使用して文字列を解放できます。 プラットフォーム呼び出しは、このようなパラメーターを異なる方法で処理します。 プラットフォーム呼び出しでは、パラメーターを `String` 型の代わりに `IntPtr` 型にします。 <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> クラスにより提供されるメソッドを使用して、型を手動で文字列に変換し、手動で解放します。  
+> 文字列を割り当てる Windows API 関数を使用して、`LocalFree` などのメソッドを使用して文字列を解放できます。 プラットフォーム呼び出しは、このようなパラメーターを異なる方法で処理します。 プラットフォーム呼び出しでは、パラメーターを `String` 型の代わりに `IntPtr` 型にします。 <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> クラスにより提供されるメソッドを使用して、型を手動で文字列に変換し、手動で解放します。  
   
 ## <a name="declaration-basics"></a>宣言の基本  
  アンマネージド 関数に対するマネージド定義は、次の例で確認できるように、言語に依存します。 完全なコード例については、「[プラットフォーム呼び出しの例](platform-invoke-examples.md)」を参照してください。  

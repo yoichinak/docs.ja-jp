@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 5171b9b9878331069e354eeb17ad57ca9bd594a8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2652c080951823e5289785b5906d2b0f48f5d658
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773665"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950787"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>方法: イベントベースの非同期パターンをサポートするコンポーネントを実装する
 顕著な遅延が発生する可能性がある操作を伴うクラスを作成する場合は、[イベント ベースの非同期パターン](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)を実装することによって、非同期機能を与えることを検討します。  
@@ -176,7 +176,7 @@ ms.locfileid: "67773665"
  `CalculateWorker` メソッドはデリゲートにラップされており、`BeginInvoke` の呼び出しとは非同期に呼び出されます。  
   
 > [!NOTE]
->  進行状況の報告は、`BuildPrimeNumberList` メソッドで実装されています。 高速なコンピューターでは、`ProgressChanged` イベントが立て続けに発生する可能性があります。 これらのイベントが生成されるクライアント スレッドは、このような状況を処理できる必要があります。 ユーザー インターフェイスのコードがメッセージであふれ、処理が追いつかなくなり、応答しなくなる可能性があります。 この状況を処理するユーザー インターフェイスの例については、「[方法:イベントベースの非同期パターンのクライアントを実装する](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)」をご覧ください。  
+> 進行状況の報告は、`BuildPrimeNumberList` メソッドで実装されています。 高速なコンピューターでは、`ProgressChanged` イベントが立て続けに発生する可能性があります。 これらのイベントが生成されるクライアント スレッドは、このような状況を処理できる必要があります。 ユーザー インターフェイスのコードがメッセージであふれ、処理が追いつかなくなり、応答しなくなる可能性があります。 この状況を処理するユーザー インターフェイスの例については、「[方法:イベントベースの非同期パターンのクライアントを実装する](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)」をご覧ください。  
   
 ### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>素数の計算を非同期に実行するには:  
   

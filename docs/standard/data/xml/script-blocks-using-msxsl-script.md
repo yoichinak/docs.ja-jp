@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 32c76ae4556467759dad111b47e3ad8f6cf6df92
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1488fb6b7671acd86286bcac6fbfce8bee9429ad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589980"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939586"
 ---
 # <a name="script-blocks-using-msxslscript"></a>msxsl:script を使用したスクリプト ブロック
 <xref:System.Xml.Xsl.XslCompiledTransform> クラスは、`msxsl:script` 要素を使用した埋め込みスクリプトをサポートしています。 スタイル シートが読み込まれると、定義されているすべての関数は Code Document Object Model (CodeDOM) によって Microsoft intermediate language (MSIL) にコンパイルされ、実行時に実行されます。 埋め込みのスクリプト ブロックから生成されたアセンブリは、スタイル シートに対して生成されるアセンブリとは区別されます。  
@@ -22,7 +22,7 @@ ms.locfileid: "64589980"
  埋め込みスクリプトのサポートは、<xref:System.Xml.Xsl.XslCompiledTransform> クラスではオプションの XSLT 設定です。 スクリプトのサポートは既定で無効になっています。 スクリプトのサポートを有効にするには、<xref:System.Xml.Xsl.XsltSettings> プロパティを <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A> に設定して `true` オブジェクトを作成し、そのオブジェクトを <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> メソッドに渡します。  
   
 > [!NOTE]
->  XSLT スクリプトは、スクリプトのサポートが必要であり、完全に信頼された環境で作業している場合のみ有効にします。  
+> XSLT スクリプトは、スクリプトのサポートが必要であり、完全に信頼された環境で作業している場合のみ有効にします。  
   
 ## <a name="msxslscript-element-definition"></a>msxsl:script 要素の定義  
  `msxsl:script` 要素は XSLT 1.0 勧告に対するマイクロソフトの拡張機能であり、次のように定義されます。  
@@ -38,7 +38,7 @@ ms.locfileid: "64589980"
  `implements-prefix` 属性は必須です。 この属性は、名前空間を宣言し、それをスクリプト ブロックに関連付けるために使用されます。 この属性の値は、名前空間を表すプレフィックスです。 このプレフィックスは、スタイル シート内の任意の場所で定義できます。  
   
 > [!NOTE]
->  `msxsl:script` 要素を使用するときは、どの言語でも、スクリプトを CDATA セクション内に配置することをお勧めします。 スクリプトは、その言語で使用する演算子、識別子、または区切り記号を含むことがあり、CDATA セクション内に配置しないと、誤って XML として解釈される可能性があります。 次の XML は、コードを配置できる CDATA セクションのテンプレートです。  
+> `msxsl:script` 要素を使用するときは、どの言語でも、スクリプトを CDATA セクション内に配置することをお勧めします。 スクリプトは、その言語で使用する演算子、識別子、または区切り記号を含むことがあり、CDATA セクション内に配置しないと、誤って XML として解釈される可能性があります。 次の XML は、コードを配置できる CDATA セクションのテンプレートです。  
   
 ```xml  
 <msxsl:script implements-prefix='your-prefix' language='CSharp'>  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19f1cc3708d2d552da3d94bc6b490ebaa2ece657
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: b5c6de2bde111ae459dbcfa1c0a7363d406f5f80
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586159"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928257"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>方法: 動的メソッドを定義および実行する
 ここでは、単純な動的メソッドと、クラスのインスタンスにバインドされた動的メソッドを定義し、実行する手順について説明します。 動的メソッドの詳細については、<xref:System.Reflection.Emit.DynamicMethod> クラスに関するトピックと「[Reflection Emit Dynamic Method Scenarios](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100))」(リフレクション出力による動的メソッドのシナリオ) を参照してください。  
@@ -38,7 +38,7 @@ ms.locfileid: "65586159"
 3. <xref:System.Reflection.Emit.DynamicMethod> を作成します。 この例では、メソッドの名前は `SquareIt` です。  
   
     > [!NOTE]
-    >  動的メソッドに名前を付ける必要はありません。動的メソッドは名前で呼び出すことはできません。 複数の動的メソッドに同じ名前を付けることができます。 ただし、名前は呼び出し履歴に表示されるため、デバッグの際に役立つことがあります。  
+    > 動的メソッドに名前を付ける必要はありません。動的メソッドは名前で呼び出すことはできません。 複数の動的メソッドに同じ名前を付けることができます。 ただし、名前は呼び出し履歴に表示されるため、デバッグの際に役立つことがあります。  
   
      戻り値の型は、`long` として指定します。 プログラム例を格納する `Example` クラスを含むモジュールにメソッドを関連付けます。 読み込むモジュールを指定できます。 動的メソッドは、モジュール レベルの `static` メソッド (Visual Basic では `Shared`) と同様に機能します。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "65586159"
 5. <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%28System.Type%2CSystem.Object%29> メソッド オーバーロードを呼び出して、動的メソッドを表す (手順 1 で宣言した) デリゲートのインスタンスを作成します。 デリゲートを作成すると、メソッドは完了します。メソッドにそれ以上変更を加えようとしても (MSIL の追加など) 無視されます。  
   
     > [!NOTE]
-    >  <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> メソッドを複数回呼び出して、対象の型の他のインスタンスにバインドされたデリゲートを作成できます。  
+    > <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> メソッドを複数回呼び出して、対象の型の他のインスタンスにバインドされたデリゲートを作成できます。  
   
      次のコードでは、プライベート テスト フィールドが 42 に設定された `Example` クラスの新しいインスタンスにメソッドをバインドします。 つまり、デリゲートが呼び出されるたびに、`Example` のインスタンスがメソッドの 1 つ目のパラメーターに渡されます。  
   

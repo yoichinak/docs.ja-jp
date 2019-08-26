@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 458b18ad34cfff6ab136408ab8e8b2e7953b35cb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0b109ec82d139e3b3eb321c90d5f41dd1eae216f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593564"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927931"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>方法: 厳密な名前でアセンブリに署名する
 厳密な名前でアセンブリに署名するには、いくつかの方法があります。  
@@ -41,16 +41,16 @@ ms.locfileid: "64593564"
   
 3. **[アセンブリの署名]** ボックスを選択します。  
   
-4. **[厳密な名前のキー ファイルを選択してください]** ボックスで **[\<参照>]** をクリックし、キー ファイルに移動します。 新しいキー ファイルを作成するには、**[\<新規作成>]** を選択し、**[厳密な名前キーの作成]** ダイアログ ボックスでその名前を入力します。  
+4. **[厳密な名前のキー ファイルを選択してください]** ボックスで **[\<参照>]** をクリックし、キー ファイルに移動します。 新しいキー ファイルを作成するには、 **[\<新規作成>]** を選択し、 **[厳密な名前キーの作成]** ダイアログ ボックスでその名前を入力します。  
   
 > [!NOTE]
->  [アセンブリの遅延署名](../../../docs/framework/app-domains/delay-sign-assembly.md)を行うには、公開キー ファイルを選択します。  
+> [アセンブリの遅延署名](../../../docs/framework/app-domains/delay-sign-assembly.md)を行うには、公開キー ファイルを選択します。  
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>アセンブリ リンカーを使用してアセンブリを作成し、厳密な名前でそのアセンブリに署名するには  
   
 - [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)で次のコマンドを入力します。  
   
-     **al** **/out:**\<*assemblyName*> *\<moduleName>* **/keyfile:**\<*keyfileName*>  
+     **al** **/out:** \<*assemblyName*>  *\<moduleName>* **/keyfile:** \<*keyfileName*>  
   
      それぞれの文字について以下に説明します。  
   
@@ -78,7 +78,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
 2. ソース コード ファイルを通常どおりにコンパイルします。  
   
 > [!NOTE]
->  C# および Visual Basic コンパイラは、ソース コードで <xref:System.Reflection.AssemblyKeyFileAttribute> または <xref:System.Reflection.AssemblyKeyNameAttribute> 属性が見つかった場合、コンパイラ警告を発行します (CS1699 と BC41008)。 この警告は無視してかまいません。  
+> C# および Visual Basic コンパイラは、ソース コードで <xref:System.Reflection.AssemblyKeyFileAttribute> または <xref:System.Reflection.AssemblyKeyNameAttribute> 属性が見つかった場合、コンパイラ警告を発行します (CS1699 と BC41008)。 この警告は無視してかまいません。  
   
  次の例は、 <xref:System.Reflection.AssemblyKeyFileAttribute> という名前のキー ファイルを指定して、 `keyfile.snk`属性を使用します。このキー ファイルは、アセンブリがコンパイルされるディレクトリにあります。  
   

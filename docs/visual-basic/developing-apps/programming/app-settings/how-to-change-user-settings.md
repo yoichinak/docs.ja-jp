@@ -7,12 +7,12 @@ helpviewer_keywords:
 - My.Settings object [Visual Basic], changing user settings
 - examples [Visual Basic], changing user settings
 ms.assetid: 41250181-c594-4854-9988-8183b9eb03cf
-ms.openlocfilehash: 05c95026d061918b38cf301209afefa9498e33bf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 553ebc5b0d6381f56783df8be83344f96a21dd8e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820972"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968404"
 ---
 # <a name="how-to-change-user-settings-in-visual-basic"></a>方法: Visual Basic でユーザー設定を変更する
 ユーザー設定を変更するには、`My.Settings` オブジェクトにある設定のプロパティに新しい値を代入します。  
@@ -20,7 +20,7 @@ ms.locfileid: "58820972"
  `My.Settings` オブジェクトでは、各設定はプロパティとして公開されます。 プロパティ名はその設定の名前と同じで、プロパティの型は設定の型と同じです。 プロパティが読み取り専用かどうかは、設定の**スコープ**でわかります。つまり、**アプリケーション** スコープの設定のプロパティは読み取り専用であるのに対し、**ユーザー** スコープの設定のプロパティは読み取り/書き込みです。 詳細については、「[My.Settings オブジェクト](../../../../visual-basic/language-reference/objects/my-settings-object.md)」を参照してください。  
   
 > [!NOTE]
->  ユーザー スコープ設定の値は実行時に変更および保存できますが、アプリケーション スコープ設定は読み取り専用であり、プログラムで変更することはできません。 アプリケーション スコープの設定を変更するには、アプリケーションを作成するときに、**プロジェクト デザイナー**を使用するか、アプリケーションの構成ファイルを編集します。 詳細については、「[アプリケーションの設定の管理 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)」を参照してください。  
+> ユーザー スコープ設定の値は実行時に変更および保存できますが、アプリケーション スコープ設定は読み取り専用であり、プログラムで変更することはできません。 アプリケーション スコープの設定を変更するには、アプリケーションを作成するときに、**プロジェクト デザイナー**を使用するか、アプリケーションの構成ファイルを編集します。 詳細については、「[アプリケーションの設定の管理 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)」を参照してください。  
   
 ## <a name="example"></a>例  
  この例では、`Nickname` ユーザー設定の値を変更します。  

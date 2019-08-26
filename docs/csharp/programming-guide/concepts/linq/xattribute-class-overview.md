@@ -2,12 +2,12 @@
 title: XAttribute クラスの概要 (C#)
 ms.date: 07/20/2015
 ms.assetid: 5a630f24-f9ad-400e-831e-c14ebfc9e142
-ms.openlocfilehash: 0440e8271edcf54d00a56e2987235afd260f9156
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 79ef00aa79be0c743423cfba1a911b238ff9a7ca
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483195"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590929"
 ---
 # <a name="xattribute-class-overview-c"></a>XAttribute クラスの概要 (C#)
 属性は、要素に関連付けられている名前と値のペアです。 <xref:System.Xml.Linq.XAttribute> クラスは、XML 属性を表します。  
@@ -20,7 +20,7 @@ ms.locfileid: "66483195"
 ## <a name="the-xattribute-constructor"></a>XAttribute コンストラクター  
  最もよく使用する <xref:System.Xml.Linq.XAttribute> クラスのコンストラクターを次に示します。  
   
-|コンストラクター|説明|  
+|Constructor|説明|  
 |-----------------|-----------------|  
 |`XAttribute(XName name, object content)`|<xref:System.Xml.Linq.XAttribute> オブジェクトを作成します。 `name` 引数には属性の名前を指定し、`content` には属性のコンテンツを指定します。|  
   
@@ -81,4 +81,4 @@ Console.WriteLine(c);
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to XML プログラミングの概要 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [LINQ to XML プログラミングの概要 (C#)](./linq-to-xml-overview.md)

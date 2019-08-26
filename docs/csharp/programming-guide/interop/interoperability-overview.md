@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 589bb205b10a5b7b0c4480393b8937e0df36022f
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 1342711ca17b0d2bf5122f4c749514e3b96c9ad7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052393"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921812"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>相互運用性の概要 (C# プログラミング ガイド)
 C# マネージド コードとアンマネージド コード間で相互運用を可能にする方法について説明します。  
@@ -22,10 +22,10 @@ C# マネージド コードとアンマネージド コード間で相互運用
 ## <a name="platform-invoke"></a>プラットフォーム呼び出し  
  "*プラットフォーム呼び出し*" とは、Microsoft Windows API にあるような、ダイナミックリンク ライブラリ (DLL) で実装されているアンマネージド関数をマネージド コードで呼び出すことを可能にするサービスです。 これはエクスポートされた関数を見つけて呼び出し、必要に応じて相互運用の境界を越えて、その引数 (整数、文字列、配列、構造体、その他) をマーシャリングします。  
   
- 詳細については、「[アンマネージ DLL 関数の処理](../../../framework/interop/consuming-unmanaged-dll-functions.md)」と「[方法: プラットフォーム呼び出しを使用して Wave ファイルを再生する](../../../csharp/programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md)」をご覧ください。  
+ 詳細については、「[アンマネージ DLL 関数の処理](../../../framework/interop/consuming-unmanaged-dll-functions.md)」と「[方法: プラットフォーム呼び出しを使用して Wave ファイルを再生する](./how-to-use-platform-invoke-to-play-a-wave-file.md)」をご覧ください。  
   
 > [!NOTE]
->  [共通言語ランタイム](../../../standard/clr.md) (CLR) が、システム リソースへのアクセスを管理します。 CLR の外部のアンマネージ コードを呼び出すと、このセキュリティ メカニズムがバイパスされるため、セキュリティ リスクが生じます。 たとえば、アンマネージ コードがアンマネージ コード内のリソースを直接呼び出した場合、CLR のセキュリティ機構がバイパスされます。 詳細については、「[.NET でのセキュリティ](../../../standard/security/index.md)」を参照してください。  
+> [共通言語ランタイム](../../../standard/clr.md) (CLR) が、システム リソースへのアクセスを管理します。 CLR の外部のアンマネージ コードを呼び出すと、このセキュリティ メカニズムがバイパスされるため、セキュリティ リスクが生じます。 たとえば、アンマネージ コードがアンマネージ コード内のリソースを直接呼び出した場合、CLR のセキュリティ機構がバイパスされます。 詳細については、「[.NET でのセキュリティ](../../../standard/security/index.md)」を参照してください。  
   
 ## <a name="c-interop"></a>C++ Interop  
  It Just Works (IJW) とも呼ばれる C++ interop を使用してネイティブ C++ クラスをラップすると、このクラスを C# またはその他の .NET Framework 言語で作成されたコードで使用できるようになります。 これを行うには、C++ コードを記述して、ネイティブ DLL または COM コンポーネントをラップします。 他の .NET Framework 言語とは異なり、Visual C++ には相互運用性サポートが備えられています。これにより、マネージド コードとアンマネージド コードは同じアプリケーション内、また同じファイルでも共存できるようになります。 C++ コードは、マネージド アセンブリを生成する **/clr** コンパイラ スイッチを使用して構築できます。 最後に、C# プロジェクトのアセンブリへの参照を追加し、他のマネージド クラスを使用するときと同じように、ラップされたオブジェクトを使用します。  
@@ -37,13 +37,13 @@ C# マネージド コードとアンマネージド コード間で相互運用
   
 2. プロジェクトに、COM コンポーネントまたはタイプ ライブラリへの参照を追加します。  
   
-     参照を追加する際、Visual Studio は [Tlbimp.exe (タイプ ライブラリ インポーター)](../../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) を使用します。これにより、タイプ ライブラリを入力として取得し、.NET Framework 相互運用アセンブリを出力します。 このアセンブリは、ランタイム呼び出し可能ラッパー (RCW) とも呼ばれ、タイプ ライブラリ内の COM クラスとインターフェイスをラップする、マネージド クラスとインターフェイスを含みます。 Visual Studio は、生成されたアセンブリへの参照をプロジェクトに追加します。  
+     参照を追加する際、Visual Studio は [Tlbimp.exe (タイプ ライブラリ インポーター)](../../../framework/tools/tlbimp-exe-type-library-importer.md) を使用します。これにより、タイプ ライブラリを入力として取得し、.NET Framework 相互運用アセンブリを出力します。 このアセンブリは、ランタイム呼び出し可能ラッパー (RCW) とも呼ばれ、タイプ ライブラリ内の COM クラスとインターフェイスをラップする、マネージド クラスとインターフェイスを含みます。 Visual Studio は、生成されたアセンブリへの参照をプロジェクトに追加します。  
   
 3. RCW で定義されているクラスのインスタンスを作成します。 これにより、COM オブジェクトのインスタンスが作成されます。  
   
 4. 他のマネージド オブジェクトを使用するときと同様に、オブジェクトを使用します。 オブジェクトがガベージ コレクションによって解放されるとき、COM オブジェクトのインスタンスもメモリから解放されます。  
   
- 詳細については、「[.NET Framework への COM コンポーネントの公開](../../../../docs/framework/interop/exposing-com-components.md)」を参照してください。  
+ 詳細については、「[.NET Framework への COM コンポーネントの公開](../../../framework/interop/exposing-com-components.md)」を参照してください。  
   
 ## <a name="exposing-c-to-com"></a>COM への C# の公開  
  COM クライアントは、適切に公開されている C# 型を使用できます。 C# 型を公開する基本的な手順は次のとおりです。  
@@ -54,15 +54,15 @@ C# マネージド コードとアンマネージド コード間で相互運用
   
 2. COM タイプ ライブラリを生成し、COM の使用状況に登録します。  
   
-     Visual C# プロジェクト プロパティを変更して、C# アセンブリが COM 相互運用に自動的に登録されるようにできます。 Visual Studio は `/tlb` コマンド ライン スイッチを使用して [Regasm.exe (アセンブリ登録ツール)](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) を使用します。これにより、マネージド アセンブリが入力として取得され、タイプ ライブラリを生成できます。 タイプ ライブラリは、アセンブリ内の `public` 型を記述し、レジストリ エントリを追加することで、COM クライアントがマネージド クラスを作成できるようにします。  
+     Visual C# プロジェクト プロパティを変更して、C# アセンブリが COM 相互運用に自動的に登録されるようにできます。 Visual Studio は `/tlb` コマンド ライン スイッチを使用して [Regasm.exe (アセンブリ登録ツール)](../../../framework/tools/regasm-exe-assembly-registration-tool.md) を使用します。これにより、マネージド アセンブリが入力として取得され、タイプ ライブラリを生成できます。 タイプ ライブラリは、アセンブリ内の `public` 型を記述し、レジストリ エントリを追加することで、COM クライアントがマネージド クラスを作成できるようにします。  
   
- 詳細については、「[COM への .NET Framework コンポーネントの公開](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)」と「[COM クラスの例](../../../csharp/programming-guide/interop/example-com-class.md)」を参照してください。  
+ 詳細については、「[COM への .NET Framework コンポーネントの公開](../../../framework/interop/exposing-dotnet-components-to-com.md)」と「[COM クラスの例](./example-com-class.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
 - [相互運用パフォーマンスの向上](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29)
 - [COM と .NET の相互運用性の概要](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net)
-- [COM 相互運用の概要 (Visual Basic)](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)
-- [マネージド コードとアンマネージド コード間でのマーシャリング](../../../../docs/framework/interop/interop-marshaling.md)
-- [アンマネージ コードとの相互運用](../../../../docs/framework/interop/index.md)
-- [C# プログラミングガイド](../../../csharp/programming-guide/index.md)
+- [COM 相互運用の概要 (Visual Basic)](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)
+- [マネージド コードとアンマネージド コード間でのマーシャリング](../../../framework/interop/interop-marshaling.md)
+- [アンマネージ コードとの相互運用](../../../framework/interop/index.md)
+- [C# プログラミングガイド](../index.md)

@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: c67eccc7-004d-4b2f-987e-919cbbd62ef7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30be9fc661ce05a664f9e901edef621d9de62e34
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7416f2f9c200d687d3f2c1f14b01cafdb48f85b1
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713445"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988181"
 ---
 # <a name="how-to-control-ordering-in-a-plinq-query"></a>方法: PLINQ クエリの順序を制御する
 以下の例では、<xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 拡張メソッドを使用して PLINQ クエリの順序を制御する方法を示します。  
   
 > [!WARNING]
->  これらの例は使用法を示すことを主な目的としており、同等の LINQ to Objects 順次クエリよりも実行速度が速い場合もあれば遅い場合もあります。  
+> これらの例は使用法を示すことを主な目的としており、同等の LINQ to Objects 順次クエリよりも実行速度が速い場合もあれば遅い場合もあります。  
   
 ## <a name="example"></a>例  
  次の例では、ソース シーケンスの順序を維持します。 この操作が必要になるのは、たとえば、正確な結果を生成するためにクエリ演算子で順序ありのソース シーケンスが求められる場合です。  

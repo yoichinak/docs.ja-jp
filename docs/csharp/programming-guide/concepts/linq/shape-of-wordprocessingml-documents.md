@@ -2,12 +2,12 @@
 title: WordprocessingML ドキュメントの構造 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3791b5e0-c502-469b-bb75-a7bf6fdd0a94
-ms.openlocfilehash: 10f8ceea7651b207dcafe21b66e340ac39c6adf1
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 84d893267c37ecf99a457ebb683d0451e2b4b68f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483439"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591049"
 ---
 # <a name="shape-of-wordprocessingml-documents-c"></a>WordprocessingML ドキュメントの構造 (C#)
 このトピックでは、WordprocessingML ドキュメントの XML 構造について説明します。  
@@ -96,4 +96,4 @@ using (Package wdPackage = Package.Open("SampleDoc.docx", FileMode.Open, FileAcc
   
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)
+- [チュートリアル:WordprocessingML ドキュメント内のコンテンツの操作 (C#)](./shape-of-wordprocessingml-documents.md)

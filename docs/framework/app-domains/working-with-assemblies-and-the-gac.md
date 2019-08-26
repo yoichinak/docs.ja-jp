@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 363410baea1706211acaa639f1704e91230723a8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 62760cb9fe5832ee018ebdebf6275ea61691c738
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592739"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927801"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>アセンブリとグローバル アセンブリ キャッシュの使用
 あるアセンブリを複数のアプリケーションで共有する場合は、そのアセンブリをグローバル アセンブリ キャッシュ内にインストールできます。 共通言語ランタイムをインストールしている各コンピューターは、このコードをコンピューター全体で使用できます。 グローバル アセンブリ キャッシュは、そのコンピューター上の複数のアプリケーションで共有するように指定されたアセンブリを格納します。 グローバル アセンブリ キャッシュ内にインストールされるアセンブリは、厳密な名前を持つ必要があります。  
   
 > [!NOTE]
->  グローバル アセンブリ キャッシュ内に配置されるアセンブリは、アセンブリ名とファイル名の拡張子を除く部分が一致している必要があります。 たとえば、アセンブリ名が myAssembly のアセンブリの場合、ファイル名は myAssembly.exe または myAssembly.dll である必要があります。  
+> グローバル アセンブリ キャッシュ内に配置されるアセンブリは、アセンブリ名とファイル名の拡張子を除く部分が一致している必要があります。 たとえば、アセンブリ名が myAssembly のアセンブリの場合、ファイル名は myAssembly.exe または myAssembly.dll である必要があります。  
   
  アセンブリの共有が必要な場合にだけ、アセンブリをグローバル アセンブリ キャッシュにインストールします。 一般的には、明らかにアセンブリを共有する必要がある場合を除いて、アセンブリの依存関係はプライベートにし、アセンブリはアプリケーション ディレクトリに配置します。 また、COM 相互運用 (機能) またはアンマネージ コードからアセンブリにアクセスできるようにするために、アセンブリをグローバル アセンブリ キャッシュにインストールする必要はありません。  
   

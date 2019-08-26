@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 519ce34fc1f86220dfd0f3f7e19e3a50fba06087
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: e2cdaa312c037714a34e25e62ad318c9bc745ea7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469451"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953190"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Blittable 型と非 Blittable 型
 ほとんどのデータ型の表現はマネージド メモリとアンマネージド メモリの両方で共通しているため、相互運用マーシャラーによる特別な処理は必要ありません。 これらの型は、マネージド コードとアンマネージド コード間での受け渡しの際に変換が必要でないため、*blittable 型*と呼ばれます。  
@@ -71,7 +71,7 @@ ms.locfileid: "65469451"
 |[System.Valuetype](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0t2cwe11(v=vs.100))|固定メモリ レイアウトを持つ構造体に変換されます。|  
 |[System.Szarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|C スタイルの配列または `SAFEARRAY` に変換されます。|  
   
- クラス型とオブジェクト型は COM 相互運用でのみサポートされます。 Visual Basic、C#、および C++ の対応する型については、[クラス ライブラリの概要](../../../docs/standard/class-library-overview.md)に関する記事を参照してください。  
+ クラス型とオブジェクト型は COM 相互運用でのみサポートされます。 Visual Basic、C#、および C++ の対応する型については、[クラス ライブラリの概要](../../standard/class-library-overview.md)に関する記事を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

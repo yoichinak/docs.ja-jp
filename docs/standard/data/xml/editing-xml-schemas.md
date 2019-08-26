@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 119c4c13c90aeca8c14d2725d927c38be32212a6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3d0d67c82e753b044f759b4d1139c5f6b4837b31
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308719"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948479"
 ---
 # <a name="editing-xml-schemas"></a>XML スキーマの編集
 XML スキーマの編集は、スキーマ オブジェクト モデル (SOM) の最も重要な機能の 1 つです。 XML スキーマの既存の値を変更する場合、SOM のスキーマ コンパイル前のすべてのプロパティを使用できます。 その後、XML スキーマを再コンパイルすると、変更が反映されます。  
@@ -93,7 +93,7 @@ XML スキーマの編集は、スキーマ オブジェクト モデル (SOM) �
 8. スキーマのコンパイル前の <xref:System.Xml.Schema.XmlSchemaObject> コレクションで、それぞれの <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> を反復処理します。  
   
 > [!NOTE]
->  `FirstName` 要素はスキーマのグローバル要素ではないため、<xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> または <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> コレクションでは使用できません。 コード サンプルでは、`FirstName` 要素を検索するために、最初に `Customer` 要素の検索を行います。  
+> `FirstName` 要素はスキーマのグローバル要素ではないため、<xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> または <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> コレクションでは使用できません。 コード サンプルでは、`FirstName` 要素を検索するために、最初に `Customer` 要素の検索を行います。  
 >   
 >  最初のコード サンプルでは、スキーマ コンパイル後の <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> コレクションを使用してスキーマを走査しました。 このサンプルでは、スキーマ コンパイル前の <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> コレクションを使用してスキーマを走査します。 どちらのコレクションでもスキーマのグローバル要素にアクセスできますが、<xref:System.Xml.Schema.XmlSchema.Items%2A> コレクションで反復処理を行う場合、スキーマ内のすべてのグローバル要素に対して反復処理を行う必要があり、スキーマに PSCI プロパティが存在しないため、処理時間が長くなります。 PSCI コレクション (<xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>、<xref:System.Xml.Schema.XmlSchema.Attributes%2A?displayProperty=nameWithType>、<xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A?displayProperty=nameWithType> など) では、グローバルな要素、属性、型、および PSCI プロパティに直接アクセスできます。  
   
