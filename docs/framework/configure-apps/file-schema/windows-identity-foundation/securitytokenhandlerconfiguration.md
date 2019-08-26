@@ -3,20 +3,20 @@ title: <securityTokenHandlerConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 28724cc6-020c-4a06-9a1f-d7594f315019
 author: BrucePerlerMS
-ms.openlocfilehash: 29e18cdda9e18addef4f0f32fd30e9abf6af78fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0aefaa808dfc32085a208420fcd582b1671acc64
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793849"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942452"
 ---
-# <a name="securitytokenhandlerconfiguration"></a>\<securityTokenHandlerConfiguration>
-トークン ハンドラーのコレクションの構成を提供します。  
+# <a name="securitytokenhandlerconfiguration"></a>\<securityTokenHandlerConfiguration >
+トークンハンドラーのコレクションの構成を提供します。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
 \<securityTokenHandlers>  
-\<securityTokenHandlerConfiguration>  
+\<securityTokenHandlerConfiguration >  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,29 +39,29 @@ ms.locfileid: "61793849"
   
 |属性|説明|  
 |---------------|-----------------|  
-|saveBootstrapContext|セッション トークンにブートス トラップ トークンを含める必要があるかどうかを指定します。 設定して、値がトークン ハンドラー コレクションに設定することも可能性があります、`saveBootstrapContext`属性を[ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)要素。 トークン ハンドラー コレクションに設定値は、サービスの設定値をオーバーライドします。|  
-|maximumClockSkew|A<xref:System.TimeSpan>許可されている最大のクロック スキューを指定します。 サインイン セッションの有効期限の検証などの時間を区別する操作を実行するときは、最大の許可されている時刻のずれを制御します。 既定値は 5 分間、"00: 継続"。 指定する方法の詳細についての<xref:System.TimeSpan>値を参照してください[Timespan 値](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)します。 設定して、最大クロック スキューがサービス レベルで設定することも可能性があります、`maximumClockSkew`属性を[ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)要素。 トークン ハンドラー コレクションに設定値は、サービスの設定値をオーバーライドします。|  
+|saveBootstrapContext|ブートストラップトークンをセッショントークンに含める必要があるかどうかを指定します。 また、値は、トークンハンドラーコレクションに対して設定すること`saveBootstrapContext`もできます。これを行うには、identity [ \<configuration >](identityconfiguration.md)要素の属性を設定します。 トークンハンドラーコレクションに設定された値は、サービスで設定された値よりも優先されます。|  
+|maximumClockSkew|許容される最大のクロックスキューを指定する。<xref:System.TimeSpan> サインインセッションの有効期限の検証など、時間を区別する操作を実行するときに許容される最大のクロックスキューを制御します。 既定値は5分 "00:05:00" です。 値を指定<xref:System.TimeSpan>する方法の詳細については、「 [Timespan values](../windows-workflow-foundation/index.md)」を参照してください。 また、サービスレベルでは、 `maximumClockSkew` [ \<identity configuration >](identityconfiguration.md)要素の属性を設定することによって、時刻のずれの最大値を設定することもできます。 トークンハンドラーコレクションに設定された値は、サービスで設定された値よりも優先されます。|  
   
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<audienceUris>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)|この証明書利用者の許容可能な識別子 Uri のセットを指定します。 任意。|  
-|[\<caches>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|セッション トークンやトークン リプレイ検出のために使用されるキャッシュを登録します。 サービス レベルまたはセキュリティ トークン ハンドラー コレクションに指定できます。 省略可能です。|  
-|[\<certificateValidation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|トークン ハンドラーを使用して証明書の検証の設定を制御します。 サービス レベルまたはセキュリティ トークン ハンドラー コレクションに指定できます。 特定のハンドラーが、独自の検証ツールで構成されている場合、これらの設定が上書きされます。 省略可能です。|  
-|[\<issuerNameRegistry>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|トークン ハンドラー コレクションのハンドラーによって使用される発行者名レジストリを構成します。 省略可能です。|  
-|[\<issuerTokenResolver>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)|トークン ハンドラー コレクションのハンドラーによって使用される発行者トークン リゾルバーを登録します。 発行者トークン リゾルバーを使用して、受信トークンおよびメッセージの署名トークンを解決します。 任意。|  
-|[\<serviceTokenResolver>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)|トークン ハンドラー コレクションのハンドラーによって使用されるサービス トークン リゾルバーを登録します。 サービス トークン リゾルバーを使用して、受信トークンおよびメッセージの暗号化トークンを解決します。 省略可能です。|  
-|[\<tokenReplayDetection>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|トークン リプレイ検出が有効にし、トークンの有効期限を指定します。 サービス レベルまたはセキュリティ トークン ハンドラー コレクションに指定できます。 任意。|  
+|[\<audienceUris>](audienceuris.md)|この証明書利用者の許容される識別子である Uri のセットを指定します。 任意。|  
+|[\<キャッシュ >](caches.md)|セッショントークンとトークンリプレイ検出に使用されるキャッシュを登録します。 は、サービスレベルまたはセキュリティトークンハンドラーコレクションで指定できます。 任意。|  
+|[\<certificateValidation >](certificatevalidation.md)|トークンハンドラーが証明書を検証するために使用する設定を制御します。 は、サービスレベルまたはセキュリティトークンハンドラーコレクションで指定できます。 特定のハンドラーが独自の検証コントロールを使用して構成されている場合、これらの設定はオーバーライドされます。 任意。|  
+|[\<issuerNameRegistry >](issuernameregistry.md)|トークンハンドラーコレクションのハンドラーによって使用される発行者名レジストリを構成します。 任意。|  
+|[\<issuerTokenResolver >](issuertokenresolver.md)|トークンハンドラーコレクションのハンドラーによって使用される発行者トークンリゾルバーを登録します。 発行者トークンリゾルバーは、受信トークンとメッセージの署名トークンを解決するために使用されます。 任意。|  
+|[\<serviceTokenResolver>](servicetokenresolver.md)|トークンハンドラーコレクションのハンドラーによって使用されるサービストークンリゾルバーを登録します。 サービストークンリゾルバーは、受信トークンとメッセージの暗号化トークンを解決するために使用されます。 任意。|  
+|[\<tokenReplayDetection>](tokenreplaydetection.md)|トークンリプレイ検出を有効にし、トークンの有効期限を指定します。 は、サービスレベルまたはセキュリティトークンハンドラーコレクションで指定できます。 任意。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|エンドポイントに登録されているセキュリティ トークン ハンドラーのコレクションを指定します。|  
+|[\<securityTokenHandlers>](securitytokenhandlers.md)|エンドポイントに登録されているセキュリティトークンハンドラーのコレクションを指定します。|  
   
 ## <a name="remarks"></a>Remarks  
- このセクションのプロパティ値を提供する、<xref:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration>オブジェクト。 このセクションで構成した設定は、サービスで構成されているものをオーバーライドします。 これらの設定の一部は、ハンドラーがセキュリティ トークン ハンドラー コレクションに追加されたときに指定されている設定によってさらに、オーバーライドことができます。  
+ このセクションでは、 <xref:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration>オブジェクトのプロパティ値を提供します。 このセクションで構成した設定は、サービスで構成されている設定よりも優先されます。 これらの設定の一部は、ハンドラーがセキュリティトークンハンドラーコレクションに追加されたときに指定される設定によってオーバーライドされることがあります。  
   
 ## <a name="example"></a>例  
   
