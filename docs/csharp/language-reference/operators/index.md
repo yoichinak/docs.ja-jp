@@ -1,35 +1,42 @@
 ---
 title: C# 演算子 - C# リファレンス
-ms.date: 04/30/2019
+ms.date: 08/20/2019
 f1_keywords:
 - cs.operators
 helpviewer_keywords:
-- boolean operators [C#]
-- expressions [C#], operators
-- logical operators [C#]
 - operators [C#]
-- Visual C#, operators
-- indirection operators [C#]
-- assignment operators [C#]
-- shift operators [C#]
-- relational operators [C#]
-- bitwise operators [C#]
-- address operators [C#]
-- keywords [C#], operators
-- arithmetic operators [C#]
+- operator precedence [C#]
+- operator associativity [C#]
+- expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 7db61e530ba5c3e0b5ae0ee0002621e369e1833b
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 75697a7a52fbfb04e1b44ecf591e271217a69bf4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566841"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924646"
 ---
 # <a name="c-operators-c-reference"></a>C# 演算子 (C# リファレンス)
 
-C# は組み込み型でサポートされている定義済みの演算子を多数提供します。 たとえば、[算術演算子](arithmetic-operators.md)は組み込み数値型のオペランドの算術演算を実行し、[ブール論理演算子](boolean-logical-operators.md)は [bool](../keywords/bool.md) オペランドの論理演算を実行します。
+C# では、組み込み型でサポートされた演算子が多数提供されています。 たとえば、[算術演算子](arithmetic-operators.md)は数値オペランドで算術演算を実行し、[ブール論理演算子](boolean-logical-operators.md)は [bool](../keywords/bool.md) オペランドで論理演算を実行します。 特定の演算子は[オーバーロード](operator-overloading.md)できます。 演算子のオーバーロードを利用すると、ユーザー定義型のオペランドに対して演算子の動作を指定できます。
 
-ユーザー定義型は、その型のオペランドに対応する動作を定義する特定の演算子をオーバーロードできます。 詳細については、「[演算子のオーバーロード](operator-overloading.md)」を参照してください。
+[式](../../programming-guide/statements-expressions-operators/expressions.md)では、演算子の優先順位と結合規則によって、操作の実行順序が決まります。 かっこを使用すれば、演算子の優先順位と結合規則によって定められた評価の順序を変更することができます。
+
+## <a name="operator-precedence"></a>演算子の優先順位
+
+複数の演算子を含む式では、優先順位の高い方の演算子が優先順位の低い方の演算子よりも先に評価されます。 次の例では、乗算は加算より優先順位が高いため、最初に乗算が実行されます。
+
+```csharp-interactive
+var a = 2 + 2 * 2;
+Console.WriteLine(a); //  output: 6
+```
+
+演算子の優先順位によって定められた評価の順序を変更するには、かっこを使用します。
+
+```csharp-interactive
+var a = (2 + 2) * 2;
+Console.WriteLine(a); //  output: 8
+```
 
 次の表は、C# の演算子を優先順位の高い順にまとめたものです。 各行内の演算子の優先順位は同じです。
 
@@ -51,7 +58,39 @@ C# は組み込み型でサポートされている定義済みの演算子を�
 | [c ? t : f](conditional-operator.md) | 条件演算子 |
 | [x = y](assignment-operator.md)、[x += y](arithmetic-operators.md#compound-assignment)、[x -= y](arithmetic-operators.md#compound-assignment)、[x *= y](arithmetic-operators.md#compound-assignment)、[x /= y](arithmetic-operators.md#compound-assignment)、[x %= y](arithmetic-operators.md#compound-assignment)、[x &= y](boolean-logical-operators.md#compound-assignment)、[x &#124;= y](boolean-logical-operators.md#compound-assignment)、[x ^= y](boolean-logical-operators.md#compound-assignment)、[x <<= y](bitwise-and-shift-operators.md#compound-assignment)、[x >>= y](bitwise-and-shift-operators.md#compound-assignment)、[=>](lambda-operator.md) | 代入とラムダ宣言 |
 
+## <a name="operator-associativity"></a>演算子の結合規則
+
+演算子の優先順位が同じ場合は、演算子の結合規則によって、操作の実行順序が決まります。
+
+- *結合規則が左から右*の演算子は、左から右に順番に評価されます。 [代入演算子](assignment-operator.md)と [null 合体演算子`??`](null-coalescing-operator.md)を除き、2 項演算子はすべて左からの結合です。 たとえば、`a + b - c` は `(a + b) - c` と評価されます。
+- *結合規則が右から左*の演算子は、右から左に評価されます。 代入演算子、null 合体演算子 `??`、および[条件演算子`?:`](conditional-operator.md)は、右からの結合です。 たとえば、`x = y = z` は `x = (y = z)` と評価されます。
+
+演算子の結合規則によって定められた評価の順序を変更するには、かっこを使用します。
+
+```csharp-interactive
+int a = 13 / 5 / 2;
+int b = 13 / (5 / 2);
+Console.WriteLine($"a = {a}, b = {b}");  // output: a = 1, b = 6
+```
+
+## <a name="operand-evaluation"></a>オペランドの評価
+
+式内のオペランドは、演算子の優先順位と結合規則に関係なく、左から右に評価されます。 次の例では、演算子とオペランドが評価される順序を示しています。
+
+| 正規表現 | 評価の順序 |
+| ---------- | ------------------- |
+|`a + b`|a、b、+|
+|`a + b * c`|a、b、c、*、+|
+|`a / b + c * d`|a、b、/、c、d、*、+|
+|`a / (b + c) * d`|a、b、c、+、/、d、*|
+
+通常、演算子のオペランドはすべて評価されます。 一部の演算子は、条件付きでオペランドを評価します。 つまり、このような演算子の最初のオペランドの値では、他の (どの) オペランドを評価する必要があるかどうかが定義されます。 これらの演算子は、条件付き論理 [AND (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) および [OR (`||`)](boolean-logical-operators.md#conditional-logical-or-operator-) 演算子、[null 合体演算子 `??`](null-coalescing-operator.md)、[null 条件演算子 `?.` と `?[]`](member-access-operators.md#null-conditional-operators--and-)、および[条件演算子 `?:`](conditional-operator.md) です。 詳細については、各演算子の説明を参照してください。
+
+## <a name="c-language-specification"></a>C# 言語仕様
+
+詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)に関するページの「[演算子](~/_csharplang/spec/expressions.md#operators)」セクションを参照してください。
+
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [演算子](../../programming-guide/statements-expressions-operators/operators.md)
+- [式](../../programming-guide/statements-expressions-operators/expressions.md)

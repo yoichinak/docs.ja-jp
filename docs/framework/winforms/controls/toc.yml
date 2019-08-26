@@ -1,49 +1,44 @@
 - name: Windows フォーム コントロール
   href: index.md
   items:
-    - name: Windows フォームでのコントロールの配置
-      href: arranging-controls-on-windows-forms.md
+    - name: Windows フォーム上にコントロールを配置する
       items:
-        - name: '方法:Windows フォーム上の複数のコントロールを配置する'
+        - name: '方法: 複数の制御コントロールを整列する'
           href: how-to-align-multiple-controls-on-windows-forms.md
-        - name: '方法:Windows フォームにコントロールを固定する'
+        - name: '方法: コントロールを固定する'
           href: how-to-anchor-controls-on-windows-forms.md
-        - name: '方法:Windows フォーム間でコントロールをコピーする'
-          href: how-to-copy-controls-between-windows-forms.md
-        - name: '方法:Windows フォーム上のコントロールをドッキングする'
+        - name: '方法: コントロールをドッキングする'
           href: how-to-dock-controls-on-windows-forms.md
-        - name: '方法:Windows フォーム上のオブジェクトをレイヤー化する'
+        - name: '方法: オブジェクトを階層化する'
           href: how-to-layer-objects-on-windows-forms.md
-        - name: '方法:Windows フォームにコントロールをロックする'
+        - name: '方法: コントロールをロックする'
           href: how-to-lock-controls-to-windows-forms.md
-        - name: '方法:Windows フォーム上のコントロールを位置設定する'
+        - name: '方法: コントロールを配置する'
           href: how-to-position-controls-on-windows-forms.md
-        - name: '方法:Windows フォーム上のコントロールのサイズを変更する'
+        - name: '方法: コントロールのサイズを変更する'
           href: how-to-resize-controls-on-windows-forms.md
-        - name: '方法:すべての Windows フォームにグリッド オプションを設定する'
+        - name: '方法: すべての Windows フォームにグリッド オプションを設定する'
           href: how-to-set-grid-options-for-all-windows-forms.md
-        - name: '方法:Windows フォーム上のタブ オーダーを設定する'
+        - name: '方法: タブ オーダーを設定する'
           href: how-to-set-the-tab-order-on-windows-forms.md
-        - name: 'チュートリアル:スナップ線を使用した Windows フォーム上のコントロールの配置'
+        - name: 'チュートリアル: スナップ線を使用してコントロールを配置する'
           href: walkthrough-arranging-controls-on-windows-forms-using-snaplines.md
-        - name: '方法:コントロールを Windows フォームのスナップ線とグリッドを使用して配置する'
-          href: how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms.md
-        - name: '方法:既存のコントロールを別の親に再配置する'
+        - name: '方法: 既存のコントロールを別の親に再配置する'
           href: how-to-reassign-existing-controls-to-a-different-parent.md
-        - name: 'チュートリアル:Padding、Margin、AutoSize プロパティを使用した Windows フォーム コントロールのレイアウト'
+        - name: 'チュートリアル: Padding、Margin、AutoSize プロパティを使用した Windows フォーム コントロールのレイアウト'
           href: windows-forms-controls-padding-autosize.md
     - name: Windows フォームへのコントロールの追加
       href: putting-controls-on-windows-forms.md
       items:
-        - name: '方法:Windows フォームにコントロールを追加する'
+        - name: '方法: コントロールを追加する'
           href: how-to-add-controls-to-windows-forms.md
-        - name: '方法:ユーザー インターフェイスを持たないコントロールを Windows フォームに追加する'
+        - name: '方法: ユーザー インターフェイスを持たないコントロールを追加する'
           href: how-to-add-controls-without-a-user-interface-to-windows-forms.md
-        - name: '方法:コントロールのコレクションに対して実行時にコントロールを追加または削除する'
+        - name: '方法: コントロールのコレクションに対して実行時にコントロールを追加または削除する'
           href: how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time.md
-        - name: 'チュートリアル:ツールボックスへのカスタム コンポーネントの自動設定'
+        - name: 'チュートリアル: ツールボックスへのカスタム コンポーネントの自動設定'
           href: walkthrough-automatically-populating-the-toolbox-with-custom-components.md
-        - name: '方法:Windows フォームに ActiveX コントロールを追加する'
+        - name: '方法: ActiveX コントロールを追加する'
           href: how-to-add-activex-controls-to-windows-forms.md
         - name: Windows フォームで ActiveX コントロールをホストする場合の考慮事項
           href: considerations-when-hosting-an-activex-control-on-a-windows-form.md
@@ -71,26 +66,26 @@
           items:
             - name: BackgroundWorker コンポーネントの概要
               href: backgroundworker-component-overview.md
-            - name: '方法:バックグラウンドで操作を実行する'
+            - name: '方法: バックグラウンドで操作を実行する'
               href: how-to-run-an-operation-in-the-background.md
-            - name: '方法:バックグラウンドでファイルをダウンロードする'
+            - name: '方法: バックグラウンドでファイルをダウンロードする'
               href: how-to-download-a-file-in-the-background.md
-            - name: '方法:バックグラウンド操作を使用するフォームを実装する'
+            - name: '方法: バックグラウンド操作を使用するフォームを実装する'
               href: how-to-implement-a-form-that-uses-a-background-operation.md
-            - name: 'チュートリアル:操作をバックグラウンドで実行する'
+            - name: 'チュートリアル: 操作をバックグラウンドで実行する'
               href: walkthrough-running-an-operation-in-the-background.md
-            - name: 'チュートリアル:バックグラウンド操作を使用するフォームの実装'
+            - name: 'チュートリアル: バックグラウンド操作を使用するフォームの実装'
               href: walkthrough-implementing-a-form-that-uses-a-background-operation.md
         - name: BindingNavigator コントロール
           href: bindingnavigator-control-windows-forms.md
           items:
             - name: BindingNavigator コントロールの概要
               href: bindingnavigator-control-overview-windows-forms.md
-            - name: '方法:Windows フォーム BindingNavigator コントロールを使用してデータ間を移動する'
+            - name: '方法: Windows フォーム BindingNavigator コントロールを使用してデータ間を移動する'
               href: how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md
-            - name: '方法:Windows フォームの BindingNavigator コントロールを使用して DataSet を移動する'
+            - name: '方法: Windows フォームの BindingNavigator コントロールを使用して DataSet を移動する'
               href: move-through-a-dataset-with-wf-bindingnavigator-control.md
-            - name: '方法:Windows フォーム BindingNavigator コントロールに [Load]、[Save]、[Cancel] の各ボタンを追加する'
+            - name: '方法: Windows フォーム BindingNavigator コントロールに [Load]、[Save]、[Cancel] の各ボタンを追加する'
               href: load-save-and-cancel-bindingnavigator.md
         - name: BindingSource コンポーネント
           href: bindingsource-component.md
@@ -99,48 +94,48 @@
               href: bindingsource-component-overview.md
             - name: BindingSource コンポーネント アーキテクチャ
               href: bindingsource-component-architecture.md
-            - name: '方法:Windows フォーム コントロールをファクトリ オブジェクトにバインドする'
+            - name: '方法: Windows フォーム コントロールをファクトリ オブジェクトにバインドする'
               href: how-to-bind-a-windows-forms-control-to-a-factory-object.md
-            - name: '方法:Windows フォーム コントロールを型にバインドする'
+            - name: '方法: Windows フォーム コントロールを型にバインドする'
               href: how-to-bind-a-windows-forms-control-to-a-type.md
-            - name: '方法:デザイナーを使って Windows フォーム コントロールを型にバインドする'
+            - name: '方法: デザイナーを使って Windows フォーム コントロールを型にバインドする'
               href: how-to-bind-a-windows-forms-control-to-a-type-using-the-designer.md
-            - name: '方法:Windows フォーム BindingSource を使用して Web サービスにバインドする'
+            - name: '方法: Windows フォーム BindingSource を使用して Web サービスにバインドする'
               href: how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource.md
-            - name: '方法:Windows フォーム コントロールを DBNull データベース値にバインドする'
+            - name: '方法: Windows フォーム コントロールを DBNull データベース値にバインドする'
               href: how-to-bind-windows-forms-controls-to-dbnull-database-values.md
-            - name: '方法:デザイナーを使用して Windows フォーム コントロールを BindingSource コンポーネントにバインドする'
+            - name: '方法: デザイナーを使用して Windows フォーム コントロールを BindingSource コンポーネントにバインドする'
               href: bind-wf-controls-with-the-bindingsource.md
-            - name: '方法:Windows フォーム BindingSource コンポーネントを使用してルックアップ テーブルを作成する'
+            - name: '方法: Windows フォーム BindingSource コンポーネントを使用してルックアップ テーブルを作成する'
               href: how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component.md
-            - name: '方法:Windows フォーム BindingSource を使用して項目の追加をカスタマイズする'
+            - name: '方法: Windows フォーム BindingSource を使用して項目の追加をカスタマイズする'
               href: how-to-customize-item-addition-with-the-windows-forms-bindingsource.md
-            - name: '方法:データ バインドで発生するエラーと例外を処理する'
+            - name: '方法: データ バインドで発生するエラーと例外を処理する'
               href: how-to-handle-errors-and-exceptions-that-occur-with-databinding.md
-            - name: '方法:BindingSource と INotifyPropertyChanged の各インターフェイスを使用して変更通知を発生させる'
+            - name: '方法: BindingSource と INotifyPropertyChanged の各インターフェイスを使用して変更通知を発生させる'
               href: raise-change-notifications--bindingsource.md
-            - name: '方法:BindingSource ResetItem メソッドを使用して変更通知を発生させる'
+            - name: '方法: BindingSource ResetItem メソッドを使用して変更通知を発生させる'
               href: how-to-raise-change-notifications-using-the-bindingsource-resetitem-method.md
-            - name: '方法:BindingSource を使用して Windows フォーム コントロール内にデータ ソースの更新を反映させる'
+            - name: '方法: BindingSource を使用して Windows フォーム コントロール内にデータ ソースの更新を反映させる'
               href: reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md
-            - name: '方法:BindingSource コンポーネントを使用してフォーム間でバインド データを共有する'
+            - name: '方法: BindingSource コンポーネントを使用してフォーム間でバインド データを共有する'
               href: how-to-share-bound-data-across-forms-using-the-bindingsource-component.md
-            - name: '方法:Windows フォーム BindingSource コンポーネントで ADO.NET データを並べ替える/フィルター処理する'
+            - name: '方法: Windows フォーム BindingSource コンポーネントで ADO.NET データを並べ替える/フィルター処理する'
               href: sort-and-filter-ado-net-data-with-wf-bindingsource-component.md
         - name: Button コントロール
           href: button-control-windows-forms.md
           items:
             - name: Button コントロールの概要
               href: button-control-overview-windows-forms.md
-            - name: '方法:Windows フォームの Button コントロールを承認ボタンとして指定する'
+            - name: '方法: Windows フォームの Button コントロールを承認ボタンとして指定する'
               href: how-to-designate-a-windows-forms-button-as-the-accept-button.md
-            - name: '方法:デザイナーを使用して Windows フォームの Button コントロールを承認ボタンとして指定する'
+            - name: '方法: デザイナーを使用して Windows フォームの Button コントロールを承認ボタンとして指定する'
               href: designate-a-wf-button-as-the-accept-button-using-the-designer.md
-            - name: '方法:Windows フォームの Button コントロールをキャンセル ボタンとして指定する'
+            - name: '方法: Windows フォームの Button コントロールをキャンセル ボタンとして指定する'
               href: how-to-designate-a-windows-forms-button-as-the-cancel-button.md
-            - name: '方法:デザイナーを使用して Windows フォームの Button コントロールをキャンセル ボタンとして指定する'
+            - name: '方法: デザイナーを使用して Windows フォームの Button コントロールをキャンセル ボタンとして指定する'
               href: designate-a-wf-button-as-the-cancel-button-using-the-designer.md
-            - name: '方法:Windows フォームのボタンのクリックに応答する'
+            - name: '方法: Button のクリックに応答する'
               href: how-to-respond-to-windows-forms-button-clicks.md
             - name: Windows フォームの Button コントロールを選択する方法
               href: ways-to-select-a-windows-forms-button-control.md
@@ -149,83 +144,83 @@
           items:
             - name: CheckBox コントロールの概要
               href: checkbox-control-overview-windows-forms.md
-            - name: '方法:Windows フォーム CheckBox のクリックに応答する'
+            - name: '方法: CheckBox のクリックに応答する'
               href: how-to-respond-to-windows-forms-checkbox-clicks.md
-            - name: '方法:Windows フォームの CheckBox コントロールでオプションを設定する'
+            - name: '方法: CheckBox コントロールでオプションを設定する'
               href: how-to-set-options-with-windows-forms-checkbox-controls.md
         - name: CheckedListBox コントロール
           href: checkedlistbox-control-windows-forms.md
           items:
             - name: CheckedListBox コントロールの概要
               href: checkedlistbox-control-overview-windows-forms.md
-            - name: '方法:Windows フォーム CheckedListBox コントロールでオンになっている項目を判断する'
+            - name: '方法: Windows フォーム CheckedListBox コントロールでオンになっている項目を判断する'
               href: how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md
         - name: ColorDialog コンポーネント
           href: colordialog-component-windows-forms.md
           items:
             - name: ColorDialog コンポーネントの概要
               href: colordialog-component-overview-windows-forms.md
-            - name: '方法:Windows フォーム ColorDialog コンポーネントの表示形式を変更する'
+            - name: '方法: Windows フォーム ColorDialog コンポーネントの表示形式を変更する'
               href: how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md
-            - name: '方法:ColorDialog コンポーネントを使用してカラー パレットを表示する'
+            - name: '方法: ColorDialog コンポーネントを使用してカラー パレットを表示する'
               href: how-to-show-a-color-palette-with-the-colordialog-component.md
         - name: ComboBox コントロール
           href: combobox-control-windows-forms.md
           items:
             - name: ComboBox コントロールの概要
               href: combobox-control-overview-windows-forms.md
-            - name: '方法:ComboBox コントロールにサイズ変更可能なテキストを作成する'
+            - name: '方法: ComboBox コントロールにサイズ変更可能なテキストを作成する'
               href: how-to-create-variable-sized-text-in-a-combobox-control.md
         - name: ContextMenu コンポーネント
           href: contextmenu-component-windows-forms.md
           items:
             - name: ContextMenu コンポーネントの概要
               href: contextmenu-component-overview-windows-forms.md
-            - name: '方法:Windows フォーム ContextMenu コンポーネントのメニュー項目を追加および削除する'
+            - name: '方法: Windows フォーム ContextMenu コンポーネントのメニュー項目を追加および削除する'
               href: add-and-remove-menu-items-with-wf-contextmenu-component.md
         - name: ContextMenuStrip コントロール
           href: contextmenustrip-control.md
           items:
             - name: ContextMenuStrip コントロールの概要
               href: contextmenustrip-control-overview.md
-            - name: '方法:ContextMenuStrip をコントロールに関連付ける'
+            - name: '方法: ContextMenuStrip をコントロールに関連付ける'
               href: how-to-associate-a-contextmenustrip-with-a-control.md
-            - name: '方法:メニュー項目を ContextMenuStrip に追加する'
+            - name: '方法: メニュー項目を ContextMenuStrip に追加する'
               href: how-to-add-menu-items-to-a-contextmenustrip.md
-            - name: '方法:ContextMenuStrip のチェックの余白とイメージの余白を設定する'
+            - name: '方法: ContextMenuStrip のチェックの余白とイメージの余白を設定する'
               href: how-to-configure-contextmenustrip-check-margins-and-image-margins.md
-            - name: '方法:ContextMenuStrip コントロールでチェックの余白とイメージの余白を有効にする'
+            - name: '方法: ContextMenuStrip コントロールでチェックの余白とイメージの余白を有効にする'
               href: how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md
-            - name: '方法:ContextMenuStrip のオープン イベントを処理する'
+            - name: '方法: ContextMenuStrip のオープン イベントを処理する'
               href: how-to-handle-the-contextmenustrip-opening-event.md
         - name: DataGrid コントロール
           href: datagrid-control-windows-forms.md
           items:
             - name: DataGrid コントロールの概要
               href: datagrid-control-overview-windows-forms.md
-            - name: '方法:Windows フォーム DataGrid コントロールにテーブルと列を追加する'
+            - name: '方法: Windows フォーム DataGrid コントロールにテーブルと列を追加する'
               href: how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md
-            - name: '方法:デザイナーを使って Windows フォーム DataGrid コントロールにテーブルと列を追加する'
+            - name: '方法: デザイナーを使って Windows フォーム DataGrid コントロールにテーブルと列を追加する'
               href: add-tables-and-columns-to-wf-datagrid-control-using-the-designer.md
-            - name: '方法:データ ソースに Windows フォーム DataGrid コントロールをバインドする'
+            - name: '方法: データ ソースに Windows フォーム DataGrid コントロールをバインドする'
               href: how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md
-            - name: '方法:デザイナーを使ってデータ ソースに Windows フォーム DataGrid コントロールをバインドする'
+            - name: '方法: デザイナーを使ってデータ ソースに Windows フォーム DataGrid コントロールをバインドする'
               href: bind-wf-datagrid-control-to-a-data-source-using-the-designer.md
-            - name: '方法:Windows フォーム DataGrid コントロールに表示されるデータを実行時に変更する'
+            - name: '方法: Windows フォーム DataGrid コントロールに表示されるデータを実行時に変更する'
               href: change-displayed-data-at-run-time-wf-datagrid-control.md
-            - name: '方法:Windows フォーム DataGrid コントロールを使用してマスター/詳細リストを作成する'
+            - name: '方法: Windows フォーム DataGrid コントロールを使用してマスター/詳細リストを作成する'
               href: how-to-create-master-detail-lists-with-the-windows-forms-datagrid-control.md
-            - name: '方法:デザイナーで Windows フォーム DataGrid コントロールを使用してマスター/詳細リストを作成する'
+            - name: '方法: デザイナーで Windows フォーム DataGrid コントロールを使用してマスター/詳細リストを作成する'
               href: create-master-details-lists-with-wf-datagrid-control-using-the-designer.md
-            - name: '方法:Windows フォーム DataGrid コントロールの列を削除するまたは非表示にする'
+            - name: '方法: Windows フォーム DataGrid コントロールの列を削除するまたは非表示にする'
               href: how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md
-            - name: '方法:Windows フォーム DataGrid コントロールの書式を設定する'
+            - name: '方法: Windows フォーム DataGrid コントロールの書式を設定する'
               href: how-to-format-the-windows-forms-datagrid-control.md
-            - name: '方法:デザイナーを使って Windows フォーム DataGrid コントロールの書式を設定する'
+            - name: '方法: デザイナーを使って Windows フォーム DataGrid コントロールの書式を設定する'
               href: how-to-format-the-windows-forms-datagrid-control-using-the-designer.md
-            - name: '方法:Windows フォーム DataGrid コントロールのクリックに応答する'
+            - name: '方法: Windows フォーム DataGrid コントロールのクリックに応答する'
               href: how-to-respond-to-clicks-in-the-windows-forms-datagrid-control.md
-            - name: '方法:Windows フォームの DataGrid コントロールを使用して入力データを検証する'
+            - name: '方法: Windows フォームの DataGrid コントロールを使用して入力データを検証する'
               href: how-to-validate-input-with-the-windows-forms-datagrid-control.md
             - name: Windows フォームの DataGrid コントロール内の移動に使用できるキーボード ショートカット
               href: keyboard-shortcuts-for-the-windows-forms-datagrid-control.md
@@ -235,27 +230,27 @@
             - name: Windows フォーム DataGridView コントロールでのデザイナーの使用
               href: using-the-designer-with-the-windows-forms-datagridview-control.md
               items:
-                - name: '方法:デザイナーを使用して Windows フォーム DataGridView コントロールの列を追加および削除する'
+                - name: '方法: デザイナーを使用して Windows フォーム DataGridView コントロールの列を追加および削除する'
                   href: add-and-remove-columns-in-the-datagrid-using-the-designer.md
-                - name: '方法:デザイナーを使用してデータを Windows フォーム DataGridView コントロールにバインドする'
+                - name: '方法: デザイナーを使用してデータを Windows フォーム DataGridView コントロールにバインドする'
                   href: bind-data-to-the-datagrid-using-the-designer.md
-                - name: '方法:デザイナーを使用して Windows フォーム DataGridView コントロールの列の順序を変更する'
+                - name: '方法: デザイナーを使用して Windows フォーム DataGridView コントロールの列の順序を変更する'
                   href: change-the-order-of-columns-in-the-datagrid-using-the-designer.md
-                - name: '方法:デザイナーを使用して Windows フォーム DataGridView 列の種類を変更する'
+                - name: '方法: デザイナーを使用して Windows フォーム DataGridView 列の種類を変更する'
                   href: change-the-type-of-a-wf-datagridview-column-using-the-designer.md
-                - name: '方法:デザイナーを使用して Windows フォーム DataGridView コントロールの列の並べ替えを有効にする'
+                - name: '方法: デザイナーを使用して Windows フォーム DataGridView コントロールの列の並べ替えを有効にする'
                   href: enable-column-reordering-in-the-datagrid-using-the-designer.md
-                - name: '方法:デザイナーを使用して Windows フォーム DataGridView コントロールの列を固定する'
+                - name: '方法: デザイナーを使用して Windows フォーム DataGridView コントロールの列を固定する'
                   href: freeze-columns-in-the-datagrid-using-the-designer.md
-                - name: '方法:デザイナーを使用して Windows フォーム DataGridView コントロールの列を非表示にする'
+                - name: '方法: デザイナーを使用して Windows フォーム DataGridView コントロールの列を非表示にする'
                   href: hide-columns-in-the-datagrid-using-the-designer.md
-                - name: '方法:デザイナーを使用して Windows フォームの DataGridView コントロールで列を読み取り専用にする'
+                - name: '方法: デザイナーを使用して Windows フォームの DataGridView コントロールで列を読み取り専用にする'
                   href: make-columns-read-only-in-the-datagrid-using-the-designer.md
-                - name: '方法:デザイナーを使用して Windows フォーム DataGridView コントロールで行が追加および削除されないようにする'
+                - name: '方法: デザイナーを使用して Windows フォーム DataGridView コントロールで行が追加および削除されないようにする'
                   href: prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md
-                - name: '方法:デザイナーを使用して Windows フォーム DataGridView コントロールに交互の行のスタイルを設定する'
+                - name: '方法: デザイナーを使用して Windows フォーム DataGridView コントロールに交互の行のスタイルを設定する'
                   href: set-alternating-row-styles-for-the-datagrid-using-the-designer.md
-                - name: '方法:デザイナーを使用して Windows フォーム DataGridView コントロールの既定のセル スタイルとデータ形式を設定する'
+                - name: '方法: デザイナーを使用して Windows フォーム DataGridView コントロールの既定のセル スタイルとデータ形式を設定する'
                   href: default-cell-styles-datagridview.md
             - name: DataGridView コントロールの概要
               href: datagridview-control-overview-windows-forms.md
@@ -275,38 +270,38 @@
             - name: Windows フォーム DataGridView コントロールでの列、行、およびセルの基本機能
               href: basic-column-row-and-cell-features-wf-datagridview-control.md
               items:
-                - name: '方法:Windows フォームの DataGridView コントロールの列を非表示にする'
+                - name: '方法: Windows フォームの DataGridView コントロールの列を非表示にする'
                   href: how-to-hide-columns-in-the-windows-forms-datagridview-control.md
-                - name: '方法:Windows フォーム DataGridView コントロールの列ヘッダーを非表示にする'
+                - name: '方法: Windows フォーム DataGridView コントロールの列ヘッダーを非表示にする'
                   href: how-to-hide-column-headers-in-the-windows-forms-datagridview-control.md
-                - name: '方法:Windows フォーム DataGridView コントロールの列の並べ替えを有効にする'
+                - name: '方法: Windows フォーム DataGridView コントロールの列の並べ替えを有効にする'
                   href: how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md
-                - name: '方法:Windows フォーム DataGridView コントロールの列を固定する'
+                - name: '方法: Windows フォーム DataGridView コントロールの列を固定する'
                   href: how-to-freeze-columns-in-the-windows-forms-datagridview-control.md
-                - name: '方法:Windows フォームの DataGridView コントロールで列を読み取り専用にする'
+                - name: '方法: Windows フォームの DataGridView コントロールで列を読み取り専用にする'
                   href: how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md
-                - name: '方法:Windows フォーム DataGridView コントロールで行が追加および削除されないようにする'
+                - name: '方法: Windows フォーム DataGridView コントロールで行が追加および削除されないようにする'
                   href: prevent-row-addition-and-deletion-datagridview.md
-                - name: '方法:Windows フォーム DataGridView コントロールの現在のセルを取得および設定する'
+                - name: '方法: Windows フォーム DataGridView コントロールの現在のセルを取得および設定する'
                   href: get-and-set-the-current-cell-wf-datagridview-control.md
-                - name: '方法:Windows フォーム DataGridView コントロールのセルにイメージを表示する'
+                - name: '方法: Windows フォーム DataGridView コントロールのセルにイメージを表示する'
                   href: how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md
             - name: Windows フォームの DataGridView コントロールの基本的な書式設定およびスタイル設定
               href: basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md
               items:
-                - name: '方法:Windows フォーム DataGridView コントロールの境界線とグリッド線のスタイルを変更する'
+                - name: '方法: Windows フォーム DataGridView コントロールの境界線とグリッド線のスタイルを変更する'
                   href: change-the-border-and-gridline-styles-in-the-datagrid.md
                 - name: Windows フォーム DataGridView コントロールでのセルのスタイル
                   href: cell-styles-in-the-windows-forms-datagridview-control.md
-                - name: '方法:Windows フォーム DataGridView コントロールの既定のセル スタイルを設定する'
+                - name: '方法: Windows フォーム DataGridView コントロールの既定のセル スタイルを設定する'
                   href: how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md
-                - name: '方法:Windows フォーム DataGridView コントロールのデータの書式を設定する'
+                - name: '方法: Windows フォーム DataGridView コントロールのデータの書式を設定する'
                   href: how-to-format-data-in-the-windows-forms-datagridview-control.md
-                - name: '方法:Windows フォーム DataGridView コントロールのフォントと色のスタイルを設定する'
+                - name: '方法: Windows フォーム DataGridView コントロールのフォントと色のスタイルを設定する'
                   href: how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md
-                - name: '方法:Windows フォーム DataGridView コントロールに交互の行のスタイルを設定する'
+                - name: '方法: Windows フォーム DataGridView コントロールに交互の行のスタイルを設定する'
                   href: how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md
-                - name: '方法:行テンプレートを使用して Windows フォーム DataGridView コントロールの行をカスタマイズする'
+                - name: '方法: 行テンプレートを使用して Windows フォーム DataGridView コントロールの行をカスタマイズする'
                   href: use-the-row-template-to-customize-rows-in-the-datagrid.md
             - name: Windows フォーム DataGridView コントロールでのデータの表示
               href: displaying-data-in-the-windows-forms-datagridview-control.md
@@ -315,33 +310,33 @@
                   href: data-display-modes-in-the-windows-forms-datagridview-control.md
                 - name: Windows フォーム DataGridView コントロールでのデータの書式設定
                   href: data-formatting-in-the-windows-forms-datagridview-control.md
-                - name: 'チュートリアル:バインドされていない Windows フォーム DataGridView コントロールを作成する'
+                - name: 'チュートリアル: バインドされていない Windows フォーム DataGridView コントロールを作成する'
                   href: walkthrough-creating-an-unbound-windows-forms-datagridview-control.md
                   items:
-                    - name: '方法:連結されていない Windows フォーム DataGridView コントロールを作成する'
+                    - name: '方法: 連結されていない Windows フォーム DataGridView コントロールを作成する'
                       href: how-to-create-an-unbound-windows-forms-datagridview-control.md
-                - name: '方法:データを Windows フォーム DataGridView コントロールにバインドする'
+                - name: '方法: データを Windows フォーム DataGridView コントロールにバインドする'
                   href: how-to-bind-data-to-the-windows-forms-datagridview-control.md
-                - name: '方法:データバインドされた Windows フォーム DataGridView コントロールに列を自動生成する'
+                - name: '方法: データバインドされた Windows フォーム DataGridView コントロールに列を自動生成する'
                   href: autogenerate-columns-in-a-data-bound-wf-datagridview-control.md
-                - name: '方法:Windows フォーム DataGridView コントロールから自動生成された列を削除する'
+                - name: '方法: Windows フォーム DataGridView コントロールから自動生成された列を削除する'
                   href: remove-autogenerated-columns-from-a-wf-datagridview-control.md
-                - name: '方法:Windows フォーム DataGridView コントロールの列の順序を変更する'
+                - name: '方法: Windows フォーム DataGridView コントロールの列の順序を変更する'
                   href: how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md
-                - name: '方法:データバインドされた Windows フォーム DataGridView コントロールに非バインド列を追加する'
+                - name: '方法: データバインドされた Windows フォーム DataGridView コントロールに非バインド列を追加する'
                   href: unbound-column-to-a-data-bound-datagridview.md
-                - name: '方法:オブジェクトを Windows フォーム DataGridView コントロールにバインドする'
+                - name: '方法: DataGridView コントロールにオブジェクトをバインドする'
                   href: how-to-bind-objects-to-windows-forms-datagridview-controls.md
-                - name: '方法:Windows フォームの DataGridView 行にバインドされたオブジェクトにアクセスする'
+                - name: '方法: DataGridView 行にバインドされたオブジェクトにアクセスする'
                   href: how-to-access-objects-bound-to-windows-forms-datagridview-rows.md
-                - name: '方法:Windows フォームの DataGridViewComboBoxCell ドロップダウン リストのオブジェクトにアクセスする'
+                - name: '方法: Windows フォームの DataGridViewComboBoxCell ドロップダウン リストのオブジェクトにアクセスする'
                   href: access-objects-in-a-wf-datagridviewcomboboxcell-drop-down-list.md
-                - name: 'チュートリアル:Windows フォームの 2 つの DataGridView コントロールを使用したマスター/詳細形式のフォームを作成する'
+                - name: 'チュートリアル: Windows フォームの 2 つの DataGridView コントロールを使用したマスター/詳細形式のフォームを作成する'
                   href: creating-a-master-detail-form-using-two-datagridviews.md
                   items:
-                    - name: '方法:Windows フォームの 2 つの DataGridView コントロールを使用してマスター/詳細形式のフォームを作成する'
+                    - name: '方法: Windows フォームの 2 つの DataGridView コントロールを使用してマスター/詳細形式のフォームを作成する'
                       href: create-a-master-detail-form-using-two-datagridviews.md
-                - name: '方法:Windows フォーム DataGridView コントロールのデータの書式設定をカスタマイズする'
+                - name: '方法: Windows フォーム DataGridView コントロールのデータの書式設定をカスタマイズする'
                   href: how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md
             - name: Windows フォーム DataGridView コントロール内の列と行のサイズ変更
               href: resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md
@@ -350,78 +345,78 @@
                   href: sizing-options-in-the-windows-forms-datagridview-control.md
                 - name: Windows フォーム DataGridView コントロールの列フィル モード
                   href: column-fill-mode-in-the-windows-forms-datagridview-control.md
-                - name: '方法:Windows フォーム DataGridView コントロールのサイズ変更モードを設定する'
+                - name: '方法: Windows フォーム DataGridView コントロールのサイズ変更モードを設定する'
                   href: how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md
-                - name: '方法:Windows フォームの DataGridView コントロールの内容に合わせてセルのサイズをプログラムで変更する'
+                - name: '方法: Windows フォームの DataGridView コントロールの内容に合わせてセルのサイズをプログラムで変更する'
                   href: programmatically-resize-cells-to-fit-content-in-the-datagrid.md
-                - name: '方法:Windows フォームの DataGridView コントロールの内容変更時にセルのサイズを自動的に変更する'
+                - name: '方法: Windows フォームの DataGridView コントロールの内容変更時にセルのサイズを自動的に変更する'
                   href: automatically-resize-cells-when-content-changes-in-the-datagrid.md
             - name: Windows フォームの DataGridView コントロールでのデータの並べ替え
               href: sorting-data-in-the-windows-forms-datagridview-control.md
               items:
                 - name: Windows フォーム DataGridView コントロール内の列の並べ替えモード
                   href: column-sort-modes-in-the-windows-forms-datagridview-control.md
-                - name: '方法:Windows フォーム DataGridView コントロール内の列の並べ替えモードを設定する'
+                - name: '方法: Windows フォーム DataGridView コントロール内の列の並べ替えモードを設定する'
                   href: set-the-sort-modes-for-columns-wf-datagridview-control.md
-                - name: '方法:Windows フォーム DataGridView コントロールの並べ替え機能をカスタマイズする'
+                - name: '方法: Windows フォーム DataGridView コントロールの並べ替え機能をカスタマイズする'
                   href: how-to-customize-sorting-in-the-windows-forms-datagridview-control.md
             - name: Windows フォーム DataGridView コントロールでのデータ入力
               href: data-entry-in-the-windows-forms-datagridview-control.md
               items:
-                - name: '方法:Windows フォーム DataGridView コントロールの編集モードを指定する'
+                - name: '方法: Windows フォーム DataGridView コントロールの編集モードを指定する'
                   href: how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md
-                - name: '方法:Windows フォーム DataGridView コントロールの新しい行に既定値を指定する'
+                - name: '方法: Windows フォーム DataGridView コントロールの新しい行に既定値を指定する'
                   href: specify-default-values-for-new-rows-in-the-datagrid.md
                 - name: Windows フォーム DataGridView コントロールにおける新規レコード行の使用
                   href: using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md
-                - name: 'チュートリアル:Windows フォーム DataGridView コントロールのデータの妥当性検査'
+                - name: 'チュートリアル: Windows フォーム DataGridView コントロールのデータの妥当性検査'
                   href: walkthrough-validating-data-in-the-windows-forms-datagridview-control.md
                   items:
-                    - name: '方法:Windows フォーム DataGridView コントロールのデータを検証する'
+                    - name: '方法: Windows フォーム DataGridView コントロールのデータを検証する'
                       href: how-to-validate-data-in-the-windows-forms-datagridview-control.md
-                - name: 'チュートリアル:Windows フォーム DataGridView コントロールでのデータ入力中に発生したエラーの処理'
+                - name: 'チュートリアル: Windows フォーム DataGridView コントロールでのデータ入力中に発生したエラーの処理'
                   href: handling-errors-that-occur-during-data-entry-in-the-datagrid.md
                   items:
-                    - name: '方法:Windows フォーム DataGridView コントロールでのデータ入力中に発生したエラーを処理する'
+                    - name: '方法: Windows フォーム DataGridView コントロールでのデータ入力中に発生したエラーを処理する'
                       href: handle-errors-that-occur-during-data-entry-in-the-datagrid.md
             - name: Windows フォーム DataGridView コントロールでの選択およびクリップボードの使用
               href: selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md
               items:
                 - name: Windows フォーム DataGridView コントロールの選択モード
                   href: selection-modes-in-the-windows-forms-datagridview-control.md
-                - name: '方法:Windows フォーム DataGridView コントロールの選択モードを設定する'
+                - name: '方法: Windows フォーム DataGridView コントロールの選択モードを設定する'
                   href: how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md
-                - name: '方法:Windows フォーム DataGridView コントロールの選択されたセル、行、および列を取得する'
+                - name: '方法: Windows フォーム DataGridView コントロールの選択されたセル、行、および列を取得する'
                   href: selected-cells-rows-and-columns-datagridview.md
-                - name: '方法:ユーザーが、Windows フォーム DataGridView コントロールからクリップボードに複数のセルをコピーできるようにする'
+                - name: '方法: ユーザーが、Windows フォーム DataGridView コントロールからクリップボードに複数のセルをコピーできるようにする'
                   href: enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md
             - name: Windows フォーム DataGridView コントロールのセル、行、および列を使用したプログラミング
               href: programming-with-cells-rows-and-columns-in-the-datagrid.md
               items:
-                - name: '方法:Windows フォーム DataGridView コントロールの各セルにツールヒントを追加する'
+                - name: '方法: Windows フォーム DataGridView コントロールの各セルにツールヒントを追加する'
                   href: add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md
-                - name: '方法:Windows フォーム DataGridView コントロールのセルの変更に基づいてカスタム動作を実行する'
+                - name: '方法: Windows フォーム DataGridView コントロールのセルの変更に基づいてカスタム動作を実行する'
                   href: perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md
-                - name: '方法:Windows フォームの DataGridView コントロールのバンドを操作する'
+                - name: '方法: Windows フォームの DataGridView コントロールのバンドを操作する'
                   href: how-to-manipulate-bands-in-the-windows-forms-datagridview-control.md
-                - name: '方法:Windows フォームの DataGridView コントロールの行を操作する'
+                - name: '方法: Windows フォームの DataGridView コントロールの行を操作する'
                   href: how-to-manipulate-rows-in-the-windows-forms-datagridview-control.md
-                - name: '方法:Windows フォーム DataGridView コントロールの列を操作する'
+                - name: '方法: Windows フォーム DataGridView コントロールの列を操作する'
                   href: how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md
-                - name: '方法:Windows フォーム DataGridView コントロールのイメージ列を操作する'
+                - name: '方法: Windows フォーム DataGridView コントロールのイメージ列を操作する'
                   href: how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md
             - name: Windows フォーム DataGridView コントロールのカスタマイズ
               href: customizing-the-windows-forms-datagridview-control.md
               items:
-                - name: '方法:Windows フォームの DataGridView コントロールのセルの外観をカスタマイズする'
+                - name: '方法: Windows フォームの DataGridView コントロールのセルの外観をカスタマイズする'
                   href: customize-the-appearance-of-cells-in-the-datagrid.md
-                - name: '方法:Windows フォームの DataGridView コントロールの行の外観をカスタマイズする'
+                - name: '方法: Windows フォームの DataGridView コントロールの行の外観をカスタマイズする'
                   href: customize-the-appearance-of-rows-in-the-datagrid.md
-                - name: '方法:Windows フォーム DataGridView コントロールのセルと列を、それぞれの動作と外観を拡張してカスタマイズする'
+                - name: '方法: Windows フォーム DataGridView コントロールのセルと列を、それぞれの動作と外観を拡張してカスタマイズする'
                   href: customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md
-                - name: '方法:Windows フォーム DataGridView コントロールのボタン列にあるボタンを無効にする'
+                - name: '方法: Windows フォーム DataGridView コントロールのボタン列にあるボタンを無効にする'
                   href: disable-buttons-in-a-button-column-in-the-datagrid.md
-                - name: '方法:Windows フォーム DataGridView Cells でコントロールをホストする'
+                - name: '方法: Windows フォーム DataGridView Cells でコントロールをホストする'
                   href: how-to-host-controls-in-windows-forms-datagridview-cells.md
             - name: Windows フォーム DataGridView コントロールでのパフォーマンス チューニング
               href: performance-tuning-in-the-windows-forms-datagridview-control.md
@@ -430,15 +425,15 @@
                   href: best-practices-for-scaling-the-windows-forms-datagridview-control.md
                 - name: Windows フォーム DataGridView コントロールでの仮想モード
                   href: virtual-mode-in-the-windows-forms-datagridview-control.md
-                - name: 'チュートリアル:Windows フォーム DataGridView コントロールでの仮想モードを実装する'
+                - name: 'チュートリアル: Windows フォーム DataGridView コントロールでの仮想モードを実装する'
                   href: implementing-virtual-mode-wf-datagridview-control.md
                   items:
-                    - name: '方法:Windows フォーム DataGridView コントロールで仮想モードを実装する'
+                    - name: '方法: Windows フォーム DataGridView コントロールで仮想モードを実装する'
                       href: how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md
                 - name: Windows フォーム DataGridView コントロールでの Just-In-Time データ読み込みによる仮想モードの実装
                   href: implementing-virtual-mode-jit-data-loading-in-the-datagrid.md
                   items:
-                    - name: '方法:Windows フォーム DataGridView コントロールで Just-In-Time データ読み込みを使用して仮想モードを実装する'
+                    - name: '方法: Windows フォーム DataGridView コントロールで Just-In-Time データ読み込みを使用して仮想モードを実装する'
                       href: virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md
             - name: Windows フォーム DataGridView コントロールの既定のキーボード処理とマウス処理
               href: default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md
@@ -449,11 +444,11 @@
           items:
             - name: DateTimePicker コントロールの概要
               href: datetimepicker-control-overview-windows-forms.md
-            - name: '方法:Windows フォームの DateTimePicker コントロールを使用してカスタム形式で日付を表示する'
+            - name: '方法: Windows フォームの DateTimePicker コントロールを使用してカスタム形式で日付を表示する'
               href: display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md
-            - name: '方法:Windows フォームの DateTimePicker コントロールを使用して日付を設定および取得する'
+            - name: '方法: Windows フォームの DateTimePicker コントロールを使用して日付を設定および取得する'
               href: how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md
-            - name: '方法:DateTimePicker コントロールを使用して時間を表示する'
+            - name: '方法: DateTimePicker コントロールを使用して時間を表示する'
               href: how-to-display-time-with-the-datetimepicker-control.md
         - name: ダイアログ ボックス コントロールおよびコンポーネント
           href: dialog-box-controls-and-components-windows-forms.md
@@ -462,25 +457,25 @@
           items:
             - name: DomainUpDown コントロールの概要
               href: domainupdown-control-overview-windows-forms.md
-            - name: '方法:Windows フォーム DomainUpDown コントロールにプログラムで項目を追加する'
+            - name: '方法: DomainUpDown コントロールにプログラムで項目を追加する'
               href: how-to-add-items-to-windows-forms-domainupdown-controls-programmatically.md
-            - name: '方法:Windows フォームの DomainUpDown コントロールから項目を削除する'
+            - name: '方法: Windows フォームの DomainUpDown コントロールから項目を削除する'
               href: how-to-remove-items-from-windows-forms-domainupdown-controls.md
         - name: ErrorProvider コンポーネント
           href: errorprovider-component-windows-forms.md
           items:
             - name: ErrorProvider コンポーネントの概要
               href: errorprovider-component-overview-windows-forms.md
-            - name: '方法:Windows フォーム ErrorProvider コンポーネントを使用してフォーム妥当性検査でエラー アイコンを表示する'
+            - name: '方法: Windows フォーム ErrorProvider コンポーネントを使用してフォーム妥当性検査でエラー アイコンを表示する'
               href: display-error-icons-for-form-validation-with-wf-errorprovider.md
-            - name: '方法:Windows フォーム ErrorProvider コンポーネントで DataSet 内にエラーを表示する'
+            - name: '方法: Windows フォーム ErrorProvider コンポーネントで DataSet 内にエラーを表示する'
               href: view-errors-within-a-dataset-with-wf-errorprovider-component.md
         - name: FileDialog クラス
           href: filedialog-class.md
           items:
-            - name: '方法:ファイル関連のダイアログ ボックスの自動アップグレードを無効にする'
+            - name: '方法: ファイル関連のダイアログ ボックスの自動アップグレードを無効にする'
               href: how-to-opt-out-of-file-dialog-box-automatic-upgrade.md
-            - name: '方法:よく使用する場所をファイル ダイアログ ボックスに追加する'
+            - name: '方法: よく使用する場所をファイル ダイアログ ボックスに追加する'
               href: how-to-add-a-custom-place-to-a-file-dialog-box.md
             - name: ファイル ダイアログ ボックスのカスタム プレイス用既知のフォルダー GUID
               href: known-folder-guids-for-file-dialog-custom-places.md
@@ -489,30 +484,30 @@
           items:
             - name: FlowLayoutPanel コントロールの概要
               href: flowlayoutpanel-control-overview.md
-            - name: '方法:FlowLayoutPanel コントロールで子コントロールを固定およびドッキングする'
+            - name: '方法: FlowLayoutPanel コントロールで子コントロールを固定およびドッキングする'
               href: how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md
-            - name: 'チュートリアル:FlowLayoutPanel を使用した Windows フォーム上のコントロールの配置'
+            - name: 'チュートリアル: FlowLayoutPanel を使用した Windows フォーム上のコントロールの配置'
               href: walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md
         - name: FolderBrowserDialog コンポーネント
           href: folderbrowserdialog-component-windows-forms.md
           items:
             - name: FolderBrowserDialog コンポーネントの概要 (Windows フォーム)
               href: folderbrowserdialog-component-overview-windows-forms.md
-            - name: '方法:Windows フォーム FolderBrowserDialog コンポーネントを使用してフォルダーを選択する'
+            - name: '方法: Windows フォーム FolderBrowserDialog コンポーネントを使用してフォルダーを選択する'
               href: how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md
         - name: FontDialog コンポーネント
           href: fontdialog-component-windows-forms.md
           items:
             - name: FontDialog コンポーネントの概要
               href: fontdialog-component-overview-windows-forms.md
-            - name: '方法:FontDialog コンポーネントを使用してフォントの一覧を表示する'
+            - name: '方法: FontDialog コンポーネントを使用してフォントの一覧を表示する'
               href: how-to-show-a-font-list-with-the-fontdialog-component.md
         - name: GroupBox コントロール
           href: groupbox-control-windows-forms.md
           items:
             - name: GroupBox コントロールの概要
               href: groupbox-control-overview-windows-forms.md
-            - name: '方法:Windows フォーム GroupBox コントロールを使用してコントロールをグループ化する'
+            - name: '方法: Windows フォーム GroupBox コントロールを使用してコントロールをグループ化する'
               href: how-to-group-controls-with-the-windows-forms-groupbox-control.md
         - name: HelpProvider コンポーネント
           href: helpprovider-component-windows-forms.md
@@ -529,29 +524,29 @@
           items:
             - name: ImageList コンポーネントの概要
               href: imagelist-component-overview-windows-forms.md
-            - name: '方法:Windows フォームの ImageList コンポーネントにイメージを追加または削除する'
+            - name: '方法: Windows フォームの ImageList コンポーネントにイメージを追加または削除する'
               href: how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md
-            - name: '方法:デザイナーを使って ImageList イメージを追加または削除する'
+            - name: '方法: デザイナーを使って ImageList イメージを追加または削除する'
               href: how-to-add-or-remove-imagelist-images-with-the-designer.md
         - name: Label コントロール
           href: label-control-windows-forms.md
           items:
             - name: Label コントロールの概要
               href: label-control-overview-windows-forms.md
-            - name: '方法:Windows フォームの Label コントロールでアクセス キーを作成する'
+            - name: '方法: Windows フォームの Label コントロールでアクセス キーを作成する'
               href: how-to-create-access-keys-with-windows-forms-label-controls.md
-            - name: '方法:Windows フォーム Label コントロールのサイズを内容に合わせて変更する'
+            - name: '方法: Windows フォーム Label コントロールのサイズを内容に合わせて変更する'
               href: how-to-size-a-windows-forms-label-control-to-fit-its-contents.md
         - name: LinkLabel コントロール
           href: linklabel-control-windows-forms.md
           items:
             - name: LinkLabel コントロールの概要
               href: linklabel-control-overview-windows-forms.md
-            - name: '方法:Windows フォーム LinkLabel コントロールの表示形式を変更する'
+            - name: '方法: Windows フォーム LinkLabel コントロールの表示形式を変更する'
               href: how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md
-            - name: '方法:Windows フォーム LinkLabel コントロールでオブジェクトまたは Web ページにリンクする'
+            - name: '方法: Windows フォーム LinkLabel コントロールでオブジェクトまたは Web ページにリンクする'
               href: link-to-an-object-or-web-page-with-wf-linklabel-control.md
-            - name: '方法:Windows フォームの LinkLabel コントロールから Web ページを表示する (Visual Basic)'
+            - name: '方法: Windows フォームの LinkLabel コントロールから Web ページを表示する (Visual Basic)'
               href: display-a-web-page-from-a-wf-linklabel-control-visual-basic.md
         - name: ListBox コントロール
           href: listbox-control-windows-forms.md
@@ -563,33 +558,33 @@
           items:
             - name: ListView コントロールの概要
               href: listview-control-overview-windows-forms.md
-            - name: '方法:Windows フォーム ListView コントロールで項目を追加および削除する'
+            - name: '方法: Windows フォーム ListView コントロールで項目を追加および削除する'
               href: how-to-add-and-remove-items-with-the-windows-forms-listview-control.md
-            - name: '方法:デザイナーで Windows フォーム ListView コントロールを使って項目を追加および削除する'
+            - name: '方法: デザイナーで Windows フォーム ListView コントロールを使って項目を追加および削除する'
               href: add-and-remove-items-with-wf-listview-control-using-the-designer.md
-            - name: '方法:Windows フォーム ListView コントロールに列を追加する'
+            - name: '方法: Windows フォーム ListView コントロールに列を追加する'
               href: how-to-add-columns-to-the-windows-forms-listview-control.md
-            - name: '方法:デザイナーを使って Windows フォーム ListView コントロールに列を追加する'
+            - name: '方法: デザイナーを使って Windows フォーム ListView コントロールに列を追加する'
               href: how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md
-            - name: '方法:ListView コントロールに検索機能を追加する'
+            - name: '方法: ListView コントロールに検索機能を追加する'
               href: how-to-add-search-capabilities-to-a-listview-control.md
-            - name: '方法:Windows フォーム ListView コントロールのアイコンを表示する'
+            - name: '方法: Windows フォーム ListView コントロールのアイコンを表示する'
               href: how-to-display-icons-for-the-windows-forms-listview-control.md
-            - name: '方法:Windows フォーム ListView コントロールの列にサブ項目を表示する'
+            - name: '方法: Windows フォーム ListView コントロールの列にサブ項目を表示する'
               href: how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md
-            - name: '方法:Windows フォーム ListView コントロールの "並べて表示" ビューを有効にする'
+            - name: '方法: Windows フォーム ListView コントロールの "並べて表示" ビューを有効にする'
               href: how-to-enable-tile-view-in-a-windows-forms-listview-control.md
-            - name: '方法:デザイナーを使って Windows フォーム ListView コントロールの "並べて表示" ビューを有効にする'
+            - name: '方法: デザイナーを使って Windows フォーム ListView コントロールの "並べて表示" ビューを有効にする'
               href: enable-tile-view-in-a-wf-listview-control-using-the-designer.md
-            - name: '方法:Windows フォーム ListView コントロールの項目をグループ化する'
+            - name: '方法: Windows フォーム ListView コントロールの項目をグループ化する'
               href: how-to-group-items-in-a-windows-forms-listview-control.md
-            - name: '方法:デザイナーを使って Windows フォーム ListView コントロールの項目をグループ化する'
+            - name: '方法: デザイナーを使って Windows フォーム ListView コントロールの項目をグループ化する'
               href: how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md
-            - name: '方法:Windows フォーム ListView コントロールに挿入マークを表示する'
+            - name: '方法: Windows フォーム ListView コントロールに挿入マークを表示する'
               href: how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md
-            - name: '方法:Windows フォーム ListView コントロール内の項目を選択する'
+            - name: '方法: Windows フォーム ListView コントロール内の項目を選択する'
               href: how-to-select-an-item-in-the-windows-forms-listview-control.md
-            - name: 'チュートリアル:デザイナーを使用した、ListView コントロールと TreeView コントロールを含むエクスプローラー スタイルのインターフェイスの作成'
+            - name: 'チュートリアル: デザイナーを使用した、ListView コントロールと TreeView コントロールを含むエクスプローラー スタイルのインターフェイスの作成'
               href: creating-an-explorer-style-interface-with-the-listview-and-treeview.md
         - name: MainMenu コンポーネント
           href: mainmenu-component-windows-forms.md
@@ -599,124 +594,124 @@
         - name: MaskedTextBox コントロール
           href: maskedtextbox-control-windows-forms.md
           items:
-            - name: 'チュートリアル:MaskedTextBox コントロールの使用'
+            - name: 'チュートリアル: MaskedTextBox コントロールの使用'
               href: walkthrough-working-with-the-maskedtextbox-control.md
-            - name: '方法:MaskedTextBox コントロールにデータをバインドする'
+            - name: '方法: MaskedTextBox コントロールにデータをバインドする'
               href: how-to-bind-data-to-the-maskedtextbox-control.md
-            - name: '方法:定型入力を設定する'
+            - name: '方法: 定型入力を設定する'
               href: how-to-set-the-input-mask.md
         - name: MenuStrip コントロール
           href: menustrip-control-windows-forms.md
           items:
             - name: MenuStrip コントロールの概要
               href: menustrip-control-overview-windows-forms.md
-            - name: '方法:ToolStripMenuItems に拡張機能を追加する'
+            - name: '方法: ToolStripMenuItems に拡張機能を追加する'
               href: how-to-add-enhancements-to-toolstripmenuitems.md
-            - name: '方法:MenuStrip を MDI 親ウィンドウに追加する'
+            - name: '方法: MenuStrip を MDI 親ウィンドウに追加する'
               href: how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms.md
-            - name: '方法:ToolStripMenuItems をコピーする'
+            - name: '方法: ToolStripMenuItems をコピーする'
               href: how-to-copy-toolstripmenuitems.md
-            - name: '方法:MenuStrip を使用して MDI ウィンドウの一覧を作成する'
+            - name: '方法: MenuStrip を使用して MDI ウィンドウの一覧を作成する'
               href: how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md
-            - name: '方法:ToolStripMenuItems を無効にする'
+            - name: '方法: ToolStripMenuItems を無効にする'
               href: how-to-disable-toolstripmenuitems.md
-            - name: '方法:デザイナーを使用して ToolStripMenuItems を無効にする'
+            - name: '方法: デザイナーを使用して ToolStripMenuItems を無効にする'
               href: how-to-disable-toolstripmenuitems-using-the-designer.md
-            - name: '方法:MenuStrip にオプション ボタンを表示する'
+            - name: '方法: MenuStrip にオプション ボタンを表示する'
               href: how-to-display-option-buttons-in-a-menustrip-windows-forms.md
-            - name: '方法:ToolStripMenuItems を非表示にする'
+            - name: '方法: ToolStripMenuItems を非表示にする'
               href: how-to-hide-toolstripmenuitems.md
-            - name: '方法:デザイナーを使用して ToolStripMenuItems を非表示にする'
+            - name: '方法: デザイナーを使用して ToolStripMenuItems を非表示にする'
               href: how-to-hide-toolstripmenuitems-using-the-designer.md
-            - name: '方法:MDI ドロップダウン メニューに MenuStrip を挿入する'
+            - name: '方法: MDI ドロップダウン メニューに MenuStrip を挿入する'
               href: how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md
-            - name: '方法:ToolStripMenuItem を MDI ドロップダウン メニューから削除する'
+            - name: '方法: ToolStripMenuItem を MDI ドロップダウン メニューから削除する'
               href: how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms.md
-            - name: '方法:ToolStripMenuItems を移動する'
+            - name: '方法: ToolStripMenuItems を移動する'
               href: how-to-move-toolstripmenuitems.md
-            - name: '方法:MenuStrip のチェックの余白とイメージの余白を設定する'
+            - name: '方法: MenuStrip のチェックの余白とイメージの余白を設定する'
               href: how-to-configure-menustrip-check-margins-and-image-margins.md
-            - name: '方法:フォームに標準メニュー項目を追加する'
+            - name: '方法: フォームに標準メニュー項目を追加する'
               href: how-to-provide-standard-menu-items-to-a-form.md
-            - name: '方法:MDI アプリケーションでメニューの自動マージを設定する'
+            - name: '方法: MDI アプリケーションでメニューの自動マージを設定する'
               href: how-to-set-up-automatic-menu-merging-for-mdi-applications.md
             - name: Windows フォームの MenuStrip コントロールへのメニュー項目のマージ
               href: merging-menu-items-in-the-windows-forms-menustrip-control.md
-            - name: 'チュートリアル:標準メニュー項目をフォームに用意する'
+            - name: 'チュートリアル: 標準メニュー項目をフォームに用意する'
               href: walkthrough-providing-standard-menu-items-to-a-form.md
         - name: MonthCalendar コントロール
           href: monthcalendar-control-windows-forms.md
           items:
             - name: MonthCalendar コントロールの概要
               href: monthcalendar-control-overview-windows-forms.md
-            - name: '方法:Windows フォームの MonthCalendar コントロールの外観を変更する'
+            - name: '方法: Windows フォームの MonthCalendar コントロールの外観を変更する'
               href: how-to-change-monthcalendar-control-appearance.md
-            - name: '方法:Windows フォームの MonthCalendar コントロールで複数の月を表示する'
+            - name: '方法: Windows フォームの MonthCalendar コントロールで複数の月を表示する'
               href: display-more-than-one-month-wf-monthcalendar-control.md
-            - name: '方法:Windows フォームの MonthCalendar コントロールを使用して特定の日付を太字で表示する'
+            - name: '方法: Windows フォームの MonthCalendar コントロールを使用して特定の日付を太字で表示する'
               href: display-specific-days-in-bold-with-wf-monthcalendar-control.md
-            - name: '方法:Windows フォームの MonthCalendar コントロールで日付の範囲を選択する'
+            - name: '方法: Windows フォームの MonthCalendar コントロールで日付の範囲を選択する'
               href: how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md
         - name: NotifyIcon コンポーネント
           href: notifyicon-component-windows-forms.md
           items:
             - name: NotifyIcon コンポーネントの概要
               href: notifyicon-component-overview-windows-forms.md
-            - name: '方法:Windows フォームの NotifyIcon コンポーネントによってタスクバーにアプリケーション アイコンを追加する'
+            - name: '方法: Windows フォームの NotifyIcon コンポーネントによってタスクバーにアプリケーション アイコンを追加する'
               href: app-icons-to-the-taskbar-with-wf-notifyicon.md
-            - name: '方法:ショートカット メニューを Windows フォーム NotifyIcon コンポーネントに関連付ける'
+            - name: '方法: ショートカット メニューを Windows フォーム NotifyIcon コンポーネントに関連付ける'
               href: how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md
         - name: NumericUpDown コントロール
           href: numericupdown-control-windows-forms.md
           items:
             - name: NumericUpDown コントロールの概要
               href: numericupdown-control-overview-windows-forms.md
-            - name: '方法:Windows フォームの NumericUpDown コントロールを使用して数値を設定および取得する'
+            - name: '方法: Windows フォームの NumericUpDown コントロールを使用して数値を設定および取得する'
               href: set-and-return-numeric-values-with-wf-numericupdown-control.md
-            - name: '方法:Windows フォームの NumericUpDown コントロールの書式を設定する'
+            - name: '方法: Windows フォームの NumericUpDown コントロールの書式を設定する'
               href: how-to-set-the-format-for-the-windows-forms-numericupdown-control.md
         - name: OpenFileDialog コンポーネント
           href: openfiledialog-component-windows-forms.md
           items:
             - name: OpenFileDialog コンポーネントの概要
               href: openfiledialog-component-overview-windows-forms.md
-            - name: '方法:OpenFileDialog コンポーネントを使用してファイルを開く'
+            - name: '方法: OpenFileDialog コンポーネントを使用してファイルを開く'
               href: how-to-open-files-using-the-openfiledialog-component.md
         - name: PageSetupDialog コンポーネント
           href: pagesetupdialog-component-windows-forms.md
           items:
             - name: PageSetupDialog コンポーネントの概要
               href: pagesetupdialog-component-overview-windows-forms.md
-            - name: '方法:PageSetupDialog コンポーネントを使用してページのプロパティを決定する'
+            - name: '方法: PageSetupDialog コンポーネントを使用してページのプロパティを決定する'
               href: how-to-determine-page-properties-using-the-pagesetupdialog-component.md
         - name: Panel コントロール
           href: panel-control-windows-forms.md
           items:
             - name: Panel コントロールの概要
               href: panel-control-overview-windows-forms.md
-            - name: '方法:デザイナーを使用して Windows フォーム Panel コントロールでコントロールをグループ化する'
+            - name: '方法: デザイナーを使用して Windows フォーム Panel コントロールでコントロールをグループ化する'
               href: group-controls-with-wf-panel-control-using-the-designer.md
-            - name: '方法:パネルの背景を設定する'
+            - name: '方法: パネルの背景を設定する'
               href: how-to-set-the-background-of-a-windows-forms-panel.md
-            - name: '方法:デザイナーを使って Windows フォーム パネルの背景を設定する'
+            - name: '方法: デザイナーを使って Windows フォーム パネルの背景を設定する'
               href: how-to-set-the-background-of-a-windows-forms-panel-using-the-designer.md
         - name: PictureBox コントロール
           href: picturebox-control-windows-forms.md
           items:
             - name: PictureBox コントロールの概要
               href: picturebox-control-overview-windows-forms.md
-            - name: '方法:デザイナーを使用してピクチャを読み込む'
+            - name: '方法: デザイナーを使用してピクチャを読み込む'
               href: how-to-load-a-picture-using-the-designer-windows-forms.md
-            - name: '方法:実行時にピクチャのサイズまたは配置を変更する'
+            - name: '方法: 実行時にピクチャのサイズまたは配置を変更する'
               href: how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md
-            - name: '方法:実行時にピクチャを設定する'
+            - name: '方法: 実行時にピクチャを設定する'
               href: how-to-set-pictures-at-run-time-windows-forms.md
         - name: PrintDialog コンポーネント
           href: printdialog-component-windows-forms.md
           items:
             - name: PrintDialog コンポーネントの概要
               href: printdialog-component-overview-windows-forms.md
-            - name: '方法:PrintDialog コンポーネントを表示する'
+            - name: '方法: PrintDialog コンポーネントを表示する'
               href: how-to-display-the-printdialog-component.md
         - name: PrintDocument コンポーネント
           href: printdocument-component-windows-forms.md
@@ -733,83 +728,83 @@
           items:
             - name: PrintPreviewDialog コントロールの概要
               href: printpreviewdialog-control-overview-windows-forms.md
-            - name: '方法:Windows フォーム アプリケーションに印刷プレビューを表示する'
+            - name: '方法: Windows フォーム アプリケーションに印刷プレビューを表示する'
               href: how-to-display-print-preview-in-windows-forms-applications.md
         - name: ProgressBar コントロール
           href: progressbar-control-windows-forms.md
           items:
             - name: ProgressBar コントロールの概要
               href: progressbar-control-overview-windows-forms.md
-            - name: '方法:Windows フォーム ProgressBar コントロールによって表示される値を設定する'
+            - name: '方法: Windows フォーム ProgressBar コントロールによって表示される値を設定する'
               href: how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control.md
         - name: RadioButton コントロール
           href: radiobutton-control-windows-forms.md
           items:
             - name: RadioButton コントロールの概要
               href: radiobutton-control-overview-windows-forms.md
-            - name: '方法:セットとして機能する Windows フォーム RadioButton コントロールをグループ化する'
+            - name: '方法: セットとして機能する Windows フォーム RadioButton コントロールをグループ化する'
               href: how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md
         - name: RichTextBox コントロール
           href: richtextbox-control-windows-forms.md
           items:
             - name: RichTextBox コントロールの概要
               href: richtextbox-control-overview-windows-forms.md
-            - name: '方法:Windows フォームの RichTextBox コントロールにおける書式属性の変更を確認する'
+            - name: '方法: Windows フォームの RichTextBox コントロールにおける書式属性の変更を確認する'
               href: determine-when-formatting-attributes-change-wf-richtextbox-control.md
-            - name: '方法:Windows フォームの RichTextBox コントロールにスクロール バーを表示する'
+            - name: '方法: Windows フォームの RichTextBox コントロールにスクロール バーを表示する'
               href: how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control.md
-            - name: '方法:Windows フォームの RichTextBox コントロールを使用して Web スタイルのリンクを表示する'
+            - name: '方法: Windows フォームの RichTextBox コントロールを使用して Web スタイルのリンクを表示する'
               href: how-to-display-web-style-links-with-the-windows-forms-richtextbox-control.md
-            - name: '方法:Windows フォームの RichTextBox コントロールにおけるドラッグ アンド ドロップ操作を有効にする'
+            - name: '方法: Windows フォームの RichTextBox コントロールにおけるドラッグ アンド ドロップ操作を有効にする'
               href: enable-drag-and-drop-operations-with-wf-richtextbox-control.md
-            - name: '方法:Windows フォームの RichTextBox コントロールにファイルを読み込む'
+            - name: '方法: Windows フォームの RichTextBox コントロールにファイルを読み込む'
               href: how-to-load-files-into-the-windows-forms-richtextbox-control.md
-            - name: '方法:Windows フォームの RichTextBox コントロールを使用してファイルを保存する'
+            - name: '方法: Windows フォームの RichTextBox コントロールを使用してファイルを保存する'
               href: how-to-save-files-with-the-windows-forms-richtextbox-control.md
-            - name: '方法:Windows フォームの RichTextBox コントロールのフォント属性を設定する'
+            - name: '方法: Windows フォームの RichTextBox コントロールのフォント属性を設定する'
               href: how-to-set-font-attributes-for-the-windows-forms-richtextbox-control.md
-            - name: '方法:Windows フォームの RichTextBox コントロールを使用してインデント、ぶら下げインデント、箇条書き段落を設定する'
+            - name: '方法: Windows フォームの RichTextBox コントロールを使用してインデント、ぶら下げインデント、箇条書き段落を設定する'
               href: set-indents-hanging-indents-bulleted-paragraphs-with-wf-richtextbox.md
         - name: SaveFileDialog コンポーネント
           href: savefiledialog-component-windows-forms.md
           items:
             - name: SaveFileDialog コンポーネントの概要
               href: savefiledialog-component-overview-windows-forms.md
-            - name: '方法:SaveFileDialog コンポーネントを使用してファイルを保存する'
+            - name: '方法: SaveFileDialog コンポーネントを使用してファイルを保存する'
               href: how-to-save-files-using-the-savefiledialog-component.md
         - name: SoundPlayer クラス
           href: soundplayer-class.md
           items:
             - name: SoundPlayer クラスの概要
               href: soundplayer-class-overview.md
-            - name: '方法:Windows フォームからサウンドを再生する'
+            - name: '方法: Windows フォームからサウンドを再生する'
               href: how-to-play-a-sound-from-a-windows-form.md
-            - name: '方法:Windows フォームからビープ音を再生する'
+            - name: '方法: Windows フォームからビープ音を再生する'
               href: how-to-play-a-beep-from-a-windows-form.md
-            - name: '方法:Windows フォームからリソースに埋め込まれたサウンドを再生する'
+            - name: '方法: Windows フォームからリソースに埋め込まれたサウンドを再生する'
               href: how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form.md
-            - name: '方法:Windows フォームからシステム サウンドを再生する'
+            - name: '方法: Windows フォームからシステム サウンドを再生する'
               href: how-to-play-a-system-sound-from-a-windows-form.md
-            - name: '方法:Windows フォーム内でサウンドを非同期的に読み込む'
+            - name: '方法: Windows フォーム内でサウンドを非同期的に読み込む'
               href: how-to-load-a-sound-asynchronously-within-a-windows-form.md
-            - name: '方法:Windows フォームでサウンドの再生をループする'
+            - name: '方法: Windows フォームでサウンドの再生をループする'
               href: how-to-loop-a-sound-playing-on-a-windows-form.md
         - name: SplitContainer コントロール
           href: splitcontainer-control-windows-forms.md
           items:
             - name: SplitContainer コントロールの概要
               href: splitcontainer-control-overview-windows-forms.md
-            - name: '方法:Windows フォームでマルチペイン ユーザー インターフェイスを作成する'
+            - name: '方法: Windows フォームでマルチペイン ユーザー インターフェイスを作成する'
               href: how-to-create-a-multipane-user-interface-with-windows-forms.md
-            - name: '方法:デザイナーを使用して Windows フォームでマルチペイン ユーザー インターフェイスを作成する'
+            - name: '方法: デザイナーを使用して Windows フォームでマルチペイン ユーザー インターフェイスを作成する'
               href: create-a-multipane-user-interface-with-wf-using-the-designer.md
-            - name: '方法:Windows フォームで Windows エクスプローラー スタイルのインターフェイスを作成する'
+            - name: '方法: Windows フォームで Windows エクスプローラー スタイルのインターフェイスを作成する'
               href: how-to-create-a-windows-explorer-style-interface-on-a-windows-form.md
-            - name: '方法:分割ウィンドウでのサイズ変更および位置指定動作を定義する'
+            - name: '方法: 分割ウィンドウでのサイズ変更および位置指定動作を定義する'
               href: how-to-define-resize-and-positioning-behavior-in-a-split-window.md
-            - name: '方法:ウィンドウを水平方向に分割する'
+            - name: '方法: ウィンドウを水平方向に分割する'
               href: how-to-split-a-window-horizontally.md
-            - name: '方法:デザイナーを使用してウィンドウを水平方向に分割する'
+            - name: '方法: デザイナーを使用してウィンドウを水平方向に分割する'
               href: how-to-split-a-window-horizontally-using-the-designer.md
         - name: Splitter コントロール
           href: splitter-control-windows-forms.md
@@ -821,39 +816,39 @@
           items:
             - name: StatusBar コントロールの概要
               href: statusbar-control-overview-windows-forms.md
-            - name: '方法:StatusBar コントロールにパネルを追加する'
+            - name: '方法: StatusBar コントロールにパネルを追加する'
               href: how-to-add-panels-to-a-statusbar-control.md
-            - name: '方法:Windows フォームの StatusBar コントロールでクリックされたパネルを確認する'
+            - name: '方法: Windows フォームの StatusBar コントロールでクリックされたパネルを確認する'
               href: determine-which-panel-wf-statusbar-control-was-clicked.md
-            - name: '方法:ステータス バー パネルのサイズを設定する'
+            - name: '方法: ステータス バー パネルのサイズを設定する'
               href: how-to-set-the-size-of-status-bar-panels.md
-            - name: 'チュートリアル:ステータス バー情報の実行時更新'
+            - name: 'チュートリアル: ステータス バー情報の実行時更新'
               href: walkthrough-updating-status-bar-information-at-run-time.md
         - name: StatusStrip コントロール
           href: statusstrip-control.md
           items:
             - name: StatusStrip コントロールの概要
               href: statusstrip-control-overview.md
-            - name: '方法:StatusStrip 内で Spring プロパティを対話的に使用する'
+            - name: '方法: StatusStrip 内で Spring プロパティを対話的に使用する'
               href: how-to-use-the-spring-property-interactively-in-a-statusstrip.md
         - name: TabControl コントロール
           href: tabcontrol-control-windows-forms.md
           items:
             - name: TabControl コントロールの概要
               href: tabcontrol-control-overview-windows-forms.md
-            - name: '方法:タブ ページにコントロールを追加する'
+            - name: '方法: タブ ページにコントロールを追加する'
               href: how-to-add-a-control-to-a-tab-page.md
-            - name: '方法:デザイナーを使ってタブ ページにコントロールを追加する'
+            - name: '方法: デザイナーを使ってタブ ページにコントロールを追加する'
               href: how-to-add-a-control-to-a-tab-page-using-the-designer.md
-            - name: '方法:Windows フォーム TabControl のタブを追加および削除する'
+            - name: '方法: Windows フォーム TabControl のタブを追加および削除する'
               href: how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md
-            - name: '方法:デザイナーで Windows フォーム TabControl を使ってタブを追加および削除する'
+            - name: '方法: デザイナーで Windows フォーム TabControl を使ってタブを追加および削除する'
               href: add-and-remove-tabs-with-wf-tabcontrol-using-the-designer.md
-            - name: '方法:Windows フォーム TabControl の表示形式を変更する'
+            - name: '方法: Windows フォーム TabControl の表示形式を変更する'
               href: how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md
-            - name: '方法:タブ ページを無効化する'
+            - name: '方法: タブ ページを無効化する'
               href: how-to-disable-tab-pages.md
-            - name: '方法:TabControl を使用して側面に位置を合わせて表示する'
+            - name: '方法: TabControl を使用して側面に位置を合わせて表示する'
               href: how-to-display-side-aligned-tabs-with-tabcontrol.md
         - name: TableLayoutPanel コントロール
           href: tablelayoutpanel-control-windows-forms.md
@@ -864,36 +859,36 @@
               href: autosize-behavior-in-the-tablelayoutpanel-control.md
             - name: TableLayoutPanel コントロールの推奨される手順
               href: best-practices-for-the-tablelayoutpanel-control.md
-            - name: '方法:TableLayoutPanel コントロール内でコントロールを配置して伸縮する'
+            - name: '方法: TableLayoutPanel コントロール内でコントロールを配置して伸縮する'
               href: how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md
-            - name: '方法:TableLayoutPanel コントロールで子コントロールを固定およびドッキングする'
+            - name: '方法: TableLayoutPanel コントロールで子コントロールを固定およびドッキングする'
               href: how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md
-            - name: '方法:データ入力用のサイズ変更可能な Windows フォームを作成する'
+            - name: '方法: データ入力用のサイズ変更可能な Windows フォームを作成する'
               href: how-to-create-a-resizable-windows-form-for-data-entry.md
-            - name: '方法:ローカリゼーションに対応した Windows フォーム レイアウトをデザインする'
+            - name: '方法: ローカリゼーションに対応した Windows フォーム レイアウトをデザインする'
               href: how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md
-            - name: '方法:TableLayoutPanel コントロールの列と行を編集する'
+            - name: '方法: TableLayoutPanel コントロールの列と行を編集する'
               href: how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md
-            - name: '方法:TableLayoutPanel コントロールの行と列を拡大する'
+            - name: '方法: TableLayoutPanel コントロールの行と列を拡大する'
               href: how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md
-            - name: 'チュートリアル:TableLayoutPanel を使用した Windows フォーム上のコントロールの配置'
+            - name: 'チュートリアル: TableLayoutPanel を使用した Windows フォーム上のコントロールの配置'
               href: walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md
         - name: TextBox コントロール
           href: textbox-control-windows-forms.md
           items:
             - name: TextBox コントロールの概要
               href: textbox-control-overview-windows-forms.md
-            - name: '方法:Windows フォーム TextBox コントロールでのカーソル位置を制御する'
+            - name: '方法: Windows フォーム TextBox コントロールでのカーソル位置を制御する'
               href: how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md
-            - name: '方法:Windows フォームの TextBox コントロールを使用してパスワード テキスト ボックスを作成する'
+            - name: '方法: Windows フォームの TextBox コントロールを使用してパスワード テキスト ボックスを作成する'
               href: how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md
-            - name: '方法:読み取り専用テキスト ボックスを作成する'
+            - name: '方法: 読み取り専用テキスト ボックスを作成する'
               href: how-to-create-a-read-only-text-box-windows-forms.md
-            - name: '方法:文字列に引用符を挿入する'
+            - name: '方法: 文字列に引用符を挿入する'
               href: how-to-put-quotation-marks-in-a-string-windows-forms.md
-            - name: '方法:Windows フォーム TextBox コントロールでテキストを選択する'
+            - name: '方法: Windows フォーム TextBox コントロールでテキストを選択する'
               href: how-to-select-text-in-the-windows-forms-textbox-control.md
-            - name: '方法:Windows フォーム TextBox コントロールで複数行を表示する'
+            - name: '方法: Windows フォーム TextBox コントロールで複数行を表示する'
               href: how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md
         - name: Timer コンポーネント
           href: timer-component-windows-forms.md
@@ -902,22 +897,22 @@
               href: timer-component-overview-windows-forms.md
             - name: Windows フォームの Timer コンポーネントの Interval プロパティの制限
               href: limitations-of-the-timer-component-interval-property.md
-            - name: '方法:Windows フォームの Timer コンポーネントを使用して一定間隔でプロシージャを実行する'
+            - name: '方法: Windows フォームの Timer コンポーネントを使用して一定間隔でプロシージャを実行する'
               href: run-procedures-at-set-intervals-with-wf-timer-component.md
         - name: ToolBar コントロール
           href: toolbar-control-windows-forms.md
           items:
             - name: ToolBar コントロールの概要
               href: toolbar-control-overview-windows-forms.md
-            - name: '方法:ツール バー コントロールにボタンを追加する'
+            - name: '方法: ツール バー コントロールにボタンを追加する'
               href: how-to-add-buttons-to-a-toolbar-control.md
-            - name: '方法:デザイナーを使って ToolBar コントロールにボタンを追加する'
+            - name: '方法: デザイナーを使って ToolBar コントロールにボタンを追加する'
               href: how-to-add-buttons-to-a-toolbar-control-using-the-designer.md
-            - name: '方法:ツール バー ボタンのアイコンを定義する'
+            - name: '方法: ツール バー ボタンのアイコンを定義する'
               href: how-to-define-an-icon-for-a-toolbar-button.md
-            - name: '方法:デザイナーを使って ToolBar ボタンのアイコンを定義する'
+            - name: '方法: デザイナーを使って ToolBar ボタンのアイコンを定義する'
               href: how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md
-            - name: '方法:ツール バー ボタンのメニュー イベントをトリガーする'
+            - name: '方法: ツール バー ボタンのメニュー イベントをトリガーする'
               href: how-to-trigger-menu-events-for-toolbar-buttons.md
         - name: ToolStrip コントロール
           href: toolstrip-control-windows-forms.md
@@ -928,77 +923,77 @@
               href: toolstrip-technology-summary.md
             - name: ToolStrip コントロールのアーキテクチャ
               href: toolstrip-control-architecture.md
-            - name: '方法:ToolStrip の項目を動的に追加する'
+            - name: '方法: ToolStrip の項目を動的に追加する'
               href: how-to-add-toolstrip-items-dynamically.md
-            - name: '方法:デザイナーを使用して標準アイテムで基本的な ToolStrip を作成する'
+            - name: '方法: デザイナーを使用して標準アイテムで基本的な ToolStrip を作成する'
               href: create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md
-            - name: '方法:プロフェッショナル スタイルの ToolStrip コントロールを作成する'
+            - name: '方法: プロフェッショナル スタイルの ToolStrip コントロールを作成する'
               href: how-to-create-a-professionally-styled-toolstrip-control.md
-            - name: '方法:メニューのマージと ToolStrip コントロールを使用して MDI フォームを作成する'
+            - name: '方法: メニューのマージと ToolStrip コントロールを使用して MDI フォームを作成する'
               href: how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md
-            - name: '方法:ToolStripPanel コントロールを持つ MDI フォームを作成する'
+            - name: '方法: ToolStripPanel コントロールを持つ MDI フォームを作成する'
               href: how-to-create-an-mdi-form-with-toolstrippanel-controls.md
-            - name: '方法:Windows フォーム内の ToolStrip テキストとイメージの外観を変更する'
+            - name: '方法: Windows フォーム内の ToolStrip テキストとイメージの外観を変更する'
               href: how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms.md
-            - name: '方法:Windows フォーム内の ToolStrip 項目の間隔と配置を変更する'
+            - name: '方法: Windows フォーム内の ToolStrip 項目の間隔と配置を変更する'
               href: how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms.md
-            - name: '方法:Windows フォームに ToolStrip コントロールのカスタム レンダラーを作成して設定する'
+            - name: '方法: Windows フォームに ToolStrip コントロールのカスタム レンダラーを作成して設定する'
               href: create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md
-            - name: '方法:ToolStrip コントロールにトグル ボタンを作成する'
+            - name: '方法: ToolStrip コントロールにトグル ボタンを作成する'
               href: how-to-create-toggle-buttons-in-toolstrip-controls.md
-            - name: '方法:ToolStrip コントロールをカスタム描画する'
+            - name: '方法: ToolStrip コントロールをカスタム描画する'
               href: how-to-custom-draw-a-toolstrip-control.md
-            - name: '方法:ToolStrip アプリケーションの色をカスタマイズする'
+            - name: '方法: ToolStrip アプリケーションの色をカスタマイズする'
               href: how-to-customize-colors-in-toolstrip-applications.md
-            - name: '方法:ドッキングされた ToolStrip コントロールの Z オーダーを定義する'
+            - name: '方法: ドッキングされた ToolStrip コントロールの Z オーダーを定義する'
               href: how-to-define-z-ordering-of-docked-toolstrip-controls.md
-            - name: '方法:マウス ポインターが ToolStripItem 上にあることを検出する'
+            - name: '方法: マウス ポインターが ToolStripItem 上にあることを検出する'
               href: how-to-detect-when-the-mouse-pointer-is-over-a-toolstripitem.md
-            - name: '方法:ToolStrip コントロールの AutoComplete を有効にする'
+            - name: '方法: ToolStrip コントロールの AutoComplete を有効にする'
               href: how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms.md
-            - name: '方法:実行時に ToolStrip 項目を並べ替えできるようにする'
+            - name: '方法: 実行時に ToolStrip 項目を並べ替えできるようにする'
               href: how-to-enable-reordering-of-toolstrip-items-at-run-time-in-windows-forms.md
-            - name: '方法:Tab キーで ToolStrip コントロールから移動できるようにする'
+            - name: '方法: Tab キーで ToolStrip コントロールから移動できるようにする'
               href: how-to-enable-the-tab-key-to-move-out-of-a-toolstrip-control.md
-            - name: '方法:カスタムの ToolStripRenderer を実装する'
+            - name: '方法: カスタムの ToolStripRenderer を実装する'
               href: how-to-implement-a-custom-toolstriprenderer.md
-            - name: '方法:ToolStrip オーバーフローを管理する'
+            - name: '方法: ToolStrip オーバーフローを管理する'
               href: how-to-manage-toolstrip-overflow-in-windows-forms.md
-            - name: '方法:ToolStrip を ToolStripContainer からフォームに移動する'
+            - name: '方法: ToolStrip を ToolStripContainer からフォームに移動する'
               href: how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md
-            - name: '方法:ToolStrip に ToolStripItem を配置する'
+            - name: '方法: ToolStrip に ToolStripItem を配置する'
               href: how-to-position-a-toolstripitem-on-a-toolstrip.md
-            - name: '方法:実行時に ToolStrip レンダラーを設定する'
+            - name: '方法: 実行時に ToolStrip レンダラーを設定する'
               href: how-to-set-the-toolstrip-renderer-at-run-time.md
-            - name: '方法:アプリケーションの ToolStrip レンダラーを設定する'
+            - name: '方法: アプリケーションの ToolStrip レンダラーを設定する'
               href: how-to-set-the-toolstrip-renderer-for-an-application.md
-            - name: '方法:ToolStripTextBox を拡大して ToolStrip の残りの幅に合わせる'
+            - name: '方法: ToolStripTextBox を拡大して ToolStrip の残りの幅に合わせる'
               href: stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-wf.md
-            - name: '方法:ToolStrip コントロールにツールヒントを使用する'
+            - name: '方法: ToolStrip コントロールにツールヒントを使用する'
               href: how-to-use-tooltips-in-toolstrip-controls.md
-            - name: '方法:ToolStripControlHost を使用して Windows フォーム コントロールをラップする'
+            - name: '方法: ToolStripControlHost を使用して Windows フォーム コントロールをラップする'
               href: how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md
-            - name: 'チュートリアル:プロフェッショナル スタイルの ToolStrip コントロールの作成'
+            - name: 'チュートリアル: プロフェッショナル スタイルの ToolStrip コントロールの作成'
               href: walkthrough-creating-a-professionally-styled-toolstrip-control.md
-            - name: 'チュートリアル:メニューのマージと ToolStrip コントロールのある MDI フォームを作成する'
+            - name: 'チュートリアル: メニューのマージと ToolStrip コントロールのある MDI フォームを作成する'
               href: walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md
         - name: ToolStripContainer コントロール
           href: toolstripcontainer-control.md
           items:
             - name: ToolStripContainer コントロールの概要
               href: toolstripcontainer-control-overview.md
-            - name: '方法:フォームに ToolStripContainer を追加する'
+            - name: '方法: フォームに ToolStripContainer を追加する'
               href: how-to-add-a-toolstripcontainer-to-a-form.md
-            - name: '方法:ToolStripContentPanel にコントロールを追加する'
+            - name: '方法: ToolStripContentPanel にコントロールを追加する'
               href: how-to-add-a-control-to-a-toolstripcontentpanel.md
         - name: ToolStripPanel コントロール
           href: toolstrippanel-control.md
           items:
             - name: ToolStripPanel コントロールの概要
               href: toolstrippanel-control-overview.md
-            - name: '方法:ToolStripPanel を結合する'
+            - name: '方法: ToolStripPanel を結合する'
               href: how-to-join-toolstrippanels.md
-            - name: '方法:ToolStripPanel を MDI で使用する'
+            - name: '方法: ToolStripPanel を MDI で使用する'
               href: how-to-use-toolstrippanels-for-mdi.md
         - name: ToolStripProgressBar コントロール
           href: toolstripprogressbar-control.md
@@ -1015,9 +1010,9 @@
           items:
             - name: ToolTip コンポーネントの概要
               href: tooltip-component-overview-windows-forms.md
-            - name: '方法:デザイン時に Windows フォームのコントロールにツールヒントを設定する'
+            - name: '方法: デザイン時に Windows フォームのコントロールにツールヒントを設定する'
               href: how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md
-            - name: '方法:Windows フォームの ToolTip コンポーネントの遅延時間を変更する'
+            - name: '方法: Windows フォームの ToolTip コンポーネントの遅延時間を変更する'
               href: how-to-change-the-delay-of-the-windows-forms-tooltip-component.md
         - name: TrackBar コントロール
           href: trackbar-control-windows-forms.md
@@ -1029,21 +1024,21 @@
           items:
             - name: TreeView コントロールの概要
               href: treeview-control-overview-windows-forms.md
-            - name: '方法:Windows フォーム TreeView コントロールでノードを追加および削除する'
+            - name: '方法: Windows フォーム TreeView コントロールでノードを追加および削除する'
               href: how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md
-            - name: '方法:デザイナーで Windows フォーム TreeView コントロールを使ってノードを追加および削除する'
+            - name: '方法: デザイナーで Windows フォーム TreeView コントロールを使ってノードを追加および削除する'
               href: add-and-remove-nodes-with-wf-treeview-control-using-the-designer.md
-            - name: '方法:ショートカット メニューを TreeView ノードに追加する'
+            - name: '方法: ショートカット メニューを TreeView ノードに追加する'
               href: how-to-attach-a-shortcut-menu-to-a-treeview-node.md
-            - name: '方法:デザイナーを使用して TreeNode にショートカット メニューを割り当てる'
+            - name: '方法: デザイナーを使用して TreeNode にショートカット メニューを割り当てる'
               href: how-to-attach-a-shortcut-menu-to-a-treenode-using-the-designer.md
-            - name: '方法:TreeView コントロールまたは ListView コントロール (Windows フォーム) にカスタム情報を追加する'
+            - name: '方法: TreeView コントロールまたは ListView コントロール (Windows フォーム) にカスタム情報を追加する'
               href: add-custom-information-to-a-treeview-or-listview-control-wf.md
-            - name: '方法:クリックされた TreeView ノードを判別する'
+            - name: '方法: クリックされた TreeView ノードを判別する'
               href: how-to-determine-which-treeview-node-was-clicked-windows-forms.md
-            - name: '方法:Windows フォーム TreeView コントロールのすべてのノードを反復処理する'
+            - name: '方法: Windows フォーム TreeView コントロールのすべてのノードを反復処理する'
               href: how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md
-            - name: '方法:Windows フォーム TreeView コントロールのアイコンを設定する'
+            - name: '方法: Windows フォーム TreeView コントロールのアイコンを設定する'
               href: how-to-set-icons-for-the-windows-forms-treeview-control.md
         - name: WebBrowser コントロール
           href: webbrowser-control-windows-forms.md
@@ -1052,24 +1047,24 @@
               href: webbrowser-control-overview.md
             - name: WebBrowser セキュリティ
               href: webbrowser-security.md
-            - name: '方法:WebBrowser コントロールで URL に移動する'
+            - name: '方法: WebBrowser コントロールで URL に移動する'
               href: how-to-navigate-to-a-url-with-the-webbrowser-control.md
-            - name: '方法:WebBrowser コントロールを使用して印刷する'
+            - name: '方法: WebBrowser コントロールを使用して印刷する'
               href: how-to-print-with-a-webbrowser-control.md
-            - name: '方法:Windows フォーム アプリケーションに Web ブラウザーの機能を追加する'
+            - name: '方法: Windows フォーム アプリケーションに Web ブラウザーの機能を追加する'
               href: how-to-add-web-browser-capabilities-to-a-windows-forms-application.md
-            - name: '方法:Windows フォーム アプリケーションで HTML ドキュメントビューアーを作成する'
+            - name: '方法: Windows フォーム アプリケーションで HTML ドキュメントビューアーを作成する'
               href: how-to-create-an-html-document-viewer-in-a-windows-forms-application.md
-            - name: '方法:DHTML コードとクライアント アプリケーション コード間の双方向の通信を実装する'
+            - name: '方法: DHTML コードとクライアント アプリケーション コード間の双方向の通信を実装する'
               href: implement-two-way-com-between-dhtml-and-client.md
             - name: マネージド HTML DOM (Document Object Model) の使用
               href: using-the-managed-html-document-object-model.md
               items:
-                - name: '方法:マネージド HTML DOM (Document Object Model) にアクセスする'
+                - name: '方法: マネージド HTML DOM (Document Object Model) にアクセスする'
                   href: how-to-access-the-managed-html-document-object-model.md
-                - name: '方法:マネージド HTML DOM (Document Object Model) の HTML ソースにアクセスする'
+                - name: '方法: マネージド HTML DOM (Document Object Model) の HTML ソースにアクセスする'
                   href: how-to-access-the-html-source-in-the-managed-html-document-object-model.md
-                - name: '方法:マネージド HTML DOM (Document Object Model) の要素のスタイルを変更する'
+                - name: '方法: マネージド HTML DOM (Document Object Model) の要素のスタイルを変更する'
                   href: how-to-change-styles-on-an-element-in-the-managed-html-document-object-model.md
                 - name: マネージド HTML DOM (Document Object Model) へのアクセス
                   href: accessing-frames-in-the-managed-html-document-object-model.md
@@ -1080,15 +1075,15 @@
           items:
             - name: ListBox の代わりに Windows フォーム ComboBox を使用する場合
               href: when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md
-            - name: '方法:Windows フォーム ComboBox、ListBox、または CheckedListBox コントロールの特定の項目にアクセスする'
+            - name: '方法: Windows フォーム ComboBox、ListBox、または CheckedListBox コントロールの特定の項目にアクセスする'
               href: access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md
-            - name: '方法:Windows フォームの ComboBox、ListBox、または CheckedListBox コントロールに項目を追加または削除する'
+            - name: '方法: Windows フォームの ComboBox、ListBox、または CheckedListBox コントロールに項目を追加または削除する'
               href: add-and-remove-items-from-a-wf-combobox.md
-            - name: '方法:Windows フォーム ComboBox、ListBox、または CheckedListBox コントロールのルックアップ テーブルを作成する'
+            - name: '方法: Windows フォーム ComboBox、ListBox、または CheckedListBox コントロールのルックアップ テーブルを作成する'
               href: create-a-lookup-table-for-a-wf-combobox-listbox.md
-            - name: '方法:Windows フォームの ComboBox または ListBox コントロールをデータにバインドする'
+            - name: '方法: Windows フォームの ComboBox または ListBox コントロールをデータにバインドする'
               href: how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md
-            - name: '方法:Windows フォーム ComboBox、ListBox、または CheckedListBox コントロールを並べ替える'
+            - name: '方法: Windows フォーム ComboBox、ListBox、または CheckedListBox コントロールを並べ替える'
               href: sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md
     - name: .NET Framework を使用したカスタム Windows フォーム コントロールの開発
       href: developing-custom-windows-forms-controls.md
@@ -1103,9 +1098,9 @@
         - name: Windows フォーム コントロール開発の基本概念
           href: windows-forms-control-development-basics.md
           items:
-            - name: '方法:シンプルな Windows フォーム コントロールを開発する'
+            - name: '方法: シンプルな Windows フォーム コントロールを開発する'
               href: how-to-develop-a-simple-windows-forms-control.md
-            - name: '方法:進行状況を示す Windows フォーム コントロールを作成する'
+            - name: '方法: 進行状況を示す Windows フォーム コントロールを作成する'
               href: how-to-create-a-windows-forms-control-that-shows-progress.md
             - name: 複合 Windows フォーム コントロールの開発
               href: developing-a-composite-windows-forms-control.md
@@ -1118,7 +1113,7 @@
               href: defining-default-values-with-the-shouldserialize-and-reset-methods.md
             - name: プロパティ変更イベント
               href: property-changed-events.md
-            - name: '方法:内在コントロールのプロパティを公開する'
+            - name: '方法: 内在コントロールのプロパティを公開する'
               href: how-to-expose-properties-of-constituent-controls.md
             - name: カスタム コントロールへのメソッドの実装
               href: method-implementation-in-custom-controls.md
@@ -1134,7 +1129,7 @@
         - name: Windows フォーム コントロールの属性
           href: attributes-in-windows-forms-controls.md
           items:
-            - name: '方法:Windows フォーム コントロールに属性を適用する'
+            - name: '方法: Windows フォーム コントロールに属性を適用する'
               href: how-to-apply-attributes-in-windows-forms-controls.md
         - name: コントロールのカスタム描画およびレンダリング
           href: custom-control-painting-and-rendering.md
@@ -1145,75 +1140,75 @@
               href: user-drawn-controls.md
             - name: 内在コントロール
               href: constituent-controls.md
-            - name: '方法:実行時にコントロールを非表示にする'
+            - name: '方法: 実行時にコントロールを非表示にする'
               href: how-to-make-your-control-invisible-at-run-time.md
-            - name: '方法:コントロールに透明な背景を指定する'
+            - name: '方法: コントロールに透明な背景を指定する'
               href: how-to-give-your-control-a-transparent-background.md
             - name: visual スタイルが使用されているコントロールのレンダリング
               href: rendering-controls-with-visual-styles.md
               items:
-                - name: '方法:コントロールの描画クラスを使用する'
+                - name: '方法: コントロールの描画クラスを使用する'
                   href: how-to-use-a-control-rendering-class.md
-                - name: '方法:visual スタイル要素を描画する'
+                - name: '方法: visual スタイル要素を描画する'
                   href: how-to-render-a-visual-style-element.md
         - name: Windows フォーム コントロールのレイアウト
           href: layout-in-windows-forms-controls.md
           items:
             - name: AutoSize プロパティの概要
               href: autosize-property-overview.md
-            - name: '方法:フォームの端に合わせてコントロールを配置する'
+            - name: '方法: フォームの端に合わせてコントロールを配置する'
               href: how-to-align-a-control-to-the-edges-of-forms.md
             - name: Windows フォーム コントロールでのマージンと埋め込み
               href: margin-and-padding-in-windows-forms-controls.md
-            - name: '方法:埋め込みを使用して Windows フォーム コントロールの周囲に境界線を作成する'
+            - name: '方法: 埋め込みを使用して Windows フォーム コントロールの周囲に境界線を作成する'
               href: how-to-create-a-border-around-a-windows-forms-control-using-padding.md
-            - name: '方法:カスタム レイアウト エンジンを実装する'
+            - name: '方法: カスタム レイアウト エンジンを実装する'
               href: how-to-implement-a-custom-layout-engine.md
         - name: Windows フォーム コントロールのマルチスレッド処理
           href: multithreading-in-windows-forms-controls.md
           items:
-            - name: '方法:Windows フォーム コントロールのスレッド セーフな呼び出しを行う'
+            - name: '方法: Windows フォーム コントロールのスレッド セーフな呼び出しを行う'
               href: how-to-make-thread-safe-calls-to-windows-forms-controls.md
-            - name: '方法:バックグラウンド スレッドを使用してファイルを検索する'
+            - name: '方法: バックグラウンド スレッドを使用してファイルを検索する'
               href: how-to-use-a-background-thread-to-search-for-files.md
     - name: .NET Framework の Windows フォーム コントロールの機能別分類
       href: windows-forms-controls-by-function.md
     - name: デザイン時の Windows フォーム コントロールの開発
       href: developing-windows-forms-controls-at-design-time.md
       items:
-        - name: 'チュートリアル:Visual Basic による複合コントロールの作成'
+        - name: 'チュートリアル: Visual Basic による複合コントロールの作成'
           href: walkthrough-authoring-a-composite-control-with-visual-basic.md
-        - name: 'チュートリアル:Visual C# による複合コントロールの作成'
+        - name: 'チュートリアル: Visual C# による複合コントロールの作成'
           href: walkthrough-authoring-a-composite-control-with-visual-csharp.md
-        - name: 'チュートリアル:Visual Basic による Windows フォーム コントロールからの継承'
+        - name: 'チュートリアル: Visual Basic による Windows フォーム コントロールからの継承'
           href: walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md
-        - name: 'チュートリアル:Visual C# による Windows フォーム コントロールからの継承'
+        - name: 'チュートリアル: Visual C# による Windows フォーム コントロールからの継承'
           href: walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md
-        - name: 'チュートリアル:Windows フォーム コントロールのスマート タグを使用した共通タスクの実行'
+        - name: 'チュートリアル: Windows フォーム コントロールのスマート タグを使用した共通タスクの実行'
           href: performing-common-tasks-using-smart-tags-on-wf-controls.md
-        - name: 'チュートリアル:DesignerSerializationVisibilityAttribute を使用した、標準データ型のコレクションのシリアル化'
+        - name: 'チュートリアル: DesignerSerializationVisibilityAttribute を使用した、標準データ型のコレクションのシリアル化'
           href: serializing-collections-designerserializationvisibilityattribute.md
-        - name: 'チュートリアル:カスタム Windows フォーム コントロールのデザイン時のデバッグ'
+        - name: 'チュートリアル: カスタム Windows フォーム コントロールのデザイン時のデバッグ'
           href: walkthrough-debugging-custom-windows-forms-controls-at-design-time.md
-        - name: 'チュートリアル:Visual Studio のデザイン時機能を活用した Windows フォーム コントロールの作成'
+        - name: 'チュートリアル: Visual Studio のデザイン時機能を活用した Windows フォーム コントロールの作成'
           href: creating-a-wf-control-design-time-features.md
-        - name: '方法:Windows フォームのコントロールを作成する'
+        - name: '方法: Windows フォームのコントロールを作成する'
           href: how-to-author-controls-for-windows-forms.md
-        - name: '方法:複合コントロールを作成する'
+        - name: '方法: 複合コントロールを作成する'
           href: how-to-author-composite-controls.md
-        - name: '方法:UserControl クラスを継承する'
+        - name: '方法: UserControl クラスを継承する'
           href: how-to-inherit-from-the-usercontrol-class.md
-        - name: '方法:既存の Windows フォーム コントロールから継承する'
+        - name: '方法: 既存の Windows フォーム コントロールから継承する'
           href: how-to-inherit-from-existing-windows-forms-controls.md
-        - name: '方法:コントロール クラスを継承する'
+        - name: '方法: コントロール クラスを継承する'
           href: how-to-inherit-from-the-control-class.md
-        - name: '方法:デザイン時にフォームの端に合わせてコントロールを配置する'
+        - name: '方法: デザイン時にフォームの端に合わせてコントロールを配置する'
           href: how-to-align-a-control-to-the-edges-of-forms-at-design-time.md
-        - name: '方法:[ツールボックス アイテムの選択] ダイアログ ボックスにコントロールを表示する'
+        - name: '方法: [ツールボックス アイテムの選択] ダイアログ ボックスにコントロールを表示する'
           href: how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md
-        - name: '方法:コントロールにツールボックス ビットマップを指定する'
+        - name: '方法: コントロールにツールボックス ビットマップを指定する'
           href: how-to-provide-a-toolbox-bitmap-for-a-control.md
-        - name: '方法:UserControl の実行時の動作をテストする'
+        - name: '方法: UserControl の実行時の動作をテストする'
           href: how-to-test-the-run-time-behavior-of-a-usercontrol.md
         - name: Windows フォーム デザイナーでのデザイン時エラー
           href: design-time-errors-in-the-windows-forms-designer.md

@@ -440,6 +440,28 @@
           href: core/porting/winforms.md
         - name: WPF プロジェクトを移植する
           href: core/porting/wpf.md
+    - name: 依存関係の読み込み
+      items:
+        - name: 概要
+          href: core/dependency-loading/overview.md
+        - name: AssemblyLoadContext について
+          href: core/dependency-loading/understanding-assemblyloadcontext.md
+        - name: 読み込みの詳細
+          items:
+            - name: 既定の依存関係プローブ
+              href: core/dependency-loading/default-probing.md
+            - name: マネージド アセンブリを読み込んでいます
+              href: core/dependency-loading/loading-managed.md
+            - name: サテライト アセンブリを読み込んでいます
+              href: core/dependency-loading/loading-resources.md
+            - name: アンマネージド ライブラリを読み込んでいます
+              href: core/dependency-loading/loading-unmanaged.md
+        - name: チュートリアル
+          items:
+            - name: プラグインがある .NET Core アプリケーションを作成する
+              href: core/tutorials/creating-app-with-plugin-support.md
+            - name: .NET Core でアセンブリのアンローダビリティを使用およびデバッグする方法
+              href: standard/assembly/unloadability-howto.md
     - name: ソースから .NET Core をビルドする
       href: core/build/index.md
       items:
@@ -1880,7 +1902,7 @@
         - name: エラー メッセージ
           href: visual-basic/language-reference/error-messages/index.md
           items:
-            - name: '''#Else'' の前には、対応する ''#If'' または ''#ElseIf'' が必要です。'
+            - name: "\t'#Else' の前には、対応する '#If' または '#ElseIf' が必要です。"
               href: visual-basic/language-reference/error-messages/elseif-must-be-preceded-by-a-matching-if-or-elseif.md
             - name: '''#Region'' および ''#End Region'' ステートメントは、メソッド本体や複数行ラムダの内部では有効ではありません。'
               href: visual-basic/language-reference/error-messages/region-and-end-region-are-not-valid-within-method-bodies-multiline-lambdas.md
