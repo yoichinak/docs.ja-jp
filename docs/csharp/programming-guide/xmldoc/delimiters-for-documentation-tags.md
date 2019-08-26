@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /** */ delimiters for C# documentation tags
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
-ms.openlocfilehash: d08dd0c68a11ddf73c19a1e09bc8c59937708553
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c8d20284b7ef2e06fb987f94f05cbe1dde1dc431
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634764"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928074"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>ドキュメント タグの区切り記号 (C# プログラミング ガイド)
 XML ドキュメント コメントでは区切り記号を使用し、ドキュメント コメントの開始位置と終了位置をコンパイラに示す必要があります。 XML ドキュメント タグでは、次の種類の区切り記号を使用できます。  
@@ -21,7 +21,7 @@ XML ドキュメント コメントでは区切り記号を使用し、ドキュ
  単一行の区切り記号。 ドキュメント例で使用されています。この区切り記号は、Visual C# プロジェクト テンプレートで使用されます。 区切り記号の直後に空白文字が続く場合、その文字は XML 出力に含まれません。  
   
 > [!NOTE]
->  Visual Studio IDE には、スマート コメント編集と呼ばれる機能があります。コード エディターで `///` 区切り記号を入力すると、\<summary> タグと \</summary> タグが自動的に挿入され、これらのタグの内側にカーソルが移動します。 [[オプション] ダイアログ ボックス](/visualstudio/ide/reference/options-text-editor-csharp-advanced)で、この機能をオンまたはオフにできます。  
+> Visual Studio IDE には、スマート コメント編集と呼ばれる機能があります。コード エディターで `///` 区切り記号を入力すると、\<summary> タグと \</summary> タグが自動的に挿入され、これらのタグの内側にカーソルが移動します。 [[オプション] ダイアログ ボックス](/visualstudio/ide/reference/options-text-editor-csharp-advanced)で、この機能をオンまたはオフにできます。  
   
  `/** */`  
  複数行の区切り記号。  
@@ -80,7 +80,7 @@ XML ドキュメント コメントでは区切り記号を使用し、ドキュ
   
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [XML ドキュメント コメント](../../../csharp/programming-guide/xmldoc/index.md)
-- [/doc (C# コンパイラ オプション)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)
-- [XML ドキュメント コメント](../../../csharp/programming-guide/xmldoc/index.md)
+- [C# プログラミング ガイド](../index.md)
+- [XML ドキュメント コメント](./index.md)
+- [/doc (C# コンパイラ オプション)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [XML ドキュメント コメント](./index.md)

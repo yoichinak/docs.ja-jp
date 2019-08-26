@@ -1,15 +1,15 @@
 ---
-title: '方法: 文字列コレクションを結合および比較する (LINQ) (C#)'
+title: 方法:文字列コレクションを結合および比較する (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: cdddf0aaac4264ae70c89590ef61e7b1bbf4cb9b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 3fe1f9dbac864f4eca8ea92f84c35d290ab14642
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585952"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594090"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>方法: 文字列コレクションを結合および比較する (LINQ) (C#)
+# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>方法:文字列コレクションを結合および比較する (LINQ) (C#)
 この例では、複数行のテキストが含まれるファイルをマージし、結果を並び替える方法を示します。 具体的には、複数のテキスト行からなる 2 つの集合の単純な連結、和集合、積集合を求める方法を示します。  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>プロジェクトとテキスト ファイルを設定するには  
@@ -173,5 +173,5 @@ class MergeStrings
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ と文字列 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ とファイル ディレクトリ (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ と文字列 (C#)](./linq-and-strings.md)
+- [LINQ とファイル ディレクトリ (C#)](./linq-and-file-directories.md)

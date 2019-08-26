@@ -4,12 +4,12 @@ description: .NET Core で使用できない .NET Framework テクノロジの�
 author: cartermp
 ms.author: mairaw
 ms.date: 04/30/2019
-ms.openlocfilehash: bfeea58f4d80b789a7174a77e0784f2326906416
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87c3dd337ad44fd21b255afa7c03b528cd8a42ad
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737097"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660598"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Core で使用できない .NET Framework テクノロジ
 
@@ -33,13 +33,13 @@ API またはテクノロジが現在実装されていないからといって�
 
 ## <a name="code-access-security-cas"></a>コード アクセス セキュリティ (CAS)
 
-サンド ボックスは、マネージド アプリケーションやライブラリが使用または実行するリソースの制限を、ランタイムまたはフレームワークに依存しています。これは [.NET Framework ではサポートされていない](~/docs/framework/misc/code-access-security.md)ため、.NET Core でもサポートされていません。 .NET Framework やランタイムでは、特権の昇格が発生するケースが多すぎるため、このまま CAS をセキュリティ境界と見なすことはできません。 さらに、CAS は実装が複雑化しており、その使用を予定していないアプリケーションでは、多くの場合で正確性のパフォーマンスに影響します。
+サンド ボックスは、マネージド アプリケーションやライブラリが使用または実行するリソースの制限を、ランタイムまたはフレームワークに依存しています。これは [.NET Framework ではサポートされていない](../../framework/misc/code-access-security.md)ため、.NET Core でもサポートされていません。 .NET Framework やランタイムでは、特権の昇格が発生するケースが多すぎるため、このまま CAS をセキュリティ境界と見なすことはできません。 さらに、CAS は実装が複雑化しており、その使用を予定していないアプリケーションでは、多くの場合で正確性のパフォーマンスに影響します。
 
 仮想化、コンテナー、ユーザー アカウントなど、オペレーティング システムが提供するセキュリティ境界を使用して、最小限の特権セットでプロセスを実行します。
 
 ## <a name="security-transparency"></a>セキュリティ透過性
 
-CAS と同様に、セキュリティ透過性はサンドボックス コードをセキュリティ クリティカルなコードから宣言的に分離しますが、[現在はセキュリティ境界としてはサポートされていません](~/docs/framework/misc/security-transparent-code.md)。 この機能は、Silverlight で頻繁に使用されます。 
+CAS と同様に、セキュリティ透過性はサンドボックス コードをセキュリティ クリティカルなコードから宣言的に分離しますが、[現在はセキュリティ境界としてはサポートされていません](../../framework/misc/security-transparent-code.md)。 この機能は、Silverlight で頻繁に使用されます。 
 
 仮想化、コンテナー、ユーザー アカウントなど、オペレーティング システムが提供するセキュリティ境界を使用して、最低限の特権セットでプロセスを実行します。
 

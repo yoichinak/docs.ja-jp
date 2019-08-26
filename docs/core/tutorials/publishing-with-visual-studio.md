@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 10/05/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 0322d44ca37ab8e7faa3188887069c2e04ec755b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f8c37f47cc8dfb999f2371773a50c2dd91e074a5
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110267"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660475"
 ---
 # <a name="publish-your-net-core-hello-world-application-with-visual-studio-2017"></a>Visual Studio 2017 での .NET Core Hello World アプリケーションの発行
 
@@ -52,4 +52,4 @@ ms.locfileid: "59110267"
 
 発行プロセスでは、フレームワークに依存する配置が作成されます。これは、.NET Core がシステムにインストールされていれば、.NET Core によってサポートされる任意のプラットフォームで発行されたアプリケーションが動作する配置の種類です。 ユーザーはコンソール ウィンドウから `dotnet HelloWorld.dll` コマンドを発行することによって、アプリケーションを実行できます。
 
-.NET Core アプリケーションの発行と展開の詳細については、「[.NET Core アプリケーション展開](../../core/deploying/index.md)」を参照してください。
+.NET Core アプリケーションの発行と展開の詳細については、「[.NET Core アプリケーション展開](../deploying/index.md)」を参照してください。

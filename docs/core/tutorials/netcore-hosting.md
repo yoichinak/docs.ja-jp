@@ -4,12 +4,12 @@ description: .NET Core ランタイムの動作を制御する必要がある高
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: d3bdaacd4be776e0e9fff01698cca360ea4c9c6d
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 8eebc04390514bca288b67952ec7748366a45d6e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402024"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660521"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>ネイティブ コードから .NET ランタイムを制御するカスタム .NET Core ホストを作成する
 
@@ -23,7 +23,7 @@ ms.locfileid: "67402024"
 
 ホストはネイティブ アプリケーションであるため、このチュートリアルでは、C++ アプリケーションを構築して .NET Core をホスティングする方法について説明します。 C++ 開発環境が必要になります ([Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) に付属のものなど)。
 
-ホストをテストするための単純な .NET Core アプリケーションも必要です。そのため、[.NET Core SDK](https://www.microsoft.com/net/core) をインストールし、[小さい .NET Core テスト アプリを作成](../../core/tutorials/with-visual-studio.md)してください ('Hello World' アプリなど)。 新しい .NET Core コンソール プロジェクト テンプレートで作成される 'Hello World' アプリで十分です。
+ホストをテストするための単純な .NET Core アプリケーションも必要です。そのため、[.NET Core SDK](https://www.microsoft.com/net/core) をインストールし、[小さい .NET Core テスト アプリを作成](with-visual-studio.md)してください ('Hello World' アプリなど)。 新しい .NET Core コンソール プロジェクト テンプレートで作成される 'Hello World' アプリで十分です。
 
 ## <a name="hosting-apis"></a>ホスト API
 .NET Core をホストするために使用できる API が 3 種類あります。 このドキュメント (および関連する[サンプル](https://github.com/dotnet/samples/tree/master/core/hosting)) では、すべてのオプションについて説明します。

@@ -4,12 +4,12 @@ description: ライブラリ プロジェクトを .NET Framework から .NET Co
 author: cartermp
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8709c4942bcd1b0fc7f0e75ee41e5c9a01df83ee
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: c7a770ba2da8c245ba9140852fc7c2a33a55f7a2
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745561"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660709"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>.NET Framework ライブラリを .NET Core に移植する
 
@@ -29,16 +29,16 @@ ms.locfileid: "56745561"
 [.NET Standard](../../standard/net-standard.md)\
 このトピックでは、すべての .NET 実装で使用可能にすることを目的とした、.NET API の正式な仕様について説明します。
 
-[パッケージ、メタパッケージ、フレームワーク](~/docs/core/packages.md)   
+[パッケージ、メタパッケージ、フレームワーク](../packages.md)   
 この記事では、.NET Core でのパッケージの定義と使用について説明すると共に、複数の .NET 実装で実行されるコードがパッケージでどのようにサポートされるかについて説明します。
 
-[クロス プラットフォーム ツールによるライブラリの作成](~/docs/core/tutorials/libraries.md)   
+[クロス プラットフォーム ツールによるライブラリの作成](../tutorials/libraries.md)   
 このトピックでは、クロスプラットフォーム CLI ツールを使用して .NET 用ライブラリを作成する方法について説明します。
 
-[.NET Core の *csproj* 形式に追加されたもの](~/docs/core/tools/csproj.md)   
+[.NET Core の *csproj* 形式に追加されたもの](../tools/csproj.md)   
 この記事では、*csproj* および MSBuild への移行に伴ってプロジェクト ファイルに追加された変更について説明します。
 
-[.NET Core への移植 - サード パーティの依存関係の分析](~/docs/core/porting/third-party-deps.md)   
+[.NET Core への移植 - サード パーティの依存関係の分析](third-party-deps.md)   
 このトピックでは、サード パーティの依存関係の移植性と、NuGet パッケージの依存関係が .NET Core で機能しない場合の対処方法について説明します。
 
 ## <a name="retargeting-your-net-framework-code-to-net-framework-472"></a>.NET Framework コードのターゲットを .NET Framework 4.7.2 に変更する
@@ -47,8 +47,8 @@ ms.locfileid: "56745561"
 
 移植する Visual Studio の各プロジェクトで、次の手順を実行します。
 
-1. プロジェクトを右クリックし、**[プロパティ]** を選択します。
-1. **[対象とする Framework]** ボックスの一覧で、**[.NET Framework 4.7.2]** を選択します。
+1. プロジェクトを右クリックし、 **[プロパティ]** を選択します。
+1. **[対象とする Framework]** ボックスの一覧で、 **[.NET Framework 4.7.2]** を選択します。
 1. プロジェクトを再コンパイルします。
 
 プロジェクトのターゲットが .NET Framework 4.7.2 になったため、コード移植のベースとしてその .NET Framework を使用できます。

@@ -2,12 +2,12 @@
 title: dotnet new コマンド
 description: dotnet new コマンドは、指定されたテンプレートに基づいて新しい .NET Core プロジェクトを作成します。
 ms.date: 05/06/2019
-ms.openlocfilehash: f8bc8cb59ae6e421f4e9bd05925376399939056d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: c9e960bab0e28e88b0cc8d431dad3b9f3f00c9c0
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878315"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660539"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -220,7 +220,7 @@ dotnet new [-h|--help]
 指定された `PATH` または `NUGET_ID` で、ソース パックまたはテンプレート パックをアンインストールします。 `<PATH|NUGET_ID>` 値を除外すると、現在インストールされているすべてのテンプレート パックとそれらに関連付けられているテンプレートが表示されます。
 
 > [!NOTE]
-> `PATH` を使用してテンプレートをアンインストールするには、完全修飾パスを使用する必要があります。 たとえば、*C:/Users/\<ユーザー>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* は有効ですが、*./GarciaSoftware.ConsoleTemplate.CSharp* が含まれるフォルダーから、そのパスを指定することはできません。
+> `PATH` を使用してテンプレートをアンインストールするには、完全修飾パスを使用する必要があります。 たとえば、*C:/Users/\<ユーザー>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* は有効ですが、 *./GarciaSoftware.ConsoleTemplate.CSharp* が含まれるフォルダーから、そのパスを指定することはできません。
 > また、テンプレートのパスの最後にある終端ディレクトリのスラッシュは含めないでください。
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
@@ -271,7 +271,7 @@ dotnet new [-h|--help]
 指定された `PATH` または `NUGET_ID` で、ソース パックまたはテンプレート パックをアンインストールします。
 
 > [!NOTE]
-> `PATH` を使用してテンプレートをアンインストールするには、完全修飾パスを使用する必要があります。 たとえば、*C:/Users/\<ユーザー>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* は有効ですが、*./GarciaSoftware.ConsoleTemplate.CSharp* が含まれるフォルダーから、そのパスを指定することはできません。
+> `PATH` を使用してテンプレートをアンインストールするには、完全修飾パスを使用する必要があります。 たとえば、*C:/Users/\<ユーザー>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* は有効ですが、 *./GarciaSoftware.ConsoleTemplate.CSharp* が含まれるフォルダーから、そのパスを指定することはできません。
 > また、テンプレートのパスの最後にある終端ディレクトリのスラッシュは含めないでください。
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
@@ -318,7 +318,7 @@ dotnet new [-h|--help]
 指定された `PATH` または `NUGET_ID` で、ソース パックまたはテンプレート パックをアンインストールします。
 
 > [!NOTE]
-> ソース `PATH` を使用してテンプレートをアンインストールするには、完全修飾パスを使用する必要があります。 たとえば、*C:/Users/\<ユーザー>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* は有効ですが、*./GarciaSoftware.ConsoleTemplate.CSharp* が含まれるフォルダーから、そのパスを指定することはできません。 また、テンプレートのパスの最後にある終端ディレクトリのスラッシュは含めないでください。
+> ソース `PATH` を使用してテンプレートをアンインストールするには、完全修飾パスを使用する必要があります。 たとえば、*C:/Users/\<ユーザー>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* は有効ですが、 *./GarciaSoftware.ConsoleTemplate.CSharp* が含まれるフォルダーから、そのパスを指定することはできません。 また、テンプレートのパスの最後にある終端ディレクトリのスラッシュは含めないでください。
 > 
 > テンプレートのアンインストールに必要な `PATH` または `NUGET_ID` 引数を決定できない場合、引数なしで `dotnet new --uninstall` を実行するとインストールされているすべてのテンプレートと、それをアンインストールするために必要な引数が一覧表示されます。
 
@@ -774,6 +774,6 @@ SDK バージョン 2.0.0 (.NET Core SDK 2.0 以降のバージョンでのみ�
 ## <a name="see-also"></a>関連項目
 
 - [dotnet new のカスタム テンプレート](custom-templates.md)
-- [dotnet new のカスタム テンプレートを作成する](~/docs/core/tutorials/create-custom-template.md)
+- [dotnet new のカスタム テンプレートを作成する](../tutorials/create-custom-template.md)
 - [dotnet/dotnet-template-samples GitHub リポジトリ](https://github.com/dotnet/dotnet-template-samples)
 - [dotnet new で使用できるテンプレート](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)

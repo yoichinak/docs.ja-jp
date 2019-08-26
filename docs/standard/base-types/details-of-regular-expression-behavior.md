@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb43554d53051ce02a296f225c68c74352add5ed
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 7ceee0c228000982be83c79fed2f7af43712b3ae
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567476"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963388"
 ---
 # <a name="details-of-regular-expression-behavior"></a>正規表現の動作の詳細
 .NET Framework の正規表現エンジンはバックトラッキング型の正規表現マッチャーであり、Perl、Python、Emacs、および Tcl で使われているのと同じ従来型の非決定性有限オートマトン (NFA) エンジンを採用しています。 このエンジンは、awk、egrep、または lex に見られるような、より高速であるが制限が多い、純粋な正規表現決定性有限オートマトン (DFA) エンジンとは異なります。 また、標準化されているが低速な POSIX NFA とも異なります。 次のセクションでは、これら 3 種類の正規表現エンジンについて説明し、.NET Framework の正規表現が従来型 NFA エンジンを使って実装されている理由について説明します。  
@@ -31,7 +31,7 @@ ms.locfileid: "69567476"
  従来型 NFA エンジンは、DFA エンジンや POSIX NFA エンジンよりも文字列の一致をより厳密に制御するため、プログラマに人気があります。 NFA エンジンは、最悪の場合には実行速度が遅くなることもありますが、あいまいさを少なくし、バックトラッキングを制限するパターンを使用すると、一致する文字列を線形時間または多項式時間で見つけるように調整できます。 言い換えると、NFA エンジンはパフォーマンスと引き換えに能力と柔軟性を向上させますが、ほとんどの場合、正規表現が適切に記述されていれば十分に許容できるパフォーマンスを実現でき、バックトラッキングによってパフォーマンスが指数関数的に低下する状況は回避されます。  
   
 > [!NOTE]
->  過度なバックトラッキングによって発生するパフォーマンスの低下と、そのような問題を回避する正規表現の作成方法については、「[バックトラッキング](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)」をご覧ください。  
+> 過度なバックトラッキングによって発生するパフォーマンスの低下と、そのような問題を回避する正規表現の作成方法については、「[バックトラッキング](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)」をご覧ください。  
   
 ## <a name="net-framework-engine-capabilities"></a>.NET Framework エンジンの機能  
  従来型の NFA エンジンの長所を利用するために、.NET Framework の正規表現エンジンには、プログラマがバックトラッキング エンジンを調整できるようにするための構成体セットが組み込まれています。 それらの構成体を使用すると、高速検索を実行したり、他の展開よりも特定の展開を優先させたりできます。  
