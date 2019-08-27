@@ -1,6 +1,6 @@
 ---
-title: ラムダ式:楽しいキーワード
-description: "\"楽しい\" キーワードをF#使用してラムダ式を定義する方法について説明します。これは匿名関数です。"
+title: ラムダ式: funキーワード
+description: "\"fun\" キーワードを使用してラムダ式を定義する方法について説明します。これは匿名関数です。"
 ms.date: 05/16/2016
 ms.openlocfilehash: 9818724686dd83a7e352fb36819289fa19b002df
 ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/30/2019
 ms.locfileid: "68630661"
 ---
-# <a name="lambda-expressions-the-fun-keyword-f"></a>ラムダ式:楽しいキーワード (F#)
+# <a name="lambda-expressions-the-fun-keyword-f"></a>ラムダ式: funキーワード (F#)
 
 `fun`キーワードは、ラムダ式、つまり匿名関数を定義するために使用されます。
 
