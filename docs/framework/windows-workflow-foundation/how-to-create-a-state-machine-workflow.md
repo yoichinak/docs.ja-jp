@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: 3f1c1beda7519a113ea15c5fed84bcb017afae12
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 451f9581ae997ad86fee968fa978713db2049455
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962350"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044388"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>方法: ステート マシン ワークフローの作成
 ワークフローは、ビルトイン アクティビティおよびカスタム アクティビティから構築できます。 このトピックでは、 <xref:System.Activities.Statements.StateMachine>アクティビティなどの組み込みアクティビティと、前[の手順のカスタムアクティビティの両方を使用するワークフローを作成する手順について説明します。アクティビティ](how-to-create-an-activity.md)のトピックを作成します。 このワークフローは、数値推測ゲームをモデル化しています。  
@@ -52,7 +52,7 @@ ms.locfileid: "69962350"
 9. **[変数の作成]** をクリックします。  
   
     > [!TIP]
-    >  **[変数の作成]** ボックスが表示され<xref:System.Activities.Statements.StateMachine>ない場合は、ワークフローデザイナー画面でアクティビティをクリックして選択します。  
+    > **[変数の作成]** ボックスが表示され<xref:System.Activities.Statements.StateMachine>ない場合は、ワークフローデザイナー画面でアクティビティをクリックして選択します。  
   
 10. [ `Guess` **名前**] ボックスに「」と入力し、 **[変数の型]** ドロップダウンリストから **[Int32]** を選択します。次に、enter キーを押して変数を保存します。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "69962350"
 1. **[State1]** をクリックして選択します。 [**プロパティ] ウィンドウ**で、 **DisplayName**をに`Initialize Target`変更します。  
   
     > [!TIP]
-    >  [**プロパティ] ウィンドウ**が表示されていない場合は、 **[表示]** メニューの **[プロパティウィンドウ]** をクリックします。  
+    > [**プロパティ] ウィンドウ**が表示されていない場合は、 **[表示]** メニューの **[プロパティウィンドウ]** をクリックします。  
   
 2. ワークフローデザイナーで、新しく名前を変更した **[初期化のターゲット]** 状態をダブルクリックして展開します。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "69962350"
     ```  
   
     > [!TIP]
-    >  **[ツールボックス]** ウィンドウが表示されていない場合は、 **[表示]** メニューの **[ツールボックス]** を選択します。  
+    > **[ツールボックス]** ウィンドウが表示されていない場合は、 **[表示]** メニューの **[ツールボックス]** を選択します。  
   
 4. ワークフローデザイナーの上部にある階層リンク表示で **[StateMachine]** をクリックして、ワークフローデザイナーの全体的なステートマシンビューに戻ります。  
   

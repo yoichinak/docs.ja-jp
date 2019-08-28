@@ -2,12 +2,12 @@
 title: 分散トランザクション
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-ms.openlocfilehash: f5ed99928534dc31832ac0baf1bb1bfa7e83ded2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 60a455d51d7ae80f5434f9564ca7416c70bef9f5
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956765"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041246"
 ---
 # <a name="distributed-transactions"></a>分散トランザクション
 トランザクションとは、たとえば、1 つの単位として成功 (コミット) または失敗 (アボート) する関連タスク セットです。 *分散トランザクション*は、複数のリソースに影響を与えるトランザクションです。 分散トランザクションがコミットされるためには、すべての参加要素が、すべてのデータ変更が永久的な変更となることを保証する必要があります。 システム クラッシュその他の予期しない出来事が発生した場合でも、変更は保持されます。 1 つの参加要素がこの保証に失敗しただけでも、トランザクション全体が失敗し、トランザクションのスコープ内のデータに対する変更がロールバックされます。  
@@ -39,7 +39,7 @@ ms.locfileid: "69956765"
 > 一度接続を明示的にトランザクションに参加させると、最初のトランザクションが終了するまでは、参加を解除したり別のトランザクションに参加させたりすることはできません。  
   
 > [!CAUTION]
->  接続の `EnlistTransaction` メソッドを使用してトランザクションが既に開始していた場合、<xref:System.Data.Common.DbConnection.BeginTransaction%2A> は例外をスローします。 ただし、トランザクションがデータ ソースで開始されたローカル トランザクションである場合 (たとえば <xref:System.Data.SqlClient.SqlCommand> を使用して BEGIN TRANSACTION ステートメントを明示的に実行した場合)、`EnlistTransaction` はローカル トランザクションをロールバックし、要求されたように既存の分散トランザクションに参加します。 ローカル トランザクションがロールバックされたことは通知されないため、<xref:System.Data.Common.DbConnection.BeginTransaction%2A> を使用して開始したのではないローカル トランザクションについては、自分で管理する必要があります。 .NET Framework Data Provider for SQL Server (`SqlClient`) を SQL Server で使用する場合は、参加を試みると例外がスローされます。 その他の場合については検出されません。  
+> 接続の `EnlistTransaction` メソッドを使用してトランザクションが既に開始していた場合、<xref:System.Data.Common.DbConnection.BeginTransaction%2A> は例外をスローします。 ただし、トランザクションがデータ ソースで開始されたローカル トランザクションである場合 (たとえば <xref:System.Data.SqlClient.SqlCommand> を使用して BEGIN TRANSACTION ステートメントを明示的に実行した場合)、`EnlistTransaction` はローカル トランザクションをロールバックし、要求されたように既存の分散トランザクションに参加します。 ローカル トランザクションがロールバックされたことは通知されないため、<xref:System.Data.Common.DbConnection.BeginTransaction%2A> を使用して開始したのではないローカル トランザクションについては、自分で管理する必要があります。 .NET Framework Data Provider for SQL Server (`SqlClient`) を SQL Server で使用する場合は、参加を試みると例外がスローされます。 その他の場合については検出されません。  
   
 ## <a name="promotable-transactions-in-sql-server"></a>SQL Server の昇格可能なトランザクション  
  SQL Server は、軽量のローカル トランザクションを必要に応じて分散トランザクションに自動的に昇格できる、昇格可能なトランザクションをサポートしています。 昇格可能なトランザクションは、必要な場合以外、分散トランザクションのオーバーヘッドの増加を引き起こすことはありません。 詳細とコードサンプルについては、「 [SQL Server とのシステムトランザクション統合](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)」を参照してください。  

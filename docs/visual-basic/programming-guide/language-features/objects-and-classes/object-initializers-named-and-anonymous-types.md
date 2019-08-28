@@ -1,5 +1,5 @@
 ---
-title: オブジェクト初期化子:名前付きの匿名型 (Visual Basic)
+title: オブジェクト初期化子:名前付きの型と匿名型 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ObjectInitializer
@@ -10,43 +10,43 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: 151c2f6cbb560d83ef0fcfef518bc50cec246ca2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e1f461cc98fb104f78a6c83a207cff7f4eda9227
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783248"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046463"
 ---
-# <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>オブジェクト初期化子:名前付きの匿名型 (Visual Basic)
-オブジェクト初期化子を使用すると、1 つの式を使用して複雑なオブジェクトのプロパティを指定できます。 これらは、匿名型の名前付きの型のインスタンスを作成する使用できます。  
+# <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>オブジェクト初期化子:名前付きの型と匿名型 (Visual Basic)
+オブジェクト初期化子を使用すると、単一の式を使用して複雑なオブジェクトのプロパティを指定できます。 これらの型を使用して、名前付きの型と匿名型のインスタンスを作成できます。  
   
 ## <a name="declarations"></a>宣言  
- 名前付きの匿名型のインスタンスの宣言はほぼ同じで、確認できますが、その影響が同じではありません。 各カテゴリは、独自の機能と制限があります。 次の例は、宣言し、名前付きクラスのインスタンスを初期化するための便利な方法を示しています。 `Customer`、オブジェクト初期化子リストを使用しています。 キーワードの後に、クラスの名前が指定されていることを確認`New`します。  
+ 名前付きの型と匿名型のインスタンスの宣言はほぼ同じに見えますが、その効果は同じではありません。 各カテゴリには、独自の機能と制限があります。 次の例は、オブジェクト初期化子リストを使用して`Customer`、名前付きクラスのインスタンスを宣言および初期化する便利な方法を示しています。 クラスの名前がキーワード`New`の後に指定されていることに注意してください。  
   
  [!code-vb[VbVbalrObjectInit#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#1)]  
   
- 匿名型には、使用可能な名前がありません。 そのため、匿名型のインスタンス化では、クラス名を含めることはできません。  
+ 匿名型には使用可能な名前がありません。 したがって、匿名型のインスタンス化にクラス名を含めることはできません。  
   
  [!code-vb[VbVbalrObjectInit#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#2)]  
   
- 要件および 2 つの宣言の結果は同じです。 `namedCust`、`Customer`を持つクラス、`Name`プロパティは既に存在する必要があります、および宣言は、そのクラスのインスタンスを作成します。 `anonymousCust`、コンパイラは、1 つのプロパティと呼ばれる文字列が含まれる新しいクラスを定義します。 `Name`、し、そのクラスの新しいインスタンスを作成します。  
+ 2つの宣言の要件と結果は同じではありません。 では、プロパティを`Name`持つクラスが既に存在している必要があり、宣言によってそのクラスのインスタンスが作成されます。`Customer` `namedCust` では`Name`、コンパイラは、1つのプロパティ、という文字列を持つ新しいクラスを定義し、そのクラスの新しいインスタンスを作成します。 `anonymousCust`  
   
 ## <a name="named-types"></a>名前付きの型  
- オブジェクト初期化子は、型のコンス トラクターを呼び出すし、単一のステートメントでの一部またはすべてのプロパティの値を設定する簡単な方法を提供します。 コンパイラは、ステートメントの適切なコンス トラクターを呼び出します。 パラメーターなしのコンス トラクターの引数が何も表示されない場合、または 1 つまたは複数の引数が送信される場合にパラメーター化されたコンス トラクター。 その後、指定したプロパティは、初期化子リストに記載された順序で初期化されます。  
+ オブジェクト初期化子は、型のコンストラクターを呼び出す簡単な方法を提供し、1つのステートメントで一部またはすべてのプロパティの値を設定します。 コンパイラは、ステートメントの適切なコンストラクターを呼び出します。引数が指定されていない場合はパラメーターなしのコンストラクター、または1つ以上の引数が送信される場合はパラメーター化されたコンストラクターです。 その後、指定されたプロパティは初期化子リストに表示される順序で初期化されます。  
   
- 各初期化子リストの初期化は、クラスのメンバーに、初期値の割り当てで構成されます。 クラスが定義されている場合、名前とメンバーのデータ型が決定されます。 次の例では、`Customer`クラスが存在する必要があります、およびがメンバーという名前の必要があります`Name`と`City`文字列値を受け入れることができます。  
+ 初期化子リスト内の各初期化は、クラスのメンバーへの初期値の割り当てで構成されます。 メンバーの名前とデータ型は、クラスが定義されるときに決定されます。 次の例`Customer`では、クラスが存在し、文字列値を受け入れること`City`ができるとという名前`Name`のメンバーを持っている必要があります。  
   
  [!code-vb[VbVbalrObjectInit#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#3)]  
   
- または、次のコードを使用して同じ結果を取得できます。  
+ または、次のコードを使用して同じ結果を得ることもできます。  
   
  [!code-vb[VbVbalrObjectInit#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#4)]  
   
- これらの各宣言には、次の例は、作成に相当する`Customer`パラメーターなしのコンス トラクターを使用して、オブジェクトし、の初期値を指定し、`Name`と`City`プロパティを使用して、 `With`ステートメント。  
+ これらの宣言は、パラメーターなしのコンストラクターを使用してオブジェクト`Customer`を作成し、を使用`With`してプロパティ`Name`と`City`プロパティの初期値を指定する次の例と同じです。諸表.  
   
  [!code-vb[VbVbalrObjectInit#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#5)]  
   
- 場合、`Customer`クラスには、値を送信することができますをパラメーター化されたコンス トラクターが含まれています。 `Name`、なども宣言と初期化、`Customer`次の方法でオブジェクト。  
+ クラスに`Customer`パラメーター化されたコンストラクターが含まれていて、たとえば`Name`、の値をに送信できる場合は、次`Customer`の方法でオブジェクトを宣言して初期化することもできます。  
   
  [!code-vb[VbVbalrObjectInit#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#6)]  
   
@@ -56,36 +56,36 @@ ms.locfileid: "67783248"
   
  ただし、初期化リストを空にすることはできません。 初期化されていないプロパティは、既定値を保持します。  
   
-### <a name="type-inference-with-named-types"></a>名前付きの型と型の推論  
- 宣言のコードを短く`cust1`オブジェクト初期化子とローカル型推論を組み合わせることで。 これを使用すると、省略、`As`変数の宣言で句。 変数のデータ型は、割り当てによって作成されるオブジェクトの型から推論されます。 次の例では、型で`cust6`は`Customer`します。  
+### <a name="type-inference-with-named-types"></a>名前付きの型の推論  
+ オブジェクト初期化子とローカル型推論を組み合わせる`cust1`ことによって、の宣言のコードを短縮できます。 これにより、変数宣言`As`で句を省略できます。 変数のデータ型は、割り当てによって作成されたオブジェクトの型から推論されます。 次の例では、の`cust6`型は`Customer`です。  
   
  [!code-vb[VbVbalrObjectInit#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#8)]  
   
-### <a name="remarks-about-named-types"></a>名前付きの型についての解説  
+### <a name="remarks-about-named-types"></a>名前付きの型に関する解説  
   
-- クラス メンバーには、オブジェクト初期化子リスト内の 1 つ以上の時間を初期化できません。 宣言`cust7`エラーが発生します。  
+- オブジェクト初期化子リストでクラスメンバーを複数回初期化することはできません。 の`cust7`宣言によりエラーが発生します。  
   
      [!code-vb[VbVbalrObjectInit#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#9)]  
   
-- メンバーは、それ自体または別のフィールドを初期化するために使用できます。 次の宣言のように、初期化前に、メンバーがアクセスされる場合`cust8`既定値が使用されます。 オブジェクト初期化子を使用する宣言が処理されるときに最初に行われるが、適切なコンス トラクターが呼び出されることに注意してください。 その後、初期化子リスト内の各フィールドが初期化されます。 既定値を次の例で`Name`が割り当てられている`cust8`で初期化の値が割り当てられていると`cust9`します。  
+- メンバーは、自身または別のフィールドを初期化するために使用できます。 が初期化される前にメンバーにアクセスする場合、の次の`cust8`宣言のように、既定値が使用されます。 オブジェクト初期化子を使用する宣言が処理された場合、最初に発生するのは、適切なコンストラクターが呼び出されることです。 その後、初期化子リスト内の個々のフィールドが初期化されます。 次の例で`Name`は、の既定値がに`cust8`割り当てられており、初期化さ`cust9`れた値がで割り当てられています。  
   
      [!code-vb[VbVbalrObjectInit#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#10)]  
   
-     次のコードの例では、パラメーター化されたコンス トラクターから`cust3`と`cust4`を宣言して初期化`cust10`と`cust11`します。  
+     次の例では、およびの`cust3` `cust4`パラメーター化された`cust10`コンストラクター `cust11`を使用して、およびを宣言および初期化します。  
   
      [!code-vb[VbVbalrObjectInit#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#11)]  
   
-- オブジェクト初期化子を入れ子にすることができます。 次の例では、`AddressClass`を 2 つのプロパティを持つクラスは、`City`と`State`、および`Customer`クラスには、`Address`プロパティのインスタンスである`AddressClass`。  
+- オブジェクト初期化子は入れ子にすることができます。 `AddressClass`次の例では、は`City`と`State`と`Customer`いう2つのプロパティを持つクラスです。この`Address`クラスには、の`AddressClass`インスタンスであるプロパティがあります。  
   
      [!code-vb[VbVbalrObjectInit#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#12)]  
   
 - 初期化リストを空にすることはできません。  
   
-- 初期化されているインスタンスは、Object 型のすることはできません。  
+- 初期化するインスタンスを型オブジェクトにすることはできません。  
   
-- クラスのメンバーの初期化中には、共有メンバー、読み取り専用メンバー、定数、またはメソッドの呼び出しをすることはできません。  
+- 初期化されるクラスメンバーは、共有メンバー、読み取り専用のメンバー、定数、またはメソッドの呼び出しにはできません。  
   
-- クラス メンバーは初期化は、インデックス付きまたは修飾ことはできません。 次の例では、コンパイラ エラーが発生します。  
+- 初期化されるクラスメンバーにインデックスを作成したり、修飾したりすることはできません。 次の例では、コンパイラエラーが発生します。  
   
      `'' Not valid.`  
   
@@ -94,44 +94,44 @@ ms.locfileid: "67783248"
      `' Dim c2 = New Customer with {.Address.City = "Springfield"}`  
   
 ## <a name="anonymous-types"></a>匿名型  
- 匿名型では、オブジェクト初期化子を使用して、明示的に定義していない新しい型と名前のインスタンスを作成します。 代わりに、コンパイラは、オブジェクト初期化子リストにに従って指定するプロパティの型を生成します。 として参照には型の名前が指定されていないため、*匿名型*します。 たとえば、前に次の宣言を比較`cust6`します。  
+ 匿名型では、オブジェクト初期化子を使用して、明示的に定義して名前を指定しない新しい型のインスタンスを作成します。 代わりに、コンパイラは、オブジェクト初期化子リストで指定したプロパティに従って型を生成します。 型の名前は指定されていないため、*匿名型*と呼ばれます。 たとえば、次の宣言をの`cust6`前の宣言と比較します。  
   
  [!code-vb[VbVbalrObjectInit#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#13)]  
   
- 唯一の違いが構文的に後に名前が指定されていないことは`New`データ型。 ただし、動作は大きく異なります。 コンパイラは、2 つのプロパティを持つ新しい匿名型を定義します。`Name`と`City`、値を指定して、そのインスタンスを作成します。 型の推定の種類を決定する`Name`と`City`文字列の例です。  
+ 構文が異なるのは、データ型の後`New`に名前が指定されていないことだけです。 しかし、何が起こるかはかなり異なります。 コンパイラは、 `Name`とと`City`いう2つのプロパティを持つ新しい匿名型を定義し、指定された値を使用してそのインスタンスを作成します。 型の推定によって`Name` 、 `City`例のとの型が文字列になります。  
   
 > [!CAUTION]
->  匿名型の名前は、コンパイラによって生成され、コンパイルするたびに異なる場合があります。 コードを使用して、または匿名型の名前に依存する必要がありますされません。  
+> 匿名型の名前はコンパイラによって生成され、コンパイルごとに異なる場合があります。 コードでは、匿名型の名前を使用したり、使用したりしないでください。  
   
- 使用することはできません型の名前が使用できないため、`As`を宣言する句`cust13`します。 型を推論する必要があります。 遅延バインディングを使用しない場合は、ローカル変数に匿名型の使用を制限します。  
+ 型の名前は使用できないため、 `As`句を使用してを宣言`cust13`することはできません。 その型を推論する必要があります。 遅延バインディングを使用しない場合、匿名型の使用はローカル変数に限定されます。  
   
- 匿名型の重大なサポートを提供する[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]クエリ。 クエリで匿名型の使用に関する詳細については、次を参照してください。[匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)と[Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)します。  
+ 匿名型は、クエリの[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]重要なサポートを提供します。 クエリでの匿名型の使用の詳細については、「[匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)」と「 [VISUAL BASIC での LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)」を参照してください。  
   
-### <a name="remarks-about-anonymous-types"></a>匿名型についての解説  
+### <a name="remarks-about-anonymous-types"></a>匿名型の解説  
   
-- 通常、匿名型の宣言内のプロパティのほとんどすべてできるが、キーのプロパティをキーワードを入力して示されている`Key`プロパティ名の前にします。  
+- 通常、匿名型の宣言に含まれるすべてまたはほとんどのプロパティは、キープロパティになります。これは`Key` 、プロパティ名の前にキーワードを入力することによって示されます。  
   
      [!code-vb[VbVbalrObjectInit#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#14)]  
   
-     キー プロパティの詳細については、次を参照してください。[キー](../../../../visual-basic/language-reference/modifiers/key.md)します。  
+     キープロパティの詳細については、「[キー](../../../../visual-basic/language-reference/modifiers/key.md)」を参照してください。  
   
-- このような名前付きの型、初期化子リスト匿名型の定義は、少なくとも 1 つのプロパティを宣言する必要があります。  
+- 名前付きの型の場合と同様に、匿名型の定義の初期化子リストは、少なくとも1つのプロパティを宣言する必要があります。  
   
      [!code-vb[VbVbalrObjectInit#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#2)]  
   
-- 匿名型のインスタンスが宣言されている場合、コンパイラは、一致する匿名型の定義を生成します。 名前とプロパティのデータ型はインスタンスの宣言からのものし、定義でコンパイラが含まれます。 プロパティがないという名前し、名前付きの型とは異なり、事前に定義されています。 その型が推論されます。 使用して、プロパティのデータ型を指定することはできません、`As`句。  
+- 匿名型のインスタンスが宣言されている場合、コンパイラは、一致する匿名型定義を生成します。 プロパティの名前とデータ型は、インスタンス宣言から取得され、コンパイラによって定義に含まれます。 名前付きの型の場合と同じように、プロパティには名前が付けられず、事前に定義されます。 これらの型は推論されます。 `As`句を使用してプロパティのデータ型を指定することはできません。  
   
-- 匿名型は、その他のいくつかの方法で、名前とそのプロパティの値を確立できますも。 たとえば、匿名型のプロパティには、名前と、変数、または名前の値と別のオブジェクトのプロパティの値の両方がかかります。  
+- 匿名型では、他のいくつかの方法でプロパティの名前と値を設定することもできます。 たとえば、匿名型のプロパティは、変数の名前と値の両方、または別のオブジェクトのプロパティの名前と値の両方を受け取ることができます。  
   
      [!code-vb[VbVbalrObjectInit#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#15)]  
   
-     匿名型のプロパティを定義するためのオプションの詳細については、次を参照してください。[方法。匿名型の宣言におけるプロパティ名と型を推論](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)します。  
+     匿名型のプロパティを定義するためのオプションの詳細につい[ては、「方法:匿名型の宣言](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)のプロパティ名と型を推論します。  
   
 ## <a name="see-also"></a>関連項目
 
 - [ローカル型の推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [方法: 匿名型の宣言におけるプロパティ名と型を推論します。](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
+- [方法: 匿名型の宣言でプロパティの名前と型を推論する](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
 - [Key](../../../../visual-basic/language-reference/modifiers/key.md)
-- [方法: オブジェクト初期化子を使用してオブジェクトを宣言します。](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)
+- [方法: オブジェクト初期化子を使用してオブジェクトを宣言する](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)

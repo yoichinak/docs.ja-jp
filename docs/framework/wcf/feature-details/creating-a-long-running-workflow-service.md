@@ -2,18 +2,20 @@
 title: 長時間のワークフロー サービスの作成
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: dae33cfcd5a2ef7b5269ebb040cf53b4c0e0b039
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e6206babdb728b6ce38c94441f775e1fdffe7d79
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69945600"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040415"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>長時間のワークフロー サービスの作成
+
 ここでは、実行時間の長いワークフロー サービスを作成する方法について説明します。 実行時間の長いワークフロー サービスは、長期間にわたって実行できます。 ワークフローでは、いくつかの追加情報を待つ間アイドル状態になることがあります。 アイドル状態になると、ワークフローは SQL データベースに永続化され、メモリから削除されます。 追加情報が使用可能になると、ワークフロー インスタンスがメモリに読み込み直されて、実行を継続します。  このシナリオでは、非常に簡略化された注文システムを実装します。  クライアントは、最初のメッセージをワークフロー サービスに送信して注文を開始します。 ワークフロー サービスは、注文 ID をクライアントに返します。 この時点で、ワークフロー サービスは、クライアントからの別のメッセージを待機しており、アイドル状態に入って、SQL Server データベースに永続化されます。  クライアントが次のメッセージを送信して項目を注文すると、ワークフロー サービスはメモリに読み込み直されて、注文の処理を終了します。 次のコード例では、項目が注文に追加されたことを示す文字列を返します。 このコード例は、テクノロジの実際の適用を意図するものではなく、実行時間の長いワークフロー サービスを示す簡単な例です。 このトピックでは、Visual Studio 2012 のプロジェクトとソリューションの作成方法を理解していることを前提としています。
 
 ## <a name="prerequisites"></a>必須コンポーネント
- このチュートリアルを使用するには、次のソフトウェアがインストールされている必要があります。
+
+このチュートリアルを使用するには、次のソフトウェアがインストールされている必要があります。
 
 1. Microsoft SQL Server 2008
 
@@ -45,16 +47,16 @@ ms.locfileid: "69945600"
 
     1. **[開始アクション]** で**特定のページ**を選択し、を指定`Service1.xamlx`します。
 
-         ![ワークフローサービスプロジェクトの Web プロパティ](./media/creating-a-long-running-workflow-service/start-action-specific-page-option.png "Web ホステッドワークフローサービス固有のページオプションを作成")する
+        ![ワークフローサービスプロジェクトの Web プロパティ](./media/creating-a-long-running-workflow-service/start-action-specific-page-option.png "Web ホステッドワークフローサービス固有のページオプションを作成")する
 
     2. **[サーバー]** で、 **[ローカル IIS Web サーバーを使用する]** を選択します。
 
-         ![ローカル Web サーバーの設定](./media/creating-a-long-running-workflow-service/use-local-web-server.png "Web ホストワークフローサービスの作成-[ローカル IIS Web サーバーを使用する] オプション")
+        ![ローカル Web サーバーの設定](./media/creating-a-long-running-workflow-service/use-local-web-server.png "Web ホストワークフローサービスの作成-[ローカル IIS Web サーバーを使用する] オプション")
 
         > [!WARNING]
-        >  この設定を行うには、Visual Studio 2012 を管理者モードで実行する必要があります。
+        > この設定を行うには、Visual Studio 2012 を管理者モードで実行する必要があります。
 
-         次の 2 つの手順で、ワークフロー サービス プロジェクトが IIS でホストされるように設定します。
+        次の 2 つの手順で、ワークフロー サービス プロジェクトが IIS でホストされるように設定します。
 
 4. まだ`Service1.xamlx`開いていない場合はを開き、既存の**receiverequest アクティビティ**アクティビティと**sendresponse**アクティビティを削除します。
 
@@ -63,60 +65,60 @@ ms.locfileid: "69945600"
     > [!NOTE]
     > 変数の種類 ボックスの一覧に CorrelationHandle が表示されない場合は、ドロップダウンから **型の参照** を選択します。 **[型名]** ボックスに「CorrelationHandle」と入力し、Listbox から CorrelationHandle を選択して、 **[OK]** をクリックします。
 
-     ![変数の追加](./media/creating-a-long-running-workflow-service/add-variables-sequential-service-activity.gif "シーケンシャルサービスアクティビティに変数を追加します。")
+    ![変数の追加](./media/creating-a-long-running-workflow-service/add-variables-sequential-service-activity.gif "シーケンシャルサービスアクティビティに変数を追加します。")
 
 6. **Receiveandsendreply**アクティビティテンプレートを **[シーケンシャルサービス]** アクティビティにドラッグアンドドロップします。 このアクティビティのセットは、クライアントからメッセージを受信して、返信を送信します。
 
     1. Receive アクティビティを選択し、次の図で強調表示**さ**れているプロパティを設定します。
 
-         ![Receive アクティビティのプロパティの設定](./media/creating-a-long-running-workflow-service/set-receive-activity-properties.png "Receive アクティビティのプロパティを設定します。")
+        ![Receive アクティビティのプロパティの設定](./media/creating-a-long-running-workflow-service/set-receive-activity-properties.png "Receive アクティビティのプロパティを設定します。")
 
-         DisplayName プロパティは、デザイナーに表示される Receive アクティビティの名前を設定します。 ServiceContractName プロパティと OperationName プロパティは、Receive アクティビティで実装されるサービス コントラクトおよび操作の名前を指定します。 ワークフローサービスでのコントラクトの使用方法の詳細については、「[ワークフローでのコントラクトの使用](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md)」を参照してください。
+        DisplayName プロパティは、デザイナーに表示される Receive アクティビティの名前を設定します。 ServiceContractName プロパティと OperationName プロパティは、Receive アクティビティで実装されるサービス コントラクトおよび操作の名前を指定します。 ワークフローサービスでのコントラクトの使用方法の詳細については、「[ワークフローでのコントラクトの使用](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md)」を参照してください。
 
     2. **Receivestartorder**アクティビティの **[定義...]** リンクをクリックし、次の図に示されているプロパティを設定します。  **[パラメーター]** オプションボタンが選択され、という`p_customerName`名前のパラメーター `customerName`が変数にバインドされていることに注意してください。 これにより、Receive アクティビティがデータを受信し、そのデータをローカル変数にバインドするように構成**さ**れます。
 
-         ![Receive アクティビティによって受信されるデータの設定](./media/creating-a-long-running-workflow-service/set-properties-for-receive-content.png "Receive アクティビティによって受信されるデータのプロパティを設定します。")
+        ![Receive アクティビティによって受信されるデータの設定](./media/creating-a-long-running-workflow-service/set-properties-for-receive-content.png "Receive アクティビティによって受信されるデータのプロパティを設定します。")
 
     3. **SendReplyToReceive**アクティビティを選択し、次の図に示すように、強調表示されているプロパティを設定します。
 
-         ![SendReply アクティビティのプロパティの設定](./media/creating-a-long-running-workflow-service/set-properties-for-reply-activities.png "SetReplyProperties")
+        ![SendReply アクティビティのプロパティの設定](./media/creating-a-long-running-workflow-service/set-properties-for-reply-activities.png "SetReplyProperties")
 
     4. **SendReplyToStartOrder**アクティビティの **[定義...]** リンクをクリックし、次の図に示すプロパティを設定します。 **[パラメーター]** オプションボタンが選択されていることに注意してください。という名前`p_orderId`のパラメーターが変数`orderId`にバインドされています。 この設定により、SendReplyToStartOrder アクティビティが型文字列の値を呼び出し元に返すように指定されます。
 
-         ![SendReply アクティビティのコンテンツデータの構成](./media/creating-a-long-running-workflow-service/setreplycontent-for-sendreplytostartorder-activity.png "SetReplyToStartOrder アクティビティの設定を構成します。")
+        ![SendReply アクティビティのコンテンツデータの構成](./media/creating-a-long-running-workflow-service/setreplycontent-for-sendreplytostartorder-activity.png "SetReplyToStartOrder アクティビティの設定を構成します。")
 
     5. **Receive**アクティビティと**SendReply**アクティビティの間に Assign アクティビティをドラッグアンドドロップし、次の図に示すようにプロパティを設定します。
 
-         ![Assign アクティビティの追加](./media/creating-a-long-running-workflow-service/add-an-assign-activity.png "Assign アクティビティを追加します。")
+        ![Assign アクティビティの追加](./media/creating-a-long-running-workflow-service/add-an-assign-activity.png "Assign アクティビティを追加します。")
 
-         これにより、新しい注文 ID が作成され、orderId 変数に値が配置されます。
+        これにより、新しい注文 ID が作成され、orderId 変数に値が配置されます。
 
     6. **ReplyToStartOrder**アクティビティを選択します。 プロパティ ウィンドウで、 **Correlationinitializers** の省略記号ボタンをクリックします。 **[初期化子の追加]** リンク`orderIdHandle`を選択し、[初期化子] テキストボックスに「」と入力します。 [関連付けの種類] で [クエリ関連付け初期化子] を選択し、[XPATH クエリ] ボックスの下の [p_orderId] を選択します。 これらの設定を次の図に示します。 **[OK]** をクリックします。  これにより、クライアントとワークフロー サービスのこのインスタンス間の相関関係が初期化されます。 この注文 ID を含むメッセージが受信されると、ワークフロー サービスのこのインスタンスにルーティングされます。
 
-         ![関連付け初期化子の追加](./media/creating-a-long-running-workflow-service/add-correlationinitializers.png "関連付け初期化子を追加します。")
+        ![関連付け初期化子の追加](./media/creating-a-long-running-workflow-service/add-correlationinitializers.png "関連付け初期化子を追加します。")
 
 7. 別の**Receiveandsendreply**アクティビティをワークフローの最後 (最初の**Receive**アクティビティと**SendReply**アクティビティを含む**シーケンス**の外側) にドラッグアンドドロップします。 これで、クライアントで送信された 2 つ目のメッセージを受信し、それに応答します。
 
     1. 新しく追加された**Receive**アクティビティと**SendReply**アクティビティを含む**シーケンス**を選択し、 **[変数]** ボタンをクリックします。 次の図で強調表示されている変数を追加します。
 
-         ![新しい変数の追加](./media/creating-a-long-running-workflow-service/add-the-itemid-variable.png "ItemId 変数を追加します。")
-         
-         また、 `orderResult` スコープ`Sequence`に**文字列**としてを追加します。
+        ![新しい変数の追加](./media/creating-a-long-running-workflow-service/add-the-itemid-variable.png "ItemId 変数を追加します。")
+
+        また、 `orderResult` スコープ`Sequence`に**文字列**としてを追加します。
 
     2. **Receive**アクティビティを選択し、次の図に示すプロパティを設定します。
 
-         ![Receive アクティビティのプロパティを設定する](./media/creating-a-long-running-workflow-service/set-receive-activities-properties.png "Receive アクティビティのプロパティを設定します。")
-         
-         > [!NOTE]
-         >  必ず、 **ServiceContractName**フィールドをに変更`../IAddItem`してください。
+        ![Receive アクティビティのプロパティを設定する](./media/creating-a-long-running-workflow-service/set-receive-activities-properties.png "Receive アクティビティのプロパティを設定します。")
+
+        > [!NOTE]
+        > 必ず、 **ServiceContractName**フィールドをに変更`../IAddItem`してください。
 
     3. **Receiveadditem**アクティビティの **[定義...]** リンクをクリックし、次の図に示すパラメーターを追加します。これにより、receive アクティビティで2つのパラメーター、注文 ID、および順序付けされている項目の id が受け入れられるように構成されます。
 
-         ![2 番目の受信のパラメーターの指定](./media/creating-a-long-running-workflow-service/add-receive-two-parameters.png "2 つのパラメーターを受け取るように receive アクティビティを構成します。")
+        ![2 番目の受信のパラメーターの指定](./media/creating-a-long-running-workflow-service/add-receive-two-parameters.png "2 つのパラメーターを受け取るように receive アクティビティを構成します。")
 
     4. **CorrelateOn**の省略記号ボタンをクリック`orderIdHandle`し、「」と入力します。 **[XPath クエリ]** の下にあるドロップダウン矢印`p_orderId`をクリックし、を選択します。 これにより、2 つ目の Receive アクティビティに相関関係が設定されます。 相関関係の詳細については、「[関連付け](../../../../docs/framework/wcf/feature-details/correlation.md)」を参照してください。
 
-         ![Correlateson プロパティの設定](./media/creating-a-long-running-workflow-service/correlateson-setting.png "Correlateson プロパティを設定します。")
+        ![Correlateson プロパティの設定](./media/creating-a-long-running-workflow-service/correlateson-setting.png "Correlateson プロパティを設定します。")
 
     5. **If**アクティビティを、 **receiveadditem**アクティビティの直後にドラッグアンドドロップします。 このアクティビティは、if ステートメントと同様に動作します。
 
@@ -124,17 +126,17 @@ ms.locfileid: "69945600"
 
         2. 次の図に示すように、assign アクティビティを **[Then** ] セクションと **[Else]** セクションにドラッグアンドドロップして、 **assign**アクティビティのプロパティを設定します。
 
-             ![サービス呼び出しの結果の割り当て](./media/creating-a-long-running-workflow-service/assign-result-of-service-call.png "サービス呼び出しの結果を割り当てます。")
+            ![サービス呼び出しの結果の割り当て](./media/creating-a-long-running-workflow-service/assign-result-of-service-call.png "サービス呼び出しの結果を割り当てます。")
 
-             条件が`true`の場合、 **Then**セクションが実行されます。 条件が`false`の場合は、 **Else**セクションが実行されます。
+            条件が`true`の場合、 **Then**セクションが実行されます。 条件が`false`の場合は、 **Else**セクションが実行されます。
 
         3. **SendReplyToReceive**アクティビティを選択し、次の図に示す**DisplayName**プロパティを設定します。
 
-             ![SendReply アクティビティのプロパティの設定](./media/creating-a-long-running-workflow-service/send-reply-activity-property.png "SendReply アクティビティのプロパティを設定します。")
+            ![SendReply アクティビティのプロパティの設定](./media/creating-a-long-running-workflow-service/send-reply-activity-property.png "SendReply アクティビティのプロパティを設定します。")
 
         4. **SetReplyToAddItem**アクティビティの **[定義...]** リンクをクリックし、次の図に示すように構成します。 これにより 、 `orderResult`変数の値を返すように SendReplyToAddItem アクティビティが構成されます。
 
-             ![SendReply アクティビティのデータバインディングの設定](./media/creating-a-long-running-workflow-service/set-property-for-sendreplytoadditem.gif "SendReplyToAddItem アクティビティのプロパティを設定します。")
+            ![SendReply アクティビティのデータバインディングの設定](./media/creating-a-long-running-workflow-service/set-property-for-sendreplytoadditem.gif "SendReplyToAddItem アクティビティのプロパティを設定します。")
 
 8. Web.config ファイルを開き、[ \<behavior >] セクションに次の要素を追加して、ワークフローの永続化を有効にします。
 
@@ -144,7 +146,7 @@ ms.locfileid: "69945600"
     ```
 
     > [!WARNING]
-    >  前のコード スニペットでホストと SQL Server インスタンス名を置換するようにします。
+    > 前のコード スニペットでホストと SQL Server インスタンス名を置換するようにします。
 
 9. ソリューションをビルドします。
 
@@ -162,7 +164,7 @@ ms.locfileid: "69945600"
 
 4. クライアント プロジェクトの `Main()` メソッド内に次のコードを追加します。
 
-    ```
+    ```csharp
     static void Main(string[] args)
     {
        // Send initial message to start the workflow service

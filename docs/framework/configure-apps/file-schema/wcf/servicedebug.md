@@ -2,12 +2,12 @@
 title: <serviceDebug>
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
-ms.openlocfilehash: cbeb0d254bf6716296f34020ea8796885e0f368a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5ca1d4e7f9107c798213d760d9780dbeded9eae0
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936266"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041267"
 ---
 # <a name="servicedebug"></a>\<serviceDebug >
 Windows Communication Foundation (WCF) サービスのデバッグ機能とヘルプ情報機能を指定します。  
@@ -62,7 +62,7 @@ Windows Communication Foundation (WCF) サービスのデバッグ機能とヘ�
  を`includeExceptionDetailInFaults`に`true`設定すると、 <xref:System.ServiceModel.FaultContractAttribute>を使用して例外が宣言されていない場合でも、サービスはアプリケーションコードによってスローされた例外を返すことができます。 この設定は、サーバーが予期しない例外をスローしている場合のデバッグ時に役立ちます。 この属性を使用すると、不明な例外がシリアル化された形式で返されるので、例外をより詳細に調べることができます。  
   
 > [!CAUTION]
->  マネージ例外情報をクライアントに戻すことは、セキュリティ リスクになり得ます。これは、例外の詳細が、非承認のクライアントで使用可能な内部サービスの実装についての情報を公開するからです。 セキュリティの問題にかかわるため、この操作は制御されたデバッグ シナリオでのみ行うことを強くお勧めします。 アプリケーションを配置する場合は、`includeExceptionDetailInFaults` を `false` に設定する必要があります。  
+> マネージ例外情報をクライアントに戻すことは、セキュリティ リスクになり得ます。これは、例外の詳細が、非承認のクライアントで使用可能な内部サービスの実装についての情報を公開するからです。 セキュリティの問題にかかわるため、この操作は制御されたデバッグ シナリオでのみ行うことを強くお勧めします。 アプリケーションを配置する場合は、`includeExceptionDetailInFaults` を `false` に設定する必要があります。  
   
  マネージ例外に関連するセキュリティの問題の詳細については、「[コントラクトとサービスのエラーの指定と処理](../../../wcf/specifying-and-handling-faults-in-contracts-and-services.md)」を参照してください。 コードサンプルについては、「[サービスデバッグ動作](../../../wcf/samples/service-debug-behavior.md)」を参照してください。  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: e8e8b294e05579a91a4557b23be6c65f4d619167
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bb5766a3efc38750458ef0d354e8a2e3ab204000
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940873"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046405"
 ---
 # <a name="drag-and-drop-overview"></a>ドラッグ アンド ドロップの概要
 このトピックでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーションでのドラッグ アンド ドロップのサポートの概要について説明します。 一般的に、ドラッグ アンド ドロップとは、マウス (または何らかのポインティング デバイス) を使用して 1 つ以上のオブジェクトを選択し、これらのオブジェクトを [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] の目的のドロップ先までドラッグしてからドロップするデータ転送方式をいいます。  
@@ -166,7 +166,7 @@ ms.locfileid: "69940873"
  ドラッグ元がドラッグされている間、<xref:System.Windows.DragDrop.QueryContinueDrag> イベントは継続的に発生します。 このイベントを処理すると、Esc、Shift、Ctrl、および Alt の各キーの状態に加えて、マウス ボタンの状態に基づいて、どのアクションがドラッグ アンド ドロップ操作を終了させるかを決定することができます。 このイベントの既定のハンドラーは、Esc キーを押した場合はドラッグ アンド ドロップ操作を取り消し、マウス ボタンを放した場合はデータをドロップします。  
   
 > [!CAUTION]
->  これらのイベントは、ドラッグ アンド ドロップ操作中に継続的に発生します。 そのため、イベント ハンドラーではリソースを集中的に使用するタスクを避ける必要があります。  たとえば、<xref:System.Windows.DragDrop.GiveFeedback> イベントが発生するたびに新しいカーソルを作成するのではなく、キャッシュされたカーソルを使用します。  
+> これらのイベントは、ドラッグ アンド ドロップ操作中に継続的に発生します。 そのため、イベント ハンドラーではリソースを集中的に使用するタスクを避ける必要があります。  たとえば、<xref:System.Windows.DragDrop.GiveFeedback> イベントが発生するたびに新しいカーソルを作成するのではなく、キャッシュされたカーソルを使用します。  
   
 ### <a name="enabling-an-element-to-be-a-drop-target"></a>要素がドロップ先になるようにする  
  ドロップ先であるオブジェクトは次の役割を務めます。  

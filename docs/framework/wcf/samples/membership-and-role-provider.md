@@ -2,12 +2,12 @@
 title: メンバーシップとロール プロバイダー
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 894fcef0cbb25f85043aa6f5c55c45bae5161546
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 139d85a1ec36509690f35f24c7ddf04716a7e909
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948547"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039446"
 ---
 # <a name="membership-and-role-provider"></a>メンバーシップとロール プロバイダー
 メンバーシップとロールプロバイダーのサンプルでは、サービスが ASP.NET のメンバーシップとロールプロバイダーを使用して、クライアントを認証および承認する方法を示します。  
@@ -123,10 +123,10 @@ ms.locfileid: "69948547"
 2. [ASP.NET アプリケーションサービスデータベース](https://go.microsoft.com/fwlink/?LinkId=94997)が構成されていることを確認します。  
   
     > [!NOTE]
-    >  SQL Server Express Edition を実行している場合、サーバー名は .\SQLEXPRESS になります。 ASP.NET アプリケーションサービスデータベースおよび web.config 接続文字列を構成する場合は、このサーバーを使用する必要があります。  
+    > SQL Server Express Edition を実行している場合、サーバー名は .\SQLEXPRESS になります。 ASP.NET アプリケーションサービスデータベースおよび web.config 接続文字列を構成する場合は、このサーバーを使用する必要があります。  
   
     > [!NOTE]
-    >  ASP.NET ワーカープロセスアカウントは、この手順で作成するデータベースに対する権限を持っている必要があります。 これを実行するには、sqlcmd ユーティリティまたは SQL Server Management Studio を使用します。  
+    > ASP.NET ワーカープロセスアカウントは、この手順で作成するデータベースに対する権限を持っている必要があります。 これを実行するには、sqlcmd ユーティリティまたは SQL Server Management Studio を使用します。  
   
 3. サンプルを単一コンピューター構成で実行するか、複数コンピューター構成で実行するかに応じて、次の手順に従います。  
   

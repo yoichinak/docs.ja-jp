@@ -2,17 +2,17 @@
 title: カスタム複合デザイナー - Workflow Item Presenter
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
-ms.openlocfilehash: 0eb2ce0ca7e5d2ffd7ddd9a3d582783b4610427a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 239f7ccd81d5bb60eed32298220df215b09e3e47
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622612"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038370"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>カスタム複合デザイナー - Workflow Item Presenter
-<xref:System.Activities.Presentation.WorkflowItemPresenter>任意のアクティビティを配置できる場所の「ドロップ ゾーン」を作成するため、WF デザイナー プログラミング モデル内の主要な型です。 このサンプルは、このような「ドロップ ゾーンです。」を表示するアクティビティ デザイナーを構築する方法を示しています。
+<xref:System.Activities.Presentation.WorkflowItemPresenter>は、任意のアクティビティを配置できる "ドロップゾーン" の作成を可能にする WF デザイナープログラミングモデルのキーの種類です。 このサンプルでは、このような "ドロップゾーン" を格納するアクティビティデザイナーを構築する方法を示します。
 
- このサンプルでは、次の方法を示します。
+ このサンプルでは、次のことを示します。
 
 ## <a name="demonstrates"></a>使用例
 
@@ -63,22 +63,22 @@ ms.locfileid: "64622612"
 </sap:ActivityDesigner>
 ```
 
- `ModelItem.Body` にバインドする WPF のデータ バインドの使用に注意してください。 `ModelItem` プロパティは、 <xref:System.Activities.Presentation.ActivityDesigner> 、デザイナーをこの場合、使用されている、基になるオブジェクトを表す**SimpleNativeActivity**します。
+ `ModelItem.Body` にバインドする WPF のデータ バインドの使用に注意してください。 `ModelItem`は、デザイナーが<xref:System.Activities.Presentation.ActivityDesigner>使用されている基になるオブジェクト (この場合は**simplenativeactivity)** ) を参照するのプロパティです。
 
 #### <a name="to-setup-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには
 
-1. Visual Studio 2010 でのソリューションを開きます。
+1. Visual Studio 2010 でソリューションを開きます。
 
 2. F5 キーを押してアプリケーションをコンパイルし、実行します。
 
 > [!IMPORTANT]
->  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
+> サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780)にアクセスして、すべての[!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (wcf) とサンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`  
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`  
   
 ## <a name="see-also"></a>関連項目
 

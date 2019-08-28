@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 0a8d10b9d6ae80bb4fa38445e0335151661c41eb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7581031b022c9c53568a616de66584be9ef7229c
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918140"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041192"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server の接続プール (ADO.NET)
 通常、データベース サーバーへの接続は、時間のかかるいくつかの手順で構成されています。 ソケットまたは名前付きパイプなどの物理チャネルの確立、サーバーとの最初のハンドシェイクの実行、接続文字列の情報の解析、サーバーによる接続の認証、現在のトランザクションへ参加するための検証などの手順を行う必要があります。  
@@ -67,7 +67,7 @@ using (SqlConnection connection = new SqlConnection(
  接続プーラーは、接続がプールに解放されたときに接続の再割り当てを行って、接続に対する要求に応えます。 最大プール サイズに達すると、使用可能な接続を取得できなくなり、要求はキューに置かれます。 プーラーは、タイムアウト (既定は 15 秒) に達するまで接続の再利用を試みます。 接続がタイムアウトになる前に、プーラーが要求を満たすことができない場合は、例外がスローされます。  
   
 > [!CAUTION]
->  接続がプールに返されるようにするために、接続を使い終えたら必ず接続を終了することを強くお勧めします。 これを行うには、 `Close` `Connection`オブジェクトの`Dispose`メソッドまたはメソッドを使用するか、内`using` C#のステートメント内のすべての`Using`接続を開くか Visual Basic でステートメントを使用します。 明示的に終了されていない接続は、プールに追加したり返したりすることができないことがあります。 詳細については、「 [using ステートメント](../../../csharp/language-reference/keywords/using-statement.md)」または[「方法:Visual Basic のシステムリソース](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)を破棄します。  
+> 接続がプールに返されるようにするために、接続を使い終えたら必ず接続を終了することを強くお勧めします。 これを行うには、 `Close` `Connection`オブジェクトの`Dispose`メソッドまたはメソッドを使用するか、内`using` C#のステートメント内のすべての`Using`接続を開くか Visual Basic でステートメントを使用します。 明示的に終了されていない接続は、プールに追加したり返したりすることができないことがあります。 詳細については、「 [using ステートメント](../../../csharp/language-reference/keywords/using-statement.md)」または[「方法:Visual Basic のシステムリソース](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)を破棄します。  
   
 > [!NOTE]
 > クラスの `Close` メソッド内で `Dispose`、`Connection`、またはその他のマネージド オブジェクトの `DataReader` または `Finalize` を呼び出さないでください。 終了処理では、クラスに直接所有されているアンマネージ リソースだけを解放してください。 クラスがアンマネージ リソースを所有していない場合は、クラス定義に `Finalize` メソッドを含めないでください。 詳細については、「[ガベージコレクション](../../../standard/garbage-collection/index.md)」を参照してください。  

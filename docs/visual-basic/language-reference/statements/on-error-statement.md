@@ -22,12 +22,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: df2bd232a870e17eeb5106cf0b60a9e77641969d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4474b217147aca74f2c6e5376c8f55318a05bf4a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963530"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046514"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error ステートメント (Visual Basic)
 エラー処理ルーチンを有効にし、プロシージャ内でルーチンの場所を指定します。は、エラー処理ルーチンを無効にするためにも使用できます。 ステートメント`On Error`は、構造化されていないエラー処理で使用され、構造化例外処理の代わりに使用できます。 [構造化例外処理](../../../standard/exceptions/index.md)は .net に組み込まれているので、一般に効率が向上するため、アプリケーションで実行時エラーを処理する場合に推奨されます。
@@ -104,7 +104,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  [!code-vb[VbVbalrErrorHandling#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#19)]
 
 > [!CAUTION]
->  Windows ダイナミックリンクライブラリ (Dll) の呼び出し中にシステムエラーが発生しても、例外は発生せず、Visual Basic エラートラップでトラップすることはできません。 DLL 関数を呼び出すときは、API の仕様に従って、成功または失敗の各戻り値を確認し、エラーが発生した場合は、 `Err`オブジェクトの`LastDLLError`プロパティの値を確認する必要があります。
+> Windows ダイナミックリンクライブラリ (Dll) の呼び出し中にシステムエラーが発生しても、例外は発生せず、Visual Basic エラートラップでトラップすることはできません。 DLL 関数を呼び出すときは、API の仕様に従って、成功または失敗の各戻り値を確認し、エラーが発生した場合は、 `Err`オブジェクトの`LastDLLError`プロパティの値を確認する必要があります。
 
 ## <a name="example"></a>例
  この例では、 `On Error GoTo`最初にステートメントを使用して、プロシージャ内のエラー処理ルーチンの場所を指定します。 この例では、0で除算しようとするとエラー番号6が生成されます。 エラー処理ルーチンでエラーが処理され、エラーの原因となったステートメントに制御が返されます。 ステートメント`On Error GoTo 0`により、エラートラップが無効になります。 次に`On Error Resume Next` 、ステートメントを使用して、次のステートメントによって生成されるエラーのコンテキストが特定ので認識されるように、エラートラップを遅延します。 は、エラーが処理され`Err`た後にオブジェクトのプロパティをクリアするために使用されます。 `Err.Clear`

@@ -2,12 +2,12 @@
 title: 仮想ディレクトリのセットアップ手順
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: f755fadf6bef2bdd58fd31f3460a143b8f52eddf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6dccc5174e3fb9ab67023310d8c060d598a707c9
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966736"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038646"
 ---
 # <a name="virtual-directory-setup-instructions"></a>仮想ディレクトリのセットアップ手順
 Windows Communication Foundation (WCF) サンプルは、%SystemDrive%\inetpub\wwwroot\servicemodelsamples フォルダーにマップされている servicemodelsamples という名前の共通の仮想ディレクトリを共有することを目的としています。  
@@ -36,10 +36,10 @@ Windows Communication Foundation (WCF) サンプルは、%SystemDrive%\inetpub\w
 7. **[OK]** をクリックします。 Web アプリケーションが、WCF サンプル用に作成されました。  
   
     > [!NOTE]
-    >  すべての WCF サンプルで同じ servicemodelsamples Web アプリケーションが使用されるため、このタスクは1回だけ実行する必要があります。  
+    > すべての WCF サンプルで同じ servicemodelsamples Web アプリケーションが使用されるため、このタスクは1回だけ実行する必要があります。  
   
     > [!NOTE]
-    >  このドキュメントでは、`virtual directory`という用語は `Web application`と同じ意味で使用しています。  
+    > このドキュメントでは、`virtual directory`という用語は `Web application`と同じ意味で使用しています。  
   
      仮想ディレクトリを作成するだけでなく、そのプロパティを設定して、WCF サービスを実行できるようにする必要もあります。 詳細については、以下を参照してください。  
   
@@ -66,7 +66,7 @@ Windows Communication Foundation (WCF) サンプルは、%SystemDrive%\inetpub\w
 8. **[次へ]** をクリックし、 **[完了]** をクリックしてウィザードを完了します。  
   
     > [!NOTE]
-    >  すべての WCF サンプルで同じ servicemodelsamples 仮想ディレクトリが使用されるため、このタスクは1回だけ実行する必要があります。  
+    > すべての WCF サンプルで同じ servicemodelsamples 仮想ディレクトリが使用されるため、このタスクは1回だけ実行する必要があります。  
   
 #### <a name="to-set-additional-virtual-directory-properties-in-iis-70-or-75"></a>IIS 7.0 または7.5 で追加の仮想ディレクトリプロパティを設定するには  
   

@@ -2,63 +2,63 @@
 title: WCF サービスと Event Tracing for Windows
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: 35d0202a3b9cf4060240dc521554644d419a5c23
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e1ee7154e2ad5b22ff0debcdd15d5809fc55df13
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723174"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044517"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>WCF サービスと Event Tracing for Windows
-このサンプルでは、Event Tracing for Windows (ETW で) を出力する Windows Communication Foundation (WCF) での分析トレースを使用する方法を示します。 分析トレースは、運用環境で WCF サービスのトラブルシューティングできるように、WCF スタックのキー_ポイントで出力されるイベントです。
+このサンプルでは、Windows Communication Foundation (WCF) の分析トレースを使用して Windows イベントトレーシング (ETW) でイベントを出力する方法を示します。 分析トレースは、運用環境での WCF サービスのトラブルシューティングを可能にする WCF スタックの主要なポイントで生成されるイベントです。
 
- WCF サービスの分析トレースのトレースが可能に運用環境でのパフォーマンスに影響を最小限にします。 これらのトレースは、ETW セッションにイベントとして出力されます。
+ WCF サービスの分析トレースは、パフォーマンスへの影響を最小限に抑えながら運用環境で有効にできるトレースです。 これらのトレースは、ETW セッションにイベントとして出力されます。
 
- このサンプルでは、基本的な WCF サービスでイベントがサービスから生成された、イベント ビューアーを使用して表示できるイベント ログに含まれています。 WCF サービスからのイベントをリッスンする専用の ETW セッションを開始することもできます。 サンプルには、バイナリ ファイルにイベントを格納する専用の ETW セッションを作成するためのスクリプトが含まれています。このバイナリ ファイルもイベント ビューアーを使用して読み取ることができます。
+ このサンプルには、イベントがサービスからイベントログに出力される基本的な WCF サービスが含まれています。これは、イベントビューアーを使用して表示できます。 WCF サービスからのイベントをリッスンする専用の ETW セッションを開始することもできます。 サンプルには、バイナリ ファイルにイベントを格納する専用の ETW セッションを作成するためのスクリプトが含まれています。このバイナリ ファイルもイベント ビューアーを使用して読み取ることができます。
 
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには
 
-1. Visual Studio 2012 を使用して、EtwAnalyticTraceSample.sln ソリューション ファイルを開きます。
+1. Visual Studio 2012 を使用して、EtwAnalyticTraceSample ソリューションファイルを開きます。
 
 2. ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。
 
 3. ソリューションを実行するには、Ctrl キーを押しながら F5 キーを押します。
 
-     Web ブラウザーで次のようにクリックします。 **[calculator.svc]** します。 サービスの WSDL ドキュメントの URI がブラウザーに表示されます。 その URI をコピーします。
+     Web ブラウザーで、 **[Calculator .svc]** をクリックします。 サービスの WSDL ドキュメントの URI がブラウザーに表示されます。 その URI をコピーします。
 
-     既定では、サービスの開始ポート 1378 で要求のリッスン`http://localhost:1378/Calculator.svc`します。
+     既定では、サービスはポート 1378 `http://localhost:1378/Calculator.svc`で要求のリッスンを開始します。
 
-4. WCF テスト クライアント (WcfTestClient.exe) を実行します。
+4. WCF テストクライアント (Wcftestclient.exe) を実行します。
 
-     WCF テスト クライアント (WcfTestClient.exe) は`\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`します。  既定の Visual Studio 2012 のインストール ディレクトリは`C:\Program Files\Microsoft Visual Studio 10.0`します。
+     WCF テストクライアント (Wcftestclient.exe) は、に`\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`あります。  既定の Visual Studio 2012 インストールディレクトリは`C:\Program Files\Microsoft Visual Studio 10.0`です。
 
-5. 選択して、サービスを追加、WCF テスト クライアント内で**ファイル**、し**サービスの追加**します。
+5. WCF テストクライアント内で、 **[ファイル]** を選択し、 **[サービスの追加]** をクリックしてサービスを追加します。
 
      入力ボックスにエンドポイントのアドレスを追加します。 既定値は `http://localhost:1378/Calculator.svc` です。
 
 6. イベント ビューアー アプリケーションを開きます。
 
-     サービスを呼び出す前に、イベント ビューアーを起動し、WCF サービスから生成された追跡イベントのイベント ログがリッスンしていることを確認します。
+     サービスを呼び出す前に、イベントビューアーを開始し、WCF サービスから生成された追跡イベントをイベントログがリッスンしていることを確認します。
 
-7. **開始**メニューの **管理ツール**、し**イベント ビューアー**します。  有効にする、**分析**と**デバッグ**ログ。
+7. **スタート** メニューから **管理ツール** を選択し、**イベントビューアー** をクリックします。  **分析**ログと**デバッグ**ログを有効にします。
 
-8. イベント ビューアーのツリー ビューでに移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、し、。**アプリケーション サーバー-アプリケーション**します。 右クリックして**アプリケーション サーバー-アプリケーション**を選択します**ビュー**、し**分析およびデバッグ ログ**します。
+8. イベントビューアーのツリービューで、 **[イベントビューアー]** 、 **[アプリケーションとサービスログ]** 、 **[Microsoft]** 、 **[Windows]** 、 **[アプリケーションサーバー-アプリケーション]** の順に移動します。 **[アプリケーションサーバー-アプリケーション]** を右クリックし、 **[表示]** をクリックして、[**分析およびデバッグログ] を表示**します。
 
-     いることを確認、 **分析およびデバッグ ログ**オプションをオンにします。
+     [**分析とデバッグログを表示**する] オプションがオンになっていることを確認します。
 
-9. 有効にする、**分析**ログ。
+9. **分析**ログを有効にします。
 
-     イベント ビューアーのツリー ビューでに移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、し、。**アプリケーション サーバー-アプリケーション**します。 右クリック**分析**選択**ログの有効化**します。
+     イベントビューアーのツリービューで、 **[イベントビューアー]** 、 **[アプリケーションとサービスログ]** 、 **[Microsoft]** 、 **[Windows]** 、 **[アプリケーションサーバー-アプリケーション]** の順に移動します。 **[分析]** を右クリックし、 **[ログを有効にする]** を選択します。
 
 #### <a name="to-test-the-service"></a>サービスをテストするには
 
-1. WCF テスト クライアントに戻ると、ダブルクリックして`Divide`分母を 0、既定値を保持しているとします。
+1. WCF テストクライアントに戻り、をダブルクリック`Divide`し、既定値をそのまま使用します。既定値では、分母が0に指定されています。
 
      分母が 0 の場合、サービスからエラーがスローされます。
 
 2. サービスから出力されたイベントを確認します。
 
-     イベント ビューアーに戻りに移動**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、し、**アプリケーション サーバー-アプリケーション**します。 右クリック**分析**選択**更新**します。
+     イベントビューアーに戻り、 **[イベントビューアー]** 、 **[アプリケーションとサービスログ]** 、 **[Microsoft]** 、 **[Windows]** 、 **[アプリケーションサーバー-アプリケーション]** の順に移動します。 **[分析]** を右クリックし、 **[更新]** を選択します。
 
      WCF 分析トレースのイベントがイベント ビューアーに表示されます。 サービスからエラーがスローされたため、イベント ビューアーにエラー トレース イベントが表示されていることに注意してください。
 
@@ -72,20 +72,20 @@ ms.locfileid: "61723174"
 
 1. イベント ビューアーを開きます。
 
-2. 移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、し**アプリケーション サーバー-アプリケーション**します。 右クリック**分析**選択**ログの無効化**します。
+2. **[イベントビューアー]** 、 **[アプリケーションとサービスログ]** 、 **[Microsoft]** 、 **[Windows]** 、 **[アプリケーション-サーバー-アプリケーション]** の順に移動します。 **[分析]** を右クリックし、 **[ログを無効にする]** を選択します。
 
-3. 移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、し**アプリケーション サーバー-アプリケーション**します。 右クリック**分析**選択**ログの消去**します。
+3. **[イベントビューアー]** 、 **[アプリケーションとサービスログ]** 、 **[Microsoft]** 、 **[Windows]** 、 **[アプリケーション-サーバー-アプリケーション]** の順に移動します。 **[分析]** を右クリックし、 **[ログの消去]** を選択します。
 
-4. 選択、**オフ**イベントを消去するオプション。
+4. **[クリア]** オプションを選択して、イベントを消去します。
 
 > [!IMPORTANT]
->  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
+> サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780)にアクセスして、すべての[!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (wcf) とサンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTracing`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTracing`  
   
 ## <a name="see-also"></a>関連項目
 

@@ -2,17 +2,17 @@
 title: 雇用プロセス
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: 685798ceab5e14169af6bdf16ce30a0f6548dc8c
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 16975aaa56c8fde09fa6f57781f13280c147e73e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881900"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038160"
 ---
 # <a name="hiring-process"></a>雇用プロセス
 このサンプルでは、メッセージング アクティビティ、およびワークフロー サービスとしてホストされる 2 つのワークフローを使用して、ビジネス プロセスを実装する方法を示します。 この 2 つのワークフローは、Contoso, Inc という架空の会社の IT インフラストラクチャの一部です。  
   
- `HiringRequest` ワークフロー プロセス (<xref:System.Activities.Statements.Flowchart> として実装) は、組織の複数のマネージャーの承認が必要です。 この目標を達成するためには、ワークフローは、(今回の場合は、受信トレイ サービスとプレーンな Windows Communication Foundation (WCF) サービスとして実装されている、組織のデータ サービス) で、組織内の他の既存のサービスを使用します。  
+ `HiringRequest` ワークフロー プロセス (<xref:System.Activities.Statements.Flowchart> として実装) は、組織の複数のマネージャーの承認が必要です。 この目標を達成するために、ワークフローは組織内の他の既存のサービス (ここでは、受信トレイサービスと、plain Windows Communication Foundation (WCF) サービスとして実装された組織のデータサービス) を使用します。  
   
  `ResumeRequest` ワークフロー (<xref:System.Activities.Statements.Sequence> として実装) は、Contoso 社の外部 Careers Web サイトに求人情報を発行し、履歴書の受け取りを管理します。 求人情報は、指定した期間 (タイムアウトになるまで) または Contoso の従業員が削除を決定するまで、外部 Web サイトに掲載されます。  
   
@@ -49,13 +49,13 @@ ms.locfileid: "65881900"
 - 同一ソリューションの複数のワークフロー。  
   
 > [!IMPORTANT]
->  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
+> サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780)にアクセスして、すべての[!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (wcf) とサンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Application\HiringProcess`  
+> `<InstallDrive>:\WF_WCF_Samples\WF\Application\HiringProcess`  
   
 ## <a name="description-of-the-process"></a>プロセスの説明  
  Contoso 社は、各部門の人数を綿密に管理しようとしています。 このため、従業員が新しい雇用プロセスを開始する場合、求人を実際に開始する前に雇用要件プロセスの承認を受ける必要があります。 このプロセスは、雇用プロセス要求 (HiringRequestService プロジェクトで定義) と呼ばれ、次の手順で構成されます。  
@@ -100,7 +100,7 @@ ms.locfileid: "65881900"
 |ContosoHR|データ コントラクト、ビジネス オブジェクト、およびリポジトリ クラスを含んでいます。|  
 |HiringRequestService|Hiring Request Process ワークフローの定義を含んでいます。<br /><br /> このプロジェクトは、サービスとしてワークフロー (xaml ファイル) を自己ホストするコンソール アプリケーションとして実装されます。|  
 |ResumeRequestService|タイムアウトとなるかプロセス終了が決定するまで応募者からの履歴書を収集するワークフロー サービス。<br /><br /> このプロジェクトは、宣言型ワークフロー サービス (xamlx) として実装されます。|  
-|OrgService|組織情報 (Employees、Positions、PositionTypes、および Departments) を公開するサービス。 このサービスは、Enterprise Resource Plan (ERP) の Company Organization モジュールと考えることができます。<br /><br /> このプロジェクトは、Windows Communication Foundation (WCF) サービスを公開するコンソール アプリケーションとして実装されます。|  
+|OrgService|組織情報 (Employees、Positions、PositionTypes、および Departments) を公開するサービス。 このサービスは、Enterprise Resource Plan (ERP) の Company Organization モジュールと考えることができます。<br /><br /> このプロジェクトは、Windows Communication Foundation (WCF) サービスを公開するコンソールアプリケーションとして実装されます。|  
 |InboxService|従業員のアクション可能なタスクを含んでいる受信トレイです。<br /><br /> このプロジェクトは、WCF サービスを公開するコンソール アプリケーションとして実装されます。|  
 |InternalClient|プロセスと対話するための Web アプリケーション。 ユーザーは、HiringProcess ワークフローを開始して、参加し、表示できます。 このアプリケーションを使用すると、ResumeRequest プロセスを開始および監視することもできます。<br /><br /> このサイトは、Contoso のイントラネット内のサイトとして実装されます。 このプロジェクトは ASP.NET Web サイトとして実装されます。|  
 |CareersWebSite|Contoso 社で募集中の求人を公開する外部 Web サイト。 興味を持った応募者は、このサイトに移動して、履歴書を送信します。|  
@@ -112,32 +112,32 @@ ms.locfileid: "65881900"
 |-------------|-----------------|-------------|  
 |フローチャート|ビジネス プロセスがフローチャートとして表されます。 このフローチャートの説明では、業務時にプロセスがホワイトボードに描画されるのと同じ方法でプロセスが表されます。|HiringRequestService|  
 |ワークフロー サービス|プロセスの定義を持つフローチャートは、サービスでホストされます (この例では、サービスはコンソール アプリケーションでホストされます)。|HiringRequestService|  
-|メッセージング アクティビティ|フローチャートでは、次の 2 つの方法でメッセージング アクティビティが使用されます。<br /><br /> -を (各承認手順で決定および関連情報が表示される) をユーザーから情報を取得します。<br />-を他の既存のサービス (InboxService および OrgDataService、サービス参照を使用) と対話します。|HiringRequestService|  
-|コンテンツ ベースの相関関係|雇用要求の ID プロパティにおける承認メッセージ相関関係は次のとおりです。<br /><br /> -プロセスが開始する場合は、関連付けハンドルが要求の ID で初期化されます。<br />-受信承認メッセージは、(各承認メッセージの最初のパラメーターは、要求の ID)、ID に基づいて関連付けられます。|HiringRequestService / ResumeRequestService|  
-|カスタム アクティビティ (宣言型およびコード ベース)|このサンプルには、次の複数のカスタム アクティビティがあります。<br /><br /> -   `SaveActionTracking`:このアクティビティが生成したカスタム<xref:System.Activities.Tracking.TrackingRecord>(を使用して<xref:System.Activities.NativeActivityContext.Track%2A>)。 このアクティビティは、<xref:System.Activities.NativeActivity> を拡張する命令型コードを使用して作成されています。<br />-   `GetEmployeesByPositionTypes`:このアクティビティは、タイプ Id の一覧を受信し、Contoso では、その位置を持つユーザーの一覧を返します。 このアクティビティは、宣言的に作成されています (アクティビティ デザイナーを使用)。<br />-   `SaveHiringRequestInfo`:このアクティビティの情報の保存、 `HiringRequest` (を使用して`HiringRequestRepository.Save`)。 このアクティビティは、<xref:System.Activities.CodeActivity> を拡張する命令型コードを使用して作成されています。|HiringRequestService|  
+|メッセージング アクティビティ|フローチャートでは、次の 2 つの方法でメッセージング アクティビティが使用されます。<br /><br /> -ユーザーから情報を取得する場合 (各承認手順で意思決定と関連情報を受け取る場合)。<br />-サービス参照によって使用される、他の既存のサービス (受信トレイサービスおよび OrgDataService) と対話する場合。|HiringRequestService|  
+|コンテンツ ベースの相関関係|雇用要求の ID プロパティにおける承認メッセージ相関関係は次のとおりです。<br /><br /> -プロセスが開始されると、関連付けハンドルは要求の ID で初期化されます。<br />-受信承認メッセージはその ID に関連付けられます (各承認メッセージの最初のパラメーターは要求の ID です)。|HiringRequestService / ResumeRequestService|  
+|カスタム アクティビティ (宣言型およびコード ベース)|このサンプルには、次の複数のカスタム アクティビティがあります。<br /><br /> -   `SaveActionTracking`[ ] :このアクティビティは、( <xref:System.Activities.Tracking.TrackingRecord>を使用<xref:System.Activities.NativeActivityContext.Track%2A>して) カスタムを出力します。 このアクティビティは、<xref:System.Activities.NativeActivity> を拡張する命令型コードを使用して作成されています。<br />-   `GetEmployeesByPositionTypes`[ ] :このアクティビティは、位置の種類 Id の一覧を受け取り、Contoso にその位置を持つ people の一覧を返します。 このアクティビティは、宣言的に作成されています (アクティビティ デザイナーを使用)。<br />-   `SaveHiringRequestInfo`[ ] :このアクティビティは、 `HiringRequest` (を使用して`HiringRequestRepository.Save`) の情報を保存します。 このアクティビティは、<xref:System.Activities.CodeActivity> を拡張する命令型コードを使用して作成されています。|HiringRequestService|  
 |システムで指定された SQL サーバー永続性|Flowchart プロセス定義をホストする<xref:System.ServiceModel.Activities.WorkflowServiceHost> インスタンスは、システムで指定された SQL サーバー永続性を使用するように構成されています。|HiringRequestService / ResumeRequestService|  
 |カスタム追跡|このサンプルには、`HiringRequestProcess` の履歴を保存するカスタム追跡参加要素が含まれています (これによって、アクションの内容、実行者、および時期が記録されます)。 ソース コードは、HiringRequestService の Tracking フォルダーにあります。|HiringRequestService|  
 |ETW 追跡|システムで指定された ETW 追跡は、HiringRequestService サービスの App.config ファイルで設定されます。|HiringRequestService|  
 |アクティビティの構成|プロセス定義では、<xref:System.Activities.Activity> のフリー コンポジションが使用されます。 Flowchart には、その他のアクティビティなどを同時に含んでいる複数の Sequence アクティビティと Parallel アクティビティが含まれています。|HiringRequestService|  
-|並列アクティビティ|-   <xref:System.Activities.Statements.ParallelForEach%601> 並列 (2 人の HR マネージャーの承認手順待機中) の CEO および HR マネージャーの受信トレイで登録に使用されます。<br />-   <xref:System.Activities.Statements.Parallel> 完了し、拒否済みの手順でいくつかのクリーンアップ タスクを実行するために使用します。|HiringRequestService|  
+|並列アクティビティ|-   <xref:System.Activities.Statements.ParallelForEach%601>は、CEO および人事管理者の受信トレイに並列で登録するために使用されます (2 人の HR マネージャーの承認手順を待機しています)。<br />-   <xref:System.Activities.Statements.Parallel>は、完了および拒否された手順でクリーンアップタスクを実行するために使用されます。|HiringRequestService|  
 |モデルの取り消し|フローチャートでは、<xref:System.Activities.Statements.CancellationScope> を使用して、取り消し動作を作成します (この場合、一部のクリーンアップが実行されます)。|HiringRequestService|  
 |カスタマー永続参加要素|`HiringRequestPersistenceParticipant` は、ワークフロー変数のデータを Contoso HR データベースに保存されているテーブルに保存します。|HiringRequestService|  
 |ワークフロー サービス|`ResumeRequestService` は、ワークフロー サービスを使用して実装されます。 ワークフロー定義およびサービス情報は、ResumeRequestService.xamlx に含まれています。 サービスは、永続性と追跡を使用するように構成されます。|ResumeRequestService|  
 |永続的なタイマー|`ResumeRequestService` は、永続的なタイマーを使用して、求人の期間を定義します (タイムアウトになると、求人は終了します)。|ResumeRequestService|  
 |トランザクション|<xref:System.Activities.Statements.TransactionScope> は、複数のアクティビティの実行時にデータの一貫性を保つために使用されます (新しい履歴書の受信時)。|ResumeRequestService|  
 |トランザクション|カスタムの永続参加要素 (`HiringRequestPersistenceParticipant`) とカスタムの追跡参加要素 (`HistoryFileTrackingParticipant`) では、同じトランザクションを使用します。|HiringRequestService|  
-|使用して[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ASP.NET アプリケーションでします。|ワークフローは、2 つの ASP.NET アプリケーションからアクセスされます。|InternalClient / CareersWebSite|  
+|ASP.NET [!INCLUDE[wf1](../../../../includes/wf1-md.md)]アプリケーションでを使用する。|ワークフローは、2つの ASP.NET アプリケーションからアクセスされます。|InternalClient / CareersWebSite|  
   
 ## <a name="data-storage"></a>データ ストレージ  
  データは、`ContosoHR` という名前の SQL Server データベースに保存されます (このデータベースを作成するためのスクリプトは `DbSetup` フォルダーにあります)。 ワークフロー インスタンスは `InstanceStore` という名前の SQL Server データベースに保存されます (インスタンス ストアを作成するためのスクリプトは [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] の配布に含まれています)。  
   
- 両方のデータベースを作成するには、Visual Studio 用開発者コマンド プロンプトから Setup.cmd スクリプトを実行します。  
+ 両方のデータベースは、Visual Studio の開発者コマンドプロンプトからセットアップを実行して作成されます。  
   
 ## <a name="running-the-sample"></a>サンプルの実行  
   
 #### <a name="to-create-the-databases"></a>データベースを作成するには  
   
-1. Visual Studio 用開発者コマンド プロンプトを開きます。  
+1. Visual Studio の開発者コマンドプロンプトを開きます。  
   
 2. サンプル フォルダーに移動します。  
   
@@ -149,9 +149,9 @@ ms.locfileid: "65881900"
   
 1. Visual Studio を管理者として実行します。 HiringRequest.sln を開きます。  
   
-2. ソリューションを右クリックして**ソリューション エクスプ ローラー**選択**プロパティ**します。  
+2. **ソリューションエクスプローラー**でソリューションを右クリックし、 **[プロパティ]** を選択します。  
   
-3. オプションを選択**マルチ スタートアップ プロジェクト**設定と、 **[careerswebsite]**、 **[internalclient]**、 **HiringRequestService**と **[Resumerequestservice]** に**開始**します。 ままに**ContosoHR**、 **InboxService**、および**OrgService** None として。  
+3. **[マルチスタートアッププロジェクト]** オプションを選択し、 **[careerswebsite]** 、 **Internalclient**、 **HiringRequestService**、 **ResumeRequestService**を**開始**するように設定します。 **ContosoHR**、受信**トレイサービス**、および**Orgservice**は、"なし" のままにします。  
   
 4. Ctrl キーと Shift キーを押しながら B キーを押して、ソリューションをビルドします。 ビルドが成功したことを確認します。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "65881900"
   
 1. デバッグを行わない場合は、ソリューションのビルド後、Ctrl キーを押しながら F5 キーを押してソリューションを実行します。 すべてのサービスが開始されたことを確認します。  
   
-2. 右クリックして **[internalclient]** 選択し、ソリューションの**ブラウザーで表示**します。 `InternalClient` の既定のページが表示されます。 サービスが実行中であることを確認し、リンクをクリックします。  
+2. ソリューションで **[Internalclient]** を右クリックし、 **[ブラウザーで表示]** を選択します。 `InternalClient` の既定のページが表示されます。 サービスが実行中であることを確認し、リンクをクリックします。  
   
 3. **HiringRequest**モジュールが表示されます。 詳細については、以下のシナリオを参照してください。  
   
@@ -167,11 +167,11 @@ ms.locfileid: "65881900"
   
 5. `ResumeRequest` は、投稿されると、パブリック Web サイト (Contoso Careers Web サイト) で使用可能になります。 求人を確認するには (さらに、応募するには)、Careers Web サイトに移動します。  
   
-6. 右クリックして **[careerswebsite]** クリックし、ソリューションで**ブラウザーで表示**します。  
+6. ソリューションの **[careerswebsite]** を右クリックし、 **[ブラウザーで表示]** を選択します。  
   
-7. 戻り、`InternalClient`を右クリックして **[internalclient]** ソリューションを選択して**ブラウザーで表示**。  
+7. ソリューションで [ `InternalClient` **internalclient** ] を右クリックし、 **[ブラウザーで表示]** を選択して、に戻ります。  
   
-8. 移動して、 **[jobpostings]** セクションをクリックして、 **Job Postings**受信トレイの上部のメニューのリンク。 詳細については、以下のシナリオを参照してください。  
+8. 受信トレイ トップメニューの **ジョブの投稿** リンクをクリックして、**jobpostings** セクションにアクセスします。 詳細については、以下のシナリオを参照してください。  
   
 ## <a name="scenarios"></a>シナリオ  
   
@@ -179,7 +179,7 @@ ms.locfileid: "65881900"
   
 1. Michael Alexander (ソフトウェア エンジニア) は、エンジニアリング部において、C# の分野で 3 年以上の実務経験を持つ SDET (Software Engineer in Test) を採用するための新たな求人を要求します。  
   
-2. 作成後、要求は Michael の受信トレイに表示されます。 ([] をクリック**更新**要求が表示されない場合)、Michael のマネージャーである Peter Brehm の承認待ちの状態。  
+2. 作成されると、要求は Michael の受信トレイに表示されます (要求が表示されない場合は **[更新]** をクリックします)。これは、michael のマネージャーである Peter Brehm の承認待ちです。  
   
 3. Peter は、Michael の要求に対応します。 Peter は、この職種で要求される C# の実務経験は 3 年ではなく 5 年であると考え、その旨を知らせるコメントを送信します。  
   
@@ -195,17 +195,17 @@ ms.locfileid: "65881900"
   
 ### <a name="start-resume-request"></a>履歴書の要求の開始  
   
-1. 人々 が申し込みを外部の Web サイトに投稿するジョブの位置が待機しているようになりましたが、(クリックするを参照することができます、 **Job Postings**リンク)。 現在、この求人は、求人を決定して掲載する HR 担当者の最終判断を待っている状態です。  
+1. これで、ジョブの位置は、ユーザーが適用できる外部 Web サイトへの投稿を待機しています ( **[ジョブの投稿]** リンクをクリックすると表示されます)。 現在、この求人は、求人を決定して掲載する HR 担当者の最終判断を待っている状態です。  
   
-2. HR は、この求人を編集するのには (をクリックして、**編集**リンク) 60 分のタイムアウトを設定して (実際にこれは、数日または数週間)。 タイムアウトによって、求人は指定時間に従い外部 Web サイトに掲載されます。  
+2. HR は、( **[編集]** リンクをクリックして) このジョブ60の位置を編集したいと考えています (実際には、数日または数週間)。 タイムアウトによって、求人は指定時間に従い外部 Web サイトに掲載されます。  
   
-3. 表示される編集した求人を保存した後、**履歴書受付**(新たな求人を確認する Web ページを更新する) タブ。  
+3. 編集したジョブの位置を保存すると、[**再開**しています] タブに表示されます (新しいジョブの位置を確認するには、Web ページを更新してください)。  
   
 ### <a name="collecting-resumes"></a>履歴書の収集  
   
 1. 求人は外部の Web サイトに提示されています。 求人の応募に興味がある人は、この求人に応募するために履歴書を送信することができます。  
   
-2. 場合、ジョブへの投稿リスト サービスに戻る「を表示できますが再開」これまでに収集されたです。  
+2. ジョブの投稿リストサービスに戻ると、これまでに収集された "表示の再開" を行うことができます。  
   
 3. また、HR は履歴書の募集を停止することもできます (適切な応募者が見つかった場合など)。  
   
@@ -215,7 +215,7 @@ ms.locfileid: "65881900"
   
 2. ソリューションをビルドできない場合は、次の項目を確認してください。  
   
-    - 参照を`ContosoHR`が、`InternalClient`または`CareersWebSite`プロジェクト。  
+    - への参照`ContosoHR`がプロジェクト`InternalClient`または`CareersWebSite`プロジェクトに存在しません。  
   
 3. ソフトウェアを実行できない場合は、次の項目を確認してください。  
   
@@ -225,9 +225,9 @@ ms.locfileid: "65881900"
   
         1. App_WebReferences フォルダーを開きます。  
   
-        2. 右クリック**Contoso**選択**Web/サービス参照の更新**します。  
+        2. **[Contoso]** を右クリックし、 **[Web/サービス参照の更新]** を選択します。  
   
-        3. Visual Studio で、CTRL + SHIFT + B を押して、ソリューションをリビルドします。  
+        3. Visual Studio で CTRL + SHIFT + B キーを押して、ソリューションをリビルドします。  
   
 ## <a name="uninstalling"></a>アンインストール  
   
