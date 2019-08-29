@@ -6,24 +6,25 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 07/25/2019
-ms.openlocfilehash: f1fce2899e9e11b1007d6c270180b27a29eaa167
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.date: 08/21/2019
+ms.openlocfilehash: 5f9d7026b270a010d2ba5d4b1165728a100ab6ed
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039446"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922559"
 ---
-# <a name="whats-new-in-net-core-30-preview-7"></a>.NET Core 3.0 (Preview 7) の新機能
+# <a name="whats-new-in-net-core-30-preview-8"></a>.NET Core 3.0 (Preview 8) の新機能
 
-この記事では、.NET Core 3.0 (Preview 7 まで) の新機能について説明します。 最も大きな強化点の 1 つは、Windows デスクトップ アプリケーションのサポートです (Windows のみ)。 .NET Core 3.0 SDK コンポーネントの Windows デスクトップを使用して、Windows フォームおよび Windows Presentation Foundation (WPF) アプリケーションを移植することができます。 誤解のないように言うと、Windows Desktop コンポーネントは Windows でのみサポートされており、Windows にのみ含まれています。 詳細については、この記事で後述する「[Windows デスクトップ](#windows-desktop)」を参照してください。
+この記事では、.NET Core 3.0 (Preview 8 まで) の新機能について説明します。 最も大きな強化点の 1 つは、Windows デスクトップ アプリケーションのサポートです (Windows のみ)。 .NET Core 3.0 SDK コンポーネントの Windows デスクトップを使用して、Windows フォームおよび Windows Presentation Foundation (WPF) アプリケーションを移植することができます。 誤解のないように言うと、Windows Desktop コンポーネントは Windows でのみサポートされており、Windows にのみ含まれています。 詳細については、この記事で後述する「[Windows デスクトップ](#windows-desktop)」を参照してください。
 
 .NET Core 3.0 では C# 8.0 のサポートが追加されています。 [最新リリースの Visual Studio Preview](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview) または OmniSharp 拡張機能を含む Visual Studio Code を使用することを強くお勧めします。
 
-[.NET Core 3.0 Preview 7 を今すぐダウンロード](https://aka.ms/netcore3download)して Windows、Mac、Linux 上で使い始めましょう。
+[.NET Core 3.0 Preview 8 を今すぐダウンロード](https://aka.ms/netcore3download)して Windows、macOS、または Linux 上で使い始めましょう。
 
 各プレビュー リリースの詳細については、次の発表を参照してください。
 
+- [.NET Core 3.0 Preview 8 の発表](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/)
 - [.NET Core 3.0 Preview 7 の発表](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)
 - [.NET Core 3.0 Preview 6 の発表](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-6/)
 - [.NET Core 3.0 Preview 5 の発表](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-5/)
@@ -34,7 +35,9 @@ ms.locfileid: "69039446"
 
 ## <a name="production-supported-preview"></a>運用環境でサポートされているプレビュー
 
-.NET Core Preview 7 は、Microsoft による運用の準備ができていると見なされており、完全にサポートされています。 Preview 7 以降、リリースでは、新機能を追加するのではなく、.NET Core 3.0 を洗練させることに焦点を当てています。 Preview 7 で変更された内容の詳細については、[Preview 7 の発表](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)に関する記事を参照してください。
+.NET Core Preview 8 は、Microsoft による運用の準備ができていると見なされており、完全にサポートされています。 Preview 7 以降、リリースでは、新機能を追加するのではなく、.NET Core 3.0 を洗練させることに焦点を当てています。 Preview 8 で変更された内容の詳細については、[Preview 8 の発表](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/)を参照してください。
+
+以前のプレビュー リリースを使用している場合は、"Go Live" のサポートを継続するために Preview 8 に移行する必要があります。
 
 ## <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows インストーラー
 
@@ -52,11 +55,11 @@ Windows 用の MSI インストーラーは、.NET Core 3.0 から変更され�
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
- 
+
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
- 
+
 </Project>
 ```
 
@@ -91,7 +94,7 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 ## <a name="net-platform-dependent-intrinsics"></a>.NET プラットフォーム依存性
 
-特定のパフォーマンス指向 CPU 命令 (**SIMD** や **ビット操作命令**セット) にアクセスできるようにする API が追加されました。 これらの命令は、データを並列で効率的に処理するといった、特定のシナリオでパフォーマンスを大幅に向上するのに役立ちます。 
+特定のパフォーマンス指向 CPU 命令 (**SIMD** や **ビット操作命令**セット) にアクセスできるようにする API が追加されました。 これらの命令は、データを並列で効率的に処理するといった、特定のシナリオでパフォーマンスを大幅に向上するのに役立ちます。
 
 .NET ライブラリでは、必要に応じて、パフォーマンスを向上するためにこれらの命令が使用されるようになりました。
 
@@ -103,8 +106,8 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 `dotnet build` または `dotnet publish` の実行中に、使用している SDK の環境およびプラットフォームと一致する実行可能ファイルが作成されます。 これらの実行可能ファイルでは、次のような他のネイティブ実行可能ファイルと同じことを期待できます。
 
-* 実行可能ファイルはダブルクリックすることができます。
-* Windows では `myapp.exe`、Linux と macOS では`./myapp` など、コマンド プロンプトからアプリケーションを直接起動できます。
+- 実行可能ファイルはダブルクリックすることができます。
+- Windows では `myapp.exe`、Linux と macOS では`./myapp` など、コマンド プロンプトからアプリケーションを直接起動できます。
 
 ## <a name="single-file-executables"></a>単一ファイルの実行可能ファイル
 
@@ -297,11 +300,11 @@ COM コンポーネントを作成して使用する方法の例については�
 
 <xref:System.Windows.Forms.HighDpiMode?displayProperty=nameWithType> 列挙型で表される `highDpiMode` に使用できる値は次のとおりです。
 
-* `DpiUnaware`
-* `SystemAware`
-* `PerMonitor`
-* `PerMonitorV2`
-* `DpiUnawareGdiScaled`
+- `DpiUnaware`
+- `SystemAware`
+- `PerMonitor`
+- `PerMonitorV2`
+- `DpiUnawareGdiScaled`
 
 高 DPI モードの詳細については、「[Windows での高 DPI デスクトップ アプリケーション開発](/windows/desktop/hidpi/high-dpi-desktop-application-development-on-windows)」をご覧ください。
 
@@ -335,7 +338,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 {
     await foreach (var result in GetResultsAsync())
     {
-        if (result > 20) yield return result; 
+        if (result > 20) yield return result;
     }
 }
 ```
@@ -350,31 +353,31 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 次のような解析および書式設定の修正があります。
 
-* 任意の長さの入力を正しく解析して丸める。
-* 負のゼロを正しく解析して書式設定する。
-* 大文字と小文字を区別しないチェックを実行し、可能な場合には省略可能な先行の `+` を許可することで、`Infinity` と `NaN` を正しく解析する。
+- 任意の長さの入力を正しく解析して丸める。
+- 負のゼロを正しく解析して書式設定する。
+- 大文字と小文字を区別しないチェックを実行し、可能な場合には省略可能な先行の `+` を許可することで、`Infinity` と `NaN` を正しく解析する。
 
 新しい <xref:System.Math?displayProperty=nameWithType> API には以下が含まれます。
 
-* <xref:System.Math.BitIncrement(System.Double)> と <xref:System.Math.BitDecrement(System.Double)>\
+- <xref:System.Math.BitIncrement(System.Double)> と <xref:System.Math.BitDecrement(System.Double)>\
 `nextUp` および `nextDown` の IEEE 演算に相当します。 入力よりも大きいか小さいかを比較する最小の浮動小数点をそれぞれ返します。 たとえば、`Math.BitIncrement(0.0)` は `double.Epsilon` を返します。
 
-* <xref:System.Math.MaxMagnitude(System.Double,System.Double)> と <xref:System.Math.MinMagnitude(System.Double,System.Double)>\
+- <xref:System.Math.MaxMagnitude(System.Double,System.Double)> と <xref:System.Math.MinMagnitude(System.Double,System.Double)>\
 `maxNumMag` および `minNumMag` の IEEE 演算に相当します。2 つの入力の大きさがより大きいまたはより小さい値をそれぞれ返します。 たとえば、`Math.MaxMagnitude(2.0, -3.0)` は `-3.0` を返します。
 
-* <xref:System.Math.ILogB(System.Double)>\
+- <xref:System.Math.ILogB(System.Double)>\
 整数値を返す `logB` IEEE 演算に相当します。入力パラメーターの 2 を底とする積分対数を返します。 このメソッドは実質的に `floor(log2(x))` と同じですが、最小限の丸め誤差で実行されます。
 
-* <xref:System.Math.ScaleB(System.Double,System.Int32)>\
+- <xref:System.Math.ScaleB(System.Double,System.Int32)>\
 整数値を受け取る `scaleB` IEEE 演算に相当します。これは実質的に `x * pow(2, n)` と同じですが、最小限の丸め誤差で実行されます。
 
-* <xref:System.Math.Log2(System.Double)>\
+- <xref:System.Math.Log2(System.Double)>\
 `log2` IEEE 演算に相当します。2 を底とする対数を返します。 丸め誤差を最小限に抑えます。
 
-* <xref:System.Math.FusedMultiplyAdd(System.Double,System.Double,System.Double)>\
+- <xref:System.Math.FusedMultiplyAdd(System.Double,System.Double,System.Double)>\
 `fma` IEEE 演算に相当します。融合型積和演算を実行します。 つまり、単一操作として `(x * y) + z` を実行することで、丸め誤差を最小限に抑えます。 例では、`FusedMultiplyAdd(1e308, 2.0, -1e308)` は `1e308` を返します。 正規の `(1e308 * 2.0) - 1e308` は `double.PositiveInfinity` を返します。
 
-* <xref:System.Math.CopySign(System.Double,System.Double)>\
+- <xref:System.Math.CopySign(System.Double,System.Double)>\
 `copySign` IEEE 演算に相当します。`x` の値を返しますが、`y` の符号と共に返されます。
 
 ## <a name="fast-built-in-json-support"></a>高速な組み込み JSON のサポート
@@ -453,8 +456,8 @@ Windows では、フラット C API、COM、および WinRT の形式で、質�
 
 .NET Core では、特定の環境で使用できるようになったときに、[OpenSSL 1.1.1 の TLS 1.3 のサポート](https://www.openssl.org/blog/blog/2018/09/11/release111/)を利用できるようになりました。 TLS 1.3 の場合:
 
-* クライアントとサーバー間に必要なラウンド トリップ回数が減るため、接続時間が改善されます。
-* 古い安全ではないさまざまな暗号化アルゴリズムが削除されたので、セキュリティが強化されました。
+- クライアントとサーバー間に必要なラウンド トリップ回数が減るため、接続時間が改善されます。
+- 古い安全ではないさまざまな暗号化アルゴリズムが削除されたので、セキュリティが強化されました。
 
 使用できる場合、.NET Core 3.0 では Linux システム上で **OpenSSL 1.1.1**、**OpenSSL 1.1.0**、または **OpenSSL 1.0.2** が使用されます。 **OpenSSL 1.1.1** が使用できる場合、<xref:System.Net.Security.SslStream?displayProperty=nameWithType> 型と <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 型の両方が **TLS 1.3** を使用します (クライアントとサーバーの両方が **TLS 1.3** をサポートしている場合)。
 
@@ -479,20 +482,20 @@ Windows では、フラット C API、COM、および WinRT の形式で、質�
 
 *RSA*、*DSA*、*ECDsa*、*ECDiffieHellman* などのすべてのキー種類は、以下の形式をサポートします。
 
-* **公開キー**
-  * X.509 SubjectPublicKeyInfo
+- **公開キー**
+  - X.509 SubjectPublicKeyInfo
 
-* **秘密キー**
-  * PKCS#8 PrivateKeyInfo
-  * PKCS#8 EncryptedPrivateKeyInfo
+- **秘密キー**
+  - PKCS#8 PrivateKeyInfo
+  - PKCS#8 EncryptedPrivateKeyInfo
 
 RSA キーは以下もサポートしています。
 
-* **公開キー**
-  * PKCS#1 RSAPublicKey
+- **公開キー**
+  - PKCS#1 RSAPublicKey
 
-* **秘密キー**
-  * PKCS#1 RSAPrivateKey
+- **秘密キー**
+  - PKCS#1 RSAPrivateKey
 
 エクスポートメソッドからは、DER でエンコードされたバイナリ データが生成され、インポート メソッドもそのようなデータを期待します。 キーがテキストに適した PEM 形式で格納されている場合、呼び出し元は import メソッドを呼び出す前にコンテンツを base64 でデコードする必要があります。
 
@@ -502,17 +505,19 @@ RSA キーは以下もサポートしています。
 
 ## <a name="serialport-for-linux"></a>Linux 用 SerialPort
 
-.NET Core 3.0 は Linux 上で <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> をサポートします。
+.Net Core 3.0 では、Linux 上の <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> に対する基本サポートを提供しています。
 
 以前の .NET Core では、Windows 上の `SerialPort` の使用のみをサポートしていました。
+
+Linux 上のシリアル ポートの制限付きサポートの詳細については、[GitHub 問題 #33146](https://github.com/dotnet/corefx/issues/33146) を参照してください。
 
 ## <a name="docker-and-cgroup-memory-limits"></a>Docker と cgroup のメモリ制限
 
 Preview 3 以降、Linux 上の Docker を使用した .NET Core 3.0 の実行は、cgroup のメモリ制限と適切に連携するようになりました。 `docker run -m` のように、メモリ制限を使用して Docker コンテナーを実行すると、.NET Core の動作が変わります。
 
-* 既定のガベージ コレクター (GC) ヒープ サイズ: 最大 20 MB、またはコンテナーのメモリ制限の 75%。
-* 明示的なサイズは、cgroup 制限の絶対数または割合として設定できます。
-* GC ヒープあたりの最小予約セグメント サイズは 16 MB です。 このサイズによって、マシン上に作成されるヒープ数が減ります。
+- 既定のガベージ コレクター (GC) ヒープ サイズ: 最大 20 MB、またはコンテナーのメモリ制限の 75%。
+- 明示的なサイズは、cgroup 制限の絶対数または割合として設定できます。
+- GC ヒープあたりの最小予約セグメント サイズは 16 MB です。 このサイズによって、マシン上に作成されるヒープ数が減ります。
 
 ## <a name="smaller-garbage-collection-heap-sizes"></a>小さいガベージ コレクションのヒープ サイズ
 
@@ -528,8 +533,8 @@ Windows 上でラージ ページを割り当てることを選択するオプ�
 
 GPIO プログラミングに使用できる 2 つのパッケージが NuGet にリリースされました。
 
-* [System.Device.Gpio](https://www.nuget.org/packages/System.Device.Gpio)
-* [Iot.Device.Bindings](https://www.nuget.org/packages/Iot.Device.Bindings)
+- [System.Device.Gpio](https://www.nuget.org/packages/System.Device.Gpio)
+- [Iot.Device.Bindings](https://www.nuget.org/packages/Iot.Device.Bindings)
 
 GPIO パッケージには、*GPIO*、*SPI*、*I2C*、および *PWM* デバイス用の API が含まれています。 IoT バインディング パッケージにはデバイス バインディングが含まれています。 詳細については、[デバイス GitHub リポジトリ](https://github.com/dotnet/iot/blob/master/src/devices/)を参照してください。
 

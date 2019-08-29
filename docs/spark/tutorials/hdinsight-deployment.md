@@ -1,46 +1,46 @@
 ---
-title: Apache Spark アプリケーション用の .NET を Azure HDInsight にデプロイする
-description: Apache Spark アプリケーション用の .NET を HDInsight にデプロイする方法について説明します。
+title: .NET for Apache Spark アプリケーションを Azure HDInsight にデプロイする
+description: .NET for Apache Spark アプリケーションを Azure HDInsight にデプロイする方法を説明します。
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
 ms.openlocfilehash: 4769c194520790ce217d46d1d3197b20742d4f1a
 ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/21/2019
 ms.locfileid: "69576949"
 ---
-# <a name="deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>Apache Spark アプリケーション用の .NET を Azure HDInsight にデプロイする
+# <a name="deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>.NET for Apache Spark アプリケーションを Azure HDInsight にデプロイする
 
-このチュートリアルでは、Apache Spark アプリケーション用の .NET を Azure HDInsight にデプロイする方法について説明します。
+このチュートリアルでは、.NET for Apache Spark アプリケーションを Azure HDInsight にデプロイする方法について説明します。
 
 このチュートリアルでは、次の作業を行う方法について説明します。
 
 > [!div class="checklist"]
-> * Microsoft の Spark を準備します。
+> * Microsoft.Spark.Worker を準備する
 > * Spark .NET アプリを発行する
 > * アプリを Azure HDInsight にデプロイする
 > * アプリの実行
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-開始する前に、次の手順を実行します。
+開始する前に、以下を行います。
 
-* [Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer/)をダウンロードします。
-* [Install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh)をローカルコンピューターにダウンロードします。 これは、後で Apache Spark 依存ファイル用の .NET を Spark クラスターのワーカーノードにコピーするために後で使用するヘルパースクリプトです。
+* [Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer/) をダウンロードします。
+* [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) をお使いのローカル コンピューターにダウンロードします。 これは、後で .NET for Apache Spark の依存ファイルを Spark クラスターのワーカー ノードにコピーするために使用するヘルパー スクリプトです。
 
 ## <a name="prepare-worker-dependencies"></a>ワーカーの依存関係を準備する
 
-**Microsoft spark**は、spark クラスターの個々のワーカーノードに存在するバックエンドコンポーネントです。 C# Udf (ユーザー定義関数) を実行する場合、Spark は、.net CLR を起動して udf を実行する方法を理解する必要があります。 **Microsoft spark**は、この機能を有効にするクラスのコレクションを spark に提供します。
+**Microsoft.Spark.Worker** は、Spark クラスターの個々のワーカー ノードに存在するバックエンド コンポーネントです。 C# UDF (ユーザー定義関数) を実行する場合、.NET CLR を起動して UDF を実行する方法を Spark が理解している必要があります。 **Microsoft.Spark.Worker** により、この機能を有効にするクラスのコレクションが Spark に提供されます。
 
-1. クラスターにデプロイする[Microsoft Spark. Worker](https://github.com/dotnet/spark/releases) Linux netcoreapp リリースを選択します。
+1. お使いのクラスターにデプロイされる [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) Linux netcoreapp リリースを選択します。
 
-   たとえば、を`.NET for Apache Spark v0.1.0`使用`netcoreapp2.1`する場合は、 [linux-x64-0.1.0](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz)をダウンロードする必要があります。これは、次のようになります。
+   たとえば、`netcoreapp2.1` を使用する `.NET for Apache Spark v0.1.0` が必要な場合は、[Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz) をダウンロードします。
 
-2. クラスター `Microsoft.Spark.Worker.<release>.tar.gz`からアクセスできる分散ファイルシステム (HDFS、 [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) 、adls など) にアップロードして、そのファイルをアップロードします。
+2. クラスターからアクセスできる分散ファイル システム (HDFS、WASB、ADLS など) に、`Microsoft.Spark.Worker.<release>.tar.gz` と [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) をアップロードします。
 
-## <a name="prepare-your-net-for-apache-spark-app"></a>Apache Spark アプリ用の .NET を準備する
+## <a name="prepare-your-net-for-apache-spark-app"></a>.NET for Apache Spark アプリを準備する
 
 1. [入門](get-started.md)チュートリアルに従ってアプリをビルドします。
 
@@ -52,54 +52,54 @@ ms.locfileid: "69576949"
    dotnet publish -c Release -f netcoreapp2.1 -r ubuntu.16.04-x64
    ```
 
-3. パブリッシュ`<your app>.zip`されたファイルのを生成します。
+3. 発行されたファイル用に `<your app>.zip` を生成します。
 
-   Linux では、を使用して`zip`次のコマンドを実行できます。
+   Linux では、`zip` を使用して次のコマンドを実行できます。
 
    ```bash
    zip -r <your app>.zip .
    ```
 
-4. クラスターからアクセス可能な分散ファイルシステム (HDFS、ADLS、ADLS など) に以下をアップロードします。
+4. クラスターからアクセスできる分散ファイル システム (HDFS、WASB、ADLS など) に、次をアップロードします。
 
-   * `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar` :この jar は、 [Microsoft Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet パッケージの一部として含まれており、アプリのビルド出力ディレクトリに併置されています。
+   * `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`:この jar は、[Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet パッケージの一部として含まれており、アプリのビルド出力ディレクトリに併置されています。
    * `<your app>.zip`
-   * 各実行プログラムの作業ディレクトリに配置されるファイル (依存関係ファイルや、 `app`すべてのワーカーがアクセスできる共通のデータなど) またはアセンブリ (ユーザー定義関数またはが依存するライブラリを含む dll など)。
+   * 各 Executor の作業ディレクトリ内に配置されるファイル (依存関係ファイルや、すべてのワーカーからアクセスできる共通データなど) またはアセンブリ (`app` が依存しているユーザー定義関数またはライブラリを含む DLL など)。
 
-## <a name="deploy-to-azure-hdinsight-spark"></a>Azure HDInsight Spark に配置する
+## <a name="deploy-to-azure-hdinsight-spark"></a>Azure HDInsight Spark にデプロイする
 
-[Azure HDInsight Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-overview)は、クラウドで Apache Spark の Microsoft による実装であり、ユーザーは Azure で Spark クラスターを起動して構成することができます。 HDInsight Spark クラスターを使用して、 [Azure Storage](https://azure.microsoft.com/services/storage/)または[Azure Data Lake Storage](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-use-data-lake-storage-gen2)に格納されているデータを処理できます。
+[Azure HDInsight Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-overview) は、ユーザーが Azure で Spark クラスターを起動して構成できるようにするための、Microsoft による Apache Spark のクラウドへの実装です。 HDInsight Spark クラスターを使用して、[Azure Storage](https://azure.microsoft.com/services/storage/) または [Azure Data Lake Storage](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-use-data-lake-storage-gen2) に格納されているデータを処理できます。
 
 > [!NOTE]
-> Azure HDInsight Spark は Linux ベースです。 Azure HDInsight Spark にアプリをデプロイする場合は、アプリに互換性が .NET Standard こと、および[.Net Core コンパイラ](https://dotnet.microsoft.com/download)を使用してアプリをコンパイルすることを確認してください。
+> Azure HDInsight Spark は Linux ベースです。 Azure HDInsight Spark へのアプリのデプロイに関心がある場合は、アプリが .NET Standard と互換性があることと、アプリのコンパイルに [.NET Core コンパイラ](https://dotnet.microsoft.com/download)を使用していることを確認してください。
 
-### <a name="deploy-microsoftsparkworker"></a>Microsoft Spark をデプロイする
+### <a name="deploy-microsoftsparkworker"></a>Microsoft.Spark.Worker をデプロイする
 
-この手順は、クラスターに対して1回のみ必要です。
+この手順は、クラスターに対して 1 回のみ必要です。
 
-HDInsight `install-worker.sh`の[スクリプトアクション](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux)を使用して、クラスターでを実行します。
+[HDInsight スクリプト アクション](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux)を使用して、クラスターで `install-worker.sh` を実行します。
 
-|設定|値|
+|設定|[値]|
 |-------|-----|
 |スクリプトの種類|カスタム|
-|Name|Microsoft Spark をインストールします。|
-|Bash スクリプト URI|アップロード`install-worker.sh`先の URI。 たとえば、`abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/install-worker.sh`|
-|ノードの種類|者|
-|パラメーター|パラメーターを`install-worker.sh`にします。 たとえば、Azure Data Lake Gen 2 `install-worker.sh` `azure abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/Microsoft.Spark.Worker.<release>.tar.gz /usr/local/bin`にアップロードした場合は、のようになります。|
+|name|Microsoft.Spark.Worker をインストールする|
+|Bash スクリプト URI|`install-worker.sh` のアップロード先の URI。 たとえば、`abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/install-worker.sh`|
+|ノードの種類|ワーカー|
+|パラメーター|`install-worker.sh` のパラメーター。 たとえば、`install-worker.sh` を Azure Data Lake Gen 2 にアップロードした場合、これは `azure abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/Microsoft.Spark.Worker.<release>.tar.gz /usr/local/bin` になります。|
 
-![スクリプトアクションの画像](./media/hdinsight-deployment/deployment-hdi-action-script.png)
+![スクリプト アクションの画像](./media/hdinsight-deployment/deployment-hdi-action-script.png)
 
 ## <a name="run-your-app"></a>アプリの実行
 
-または Apache Livy を使用して`spark-submit` 、ジョブを Azure HDInsight に送信できます。
+`spark-submit` または Apache Livy を使用して、ジョブを Azure HDInsight に送信できます。
 
-### <a name="use-spark-submit"></a>Spark 送信の使用
+### <a name="use-spark-submit"></a>spark-submit を使用する
 
-[Spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html)コマンドを使用して、Apache Spark ジョブ用の .Net を Azure HDInsight に送信できます。
+[spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html) コマンドを使用して、.NET for Apache Spark ジョブを Azure HDInsight に送信できます。
  
-1. `ssh`クラスター内のいずれかのヘッドノードに移動します。
+1. クラスター内のいずれかのヘッド ノードに `ssh` で接続します。
 
-1. を`spark-submit`実行します。
+1. `spark-submit` を実行します。
 
    ```bash
    spark-submit \
@@ -112,9 +112,9 @@ HDInsight `install-worker.sh`の[スクリプトアクション](https://docs.mi
 
 ### <a name="use-apache-livy"></a>Apache Livy を使用する
 
-[Apache Livy](https://livy.incubator.apache.org/)(Apache Spark REST API) を使用して、Apache Spark ジョブ用の .net を Azure HDInsight Spark クラスターに送信することができます。 詳細については、「 [Apache Livy を使用したリモートジョブ](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-livy-rest-interface)」を参照してください。
+[Apache Livy](https://livy.incubator.apache.org/) (Apache Spark REST API) を使用して、.NET for Apache Spark ジョブを Azure HDInsight Spark クラスターに送信することができます。 詳細については、[Apache Livy を使用したリモート ジョブ](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-livy-rest-interface) に関するページを参照してください。
 
-次のコマンドは、Linux でを使用`curl`して実行できます。
+Linux では、`curl` を使用して次のコマンドを実行できます。
 
 ```bash
 curl -k -v -X POST "https://<your spark cluster>.azurehdinsight.net/livy/batches" \
@@ -133,7 +133,7 @@ EOF
 
 ## <a name="next-steps"></a>次の手順
 
-このチュートリアルでは、Apache Spark アプリケーション用の .NET を Azure HDInsight にデプロイしました。 HDInsight の詳細については、Azure HDInsight のドキュメントを参照してください。
+このチュートリアルでは、.NET for Apache Spark アプリケーションを Azure HDInsight にデプロイしました。 HDInsight の詳細については、Azure HDInsight のドキュメントに進んでください。
 
 > [!div class="nextstepaction"]
 > [Azure HDInsight のドキュメント](https://docs.microsoft.com/azure/hdinsight/)

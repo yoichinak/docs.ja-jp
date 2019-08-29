@@ -7,16 +7,16 @@ helpviewer_keywords:
 - /refonly compiler option [C#]
 - -refonly compiler option [C#]
 - refonly compiler option [C#]
-ms.openlocfilehash: 24f5cba5650777f4844923844708d287798c445c
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: eb62f98c5d548fe3583d3422eb7b6020a82c296a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409264"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606486"
 ---
 # <a name="-refonly-c-compiler-options"></a>-refonly (C# コンパイラ オプション)
 
-**-refonly** オプションは、実装アセンブリではなく、参照アセンブリをプライマリ出力として出力することを示します。 `-refonly` パラメーターは、参照アセンブリを実行できない場合に、PDB の出力を暗黙的に無効にします。
+**-refonly** オプションは、実装アセンブリではなく、参照アセンブリをプライマリ出力として出力することを示します。 `-refonly` パラメーターは、参照アセンブリを実行できない場合に、PDB の出力を暗黙的に無効にします。 このオプションは、MSBuild の [ProduceOnlyReferenceAssembly](/visualstudio/msbuild/common-msbuild-project-properties) プロジェクト プロパティに対応します。
 
 ## <a name="syntax"></a>構文
 
@@ -36,11 +36,11 @@ ms.locfileid: "58409264"
 - プライベート関数のメンバー (メソッド、プロパティ、およびイベント) は、それらの削除がコンパイルに著しい影響を与えない場合に削除されます。 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性がない場合、内部関数メンバーに同じことを行います。
 - ただし、すべての型 (プライベートまたは入れ子になった型を含む) は参照アセンブリで保持されます。 すべての属性が (内部属性も) 保持されます。
 - すべての仮想メソッドが保持されます。 明示的なインターフェイスの実装が保持されます。 明示的に実装されたプロパティとイベントが保持されます (これらのアクセサーが仮想のため保持されます)。
-- 構造体のすべてのフィールドが保持されます  (これは、post-C#-7.1 絞り込みの候補です)。
+- 構造体のすべてのフィールドが保持されます (これは、post-C#-7.1 絞り込みの候補です)。
 
 `-refonly` オプションと [`-refout`](refout-compiler-option.md) オプションは同時に指定できません。
 
 ## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
+- [C# コンパイラ オプション](./index.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

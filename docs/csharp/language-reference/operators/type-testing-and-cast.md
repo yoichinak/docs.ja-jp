@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 6966d0b7a4f8a96bddb17ce2017fd53fc07ae922
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 62186409fdc1abb2275af535be3ae939a1e63323
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69572316"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922290"
 ---
 # <a name="type-testing-and-cast-operators-c-reference"></a>型テストとキャスト演算子 (C# リファレンス)
 
@@ -115,7 +115,7 @@ E is T ? (T)(E) : (T)null
 
 かっこは、[メソッドまたはデリゲートを呼び出すとき](member-access-operators.md#invocation-operator-)にも使います。
 
-他には、式に含まれる演算を評価する順序を指定する場合にもかっこを使います。 詳細については、「[演算子](../../programming-guide/statements-expressions-operators/operators.md)」記事の「[かっこの追加](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses)」セクションを参照してください。 優先順位順に並べられた演算子の一覧については、「[C# 演算子](index.md)」を参照してください。
+他には、式に含まれる演算を評価する順序を調整する場合にもかっこを使います。 詳細については、[C# 演算子](index.md)に関するページを参照してください。
 
 ## <a name="typeof-operator"></a>typeof 演算子
 

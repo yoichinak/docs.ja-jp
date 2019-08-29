@@ -3,12 +3,12 @@ title: .NET Core コマンドライン インターフェイス (CLI) ツール
 description: .NET Core コマンドライン インターフェイス (CLI) ツールとその機能の概要です。
 ms.date: 08/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: ff96023dd0b161271e146f7a7e69924c9db9e769
-ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
+ms.openlocfilehash: 20a083f3e7496521243bebd6585a48c8a562c548
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67569514"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105046"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET Core コマンドライン インターフェイス (CLI) ツール
 
@@ -18,8 +18,8 @@ ms.locfileid: "67569514"
 
 ネイティブ インストーラーを使用するか、インストール シェル スクリプトを使用します。
 
-* ネイティブ インストーラーは主に開発者のコンピューター上で使用され、それぞれサポートされるプラットフォームのネイティブ インストール メカニズムを使用します。たとえば、Ubuntu の場合は DEB パッケージ、Windows の場合は MSI バンドルを使用します。 これらのインストーラーでは、開発者がすぐに使用できる環境をインストールして構成します。ただし、コンピューターに対する管理者特権が必要になります。 インストール手順は、[.NET Core のインストール ガイド](https://aka.ms/dotnetcoregs)で確認できます。
-* シェル スクリプトは主に管理者特権なしでツールをインストールするときや、ビルド サーバーを設定するために使用されます。 インストール スクリプトの場合、前提条件はインストールされないため、手動でインストールする必要があります。 詳細については、[インストール スクリプト参照](dotnet-install-script.md)に関するトピックを参照してください。 継続的インテグレーション (CI) ビルド サーバーで CLI を設定する方法については、「[継続的インテグレーション (CI) で .NET Core SDK とツールを使用する](using-ci-with-cli.md)」を参照してください。
+- ネイティブ インストーラーは主に開発者のコンピューター上で使用され、それぞれサポートされるプラットフォームのネイティブ インストール メカニズムを使用します。たとえば、Ubuntu の場合は DEB パッケージ、Windows の場合は MSI バンドルを使用します。 これらのインストーラーでは、開発者がすぐに使用できる環境をインストールして構成します。ただし、コンピューターに対する管理者特権が必要になります。 インストール手順は、[.NET Core のインストール ガイド](https://aka.ms/dotnetcoregs)で確認できます。
+- シェル スクリプトは主に管理者特権なしでツールをインストールするときや、ビルド サーバーを設定するために使用されます。 インストール スクリプトの場合、前提条件はインストールされないため、手動でインストールする必要があります。 詳細については、[インストール スクリプト参照](dotnet-install-script.md)に関するトピックを参照してください。 継続的インテグレーション (CI) ビルド サーバーで CLI を設定する方法については、「[継続的インテグレーション (CI) で .NET Core SDK とツールを使用する](using-ci-with-cli.md)」を参照してください。
 
 既定では、CLI は SxS (side-by-side) 方式でインストールを実行するため、複数のバージョンの CLI ツールが 1 台のコンピューターで共存できます。 複数のバージョンがインストールされたコンピューターで使用するバージョンの決定方法について詳しくは、「[ドライバー](#driver)」セクションを参照してください。
 
@@ -31,67 +31,67 @@ ms.locfileid: "67569514"
 
 **基本的なコマンド**
 
-* [new](dotnet-new.md)
-* [restore](dotnet-restore.md)
-* [build](dotnet-build.md)
-* [publish](dotnet-publish.md)
-* [run](dotnet-run.md)
-* [test](dotnet-test.md)
-* [vstest](dotnet-vstest.md)
-* [pack](dotnet-pack.md)
-* [migrate](dotnet-migrate.md)
-* [clean](dotnet-clean.md)
-* [sln](dotnet-sln.md)
-* [help](dotnet-help.md)
-* [store](dotnet-store.md)
+- [new](dotnet-new.md)
+- [restore](dotnet-restore.md)
+- [build](dotnet-build.md)
+- [publish](dotnet-publish.md)
+- [run](dotnet-run.md)
+- [test](dotnet-test.md)
+- [vstest](dotnet-vstest.md)
+- [pack](dotnet-pack.md)
+- [migrate](dotnet-migrate.md)
+- [clean](dotnet-clean.md)
+- [sln](dotnet-sln.md)
+- [help](dotnet-help.md)
+- [store](dotnet-store.md)
 
 **プロジェクトの変更コマンド**
 
-* [add package](dotnet-add-package.md)
-* [add reference](dotnet-add-reference.md)
-* [remove package](dotnet-remove-package.md)
-* [remove reference](dotnet-remove-reference.md)
-* [list reference](dotnet-list-reference.md)
+- [add package](dotnet-add-package.md)
+- [add reference](dotnet-add-reference.md)
+- [remove package](dotnet-remove-package.md)
+- [remove reference](dotnet-remove-reference.md)
+- [list reference](dotnet-list-reference.md)
 
 **高度なコマンド**
 
-* [nuget delete](dotnet-nuget-delete.md)
-* [nuget locals](dotnet-nuget-locals.md)
-* [nuget push](dotnet-nuget-push.md)
-* [msbuild](dotnet-msbuild.md)
-* [dotnet install script](dotnet-install-script.md)
+- [nuget delete](dotnet-nuget-delete.md)
+- [nuget locals](dotnet-nuget-locals.md)
+- [nuget push](dotnet-nuget-push.md)
+- [msbuild](dotnet-msbuild.md)
+- [dotnet install script](dotnet-install-script.md)
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 **基本的なコマンド**
 
-* [new](dotnet-new.md)
-* [restore](dotnet-restore.md)
-* [build](dotnet-build.md)
-* [publish](dotnet-publish.md)
-* [run](dotnet-run.md)
-* [test](dotnet-test.md)
-* [vstest](dotnet-vstest.md)
-* [pack](dotnet-pack.md)
-* [migrate](dotnet-migrate.md)
-* [clean](dotnet-clean.md)
-* [sln](dotnet-sln.md)
+- [new](dotnet-new.md)
+- [restore](dotnet-restore.md)
+- [build](dotnet-build.md)
+- [publish](dotnet-publish.md)
+- [run](dotnet-run.md)
+- [test](dotnet-test.md)
+- [vstest](dotnet-vstest.md)
+- [pack](dotnet-pack.md)
+- [migrate](dotnet-migrate.md)
+- [clean](dotnet-clean.md)
+- [sln](dotnet-sln.md)
 
 **プロジェクトの変更コマンド**
 
-* [add package](dotnet-add-package.md)
-* [add reference](dotnet-add-reference.md)
-* [remove package](dotnet-remove-package.md)
-* [remove reference](dotnet-remove-reference.md)
-* [list reference](dotnet-list-reference.md)
+- [add package](dotnet-add-package.md)
+- [add reference](dotnet-add-reference.md)
+- [remove package](dotnet-remove-package.md)
+- [remove reference](dotnet-remove-reference.md)
+- [list reference](dotnet-list-reference.md)
 
 **高度なコマンド**
 
-* [nuget delete](dotnet-nuget-delete.md)
-* [nuget locals](dotnet-nuget-locals.md)
-* [nuget push](dotnet-nuget-push.md)
-* [msbuild](dotnet-msbuild.md)
-* [dotnet install script](dotnet-install-script.md)
+- [nuget delete](dotnet-nuget-delete.md)
+- [nuget locals](dotnet-nuget-locals.md)
+- [nuget push](dotnet-nuget-push.md)
+- [msbuild](dotnet-msbuild.md)
+- [dotnet install script](dotnet-install-script.md)
 
 ---
 

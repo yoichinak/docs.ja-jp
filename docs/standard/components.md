@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: b35db12c8da1f333b481d2bd2e7633026ae30c30
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: baeb091f7c1757e62ba049afc7a92ae8e73d3925
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570724"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70014946"
 ---
 # <a name="net-architectural-components"></a>.NET アーキテクチャ コンポーネント
 
@@ -22,22 +22,22 @@ ms.locfileid: "54570724"
 
 .NET Standard は、[ターゲット フレームワーク](glossary.md#target-framework)でもあります。 コードが .NET Standard のバージョンをターゲットにする場合、.NET Standard のそのバージョンをサポートするすべての .NET 実装でそのコードを実行できます。
 
-.NET Standard とそのターゲットの設定方法については、「[.NET Standard](net-standard.md)」を参照してください。 
+.NET Standard とそのターゲットの設定方法については、「[.NET Standard](net-standard.md)」を参照してください。
 
 ## <a name="net-implementations"></a>.NET 実装
 
 各 .NET 実装には、次のコンポーネントが含まれています。
 
-- 1 つまたは複数のランタイム。 次に例を示します。CLR for .NET Framework、CoreCLR、CoreRT for .NET Core などです。
+- 1 つまたは複数のランタイム。 次に例を示します。 CLR for .NET Framework、CoreCLR、CoreRT for .NET Core などです。
 - .NET Standard を実装し、他の API も実装する可能性があるクラス ライブラリ。 たとえば、.NET Framework 基本クラス ライブラリや .NET Core 基本クラス ライブラリなどです。
-- 必要に応じて、1 つまたは複数のアプリケーション フレームワーク。 次に例を示します。 .NET Framework には、[ASP.NET](https://www.asp.net/)、[Windows フォーム](../framework/winforms/windows-forms-overview.md)、[Windows Presentation Foundation (WPF)](../framework/wpf/index.md) などです。
+- 必要に応じて、1 つまたは複数のアプリケーション フレームワーク。 次に例を示します。 .NET Framework と .NET Core には、[ASP.NET](https://www.asp.net/)、[Windows フォーム](../framework/winforms/windows-forms-overview.md)、[Windows Presentation Foundation (WPF)](../framework/wpf/index.md) が含まれます。
 - 必要に応じて、開発ツール。 一部の開発ツールは、複数の実装間で共有されます。
 
 Microsoft が積極的に開発し保守している主要な .NET 実装としては、.NET Core、.NET Framework、Mono、UWP の 4 つがあります。
 
 ### <a name="net-core"></a>.NET Core
 
-.NET Core は .NET のクラスプラットフォーム実装であり、サーバーとクラウドのワークロードをその規模に応じて処理するように設計されています。 Windows、macOS および Linux で実行されます。 .NET Standard を実装しているので、.NET Standard をターゲットとするすべてのコードを .NET Core 上で実行できます。 ASP.NET Core は、.NET Core 上で実行されます。 
+.NET Core は .NET のクラスプラットフォーム実装であり、サーバーとクラウドのワークロードをその規模に応じて処理するように設計されています。 Windows、macOS および Linux で実行されます。 .NET Standard を実装しているので、.NET Standard をターゲットとするすべてのコードを .NET Core 上で実行できます。 [ASP.NET](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core)、[Windows フォーム](../framework/winforms/windows-forms-overview.md)、[Windows Presentation Foundation (WPF)](../framework/wpf/index.md) はすべて、.NET Core で実行されます。
 
 .NET Core の詳細については、「[.NET Core](../core/index.md)」および「[サーバー アプリ用 .NET Core と .NET Framework の選択](choosing-core-framework-server.md)」を参照してください。
 
@@ -79,7 +79,7 @@ UWP の詳細については、「[ユニバーサル Windows プラットフォ
 すべての .NET 実装と連携する多様なツールやインフラストラクチャ コンポーネントにアクセスできます。 その一部を次に示します。
 
 - .NET 言語とコンパイラ
-- .NET プロジェクト システム (*.csproj*、*.vbproj*、および *.fsproj* ファイルに基づく)
+- .NET プロジェクト システム ( *.csproj*、 *.vbproj*、および *.fsproj* ファイルに基づく)
 - [MSBuild](/visualstudio/msbuild/msbuild) (プロジェクトのビルドに使用されるビルド エンジン)
 - [NuGet](/nuget/) (Microsoft の .NET 用パッケージ マネージャー)
 - オープン ソースのビルド オーケストレーション ツール ([CAKE](https://cakebuild.net/)、[FAKE](https://fake.build/) など)

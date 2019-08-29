@@ -7,16 +7,16 @@ helpviewer_keywords:
 - refout compiler option [C#]
 - /refout compiler option [C#]
 - -refout compiler option [C#]
-ms.openlocfilehash: 06d21843c6e2d7aeb1858c3ce72426d080f73595
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 97cbf540527d0449387b71bb1d97df95b6a4aba4
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410213"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602504"
 ---
 # <a name="-refout-c-compiler-options"></a>/refout (C# コンパイラ オプション)
 
-**-refout** オプションは、参照アセンブリを出力するファイル パスを指定します。 Emit API では、これを `metadataPeStream` に変換します。
+**-refout** オプションは、参照アセンブリを出力するファイル パスを指定します。 Emit API では、これを `metadataPeStream` に変換します。 このオプションは、MSBuild の [ProduceReferenceAssembly](/visualstudio/msbuild/common-msbuild-project-properties) プロジェクト プロパティに対応します。
 
 ## <a name="syntax"></a>構文
 
@@ -40,11 +40,11 @@ ms.locfileid: "58410213"
 - プライベート関数のメンバー (メソッド、プロパティ、およびイベント) は、それらの削除がコンパイルに著しい影響を与えない場合に削除されます。 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性がない場合、内部関数メンバーに同じことを行います。
 - ただし、すべての型 (プライベートまたは入れ子になった型を含む) は参照アセンブリで保持されます。 すべての属性が (内部属性も) 保持されます。
 - すべての仮想メソッドが保持されます。 明示的なインターフェイスの実装が保持されます。 明示的に実装されたプロパティとイベントが保持されます (これらのアクセサーが仮想のため保持されます)。
-- 構造体のすべてのフィールドが保持されます  (これは、post-C#-7.1 絞り込みの候補です)。
+- 構造体のすべてのフィールドが保持されます (これは、post-C#-7.1 絞り込みの候補です)。
 
 `-refout` オプションと [`-refonly`](refonly-compiler-option.md) オプションは同時に指定できません。
 
 ## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
+- [C# コンパイラ オプション](./index.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: 93e4845cab6735e74c711d720beeb06c8883a44b
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 5fcf9c774592c0fbcdcca951ef99c1a2efa6f05e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566882"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922296"
 ---
 # <a name="operator-overloading-c-reference"></a>演算子のオーバーロード (C# リファレンス)
 
-ユーザー定義型は定義済みの C# 演算子をオーバーロードできます。 つまり、1 つまたは両方のオペランドに該当する型は、演算のカスタム実装を提供できます。 オーバーロード可能な C# 演算子は、「[オーバーロード可能な演算子](#overloadable-operators)」のセクションで示します。
+ユーザー定義型は定義済みの C# 演算子をオーバーロードできます。 つまり、1 つまたは両方のオペランドに該当する型では、演算のカスタム実装を提供できます。 オーバーロード可能な C# 演算子は、「[オーバーロード可能な演算子](#overloadable-operators)」のセクションで示します。
 
 演算子の宣言には `operator` キーワードを使用します。 演算子の宣言では、次の規則を満たす必要があります。
 
