@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28e1979b6ceb1b343764900cc7d49a576a7a4030
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: e92d5564308d31609b9fb024f3d3368a19b76b1d
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630551"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106700"
 ---
 # <a name="working-with-calendars"></a>カレンダーの使用
 
@@ -30,39 +30,39 @@ ms.locfileid: "68630551"
 
 .Net のすべてのカレンダーは、 <xref:System.Globalization.Calendar?displayProperty=nameWithType>基本カレンダーの実装を提供するクラスから派生します。 <xref:System.Globalization.Calendar> クラスを継承するクラスの 1 つに <xref:System.Globalization.EastAsianLunisolarCalendar> クラスがあります。これは、すべての太陰太陽暦の基本クラスです。 .NET には、次のカレンダー実装が含まれています。
 
-* <xref:System.Globalization.ChineseLunisolarCalendar>。中国の太陰太陽暦を表します。
+- <xref:System.Globalization.ChineseLunisolarCalendar>。中国の太陰太陽暦を表します。
 
-* <xref:System.Globalization.GregorianCalendar>。グレゴリオ暦を表します。 この暦は、<xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType> 列挙体で定義されるサブタイプ (アラビア語や中東フランス語など) にさらに分けられます。 <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> プロパティは、グレゴリオ暦のサブタイプを指定します。
+- <xref:System.Globalization.GregorianCalendar>。グレゴリオ暦を表します。 この暦は、<xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType> 列挙体で定義されるサブタイプ (アラビア語や中東フランス語など) にさらに分けられます。 <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> プロパティは、グレゴリオ暦のサブタイプを指定します。
 
-* <xref:System.Globalization.HebrewCalendar>。ヘブライ暦を表します。
+- <xref:System.Globalization.HebrewCalendar>。ヘブライ暦を表します。
 
-* <xref:System.Globalization.HijriCalendar>。回教暦を表します。
+- <xref:System.Globalization.HijriCalendar>。回教暦を表します。
 
-* <xref:System.Globalization.JapaneseCalendar>。和暦を表します。
+- <xref:System.Globalization.JapaneseCalendar>。和暦を表します。
 
-* <xref:System.Globalization.JapaneseLunisolarCalendar>。日本の太陰太陽暦を表します。
+- <xref:System.Globalization.JapaneseLunisolarCalendar>。日本の太陰太陽暦を表します。
 
-* <xref:System.Globalization.JulianCalendar>。ユリウス暦を表します。
+- <xref:System.Globalization.JulianCalendar>。ユリウス暦を表します。
 
-* <xref:System.Globalization.KoreanCalendar>。韓国暦を表します。
+- <xref:System.Globalization.KoreanCalendar>。韓国暦を表します。
 
-* <xref:System.Globalization.KoreanLunisolarCalendar>。韓国の太陰太陽暦を表します。
+- <xref:System.Globalization.KoreanLunisolarCalendar>。韓国の太陰太陽暦を表します。
 
-* <xref:System.Globalization.PersianCalendar>。ペルシャ暦を表します。
+- <xref:System.Globalization.PersianCalendar>。ペルシャ暦を表します。
 
-* <xref:System.Globalization.TaiwanCalendar>。台湾暦を表します。
+- <xref:System.Globalization.TaiwanCalendar>。台湾暦を表します。
 
-* <xref:System.Globalization.TaiwanLunisolarCalendar>。台湾の太陰太陽暦を表します。
+- <xref:System.Globalization.TaiwanLunisolarCalendar>。台湾の太陰太陽暦を表します。
 
-* <xref:System.Globalization.ThaiBuddhistCalendar>。タイ仏暦を表します。
+- <xref:System.Globalization.ThaiBuddhistCalendar>。タイ仏暦を表します。
 
-* <xref:System.Globalization.UmAlQuraCalendar>。ウムアルクラ暦を表します。
+- <xref:System.Globalization.UmAlQuraCalendar>。ウムアルクラ暦を表します。
 
 暦は、次の 2 とおりの方法で使用できます。
 
-* 特定のカルチャで使用される暦として使用する。 <xref:System.Globalization.CultureInfo> オブジェクトにはそれぞれ、現在の暦 (オブジェクトで現在使用している暦) があります。 あらゆる日付と時刻の値の文字列形式には、現在のカルチャとその現在の暦が自動的に反映されます。 通常、現在の暦は、カルチャの既定の暦になります。 <xref:System.Globalization.CultureInfo>また、オブジェクトには、カルチャで使用できる追加のカレンダーを含む、オプションのカレンダーもあります。
+- 特定のカルチャで使用される暦として使用する。 <xref:System.Globalization.CultureInfo> オブジェクトにはそれぞれ、現在の暦 (オブジェクトで現在使用している暦) があります。 あらゆる日付と時刻の値の文字列形式には、現在のカルチャとその現在の暦が自動的に反映されます。 通常、現在の暦は、カルチャの既定の暦になります。 <xref:System.Globalization.CultureInfo>また、オブジェクトには、カルチャで使用できる追加のカレンダーを含む、オプションのカレンダーもあります。
 
-* 特定のカルチャに依存しないスタンドアロンの暦として使用する。 この場合、暦が反映された値として日付を表すには、<xref:System.Globalization.Calendar> のメソッドを使用します。
+- 特定のカルチャに依存しないスタンドアロンの暦として使用する。 この場合、暦が反映された値として日付を表すには、<xref:System.Globalization.Calendar> のメソッドを使用します。
 
 <xref:System.Globalization.ChineseLunisolarCalendar>、<xref:System.Globalization.JapaneseLunisolarCalendar>、<xref:System.Globalization.JulianCalendar>、<xref:System.Globalization.KoreanLunisolarCalendar>、<xref:System.Globalization.PersianCalendar>、および <xref:System.Globalization.TaiwanLunisolarCalendar> の 6 つの Calendar クラスは、スタンドアロンの暦としてのみ使用できます。 これらは、どのカルチャでも、既定の暦またはオプションの暦としては使用されません。
 

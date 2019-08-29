@@ -2,12 +2,12 @@
 title: 'チュートリアル: Async および Await を使用した Web へのアクセス (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 7240e78614353249c82e84feac66137828a589ed
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 225046992badba7013193163a191dbf068f0da6a
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630985"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106964"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>チュートリアル: Async および Await を使用した Web へのアクセス (Visual Basic)
 
@@ -22,17 +22,17 @@ async/await 機能を使用することで、非同期プログラムをより�
 このチュートリアルでは、次のタスクを行います。
 
 > [!div class="checklist"]
-> * [WPF アプリケーションの作成](#create-a-wpf-application)
-> * [単純な WPF Mainwindow.xaml を設計する](#design-a-simple-wpf-mainwindow)
-> * [参照を追加する](#add-a-reference)
-> * [必要な Imports ステートメントを追加する](#add-necessary-imports-statements)
-> * [同期アプリケーションを作成する](#create-a-synchronous-application)
-> * [同期ソリューションをテストする](#test-the-synchronous-solution)
-> * [GetURLContents を非同期メソッドに変換する](#convert-geturlcontents-to-an-asynchronous-method)
-> * [SumPageSizes を非同期メソッドに変換する](#convert-sumpagesizes-to-an-asynchronous-method)
-> * [StartButton_Click を非同期メソッドに変換する](#convert-startbutton_click-to-an-asynchronous-method)
-> * [非同期ソリューションをテストする](#test-the-asynchronous-solution)
-> * [Geturlの Async メソッドを .NET Framework メソッドに置き換えます。](#replace-the-geturlcontentsasync-method-with-a-net-framework-method)
+> - [WPF アプリケーションの作成](#create-a-wpf-application)
+> - [単純な WPF Mainwindow.xaml を設計する](#design-a-simple-wpf-mainwindow)
+> - [参照を追加する](#add-a-reference)
+> - [必要な Imports ステートメントを追加する](#add-necessary-imports-statements)
+> - [同期アプリケーションを作成する](#create-a-synchronous-application)
+> - [同期ソリューションをテストする](#test-the-synchronous-solution)
+> - [GetURLContents を非同期メソッドに変換する](#convert-geturlcontents-to-an-asynchronous-method)
+> - [SumPageSizes を非同期メソッドに変換する](#convert-sumpagesizes-to-an-asynchronous-method)
+> - [StartButton_Click を非同期メソッドに変換する](#convert-startbutton_click-to-an-asynchronous-method)
+> - [非同期ソリューションをテストする](#test-the-asynchronous-solution)
+> - [Geturlの Async メソッドを .NET Framework メソッドに置き換えます。](#replace-the-geturlcontentsasync-method-with-a-net-framework-method)
 
 完全な非同期の例については、「[例](#example)」を参照してください。
 
@@ -48,7 +48,7 @@ async/await 機能を使用することで、非同期プログラムをより�
 
     **[新しいプロジェクト]** ダイアログ ボックスが表示されます。
 
-3. **インストールされたテンプレート** ペインで、Visual Basic を選択し、プロジェクトの種類の一覧から **WPF アプリケーション** を選択します。
+3. **[インストールされたテンプレート]** ペインで、Visual Basic を選択し、プロジェクトの種類の一覧から  **[WPF アプリケーション]** を選択します。
 
 4. **[名前]** ボックスに「`AsyncExampleWPF`」と入力して、 **[OK]** を選択します。
 

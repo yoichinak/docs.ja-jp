@@ -9,26 +9,23 @@ helpviewer_keywords:
 - hit tests [WPF], for 3-D visuals
 - Viewport3D [WPF]
 ms.assetid: 42bfbd99-c7c6-43f1-940b-90448faa412e
-ms.openlocfilehash: c3238161a01df67b05be6284b8eed61981ff3974
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 54d3ee859a50ed348308b083c48f2dd73d312bbe
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947330"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106938"
 ---
 # <a name="how-to-hit-test-in-a-viewport3d"></a>方法: Viewport3D でヒット テストを実行する
-この例では、ヒット テストでの 3D ビジュアルの<xref:System.Windows.Controls.Viewport3D>します。  
+この例では、 <xref:System.Windows.Controls.Viewport3D>で3d ビジュアルのヒットテストを行う方法を示します。  
   
- <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> 2D および 3D の情報を返します 3D のみの結果を確認するテスト結果を反復処理することができます。  
+ は<xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> 2d と3d の情報を返すため、テスト結果を反復処理して3d の結果のみを読み取ることができます。  
   
  [!code-csharp[HitTest3D#HitTest3D3DN4](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml.cs#hittest3d3dn4)]
  [!code-vb[HitTest3D#HitTest3D3DN4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTest3D/visualbasic/window1.xaml.vb#hittest3d3dn4)]  
   
- <xref:System.Windows.Media.HitTestResultBehavior>次のコードでヒット テストの結果を処理する方法を決定します。  `UpdateResultInfo` `UpdateMaterial`はローカルに定義されたメソッド。  
+ 次<xref:System.Windows.Media.HitTestResultBehavior>のコードのは、ヒットテストの結果がどのように処理されるかを決定します。  `UpdateResultInfo`および`UpdateMaterial`はローカルに定義されたメソッドです。  
   
  [!code-csharp[HitTest3D#HitTest3D3DN5](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml.cs#hittest3d3dn5)]
  [!code-vb[HitTest3D#HitTest3D3DN5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTest3D/visualbasic/window1.xaml.vb#hittest3d3dn5)]  
-  
-## <a name="see-also"></a>関連項目
-
-- [3-D のヒット テストのサンプル](https://go.microsoft.com/fwlink/?LinkID=159959)
+ 
