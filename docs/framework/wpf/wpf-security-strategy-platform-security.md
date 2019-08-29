@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 65725851cb413e28ceff0d1c9c4b62b76c4fff18
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 44f98a6d7bf8358baf3b123b2d3b1d13009098a6
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817885"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133764"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF のセキュリティ方針 - プラットフォーム セキュリティ
 Windows Presentation Foundation (WPF) にはさまざまなセキュリティサービスが用意されていますが、オペレーティングシステム、CLR、Internet Explorer など、基になるプラットフォームのセキュリティ機能も活用されています。 これらの層を組み合わせることで、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] に強力な多重防御のセキュリティ モデルが提供されます。このセキュリティ モデルでは、次の図に示すように、単一障害点の回避を試みます。  
@@ -33,7 +33,7 @@ Windows Presentation Foundation (WPF) にはさまざまなセキュリティサ
 
 <a name="Operating_System_Security"></a>   
 ## <a name="operating-system-security"></a>オペレーティング システムのセキュリティ  
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] が必要とするオペレーティング システムの最小レベルは [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] です。 の[!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]コアは、で[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]構築されたものを含め、すべての Windows アプリケーションのセキュリティ基盤を形成する複数のセキュリティ機能を提供します。 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] には、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] のセキュリティ機能が搭載され、それをさらに拡張しています。 このトピックでは、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] にとって重要なセキュリティ機能の一式、および [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] がそれらを統合してさらに多重防御を行う方法について説明します。  
+Windows のコアには、WPF を使用して構築されたものを含め、すべての Windows アプリケーションのセキュリティ基盤を形成するセキュリティ機能がいくつか用意されています。 このトピックでは、WPF にとって重要なセキュリティ機能の広範について説明します。また、WPF を統合してさらに多層防御を実現する方法についても説明します。  
   
 <a name="Microsoft_Windows_XP_Service_Pack_2__SP2_"></a>   
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP Service Pack 2 (SP2)  
@@ -57,21 +57,21 @@ Windows Presentation Foundation (WPF) にはさまざまなセキュリティサ
   
 <a name="Windows_Vista"></a>   
 ### <a name="windows-vista"></a>Windows Vista  
- [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] の [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ユーザーは、「最小限の特権によるユーザー アクセス」、コードの整合性チェック、および特権の分離など、オペレーティング システムのさらなるセキュリティ機能強化の恩恵を受けられます。  
+Windows Vista の WPF ユーザーは、"最小限の特権を持つユーザーアクセス"、コードの整合性チェック、および特権の分離など、オペレーティングシステムの追加のセキュリティ強化の恩恵を受けられます。  
   
 #### <a name="user-account-control-uac"></a>ユーザー アカウント制御 [UAC]  
  現在、Windows ユーザーは管理者特権で実行される傾向があります。これは、多くのアプリケーションでインストールまたは実行のいずれかまたは両方を行う必要があるためです。 既定のアプリケーションの設定をレジストリに書き込めることが、その一例です。  
   
  管理者特権で実行することの本当の意味は、管理者特権を付与されているプロセスからアプリケーションを実行することです。 これによるセキュリティへの影響は、管理者特権で実行するプロセスを乗っ取る悪意のあるコードが、重要なシステム リソースへのアクセスなど、これらの権限を自動的に継承することです。  
   
- このセキュリティの脅威から保護するための 1 つの方法は、必要最小限の特権でアプリケーションを実行することです。 これは、最小特権の原則として知られ、[!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] オペレーティング システムの主要機能となっています。 この機能をユーザー アカウント制御 (UAC) といい、[!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] UAC によって主に次の 2 つの方法で使用されます。  
+ このセキュリティの脅威から保護するための 1 つの方法は、必要最小限の特権でアプリケーションを実行することです。 これは、最小限の特権の原則として知られており、Windows オペレーティングシステムの中核となる機能です。 この機能は、ユーザーアカウント制御 (UAC) と呼ばれ、Windows UAC では次の2つの主要な方法で使用されます。  
   
 - ユーザーが管理者であっても、既定で UAC 特権を持つほとんどのアプリケーションを実行するために、管理者特権を必要とするアプリケーションのみが管理者特権で実行されます。 管理者特権で実行するためには、アプリケーションは、アプリケーション マニフェストで、またはセキュリティ ポリシーのエントリとして明示的にマークされる必要があります。  
   
 - 仮想化のような互換性に関する解決策を提供します。 たとえば、多くのアプリケーションが C:\Program Files のような制限された場所への書き込みを試みるなどです。 UAC の下で実行するアプリケーションでは、書き込みに管理者特権が必要でない、ユーザーごとの代替の場所が存在します。 UAC の下で実行するアプリケーションでは、UAC は C:\Program Files を仮想化して、書き込もうとしているアプリケーションが、実際はユーザーごとの代替の場所に書き込むようにします。 このような互換性の作業により、オペレーティング システムは、以前は UAC で実行できなかった多くのアプリケーションを実行できるようになります。  
   
 #### <a name="code-integrity-checks"></a>コードの整合性チェック  
- [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] には、読み込み時または実行時に、悪意のあるコードがシステム ファイルやカーネルに挿入されないようにするための、より詳細なコード整合性チェックが組み込まれています。 これは、システム ファイルの保護を超えて動作します。  
+ Windows Vista には、読み込み時または実行時に悪意のあるコードがシステムファイルやカーネルに挿入されないようにするための、より詳細なコード整合性チェックが組み込まれています。 これは、システム ファイルの保護を超えて動作します。  
   
 <a name="Limited_Rights_Process_for_Browser_Hosted_Applications"></a>   
 ### <a name="limited-rights-process-for-browser-hosted-applications"></a>ブラウザーでホストされるアプリケーションの制限付き権限のプロセス  

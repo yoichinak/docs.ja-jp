@@ -10,18 +10,18 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: 35b46d2030ee887eb98618fbed127097cec1f0c5
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e0f7bd553096be0674827aa0498a53df5247940e
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044193"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133779"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI オートメーションおよび画面の拡大縮小
 > [!NOTE]
 > このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 の最新情報[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については[、「Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
- [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]画面上のほとんど[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]の要素が大きく表示されるように、ユーザーがドット/インチ (dpi) 設定を変更できるようにします。 この機能は長い間、 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]で有効でしたが、以前のバージョンでは、アプリケーションによって拡大縮小を実装しなければなりませんでした。 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]では、独自の拡大縮小処理を行わないアプリケーションのすべてについて、デスクトップ ウィンドウ マネージャーが既定の拡大縮小を行います。 UI オートメーション クライアント アプリケーションでは、この機能を考慮に入れる必要があります。  
+Windows Vista 以降では、ユーザーはドット/インチ (dpi) の設定を変更して、画面上のほとんどのユーザーインターフェイス (UI) 要素のサイズを大きくすることができます。 この機能は Windows では長時間使用できましたが、以前のバージョンでは、アプリケーションによってスケーリングを実装する必要がありました。 Windows Vista 以降では、デスクトップウィンドウマネージャーによって、独自のスケーリングを処理しないすべてのアプリケーションに対して既定のスケーリングが実行されます。 UI オートメーション クライアント アプリケーションでは、この機能を考慮に入れる必要があります。  
   
 <a name="Scaling_in_Windows_Vista"></a>   
 ## <a name="scaling-in-windows-vista"></a>Windows Vista での拡大縮小  

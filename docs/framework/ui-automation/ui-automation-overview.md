@@ -6,12 +6,12 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: af4abf060e9a8606f69a94f27ecd76487a2ff51c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 968660f2fa043ee4028cb144f368d9380729ffef
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914592"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133802"
 ---
 # <a name="ui-automation-overview"></a>UI オートメーションの概要
 > [!NOTE]
@@ -26,9 +26,9 @@ ms.locfileid: "69914592"
   
  UI オートメーション クライアント アプリケーションを作成すると、そのアプリケーションは、複数のフレームワーク上で動作することが保証されます。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] コアは、 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]のさまざまな部分の基になるフレームワークのあらゆる差異をマスクします。 たとえば、 `Content` のボタンの [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] プロパティ、 `Caption` のボタンの [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] プロパティ、および HTML イメージの `ALT` プロパティは、 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>ビュー内では、すべて単一のプロパティ、つまり [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] にマップされます。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] の完全な機能は、 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]、 [!INCLUDE[TLA#tla_winxp](../../../includes/tlasharptla-winxp-md.md)]、および [!INCLUDE[TLA2#tla_winnetsvrfam](../../../includes/tla2sharptla-winnetsvrfam-md.md)]で利用できます。  
+UI オートメーションは、.NET Framework を実行している、サポートされている Windows オペレーティングシステムのすべての機能を提供します (「.NET Core 3.0 以降での .NET Core の[システム要件](../get-started/system-requirements.md)またはバージョンの .NET Framework」を参照してください)。  
   
- UI オートメーションプロバイダーは、組み込みのブリッジングサービスを使用して、Microsoft Active Accessibility クライアントアプリケーションのサポートを提供します。  
+ UI オートメーションプロバイダーは、組み込みのブリッジングサービスを介して Microsoft Active Accessibility クライアントアプリケーションをサポートします。  
   
 <a name="Providers_and_Clients"></a>   
 ## <a name="providers-and-clients"></a>プロバイダーおよびクライアント  
