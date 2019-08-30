@@ -2,12 +2,12 @@
 title: プログラミングの概念 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-ms.openlocfilehash: 7668ca6bba0b938e569886cfa9f1985eaa48c5d0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3fcb1ca76c49919b00b74d955b7aadaa2e882f2a
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594996"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168340"
 ---
 # <a name="programming-concepts-c"></a>プログラミングの概念 (C#)
 このセクションでは、C# 言語でのプログラミングの概念について説明します。  
@@ -17,7 +17,7 @@ ms.locfileid: "69594996"
 |Title|説明|  
 |-----------|-----------------|  
 |[.NET のアセンブリ](../../../standard/assembly/index.md)|アセンブリを作成および使用する方法について説明します。|  
-|[Async および Await を使用した非同期プログラミング (C#)](./async/index.md)|C# の [async](../../language-reference/keywords/async.md) および [await](../../language-reference/keywords/await.md) キーワードを使用して非同期ソリューションを記述する方法を説明します。 チュートリアルが含まれています。|  
+|[Async および Await を使用した非同期プログラミング (C#)](./async/index.md)|C# の [async](../../language-reference/keywords/async.md) および [await](../../language-reference/operators/await.md) キーワードを使用して非同期ソリューションを記述する方法を説明します。 チュートリアルが含まれています。|  
 |[属性 (C#)](./attributes/index.md)|属性を使用して、型、フィールド、メソッド、プロパティなどのプログラミング要素に関する追加情報を指定する方法について説明します。|  
 |[呼び出し元情報 (C#)](./caller-information.md)|メソッドの呼び出し元に関する情報を取得する方法について説明します。 この情報には、ソース コードのファイル パスと行番号および呼び出し元のメンバー名が含まれます。|  
 |[コレクション (C#)](./collections.md)|.NET Framework で提供されているコレクションの種類のいくつかについて説明します。 単純なコレクションおよびキーと値のペアのコレクションを使用する方法を示します。|  

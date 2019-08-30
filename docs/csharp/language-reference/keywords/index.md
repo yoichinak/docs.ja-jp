@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Visual C#, keywords
 - '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-ms.openlocfilehash: 05a78def4a84fff24ff00d7c2c64320a76e4e707
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: f325d8ba09e3c3d1c1b3436f758e8fc1696c7f49
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566349"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167851"
 ---
 # <a name="c-keywords"></a>C# のキーワード
 
@@ -52,7 +52,7 @@ ms.locfileid: "69566349"
 ||||  
 |---|---|---|  
 |[add](add.md)|[alias](extern-alias.md)|[ascending](ascending.md)|
-|[async](async.md)|[await](await.md)|[by](by.md)|
+|[async](async.md)|[await](../operators/await.md)|[by](by.md)|
 |[descending](descending.md)|[dynamic](dynamic.md)|[equals](equals.md)|
 |[from](from-clause.md)|[get](get.md)|[global](../operators/namespace-alias-qualifier.md)|
 |[group](group-clause.md)|[into](into.md)|[join](join-clause.md)|
