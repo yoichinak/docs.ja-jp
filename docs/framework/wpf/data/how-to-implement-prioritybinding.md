@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-ms.openlocfilehash: ad19db9d686469e3ade1ff188553fceb8d525674
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4be1ce434eb1e169e8a19b56c92ca1efb48773d2
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937445"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169081"
 ---
 # <a name="how-to-implement-prioritybinding"></a>方法: PriorityBinding を実装する
 <xref:System.Windows.Data.PriorityBinding>で[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]は、バインドのリストを指定します。 バインドの一覧は、優先順位が最も高い順に並べ替えられます。 最も優先順位の高いバインドが処理時に値を正常に返す場合、リスト内の他のバインドを処理する必要はありません。 最も優先度の高いバインドが評価されるまでに長い時間がかかる場合もありますが、高い優先順位のバインドによって値が正常に返されるまで、値が正常に返される次に高い優先順位が使用されます。  
@@ -27,7 +27,7 @@ ms.locfileid: "69937445"
  の`SlowestDP` get アクセサーは、5秒間待機してから、 `_slowestDP`データメンバーの値を返します。  
   
 > [!NOTE]
-> この例は、デモンストレーション目的のみで提供されます。 [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]フィールドセットよりも速度が低いプロパティを定義することをお勧めします。 詳細については、「[プロパティとメソッドの選択](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229054(v=vs.100))」を参照してください。  
+> この例は、デモンストレーション目的のみで提供されます。 .NET ガイドラインでは、フィールドセットよりも速度が低いプロパティを定義することをお勧めします。 詳細については、「[プロパティとメソッドの選択](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229054(v=vs.100))」を参照してください。  
   
  [!code-csharp[PriorityBinding#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
  [!code-vb[PriorityBinding#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  

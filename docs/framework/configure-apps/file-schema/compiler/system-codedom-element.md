@@ -9,18 +9,18 @@ helpviewer_keywords:
 - system.codedom element
 - <system.codedom> element
 ms.assetid: 672a68f7-e69f-4479-ac30-e980085ec4fe
-ms.openlocfilehash: 43bc3c40bfc0b0ce4c0b18683092faf8b67e1c04
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 19f37095bd01b76fda8b1e29423c413dbdb06a65
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927692"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168918"
 ---
 # <a name="systemcodedom-element"></a>\<system.string > 要素
 使用可能な言語プロバイダーのコンパイラ構成設定を指定します。  
   
- \<configuration> 要素  
-\<system.string > 要素  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp;&nbsp; **\<システムの codedom >**  
   
 ## <a name="syntax"></a>構文  
   

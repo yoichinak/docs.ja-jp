@@ -37,7 +37,7 @@ ms.locfileid: "69595315"
     }
     ```
 
-    この規則には例外が 1 つあります。 反変の汎用デリゲートをメソッド パラメーターとして使用する場合は、型をデリゲートのジェネリック型パラメーターとして使用できます。 次の例では、型 `R` によって示します。 詳細については、「[デリゲートの変性 (C#)](./variance-in-delegates.md)」および「[Func および Action 汎用デリゲートでの変性の使用 (C#)](./using-variance-for-func-and-action-generic-delegates.md)」を参照してください。
+    この規則には例外が 1 つあります。 反変の汎用デリゲートをメソッド パラメーターとして使用する場合は、型をデリゲートのジェネリック型パラメーターとして使用できます。 次の例では、型 `R` によって示します。 詳細については、次を参照してください。[デリゲート (Visual Basic) の変性](./variance-in-delegates.md)と[Func および Action 汎用デリゲート (Visual Basic) を使用して変性](./using-variance-for-func-and-action-generic-delegates.md)します。
 
     ```csharp
     interface ICovariant<out R>

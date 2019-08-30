@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
-ms.openlocfilehash: 0b64088f43b69a982fc305fc16ad10edd1faa593
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8c39fe75eea5042657cab533a0a557d966802a1b
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966054"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169018"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters および XAML
 このトピックでは、一般的な XAML 言語機能としての文字列からの型変換の目的について説明します。 .NET Framework では、クラス<xref:System.ComponentModel.TypeConverter>は、XAML 属性の使用でプロパティ値として使用できるマネージカスタムクラスの実装の一部として、特定の目的を果たします。 カスタムクラスを作成し、クラスのインスタンスを XAML 設定可能な属性値として使用できるようにする場合は、を<xref:System.ComponentModel.TypeConverterAttribute>クラスに適用するか、カスタム<xref:System.ComponentModel.TypeConverter>クラスを記述するか、またはその両方を使用する必要があります。  
@@ -103,9 +103,9 @@ ms.locfileid: "69966054"
   
 <a name="Applying_the_TypeConverterAttribute"></a>   
 ## <a name="applying-the-typeconverterattribute"></a>TypeConverterAttribute の適用  
- カスタム型コンバーターを XAML プロセッサによってカスタムクラスの動作する型コンバーターとして使用するには、をクラス定義[!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute>に適用する必要があります。 属性を通して指定する <xref:System.ComponentModel.TypeConverterAttribute.ConverterTypeName%2A> は、カスタム型コンバーターの型名である必要があります。 この属性を適用すると、プロパティ型がカスタムクラス型を使用する値を XAML プロセッサが処理するときに、入力文字列を入力して、オブジェクトインスタンスを返すことができます。  
+ カスタム型コンバーターを XAML プロセッサによってカスタムクラスの動作する型コンバーターとして使用するには、をクラス定義<xref:System.ComponentModel.TypeConverterAttribute>に適用する必要があります。 属性を通して指定する <xref:System.ComponentModel.TypeConverterAttribute.ConverterTypeName%2A> は、カスタム型コンバーターの型名である必要があります。 この属性を適用すると、プロパティ型がカスタムクラス型を使用する値を XAML プロセッサが処理するときに、入力文字列を入力して、オブジェクトインスタンスを返すことができます。  
   
- また、プロパティごとに型コンバーターを提供することもできます。 クラス定義に [!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> を適用する代わりに、プロパティ定義 (メイン定義内の `get`/`set` 実装ではなくメイン定義自体) に適用します。 プロパティの型は、カスタム型コンバーターによって処理される型と一致する必要があります。 この属性を適用すると、XAMLprocessor は、そのプロパティの値を処理するときに、入力文字列を処理し、オブジェクトのインスタンスを返すことができます。 プロパティごとの型コンバーターの手法は、Microsoft .NET Framework またはその他のライブラリからプロパティの型を使用する場合に特に便利です。クラス定義を制御すること<xref:System.ComponentModel.TypeConverterAttribute>はできず、その中にを適用することもできません。  
+ また、プロパティごとに型コンバーターを提供することもできます。 を<xref:System.ComponentModel.TypeConverterAttribute>クラス定義に適用する代わりに、プロパティ定義 (メイン定義内の`set`実装では`get` /なく、メイン定義) に適用します。 プロパティの型は、カスタム型コンバーターによって処理される型と一致する必要があります。 この属性を適用すると、プロパティの値を XAML プロセッサが処理する際に、入力文字列を処理して、オブジェクトのインスタンスを返すことができます。 プロパティごとの型コンバーターの手法は、Microsoft .NET Framework またはその他のライブラリからプロパティの型を使用する場合に特に便利です。クラス定義を制御すること<xref:System.ComponentModel.TypeConverterAttribute>はできず、その中にを適用することもできません。  
   
 ## <a name="see-also"></a>関連項目
 

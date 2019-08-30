@@ -1,5 +1,5 @@
 ---
-title: Func および Action 汎用デリゲートでの変性の使用 (C#)
+title: Func および Action 汎用デリゲート (Visual Basic) の変性の使用
 ms.date: 07/20/2015
 ms.assetid: 1826774f-2b7a-470f-b110-17cfdd6abdae
 ms.openlocfilehash: bbfc41fb8ab3e7d800f1eb03098e02056e694872
@@ -9,7 +9,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/21/2019
 ms.locfileid: "69659909"
 ---
-# <a name="using-variance-for-func-and-action-generic-delegates-c"></a>Func および Action 汎用デリゲートでの変性の使用 (C#)
+# <a name="using-variance-for-func-and-action-generic-delegates-c"></a>Func および Action 汎用デリゲート (Visual Basic) の変性の使用
 以下の例では、`Func` 汎用デリゲートと `Action` 汎用デリゲートの共変性と反変性を使用して、メソッドの再利用を可能にし、コードの柔軟性を高める方法を示します。  
   
  共変性と反変性の詳細については、「[デリゲートの変性 (C# )](./variance-in-delegates.md)」を参照してください。  
