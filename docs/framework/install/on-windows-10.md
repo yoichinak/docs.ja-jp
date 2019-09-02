@@ -5,12 +5,12 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 13ccdafc00f7a43d456126e3ec3afc1ae5897564
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 33805230e0aa6c75443773d60e73f9463ee1fde5
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422666"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106544"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Windows 10 と Windows Server 2016 以降に .NET Framework をインストールする
 
@@ -24,7 +24,7 @@ ms.locfileid: "67422666"
 
 .NET Framework 4.8 は次の Windows に付属しています。
 
-* [Windows 10 May 2019 Update](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
+- [Windows 10 May 2019 Update](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
 
 > [!div class="button"]
 > [.NET Framework 4.8 のダウンロード](https://dotnet.microsoft.com/download/dotnet-framework/net48)
@@ -33,20 +33,20 @@ ms.locfileid: "67422666"
 
 [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) は次の Windows にインストールできます。
 
-* Windows 10 October 2018 Update (バージョン 1809)
-* Windows 10 April 2018 Update (バージョン 1803)
-* Windows 10 Fall Creators Update (バージョン 1709)
-* Windows 10 Creators Update (バージョン 1703)
-* Windows 10 Anniversary Update (バージョン 1607)
-* Windows Server 2019
-* Windows Server、バージョン 1809
-* Windows Server、バージョン 1803
-* Windows Server 2016
+- Windows 10 October 2018 Update (バージョン 1809)
+- Windows 10 April 2018 Update (バージョン 1803)
+- Windows 10 Fall Creators Update (バージョン 1709)
+- Windows 10 Creators Update (バージョン 1703)
+- Windows 10 Anniversary Update (バージョン 1607)
+- Windows Server 2019
+- Windows Server、バージョン 1809
+- Windows Server、バージョン 1803
+- Windows Server 2016
 
 .NET Framework 4.8 はサポートされていません。
 
-* Windows 10 1507
-* Windows 10 1511
+- Windows 10 1507
+- Windows 10 1511
 
 Windows 10 1507 または 1511 を使用しているとき、.NET Framework 4.8 をインストールする場合、それらより新しい Windows 10 バージョンに先にアップグレードする必要があります。
 

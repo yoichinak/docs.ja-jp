@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: acf5af755d6322f75a616005cc904d464564bc81
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 962163b51507647fd975815c214891a6d692e66c
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915829"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203952"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>XML Web サービスからの DataSet の使用
-<xref:System.Data.DataSet> は、非接続型デザインで設計されています。インターネットで簡単にデータを転送するのが目的の一部です。 **データセット**は xml web サービスからの入力または出力として指定できることを示す "serializable" です。 xml web サービスからクライアントおよびクライアントに**データセット**の内容をストリームするために必要な追加のコーディングは必要ありません。 **データセット**は、DiffGram 形式を使用して xml ストリームに暗黙的に変換され、ネットワーク経由で送信された後、受信側の**データセット**として xml ストリームから再構築されます。 これにより、XML Web サービスを使用してリレーショナル データを送信および返送する、たいへん簡単で柔軟性のある方法が提供されます。 DiffGram 形式の詳細については、「diffgram[グラム](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)」を参照してください。  
+<xref:System.Data.DataSet> は、非接続型デザインで設計されています。インターネットで簡単にデータを転送するのが目的の一部です。 **データセット**は xml web サービスからの入力または出力として指定できることを示す "serializable" です。 xml web サービスからクライアントおよびクライアントに**データセット**の内容をストリームするために必要な追加のコーディングは必要ありません。 **データセット**は、DiffGram 形式を使用して xml ストリームに暗黙的に変換され、ネットワーク経由で送信された後、受信側の**データセット**として xml ストリームから再構築されます。 これにより、XML Web サービスを使用してリレーショナル データを送信および返送する、たいへん簡単で柔軟性のある方法が提供されます。 DiffGram 形式の詳細については、「diffgram[グラム](diffgrams.md)」を参照してください。  
   
  次の例では、データ**セット**を使用してリレーショナルデータ (変更されたデータを含む) を転送し、更新内容を元のデータソースに解決する XML Web サービスとクライアントを作成する方法を示します。  
   
@@ -157,7 +157,7 @@ ms.locfileid: "69915829"
     }  
     ```  
   
-     一般的なシナリオでは、オプティミスティック同時実行制御違反をキャッチするために**UpdateCustomers**メソッドが記述されます。 説明を簡単にするために、この例では UpdateCustmoers メソッドを省略しています。 オプティミスティック同時実行制御の詳細については、「[オプティミスティック同時実行制御](../../../../../docs/framework/data/adonet/optimistic-concurrency.md)」を参照してください。  
+     一般的なシナリオでは、オプティミスティック同時実行制御違反をキャッチするために**UpdateCustomers**メソッドが記述されます。 説明を簡単にするために、この例では UpdateCustmoers メソッドを省略しています。 オプティミスティック同時実行制御の詳細については、「[オプティミスティック同時実行制御](../optimistic-concurrency.md)」を参照してください。  
   
 2. XML Web サービス プロキシを作成します。  
   
@@ -261,11 +261,11 @@ ms.locfileid: "69915829"
   
 ## <a name="see-also"></a>関連項目
 
-- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)
-- [DataSet、DataTable、および DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
-- [DataAdapter からの DataSet の読み込み](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)
-- [DataAdapter によるデータ ソースの更新](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
-- [DataAdapter パラメーター](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)
+- [ADO.NET](../index.md)
+- [DataSet、DataTable、および DataView](index.md)
+- [DataTables](datatables.md)
+- [DataAdapter からの DataSet の読み込み](../populating-a-dataset-from-a-dataadapter.md)
+- [DataAdapter によるデータ ソースの更新](../updating-data-sources-with-dataadapters.md)
+- [DataAdapter パラメーター](../dataadapter-parameters.md)
 - [Web サービス記述言語ツール (Wsdl.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100))
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

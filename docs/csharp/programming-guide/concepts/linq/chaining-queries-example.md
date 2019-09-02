@@ -2,12 +2,12 @@
 title: クエリの連結の例 (C#)
 ms.date: 07/20/2015
 ms.assetid: abbca162-d95e-43af-b92c-e46e6aa2540e
-ms.openlocfilehash: 90c2ba1c9125114f9e26f4afeb3ff6373ff01d9c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 45e3a4f341ca8eb06ff0f553e0f933956e6c6546
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594827"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205421"
 ---
 # <a name="chaining-queries-example-c"></a>クエリの連結の例 (C#)
 この例は前の例に基づいており、2 つのクエリ (どちらのクエリも遅延実行とレイジー評価を使用している) を連結した場合の結果について説明します。  
@@ -64,7 +64,7 @@ class Program
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```output  
 ToUpper: source >abc<  
 AppendString: source >ABC<  
 Main: str >ABC!!!<  
@@ -88,4 +88,4 @@ Main: str >GHI!!!<
   
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル:クエリの連結 (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [チュートリアル: クエリの連結 (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

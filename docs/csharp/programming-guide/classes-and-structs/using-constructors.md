@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 6825fbc571d8b08808f14a3f69ffc6f8a1ef048c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: dab8466b4d40e318bbb9915c06ce4ac836c0ead0
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596190"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205429"
 ---
 # <a name="using-constructors-c-programming-guide"></a>コンストラクターの使用 (C# プログラミング ガイド)
 
@@ -39,14 +39,14 @@ Console.WriteLine(i);
   
  ただし、次のコードでは `new` が使用されておらず、コードは初期化されていないオブジェクトの使用を試みるため、コンパイラ エラーが発生します。  
   
-```  
+```csharp  
 int i;  
 Console.WriteLine(i);  
 ```  
   
  これに対して、`structs` をベースにしたオブジェクト (組み込みのすべての数値型など) は、次の例のように、初期化または代入してから使用できます。  
   
-```  
+```csharp  
 int a = 44;  // Initialize the value type...  
 int b;  
 b = 33;      // Or assign it before using it.  
@@ -55,7 +55,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
  このため、値型のパラメーターなしのコンストラクターを呼び出す必要はありません。  
   
- クラスと `structs` のどちらも、パラメーターを受け取るコンストラクターを定義できます。 パラメーターを受け取るコンストラクターは、`new` ステートメントまたは [base](../../language-reference/keywords/base.md) ステートメントを使用して呼び出す必要があります。 クラスと `structs` は複数のコンストラクターを定義することもできます。また、どちらも、パラメーターなしのコンストラクターの定義には必要ありません。 例:  
+ クラスと `structs` のどちらも、パラメーターを受け取るコンストラクターを定義できます。 パラメーターを受け取るコンストラクターは、`new` ステートメントまたは [base](../../language-reference/keywords/base.md) ステートメントを使用して呼び出す必要があります。 クラスと `structs` は複数のコンストラクターを定義することもできます。また、どちらも、パラメーターなしのコンストラクターの定義には必要ありません。 次に例を示します。  
   
  [!code-csharp[csProgGuideObjects#54](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#54)]  
   
@@ -63,7 +63,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
  [!code-csharp[csProgGuideObjects#55](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#55)]  
   
- コンストラクターでは、`base` キーワードを使用して、基底クラスのコンストラクターを呼び出すことができます。 例:  
+ コンストラクターでは、`base` キーワードを使用して、基底クラスのコンストラクターを呼び出すことができます。 次に例を示します。  
   
  [!code-csharp[csProgGuideObjects#56](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#56)]  
   

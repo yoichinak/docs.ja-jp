@@ -2,12 +2,12 @@
 title: 非同期の戻り値の型 (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: f40592038ce16173e6dced5e8bcb914cfeb1b1f5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2c0dae6b4357ce89325ecb9b7d70ffd79f4e9417
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922041"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168395"
 ---
 # <a name="async-return-types-c"></a>非同期の戻り値の型 (C#)
 非同期メソッドには、次の戻り値の型があります。
@@ -31,7 +31,7 @@ ms.locfileid: "69922041"
   
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1.cs)]
 
-`GetLeisureHours` が `ShowTodaysInfo` メソッドの await 式の中から呼び出されると、await 式は `GetLeisureHours` メソッドから返されるタスクに格納されている整数値 (`leisureHours` の値) を取得します。 await 式の詳細については、「[await](../../../language-reference/keywords/await.md)」を参照してください。  
+`GetLeisureHours` が `ShowTodaysInfo` メソッドの await 式の中から呼び出されると、await 式は `GetLeisureHours` メソッドから返されるタスクに格納されている整数値 (`leisureHours` の値) を取得します。 await 式の詳細については、「[await](../../../language-reference/operators/await.md)」を参照してください。  
   
 次のコードに示すように、`GetLeisureHours` の呼び出しと、`await` の適用を分離すると、この仕組みをよく理解できます。 メソッドの宣言から予想されるように、直ちに待機しない `GetLeisureHours` メソッドの呼び出しは、`Task<int>` を返します。 タスクは、この例の `integerTask` 変数に割り当てられます。 `integerTask` は <xref:System.Threading.Tasks.Task%601> であるため、<xref:System.Threading.Tasks.Task%601.Result> 型の `TResult` プロパティが含まれています。 この場合、`TResult` は整数型を表します。 `await` が `integerTask` に適用されると、`integerTask` の <xref:System.Threading.Tasks.Task%601.Result%2A> プロパティの内容が await 式の評価となります。 この値は `ret` 変数に割り当てられます。  
   
@@ -80,7 +80,7 @@ C# 7.0 以降、非同期メソッドで、アクセス可能な `GetAwaiter` �
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Threading.Tasks.Task.FromResult%2A>
-- [チュートリアル:Async と Await を使用した Web へのアクセス (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [チュートリアル: Async と Await を使用した Web へのアクセス (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [非同期プログラムにおける制御フロー (C#)](./control-flow-in-async-programs.md)
 - [async](../../../language-reference/keywords/async.md)
-- [await](../../../language-reference/keywords/await.md)
+- [await](../../../language-reference/operators/await.md)

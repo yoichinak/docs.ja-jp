@@ -2,12 +2,12 @@
 title: dotnet add package コマンド
 description: "'dotnet add package' コマンドは、NuGet パッケージ参照をプロジェクトに追加する便利なオプションを提供します。"
 ms.date: 06/26/2019
-ms.openlocfilehash: 50a352be66f2b4bd4498d79f61dc01f56d4b00c5
-ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
+ms.openlocfilehash: 124e42b1d5897802bb1698c8e22b7e76031391a2
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67569513"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105162"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -54,59 +54,59 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 ## <a name="arguments"></a>引数
 
-* **`PROJECT`**
+- **`PROJECT`**
 
   プロジェクト ファイルを指定します。 指定されていない場合、現在のディレクトリで検索されます。
 
-* **`PACKAGE_NAME`**
+- **`PACKAGE_NAME`**
 
   追加するパッケージ参照。
 
 ## <a name="options"></a>オプション
 
-* **`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   特定の[フレームワーク](../../standard/frameworks.md)を対象にしている場合にのみ、パッケージ参照を追加します。
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   コマンドの短いヘルプを印刷します。
 
-* **`--interactive`**
+- **`--interactive`**
 
   コマンドを停止して、ユーザーの入力または操作のために待機させることができます (たとえば、認証を完了する場合)。 .NET Core 2.1 SDK バージョン 2.1.400 以降で使用可能です。
 
-* **`-n|--no-restore`**
+- **`-n|--no-restore`**
 
   復元のプレビューと互換性チェックを実行せずにパッケージ参照を追加します。
 
-* **`--package-directory <PACKAGE_DIRECTORY>`**
+- **`--package-directory <PACKAGE_DIRECTORY>`**
 
   パッケージの復元先となるディレクトリ。 既定のパッケージ復元場所は、Windows の場合は `%userprofile%\.nuget\packages`、macOS と Linux の場合は `~/.nuget/packages` です。 詳細については、[NuGet でのグローバル パッケージ、キャッシュ、および一時フォルダーの管理](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)に関する記事を参照してください。
 
-* **`-s|--source <SOURCE>`**
+- **`-s|--source <SOURCE>`**
 
   復元操作時に使用する NuGet パッケージのソース。
 
-* **`-v|--version <VERSION>`**
+- **`-v|--version <VERSION>`**
 
   パッケージのバージョン。 [NuGet パッケージのバージョン管理](https://docs.microsoft.com/nuget/reference/package-versioning)に関するページを参照してください。
 
 ## <a name="examples"></a>使用例
 
-* `Newtonsoft.Json` NuGet パッケージをプロジェクトに追加する:
+- `Newtonsoft.Json` NuGet パッケージをプロジェクトに追加する:
 
   ```console
   dotnet add package Newtonsoft.Json
   ```
 
-* 特定バージョンのパッケージをプロジェクトに追加する:
+- 特定バージョンのパッケージをプロジェクトに追加する:
 
   ```console
   dotnet add ToDo.csproj package Microsoft.Azure.DocumentDB.Core -v 1.0.0
   ```
 
-* 特定の NuGet ソースを使用してパッケージを追加する:
+- 特定の NuGet ソースを使用してパッケージを追加する:
 
   ```console
   dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json

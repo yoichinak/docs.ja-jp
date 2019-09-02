@@ -2,12 +2,12 @@
 title: Async および Await を使用したタスク非同期プログラミング モデル (TAP) (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: bfe32b2eaefb9ce813ca74bed450a935e33dc9d4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: abe1ab777a17ba8cba15a27b02d389a9ede3caf0
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595606"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167898"
 ---
 # <a name="task-asynchronous-programming-model"></a>非同期プログラミング モデル
 
@@ -38,7 +38,7 @@ Web アクセスなど、ブロックされる可能性がある操作には、�
 
 ## <a name="BKMK_HowtoWriteanAsyncMethod"></a>非同期メソッドの作成の簡素化
 
-C# の [async](../../../language-reference/keywords/async.md) キーワードと [await](../../../language-reference/keywords/await.md) キーワードは、非同期プログラミングの中核です。 これら 2 つのキーワードを使用すると、同期メソッドの作成とほぼ同様の容易さで、.NET Framework、.NET Core または Windows ランタイムのリソースを使用して非同期メソッドを作成できます。 `async` キーワードを使用して定義する非同期メソッドは、"*async メソッド*" として参照されます。
+C# の [async](../../../language-reference/keywords/async.md) キーワードと [await](../../../language-reference/operators/await.md) キーワードは、非同期プログラミングの中核です。 これら 2 つのキーワードを使用すると、同期メソッドの作成とほぼ同様の容易さで、.NET Framework、.NET Core または Windows ランタイムのリソースを使用して非同期メソッドを作成できます。 `async` キーワードを使用して定義する非同期メソッドは、"*async メソッド*" として参照されます。
 
 async メソッドの例を次に示します。 コードのほとんどは、見たことのあるものと思います。
 
@@ -156,7 +156,7 @@ Windows ランタイムにも、Windows アプリの `async` と `await` で使�
 
 [async](../../../language-reference/keywords/async.md) 修飾子を使用して、メソッドが非同期メソッドであることを指定すると、次の 2 つの機能が有効になります。
 
-- マークされた非同期のメソッドは中断ポイントを示すために [await](../../../language-reference/keywords/await.md) を使用できます。 `await` 演算子は、非同期のメソッドが、待機中の非同期のプロセスが完了するまでこのポイント以降を続行できないことを、コンパイラに指示します。 その間、コントロールは非同期のメソッドの呼び出し元に戻されます。
+- マークされた非同期のメソッドは中断ポイントを示すために [await](../../../language-reference/operators/await.md) を使用できます。 `await` 演算子は、非同期のメソッドが、待機中の非同期のプロセスが完了するまでこのポイント以降を続行できないことを、コンパイラに指示します。 その間、コントロールは非同期のメソッドの呼び出し元に戻されます。
 
      非同期のメソッドの `await` 式での中断は、メソッドからの終了を意図するものではなく、`finally` ブロックは実行されません。
 
@@ -168,7 +168,7 @@ Windows ランタイムにも、Windows アプリの `async` と `await` で使�
 
 - [async](../../../language-reference/keywords/async.md)
 
-- [await](../../../language-reference/keywords/await.md)
+- [await](../../../language-reference/operators/await.md)
 
 ## <a name="BKMK_ReturnTypesandParameters"></a>戻り値の型およびパラメーター
 
@@ -343,6 +343,7 @@ namespace AsyncFirstExample
 ## <a name="see-also"></a>関連項目
 
 - [async](../../../language-reference/keywords/async.md)
-- [await](../../../language-reference/keywords/await.md)
+- [await](../../../language-reference/operators/await.md)
 - [非同期プログラミング](../../../async.md)
 - [非同期の概要](../../../../standard/async.md)
+ 

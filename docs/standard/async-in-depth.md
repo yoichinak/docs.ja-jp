@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 6f1900eaabafe2931d88959bf79bf4ca1f5bc98b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 91fd37ce329c03b43b5472e4579be7f5ef961738
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666582"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169109"
 ---
 # <a name="async-in-depth"></a>非同期の詳細
 
@@ -21,8 +21,8 @@ I/O および CPU バインドの非同期コードは、.NET のタスクベー
 
 Task は、[Promise Model of Concurrency](https://en.wikipedia.org/wiki/Futures_and_promises) (並行性の Promise 型モデル) として知られるモデルを実装するために使用される構成体です。  つまり、今後のある時点で作業が完了することを "約束" し、クリーン API を使用した約束の調整を可能にします。
 
-* `Task` は、値を返さない 1 回の操作を表します。
-* `Task<T>` は、`T` 型の値を返す 1 回の操作を表します。
+- `Task` は、値を返さない 1 回の操作を表します。
+- `Task<T>` は、`T` 型の値を返す 1 回の操作を表します。
 
 作業の抽象化は非同期に発生し、スレッド処理の抽象化では*ない*ため、タスクについて判断することが重要です。 既定では、タスクは現在のスレッドで実行され、必要に応じてオペレーティング システムに作業を委任します。 必要に応じて、`Task.Run` API を使用して、タスクを別のスレッドで実行することを明示的に要求できます。
 
@@ -90,9 +90,9 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 
 0-1————————————————————————————————————————————————–2-3
 
-* `0` の時点から `1` の時点までは、非同期メソッドが呼び出し元に制御を渡すまでにかかった時間です。
-* `1` の時点から `2` の時点までは、CPU に負荷をかけずに I/O に費やされた時間です。
-* 最後に、`2` の時点から `3` の時点までは、非同期メソッドに制御 (および場合によっては値) を戻すまでの時間です。この時点でそのメソッドは再度実行されます。
+- `0` の時点から `1` の時点までは、非同期メソッドが呼び出し元に制御を渡すまでにかかった時間です。
+- `1` の時点から `2` の時点までは、CPU に負荷をかけずに I/O に費やされた時間です。
+- 最後に、`2` の時点から `3` の時点までは、非同期メソッドに制御 (および場合によっては値) を戻すまでの時間です。この時点でそのメソッドは再度実行されます。
 
 ### <a name="what-does-this-mean-for-a-server-scenario"></a>サーバー側のシナリオ
 

@@ -3,12 +3,12 @@ title: インデックスと範囲を使用してデータの範囲を調べる
 description: この高度なチュートリアルでは、インデックスと範囲を使用してデータを調べ、シーケンシャル データ セットのスライスを調べる方法について説明します。
 ms.date: 04/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 118d3c9ccad98ec02195c2b5e26a2ca203990adf
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: d53f32bcb310d4859cea67a742ac0e2c4be5d942
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557184"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105788"
 ---
 # <a name="indices-and-ranges"></a>インデックスと範囲
 
@@ -17,9 +17,9 @@ ms.locfileid: "65557184"
 このチュートリアルでは、次の作業を行う方法について説明します。
 
 > [!div class="checklist"]
-> * シーケンス内の範囲に構文を使用します。
-> * 各シーケンスの開始と終了に関する設計上の決定について説明します。
-> * <xref:System.Index> 型と <xref:System.Range> 型のシナリオについて説明します。
+> - シーケンス内の範囲に構文を使用します。
+> - 各シーケンスの開始と終了に関する設計上の決定について説明します。
+> - <xref:System.Index> 型と <xref:System.Range> 型のシナリオについて説明します。
 
 ## <a name="language-support-for-indices-and-ranges"></a>インデックスと範囲の言語サポート
 

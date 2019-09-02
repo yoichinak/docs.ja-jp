@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
-ms.openlocfilehash: 83147c3f9d70434f5c8dd34e2e56f44f71adc53d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 24d0d44f5964708164f89b0d9fa6c4c1aac7da0b
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607879"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204508"
 ---
 # <a name="row-states-and-row-versions"></a>行の状態とバージョン
 ADO.NET は、行の状態とバージョンを使用してテーブル内の行を管理します。 行状態は、1 つの行のステータスを示します。行バージョンは、1 つの行の値が変更されるときに、変更に応じてその行に格納される現在の値、元の値、既定値などを維持します。 たとえば、ある行の 1 つの列を変更すると、この行の状態は `Modified` になり、次の 2 つの行バージョンが存在することになります。`Current` には現在の行値が格納され、`Original` にはその列が変更される前の行値が格納されます。  
@@ -96,7 +96,7 @@ foreach (DataRow delRow in delRows)
   
 ## <a name="see-also"></a>関連項目
 
-- [DataTable 内のデータの操作](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
-- [DataSet、DataTable、および DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [DataAdapter と DataReader](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [DataTable 内のデータの操作](manipulating-data-in-a-datatable.md)
+- [DataSet、DataTable、および DataView](index.md)
+- [DataAdapter と DataReader](../dataadapters-and-datareaders.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

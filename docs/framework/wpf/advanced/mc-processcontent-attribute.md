@@ -5,12 +5,12 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: 2689b2c8-b4dc-4b71-b9bd-f95e619122d7
-ms.openlocfilehash: bc406659bec3fd8d5da87b597356a3411c7a2605
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 619c3ffbc68c8c72ea9dd6545ab8da536380483b
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567396"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206173"
 ---
 # <a name="mcprocesscontent-attribute"></a>mc:ProcessContent 属性
 [Mc: Ignorable 属性](mc-ignorable-attribute.md)を指定することが原因で、直接の親要素が[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサによって無視される場合でも、関連する親要素によって処理されるコンテンツを保持する要素を指定します。[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 属性`mc:ProcessContent`は、カスタム名前空間マッピング[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]とバージョン管理の両方で、マークアップ互換性をサポートしています。  
@@ -44,7 +44,7 @@ ms.locfileid: "69567396"
   
  属性では、スペース区切り記号 (など`mc:ProcessContent="ignore:Element1 ignore:Element2"`) を使用して、複数のプレフィックスを指定できます。  
   
- 名前[!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)]空間は、SDK のこの領域内には記載されていない他の要素と属性を定義します。 詳細については、「 [XML マークアップ互換性の仕様](https://go.microsoft.com/fwlink/?LinkId=73824)」を参照してください。  
+ 名前`http://schemas.openxmlformats.org/markup-compatibility/2006`空間は、SDK のこの領域内には記載されていない他の要素と属性を定義します。 詳細については、「 [XML マークアップ互換性の仕様](https://go.microsoft.com/fwlink/?LinkId=73824)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

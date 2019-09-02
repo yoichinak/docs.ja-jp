@@ -2,12 +2,12 @@
 title: C# 8.0 の新機能 - C# ガイド
 description: C# 8.0 で使用できる新しい機能の概要を説明します。 この記事は、プレビュー 5 での最新のものです。
 ms.date: 02/12/2019
-ms.openlocfilehash: bf67baba926effd012ae01d3d802ba921e41ad5a
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 14c86fe4b1ecd1c89ebbbb082c5c9956bc51e03e
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363894"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105511"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 の新機能
 
@@ -16,10 +16,10 @@ C# 言語では、既に試すことができる多くの機能強化が行わ�
 - [読み取り専用メンバー](#readonly-members)
 - [既定のインターフェイス メンバー](#default-interface-members)
 - [パターン マッチングの拡張機能](#more-patterns-in-more-places):
-  * [switch 式](#switch-expressions)
-  * [プロパティのパターン](#property-patterns)
-  * [タプル パターン](#tuple-patterns)
-  * [位置指定パターン](#positional-patterns)
+  - [switch 式](#switch-expressions)
+  - [プロパティのパターン](#property-patterns)
+  - [タプル パターン](#tuple-patterns)
+  - [位置指定パターン](#positional-patterns)
 - [using 宣言](#using-declarations)
 - [静的ローカル関数](#static-local-functions)
 - [破棄可能な ref 構造体](#disposable-ref-structs)

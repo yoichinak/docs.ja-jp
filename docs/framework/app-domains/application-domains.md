@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 571b049300a7c7de963bd762e0266f66060479fe
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c9ab95124264b2b59be77695755ab1d1f1c3b1aa
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927993"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040733"
 ---
 # <a name="application-domains"></a>アプリケーション ドメイン
 
@@ -145,7 +145,7 @@ COMPLUS_LoaderOptimization = 1
  COMPLUS_LoaderOptimization 環境フラグを 1 に設定すると、ランタイム ホストは強制的にすべてのアセンブリを SingleDomain と呼ばれるドメイン中立でない方法で読み込みます。 SingleDomain では、常にドメインに中立として読み込まれる Mscorlib を除き、どのアセンブリもドメインに中立として読み込まれません。 この設定は、ホストがプロセス内で 1 つのアプリケーションだけを実行する場合に一般的に使用されるため、シングル ドメインと呼ばれます。  
   
 > [!CAUTION]
->  COMPLUS_LoaderOptimization 環境フラグは診断およびテストのシナリオで使用するように設計されています。 このフラグをオンにすることにより、速度の大幅な低下と使用メモリの増大が発生する場合があります。  
+> COMPLUS_LoaderOptimization 環境フラグは診断およびテストのシナリオで使用するように設計されています。 このフラグをオンにすることにより、速度の大幅な低下と使用メモリの増大が発生する場合があります。  
   
 ### <a name="code-example"></a>コード例
 

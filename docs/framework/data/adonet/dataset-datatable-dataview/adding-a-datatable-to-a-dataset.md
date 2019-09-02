@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 556d29a3-8fc9-4e38-b3ee-c188f7e7b155
-ms.openlocfilehash: 2bc0bca55dcdc350537f0826ab3a675747ee5497
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d62d55771e4fda74d336163b3f53b3f50cfb1e39
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951327"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205292"
 ---
 # <a name="adding-a-datatable-to-a-dataset"></a>DataSet への DataTable の追加
 ADO.NET を使用して <xref:System.Data.DataTable> オブジェクトを作成し、そのオブジェクトを既存の <xref:System.Data.DataSet> に追加できます。 <xref:System.Data.DataTable> プロパティと <xref:System.Data.DataTable.PrimaryKey%2A> プロパティを使用することで、<xref:System.Data.DataColumn.Unique%2A> の制約情報を設定できます。  
@@ -34,5 +34,5 @@ ADO.NET を使用して <xref:System.Data.DataTable> オブジェクトを作成
   
 ## <a name="see-also"></a>関連項目
 
-- [DataSet、DataTable、および DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [DataSet、DataTable、および DataView](index.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -11,17 +11,17 @@ helpviewer_keywords:
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ca30448c24efc48be3d68c6b3fa03c949b72d1a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d1c108e75c0e2da3d513669f5b8b02bada43b983
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910703"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206081"
 ---
 # <a name="security-transparent-code-level-1"></a>透過的セキュリティコード、レベル1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- 透過性を使用すると、開発者は、部分的に信頼されるコードに機能を公開する .NET Framework ライブラリのセキュリティを強化できます。 レベル 1 の透過性は、.NET Framework Version 2.0 で導入され、主に Microsoft 内でのみ使用されていました。 .NET Framework 4 以降では、[レベル2の透過性](../../../docs/framework/misc/security-transparent-code-level-2.md)を使用できます。 ただし、以前のセキュリティ規則で実行する必要があるレガシコードを特定できるように、レベル1の透過性は保持されています。  
+ 透過性を使用すると、開発者は、部分的に信頼されるコードに機能を公開する .NET Framework ライブラリのセキュリティを強化できます。 レベル 1 の透過性は、.NET Framework Version 2.0 で導入され、主に Microsoft 内でのみ使用されていました。 .NET Framework 4 以降では、[レベル2の透過性](security-transparent-code-level-2.md)を使用できます。 ただし、以前のセキュリティ規則で実行する必要があるレガシコードを特定できるように、レベル1の透過性は保持されています。  
   
 > [!IMPORTANT]
 > レベル 1 の透過性は、互換性を確保するためにのみ指定してください。つまり、<xref:System.Security.AllowPartiallyTrustedCallersAttribute> を使用するか、透過性モデルを使用しない、.NET Framework 3.5 以前で開発されたコードに対してのみレベル 1 を指定してください。 たとえば、部分的に信頼された呼び出し元からの呼び出しを許可する .NET Framework 2.0 アセンブリ (APTCA) にはレベル 1 の透過性を使用します。 .NET Framework 4 用に開発されたコードでは、常にレベル2の透過性を使用します。  
@@ -132,5 +132,5 @@ public class B
   
 ## <a name="see-also"></a>関連項目
 
-- [透過的セキュリティコード、レベル2](../../../docs/framework/misc/security-transparent-code-level-2.md)
-- [セキュリティの変更](../../../docs/framework/security/security-changes.md)
+- [透過的セキュリティコード、レベル2](security-transparent-code-level-2.md)
+- [セキュリティの変更](../security/security-changes.md)

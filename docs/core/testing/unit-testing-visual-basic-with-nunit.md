@@ -4,12 +4,12 @@ description: NUnit を使用した Visual Basic ソリューションのサン�
 author: rprouse
 ms.date: 10/04/2018
 ms.custom: seodec18
-ms.openlocfilehash: 84287a94504594c731c0fbccf2e61a957a15a36f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7563fe12d1e3637a737c5472dbf8d64d163a3feb
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626403"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168214"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>dotnet テストと NUnit を使用した Visual Basic .NET Core ライブラリでの単体テスト
 
@@ -30,7 +30,7 @@ dotnet new sln
 
 次に、*PrimeService* ディレクトリを作成します。 これまでのところ、ファイルの構造は次のアウトラインのようになっています。
 
-```
+```console
 /unit-testing-vb-nunit
     unit-testing-vb-nunit.sln
     /PrimeService
@@ -66,7 +66,7 @@ dotnet sln add .\PrimeService\PrimeService.vbproj
 
 次に、*PrimeService.Tests* ディレクトリを作成します。 次の一覧はディレクトリ構造を示したものです。
 
-```
+```console
 /unit-testing-vb-nunit
     unit-testing-vb-nunit.sln
     /PrimeService
@@ -95,7 +95,7 @@ dotnet add reference ../PrimeService/PrimeService.vbproj
 
 ソリューションの最終的なレイアウトは次のようになります。
 
-```
+```console
 /unit-testing-vb-nunit
     unit-testing-vb-nunit.sln
     /PrimeService

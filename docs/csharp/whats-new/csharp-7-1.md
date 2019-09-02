@@ -2,12 +2,12 @@
 title: C# 7.1 の新機能
 description: C# 7.1 の新機能の概要。
 ms.date: 04/09/2019
-ms.openlocfilehash: 18306da709ea30f03f6c42b4a917e9b39695eb16
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: ee68cbf129d02fc58155a603d6a3f63cfb182cd0
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796598"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105546"
 ---
 # <a name="whats-new-in-c-71"></a>C# 7.1 の新機能
 
@@ -17,13 +17,13 @@ C# 7.1 では、[言語バージョン選択](../language-reference/configure-la
 
 このリリースの新しい言語機能は次のとおりです。
 
-* [`async` `Main` メソッド](#async-main)
+- [`async` `Main` メソッド](#async-main)
   - アプリケーションのエントリ ポイントに `async` 修飾子を設定できます。
-* [`default` リテラル式](#default-literal-expressions)
+- [`default` リテラル式](#default-literal-expressions)
   - ターゲットの種類を推論できるとき、既定の値式で既定のリテラル式を使用できます。
-* [推論されたタプル要素の名前](#inferred-tuple-element-names)
+- [推論されたタプル要素の名前](#inferred-tuple-element-names)
   - タプル要素の名前は、多くの場合、タプル初期化から推論できます。
-* [ジェネリック型パラメーターのパターン マッチ](#pattern-matching-on-generic-type-parameters)
+- [ジェネリック型パラメーターのパターン マッチ](#pattern-matching-on-generic-type-parameters)
   - 型がジェネリック型パラメーターである変数にパターン マッチ式を使用できます。
 
 最後に、コンパイラには、[参照アセンブリ生成](#reference-assembly-generation)を制御する 2 つのオプション、`-refout` と `-refonly` があります。

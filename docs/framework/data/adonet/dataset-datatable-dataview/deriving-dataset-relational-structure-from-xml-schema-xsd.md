@@ -2,17 +2,17 @@
 title: XML スキーマ (XSD) からの DataSet リレーショナル構造の派生
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: 98c43b6af2913b9737085d2d983b37c6da4c1724
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 29b905c42f15cad4eb8521c4d702b56093982445
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934464"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203780"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>XML スキーマ (XSD) からの DataSet リレーショナル構造の派生
 ここでは、XML スキーマ定義言語 (XSD) スキーマ ドキュメントから `DataSet` のリレーショナル スキーマを生成する方法についての概要を説明します。 一般に、スキーマ要素`complexType`の各子要素に対して`DataSet`、でテーブルが生成されます。 テーブル構造は、複合型の定義に基づいて決定されます。 テーブルは、スキーマ内`DataSet`の最上位の要素に対して、で作成されます。 ただし、 `complexType`要素が別`complexType` `complexType`の要素の内部に入れ子になっている場合は、最上位レベルの要素に対してのみ`complexType`テーブルが作成され`DataTable` `DataSet`ます。この場合、入れ子になった要素は内のにマップされます。  
   
- XSD の詳細については、次を参照して[ください。 World Wide Web コンソーシアム (W3C) XML スキーマパート 0:入門勧告](https://www.w3.org/TR/xmlschema-0/) [、XML スキーマパート 1:構造に](https://www.w3.org/TR/xmlschema-1/)関する推奨事項[、および XML スキーマ第2部:データ型](https://www.w3.org/TR/xmlschema-2/)の推奨。  
+ XSD の詳細については、次を参照して[ください。 World Wide Web コンソーシアム (W3C) XML スキーマパート 0:入門勧告](https://www.w3.org/TR/xmlschema-0/) [、XML スキーマパート 1:構造に](https://www.w3.org/TR/xmlschema-1/)関する推奨事項[、および XML スキーマ第2部:Datatypes Recommendation](https://www.w3.org/TR/xmlschema-2/)」 (XML スキーマ第 2 部: データ型の推奨事項) を参照してください。  
   
  次の例は、XML スキーマ`customers`を示しています。は、 `MyDataSet`要素の子要素であり、 **DataSet**要素です。  
   
@@ -83,17 +83,17 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
 ```  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [XML スキーマ (XSD) 制約の DataSet 制約への割り当て](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [XML スキーマ (XSD) 制約の DataSet 制約への割り当て](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  で unique および foreign key 制約を作成するために使用される XML `DataSet`スキーマ要素について説明します。  
   
- [XML スキーマ (XSD) からの DataSet リレーションの生成](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [XML スキーマ (XSD) からの DataSet リレーションの生成](generating-dataset-relations-from-xml-schema-xsd.md)  
  のテーブル列`DataSet`間のリレーションを作成するために使用される XML スキーマ要素について説明します。  
   
- [XML スキーマ制約およびリレーションシップ](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/xml-schema-constraints-and-relationships.md)  
+ [XML スキーマ制約およびリレーションシップ](xml-schema-constraints-and-relationships.md)  
  XML スキーマ要素を使用してで制約を作成するときに、 `DataSet`暗黙的にリレーションシップを作成する方法について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
- [DataSet での XML の使用](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [DataSet での XML の使用](using-xml-in-a-dataset.md)  
  のリレーショナル構造とデータ`DataSet`を XML データとして読み込んで永続化する方法について説明します。  
   
 ## <a name="see-also"></a>関連項目

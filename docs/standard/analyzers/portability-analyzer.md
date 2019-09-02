@@ -4,12 +4,12 @@ description: .NET Portability Analyzer ツールを使って、さまざまな .
 ms.date: 07/18/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 32b4f980061b0975c413a8cde436074f76cfabc9
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: fdd2e9f288649b35b778b5da505408822e0ea8fe
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433948"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107504"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -17,11 +17,11 @@ ms.locfileid: "68433948"
 
 ## <a name="common-targets"></a>一般的なターゲット
 
-* [.NET Core](../../core/index.md): モジュール型の設計で、side-by-side を採用しており、クロスプラットフォームのシナリオを対象としています。 side-by-side 機能により、他のアプリに影響を与えることなく新しい .NET Core バージョンを導入することができます。 クロスプラットフォームをサポートする .NET Core にアプリを移植することが目的である場合は、これが推奨されるターゲットです。 
-* [.NET Standard](../../standard/net-standard.md): .NET のすべての実装で使用できる .NET Standard API が含まれています。 .NET でサポートされるすべてのプラットフォームでライブラリを実行させることが目的である場合は、これが推奨されるターゲットです。  
-* [ASP.NET Core](/aspnet/core): .NET Core 上に構築された最新の Web フレームワークです。 複数のプラットフォームをサポートするために .NET Core に Web アプリを移植することが目的である場合は、これが推奨されるターゲットです。
-* .NET Core と[プラットフォーム拡張機能](../../core/porting/windows-compat-pack.md): Windows 互換機能パックに加えて .NET Core API が含まれます。.NET Framework で利用可能なテクノロジの多くが提供されます。 Windows で .NET Framework から .NET Core にアプリを移植する場合は、これが推奨されるターゲットです。
-* .NET Standard と[プラットフォーム拡張機能](../../core/porting/windows-compat-pack.md): Windows 互換機能パックに加えて .NET Standard API が含まれます。.NET Framework で利用可能なテクノロジの多くが提供されます。 Windows で .NET Framework から .NET Core にライブラリを移植する場合は、これが推奨されるターゲットです。
+- [.NET Core](../../core/index.md): モジュール型の設計で、side-by-side を採用しており、クロスプラットフォームのシナリオを対象としています。 side-by-side 機能により、他のアプリに影響を与えることなく新しい .NET Core バージョンを導入することができます。 クロスプラットフォームをサポートする .NET Core にアプリを移植することが目的である場合は、これが推奨されるターゲットです。 
+- [.NET Standard](../../standard/net-standard.md): .NET のすべての実装で使用できる .NET Standard API が含まれています。 .NET でサポートされるすべてのプラットフォームでライブラリを実行させることが目的である場合は、これが推奨されるターゲットです。  
+- [ASP.NET Core](/aspnet/core): .NET Core 上に構築された最新の Web フレームワークです。 複数のプラットフォームをサポートするために .NET Core に Web アプリを移植することが目的である場合は、これが推奨されるターゲットです。
+- .NET Core と[プラットフォーム拡張機能](../../core/porting/windows-compat-pack.md): Windows 互換機能パックに加えて .NET Core API が含まれます。.NET Framework で利用可能なテクノロジの多くが提供されます。 Windows で .NET Framework から .NET Core にアプリを移植する場合は、これが推奨されるターゲットです。
+- .NET Standard と[プラットフォーム拡張機能](../../core/porting/windows-compat-pack.md): Windows 互換機能パックに加えて .NET Standard API が含まれます。.NET Framework で利用可能なテクノロジの多くが提供されます。 Windows で .NET Framework から .NET Core にライブラリを移植する場合は、これが推奨されるターゲットです。
 
 ## <a name="how-to-use-the-net-portability-analyzer"></a>.NET Portability Analyzer の使用方法
 
@@ -38,9 +38,9 @@ Visual Studio でプロジェクト全体を分析するには、**ソリュー�
 
 [ApiPort コンソール アプリ](https://aka.ms/apiportdownload)を使うこともできます。 
 
-* 現在のディレクトリを分析するには、次のコマンドを入力します。`ApiPort.exe analyze -f .`
-* 特定の .dll ファイルの一覧を分析するには、次のコマンドを入力します。`ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
-* 詳細なヘルプを表示するには `ApiPort.exe -?` を実行します
+- 現在のディレクトリを分析するには、次のコマンドを入力します。`ApiPort.exe analyze -f .`
+- 特定の .dll ファイルの一覧を分析するには、次のコマンドを入力します。`ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
+- 詳細なヘルプを表示するには `ApiPort.exe -?` を実行します
 
 自分が所有していて移植したいすべての関連する exe と dll ファイルを含め、アプリが依存しているけれども自分で所有しているのではなく移植できないファイルを除外することをお勧めします。 これにより、最も関連のある移植性レポートが得られます。  
 

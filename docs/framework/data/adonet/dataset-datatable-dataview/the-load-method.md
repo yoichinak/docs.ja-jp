@@ -4,27 +4,27 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: e22e5812-89c6-41f0-9302-bb899a46dbff
-ms.openlocfilehash: 82f840ab7dd26a4888ebf024d696f2c70701eb18
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b704deeffcd06bca09b6c26d60a66218b46fc55c
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607233"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203172"
 ---
 # <a name="the-load-method"></a>Load メソッド
-<xref:System.Data.DataTable.Load%2A> メソッドを使用して、データ ソースの行を <xref:System.Data.DataTable> に読み込むことができます。 これは最も単純な形式では、1 つのパラメーターを受け取っているオーバー ロードされたメソッド、 **DataReader**します。 このフォームで、単に読み込む、 **DataTable**行。 必要に応じて、指定、 **LoadOption**にデータを追加する方法を制御するパラメーター、 **DataTable**します。  
+<xref:System.Data.DataTable.Load%2A> メソッドを使用して、データ ソースの行を <xref:System.Data.DataTable> に読み込むことができます。 これはオーバーロードされたメソッドであり、最も単純な形式で、1つのパラメーターである**DataReader**を受け取ります。 この形式では、単に行を含む**DataTable**が読み込まれます。 必要に応じて、 **LoadOption**パラメーターを指定して、データを**DataTable**に追加する方法を制御できます。  
   
- **LoadOption**パラメーターの場合に特に便利ですが、 **DataTable**既にデータの行を含む、データと組み合わせて、データ ソースからデータを受信する方法を記述できるため、テーブルの既存の。 たとえば、 **PreserveCurrentValues** (既定値) を指定する場合は、行がマークが**Added**で、 **DataTable**、**元**値列または列の各データ ソースから一致する行の内容に設定されています。 **現在**値は、行が追加されたときに割り当てられた値を保持し、 **RowState**の行に設定されます**Changed**します。  
+ **LoadOption**パラメーターは、 **DataTable**に既にデータ行が含まれている場合に特に便利です。これは、データソースからの受信データをテーブル内の既存のデータと結合する方法を記述するためです。 たとえば、 **PreserveCurrentValues** (既定値) は、行が**DataTable**に**追加さ**れたとしてマークされている場合に、**元**の値または各列がデータソースの一致する行の内容に設定されることを指定します。 **現在**の値は、行が追加されたときに割り当てられた値を保持し、その行の**RowState**は**Changed**に設定されます。  
   
  <xref:System.Data.LoadOption> 列挙値の簡単な説明を次の表に示します。  
   
 |LoadOption の値|説明|  
 |----------------------|-----------------|  
-|**OverwriteRow**|受信した行が同じである場合**PrimaryKey**として既に存在する行の値、 **DataTable**、**元**と**現在**それぞれの値列は、受信した行の値に置き換え、 **RowState**プロパティに設定されて**Unchanged**します。<br /><br /> 行に既に存在しないデータ ソースから、 **DataTable**を使用して追加、 **RowState** @property **Unchanged**。<br /><br /> このオプションが有効の内容を更新、 **DataTable**データ ソースの内容と一致するようにします。|  
-|**PreserveCurrentValues (既定値)**|受信した行が同じである場合**PrimaryKey**として既に存在する行の値、 **DataTable**、**元**値は、受信した行、および、の内容に設定されて**現在**値は変更されません。<br /><br /> 場合、 **RowState**は**Added**または**Modified**に設定されている**Modified**します。<br /><br /> 場合、 **RowState**が**Deleted**、まま**Deleted**します。<br /><br /> 行に既に存在しないデータ ソースから、 **DataTable**が追加されると、 **RowState**に設定されている**Unchanged**します。|  
-|**UpdateCurrentValues**|受信した行が同じである場合**PrimaryKey**として既に存在する行の値、 **DataTable**、**現在**値をコピー、**元**値、および**現在**値は、受信した行の内容に設定されます。<br /><br /> 場合、 **RowState**で、 **DataTable**が**Added**、 **RowState**まま**Added**します。 としてマークされた行**Modified**または**Deleted**、 **RowState**は**Modified**します。<br /><br /> 行に既に存在しないデータ ソースから、 **DataTable**が追加されると、 **RowState**に設定されている**Added**。|  
+|**OverwriteRow**|受信した行の**PrimaryKey**値が**DataTable**に既に存在する行と同じ場合、各列の**元**の値と**現在**の値は、受信した行の値に置き換えられ、 **RowState**プロパティはに設定されます。**変更なし**。<br /><br /> **DataTable**にまだ存在しないデータソースからの行は、 **RowState**値が**Unchanged のまま**追加されます。<br /><br /> このオプションを有効にすると、データソースの内容と一致するように**DataTable**の内容が更新されます。|  
+|**PreserveCurrentValues (既定値)**|入力方向の行の**PrimaryKey**値が**DataTable**に既に存在する行と同じ場合、**元**の値は受信した行の内容に設定され、**現在**の値は変更されません。<br /><br /> **RowState**が**追加**または**変更**されると、 **[変更済み]** に設定されます。<br /><br /> **RowState**が**削除**された場合、**削除**されたままになります。<br /><br /> **DataTable**にまだ存在しないデータソースからの行が追加され、 **RowState**は**Unchanged**に設定されます。|  
+|**UpdateCurrentValues**|受信した行の**PrimaryKey**値が**DataTable**内の既存の行と同じ場合、**現在**の値が**元**の値にコピーされ、**現在**の値が受信した行の内容に設定されます。<br /><br /> **DataTable**の**RowState**が**追加**された場合、 **RowState**は**追加さ**れたままになります。 **変更**または**削除済み**としてマークされた行については、 **RowState**が**変更**されます。<br /><br /> **DataTable**に存在しないデータソースの行が追加され、 **RowState**が**追加**されるように設定されます。|  
   
- 次のサンプルは、**ロード**に従業員の誕生日の一覧を表示するメソッド、 **Northwind**データベース。  
+ 次のサンプルでは、 **Load**メソッドを使用して、 **Northwind**データベース内の従業員の誕生日の一覧を表示します。  
   
 ```vb  
 Private Sub LoadBirthdays(ByVal connectionString As String)  
@@ -70,5 +70,5 @@ End Sub
   
 ## <a name="see-also"></a>関連項目
 
-- [DataTable 内のデータの操作](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [DataTable 内のデータの操作](manipulating-data-in-a-datatable.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

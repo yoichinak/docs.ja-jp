@@ -4,19 +4,19 @@ description: .NET Core を配布用にパッケージ化、名前付け、およ
 author: tmds
 ms.date: 03/02/2018
 ms.custom: seodec18
-ms.openlocfilehash: b961d84053dc41e75e002c8c12419fdef99ded4b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5d23147c8a38fbeea9e88c0a18e1f220e854fec1
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64585250"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105415"
 ---
 # <a name="net-core-distribution-packaging"></a>.NET Core の配布パッケージ
 
 .NET Core はますます多くのプラットフォームで使用できるようになってきているため、.NET Core をパッケージ化し、名前を付け、バージョン管理する方法を知っていると便利です。 そうすることで、パッケージの管理者は、ユーザーの .NET の実行環境に左右されることなく一貫した体験が保証されるようにサポートできます。 この記事は以下のユーザーに役立ちます。
 
-* ソースから .NET Core をビルドしようとしている。
-* 結果として生じるレイアウトまたは生成されるパッケージに影響する可能性がある .NET Core CLI に変更を加えたい。
+- ソースから .NET Core をビルドしようとしている。
+- 結果として生じるレイアウトまたは生成されるパッケージに影響する可能性がある .NET Core CLI に変更を加えたい。
 
 ## <a name="disk-layout"></a>ディスク レイアウト
 

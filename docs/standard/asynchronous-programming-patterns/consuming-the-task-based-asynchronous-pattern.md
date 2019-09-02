@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 723f07fb3fb4eda1c0071eec2b1d012948a10f77
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 08b5dee94a9a23fdd1c9e635aa2ef848f59e86cf
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666558"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169131"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>タスク ベースの非同期パターンの利用
 
 タスク ベースの非同期パターン (TAP) を使用して非同期操作を行うと、コールバックを使用して、ブロックすることなく待機できます。  タスクの場合、これは <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> などのメソッドによって行われます。 言語ベースの非同期サポートが、通常の制御フロー内での非同期操作の待機を許可することで、コールバックを隠し、コンパイラにより生成されたコードはこの同じ API レベルのサポートを提供します。
 
 ## <a name="suspending-execution-with-await"></a>Await による実行の中断
- .NET Framework 4.5 以降では、C# の [await](../../csharp/language-reference/keywords/await.md) キーワードおよび Visual Basic の [Await 演算子](../../visual-basic/language-reference/operators/await-operator.md)を使用して <xref:System.Threading.Tasks.Task> と <xref:System.Threading.Tasks.Task%601> オブジェクトを非同期に待機できます。 <xref:System.Threading.Tasks.Task> を待っているとき、`await` 式は型 `void` になります。 <xref:System.Threading.Tasks.Task%601> を待っているとき、`await` 式は型 `TResult` になります。 `await` 式は、非同期メソッドの本体内に含める必要があります。 .NET Framework 4.5 における C# および Visual Basic の言語サポートの詳細については、C# および Visual Basic の言語仕様を参照してください。
+ .NET Framework 4.5 以降では、C# の [await](../../csharp/language-reference/operators/await.md) キーワードおよび Visual Basic の [Await 演算子](../../visual-basic/language-reference/operators/await-operator.md)を使用して <xref:System.Threading.Tasks.Task> と <xref:System.Threading.Tasks.Task%601> オブジェクトを非同期に待機できます。 <xref:System.Threading.Tasks.Task> を待っているとき、`await` 式は型 `void` になります。 <xref:System.Threading.Tasks.Task%601> を待っているとき、`await` 式は型 `TResult` になります。 `await` 式は、非同期メソッドの本体内に含める必要があります。 .NET Framework 4.5 における C# および Visual Basic の言語サポートの詳細については、C# および Visual Basic の言語仕様を参照してください。
 
  待機機能は、隠れた状態で継続を使用してタスクにコールバックをインストールします。  このコールバックは中断ポイントから非同期メソッドを再開します。 非同期メソッドが再開され、待機していた操作が正常に完了し、<xref:System.Threading.Tasks.Task%601> であった場合に、その `TResult` が返されます。  待っていた <xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.Task%601> が <xref:System.Threading.Tasks.TaskStatus.Canceled> 状態で終わった場合、<xref:System.OperationCanceledException> 例外がスローされます。  待っていた <xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.Task%601> が <xref:System.Threading.Tasks.TaskStatus.Faulted> 状態で終わった場合、エラーの原因となった例外がスローされます。 `Task` は複数の例外の結果としてエラーになることがありますが、反映されるのはこれらの例外の中の 1 つのみです。 ただし、<xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> プロパティは、すべてのエラーが含まれる <xref:System.AggregateException> 例外を返します。
 

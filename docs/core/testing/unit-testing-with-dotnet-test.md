@@ -5,12 +5,12 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 11/29/2017
 ms.custom: seodec18
-ms.openlocfilehash: 5319e33c314187ccce3e9832c4b01d93ba86c3ce
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1013e14690bb3cfc17e339bfd5045e6d10bc3d3e
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626419"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168144"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>dotnet テストと xUnit を使用した .NET Core での単体テスト C#
 
@@ -22,7 +22,7 @@ ms.locfileid: "68626419"
 この新しいディレクトリ内で [`dotnet new sln`](../tools/dotnet-new.md) を実行して、ソリューションを新たに作成します。 ソリューションを用意すると、クラス ライブラリと単体テスト プロジェクトの両方を管理しやすくなります。
 ソリューションのディレクトリ内で、*PrimeService* ディレクトリを作成します。 現時点のディレクトリとファイルの構造は次のようになっています。
 
-```
+```console
 /unit-testing-using-dotnet-test
     unit-testing-using-dotnet-test.sln
     /PrimeService
@@ -49,7 +49,7 @@ namespace Prime.Services
 
 [dotnet sln](../tools/dotnet-sln.md) コマンドを実行して、クラス ライブラリ プロジェクトをソリューションに追加します。
 
-```
+```console
 dotnet sln add ./PrimeService/PrimeService.csproj
 ```
 
@@ -57,7 +57,7 @@ dotnet sln add ./PrimeService/PrimeService.csproj
 
 次に、*PrimeService.Tests* ディレクトリを作成します。 次の一覧はディレクトリ構造を示したものです。
 
-```
+```console
 /unit-testing-using-dotnet-test
     unit-testing-using-dotnet-test.sln
     /PrimeService
@@ -78,7 +78,7 @@ dotnet sln add ./PrimeService/PrimeService.csproj
 
 テスト プロジェクトには、単体テストを作成して実行するための、他のパッケージが必要です。 前の手順の `dotnet new` によって、xUnit と xUnit ランナーが追加されています。 ここで、プロジェクトに別の依存関係として `PrimeService` クラス ライブラリを追加します。 次の [`dotnet add reference`](../tools/dotnet-add-reference.md) コマンドを使用します。
 
-```
+```console
 dotnet add reference ../PrimeService/PrimeService.csproj
 ```
 
@@ -86,7 +86,7 @@ dotnet add reference ../PrimeService/PrimeService.csproj
 
 ソリューションの最終的なレイアウトは次のようになります。
 
-```
+```console
 /unit-testing-using-dotnet-test
     unit-testing-using-dotnet-test.sln
     /PrimeService
@@ -99,7 +99,7 @@ dotnet add reference ../PrimeService/PrimeService.csproj
 
 テスト プロジェクトをソリューションに追加するには、*unit-testing-using-dotnet-test* ディレクトリで [dotnet sln](../tools/dotnet-sln.md) コマンドを実行します。
 
-```
+```console
 dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 ```
 

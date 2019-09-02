@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 1929e854-23a0-4bb1-94be-e8aa3b609e32
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f79fd3e0678fc0bba0d3074904f9ce9460fc6c20
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ffe4f3e000c80610d5a105dddef90f9cfd51f0dc
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910927"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205589"
 ---
 # <a name="dangerous-permissions-and-policy-administration"></a>危険なアクセス許可とポリシー管理
 .NET Framework がアクセス許可を提供する保護された操作のいくつかで、セキュリティ システムが回避されてしまう可能性があります。 これらの危険なアクセス許可は信頼できるコードにのみ付与し、その付与は必要な場合に限る必要があります。 これらのアクセス許可が付与されると、通常、悪意のあるコードに対する防御策はありません。  
   
 > [!NOTE]
-> .NET Framework 4 では、.NET Framework セキュリティモデルと用語に重要な変更が加えられています。 これらの変更の詳細については、「[セキュリティの変更](../../../docs/framework/security/security-changes.md)」を参照してください。  
+> .NET Framework 4 では、.NET Framework セキュリティモデルと用語に重要な変更が加えられています。 これらの変更の詳細については、「[セキュリティの変更](../security/security-changes.md)」を参照してください。  
   
  危険なアクセス許可については、次の表で説明します。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "69910927"
 |<xref:System.Security.Permissions.SecurityPermissionFlag.SkipVerification>|検証なしで、コードは何でも実行できます。|  
 |<xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence>|無効な証拠でセキュリティ ポリシーをかいくぐることができます。|  
 |<xref:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy>|セキュリティ ポリシーを変更する機能によって、セキュリティを無効にできます。|  
-|<xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter>|シリアル化を使用して、ユーザー補助機能のメカニズムを回避できます。 詳細については、「 [セキュリティとシリアル化](../../../docs/framework/misc/security-and-serialization.md)」を参照してください。|  
+|<xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter>|シリアル化を使用して、ユーザー補助機能のメカニズムを回避できます。 詳細については、「 [セキュリティとシリアル化](security-and-serialization.md)」を参照してください。|  
 |<xref:System.Security.Permissions.SecurityPermissionFlag.ControlPrincipal>|現行プリンシパルを設定する機能によって、ロール ベースのセキュリティを欺くことができます。|  
 |<xref:System.Security.Permissions.SecurityPermissionFlag.ControlThread>|スレッドにはセキュリティ状態が関連付けられているため、スレッドの操作は危険です。|  
 |<xref:System.Security.Permissions.ReflectionPermission>||  

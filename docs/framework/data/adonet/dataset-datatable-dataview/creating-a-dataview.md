@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b1cc02d1-23b1-4439-a998-0da1899f3442
-ms.openlocfilehash: 05122f7c980c4b7dfdb27eec73464a4f0556ba99
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 391c071f19149e9690c9121b1094aef5bfa605cd
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034386"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203849"
 ---
 # <a name="creating-a-dataview"></a>DataView の作成
-<xref:System.Data.DataView> は 2 とおりの方法で作成できます。 使用することができます、 **DataView**への参照を作成できますコンス トラクター、または、<xref:System.Data.DataTable.DefaultView%2A>のプロパティ、<xref:System.Data.DataTable>します。 **DataView**コンス トラクターは空、またはいずれかがかかることができます、 **DataTable**引数を 1 つとして、または**DataTable**フィルター条件、並べ替え条件、および行と共に状態フィルター。 使用する追加の引数の詳細については、 **DataView**を参照してください[並べ替えとフィルター データ](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)します。  
+<xref:System.Data.DataView> は 2 とおりの方法で作成できます。 **DataView**コンストラクターを使用することも、 <xref:System.Data.DataTable.DefaultView%2A> <xref:System.Data.DataTable>のプロパティへの参照を作成することもできます。 **DataView**コンストラクターは空にすることも、 **datatable**を単一の引数として使用することも 、datatable をフィルター条件、並べ替え条件、および行の状態フィルターと共に取得することもできます。 **DataView**で使用できるその他の引数の詳細については、「[データの並べ替えとフィルター処理](sorting-and-filtering-data.md)」を参照してください。  
   
- のインデックス、 **DataView**ときにも、構築、 **DataView**が作成されるときのいずれかと、**並べ替え**、 **RowFilter**、または**RowStateFilter**プロパティが変更されると、任意の最初の並べ替え順序を指定するか、作成するときに、コンス トラクター引数としてフィルタ リング条件によって最適なパフォーマンスを実現し、 **DataView**します。 作成、 **DataView**並べ替えまたはフィルター条件を指定しを設定せず、**並べ替え**、 **RowFilter**、または**RowStateFilter**プロパティが、その後、インデックスの構築には少なくとも 2 回: したらときに、 **DataView**が作成し、もう一度、並べ替えまたはフィルターのプロパティのいずれかが変更された日時。  
+ Dataview のインデックスは、 **dataview**が作成されたときと、 **Sort**、 **RowFilter**、または**rowstatefilter**の各プロパティが変更されたときに、最適なパフォーマンスを実現するために、最初の**DataView**を作成するときに、コンストラクター引数として並べ替え順序またはフィルター条件を指定します。 並べ替えまたはフィルター条件を指定せずに**dataview**を作成した後、 **sort**、 **RowFilter**、または**rowstatefilter**の各プロパティを後で設定すると、インデックスが少なくとも2回作成されます。 **dataview**が並べ替えまたはフィルターのプロパティが変更されたときに作成されます。  
   
- 作成する場合、 **DataView**を任意の引数を受け取らないコンス トラクターを使用することができなくを使用する、 **DataView**を設定するまで、**テーブル**プロパティ.  
+ 引数を受け取らないコンストラクターを使用して**dataview**を作成した場合、**テーブル**プロパティを設定するまで**dataview**を使用することはできません。  
   
- 次のコード例は、作成する方法を示します、 **DataView**を使用して、 **DataView**コンス トラクター。 A **RowFilter**、**並べ替え**列、および**DataViewRowState**に沿ってで提供されている、 **DataTable**します。  
+ **Dataview**コンストラクターを使用して**dataview**を作成する方法を次のコード例に示します。 **DataTable**と共に**RowFilter**、 **Sort**列、および**DataViewRowState**が指定されています。  
   
 ```vb  
 Dim custDV As DataView = New DataView(custDS.Tables("Customers"), _  
@@ -35,7 +35,7 @@ DataView custDV = new DataView(custDS.Tables["Customers"],
     DataViewRowState.CurrentRows);  
 ```  
   
- 次のコード例は、既定値への参照を取得する方法を示します**DataView**の**DataTable**を使用して、 **DefaultView**テーブルのプロパティ。  
+ 次のコード例は、テーブルの**DefaultView**プロパティを使用して、 **DataTable**の既定の**DataView**への参照を取得する方法を示しています。  
   
 ```vb  
 Dim custDV As DataView = custDS.Tables("Customers").DefaultView  
@@ -49,7 +49,7 @@ DataView custDV = custDS.Tables["Customers"].DefaultView;
 
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>
-- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
-- [データの並べ替えとフィルター処理](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)
-- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [DataViews](dataviews.md)
+- [データの並べ替えとフィルター処理](sorting-and-filtering-data.md)
+- [DataTables](datatables.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

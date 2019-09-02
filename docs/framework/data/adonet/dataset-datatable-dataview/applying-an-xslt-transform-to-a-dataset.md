@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-ms.openlocfilehash: 56f6e13763b5230e046c0838892393b3672a54be
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8bff92fe40ec668dfa634c3b97f2f1df238f159b
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937035"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203964"
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>DataSet への XSLT 変換の適用
 の**WriteXml**メソッド<xref:System.Data.DataSet>を使用すると、データ**セット**の内容を XML データとして書き込むことができます。 一般的なタスクは、XSLT (XSL Transformation) を使用してこの XML を別の形式へ変換する操作です。 ただし、を使用<xref:System.Xml.XmlDataDocument>して**データセット**を同期すると、最初に**WriteXml**を使用してデータ**セット**の内容を XML データとして書き込むことなく、データセットのコンテンツに XSLT スタイルシートを適用できます。  
@@ -59,7 +59,7 @@ ms.locfileid: "69937035"
  次のコードでは、**データセットにデータ**を読み込み、XSLT スタイルシートを適用します。  
   
 > [!NOTE]
-> リレーションシップを含む**データセット**に XSLT スタイルシートを適用する場合は、入れ子になった各関係に対して、 <xref:System.Data.DataRelation>の nested プロパティを**true**に設定すると、最適なパフォーマンスが得られます。 これにより、階層を自然な順番で上から下へと進みながらデータを変換する XSLT スタイル シートを利用できるようになります。パフォーマンスに大きく影響する XPath ロケーション軸 (たとえば、スタイル シートのノード テスト式での preceding-sibling や following-sibling) を使用して階層をたどる必要はなくなります。 入れ子になったリレーションの詳細については、「 [datarelation の入れ子](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)」を参照してください。  
+> リレーションシップを含む**データセット**に XSLT スタイルシートを適用する場合は、入れ子になった各関係に対して、 <xref:System.Data.DataRelation>の nested プロパティを**true**に設定すると、最適なパフォーマンスが得られます。 これにより、階層を自然な順番で上から下へと進みながらデータを変換する XSLT スタイル シートを利用できるようになります。パフォーマンスに大きく影響する XPath ロケーション軸 (たとえば、スタイル シートのノード テスト式での preceding-sibling や following-sibling) を使用して階層をたどる必要はなくなります。 入れ子になったリレーションの詳細については、「 [datarelation の入れ子](nesting-datarelations.md)」を参照してください。  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -125,5 +125,5 @@ writer.Close();
   
 ## <a name="see-also"></a>関連項目
 
-- [DataSet と XmlDataDocument の同期](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
+- [DataSet と XmlDataDocument の同期](dataset-and-xmldatadocument-synchronization.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

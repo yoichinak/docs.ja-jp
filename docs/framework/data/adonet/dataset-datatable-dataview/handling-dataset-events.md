@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54edefe0-bc38-419b-b486-3d8a0c356f13
-ms.openlocfilehash: 8b93b0564bbd6d760193f11d23d97ccb2cb4c943
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 88f35d90f02b44b88f4bb7c6fac6a94a09afe81a
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928513"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204842"
 ---
 # <a name="handling-dataset-events"></a>DataSet のイベント処理
 <xref:System.Data.DataSet> オブジェクトには、 <xref:System.ComponentModel.MarshalByValueComponent.Disposed>、 <xref:System.Data.DataSet.Initialized>、 <xref:System.Data.DataSet.MergeFailed>という 3 つのイベントがあります。  
@@ -53,11 +53,11 @@ private static void DataSetMergeFailed(
 > [!NOTE]
 > オブジェクト`DataSet`および`DataTable`オブジェクトは、 <xref:System.ComponentModel.MarshalByValueComponent> から<xref:System.Runtime.Serialization.ISerializable>継承し、リモート処理用のインターフェイスをサポートします。 これらは、リモート処理ができる唯一の ADO.NET オブジェクトです。 詳細については、「 [.Net リモート処理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))」を参照してください。  
   
- を操作`DataSet`するときに使用できるその他のイベントの詳細については、「 [DataTable イベントの処理](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)と[DataAdapter イベントの処理](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md)」を参照してください。  
+ を操作`DataSet`するときに使用できるその他のイベントの詳細については、「 [DataTable イベントの処理](handling-datatable-events.md)と[DataAdapter イベントの処理](../handling-dataadapter-events.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [DataSet、DataTable、および DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [DataSet、DataTable、および DataView](index.md)
 - [データの検証](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/t3b36awf(v=vs.120))
-- [ADO.NET でのデータの取得および変更](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [ADO.NET でのデータの取得および変更](../retrieving-and-modifying-data.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

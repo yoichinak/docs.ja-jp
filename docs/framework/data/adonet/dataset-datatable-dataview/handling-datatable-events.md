@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 210d15187cd539cdae6e38fdcb708b4b9f81c073
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 146854b592dd83efe87c54e1f5f99f110b81c1a5
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988308"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203685"
 ---
 # <a name="handling-datatable-events"></a>DataTable イベントの処理
 <xref:System.Data.DataTable> オブジェクトは、アプリケーションが処理できる一連のイベントを提供します。 `DataTable` のイベントを次の表に示します。  
@@ -81,7 +81,7 @@ ms.locfileid: "69988308"
   
 ## <a name="see-also"></a>関連項目
 
-- [DataTable 内のデータの操作](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
-- [DataAdapter のイベント処理](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
-- [DataSet のイベント処理](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
+- [DataTable 内のデータの操作](manipulating-data-in-a-datatable.md)
+- [DataAdapter のイベント処理](../handling-dataadapter-events.md)
+- [DataSet のイベント処理](handling-dataset-events.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

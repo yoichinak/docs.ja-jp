@@ -5,22 +5,22 @@ ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: 1052ab7d7c6fd948f59c5956b918fbfd01899a1a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: d16d8fee58f4480bc83da884caf0ff15981b09af
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608684"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168612"
 ---
 # <a name="contextual-keywords-c-reference"></a>コンテキスト キーワード (C# リファレンス)
 
 コンテキスト キーワードを使用して、コード内で特定の意味を付与することができます。ただし C# ではコンテキスト キーワードは予約語ではありません。 このセクションでは、次のコンテキスト キーワードを紹介します。  
   
-|Keyword|説明|  
+|キーワード|説明|  
 |-------------|-----------------|  
 |[add](./add.md)|クライアント コードがイベントをサブスクライブするときに呼び出されるカスタム イベント アクセサーを定義します。|  
 |[async](./async.md)|修飾されたメソッド、ラムダ式、または匿名メソッドが非同期であることを示します。|  
-|[await](./await.md)|待機中のタスクが完了するまで async のメソッドを中断します。|  
+|[await](../operators/await.md)|待機中のタスクが完了するまで async のメソッドを中断します。|  
 |[dynamic](./dynamic.md)|コンパイル時の型チェックをバイパスする処理を可能にする参照型を定義します。|  
 |[get](./get.md)|プロパティまたはインデクサーのアクセサー メソッドを定義します。|  
 |[global](../operators/namespace-alias-qualifier.md)|グローバル名前空間のエイリアス (それ以外の場合は無名です)。|  

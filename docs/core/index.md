@@ -4,12 +4,12 @@ description: .NET Core は、Windows、Linux、および Mac アプリを作成�
 author: richlander
 ms.date: 08/01/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 79a0c09074159160dd01b0c7970612f7058cc3fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: db4daa8c78a181f0599c4c75ccd31f46ee278e63
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614454"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202827"
 ---
 # <a name="net-core-guide"></a>.NET Core のガイド
 
@@ -40,7 +40,7 @@ dotnet run
 
 次の出力が表示されます。
 
-```console
+```output
 Hello World!
 ```
 

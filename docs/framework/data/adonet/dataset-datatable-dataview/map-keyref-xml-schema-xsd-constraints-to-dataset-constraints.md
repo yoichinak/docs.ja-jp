@@ -2,29 +2,29 @@
 title: XML スキーマ (XSD) のキー参照制約の DataSet 制約への割り当て
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
-ms.openlocfilehash: 4cc4cb530b7252f35469fd4bb43bf6da9c1a3e24
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 611322065a4df53d1a3149ef4e1ca5592f149081
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64604025"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203442"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>XML スキーマ (XSD) のキー参照制約の DataSet 制約への割り当て
-**Keyref**要素では、ドキュメント内の要素間のリンクを確立することができます。 これは、リレーショナル データベースの外部キーのリレーションシップと同様です。 スキーマが指定されている場合、 **keyref**要素で、要素の変換のテーブル内の列に対応する外部キー制約にスキーマのマッピング プロセス中に、<xref:System.Data.DataSet>します。 既定で、 **keyref**要素で、リレーションシップも生成されます、 **ParentTable**、 **ChildTable**、 **ParentColumn**、および**ChildColumn**リレーションの指定されたプロパティ。  
+**Keyref**要素を使用すると、ドキュメント内の要素間のリンクを確立できます。 これは、リレーショナル データベースの外部キーのリレーションシップと同様です。 スキーマで**keyref**要素が指定されている場合、要素はスキーママッピングプロセス中に、 <xref:System.Data.DataSet>のテーブル内の列に対応する外部キー制約に変換されます。 既定では、 **keyref**要素は、リレーションシップに対して指定されている**parenttable**、 **childtable**、 **parenttable**、および**childtable**プロパティを使用して、リレーションシップも生成します。  
   
- 次の表にアウトライン、 **msdata**属性で指定することができます、 **keyref**要素。  
+ 次の表は、 **keyref**要素で指定できる**msdata**属性の概要を示しています。  
   
 |属性名|説明|  
 |--------------------|-----------------|  
-|**msdata:ConstraintOnly**|場合**ConstraintOnly ="true"** が指定されて、 **keyref**スキーマ内の要素、制約が作成されますが、リレーションシップは作成されません。 この属性が指定されていない場合 (またはに設定されている**False**)、制約とリレーションシップの両方に作成されます、**データセット**します。|  
-|**msdata:ConstraintName**|場合、 **ConstraintName**属性を指定すると、その値、制約の名前として使用されます。 それ以外の場合、**名前**の属性、 **keyref**スキーマ内の要素で、制約の名前を提供します、**データセット**します。|  
-|**msdata:UpdateRule**|場合、 **UpdateRule**属性が指定されて、 **keyref**スキーマ内の要素、その値に割り当てられている、 **UpdateRule**制約プロパティ、 **データセット**します。 それ以外の場合、 **UpdateRule**プロパティに設定されて**Cascade**します。|  
-|**msdata:DeleteRule**|場合、 **DeleteRule**属性が指定されて、 **keyref**スキーマ内の要素、その値に割り当てられている、 **DeleteRule**制約プロパティ、 **データセット**します。 それ以外の場合、 **DeleteRule**プロパティに設定されて**Cascade**します。|  
-|**msdata:AcceptRejectRule**|場合、 **AcceptRejectRule**属性が指定されて、 **keyref**スキーマ内の要素、その値に割り当てられている、 **AcceptRejectRule** 制約プロパティ**データセット**します。 それ以外の場合、 **AcceptRejectRule**プロパティに設定されて**None**します。|  
+|**msdata:ConstraintOnly**|スキーマの**keyref**要素で**ConstraintOnly = "true"** が指定されている場合、制約が作成されますが、リレーションシップは作成されません。 この属性が指定されていない場合 (または**False**に設定されている場合) は、制約とリレーションシップの両方が**DataSet**に作成されます。|  
+|**msdata:ConstraintName**|**ConstraintName**属性が指定されている場合、その値は制約の名前として使用されます。 それ以外の場合は、スキーマの**keyref**要素の**name**属性によって、**データセット**内の制約名が提供されます。|  
+|**msdata:UpdateRule**|スキーマの**keyref**要素に**UpdateRule**属性が指定されている場合、その値は**データセット**の**UpdateRule** constraint プロパティに割り当てられます。 それ以外の場合、 **UpdateRule**プロパティは**Cascade**に設定されます。|  
+|**msdata:DeleteRule**|スキーマの**keyref**要素に**DeleteRule**属性が指定されている場合、その値は**データセット**の**DeleteRule** constraint プロパティに割り当てられます。 それ以外の場合、 **DeleteRule**プロパティは**Cascade**に設定されます。|  
+|**msdata:AcceptRejectRule**|スキーマの**keyref**要素に**AcceptRejectRule**属性が指定されている場合、その値は**データセット**の**AcceptRejectRule** constraint プロパティに割り当てられます。 それ以外の場合、 **AcceptRejectRule**プロパティは**None**に設定されます。|  
   
- 次の例に示すスキーマが含まれています、**キー**と**keyref**間のリレーションシップ、 **OrderNumber**の子要素、**順序**要素と**OrderNo**の子要素、 **OrderDetail**要素。  
+ 次の例には、 **Order**要素の**ordernumber**子要素と**ordernumber**の**ordernumber**子要素間の**キー**および**keyref**リレーションシップを指定するスキーマが含まれています。element.  
   
- 例では、 **OrderNumber**の子要素、 **OrderDetail**要素が参照する、 **OrderNo**のキーの子要素、**順序**要素。  
+ この例では、 **Ordernumber**要素の**ordernumber**子要素は、 **Order**要素の**ordernumber**キー子要素を参照します。  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -66,16 +66,16 @@ ms.locfileid: "64604025"
 </xs:schema>  
 ```  
   
- 結果は次の XML スキーマ定義言語 (XSD) スキーマの割り当て処理**データセット**2 つのテーブル。  
+ XML スキーマ定義言語 (XSD) スキーマのマッピングプロセスでは、次の2つのテーブルを含む**データセット**が生成されます。  
   
 ```  
 OrderDetail(OrderNo, ItemNo) and  
 Order(OrderNumber, EmpNumber)  
 ```  
   
- さらに、**データセット**次の制約を定義します。  
+ また、**データセット**は、次の制約を定義します。  
   
-- Unique 制約、**順序**テーブル。  
+- **Order**テーブルに対する unique 制約です。  
   
     ```  
               Table: Order  
@@ -85,7 +85,7 @@ Order(OrderNumber, EmpNumber)
     IsPrimaryKey: False  
     ```  
   
-- 間のリレーションシップ、**順序**と**OrderDetail**テーブル。 **入れ子になった**プロパティに設定されて**False**スキーマの 2 つの要素が入れ子にされていないためです。  
+- **Order**テーブルと**orderdetail**テーブル間のリレーションシップ。 2つの要素がスキーマで入れ子になっていないため、 **nested**プロパティは**False**に設定されています。  
   
     ```  
               ParentTable: Order  
@@ -98,7 +98,7 @@ Order(OrderNumber, EmpNumber)
     Nested: False  
     ```  
   
-- 外部キー制約、 **OrderDetail**テーブル。  
+- **Orderdetail**テーブルの foreign key 制約。  
   
     ```  
               ConstraintName: OrderNoRef  
@@ -111,6 +111,6 @@ Order(OrderNumber, EmpNumber)
   
 ## <a name="see-also"></a>関連項目
 
-- [XML スキーマ (XSD) 制約の DataSet 制約への割り当て](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [XML スキーマ (XSD) からの DataSet リレーションの生成](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
+- [XML スキーマ (XSD) 制約の DataSet 制約への割り当て](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [XML スキーマ (XSD) からの DataSet リレーションの生成](generating-dataset-relations-from-xml-schema-xsd.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

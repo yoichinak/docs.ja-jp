@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a33fd5f9-2de9-4653-a4f0-d9df25082c4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e3bde5b18437cc9890f660f018e81582a4d708d2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f040e1e1706e1f84ced8b253ff3fb15dbcbd6e1e
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910916"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206012"
 ---
 # <a name="link-demands"></a>リンク確認要求
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -32,7 +32,7 @@ ms.locfileid: "69910916"
   
  <xref:System.Security.CodeAccessPermission.Assert%2A>、<xref:System.Security.CodeAccessPermission.Deny%2A>、および <xref:System.Security.CodeAccessPermission.PermitOnly%2A> の各スタック ウォーク修飾子は、リンク確認要求の評価に影響を与えません。  リンク確認要求は、スタック ウォークを実行しないため、スタック ウォーク修飾子はリンク確認要求に影響を与えません。  
   
- リンク確認要求によって保護されているメソッドが[リフレクション](../../../docs/framework/reflection-and-codedom/reflection.md)によってアクセスされる場合、リンク確認要求は、リフレクションによってアクセスされるコードの直前の呼び出し元をチェックします。 これは、メソッドの探索と、リフレクションを使用して行うメソッド呼び出しの両方に該当します。 たとえば、コードがリフレクションを使用して、 <xref:System.Reflection.MethodInfo>リンク確認要求で保護されているメソッドを表すオブジェクトを返し、その**MethodInfo**オブジェクトを、オブジェクトを使用して元のメソッドを呼び出す他のコードに渡すとします。 この場合、リンク確認要求のチェックは2回行われます。1回は**MethodInfo**オブジェクトを返すコードで、もう1つは、それを呼び出すコードの場合です。  
+ リンク確認要求によって保護されているメソッドが[リフレクション](../reflection-and-codedom/reflection.md)によってアクセスされる場合、リンク確認要求は、リフレクションによってアクセスされるコードの直前の呼び出し元をチェックします。 これは、メソッドの探索と、リフレクションを使用して行うメソッド呼び出しの両方に該当します。 たとえば、コードがリフレクションを使用して、 <xref:System.Reflection.MethodInfo>リンク確認要求で保護されているメソッドを表すオブジェクトを返し、その**MethodInfo**オブジェクトを、オブジェクトを使用して元のメソッドを呼び出す他のコードに渡すとします。 この場合、リンク確認要求のチェックは2回行われます。1回は**MethodInfo**オブジェクトを返すコードで、もう1つは、それを呼び出すコードの場合です。  
   
 > [!NOTE]
 > 静的クラスのコンストラクターで実行されるリンク確認要求では、静的コンストラクターは保護されません。これは、静的コンストラクターがアプリケーションのコードの実行パスの外側で、システムによって呼び出されるためです。 その結果、リンク確認要求がクラス全体に適用される場合、静的コンストラクターへのアクセスは保護できませんが、クラスの残りの部分は保護されます。  
@@ -57,4 +57,4 @@ public static string ReadData()
 ## <a name="see-also"></a>関連項目
 
 - [属性](../../standard/attributes/index.md)
-- [コード アクセス セキュリティ](../../../docs/framework/misc/code-access-security.md)
+- [コード アクセス セキュリティ](code-access-security.md)

@@ -3,12 +3,12 @@ title: 式の解釈
 description: 式ツリーの構造を調べるためのコードの記述方法について説明します。
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 952a1c553e2392ffc717dc344dfe77a11f025cc4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fcc16e7a0cef7b3ac24d99ccbddd93bed100a5bb
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211245"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202973"
 ---
 # <a name="interpreting-expressions"></a>式の解釈
 
@@ -34,7 +34,7 @@ Console.WriteLine($"The value of the constant value is {constant.Value}");
 
 このコードの出力は、次のようになります。
 
-```
+```output
 This is an Constant expression type
 The type of the constant value is System.Int32
 The value of the constant value is 24
@@ -80,7 +80,7 @@ Console.WriteLine($"\tParameter Type: {right.Type.ToString()}, Name: {right.Name
 
 このサンプル コードから、次のような出力が得られます。
 
-```
+```output
 This expression is a/an Lambda expression type
 The name of the lambda is <null>
 The return type is System.Int32
@@ -218,7 +218,7 @@ public class ConstantVisitor : Visitor
 
 上記の加算式でこのビジターを実行すると、次のような出力が得られます。
 
-```
+```output
 This expression is a/an Lambda expression type
 The name of the lambda is <null>
 The return type is System.Int32
@@ -271,7 +271,7 @@ Expression<Func<int, int>> sum = (a) => 1 + a + 3 + 4;
 
 これを合計するビジターを作成し、実行すれば、次の出力が得られます。
 
-```
+```output
 This expression is a/an Lambda expression type
 The name of the lambda is <null>
 The return type is System.Int32
@@ -309,7 +309,7 @@ Expression<Func<int, int, int>> sum3 = (a, b) => (1 + a) + (3 + b);
 
 ビジターからの出力は、次のようになります。
 
-```
+```output
 This expression is a/an Lambda expression type
 The name of the lambda is <null>
 The return type is System.Int32
@@ -451,7 +451,7 @@ public class MethodCallVisitor : Visitor
 
 式ツリーの出力は、次のようになります。
 
-```
+```output
 This expression is a/an Lambda expression type
 The name of the lambda is <null>
 The return type is System.Int32

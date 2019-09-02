@@ -2,12 +2,12 @@
 title: Word 文書内のテキストの検索 (C#)
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
-ms.openlocfilehash: 99a6bc2bb08af47ab725ef94ae8cd77d54cbad0a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 173472b9dbd669476c3e5529655d111b88b0dba2
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594342"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205390"
 ---
 # <a name="finding-text-in-word-documents-c"></a>Word 文書内のテキストの検索 (C#)
 このトピックでは、以前のクエリを拡張して、ドキュメント内で特定の文字列の出現箇所をすべて検索します。  
@@ -167,7 +167,7 @@ class Program
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```output  
 StyleName:Code >        Console.WriteLine("Hello World");<  
 StyleName:Code >Hello World<  
 ```  
@@ -314,7 +314,7 @@ class Program
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```output  
 StyleName:Code ><  
 ```  
   
@@ -329,6 +329,6 @@ StyleName:Code ><
   
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル:WordprocessingML ドキュメント内のコンテンツの操作 (C#)](./shape-of-wordprocessingml-documents.md)
+- [チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (C#)](./shape-of-wordprocessingml-documents.md)
 - [純粋関数によるリファクタリング (C#)](./refactoring-using-a-pure-function.md)
 - [LINQ to XML における遅延実行とレイジー評価 (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

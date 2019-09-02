@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d636496599d4419518ce53c956c83f6ae175aa8
-ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
+ms.openlocfilehash: 4092d8694bdb896db1332bd73afae3f62bba36cf
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67135656"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105911"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>.NET アプリでのリソースのパッケージ化と配置
 
@@ -141,7 +141,7 @@ ms.locfileid: "67135656"
 .NET Core リソース フォールバック プロセスには次の手順が含まれます。
 
 1. 要求されたカルチャのサテライト アセンブリの読み込みがランタイムで試行されます。
-     * 現在実行中のアセンブリのサブディレクトリで、要求されたカルチャと一致するディレクトリを調べます。 サブディレクトリが見つかった場合、要求されたカルチャの有効なサテライト アセンブリがそのサブディレクトリで検索され、読み込まれます。
+     - 現在実行中のアセンブリのサブディレクトリで、要求されたカルチャと一致するディレクトリを調べます。 サブディレクトリが見つかった場合、要求されたカルチャの有効なサテライト アセンブリがそのサブディレクトリで検索され、読み込まれます。
 
        > [!NOTE]
        > 大文字と小文字を区別するファイル システム (つまり Linux と macOS) を持つオペレーティング システムでは、カルチャ名のサブディレクトリ検索では大文字と小文字が区別されます。 サブディレクトリ名は、<xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> の大文字と小文字が完全に一致する必要があります (たとえば `es`、`es-MX`)。
@@ -149,8 +149,8 @@ ms.locfileid: "67135656"
        > [!NOTE]
        > プログラマーが <xref:System.Runtime.Loader.AssemblyLoadContext> からカスタム アセンブリの読み込みコンテキストを派生させた場合、状況は複雑になります。 実行中のアセンブリがカスタム コンテキストに読み込まれた場合、ランタイムによってサテライト アセンブリがカスタム コンテキストに読み込まれます。 このドキュメントでは詳細について説明しません。 「<xref:System.Runtime.Loader.AssemblyLoadContext>」を参照してください。
 
-     * サテライト アセンブリが見つからない場合、<xref:System.Runtime.Loader.AssemblyLoadContext> は <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> イベントを発生させ、サテライト アセンブリが見つからないことを示します。 イベントを処理することを選択した場合、イベント ハンドラーでサテライト アセンブリの参照を読み込んで返すことができます。
-     * まだサテライト アセンブリが見つからない場合は、AssemblyLoadContext は AppDomain に <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> イベントをトリガーさせて、サテライト アセンブリが見つからないことを示します。 イベントを処理することを選択した場合、イベント ハンドラーでサテライト アセンブリの参照を読み込んで返すことができます。
+     - サテライト アセンブリが見つからない場合、<xref:System.Runtime.Loader.AssemblyLoadContext> は <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> イベントを発生させ、サテライト アセンブリが見つからないことを示します。 イベントを処理することを選択した場合、イベント ハンドラーでサテライト アセンブリの参照を読み込んで返すことができます。
+     - まだサテライト アセンブリが見つからない場合は、AssemblyLoadContext は AppDomain に <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> イベントをトリガーさせて、サテライト アセンブリが見つからないことを示します。 イベントを処理することを選択した場合、イベント ハンドラーでサテライト アセンブリの参照を読み込んで返すことができます。
 
 2. サテライト アセンブリが見つかった場合、要求されたリソースのサテライト アセンブリがランタイムによって検索されます。 アセンブリでリソースが見つかると、それを使用します。 リソースが見つからない場合は、検索を続けます。
 

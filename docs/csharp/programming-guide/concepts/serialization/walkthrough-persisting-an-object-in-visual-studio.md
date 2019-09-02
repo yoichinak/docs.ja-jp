@@ -1,12 +1,12 @@
 ---
 title: 'チュートリアル: C# を使用してオブジェクトを永続化する'
 ms.date: 04/26/2018
-ms.openlocfilehash: 85b58e93d667d39800538bb2c29d4ba69146e7f3
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 88fb589ca2f9a24f861b528bfd601f837e9aac5f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975824"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105921"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>チュートリアル: C\# を使用してオブジェクトを永続化する
 
@@ -22,14 +22,14 @@ ms.locfileid: "56975824"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-* ビルドして実行するには、[.NET Core SDK](https://www.microsoft.com/net/core) をインストールします。
+- ビルドして実行するには、[.NET Core SDK](https://www.microsoft.com/net/core) をインストールします。
 
-* コード エディターをまだインストールしていなければ、お気に入りのエディターをインストールしてください。
+- コード エディターをまだインストールしていなければ、お気に入りのエディターをインストールしてください。
 
 > [!TIP]
 > コード エディターをインストールする必要がありますか。 [Visual Studio](https://visualstudio.com/downloads) をお試しください。
 
-* この例では C# 7.3 が必要です。 「[C# 言語のバージョンの選択](../../../language-reference/configure-language-version.md)」を参照してください 
+- この例では C# 7.3 が必要です。 「[C# 言語のバージョンの選択](../../../language-reference/configure-language-version.md)」を参照してください 
 
 オンラインで [.NET サンプルの GitHub リポジトリ](https://github.com/dotnet/samples/tree/master/csharp/serialization)にアクセスしてサンプル コードを確認することができます。
 

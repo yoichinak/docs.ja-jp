@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
-ms.openlocfilehash: b4682d60e213ad57308143b2c7ea06d123daf61d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f788e1732f083c01542fcdacdfc042553741350b
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607495"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204412"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>DataSet と XmlDataDocument の同期
-このセクションでは、<xref:System.Xml.XmlDataDocument> と同期され、厳密に型指定された <xref:System.Data.DataSet> を使用して、注文書を処理する手順の 1 ステップを例に説明します。 以下の例を作成、**データセット**ソース XML ドキュメントの一部だけと一致する最小化されたスキーマを使用します。 例を使用して、 **XmlDataDocument** 、ソース XML ドキュメントの忠実性を保持するために有効にすると、**データセット**XML ドキュメントのサブセットを公開に使用します。  
+このセクションでは、<xref:System.Xml.XmlDataDocument> と同期され、厳密に型指定された <xref:System.Data.DataSet> を使用して、注文書を処理する手順の 1 ステップを例に説明します。 次の例では、ソース XML ドキュメントの一部にのみ一致する、最小化されたスキーマを使用して**データセット**を作成します。 この例では、 **XmlDataDocument**を使用してソース xml ドキュメントの忠実性を維持し、xml ドキュメントのサブセットを公開するために**データセット**を使用できるようにします。  
   
  注文書に関する情報 (顧客情報、発注品目、出荷情報など) をすべて含む XML ドキュメントの例を次に示します。  
   
@@ -109,9 +109,9 @@ ms.locfileid: "61607495"
 </PurchaseOrder>  
 ```  
   
- 前述の XML ドキュメントに含まれている注文書の情報を処理する手順の 1 ステップとして、企業の現在の在庫のデータを使用してこの注文書が処理されます。 企業の倉庫で注文を処理する従業員は、注文書の内容をすべて確認する必要はありません。確認する必要がある情報は、注文書の製品情報だけです。 XML ドキュメントから製品情報のみを公開する、厳密に型指定された作成**データセット**スキーマを持つ製品と数量にマップを注文した XML スキーマ定義言語 (XSD) スキーマとして書き込まれます。 します。 詳細については厳密に型指定**データセット**、オブジェクトを参照してください[型指定されたデータセット](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)します。  
+ 前述の XML ドキュメントに含まれている注文書の情報を処理する手順の 1 ステップとして、企業の現在の在庫のデータを使用してこの注文書が処理されます。 企業の倉庫で注文を処理する従業員は、注文書の内容をすべて確認する必要はありません。確認する必要がある情報は、注文書の製品情報だけです。 XML ドキュメントから製品情報のみを公開するには、XML スキーマ定義言語 (XSD) スキーマとして記述されたスキーマを使用して、厳密に型指定された**データセット**を作成します。このスキーマは、順序付けされた製品と数量にマップされます。 厳密に型指定された**dataset**オブジェクトの詳細については、「[型付き dataset](typed-datasets.md)」を参照してください。  
   
- 次のコードは、元のスキーマ、厳密に型指定された**データセット**このサンプルが生成されます。  
+ 次のコードは、このサンプルの厳密に型指定された**DataSet**の生成元となるスキーマを示しています。  
   
 ```xml  
 <?xml version="1.0" standalone="yes"?>  
@@ -157,11 +157,11 @@ ms.locfileid: "61607495"
 </xs:schema>  
 ```  
   
- 情報だけに注目してください、 **OrderDetails**と**製品**のスキーマ内の元の XML ドキュメントの要素が含まれて、**データセット**します。 同期、**データセット**で、 **XmlDataDocument**に含まれていない要素により、**データセット**XML ドキュメントに保持されます。  
+ **データセット**のスキーマには、元の XML ドキュメントの**OrderDetails**要素と**Products**要素からの情報のみが含まれていることに注意してください。 **Dataset**を**XmlDataDocument**と同期することで、**データセット**に含まれていない要素が XML ドキュメントで保持されるようになります。  
   
- 厳密に型指定と**データセット**XML スキーマから生成された (の名前空間を持つ**Northwind.FillOrder**)、同期することによって、元の XML ドキュメントの一部を公開することができます、 **データセット**で、 **XmlDataDocument**ソース XML ドキュメントから読み込まれます。 注意、**データセット**から生成されたスキーマには、構造がないデータが含まれています。 XML を読み込むときに、データが入力されます、 **XmlDataDocument**します。 読み込もうとした場合、 **XmlDataDocument**と同期されて、**データセット**データが含まれている、例外がスローされます。  
+ XML スキーマから生成された厳密に型指定された**データセット**( **Northwind. fillorder**の名前空間を持つ) を使用して、**データセット**と読み込まれた**XmlDataDocument**を同期して、元の xml ドキュメントの一部を公開できます。ソース XML ドキュメントから。 スキーマから生成されたデータ**セット**には構造が含まれていますが、データは含まれていません。 データは、XML を**XmlDataDocument**に読み込むときに入力されます。 既にデータが含まれているデータ**セット**と同期された**XmlDataDocument**を読み込もうとすると、例外がスローされます。  
   
- 後に、**データセット**(および**XmlDataDocument**) が更新された、 **XmlDataDocument**によって無視された要素を変更した XML ドキュメントを書き込むことができます、**データセット**そのまま次のようです。 注文書の処理手順では、注文品目の入力後に、変更された XML ドキュメントが注文処理の次のステップ (社内の出荷部門) に渡されます。  
+ **データセット**(および**XmlDataDocument**) が更新された後、 **XmlDataDocument**は、次に示すように、**データセット**によって無視された要素を含む変更された XML ドキュメントを書き出すことができます。 注文書の処理手順では、注文品目の入力後に、変更された XML ドキュメントが注文処理の次のステップ (社内の出荷部門) に渡されます。  
   
 ```vb  
 Imports System  
@@ -233,5 +233,5 @@ public class Sample
   
 ## <a name="see-also"></a>関連項目
 
-- [DataSet と XmlDataDocument の同期](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
+- [DataSet と XmlDataDocument の同期](dataset-and-xmldatadocument-synchronization.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

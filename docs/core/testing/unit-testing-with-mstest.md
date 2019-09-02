@@ -5,12 +5,12 @@ author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
 ms.custom: seodec18
-ms.openlocfilehash: 8100add17b61424624f27de705728935f3a1160b
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: ae4ddd4df902cf8c3d50e50614b12af8dc0aebed
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038038"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168168"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>MSTest と .NET Core による単体テスト C#
 
@@ -20,7 +20,7 @@ ms.locfileid: "69038038"
 
 シェル ウィンドウを開きます。 ソリューションを保存するための *unit-testing-using-mstest* というディレクトリを作成します。 この新しいディレクトリ内で [`dotnet new sln`](../tools/dotnet-new.md) を実行して、クラス ライブラリとテスト プロジェクト用の新しいソリューション ファイルを作成します。 次に、*PrimeService* ディレクトリを作成します。 現時点のディレクトリとファイルの構造は次のアウトラインのようになっています。
 
-```
+```console
 /unit-testing-using-mstest
     unit-testing-using-mstest.sln
     /PrimeService
@@ -49,7 +49,7 @@ namespace Prime.Services
 
 次に、*PrimeService.Tests* ディレクトリを作成します。 次の一覧はディレクトリ構造を示したものです。
 
-```
+```console
 /unit-testing-using-mstest
     unit-testing-using-mstest.sln
     /PrimeService
@@ -70,7 +70,7 @@ namespace Prime.Services
 
 テスト プロジェクトには、単体テストを作成して実行するための、他のパッケージが必要です。 前の手順の `dotnet new` により、MSTest SDK、MSTest テスト フレームワーク、MSTest ランナーが追加されました。 ここで、プロジェクトに別の依存関係として `PrimeService` クラス ライブラリを追加します。 次の [`dotnet add reference`](../tools/dotnet-add-reference.md) コマンドを使用します。
 
-```
+```console
 dotnet add reference ../PrimeService/PrimeService.csproj
 ```
 
@@ -78,7 +78,7 @@ dotnet add reference ../PrimeService/PrimeService.csproj
 
 ソリューションの最終的なレイアウトは次のアウトラインのようになります。
 
-```
+```console
 /unit-testing-using-mstest
     unit-testing-using-mstest.sln
     /PrimeService

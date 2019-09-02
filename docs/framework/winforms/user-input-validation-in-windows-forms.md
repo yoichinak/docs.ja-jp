@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: 0a1d6c4c18e658d71f1baf90763e121314ea35d4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7ee99d1b264f508882418c83da8e82759b0d95fa
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916294"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206137"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Windows フォームでのユーザー入力の検証
 ユーザーがアプリケーションにデータを入力するときに、アプリケーションで使用する前にデータが有効であることを確認する必要がある場合があります。 特定のテキストフィールドの長さがゼロでないこと、フィールドが電話番号またはその他の整形式のデータとして書式設定されていること、または、データベースのセキュリティを侵害するために使用できる安全でない文字が文字列に含まれていないことが必要になる場合があります。 Windows フォームには、アプリケーションの入力を検証するためのいくつかの方法が用意されています。  
@@ -85,7 +85,7 @@ ms.locfileid: "69916294"
   
 - プログラムによっ<xref:System.Windows.Forms.Form.Close%2A>てメソッドを呼び出します。  
   
- ただし、場合によっては、コントロールの値が有効かどうかに関係なく、ユーザーがフォームを閉じることが必要になることがあります。 フォームの<xref:System.Windows.Forms.Form.Closing>イベントのハンドラーを作成することにより、検証をオーバーライドして、無効なデータがまだ含まれているフォームを閉じることができます。 イベントで、 <xref:System.ComponentModel.CancelEventArgs.Cancel%2A>プロパティをに`false`設定します。 これにより、フォームが強制的に閉じられます。 使用例を含む詳細については、「<xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>」を参照してください。  
+ ただし、場合によっては、コントロールの値が有効かどうかに関係なく、ユーザーがフォームを閉じることが必要になることがあります。 フォームの<xref:System.Windows.Forms.Form.FormClosing>イベントのハンドラーを作成することにより、検証をオーバーライドして、無効なデータがまだ含まれているフォームを閉じることができます。 イベントで、 <xref:System.ComponentModel.CancelEventArgs.Cancel%2A>プロパティをに`false`設定します。 これにより、フォームが強制的に閉じられます。 使用例を含む詳細については、「<xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>」を参照してください。  
   
 > [!NOTE]
 > フォームがこのように強制的に閉じられるようにすると、フォームのコントロールに保存されていないデータはすべて失われます。 また、モーダルフォームは、コントロールが閉じられたときに、その内容を検証しません。 コントロールの検証を引き続き使用してコントロールにフォーカスを移すことはできますが、フォームの終了に関連する動作について心配する必要はありません。  
@@ -93,7 +93,7 @@ ms.locfileid: "69916294"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
-- <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>
-- <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.FormClosingEventArgs?displayProperty=nameWithType>
 - [MaskedTextBox コントロール](./controls/maskedtextbox-control-windows-forms.md)
 - [正規表現の例](../../standard/base-types/regular-expression-examples.md)

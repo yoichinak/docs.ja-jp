@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 21266130bd44d45d03f85cdeee9480b7a9944b55
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 303d6790f1e4a42b021de3a214e3e7b44e1a4320
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876931"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104626"
 ---
 # <a name="contributing"></a>コントリビューション
 
@@ -15,10 +15,10 @@ ms.locfileid: "65876931"
 
 このドキュメントでは、[.NET ドキュメント サイト](https://docs.microsoft.com/dotnet)でホストされる記事とコード サンプルを投稿するためのプロセスについて説明します。 投稿には、誤字の修正のような簡単なものから、新しい記事のような複雑なものまであります。
 
-* [投稿のプロセス](#process-for-contributing)
-* [C# の対話型エクスペリエンス](#the-c-interactive-experience)
-* [注意事項](#dos-and-donts)
-* [共同作成者ライセンス条項](#contributor-license-agreement)
+- [投稿のプロセス](#process-for-contributing)
+- [C# の対話型エクスペリエンス](#the-c-interactive-experience)
+- [注意事項](#dos-and-donts)
+- [共同作成者ライセンス条項](#contributor-license-agreement)
 
 このリポジトリには、.NET の概念に関するドキュメントが含まれています。 .NET ドキュメント サイトは、このリポジトリに加え、次の複数のリポジトリで構築されています。
 
@@ -35,7 +35,7 @@ ms.locfileid: "65876931"
 **手順 1:** 少しの変更の場合 (たとえば、入力ミスを修正する場合や、すぐに pull request を開いてドキュメント内に見つけた問題に対処する場合) は、この手順をスキップします。 新しいコンテンツを書き込んだり、既存のコンテンツを完全に改訂したりすることに興味がある場合は、自分が何をしたいかを説明する[問題](https://github.com/dotnet/docs/issues)を開きます。
 **docs** フォルダーのコンテンツはセクションで構成され、それらが目次 (TOC) に反映されます。 TOC のどこにトピックを配置するかを明確にします。 提案に対するフィードバックを得ます。
 
-- または -
+または
 
 コミュニティへの投稿が歓迎されている既存の問題から選択することもできます。 [Projects for .NET Community contributors](https://github.com/dotnet/docs/projects/35) (.NET コミュニティへの投稿者向けのプロジェクト) に、コミュニティへの投稿者が利用できる多くの作業項目が一覧で示されています。 自分の興味と責任のレベルに応じて、次のカテゴリに属する問題から選択できます。
 
@@ -49,7 +49,7 @@ ms.locfileid: "65876931"
 
 **手順 2:** 必要に応じて、`dotnet/docs`、`dotnet/samples`、または `dotnet/dotnet-api-docs` リポジトリをフォークして、変更を行うためのブランチを作成します。
 
-小さな変更の場合は、GitHub の Web インターフェイスを使用できます。 変更したいファイルの **[Edit the file in your fork of this project]**(このプロジェクトの自分のフォーク内でこのファイルを編集する) をクリックするだけです。 変更を送信すると、GitHub によって、専用の新しいブランチが作成されます。
+小さな変更の場合は、GitHub の Web インターフェイスを使用できます。 変更したいファイルの **[Edit the file in your fork of this project]** (このプロジェクトの自分のフォーク内でこのファイルを編集する) をクリックするだけです。 変更を送信すると、GitHub によって、専用の新しいブランチが作成されます。
 
 **手順 3:** この新しいブランチで変更を行います。
 
@@ -119,7 +119,7 @@ Microsoft では、リポジトリ内に存在するコードを次のように�
 
 ## <a name="the-c-interactive-experience"></a>C# の対話型エクスペリエンス
 
-C# で記述された短いサンプル コードでは、`csharp-interactive` 言語タグを使用して、ブラウザーで実行される C# のサンプルを指定できます  (インライン コード サンプルでは `csharp-interactive` タグを使用し、ソースから含まれるスニペットでは `code-csharp-interactive` タグを使用します)。これらのコード サンプルでは、記事内の コード ウィンドウと出力ウィンドウが表示されます。 ユーザーがサンプルを実行すると、対話型コードの実行による出力が出力ウィンドウに表示されます。 
+C# で記述された短いサンプル コードでは、`csharp-interactive` 言語タグを使用して、ブラウザーで実行される C# のサンプルを指定できます (インライン コード サンプルでは `csharp-interactive` タグを使用し、ソースから含まれるスニペットでは `code-csharp-interactive` タグを使用します)。これらのコード サンプルでは、記事内の コード ウィンドウと出力ウィンドウが表示されます。 ユーザーがサンプルを実行すると、対話型コードの実行による出力が出力ウィンドウに表示されます。 
 
 C# の対話型エクスペリエンスでは、サンプルの操作方法が変わります。 訪問者は、サンプルを実行して結果を確認できます。 サンプルまたは対応するテキストに出力に関する情報を含める必要があるかどうかを判断するために役立つさまざまな要素があります。
 

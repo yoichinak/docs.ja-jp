@@ -14,12 +14,12 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: 0e8548745768bc9137e8fc76f86fc9fc7982b8de
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: e6c912f5ff9590f3b8cbb0f7e3f88e08fa9dd556
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "68616352"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106908"
 ---
 # <a name="metadata-and-markdown-template"></a>メタデータとマークダウン テンプレート
 
@@ -61,12 +61,12 @@ ms.locfileid: "68616352"
 
 ファイル名には次の規則を使用します。
 
-* 小文字、数字、ハイフンのみを使用する。
-* スペースや句読点を使用しない。 ハイフンを使用して、ファイル名の単語と数字を区切る。
-* develop (開発)、buy (購入)、build (ビルド)、troubleshoot (トラブルシューティング) など、具体的な動作動詞を使用する。 -ing 形の語は使用しません。
-* 小さな単語を使用しない。a、and、the、in、or などは含めません。
-* マークダウンで記述し、.md ファイル拡張子を使用する必要がある。
-* ファイル名を極力短くする。 記事の URL の一部となるためです。
+- 小文字、数字、ハイフンのみを使用する。
+- スペースや句読点を使用しない。 ハイフンを使用して、ファイル名の単語と数字を区切る。
+- develop (開発)、buy (購入)、build (ビルド)、troubleshoot (トラブルシューティング) など、具体的な動作動詞を使用する。 -ing 形の語は使用しません。
+- 小さな単語を使用しない。a、and、the、in、or などは含めません。
+- マークダウンで記述し、.md ファイル拡張子を使用する必要がある。
+- ファイル名を極力短くする。 記事の URL の一部となるためです。
 
 ## <a name="headings"></a>見出し
 
@@ -244,22 +244,22 @@ UID に特殊文字 \`、\# または \* が含まれる場合、UID 値はそ�
 [!code-<language>[<name>](<pathToFile><queryoption><queryoptionvalue>)]
 ```
 
-* `-<language>` ("*省略可能*" ですが、使用が "*推奨*" されます)
-  * 参照されるコード スニペットの言語。 サポートされる値のリストについては、「[サポートされる言語](#supported-languages)」をご覧ください。
+- `-<language>` ("*省略可能*" ですが、使用が "*推奨*" されます)
+  - 参照されるコード スニペットの言語。 サポートされる値のリストについては、「[サポートされる言語](#supported-languages)」をご覧ください。
 
-* `<name>` ("*省略可能*")
-  * コード スニペットの名前。 出力 HTML には影響を与えませんが、使用すると、マークダウン ソースの読みやすさを向上できます。
+- `<name>` ("*省略可能*")
+  - コード スニペットの名前。 出力 HTML には影響を与えませんが、使用すると、マークダウン ソースの読みやすさを向上できます。
 
-* `<pathToFile>` ("*必須*")
-  * 参照するコード スニペット ファイルを示す、ファイルシステム内の相対パス。
+- `<pathToFile>` ("*必須*")
+  - 参照するコード スニペット ファイルを示す、ファイルシステム内の相対パス。
 
-* `<queryoption>` および `<queryoptionvalue>` ("*省略可能*")
-  * ファイルからコードを取得する方法を指定するために一緒に使用します。
-    * `#`: `#L{startlinenumber}-L{endlinenumber}` (行の範囲) "*または*" `#{tagname}` (タグ名)。
+- `<queryoption>` および `<queryoptionvalue>` ("*省略可能*")
+  - ファイルからコードを取得する方法を指定するために一緒に使用します。
+    - `#`: `#L{startlinenumber}-L{endlinenumber}` (行の範囲) "*または*" `#{tagname}` (タグ名)。
     行番号は変動するため、使用はお勧めしません。 コード スニペットの参照方法としては、タグ名が推奨されます。
-    * `range`:`?range=1,3-5` 行の範囲。 この例では、行 1、3、4、5 が含まれます。
-    * `dedent`:`?dedent=8` スペースの数だけ、行のインデントを解除します。この例では 8 です。 これは、ファイルの行のサブセットを選択する、`range` やその他のクエリ オプションと組み合わせることができます。
-    * `outdent`:`?outdent=8` スペースの数だけ、行のインデントを戻します。この例では 8 です。 これは、ファイルの行のサブセットを選択する、`range` やその他のクエリ オプションと組み合わせることができます。
+    - `range`:`?range=1,3-5` 行の範囲。 この例では、行 1、3、4、5 が含まれます。
+    - `dedent`:`?dedent=8` スペースの数だけ、行のインデントを解除します。この例では 8 です。 これは、ファイルの行のサブセットを選択する、`range` やその他のクエリ オプションと組み合わせることができます。
+    - `outdent`:`?outdent=8` スペースの数だけ、行のインデントを戻します。この例では 8 です。 これは、ファイルの行のサブセットを選択する、`range` やその他のクエリ オプションと組み合わせることができます。
 
 可能な限り、タグ名オプションを使用することをお勧めします。 タグ名は、領域の名前、またはソース コードに存在する `Snippettagname` 形式のコード コメントの名前です。 次の例は、タグ名 `1` を参照する方法を示します。
 
@@ -448,11 +448,11 @@ Include を使用して、あるファイルのマークダウンを別のファ
 リストには、カスタム スタイルを使用できます。 緑色のチェック マークが付けられたリストを表示できます。
 
 > [!div class="checklist"]
-> * .NET Core アプリの作成方法
-> * Microsoft.XmlSerializer.Generator パッケージへの参照を追加する方法
-> * MyApp.csproj を編集して依存関係を追加する方法
-> * クラスと XmlSerializer を追加する方法
-> * アプリケーションをビルドして実行する方法
+> - .NET Core アプリの作成方法
+> - Microsoft.XmlSerializer.Generator パッケージへの参照を追加する方法
+> - MyApp.csproj を編集して依存関係を追加する方法
+> - クラスと XmlSerializer を追加する方法
+> - アプリケーションをビルドして実行する方法
 
 使用中のチェックされたリストの例は、[.NET Core ドキュメント](https://docs.microsoft.com/dotnet/core/additional-tools/xml-serializer-generator)で確認できます。
 

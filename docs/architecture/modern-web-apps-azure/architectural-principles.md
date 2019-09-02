@@ -4,12 +4,12 @@ description: ASP.NET Core および Azure での最新の Web アプリケーシ
 author: ardalis
 ms.author: wiwagn
 ms.date: 02/16/2019
-ms.openlocfilehash: 74ff7196ce17807b98a975687a524041f15a7f5b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 93a0fd5c484e27853ec9a6919aa573f68471ceaa
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675579"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105484"
 ---
 # <a name="architectural-principles"></a>アーキテクチャの原則
 
@@ -101,8 +101,8 @@ ms.locfileid: "68675579"
 
 ## <a name="additional-resources"></a>その他の技術情報
 
-* [Java の設計パターン: 原則](https://java-design-patterns.com/principles/)
-* [境界付けられたコンテキスト](https://martinfowler.com/bliki/BoundedContext.html)
+- [Java の設計パターン: 原則](https://java-design-patterns.com/principles/)
+- [境界付けられたコンテキスト](https://martinfowler.com/bliki/BoundedContext.html)
 
 >[!div class="step-by-step"]
 >[前へ](choose-between-traditional-web-and-single-page-apps.md)

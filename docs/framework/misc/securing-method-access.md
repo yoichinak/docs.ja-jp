@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e981d75ead5ec2e7f95a854da8c0fa42f476d9da
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1157d93585a564f83bf3809ba2fc3a26949fb711
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910789"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206117"
 ---
 # <a name="securing-method-access"></a>メソッド アクセスの保護
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -40,7 +40,7 @@ ms.locfileid: "69910789"
   
 - 特定のメソッドをオーバーライドする派生クラスに、特定の ID またはアクセス許可を要求します。  
   
- 呼び出し元に特定の厳密な名前による署名を要求することによってアクセスを制限し、パブリック クラスの保護に役立つ方法の例を次に示します。 この例では<xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> 、厳密な名前の**要求**でを使用します。 厳密な名前でアセンブリに署名する方法についてのタスクベースの情報については、「厳密な名前[付きアセンブリの作成と使用](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)」を参照してください。  
+ 呼び出し元に特定の厳密な名前による署名を要求することによってアクセスを制限し、パブリック クラスの保護に役立つ方法の例を次に示します。 この例では<xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> 、厳密な名前の**要求**でを使用します。 厳密な名前でアセンブリに署名する方法についてのタスクベースの情報については、「厳密な名前[付きアセンブリの作成と使用](../app-domains/create-and-use-strong-named-assemblies.md)」を参照してください。  
   
 ```vb  
 <StrongNameIdentityPermissionAttribute(SecurityAction.Demand, PublicKey := "…hex…", Name := "App1", Version := "0.0.0.0")>  _  
@@ -60,9 +60,9 @@ public class Class1
  このセクションで示す宣言を使用すると、特定のクラスとメソッド、およびプロパティとイベントが部分的な信頼のコードによって使用されるのを防ぐことができます。 これらの宣言をクラスに適用すると、すべてのメソッド、プロパティ、イベントが保護されますが、フィールドへのアクセスは宣言セキュリティの影響を受けないため、注意が必要です。 また、リンク確認要求は直前の呼び出し元に対して保護できるようにするだけで、攻撃を受ける可能性が残っています。  
   
 > [!NOTE]
-> 新しい透過性モデルは .NET Framework 4 で導入されました。 [透過的セキュリティコード、レベル 2](../../../docs/framework/misc/security-transparent-code-level-2.md)モデルは、 <xref:System.Security.SecurityCriticalAttribute>属性を使用してセキュリティで保護されたコードを識別します。 セキュリティ クリティカル コードでは、呼び出し元と継承先の両方が完全に信頼されていることが必要です。 .NET Framework の以前のバージョンのコード アクセス セキュリティ規則で実行されているアセンブリは、レベル 2 のアセンブリを呼び出すことができます。 この場合、セキュリティ クリティカル属性は、完全な信頼のためのリンク確認要求として扱われます。  
+> 新しい透過性モデルは .NET Framework 4 で導入されました。 [透過的セキュリティコード、レベル 2](security-transparent-code-level-2.md)モデルは、 <xref:System.Security.SecurityCriticalAttribute>属性を使用してセキュリティで保護されたコードを識別します。 セキュリティ クリティカル コードでは、呼び出し元と継承先の両方が完全に信頼されていることが必要です。 .NET Framework の以前のバージョンのコード アクセス セキュリティ規則で実行されているアセンブリは、レベル 2 のアセンブリを呼び出すことができます。 この場合、セキュリティ クリティカル属性は、完全な信頼のためのリンク確認要求として扱われます。  
   
- 厳密な名前が付けられたアセンブリでは、すべてのパブリックにアクセスできるメソッド、プロパティ、およびイベントに[LinkDemand](../../../docs/framework/misc/link-demands.md)が適用され、完全に信頼された呼び出し元に対して使用が制限されます。 この機能を無効にするには、<xref:System.Security.AllowPartiallyTrustedCallersAttribute> 属性を適用する必要があります。 このため、信頼関係のない呼び出し元を除外するクラスを明示的に指定することは、署名のないアセンブリまたはこの属性を持つアセンブリだけに必要です。これらの宣言を使用して、信頼関係のない呼び出し元からの利用を想定していない型のサブセットをマークできます。  
+ 厳密な名前が付けられたアセンブリでは、すべてのパブリックにアクセスできるメソッド、プロパティ、およびイベントに[LinkDemand](link-demands.md)が適用され、完全に信頼された呼び出し元に対して使用が制限されます。 この機能を無効にするには、<xref:System.Security.AllowPartiallyTrustedCallersAttribute> 属性を適用する必要があります。 このため、信頼関係のない呼び出し元を除外するクラスを明示的に指定することは、署名のないアセンブリまたはこの属性を持つアセンブリだけに必要です。これらの宣言を使用して、信頼関係のない呼び出し元からの利用を想定していない型のサブセットをマークできます。  
   
  クラスおよびメンバーを信頼関係のないコードによって使用されるのを防ぐ方法の例を次に示します。  
   

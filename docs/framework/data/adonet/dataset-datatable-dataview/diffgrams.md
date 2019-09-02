@@ -2,17 +2,17 @@
 title: DiffGrams
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: 2bf736445a041ec678ab30474da51fddfba1773b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b9e6fb4ce1c2c7ee7d081a1cb2106d30960853c7
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934477"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204880"
 ---
 # <a name="diffgrams"></a>DiffGrams
 DiffGram は、データ要素の現在のバージョンと元のバージョンを識別する XML 形式です。 <xref:System.Data.DataSet> では、 の内容を読み込んで永続化するため、およびネットワーク接続経由で転送する場合にこの内容をシリアル化するために、DiffGram 形式が使用されます。 が diffgram として書き込まれると、のスキーマで<xref:System.Data.DataSet>はなく、コンテンツを正確に再作成するために必要なすべての情報が diffgram に挿入されます。ただし、**元**の列と<xref:System.Data.DataSet> **現在**の行のバージョン、行のエラー情報、および行の順序。  
   
- XML Web サービスから <xref:System.Data.DataSet> を送信または取得するときには、DiffGram 形式が暗黙的に使用されます。 また、ReadXml メソッドを使用して<xref:System.Data.DataSet> xml からのコンテンツを読み込むとき、または WriteXml メソッドを使用<xref:System.Data.DataSet>してのコンテンツを xml で書き込むときに、コンテンツを DiffGram として読み取るか書き込むように指定できます。 詳細については、「 [xml からの dataset の読み込み](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)」と「 [xml データとしての dataset の内容の書き込み](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)」を参照してください。  
+ XML Web サービスから <xref:System.Data.DataSet> を送信または取得するときには、DiffGram 形式が暗黙的に使用されます。 また、ReadXml メソッドを使用して<xref:System.Data.DataSet> xml からのコンテンツを読み込むとき、または WriteXml メソッドを使用<xref:System.Data.DataSet>してのコンテンツを xml で書き込むときに、コンテンツを DiffGram として読み取るか書き込むように指定できます。 詳細については、「 [xml からの dataset の読み込み](loading-a-dataset-from-xml.md)」と「 [xml データとしての dataset の内容の書き込み](writing-dataset-contents-as-xml-data.md)」を参照してください。  
   
  .NET Framework では、DiffGram 形式は主に <xref:System.Data.DataSet> の内容をシリアル化するときの形式として使用されますが、Microsoft SQL Server データベース内のテーブル データを変更するときにも DiffGrams を使用できます。  
   
@@ -133,8 +133,8 @@ DiffGram は、データ要素の現在のバージョンと元のバージョ�
   
 ## <a name="see-also"></a>関連項目
 
-- [DataSet での XML の使用](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [XML からの DataSet の読み込み](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [DataSet 内容の XML データとしての書き込み](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)
-- [DataSet、DataTable、および DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [DataSet での XML の使用](using-xml-in-a-dataset.md)
+- [XML からの DataSet の読み込み](loading-a-dataset-from-xml.md)
+- [DataSet 内容の XML データとしての書き込み](writing-dataset-contents-as-xml-data.md)
+- [DataSet、DataTable、および DataView](index.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

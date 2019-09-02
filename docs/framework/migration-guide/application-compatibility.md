@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 154640499e99767f73a148c6980e6a2a4cfbce2f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 56f0ebccc1bd46a26b5247ac2668e963cbeac828
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623787"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106479"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>.NET Framework のアプリケーションの互換性
 
@@ -22,15 +22,15 @@ ms.locfileid: "64623787"
 
 各アプリは .NET Framework の特定のバージョンをターゲットとします。バージョンは次の方法で指定することができます。
 
-* Visual Studio でターゲット フレームワークを定義する。
-* プロジェクト ファイルでターゲット フレームワークを指定する。
-* <xref:System.Runtime.Versioning.TargetFrameworkAttribute> をソース コードに適用する。
+- Visual Studio でターゲット フレームワークを定義する。
+- プロジェクト ファイルでターゲット フレームワークを指定する。
+- <xref:System.Runtime.Versioning.TargetFrameworkAttribute> をソース コードに適用する。
 
 ターゲットに指定されたバージョンより新しいバージョンでアプリが実行されると、.NET Framework は後方互換動作によって、ターゲットに指定されている古いバージョンを模倣します。 つまり、アプリは、Framework の新しいバージョンで実行されていても、古いバージョンで実行されているように機能します。 .NET Framework のバージョン間の互換性の問題の多くは、この後方互換モデルを通して対応されます。 アプリケーションがターゲットとする .NET Framework のバージョンは、コードが実行されているアプリケーション ドメインのエントリ アセンブリのターゲット バージョンによって決まります。 そのアプリケーション ドメインに読み込まれたすべての追加アセンブリは、その .NET Framework バージョンをターゲットとします。 たとえば、実行可能ファイルの場合、実行可能ファイルのターゲットとなるフレームワークは、その AppDomain 内のすべてのアセンブリが実行される互換モードになります。
 
 ## <a name="runtime-changes"></a>ランタイムの変更
 
-ランタイムの問題とは、コンピューターに新しいランタイムを配置し前と同じバイナリを実行したが動作が異なっている場合に発生する問題です。 バイナリが .NET Framework 4.0 向けにコンパイルされている場合、そのバイナリは .NET Framework 4.5 以降のバージョンでは .NET Framework 4.0 互換モードで実行されます。 4.5 に影響する変更の多くは、4.0 向けにコンパイルされたバイナリには影響しません。 これは、AppDomain に固有のものであり、入力アセンブリの設定内容によって異なります。
+ランタイムの問題とは、コンピューターに新しいランタイムを配置し前と同じバイナリを実行したが動作が異なっている場合に発生する問題です。 バイナリが .NET Framework 4.0 向けにコンパイルされている場合、そのバイナリは .NET Framework 4.5 以降のバージョンでは .NET Framework 4.0 互換モードで実行されます。 4\.5 に影響する変更の多くは、4.0 向けにコンパイルされたバイナリには影響しません。 これは、AppDomain に固有のものであり、入力アセンブリの設定内容によって異なります。
 
 ## <a name="retargeting-changes"></a>変更の再ターゲット
 
@@ -71,8 +71,8 @@ ms.locfileid: "64623787"
 ## <a name="usage"></a>使用法
 開始するには、以下の中から互換性の変更の種類を選択します。
 
-* [変更の再ターゲット](./retargeting/index.md)
-* [ランタイムの変更点](./runtime/index.md)
+- [変更の再ターゲット](./retargeting/index.md)
+- [ランタイムの変更点](./runtime/index.md)
 
 ## <a name="see-also"></a>関連項目
 

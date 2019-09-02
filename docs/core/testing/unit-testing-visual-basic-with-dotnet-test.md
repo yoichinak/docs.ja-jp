@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: e8d5b565bc04a0beb30142247b4ee8d94dcce86b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 867b6e3c9c647cd302b0635de1d02573485e89c7
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626441"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168255"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-xunit"></a>dotnet テストと xUnit を使用した Visual Basic .NET Core ライブラリでの単体テスト
 
@@ -22,7 +22,7 @@ ms.locfileid: "68626441"
 この新しいディレクトリ内で [`dotnet new sln`](../tools/dotnet-new.md) を実行して、ソリューションを新たに作成します。 こうすることで、クラス ライブラリと単体テスト プロジェクトの両方を管理しやすくなります。
 ソリューションのディレクトリ内で、*PrimeService* ディレクトリを作成します。 現時点のディレクトリとファイルの構造は次のようになっています。
 
-```
+```console
 /unit-testing-using-dotnet-test
     unit-testing-using-dotnet-test.sln
     /PrimeService
@@ -46,7 +46,7 @@ End Namespace
 
 次に、*PrimeService.Tests* ディレクトリを作成します。 次の一覧はディレクトリ構造を示したものです。
 
-```
+```console
 /unit-testing-vb-using-dotnet-test
     unit-testing-vb-using-dotnet-test.sln
     /PrimeService
@@ -67,7 +67,7 @@ End Namespace
 
 テスト プロジェクトには、単体テストを作成して実行するための、他のパッケージが必要です。 前の手順の `dotnet new` によって、xUnit と xUnit ランナーが追加されています。 ここで、プロジェクトに別の依存関係として `PrimeService` クラス ライブラリを追加します。 次の [`dotnet add reference`](../tools/dotnet-add-reference.md) コマンドを使用します。
 
-```
+```console
 dotnet add reference ../PrimeService/PrimeService.vbproj
 ```
 
@@ -75,7 +75,7 @@ dotnet add reference ../PrimeService/PrimeService.vbproj
 
 フォルダーの最終的なレイアウトは次のようになります。
 
-```
+```console
 /unit-testing-using-dotnet-test
     unit-testing-using-dotnet-test.sln
     /PrimeService

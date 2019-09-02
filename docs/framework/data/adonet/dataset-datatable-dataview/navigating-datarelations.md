@@ -5,28 +5,28 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e673f4-9b44-45ae-aaea-c504d1cc5d3e
-ms.openlocfilehash: f4dfccad23bf5d15f5cbd0a33e76a136417e13ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b7b1717317bb119538497f60bae48ec1da2286c8
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607265"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203325"
 ---
 # <a name="navigating-datarelations"></a>DataRelation の移動
-<xref:System.Data.DataRelation> の主な機能の 1 つは、<xref:System.Data.DataTable> の 1 つの <xref:System.Data.DataSet> から別の  を移動できることです。 すべてを取得することができます、関連する<xref:System.Data.DataRow>にあるオブジェクトの**DataTable**指定されると、1 つ**DataRow**関連から**DataTable**。 確立した後など、 **DataRelation**を使用して特定の顧客行のすべての注文行を取得する顧客のテーブルと orders のテーブルでは、間**GetChildRows**。  
+<xref:System.Data.DataRelation> の主な機能の 1 つは、<xref:System.Data.DataTable> の 1 つの <xref:System.Data.DataSet> から別の  を移動できることです。 これにより、関連する**datatable**から<xref:System.Data.DataRow> 1 つの**DataRow**が渡されたときに、1つの**datatable**内のすべての関連オブジェクトを取得できます。 たとえば、customers テーブルと orders テーブルの間に**DataRelation**を確立した後、 **GetChildRows**を使用して特定の顧客行のすべての注文行を取得できます。  
   
- 次のコード例を作成、 **DataRelation**間、**顧客**テーブルおよび**注文**のテーブルを**データセット**を返します各顧客のすべての注文します。  
+ 次のコード例では、 **Customers**テーブルと**データセット**の**Orders**テーブルの間に**DataRelation**を作成し、各顧客のすべての注文を返します。  
   
  [!code-csharp[DataWorks Data.DataTableRelation#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks Data.DataTableRelation/CS/source.cs#1)]
  [!code-vb[DataWorks Data.DataTableRelation#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.DataTableRelation/VB/source.vb#1)]  
   
- 上記の例に基づいて、4 つのテーブルを相互に関連付け、そのテーブルのリレーションシップ間を移動する例を次に示します。 前の例のように**CustomerID**関連、**顧客**テーブル、**注文**テーブル。 顧客ごとに、**顧客**テーブル内のすべての子行、**注文**特定の顧客が注文の数を返すために、テーブルが決定され、その**OrderID**値。  
+ 上記の例に基づいて、4 つのテーブルを相互に関連付け、そのテーブルのリレーションシップ間を移動する例を次に示します。 前の例と同様に、 **CustomerID**は**Customers**テーブルを**Orders**テーブルに関連付けます。 **Customers**テーブルの顧客ごとに、 **orders**テーブル内のすべての子行が決定され、特定の顧客が持つ注文の数とその**OrderID**値が返されます。  
   
- 展開された例もから値を返します、 **OrderDetails**と**製品**テーブル。 **注文**テーブルに関連する、 **OrderDetails**テーブルを使用して**OrderID**を決める際に、各顧客の注文、どのような製品と数量を注文しました。 **OrderDetails**テーブルにはのみが含まれています、 **ProductID**注文の製品の**OrderDetails**に関連する**製品**使用して**ProductID**を返すために、 **ProductName**します。 このリレーションで、**製品**テーブルが親と**Order Details**テーブルが子。 その結果、反復処理時、 **OrderDetails**テーブル**GetParentRow**取得、関連するために呼び出される**ProductName**値。  
+ 展開された例では、 **OrderDetails**テーブルと**Products**テーブルからも値が返されます。 **Orders**テーブルは、 **OrderID**を使用して**OrderDetails**テーブルに関連付けられており、顧客の注文ごとに、どの製品と数量が注文されたかを判断します。 **OrderDetails**テーブルに含まれるのは注文済み製品の**productid**のみであるため、 **OrderDetails**は ProductName を使用する**製品**に関連付けられ、 **ProductName**が返されます。 このリレーションシップでは、 **Products**テーブルが親であり、 **Order Details**テーブルが子です。 その結果、 **OrderDetails**テーブルを反復処理するときに、 **GetParentRow**が呼び出され、関連する**ProductName**の値が取得されます。  
   
- された場合、 **DataRelation**用に作成、**顧客**と**注文**テーブル、値が指定されていない、 **createConstraints**フラグ (既定値は**true**)。 これですべての行、**注文**テーブルが、 **CustomerID** 、親が存在する値**顧客**テーブル。 場合、 **CustomerID**内に存在する、**注文**テーブルに存在しない、**顧客**、テーブル、<xref:System.Data.ForeignKeyConstraint>例外がスローされます。  
+ **Customers**テーブルと**Orders**テーブルに対して**DataRelation**が作成された場合、 **createConstraints**フラグに値が指定されていないことに注意してください (既定値は**true**です)。 これは、 **Orders**テーブルのすべての行に、親**Customers**テーブルに存在する**CustomerID**値があることを前提としています。 Customers テーブルに存在しない**Orders**テーブルに**CustomerID**が存在する場合 、によって例外がスローされます。<xref:System.Data.ForeignKeyConstraint>  
   
- 子の列には、親列を含まない値が含まれます、設定、 **createConstraints**フラグを**false**を追加するとき、 **DataRelation**します。 例では、 **createConstraints**にフラグが設定されている**false**の**DataRelation**間、**注文**テーブルと、 **OrderDetails**テーブル。 これにより、アプリケーションからのすべてのレコードを返す、 **OrderDetails**テーブルとレコードのサブセットのみ、**注文**せず、実行時に例外を生成するテーブル。 展開された例では、次の形式で出力が生成されます。  
+ 子列に親列に含まれていない値が含まれている可能性がある場合は、 **DataRelation**を追加するときに**createConstraints**フラグを**false**に設定します。 この例では、 **Orders**テーブルと**OrderDetails**テーブルの間の**DataRelation**に対して**createConstraints**フラグが**false**に設定されています。 これにより、アプリケーションは**OrderDetails**テーブルからすべてのレコードを返すことができ、実行時の例外を生成することなく**Orders**テーブルのレコードのサブセットのみを返すことができます。 展開された例では、次の形式で出力が生成されます。  
   
 ```  
 Customer ID: NORTS  
@@ -44,12 +44,12 @@ Customer ID: NORTS
           Quantity: 3  
 ```  
   
- 次のコード例は、展開された例場所からの値、 **OrderDetails**と**製品**内のレコードのサブセットのみをテーブルが返されます、**注文**返されるテーブル。  
+ 次のコード例は、返される**Orders**テーブル内のレコードのサブセットだけを使用して、 **OrderDetails**テーブルと**Products**テーブルの値が返される、拡張されたサンプルです。  
   
  [!code-csharp[DataWorks Data.DataTableNavigation#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks Data.DataTableNavigation/CS/source.cs#1)]
  [!code-vb[DataWorks Data.DataTableNavigation#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.DataTableNavigation/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [DataSet、DataTable、および DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [DataSet、DataTable、および DataView](index.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

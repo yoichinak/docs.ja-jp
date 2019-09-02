@@ -2,12 +2,12 @@
 title: 既定の段落スタイルの検索 (C#)
 ms.date: 07/20/2015
 ms.assetid: be102177-8ab0-444a-b671-7023e555ffdb
-ms.openlocfilehash: 702d3906f51b996f59dcd15067702b6de07c60a5
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 45a3e293a88fc0d7fc6aa70d21d1d3a6a8bb9b13
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594365"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204106"
 ---
 # <a name="finding-the-default-paragraph-style-c"></a>既定の段落スタイルの検索 (C#)
 「WordprocessingML ドキュメント内の情報の操作」チュートリアルでの最初のタスクは、ドキュメント内にある段落の既定のスタイルを検索することです。  
@@ -76,10 +76,10 @@ string defaultStyle =
 Console.WriteLine("The default style is: {0}", defaultStyle);  
 ```  
   
-### <a name="comments"></a>説明  
+### <a name="comments"></a>コメント  
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```output  
 The default style is: Normal  
 ```  
   
@@ -87,4 +87,3 @@ The default style is: Normal
  次の例では、ドキュメント内のすべての段落およびそのスタイルを検索する同様のクエリを記述します。  
   
 - [段落とそのスタイルの取得 (C#)](./retrieving-the-paragraphs-and-their-styles.md)  
-  

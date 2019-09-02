@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: eecf9d78-60e3-4fdc-8de0-e56c13a89414
-ms.openlocfilehash: b56d2f8cd46f3184f1001c8bd6a70dbfc4968968
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 64ba7a8e6bd6361e14d1f16576e377575b088bbe
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937030"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205142"
 ---
 # <a name="creating-a-datatable"></a>DataTable の作成
 <xref:System.Data.DataTable> は 1 つのインメモリ リレーショナル データのテーブルを表します。DataTable は単独で作成および使用することも、他の .NET Framework オブジェクトから <xref:System.Data.DataSet> のメンバーとして使用することもできます。  
@@ -53,8 +53,8 @@ DataTable customersTable = customers.Tables.Add("CustomersTable");
 
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataTableCollection>
-- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
-- [DataAdapter からの DataSet の読み込み](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)
-- [XML からの DataSet の読み込み](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [XML の DataSet スキーマ情報の読み込み](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
+- [DataTables](datatables.md)
+- [DataAdapter からの DataSet の読み込み](../populating-a-dataset-from-a-dataadapter.md)
+- [XML からの DataSet の読み込み](loading-a-dataset-from-xml.md)
+- [XML の DataSet スキーマ情報の読み込み](loading-dataset-schema-information-from-xml.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -4,12 +4,12 @@ description: ASP.NET Core および Azure での最新の Web アプリケーシ
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: fd804176a7579fe7c5e226bf5b4feb457cb2df14
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 9f8c9c47757379d641b821f312b89666456343d4
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971203"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105464"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC アプリを開発する
 
@@ -43,7 +43,7 @@ ASP.NET Core アプリの中心となる機能は、受信した要求を送信�
 ASP.NET Core MVC アプリは、規則ルートと属性ルートのどちらか一方または両方を使用できます。 規則ルートはコードで定義されており、次の例のような構文を使ってルーティングの "_規則_" を指定します。
 
 ```csharp
-app.UseMvc(routes =>;
+app.UseMvc(routes =>
 {
     routes.MapRoute("default","{controller=Home}/{action=Index}/{id?}");
 });
@@ -208,7 +208,7 @@ app.UseMvc(routes =>
 ASP.NET Core は、組み込みの規則の種類を使って、その動作を制御します。 これらの規則は変更したり置き換えたりできます。 たとえば、名前空間に基づいて特定のコントローラーの機能名を自動的に取得する規則を作成できます (これは通常、コントローラーが存在するフォルダーに関連付けられます)。
 
 ```csharp
-FeatureConvention : IControllerModelConvention
+public class FeatureConvention : IControllerModelConvention
 {
     public void Apply(ControllerModel controller)
     {
@@ -474,7 +474,7 @@ public class Program
     public static void Main(string[] args)
     {
         StartConnectionAsync();
-        _connection.On("receiveMessage", (arguments) =>;
+        _connection.On("receiveMessage", (arguments) =>
         {
             Console.WriteLine($"{arguments[0]} said: {arguments[1]}");
         });

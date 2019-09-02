@@ -1,15 +1,15 @@
 ---
-title: 方法:プロジェクションの型を制御する (C#)
+title: '方法: プロジェクションの型を制御する (C#)'
 ms.date: 07/20/2015
 ms.assetid: e4db6b7e-4cc9-4c8f-af85-94acf32aa348
-ms.openlocfilehash: 559cfb2a38ba76fb37a17100f0441498223852d7
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a44f7616beba3e07f6e44cc279c67468abc779e3
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594024"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204092"
 ---
-# <a name="how-to-control-the-type-of-a-projection-c"></a>方法:プロジェクションの型を制御する (C#)
+# <a name="how-to-control-the-type-of-a-projection-c"></a>方法: プロジェクションの型を制御する (C#)
 射影は、1 つのデータのセットを取得し、フィルター処理し、その形式を変更し、その型も変更するプロセスです。 ほとんどのクエリ式は射影を実行します。 このセクション内のクエリ式は、ほとんどが <xref:System.Collections.Generic.IEnumerable%601> の <xref:System.Xml.Linq.XElement> に評価されますが、射影の型を制御して別の型のコレクションを作成することができます。 このトピックでは、その方法について説明します。  
   
 ## <a name="example"></a>例  
@@ -62,7 +62,7 @@ class Program
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```output  
 GREAL:Great Lakes Food Market:Howard Snyder  
 HUNGC:Hungry Coyote Import Store:Yoshi Latimer  
 LAZYK:Lazy K Kountry Store:John Steel  

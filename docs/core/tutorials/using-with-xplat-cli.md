@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 08/07/2019
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: 88e9501a776a026a311c5002674c15acf2324f2b
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: a680a4b58927d915e887eea43a72983a5b349682
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868589"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105060"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Windows/Linux/macOS の .NET Core でのコマンド ラインの使用に関する概要
 
@@ -47,8 +47,8 @@ dotnet run
 
    プロジェクト ファイルでは、依存関係を復元し、プログラムをビルドするために必要なすべてのものを指定します。
 
-   * `OutputType` タグは、実行可能ファイル (つまり、コンソール アプリケーション) をビルドすることを示します。
-   * `TargetFramework` タグは、対象の .NET 実装を指定します。 高度なシナリオでは、複数の対象フレームワークを指定し、1 回の操作でそれらすべてにビルドすることができます。 このチュートリアルでは、.NET Core 2.1 の場合のビルドについてのみ説明します。
+   - `OutputType` タグは、実行可能ファイル (つまり、コンソール アプリケーション) をビルドすることを示します。
+   - `TargetFramework` タグは、対象の .NET 実装を指定します。 高度なシナリオでは、複数の対象フレームワークを指定し、1 回の操作でそれらすべてにビルドすることができます。 このチュートリアルでは、.NET Core 2.1 の場合のビルドについてのみ説明します。
 
    `Program.cs`:
 

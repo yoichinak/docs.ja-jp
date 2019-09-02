@@ -2,12 +2,12 @@
 title: 非同期アプリにおける再入の処理 (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: 78d6b786e5d54a75325d8a7a31b3e12eef7184e8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3b6c5e29559a5350bdce7ad8bcf971281bb79994
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595640"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204301"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>非同期アプリにおける再入の処理 (C#)
 
@@ -36,7 +36,7 @@ ms.locfileid: "69595640"
 
 次の例は、ユーザーが 1 度だけ **[Start]** をクリックした場合の出力を示しています。 ダウンロードされた Web サイトの一覧には、各サイトのサイズがバイト単位で表示されます。 合計バイト数は最後に表示されます。
 
-```
+```output
 1. msdn.microsoft.com/library/hh191443.aspx                83732
 2. msdn.microsoft.com/library/aa578028.aspx               205273
 3. msdn.microsoft.com/library/jj155761.aspx                29019
@@ -51,7 +51,7 @@ TOTAL bytes returned:  890591
 
 ただし、ユーザーがボタンを複数回クリックすると、イベント ハンドラーは繰り返し呼び出され、ダウンロード プロセスはそのたびに再入力されます。 その結果、複数の非同期操作が同時に実行され、出力は結果をインターリーブするので、合計バイト数がややこしくなります。
 
-```
+```output
 1. msdn.microsoft.com/library/hh191443.aspx                83732
 2. msdn.microsoft.com/library/aa578028.aspx               205273
 3. msdn.microsoft.com/library/jj155761.aspx                29019
@@ -270,7 +270,7 @@ async Task AccessTheWebAsync(CancellationToken ct)
 
 このアプリの実行中に複数回 **[Start]** ボタンをクリックすると、次の出力のような結果が生成されます。
 
-```
+```output
 1. msdn.microsoft.com/library/hh191443.aspx                83732
 2. msdn.microsoft.com/library/aa578028.aspx               205273
 3. msdn.microsoft.com/library/jj155761.aspx                29019
@@ -308,7 +308,7 @@ TOTAL bytes returned:  890591
 
 次の出力は、ユーザーが 1 度だけ **[Start]** ボタンをクリックした場合の結果を示しています。 文字ラベル A は、 **[Start]** ボタンが最初にクリックされた結果であることを示しています。 数字は、ダウンロード対象の一覧における URL の順序を示しています。
 
-```
+```output
 #Starting group A.
 #Task assigned for group A.
 
@@ -328,7 +328,7 @@ TOTAL bytes returned:  918876
 
 ユーザーが **[Start]** ボタンを 3 回クリックすると、アプリでは次のような出力が生成されます。 先頭にシャープ記号 (#) が付いている情報行は、アプリケーションの進行状況を追跡します。
 
-```
+```output
 #Starting group A.
 #Task assigned for group A.
 
@@ -499,7 +499,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 
 - 前のグループが出力を表示していても、グループを開始できます。その際、前のグループの出力の表示は中断されません。
 
-    ```
+    ```output
     #Starting group A.
     #Task assigned for group A. Download tasks are active.
 
@@ -537,7 +537,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 
 - 次の 2 行は、出力に必ず同時に表示されます。 `StartButton_Click` のグループ操作が開始してから、グループのタスクが `pendingWork` に割り当てられるまでの間、コードが中断されることは決してありません。
 
-    ```
+    ```output
     #Starting group B.
     #Task assigned for group B. Download tasks are active.
     ```
@@ -724,5 +724,5 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル:Async と Await を使用した Web へのアクセス (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [チュートリアル: Async と Await を使用した Web へのアクセス (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Async および Await を使用した非同期プログラミング (C#)](./index.md)

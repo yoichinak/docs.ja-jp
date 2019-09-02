@@ -1,16 +1,16 @@
 ---
-title: 方法:async と await を使用して複数の Web 要求を並列実行する (C#)
+title: '方法: async と await を使用して複数の Web 要求を並列実行する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: edba5ed5026c16ca1f1b09e8504ecfdf408ae5ef
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 06b70f5f3b2e1f3e7e423b16463f0b6b613f62c2
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922005"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168379"
 ---
-# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>方法:async と await を使用して複数の Web 要求を並列実行する (C#)
-非同期メソッドでは、タスクは作成されると開始されます。 [await](../../../language-reference/keywords/await.md) 演算子は、メソッド内でタスクが終了するまで処理が続行できなくなった時点で、タスクに適用されます。 次の例に示すように、タスクは多くの場合、作成されるとすぐに待機します。  
+# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>方法: async と await を使用して複数の Web 要求を並列実行する (C#)
+非同期メソッドでは、タスクは作成されると開始されます。 [await](../../../language-reference/operators/await.md) 演算子は、メソッド内でタスクが終了するまで処理が続行できなくなった時点で、タスクに適用されます。 次の例に示すように、タスクは多くの場合、作成されるとすぐに待機します。  
   
 ```csharp  
 var result = await someWebAccessMethodAsync(url);  
@@ -226,6 +226,6 @@ namespace AsyncExample_MultipleTasks
   
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル:Async と Await を使用した Web へのアクセス (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [チュートリアル: Async と Await を使用した Web へのアクセス (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Async および Await を使用した非同期プログラミング (C#)](./index.md)
 - [方法: Task.WhenAll を使用して AsyncWalkthrough を拡張する (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)

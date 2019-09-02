@@ -2,12 +2,12 @@
 title: リソースへのアクセス時のセキュリティ信頼レベル
 ms.date: 03/30/2017
 ms.assetid: fb5be924-317d-4d69-b33a-3d18ecfb9d6e
-ms.openlocfilehash: 4cd229737d7569afe84d945dce0fbb6867f3ef76
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7070d82c430b762059153c544e26478dc2d7ae39
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948716"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205875"
 ---
 # <a name="security-trust-levels-in-accessing-resources"></a>リソースへのアクセス時のセキュリティ信頼レベル
 ここでは、<xref:System.Transactions> が公開するリソースの種類に対して、アクセスがどのように制限されるかについて説明します。  
@@ -38,7 +38,7 @@ ms.locfileid: "69948716"
   
  回復を有効にするため、この種類のアプリケーションにはシステム リソースを永続的に消費する機能があります。 これは、トランザクションに参加しているすべての永続的リソース マネージャーが結果を受信したことを確認するまで、回復可能なトランザクション マネージャーはコミットしたトランザクションを記憶する必要があるためです。 したがって、この種類のアプリケーションには完全な信頼が必要です。完全な信頼レベルが付与されない限り、実行しないでください。  
   
- 永続参加リストと回復の詳細については、「トランザクションの参加[要素としてのリソースの参加](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)と[回復の実行](../../../../docs/framework/data/transactions/performing-recovery.md)に関するトピック」を参照してください。  
+ 永続参加リストと回復の詳細については、「トランザクションの参加[要素としてのリソースの参加](enlisting-resources-as-participants-in-a-transaction.md)と[回復の実行](performing-recovery.md)に関するトピック」を参照してください。  
   
  COM+ とのレガシ相互運用を実行するアプリケーションにも、完全な信頼が必要です。  
   

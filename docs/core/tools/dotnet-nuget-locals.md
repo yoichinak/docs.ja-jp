@@ -3,12 +3,12 @@ title: dotnet nuget locals コマンド
 description: dotnet nuget locals コマンドは、HTTP 要求キャッシュ、一時的なキャッシュ、コンピューター全体のグローバル パッケージ フォルダーなどのローカルの NuGet リソースをクリアまたは一覧表示します。
 author: karann-msft
 ms.date: 06/26/2019
-ms.openlocfilehash: 6436bbaee7ae50f4b225c32b2245c737b0d359c3
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 0cf025f91a7582fafc401799cd1d8b933b087535
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539270"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202469"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
@@ -24,7 +24,7 @@ ms.locfileid: "67539270"
 
 ## <a name="synopsis"></a>構文
 
-```
+```console
 dotnet nuget locals <CACHE_LOCATION> [(-c|--clear)|(-l|--list)] [--force-english-output]
 dotnet nuget locals [-h|--help]
 ```

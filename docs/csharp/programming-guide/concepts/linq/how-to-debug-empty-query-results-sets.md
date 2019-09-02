@@ -2,12 +2,12 @@
 title: '方法: 空のクエリ結果セットをデバッグする (C#)'
 ms.date: 07/20/2015
 ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
-ms.openlocfilehash: 06c878a7751a14a3043b450d9242037ca91ad754
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 12d2132f1f088050fdd109d067069870b82f2661
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710130"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205321"
 ---
 # <a name="how-to-debug-empty-query-results-sets-c"></a>方法: 空のクエリ結果セットをデバッグする (C#)
 XML ツリーのクエリにおける最も一般的な問題の 1 つは、XML ツリーに既定の名前空間がある場合に、XML が名前空間に含まれていないものとして開発者がクエリを記述してしまうことです。  
@@ -42,7 +42,7 @@ Console.WriteLine("End of result set");
   
  この例を実行すると、次の結果が得られます。  
   
-```  
+```output  
 Result set follows:  
 End of result set  
 ```  
@@ -74,7 +74,7 @@ Console.WriteLine("End of result set");
   
  この例を実行すると、次の結果が得られます。  
   
-```  
+```output  
 Result set follows:  
 1  
 2  

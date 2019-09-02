@@ -4,12 +4,12 @@ description: .NET for Apache Spark アプリケーションを Databricks にデ
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: ca9e93a413622c84325ca9fc8bac17268b990c5a
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 77c2d93ae324b6acbf8fc8dc25cd3e4d1a652f48
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "69576969"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107352"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>.NET for Apache Spark アプリケーションを Databricks にデプロイする
 
@@ -18,17 +18,17 @@ ms.locfileid: "69576969"
 このチュートリアルでは、次の作業を行う方法について説明します。
 
 > [!div class="checklist"]
-> * Microsoft.Spark.Worker を準備する
-> * Spark .NET アプリを発行する
-> * Databricks にアプリをデプロイする
-> * アプリの実行
+> - Microsoft.Spark.Worker を準備する
+> - Spark .NET アプリを発行する
+> - Databricks にアプリをデプロイする
+> - アプリの実行
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
 開始する前に、以下を行います。
 
-* [Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html) をダウンロードします。
-* [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) をお使いのローカル コンピューターにダウンロードします。 これは、後で .NET for Apache Spark の依存ファイルを Spark クラスターのワーカー ノードにコピーするために使用するヘルパー スクリプトです。
+- [Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html) をダウンロードします。
+- [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) をお使いのローカル コンピューターにダウンロードします。 これは、後で .NET for Apache Spark の依存ファイルを Spark クラスターのワーカー ノードにコピーするために使用するヘルパー スクリプトです。
 
 ## <a name="prepare-worker-dependencies"></a>ワーカーの依存関係を準備する
 
@@ -62,9 +62,9 @@ ms.locfileid: "69576969"
 
 4. クラスターからアクセスできる分散ファイル システム (DBFS など) に、次をアップロードします。
 
-   * `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`:この jar は、[Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet パッケージの一部として含まれており、アプリのビルド出力ディレクトリに併置されています。
-   * `<your app>.zip`
-   * 各 Executor の作業ディレクトリ内に配置されるファイル (依存関係ファイルや、すべてのワーカーからアクセスできる共通データなど) またはアセンブリ (アプリが依存しているユーザー定義関数またはライブラリを含む DLL など)。
+   - `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`:この jar は、[Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet パッケージの一部として含まれており、アプリのビルド出力ディレクトリに併置されています。
+   - `<your app>.zip`
+   - 各 Executor の作業ディレクトリ内に配置されるファイル (依存関係ファイルや、すべてのワーカーからアクセスできる共通データなど) またはアセンブリ (アプリが依存しているユーザー定義関数またはライブラリを含む DLL など)。
 
 ## <a name="deploy-to-databricks"></a>Databricks のデプロイする
 

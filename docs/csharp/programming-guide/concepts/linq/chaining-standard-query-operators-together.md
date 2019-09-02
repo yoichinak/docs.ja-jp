@@ -2,12 +2,12 @@
 title: 標準クエリ演算子の連結 (C#)
 ms.date: 07/20/2015
 ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
-ms.openlocfilehash: 89cf7f526bdc60881e901d7ca8f556e97488b220
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 37df654b2bfdcc135460e5ded2ceec1eca33b35a
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594831"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204212"
 ---
 # <a name="chaining-standard-query-operators-together-c"></a>標準クエリ演算子の連結 (C#)
 これは、「[チュートリアル:クエリの連結 (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)」の最後のトピックです。  
@@ -75,7 +75,7 @@ class Program
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```output  
 ToUpper: source >abc<  
 ToUpper: source >def<  
 AppendString: source >DEF<  
@@ -85,4 +85,3 @@ ToUpper: source >ghi<
 AppendString: source >GHI<  
 Main: str >GHI!!!<  
 ```  
-  

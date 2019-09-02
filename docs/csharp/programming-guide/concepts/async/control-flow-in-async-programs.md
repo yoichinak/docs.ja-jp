@@ -2,18 +2,18 @@
 title: 非同期プログラムにおける制御フロー (C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-ms.openlocfilehash: 8adf4bcf193d9fa8d7335996539933ce71282bac
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 99f80a86f14179c5f270064a9f96e35f8611ef13
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595851"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204446"
 ---
 # <a name="control-flow-in-async-programs-c"></a>非同期プログラムにおける制御フロー (C#)
 
 `async` キーワードと `await` キーワードを使用すると、非同期のプログラムの作成と保守をより簡単に行えます。 ただし、プログラムがどのように動作するかを理解しないと、その結果は予想に反するものになる場合があります。 このトピックでは、簡単な非同期プログラムによる制御フローをトレースして、制御があるメソッドから別のメソッドに移るタイミングと、その都度転送される情報について説明します。
 
-一般に、[async (C#)](../../../language-reference/keywords/async.md) 修飾子を使用した非同期コードを含むメソッドをマークします。 async 修飾子でマークされたメソッドでは、[await (C#)](../../../language-reference/keywords/await.md) 演算子を使用して、呼び出される非同期処理の終了をメソッドが待機する場所を指定できます。 詳細については、「[Async および Await を使用した非同期プログラミング (C#)](./index.md)」を参照してください。
+一般に、[async (C#)](../../../language-reference/keywords/async.md) 修飾子を使用した非同期コードを含むメソッドをマークします。 async 修飾子でマークされたメソッドでは、[await (C#)](../../../language-reference/operators/await.md) 演算子を使用して、呼び出される非同期処理の終了をメソッドが待機する場所を指定できます。 詳細については、「[Async および Await を使用した非同期プログラミング (C#)](./index.md)」を参照してください。
 
 次の例では、非同期メソッドを使用して、指定した Web サイトのコンテンツを文字列としてダウンロードし、その文字列の長さを表示します。 この例には、次の 2 つのメソッドが含まれています。
 
@@ -60,7 +60,7 @@ public partial class MainWindow : Window
 
 「1」から「6」までのそれぞれのラベルの位置は、プログラムの現在の状態に関する情報を表示します。 次の出力が生成されます。
 
-```text
+```output
 ONE:   Entering startButton_Click.
            Calling AccessTheWebAsync.
 
@@ -240,7 +240,7 @@ Length of the downloaded string: 33946.
 
     次の出力が表示されます。
 
-    ```text
+    ```output
     ONE:   Entering startButton_Click.
                Calling AccessTheWebAsync.
 
@@ -292,7 +292,7 @@ Task<string> getStringTask = client.GetStringAsync("https://msdn.microsoft.com")
 
  このタスクは `client.GetStringAsync` により実際の文字列が最終的に生成される約束と見なすことができます。 `AccessTheWebAsync` には `client.GetStringAsync` から約束された文字列に依存しない処理がある場合、その処理は `client.GetStringAsync` を待機している間は、続行できます。 この例では、"THREE" のラベルの付いた行の出力は、独立した処理を行う機会を表します。
 
-```
+```output
 THREE: Back in AccessTheWebAsync.
            Task getStringTask is started.
            About to await getStringTask & return a Task<int> to startButton_Click.
@@ -327,7 +327,7 @@ Task<int> getLengthTask = AccessTheWebAsync();
 
  `AccessTheWebAsync` と同様に、`startButton_Click` は、非同期タスク (`getLengthTask`) の結果に依存しない処理を、タスクが待機するまで続行できます。 次の出力行はその処理を表します。
 
-```
+```output
 FOUR:  Back in startButton_Click.
            Task getLengthTask is started.
            About to await getLengthTask -- no caller to return to.
@@ -347,7 +347,7 @@ int contentLength = await getLengthTask;
 
 `client.GetStringAsync` が終了を通知すると、`AccessTheWebAsync` の処理は中断から解放され、await ステートメントを越えて続行できます。 次の出力行は、処理の再開を表します。
 
-```
+```output
 FIVE:  Back in AccessTheWebAsync.
            Task getStringTask is complete.
            Processing the return statement.
@@ -368,7 +368,7 @@ FIVE:  Back in AccessTheWebAsync.
 
 次の出力行は、`startButton_Async` の処理の再開を表します。
 
-```
+```output
 SIX:   Back in startButton_Click.
            Task getLengthTask is finished.
            Result from AccessTheWebAsync is stored in contentLength.
@@ -389,5 +389,5 @@ int contentLength = await getLengthTask;
 
 - [Async および Await を使用した非同期プログラミング (C#)](./index.md)
 - [非同期の戻り値の型 (C#)](./async-return-types.md)
-- [チュートリアル:Async と Await を使用した Web へのアクセス (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [チュートリアル: Async と Await を使用した Web へのアクセス (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Async Sample:非同期プログラムにおける制御フロー (C# および Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

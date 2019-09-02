@@ -19,12 +19,12 @@ helpviewer_keywords:
 - network resources, authentication
 - user authentication, digest
 ms.assetid: 8cce2742-8d52-4643-9dd2-64ddf38aa878
-ms.openlocfilehash: 4f70d2aef3bb064a3df9db9c87671040776332a7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 029243f9f8b02275c0f0a6ec1a74a9a2ca198d9c
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089823"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044122"
 ---
 # <a name="basic-and-digest-authentication"></a>基本認証とダイジェスト認証
 基本認証とダイジェスト認証の <xref:System.Net> 実装は、RFC2617 – HTTP 認証:基本認証とダイジェスト認証 ([World Wide Web コンソーシアム](https://www.w3.org)の Web サイトで入手可能) に従います。  
@@ -44,7 +44,7 @@ WReq.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword);
 ```  
   
 > [!CAUTION]
->  基本認証およびダイジェスト認証で送信されるデータは暗号化されないため、敵対者がデータを見ることができます。 また、基本認証の資格情報 (ユーザー名とパスワード) はクリア テキストで送信されるので、傍受される可能性があります。  
+> 基本認証およびダイジェスト認証で送信されるデータは暗号化されないため、敵対者がデータを見ることができます。 また、基本認証の資格情報 (ユーザー名とパスワード) はクリア テキストで送信されるので、傍受される可能性があります。  
   
 ## <a name="see-also"></a>関連項目
 

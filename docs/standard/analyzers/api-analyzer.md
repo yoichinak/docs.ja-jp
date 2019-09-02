@@ -5,12 +5,12 @@ author: oliag
 ms.author: mairaw
 ms.date: 04/26/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 892fb5cc9fba3434b0884c88b97f784d58093303
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2d97921a3e98d85ac1e58c7686eadef3e979211f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063350"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107380"
 ---
 # <a name="net-api-analyzer"></a>.NET API アナライザー
 
@@ -23,7 +23,7 @@ API アナライザーは、NuGet パッケージ [Microsoft.DotNet.Analyzers.Co
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-* Visual Studio 2017 以降のバージョン、または Visual Studio for Mac (すべてのバージョン)。
+- Visual Studio 2017 以降のバージョン、または Visual Studio for Mac (すべてのバージョン)。
 
 ## <a name="discovering-deprecated-apis"></a>非推奨の API の検出
 
@@ -50,8 +50,8 @@ ID をクリックすると、API が非推奨になった理由に関する詳�
 
 強調表示されたメンバーを右クリックして **[\<診断 ID> の非表示]** を選ぶと、警告を抑制できます。 警告を抑制するには 2 つの方法があります。 
 
-* [ローカル (ソース内)](#suppressing-warnings-locally)
-* [グローバル (抑制ファイル内)](#suppressing-warnings-globally) - 推奨
+- [ローカル (ソース内)](#suppressing-warnings-locally)
+- [グローバル (抑制ファイル内)](#suppressing-warnings-globally) - 推奨
 
 ### <a name="suppressing-warnings-locally"></a>警告をローカルに抑制する
 
@@ -95,11 +95,11 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 
 現時点では、アナライザーは次のケースを処理します。
 
-* <xref:System.PlatformNotSupportedException> (PC001) をスローする .NET Standard API の使用。
-* .NET Framework 4.6.1 (PC002) では利用できない .NET Standard API の使用。
-* UWP (PC003) に存在しないネイティブ API の使用。
-* Delegate.BeginInvoke および EndInvoke API (PC004) の使用。
-* 非推奨 (DEXXXX) としてマークされている API の使用。
+- <xref:System.PlatformNotSupportedException> (PC001) をスローする .NET Standard API の使用。
+- .NET Framework 4.6.1 (PC002) では利用できない .NET Standard API の使用。
+- UWP (PC003) に存在しないネイティブ API の使用。
+- Delegate.BeginInvoke および EndInvoke API (PC004) の使用。
+- 非推奨 (DEXXXX) としてマークされている API の使用。
 
 ## <a name="ci-machine"></a>CI マシン
 

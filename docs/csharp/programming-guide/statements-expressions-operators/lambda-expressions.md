@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 36dab520d67d08d1b3304f1453bfb2c07a2f1c32
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: 1a608a9102e5fb19e40294761c0de98f7e008133
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671707"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168977"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>ラムダ式 (C# プログラミング ガイド)
 
@@ -90,7 +90,7 @@ ms.locfileid: "68671707"
   
 ## <a name="async-lambdas"></a>非同期ラムダ
 
-[async](../../language-reference/keywords/async.md) キーワードと [await](../../language-reference/keywords/await.md) キーワードを使用すると、非同期処理を組み込んだラムダ式およびステートメントを簡単に作成できます。 たとえば、次に示す Windows フォーム例には、非同期メソッド `ExampleMethodAsync`を呼び出して待機するイベント ハンドラーが含まれています。
+[async](../../language-reference/keywords/async.md) キーワードと [await](../../language-reference/operators/await.md) キーワードを使用すると、非同期処理を組み込んだラムダ式およびステートメントを簡単に作成できます。 たとえば、次に示す Windows フォーム例には、非同期メソッド `ExampleMethodAsync`を呼び出して待機するイベント ハンドラーが含まれています。
 
 ```csharp
 public partial class Form1 : Form

@@ -1,22 +1,22 @@
 ---
-title: 方法:文字列コレクションを結合および比較する (LINQ) (C#)
+title: '方法: 文字列コレクションを結合および比較する (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: 3fe1f9dbac864f4eca8ea92f84c35d290ab14642
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 414d9764d8de0a1d7cd395a3192a097d48983856
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594090"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205369"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>方法:文字列コレクションを結合および比較する (LINQ) (C#)
+# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>方法: 文字列コレクションを結合および比較する (LINQ) (C#)
 この例では、複数行のテキストが含まれるファイルをマージし、結果を並び替える方法を示します。 具体的には、複数のテキスト行からなる 2 つの集合の単純な連結、和集合、積集合を求める方法を示します。  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>プロジェクトとテキスト ファイルを設定するには  
   
 1. 次の名前を names1.txt という名前のテキスト ファイルにコピーし、プロジェクト フォルダーに保存します。  
   
-    ```  
+    ```text  
     Bankov, Peter  
     Holm, Michael  
     Garcia, Hugo  
@@ -31,7 +31,7 @@ ms.locfileid: "69594090"
   
 2. 次の名前を names2.txt という名前のテキスト ファイルにコピーし、プロジェクト フォルダーに保存します。 2 つのファイルには、共通の名前がいくつか含まれていることに注意してください。  
   
-    ```  
+    ```text  
     Liu, Jinghao  
     Bankov, Peter  
     Holm, Michael  

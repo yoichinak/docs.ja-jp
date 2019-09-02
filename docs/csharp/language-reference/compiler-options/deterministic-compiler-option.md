@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /deterministic compiler option [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3950578e9e5d1acb517e7d96c76454b198ba3e1c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e77c14a1c3a4ba11b8ae6556be4f1c3c0cd42788
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606926"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202920"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -22,7 +22,7 @@ ms.locfileid: "69606926"
 
 ## <a name="syntax"></a>構文
 
-```
+```console
 -deterministic
 ```
 

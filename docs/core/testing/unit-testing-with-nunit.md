@@ -4,12 +4,12 @@ description: dotnet テストおよび NUnit を使用したサンプル ソリ�
 author: rprouse
 ms.date: 08/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 927facd271d6590cac2b0ce10790a16c88482020
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: 22475fcbd9e971f4c544c020d9198fadee4548b1
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733412"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168125"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>NUnit と .NET Core による単体テスト C#
 
@@ -30,7 +30,7 @@ dotnet new sln
  
 次に、*PrimeService* ディレクトリを作成します。 これまでのところ、ディレクトリとファイルの構造は次のアウトラインのようになっています。
 
-```
+```console
 /unit-testing-using-nunit
     unit-testing-using-nunit.sln
     /PrimeService
@@ -69,7 +69,7 @@ dotnet sln add PrimeService/PrimeService.csproj
 
 次に、*PrimeService.Tests* ディレクトリを作成します。 次の一覧はディレクトリ構造を示したものです。
 
-```
+```console
 /unit-testing-using-nunit
     unit-testing-using-nunit.sln
     /PrimeService
@@ -98,7 +98,7 @@ dotnet add reference ../PrimeService/PrimeService.csproj
 
 ソリューションの最終的なレイアウトは次のアウトラインのようになります。
 
-```
+```console
 /unit-testing-using-nunit
     unit-testing-using-nunit.sln
     /PrimeService

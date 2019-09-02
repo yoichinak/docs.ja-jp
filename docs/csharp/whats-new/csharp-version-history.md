@@ -3,12 +3,12 @@ title: C# の歴史 - C# ガイド
 description: この言語の最初のバージョンがどのようなものであったか、そしてそれ以降どのように進化してきたかについて説明します。
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 8230efcbcdd67cc99f321efc6509df3665d9f2f7
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 9962dcb0192fb27ff21b24e985a6a897703720c7
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363881"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105680"
 ---
 # <a name="the-history-of-c"></a>C\# の歴史
 
@@ -19,11 +19,11 @@ ms.locfileid: "68363881"
 
 C# のビルド ツールでは、言語の最新のメジャー リリースが言語の既定のバージョンと見なされます。 メジャー リリースの間には、このセクションの他の記事で詳しく説明するポイント リリースが存在することがあります。 ポイント リリースで最新の機能を使用するには、[コンパイラ言語バージョンを構成](../language-reference/configure-language-version.md)し、バージョンを選択する必要があります。 C# 7.0 以降、3 つのポイント リリースがありました。
 
-* [C# 7.3](csharp-7-3.md):
+- [C# 7.3](csharp-7-3.md):
   - C# 7.3 は [Visual Studio 2017 バージョン 15.7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) および [.NET Core 2.1 SDK](../../core/whats-new/dotnet-core-2-1.md) 以降で利用可能です。
-* [C# 7.2](csharp-7-2.md):
+- [C# 7.2](csharp-7-2.md):
   - C# 7.2 は [Visual Studio 2017 バージョン 15.5](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) および [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md) 以降で利用可能です。
-* [C# 7.1](csharp-7-1.md):
+- [C# 7.1](csharp-7-1.md):
   - C# 7.1 は [Visual Studio 2017 バージョン 15.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) および [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md) 以降で利用可能です。
 
 ## <a name="c-version-10"></a>C# バージョン 1.0
@@ -124,7 +124,7 @@ C# バージョン 5.0 は、この言語の専心的なバージョンでした
 
 ### <a name="see-also"></a>関連項目
 
-* [コード プロジェクト:C# 5.0 の呼び出し元情報属性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+- [コード プロジェクト:C# 5.0 の呼び出し元情報属性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
 呼び出し元情報属性を使用すると、さまざまな定型リフレクション コードを使用しなくても、実行しているコンテキストに関する情報を簡単に取得できます。 診断とログ記録のタスクでは、さまざまな用途があります。
 

@@ -4,12 +4,12 @@ description: この記事では、PowerShell、Bash、および zsh 向けの .N
 author: thraka
 ms.author: adegeo
 ms.date: 12/17/2018
-ms.openlocfilehash: 16574e02aa9f9167602401eef2ad7a73e07ad107
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: c7673d95f3710d78d3a09b26f031396587f9c669
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203338"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202491"
 ---
 # <a name="how-to-enable-tab-completion-for-net-core-cli"></a>.NET Core CLI のタブ補完を有効にする方法
 
@@ -19,7 +19,7 @@ ms.locfileid: "57203338"
 
 セットアップが完了したら、シェルに `dotnet` コマンドを入力した後、TAB キーを押すと、.NET Core CLI のタブ補完がトリガーされます。 現在のコマンド ラインが `dotnet complete` コマンドに送信され、結果がシェルによって処理されます。 何かを `dotnet complete` コマンドに直接送信することで、タブ補完を有効にせずに結果をテストすることができます。 次に例を示します。
 
-```
+```console
 > dotnet complete "dotnet a"
 add
 clean

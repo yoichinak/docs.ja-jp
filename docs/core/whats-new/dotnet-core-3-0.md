@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 08/21/2019
-ms.openlocfilehash: 5f9d7026b270a010d2ba5d4b1165728a100ab6ed
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f62afe79ec3ace98a3bd8997e20672bef81b89c4
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922559"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70037836"
 ---
 # <a name="whats-new-in-net-core-30-preview-8"></a>.NET Core 3.0 (Preview 8) の新機能
 
@@ -430,7 +430,7 @@ JSON 文字列をオブジェクトに逆シリアル化する例を次に示し
 
 ### <a name="type-nativelibrary"></a>型:NativeLibrary
 
-<xref:System.Runtime.InteropServices.NativeLibrary?displayProperty=nameWithType> には、(.NET Core P/Invoke と同じ読み込みロジックを使用して) ネイティブ ライブラリを読み込み、`getSymbol` などの関連するヘルパー関数を指定するためのカプセル化機能があります。 コード例については、[DLLMap のデモ](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin)を参照してください。
+<xref:System.Runtime.InteropServices.NativeLibrary?displayProperty=nameWithType> には、(.NET Core P/Invoke と同じ読み込みロジックを使用して) ネイティブ ライブラリを読み込み、`getSymbol` などの関連するヘルパー関数を指定するためのカプセル化機能があります。 コード例については、[DLLMap のデモ](https://github.com/dotnet/samples/tree/master/core/extensions/DllMapDemo)を参照してください。
 
 ### <a name="windows-native-interop"></a>Windows のネイティブ相互運用機能
 

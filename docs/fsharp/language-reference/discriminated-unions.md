@@ -2,12 +2,12 @@
 title: 判別共用体
 description: 判別共用体のF#使用方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: fa4f011a8d5fd6725a44e030b423e79244a18734
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 3ed05fdb144d7266adc1718cdf015ab64680f3d8
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106764"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206161"
 ---
 # <a name="discriminated-unions"></a>判別共用体
 
@@ -87,7 +87,7 @@ let getShapeHeight shape =
 判別F#共用体では、単一の型をラップするためにドメインモデリングでよく使用されます。 パターンマッチングを使用して基になる値を簡単に抽出することもできます。 1つのケースに一致式を使用する必要はありません。
 
 ```fsharp
-let ([UnionCaseName] [values]) = [UnionValue]
+let ([UnionCaseIdentifier] [values]) = [UnionValue]
 ```
 
 この動作を次の例で示します。

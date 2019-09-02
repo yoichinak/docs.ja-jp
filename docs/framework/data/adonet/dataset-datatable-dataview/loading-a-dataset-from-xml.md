@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
-ms.openlocfilehash: 24b962edc15c04cf1f68b73a7da960857658309c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 77f25e1c52f10a1724bf81a3fa533739e15085c4
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928453"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204712"
 ---
 # <a name="loading-a-dataset-from-xml"></a>XML からの DataSet の読み込み
 ADO.NET では、XML ストリームまたは XML ドキュメントから <xref:System.Data.DataSet> の内容を作成できます。 また、.NET Framework では、XML から読み込まれる情報と <xref:System.Data.DataSet> のスキーマまたはリレーショナル構造の作成方法を柔軟に変更できます。  
@@ -22,10 +22,10 @@ ADO.NET では、XML ストリームまたは XML ドキュメントから <xref
 |オプション|説明|  
 |------------|-----------------|  
 |**Auto**|既定値です。 XML を調べ、次の順序で最適なオプションを選択します。<br /><br /> -XML が DiffGram の場合は、 **diffgram**が使用されます。<br />-に<xref:System.Data.DataSet>スキーマが含まれている場合、または XML にインラインスキーマが含まれている場合は、 **readschema**が使用されます。<br />-に<xref:System.Data.DataSet>スキーマが含まれておらず、XML にインラインスキーマが含まれていない場合は、 **InferSchema**が使用されます。<br /><br /> 読み取り中の XML の形式がわかっている場合は、最適なパフォーマンスを得るために、**自動**既定値をそのまま使用するのではなく、明示的な**XmlReadMode**を設定することをお勧めします。|  
-|**ReadSchema**|インライン スキーマを読み取り、データとスキーマを読み込みます。<br /><br /> <xref:System.Data.DataSet> に既にスキーマが含まれている場合には、読み取るインライン スキーマの新しいテーブルが <xref:System.Data.DataSet> の既存のスキーマに追加されます。 インライン スキーマのテーブルが既に <xref:System.Data.DataSet> に存在している場合には、例外がスローされます。 **XmlReadMode**を使用して、既存のテーブルのスキーマを変更することはできません。<br /><br /> <xref:System.Data.DataSet> にスキーマが含まれておらず、インライン スキーマが存在しない場合には、データは読み取られません。<br /><br /> インライン スキーマを定義するには、XML スキーマ定義言語 (XSD) スキーマを使用します。 インラインスキーマを XML スキーマとして記述する方法の詳細については、「 [Xml スキーマ (XSD) からの DataSet リレーショナル構造の派生](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)」を参照してください。|  
+|**ReadSchema**|インライン スキーマを読み取り、データとスキーマを読み込みます。<br /><br /> <xref:System.Data.DataSet> に既にスキーマが含まれている場合には、読み取るインライン スキーマの新しいテーブルが <xref:System.Data.DataSet> の既存のスキーマに追加されます。 インライン スキーマのテーブルが既に <xref:System.Data.DataSet> に存在している場合には、例外がスローされます。 **XmlReadMode**を使用して、既存のテーブルのスキーマを変更することはできません。<br /><br /> <xref:System.Data.DataSet> にスキーマが含まれておらず、インライン スキーマが存在しない場合には、データは読み取られません。<br /><br /> インライン スキーマを定義するには、XML スキーマ定義言語 (XSD) スキーマを使用します。 インラインスキーマを XML スキーマとして記述する方法の詳細については、「 [Xml スキーマ (XSD) からの DataSet リレーショナル構造の派生](deriving-dataset-relational-structure-from-xml-schema-xsd.md)」を参照してください。|  
 |**IgnoreSchema**|インライン スキーマを無視し、データを既存の <xref:System.Data.DataSet> スキーマへ読み込みます。 既存のスキーマに一致しないデータは破棄されます。 <xref:System.Data.DataSet> にスキーマがない場合には、データは読み込まれません。<br /><br /> データが DiffGram の場合、 **IgnoreSchema**には**diffgram**と同じ機能があり*ます。*|  
-|**InferSchema**|インライン スキーマを無視し、XML データ構造ごとにスキーマを推論し、データを読み込みます。<br /><br /> <xref:System.Data.DataSet> に既にスキーマが含まれている場合、既存のテーブルに列を追加することによって現在のスキーマが拡張されます。 既存のテーブルが存在しない場合、余分なテーブルは追加されません。 推論されたテーブルが他の名前空間に既に存在している場合、または推論された列と既存の列が矛盾する場合には、例外がスローされます。<br /><br /> **Readxmlschema**が xml ドキュメントからスキーマを推論する方法の詳細については、「 [Xml からの DataSet リレーショナル構造の推論](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)」を参照してください。|  
-|**DiffGram**|DiffGram を読み取り、現在のスキーマへデータを追加します。 **DiffGram**では、一意の識別子の値が一致する既存の行と新しい行がマージされます。 このトピックの最後にある「XML のデータの結合」の説明を参照してください。 Diffgram の詳細については、「 [Diffgram グラム](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)」を参照してください。|  
+|**InferSchema**|インライン スキーマを無視し、XML データ構造ごとにスキーマを推論し、データを読み込みます。<br /><br /> <xref:System.Data.DataSet> に既にスキーマが含まれている場合、既存のテーブルに列を追加することによって現在のスキーマが拡張されます。 既存のテーブルが存在しない場合、余分なテーブルは追加されません。 推論されたテーブルが他の名前空間に既に存在している場合、または推論された列と既存の列が矛盾する場合には、例外がスローされます。<br /><br /> **Readxmlschema**が xml ドキュメントからスキーマを推論する方法の詳細については、「 [Xml からの DataSet リレーショナル構造の推論](inferring-dataset-relational-structure-from-xml.md)」を参照してください。|  
+|**DiffGram**|DiffGram を読み取り、現在のスキーマへデータを追加します。 **DiffGram**では、一意の識別子の値が一致する既存の行と新しい行がマージされます。 このトピックの最後にある「XML のデータの結合」の説明を参照してください。 Diffgram の詳細については、「 [Diffgram グラム](diffgrams.md)」を参照してください。|  
 |**抜粋**|ストリームの終わりに達するまで、複数 XML フラグメントの読み取りを続行します。 <xref:System.Data.DataSet> スキーマに一致するフラグメントが適切なテーブルに追加されます。 <xref:System.Data.DataSet> スキーマに一致しないフラグメントは破棄されます。|  
   
 > [!NOTE]
@@ -118,10 +118,10 @@ foreach (DataTable dataTable in dataSet.Tables)
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Data.DataSet.Merge%2A?displayProperty=nameWithType>
-- [DataSet での XML の使用](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)
-- [XML スキーマ (XSD) からの DataSet リレーショナル構造の派生](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)
-- [XML からの DataSet リレーショナル構造の推論](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
-- [XML の DataSet スキーマ情報の読み込み](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
-- [DataSet、DataTable、および DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [DataSet での XML の使用](using-xml-in-a-dataset.md)
+- [DiffGrams](diffgrams.md)
+- [XML スキーマ (XSD) からの DataSet リレーショナル構造の派生](deriving-dataset-relational-structure-from-xml-schema-xsd.md)
+- [XML からの DataSet リレーショナル構造の推論](inferring-dataset-relational-structure-from-xml.md)
+- [XML の DataSet スキーマ情報の読み込み](loading-dataset-schema-information-from-xml.md)
+- [DataSet、DataTable、および DataView](index.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

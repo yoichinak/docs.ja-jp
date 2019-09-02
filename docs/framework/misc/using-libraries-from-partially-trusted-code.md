@@ -11,24 +11,24 @@ helpviewer_keywords:
 ms.assetid: dd66cd4c-b087-415f-9c3e-94e3a1835f74
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e08cb1b3f4708b4314f0cd663f70fa10aaa1aded
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 50428e4e28df812a3a0c985d0d1876dab7b5279c
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910679"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206035"
 ---
 # <a name="using-libraries-from-partially-trusted-code"></a>部分信頼コードからのライブラリの使用
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
 > [!NOTE]
-> このトピックでは、厳密な名前付きアセンブリの動作について説明し、[レベル 1](../../../docs/framework/misc/security-transparent-code-level-1.md)のアセンブリにのみ適用します。 [セキュリティ透過的なコード、](../../../docs/framework/misc/security-transparent-code-level-2.md) .NET Framework 4 以降のレベル2のアセンブリは、厳密な名前の影響を受けません。 セキュリティシステムへの変更の詳細については、「[セキュリティの変更](../../../docs/framework/security/security-changes.md)」を参照してください。  
+> このトピックでは、厳密な名前付きアセンブリの動作について説明し、[レベル 1](security-transparent-code-level-1.md)のアセンブリにのみ適用します。 [セキュリティ透過的なコード、](security-transparent-code-level-2.md) .NET Framework 4 以降のレベル2のアセンブリは、厳密な名前の影響を受けません。 セキュリティシステムへの変更の詳細については、「[セキュリティの変更](../security/security-changes.md)」を参照してください。  
   
- ホストまたはサンドボックスから不完全な信頼を受けているアプリケーションは、ライブラリの作成者が <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 属性を使用して具体的に許可しない限り、共有マネージド ライブラリを呼び出せません。 そのため、アプリケーションの作成者は、ライブラリによっては部分的に信頼されたコンテキストから使用できないことを認識する必要があります。 既定では、部分信頼[サンドボックス](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)で実行され、完全に信頼されたアセンブリの一覧にないすべてのコードは、部分的に信頼されています。 部分的に信頼されたコンテキストからコードを実行する、または部分的に信頼されたコードによってコードが呼び出されることはないと考えられる場合は、このセクションの情報を考慮する必要はありません。 ただし、部分的に信頼されたコードと対話する必要があるコード、または部分的に信頼されたコンテキストから操作するコードを記述する場合は、次の要因を考慮する必要があります。  
+ ホストまたはサンドボックスから不完全な信頼を受けているアプリケーションは、ライブラリの作成者が <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 属性を使用して具体的に許可しない限り、共有マネージド ライブラリを呼び出せません。 そのため、アプリケーションの作成者は、ライブラリによっては部分的に信頼されたコンテキストから使用できないことを認識する必要があります。 既定では、部分信頼[サンドボックス](how-to-run-partially-trusted-code-in-a-sandbox.md)で実行され、完全に信頼されたアセンブリの一覧にないすべてのコードは、部分的に信頼されています。 部分的に信頼されたコンテキストからコードを実行する、または部分的に信頼されたコードによってコードが呼び出されることはないと考えられる場合は、このセクションの情報を考慮する必要はありません。 ただし、部分的に信頼されたコードと対話する必要があるコード、または部分的に信頼されたコンテキストから操作するコードを記述する場合は、次の要因を考慮する必要があります。  
   
 - ライブラリは、複数のアプリケーションで共有するために、厳密な名前で署名する必要があります。 厳密な名前を使用すると、コードをグローバル アセンブリ キャッシュに配置したり、サンドボックス化する <xref:System.AppDomain> の完全信頼一覧に追加したりできます。また、コンシューマーは、実際にあなたが発信する特定のモバイル コードを確認することができます。  
   
-- 既定では、厳密な名前の[レベル 1](../../../docs/framework/misc/security-transparent-code-level-1.md)の共有ライブラリは、完全な信頼に対して暗黙的な[LinkDemand](../../../docs/framework/misc/link-demands.md)を実行します。ライブラリの作成者は何もする必要はありません。  
+- 既定では、厳密な名前の[レベル 1](security-transparent-code-level-1.md)の共有ライブラリは、完全な信頼に対して暗黙的な[LinkDemand](link-demands.md)を実行します。ライブラリの作成者は何もする必要はありません。  
   
 - 呼び出し元に完全な信頼がないにもかかわらず、このようなライブラリを呼び出そうとする場合、ランタイムは <xref:System.Security.SecurityException> をスローします。これにより、呼び出し元はライブラリにリンクできなくなります。  
   
@@ -53,4 +53,4 @@ ms.locfileid: "69910679"
   
 ## <a name="see-also"></a>関連項目
 
-- [コード アクセス セキュリティ](../../../docs/framework/misc/code-access-security.md)
+- [コード アクセス セキュリティ](code-access-security.md)

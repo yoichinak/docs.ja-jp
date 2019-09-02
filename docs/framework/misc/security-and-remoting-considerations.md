@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bb5727bab8e06decde6ccff8b84515f82c3d491a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2d4d3b009e5792685ea39a3bcc2a15e082e1b8de
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910700"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206100"
 ---
 # <a name="security-and-remoting-considerations"></a>セキュリティとリモート処理の考慮事項
 リモート処理を使用すると、アプリケーション ドメイン、プロセス、コンピューターの間で透過的な呼び出しを設定できます。 ただし、コード アクセス セキュリティのスタック ウォークがプロセスやコンピューターの境界を超えることはできません (これは、同一プロセスのアプリケーション ドメイン間に当てはまります)。  
   
  リモート処理可能な (<xref:System.MarshalByRefObject> クラスから派生した) クラスの場合、セキュリティに関する責任を負う必要があります。 呼び出し元のコードを暗黙的に信頼できる閉じた環境でのみコードを使用するか、あるいは、保護対象コードが悪意を持って使用される可能性のある外部エントリの影響を受けないようにリモート呼び出しを設計する必要があります。  
   
- 一般に、宣言型の[LinkDemand](../../../docs/framework/misc/link-demands.md)と<xref:System.Security.Permissions.SecurityAction.InheritanceDemand>セキュリティチェックで保護されているメソッド、プロパティ、またはイベントを公開しないようにする必要があります。 リモート処理では、こうしたチェックは実施されません。 <xref:System.Security.Permissions.SecurityAction.Demand>、 [Assert](../../../docs/framework/misc/using-the-assert-method.md)などの他のセキュリティチェックは、プロセス内のアプリケーションドメイン間で機能しますが、プロセス間またはコンピューター間のシナリオでは機能しません。  
+ 一般に、宣言型の[LinkDemand](link-demands.md)と<xref:System.Security.Permissions.SecurityAction.InheritanceDemand>セキュリティチェックで保護されているメソッド、プロパティ、またはイベントを公開しないようにする必要があります。 リモート処理では、こうしたチェックは実施されません。 <xref:System.Security.Permissions.SecurityAction.Demand>、 [Assert](using-the-assert-method.md)などの他のセキュリティチェックは、プロセス内のアプリケーションドメイン間で機能しますが、プロセス間またはコンピューター間のシナリオでは機能しません。  
   
 ## <a name="protected-objects"></a>保護されているオブジェクト  
  一部のオブジェクトはそれ自体でセキュリティ状態を保持します。 これらのオブジェクトを信頼されていないコードに渡してはなりません。こうしたコードに渡すと、独自の権限を超えるセキュリティ承認が取得されかねません。  

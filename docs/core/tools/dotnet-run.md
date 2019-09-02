@@ -2,12 +2,12 @@
 title: dotnet run コマンド
 description: dotnet run コマンドは、ソース コードからアプリケーションを実行する便利なオプションを提供します。
 ms.date: 05/29/2018
-ms.openlocfilehash: 489429e2371c807e09f9fb8c2de6f96d091edc6d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0a6c1303bc12c256dd0a8923f9468620835ddabc
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632002"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202810"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -21,7 +21,7 @@ ms.locfileid: "65632002"
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
-```
+```console
 dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies]
     [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [-v|--verbosity] [[--] [application arguments]]
 dotnet run [-h|--help]
@@ -29,7 +29,7 @@ dotnet run [-h|--help]
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
-```
+```console
 dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies]
     [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [[--] [application arguments]]
 dotnet run [-h|--help]
@@ -37,7 +37,7 @@ dotnet run [-h|--help]
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-```
+```console
 dotnet run [-c|--configuration] [-f|--framework] [-p|--project] [[--] [application arguments]]
 dotnet run [-h|--help]
 ```
@@ -190,7 +190,7 @@ dotnet myapp.dll
 
 `-p|--project <PATH/PROJECT.csproj>`
 
-プロジェクト ファイルのパスと名前を指定します  (注を参照)。指定しない場合は、既定で現在のディレクトリに設定されます。
+プロジェクト ファイルのパスと名前を指定します (注を参照)。指定しない場合は、既定で現在のディレクトリに設定されます。
 
 > [!NOTE]
 > `-p|--project` オプションでプロジェクト ファイルのパスと名前を使用します。 CLI の回帰により、.NET Core SDK 1.x でフォルダー パスを指定できなくなります。 この問題の詳細については、[「dotnet run -p, can not start a project (dotnet/cli #5992)」](https://github.com/dotnet/cli/issues/5992) (dotnet run -p でプロジェクトを開始できない (dotnet/cli #5992)) を参照してください。

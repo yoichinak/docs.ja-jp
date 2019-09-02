@@ -2,12 +2,12 @@
 title: DataTable スキーマの定義
 ms.date: 03/30/2017
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
-ms.openlocfilehash: 20fee4316ad95c0f8716a0f374410009ea129222
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0d2609801da3bc336c54d32068246027cfd6d3aa
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952359"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204991"
 ---
 # <a name="datatable-schema-definition"></a>DataTable スキーマの定義
 テーブルのスキーマ (構造) は、列と制約で表されます。 <xref:System.Data.DataTable> のスキーマは、<xref:System.Data.DataColumn>、<xref:System.Data.ForeignKeyConstraint>、<xref:System.Data.UniqueConstraint> の各オブジェクトを使用して定義します。 テーブルの列は、データ ソースの列に割り当てたり、式で算出された値を格納したり、格納されている値を自動的にインクリメントしたり、主キー値を格納したりできます。  
@@ -20,22 +20,22 @@ ms.locfileid: "69952359"
 > DataTable <xref:System.Data.DataTable.CaseSensitive%2A>のプロパティは 、この動作に影響しません。 **CaseSensitive**プロパティは、テーブル内のデータに適用され、並べ替え、検索、フィルター処理、制約の適用などに影響しますが、列、リレーション、および制約への参照には影響しません。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [DataTable への列の追加](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-columns-to-a-datatable.md)  
+ [DataTable への列の追加](adding-columns-to-a-datatable.md)  
  **DataColumn**オブジェクトを使用してテーブルの列を定義する方法について説明します。  
   
- [式列の作成](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-expression-columns.md)  
+ [式列の作成](creating-expression-columns.md)  
  列の**式**プロパティを使用して、行の他の列の値に基づいて値を計算する方法について説明します。  
   
- [AutoIncrement 列の作成](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md)  
+ [AutoIncrement 列の作成](creating-autoincrement-columns.md)  
  数値を自動的にインクリメントして行ごとに一意の列値が割り当てられるように列を設定する方法について説明します。  
   
- [主キーの定義](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)  
+ [主キーの定義](defining-primary-keys.md)  
  1つ以上の**DataColumn**オブジェクトからテーブルの主キーを指定する方法について説明します。  
   
- [DataTable の制約](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)  
+ [DataTable の制約](datatable-constraints.md)  
  テーブルの列の外部キー制約と UNIQUE 制約を定義する方法について説明します。  
   
 ## <a name="see-also"></a>関連項目
 
-- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [DataTables](datatables.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

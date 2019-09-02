@@ -2,12 +2,12 @@
 title: dotnet pack コマンド
 description: dotnet pack コマンドでは、.NET Core プロジェクトの NuGet パッケージを作成します。
 ms.date: 12/04/2018
-ms.openlocfilehash: 5d48e5957e8095cc9ef4eaca2e1e1746c25a2a88
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: c5c00f3bb06e5bc5579c0d3d6bdd39fbdf3db656
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876042"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202845"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -21,7 +21,7 @@ ms.locfileid: "65876042"
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-```
+```console
 dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies]
     [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
@@ -29,7 +29,7 @@ dotnet pack [-h|--help]
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-```
+```console
 dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output]
     [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
@@ -47,7 +47,7 @@ dotnet pack [-h|--help]
 
 パッキング プロセスのために `dotnet pack` コマンドに MSBuild のプロパティを使用できます。 詳細については、「[NuGet メタデータ プロパティ](csproj.md#nuget-metadata-properties)」と「[MSBuild コマンド ライン リファレンス](/visualstudio/msbuild/msbuild-command-line-reference)」を参照してください。 「[例](#examples)」のセクションでは、MSBuild の -p スイッチを使用する方法について、2 つの異なるシナリオで説明します。
 
-Web プロジェクトは既定でパッケージ化可能ではありません。 既定の動作をオーバーライドするには、*.csproj* ファイルに次のプロパティを追加します。
+Web プロジェクトは既定でパッケージ化可能ではありません。 既定の動作をオーバーライドするには、 *.csproj* ファイルに次のプロパティを追加します。
 
 ```xml
 <PropertyGroup>

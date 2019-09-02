@@ -6,12 +6,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 6e7a1dfc739278eecfa8582bb0a9f8938c561acf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 92787b7a64f0d77aea625625722ef18f7efb9dab
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924456"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168487"
 ---
 # <a name="methods-c-programming-guide"></a>メソッド (C# プログラミング ガイド)
 メソッドは、一連のステートメントが含まれているコード ブロックです。 必要なメソッド引数を指定してプログラムからメソッドを呼び出すと、メソッド内のステートメントが実行されます。 C# では、実行されるすべての命令がメソッドのコンテキストで実行されます。 Main メソッドは、すべての C# アプリケーションのエントリ ポイントです。プログラムが開始されると、このメソッドが共通言語ランタイム (CLR) によって呼び出されます。  
@@ -35,7 +35,7 @@ ms.locfileid: "69924456"
  [!code-csharp[csProgGuideObjects#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#41)]  
   
 ## <a name="method-parameters-vs-arguments"></a>メソッド パラメーターと引数  
- メソッド定義には、必要なパラメーターの名前と型を指定します。 呼び出し元のコードからメソッドを呼び出すときに、各パラメーターに引数と呼ばれる具体的な値を指定します。 引数にはパラメーター型との互換性が必要ですが、呼び出し元のコードで引数名を使用する場合、引数名がメソッドで定義されるパラメーター名と同じである必要はありません。 例:  
+ メソッド定義には、必要なパラメーターの名前と型を指定します。 呼び出し元のコードからメソッドを呼び出すときに、各パラメーターに引数と呼ばれる具体的な値を指定します。 引数にはパラメーター型との互換性が必要ですが、呼び出し元のコードで引数名を使用する場合、引数名がメソッドで定義されるパラメーター名と同じである必要はありません。 次に例を示します。  
   
  [!code-csharp[csProgGuideObjects#74](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#74)]  
   
@@ -113,7 +113,7 @@ public static void FillMatrix(int[,] matrix)
 ## <a name="async-methods"></a>非同期メソッド  
  非同期機能を使用することによって、明示的なコールバックを使用せずに、または複数のメソッドやラムダ式にわたって手動でコードを分割することなく、非同期メソッドを呼び出すことができます。 
   
- メソッドに [async](../../language-reference/keywords/async.md) 修飾子を付けると、そのメソッドで [await](../../language-reference/keywords/await.md) 演算子を使用できます。 コントロールが非同期メソッドの await 式に到達すると、コントロールは呼び出し元に戻り、待機中のタスクが完了するまでメソッドの進行状況は中断されます。 タスクが完了すると、メソッドで実行を再開できます。  
+ メソッドに [async](../../language-reference/keywords/async.md) 修飾子を付けると、そのメソッドで [await](../../language-reference/operators/await.md) 演算子を使用できます。 コントロールが非同期メソッドの await 式に到達すると、コントロールは呼び出し元に戻り、待機中のタスクが完了するまでメソッドの進行状況は中断されます。 タスクが完了すると、メソッドで実行を再開できます。  
   
 > [!NOTE]
 > 非同期メソッドは、まだ完了していない待機中の最初のオブジェクトに達するか、または非同期メソッドの最後に達すると、呼び出し元に戻ります。  

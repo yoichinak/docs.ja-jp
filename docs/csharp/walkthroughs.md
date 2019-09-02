@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: 0c666d62c21d3e4f7b1041c1d5360ac43d2cf03f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e70d2b708eefa9762bef15403a63b2a908f7a149
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587059"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168970"
 ---
 # <a name="c-walkthroughs"></a>C# チュートリアル
 チュートリアルでは、製品や特定の機能領域について学習を開始するのに適した一般的なシナリオについて詳細な手順を示します。  
@@ -21,7 +21,7 @@ ms.locfileid: "69587059"
 ## <a name="in-this-section"></a>このセクションの内容  
 
  [Async と Await を使用した Web へのアクセス](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [async](./language-reference/keywords/async.md) と [await](./language-reference/keywords/await.md) を使用して非同期ソリューションを作成する方法を示します。  
+ [async](./language-reference/keywords/async.md) と [await](./language-reference/operators/await.md) を使用して非同期ソリューションを作成する方法を示します。  
   
  [Creating a Windows Runtime Component in C# or Visual Basic and Calling it from JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript) (C# および Visual Basic での Windows ランタイム コンポーネントの作成および JavaScript による呼び出し)  
  Windows ランタイム型を作成し、Windows ランタイム コンポーネントにパッケージ化した後、JavaScript を使用して Windows 用に作成された [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] アプリからコンポーネントを呼び出す方法を示します。  

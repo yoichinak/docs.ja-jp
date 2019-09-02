@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14207dcefe053e596052c9b94078333c1c714641
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e210f14c74efe214be06a1cb901a144dd92af5e0
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59185576"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168877"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (署名ツール)
 署名ツールはコマンド ライン ツールで、ファイルにデジタル署名を添付し、ファイルの署名を検証し、ファイルにタイム スタンプを付けます。  
@@ -170,7 +170,7 @@ signtool sign /f MyCert.pfx /p MyPassword MyFile.exe
  ファイルにデジタル署名してタイム スタンプを付けるコマンドを次に示します。 ファイルへの署名に使用する証明書は、PFX ファイルに格納されています。  
   
 ```  
-signtool sign /f MyCert.pfx /t http://timestamp.verisign.com/scripts/timstamp.dll MyFile.exe  
+signtool sign /f MyCert.pfx /t http://timestamp.digicert.com MyFile.exe  
 ```  
   
  `My` ストアにある件名が `My Company Certificate` の証明書を使用してファイルに署名するコマンドを次に示します。  
@@ -188,7 +188,7 @@ Signtool sign /f MyCert.pfx /d: "MyControl" /du http://www.example.com/MyControl
  デジタル署名済みのファイルにタイム スタンプを付けるコマンドを次に示します。  
   
 ```  
-signtool timestamp /t http://timestamp.verisign.com/scripts/timstamp.dll MyFile.exe  
+signtool timestamp /t http://timestamp.digicert.com MyFile.exe  
 ```  
   
  ファイルが署名済みであることを検証するコマンドを次に示します。  

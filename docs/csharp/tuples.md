@@ -3,12 +3,12 @@ title: タプル型 - C# ガイド
 description: C# の名前のないタプルと名前付きタプルについて
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: dc02fceb2901fb9cb7bf71869213d8b178520900
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 00330af38044b07128551b7dc74c7d831c7a5626
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988404"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105899"
 ---
 # <a name="c-tuple-types"></a>C# のタプル型
 
@@ -40,7 +40,7 @@ C# のタプルは、軽量構文を使用して定義する型で、 構文が�
 既存の `Tuple` 型で定義されたプロパティと同様、`ValueTuple` 構造体のフィールドには `Item1`、`Item2`、`Item3` といった名前が付いています。
 "*名前のないタプル*" には、この名前しか使用できません。 タプルに代替フィールド名を付けなかった場合は、名前のないタプルが作成されます。
 
-[!code-csharp[UnnamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#01_UnNamedTuple "Unnamed tuple")]
+[!code-csharp[UnnamedTuple](../../samples/snippets/csharp/tuples/program.cs#01_UnNamedTuple "Unnamed tuple")]
 
 前の例のタプルは、リテラル定数を使って初期化されており、C# 7.1 の*タプル フィールド名プロジェクション*を使って作成された要素名はありません。
 
@@ -49,13 +49,13 @@ C# のタプルは、軽量構文を使用して定義する型で、 構文が�
 名前を付けた要素に対してシノニムも設定されます。
 名前付きタプルを作成するには、各要素の名前を指定します。 たとえば、タプル初期化の一環として名前を指定できます。
 
-[!code-csharp[NamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#02_NamedTuple "Named tuple")]
+[!code-csharp[NamedTuple](../../samples/snippets/csharp/tuples/program.cs#02_NamedTuple "Named tuple")]
 
 コンパイラと言語によってシノニムが処理されるため、名前付きタプルを効果的に使用できるようになります。 IDE やエディターは Roslyn API を使用して、セマンティック名を読み取ります。 これにより、同じアセンブリ内の任意の場所で、セマンティック名によって名前付きタプルの要素を参照できます。 定義した名前は、コンパイル済み出力が生成されるときに、対応する `Item*` に置き換えられます。 これらの要素に設定した名前は、コンパイルされた Microsoft Intermediate Language (MSIL) には含まれません。
 
 C# 7.1 以降、タプルのフィールド名は、タプルの初期化に使用した変数によって指定される場合があります。 これは、 **[タプル プロジェクション初期化子](#tuple-projection-initializers)** と呼ばれます。 次のコードでは、要素 `count` (整数)、および `sum` (倍精度浮動小数点型) で `accumulation` という名前のタプルを作成します。
 
-[!code-csharp[ProjectedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectedTupleNames "Named tuple")]
+[!code-csharp[ProjectedTuple](../../samples/snippets/csharp/tuples/program.cs#ProjectedTupleNames "Named tuple")]
 
 コンパイラは、パブリック メソッドまたはプロパティから返されたタプルに指定されている名前を伝える必要があります。 このような場合、コンパイラはメソッドに <xref:System.Runtime.CompilerServices.TupleElementNamesAttribute> 属性を追加します。 この属性には、タプルの各要素に付けられた名前が含まれた <xref:System.Runtime.CompilerServices.TupleElementNamesAttribute.TransformNames> リスト プロパティが含まれています。
 
@@ -69,20 +69,20 @@ C# 7.1 以降、タプルのフィールド名は、タプルの初期化に使�
 一般に、タプル プロジェクション初期化子は、タプルの初期化ステートメントの右側にある変数またはフィールド名を使用して機能します。
 明示的な名前が指定された場合は、射影された名前より優先されます。 たとえば、次の初期化子では、要素は `localVariableOne` や `localVariableTwo` ではなく、`explicitFieldOne` と `explicitFieldTwo` になります。
 
-[!code-csharp[ExplicitNamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionExample_Explicit "Explicitly named tuple")]
+[!code-csharp[ExplicitNamedTuple](../../samples/snippets/csharp/tuples/program.cs#ProjectionExample_Explicit "Explicitly named tuple")]
 
 明示的な名前が指定されていないフィールドの場合、適用可能な暗黙的な名前が射影されます。 明示的または暗黙的のいずれかで、セマンティック名を指定するための要件はありません。 次の初期化子には、フィールド名 `Item1` があり、その値は `42` と `stringContent` で、その値は "The answer to everything" です。
 
-[!code-csharp[MixedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#MixedTuple "mixed tuple")]
+[!code-csharp[MixedTuple](../../samples/snippets/csharp/tuples/program.cs#MixedTuple "mixed tuple")]
 
 候補フィールド名がタプル フィールドに射影されない場合の条件は 2 つあります。
 
-1. 候補名が予約されているタプル名の場合。 例としては、`Item3`、`ToString` または `Rest`。
+1. 候補名が予約されているタプル名の場合。 例としては、`Item3`、`ToString` または `Rest` です。
 1. 候補名が、別のタプル フィールド名 (明示的または暗黙的のいずれか) の複製である場合。
 
 これらの条件によってあいまいさを回避します。 この名前がタプルのフィールドのフィールド名として使用される場合、あいまいさの原因となります。 この条件はどちらも、コンパイル時エラーを発生させることはありません。 代わりに、射影された名前のない要素には、射影されたセマンティック名がありません。  これらの条件の例を以下に示します。
 
-[!code-csharp-interactive[Ambiguity](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionAmbiguities "tuples where projections are not performed")]
+[!code-csharp-interactive[Ambiguity](../../samples/snippets/csharp/tuples/program.cs#ProjectionAmbiguities "tuples where projections are not performed")]
 
 これらの条件は、タプル フィールド名プロジェクションが利用できなかった場合、C# 7.0 で記述されたコードに対する重大な変更になるため、コンパイラ エラーが発生することはありません。
 
@@ -90,24 +90,24 @@ C# 7.1 以降、タプルのフィールド名は、タプルの初期化に使�
 
 C# 7.3 以降では、タプル型で `==` および `!=` 演算子がサポートされます。 これらの演算子は、左の引数の各メンバーと右の引数の各メンバーを順番に比較することによって機能します。 これらの比較はショートさせます。 これらは、ペアが等値でなくなるとすぐにメンバーの評価を停止します。 次のコード例では `==` を使用しますが、比較規則がすべて `!=` に適用されます。 次のコード例は、整数の 2 つのペアの等値比較を示しています。
 
-[!code-csharp-interactive[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
+[!code-csharp-interactive[TupleEquality](../../samples/snippets/csharp/tuples/program.cs#Equality "Testing tuples for equality")]
 
 タプルの等値テストをより簡単にするルールがいくつかあります。 次のコードに示すように、いずれかのタプルが null 許容タプルの場合、タプルの等値性によって[リフト変換](~/_csharplang/spec/conversions.md#lifted-conversion-operators)が実行されます。
 
-[!code-csharp-interactive[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]
+[!code-csharp-interactive[NullableTupleEquality](../../samples/snippets/csharp/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]
 
 タプルの等値性では、両方のタプルの各メンバーに対して暗黙の変換も実行されます。 これらには、リフト変換、拡大変換などの暗黙の型変換も含まれます。 次の例は、整数から long 型への暗黙の型変換によって、整数の 2 つのタプルを long 型の 2 つのタプルと比較できることを示しています。
 
-[!code-csharp-interactive[SnippetMemberConversions](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberConversions "converting tuples for equality tests")]
+[!code-csharp-interactive[SnippetMemberConversions](../../samples/snippets/csharp/tuples/program.cs#SnippetMemberConversions "converting tuples for equality tests")]
 
 タプルのメンバーの名前は、等値性のテストに参加しません。 ただし、いずれかのオペランドが明示的な名前を持つタプル リテラルの場合、コンパイラは、この名前が他のオペランドの名前と一致しない場合、警告 CS8383 を生成します。
 両方のオペランドがタプル リテラルである場合、警告は次の例に示すように右オペランドに含まれます。
 
-[!code-csharp-interactive[MemberNames](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberNames "Tuple member names do not participate in equality tests")]
+[!code-csharp-interactive[MemberNames](../../samples/snippets/csharp/tuples/program.cs#SnippetMemberNames "Tuple member names do not participate in equality tests")]
 
 最後に、タプルに入れ子になったタプルが含まれることがあります。 タプルの等値性によって、次の例に示すように、入れ子になったタプルを通じて各オペランドの "シェイプ" が比較されます。
 
-[!code-csharp-interactive[NestedTuples](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetNestedTuples "Tuples may contain nested tuples that participate in tuple equality.")]
+[!code-csharp-interactive[NestedTuples](../../samples/snippets/csharp/tuples/program.cs#SnippetNestedTuples "Tuples may contain nested tuples that participate in tuple equality.")]
 
 シェイプが異なる 2 つのタプルの等値性 (または非等値性) を比較すると、コンパイル時エラーになります。 コンパイラは、入れ子になったタプルを比較するためにその分解を試行することはありません。
 
@@ -118,14 +118,14 @@ C# 7.3 以降では、タプル型で `==` および `!=` 演算子がサポー�
 
 以降の例で使用されている変数について考えます。
 
-[!code-csharp[VariableCreation](../../samples/snippets/csharp/tuples/tuples/program.cs#03_VariableCreation "Variable creation")]
+[!code-csharp[VariableCreation](../../samples/snippets/csharp/tuples/program.cs#03_VariableCreation "Variable creation")]
 
 最初の 2 つの変数 `unnamed` および `anonymous` では、要素にセマンティック名が割り当てられていません。 フィールド名は `Item1` と `Item2` になります。
 最後の 2 つの変数 `named` および `differentName` では、要素にセマンティック名が付けられています。 この 2 つのタプルでは、要素名が異なっています。
 
 この 4 つのタプルに含まれている要素の数 ("カーディナリティ" と呼ばれます) と要素の型は同じです。 このため、これらの割り当てはすべて機能します。
 
-[!code-csharp[VariableAssignment](../../samples/snippets/csharp/tuples/tuples/program.cs#04_VariableAssignment "Variable assignment")]
+[!code-csharp[VariableAssignment](../../samples/snippets/csharp/tuples/program.cs#04_VariableAssignment "Variable assignment")]
 
 タプルの名前が割り当てられていないことに注意してください。 要素の値は、タプルの要素の順序に従って割り当てられます。
 
@@ -142,7 +142,7 @@ named = differentShape;
 
 タプルはメソッドの戻り値として使用できます。これはタプルの一般的な使用方法の 1 つです。 その例を見てみましょう。 数値シーケンスの標準偏差を計算する次のメソッドについて考えます。
 
-[!code-csharp[StandardDeviation](../../samples/snippets/csharp/tuples/tuples/statistics.cs#05_StandardDeviation "Compute Standard Deviation")]
+[!code-csharp[StandardDeviation](../../samples/snippets/csharp/tuples/statistics.cs#05_StandardDeviation "Compute Standard Deviation")]
 
 > [!NOTE]
 > この例では、未修正のサンプル標準偏差を計算します。
@@ -153,21 +153,21 @@ named = differentShape;
 
 シーケンスの列挙を 1 つだけ使用して標準偏差を計算する、別の数式があります。  この計算では、シーケンスを列挙しながら、2 つの値が生成されます。1 つはシーケンス内のすべての項目の合計、もう 1 つは各値の二乗和です。
 
-[!code-csharp[SumOfSquaresFormula](../../samples/snippets/csharp/tuples/tuples/statistics.cs#06_SumOfSquaresFormula "Compute Standard Deviation using the sum of squares")]
+[!code-csharp[SumOfSquaresFormula](../../samples/snippets/csharp/tuples/statistics.cs#06_SumOfSquaresFormula "Compute Standard Deviation using the sum of squares")]
 
 このバージョンでは、シーケンスを 1 回だけ列挙しますが、 再利用可能なコードとは言えません。 操作を続けていくと、さまざまな統計計算処理の多くが、シーケンス内の項目数、シーケンスの合計、およびシーケンスの二乗和を使用していることがわかります。 このメソッドをリファクタリングし、その 3 つの値すべてを生成するユーティリティ メソッドを作成しましょう。 3 つすべての値をタプルとして戻すことができます。
 
 このメソッドを更新して、列挙中に計算された 3 つの値をタプルに格納しましょう。 そうすると、次のバージョンが作成されます。
 
-[!code-csharp[TupleVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#07_TupleVersion "Refactor to use tuples")]
+[!code-csharp[TupleVersion](../../samples/snippets/csharp/tuples/statistics.cs#07_TupleVersion "Refactor to use tuples")]
 
 Visual Studio のリファクタリング サポートにより、主要な統計情報の機能をプライベート メソッドに抽出できます。 これにより、3 つの値 `Sum`、`SumOfSquares`、`Count` を含むタプル型を返す `private static` メソッドが作成されます。
 
-[!code-csharp[TupleMethodVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#08_TupleMethodVersion "After extracting utility method")]
+[!code-csharp[TupleMethodVersion](../../samples/snippets/csharp/tuples/statistics.cs#08_TupleMethodVersion "After extracting utility method")]
  
 編集を手動ですばやく行う必要がある場合は、使用できるオプションが他にもいくつかあります。 まず、`var` 宣言を使用することで、`ComputeSumAndSumOfSquares` メソッド呼び出しのタプルの結果を初期化できます。 `ComputeSumAndSumOfSquares` メソッド内に異なる 3 つの変数を作成することもできます。 最終的なバージョンを次のコードに示します。
 
-[!code-csharp[CleanedTupleVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#09_CleanedTupleVersion "After final cleanup")]
+[!code-csharp[CleanedTupleVersion](../../samples/snippets/csharp/tuples/statistics.cs#09_CleanedTupleVersion "After final cleanup")]
 
 この最終バージョンは、この 3 つの値を必要とするすべてのメソッド、またはそのサブセットで使用できます。
 
@@ -203,11 +203,11 @@ LINQ クエリを作成するときも、タプルが便利です。 最終的�
 タプル型のシーケンスを返すのは簡単です。要素の名前と型は、コンパイル時に IDE ツールで使用することができます。
 たとえば、次の ToDo アプリケーションを考えてみます。 ToDo リストの 1 つのエントリを表すために、次のようなクラスを定義します。
 
-[!code-csharp[ToDoItem](../../samples/snippets/csharp/tuples/tuples/projectionsample.cs#14_ToDoItem "To Do Item")]
+[!code-csharp[ToDoItem](../../samples/snippets/csharp/tuples/projectionsample.cs#14_ToDoItem "To Do Item")]
 
 モバイル アプリケーションでサポートされるのは、タイトルしか表示されないコンパクト形式の現在の ToDo 項目です。 その LINQ クエリでは、ID とタイトルのみが含まれるプロジェクションが作成されます。 タプルのシーケンスを返すメソッドは、その設計を適切に表現しています。
 
-[!code-csharp[QueryReturningTuple](../../samples/snippets/csharp/tuples/tuples/projectionsample.cs#15_QueryReturningTuple "Query returning a tuple")]
+[!code-csharp[QueryReturningTuple](../../samples/snippets/csharp/tuples/projectionsample.cs#15_QueryReturningTuple "Query returning a tuple")]
 
 > [!NOTE]
 > C# 7.1 では、タプル プロジェクションを使用して、匿名型で名前が付けられたプロパティと同様の方法で、要素を使用する名前付きタプルを作成できます。 上記のコードでは、クエリ プロジェクションの `select` ステートメントで、要素 `ID` と `Title` を含むタプルを作成します。
@@ -218,11 +218,11 @@ LINQ クエリを作成するときも、タプルが便利です。 最終的�
 
 タプル内のすべての項目を展開するには、メソッドによって返されるタプルを*分解*します。 タプルは 3 とおりの方法で分解できます。  まず、かっこの中で各フィールドの型を明示的に宣言して、タプルの要素ごとに個別の変数を作成することができます。
 
-[!code-csharp[Deconstruct](../../samples/snippets/csharp/tuples/tuples/statistics.cs#10_Deconstruct "Deconstruct")]
+[!code-csharp[Deconstruct](../../samples/snippets/csharp/tuples/statistics.cs#10_Deconstruct "Deconstruct")]
 
 また、かっこの外に `var` キーワードを使用して、タプルの各フィールドに対して暗黙的に型指定された変数を宣言することもできます。
 
-[!code-csharp[DeconstructToVar](../../samples/snippets/csharp/tuples/tuples/statistics.cs#11_DeconstructToVar "Deconstruct to Var")]
+[!code-csharp[DeconstructToVar](../../samples/snippets/csharp/tuples/statistics.cs#11_DeconstructToVar "Deconstruct to Var")]
 
 `var` キーワードは、かっこ内のいずれか 1 つの変数宣言に使用することも、すべての変数宣言に使用することもできます。 
 
@@ -253,21 +253,21 @@ public class Point
 
 型の作成者は、型を構成するデータ要素を表す任意の数の `out` 変数に対して値を割り当てる `Deconstruct` メソッドを 1 つ以上定義できます。 たとえば、次の `Person` 型は、person オブジェクトを、名と姓を表す要素に分解する `Deconstruct` メソッドを定義しています。
 
-[!code-csharp[TypeWithDeconstructMethod](../../samples/snippets/csharp/tuples/tuples/person.cs#12_TypeWithDeconstructMethod "Type with a deconstruct method")]
+[!code-csharp[TypeWithDeconstructMethod](../../samples/snippets/csharp/tuples/person.cs#12_TypeWithDeconstructMethod "Type with a deconstruct method")]
 
 deconstruct メソッドを使用すると、`Person` から、`FirstName` プロパティと `LastName` プロパティを表す 2 つの文字列を割り当てることができます。
 
-[!code-csharp[Deconstruct Type](../../samples/snippets/csharp/tuples/tuples/program.cs#12A_DeconstructType "Deconstruct a class type")]
+[!code-csharp[Deconstruct Type](../../samples/snippets/csharp/tuples/program.cs#12A_DeconstructType "Deconstruct a class type")]
 
 自分で作成していない型を分解することもできます。
 `Deconstruct` メソッドは、オブジェクトのアクセス可能なデータ メンバーを展開する拡張メソッドとして使用できます。 次の例は、`Person` から派生した `Student` 型と、`Student` を 3 つの変数 `FirstName`、`LastName`、`GPA` に分解する拡張メソッドを示しています。
 
-[!code-csharp[ExtensionDeconstructMethod](../../samples/snippets/csharp/tuples/tuples/person.cs#13_ExtensionDeconstructMethod "Type with a deconstruct extension method")]
+[!code-csharp[ExtensionDeconstructMethod](../../samples/snippets/csharp/tuples/person.cs#13_ExtensionDeconstructMethod "Type with a deconstruct extension method")]
 
 `Student` オブジェクトには、アクセス可能な `Deconstruct` メソッドが 2 つあります。`Student` 型に対して宣言された拡張メソッドと、`Person` 型のメンバーです。 両方ともスコープ内にあり、`Student` を 2 つまたは 3 つの変数に分解できます。
 student を 3 つの変数に割り当てると、名、姓、GPA のすべてが返されます。 student を 2 つの変数に割り当てると、名と姓のみが返されます。
 
-[!code-csharp[Deconstruct extension method](../../samples/snippets/csharp/tuples/tuples/program.cs#13A_DeconstructExtension "Deconstruct a class type using an extension method")]
+[!code-csharp[Deconstruct extension method](../../samples/snippets/csharp/tuples/program.cs#13A_DeconstructExtension "Deconstruct a class type using an extension method")]
 
 クラスまたはクラス階層で複数の `Deconstruct` メソッドを定義するときには注意が必要です。 `out` パラメーターの数が同じ `Deconstruct` メソッドが複数あると、あいまいさが生じ、 呼び出し元が、必要な `Deconstruct` メソッドを簡単には呼び出せなくなる場合があります。
 
