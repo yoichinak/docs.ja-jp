@@ -18,8 +18,8 @@ ms.locfileid: "69663551"
 
 ランタイムが実行時の不適切なプラットフォーム呼び出し宣言を自動的に修正するかどうかを指定します。これにより、マネージド コードとアンマネージド コード間の遷移が遅くなります。
 
-\<configuration>
-\<runtime>
+\<configuration>\
+\<runtime>\
 \<NetFx40_PInvokeStackResilience >
 
 ## <a name="syntax"></a>構文

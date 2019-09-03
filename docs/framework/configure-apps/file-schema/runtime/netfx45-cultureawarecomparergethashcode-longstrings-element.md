@@ -20,8 +20,8 @@ ms.locfileid: "69663587"
 
 ランタイムが <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> メソッドで固定量のメモリを使用してハッシュ コードを計算するかどうかを指定します。
 
-\<configuration>
-\<runtime>
+\<configuration>\
+\<runtime>\
 \<NetFx45_CultureAwareComparerGetHashCode_LongStrings >
 
 ## <a name="syntax"></a>構文

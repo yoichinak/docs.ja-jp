@@ -20,7 +20,7 @@ ms.locfileid: "69663464"
 
 アプリケーションを構成するために共通言語ランタイムによって使用される情報を提供します。
 
-\<configuration>
+\<configuration>\
 \<ランタイム >
 
 ## <a name="syntax"></a>構文
