@@ -52,4 +52,4 @@ result = object1 IsNot object2
 - [Is 演算子](../../../visual-basic/language-reference/operators/is-operator.md)
 - [TypeOf 演算子](../../../visual-basic/language-reference/operators/typeof-operator.md)
 - [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [方法: 2つのオブジェクトが同じかどうかをテストする](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-test-whether-two-objects-are-the-same.md)
+- [2 つのオブジェクトが等しいかどうかをテストする方法](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-test-whether-two-objects-are-the-same.md)
