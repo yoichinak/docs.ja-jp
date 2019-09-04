@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 7ae19e48467bf5feca115c993c2299c1ecbaadc7
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 70fcd8041946f2b1db3b37de79318b87771ee676
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566336"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168776"
 ---
 # <a name="lock-statement-c-reference"></a>lock ステートメント (C# リファレンス)
 
@@ -47,9 +47,9 @@ finally
 
 このコードでは [try...finally](try-finally.md) ブロックが使用されているため、`lock` ステートメントの本文内で例外がスローされた場合でもロックは解放されます。
 
-`lock` ステートメントの本体で [await](await.md) キーワードを使用することはできません。
+`lock` ステートメントの本文で [await](../operators/await.md) 演算子を使用することはできません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 共有リソースへのスレッド アクセスを同期する場合、専用オブジェクト インスタンス (`private readonly object balanceLock = new object();` など) またはコードの関連のない部分によってロック オブジェクトとして使用される可能性がない別のインスタンスをロックします。 異なる共有リソースに対して同じロック オブジェクト インスタンスを使用することは避けてください。デッドロックやロックの競合が発生する可能性があります。 特に、以下をロック オブジェクトとして使用しないでください。
 

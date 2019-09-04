@@ -2,12 +2,12 @@
 title: dotnet コマンド
 description: dotnet コマンド (.NET Core CLI ツールの一般的なドライバー) とその使用法について説明します。
 ms.date: 06/04/2018
-ms.openlocfilehash: e1571bea1594b492427bdf5b3a7959733459c54e
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 61542a3fff8bba6e2c3e55a4db5a746620d79ca1
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331015"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202510"
 ---
 # <a name="dotnet-command"></a>dotnet コマンド
 
@@ -21,23 +21,24 @@ ms.locfileid: "68331015"
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
-```
-dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics] [--fx-version]
-    [-h|--help] [--info] [--list-runtimes] [--list-sdks] [--roll-forward-on-no-candidate-fx] [-v|--verbosity] [--version]
+```console
+dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
+    [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--list-runtimes] [--list-sdks] [--roll-forward-on-no-candidate-fx] [--runtimeconfig] [-v|--verbosity] [--version]
 ```
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
-```
-dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics]
-    [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx] [-v|--verbosity] [--version]
+```console
+dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
+    [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx]
+    [--runtimeconfig] [-v|--verbosity] [--version]
 ```
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-```
-dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-version]
-    [-h|--help] [--info] [-v|--verbosity] [--version]
+```console
+dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagnostics]
+    [--fx-version] [-h|--help] [--info] [--runtimeconfig] [-v|--verbosity] [--version]
 ```
 
 ---
@@ -54,11 +55,17 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `--additional-deps <PATH>`
 
-追加の *.deps.json* ファイルへのパスです。
+追加の *.deps.json* ファイルへのパス。
 
 `--additionalprobingpath <PATH>`
 
 プローブ ポリシーとプローブするアセンブリを含むパスです。
+
+`--depsfile`
+
+*deps.json* ファイルへのパス。
+
+*deps.json* ファイルには、依存関係、コンパイル依存関係、アセンブリ競合に対処するためのバージョン情報の一覧が含まれています。 このファイルの詳細については、GitHub の「[Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)」 (ランタイム構成ファイル) を参照してください。
 
 `-d|--diagnostics`
 
@@ -93,6 +100,12 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
  詳細については、「[Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward)」(ロールフォワード) を参照してください。
 
+`--runtimeconfig`
+
+*runtimeconfig.json* ファイルへのパス。
+
+*runtimeconfig.json* ファイルは、ランタイム構成設定が含まれる構成ファイルです。 詳細については、GitHub の「[Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)」 (ランタイム構成ファイル) を参照してください。
+
 `-v|--verbosity <LEVEL>`
 
 コマンドの詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。 一部のコマンドではサポートされていません。このオプションが使用可能かどうかを判断するには、対象のコマンドのページを参照してください。
@@ -105,11 +118,17 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `--additional-deps <PATH>`
 
-追加の *.deps.json* ファイルへのパスです。
+追加の *.deps.json* ファイルへのパス。
 
 `--additionalprobingpath <PATH>`
 
 プローブ ポリシーとプローブするアセンブリを含むパスです。
+
+`--depsfile`
+
+*deps.json* ファイルへのパス。
+
+*deps.json* ファイルには、依存関係、コンパイル依存関係、アセンブリ競合に対処するためのバージョン情報の一覧が含まれています。 このファイルの詳細については、GitHub の「[Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)」 (ランタイム構成ファイル) を参照してください。
 
 `-d|--diagnostics`
 
@@ -131,6 +150,12 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
  `0` に設定されている場合、マイナー バージョンのロールフォワードを無効にします。 詳細については、「[Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward)」(ロールフォワード) を参照してください。
 
+`--runtimeconfig`
+
+*runtimeconfig.json* ファイルへのパス。
+
+*runtimeconfig.json* ファイルは、ランタイム構成設定が含まれる構成ファイルです。 詳細については、GitHub の「[Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)」 (ランタイム構成ファイル) を参照してください。
+
 `-v|--verbosity <LEVEL>`
 
 コマンドの詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。 一部のコマンドではサポートされていません。このオプションが使用可能かどうかを判断するには、対象のコマンドのページを参照してください。
@@ -144,6 +169,12 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 `--additionalprobingpath <PATH>`
 
 プローブ ポリシーとプローブするアセンブリを含むパスです。
+
+`--depsfile`
+
+*deps.json* ファイルへのパス。
+
+*deps.json* ファイルには、依存関係、コンパイル依存関係、アセンブリ競合に対処するためのバージョン情報の一覧が含まれています。 このファイルの詳細については、GitHub の「[Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)」 (ランタイム構成ファイル) を参照してください。
 
 `-d|--diagnostics`
 
@@ -160,6 +191,12 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 `--info`
 
 現在のオペレーティング システムや .NET Core バージョンのコミット SHA など、.NET Core インストールとコンピューター環境に関する詳細を出力します。
+
+`--runtimeconfig`
+
+*runtimeconfig.json* ファイルへのパス。
+
+*runtimeconfig.json* ファイルは、ランタイム構成設定が含まれる構成ファイルです。 詳細については、GitHub の「[Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)」 (ランタイム構成ファイル) を参照してください。
 
 `-v|--verbosity <LEVEL>`
 
@@ -355,3 +392,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 .NET Core ツールの使用に関するデータを収集し、Microsoft に送信するかどうかを指定します。 `true` に設定するとテレメトリ機能が無効になります (指定できる値は `true`、`1`、または `yes` です)。 それ以外の場合は `false` に設定します。この場合、テレメトリ機能が有効になります (指定できる値は `false`、`0`、または `no` です)。 設定されていない場合、既定で `false` になり、テレメトリ機能はアクティブになります。
 
 ---
+
+## <a name="see-also"></a>関連項目
+
+- [ランタイム構成ファイル](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)

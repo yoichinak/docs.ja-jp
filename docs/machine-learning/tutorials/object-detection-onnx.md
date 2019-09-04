@@ -3,15 +3,15 @@ title: 'チュートリアル: ONNX と ML.NET でディープ ラーニング�
 description: このチュートリアルでは、ML.NET の事前トレーニング済みの ONNX ディープ ラーニング モデルを使用して画像内のオブジェクトを検出する方法について説明します。
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 08/01/2019
+ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e44ea5795beb90bafe3faf0bafb463d49ba1fc41
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: deb7258326428cca01ea8734e0dc010c29177cfa
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868726"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106860"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>チュートリアル: ML.NET で ONNX を使用してオブジェクトを検出する
 
@@ -21,11 +21,11 @@ ML.NET の事前トレーニング済みの ONNX モデルを使用して画像�
 
 このチュートリアルでは、次の作業を行う方法について説明します。
 > [!div class="checklist"]
-> * 問題を把握する
-> * ONNX の概要と ML.NET でどのように動作するかについて説明します。
-> * モデルの概要
-> * 事前トレーニング済みモデルを再利用する
-> * 読み込まれたモデルを使用してオブジェクトを検出する
+> - 問題を把握する
+> - ONNX の概要と ML.NET でどのように動作するかについて説明します。
+> - モデルの概要
+> - 事前トレーニング済みモデルを再利用する
+> - 読み込まれたモデルを使用してオブジェクトを検出する
 
 ## <a name="pre-requisites"></a>前提条件
 
@@ -42,7 +42,7 @@ ML.NET の事前トレーニング済みの ONNX モデルを使用して画像�
 
 ## <a name="what-is-object-detection"></a>オブジェクトの検出とは
 
-オブジェクト検出はコンピューターのビジョンの問題です。 画像の分類に密接に関連していますが、オブジェクト検出では、より詳細なスケールで画像分類が実行されます。 オブジェクト検出では、画像内のエンティティの特定 " _" 分類の両方が行われます。 オブジェクト検出は、画像に異なる種類のオブジェクトが複数含まれる場合に使用します。
+オブジェクト検出はコンピューターのビジョンの問題です。 画像の分類に密接に関連していますが、オブジェクト検出では、より詳細なスケールで画像分類が実行されます。 オブジェクト検出では、画像内のエンティティの特定 "_と_" 分類の両方が行われます。 オブジェクト検出は、画像に異なる種類のオブジェクトが複数含まれる場合に使用します。
 
 ![](./media/object-detection-onnx/img-classification-obj-detection.PNG)
 
@@ -117,7 +117,7 @@ ONNX の概要と Tiny YOLOv2 のしくみについて全般的な知識が得�
 
 "*Program.cs*" ファイルを開き、ファイルの先頭に次の追加の `using` ステートメントを追加します。
 
-[!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L1-L9)]
+[!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L1-L7)]
 
 次に、さまざまな資産のパスを定義します。 
 
@@ -178,76 +178,6 @@ ONNX の概要と Tiny YOLOv2 のしくみについて全般的な知識が得�
 
 [!code-csharp [InitMLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L24)]
 
-### <a name="add-helper-methods"></a>ヘルパー メソッドを追加する
-
-モデルによって予測が行われ (一般的にスコアリングと呼ばれます)、出力が処理された後は、境界ボックスが画像の上に描画される必要があります。 これを行うには、"*Program.cs*" の `GetAbsolutePath` メソッドの下に `DrawBoundingBox` というメソッドを追加します。
-
-```csharp
-private static void DrawBoundingBox(string inputImageLocation, string outputImageLocation, string imageName, IList<YoloBoundingBox> filteredBoundingBoxes)
-{
-
-}
-```
-
-まず、`DrawBoundingBox` メソッドで画像を読み込み、高さと幅の寸法を取得します。
-
-[!code-csharp [LoadImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L78-L81)]
-
-次に、for-each ループを作成し、モデルにより検出される各境界ボックスに反復処理を行います。
-
-```csharp
-foreach (var box in filteredBoundingBoxes)
-{
-
-}
-```
-
-for-each ループ内で、境界ボックスの寸法を取得します。
-
-[!code-csharp [GetBBoxDimensions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L86-L89)]
-
-境界ボックスの寸法は `416 x 416` のモデル入力に対応しているため、画像の実際のサイズに合わせて境界ボックスの寸法を拡大縮小します。
-
-[!code-csharp [ScaleImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L92-L95)]
-
-次に、各境界ボックスの上に表示されるテキストのテンプレートを定義します。 テキストには、対応する境界ボックス内のオブジェクトのクラスのほか、信頼度を含めます。
-
-[!code-csharp [DefineBBoxText](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L98)]
-
-画像を描画するために、[`Graphics`](xref:System.Drawing.Graphics) オブジェクトに変換します。
-
-```csharp
-using (Graphics thumbnailGraphic = Graphics.FromImage(image))
-{
-    
-}
-```
-
-`using` コード ブロック内で、グラフィックの [`Graphics`](xref:System.Drawing.Graphics) オブジェクト設定を調整します。
-
-[!code-csharp [TuneGraphicSettings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L102-L104)]
-
-その下で、テキストと境界ボックスのフォントと色のオプションを設定します。
-
-[!code-csharp [SetColorOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L106-L114)]
-
-[`FillRectangle`](xref:System.Drawing.Graphics.FillRectangle*) メソッドを使用してテキストを含めるために、境界ボックスの上に四角形を作成して塗りつぶします。 これにより、テキストにコントラストを付け、読みやすさを向上させることができます。
-
-[!code-csharp [DrawTextBackground](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L117)]
-
-次に、[`DrawString`](xref:System.Drawing.Graphics.DrawString*) メソッドと [`DrawRectangle`](xref:System.Drawing.Graphics.DrawRectangle*) メソッドを使用して、画像の上にテキストと境界ボックスを描画します。
-
-[!code-csharp [DrawClassAndBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L118-L121)]
-
-for-each ループの外側に、画像を `outputDirectory` に保存するコードを追加します。
-
-[!code-csharp [SaveImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L125-L130)]
-
-アプリケーションが実行時に想定どおりに予測を行っているという追加のフィードバックを取得するには、"*Program.cs*" ファイルの `DrawBoundingBox` メソッドの下に `LogDetectedObjects` というメソッドを追加して、検出されたオブジェクトをコンソールに出力します。
-
-[!code-csharp [LogOuptuts](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L133-L143)]
-
-これらのメソッドは両方とも、モデルから出力が生成され、処理されるときに役立ちます。 最初に、モデルの出力を処理する機能を作成します。
 
 ## <a name="create-a-parser-to-post-process-model-outputs"></a>モデル出力を後処理するパーサーを作成する
 
@@ -344,7 +274,7 @@ for-each ループの外側に、画像を `outputDirectory` に保存するコ�
     - `CELL_HEIGHT` は、画像グリッド内の 1 つのセルの高さです。
     - `channelStride` は、グリッド内の現在のセルの開始位置です。
 
-    モデルによって画像のスコアが付けられると、`416px x 416px` の入力が `13 x 13` のサイズのセルのグリッドに分割されます。 各セルには `32px x 32px` が含まれます。 各セルには 5 個の境界ボックスがあり、それぞれに 5 つの特徴 (x、y、幅、高さ、信頼度) があります。 また、各境界ボックスには、各クラスの確率 (この例では 20) が格納されます。 したがって、各セルには 125 個の情報が含まれます (5 つの特徴 + 20 個のクラスの確率)。 
+    モデルで予測 (スコアリングとも呼ばれる) が行われると、`416px x 416px` の入力画像が `13 x 13` のサイズのセルから成るグリッドに分割されます。 各セルには `32px x 32px` が含まれます。 各セルには 5 個の境界ボックスがあり、それぞれに 5 つの特徴 (x、y、幅、高さ、信頼度) があります。 また、各境界ボックスには、各クラスの確率 (この例では 20) が格納されます。 したがって、各セルには 125 個の情報が含まれます (5 つの特徴 + 20 個のクラスの確率)。 
 
 5 個の境界ボックスすべてについて、`channelStride` の下にアンカーのリストを作成します。
 
@@ -560,7 +490,7 @@ for (var j = i + 1; j < boxes.Count; j++)
 
     [!code-csharp [LoadModelLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L47-L49)]
 
-    通常、ML.NET パイプラインでは [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*) メソッドが呼び出されたときにデータが処理されることを想定しています。 この場合、トレーニングに似たプロセスが使用されます。 ただし、実際のトレーニングは行われないため、空の [`IDataView`](xref:Microsoft.ML.IDataView) を使用することができます。 空のリストから、パイプラインの新しい [`IDataView`](xref:Microsoft.ML.IDataView) を作成します。
+    [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*) メソッドが呼び出されたときに操作されるデータ スキーマが ML.NET パイプラインで認識されている必要があります。 この場合、トレーニングに似たプロセスが使用されます。 ただし、実際のトレーニングは行われないため、空の [`IDataView`](xref:Microsoft.ML.IDataView) を使用することができます。 空のリストから、パイプラインの新しい [`IDataView`](xref:Microsoft.ML.IDataView) を作成します。
 
     [!code-csharp [LoadEmptyIDV](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L52)]    
 
@@ -608,7 +538,13 @@ private IEnumerable<float[]> PredictDataUsingModel(IDataView testData, ITransfor
 
 ## <a name="detect-objects"></a>オブジェクトを検出する
 
-すべての設定が完了したので、次はいくつかのオブジェクトを検出します。 "*Program.cs*" クラスの `Main` メソッド内に、try-catch ステートメントを追加します。
+すべての設定が完了したので、次はいくつかのオブジェクトを検出します。 まず、*Program.cs* クラスでスコアラーとパーサーの参照を追加します。
+
+[!code-csharp [ReferenceScorerParser](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L8-L9)]
+
+### <a name="score-and-parse-model-outputs"></a>モデル出力のスコア付けと解析
+
+"*Program.cs*" クラスの `Main` メソッド内に、try-catch ステートメントを追加します。
 
 ```csharp
 try
@@ -633,7 +569,78 @@ catch (Exception ex)
 
 [!code-csharp [ParsePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L39-L44)]
 
-モデル出力が処理されたら、次は画像上に境界ボックスを描画します。 for ループを作成して、スコア付けされた各画像を反復処理します。
+モデル出力が処理されたら、次は画像上に境界ボックスを描画します。 
+
+### <a name="visualize-predictions"></a>予測の視覚化
+
+モデルによって画像にスコアが付けられ、出力が処理された後は、境界ボックスが画像の上に描画される必要があります。 これを行うには、*Program.cs* の内部にある `GetAbsolutePath` メソッドの下に `DrawBoundingBox` というメソッドを追加します。
+
+```csharp
+private static void DrawBoundingBox(string inputImageLocation, string outputImageLocation, string imageName, IList<YoloBoundingBox> filteredBoundingBoxes)
+{
+
+}
+```
+
+まず、`DrawBoundingBox` メソッドで画像を読み込み、高さと幅の寸法を取得します。
+
+[!code-csharp [LoadImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L78-L81)]
+
+次に、for-each ループを作成し、モデルにより検出される各境界ボックスに反復処理を行います。
+
+```csharp
+foreach (var box in filteredBoundingBoxes)
+{
+
+}
+```
+
+for-each ループ内で、境界ボックスの寸法を取得します。
+
+[!code-csharp [GetBBoxDimensions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L86-L89)]
+
+境界ボックスの寸法は `416 x 416` のモデル入力に対応しているため、画像の実際のサイズに合わせて境界ボックスの寸法を拡大縮小します。
+
+[!code-csharp [ScaleImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L92-L95)]
+
+次に、各境界ボックスの上に表示されるテキストのテンプレートを定義します。 テキストには、対応する境界ボックス内のオブジェクトのクラスのほか、信頼度を含めます。
+
+[!code-csharp [DefineBBoxText](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L98)]
+
+画像を描画するために、[`Graphics`](xref:System.Drawing.Graphics) オブジェクトに変換します。
+
+```csharp
+using (Graphics thumbnailGraphic = Graphics.FromImage(image))
+{
+    
+}
+```
+
+`using` コード ブロック内で、グラフィックの [`Graphics`](xref:System.Drawing.Graphics) オブジェクト設定を調整します。
+
+[!code-csharp [TuneGraphicSettings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L102-L104)]
+
+その下で、テキストと境界ボックスのフォントと色のオプションを設定します。
+
+[!code-csharp [SetColorOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L106-L114)]
+
+[`FillRectangle`](xref:System.Drawing.Graphics.FillRectangle*) メソッドを使用してテキストを含めるために、境界ボックスの上に四角形を作成して塗りつぶします。 これにより、テキストにコントラストを付け、読みやすさを向上させることができます。
+
+[!code-csharp [DrawTextBackground](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L117)]
+
+次に、[`DrawString`](xref:System.Drawing.Graphics.DrawString*) メソッドと [`DrawRectangle`](xref:System.Drawing.Graphics.DrawRectangle*) メソッドを使用して、画像の上にテキストと境界ボックスを描画します。
+
+[!code-csharp [DrawClassAndBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L118-L121)]
+
+for-each ループの外側に、画像を `outputDirectory` に保存するコードを追加します。
+
+[!code-csharp [SaveImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L125-L130)]
+
+アプリケーションが実行時に想定どおりに予測を行っているという追加のフィードバックを取得するには、*Program.cs* ファイル内にある `DrawBoundingBox` メソッドの下に `LogDetectedObjects` というメソッドを追加して、検出されたオブジェクトをコンソールに出力します。
+
+[!code-csharp [LogOuptuts](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L133-L143)]
+
+これで予測から視覚的なフィードバックを作成するヘルパー メソッドが用意できたので、スコア付けされた画像を反復処理する for ループを追加します。
 
 ```csharp
 for (var i = 0; i < images.Count(); i++)
@@ -650,7 +657,7 @@ for ループ内で、画像ファイルの名前と、画像に関連付けら�
 
 [!code-csharp [DrawBBoxes](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L52)]
 
-最後に、`LogDetectedObjects` メソッドを使用して、ログ記録ロジックを追加します。
+最後に、`LogDetectedObjects` メソッドを使用し、予測をコンソールに出力します。
 
 [!code-csharp [LogPredictionsOutput](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L54)]
 
@@ -704,11 +711,11 @@ person and its Confidence score: 0.5551759
 
 このチュートリアルでは、次の作業を行う方法を学びました。
 > [!div class="checklist"]
-> * 問題を把握する
-> * ONNX の概要と ML.NET でどのように動作するかについて説明します。
-> * モデルの概要
-> * 事前トレーニング済みモデルを再利用する
-> * 読み込まれたモデルを使用してオブジェクトを検出する
+> - 問題を把握する
+> - ONNX の概要と ML.NET でどのように動作するかについて説明します。
+> - モデルの概要
+> - 事前トレーニング済みモデルを再利用する
+> - 読み込まれたモデルを使用してオブジェクトを検出する
 
 Machine Learning サンプルの GitHub リポジトリを確認し、拡張されたオブジェクト検出サンプルを探索してください。
 > [!div class="nextstepaction"]

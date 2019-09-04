@@ -1,5 +1,5 @@
 ---
-title: COM への .NET Framework コンポーネントの公開
+title: COM への .NET コンポーネントの公開
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exposing .NET Framework components to COM
@@ -8,14 +8,14 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48d550a526336cf3e9de9cb53a16ddcf86f3af5d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 981f5f23bf2aafc41426c858e150ec3664a494f9
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946515"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205803"
 ---
-# <a name="exposing-net-framework-components-to-com"></a>COM への .NET Framework コンポーネントの公開
+# <a name="exposing-net-components-to-com"></a>COM への .NET コンポーネントの公開
 
 .NET 型の記述とその型をアンマネージ コードから使用することは、開発者にとっては個別のアクティビティです。 このセクションでは、COM クライアントと相互運用するマネージド コードの記述のためのいくつかのヒントについて説明します。
 

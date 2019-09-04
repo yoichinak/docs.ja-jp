@@ -1,16 +1,16 @@
 ---
 title: モデルのトレーニングと評価
 description: ML.NET を使用して、機械学習モデルの構築、メトリックの収集、およびパフォーマンスの測定を行う方法について説明します。 機械学習モデルによって、トレーニング データ内のパターンが識別され、新しいデータを使って予測が実行されます。
-ms.date: 06/25/2019
+ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 61cdaf693c417d02da95d1d79ab30eb2d30a057b
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 3fb586b218f1769949efc362cacc3957623dd43b
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397642"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169046"
 ---
 # <a name="train-and-evaluate-a-model"></a>モデルのトレーニングと評価
 
@@ -20,7 +20,7 @@ ML.NET を使用して、機械学習モデルの構築、メトリックの収�
 
 機械学習モデルの目的は、トレーニング データ内のパターンを識別することです。 これらのパターンは、新しいデータを使用して予測を行うために使用されます。
 
-次のデータ モデルがあるとします。
+データは `HousingData` などのクラスでモデル化できます。
 
 ```csharp
 public class HousingData
@@ -38,7 +38,7 @@ public class HousingData
 }
 ```
 
-データを [`IDataView`](xref:Microsoft.ML.IDataView) に読み込みます。
+[`IDataView`](xref:Microsoft.ML.IDataView) にロードされた、次のデータがあるとします。
 
 ```csharp
 HousingData[] housingData = new HousingData[]

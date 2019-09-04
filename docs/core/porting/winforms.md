@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.custom: ''
-ms.openlocfilehash: aebfaa85338e014ca47256b85a1bd6529ad803bb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 7ef36be47648ae338b5fe70b75431006c99be31f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59327166"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105213"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>方法: Windows Forms デスクトップ アプリを .NET Core に移植する
 
@@ -54,7 +54,7 @@ ms.locfileid: "59327166"
 
 01. [Windows 互換機能パック][compat-pack]が移行に役立つ可能性がある。
 
-    .NET Framework で利用できる一部の API は、.NET Core 3.0 では利用できません。 [Windows 互換機能パック][compat-pack]によって多数の API が追加され、Windows Forms アプリに .NET Core との互換性を持たせるために役立つ可能性があります。
+    .NET Framework で利用できる一部の API は、.NET Core 3.0 では利用できません。 [Windows 互換機能パック][compat-pack]によって多数の API が追加され、Windows Forms アプリの .NET Core との互換性が促進される可能性があります。
 
 01. 自分のプロジェクトで使用されている NuGet パッケージを更新する。
 
@@ -300,7 +300,7 @@ Visual Studio 2019 で Windows Forms デザイナーがサポートされるよ�
  
 ## <a name="next-steps"></a>次の手順
 
-* [Windows 互換機能パック][compat-pack]の詳細を確認する。
-* .NET Framework Windows Forms プロジェクトの .NET Core への[移植に関するビデオ](https://www.youtube.com/watch?v=upVQEUc_KwU)を視聴する。
+- [Windows 互換機能パック][compat-pack]の詳細を確認する。
+- .NET Framework Windows Forms プロジェクトの .NET Core への[移植に関するビデオ](https://www.youtube.com/watch?v=upVQEUc_KwU)を視聴する。
 
 [compat-pack]: windows-compat-pack.md

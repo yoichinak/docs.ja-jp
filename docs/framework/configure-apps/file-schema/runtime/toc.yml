@@ -26,12 +26,14 @@
                   href: bindingredirect-element.md
                 - name: <codeBase> 要素
                   href: codebase-element.md
+                - name: <publisherPolicy> 要素
+                  href: publisherpolicy-element.md
             - name: <probing> 要素
               href: probing-element.md
-            - name: <publisherPolicy> 要素
-              href: publisherpolicy-element.md
             - name: <qualifyAssembly> 要素
               href: qualifyassembly-element.md
+            - name: <supportPortability> 要素
+              href: supportportability-element.md
         - name: <bypassTrustedAppStrongNames> 要素
           href: bypasstrustedappstrongnames-element.md
         - name: <CompatSortNLSVersion> 要素
@@ -82,23 +84,6 @@
           href: relativebindforresources-element.md
         - name: <shadowCopyVerifyByTimestamp> 要素
           href: shadowcopyverifybytimestamp-element.md
-        - name: <supportPortability> 要素
-          href: supportportability-element.md
-        - name: <system.runtime.caching> 要素 (キャッシュ設定)
-          href: system-runtime-caching-element-cache-settings.md
-          items:
-            - name: <memoryCache> 要素 (キャッシュ設定)
-              href: memorycache-element-cache-settings.md
-              items:
-                - name: <namedCaches> 要素 (キャッシュ設定)
-                  href: namedcaches-element-cache-settings.md
-                  items:
-                    - name: <namedCaches> の <add> 要素
-                      href: add-element-for-namedcaches.md
-                    - name: <namedCaches> の <clear> 要素
-                      href: clear-element-for-namedcaches.md
-                    - name: <namedCaches> の <remove> 要素
-                      href: remove-element-for-namedcaches.md
         - name: <Thread_UseAllCpuGroups> 要素
           href: thread-useallcpugroups-element.md
         - name: <ThrowUnobservedTaskExceptions> 要素
@@ -111,3 +96,18 @@
           href: userandomizedstringhashalgorithm-element.md
         - name: <UseSmallInternalThreadStacks> 要素
           href: usesmallinternalthreadstacks-element.md
+    - name: <system.runtime.caching> 要素 (キャッシュ設定)
+      href: system-runtime-caching-element-cache-settings.md
+      items:
+        - name: <memoryCache> 要素 (キャッシュ設定)
+          href: memorycache-element-cache-settings.md
+          items:
+            - name: <namedCaches> 要素 (キャッシュ設定)
+              href: namedcaches-element-cache-settings.md
+              items:
+                - name: <namedCaches> の <add> 要素
+                  href: add-element-for-namedcaches.md
+                - name: <namedCaches> の <clear> 要素
+                  href: clear-element-for-namedcaches.md
+                - name: <namedCaches> の <remove> 要素
+                  href: remove-element-for-namedcaches.md

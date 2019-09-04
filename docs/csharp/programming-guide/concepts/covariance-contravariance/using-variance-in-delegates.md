@@ -2,12 +2,12 @@
 title: デリゲートの変性の使用 (C#)
 ms.date: 07/20/2015
 ms.assetid: 1638c95d-dc8b-40c1-972c-c2dcf84be55e
-ms.openlocfilehash: 00e11d4ce755c8c75b73023fec14d95ebc96b4fe
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 980caf8d5e4699115d203a89fab7994d18cc1707
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595265"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168366"
 ---
 # <a name="using-variance-in-delegates-c"></a>デリゲートの変性の使用 (C#)
 メソッドをデリゲートに割り当てると、"*共変性*" と "*反変性*" により、デリゲート型をメソッドのシグネチャに柔軟に一致させることができます。 共変性により、メソッドの戻り値の型の派生を、デリゲートに定義されている型よりも強くできます。 また、反変性により、メソッドのパラメーター型の派生をデリゲート型よりも弱くできます。  
@@ -50,8 +50,23 @@ class Program
   
 ## <a name="example-2-contravariance"></a>例 2:反変性  
   
-### <a name="description"></a>説明  
- この例は、パラメーターの型がデリゲート シグネチャ パラメーター型の基本データ型であるメソッドで、デリゲートをどのように使用できるかを示しています。 反変性により、複数のハンドラーの代わりに単一のイベント ハンドラーを使用できます。 たとえば、`EventArgs` 入力パラメーターを受け取るイベント ハンドラーを作成し、そのイベント ハンドラーを、`MouseEventArgs` 型をパラメーターとして送信する `Button.MouseClick` イベントや `KeyEventArgs` パラメーターを送信する `TextBox.KeyDown` イベントで使用できます。  
+### <a name="description"></a>説明
+
+この例は、型がデリゲート シグネチャ パラメーター型の基本データ型であるパラメーターを持つメソッドでデリゲートを使用する方法を示しています。 反変性により、複数のハンドラーの代わりに単一のイベント ハンドラーを使用できます。 次の例では、2 つのデリゲートを使用します。
+
+- [Button.KeyDown](xref:System.Windows.Forms.Control.KeyDown) イベントのシグネチャを定義する <xref:System.Windows.Forms.KeyEventHandler> デリゲート。 そのシグネチャ:
+
+   ```csharp
+   public delegate void KeyEventHandler(object sender, KeyEventArgs e)
+   ```
+
+- [Button.MouseClick](xref:System.Windows.Forms.Control.MouseDown) イベントのシグネチャを定義する <xref:System.Windows.Forms.MouseEventHandler> デリゲート。 そのシグネチャ:
+
+   ```csharp
+   public delegate void MouseEventHandler(object sender, MouseEventArgs e)
+   ```
+
+この例では、イベント ハンドラーと <xref:System.EventArgs> パラメーターが定義され、そのパラメーターを使用し、`Button.KeyDown` と `Button.MouseClick` の両方のイベントが処理されます。 これが可能になるのは、<xref:System.EventArgs> は <xref:System.Windows.Forms.KeyEventArgs> と <xref:System.Windows.Forms.MouseEventArgs> の両方の基本データ型であるためです。 
   
 ### <a name="code"></a>コード  
   

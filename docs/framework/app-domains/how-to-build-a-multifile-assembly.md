@@ -19,14 +19,15 @@ helpviewer_keywords:
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bcc451903f7fbf7f82e2ed64834d26e605a0c069
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a964e73cc41cebad33a3edc34b89ef240fbc62c8
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59187799"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040856"
 ---
 # <a name="how-to-build-a-multifile-assembly"></a>方法: マルチファイル アセンブリをビルドする
+
 この記事では、マルチファイル アセンブリを作成する方法を説明し、プロシージャの各手順を示すコードを提供します。
 
 > [!NOTE]
@@ -50,7 +51,7 @@ ms.locfileid: "59187799"
 
     *module* パラメーターと **/t:** コンパイラ オプションを指定すると、ファイルはアセンブリではなくモジュールとしてコンパイルされます。 コンパイラは、アセンブリに追加できる `Stringer.netmodule` モジュールを生成します。
 
-02. コード内で参照されるほかのモジュールを示すために必要なコンパイラ オプションを使用して、ほかのすべてのモジュールをコンパイルします。 この手順では、**/addmodule** コンパイラ オプションを使用します。
+02. コード内で参照されるほかのモジュールを示すために必要なコンパイラ オプションを使用して、ほかのすべてのモジュールをコンパイルします。 この手順では、 **/addmodule** コンパイラ オプションを使用します。
 
     次の例では、`Client` コード モジュールに、手順 1. で作成した `Main` モジュール内のメソッドを参照するエントリ ポイント `Stringer.dll` メソッドがあります。
 
@@ -64,28 +65,24 @@ ms.locfileid: "59187799"
     [!code-csharp[Conceptual.Assembly.Multifile#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#4)]
     [!code-vb[Conceptual.Assembly.Multifile#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#4)]
 
-    このモジュールは後の手順でアセンブリに追加するため、**/t:module** オプションを指定します。 `Client` 内のコードが `Stringer.netmodule` 内のコードによって作成された名前空間を参照するため、**/addmodule** オプションを指定します。 コンパイラは、`Client.netmodule` という別のモジュールへの参照を格納する `Stringer.netmodule` モジュールを生成します。
+    このモジュールは後の手順でアセンブリに追加するため、 **/t:module** オプションを指定します。 `Client` 内のコードが `Stringer.netmodule` 内のコードによって作成された名前空間を参照するため、 **/addmodule** オプションを指定します。 コンパイラは、`Client.netmodule` という別のモジュールへの参照を格納する `Stringer.netmodule` モジュールを生成します。
 
     >[!NOTE]
     >C# コンパイラと Visual Basic コンパイラは、マルチファイル アセンブリを直接作成する場合、次の 2 種類の構文を使用します。
     >
-    >- 2 回のコンパイルで、2 ファイルのアセンブリを作成する。
+    >- 2 回のコンパイルで、2 ファイルのアセンブリを作成する。[!code-cpp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#5)]
+    >  [!code-csharp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#5)]
+    >  [!code-vb[Conceptual.Assembly.Multifile#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#5)]
     >
-    >    [!code-cpp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#5)]
-    >    [!code-csharp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#5)]
-    >    [!code-vb[Conceptual.Assembly.Multifile#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#5)]
-    >
-    >- 1 回のコンパイルで、2 ファイルのアセンブリを作成する。
-    >
-    >    [!code-cpp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#6)]
-    >    [!code-csharp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#6)]
-    >    [!code-vb[Conceptual.Assembly.Multifile#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#6)]
+    >- 1 回のコンパイルで、2 ファイルのアセンブリを作成する。[!code-cpp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#6)]
+    >  [!code-csharp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#6)]
+    >  [!code-vb[Conceptual.Assembly.Multifile#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#6)]
 
 03. [アセンブリ リンカー (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) を使用して、アセンブリ マニフェストを格納する出力ファイルを作成します。 このファイルは、アセンブリの一部であるすべてのモジュールまたはリソースについての参照情報を格納します。
 
     コマンド プロンプトに次のコマンドを入力します。
 
-    **al** \<*module name*> \<*module name*> … **/main:**\<*method name*> **/out:**\<*file name*> **/target:**\<*assembly file type*>
+    **al** \<*module name*> \<*module name*> … **/main:** \<*method name*>  **/out:** \<*file name*>  **/target:** \<*assembly file type*>
 
     このコマンドで、*module name* 引数はアセンブリに含める各モジュールの名前を指定します。 **/main:** オプションは、アセンブリのエントリ ポイントであるメソッド名を指定します。 **/out:** オプションは、アセンブリ メタデータを格納する出力ファイルの名前を指定します。 **/target:** オプションは、アセンブリがコンソール アプリケーション実行可能ファイル (.exe)、Windows 実行可能ファイル (.win)、またはライブラリ ファイル (.lib) であることを指定します。
 

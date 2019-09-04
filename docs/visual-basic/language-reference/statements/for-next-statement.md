@@ -61,7 +61,7 @@ Next [ counter ]
 |`Next`|必須。 `For`ループの定義を終了します。|
 
 > [!NOTE]
-> このステートメントでは、キーワードを使用して、カウンターの範囲を指定します。`To` このキーワードは、 [Select...Case ステートメント](../../../visual-basic/language-reference/statements/select-case-statement.md)と配列宣言。 配列の宣言の詳細については、「 [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)」を参照してください。
+> このステートメントでは、`To`キーワードを使用して、カウンターの範囲を指定します。 このキーワードは [Select...Case ステートメント](../../../visual-basic/language-reference/statements/select-case-statement.md) と配列の宣言でも使用できます。 配列の宣言に関する詳細については、「 [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)」を参照してください。
 
 ## <a name="simple-examples"></a>簡単な例
 
@@ -86,7 +86,7 @@ Next [ counter ]
 
 ループを入れ子にする場合、各ループは`counter`一意の変数を持つ必要があります。
 
-また、さまざまな種類のコントロール構造を入れ子にすることもできます。 詳細については、「[入れ子になったコントロール構造](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)」を参照してください。
+さまざまな種類の制御構造を入れ子にすることもできます。 詳細については、[入れ子になった制御構造](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md) を参照してください。
 
 ## <a name="exit-for-and-continue-for"></a>Exit For と Continue For
 

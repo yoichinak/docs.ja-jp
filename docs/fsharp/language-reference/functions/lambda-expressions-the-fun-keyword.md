@@ -1,6 +1,6 @@
 ---
-title: ラムダ式:楽しいキーワード
-description: "\"楽しい\" キーワードをF#使用してラムダ式を定義する方法について説明します。これは匿名関数です。"
+title: ラムダ式:funキーワード
+description: '\"fun\" キーワードを使用してラムダ式を定義する方法について説明します。これは匿名関数です。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 9818724686dd83a7e352fb36819289fa19b002df
 ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4

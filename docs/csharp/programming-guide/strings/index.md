@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: d9453f931bba9b1d3b5db3b4f80aa365677c0b76
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 8dacd4bf0102ccc2e769d10ce51e481b36004c3a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988423"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252972"
 ---
 # <a name="strings-c-programming-guide"></a>文字列 (C# プログラミング ガイド)
 文字列は、値がテキストの <xref:System.String> 型のオブジェクトです。 内部では、テキストは <xref:System.Char> オブジェクトの順次読み取り専用コレクションとして格納されます。 C# の文字列の末尾には null 終端文字はありません。したがって、C# の文字列には任意の数の null 文字 ('\0') を埋め込むことができます。 文字列の <xref:System.String.Length%2A> プロパティは、Unicode 文字の数ではなく、文字列に含まれている `Char` オブジェクトの数を表します。 文字列内の個別の Unicode コード ポイントにアクセスするには、<xref:System.Globalization.StringInfo> オブジェクトを使用します。  
@@ -107,7 +107,7 @@ C# 6.0 以降で使用できる ["*補間文字列*"](../../language-reference/t
 ## <a name="null-strings-and-empty-strings"></a>null 文字列と空の文字列  
  空の文字列はゼロ文字を含む <xref:System.String?displayProperty=nameWithType> オブジェクトのインスタンスです。 空の文字列は、空のテキスト フィールドを表すため、さまざまなプログラミング シナリオでよく使用されます。 有効な <xref:System.String?displayProperty=nameWithType> オブジェクトであるため、空の文字列でメソッドを呼び出すことができます。 空の文字列は、次のように初期化されます。  
   
-```  
+```csharp  
 string s = String.Empty;  
 ```  
   

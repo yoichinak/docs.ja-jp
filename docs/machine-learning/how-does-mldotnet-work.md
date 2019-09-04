@@ -1,17 +1,17 @@
 ---
 title: ML.NET の概要とそのしくみ
 description: ML.NET を使用すると、オンラインまたはオフラインのどちらのシナリオでも、.NET アプリケーションに機械学習を追加できます。 この機能により、データを使った自動予測をアプリケーションで利用できるようになります。ML.NET を使うためにネットワークに接続する必要はありません。 この記事では、ML.NET の機械学習の基本について説明します。
-ms.date: 07/17/2019
+ms.date: 08/26/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 23e71e86b75854042068b6a68f90cf995749ee58
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: af91819c66a2376f446d0f18537d2f6e718b446e
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331584"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104893"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>ML.NET の概要とそのしくみ
 
@@ -229,7 +229,7 @@ ML.NET アプリケーションは <xref:Microsoft.ML.MLContext> オブジェク
 
 ML.NET 機械学習パイプラインの中心には [DataView](xref:Microsoft.ML.IDataView) オブジェクトがあります。
 
-パイプライン内の各変換には、入力スキーマ (変換で入力にあると想定されているデータの名前、型、およびサイズ) と、出力スキーマ (変換によって変換後に生成されるデータの名前、型、およびサイズ) があります。 
+パイプライン内の各変換には、入力スキーマ (変換で入力にあると想定されているデータの名前、型、およびサイズ) と、出力スキーマ (変換によって変換後に生成されるデータの名前、型、およびサイズ) があります。 次のドキュメントでは、[IDataView インターフェイスとその型システム](https://xadupre.github.io/machinelearningext/mlnetdocs/idataviewtypesystem.html)について詳しく説明しています。
 
 パイプライン内の 1 つの変換からの出力スキーマが次の変換の入力スキーマと一致しない場合、ML.NET から例外がスローされます。
 

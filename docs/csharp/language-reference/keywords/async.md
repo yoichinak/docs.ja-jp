@@ -9,12 +9,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: e0c8f52193639c067252878127ee95a0897b9582
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 71e3781b08bca3441dbd55704bcb0f7de635097e
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922440"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168647"
 ---
 # <a name="async-c-reference"></a>async (C# リファレンス)
 
@@ -27,7 +27,7 @@ public async Task<int> ExampleMethodAsync()
 }  
 ```  
 
-非同期プログラミングに慣れていない場合、または、非同期メソッドで `await` キーワードを使って、実行時間が長くなる可能性のある処理を、呼び出し元のスレッドをブロックすることなく実行する方法を理解していない場合は、「[Async および Await を使用した非同期プログラミング](../../programming-guide/concepts/async/index.md)」の概要をご覧ください。 次のコードは、非同期メソッド内のコードで、<xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType> メソッドを呼び出します。 
+非同期プログラミングに慣れていない場合、または、非同期メソッドで [`await` 演算子](../operators/await.md)を使って、実行時間が長くなる可能性のある処理を、呼び出し元のスレッドをブロックすることなく実行する方法を理解していない場合は、「[async および await を使用した非同期プログラミング](../../programming-guide/concepts/async/index.md)」の概要を参照してください。 次のコードは、非同期メソッド内のコードで、<xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType> メソッドを呼び出します。
   
 ```csharp  
 string contents = await httpClient.GetStringAsync(requestUrl);  
@@ -87,6 +87,6 @@ C# 7.0 以降、`GetAwaiter` メソッドを持つ別の型 (通常は値の型)
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>
-- [await](./await.md)
-- [チュートリアル:Async と Await を使用した Web へのアクセス](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [await](../operators/await.md)
+- [チュートリアル: Async と Await を使用した Web へのアクセス](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Async および Await を使用した非同期プログラミング](../../programming-guide/concepts/async/index.md)

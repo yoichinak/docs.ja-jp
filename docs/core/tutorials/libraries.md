@@ -4,12 +4,12 @@ description: .NET Core CLI ツールを使用して .NET Core ライブラリを
 author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: 9dd1d8477f8e34e79ff521463972e26a21ad1dfd
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: d22f73b33c36357b7f8018d1620b240e18d91676
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212067"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202658"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>クロス プラットフォーム ツールによるライブラリの開発
 
@@ -72,19 +72,20 @@ ms.locfileid: "57212067"
 
 最大数の開発者とプロジェクトを対象にしたい場合、基準となるターゲットは .NET Framework 4.0 です。 .NET Framework をターゲット設定するには、まず、サポートしたい .NET Framework バージョンに対応する正しいターゲット フレームワーク モニカー (TFM) を使用します。
 
-```
-.NET Framework 2.0   --> net20
-.NET Framework 3.0   --> net30
-.NET Framework 3.5   --> net35
-.NET Framework 4.0   --> net40
-.NET Framework 4.5   --> net45
-.NET Framework 4.5.1 --> net451
-.NET Framework 4.5.2 --> net452
-.NET Framework 4.6   --> net46
-.NET Framework 4.6.1 --> net461
-.NET Framework 4.6.2 --> net462
-.NET Framework 4.7   --> net47
-```
+| .NET Framework のバージョン | TFM      |
+| ---------------------- | -------- |
+| .NET Framework 2.0     | `net20`  |
+| .NET Framework 3.0     | `net30`  |
+| .NET Framework 3.5     | `net35`  |
+| .NET Framework 4.0     | `net40`  |
+| .NET Framework 4.5     | `net45`  |
+| .NET Framework 4.5.1   | `net451` |
+| .NET Framework 4.5.2   | `net452` |
+| .NET Framework 4.6     | `net46`  |
+| .NET Framework 4.6.1   | `net461` |
+| .NET Framework 4.6.2   | `net462` |
+| .NET Framework 4.7     | `net47`  |
+| .NET Framework 4.8     | `net48`  |
 
 この TFM をプロジェクト ファイルの `TargetFramework` セクションに挿入します。 .NET Framework 4.0 をターゲットとするライブラリを作成する例を次に示します。
 
