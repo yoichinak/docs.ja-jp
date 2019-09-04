@@ -2,12 +2,12 @@
 title: TREAT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b77f156-55de-4cb4-8154-87f707d4c635
-ms.openlocfilehash: 15664da02189dd618784d55c07aaf4db38a2f656
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b7393bef32b3e057eca51eb516cb72cd2de126c2
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929288"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248968"
 ---
 # <a name="treat-entity-sql"></a>TREAT (Entity SQL)
 特定の基本データ型のオブジェクトを指定の派生型のオブジェクトとして処理します。  
@@ -68,5 +68,5 @@ WHERE p IS OF (NamespaceName.Employee)
   
 ## <a name="see-also"></a>関連項目
 
-- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [NULL 値が許容される構造化型](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)
+- [Entity SQL リファレンス](entity-sql-reference.md)
+- [NULL 値が許容される構造化型](nullable-structured-types-entity-sql.md)

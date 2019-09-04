@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2268d07fb643621c944ef9bf561156b5332aaafc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 83980d315c83aa5cc23944dbd271c29e0ed83206
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920718"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252477"
 ---
 # <a name="loadfromremotesources-element"></a>\<loadFromRemoteSources > 要素
 リモートソースから読み込まれたアセンブリに .NET Framework 4 以降で完全信頼を付与するかどうかを指定します。
@@ -20,9 +20,9 @@ ms.locfileid: "69920718"
 > [!NOTE]
 > Visual Studio プロジェクトの [エラー一覧] またはビルドエラーのエラーメッセージが原因でこの記事にリダイレクトされた[場合は、「方法:Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100))で Web からのアセンブリを使用します。  
   
- \<configuration>  
-\<ランタイム >  
-\<loadFromRemoteSources>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<ランタイム >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<loadFromRemoteSources >**  
   
 ## <a name="syntax"></a>構文  
   

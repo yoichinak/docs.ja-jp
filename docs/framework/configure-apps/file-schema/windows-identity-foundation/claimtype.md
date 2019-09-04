@@ -3,20 +3,21 @@ title: <claimType>
 ms.date: 03/30/2017
 ms.assetid: d17b5831-9a2c-45c4-b0d1-68f48e72e861
 author: BrucePerlerMS
-ms.openlocfilehash: 4253aec961b812b6893ee201861d2ab38048032a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a46e9129bd27319abb4d7519444568af622170fc
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942877"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252067"
 ---
 # <a name="claimtype"></a>\<claimType >
 入力方向のセキュリティトークンに対して1つの省略可能なクレームまたは必須の要求を指定します。  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<claimTypeRequired>  
-\<claimType >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<システムの >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<構成 >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<claimTypeRequired >** ](claimtyperequired.md)\  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<claimType >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,7 +39,7 @@ ms.locfileid: "69942877"
   
 |属性|説明|  
 |---------------|-----------------|  
-|種類|要求の種類。 通常は URI です。 必須。|  
+|型|要求の種類。 通常は URI です。 必須。|  
 |optional|要求の種類が省略可能かどうかを指定するブール値です。 任意。|  
   
 ### <a name="child-elements"></a>子要素  

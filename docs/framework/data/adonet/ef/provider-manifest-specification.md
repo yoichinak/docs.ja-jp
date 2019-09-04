@@ -2,12 +2,12 @@
 title: プロバイダー マニフェストの仕様
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 9ae528105119241e05be5182db418312c4120112
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 6b924f484e6635760d08d0eba9fb9436bdd8bc88
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422719"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248585"
 ---
 # <a name="provider-manifest-specification"></a>プロバイダー マニフェストの仕様
 ここでは、データ ストア プロバイダーでデータ ストアの型および関数がどのようにサポートされているかについて説明します。  
@@ -23,13 +23,13 @@ ms.locfileid: "67422719"
   
  プロバイダー マニフェストは、データ ストアへの接続を開くことなく、デザイン時にツールで読み込むことができる必要があります。  
   
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]ケースの機密性が高いが、基になるデータ ストアができない可能性があります。 マニフェストで定義および使用されている EDM 成果物 (識別子や型名など) では、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] の大文字と小文字の区別を使用する必要があります。 大文字と小文字が区別されるデータ ストア要素がプロバイダー マニフェストに含まれる場合、その大文字と小文字の区別はプロバイダー マニフェストで保持する必要があります。  
+ で[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]は大文字と小文字が区別されますが、基になるデータストアがではない可能性があります。 マニフェストで定義および使用されている EDM 成果物 (識別子や型名など) では、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] の大文字と小文字の区別を使用する必要があります。 大文字と小文字が区別されるデータ ストア要素がプロバイダー マニフェストに含まれる場合、その大文字と小文字の区別はプロバイダー マニフェストで保持する必要があります。  
   
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] では、すべてのデータ プロバイダーに対応するプロバイダー マニフェストが必要です。 プロバイダーがないプロバイダーを使用しようとする場合とマニフェスト、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]エラーが表示されます。  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] では、すべてのデータ プロバイダーに対応するプロバイダー マニフェストが必要です。 プロバイダーマニフェスト[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]がに含まれていないプロバイダーを使用しようとすると、エラーが発生します。  
   
  プロバイダーとの対話で例外が発生したときに [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] によってスローされる例外の種類を次の表に示します。  
   
-|懸案事項|例外|  
+|問題|例外|  
 |-----------|---------------|  
 |プロバイダーで DbProviderServices の GetProviderManifest がサポートされていない。|ProviderIncompatibleException|  
 |プロバイダー マニフェストが見つからないため、プロバイダー マニフェストを取得しようとすると、プロバイダーから `null` が返される。|ProviderIncompatibleException|  
@@ -39,7 +39,7 @@ ms.locfileid: "67422719"
  プロバイダーでは、次のシナリオをサポートしています。  
   
 ### <a name="writing-a-provider-with-symmetric-type-mapping"></a>対称型マッピングによるプロバイダーの記述  
- プロバイダーを作成することができます、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]各ストアの種類がマッピングの方向に関係なく、単一の EDM 型にマップされます。 EDM 型に対応する非常に単純なマッピングを持つプロバイダー型では、型システムが単純であるか EDM 型と一致するため、対称ソリューションを使用できます。  
+ マッピングの方向に関係なく、 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]各ストア型が1つの EDM 型にマップされるのプロバイダーを作成できます。 EDM 型に対応する非常に単純なマッピングを持つプロバイダー型では、型システムが単純であるか EDM 型と一致するため、対称ソリューションを使用できます。  
   
  ドメインの単純さを利用して、静的な宣言型プロバイダー マニフェストを作成することができます。  
   
@@ -54,14 +54,14 @@ ms.locfileid: "67422719"
   
  次の 2 つのセクションで構成される XML ファイルを記述します。  
   
-- プロバイダーの種類の一覧は、EDM 用語で表現し、両方向のマッピングを定義します。EDM からプロバイダーへのプロバイダーから EDM への.  
+- EDM 用語で表されるプロバイダーの種類の一覧と、双方向のマッピングを定義します。EDM からプロバイダー、およびプロバイダーと EDM。  
   
 - パラメーターと戻り値の型が EDM 用語で表現される、プロバイダーがサポートする関数の一覧。  
   
 ## <a name="provider-manifest-discoverability"></a>プロバイダー マニフェストの探索可能性  
  マニフェストは、Entity Services の複数のコンポーネントの種類 (Tools や Query など) では間接的に使用されますが、データ ストア メタデータ ローダーを使用してメタデータからより直接的に使用することができます。  
   
- ![dfb3d02b&#45;7a8c&#45;4d51&#45;ac5a&#45;a73d8aa145e6](../../../../../docs/framework/data/adonet/ef/media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
+ ![dfb3d02b&#45;7a8c&#45;4d51&#45;ac5a&#45;a73d8aa145e6](./media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
   
  ただし、指定されたプロバイダーでは、異なるストアや、同じストアの異なるバージョンがサポートされている場合があります。 そのため、プロバイダーは、サポートされるデータ ストアごとに、異なるマニフェストを報告する必要があります。  
   
@@ -77,13 +77,13 @@ ms.locfileid: "67422719"
 ## <a name="provider-manifest-programming-model"></a>プロバイダー マニフェストのプログラミング モデル  
  プロバイダーは <xref:System.Data.Common.DbXmlEnabledProviderManifest> から派生します。これにより、プロバイダーは、そのマニフェストを宣言によって指定できます。 プロバイダーのクラス階層を次の図に示します。  
   
- ![None](../../../../../docs/framework/data/adonet/ef/media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
+ ![なし](./media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
   
 ### <a name="discoverability-api"></a>探索可能性の API  
  プロバイダー マニフェストは、データ ストア接続またはプロバイダー マニフェスト トークンのいずれかを使用して、ストア メタデータ ローダー (StoreItemCollection) によって読み込まれます。  
   
 #### <a name="using-a-data-store-connection"></a>データ ストア接続を使用する  
- データ ストア接続が利用できる場合は、呼び出す<xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType>に渡されるトークンを返す、<xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A>を返すメソッド<xref:System.Data.Common.DbProviderManifest>します。 このメソッドからのプロバイダーの実装にデリゲート`GetDbProviderManifestToken`します。  
+ データストア接続が使用可能な場合は<xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType> 、を呼び出して、 <xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A>メソッドに渡されるトークンを返します<xref:System.Data.Common.DbProviderManifest>。このトークンはを返します。 このメソッドは、の`GetDbProviderManifestToken`プロバイダーの実装にデリゲートします。  
   
 ```csharp
 public string GetProviderManifestToken(DbConnection connection);  
@@ -91,7 +91,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 ```  
   
 #### <a name="using-a-provider-manifest-token"></a>プロバイダー マニフェスト トークンを使用する  
- オフライン シナリオの場合、SSDL の表現からトークンが選択されます。 SSDL により、ProviderManifestToken を指定する (を参照してください[スキーマ要素 (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl)詳細については)。 たとえば、接続を開くことができない場合、SSDL には、マニフェストに関する情報を指定するプロバイダー マニフェスト トークンがあります。  
+ オフライン シナリオの場合、SSDL の表現からトークンが選択されます。 SSDL では、ProviderManifestToken を指定できます (詳細については、「 [Schema 要素 (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl) 」を参照してください)。 たとえば、接続を開くことができない場合、SSDL には、マニフェストに関する情報を指定するプロバイダー マニフェスト トークンがあります。  
   
 ```  
 public DbProviderManifest GetProviderManifest(string manifestToken);  
@@ -250,7 +250,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
 |属性名|データの種類|必須|既定値|説明|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Name|String|はい|N/A|プロバイダー固有のデータ型の名前|  
+|名前|String|[はい]|N/A|プロバイダー固有のデータ型の名前|  
 |PrimitiveTypeKind|PrimitiveTypeKind|[はい]|N/A|EDM 型の名前|  
   
 ###### <a name="function-node"></a>Function ノード  
@@ -258,27 +258,27 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
 |属性名|データの種類|必須|既定値|説明|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Name|String|はい|N/A|関数の識別子/名前|  
+|Name|String|[はい]|N/A|関数の識別子/名前|  
 |ReturnType|String|いいえ|Void|関数の戻り値の EDM 型|  
-|Aggregate|ブール型|いいえ|False|関数が集計関数の場合は True|  
-|BuiltIn|ブール型|いいえ|True|関数がデータ ストアに組み込まれている場合は True|  
-|StoreFunctionName|String|いいえ|\<名 >|データ ストア内の関数名。  関数名のリダイレクト レベルを許可できます。|  
-|NiladicFunction|ブール型|いいえ|False|関数にパラメーターが必要なく、パラメーターなしで呼び出される場合は True|  
-|ParameterType<br /><br /> Semantics|ParameterSemantics|いいえ|AllowImplicit<br /><br /> 変換|クエリ パイプラインによるパラメーター型の置換の処理方法の選択<br /><br /> -   ExactMatchOnly<br />-AllowImplicitPromotion<br />-AllowImplicitConversion|  
+|Aggregate|Boolean|いいえ|False|関数が集計関数の場合は True|  
+|BuiltIn|Boolean|いいえ|True|関数がデータ ストアに組み込まれている場合は True|  
+|StoreFunctionName|String|いいえ|\<名前 >|データ ストア内の関数名。  関数名のリダイレクト レベルを許可できます。|  
+|NiladicFunction|Boolean|いいえ|False|関数にパラメーターが必要なく、パラメーターなしで呼び出される場合は True|  
+|ParameterType<br /><br /> Semantics|ParameterSemantics|いいえ|AllowImplicit<br /><br /> 変換|クエリ パイプラインによるパラメーター型の置換の処理方法の選択<br /><br /> - ExactMatchOnly<br />- AllowImplicitPromotion<br />- AllowImplicitConversion|  
   
- **[パラメーター] ノード**  
+ **パラメーターノード**  
   
  各関数には、1 つ以上の Parameter ノードのコレクションが含まれています。  
   
 |属性名|データの種類|必須|既定値|説明|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Name|String|はい|N/A|パラメーターの識別子/名前|  
-|型|String|[はい]|N/A|パラメーターの EDM 型|  
-|モード|パラメーター<br /><br /> Direction|[はい]|N/A|パラメーターの方向<br /><br /> -で<br />-アウト<br />-inout|  
+|Name|String|[はい]|N/A|パラメーターの識別子/名前|  
+|種類|String|[はい]|N/A|パラメーターの EDM 型|  
+|モード|パラメーター<br /><br /> Direction|[はい]|N/A|パラメーターの方向<br /><br /> -in<br />-out<br />-inout|  
   
 ##### <a name="namespace-attribute"></a>Namespace 属性  
- 各データ ストア プロバイダーでは、マニフェストで定義された情報に対して 1 つの名前空間または名前空間のグループを定義する必要があります。 この名前空間は、Entity SQL クエリで、関数および型の名前を解決するために使用できます。 たとえば、次のようになります。Sql Server。 その名前空間は、標準的な関数が Entity SQL クエリでサポートされるように Entity Services で定義された正規の名前空間 (EDM) とは別にする必要があります。  
+ 各データ ストア プロバイダーでは、マニフェストで定義された情報に対して 1 つの名前空間または名前空間のグループを定義する必要があります。 この名前空間は、Entity SQL クエリで、関数および型の名前を解決するために使用できます。 たとえば、次のようになります。SqlServer. その名前空間は、標準的な関数が Entity SQL クエリでサポートされるように Entity Services で定義された正規の名前空間 (EDM) とは別にする必要があります。  
   
 ## <a name="see-also"></a>関連項目
 
-- [Entity Framework データ プロバイダーの作成](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+- [Entity Framework データ プロバイダーの作成](writing-an-ef-data-provider.md)

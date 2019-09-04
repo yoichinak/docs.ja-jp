@@ -3,19 +3,20 @@ title: <caches>
 ms.date: 03/30/2017
 ms.assetid: 4651091b-3a20-40d8-b293-4408c0710143
 author: BrucePerlerMS
-ms.openlocfilehash: 5ad75ae18772d6e7c724f2cbf40c1e3083d5c345
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 80f435b52fd7657c5cd44538028d6080beffe0b5
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941965"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252156"
 ---
 # <a name="caches"></a>\<キャッシュ >
 セッショントークンとトークンリプレイ検出に使用されるキャッシュを登録します。  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<キャッシュ >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<システムの >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<構成 >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<キャッシュ >**  
   
 ## <a name="syntax"></a>構文  
   

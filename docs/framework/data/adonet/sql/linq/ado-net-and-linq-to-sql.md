@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
-ms.openlocfilehash: b47a46f9fd9ef3ef1935fa7a88c2e60fe80db09d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0bebc8d890325ec4ab090470952e11b90d0e37ef
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964138"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248115"
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET および LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]は、ADO.NET のテクノロジファミリの一部です。 これは、ADO.NET プロバイダーモデルによって提供されるサービスに基づいています。 これにより、 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]既存の ADO.NET アプリケーションとコードを組み合わせて、現在[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]の ADO.NET ソリューションをに移行できます。 次の図は、この関係を高いレベルから見たものです。  
   
- ![LINQ to SQL と ADO.NET](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinq-3.png "DLinq_3")  
+ ![LINQ to SQL と ADO.NET](./media/dlinq-3.png "DLinq_3")  
   
 ## <a name="connections"></a>接続  
  を作成するときに、既存の[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.DataContext>ADO.NET 接続を指定することができます。 に対するすべての<xref:System.Data.Linq.DataContext>操作 (クエリを含む) は、この指定された接続を使用します。 接続が既に開いている[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]場合は、終了時にそのままにしておきます。  
@@ -59,5 +59,5 @@ ms.locfileid: "69964138"
   
 ## <a name="see-also"></a>関連項目
 
-- [背景情報](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [方法: ADO.NET コマンドと DataContext の間の接続を再利用する](../../../../../../docs/framework/data/adonet/sql/linq/how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)
+- [背景情報](background-information.md)
+- [方法: ADO.NET コマンドと DataContext の間の接続を再利用する](how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)

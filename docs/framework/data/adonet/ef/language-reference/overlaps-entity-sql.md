@@ -2,12 +2,12 @@
 title: OVERLAPS (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41743e89-79cb-4d7b-8a27-355b45024b61
-ms.openlocfilehash: 9d909fb7efbb29619351cfc866b0f84381d0b80b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fef90beebf1c2723c767eaf5155542ad40d5fcb8
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760273"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249736"
 ---
 # <a name="overlaps-entity-sql"></a>OVERLAPS (Entity SQL)
 2 つのコレクションに共通の要素が存在するかどうかを調べます。  
@@ -26,16 +26,16 @@ expression OVERLAPS expression
  2 つのコレクションに共通の要素がある場合は`true` 、それ以外の場合は `false`。  
   
 ## <a name="remarks"></a>Remarks  
- 機能的には、次と同等で重複が用意されています。  
+ オーバーラップは、次の機能と同等の機能を提供します。  
   
  `EXISTS ( expression INTERSECT expression )`  
   
- OVERLAPS は、 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] の集合演算子の 1 つです。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] のすべての集合演算子は左から右に評価されます。 優先順位は、[!INCLUDE[esql](../../../../../../includes/esql-md.md)]集合演算子を参照してください[EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)します。  
+ OVERLAPS は、 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] の集合演算子の 1 つです。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] のすべての集合演算子は左から右に評価されます。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]集合演算子の優先順位情報については、「 [EXCEPT](except-entity-sql.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の Entity SQL クエリでは、OVERLAPS 演算子を使用して、2 つのコレクションに共通の値が存在するかどうかを調べます。 このクエリは、AdventureWorks Sales Model に基づいています。 これをコンパイルして実行するには、次の手順を実行します。  
   
-1. 」の手順に従って[方法。StructuralType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)します。  
+1. [「方法:StructuralType の結果](../how-to-execute-a-query-that-returns-structuraltype-results.md)を返すクエリを実行します。  
   
 2. 次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。  
   
@@ -43,4 +43,4 @@ expression OVERLAPS expression
   
 ## <a name="see-also"></a>関連項目
 
-- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Entity SQL リファレンス](entity-sql-reference.md)

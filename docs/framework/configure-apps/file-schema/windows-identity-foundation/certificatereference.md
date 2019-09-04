@@ -3,20 +3,21 @@ title: <certificateReference>
 ms.date: 03/30/2017
 ms.assetid: 2ac8bc14-e9f1-48fb-b662-f5991558fbe4
 author: BrucePerlerMS
-ms.openlocfilehash: da8ea128466457409334cd0b4ee3246a923f969a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 782ca3344774b8412a18e3cf13bff5f969751ea3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941929"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252141"
 ---
 # <a name="certificatereference"></a>\<certificateReference >
 証明書ストアの x.509 証明書を検索して検証するために使用する設定を指定します。  
   
- \<system.identityModel.services>  
-\<federationConfiguration>  
-\<serviceCertificate>  
-\<certificateReference >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> のシステム**](system-identitymodel-services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<federationConfiguration >** ](federationconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceCertificate >** ](servicecertificate.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<certificateReference >**  
   
 ## <a name="syntax"></a>構文  
   

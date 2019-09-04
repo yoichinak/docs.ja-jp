@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 3559d46a-7640-4c72-9a11-7e980768929e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3071b25392048161ebb40c39842f5da0dce3475
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2fa32d64f3ce440981c5f26d731051a118ed9254
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920831"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252667"
 ---
 # <a name="disablecommitthreadstack-element"></a>\<disableCommitThreadStack > 要素
 スレッドの起動時にスレッド スタック全体をコミットするかどうかを指定します。  
   
- \<configuration>  
-\<ランタイム >  
-\<disableCommitThreadStack >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<ランタイム >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<disableCommitThreadStack>**  
   
 ## <a name="syntax"></a>構文  
   

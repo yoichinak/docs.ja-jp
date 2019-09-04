@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d729120c-4c1b-4f34-bbe9-33694fca2dde
-ms.openlocfilehash: d9d53e91f5252a0ac44822ac6252ce02e9697d33
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5090616705c799f2905226b4892fa1fbe50bfbf3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61615039"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249533"
 ---
 # <a name="query-expression-syntax-examples-aggregate-operators"></a>クエリ式の構文例:集計演算子
-このトピックの例では、使用する方法を示します、 <xref:System.Linq.Enumerable.Average%2A>、 <xref:System.Linq.Enumerable.Count%2A>、 <xref:System.Linq.Enumerable.Max%2A>、 <xref:System.Linq.Enumerable.Min%2A>、および<xref:System.Linq.Enumerable.Sum%2A>を照会する方法、 [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples)クエリ式構文を使用します。 これらの例で使用されている、AdventureWorks Sales Model は、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルから作成されています。  
+このトピックの例では<xref:System.Linq.Enumerable.Average%2A> <xref:System.Linq.Enumerable.Max%2A>、クエリ式の構文を使用<xref:System.Linq.Enumerable.Min%2A>して<xref:System.Linq.Enumerable.Sum%2A> 、 <xref:System.Linq.Enumerable.Count%2A>、、、、およびの各メソッドを使用して、 [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples)に対してクエリを実行する方法を示します。 これらの例で使用されている、AdventureWorks Sales Model は、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルから作成されています。  
   
- このトピックの例では、次を使用して`using` / `Imports`ステートメント。  
+ このトピックの例では、次`using` / `Imports`のステートメントを使用します。  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
@@ -54,7 +54,7 @@ ms.locfileid: "61615039"
  [!code-csharp[DP L2E Examples#CountGrouped](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#countgrouped)]
  [!code-vb[DP L2E Examples#CountGrouped](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#countgrouped)]  
   
-## <a name="max"></a>最大  
+## <a name="max"></a>Max  
   
 ### <a name="example"></a>例  
  次の例では、<xref:System.Linq.Enumerable.Max%2A> メソッドを使用して、それぞれの連絡先 ID について最大合計支払額を取得します。  
@@ -68,7 +68,7 @@ ms.locfileid: "61615039"
  [!code-csharp[DP L2E Examples#MaxElements_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#maxelements_mq)]
  [!code-vb[DP L2E Examples#MaxElements_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#maxelements_mq)]  
   
-## <a name="min"></a>最小  
+## <a name="min"></a>Min  
   
 ### <a name="example"></a>例  
  次の例では、<xref:System.Linq.Enumerable.Min%2A> メソッドを使用して、それぞれの連絡先 ID について最小合計支払額を取得します。  
@@ -92,4 +92,4 @@ ms.locfileid: "61615039"
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to Entities でのクエリ](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [LINQ to Entities でのクエリ](queries-in-linq-to-entities.md)

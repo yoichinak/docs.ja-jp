@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: bcd7b699-4e50-4523-8c33-2f54a103d94e
-ms.openlocfilehash: 165fb1524daa781c29037bf1c9cb2b3013504177
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: d43ec0cdf5b5bb03854dffc7132dddb4c9ae76fd
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539740"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249261"
 ---
 # <a name="query-results"></a>クエリ結果
-LINQ to Entities クエリをコマンド ツリーに変換して実行すると、クエリの結果は通常、次のいずれかとして返されます。  
+LINQ to Entities クエリをコマンドツリーに変換して実行すると、通常、クエリ結果は次のいずれかとして返されます。  
   
 - 0 個以上の型指定されたエンティティ オブジェクトのコレクション、または概念モデルの複合型のプロジェクション。  
   
@@ -25,7 +25,7 @@ LINQ to Entities クエリをコマンド ツリーに変換して実行する�
   
  データ ソースに対してクエリを実行すると、その結果は CLR 型に具体化されてクライアントに返されます。 オブジェクトの具体化は、すべて [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] によって実行されます。 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] と CLR の間のマッピングができないことが原因でエラーが発生すると、オブジェクトの具体化中に例外がスローされます。  
   
- プリミティブ概念モデル型を返すクエリを実行した場合、その結果は、[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] から切り離されたスタンドアロンの CLR 型で構成されます。 ただし、クエリが <xref:System.Data.Objects.ObjectQuery%601> によって表されるエンティティ オブジェクトのコレクションを返す場合、これらの型はオブジェクト コンテキストによって追跡されます。 すべてのオブジェクトの動作 (子/親のコレクション、変更の追跡、ポリモーフィズムなど) で定義されているは、[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]します。 この機能は、[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] で定義されるようにその機能の範囲内で使用されます。 詳細については、次を参照してください。[オブジェクトの操作](../../../../../../docs/framework/data/adonet/ef/working-with-objects.md)します。  
+ プリミティブ概念モデル型を返すクエリを実行した場合、その結果は、[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] から切り離されたスタンドアロンの CLR 型で構成されます。 ただし、クエリが <xref:System.Data.Objects.ObjectQuery%601> によって表されるエンティティ オブジェクトのコレクションを返す場合、これらの型はオブジェクト コンテキストによって追跡されます。 すべてのオブジェクトの動作 (子/親コレクション、変更の追跡、ポリモーフィズムなど) は、 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]で定義されています。 この機能は、[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] で定義されるようにその機能の範囲内で使用されます。 詳細については、「[オブジェクトの操作](../working-with-objects.md)」を参照してください。  
   
  クエリから返される構造型 (匿名型、NULL 値が許容される複合型など) は、`null` 値になります。 返されたエンティティの <xref:System.Data.Objects.DataClasses.EntityCollection%601> プロパティも `null` 値になります。 これは、要素を持たない `null` に対する <xref:System.Linq.Queryable.FirstOrDefault%2A> の呼び出しなど、<xref:System.Data.Objects.ObjectQuery%601> 値になっているエンティティのコレクション プロパティが投影されるためです。  
   

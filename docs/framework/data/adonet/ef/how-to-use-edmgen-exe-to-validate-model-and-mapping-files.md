@@ -2,21 +2,21 @@
 title: '方法: EdmGen.exe を使用してモデル ファイルとマッピング ファイルを検証する'
 ms.date: 03/30/2017
 ms.assetid: 2641906a-971a-4d0b-8aee-13fabc02a1cc
-ms.openlocfilehash: ac278123e9b0927ba6b2ce07059561e7fbb3a898
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4495ff3c5d55779e9db113a2a59361b643841382
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61605705"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251373"
 ---
 # <a name="how-to-use-edmgenexe-to-validate-model-and-mapping-files"></a>方法: EdmGen.exe を使用してモデル ファイルとマッピング ファイルを検証する
-このトピックでは、使用する方法を示します、 [EDM ジェネレーター (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md)モデルとマッピング ファイルを検証するためのツール。 詳細については、次を参照してください。 [Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md)します。  
+このトピックでは、 [EDM ジェネレーター (edmgen.exe)](edm-generator-edmgen-exe.md)ツールを使用して、モデルファイルとマッピングファイルを検証する方法について説明します。 詳細については、「 [Entity Data Model](../entity-data-model.md)」を参照してください。  
   
 ### <a name="to-validate-the-school-model-using-edmgenexe"></a>EdmGen.exe を使用して School モデルを検証するには  
   
-1. School データベースを作成します。 詳細については、次を参照してください。 [School サンプル データベースを作成する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))します。  
+1. School データベースを作成します。 詳細については、「 [School サンプルデータベースの作成](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))」を参照してください。  
   
-2. School モデルを生成します。 詳細については、「[方法 :EdmGen.exe を使用して、モデルとマッピング ファイルを生成する](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)します。  
+2. School モデルを生成します。 詳細については、「[方法 :Edmgen.exe を使用して、モデルファイルとマッピングファイル](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)を生成します。  
   
 3. コマンド プロンプトで、次のコマンド (改行なし) を実行します。  
   
@@ -26,7 +26,7 @@ ms.locfileid: "61605705"
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: Entity Framework プロジェクトを手動で構成します。](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))
+- [方法: Entity Framework プロジェクトを手動で構成する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))
 - [ADO.NET Entity Data Model ツール](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
-- [方法: クエリのパフォーマンスを向上させるためにビューを事前に生成します。](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))
-- [方法: EdmGen.exe を使用してオブジェクト レイヤー コードを生成するには](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md)
+- [方法: クエリのパフォーマンスを向上させるためのビューを事前に生成する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))
+- [方法: Edmgen.exe を使用してオブジェクトレイヤーコードを生成する](how-to-use-edmgen-exe-to-generate-object-layer-code.md)

@@ -2,18 +2,18 @@
 title: 型定義 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
-ms.openlocfilehash: 5a8a0cae4599057a627cce6abebf34c7f05e821f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 471964266c290d5eba95804dbe1c2bc5225e3f83
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641393"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248946"
 ---
 # <a name="type-definitions-entity-sql"></a>型定義 (Entity SQL)
 型定義は、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] Inline 関数の宣言ステートメントで使用されます。  
   
 ## <a name="remarks"></a>Remarks  
- インライン関数の宣言ステートメントから成る、[関数](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md)キーワードの後に (かっこで囲まれたパラメーター定義リストが続く関数名 (例:"MyAvg") を表す識別子例:"dues します。  
+ インライン関数の宣言ステートメントは[、関数の](function-entity-sql.md)名前を表す識別子 (たとえば、"myavg") の後に、かっこ内のパラメーター定義リスト (たとえば、"待機中のコレクション (10進数) ")。  
   
  パラメーター定義リストは、0 個以上のパラメーター定義で構成されます。 各パラメーター定義は、識別子 (関数のパラメーターの名前。例 : "dues") とそれに続く型定義 (例 : "Collection(Decimal)") で構成されます。  
   
@@ -23,7 +23,7 @@ ms.locfileid: "64641393"
   
 - キーワード `COLLECTION` とそれに続くかっこに囲まれた別の型定義 (例 : "Collection(AdventureWorks.Order)")。  
   
-- キーワード ROW とそれに続くかっこに囲まれたプロパティ定義リスト (例 : "Row(x AdventureWorks.Order)")。 プロパティの定義などの形式である"`identifier type_definition`、 `identifier type_definition`,..."です。  
+- キーワード ROW とそれに続くかっこに囲まれたプロパティ定義リスト (例 : "Row(x AdventureWorks.Order)")。 プロパティ定義の形式は、"`identifier type_definition`, `identifier type_definition`,..." です。  
   
 - キーワード REF とそれに続くかっこに囲まれた識別子の型 (例 : "Ref(AdventureWorks.Order)")。 REF 型定義演算子は、引数としてエンティティ型を必要とします。 引数としてプリミティブ型を指定することはできません。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "64641393"
   
  型定義のオプションは、次のとおりです。  
   
-- `IdentifierName supported_type`、または  
+- `IdentifierName supported_type`、、または  
   
 - `IdentifierName` COLLECTION(`type_definition`)、または  
   
@@ -88,5 +88,5 @@ select Ref(x) from AdventureWorksEntities.SalesOrderHeaders as x
   
 ## <a name="see-also"></a>関連項目
 
-- [Entity SQL の概要](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
-- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Entity SQL の概要](entity-sql-overview.md)
+- [Entity SQL リファレンス](entity-sql-reference.md)

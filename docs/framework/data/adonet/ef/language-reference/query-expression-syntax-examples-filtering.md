@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c27cb89c-1c1d-4988-9f38-950eda3cb275
-ms.openlocfilehash: b9e8cf238d35ec9a6fc9c6d013c4d92b00dced78
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 84de36b79ed646d73a8f2d8e00c26d8dcf6de4b7
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955790"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249505"
 ---
 # <a name="query-expression-syntax-examples-filtering"></a>クエリ式の構文例:フィルター
-このトピックの例では、クエリ式の`Where`構文`Where…Contains`を使用して、メソッドとメソッドを使用して、 [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples)に対してクエリを実行する方法を示します。 注意:`Contains` は、[コンパイル済みクエリ](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)の一部として使用できません。  
+このトピックの例では、クエリ式の`Where`構文`Where…Contains`を使用して、メソッドとメソッドを使用して、 [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples)に対してクエリを実行する方法を示します。 注意:`Contains` は、[コンパイル済みクエリ](compiled-queries-linq-to-entities.md)の一部として使用できません。  
   
  これらの例で使用されている、AdventureWorks Sales Model は、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルから作成されています。  
   
@@ -67,4 +67,4 @@ ms.locfileid: "69955790"
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to Entities でのクエリ](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [LINQ to Entities でのクエリ](queries-in-linq-to-entities.md)

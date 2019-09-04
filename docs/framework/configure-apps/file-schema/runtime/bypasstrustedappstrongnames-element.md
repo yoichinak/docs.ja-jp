@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92873277b4b25e4c1c5981628187078ac7cb5704
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3fb198d6a19e25df4c86186d35aab3330c53121c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920889"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252769"
 ---
 # <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames> 要素
 完全に信頼<xref:System.AppDomain>されているアセンブリでの厳密な名前の検証をバイパスするかどうかを指定します。  
   
- \<configuration>  
-\<ランタイム >  
-\<Bypasstrustedappstrongnames> >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<ランタイム >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<bypassTrustedAppStrongNames>**  
   
 ## <a name="syntax"></a>構文  
   

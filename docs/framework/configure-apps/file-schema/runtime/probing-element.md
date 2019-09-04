@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b00a5349e22feb3cce404ff504edd798ff9e304
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 05634cb319ac69bd76e16e592ba59490b30c9c9d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663524"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252398"
 ---
 # <a name="probing-element"></a>\<> 要素のプローブ
 アセンブリの読み込み時に共通言語ランタイムが検索するアプリケーションの基本サブディレクトリを指定します。  
   
- \<configuration>  
-\<ランタイム >  
-\<assemblyBinding>  
-\<プローブ >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<ランタイム >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<プローブ >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,7 +42,8 @@ ms.locfileid: "69663524"
 |`privatePath`|必須の属性です。<br /><br /> アセンブリを含む可能性のあるアプリケーションのベースディレクトリのサブディレクトリを指定します。 各サブディレクトリをセミコロンで区切ります。|  
   
 ### <a name="child-elements"></a>子要素  
- なし。  
+
+なし。  
   
 ### <a name="parent-elements"></a>親要素  
   

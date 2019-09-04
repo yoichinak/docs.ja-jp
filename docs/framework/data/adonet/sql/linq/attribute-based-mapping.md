@@ -2,22 +2,22 @@
 title: 属性ベースの対応付け
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-ms.openlocfilehash: 41152aa81ab84a2ab77e9a4ebf16e102ee5c0e3f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1e11a2efc3d1afa56a27d6e2c60149a509511080
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964095"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248063"
 ---
 # <a name="attribute-based-mapping"></a>属性ベースの対応付け
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]属性を適用するか、 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]または外部マッピングファイルを使用して、SQL Server データベースをオブジェクトモデルにマップします。 このトピックでは、属性ベースの方法について説明します。  
   
- 大部分の基本フォームでは、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、データベースと <xref:System.Data.Linq.DataContext>、テーブルとクラス、列およびリレーションシップとそのクラスのプロパティを、それぞれ対応付けています。 属性を使用して、オブジェクト モデル内の継承階層を対応付けることもできます。 詳細については、「[方法 :Visual Basic またはC# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)でオブジェクトモデルを生成します。  
+ 大部分の基本フォームでは、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、データベースと <xref:System.Data.Linq.DataContext>、テーブルとクラス、列およびリレーションシップとそのクラスのプロパティを、それぞれ対応付けています。 属性を使用して、オブジェクト モデル内の継承階層を対応付けることもできます。 詳細については、「[方法 :Visual Basic またはC# ](how-to-generate-the-object-model-in-visual-basic-or-csharp.md)でオブジェクトモデルを生成します。  
   
- Visual Studio を使用する開発者は、通常、オブジェクトリレーショナルデザイナーを使用して属性ベースの対応付けを実行します。 また、SQLMetal コマンド ライン ツールを使用したり、自分で属性をハンド コードしたりすることもできます。 詳細については、「[方法 :Visual Basic またはC# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)でオブジェクトモデルを生成します。  
+ Visual Studio を使用する開発者は、通常、オブジェクトリレーショナルデザイナーを使用して属性ベースの対応付けを実行します。 また、SQLMetal コマンド ライン ツールを使用したり、自分で属性をハンド コードしたりすることもできます。 詳細については、「[方法 :Visual Basic またはC# ](how-to-generate-the-object-model-in-visual-basic-or-csharp.md)でオブジェクトモデルを生成します。  
   
 > [!NOTE]
-> 外部 XML ファイルを使用して対応付けることもできます。 詳細については、「[外部マッピング](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)」を参照してください。  
+> 外部 XML ファイルを使用して対応付けることもできます。 詳細については、「[外部マッピング](external-mapping.md)」を参照してください。  
   
  以下のセクションでは、属性ベースの対応付けについて詳しく説明します。 詳細については、「<xref:System.Data.Linq.Mapping>」を参照してください。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "69964095"
 > AssociationAttribute プロパティ値と ColumnAttribute Storage プロパティ値では大文字と小文字が区別されます。 たとえば、AssociationAttribute.Storage  プロパティの属性に使用されている値は、コード内の別の場所で使用されている対応するプロパティ名と、大文字と小文字が一致するようにしてください。 これは、Visual Basic など、通常は大文字と小文字が区別されないすべての .NET プログラミング言語に適用されます。 Storage プロパティの詳細については、「<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>」を参照してください。  
   
 ## <a name="associationattribute-attribute"></a>AssociationAttribute 属性  
- この属性は、外部キーと主キーのリレーションシップなど、データベース内の関連付けを表すプロパティを指定するために使用します。 リレーションシップの詳細については[、「」を参照してください。データベース リレーションシップを割り当てる](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md)」をご覧ください。  
+ この属性は、外部キーと主キーのリレーションシップなど、データベース内の関連付けを表すプロパティを指定するために使用します。 リレーションシップの詳細については[、「」を参照してください。データベース リレーションシップを割り当てる](how-to-map-database-relationships.md)」をご覧ください。  
   
  この属性のプロパティを次の表に示します。  
   
@@ -144,4 +144,4 @@ ms.locfileid: "69964095"
   
 ## <a name="see-also"></a>関連項目
 
-- [参照](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [参照](reference.md)

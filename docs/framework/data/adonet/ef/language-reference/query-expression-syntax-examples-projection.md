@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 079926c5-e6b5-4fb9-b4cf-9c63886dd626
-ms.openlocfilehash: 9c10c334ae2a10df1f75384ce042781b6f1bd43a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 52681a4035ef55133c6191e7eac2cab7ed36c8fb
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614415"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249346"
 ---
 # <a name="query-expression-syntax-examples-projection"></a>クエリ式の構文例:射影
-このトピックの例では、使用する方法を示します、`Select`メソッドと`From … From …`クエリを実行するためのキーワード、 [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples)クエリ式構文を使用します。 `From … From …` は、メソッドは、`SelectMany` メソッドのクエリ ベース版に相当します。 これらの例で使用されている、AdventureWorks Sales Model は、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルから作成されています。  
+このトピックの例では、クエリ式の`Select`構文を使用`From … From …`して、メソッドとキーワードを使用して、 [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples)に対してクエリを実行する方法を示します。 `From … From …` は、メソッドは、`SelectMany` メソッドのクエリ ベース版に相当します。 これらの例で使用されている、AdventureWorks Sales Model は、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルから作成されています。  
   
- このトピックの例では、次を使用して`using` / `Imports`ステートメント。  
+ このトピックの例では、次`using` / `Imports`のステートメントを使用します。  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
   
-## <a name="select"></a>選択  
+## <a name="select"></a>Select  
   
 ### <a name="example"></a>例  
  次の例では、<xref:System.Linq.Enumerable.Select%2A> メソッドを使用して `Product` テーブルからすべての行を取得し、製品名を表示しています。  
@@ -40,7 +40,7 @@ ms.locfileid: "61614415"
  [!code-csharp[DP L2E Examples#SelectAnonymousTypes](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#selectanonymoustypes)]
  [!code-vb[DP L2E Examples#SelectAnonymousTypes](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#selectanonymoustypes)]  
   
-## <a name="from--from--selectmany"></a>差出人。 差出人。 (SelectMany)  
+## <a name="from--from--selectmany"></a>差出人。 差出人。 SelectMany  
   
 ### <a name="example"></a>例  
  次の例では、`From … From …` (<xref:System.Linq.Enumerable.SelectMany%2A> メソッドと等価) を使用して、`TotalDue` が 500.00 に満たないすべての注文を選択します。  
@@ -62,4 +62,4 @@ ms.locfileid: "61614415"
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to Entities でのクエリ](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [LINQ to Entities でのクエリ](queries-in-linq-to-entities.md)

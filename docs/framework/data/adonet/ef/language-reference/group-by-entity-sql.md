@@ -2,15 +2,15 @@
 title: GROUP BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cf4f4972-4724-4945-ba44-943a08549139
-ms.openlocfilehash: d9074b1c2ea4f8f9206c8de1e658c1aac762a74f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 641231825ca00c6accd19039ba1ec403208a077e
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936091"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250895"
 ---
 # <a name="group-by-entity-sql"></a>GROUP BY (Entity SQL)
-クエリ ([SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) 式によって返されるオブジェクトをグループ化するよう指定します。  
+クエリ ([SELECT](select-entity-sql.md)) 式によって返されるオブジェクトをグループ化するよう指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -57,12 +57,12 @@ GROUP BY Q   -- BAD
 GROUP BY 1   -- BAD, a constant is not allowed  
 ```  
   
- GROUP BY を使用する場合の例については、「 [HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md)」をご覧ください。  
+ GROUP BY を使用する場合の例については、「 [HAVING](having-entity-sql.md)」をご覧ください。  
   
 ## <a name="example"></a>例  
  次の Entity SQL クエリでは、GROUP BY 演算子を使用して、クエリによって返されるオブジェクトをグループ化するよう指定します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
-1. [「方法:PrimitiveType の結果](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)を返すクエリを実行します。  
+1. [「方法:PrimitiveType の結果](../how-to-execute-a-query-that-returns-primitivetype-results.md)を返すクエリを実行します。  
   
 2. 次のクエリを引数として `ExecutePrimitiveTypeQuery` メソッドに渡します。  
   
@@ -70,5 +70,5 @@ GROUP BY 1   -- BAD, a constant is not allowed
   
 ## <a name="see-also"></a>関連項目
 
-- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [クエリ式](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
+- [Entity SQL リファレンス](entity-sql-reference.md)
+- [クエリ式](query-expressions-entity-sql.md)

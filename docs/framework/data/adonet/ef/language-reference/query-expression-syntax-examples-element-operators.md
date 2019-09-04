@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 32268fe2-de18-4065-8060-f250def83837
-ms.openlocfilehash: 1b73e22e79c665763390561a1e48b2583ec6cd27
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5736828a629368a5b9abea9e63f7df2d2de3ca8d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614441"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249523"
 ---
 # <a name="query-expression-syntax-examples-element-operators"></a>クエリ式の構文例:要素演算子
-このトピックの例では、使用する方法を示します、<xref:System.Linq.Enumerable.First%2A>メソッド クエリを[AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples)クエリ式の構文を使用します。 これらの例で使用されている、AdventureWorks Sales Model は、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルから作成されています。  
+このトピックの例では、クエリ式の<xref:System.Linq.Enumerable.First%2A>構文を使用して、メソッドを使用して、 [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples)に対してクエリを実行する方法を示します。 これらの例で使用されている、AdventureWorks Sales Model は、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルから作成されています。  
   
- このトピックの例では、次を使用して`using` / `Imports`ステートメント。  
+ このトピックの例では、次`using` / `Imports`のステートメントを使用します。  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
@@ -30,4 +30,4 @@ ms.locfileid: "61614441"
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to Entities でのクエリ](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [LINQ to Entities でのクエリ](queries-in-linq-to-entities.md)

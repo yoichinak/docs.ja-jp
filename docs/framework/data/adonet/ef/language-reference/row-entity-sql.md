@@ -2,12 +2,12 @@
 title: ROW (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 06da96e8-55d7-486c-991a-4e514d837ff9
-ms.openlocfilehash: 676080a6cc4208ea1a4d72b85a4a55e01fafe638
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dfd0031f49cbdf41797cecf21c149fafde4d7a8c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641447"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249246"
 ---
 # <a name="row-entity-sql"></a>ROW (Entity SQL)
 1 つまたは複数の値から構造的に型付けされた匿名レコードを構築します。  
@@ -35,7 +35,7 @@ ROW ( expression [ AS alias ] [,...] )
 ROW(1 AS a, "abc" AS b, a+34 AS c)  
 ```  
   
- 行コンストラクターで式の別名が指定されていなければ、Entity Framework は別名の生成を試みます。 詳細については、「 [識別子](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md) 」トピックの「別名規則」セクションを参照してください。  
+ 行コンストラクターで式の別名が指定されていなければ、Entity Framework は別名の生成を試みます。 詳細については、「 [識別子](identifiers-entity-sql.md) 」トピックの「別名規則」セクションを参照してください。  
   
  次の規則は、行コンストラクターで別名を定義する式に適用されます。  
   
@@ -43,12 +43,12 @@ ROW(1 AS a, "abc" AS b, a+34 AS c)
   
 - 同じ行コンストラクター内の 2 つの式に同じ別名を指定することはできません。  
   
- クエリ コンス トラクターの詳細については、次を参照してください。[構築型](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)します。  
+ クエリコンストラクターの詳細については、「[型の構築](constructing-types-entity-sql.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の Entity SQL クエリは ROW 演算子を使用して、構造的に型付けされた匿名レコードを構築します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
-1. 」の手順に従って[方法。StructuralType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)します。  
+1. [「方法:StructuralType の結果](../how-to-execute-a-query-that-returns-structuraltype-results.md)を返すクエリを実行します。  
   
 2. 次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。  
   
@@ -56,6 +56,6 @@ ROW(1 AS a, "abc" AS b, a+34 AS c)
   
 ## <a name="see-also"></a>関連項目
 
-- [コンストラクター](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)
-- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [型定義](../../../../../../docs/framework/data/adonet/ef/language-reference/type-definitions-entity-sql.md)
+- [コンストラクター](constructing-types-entity-sql.md)
+- [Entity SQL リファレンス](entity-sql-reference.md)
+- [型定義](type-definitions-entity-sql.md)

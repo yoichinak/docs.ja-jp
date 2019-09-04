@@ -1,13 +1,13 @@
 ---
-title: '- (除算)(Entity SQL)'
+title: '- 8060(Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: ef48c368-f3ed-4275-8ada-4e9649781262
-ms.openlocfilehash: c3b477a63adf3c3d51f28449e94c2b716422296c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d4e4c1449b665e6dea22bfcc0ee2277478b4da1a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606063"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251054"
 ---
 # <a name="-divide-entity-sql"></a>/ (除算) (Entity SQL)
 1 つの値を別の値で除算します。  
@@ -26,12 +26,12 @@ dividend / divisor
  被除数を除算する数値式。 `divisor` は、任意の数値データ型の有効な式です。  
   
 ## <a name="result-types"></a>戻り値の型  
- 2 つの引数の暗黙の型の昇格の結果であるデータ型。 暗黙的な型の上位変換の詳細については、次を参照してください。[型システム](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)します。  
+ 2 つの引数の暗黙の型の昇格の結果であるデータ型。 暗黙の型の昇格の詳細については、「[型システム](type-system-entity-sql.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の Entity SQL クエリを使用して、/算術演算子を別の 1 つの数値を除算します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
+ 次の Entity SQL クエリでは、/算術演算子を使用して、1つの数値を別の数値で除算します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
-1. 」の手順に従って[方法。StructuralType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)します。  
+1. [「方法:StructuralType の結果](../how-to-execute-a-query-that-returns-structuraltype-results.md)を返すクエリを実行します。  
   
 2. 次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。  
   
@@ -39,4 +39,4 @@ dividend / divisor
   
 ## <a name="see-also"></a>関連項目
 
-- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Entity SQL リファレンス](entity-sql-reference.md)

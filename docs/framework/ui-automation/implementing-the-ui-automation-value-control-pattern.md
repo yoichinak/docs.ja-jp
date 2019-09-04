@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Value control pattern
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
-ms.openlocfilehash: 55290e8f14f81c50239097905e5407dbcf547c4c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4af35b3ad1277723d4102b3aeac48748588ef8bf
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968219"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70244015"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>UI オートメーション Value コントロール パターンの実装
 > [!NOTE]
@@ -36,7 +36,7 @@ ms.locfileid: "69968219"
   
 - <xref:System.Windows.Automation.Provider.IValueProvider> は、書式設定情報や部分文字列の値の取得をサポートしていません。 このようなシナリオでは <xref:System.Windows.Automation.Provider.ITextProvider> を実装します。  
   
-- <xref:System.Windows.Automation.Provider.IValueProvider> を実装する必要があるコントロールの一例は、 **の** カラー ピッカー [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] 選択コントロールです (以下を参照)。このコントロールは、色の値 (たとえば「黄」) と同等の内部 [!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)] 構造の間の文字列マッピングをサポートしています。  
+- <xref:System.Windows.Automation.Provider.IValueProvider>**色の**値 ("黄" など) と同等の内部[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] RGB 構造との間の文字列マッピングをサポートするコントロール (下図を参照) などのコントロールによって実装する必要があります。  
   
  ![黄色が強調表示されたカラーピッカー。](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 色見本の文字列のマッピング例  

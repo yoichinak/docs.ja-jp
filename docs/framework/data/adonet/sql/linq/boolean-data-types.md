@@ -2,12 +2,12 @@
 title: ブール型
 ms.date: 03/30/2017
 ms.assetid: 57f7376b-4b11-4b35-98a9-780382053ceb
-ms.openlocfilehash: f200445d2ba7846f9dc467c7f06bce4225c88865
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9fa3327315593bd54fc51f67bf9964da8d683c5d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964080"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248054"
 ---
 # <a name="boolean-data-types"></a>ブール型
 ブール演算子は、共通言語ランタイム (CLR) で正常に動作しますが、ショートサーキットの動作は変換されません。 たとえば、Visual Basic の `AndAlso` 演算子は `And` 演算子のように動作します。 C# の `&&` 演算子は `&` 演算子のように動作します。  
@@ -25,4 +25,4 @@ ms.locfileid: "69964080"
   
 ## <a name="see-also"></a>関連項目
 
-- [データ型と関数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [データ型と関数](data-types-and-functions.md)

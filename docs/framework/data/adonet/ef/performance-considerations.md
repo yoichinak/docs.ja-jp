@@ -2,12 +2,12 @@
 title: パフォーマンスに関する考慮事項 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: 4836125205f3d4cbbe852c92f2a88aca331ded70
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 99969d7991f613bd8049aac81669583372e0f2c6
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962249"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248517"
 ---
 # <a name="performance-considerations-entity-framework"></a>パフォーマンスに関する考慮事項 (Entity Framework)
 このトピックでは、ADO.NET Entity Framework のパフォーマンス特性を示し、Entity Framework アプリケーションのパフォーマンスを向上させるために役立つ注意事項について説明します。  
@@ -20,7 +20,7 @@ ms.locfileid: "69962249"
 |メタデータの読み込み|中|各アプリケーション ドメイン内で 1 回|Entity Framework が使用するモデルとマッピングのメタデータが、<xref:System.Data.Metadata.Edm.MetadataWorkspace> に読み込まれます。 このメタデータはグローバルにキャッシュされ、同じアプリケーション ドメイン内にある <xref:System.Data.Objects.ObjectContext> の他のインスタンスも使用できるようになります。|  
 |データベース接続を開く|中<sup>1</sup>|必要時|開いているデータベースへの接続によって貴重なリソース[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]が消費されるため、は必要な場合にのみデータベース接続を開き、閉じます。 接続は、明示的に開くこともできます。 詳細については、「[接続とトランザクションの管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))」を参照してください。|  
 |ビューの生成|High|各アプリケーション ドメイン内で 1 回 (事前生成可能)|Entity Framework が、概念モデルに対してクエリを実行したり変更内容をデータ ソースに保存したりできるようになるには、データベースにアクセスするためのローカル クエリ ビューのセットを事前に生成しておく必要があります。 このビューを生成する際のコストは高いため、デザイン時にビューを事前に作成してプロジェクトに追加しておくことができます。 詳細については、「[方法 :クエリのパフォーマンス](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))を向上させるためにビューを事前に生成します。|  
-|クエリの準備|中<sup>2</sup>|各一意のクエリに対して 1 回|クエリ コマンドを作成したり、モデルとマッピングのメタデータに基づいてコマンド ツリーを生成したり、返されるデータの形状を定義したりするためのコストが含まれます。 Entity SQL と LINQ の両方のクエリ コマンドがキャッシュされるため、同じクエリであれば、後続の実行は短時間で済みます。 後続の実行でさらにコストを削減するためにコンパイル済み LINQ クエリを使用でき、コンパイル済みクエリが自動的にキャッシュされる LINQ クエリよりも効率的である場合があります。 詳細については、「[コンパイル済みクエリ (LINQ to Entities)](../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)」を参照してください。 LINQ クエリの実行に関する一般的な情報については、「 [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)」を参照してください。 **注:** メモリ内コレクションへ `Enumerable.Contains` 演算子を追加する LINQ to Entities クエリは自動的にキャッシュされません。 またコンパイル済み LINQ クエリのメモリ内コレクションをパラメーターで表すことは許可されていません。|  
+|クエリの準備|中<sup>2</sup>|各一意のクエリに対して 1 回|クエリ コマンドを作成したり、モデルとマッピングのメタデータに基づいてコマンド ツリーを生成したり、返されるデータの形状を定義したりするためのコストが含まれます。 Entity SQL と LINQ の両方のクエリ コマンドがキャッシュされるため、同じクエリであれば、後続の実行は短時間で済みます。 後続の実行でさらにコストを削減するためにコンパイル済み LINQ クエリを使用でき、コンパイル済みクエリが自動的にキャッシュされる LINQ クエリよりも効率的である場合があります。 詳細については、「[コンパイル済みクエリ (LINQ to Entities)](./language-reference/compiled-queries-linq-to-entities.md)」を参照してください。 LINQ クエリの実行に関する一般的な情報については、「 [LINQ to Entities](./language-reference/linq-to-entities.md)」を参照してください。 **注:** メモリ内コレクションへ `Enumerable.Contains` 演算子を追加する LINQ to Entities クエリは自動的にキャッシュされません。 またコンパイル済み LINQ クエリのメモリ内コレクションをパラメーターで表すことは許可されていません。|  
 |クエリの実行|低<sup>2</sup>|各クエリに対して 1 回|ADO.NET データ プロバイダーを使用してデータ ソースに対してコマンドを実行するコスト。 大半のデータ ソースではクエリ プランがキャッシュされるため、同じクエリであれば、後続の実行は短時間で済むことがあります。|  
 |型の読み込みと検証|低<sup>3</sup>|各 <xref:System.Data.Objects.ObjectContext> インスタンスに対して 1 回|型が読み込まれ、概念モデルが定義する型に照らし合わせて検証されます。|  
 |追跡|低<sup>3</sup>|クエリが返す各オブジェクトに対して 1 回 <sup>4</sup>|クエリが <xref:System.Data.Objects.MergeOption.NoTracking> のマージ オプションを使用する場合には、この段階でパフォーマンスが低下することはありません。<br /><br /> クエリが <xref:System.Data.Objects.MergeOption.AppendOnly>、<xref:System.Data.Objects.MergeOption.PreserveChanges>、または <xref:System.Data.Objects.MergeOption.OverwriteChanges> のいずれかのマージ オプションを使用する場合には、クエリ結果が <xref:System.Data.Objects.ObjectStateManager> で追跡されます。 クエリが返す追跡対象の各オブジェクトに対して <xref:System.Data.EntityKey> が生成され、<xref:System.Data.Objects.ObjectStateEntry> に <xref:System.Data.Objects.ObjectStateManager> を作成するために使用されます。 <xref:System.Data.Objects.ObjectStateEntry> に対応する既存の <xref:System.Data.EntityKey> がある場合には、既存のオブジェクトが返されます。 <xref:System.Data.Objects.MergeOption.PreserveChanges> または <xref:System.Data.Objects.MergeOption.OverwriteChanges> オプションが指定されている場合、オブジェクトは更新後に返されます。<br /><br /> 詳細については、「 [Id 解決、状態管理、および Change Tracking](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896269(v=vs.100))」を参照してください。|  
@@ -32,7 +32,7 @@ ms.locfileid: "69962249"
   
  <sup>3</sup>合計コストは、クエリによって返されるオブジェクトの数に比例して増加します。  
   
- <sup>4</sup>このオーバーヘッドは、entityclient クエリには必要ありません。 <xref:System.Data.EntityClient.EntityDataReader> entityclient クエリでは、オブジェクトではなくが返されるからです。 詳細については、「 [Entity Framework 用の EntityClient プロバイダー](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)」を参照してください。  
+ <sup>4</sup>このオーバーヘッドは、entityclient クエリには必要ありません。 <xref:System.Data.EntityClient.EntityDataReader> entityclient クエリでは、オブジェクトではなくが返されるからです。 詳細については、「 [Entity Framework 用の EntityClient プロバイダー](entityclient-provider-for-the-entity-framework.md)」を参照してください。  
   
 ## <a name="additional-considerations"></a>その他の考慮事項  
  Entity Framework アプリケーションのパフォーマンスを低下させる可能性があるその他の考慮事項を次に示します。  
@@ -41,10 +41,10 @@ ms.locfileid: "69962249"
  クエリがリソースを大量に消費することがあるので、コード内のどの個所で、またどのコンピューター上でクエリを実行するのかを検討してください。  
   
 #### <a name="deferred-versus-immediate-execution"></a>遅延実行と即時実行  
- <xref:System.Data.Objects.ObjectQuery%601> クエリまたは LINQ クエリを作成しても、すぐには実行されないことがあります。 クエリの実行は、結果が必要になるまで遅延されます。たとえば、`foreach` (C#) または `For Each` (Visual Basic) の列挙時や、<xref:System.Collections.Generic.List%601> コレクションに割り当てられた場合などです。 クエリがすぐに実行されるのは、<xref:System.Data.Objects.ObjectQuery%601.Execute%2A> 上で <xref:System.Data.Objects.ObjectQuery%601> メソッドが呼び出されたときや、単一クエリを返す LINQ メソッド (<xref:System.Linq.Enumerable.First%2A> や <xref:System.Linq.Enumerable.Any%2A> など) が呼び出されたときです。 詳細については、「[オブジェクトクエリ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100))と[クエリ実行 (LINQ to Entities)](../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md)」を参照してください。  
+ <xref:System.Data.Objects.ObjectQuery%601> クエリまたは LINQ クエリを作成しても、すぐには実行されないことがあります。 クエリの実行は、結果が必要になるまで遅延されます。たとえば、`foreach` (C#) または `For Each` (Visual Basic) の列挙時や、<xref:System.Collections.Generic.List%601> コレクションに割り当てられた場合などです。 クエリがすぐに実行されるのは、<xref:System.Data.Objects.ObjectQuery%601.Execute%2A> 上で <xref:System.Data.Objects.ObjectQuery%601> メソッドが呼び出されたときや、単一クエリを返す LINQ メソッド (<xref:System.Linq.Enumerable.First%2A> や <xref:System.Linq.Enumerable.Any%2A> など) が呼び出されたときです。 詳細については、「[オブジェクトクエリ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100))と[クエリ実行 (LINQ to Entities)](./language-reference/query-execution.md)」を参照してください。  
   
 #### <a name="client-side-execution-of-linq-queries"></a>クライアント側での LINQ クエリの実行  
- LINQ クエリの実行は、データ ソースをホストするコンピューター上で行われますが、LINQ クエリは部分的にクライアント コンピューター上で評価されることがあります。 詳細については、「[クエリの実行」 (LINQ to Entities)](../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md)のストア実行に関するセクションを参照してください。  
+ LINQ クエリの実行は、データ ソースをホストするコンピューター上で行われますが、LINQ クエリは部分的にクライアント コンピューター上で評価されることがあります。 詳細については、「[クエリの実行」 (LINQ to Entities)](./language-reference/query-execution.md)のストア実行に関するセクションを参照してください。  
   
 ### <a name="query-and-mapping-complexity"></a>クエリとマッピングの複雑さ  
  個々のクエリの複雑さおよびエンティティ モデルのマッピングの複雑さは、クエリ パフォーマンスに大きな影響を及ぼします。  
@@ -155,4 +155,4 @@ ms.locfileid: "69962249"
   
 ## <a name="see-also"></a>関連項目
 
-- [開発および配置に関する注意事項](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)
+- [開発および配置に関する注意事項](development-and-deployment-considerations.md)

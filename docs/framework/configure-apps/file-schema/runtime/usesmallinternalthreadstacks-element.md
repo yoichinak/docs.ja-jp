@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ee4df12a017429de333dd4e93df27973b658dad
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 515ea076c5eaead50b41e45e415725d0439914bc
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920680"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252205"
 ---
 # <a name="usesmallinternalthreadstacks-element"></a>\<UseSmallInternalThreadStacks > 要素
 共通言語ランタイム (CLR) が、内部で使用する特定のスレッドを作成するときに明示的なスタックサイズを指定することによって、メモリの使用量を削減するように要求します。これらのスレッドの既定のスタックサイズは使用されません。  
   
- \<configuration> 要素  
-\<runtime> 要素  
-\<UseSmallInternalThreadStacks > 要素  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<ランタイム >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<UseSmallInternalThreadStacks>**  
   
 ## <a name="syntax"></a>構文  
   

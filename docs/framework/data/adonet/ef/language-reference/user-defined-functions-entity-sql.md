@@ -2,18 +2,18 @@
 title: ユーザー定義関数 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 3f9e6bbd-8e5a-43e1-809f-f8a61338e522
-ms.openlocfilehash: 4922e7fada676a6c26042236ccdb6315d6d455ae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9ddafb18a10ff2313fd27eab453907054a35218a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879750"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248770"
 ---
 # <a name="user-defined-functions-entity-sql"></a>ユーザー定義関数 (Entity SQL)
-Entity SQL では、クエリ内でのユーザー定義関数の呼び出しがサポートされます。 これらのクエリを使用して関数をインラインを定義することができます (を参照してください[方法。ユーザー定義関数を呼び出す](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))) または概念モデルの一部として (を参照してください[方法。概念モデルでカスタム関数を定義](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100)))。 Entity SQL コマンドを概念モデルの関数が定義されている、 [DefiningExpression](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#definingexpression-element-csdl)の要素を[関数](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#function-element-csdl)概念モデル内の要素。  
+Entity SQL では、クエリ内でのユーザー定義関数の呼び出しがサポートされます。 これらの関数は、クエリを使用してインライン[で定義できます (「方法:ユーザー定義関数](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))を呼び出すか、または概念モデルの一部とし[て、次を参照してください。概念モデル](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))でカスタム関数を定義します。 概念モデルの関数は、概念モデルの[Function](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#function-element-csdl)要素の[定義要素の](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#definingexpression-element-csdl)Entity SQL コマンドとして定義されます。  
   
- Entity SQL を使用すると、関数をクエリ コマンド自体で定義することができます。 [関数](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md)演算子は、インライン関数を定義します。 複数の関数を 1 つのコマンドで定義することができます。関数の署名が一意であれば、これら複数の関数に同じ名前を付けることができます。 詳細については、「 [Function Overload Resolution](../../../../../../docs/framework/data/adonet/ef/language-reference/function-overload-resolution-entity-sql.md)」を参照してください。  
+ Entity SQL を使用すると、関数をクエリ コマンド自体で定義することができます。 [関数](function-entity-sql.md)演算子は、インライン関数を定義します。 複数の関数を 1 つのコマンドで定義することができます。関数の署名が一意であれば、これら複数の関数に同じ名前を付けることができます。 詳細については、「 [Function Overload Resolution](function-overload-resolution-entity-sql.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [関数](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)
+- [関数](functions-entity-sql.md)

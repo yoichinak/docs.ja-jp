@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 98daef1f-15d4-483e-985c-d78ea3abe8c8
-ms.openlocfilehash: 78bafcad0a0f34c74ea58f107621ad145c1b405b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 109be8ef2bf41326fcab5896ecdc359859683345
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631528"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250685"
 ---
 # <a name="initialization-expressions"></a>初期化式
 初期化式は、新しいオブジェクトを初期化します。 初期化式は、ほとんどの新しい C# 3.0 および Visual Basic 9.0 初期化式を含め、ほとんどがサポートされています。 次の型は、LINQ to Entities クエリによって初期化して返すことができます。  
@@ -48,4 +48,4 @@ ms.locfileid: "64631528"
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to Entities クエリ内の式](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)
+- [LINQ to Entities クエリ内の式](expressions-in-linq-to-entities-queries.md)

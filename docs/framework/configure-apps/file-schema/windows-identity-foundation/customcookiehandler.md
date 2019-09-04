@@ -3,20 +3,21 @@ title: <customCookieHandler>
 ms.date: 03/30/2017
 ms.assetid: a03b153d-5ec6-4915-9031-6f0c3fd348be
 author: BrucePerlerMS
-ms.openlocfilehash: ebf1f7f3de1b44dba63977bf524dea9af2690fb1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e1f32e17cf0da5e948d778e8b61aca6053eff4ef
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942792"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252019"
 ---
 # <a name="customcookiehandler"></a>\<customCookieHandler >
 カスタムクッキーハンドラーの種類を設定します。 この要素は、 `mode` `<cookieHandler>`要素の属性が "Custom" の場合にのみ存在する可能性があります。 カスタム型は、 <xref:System.IdentityModel.Services.CookieHandler>クラスから派生する必要があります。  
   
- \<system.identityModel.services>  
-\<federationConfiguration>  
-\<cookieHandler >  
-\<customCookieHandler >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> のシステム**](system-identitymodel-services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<federationConfiguration >** ](federationconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cookieHandler >** ](cookiehandler.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<customCookieHandler >**  
   
 ## <a name="syntax"></a>構文  
   

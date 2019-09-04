@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b82be30c18cde361aa412ee1b631c8368c8de1b3
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 1395ee64d94e33693344b678c7a949665f994079
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663931"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252823"
 ---
 # <a name="appdomainresourcemonitoring-element"></a>\<appDomainResourceMonitoring > 要素
 プロセスのライフサイクルにおいて、プロセスのすべてのアプリケーション ドメインの統計を収集するようにランタイムに指示します。  
   
- \<configuration>  
-\<ランタイム >  
-\<appDomainResourceMonitoring >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<ランタイム >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<appDomainResourceMonitoring>**  
   
 ## <a name="syntax"></a>構文  
   

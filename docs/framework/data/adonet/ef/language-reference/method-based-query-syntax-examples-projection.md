@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 505491fa-5920-43ce-8a96-c25389e125d8
-ms.openlocfilehash: a38fce33fe34bf6485d0d5fcef4f194f4c2470b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 231fe6072d9a9a561aa91d3cb52fa6963f2d72dd
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760507"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250062"
 ---
 # <a name="method-based-query-syntax-examples-projection"></a>メソッド ベースのクエリ構文例:射影
-このトピックの例では、使用する方法を示します、<xref:System.Linq.Enumerable.Select%2A>と<xref:System.Linq.Enumerable.SelectMany%2A>を照会する方法、 [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples)メソッド ベースのクエリ構文を使用します。 これらの例で使用されている、AdventureWorks Sales Model は、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルから作成されています。  
+このトピックの例では、メソッドベースの<xref:System.Linq.Enumerable.Select%2A>クエリ<xref:System.Linq.Enumerable.SelectMany%2A>構文を使用して、メソッドとメソッドを使用して、 [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples)に対してクエリを実行する方法を示します。 これらの例で使用されている、AdventureWorks Sales Model は、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルから作成されています。  
   
- このトピックの例では、次を使用して`using` / `Imports`ステートメント。  
+ このトピックの例では、次`using` / `Imports`のステートメントを使用します。  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
   
-## <a name="select"></a>選択  
+## <a name="select"></a>Select  
   
 ### <a name="example"></a>例  
  次の例では、<xref:System.Linq.Queryable.Select%2A> メソッドを使用して、`Product.Name` プロパティおよび `Product.ProductID` プロパティを一連の匿名型に射影します。  
@@ -50,4 +50,4 @@ ms.locfileid: "61760507"
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to Entities でのクエリ](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [LINQ to Entities でのクエリ](queries-in-linq-to-entities.md)

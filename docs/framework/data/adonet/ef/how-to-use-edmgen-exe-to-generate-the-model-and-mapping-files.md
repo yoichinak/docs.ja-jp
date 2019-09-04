@@ -2,12 +2,12 @@
 title: '方法: EdmGen.exe を使用してモデル ファイルとマッピング ファイルを生成する'
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
-ms.openlocfilehash: 37234d8f0631ea11ea0d9c7d4e8f027a7266814e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 141b19c545360f92c2689252cf9aefd1ef156cf0
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958456"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251422"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>方法: EdmGen.exe を使用してモデル ファイルとマッピング ファイルを生成する
 このトピックでは、EDM ジェネレーター (EdmGen.exe) ツールを使用して、School データベースに基づく次のファイルを生成する方法について説明します。  
@@ -22,7 +22,7 @@ ms.locfileid: "69958456"
   
 - ビュー ファイル  
   
- EdmGen.exe ツールでは、/mode:FullGeneration を使用して上記のファイルを生成します。 Edmgen.exe コマンドの詳細については、「 [EDM Generator (edmgen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md)」を参照してください。  
+ EdmGen.exe ツールでは、/mode:FullGeneration を使用して上記のファイルを生成します。 Edmgen.exe コマンドの詳細については、「 [EDM Generator (edmgen.exe)](edm-generator-edmgen-exe.md)」を参照してください。  
   
  Edmgen.exe を使用してモデルファイルとマッピングファイルを生成する場合でも、 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]を使用するように Visual Studio プロジェクトを構成する必要があります。 詳細については、「[方法 :Entity Framework プロジェクト](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))を手動で構成します。  
   
@@ -55,8 +55,8 @@ ms.locfileid: "69958456"
   
 ## <a name="see-also"></a>関連項目
 
-- [モデリングとマッピング](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)
+- [モデリングとマッピング](modeling-and-mapping.md)
 - [方法: Entity Framework プロジェクトを手動で構成する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))
 - [方法: クエリのパフォーマンスを向上させるためのビューを事前に生成する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))
 - [ADO.NET Entity Data Model ツール](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
-- [方法: Edmgen.exe を使用してモデルファイルとマッピングファイルを検証する](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)
+- [方法: Edmgen.exe を使用してモデルファイルとマッピングファイルを検証する](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)

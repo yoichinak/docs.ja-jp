@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 19f66872-d5ab-49f8-969f-e53f9632a13d
-ms.openlocfilehash: bf6c889fff2635cd50597e72151c46fbb4d9b97d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5506c37ea4f313599f666014fd305a79f5cc7ffb
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760585"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250249"
 ---
 # <a name="method-based-query-syntax-examples-conversion"></a>メソッド ベースのクエリ構文例:変換
-このトピックの例では、使用する方法を示します、 <xref:System.Linq.Enumerable.ToArray%2A>、<xref:System.Linq.Enumerable.ToDictionary%2A>と<xref:System.Linq.Enumerable.ToList%2A>を照会する方法、 [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples)メソッド ベースのクエリ構文を使用します。 これらの例で使用されている、AdventureWorks Sales Model は、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルから作成されています。  
+このトピックの例では、メソッドベースの<xref:System.Linq.Enumerable.ToArray%2A>クエリ構文<xref:System.Linq.Enumerable.ToList%2A>を使用して、 <xref:System.Linq.Enumerable.ToDictionary%2A>メソッド、メソッド、およびメソッドを使用して、 [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples)に対してクエリを実行する方法を示します。 これらの例で使用されている、AdventureWorks Sales Model は、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルから作成されています。  
   
- このトピックの例では、次を使用して`using` / `Imports`ステートメント。  
+ このトピックの例では、次`using` / `Imports`のステートメントを使用します。  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
@@ -46,4 +46,4 @@ ms.locfileid: "61760585"
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to Entities でのクエリ](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [LINQ to Entities でのクエリ](queries-in-linq-to-entities.md)

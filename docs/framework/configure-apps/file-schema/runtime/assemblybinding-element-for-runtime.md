@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84ec54eeb8adee90031057dadc4549cb73527be1
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 515261fe39676292ce50858f71b7da92287945d1
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663901"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252810"
 ---
 # <a name="assemblybinding-element-for-runtime"></a>\<runtime > の\<assemblybinding > 要素
 アセンブリ バージョンのリダイレクトおよびアセンブリの位置に関する情報が含まれます。  
   
- \<configuration>  
-\<ランタイム >  
-\<assemblyBinding>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<ランタイム >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<assemblyBinding>**  
   
 ## <a name="syntax"></a>構文  
   

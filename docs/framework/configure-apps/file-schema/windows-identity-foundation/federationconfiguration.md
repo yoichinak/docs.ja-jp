@@ -3,18 +3,19 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: c4dbb31bb7961f0d33df9d1faee8fe36ecb520a3
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 148b2f3e12fbfbf85b800f0ca7f5dc7dc1845d24
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988327"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252001"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 Ws-federation プロトコル<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>を介してフェデレーション認証を<xref:System.IdentityModel.Services.SessionAuthenticationModule>使用する場合、(wsfam) と (SAM) を構成します。 <xref:System.IdentityModel.Services.ClaimsPrincipalPermission>また<xref:System.Security.Claims.ClaimsAuthorizationManager> は<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>クラスを使用してクレームベースのアクセス制御を提供するときに、を構成します。  
   
- \<system.identityModel.services>  
-\<federationConfiguration>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> のシステム**](system-identitymodel-services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<federationConfiguration >**  
   
 ## <a name="syntax"></a>構文  
   

@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3a348ac8da855e458b6208c51f9c51b48da3134
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 575d44ad9ecf445ba5d4b7fbe47032127ccb33ae
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927444"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252733"
 ---
 # <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion > 要素
 文字列比較の実行時に、ランタイムがレガシ並べ替え順序を使用するように指定します。  
   
- \<configuration>  
-\<ランタイム >  
-\<CompatSortNLSVersion > 要素  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<ランタイム >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<CompatSortNLSVersion>**  
   
 ## <a name="syntax"></a>構文  
   

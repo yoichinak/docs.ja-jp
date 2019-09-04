@@ -9,19 +9,19 @@ helpviewer_keywords:
 - runtime element
 - container tags, <runtime> element
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
-ms.openlocfilehash: 3cf99a4dcf64b82846729d8663e398385b7a1086
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e703b9739ea93d3c7bf08371bc264bbdcb05b716
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663464"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252322"
 ---
 # <a name="runtime-element"></a>\<runtime> 要素
 
 アプリケーションを構成するために共通言語ランタイムによって使用される情報を提供します。
 
-\<configuration>\
-\<ランタイム >
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp;&nbsp; **\<ランタイム >**  
 
 ## <a name="syntax"></a>構文
 

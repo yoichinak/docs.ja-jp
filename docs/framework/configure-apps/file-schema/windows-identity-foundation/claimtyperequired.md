@@ -3,19 +3,20 @@ title: <claimTypeRequired>
 ms.date: 03/30/2017
 ms.assetid: c469d71f-6c77-4a24-97aa-53efa126ceef
 author: BrucePerlerMS
-ms.openlocfilehash: 85f3954514fa8b532311b1fbfc34f32ebefa4099
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1c40c5e4b4a24a3c1bbd6e096f12b7b044331c88
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942827"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252060"
 ---
 # <a name="claimtyperequired"></a>\<claimTypeRequired>
 受信セキュリティトークンに必要な要求のセットを指定します。  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<claimTypeRequired>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<システムの >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<構成 >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<claimTypeRequired >**  
   
 ## <a name="syntax"></a>構文  
   

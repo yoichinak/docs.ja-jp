@@ -2,12 +2,12 @@
 title: リテラル (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-ms.openlocfilehash: 6196c1b026b49847bd06cc9cda5ea6b6af289858
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9aba737b522f75f1f81cc054fb87b414b06f9611
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953288"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250345"
 ---
 # <a name="literals-entity-sql"></a>リテラル (Entity SQL)
 このトピックでは、リテラルに関する [!INCLUDE[esql](../../../../../../includes/esql-md.md)] のサポートについて説明します。  
@@ -15,9 +15,9 @@ ms.locfileid: "69953288"
 ## <a name="null"></a>Null  
  NULL リテラルは、あらゆる型で NULL 値を表す際に使用されます。 NULL リテラルは、すべての型と互換性があります。  
   
- NULL リテラルをキャストすることによって、型指定された NULL を作成できます。 詳細については、「 [CAST](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)」を参照してください。  
+ NULL リテラルをキャストすることによって、型指定された NULL を作成できます。 詳細については、「 [CAST](cast-entity-sql.md)」を参照してください。  
   
- 空の浮動小数点数の null リテラルを使用できる場所に関する規則については、「 [Null リテラルと型推論](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md)」を参照してください。  
+ 空の浮動小数点数の null リテラルを使用できる場所に関する規則については、「 [Null リテラルと型推論](null-literals-and-type-inference-entity-sql.md)」を参照してください。  
   
 ## <a name="boolean"></a>ブール型  
  ブール型リテラルは、`true` と `false` のキーワードで表されます。  
@@ -103,4 +103,4 @@ GUID  '1AFC7F5C-FFA0-4741-81CF-F12EAAB822BF'
   
 ## <a name="see-also"></a>関連項目
 
-- [Entity SQL の概要](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Entity SQL の概要](entity-sql-overview.md)

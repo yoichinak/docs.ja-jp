@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: ee622801-9e46-470b-85ab-88c4b1dd2ee1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b42c141362d99090db922d3a6b429f05592130cd
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 164492eb1abc7329481f158963118b47d2c4aebc
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659015"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252861"
 ---
 # <a name="alwaysflowimpersonationpolicy-element"></a>\<alwaysFlowImpersonationPolicy > 要素
 偽装の実行方法に関係なく、Windows ID が常に非同期ポイント間でフローすることを指定します。  
   
- \<configuration>  
-\<ランタイム >  
-\<alwaysFlowImpersonationPolicy>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<ランタイム >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<alwaysFlowImpersonationPolicy >** \  
   
 ## <a name="syntax"></a>構文  
   

@@ -8,23 +8,23 @@ helpviewer_keywords:
 - invoking print dialogs [WPF]
 - print dialogs [WPF], invoking
 ms.assetid: e3a2c84c-74fe-45a4-8501-5813f9dbfed2
-ms.openlocfilehash: cd7b06030e0fb2bba74590ee80c07c34047c5b47
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4bad8158925fea8af529f70f92aad74e2a6bbec0
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950609"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254112"
 ---
 # <a name="how-to-invoke-a-print-dialog"></a>方法: 印刷ダイアログ ボックスを呼び出す
 アプリケーションから印刷できるようにするには、単にオブジェクトを<xref:System.Windows.Controls.PrintDialog>作成して開くことができます。  
   
 ## <a name="example"></a>例  
- <xref:System.Windows.Controls.PrintDialog> コントロールには、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]、構成、および [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] ジョブの送信用の 1 つのエントリ ポイントが用意されています。 コントロールは使いやすく、マークアップまたはコードを使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]してインスタンス化できます。 次の例では、コントロールをインスタンス化してコードで開く方法と、コントロールから出力する方法を示します。 また、ダイアログで特定の範囲のページを設定するオプションをユーザーに与える方法についても説明します。 このコード例では、C: ドライブのルートに FixedDocumentSequence ファイルがあることを前提としています。  
+ コントロール<xref:System.Windows.Controls.PrintDialog>は、、構成、および XPS [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]ジョブを送信するための1つのエントリポイントを提供します。 コントロールは使いやすく、マークアップまたはコードを使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]してインスタンス化できます。 次の例では、コントロールをインスタンス化してコードで開く方法と、コントロールから出力する方法を示します。 また、ダイアログで特定の範囲のページを設定するオプションをユーザーに与える方法についても説明します。 このコード例では、C: ドライブのルートに FixedDocumentSequence ファイルがあることを前提としています。  
   
  [!code-csharp[printdialog#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintDialog/CSharp/Window1.xaml.cs#1)]
  [!code-vb[printdialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintDialog/visualbasic/window1.xaml.vb#1)]  
   
- ダイアログが開いたら、ユーザーは自分のコンピューターにインストールされているプリンターから選択できるようになります。 また、 [Microsoft XPS ドキュメントライター](https://go.microsoft.com/fwlink/?LinkId=147319)を選択して、印刷ではなく[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]ファイルを作成することもできます。  
+ ダイアログが開いたら、ユーザーは自分のコンピューターにインストールされているプリンターから選択できるようになります。 また、 [MICROSOFT Xps ドキュメントライター](https://go.microsoft.com/fwlink/?LinkId=147319)を選択して、印刷ではなく XML Paper SPECIFICATION (XPS) ファイルを作成することもできます。  
   
 > [!NOTE]
 > このトピックで[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]説明されているの<xref:System.Windows.Forms.PrintDialog?displayProperty=nameWithType>コントロールは、Windows フォームのコンポーネントと混同しないようにする必要があります。 <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType>  

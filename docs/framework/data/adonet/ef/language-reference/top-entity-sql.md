@@ -2,12 +2,12 @@
 title: TOP (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4a4a0954-82e2-4eae-bcaf-7c4552f3532d
-ms.openlocfilehash: e7c6cf6b67dc3af29f7ca8fb22af419235a9b833
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8b55519b7f95deb6463af4c0a6a2a53975e5b5a2
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879763"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248971"
 ---
 # <a name="top-entity-sql"></a>TOP (Entity SQL)
 
@@ -21,7 +21,7 @@ SELECT 句には、オプションの ALL/DISTINCT 修飾子に続けてオプ�
 
 ## <a name="arguments"></a>引数
 
-`n` 返される行の数を指定する数値式。 `n` は単一の数値リテラルかまたは単一のパラメーターです。
+`n`返される行の数を指定する数値式です。 `n` は単一の数値リテラルかまたは単一のパラメーターです。
 
 ## <a name="remarks"></a>Remarks
 
@@ -39,13 +39,13 @@ select distinct top(10) c.a1, c.a2 from T as a
 select distinct top(@topParam) c.a1, c.a2 from T as a
 ```
 
-TOP は、クエリが並べ替えられていない限り、非決定的です。 確定的な結果が必要な場合は、 [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md) 句の [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) サブ句および [LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) サブ句を使用します。 TOP     SKIP/LIMIT
+TOP は、クエリが並べ替えられていない限り、非決定的です。 確定的な結果が必要な場合は、 [ORDER BY](skip-entity-sql.md) 句の [SKIP](limit-entity-sql.md) サブ句および [LIMIT](order-by-entity-sql.md) サブ句を使用します。 TOP     SKIP/LIMIT
 
 ## <a name="example"></a>例
 
 次の [!INCLUDE[esql](../../../../../../includes/esql-md.md)] クエリは、TOP を使用して、クエリ結果から返される 1 番上の 1 行を指定します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。
 
-1. 」の手順に従って[方法。StructuralType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)します。
+1. [「方法:StructuralType の結果](../how-to-execute-a-query-that-returns-structuraltype-results.md)を返すクエリを実行します。
 
 2. 次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。
 
@@ -53,8 +53,8 @@ TOP は、クエリが並べ替えられていない限り、非決定的です�
 
 ## <a name="see-also"></a>関連項目
 
-- [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)
-- [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)
-- [LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)
-- [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)
-- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [SELECT](select-entity-sql.md)
+- [SKIP](skip-entity-sql.md)
+- [LIMIT](limit-entity-sql.md)
+- [ORDER BY](order-by-entity-sql.md)
+- [Entity SQL リファレンス](entity-sql-reference.md)

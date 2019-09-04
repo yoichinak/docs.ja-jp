@@ -3,21 +3,22 @@ title: <issuerTokenResolver>
 ms.date: 03/30/2017
 ms.assetid: f74392f6-3f5b-4880-bd8a-3a9130d31e65
 author: BrucePerlerMS
-ms.openlocfilehash: da591940910b16d42ef8ab1a05c4b244dbe543f4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8775e3044e58886cfa53a9fd9fc8b4b8ed2105b5
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942628"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251948"
 ---
 # <a name="issuertokenresolver"></a>\<issuerTokenResolver >
 トークンハンドラーコレクションのハンドラーによって使用される発行者トークンリゾルバーを登録します。 発行者トークンリゾルバーは、受信トークンとメッセージの署名トークンを解決するために使用されます。  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<securityTokenHandlers>  
-\<securityTokenHandlerConfiguration >  
-\<issuerTokenResolver >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<システムの >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<構成 >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securityTokenHandlers >** ](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securityTokenHandlerConfiguration >** ](securitytokenhandlerconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<issuerTokenResolver >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,7 +42,7 @@ ms.locfileid: "69942628"
   
 |属性|説明|  
 |---------------|-----------------|  
-|種類|発行者トークンリゾルバーの種類を指定します。 は、クラスまた<xref:System.IdentityModel.Tokens.IssuerTokenResolver>は<xref:System.IdentityModel.Tokens.IssuerTokenResolver>クラスから派生した型のいずれかである必要があります。 必須。|  
+|型|発行者トークンリゾルバーの種類を指定します。 は、クラスまた<xref:System.IdentityModel.Tokens.IssuerTokenResolver>は<xref:System.IdentityModel.Tokens.IssuerTokenResolver>クラスから派生した型のいずれかである必要があります。 必須。|  
   
 ### <a name="child-elements"></a>子要素  
  なし  

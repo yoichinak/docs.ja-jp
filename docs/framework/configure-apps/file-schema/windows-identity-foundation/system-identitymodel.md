@@ -3,17 +3,18 @@ title: <system.identityModel>
 ms.date: 03/30/2017
 ms.assetid: 210ce7e9-d07b-400c-800f-5f525dcf95e8
 author: BrucePerlerMS
-ms.openlocfilehash: 286ae88946692e6894ca3c7ee9e1348415c84ade
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a54f5ce86aee1a5e831c0b10aa1471d4a82f40a5
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943598"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251792"
 ---
 # <a name="systemidentitymodel"></a>\<system.identityModel>
 アプリケーションで Windows Identity Foundation (WIF) オプションを有効にするための構成を提供します。  
   
- \<system.identityModel>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp; **\<システムの >**  
   
 ## <a name="syntax"></a>構文  
   
