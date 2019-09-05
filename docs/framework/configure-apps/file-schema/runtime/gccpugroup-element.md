@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ee56b23b6d5fca6d0527d509c9b6a6fc6dd82336
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9ff646f13c5619b0bfca1b61c86013a981c274e3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920782"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252559"
 ---
 # <a name="gccpugroup-element"></a>\<GCCpuGroup > 要素
 
 ガベージ コレクションが複数の CPU グループをサポートするかどうかを指定します。
 
-\<configuration>
-\<runtime>
-\<GCCpuGroup>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<ランタイム >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<GCCpuGroup>**  
 
 ## <a name="syntax"></a>構文
 

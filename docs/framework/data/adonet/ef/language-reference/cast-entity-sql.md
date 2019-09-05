@@ -2,12 +2,12 @@
 title: CAST (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
-ms.openlocfilehash: 253dcf092deadd1049d0556af4ea0630602110d0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 385f9a8057ea6aa3637f7fae6fec79154ac625ba
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935824"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251233"
 ---
 # <a name="cast-entity-sql"></a>CAST (Entity SQL)
 あるデータ型の式を別のデータ型に変換します。  
@@ -23,7 +23,7 @@ CAST ( expression AS data_type )
  `data_type`に変換できる任意の有効な式。  
   
  `data_type`  
- 対象システムで提供されるデータ型。 プリミティブ (スカラー) 型でなければなりません。 使用される `data_type` は、クエリのスペースによって異なります。 クエリが <xref:System.Data.EntityClient.EntityCommand>で実行される場合、データ型は概念モデルで定義された型です。 詳細については、「 [CSDL Specification](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)」を参照してください。 クエリが <xref:System.Data.Objects.ObjectQuery%601>で実行される場合、データ型は共通言語ランタイム (CLR) 型です。  
+ 対象システムで提供されるデータ型。 プリミティブ (スカラー) 型でなければなりません。 使用される `data_type` は、クエリのスペースによって異なります。 クエリが <xref:System.Data.EntityClient.EntityCommand>で実行される場合、データ型は概念モデルで定義された型です。 詳細については、「 [CSDL Specification](csdl-specification.md)」を参照してください。 クエリが <xref:System.Data.Objects.ObjectQuery%601>で実行される場合、データ型は共通言語ランタイム (CLR) 型です。  
   
 ## <a name="return-value"></a>戻り値  
  `data_type`と同じ値を返します。  
@@ -53,7 +53,7 @@ CAST( e as T )
 ## <a name="example"></a>例  
  次の [!INCLUDE[esql](../../../../../../includes/esql-md.md)] クエリは CAST 演算子を使用して、あるデータ型の式を別のデータ型にキャストします。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
-1. [「方法:PrimitiveType の結果](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)を返すクエリを実行します。  
+1. [「方法:PrimitiveType の結果](../how-to-execute-a-query-that-returns-primitivetype-results.md)を返すクエリを実行します。  
   
 2. 次のクエリを引数として `ExecutePrimitiveTypeQuery` メソッドに渡します。  
   
@@ -61,4 +61,4 @@ CAST( e as T )
   
 ## <a name="see-also"></a>関連項目
 
-- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Entity SQL リファレンス](entity-sql-reference.md)

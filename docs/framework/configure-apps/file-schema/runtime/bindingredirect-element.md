@@ -9,21 +9,21 @@ helpviewer_keywords:
 - container tags, <bindingRedirect> element
 - bindingRedirect element
 ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
-ms.openlocfilehash: 7cdea10cc6e0562f6062470240b01743aa439bde
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 7d51ef5c4107fc6a40a472a660f53bb0ded59683
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658938"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252784"
 ---
 # <a name="bindingredirect-element"></a>\<bindingRedirect > 要素
 1 つのアセンブリ バージョンを別のバージョンにリダイレクトします。  
   
- \<configuration>  
-\<ランタイム >  
-\<assemblyBinding>  
-\<dependentAssembly >  
-\<bindingRedirect >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<ランタイム >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dependentAssembly >** ](dependentassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bindingRedirect >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,7 +41,7 @@ newVersion="new assembly version"/>
 |属性|説明|  
 |---------------|-----------------|  
 |`oldVersion`|必須の属性です。<br /><br /> 初めに要求されていたアセンブリのバージョンを指定します。 アセンブリバージョン番号の形式は major. *minor. build. revision*です。 このバージョン番号の各部分で有効値は、0 ～ 65535 です。<br /><br /> バージョン範囲は、次の形式でも指定できます。<br /><br /> *n. n. n. n. n. n. n. n. n*|  
-|`newVersion`|必須の属性です。<br /><br /> 最初に要求されたバージョンの代わりに、次の形式で使用するアセンブリのバージョンを指定します。 n. n. n. n<br /><br /> この値では `oldVersion` より前のバージョンを指定できます。|  
+|`newVersion`|必須の属性です。<br /><br /> 最初に要求されたバージョンの代わりに *、次の*形式で使用するアセンブリのバージョンを指定します。 n. n. n. n<br /><br /> この値では `oldVersion` より前のバージョンを指定できます。|  
   
 ### <a name="child-elements"></a>子要素  
   

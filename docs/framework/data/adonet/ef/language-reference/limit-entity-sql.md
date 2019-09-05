@@ -2,12 +2,12 @@
 title: LIMIT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c22ffede-0a52-44d1-99b9-4a91e651e1b9
-ms.openlocfilehash: e637218bb3db69d4b09fd734b939fd30f50ed806
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 432dfe2c8b2b87daf885be6de4da9bbeaaa37638
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961884"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250443"
 ---
 # <a name="limit-entity-sql"></a>LIMIT (Entity SQL)
 物理的なページングは、ORDER BY 句の LIMIT サブ句を使用して実行できます。 LIMIT は ORDER BY 句と切り離して使用することはできません。  
@@ -30,7 +30,7 @@ ms.locfileid: "69961884"
 ## <a name="example"></a>例  
  次の Entity SQL クエリでは、SELECT ステートメントで返されたオブジェクトの並べ替え順序の指定に ORDER BY 演算子を LIMIT と共に使用します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
-1. [「方法:StructuralType の結果](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)を返すクエリを実行します。  
+1. [「方法:StructuralType の結果](../how-to-execute-a-query-that-returns-structuraltype-results.md)を返すクエリを実行します。  
   
 2. 次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "69961884"
   
 ## <a name="see-also"></a>関連項目
 
-- [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)
+- [ORDER BY](order-by-entity-sql.md)
 - [方法: クエリ結果のページ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
-- [ページング](../../../../../../docs/framework/data/adonet/ef/language-reference/paging-entity-sql.md)
-- [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)
+- [ページング](paging-entity-sql.md)
+- [TOP](top-entity-sql.md)

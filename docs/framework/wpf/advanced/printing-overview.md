@@ -15,27 +15,27 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: bfac0248e6d9dae3ef87f43b2c713e1dc64a9464
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: b6de7aab77c168f353b39b44853fc224cbf0244d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70016108"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254078"
 ---
 # <a name="printing-overview"></a>印刷の概要
-Microsoft .NET Framework を使用すると、Windows Presentation Foundation (WPF) を使用するアプリケーション開発者は、豊富な新しい印刷および印刷システム管理 Api を利用できます。 また、[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] によって、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] アプリケーションを作成する開発者と、アンマネージ コードを使用する開発者も、これらの印刷システム拡張機能の一部を使用できます。 この新しい機能の中核となるのが、新しい [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] ファイル形式と [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 印刷パスです。  
+Microsoft .NET Framework を使用すると、Windows Presentation Foundation (WPF) を使用するアプリケーション開発者は、豊富な新しい印刷および印刷システム管理 Api を利用できます。 また、[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] によって、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] アプリケーションを作成する開発者と、アンマネージ コードを使用する開発者も、これらの印刷システム拡張機能の一部を使用できます。 この新しい機能の中核となるのは、新しい XML Paper Specification (XPS) ファイル形式と XPS 印刷パスです。  
   
- このトピックは、次のセクションで構成されています。  
+ このトピックは次のセクションで構成されます。  
   
 <a name="introduction_to_XPS"></a>   
 ## <a name="about-xps"></a>XPS について  
  XPS は、電子ドキュメント形式、スプールファイル形式、およびページ記述言語です。 これは、、open パッケージング規則 ( [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]OPC)、およびその他の業界標準を使用してクロスプラットフォームドキュメントを作成するオープンドキュメント形式です。 XPS は、デジタルドキュメントの作成、共有、印刷、表示、アーカイブを行うプロセスを簡略化します。 XPS の詳細については、「 [Xps ドキュメント](/windows/desktop/printdocs/documents)」を参照してください。  
   
- を使用して xps ベースのコンテンツを[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]印刷するいくつかの方法については、「[プログラムによる xps ファイルの印刷](how-to-programmatically-print-xps-files.md)」をご利用ください。 このトピックに含まれるコンテンツの確認中にこれらのサンプルを参照すると、役に立つ場合があります。 (アンマネージコードの開発者は、 [MXDC_ESCAPE 関数](/windows/desktop/printdocs/mxdc-escape)のドキュメントを参照する必要があります。 Windows フォーム開発者は、完全な<xref:System.Drawing.Printing> [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]印刷パスをサポートしていない名前空間の API を使用する必要がありますが、ハイブリッドの GDI から XPS への印刷パスがサポートされています。 以下の**印刷パスのアーキテクチャ**をご覧ください。)  
+ を使用して xps ベースのコンテンツを[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]印刷するいくつかの方法については、「[プログラムによる xps ファイルの印刷](how-to-programmatically-print-xps-files.md)」をご利用ください。 このトピックに含まれるコンテンツの確認中にこれらのサンプルを参照すると、役に立つ場合があります。 (アンマネージコードの開発者は、 [MXDC_ESCAPE 関数](/windows/desktop/printdocs/mxdc-escape)のドキュメントを参照する必要があります。 Windows フォーム開発者は、完全な xps <xref:System.Drawing.Printing>印刷パスをサポートしていない名前空間の API を使用する必要がありますが、ハイブリッドの GDI から XPS への印刷パスがサポートされています。 以下の**印刷パスのアーキテクチャ**をご覧ください。)  
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>XPS 印刷パス  
- XML Paper Specification (XPS) の印刷パスは、Windows アプリケーションでの印刷の処理方法を再定義する新しい Windows 機能です。 は[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 、ドキュメントのプレゼンテーション言語 (RTF など)、印刷スプーラの形式 (WMF など)、およびページ記述言語 (PCL や Postscript など) を置き換えることができるため、新しい印刷パスでは、アプリケーションパブリケーションからの XPS 形式を印刷ドライバーまたはデバイスでの最終処理。  
+ XML Paper Specification (XPS) の印刷パスは、Windows アプリケーションでの印刷の処理方法を再定義する新しい Windows 機能です。 XPS はドキュメントのプレゼンテーション言語 (RTF など)、印刷スプーラの形式 (WMF など)、およびページ記述言語 (PCL や Postscript など) に置き換えることができるため、新しい印刷パスは、アプリケーションパブリケーションから印刷ドライバーまたはデバイスでの最終処理まで XPS 形式を維持します。  
   
  Xps 印刷パスは xps プリンタードライバーモデル (XPSDrv) に基づいて構築されています。これにより[!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)] 、印刷、カラーサポートの向上、および大幅に改善された印刷パフォーマンスなど、開発者にとっていくつかの利点が得られます。 (XPSDrv の詳細については、 [Windows Driver Kit のドキュメント](/windows-hardware/drivers/)を参照してください)。  
   
@@ -62,7 +62,7 @@ Microsoft .NET Framework を使用すると、Windows Presentation Foundation (W
 ### <a name="print-path-architecture"></a>印刷パスのアーキテクチャ  
  と .NET Framework [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]の両方のアプリケーションで xps [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]がサポートされますが、Windows フォームアプリケーションでは、xps プリンタードライバー (XPSDrv) 用の xps 形式のコンテンツを作成するために、GDI から xps への変換を使用します。 これらのアプリケーションは XPS 印刷パスを使用する必要がなく、拡張メタファイル (EMF) ベースの印刷を引き続き使用できます。 ただし、ほとんどの XPS 機能と拡張機能は、XPS 印刷パスを対象とするアプリケーションでのみ使用できます。  
   
- および Windows フォームアプリケーションで[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] XPSDrv ベースのプリンターを使用できるようにするために、xps プリンタードライバー (XPSDrv) は、GDI から xps 形式への変換をサポートしています。 XPSDrv モデルでは、 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]アプリケーションがドキュメントを印刷[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]できるように、XPS から GDI 形式のコンバーターも提供されています。 アプリケーション[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]の場合、XPS 形式から GDI 形式への変換は、書き込み<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>操作の対象<xref:System.Windows.Xps.XpsDocumentWriter>の印刷キューに XPSDrv ドライバーがない場合は常に、クラスのメソッド<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>とメソッドによって自動的に行われます。 (Windows フォームアプリケーションはドキュメント[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]を印刷できません。)  
+ および Windows フォームアプリケーションで[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] XPSDrv ベースのプリンターを使用できるようにするために、xps プリンタードライバー (XPSDrv) は、GDI から xps 形式への変換をサポートしています。 XPSDrv モデルでは、 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]アプリケーションが xps ドキュメントを印刷できるように、xps から GDI 形式のコンバーターも提供されています。 アプリケーション[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]の場合、XPS 形式から GDI 形式への変換は、書き込み<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>操作の対象<xref:System.Windows.Xps.XpsDocumentWriter>の印刷キューに XPSDrv ドライバーがない場合は常に、クラスのメソッド<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>とメソッドによって自動的に行われます。 (Windows フォームアプリケーションは XPS ドキュメントを印刷できません)。  
   
  次の図は、印刷サブシステムを示し、Microsoft によって提供される部分と、ソフトウェアとハードウェアのベンダーによって定義される部分を定義しています。  
   
@@ -128,7 +128,7 @@ XPS の機能やサポートを必要としないアプリケーションでは�
   
 - **フォントのサブセット化**。 実際のドキュメント内で使用されている文字だけが XPS ファイルに格納されます。  
   
-- **高度なグラフィックスのサポート**。 透過性とグラデーションのプリミティブのネイティブ サポートにより、[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ドキュメントの内容のラスタライズを回避できます。  
+- **高度なグラフィックスのサポート**。 透明度とグラデーションのプリミティブのネイティブサポートにより、XPS ドキュメント内のコンテンツのラスタライズが回避されます。  
   
 - **共通リソースの識別**。 複数回使用するリソース (会社のロゴを表す画像など) は共有リソースとして扱われ、一度だけ読み込まれます。  
   

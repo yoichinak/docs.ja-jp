@@ -2,16 +2,16 @@
 title: CLR メソッドと正規関数とのマッピング
 ms.date: 03/30/2017
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
-ms.openlocfilehash: 16d447e82959f5ade7210b36dcf9d06bed9c9b00
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6f14ad8d9e8f919fe820447cc991b102319b38d5
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61605718"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251225"
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>CLR メソッドと正規関数とのマッピング
 
-Entity Framework は、文字列操作、数学関数などの多くのデータベース システム間で共通の機能を実装する正規関数のセットを提供します。 この関数により、開発者は広範なデータベース システムをターゲットとして指定することができます。 LINQ to Entities などのクエリ テクノロジから呼び出されると、これらの正規関数は使用されているプロバイダーに対応した正しい格納関数に変換されます。 これにより、関数の呼び出しをデータ ソース間で共通の形式で表すことができ、データ ソース間に一貫した方法でクエリを利用できます。 オペランドが数値型である場合は、ビット単位の AND、OR、NOT、および XOR 演算子も正規関数にマップされます。 ブール型のオペランドの場合、ビット単位の AND、OR、NOT、および XOR 演算子は、それぞれのオペランドの論理 AND、OR、NOT、および XOR 演算を計算します。 詳細については、次を参照してください。[正規関数](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)します。
+Entity Framework は、文字列操作、数学関数などの多くのデータベース システム間で共通の機能を実装する正規関数のセットを提供します。 この関数により、開発者は広範なデータベース システムをターゲットとして指定することができます。 LINQ to Entities などのクエリ テクノロジから呼び出されると、これらの正規関数は使用されているプロバイダーに対応した正しい格納関数に変換されます。 これにより、関数の呼び出しをデータ ソース間で共通の形式で表すことができ、データ ソース間に一貫した方法でクエリを利用できます。 オペランドが数値型である場合は、ビット単位の AND、OR、NOT、および XOR 演算子も正規関数にマップされます。 ブール型のオペランドの場合、ビット単位の AND、OR、NOT、および XOR 演算子は、それぞれのオペランドの論理 AND、OR、NOT、および XOR 演算を計算します。 詳細については、「[正規関数](canonical-functions.md)」を参照してください。
 
 LINQ シナリオの場合、Entity Framework に対するクエリでは、正規関数による、基になるデータ ソース上のメソッドへの特定の CLR メソッドのマッピングも行われます。 正規関数に明示的にマップされない LINQ to Entities クエリで任意のメソッドの呼び出しが実行されると、ランタイムの <xref:System.NotSupportedException> 例外がスローされます。
 
@@ -41,16 +41,16 @@ LINQ シナリオの場合、Entity Framework に対するクエリでは、正�
 |System.String メソッド (インスタンス)|正規関数|メモ|
 |---------------------------------------|------------------------|-----------|
 |Boolean Contains(String `value`)|`this` LIKE '%`value`%'|`value` が定数ではない場合、IndexOf(`this`, `value`) > 0 にマップされます。|
-|Boolean EndsWith(String `value`)|`this` ような`'` % `value`'|`value` が定数ではない場合、Right(`this`, length(`value`)) = `value` にマップされます。|
+|Boolean EndsWith(String `value`)|`this`LIKE `'` '% `value`|`value` が定数ではない場合、Right(`this`, length(`value`)) = `value` にマップされます。|
 |Boolean StartsWith(String `value`)|`this` LIKE '`value`%'|`value` が定数ではない場合、IndexOf(`this`, `value`) = 1 にマップされます。|
 |長さ|Length(`this`)||
 |Int32 IndexOf(String `value`)|IndexOf(`this`, `value`) - 1||
 |System.String Insert(Int32 `startIndex`, String `value`)|Concat(Concat(Substring(`this`, 1, `startIndex`), `value`), Substring(`this`, `startIndex`+1, Length(`this`) - `startIndex`))||
 |System.String Remove(Int32 `startIndex`)|Substring(`this`, 1, `startIndex`)||
-|System.String Remove(Int32 `startIndex`, Int32 `count`)|Concat(Substring(`this`, 1, `startIndex`) , Substring(`this`, `startIndex` + `count` +1, Length(`this`) - (`startIndex` + `count`)))|`startIndex` が 0 以上の整数である場合、サポートされるのは Remove(`count`, `count`) だけです。|
+|System.String Remove(Int32 `startIndex`, Int32 `count`)|`this`Concat (substring (, 1, `startIndex`), substring (`this`, `startIndex`  +   + `count``startIndex``this` `count` + 1, Length ()-()))|`startIndex` が 0 以上の整数である場合、サポートされるのは Remove(`count`, `count`) だけです。|
 |System.String Replace(String `oldValue`, String `newValue`)|Replace(`this`, `oldValue`, `newValue`)||
 |System.String Substring(Int32 `startIndex`)|Substring(`this`, `startIndex` +1, Length(`this`) - `startIndex`)||
-|System.String Substring(Int32 `startIndex`, Int32 `length`)|部分文字列 (`this`、 `startIndex` +1、 `length`)||
+|System.String Substring(Int32 `startIndex`, Int32 `length`)|Substring (`this`, `startIndex` + 1, `length`)||
 |System.String ToLower()|ToLower(`this`)||
 |System.String ToUpper()|ToUpper(`this`)||
 |System.String Trim()|Trim(`this`)||
@@ -69,9 +69,9 @@ LINQ シナリオの場合、Entity Framework に対するクエリでは、正�
 |Boolean op_GreaterThan(DateTime `t1`, DateTime `t2`)|> 演算子||
 |Boolean op_GreaterThanOrEqual(DateTime `t1`, DateTime `t2`)|>= 演算子||
 |Boolean op_Inequality(DateTime `t1`, DateTime `t2`)|!= 演算子||
-|ブール op_LessThan (DateTime `t1`、DateTime `t2`)|< 演算子||
+|Boolean op_LessThan (datetime `t1`, datetime `t2`)|< 演算子||
 |Boolean op_LessThanOrEqual(DateTime `t1`, DateTime `t2`)|<= 演算子||
-|Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal `Interval` DateInterval、として \_<br /><br /> ByVal `DateValue` 、DateTime として \_<br /><br /> 省略可能な ByVal `FirstDayOfWeekValue` FirstDayOfWeek として、曜日を = \_<br /><br /> 省略可能な ByVal `FirstWeekOfYearValue` < として VbFirstJan1 を = \_<br /><br /> ) As Integer||詳細については、「DatePart 関数」を参照してください。|
+|Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> Dateinterval としての ByVal `Interval` 、\_<br /><br /> DateTime `DateValue`としての ByVal、\_<br /><br /> FirstDayOfWeek = `FirstDayOfWeekValue` vbsunday としての ByVal (省略可)\_<br /><br /> FirstWeekOfYear = `FirstWeekOfYearValue` VbFirstJan1 としての省略可能な ByVal\_<br /><br /> ) As Integer||詳細については、「DatePart 関数」を参照してください。|
 |Microsoft.VisualBasic.DateAndTime.Now|CurrentDateTime()||
 |Microsoft.VisualBasic.DateAndTime.Year(DateTime `TimeValue`)|Year()||
 |Microsoft.VisualBasic.DateAndTime.Month(DateTime `TimeValue`)|Month()||
@@ -203,4 +203,4 @@ LINQ シナリオの場合、Entity Framework に対するクエリでは、正�
 
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+- [LINQ to Entities](linq-to-entities.md)

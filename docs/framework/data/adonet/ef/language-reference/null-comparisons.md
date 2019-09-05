@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: 5862506960ae1e763baebee5d990df83f92cc784
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 6aa0af812d44f5c63758dd47ea4271bb2d689837
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539729"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249828"
 ---
 # <a name="null-comparisons"></a>NULL 比較
-データ ソースの `null` 値は不明な値を表します。 Linq to Entities クエリで特定の計算または比較が有効な場合、または null 以外の場合、データを格納している行でのみ実行できるように null 値を確認できます。 ただし、CLR の NULL セマンティクスは、データ ソースの NULL セマンティクスとは異なる場合があります。 ほとんどのデータベースでは、3 値論理を使用して NULL 比較を処理します。 これは、null 値に対する比較に評価されない`true`または`false`、評価結果が`unknown`します。 これは、多くの場合は ANSI NULL の実装ですが、そうでない場合もあります。  
+データ ソースの `null` 値は不明な値を表します。 LINQ to Entities のクエリでは、null 値をチェックして、特定の計算または比較が、有効な、または null 以外のデータを含む行に対してのみ実行されるようにすることができます。 ただし、CLR の NULL セマンティクスは、データ ソースの NULL セマンティクスとは異なる場合があります。 ほとんどのデータベースでは、3 値論理を使用して NULL 比較を処理します。 つまり、null 値に対する比較はまたはに`true`評価されず、と`false`評価`unknown`されます。 これは、多くの場合は ANSI NULL の実装ですが、そうでない場合もあります。  
   
- SQL Server の既定では、NULL = NULL の比較は NULL 値を返します。 次の例では、行、`ShipDate`は null は、結果セットから除外して、TRANSACT-SQL ステートメントでは、0 行を返します。  
+ SQL Server の既定では、NULL = NULL の比較は NULL 値を返します。 次の例で`ShipDate`は、が null の行が結果セットから除外され、transact-sql ステートメントが0行を返します。  
   
 ```  
 -- Find order details and orders with no ship date.  
@@ -33,7 +33,7 @@ WHERE h.ShipDate IS Null
  [!code-vb[DP L2E Conceptual Examples#JoinOnNull](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#joinonnull)]  
   
 ## <a name="key-selectors"></a>キー セレクター  
- A*キー セレクター*要素からキーを抽出する標準クエリ演算子で使用される関数。 キー セレクター関数では、式を定数と比較できます。 式が NULL 定数と比較される場合、または 2 つの NULL 定数が比較される場合、CLR の NULL セマンティクスが使用されます。 データ ソースの NULL 値を持つ 2 つの列が比較される場合は、ストア NULL セマンティクスが使用されます。 キー セレクターは、<xref:System.Linq.Queryable.GroupBy%2A> など、グループ化や並べ替えの標準クエリ演算子で使用される場合が多く、クエリ結果の並べ替えやグループ化に使用するキーを選択できます。  
+ *キーセレクター*は、要素からキーを抽出するために標準クエリ演算子で使用される関数です。 キー セレクター関数では、式を定数と比較できます。 式が NULL 定数と比較される場合、または 2 つの NULL 定数が比較される場合、CLR の NULL セマンティクスが使用されます。 データ ソースの NULL 値を持つ 2 つの列が比較される場合は、ストア NULL セマンティクスが使用されます。 キー セレクターは、<xref:System.Linq.Queryable.GroupBy%2A> など、グループ化や並べ替えの標準クエリ演算子で使用される場合が多く、クエリ結果の並べ替えやグループ化に使用するキーを選択できます。  
   
 ## <a name="null-property-on-a-null-object"></a>NULL オブジェクトの NULL プロパティ  
  [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] では、NULL オブジェクトのプロパティは NULL です。 CLR で NULL オブジェクトのプロパティを参照しようとすると、<xref:System.NullReferenceException> が返されます。 LINQ クエリに NULL オブジェクトのプロパティが含まれている場合、動作の一貫性が失われることがあります。  
@@ -44,8 +44,8 @@ WHERE h.ShipDate IS Null
  [!code-vb[DP L2E Conceptual Examples#CastResultsIsNull](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#castresultsisnull)]  
   
 ## <a name="passing-null-collections-to-aggregate-functions"></a>集計関数に NULL コレクションを渡す  
- LINQ to Entities でサポートするコレクションを渡すときにで`IQueryable`での集計関数、集計の操作がデータベースで実行されます。 クエリがメモリで実行して、データベースで実行されたクエリの結果の違いがある可能性があります。 メモリ内クエリを使用して、一致がない場合、クエリは 0 を返します。 データベースでは、これと同じクエリから `null` が返されます。 場合、`null`値が LINQ 集計関数に渡されると、例外がスローされます。 可能な限りそのまま使用する`null`値型と null 許容型にクエリ結果を受け取るその型のプロパティをキャストします。  
+ LINQ to Entities では、をサポート`IQueryable`するコレクションを集計関数に渡すと、集計操作がデータベースで実行されます。 メモリ内で実行されたクエリの結果と、データベースで実行されたクエリの結果が異なる場合があります。 メモリ内クエリで一致するものがない場合、クエリは0を返します。 データベースでは、これと同じクエリから `null` が返されます。 LINQ 集計関数に値が渡されると、例外がスローされます。`null` 使用可能な`null`値を受け入れるには、クエリ結果を受け取る型の型とプロパティを null 許容型にキャストします。  
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to Entities クエリ内の式](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)
+- [LINQ to Entities クエリ内の式](expressions-in-linq-to-entities-queries.md)

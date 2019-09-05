@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c8f8744d3ef1ca30eb05a4c8c3290d8a514714b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: cc206e584440778858e61fc0bab51fc8ffa2009a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663514"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252381"
 ---
 # <a name="publisherpolicy-element"></a>\<Publisherpolicy apply > 要素
 ランタイムが発行元ポリシーを適用するかどうかを指定します。  
   
- \<configuration>  
-\<ランタイム >  
-\<assemblyBinding>  
-\<dependentAssembly >  
-\<Publisherpolicy apply >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<ランタイム >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dependentAssembly >** ](dependentassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Publisherpolicy apply >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,13 +51,16 @@ ms.locfileid: "69663514"
 |`no`|発行者ポリシーは適用されません。|  
   
 ### <a name="child-elements"></a>子要素  
- なし。  
+
+なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
+|`assemblyBinding`|アセンブリ バージョンのリダイレクトおよびアセンブリの位置に関する情報が含まれます。|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
+|`dependentAssembly`|各アセンブリのバインディング ポリシーとアセンブリの場所をカプセル化します。 アセンブリごと`<dependentAssembly>`に1つの要素を使用します。|  
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
 ## <a name="remarks"></a>Remarks  

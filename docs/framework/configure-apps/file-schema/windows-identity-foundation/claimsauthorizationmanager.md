@@ -3,19 +3,20 @@ title: <claimsAuthorizationManager>
 ms.date: 03/30/2017
 ms.assetid: 9354eee3-f692-4ad6-8427-3169686b8bcc
 author: BrucePerlerMS
-ms.openlocfilehash: 74ca031f7017d51adaa7a71593f537b64abbeae6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ddbe8a862940272e4192a3f4c0abdc1f9e8b5d48
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942889"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252079"
 ---
 # <a name="claimsauthorizationmanager"></a>\<claimsAuthorizationManager >
 入力方向の要求に対して要求承認マネージャーを登録します。  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<claimsAuthorizationManager >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<システムの >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<構成 >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<claimsAuthorizationManager >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,7 +37,7 @@ ms.locfileid: "69942889"
   
 |属性|説明|  
 |---------------|-----------------|  
-|種類|<xref:System.Security.Claims.ClaimsAuthorizationManager>クラスから派生するカスタム型。 `type`属性を指定する方法の詳細については、「[カスタム型参照](../windows-workflow-foundation/index.md)」を参照してください。|  
+|型|<xref:System.Security.Claims.ClaimsAuthorizationManager>クラスから派生するカスタム型。 `type`属性を指定する方法の詳細については、「[カスタム型参照](../windows-workflow-foundation/index.md)」を参照してください。|  
   
 ### <a name="child-elements"></a>子要素  
  `type`属性が存在しない場合、または`type`属性が<xref:System.Security.Claims.ClaimsAuthenticationManager>クラスを`<claimsAuthorizationManager>`参照している場合、要素は子要素を受け取りません<xref:System.Security.Claims.ClaimsAuthorizationManager> 。ただし、から派生したクラスは子構成要素を定義できます。  

@@ -3,19 +3,20 @@ title: <securityTokenHandlers>
 ms.date: 03/30/2017
 ms.assetid: f11a631d-4094-4e11-bb03-4ede74b30281
 author: BrucePerlerMS
-ms.openlocfilehash: 678e5c705181c55257b1ddb853690ada60ecd17a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 017309436660991c69da569e9cc4219e842ecaa3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942459"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251873"
 ---
 # <a name="securitytokenhandlers"></a>\<securityTokenHandlers>
 エンドポイントに登録されているセキュリティトークンハンドラーのコレクションを指定します。  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<securityTokenHandlers>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<システムの >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<構成 >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<securityTokenHandlers >**  
   
 ## <a name="syntax"></a>構文  
   

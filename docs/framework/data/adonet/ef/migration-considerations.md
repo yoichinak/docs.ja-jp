@@ -2,15 +2,15 @@
 title: 移行に関する注意事項 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: 8370156d2bd0f3858d7fa0936fa967a658e6e910
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3554f530acf0e3ca3e66dddf74f63e7ede03708e
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929305"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248566"
 ---
 # <a name="migration-considerations-entity-framework"></a>移行に関する注意事項 (Entity Framework)
-ADO.NET Entity Framework には、既存のアプリケーションにいくつかの利点があります。 特に重要な利点の 1 つが、概念モデルを使用して、アプリケーションで使用するデータ構造をデータ ソースのスキーマから分離できることです。 これにより、ストレージ モデルやデータ ソース自体の将来の変更が容易になり、その変更を補うための変更をアプリケーションに加える必要がなくなります。 を使用する[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]利点の詳細については、「 [Entity Framework の概要](../../../../../docs/framework/data/adonet/ef/overview.md)」と「 [Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md)」を参照してください。  
+ADO.NET Entity Framework には、既存のアプリケーションにいくつかの利点があります。 特に重要な利点の 1 つが、概念モデルを使用して、アプリケーションで使用するデータ構造をデータ ソースのスキーマから分離できることです。 これにより、ストレージ モデルやデータ ソース自体の将来の変更が容易になり、その変更を補うための変更をアプリケーションに加える必要がなくなります。 を使用する[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]利点の詳細については、「 [Entity Framework の概要](overview.md)」と「 [Entity Data Model](../entity-data-model.md)」を参照してください。  
   
  の利点[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]を活用するには、既存の[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]アプリケーションをに移行します。 移行作業の一部はすべてのアプリケーションに共通です。 これらの一般的なタスクには、バージョン 3.5 Service Pack 1 (SP1) 以降の .NET Framework を使用したアプリケーションのアップグレード、モデルとマッピングの定義、Entity Framework の構成などがあります。 そのほか、アプリケーションを [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] に移行する際には、 移行するアプリケーションの種類やアプリケーションの特定の機能に依存する注意点もあります。 このトピックでは、既存のアプリケーションをアップグレードする際に最適な方法を選択するために役立つ情報を紹介します。  
   
@@ -23,7 +23,7 @@ ADO.NET Entity Framework には、既存のアプリケーションにいくつ�
   
 - 大規模なアプリケーションや複雑なアプリケーションの場合、アプリケーション全体を一度に Entity Framework に移行する必要はありません。 ただし、Entity Framework を使用しない部分がアプリケーションにある場合、それらの部分については、データ ソースが変更された場合に変更が必要になります。  
   
-- Entity Framework によって使用されるデータプロバイダー接続は、 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ADO.NET データプロバイダーを使用してデータソースにアクセスするため、アプリケーションの他の部分と共有できます。 (たとえば、Entity Framework は SqlClient プロバイダーを使用して SQL Server データベースにアクセスします)。 詳細については、「 [Entity Framework 用の EntityClient プロバイダー](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)」を参照してください。  
+- Entity Framework によって使用されるデータプロバイダー接続は、 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ADO.NET データプロバイダーを使用してデータソースにアクセスするため、アプリケーションの他の部分と共有できます。 (たとえば、Entity Framework は SqlClient プロバイダーを使用して SQL Server データベースにアクセスします)。 詳細については、「 [Entity Framework 用の EntityClient プロバイダー](entityclient-provider-for-the-entity-framework.md)」を参照してください。  
   
 ## <a name="common-migration-tasks"></a>共通の移行タスク  
  既存アプリケーションの [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] への移行パスは、アプリケーションの種類と既存のデータ アクセス計画の両方に依存します。 ただし、以下のタスクは、既存のアプリケーションを [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] に移行する際に常に実行する必要があります。  
@@ -46,7 +46,7 @@ ADO.NET Entity Framework には、既存のアプリケーションにいくつ�
   
 3. 接続文字列を定義します。  
   
-     [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] で概念モデルに対してクエリを実行する際には特殊な形式の接続文字列を使用します。 この接続文字列は、モデル ファイルとマッピング ファイルに関する情報とデータ ソースへの接続に関する情報をカプセル化したものです。 詳細については、「[方法 :接続文字列](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)を定義します。  
+     [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] で概念モデルに対してクエリを実行する際には特殊な形式の接続文字列を使用します。 この接続文字列は、モデル ファイルとマッピング ファイルに関する情報とデータ ソースへの接続に関する情報をカプセル化したものです。 詳細については、「[方法 :接続文字列](how-to-define-the-connection-string.md)を定義します。  
   
 4. Visual Studio プロジェクトを構成します。  
   
@@ -60,13 +60,13 @@ ADO.NET Entity Framework には、既存のアプリケーションにいくつ�
   
 - データ リーダーを使用して表形式のデータを表示している場合  
 
-  EntityClient プロバイダーを使用し[!INCLUDE[esql](../../../../../includes/esql-md.md)]てクエリを実行し、返され<xref:System.Data.EntityClient.EntityDataReader>たオブジェクトを列挙することを検討してください。 この方法を使用するのは、データ リーダーを使用して表形式のデータを表示するアプリケーションで、データをオブジェクトに具体化したり、変更を追跡したり、更新を行ったりするための [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] の機能が不要である場合だけにしてください。 データ ソースを更新する既存のデータ アクセス コードも引き続き使用できますが、<xref:System.Data.EntityClient.EntityConnection.StoreConnection%2A> の <xref:System.Data.EntityClient.EntityConnection> プロパティから既存の接続にアクセスできます。 詳細については、「 [Entity Framework 用の EntityClient プロバイダー](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)」を参照してください。  
+  EntityClient プロバイダーを使用し[!INCLUDE[esql](../../../../../includes/esql-md.md)]てクエリを実行し、返され<xref:System.Data.EntityClient.EntityDataReader>たオブジェクトを列挙することを検討してください。 この方法を使用するのは、データ リーダーを使用して表形式のデータを表示するアプリケーションで、データをオブジェクトに具体化したり、変更を追跡したり、更新を行ったりするための [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] の機能が不要である場合だけにしてください。 データ ソースを更新する既存のデータ アクセス コードも引き続き使用できますが、<xref:System.Data.EntityClient.EntityConnection.StoreConnection%2A> の <xref:System.Data.EntityClient.EntityConnection> プロパティから既存の接続にアクセスできます。 詳細については、「 [Entity Framework 用の EntityClient プロバイダー](entityclient-provider-for-the-entity-framework.md)」を参照してください。  
   
 - DataSet を使用している場合  
 
-  は[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 、データセットによって提供されるものと同じ機能の多くを提供します。これには、メモリ内の永続性、変更の追跡、データバインディング、オブジェクトの XML データとしてのシリアル化などが含まれます。 詳細については、「[オブジェクトの操作](../../../../../docs/framework/data/adonet/ef/working-with-objects.md)」を参照してください。  
+  は[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 、データセットによって提供されるものと同じ機能の多くを提供します。これには、メモリ内の永続性、変更の追跡、データバインディング、オブジェクトの XML データとしてのシリアル化などが含まれます。 詳細については、「[オブジェクトの操作](working-with-objects.md)」を参照してください。  
   
-  アプリケーションで[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]必要なデータセットの機能がによって提供されていない場合でも、LINQ to DataSet を使用して LINQ クエリの利点を活用できます。 詳細については、「[LINQ to DataSet](../../../../../docs/framework/data/adonet/linq-to-dataset.md)」を参照してください。  
+  アプリケーションで[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]必要なデータセットの機能がによって提供されていない場合でも、LINQ to DataSet を使用して LINQ クエリの利点を活用できます。 詳細については、「[LINQ to DataSet](../linq-to-dataset.md)」を参照してください。  
   
 ## <a name="considerations-for-applications-that-bind-data-to-controls"></a>データをコントロールにバインドするアプリケーションの注意点  
  .NET Framework を使用すると、データセットや ASP.NET データソースコントロールなどのデータソースにデータをカプセル化し、それらのデータコントロールにユーザーインターフェイス要素をバインドできます。 以下は、コントロールを Entity Framework データにバインドする場合の注意点です。  
@@ -92,7 +92,7 @@ ADO.NET Entity Framework には、既存のアプリケーションにいくつ�
   
 - XML データを使用するアプリケーション  
 
-  オブジェクトのシリアル化では、作成することができます[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]データ サービス。 XML データを使用するアプリケーション (AJAX ベースのインターネット アプリケーションなど) にデータを提供する  データ サービスを作成できます。 このような場合は [!INCLUDE[ssAstoria](../../../../../includes/ssastoria-md.md)] の使用を検討してください。 これらのデータサービスは、Entity Data Model に基づいており、GET、PUT、POST などの標準の表現形式 (REST) HTTP アクションを使用して、エンティティデータへの動的アクセスを提供します。 詳細については、「[WCF Data Services 4.5](../../../../../docs/framework/data/wcf/index.md)」を参照してください。  
+  オブジェクトのシリアル化では、作成することができます[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]データ サービス。 XML データを使用するアプリケーション (AJAX ベースのインターネット アプリケーションなど) にデータを提供する  データ サービスを作成できます。 このような場合は [!INCLUDE[ssAstoria](../../../../../includes/ssastoria-md.md)] の使用を検討してください。 これらのデータサービスは、Entity Data Model に基づいており、GET、PUT、POST などの標準の表現形式 (REST) HTTP アクションを使用して、エンティティデータへの動的アクセスを提供します。 詳細については、「[WCF Data Services 4.5](../../wcf/index.md)」を参照してください。  
   
   [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] はネイティブ XML データ型をサポートしていません。 そのため、XML 列を持つテーブルにエンティティをマップすると、その XML 列に対応するエンティティ プロパティは文字列になります。 このような場合は、オブジェクトを切断して XML としてシリアル化することができます。 詳細については、「[オブジェクトのシリアル](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100))化」を参照してください。  
   
@@ -104,5 +104,5 @@ ADO.NET Entity Framework には、既存のアプリケーションにいくつ�
   
 ## <a name="see-also"></a>関連項目
 
-- [配置に関する注意事項](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
-- [Entity Framework の用語](../../../../../docs/framework/data/adonet/ef/terminology.md)
+- [配置に関する注意事項](deployment-considerations.md)
+- [Entity Framework の用語](terminology.md)

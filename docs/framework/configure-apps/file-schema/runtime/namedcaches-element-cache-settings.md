@@ -6,20 +6,20 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - <namedCaches> element
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
-ms.openlocfilehash: 9cedd462aa539745ddab844dff158912914cb024
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 4587234ad91fa3b1abbb376bd7ae517d5abea6c3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663576"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252459"
 ---
 # <a name="namedcaches-element-cache-settings"></a>\<namedCaches > 要素 (キャッシュ設定)
 名前付き<xref:System.Runtime.Caching.MemoryCache>インスタンスの構成設定のコレクションを指定します。 プロパティ<xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A>は、構成ファイルの1つ`namedCaches`以上の要素から構成設定のコレクションを参照します。  
   
- \<configuration>  
-\<> のキャッシュ  
-\<memoryCache>  
-\<namedCaches>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> のキャッシュ**](system-runtime-caching-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<memoryCache >** ](memorycache-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<namedCaches >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -56,7 +56,9 @@ ms.locfileid: "69663576"
   
 |要素|説明|  
 |-------------|-----------------|  
+|[\<configuration>](../configuration-element.md)|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素を指定します。|  
 |[\<memoryCache>](memorycache-element-cache-settings.md)|<xref:System.Runtime.Caching.MemoryCache> クラスに基づくキャッシュを構成するために使用される要素を定義します。|  
+|[\<system.runtime.caching>](system-runtime-caching-element-cache-settings.md)|.NET Framework に組み込まれているアプリケーションに出力キャッシュを実装できる型が含まれています。|  
   
 ## <a name="remarks"></a>Remarks  
  Web.config ファイルのメモリキャッシュ構成セクションに`add`は、 `namedCaches`コレクションの、 `remove`、 `clear`の各属性を含めることができます。 各`namedCaches`エントリは、 `name`属性によって一意に識別されます。  

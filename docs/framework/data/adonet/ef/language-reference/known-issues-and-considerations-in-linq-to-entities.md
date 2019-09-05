@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: 66af3395d7ba7271323ad6461e8e1fb8c823a1c6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7be3491af48ad29cd7892dd31a077aa7ac44ca63
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913902"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250499"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities の既知の問題および注意点
 ここでは、LINQ to Entities クエリに関する既知の問題について説明します。  
@@ -81,4 +81,4 @@ ms.locfileid: "69913902"
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+- [LINQ to Entities](linq-to-entities.md)

@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: ae8d5a7e-e7f7-47f7-98d9-455cc243a322
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b535ba67ab05dabd7e0a23e79692bbf69e25b55
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 7ffb297cc38f20917e720b216607e9ccfc966866
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663922"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252840"
 ---
 # <a name="appdomainmanagertype-element"></a>\<appDomainManagerType > 要素
 既定のアプリケーション ドメインのアプリケーション ドメイン マネージャーの役割を果たす種類を指定します。  
   
- \<configuration>  
-\<ランタイム >  
-\<appDomainManagerType >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<ランタイム >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<appDomainManagerType>**  
   
 ## <a name="syntax"></a>構文  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 2104cb4e853888efffe6b289ac1400530be25473
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 5113de6d8d333983e6e26579ff9803a9f5a62816
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015609"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254174"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType レジストリの設定
 このトピックでは、WPF アプリケーションで使用される Microsoft ClearType レジストリ設定の概要について説明します。  
@@ -19,7 +19,7 @@ ms.locfileid: "70015609"
 ## <a name="technology-overview"></a>テクノロジの概要  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ディスプレイデバイスにテキストを表示するアプリケーションでは、ClearType 機能を使用して読みやすさを向上させます。 ClearType は、Microsoft によって開発されたソフトウェアテクノロジで、ラップトップの画面、Pocket PC の画面、フラットパネルモニターなど、既存の Lcd (液晶ディスプレイ) でのテキストの読みやすさを向上させます。 ClearType は、LCD 画面のすべてのピクセルで個々の垂直色のストライプ要素にアクセスすることによって機能します。 ClearType の詳細については、「 [cleartype の概要](cleartype-overview.md)」を参照してください。  
   
- ClearType を使用してレンダリングされたテキストは、さまざまなディスプレイデバイスで表示すると、大きく異なる場合があります。 たとえば、少数のモニターでは、より一般的な赤、緑、青 ( [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) の順序ではなく、青、緑、赤の順序でカラーストライプ要素が実装されます。  
+ ClearType を使用してレンダリングされたテキストは、さまざまなディスプレイデバイスで表示すると、大きく異なる場合があります。 たとえば、少数のモニターでは、より一般的な赤、緑、青 (RGB) の順序ではなく、青、緑、赤の順序でカラーストライプ要素が実装されます。  
   
  ClearType を使用して表示されるテキストは、さまざまな色の区別レベルを持つ個人によって表示される場合に、大幅に異なる表示になることもあります。 他の人よりも色のわずかな違いを見分ける能力に長けている人もいます。  
   
