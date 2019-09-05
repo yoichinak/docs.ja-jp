@@ -1,74 +1,49 @@
-- name: ML.NET ガイド
+- name: ML.NET
   href: index.yml
 - name: 概要
   expanded: true
   items:
-    - name: ML.NET の概要とそのしくみ
-      href: how-does-mldotnet-work.md
+    - name: API
+      items:
+        - name: ML.NET API
+          href: how-does-mldotnet-work.md
+    - name: ツール
+      items:
+        - name: ML.NET モデル ビルダー ツール
+          href: automate-training-with-model-builder.md
+        - name: ML.NET コマンド ライン インターフェイス
+          href: automate-training-with-cli.md
 - name: チュートリアル
   items:
-    - name: 概要
-      href: tutorials/index.md
-    - name: センチメントの分析 (二項分類)
-      href: tutorials/sentiment-analysis.md
-    - name: サポートの問題の分類 (多クラス分類)
-      href: tutorials/github-issue-classification.md
-    - name: 価格の予測 (回帰)
-      href: tutorials/predict-prices.md
-    - name: あやめ花の分類 (K-means クラスタ リング)
-      href: tutorials/iris-clustering.md
-    - name: 映画をお勧めする (マトリックス因子分解)
-      href: tutorials/movie-recommendation.md
-    - name: 画像の分類 (転移学習)
-      href: tutorials/image-classification.md
-    - name: 製品売上分析 (異常検出)
-      href: tutorials/sales-anomaly-detection.md
-    - name: 画像内のオブジェクトを検出 (オブジェクト検出)
-      href: tutorials/object-detection-onnx.md
-- name: 使い方ガイド
-  items:
-    - name: データの読み込み
-      href: how-to-guides/load-data-ml-net.md
-    - name: データの準備
-      href: how-to-guides/prepare-data-ml-net.md
-    - name: トレーニング、評価、およびモデルの説明
+    - name: API
       items:
-        - name: モデルをトレーニングして評価する
-          href: how-to-guides/train-machine-learning-model-ml-net.md
-        - name: クロス検証を使ってモデルをトレーニングする
-          href: how-to-guides/train-machine-learning-model-cross-validation-ml-net.md
-        - name: パイプラインの中間データ値を検査する
-          href: how-to-guides/inspect-intermediate-data-ml-net.md
-        - name: PFI を使ってモデルの特徴の重要度を判断する
-          href: how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md
-    - name: トレーニング済みモデルの使用
+        - name: 概要
+          href: tutorials/index.md
+        - name: センチメントの分析 (二項分類)
+          href: tutorials/sentiment-analysis.md
+        - name: サポートの問題の分類 (多クラス分類)
+          href: tutorials/github-issue-classification.md
+        - name: 価格の予測 (回帰)
+          href: tutorials/predict-prices.md
+        - name: あやめ花の分類 (K-means クラスタ リング)
+          href: tutorials/iris-clustering.md
+        - name: 映画をお勧めする (マトリックス因子分解)
+          href: tutorials/movie-recommendation.md
+        - name: 画像の分類 (転移学習)
+          href: tutorials/image-classification.md
+        - name: 製品売上分析 (異常検出)
+          href: tutorials/sales-anomaly-detection.md
+        - name: 画像内のオブジェクトを検出 (オブジェクト検出)
+          href: tutorials/object-detection-onnx.md
+    - name: ツール
       items:
-        - name: モデルを保存して読み込む
-          href: how-to-guides/save-load-machine-learning-models-ml-net.md
-        - name: モデルを使用して予測を行う
-          href: how-to-guides/machine-learning-model-predictions-ml-net.md
-        - name: モデルを再トレーニングする
-          href: how-to-guides/retrain-model-ml-net.md
-        - name: Azure Functions にモデルをデプロイする
-          href: how-to-guides/serve-model-serverless-azure-functions-ml-net.md
-        - name: Web API にモデルをデプロイする
-          href: how-to-guides/serve-model-web-api-ml-net.md
-    - name: Infer.NET
-      items:
-        - name: Infer.NET を使用した確率的プログラミング
-          href: how-to-guides/matchup-app-infer-net.md
-- name: 関連項目
+        - name: モデル ビルダーを使った価格の予測
+          href: tutorials/predict-prices-with-model-builder.md
+        - name: ML.NET CLI を使用してセンチメントを分析する
+          href: tutorials/mlnet-cli.md
+- name: 概念
   items:
-    - name: API リファレンス
-      href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet'
-    - name: API リファレンスのプレビュー
-      href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet-preview'
-- name: リソース
-  href: resources/index.md
-  items:
-    - name: 用語集
-      href: resources/glossary.md
-    - name: タスク
+    - name: ML.NET タスク (モデル型)
       href: resources/tasks.md
     - name: アルゴリズム
       href: how-to-choose-an-ml-net-algorithm.md
@@ -76,35 +51,67 @@
       href: resources/transforms.md
     - name: メトリック
       href: resources/metrics.md
-    - name: モデルの精度を改善する
+    - name: モデルの正確度を改善する
       href: resources/improve-machine-learning-model-ml-net.md
-- name: 自動化された ML プレビュー
+- name: 使い方ガイド
   items:
-    - name: 概要
-      href: automl-overview.md
-    - name: モデル ビルダー
+    - name: API
       items:
-        - name: モデル ビルダーとは
-          href: automate-training-with-model-builder.md
+        - name: データの読み込み
+          href: how-to-guides/load-data-ml-net.md
+        - name: データの準備
+          href: how-to-guides/prepare-data-ml-net.md
+        - name: トレーニング、評価、およびモデルの説明
+          items:
+            - name: モデルをトレーニングして評価する
+              href: how-to-guides/train-machine-learning-model-ml-net.md
+            - name: クロス検証を使ってモデルをトレーニングする
+              href: how-to-guides/train-machine-learning-model-cross-validation-ml-net.md
+            - name: パイプラインの中間データ値を検査する
+              href: how-to-guides/inspect-intermediate-data-ml-net.md
+            - name: PFI を使ってモデルの特徴の重要度を判断する
+              href: how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md
+        - name: トレーニング済みモデルの使用
+          items:
+            - name: モデルを保存して読み込む
+              href: how-to-guides/save-load-machine-learning-models-ml-net.md
+            - name: モデルを使用して予測を行う
+              href: how-to-guides/machine-learning-model-predictions-ml-net.md
+            - name: モデルを再トレーニングする
+              href: how-to-guides/retrain-model-ml-net.md
+            - name: Azure Functions にモデルをデプロイする
+              href: how-to-guides/serve-model-serverless-azure-functions-ml-net.md
+            - name: Web API にモデルをデプロイする
+              href: how-to-guides/serve-model-web-api-ml-net.md
+    - name: ツール
+      items:
         - name: モデル ビルダーのインストール
           href: how-to-guides/install-model-builder.md
-        - name: モデル ビルダーを使った価格の予測
-          href: tutorials/predict-prices-with-model-builder.md
-    - name: ML.NET CLI
-      items:
         - name: CLI をインストールする
           href: how-to-guides/install-ml-net-cli.md
-        - name: 自動化された機械学習
-          href: automate-training-with-cli.md
-        - name: 二項分類器を自動生成する
-          href: tutorials/mlnet-cli.md
-        - name: CLI リファレンス
-          href: reference/ml-net-cli-reference.md
-        - name: CLI テレメトリ
-          href: resources/ml-net-cli-telemetry.md
-    - name: 自動化された ML API
-      items:
         - name: 自動化された ML API を使用する
           href: how-to-guides/how-to-use-the-automl-api.md
-        - name: API リファレンス
+    - name: Infer.NET
+      items:
+        - name: Infer.NET を使用した確率的プログラミング
+          href: how-to-guides/matchup-app-infer-net.md
+- name: 関連項目
+  items:
+    - name: API
+      items:
+        - name: ML.NET API リファレンス
+          href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet'
+        - name: ML.NET API プレビュー API リファレンス
+          href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet-preview'
+    - name: ツール
+      items:
+        - name: CLI リファレンス
+          href: reference/ml-net-cli-reference.md
+        - name: ML.NET AutoML API リファレンス
           href: 'https://docs.microsoft.com/dotnet/api/index?view=automl-dotnet'
+- name: リソース
+  items:
+    - name: 用語集
+      href: resources/glossary.md
+    - name: CLI テレメトリ
+      href: resources/ml-net-cli-telemetry.md

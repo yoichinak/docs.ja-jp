@@ -11,12 +11,12 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: 9d5b5b8a479efd3918dc23616aa331cc07a901ac
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 4919424339df1f8d2c68465bd9f9af42f344fe37
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972211"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254067"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>チュートリアル: 初めての WPF デスクトップ アプリケーション
 
@@ -43,7 +43,7 @@ ms.locfileid: "68972211"
 >
 > この記事の右上隅にあるC# **\<ドロップダウンを使用/>** して、と Visual Basic の間でサンプルコードのコード言語を切り替えることができます。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 - Visual Studio 2017 以降 (この記事では Visual Studio 2019 を使用します)
 
@@ -55,17 +55,17 @@ ms.locfileid: "68972211"
 
 1. Visual Basic または Visual C# のという名前で新しい WPF アプリケーション プロジェクトを作成する **`ExpenseIt`** :
 
-   1. Visual Studio を開き、[**作業の開始**] メニューの [**新しいプロジェクトの作成**] を選択します。
+   1. Visual Studio を開き、 **[作業の開始]** メニューの **[新しいプロジェクトの作成]** を選択します。
 
-      [**新しいプロジェクトの作成**] ダイアログボックスが表示されます。
+      **[新しいプロジェクトの作成]** ダイアログボックスが表示されます。
 
-   2. [**言語**] ドロップダウンで、 **C#** [] または [ **Visual Basic**] を選択します。
+   2. **言語** ドロップダウンで、 **C#**  または  **Visual Basic** を選択します。
       
-   3. [ **WPF アプリ (.NET Framework)** ] テンプレートを選択し、[**次へ**] を選択します。 
+   3. **[WPF アプリ (.NET Framework)]** テンプレートを選択し、 **[次へ]** を選択します。 
      
       ![[新しいプロジェクトの作成] ダイアログ](./media/walkthrough-my-first-wpf-desktop-application/create-new-project-dialog.png)
     
-      [**新しいプロジェクトの構成**] ダイアログボックスが開きます。
+      **[新しいプロジェクトの構成]** ダイアログボックスが開きます。
 
    4. プロジェクト名を入力 **`ExpenseIt`** 選び **作成** です。
 
@@ -135,7 +135,7 @@ ms.locfileid: "68972211"
 
    1. **ソリューション エクスプ ローラー**を右クリックし、 **`ExpenseIt`** プロジェクト ノード**追加** > **ページ**します。
 
-   1. [**新しい項目の追加**] ダイアログでは、[**ページ (WPF)** ] テンプレートは既に選択されています。 名前を入力します **`ExpenseItHome`** 、し、**追加**します。
+   1. **[新しい項目の追加]** ダイアログでは、 **[ページ (WPF)]** テンプレートは既に選択されています。 名前を入力します **`ExpenseItHome`** 、し、**追加**します。
 
     このページは、アプリケーションの起動時に表示される最初のページです。 このレポートには、の経費明細書を表示するために選択する相手の一覧が表示されます。
 
@@ -143,7 +143,7 @@ ms.locfileid: "68972211"
 
 1. <xref:System.Windows.Controls.Page.Title%2A>を"`ExpenseIt - Home`" に設定します。
 
-1. 要素と`DesignHeight` `DesignWidth`要素の値を300ピクセルに設定します。
+1. を350ピクセル`DesignWidth`に、を500ピクセルに設定します。 `DesignHeight`
 
     XAML は、Visual Basic に対して次のように表示されるようになりました。
 
@@ -168,15 +168,15 @@ ms.locfileid: "68972211"
     [!code-xaml[ExpenseIt#7](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/MainWindow.xaml#7)]
 
    > [!TIP]
-   > また、[**プロパティ**] ウィンドウの [**その他**] カテゴリで、[**ソース**] プロパティを設定することもできます。
+   > また、 **[プロパティ]** ウィンドウの **[その他]** カテゴリで、 **[ソース]** プロパティを設定することもできます。
    >
    > ![プロパティウィンドウのソースプロパティ](./media/properties-source.png)
 
-1. 別の新しい WPF ページをプロジェクトに追加し、次のように名前を指定します。
+1. 別の新しい WPF ページをプロジェクトに追加し、次*のように*名前を指定します。
 
    1. **ソリューション エクスプ ローラー**を右クリックし、 **`ExpenseIt`** プロジェクト ノード**追加** > **ページ**します。
 
-   1. [**新しい項目の追加**] ダイアログで、[**ページ (WPF)** ] テンプレートを選択します。 [名前の指定] をクリックし、[**追加**] を選択します。
+   1. **[新しい項目の追加]** ダイアログで、 **[ページ (WPF)]** テンプレートを選択します。 [名前の指定] をクリック**し、[** **追加**] を選択します。
 
     このページで選択されているユーザーの経費報告書が表示されます、 **`ExpenseItHome`** ページ。
 
@@ -184,7 +184,7 @@ ms.locfileid: "68972211"
 
 1. <xref:System.Windows.Controls.Page.Title%2A>を"`ExpenseIt - View Expense`" に設定します。
 
-1. 要素と`DesignHeight` `DesignWidth`要素の値を300ピクセルに設定します。
+1. を350ピクセル`DesignWidth`に、を500ピクセルに設定します。 `DesignHeight` 
 
     Visual Basic では、この*xaml*は次のようになります。
 
@@ -194,7 +194,7 @@ ms.locfileid: "68972211"
 
     [!code-xaml[ExpenseIt#4](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/ExpenseReportPage.xaml#4)]
 
-1. *Expenseithome.xaml*を開き、 *ExpenseItHome.xaml.cs* 、または ExpenseReportPage.xaml.cs、またはを開きます。
+1. *Expenseithome.xaml*を開き、 *ExpenseItHome.xaml.cs* 、または ExpenseReportPage.xaml.cs *、また*はを開きます。
 
     新しいページファイルを作成すると、Visual Studio によってその*分離コード*ファイルが自動的に作成されます。 これらの分離コード ファイルでは、ユーザー入力に対応するためのロジックを処理します。
 
@@ -214,11 +214,11 @@ ms.locfileid: "68972211"
 
     1. プロジェクトノードを右クリックし、[**既存項目**の**追加** > ] を選択するか、 **Shift**+**Alt**+**A**キーを押します。
 
-    2. [**既存項目の追加**] ダイアログボックスで、[すべての**ファイル**] または [**イメージファイル**] のいずれかにファイルフィルターを設定し、使用するイメージファイルを参照して [**追加**] を選択します。
+    2. **[既存項目の追加]** ダイアログボックスで、すべての **[ファイル]** または **[イメージファイル]** のいずれかにファイルフィルターを設定し、使用するイメージファイルを参照して **[追加]** を選択します。
 
 ## <a name="build-and-run-the-application"></a>アプリケーションのビルドと実行
 
-1. アプリケーションをビルドして実行するには、 **F5**キーを押すか、[**デバッグ**] メニューの [**デバッグの開始**] をクリックします。
+1. アプリケーションをビルドして実行するには、 **F5**キーを押すか、 **[デバッグ]** メニューの **[デバッグの開始]** をクリックします。
 
     次の図は、 <xref:System.Windows.Navigation.NavigationWindow>ボタンを使用したアプリケーションを示しています。
 
@@ -251,7 +251,7 @@ ms.locfileid: "68972211"
    ```
 
    > [!TIP]
-   > また、[**プロパティ**] ウィンドウの [**レイアウト**] カテゴリで、**余白**の値を設定することもできます。
+   > また、 **[プロパティ]** ウィンドウの **[レイアウト]** カテゴリで、**余白**の値を設定することもできます。
    >
    > ![プロパティウィンドウの余白の値](./media/properties-margin.png)
 
@@ -282,7 +282,7 @@ ms.locfileid: "68972211"
    [!code-xaml[ExpenseIt#10](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt4/ExpenseItHome.xaml#10)]
 
    > [!TIP]
-   > コントロールは、[**ツールボックス**] ウィンドウからデザインウィンドウにドラッグして、[**プロパティ**] ウィンドウでプロパティを設定することによって作成することもできます。
+   > コントロールは、 **[ツールボックス]** ウィンドウからデザインウィンドウにドラッグして、 **[プロパティ]** ウィンドウでプロパティを設定することによって作成することもできます。
 
 2. アプリケーションをビルドして実行します。
 
@@ -351,7 +351,7 @@ ms.locfileid: "68972211"
 
 3. アプリケーションをビルドして実行します。
 
-4. [**表示**] ボタンを選択します。
+4. **[表示]** ボタンを選択します。
 
     経費明細書ページが表示されます。 また、[戻る] ナビゲーションボタンが有効になっていることにも注意してください。
 
@@ -363,7 +363,7 @@ ms.locfileid: "68972211"
 
 多くの場合、UI で同じ種類のすべての要素に対して、さまざまな要素の外観が同じになります。 UI では、[スタイル](../controls/styling-and-templating.md)を使用して、複数の要素間で外観を再利用できるようにします。 スタイルの再利用性により、XAML の作成と管理が簡単になります。 このセクションでは、これまでの手順で定義した要素ごとの属性を、スタイルに置き換えます。
 
-1. *アプリケーション .xaml*または app.xamlを開きます。
+1. *アプリケーション .xaml* *または app.xaml を*開きます。
 
 2. タグの<xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType>間に次の XAML を追加します。
 
@@ -465,7 +465,7 @@ ms.locfileid: "68972211"
 
 5. アプリケーションをビルドして実行します。
 
-6. ユーザーを選択し、[**表示**] ボタンを選択します。
+6. ユーザーを選択し、 **[表示]** ボタンを選択します。
 
 次の図は、適用され`ExpenseIt`たコントロール、レイアウト、スタイル、データバインディング、およびデータテンプレートを使用したアプリケーションの両方のページを示しています。
 
