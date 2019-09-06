@@ -21,8 +21,8 @@ ms.locfileid: "70252861"
 偽装の実行方法に関係なく、Windows ID が常に非同期ポイント間でフローすることを指定します。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<ランタイム >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<alwaysFlowImpersonationPolicy >** \  
+&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<alwaysFlowImpersonationPolicy>** \  
   
 ## <a name="syntax"></a>構文  
   
@@ -112,4 +112,4 @@ ms.locfileid: "70252861"
 
 - [ランタイム設定スキーマ](index.md)
 - [構成ファイル スキーマ](../index.md)
-- [\<legacyImpersonationPolicy > 要素](legacyimpersonationpolicy-element.md)
+- [\<legacyImpersonationPolicy> 要素](legacyimpersonationpolicy-element.md)
