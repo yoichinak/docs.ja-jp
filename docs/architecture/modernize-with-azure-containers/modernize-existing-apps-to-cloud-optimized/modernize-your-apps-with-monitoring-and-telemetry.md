@@ -2,12 +2,12 @@
 title: 監視と製品利用統計情報でアプリを最新化する
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを最新化する |監視とテレメトリを使用してアプリを最新化する
 ms.date: 04/30/2018
-ms.openlocfilehash: 5bffb336234f63dca150acc9ef31f9efa2e3937b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 65c464e27e326f6a60b4879ec787253dea019d92
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578175"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373952"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>監視と製品利用統計情報でアプリを最新化する
 
@@ -21,7 +21,7 @@ Application Insights は、複数のプラットフォームで作業する web 
 
 ![Application Insights 監視ダッシュボード](./media/image10.png)
 
-> **図 4-10.** Application Insights 監視ダッシュボード
+**図 4-10.** Application Insights 監視ダッシュボード
 
 ## <a name="monitor-your-docker-infrastructure-with-log-analytics-and-its-container-monitoring-solution"></a>Log Analytics とそのコンテナー監視ソリューションを使用して Docker インフラストラクチャを監視する
 
@@ -45,7 +45,7 @@ Log Analytics の[コンテナー監視ソリューション](https://docs.micro
 
 ![Log Analytics コンテナー監視ソリューション](./media/image11.png)
 
-> **図 4-11.** Log Analytics コンテナー監視ソリューション
+**図 4-11.** Log Analytics コンテナー監視ソリューション
 
 Log Analytics Container Monitoring ソリューションを使用して、次のことを行うことができます。
 

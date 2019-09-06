@@ -2,12 +2,12 @@
 title: ハイブリッド クラウド シナリオへの移行
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを最新化する |ハイブリッドクラウドシナリオへの移行
 ms.date: 04/30/2018
-ms.openlocfilehash: 04c618681c61f5584e641e0a4735e1261ab34fa3
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 313608c41427b3833bbc873398595ceb37bd7c7d
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578215"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373941"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>ハイブリッド クラウド シナリオへの移行
 
@@ -27,7 +27,7 @@ Azure Stack は、組織のデータセンターから Azure サービスを提�
 
 ![Azure Stack と Azure を使用した Microsoft ハイブリッドクラウドプラットフォーム](./media/image13.jpg)
 
-> **図 4-13.** Azure Stack と Azure を使用した Microsoft ハイブリッドクラウドプラットフォーム
+**図 4-13.** Azure Stack と Azure を使用した Microsoft ハイブリッドクラウドプラットフォーム
 
 Azure Stack は、ニーズに合わせて2つのデプロイオプションで提供されます。
 

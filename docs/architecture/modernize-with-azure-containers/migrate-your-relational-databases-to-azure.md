@@ -2,12 +2,12 @@
 title: リレーショナルデータベースを azure に移行する
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを最新化する |リレーショナルデータベースを azure に移行する
 ms.date: 04/28/2018
-ms.openlocfilehash: 982050d99aaa66cde1168a2f2fa64ed5f3e9163b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: b2153e65a12706b97fae11c5f23846c83bcd6642
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660727"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374096"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>リレーショナルデータベースを azure に移行する
 
@@ -17,7 +17,7 @@ Azure では、データベースサーバーを IaaS Vm (純粋なリフトア�
 
 ![Azure でのデータベース移行パス](./media/image3-1.png)
 
-> **図 3-1.** Azure でのデータベース移行パス
+**図 3-1.** Azure でのデータベース移行パス
 
 ## <a name="when-to-migrate-to-azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance に移行する場合
 

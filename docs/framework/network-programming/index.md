@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-ms.openlocfilehash: 74084b8eef46f700733ad44e04cf8b3811456b85
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 245c843d13e70a807807f4e462dd1a5357c25665
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642413"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398531"
 ---
 # <a name="network-programming-in-the-net-framework"></a>.NET Framework のネットワーク プログラミング
 Microsoft .NET Framework は、アプリケーションにすばやく簡単に統合できる、複数層の拡張可能なインターネット サービスのマネージド実装を提供します。 ネットワーク アプリケーションは、プラグ可能なプロトコルを基に自動的に新しいインターネット プロトコルを使用するように作成することも、ソケット レベルでネットワークを使用できるように Windows ソケット インターフェイスのマネージド実装を使用することもできます。  
@@ -139,5 +139,4 @@ Microsoft .NET Framework は、アプリケーションにすばやく簡単に�
 - [.NET Framework でのトランスポート層セキュリティ (TLS) のベスト プラクティス](../../../docs/framework/network-programming/tls.md)
 - [ネットワーク プログラミング方法のトピック](../../../docs/framework/network-programming/network-programming-how-to-topics.md)
 - [ネットワーク プログラミングのサンプル](../../../docs/framework/network-programming/network-programming-samples.md)
-- [MSDN Code Gallery 上の .NET 用のネットワークのサンプル](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
-- [HttpClient のサンプル](https://go.microsoft.com/fwlink/?LinkId=242550)
+- [HttpClient のサンプル](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)

@@ -2,12 +2,12 @@
 title: 既存の .NET アプリをクラウド向けに最適化されたアプリケーションに最新化する理由
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを最新化する |既存の .NET アプリをクラウド向けに最適化されたアプリケーションに最新化する理由
 ms.date: 04/28/2018
-ms.openlocfilehash: 5aa9828f65f76138461c18711fe03bdbe6a70ffd
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: aabce73efaae520a3b59c70d53519b847f2c6a94
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578125"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373929"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>既存の .NET アプリをクラウド向けに最適化されたアプリケーションに最新化する理由
 
@@ -41,9 +41,9 @@ ms.locfileid: "69578125"
 
 図4-2 は、クラウド向けに最適化されたアプリケーションの主なオプションの柱を示しています。 実装する柱が多いほど、アプリケーションの readier は顧客の期待を満たすことができます。
 
-> ![クラウド向けに最適化されたアプリケーションの主な柱](./media/image2.png)
->
-> **図 4-2** クラウド向けに最適化されたアプリケーションの主な柱
+![クラウド向けに最適化されたアプリケーションの主な柱](./media/image2.png)
+
+**図 4-2** クラウド向けに最適化されたアプリケーションの主な柱
 
 まとめると、クラウド向けに最適化されたアプリケーションは、クラウドコンピューティングモデルを活用するアプリケーションを構築および管理するためのアプローチです。コンテナー、管理されたクラウドインフラストラクチャ、回復力のあるアプリケーション手法を組み合わせて使用します。監視、継続的デリバリー、DevOps により、既存のアプリケーションを再構築して再作成する必要がありません。
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c15b2c27e51557494f10c2445d75a4bd56c47f91
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: bbf7c1203a1f6089eefce3ed2876c9ade91cc697
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987249"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374447"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework の新機能
 
@@ -174,7 +174,7 @@ ms.locfileid: "69987249"
 
 **高 DPI の機能強化**
 
-.NET Framework 4.8 では、WPF でモニターごとの V2 DPI の認識および混合モードの DPI スケーリングのサポートが追加されています。 高 DPI の開発に関する追加情報については、「[High DPI Desktop Application Development on Windows (Windows での高 DPI デスクトップ アプリケーション開発)](/desktop/hidpi/high-dpi-desktop-application-development-on-windows)」をご覧ください。
+.NET Framework 4.8 では、WPF でモニターごとの V2 DPI の認識および混合モードの DPI スケーリングのサポートが追加されています。 高 DPI の開発に関する追加情報については、「[High DPI Desktop Application Development on Windows (Windows での高 DPI デスクトップ アプリケーション開発)](/windows/win32/hidpi/high-dpi-desktop-application-development-on-windows)」をご覧ください。
 
 .NET framework 4.8 では、混合モードの DPI スケーリングをサポートするプラットフォーム上の高 DPI WPF アプリケーションでのホステッド HWND と Windows フォームの相互運用のためのサポートが向上しています (Windows 10 April 2018 Update 以降)。 [SetThreadDpiHostingBehavior](/windows/desktop/api/winuser/nf-winuser-setthreaddpihostingbehavior) および [SetThreadDpiAwarenessContext](/windows/desktop/api/winuser/nf-winuser-setthreaddpiawarenesscontext) を呼び出すことによって、ホステッド HWND または Windows フォームのコントロールを混合モードの DPI スケーリングされたウィンドウとして作成すると、それらはモニターごとの V2 WPF アプリケーション内でホストでき、適切にサイズ設定およびスケーリングされます。 そのようなホステッド コンテンツは、ネイティブ DPI ではレンダリングされず、代わりにオペレーティング システムによって適切なサイズにスケーリングされます。 モニターごとの v2 DPI 認識モードのサポートにより、高 DPI アプリケーションのネイティブ ウィンドウで WPF コントロールをホストする (つまり、子にする) こともできます。
 
