@@ -2,12 +2,12 @@
 title: 既存の .NET アプリをクラウド最適化アプリケーションに最新化する
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを最新化する
 ms.date: 04/28/2018
-ms.openlocfilehash: 00385ac1e2f41d2005606fa7f943618ec253ffc2
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 92dc0cde11bb35797fe3c4e8442a2a6514a27e08
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/05/2019
-ms.locfileid: "70294959"
+ms.locfileid: "70374062"
 ---
 # <a name="modernize-existing-net-apps-to-cloud-optimized-applications"></a>既存の .NET アプリをクラウド最適化アプリケーションに最新化する
 
@@ -19,7 +19,7 @@ ms.locfileid: "70294959"
 
 ![クラウド最適化アプリケーションの配置](./media/image1.png)
 
-> **図 4-1** クラウド最適化アプリケーションの配置
+**図 4-1** クラウド最適化アプリケーションの配置
 
 >[!div class="step-by-step"]
 >[前へ](../migrate-your-relational-databases-to-azure.md)
