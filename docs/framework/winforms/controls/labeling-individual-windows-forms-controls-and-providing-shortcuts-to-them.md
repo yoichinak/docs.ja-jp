@@ -7,12 +7,12 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], controls
 - Windows Forms controls, labels
 ms.assetid: 6eaf868c-819f-4131-8f59-048e20c286f7
-ms.openlocfilehash: 892761ae52b8b3546c86a849d2d2eecc7442be53
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e06fe547e867ec368369fbe4f320be903ed11bc6
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666135"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373667"
 ---
 # <a name="label-individual-windows-forms-controls-and-provide-shortcuts"></a>個々の Windows フォームコントロールにラベルを付け、ショートカットを提供する
 
