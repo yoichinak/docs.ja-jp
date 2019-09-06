@@ -21,8 +21,8 @@ ms.locfileid: "70252871"
 <xref:System.AppContext> クラスで使用される、新機能に対するオプトアウト メカニズムを指定するスイッチを 1 つまたは複数定義します。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<ランタイム >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<AppContextSwitchOverrides >**  
+&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<AppContextSwitchOverrides>**  
   
 ## <a name="syntax"></a>構文  
   
