@@ -2,22 +2,23 @@
 title: <message> の <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 621abbde-590b-454d-90ac-68dc3c69c720
-ms.openlocfilehash: 30507e44997a2e0fcc43494332e87edb2cc37aa3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8cb8879d866eca3b1dafbd139de39373874dad14
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931456"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397801"
 ---
 # <a name="message-of-wshttpbinding"></a>\<wsHttpBinding の\<メッセージ > >
 [ \<WsHttpBinding >](wshttpbinding.md)のメッセージレベルのセキュリティの設定を定義します。  
   
- \<system.ServiceModel >  
-\<bindings>  
-\<wsHttpBinding>  
-\<binding>  
-\<セキュリティ >  
-\<message>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<バインド >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsHttpBinding >** ](wshttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<バインド >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<セキュリティ >** ](security-of-wshttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<メッセージ >**  
   
 ## <a name="syntax"></a>構文  
   

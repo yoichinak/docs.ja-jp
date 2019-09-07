@@ -2,22 +2,23 @@
 title: <message>の要素<wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
-ms.openlocfilehash: 4730d7e573eefdfcd5704621d0a7ccaa15f76d3a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e26e1f94fb38e0654fd0bc9f06c6096a488bccfe
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931578"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400277"
 ---
 # <a name="message-element-of-wsfederationhttpbinding"></a>\<wsFederationHttpBinding > の\<メッセージ > 要素
 [ \<WsFederationHttpBinding >](wsfederationhttpbinding.md)のメッセージレベルセキュリティの設定を定義します。  
   
- \<system.ServiceModel >  
-\<bindings>  
-\<wsFederatedBinding>  
-\<binding>  
-\<セキュリティ >  
-\<message>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<バインド >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsFederationHttpBinding >** ](wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<バインド >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<セキュリティ >** ](security-of-wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<メッセージ >**  
   
 ## <a name="syntax"></a>構文  
   

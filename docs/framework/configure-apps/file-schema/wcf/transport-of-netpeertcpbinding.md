@@ -2,22 +2,23 @@
 title: <transport> の <netPeerTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: c44d86d2-1160-44d7-9c7a-297b12eccc7f
-ms.openlocfilehash: 837d01540fa63579877ab4085bd8034c78f2fbe0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 08be5d752f8422ebe6442b295195f21b16a274c0
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915559"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399311"
 ---
 # <a name="transport-of-netpeertcpbinding"></a>\<netpeertcpbinding > の\<トランスポート >
 Netpeertcpbinding > を使用[ \<](netpeertcpbinding.md)する場合のトランスポートレベルのセキュリティ設定を指定します。  
   
- \<system.ServiceModel >  
-\<bindings>  
-\<netPeerTcpBinding>  
-\<binding>  
-\<セキュリティ >  
-\<transport>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<バインド >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netPeerTcpBinding >** ](netpeertcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<バインド >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<セキュリティ >** ](security-of-netpeerbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<トランスポート >**  
   
 ## <a name="syntax"></a>構文  
   

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 19f66872-d5ab-49f8-969f-e53f9632a13d
-ms.openlocfilehash: 5506c37ea4f313599f666014fd305a79f5cc7ffb
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: a78588cb4bd09f8a8a8ce8ed4a60dd45fce1d386
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250249"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397482"
 ---
 # <a name="method-based-query-syntax-examples-conversion"></a>メソッド ベースのクエリ構文例:変換
-このトピックの例では、メソッドベースの<xref:System.Linq.Enumerable.ToArray%2A>クエリ構文<xref:System.Linq.Enumerable.ToList%2A>を使用して、 <xref:System.Linq.Enumerable.ToDictionary%2A>メソッド、メソッド、およびメソッドを使用して、 [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples)に対してクエリを実行する方法を示します。 これらの例で使用されている、AdventureWorks Sales Model は、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルから作成されています。  
+このトピックの例では、メソッドベースの<xref:System.Linq.Enumerable.ToArray%2A>クエリ構文<xref:System.Linq.Enumerable.ToList%2A>を使用して、 <xref:System.Linq.Enumerable.ToDictionary%2A>メソッド、メソッド、およびメソッドを使用して、 [AdventureWorks Sales Model](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)に対してクエリを実行する方法を示します。 これらの例で使用されている、AdventureWorks Sales Model は、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルから作成されています。  
   
  このトピックの例では、次`using` / `Imports`のステートメントを使用します。  
   

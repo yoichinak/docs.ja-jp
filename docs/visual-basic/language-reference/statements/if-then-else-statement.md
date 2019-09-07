@@ -21,12 +21,12 @@ helpviewer_keywords:
 - If function [Visual Basic], and If...Then...Else statements
 - Else statement [Visual Basic]
 ms.assetid: 790068a2-1307-4e28-8a72-be5ebda099e9
-ms.openlocfilehash: e0b365afaa8cf7dff130cf01d2937be629e5f7a8
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: db81a1c41809b563d5f9d0777c3feb064c5e540b
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106523"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400709"
 ---
 # <a name="ifthenelse-statement-visual-basic"></a>If...Then...Else ステートメント (Visual Basic)
 
@@ -34,7 +34,7 @@ ms.locfileid: "70106523"
 
 ## <a name="syntax"></a>構文
 
-```
+```vb
 ' Multiline syntax:
 If condition [ Then ]
     [ statements ]
@@ -61,7 +61,7 @@ If condition Then [ statements ] [ Else [ elsestatements ] ]
 `condition` \
 必須。 条件. `True`は`Boolean`、、、またはに暗黙的に変換可能なデータ型に評価される必要があります。 `False`
 
-式が[Nothing](../../../visual-basic/language-reference/nothing.md)に評価さ`False`れる[null 許容](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean`変数である場合、条件は式がで、 `Else`ブロックが実行されるかのように処理されます。
+式が[Nothing](../../../visual-basic/language-reference/nothing.md)に`False`評価される[null 許容](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean`変数である場合、条件は式がで`ElseIf`あるかのように処理され、ブロックが存在する場合`Else`は評価され、ブロックは存在する場合は実行されます。
 
 `Then` \
 単一行の構文では必須です。複数行の構文では省略可能です。

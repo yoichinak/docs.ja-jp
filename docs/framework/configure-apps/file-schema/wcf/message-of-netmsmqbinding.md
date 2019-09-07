@@ -2,25 +2,24 @@
 title: <message> の <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 6ebf0240-d7be-4493-b0fe-f00fd5989d77
-ms.openlocfilehash: b163dcb08e9656e3bde9c7fbb71fa1c92c9957ca
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09d9d4a5d1967afaf9a6ed5756c309e78fee0923
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931517"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400256"
 ---
 # <a name="message-of-netmsmqbinding"></a>\<netmsmqbinding \<> のメッセージ >
 
 この `netMsmqBinding` バインディングでの SOAP メッセージ セキュリティ設定を定義します。
 
-```xml
-<system.ServiceModel>
-  <bindings>
-    <netMsmqBinding>
-      <binding>
-        <security>
-          <message>
-```
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<バインド >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netMsmqBinding >** ](netmsmqbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<バインド >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<セキュリティ >** ](security-of-netmsmqbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<メッセージ >**  
 
 ## <a name="syntax"></a>構文
 

@@ -2,21 +2,22 @@
 title: <security> の <netPeerBinding>
 ms.date: 03/30/2017
 ms.assetid: 1ef40d8c-f903-4426-9b08-da81462766d8
-ms.openlocfilehash: be5ebacec466caf8d8a77bf552f42da1861e77a1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 88aa2898472c20c9e52cfd5830c0e41e8ea9ba21
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936625"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399817"
 ---
 # <a name="security-of-netpeerbinding"></a>\<netpeerbinding \<> のセキュリティ >
 [ \<Netpeertcpbinding >](netpeertcpbinding.md)のセキュリティ設定を定義します。これには、使用する認証の種類や、メッセージトランスポートに使用するセキュリティなどが含まれます。  
   
- \<system.ServiceModel >  
-\<bindings>  
-\<netPeerBinding>  
-\<binding>  
-\<セキュリティ >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<バインド >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netPeerTcpBinding >** ](netpeertcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<バインド >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<セキュリティ >**  
   
 ## <a name="syntax"></a>構文  
   

@@ -2,21 +2,22 @@
 title: <security> の <msmqIntegrationBinding>
 ms.date: 03/30/2017
 ms.assetid: ae5c68a8-14a2-4c6e-b9e0-3e94e3e9135e
-ms.openlocfilehash: 5b74c95ef2933fcf7e8d49aed89d95acbd288b80
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e4f10ab994429c6cbb690caef38114b8340e6839
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936706"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399866"
 ---
 # <a name="security-of-msmqintegrationbinding"></a>\<msmqIntegrationBinding > の\<セキュリティ >
 メッセージ キュー (MSMQ) 統合チャネルのトランスポート セキュリティ設定を定義します。  
   
- \<system.ServiceModel >  
-\<bindings>  
-msmqIntegrationBinding  
-\<binding>  
-\<セキュリティ >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<バインド >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<msmqIntegrationBinding >** ](msmqintegrationbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<バインド >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<セキュリティ >**  
   
 ## <a name="syntax"></a>構文  
   

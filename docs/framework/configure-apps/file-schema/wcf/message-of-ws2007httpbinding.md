@@ -2,22 +2,23 @@
 title: <message> の <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9ffd8db6-84a8-4b38-a9fe-2cb1a87a1c97
-ms.openlocfilehash: 59449ec5f8f048e27313d088be0ca951915ef5e5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 987c51f65f5c36a70724fd62fecaf737943c2d9a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931505"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398034"
 ---
 # <a name="message-of-ws2007httpbinding"></a>\<ws2007HttpBinding > の\<メッセージ >
 Ws2007HttpBinding > 要素の[ \<](ws2007httpbinding.md)メッセージレベルのセキュリティの設定を定義します。  
   
- \<system.ServiceModel >  
-\<bindings>  
-\<ws2007HttpBinding >  
-\<binding>  
-\<セキュリティ >  
-\<message>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<バインド >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<ws2007HttpBinding >** ](ws2007httpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<バインド >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<セキュリティ >** ](security-of-ws2007httpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<メッセージ >**  
   
 ## <a name="syntax"></a>構文  
   

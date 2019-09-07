@@ -3,15 +3,18 @@ title: ワークフローの <system.serviceModel>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
-ms.openlocfilehash: faa8154c4d7ac5c6aa2f9f1707cf8f0d39eefad5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 757a7a132a6e765e257097d251a110297c6a40bf
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947360"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398600"
 ---
 # <a name="systemservicemodel-of-workflow"></a>\<ワークフローの System.servicemodel >
 この構成セクションには、すべてのワークフロー構成要素が含まれます。  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp; **\<system.ServiceModel >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -108,4 +111,4 @@ ms.locfileid: "69947360"
   
 |要素|説明|  
 |-------------|-----------------|  
-|\<configuration>|.NET 構成ファイルのすべての構成要素のルート要素。|
+|[\<configuration>](../configuration-element.md)|.NET 構成ファイルのすべての構成要素のルート要素。|

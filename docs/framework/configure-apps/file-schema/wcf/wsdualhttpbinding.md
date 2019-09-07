@@ -4,19 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - wsDualHttpBinding Element
 ms.assetid: fd8ac4e2-5641-473b-9115-73f14ab1c065
-ms.openlocfilehash: 8fd758258a34fd63882c3d06b49cbe53bd2d105d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ca841499f5a1584d5fd5c1bb763da4f3460c4f13
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915125"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399042"
 ---
 # <a name="wsdualhttpbinding"></a>\<wsDualHttpBinding >
 双方向サービス コントラクト、または SOAP 中継局を介しての通信に適した、セキュリティで保護されて信頼できる相互操作可能なバインディングを定義します。  
   
- \<system.ServiceModel >  
-\<bindings>  
-\<wsDualHttpBinding >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<バインド >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<wsDualHttpBinding >**  
   
 ## <a name="syntax"></a>構文  
   

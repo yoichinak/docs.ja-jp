@@ -2,21 +2,22 @@
 title: <security> の <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: fdda0ff7-b462-4e26-af52-e87ddab71945
-ms.openlocfilehash: a895df027bee7430e51e76c480136a49b6b2a0be
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ab5969da6a2d7cb59c057fd5bb909add6b6398a4
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936574"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399783"
 ---
 # <a name="security-of-ws2007httpbinding"></a>\<ws2007HttpBinding > の\<セキュリティ >
 Ws2007HttpBinding > 要素で[ \<](ws2007httpbinding.md)使用されるセキュリティ設定を表します。  
   
- \<system.serviceModel>  
-\<bindings>  
-\<ws2007HttpBinding >  
-\<binding>  
-\<セキュリティ >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<バインド >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<ws2007HttpBinding >** ](ws2007httpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<バインド >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<セキュリティ >**  
   
 ## <a name="syntax"></a>構文  
   

@@ -2,19 +2,20 @@
 title: <netTcpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d4715e1-5fff-4c3d-a226-18f21d0b30c4
-ms.openlocfilehash: 40bc674587523a4da1f0ac894702de61d96cfc7d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b7b1fa58d562b1b4c191a84a12cd264f5a93dd9f
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69932968"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400130"
 ---
 # <a name="nettcpcontextbinding"></a>\<netTcpContextBinding>
 保護レベルの署名を求める <xref:System.ServiceModel.NetTcpBinding> のコンテキストを指定します。 NetTcpContextBinding の contextExchangeMechanism は、SOAPHeader です。  
   
- \<system.ServiceModel >  
-\<bindings>  
-\<netTcpContextBinding>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<バインド >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<netTcpContextBinding >**  
   
 ## <a name="syntax"></a>構文  
   

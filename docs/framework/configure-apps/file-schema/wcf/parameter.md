@@ -2,22 +2,23 @@
 title: <parameter>
 ms.date: 03/30/2017
 ms.assetid: 0fb41e2d-64f7-44ab-993e-05892eac6d82
-ms.openlocfilehash: c3f2179835ad1232e115cad0decdd3d41bbdc160
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 07fa410109a7bd2fa315132c4737301698bb3a93
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69932847"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400110"
 ---
 # <a name="parameter"></a>\<パラメーター >
 宣言された型がジェネリック型である場合、ジェネリック パラメーターを指定します。  
   
- \<system.runtime.serialization>  
-\<dataContractSerializer >  
-\<declaredTypes > 要素  
-\<declaredTypes > の > \<要素の追加  
-\<knownType > 要素  
-\<parameter > 要素  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> を実行します。** ](system-runtime-serialization.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dataContractSerializer >** ](datacontractserializer.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<declaredTypes >** ](declaredtypes.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> の追加**](add-of-declaredtypes-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<knownType >** ](knowntype.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<パラメーター >**  
   
 ## <a name="syntax"></a>構文  
   

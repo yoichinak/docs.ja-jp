@@ -2,21 +2,22 @@
 title: <security> の <wsDualHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 869c05e7-4ebe-467d-95ab-c8f8de4e6b9e
-ms.openlocfilehash: bed7f4ce325e0d5e387e310ca15a3b72ac93f18e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b6a1c952b1ae65c8fb6f17237b5c15f3a8d4844a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936541"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399746"
 ---
 # <a name="security-of-wsdualhttpbinding"></a>\<wsDualHttpBinding > の\<セキュリティ >
 [ \<WsDualHttpBinding >](wsdualhttpbinding.md)のセキュリティ機能を定義します。  
   
- \<system.ServiceModel >  
-\<bindings>  
-\<wsDualHttpBinding >  
-\<binding>  
-\<セキュリティ >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<バインド >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsDualHttpBinding >** ](wsdualhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<バインド >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<セキュリティ >**  
   
 ## <a name="syntax"></a>構文  
   

@@ -2,21 +2,22 @@
 title: <security> の <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 8658b162-2ddf-4162-a869-aa517a42288a
-ms.openlocfilehash: e627a63221d0013c89495d7ff81e02047a03df89
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f7a4ef98637a7c966665fdd02ad26929bd4ba6ac
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936505"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399724"
 ---
 # <a name="security-of-wshttpbinding"></a>\<wsHttpBinding の\<セキュリティ > >
 [ \<WsHttpBinding >](wshttpbinding.md)のセキュリティ機能を表します。  
   
- \<system.ServiceModel >  
-\<bindings>  
-\<wsHttpBinding>  
-\<binding>  
-\<セキュリティ >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<バインド >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsHttpBinding >** ](wshttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<バインド >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<セキュリティ >**  
   
 ## <a name="syntax"></a>構文  
   

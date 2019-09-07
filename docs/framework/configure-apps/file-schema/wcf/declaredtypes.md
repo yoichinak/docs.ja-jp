@@ -8,21 +8,22 @@ helpviewer_keywords:
 - KnownTypes
 - <declaredTypes> element
 ms.assetid: f35184e4-9d9e-4d37-8fb4-d5b58220eb3e
-ms.openlocfilehash: cef34a8836c7b17fe9a85cac190090f42653df14
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c45a4e67d0a2d98c0e9c1a91e07f25b81370244c
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919253"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398060"
 ---
 # <a name="declaredtypes"></a>\<declaredTypes >
 逆シリアル化時に <xref:System.Runtime.Serialization.DataContractSerializer> が使用する既知の型が含まれています。  
   
  データコントラクトと既知の型の詳細については、「[データコントラクトの既知の型](../../../wcf/feature-details/data-contract-known-types.md)」を参照してください。  
   
- system.runtime.serialization  
-\<dataContractSerializer >  
-\<declaredTypes >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> を実行します。** ](system-runtime-serialization.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dataContractSerializer >** ](datacontractserializer.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<declaredTypes >**  
   
 ## <a name="syntax"></a>構文  
   

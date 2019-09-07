@@ -8,15 +8,18 @@ helpviewer_keywords:
 - <system.serviceModel> element
 - system.serviceModel element
 ms.assetid: 78519531-ad7a-40d3-b3e7-42f1103d8854
-ms.openlocfilehash: 4fa6916437bb569029efe270ba8296703d89c539
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2125ce00b0e23f2e93ff251549f9c1276892b16b
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938918"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399454"
 ---
 # <a name="systemservicemodel"></a>\<system.serviceModel>
 この構成セクションには、すべての Windows Communication Foundation (WCF) ServiceModel 構成要素が含まれています。  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp; **\<System.servicemodel >**  
   
 ## <a name="syntax"></a>構文  
   

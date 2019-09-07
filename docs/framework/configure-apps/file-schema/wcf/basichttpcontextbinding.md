@@ -2,19 +2,20 @@
 title: <basicHttpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 39b16b82-4ec6-4eff-8031-67e026870961
-ms.openlocfilehash: 05c863cf7649546745db270a4b3ac0c638083a85
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0f4bde41bdd37580d946af3195540082d3647e7a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919866"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400625"
 ---
 # <a name="basichttpcontextbinding"></a>\<basicHttpContextBinding>
 HTTP クッキーを交換機構として有効にすることにより、交換する <xref:System.ServiceModel.BasicHttpBinding> のコンテキストを提供するバインディングを指定します。  
   
- \<system.ServiceModel >  
-\<bindings>  
-\<basicHttpContextBinding>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<バインド >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<basicHttpContextBinding >**  
   
 ## <a name="syntax"></a>構文  
   

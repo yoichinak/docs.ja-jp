@@ -2,22 +2,23 @@
 title: <windows> <clientCredentials>要素
 ms.date: 03/30/2017
 ms.assetid: 793e41c2-31ea-4159-abbc-2123bf097233
-ms.openlocfilehash: e9f0ed9879cc42ea25b83e6b626139a40a593112
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 61ca99213f0b83a5af5df0184a8c1de405366288
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940309"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399128"
 ---
 # <a name="windows-of-clientcredentials-element"></a>\<clientCredentials > 要素\<の windows >
 クライアントを表すために使用される Windows 資格情報の設定を指定します。  
   
- \<system.ServiceModel >  
-\<<behaviors>  
-\<endpointBehaviors>  
-\<behavior>  
-\<clientCredentials>  
-\<windows >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<動作 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<動作 >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clientCredentials >** ](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<windows >**  
   
 ## <a name="syntax"></a>構文  
   

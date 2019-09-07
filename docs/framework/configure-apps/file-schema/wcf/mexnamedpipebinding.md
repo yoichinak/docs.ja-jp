@@ -2,19 +2,20 @@
 title: <mexNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: 193412fa-3260-414c-92c6-b32ed3b94a34
-ms.openlocfilehash: 0d0904c02e31def1b5264bec9f61eac0c9a8e964
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b26201064aad3a8a09d8604a9706fe3c149cbf58
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931233"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400225"
 ---
 # <a name="mexnamedpipebinding"></a>\<mexNamedPipeBinding>
 名前付きパイプを経由する WS-MetadataExchange (WS-MEX) メッセージ交換に使用されるバインディングの設定を指定します。  
   
- \<system.ServiceModel >  
-\<bindings>  
-\<mexNamedPipeBinding>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<バインド >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<mexNamedPipeBinding >**  
   
 ## <a name="syntax"></a>構文  
   

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cb23c25c-1075-4cc3-a8ff-4db72e536c0d
-ms.openlocfilehash: c3a9bcef1944d0d018134383d3e556fe6ac24822
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 513d66c036b81b93e9692f060443ed193625898e
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250213"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398502"
 ---
 # <a name="method-based-query-syntax-examples-grouping"></a>メソッド ベースのクエリ構文例:グループ化
-このトピックの例では、メソッドを使用`GroupBy`して、メソッドベースのクエリ構文を使用して、 [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples)に対してクエリを実行する方法を示します。 これらの例で使用されている、AdventureWorks Sales Model は、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルから作成されています。  
+このトピックの例では、メソッドを使用`GroupBy`して、メソッドベースのクエリ構文を使用して、 [AdventureWorks Sales Model](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)に対してクエリを実行する方法を示します。 これらの例で使用されている、AdventureWorks Sales Model は、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルから作成されています。  
   
  このトピックの例では、次`using` / `Imports`のステートメントを使用します。  
   

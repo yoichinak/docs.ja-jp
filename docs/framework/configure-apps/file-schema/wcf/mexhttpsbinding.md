@@ -2,19 +2,20 @@
 title: <mexHttpsBinding>
 ms.date: 03/30/2017
 ms.assetid: f2ed3774-78b9-4a15-b79b-655f1ad68b86
-ms.openlocfilehash: 30d1aa27ce29b6aa4091c3e7be05746ad462102a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d32db2180e06cba6662ed853ab1a259805680ea1
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931265"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397822"
 ---
 # <a name="mexhttpsbinding"></a>\<mexHttpsBinding>
 HTTPS 経由の WS-MetadataExchange (WS-MEX) メッセージ交換に使用されるバインディングの設定を指定します。  
   
- \<system.ServiceModel >  
-\<bindings>  
-\<mexHttpsBinding>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<バインド >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<mexHttpsBinding >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -52,7 +53,7 @@ HTTPS 経由の WS-MetadataExchange (WS-MEX) メッセージ交換に使用さ�
 |[\<bindings>](bindings.md)|この要素には、標準バインディングおよびカスタム バインドのコレクションが保持されます。|  
   
 ## <a name="remarks"></a>Remarks  
- このバインディングは、基本的には証明書を使用してトランスポート レベルのセキュリティをサポートする `WSHttpBinding` バインディングです。 このようなメタデータエンドポイントの構成と使用の詳細[については、「」を参照してください。カスタムの ws-metadata Exchange バインディング](../../../wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md) [を構成する方法:MEX 以外のバインディング](../../../wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)を介してメタデータを取得し、サンプルのカスタムの[セキュリティで保護されたメタデータエンドポイント](../../../wcf/samples/custom-secure-metadata-endpoint.md)を取得します。  
+ このバインディングは、基本的には証明書を使用してトランスポート レベルのセキュリティをサポートする `WSHttpBinding` バインディングです。 このようなメタデータエンドポイントの構成と使用の詳細[については、「」を参照してください。カスタム WS-Metadata Exchange バインディング](../../../wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)の構成、 [方法:MEX 以外のバインディング](../../../wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)を介してメタデータを取得し、サンプルのカスタムの[セキュリティで保護されたメタデータエンドポイント](../../../wcf/samples/custom-secure-metadata-endpoint.md)を取得します。  
   
 ## <a name="see-also"></a>関連項目
 
@@ -60,7 +61,7 @@ HTTPS 経由の WS-MetadataExchange (WS-MEX) メッセージ交換に使用さ�
 - <xref:System.ServiceModel.Configuration.MexHttpsBindingElement>
 - [方法: 構成ファイルを使用してサービスのメタデータを公開する](../../../wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [カスタム バインディングを介したメタデータの公開と取得](../../../wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)
-- [方法: カスタムの WS-METADATA Exchange バインディングを構成する](../../../wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)
+- [方法: カスタム WS-Metadata Exchange バインドを構成する](../../../wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)
 - [方法: MEX 以外のバインディングを介したメタデータの取得](../../../wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)
 - [カスタム セキュア メタデータ エンドポイント](../../../wcf/samples/custom-secure-metadata-endpoint.md)
 - [メタデータ](../../../wcf/feature-details/metadata.md)

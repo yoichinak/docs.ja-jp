@@ -2,18 +2,19 @@
 title: <net.pipe>
 ms.date: 03/30/2017
 ms.assetid: 6a0f0318-f8f6-466c-9fae-199d7274a82e
-ms.openlocfilehash: 7d868d84318db8c9fe188293154dc275060a3952
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dd984b2ab89060451b1b2d02c324e803766908ce
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933180"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397724"
 ---
 # <a name="netpipe"></a>\<net.pipe >
 名前付きパイプ接続の有効期間を管理し、名前付きパイプを介して到着するアクティベーション要求を処理する名前付きパイプ アクティベーション サービスの構成設定を指定します。  
   
- \<system.serviceModel.activation>  
-\<net.pipe >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel. activation >** ](system-servicemodel-activation.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<net.pipe >**  
   
 ## <a name="syntax"></a>構文  
   

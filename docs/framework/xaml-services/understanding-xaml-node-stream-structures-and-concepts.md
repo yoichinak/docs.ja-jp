@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: c873961982cd1642d8b354e5d77b06105c0b7a1e
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: d6b2975b8e0338b121d00f5ec7f4ffb69d32ab6a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364311"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400732"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>XAML ノード ストリームの構造と概念について
 
@@ -84,10 +84,7 @@ while (xxr.Read()) {
 
 ### <a name="accessing-xaml-beyond-the-node-loop-concept"></a>ノード ループの概念を超えた XAML へのアクセス
 
-XAML ノード ループとして使用する以外に XAML 表現を使用する可能性があるその他の方法があります。 たとえば、インデックス付きのノードを読み取ることができる XAML リーダー、特に `x:Name`、 `x:Uid`、またはその他の識別子を介して直接ノードにアクセスする XAML リーダーが存在することがあります。 .NET framework XAML サービスは、完全な実装を提供していませんが、サービスとサポートの種類を通じて推奨されたパターンを提供します。 詳細については、次のトピックを参照してください。 <xref:System.Xaml.IXamlIndexingReader> および <xref:System.Xaml.XamlNodeList>.
-
-> [!TIP]
-> Microsoft では、Microsoft XAML Toolkit と呼ばれるアウトオブバンド リリースも生成しています。 このアウトオブバンド リリースは、まだプレリリース段階です。 しかし、プレリリース版のコンポーネントの使用をご希望の場合、Microsoft XAML Toolkit では、XAML ツールと XAML の静的分析用の興味深いリソースが提供されています。 Microsoft XAML Toolkit には、XAML DOM API、FxCop の分析のサポート、および Silverlight の XAML スキーマ コンテキストが含まれています。 詳細については、「 [Microsoft XAML Toolkit](https://code.msdn.microsoft.com/XAML)」を参照してください。
+XAML ノード ループとして使用する以外に XAML 表現を使用する可能性があるその他の方法があります。 たとえば、インデックス付きのノードを読み取ることができる XAML リーダー、特に `x:Name`、 `x:Uid`、またはその他の識別子を介して直接ノードにアクセスする XAML リーダーが存在することがあります。 .NET framework XAML サービスは、完全な実装を提供していませんが、サービスとサポートの種類を通じて推奨されたパターンを提供します。 詳細については、次のトピックを参照してください。 <xref:System.Xaml.IXamlIndexingReader> および <xref:System.Xaml.XamlNodeList>
 
 <a name="working_with_the_current_node"></a>
 
