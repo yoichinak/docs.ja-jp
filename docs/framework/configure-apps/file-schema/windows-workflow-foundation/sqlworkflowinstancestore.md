@@ -3,21 +3,22 @@ title: <sqlWorkflowInstanceStore>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 8a4e4214-fc51-4f4d-b968-0427c37a9520
-ms.openlocfilehash: 7a6f9fb5b2b98d2951343b5a529507b3fcd88dc8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 581da860a490c95d5d621194c7f6643fc15118fe
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947518"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398681"
 ---
 # <a name="sqlworkflowinstancestore"></a>\<sqlWorkflowInstanceStore>
 ワークフローサービスインスタンスの状態情報の SQL Server 2005 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>または SQL Server 2008 データベースへの永続化をサポートする機能を構成できるようにするサービス動作。 この機能の詳細については、「 [SQL Workflow Instance Store](../../../windows-workflow-foundation/sql-workflow-instance-store.md)」を参照してください。  
   
-\<system.ServiceModel >  
-\<<behaviors>  
-\<serviceBehaviors>  
-\<behavior>  
-\<sqlWorkflowInstanceStore>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<system.ServiceModel >** ](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<動作 >** ](behaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<動作 >** ](behavior-of-servicebehaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<sqlWorkflowInstanceStore >**  
   
 ## <a name="syntax"></a>構文  
   

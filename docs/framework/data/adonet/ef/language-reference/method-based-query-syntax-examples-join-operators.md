@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d00f0efa-9084-4c17-843f-54904fcb4204
-ms.openlocfilehash: 2f26f937901debd27cb936d1f642e0a5149b167a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c7dafae846a30424f008cce5f597efbdefa4bdf8
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250135"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397355"
 ---
 # <a name="method-based-query-syntax-examples-join-operators"></a>メソッド ベースのクエリ構文例:結合演算子
-このトピックの例では、メソッドベースの<xref:System.Linq.Enumerable.Join%2A>クエリ<xref:System.Linq.Enumerable.GroupJoin%2A>構文を使用して、メソッドとメソッドを使用して、 [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples)に対してクエリを実行する方法を示します。 これらの例で使用されている、AdventureWorks Sales Model は、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルから作成されています。  
+このトピックの例では、メソッドベースの<xref:System.Linq.Enumerable.Join%2A>クエリ<xref:System.Linq.Enumerable.GroupJoin%2A>構文を使用して、メソッドとメソッドを使用して、 [AdventureWorks Sales Model](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)に対してクエリを実行する方法を示します。 これらの例で使用されている、AdventureWorks Sales Model は、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルから作成されています。  
   
  このトピックの例では、次`using` / `Imports`のステートメントを使用します。  
   
