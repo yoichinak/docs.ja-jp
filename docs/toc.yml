@@ -262,7 +262,7 @@
     - name: Docker
       items:
         - name: .NET および Docker の概要
-          href: core/docker/intro-net-docker.md
+          href: core/docker/introduction.md
         - name: NET Core アプリのコンテナー化
           href: core/docker/build-container.md
         - name: Visual Studio のコンテナー ツール
