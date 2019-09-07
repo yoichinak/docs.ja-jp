@@ -4,19 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - wsHttpBinding Element
 ms.assetid: 0eee8ced-ad68-427d-b95a-97260e98deed
-ms.openlocfilehash: 81f0101ce1dc2195cfc2f556e38a8551f674d13b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fc86a97ebae160f5bf2c8fcb2df9295ed7803963
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941513"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399024"
 ---
 # <a name="wshttpbinding"></a>\<wsHttpBinding>
 双方向サービス コントラクト以外に適した、安全で信頼のおける相互操作可能なバインディングを定義します。 バインディングは、次の仕様を実装します。信頼性のための WS-ATOMICTRANSACTION メッセージングと、メッセージセキュリティと認証用 WS-SECURITY。 トランスポートは HTTP、メッセージ エンコーディングは Text/XML エンコーディングです。  
   
- \<system.ServiceModel >  
-\<bindings>  
-\<wsHttpBinding>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<バインド >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<wsHttpBinding >**  
   
 ## <a name="syntax"></a>構文  
   

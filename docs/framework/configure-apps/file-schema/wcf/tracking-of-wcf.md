@@ -2,20 +2,21 @@
 title: <tracking>WCF の
 ms.date: 03/30/2017
 ms.assetid: 70cfaf24-a91c-4e56-ac47-d2ed87a963b3
-ms.openlocfilehash: ad4f85139ff0a0f587bc47f63334fe97e25440b0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e8f74d635299a965b754536234e6be28e4e7a104
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69932371"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399418"
 ---
 # <a name="tracking-of-wcf"></a>\<WCF の > の追跡
 ワークフロー サービスの追跡設定を定義する構成セクションを表します。  
   
  ワークフロー追跡とその構成の詳細については、「ワークフローの[追跡とトレース](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)」と「ワークフロー[の追跡の構成](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md)」を参照してください。  
   
- \<system.serviceModel>  
-\<追跡 >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<追跡 >**  
   
 ## <a name="syntax"></a>構文  
   
