@@ -4,12 +4,12 @@ description: このドキュメントでは、Visual Studio Code を使用して
 author: bleroy
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: e79f5dd90124d2a1902194af2edbde0f5df107c7
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f1cb9b45c0ed1b4315361846fc065209088b57f8
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633977"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373787"
 ---
 # <a name="get-started-with-net-core-on-macos"></a>macOS での .NET Core の概要
 
@@ -30,7 +30,7 @@ Visual Studio Code C# 拡張機能をインストールするには、Visual Stu
 
 このチュートリアルでは 3 つのプロジェクト (ライブラリ プロジェクト、そのライブラリ プロジェクトのテスト、およびライブラリを使用するコンソール アプリケーション) を作成します。 GitHub の dotnet/samples レポジトリで、このトピックの[ソースを表示またはダウンロード](https://github.com/dotnet/samples/tree/master/core/getting-started/golden)することができます。 ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)」を参照してください。
 
-Visual Studio Code を開始します。 <kbd>Ctrl</kbd>+<kbd>\`</kbd> (バッククォートまたはアクサン グラーブ) キーを押すか、メニューから **[表示]、[統合ターミナル]** の順に選択し、Visual Studio Code で埋め込みターミナルを開きます。 Visual Studio Code の外部で作業を行う場合は、エクスプローラーの **[コマンド プロンプトで開く]** コマンド (Ma または Linux の場合は **[ターミナルで開く]**) を使用して外部シェルを開くこともできます。
+Visual Studio Code を開始します。 <kbd>Ctrl</kbd>+<kbd>\`</kbd> (バッククォートまたはアクサン グラーブ) キーを押すか、メニューから **[表示]、[統合ターミナル]** の順に選択し、Visual Studio Code で埋め込みターミナルを開きます。 Visual Studio Code の外部で作業を行う場合は、エクスプローラーの **[コマンド プロンプトで開く]** コマンド (Ma または Linux の場合は **[ターミナルで開く]** ) を使用して外部シェルを開くこともできます。
 
 1 つ以上の .NET Core プロジェクトのコンテナーとして機能する、ソリューション ファイルの作成を開始します。 ターミナルで、*golden* フォルダーを作成し、そのフォルダーを開きます。 このフォルダーはソリューションのルートです。 以下のように、[`dotnet new`](../tools/dotnet-new.md) コマンドを実行して新しいソリューション *golden.sln* を作成します。
 
@@ -56,7 +56,7 @@ dotnet sln add library/library.csproj
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.4</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
 </Project>
@@ -72,7 +72,7 @@ dotnet add library package Newtonsoft.Json
 
 ```xml
 <ItemGroup>
-  <PackageReference Include="Newtonsoft.Json" Version="10.0.1" />
+  <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
 </ItemGroup>
 ```
 

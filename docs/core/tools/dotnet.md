@@ -2,12 +2,12 @@
 title: dotnet コマンド
 description: dotnet コマンド (.NET Core CLI ツールの一般的なドライバー) とその使用法について説明します。
 ms.date: 06/04/2018
-ms.openlocfilehash: 61542a3fff8bba6e2c3e55a4db5a746620d79ca1
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 328fd24cd72110bd235c177398f6f147fbb9d144
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202510"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373745"
 ---
 # <a name="dotnet-command"></a>dotnet コマンド
 
@@ -94,9 +94,9 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 `--roll-forward-on-no-candidate-fx <N>`
 
 必要な共有フレームワークが利用できない場合の動作を定義します。 `N` には以下があります。
-* `0` - マイナー バージョンのロールフォワードでも無効にします。
-* `1` - マイナー バージョンはロール フォワードしますが、メジャー バージョンはしません。 これが既定の動作です。
-* `2` - マイナー バージョンとメジャー バージョンをロール フォワードします。
+- `0` - マイナー バージョンのロールフォワードでも無効にします。
+- `1` - マイナー バージョンはロール フォワードしますが、メジャー バージョンはしません。 これが既定の動作です。
+- `2` - マイナー バージョンとメジャー バージョンをロール フォワードします。
 
  詳細については、「[Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward)」(ロールフォワード) を参照してください。
 

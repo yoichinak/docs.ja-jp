@@ -4,12 +4,12 @@ description: .NET for Apache Spark アプリケーションを Databricks にデ
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 77c2d93ae324b6acbf8fc8dc25cd3e4d1a652f48
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 3c9169e2936742c82ba27327ac07f0aa1b4c645c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107352"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254043"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>.NET for Apache Spark アプリケーションを Databricks にデプロイする
 
@@ -119,7 +119,7 @@ Databricks を使用すると、.NET for Apache Spark アプリを既存のア�
 3. パラメーターを適切に設定します。
 
    ```
-   Main Class: org.apache.spark.deploy.DotnetRunner
+   Main Class: org.apache.spark.deploy.dotnet.DotnetRunner
    Arguments /dbfs/apps/<your-app-name>.zip <your-app-main-class>
    ```
  
@@ -163,7 +163,7 @@ Databricks を使用すると、.NET for Apache Spark アプリを既存のア�
 2. 次のパラメーターを指定して `spark-submit` を構成します。
 
       ```bash
-      ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
+      ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
       ```
 
 3. Databricks ワークスペース内の Databricks クラスターに移動します。 **[ジョブ]** の下でジョブを選択し、 **[今すぐ実行]** を選択してジョブを実行します。

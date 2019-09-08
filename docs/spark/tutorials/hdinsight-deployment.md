@@ -4,12 +4,12 @@ description: .NET for Apache Spark アプリケーションを Azure HDInsight �
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4769c194520790ce217d46d1d3197b20742d4f1a
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 81d1af1fd4e3329c4a289eea388edf8af57d7c4e
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "69576949"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70243945"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>.NET for Apache Spark アプリケーションを Azure HDInsight にデプロイする
 
@@ -104,7 +104,7 @@ ms.locfileid: "69576949"
    ```bash
    spark-submit \
    --master yarn \
-   --class org.apache.spark.deploy.DotnetRunner \
+   --class org.apache.spark.deploy.dotnet.DotnetRunner \
    --files <comma-separated list of assemblies that contain UDF definitions, if any> \
    abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar \
    abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<your app>.zip <your app> <app arg 1> <app arg 2> ... <app arg n>
@@ -124,7 +124,7 @@ curl -k -v -X POST "https://<your spark cluster>.azurehdinsight.net/livy/batches
 -d @- << EOF
 {
     "file":"abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar",
-    "className":"org.apache.spark.deploy.DotnetRunner",
+    "className":"org.apache.spark.deploy.dotnet.DotnetRunner",
     "files":["abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<udf assembly>", "abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<file>"],
     "args":["abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<your app>.zip","<your app>","<app arg 1>","<app arg 2>,"...","<app arg n>"]
 }

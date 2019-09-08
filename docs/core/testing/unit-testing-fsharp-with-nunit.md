@@ -6,16 +6,18 @@ ms.date: 10/04/2018
 dev_langs:
 - fsharp
 ms.custom: seodec18
-ms.openlocfilehash: 7b559d94c03081a8ef67cf91ccfb7d08ff5b6c60
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d654f77eb71b050b636476d67c62da3ea764edf7
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626448"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374194"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>dotnet テストと NUnit を使用した .NET Core での単体テスト F# ライブラリ
 
 このチュートリアルでは、単体テストの概念について学習するためにサンプル ソリューションを段階的に構築する対話型のエクスペリエンスを示します。 構築済みのソリューションを使用してチュートリアルに従う場合は、開始する前に[サンプル コードを参照またはダウンロード](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp-nunit/)してください。 ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)」を参照してください。
+
+[!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
 ## <a name="prerequisites"></a>必須コンポーネント
 

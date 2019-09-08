@@ -4,16 +4,18 @@ description: dotnet テストおよび NUnit を使用したサンプル ソリ�
 author: rprouse
 ms.date: 08/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 22475fcbd9e971f4c544c020d9198fadee4548b1
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 19aa97687c41cf4a4aac00bf6ca83bc27504b09d
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168125"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374125"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>NUnit と .NET Core による単体テスト C#
 
 このチュートリアルでは、単体テストの概念について学習するためにサンプル ソリューションを段階的に構築する対話型のエクスペリエンスを示します。 構築済みのソリューションを使用してチュートリアルに従う場合は、開始する前に[サンプル コードを参照またはダウンロード](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/)してください。 ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)」を参照してください。
+
+[!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
 ## <a name="prerequisites"></a>必須コンポーネント
 

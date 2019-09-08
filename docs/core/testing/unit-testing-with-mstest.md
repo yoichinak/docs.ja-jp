@@ -5,16 +5,18 @@ author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
 ms.custom: seodec18
-ms.openlocfilehash: ae4ddd4df902cf8c3d50e50614b12af8dc0aebed
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 1e0625adb5b96d95d8ed8ceed67c5acb134bb2e9
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168168"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373857"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>MSTest と .NET Core による単体テスト C#
 
 このチュートリアルでは、単体テストの概念について学習するためにサンプル ソリューションを段階的に構築する対話型のエクスペリエンスを示します。 構築済みのソリューションを使用してチュートリアルに従う場合は、開始する前に[サンプル コードを参照またはダウンロード](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-mstest/)してください。 ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)」を参照してください。
+
+[!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
 ## <a name="create-the-source-project"></a>ソース プロジェクトを作成する
 
