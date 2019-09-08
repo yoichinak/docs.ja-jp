@@ -2,12 +2,12 @@
 title: SQL Server の CLR 統合セキュリティ
 ms.date: 03/30/2017
 ms.assetid: 489fe096-fd1d-42de-8438-bf7aed46aea2
-ms.openlocfilehash: 946401211d515df9ba5b9e38d7cfd10730973b64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4756d13ff52a4c55b48c3ea56d26111029c8a7e4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878489"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794562"
 ---
 # <a name="clr-integration-security-in-sql-server"></a>SQL Server の CLR 統合セキュリティ
 Microsoft SQL Server で新たに導入された機能の 1 つに、.NET Framework の共通言語ランタイム (CLR) コンポーネントの統合があります。 CLR の統合により、Microsoft Visual Basic .NET や Microsoft Visual C# を含む任意の .NET Framework 言語を使用して、ストアド プロシージャ、トリガー、ユーザー定義型、ユーザー定義関数、ユーザー定義集計、およびストリーミング テーブル値関数を作成できるようになりました。  
@@ -19,12 +19,12 @@ Microsoft SQL Server で新たに導入された機能の 1 つに、.NET Framew
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[コード アクセス セキュリティ](../../../../../docs/framework/misc/code-access-security.md)|.NET Framework の CAS について説明します。|  
+|[コード アクセス セキュリティ](../../../misc/code-access-security.md)|.NET Framework の CAS について説明します。|  
 |[CLR 統合のセキュリティ](/sql/relational-databases/clr-integration/security/clr-integration-security)|SQL Server の内部で実行されるマネージド コードのセキュリティ モデルについて説明します。|  
   
 ## <a name="see-also"></a>関連項目
 
-- [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server におけるアプリケーション セキュリティのシナリオ](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [SQL Server の共通言語ランタイム統合](../../../../../docs/framework/data/adonet/sql/sql-server-common-language-runtime-integration.md)
-- [ADO.NET の概要](../../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [ADO.NET アプリケーションのセキュリティ保護](../securing-ado-net-applications.md)
+- [SQL Server におけるアプリケーション セキュリティのシナリオ](application-security-scenarios-in-sql-server.md)
+- [SQL Server の共通言語ランタイム統合](sql-server-common-language-runtime-integration.md)
+- [ADO.NET の概要](../ado-net-overview.md)

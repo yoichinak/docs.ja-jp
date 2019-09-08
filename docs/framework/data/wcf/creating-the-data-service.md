@@ -1,20 +1,20 @@
 ---
-title: Visual Studio での WCF data service を作成します。
+title: Visual Studio で WCF data service を作成する
 ms.date: 08/24/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: e04f64338eaa87755510a84e7c84773c7fede807
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c3c80fb48635199f45acb1e72bf756bbc65d2e14
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634668"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780413"
 ---
 # <a name="create-the-data-service"></a>データ サービスを作成する
 
-このトピックでは、公開する WCF Data Services を使用するサンプル データ サービスを作成する、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]フィード、Northwind サンプル データベースに基づいています。 この作業に必要な基本手順は次のとおりです。
+このトピックでは、WCF Data Services を使用して、Northwind サンプルデータベースに基づく[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]フィードを公開するサンプルデータサービスを作成します。 この作業に必要な基本手順は次のとおりです。
 
 1. ASP.NET Web アプリケーションを作成します。
 
@@ -24,35 +24,35 @@ ms.locfileid: "65634668"
 
 4. データ サービスへのアクセスを有効にします。
 
-## <a name="create-the-aspnet-web-app"></a>ASP.NET web アプリを作成します。
+## <a name="create-the-aspnet-web-app"></a>ASP.NET web アプリを作成する
 
-1. Visual Studio での**ファイル**メニューの **新規** > **プロジェクト**します。
+1. Visual Studio で、 **[ファイル]** メニューの [**新しい** > **プロジェクト**] をクリックします。
 
 1. **新しいプロジェクト** ダイアログ ボックスで、Visual Basic または Visual C# のいずれかの選択 で、 **Web**カテゴリ、および選択**ASP.NET Web アプリケーション**します。
 
-1. 入力`NorthwindService`選択し、プロジェクトの名前として**OK**します。
+1. プロジェクト`NorthwindService`の名前として「」と入力し、[ **OK]** を選択します。
 
-1. **新しい ASP.NET Web アプリケーション**ダイアログ ボックスで、**空**選び**OK**。
+1. **[New ASP.NET Web Application]** ダイアログボックスで **[Empty]** を選択し、 **[OK]** を選択します。
 
-1. (省略可能) Web アプリケーションに対して特定のポート番号を指定します。 注: ポート番号`12345`のクイック スタート トピックには、このシリーズで使用されます。
+1. (省略可能) Web アプリケーションに対して特定のポート番号を指定します。 注: この一連の`12345`クイックスタートトピックでは、ポート番号が使用されています。
 
-    1. **ソリューション エクスプ ローラー**、先ほど作成した ASP.NET プロジェクトを右クリックし、**プロパティ**します。
+    1. **ソリューションエクスプローラー**で、先ほど作成した ASP.NET プロジェクトを右クリックし、 **[プロパティ]** を選択します。
 
-    2. 選択、 **Web**タブをクリックし、値の設定、**特定のポート**テキスト ボックスに`12345`します。
+    2. **[Web]** タブを選択し、特定の **[ポート]** ボックスの値`12345`をに設定します。
 
 ## <a name="define-the-data-model"></a>データ モデルを定義する
 
-1. **ソリューション エクスプ ローラー**ASP.NET プロジェクトの名前を右クリックし、クリックして**追加** > **新しい項目の**します。
+1. **ソリューションエクスプローラー**で、ASP.NET プロジェクトの名前を右クリックし、[**新しい項目**の**追加** > ] をクリックします。
 
-2. **新しい項目の追加**ダイアログ ボックスで、**データ**カテゴリ、および選択**ADO.NET Entity Data Model**します。
+2. **[新しい項目の追加]** ダイアログボックスで、 **[データ]** カテゴリを選択し、 **[ADO.NET Entity Data Model]** を選択します。
 
-3. データ モデルの名前を入力`Northwind.edmx`します。
+3. データモデルの名前として「」 `Northwind.edmx`と入力します。
 
-4. **Entity Data Model ウィザード**を選択します**データベースの EF デザイナー**、順にクリックします**次**します。
+4. **Entity Data Model ウィザード**で、 **[データベースから EF Designer]** を選択し、 **[次へ]** をクリックします。
 
-5. 次の手順のいずれかの手順を実行して、データ モデルをデータベースに接続し、**次**:
+5. 次のいずれかの手順を実行して、データモデルをデータベースに接続し、 **[次へ]** をクリックします。
 
-    - 既に構成されているデータベース接続を持っていない場合はクリックして**新しい接続**し、新しい接続を作成します。 詳細については、「[方法 :SQL Server データベースへの接続を作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))します。 この SQL Server インスタンスには、Northwind サンプル データベースがアタッチされている必要があります。
+    - データベース接続が既に構成されていない場合は、 **[新しい接続]** をクリックして新しい接続を作成します。 詳細については、「[方法 :SQL Server データベース](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))への接続を作成します。 この SQL Server インスタンスには、Northwind サンプル データベースがアタッチされている必要があります。
 
          \- または -
 
@@ -60,29 +60,29 @@ ms.locfileid: "65634668"
 
 6. ウィザードの最終ページで、データベース内のすべてのテーブルのチェック ボックスをオンにし、ビューおよびストアド プロシージャのチェック ボックスをオフにします。
 
-7. クリックして**完了**ウィザードを閉じます。
+7. **[完了]** をクリックして、ウィザードを終了します。
 
-## <a name="create-the-wcf-data-service"></a>WCF データ サービスを作成します。
+## <a name="create-the-wcf-data-service"></a>WCF data service の作成
 
-1. **ソリューション エクスプ ローラー**、ASP.NET プロジェクトを右クリックし、選択し、**追加** > **新しい項目の**します。
+1. **ソリューションエクスプローラー**で、ASP.NET プロジェクトを右クリックし、[**新しい項目**の**追加** > ] を選択します。
 
-2. **新しい項目の追加**ダイアログ ボックスで、 **WCF Data Service**から項目テンプレート、 **Web**カテゴリ。
+2. **[新しい項目の追加]** ダイアログボックスで、 **Web**カテゴリから**WCF Data Service**項目テンプレートを選択します。
 
-   ![Visual Studio 2015 での WCF データ サービス項目テンプレート](media/wcf-data-service-item-template.png)
+   ![Visual Studio 2015 の WCF Data Service 項目テンプレート](media/wcf-data-service-item-template.png)
 
    > [!NOTE]
-   > **WCF Data Service**テンプレートは、Visual Studio 2015 ではなく Visual Studio 2017 で使用できます。
+   > **WCF Data Service**テンプレートは visual studio 2015 で使用できますが、visual studio 2017 では使用できません。
 
-3. サービスの名前を入力`Northwind`します。
+3. サービスの名前として「」 `Northwind`と入力します。
 
-     Visual Studio で新しいサービスの XML マークアップおよびコード ファイルが作成されます。 既定では、コード エディターのウィンドウが開きます。 **ソリューション エクスプ ローラー**、サービスが、拡張子を持つ名前 Northwind *. は.svc.cs*または *..svc.vb になります*します。
+     Visual Studio で新しいサービスの XML マークアップおよびコード ファイルが作成されます。 既定では、コード エディターのウィンドウが開きます。 **ソリューションエクスプローラー**では、サービスの名前は、 *svc.cs*または *.svc*という名前になります。
 
 4. データ サービスのコードで、データ サービスを定義するクラスの定義にあるコメント `/* TODO: put your data source class name here */` をデータ モデルのエンティティ コンテナーである型 (この場合は `NorthwindEntities`) で置き換えます。 クラス定義は次のようになります。
 
      [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#servicedefinition)]
      [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#servicedefinition)]
 
-## <a name="enable-access-to-data-service-resources"></a>データ サービス リソースへのアクセスを有効にします。
+## <a name="enable-access-to-data-service-resources"></a>データサービスリソースへのアクセスを有効にする
 
 1. データ サービスのコードで、`InitializeService` 関数のプレースホルダーのコードを次の内容で置き換えます。
 
@@ -92,14 +92,14 @@ ms.locfileid: "65634668"
      これにより、承認されたクライアントは、指定したエンティティ セットのリソースに読み取りおよび書き込みアクセスできるようになります。
 
     > [!NOTE]
-    > ASP.NET アプリケーションにアクセスできるクライアントは、データ サービスによって公開されるリソースにもアクセスできます。 運用データ サービスで、リソースへの承認されていないアクセスを防止するために、アプリケーション自身もセキュリティで保護する必要があります。 詳細については、「 [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)」を参照してください。
+    > ASP.NET アプリケーションにアクセスできるクライアントは、データ サービスによって公開されるリソースにもアクセスできます。 運用データ サービスで、リソースへの承認されていないアクセスを防止するために、アプリケーション自身もセキュリティで保護する必要があります。 詳細については、「 [Securing WCF Data Services](securing-wcf-data-services.md)」を参照してください。
 
 ## <a name="next-steps"></a>次の手順
 
-Northwind サンプル データベースに基づいている OData フィードを公開する新しいデータ サービスが正常に作成しを ASP.NET Web アプリケーションへのアクセス許可を持つクライアントからフィードへのアクセスを有効にします。 次に、Visual Studio からデータ サービスを開始し、Web ブラウザーから HTTP GET 要求を送信してフィードの OData へのアクセスします。
+ここでは、Northwind サンプルデータベースに基づく OData フィードを公開する新しいデータサービスを作成し、ASP.NET Web アプリケーションに対するアクセス許可を持つクライアントに対してフィードへのアクセスを有効にしました。 次に、Visual Studio からデータサービスを開始し、Web ブラウザーから HTTP GET 要求を送信して OData フィードにアクセスします。
 
 > [!div class="nextstepaction"]
-> [Web ブラウザーからサービスへのアクセスします。](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)
+> [Web ブラウザーからサービスにアクセスする](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)
 
 ## <a name="see-also"></a>関連項目
 

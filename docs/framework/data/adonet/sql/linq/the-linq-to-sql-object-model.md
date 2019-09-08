@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
-ms.openlocfilehash: 6518e4edeccdd533487f717122ba6832f13436a3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b73904e2347c501b21b2c5933d0b43c7abafeb7c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947064"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792313"
 ---
 # <a name="the-linq-to-sql-object-model"></a>LINQ to SQL オブジェクト モデル
 で[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]は、開発者のプログラミング言語で表されるオブジェクトモデルは、リレーショナルデータベースのデータモデルにマップされます。 データ操作はオブジェクト モデルに従って行われます。  
@@ -40,7 +40,7 @@ ms.locfileid: "69947064"
   
  テーブルとして宣言されたクラスのインスタンスのみ (つまり、エンティティ クラス)、データベースに保存できます。  
   
- 詳細については、「[属性ベースのマッピング](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)」の「テーブル属性」セクションを参照してください。  
+ 詳細については、「[属性ベースのマッピング](attribute-based-mapping.md)」の「テーブル属性」セクションを参照してください。  
   
 ## <a name="linq-to-sql-class-members-and-database-columns"></a>LINQ to SQL クラス メンバーおよびデータベース列  
  クラスとテーブルの関連付けに加えて、フィールドまたはプロパティを設定してデータベース列を表すことができます。 このためには、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、次の例に示すように <xref:System.Data.Linq.Mapping.ColumnAttribute> 属性を定義します。  
@@ -51,7 +51,7 @@ ms.locfileid: "69947064"
   
  列に対応付けられたフィールドおよびプロパティのみ、データベースに保持したり、データベースから取得できます。 列として宣言されていないものは、アプリケーション ロジックの一時的な部分と見なされます。  
   
- <xref:System.Data.Linq.Mapping.ColumnAttribute> 属性にはさまざまなプロパティがあり、これを使用することで、列を表すメンバーをカスタマイズできます (たとえば、主キー列を表すメンバーを指定できます)。 詳細については、「[属性ベースのマッピング](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)」の「列の属性」セクションを参照してください。  
+ <xref:System.Data.Linq.Mapping.ColumnAttribute> 属性にはさまざまなプロパティがあり、これを使用することで、列を表すメンバーをカスタマイズできます (たとえば、主キー列を表すメンバーを指定できます)。 詳細については、「[属性ベースのマッピング](attribute-based-mapping.md)」の「列の属性」セクションを参照してください。  
   
 ## <a name="linq-to-sql-associations-and-database-foreign-key-relationships"></a>LINQ to SQL の関連付けおよびデータベースの外部キー リレーションシップ  
  で[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]は、 <xref:System.Data.Linq.Mapping.AssociationAttribute>属性を適用することによって、データベースの関連付け (外部キーと主キーのリレーションシップなど) を表すことができます。 次のコードセグメントでは、クラス`Order`に<xref:System.Data.Linq.Mapping.AssociationAttribute>属性を`Customer`持つプロパティが含まれています。 このプロパティとその属性が、`Order` クラスおよび `Customer` クラスとのリレーションシップを提供します。  
@@ -62,7 +62,7 @@ ms.locfileid: "69947064"
  [!code-csharp[DLinqObjectModel#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/northwind.cs#3)]
  [!code-vb[DLinqObjectModel#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectModel/vb/northwind.vb#3)]  
   
- 詳細については、「[属性ベースのマッピング](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)」の「Association 属性」セクションを参照してください。  
+ 詳細については、「[属性ベースのマッピング](attribute-based-mapping.md)」の「Association 属性」セクションを参照してください。  
   
 ## <a name="linq-to-sql-methods-and-database-stored-procedures"></a>LINQ to SQL メソッドおよびデータベース ストアド プロシージャ  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、ストアド プロシージャとユーザー定義関数をサポートしています。 で[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]は、これらのデータベース定義の抽象化をクライアントオブジェクトにマップし、クライアントコードから厳密に型指定された方法でアクセスできるようにします。 メソッド シグネチャは、データベース内で定義されているプロシージャおよび関数のシグネチャと可能な限りよく似ています。 IntelliSense を使用して、これらのメソッドを見つけることができます。  
@@ -78,9 +78,9 @@ ms.locfileid: "69947064"
  [!code-csharp[DLinqObjectModel#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/northwind.cs#4)]
  [!code-vb[DLinqObjectModel#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectModel/vb/northwind.vb#4)]  
   
- 詳細については、「[属性ベースのマッピング](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)と[ストアドプロシージャ](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)」の「Function 属性」、「ストアドプロシージャ属性」、および「Parameter 属性」セクションを参照してください。  
+ 詳細については、「[属性ベースのマッピング](attribute-based-mapping.md)と[ストアドプロシージャ](stored-procedures.md)」の「Function 属性」、「ストアドプロシージャ属性」、および「Parameter 属性」セクションを参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [属性ベースの対応付け](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
-- [背景情報](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [属性ベースの対応付け](attribute-based-mapping.md)
+- [背景情報](background-information.md)

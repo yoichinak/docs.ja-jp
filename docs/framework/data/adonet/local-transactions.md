@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: a0cb72913c10712ece188a782095b93f98cdc0b2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 979d51a97245bc9616349679ec8cf05cae8c595a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955768"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783711"
 ---
 # <a name="local-transactions"></a>ローカル トランザクション
 複数のタスクを連結して1つの作業単位として実行する場合は、ADO.NET のトランザクションが使用されます。 たとえば、あるアプリケーションが 2 つのタスクを実行するものとします。 まず、注文情報に従ってテーブルが更新されます。 次に、在庫情報を含むテーブルが更新され、注文品の金額が借方記入されます。 いずれかのタスクが失敗した場合、両方の更新がロールバックされます。  
@@ -49,7 +49,7 @@ ms.locfileid: "69955768"
   
 ## <a name="see-also"></a>関連項目
 
-- [トランザクションと同時実行](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
-- [分散トランザクション](../../../../docs/framework/data/adonet/distributed-transactions.md)
-- [SQL Server と System.Transactions の統合](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [トランザクションと同時実行](transactions-and-concurrency.md)
+- [分散トランザクション](distributed-transactions.md)
+- [SQL Server と System.Transactions の統合](system-transactions-integration-with-sql-server.md)
+- [ADO.NET の概要](ado-net-overview.md)

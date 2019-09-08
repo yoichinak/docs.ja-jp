@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: b288ffe6346ac8260756115b50c253c42b596f96
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 080432670c68623433a6b4e61adba77cf6fa5ec7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948264"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786870"
 ---
 # <a name="code-access-security-and-adonet"></a>コード アクセス セキュリティと ADO.NET
 .NET Framework はコード アクセス セキュリティ (CAS) に加えてロール ベースのセキュリティを備えています。どちらも、共通言語ランタイム (CLR) が提供する共通のインフラストラクチャを使って実装されています。 アンマネージ コードの場合、ほとんどのアプリケーションはユーザーまたはプリンシパルの権限で実行されます。 そのため、悪意のあるソフトウェアやエラーを含むソフトウェアが、システム特権を持つユーザーによって実行された場合、コンピューター システムが被害を受けたり、機密データが改ざんされる可能性があります。  
@@ -47,15 +47,15 @@ ms.locfileid: "69948264"
   
  CLR にはマネージド コードに制限を適用するためのメカニズムが、権限を使用することによって実装されています。 ロール ベースのセキュリティ権限により、ユーザー (またはユーザーのために行動するエージェント) が特定の ID を持っているかどうか、または特定のロールに所属しているかどうかを検出するメカニズムが実現されます。 詳細については、「[セキュリティのアクセス許可](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5ba4k1c5(v=vs.100))」を参照してください。  
   
- 開発しているアプリケーションの種類によっては、データベースに対するロール ベースの権限の実装も考慮する必要があります。 SQL Server のロールベースセキュリティの詳細については、「 [SQL Server セキュリティ](../../../../docs/framework/data/adonet/sql/sql-server-security.md)」を参照してください。  
+ 開発しているアプリケーションの種類によっては、データベースに対するロール ベースの権限の実装も考慮する必要があります。 SQL Server のロールベースセキュリティの詳細については、「 [SQL Server セキュリティ](./sql/sql-server-security.md)」を参照してください。  
   
 ## <a name="assemblies"></a>アセンブリ  
- アセンブリは、.NET Framework アプリケーションの配置、バージョン管理、再利用、アクティベーション スコープ、およびセキュリティ権限の基本単位です。 アセンブリは、互いに連携して動作するように作成された一連の型やリソースを提供し、"機能" の論理上の単位を成すものです。 CLR から見て、型がアセンブリのコンテキスト外に存在することはありません。 アセンブリの作成と配置の詳細については、「[アセンブリを使用したプログラミング](../../../../docs/framework/app-domains/programming-with-assemblies.md)」を参照してください。  
+ アセンブリは、.NET Framework アプリケーションの配置、バージョン管理、再利用、アクティベーション スコープ、およびセキュリティ権限の基本単位です。 アセンブリは、互いに連携して動作するように作成された一連の型やリソースを提供し、"機能" の論理上の単位を成すものです。 CLR から見て、型がアセンブリのコンテキスト外に存在することはありません。 アセンブリの作成と配置の詳細については、「[アセンブリを使用したプログラミング](../../app-domains/programming-with-assemblies.md)」を参照してください。  
   
 ### <a name="strong-naming-assemblies"></a>厳密な名前付きアセンブリ  
  厳密な名前 (デジタル署名) は、アセンブリの ID (単純なテキスト名、バージョン番号、および使用可能な場合はカルチャ情報) と、公開キーおよびデジタル署名で構成されます。 このデジタル署名は、対応する秘密キーを使用してアセンブリ ファイルから生成されます。 アセンブリ ファイルにはアセンブリ マニフェストが格納されており、そこに、アセンブリを構成するすべてのファイルの名前とハッシュが含まれます。  
   
- アセンブリに厳密な名前を付けることで、アプリケーションやコンポーネントに一意の ID が与えられます。他のソフトウェアは、その ID を使用することで、対応するアプリケーションまたはコンポーネントを明示的に参照できます。 アセンブリに厳密な名前を付けると、悪意のあるコードを含むアセンブリのなりすましから保護することができます。 また、異なるバージョンのコンポーネント間でバージョンの整合性をとることもできます。 グローバル アセンブリ キャッシュ (GAC) に展開されるアセンブリには、厳密な名前を付ける必要があります。 詳しくは、「[厳密な名前付きアセンブリの作成と使用](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)」をご覧ください。  
+ アセンブリに厳密な名前を付けることで、アプリケーションやコンポーネントに一意の ID が与えられます。他のソフトウェアは、その ID を使用することで、対応するアプリケーションまたはコンポーネントを明示的に参照できます。 アセンブリに厳密な名前を付けると、悪意のあるコードを含むアセンブリのなりすましから保護することができます。 また、異なるバージョンのコンポーネント間でバージョンの整合性をとることもできます。 グローバル アセンブリ キャッシュ (GAC) に展開されるアセンブリには、厳密な名前を付ける必要があります。 詳しくは、「[厳密な名前付きアセンブリの作成と使用](../../app-domains/create-and-use-strong-named-assemblies.md)」をご覧ください。  
   
 ## <a name="partial-trust-in-adonet-20"></a>ADO.NET 2.0 での Partial Trust (部分信頼)  
  ADO.NET 2.0 では、.NET Framework Data Provider for SQL Server、.NET Framework Data Provider for OLE DB、.NET Framework Data Provider for ODBC、および .NET Framework Data Provider for Oracle のすべてが、部分的に信頼された環境でも実行できるようになりました。 .NET Framework の以前のリリースでは、信頼性のレベルが full-trust よりも低いアプリケーションでは <xref:System.Data.SqlClient> のみがサポートされていました。  
@@ -78,7 +78,7 @@ ms.locfileid: "69948264"
 |`Unrestricted`|このリソースに対する無制限のアクセス許可が宣言されているかどうかを示します。 このプロパティは、<xref:System.Security.Permissions.SecurityAttribute> から継承されています。|  
   
 #### <a name="connectionstring-syntax"></a>ConnectionString の構文  
- 次の例では、特定の接続文字列のみ使用できるようにするために、構成ファイルの `connectionStrings` 要素を使用する方法を示しています。 構成ファイルからの接続文字列の格納と取得の詳細については、「[接続文字列](../../../../docs/framework/data/adonet/connection-strings.md)」を参照してください。  
+ 次の例では、特定の接続文字列のみ使用できるようにするために、構成ファイルの `connectionStrings` 要素を使用する方法を示しています。 構成ファイルからの接続文字列の格納と取得の詳細については、「[接続文字列](connection-strings.md)」を参照してください。  
   
 ```xml  
 <connectionStrings>  
@@ -136,7 +136,7 @@ ms.locfileid: "69948264"
 ```  
   
 ### <a name="enabling-partial-trust-with-a-custom-permission-set"></a>カスタム アクセス許可セットを使用した Partial Trust の有効化  
- 特定のゾーンに対して <xref:System.Data.SqlClient> アクセス許可を有効にするには、システム管理者がカスタム アクセス許可セットを作成して、目的のゾーンに指定する必要があります。 `LocalIntranet` などの既定のアクセス許可セットは変更できません。 たとえば、がである<xref:System.Data.SqlClient>コード<xref:System.Security.Policy.Zone> `LocalIntranet`に対するアクセス許可を含めるには、システム管理者がの`LocalIntranet`アクセス許可セットをコピー <xref:System.Data.SqlClient>し、その名前を "customlocalintranet" に変更し、アクセス許可を追加し、インポートします。[caspol.exe (コードアクセスセキュリティポリシーツール)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)を使用して customlocalintranet アクセス許可セットを設定し、の`LocalIntranet_Zone`アクセス許可セットを customlocalintranet に設定します。  
+ 特定のゾーンに対して <xref:System.Data.SqlClient> アクセス許可を有効にするには、システム管理者がカスタム アクセス許可セットを作成して、目的のゾーンに指定する必要があります。 `LocalIntranet` などの既定のアクセス許可セットは変更できません。 たとえば、がである<xref:System.Data.SqlClient>コード<xref:System.Security.Policy.Zone> `LocalIntranet`に対するアクセス許可を含めるには、システム管理者がの`LocalIntranet`アクセス許可セットをコピー <xref:System.Data.SqlClient>し、その名前を "customlocalintranet" に変更し、アクセス許可を追加し、インポートします。[caspol.exe (コードアクセスセキュリティポリシーツール)](../../tools/caspol-exe-code-access-security-policy-tool.md)を使用して customlocalintranet アクセス許可セットを設定し、の`LocalIntranet_Zone`アクセス許可セットを customlocalintranet に設定します。  
   
 ### <a name="sample-permission-set"></a>サンプル アクセス許可セット  
  部分信頼のシナリオでの、.NET Framework Data Provider for SQL Server 用アクセス許可セットの例を次に示します。 カスタムアクセス許可セットの作成の詳細については、「 [Caspol.exe を使用したアクセス許可セットの構成](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100))」を参照してください。  
@@ -190,13 +190,13 @@ Failed, as expected: Request failed.
 ```  
   
 ## <a name="interoperability-with-unmanaged-code"></a>アンマネージ コードとの相互運用性  
- CLR の外部で実行されるコードはアンマネージ コードと呼ばれます。 したがって、CAS などのセキュリティ メカニズムをアンマネージ コードに適用することはできません。 アンマネージ コードの例としては、COM コンポーネント、ActiveX インターフェイス、Windows API 関数があります。 アンマネージ コードを実行する場合は、アプリケーションの全体的なセキュリティが損なわれないよう特別な考慮をする必要があります。 詳細については、「[アンマネージ コードとの相互運用](../../../../docs/framework/interop/index.md)」を参照してください。  
+ CLR の外部で実行されるコードはアンマネージ コードと呼ばれます。 したがって、CAS などのセキュリティ メカニズムをアンマネージ コードに適用することはできません。 アンマネージ コードの例としては、COM コンポーネント、ActiveX インターフェイス、Windows API 関数があります。 アンマネージ コードを実行する場合は、アプリケーションの全体的なセキュリティが損なわれないよう特別な考慮をする必要があります。 詳細については、「[アンマネージ コードとの相互運用](../../interop/index.md)」を参照してください。  
   
  .NET Framework は、COM 相互運用機能を介したアクセスを提供することによって、既存の COM コンポーネントとの下位互換性をサポートしています。 COM 相互運用ツールを使って適切な COM 型をインポートすることにより、.NET Framework アプリケーションに COM コンポーネントを組み込むことができます。 インポートが完了すると、COM 型を使用できるようになります。 アセンブリのメタデータをタイプ ライブラリにエクスポートし、マネージド コンポーネントを COM コンポーネントとして登録することで、COM クライアントからマネージド コードにアクセスすることもできます。 詳細については、「[高度な COM 相互運用性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [ADO.NET アプリケーションのセキュリティ保護](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [ADO.NET アプリケーションのセキュリティ保護](securing-ado-net-applications.md)
 - [ネイティブコードと .NET Framework コードのセキュリティ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
 - [ロール ベースのセキュリティ](../../../standard/security/role-based-security.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET の概要](ado-net-overview.md)

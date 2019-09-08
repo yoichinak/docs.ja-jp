@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 714ec7bda4f6c79b789d6c3029b68a04cef1342b
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ed9149eb5b88d648c02863e0fb0101e5503e1c73
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041225"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782143"
 ---
 # <a name="frequently-asked-questions"></a>よく寄せられる質問
 
 ここでは、[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] を実装するときに発生する可能性のある一般的な問題の対処法について説明します。
 
-[トラブルシューティング](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)では、その他の問題に対処します。
+[トラブルシューティング](troubleshooting.md)では、その他の問題に対処します。
 
 ## <a name="cannot-connect"></a>接続できない
 
 Q. データベースに接続できません。
 
-A: 接続文字列が正しいことと、SQL Server インスタンスが実行されていることを確認してください。 また、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では、名前付きパイプ プロトコルを有効にする必要があります。 詳細については、「[チュートリアルによる学習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)」を参照してください。
+A: 接続文字列が正しいことと、SQL Server インスタンスが実行されていることを確認してください。 また、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では、名前付きパイプ プロトコルを有効にする必要があります。 詳細については、「[チュートリアルによる学習](learning-by-walkthroughs.md)」を参照してください。
 
 ## <a name="changes-to-database-lost"></a>データベースの変更内容が失われる
 
@@ -40,7 +40,7 @@ A: 通常、接続は、クエリ結果を処理するまでは開いた状態�
 
 - 接続オブジェクトを使って <xref:System.Data.Linq.DataContext> が作成されている場合は、接続状態。
 
-- 接続文字列の設定 (たとえば、複数のアクティブな結果セット (MARS) の有効化)。 詳細については、「 [複数のアクティブな結果セット (MARS)](../../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)」を参照してください。
+- 接続文字列の設定 (たとえば、複数のアクティブな結果セット (MARS) の有効化)。 詳細については、「 [複数のアクティブな結果セット (MARS)](../multiple-active-result-sets-mars.md)」を参照してください。
 
 ## <a name="updating-without-querying"></a>クエリを使用しない更新
 
@@ -56,7 +56,7 @@ A: [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] にはセ
 
 Q. 予期しない結果がクエリから返されます。 どうなっているのか調べる方法はありますか。
 
-A: [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] には、生成された SQL コードを調べるためのツールがいくつか用意されています。 このうち、最も重要なものは <xref:System.Data.Linq.DataContext.Log%2A> です。 詳細については、「[デバッグのサポート](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)」を参照してください。
+A: [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] には、生成された SQL コードを調べるためのツールがいくつか用意されています。 このうち、最も重要なものは <xref:System.Data.Linq.DataContext.Log%2A> です。 詳細については、「[デバッグのサポート](debugging-support.md)」を参照してください。
 
 ## <a name="unexpected-stored-procedure-results"></a>予期しないストアド プロシージャ結果
 
@@ -110,13 +110,13 @@ select nax(i) AS MaxResult from t where name like 'hello'
 end
 ```
 
-詳細については、「[ストアドプロシージャを使用](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md)した操作のカスタマイズ」を参照してください。
+詳細については、「[ストアドプロシージャを使用](customizing-operations-by-using-stored-procedures.md)した操作のカスタマイズ」を参照してください。
 
 ## <a name="serialization-errors"></a>シリアル化のエラー
 
 Q. シリアル化しようとすると、次のエラーが表示されます。"Type ' system.string. ChangeTracker + StandardChangeTracker '...がシリアル化可能として設定されていません。 "
 
-A: [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のコード生成では、<xref:System.Runtime.Serialization.DataContractSerializer> のシリアル化がサポートされます。 <xref:System.Xml.Serialization.XmlSerializer> および <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> はサポートされません。 詳細については、「[Serialization](../../../../../../docs/framework/data/adonet/sql/linq/serialization.md)」 (シリアル化) を参照してください。
+A: [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のコード生成では、<xref:System.Runtime.Serialization.DataContractSerializer> のシリアル化がサポートされます。 <xref:System.Xml.Serialization.XmlSerializer> および <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> はサポートされません。 詳細については、「[Serialization](serialization.md)」 (シリアル化) を参照してください。
 
 ## <a name="multiple-dbml-files"></a>複数の DBML ファイル
 
@@ -210,13 +210,13 @@ Q. <xref:System.Data.Linq.DataContext> プールに役立つコンストラク�
 
 A: <xref:System.Data.Linq.DataContext> のインスタンスは再使用しないようにしてください。 <xref:System.Data.Linq.DataContext> はそれぞれ、特定の 1 つの編集/クエリ セッション用の状態 (ID キャッシュを含む) を保持します。 データベースの現在の状態に基づく新しいインスタンスを得るには、新しい <xref:System.Data.Linq.DataContext> を使用してください。
 
-それでも、基になる ADO.NET 接続プールを使用できます。 詳しくは、「[SQL Server の接続プール (ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)」をご覧ください。
+それでも、基になる ADO.NET 接続プールを使用できます。 詳しくは、「[SQL Server の接続プール (ADO.NET)](../../sql-server-connection-pooling.md)」をご覧ください。
 
 ## <a name="second-datacontext-is-not-updated"></a>2 番目の DataContext が更新されない
 
 Q. データベース内の値を格納するために、<xref:System.Data.Linq.DataContext> の 1 つのインスタンスを使用しました。 しかし、同じデータベースに対する 2 番目の <xref:System.Data.Linq.DataContext> では、更新された値が反映されません。 2 番目の <xref:System.Data.Linq.DataContext> インスタンスは、キャッシュされた値を返すようです。
 
-A: この動作は意図されたものです。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、最初のインスタンスと同じインスタンス/値を返し続けます。 更新の際には、オプティミスティック同時実行が使用されます。 元のデータを使ってデータベースの現在の状態を検査し、実際に未変更であることをアサートします。 変更されている場合は競合が発生するため、アプリケーションでそれを解決する必要があります。 1 つのオプションとして、アプリケーションは、元の状態をデータベースの現在の状態にリセットして、更新を再試行できます。 詳細については、「[方法 :変更の競合](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)を管理します。
+A: この動作は意図されたものです。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、最初のインスタンスと同じインスタンス/値を返し続けます。 更新の際には、オプティミスティック同時実行が使用されます。 元のデータを使ってデータベースの現在の状態を検査し、実際に未変更であることをアサートします。 変更されている場合は競合が発生するため、アプリケーションでそれを解決する必要があります。 1 つのオプションとして、アプリケーションは、元の状態をデータベースの現在の状態にリセットして、更新を再試行できます。 詳細については、「[方法 :変更の競合](how-to-manage-change-conflicts.md)を管理します。
 
 また、<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> を false に設定することもできます。この場合、キャッシュと変更追跡が無効になります。 その後は、クエリを実行するたびに最新の値を取得できます。
 
@@ -228,6 +228,6 @@ A: 読み取り専用モードでは、変更を追跡するコンテキスト�
 
 ## <a name="see-also"></a>関連項目
 
-- [参照](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [トラブルシューティング](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)
-- [LINQ to SQL におけるセキュリティ](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)
+- [参照](reference.md)
+- [トラブルシューティング](troubleshooting.md)
+- [LINQ to SQL におけるセキュリティ](security-in-linq-to-sql.md)

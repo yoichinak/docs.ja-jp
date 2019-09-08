@@ -2,12 +2,12 @@
 title: XML スキーマ (XSD) からの DataSet リレーショナル構造の派生
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: 29b905c42f15cad4eb8521c4d702b56093982445
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: d15aa02b41b9a34b00298aeb32d2e3998de8feba
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203780"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786341"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>XML スキーマ (XSD) からの DataSet リレーショナル構造の派生
 ここでは、XML スキーマ定義言語 (XSD) スキーマ ドキュメントから `DataSet` のリレーショナル スキーマを生成する方法についての概要を説明します。 一般に、スキーマ要素`complexType`の各子要素に対して`DataSet`、でテーブルが生成されます。 テーブル構造は、複合型の定義に基づいて決定されます。 テーブルは、スキーマ内`DataSet`の最上位の要素に対して、で作成されます。 ただし、 `complexType`要素が別`complexType` `complexType`の要素の内部に入れ子になっている場合は、最上位レベルの要素に対してのみ`complexType`テーブルが作成され`DataTable` `DataSet`ます。この場合、入れ子になった要素は内のにマップされます。  
@@ -98,4 +98,4 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
   
 ## <a name="see-also"></a>関連項目
 
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET の概要](../ado-net-overview.md)

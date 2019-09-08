@@ -2,12 +2,12 @@
 title: 外部マップ
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-ms.openlocfilehash: 70372473eb2de5d3c4751e237e7beb66315b690e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 39cdd7b23bd90ff8938dda9eee630149ce6ddbea
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950327"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793989"
 ---
 # <a name="external-mapping"></a>外部マップ
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]では、*外部マッピング*がサポートされています。このプロセスでは、個別の XML ファイルを使用して、データベースのデータモデルとオブジェクトモデルの間のマッピングを指定します。 外部マッピング ファイルを使用すると、次のような利点があります。  
@@ -23,7 +23,7 @@ ms.locfileid: "69950327"
   
 - マッピング ファイルは XML ファイルである必要があります。  
   
-- XML マッピング ファイルは、XML スキーマ定義ファイルに対して有効である必要があります。 詳細については、「[方法 :DBML ファイルと外部マッピングファイル](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)を検証します。  
+- XML マッピング ファイルは、XML スキーマ定義ファイルに対して有効である必要があります。 詳細については、「[方法 :DBML ファイルと外部マッピングファイル](how-to-validate-dbml-and-external-mapping-files.md)を検証します。  
   
 - 外部マッピングは、属性ベースのマッピングをオーバーライドします。 言い換えると、外部マッピング ソースを使って <xref:System.Data.Linq.DataContext> を作成した場合、<xref:System.Data.Linq.DataContext> はクラスに作成したすべてのマッピング属性を無視します。 この動作は、クラスが外部マッピング ファイルに含まれるかどうかにかかわらず適用されます。  
   
@@ -32,10 +32,10 @@ ms.locfileid: "69950327"
 ## <a name="xml-schema-definition-file"></a>XML スキーマ定義ファイル  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の外部マッピングは、以下のような XML スキーマ定義に対して有効である必要があります。  
   
- このスキーマ定義ファイルを、DBML ファイルの検証に使われるスキーマ定義ファイルと区別してください。 詳細については、「 [LINQ to SQL でのコード生成](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)」を参照してください。  
+ このスキーマ定義ファイルを、DBML ファイルの検証に使われるスキーマ定義ファイルと区別してください。 詳細については、「 [LINQ to SQL でのコード生成](code-generation-in-linq-to-sql.md)」を参照してください。  
   
 > [!NOTE]
-> また、Visual Studio ユーザーは、この XSD ファイルを [XML スキーマ] ダイアログボックスの "LinqToSqlMapping" として検索します。 外部マッピングファイルを検証するためにこのファイルを正しく使用[するには、「方法:DBML ファイルと外部マッピングファイル](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)を検証します。  
+> また、Visual Studio ユーザーは、この XSD ファイルを [XML スキーマ] ダイアログボックスの "LinqToSqlMapping" として検索します。 外部マッピングファイルを検証するためにこのファイルを正しく使用[するには、「方法:DBML ファイルと外部マッピングファイル](how-to-validate-dbml-and-external-mapping-files.md)を検証します。  
   
 ```  
 ?<?xml version="1.0" encoding="utf-16"?>  
@@ -143,6 +143,6 @@ elementFormDefault="qualified" >
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to SQL でのコード生成](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
-- [リファレンス](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [方法: 外部ファイルとしてオブジェクトモデルを生成する](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+- [LINQ to SQL でのコード生成](code-generation-in-linq-to-sql.md)
+- [リファレンス](reference.md)
+- [方法: 外部ファイルとしてオブジェクトモデルを生成する](how-to-generate-the-object-model-as-an-external-file.md)

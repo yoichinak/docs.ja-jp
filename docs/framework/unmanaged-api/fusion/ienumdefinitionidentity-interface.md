@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bbd8476b7778de6d0023f3a8522a44be6626884
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 88c2513229b6a4183cadbdc78e505910e01e152c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751520"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796474"
 ---
 # <a name="ienumdefinitionidentity-interface"></a>IEnumDefinitionIdentity インターフェイス
-コレクションの列挙子として機能`IDefinitionIdentity`オブジェクト。  
+オブジェクトの`IDefinitionIdentity`コレクションの列挙子として機能します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -55,19 +55,19 @@ IEnumDefinitionIdentity : IUnknown {
   
 |メソッド|説明|  
 |------------|-----------------|  
-|`IEnumDefinitionIdentity::Clone`|新しいインターフェイス ポインターを取得`IEnumDefinitionIdentity`これと同じメンバーを含むオブジェクト`IEnumDefinitionIdentity`します。|  
-|`IEnumDefinitionIdentity::Next`|指定した数を取得`IDefinitionIdentity`オブジェクト、現在の位置で開始します。|  
-|`IEnumDefinitionIdentity::Reset`|これの先頭に、命令ポインターを移動`IEnumDefinitionIdentity`します。|  
-|`IEnumDefinitionIdentity::Skip`|指定数の要素を現在の位置からでは、転送、命令ポインターを移動します。|  
+|`IEnumDefinitionIdentity::Clone`|`IEnumDefinitionIdentity` この`IEnumDefinitionIdentity`と同じメンバーを含む新しいオブジェクトへのインターフェイスポインターを取得します。|  
+|`IEnumDefinitionIdentity::Next`|現在の`IDefinitionIdentity`位置から開始して、指定した数のオブジェクトを取得します。|  
+|`IEnumDefinitionIdentity::Reset`|命令ポインターをこの`IEnumDefinitionIdentity`の先頭に移動します。|  
+|`IEnumDefinitionIdentity::Skip`|現在位置を開始位置として、指定した要素数だけ前方に命令ポインターを移動します。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** Isolation.h  
+ **ヘッダー:** 分離 .h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [Fusion インターフェイス](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [IDefinitionIdentity インターフェイス](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)
+- [Fusion インターフェイス](fusion-interfaces.md)
+- [IDefinitionIdentity インターフェイス](idefinitionidentity-interface.md)

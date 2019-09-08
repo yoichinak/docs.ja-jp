@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: f9324370539b41d21365e0bd126c2f632ac67789
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: db538634dccf22fb954ccf0827909e5cf3563f77
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044286"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798165"
 ---
 # <a name="configuring-message-logging"></a>メッセージ ログの構成
 
@@ -47,7 +47,7 @@ Windows Communication Foundation (WCF) では、既定ではメッセージは�
 </system.serviceModel>
 ```
 
-メッセージログの設定の詳細については、「[トレースとメッセージログの推奨設定](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)」を参照してください。
+メッセージログの設定の詳細については、「[トレースとメッセージログの推奨設定](./tracing/recommended-settings-for-tracing-and-message-logging.md)」を参照してください。
 
 `add` を使用して、使用するリスナーの名前と型を指定することができます。 この例の構成では、リスナーに "messages" という名前を付け、使用する型として標準の .NET Framework トレース リスナー (`System.Diagnostics.XmlWriterTraceListener`) を追加しています。 `System.Diagnostics.XmlWriterTraceListener` を使用する場合は、構成ファイルで出力ファイルの場所と名前を指定する必要があります。 指定するには、`initializeData` をログ ファイルの名前に設定します。 それ以外の場合、例外がスローされます。 また、既定のファイルにログを出力するカスタム リスナーを実装することもできます。
 
@@ -62,7 +62,7 @@ Windows Communication Foundation (WCF) では、既定ではメッセージは�
 <source name="System.ServiceModel.MessageLogging" switchValue="Verbose">
 ```
 
-トレース ソースを無効にする場合は、代わりに `logMessagesAtServiceLevel` 要素の `logMalformedMessages` 属性、`logMessagesAtTransportLevel` 属性、および `messageLogging` 属性を使用する必要があります。 これらすべての属性を `false` に設定します。 この設定を行うには、構成エディター UI インターフェイスで前のコード例の構成ファイルを使用するか、または WMI を使用します。 構成エディターツールの詳細については、「[構成エディターツール (svcconfigeditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)」を参照してください。 WMI の詳細については、「[診断のための Windows Management Instrumentation の使用](../../../../docs/framework/wcf/diagnostics/wmi/index.md)」を参照してください。
+トレース ソースを無効にする場合は、代わりに `logMessagesAtServiceLevel` 要素の `logMalformedMessages` 属性、`logMessagesAtTransportLevel` 属性、および `messageLogging` 属性を使用する必要があります。 これらすべての属性を `false` に設定します。 この設定を行うには、構成エディター UI インターフェイスで前のコード例の構成ファイルを使用するか、または WMI を使用します。 構成エディターツールの詳細については、「[構成エディターツール (svcconfigeditor.exe)](../configuration-editor-tool-svcconfigeditor-exe.md)」を参照してください。 WMI の詳細については、「[診断のための Windows Management Instrumentation の使用](./wmi/index.md)」を参照してください。
 
 ## <a name="logging-levels-and-options"></a>ログ レベルとオプション
 
@@ -101,7 +101,7 @@ WCF は、サービスとトランスポートの2つの異なるレベルでメ
 
 構成ファイルでトレース リスナーを定義していない場合は、ログ レベルの指定に関係なくログ出力は生成されません。
 
-このセクションで説明されている属性などのメッセージ ログ オプションは、実行時に WMI (Windows Management Instrumentation) を使用して変更できます。 これを行うには、 [AppDomainInfo](../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md)インスタンスにアクセスします。このインスタンスは`LogMessagesAtServiceLevel`、 `LogMessagesAtTransportLevel`、、 `LogMalformedMessages`およびのブール型プロパティを公開します。 そのため、メッセージ ログ用のトレース リスナーを構成していても、これらのオプションを構成で `false` に設定している場合は、後でアプリケーションを実行しているときに `true` に変更できます。 これで、メッセージ ログが実行時に有効になります。 同様に、構成ファイルでメッセージ ログを有効にしている場合は、実行時に WMI を使用して無効にできます。 詳細については、「[診断のための Windows Management Instrumentation の使用](../../../../docs/framework/wcf/diagnostics/wmi/index.md)」を参照してください。
+このセクションで説明されている属性などのメッセージ ログ オプションは、実行時に WMI (Windows Management Instrumentation) を使用して変更できます。 これを行うには、 [AppDomainInfo](./wmi/appdomaininfo.md)インスタンスにアクセスします。このインスタンスは`LogMessagesAtServiceLevel`、 `LogMessagesAtTransportLevel`、、 `LogMalformedMessages`およびのブール型プロパティを公開します。 そのため、メッセージ ログ用のトレース リスナーを構成していても、これらのオプションを構成で `false` に設定している場合は、後でアプリケーションを実行しているときに `true` に変更できます。 これで、メッセージ ログが実行時に有効になります。 同様に、構成ファイルでメッセージ ログを有効にしている場合は、実行時に WMI を使用して無効にできます。 詳細については、「[診断のための Windows Management Instrumentation の使用](./wmi/index.md)」を参照してください。
 
 メッセージ ログの `source` フィールドは、要求メッセージを送信または受信する際に要求/応答または一方向の要求については、サービス モデル レイヤーまたはトランスポート レイヤーで、または正しくないメッセージの場合に、メッセージを記録するコンテキストを指定します。
 
@@ -174,6 +174,6 @@ WCF は、サービスとトランスポートの2つの異なるレベルでメ
 
 ## <a name="see-also"></a>関連項目
 
-- [\<messageLogging >](../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
-- [メッセージ ログ](../../../../docs/framework/wcf/diagnostics/message-logging.md)
-- [トレースとメッセージ ログの推奨設定](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)
+- [\<messageLogging >](../../configure-apps/file-schema/wcf/messagelogging.md)
+- [メッセージ ログ](message-logging.md)
+- [トレースとメッセージ ログの推奨設定](./tracing/recommended-settings-for-tracing-and-message-logging.md)

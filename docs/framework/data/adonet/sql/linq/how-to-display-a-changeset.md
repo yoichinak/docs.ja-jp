@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 126e7245-c5a0-4ebf-800d-cc1fcf9cd0ab
-ms.openlocfilehash: 92acee0d36634ea09c245418fcc7a8b97d208aa6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5f49e123e6e980501d330eeecf2719023cdff8e7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903111"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781967"
 ---
 # <a name="how-to-display-a-changeset"></a>方法: 変更セットを表示する
 <xref:System.Data.Linq.DataContext> によって追跡される変更を <xref:System.Data.Linq.DataContext.GetChangeSet%2A> を使って表示することができます。  
@@ -53,4 +53,4 @@ Total changes: {Added: 0, Removed: 0, Modified: 8}
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグのサポート](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+- [デバッグのサポート](debugging-support.md)

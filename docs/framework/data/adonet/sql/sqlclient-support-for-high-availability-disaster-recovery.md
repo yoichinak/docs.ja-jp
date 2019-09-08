@@ -2,12 +2,12 @@
 title: 高可用性障害復旧のための SqlClient サポート
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 104fdd78ce3f4b9c18f09fc41fddebe46815d217
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b51c3cb1eb3c8726b7de007a1c1519eae0733392
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938474"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791615"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>高可用性障害復旧のための SqlClient サポート
 このトピックでは、高可用性、ディザスターリカバリー、AlwaysOn 可用性グループのための SqlClient サポート (.NET Framework 4.5 で追加) について説明します。  AlwaysOn 可用性グループ機能が SQL Server 2012 に追加されました。 AlwaysOn 可用性グループの詳細については、「SQL Server オンラインブック」を参照してください。  
@@ -98,5 +98,5 @@ ms.locfileid: "69938474"
   
 ## <a name="see-also"></a>関連項目
 
-- [SQL Server の機能と ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server の機能と ADO.NET](sql-server-features-and-adonet.md)
+- [ADO.NET の概要](../ado-net-overview.md)

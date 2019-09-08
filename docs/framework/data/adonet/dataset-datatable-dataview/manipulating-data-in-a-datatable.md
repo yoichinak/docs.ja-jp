@@ -2,12 +2,12 @@
 title: DataTable 内のデータの操作
 ms.date: 03/30/2017
 ms.assetid: 5cb86d48-a987-4af4-80e0-8cc2c8373d62
-ms.openlocfilehash: 83b1a4b6c0e477ac918a2bb4e454718fc58ece0b
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 421680a4f39dd68c09dfe20e62f2eec86259b9f0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203489"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786153"
 ---
 # <a name="manipulating-data-in-a-datatable"></a>DataTable 内のデータの操作
 <xref:System.Data.DataTable> 内に <xref:System.Data.DataSet> を作成した後で、データベース内のテーブルを使用する場合と同じ操作を実行できます。 テーブル内のデータの追加、表示、編集、および削除を実行したり、エラーとイベントを監視したり、テーブル内のデータを照会したりできます。 **DataTable**内のデータを変更する場合は、変更が正確であるかどうかを確認し、変更をプログラムによって受け入れるか拒否するかを決定することもできます。  
@@ -41,4 +41,4 @@ ms.locfileid: "70203489"
 
 - [DataTables](datatables.md)
 - [DataTable イベントの処理](handling-datatable-events.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET の概要](../ado-net-overview.md)

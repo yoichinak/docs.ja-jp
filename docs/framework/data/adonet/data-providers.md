@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: fc338b176ee0b20800b83febe05ed2fe695cecb0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3891cae272d93c2bb1ba8929a40fbdb8c332765c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949814"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785641"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework データ プロバイダー
 .NET Framework データプロバイダーは、データベースへの接続、コマンドの実行、および結果の取得に使用されます。 その結果は、直接処理されるか、必要に応じてユーザーに公開されるように <xref:System.Data.DataSet> に格納されるか、取得したデータセットを複数のソースからのデータと組み合わせるか、または、層間でリモート処理されます。 .NET Framework データプロバイダーは軽量であり、データソースとコードの間に最小限のレイヤーを作成することにより、機能を損なうことなくパフォーマンスを向上させることができます。  
@@ -54,12 +54,12 @@ ms.locfileid: "69949814"
 > [!NOTE]
 > ODBC 用の .NET Framework Data Provider は、OLE DB の .NET Framework Data Provider に似たアーキテクチャを備えています。たとえば、ODBC サービスコンポーネントを呼び出します。  
   
- ![データプロバイダー](../../../../docs/framework/data/adonet/media/netdataproviders-bpuedev11.gif "NETDataProviders_bpuedev11")  
+ ![データプロバイダー](./media/netdataproviders-bpuedev11.gif "NETDataProviders_bpuedev11")  
 .NET Framework Data Provider for SQL Server と .NET Framework Data Provider for OLE DB の比較  
   
  SQL Server クラスの .NET Framework Data Provider は、 <xref:System.Data.SqlClient>名前空間にあります。  
   
- SQL Server の .NET Framework Data Provider では、ローカルトランザクションと分散トランザクションの両方がサポートされます。 分散トランザクションの場合、既定では SQL Server の .NET Framework Data Provider が自動的にトランザクションに参加し、トランザクションの詳細を Windows コンポーネントサービス<xref:System.Transactions>またはから取得します。 詳細については、「[トランザクションと同時実行](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)」を参照してください。  
+ SQL Server の .NET Framework Data Provider では、ローカルトランザクションと分散トランザクションの両方がサポートされます。 分散トランザクションの場合、既定では SQL Server の .NET Framework Data Provider が自動的にトランザクションに参加し、トランザクションの詳細を Windows コンポーネントサービス<xref:System.Transactions>またはから取得します。 詳細については、「[トランザクションと同時実行](transactions-and-concurrency.md)」を参照してください。  
   
  名前空間 `System.Data.SqlClient` をユーザーのアプリケーションにインクルードする方法を次のコード サンプルで示します。  
   
@@ -72,7 +72,7 @@ using System.Data.SqlClient;
 ```  
   
 ## <a name="net-framework-data-provider-for-ole-db"></a>.NET Framework Data Provider for OLE DB  
- OLE DB 用の .NET Framework Data Provider (OleDb) は、COM 相互運用機能を介してネイティブ OLE DB を使用して、データアクセスを有効にします。 OLE DB の .NET Framework Data Provider では、ローカルトランザクションと分散トランザクションの両方がサポートされます。 分散トランザクションの場合、既定では OLE DB の .NET Framework Data Provider は、トランザクションに自動的に参加し、トランザクションの詳細を Windows コンポーネントサービスから取得します。 詳細については、「[トランザクションと同時実行](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)」を参照してください。  
+ OLE DB 用の .NET Framework Data Provider (OleDb) は、COM 相互運用機能を介してネイティブ OLE DB を使用して、データアクセスを有効にします。 OLE DB の .NET Framework Data Provider では、ローカルトランザクションと分散トランザクションの両方がサポートされます。 分散トランザクションの場合、既定では OLE DB の .NET Framework Data Provider は、トランザクションに自動的に参加し、トランザクションの詳細を Windows コンポーネントサービスから取得します。 詳細については、「[トランザクションと同時実行](transactions-and-concurrency.md)」を参照してください。  
   
  次の表は、ADO.NET でテストされたプロバイダーを示しています。  
   
@@ -100,7 +100,7 @@ using System.Data.OleDb;
 ```  
   
 ## <a name="net-framework-data-provider-for-odbc"></a>.NET Framework Data Provider for ODBC  
- .NET Framework Data Provider for ODBC (odbc) では、ネイティブ ODBC ドライバーマネージャー (DM) を使用してデータアクセスを有効にします。 ODBC データ プロバイダーはローカル トランザクションと分散トランザクションのどちらもサポートします。 分散トランザクションの場合、既定で、ODBC データ プロバイダーは自動的にトランザクションに参加し、トランザクションの詳細を Windows コンポーネント サービスから取得します。 詳細については、「[トランザクションと同時実行](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)」を参照してください。  
+ .NET Framework Data Provider for ODBC (odbc) では、ネイティブ ODBC ドライバーマネージャー (DM) を使用してデータアクセスを有効にします。 ODBC データ プロバイダーはローカル トランザクションと分散トランザクションのどちらもサポートします。 分散トランザクションの場合、既定で、ODBC データ プロバイダーは自動的にトランザクションに参加し、トランザクションの詳細を Windows コンポーネント サービスから取得します。 詳細については、「[トランザクションと同時実行](transactions-and-concurrency.md)」を参照してください。  
   
  次の表は、ADO.NET でテストされた ODBC ドライバーを示しています。  
   
@@ -126,7 +126,7 @@ using System.Data.Odbc;
 > ODBC の .NET Framework Data Provider には、MDAC 2.6 以降のバージョンが必要です。 MDAC 2.8 SP1 をお勧めします。 MDAC 2.8 SP1 は「 [データ アクセスおよびストレージ デベロッパー センター](https://go.microsoft.com/fwlink/?linkid=4173)」からダウンロードできます。  
   
 ## <a name="net-framework-data-provider-for-oracle"></a>.NET Framework Oracle 用データ プロバイダー  
- .NET Framework Data Provider for Oracle (System.data.oracleclient) を使用すると、oracle クライアント接続ソフトウェアを介して Oracle データソースへのデータアクセスが可能になります。 このデータ プロバイダーは Oracle クライアント ソフトウェア バージョン 8.1.7 以降をサポートしています。 データ プロバイダーはローカル トランザクションと分散トランザクションのどちらもサポートします。 詳細については、「[トランザクションと同時実行](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)」を参照してください。  
+ .NET Framework Data Provider for Oracle (System.data.oracleclient) を使用すると、oracle クライアント接続ソフトウェアを介して Oracle データソースへのデータアクセスが可能になります。 このデータ プロバイダーは Oracle クライアント ソフトウェア バージョン 8.1.7 以降をサポートしています。 データ プロバイダーはローカル トランザクションと分散トランザクションのどちらもサポートします。 詳細については、「[トランザクションと同時実行](transactions-and-concurrency.md)」を参照してください。  
   
  Oracle の .NET Framework Data Provider では、oracle データソースに接続する前に、システムに Oracle クライアントソフトウェア (バージョン8.1.7 以降以降) が必要です。  
   
@@ -159,6 +159,5 @@ using System.Data.OracleClient;
   
 ## <a name="see-also"></a>関連項目
 
-- [ADO.NET の概要](../../../../docs/framework/data/adonet/ado-net-overview.md)
-- [ADO.NET でのデータの取得および変更](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET の概要](ado-net-overview.md)
+- [ADO.NET でのデータの取得および変更](retrieving-and-modifying-data.md)

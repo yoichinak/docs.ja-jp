@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6b7f9cb-81be-44e1-bb94-56137954876d
-ms.openlocfilehash: ef4831af0b7bafed7d40bd86d2684c73d84a0f93
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 1387dad1f588770384422bf579ed547271b30c0a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634159"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794553"
 ---
 # <a name="retrieving-identity-or-autonumber-values"></a>ID 値および Autonumber 値の取得
 
@@ -23,7 +23,7 @@ ADO.NET アプリケーションでは、`Update` の `DataAdapter` メソッド
 Microsoft Access Jet データベース エンジンなど、一部のデータベース エンジンは、出力パラメーターをサポートしておらず、複数のステートメントを 1 回のバッチで処理することもできません。 Jet データベース エンジンを使用する場合は、`RowUpdated` の `DataAdapter` イベントのイベント ハンドラーで別途 SELECT コマンドを実行することによって、挿入行に対して生成された新しい AutoNumber 値を取得できます。
 
 > [!NOTE]
-> 自動インクリメント値を使用する代わりに、クライアント コンピューター側で <xref:System.Guid.NewGuid%2A> オブジェクトの <xref:System.Guid> メソッドを使用して GUID (グローバルな一意識別子) を生成し、新しい行が挿入されるたびにそれをサーバーにコピーする方法もあります。 `NewGuid` メソッドでは、値の重複を高い確率で防ぐアルゴリズムを使って 16 バイトのバイナリ値が生成されます。 SQL Server データベースでは、Transact-SQL の `uniqueidentifier` 関数を使って自動的に生成される GUID が、`NEWID()` 列に格納されます。 GUID を主キーとして使用すると、パフォーマンスが低下する場合があります。 SQL Server のサポートを提供する、`NEWSEQUENTIALID()`をグローバルに一意であることは保証されませんより効率的にインデックスをシーケンシャルな GUID を生成する関数。
+> 自動インクリメント値を使用する代わりに、クライアント コンピューター側で <xref:System.Guid.NewGuid%2A> オブジェクトの <xref:System.Guid> メソッドを使用して GUID (グローバルな一意識別子) を生成し、新しい行が挿入されるたびにそれをサーバーにコピーする方法もあります。 `NewGuid` メソッドでは、値の重複を高い確率で防ぐアルゴリズムを使って 16 バイトのバイナリ値が生成されます。 SQL Server データベースでは、Transact-SQL の `uniqueidentifier` 関数を使って自動的に生成される GUID が、`NEWID()` 列に格納されます。 GUID を主キーとして使用すると、パフォーマンスが低下する場合があります。 SQL Server は、グローバルに`NEWSEQUENTIALID()`一意であることが保証されていないが、より効率的にインデックスを作成できる、シーケンシャルな GUID を生成する関数のサポートを提供します。
 
 ## <a name="retrieving-sql-server-identity-column-values"></a>SQL Server の ID 列値の取得
 
@@ -32,10 +32,10 @@ Microsoft SQL Server を使用している場合は、出力パラメーター�
 |関数|説明|
 |--------------|-----------------|
 |SCOPE_IDENTITY|現在の実行スコープ内の最後の ID 値を返します。 通常は、SCOPE_IDENTITY を使用することをお勧めします。|
-|@@IDENTITY|現在のセッション内の任意のテーブルで生成された最後の ID 値を保持します。 @@IDENTITYトリガーによって影響を受けることができますと予想される id 値を返すことができません。|
+|@@IDENTITY|現在のセッション内の任意のテーブルで生成された最後の ID 値を保持します。 @@IDENTITYはトリガーの影響を受ける可能性があり、予想される id 値を返すことはできません。|
 |IDENT_CURRENT|任意のセッションとスコープ内の特定のテーブルに対して生成された最後の ID 値を返します。|
 
- 次のストアド プロシージャに 1 行を挿入する方法を示します、**カテゴリ**テーブルし、出力パラメーターを使用して、TRANSACT-SQL の SCOPE_IDENTITY() 関数によって生成された新しい id 値を返します。
+ 次のストアドプロシージャは、 **Categories**テーブルに行を挿入し、output パラメーターを使用して、transact-sql SCOPE_IDENTITY () 関数によって生成された新しい id 値を返す方法を示しています。
 
 ```sql
 CREATE PROCEDURE dbo.InsertCategory
@@ -46,7 +46,7 @@ INSERT INTO Categories (CategoryName) VALUES(@CategoryName)
 SET @Identity = SCOPE_IDENTITY()
 ```
 
-このストアド プロシージャは <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> オブジェクトの <xref:System.Data.SqlClient.SqlDataAdapter> のソースとして指定できます。 <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> の <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> プロパティには、有効な <xref:System.Data.CommandType.StoredProcedure> を設定する必要があります。 ID の出力を取得するには、<xref:System.Data.SqlClient.SqlParameter> を <xref:System.Data.ParameterDirection> に設定した <xref:System.Data.ParameterDirection.Output> を作成します。 ときに、`InsertCommand`が処理されると、自動的にインクリメントされた id 値が返され、内に配置、 **CategoryID**設定した場合は、現在の行の列、<xref:System.Data.SqlClient.SqlCommand.UpdatedRowSource%2A>挿入コマンドのプロパティ`UpdateRowSource.OutputParameters`または`UpdateRowSource.Both`.
+このストアド プロシージャは <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> オブジェクトの <xref:System.Data.SqlClient.SqlDataAdapter> のソースとして指定できます。 <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> の <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> プロパティには、有効な <xref:System.Data.CommandType.StoredProcedure> を設定する必要があります。 ID の出力を取得するには、<xref:System.Data.SqlClient.SqlParameter> を <xref:System.Data.ParameterDirection> に設定した <xref:System.Data.ParameterDirection.Output> を作成します。 `UpdateRowSource.Both` <xref:System.Data.SqlClient.SqlCommand.UpdatedRowSource%2A> `UpdateRowSource.OutputParameters`が処理されると、挿入コマンドのプロパティをまたはに設定すると、自動インクリメントされた id 値が返され、現在の行の CategoryID 列に配置されます。 `InsertCommand`
 
 挿入コマンドで、INSERT ステートメントと (新しい ID 値を返す) SELECT ステートメントの両方を含むバッチを実行した場合、挿入コマンドの `UpdatedRowSource` プロパティを `UpdateRowSource.FirstReturnedRecord` に設定することによって新しい値を取得できます。
 
@@ -55,7 +55,7 @@ SET @Identity = SCOPE_IDENTITY()
 
 ## <a name="merging-new-identity-values"></a>新しい ID 値の結合
 
-`GetChanges` の `DataTable` は、変更行だけを含んだコピーを作成するメソッドです。作成した新しいコピーは `Update` の `DataAdapter` メソッドの呼び出し時に使用できます。 この方法を用いると、変更された行を別のコンポーネントにマーシャリングして更新を実行できます。 更新後、このコピーには、元の `DataTable` に再び結合する必要のある新しい ID 値が格納されている可能性もあります。 新しい ID 値は、おそらく `DataTable` 内の元の値とは異なります。 マージを元の値の実行に、 **AutoIncrement**特定して、元の既存の行を更新するには、コピーに列を保持する必要があります`DataTable`を含む新しい行を追加するのではなく新しい id 値。 しかし、既定では、`Update` の `DataAdapter` メソッドを呼び出した後、元の値は失われてしまいます。更新された `AcceptChanges` ごとに `DataRow` が暗黙的に呼び出されるためです。
+`GetChanges` の `DataTable` は、変更行だけを含んだコピーを作成するメソッドです。作成した新しいコピーは `Update` の `DataAdapter` メソッドの呼び出し時に使用できます。 この方法を用いると、変更された行を別のコンポーネントにマーシャリングして更新を実行できます。 更新後、このコピーには、元の `DataTable` に再び結合する必要のある新しい ID 値が格納されている可能性もあります。 新しい ID 値は、おそらく `DataTable` 内の元の値とは異なります。 マージを実行するには、コピー内の**AutoIncrement**列の元の値を保持し、新しい id 値を含む新しい行を追加するのでは`DataTable`なく、元ので既存の行を検索して更新できるようにする必要があります. しかし、既定では、`Update` の `DataAdapter` メソッドを呼び出した後、元の値は失われてしまいます。更新された `AcceptChanges` ごとに `DataRow` が暗黙的に呼び出されるためです。
 
 `DataColumn` の更新処理中、`DataRow` の `DataAdapter` に格納されていた元の値を保持するには、次の 2 とおりの方法があります。
 
@@ -99,16 +99,16 @@ WHERE ShipperID = SCOPE_IDENTITY();
 
 ## <a name="retrieving-microsoft-access-autonumber-values"></a>Microsoft Access の Autonumber 値の取得
 
-このセクションでは、Jet 4.0 データベースから `Autonumber` 値を取得する方法を例で示します。 Jet データベース エンジンは、複数のステートメントをバッチとして実行することも、出力パラメーターを使用することもできません。そのため、前述した方法では、挿入行に割り当てられた新しい `Autonumber` 値を取得することはできません。 ただし、コードを追加することができます、 `RowUpdated` @ 独立した SELECT を実行するイベント ハンドラー@IDENTITY新しいを取得するステートメント`Autonumber`値。
+このセクションでは、Jet 4.0 データベースから `Autonumber` 値を取得する方法を例で示します。 Jet データベース エンジンは、複数のステートメントをバッチとして実行することも、出力パラメーターを使用することもできません。そのため、前述した方法では、挿入行に割り当てられた新しい `Autonumber` 値を取得することはできません。 ただし、別の SELECT @ `RowUpdated` @IDENTITYステートメントを実行するコードをイベントハンドラーに追加して、新しい`Autonumber`値を取得することもできます。
 
 ### <a name="example"></a>例
 
-この例では、`MissingSchemaAction.AddWithKey` を使ってスキーマ情報を追加する代わりに、あらかじめ適切なスキーマで `DataTable` を構成した後、<xref:System.Data.OleDb.OleDbDataAdapter> を呼び出して `DataTable` にデータを格納しています。 この場合、 **CategoryID**列を設定して、0 から始まる挿入された行ごとに割り当てられた値をデクリメントするように構成<xref:System.Data.DataColumn.AutoIncrement%2A>に`true`、<xref:System.Data.DataColumn.AutoIncrementSeed%2A>を 0 にし、<xref:System.Data.DataColumn.AutoIncrementStep%2A>を-1 にします。 その後、2 つの新しい行を追加し、`GetChanges` を使って変更行を新しい `DataTable` に追加します。`Update` メソッドには、このデータ テーブルが渡されます。
+この例では、`MissingSchemaAction.AddWithKey` を使ってスキーマ情報を追加する代わりに、あらかじめ適切なスキーマで `DataTable` を構成した後、<xref:System.Data.OleDb.OleDbDataAdapter> を呼び出して `DataTable` にデータを格納しています。 この場合、 **CategoryID**列は、0から始まる挿入された各行に割り当てられた値をデクリメント<xref:System.Data.DataColumn.AutoIncrement%2A>するように構成されています。これは、をに`true`、 <xref:System.Data.DataColumn.AutoIncrementSeed%2A>を 0 <xref:System.Data.DataColumn.AutoIncrementStep%2A>に、を-1 に設定することによって行います。 その後、2 つの新しい行を追加し、`GetChanges` を使って変更行を新しい `DataTable` に追加します。`Update` メソッドには、このデータ テーブルが渡されます。
 
 [!code-csharp[DataWorks OleDb.JetAutonumberMerge#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/CS/source.cs#1)]
 [!code-vb[DataWorks OleDb.JetAutonumberMerge#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/VB/source.vb#1)]
 
-`RowUpdated` イベント ハンドラーでは、<xref:System.Data.OleDb.OleDbConnection> の `Update` ステートメントと同じ、開いている `OleDbDataAdapter` を使用します。 このハンドラーでは、挿入された行について、`StatementType` の <xref:System.Data.OleDb.OleDbRowUpdatedEventArgs> をチェックします。 挿入ごとに新しい行<xref:System.Data.OleDb.OleDbCommand>@ SELECT を実行する作成@IDENTITY返す、新しい接続でステートメント`Autonumber`で配置されている値は、 **CategoryID**の列、`DataRow`します。 次に、`Status` の暗黙的な呼び出しを抑制するため、`UpdateStatus.SkipCurrentRow` プロパティを `AcceptChanges` に設定しています。 プロシージャの本体では、`Merge` メソッドを呼び出すことによって、2 つの `DataTable` を結合し、最後に `AcceptChanges` を呼び出します。
+`RowUpdated` イベント ハンドラーでは、<xref:System.Data.OleDb.OleDbConnection> の `Update` ステートメントと同じ、開いている `OleDbDataAdapter` を使用します。 このハンドラーでは、挿入された行について、`StatementType` の <xref:System.Data.OleDb.OleDbRowUpdatedEventArgs> をチェックします。 挿入された行ごと<xref:System.Data.OleDb.OleDbCommand>に、新しいが作成され@IDENTITY 、接続で SELECT @ ステートメントが実行`Autonumber`され、新しい値が返されます。この`DataRow`値は、の**CategoryID**列に格納されます。 次に、`Status` の暗黙的な呼び出しを抑制するため、`UpdateStatus.SkipCurrentRow` プロパティを `AcceptChanges` に設定しています。 プロシージャの本体では、`Merge` メソッドを呼び出すことによって、2 つの `DataTable` を結合し、最後に `AcceptChanges` を呼び出します。
 
 [!code-csharp[DataWorks OleDb.JetAutonumberMerge#2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/CS/source.cs#2)]
 [!code-vb[DataWorks OleDb.JetAutonumberMerge#2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/VB/source.vb#2)]
@@ -354,7 +354,7 @@ GO
 コード リストを次に示します。
 
 > [!TIP]
-> このコード リストは、MySchool.mdb という名前の Access データベース ファイルを参照します。 (完全な c# または Visual Basic のサンプル プロジェクトの一部) として MySchool.mdb をからダウンロードできます[code.msdn.microsoft.com](https://code.msdn.microsoft.com/How-to-Retrieve-the-511acece)します。
+> このコード リストは、MySchool.mdb という名前の Access データベース ファイルを参照します。 C# [Code.msdn.microsoft.com](https://code.msdn.microsoft.com/How-to-Retrieve-the-511acece)から、(完全または Visual Basic サンプルプロジェクトの一部として) myschool .mdb をダウンロードできます。
 
 ```csharp
 using System;
@@ -538,10 +538,10 @@ class Program {
 
 ## <a name="see-also"></a>関連項目
 
-- [ADO.NET でのデータの取得および変更](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [DataAdapter と DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [行の状態とバージョン](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
-- [AcceptChange と RejectChange](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)
-- [DataSet の内容のマージ](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)
-- [DataAdapter によるデータ ソースの更新](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET でのデータの取得および変更](retrieving-and-modifying-data.md)
+- [DataAdapter と DataReader](dataadapters-and-datareaders.md)
+- [行の状態とバージョン](./dataset-datatable-dataview/row-states-and-row-versions.md)
+- [AcceptChange と RejectChange](./dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)
+- [DataSet の内容のマージ](./dataset-datatable-dataview/merging-dataset-contents.md)
+- [DataAdapter によるデータ ソースの更新](updating-data-sources-with-dataadapters.md)
+- [ADO.NET の概要](ado-net-overview.md)

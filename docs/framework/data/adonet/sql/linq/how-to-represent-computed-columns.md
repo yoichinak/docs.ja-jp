@@ -2,12 +2,12 @@
 title: '方法: 計算列を表す'
 ms.date: 03/30/2017
 ms.assetid: 4025f1fd-9dfa-46c0-b04f-34e8bc7957a2
-ms.openlocfilehash: 01c3442448285893ebb476ed11889e073065d4d8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7b37e698419fae7590ac1853309a7f394917f6a0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943542"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781729"
 ---
 # <a name="how-to-represent-computed-columns"></a>方法: 計算列を表す
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 属性のプロパティを使用して、計算結果が内容である<xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>列を表します<xref:System.Data.Linq.Mapping.ColumnAttribute> 。  
@@ -25,5 +25,5 @@ ms.locfileid: "69943542"
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to SQL オブジェクト モデル](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [方法: コードエディターを使用してエンティティクラスをカスタマイズする](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [LINQ to SQL オブジェクト モデル](the-linq-to-sql-object-model.md)
+- [方法: コードエディターを使用してエンティティクラスをカスタマイズする](how-to-customize-entity-classes-by-using-the-code-editor.md)

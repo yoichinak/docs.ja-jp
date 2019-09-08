@@ -2,17 +2,17 @@
 title: DataTables
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
-ms.openlocfilehash: 365eafc938f3db511fd6714bec02cea2bd27ea25
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 12255f738dea0a4713389e599468d1a7fab67d23
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204963"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784693"
 ---
 # <a name="datatables"></a>DataTables
 <xref:System.Data.DataSet> は、テーブル、リレーションシップ、および制約のコレクションで構成されます。 ADO.NET では<xref:System.Data.DataTable> 、オブジェクトは**データセット**内のテーブルを表すために使用されます。 **DataTable**は、インメモリリレーショナルデータの1つのテーブルを表します。データはに対してローカルです。ネットワークベースのアプリケーションが存在しますが、 **dataadapter**を使用した Microsoft SQL Server などのデータソースからデータを設定できます。詳細については、「 [Dataadapter からのデータセットの読み込み](../populating-a-dataset-from-a-dataadapter.md)」を参照してください。  
   
- **DataTable**クラスは、.NET Framework クラスライブラリ内の system.string 名前空間のメンバーです。 **Datatable**は、**データセット**のメンバーとして個別に作成および使用できます。また、 **datatable**オブジェクトは、 <xref:System.Data.DataView>などの他の .NET Framework オブジェクトと組み合わせて使用することもできます。 Dataset オブジェクトの**tables**プロパティを使用して、**データセット**内のテーブルのコレクションにアクセスします。  
+ **DataTable**クラスは、.NET Framework クラスライブラリ内の**system.string 名前空間**のメンバーです。 **Datatable**は、**データセット**のメンバーとして個別に作成および使用できます。また、 **datatable**オブジェクトは、 <xref:System.Data.DataView>などの他の .NET Framework オブジェクトと組み合わせて使用することもできます。 **Dataset オブジェクトの** **tables**プロパティを使用して、**データセット**内のテーブルのコレクションにアクセスします。  
   
  テーブルのスキーマ (構造) は、列と制約で表されます。 オブジェクトとオブジェクト<xref:System.Data.DataColumn> および<xref:System.Data.UniqueConstraint>オブジェクトを使用して、DataTable のスキーマを定義します。 <xref:System.Data.ForeignKeyConstraint> テーブルの列は、データ ソースの列に割り当てたり、式で算出された値を格納したり、格納されている値を自動的にインクリメントしたり、主キー値を格納したりできます。  
   
@@ -53,8 +53,8 @@ ms.locfileid: "70204963"
  **DataTable**オブジェクトに関する参照情報を提供します。  
   
  [.NET クラス ライブラリの概要](../../../../standard/class-library-overview.md)  
- **System**名前空間と、その第2レベルの名前空間である system.string を含む .NET Framework クラスライブラリの概要について説明します。  
+ **System**名前空間と、その第2レベルの名前**空間である**system.string を含む .NET Framework クラスライブラリの概要について説明します。  
   
 ## <a name="see-also"></a>関連項目
 
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET の概要](../ado-net-overview.md)

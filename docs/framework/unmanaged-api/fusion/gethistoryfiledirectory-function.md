@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10eead2772a2bbd8abaf7b9c090a091687725972
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: adbbf94dc36c6d82360ed532b283cd666a1a52ed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778656"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796849"
 ---
 # <a name="gethistoryfiledirectory-function"></a>GetHistoryFileDirectory 関数
 アプリケーション履歴ディレクトリのパスを取得します。  
@@ -37,33 +37,33 @@ HRESULT GetHistoryFileDirectory (
   
 ## <a name="parameters"></a>パラメーター  
  `wzDir`  
- [out]アプリケーション履歴ディレクトリへのパスを保持するバッファー。  
+ 入出力アプリケーション履歴ディレクトリへのパスを保持するバッファー。  
   
  `pdwSize`  
  [入力、出力]バッファーの長さ。  
   
 ## <a name="return-value"></a>戻り値  
- このメソッドは、次の値だけでなく、WinError.h ファイルで定義されている標準の COM エラー コードを返します。  
+ このメソッドは、Winerror.h ファイルで定義されているように、次の値に加えて、標準の COM エラーコードを返します。  
   
 |リターン コード|説明|  
 |-----------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
-|E_INVALIDARG|`wzDir` または`pdwSize`が null の場合、または、バージョン文字列が正しくありません。|  
+|E_INVALIDARG|`wzDir`また`pdwSize`はが null であるか、またはバージョン文字列が正しくありません。|  
   
 ## <a name="remarks"></a>Remarks  
- 正常に完了、`pdwSize`引数パス文字列の長さを設定します。  
+ 正常に完了する`pdwSize`と、引数はパス文字列の長さに設定されます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** Fusion.h  
+ **ヘッダー:** Fusion. h  
   
- **ライブラリ:** Fusion.dll と Mscorwks.dll します。 Mscorwks.dll のではなく Fusion.dll を使用して、正しいバージョンの .NET Framework を対象にすることを確認します。  
+ **ライブラリ**Fusion .dll と Mscorwks.dll。 Mscorwks.dll の代わりに Fusion を使用して、正しいバージョンの .NET Framework を対象としていることを確認してください。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [CreateHistoryReader 関数](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)
-- [NukeDownloadedCache 関数](../../../../docs/framework/unmanaged-api/fusion/nukedownloadedcache-function.md)
-- [Fusion グローバル静的関数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [CreateHistoryReader 関数](createhistoryreader-function.md)
+- [NukeDownloadedCache 関数](nukedownloadedcache-function.md)
+- [Fusion グローバル静的関数](fusion-global-static-functions.md)

@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 00118de7-33c6-41c4-8e1f-5d5e35e0da83
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8736da6c8db876b3dadb3b906a586633be176cf6
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 3d8ab96c758b946684af78bfa21822fdaf96530a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038324"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786974"
 ---
 # <a name="certverifyauthenticodelicense-function"></a>CertVerifyAuthenticodeLicense 関数
 Authenticode XrML ライセンスの有効性を検証します。  
@@ -53,20 +53,20 @@ HRESULT CertVerifyAuthenticodeLicense (
 - AXL_TRUST_MICROSOFT_ROOT_ONLY  
   
  `pSignerInfo`  
- [out] 署名者の情報を受け取るため。 ライセンスに署名がない場合、`dwError` は TRUST_E_NOSIGNATURE に設定されます。 使用後に、 [Certfree認証 Oデザイナ情報](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodesignerinfo-function.md)関数を使用してリソースを解放するのは、呼び出し元の責任です。  
+ [out] 署名者の情報を受け取るため。 ライセンスに署名がない場合、`dwError` は TRUST_E_NOSIGNATURE に設定されます。 使用後に、 [Certfree認証 Oデザイナ情報](certfreeauthenticodesignerinfo-function.md)関数を使用してリソースを解放するのは、呼び出し元の責任です。  
   
- 「 [AXL_AUTHENTICODE_SIGNER_INFO 構造体](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md)」を参照してください。  
+ 「 [AXL_AUTHENTICODE_SIGNER_INFO 構造体](axl-authenticode-signer-info-structure.md)」を参照してください。  
   
  `pTimestamperInfo`  
- [out] 可能な場合は、タイム スタンプの情報を受け取るため。 ライセンスにタイム スタンプがない場合、`dwError` は TRUST_E_NOSIGNATURE に設定されます。 使用後に[CertFreeAuthenticodeTimestamperInfo](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodetimestamperinfo-function.md)関数を使用してリソースを解放するのは、呼び出し元の責任です。  
+ [out] 可能な場合は、タイム スタンプの情報を受け取るため。 ライセンスにタイム スタンプがない場合、`dwError` は TRUST_E_NOSIGNATURE に設定されます。 使用後に[CertFreeAuthenticodeTimestamperInfo](certfreeauthenticodetimestamperinfo-function.md)関数を使用してリソースを解放するのは、呼び出し元の責任です。  
   
- 「 [AXL_AUTHENTICODE_TIMESTAMPER_INFO 構造体](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md)」を参照してください。  
+ 「 [AXL_AUTHENTICODE_TIMESTAMPER_INFO 構造体](axl-authenticode-timestamper-info-structure.md)」を参照してください。  
   
 ## <a name="return-value"></a>戻り値  
  正常に終了した場合は `S_OK` を返します。 それ以外の場合はエラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目
 
-- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)
-- [GetHashFromHandle メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)
-- [ICLRStrongName インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [Authenticode](index.md)
+- [GetHashFromHandle メソッド](../hosting/iclrstrongname-gethashfromhandle-method.md)
+- [ICLRStrongName インターフェイス](../hosting/iclrstrongname-interface.md)

@@ -2,12 +2,12 @@
 title: 入れ子になっている要素に指定したリレーションシップの割り当て
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
-ms.openlocfilehash: 510a5e676df7bac274c6086b94e9a23e7540da20
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: e8cdf73b6277abdaab1256ca87e615a5e25e7336
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204639"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786085"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>入れ子になっている要素に指定したリレーションシップの割り当て
 スキーマには、スキーマ内の2つの要素間のマッピングを明示的に指定する**msdata: Relationship**注釈を含めることができます。 **Msdata: Relationship**で指定する2つの要素は、スキーマで入れ子にすることができますが、である必要はありません。 マッピングプロセスでは、スキーマ内で**msdata: Relationship**を使用して、2つの列の間に主キー/外部キーのリレーションシップを生成します。  
@@ -78,4 +78,4 @@ ms.locfileid: "70204639"
 
 - [XML スキーマ (XSD) からの DataSet リレーションの生成](generating-dataset-relations-from-xml-schema-xsd.md)
 - [XML スキーマ (XSD) 制約の DataSet 制約への割り当て](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET の概要](../ado-net-overview.md)

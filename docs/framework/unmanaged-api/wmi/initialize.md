@@ -1,6 +1,6 @@
 ---
 title: Initialize 関数 (アンマネージ API リファレンス)
-description: 初期化関数は、WMI の初期化を実行します。
+description: Initialize 関数は、WMI の初期化を実行します。
 ms.date: 11/06/2017
 api_name:
 - Initialize
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c71b2b6d6f102d19d30d480ee9bafcac3c204be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1bc3688b30180bdcde0a87027955a789de749f90
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049298"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798442"
 ---
 # <a name="initialize-function"></a>Initialize 関数
 
@@ -41,20 +41,20 @@ HRESULT Initialize(
 
 `bAllowIManagementObjectQI`
 
-[in]`true` WMI オブジェクトの queryinterface 呼び出しが許可されることを示す`false`それ以外の場合。
+から`true` WMI オブジェクトに対する QueryInterface の呼び出しが許可されていることを示す場合は。`false`それ以外の場合は。
 
 ## <a name="return-value"></a>戻り値
 
-関数は常に返します`S_OK`(0)。
+関数は常に`S_OK` (0) を返します。
 
 ## <a name="requirements"></a>必要条件
 
-**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+**・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。
 
-**ヘッダー:** WMINet_Utils.def
+**ヘッダー:** WMINet_Utils
 
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>関連項目
 
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+- [WMI およびパフォーマンスカウンター (アンマネージ API リファレンス)](index.md)

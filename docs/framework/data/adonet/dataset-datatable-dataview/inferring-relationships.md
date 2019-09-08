@@ -2,15 +2,15 @@
 title: リレーションシップの推論
 ms.date: 03/30/2017
 ms.assetid: 8fa86a9d-6545-4a9d-b1f5-58d9742179c7
-ms.openlocfilehash: 92a4953dc7f5119ffbf171ff2a7bf5b58e896638
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 4c9c13453e4a830fcda337e8163649ba6491a995
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204772"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785365"
 ---
 # <a name="inferring-relationships"></a>リレーションシップの推論
-テーブルとして推論される要素に、同じくテーブルとして推論される子の要素が含まれている場合には、2 つのテーブル間に <xref:System.Data.DataRelation> が作成されます。 **ParentTableName_Id**という名前の新しい列が、親要素用に作成されたテーブルと、子要素に対して作成されたテーブルの両方に追加されます。 この id 列の**ColumnMapping**プロパティは、 **Mappingtype. Hidden**に設定されます。 この列は、親テーブルの自動インクリメント主キーになり、2つのテーブル間の**DataRelation**に使用されます。 追加された id 列のデータ型は、他のすべての推定列 (system.string) のデータ型とは異なり、 **system.string**になります。 **DeleteRule** <xref:System.Data.ForeignKeyConstraint> Cascade = を指定したは、親テーブルと子テーブルの両方で新しい列を使用して作成されます。  
+テーブルとして推論される要素に、同じくテーブルとして推論される子の要素が含まれている場合には、2 つのテーブル間に <xref:System.Data.DataRelation> が作成されます。 **ParentTableName_Id**という名前の新しい列が、親要素用に作成されたテーブルと、子要素に対して作成されたテーブルの両方に追加されます。 この id 列の**ColumnMapping**プロパティは、 **Mappingtype. Hidden**に設定されます。 この列は、親テーブルの自動インクリメント主キーになり、2つのテーブル間の**DataRelation**に使用されます。 追加された id 列のデータ型は、他のすべての推定列 ( **system.string**) のデータ型とは異なり、system.string に**なります。** **DeleteRule** <xref:System.Data.ForeignKeyConstraint> Cascade = を指定したは、親テーブルと子テーブルの両方で新しい列を使用して作成されます。  
   
  たとえば、次のような XML があるとします。  
   
@@ -77,4 +77,4 @@ ms.locfileid: "70204772"
 - [DataRelation の入れ子化](nesting-datarelations.md)
 - [DataSet での XML の使用](using-xml-in-a-dataset.md)
 - [DataSet、DataTable、および DataView](index.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET の概要](../ado-net-overview.md)

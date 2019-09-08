@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d76e9b4e18b46d0b546d6c66fa572c35cb9fcefe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f7fee7a91de99e2db69609cbc7c73e22d85d045f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741768"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777062"
 ---
 # <a name="importfile-method"></a>ImportFile メソッド
 アセンブリとバインドされていないモジュールをインポートします。  
@@ -44,28 +44,28 @@ HRESULT ImportFile(
  インポートするファイルの完全修飾名。  
   
  `pszTargetName`  
- 省略可能な出力ファイル名、アセンブリにリンクされていると、ファイルの名前を変更するために使用できます。  
+ アセンブリにリンクされているファイルの名前を変更するために使用できる省略可能な出力ファイル名です。  
   
  `fSmartImport`  
- TRUE の場合は、ImportTypes が使用されますが、それ以外の場合にインポートし、手動で実行する必要があります。  
+ TRUE の場合、ImportTypes が使用されます。それ以外の場合は、インポートを手動で実行する必要があります。  
   
  `pImportToken`  
- トークンの一意のファイル ID を格納する場所へのポインター。 ファイルには、アセンブリまたはファイルを指定できます。  
+ 一意のファイル ID が格納されるトークンへのポインター。 ファイルには、アセンブリまたはファイルを指定できます。  
   
  `ppAssemblyScope`  
- ポインターを受け取る[IMetaDataAssemblyImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)します。 ファイルはアセンブリでない場合、NULL を指定できます。  
+ [IMetaDataAssemblyImport インターフェイス](../metadata/imetadataassemblyimport-interface.md)へのポインターを受け取ります。 ファイルがアセンブリでない場合は NULL を指定できます。  
   
  `pdwCountOfScopes`  
- ファイルやインポートされているスコープの数へのポインター。  
+ インポートされたファイルまたはスコープの数へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は、S_OK を返します。  
+ メソッドが成功した場合、S_OK を返します。  
   
 ## <a name="requirements"></a>必要条件  
- Alink.h が必要です。  
+ Alink. h が必要です。  
   
 ## <a name="see-also"></a>関連項目
 
-- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink インターフェイス](ialink-interface.md)
+- [IALink2 インターフェイス](ialink2-interface.md)
+- [ALink API](index.md)

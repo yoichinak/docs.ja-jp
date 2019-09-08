@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 402d56b44c2b6f53f901e35c6d7b965811a40344
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 266462a5393c8e26aa2bc3f2ec8ab72d4410a431
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636599"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798296"
 ---
-# <a name="qualifiersetgetnames-function"></a>QualifierSet_GetNames 関数
+# <a name="qualifierset_getnames-function"></a>QualifierSet_GetNames 関数
 
-すべての修飾子のまたは現在のオブジェクトまたはプロパティから利用できる特定の修飾子の名前を取得します。
+現在のオブジェクトまたはプロパティから使用可能な、すべての修飾子または特定の修飾子の名前を取得します。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -43,49 +43,49 @@ HRESULT QualifierSet_GetNames (
 ## <a name="parameters"></a>パラメーター
 
 `vFunc`\
-[in]このパラメーターは使用されません。
+からこのパラメーターは使用されていません。
 
 `ptr`\
-[in]ポインター、 [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)インスタンス。
+から[IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)インスタンスへのポインター。
 
 `lFlags`\
-[in]次のフラグまたは列挙体に追加するには、どの名前を指定する値の 1 つ。
+から列挙に含める名前を指定する、次のいずれかのフラグまたは値。
 
-|定数  |値  |説明  |
+|定数  |Value  |説明  |
 |---------|---------|---------|
 |  | 0 | すべての修飾子の名前を返します。 |
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 現在のプロパティまたはオブジェクトに特定修飾子の名前のみを返します。 <br/> プロパティ。(上書きを含む)、プロパティに固有の修飾子のみとクラス定義から反映された修飾子いないに返されます。 <br/> インスタンス。インスタンス固有の修飾子名のみが返されます。 <br/> クラス。クラスを派生させる特定の修飾子のみを返します。
-|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | 別のオブジェクトから修飾子の名前のみが反映される戻り値。 <br/> プロパティ。戻り値修飾子のみが反映されるこのプロパティに、クラス定義と、プロパティ自体から。 <br/> インスタンス。クラス定義からこれらの修飾子が反映される戻り値。 <br/> クラス。戻り値の修飾子名のみが親クラスから継承されます。 |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 現在のプロパティまたはオブジェクトに固有の修飾子の名前のみを返します。 <br/> プロパティの場合:プロパティに固有の修飾子 (オーバーライドを含む) だけを返します。クラス定義から伝達された修飾子は返しません。 <br/> インスタンスの場合:インスタンス固有の修飾子名だけを返します。 <br/> クラスの場合:派生するクラスに固有の修飾子だけを返します。
+|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | 別のオブジェクトから伝達された修飾子の名前のみを返します。 <br/> プロパティの場合:プロパティ自体からではなく、クラス定義からこのプロパティに反映された修飾子だけを返します。 <br/> インスタンスの場合:クラス定義から伝達された修飾子だけを返します。 <br/> クラスの場合:親クラスから継承された修飾子名だけを返します。 |
 
 `pstrNames`\
-[out]新しい`SAFEARRAY`要求の名前を格納しています。 配列要素の 0 ことができます。 エラーが発生した場合、新しい`SAFEARRAY`は返されません。
+入出力要求さ`SAFEARRAY`れた名前を格納している新しい。 配列には、0個の要素を含めることができます。 エラーが発生した場合は`SAFEARRAY` 、新しいが返されません。
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
+この関数によって返される次の値は、 *WbemCli*ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-|定数  |値  |説明  |
+|定数  |Value  |説明  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが無効です。 |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 新しい列挙を開始するのに十分なメモリがあります。 |
-|`WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが有効ではありません。 |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 新しい列挙を開始するために必要なメモリが不足しています。 |
+|`WBEM_S_NO_ERROR` | 0 | 関数の呼び出しに成功しました。  |
 
 ## <a name="remarks"></a>Remarks
 
-この関数の呼び出しをラップする、 [IWbemQualifierSet::GetNames](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-getnames)メソッド。
+この関数は、 [IWbemQualifierSet:: GetNames](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-getnames)メソッドの呼び出しをラップします。
 
-修飾子の名前を取得すると名前での各修飾子をアクセスを呼び出して、 [QualifierSet_Get](qualifierset-get.md)関数。
+修飾子名を取得したら、 [QualifierSet_Get](qualifierset-get.md)関数を呼び出すことによって、各修飾子に名前でアクセスできます。
 
-そのため、0 個の修飾子に指定したオブジェクトのエラーではありませんで文字列の数`pstrNames`返された場合は、0、関数を返しても、`WBEM_S_NO_ERROR`します。
+指定されたオブジェクトが修飾子を持たない場合のエラーではないため、関数が`pstrNames`を返す`WBEM_S_NO_ERROR`場合でも、戻り時の内の文字列の数は0になることがあります。
 
 ## <a name="requirements"></a>必要条件
 
-**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+**・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。
 
-**ヘッダー:** WMINet_Utils.idl
+**ヘッダー:** WMINet_Utils
 
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>関連項目
 
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+- [WMI およびパフォーマンスカウンター (アンマネージ API リファレンス)](index.md)

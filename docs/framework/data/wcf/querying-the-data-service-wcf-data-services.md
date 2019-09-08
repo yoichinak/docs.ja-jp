@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: 50dc56a3c4c87bf9ac197b127c036c41ac833a88
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 21a0a02516a1fbe24378235b910df0a602900a21
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931120"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790382"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>データ サービスに対するクエリ (WCF Data Services)
 
@@ -43,7 +43,7 @@ ms.locfileid: "69931120"
 [!code-csharp[Astoria Northwind Client#GetAllCustomersSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getallcustomersspecific)]
 [!code-vb[Astoria Northwind Client#GetAllCustomersSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getallcustomersspecific)]
 
-詳細については、「[方法 :データサービスクエリ](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)を実行します。
+詳細については、「[方法 :データサービスクエリ](how-to-execute-data-service-queries-wcf-data-services.md)を実行します。
 
 クライアント[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]は、でC#*動的*な型を使用する場合など、遅延バインディングオブジェクトのクエリをサポートします。 パフォーマンス上の理由から、データ サービスに対しては常に厳密に型指定されたクエリを作成するようにしてください。 <xref:System.Tuple> 型と動的オブジェクトはクライアントでサポートされていません。
 
@@ -54,7 +54,7 @@ ms.locfileid: "69931120"
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqspecific)]
 [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqspecific)]
 
-この LINQ クエリは、Northwind ベースの[クイックスタート](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)データサービスに対して実行される次のクエリ URI に変換されます。
+この LINQ クエリは、Northwind ベースの[クイックスタート](quickstart-wcf-data-services.md)データサービスに対して実行される次のクエリ URI に変換されます。
 
 ```
 http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight gt 30
@@ -63,7 +63,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 > [!NOTE]
 > LINQ 構文で表現できるクエリのセットは、データ サービスによって使用される REST (Representational State Transfer) ベースの URI 構文で有効なクエリのセットよりも範囲が広くなります。 クエリを対象データ サービスの URI にマップできない場合、<xref:System.NotSupportedException> が発生します。
 
-詳細については、「 [LINQ の考慮事項](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md)」を参照してください。
+詳細については、「 [LINQ の考慮事項](linq-considerations-wcf-data-services.md)」を参照してください。
 
 ## <a name="adding-query-options"></a>クエリ オプションの追加
 
@@ -77,9 +77,9 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 [!code-csharp[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#orderwithfilter)]
 [!code-vb[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#orderwithfilter)]
 
-<xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> メソッドを連続して呼び出すと、複雑なクエリ式を作成できます。 詳細については、「[方法 :データサービスクエリ](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)にクエリオプションを追加します。
+<xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> メソッドを連続して呼び出すと、複雑なクエリ式を作成できます。 詳細については、「[方法 :データサービスクエリ](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)にクエリオプションを追加します。
 
-クエリ オプションを使用して、LINQ クエリの構文要素を表すことができます。 詳細については、「 [LINQ の考慮事項](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md)」を参照してください。
+クエリ オプションを使用して、LINQ クエリの構文要素を表すことができます。 詳細については、「 [LINQ の考慮事項](linq-considerations-wcf-data-services.md)」を参照してください。
 
 > [!NOTE]
 > `$select` メソッドを使用してクエリ URI に <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> クエリ オプションを追加することはできません。 LINQ の <xref:System.Linq.Enumerable.Select%2A> メソッドを使用して、クライアントによって要求 URI に `$select` クエリ オプションが生成されるようにすることをお勧めします。
@@ -102,7 +102,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 [!code-csharp[Astoria Northwind Client#GetResponseSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getresponsespecific)]
 [!code-vb[Astoria Northwind Client#GetResponseSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getresponsespecific)]
 
-データ サービスのエンティティを表すエンティティ型インスタンスは、オブジェクトの具体化というプロセスによってクライアントで作成されます。 詳細については、「[オブジェクトの具体化](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)」を参照してください。 <xref:System.Data.Services.Client.QueryOperationResponse%601> オブジェクトは、<xref:System.Collections.Generic.IEnumerable%601> を実装してクエリ結果へのアクセスを提供します。
+データ サービスのエンティティを表すエンティティ型インスタンスは、オブジェクトの具体化というプロセスによってクライアントで作成されます。 詳細については、「[オブジェクトの具体化](object-materialization-wcf-data-services.md)」を参照してください。 <xref:System.Data.Services.Client.QueryOperationResponse%601> オブジェクトは、<xref:System.Collections.Generic.IEnumerable%601> を実装してクエリ結果へのアクセスを提供します。
 
 さらに、<xref:System.Data.Services.Client.QueryOperationResponse%601> には、クエリ結果に関する追加情報へのアクセスを可能にする次のメンバーが含まれます。
 
@@ -121,36 +121,36 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 既定では[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 、はクエリ URI によって明示的に選択されたデータのみを返します。 これにより、必要に応じてデータ サービスから追加のデータを明示的に読み込むことができます。 データ サービスからデータを明示的に読み込むたびに要求がデータ サービスに送られます。 明示的に読み込むことができるデータには、関連エンティティ、ページングされた応答データ、バイナリ データ ストリームがあります。
 
 > [!NOTE]
-> データ サービスはページングされた応答を返す場合があるので、アプリケーションではページングされたデータ サービス応答を処理するプログラミング パターンを使用することをお勧めします。 詳細については、「[遅延コンテンツの読み込み](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)」を参照してください。
+> データ サービスはページングされた応答を返す場合があるので、アプリケーションではページングされたデータ サービス応答を処理するプログラミング パターンを使用することをお勧めします。 詳細については、「[遅延コンテンツの読み込み](loading-deferred-content-wcf-data-services.md)」を参照してください。
 
-エンティティの特定のプロパティのみが応答で返されるように指定することにより、クエリによって返されるデータの量を削減することもできます。 詳細については、「[クエリプロジェクション](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)」を参照してください。
+エンティティの特定のプロパティのみが応答で返されるように指定することにより、クエリによって返されるデータの量を削減することもできます。 詳細については、「[クエリプロジェクション](query-projections-wcf-data-services.md)」を参照してください。
 
 ## <a name="getting-a-count-of-the-total-number-of-entities-in-the-set"></a>セット内のエンティティの合計数の取得
 
 一部のシナリオでは、クエリによって返される数だけではなく、エンティティ セット内のエンティティの合計数を知っておくと役立ちます。 このセット内のエンティティの合計数がクエリ結果に含まれるように要求するには、<xref:System.Data.Services.Client.DataServiceQuery%601.IncludeTotalCount%2A> で <xref:System.Data.Services.Client.DataServiceQuery%601> メソッドを呼び出します。 この場合、返された <xref:System.Data.Services.Client.QueryOperationResponse%601.TotalCount%2A> の <xref:System.Data.Services.Client.QueryOperationResponse%601> プロパティが、セット内のエンティティの合計数を返します。
 
-さらに、<xref:System.Int32> メソッドまたは <xref:System.Int64> メソッドを呼び出すことにより、それぞれ <xref:System.Linq.Enumerable.Count%2A> 値または <xref:System.Linq.Enumerable.LongCount%2A> 値として、セット内のエンティティの合計数のみを取得することもできます。 これらのメソッドを呼び出すと、<xref:System.Data.Services.Client.QueryOperationResponse%601> は返されず、カウント値のみが返されます。 詳細については、「[方法 :クエリ](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)によって返されるエンティティの数を決定します。
+さらに、<xref:System.Int32> メソッドまたは <xref:System.Int64> メソッドを呼び出すことにより、それぞれ <xref:System.Linq.Enumerable.Count%2A> 値または <xref:System.Linq.Enumerable.LongCount%2A> 値として、セット内のエンティティの合計数のみを取得することもできます。 これらのメソッドを呼び出すと、<xref:System.Data.Services.Client.QueryOperationResponse%601> は返されず、カウント値のみが返されます。 詳細については、「[方法 :クエリ](number-of-entities-returned-by-a-query-wcf.md)によって返されるエンティティの数を決定します。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-- [クエリ射影](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)
+- [クエリ射影](query-projections-wcf-data-services.md)
 
-- [オブジェクトの具体化](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)
+- [オブジェクトの具体化](object-materialization-wcf-data-services.md)
 
-- [LINQ に関する留意点](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md)
+- [LINQ に関する留意点](linq-considerations-wcf-data-services.md)
 
-- [方法: データサービスクエリの実行](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)
+- [方法: データサービスクエリの実行](how-to-execute-data-service-queries-wcf-data-services.md)
 
-- [方法: データサービスクエリにクエリオプションを追加する](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
+- [方法: データサービスクエリにクエリオプションを追加する](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
 
-- [方法: クエリによって返されるエンティティの数を決定する](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)
+- [方法: クエリによって返されるエンティティの数を決定する](number-of-entities-returned-by-a-query-wcf.md)
 
-- [方法: データサービス要求のクライアント資格情報を指定する](../../../../docs/framework/data/wcf/specify-client-creds-for-a-data-service-request-wcf.md)
+- [方法: データサービス要求のクライアント資格情報を指定する](specify-client-creds-for-a-data-service-request-wcf.md)
 
-- [方法: クライアント要求のヘッダーを設定する](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md)
+- [方法: クライアント要求のヘッダーを設定する](how-to-set-headers-in-the-client-request-wcf-data-services.md)
 
-- [方法: プロジェクトクエリの結果](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)
+- [方法: プロジェクトクエリの結果](how-to-project-query-results-wcf-data-services.md)
 
 ## <a name="see-also"></a>関連項目
 
-- [WCF Data Services クライアント ライブラリ](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [WCF Data Services クライアント ライブラリ](wcf-data-services-client-library.md)

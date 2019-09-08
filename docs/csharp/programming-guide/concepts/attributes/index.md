@@ -1,12 +1,12 @@
 ---
 title: 属性 (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 42a7035a9dae146ad7a303da41c83891e5e19ef8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7b78d5832c15d3d1142b80d2ccb96a72e4e20390
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668615"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374370"
 ---
 # <a name="attributes-c"></a>属性 (C#)
 
@@ -57,7 +57,7 @@ ms.locfileid: "61668615"
 
 ### <a name="attribute-targets"></a>属性の対象
 
-属性の*対象*は、属性が適用されるエンティティです。 たとえば、属性は、クラス、特定のメソッド、またはアセンブリ全体に適用できます。 既定では、属性は後に続く要素に適用されます。 ただし、明示的に指定すれば、メソッド、属性のパラメーター、属性の戻り値などにも適用できます。
+属性の*対象*は、属性が適用されるエンティティです。 たとえば、属性は、クラス、特定のメソッド、またはアセンブリ全体に適用できます。 既定では、属性はその後に続く要素に適用されます。 ただし、明示的に指定すれば、メソッド、属性のパラメーター、属性の戻り値などにも適用できます。
 
 属性の対象を明示的に識別するには、次の構文を使用します。
 
@@ -101,8 +101,8 @@ C# でメソッド、メソッドのパラメーター、およびメソッド�
 
 次の表に、コードでの属性の一般的な使用法をいくつか示します。
 
-- Web サービスの `WebMethod` 属性を使用してメソッドをマークして、メソッドが SOAP プロトコルを介して呼び出されるようにします。 詳細については、「<xref:System.Web.Services.WebMethodAttribute>」を参照してください。
-- ネイティブ コードと相互運用するときにメソッドのパラメーターをマーシャリングする方法を記述します。 詳細については、「<xref:System.Runtime.InteropServices.MarshalAsAttribute>」を参照してください。
+- Web サービスの `WebMethod` 属性を使用してメソッドをマークして、メソッドが SOAP プロトコルを介して呼び出されるようにします。 詳細については、<xref:System.Web.Services.WebMethodAttribute> を参照してください。
+- ネイティブ コードと相互運用するときにメソッドのパラメーターをマーシャリングする方法を記述します。 詳細については、<xref:System.Runtime.InteropServices.MarshalAsAttribute> を参照してください。
 - クラス、メソッド、およびインターフェイスの COM プロパティを記述します。
 - <xref:System.Runtime.InteropServices.DllImportAttribute> クラスを使用してアンマネージ コードを呼び出します。
 - タイトル、バージョン、説明、または商標についてのアセンブリを記述します。

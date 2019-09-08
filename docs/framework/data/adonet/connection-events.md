@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5a29de74-acfc-4134-8616-829dd7ce0710
-ms.openlocfilehash: 8ed62d0193639b434d66c446e3b9d0c184577a80
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e958c96e304962dace72e90b9266b57943f01ac9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949561"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785736"
 ---
 # <a name="connection-events"></a>接続イベント
 すべての .NET Framework データプロバイダーには、データソースから情報メッセージを取得したり、**接続**の状態が変更されたかどうかを確認したりするために使用できる、2つのイベントを持つ**接続**オブジェクトがあります。 次の表では、**接続**オブジェクトのイベントについて説明します。  
@@ -74,7 +74,7 @@ protected static void OnInfoMessage(
 > 重大度レベルが 17 以上のエラーが発生すると、サーバーのコマンド処理が停止します。このエラーは、例外として処理する必要があります。 この場合、<xref:System.Data.SqlClient.SqlConnection.InfoMessage> イベントによるエラー処理の方法にかかわらず例外がスローされます。  
   
 ## <a name="working-with-the-statechange-event"></a>StateChange イベントの使用  
- **StateChange**イベントは、**接続**の状態が変化したときに発生します。 **StateChange**イベントは、 <xref:System.Data.StateChangeEventArgs> **originalstate**プロパティと設定されたプロパティを使用して、**接続**の状態の変化を確認できるようにを受け取ります。 **Originalstate**プロパティは、変更<xref:System.Data.ConnectionState>前の**接続**の状態を示す列挙体です。 "状態" <xref:System.Data.ConnectionState>は、変更後の**接続**の状態を示す列挙体です。  
+ **StateChange**イベントは、**接続**の状態が変化したときに発生します。 **StateChange**イベントは、 <xref:System.Data.StateChangeEventArgs> **originalstate** **プロパティと**設定されたプロパティを使用して、**接続**の状態の変化を確認できるようにを受け取ります。 **Originalstate**プロパティは、変更<xref:System.Data.ConnectionState>前の**接続**の状態を示す列挙体です。 "状態 **" は、** 変更後の<xref:System.Data.ConnectionState> **接続**の状態を示す列挙体です。  
   
  次のコード例では、 **StateChange**イベントを使用して、**接続**の状態が変化したときにコンソールにメッセージを書き込みます。  
   
@@ -107,5 +107,5 @@ protected static void OnStateChange(object sender,
   
 ## <a name="see-also"></a>関連項目
 
-- [データ ソースへの接続](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [データ ソースへの接続](connecting-to-a-data-source.md)
+- [ADO.NET の概要](ado-net-overview.md)

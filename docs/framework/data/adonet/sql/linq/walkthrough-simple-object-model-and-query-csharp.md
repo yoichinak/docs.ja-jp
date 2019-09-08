@@ -2,12 +2,12 @@
 title: 'チュートリアル: 簡単なオブジェクト モデルとクエリ (C#)'
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: 4661dffa037504d9157f30af12d4308a4d7644a2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a9b3b57e37331cd13f2cd30b8a7663f2fb39d8c1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946923"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792129"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>チュートリアル: 簡単なオブジェクト モデルとクエリ (C#)
 
@@ -23,7 +23,7 @@ ms.locfileid: "69946923"
 
 - このチュートリアルでは、専用フォルダー ("c:\linqtest5") を使用してファイルを保持します。 チュートリアルを開始する前に、このフォルダーを作成してください。
 
-- このチュートリアルには、Northwind サンプル データベースが必要です。 開発用コンピューターにこのデータベースがない場合は、Microsoft ダウンロード サイトからダウンロードします。 手順については、「[サンプルデータベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)」を参照してください。 データベースをダウンロードしたら、ファイルを c:\linqtest5 フォルダーにコピーします。
+- このチュートリアルには、Northwind サンプル データベースが必要です。 開発用コンピューターにこのデータベースがない場合は、Microsoft ダウンロード サイトからダウンロードします。 手順については、「[サンプルデータベースのダウンロード](downloading-sample-databases.md)」を参照してください。 データベースをダウンロードしたら、ファイルを c:\linqtest5 フォルダーにコピーします。
 
 ## <a name="overview"></a>概要
 
@@ -140,7 +140,7 @@ ms.locfileid: "69946923"
 2. F5 キーを押してアプリケーションをデバッグします。
 
     > [!NOTE]
-    > アプリケーションで実行時エラーが発生した場合は、「[チュートリアルによる学習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)」の「トラブルシューティング」セクションを参照してください。
+    > アプリケーションで実行時エラーが発生した場合は、「[チュートリアルによる学習](learning-by-walkthroughs.md)」の「トラブルシューティング」セクションを参照してください。
 
      クエリの結果は、以下のようにコンソール ウィンドウに表示されます。
 
@@ -160,10 +160,10 @@ ms.locfileid: "69946923"
 
 ## <a name="next-steps"></a>次の手順
 
-この[チュートリアルは次のとおりです。リレーションシップ (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)にまたがるクエリの実行は、このチュートリアルが終了するまで続行されます。 リレーションシップ間のクエリのチュートリアルで[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]は、リレーショナルデータベースでの*結合*と同様に、テーブル間でクエリを実行する方法を示します。
+この[チュートリアルは次のとおりです。リレーションシップ (C#)](walkthrough-querying-across-relationships-csharp.md)にまたがるクエリの実行は、このチュートリアルが終了するまで続行されます。 リレーションシップ間のクエリのチュートリアルで[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]は、リレーショナルデータベースでの*結合*と同様に、テーブル間でクエリを実行する方法を示します。
 
 「リレーションシップ間でクエリを実行する」のチュートリアルに進む場合は、必要条件として、ここで完了したチュートリアルのソリューションを保存しておく必要があります。
 
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアルによる学習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [チュートリアルによる学習](learning-by-walkthroughs.md)

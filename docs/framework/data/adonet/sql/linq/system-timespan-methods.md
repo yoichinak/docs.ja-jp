@@ -2,12 +2,12 @@
 title: System.TimeSpan メソッド
 ms.date: 03/30/2017
 ms.assetid: 9333fee8-1454-4374-855b-8c14c002f48f
-ms.openlocfilehash: ec27f8f17a6709efef1a8230b521778095ae1257
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9a7eb3c979219003d497ec752b36ec54ef081b43
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947092"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781046"
 ---
 # <a name="systemtimespan-methods"></a>System.TimeSpan メソッド
 <xref:System.TimeSpan?displayProperty=nameWithType> のメンバー サポートは、使用している .NET Framework と Microsoft SQL Server のバージョンに大きく依存します。  
@@ -34,11 +34,11 @@ ms.locfileid: "69947092"
 > LINQ to SQL で <xref:System.TimeSpan?displayProperty=nameWithType> を SQL の `TIME` 列にマッピングする機能を使用するには、.NET Framework 3.5 SP1 以降が必要です。 SQL の `TIME` データ型は Microsoft SQL Server 2008 以降でのみ使用可能です。  
   
 ### <a name="addition-and-subtraction"></a>加算と減算  
- 加算と減算は、CLR の <xref:System.TimeSpan?displayProperty=nameWithType> 型ではサポートされていますが、SQL の `TIME` 型ではサポートされていません。 そのため、LINQ to SQL クエリにより、SQL の `TIME` 型にマッピングしたときに加算や減算を試みると、エラーが発生します。 Sql の日付と時刻の型の使用に関するその他の考慮事項については、 [「SQL CLR 型のマッピング](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)」を参照してください。  
+ 加算と減算は、CLR の <xref:System.TimeSpan?displayProperty=nameWithType> 型ではサポートされていますが、SQL の `TIME` 型ではサポートされていません。 そのため、LINQ to SQL クエリにより、SQL の `TIME` 型にマッピングしたときに加算や減算を試みると、エラーが発生します。 Sql の日付と時刻の型の使用に関するその他の考慮事項については、 [「SQL CLR 型のマッピング](sql-clr-type-mapping.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [クエリの概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [オブジェクト モデルの作成](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
-- [SQL と CLR の型マッピング](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
-- [データ型と関数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [クエリの概念](query-concepts.md)
+- [オブジェクト モデルの作成](creating-the-object-model.md)
+- [SQL と CLR の型マッピング](sql-clr-type-mapping.md)
+- [データ型と関数](data-types-and-functions.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
-ms.openlocfilehash: ef771d924d9b508c29061f75a45808b5f81abb53
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d14b15f72bd196d8b3a61f22c614516e17d2e95b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963833"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781244"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>ID キャッシュからのオブジェクトの取得
 このトピックでは、<xref:System.Data.Linq.DataContext> によって管理される ID キャッシュからオブジェクトを返す、LINQ to SQL クエリの種類について説明します。  
@@ -20,7 +20,7 @@ ms.locfileid: "69963833"
  通常、LINQ to SQL で ID キャッシュからオブジェクトを取得するには、そのクエリがオブジェクトのプライマリ キーに基づき、1 つのオブジェクトを返すようにする必要があります。 特に、次に示す一般的な形式のいずれかでクエリを実行する必要があります。  
   
 > [!NOTE]
-> プリコンパイル済みクエリでは、ID キャッシュからオブジェクトが返されません。 プリコンパイル済みクエリの詳細については<xref:System.Data.Linq.CompiledQuery> 、 [「」および「方法:クエリ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md)を保存して再利用します。  
+> プリコンパイル済みクエリでは、ID キャッシュからオブジェクトが返されません。 プリコンパイル済みクエリの詳細については<xref:System.Data.Linq.CompiledQuery> 、 [「」および「方法:クエリ](how-to-store-and-reuse-queries.md)を保存して再利用します。  
   
  オブジェクトを ID キャッシュから取得するには、次に示す一般的な形式のいずれかでクエリを実行する必要があります。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "69963833"
   
 ## <a name="see-also"></a>関連項目
 
-- [クエリの概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [オブジェクト ID](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
-- [背景情報](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [オブジェクト ID](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+- [クエリの概念](query-concepts.md)
+- [オブジェクト ID](object-identity.md)
+- [背景情報](background-information.md)
+- [オブジェクト ID](object-identity.md)

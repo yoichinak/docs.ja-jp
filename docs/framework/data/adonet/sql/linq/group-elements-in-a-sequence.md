@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1d50c8b4-f550-4775-bbb6-eab6e874cb43
-ms.openlocfilehash: 50887acefdd5d0feaf9d0885e9ee842f44f0ef65
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bc490b579e841a0e9b3724fe0e8789cc9411683d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915051"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782183"
 ---
 # <a name="group-elements-in-a-sequence"></a>シーケンスの要素のグループ化
 <xref:System.Linq.Enumerable.GroupBy%2A> 演算子はシーケンスの要素をグループ化します。 Northwind データベースを使用する例を次に示します。  
   
 > [!NOTE]
-> null 列値が <xref:System.Linq.Enumerable.GroupBy%2A> クエリに含まれると、<xref:System.InvalidOperationException> がスローされることがあります。 詳細については、[トラブルシューティング](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)の「GroupBy InvalidOperationException」セクションを参照してください。  
+> null 列値が <xref:System.Linq.Enumerable.GroupBy%2A> クエリに含まれると、<xref:System.InvalidOperationException> がスローされることがあります。 詳細については、[トラブルシューティング](troubleshooting.md)の「GroupBy InvalidOperationException」セクションを参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、`Products` を基準として `CategoryID` をグループ化しています。  
@@ -74,5 +74,5 @@ ms.locfileid: "69915051"
   
 ## <a name="see-also"></a>関連項目
 
-- [クエリの例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [クエリの例](query-examples.md)
+- [サンプル データベースのダウンロード](downloading-sample-databases.md)

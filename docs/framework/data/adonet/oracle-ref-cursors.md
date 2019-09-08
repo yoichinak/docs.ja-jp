@@ -2,12 +2,12 @@
 title: Oracle REF CURSOR
 ms.date: 03/30/2017
 ms.assetid: c6b25b8b-0bdd-41b2-9c7c-661f070c2247
-ms.openlocfilehash: 7c6b326b15a2af58da9206adf28070e57fec600c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7cd29a6a20015c7ce4475b0211cb07f7ee78b530
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963514"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794872"
 ---
 # <a name="oracle-ref-cursors"></a>Oracle REF CURSOR
 Oracle の .NET Framework Data Provider では、Oracle **REF CURSOR**データ型がサポートされています。 データ プロバイダーを使用して Oracle REF CURSOR を操作するときは、次の動作を考慮する必要があります。  
@@ -30,19 +30,19 @@ Oracle の .NET Framework Data Provider では、Oracle **REF CURSOR**データ�
 - PL/SQL **TABLE**データ型はサポートされていません。 ただし、REF CURSOR は、さらに効果的です。 **TABLE**データ型を使用する必要がある場合は、OLE DB .net DATA PROVIDER と MSDAORA を使用します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [REF CURSOR の例](../../../../docs/framework/data/adonet/ref-cursor-examples.md)  
+ [REF CURSOR の例](ref-cursor-examples.md)  
  次の 3 つの例を使って REF CURSOR の使い方について説明します。  
   
- [OracleDataReader の REF CURSOR パラメーター](../../../../docs/framework/data/adonet/ref-cursor-parameters-in-an-oracledatareader.md)  
+ [OracleDataReader の REF CURSOR パラメーター](ref-cursor-parameters-in-an-oracledatareader.md)  
  REF CURSOR パラメーターを返す PL/SQL ストアドプロシージャを実行し、その値を**OracleDataReader**として読み取る方法を示します。  
   
- [OracleDataReader を使用した複数の REF CURSOR からのデータの取得](../../../../docs/framework/data/adonet/retrieving-data-from-multiple-ref-cursors.md)  
+ [OracleDataReader を使用した複数の REF CURSOR からのデータの取得](retrieving-data-from-multiple-ref-cursors.md)  
  2つの REF CURSOR パラメーターを返す PL/SQL ストアドプロシージャを実行し、 **OracleDataReader**を使用して値を読み取る方法を示します。  
   
- [1 つまたは複数の REF CURSOR を使用した DataSet の値の設定](../../../../docs/framework/data/adonet/filling-a-dataset-using-one-or-more-ref-cursors.md)  
+ [1 つまたは複数の REF CURSOR を使用した DataSet の値の設定](filling-a-dataset-using-one-or-more-ref-cursors.md)  
  2 つの REF CURSOR パラメーターを返し、返された行を <xref:System.Data.DataSet> に入力する、PL/SQL ストアド プロシージャを実行する方法について説明します。  
   
 ## <a name="see-also"></a>関連項目
 
-- [Oracle および ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Oracle および ADO.NET](oracle-and-adonet.md)
+- [ADO.NET の概要](ado-net-overview.md)

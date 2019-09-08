@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5781254b508887f2e76f6ca0eca6a2830ada172b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0d29b9e2a9b9022f682065816a62734d6c5b2d62
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774018"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796411"
 ---
 # <a name="iinstallreferenceenum-interface"></a>IInstallReferenceEnum インターフェイス
-グローバル アセンブリ キャッシュにインストールされている参照先アセンブリの列挙子を表します。  
+グローバルアセンブリキャッシュにインストールされている参照アセンブリの列挙子を表します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,16 +42,16 @@ interface IInstallReferenceEnum : IUnknown {
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetNextInstallReferenceItem メソッド](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-getnextinstallreferenceitem-method.md)|次のポインターを取得`IInstallReferenceItem`これに含まれる`IInstallReferenceEnum`します。|  
+|[GetNextInstallReferenceItem メソッド](iinstallreferenceenum-getnextinstallreferenceitem-method.md)|`IInstallReferenceItem` この`IInstallReferenceEnum`に格納されている次のへのポインターを取得します。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** Fusion.h  
+ **ヘッダー:** Fusion. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [Fusion インターフェイス](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [IInstallReferenceItem インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
+- [Fusion インターフェイス](fusion-interfaces.md)
+- [IInstallReferenceItem インターフェイス](iinstallreferenceitem-interface.md)

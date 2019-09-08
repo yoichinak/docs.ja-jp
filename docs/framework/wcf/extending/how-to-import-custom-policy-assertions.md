@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-ms.openlocfilehash: 627b68d707dbedfaf6a291f2ab22dbc9a4f60835
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 4510eac2d9c1b3bb64420b0678b3a47a90887188
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363858"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795621"
 ---
 # <a name="how-to-import-custom-policy-assertions"></a>方法: カスタム ポリシー アサーションをインポートする
 ポリシー アサーションはサービス エンドポイントの機能と要件を説明します。  クライアント アプリケーションはサービス メタデータにあるポリシー アサーションを使用して、クライアント バインディングを構成したり、サービス エンドポイントのサービス コントラクトをカスタマイズしたりできます。  
@@ -25,7 +25,7 @@ ms.locfileid: "68363858"
   
 3. 構成ファイルを使用します。 次の手順を参照してください。  
   
-4. [ServiceModel メタデータユーティリティツール (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)での構成ファイルの使用。 次の手順を参照してください。  
+4. [ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)での構成ファイルの使用。 次の手順を参照してください。  
   
 5. プログラムでポリシー インポーターを挿入します。 次の手順を参照してください。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68363858"
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-a-configuration-file"></a>構成ファイルを使用してメタデータ システムにカスタム ポリシー インポーターを挿入するには  
   
-1. クライアント構成ファイルの`<extensions>` [ \<policyimporters >](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md)要素内の要素にインポーター型を追加します。  
+1. クライアント構成ファイルの`<extensions>` [ \<policyimporters >](../../configure-apps/file-schema/wcf/policyimporters.md)要素内の要素にインポーター型を追加します。  
   
      [!code-xml[CustomPolicySample#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]   
   
@@ -55,9 +55,9 @@ ms.locfileid: "68363858"
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-svcutilexe"></a>Svcutil.exe を使用してメタデータ システムにカスタム ポリシー インポーターを挿入するには  
   
-1. Svcutil.exe の構成ファイルの`<extensions>` [ \<policyimporters >](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md)要素内の要素にインポーター型を追加します。 また、`/svcutilConfig` オプションを使用して、異なる構成ファイルに登録されているポリシー インポーター型を読み込むように Svcutil.exe を指定することもできます。  
+1. Svcutil.exe の構成ファイルの`<extensions>` [ \<policyimporters >](../../configure-apps/file-schema/wcf/policyimporters.md)要素内の要素にインポーター型を追加します。 また、`/svcutilConfig` オプションを使用して、異なる構成ファイルに登録されているポリシー インポーター型を読み込むように Svcutil.exe を指定することもできます。  
   
-2. [ServiceModel メタデータユーティリティツール (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)を使用してメタデータをインポートすると、インポーターが自動的に呼び出されます。  
+2. [ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)を使用してメタデータをインポートすると、インポーターが自動的に呼び出されます。  
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-programmatically"></a>プログラム使用してメタデータ システムにカスタム ポリシー インポーターを挿入するには  
   
@@ -68,4 +68,4 @@ ms.locfileid: "68363858"
 - <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
-- [メタデータ システムの拡張](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)
+- [メタデータ システムの拡張](extending-the-metadata-system.md)

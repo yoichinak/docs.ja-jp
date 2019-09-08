@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fba17a2ffad9220acdbc79726efe0d3d4184978a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 193604068e379d62107b25f2bc348cd7c8bc6e98
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697980"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796712"
 ---
 # <a name="iassemblycacheitem-interface"></a>IAssemblyCacheItem インターフェイス
-グローバル アセンブリ キャッシュ内の 1 つのアセンブリを表します。  
+グローバルアセンブリキャッシュ内の1つのアセンブリを表します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[AbortItem メソッド](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-abortitem-method.md)|リリースされる前に、クリーンアップ操作を実行する、グローバル アセンブリ キャッシュにアセンブリを使用します。|  
-|[Commit メソッド](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-commit-method.md)|メモリにキャッシュされたアセンブリ参照をコミットします。|  
-|[CreateStream メソッド](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-createstream-method.md)|指定した名前と形式を使用するストリームを作成します。|  
+|[AbortItem メソッド](iassemblycacheitem-abortitem-method.md)|アセンブリが解放される前に、グローバルアセンブリキャッシュ内のアセンブリでクリーンアップ操作を実行できるようにします。|  
+|[Commit メソッド](iassemblycacheitem-commit-method.md)|キャッシュされたアセンブリ参照をメモリにコミットします。|  
+|[CreateStream メソッド](iassemblycacheitem-createstream-method.md)|指定された名前と形式を使用してストリームを作成します。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** Fusion.h  
+ **ヘッダー:** Fusion. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [Fusion インターフェイス](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [グローバル アセンブリ キャッシュ](../../../../docs/framework/app-domains/gac.md)
-- [IAssemblyCache インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [Fusion インターフェイス](fusion-interfaces.md)
+- [グローバル アセンブリ キャッシュ](../../app-domains/gac.md)
+- [IAssemblyCache インターフェイス](iassemblycache-interface.md)

@@ -1,6 +1,6 @@
 ---
 title: QualifierSet_Delete 関数 (アンマネージ API リファレンス)
-description: QualifierSet_Delete 関数は、名前、修飾子を削除します。
+description: QualifierSet_Delete 関数は、修飾子を名前で削除します。
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_Delete
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 956abe8ddf8075b7b8f8c057db0aa7187982e1d5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4bc26a16650a5beecc17898e0421e79536713deb
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782611"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798339"
 ---
-# <a name="qualifiersetdelete-function"></a>QualifierSet_Delete 関数
+# <a name="qualifierset_delete-function"></a>QualifierSet_Delete 関数
 名前によって指定した修飾子が削除されます。  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -41,39 +41,39 @@ HRESULT QualifierSet_Delete (
 ## <a name="parameters"></a>パラメーター
 
 `vFunc`  
-[in]このパラメーターは使用されません。
+からこのパラメーターは使用されていません。
 
 `ptr`   
-[in]ポインター、 [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)インスタンス。
+から[IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)インスタンスへのポインター。
 
 `wszName`   
-[in]削除する修飾子の名前。
+から削除する修飾子の名前。
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
+この関数によって返される次の値は、 *WbemCli*ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-|定数  |値  |説明  |
+|定数  |Value  |説明  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszName` パラメーターが正しくありません。 |
-|`WBEM_E_INVALID_OPERATION` | 0x80041016 | この修飾子を削除することはできません。 |
-|`WBEM_E_NOT_FOUND` | 0x80041002 | 指定した修飾子が見つかりませんでした。 |
-|`WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
-| `WBEM_S_RESET_TO_DEFAULT` | 0x40002 | ローカルのオーバーライドが削除され、親オブジェクトから元の修飾子がスコープを再開します。 |
+|`WBEM_E_INVALID_OPERATION` | 0x80041016 | この修飾子の削除は無効です。 |
+|`WBEM_E_NOT_FOUND` | 0x80041002 | 指定された修飾子が見つかりませんでした。 |
+|`WBEM_S_NO_ERROR` | 0 | 関数の呼び出しに成功しました。  |
+| `WBEM_S_RESET_TO_DEFAULT` | 0x40002 | ローカルオーバーライドが削除され、親オブジェクトからの元の修飾子がスコープを再開しました。 |
 
 ## <a name="remarks"></a>Remarks
 
-この関数の呼び出しをラップする、 [IWbemQualifierSet::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-delete)メソッド。
+この関数は、 [IWbemQualifierSet::D e)](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-delete)メソッドの呼び出しをラップします。
 
-修飾子の伝達の規則により、特定の修飾子可能性があります別のオブジェクトから継承されだけでは、現在のクラスまたはインスタンスでオーバーライドされます。 ここで、`QualifierSet_Delete`メソッドは、元の継承された値に、修飾子をリセットします。 関数は、この場合、状態コードを返します`WBEM_S_RESET_TO_DEFAULT`します。
+修飾子の伝達規則により、特定の修飾子が別のオブジェクトから継承され、現在のクラスまたはインスタンスで単にオーバーライドされている可能性があります。 この場合、メソッドは`QualifierSet_Delete` 、修飾子を元の継承された値にリセットします。 この場合の関数は、ステータスコード`WBEM_S_RESET_TO_DEFAULT`を返します。
 
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** WMINet_Utils.idl  
+ **ヘッダー:** WMINet_Utils  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+- [WMI およびパフォーマンスカウンター (アンマネージ API リファレンス)](index.md)

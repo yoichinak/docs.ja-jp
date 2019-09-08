@@ -2,12 +2,12 @@
 title: SQL Server での認証
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 1723552a48ebfa41e8d6a0f963154fc3b864119d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 49835ebf8ebe4d5bd200ed771477edc8af580b7d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957487"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794293"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server での認証
 SQL Server は、Windows 認証モードと混合モードの 2 つの認証モードをサポートしています。  
@@ -69,7 +69,7 @@ SQL Server は、Windows 認証モードと混合モードの 2 つの認証モ�
  SQL Server には、以降のバージョンで[!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)]実行されている場合に SQL Server ログインに Windows パスワードポリシーメカニズムが用意されています。 パスワードの複雑性のポリシーは、考えられるパスワードの数を増やすことにより、総当たり攻撃を防ぐようにデザインされています。 SQL Server は、SQL Server 内で使用されるパスワードに[!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] 、で使用されているのと同じ複雑さと有効期限ポリシーを適用できます。  
   
 > [!IMPORTANT]
-> ユーザー入力から文字列を連結することによって接続文字列を構築している場合、接続文字列のインジェクション攻撃に対して脆弱になります。 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> を使用すると、構文的に正しい接続文字列を実行時に作成できます。 詳細については、「[接続文字列ビルダー](../../../../../docs/framework/data/adonet/connection-string-builders.md)」をご覧ください。  
+> ユーザー入力から文字列を連結することによって接続文字列を構築している場合、接続文字列のインジェクション攻撃に対して脆弱になります。 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> を使用すると、構文的に正しい接続文字列を実行時に作成できます。 詳細については、「[接続文字列ビルダー](../connection-string-builders.md)」をご覧ください。  
   
 ## <a name="external-resources"></a>外部リソース  
  詳細については、次のリソースを参照してください。  
@@ -80,8 +80,8 @@ SQL Server は、Windows 認証モードと混合モードの 2 つの認証モ�
   
 ## <a name="see-also"></a>関連項目
 
-- [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server におけるアプリケーション セキュリティのシナリオ](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [データ ソースへの接続](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [接続文字列](../../../../../docs/framework/data/adonet/connection-strings.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET アプリケーションのセキュリティ保護](../securing-ado-net-applications.md)
+- [SQL Server におけるアプリケーション セキュリティのシナリオ](application-security-scenarios-in-sql-server.md)
+- [データ ソースへの接続](../connecting-to-a-data-source.md)
+- [接続文字列](../connection-strings.md)
+- [ADO.NET の概要](../ado-net-overview.md)

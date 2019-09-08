@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
-ms.openlocfilehash: 105537a5fccef6de7266407c78cc915f8c5d8678
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 6e0dcd819dc354e1fd23b244692dff5091142004
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204060"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784859"
 ---
 # <a name="adding-columns-to-a-datatable"></a>DataTable への列の追加
 に<xref:System.Data.DataTable>は、テーブルの<xref:System.Data.DataColumn> **Columns**プロパティによって参照されるオブジェクトのコレクションが含まれています。 この列のコレクションと制約によって、テーブルのスキーマ (構造) が定義されます。  
@@ -58,4 +58,4 @@ workTable.Columns.Add("Purchases", typeof(Double));
 - <xref:System.Data.DataTable>
 - [DataTable スキーマの定義](datatable-schema-definition.md)
 - [DataTables](datatables.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET の概要](../ado-net-overview.md)

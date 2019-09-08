@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d97ce4da-f09c-4d1e-85b7-a0ccedd7246a
-ms.openlocfilehash: 29e9ac5b95b62ef2a4467bf41484c3740d550abd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 03b09d3a53c725bb0e84ba6b5d98944267bc564c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964949"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780792"
 ---
 # <a name="sql-xml-column-values"></a>SQL XML 列値
 SQL Server は`xml`データ型をサポートし、開発者は<xref:System.Data.SqlClient.SqlCommand>クラスの標準動作を使用して、この型を含む結果セットを取得できます。 `xml` 列は、その他の列と同じようにして (<xref:System.Data.SqlClient.SqlDataReader> などに) 取得することができますが、その列の内容を XML として使用する場合は、<xref:System.Xml.XmlReader> を使用する必要があります。  
@@ -27,5 +27,5 @@ SQL Server は`xml`データ型をサポートし、開発者は<xref:System.Dat
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Data.SqlTypes.SqlXml>
-- [SQL Server における XML データ](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server における XML データ](xml-data-in-sql-server.md)
+- [ADO.NET の概要](../ado-net-overview.md)

@@ -2,12 +2,12 @@
 title: 安全なクライアント アプリケーション
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
-ms.openlocfilehash: 1312ddc079bdf8f08aebe8eb27e4bab9bf914fa8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 15d2b2199344644392be0e9a530c046a77db8523
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963153"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794382"
 ---
 # <a name="secure-client-applications"></a>安全なクライアント アプリケーション
 通常、アプリケーションは多数の要素で構成されており、それぞれをデータの損失やシステムのセキュリティ侵害を招く脆弱性から確実に保護する必要があります。 安全なユーザー インターフェイスを作成し、攻撃者によるデータやシステム リソースへのアクセスを未然に阻止することで、多くの問題を防ぐことができます。  
@@ -24,7 +24,7 @@ ms.locfileid: "69963153"
  [ASP.NET Web ページでのユーザー入力の検証](https://docs.microsoft.com/previous-versions/aspnet/7kh55542(v=vs.100))  
  ASP.NET の検証コントロールを使ったユーザー入力の検証について概要を説明します。  
   
- [Windows フォームでのユーザー入力](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
+ [Windows フォームでのユーザー入力](../../winforms/user-input-in-windows-forms.md)  
  Windows フォーム アプリケーションにおけるマウス入力およびキーボード入力の検証に関連したリンクや情報を提供します。  
   
  [.NET Framework 正規表現](../../../standard/base-types/regular-expressions.md)  
@@ -33,10 +33,10 @@ ms.locfileid: "69963153"
 ## <a name="windows-applications"></a>Windows アプリケーション  
  これまで、Windows アプリケーションは、アクセスがすべて許可された状態で実行されていました。 .NET Framework は、コード アクセス セキュリティ (CAS) を使用して Windows アプリケーションで実行されるコードを制限するインフラストラクチャを提供します。 ただし、CAS だけでは、アプリケーションを保護するには不十分です。  
   
- [Windows フォームのセキュリティ](../../../../docs/framework/winforms/windows-forms-security.md)  
+ [Windows フォームのセキュリティ](../../winforms/windows-forms-security.md)  
  Windows フォーム アプリケーションをセキュリティで保護する方法について説明します。また、関連項目へのリンクがあります。  
   
- [Windows フォームとアンマネージ アプリケーション](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
+ [Windows フォームとアンマネージ アプリケーション](../../winforms/advanced/windows-forms-and-unmanaged-applications.md)  
  Windows フォーム アプリケーションでアンマネージ アプリケーションと対話する方法について説明します。  
   
  [Windows フォームの ClickOnce 配置](../../winforms/clickonce-deployment-for-windows-forms.md)  
@@ -63,12 +63,12 @@ ms.locfileid: "69963153"
 |--------------|-----------------|  
 |[リモートアプリケーションの構成](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b8tysty8(v=vs.100))|一般的な問題を回避するためのリモート処理アプリケーションの構成方法について説明します。|  
 |[リモート処理でのセキュリティ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9hwst9th(v=vs.100))|認証と暗号化のほか、リモート処理に関連したその他のセキュリティ トピックについて説明します。|  
-|[セキュリティとリモート処理に関する考慮事項](../../../../docs/framework/misc/security-and-remoting-considerations.md)|保護されたオブジェクトやアプリケーション ドメインの境界越えに伴うセキュリティの問題について説明します。|  
+|[セキュリティとリモート処理に関する考慮事項](../../misc/security-and-remoting-considerations.md)|保護されたオブジェクトやアプリケーション ドメインの境界越えに伴うセキュリティの問題について説明します。|  
   
 ## <a name="see-also"></a>関連項目
 
-- [ADO.NET アプリケーションのセキュリティ保護](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [ADO.NET アプリケーションのセキュリティ保護](securing-ado-net-applications.md)
 - [データアクセス戦略に関する推奨事項](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
 - [アプリケーションの保護](/visualstudio/ide/securing-applications)
-- [接続情報の保護](../../../../docs/framework/data/adonet/protecting-connection-information.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [接続情報の保護](protecting-connection-information.md)
+- [ADO.NET の概要](ado-net-overview.md)

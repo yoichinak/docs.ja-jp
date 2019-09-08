@@ -2,12 +2,12 @@
 title: 'チュートリアル: リレーションシップを介したクエリの実行 (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: a9e0583b14c07df2b1de23ba37fa88552a4c5c7c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ebf96bc575ef68e1190c5b9be7111902c0f69fef
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946943"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780990"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>チュートリアル: リレーションシップを介したクエリの実行 (C#)
 このチュートリアルでは、データベース[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]内の外部キーリレーションシップを表すための*関連付け*の使用方法について説明します。  
@@ -16,8 +16,8 @@ ms.locfileid: "69946943"
   
  このチュートリアルは、Visual C# 開発設定を使用して記述されています。  
   
-## <a name="prerequisites"></a>前提条件  
- チュートリアルを完了し[ている必要があります。単純なオブジェクトモデルとクエリC#(](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md))。 このチュートリアルは前のチュートリアルに基づいて作成されており、c:\linqtest5 に northwnd.mdf ファイルがあることが前提です。  
+## <a name="prerequisites"></a>必須コンポーネント  
+ チュートリアルを完了し[ている必要があります。単純なオブジェクトモデルとクエリC#(](walkthrough-simple-object-model-and-query-csharp.md))。 このチュートリアルは前のチュートリアルに基づいて作成されており、c:\linqtest5 に northwnd.mdf ファイルがあることが前提です。  
   
 ## <a name="overview"></a>概要  
  このチュートリアルは、主に次の 3 つの手順で構成されています。  
@@ -86,8 +86,8 @@ ms.locfileid: "69946943"
 4. コンソール ウィンドウで Enter キーを押して、デバッグを停止します。  
   
 ## <a name="next-steps"></a>次の手順  
- 次のチュートリアル ([チュートリアル:データの操作C#(](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)): データを操作する方法を示します。 そのチュートリアルを実行するのに、既に終了したこのシリーズの 2 つのチュートリアルを保存する必要はありません。  
+ 次のチュートリアル ([チュートリアル:データの操作C#(](walkthrough-manipulating-data-csharp.md)): データを操作する方法を示します。 そのチュートリアルを実行するのに、既に終了したこのシリーズの 2 つのチュートリアルを保存する必要はありません。  
   
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアルによる学習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [チュートリアルによる学習](learning-by-walkthroughs.md)

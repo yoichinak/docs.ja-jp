@@ -2,12 +2,12 @@
 title: 診断用の WMI (Windows Management Instrumentation) の使用
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: e1f5ccb8849d5f8f6bd9156cd428d395a86b1301
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 90aae0e22feec5d26fa7ee4c690904ed893489b4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046016"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795918"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>診断用の WMI (Windows Management Instrumentation) の使用
 Windows Communication Foundation (WCF) は、WCF Windows Management Instrumentation (WMI) プロバイダーを介して実行時にサービスの検査データを公開します。  
@@ -17,7 +17,7 @@ Windows Communication Foundation (WCF) は、WCF Windows Management Instrumentat
   
  WMI プロバイダーは、WBEM と互換性のあるインターフェイスを通して実行時にインストルメンテーションを公開するコンポーネントです。 これは、属性と値のペアを持つ WMI オブジェクトのセットで構成されます。 ペアには多くの単純型を指定できます。 管理ツールは、実行時にインターフェイスを介してサービスに接続できます。 WCF は、アドレス、バインディング、動作、リスナーなどのサービスの属性を公開します。  
   
- 組み込みの WMI プロバイダーは、アプリケーションの構成ファイルでアクティブにできます。 これを行うには`wmiProviderEnabled` 、次のサンプル構成に示すように、 [ \<system.servicemodel >](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)セクションの[ \<診断 >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)の属性を使用します。  
+ 組み込みの WMI プロバイダーは、アプリケーションの構成ファイルでアクティブにできます。 これを行うには`wmiProviderEnabled` 、次のサンプル構成に示すように、 [ \<system.servicemodel >](../../../configure-apps/file-schema/wcf/system-servicemodel.md)セクションの[ \<診断 >](../../../configure-apps/file-schema/wcf/diagnostics.md)の属性を使用します。  
   
 ```xml  
 <system.serviceModel>  
@@ -35,9 +35,9 @@ Windows Communication Foundation (WCF) は、WCF Windows Management Instrumentat
 > [!CAUTION]
 > .NET Framework 提供のメソッドを使用し、プログラムで WMI データにアクセスする場合、そのようなメソッドは接続確立時に例外をスローする場合があることを認識しておく必要があります。 接続は、<xref:System.Management.ManagementObject> インスタンスの構築中に確立されませんが、実際のデータ交換が含まれた最初の要求時に確立されます。 したがって、`try..catch` ブロックを使用して例外をキャッチする必要があります。  
   
- トレース レベルやメッセージ ログ レベルだけでなく、WMI の `System.ServiceModel` トレース ソースのメッセージ ログ オプションも変更できます。 これを行うには、 [AppDomainInfo](../../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md)インスタンスにアクセスします。このインスタンスは`LogMessagesAtServiceLevel`、 `LogMessagesAtTransportLevel` `LogMalformedMessages`、、、 `TraceLevel`およびのブール型プロパティを公開します。 そのため、メッセージ ログ用のトレース リスナーを構成していても、これらのオプションを構成で `false` に設定している場合は、後でアプリケーションを実行しているときに `true` に変更できます。 これで、メッセージ ログが実行時に有効になります。 同様に、構成ファイルでメッセージ ログを有効にしている場合は、実行時に WMI を使用して無効にできます。  
+ トレース レベルやメッセージ ログ レベルだけでなく、WMI の `System.ServiceModel` トレース ソースのメッセージ ログ オプションも変更できます。 これを行うには、 [AppDomainInfo](appdomaininfo.md)インスタンスにアクセスします。このインスタンスは`LogMessagesAtServiceLevel`、 `LogMessagesAtTransportLevel` `LogMalformedMessages`、、、 `TraceLevel`およびのブール型プロパティを公開します。 そのため、メッセージ ログ用のトレース リスナーを構成していても、これらのオプションを構成で `false` に設定している場合は、後でアプリケーションを実行しているときに `true` に変更できます。 これで、メッセージ ログが実行時に有効になります。 同様に、構成ファイルでメッセージ ログを有効にしている場合は、実行時に WMI を使用して無効にできます。  
   
- 構成ファイルで、メッセージ ログのメッセージ ログ トレース リスナーまたはトレースの `System.ServiceModel` トレース リスナーが指定されていない場合、WMI が変更を受け入れても変更は有効になりません。 各リスナーを適切に設定する方法の詳細については、「[メッセージログの構成](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)」および「[トレースの構成](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)」を参照してください。 構成で設定された他のすべてのトレース ソースのトレース レベルは、アプリケーションが開始されると有効になり変更できません。  
+ 構成ファイルで、メッセージ ログのメッセージ ログ トレース リスナーまたはトレースの `System.ServiceModel` トレース リスナーが指定されていない場合、WMI が変更を受け入れても変更は有効になりません。 各リスナーを適切に設定する方法の詳細については、「[メッセージログの構成](../configuring-message-logging.md)」および「[トレースの構成](../tracing/configuring-tracing.md)」を参照してください。 構成で設定された他のすべてのトレース ソースのトレース レベルは、アプリケーションが開始されると有効になり変更できません。  
   
  WCF は、 `GetOperationCounterInstanceName`スクリプト作成のためのメソッドを公開します。 このメソッドに操作名を指定した場合、このメソッドはパフォーマンス カウンターのインスタンス名を返します。 ただし、このメソッドは入力を検証しません。 したがって、正しくない操作名を指定した場合、正しくないカウンター名が返されます。  
   

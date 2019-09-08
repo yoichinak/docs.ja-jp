@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a16e4a4d-6a5b-45db-8635-19570e4572ae
-ms.openlocfilehash: dd4bca48c35b9b636a96fe5d4a724272abc4f71d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bde442e344ae8aa710d75c61d0957bff9264bf01
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934398"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783536"
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>DbProviderFactory の取得
 <xref:System.Data.Common.DbProviderFactory> を取得する過程では、データ プロバイダーに関する情報が <xref:System.Data.Common.DbProviderFactories> クラスに渡されます。 <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> メソッドはこの情報に基づいて、厳密に型指定されたプロバイダー ファクトリを作成します。 たとえば、<xref:System.Data.SqlClient.SqlClientFactory> を作成するには、`GetFactory` の引数にプロバイダー名 System.Data.SqlClient を文字列として指定します。 `GetFactory` には、<xref:System.Data.DataRow> を引数として受け取るオーバーロードも存在します。 プロバイダー ファクトリを作成すると、対応するメソッドを使って他のオブジェクトを作成できるようになります。 `SqlClientFactory` のメソッドには、<xref:System.Data.SqlClient.SqlClientFactory.CreateConnection%2A>、<xref:System.Data.SqlClient.SqlClientFactory.CreateCommand%2A>、<xref:System.Data.SqlClient.SqlClientFactory.CreateDataAdapter%2A> などがあります。  
@@ -55,7 +55,7 @@ ms.locfileid: "69934398"
  [!code-vb[DataWorks DbProviderFactories#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbProviderFactories/VB/source.vb#1)]  
   
 ## <a name="using-application-configuration-files-to-store-factory-information"></a>アプリケーション構成ファイルを使用したファクトリ情報の保存  
- ファクトリを操作するために使用されるデザインパターンでは、プロバイダーと接続文字列の情報をアプリケーション構成ファイルに格納することがあります。たとえば、Windows アプリケーションの場合は app.config、ASP.NET アプリケーションの場合は web.config です。  
+ ファクトリを操作するために使用されるデザインパターンでは、プロバイダーと接続文字列の情報をアプリケーション構成ファイルに格納することがあります。たとえば、Windows**アプリケーションの場合は app.config、** ASP.NET**アプリケーションの場合は web.config です**。  
   
  次の構成ファイル フラグメントは、2 つの名前付き接続文字列 (SQL Server の Northwind データベースに接続するための "NorthwindSQL" と、Access/Jet の Northwind データベースに接続するための "NorthwindAccess") を保存する例を示したものです。 この**不変**名は、 **providerName**属性に使用されます。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "69934398"
 ```  
   
 ### <a name="retrieving-a-connection-string-by-provider-name"></a>プロバイダー名による接続文字列の取得  
- プロバイダー ファクトリを作成するには、プロバイダー名だけでなく接続文字列も指定する必要があります。 この例では、プロバイダー名を "system.string" というインバリアント形式で渡すことによって、アプリケーション構成ファイルから接続文字列を取得する方法を示します。 このコードでは、<xref:System.Configuration.ConnectionStringSettingsCollection> を反復処理しています。 成功した場合には <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> が、それ以外の場合は `null` (Visual Basic の場合は `Nothing`) が返されます。 プロバイダーに複数のエントリが存在した場合は、最初に見つかったエントリが返されます。 構成ファイルから接続文字列を取得する方法の詳細と例については、「[接続文字列と構成ファイル](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)」を参照してください。  
+ プロバイダー ファクトリを作成するには、プロバイダー名だけでなく接続文字列も指定する必要があります。 この例では、プロバイダー名*を "system.string" と*いうインバリアント形式で渡すことによって、アプリケーション構成ファイルから接続文字列を取得する方法を示します。 このコードでは、<xref:System.Configuration.ConnectionStringSettingsCollection> を反復処理しています。 成功した場合には <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> が、それ以外の場合は `null` (Visual Basic の場合は `Nothing`) が返されます。 プロバイダーに複数のエントリが存在した場合は、最初に見つかったエントリが返されます。 構成ファイルから接続文字列を取得する方法の詳細と例については、「[接続文字列と構成ファイル](connection-strings-and-configuration-files.md)」を参照してください。  
   
 > [!NOTE]
 > このコードを実行するには、`System.Configuration.dll` を参照設定する必要があります。  
@@ -88,7 +88,7 @@ ms.locfileid: "69934398"
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/VB/source.vb#1)]  
   
 ## <a name="creating-the-dbproviderfactory-and-dbconnection"></a>DbProviderFactory および DbConnection の作成  
- この例では、"system.string <xref:System.Data.Common.DbProviderFactory> " <xref:System.Data.Common.DbConnection>形式のプロバイダー名と接続文字列を渡して、オブジェクトとオブジェクトを作成する方法を示します。 成功した場合には `DbConnection` オブジェクトが返されます。エラーが発生した場合は `null` (Visual Basic の場合は `Nothing`) が返されます。  
+ この例では *、"system.string" 形式*のプロバイダー名と接続文字列を渡して、オブジェクトと<xref:System.Data.Common.DbConnection>オブジェクトを<xref:System.Data.Common.DbProviderFactory>作成する方法を示します。 成功した場合には `DbConnection` オブジェクトが返されます。エラーが発生した場合は `null` (Visual Basic の場合は `Nothing`) が返されます。  
   
  このコードでは、`DbProviderFactory` を呼び出すことによって <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> を取得しています。 次に、<xref:System.Data.Common.DbProviderFactory.CreateConnection%2A> メソッドで <xref:System.Data.Common.DbConnection> オブジェクトを作成し、<xref:System.Data.Common.DbConnection.ConnectionString%2A> プロパティに接続文字列を設定します。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "69934398"
   
 ## <a name="see-also"></a>関連項目
 
-- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
-- [接続文字列](../../../../docs/framework/data/adonet/connection-strings.md)
+- [DbProviderFactories](dbproviderfactories.md)
+- [接続文字列](connection-strings.md)
 - [構成クラスの使用](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100))
 - [ADO.NET の概要](ado-net-overview.md)

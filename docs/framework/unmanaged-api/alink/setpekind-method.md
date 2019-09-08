@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8fc581904351443f4368a68a653fd39b3548999a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9a48dbd38d357b668c2794ae6305ceb9cad3dcf4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741418"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787190"
 ---
 # <a name="setpekind-method"></a>SetPEKind メソッド
-コンピューター固有またはマシンに依存しないのいずれかのノートブックの実行可能ファイル タイプを決定します。  
+ポータブル実行可能ファイルの種類 (マシン固有またはコンピューターに依存しない) を決定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,23 +42,23 @@ HRESULT SetPEKind(
  アセンブリの ID。  
   
  `FileToken`  
- PE の種類を設定するファイルのトークン。 場合に NULL が`AssemblyID`バインドされていない netmodule では示されません。  
+ PE の種類を設定するファイルのトークン。 がバインドされ`AssemblyID`ていない .netmodule を示していない場合は、NULL にすることができます。  
   
  `dwPEKind`  
- 示されている PE の型、 [CorPEKind 列挙型](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)します。  
+ [Corpekind 列挙体](../metadata/corpekind-enumeration.md)によって示される PE の種類。  
   
  `dwMachine`  
- ターゲット コンピューターのアーキテクチャ、NT ヘッダーに記載されています。  
+ NT ヘッダーに示されている、対象コンピューターのアーキテクチャ。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は、S_OK を返します。  
+ メソッドが成功した場合、S_OK を返します。  
   
 ## <a name="requirements"></a>必要条件  
- Alink.h が必要です。  
+ Alink. h が必要です。  
   
 ## <a name="see-also"></a>関連項目
 
-- [GetPEKind メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)
-- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [GetPEKind メソッド](../metadata/imetadataimport2-getpekind-method.md)
+- [IALink2 インターフェイス](ialink2-interface.md)
+- [IALink インターフェイス](ialink-interface.md)
+- [ALink API](index.md)

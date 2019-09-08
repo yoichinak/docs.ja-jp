@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
-ms.openlocfilehash: 3bbe28423385cae0f09f301c03b2b1a59edf101d
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: e76e81153cb7d074fe975744c6b6041ee04be90f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205073"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785430"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>DataSet と XmlDataDocument の同期
 ADO.NET の <xref:System.Data.DataSet> には、データのリレーショナル表現があります。 階層データにアクセスするには、.NET Framework で使用できる XML クラスを使用できます。 従来、この 2 つのデータ表現は個別に使用されていました。 ただし、.NET Framework では、データ**セット**オブジェクトと<xref:System.Xml.XmlDataDocument>オブジェクトを使用して、データのリレーショナル表現と階層表現の両方に対してリアルタイムの同期アクセスを行うことができます。  
   
- データ**セット**が**XmlDataDocument**と同期されると、両方のオブジェクトが1つのデータセットを処理します。 これは、**データセット**に変更が加えられた場合、変更が**XmlDataDocument**に反映されることを意味します。また、その逆も同様です。 データセットと**XmlDataDocument**の間の関係により、1つのデータセットを使用して1つのアプリケーションでデータ**セット**を中心に構築されたサービススイート全体にアクセスできるようになり (Web フォームやWindows フォームコントロール、および Visual Studio .NET デザイナー) に加えて、拡張スタイルシート言語 (XSL)、XSL transformation (XSLT)、XML Path Language (XPath) などの XML サービス群が含まれています。 アプリケーションでアクセス対象とするサービス セットを選択する必要はありません。どちらのサービス セットにもアクセスできます。  
+ データ**セット**が**XmlDataDocument**と同期されると、両方のオブジェクトが1つのデータセットを処理します。 これは、**データセット**に変更が加えられた場合、変更が**XmlDataDocument**に反映されることを意味します。また、その逆も同様です。 データセットと XmlDataDocument**の間**の関係により、1つのデータセットを使用して1つのアプリケーションでデータ**セット**を中心に構築されたサービススイート全体にアクセスできるようになり (Web フォームやWindows フォームコントロール、および Visual Studio .NET デザイナー) に加えて、拡張スタイルシート言語 (XSL)、XSL transformation (XSLT)、XML Path Language (XPath) などの XML サービス群が含まれています。 アプリケーションでアクセス対象とするサービス セットを選択する必要はありません。どちらのサービス セットにもアクセスできます。  
   
  **データセット**を**XmlDataDocument**と同期するには、いくつかの方法があります。 次の操作を行うことができます。  
   
@@ -63,7 +63,7 @@ ADO.NET の <xref:System.Data.DataSet> には、データのリレーショナ�
   
      データが含まれているデータ**セット**と同期されている場合、 **XmlDataDocument**を読み込むことはできません。 読み込もうとすると例外がスローされます。  
   
-- 新しい**XmlDataDocument**を作成して XML ドキュメントから読み込み、 **XmlDataDocument**のデータ**セット**プロパティを使用してデータのリレーショナルビューにアクセスします。 データセットを使用して**XmlDataDocument**内のデータを表示するには、データ**セット**のスキーマを設定する必要があります。 ここでも、**データセット**スキーマ内のテーブル名と列名は、同期する XML 要素の名前と一致している必要があります。 この名前の一致では、大文字と小文字が区別されます。  
+- 新しい**XmlDataDocument**を作成して XML ドキュメントから読み込み、 **XmlDataDocument**のデータ**セット**プロパティを使用してデータのリレーショナルビューにアクセスします。 データセットを使用して**XmlDataDocument**内のデータを表示するには、データ**セット**のスキーマを設定する必要が**あります。** ここでも、**データセット**スキーマ内のテーブル名と列名は、同期する XML 要素の名前と一致している必要があります。 この名前の一致では、大文字と小文字が区別されます。  
   
      次のコード例では、 **XmlDataDocument**内のデータのリレーショナルビューにアクセスする方法を示します。  
   
@@ -101,7 +101,7 @@ ADO.NET の <xref:System.Data.DataSet> には、データのリレーショナ�
   
 ## <a name="related-sections"></a>関連項目  
  [DataSet での XML の使用](using-xml-in-a-dataset.md)  
- データセットの内容を XML データとして読み込み、永続化するなど、データ**セット**をデータソースとして xml と対話する方法について説明します。  
+ データセットの内容を XML**データとし**て読み込み、永続化するなど、データ**セット**をデータソースとして xml と対話する方法について説明します。  
   
  [DataRelation の入れ子化](nesting-datarelations.md)  
  **DataSet**の内容を XML データとして表す場合に、入れ子になった**DataRelation**オブジェクトの重要性について説明し、これらの関係を作成する方法について説明します。  
@@ -114,4 +114,4 @@ ADO.NET の <xref:System.Data.DataSet> には、データのリレーショナ�
   
 ## <a name="see-also"></a>関連項目
 
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET の概要](../ado-net-overview.md)

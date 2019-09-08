@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bdc1ef6490f250ebe93b0482adf244adfc0ffd56
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b26f08548ac964fae2f4d64db50167add327eb2d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741789"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777369"
 ---
 # <a name="getwin32resblob-method"></a>GetWin32ResBlob メソッド
-Win32 リソースの blob を取得します。 アセンブリ オプションを設定した後、このメソッドを呼び出します。  
+Win32 リソース blob を取得します。 アセンブリオプションを設定した後に、このメソッドを呼び出します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,28 +44,28 @@ HRESULT GetWin32ResBlob(
  アセンブリの ID。  
   
  `FileToken`  
- Win32 バージョン リソースを作成するときに使用するファイル名を取得するために使用するファイル トークン  
+ Win32 バージョンリソースの構築時に使用されるファイル名を取得するために使用されるファイルトークン  
   
  `fDll`  
- ファイルは、DLL false EXE の場合は TRUE。  
+ ファイルが DLL の場合は TRUE、EXE の場合は false。  
   
  `pszIconFile`  
- リソースの blob に挿入するオプションのアイコン。  
+ リソース blob に挿入するオプションアイコン。  
   
  `ppResBlob`  
- リソースの blob を受け取ります。  
+ リソース blob を受信します。  
   
  `pcbResBlob`  
  Blob のサイズを受け取ります。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は、S_OK を返します。  
+ メソッドが成功した場合、S_OK を返します。  
   
 ## <a name="requirements"></a>必要条件  
- Alink.h が必要です。  
+ Alink. h が必要です。  
   
 ## <a name="see-also"></a>関連項目
 
-- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink インターフェイス](ialink-interface.md)
+- [IALink2 インターフェイス](ialink2-interface.md)
+- [ALink API](index.md)

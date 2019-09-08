@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-ms.openlocfilehash: eb60bc474ae0dd8cec85ca36f68b12764d46044d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: d49df909521b3b5e5cf509c1367821856e91e30b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040219"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795471"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>チュートリアル: カスタム クライアントおよびサービスの資格情報を作成する
 
@@ -23,8 +23,6 @@ ms.locfileid: "70040219"
 - アプリケーションで資格情報を設定するための API を提供します。
 
 - <xref:System.IdentityModel.Selectors.SecurityTokenManager> 実装のファクトリとして動作します。
-
-<xref:System.ServiceModel.Description.ClientCredentials> クラスと <xref:System.ServiceModel.Description.ServiceCredentials> クラスは、どちらも <xref:System.ServiceModel.Security.SecurityCredentialsManager> を返すためのコントラクトを定義する <xref:System.IdentityModel.Selectors.SecurityTokenManager> 抽象クラスから継承されます。
 
 WCF に用意されている既定の実装では、システム指定の資格情報の種類をサポートし、これらの資格情報の種類を処理できるセキュリティトークンマネージャーを作成します。
 
@@ -44,11 +42,11 @@ WCF に用意されている既定の実装では、システム指定の資格�
 
 資格情報をカスタマイズする理由は、資格情報のプロビジョニング、セキュリティトークンのシリアル化、または認証に関する WCF の動作を変更するため、カスタム資格情報クラスの作成は最初の手順にすぎません。 このセクションの他のトピックでは、カスタムのシリアライザーと認証システムを作成する方法について説明します。 カスタム資格情報クラスの作成は、このような観点からすると、一連のトピックの最初の手順になります。 これに続く処理 (カスタムのシリアライザーおよび認証システムの作成) は、カスタム資格情報の作成後にのみ可能になります。 このトピックに基づく他のトピックには、次のものがあります。
 
-- [方法: カスタムセキュリティトークンプロバイダーを作成する](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
+- [方法: カスタムセキュリティトークンプロバイダーを作成する](how-to-create-a-custom-security-token-provider.md)
 
-- [方法: カスタムセキュリティトークン認証システムを作成する](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
+- [方法: カスタムセキュリティトークン認証システムを作成する](how-to-create-a-custom-security-token-authenticator.md)
 
-- [方法: カスタムトークン](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)を作成します。
+- [方法: カスタムトークン](how-to-create-a-custom-token.md)を作成します。
 
 ## <a name="procedures"></a>手順
 
@@ -72,11 +70,11 @@ WCF に用意されている既定の実装では、システム指定の資格�
 
 1. <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> から派生する新しいクラスを定義します。
 
-2. 任意。 カスタム <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 実装を作成する必要がある場合は、<xref:System.IdentityModel.Selectors.SecurityTokenProvider> メソッドをオーバーライドします。 カスタムセキュリティトークンプロバイダーの詳細については[、「」を参照してください。カスタムセキュリティトークンプロバイダー](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)を作成します。
+2. 任意。 カスタム <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 実装を作成する必要がある場合は、<xref:System.IdentityModel.Selectors.SecurityTokenProvider> メソッドをオーバーライドします。 カスタムセキュリティトークンプロバイダーの詳細については[、「」を参照してください。カスタムセキュリティトークンプロバイダー](how-to-create-a-custom-security-token-provider.md)を作成します。
 
-3. 任意。 カスタム <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> 実装を作成する必要がある場合は、<xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> メソッドをオーバーライドします。 カスタムセキュリティトークン認証システムの詳細について[は、「」を参照してください。カスタムセキュリティトークン認証システム](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)を作成します。
+3. 任意。 カスタム <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> 実装を作成する必要がある場合は、<xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> メソッドをオーバーライドします。 カスタムセキュリティトークン認証システムの詳細について[は、「」を参照してください。カスタムセキュリティトークン認証システム](how-to-create-a-custom-security-token-authenticator.md)を作成します。
 
-4. 任意。 カスタム <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A> を作成する必要がある場合は、<xref:System.IdentityModel.Selectors.SecurityTokenSerializer> メソッドをオーバーライドします。 カスタムセキュリティトークンおよびカスタムセキュリティトークンシリアライザーの詳細については[、「」を参照してください。カスタムトークン](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)を作成します。
+4. 任意。 カスタム <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A> を作成する必要がある場合は、<xref:System.IdentityModel.Selectors.SecurityTokenSerializer> メソッドをオーバーライドします。 カスタムセキュリティトークンおよびカスタムセキュリティトークンシリアライザーの詳細については[、「」を参照してください。カスタムトークン](how-to-create-a-custom-token.md)を作成します。
 
     [!code-csharp[c_CustomCredentials#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#2)]
     [!code-vb[c_CustomCredentials#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#2)]
@@ -160,11 +158,11 @@ WCF に用意されている既定の実装では、システム指定の資格�
 
 1. <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> クラスから派生する新しいクラスを定義します。
 
-2. 任意。 カスタム <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A> 実装を作成する必要がある場合は、<xref:System.IdentityModel.Selectors.SecurityTokenProvider> メソッドをオーバーライドします。 カスタムセキュリティトークンプロバイダーの詳細については[、「」を参照してください。カスタムセキュリティトークンプロバイダー](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)を作成します。
+2. 任意。 カスタム <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A> 実装を作成する必要がある場合は、<xref:System.IdentityModel.Selectors.SecurityTokenProvider> メソッドをオーバーライドします。 カスタムセキュリティトークンプロバイダーの詳細については[、「」を参照してください。カスタムセキュリティトークンプロバイダー](how-to-create-a-custom-security-token-provider.md)を作成します。
 
-3. 任意。 カスタム <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> 実装を作成する必要がある場合は、<xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> メソッドをオーバーライドします。 カスタムセキュリティトークン認証システムの詳細について[は、「」を参照してください。カスタムセキュリティトークン認証システム](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)トピックを作成します。
+3. 任意。 カスタム <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> 実装を作成する必要がある場合は、<xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> メソッドをオーバーライドします。 カスタムセキュリティトークン認証システムの詳細について[は、「」を参照してください。カスタムセキュリティトークン認証システム](how-to-create-a-custom-security-token-authenticator.md)トピックを作成します。
 
-4. 任意。 カスタム <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29> を作成する必要がある場合は、<xref:System.IdentityModel.Selectors.SecurityTokenSerializer> メソッドをオーバーライドします。 カスタムセキュリティトークンおよびカスタムセキュリティトークンシリアライザーの詳細については[、「」を参照してください。カスタムトークン](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)を作成します。
+4. 任意。 カスタム <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29> を作成する必要がある場合は、<xref:System.IdentityModel.Selectors.SecurityTokenSerializer> メソッドをオーバーライドします。 カスタムセキュリティトークンおよびカスタムセキュリティトークンシリアライザーの詳細については[、「」を参照してください。カスタムトークン](how-to-create-a-custom-token.md)を作成します。
 
     [!code-csharp[c_CustomCredentials#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#5)]
     [!code-vb[c_CustomCredentials#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#5)]
@@ -190,6 +188,6 @@ WCF に用意されている既定の実装では、システム指定の資格�
 - <xref:System.IdentityModel.Selectors.SecurityTokenManager>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement>
-- [方法: カスタムセキュリティトークンプロバイダーを作成する](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
-- [方法: カスタムセキュリティトークン認証システムを作成する](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
-- [方法: カスタムトークンを作成する](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)
+- [方法: カスタムセキュリティトークンプロバイダーを作成する](how-to-create-a-custom-security-token-provider.md)
+- [方法: カスタムセキュリティトークン認証システムを作成する](how-to-create-a-custom-security-token-authenticator.md)
+- [方法: カスタムトークンを作成する](how-to-create-a-custom-token.md)

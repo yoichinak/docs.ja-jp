@@ -2,12 +2,12 @@
 title: オプティミスティック コンカレンシー:概要
 ms.date: 03/30/2017
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
-ms.openlocfilehash: a61d4c5b35f3797539fe845045b8a959b0351350
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fa7d423c0abc07e0d97f7d0d4d557aa11d675ee4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938626"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792928"
 ---
 # <a name="optimistic-concurrency-overview"></a>オプティミスティック コンカレンシー:概要
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] はオプティミスティック コンカレンシーをサポートします。 次の表では、ドキュメントで[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]オプティミスティック同時実行に適用される用語について説明します。  
@@ -44,26 +44,26 @@ ms.locfileid: "69938626"
 |ユーザー 1|Alfred||マーケティング|  
 |ユーザー 2||Mary|サービス|  
   
- このような競合は、いくつかの方法で解決できます。 詳細については、「[方法 :変更の競合](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)を管理します。  
+ このような競合は、いくつかの方法で解決できます。 詳細については、「[方法 :変更の競合](how-to-manage-change-conflicts.md)を管理します。  
   
 ## <a name="conflict-detection-and-resolution-checklist"></a>競合の検出と解決のチェック リスト  
  競合の検出と解決は、さまざまな詳細レベルで行うことができます。 極端な方法としては、すべての競合を 3 つの方法 (<xref:System.Data.Linq.RefreshMode> を参照) のいずれかで 1 つで解決し、それ以外の考慮を一切加えないという方法もあります。 正反対の方法としては、競合している各メンバーについて、それぞれの競合の種類ごとに、特定の処理を指定するという方法もあります。  
   
 - オブジェクト モデルの <xref:System.Data.Linq.Mapping.UpdateCheck> オプションを指定または変更します。  
   
-     詳細については、「[方法 :同時実行の競合](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)をテストするメンバーを指定します。  
+     詳細については、「[方法 :同時実行の競合](how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)をテストするメンバーを指定します。  
   
 - <xref:System.Data.Linq.DataContext.SubmitChanges%2A> の呼び出しの try/catch ブロックで、例外がどの時点でスローされるかを指定します。  
   
-     詳細については、「[方法 :同時実行例外をいつスロー](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md)するかを指定します。  
+     詳細については、「[方法 :同時実行例外をいつスロー](how-to-specify-when-concurrency-exceptions-are-thrown.md)するかを指定します。  
   
 - 取得する競合の詳細さを判断し、それに応じたコードを try/catch ブロックに記述します。  
   
-     詳細については、「[方法 :エンティティの競合情報](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md)を[取得し、次の操作を行います。メンバーの競合情報](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md)を取得します。  
+     詳細については、「[方法 :エンティティの競合情報](how-to-retrieve-entity-conflict-information.md)を[取得し、次の操作を行います。メンバーの競合情報](how-to-retrieve-member-conflict-information.md)を取得します。  
   
 - 検出した`try`さまざまな競合を解決する方法を`catch`コードに/含めます。  
   
-     詳細については、「[方法 :データベースの値](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)を保持して[競合を解決する方法:データベースの値](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)を上書きして競合[を解決し、次の操作を実行します。データベース値](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md)とマージして競合を解決します。  
+     詳細については、「[方法 :データベースの値](how-to-resolve-conflicts-by-retaining-database-values.md)を保持して[競合を解決する方法:データベースの値](how-to-resolve-conflicts-by-overwriting-database-values.md)を上書きして競合[を解決し、次の操作を実行します。データベース値](how-to-resolve-conflicts-by-merging-with-database-values.md)とマージして競合を解決します。  
   
 ## <a name="linq-to-sql-types-that-support-conflict-discovery-and-resolution"></a>競合の発見と解決をサポートする LINQ to SQL の型  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] で、オプティミスティック コンカレンシーの競合の解決をサポートするクラスと機能を以下に示します。  
@@ -90,4 +90,4 @@ ms.locfileid: "69938626"
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: 変更の競合を管理する](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [方法: 変更の競合を管理する](how-to-manage-change-conflicts.md)

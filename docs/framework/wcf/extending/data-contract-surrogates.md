@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: 7b1e8585755bbbff900bd621d8bc3a25fd23961c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cc0772cbb35f7c149af7eac04239d7349fa79f27
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587504"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797201"
 ---
 # <a name="data-contract-surrogates"></a>データ コントラクト サロゲート
-データ コントラクト*サロゲート*は高度な機能、データ コントラクト モデルに基づいて構築されています。 この機能は、型をシリアル化または逆シリアル化する方法や、型をメタデータに投影する方法をユーザーが変更する場合に、型のカスタマイズと置換に使用することを目的としています。 サロゲートを使用できるのは、型のデータ コントラクトが指定されていない場合、フィールドやプロパティが <xref:System.Runtime.Serialization.DataMemberAttribute> 属性でマークされていない場合、またはユーザーがスキーマのバリエーションを動的に作成することを希望している場合などです。  
+データコントラクト*サロゲート*は、データコントラクトモデルに基づいて構築された高度な機能です。 この機能は、型をシリアル化または逆シリアル化する方法や、型をメタデータに投影する方法をユーザーが変更する場合に、型のカスタマイズと置換に使用することを目的としています。 サロゲートを使用できるのは、型のデータ コントラクトが指定されていない場合、フィールドやプロパティが <xref:System.Runtime.Serialization.DataMemberAttribute> 属性でマークされていない場合、またはユーザーがスキーマのバリエーションを動的に作成することを希望している場合などです。  
   
  <xref:System.Runtime.Serialization.DataContractSerializer> を使用して .NET Framework から XML などの適切な形式に変換するときに、データ コントラクト サロゲートを使用してシリアル化と逆シリアル化を行います。 また、XML スキーマ ドキュメント (XSD) などのメタデータ表現を生成するときに、データ コントラクト サロゲートを使用して、型のエクスポートするメタデータを変更できます。 インポート時には、メタデータからコードが作成されますが、この場合にサロゲートを使用すると、生成されるコードもカスタマイズできます。  
   
@@ -60,9 +60,9 @@ ms.locfileid: "64587504"
   
  <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> メソッドは、オブジェクトをシリアル化するときに呼び出されます。 このメソッドでは、元の型からサロゲートされた型のフィールドにデータを転送します。 フィールドは、サロゲート フィールドに直接割り当てることができます。また、元のデータの操作をサロゲートに格納することもできます。 このメソッドは、フィールドを直接割り当てる場合、サロゲートされたフィールドに格納されたデータに対して操作を実行する場合、サロゲートされたフィールドに元の型の XML を格納する場合などに使用できます。  
   
- `targetType` パラメーターは、メンバーの宣言された型を指します。 このパラメーターは、<xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> メソッドによって返されたサロゲートされた型です。 シリアライザーは、返されるオブジェクトがこの型に割り当て可能であることを強制するわけではありません。 `obj`パラメーターは、シリアル化するオブジェクトに応じてサロゲートに変換されます。 サロゲートがオブジェクトを処理しない場合、このメソッドは入力オブジェクトを返す必要があります。 それ以外の場合は、新しいサロゲート オブジェクトが返されます。 オブジェクトが null の場合、サロゲートは呼び出されません。 さまざまなインスタンスの多数のサロゲートのマッピングをこのメソッドで定義できます。  
+ `targetType` パラメーターは、メンバーの宣言された型を指します。 このパラメーターは、<xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> メソッドによって返されたサロゲートされた型です。 シリアライザーは、返されるオブジェクトがこの型に割り当て可能であることを強制するわけではありません。 `obj`パラメーターは、シリアル化するオブジェクトであり、必要に応じてサロゲートに変換されます。 サロゲートがオブジェクトを処理しない場合、このメソッドは入力オブジェクトを返す必要があります。 それ以外の場合は、新しいサロゲート オブジェクトが返されます。 オブジェクトが null の場合、サロゲートは呼び出されません。 さまざまなインスタンスの多数のサロゲートのマッピングをこのメソッドで定義できます。  
   
- <xref:System.Runtime.Serialization.DataContractSerializer> の作成時に、オブジェクト参照を保持するように指定できます  (詳細については、次を参照してください[シリアル化および逆シリアル化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。)。これを行うには、コンストラクターの `preserveObjectReferences` パラメーターを `true` に設定します。 この場合、サロゲートはオブジェクトに対して 1 回だけ呼び出されます。これは、以降のシリアル化では参照をストリームに書き込むだけだからです。 `preserveObjectReferences` を `false` に設定すると、インスタンスが発生するたびにサロゲートが呼び出されます。  
+ <xref:System.Runtime.Serialization.DataContractSerializer> の作成時に、オブジェクト参照を保持するように指定できます (詳細については、「[シリアル化と逆シリアル化](../feature-details/serialization-and-deserialization.md)」を参照してください)。これを行うには、コンストラクターの `preserveObjectReferences` パラメーターを `true` に設定します。 この場合、サロゲートはオブジェクトに対して 1 回だけ呼び出されます。これは、以降のシリアル化では参照をストリームに書き込むだけだからです。 `preserveObjectReferences` を `false` に設定すると、インスタンスが発生するたびにサロゲートが呼び出されます。  
   
  シリアル化されたインスタンスの型が宣言された型と異なる場合、インスタンスをもう一方の側で逆シリアル化できるように、型情報 (`xsi:type` など) がストリームに書き込まれます。 このプロセスは、オブジェクトがサロゲートされているかどうかに関係なく発生します。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "64587504"
   
  このメソッドが呼び出されるのは、オブジェクトの逆シリアル化中だけです。 このメソッドは、サロゲート型から元の型に戻す逆シリアル化に必要な逆方向のデータ マッピングを行います。 `GetObjectToSerialize` メソッドと同様に、フィールド データを直接交換する場合、データに対して操作を実行する場合、XML データを格納する場合などに使用できます。 逆シリアル化するときには、データ変換時の操作の結果として、元のデータから正確なデータ値を必ずしも取得できるとは限りません。  
   
- `targetType` パラメーターは、メンバーの宣言された型を指します。 このパラメーターは、`GetDataContractType` メソッドによって返されたサロゲートされた型です。 `obj`パラメーターは逆シリアル化されたオブジェクトを指します。 オブジェクトがサロゲートされている場合、オブジェクトを変換して元の型に戻すことができます。 サロゲートがオブジェクトを処理しない場合、このメソッドは入力オブジェクトを返します。 それ以外の場合は、変換が完了すると、逆シリアル化されたオブジェクトが返されます。 複数のサロゲート型が存在する場合、各型とその変換を示すことにより、サロゲートからそれぞれのプライマリ型へのデータ変換を提供できます。  
+ `targetType` パラメーターは、メンバーの宣言された型を指します。 このパラメーターは、`GetDataContractType` メソッドによって返されたサロゲートされた型です。 パラメーター `obj`は、逆シリアル化されたオブジェクトを参照します。 オブジェクトがサロゲートされている場合、オブジェクトを変換して元の型に戻すことができます。 サロゲートがオブジェクトを処理しない場合、このメソッドは入力オブジェクトを返します。 それ以外の場合は、変換が完了すると、逆シリアル化されたオブジェクトが返されます。 複数のサロゲート型が存在する場合、各型とその変換を示すことにより、サロゲートからそれぞれのプライマリ型へのデータ変換を提供できます。  
   
  オブジェクトを返す場合、このサロゲートによって返されたオブジェクトで内部オブジェクト テーブルが更新されます。 インスタンスへの以降の参照では、このオブジェクト テーブルからサロゲートされたインスタンスが取得されます。  
   
@@ -131,17 +131,17 @@ ms.locfileid: "64587504"
 ### <a name="getknowncustomdatatypes-method"></a>GetKnownCustomDataTypes メソッド  
  このメソッドは、スキーマから定義済みのカスタム データ型を取得します。 スキーマのインポートでは、このメソッドは省略可能です。  
   
- このメソッドは、スキーマのエクスポートとインポートの開始時に呼び出されます。 このメソッドは、エクスポートまたはインポートするスキーマで使用されるカスタム データ型を返します。 メソッドには、型のコレクションである <xref:System.Collections.ObjectModel.Collection%601> (`customDataTypes` パラメーター) が渡されます。 このメソッドでは、既知の型をこのコレクションに追加する必要があります。 既知のカスタム データ型は、<xref:System.Runtime.Serialization.DataContractSerializer> を使用したカスタム データのシリアル化と逆シリアル化を可能にするために必要となります。 詳細については、次を参照してください。 [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)します。  
+ このメソッドは、スキーマのエクスポートとインポートの開始時に呼び出されます。 このメソッドは、エクスポートまたはインポートするスキーマで使用されるカスタム データ型を返します。 メソッドには、型のコレクションである <xref:System.Collections.ObjectModel.Collection%601> (`customDataTypes` パラメーター) が渡されます。 このメソッドでは、既知の型をこのコレクションに追加する必要があります。 既知のカスタム データ型は、<xref:System.Runtime.Serialization.DataContractSerializer> を使用したカスタム データのシリアル化と逆シリアル化を可能にするために必要となります。 詳細については、「[データコントラクトの既知の型](../feature-details/data-contract-known-types.md)」を参照してください。  
   
 ## <a name="implementing-a-surrogate"></a>サロゲートの実装  
- Wcf データ コントラクト サロゲートを使用するには、いくつかの特別な手順に従ってください。  
+ WCF 内でデータコントラクトサロゲートを使用するには、いくつかの特別な手順に従う必要があります。  
   
 ### <a name="to-use-a-surrogate-for-serialization-and-deserialization"></a>シリアル化と逆シリアル化にサロゲートを使用するには  
  サロゲートを使用してデータのシリアル化と逆シリアル化を実行するには、<xref:System.Runtime.Serialization.DataContractSerializer> を使用します。 <xref:System.Runtime.Serialization.DataContractSerializer> は、<xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> によって作成されます。 サロゲートも指定する必要があります。  
   
 ##### <a name="to-implement-serialization-and-deserialization"></a>シリアル化と逆シリアル化を実装するには  
   
-1. サービスの <xref:System.ServiceModel.ServiceHost> のインスタンスを作成します。 完全な手順については、次を参照してください。[基本的な WCF プログラミング](../../../../docs/framework/wcf/basic-wcf-programming.md)します。  
+1. サービスの <xref:System.ServiceModel.ServiceHost> のインスタンスを作成します。 詳しい手順については、「[基本的な WCF プログラミング](../basic-wcf-programming.md)」を参照してください。  
   
 2. 指定したサービス ホストの各 <xref:System.ServiceModel.Description.ServiceEndpoint> について、<xref:System.ServiceModel.Description.OperationDescription> を検索します。  
   
@@ -175,7 +175,7 @@ ms.locfileid: "64587504"
      [!code-csharp[C_IDataContractSurrogate#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#9)]  
   
 ### <a name="to-use-a-surrogate-for-metadata-export"></a>メタデータのエクスポートにサロゲートを使用するには  
- 既定では、wcf サービスのメタデータをエクスポートするときに、WSDL と XSD スキーマを生成する必要があります。 データ コントラクト型の XSD スキーマを生成するコンポーネント (<xref:System.Runtime.Serialization.XsdDataContractExporter>) に、サロゲートを追加する必要があります。 これを行うには、<xref:System.ServiceModel.Description.IWsdlExportExtension> を実装する動作を使用して <xref:System.ServiceModel.Description.WsdlExporter> を変更するか、メタデータをエクスポートする際に使用する <xref:System.ServiceModel.Description.WsdlExporter> を直接変更します。  
+ 既定では、サービスの WCF からメタデータをエクスポートするときに、WSDL スキーマと XSD スキーマの両方を生成する必要があります。 データ コントラクト型の XSD スキーマを生成するコンポーネント (<xref:System.Runtime.Serialization.XsdDataContractExporter>) に、サロゲートを追加する必要があります。 これを行うには、<xref:System.ServiceModel.Description.IWsdlExportExtension> を実装する動作を使用して <xref:System.ServiceModel.Description.WsdlExporter> を変更するか、メタデータをエクスポートする際に使用する <xref:System.ServiceModel.Description.WsdlExporter> を直接変更します。  
   
 ##### <a name="to-use-a-surrogate-for-metadata-export"></a>メタデータのエクスポートにサロゲートを使用するには  
   
@@ -198,4 +198,4 @@ ms.locfileid: "64587504"
 - <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>
 - <xref:System.Runtime.Serialization.ImportOptions>
 - <xref:System.Runtime.Serialization.ExportOptions>
-- [データ コントラクトの使用](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [データ コントラクトの使用](../feature-details/using-data-contracts.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: 561ebd7ac6948fa42f73ebb4f1eb97c574e6d7e7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f3add49d48a569664d4cbb6b5c26d5f3379b6f18
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963184"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794413"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>DataReader を使用してデータを取得する
 **Datareader**を使用してデータを取得するには、 **command**オブジェクトのインスタンスを作成した後、 **ExecuteReader**を呼び出してデータソースから行を取得し、 **datareader**を作成します。 **DataReader**は、バッファリングされていないデータストリームを提供します。これにより、手続き型のロジックによって、データソースからの結果を順番に効率的に処理できます。 データがメモリにキャッシュされないため、大量のデータを取得する場合は、 **DataReader**を使用することをお勧めします。
@@ -57,7 +57,7 @@ reader = command.ExecuteReader()
 ## <a name="working-with-ole-db-chapters"></a>OLE DB の章を操作する  
  階層型の行セット、つまりチャプター (OLE DB type **DBTYPE_HCHAPTER**、ADO 型**adchapter**) は、 <xref:System.Data.OleDb.OleDbDataReader>を使用して取得できます。 チャプターを含むクエリが**datareader**として返された場合、チャプターはその**datareader**の列として返され、 **datareader**オブジェクトとして公開されます。  
   
- ADO.NET**データセット**を使用すると、テーブル間の親子リレーションシップを使用して、階層的な行セットを表すこともできます。 詳細については、「[データセット、datatable、および DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)」を参照してください。  
+ ADO.NET**データセット**を使用すると、テーブル間の親子リレーションシップを使用して、階層的な行セットを表すこともできます。 詳細については、「[データセット、datatable、および DataViews](./dataset-datatable-dataview/index.md)」を参照してください。  
   
  MSDataShape プロバイダーを使用して、顧客リストの顧客別オーダーのチャプター列を生成するコード サンプルを次に示します。  
   
@@ -255,11 +255,11 @@ adapter.Fill(ds);
 ```
 
 > [!NOTE]
-> **OverflowException**を回避するには、に値<xref:System.Data.DataRow>を格納する前に、Oracle の数値型から有効な .NET Framework 型への変換も処理することをお勧めします。 イベントを使用し<xref:System.Data.Common.DataAdapter.FillError>て、 **OverflowException**が発生したかどうかを判断できます。 <xref:System.Data.Common.DataAdapter.FillError>イベントの詳細については、「 [DataAdapter イベントの処理](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)」を参照してください。  
+> **OverflowException**を回避するには、に値<xref:System.Data.DataRow>を格納する前に、Oracle の数値型から有効な .NET Framework 型への変換も処理することをお勧めします。 イベントを使用し<xref:System.Data.Common.DataAdapter.FillError>て、 **OverflowException**が発生したかどうかを判断できます。 <xref:System.Data.Common.DataAdapter.FillError>イベントの詳細については、「 [DataAdapter イベントの処理](handling-dataadapter-events.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [DataAdapter と DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [コマンドおよびパラメーター](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [データベース スキーマ情報の取得](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataAdapter と DataReader](dataadapters-and-datareaders.md)
+- [コマンドおよびパラメーター](commands-and-parameters.md)
+- [データベース スキーマ情報の取得](retrieving-database-schema-information.md)
+- [ADO.NET の概要](ado-net-overview.md)

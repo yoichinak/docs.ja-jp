@@ -2,12 +2,12 @@
 title: モデル宣言関数
 ms.date: 03/30/2017
 ms.assetid: aba87f13-5685-4f6b-ad14-918e8a7d5c2a
-ms.openlocfilehash: 73e716f1c42dfbbb91dc6456212de2a331d7c4ef
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cb2fca52604bd57f25469f5621c292a27638c76f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943922"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794801"
 ---
 # <a name="model-declared-function"></a>モデル宣言関数
 *モデルで宣言*された関数は、概念モデルで宣言されているが、その概念モデルで定義されていない関数です。 この関数は、ホスト環境またはストレージ環境で定義します。 たとえば、モデル宣言関数は、データベースに定義された関数にマップされ、これによって概念モデルにおけるサーバー側の機能が公開される場合があります。  
@@ -30,5 +30,5 @@ ms.locfileid: "69943922"
   
 ## <a name="see-also"></a>関連項目
 
-- [Entity Data Model キーの概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Entity Data Model キーの概念](entity-data-model-key-concepts.md)
+- [Entity Data Model](entity-data-model.md)

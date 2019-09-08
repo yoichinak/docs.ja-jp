@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b7be346f1c92c877932957787b0747515c144752
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 76d341aca7c96e5932a1fc155ccaee17ce6585da
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741537"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777004"
 ---
 # <a name="setassemblyfile-method"></a>SetAssemblyFile メソッド
-ビルドするアセンブリの名前を割り当てます。 非バインド モジュールを生成するときに使用しないでください。  
+ビルドされるアセンブリの名前を割り当てます。 非バインドモジュールの生成時には使用しません。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,25 +39,25 @@ HRESULT SetAssemblyFile(
   
 ## <a name="parameters"></a>パラメーター  
  `pszFilename`  
- マニフェスト ファイルの完全修飾名。  
+ マニフェストファイルの完全修飾名。  
   
  `pEmitter`  
- ポインター [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)インターフェイス。  
+ [IMetaDataEmit インターフェイス](../metadata/imetadataemit-interface.md)インターフェイスへのポインター。  
   
  `afFlags`  
- 定義されているフラグ[AssemblyFlags 列挙体](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md)します。  
+ [Assemblyflags 列挙型](../metadata/assemblyflags-enumeration.md)で定義されているフラグ。  
   
  `pAssemblyID`  
  結果として得られるアセンブリの ID へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は、S_OK を返します。  
+ メソッドが成功した場合、S_OK を返します。  
   
 ## <a name="requirements"></a>必要条件  
- Alink.h が必要です。  
+ Alink. h が必要です。  
   
 ## <a name="see-also"></a>関連項目
 
-- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink インターフェイス](ialink-interface.md)
+- [IALink2 インターフェイス](ialink2-interface.md)
+- [ALink API](index.md)

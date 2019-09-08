@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b9bec757071a98e085ccdeee3fc66bfc07f52bc
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: b78789344050fd5e1cb0ee3492bf330fbf92bc88
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040163"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798937"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver 関数
-タイプライブラリを読み込み、指定された[ITypeLibResolver インターフェイス](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)を使用して、内部で参照されているタイプライブラリを解決します。  
+タイプライブラリを読み込み、指定された[ITypeLibResolver インターフェイス](itypelibresolver-interface.md)を使用して、内部で参照されているタイプライブラリを解決します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,10 +47,10 @@ HRESULT LoadTypeLibWithResolver(
   
 - `REGKIND_REGISTER`:このタイプライブラリを登録します。  
   
-- `REGKIND_NONE`:このタイプライブラリを登録しないでください。  
+- `REGKIND_NONE` :このタイプライブラリを登録しないでください。  
   
  `pTlbResolver`  
- から[ITypeLibResolver インターフェイス](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)の実装へのポインター。  
+ から[ITypeLibResolver インターフェイス](itypelibresolver-interface.md)の実装へのポインター。  
   
  `pptlib`  
  入出力読み込まれているタイプライブラリへの参照。  
@@ -70,22 +70,22 @@ HRESULT LoadTypeLibWithResolver(
 |`TYPE_E_CANTLOADLIBRARY`|タイプライブラリまたは DLL を読み込めませんでした。|  
   
 ## <a name="remarks"></a>Remarks  
- [Tlbexp.exe (タイプライブラリエクスポーター)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)は、アセンブリからタイプ`LoadTypeLibWithResolver`ライブラリへの変換プロセス中に関数を呼び出します。  
+ [Tlbexp.exe (タイプライブラリエクスポーター)](../../tools/tlbexp-exe-type-library-exporter.md)は、アセンブリからタイプ`LoadTypeLibWithResolver`ライブラリへの変換プロセス中に関数を呼び出します。  
   
  この関数は、レジストリへの最小限のアクセスで、指定されたタイプライブラリを読み込みます。 次に、関数は、内部的に参照されるタイプライブラリのタイプライブラリを調べます。このタイプライブラリはそれぞれ、親タイプライブラリに読み込まれ、追加される必要があります。  
   
- 参照されるタイプライブラリを読み込む前に、その参照ファイルのパスを完全なファイルパスに解決する必要があります。 これは、 `pTlbResolver`パラメーターで渡される[ITypeLibResolver インターフェイス](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)によって提供される[resolvetypelib メソッド](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md)を使用して実現されます。  
+ 参照されるタイプライブラリを読み込む前に、その参照ファイルのパスを完全なファイルパスに解決する必要があります。 これは、 `pTlbResolver`パラメーターで渡される[ITypeLibResolver インターフェイス](itypelibresolver-interface.md)によって提供される[resolvetypelib メソッド](resolvetypelib-method.md)を使用して実現されます。  
   
  参照されているタイプライブラリの完全なファイルパスがわかっ`LoadTypeLibWithResolver`ている場合、この関数は参照されているタイプライブラリを読み込んで親タイプライブラリに追加し、結合されたマスタータイプライブラリを作成します。  
   
  関数は、内部的に参照されるすべてのタイプライブラリを解決して読み込み、 `pptlib`パラメーター内のマスター解決済みタイプライブラリへの参照を返します。  
   
- この関数は、通常、 [tlbexp.exe (タイプライブラリエクスポーター)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)によって呼び出されます。これは、 `pTlbResolver`パラメーターに独自の内部[ITypeLibResolver インターフェイス](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)実装を提供します。 `LoadTypeLibWithResolver`  
+ この関数は、通常、 [tlbexp.exe (タイプライブラリエクスポーター)](../../tools/tlbexp-exe-type-library-exporter.md)によって呼び出されます。これは、 `pTlbResolver`パラメーターに独自の内部[ITypeLibResolver インターフェイス](itypelibresolver-interface.md)実装を提供します。 `LoadTypeLibWithResolver`  
   
- を直接呼び出す`LoadTypeLibWithResolver`場合は、独自の[ITypeLibResolver インターフェイス](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)実装を指定する必要があります。  
+ を直接呼び出す`LoadTypeLibWithResolver`場合は、独自の[ITypeLibResolver インターフェイス](itypelibresolver-interface.md)実装を指定する必要があります。  
   
 ## <a name="requirements"></a>必要条件  
- **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Tlf .h  
   
@@ -95,5 +95,5 @@ HRESULT LoadTypeLibWithResolver(
   
 ## <a name="see-also"></a>関連項目
 
-- [Tlbexp ヘルパー関数](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
+- [Tlbexp ヘルパー関数](index.md)
 - [LoadTypeLibEx 関数](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

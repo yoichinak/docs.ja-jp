@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: 962163b51507647fd975815c214891a6d692e66c
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 5f28179b43cb0af2d75e9e5b13783bc7287c8886
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203952"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784772"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>XML Web サービスからの DataSet の使用
 <xref:System.Data.DataSet> は、非接続型デザインで設計されています。インターネットで簡単にデータを転送するのが目的の一部です。 **データセット**は xml web サービスからの入力または出力として指定できることを示す "serializable" です。 xml web サービスからクライアントおよびクライアントに**データセット**の内容をストリームするために必要な追加のコーディングは必要ありません。 **データセット**は、DiffGram 形式を使用して xml ストリームに暗黙的に変換され、ネットワーク経由で送信された後、受信側の**データセット**として xml ストリームから再構築されます。 これにより、XML Web サービスを使用してリレーショナル データを送信および返送する、たいへん簡単で柔軟性のある方法が提供されます。 DiffGram 形式の詳細については、「diffgram[グラム](diffgrams.md)」を参照してください。  
@@ -268,4 +268,4 @@ ms.locfileid: "70203952"
 - [DataAdapter によるデータ ソースの更新](../updating-data-sources-with-dataadapters.md)
 - [DataAdapter パラメーター](../dataadapter-parameters.md)
 - [Web サービス記述言語ツール (Wsdl.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100))
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET の概要](../ado-net-overview.md)

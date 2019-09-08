@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
-ms.openlocfilehash: a93cb9da44985fa29a4975875564b384117ce76f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f3e28adc2cf7c24cee9ee344eb78404f01b79793
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938453"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780717"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>ASP.NET アプリケーションでの SqlDependency
 ここでは、ASP.NET の <xref:System.Data.SqlClient.SqlDependency> オブジェクトを使用して、<xref:System.Web.Caching.SqlCacheDependency> を間接的に使用する方法の例を示します。 <xref:System.Web.Caching.SqlCacheDependency> オブジェクトでは <xref:System.Data.SqlClient.SqlDependency> を使用して通知をリッスンし、キャッシュを適切に更新します。  
   
 > [!NOTE]
-> このサンプルコードでは、クエリ[通知](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)を有効にするスクリプトを実行して、クエリ通知を有効にしていることを前提としています。  
+> このサンプルコードでは、クエリ[通知](enabling-query-notifications.md)を有効にするスクリプトを実行して、クエリ通知を有効にしていることを前提としています。  
   
 ## <a name="about-the-sample-application"></a>サンプル アプリケーションについて  
  このサンプルアプリケーションでは、単一の ASP.NET Web ページを使用して、 **AdventureWorks** SQL Server データベースの<xref:System.Web.UI.WebControls.GridView>製品情報をコントロールに表示します。 ページが読み込まれる際に、<xref:System.Web.UI.WebControls.Label> コントロールに現在の時刻が入力されます。 次に、<xref:System.Web.Caching.SqlCacheDependency> オブジェクトを定義し、最長 3 分間キャッシュ データを格納するように <xref:System.Web.Caching.Cache> オブジェクトのプロパティを設定します。 その後、データベースに接続し、データを取得します。 ページが読み込まれ、アプリケーションが実行されると、ASP.NET ではキャッシュからデータが取得されます。これは、ページ上の時刻が変更されないことで確認できます。 監視しているデータが変化すると、ASP.NET によりキャッシュが無効化され、`GridView` コントロールに最新データが再入力されることで、`Label` コントロールに表示される時刻が更新されます。  
@@ -59,5 +59,5 @@ ms.locfileid: "69938453"
   
 ## <a name="see-also"></a>関連項目
 
-- [SQL Server のクエリ通知](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server のクエリ通知](query-notifications-in-sql-server.md)
+- [ADO.NET の概要](../ado-net-overview.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76057508-e12d-4779-a707-06a4c2568acf
-ms.openlocfilehash: afa760d890cf2857737372af5a9d3ba7c2749e6c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 054898a3520cbc2b607fc26b94b72b9896ad9c71
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949419"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786685"
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>DataView オブジェクトの作成 (LINQ to DataSet)
 LINQ to DataSet コンテキストでを作成するに<xref:System.Data.DataView>は、次の2つの方法があります。 を使用して<xref:System.Data.DataView> LINQ to DataSet クエリ<xref:System.Data.DataTable>からを作成することも、型指定されたまたは型指定<xref:System.Data.DataTable>されていないから作成することもできます。 どちらの場合も、 <xref:System.Data.DataView> <xref:System.Data.DataTableExtensions.AsDataView%2A>拡張メソッドのいずれかを使用してを作成します。<xref:System.Data.DataView>は、LINQ to DataSet コンテキストで直接構築することはできません。  
@@ -19,7 +19,7 @@ LINQ to DataSet コンテキストでを作成するに<xref:System.Data.DataVie
   
  <xref:System.Data.DataView> は、インデックスを構築します。これにより、フィルター処理や並べ替えなど、インデックスを使用できる操作のパフォーマンスが大幅に向上します。 <xref:System.Data.DataView> のインデックスは、<xref:System.Data.DataView> の作成時に構築されるほか、並べ替えまたはフィルター処理の情報が変更されたときにも構築されます。 <xref:System.Data.DataView> を作成した後で、並べ替えまたはフィルター処理の情報を設定した場合、インデックスが最低でも 2 回 (<xref:System.Data.DataView> の作成時と、並べ替えまたはフィルターのプロパティの変更時) 構築されることになります。  
   
- を使用した<xref:System.Data.DataView>フィルター処理と並べ替えの詳細については、「 [dataview によるフィルター処理](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)」と「 [dataview による並べ替え](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)」を参照してください。  
+ を使用した<xref:System.Data.DataView>フィルター処理と並べ替えの詳細については、「 [dataview によるフィルター処理](filtering-with-dataview-linq-to-dataset.md)」と「 [dataview による並べ替え](sorting-with-dataview-linq-to-dataset.md)」を参照してください。  
   
 ## <a name="creating-dataview-from-a-linq-to-dataset-query"></a>LINQ to DataSet クエリの結果からの DataView の作成  
  オブジェクトは、LINQ to DataSet クエリの結果から作成できます。この場合、結果はオブジェクトの<xref:System.Data.DataRow>射影になります。 <xref:System.Data.DataView> 新しく作成される <xref:System.Data.DataView> は、その基となるクエリからのフィルター処理および並べ替え情報を継承します。  
@@ -72,6 +72,6 @@ LINQ to DataSet コンテキストでを作成するに<xref:System.Data.DataVie
   
 ## <a name="see-also"></a>関連項目
 
-- [データ バインディングと LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
-- [DataView によるフィルター処理](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)
-- [DataView による並べ替え](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)
+- [データ バインディングと LINQ to DataSet](data-binding-and-linq-to-dataset.md)
+- [DataView によるフィルター処理](filtering-with-dataview-linq-to-dataset.md)
+- [DataView による並べ替え](sorting-with-dataview-linq-to-dataset.md)

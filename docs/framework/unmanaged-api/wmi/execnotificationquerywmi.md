@@ -1,6 +1,6 @@
 ---
 title: ExecNotificationQueryWmi 関数 (アンマネージ API リファレンス)
-description: ExecNotificationQueryWmi 関数は、イベントを受信するクエリを実行します。
+description: ExecNotificationQueryWmi 関数は、イベントを受信するためのクエリを実行します。
 ms.date: 11/06/2017
 api_name:
 - ExecNotificationQueryWmi
@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aa2233bab82f3cd4d1bbcb59f5714c6e4dc91aa5
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5cfe54c7c9b7ae707b2d3591afbd830bac171f0b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636555"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798645"
 ---
 # <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi 関数
 
-イベントを受信するクエリが実行されます。 呼び出しが直ちに返され、呼び出し元は、到着すると、イベントの返された列挙子をポーリングします。 返された列挙子を解放するクエリをキャンセルします。
+イベントを受信するクエリが実行されます。 呼び出しはすぐに返されます。呼び出し元は、返されたイベントの列挙子をポーリングできます。 返された列挙子を解放すると、クエリが取り消されます。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -50,82 +50,82 @@ HRESULT ExecNotificationQueryWmi (
 ## <a name="parameters"></a>パラメーター
 
 `strQueryLanguage`\
-[in]Windows の管理でサポートされる有効なクエリ言語を含む文字列。 WMI クエリ言語の頭字語である"WQL"必要があります。
+からWindows Management でサポートされている有効なクエリ言語を含む文字列。 これは、WMI Query Language の頭字語である "WQL" である必要があります。
 
 `strQuery`\
-[in]クエリのテキスト。 このパラメーターを `null` とすることはできません。
+からクエリのテキスト。 このパラメーターを `null` とすることはできません。
 
 `lFlags`\
-[in]この関数の動作に影響する次の 2 つのフラグの組み合わせ。 これらの値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
+からこの関数の動作に影響を与える、次の2つのフラグの組み合わせ。 これらの値は、 *WbemCli*ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-| 定数 | 値  | 説明  |
+| 定数 | Value  | 説明  |
 |---------|---------|---------|
-| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | フラグには、半同期的メソッドの呼び出しが行わします。 このフラグが設定されていない場合、呼び出しが失敗します。 これは、イベントが継続的に、受信したため、ユーザーは、返された列挙子をポーリングする必要があります。 この呼び出しを無期限にブロックしているようにを不可能になります。 |
-| `WBEM_FLAG_FORWARD_ONLY` | 0x20 | 関数は、順方向専用の列挙子を返します。 呼び出しは許可されませんが、通常、順方向専用の列挙子は、高速と従来の列挙子より少ないメモリを使用して、[複製](clone.md)します。 |
+| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | このフラグにより、半同期呼び出しが発生します。 このフラグが設定されていない場合、呼び出しは失敗します。 これは、イベントが連続して受信されるためです。これは、ユーザーが返された列挙子をポーリングする必要があることを意味します。 この呼び出しを無制限にブロックすると、そのようなことは不可能になります。 |
+| `WBEM_FLAG_FORWARD_ONLY` | 0x20 | 関数は、順方向専用の列挙子を返します。 通常、順方向専用の列挙子は、従来の列挙子よりも高速で使用されるメモリが少なくなりますが、[複製](clone.md)の呼び出しは許可されません。 |
 
 `pCtx`\
-[in]この値は、通常、`null`します。 ポインターは、それ以外の場合、 [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)要求イベントを提供しているプロバイダーで使用できるインスタンス。
+から通常、この値は`null`です。 それ以外の場合は、要求されたイベントを提供しているプロバイダーが使用できる[IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)インスタンスへのポインターです。
 
 `ppEnum`\
-[out]エラーが発生しない場合は、クエリの結果セットのインスタンスを取得する呼び出し元を許可する列挙子へのポインターを受け取ります。 参照してください、[解説](#remarks)詳細についてはします。
+入出力エラーが発生しなかった場合、は、呼び出し元がクエリの結果セット内のインスタンスを取得できるようにする列挙子へのポインターを受け取ります。 詳細については、「[解説](#remarks)」を参照してください。
 
 `authLevel`\
-[in]承認レベル。
+から承認レベル。
 
 `impLevel`\
-[in]偽装レベル。
+から偽装レベル。
 
 `pCurrentNamespace`\
-[in]ポインター、 [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)現在の名前空間を表すオブジェクト。
+から現在の名前空間を表す[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)オブジェクトへのポインター。
 
 `strUser`\
-[in]ユーザー名。 参照してください、 [ConnectServerWmi](connectserverwmi.md)関数の詳細についてはします。
+からユーザー名。 詳細については、「 [Connectserverwmi](connectserverwmi.md)関数」を参照してください。
 
 `strPassword`\
-[in]パスワードです。 参照してください、 [ConnectServerWmi](connectserverwmi.md)関数の詳細についてはします。
+からパスワード。 詳細については、「 [Connectserverwmi](connectserverwmi.md)関数」を参照してください。
 
 `strAuthority`\
-[in]ユーザーのドメイン名。 参照してください、 [ConnectServerWmi](connectserverwmi.md)関数の詳細についてはします。
+からユーザーのドメイン名。 詳細については、「 [Connectserverwmi](connectserverwmi.md)関数」を参照してください。
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
+この関数によって返される次の値は、 *WbemCli*ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-|定数  |値  |説明  |
+|定数  |Value  |説明  |
 |---------|---------|---------|
-| `WBEM_E_ACCESS_DENIED` | 0x80041003 | ユーザーには、1 つ以上の関数が返すことができるクラスを表示するアクセス許可がありません。 |
-| `WBEM_E_FAILED` | 0x80041001 | 不明なエラーが発生しました。 |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが無効です。 |
-| `WBEM_E_INVALID_CLASS` | 0x80041010 | クエリでは、存在しないクラスを指定します。 |
-| `WBEMESS_E_REGISTRATION_TOO_PRECISE` | 0x80042002 | イベントの配信が多すぎるの精度が要求されています。 大規模なポーリングの許容範囲を指定する必要があります。 |
-| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | クエリでは、Windows の管理を提供できるより多くの情報を要求します。 これは、`HRESULT`イベント クエリの結果を名前空間のすべてのオブジェクトのポーリング要求したときに返されます。 |
-| `WBEM_E_INVALID_QUERY` | 0x80041017 | クエリでは、構文エラーがありました。 |
-| `WBEM_E_INVALID_QUERY_TYPE` | 0x80041018 | 要求されたクエリ言語がサポートされていません。 |
+| `WBEM_E_ACCESS_DENIED` | 0x80041003 | 関数が返すことのできる1つ以上のクラスを表示するアクセス許可がユーザーにありません。 |
+| `WBEM_E_FAILED` | 0x80041001 | 特定できないエラーが発生しました。 |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが有効ではありません。 |
+| `WBEM_E_INVALID_CLASS` | 0x80041010 | このクエリでは、存在しないクラスが指定されています。 |
+| `WBEMESS_E_REGISTRATION_TOO_PRECISE` | 0x80042002 | 要求されたイベント配信の精度が大きすぎます。 より大きなポーリング許容範囲を指定する必要があります。 |
+| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | このクエリでは、Windows Management で提供されるよりも多くの情報が要求されます。 これ`HRESULT`は、イベントクエリによって名前空間内のすべてのオブジェクトをポーリングする要求が発生した場合に返されます。 |
+| `WBEM_E_INVALID_QUERY` | 0x80041017 | クエリで構文エラーが発生しました。 |
+| `WBEM_E_INVALID_QUERY_TYPE` | 0x80041018 | 要求されたクエリ言語はサポートされていません。 |
 | `WBEM_E_QUOTA_VIOLATION` | 0x8004106c | クエリが複雑すぎます。 |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 操作を完了するのに十分なメモリがあります。 |
-| `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI は、おそらく停止および再起動されました。 呼び出す[ConnectServerWmi](connectserverwmi.md)もう一度です。 |
-| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | 現在のプロセスと WMI のリモート プロシージャ コール (RPC) リンクに失敗しました。 |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 操作を完了するために必要なメモリが不足しています。 |
+| `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI が停止し、再起動されたことがあります。 [Connectserverwmi](connectserverwmi.md)を再度呼び出します。 |
+| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | 現在のプロセスと WMI の間のリモートプロシージャコール (RPC) リンクが失敗しました。 |
 | `WBEM_E_UNPARSABLE_QUERY` | 0x80041058 | クエリを解析できません。 |
-| `WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
+| `WBEM_S_NO_ERROR` | 0 | 関数の呼び出しに成功しました。  |
 
 ## <a name="remarks"></a>Remarks
 
-この関数の呼び出しをラップする、 [IWbemServices::ExecNotificationQuery](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-execnotificationquery)メソッド。
+この関数は、 [IWbemServices:: ExecNotificationQuery](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-execnotificationquery)メソッドの呼び出しをラップします。
 
-呼び出し元が、返されたは定期的に、関数から制御が戻た後`ppEnum`オブジェクトを[次](next.md)関数を使用可能なイベントがあるを参照してください。
+関数が返された後、呼び出し元は、 `ppEnum`返されたオブジェクトを定期的に[次](next.md)の関数に渡して、使用可能なイベントがあるかどうかを確認します。
 
-数に制限は`AND`と`OR`WQL クエリで使用できるキーワードです。 WMI を返す可能性が多数の複雑なクエリで使用される WQL キーワード、 `WBEM_E_QUOTA_VIOLATION` (または 0x8004106c) としてのエラー コード、`HRESULT`値。 WQL キーワードの制限は、クエリの複雑な方法に依存します。
+WQL クエリで使用できるキーワードと`AND` `OR`キーワードの数には制限があります。 複雑なクエリで使用される WQL キーワードの数が多いと、WMI `WBEM_E_QUOTA_VIOLATION`が (または 0x8004106c) エラーコード`HRESULT`を値として返すことがあります。 WQL キーワードの制限は、クエリの複雑さによって異なります。
 
-呼び出すことによって追加のエラー情報を取得するには、関数呼び出しに失敗した場合、 [GetErrorInfo](geterrorinfo.md)関数。
+関数呼び出しが失敗した場合は、 [GetErrorInfo](geterrorinfo.md)関数を呼び出して追加のエラー情報を取得できます。
 
 ## <a name="requirements"></a>必要条件
 
-**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+**・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。
 
-**ヘッダー:** WMINet_Utils.idl
+**ヘッダー:** WMINet_Utils
 
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>関連項目
 
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+- [WMI およびパフォーマンスカウンター (アンマネージ API リファレンス)](index.md)
