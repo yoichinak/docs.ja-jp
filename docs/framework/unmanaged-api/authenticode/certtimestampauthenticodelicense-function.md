@@ -10,12 +10,12 @@ api_type:
 ms.assetid: d468325a-21c5-43ce-8567-84e342b22308
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c2bb6f0324c461f59bd98a70333b176e79a16a6
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: aaf76d4c3d0f5fb59aeb35fae7a7020ee97b74d6
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039592"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70776478"
 ---
 # <a name="certtimestampauthenticodelicense-function"></a>CertTimestampAuthenticodeLicense 関数
 Authenticode XrML ライセンスにタイム スタンプを付けます。  
@@ -48,4 +48,4 @@ HRESULT CertTimestampAuthenticodeLicense (
   
 ## <a name="see-also"></a>関連項目
 
-- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+- [Authenticode](index.md)

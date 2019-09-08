@@ -2,12 +2,12 @@
 title: ADO.NET での接続文字列
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 02fe8d984f1287673477bb142b3f9626e248898e
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 8f726ca71ba955ef542d15e0e8318c2b310e607e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363750"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784911"
 ---
 # <a name="connection-strings-in-adonet"></a>ADO.NET での接続文字列
 
@@ -57,23 +57,23 @@ Keyword=a=b=c
 
 入力ミスによってエラーが発生する可能性があります。 たとえば、 `Integrated Security=true`は有効ですが`IntegratedSecurity=true` 、エラーが発生します。
 
-実行時に未検証ユーザー入力から手動で構築された接続文字列は、文字列インジェクション攻撃に対して脆弱で、データソースのセキュリティが危険にさらされます。 これらの問題に対処するために、 *ADO.NET* 2.0 では *.NET Framework*データプロバイダーごとに[接続文字列ビルダー](../../../../docs/framework/data/adonet/connection-string-builders.md)が導入されました。 これらの接続文字列ビルダーは、パラメーターを厳密に型指定されたプロパティとして公開し、データソースに送信される前に接続文字列を検証できるようにします。
+実行時に未検証ユーザー入力から手動で構築された接続文字列は、文字列インジェクション攻撃に対して脆弱で、データソースのセキュリティが危険にさらされます。 これらの問題に対処するために、 *ADO.NET* 2.0 では *.NET Framework*データプロバイダーごとに[接続文字列ビルダー](connection-string-builders.md)が導入されました。 これらの接続文字列ビルダーは、パラメーターを厳密に型指定されたプロパティとして公開し、データソースに送信される前に接続文字列を検証できるようにします。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[接続文字列ビルダー](../../../../docs/framework/data/adonet/connection-string-builders.md)\
+[接続文字列ビルダー](connection-string-builders.md)\
 `ConnectionStringBuilder` クラスを使用して、有効な接続文字列を実行時に作成する方法について説明します。
 
-[接続文字列と構成ファイル](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)\
+[接続文字列と構成ファイル](connection-strings-and-configuration-files.md)\
 構成ファイルを使用した接続文字列の格納と取得の方法について説明します。
 
-[接続文字列の構文](../../../../docs/framework/data/adonet/connection-string-syntax.md)\
+[接続文字列の構文](connection-string-syntax.md)\
 `SqlClient`、`OracleClient`、`OleDb`、`Odbc` の各プロバイダーに固有の接続文字列を構成する方法について説明します。
 
-[接続情報の保護](../../../../docs/framework/data/adonet/protecting-connection-information.md)\
+[接続情報の保護](protecting-connection-information.md)\
 データ ソースへの接続に使用する情報を保護する方法を示します。
 
 ## <a name="see-also"></a>関連項目
 
 - [データ ソースへの接続](/cpp/data/odbc/connecting-to-a-data-source)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET の概要](ado-net-overview.md)

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
-ms.openlocfilehash: 481e0983a40bb551d08894ea32f76f332b8fe5a3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3a1e369fe52a2a529fb3511d9a65067b4a56ec1e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943135"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797256"
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>動作を使用したランタイムの構成と拡張
-動作を使用すると、既定の動作を変更したり、サービス構成を検査および検証するカスタム拡張機能を追加したり、Windows Communication Foundation (WCF) クライアントおよびサービスアプリケーションで実行時の動作を変更したりすることができます。 ここでは、動作インターフェイスとその実装方法について説明します。また、動作インターフェイスをサービスの説明 (サービス アプリケーションの場合) またはエンドポイント (クライアント アプリケーションの場合) にプログラムによって追加する方法と、構成ファイル内で追加する方法についても説明します。 システム指定の動作の使用方法の詳細については、「[サービスの実行時の動作の指定](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)」および「クライアントの[実行時の動作の指定](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)」を参照してください。  
+動作を使用すると、既定の動作を変更したり、サービス構成を検査および検証するカスタム拡張機能を追加したり、Windows Communication Foundation (WCF) クライアントおよびサービスアプリケーションで実行時の動作を変更したりすることができます。 ここでは、動作インターフェイスとその実装方法について説明します。また、動作インターフェイスをサービスの説明 (サービス アプリケーションの場合) またはエンドポイント (クライアント アプリケーションの場合) にプログラムによって追加する方法と、構成ファイル内で追加する方法についても説明します。 システム指定の動作の使用方法の詳細については、「[サービスの実行時の動作の指定](../specifying-service-run-time-behavior.md)」および「クライアントの[実行時の動作の指定](../specifying-client-run-time-behavior.md)」を参照してください。  
   
 ## <a name="behaviors"></a>ビヘイビアー  
  動作の種類は、サービスまたはサービスエンドポイント記述オブジェクト (それぞれサービスまたはクライアント上) に追加されます。これらのオブジェクトを Windows Communication Foundation (WCF) で使用して、WCF サービスまたは WCF クライアントを実行するランタイムを作成します。 ランタイムの構築プロセスでこれらの動作を呼び出すと、コントラクト、バインディング、およびアドレスによって構築されたランタイムを変更するランタイム プロパティやランタイム メソッドにアクセスできます。  
@@ -32,9 +32,9 @@ ms.locfileid: "69943135"
  変更できるプロパティと実装できるカスタマイズ インターフェイスには、サービスおよびクライアントのランタイム クラスからアクセスできます。 サービス型は、<xref:System.ServiceModel.Dispatcher.DispatchRuntime> クラスと <xref:System.ServiceModel.Dispatcher.DispatchOperation> クラスです。 クライアント型は、<xref:System.ServiceModel.Dispatcher.ClientRuntime> クラスと <xref:System.ServiceModel.Dispatcher.ClientOperation> クラスです。 <xref:System.ServiceModel.Dispatcher.ClientRuntime> クラスと <xref:System.ServiceModel.Dispatcher.DispatchRuntime> クラスは、それぞれクライアント全体またはサービス全体のランタイム プロパティと拡張コレクションにアクセスするための拡張エントリ ポイントです。 同様に、<xref:System.ServiceModel.Dispatcher.ClientOperation> クラスと <xref:System.ServiceModel.Dispatcher.DispatchOperation> クラスは、それぞれクライアント操作またはサービス操作のランタイム プロパティと拡張コレクションを公開します。 ただし、必要に応じて、操作ランタイム オブジェクトからより広いスコープのランタイム オブジェクトにアクセスできます。また、逆の場合も同様です。  
   
 > [!NOTE]
-> クライアントの実行動作を変更するために使用できるランタイムプロパティと拡張機能の種類の詳細については、「[クライアントの拡張](../../../../docs/framework/wcf/extending/extending-clients.md)」を参照してください。 サービスディスパッチャーの実行動作を変更するために使用できるランタイムプロパティと拡張型の詳細については、「[ディスパッチャーの拡張](../../../../docs/framework/wcf/extending/extending-dispatchers.md)」を参照してください。  
+> クライアントの実行動作を変更するために使用できるランタイムプロパティと拡張機能の種類の詳細については、「[クライアントの拡張](extending-clients.md)」を参照してください。 サービスディスパッチャーの実行動作を変更するために使用できるランタイムプロパティと拡張型の詳細については、「[ディスパッチャーの拡張](extending-dispatchers.md)」を参照してください。  
   
- ほとんどの WCF ユーザーは、ランタイムと直接やり取りしません。代わりに、構成ファイルのクラスまたは動作のエンドポイント、コントラクト、バインディング、アドレス、動作属性などの主要なプログラミングモデル構造を使用します。 これらのコンストラクトは、説明ツリーを構成します。これは、説明ツリーによって記述されたサービスまたはクライアントをサポートするランタイムを構築するための完全な仕様です。  
+ ほとんどの WCF ユーザーは、ランタイムと直接やり取りしません。代わりに、構成ファイルのクラスまたは動作のエンドポイント、コントラクト、バインディング、アドレス、動作属性などの主要なプログラミングモデル構造を使用します。 これらのコンストラクトは、説明ツリーを*構成します*。これは、説明ツリーによって記述されたサービスまたはクライアントをサポートするランタイムを構築するための完全な仕様です。  
   
  WCF には、次の4種類の動作があります。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "69943135"
  サービス、エンドポイント、およびコントラクトの動作は、コードまたは属性を使用して指定するように設計できます。アプリケーション構成ファイルまたは Web 構成ファイルを使用して構成できるのは、サービスの動作とエンドポイントの動作だけです。 属性を使用して動作を公開した場合、開発者は、実行時に追加、削除、または変更できない動作をコンパイル時に指定できます。 多くの場合、これはサービスの適切な操作のために常に必要となる動作に適しています (<xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> 属性に対するトランザクション関連のパラメーターなど)。 構成を使用して動作を公開すると、開発者はサービス展開者に動作の仕様と構成を委ねることができます。 これは、動作がオプション コンポーネント、または他の展開固有の構成 (サービスまたはサービスの特定の承認構成についてメタデータを公開するかどうかなど) である場合に適しています。  
   
 > [!NOTE]
-> 企業のアプリケーション ポリシーを machine.config 構成ファイルに挿入し、これらの項目をロックダウンすることで、ポリシーを適用する構成をサポートする動作を使用することもできます。 説明と例については、 [「方法:企業](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)内のエンドポイントをロックダウンします。  
+> 企業のアプリケーション ポリシーを machine.config 構成ファイルに挿入し、これらの項目をロックダウンすることで、ポリシーを適用する構成をサポートする動作を使用することもできます。 説明と例については、 [「方法:企業](how-to-lock-down-endpoints-in-the-enterprise.md)内のエンドポイントをロックダウンします。  
   
  構成を使用して動作を公開するには、開発者は <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> の派生クラスを作成し、その拡張を構成に登録する必要があります。  
   

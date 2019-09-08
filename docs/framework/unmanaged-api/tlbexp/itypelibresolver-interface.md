@@ -16,32 +16,32 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fa3135465673bedea1c6827da622903279d1bcf1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6ebc885e000f902670dbf74d5ecc11fd956f8c81
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61964633"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798882"
 ---
 # <a name="itypelibresolver-interface"></a>ITypeLibResolver インターフェイス
-提供、 [ResolveTypeLib メソッド](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md)、タイプ ライブラリのファイル パスを解決します。  
+タイプライブラリのファイルパスを解決する[Resolvetypelib メソッド](resolvetypelib-method.md)を提供します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[ResolveTypeLib メソッド](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md)|完全修飾パスを返すことによって、タイプ ライブラリの簡易名を解決します。|  
+|[ResolveTypeLib メソッド](resolvetypelib-method.md)|完全修飾パスを返すことにより、タイプライブラリの簡易名を解決します。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** TlbRef.idl、TlbRef.h  
+ **ヘッダー:** Tlf .idl, Tl. h  
   
- **ライブラリ:** TlbRef.lib  
+ **ライブラリ**Tlf .lib  
   
- **.NET framework のバージョン:** 4, 3.5, 3.0, 2.0  
+ **.NET Framework のバージョン:** 4、3.5、3.0、2.0  
   
 ## <a name="see-also"></a>関連項目
 
-- [Tlbexp ヘルパー関数](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
+- [Tlbexp ヘルパー関数](index.md)
 - [LoadTypeLibEx 関数](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - asynchronous operations [WCF Data Services]
 - WCF Data Services, client library
 ms.assetid: 679644c7-e3fc-422c-b14a-b44b683900d0
-ms.openlocfilehash: 01212b859e10ec1bbbb452486ce1aa6a2cecb583
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bb62b9ad214e5e268c3905df486f5914437b36d3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965828"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780523"
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>非同期操作 (WCF Data Services)
 Web アプリケーションは、内部ネットワーク内で実行するアプリケーションより長い、クライアントとサーバーとの間の待機時間に対応する必要があります。 Web を介して <xref:System.Data.Services.Client.DataServiceContext> サーバーにアクセスする場合、アプリケーションのパフォーマンスとユーザー エクスペリエンスを最適化するために <xref:System.Data.Services.Client.DataServiceQuery%601> クラスおよび [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] クラスの非同期メソッドを使用することをお勧めします。  
   
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] サーバーでは、HTTP 要求は非同期として処理されますが、[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] クライアント ライブラリの一部のメソッドは同期であり、要求と応答のやり取りがすべて完了するまで待ってから実行を継続します。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] クライアント ライブラリの非同期メソッドは、このやり取りの完了を待たず、アプリケーションはユーザー インターフェイスの応答性を維持できます。  
   
- 非同期操作を実行するには、 <xref:System.Data.Services.Client.DataServiceContext>クラスと<xref:System.Data.Services.Client.DataServiceQuery%601>クラスで、それぞれ*Begin*および*End*で始まるメソッドのペアを使用します。 *Begin*メソッドは、操作の完了時にサービスが呼び出すデリゲートを登録します。 *終了*メソッドは、完了した操作からのコールバックを処理するために登録されているデリゲートで呼び出す必要があります。 非同期操作を完了するために*End*メソッドを呼び出す場合は、操作を開始する<xref:System.Data.Services.Client.DataServiceQuery%601>ときに使用したのと同じインスタンスまたは<xref:System.Data.Services.Client.DataServiceContext>インスタンスから実行する必要があります。 各*Begin*メソッドは、 `state`状態オブジェクトをコールバックに渡すことができるパラメーターを受け取ります。 この状態オブジェクトは、 <xref:System.IAsyncResult>コールバックで提供されたから取得され、対応する*End*メソッドを呼び出して非同期操作を完了するために使用されます。 たとえば、<xref:System.Data.Services.Client.DataServiceQuery%601> インスタンスで `state` メソッドを呼び出すときにインスタンスを <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> パラメーターとして指定した場合、同じ <xref:System.Data.Services.Client.DataServiceQuery%601> インスタンスが <xref:System.IAsyncResult> によって返されます。 この <xref:System.Data.Services.Client.DataServiceQuery%601> のインスタンスは、<xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> メソッドを呼び出してクエリ操作を完了するために使用されます。 詳細については、「[方法 :非同期データサービスクエリ](../../../../docs/framework/data/wcf/how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)を実行します。  
+ 非同期操作を実行するには、 <xref:System.Data.Services.Client.DataServiceContext>クラスと<xref:System.Data.Services.Client.DataServiceQuery%601>クラスで、それぞれ*Begin*および*End*で始まるメソッドのペアを使用します。 *Begin*メソッドは、操作の完了時にサービスが呼び出すデリゲートを登録します。 *終了*メソッドは、完了した操作からのコールバックを処理するために登録されているデリゲートで呼び出す必要があります。 非同期操作を完了するために*End*メソッドを呼び出す場合は、操作を開始する<xref:System.Data.Services.Client.DataServiceQuery%601>ときに使用したのと同じインスタンスまたは<xref:System.Data.Services.Client.DataServiceContext>インスタンスから実行する必要があります。 各*Begin*メソッドは、 `state`状態オブジェクトをコールバックに渡すことができるパラメーターを受け取ります。 この状態オブジェクトは、 <xref:System.IAsyncResult>コールバックで提供されたから取得され、対応する*End*メソッドを呼び出して非同期操作を完了するために使用されます。 たとえば、<xref:System.Data.Services.Client.DataServiceQuery%601> インスタンスで `state` メソッドを呼び出すときにインスタンスを <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> パラメーターとして指定した場合、同じ <xref:System.Data.Services.Client.DataServiceQuery%601> インスタンスが <xref:System.IAsyncResult> によって返されます。 この <xref:System.Data.Services.Client.DataServiceQuery%601> のインスタンスは、<xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> メソッドを呼び出してクエリ操作を完了するために使用されます。 詳細については、「[方法 :非同期データサービスクエリ](how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)を実行します。  
   
 > [!NOTE]
 > Silverlight 用の .NET Framework で提供されるクライアント ライブラリでは、非同期操作だけがサポートされます。 詳細については、「 [WCF Data Services (Silverlight)](https://go.microsoft.com/fwlink/?LinkID=143149)」を参照してください。  
@@ -38,4 +38,4 @@ Web アプリケーションは、内部ネットワーク内で実行するア�
   
 ## <a name="see-also"></a>関連項目
 
-- [WCF Data Services クライアント ライブラリ](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [WCF Data Services クライアント ライブラリ](wcf-data-services-client-library.md)

@@ -1,6 +1,6 @@
 ---
 title: EndEnumeration 関数 (アンマネージ API リファレンス)
-description: EndEnumeration 関数は、列挙を終了します。
+description: EndEnumeration 関数は、列挙体を終了します。
 ms.date: 11/06/2017
 api_name:
 - EndEnumeration
@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d5c576cb808ee92452c193c3fbce4f1d2c2cad05
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0065dcd25430e102b965d5598c7e9a04c7857eb3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636780"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798814"
 ---
 # <a name="endenumeration-function"></a>EndEnumeration 関数
 
-呼び出しで開始した、列挙体シーケンスの終了、 [BeginEnumeration 関数](beginenumeration.md)します。
+[Beginenumeration 関数](beginenumeration.md)の呼び出しで開始された列挙シーケンスを終了します。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -41,34 +41,34 @@ HRESULT EndEnumeration (
 ## <a name="parameters"></a>パラメーター
 
 `vFunc`\
-[in]このパラメーターは使用されません。
+からこのパラメーターは使用されていません。
 
 `ptr`\
-[in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。
+から[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンスへのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
+この関数によって返される次の値は、 *WbemCli*ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-|定数  |値  |説明  |
+|定数  |Value  |説明  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | 一般的なエラーが発生しました。 |
-|`WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
+|`WBEM_S_NO_ERROR` | 0 | 関数の呼び出しに成功しました。  |
 
 ## <a name="remarks"></a>Remarks
 
-この関数の呼び出しをラップする、 [IWbemClassObject::EndEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)メソッド。
+この関数は、 [IWbemClassObject:: EndEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)メソッドの呼び出しをラップします。
 
-呼び出し、`EndEnumeration`関数は必要ありませんが、列挙体に関連付けられているリソースを解放するためお勧めします。 ただし、リソースは、次の列挙を開始またはオブジェクトがリリースされたときに、自動的に解放します。
+`EndEnumeration`関数を呼び出す必要はありませんが、列挙型に関連付けられているリソースを解放するため、この関数を使用することをお勧めします。 ただし、次の列挙が開始されるか、オブジェクトが解放されると、リソースは自動的に割り当て解除されます。
 
 ## <a name="requirements"></a>必要条件
 
-**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+**・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。
 
-**ヘッダー:** WMINet_Utils.idl
+**ヘッダー:** WMINet_Utils
 
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>関連項目
 
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+- [WMI およびパフォーマンスカウンター (アンマネージ API リファレンス)](index.md)

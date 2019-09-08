@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
-ms.openlocfilehash: b8a8656bb68832a09490e656903fd68788bdeb1d
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: bf73adff89ca5cad3a71239421ac826105a387cd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203101"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785218"
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>DataSet 内容の XML データとしての書き込み
 ADO.NET では、<xref:System.Data.DataSet> の XML 表現を記述することができます。このとき、 にスキーマが含まれていても、含まれていなくてもかまいません。 XML にインラインで含まれているスキーマ情報は、XML スキーマ定義言語 (XSD) を使用して記述されています。 スキーマには、リレーション定義および制約定義と、<xref:System.Data.DataSet> のテーブル定義が含まれています。  
@@ -29,7 +29,7 @@ string xmlDS = custDS.GetXml();
   
  **GetXml**は、 <xref:System.Data.DataSet>スキーマ情報を含まないの XML 表現を返します。 (XML スキーマとして) <xref:System.Data.DataSet>のスキーマ情報を文字列に書き込むには、 **getxmlschema**を使用します。  
   
- をファイル、 <xref:System.Data.DataSet>ストリーム、または**XmlWriter**に書き込むには、 **WriteXml**メソッドを使用します。 **WriteXml**に渡す最初のパラメーターは、XML 出力の変換先です。 たとえば、ファイル名を含む文字列、または、system.servicemodelオブジェクトなどを渡します。 **XmlWriteMode**の省略可能な2番目のパラメーターを渡して、XML 出力の書き込み方法を指定できます。  
+ をファイル、 <xref:System.Data.DataSet>ストリーム、または**XmlWriter**に書き込むには、 **WriteXml**メソッドを使用します。 **WriteXml**に渡す最初のパラメーターは、XML 出力の変換先です。 たとえば、ファイル名を含む文字列、また**は、system.servicemodel オブジェクトなど**を渡します。 **XmlWriteMode**の省略可能な2番目のパラメーターを渡して、XML 出力の書き込み方法を指定できます。  
   
  次の表は、 **XmlWriteMode**のオプションを示しています。  
   
@@ -39,9 +39,9 @@ string xmlDS = custDS.GetXml();
 |**WriteSchema**|<xref:System.Data.DataSet> の現在の内容を XML データとして書き込みます。このとき、リレーショナル構造がインライン XML スキーマとして書き込まれます。|  
 |**DiffGram**|元の値と現在の値を含め、<xref:System.Data.DataSet> 全体を DiffGram として書き込みます。 詳細については、「 [Diffgram グラム](diffgrams.md)」を参照してください。|  
   
- <xref:System.Data.DataSet> **DataRelation**オブジェクトを含むの xml 表現を記述する場合、ほとんどの場合、その結果の xml に、関連する親要素内に入れ子になった各リレーションシップの子行が含まれるようにする必要があります。 これを実現するには、datarelation をに<xref:System.Data.DataSet>追加するときに、 **datarelation**の**Nested**プロパティを**true**に設定します。 詳細については、「 [datarelation の入れ子](nesting-datarelations.md)」を参照してください。  
+ <xref:System.Data.DataSet> **DataRelation**オブジェクトを含むの xml 表現を記述する場合、ほとんどの場合、その結果の xml に、関連する親要素内に入れ子になった各リレーションシップの子行が含まれるようにする必要があります。 これを実現するには **、datarelation を** <xref:System.Data.DataSet>に追加するときに、 **datarelation**の**Nested**プロパティを**true**に設定します。 詳細については、「 [datarelation の入れ子](nesting-datarelations.md)」を参照してください。  
   
- <xref:System.Data.DataSet> の XML 表現をファイルに書き込む 2 つの例を次に示します。 最初の例では、結果の XML のファイル名を文字列として**WriteXml**に渡します。 2番目の例では、system.servicemodel オブジェクトを渡します。  
+ <xref:System.Data.DataSet> の XML 表現をファイルに書き込む 2 つの例を次に示します。 最初の例では、結果の XML のファイル名を文字列として**WriteXml**に渡します。 2番目の例**では、system.servicemodel オブジェクトを**渡します。  
   
 ```vb  
 custDS.WriteXml("Customers.xml", XmlWriteMode.WriteSchema)  
@@ -80,4 +80,4 @@ xmlSW.Close();
 - [DataRelation の入れ子化](nesting-datarelations.md)
 - [XSD としての DataSet スキーマ情報の書き込み](writing-dataset-schema-information-as-xsd.md)
 - [DataSet、DataTable、および DataView](index.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET の概要](../ado-net-overview.md)

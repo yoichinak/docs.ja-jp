@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5675663-fc91-4e0d-87a9-481b25b64c0f
-ms.openlocfilehash: b3a1077bff9bf457b4aef0b05357d4a9260f8973
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: c36c68b0375e7d03aac36de7d02b2c9579ea9316
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204821"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784588"
 ---
 # <a name="handling-dataview-events"></a>DataView イベントの処理
 <xref:System.Data.DataView.ListChanged> の <xref:System.Data.DataView> イベントを使用して、ビューが更新されているかどうかを確認できます。 基になるテーブルの行の追加、削除、または変更や、このスキーマの列の追加または削除、親子のリレーションシップの変更など、これらの更新を行うとこのイベントが発生します。 また、 **ListChanged**イベントは、表示している行の一覧が新しい並べ替え順序またはフィルターの適用によって大幅に変更された場合にも通知します。  
@@ -56,4 +56,4 @@ protected static void OnListChanged(object sender,
 - <xref:System.Data.DataView>
 - <xref:System.ComponentModel.ListChangedEventHandler>
 - [DataViews](dataviews.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET の概要](../ado-net-overview.md)

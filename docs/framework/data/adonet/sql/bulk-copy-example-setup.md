@@ -2,17 +2,17 @@
 title: バルク コピー サンプルのセットアップ
 ms.date: 03/30/2017
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
-ms.openlocfilehash: 2a7c0ddef42ff56306a42288c6960987ce7f714a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ac09ed85315aee7c6b29952916088ebe6e301eb9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918088"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794421"
 ---
 # <a name="bulk-copy-example-setup"></a>バルク コピー サンプルのセットアップ
 <xref:System.Data.SqlClient.SqlBulkCopy> クラスを使用すると、SQL Server のテーブルにのみデータを書き込むことができます。 このトピックに示されているコードサンプルでは、SQL Server サンプルデータベース**AdventureWorks**を使用します。 既存のテーブルの改変を防ぐため、コード サンプルでは、別途作成したテーブルにデータを書き込みます。このテーブルを最初に作成しておく必要があります。  
   
- **BulkCopyDemoMatchingColumns**テーブルと**Bulkcopydemocolumns**テーブルはどちらも**AdventureWorks** **Production**テーブルに基づいています。 これらのテーブルを使用するコードサンプルでは、データが**Production**テーブルからこれらのサンプルテーブルのいずれかに追加されます。 このサンプルでは、ソースデータの列を変換先テーブルにマップする方法を示しています。**BulkCopyDemoMatchingColumns**は、その他のほとんどのサンプルに使用されます。  
+ **BulkCopyDemoMatchingColumns**テーブルと**Bulkcopydemocolumns**テーブルはどちらも**AdventureWorks** **Production**テーブルに基づいています。 これらのテーブルを使用するコードサンプルでは、データが**Production**テーブルからこれらのサンプルテーブルのいずれかに追加されます。 このサンプルで**は、ソース**データの列を変換先テーブルにマップする方法を示しています。**BulkCopyDemoMatchingColumns**は、その他のほとんどのサンプルに使用されます。  
   
  <xref:System.Data.SqlClient.SqlBulkCopy> クラスを使用して複数のテーブルに書き込む方法を説明するコード サンプルもあります。 これらのサンプルでは、 **Bulkcopydemoorderheader**テーブルと**Bulkcopydemoorderheader**テーブルをコピー先テーブルとして使用します。 これらのテーブルは、 **AdventureWorks**の**SalesOrderHeader**テーブルと**SalesOrderDetail**テーブルに基づいています。  
   
@@ -83,5 +83,5 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderDetail]([SalesOrderID] [int] NOT NULL,
   
 ## <a name="see-also"></a>関連項目
 
-- [SQL Server でのバルク コピー操作](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server でのバルク コピー操作](bulk-copy-operations-in-sql-server.md)
+- [ADO.NET の概要](../ado-net-overview.md)

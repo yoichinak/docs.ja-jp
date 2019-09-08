@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
-ms.openlocfilehash: 496d6f6ffef8d15e368979a67a8beed62ab86c38
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 481a56f923c4218cd8689c578ce990785aee0ab3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918186"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782725"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>DataView による並べ替え (LINQ to DataSet)
 特定の条件に基づいてデータを並べ替え、UI コントロールを介してそのデータをクライアントに提供する機能は、データ バインディングの重要な特徴です。 <xref:System.Data.DataView> には、データを並べ替え、特定の並べ替え条件に従って並べ替えられたデータ行を返す方法がいくつか用意されています。 では、文字列ベースの並べ替え機能に加え<xref:System.Data.DataView>て、並べ替え条件に[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]式を使用することもできます。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]式を使用すると、文字列ベースの並べ替えよりもはるかに複雑で強力な並べ替え操作が可能になります。 このトピックでは、<xref:System.Data.DataView> を使用して並べ替えを行うこの 2 つの方法について説明します。  
@@ -20,7 +20,7 @@ ms.locfileid: "69918186"
   
  式ベースの並べ替えは、文字列ベースの並べ替えよりもはるかに強力で複雑な並べ替え機能を提供します。 文字列ベースの並べ替え機能と式ベースの並べ替え機能は、相互に排他的です。 <xref:System.Data.DataView.Sort%2A> をクエリから作成した後に文字列ベースの <xref:System.Data.DataView> を設定した場合、クエリから推論される式ベースの並べ替えはクリアされます (再設定できません)。  
   
- <xref:System.Data.DataView> のインデックスは、<xref:System.Data.DataView> の作成時に構築されるほか、並べ替えまたはフィルター処理の情報が変更されたときにも構築されます。 を作成する LINQ to DataSet クエリ<xref:System.Data.DataView>に並べ替え条件を指定し、後で並べ替え情報を変更しないようにすると、最適なパフォーマンスが得られます。 詳細については、「 [DataView のパフォーマンス](../../../../docs/framework/data/adonet/dataview-performance.md)」を参照してください。  
+ <xref:System.Data.DataView> のインデックスは、<xref:System.Data.DataView> の作成時に構築されるほか、並べ替えまたはフィルター処理の情報が変更されたときにも構築されます。 を作成する LINQ to DataSet クエリ<xref:System.Data.DataView>に並べ替え条件を指定し、後で並べ替え情報を変更しないようにすると、最適なパフォーマンスが得られます。 詳細については、「 [DataView のパフォーマンス](dataview-performance.md)」を参照してください。  
   
 > [!NOTE]
 > ほとんどの場合、並べ替えに使用する式は、副作用のない確定的な式である必要があります。 また、並べ替え処理は任意の回数実行されるため、特定の実行回数に依存するロジックが式に含まれないようにしてください。  
@@ -48,7 +48,7 @@ ms.locfileid: "69918186"
   
  文字列ベースの並べ替え機能と式ベースの並べ替え機能は、相互に排他的です。 <xref:System.Data.DataView.Sort%2A> プロパティを設定すると、<xref:System.Data.DataView> の作成元のクエリから推論される式ベースの並べ替えはクリアされます。  
   
- 文字列ベース<xref:System.Data.DataView.Sort%2A>のフィルター処理の詳細については、「[データの並べ替えとフィルター処理](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)」を参照してください。  
+ 文字列ベース<xref:System.Data.DataView.Sort%2A>のフィルター処理の詳細については、「[データの並べ替えとフィルター処理](./dataset-datatable-dataview/sorting-and-filtering-data.md)」を参照してください。  
   
 ### <a name="example"></a>例  
  次の例では、<xref:System.Data.DataView> を Contact テーブルから作成した後、姓を降順に並べ替え、名を昇順に並べ替えます。  
@@ -83,6 +83,6 @@ ms.locfileid: "69918186"
   
 ## <a name="see-also"></a>関連項目
 
-- [データ バインディングと LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
-- [DataView によるフィルター処理](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)
+- [データ バインディングと LINQ to DataSet](data-binding-and-linq-to-dataset.md)
+- [DataView によるフィルター処理](filtering-with-dataview-linq-to-dataset.md)
 - [データの並べ替え](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546145(v=vs.120))

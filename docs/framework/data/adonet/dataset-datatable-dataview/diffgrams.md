@@ -2,12 +2,12 @@
 title: DiffGrams
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: b9e6fb4ce1c2c7ee7d081a1cb2106d30960853c7
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: dd70c8d238ba47744eec6ab4a4c6bc1e80a3d0b3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204880"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784662"
 ---
 # <a name="diffgrams"></a>DiffGrams
 DiffGram は、データ要素の現在のバージョンと元のバージョンを識別する XML 形式です。 <xref:System.Data.DataSet> では、 の内容を読み込んで永続化するため、およびネットワーク接続経由で転送する場合にこの内容をシリアル化するために、DiffGram 形式が使用されます。 が diffgram として書き込まれると、のスキーマで<xref:System.Data.DataSet>はなく、コンテンツを正確に再作成するために必要なすべての情報が diffgram に挿入されます。ただし、**元**の列と<xref:System.Data.DataSet> **現在**の行のバージョン、行のエラー情報、および行の順序。  
@@ -97,7 +97,7 @@ DiffGram は、データ要素の現在のバージョンと元のバージョ�
 |**[非表示]**|**ColumnMapping**プロパティが**Mappingtype. Hidden**に設定されている列を識別します。 属性は、 **msdata: hidden** *[ColumnName]* = "*value*" という形式で記述されます。 たとえば、`<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">` のように指定します。<br /><br /> データが格納されている隠し列だけが DiffGram 属性として書き込まれます。 それ以外の場合は無視されます。|  
   
 ## <a name="sample-diffgram"></a>DiffGram のサンプル  
- DiffGram 形式の例を次に示します。 この例では、変更のコミット前のテーブル内の行に対する更新結果が示されています。 CustomerID の "ALFKI" である行は変更されていますが、更新されていません。 その結果、**現在**の行には、 ***datainstance*** **>** ブロックに **\<** "Customers1" という**id**の "" が含まれています。また 、**元**の行には、  **\<diffgram: >** ブロックの前。 CustomerID が "ANATR" の行には**RowError**が含まれているため、で`diffgr:hasErrors="true"`注釈が付けられ、  **\<: errors >** ブロックに関連する要素があります。  
+ DiffGram 形式の例を次に示します。 この例では、変更のコミット前のテーブル内の行に対する更新結果が示されています。 CustomerID の "ALFKI" である行は変更されていますが、更新されていません。 その結果、**現在**の行には、 ***datainstance*** **>** **\<** ブロックに "Customers1" という**id**の "" が含まれてい**ます。また**、**元**の行には、  **\<diffgram: >** ブロックの前。 CustomerID が "ANATR" の行には**RowError**が含まれているため、で`diffgr:hasErrors="true"`注釈が付けられ、  **\<: errors >** ブロックに関連する要素があります。  
   
 ```xml  
 <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">  
@@ -137,4 +137,4 @@ DiffGram は、データ要素の現在のバージョンと元のバージョ�
 - [XML からの DataSet の読み込み](loading-a-dataset-from-xml.md)
 - [DataSet 内容の XML データとしての書き込み](writing-dataset-contents-as-xml-data.md)
 - [DataSet、DataTable、および DataView](index.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET の概要](../ado-net-overview.md)

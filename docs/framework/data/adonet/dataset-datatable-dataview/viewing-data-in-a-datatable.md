@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1d26e0fb-f6e0-4afa-9a9c-b8d55b8f20dc
-ms.openlocfilehash: ea92b8a5e46bdaa8e94756cd28a3fbcb2789d7b3
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: c13f0b802b2714a17ea4014625a65ebd1b0011f4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204390"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785852"
 ---
 # <a name="viewing-data-in-a-datatable"></a>DataTable 内のデータの表示
 
@@ -115,4 +115,4 @@ DataRow[] custRows = workTable.Select("CustID > 5", "CustLName ASC");
 - <xref:System.Data.DataViewRowState>
 - [DataTable 内のデータの操作](manipulating-data-in-a-datatable.md)
 - [行の状態とバージョン](row-states-and-row-versions.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET の概要](../ado-net-overview.md)

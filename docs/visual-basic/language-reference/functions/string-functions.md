@@ -4,15 +4,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 4f6203fd6ae69315e7efaaa3c17bb4132bd175d8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 917797700c3e403971ce6f48174a282b1102f127
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69930857"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799321"
 ---
 # <a name="string-functions-visual-basic"></a>文字列関数 (Visual Basic)
-Visual Basic で文字列の検索と操作のために用意されている関数の一覧を次の表に示します。  
+
+次の表に、文字列を検索して操作<xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType>するためにクラスで提供 Visual Basic れる関数を示します。 これらは Visual Basic 組み込み関数と見なすことができます。つまり、例に示すように、クラスの明示的なメンバーとして呼び出す必要はありません。 <xref:System.String?displayProperty=nameWithType>クラスでは、追加のメソッドと、場合によっては補完メソッドを使用できます。 
   
 |.NET Framework メソッド|説明|  
 |---------------------------|-----------------|  
@@ -48,33 +49,38 @@ Visual Basic で文字列の検索と操作のために用意されている関�
   
  [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)ステートメントを使用すると、システムのロケール (`Text`) または文字の内部バイナリ表現 (`Binary`) によって決定される、大文字と小文字を区別しないテキストの並べ替え順序を使用して文字列を比較するかどうかを設定できます。 既定のテキスト比較方法は `Binary` です。  
   
-## <a name="example"></a>例  
- `UCase` 関数を使って文字列を大文字に変換して返す例を次に示します。  
+## <a name="example-ucase"></a>例:UCase
+
+`UCase` 関数を使って文字列を大文字に変換して返す例を次に示します。  
+[!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]  
   
- [!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]  
+## <a name="example-ltrim"></a>例:LTrim
+
+この例では、文字列変数から、`LTrim` 関数を使って先頭の空白を除去し、`RTrim` 関数を使って後続の空白を除去しています。 また、`Trim` 関数を使って両方のタイプの空白を除去しています。  
   
-## <a name="example"></a>例  
- この例では、文字列変数から、`LTrim` 関数を使って先頭の空白を除去し、`RTrim` 関数を使って後続の空白を除去しています。 また、`Trim` 関数を使って両方のタイプの空白を除去しています。  
+[!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]  
   
- [!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]  
+## <a name="example-mid"></a>例:Mid
+
+`Mid` 関数を使って、文字列から指定された字数を返す例を次に示します。  
+
+[!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]  
+
+## <a name="example-len"></a>例:Len
+
+`Len` 関数を使って文字列の文字数を返す例を次に示します。  
   
-## <a name="example"></a>例  
- `Mid` 関数を使って、文字列から指定された字数を返す例を次に示します。  
+[!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]  
   
- [!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]  
+## <a name="example-instr"></a>例:InStr
+
+`InStr` 関数を使って、ある文字列の中から指定された文字列を検索し、最初に見つかった文字位置を返す例を次に示します。  
   
-## <a name="example"></a>例  
- `Len` 関数を使って文字列の文字数を返す例を次に示します。  
+[!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]  
   
- [!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]  
-  
-## <a name="example"></a>例  
- `InStr` 関数を使って、ある文字列の中から指定された文字列を検索し、最初に見つかった文字位置を返す例を次に示します。  
-  
- [!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]  
-  
-## <a name="example"></a>例  
- `Format` の書式指定とユーザー定義の書式指定の両方を使って値の書式を指定する、`String` 関数のさまざまな使用例を次に示します。 日付の区切り記号 (`/`)、時刻の区切り記号 (`:`)、および午前/午後を示す文字 (`t` および `tt`) について、システムで実際に表示される書式は、コードが使用するロケール設定によって決まります。 時刻と日付を開発環境で表示する場合は、コード ロケールの短い時刻書式と短い日付書式が使用されます。  
+## <a name="example-format"></a>例:Format
+
+`Format` の書式指定とユーザー定義の書式指定の両方を使って値の書式を指定する、`String` 関数のさまざまな使用例を次に示します。 日付の区切り記号 (`/`)、時刻の区切り記号 (`:`)、および午前/午後を示す文字 (`t` および `tt`) について、システムで実際に表示される書式は、コードが使用するロケール設定によって決まります。 時刻と日付を開発環境で表示する場合は、コード ロケールの短い時刻書式と短い日付書式が使用されます。  
   
 > [!NOTE]
 > 24 時間制を使用するロケールでは、午前/午後を示す記号 (`t` および `tt`) では何も表示されません。  
@@ -86,3 +92,4 @@ Visual Basic で文字列の検索と操作のために用意されている関�
 - [キーワード](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic ランタイム ライブラリのメンバー](../../../visual-basic/language-reference/runtime-library-members.md)
 - [文字列操作の概要](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
+- [System.string クラスメソッド]<xref:System.String#methods?displayProperty=nameWithType>

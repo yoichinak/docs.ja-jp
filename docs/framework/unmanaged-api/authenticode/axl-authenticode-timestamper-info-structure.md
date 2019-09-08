@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 89e41a81-0f41-45ad-8f20-a120e4ff24fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9eef89c9e560da65d670ffe59649b44a64f8da6a
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: ae7879e1f6598108d839287792ed441391764ae2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039602"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70776648"
 ---
 # <a name="axl_authenticode_timestamper_info-structure"></a>AXL_AUTHENTICODE_TIMESTAMPER_INFO 構造体
 Authenticode のタイム スタンパー情報を定義します。  
@@ -38,4 +38,4 @@ typedef struct _AXL_AUTHENTICODE_SIGNER_INFO {
   
 ## <a name="see-also"></a>関連項目
 
-- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+- [Authenticode](index.md)

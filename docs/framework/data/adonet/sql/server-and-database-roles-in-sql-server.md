@@ -2,12 +2,12 @@
 title: SQL Server のサーバー ロールとデータベース ロール
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: 97ad04b1d081e5635104bdadb2d1a54402ffcca2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f3e31aa67bfbaa541d8d1eb5b8b61dfd28182c72
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961102"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791783"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>SQL Server のサーバー ロールとデータベース ロール
 SQL Server では、すべてのバージョンで、個々のユーザーではなくロール (つまり、ユーザーのグループ) に対して権限を割り当てることのできるロール ベースのセキュリティが使用されています。 固定サーバー ロールおよび固定データベース ロールには、固定された一連の権限が割り当てられています。  
@@ -42,7 +42,7 @@ SQL Server では、すべてのバージョンで、個々のユーザーでは
  `dbo` (データベース所有者) は、データベースのすべてのアクティビティを実行する暗黙権限を持ったユーザー アカウントです。 `sysadmin` 固定サーバー ロールのメンバーは、自動的に `dbo` にマップされます。  
   
 > [!NOTE]
-> `dbo`は、「 [SQL Server での所有権とユーザースキーマの分離](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)」で説明されているように、スキーマの名前でもあります。  
+> `dbo`は、「 [SQL Server での所有権とユーザースキーマの分離](ownership-and-user-schema-separation-in-sql-server.md)」で説明されているように、スキーマの名前でもあります。  
   
  `dbo` ユーザー アカウントは、よく `db_owner` 固定データベース ロールと混同されます。 `db_owner` のスコープがサーバー全体であるのに対し、`sysadmin` のスコープはデータベースです。 `db_owner` ロールのメンバーであるからといって、`dbo` のユーザー権限があるとは限りません。  
   
@@ -63,9 +63,9 @@ SQL Server では、すべてのバージョンで、個々のユーザーでは
   
 ## <a name="see-also"></a>関連項目
 
-- [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server におけるアプリケーション セキュリティのシナリオ](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [SQL Server での認証](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
-- [SQL Server における所有権とユーザーとスキーマの分離](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
-- [SQL Server の承認とアクセス許可](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET アプリケーションのセキュリティ保護](../securing-ado-net-applications.md)
+- [SQL Server におけるアプリケーション セキュリティのシナリオ](application-security-scenarios-in-sql-server.md)
+- [SQL Server での認証](authentication-in-sql-server.md)
+- [SQL Server における所有権とユーザーとスキーマの分離](ownership-and-user-schema-separation-in-sql-server.md)
+- [SQL Server の承認とアクセス許可](authorization-and-permissions-in-sql-server.md)
+- [ADO.NET の概要](../ado-net-overview.md)

@@ -2,12 +2,12 @@
 title: XML からの DataSet リレーショナル構造の推論
 ms.date: 03/30/2017
 ms.assetid: cd2f41c6-6785-420e-aa43-3ceb0bdccdce
-ms.openlocfilehash: 9b1932807058777a532457c99efc49f3ddfdf4ae
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 1c8325d7ed52fea7397a7b5aa8744bdfa90b2c6e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204809"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785318"
 ---
 # <a name="inferring-dataset-relational-structure-from-xml"></a>XML からの DataSet リレーショナル構造の推論
 <xref:System.Data.DataSet> のリレーショナル構造 (スキーマ) は、テーブル、列、制約、およびリレーションで構成されます。 XML から <xref:System.Data.DataSet> を読み込むときには、事前定義されたスキーマを使用するか、または読み込む対象の XML から明示的にまたは推論によってスキーマを作成できます。 Xml <xref:System.Data.DataSet>からのスキーマおよびコンテンツの読み込みの詳細については、「xml からの[dataset の読み込み](loading-a-dataset-from-xml.md)」と「 [xml からの dataset スキーマ情報の読み込み](loading-dataset-schema-information-from-xml.md)」を参照してください。  
@@ -49,4 +49,4 @@ ms.locfileid: "70204809"
   
 ## <a name="see-also"></a>関連項目
 
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET の概要](../ado-net-overview.md)

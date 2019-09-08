@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5da300e2-74c0-4d13-9202-fc20ed8212d8
-ms.openlocfilehash: 2ff2b6b6d00c854d07f36d37986268a388c7f31b
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: ad10557a55b498fe004bff6ce89801e975e7138b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203716"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786316"
 ---
 # <a name="finding-rows"></a>行の検索
 <xref:System.Data.DataView.Find%2A> の <xref:System.Data.DataView.FindRows%2A> メソッドと <xref:System.Data.DataView> メソッドを使用すると、並べ替えキーの値に基づいて行を検索できます。 **Find**メソッドと**FindRows**メソッドの検索値の大文字と小文字の区別は、基になる<xref:System.Data.DataTable>の**CaseSensitive**プロパティによって決定されます。 検索結果を返すには、検索値が既存の並べ替えキーの値と完全に一致している必要があります。  
   
- **Find**メソッドは、検索条件に一致<xref:System.Data.DataRowView>するのインデックスを持つ整数を返します。 複数の行が検索条件に一致する場合は、最初に一致した**DataRowView**のインデックスのみが返されます。 一致するものが見つからない場合は、-1 が返されます。  
+ **Find**メソッドは、検索条件に一致<xref:System.Data.DataRowView>するのインデックスを持つ整数を返します。 複数の行が検索条件に一致する場合は、最初に一致した**DataRowView**のインデックスのみが返されます。 一致するものが見つからない**場合は、** -1 が返されます。  
   
  複数の行に一致する検索結果を返すには、 **FindRows**メソッドを使用します。 **FindRows**は、**検索**メソッドと同様に機能しますが、 **DataView**内の一致するすべての行を参照する**DataRowView**配列を返す点が異なります。 一致するものが見つからない場合、 **DataRowView**配列は空になります。  
   
@@ -98,4 +98,4 @@ else
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>
 - [DataViews](dataviews.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET の概要](../ado-net-overview.md)

@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 44d99680-69c7-4879-a732-f6771b334211
-ms.openlocfilehash: 3e365f0c12b2c1c6ddfa91c96ad5769b63c9e25e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 8186b90a666a7b75ce626cccb7cc28af38de7c5b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043603"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781867"
 ---
 # <a name="how-to-insert-rows-into-the-database"></a>方法: 行をデータベースに挿入する
 
 データベースに行を挿入するには、関連付けら[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]れている<xref:System.Data.Linq.Table%601>コレクションにオブジェクトを追加し、変更をデータベースに送信します。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]では、変更内容が適切`INSERT`な SQL コマンドに変換されます。
 
 > [!NOTE]
-> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の `Insert`、`Update`、および `Delete` の既定のデータベース操作メソッドはオーバーライドできます。 詳細については、「[挿入、更新、および削除の操作をカスタマイズ](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)する」を参照してください。
+> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の `Insert`、`Update`、および `Delete` の既定のデータベース操作メソッドはオーバーライドできます。 詳細については、「[挿入、更新、および削除の操作をカスタマイズ](customizing-insert-update-and-delete-operations.md)する」を参照してください。
 >
 > Visual Studio を使用する開発者は、オブジェクトリレーショナルデザイナーを使用して、同じ目的でストアドプロシージャを開発できます。
 
-以下の手順では、有効な <xref:System.Data.Linq.DataContext> で Northwind データベースに接続されるものと想定しています。 詳細については、「[方法 :データベース](../../../../../../docs/framework/data/adonet/sql/linq/how-to-connect-to-a-database.md)に接続します。
+以下の手順では、有効な <xref:System.Data.Linq.DataContext> で Northwind データベースに接続されるものと想定しています。 詳細については、「[方法 :データベース](how-to-connect-to-a-database.md)に接続します。
 
 ### <a name="to-insert-a-row-into-the-database"></a>行をデータベースに挿入するには
 
@@ -40,7 +40,7 @@ ms.locfileid: "70043603"
 
 ## <a name="see-also"></a>関連項目
 
-- [方法: 変更の競合を管理する](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [方法: 変更の競合を管理する](how-to-manage-change-conflicts.md)
 - [DataContext メソッド (O/R デザイナー)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
 - [方法: 更新、挿入、および削除を実行するストアド プロシージャを割り当てる (O/R デザイナー)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)
-- [データの変更と変更の送信](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+- [データの変更と変更の送信](making-and-submitting-data-changes.md)
