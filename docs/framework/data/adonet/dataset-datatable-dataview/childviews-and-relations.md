@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
-ms.openlocfilehash: 2bbd0d980b65bfbc9240faa8506f2e41875ec6e6
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: d208b0796a072cda2873678ba184bc9793a1688a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205185"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786588"
 ---
 # <a name="childviews-and-relations"></a>ChildView とリレーション
 <xref:System.Data.DataSet> 内のテーブル間にリレーションシップが存在する場合は、このリレーションシップの子テーブルの行が含まれている <xref:System.Data.DataView> を作成できます。このような DataView を作成するには、親テーブルの行に対して <xref:System.Data.DataRowView.CreateChildView%2A> の <xref:System.Data.DataRowView> メソッドを使用します。 たとえば、次のコードでは、**カテゴリ**とその関連**製品**が、**区分**番号と**ProductName**順にアルファベット順に表示されます。  
@@ -79,4 +79,4 @@ foreach (DataRowView catDRV in catView)
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>
 - [DataViews](dataviews.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET の概要](../ado-net-overview.md)

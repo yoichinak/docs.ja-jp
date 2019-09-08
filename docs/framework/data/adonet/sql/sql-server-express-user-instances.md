@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: f76b1f0a09be2f745156437919f43ebaa8840519
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7cd02a0a315ffdb155af09ac4e4fabbea1724a4d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938489"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780839"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express ユーザー インスタンス
 Microsoft SQL Server Express Edition (SQL Server Express) でサポートされる機能に、ユーザー インスタンスがあります。ユーザー インスタンスは、.NET Framework Data Provider for SQL Server (`SqlClient`) を使用している場合にしか利用できません。 ユーザー インスタンスは、親インスタンスによって生成される SQL Server Express データベース エンジンの独立したインスタンスです。 ユーザー インスタンスを使用すると、ローカル コンピューターの管理者以外のユーザーが、SQL Server Express データベースにアタッチして接続できます。 それぞれのインスタンスは、1 ユーザーあたり 1 インスタンスの原則に基づいて、個々のユーザーのセキュリティ コンテキストで実行されます。  
@@ -152,7 +152,7 @@ private static void OpenSqlConnection()
   
 ## <a name="see-also"></a>関連項目
 
-- [SQL Server と ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [接続文字列](../../../../../docs/framework/data/adonet/connection-strings.md)
-- [データ ソースへの接続](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server と ADO.NET](index.md)
+- [接続文字列](../connection-strings.md)
+- [データ ソースへの接続](../connecting-to-a-data-source.md)
+- [ADO.NET の概要](../ado-net-overview.md)

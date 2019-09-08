@@ -2,12 +2,12 @@
 title: System.DateTimeOffset メソッド
 ms.date: 03/30/2017
 ms.assetid: 25b3e5c0-7603-4a70-b3e5-2149e3da69a2
-ms.openlocfilehash: a638a4fcc156727f734ff480a18b9997bc9d2e34
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2e29cf02d4f7e8004782264bf940bb1faf393269
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959087"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781549"
 ---
 # <a name="systemdatetimeoffset-methods"></a>System.DateTimeOffset メソッド
 オブジェクト モデルまたは外部マッピング ファイルにマッピングされると、<xref:System.DateTimeOffset?displayProperty=nameWithType> メソッド、演算子、プロパティのほとんどを LINQ to SQL のクエリ内から呼び出すことができます。  
@@ -28,6 +28,6 @@ ms.locfileid: "69959087"
   
 ## <a name="see-also"></a>関連項目
 
-- [クエリの概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [オブジェクト モデルの作成](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
-- [SQL と CLR の型マッピング](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
+- [クエリの概念](query-concepts.md)
+- [オブジェクト モデルの作成](creating-the-object-model.md)
+- [SQL と CLR の型マッピング](sql-clr-type-mapping.md)

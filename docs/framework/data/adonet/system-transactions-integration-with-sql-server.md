@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 25b443d8234909a4d8525c2ce2b4e70c3baa337b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 075eea42c65a822fc46ca14f820599567c35d231
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965231"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791365"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>SQL Server と System.Transactions の統合
 .NET Framework バージョン2.0 では、 <xref:System.Transactions>名前空間を使用してアクセスできるトランザクションフレームワークが導入されました。 このフレームワークは、ADO.NET など、.NET Framework に完全に統合された方法でトランザクションを公開します。  
@@ -230,5 +230,5 @@ End Function
   
 ## <a name="see-also"></a>関連項目
 
-- [トランザクションと同時実行](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [トランザクションと同時実行](transactions-and-concurrency.md)
+- [ADO.NET の概要](ado-net-overview.md)

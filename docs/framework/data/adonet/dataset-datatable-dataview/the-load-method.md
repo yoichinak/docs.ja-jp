@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: e22e5812-89c6-41f0-9302-bb899a46dbff
-ms.openlocfilehash: b704deeffcd06bca09b6c26d60a66218b46fc55c
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: da0695aff9447355b1fc44a033c1b4a1cc224435
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203172"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785886"
 ---
 # <a name="the-load-method"></a>Load メソッド
 <xref:System.Data.DataTable.Load%2A> メソッドを使用して、データ ソースの行を <xref:System.Data.DataTable> に読み込むことができます。 これはオーバーロードされたメソッドであり、最も単純な形式で、1つのパラメーターである**DataReader**を受け取ります。 この形式では、単に行を含む**DataTable**が読み込まれます。 必要に応じて、 **LoadOption**パラメーターを指定して、データを**DataTable**に追加する方法を制御できます。  
@@ -71,4 +71,4 @@ End Sub
 ## <a name="see-also"></a>関連項目
 
 - [DataTable 内のデータの操作](manipulating-data-in-a-datatable.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET の概要](../ado-net-overview.md)

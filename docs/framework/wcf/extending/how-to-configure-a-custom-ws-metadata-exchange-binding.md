@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: 51681e258e6a21b3a7ae604d1c0ef65d320bfb4f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3582ba3c434bb763889faebcc27407f67af7b1e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991225"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795653"
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>方法: カスタム WS-Metadata Exchange バインディングを構成する
-ここでは、カスタム WS-Metadata Exchange バインディングを構成する方法について説明します。 Windows Communication Foundation (WCF) には、4 つのシステム定義のメタデータ バインディングが含まれていますが、どのバインディングを使用してメタデータを公開することができます。 ここでは、`wsHttpBinding` を使用してメタデータを公開する方法を示します。 このバインディングでは、メタデータをセキュリティで保護して公開することができます。 この記事のコードがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)します。  
+ここでは、カスタム WS-Metadata Exchange バインディングを構成する方法について説明します。 Windows Communication Foundation (WCF) には、4つのシステム定義のメタデータバインドが含まれていますが、必要なバインドを使用してメタデータを公開できます。 ここでは、`wsHttpBinding` を使用してメタデータを公開する方法を示します。 このバインディングでは、メタデータをセキュリティで保護して公開することができます。 この記事のコードは、[はじめに](../samples/getting-started-sample.md)に基づいています。  
   
 ### <a name="using-a-configuration-file"></a>構成ファイルの使用  
   
@@ -115,8 +115,8 @@ ms.locfileid: "61991225"
   
 ## <a name="see-also"></a>関連項目
 
-- [メタデータ公開動作](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)
-- [メタデータの抽出](../../../../docs/framework/wcf/samples/retrieve-metadata.md)
-- [メタデータ](../../../../docs/framework/wcf/feature-details/metadata.md)
-- [メタデータの公開](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)
-- [メタデータ エンドポイントを公開する](../../../../docs/framework/wcf/publishing-metadata-endpoints.md)
+- [メタデータ公開動作](../samples/metadata-publishing-behavior.md)
+- [メタデータの抽出](../samples/retrieve-metadata.md)
+- [メタデータ](../feature-details/metadata.md)
+- [メタデータの公開](../feature-details/publishing-metadata.md)
+- [メタデータ エンドポイントを公開する](../publishing-metadata-endpoints.md)

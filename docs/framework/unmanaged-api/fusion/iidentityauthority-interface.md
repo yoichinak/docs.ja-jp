@@ -16,48 +16,48 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 263dc0f9d686440aaa23e359c26db1b4d3d09b1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7421e0d0e1a1f0e1a5fbe0d0eb7d5a0ab2a48b9a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609101"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796427"
 ---
 # <a name="iidentityauthority-interface"></a>IIdentityAuthority インターフェイス
 
-コード オブジェクトの id キーを管理します。
+コードオブジェクトの id キーを管理します。
 
 ## <a name="methods"></a>メソッド
 
 |メソッド|説明|
 |------------|-----------------|
-|`IIdentityAuthority::AreDefinitionsEqual`|2 つ指定されているかどうかを示す値を取得します[IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)インスタンスが等しい。|
-|`IIdentityAuthority::AreReferencesEqual`|2 つ指定されているかどうかを示す値を取得します[IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)インスタンスが等しい。|
-|`IIdentityAuthority::AreTextualDefinitionsEqual`|2 つの指定した文字列の定義 id の形式が等しいかどうかを示す値を取得します。|
-|`IIdentityAuthority::AreTextualReferencesEqual`|2 つの指定した文字列の参照 id の形式が等しいかどうかを示す値を取得します。|
-|`IIdentityAuthority::CreateDefinition`|新しいポインターを取得します。 `IDefinitionIdentity` 、現在のスコープ内のコード オブジェクトを表すインスタンス。|
-|`IIdentityAuthority::CreateReference`|新しいポインターを取得します。 `IReferenceIdentity` 、現在のスコープ内のコード オブジェクトを表すインスタンス。|
-|`IIdentityAuthority::DefinitionToText`|指定した書式設定された文字列バージョンを取得`IDefinitionIdentity`します。|
-|`IIdentityAuthority::DefinitionToTextBuffer`|指定した文字列形式を指定のワイド文字バッファーに設定`IDefinitionIdentity`します。|
-|`IIdentityAuthority::DoesDefinitionMatchReference`|示す値を取得するかどうか、指定した`IDefinitionIdentity`と`IReferenceIdentity`インスタンスが同じコード オブジェクトを参照してください。|
-|`IIdentityAuthority::DoesTextualDefinitionMatchTextualReference`|指定した文字列が同じコード オブジェクトを参照するかどうかを示す値を取得します。|
-|`IIdentityAuthority::GenerateDefinitionKey`|指定した文字列が新しく作成されたキーへのポインターを取得`IDefinitionIdentity`します。|
-|`IIdentityAuthority::GenerateReferenceKey`|指定した文字列が新しく作成されたキーへのポインターを取得`IReferenceIdentity`します。|
-|`IIdentityAuthority::HashDefinition`|指定したハッシュ値を取得します。`IDefinitionIdentity`します。|
-|`IIdentityAuthority::HashReference`|指定したハッシュ値を取得します。`IReferenceIdentity`します。|
-|`IIdentityAuthority::ReferenceToText`|指定した書式設定された文字列バージョンを取得`IReferenceIdentity`します。|
-|`IIdentityAuthority::ReferenceToTextBuffer`|指定した文字列形式を指定のワイド文字バッファーに設定`IReferenceIdentity`します。|
-|`IIdentityAuthority::TextToDefinition`|インターフェイス ポインターを取得、`IDefinitionIdentity`書式指定文字列を指定された対象から生成されたインスタンス。|
-|`IIdentityAuthority::TextToReference`|インターフェイス ポインターを取得、`IReferenceIdentity`書式指定文字列を指定された対象から生成されたインスタンス。|
+|`IIdentityAuthority::AreDefinitionsEqual`|指定した2つの[IDefinitionIdentity](idefinitionidentity-interface.md)インスタンスが等しいかどうかを示す値を取得します。|
+|`IIdentityAuthority::AreReferencesEqual`|指定した2つの[IReferenceIdentity](ireferenceidentity-interface.md)インスタンスが等しいかどうかを示す値を取得します。|
+|`IIdentityAuthority::AreTextualDefinitionsEqual`|指定した2つの文字列定義 id 表現が等しいかどうかを示す値を取得します。|
+|`IIdentityAuthority::AreTextualReferencesEqual`|指定した2つの文字列参照 id 表現が等しいかどうかを示す値を取得します。|
+|`IIdentityAuthority::CreateDefinition`|現在のスコープ内のコード`IDefinitionIdentity`オブジェクトを表す新しいインスタンスへのポインターを取得します。|
+|`IIdentityAuthority::CreateReference`|現在のスコープ内のコード`IReferenceIdentity`オブジェクトを表す新しいインスタンスへのポインターを取得します。|
+|`IIdentityAuthority::DefinitionToText`|指定したの書式設定され`IDefinitionIdentity`た文字列バージョンを取得します。|
+|`IIdentityAuthority::DefinitionToTextBuffer`|指定したワイド文字バッファーに、指定`IDefinitionIdentity`したの文字列バージョンを格納します。|
+|`IIdentityAuthority::DoesDefinitionMatchReference`|指定した`IDefinitionIdentity`と`IReferenceIdentity`インスタンスが同じコードオブジェクトを参照しているかどうかを示す値を取得します。|
+|`IIdentityAuthority::DoesTextualDefinitionMatchTextualReference`|指定した文字列が同じコードオブジェクトを参照しているかどうかを示す値を取得します。|
+|`IIdentityAuthority::GenerateDefinitionKey`|指定`IDefinitionIdentity`したに対して新しく作成された文字列キーへのポインターを取得します。|
+|`IIdentityAuthority::GenerateReferenceKey`|指定`IReferenceIdentity`したに対して新しく作成された文字列キーへのポインターを取得します。|
+|`IIdentityAuthority::HashDefinition`|指定した`IDefinitionIdentity`のハッシュ値を取得します。|
+|`IIdentityAuthority::HashReference`|指定した`IReferenceIdentity`のハッシュ値を取得します。|
+|`IIdentityAuthority::ReferenceToText`|指定したの書式設定され`IReferenceIdentity`た文字列バージョンを取得します。|
+|`IIdentityAuthority::ReferenceToTextBuffer`|指定したワイド文字バッファーに、指定`IReferenceIdentity`したの文字列バージョンを格納します。|
+|`IIdentityAuthority::TextToDefinition`|指定した書式設定さ`IDefinitionIdentity`れた文字列から生成されたインスタンスへのインターフェイスポインターを取得します。|
+|`IIdentityAuthority::TextToReference`|指定した書式設定さ`IReferenceIdentity`れた文字列から生成されたインスタンスへのインターフェイスポインターを取得します。|
 
 ## <a name="requirements"></a>必要条件
 
-**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+**・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。
 
-**ヘッダー:** Isolation.h
+**ヘッダー:** 分離 .h
 
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
 ## <a name="see-also"></a>関連項目
 
-- [Fusion インターフェイス](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [Fusion インターフェイス](fusion-interfaces.md)

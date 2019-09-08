@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
-ms.openlocfilehash: eb6841dd24c4c7587cc2424cc1e606194da34585
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 357812aa95ea731fe86fbe49b2cb1b2806e3915a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944063"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784867"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>DataAdapter DataTable と DataColumn のマップ
-**DataAdapter**には、その**TableMappings**プロパティ内の<xref:System.Data.Common.DataTableMapping> 0 個以上のオブジェクトのコレクションが含まれています。 **DataTableMapping**は、データソースに対するクエリから返されたデータとの<xref:System.Data.DataTable>間のマスターマッピングを提供します。 **DataTableMapping**名は、 **DataAdapter**の**Fill**メソッドに**DataTable**名の代わりに渡すことができます。 次の例では 、 **authorsmapping**という名前の**Authors**テーブルを作成します。  
+**DataAdapter**には、その**TableMappings**プロパティ内の<xref:System.Data.Common.DataTableMapping> 0 個以上のオブジェクトのコレクションが含まれています。 **DataTableMapping**は、データソースに対するクエリから返されたデータとの<xref:System.Data.DataTable>間のマスターマッピングを提供します。 **DataTableMapping**名は、 **DataAdapter**の**Fill**メソッドに**DataTable**名の代わりに渡すことができます。 次の例では、 **Authorsmapping**という名前の **Authors**テーブルを作成します。  
   
 ```vb  
 workAdapter.TableMappings.Add("AuthorsMapping", "Authors")  
@@ -53,7 +53,7 @@ adapter.Fill(custDS);
   
  **Fill**メソッドに**DataSet**のインスタンスと**DataTableMapping**名が渡されたときに、その名前を持つマッピングが存在する場合は、その名前が使用されます。それ以外の場合は、その名前の**DataTable**が使用されます。  
   
- 次の例では、 **customers**という名前の**DataTableMapping**と、**スキーマ**の**DataTable**名を作成します。 次に、SELECT ステートメントによって返された行を 、**データテーブル**にマップします。  
+ 次の例では、 **customers**という名前の**DataTableMapping**と、**スキーマ**の**DataTable**名を作成します。 次に、SELECT ステートメントによって返された行を **、** **データテーブル**にマップします。  
   
 ```vb  
 Dim mapping As ITableMapping = _  
@@ -99,6 +99,6 @@ adapter.Fill(customersDataSet, "Customers")
   
 ## <a name="see-also"></a>関連項目
 
-- [DataAdapter と DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [ADO.NET でのデータの取得および変更](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataAdapter と DataReader](dataadapters-and-datareaders.md)
+- [ADO.NET でのデータの取得および変更](retrieving-and-modifying-data.md)
+- [ADO.NET の概要](ado-net-overview.md)

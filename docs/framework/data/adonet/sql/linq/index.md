@@ -2,12 +2,12 @@
 title: LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
-ms.openlocfilehash: 86c7e9fae270e75d1ba7e9725ded22ea1961311a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fbb2f8cf37bd05864dc93b8ebbd33466a9a2c55e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911998"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793083"
 ---
 # <a name="linq-to-sql"></a>LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]は .NET Framework バージョン3.5 のコンポーネントであり、リレーショナルデータをオブジェクトとして管理するためのランタイムインフラストラクチャを提供します。  
@@ -22,16 +22,16 @@ ms.locfileid: "69911998"
  このリリースの [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] に含まれているドキュメントでは、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] アプリケーションを構築するのに必要な基本的なビルド ブロック、プロセス、および手法について説明します。 また、特定の問題について Microsoft Docs を検索したり、 [LINQ フォーラム](https://go.microsoft.com/fwlink/?LinkId=76488)に参加したりすることもできます。このトピックでは、より複雑なトピックについて、専門家に詳しく説明します。 最後に、「 [LINQ to SQL: リレーショナルデータに対する .net 統合言語クエリ](https://go.microsoft.com/fwlink/?LinkId=93205)」ホワイト[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]ペーパーでは、Visual Basic とC#コード例を使用したテクノロジについて詳しく説明しています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [はじめに](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)  
+ [はじめに](getting-started.md)  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の簡単な概要と、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] を使用して作業を始める方法を示します。  
   
- [プログラミング ガイド](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
+ [プログラミング ガイド](programming-guide.md)  
  マップ、クエリ、更新、デバッグ、および同様のタスクを行う手順を示します。  
   
- [参照](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
+ [参照](reference.md)  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のさまざまな側面に関するリファレンス情報を示します。 SQL-CLR 型マッピング、標準クエリ演算子変換などのトピックが含まれます。  
   
- [サンプル](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)  
+ [サンプル](samples.md)  
  Visual Basic とC#サンプルへのリンクを示します。  
   
 ## <a name="related-sections"></a>関連項目  
@@ -44,13 +44,13 @@ ms.locfileid: "69911998"
  [LINQ](../../../../../visual-basic/programming-guide/language-features/linq/index.md)  
  Visual Basic [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]ユーザー向けのテクノロジについて説明します。  
   
- [LINQ と ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
+ [LINQ と ADO.NET](../../linq-and-ado-net.md)  
  ADO.NET ポータルにリンクします。  
   
  [LINQ to SQL チュートリアル](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90))  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のチュートリアルを一覧します。  
   
- [サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  
+ [サンプル データベースのダウンロード](downloading-sample-databases.md)  
  ドキュメントで使用されるサンプル データベースをダウンロードする方法について説明します。  
   
  [LinqDataSource Web サーバーコントロールの概要](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  

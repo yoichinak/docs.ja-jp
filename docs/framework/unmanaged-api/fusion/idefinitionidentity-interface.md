@@ -16,32 +16,32 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ff23330f307c10eac134048de39a6e19a67c75b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 84c595bfdcca84ee43a53e2ea913cc978ae0953e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697538"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796530"
 ---
 # <a name="idefinitionidentity-interface"></a>IDefinitionIdentity インターフェイス
-現在のスコープ内でアプリケーションを定義するコードの一意のシグネチャを表します。  
+現在のスコープ内のアプリケーションを定義するコードの一意の署名を表します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|`IDefinitionIdentity::Clone`|新しいインターフェイス ポインターを取得`IDefinitionIdentity`これと同じであるオブジェクト`IDefinitionIdentity`、指定した属性の変更を除く。|  
-|`IDefinitionIdentity::EnumAttributes`|インターフェイス ポインターを取得、 [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)オブジェクトに関連付けられた属性を含む`IDefinitionIdentity`します。|  
-|`IDefinitionIdentity::GetAttribute`|指定した名前空間には、指定した名前の属性の値を取得します。|  
-|`IDefinitionIdentity::SetAttribute`|指定した値を指定した名前空間で指定した名前を持つ属性を設定します。|  
+|`IDefinitionIdentity::Clone`|指定した属性の変更を`IDefinitionIdentity`除き、この`IDefinitionIdentity`と同一の新しいオブジェクトへのインターフェイスポインターを取得します。|  
+|`IDefinitionIdentity::EnumAttributes`|この`IDefinitionIdentity`に関連付けられている属性を格納している[IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)オブジェクトへのインターフェイスポインターを取得します。|  
+|`IDefinitionIdentity::GetAttribute`|指定した名前空間内の指定した名前の属性の値を取得します。|  
+|`IDefinitionIdentity::SetAttribute`|指定した名前空間の指定した名前を持つ属性を、指定した値に設定します。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** Isolation.h  
+ **ヘッダー:** 分離 .h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [Fusion インターフェイス](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [Fusion インターフェイス](fusion-interfaces.md)

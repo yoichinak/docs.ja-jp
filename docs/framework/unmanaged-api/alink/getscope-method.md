@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f3c3142ca12789b086bcd8b5a9c00c943264ae7b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b3a0e42e9ffb99896bdd09dbbab65eafb40cafff
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741858"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777211"
 ---
 # <a name="getscope-method"></a>GetScope メソッド
-インポート スコープを取得します。  
+インポートスコープを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,22 +42,22 @@ HRESULT GetScope(
  インポート先のアセンブリの一意の ID。  
   
  `FileToken`  
- インポートするファイルの一意の ID。  
+ インポート元のファイルの一意の ID。  
   
  `dwScope`  
- インポートする 0 から始まるスコープです。  
+ インポートする0から始まるスコープ。  
   
  `ppImportScope`  
- 受信[IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)スコープのインターフェイス。  
+ スコープの[IMetaDataImport インターフェイス](../metadata/imetadataimport-interface.md)インターフェイスを受け取ります。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は、S_OK を返します。  
+ メソッドが成功した場合、S_OK を返します。  
   
 ## <a name="requirements"></a>必要条件  
- Alink.h が必要です。  
+ Alink. h が必要です。  
   
 ## <a name="see-also"></a>関連項目
 
-- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink インターフェイス](ialink-interface.md)
+- [IALink2 インターフェイス](ialink2-interface.md)
+- [ALink API](index.md)

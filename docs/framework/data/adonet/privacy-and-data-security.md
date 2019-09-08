@@ -2,12 +2,12 @@
 title: プライバシーとデータ セキュリティ
 ms.date: 03/30/2017
 ms.assetid: 46fa5839-adf7-4c7c-bce3-71e941fa7de9
-ms.openlocfilehash: e4f603d35b4fc03eff990570e725a9d063c19faa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 04e405307d3aa42388c396cd69c465ba7ec70d35
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69988719"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783231"
 ---
 # <a name="privacy-and-data-security"></a>プライバシーとデータ セキュリティ
 ADO.NET アプリケーションにおける機密情報の保護と管理は、基になる製品および作成に使用されたテクノロジに依存します。 ADO.NET そのものは、データを保護したり暗号化したりするためのサービスを提供しません。  
@@ -18,7 +18,7 @@ ADO.NET アプリケーションにおける機密情報の保護と管理は、
  暗号化ではデータを暗号化した後に復号化を行いますが、データのハッシュは不可逆性の処理です。 データのハッシュは、データが変更されていないことを確認することによって改ざんを防止する場合に役立ちます。ハッシュ アルゴリズムは、同一内容の入力文字列に対して、容易に比較できる同一内容の短い値を出力します。 ハッシュ[コードを使用してデータの整合性を確保](../../../standard/security/ensuring-data-integrity-with-hash-codes.md)するハッシュ値を生成および検証する方法について説明します。  
   
 ## <a name="encrypting-configuration-files"></a>構成ファイルの暗号化  
- アプリケーションのセキュリティを実現するうえで、データ ソースへのアクセスを保護することは、最も重要な目標の 1 つです。 保護されていない接続文字列は脆弱性を招く原因になります。 構成ファイルに保存された接続文字列は、.NET Framework が基本的な要素を定義するために使用する標準的な XML ファイルに格納されます。 保護構成機能を使用すると、構成ファイル内の機密情報を暗号化できます。 保護構成は、主に ASP.NET アプリケーションを想定して設計されたものですが、Windows アプリケーションの構成ファイル セクションを暗号化する目的でも使用できます。 詳細については、「[接続情報の保護](../../../../docs/framework/data/adonet/protecting-connection-information.md)」を参照してください。  
+ アプリケーションのセキュリティを実現するうえで、データ ソースへのアクセスを保護することは、最も重要な目標の 1 つです。 保護されていない接続文字列は脆弱性を招く原因になります。 構成ファイルに保存された接続文字列は、.NET Framework が基本的な要素を定義するために使用する標準的な XML ファイルに格納されます。 保護構成機能を使用すると、構成ファイル内の機密情報を暗号化できます。 保護構成は、主に ASP.NET アプリケーションを想定して設計されたものですが、Windows アプリケーションの構成ファイル セクションを暗号化する目的でも使用できます。 詳細については、「[接続情報の保護](protecting-connection-information.md)」を参照してください。  
   
 ## <a name="securing-string-values-in-memory"></a>メモリ内の文字列値の保護  
  <xref:System.String> オブジェクトにパスワード、クレジット カード番号、個人データなどの機密情報が含まれていると、そのデータの使用後に、情報が漏洩するリスクが生じます。アプリケーションでは、文字列データをコンピューターのメモリから削除することはできません。  
@@ -29,6 +29,6 @@ ADO.NET アプリケーションにおける機密情報の保護と管理は、
   
 ## <a name="see-also"></a>関連項目
 
-- [ADO.NET アプリケーションのセキュリティ保護](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server のセキュリティ](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET アプリケーションのセキュリティ保護](securing-ado-net-applications.md)
+- [SQL Server のセキュリティ](./sql/sql-server-security.md)
+- [ADO.NET の概要](ado-net-overview.md)

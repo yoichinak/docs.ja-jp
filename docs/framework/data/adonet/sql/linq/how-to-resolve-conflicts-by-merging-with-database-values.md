@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1988b79c-3bfc-4c5c-a08a-86cf638bbe17
-ms.openlocfilehash: ccd2e37457e686bc5faed6d8979c2b266d05c829
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 18a7eceeec63d9caadefab8d98942f10d82c99ca
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943437"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793351"
 ---
 # <a name="how-to-resolve-conflicts-by-merging-with-database-values"></a>方法: データベース値とマージすることで競合を解決する
-変更内容を再送信する前に、データベース内の予期した値と実際の値の違いを調整するために、<xref:System.Data.Linq.RefreshMode.KeepChanges> を使用して、データベース内の値を現在のクライアント メンバー値とマージできます。 詳細については[、「オプティミスティック同時実行制御」を参照してください。概要](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)。  
+変更内容を再送信する前に、データベース内の予期した値と実際の値の違いを調整するために、<xref:System.Data.Linq.RefreshMode.KeepChanges> を使用して、データベース内の値を現在のクライアント メンバー値とマージできます。 詳細については[、「オプティミスティック同時実行制御」を参照してください。概要](optimistic-concurrency-overview.md)。  
   
 > [!NOTE]
 > どの場合も、データベースから最新のデータを取得することで、まずクライアントのレコードが更新されます。 この処理によって、次の更新処理が同じコンカレンシー チェックで失敗することを防止できます。  
@@ -42,6 +42,6 @@ ms.locfileid: "69943437"
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: データベースの値を上書きして競合を解決する](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)
-- [方法: データベースの値を保持して競合を解決する](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)
-- [方法: 変更の競合を管理する](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [方法: データベースの値を上書きして競合を解決する](how-to-resolve-conflicts-by-overwriting-database-values.md)
+- [方法: データベースの値を保持して競合を解決する](how-to-resolve-conflicts-by-retaining-database-values.md)
+- [方法: 変更の競合を管理する](how-to-manage-change-conflicts.md)

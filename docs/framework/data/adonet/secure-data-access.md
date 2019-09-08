@@ -2,12 +2,12 @@
 title: 安全なデータ アクセス
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 7aa68842ab3733943f84e9d6d9157f7a3d65cac7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 122bdaf8467994f8f56ce3f6c92457be6b8b3155
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963151"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782775"
 ---
 # <a name="secure-data-access"></a>安全なデータ アクセス
 セキュリティで保護された ADO.NET コードを作成するには、基になるデータ ストア、つまりデータベースで利用可能なセキュリティ機構を理解しておく必要があります。 さらに、アプリケーションに含まれる他の機能またはコンポーネントのセキュリティへの影響も考慮する必要があります。  
@@ -23,10 +23,10 @@ ms.locfileid: "69963151"
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[接続情報の保護](../../../../docs/framework/data/adonet/protecting-connection-information.md)|保護構成を使用して接続文字列を暗号化する方法など、セキュリティのベスト プラクティスと接続情報を保護する手法について説明します。|  
+|[接続情報の保護](protecting-connection-information.md)|保護構成を使用して接続文字列を暗号化する方法など、セキュリティのベスト プラクティスと接続情報を保護する手法について説明します。|  
 |[データアクセス戦略に関する推奨事項](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|データへのアクセスおよびデータベース操作の実行に関連した推奨事項について説明します。|  
-|[接続文字列ビルダー](../../../../docs/framework/data/adonet/connection-string-builders.md)|実行時にユーザー入力から接続文字列を構築する方法について説明します。|  
-|[SQL Server セキュリティの概要](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|SQL Server のセキュリティ アーキテクチャについて説明します。|  
+|[接続文字列ビルダー](connection-string-builders.md)|実行時にユーザー入力から接続文字列を構築する方法について説明します。|  
+|[SQL Server セキュリティの概要](./sql/overview-of-sql-server-security.md)|SQL Server のセキュリティ アーキテクチャについて説明します。|  
   
 ## <a name="parameterized-commands-and-sql-injection"></a>パラメーター化コマンドと SQL インジェクション  
  パラメーター化コマンドは SQL インジェクション攻撃への対策として利用できます。SQL インジェクション攻撃は、SQL ステートメントに、サーバーのセキュリティを侵害するコマンドを "注入" することによって行われます。 パラメーター化コマンドを使用した場合、外部ソースから受け取る値が必ず値として渡され、Transact-SQL ステートメントの一部になることはないため、SQL インジェクション攻撃を防ぐことができます。 Transact-SQL コマンドが値に挿入されたとしても、データ ソースに対して実行されることはありません。 これらのコマンドは、単なるパラメーター値として処理されます。 セキュリティ面の利点に加え、パラメーター化コマンドには、Transact-SQL ステートメントで渡される値やストアド プロシージャに渡される値を簡単に扱うことができるという利点もあります。  
@@ -35,9 +35,9 @@ ms.locfileid: "69963151"
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[DataAdapter パラメーター](../../../../docs/framework/data/adonet/dataadapter-parameters.md)|`DataAdapter` でパラメーターを使用する方法について説明します。|  
-|[ストアド プロシージャでのデータの変更](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)|パラメーターの指定方法および戻り値の取得方法について説明します。|  
-|[SQL Server でのストアド プロシージャを使用したアクセス許可の管理](../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)|SQL Server のストアド プロシージャを使用してデータ アクセスをカプセル化する方法を説明します。|  
+|[DataAdapter パラメーター](dataadapter-parameters.md)|`DataAdapter` でパラメーターを使用する方法について説明します。|  
+|[ストアド プロシージャでのデータの変更](modifying-data-with-stored-procedures.md)|パラメーターの指定方法および戻り値の取得方法について説明します。|  
+|[SQL Server でのストアド プロシージャを使用したアクセス許可の管理](./sql/managing-permissions-with-stored-procedures-in-sql-server.md)|SQL Server のストアド プロシージャを使用してデータ アクセスをカプセル化する方法を説明します。|  
   
 ## <a name="script-exploits"></a>スクリプト攻略  
  Web ページに悪意のある文字を挿入することによって行われるスクリプト攻略もインジェクション型の攻撃に属します。 挿入された文字はブラウザーによって検証されることなく、ページの一部として処理されます。  
@@ -84,14 +84,14 @@ ms.locfileid: "69963151"
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[アンマネージ コードとの相互運用](../../../../docs/framework/interop/index.md)|COM コンポーネントを .NET Framework に公開する方法、および .NET Framework コンポーネントを COM に公開する方法について説明します。|
+|[アンマネージ コードとの相互運用](../../interop/index.md)|COM コンポーネントを .NET Framework に公開する方法、および .NET Framework コンポーネントを COM に公開する方法について説明します。|
 |[高度な COM 相互運用性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|プライマリ相互運用機能アセンブリ、スレッド処理、カスタム マーシャリングなど高度なトピックが含まれています。|
 
 ## <a name="see-also"></a>関連項目
 
-- [ADO.NET アプリケーションのセキュリティ保護](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server のセキュリティ](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [ADO.NET アプリケーションのセキュリティ保護](securing-ado-net-applications.md)
+- [SQL Server のセキュリティ](./sql/sql-server-security.md)
 - [データアクセス戦略に関する推奨事項](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
-- [接続情報の保護](../../../../docs/framework/data/adonet/protecting-connection-information.md)
-- [接続文字列ビルダー](../../../../docs/framework/data/adonet/connection-string-builders.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [接続情報の保護](protecting-connection-information.md)
+- [接続文字列ビルダー](connection-string-builders.md)
+- [ADO.NET の概要](ado-net-overview.md)

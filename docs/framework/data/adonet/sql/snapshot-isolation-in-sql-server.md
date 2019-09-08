@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 9f9dfd4f1f299817aa424716aac4408a0b77a240
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2f17e9828f46e6355cdbbddb1b8a83f1188b1a01
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958011"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791745"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>SQL Server でのスナップショット分離
 スナップショット分離により、OLTP アプリケーションのコンカレンシーが向上しています。  
@@ -143,6 +143,6 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
   
 ## <a name="see-also"></a>関連項目
 
-- [SQL Server と ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server と ADO.NET](index.md)
+- [ADO.NET の概要](../ado-net-overview.md)
 - [トランザクションのロックおよび行のバージョン管理ガイド](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)

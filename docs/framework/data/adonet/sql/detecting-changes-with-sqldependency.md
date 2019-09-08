@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e6a58316-f005-4477-92e1-45cc2eb8c5b4
-ms.openlocfilehash: 839642c4fea45f4f37c5dc351d71417d46d07093
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3719188064388b00c756dd037d4a475ca6debd13
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877670"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782425"
 ---
 # <a name="detecting-changes-with-sqldependency"></a>SqlDependency を使用した変更の検出
 
@@ -18,7 +18,7 @@ ms.locfileid: "61877670"
 
 ## <a name="security-considerations"></a>セキュリティの考慮事項
 
-指定されたコマンドについて基になるデータが変更されたという通知を受け取るために、依存関係を持つインフラストラクチャでは <xref:System.Data.SqlClient.SqlConnection> が呼び出されると、<xref:System.Data.SqlClient.SqlDependency.Start%2A> が開かれることを利用します。 クライアントが `SqlDependency.Start` の呼び出しを開始できるかどうかは、<xref:System.Data.SqlClient.SqlClientPermission> を使用し、コード アクセス セキュリティ属性を利用することで制御します。 詳細については、次を参照してください。[クエリ通知を有効にする](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)と[コード アクセス セキュリティと ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)します。
+指定されたコマンドについて基になるデータが変更されたという通知を受け取るために、依存関係を持つインフラストラクチャでは <xref:System.Data.SqlClient.SqlConnection> が呼び出されると、<xref:System.Data.SqlClient.SqlDependency.Start%2A> が開かれることを利用します。 クライアントが `SqlDependency.Start` の呼び出しを開始できるかどうかは、<xref:System.Data.SqlClient.SqlClientPermission> を使用し、コード アクセス セキュリティ属性を利用することで制御します。 詳細については、「[クエリ通知の有効化](enabling-query-notifications.md)」および「[コードアクセスセキュリティと ADO.NET](../code-access-security.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -127,5 +127,5 @@ void Termination()
 
 ## <a name="see-also"></a>関連項目
 
-- [SQL Server のクエリ通知](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server のクエリ通知](query-notifications-in-sql-server.md)
+- [ADO.NET の概要](../ado-net-overview.md)

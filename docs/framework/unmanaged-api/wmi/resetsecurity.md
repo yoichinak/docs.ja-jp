@@ -1,6 +1,6 @@
 ---
 title: ResetSecurity 関数 (アンマネージ API リファレンス)
-description: ResetSecurity 関数では、現在のスレッドに偽装トークンが割り当てられます。
+description: ResetSecurity 関数は、現在のスレッドに偽装トークンを割り当てます。
 ms.date: 11/06/2017
 api_name:
 - ResetSecurity
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3d87fa10dafba326147bcaa39836b631291ef1c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1636d7de8273389e785131dbc1145affd5d3b45f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783126"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798256"
 ---
 # <a name="resetsecurity-function"></a>ResetSecurity 関数
 指定した偽装トークンが現在のスレッドに割り当てられます。   
@@ -39,21 +39,21 @@ HRESULT ResetSecurity (
 ## <a name="parameters"></a>パラメーター
 
 `token`  
-[in]現在のスレッドに関連付ける権限借用トークンです。 この値は `null` の場合もあります。 
+から現在のスレッドに関連付ける偽装トークン。 この値は `null` の場合もあります。 
 
 ## <a name="return-value"></a>戻り値
 
-関数が成功した場合、戻り値は`S_OK`(0)。
+関数が成功した場合、戻り値`S_OK`は (0) になります。
 
-関数が失敗した場合、戻り値が 0 以外のエラー コードにします。 拡張エラー情報を取得する、 [GetErrorInfo](geterrorinfo.md)関数。
+関数が失敗した場合、戻り値は0以外のエラーコードです。 拡張されたエラー情報を取得するには、 [GetErrorInfo](geterrorinfo.md)関数を呼び出します。
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** WMINet_Utils.idl  
+ **ヘッダー:** WMINet_Utils  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+- [WMI およびパフォーマンスカウンター (アンマネージ API リファレンス)](index.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: 21501ec9d0af4c785dd86946fa34c1041bb34b9d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 35e7cc666307d589f21c128734df10430a1a8588
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043898"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779622"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>バイナリ データの操作 (WCF Data Services)
 
@@ -23,7 +23,7 @@ ms.locfileid: "70043898"
 
 - 個別のバイナリ リソース ストリームとして。 写真、ビデオ、またはその他の種類のバイナリ エンコード データを表すバイナリ ラージ オブジェクト (BLOB) データにアクセスしたり、変更したりする場合は、この方法が適しています。
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 定義されている HTTP を使用してバイナリ データのストリーミングを実装、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]します。 バイナリ データはこのメカニズムでは別のメディア リソースとして扱われますが、メディア リンク エントリと呼ばれるエンティティに関連します。 詳細については、[ストリーミング プロバイダー](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)を参照してください。
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 定義されている HTTP を使用してバイナリ データのストリーミングを実装、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]します。 バイナリ データはこのメカニズムでは別のメディア リソースとして扱われますが、メディア リンク エントリと呼ばれるエンティティに関連します。 詳細については、[ストリーミング プロバイダー](streaming-provider-wcf-data-services.md)を参照してください。
 
 > [!TIP]
 > 写真を格納する[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]サービスからバイナリ画像ファイルをダウンロードする Windows Presentation Foundation (WPF) クライアントアプリケーションを作成する手順の例については、「 [Data Services ストリーミングプロバイダーシリーズ-パート」を参照してください。2:クライアント](https://go.microsoft.com/fwlink/?LinkId=201637)からのメディアリソースストリームへのアクセス。 ブログ記事で取り上げているストリーミングフォトデータサービスのサンプルコードをダウンロードするには、MSDN コードギャラリーの[ストリーミングフォトデータサービスのサンプル](https://go.microsoft.com/fwlink/?LinkId=198988)を参照してください。
@@ -74,5 +74,5 @@ ms.locfileid: "70043898"
 
 ## <a name="see-also"></a>関連項目
 
-- [WCF Data Services クライアント ライブラリ](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [コントロールへのデータのバインド](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)
+- [WCF Data Services クライアント ライブラリ](wcf-data-services-client-library.md)
+- [コントロールへのデータのバインド](binding-data-to-controls-wcf-data-services.md)

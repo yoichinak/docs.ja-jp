@@ -2,15 +2,15 @@
 title: System.Object メソッド
 ms.date: 03/30/2017
 ms.assetid: 5397fca0-689e-443e-802f-e1cbdc866427
-ms.openlocfilehash: 3a52f081f1c0c6e6c5218550009c736d0ed60514
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d1a36798ef789bbc44f581dfc631feee19e1f66b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917664"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781064"
 ---
 # <a name="systemobject-methods"></a>System.Object メソッド
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 次のサポート<xref:System.Object>メソッド。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]では、 <xref:System.Object>次のメソッドがサポートされています。  
   
 |||  
 |-|-|  
@@ -26,8 +26,8 @@ ms.locfileid: "61917664"
 |<xref:System.Object.ToString?displayProperty=nameWithType>、`BINARY`、`VARBINARY`、`IMAGE` などのバイナリ型の `TIMESTAMP`||  
   
 ## <a name="differences-from-net"></a>.NET との相違  
- 出力<xref:System.Object.ToString?displayProperty=nameWithType>倍を使用する SQL `CONVERT`(nvarchar (30), @x, 2) sql です。 このとき、SQL は常に 16 桁と指数表記を使用します (たとえば、0 に対して "0.000000000000000e+000" を使用)。 そのため、<xref:System.Object.ToString?displayProperty=nameWithType> 変換では、.NET Framework 内の <xref:System.Convert.ToString%2A?displayProperty=nameWithType>  と同じ文字列は作成されません。  
+ の出力<xref:System.Object.ToString?displayProperty=nameWithType>では、sql で`CONVERT`sql (NVARCHAR (30) @x,, 2) が使用されます。 このとき、SQL は常に 16 桁と指数表記を使用します (たとえば、0 に対して "0.000000000000000e+000" を使用)。 そのため、<xref:System.Object.ToString?displayProperty=nameWithType> 変換では、.NET Framework 内の <xref:System.Convert.ToString%2A?displayProperty=nameWithType>  と同じ文字列は作成されません。  
   
 ## <a name="see-also"></a>関連項目
 
-- [データ型と関数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [データ型と関数](data-types-and-functions.md)

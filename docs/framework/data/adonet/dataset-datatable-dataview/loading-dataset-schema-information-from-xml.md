@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
-ms.openlocfilehash: 4eb211ed13b5f2fe066cd7570c97ae324b187b34
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: db0df68aa89cdd5c8bf94ad95a2b8bc9b36d5685
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203511"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786224"
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>XML の DataSet スキーマ情報の読み込み
 のスキーマ<xref:System.Data.DataSet> (そのテーブル、列、リレーション、および制約) は、プログラムによって定義するか、の <xref:System.Data.Common.DataAdapter>Fill メソッドまたは**FillSchema**メソッドで作成するか、または XML ドキュメントから読み込むことができます。 XML ドキュメントから**dataset**スキーマ情報を読み込むには、**データセット**の**readxmlschema**または**InferXmlSchema**メソッドを使用します。 **Readxmlschema**を使用すると、xml スキーマ定義言語 (XSD) スキーマを含むドキュメントまたはインライン xml スキーマを含む xml ドキュメントから、**データセット**スキーマ情報を読み込んだり、推測したりすることができます。 **InferXmlSchema**を使用すると、指定した特定の xml 名前空間を無視しながら、xml ドキュメントからスキーマを推論できます。  
@@ -27,7 +27,7 @@ ms.locfileid: "70203511"
   
  **Readxmlschema**は**データセット**のスキーマのみを読み込むか推論しますが、 **dataset**の**ReadXml**メソッドは、XML ドキュメントに含まれているスキーマとデータの両方の読み込みまたは推論を行います。 詳細については、「 [XML からの DataSet の読み込み](loading-a-dataset-from-xml.md)」を参照してください。  
   
- 次のコード例は、XML ドキュメントまたは XML ストリームから**データセット**スキーマを読み込む方法を示しています。 最初の例では、XML スキーマファイル名を**Readxmlschema**メソッドに渡しています。 2番目の例は、system.object を示しています。  
+ 次のコード例は、XML ドキュメントまたは XML ストリームから**データセット**スキーマを読み込む方法を示しています。 最初の例では、XML スキーマファイル名を**Readxmlschema**メソッドに渡しています。 2番目の例は、 **system.object を示しています**。  
   
 ```vb  
 Dim dataSet As DataSet = New DataSet  
@@ -54,7 +54,7 @@ xmlStream.Close();
 ```  
   
 ## <a name="inferxmlschema"></a>InferXmlSchema  
- データセットの**InferXmlSchema**メソッドを使用して、XML ドキュメントからスキーマを推論するように**データセット**に指示することもできます。 **InferXmlSchema**は、 **XmlReadMode**の**InferSchema** (データの読み込みとスキーマの推論) を使用した**ReadXml**と、読み取り中のドキュメントにインラインスキーマが含まれていない場合と同様に機能します。 ただし、 **InferXmlSchema**には、スキーマが推論されるときに無視する特定の XML 名前空間を指定できる追加機能が用意されています。 **InferXmlSchema**は、ファイル名、ストリーム、または**XmlReader**によって指定された XML ドキュメントの場所である2つの必須引数を受け取ります。とは、操作によって無視される XML 名前空間の文字列配列です。  
+ データセットの**InferXmlSchema**メソッドを使用して、XML ドキュメントからスキーマを推論するように**データセット**に指示することもでき**ます。** **InferXmlSchema**は、 **XmlReadMode**の**InferSchema** (データの読み込みとスキーマの推論) を使用した**ReadXml**と、読み取り中のドキュメントにインラインスキーマが含まれてい**ない場合と**同様に機能します。 ただし、 **InferXmlSchema**には、スキーマが推論されるときに無視する特定の XML 名前空間を指定できる追加機能が用意されています。 **InferXmlSchema**は、ファイル名、ストリーム、または**XmlReader**によって指定された XML ドキュメントの場所である2つの必須引数を受け取ります。とは、操作によって無視される XML 名前空間の文字列配列です。  
   
  たとえば、次のような XML があるとします。  
   
@@ -92,4 +92,4 @@ dataSet.InferXmlSchema("input_od.xml", new string[] "urn:schemas-microsoft-com:o
 - [XML からの DataSet リレーショナル構造の推論](inferring-dataset-relational-structure-from-xml.md)
 - [XML からの DataSet の読み込み](loading-a-dataset-from-xml.md)
 - [DataSet、DataTable、および DataView](index.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET の概要](../ado-net-overview.md)

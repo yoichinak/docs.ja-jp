@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 061d98b2-baa7-4336-8ad2-c14de8134d91
-ms.openlocfilehash: 21ed620ab5b7a78fc4f396cc474e7c62b70f1ddd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8baf361ba66ba33927121ae20edcc6c12964c21c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946620"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792099"
 ---
 # <a name="what-you-can-do-with-linq-to-sql"></a>LINQ to SQL の主な機能
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、SQL 開発者が期待するすべての主要な機能に対応しています。 情報の照会、テーブルへの情報の挿入、およびテーブルの情報の更新と削除を行うことができます。  
   
 ## <a name="selecting"></a>選択  
- 選択 (*射影*) は、 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] クエリを任意のプログラミング言語で記述し、そのクエリを実行して結果を取得することにより実現されます。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 自体は、必要なすべての操作を、使い慣れた SQL の操作に変換します。 詳細については、「 [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)」を参照してください。  
+ 選択 (*射影*) は、 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] クエリを任意のプログラミング言語で記述し、そのクエリを実行して結果を取得することにより実現されます。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 自体は、必要なすべての操作を、使い慣れた SQL の操作に変換します。 詳細については、「 [LINQ to SQL](index.md)」を参照してください。  
   
  次の例では、ロンドン在住の顧客の会社名を取得し、コンソール ウィンドウに表示します。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "69946620"
  項目を `Delete` (削除) するには、項目を所属先のコレクションから削除してから、 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> の <xref:System.Data.Linq.DataContext> を呼び出して、変更をコミットします。  
   
 > [!NOTE]
-> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は連鎖削除操作を認識しません。 制約があるテーブルの行を削除する場合は、「 [方法:データベース](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md)から行を削除します。  
+> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は連鎖削除操作を認識しません。 制約があるテーブルの行を削除する場合は、「 [方法:データベース](how-to-delete-rows-from-the-database.md)から行を削除します。  
   
  次の例では、 `CustomerID` が `98128` の顧客をデータベースから取得します。 次に、顧客の行が取得されたことを確認した後で、 <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> を呼び出して、このオブジェクトをコレクションから削除します。 最後に、 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> を呼び出して、削除をデータベースに転送します。  
   
@@ -52,6 +52,6 @@ ms.locfileid: "69946620"
   
 ## <a name="see-also"></a>関連項目
 
-- [プログラミング ガイド](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)
-- [LINQ to SQL オブジェクト モデル](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [はじめに](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+- [プログラミング ガイド](programming-guide.md)
+- [LINQ to SQL オブジェクト モデル](the-linq-to-sql-object-model.md)
+- [はじめに](getting-started.md)

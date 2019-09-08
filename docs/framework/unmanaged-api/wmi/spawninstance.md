@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 97a3ab62cda82526a7ad8b8e5d985d9fce7d6f07
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 529905bd9286520a8e09479bfc95ef0b614f53e9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783072"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798220"
 ---
 # <a name="spawninstance-function"></a>SpawnInstance 関数
 クラスの新しいインスタンスが作成されます。    
@@ -41,43 +41,43 @@ HRESULT SpawnInstance (
 ## <a name="parameters"></a>パラメーター
 
 `vFunc`  
-[in]このパラメーターは使用されません。
+からこのパラメーターは使用されていません。
 
 `ptr`  
-[in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。
+から[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンスへのポインター。
 
 `lFlags`  
-[in] 予約されています。 このパラメーターは、0 を指定する必要があります。
+[in] 予約されています。 このパラメーターには0を指定する必要があります。
 
 `ppNewInstance`  
-[out]クラスの新しいインスタンスへのポインターを受け取ります。 新しいオブジェクトでないエラーが発生する場合、返されると`ppNewInstance`は左未変更の状態します。
+入出力クラスの新しいインスタンスへのポインターを受け取ります。 エラーが発生した場合、新しいオブジェクトは返さ`ppNewInstance`れず、未変更のままになります。
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
+この関数によって返される次の値は、 *WbemCli*ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
 |定数  |Value  |説明  |
 |---------|---------|---------|
-| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` 有効なクラス定義ではないと、新しいインスタンスを生成することはできません。 完了しないか、それが登録されていない Windows の管理を呼び出すことによって[PutClassWmi](putclasswmi.md)します。 |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 操作を完了するのに十分なメモリがあります。 |
+| `WBEM_E_INCOMPLETE_CLASS` | 0x80040 | `ptr`は有効なクラス定義ではなく、新しいインスタンスを生成できません。 このファイルが不完全であるか、 [Putclasswmi](putclasswmi.md)を呼び出して Windows Management に登録されていません。 |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 操作を完了するために必要なメモリが不足しています。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` は `null` です。 |
-| `WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
+| `WBEM_S_NO_ERROR` | 0 | 関数の呼び出しに成功しました。  |
   
 ## <a name="remarks"></a>Remarks
 
-この関数の呼び出しをラップする、 [IWbemClassObject::SpawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance)メソッド。
+この関数は、 [IWbemClassObject:: SpawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance)メソッドの呼び出しをラップします。
 
-`ptr` 取得する必要があるクラス定義から Windows の管理。 (インスタンスからインスタンスの生成がサポートされていることに注意してください。 ただし、返されたインスタンスが空)。このクラスの定義を使用するには、新しいインスタンスを作成します。 呼び出し、 [PutInstanceWmi](putinstancewmi.md) Windows 管理インスタンスを作成する場合は、関数が必要です。
+`ptr`は、Windows 管理から取得したクラス定義である必要があります。 (インスタンスからインスタンスを生成することはサポートされていますが、返されたインスタンスが空であることに注意してください)。次に、このクラス定義を使用して、新しいインスタンスを作成します。 Windows Management にインスタンスを書き込む場合は、 [Putinstancewmi](putinstancewmi.md)関数を呼び出す必要があります。
 
-返される新しいオブジェクト`ppNewClass`自動的に現在のオブジェクトのサブクラスになります。 この動作を上書きすることはできません。 サブクラス (派生クラス) を作成できる他の方法はありません。
+で`ppNewClass`返された新しいオブジェクトは、自動的に現在のオブジェクトのサブクラスになります。 この動作をオーバーライドすることはできません。 サブクラス (派生クラス) を作成する方法は他にもありません。
 
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** WMINet_Utils.idl  
+ **ヘッダー:** WMINet_Utils  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+- [WMI およびパフォーマンスカウンター (アンマネージ API リファレンス)](index.md)

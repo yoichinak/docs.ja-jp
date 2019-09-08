@@ -2,31 +2,31 @@
 title: ADO.NET における SQL Server データ操作
 ms.date: 03/30/2017
 ms.assetid: b864ebc9-ed8e-4059-85fd-36d9198f5521
-ms.openlocfilehash: 2dd4430e5b7f86253966f2778abe7d9ba58661a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d2c6477630e5f4b5f25fcbbdd8ffb76109ff507b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876318"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791664"
 ---
 # <a name="sql-server-data-operations-in-adonet"></a>ADO.NET における SQL Server データ操作
 このセクションでは、.NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) 固有の SQL Server の機能について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [SQL Server でのバルク コピー操作](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)  
+ [SQL Server でのバルク コピー操作](bulk-copy-operations-in-sql-server.md)  
  .NET Data Provider for SQL Server のバルク コピー機能について説明します。  
   
- [複数のアクティブな結果セット (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
+ [複数のアクティブな結果セット (MARS)](multiple-active-result-sets-mars.md)  
  <xref:System.Data.SqlClient.SqlDataReader> の各インスタンスが別々のコマンドで開始されているとき、複数の <xref:System.Data.SqlClient.SqlDataReader> を接続上で開く方法について説明します。  
   
- [非同期操作](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
+ [非同期操作](asynchronous-operations.md)  
  .NET Framework で使用されている非同期モデルに基づいて設計された API を使用して、非同期データベース操作を実行する方法について説明します。  
   
- [テーブル値パラメーター](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)  
+ [テーブル値パラメーター](table-valued-parameters.md)  
  SQL Server 2008 で導入された、テーブル値パラメーターの使用方法について説明します。  
   
 ## <a name="see-also"></a>関連項目
 
-- [ADO.NET でのデータの取得および変更](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [SQL Server と ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET でのデータの取得および変更](../retrieving-and-modifying-data.md)
+- [SQL Server と ADO.NET](index.md)
+- [ADO.NET の概要](../ado-net-overview.md)

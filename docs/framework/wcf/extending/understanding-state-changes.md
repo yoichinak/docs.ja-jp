@@ -2,12 +2,12 @@
 title: 状態変更の理解
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-ms.openlocfilehash: 154f49e7da059d20d0751a73c664aa2a0f89be12
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9f72d113c7160bdb6c4c5680669243323a30a4c1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963085"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796945"
 ---
 # <a name="understanding-state-changes"></a>状態変更の理解
 ここでは、チャネルの状態と遷移、チャネル状態の構成に使用する型、およびそれらの型の実装方法について説明します。  
@@ -28,12 +28,12 @@ ms.locfileid: "69963085"
   
  すべての <xref:System.ServiceModel.ICommunicationObject> は Created 状態から開始します。 この状態では、アプリケーションがプロパティを設定してオブジェクトを構成できます。 オブジェクトが Created 以外の状態になると、オブジェクトは不変と見なされます。  
   
- ![チャネル状態遷移](../../../../docs/framework/wcf/extending/media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
+ ![チャネル状態遷移](./media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
 図 1. ICommunicationObject ステート マシン  
   
  Windows Communication Foundation (WCF) は、およびチャネルステートマシン<xref:System.ServiceModel.Channels.CommunicationObject>を実装<xref:System.ServiceModel.ICommunicationObject>するという名前の抽象基本クラスを提供します。 次の図は、<xref:System.ServiceModel.Channels.CommunicationObject> に固有の、変更済みの状態図です。 <xref:System.ServiceModel.ICommunicationObject> ステート マシンのほかに、追加の <xref:System.ServiceModel.Channels.CommunicationObject> メソッドが呼び出されるタイミングも示しています。  
   
- ![状態の変更](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure5statetransitionsdetailsc.gif "wcfc_WCFChannelsigure5StateTransitionsDetailsc")  
+ ![状態の変更](./media/wcfc-wcfchannelsigure5statetransitionsdetailsc.gif "wcfc_WCFChannelsigure5StateTransitionsDetailsc")  
 図 2. イベントと保護メソッドの呼び出しを含む、ICommunicationObject ステート マシンの CommunicationObject 実装  
   
 ### <a name="icommunicationobject-events"></a>ICommunicationObject イベント  
@@ -90,7 +90,7 @@ ms.locfileid: "69963085"
   
  次に、状態を Opening に設定し、OnOpening() (Opening イベントを発生させます)、OnOpen()、および OnOpened() をこの順に呼び出します。 OnOpened() は、状態を Opened に設定し、Opened イベントを発生させます。 これらのいずれかが例外をスローした場合、Open() は Fault() を呼び出して例外をバブリングさせます。 Open プロセスの詳細を次の図に示します。  
   
- ![状態の変更](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigurecoopenflowchartf.gif "wcfc_WCFChannelsigureCOOpenFlowChartf")  
+ ![状態の変更](./media/wcfc-wcfchannelsigurecoopenflowchartf.gif "wcfc_WCFChannelsigureCOOpenFlowChartf")  
 カスタム オープン ロジック (内部通信オブジェクトを開くなど) を実装するように OnOpen メソッドをオーバーライドします。  
   
  Close メソッド  
@@ -101,7 +101,7 @@ ms.locfileid: "69963085"
   
  Close() メソッドはどの状態でも呼び出すことができます。 このメソッドは、オブジェクトを正常に閉じようとします。 エラーが発生した場合は、オブジェクトを終了します。 現在の状態が Closing または Closed の場合、このメソッドは何もしません。 それ以外の場合は、状態を Closing に設定します。 元の状態が Created、Opening、または Faulted の場合は、Abort() を呼び出します (次の図を参照してください)。 元の状態が Opened の場合は、OnClosing() (Closing イベントを発生させます)、OnClose()、および OnClosed() をこの順に呼び出します。 これらのいずれかが例外をスローした場合、Close() は Abort() を呼び出して例外をバブリングさせます。 OnClosed() は状態をクローズに設定し、クローズ イベントを発生させます。 Close プロセスの詳細を次の図に示します。  
   
- ![状態の変更](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsguire7ico-closeflowchartc.gif "wcfc_WCFChannelsguire7ICO-CloseFlowChartc")  
+ ![状態の変更](./media/wcfc-wcfchannelsguire7ico-closeflowchartc.gif "wcfc_WCFChannelsguire7ICO-CloseFlowChartc")  
 OnClose メソッドをオーバーライドして、カスタム クローズ ロジック (内部通信オブジェクトを閉じるなど) を実装します。 OnClose() はタイムアウト パラメーターを取り、Abort() の一部として呼び出されないため、長時間にわたってブロックできる正常なクロージング ロジック (たとえば、もう一方の側が応答するまで待機するなど) はすべて OnClose() で実装してください。  
   
  中止  
@@ -111,7 +111,7 @@ OnClose メソッドをオーバーライドして、カスタム クローズ �
   
  現在の状態が Closed の場合、またはオブジェクトが既に終了している場合 (Abort() を別のスレッドで実行するなどにより)、Abort() メソッドは何もしません。 それ以外の場合は、状態を Closing に設定し、OnClosing() (Closing イベントを発生させます)、OnAbort()、および OnClosed をこの順に呼び出します (オブジェクトを閉じるのではなく、終了させるので OnClose を呼び出しません)。 OnClosed() は状態をクローズに設定し、クローズ イベントを発生させます。 これらのいずれかが例外をスローした場合は、Abort の呼び出し元に例外が再スローされます。 OnClosing()、OnClosed()、および OnAbort() の実装は、入出力などでブロックしないでください。 Abort プロセスの詳細を次の図に示します。  
   
- ![状態の変更](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure8ico-abortflowchartc.gif "wcfc_WCFChannelsigure8ICO-AbortFlowChartc")  
+ ![状態の変更](./media/wcfc-wcfchannelsigure8ico-abortflowchartc.gif "wcfc_WCFChannelsigure8ICO-AbortFlowChartc")  
 カスタム終了ロジック (内部通信オブジェクトを終了するなど) を実装するように OnAbort メソッドをオーバーライドします。  
   
  Fault  

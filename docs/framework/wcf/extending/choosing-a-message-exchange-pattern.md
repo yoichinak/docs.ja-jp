@@ -2,15 +2,15 @@
 title: メッセージ交換パターンの選択
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 518a21ef34d52ef4b70871ba8bad7876374dd319
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7dcbea30b53142ed68db9ac138f8c7a665ca1729
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951858"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797297"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>メッセージ交換パターンの選択
-カスタムトランスポートを記述する最初の手順は、開発中のチャネルに必要な*メッセージ交換パターン*(meps) を決定することです。 ここでは、使用できるオプションとさまざまな要件について説明します。 これは、「チャネルの[開発](../../../../docs/framework/wcf/extending/developing-channels.md)」で説明されているチャネル開発タスクリストの最初のタスクです。  
+カスタムトランスポートを記述する最初の手順は、開発中のチャネルに必要な*メッセージ交換パターン*(meps) を決定することです。 ここでは、使用できるオプションとさまざまな要件について説明します。 これは、「チャネルの[開発](developing-channels.md)」で説明されているチャネル開発タスクリストの最初のタスクです。  
   
 ## <a name="six-message-exchange-patterns"></a>6 つのメッセージ交換パターン  
  次の 3 つの MEP から選択できます。  
@@ -27,7 +27,7 @@ ms.locfileid: "69951858"
   
      二重 MEP では、クライアントにより任意の数のメッセージを送信して、任意の順序で受信できます。 二重 MEP は、話される語の 1 つずつがメッセージである電話の会話に似ています。 この MEP ではどちらの側も送信および受信できるので、クライアントおよびサービス チャネルによって実装されるインターフェイスは <xref:System.ServiceModel.Channels.IDuplexChannel> になります。  
   
- ![メッセージ交換パターンの選択](../../../../docs/framework/wcf/extending/media/wcfc-basicthreemepsc.gif "wcfc_BasicThreeMEPsc")  
+ ![メッセージ交換パターンの選択](./media/wcfc-basicthreemepsc.gif "wcfc_BasicThreeMEPsc")  
 3 つの基本的なメッセージ交換パターンです。 上から順に、データグラム、要求 - 応答、二重。  
   
  これらの各 MEPs は、*セッション*をサポートすることもできます。 セッション (および <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> 型の <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType> の実装) は、チャネルで送受信されるすべてのメッセージを相互に関連付けます。 要求 - 応答パターンはスタンドアロンの 2 メッセージ セッションで、要求と応答が相互に関連付けられています。 一方、セッションをサポートする要求 - 応答パターンは、そのチャネルのすべての要求 - 応答ペアが互いに関連付けられることを意味しています。 したがって、次のように合計 6 つの MEP から選択できます。  
@@ -52,7 +52,7 @@ ms.locfileid: "69951858"
   
  チャネル オブジェクト モデルでは、各論理セッションは、セッションの多いチャネルの 1 つのインスタンスとしてマニフェストされます。 したがって、クライアントによって作成され、サービスで受け入れられるすべての新しいセッションは、それぞれの側のセッションの多い新しいチャネルに対応します。 セッションの少ないチャネルの構造 (上) と、セッションの多いチャネルの構造 (下) を次の図に示します。  
   
- ![メッセージ交換パターンの選択](../../../../docs/framework/wcf/extending/media/wcfc-sessionandsessionlesschannelsc.gif "wcfc_SessionAndSessionlessChannelsc")  
+ ![メッセージ交換パターンの選択](./media/wcfc-sessionandsessionlesschannelsc.gif "wcfc_SessionAndSessionlessChannelsc")  
   
  クライアントがセッションの多い新しいチャネルを作成し、メッセージを送信します。 サービス側では、チャネル リスナーがこのメッセージを受信し、メッセージが新しいセッションに属することを検出します。チャネル リスナーはセッションの多い新しいチャネルを作成し、(チャネル リスナーで AcceptChannel を呼び出しているアプリケーションへの応答として) アプリケーションに渡します。 アプリケーションは、同じセッションの多いチャネルを介して、このメッセージと同じセッションで送信される後続のすべてのメッセージを受信します。  
   
@@ -94,4 +94,4 @@ ms.locfileid: "69951858"
   
 ## <a name="see-also"></a>関連項目
 
-- [チャネル モデルの概要](../../../../docs/framework/wcf/extending/channel-model-overview.md)
+- [チャネル モデルの概要](channel-model-overview.md)

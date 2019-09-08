@@ -2,12 +2,12 @@
 title: トランザクションとコンカレンシー
 ms.date: 03/30/2017
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
-ms.openlocfilehash: c78031150d9b1209372dece49813dfcf0a03b9d5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 837fe6c42d64f7416dbd895e56a38d1a409e567a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965213"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791318"
 ---
 # <a name="transactions-and-concurrency"></a>トランザクションとコンカレンシー
 トランザクションは、単一のコマンド、またはパッケージとして実行されるコマンドのグループで構成されます。 トランザクションを使用することで、複数の操作を 1 つの作業単位にまとめることができます。 トランザクションのあるポイントで障害が発生した場合は、トランザクションが開始される前の状態にすべての更新をロールバックできます。  
@@ -22,23 +22,23 @@ ms.locfileid: "69965213"
  SQL Server と Oracle 間のトランザクションなど、異なるリソースマネージャーを含むトランザクションには、分散トランザクションが必要です。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ローカル トランザクション](../../../../docs/framework/data/adonet/local-transactions.md)  
+ [ローカル トランザクション](local-transactions.md)  
  データベースに対してトランザクションを実行する方法を示します。  
   
- [分散トランザクション](../../../../docs/framework/data/adonet/distributed-transactions.md)  
+ [分散トランザクション](distributed-transactions.md)  
  ADO.NET で分散トランザクションを実行する方法について説明します。  
   
- [SQL Server と System.Transactions の統合](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
+ [SQL Server と System.Transactions の統合](system-transactions-integration-with-sql-server.md)  
  分散<xref:System.Transactions>トランザクションを操作するための SQL Server との統合について説明します。  
   
- [オプティミスティック コンカレンシー](../../../../docs/framework/data/adonet/optimistic-concurrency.md)  
+ [オプティミスティック コンカレンシー](optimistic-concurrency.md)  
  オプティミスティック コンカレンシーとペシミスティック コンカレンシーについて、およびコンカレンシー違反をテストする方法について説明します。  
   
 ## <a name="see-also"></a>関連項目
 
-- [トランザクションの基礎](../../../../docs/framework/data/transactions/transaction-fundamentals.md)
-- [データ ソースへの接続](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [コマンドおよびパラメーター](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [DataAdapter と DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [トランザクションの基礎](../transactions/transaction-fundamentals.md)
+- [データ ソースへの接続](connecting-to-a-data-source.md)
+- [コマンドおよびパラメーター](commands-and-parameters.md)
+- [DataAdapter と DataReader](dataadapters-and-datareaders.md)
+- [DbProviderFactories](dbproviderfactories.md)
+- [ADO.NET の概要](ado-net-overview.md)

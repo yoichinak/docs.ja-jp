@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9530f9c9-dd98-4b93-8cdb-40d7f1e8d0ab
-ms.openlocfilehash: 08149de9222c34928078c0ca9d88096f7a4a88d1
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 971a1bddc40521dc7381ecb2e39709c0fed282ed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203264"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785987"
 ---
 # <a name="nesting-datarelations"></a>DataRelation の入れ子化
 データのリレーショナル表現では、各テーブルに含まれている行が、列または列セットを使用して相互に関連付けられています。 ADO.NET の <xref:System.Data.DataSet> では、テーブル間のリレーションシップは <xref:System.Data.DataRelation> を使用して実装されます。 **DataRelation**を作成する場合、列の親子リレーションシップは、リレーションシップを通じてのみ管理されます。 テーブルと列はそれぞれ別個のエンティティです。 XML のデータ階層表現では、子要素が入れ子の状態で含まれている親要素によって親子のリレーションシップが表現されます。  
@@ -59,7 +59,7 @@ DataRelation customerOrders = dataSet.Relations.Add(
   dataSet.Tables["Orders"].Columns["CustomerID"]);  
 ```  
   
- このデータセットでは、 **DataRelation**オブジェクトの**nested**プロパティは**true**に設定されていないため、この**データセット**が XML データとして表される場合、子オブジェクトは親要素内に入れ子にされません。 入れ子になっていないデータリレーションを含むデータ**セット**の XML 表現を変換すると、パフォーマンスが低下する可能性があります。 データ リレーションシップは入れ子にすることをお勧めします。 これを行うには、 **Nested**プロパティを**true**に設定します。 次に、トップダウン階層形式の XPath クエリ式を使用してデータを検索、変換するコードを XSLT スタイル シートに記述します。  
+ このデータセットでは、 **DataRelation**オブジェクトの**nested**プロパティは**true**に設定されていない**ため、この** **データセット**が XML データとして表される場合、子オブジェクトは親要素内に入れ子にされません。 入れ子になっていないデータリレーションを含む**データ** **セット**の XML 表現を変換すると、パフォーマンスが低下する可能性があります。 データ リレーションシップは入れ子にすることをお勧めします。 これを行うには、 **Nested**プロパティを**true**に設定します。 次に、トップダウン階層形式の XPath クエリ式を使用してデータを検索、変換するコードを XSLT スタイル シートに記述します。  
   
  次のコード例は、**データセット**で**WriteXml**を呼び出した結果を示しています。  
   
@@ -136,4 +136,4 @@ customerOrders.Nested = true;
 - [DataSet での XML の使用](using-xml-in-a-dataset.md)
 - [DataRelation の追加](adding-datarelations.md)
 - [DataSet、DataTable、および DataView](index.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET の概要](../ado-net-overview.md)

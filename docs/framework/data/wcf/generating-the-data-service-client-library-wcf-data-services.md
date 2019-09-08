@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - Add Service Reference dialog box
 ms.assetid: 314077c1-ac10-47e1-bed4-940b5462359d
-ms.openlocfilehash: 14ea550715c1b224945137f123eed3b53e56cead
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d53f2d209d6fb0a6f3cadb96245338060ece87db
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918650"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780291"
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>データ サービス クライアント ライブラリの生成 (WCF Data Services)
 を実装[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]するデータサービスは、 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]フィードによって公開されるデータモデルを記述したサービスメタデータドキュメントを返すことができます。 詳細については[、「OData:サービスメタデータ](https://go.microsoft.com/fwlink/?LinkId=186070)ドキュメント。 Visual Studio の **[サービス参照の追加]** ダイアログボックスを使用して、ベースの[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]サービスへの参照を追加できます。 このツールを使用して、クライアントプロジェクトの[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]フィードによって返されるメタデータへの参照を追加すると、次のアクションが実行されます。  
@@ -27,9 +27,9 @@ ms.locfileid: "69918650"
   
 - `System.Data.Services.Client` アセンブリへの参照がプロジェクトに追加されます。  
   
- 詳細については、「[方法 :データサービス参照](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)を追加します。  
+ 詳細については、「[方法 :データサービス参照](how-to-add-a-data-service-reference-wcf-data-services.md)を追加します。  
   
- クライアントデータサービスクラスは、コマンドプロンプトで[datasvcutil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md)ツールを使用して生成することもできます。 詳細については、「[方法 :クライアントデータサービスクラス](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)を手動で生成します。  
+ クライアントデータサービスクラスは、コマンドプロンプトで[datasvcutil.exe](wcf-data-service-client-utility-datasvcutil-exe.md)ツールを使用して生成することもできます。 詳細については、「[方法 :クライアントデータサービスクラス](how-to-manually-generate-client-data-service-classes-wcf-data-services.md)を手動で生成します。  
   
 ## <a name="client-data-type-mapping"></a>クライアント データ型のマッピング  
  Visual Studio の **[サービス参照の追加]** ダイアログボックスまたは`DataSvcUtil.exe`ツールを使用して、 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]フィードに基づくクライアントデータクラスを生成する場合、次のように、.NET Framework データ型がデータモデルのプリミティブ型にマップされます。  
@@ -54,5 +54,5 @@ ms.locfileid: "69918650"
   
 ## <a name="see-also"></a>関連項目
 
-- [WCF Data Services クライアント ライブラリ](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [クイック スタート](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [WCF Data Services クライアント ライブラリ](wcf-data-services-client-library.md)
+- [クイック スタート](quickstart-wcf-data-services.md)

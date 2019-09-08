@@ -1,6 +1,6 @@
 ---
 title: InheritsFrom 関数 (アンマネージ API リファレンス)
-description: InheritsFrom 関数では、クラスまたはインスタンスが特定の親クラスから派生するかどうかを決定します。
+description: InheritsFrom 関数は、クラスまたはインスタンスが特定の親クラスから派生しているかどうかを判断します。
 ms.date: 11/06/2017
 api_name:
 - InheritsFrom
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5c04a08c9712359453b9c5a9d136e22e1de8648a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c32c54ec56ea0fe4f4039ca6438a91338edbadb
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746508"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798455"
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom 関数
 指定した親クラスから現在のクラスまたはインスタンスが派生しているかどうかが判定されます。
@@ -41,35 +41,35 @@ HRESULT InheritsFrom (
 ## <a name="parameters"></a>パラメーター
 
 `vFunc`  
-[in]このパラメーターは使用されません。
+からこのパラメーターは使用されていません。
 
 `ptr`  
-[in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。
+から[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンスへのポインター。
 
 `wszAncestor`  
-[in]クラスの名前。 `wszAncestor` 有効なをポイントする必要があります`LPCWSTR`します。
+からクラスの名前。 `wszAncestor`は有効`LPCWSTR`なを指している必要があります。
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
+この関数によって返される次の値は、 *WbemCli*ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-|定数  |値  |説明  |
+|定数  |Value  |説明  |
 |---------|---------|---------|
-| `WBEM_S_NO_ERROR` | 0 | 現在のオブジェクトが継承`wszAncestor`します。  |
-| `WBEM_S_FALSE` | 1 | 現在のオブジェクトを継承しない`wszAncestor`します。 |
+| `WBEM_S_NO_ERROR` | 0 | 現在のオブジェクトはを`wszAncestor`継承します。  |
+| `WBEM_S_FALSE` | 1 | 現在のオブジェクトはを`wszAncestor`継承しません。 |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszAncestor` は `null` です。 |
   
 ## <a name="remarks"></a>Remarks
 
-この関数の呼び出しをラップする、 [IWbemClassObject::InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom)メソッド。
+この関数は、 [IWbemClassObject:: InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom)メソッドの呼び出しをラップします。
 
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** WMINet_Utils.idl  
+ **ヘッダー:** WMINet_Utils  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+- [WMI およびパフォーマンスカウンター (アンマネージ API リファレンス)](index.md)

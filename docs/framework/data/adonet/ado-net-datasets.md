@@ -2,52 +2,51 @@
 title: ADO.NET データセット
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-ms.openlocfilehash: da6fb7bbe82e37787615518fa74a0d84bf95758f
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: acbe5a549539a77d63332687486cbe8744592f8b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504276"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786988"
 ---
 # <a name="adonet-datasets"></a>ADO.NET データセット
-<xref:System.Data.DataSet>オブジェクトは、切断されているサポートの中心となる分散データ シナリオ ADO.NET をします。 **データセット**データ ソースに関係なく一貫したリレーショナル プログラミング モデルを提供するデータのメモリ常駐型の表現です。 複数の異なるデータ ソースや XML データと組み合わせて使用でき、アプリケーションにとってローカルなデータの管理にも使用できます。 **データセット**関連テーブル、制約、およびテーブル間のリレーションシップを含む、データの完全なセットを表します。 次の図は、**データセット**オブジェクト モデルです。  
+<xref:System.Data.DataSet>オブジェクトは、ADO.NET を使用して、切断された分散データシナリオをサポートするための中心的な役割を持ちます。 データ**セット**は、データソースに関係なく、一貫性のあるリレーショナルプログラミングモデルを提供する、メモリ常駐型のデータ表現です。 複数の異なるデータ ソースや XML データと組み合わせて使用でき、アプリケーションにとってローカルなデータの管理にも使用できます。 データ**セット**は、関連テーブル、制約、およびテーブル間のリレーションシップを含む、データの完全なセットを表します。 次の図は、**データセット**オブジェクトモデルを示しています。  
   
- ![ADO.Net グラフィック](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
+ ![ADO.Net グラフィック](./media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
 DataSet オブジェクト モデル  
   
- メソッドと内のオブジェクトを**データセット**リレーショナル データベースのモデルと一致します。  
+ **データセット**内のメソッドとオブジェクトは、リレーショナルデータベースモデルのメソッドとオブジェクトと一貫性があります。  
   
- **データセット**も永続化および XML としてその内容とそのスキーマを XML スキーマ定義言語 (XSD) スキーマとしてを再読み込みできます。 詳しくは、「[DataSet での XML の使用](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)」を参照してください。  
+ また、**データセット**は、その内容を xml として永続化し、xml スキーマ定義言語 (XSD) スキーマとしてそのスキーマを再読み込みすることもできます。 詳しくは、「[DataSet での XML の使用](./dataset-datatable-dataview/using-xml-in-a-dataset.md)」を参照してください。  
   
 ## <a name="the-datatablecollection"></a>DataTableCollection  
- ADO.NET**データセット**によって表現される 0 個以上のテーブルのコレクションを含む<xref:System.Data.DataTable>オブジェクト。 <xref:System.Data.DataTableCollection>すべてが含まれています、 **DataTable**内のオブジェクトを**データセット**します。  
+ ADO.NET**データセット**には、オブジェクトによって<xref:System.Data.DataTable>表される0個以上のテーブルのコレクションが含まれています。 に<xref:System.Data.DataTableCollection>は、**データセット**内のすべての**DataTable**オブジェクトが格納されます。  
   
- A **DataTable**で定義されている、<xref:System.Data>名前空間、メモリ常駐データの 1 つのテーブルを表します。 このテーブルには、共にテーブルのスキーマを定義する <xref:System.Data.DataColumnCollection> で表現される列と <xref:System.Data.ConstraintCollection> で表現される制約のコレクションが含まれます。 A **DataTable**もによって表される行のコレクションを含む、<xref:System.Data.DataRowCollection>テーブルにデータを格納します。 <xref:System.Data.DataRow> には、行に格納された値の変更を識別できるように、行の現在の状態と共に、行の現在のバージョンと元のバージョンの両方が保持されます。  
+ **DataTable**は<xref:System.Data>名前空間で定義され、メモリ常駐データの1つのテーブルを表します。 このテーブルには、共にテーブルのスキーマを定義する <xref:System.Data.DataColumnCollection> で表現される列と <xref:System.Data.ConstraintCollection> で表現される制約のコレクションが含まれます。 **DataTable**には<xref:System.Data.DataRowCollection>、テーブル内のデータを格納するによって表される行のコレクションも含まれます。 <xref:System.Data.DataRow> には、行に格納された値の変更を識別できるように、行の現在の状態と共に、行の現在のバージョンと元のバージョンの両方が保持されます。  
   
 ## <a name="the-dataview-class"></a>DataView クラス  
- <xref:System.Data.DataView> では、<xref:System.Data.DataTable> に格納されているデータのさまざまなビューを作成できます。この機能は、データ連結アプリケーションで頻繁に使用されます。 <xref:System.Data.DataView> を使用すると、テーブルのデータをさまざまな並べ替え順序で公開したり、行の状態やフィルター式に基づいてデータをフィルター処理したりできます。 詳細については、次を参照してください。 [Dataview](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)します。  
+ <xref:System.Data.DataView> では、<xref:System.Data.DataTable> に格納されているデータのさまざまなビューを作成できます。この機能は、データ連結アプリケーションで頻繁に使用されます。 <xref:System.Data.DataView> を使用すると、テーブルのデータをさまざまな並べ替え順序で公開したり、行の状態やフィルター式に基づいてデータをフィルター処理したりできます。 詳細については、「 [Dataviews](./dataset-datatable-dataview/dataviews.md)」を参照してください。  
   
 ## <a name="the-datarelationcollection"></a>DataRelationCollection  
- A**データセット**でリレーションシップが含まれますその<xref:System.Data.DataRelationCollection>オブジェクト。 表される、リレーションシップ、<xref:System.Data.DataRelation>オブジェクト、1 つの行に関連付けます**DataTable**の行を別**DataTable**します。 リレーションシップは、リレーショナル データベースの主キー列と外部キー列の間に存在する結合パスに似ています。 A **DataRelation**の 2 つのテーブルで一致する列を識別、**データセット**します。  
+ **データセット**には、その<xref:System.Data.DataRelationCollection>オブジェクト内のリレーションシップが含まれます。 <xref:System.Data.DataRelation>オブジェクトによって表されるリレーションシップは、ある**datatable**内の行を別の**datatable**内の行に関連付けます。 リレーションシップは、リレーショナル データベースの主キー列と外部キー列の間に存在する結合パスに似ています。 **DataRelation**は、**データセット**の2つのテーブルの一致する列を識別します。  
   
- リレーションシップは、1 つのテーブル内の別のナビゲーションを有効にする、**データセット**します。 重要な要素を**DataRelation**はリレーションシップの名前、関連するもの、テーブルの名前および関連する列の各テーブルにします。 <xref:System.Data.DataColumn> オブジェクトの配列をキー列として指定することによって、テーブルごとに複数の列を使用してリレーションシップを構築できます。 リレーションシップを追加すると、 <xref:System.Data.DataRelationCollection>、必要に応じて追加することができます、 **UniqueKeyConstraint**と**ForeignKeyConstraint**関連する列が変更されたときに、整合性制約を適用するには値。  
+ リレーションシップを使用すると、**データセット**内の1つのテーブルから別のテーブルに移動できます。 **DataRelation**の重要な要素は、リレーションシップの名前、関連付けられているテーブルの名前、および各テーブル内の関連する列です。 <xref:System.Data.DataColumn> オブジェクトの配列をキー列として指定することによって、テーブルごとに複数の列を使用してリレーションシップを構築できます。 に<xref:System.Data.DataRelationCollection>リレーションシップを追加する場合は、必要に応じて**UniqueKeyConstraint**と**ForeignKeyConstraint**を追加して、関連する列の値を変更したときに整合性制約を適用できます。  
   
- 詳細については、次を参照してください。 [Datarelation の追加](../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)します。  
+ 詳細については、「 [datarelation の追加](./dataset-datatable-dataview/adding-datarelations.md)」を参照してください。  
   
 ## <a name="xml"></a>XML  
- 入力することができます、**データセット**から、XML ストリームまたはドキュメント。 提供する XML ストリームまたはドキュメントを使用することができます、**データセット**データ、スキーマ情報、またはその両方です。 既存のデータまたはスキーマ情報に既に存在すると、XML ストリームまたはドキュメントから提供される情報を組み合わせることができます、**データセット**します。 詳しくは、「[DataSet での XML の使用](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)」を参照してください。  
+ XML ストリームまたは XML ドキュメントから**データセットにデータ**を読み込むことができます。 XML ストリームまたはドキュメントを使用して、データ**セット**にデータ、スキーマ情報、またはその両方を提供できます。 XML ストリームまたはドキュメントから提供された情報は、データ**セット**内に既に存在する既存のデータまたはスキーマ情報と組み合わせることができます。 詳しくは、「[DataSet での XML の使用](./dataset-datatable-dataview/using-xml-in-a-dataset.md)」を参照してください。  
   
 ## <a name="extendedproperties"></a>ExtendedProperties  
- **データセット**、 **DataTable**、および**DataColumn**がすべて、 **ExtendedProperties**プロパティ。 **ExtendedProperties**は、 **PropertyCollection**結果セットの生成に使用された SELECT ステートメントやデータが生成された時刻などのカスタム情報を配置することができます。 **ExtendedProperties**コレクションのスキーマ情報に保存されて、**データセット**します。  
+ **DataSet**、 **DataTable**、および**DataColumn**には、 **extendedproperties**プロパティがあります。 **Extendedproperties**は、結果セットの生成に使用された select ステートメントや、データが生成された時刻などのカスタム情報を配置できる**PropertyCollection**です。 **Extendedproperties**コレクションは、**データセット**のスキーマ情報と共に保持されます。  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
- LINQ to DataSet は、データセットに格納されている非接続型データの統合言語クエリ機能を提供します。 LINQ to DataSet 規格を使用して[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]構文と、Visual Studio IDE を使用しているときに、コンパイル時の構文チェック、静的な型指定、および IntelliSense のサポートを提供します。  
+ LINQ to DataSet は、データセットに格納されている非接続データに対して統合言語クエリ機能を提供します。 LINQ to DataSet は、 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] Visual Studio IDE を使用しているときに、標準の構文を使用し、コンパイル時の構文チェック、静的な型指定、IntelliSense のサポートを提供します。  
   
- 詳細については、「[LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)」を参照してください。  
+ 詳細については、「[LINQ to DataSet](linq-to-dataset.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [ADO.NET の概要](../../../../docs/framework/data/adonet/ado-net-overview.md)
-- [DataSet、DataTable、および DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET でのデータの取得および変更](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET の概要](ado-net-overview.md)
+- [DataSet、DataTable、および DataView](./dataset-datatable-dataview/index.md)
+- [ADO.NET でのデータの取得および変更](retrieving-and-modifying-data.md)

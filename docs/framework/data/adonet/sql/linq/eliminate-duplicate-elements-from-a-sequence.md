@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2b224a84-bad5-4843-adcc-14e784d280f5
-ms.openlocfilehash: 49138e9b130b1a2137b5e9e779875d6107972578
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b8e19ac76869c33d01a59ee3aad104a7ddbb8f7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032592"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782218"
 ---
 # <a name="eliminate-duplicate-elements-from-a-sequence"></a>シーケンスからの重複する要素の削除
 重複する要素をシーケンスから削除するには、<xref:System.Linq.Queryable.Distinct%2A> 演算子を使用します。  
@@ -23,4 +23,4 @@ ms.locfileid: "62032592"
   
 ## <a name="see-also"></a>関連項目
 
-- [クエリの例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [クエリの例](query-examples.md)

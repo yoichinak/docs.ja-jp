@@ -2,19 +2,19 @@
 title: '方法: MEX 以外のバインディングを介してメタデータを取得する'
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: 4a127e3e2283050018705c85606bd7c03c36de8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6cd6e0ce5dc287c826179c152b989b5f7842bb6e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766780"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795572"
 ---
 # <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>方法: MEX 以外のバインディングを介してメタデータを取得する
-ここでは、MEX 以外のバインディングを介して MEX エンドポイントからメタデータを取得する方法を説明します。 このサンプルでコードがに基づいて、[メタデータ エンドポイントのセキュリティで保護されたカスタム](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)サンプル。  
+ここでは、MEX 以外のバインディングを介して MEX エンドポイントからメタデータを取得する方法を説明します。 このサンプルのコードは、[カスタムセキュアメタデータエンドポイント](../samples/custom-secure-metadata-endpoint.md)のサンプルに基づいています。  
   
 ### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>MEX 以外のバインディングを介してメタデータを取得するには  
   
-1. MEX エンドポイントで使用されているバインディングを特定します。 Windows Communication Foundation (WCF) サービスの場合に、サービスの構成ファイルにアクセスすることで MEX バインディングを指定できます。 この場合、MEX バインディングは、次のサービス構成で定義されています。  
+1. MEX エンドポイントで使用されているバインディングを特定します。 Windows Communication Foundation (WCF) サービスの場合は、サービスの構成ファイルにアクセスすることにより、MEX バインドを特定できます。 この場合、MEX バインディングは、次のサービス構成で定義されています。  
   
     ```xml  
     <services>  
@@ -121,8 +121,8 @@ ms.locfileid: "61766780"
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5. この時点で、サービス エンドポイントのコレクションが取得されます。 メタデータのインポートに関する詳細については、次を参照してください。[方法。サービス エンドポイントにメタデータをインポート](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)します。  
+5. この時点で、サービス エンドポイントのコレクションが取得されます。 メタデータのインポートの詳細につい[ては、「」を参照してください。サービスエンドポイント](../feature-details/how-to-import-metadata-into-service-endpoints.md)にメタデータをインポートします。  
   
 ## <a name="see-also"></a>関連項目
 
-- [メタデータ](../../../../docs/framework/wcf/feature-details/metadata.md)
+- [メタデータ](../feature-details/metadata.md)

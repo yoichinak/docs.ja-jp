@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 531f9167a931d6b972e47e120950197bed11c07e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63c1cb3c417e8e521c6ac8417d260ccb937863f8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778709"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796742"
 ---
 # <a name="iassemblycacheuninstallassembly-method"></a>IAssemblyCache::UninstallAssembly メソッド
-指定したアセンブリをグローバル アセンブリ キャッシュからアンインストールします。  
+指定したアセンブリをグローバルアセンブリキャッシュからアンインストールします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,16 +40,16 @@ HRESULT UninstallAssembly (
   
 ## <a name="parameters"></a>パラメーター  
  `dwFlags`  
- [in]ものがありますで定義されているフラグ。  
+ からFusion に定義されているフラグ。  
   
  `pszAssemblyName`  
- [in]アンインストールするアセンブリの名前。  
+ からアンインストールするアセンブリの名前。  
   
  `pRefData`  
- [in]A [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)アセンブリのインストール データを含む構造体。  
+ からアセンブリのインストールデータを格納する[FUSION_INSTALL_REFERENCE](fusion-install-reference-structure.md)構造体。  
   
  `pulDisposition`  
- [out] 省略可能ものがありますで定義されている配置の値の 1 つ。 使用できる値は次のとおりです。  
+ [out、省略可能]Fusion で定義されている配置値の1つ。 使用できる値は次のとおりです。  
   
 - IASSEMBLYCACHE_UNINSTALL_DISPOSITION_UNINSTALLED (1)  
   
@@ -64,12 +64,12 @@ HRESULT UninstallAssembly (
 - IASSEMBLYCACHE_UNINSTALL_DISPOSITION_REFERENCE_NOT_FOUND (6)  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** Fusion.h  
+ **ヘッダー:** Fusion. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IAssemblyCache インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [IAssemblyCache インターフェイス](iassemblycache-interface.md)

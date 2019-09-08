@@ -1,6 +1,6 @@
 ---
 title: QualifierSet_EndEnumeration 関数 (アンマネージ API リファレンス)
-description: QualifierSet_EndEnumeration 関数は、列挙を終了します。
+description: QualifierSet_EndEnumeration 関数は、列挙体を終了します。
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_EndEnumeration
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 206d6448835b60c55b378636ff5daa5fa4f8b5d0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2c5a817174ec4c4e4407c19bb1d6d2d852d86dd2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782592"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798318"
 ---
-# <a name="qualifiersetendenumeration-function"></a>QualifierSet_EndEnumeration 関数
-呼び出しで開始された列挙の終了、 [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)関数。  
+# <a name="qualifierset_endenumeration-function"></a>QualifierSet_EndEnumeration 関数
+[QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)関数の呼び出しで開始された列挙体を終了します。  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -40,33 +40,33 @@ HRESULT QualifierSet_EndEnumeration (
 ## <a name="parameters"></a>パラメーター
 
 `vFunc`  
-[in]このパラメーターは使用されません。
+からこのパラメーターは使用されていません。
 
 `ptr`   
-[in]ポインター、 [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)インスタンス。
+から[IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)インスタンスへのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイルで定義できますを定数として、コード。
+この関数によって返される次の値は、 *WbemCli*ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-|定数  |値  |説明  |
+|定数  |Value  |説明  |
 |---------|---------|---------|
-|`WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
+|`WBEM_S_NO_ERROR` | 0 | 関数の呼び出しに成功しました。  |
   
 ## <a name="remarks"></a>Remarks
 
-この関数の呼び出しをラップする、 [IWbemQualifierSet::EndEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-endenumeration)メソッド。
+この関数は、 [IWbemQualifierSet:: EndEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-endenumeration)メソッドの呼び出しをラップします。
 
-この呼び出しは、お勧めしますが、必要ありません。 列挙体に関連付けられているリソースを直ちに解放します。
+この呼び出しは推奨されますが、必須ではありません。 列挙に関連付けられているリソースを直ちに解放します。
 
 ## <a name="requirements"></a>必要条件  
 
-**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+**・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
-**ヘッダー:** WMINet_Utils.idl  
+**ヘッダー:** WMINet_Utils  
   
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+- [WMI およびパフォーマンスカウンター (アンマネージ API リファレンス)](index.md)

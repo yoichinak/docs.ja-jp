@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7da0986269189ba5c2dfa0f10d509bf51deb446d
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: d8ea7df9396e9199d04ad5609daa9d2b01761f36
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040204"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798893"
 ---
 # <a name="gettypelibinfo-function"></a>GetTypeLibInfo 関数
 指定したタイプライブラリに関する情報を返します。そのためには、その[Tlibattr](https://docs.microsoft.com/windows/win32/api/oaidl/ns-oaidl-tlibattr)構造体を調べます。  
@@ -59,12 +59,12 @@ HRESULT GetTypeLibInfo(
  入出力タイプライブラリのマイナーバージョン番号。 たとえば、バージョン*x.y*の場合、マイナーバージョン番号は*y*になります。  
   
 ## <a name="remarks"></a>Remarks  
- この関数は、 [tlbexp.exe (タイプライブラリエクスポーター)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)によって呼び出されます。 `GetTypeLibInfo` このツールは、共通言語ランタイム (CLR) アセンブリ内の型を記述するタイプライブラリを生成します。  
+ この関数は、 [tlbexp.exe (タイプライブラリエクスポーター)](../../tools/tlbexp-exe-type-library-exporter.md)によって呼び出されます。 `GetTypeLibInfo` このツールは、共通言語ランタイム (CLR) アセンブリ内の型を記述するタイプライブラリを生成します。  
   
  いずれか`HRESULT`のパラメーターが null の場合、関数は`E_POINTER`のを返します。 それ以外の場合は、 `S_OK`を返します。  
   
 ## <a name="requirements"></a>必要条件  
- **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Tlf .h  
   
@@ -74,5 +74,5 @@ HRESULT GetTypeLibInfo(
   
 ## <a name="see-also"></a>関連項目
 
-- [Tlbexp ヘルパー関数](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
+- [Tlbexp ヘルパー関数](index.md)
 - [LoadTypeLibEx 関数](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

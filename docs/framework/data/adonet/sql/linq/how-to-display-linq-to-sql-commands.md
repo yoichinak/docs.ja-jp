@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1decb05e-37ad-4ed6-ab2f-071eb4c4f628
-ms.openlocfilehash: d71eaf834ebf36d462f8581f0074b2f6a90bae17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2f562dfd8f13c107249e697b77de7538df56fe2f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903124"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781949"
 ---
 # <a name="how-to-display-linq-to-sql-commands"></a>方法: LINQ to SQL コマンドを表示する
 SQL コマンドとその他の情報を表示するには、<xref:System.Data.Linq.DataContext.GetCommand%2A> を使用します。  
@@ -50,4 +50,4 @@ Connection: System.Data.SqlClient.SqlConnection
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグのサポート](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+- [デバッグのサポート](debugging-support.md)

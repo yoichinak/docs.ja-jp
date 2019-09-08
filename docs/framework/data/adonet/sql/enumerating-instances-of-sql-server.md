@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
-ms.openlocfilehash: 304387197c7c6ca31d76ce429cd1516be27ba7b9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c464762e82a24aab399a23ecb26420b5dce61f55
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938172"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782382"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>SQL Server のインスタンスの列挙 (ADO.NET)
 SQL Server を使うと、アプリケーションは現在のネットワーク内の SQL Server インスタンスを検索できます。 <xref:System.Data.Sql.SqlDataSourceEnumerator> クラスは、表示可能なすべてのサーバーに関する情報が含まれた <xref:System.Data.DataTable> を提供することで、アプリケーション開発者にこの情報を公開します。 返されたこのテーブルには、ユーザーが新しい接続を作成しようとしたときに表示される一覧と一致する、ネットワーク上で使用可能なサーバーインスタンスの一覧が含まれています。また、接続プロパティで、使用可能なすべてのサーバーを含むドロップダウンリストを展開します。ダイアログボックス。 結果には一部のインスタンスが表示されないことがあります。  
@@ -126,5 +126,5 @@ class Program
   
 ## <a name="see-also"></a>関連項目
 
-- [SQL Server と ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server と ADO.NET](index.md)
+- [ADO.NET の概要](../ado-net-overview.md)

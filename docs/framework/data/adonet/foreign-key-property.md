@@ -2,28 +2,28 @@
 title: 外部キーのプロパティ
 ms.date: 03/30/2017
 ms.assetid: 23cb6729-544d-4f67-9ee7-44e8a6545587
-ms.openlocfilehash: 74117b30ca54f7c57bd970003fc6f5dcc54d553f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e2f41c2db9aea26c7954a99ebf3f40b03e8df735
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879082"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795033"
 ---
 # <a name="foreign-key-property"></a>外部キーのプロパティ
-A*外部キー プロパティ*Entity Data Model (EDM) では、プリミティブ型[プロパティ](../../../../docs/framework/data/adonet/property.md)(または一連のプリミティブ型のプロパティ) で、[エンティティ型](../../../../docs/framework/data/adonet/entity-type.md)を格納しています。[エンティティ キー](../../../../docs/framework/data/adonet/entity-key.md)別のエンティティ型。  
+Entity Data Model (EDM) の*外部キープロパティ*は、別のエンティティ型の[エンティティキー](entity-key.md)を含む[エンティティ型](entity-type.md)のプリミティブ型の[プロパティ](property.md)(またはプリミティブ型のプロパティのセット) です。  
   
- 外部キーのプロパティは、リレーショナル データベースの外部キー列に似ています。 外部キー列がテーブルの行の間のリレーションシップを作成するリレーショナル データベースで使用されること、同じ方法で概念モデルで外部キー プロパティが確立するために使用される[アソシエーション](../../../../docs/framework/data/adonet/association-type.md)エンティティ型の間。 A[参照整合性制約](../../../../docs/framework/data/adonet/referential-integrity-constraint.md)2 つのエンティティ型、型のいずれかがある、外部キー プロパティとの間のアソシエーションを定義するために使用します。  
+ 外部キーのプロパティは、リレーショナル データベースの外部キー列に似ています。 リレーショナルデータベースで外部キー列を使用してテーブル内の行間のリレーションシップを作成するのと同じように、概念モデルの外部キープロパティを使用してエンティティ型間の[アソシエーション](association-type.md)を確立します。 [参照整合性制約](referential-integrity-constraint.md)は、型の1つに外部キープロパティがある場合に、2つのエンティティ型間のアソシエーションを定義するために使用されます。  
   
 ## <a name="example"></a>例  
  下のダイアグラムは、`Book`、`Publisher`、および `Author` という 3 つのエンティティ型の概念モデルを示しています。 `Book` エンティティ型には、`PublisherId` というプロパティがあります。`Publisher` アソシエーションに参照整合性制約を定義するときに、このプロパティは `PublishedBy` エンティティ型のエンティティ キーを参照します。  
   
- ![RefConstraintModel](./media/foreign-key-property/reference-constraint-model.gif "参照に関する制約のモデルの例")  
+ ![RefConstraintModel](./media/foreign-key-property/reference-constraint-model.gif "参照制約モデルの例")  
   
- [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)概念スキーマ定義言語と呼ばれるドメイン固有言語 (DSL) を使用して ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 概念モデルを定義します。 次の CSDL は、外部キーのプロパティ `PublisherId` を使用して、上の概念モデルに示された `PublishedBy` アソシエーションに参照整合性制約を定義します。  
+ [ADO.NET Entity Framework](./ef/index.md)は、概念スキーマ定義言語 ([CSDL](./ef/language-reference/csdl-specification.md)) と呼ばれるドメイン固有言語 (DSL) を使用して概念モデルを定義します。 次の CSDL は、外部キーのプロパティ `PublisherId` を使用して、上の概念モデルに示された `PublishedBy` アソシエーションに参照整合性制約を定義します。  
   
  [!code-xml[EDM_Example_Model#RefConstraint](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#refconstraint)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [Entity Data Model キーの概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Entity Data Model キーの概念](entity-data-model-key-concepts.md)
+- [Entity Data Model](entity-data-model.md)

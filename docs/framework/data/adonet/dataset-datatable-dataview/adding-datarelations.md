@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a4a564fb-c1c4-4135-b6c2-b030e51195e4
-ms.openlocfilehash: fde1e2ace09e31234d199876ae7f063e01e7a7e4
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 8157d296636d0f8661a35af35de561f5cc49c30b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203969"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784811"
 ---
 # <a name="adding-datarelations"></a>DataRelation の追加
 複数の <xref:System.Data.DataSet> オブジェクトを含む <xref:System.Data.DataTable> では、<xref:System.Data.DataRelation> オブジェクトを使用して 1 つのテーブルを別のテーブルに関連付けたり、テーブル間を移動したり、関連付けたテーブルから子または親の行を戻したりできます。  
@@ -38,4 +38,4 @@ customerOrders.Relations.Add("CustOrders",
 ## <a name="see-also"></a>関連項目
 
 - [DataSet、DataTable、および DataView](index.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET の概要](../ado-net-overview.md)

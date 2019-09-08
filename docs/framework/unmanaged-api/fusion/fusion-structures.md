@@ -8,32 +8,32 @@ helpviewer_keywords:
 ms.assetid: 3feb4fc5-a1e9-445d-929c-0a7490244114
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 762b23af9eb6282a26d9b0430132023c9f76d1f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fb66e0d518abc2d337362affbd2aa951303128f3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697733"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795292"
 ---
 # <a name="fusion-structures"></a>Fusion 構造体
-このセクションでは、fusion API を使用するアンマネージ構造体について説明します。  
+このセクションでは、fusion API が使用するアンマネージ構造体について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ASSEMBLY_INFO 構造体](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md)  
- グローバル アセンブリ キャッシュに登録されているアセンブリに関する情報が含まれています。  
+ [ASSEMBLY_INFO 構造体](assembly-info-structure.md)  
+ グローバルアセンブリキャッシュに登録されているアセンブリに関する情報を格納します。  
   
- [FUSION_INSTALL_REFERENCE 構造体](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)  
- アプリケーションがグローバル アセンブリ キャッシュにアプリケーションがインストールされているアセンブリに参照を表します。  
+ [FUSION_INSTALL_REFERENCE 構造体](fusion-install-reference-structure.md)  
+ アプリケーションがグローバルアセンブリキャッシュにインストールしたアセンブリに対して行う参照を表します。  
   
- [IDENTITY_ATTRIBUTE 構造体](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)  
- メタデータ属性について説明する[IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)インスタンス。  
+ [IDENTITY_ATTRIBUTE 構造体](identity-attribute-structure.md)  
+ [IDefinitionIdentity](idefinitionidentity-interface.md)インスタンスに関するメタデータ属性情報を格納します。  
   
- [IDENTITY_ATTRIBUTE_BLOB 構造体](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)  
- 関連のオフセットの情報を含む[IDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)構造体。  
+ [IDENTITY_ATTRIBUTE_BLOB 構造体](identity-attribute-blob-structure.md)  
+ 関連付けられている[IDENTITY_ATTRIBUTE](identity-attribute-structure.md)構造体のオフセット情報を格納します。  
   
 ## <a name="related-sections"></a>関連項目  
- [Fusion インターフェイス](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
+ [Fusion インターフェイス](fusion-interfaces.md)  
   
- [Fusion グローバル静的関数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
+ [Fusion グローバル静的関数](fusion-global-static-functions.md)  
   
- [Fusion 列挙型](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+ [Fusion 列挙型](fusion-enumerations.md)

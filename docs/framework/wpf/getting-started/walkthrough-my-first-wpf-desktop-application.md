@@ -1,6 +1,6 @@
 ---
-title: Visual Studio で WPF アプリケーションを作成する
-ms.date: 03/20/2019
+title: チュートリアル:Visual Studio 2019 で初めての WPF アプリケーションを作成する-.NET Framework
+ms.date: 09/06/2019
 dev_langs:
 - csharp
 - vb
@@ -8,44 +8,41 @@ helpviewer_keywords:
 - getting started [WPF], WPF
 - WPF [WPF], getting started
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
+ms.topic: tutorial
+ms.custom: vs-dotnet
 author: mairaw
 ms.author: mairaw
-ms.custom: vs-dotnet
-ms.openlocfilehash: 4919424339df1f8d2c68465bd9f9af42f344fe37
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c8b7f6f3bdbf3adc7c355e88cfe1f569cc0cb76f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254067"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799332"
 ---
-# <a name="walkthrough-my-first-wpf-desktop-application"></a>チュートリアル: 初めての WPF デスクトップ アプリケーション
+# <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>チュートリアル:Visual Studio 2019 で初めての WPF アプリケーションを作成する
 
 この記事では、ほとんどの WPF アプリケーションに共通の要素を含む Windows Presentation Foundation (WPF) デスクトップアプリケーションを開発する方法について説明します。Extensible Application Markup Language (XAML) マークアップ、分離コード、アプリケーション定義、コントロール、レイアウト、データバインディング、およびスタイル。 アプリケーションを開発するには、Visual Studio を使用します。 
 
-このチュートリアルでは、次の手順について説明します。
-
-- XAML を使用して、アプリケーションのユーザーインターフェイス (UI) の外観をデザインします。
-
-- アプリケーションの動作を構築するコードを記述します。
-
-- アプリケーションを管理するためのアプリケーション定義を作成します。
-
-- コントロールを追加し、レイアウトを作成してアプリケーション UI を作成します。
-
-- アプリケーションの UI 全体で一貫した外観のスタイルを作成します。
-
-- Ui にデータを設定し、データと UI の同期を保つために、UI をデータにバインドします。
+このチュートリアルでは、次の作業を行う方法について説明します。
+> [!div class="checklist"]
+> - WPF プロジェクトを作成します。
+> - XAML を使用して、アプリケーションのユーザーインターフェイス (UI) の外観をデザインします。
+> - アプリケーションの動作を構築するコードを記述します。
+> - アプリケーションを管理するためのアプリケーション定義を作成します。
+> - コントロールを追加し、レイアウトを作成してアプリケーション UI を作成します。
+> - アプリケーションの UI 全体で一貫した外観のスタイルを作成します。
+> - Ui にデータを設定し、データと UI の同期を保つために、UI をデータにバインドします。
 
 チュートリアルを終了すると、選択したユーザーの経費報告書をユーザーが表示できるスタンドアロン Windows アプリケーションが作成されます。 アプリケーションは、ブラウザースタイルのウィンドウでホストされるいくつかの WPF ページで構成されています。
 
 > [!TIP]
-> このチュートリアルのビルドに使用されるサンプルコードは、Visual Basic とC# [チュートリアルの WPF アプリのサンプルコード](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/WalkthroughFirstWPFApp)の両方で使用できます。
+> このチュートリアルで使用されているサンプルコードは、Visual Basic とC#チュートリアルの[WPF アプリのサンプルコード](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/WalkthroughFirstWPFApp)の両方で使用できます。
 >
-> この記事の右上隅にあるC# **\<ドロップダウンを使用/>** して、と Visual Basic の間でサンプルコードのコード言語を切り替えることができます。
+> このページの上部にある言語セレクターを使用しC#て、と Visual Basic の間でサンプルコードのコード言語を切り替えることができます。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- Visual Studio 2017 以降 (この記事では Visual Studio 2019 を使用します)
+- **.Net デスクトップ開発**ワークロードがインストールされた[Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 。
 
    最新バージョンの Visual Studio をインストールする方法の詳細については、「 [Visual studio のインストール](/visualstudio/install/install-visual-studio)」を参照してください。
 
@@ -210,7 +207,7 @@ ms.locfileid: "70254067"
 
     [!code-vb[ExpenseIt#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/ExpenseReportPage.xaml.vb#5)]
 
-1. *透かし*という名前のイメージをプロジェクトに追加します。 独自のイメージを作成したり、サンプルコードからファイルをコピーしたり、[ここで](https://raw.githubusercontent.com/microsoft/WPF-Samples/master/Getting%20Started/WalkthroughFirstWPFApp/csharp/watermark.png)取得したりすることができます。
+1. *透かし*という名前のイメージをプロジェクトに追加します。 独自のイメージを作成したり、サンプルコードからファイルをコピーしたり、 [microsoft/WPF-Samples](https://raw.githubusercontent.com/microsoft/WPF-Samples/master/Getting%20Started/WalkthroughFirstWPFApp/csharp/watermark.png) GitHub リポジトリから取得したりすることができます。
 
     1. プロジェクトノードを右クリックし、[**既存項目**の**追加** > ] を選択するか、 **Shift**+**Alt**+**A**キーを押します。
 
@@ -475,11 +472,8 @@ ms.locfileid: "70254067"
 > このサンプルでは、WPF の特定の機能について説明します。セキュリティ、ローカライズ、アクセシビリティなどのベストプラクティスについては説明しません。 WPF と .NET アプリ開発のベストプラクティスの包括的な説明については、次のトピックを参照してください。
 >
 > - [ユーザー補助](../../ui-automation/accessibility-best-practices.md)
->
 > - [セキュリティ](../security-wpf.md)
->
 > - [WPF のグローバリゼーションおよびローカリゼーションの概要](../advanced/wpf-globalization-and-localization-overview.md)
->
 > - [WPF のパフォーマンス](../advanced/optimizing-wpf-application-performance.md)
 
 ## <a name="next-steps"></a>次の手順

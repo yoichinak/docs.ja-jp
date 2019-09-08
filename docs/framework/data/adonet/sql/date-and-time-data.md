@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 016e2efae68c02c8c5a10ab74419599bc41be3a8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 90a70eaa2b5aeb8ef1f1659d7912b9ae5abc4eca
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959385"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794244"
 ---
 # <a name="date-and-time-data"></a>日付と時刻のデータ
 SQL Server 2008 では、日付と時刻の情報を扱うための新しいデータ型が導入されました。 新しいデータ型には、日付と時刻の別個のデータ型と、範囲、有効桁数、タイム ゾーン処理が向上した拡張データ型が含まれています。 .NET Framework 3.5 Service Pack (SP) 1 以降では、.NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) が SQL Server 2008 データベース エンジンの新機能すべてをサポートします。 SqlClient でこれらの新機能を使用するには、.NET Framework 3.5 SP1 以降をインストールする必要があります。  
@@ -88,7 +88,7 @@ SQL Server 2008 では、日付と時刻の情報を扱うための新しいデ�
   
 |プロパティ|説明|  
 |--------------|-----------------|  
-|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|値を NULL に設定できるかどうかを取得または設定します。 サーバーに NULL パラメーター値を送る場合は、<xref:System.DBNull> (Visual Basic の場合は `null`) ではなく、`Nothing` を指定する必要があります。 データベースの NULL 値の詳細については、「 [Handling Null Values](../../../../../docs/framework/data/adonet/sql/handling-null-values.md)」を参照してください。|  
+|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|値を NULL に設定できるかどうかを取得または設定します。 サーバーに NULL パラメーター値を送る場合は、<xref:System.DBNull> (Visual Basic の場合は `null`) ではなく、`Nothing` を指定する必要があります。 データベースの NULL 値の詳細については、「 [Handling Null Values](handling-null-values.md)」を参照してください。|  
 |<xref:System.Data.SqlClient.SqlParameter.Precision%2A>|その値の最大桁数を取得または設定します。 この設定値は date データ型と time データ型では無視されます。|  
 |<xref:System.Data.SqlClient.SqlParameter.Scale%2A>|、 `Time` 、`DateTime2`およびの値の時間部分が解決される小数点以下の桁数を取得または`DateTimeOffset`設定します。 既定値は 0 です。これは、実際の桁数が値から推論されてサーバーに送られることを意味します。|  
 |<xref:System.Data.SqlClient.SqlParameter.Size%2A>|date データ型と time データ型では無視されます。|  
@@ -101,7 +101,7 @@ SQL Server 2008 では、日付と時刻の情報を扱うための新しいデ�
 ### <a name="creating-parameters"></a>パラメーターの作成  
  <xref:System.Data.SqlClient.SqlParameter> オブジェクトは、そのコンストラクターを使って作成できるほか、<xref:System.Data.SqlClient.SqlCommand> の <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> メソッドを呼び出して、`Add`<xref:System.Data.SqlClient.SqlParameterCollection> コレクションにそれを追加することによって作成することもできます。 `Add` メソッドは、入力としてコンストラクター引数または既存のパラメーター オブジェクトを受け取ります。  
   
- このトピックの次のセクションでは、日付と時刻のパラメーターを指定する方法の例を示します。 パラメーターの使用に関するその他の例については、「[パラメーターとパラメーターのデータ型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)および[DataAdapter パラメーター](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)の構成」を参照してください。  
+ このトピックの次のセクションでは、日付と時刻のパラメーターを指定する方法の例を示します。 パラメーターの使用に関するその他の例については、「[パラメーターとパラメーターのデータ型](../configuring-parameters-and-parameter-data-types.md)および[DataAdapter パラメーター](../dataadapter-parameters.md)の構成」を参照してください。  
   
 ### <a name="date-example"></a>Date の例  
  次のコード フラグメントは、`date` パラメーターの指定方法を示しています。  
@@ -241,7 +241,7 @@ command.Parameters.AddWithValue( _
   
 ## <a name="see-also"></a>関連項目
 
-- [SQL Server データ型のマッピング](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [パラメーターおよびパラメーター データ型の構成](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
-- [SQL Server データ型と ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server データ型のマッピング](../sql-server-data-type-mappings.md)
+- [パラメーターおよびパラメーター データ型の構成](../configuring-parameters-and-parameter-data-types.md)
+- [SQL Server データ型と ADO.NET](sql-server-data-types.md)
+- [ADO.NET の概要](../ado-net-overview.md)

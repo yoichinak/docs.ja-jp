@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-ms.openlocfilehash: 56d1d11240934036994a14e454cf1a1d8b95226a
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 6082a171d24c55ea52c153bbd920bb7486be78a7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204538"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784373"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>DataSet に対する XPath クエリの実行
-同期<xref:System.Data.DataSet>されたと<xref:System.Xml.XmlDataDocument>の間のリレーションシップにより、 **XmlDataDocument**にアクセスする xml パス言語 (XPath) クエリなどの xml サービスを使用できるようになり、特定の機能をより簡単に実行できるようになります。**データセット**への直接アクセス。 たとえば<xref:System.Data.DataTable> 、の**Select**メソッドを使用して**データセット**内の他のテーブルとの間でリレーションシップを移動するのではなく、**データセット**と同期されている**XmlDataDocument**に対して XPath クエリを実行することで、の形式の XML 要素のリスト<xref:System.Xml.XmlNodeList>。 ノードとして <xref:System.Xml.XmlElement>キャストされた xmlnodelist のノードを**XmlDataDocument**の<xref:System.Data.DataRow> **getrowfromelement**メソッドに渡して、同期**された内のテーブルの行に一致する参照を返すことができます。データセット**。  
+同期<xref:System.Data.DataSet>されたと<xref:System.Xml.XmlDataDocument>の間のリレーションシップにより、 **XmlDataDocument**にアクセスする xml パス言語 (XPath) クエリなどの xml サービスを使用できるようになり、特定の機能をより簡単に実行できるようになります。**データセット**への直接アクセス。 たとえば<xref:System.Data.DataTable> 、の**Select**メソッドを使用して**データセット**内の他のテーブルとの間でリレーションシップを移動するのではなく、**データセット**と同期されている**XmlDataDocument**に対して XPath クエリを実行することで、の形式の XML 要素のリスト<xref:System.Xml.XmlNodeList>。 ノードとし<xref:System.Xml.XmlElement>てキャストされた**xmlnodelist**のノードを**XmlDataDocument**の**getrowfromelement**メソッドに渡して、同期<xref:System.Data.DataRow> **された内のテーブルの行に一致する参照を返すことができます。データセット**。  
   
  たとえば、次に示すコード サンプルでは孫 XPath クエリが実行されます。 **データセット**には、次の3つのテーブルが格納されます。**顧客**、**注文**、および**OrderDetails**。 このサンプルでは、 **Customers**テーブルと**orders**テーブルの間、および**orders**テーブルと**OrderDetails**テーブルの間に親子関係が最初に作成されます。 次に、XPath クエリが実行されて、孫**OrderDetails**ノードに43という値の**ProductID**ノードがある**Customers**ノードの**xmlnodelist**が返されます。 基本的に、このサンプルでは、XPath クエリを使用して、 **ProductID**が43の製品を発注した顧客を特定します。  
   
@@ -104,4 +104,4 @@ foreach (XmlNode xmlNode in nodeList)
 ## <a name="see-also"></a>関連項目
 
 - [DataSet と XmlDataDocument の同期](dataset-and-xmldatadocument-synchronization.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET の概要](../ado-net-overview.md)

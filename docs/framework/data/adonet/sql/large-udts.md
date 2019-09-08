@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: 97df0bee10440dd03f07b980589d9dda85ce121e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 33f4263c747ac2590234493ec7cb9e6048ed2b96
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69909881"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794012"
 ---
 # <a name="large-udts"></a>大きな UDT
 開発者は、ユーザー定義型 (UDT) を使用すると、SQL Server データベースに共通言語ランタイム (CLR) オブジェクトを格納して、サーバーのスカラー型システムを拡張することができます。 UDT は複数の要素を持つことができ、動作を定義できます。この点は、1 つの SQL Server システム データ型から構成される従来の別名データ型と異なります。  
@@ -27,7 +27,7 @@ ms.locfileid: "69909881"
 1. [CLR ユーザー定義型](https://go.microsoft.com/fwlink/?LinkId=98366)  
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>GetSchema による UDT スキーマの取得  
- <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> の <xref:System.Data.SqlClient.SqlConnection> メソッドは、データベース スキーマ情報を <xref:System.Data.DataTable> に返します。 詳細については、「 [SQL Server スキーマコレクション](../../../../../docs/framework/data/adonet/sql-server-schema-collections.md)」を参照してください。  
+ <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> の <xref:System.Data.SqlClient.SqlConnection> メソッドは、データベース スキーマ情報を <xref:System.Data.DataTable> に返します。 詳細については、「 [SQL Server スキーマコレクション](../sql-server-schema-collections.md)」を参照してください。  
   
 ### <a name="getschematable-column-values-for-udts"></a>UDT の GetSchemaTable 列値  
  <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> の <xref:System.Data.SqlClient.SqlDataReader> メソッドは、列メタデータを記述する <xref:System.Data.DataTable> を返します。 次の表は、SQL Server 2005 と SQL Server 2008 における、大きな UDT の列メタデータの違いを示しています。  
@@ -133,8 +133,8 @@ End Using
   
 ## <a name="see-also"></a>関連項目
 
-- [パラメーターおよびパラメーター データ型の構成](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
-- [データベース スキーマ情報の取得](../../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
-- [SQL Server データ型のマッピング](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [SQL Server のバイナリ データと大きな値のデータ](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [パラメーターおよびパラメーター データ型の構成](../configuring-parameters-and-parameter-data-types.md)
+- [データベース スキーマ情報の取得](../retrieving-database-schema-information.md)
+- [SQL Server データ型のマッピング](../sql-server-data-type-mappings.md)
+- [SQL Server のバイナリ データと大きな値のデータ](sql-server-binary-and-large-value-data.md)
+- [ADO.NET の概要](../ado-net-overview.md)

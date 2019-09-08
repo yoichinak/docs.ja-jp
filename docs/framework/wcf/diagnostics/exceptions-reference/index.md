@@ -2,52 +2,58 @@
 title: 例外リファレンス
 ms.date: 03/30/2017
 ms.assetid: adc19950-5f79-4045-8403-bf6310118ee3
+ms.openlocfilehash: 5e61f395cb107202a7c435648f53ad40fce318b4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797337"
 ---
 # <a name="exceptions-reference"></a>例外リファレンス
-このセクションでは、Windows Communication Foundation (WCF) によって生成された次の領域内のすべての例外を示します。  
+ここでは、Windows Communication Foundation (WCF) によって生成される次の領域のすべての例外を示します。  
   
- [IdentityModel](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/identitymodel-exceptions.md)  
+ [IdentityModel](identitymodel-exceptions.md)  
   
- [COM+ 統合](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/com-integration.md)  
+ [COM+ 統合](com-integration.md)  
   
- [構成](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)  
+ [構成](configuration.md)  
   
- [コア通信:チャネル フレームワーク](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-channel-framework.md)  
+ [コア通信:チャネルフレームワーク](core-communications-channel-framework.md)  
   
- [コア通信:接続フレームワーク](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-connection-framework.md)  
+ [コア通信:接続フレームワーク](core-communications-connection-framework.md)  
   
  コア通信: HTTP/HTTPS トランスポート チャネル  
   
- [コア通信:Internalduplex トランスポート チャネル](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-internal-duplex-transport-channels.md)  
+ [コア通信:内部二重トランスポートチャネル](core-communications-internal-duplex-transport-channels.md)  
   
- [コア通信:名前付きパイプ トランスポート チャネル](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-named-pipe-transport-channels.md)  
+ [コア通信:名前付きパイプトランスポートチャネル](core-communications-named-pipe-transport-channels.md)  
   
- [コア通信:TCP トランスポート チャネル](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-tcp-transport-channels.md)  
+ [コア通信:TCP トランスポートチャネル](core-communications-tcp-transport-channels.md)  
   
- [コア通信:トランスポート フレームワーク](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-transport-framework.md)  
+ [コア通信:トランスポートフレームワーク](core-communications-transport-framework.md)  
   
- [コア通信:ユーティリティ](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-utilities.md)  
+ [コア通信:事業](core-communications-utilities.md)  
   
- [コア通信:Webhost サポート](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-webhost-support.md)  
+ [コア通信:Webhost のサポート](core-communications-webhost-support.md)  
   
- [トランザクション](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/transaction-exceptions.md)  
+ [トランザクション](transaction-exceptions.md)  
   
- [ホスティング](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/hosting-exceptions.md)  
+ [ホスティング](hosting-exceptions.md)  
   
- [ピア チャネル](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/peer-channel.md)  
+ [ピア チャネル](peer-channel.md)  
   
- [MSMQ 統合のトランスポート](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/msmq-integration-transport.md)  
+ [MSMQ 統合のトランスポート](msmq-integration-transport.md)  
   
- [MSMQ トランスポート](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/msmq-transport.md)  
+ [MSMQ トランスポート](msmq-transport.md)  
   
- [信頼できるメッセージ機能](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/reliable-messaging.md)  
+ [信頼できるメッセージ機能](reliable-messaging.md)  
   
- [セキュリティ例外](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/security-exceptions.md)  
+ [セキュリティ例外](security-exceptions.md)  
   
- [サービス フレームワーク](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/service-framework.md)  
+ [サービス フレームワーク](service-framework.md)  
   
- [サービス フレームワーク データ](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/service-framework-data.md)  
+ [サービス フレームワーク データ](service-framework-data.md)  
   
- [トランザクション フォーマッタ](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/transaction-formatter.md)  
+ [トランザクション フォーマッタ](transaction-formatter.md)  
   
- [ツール](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/tools.md)
+ [ツール](tools.md)

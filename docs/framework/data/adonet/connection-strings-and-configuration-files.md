@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 3a1b0b947b97eac52e06626d2ed6d47bb9700147
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a98239886d6745bbb6e13e71a12764008460cdd7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949460"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785674"
 ---
 # <a name="connection-strings-and-configuration-files"></a>接続文字列と構成ファイル
-接続文字列をアプリケーションのコードに組み込むと、セキュリティ上の脆弱性やメンテナンスの問題を引き起こす可能性があります。 アプリケーションのソース コード内にコンパイルされた暗号化されていない接続文字列は、[Ildasm.exe (IL 逆アセンブラー)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) ツールを使用して参照することができます。 さらに、接続文字列が変わるたびにアプリケーションを再コンパイルする必要性が生じます。 そのため、接続文字列はアプリケーション構成ファイルに保存することをお勧めします。  
+接続文字列をアプリケーションのコードに組み込むと、セキュリティ上の脆弱性やメンテナンスの問題を引き起こす可能性があります。 アプリケーションのソース コード内にコンパイルされた暗号化されていない接続文字列は、[Ildasm.exe (IL 逆アセンブラー)](../../tools/ildasm-exe-il-disassembler.md) ツールを使用して参照することができます。 さらに、接続文字列が変わるたびにアプリケーションを再コンパイルする必要性が生じます。 そのため、接続文字列はアプリケーション構成ファイルに保存することをお勧めします。  
   
 ## <a name="working-with-application-configuration-files"></a>アプリケーション構成ファイルの使用  
  アプリケーション構成ファイルには、特定のアプリケーションに固有の設定が格納されます。 たとえば、ASP.NET アプリケーションには少なくとも 1 つの **web.config** ファイルが存在するほか、Windows アプリケーションにも必要に応じて **app.config** ファイルを割り当てることができます。 構成ファイルの名前と場所はアプリケーションのホストによって異なりますが、どの構成ファイルにも共通の要素があります。  
@@ -36,7 +36,7 @@ ms.locfileid: "69949460"
 ```  
   
 > [!NOTE]
-> 構成ファイルに接続文字列の一部を保存しておき、<xref:System.Data.Common.DbConnectionStringBuilder> クラスを使用して実行時に補完できます。 接続文字列の要素を事前に知ることができない場合や、機密情報を構成ファイルに保存したくない場合には有効な手段です。 詳細については、「[接続文字列ビルダー](../../../../docs/framework/data/adonet/connection-string-builders.md)」をご覧ください。  
+> 構成ファイルに接続文字列の一部を保存しておき、<xref:System.Data.Common.DbConnectionStringBuilder> クラスを使用して実行時に補完できます。 接続文字列の要素を事前に知ることができない場合や、機密情報を構成ファイルに保存したくない場合には有効な手段です。 詳細については、「[接続文字列ビルダー](connection-string-builders.md)」をご覧ください。  
   
 ### <a name="using-external-configuration-files"></a>外部構成ファイルの使用  
  外部構成ファイルとは、単一のセクションから成る、構成ファイルのフラグメントを含んだ独立したファイルを言います。 外部構成ファイルは、メインの構成ファイルによって参照されます。 **connectionStrings** セクションを物理的に分かれたファイルに保存できるため、アプリケーションの配置後に接続文字列を編集する場合に有効な手段です。 たとえば、構成ファイルに修正が加えられた場合、ASP.NET の標準的な動作ではアプリケーション ドメインが再起動され、その結果、状態情報が失われてしまいます。 しかし、外部構成ファイルに対する修正であればアプリケーションの再起動は伴いません。 外部構成ファイルは ASP.NET だけでなく、Windows アプリケーションでも使用できます。 また、ファイルのアクセス セキュリティや権限を使用して、外部構成ファイルへのアクセスを制限することもできます。 実行時における外部構成ファイルの使用は透過的であり、特殊なコーディングも不要です。  
@@ -171,9 +171,9 @@ ms.locfileid: "69949460"
   
 ## <a name="see-also"></a>関連項目
 
-- [接続文字列ビルダー](../../../../docs/framework/data/adonet/connection-string-builders.md)
-- [接続情報の保護](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [接続文字列ビルダー](connection-string-builders.md)
+- [接続情報の保護](protecting-connection-information.md)
 - [構成クラスの使用](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
-- [アプリの構成](../../../../docs/framework/configure-apps/index.md)
+- [アプリの構成](../../configure-apps/index.md)
 - [ASP.NET Web サイト管理](https://docs.microsoft.com/previous-versions/aspnet/6hy1xzbw(v=vs.100))
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET の概要](ado-net-overview.md)

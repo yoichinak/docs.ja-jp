@@ -10,12 +10,12 @@ api_type:
 ms.assetid: fb626b41-b888-4625-84c3-2c02b5e3866f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1cfc2f5cde22bf63275dd4bdc65857ac1d51b3fe
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 4b101a912eb58ed14f81d847ea2fd6ce9f22c065
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038429"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787095"
 ---
 # <a name="_axlgetissuerpublickeyhash-function"></a>\_AxlGetIssuerPublicKeyHash 関数
 指定された証明書の署名に使用する秘密キーに関連付けられている公開キーの SHA-1 ハッシュを取得します。  
@@ -41,4 +41,4 @@ HRESULT _AxlGetIssuerPublicKeyHash (
   
 ## <a name="see-also"></a>関連項目
 
-- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+- [Authenticode](index.md)

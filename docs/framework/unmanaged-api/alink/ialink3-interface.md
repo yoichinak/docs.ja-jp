@@ -8,26 +8,26 @@ helpviewer_keywords:
 ms.assetid: a96bf3cc-75a0-49c9-bf5e-4d7ad5dab716
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 16c787d865313f77417093555ea0cedb72aeb042
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4989fd403e78558b415ba29e31e6a3a4e5bbe59
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753661"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787284"
 ---
 # <a name="ialink3-interface"></a>IALink3 インターフェイス
-1 つのメソッドを提供します。 `SetManifestFile`、を使用すると、指定するか、リンカーがアセンブリを作成するときに使用するマニフェスト ファイルをリセットします。  
+には、単一の`SetManifestFile`メソッドが用意されています。このメソッドを使用すると、アセンブリの作成時にリンカーが使用するマニフェストファイルを指定またはリセットできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [SetManifestFile メソッド](../../../../docs/framework/unmanaged-api/alink/setmanifestfile-method.md)  
- 使用すると、指定するか、リンカーがアセンブリを作成するときに使用するマニフェスト ファイルをリセットできます。  
+ [SetManifestFile メソッド](setmanifestfile-method.md)  
+ リンカーがアセンブリを作成するときに使用するマニフェストファイルを指定またはリセットできます。  
   
 ## <a name="related-sections"></a>関連項目  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)  
+ [ALink API](index.md)  
  .NET Framework アセンブリと非バインド モジュールの作成をサポートします。  
   
- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
+ [IALink インターフェイス](ialink-interface.md)  
  .NET Framework アセンブリの構築に役立ちます。  
   
- [Al.exe (アセンブリ リンカー)](../../../../docs/framework/tools/al-exe-assembly-linker.md)  
- アセンブリを含むファイルを生成します。 いずれかのモジュールである 1 つまたは複数のファイルまたはリソース ファイルからマニフェスト。
+ [Al.exe (アセンブリ リンカー)](../../tools/al-exe-assembly-linker.md)  
+ モジュールまたはリソースファイルのいずれかである1つ以上のファイルから、アセンブリマニフェストを含むファイルを生成します。

@@ -2,12 +2,12 @@
 title: 接続文字列の構文
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: 9b43dc780b8570bd671f6b5d9db14a0c98e822d8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 00b8dc4c7592daa200f1a2a6c3c7fa9a3c587087
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949468"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784916"
 ---
 # <a name="connection-string-syntax"></a>接続文字列の構文
 すべての .NET Framework データ プロバイダーは、`Connection` を継承する <xref:System.Data.Common.DbConnection> オブジェクトに加え、プロバイダー固有の <xref:System.Data.Common.DbConnection.ConnectionString%2A> プロパティを持ちます。 それぞれのプロバイダーに固有の接続文字列の構文は、対応する `ConnectionString` プロパティのトピックで説明されています。 次の表は、.NET Framework に含まれている 4 つのデータ プロバイダーを一覧にしたものです。  
@@ -30,7 +30,7 @@ ms.locfileid: "69949468"
   
 - <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
   
- 接続文字列ビルダーを使用すると、構文的に正しい接続文字列を実行時に構築できるため、コード内で接続文字列値を手動で連結する必要はありません。 詳細については、「[接続文字列ビルダー](../../../../docs/framework/data/adonet/connection-string-builders.md)」をご覧ください。  
+ 接続文字列ビルダーを使用すると、構文的に正しい接続文字列を実行時に構築できるため、コード内で接続文字列値を手動で連結する必要はありません。 詳細については、「[接続文字列ビルダー](connection-string-builders.md)」をご覧ください。  
 
 ## <a name="windows-authentication"></a>Windows 認証  
  データ ソースが Windows 認証 (*統合セキュリティ* とも呼ばれることもあります) をサポートしている場合、Windows 認証 を使用することを推奨します。 接続文字列の構文は、プロバイダーによって異なります。 .NET Framework データ プロバイダーで使用されている Windows 認証の構文を次の表に示します。  
@@ -90,7 +90,7 @@ Data Source=MySqlServer\MSSQL1;"
 ## <a name="connecting-and-attaching-to-sql-server-express-user-instances"></a>SQL Server Express ユーザー インスタンスへの接続とアタッチ  
  ユーザー インスタンスは、SQL Server Express の機能の 1 つです。 最小限の特権しか持たないローカル Windows アカウントで実行しているユーザーが、SQL Server データベースにアタッチできます。この場合、管理特権は不要です。 ユーザー インスタンスは、サービスとしてではなく、ユーザーの Windows 資格情報で実行されます。  
   
- ユーザーインスタンスの操作の詳細については、「 [SQL Server Express ユーザーインスタンス](../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)」を参照してください。  
+ ユーザーインスタンスの操作の詳細については、「 [SQL Server Express ユーザーインスタンス](./sql/sql-server-express-user-instances.md)」を参照してください。  
   
 ## <a name="using-trustservercertificate"></a>TrustServerCertificate の使用  
  `TrustServerCertificate`キーワードは、有効な証明書を使用して SQL Server インスタンスに接続する場合にのみ有効です。 `TrustServerCertificate` を `true` に設定した場合、トランスポート層に SSL が使用されてチャネルが暗号化されます。また、証明書チェーンをたどることによる信頼性の検証は省略されます。  
@@ -196,6 +196,6 @@ Data Source=Oracle9i;User ID=*****;Password=*****;
   
 ## <a name="see-also"></a>関連項目
 
-- [接続文字列](../../../../docs/framework/data/adonet/connection-strings.md)
-- [データ ソースへの接続](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [接続文字列](connection-strings.md)
+- [データ ソースへの接続](connecting-to-a-data-source.md)
+- [ADO.NET の概要](ado-net-overview.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-ms.openlocfilehash: a620b7b15bb876d255fe787dc5d48aef14fb73e7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 322325b765f62d04e5713557f2ef9c97e1746ae0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946608"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792057"
 ---
 # <a name="manipulating-data"></a>データの操作
 複数のアクティブな結果セット (MARS : Multiple Active Result Set) の導入前は、開発者は複数の接続またはサーバー側のカーソルのいずれかを使用して特定のシナリオを解決しなければなりませんでした。 さらに、トランザクションの状況で複数の接続が使用されている場合は、バインドされた接続 ( **sp_getbindtoken**と**sp_bindsession**) が必要です。 以下のシナリオでは、複数の接続の代わりに MARS の有効な接続の使い方について説明します。  
@@ -404,5 +404,5 @@ private static string GetConnectionString()
   
 ## <a name="see-also"></a>関連項目
 
-- [複数のアクティブな結果セット (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [複数のアクティブな結果セット (MARS)](multiple-active-result-sets-mars.md)
+- [ADO.NET の概要](../ado-net-overview.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 8ce7cd859ce0c9a5874751e9928e5bced33593d6
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 351175b96d354a264a9280018ce21de8870beda2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205251"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784798"
 ---
 # <a name="annotating-typed-datasets"></a>型指定された DataSet の注釈
 注釈を使用すると、基になるスキーマを変更せずに型指定された <xref:System.Data.DataSet> の要素の名前を変更できます。 基になるスキーマの要素の名前を変更すると、型指定されたデータ**セット**は、データソース内に存在しないオブジェクトを参照するだけでなく、データソース内に存在するオブジェクトへの参照も失われます。  
@@ -228,4 +228,4 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
 - <xref:System.Data.DataSet>
 - [型指定されたデータセット](typed-datasets.md)
 - [DataSet、DataTable、および DataView](index.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET の概要](../ado-net-overview.md)

@@ -2,12 +2,12 @@
 title: オブジェクトの状態と変更の追跡
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
-ms.openlocfilehash: a60afab5158d0d5f66d12d6913ee890abc8ca730
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: a9df200f4d2e5f64bf5883c7bc513ba7129dcaad
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043519"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781275"
 ---
 # <a name="object-states-and-change-tracking"></a>オブジェクトの状態と変更の追跡
 
@@ -21,7 +21,7 @@ ms.locfileid: "70043519"
 |-----------|-----------------|
 |`Untracked`|[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] によって追跡されないオブジェクト。 具体的には次のものがあります。<br /><br /> -現在<xref:System.Data.Linq.DataContext>のを使用してクエリを実行しないオブジェクト (新しく作成されたオブジェクトなど)。<br />-逆シリアル化によって作成されたオブジェクト<br />-別<xref:System.Data.Linq.DataContext>のを使用してクエリを実行するオブジェクト。|
 |`Unchanged`|現在の <xref:System.Data.Linq.DataContext> を使用して取得され、作成後に変更された履歴がないオブジェクト。|
-|`PossiblyModified`|に<xref:System.Data.Linq.DataContext>*アタッチ*されているオブジェクト。 詳細については、「 [N 層アプリケーションでのデータの取得と CUD の操作 (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md)」を参照してください。|
+|`PossiblyModified`|に<xref:System.Data.Linq.DataContext>*アタッチ*されているオブジェクト。 詳細については、「 [N 層アプリケーションでのデータの取得と CUD の操作 (LINQ to SQL)](data-retrieval-and-cud-operations-in-n-tier-applications.md)」を参照してください。|
 |`ToBeInserted`|現在の <xref:System.Data.Linq.DataContext> を使用して取得されていないオブジェクト。 この場合、`INSERT` 中にデータベースの <xref:System.Data.Linq.DataContext.SubmitChanges%2A> が発生します。|
 |`ToBeUpdated`|取得後に変更された履歴があるオブジェクト。 この場合、`UPDATE` 中にデータベースの <xref:System.Data.Linq.DataContext.SubmitChanges%2A> が発生します。|
 |`ToBeDeleted`|削除がマークされているオブジェクト。`DELETE` 中にデータベースの <xref:System.Data.Linq.DataContext.SubmitChanges%2A> が発生します。|
@@ -31,7 +31,7 @@ ms.locfileid: "70043519"
 
 `Inserts` を使用して、<xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> を明示的に要求できます。 また、 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]は、 `Inserts`更新する必要がある既知のオブジェクトのいずれかに接続されているオブジェクトを検索することによって推論できます。 たとえば`Untracked` 、オブジェクトを<xref:System.Data.Linq.EntityRef%601> <xref:System.Data.Linq.EntitySet%601>に追加し`Untracked`たり、をオブジェクトに設定したりすると、グラフ内`Untracked`の追跡対象オブジェクトによってオブジェクトに到達できるようになります。 処理<xref:System.Data.Linq.DataContext.SubmitChanges%2A>中、 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]は追跡対象オブジェクトを走査し、追跡されない、到達可能なすべての永続オブジェクトを検出します。 このようなオブジェクトは、データベースへの挿入候補です。
 
-継承階層のクラスの場合、 <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>(`o`) は、*識別子*として指定されたメンバーの値をオブジェクト`o`の型と一致するように設定します。 既定の識別子の値の型が一致する場合、この操作によって、識別子の値が既定値で上書きされます。 詳細については、「[継承のサポート](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md)」を参照してください。
+継承階層のクラスの場合、 <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>(`o`) は、*識別子*として指定されたメンバーの値をオブジェクト`o`の型と一致するように設定します。 既定の識別子の値の型が一致する場合、この操作によって、識別子の値が既定値で上書きされます。 詳細については、「[継承のサポート](inheritance-support.md)」を参照してください。
 
 > [!IMPORTANT]
 > `Table` に追加されたオブジェクトは、ID キャッシュにはありません。 ID キャッシュは、データベースから取得されたもののみを反映します。 <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> を呼び出した後、<xref:System.Data.Linq.DataContext.SubmitChanges%2A> が正常終了するまで、追加されたエンティティはデータベースに対するクエリで使用されません。
@@ -69,5 +69,5 @@ ms.locfileid: "70043519"
 
 ## <a name="see-also"></a>関連項目
 
-- [背景情報](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [挿入、更新、および削除の各操作](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)
+- [背景情報](background-information.md)
+- [挿入、更新、および削除の各操作](insert-update-and-delete-operations.md)

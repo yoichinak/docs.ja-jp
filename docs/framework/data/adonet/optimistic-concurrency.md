@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: 37641056f2f3110685c24266d2612845ffbf0b3d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a8cca707f8fa82e97e988fcbe015b55e35b93499
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929240"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794681"
 ---
 # <a name="optimistic-concurrency"></a>オプティミスティック コンカレンシー
 マルチユーザー環境には、データベースのデータを更新するための 2 つのモデルがあります。オプティミスティック コンカレンシーとペシミスティック コンカレンシーです。 <xref:System.Data.DataSet> オブジェクトは、データをリモート処理するときや、データと対話するときのように長時間にわたる利用状況では、オプティミスティック コンカレンシーの使用を奨励するように設計されています。  
@@ -96,9 +96,9 @@ UPDATE Table1 Set Col1 = @NewVal1
  オプティミスティック コンカレンシー モデルを使用するときは、より制限の少ない抽出条件を適用するように選択することもできます。 たとえば、WHERE 句で主キー列だけを使用すると、前回のクエリ実行後に主キー以外の列が更新されたかどうかに関係なく、データが上書きされます。 WHERE 句を特定の列だけに適用することもできます。特定の列だけに WHERE 句を適用した場合は、特定のフィールドが前回のクエリ実行後に更新されていない限りデータが上書きされます。  
   
 ### <a name="the-dataadapterrowupdated-event"></a>DataAdapter.RowUpdated イベント  
- <xref:System.Data.Common.DataAdapter>オブジェクトの**RowUpdated**イベントは、オプティミスティック同時実行制御違反のアプリケーションに通知を提供するために、前に説明した手法と組み合わせて使用できます。 **RowUpdated**は、**変更**された行を**データセット**から更新しようとするたびに発生します。 これにより、例外発生時の処理、カスタム エラー情報の追加、再試行ロジックの追加などの特別の処理コードを追加できます。 オブジェクト<xref:System.Data.Common.RowUpdatedEventArgs>は、テーブル内の変更された行について、特定の update コマンドによって影響を受けた行の数を含む**RecordsAffected**プロパティを返します。 オプティミスティック同時実行制御をテストするように update コマンドを設定することにより、 **RecordsAffected**プロパティは、オプティミスティック同時実行制御違反が発生したときに、レコードが更新されなかったため、値0を返します。 この場合、例外がスローされます。 **RowUpdated**イベントを使用すると、 **Updatestatus. skipcurrentrow**などの適切な**RowUpdatedEventArgs**値を設定することによって、この発生を処理し、例外を回避できます。 **RowUpdated**イベントの詳細については、「 [DataAdapter イベントの処理](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)」を参照してください。  
+ <xref:System.Data.Common.DataAdapter>オブジェクトの**RowUpdated**イベントは、オプティミスティック同時実行制御違反のアプリケーションに通知を提供するために、前に説明した手法と組み合わせて使用できます。 **RowUpdated**は、**変更**された行を**データセット**から更新しようとするたびに発生します。 これにより、例外発生時の処理、カスタム エラー情報の追加、再試行ロジックの追加などの特別の処理コードを追加できます。 オブジェクト<xref:System.Data.Common.RowUpdatedEventArgs>は、テーブル内の変更された行について、特定の update コマンドによって影響を受けた行の数を含む**RecordsAffected**プロパティを返します。 オプティミスティック同時実行制御をテストするように update コマンドを設定することにより、 **RecordsAffected**プロパティは、オプティミスティック同時実行制御違反が発生したときに、レコードが更新されなかったため、値0を返します。 この場合、例外がスローされます。 **RowUpdated**イベントを使用すると、 **Updatestatus. skipcurrentrow**などの適切な**RowUpdatedEventArgs**値を設定することによって、この発生を処理し、例外を回避できます。 **RowUpdated**イベントの詳細については、「 [DataAdapter イベントの処理](handling-dataadapter-events.md)」を参照してください。  
   
- 必要に応じて、 **update**を呼び出す前に**ContinueUpdateOnError**を**True**に設定し、**更新**が完了したときに特定の行の**RowError**プロパティに格納されているエラー情報に応答することができます。 詳細については、「[行エラー情報](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)」を参照してください。  
+ 必要に応じて、 **update**を呼び出す前に**ContinueUpdateOnError**を**True**に設定し、**更新**が完了したときに特定の行の**RowError**プロパティに格納されているエラー情報に応答することができます。 詳細については、「[行エラー情報](./dataset-datatable-dataview/row-error-information.md)」を参照してください。  
   
 ## <a name="optimistic-concurrency-example"></a>オプティミスティック コンカレンシーの例  
  次の例では、 **DataAdapter**の**UpdateCommand**をオプティミスティック同時実行制御をテストするように設定し、 **RowUpdated**イベントを使用してオプティミスティック同時実行制御違反をテストしています。 オプティミスティック同時実行制御違反が発生すると、アプリケーションは、更新プログラムが発行された行の**RowError**を、オプティミスティック同時実行制御違反を反映するように設定します。  
@@ -208,8 +208,8 @@ protected static void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)
   
 ## <a name="see-also"></a>関連項目
 
-- [ADO.NET でのデータの取得および変更](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [DataAdapter によるデータ ソースの更新](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
-- [行エラー情報](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)
-- [トランザクションと同時実行](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET でのデータの取得および変更](retrieving-and-modifying-data.md)
+- [DataAdapter によるデータ ソースの更新](updating-data-sources-with-dataadapters.md)
+- [行エラー情報](./dataset-datatable-dataview/row-error-information.md)
+- [トランザクションと同時実行](transactions-and-concurrency.md)
+- [ADO.NET の概要](ado-net-overview.md)

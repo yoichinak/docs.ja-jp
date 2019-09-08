@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e673f4-9b44-45ae-aaea-c504d1cc5d3e
-ms.openlocfilehash: b7b1717317bb119538497f60bae48ec1da2286c8
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 412f133c7cf23642ba92d54272287cb708dddc92
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203325"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784365"
 ---
 # <a name="navigating-datarelations"></a>DataRelation の移動
 <xref:System.Data.DataRelation> の主な機能の 1 つは、<xref:System.Data.DataTable> の 1 つの <xref:System.Data.DataSet> から別の  を移動できることです。 これにより、関連する**datatable**から<xref:System.Data.DataRow> 1 つの**DataRow**が渡されたときに、1つの**datatable**内のすべての関連オブジェクトを取得できます。 たとえば、customers テーブルと orders テーブルの間に**DataRelation**を確立した後、 **GetChildRows**を使用して特定の顧客行のすべての注文行を取得できます。  
@@ -22,7 +22,7 @@ ms.locfileid: "70203325"
   
  上記の例に基づいて、4 つのテーブルを相互に関連付け、そのテーブルのリレーションシップ間を移動する例を次に示します。 前の例と同様に、 **CustomerID**は**Customers**テーブルを**Orders**テーブルに関連付けます。 **Customers**テーブルの顧客ごとに、 **orders**テーブル内のすべての子行が決定され、特定の顧客が持つ注文の数とその**OrderID**値が返されます。  
   
- 展開された例では、 **OrderDetails**テーブルと**Products**テーブルからも値が返されます。 **Orders**テーブルは、 **OrderID**を使用して**OrderDetails**テーブルに関連付けられており、顧客の注文ごとに、どの製品と数量が注文されたかを判断します。 **OrderDetails**テーブルに含まれるのは注文済み製品の**productid**のみであるため、 **OrderDetails**は ProductName を使用する**製品**に関連付けられ、 **ProductName**が返されます。 このリレーションシップでは、 **Products**テーブルが親であり、 **Order Details**テーブルが子です。 その結果、 **OrderDetails**テーブルを反復処理するときに、 **GetParentRow**が呼び出され、関連する**ProductName**の値が取得されます。  
+ 展開された例では、 **OrderDetails**テーブルと**Products**テーブルからも値が返されます。 **Orders**テーブルは、 **OrderID**を使用して**OrderDetails**テーブルに関連付けられており、顧客の注文ごとに、どの製品と数量が注文されたかを判断します。 **OrderDetails**テーブルに含まれるのは注文済み製品の**productid**のみであるため、 **OrderDetails**は ProductName**を使用する** **製品**に関連付けられ、 **ProductName**が返されます。 このリレーションシップでは、 **Products**テーブルが親であり、 **Order Details**テーブルが子です。 その結果、 **OrderDetails**テーブルを反復処理するときに、 **GetParentRow**が呼び出され、関連する**ProductName**の値が取得されます。  
   
  **Customers**テーブルと**Orders**テーブルに対して**DataRelation**が作成された場合、 **createConstraints**フラグに値が指定されていないことに注意してください (既定値は**true**です)。 これは、 **Orders**テーブルのすべての行に、親**Customers**テーブルに存在する**CustomerID**値があることを前提としています。 Customers テーブルに存在しない**Orders**テーブルに**CustomerID**が存在する場合 、によって例外がスローされます。<xref:System.Data.ForeignKeyConstraint>  
   
@@ -52,4 +52,4 @@ Customer ID: NORTS
 ## <a name="see-also"></a>関連項目
 
 - [DataSet、DataTable、および DataView](index.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET の概要](../ado-net-overview.md)

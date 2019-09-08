@@ -8,16 +8,16 @@ helpviewer_keywords:
 - claims [WCF], comparing
 - claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
-ms.openlocfilehash: e2d3d33900dd894eea77420aac444ebde0df9a43
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 29254bd661e72b926b21695ccb646480c53b5475
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68970777"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797102"
 ---
 # <a name="how-to-compare-claims"></a>方法: クレームを比較する
 
-認証チェックを実行するには、Windows Communication Foundation (WCF) の Id モデルインフラストラクチャを使用します。 この場合、一般的なタスクとして、承認コンテキスト内のクレームが、要求されたアクションの実行や要求されたリソースへのアクセスに必要なクレームと比較されます。 このトピックでは、組み込みとカスタム クレームの型を含め、クレームの比較方法について説明します。 Id モデルインフラストラクチャの詳細については、「 [Id モデルを使用したクレームと承認の管理](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)」を参照してください。
+認証チェックを実行するには、Windows Communication Foundation (WCF) の Id モデルインフラストラクチャを使用します。 この場合、一般的なタスクとして、承認コンテキスト内のクレームが、要求されたアクションの実行や要求されたリソースへのアクセスに必要なクレームと比較されます。 このトピックでは、組み込みとカスタム クレームの型を含め、クレームの比較方法について説明します。 Id モデルインフラストラクチャの詳細については、「 [Id モデルを使用したクレームと承認の管理](../feature-details/managing-claims-and-authorization-with-the-identity-model.md)」を参照してください。
 
 クレームの比較では、クレーム間で 3 つの部分 (型、権限、およびリソース) の比較が行われ、等しいかどうかが判断されます。 次の例を参照してください。
 
@@ -74,5 +74,5 @@ ms.locfileid: "68970777"
 
 ## <a name="see-also"></a>関連項目
 
-- [ID モデルを使用したクレームと承認の管理](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
-- [方法: カスタム要求の作成](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+- [ID モデルを使用したクレームと承認の管理](../feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [方法: カスタム要求の作成](how-to-create-a-custom-claim.md)

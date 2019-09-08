@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d59b93a9-50c8-4770-a114-d902f6a0ea76
-ms.openlocfilehash: f6f112a63dd976a1d6ae91f2fafd6678a9f40846
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 21fa2f9e1dc2f255fe94f2420ba90a809ab5b05e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69945090"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792666"
 ---
 # <a name="sort-elements-in-a-sequence"></a>シーケンスの要素の並べ替え
 1 つ以上のキーに従ってシーケンスを並べ替えるには、<xref:System.Linq.Enumerable.OrderBy%2A> 演算子を使用します。  
@@ -90,5 +90,5 @@ ms.locfileid: "69945090"
   
 ## <a name="see-also"></a>関連項目
 
-- [クエリの例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [クエリの例](query-examples.md)
+- [サンプル データベースのダウンロード](downloading-sample-databases.md)

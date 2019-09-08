@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fcf714cb0c1c1dd59ae2ec56279870c0bb3e1c4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bd138d0418bb9667a86419d719bf0b95a4bb1b12
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741727"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777121"
 ---
 # <a name="importfileex-method"></a>ImportFileEx メソッド
-インポートには、アセンブリまたはバインドされていないモジュールが示されます。  
+指定したアセンブリまたはバインドされていないモジュールをインポートします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,31 +45,31 @@ HRESULT ImportFileEx(
  インポート元のファイルの完全修飾名。  
   
  `pszTargetName`  
- ターゲット ファイルの名前を省略可能です。  
+ ターゲットファイルの名前 (省略可能)。  
   
  `fSmartImport`  
- TRUE の場合は、ImportTypes が使用されますが、それ以外の場合にインポートし、手動で実行する必要があります。  
+ TRUE の場合、ImportTypes が使用されます。それ以外の場合は、インポートを手動で実行する必要があります。  
   
  `dwOpenFlags`  
- 渡すフラグ[OpenScope メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)します。  
+ [Openscope メソッド](../metadata/imetadatadispenser-openscope-method.md)に渡されるフラグ。  
   
  `pImportToken`  
  インポートされるファイルの ID を受け取ります。  
   
  `ppAssemblyScope`  
- アセンブリ インポート スコープを受け取る[IMetaDataAssemblyImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)インターフェイス。 ファイルはアセンブリでない場合、NULL に設定されます。  
+ アセンブリインポートスコープ[IMetaDataAssemblyImport インターフェイス](../metadata/imetadataassemblyimport-interface.md)インターフェイスを受け取ります。 ファイルがアセンブリでない場合、は NULL に設定されます。  
   
  `pdwCountOfScopes`  
- インポートされたファイルやスコープの数を受け取ります。  
+ インポートされたファイルまたはスコープの数を受信します。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は、S_OK を返します。  
+ メソッドが成功した場合、S_OK を返します。  
   
 ## <a name="requirements"></a>必要条件  
- Alink.h が必要です。  
+ Alink. h が必要です。  
   
 ## <a name="see-also"></a>関連項目
 
-- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2 インターフェイス](ialink2-interface.md)
+- [IALink インターフェイス](ialink-interface.md)
+- [ALink API](index.md)

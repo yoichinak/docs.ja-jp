@@ -2,12 +2,12 @@
 title: メッセージ ログ記録のセキュリティの考慮事項
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: b635591b7a3b07385ed48c6b1ea556139c6d77c5
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: c5efd2990a00045e920c005f6658d5fdfb858481
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044266"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795947"
 ---
 # <a name="security-concerns-for-message-logging"></a>メッセージ ログ記録のセキュリティの考慮事項
 ここでは、メッセージ ログに表示される機密データだけでなく、メッセージ ログによって生成されるイベントを保護する方法についても説明します。  
@@ -107,9 +107,9 @@ ms.locfileid: "70044266"
   
 - 既知の PII をログに記録することはできません。このイベントは、既知の PII のログ記録が許可されていない場合に生成されます。 このエラーは、 `logKnownPii` app.config ファイルまた`source`は web.config ファイルの要素の属性がに`true` `enableLoggingKnownPii`設定されていても、machine.config ファイルの`machineSettings`要素の属性がに`false`設定されている場合に発生します. 例外をスローすることはありません。  
   
- これらのイベントは、Windows に付属するイベント ビューアー ツールを使用して表示できます。 詳細については、「[イベントログ](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)」を参照してください。  
+ これらのイベントは、Windows に付属するイベント ビューアー ツールを使用して表示できます。 詳細については、「[イベントログ](./event-logging/index.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [メッセージ ログ](../../../../docs/framework/wcf/diagnostics/message-logging.md)
-- [トレースに関するセキュリティの考慮事項と役立つヒント](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)
+- [メッセージ ログ](message-logging.md)
+- [トレースに関するセキュリティの考慮事項と役立つヒント](./tracing/security-concerns-and-useful-tips-for-tracing.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 989d046bba1ba3170649e9d908a850bd1177fdd2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 269e3702c21532f377735ba6087abb1603dde4f7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773833"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796318"
 ---
 # <a name="isframeworkassembly-function"></a>IsFrameworkAssembly 関数
 指定したアセンブリが管理されているかどうかを示す値を取得します。  
@@ -39,13 +39,13 @@ HRESULT IsFrameworkAssembly (
   
 ## <a name="parameters"></a>パラメーター  
  `pwzAssemblyReference`  
- [in]チェック対象のアセンブリの名前。  
+ から確認するアセンブリの名前。  
   
  `pbIsFrameworkAssembly`  
- [out]アセンブリが管理されているかどうかを示すブール値。  
+ 入出力アセンブリが管理されているかどうかを示すブール値。  
   
  `pwzFrameworkAssemblyIdentity`  
- [in]アセンブリの一意の id を含む uncanonicalized 文字列。  
+ からアセンブリの一意の id を含む、正規化されていない文字列。  
   
  `pccSize`  
  [入力] `pwzFrameworkAssemblyIdentity` のサイズ。  
@@ -53,13 +53,13 @@ HRESULT IsFrameworkAssembly (
 ## <a name="remarks"></a>Remarks  
  `pwzAssemblyReference`パラメーターは、アセンブリの名前を含む文字列へのポインターです。  
   
- このアセンブリが、.NET Framework の一部である場合、`pbIsFrameworkAssembly`パラメーターはブール値を含む`true`します。  
+ このアセンブリが .NET Framework の一部である場合、 `pbIsFrameworkAssembly`パラメーターにはの`true`ブール値が格納されます。  
   
- 名前付きのアセンブリ、.NET Framework の一部でない場合、または場合、`pwzAssemblyReference`パラメーターは、アセンブリを指定していない`pbIsFrameworkAssembly`のブール値を含む`false`します。  
+ 名前付きアセンブリが .NET Framework に含まれていない場合、また`pwzAssemblyReference`はパラメーターがアセンブリの名前を`pbIsFrameworkAssembly`指定しない場合、に`false`はブール値のが格納されます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [Fusion グローバル静的関数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Fusion グローバル静的関数](fusion-global-static-functions.md)

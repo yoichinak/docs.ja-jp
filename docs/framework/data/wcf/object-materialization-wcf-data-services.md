@@ -5,16 +5,16 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
-ms.openlocfilehash: d45d472a2996c0b501af70a0a2a6d2d669dedb4d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 89357b1d05526438c939a73663c5b7b6273df4ac
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043530"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790391"
 ---
 # <a name="object-materialization-wcf-data-services"></a>オブジェクトの具体化 (WCF Data Services)
 
-**[サービス参照の追加]** ダイアログボックス[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]を使用して、.NET Framework ベースのクライアントアプリケーションでフィードを使用すると、フィードによって公開されるデータモデルのエンティティ型ごとに同等のデータクラスが生成されます。 詳細については、「[データサービスクライアントライブラリの生成](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)」を参照してください。 クエリによって返されるエンティティ データは、これらの生成されたクライアント データ サービス クラスのいずれかのインスタンスに具体化されます。 追跡オブジェクトのマージオプションと id 解決の詳細については、「[データサービスコンテキストの管理](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)」を参照してください。
+**[サービス参照の追加]** ダイアログボックス[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]を使用して、.NET Framework ベースのクライアントアプリケーションでフィードを使用すると、フィードによって公開されるデータモデルのエンティティ型ごとに同等のデータクラスが生成されます。 詳細については、「[データサービスクライアントライブラリの生成](generating-the-data-service-client-library-wcf-data-services.md)」を参照してください。 クエリによって返されるエンティティ データは、これらの生成されたクライアント データ サービス クラスのいずれかのインスタンスに具体化されます。 追跡オブジェクトのマージオプションと id 解決の詳細については、「[データサービスコンテキストの管理](managing-the-data-service-context-wcf-data-services.md)」を参照してください。
 
 さらに [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] では、ツールによって生成されたデータ クラスを使用する代わりに、独自のクライアント データ サービス クラスを定義できます。 これにより、"plain-old CLR object" (POCO) データ クラスとして知られる独自のデータ クラスを使用できます。 これらの種類のカスタムデータクラスを使用する場合は、または<xref:System.Data.Services.Common.DataServiceKeyAttribute> <xref:System.Data.Services.Common.DataServiceEntityAttribute>のいずれかを使用してデータクラスの属性を設定し、クライアントの型名がデータサービスのデータモデルの型名と一致するようにします。
 
@@ -38,10 +38,10 @@ ms.locfileid: "70043530"
 
     - 複合プロパティは、新しい複合型インスタンスに設定されます。このインスタンスは、応答からの複合型のプロパティとともに設定されます。
 
-    - 関連するエンティティのコレクションを返すナビゲーション プロパティは、<xref:System.Collections.Generic.ICollection%601> の新しいまたは既存のインスタンスに設定されます。ここで、`T` は関連エンティティの型です。 このコレクションは、関連オブジェクトが <xref:System.Data.Services.Client.DataServiceContext> に読み込まれていない限り空になります。 詳細については、「[遅延コンテンツの読み込み](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)」を参照してください。
+    - 関連するエンティティのコレクションを返すナビゲーション プロパティは、<xref:System.Collections.Generic.ICollection%601> の新しいまたは既存のインスタンスに設定されます。ここで、`T` は関連エンティティの型です。 このコレクションは、関連オブジェクトが <xref:System.Data.Services.Client.DataServiceContext> に読み込まれていない限り空になります。 詳細については、「[遅延コンテンツの読み込み](loading-deferred-content-wcf-data-services.md)」を参照してください。
 
       > [!NOTE]
-      > 生成されたクライアント データ クラスでデータ バインディングがサポートされる場合、ナビゲーション プロパティは代わりに <xref:System.Data.Services.Client.DataServiceCollection%601> クラスのインスタンスを返します。 詳細については、「[コントロールへのデータのバインド](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)」を参照してください。
+      > 生成されたクライアント データ クラスでデータ バインディングがサポートされる場合、ナビゲーション プロパティは代わりに <xref:System.Data.Services.Client.DataServiceCollection%601> クラスのインスタンスを返します。 詳細については、「[コントロールへのデータのバインド](binding-data-to-controls-wcf-data-services.md)」を参照してください。
 
 4. <xref:System.Data.Services.Client.DataServiceContext.ReadingEntity> イベントが発生します。
 
@@ -49,5 +49,5 @@ ms.locfileid: "70043530"
 
 ## <a name="see-also"></a>関連項目
 
-- [データ サービスに対するクエリ](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
-- [クエリ射影](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)
+- [データ サービスに対するクエリ](querying-the-data-service-wcf-data-services.md)
+- [クエリ射影](query-projections-wcf-data-services.md)

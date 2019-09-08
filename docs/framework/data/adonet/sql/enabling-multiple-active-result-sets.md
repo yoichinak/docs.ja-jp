@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 5dd2bfa0884eac6864630bf393e232cf45bd1c99
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1f8cb573d051970414f3962057f6329683eea5bd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938196"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782397"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>複数のアクティブな結果セットの有効化
 複数のアクティブな結果セット (MARS : Multiple Active Result Set) は、SQL Server で動作する機能であり、複数のバッチを単一の接続で実行することができます。 SQL Server で使用できるように MARS が有効になっているときは、使用中の各コマンド オブジェクトは接続にセッションを追加します。  
@@ -68,7 +68,7 @@ string connectionString = "Data Source=MSSQL1;" +
  MARS 操作は、スレッド セーフではありません。  
   
 ### <a name="connection-pooling"></a>接続のプール  
- MARS の有効な接続は、その他の接続と同じようにプールされます。 アプリケーションが 2 つの接続を開き、その一方は MARS が有効で他方は MARS が無効になっている場合、それら 2 つの接続は別々のプールに入れられます。 詳しくは、「[SQL Server の接続プール (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)」をご覧ください。  
+ MARS の有効な接続は、その他の接続と同じようにプールされます。 アプリケーションが 2 つの接続を開き、その一方は MARS が有効で他方は MARS が無効になっている場合、それら 2 つの接続は別々のプールに入れられます。 詳しくは、「[SQL Server の接続プール (ADO.NET)](../sql-server-connection-pooling.md)」をご覧ください。  
   
 ### <a name="sql-server-batch-execution-environment"></a>SQL Server のバッチ実行環境  
  接続を開くとき、既定の環境が定義されます。 この環境は、MARS の論理セッションにコピーされます。  
@@ -113,5 +113,5 @@ string connectionString = "Data Source=MSSQL1;" +
   
 ## <a name="see-also"></a>関連項目
 
-- [複数のアクティブな結果セット (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [複数のアクティブな結果セット (MARS)](multiple-active-result-sets-mars.md)
+- [ADO.NET の概要](../ado-net-overview.md)

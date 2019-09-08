@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b475cf72-9e64-4f6e-99c1-af7737bc85ef
-ms.openlocfilehash: 828f0a21ca1ea4155f31dfbc87b01dc8c4b81e40
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e42f48a188741c3ddff44f6444fa351192c8175f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928734"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793337"
 ---
 # <a name="how-to-resolve-conflicts-by-retaining-database-values"></a>方法: データベース値を維持することで競合を解決する
-変更内容を再送信する前に、データベース内の予期した値と実際の値の違いを調整するために、<xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues> を使用することで、データベース内の値を維持できます。 この場合、オブジェクト モデル内の現在の値は上書きされます。 詳細については[、「オプティミスティック同時実行制御」を参照してください。概要](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)。  
+変更内容を再送信する前に、データベース内の予期した値と実際の値の違いを調整するために、<xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues> を使用することで、データベース内の値を維持できます。 この場合、オブジェクト モデル内の現在の値は上書きされます。 詳細については[、「オプティミスティック同時実行制御」を参照してください。概要](optimistic-concurrency-overview.md)。  
   
 > [!NOTE]
 > どの場合も、データベースから最新のデータを取得することで、まずクライアントのレコードが更新されます。 この処理によって、次の更新処理が同じコンカレンシー チェックで失敗することを防止できます。  
@@ -42,4 +42,4 @@ ms.locfileid: "69928734"
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: 変更の競合を管理する](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [方法: 変更の競合を管理する](how-to-manage-change-conflicts.md)

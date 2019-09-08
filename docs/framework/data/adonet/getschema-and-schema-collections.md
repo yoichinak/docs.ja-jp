@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
-ms.openlocfilehash: 11cfad81e40e76691db9f99efd1d60f5528600d2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ac0216ce2965d555f7283ba66a085ea9d7cac3c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667050"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783845"
 ---
 # <a name="getschema-and-schema-collections"></a>GetSchema およびスキーマ コレクション
-**接続**で .NET Framework マネージ プロバイダーの実装の各クラスを**GetSchema**メソッドが現在接続されているデータベースに関するスキーマ情報を取得するために使用し、返されるスキーマ情報、 **GetSchema**メソッドは、の形式では、<xref:System.Data.DataTable>します。 **GetSchema**メソッドが戻るには、スキーマ コレクションを指定し、返される情報量を制限するための省略可能なパラメーターを提供するオーバー ロードされたメソッド。  
+各 .NET Framework マネージプロバイダーの**接続**クラスは、現在接続されているデータベースに関するスキーマ情報と、 **から返されるスキーマ情報を取得するために使用される、GetSchema メソッドを実装します。GetSchema**メソッドには、 <xref:System.Data.DataTable>の形式が用意されています。 **GetSchema**メソッドは、返されるスキーマコレクションを指定し、返される情報量を制限するためのオプションのパラメーターを提供する、オーバーロードされたメソッドです。  
   
 ## <a name="specifying-the-schema-collections"></a>スキーマ コレクションの指定  
- 最初のオプション パラメーター、 **GetSchema**メソッドは文字列として指定されたコレクションの名前。 スキーマ コレクションには 2 種類あります。すべてのプロバイダーに共通している一般的なスキーマ コレクションと、各プロバイダーによって固有のスキーマ コレクションです。  
+ **GetSchema**メソッドの最初の省略可能なパラメーターは、文字列として指定されたコレクション名です。 スキーマ コレクションには 2 種類あります。すべてのプロバイダーに共通している一般的なスキーマ コレクションと、各プロバイダーによって固有のスキーマ コレクションです。  
   
- 呼び出すことによってサポートされるスキーマ コレクションの一覧を決定する .NET Framework マネージ プロバイダーを照会することができます、 **GetSchema**メソッド引数なしでまたはスキーマ コレクション名に"metadatacollections を指定"します。 これにより、サポートされるスキーマ コレクションの一覧、それぞれがサポートする制限数、および使用する識別子部分の数と共に、<xref:System.Data.DataTable> が返されます。  
+ 引数を指定せずに**GetSchema**メソッドを呼び出すか、スキーマコレクション名 "MetaDataCollections" を使用して、サポートされているスキーマコレクションの一覧を確認するために、.NET Framework マネージプロバイダーに照会できます。 これにより、サポートされるスキーマ コレクションの一覧、それぞれがサポートする制限数、および使用する識別子部分の数と共に、<xref:System.Data.DataTable> が返されます。  
   
 ### <a name="retrieving-schema-collections-example"></a>スキーマ コレクションの取得例  
- 次の例では、使用する方法、 <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> 、.NET Framework Data Provider for SQL Server 方法<xref:System.Data.SqlClient.SqlConnection>に関するすべてのテーブルに含まれるスキーマ情報を取得するクラス、 **AdventureWorks**サンプル データベース。  
+ 次の例では、SQL Server <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> <xref:System.Data.SqlClient.SqlConnection>クラスの .NET Framework Data Provider のメソッドを使用して、 **AdventureWorks**サンプルデータベースに格納されているすべてのテーブルに関するスキーマ情報を取得する方法を示します。  
   
 ```vb  
 Imports System.Data.SqlClient  
@@ -106,5 +106,5 @@ class Program
   
 ## <a name="see-also"></a>関連項目
 
-- [データベース スキーマ情報の取得](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [データベース スキーマ情報の取得](retrieving-database-schema-information.md)
+- [ADO.NET の概要](ado-net-overview.md)
