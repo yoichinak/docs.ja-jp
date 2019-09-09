@@ -11,12 +11,12 @@ ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 0571bd6b169b94b1626bffb0d0793bbb22a93ba0
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: fcf95e08296f5a8ec5a386ac614482c034e72c8b
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015864"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373239"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>方法: 既存の Windows フォーム コントロールから継承する
 
@@ -26,22 +26,22 @@ ms.locfileid: "70015864"
 
 1. Visual Studio で、新しい**Windows フォームアプリケーション**プロジェクトを作成します。
 
-2. **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。
+1. **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。
 
-     **[新しい項目の追加]** ダイアログ ボックスが表示されます。
+    **[新しい項目の追加]** ダイアログ ボックスが表示されます。
 
-3. **[新しい項目の追加]** ダイアログ ボックスの **[カスタム コントロール]** をダブルクリックします。
+1. **[新しい項目の追加]** ダイアログ ボックスの **[カスタム コントロール]** をダブルクリックします。
 
-     新しいカスタム コントロールがプロジェクトに追加されます。
+    新しいカスタム コントロールがプロジェクトに追加されます。
 
-4. 以下を使用する場合:
+1. 以下を使用する場合:
 
-   - Visual Basic、**ソリューションエクスプローラー**の上部にある **[すべてのファイルを表示]** をクリックします。 CustomControl1.vb を展開し、コード エディターで CustomControl1.Designer.vb を開きます。
-   - C#で、コードエディターで CustomControl1.cs を開きます。
+    - Visual Basic、**ソリューションエクスプローラー**の上部にある **[すべてのファイルを表示]** をクリックします。 CustomControl1.vb を展開し、コード エディターで CustomControl1.Designer.vb を開きます。
+    - C#で、コードエディターで CustomControl1.cs を開きます。
 
-6. から<xref:System.Windows.Forms.Control>継承するクラス宣言を探します。
+1. から<xref:System.Windows.Forms.Control>継承するクラス宣言を探します。
 
-7. 基底クラスを継承元のコントロールに変更します。
+1. 基底クラスを継承元のコントロールに変更します。
 
      たとえば、から<xref:System.Windows.Forms.Button>継承する場合は、クラスの宣言を次のように変更します。
 
@@ -54,11 +54,11 @@ ms.locfileid: "70015864"
     public partial class CustomControl1 : System.Windows.Forms.Button
     ```
 
-8. Visual Basic を使用している場合は、CustomControl1.Designer.vb を保存して閉じます。 コード エディターで CustomControl1.vb を開きます。
+1. Visual Basic を使用している場合は、CustomControl1.Designer.vb を保存して閉じます。 コード エディターで CustomControl1.vb を開きます。
 
-9. コントロールに組み込むカスタム メソッドやカスタム プロパティを実装します。
+1. コントロールに組み込むカスタム メソッドやカスタム プロパティを実装します。
 
-10. コントロールのグラフィカルな外観を変更する場合は、 <xref:System.Windows.Forms.Control.OnPaint%2A>メソッドをオーバーライドします。
+1. コントロールのグラフィカルな外観を変更する場合は、 <xref:System.Windows.Forms.Control.OnPaint%2A>メソッドをオーバーライドします。
 
     > [!NOTE]
     > を<xref:System.Windows.Forms.Control.OnPaint%2A>オーバーライドしても、すべてのコントロールの外観を変更することはできません。 Windows によって実行されるすべての描画 (たとえば、 <xref:System.Windows.Forms.TextBox>) を持つコントロールは、 <xref:System.Windows.Forms.Control.OnPaint%2A>メソッドを呼び出すことがないため、カスタムコードは使用されません。 <xref:System.Windows.Forms.Control.OnPaint%2A>メソッドが使用可能かどうかを確認するには、変更する特定のコントロールのヘルプドキュメントを参照してください。 すべての Windows フォーム コントロールの一覧については、「[Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)」を参照してください。 コントロールがメンバーメソッドとし<xref:System.Windows.Forms.Control.OnPaint%2A>てリストされていない場合は、このメソッドをオーバーライドすることによって外観を変更することはできません。 カスタム描画の詳細については、「[コントロールのカスタム描画およびレンダリング](custom-control-painting-and-rendering.md)」を参照してください。
@@ -83,7 +83,7 @@ ms.locfileid: "70015864"
     }
     ```
 
-11. コントロールを保存して、動作確認を行います。
+1. コントロールを保存して、動作確認を行います。
 
 ## <a name="see-also"></a>関連項目
 

@@ -14,12 +14,12 @@ ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 2fbb0715d148b443b1eca8f400e4ad43eb51fa43
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 4fd1f1dc0c2c0ad9ae2009ed592e48b8eeaa2783
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015732"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373689"
 ---
 # <a name="walkthrough-serialize-collections-of-standard-types"></a>チュートリアル: 標準型のコレクションをシリアル化する
 
@@ -27,7 +27,7 @@ ms.locfileid: "70015732"
 
 このトピックのコードを単一のリストとしてコピーするには、「[方法:DesignerSerializationVisibilityAttribute](/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))を使用して、標準型のコレクションをシリアル化します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 このチュートリアルを完了するには Visual Studio が必要です。
 
@@ -90,8 +90,8 @@ ms.locfileid: "70015732"
 
 5. **文字列コレクションエディター**でいくつかの文字列を入力します。 各文字列の末尾で**enter**キーを押して区切ります。 文字列の入力が完了したら、 **[OK]** をクリックします。
 
-> [!NOTE]
-> 入力した文字列は、 <xref:System.Windows.Forms.TextBox> `SerializationDemoControl`のに表示されます。
+    > [!NOTE]
+    > 入力した文字列は、 <xref:System.Windows.Forms.TextBox> `SerializationDemoControl`のに表示されます。
 
 6. **ソリューション エクスプローラー**で、 **[すべてのファイルを表示]** ボタンをクリックします。
 

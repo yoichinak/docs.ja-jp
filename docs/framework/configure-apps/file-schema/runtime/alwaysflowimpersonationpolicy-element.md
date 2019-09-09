@@ -17,7 +17,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/04/2019
 ms.locfileid: "70252861"
 ---
-# <a name="alwaysflowimpersonationpolicy-element"></a>\<alwaysFlowImpersonationPolicy > 要素
+# <a name="alwaysflowimpersonationpolicy-element"></a>\<alwaysFlowImpersonationPolicy> 要素
 偽装の実行方法に関係なく、Windows ID が常に非同期ポイント間でフローすることを指定します。  
   
 [ **\<configuration>** ](../configuration-element.md)\

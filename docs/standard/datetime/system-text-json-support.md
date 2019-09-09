@@ -1,5 +1,5 @@
 ---
-title: System.string での DateTime と DateTimeOffset のサポート
+title: TimeOffset support in での DateTime と DateTimeOffset のサポート
 description: System.string ライブラリでの DateTime 型と DateTimeOffset 型のサポートの概要について説明します。
 ms.technology: dotnet-standard
 author: layomia
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - JSON Serializer, JSON Reader, JSON Writer
 - Converter, JSON Converter, DateTime Converter
 - ISO, ISO 8601, ISO 8601-1:2019
-ms.openlocfilehash: 182694a3d2df02d5e2c709e33a02bd9fa7d20383
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5bff01b10b2bdea4fdcfee86e348c47f44d50103
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69973216"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374473"
 ---
-# <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>System.string での DateTime と DateTimeOffset のサポート
+# <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>TimeOffset support in での DateTime と DateTimeOffset のサポート
 
 System.string ライブラリは、ISO 8601:-2019 拡張プロファイルに従っ<xref:System.DateTime>て<xref:System.DateTimeOffset> 、との値を解析して書き込みます。
 [コンバーター](https://docs.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1?view=netcore-3.0)は、を使用した<xref:System.Text.Json.JsonSerializer>シリアル化と逆シリアル化のためのカスタムサポートを提供します。

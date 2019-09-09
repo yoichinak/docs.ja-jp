@@ -16,39 +16,39 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 015085cff23028814937dfef9aea19af7438b4f5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1f6a8b0ead430ffdd0e4e30cacae54d68fa9d730
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61750606"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969263"
 ---
 # <a name="icordebugclass2-interface"></a>ICorDebugClass2 インターフェイス
 
-ジェネリック、または <xref:System.Type> 型のメソッド パラメーターを持つクラスを表します。 このインターフェイスは拡張[ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)します。  
+ジェネリック、または <xref:System.Type> 型のメソッド パラメーターを持つクラスを表します。 このインターフェイスは[、を](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)拡張します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
 |[GetParameterizedType メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-getparameterizedtype-method.md)|このクラスの型宣言を取得します。|  
-|[SetJMCStatus メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-setjmcstatus-method.md)|このクラスの各メソッドでは、メソッドは、ユーザー定義のコードかどうかを示す値を設定します。|  
+|[SetJMCStatus メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-setjmcstatus-method.md)|このクラスの各メソッドについて、メソッドがユーザー定義のコードかどうかを示す値を設定します。|  
   
 ## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** CorDebug.idl、CorDebug.h  
+ **ヘッダー:** CorDebug .idl、CorDebug. h  
   
- **ライブラリ:** CorGuids.lib  
+ **ライブラリ**CorGuids .lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugClass インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)
+- [のクラスインターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)
 - [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

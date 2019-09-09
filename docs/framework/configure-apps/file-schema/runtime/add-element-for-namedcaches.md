@@ -16,7 +16,7 @@ ms.locfileid: "70252884"
 メモリキャッシュ`namedCache`の`namedCaches`コレクションにエントリを追加します。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<system.runtime.caching>**](system-runtime-caching-element-cache-settings.md)\
+&nbsp;&nbsp;[ **\<system.runtime.caching>** ](system-runtime-caching-element-cache-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<memoryCache>** ](memorycache-element-cache-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<namedCaches>** ](namedcaches-element-cache-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<add>**  
@@ -79,4 +79,4 @@ ms.locfileid: "70252884"
   
 ## <a name="see-also"></a>関連項目
 
-- [\<namedCaches > 要素 (キャッシュ設定)](namedcaches-element-cache-settings.md)
+- [\<namedCaches> 要素 (キャッシュ設定)](namedcaches-element-cache-settings.md)

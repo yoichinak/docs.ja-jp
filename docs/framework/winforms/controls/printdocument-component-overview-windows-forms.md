@@ -7,12 +7,12 @@ helpviewer_keywords:
 - PrintDocument component [Windows Forms], about PrintDocument component
 - printing [Windows Forms], PrintDocument component
 ms.assetid: b59b4b60-dce5-42ca-8421-3a54a2f7bab0
-ms.openlocfilehash: 96bca5d96722098f76059c58c32b3fea0ff78cd2
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 16a7f3a34ccb280f7bf91c52e29b20edc22130b9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211726"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928995"
 ---
 # <a name="printdocument-component-overview-windows-forms"></a>PrintDocument コンポーネントの概要 (Windows フォーム)
 
@@ -20,13 +20,13 @@ Windows フォーム [PrintDocument](printdocument-component-windows-forms.md) �
 
 ## <a name="working-with-the-printdocument-component"></a>PrintDocument コンポーネントの操作
 
-2 つの主なシナリオを含む、<xref:System.Drawing.Printing.PrintDocument>コンポーネントします。
+コンポーネントに<xref:System.Drawing.Printing.PrintDocument>関連する主なシナリオは、次の2つです。
 
-- 簡易印刷ジョブ (個々のテキスト ファイルを印刷する場合など)。 追加すると、このような場合、<xref:System.Drawing.Printing.PrintDocument>コンポーネントを Windows フォーム内のファイルを印刷するプログラミング ロジックを追加し、<xref:System.Drawing.Printing.PrintDocument.PrintPage>イベント ハンドラー。 プログラミング ロジック、<xref:System.Drawing.Printing.PrintDocument.Print%2A>ドキュメントを印刷する方法。 このメソッドは、送信、<xref:System.Drawing.Graphics>に含まれる、オブジェクト、<xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A>のプロパティ、<xref:System.Drawing.Printing.PrintPageEventArgs>プリンターへのクラス。 使用してテキスト ドキュメントを印刷する方法を示す例については、<xref:System.Drawing.Printing.PrintDocument>コンポーネントを参照してください[方法。Windows フォームで複数ページのテキスト ファイルを印刷](../advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)します。
+- 簡易印刷ジョブ (個々のテキスト ファイルを印刷する場合など)。 このような場合は、 <xref:System.Drawing.Printing.PrintDocument>コンポーネントを Windows フォームに追加し、 <xref:System.Drawing.Printing.PrintDocument.PrintPage>イベントハンドラーでファイルを出力するプログラミングロジックを追加します。 プログラミングロジックは、ドキュメントを印刷<xref:System.Drawing.Printing.PrintDocument.Print%2A>するメソッドとなする必要があります。 このメソッドは、 <xref:System.Drawing.Graphics> <xref:System.Drawing.Printing.PrintPageEventArgs>クラスの<xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A>プロパティに含まれるオブジェクトをプリンターに送信します。 <xref:System.Drawing.Printing.PrintDocument>コンポーネントを使用してテキストドキュメントを印刷する方法を示す例につい[ては、「方法:Windows フォーム](../advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)で複数ページのテキストファイルを印刷します。
 
-- より複雑な印刷ジョブ (作成した印刷ロジックを再利用する場合など)。 このような場合は、新しいコンポーネントを派生させる、<xref:System.Drawing.Printing.PrintDocument>コンポーネントと上書き (を参照してください[オーバーライド](~/docs/visual-basic/language-reference/modifiers/overrides.md)Visual basic または[オーバーライド](~/docs/csharp/language-reference/keywords/override.md)のC#)、<xref:System.Drawing.Printing.PrintDocument.PrintPage>イベント。
+- より複雑な印刷ジョブ (作成した印刷ロジックを再利用する場合など)。 この<xref:System.Drawing.Printing.PrintDocument>ような場合は、コンポーネントから新しいコンポーネントを派生させ、 <xref:System.Drawing.Printing.PrintDocument.PrintPage>イベントのオーバーライド (Visual Basic または[オーバーライド](../../../csharp/language-reference/keywords/override.md)[のオーバーライドを参照](../../../visual-basic/language-reference/modifiers/overrides.md) C#) を行います。
 
-フォームに追加されたとき、<xref:System.Drawing.Printing.PrintDocument>コンポーネントは、Visual Studio での Windows フォーム デザイナーの下部にあるトレイに表示されます。
+フォームに追加されると、 <xref:System.Drawing.Printing.PrintDocument> Visual Studio の Windows フォームデザイナーの下部にあるトレイにコンポーネントが表示されます。
 
 ## <a name="see-also"></a>関連項目
 

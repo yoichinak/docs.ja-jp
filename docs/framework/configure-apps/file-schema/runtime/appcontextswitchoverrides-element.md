@@ -17,7 +17,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/04/2019
 ms.locfileid: "70252871"
 ---
-# <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > 要素
+# <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides> 要素
 <xref:System.AppContext> クラスで使用される、新機能に対するオプトアウト メカニズムを指定するスイッチを 1 つまたは複数定義します。  
   
 [ **\<configuration>** ](../configuration-element.md)\

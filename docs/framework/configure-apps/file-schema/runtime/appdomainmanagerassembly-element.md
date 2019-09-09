@@ -48,9 +48,9 @@ ms.locfileid: "70252847"
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
 ## <a name="remarks"></a>Remarks  
- アプリケーションドメインマネージャーの種類を指定するには、この要素と[ \<appDomainManagerType >](appdomainmanagertype-element.md)要素の両方を指定する必要があります。 これらの要素のいずれかが指定されていない場合、もう一方は無視されます。  
+ アプリケーションドメインマネージャーの種類を指定するには、この要素と[ \<appDomainManagerType>](appdomainmanagertype-element.md)要素の両方を指定する必要があります。 これらの要素のいずれかが指定されていない場合、もう一方は無視されます。  
   
- 既定のアプリケーションドメインが読み込まれる<xref:System.TypeLoadException>と、指定したアセンブリが存在しない場合、またはアセンブリに[ \<appDomainManagerType >](appdomainmanagertype-element.md)要素によって指定された型が含まれていない場合に、がスローされます。着手. アセンブリが見つかってもバージョン情報が一致<xref:System.IO.FileLoadException>しない場合は、がスローされます。  
+ 既定のアプリケーションドメインが読み込まれる<xref:System.TypeLoadException>と、指定したアセンブリが存在しない場合、またはアセンブリに[ \<appDomainManagerType>](appdomainmanagertype-element.md)要素によって指定された型が含まれていない場合に、がスローされます。着手. アセンブリが見つかってもバージョン情報が一致<xref:System.IO.FileLoadException>しない場合は、がスローされます。  
   
  既定のアプリケーションドメインに対してアプリケーションドメインマネージャーの種類を指定すると、既定のアプリケーションドメインから作成された他のアプリケーションドメインは、アプリケーションドメインマネージャーの種類を継承します。 <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>プロパティと<xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>プロパティを使用して、新しいアプリケーションドメインに別のアプリケーションドメインマネージャーの種類を指定します。  
   
