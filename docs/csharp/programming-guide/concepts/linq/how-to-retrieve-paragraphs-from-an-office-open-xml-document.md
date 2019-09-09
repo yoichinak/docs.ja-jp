@@ -1,15 +1,15 @@
 ---
-title: 方法:Office Open XML ドキュメントから段落を取得する (C#)
+title: '方法: Office Open XML ドキュメントから段落を取得する (C#)'
 ms.date: 07/20/2015
 ms.assetid: cc2687cf-d648-451e-88ac-3847c6c967c8
-ms.openlocfilehash: 352389467bbe3c2a5e7364b081539bad8efc3f3b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: bfac597e0c36f41216821947928babd471fd61b3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592611"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253390"
 ---
-# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>方法:Office Open XML ドキュメントから段落を取得する (C#)
+# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>方法: Office Open XML ドキュメントから段落を取得する (C#)
 このトピックでは、Office Open XML ドキュメントを開き、そのドキュメント内のすべての段落のコレクションを取得する例について説明します。  
   
  Office Open XML の詳細については、[Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) と [www.ericwhite.com](http://ericwhite.com/) を参照してください。  
@@ -165,7 +165,7 @@ class Program
   
  この例で「[ソースとなる Office Open XML ドキュメントの作成 (C#)](./creating-the-source-office-open-xml-document.md)」に記載されているサンプルの Open XML ドキュメントを使用して実行すると、次のように出力されます。  
   
-```  
+```output  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
 StyleName:Normal ><  
 StyleName:Normal >The following example prints to the console.<  

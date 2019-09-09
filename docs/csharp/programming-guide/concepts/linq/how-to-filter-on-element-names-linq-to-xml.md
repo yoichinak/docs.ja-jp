@@ -1,15 +1,15 @@
 ---
-title: 方法:要素名をフィルター処理する (LINQ to XML) (C#)
+title: '方法: 要素名をフィルター処理する (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1849fb03-f075-421f-863c-e8fb32773cdf
-ms.openlocfilehash: 9febe3b834261326bab3e82d87c476f99d4e6b1f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2a4eccac3bc24005af0efee0785393de00039228
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593813"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253804"
 ---
-# <a name="how-to-filter-on-element-names-linq-to-xml-c"></a>方法:要素名をフィルター処理する (LINQ to XML) (C#)
+# <a name="how-to-filter-on-element-names-linq-to-xml-c"></a>方法: 要素名をフィルター処理する (LINQ to XML) (C#)
 <xref:System.Collections.Generic.IEnumerable%601> の <xref:System.Xml.Linq.XElement> を返すメソッドのいずれかを呼び出す際に、要素名をフィルター処理できます。  
   
 ## <a name="example"></a>例  
@@ -28,7 +28,7 @@ foreach(XElement prdName in items)
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```output  
 ProductName:Lawnmower  
 ProductName:Baby Monitor  
 ```  
@@ -66,7 +66,7 @@ foreach (XElement prdName in items)
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```output  
 {http://www.adventure-works.com}ProductName:Lawnmower  
 {http://www.adventure-works.com}ProductName:Baby Monitor  
 ```  

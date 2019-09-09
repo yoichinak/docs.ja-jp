@@ -2,12 +2,12 @@
 title: 純粋関数によるリファクタリング (C#)
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
-ms.openlocfilehash: d1c4b1fc59e52fbd72dec1ee0e73e7198a083868
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f264a0028ed265a5a4fbe1dc32f430c648724c20
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591311"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253078"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>純粋関数によるリファクタリング (C#)
 次の例では、前の例 (「[拡張メソッドを使用したリファクタリング (C#)](./refactoring-using-an-extension-method.md)」) をリファクタリングして、純粋関数を使用するようにします。この例では、段落のテキストを検索するコードが純粋静的メソッド `ParagraphText` に移動されています。  
@@ -156,7 +156,7 @@ class Program
   
  この例では、リファクタリング前と同じ出力が生成されます。  
   
-```  
+```output  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
 StyleName:Normal ><  
 StyleName:Normal >The following example prints to the console.<  
@@ -181,6 +181,6 @@ StyleName:Code >Hello World<
   
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル:WordprocessingML ドキュメント内のコンテンツの操作 (C#)](./shape-of-wordprocessingml-documents.md)
+- [チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (C#)](./shape-of-wordprocessingml-documents.md)
 - [拡張メソッドを使用したリファクタリング (C#)](./refactoring-using-an-extension-method.md)
 - [純粋関数へのリファクタリング (C#)](./refactoring-into-pure-functions.md)

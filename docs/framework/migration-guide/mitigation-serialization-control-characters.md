@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: e065d458-a128-44f2-9f17-66af9d5be954
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e7e316f874a2b559cb3fe9d64a9ec7cf25addbe5
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 12b26c8cc01b7af1c3b345d2f274a1d25a19d689
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557778"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70789844"
 ---
 # <a name="mitigation-serialization-of-control-characters-with-the-datacontractjsonserializer"></a>軽減策:DataContractJsonSerializer での制御文字のシリアル化
 
@@ -42,4 +42,4 @@ ms.locfileid: "65557778"
  
 ## <a name="see-also"></a>関連項目
 
-- [.NET Framework 4.7 における再ターゲットの変更点](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
+- [.NET Framework 4.7 における再ターゲットの変更点](retargeting-changes-in-the-net-framework-4-7.md)

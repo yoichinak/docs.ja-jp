@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9264d8eb7923663061f9bccfffe5b8f5254549f0
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 67e41450ed69d73a4b27b0aa37974ae01be69687
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66379888"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779240"
 ---
 # <a name="mitigation-pointer-based-touch-and-stylus-support"></a>軽減策:ポインター ベースのタッチおよびスタイラスのサポート
 
@@ -40,7 +40,7 @@ ms.locfileid: "66379888"
 
       そのため、マウス入力が検出されるまで、アプリケーションが応答しなくなる可能性があります。 代わりに、開発者はマウス イベントからドラッグ アンド ドロップを開始する必要があります。
 
-## <a name="opting-in-to-wmpointer-based-touchstylus-support"></a>WM_POINTER ベースのタッチ/スタイラス サポートの有効化
+## <a name="opting-in-to-wm_pointer-based-touchstylus-support"></a>WM_POINTER ベースのタッチ/スタイラス サポートの有効化
 
 このスタックを有効にする開発者は、アプリケーションの app.config ファイルに次の行を追加できます。
 
@@ -56,4 +56,4 @@ ms.locfileid: "66379888"
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Framework 4.7 における再ターゲットの変更点](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
+- [.NET Framework 4.7 における再ターゲットの変更点](retargeting-changes-in-the-net-framework-4-7.md)

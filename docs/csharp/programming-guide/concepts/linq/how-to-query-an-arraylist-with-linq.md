@@ -1,20 +1,20 @@
 ---
-title: 方法:LINQ を使用して ArrayList を照会する (C#)
+title: '方法: LINQ を使用して ArrayList を照会する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 2bfb471c-6e9a-4e60-bd83-4a1778abde11
-ms.openlocfilehash: dca201a23b316cc16bc746ea920303814c8c7c87
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 51c42296b8acb6be1c9c4505f9af3d6fbaf248ce
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592921"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253451"
 ---
-# <a name="how-to-query-an-arraylist-with-linq-c"></a>方法:LINQ を使用して ArrayList を照会する (C#)
+# <a name="how-to-query-an-arraylist-with-linq-c"></a>方法: LINQ を使用して ArrayList を照会する (C#)
 LINQ を使用して <xref:System.Collections.ArrayList> などの非ジェネリックの <xref:System.Collections.IEnumerable> コレクションをクエリする場合、範囲変数の型を明示的に宣言して、オブジェクトの特定の型をコレクションに反映させる必要があります。 たとえば、`Student` オブジェクトの <xref:System.Collections.ArrayList> がある場合、[from 句](../../../language-reference/keywords/from-clause.md)は次のようになります。  
   
-```  
+```csharp  
 var query = from Student s in arrList  
-...  
+//...
 ```  
   
  範囲変数の型を指定することで、<xref:System.Collections.ArrayList> 内の各項目を `Student` にキャストします。  

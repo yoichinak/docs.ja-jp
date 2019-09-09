@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56f0ebccc1bd46a26b5247ac2668e963cbeac828
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: f547180995ec155f9121eeace109e7dfb07c7827
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106479"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790115"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>.NET Framework のアプリケーションの互換性
 
@@ -76,6 +76,6 @@ ms.locfileid: "70106479"
 
 ## <a name="see-also"></a>関連項目
 
-- [バージョンおよび依存関係](../../../docs/framework/migration-guide/versions-and-dependencies.md)
-- [新機能](../../../docs/framework/whats-new/index.md)
-- [クラス ライブラリの互換性のために残されている機能](../../../docs/framework/whats-new/whats-obsolete.md)
+- [バージョンおよび依存関係](versions-and-dependencies.md)
+- [新機能](../whats-new/index.md)
+- [クラス ライブラリの互換性のために残されている機能](../whats-new/whats-obsolete.md)

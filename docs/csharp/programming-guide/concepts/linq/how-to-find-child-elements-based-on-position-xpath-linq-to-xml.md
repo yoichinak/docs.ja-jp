@@ -1,15 +1,15 @@
 ---
-title: 方法:位置に基づいて子要素を検索する (XPath-LINQ to XML) (C#)
+title: '方法: 位置に基づいて子要素を検索する (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: e35bb269-ec86-4c96-8321-12491a0eb2c3
-ms.openlocfilehash: b55e2df5a97446da9d02fd3979f5d8d584228ba2
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 1adbbb6dd074ffcb39269a800024e444cf8791d1
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593504"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253758"
 ---
-# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a>方法:位置に基づいて子要素を検索する (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a>方法: 位置に基づいて子要素を検索する (XPath-LINQ to XML) (C#)
 要素をその位置に基づいて検索しなければならない場合があります。 2 番目の要素を検索したり、3 番目から 5 番目の要素を検索したりすることがあります。  
   
  XPath 式を次に示します。  
@@ -56,7 +56,7 @@ foreach (XElement el in list1)
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```output  
 Results are identical  
 <Test TestId="0002" TestType="CMD">  
   <Name>Find succeeding characters</Name>  

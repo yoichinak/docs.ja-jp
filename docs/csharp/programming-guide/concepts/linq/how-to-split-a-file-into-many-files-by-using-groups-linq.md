@@ -1,22 +1,22 @@
 ---
-title: 方法:グループを使用して 1 つのファイルを複数のファイルに分割する (LINQ) (C#)
+title: '方法: グループを使用して 1 つのファイルを複数のファイルに分割する (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: 171d0aababfe4ff4ba5be4c8d307c917474671fc
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 5f2ae7657162ba5a2c88e5378119eaad4cb1e288
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592384"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253273"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>方法:グループを使用して 1 つのファイルを複数のファイルに分割する (LINQ) (C#)
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>方法: グループを使用して 1 つのファイルを複数のファイルに分割する (LINQ) (C#)
 この例では、2 つのファイルの内容をマージし、新しい方法でデータを整理する一連の新しいファイルを作成するための、1 つの方法を示します。  
   
 ### <a name="to-create-the-data-files"></a>データ ファイルを作成するには  
   
 1. 次の名前を names1.txt という名前のテキスト ファイルにコピーし、プロジェクト フォルダーに保存します。  
   
-    ```  
+    ```text  
     Bankov, Peter  
     Holm, Michael  
     Garcia, Hugo  
@@ -31,7 +31,7 @@ ms.locfileid: "69592384"
   
 2. 次の名前を names2.txt という名前のテキスト ファイルにコピーし、プロジェクト フォルダーに保存します。2 つのファイルには、共通の名前がいくつか含まれていることに注意してください。  
   
-    ```  
+    ```text  
     Liu, Jinghao  
     Bankov, Peter  
     Holm, Michael  

@@ -2,12 +2,12 @@
 title: '方法: 特定の要素名を持つ子孫を検索する (C#)'
 ms.date: 07/20/2015
 ms.assetid: f684da20-bee9-47f5-9607-7e3fd7e67470
-ms.openlocfilehash: dbb955697e4d4b0ed5aad9c00c37e73bbd32b7b4
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 8c859c555109a6f68a6b4290c536b10114620f3d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709940"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253691"
 ---
 # <a name="how-to-find-descendants-with-a-specific-element-name-c"></a>方法: 特定の要素名を持つ子孫を検索する (C#)
 特定の名前を持つ子孫をすべて検索しなければならない場合があります。 すべての子孫を反復処理するコードを記述することもできますが、<xref:System.Xml.Linq.XContainer.Descendants%2A> 軸を使用する方が簡単です。  
@@ -47,7 +47,7 @@ Console.WriteLine(str);
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```output  
 Some text that is broken up into multiple segments.  
 ```  
   
@@ -87,7 +87,7 @@ Console.WriteLine(str);
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```output  
 Some text that is broken up into multiple segments.  
 ```  
   

@@ -1,15 +1,15 @@
 ---
-title: 方法:新しい型を射影する (LINQ to XML) (C#)
+title: '方法: 新しい型を射影する (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 48145cf9-1e0b-4e73-bbfd-28fc04800dc4
-ms.openlocfilehash: bec4e7c7d87dffb90b49b76aa00a5de093d68436
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 32c3de9f4dd967cf0aafa7f4e571d8714ca41e3a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593040"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253505"
 ---
-# <a name="how-to-project-a-new-type-linq-to-xml-c"></a>方法:新しい型を射影する (LINQ to XML) (C#)
+# <a name="how-to-project-a-new-type-linq-to-xml-c"></a>方法: 新しい型を射影する (LINQ to XML) (C#)
 
 このセクションにあるその他の例では、<xref:System.Collections.Generic.IEnumerable%601> の <xref:System.Xml.Linq.XElement>、<xref:System.Collections.Generic.IEnumerable%601> の `string`、および <xref:System.Collections.Generic.IEnumerable%601> の `int` として結果を返すクエリを示しています。 これらは一般的な戻り値の型ですが、すべてのシナリオに適切であるとは限りません。 多くの場合、クエリを使用して、別の型の <xref:System.Collections.Generic.IEnumerable%601> を返すようにする必要があります。
 
@@ -53,7 +53,7 @@ class Program {
 
 この例を実行すると、次の出力が生成されます。
 
-```console
+```output
 Lawnmower:1
 Baby Monitor:2
 ```

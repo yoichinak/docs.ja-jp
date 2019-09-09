@@ -1,15 +1,15 @@
 ---
-title: 方法:オブジェクト グラフを射影する (C#)
+title: '方法: オブジェクト グラフを射影する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-ms.openlocfilehash: dcfdd8cba95d729a1f9bda3adb4b5fd8690b724a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: b00e350dd5bf00a5939547b3ed1651b2a6645197
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592992"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253480"
 ---
-# <a name="how-to-project-an-object-graph-c"></a>方法:オブジェクト グラフを射影する (C#)
+# <a name="how-to-project-an-object-graph-c"></a>方法: オブジェクト グラフを射影する (C#)
 このトピックでは、XML からオブジェクト グラフを射影 (作成) する方法を示します。  
   
 ## <a name="example"></a>例  
@@ -218,7 +218,7 @@ class Program {
   
  この例では次の出力が生成されます。  
   
-```  
+```output  
 PurchaseOrderNumber: 99503  
 OrderDate: 10/20/1999  
   

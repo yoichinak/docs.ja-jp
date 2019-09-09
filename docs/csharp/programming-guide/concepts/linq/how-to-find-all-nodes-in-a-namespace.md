@@ -1,15 +1,15 @@
 ---
-title: 方法:名前空間内のすべてのノードを検索する (C#)
+title: '方法: 名前空間内のすべてのノードを検索する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-ms.openlocfilehash: 512ca398831541c30a6c0c1e305c5c6269c13ddb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f8a6f33084417e0dd489002eaa5d2de509e30d39
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593641"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253784"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-c"></a>方法:名前空間内のすべてのノードを検索する (C#)
+# <a name="how-to-find-all-nodes-in-a-namespace-c"></a>方法: 名前空間内のすべてのノードを検索する (C#)
 各要素または各属性の名前空間をフィルター処理することで、特定の名前空間内にあるすべてのノードを検索できます。  
   
 ## <a name="example"></a>例  
@@ -37,7 +37,7 @@ foreach (XElement el in awElements)
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```output  
 Nodes in the http://www.adventure-works.com namespace  
 {http://www.adventure-works.com}Child3  
 {http://www.adventure-works.com}GrandChild2  

@@ -1,15 +1,15 @@
 ---
-title: 方法:XmlReader から XML フラグメントをストリーム出力する (C#)
+title: '方法: XmlReader から XML フラグメントをストリーム出力する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 4a8f0e45-768a-42e2-bc5f-68bdf0e0a726
-ms.openlocfilehash: c27c2165af95b8b781564e14efc0668f596e3057
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e5aeb5111931ff6a35a3b7806abc24e0fbbf9621
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592409"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253293"
 ---
-# <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a>方法:XmlReader から XML フラグメントをストリーム出力する (C#)
+# <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a>方法: XmlReader から XML フラグメントをストリーム出力する (C#)
 大きな XML ファイルを処理する必要があるときに、XML ツリー全体をメモリに読み込むことができない場合があります。 このトピックでは、<xref:System.Xml.XmlReader> を使用してフラグメントをストリーム出力する方法について説明します。  
   
  <xref:System.Xml.XmlReader> を使用して <xref:System.Xml.Linq.XElement> オブジェクトを読み取るための最も効果的な方法の 1 つは、カスタムの軸メソッドを独自に記述することです。 一般に軸メソッドは、このトピックの例で示すように、<xref:System.Collections.Generic.IEnumerable%601> の <xref:System.Xml.Linq.XElement> などのコレクションを返します。 カスタムの軸メソッドでは、<xref:System.Xml.Linq.XNode.ReadFrom%2A> メソッドを呼び出して XML フラグメントを作成した後に、`yield return` を使用してコレクションを返します。 これにより、カスタムの軸メソッドに遅延実行セマンティクスが付加されます。  
@@ -75,7 +75,7 @@ static void Main(string[] args)
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```output  
 bbb  
 ccc  
 ```  

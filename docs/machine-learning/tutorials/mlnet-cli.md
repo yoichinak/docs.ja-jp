@@ -1,19 +1,19 @@
 ---
-title: ML.NET CLI を使用して二項分類子を自動生成する
+title: ML.NET CLI を使用してセンチメントを分析する
 description: サンプル データセットから ML モデルと関連する C# コードを自動的に生成する
 author: cesardl
 ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: c0e188286821f0e3822fde4af74a1561edfbb868
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 7b740f2c93096c971da009e8abf6865ac1b8e966
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107269"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254154"
 ---
-# <a name="auto-generate-a-binary-classifier-using-the-cli"></a>CLI を使用して二項分類子を自動生成する
+# <a name="analyze-sentiment-using-the-mlnet-cli"></a>ML.NET CLI を使用してセンチメントを分析する
 
 ML.NET CLI を使用して ML.NET モデルと基礎となる C# コードを自動生成する方法について説明します。 データセットと実装する機械学習タスクを指定すると、CLI では、AutoML エンジンを使用してモデルの生成と展開のソース コードと、二項モデルが作成されます。
 

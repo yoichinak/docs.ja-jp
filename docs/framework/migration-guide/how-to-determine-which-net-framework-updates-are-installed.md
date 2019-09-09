@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e11b2588471e95b4e47fd0efaf41757430b9bb39
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4c505c679c46494f7dc2534c2bbe9f50243a7dd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604185"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790066"
 ---
 # <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>方法: インストールされている NET Framework セキュリティ更新プログラムおよび修正プログラムを確認する
 
@@ -29,7 +29,7 @@ ms.locfileid: "54604185"
 
 コンピューターにインストールされている .NET Framework のバージョンごとのインストール済みのセキュリティ更新プログラムおよび修正プログラムは、Windows レジストリに一覧表示されます。 レジストリ エディター (*regedit.exe*) プログラムを使用して、この情報を表示することができます。
 
-1. プログラム **regedit.exe** を開きます。 Windows 8 以降のバージョンでは、**[スタート]** ![Windows ロゴ](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo")を右クリックし、**[ファイル名を指定して実行]** を選択します。 **[開く]** ボックスに「**regedit**」と入力し、**[OK]** を選択します。
+1. プログラム **regedit.exe** を開きます。 Windows 8 以降のバージョンでは、 **[スタート]** ![Windows ロゴ](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo")を右クリックし、 **[ファイル名を指定して実行]** を選択します。 **[開く]** ボックスに「**regedit**」と入力し、 **[OK]** を選択します。
 
 2. レジストリ エディターで、次のサブキーを開きます。
 
@@ -37,7 +37,7 @@ ms.locfileid: "54604185"
 
      インストールされている更新プログラムは、適用された .NET Framework バージョンを識別するサブキーの下に一覧表示されています。 各更新プログラムは、サポート技術情報の (KB) 番号で識別されます。
 
-レジストリ エディターでは、各バージョンの .NET Framework バージョンとインストールされている更新プログラムが別々のサブキーに格納されます。 インストールされているバージョン番号の詳細については、「[方法: インストールされている .NET Framework バージョンを確認する](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)」を参照してください。
+レジストリ エディターでは、各バージョンの .NET Framework バージョンとインストールされている更新プログラムが別々のサブキーに格納されます。 インストールされているバージョン番号の詳細については、「[方法: インストールされている .NET Framework バージョンを確認する](how-to-determine-which-versions-are-installed.md)」を参照してください。
 
 ## <a name="to-find-installed-updates-by-querying-the-registry-in-code"></a>コードでレジストリにクエリを実行し、インストールされている更新プログラムを見つける
 
@@ -108,6 +108,6 @@ KB2600217
 
 ## <a name="see-also"></a>関連項目
 
-- [方法: インストールされている .NET Framework バージョンを確認する](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)
-- [開発者向けの .NET Framework のインストール](../../../docs/framework/install/guide-for-developers.md)
-- [バージョンおよび依存関係](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+- [方法: インストールされている .NET Framework バージョンを確認する](how-to-determine-which-versions-are-installed.md)
+- [開発者向けの .NET Framework のインストール](../install/guide-for-developers.md)
+- [バージョンおよび依存関係](versions-and-dependencies.md)

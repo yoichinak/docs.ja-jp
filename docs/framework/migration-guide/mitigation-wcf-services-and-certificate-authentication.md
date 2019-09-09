@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ef19c91a-b9df-4bf0-a28e-eb1e99c4bc95
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6ad11d4295be3a5bfd590d9cef1926f6676f2b1
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 0fcb4de714c8a0f1f2c61f3a12815a5a0a3ddc83
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043239"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70789824"
 ---
 # <a name="mitigation-wcf-services-and-certificate-authentication"></a>軽減策:WCF サービスと証明書認証
 
@@ -17,7 +17,7 @@ ms.locfileid: "70043239"
 
 ## <a name="impact"></a>影響
 
-TLS 1.2 では MD5 証明書認証がサポートされません。 そのため、顧客がハッシュ アルゴリズムで MD5 を使用する SSL 証明書を使用すると、WCF クライアントは WCF サービスに接続できません。 詳細については、「[軽減策:WCF サービスと証明書認証](../../../docs/framework/migration-guide/mitigation-wcf-services-and-certificate-authentication.md)」を参照してください。
+TLS 1.2 では MD5 証明書認証がサポートされません。 そのため、顧客がハッシュ アルゴリズムで MD5 を使用する SSL 証明書を使用すると、WCF クライアントは WCF サービスに接続できません。 詳細については、「[軽減策:WCF サービスと証明書認証](mitigation-wcf-services-and-certificate-authentication.md)」を参照してください。
 
 ## <a name="mitigation"></a>軽減策
 
@@ -58,4 +58,4 @@ TLS 1.2 では MD5 証明書認証がサポートされません。 そのため
 
 ## <a name="see-also"></a>関連項目
 
-- [ランタイムの変更点](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
+- [ランタイムの変更点](runtime-changes-in-the-net-framework-4-6.md)

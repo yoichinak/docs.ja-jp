@@ -2,12 +2,12 @@
 title: LINQ to XML イベント (C#)
 ms.date: 07/20/2015
 ms.assetid: ce7de951-cba7-4870-9962-733eb01cd680
-ms.openlocfilehash: 8278d3eac9d1e149cbfe64e184439ef9ac3cd39b
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 8e0cb4519dd0fc2bed443d9a62b9a2545d10e161
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484338"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253175"
 ---
 # <a name="linq-to-xml-events-c"></a>LINQ to XML イベント (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] イベントを使うと、XML ツリーが変更されるときに通知を受けることができます。  
@@ -78,7 +78,7 @@ Console.WriteLine(root);
 ### <a name="comments"></a>コメント  
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```output  
 Changed System.Xml.Linq.XElement Add  
 Changed System.Xml.Linq.XElement Add  
 Changed System.Xml.Linq.XText Remove  

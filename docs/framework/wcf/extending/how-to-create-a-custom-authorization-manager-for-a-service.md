@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, extending
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-ms.openlocfilehash: ffdfe41db05eb5f2dd55a233f8ed646401777d0f
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 9c28cb81b78f80505cfcf5f7e4dfdba083bd0793
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040292"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797115"
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>方法: サービスで使用するカスタム承認マネージャーを作成する
 
@@ -58,17 +58,17 @@ Windows Communication Foundation (WCF) の Id モデルインフラストラク�
 
 1. サービスの構成ファイルを開きます。
 
-2. [動作\<>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)に[ serviceauthorization\<>](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)を追加します。
+2. [動作\<>](../../configure-apps/file-schema/wcf/behaviors.md)に[ serviceauthorization\<>](../../configure-apps/file-schema/wcf/serviceauthorization-element.md)を追加します。
 
-    Serviceauthorization `serviceAuthorizationManagerType` > に属性を追加し、その値をカスタム承認マネージャーを表す型に設定します。 [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)
+    Serviceauthorization `serviceAuthorizationManagerType` > に属性を追加し、その値をカスタム承認マネージャーを表す型に設定します。 [ \<](../../configure-apps/file-schema/wcf/serviceauthorization-element.md)
 
 3. クライアントとサービスの間の通信をセキュリティで保護するバインディングを追加します。
 
-    この通信用に選択されたバインディングによって、<xref:System.IdentityModel.Policy.AuthorizationContext> に追加されるクレームが決まります。これは、カスタム承認マネージャーが承認に関する決定を行うために使用します。 システム指定のバインディングの詳細については、「[システム指定のバインディング](../../../../docs/framework/wcf/system-provided-bindings.md)」を参照してください。
+    この通信用に選択されたバインディングによって、<xref:System.IdentityModel.Policy.AuthorizationContext> に追加されるクレームが決まります。これは、カスタム承認マネージャーが承認に関する決定を行うために使用します。 システム指定のバインディングの詳細については、「[システム指定のバインディング](../system-provided-bindings.md)」を参照してください。
 
-4. サービス > 要素を追加`behaviorConfiguration`し、属性の値を[ \<behavior >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)要素の name 属性の値に設定することによって、動作をサービスエンドポイントに関連付けます。 [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/service.md)
+4. サービス > 要素を追加`behaviorConfiguration`し、属性の値を[ \<behavior >](../../configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)要素の name 属性の値に設定することによって、動作をサービスエンドポイントに関連付けます。 [ \<](../../configure-apps/file-schema/wcf/service.md)
 
-    サービスエンドポイントの構成の詳細について[は、「」を参照してください。構成](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)にサービスエンドポイントを作成します。
+    サービスエンドポイントの構成の詳細について[は、「」を参照してください。構成](../feature-details/how-to-create-a-service-endpoint-in-configuration.md)にサービスエンドポイントを作成します。
 
     カスタム承認マネージャー `Samples.MyServiceAuthorizationManager` を登録するコード例を次に示します。
 
@@ -114,7 +114,7 @@ Windows Communication Foundation (WCF) の Id モデルインフラストラク�
 
 ## <a name="example"></a>例
 
-<xref:System.ServiceModel.ServiceAuthorizationManager> メソッドのオーバーライドを含む <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> クラスの基本実装を次のコード例に示します。 このコード例は、<xref:System.IdentityModel.Policy.AuthorizationContext> のカスタム クレームを調べ、そのカスタム クレームのリソースが `true` のアクション値と一致した場合に <xref:System.ServiceModel.OperationContext> を返します。 <xref:System.ServiceModel.ServiceAuthorizationManager>クラスの完全な実装については、「[承認ポリシー](../../../../docs/framework/wcf/samples/authorization-policy.md)」を参照してください。
+<xref:System.ServiceModel.ServiceAuthorizationManager> メソッドのオーバーライドを含む <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> クラスの基本実装を次のコード例に示します。 このコード例は、<xref:System.IdentityModel.Policy.AuthorizationContext> のカスタム クレームを調べ、そのカスタム クレームのリソースが `true` のアクション値と一致した場合に <xref:System.ServiceModel.OperationContext> を返します。 <xref:System.ServiceModel.ServiceAuthorizationManager>クラスの完全な実装については、「[承認ポリシー](../samples/authorization-policy.md)」を参照してください。
 
 [!code-csharp[c_CustomAuthMgr#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#2)]
 [!code-vb[c_CustomAuthMgr#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#2)]
@@ -122,4 +122,4 @@ Windows Communication Foundation (WCF) の Id モデルインフラストラク�
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
-- [承認ポリシー](../../../../docs/framework/wcf/samples/authorization-policy.md)
+- [承認ポリシー](../samples/authorization-policy.md)

@@ -2,12 +2,12 @@
 title: '方法: 兄弟ノードを検索する (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: e2c73d10-a8ca-4e11-b5aa-d055de285874
-ms.openlocfilehash: c64806c4505b507a9058a03d5cb882412f6868da
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 6c7509ea0667bb84d62ee804f4d232d74fa7f6e0
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593403"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253611"
 ---
 # <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>方法: 兄弟ノードを検索する (XPath-LINQ to XML) (C#)
 特定の名前を持つノードのすべての兄弟を検索する場合があります。 コンテキスト ノードも特定の名前を持つ場合は、結果のコレクションにコンテキスト ノードが含まれることがあります。  
@@ -51,7 +51,7 @@ foreach (XElement el in list1)
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```output  
 Results are identical  
 <Book id="bk101">  
   <Author>Garghentini, Davide</Author>  

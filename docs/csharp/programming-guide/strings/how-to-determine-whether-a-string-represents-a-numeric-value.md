@@ -7,17 +7,17 @@ helpviewer_keywords:
 - validating numeric input [C#]
 - strings [C#], numeric
 ms.assetid: a4e84e10-ea0a-489f-a868-503dded9d85f
-ms.openlocfilehash: 831f0fc83c8a7066b40d64e4765a312b8b4847bc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8fc5051893882a6dbdbb4c9097949794d4430a93
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921777"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252950"
 ---
 # <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>方法: 文字列が数値を表しているかどうかを確認する (C# プログラミング ガイド)
 文字列が指定された数値型の有効な表現であるかどうかを確認するには、静的 `TryParse` メソッドを使用します。このメソッドには、すべてのプリミティブ数値型が実装されており、また <xref:System.DateTime>、<xref:System.Net.IPAddress> などの型も実装されています。 次の例では、"108" が有効な [int](../../language-reference/builtin-types/integral-numeric-types.md) かどうかを確認する方法を示します。  
   
-```  
+```csharp  
 int i = 0;   
 string s = "108";  
 bool result = int.TryParse(s, out i); //i now = 108  

@@ -1,15 +1,15 @@
 ---
-title: 方法:省略可能な要素をフィルター処理する (C#)
+title: '方法: 省略可能な要素をフィルター処理する (C#)'
 ms.date: 07/20/2015
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
-ms.openlocfilehash: 403c331787df7eb538302df2ecc332a663e68d71
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0f8e17d99085ad04ed76b83bce806418ca6d60cd
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593796"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253828"
 ---
-# <a name="how-to-filter-on-an-optional-element-c"></a>方法:省略可能な要素をフィルター処理する (C#)
+# <a name="how-to-filter-on-an-optional-element-c"></a>方法: 省略可能な要素をフィルター処理する (C#)
 要素に対するフィルター処理が、その要素が XML ドキュメント内に存在しているかどうか明確でない場合でも必要になることがあります。 特定の要素が子要素を持たない場合、その要素に対するフィルター処理によって null 参照例外が発生しないように検索を実行する必要があります。 次の例では、`Child5` 要素には `Type` 子要素はありませんが、クエリは正常に実行されます。  
   
 ## <a name="example"></a>例  
@@ -47,7 +47,7 @@ foreach(string str in cList)
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```output  
 Child One Text  
 Child Two Text  
 Child Four Text  
@@ -89,7 +89,7 @@ foreach (string str in cList)
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```output  
 Child One Text  
 Child Two Text  
 Child Four Text  

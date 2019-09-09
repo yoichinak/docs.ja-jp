@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 345840ad45add21c6088abd0fb45e2e591b7df21
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6f071f907fe38b226a5083699e758bc5fb8bffce
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923887"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252991"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>コマンド ライン引数 (C# プログラミング ガイド)
 `Main` メソッドに引数を渡すには、次のいずれかの方法でメソッドを定義します。  
@@ -28,19 +28,19 @@ ms.locfileid: "69923887"
   
  また、<xref:System.Convert> クラスまたは `Parse` メソッドを使って、文字列型の引数を数値型に変換できます。 たとえば、次のステートメントでは、`string` メソッドを使用して `long` を <xref:System.Int64.Parse%2A> 値に変換します。  
   
-```  
+```csharp  
 long num = Int64.Parse(args[0]);  
 ```  
   
  C# の `long` 型を使うこともできます。これは `Int64` のエイリアスです。  
   
-```  
+```csharp  
 long num = long.Parse(args[0]);  
 ```  
   
  また、同じ変換に `Convert` クラスの `ToInt64` メソッドを使うこともできます。  
   
-```  
+```csharp  
 long num = Convert.ToInt64(s);  
 ```  
   

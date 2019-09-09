@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1c4de9d7-9aba-427a-8f38-0ab9bfb8f85e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8f6016fc43700fda36c6d94408019d25f89bb36b
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 91db9d8c6fccf75bc9025a9487517e8c55d016cc
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044207"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779210"
 ---
 # <a name="mitigation-product-versioning"></a>軽減策:製品のバージョン管理
 
@@ -31,7 +31,7 @@ ms.locfileid: "70044207"
 
 一般に、.NET Framework のランタイムのバージョンやインストール ディレクトリを検出する際、アプリケーションは推奨される技法に従う必要があります。
 
-- .NET Framework のランタイム バージョンを検出するには、「[方法:インストールされている .NET Framework バージョンを確認する](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)」を参照してください。
+- .NET Framework のランタイム バージョンを検出するには、「[方法:インストールされている .NET Framework バージョンを確認する](how-to-determine-which-versions-are-installed.md)」を参照してください。
 
 - .NET Framework のインストール パスを確認するには、`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` キーの `InstallPath` エントリの値を使用します。
 
@@ -44,4 +44,4 @@ ms.locfileid: "70044207"
 
 ## <a name="see-also"></a>関連項目
 
-- [ランタイムの変更点](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
+- [ランタイムの変更点](runtime-changes-in-the-net-framework-4-6.md)

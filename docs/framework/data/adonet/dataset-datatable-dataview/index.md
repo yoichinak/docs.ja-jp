@@ -2,12 +2,12 @@
 title: DataSet、DataTable、および DataView
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
-ms.openlocfilehash: 4b5e81f415685d6ee3529c7e4f9d389e8017427e
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 1744f6c6d8ea3c28a8dab30c0d201ae1dacc7ee3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203636"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786195"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>DataSet、DataTable、および DataView
 ADO.NET <xref:System.Data.DataSet> はメモリ常駐型のデータ表現であり、含まれているデータ ソースとは関係なく、一貫性のあるリレーショナル プログラミング モデルを提供します。 <xref:System.Data.DataSet> とは、テーブル間のリレーションシップだけでなく、包括するテーブル、整列するテーブル、およびデータを制約するテーブルを含むデータのセットを表します。  
@@ -81,4 +81,4 @@ ADO.NET <xref:System.Data.DataSet> はメモリ常駐型のデータ表現であ
 ## <a name="see-also"></a>関連項目
 
 - [ADO.NET](../index.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET の概要](../ado-net-overview.md)

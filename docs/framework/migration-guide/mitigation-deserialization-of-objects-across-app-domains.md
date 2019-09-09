@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd0cbd4c688815139d83a742bb75c54eebbe55b7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d172503cee4e3880f493c68d5789e17c64a82a12
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648473"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790003"
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>軽減策: アプリ ドメイン全体でのオブジェクトの逆シリアル化
 場合によっては、アプリが異なるアプリケーション ベースを持つ複数のアプリ ドメインを使用すると、アプリ ドメイン間で論理呼び出しコンテキストのオブジェクトを逆シリアル化しようとして、例外がスローされます。  
@@ -50,4 +50,4 @@ ms.locfileid: "64648473"
   
 ## <a name="see-also"></a>関連項目
 
-- [ランタイムの変更点](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-1.md)
+- [ランタイムの変更点](runtime-changes-in-the-net-framework-4-5-1.md)

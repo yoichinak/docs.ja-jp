@@ -1,15 +1,15 @@
 ---
-title: 方法:単一の属性を取得する (LINQ to XML) (C#)
+title: '方法: 単一の属性を取得する (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1b6b07b9-933f-47e9-874e-e790cab49dc5
-ms.openlocfilehash: 4a1be51c7f0e89a8f211ae523eb102282bd9747b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: d8c8d0e3a99f94c4404f0ab23a5edf082be77952
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592656"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253405"
 ---
-# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>方法:単一の属性を取得する (LINQ to XML) (C#)
+# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>方法: 単一の属性を取得する (LINQ to XML) (C#)
 このトピックでは、属性名を指定して要素の単一の属性を取得する方法について説明します。 これは、特定の属性を持つ要素を検索するクエリ式を記述する場合に便利です。  
   
  <xref:System.Xml.Linq.XElement.Attribute%2A> クラスの <xref:System.Xml.Linq.XElement> メソッドは、指定された名前を持つ <xref:System.Xml.Linq.XAttribute> を返します。  
@@ -37,7 +37,7 @@ foreach (XElement el in elList)
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```output  
 home  
 work  
 ```  
@@ -63,7 +63,7 @@ foreach (XElement el in elList)
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```output  
 home  
 work  
 ```  
@@ -92,7 +92,7 @@ foreach (XElement el in elList)
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```output  
 home  
 work  
 ```  

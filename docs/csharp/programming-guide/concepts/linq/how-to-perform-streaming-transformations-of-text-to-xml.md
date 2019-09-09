@@ -2,12 +2,12 @@
 title: '方法: テキストから XML へのストリーミング変換を実行する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 9b3bd941-d0ff-4f2d-ae41-7c3b81d8fae6
-ms.openlocfilehash: d37ea5167576098d4ea343e49ae4ff6bac20d4ba
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1507c628731a11e06c73f253c1a0c0f9a85a2269
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485249"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253526"
 ---
 # <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>方法: テキストから XML へのストリーミング変換を実行する (C#)
 テキスト ファイルを処理する方法の 1 つは、`yield return` 構造を使用して、テキスト ファイルを一度に 1 行ずつストリーム出力する拡張メソッドを記述することです。 その後、テキスト ファイルをレイジー遅延方式で処理する LINQ クエリを記述できます。 次に <xref:System.Xml.Linq.XStreamingElement> を使用してストリーム出力すると、ソース テキスト ファイルのサイズにかかわらず、メモリを最小限しか使用しないテキスト ファイルから XML への変換を作成できます。  
@@ -17,7 +17,7 @@ ms.locfileid: "66485249"
 ## <a name="example"></a>例  
  次のテキスト ファイル (People.txt) は、この例のソースです。  
   
-```  
+```text  
 #This is a comment  
 1,Tai,Yee,Writer  
 2,Nikolay,Grachev,Programmer  

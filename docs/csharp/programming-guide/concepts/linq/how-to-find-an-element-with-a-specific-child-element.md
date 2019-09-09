@@ -1,15 +1,15 @@
 ---
-title: 方法:特定の子要素を持つ要素を検索する (C#)
+title: '方法: 特定の子要素を持つ要素を検索する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 00cf5555-374e-4369-bf93-7bd2e7f21db3
-ms.openlocfilehash: 80539c7ccd21bc38967479d7b724e6f3361d24ac
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f007bddcbecc1cb938d05c7d444d29b6047749e8
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593549"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253750"
 ---
-# <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>方法:特定の子要素を持つ要素を検索する (C#)
+# <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>方法: 特定の子要素を持つ要素を検索する (C#)
 このトピックでは、特定の値を含む子要素を持つ特定の要素を検索する方法について説明します。  
   
 ## <a name="example"></a>例  
@@ -29,7 +29,7 @@ foreach (XElement el in tests)
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```output  
 0002  
 0006  
 ```  
@@ -52,7 +52,7 @@ foreach (XElement el in tests)
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```output  
 0002  
 0006  
 ```  

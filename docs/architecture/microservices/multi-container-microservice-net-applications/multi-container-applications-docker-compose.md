@@ -2,12 +2,12 @@
 title: docker-compose.yml で複数のコンテナー アプリケーションを定義する
 description: docker-compose.yml を使用して複数コンテナーのアプリケーション用にマイクロサービスの構成を指定する方法。
 ms.date: 10/02/2018
-ms.openlocfilehash: 6f526a951f50bad673a44cfd6c53664a13211a32
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1b88d2267b12a33e125a7a1d2273654a50fd2d0f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675959"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253969"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml で複数のコンテナー アプリケーションを定義する
 
@@ -406,7 +406,7 @@ IdentityUrl=http://${ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP}:5105
 
 次の例は、eShopOnContainers アプリケーション用の [.env](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/.env) ファイルと同様の .env ファイルを示しています。
 
-```
+```env
 # .env file
 
 ESHOP_EXTERNAL_DNS_NAME_OR_IP=localhost

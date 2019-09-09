@@ -2,12 +2,12 @@
 title: 段落のテキストの取得 (C#)
 ms.date: 07/20/2015
 ms.assetid: 127d635e-e559-408f-90c8-2bb621ca50ac
-ms.openlocfilehash: 88a7e82a7d27048ce3f901e6e9d50b8737797adb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 986145fa62722a35d23831a3818b89e63529b85f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591074"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253059"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a>段落のテキストの取得 (C#)
 この例は、前の例の「[段落とそのスタイルの取得 (C#)](./retrieving-the-paragraphs-and-their-styles.md)」を基にしています。 この新しい例では、各段落のテキストを文字列として取得します。  
@@ -119,7 +119,7 @@ foreach (var p in paraWithText)
   
  この例を「[ソースとなる Office Open XML ドキュメントの作成 (C#)](./creating-the-source-office-open-xml-document.md)」で説明されているドキュメントに適用すると、次の出力が生成されます。  
   
-```  
+```output  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
 StyleName:Normal ><  
 StyleName:Normal >The following example prints to the console.<  
@@ -144,5 +144,5 @@ StyleName:Code >Hello World<
   
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル:WordprocessingML ドキュメント内のコンテンツの操作 (C#)](./tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (C#)](./tutorial-manipulating-content-in-a-wordprocessingml-document.md)
 - [LINQ to XML における遅延実行とレイジー評価 (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

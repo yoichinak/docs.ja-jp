@@ -2,12 +2,12 @@
 title: '方法: ルート要素を検索する (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 4fd824e0-4d39-429b-b092-f6a5c046ee6c
-ms.openlocfilehash: 1fea4cc630dd708a86a0f0595ac727f8b8fa40af
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: d53fbaf089e54d50422e39cd047ee960bc8e46c3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593384"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253606"
 ---
 # <a name="how-to-find-the-root-element-xpath-linq-to-xml-c"></a>方法: ルート要素を検索する (XPath-LINQ to XML) (C#)
 このトピックでは、XPath および [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用してルート要素を取得する方法について説明します。  
@@ -39,7 +39,7 @@ Console.WriteLine(el1.Name);
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```output  
 Results are identical  
 PurchaseOrders  
 ```  

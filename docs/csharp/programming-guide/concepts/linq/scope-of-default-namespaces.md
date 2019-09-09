@@ -2,12 +2,12 @@
 title: C# での既定の名前空間のスコープ
 ms.date: 07/20/2015
 ms.assetid: fe826236-830f-457a-9027-7ad62c909fae
-ms.openlocfilehash: 0c5f5cccda6ba6a75a8631ed095921b90b02916b
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: 7615351f6e5f8b18bd6466a83d54aa65a6c99b50
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868871"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253046"
 ---
 # <a name="scope-of-default-namespaces-in-c"></a>C\# での既定の名前空間のスコープ
 XML ツリーで表される既定の名前空間は、クエリのスコープ内にありません。 既定の名前空間に含まれる XML が存在する場合は、<xref:System.Xml.Linq.XNamespace> 変数を宣言し、この変数をローカル名と組み合わせて作成した修飾名をクエリで使用する必要があります。  
@@ -45,7 +45,7 @@ Console.WriteLine("End of result set");
 ### <a name="comments"></a>コメント  
  この例を実行すると、次の結果が得られます。  
   
-```  
+```output  
 Result set follows:  
 End of result set  
 ```  
@@ -80,7 +80,7 @@ Console.WriteLine("End of result set");
 ### <a name="comments"></a>コメント  
  この例を実行すると、次の結果が得られます。  
   
-```  
+```output  
 Result set follows:  
 1  
 2  
