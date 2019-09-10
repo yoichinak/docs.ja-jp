@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: deb7258326428cca01ea8734e0dc010c29177cfa
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: a5a11bc49fa834ebd6945e47767deb559244b459
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106860"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374515"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>チュートリアル: ML.NET で ONNX を使用してオブジェクトを検出する
 
@@ -57,25 +57,25 @@ ML.NET の事前トレーニング済みの ONNX モデルを使用して画像�
 
 ## <a name="select-a-deep-learning-model"></a>ディープ ラーニング モデルを選択する
 
-ディープ ラーニングは、機械学習のサブセットです。 ディープ ラーニング モデルをトレーニングするには、大量のデータが必要です。 データ内のパターンは、一連のレイヤーによって表されます。 データ内のリレーションシップは、重みを含むレイヤー間の接続としてエンコードされます。 重みが高いほど、リレーションシップが強くなります。 この一連のレイヤーと接続は、まとめて人工ニューラル ネットワークと呼ばれます。 ネットワーク内のレイヤーが多くなるほど、"深く" なり、ディープ ニューラル ネットワークになります。 
+ディープ ラーニングは、機械学習のサブセットです。 ディープ ラーニング モデルをトレーニングするには、大量のデータが必要です。 データ内のパターンは、一連のレイヤーによって表されます。 データ内のリレーションシップは、重みを含むレイヤー間の接続としてエンコードされます。 重みが高いほど、リレーションシップが強くなります。 この一連のレイヤーと接続は、まとめて人工ニューラル ネットワークと呼ばれます。 ネットワーク内のレイヤーが多くなるほど、"深く" なり、ディープ ニューラル ネットワークになります。
 
-ニューラル ネットワークにはさまざまな種類があり、よく知られているものとして、マルチレイヤー パーセプトロン (MLP)、畳み込みニューラル ネットワーク (CNN)、および再帰型ニューラル ネットワーク (RNN) があります。 最も基本的なのは MLP であり、一連の入力が一連の出力にマップされます。 このニューラル ネットワークは、データに空間と時間のコンポーネントがない場合に適しています。 CNN では、畳み込みレイヤーを利用し、データに含まれている空間情報を処理します。 CNN の良いユース ケースは、画像の領域内に特徴が存在するかどうかを検出する画像処理です (画像の中央に鼻があるか、など)。 最後に、RNN では、状態またはメモリの永続化を入力として使用できます。 RNN は、時系列分析に使用されます。この場合、イベントの順序付けとコンテキストが重要です。 
+ニューラル ネットワークにはさまざまな種類があり、よく知られているものとして、マルチレイヤー パーセプトロン (MLP)、畳み込みニューラル ネットワーク (CNN)、および再帰型ニューラル ネットワーク (RNN) があります。 最も基本的なのは MLP であり、一連の入力が一連の出力にマップされます。 このニューラル ネットワークは、データに空間と時間のコンポーネントがない場合に適しています。 CNN では、畳み込みレイヤーを利用し、データに含まれている空間情報を処理します。 CNN の良いユース ケースは、画像の領域内に特徴が存在するかどうかを検出する画像処理です (画像の中央に鼻があるか、など)。 最後に、RNN では、状態またはメモリの永続化を入力として使用できます。 RNN は、時系列分析に使用されます。この場合、イベントの順序付けとコンテキストが重要です。
 
 ### <a name="understand-the-model"></a>モデルの概要
 
-オブジェクト検出は、画像処理タスクです。 そのため、この問題を解決するためにトレーニングされるほとんどのディープ ラーニング モデルは、CNN です。 このチュートリアルで使用するモデルは、次のドキュメントで説明されている YOLOv2 モデルのコンパクトなバージョンである Tiny YOLOv2 モデルです。[「YOLO9000:Better, Faster, Stronger」 (YOLO9000: より良く、より速く、より強く) (Redmon、Fadhari 著)](https://arxiv.org/pdf/1612.08242.pdf)。 Tiny YOLOv2 は Pascal VOC データセットでトレーニングされ、20 種類のクラスのオブジェクトを予測できる 15 個のレイヤーで構成されています。 Tiny YOLOv2 は元の YOLOv2 モデルを凝縮したバージョンなので、速度と精度のトレードオフが生じます。 Netron などのツールを使用して、モデルを構成するさまざまなレイヤーを視覚化できます。 モデルを検査すると、ニューラル ネットワークを構成するすべてのレイヤー間の接続のマッピングが生成されます。各レイヤーには、レイヤーの名前と共にそれぞれの入力/出力の寸法が含まれます。 モデルの入力と出力を記述するために使用されるデータ構造は、テンソルと呼ばれます。 テンソルは、データを N 次元に格納するコンテナーと考えることができます。 Tiny YOLOv2 の場合、入力レイヤーの名前は `image` であり、`3 x 416 x 416` の寸法のテンソルが想定されています。 出力レイヤーの名前は `grid` であり、`125 x 13 x 13` の寸法の出力テンソルが生成されます。  
+オブジェクト検出は、画像処理タスクです。 そのため、この問題を解決するためにトレーニングされるほとんどのディープ ラーニング モデルは、CNN です。 このチュートリアルで使用するモデルは、次のドキュメントで説明されている YOLOv2 モデルのコンパクトなバージョンである Tiny YOLOv2 モデルです。[「YOLO9000:Better, Faster, Stronger」 (YOLO9000: より良く、より速く、より強く) (Redmon、Fadhari 著)](https://arxiv.org/pdf/1612.08242.pdf)。 Tiny YOLOv2 は Pascal VOC データセットでトレーニングされ、20 種類のクラスのオブジェクトを予測できる 15 個のレイヤーで構成されています。 Tiny YOLOv2 は元の YOLOv2 モデルを凝縮したバージョンなので、速度と精度のトレードオフが生じます。 Netron などのツールを使用して、モデルを構成するさまざまなレイヤーを視覚化できます。 モデルを検査すると、ニューラル ネットワークを構成するすべてのレイヤー間の接続のマッピングが生成されます。各レイヤーには、レイヤーの名前と共にそれぞれの入力/出力の寸法が含まれます。 モデルの入力と出力を記述するために使用されるデータ構造は、テンソルと呼ばれます。 テンソルは、データを N 次元に格納するコンテナーと考えることができます。 Tiny YOLOv2 の場合、入力レイヤーの名前は `image` であり、`3 x 416 x 416` の寸法のテンソルが想定されています。 出力レイヤーの名前は `grid` であり、`125 x 13 x 13` の寸法の出力テンソルが生成されます。
 
 ![](./media/object-detection-onnx/netron-model-map.png)
 
-YOLO モデルは `3(RGB) x 416px x 416px` の画像を受け取ります。 この入力はモデルによって取得され、さまざまなレイヤーを経由して出力が生成されます。 出力では入力画像が `13 x 13` グリッドに分割されます。グリッド内の各セルは、`125` 値で構成されます。 
+YOLO モデルは `3(RGB) x 416px x 416px` の画像を受け取ります。 この入力はモデルによって取得され、さまざまなレイヤーを経由して出力が生成されます。 出力では入力画像が `13 x 13` グリッドに分割されます。グリッド内の各セルは、`125` 値で構成されます。
 
 ### <a name="what-is-an-onnx-model"></a>ONNX モデルとは
 
-Open Neural Network Exchange (ONNX) は、AI モデルのオープン ソース形式です。 ONNX は、フレームワーク間の相互運用性をサポートしています。 つまり、PyTorch などの多くの一般的な機械学習フレームワークのいずれかでモデルをトレーニングして ONNX 形式に変換し、ML.NET などの別のフレームワークで ONNX モデルを使用することができます。 詳細については、[ONNX の Web サイト](https://onnx.ai/)を参照してください。 
+Open Neural Network Exchange (ONNX) は、AI モデルのオープン ソース形式です。 ONNX は、フレームワーク間の相互運用性をサポートしています。 つまり、PyTorch などの多くの一般的な機械学習フレームワークのいずれかでモデルをトレーニングして ONNX 形式に変換し、ML.NET などの別のフレームワークで ONNX モデルを使用することができます。 詳細については、[ONNX の Web サイト](https://onnx.ai/)を参照してください。
 
 ![](./media/object-detection-onnx/onnx-frameworks.png)
 
-事前トレーニング済みの Tiny YOLOv2 モデルは ONNX 形式で格納されます。これはレイヤーのシリアル化された表現であり、それらのレイヤーの学習済みパターンです。 ML.NET では、ONNX との相互運用性は [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) および [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) NuGet パッケージを使用して実現されます。 [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) パッケージには、画像を受け取り、予測またはトレーニング パイプラインへの入力として使用できる数値にエンコードする一連の変換が含まれています。 [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) パッケージでは、ONNX ランタイムを利用して ONNX モデルを読み込み、それを使用して、指定された入力に基づいて予測を行います。 
+事前トレーニング済みの Tiny YOLOv2 モデルは ONNX 形式で格納されます。これはレイヤーのシリアル化された表現であり、それらのレイヤーの学習済みパターンです。 ML.NET では、ONNX との相互運用性は [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) および [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) NuGet パッケージを使用して実現されます。 [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) パッケージには、画像を受け取り、予測またはトレーニング パイプラインへの入力として使用できる数値にエンコードする一連の変換が含まれています。 [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) パッケージでは、ONNX ランタイムを利用して ONNX モデルを読み込み、それを使用して、指定された入力に基づいて予測を行います。
 
 ![](./media/object-detection-onnx/onnx-ml-net-integration.png)
 
@@ -89,10 +89,10 @@ ONNX の概要と Tiny YOLOv2 のしくみについて全般的な知識が得�
 
 1. **Microsoft.ML NuGet パッケージ**をインストールします。
 
-    - ソリューション エクスプローラーで、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。 
-    - [パッケージ ソース] として "nuget.org" を選択し、[参照] タブを選択し、"**Microsoft.ML**" を検索します。 
-    - **[インストール]** ボタンを選択します。 
-    - **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、 **[ライセンスの同意]** ダイアログの **[同意する]** を選択します。 
+    - ソリューション エクスプローラーで、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。
+    - [パッケージ ソース] として "nuget.org" を選択し、[参照] タブを選択し、"**Microsoft.ML**" を検索します。
+    - **[インストール]** ボタンを選択します。
+    - **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、 **[ライセンスの同意]** ダイアログの **[同意する]** を選択します。
     - **Microsoft.ML.ImageAnalytics** と **Microsoft.ML.OnnxTransformer** に対してこれらの手順を繰り返します。
 
 ### <a name="prepare-your-data-and-pre-trained-model"></a>データと事前トレーニング済みモデルを準備する
@@ -106,7 +106,7 @@ ONNX の概要と Tiny YOLOv2 のしくみについて全般的な知識が得�
     コマンド プロンプトを開き、次のコマンドを入力します。
 
     ```shell
-    tar -xvzf tiny_yolov2.tar.gz 
+    tar -xvzf tiny_yolov2.tar.gz
     ```
 
 1. 解凍したディレクトリから抽出した `model.onnx` ファイルを "*ObjectDetection*" プロジェクトの `assets\Model` ディレクトリにコピーし、名前を `TinyYolo2_model.onnx` に変更します。 このディレクトリには、このチュートリアルに必要なモデルが含まれています。
@@ -119,9 +119,9 @@ ONNX の概要と Tiny YOLOv2 のしくみについて全般的な知識が得�
 
 [!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L1-L7)]
 
-次に、さまざまな資産のパスを定義します。 
+次に、さまざまな資産のパスを定義します。
 
-1. 最初に、`GetAbsolutePath` メソッドを `Program` クラスの `Main` メソッドの下に追加します。 
+1. 最初に、`GetAbsolutePath` メソッドを `Program` クラスの `Main` メソッドの下に追加します。
 
     [!code-csharp [GetAbsolutePath](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L66-L74)]
 
@@ -137,13 +137,13 @@ ONNX の概要と Tiny YOLOv2 のしくみについて全般的な知識が得�
 
 1. **ソリューション エクスプローラー**で "*DataStructures*" ディレクトリを右クリックし、 **[追加]**  >  **[新しい項目]** の順に選択します。
 1. **[新しい項目の追加]** ダイアログ ボックスで、 **[クラス]** を選択し、 **[名前]** フィールドを "*ImageNetData.cs*" に変更します。 次に **[追加]** を選択します。
-     
+
     コード エディターで "*ImageNetData.cs*" ファイルが開きます。 次の `using` ステートメントを "*ImageNetData.cs*" の先頭に追加します。
 
     [!code-csharp [ImageNetDataUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/DataStructures/ImageNetData.cs#L1-L4)]
 
     既存のクラス定義を削除し、`ImageNetData` クラスの次のコードを "*ImageNetData.cs*" ファイルに追加します。
-    
+
     [!code-csharp [ImageNetDataClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/DataStructures/ImageNetData.cs#L8-L23)]
 
     `ImageNetData` は、入力画像データ クラスであり、次の <xref:System.String> フィールドがあります。
@@ -178,7 +178,6 @@ ONNX の概要と Tiny YOLOv2 のしくみについて全般的な知識が得�
 
 [!code-csharp [InitMLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L24)]
 
-
 ## <a name="create-a-parser-to-post-process-model-outputs"></a>モデル出力を後処理するパーサーを作成する
 
 このモデルでは、画像を `13 x 13` グリッドに分割します。各グリッド セルは `32px x 32px` です。 各グリッド セルには、5 個の潜在的なオブジェクト境界ボックスが含まれます。 境界ボックスには 25 個の要素があります。
@@ -188,7 +187,7 @@ ONNX の概要と Tiny YOLOv2 のしくみについて全般的な知識が得�
 - `x` 関連付けられているグリッド セルを基準にした、境界ボックスの中心の x 位置。
 - `y` 関連付けられているグリッド セルを基準にした、境界ボックスの中心の y 位置。
 - `w` 境界ボックスの幅。
-- `h` 境界ボックスの高さ。 
+- `h` 境界ボックスの高さ。
 - `o` オブジェクトが境界ボックス内に存在する信頼度の値。これは物体らしさのスコアとも呼ばれます。
 - `p1-p20` モデルによって予測される 20 個のクラスそれぞれのクラスの確率。
 
@@ -207,7 +206,7 @@ ONNX の概要と Tiny YOLOv2 のしくみについて全般的な知識が得�
 1. **ソリューション エクスプローラー**で、"*YoloParser*" ディレクトリを右クリックし、 **[追加]**  >  **[新しい項目]** の順に選択します。
 1. **[新しい項目の追加]** ダイアログボックスで **[クラス]** を選択し、 **[名前]** フィールドを "*DimensionsBase.cs*" に変更します。 次に **[追加]** を選択します。
 
-    コード エディターで "*DimensionsBase.cs*" ファイルが開きます。 すべての `using` ステートメントと既存のクラス定義を削除します。 
+    コード エディターで "*DimensionsBase.cs*" ファイルが開きます。 すべての `using` ステートメントと既存のクラス定義を削除します。
 
     `DimensionsBase` クラスの次のコードを "*DimensionsBase.cs*" ファイルに追加します。
 
@@ -236,7 +235,7 @@ ONNX の概要と Tiny YOLOv2 のしくみについて全般的な知識が得�
     既存の `YoloBoundingBox` クラス定義を削除し、`YoloBoundingBox` クラスの次のコードを "*YoloBoundingBox.cs*" ファイルに追加します。
 
     [!code-csharp [YoloBoundingBoxClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloBoundingBox.cs#L7-L21)]
-    
+
     `YoloBoundingBox` には次のフィールドがあります。
 
     - `Dimensions` には、境界ボックスの寸法が格納されます。
@@ -262,7 +261,7 @@ ONNX の概要と Tiny YOLOv2 のしくみについて全般的な知識が得�
 
 1. `YoloOutputParser` クラス定義内に、次の定数とフィールドを追加します。
 
-    [!code-csharp [ParserVarDefinitions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L12-L21)]    
+    [!code-csharp [ParserVarDefinitions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L12-L21)]
 
     - `ROW_COUNT` は、画像が分割されるグリッドの行数です。
     - `COL_COUNT` は、画像が分割されるグリッドの列数です。
@@ -274,17 +273,17 @@ ONNX の概要と Tiny YOLOv2 のしくみについて全般的な知識が得�
     - `CELL_HEIGHT` は、画像グリッド内の 1 つのセルの高さです。
     - `channelStride` は、グリッド内の現在のセルの開始位置です。
 
-    モデルで予測 (スコアリングとも呼ばれる) が行われると、`416px x 416px` の入力画像が `13 x 13` のサイズのセルから成るグリッドに分割されます。 各セルには `32px x 32px` が含まれます。 各セルには 5 個の境界ボックスがあり、それぞれに 5 つの特徴 (x、y、幅、高さ、信頼度) があります。 また、各境界ボックスには、各クラスの確率 (この例では 20) が格納されます。 したがって、各セルには 125 個の情報が含まれます (5 つの特徴 + 20 個のクラスの確率)。 
+    モデルで予測 (スコアリングとも呼ばれる) が行われると、`416px x 416px` の入力画像が `13 x 13` のサイズのセルから成るグリッドに分割されます。 各セルには `32px x 32px` が含まれます。 各セルには 5 個の境界ボックスがあり、それぞれに 5 つの特徴 (x、y、幅、高さ、信頼度) があります。 また、各境界ボックスには、各クラスの確率 (この例では 20) が格納されます。 したがって、各セルには 125 個の情報が含まれます (5 つの特徴 + 20 個のクラスの確率)。
 
 5 個の境界ボックスすべてについて、`channelStride` の下にアンカーのリストを作成します。
 
-[!code-csharp [ParserAnchors](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L23-L26)]   
+[!code-csharp [ParserAnchors](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L23-L26)]
 
 アンカーは、境界ボックスの定義済みの高さと幅の比率です。 モデルによって検出されるほとんどのオブジェクトまたはクラスには、同様の比率があります。 これは、境界ボックスを作成するときに役立ちます。 境界ボックスの予測ではなく、事前に定義された寸法からのオフセットが計算されるため、境界ボックスを予測するために必要な計算が少なくなります。 通常、これらのアンカーの比率は、使用されるデータセットに基づいて計算されます。 この場合は、データセットは既知であり、値が事前に計算されているため、アンカーをハードコーディングすることができます。
 
 次に、モデルで予測するラベルまたはクラスを定義します。 このモデルでは、元の YOLOv2 モデルによって予測されるクラスの合計数のサブセットである 20 個のクラスを予測します。
 
-`anchors` の下にラベルのリストを追加します。 
+`anchors` の下にラベルのリストを追加します。
 
 [!code-csharp [ParserLabels](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L28-L34)]
 
@@ -294,7 +293,7 @@ ONNX の概要と Tiny YOLOv2 のしくみについて全般的な知識が得�
 
 ### <a name="create-helper-functions"></a>ヘルパー関数を作成する
 
-後処理フェーズには、関係する一連の手順が含まれています。 このためには、いくつかのヘルパー メソッドを使用できます。 
+後処理フェーズには、関係する一連の手順が含まれています。 このためには、いくつかのヘルパー メソッドを使用できます。
 
 パーサーによって使用されるヘルパー メソッドは次のとおりです。
 
@@ -322,7 +321,7 @@ public IList<YoloBoundingBox> ParseOutputs(float[] yoloModelOutputs, float thres
 
 }
 ```
-    
+
 境界ボックスを格納するリストを作成し、`ParseOutputs` メソッド内に変数を定義します。
 
 [!code-csharp [BBoxList](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L155)]
@@ -419,7 +418,7 @@ for (int i = 0; i < boxes.Count; i++)
 ```csharp
 if (isActiveBoxes[i])
 {
-    
+
 }
 ```
 
@@ -492,7 +491,7 @@ for (var j = i + 1; j < boxes.Count; j++)
 
     [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*) メソッドが呼び出されたときに操作されるデータ スキーマが ML.NET パイプラインで認識されている必要があります。 この場合、トレーニングに似たプロセスが使用されます。 ただし、実際のトレーニングは行われないため、空の [`IDataView`](xref:Microsoft.ML.IDataView) を使用することができます。 空のリストから、パイプラインの新しい [`IDataView`](xref:Microsoft.ML.IDataView) を作成します。
 
-    [!code-csharp [LoadEmptyIDV](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L52)]    
+    [!code-csharp [LoadEmptyIDV](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L52)]
 
     その下にパイプラインを定義します。 パイプラインは、4 つの変換で構成されます。
 
@@ -569,7 +568,7 @@ catch (Exception ex)
 
 [!code-csharp [ParsePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L39-L44)]
 
-モデル出力が処理されたら、次は画像上に境界ボックスを描画します。 
+モデル出力が処理されたら、次は画像上に境界ボックスを描画します。
 
 ### <a name="visualize-predictions"></a>予測の視覚化
 
@@ -612,7 +611,7 @@ for-each ループ内で、境界ボックスの寸法を取得します。
 ```csharp
 using (Graphics thumbnailGraphic = Graphics.FromImage(image))
 {
-    
+
 }
 ```
 
@@ -638,7 +637,7 @@ for-each ループの外側に、画像を `outputDirectory` に保存するコ�
 
 アプリケーションが実行時に想定どおりに予測を行っているという追加のフィードバックを取得するには、*Program.cs* ファイル内にある `DrawBoundingBox` メソッドの下に `LogDetectedObjects` というメソッドを追加して、検出されたオブジェクトをコンソールに出力します。
 
-[!code-csharp [LogOuptuts](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L133-L143)]
+[!code-csharp [LogOutputs](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L133-L143)]
 
 これで予測から視覚的なフィードバックを作成するヘルパー メソッドが用意できたので、スコア付けされた画像を反復処理する for ループを追加します。
 
@@ -665,9 +664,9 @@ try-catch ステートメントの後に、プロセスの実行が完了した�
 
 [!code-csharp [EndProcessLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L62-L63)]
 
-これで完了です。 
+これで完了です。
 
-## <a name="results"></a>結果 
+## <a name="results"></a>結果
 
 上記の手順を実行した後、コンソール アプリを実行します (Ctrl + F5 キー)。 結果は以下の出力のようになるはずです。 警告メッセージまたは処理中のメッセージが表示される場合がありますが、わかりやすくするため、これらのメッセージは結果から削除してあります。
 
@@ -701,7 +700,7 @@ person and its Confidence score: 0.5551759
 ========= End of Process..Hit any Key ========
 ```
 
-画像を境界ボックスと共に表示するには、`assets/images/output/` ディレクトリに移動します。 処理された画像の 1 つのサンプルを次に示します。 
+画像を境界ボックスと共に表示するには、`assets/images/output/` ディレクトリに移動します。 処理された画像の 1 つのサンプルを次に示します。
 
 ![](./media/object-detection-onnx/image3.jpg)
 

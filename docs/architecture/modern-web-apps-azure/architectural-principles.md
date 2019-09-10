@@ -4,12 +4,12 @@ description: ASP.NET Core および Azure での最新の Web アプリケーシ
 author: ardalis
 ms.author: wiwagn
 ms.date: 02/16/2019
-ms.openlocfilehash: 93a0fd5c484e27853ec9a6919aa573f68471ceaa
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 91bb3be207c9919eb7eb0119e96e76aae94858be
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105484"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373766"
 ---
 # <a name="architectural-principles"></a>アーキテクチャの原則
 
@@ -36,13 +36,13 @@ ms.locfileid: "70105484"
 
 アプリケーション内の依存関係の方向は、実装の詳細の方向ではなく、抽象化の方向とする必要があります。 大部分のアプリケーションは、コンパイル時の依存関係のフローがランタイム実行の方向になるように記述されます。 これにより直接的な依存関係グラフが生成されます。 つまり、図 4-1 に示すように、モジュール A がモジュール B 内の関数を呼び出し、モジュール B がモジュール C 内の関数を呼び出す場合、コンパイル時に A は B に依存し、B は C に依存します。
 
-![](./media/image4-1.png)
+![直接的な依存関係グラフ](./media/image4-1.png)
 
 **図 4-1** 直接的な依存関係グラフ。
 
 依存関係逆転の原則を適用すると、A は B によって実装された抽象化でメソッドを呼び出すことができます。このことは、実行時に A が B を呼び出し、コンパイル時には B が、A によって制御されるインターフェイスに依存することを可能にします (つまり、通常のコンパイル時の依存関係が*逆転*されます)。 実行時に、プログラム実行のフローには変更がありませんが、インターフェイスの導入により、このインターフェイスのさまざまな実装を簡単に接続できるようになります。
 
-![](./media/image4-2.png)
+![逆転された依存関係グラフ](./media/image4-2.png)
 
 **図 4-2** 逆転された依存関係グラフ。
 

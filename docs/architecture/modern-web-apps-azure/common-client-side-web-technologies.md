@@ -4,12 +4,12 @@ description: ASP.NET Core および Azure での最新の Web アプリケーシ
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 4dc0618eceda4df7c5aa76aee3ac649deb9f5310
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 3a44b017c6160639ed1be7374b893e103ee5f5d8
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675439"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373905"
 ---
 # <a name="common-client-side-web-technologies"></a>一般的なクライアント側の Web テクノロジ
 
@@ -28,9 +28,9 @@ HTML (ハイパーテキスト マークアップ言語) は、Web ページと 
 
 CSS (カスケード スタイル シート) は、HTML 要素の外観やレイアウトの制御に利用されます。 CSS スタイルは HTML 要素に直接適用したり、同じページで別途定義したりできます。あるいは、別個のファイルに定義し、ページで参照できます。 スタイルは、特定の HTML 要素を選択するときの使われ方に基づいてカスケードします。 たとえば、スタイルをドキュメント全体に適用しても、特定の要素に適用されるスタイルによってオーバーライドされることがあります。 同様に、ある要素固有のスタイルは、その要素に適用された CSS クラスに適用されるスタイルでオーバーライドされ、(その ID 経由で) その要素の特定のインスタンスを対象とするスタイルでさらにオーバーライドされます。 図 6-1
 
-**図 6-1.** CSS 特性ルールの順序
+![CSS 特性ルール](./media/image6-1.png)
 
-![](./media/image6-1.png)
+**図 6-1.** CSS 特性ルールの順序
 
 スタイルを別個のスタイルシート ファイルで保存し、選択ベースのカスケードを利用してアプリケーション内で一貫性があり、再利用可能なスタイルを実装することをお勧めします。 HTML 内にスタイル ルールを置くことは避けてください。(要素のクラス全体または特定の CSS クラスが適用された要素ではなく) 特定の個別要素にスタイルを適用することはルールではなく、例外にしてください。
 

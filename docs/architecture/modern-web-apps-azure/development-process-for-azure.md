@@ -4,12 +4,12 @@ description: ASP.NET Core および Azure での最新の Web アプリケーシ
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 286ffdb73425794e5979cde902e21ebd90a26969
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: dcd2616cd5638aa712c11e370d35111b248e88ec
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675149"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374049"
 ---
 # <a name="development-process-for-azure"></a>Azure の開発プロセス
 
@@ -28,7 +28,7 @@ ms.locfileid: "68675149"
 
 **Visual Studio 2017。** *Visual Studio 2017* を使用する場合、 *.NET Core クロスプラットフォームの開発* ワークロードがインストールされている限り、ASP.NET Core アプリケーションを構築できます。 図 10-1 には、Visual Studio 2017 の必要なワークロードのセットアップ ダイアログが示されています。
 
-![](./media/image10-1.png)
+![Visual Studio 2017 での .NET Core ワークロードのインストール](./media/image10-1.png)
 
 **図 10-1** Visual Studio 2017 での .NET Core ワークロードのインストール。
 

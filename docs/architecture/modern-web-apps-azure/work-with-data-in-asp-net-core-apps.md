@@ -4,12 +4,12 @@ description: ASP.NET Core および Azure での最新の Web アプリケーシ
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: e4303a3046981756cae6951483c100b37425dc80
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 3b251003a2da998936a11acff3cc2975c4b78838
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105449"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373993"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core アプリでのデータの操作
 
@@ -76,9 +76,9 @@ EF Core をインストールして、DbContext の子の型を作成し、そ�
 
 図 8-1 に示すように、ロガーを構成し、そのレベルが少なくとも Information に設定されていることを確認することで、EF Core で実行されるクエリを確認できます。
 
-![](./media/image8-1.png)
+![コンソールへの EF Core クエリのログ記録](./media/image8-1.png)
 
-図 8-1 コンソールへの EE Core クエリのログ記録
+**図 8-1**。 コンソールへの EF Core クエリのログ記録
 
 ### <a name="fetching-and-storing-data"></a>データのフェッチと格納
 
