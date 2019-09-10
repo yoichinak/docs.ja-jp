@@ -2,12 +2,12 @@
 title: Entity SQL と Transact-SQL の相違点
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
-ms.openlocfilehash: 1a4bf8267ee5f036effc5f7bc91c28d1485b7612
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e809cea2f853eed51d28e55f81a411f7af2e5a33
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250856"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854473"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Entity SQL と Transact-SQL の相違点
 このトピックでは、 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]と transact-sql の違いについて説明します。  
@@ -189,7 +189,7 @@ SELECT C2.FirstName, C2.LastName
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] では分析関数はまだサポートしていません。  
   
  組み込み関数、演算子  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]では、Transact-sql の組み込み関数と演算子のサブセットをサポートしています。 これらの演算子と関数の多くは、主要なストア プロバイダーによりサポートされています。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]プロバイダーマニフェストで宣言されたストア固有の関数を使用します。 また、を使用すると、組み込みのおよびユーザー定義の既存の[!INCLUDE[esql](../../../../../../includes/esql-md.md)]ストア関数をとして宣言できます。 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]では、Transact-sql の組み込み関数と演算子のサブセットをサポートしています。 これらの演算子と関数の多くは、主要なストア プロバイダーによりサポートされています。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]プロバイダーマニフェストで宣言されたストア固有の関数を使用します。 また、Entity Framework を使用すると、組み込みのおよびユーザー定義の既存の[!INCLUDE[esql](../../../../../../includes/esql-md.md)]ストア関数をとして宣言できます。  
   
  ヒント  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ではクエリ ヒントのメカニズムは提供していません。  

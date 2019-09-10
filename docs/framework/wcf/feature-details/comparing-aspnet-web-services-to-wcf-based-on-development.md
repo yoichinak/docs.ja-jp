@@ -2,16 +2,16 @@
 title: 開発者の視点から見た ASP.NET Web サービスと WCF との比較
 ms.date: 03/30/2017
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-ms.openlocfilehash: 8b0e26f0b76ee56d06c426cd3c11b169a74b1896
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 607d0eaabde4e00c1a00b995356bb6d4e1a39234
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663370"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855757"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>開発者の視点から見た ASP.NET Web サービスと WCF との比較
 
-Windows Communication Foundation (WCF) では、WCF アプリケーションのプログラミングし、ASP.NET Web サービスのように構成を有効にして、その動作を模倣する ASP.NET 互換性モード オプションがあります。 次のセクションでは、ASP.NET Web サービスの比較され、WCF が両方のテクノロジを使用してアプリケーションの開発に必要なものに基づきます。
+Windows Communication Foundation (WCF) には ASP.NET 互換モードオプションがあります。このオプションを使用すると、WCF アプリケーションを ASP.NET Web サービスのようにプログラミングおよび構成し、その動作を模倣できます。 次のセクションでは、両方のテクノロジを使用してアプリケーションを開発するために必要なものに基づいて、ASP.NET ウェブサービスと WCF を比較します。
 
 ## <a name="data-representation"></a>データ表現
 
@@ -27,9 +27,9 @@ ASP.NET で Web サービスを開発する場合、通常はまず、このサ�
 
 - <xref:System.Xml.Serialization> 名前空間の属性型は、大部分が .NET Framework クラスやそのメンバーに追加可能であり、これにより、XML での当該クラスのインスタンスの表現方法を制御できます。
 
-通常、WCF アプリケーションの開発は複合型の定義を含むもが開始します。 WCF は、ASP.NET Web サービスと同じ .NET Framework 型を使用して作成できます。
+また、WCF アプリケーション開発は、通常、複合型の定義から開始されます。 WCF では、ASP.NET Web サービスと同じ .NET Framework 型を使用できます。
 
-WCF<xref:System.Runtime.Serialization.DataContractAttribute>と<xref:System.Runtime.Serialization.DataMemberAttribute>型のインスタンスを XML、およびどの特定のフィールドまたは型のプロパティをシリアル化する、次のサンプル コードに示すようにシリアル化することを示す .NET Framework 型に追加することができます。
+次の<xref:System.Runtime.Serialization.DataContractAttribute>サンプル<xref:System.Runtime.Serialization.DataMemberAttribute>コードに示すように、WCF とを .NET Framework 型に追加して、型のインスタンスを XML にシリアル化し、その型の特定のフィールドまたはプロパティをシリアル化することを示すことができます。
 
 ```csharp
 //Example One:
@@ -145,7 +145,7 @@ public class LineItem
 }
 ```
 
-<xref:System.Runtime.Serialization.DataContractAttribute> は、当該型の中にシリアル化可能なフィールドやプロパティがあることを示し、具体的にどのフィールドやプロパティをシリアル化できるかを <xref:System.Runtime.Serialization.DataMemberAttribute> で示します。 <xref:System.Runtime.Serialization.DataContractAttribute> はクラスにも構造体にも適用できます。 <xref:System.Runtime.Serialization.DataMemberAttribute> はフィールドやプロパティに適用します。これはパブリックでもプライベートでもかまいません。 型のインスタンス、<xref:System.Runtime.Serialization.DataContractAttribute>に適用されるにと呼ばれる WCF でのデータ コントラクトします。 これを XML 形式にシリアル化するには <xref:System.Runtime.Serialization.DataContractSerializer> を使います。
+<xref:System.Runtime.Serialization.DataContractAttribute> は、当該型の中にシリアル化可能なフィールドやプロパティがあることを示し、具体的にどのフィールドやプロパティをシリアル化できるかを <xref:System.Runtime.Serialization.DataMemberAttribute> で示します。 <xref:System.Runtime.Serialization.DataContractAttribute> はクラスにも構造体にも適用できます。 <xref:System.Runtime.Serialization.DataMemberAttribute> はフィールドやプロパティに適用します。これはパブリックでもプライベートでもかまいません。 が適用されている<xref:System.Runtime.Serialization.DataContractAttribute>型のインスタンスは、WCF ではデータコントラクトと呼ばれます。 これを XML 形式にシリアル化するには <xref:System.Runtime.Serialization.DataContractSerializer> を使います。
 
 <xref:System.Runtime.Serialization.DataContractSerializer> を使う場合と、<xref:System.Xml.Serialization.XmlSerializer> および <xref:System.Xml.Serialization> 名前空間に定義された属性を使う場合の、主な違いを以下に示します。
 
@@ -176,7 +176,7 @@ public class LineItem
 
 - <xref:System.Runtime.Serialization.DataContractSerializer> の場合、パブリックでないメンバーも XML に変換できるため、シリアル化できる .NET 型についての制約が少なくなります。 特に、<xref:System.Collections.Hashtable> など、<xref:System.Collections.IDictionary> インターフェイスを実装した型が変換可能です。 <xref:System.Runtime.Serialization.DataContractSerializer> はさらに、既存の .NET 型のインスタンスを XML にシリアル化する場合でも、型定義を変更したり、ラッパーを定義したりする必要がありません。
 
-- <xref:System.Runtime.Serialization.DataContractSerializer> はパブリックでないメンバーも変換できるため、完全に信頼できるコードからしか実行できないようになっています。<xref:System.Xml.Serialization.XmlSerializer> にはそのような制約がありません。 コードの完全な信頼アクセス許可は、コードが実行されている資格情報を使用してアクセスできるコンピューター上のすべてのリソースへの完全なアクセスを示します。 このオプションは、完全に信頼されたコード、コンピューター上のすべてのリソースにアクセスするように注意して使用する必要があります。
+- <xref:System.Runtime.Serialization.DataContractSerializer> はパブリックでないメンバーも変換できるため、完全に信頼できるコードからしか実行できないようになっています。<xref:System.Xml.Serialization.XmlSerializer> にはそのような制約がありません。 完全信頼コードアクセス許可は、コードを実行している資格情報を使用してアクセスできる、コンピューター上のすべてのリソースへの完全なアクセスを提供します。 このオプションは、完全に信頼されたコードがコンピューター上のすべてのリソースにアクセスするため、注意して使用する必要があります。
 
 - <xref:System.Runtime.Serialization.DataContractSerializer> にはバージョン管理の機能がいくつか組み込まれています。
 
@@ -184,7 +184,7 @@ public class LineItem
 
   - データ コントラクトに <xref:System.Runtime.Serialization.IExtensibleDataObject> インターフェイスを実装すると、<xref:System.Runtime.Serialization.DataContractSerializer> は、新バージョンのデータ コントラクトで定義されたメンバーを、旧バージョンのコントラクトを扱うアプリケーション経由で受け渡しできるようになります。
 
-以上のようにさまざまな違いがありますが、<xref:System.Xml.Serialization.XmlSerializer> で既定の設定を使用して型をシリアル化したものは、XML の名前空間を明示的に定義してあれば、<xref:System.Runtime.Serialization.DataContractSerializer> で型をシリアル化したものと意味的に同等です。 シリアライザーの両方で使用するための属性を持ち、次のクラスは、意味的に同一の XML に変換されます、<xref:System.Xml.Serialization.XmlSerializer>および、 <xref:System.Runtime.Serialization.DataContractAttribute>:
+以上のようにさまざまな違いがありますが、<xref:System.Xml.Serialization.XmlSerializer> で既定の設定を使用して型をシリアル化したものは、XML の名前空間を明示的に定義してあれば、<xref:System.Runtime.Serialization.DataContractSerializer> で型をシリアル化したものと意味的に同等です。 次のクラスは、両方のシリアライザーで使用する属性を持って<xref:System.Xml.Serialization.XmlSerializer>おり、と<xref:System.Runtime.Serialization.DataContractAttribute>によって意味的に同一の XML に変換されます。
 
 ```csharp
 [Serializable]
@@ -201,10 +201,10 @@ public class LineItem
 }
 ```
 
-Windows ソフトウェア開発キット (SDK) と呼ばれるコマンド ライン ツールが含まれています、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)します。 などの xsd.exe ツールは、ASP.NET Web サービスで使用される、Svcutil.exe は、XML スキーマから .NET データ型の定義を生成できます。 <xref:System.Runtime.Serialization.DataContractSerializer> が XML スキーマで定義された形式の XML を出力できる場合、型はデータ コントラクトの形に変換されます。そうでなければ、<xref:System.Xml.Serialization.XmlSerializer> を使用してシリアル化します。 Svcutil.exe を使用してデータ コントラクトから XML スキーマも生成できるその`dataContractOnly`スイッチします。
+Windows ソフトウェア開発キット (SDK) には、 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)と呼ばれるコマンドラインツールが含まれています。 ASP.NET Web サービスで使用される xsd.exe ツールと同様に、Svcutil.exe は XML スキーマから .NET データ型の定義を生成できます。 <xref:System.Runtime.Serialization.DataContractSerializer> が XML スキーマで定義された形式の XML を出力できる場合、型はデータ コントラクトの形に変換されます。そうでなければ、<xref:System.Xml.Serialization.XmlSerializer> を使用してシリアル化します。 Svcutil.exe では、 `dataContractOnly`スイッチを使用してデータコントラクトから XML スキーマを生成することもできます。
 
 > [!NOTE]
-> ASP.NET Web サービスの使用、 <xref:System.Xml.Serialization.XmlSerializer>、および WCF の ASP.NET 互換モードは、ASP.NET Web サービスの動作を模倣する WCF サービス、ASP.NET 互換性オプションも使用する 1 つは制限されません、<xref:System.Xml.Serialization.XmlSerializer>します。 必要であれば ASP.NET 互換モードでも <xref:System.Runtime.Serialization.DataContractSerializer> も使えるようになっています。
+> ASP.NET ウェブサービスでは<xref:System.Xml.Serialization.XmlSerializer>を使用しますが、wcf ASP.NET 互換モードでは wcf サービスが ASP.NET Web サービスの動作を模倣しますが、ASP.NET compatibility オプションでは、 <xref:System.Xml.Serialization.XmlSerializer>を使用するように制限されていません。 必要であれば ASP.NET 互換モードでも <xref:System.Runtime.Serialization.DataContractSerializer> も使えるようになっています。
 
 ## <a name="service-development"></a>サービスの開発
 
@@ -244,7 +244,7 @@ public class Service : IEcho
 
 <xref:System.Web.Services.WebService> 属性を持つインターフェイスは、サービスによって実行される操作のコントラクトを構成し、またそれをさまざまなクラスで再利用することによって、同じコントラクトをさまざまな方法で実装できるので、このオプションの使用をお勧めします。
 
-WCF サービスは、1 つまたは複数の WCF エンドポイントの定義によって提供されます。 エンドポイントは、アドレス、バインディング、サービス コントラクトで定義します。 アドレスとは、サービスが配備された場所のことです。 バインディングはサービスとの通信方法を表します。 サービス コントラクトとは、サービスが実行できる操作の定義のことです。
+WCF サービスは、1つまたは複数の WCF エンドポイントを定義することによって提供されます。 エンドポイントは、アドレス、バインディング、サービス コントラクトで定義します。 アドレスとは、サービスが配備された場所のことです。 バインディングはサービスとの通信方法を表します。 サービス コントラクトとは、サービスが実行できる操作の定義のことです。
 
 サービス コントラクトは通常、インターフェイスに <xref:System.ServiceModel.ServiceContractAttribute> および <xref:System.ServiceModel.OperationContractAttribute> を追加して定義します。
 
@@ -257,7 +257,7 @@ public interface IEcho
 }
 ```
 
-<xref:System.ServiceModel.ServiceContractAttribute>インターフェイスは、WCF サービス コントラクトを定義することを指定します、 <xref:System.ServiceModel.OperationContractAttribute> 、あれば、インターフェイスのメソッドの定義するサービス コントラクトの操作を示します。
+は<xref:System.ServiceModel.ServiceContractAttribute> 、インターフェイスが WCF サービスコントラクトを定義することを指定<xref:System.ServiceModel.OperationContractAttribute>します。また、は、インターフェイスのメソッドがサービスコントラクトの操作を定義しているかどうかを示します。
 
 このようにして定義されたサービス コントラクトをクラスとして実装します。サービス コントラクトを定義するインターフェイスを実装するクラスという形で記述します。
 
@@ -271,9 +271,9 @@ public class Service : IEcho
 }
 ```
 
-サービス コントラクトを実装するクラスは、WCF での入力をサービスとして参照されます。
+サービスコントラクトを実装するクラスは、WCF ではサービス型と呼ばれます。
 
-次に、アドレスとバインディングを、サービス型と関連付けます。 通常、直接、ファイルを編集して、または WCF で提供される構成エディターを使用して、構成ファイルで行われます。 構成ファイルの例を以下に示します。
+次に、アドレスとバインディングを、サービス型と関連付けます。 通常は、ファイルを直接編集するか、WCF に用意されている構成エディターを使用して、構成ファイルで行います。 構成ファイルの例を以下に示します。
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -299,15 +299,15 @@ public class Service : IEcho
 |WSHttpBinding|HTTP 上の WS-* プロトコルに対応した Web サービスやクライアントとの相互運用性。|
 |WSDualHttpBinding|双方向 HTTP 通信。最初のメッセージの受信者は送信元に直接は応答せず、代わりに、WS-* プロトコルに準拠した HTTP で、ある期間にわたって任意の数の応答を送信することができます。|
 |WSFederationBinding|HTTP 通信。サービスのリソースに対するアクセスを、明示的に指定された資格情報プロバイダーによって発行された証明書に基づいて制御することができます。|
-|NetTcpBinding|ネットワーク経由で WCF ソフトウェア エンティティ間の通信のセキュリティで保護された、信頼性の高い、高パフォーマンス|
-|NetNamedPipeBinding|同じコンピューターに WCF ソフトウェア エンティティ間の通信のセキュリティで保護された、信頼性の高い、高パフォーマンス|
-|NetMsmqBinding|MSMQ を使用して WCF ソフトウェア エンティティ間の通信。|
-|MsmqIntegrationBinding|WCF のソフトウェア エンティティと MSMQ を使用して別のソフトウェア エンティティ間の通信。|
-|NetPeerTcpBinding|Windows ピア ツー ピア ネットワー キングを使用して WCF ソフトウェア エンティティ間の通信。|
+|NetTcpBinding|ネットワーク経由での WCF ソフトウェアエンティティ間の安全で信頼性の高い高パフォーマンスな通信。|
+|NetNamedPipeBinding|同じコンピューター上の WCF ソフトウェアエンティティ間で、セキュリティで保護された信頼性の高い高パフォーマンスの通信を実現します。|
+|NetMsmqBinding|MSMQ を使用した WCF ソフトウェアエンティティ間の通信。|
+|MsmqIntegrationBinding|MSMQ を使用した WCF ソフトウェアエンティティと別のソフトウェアエンティティ間の通信。|
+|NetPeerTcpBinding|Windows ピアツーピアネットワークを使用した WCF ソフトウェアエンティティ間の通信。|
 
 システム指定のバインディングである <xref:System.ServiceModel.BasicHttpBinding> には、ASP.NET Web サービスが対応している一連のプロトコルが組み込まれています。
 
-WCF アプリケーションのカスタム バインドは、WCF を使用して個々 のプロトコルを実装するバインド要素クラスのコレクションとして簡単に定義されます。 追加のプロトコルを表す、新しいバインド要素を記述することも可能です。
+WCF アプリケーションのカスタムバインドは、WCF が個々のプロトコルを実装するために使用するバインド要素クラスのコレクションとして簡単に定義できます。 追加のプロトコルを表す、新しいバインド要素を記述することも可能です。
 
 サービス型の内部的な動作は、動作を表すクラス群のプロパティで調整できます。 次の例で、<xref:System.ServiceModel.ServiceBehaviorAttribute> クラスは、サービス型がマルチスレッド処理されることを指定しています。
 
@@ -324,13 +324,11 @@ public class DerivativesCalculatorServiceType: IDerivativesCalculator
 
 ASP.NET Web サービスは、コンパイルしてクラス ライブラリ アセンブリの形になっています。 サービス ファイルという、拡張子が .asmx のファイルの `@ WebService` ディレクティブに、サービスの実行コードが組み込まれたクラスと、これを収容するアセンブリが定義されています。
 
-```
-<%@ WebService Language="C#" Class="Service,ServiceAssembly" %>
-```
+`<%@ WebService Language="C#" Class="Service,ServiceAssembly" %>`
 
 サービス ファイルをインターネット インフォメーション サービス (IIS) の ASP.NET アプリケーション ルート、アセンブリをアプリケーション ルートのサブディレクトリ \bin 以下にコピーすると、 このサービス ファイルの URL (Uniform Resource Locator) でアプリケーションにアクセスできるようになります。
 
-および任意の .NET アプリケーション内で IIS 5.1 または 6.0 では、Windows プロセス アクティブ化サービス (WAS) IIS 7.0 の一部として提供されている WCF サービスをホストに容易にできます。 ただし IIS 5.1/6.0 の場合、通信トランスポート プロトコルは HTTP に限ります。
+WCF サービスは、iis 5.1 または6.0 内、IIS 7.0 の一部として提供される Windows プロセスアクティブ化サービス (WAS)、および .NET アプリケーション内で簡単にホストできます。 ただし IIS 5.1/6.0 の場合、通信トランスポート プロトコルは HTTP に限ります。
 
 IIS 5.1/6.0 または WAS 上でサービスをホストする手順を以下に示します。
 
@@ -338,9 +336,7 @@ IIS 5.1/6.0 または WAS 上でサービスをホストする手順を以下に
 
 2. 拡張子を .svc としたサービス ファイルを作り、サービス型を `@ ServiceHost` ディレクティブで次のように指定します。
 
-    ```
-    <%@ServiceHost language="c#" Service="MyService" %>
-    ```
+    `<%@ServiceHost language="c#" Service="MyService" %>`
 
 3. サービス ファイルを仮想ディレクトリにコピーし、アセンブリをその仮想ディレクトリの \bin サブディレクトリにコピーします。
 
@@ -348,7 +344,7 @@ IIS 5.1/6.0 または WAS 上でサービスをホストする手順を以下に
 
 するとアプリケーションには、アプリケーション ルートに置いたサービス ファイルの URL でアクセスできるようになります。
 
-.NET アプリケーション内で WCF サービスをホストするサービス型、アプリケーションによって参照されるクラス ライブラリ アセンブリをコンパイルし、サービスを使用して、ホストにアプリケーションをプログラミング、<xref:System.ServiceModel.ServiceHost>クラス。 サービスを管理する基本的なプログラムの例を以下に示します。
+.Net アプリケーション内で WCF サービスをホストするには、アプリケーションによって参照されるクラスライブラリアセンブリにサービスの種類をコンパイルし、 <xref:System.ServiceModel.ServiceHost>クラスを使用してサービスをホストするようにアプリケーションをプログラミングします。 サービスを管理する基本的なプログラムの例を以下に示します。
 
 ```csharp
 string httpBaseAddress = "http://www.contoso.com:8000/";
@@ -373,9 +369,9 @@ typeof(Service), //"Service" is the name of the service type baseAddresses))
 
 この例では <xref:System.ServiceModel.ServiceHost> の構築時にトランスポート プロトコルに対してアドレスを指定しています。 このアドレスをベース アドレスと呼びます。
 
-WCF サービスのエンドポイントに指定されたアドレスは、エンドポイントのホストのベース アドレスに対する相対アドレスです。 ホストではトランスポート プロトコルごとに 1 つベース アドレスを設定できます。 上記の構成ファイルの構成例では、エンドポイントに対して選択された <xref:System.ServiceModel.BasicHttpBinding> はトランスポート プロトコルとして HTTP を使用しているので、エンドポイント `EchoService` のアドレスは、HTTP に対して設定されたベース アドレスを基準としたものになります。 上記の例では、ホストの場合、HTTP ベース アドレスは`http://www.contoso.com:8000/`します。 なお、IIS や WAS 上でホストされているサービスの場合、ベース アドレスはサービス ファイルの URL になります。
+WCF サービスのエンドポイントに対して指定されるアドレスは、エンドポイントのホストのベースアドレスを基準とするアドレスです。 ホストではトランスポート プロトコルごとに 1 つベース アドレスを設定できます。 上記の構成ファイルの構成例では、エンドポイントに対して選択された <xref:System.ServiceModel.BasicHttpBinding> はトランスポート プロトコルとして HTTP を使用しているので、エンドポイント `EchoService` のアドレスは、HTTP に対して設定されたベース アドレスを基準としたものになります。 前の例のホストの場合、HTTP ベースアドレスは`http://www.contoso.com:8000/`になります。 なお、IIS や WAS 上でホストされているサービスの場合、ベース アドレスはサービス ファイルの URL になります。
 
-WCF の ASP.NET 互換モード オプションを使用する IIS または WAS とする構成と HTTP トランスポート プロトコルとして排他的でホストされているサービスのみが可能です。 ASP.NET 互換モードは、次の 2 つの手順で切り替えます。
+WCF ASP.NET 互換モードオプションを使用するには、IIS または WAS でホストされていて、トランスポートプロトコルとしてのみ HTTP で構成されているサービスのみを使用できます。 ASP.NET 互換モードは、次の 2 つの手順で切り替えます。
 
 1. プログラムの開発者は、サービス型に <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 属性を追加し、ASP.NET 互換モードに切り替えることができる、または切り替えることが必須である旨の指定をしておく必要があります。
 
@@ -398,7 +394,7 @@ WCF の ASP.NET 互換モード オプションを使用する IIS または WAS
     </configuration>
     ```
 
-    WCF アプリケーションを構成すると、.svc ではなく、サービス ファイルの拡張機能として .asmx を使用することもできます。
+    また、.svc ではなくサービスファイルの拡張子として .asmx を使用するように、WCF アプリケーションを構成することもできます。
 
     ```xml
     <system.web>
@@ -418,15 +414,15 @@ WCF の ASP.NET 互換モード オプションを使用する IIS または WAS
     </system.web>
     ```
 
-    オプションでは、WCF を使用するサービスを変更する場合に .asmx サービス ファイルの Url を使用するように構成されたクライアントを変更することから保存できます。
+    このオプションを使用すると、WCF を使用するようにサービスを変更するときに、.asmx サービスファイルの Url を使用するように構成されているクライアントを変更する必要がなくなります。
 
 ## <a name="client-development"></a>クライアント開発
 
-ASP.NET Web サービスのクライアントの開発にはコマンド ライン ツール WSDL.exe を使用します.asmx ファイルの URL を入力として指定します。 WCF に用意された、対応するツールが[ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)します。 サービス コントラクトの定義と WCF クライアント クラスの定義を持つコード モジュールを生成します。 また、サービスのアドレスとバインディングを指定して、構成ファイルを生成することもできます。
+ASP.NET Web サービスのクライアントの開発にはコマンド ライン ツール WSDL.exe を使用します.asmx ファイルの URL を入力として指定します。 WCF によって提供される対応ツールは、 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)です。 これにより、サービスコントラクトの定義と WCF クライアントクラスの定義を含むコードモジュールが生成されます。 また、サービスのアドレスとバインディングを指定して、構成ファイルを生成することもできます。
 
-リモート サービスのクライアントを開発する場合、通常は、非同期パターンに従ってプログラムを記述するようお勧めします。 WSDL.exe ツールは、特段の指定をしなくても、同期パターンと非同期パターンを使ったコードをそれぞれ生成します。 によって生成されたコード、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)のいずれかのパターンを指定できます。 特に指定しなければ同期パターン用です。 `/async` スイッチを指定して実行すれば、生成されるコードは非同期パターン用になります。
+リモート サービスのクライアントを開発する場合、通常は、非同期パターンに従ってプログラムを記述するようお勧めします。 WSDL.exe ツールは、特段の指定をしなくても、同期パターンと非同期パターンを使ったコードをそれぞれ生成します。 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)によって生成されたコードは、どちらのパターンでも提供できます。 特に指定しなければ同期パターン用です。 `/async` スイッチを指定して実行すれば、生成されるコードは非同期パターン用になります。
 
-ASP によって生成された WCF クライアント クラスの名前を示す保証はありません。NET の WSDL.exe ツールでは、既定では、Svcutil.exe ツールによって生成された WCF クライアント クラスの名前と一致します。 特に、<xref:System.Xml.Serialization.XmlSerializer> でシリアル化したクラスのプロパティ名は、Svcutil.exe で生成した場合 "Property" という接頭辞が付きますが、WSDL.exe の場合はそうなりません。
+ASP によって生成される WCF クライアントクラスに名前があることは保証されません。既定では、.NET の WSDL.EXE ツールは、Svcutil.exe ツールによって生成される WCF クライアントクラスの名前と一致します。 特に、<xref:System.Xml.Serialization.XmlSerializer> でシリアル化したクラスのプロパティ名は、Svcutil.exe で生成した場合 "Property" という接頭辞が付きますが、WSDL.exe の場合はそうなりません。
 
 ## <a name="message-representation"></a>メッセージ表現
 
@@ -477,7 +473,7 @@ public class Service: WebService, IEcho
 }
 ```
 
-WCF は、属性を提供<xref:System.ServiceModel.MessageContractAttribute>、<xref:System.ServiceModel.MessageHeaderAttribute>と<xref:System.ServiceModel.MessageBodyMemberAttribute>サービスによって送受信される SOAP メッセージの構造を記述します。
+WCF には、サービスに<xref:System.ServiceModel.MessageContractAttribute>よっ<xref:System.ServiceModel.MessageHeaderAttribute>て送受信される SOAP メッセージの構造を記述するための、、、および<xref:System.ServiceModel.MessageBodyMemberAttribute>の属性が用意されています。
 
 ```csharp
 [DataContract]
@@ -517,7 +513,7 @@ public interface IItemService
 }
 ```
 
-この構文でメッセージ構造を明示的に記述できますが、ASP.NET Web サービスのコードからメッセージ構造を導くことも可能です。 また、ASP.NET の構文ではメッセージ ヘッダーとして表されます、サービスのプロパティなど、`ProtocolHeader`前の例では、プロパティが WCF の構文ではメッセージのプロパティとしてより正確に表されます。 また、WCF では、エンドポイントの構成に追加するメッセージ ヘッダーができます。
+この構文でメッセージ構造を明示的に記述できますが、ASP.NET Web サービスのコードからメッセージ構造を導くことも可能です。 また、ASP.NET 構文では、メッセージヘッダーは、前の例のプロパティの`ProtocolHeader`ように、サービスのプロパティとして表されます。一方、WCF 構文では、メッセージのプロパティとしてより正確に表されます。 また、WCF では、メッセージヘッダーをエンドポイントの構成に追加できます。
 
 ```xml
 <service name="Service ">
@@ -553,11 +549,11 @@ public interface IEcho
 
 ASP.NET が WSDL で生成したサービス記述はカスタマイズ可能です。 <xref:System.Web.Services.Description.ServiceDescriptionFormatExtension> の派生クラスを作成し、WSDL による記述に項目を追加する、という形でカスタマイズします。
 
-WCF でサービスを記述する WSDL 応答は、IIS 51 内でホストされている HTTP エンドポイントを持つクエリは、WSDL、WCF サービスの .svc ファイルの HTTP GET 要求を発行する 6.0 または WAS から発生します。 httpGetEnabled が true に設定されている場合は、WSDL で記述したクエリを HTTP GET 要求として、.NET アプリケーション上でホストされているサービスの HTTP ベース アドレスに発行しても同じ効力があります。
+IIS 51、6.0、または WAS でホストされている HTTP エンドポイントを使用して、WCF サービスの .svc ファイルのクエリ WSDL を使用して HTTP GET 要求を発行すると、WCF は WSDL と応答してサービスを記述します。 httpGetEnabled が true に設定されている場合は、WSDL で記述したクエリを HTTP GET 要求として、.NET アプリケーション上でホストされているサービスの HTTP ベース アドレスに発行しても同じ効力があります。
 
-ただし、WCF は、サービスの記述を生成すると、WSDL での Ws-metadataexchange 要求にも応答します。 ASP.NET Web サービスには、WS-MetadataExchange 要求に応答する機能がありません。
+ただし、WCF は、サービスを説明するために生成された WSDL による Ws-metadataexchange 要求にも応答します。 ASP.NET Web サービスには、WS-MetadataExchange 要求に応答する機能がありません。
 
-WCF によって生成される WSDL を広範囲にカスタマイズできます。 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> クラスには、WSDL による記述をカスタマイズするための機能がいくつか組み込まれています。 WSDL を生成しませんが、静的な WSDL ファイルを使用して、特定の url にではなく、WCF を構成することもできます。
+WCF によって生成される WSDL は、広範囲にカスタマイズできます。 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> クラスには、WSDL による記述をカスタマイズするための機能がいくつか組み込まれています。 WCF は、WSDL を生成しないように構成することもできますが、特定の URL で静的 WSDL ファイルを使用するように構成することもできます。
 
 ```xml
 <behaviors>
@@ -576,7 +572,7 @@ WCF によって生成される WSDL を広範囲にカスタマイズできま�
 
 ASP.NET Web サービスでは、処理できない例外が発生すると、SOAP エラーとしてクライアントに返されます。 また、<xref:System.Web.Services.Protocols.SoapException> クラスのインスタンスを明示的にスローして、クライアント側に SOAP エラーの詳しい状況を通知し、より適切に管理させることも可能です。
 
-WCF サービスで未処理の例外は返されませんをクライアントに機密情報が、例外を誤って公開されることを防ぐために SOAP エラーとして。 ただしデバッグ目的で、このような例外をクライアントに返すように設定することは可能です。
+WCF サービスでは、ハンドルされない例外が SOAP エラーとしてクライアントに返されないため、例外によって機密情報が誤って公開されることはありません。 ただしデバッグ目的で、このような例外をクライアントに返すように設定することは可能です。
 
 SOAP エラーをクライアントに返す場合、データ コントラクト型を汎用型 <xref:System.ServiceModel.FaultException%601> のインスタンスとしてキャストし、これをスローする方法が使えます。 また、操作に <xref:System.ServiceModel.FaultContractAttribute> 属性を追加して、操作で生じうるエラーを指定する方法もあります。
 
@@ -634,9 +630,9 @@ public class Service : WebService, IEcho
 
 ASP.NET では、<xref:System.Web.HttpContext> の Session プロパティでアクセスするセッション状態情報の、実際の格納場所を細かく制御できます。 格納場所としては、クッキー内、データベース内、稼動中のサーバーのメモリ上、状態管理用の特別なサーバーのメモリ上があり、 サービスの構成ファイルで指定します。
 
-WCF では、状態管理の拡張可能なオブジェクトを提供します。 いずれも <xref:System.ServiceModel.IExtensibleObject%601> を実装しています。 中でも重要な拡張可能オブジェクトは、<xref:System.ServiceModel.ServiceHostBase> および <xref:System.ServiceModel.InstanceContext> です。 `ServiceHostBase` を使用すると、同一ホスト上の全サービス型のあらゆるインスタンスからアクセスできる状態を管理できます。一方、`InstanceContext` を使用すると、同じサービス型のインスタンス内で実行されるコードからアクセスできる状態を管理できます。
+WCF には、状態管理のための拡張可能なオブジェクトが用意されています。 いずれも <xref:System.ServiceModel.IExtensibleObject%601> を実装しています。 中でも重要な拡張可能オブジェクトは、<xref:System.ServiceModel.ServiceHostBase> および <xref:System.ServiceModel.InstanceContext> です。 `ServiceHostBase` を使用すると、同一ホスト上の全サービス型のあらゆるインスタンスからアクセスできる状態を管理できます。一方、`InstanceContext` を使用すると、同じサービス型のインスタンス内で実行されるコードからアクセスできる状態を管理できます。
 
-ここでは、サービスの種類、`TradingSystem`が、<xref:System.ServiceModel.ServiceBehaviorAttribute>同じ WCF クライアント インスタンスからのすべての呼び出しは、サービスの種類の同じインスタンスにルーティングされますを指定します。
+ここで、サービス型`TradingSystem`には、同じ WCF クライアントインスタンスからのすべての呼び出しがサービス型の同じインスタンスにルーティングされることを指定<xref:System.ServiceModel.ServiceBehaviorAttribute>するがあります。
 
 ```csharp
 [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]
@@ -675,21 +671,21 @@ void ITradingService.AddTrade(Trade trade)
 }
 ```
 
-ASP.NET では、経由でコントロールが用意されていますが、状態の情報、<xref:System.Web.HttpContext>クラスが実際に格納されている WCF では、少なくとも、初期のバージョンでは拡張可能なオブジェクトを格納する場所を細かく制御します。 WCF サービスの ASP.NET 互換モードを選択するため、推奨する理由を構成します。 このような制御が不可欠な応用の場合、ASP.NET 互換モードにすれば、ASP.NET と同様に <xref:System.Web.HttpContext> クラスの機能を活用できるばかりでなく、<xref:System.Web.HttpContext> クラスで管理する状態情報の実際の格納場所も制御できます。
+ASP.NET では、 <xref:System.Web.HttpContext>クラス内の状態情報を実際に格納する場所を制御できますが、WCF は少なくとも最初のバージョンでは、拡張可能なオブジェクトが格納される場所を制御できません。 これは、WCF サービスの ASP.NET 互換モードを選択するための非常に最良の理由です。 このような制御が不可欠な応用の場合、ASP.NET 互換モードにすれば、ASP.NET と同様に <xref:System.Web.HttpContext> クラスの機能を活用できるばかりでなく、<xref:System.Web.HttpContext> クラスで管理する状態情報の実際の格納場所も制御できます。
 
 ## <a name="security"></a>セキュリティ
 
-ASP.NET Web サービスのセキュリティ保全の手順は、IIS アプリケーションのセキュリティ保全の手順と同じです。 IIS 内でだけでなく、任意の .NET 実行可能ファイル内でも、WCF アプリケーションをホストできるため、WCF アプリケーションをセキュリティで保護するためのオプションに IIS の機能から独立して行う必要があります。 ただし、ASP.NET Web サービスを提供する機能では、ASP.NET 互換モードで実行されている WCF サービスを入手できます。
+ASP.NET Web サービスのセキュリティ保全の手順は、IIS アプリケーションのセキュリティ保全の手順と同じです。 WCF アプリケーションは IIS 内だけでなく、.NET 実行可能ファイル内でもホストできるため、WCF アプリケーションをセキュリティで保護するためのオプションは、IIS の機能とは独立したものにする必要があります。 ただし、ASP.NET Web サービスに提供されている機能は、ASP.NET 互換モードで実行されている WCF サービスでも使用できます。
 
 ### <a name="security-authentication"></a>セキュリティ:認証
 
-IIS は、匿名アクセスまたはさまざまな認証のモードのいずれかを選択する、アプリケーションへのアクセスを制御するための機能を提供します。Windows 認証、ダイジェスト認証、基本認証、および .NET Passport 認証します。 Windows 認証は、ASP.NET Web サービスへのアクセス制御に使えます。 ただし、WCF アプリケーションが IIS 内でホストされているときに、さまざまなその他のオプション間での Windows 認証をサポートして、WCF によって、その認証を管理できるように、アプリケーションへの匿名アクセスを許可するように IIS を構成する必要があります。 他の認証方法としては、ユーザー名トークン、X.509 証明書、SAML トークン、CardSpace カードなどが組み込まれていますが、独自の認証機構を定義することも可能です。
+IIS には、匿名アクセスまたはさまざまな認証モードを選択できるアプリケーションへのアクセスを制御する機能が用意されています。Windows 認証、ダイジェスト認証、基本認証、および .NET Passport 認証。 Windows 認証は、ASP.NET Web サービスへのアクセス制御に使えます。 ただし、WCF アプリケーションが IIS 内でホストされている場合、アプリケーションへの匿名アクセスを許可するように IIS を構成する必要があります。これにより、他のさまざまなオプション間で Windows 認証をサポートする WCF 自体で認証を管理できます。 他の認証方法としては、ユーザー名トークン、X.509 証明書、SAML トークン、CardSpace カードなどが組み込まれていますが、独自の認証機構を定義することも可能です。
 
 ### <a name="security-impersonation"></a>セキュリティ:偽装
 
-ASP.NET Web サービスは ASP.NET の ID 要素を使用して、あるユーザーに偽装することができます。あらかじめ設定した特定のユーザーでなくても、要求に資格情報が添えられていれば、その要求元ユーザーに偽装できます。 ASP.NET 互換モードで実行されている WCF アプリケーションで偽装を構成するのには、その要素を使用できます。
+ASP.NET Web サービスは ASP.NET の ID 要素を使用して、あるユーザーに偽装することができます。あらかじめ設定した特定のユーザーでなくても、要求に資格情報が添えられていれば、その要求元ユーザーに偽装できます。 この要素を使用して、ASP.NET 互換モードで実行されている WCF アプリケーションで偽装を構成できます。
 
-WCF 構成システムは、特定の権限を借用するユーザーを指定するため、独自の id 要素を提供します。 また、WCF クライアントおよびサービス別に構成できます権限借用のため。 クライアント側では、要求を送信する現在のユーザーに偽装する構成が可能です。
+WCF 構成システムには、偽装する特定のユーザーを指定するための独自の id 要素が用意されています。 また、WCF クライアントとサービスは、権限借用のために個別に構成できます。 クライアント側では、要求を送信する現在のユーザーに偽装する構成が可能です。
 
 ```xml
 <behaviors>
@@ -708,17 +704,17 @@ WCF 構成システムは、特定の権限を借用するユーザーを指定�
 public void Receive(Message input)
 ```
 
-### <a name="security-authorization-using-access-control-lists"></a>セキュリティ:アクセス制御リストを使用した承認
+### <a name="security-authorization-using-access-control-lists"></a>セキュリティ:Access Control リストを使用した承認
 
-アクセス制御リスト (ACL) を使って .asmx ファイルへのアクセスを制限できます。 ただし、WCF の .svc ファイルの Acl は、ASP.NET 互換モードでを除き無視されます。
+アクセス制御リスト (ACL) を使って .asmx ファイルへのアクセスを制限できます。 ただし、ASP.NET 互換モードの場合を除き、WCF .svc ファイルの Acl は無視されます。
 
-### <a name="security-role-based-authorization"></a>セキュリティ:ロール ベースの承認
+### <a name="security-role-based-authorization"></a>セキュリティ:ロールベースの承認
 
 IIS の Windows 認証オプションを、ASP.NET 構成言語の承認要素と組み合わせて使用すると、ASP.NET Web サービスに対し、各ユーザーが属する Windows グループに基づくロール ベースの承認機構を提供できます。 ASP.NET 2.0 には、より汎用的なロール ベースの承認機構である、ロール プロバイダーが導入されました。
 
 ロール プロバイダーとは、ユーザーが割り当てられたロールに関する問い合わせを行う、基本インターフェイスを実装したクラス群です。各ロール プロバイダーには、さまざまな情報源から必要な情報を取得する手段が組み込まれています。 ASP.NET 2.0 には、Microsoft SQL Server データベースからロールの割り当てを検索できるロール プロバイダーと、Windows Server 2003 承認マネージャーから検索できるロール プロバイダーがあります。
 
-ロール プロバイダーのメカニズムは、WCF アプリケーションなど、任意の .NET アプリケーションで ASP.NET とは無関係に実際に使用できます。 WCF アプリケーションの次のサンプルの構成方法を示します、ASP.NET ロール プロバイダーを使用して選択されたオプション、<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>します。
+ロールプロバイダーのメカニズムは、WCF アプリケーションを含む任意の .NET アプリケーションの ASP.NET とは無関係に使用できます。 次の WCF アプリケーションのサンプル構成では、ASP.NET ロールプロバイダーの使用方法が、 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>で選択されたオプションであることを示します。
 
 ```xml
 <system.serviceModel>
@@ -741,9 +737,9 @@ IIS の Windows 認証オプションを、ASP.NET 構成言語の承認要素�
 
 ### <a name="security-claims-based-authorization"></a>セキュリティ:クレーム ベースの承認
 
-WCF の最も重要な技術革新の 1 つは、クレームに基づく保護されたリソースへのアクセスを承認するための完全なサポートです。 クレームは、型、権限、および値で構成されます。たとえば、運転免許証を考えてみましょう。 ここには所持者に関する誕生日などの情報 (ここでいう「クレーム」) が記載されています。 つまり、クレームの型は「誕生日」、値は運転者の実際の誕生日です。 また、クレームの権限は、所持者がこの値に対してできることを表します。 誕生日について言えば、所持者はこの情報を「見る」ことはできますが、「書き換える」ことはできません。 クレーム ベースの承認は、ロール ベースの承認を包含する概念です。というのも、ロールはクレームの 1 つの型であると考えることができるからです。
+WCF の最も重要なイノベーションの1つは、要求に基づいて保護されたリソースへのアクセスの承認を完全にサポートすることです。 クレームは、型、権限、および値で構成されます。たとえば、運転免許証を考えてみましょう。 ここには所持者に関する誕生日などの情報 (ここでいう「クレーム」) が記載されています。 つまり、クレームの型は「誕生日」、値は運転者の実際の誕生日です。 また、クレームの権限は、所持者がこの値に対してできることを表します。 誕生日について言えば、所持者はこの情報を「見る」ことはできますが、「書き換える」ことはできません。 クレーム ベースの承認は、ロール ベースの承認を包含する概念です。というのも、ロールはクレームの 1 つの型であると考えることができるからです。
 
-クレーム ベースの承認では、一連のクレームを操作のアクセス要求と比較し、その結果に応じてアクセスを許可または拒否します。 WCF を使用して値を割り当てることで、クレーム ベースの承認をもう一度実行するクラスを指定することができます、`ServiceAuthorizationManager`プロパティの<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>します。
+クレーム ベースの承認では、一連のクレームを操作のアクセス要求と比較し、その結果に応じてアクセスを許可または拒否します。 WCF では、の`ServiceAuthorizationManager` <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>プロパティに値を割り当てることによって、要求ベースの承認を再実行するために使用するクラスを指定できます。
 
 ```xml
 <behaviors>
@@ -755,17 +751,17 @@ WCF の最も重要な技術革新の 1 つは、クレームに基づく保護�
 </behaviors>
 ```
 
-クレーム ベースの承認を行うクラスは、<xref:System.ServiceModel.ServiceAuthorizationManager> を継承し、`AccessCheck()` メソッドだけをオーバーライドして定義します。 WCF サービスの操作が呼び出され、提供されるたびにこのメソッドを呼び出して、 <xref:System.ServiceModel.OperationContext> 、ユーザーのクレームを持つオブジェクトでその`ServiceSecurityContext.AuthorizationContext`プロパティ。 WCF はセキュリティ トークンからユーザーに関するクレームをアセンブル、これが認証に指定されたユーザー、問題の操作をこれらの要求が十分であるかどうかを評価します。
+クレーム ベースの承認を行うクラスは、<xref:System.ServiceModel.ServiceAuthorizationManager> を継承し、`AccessCheck()` メソッドだけをオーバーライドして定義します。 WCF は、サービスの操作が呼び出されるたびに、そのメソッドを<xref:System.ServiceModel.OperationContext>呼び出し、その`ServiceSecurityContext.AuthorizationContext`プロパティでユーザーのクレームを持つオブジェクトを提供します。 WCF では、ユーザーに関する認証用に提供されたセキュリティトークンからユーザーに関するクレームをアセンブルする処理を行います。これにより、該当する操作に対して十分な要求があるかどうかを評価するタスクが残ります。
 
-WCF は、任意の種類のセキュリティから要求を自動的に作成トークンは非常に重要な技術革新、認証メカニズムの完全に独立したクレーム ベースの承認のコードを可能になったためです。 これに対し、ACL やロール ベースの承認は、Windows 認証と密に関連し合っています。
+WCF では、任意の種類のセキュリティトークンからのクレームを自動的にアセンブルすることが非常に重要なイノベーションです。これは、認証メカニズムに関係なく、信頼性の高い要求に基づいてコードを承認するためです。 これに対し、ACL やロール ベースの承認は、Windows 認証と密に関連し合っています。
 
 ### <a name="security-confidentiality"></a>セキュリティ:機密性
 
-ASP.NET Web サービスとの間でやり取りするメッセージの機密性は、トランスポート層で、IIS 上のアプリケーションが Secure Hypertext Transfer Protocol (HTTPS) を使うように構成することによって確保します。 IIS 内でホストされる WCF アプリケーションは、同じを実行できます。 ただし、IIS の外部でホストされる WCF アプリケーションは、セキュリティで保護されたトランスポート プロトコルを使用しても構成できます。 もっと重要な WCF アプリケーションを構成して Ws-security プロトコルを使用して、配送される前に、メッセージをセキュリティで保護することもできます。 メッセージの本体を WS-Security で保護することにより、最終送信先に到達するまでの中継ノードで機密が洩れないようにすることができます。
+ASP.NET Web サービスとの間でやり取りするメッセージの機密性は、トランスポート層で、IIS 上のアプリケーションが Secure Hypertext Transfer Protocol (HTTPS) を使うように構成することによって確保します。 IIS 内でホストされている WCF アプリケーションに対しても同じことができます。 ただし、IIS の外部でホストされている WCF アプリケーションは、セキュリティで保護されたトランスポートプロトコルを使用するように構成することもできます。 さらに重要な点として、WCF アプリケーションは、WS-SECURITY プロトコルを使用してメッセージを転送する前にセキュリティで保護するように構成することもできます。 メッセージの本体を WS-Security で保護することにより、最終送信先に到達するまでの中継ノードで機密が洩れないようにすることができます。
 
 ## <a name="globalization"></a>グローバリゼーション
 
-ASP.NET 構成言語では、個々のサービスごとにカルチャを指定することができます。 WCF では、ASP.NET 互換モードで以外には、その構成設定をサポートしません。 ASP.NET 互換モードを使用しない WCF サービスをローカライズするには、カルチャに固有のアセンブリにサービスの種類をコンパイルして各カルチャに固有のアセンブリのカルチャに固有の別個のエンドポイントがあります。
+ASP.NET 構成言語では、個々のサービスごとにカルチャを指定することができます。 WCF では、ASP.NET 互換モードを除き、この構成設定はサポートされません。 ASP.NET 互換モードを使用しない WCF サービスをローカライズするには、サービスの種類をカルチャ固有のアセンブリにコンパイルし、カルチャ固有のアセンブリごとにカルチャ固有のエンドポイントを個別に用意します。
 
 ## <a name="see-also"></a>関連項目
 

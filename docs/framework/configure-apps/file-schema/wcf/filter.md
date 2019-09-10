@@ -2,18 +2,21 @@
 title: <filter>
 ms.date: 03/30/2017
 ms.assetid: 3266700b-904b-44e4-93a7-e06a1a445100
-ms.openlocfilehash: 68de255b9f11dc4377159d1cc3efa575633db316
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6e78275aaeb202405e327302455d56fa431d7f27
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918889"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855251"
 ---
 # <a name="filter"></a>\<フィルター >
 
 受信メッセージを評価するときに使用する Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter>の種類、およびフィルターに必要なサポートデータまたはパラメーターを決定するルーティングフィルターを定義します。
 
-\<system.serviceModel> \<routing> \<filters> \<filter>
+[ **\<system.serviceModel>** ](system-servicemodel.md)\
+&nbsp;&nbsp;[ **\<ルーティング >** ](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<フィルター >** ](filters-of-routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<フィルター >**  
   
 ## <a name="syntax"></a>構文  
   

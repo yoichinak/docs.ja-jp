@@ -2,12 +2,12 @@
 title: 'コマンド ツリーからの SQL の生成: ベスト プラクティス'
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 366e27f8c8a04c5d2507ab37459ad6d5abc255ae
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9859c7df941ae6681c991001e0d1e5a50c7ffc60
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251568"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855003"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>コマンド ツリーからの SQL の生成: ベスト プラクティス
 
@@ -137,11 +137,11 @@ ON b.y = d.z
 
 ## <a name="avoid-select-"></a>SELECT * の回避
 
-ベース テーブルから選択する際には `SELECT *` を使用しないでください。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]アプリケーションのストレージモデルには、データベーステーブル内の列のサブセットのみを含めることができます。 この場合、`SELECT *` によって正しくない結果が生成される可能性があります。 代わりに、関与する式の結果の型の列名を使用して、関与するすべての列を指定してください。
+ベース テーブルから選択する際には `SELECT *` を使用しないでください。 Entity Framework アプリケーションのストレージモデルには、データベーステーブル内の列のサブセットのみを含めることができます。 この場合、`SELECT *` によって正しくない結果が生成される可能性があります。 代わりに、関与する式の結果の型の列名を使用して、関与するすべての列を指定してください。
 
 ## <a name="reuse-of-expressions"></a>式の再利用
 
-式は、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] によって渡されたクエリ コマンド ツリーで再利用できます。 各式は、クエリ コマンド ツリーで 1 回しか使用できないわけではありません。
+式は、Entity Framework によって渡されたクエリコマンドツリーで再利用できます。 各式は、クエリ コマンド ツリーで 1 回しか使用できないわけではありません。
 
 ## <a name="mapping-primitive-types"></a>プリミティブ型のマッピング
 

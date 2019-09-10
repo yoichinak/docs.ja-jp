@@ -2,18 +2,20 @@
 title: <metadata>
 ms.date: 03/30/2017
 ms.assetid: d09653eb-e355-4c73-b87b-28f93d56480d
-ms.openlocfilehash: 4555dc9c2e0b783de2fb57e47c9aada0d69462e7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 028e4d3fbe7bce06caa7497c8f95f3b293a4b068
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931312"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855230"
 ---
 # <a name="metadata"></a>\<matadata>
 サービス メタデータを処理する方法を指定します。  
   
- \<system.ServiceModel >  
-\<client>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<クライアント >** ](client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<メタデータ >**  
   
 ## <a name="syntax"></a>構文  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 578c480940d70fa84edf18d572992e755c8efed5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d7ddae58874c69468eb6ff1762db9083897b1acd
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780320"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854072"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>WCF Data Services の開発とデプロイ
 
@@ -121,7 +121,7 @@ WCF Data Services では、データ サービスをホストするプロセス�
 
 データ サービスを配置する際は、次の点を考慮してください。
 
-- [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] プロバイダーを使用して SQL Server データベースにアクセスするデータ サービスを配置する場合、データ サービスの配置でのデータ構造、データ、またはその両方の反映も必要になることがあります。 Visual Studio では、スクリプト (.sql ファイル) を自動的に作成してコピー先データベースで実行できます。これらのスクリプトは、ASP.NET アプリケーションの Web 配置パッケージに含めることができます。 詳細については、「[方法 :Web アプリケーションプロジェクト](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))を使用してデータベースを配置します。 ASP.NET Web サイトでは、Visual Studio の**データベース発行ウィザード**を使用してこれを行うことができます。 詳細については、「 [SQL Database の発行](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100))」を参照してください。
+- Entity Framework プロバイダーを使用して SQL Server データベースにアクセスするデータサービスを配置する場合は、データサービスの配置にデータ構造、データ、またはその両方を伝達することが必要になる場合があります。 Visual Studio では、スクリプト (.sql ファイル) を自動的に作成してコピー先データベースで実行できます。これらのスクリプトは、ASP.NET アプリケーションの Web 配置パッケージに含めることができます。 詳細については、「[方法 :Web アプリケーションプロジェクト](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))を使用してデータベースを配置します。 ASP.NET Web サイトでは、Visual Studio の**データベース発行ウィザード**を使用してこれを行うことができます。 詳細については、「 [SQL Database の発行](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100))」を参照してください。
 
 - WCF Data Services には基本的な WCF 実装が含まれているため、windows server AppFabric を使用して、Windows Server 上で実行されている IIS に配置されたデータサービスを監視できます。 Windows Server AppFabric を使用したデータサービスの監視の詳細については、「 [Windows Server appfabric を使用した WCF Data Services の追跡](https://go.microsoft.com/fwlink/?LinkID=202005)」を参照してください。
 

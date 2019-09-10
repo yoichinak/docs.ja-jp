@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d70b502f-6a15-4120-b4fe-500b173ad9cc
-ms.openlocfilehash: 5262d2bca07525aba6db5303e730c8b358641d52
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e625ac3968542c65e737093c0ac292de4c2ffa37
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250972"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854457"
 ---
 # <a name="expressions-in-linq-to-entities-queries"></a>LINQ to Entities クエリ内の式
 式は、単一の値、オブジェクト、メソッド、または名前空間として評価されるコード フラグメントです。 式には、リテラル値、メソッド呼び出し、演算子とそのオペランド、または単純な名前を含めることができます。 単純な名前には、変数、型メンバー、メソッド パラメーター、名前空間、または型の名前を指定できます。 式では、他の式をパラメーターとして使用する演算子、またはパラメーターが他のメソッド呼び出しであるメソッド呼び出しを使用できます。 したがって、単純な式だけでなく、非常に複雑な式も作成できます。  
   
- LINQ to Entities のクエリでは、ラムダ式を含む、 <xref:System.Linq.Expressions>名前空間内の型で許可されているものを式に含めることができます。 LINQ to Entities クエリで使用できる式は、 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]にクエリを実行するために使用できる式のスーパーセットです。  に対する[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]クエリの一部である式は、および基になる`ObjectQuery<T>`データソースでサポートされている操作に制限されます。  
+ LINQ to Entities のクエリでは、ラムダ式を含む、 <xref:System.Linq.Expressions>名前空間内の型で許可されているものを式に含めることができます。 LINQ to Entities クエリで使用できる式は、Entity Framework のクエリに使用できる式のスーパーセットです。 Entity Framework に対するクエリの一部である式は、およびで`ObjectQuery<T>`サポートされる操作に制限されています。基になるデータソース。  
   
  次の例では、`Where` 句で使用される比較の式を示します。  
   

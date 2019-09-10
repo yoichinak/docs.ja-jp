@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: b4ea05b0112af4c1dcb6308a08ab3b31c586fbe8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 17d54210d7abc16fe91fa94f39a8f85eac866088
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790857"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854192"
 ---
 # <a name="feed-customization-wcf-data-services"></a>フィードのカスタマイズ (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]を使用してデータをフィードとして公開します。[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]では、データフィードに Atom 形式と JavaScript Object Notation (JSON) 形式の両方をサポートしています。 Atom フィードを使用すると、 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]は、エンティティやリレーションシップなどのデータを、HTTP メッセージの本文に含めることができる XML 形式にシリアル化するための標準的な方法を提供します。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]エンティティと Atom 要素に格納されているデータ間の既定のエンティティプロパティマッピングを定義します。 詳細については[、「OData:Atom 形式](https://go.microsoft.com/fwlink/?LinkID=185794)。  
@@ -31,7 +31,7 @@ ms.locfileid: "70790857"
 > カスタム フィードを定義する場合、カスタム マッピングが定義されているすべてのエンティティ プロパティが投影に含まれることを保証する必要があります。 マップされているエンティティ プロパティがこの射影に含まれていない場合、データの損失が発生することがあります。 詳細については、「[クエリプロジェクション](query-projections-wcf-data-services.md)」を参照してください。  
   
 ## <a name="customizing-feeds-with-the-entity-framework-provider"></a>Entity Framework プロバイダーを使用したフィードのカスタマイズ  
- [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] プロバイダーで使用されるデータ モデルは、.edmx ファイルの XML として表現されます。 この場合、カスタム フィードを定義する属性が、データ モデルのエンティティ型とプロパティを表現する `EntityType` および `Property` 要素に追加されます。 これらのフィードのカスタマイズ属性は、 [MC-CSDL\]で\[定義されていません。概念スキーマ定義ファイル形式](https://go.microsoft.com/fwlink/?LinkId=159072)。 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]プロバイダーがデータモデルを定義するために使用する形式です。 したがって、フィードのカスタマイズ属性を特定のスキーマ名前空間で宣言する必要があります。これは、`m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"` として定義されます。 次の XML フラグメントは、`Property`、`Products`、および `ProductName` プロパティを定義する `ReorderLevel` エンティティ型の `UnitsInStock` 要素に適用されたフィードのカスタマイズ属性を示します。  
+ Entity Framework プロバイダーで使用されるデータ モデルは、.edmx ファイルの XML として表現されます。 この場合、カスタム フィードを定義する属性が、データ モデルのエンティティ型とプロパティを表現する `EntityType` および `Property` 要素に追加されます。 これらのフィードのカスタマイズ属性は、 [MC-CSDL\]で\[定義されていません。概念スキーマ定義ファイル形式](https://go.microsoft.com/fwlink/?LinkId=159072)。 Entity Framework プロバイダーがデータモデルを定義するために使用する形式です。 したがって、フィードのカスタマイズ属性を特定のスキーマ名前空間で宣言する必要があります。これは、`m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"` として定義されます。 次の XML フラグメントは、`Property`、`Products`、および `ProductName` プロパティを定義する `ReorderLevel` エンティティ型の `UnitsInStock` 要素に適用されたフィードのカスタマイズ属性を示します。  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/northwind.csdl#edmfeedattributes)]  
   

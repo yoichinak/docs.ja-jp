@@ -3,12 +3,12 @@ title: WIF および Web ファーム
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: e6806971bd2260785d66bfdb54a3e2938043c746
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09d5f3f745f170439a7fbf160b78439c103623b9
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967188"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851523"
 ---
 # <a name="wif-and-web-farms"></a>WIF および Web ファーム
 Windows Identity Foundation (WIF) を使用して、Web ファームに展開されている証明書利用者 (RP) アプリケーションのリソースをセキュリティで保護するには、ファーム内の別のコンピューターで実行されている RP アプリケーションのインスタンスのトークンを WIF が処理できるように、特定の手順を実行する必要があります。 この処理には、セッション トークン シグネチャの検証、セッション トークンの暗号化と復号化、再生されたセキュリティ トークンの検出が含まれます。  
@@ -64,7 +64,7 @@ Windows Identity Foundation (WIF) を使用して、Web ファームに展開さ
 ## <a name="the-wcf-caching-service"></a>WCF キャッシュ サービス  
  次のインターフェイスでは、証明書利用者アプリケーションが使用している WCF キャッシュ サービスと WCF クライアント間のコントラクトを定義して通信します。 これは、実質的にサービス操作として <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> クラスのメソッドを公開するものです。  
   
-```  
+```csharp
 [ServiceContract()]  
 public interface ISessionSecurityTokenCacheService  
 {  
@@ -90,7 +90,7 @@ public interface ISessionSecurityTokenCacheService
   
  WCF キャッシュ サービスの実装を次のコードに示します。 この例では、WIF に実装されている既定のメモリ内セッション トークン キャッシュが使用されます。 または、データベースに基づく永続的なキャッシュを実装することもできます。 `ISessionSecurityTokenCacheService` で、上記のインターフェイスを定義します。 この例では、簡略化のために、インターフェイスの実装に必要なメソッドのすべてを示していません。  
   
-```  
+```csharp
 using System;  
 using System.Collections.Generic;  
 using System.IdentityModel.Configuration;  
@@ -150,7 +150,7 @@ namespace WcfSessionSecurityTokenCacheService
   
  このクラスは <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A> メソッドをオーバーライドし、`<sessionSecurityTokenCache>` 要素のカスタム `<cacheServiceAddress>` 子要素からサービス エンドポイントを取得します。 このエンドポイントを使用して、サービスとの通信に使用する `ISessionSecurityTokenCacheService` チャネルを初期化します。  この例では、簡略化のために、<xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> クラスの実装に必要なメソッドのすべてを示していません。  
   
-```  
+```csharp
 using System;  
 using System.Configuration;  
 using System.IdentityModel.Configuration;  

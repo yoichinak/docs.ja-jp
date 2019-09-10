@@ -2,31 +2,33 @@
 title: <udpDiscoveryEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 1f485329-2771-43bc-88de-df8f2faa3bb7
-ms.openlocfilehash: e6e567e8a657b4c1683ae4abfb14f96a0f272e4a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1729255c68c75f824b8cd8c87f106a4a9b3550f6
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934593"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854893"
 ---
 # <a name="udpdiscoveryendpoint"></a>\<udpDiscoveryEndpoint >
 この構成要素は、UDP マルチキャスト バインディングを使用した探索操作用に事前に構成される標準エンドポイントを定義します。 このエンドポイントには固定コントラクトがあり、WS-Discovery プロトコルの 2 つのバージョンをサポートします。 また、WS-Discovery の仕様 (WS-Discovery April 2005 または WS-Discovery V1.1) に規定された固定 UDP バインディングと既定のアドレスも備えています。  
   
- \<system.ServiceModel >  
-\<standardEndpoints >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<standardEndpoints >** ](standardendpoints.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<udpDiscoveryEndpoint >**  
   
 ## <a name="syntax"></a>構文  
   
 ```xml  
 <system.serviceModel>
   <standardEndpoints>
-    <discoveryEndpoint>
+    <udpDiscoveryEndpoint>
       <standardEndpoint discoveryMode="Adhoc/Managed"
                         discoveryVersion="WSDiscovery11/WSDiscoveryApril2005"
                         maxResponseDelay="Timespan"
                         multicastAddress="Uri"
                         name="String" />
-    </discoveryEndpoint>
+    </udpDiscoveryEndpoint>
   </standardEndpoints>
 </system.serviceModel>
 ```  

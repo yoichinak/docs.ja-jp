@@ -2,12 +2,12 @@
 title: パフォーマンスに関する考慮事項 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: 99969d7991f613bd8049aac81669583372e0f2c6
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: eb46b183ec1e930dfe5c4a1eea237024033c357d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248517"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854605"
 ---
 # <a name="performance-considerations-entity-framework"></a>パフォーマンスに関する考慮事項 (Entity Framework)
 このトピックでは、ADO.NET Entity Framework のパフォーマンス特性を示し、Entity Framework アプリケーションのパフォーマンスを向上させるために役立つ注意事項について説明します。  
@@ -18,7 +18,7 @@ ms.locfileid: "70248517"
 |操作|相対コスト|頻度|コメント|  
 |---------------|-------------------|---------------|--------------|  
 |メタデータの読み込み|中|各アプリケーション ドメイン内で 1 回|Entity Framework が使用するモデルとマッピングのメタデータが、<xref:System.Data.Metadata.Edm.MetadataWorkspace> に読み込まれます。 このメタデータはグローバルにキャッシュされ、同じアプリケーション ドメイン内にある <xref:System.Data.Objects.ObjectContext> の他のインスタンスも使用できるようになります。|  
-|データベース接続を開く|中<sup>1</sup>|必要時|開いているデータベースへの接続によって貴重なリソース[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]が消費されるため、は必要な場合にのみデータベース接続を開き、閉じます。 接続は、明示的に開くこともできます。 詳細については、「[接続とトランザクションの管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))」を参照してください。|  
+|データベース接続を開く|中<sup>1</sup>|必要時|開いているデータベースへの接続によって貴重なリソースが消費されるため、Entity Framework は必要に応じてのみデータベース接続を開き、閉じます。 接続は、明示的に開くこともできます。 詳細については、「[接続とトランザクションの管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))」を参照してください。|  
 |ビューの生成|High|各アプリケーション ドメイン内で 1 回 (事前生成可能)|Entity Framework が、概念モデルに対してクエリを実行したり変更内容をデータ ソースに保存したりできるようになるには、データベースにアクセスするためのローカル クエリ ビューのセットを事前に生成しておく必要があります。 このビューを生成する際のコストは高いため、デザイン時にビューを事前に作成してプロジェクトに追加しておくことができます。 詳細については、「[方法 :クエリのパフォーマンス](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))を向上させるためにビューを事前に生成します。|  
 |クエリの準備|中<sup>2</sup>|各一意のクエリに対して 1 回|クエリ コマンドを作成したり、モデルとマッピングのメタデータに基づいてコマンド ツリーを生成したり、返されるデータの形状を定義したりするためのコストが含まれます。 Entity SQL と LINQ の両方のクエリ コマンドがキャッシュされるため、同じクエリであれば、後続の実行は短時間で済みます。 後続の実行でさらにコストを削減するためにコンパイル済み LINQ クエリを使用でき、コンパイル済みクエリが自動的にキャッシュされる LINQ クエリよりも効率的である場合があります。 詳細については、「[コンパイル済みクエリ (LINQ to Entities)](./language-reference/compiled-queries-linq-to-entities.md)」を参照してください。 LINQ クエリの実行に関する一般的な情報については、「 [LINQ to Entities](./language-reference/linq-to-entities.md)」を参照してください。 **注:** メモリ内コレクションへ `Enumerable.Contains` 演算子を追加する LINQ to Entities クエリは自動的にキャッシュされません。 またコンパイル済み LINQ クエリのメモリ内コレクションをパラメーターで表すことは許可されていません。|  
 |クエリの実行|低<sup>2</sup>|各クエリに対して 1 回|ADO.NET データ プロバイダーを使用してデータ ソースに対してコマンドを実行するコスト。 大半のデータ ソースではクエリ プランがキャッシュされるため、同じクエリであれば、後続の実行は短時間で済むことがあります。|  
@@ -116,7 +116,7 @@ ms.locfileid: "70248517"
   
 - 明示的トランザクションを常に DTC に昇格する SQL Server 2000 データベースやその他のデータ ソースに対して、明示的トランザクションで操作を実行する場合。  
   
-- SQL Server 2005 に対して明示的トランザクションで操作を実行し、かつ接続が [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] によって管理される場合。 これは、接続が閉じられてから同じトランザクション内で再度開かれると、SQL Server 2005 が DTC に必ず昇格するためです。この動作は、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] の既定の動作です。 この DTC 昇格は、SQL Server 2008 使用時には生じません。 SQL Server 2005 使用時にこの昇格を回避するには、トランザクション内で接続を明示的に開いて閉じる必要があります。 詳細については、「[接続とトランザクションの管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))」を参照してください。  
+- 接続が Entity Framework によって管理されている場合に、SQL Server 2005 に対して操作を行う明示的なトランザクション。 これは、接続が閉じられ、1つのトランザクション内で再度開かれるたびに (Entity Framework の既定の動作)、SQL Server 2005 が DTC に昇格するために発生します。 この DTC 昇格は、SQL Server 2008 使用時には生じません。 SQL Server 2005 使用時にこの昇格を回避するには、トランザクション内で接続を明示的に開いて閉じる必要があります。 詳細については、「[接続とトランザクションの管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))」を参照してください。  
   
  明示的トランザクションが使用されるのは、1 つの <xref:System.Transactions> トランザクション内で操作を 1 つ以上実行するときです。 詳細については、「[接続とトランザクションの管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))」を参照してください。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "70248517"
  通常は、<xref:System.Data.Objects.ObjectContext> ステートメント (Visual Basic では `using`) 内に `Using…End Using` インスタンスを作成する必要があります。 これにより、パフォーマンスが向上します。これは、コードがステートメント ブロックを終了するときに、オブジェクト コンテキストに関連付けられたリソースが自動的に廃棄されるからです。 ただし、オブジェクト コンテキストによって管理されるオブジェクトにコントロールがバインドされている場合、バインドが必要とされる間は <xref:System.Data.Objects.ObjectContext> インスタンスを保持し、手動で廃棄する必要があります。 詳細については、「[接続とトランザクションの管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))」を参照してください。  
   
 #### <a name="consider-opening-the-database-connection-manually"></a>データベース接続を手動で開くことを検討する  
- アプリケーションで一連のオブジェクトクエリまたは頻繁にの呼び出し<xref:System.Data.Objects.ObjectContext.SaveChanges%2A>を実行して、作成、更新、および削除の各操作を[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]データソースに保存する場合、は、データソースへの接続を継続的に開いて閉じる必要があります。 このような状況では、操作の開始時に接続を手動で開いて、操作の完了時に接続を手動で閉じるか廃棄することを検討してください。 詳細については、「[接続とトランザクションの管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))」を参照してください。  
+ アプリケーションで一連のオブジェクトクエリまたは頻繁に呼び出し<xref:System.Data.Objects.ObjectContext.SaveChanges%2A>を実行して、作成、更新、および削除の各操作をデータソースに保存する場合、Entity Framework はデータソースへの接続を継続的に開いて閉じる必要があります。 このような状況では、操作の開始時に接続を手動で開いて、操作の完了時に接続を手動で閉じるか廃棄することを検討してください。 詳細については、「[接続とトランザクションの管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))」を参照してください。  
   
 ## <a name="performance-data"></a>パフォーマンス データ  
  Entity Framework の一部のパフォーマンスデータは、 [ADO.NET チームのブログ](https://go.microsoft.com/fwlink/?LinkId=91905)の次の投稿で公開されています。  

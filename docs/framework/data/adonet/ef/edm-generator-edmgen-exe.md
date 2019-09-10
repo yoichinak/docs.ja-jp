@@ -2,18 +2,18 @@
 title: EDM ジェネレーター (EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: 688989fea6037cc989267e14b103210c2a995afa
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 82166782e25cb7a7ea23fe7faf7a30cb0e68d631
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251623"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854723"
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM ジェネレーター (EdmGen.exe)
 
-EdmGen.exe は、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] モデルとマッピング ファイルを操作するためのコマンドライン ツールです。 EdmGen.exe ツールを使用すると、次の操作を行うことができます。
+Edmgen.exe は、Entity Framework モデルファイルとマッピングファイルを操作するために使用されるコマンドラインツールです。 EdmGen.exe ツールを使用すると、次の操作を行うことができます。
 
-- データ ソース固有の .NET Framework データ プロバイダーを使用してデータ ソースに接続し、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] で使用される概念モデル (.csdl)、ストレージ モデル (.ssdl)、およびマッピング (.msl) のファイルを生成する。 詳細については、「[方法 :Edmgen.exe を使用して、モデルファイルとマッピングファイル](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)を生成します。
+- データソース固有の .NET Framework データプロバイダーを使用してデータソースに接続し、Entity Framework によって使用される概念モデル (.csdl)、ストレージモデル (.ssdl)、およびマッピング (.msl) ファイルを生成します。 詳細については、「[方法 :Edmgen.exe を使用して、モデルファイルとマッピングファイル](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)を生成します。
 
 - 既存のモデルを検証する。 詳細については、「[方法 :Edmgen.exe を使用して、モデルファイルとマッピング](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)ファイルを検証します。
 
