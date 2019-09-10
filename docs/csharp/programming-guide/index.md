@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: f41129b33b717efad5f1b1f59e40f95169e31bf8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f9ac3a6c1e96a1ba4cd78be46a1fd3ad7ee5e4ed
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589482"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850962"
 ---
 # <a name="c-programming-guide"></a>C# プログラミング ガイド
 このセクションでは、C# 言語の重要な機能に関する詳細と、.NET Framework 経由でアクセスできる C# の機能について説明します。  
   
- このセクションの大部分は、C# と一般的なプログラミングの概念について、ある程度の知識を持っていることを前提として説明されています。 プログラミングや C# のまったくの初心者の方は、「[Introduction to C# Tutorials](../tutorials/intro-to-csharp/index.md)」(C# チュートリアルの概要) や「[Getting Started with C#](https://www.microsoft.com/net/tutorials/csharp/getting-started)」(C# の概要) の対話型チュートリアルを参照してください。プログラミングの予備知識は必要ありません。  
+ このセクションの大部分は、C# と一般的なプログラミングの概念について、ある程度の知識を持っていることを前提として説明されています。 プログラミングや C# のまったくの初心者の方は、「[Introduction to C# Tutorials](../tutorials/intro-to-csharp/index.md)」(C# チュートリアルの概要) や「[.NET In-Browser Tutorial](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)」(ブラウザーでの .NET のチュートリアル) を参照してください。プログラミングの予備知識は必要ありません。  
   
  特定のキーワード、演算子、およびプリプロセッサ ディレクティブについては、「[C# リファレンス](../language-reference/index.md)」を参照してください。 C# 言語の仕様については、「[C# 言語仕様](../language-reference/language-specification/index.md)」を参照してください。  
   
