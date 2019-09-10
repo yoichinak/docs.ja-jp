@@ -7,12 +7,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 1608cd7b888a67af3ccb98b16323e74a9c5ad4a9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 4e51c5dd226533e7d1ce79a136dba19cbb252f92
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608402"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253915"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (ジェネリック型制約) (C# リファレンス)
 
@@ -20,40 +20,47 @@ ms.locfileid: "69608402"
 
 たとえば、型パラメーター `T` が <xref:System.IComparable%601> インターフェイスを実装するように、次のように `MyGenericClass` ジェネリック クラスを宣言できます。
 
-[!code-csharp[using an interface constraint](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#1)]
+[!code-csharp[using an interface constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#1)]
 
 > [!NOTE]
 > クエリ式での where 句の詳細については、「[where 句](where-clause.md)」を参照してください。
 
 `where` 句には基底クラスの制約を含めることもできます。 基底クラスの制約は、ジェネリック型の型引数として使用する型には、ジェネリック型の型引数として使用される基底クラスとして指定されているクラス (または基底クラス自体) が含まれている必要があることを指定します。 基底クラスの制約を使用する場合は、型パラメーターに関する制約よりも前に制約を記述する必要があります。 一部の型は、基底クラスの制約として許可されません (<xref:System.Object>、<xref:System.Array>、<xref:System.ValueType>)。 C# 7.3 より前は、<xref:System.Enum>、<xref:System.Delegate>、<xref:System.MulticastDelegate> も基底クラスの制約として許可されていません。 次の例では、この型は基底クラスとして指定できるようになったことを示しています。
 
-[!code-csharp[using an interface constraint](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#2)]
+[!code-csharp[using an interface constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#2)]
 
 `where` 句では、型が `class` または `struct` であることを指定できます。 `struct` 制約では、`System.ValueType` の基底クラスの制約を指定する必要はありません。 `System.ValueType` 型は基底クラスの制約として使用できません。 `class` 制約と `struct` 制約の両方の例を次に示します。
 
-[!code-csharp[using the class and struct constraints](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#3)]
+[!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#3)]
+
+`where` 句には、`notnull` 制約を含めることができます。 `notnull` 制約では、型パラメーターを null 非許容型に制限します。 その型には、[値型](struct.md)または null 非許容参照型を指定できます。 `notnull` 制約は、C# 8.0 以降の [`nullable enable` コンテキスト](../../nullable-references.md#nullable-contexts)でコンパイルされたコードで使用できます。 他の制約とは異なり、型引数が `notnull` 制約に違反すると、コンパイラによりエラーではなく警告が生成されます。 警告は、`nullable enable` コンテキストでのみ生成されます。 
+
+> [!IMPORTANT]
+> `notnull` 制約が含まれるジェネリック宣言は、null 許容が未指定のコンテキストで使用できますが、コンパイラではその制約は強制されません。
+
+[!code-csharp[using the nonnull constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#NotNull)]
 
 `where` 句には、`unmanaged` 制約を含めることもできます。 `unmanaged` 制約では、[アンマネージド型](../builtin-types/unmanaged-types.md)と呼ばれる型に対して型パラメーターを制限します。 `unmanaged` 制約を使用すると、C# でローレベルの相互運用コードを記述しやすくなります。 この制約では、すべてのアンマネージド型にわたって再利用可能なルーチンを可能にします。 `unmanaged` 制約は、`class` や `struct` 制約と組み合わせることはできません。 `unmanaged` 制約は `struct` にする必要がある型を適用します。
 
-[!code-csharp[using the unmanaged constraint](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#4)]
+[!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#4)]
 
-`where` 句には、コンストラクター制約 `new()` を含めることもできます。 その制約では、`new` 演算子を使用して型パラメーターのインスタンスを作成できるようにします。 [new() 制約](new-constraint.md)に基づいて、コンパイラは、指定されている型引数には、アクセス可能なパラメーターなしの (または既定の) コンストラクターが必要であることを認識します。 例:
+`where` 句には、コンストラクター制約 `new()` を含めることもできます。 その制約では、`new` 演算子を使用して型パラメーターのインスタンスを作成できるようにします。 [new() 制約](new-constraint.md)に基づいて、コンパイラは、指定されている型引数には、アクセス可能なパラメーターなしの (または既定の) コンストラクターが必要であることを認識します。 次に例を示します。
 
-[!code-csharp[using the new constraint](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#5)]
+[!code-csharp[using the new constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#5)]
 
 `new()` 制約は `where` 句の最後に示されます。 `new()` 制約は、`struct` や `unmanaged` 制約と組み合わせることはできません。 それらの制約を満たすすべての型には、`new()` 制約を重複させて、アクセス可能なパラメーターなしのコンストラクターが含まれている必要があります。
 
 複数の型パラメーターがある場合には、型パラメーターごとに `where` 句を 1 つずつ使用します。次に例を示します。
 
-[!code-csharp[using multiple where constraints](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#6)]
+[!code-csharp[using multiple where constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#6)]
 
 次の例に示すように、ジェネリック メソッドの型パラメーターにも制約を適用できます。
 
-[!code-csharp[where constraints with generic methods](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#7)]
+[!code-csharp[where constraints with generic methods](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#7)]
 
 デリゲートに対する型パラメーター制約を記述する構文は、メソッドの構文と同じである点に注意してください。
 
-[!code-csharp[where constraints with generic methods](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#8)]
+[!code-csharp[where constraints with generic methods](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#8)]
 
 汎用デリゲートについては、「[汎用デリゲート](../../programming-guide/generics/generic-delegates.md)」を参照してください。
 

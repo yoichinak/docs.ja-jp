@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: f3b0fe20ae9f6eb50f26d044f18e02214ce97757
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 87ca9b75d641035b268c6737822f198d1eea87e3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038471"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777509"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework でのトランスポート層セキュリティ (TLS) のベスト プラクティス
 
@@ -66,7 +66,9 @@ Windows フォームやその他のアプリケーションの場合は、「[�
 
 ### <a name="for-http-networking"></a>HTTP ネットワークの場合
 
-.NET Framework 4.7 以降のバージョンを使う <xref:System.Net.ServicePointManager> の既定の設定は、OS による最適なセキュリティ プロトコルとバージョンの選択です。 OS による既定の最適な選択を使用することが可能な場合は、<xref:System.Net.ServicePointManager.SecurityProtocol> プロパティの値を設定しないでください。 それ以外の場合は <xref:System.Net.SecurityProtocolType.SystemDefault> に設定します。
+<xref:System.Net.ServicePointManager> で .NET Framework 4.7 以降のバージョンを使用すると、OS で構成されている既定のセキュリティ プロトコルが使用されます。 OS による既定の選択を使用することが可能な場合は、<xref:System.Net.ServicePointManager.SecurityProtocol?displayProperty=nameWithType> プロパティの値を設定しないでください。これで既定の <xref:System.Net.SecurityProtocolType.SystemDefault?displayProperty=nameWithType> になります。
+
+<xref:System.Net.SecurityProtocolType.SystemDefault?displayProperty=nameWithType> 設定により <xref:System.Net.ServicePointManager> でオペレーティング システムによって構成された既定のセキュリティ プロトコルが使用されるため、アプリケーションが実行されている OS に基づいて異なる方法で実行される可能性があります。 たとえば、Windows 7 SP1 では TLS 1.0 が使用される一方で、Windows 8 と Windows 10 では TLS 1.2 が使用されます。
 
 HTTP ネットワークで、.NET Framework 4.7 以降のバージョンが対象の場合は、この記事の残りの部分は関係ありません。
 

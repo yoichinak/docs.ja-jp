@@ -3,12 +3,12 @@ title: C# の概要 - 対話型チュートリアル
 description: お使いのブラウザーで C# を学習し、独自の開発環境で使用を開始します
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 65526dcf04525f3f2afb358a5b6289ff8bba7de8
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 1712e32175a95373ca85464bbdebed9ef99fb375
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015008"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850770"
 ---
 # <a name="introduction-to-c"></a>C\# の概要
 
@@ -45,4 +45,4 @@ Hello World レッスンに続くすべての入門用チュートリアルは�
 この最後のチュートリアルは、お使いのマシンで、独自のローカルの開発環境と .NET Core を使用して行うためにのみ使用できます。
 コンソール アプリケーションを構築し、C# 言語に含まれるオブジェクト指向の基本的な機能について学習します。
 
-このチュートリアルでは、オンラインの入門用チュートリアルを終了していること、さらに [.NET Core SDK](https://www.microsoft.com/net/download) と [Visual Studio Code](https://code.visualstudio.com/) をインストール済みであることを前提としています。
+このチュートリアルでは、オンラインの入門用チュートリアルを終了していること、さらに [.NET Core SDK](https://dotnet.microsoft.com/download) と [Visual Studio Code](https://code.visualstudio.com/) をインストール済みであることを前提としています。

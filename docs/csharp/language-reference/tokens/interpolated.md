@@ -2,27 +2,26 @@
 title: $ - 文字列補間 - C# リファレンス
 ms.custom: seodec18
 description: 文字列補間では、従来の複合文字列の書式設定よりも読み取りやすく、便利な構文を書式指定文字列の出力に提供します。
-ms.date: 04/29/2019
+ms.date: 09/02/2019
 f1_keywords:
 - $_CSharpKeyword
 - $
 helpviewer_keywords:
 - $ special character [C#]
-- $ language element [C#]
 - string interpolation [C#]
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 1f0d63a549daa9fecd0cce3a7e5a6496929c37d2
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 53a8938a373136df65e23c162b94c4d8dc1f30b4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202960"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253861"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - 文字列補間 (C# リファレンス)
 
-`$` 特殊文字は、リテラル文字列を*挿入文字列*として識別します。 挿入文字列は、*補間式*が含まれている可能性がある文字列リテラルです。 挿入文字列が結果の文字列に解決されると、補間式を含む項目は、式の結果の文字列表現によって置き換えられます。 この機能は C# 6 以降のバージョンの言語で使用できます。
+`$` 特殊文字は、リテラル文字列を*挿入文字列*として識別します。 挿入文字列は、*補間式*が含まれている可能性がある文字列リテラルです。 挿入文字列が結果の文字列に解決されると、補間式を含む項目は、式の結果の文字列表現によって置き換えられます。 この機能は、C# 6 以降で使用できます。
 
 文字列補間では、[複合文字列の書式設定](../../../standard/base-types/composite-formatting.md)機能よりも読み取りやすく便利な構文を使用して書式指定された文字列を作成できます。 次の例では、両方の機能を使用して、同じ出力を生成します。
 
@@ -30,7 +29,7 @@ ms.locfileid: "70202960"
 
 ## <a name="structure-of-an-interpolated-string"></a>挿入文字列の構造
 
-文字列リテラルを挿入文字列として識別するため、先頭に `$` の記号を追加してください。 `$` と文字列リテラルを開始する `"` の間に空白を入れることはできません。 空白を入れると、コンパイル時エラーが発生します。
+文字列リテラルを挿入文字列として識別するため、先頭に `$` の記号を追加してください。 `$` と文字列リテラルを開始する `"` の間に空白を入れることはできません。
 
 補間式を含む項目の構造は、次のとおりです。
 
@@ -42,8 +41,8 @@ ms.locfileid: "70202960"
 
 |要素|説明|
 |-------------|-----------------|
-|`interpolationExpression`|書式設定される結果を生成する式です。 `null` 結果の文字列表現は、<xref:System.String.Empty?displayProperty=nameWithType> です。|
-|`alignment`|補間式の結果の文字列表現で、最小文字数を定義する値を持つ定数式です。 正の場合は、文字列表現は右揃えで配置され、負の場合は、左揃えで配置されます。 詳細については、「[Alignment コンポーネント](../../../standard/base-types/composite-formatting.md#alignment-component)」を参照してください。|
+|`interpolationExpression`|書式設定される結果を生成する式です。 `null` の文字列表記は <xref:System.String.Empty?displayProperty=nameWithType> です。|
+|`alignment`|式の結果の文字列表現で、最小文字数を定義する値を持つ定数式です。 正の場合は、文字列表現は右揃えで配置され、負の場合は、左揃えで配置されます。 詳細については、「[Alignment コンポーネント](../../../standard/base-types/composite-formatting.md#alignment-component)」を参照してください。|
 |`formatString`|式の結果の型によってサポートされる書式指定文字列です。 詳細については、「[Format String コンポーネント](../../../standard/base-types/composite-formatting.md#format-string-component)」を参照してください。|
 
 次の例では、前述したオプションの書式設定コンポーネントを使用します。
@@ -60,16 +59,16 @@ ms.locfileid: "70202960"
 
 [!code-csharp-interactive[example with ternary conditional operator](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
-逐語的挿入文字列は、`@` 文字が続く `$` 文字で始まります。 逐語的文字列の詳細については、[string](../keywords/string.md) と [逐語的識別子](verbatim.md)に関するトピックを参照してください。
+verbatim 補間文字列は、`$` 文字で始まり、`@` 文字が続きます。 逐語的文字列の詳細については、[string](../keywords/string.md) と [逐語的識別子](verbatim.md)に関するトピックを参照してください。
 
 > [!NOTE]
-> `$` トークンは、逐語的挿入文字列の `@` トークンの前に置く必要があります。
+> C# 8.0 以降では、`$` と `@` のトークンを任意の順序で使用できます。`$@"..."` と `@$"..."` はどちらも有効な verbatim 補間文字列です。 以前のバージョンの C# では、`$` トークンは `@` トークンの前に記述する必要があります。
 
-## <a name="implicit-conversions-and-specifying-iformatprovider-implementation"></a>暗黙的な変換と `IFormatProvider` 実装の指定
+## <a name="implicit-conversions-and-how-to-specify-iformatprovider-implementation"></a>暗黙的な変換と `IFormatProvider` 実装の指定方法
 
 挿入文字列から暗黙の変換を行う方法は 3 種類あります。
 
-1. 挿入文字列から <xref:System.String> インスタンスへの変換。これは、適切に書式設定された文字列表現の結果で置き換えられる、補間式の項目を含む挿入文字列分析の結果です。 この変換では、現在のカルチャを使用します。
+1. 挿入文字列から <xref:System.String> インスタンスへの変換。これは、適切に書式設定された文字列表現の結果で置き換えられる、補間式の項目を含む挿入文字列分析の結果です。 この変換では <xref:System.Globalization.CultureInfo.CurrentCulture> を使用して、式の結果の書式を設定します。
 
 1. 書式設定される式の結果と、挿入文字列から複合書式指定文字列を表す <xref:System.FormattableString> インスタンスへの変換。 これは、単一の <xref:System.FormattableString> インスタンスから、カルチャ固有のコンテンツを持つ複数の結果文字列の作成を可能にするものです。 そのためには、次のいずれかのメソッドを呼び出します。
 
@@ -77,7 +76,7 @@ ms.locfileid: "70202960"
       - <xref:System.Globalization.CultureInfo.InvariantCulture> の結果文字列を生成する <xref:System.FormattableString.Invariant%2A> メソッド。
       - 特定のカルチャの結果文字列を生成する <xref:System.FormattableString.ToString(System.IFormatProvider)> メソッド。
 
-    <xref:System.FormattableString.ToString(System.IFormatProvider)> メソッドを使用して、カスタム書式設定をサポートする <xref:System.IFormatProvider> インターフェイスのユーザー定義の実装を提供することもできます。 詳細については、「[ICustomFormatter を使用したカスタム書式設定](../../../standard/base-types/formatting-types.md#custom-formatting-with-icustomformatter)」を参照してください。
+    <xref:System.FormattableString.ToString(System.IFormatProvider)> メソッドを使用して、カスタム書式設定をサポートする <xref:System.IFormatProvider> インターフェイスのユーザー定義の実装を提供することもできます。 詳細については、「[ICustomFormatter を使用したカスタム書式設定](../../../standard/base-types/formatting-types.md#custom-formatting-with-icustomformatter)」の「[.NET での書式設定](../../../standard/base-types/formatting-types.md)」のセクションを参照してください。
 
 1. 挿入文字列から <xref:System.IFormattable> インスタンスへの変換。これは、単一の <xref:System.IFormattable> インスタンスから、カルチャ固有のコンテンツを持つ複数の結果文字列の作成も可能にするものです。
 
@@ -101,12 +100,9 @@ ms.locfileid: "70202960"
 
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.String.Format%2A?displayProperty=nameWithType>
-- <xref:System.FormattableString?displayProperty=nameWithType>
-- <xref:System.IFormattable?displayProperty=nameWithType>
-- [複合書式指定](../../../standard/base-types/composite-formatting.md)
-- [数値結果テーブルの書式設定](../keywords/formatting-numeric-results-table.md)
-- [文字列](../../programming-guide/strings/index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
-- [C# 特殊文字](index.md)
 - [C# リファレンス](../index.md)
+- [C# 特殊文字](index.md)
+- [文字列](../../programming-guide/strings/index.md)
+- [数値結果テーブルの書式設定](../keywords/formatting-numeric-results-table.md)
+- [複合書式指定](../../../standard/base-types/composite-formatting.md)
+- <xref:System.String.Format%2A?displayProperty=nameWithType>

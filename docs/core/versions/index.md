@@ -4,12 +4,12 @@ description: この記事では、.NET Core SDK と ランタイムをバージ�
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: dcf74f6fa892446555541f13a33130a93787cf70
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 4674cd8750f5a5e628945c1712ac579d88385b94
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104957"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849291"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core をバージョン管理する方法の概要
 
@@ -108,6 +108,6 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 - [ターゲット フレームワーク](../../standard/frameworks.md)
 - [.NET Core の配布パッケージ](../build/distribution-packaging.md)
-- [.NET Core サポート ライフサイクルのファクト シート](https://www.microsoft.com/net/core/support)
+- [.NET Core サポート ライフサイクルのファクト シート](https://dotnet.microsoft.com/platform/support/policy)
 - [.NET core 2 + バージョン バインディング](https://github.com/dotnet/designs/issues/3)
 - [.NET Core の Docker イメージ](https://hub.docker.com/_/microsoft-dotnet-core/)

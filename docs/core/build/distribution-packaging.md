@@ -4,12 +4,12 @@ description: .NET Core を配布用にパッケージ化、名前付け、およ
 author: tmds
 ms.date: 03/02/2018
 ms.custom: seodec18
-ms.openlocfilehash: 5d23147c8a38fbeea9e88c0a18e1f220e854fec1
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: d72677cba1e7685f8e05cf479ec508683dd77b55
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105415"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70394160"
 ---
 # <a name="net-core-distribution-packaging"></a>.NET Core の配布パッケージ
 
@@ -33,17 +33,34 @@ ms.locfileid: "70105415"
 ├── sdk
 │   ├── <sdk version>            (3)
 │   └── NuGetFallbackFolder      (4)
-└── shared
-    ├── Microsoft.NETCore.App
-    │   └── <runtime version>    (5)
-    └── Microsoft.AspNetCore.App
-        └── <aspnetcore version> (6)
-    └── Microsoft.AspNetCore.All
-        └── <aspnetcore version> (7)
+├── packs
+│   ├── Microsoft.AspNetCore.App.Ref
+│   │   └── <aspnetcore ref version>     (11)
+│   ├── Microsoft.NETCore.App.Ref
+│   │   └── <netcore ref version>        (12)
+│   ├── Microsoft.NETCore.App.Host.<rid>
+│   │   └── <apphost version>            (13)
+│   ├── Microsoft.WindowsDesktop.App.Ref
+│   │   └── <desktop ref version>        (14)
+│   └── NETStandard.Library.Ref
+│       └── <netstandard version>        (15)
+├── shared
+│   ├── Microsoft.NETCore.App
+│   │   └── <runtime version>     (5)
+│   ├── Microsoft.AspNetCore.App
+│   │   └── <aspnetcore version>  (6)
+│   ├── Microsoft.AspNetCore.All
+│   │   └── <aspnetcore version>  (6)
+│   └── Microsoft.WindowsDesktop.App
+│       └── <desktop app version> (7)
+└── templates
+│   └── <templates version>      (17)
 /
-├─usr/share/man/man1
+├── etc/dotnet
+│       └── install_location     (16)
+├── usr/share/man/man1
 │       └── dotnet.1.gz          (9)
-└─usr/bin
+└── usr/bin
         └── dotnet               (10)
 ```
 
@@ -55,17 +72,31 @@ ms.locfileid: "70105415"
 
 - (3) **sdk/\<sdk バージョン>** SDK (別名 "ツール") は、.NET Core のライブラリやアプリケーションを記述し、ビルドするために使用されるマネージド ツールのセットです。 SDK には、.NET Core コマンドライン インターフェイス (CLI)、マネージ言語コンパイラ、MSBuild、関連するビルド タスクとターゲット、NuGet、新しいプロジェクト テンプレートなどが含まれています。
 
-- (4) **sdk/NuGetFallbackFolder** には、`dotnet restore` や `dotnet build /t:Restore` の実行時など、復元操作中に SDK によって使用される NuGet パッケージのキャッシュが含まれています。
+- (4) **sdk/NuGetFallbackFolder** には、`dotnet restore` や `dotnet build /t:Restore` の実行時など、復元操作中に SDK によって使用される NuGet パッケージのキャッシュが含まれています。 このフォルダーは、.NET Core 3.0 より前でのみ使用されます。 `nuget.org` からの構築済みのバイナリ アセットを含むため、ソースから作成することはできません。
 
 **共有**フォルダーには、フレームワークが含まれています。 共有フレームワークは、さまざまなアプリケーションで利用できるように、中央の場所で一連のライブラリを提供します。
 
 - (5) **shared/Microsoft.NETCore.App/\<runtime バージョン&gt;** このフレームワークには、.NET Core のランタイムと補助マネージド ライブラリが含まれています。
 
-- (6,7) **shared/Microsoft.AspNetCore.{App,All}/\<aspnetcore バージョン>** には、ASP.NET Core ライブラリが含まれています。 `Microsoft.AspNetCore.App` の下にあるライブラリは、.NET Core プロジェクトの一部として開発され、サポートされています。 `Microsoft.AspNetCore.All` の下にあるライブラリは、サードパーティ製ライブラリも含まれるスーパーセットです。
+- (6) **shared/Microsoft.AspNetCore.{App,All}/\<aspnetcore バージョン>** には、ASP.NET Core ライブラリが含まれます。 `Microsoft.AspNetCore.App` の下にあるライブラリは、.NET Core プロジェクトの一部として開発され、サポートされています。 `Microsoft.AspNetCore.All` の下にあるライブラリは、サードパーティ製ライブラリも含まれるスーパーセットです。
+
+- (7) **shared/Microsoft.Desktop.App/\<デスクトップ アプリ バージョン>** には、Windows デスクトップ ライブラリが含まれます。 これは、Windows 以外のプラットフォームには含まれていません。
 
 - (8) **LICENSE.txt、ThirdPartyNotices.txt** は、それぞれ .NET Core ライセンスと、.NET Core で利用されるサードパーティ ライブラリのライセンスです。
 
 - (9,10) **dotnet.1.gz、dotnet** `dotnet.1.gz` は dotnet のマニュアル ページです。 `dotnet` は dotnet host(1) のシンボリック リンクです。 これらのファイルは、システム統合のために、よく知られている場所にインストールされます。
+
+- (11,12) **Microsoft.NETCore.App.Ref,Microsoft.AspNetCore.App.Ref** には、.NET Core と ASP.NET Core のそれぞれの `x.y` バージョンの API が記述されています。 これらのパックは、それのターゲット バージョンのコンパイル時に使用されます。
+
+- (13) **Microsoft.NETCore.App.Host.\<rid>** には、プラットフォーム `rid` のネイティブ バイナリが含まれます。 このバイナリは、.NET Core アプリケーションをそのプラットフォームのネイティブ バイナリにコンパイルするときのテンプレートです。
+
+- (14) **Microsoft.WindowsDesktop.App.Ref** には、Windows Desktop アプリケーションの `x.y` バージョンの API が記述されています。 これらのファイルは、そのターゲットに対してコンパイルする場合に使用されます。 これは、Windows 以外のプラットフォームにはありません。
+
+- (15) **NETStandard.Library.Ref** には、netstandard `x.y` の API が記述されています。 これらのファイルは、そのターゲットに対してコンパイルする場合に使用されます。
+
+- (16) **/etc/dotnet/install_location** は、`dotnet` ホスト バイナリを含むフォルダーへの完全なパスを含むファイルです。 このパスは、改行で終了できる場合があります。 ルートが `/usr/share/dotnet` の場合は、このファイルを追加する必要はありません。
+
+- (17) **templates** には、SDK で使用されるテンプレートが含まれます。 たとえば、`dotnet new` はここからプロジェクト テンプレートを検索します。
 
 ## <a name="recommended-packages"></a>推奨パッケージ
 
@@ -76,17 +107,67 @@ SDK バージョンは同じ `[major].[minor]` を利用し、SDK の機能と�
 パッケージには、その名前にバージョン番号の一部が含まれているものもあります。 それによって、特定のバージョンをインストールすることができます。
 バージョンの残りの部分はバージョン名には含まれていません。 それによって、OS パッケージ マネージャーはパッケージを更新できます (セキュリティ修正の自動インストールなど)。 サポートされるパッケージ マネージャーは Linux 固有です。
 
-次の表は、推奨パッケージをまとめたものです。
+推奨するパッケージを、以下に示します。
 
-| name                                    | 例                | ユース ケース:インストール ...           | 内容           | 依存関係                                   | Version            |
-|-----------------------------------------|------------------------|---------------------------------|--------------------|------------------------------------------------|--------------------|
-| dotnet-sdk-[major]                      | dotnet-sdk-2           | ランタイム メジャーの最新 sdk    |                    | dotnet-sdk-[major].[latestminor]               | \<sdk version>     |
-| dotnet-sdk-[major].[minor]              | dotnet-sdk-2.1         | 特定のランタイムの最新の sdk |                    | dotnet-sdk-[major].[minor].[latest sdk feat]xx | \<sdk version>     |
-| dotnet-sdk-[major].[minor].[sdk feat]xx | dotnet-sdk-2.1.3xx     | 特定の sdk 機能リリース    | (3),(4)            | aspnetcore-runtime-[major].[minor]             | \<sdk version>     |
-| aspnetcore-runtime-[major].[minor]      | aspnetcore-runtime-2.1 | 特定の ASP.NET Core ランタイム   | (6),[(7)]          | dotnet-runtime-[major].[minor]                 | \<runtime version> |
-| dotnet-runtime-[major].[minor]          | dotnet-runtime-2.1     | 特定のランタイム                | (5)                | host-fxr:\<runtime version>+                   | \<runtime version> |
-| dotnet-host-fxr                         | dotnet-host-fxr        | _dependency_                    | (2)                | host:\<runtime version>+                       | \<runtime version> |
-| dotnet-host                             | dotnet-host            | _dependency_                    | (1),(8),(9),(10)   |                                                | \<runtime version> |
+- `dotnet-sdk-[major].[minor]`: 特定のランタイム用に最新の sdk をインストールします
+  - **バージョン:** \<ランタイム バージョン>
+  - **例:** dotnet-sdk-2.1
+  - **内容:** (3),(4)
+  - **依存関係:** `aspnetcore-runtime-[major].[minor]`、`dotnet-targeting-pack-[major].[minor]`、`aspnetcore-targeting-pack-[major].[minor]`、`netstandard-targeting-pack-[netstandard_major].[netstandard_minor]`、`dotnet-apphost-pack-[major].[minor]`、`dotnet-templates-[major].[minor]`
+
+- `aspnetcore-runtime-[major].[minor]`: 特定の ASP.NET Core ランタイムをインストールします
+  - **バージョン:** \<aspnetcore ランタイム バージョン>
+  - **例:** aspnetcore-runtime-2.1
+  - **内容:** (6)
+  - **依存関係:** `dotnet-runtime-[major].[minor]`
+
+- `dotnet-runtime-deps-[major].[minor]` _(省略可能)_ : 自己完結型アプリケーションを実行する依存関係をインストールします
+  - **バージョン:** \<ランタイム バージョン>
+  - **例:** dotnet-runtime-deps-2.1
+  - **依存関係:** _ディストリビューション固有の依存関係_
+
+- `dotnet-runtime-[major].[minor]`: 特定のランタイムをインストールします
+  - **バージョン:** \<ランタイム バージョン>
+  - **例:** dotnet-runtime-2.1
+  - **内容:** (5)
+  - **依存関係:** `dotnet-hostfxr:<runtime version>+`、`dotnet-runtime-deps-[major].[minor]`
+
+- `dotnet-hostfxr`: 依存関係
+  - **バージョン:** \<ランタイム バージョン>
+  - **例:** dotnet-hostfxr
+  - **内容:** (2)
+  - **依存関係:** `host:<runtime version>+`
+
+- `dotnet-host`: 依存関係
+  - **バージョン:** \<ランタイム バージョン>
+  - **例:** dotnet-host
+  - **内容:** (1)、(8)、(9)、(10)、(16)
+
+- `dotnet-apphost-pack-[major].[minor]`: 依存関係
+  - **バージョン:** \<ランタイム バージョン>
+  - **内容:** (13)
+
+- `dotnet-targeting-pack-[major].[minor]`: 最新ではないランタイムを対象にできます
+  - **バージョン:** \<ランタイム バージョン>
+  - **内容:** (12)
+
+- `aspnetcore-targeting-pack-[major].[minor]`: 最新ではないランタイムを対象にできます
+  - **バージョン:** \<aspnetcore ランタイム バージョン>
+  - **内容:** (11)
+
+- `netstandard-targeting-pack-[major].[minor]`: netstandard バージョンを対象にできます
+  - **バージョン:** \<sdk バージョン>
+  - **内容:** (15)
+
+- `dotnet-templates-[major].[minor]`
+  - **バージョン:** \<sdk バージョン>
+  - **内容:** (15)
+
+`dotnet-runtime-deps-[major].[minor]` では、_ディストリビューション固有の依存関係_を理解している必要があります。 ディストリビューションのビルド システムは、これを自動的に得ることができる可能性があるため、このパッケージは省略可能です。これらの場合、これらの依存関係は `dotnet-runtime-[major].[minor]` パッケージに直接追加されます。
+
+パッケージの内容がバージョン付きフォルダーにある場合、`[major].[minor]` のパッケージ名はバージョン付きのフォルダー名と同じになります。 `netstandard-targeting-pack-[major].[minor]` を除くすべてのパッケージでは、これは .NET Core バージョンとも同じになります。
+
+パッケージ間の依存関係では、_以上_ のバージョン要件を使用する必要があります。 たとえば、`dotnet-sdk-2.2:2.2.401` には `aspnetcore-runtime-2.2 >= 2.2.6` が必要です。 これにより、ユーザーは (`dnf update dotnet-sdk-2.2` などの) ルート パッケージを使用してインストールをアップグレードできます。
 
 ほとんどのディストリビューションで、ソースからビルドするすべての成果物を必要とします。 これはパッケージにいくつかの影響を与えます。
 
@@ -95,31 +176,6 @@ SDK バージョンは同じ `[major].[minor]` を利用し、SDK の機能と�
 - `NuGetFallbackFolder` は `nuget.org` からバイナリ成果物を利用して入力されます。 空のままにしてください。
 
 複数の `dotnet-sdk` パッケージで `NuGetFallbackFolder` に同じファイルが提供されることがあります。 パッケージ マネージャーの問題を回避するには、これらのファイルを同じにします (チェックサム、変更日など)。
-
-### <a name="preview-versions"></a>プレビュー バージョン
-
-パッケージ管理者は、共有フレームワークと SDK のプレビュー バージョンを提供するという選択もできます。 プレビュー リリースは、`dotnet-sdk-[major].[minor].[sdk feat]xx`、`aspnetcore-runtime-[major].[minor]`、または `dotnet-runtime-[major].[minor]` パッケージを利用して提供されることがあります。 プレビュー リリースの場合、パッケージ バージョン メジャーをゼロに設定する必要があります。 この方法で、最終リリースがパッケージのアップグレードとしてインストールされます。
-
-### <a name="patch-packages"></a>パッチ パッケージ
-
-パッケージのパッチ バージョンは破壊的な変更を招くことがあるため、パッケージ管理者は "_パッチ パッケージ_" を提供することがあります。 そのようなパッケージによって、自動的にアップグレードされない特定のパッチ バージョンをインストールできます。 パッチ パッケージは (セキュリティ) 修正プログラムでアップグレードされないため、あまり使用しないでください。
-
-次の表は、推奨パッケージと**パッチ パッケージ**をまとめたものです。
-
-| name                                           | 例                  | 内容         | 依存関係                                              |
-|------------------------------------------------|--------------------------|------------------|-----------------------------------------------------------|
-| dotnet-sdk-[major]                             | dotnet-sdk-2             |                  | dotnet-sdk-[major].[latest sdk minor]                     |
-| dotnet-sdk-[major].[minor]                     | dotnet-sdk-2.1           |                  | dotnet-sdk-[major].[minor].[latest sdk feat]xx            |
-| dotnet-sdk-[major].[minor].[sdk feat]xx        | dotnet-sdk-2.1.3xx       |                  | dotnet-sdk-[major].[minor].[latest sdk patch]             |
-| **dotnet-sdk-[major].[minor].[patch]**         | dotnet-sdk-2.1.300       | (3),(4)          | aspnetcore-runtime-[major].[minor].[sdk runtime patch]    |
-| aspnetcore-runtime-[major].[minor]             | aspnetcore-runtime-2.1   |                  | aspnetcore-runtime-[major].[minor].[latest runtime patch] |
-| **aspnetcore-runtime-[major].[minor].[patch]** | aspnetcore-runtime-2.1.0 | (6),[(7)]        | dotnet-runtime-[major].[minor].[patch]                    |
-| dotnet-runtime-[major].[minor]                 | dotnet-runtime-2.1       |                  | dotnet-runtime-[major].[minor].[latest runtime patch]     |
-| **dotnet-runtime-[major].[minor].[patch]**     | dotnet-runtime-2.1.0     | (5)              | host-fxr:\<runtime version>+                              |
-| dotnet-host-fxr                                | dotnet-host-fxr          | (2)              | host:\<runtime version>+                                  |
-| dotnet-host                                    | dotnet-host              | (1),(8),(9),(10) |                                                           |
-
-パッチ パッケージの使用の代わりになるのが_ピン留め_ (固定) です。パッケージ マネージャーを利用し、特定のバージョンにパッケージを固定します。 他のアプリケーション/ユーザーに影響を与えないように、このようなアプリケーションはコンテナーでビルドし、配置できます。
 
 ## <a name="building-packages"></a>パッケージをビルドする
 

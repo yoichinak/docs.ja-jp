@@ -2,14 +2,14 @@
 title: ML.NET CLI によるテレメトリ収集
 description: 分析のために使用状況の情報を収集する ML.NET CLI テレメトリ機能、収集されるデータ、機能を無効にする方法について説明します。 また、.NET の使用許諾契約と Microsoft GDPR 準拠に関する情報のリンクも紹介します。
 ms.topic: conceptual
-ms.date: 05/05/2019
+ms.date: 09/03/2019
 ms.custom: ''
-ms.openlocfilehash: b9f6ccf7ff76f0cf4ce806f39909b7607a20b9f6
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: e7b3b3d7789f2368ebc4448e73add817986a5906
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567495"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254009"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>ML.NET CLI によるテレメトリ収集
 
@@ -36,14 +36,14 @@ ms.locfileid: "69567495"
 
 ML.NET CLI のテレメトリ機能は既定で有効です。
 
-`MLDOTNET_CLI_TELEMETRY_OPTOUT` 環境変数を `1` または `true` に設定して、製品利用統計情報の機能をオプトアウトします。 この環境変数は、.NET CLI ツールにグローバルに適用されます。
+`MLDOTNET_CLI_TELEMETRY_OPTOUT` 環境変数を `1` または `true` に設定して、製品利用統計情報の機能をオプトアウトします。 この環境変数は、ML.NET CLI ツールにグローバルに適用されます。
 
 ## <a name="data-points-collected"></a>収集されるデータ ポイント
 
 この機能は次のデータを収集します。
 
 - 呼び出されたコマンド (`auto-train` など)
-- 使用されたコマンド ライン パラメーターの名前 (つまり "dataset-name、label-column-name、ml-task、output-path、max-exploration-time、verbosity")
+- 使用されたコマンド ライン パラメーターの名前 ("dataset-name、label-column-name、ml-task、output-path、max-exploration-time、verbosity")
 - ハッシュされた MAC アドレス: マシンの暗号化された (SHA256) 匿名で一意の ID
 - 呼び出しのタイムスタンプ
 - 地理的位置を特定するためにのみ使用される 3 オクテットの IP アドレス (完全な IP アドレスではない)
@@ -52,7 +52,7 @@ ML.NET CLI のテレメトリ機能は既定で有効です。
 - データセット ファイルサイズ バケット
 - オペレーティング システムとバージョン
 - タスク パラメーターの値:カテゴリ値 (`regression`、`binary-classification`、`multiclass-classification` など)
-- ML.NET CLI バージョン (つまり 0.3.27703.4)
+- ML.NET CLI バージョン (0.3.27703.4)
 
 データは [Azure Application Insights](https://azure.microsoft.com/services/application-insights/) テクノロジを使用して Microsoft サーバーに安全に送信され、制限されたアクセスの下で保持され、厳格なセキュリティ コントロールの下で安全な [Azure Storage](https://azure.microsoft.com/services/storage/) システムから使用されます。
 

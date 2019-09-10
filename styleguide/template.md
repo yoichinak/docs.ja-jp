@@ -7,19 +7,19 @@ author:
 ms.author:
 - MICROSOFT ALIAS OF INTERNAL OWNER
 ms.date:
-- CREATION/UPDATE DATE - mm/dd/yyyy
+- CREATION/UPDATE DATE - MM/dd/yyyy
 ms.topic:
 - TOPIC TYPE
 ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: e6c912f5ff9590f3b8cbb0f7e3f88e08fa9dd556
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: d9a377941f54dbd42ae6eaec6c21a93dd48673a1
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106908"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254013"
 ---
 # <a name="metadata-and-markdown-template"></a>メタデータとマークダウン テンプレート
 
@@ -70,10 +70,7 @@ ms.locfileid: "70106908"
 
 ## <a name="headings"></a>見出し
 
-文スタイルで大文字化します。 次のものは必ず大文字にします。
-
-- 見出しの最初の文字。
-- タイトルまたは見出し内のコロンの後に続く文字 (たとえば、"How to:Sort an array" のようにします)。
+文スタイルで大文字化します。 見出しの最初の単語は常に大文字にします。ただし、タイトルまたは見出しのコロン後の単語は大文字にしないでください (例: "方法: sort")。
 
 見出しは atx スタイルを使用して作成する必要があります。つまり、見出しを示すために行の先頭に 1 から 6 文字のハッシュ文字 (#) を使用します。これは、HTML 見出しレベルの H1 〜 H6 に対応します。 レベル 1 とレベル 2 のヘッダーの例が上で使用されています。
 

@@ -5,12 +5,12 @@ author: mairaw
 ms.author: mairaw
 ms.date: 05/06/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 8407bedc6b7b9e5e3263b37747050eba82eea653
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 2927b892f8f83366a46cb113b3f0233bbd168974
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "68952245"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855469"
 ---
 # <a name="welcome-to-net"></a>.NET にようこそ
 
@@ -68,4 +68,4 @@ ms.locfileid: "68952245"
 - [Windows フォーム](https://github.com/dotnet/winforms)
 - [WPF](https://github.com/dotnet/wpf)
 
-[.NET のコミュニティ](https://www.microsoft.com/net/community)で既に活動している人たちに加わり、新しい情報を得たり、支援を求めることができます。
+[.NET のコミュニティ](https://dotnet.microsoft.com/platform/community)で既に活動している人たちに加わり、新しい情報を得たり、支援を求めることができます。

@@ -2,12 +2,12 @@
 title: 静的にコンパイルされたクエリ (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 3bf558fe-0705-479d-86d4-00188f5fcf9c
-ms.openlocfilehash: 9f10d93e0e5add02dbfb8c8867031ce68e58c0f4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 98725cece1006ba13afb64bb8ae17ae6e62c53cf
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924158"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253031"
 ---
 # <a name="statically-compiled-queries-linq-to-xml-c"></a>静的にコンパイルされたクエリ (LINQ to XML) (C#)
 <xref:System.Xml.XmlDocument> に対し、LINQ to XML で最も重要なパフォーマンスの利点の 1 つは、XPath のクエリは実行時に解釈する必要がある一方で LINQ to XML のクエリは静的にコンパイルされるという点です。 この機能は LINQ to XML に組み込まれているので、追加の手順を実行することなく利用できますが、その違いを理解しておくと、この 2 つの技術のどちらかを選ぶときに役立ちます。 このトピックでは、相違点について説明します。  
@@ -15,11 +15,7 @@ ms.locfileid: "69924158"
 ## <a name="statically-compiled-queries-vs-xpath"></a>静的にコンパイルされたクエリと XPath  
  次の例は、指定した名前と指定した値の属性がある子孫要素を取得する方法を示しています。  
   
- 次に示すのは、これに相当する XPath 式です。  
-  
-```  
-//Address[@Type='Shipping']  
-```  
+ これに相当する XPath 式は、`//Address[@Type='Shipping']` です。
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -92,4 +88,3 @@ reader.Close();
 - ノードを反復処理し、式の評価に基づいて結果セットのノードを適切に選択します。  
   
  この場合、対応する LINQ to XML のクエリよりも処理量がかなり多くなります。 具体的なパフォーマンスの違いはクエリの種類によって異なりますが、一般に LINQ to XML のクエリは処理量が少ないため、<xref:System.Xml.XmlDocument> を使用して XPath 式を評価するよりも良いパフォーマンスが得られます。  
-  
