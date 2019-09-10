@@ -2,15 +2,15 @@
 title: '方法: モデル ファイルとマッピング ファイルを組み込みリソースにする'
 ms.date: 03/30/2017
 ms.assetid: 20dfae4d-e95a-4264-9540-f5ad23b462d3
-ms.openlocfilehash: c88e0c09742d76c7508d7d782eabbe46035d3501
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 371f8f0317295ee39d543b5637afb93102036b62
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251443"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854597"
 ---
 # <a name="how-to-make-model-and-mapping-files-embedded-resources"></a>方法: モデル ファイルとマッピング ファイルを組み込みリソースにする
-を[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]使用すると、モデルファイルとマッピングファイルをアプリケーションの埋め込みリソースとして配置できます。 モデル ファイルとマッピング ファイルが組み込まれたアセンブリは、エンティティ接続と同じアプリケーション ドメインに読み込む必要があります。 詳細については、「[Connection Strings (接続文字列)](connection-strings.md)」をご覧ください。 既定では、Entity Data Model ツールによってモデルファイルとマッピングファイルが埋め込まれます。 モデル ファイルとマッピング ファイルを手動で定義する場合は、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] アプリケーションと共にモデル ファイルとマッピング ファイルが組み込みリソースとして確実に配置されるように、この手順を使用します。  
+Entity Framework を使用すると、モデルファイルとマッピングファイルをアプリケーションの埋め込みリソースとして配置できます。 モデル ファイルとマッピング ファイルが組み込まれたアセンブリは、エンティティ接続と同じアプリケーション ドメインに読み込む必要があります。 詳細については、「[Connection Strings (接続文字列)](connection-strings.md)」をご覧ください。 既定では、Entity Data Model ツールによってモデルファイルとマッピングファイルが埋め込まれます。 モデルファイルとマッピングファイルを手動で定義する場合は、次の手順を使用して、ファイルが埋め込みリソースとして Entity Framework アプリケーションと共に配置されるようにします。  
   
 > [!NOTE]
 > 組み込みリソースを保持するには、モデル ファイルとマッピング ファイルを変更するたびに、この手順を繰り返す必要があります。  

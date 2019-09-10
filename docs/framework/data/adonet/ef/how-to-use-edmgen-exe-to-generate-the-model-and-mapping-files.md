@@ -2,12 +2,12 @@
 title: '方法: EdmGen.exe を使用してモデル ファイルとマッピング ファイルを生成する'
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
-ms.openlocfilehash: 141b19c545360f92c2689252cf9aefd1ef156cf0
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 04606e23cffd03dea956076a07bb6cf2fadb4c9c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251422"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854566"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>方法: EdmGen.exe を使用してモデル ファイルとマッピング ファイルを生成する
 このトピックでは、EDM ジェネレーター (EdmGen.exe) ツールを使用して、School データベースに基づく次のファイルを生成する方法について説明します。  
@@ -24,7 +24,7 @@ ms.locfileid: "70251422"
   
  EdmGen.exe ツールでは、/mode:FullGeneration を使用して上記のファイルを生成します。 Edmgen.exe コマンドの詳細については、「 [EDM Generator (edmgen.exe)](edm-generator-edmgen-exe.md)」を参照してください。  
   
- Edmgen.exe を使用してモデルファイルとマッピングファイルを生成する場合でも、 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]を使用するように Visual Studio プロジェクトを構成する必要があります。 詳細については、「[方法 :Entity Framework プロジェクト](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))を手動で構成します。  
+ Edmgen.exe を使用してモデルファイルとマッピングファイルを生成する場合でも、Entity Framework を使用するように Visual Studio プロジェクトを構成する必要があります。 詳細については、「[方法 :Entity Framework プロジェクト](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))を手動で構成します。  
   
 > [!NOTE]
 > EdmGen.exe によって生成された概念モデルには、データベース内のすべてのオブジェクトが含まれています。 特定のオブジェクトだけを含んだ概念モデルを生成する場合は、Entity Data Model ウィザードを使用してください。 詳細については、「[方法 :Entity Data Model ウィザード](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))を使用します。  

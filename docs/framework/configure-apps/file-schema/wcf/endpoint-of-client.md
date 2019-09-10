@@ -2,19 +2,20 @@
 title: <endpoint> の <client>
 ms.date: 03/30/2017
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
-ms.openlocfilehash: 2bf59972ff2f75995e94a3c1934e88944d65fcc7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f1ffbc1e8efac70523d7f631c8cf9ba9a1622bfc
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919099"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855323"
 ---
 # <a name="endpoint-of-client"></a>\<クライアント > の\<エンドポイント >
 サーバーのサービス エンドポイントに接続するためにクライアントによって使用されるチャネル エンドポイントのコントラクト、バインディング、およびアドレスのプロパティを指定します。  
   
- \<system.ServiceModel >  
-\<client>  
-\<endpoint>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<クライアント >** ](client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<エンドポイント >**  
   
 ## <a name="syntax"></a>構文  
   

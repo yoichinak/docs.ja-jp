@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 3660194a93a0528c4e5b466fb63801a8b1e12d2f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4d51011fddb856cf1ebd00943e9b79776d9181d0
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779785"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854109"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>ストリーミング プロバイダー (WCF Data Services)
 
@@ -53,7 +53,7 @@ ms.locfileid: "70779785"
 
 また、エンティティまたはデータ モデルを定義する .edmx ファイルまたは .csdl ファイルのルートに名前空間 `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` を追加する必要があります。
 
-[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]プロバイダーを使用してメディアリソースを公開するデータサービスの例については、post [Data Services Streaming provider シリーズを参照してください。ストリーミングプロバイダーの実装 (パート 1)](https://go.microsoft.com/fwlink/?LinkID=198989)。
+Entity Framework プロバイダーを使用してメディアリソースを公開するデータサービスの例については、post [Data Services Streaming provider シリーズを参照してください。ストリーミングプロバイダーの実装 (パート 1)](https://go.microsoft.com/fwlink/?LinkID=198989)。
 
 **リフレクション プロバイダー**
 

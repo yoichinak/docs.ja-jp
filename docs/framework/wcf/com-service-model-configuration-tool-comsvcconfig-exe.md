@@ -5,19 +5,19 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: 7717c6c2-85fc-418b-a8ed-bad8e61cec5c
-ms.openlocfilehash: 89462d05b9da7fc63bda58955517bfa9f0c50ab9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 98c8e50ea4a9efe1c69a0c7b959b228a045dfca1
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964196"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855658"
 ---
 # <a name="com-service-model-configuration-tool-comsvcconfigexe"></a>COM+ サービス モデル構成ツール (ComSvcConfig.exe)
 COM+ サービス モデル構成コマンド ライン ツール (ComSvcConfig.exe) を使用すると、COM+ インターフェイスを Web サービスとして公開するように構成できます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | ApplicationName>] [/contract:<ClassID | ProgID | *,InterfaceID | InterfaceName | *>] [/hosting:<complus | was>] [/webSite:<WebsiteName>] [/webDirectory:<WebDirectoryName>] [/mex] [/id] [/nologo] [/verbose] [/help] [/partial]  
 ```  
   
@@ -63,7 +63,7 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
   
 ### <a name="code"></a>コード  
   
-```  
+```console  
 ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financial,IFinances /hosting:complus /verbose  
 ```  
   
@@ -72,7 +72,7 @@ ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financia
   
 ### <a name="code"></a>コード  
   
-```  
+```console  
 ComSvcConfig.exe /install /application:OnlineWarehouse /contract:ItemInventory.Warehouse,IStockLevels /hosting:was /webDirectory:root/OnlineWarehouse  
 ```  
   
@@ -81,7 +81,7 @@ ComSvcConfig.exe /install /application:OnlineWarehouse /contract:ItemInventory.W
   
 ### <a name="code"></a>コード  
   
-```  
+```console  
 ComSvcConfig.exe /uninstall /application:OnlineStore /interface:ItemOrders.Financial,IFinances /hosting:complus  
 ```  
   
@@ -90,7 +90,7 @@ ComSvcConfig.exe /uninstall /application:OnlineStore /interface:ItemOrders.Finan
   
 ### <a name="code"></a>コード  
   
-```  
+```console  
 ComSvcConfig.exe /list /application:OnlineStore /hosting:complus  
 ```  
   

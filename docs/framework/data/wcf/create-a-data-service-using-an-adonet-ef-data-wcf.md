@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: ae4176fd986f870523e44a11eee48850e2dddd7c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1d3c3628a32439d4847505e234b12b084b47ba3d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791077"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854121"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>方法: ADO.NET Entity Framework データソース (WCF Data Services) を使用してデータサービスを作成する
 
-WCF Data Services は、エンティティデータをデータサービスとして公開します。 このエンティティデータは、データソースが[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]リレーショナルデータベースの場合、ADO.NET によって提供されます。 このトピックでは、既存のデータベース[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]に基づくベースのデータモデルを Visual Studio Web アプリケーションに作成し、このデータモデルを使用して新しいデータサービスを作成する方法について説明します。
+WCF Data Services は、エンティティデータをデータサービスとして公開します。 このエンティティデータは、データソースがリレーショナルデータベースの場合に、ADO. NETEntity Framework によって提供されます。 このトピックでは、既存のデータベースに基づき、このデータ モデルを使用して新しいデータ サービスを作成する Visual Studio Web アプリケーションで Entity Framework ベースのデータ モデルを作成する方法について説明します。
 
-また[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 、には、Visual Studio プロジェクトの外部で[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]モデルを生成できるコマンドラインツールも用意されています。 詳細については、「[方法 :Edmgen.exe を使用して、モデルファイルとマッピングファイル](../adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)を生成します。
+Entity Framework は、Visual Studio プロジェクトの外部に Entity Framework モデルを生成できるコマンド ライン ツールも提供します。 詳細については、「[方法 :Edmgen.exe を使用して、モデルファイルとマッピングファイル](../adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)を生成します。
 
 ## <a name="to-add-an-entity-framework-model-that-is-based-on-an-existing-database-to-an-existing-web-application"></a>既存のデータベースに基づく Entity Framework モデルを既存の Web アプリケーションに追加するには
 
@@ -45,7 +45,7 @@ WCF Data Services は、エンティティデータをデータサービスと�
 
 9. **[完了]** をクリックしてウィザードを完了します。
 
-     特定のデータベースに基づく既定のデータ モデルが作成されます。 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] では、データ モデルをカスタマイズできます。 詳細については、「 [Entity Data Model ツールのタスク](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100))」を参照してください。
+     特定のデータベースに基づく既定のデータ モデルが作成されます。 Entity Framework では、データ モデルをカスタマイズできます。 詳細については、「 [Entity Data Model ツールのタスク](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100))」を参照してください。
 
 ## <a name="to-create-the-data-service-by-using-the-new-data-model"></a>新しいデータ モデルを使用してデータ サービスを作成するには
 

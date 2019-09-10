@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: 38ec0986ef3e673ad2d624d33dc33d882f7e412c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0e5792fa4f31c4f40047016252100b1de23fd075
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780434"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854203"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>データ サービスの構成 (WCF Data Services)
-で[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]は、フィードを公開[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]するデータサービスを作成できます。 これらのフィードには、さまざまなデータ ソースからのデータが含まれることがあります。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]では、データプロバイダーを使用して[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 、このデータをフィードとして公開します。 これらのプロバイダーには、[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] プロバイダー、リフレクション プロバイダー、およびカスタム データ サービス プロバイダー インターフェイスのセットがあります。 プロバイダーの実装は、サービスのデータ モデルを定義します。 詳細については、「 [Data Services プロバイダー](data-services-providers-wcf-data-services.md)」を参照してください。  
+で[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]は、フィードを公開[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]するデータサービスを作成できます。 これらのフィードには、さまざまなデータ ソースからのデータが含まれることがあります。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]では、データプロバイダーを使用して[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 、このデータをフィードとして公開します。 これらのプロバイダーには、Entity Framework プロバイダー、リフレクション プロバイダー、およびカスタム データ サービス プロバイダー インターフェイスのセットがあります。 プロバイダーの実装は、サービスのデータ モデルを定義します。 詳細については、「 [Data Services プロバイダー](data-services-providers-wcf-data-services.md)」を参照してください。  
   
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] では、データ サービスは、データ サービスの種類がデータ モデルのエンティティ コンテナーである <xref:System.Data.Services.DataService%601> クラスから継承するクラスです。 このエンティティ コンテナーには、データ モデルのエンティティ セットにアクセスするために使用される <xref:System.Linq.IQueryable%601> を返す 1 つ以上のプロパティがあります。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "70780434"
 |`/Customers?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> および<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|サポートなし|サポートなし|`Customers`: <xref:System.Data.Services.EntitySetRights.WriteAppend>|サポートなし|  
 |`/Customers('ALFKI')?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> および<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|サポートなし|サポートなし|サポートなし|サポートなし|  
   
- <sup>1</sup>この例では`Address` 、は、という名前`StreetAddress`の`Customers`プロパティを持つエンティティの複合型プロパティを表します。 Northwind データ サービスによって使用されるモデルでは、この複合型は明示的に定義されていません。 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]プロバイダーを使用してデータモデルが定義されている場合は、Entity Data Model ツールを使用して、このような複合型を定義できます。 詳細については、「[方法 :複合型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100))を作成および変更します。  
+ <sup>1</sup>この例では`Address` 、は、という名前`StreetAddress`の`Customers`プロパティを持つエンティティの複合型プロパティを表します。 Northwind データ サービスによって使用されるモデルでは、この複合型は明示的に定義されていません。 Entity Framework プロバイダーを使用してデータ モデルを定義している場合、Entity Data Model ツールを使用して、このような複合型を定義できます。 詳細については、「[方法 :複合型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100))を作成および変更します。  
   
  <sup>2</sup>この URI は、バイナリラージオブジェクト (BLOB) を返すプロパティがメディアリンクエントリであるエンティティ (この場合は`Customers`) に属するメディアリソースとして定義されている場合にサポートされます。 詳細については、[ストリーミング プロバイダー](streaming-provider-wcf-data-services.md)を参照してください。  
   

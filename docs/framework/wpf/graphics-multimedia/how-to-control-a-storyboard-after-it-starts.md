@@ -1,5 +1,5 @@
 ---
-title: '方法: 開始後に、ストーリー ボードを制御します。'
+title: '方法: ストーリーボードを開始後に制御する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,42 +7,45 @@ dev_langs:
 helpviewer_keywords:
 - Storyboards [WPF], controlling after start
 ms.assetid: 040f13f0-69f9-4ab5-be2b-079f4f80c7c0
-ms.openlocfilehash: 680676921e14ad69d97f3ee1c39e3ec955e66dec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: de30cfdb49df721cb4d6845dc67464e8a5b61f93
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662139"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855864"
 ---
-# <a name="how-to-control-a-storyboard-after-it-starts"></a>方法: 開始後に、ストーリー ボードを制御します。
-この例では、コントロールにコードを使って、<xref:System.Windows.Media.Animation.Storyboard>開始後。 ストーリー ボードを制御する[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]を使用して、<xref:System.Windows.Trigger>と<xref:System.Windows.TriggerAction>オブジェクト。 例については、次を参照してください。 [、ストーリー ボード開始後の制御をイベント トリガーを使用して](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)します。  
-  
- 使用するストーリー ボードを開始するには、その<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>メソッド、プロパティがアニメーション化して、ストーリー ボードを開始するストーリー ボードのアニメーションを分散します。  
-  
- ストーリー ボードを制御するためには、使用する、<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>メソッドを指定して**true** 2 番目のパラメーター。 一時停止、再開、シーク、停止、高速化する、またはストーリー ボード、速度が低下または塗りつぶし期間まで進める、ストーリー ボードの対話型のメソッドを使用できます。 次には、ストーリー ボードの対話型のメソッドの一覧を示します。  
-  
-- <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>:ストーリー ボードを一時停止します。  
-  
-- <xref:System.Windows.Media.Animation.Storyboard.Resume%2A>:一時停止中のストーリー ボードを再開します。  
-  
-- <xref:System.Windows.Media.Animation.Storyboard.SetSpeedRatio%2A>:ストーリー ボードの対話型速度を設定します。  
-  
-- <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>:指定した場所のストーリー ボードをシークします。  
-  
-- <xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A>:指定した場所にストーリー ボードをシークします。 異なり、<xref:System.Windows.Media.Animation.Storyboard.Seek%2A>メソッドでは、この操作は、次の目盛りの前に処理されます。  
-  
-- <xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>:ある場合は、塗りつぶし期間、ストーリー ボードを進めます。  
-  
-- <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>:ストーリー ボードを停止します。  
-  
- 次の例では、いくつかのストーリー ボード メソッドは、ストーリー ボードを対話的に制御に使用されます。  
-  
- **注:** トリガーを使用してストーリー ボードを制御するための例を参照する[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]を参照してください[イベント トリガーを使用して、ストーリー ボード開始後に制御する](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)します。  
-  
-## <a name="example"></a>例  
- [!code-csharp[timingbehaviors_procedural_snip#ControlStoryboardExampleUsingWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/ControlStoryboardExample.cs#controlstoryboardexampleusingwholepage)]
- [!code-vb[timingbehaviors_procedural_snip#ControlStoryboardExampleUsingWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/controlstoryboardexample.vb#controlstoryboardexampleusingwholepage)]  
-  
+# <a name="how-to-control-a-storyboard-after-it-starts"></a>方法: ストーリーボードを開始後に制御する
+
+この例では、コードを使用して<xref:System.Windows.Media.Animation.Storyboard>を開始した後に制御する方法を示します。 で[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ストーリーボードを制御するに<xref:System.Windows.Trigger>は<xref:System.Windows.TriggerAction> 、オブジェクトとオブジェクトを使用します。例については、「[開始後にイベントトリガーを使用してストーリーボードを制御](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)する」を参照してください。
+
+ストーリーボードを開始するには、 <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>そのメソッドを使用します。これにより、ストーリーボードのアニメーションがアニメーション化され、ストーリーボードが開始されます。
+
+ストーリーボードを制御できるようにするに<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>は、メソッドを使用し、2番目のパラメーターとして**true**を指定します。 その後、ストーリーボードの対話型メソッドを使用して、ストーリーボードの一時停止、再開、シーク、停止、速度の低下、または速度の低下を行うことができます。 次に、ストーリーボードの対話型メソッドの一覧を示します。
+
+- <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>:ストーリーボードを一時停止します。
+
+- <xref:System.Windows.Media.Animation.Storyboard.Resume%2A>:一時停止したストーリーボードを再開します。
+
+- <xref:System.Windows.Media.Animation.Storyboard.SetSpeedRatio%2A>:ストーリーボードの対話速度を設定します。
+
+- <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>:指定された場所でストーリーボードをシークします。
+
+- <xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A>:指定された位置までストーリーボードをシークします。 <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>メソッドとは異なり、この操作は次のティックの前に処理されます。
+
+- <xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>:ストーリーボードがある場合は、そのストーリーボードをその塗りつぶし期間に進めます。
+
+- <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>:ストーリーボードを停止します。
+
+次の例では、ストーリーボードを対話的に制御するために、いくつかのストーリーボードメソッドが使用されています。
+
+> [!NOTE]
+> で[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]トリガーを使用してストーリーボードを制御する例については、「[開始後にイベントトリガーを使用してストーリーボードを制御](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)する」を参照してください。
+
+## <a name="example"></a>例
+
+[!code-csharp[timingbehaviors_procedural_snip#ControlStoryboardExampleUsingWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/ControlStoryboardExample.cs#controlstoryboardexampleusingwholepage)]
+[!code-vb[timingbehaviors_procedural_snip#ControlStoryboardExampleUsingWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/controlstoryboardexample.vb#controlstoryboardexampleusingwholepage)]
+
 ## <a name="see-also"></a>関連項目
 
 - [開始後のストーリーボードをイベント トリガーを使用して制御する](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)

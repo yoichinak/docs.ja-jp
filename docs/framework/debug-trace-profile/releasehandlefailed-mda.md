@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad580ecace07d3d6fdf206ff660dc4bac4bceb09
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f3ea64668272b6625a9e43c9610496a7e7392129
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614291"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854032"
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed MDA
 `releaseHandleFailed` マネージド デバッグ アシスタント (MDA) は、<xref:System.Runtime.InteropServices.SafeHandle> または <xref:System.Runtime.InteropServices.CriticalHandle> から派生するクラスの <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> メソッドが `false` を返すときに、開発者に通知するためにアクティブ化されます。  
@@ -34,7 +34,7 @@ ms.locfileid: "64614291"
   
 - <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> の実行中に発生する、リソースの解放を妨げるエラーは、<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> メソッド自体の実装のバグです。 そのコードが、機能を実行するために他のプログラマが作成したコードを呼び出している場合でも、この規定を実行するようにすることがプログラマの責任です。  
   
-## <a name="resolution"></a>解像度  
+## <a name="resolution"></a>解決策  
  MDA 通知を発生させた特定の <xref:System.Runtime.InteropServices.SafeHandle> (または <xref:System.Runtime.InteropServices.CriticalHandle>) 型を使用するコードをレビューし、未処理のハンドル値が<xref:System.Runtime.InteropServices.SafeHandle> から抽出されて、別の場所にコピーされている場所を探します。 これは、未処理のハンドル値の使用がランタイムにより追跡できなくなっているため、<xref:System.Runtime.InteropServices.SafeHandle> または <xref:System.Runtime.InteropServices.CriticalHandle> の実装内のエラーの一般的な原因です。 未処理のハンドルのコピーがその後閉じられると、同じハンドルを閉じようとして無効になるため、後で <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 呼び出しがエラーになる可能性があります。  
   
  不適切なハンドルの重複は、様々な方法で発生します。  
@@ -55,7 +55,7 @@ ms.locfileid: "64614291"
 ## <a name="output"></a>Output  
  <xref:System.Runtime.InteropServices.SafeHandle> または <xref:System.Runtime.InteropServices.CriticalHandle> でエラーが発生し、ハンドルを適切に解放できないことを示すメッセージ。 例えば:  
   
-```  
+```output
 "A SafeHandle or CriticalHandle of type 'MyBrokenSafeHandle'   
 failed to properly release the handle with value 0x0000BEEF. This   
 usually indicates that the handle was released incorrectly via   

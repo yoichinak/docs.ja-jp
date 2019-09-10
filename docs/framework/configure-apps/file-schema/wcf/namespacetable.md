@@ -2,20 +2,21 @@
 title: <namespaceTable>
 ms.date: 03/30/2017
 ms.assetid: 64801766-01b7-4c65-9ce6-70ad5af67689
-ms.openlocfilehash: 0316e983446644671ead2f8f843dc91b493b29c9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: aefe7beec7335d80341e670961800907c2bd0200
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933165"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855101"
 ---
 # <a name="namespacetable"></a>\<namespaceTable >
 
 名前空間とプレフィックスのマッピングを含む要素セットを定義する構成セクションを表します。これは、ルーティングの XPath フィルターで使用されます。
 
-**\<system.serviceModel>**    
-&nbsp;&nbsp; **\<ルーティング >**    
-&nbsp;&nbsp;&nbsp;&nbsp; **\<namespaceTable>**
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<ルーティング >** ](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<namespaceTable >**  
   
 ## <a name="syntax"></a>構文  
   

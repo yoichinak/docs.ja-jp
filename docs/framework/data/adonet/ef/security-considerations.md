@@ -2,23 +2,23 @@
 title: セキュリティに関する注意事項 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: d1fb104f336938cc83d53cae71a8132f9b648dc6
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 1865afb384cfff41ede953c00f01cc96aea9a080
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248553"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854248"
 ---
 # <a name="security-considerations-entity-framework"></a>セキュリティに関する注意事項 (Entity Framework)
-このトピックでは、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] アプリケーションの開発、配置、および実行に特有のセキュリティの注意点について説明します。 また、セキュリティで保護された .NET Framework アプリケーションを作成するための推奨事項に従ってください。 詳細については、「[セキュリティの概要](../security-overview.md)」を参照してください。  
+このトピックでは、Entity Framework アプリケーションの開発、配置、および実行に固有のセキュリティの考慮事項について説明します。 また、セキュリティで保護された .NET Framework アプリケーションを作成するための推奨事項に従ってください。 詳細については、「[セキュリティの概要](../security-overview.md)」を参照してください。  
   
 ## <a name="general-security-considerations"></a>セキュリティについての全般的な考慮事項  
- 以下のセキュリティの注意点は、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] を使用するすべてのアプリケーションに当てはまります。  
+ Entity Framework を使用するすべてのアプリケーションには、次のセキュリティの考慮事項が適用されます。  
   
 #### <a name="use-only-trusted-data-source-providers"></a>信頼できるデータ ソース プロバイダーのみを使用する  
  データ ソースと通信するためにはプロバイダーで次の処理が行われる必要があります。  
   
-- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] から接続文字列を取得する。  
+- Entity Framework から接続文字列を受け取ります。  
   
 - コマンド ツリーをデータ ソースのネイティブ クエリ言語に変換する。  
   
@@ -27,7 +27,7 @@ ms.locfileid: "70248553"
  ログオン操作の際には、ユーザーのパスワードに基づく情報が、基になるデータ ソースのネットワーク ライブラリを通じてサーバーに渡されます。 悪質なプロバイダーを使用すると、ユーザーの資格情報を盗まれたり、悪質なクエリを生成されたり、結果セットを改ざんされたりする可能性があります。  
   
 #### <a name="encrypt-your-connection-to-protect-sensitive-data"></a>接続を暗号化して機密データを保護する  
- データの暗号化は [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] では直接処理されません。 ユーザーがパブリック ネットワーク経由でデータにアクセスする場合は、セキュリティを強化するためにアプリケーションでデータ ソースへの暗号化接続を確立する必要があります。 詳細については、データ ソースのセキュリティ関連のドキュメントを参照してください。 SQL Server データソースについては、「 [SQL Server への接続の暗号化](https://go.microsoft.com/fwlink/?LinkId=119544)」を参照してください。  
+ Entity Framework は、データの暗号化を直接処理しません。 ユーザーがパブリック ネットワーク経由でデータにアクセスする場合は、セキュリティを強化するためにアプリケーションでデータ ソースへの暗号化接続を確立する必要があります。 詳細については、データ ソースのセキュリティ関連のドキュメントを参照してください。 SQL Server データソースについては、「 [SQL Server への接続の暗号化](https://go.microsoft.com/fwlink/?LinkId=119544)」を参照してください。  
   
 #### <a name="secure-the-connection-string"></a>接続文字列を保護する  
  アプリケーションのセキュリティを実現するうえで、データ ソースへのアクセスを保護することは、最も重要な目標の 1 つです。 保護されていない接続文字列や適切に作成されていない接続文字列は脆弱性を招く原因になります。 接続情報をテキスト形式で保存したり、メモリ内に保持したりすると、システム全体のセキュリティが損なわれる可能性があります。 接続文字列を保護するための推奨事項を以下に示します。  
@@ -46,7 +46,7 @@ ms.locfileid: "70248553"
   
 - 接続を動的に作成する場合は接続文字列ビルダーを使用する。  
   
-     接続文字列を実行時に作成する必要がある場合は <xref:System.Data.EntityClient.EntityConnectionStringBuilder> クラスを使用します。 この文字列ビルダー クラスは、入力情報を検証して無効な入力情報をエスケープする処理により、接続文字列インジェクション攻撃の防止に役立ちます。 詳細については、「[方法 :EntityConnection 接続文字列](how-to-build-an-entityconnection-connection-string.md)を作成します。 また、適切な文字列ビルダークラスを使用して、 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]接続文字列の一部であるデータソース接続文字列を作成します。 ADO.NET プロバイダーの接続文字列ビルダーの詳細については、「[接続文字列ビルダー](../connection-string-builders.md)」を参照してください。  
+     接続文字列を実行時に作成する必要がある場合は <xref:System.Data.EntityClient.EntityConnectionStringBuilder> クラスを使用します。 この文字列ビルダー クラスは、入力情報を検証して無効な入力情報をエスケープする処理により、接続文字列インジェクション攻撃の防止に役立ちます。 詳細については、「[方法 :EntityConnection 接続文字列](how-to-build-an-entityconnection-connection-string.md)を作成します。 また、適切な文字列ビルダークラスを使用して、Entity Framework 接続文字列の一部であるデータソース接続文字列を作成します。 ADO.NET プロバイダーの接続文字列ビルダーの詳細については、「[接続文字列ビルダー](../connection-string-builders.md)」を参照してください。  
   
  詳細については、「[接続情報の保護](../protecting-connection-information.md)」を参照してください。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "70248553"
  データ ソースの管理者は、必要なアクセス許可のみをユーザーに与えるようにしてください。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] では、データを変更する DML ステートメント (INSERT、UPDATE、DELETE など) はサポートされていませんが、データ ソースへの接続にアクセスすることはできます。 悪質なユーザーによって、その接続を使用してデータ ソースのネイティブ言語で DML ステートメントを実行される可能性があります。  
   
 #### <a name="run-applications-with-the-minimum-permissions"></a>最小限のアクセス許可でアプリケーションを実行する  
- マネージアプリケーションを完全信頼のアクセス許可で実行できるようにすると、.NET Framework によって、コンピューターへのアプリケーションのアクセスが制限されることはありません。 これは、システム全体を危険にさらすセキュリティの脆弱性の原因になります。 .NET Framework でコードアクセスセキュリティおよびその他のセキュリティメカニズムを使用するには、部分信頼アクセス許可を使用してアプリケーションを実行し、アプリケーションを機能させるために必要な最小限のアクセス許可セットを使用してアプリケーションを実行する必要があります。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] アプリケーションに必要な最小限のアクセス許可を以下に示します。  
+ マネージアプリケーションを完全信頼のアクセス許可で実行できるようにすると、.NET Framework によって、コンピューターへのアプリケーションのアクセスが制限されることはありません。 これは、システム全体を危険にさらすセキュリティの脆弱性の原因になります。 .NET Framework でコードアクセスセキュリティおよびその他のセキュリティメカニズムを使用するには、部分信頼アクセス許可を使用してアプリケーションを実行し、アプリケーションを機能させるために必要な最小限のアクセス許可セットを使用してアプリケーションを実行する必要があります。 次のコードアクセス許可は、Entity Framework アプリケーションで必要な最小限のアクセス許可です。  
   
 - <xref:System.Security.Permissions.FileIOPermission>: <xref:System.Security.Permissions.FileIOPermissionAccess.Write> (指定されたメタデータ ファイルを開くため) または <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery> (メタデータ ファイルのディレクトリを検索するため)。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "70248553"
  詳細については、「 [Code Access Security and ADO.NET](../code-access-security.md)」を参照してください。  
   
 #### <a name="do-not-install-untrusted-applications"></a>信頼できないアプリケーションをインストールしない  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ではセキュリティのアクセス許可が適用されません。ユーザーが指定したデータ オブジェクト コードは、信頼されているかどうかに関係なくインプロセスで呼び出されます。 データ ストアとアプリケーションでクライアントの認証および承認が行われるようにしてください。  
+ Entity Framework では、セキュリティアクセス許可は適用されません。ユーザーが指定したデータオブジェクトコードは、信頼されているかどうかに関係なく、処理中に呼び出されます。 データ ストアとアプリケーションでクライアントの認証および承認が行われるようにしてください。  
   
 #### <a name="restrict-access-to-all-configuration-files"></a>すべての構成ファイルへのアクセスを制限する  
  管理者は、アプリケーションの構成を指定するすべてのファイルへの書き込みアクセスを制限する必要があります。これには、enterprisesec、config、machine.config、 \<アプリケーション構成ファイルの*アプリケーション*> が含まれます.exe. .config.  
@@ -86,7 +86,7 @@ ms.locfileid: "70248553"
  app.config ではプロバイダーの不変名を変更できます。クライアント アプリケーションは、強力な名前を使用して標準のプロバイダー ファクトリ モデルを通じて基になるプロバイダーにアクセスする責任を負う必要があります。  
   
 #### <a name="restrict-permissions-to-the-model-and-mapping-files"></a>モデル ファイルとマッピング ファイルへのアクセス許可を制限する  
- 管理者は、モデル ファイルとマッピング ファイル (.edmx、.csdl、.ssdl、および .msl) への書き込みアクセスを、モデルやマッピングを変更するユーザーのみに制限する必要があります。 で[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]は、実行時にのみこれらのファイルに対する読み取りアクセス権が必要です。 また、管理者は、Entity Data Model ツールによって生成されるオブジェクトレイヤーおよびプリコンパイル済みビューソースコードファイルへのアクセスを制限する必要があります。  
+ 管理者は、モデル ファイルとマッピング ファイル (.edmx、.csdl、.ssdl、および .msl) への書き込みアクセスを、モデルやマッピングを変更するユーザーのみに制限する必要があります。 Entity Framework には、実行時にのみこれらのファイルに対する読み取りアクセス権が必要です。 また、管理者は、Entity Data Model ツールによって生成されるオブジェクトレイヤーおよびプリコンパイル済みビューソースコードファイルへのアクセスを制限する必要があります。  
   
 ## <a name="security-considerations-for-queries"></a>クエリのセキュリティに関する注意点  
  概念モデルのクエリを実行する際は、セキュリティに関して次の点に注意する必要があります。 これらの注意点は、EntityClient を使用する [!INCLUDE[esql](../../../../../includes/esql-md.md)] クエリと、LINQ、[!INCLUDE[esql](../../../../../includes/esql-md.md)]、およびクエリ ビルダー メソッドを使用するオブジェクト クエリに当てはまります。  
@@ -135,7 +135,7 @@ ms.locfileid: "70248553"
  <xref:System.Data.Objects.ObjectContext> を複数のアプリケーション ドメインで共有すると接続文字列の情報が漏洩する可能性があります。 代わりに、シリアル化したオブジェクトやオブジェクト グラフをもう一方のアプリケーション ドメインに転送して、そのアプリケーション ドメインでそれらのオブジェクトを <xref:System.Data.Objects.ObjectContext> にアタッチするようにしてください。 詳細については、「[オブジェクトのシリアル](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100))化」を参照してください。  
   
 #### <a name="prevent-type-safety-violations"></a>型の安全性違反を防止する  
- 型の安全性違反が発生すると、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] でオブジェクトのデータの整合性が保証されなくなります。 型の安全性違反は、信頼できないアプリケーションを完全信頼のコード アクセス セキュリティで実行できるようにすると発生する可能性があります。  
+ タイプセーフに違反した場合、Entity Framework は、オブジェクト内のデータの整合性を保証できません。 型の安全性違反は、信頼できないアプリケーションを完全信頼のコード アクセス セキュリティで実行できるようにすると発生する可能性があります。  
   
 #### <a name="handle-exceptions"></a>例外を処理する  
  try/catch ブロック内の <xref:System.Data.Objects.ObjectContext> のメソッドとプロパティにアクセスします。 例外をキャッチすると、未処理の例外によって <xref:System.Data.Objects.ObjectStateManager> のエントリまたはモデル情報 (テーブル名など) がアプリケーションのユーザーに公開されることはありません。  
@@ -145,13 +145,13 @@ ms.locfileid: "70248553"
 ASP.NET アプリケーションでパスを操作するときは、次の点を考慮する必要があります。  
   
 #### <a name="verify-whether-your-host-performs-path-checks"></a>ホストでパスがチェックされるかどうかを確認する  
- `|DataDirectory|` (パイプ記号で囲まれた) 置換文字列を使用すると、ADO.NET は解決されたパスがサポートされているかどうかを確認します。 たとえば、`DataDirectory` の後に "." を使用することはできません。 ASP.NET をホストするプロセスによって、Web アプリケーション`~`のルート演算子 () を解決する場合と同じチェックが実行されます。 IIS ではこのチェックが行われますが、IIS 以外のホストでは、解決されたパスがサポートされているかどうかが確認されない可能性があります。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] アプリケーションを配置するホストの動作を把握しておく必要があります。  
+ `|DataDirectory|` (パイプ記号で囲まれた) 置換文字列を使用すると、ADO.NET は解決されたパスがサポートされているかどうかを確認します。 たとえば、`DataDirectory` の後に "." を使用することはできません。 ASP.NET をホストするプロセスによって、Web アプリケーション`~`のルート演算子 () を解決する場合と同じチェックが実行されます。 IIS ではこのチェックが行われますが、IIS 以外のホストでは、解決されたパスがサポートされているかどうかが確認されない可能性があります。 Entity Framework アプリケーションを展開するホストの動作を把握しておく必要があります。  
   
 #### <a name="do-not-make-assumptions-about-resolved-path-names"></a>解決されるパス名を想定しない  
- ルート演算子 (`~`) と `DataDirectory` 置換文字列が解決される値は、アプリケーションの実行中に変化しない状態で維持される必要がありますが、ホストでそれらの値の変更が [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] によって制限されるわけではありません。  
+ ルート演算子 (`~`) `DataDirectory`と置換文字列を解決する値は、アプリケーションの実行時に一定のままである必要がありますが、Entity Framework では、ホストがこれらの値を変更できないように制限されていません。  
   
 #### <a name="verify-the-path-length-before-deployment"></a>配置の前にパスの長さを確認する  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] アプリケーションを配置する前に、ルート演算子 (~) と `DataDirectory` 置換文字列の値がオペレーティング システムのパスの長さの制限を超えないことを確認する必要があります。 ADO.NET データプロバイダーでは、パスの長さが有効な制限内であることは保証されません。  
+ Entity Framework アプリケーションを展開する前に、ルート演算子 (~) と`DataDirectory`置換文字列の値がオペレーティングシステムのパスの長さの制限を超えていないことを確認する必要があります。 ADO.NET データプロバイダーでは、パスの長さが有効な制限内であることは保証されません。  
   
 ## <a name="security-considerations-for-adonet-metadata"></a>ADO.NET メタデータのセキュリティに関する注意点  
  モデル ファイルとマッピング ファイルの生成と操作を行う際は、セキュリティに関して次の点に注意する必要があります。  

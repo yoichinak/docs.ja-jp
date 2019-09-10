@@ -2,32 +2,32 @@
 title: プロバイダー マニフェストの仕様
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 6b924f484e6635760d08d0eba9fb9436bdd8bc88
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: cc58bbc82f3930f087b5da0c64afb4f9f03e905b
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248585"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854505"
 ---
 # <a name="provider-manifest-specification"></a>プロバイダー マニフェストの仕様
 ここでは、データ ストア プロバイダーでデータ ストアの型および関数がどのようにサポートされているかについて説明します。  
   
  Entity Services は、特定のデータ ストア プロバイダーとは別に動作しますが、データ プロバイダーでモデル、マッピング、およびクエリと基になるデータ ストアの対話方法を明示的に定義できるようにします。 抽象化レイヤーがない場合、Entity Services が対象とするのは、特定のデータ ストアまたはデータ プロバイダーのみです。  
   
- プロバイダーでサポートされる型は、基になるデータベースによって直接的または間接的にサポートされています。 これらの型は、必ずしも正確なストア型であるとは限りませんが、プロバイダーで [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] のサポートに使用される型です。 プロバイダー/ストア型は、Entity Data Model (EDM) 用語で記述されます。  
+ プロバイダーでサポートされる型は、基になるデータベースによって直接的または間接的にサポートされています。 これらの型は必ずしも正確なストア型ではありませんが、プロバイダーが Entity Framework をサポートするために使用する型です。 プロバイダー/ストア型は、Entity Data Model (EDM) 用語で記述されます。  
   
  データ ストアによってサポートされる関数のパラメーターと戻り値の型は、EDM 用語で指定されます。  
   
 ## <a name="requirements"></a>必要条件  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] およびデータ ストアでは、データが失われたり切り捨てられたりすることなく、既知の型でデータを受け渡しできることが必要です。  
+ Entity Framework とデータストアは、データの損失や切り捨てを発生させることなく、既知の型との間でデータをやり取りできる必要があります。  
   
  プロバイダー マニフェストは、データ ストアへの接続を開くことなく、デザイン時にツールで読み込むことができる必要があります。  
   
- で[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]は大文字と小文字が区別されますが、基になるデータストアがではない可能性があります。 マニフェストで定義および使用されている EDM 成果物 (識別子や型名など) では、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] の大文字と小文字の区別を使用する必要があります。 大文字と小文字が区別されるデータ ストア要素がプロバイダー マニフェストに含まれる場合、その大文字と小文字の区別はプロバイダー マニフェストで保持する必要があります。  
+ Entity Framework では大文字と小文字が区別されますが、基になるデータストアがではない可能性があります。 マニフェストで EDM 成果物 (識別子と型名など) が定義されて使用されている場合、Entity Framework 大文字と小文字の区別を使用する必要があります。 大文字と小文字が区別されるデータ ストア要素がプロバイダー マニフェストに含まれる場合、その大文字と小文字の区別はプロバイダー マニフェストで保持する必要があります。  
   
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] では、すべてのデータ プロバイダーに対応するプロバイダー マニフェストが必要です。 プロバイダーマニフェスト[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]がに含まれていないプロバイダーを使用しようとすると、エラーが発生します。  
+ Entity Framework には、すべてのデータプロバイダーのプロバイダーマニフェストが必要です。 Entity Framework のプロバイダーマニフェストがないプロバイダーを使用しようとすると、エラーが発生します。  
   
- プロバイダーとの対話で例外が発生したときに [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] によってスローされる例外の種類を次の表に示します。  
+ 次の表では、プロバイダーとの対話によって例外が発生した場合に Entity Framework がスローする例外の種類について説明します。  
   
 |問題|例外|  
 |-----------|---------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "70248585"
  プロバイダーでは、次のシナリオをサポートしています。  
   
 ### <a name="writing-a-provider-with-symmetric-type-mapping"></a>対称型マッピングによるプロバイダーの記述  
- マッピングの方向に関係なく、 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]各ストア型が1つの EDM 型にマップされるのプロバイダーを作成できます。 EDM 型に対応する非常に単純なマッピングを持つプロバイダー型では、型システムが単純であるか EDM 型と一致するため、対称ソリューションを使用できます。  
+ マッピングの方向に関係なく、各店舗の種類が1つの EDM 型にマップされる Entity Framework のプロバイダーを作成できます。 EDM 型に対応する非常に単純なマッピングを持つプロバイダー型では、型システムが単純であるか EDM 型と一致するため、対称ソリューションを使用できます。  
   
  ドメインの単純さを利用して、静的な宣言型プロバイダー マニフェストを作成することができます。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "70248585"
 - パラメーターと戻り値の型が EDM 用語で表現される、プロバイダーがサポートする関数の一覧。  
   
 ### <a name="writing-a-provider-with-asymmetric-type-mapping"></a>非対照型マッピングによるプロバイダーの記述  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] のデータ ストア プロバイダーを記述する場合、一部の型の EDM からプロバイダーへの型マッピングが、プロバイダーから EDM への型マッピングとは異なることがあります。 たとえば、プロバイダー側で unbounded の EDM PrimitiveTypeKind.String が nvarchar(4000) にマップされるのに対して、nvarchar(4000) は EDM PrimitiveTypeKind.String(MaxLength=4000) にマップされる場合があります。  
+ Entity Framework のデータストアプロバイダーを記述する場合、一部の型に対する EDM からプロバイダーへの型のマッピングは、プロバイダーから EDM への型のマッピングとは異なる場合があります。 たとえば、プロバイダー側で unbounded の EDM PrimitiveTypeKind.String が nvarchar(4000) にマップされるのに対して、nvarchar(4000) は EDM PrimitiveTypeKind.String(MaxLength=4000) にマップされる場合があります。  
   
  次の 2 つのセクションで構成される XML ファイルを記述します。  
   
@@ -272,7 +272,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
 |属性名|データの種類|必須|既定値|説明|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Name|String|[はい]|N/A|パラメーターの識別子/名前|  
+|名前|String|[はい]|N/A|パラメーターの識別子/名前|  
 |種類|String|[はい]|N/A|パラメーターの EDM 型|  
 |モード|パラメーター<br /><br /> Direction|[はい]|N/A|パラメーターの方向<br /><br /> -in<br />-out<br />-inout|  
   

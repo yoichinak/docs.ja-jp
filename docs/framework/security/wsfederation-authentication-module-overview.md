@@ -3,12 +3,12 @@ title: WSFederation 認証モジュールの概要
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: 9ade6b0d9e4aadb353ca148f868d548fbaacfbc3
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: eaf53a352238161ccec1b481649074d322954905
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987698"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851506"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation 認証モジュールの概要
 Windows Identity Foundation (WIF) は、WS-Federated Authentication Module (WS-FAM) を通じて ASP.NET アプリケーションでのフェデレーション認証をサポートします。 このトピックは、フェデレーション認証の動作とその使用方法の理解に役立ちます。  
@@ -67,7 +67,7 @@ Windows Identity Foundation (WIF) は、WS-Federated Authentication Module (WS-F
   
 - <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=nameWithType> イベントは、<xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> から派生するアプリケーションのモジュールのいずれか 1 つで ASP.NET インフラストラクチャが <xref:System.IdentityModel.Services.HttpModuleBase> メソッドを初めて呼び出す場合に発生します。 このメソッドは静的な <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> のプロパティにアクセスし、これにより構成が Web.config ファイルから読み込まれます。 このイベントが発生するのは、このプロパティに初めてアクセスした場合だけです。 構成から初期化される <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> オブジェクトは、イベント ハンドラーの <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> のプロパティを通じてアクセスできます。 構成がモジュールに適用される前に、このイベントを使用して構成を変更できます。 Application_Start イベントでこのイベントのハンドラーを追加できます。  
   
-    ```  
+    ```csharp
     void Application_Start(object sender, EventArgs e)  
     {  
         FederatedAuthentication.FederationConfigurationCreated += new EventHandler<FederationConfigurationCreatedEventArgs>(FederatedAuthentication_FederationConfigurationCreated);  

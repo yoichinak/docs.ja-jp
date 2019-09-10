@@ -2,12 +2,12 @@
 title: コマンド ツリーの構造
 ms.date: 03/30/2017
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-ms.openlocfilehash: a3568f3deeaeeb31b69b41ac7c767001b792a8eb
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8368354049a77a56a5aa54ab500619576f41b0dc
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248224"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854264"
 ---
 # <a name="the-shape-of-the-command-trees"></a>コマンド ツリーの構造
 
@@ -17,7 +17,7 @@ SQL 生成モジュールは、指定された入力クエリ コマンド ツ�
 
 クエリ コマンド ツリーは、クエリのオブジェクト モデル表現です。 クエリ コマンド ツリーには、次の 2 つの目的があります。
 
-- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] に対して指定された入力クエリを表現する。
+- Entity Framework に対して指定された入力クエリを表現します。
 
 - プロバイダーに対して提供された出力クエリを表現し、バックエンドに対するクエリを記述する。
 
@@ -25,7 +25,7 @@ SQL 生成モジュールは、指定された入力クエリ コマンド ツ�
 
 DBQueryCommandTree.Query プロパティは、クエリのロジックを記述する式ツリーのルートです。 DBQueryCommandTree.Parameters プロパティには、クエリで使用されるパラメーターのリストが格納されます。 式ツリーは、DbExpression オブジェクトから構成されます。
 
-DbExpression オブジェクトは、計算を表します。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] では、定数、変数、関数、コンストラクター、およびフィルターや結合のような標準の関係演算子など、クエリ式を構成するための式がいくつか用意されています。 すべての DbExpression オブジェクトには、その式によって生成される結果の型を表す ResultType プロパティがあります。 この型は、TypeUsage として表されます。
+DbExpression オブジェクトは、計算を表します。 いくつかの種類の式は、クエリ式を作成するために Entity Framework によって提供されます。これには、定数、変数、関数、コンストラクター、およびフィルターや結合などの標準的な関係演算子が含まれます。 すべての DbExpression オブジェクトには、その式によって生成される結果の型を表す ResultType プロパティがあります。 この型は、TypeUsage として表されます。
 
 ## <a name="shapes-of-the-output-query-command-tree"></a>出力クエリ コマンド ツリーの構造
 
@@ -75,7 +75,7 @@ DbExpression オブジェクトは、計算を表します。 [!INCLUDE[adonet_e
 
 - ユーザー定義関数
 
-正規関数 (詳細については、「[正規関数](./language-reference/canonical-functions.md)」を参照し[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]てください) は、の一部として指定されます。プロバイダーは、これらの仕様に基づいて正規関数の実装を提供する必要があります。 ストア関数は、対応するプロバイダー マニフェスト内の仕様に基づいています。 ユーザー定義の関数は、SSDL 内の仕様に基づいています。
+正規関数 (詳細については、「[正規関数](./language-reference/canonical-functions.md)」を参照してください) が Entity Framework の一部として指定されます。プロバイダーは、これらの仕様に基づいて正規関数の実装を提供する必要があります。 ストア関数は、対応するプロバイダー マニフェスト内の仕様に基づいています。 ユーザー定義の関数は、SSDL 内の仕様に基づいています。
 
 また、NiladicFunction 属性を持つ関数は引数を持たないため、末尾のかっこを省略して変換する必要があります。  つまり *、 \<functionName > ()* ではなく *\<> を functionName*します。
 

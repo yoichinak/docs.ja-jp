@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: bcd7b699-4e50-4523-8c33-2f54a103d94e
-ms.openlocfilehash: d43ec0cdf5b5bb03854dffc7132dddb4c9ae76fd
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 3ac80cfe06f8531dcd2343f676a6f78f8eb0e8f6
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249261"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854301"
 ---
 # <a name="query-results"></a>クエリ結果
 LINQ to Entities クエリをコマンドツリーに変換して実行すると、通常、クエリ結果は次のいずれかとして返されます。  
@@ -23,9 +23,9 @@ LINQ to Entities クエリをコマンドツリーに変換して実行すると
   
 - 匿名型。  
   
- データ ソースに対してクエリを実行すると、その結果は CLR 型に具体化されてクライアントに返されます。 オブジェクトの具体化は、すべて [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] によって実行されます。 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] と CLR の間のマッピングができないことが原因でエラーが発生すると、オブジェクトの具体化中に例外がスローされます。  
+ データ ソースに対してクエリを実行すると、その結果は CLR 型に具体化されてクライアントに返されます。 オブジェクトの具体化は、すべて Entity Framework によって実行されます。 Entity Framework と CLR とのマッピングができないことが原因でエラーが発生すると、オブジェクトの具体化中に例外がスローされます。
   
- プリミティブ概念モデル型を返すクエリを実行した場合、その結果は、[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] から切り離されたスタンドアロンの CLR 型で構成されます。 ただし、クエリが <xref:System.Data.Objects.ObjectQuery%601> によって表されるエンティティ オブジェクトのコレクションを返す場合、これらの型はオブジェクト コンテキストによって追跡されます。 すべてのオブジェクトの動作 (子/親コレクション、変更の追跡、ポリモーフィズムなど) は、 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]で定義されています。 この機能は、[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] で定義されるようにその機能の範囲内で使用されます。 詳細については、「[オブジェクトの操作](../working-with-objects.md)」を参照してください。  
+ クエリ実行でプリミティブ概念モデル型が返された場合、結果は、スタンドアロンで Entity Framework から切断された CLR 型で構成されます。 ただし、クエリが <xref:System.Data.Objects.ObjectQuery%601> によって表されるエンティティ オブジェクトのコレクションを返す場合、これらの型はオブジェクト コンテキストによって追跡されます。 すべてのオブジェクトの動作 (子/親コレクション、変更の追跡、ポリモーフィズムなど) は、Entity Framework で定義されています。 この機能は、Entity Framework で定義されている容量で使用できます。 詳細については、「[オブジェクトの操作](../working-with-objects.md)」を参照してください。
   
  クエリから返される構造型 (匿名型、NULL 値が許容される複合型など) は、`null` 値になります。 返されたエンティティの <xref:System.Data.Objects.DataClasses.EntityCollection%601> プロパティも `null` 値になります。 これは、要素を持たない `null` に対する <xref:System.Linq.Queryable.FirstOrDefault%2A> の呼び出しなど、<xref:System.Data.Objects.ObjectQuery%601> 値になっているエンティティのコレクション プロパティが投影されるためです。  
   

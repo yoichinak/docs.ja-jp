@@ -2,12 +2,12 @@
 title: 長時間のワークフロー サービスの作成
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: e6206babdb728b6ce38c94441f775e1fdffe7d79
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ceda43cc41ceb3381b4700d6ea8b1871e368dccc
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040415"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856204"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>長時間のワークフロー サービスの作成
 
@@ -124,7 +124,7 @@ ms.locfileid: "70040415"
 
         1. **Condition**プロパティをに設定します。`itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`
 
-        2. 次の図に示すように、assign アクティビティを **[Then** ] セクションと **[Else]** セクションにドラッグアンドドロップして、 **assign**アクティビティのプロパティを設定します。
+        2. 次の図に示すように、 **assign アクティビティを** **[Then** ] セクションと **[Else]** セクションにドラッグアンドドロップして、 **assign**アクティビティのプロパティを設定します。
 
             ![サービス呼び出しの結果の割り当て](./media/creating-a-long-running-workflow-service/assign-result-of-service-call.png "サービス呼び出しの結果を割り当てます。")
 
@@ -191,7 +191,7 @@ ms.locfileid: "70040415"
 
 5. ソリューションをビルドし、`OrderClient` アプリケーションを実行します。 クライアントに次のテキストが表示されます。
 
-    ```Output
+    ```output
     Sending start messageWorkflow service is idle...Press [ENTER] to send an add item message to reactivate the workflow service...
     ```
 
@@ -201,7 +201,7 @@ ms.locfileid: "70040415"
 
 7. Enter キーを押して、項目の追加メッセージをワークフロー サービスに送信します。 クライアントに次のテキストが表示されます。
 
-    ```Output
+    ```output
     Sending add item messageService returned: Item added to orderPress any key to continue . . .
     ```
 

@@ -2,12 +2,12 @@
 title: Entity Framework 用の .NET Framework Data Provider for SQL Server (SqlClient) の既知の問題
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 5c0b7c32e00a0cc90367a559a41f5a7ab59a33a4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 18e3ad59af4014086bd475815011b6008bcb5052
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251391"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854551"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Entity Framework 用の .NET Framework Data Provider for SQL Server (SqlClient) の既知の問題
 ここでは、.NET Framework Data Provider for SQL Server (SqlClient) に関連する既知の問題について説明します。  
@@ -43,7 +43,7 @@ SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP
 ```  
   
 ## <a name="targeting-the-correct-sql-server-version"></a>適切なバージョンの SQL Server を対象としたクエリの実行  
- は[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 、ストレージモデル (.ssdl) ファイルの Schema 要素の`ProviderManifestToken`属性で指定されている SQL Server バージョンに基づいた transact-sql クエリを対象とします。 このバージョンは、実際に接続する SQL Server のバージョンとは異なる場合があります。 たとえば、SQL Server 2005 `ProviderManifestToken`を使用していて、属性が2008に設定されている場合、生成された transact-sql クエリはサーバーで実行されない可能性があります。 たとえば、SQL Server 2008 で導入された新しい日付と時刻の型を使用するクエリは、以前のバージョンの SQL Server では実行されません。 SQL Server 2005 を使用していても`ProviderManifestToken` 、属性が2000に設定されている場合、生成された transact-sql クエリの最適化が低下するか、クエリがサポートされていないという例外が発生する可能性があります。 詳細については、このトピックの「CROSS APPLY 演算子および OUTER APPLY 演算子」を参照してください。  
+ Entity Framework は、ストレージモデル (.ssdl) ファイルの Schema 要素の`ProviderManifestToken`属性で指定されている SQL Server バージョンに基づいた transact-sql クエリを対象としています。 このバージョンは、実際に接続する SQL Server のバージョンとは異なる場合があります。 たとえば、SQL Server 2005 `ProviderManifestToken`を使用していて、属性が2008に設定されている場合、生成された transact-sql クエリはサーバーで実行されない可能性があります。 たとえば、SQL Server 2008 で導入された新しい日付と時刻の型を使用するクエリは、以前のバージョンの SQL Server では実行されません。 SQL Server 2005 を使用していても`ProviderManifestToken` 、属性が2000に設定されている場合、生成された transact-sql クエリの最適化が低下するか、クエリがサポートされていないという例外が発生する可能性があります。 詳細については、このトピックの「CROSS APPLY 演算子および OUTER APPLY 演算子」を参照してください。  
   
  データベースの一部の動作は、データベースの互換性レベルの設定に依存します。 `ProviderManifestToken`属性が2005に設定されていて、SQL Server バージョンが2005であるにもかかわらず、データベースの互換性レベルが "80" (SQL Server 2000) に設定されている場合、生成された transact-sql は SQL Server 2005 を対象としますが、想定どおりに実行されない可能性があります。互換性レベルの設定。 たとえば、ORDER BY リストの列名とセレクターの列名が一致する場合、順序付けが失われることがあります。  
   
@@ -57,7 +57,7 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
 ```  
   
 ## <a name="server-generated-guid-identity-values"></a>サーバー生成の GUID ID 値  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] では、サーバー生成の GUID 型 ID 値がサポートされますが、プロバイダーは、サーバー生成の ID 値を行の挿入後に返す動作をサポートする必要があります。 SQL Server 2005 以降では、SQL Server データベースのサーバー生成 GUID 型を[OUTPUT 句](https://go.microsoft.com/fwlink/?LinkId=169400)を使用して返すことができます。  
+ Entity Framework は、サーバーで生成された GUID 型の id 値をサポートしますが、プロバイダーは、行が挿入された後にサーバーで生成された id 値を返すことをサポートする必要があります。 SQL Server 2005 以降では、SQL Server データベースのサーバー生成 GUID 型を[OUTPUT 句](https://go.microsoft.com/fwlink/?LinkId=169400)を使用して返すことができます。  
   
 ## <a name="see-also"></a>関連項目
 

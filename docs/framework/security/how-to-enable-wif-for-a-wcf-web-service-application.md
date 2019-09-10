@@ -3,12 +3,12 @@ title: '方法: WCF Web サービス アプリケーションの WIF を有効�
 ms.date: 03/30/2017
 ms.assetid: bfc64b3d-64e9-4093-a6a4-72e933917af7
 author: BrucePerlerMS
-ms.openlocfilehash: b9fa1f815a962adc0b3c91177021788734b92bb6
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 809009642caf743f4f067591adfa63ccb154a577
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041458"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851533"
 ---
 # <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>方法: WCF Web サービス アプリケーションの WIF を有効にする
 ## <a name="applies-to"></a>適用対象
@@ -245,7 +245,7 @@ ms.locfileid: "70041458"
 
 2. **Enter** キーを押すと、コンソールに以下のクレーム情報が表示されます。
 
-    ```
+    ```output
     Computed by Service1
     Input received from client: Hello World
     Client Name: Terry
