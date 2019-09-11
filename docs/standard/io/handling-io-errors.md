@@ -31,9 +31,9 @@ ms.locfileid: "53126876"
 - <xref:System.IO.PathTooLongException?displayProperty=nameWithType>。
 - <xref:System.OperationCanceledException?displayProperty=nameWithType>。
 - <xref:System.UnauthorizedAccessException?displayProperty=nameWithType>。
-- <xref:System.ArgumentException?displayProperty=nameWithType>、.NET Framework と .NET Core 2.0 以前のバージョンで、無効なパス文字に対してスローされます。
-- <xref:System.NotSupportedException?displayProperty=nameWithType>、.NET Framework で無効なコロンに対してスローされます。
-- <xref:System.Security.SecurityException?displayProperty=nameWithType>、.NET Framework で必要な権限が欠けている限定的な信頼で実行されているアプリケーションに対してスローされます  (完全な信頼は .NET Framework の既定の設定です)。
+- <xref:System.ArgumentException?displayProperty=nameWithType>。 .NET Framework と .NET Core 2.0 以前のバージョンで、無効なパス文字に対してスローされます。
+- <xref:System.NotSupportedException?displayProperty=nameWithType>。 .NET Framework で無効なコロンに対してスローされます。
+- <xref:System.Security.SecurityException?displayProperty=nameWithType>。 .NET Framework で必要な権限が欠けている限定的な信頼で実行されているアプリケーションに対してスローされます (完全な信頼は .NET Framework の既定の設定です)。 (完全な信頼は .NET Framework の既定の設定です)。
 
 ## <a name="mapping-error-codes-to-exceptions"></a>エラー コードの例外へのマッピング
 
@@ -49,13 +49,13 @@ ms.locfileid: "53126876"
 
 | 例外の種類 | .NET Core | .NET Framework |
 |---|---|---|
-| <xref:System.IO.IOException> | [はい] | [はい] |
-| <xref:System.IO.FileNotFoundException> | [はい] | [はい] |
-| <xref:System.IO.DirectoryNotFoundException> | [はい] | [はい] |
-| <xref:System.IO.DriveNotFoundException?> | [はい] | [はい] |
-| <xref:System.IO.PathTooLongException> | [はい] | [はい] |
-| <xref:System.OperationCanceledException> | [はい] | [はい] |
-| <xref:System.UnauthorizedAccessException> | [はい] | [はい] |
+| <xref:System.IO.IOException> | はい | はい |
+| <xref:System.IO.FileNotFoundException> | はい | はい |
+| <xref:System.IO.DirectoryNotFoundException> | はい | はい |
+| <xref:System.IO.DriveNotFoundException?> | はい | はい |
+| <xref:System.IO.PathTooLongException> | はい | はい |
+| <xref:System.OperationCanceledException> | はい | はい |
+| <xref:System.UnauthorizedAccessException> | はい | はい |
 | <xref:System.ArgumentException> | .NET Core 2.0 以前| はい |
 | <xref:System.NotSupportedException> | × | はい |
 | <xref:System.Security.SecurityException> | × | 限定的な信頼のみ |
