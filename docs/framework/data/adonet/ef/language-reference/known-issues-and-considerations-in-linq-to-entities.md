@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: 7be3491af48ad29cd7892dd31a077aa7ac44ca63
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4fb7d574fdb9bd6bd9465cffaf0fda5069b2c0ee
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250499"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854384"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities の既知の問題および注意点
 ここでは、LINQ to Entities クエリに関する既知の問題について説明します。  
@@ -42,7 +42,7 @@ ms.locfileid: "70250499"
   
 <a name="UnsignedIntsUnsupported"></a>   
 ## <a name="unsigned-integers-not-supported"></a>サポートされていない符号なし整数  
- が符号なし整数をサポートし[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]ていないため、LINQ to Entities クエリで符号なし整数型を指定することはサポートされていません。 符号なし整数を指定すると、 <xref:System.ArgumentException>次の例に示すように、クエリ式の変換時に例外がスローされます。 この例では、ID 48000 を持つ注文に対してクエリを実行します。  
+ LINQ to Entities クエリでの符号なし整数型の指定はサポートされていません。 Entity Framework では符号なし整数がサポートされていません。 符号なし整数を指定すると、 <xref:System.ArgumentException>次の例に示すように、クエリ式の変換時に例外がスローされます。 この例では、ID 48000 を持つ注文に対してクエリを実行します。  
   
  [!code-csharp[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#uintasqueryparam)]
  [!code-vb[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#uintasqueryparam)]  
