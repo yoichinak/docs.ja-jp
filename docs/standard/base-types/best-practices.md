@@ -13,12 +13,12 @@ ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
 ms.custom: serodec18
-ms.openlocfilehash: 8d887bb32d1bdd398353d00aba16c2cc8adfcacb
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: a945c53f3206f29cf2b07fea86ba3e8e3af11645
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988821"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254224"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET の正規表現に関するベスト プラクティス
 <a name="top"></a> .NET の正規表現エンジンは、リテラル テキストの比較と照合ではなくパターン一致に基づいてテキストを処理する、完全な機能を備えた強力なツールです。 ほとんどの場合は、すばやく効率的にパターン一致が実行されますが、 処理が非常に遅く見えることもあります。 極端なケースでは、比較的小さな入力の処理に何時間も何日もかかり、応答しなくなったように見えることさえあります。  
@@ -96,7 +96,7 @@ ms.locfileid: "69988821"
 > メソッド呼び出しの形式 (静的、解釈、コンパイル) は、メソッド呼び出しで同じ正規表現が繰り返し使用される場合や、アプリケーションで正規表現オブジェクトが多用される場合に、パフォーマンスに影響を与えます。  
   
 ### <a name="static-regular-expressions"></a>静的正規表現  
- 静的正規表現メソッドは、正規表現オブジェクトを同じ正規表現で繰り返しインスタンス化する代わりの方法として推奨されます。 正規表現オブジェクトで使用される正規表現パターンとは異なり、インスタンス メソッドの呼び出しで使用されるパターンの場合は、そのオペレーション コードまたはコンパイルされた Microsoft Intermediate Language (MSIL) が正規表現エンジンによって内部にキャッシュされます。  
+ 静的正規表現メソッドは、正規表現オブジェクトを同じ正規表現で繰り返しインスタンス化する代わりの方法として推奨されます。 正規表現オブジェクトで使用される正規表現パターンとは異なり、静的メソッドの呼び出しで使用されるパターンの場合は、そのオペレーション コードまたはコンパイルされた Microsoft Intermediate Language (MSIL) が正規表現エンジンによって内部にキャッシュされます。  
   
  たとえば、ユーザー入力を検証するために別のメソッドを頻繁に呼び出すイベント ハンドラーがあったとします。 これを反映したコードを次の例に示します。この例では、<xref:System.Windows.Forms.Button> コントロールの <xref:System.Windows.Forms.Control.Click> イベントを使用して `IsValidCurrency` というメソッドを呼び出しています。このメソッドは、ユーザーが通貨記号に続けて 1 文字以上の 10 進数の数字を入力したかどうかを確認します。  
   

@@ -4,12 +4,12 @@ description: .NET でのサーバー アプリのビルド時に考慮する必�
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 520920566e8a55eef2d506dc4a8085f57ef1c0bb
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: e5df362231b0786a58a4c3c9ae8f5a167930a12e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107289"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799257"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>サーバー アプリ用 .NET Core と .NET Framework の選択
 
@@ -28,7 +28,7 @@ ms.locfileid: "70107289"
 - 現在、アプリで .NET Framework を使用している (移行ではなく拡張することをお勧めします)。
 - アプリが .NET Core で使用できないサードパーティ製の .NET ライブラリや NuGet パッケージを使用している。
 - アプリで、.NET Core で使用できない .NET テクノロジを使用している。
-- アプリで、.NET Core をサポートしていないプラットフォームを使用している。
+- アプリで、.NET Core をサポートしていないプラットフォームを使用している。 .NET Core は Windows、macOS、Linux でサポートされています。
 
 ## <a name="when-to-choose-net-core"></a>どのような場合に .NET Core を選択すべきか
 
@@ -108,6 +108,6 @@ Microsoft やサードパーティ製のプラットフォームの中には、.
 - [ターゲット フレームワーク](frameworks.md)
 - [.NET Core のガイド](../core/index.md)
 - [.NET Framework から .NET Core への移植](../core/porting/index.md)
-- [.NET および Docker の概要](../core/docker/intro-net-docker.md)
+- [.NET および Docker の概要](../core/docker/introduction.md)
 - [.NET コンポーネントの概要](components.md)
 - [.NET マイクロサービス:コンテナー化された .NET アプリケーションのアーキテクチャ](../architecture/microservices/index.md)
