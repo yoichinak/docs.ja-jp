@@ -21,19 +21,19 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-ms.openlocfilehash: 745974523bd747dd23f3cfaf7cb70bb6cd4513f0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f17f815ea0f1f91284d3223ff233a87dc7ff71eb
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946212"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892687"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>方法: コード内でのステートメントの分割と結合 (Visual Basic)
 コードを記述するときに、コードエディターで水平スクロールを必要とする長いステートメントを作成する場合があります。 これはコードの実行方法には影響しませんが、モニターに表示されるコードをユーザーまたは他のユーザーが読み取ることが困難になります。 このような場合は、1つの long ステートメントを複数の行に分割することを検討してください。  
   
 ### <a name="to-break-a-single-statement-into-multiple-lines"></a>1つのステートメントを複数の行に分割するには  
   
-- 行連結文字を使用します。これは、改行`_`する位置で、アンダースコア () です。 アンダースコアは、スペースの直後、および行終端記号 (キャリッジ リターン) の直前に指定する必要があります。  
+-   行連結文字を使用します。これは、改行`_`する位置で、アンダースコア () です。 アンダースコアは、直後にスペースを付け、その直後に行終端記号 (キャリッジリターン) を付けるか、または (バージョン16.0 以降) コメントの後に復帰を続けます。 
   
     > [!NOTE]
     > 場合によっては、行連結文字を省略すると、Visual Basic コンパイラは、次のコード行でステートメントを暗黙的に続行します。 行連結文字を省略できる構文要素の一覧については、「[ステートメント](../../../visual-basic/programming-guide/language-features/statements.md)」の「暗黙的な行の連結」を参照してください。  

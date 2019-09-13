@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5cdd2f5538be0e39b5dd3a378825ccf81f314c03
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ee6dafa8578c59d23908bf0e184091bb4ceaeb45
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916282"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895287"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>チュートリアル: 暗号化アプリケーションの作成
 このチュートリアルでは、コンテンツの暗号化および復号化の方法を示します。 コード例は、Windows フォーム アプリケーション向けに設計されています。 このアプリケーションは、スマート カードを使用するなどの実際のシナリオは示していません。 代わりに、暗号化と復号化の基礎を示しています。  
@@ -45,7 +45,7 @@ ms.locfileid: "69916282"
 |公開キーのインポート|キーを XML ファイルからキー コンテナーに読み込みます。|  
 |アプリケーションのテスト|このアプリケーションをテストするための手順を一覧に示します。|  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 - <xref:System.IO> 名前空間と <xref:System.Security.Cryptography> 名前空間への参照。  
@@ -53,7 +53,7 @@ ms.locfileid: "69916282"
 ## <a name="creating-a-windows-forms-application"></a>Windows フォーム アプリケーションの作成  
  このチュートリアルにあるほとんどのコード例は、ボタン コントロールのイベント ハンドラーとして設計されています。 次の表は、サンプル アプリケーションに必要なコントロールと、コード例に一致する必要な名前を示しています。  
   
-|コントロール|名前|テキストのプロパティ (必要に応じて)|  
+|コントロール|Name|テキストのプロパティ (必要に応じて)|  
 |-------------|----------|---------------------------------|  
 |<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|ファイルの暗号化|  
 |<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|ファイルの復号化|  
@@ -61,7 +61,7 @@ ms.locfileid: "69916282"
 |<xref:System.Windows.Forms.Button>|`buttonExportPublicKey`|公開キーのエクスポート|  
 |<xref:System.Windows.Forms.Button>|`buttonImportPublicKey`|公開キーのインポート|  
 |<xref:System.Windows.Forms.Button>|`buttonGetPrivateKey`|秘密キーの取得|  
-|<xref:System.Windows.Forms.Label>|`label1`||  
+|<xref:System.Windows.Forms.Label>|`label1`|キーが設定されていません|  
 |<xref:System.Windows.Forms.OpenFileDialog>|`openFileDialog1`||  
 |<xref:System.Windows.Forms.OpenFileDialog>|`openFileDialog2`||  
   

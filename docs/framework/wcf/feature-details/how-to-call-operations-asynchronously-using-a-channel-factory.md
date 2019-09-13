@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cc17dd47-b9ad-451c-a362-e36e0aac7ba0
-ms.openlocfilehash: 3080514d06119a2f1b621cff16056ac7577c30b3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: adc4d519e8d29fef5595ab7ddc3168462525c4e2
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966802"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895233"
 ---
 # <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>方法: チャネル ファクトリを使用して、非同期的に操作を呼び出す
 ここでは、<xref:System.ServiceModel.ChannelFactory%601> ベースのクライアント アプリケーションを使用する場合に、クライアントからサービス操作に非同期にアクセスする方法について説明します。 サービスを呼び出すために <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> オブジェクトを使用する場合は、イベント ドリブンの非同期呼び出しモデルを使用できます。 詳細については、「[方法 :サービス操作を非同期](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)に呼び出します。 イベントベースの非同期呼び出しモデルの詳細については、「[イベントベースの非同期パターン (EAP)](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)」を参照してください。  
@@ -23,7 +23,7 @@ ms.locfileid: "69966802"
   
 1. 次のコマンドに示すように、 `/async`オプションを指定して[ServiceModel メタデータユーティリティツール (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)ツールを実行します。  
   
-    ```  
+    ```console
     svcutil /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost:8000/servicemodelsamples/service/mex /a  
     ```  
   

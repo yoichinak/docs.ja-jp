@@ -2,12 +2,12 @@
 title: カスタム メッセージ フィルター
 ms.date: 03/30/2017
 ms.assetid: 98dd0af8-fce6-4255-ac32-42eb547eea67
-ms.openlocfilehash: 0b8336fe4d83f45369af31fe34b58696145d08c0
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 30405800cd219f56fcc08b8e8d22f4fe0b907e32
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039924"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928699"
 ---
 # <a name="custom-message-filter"></a>カスタム メッセージ フィルター
 このサンプルでは、Windows Communication Foundation (WCF) がメッセージをエンドポイントにディスパッチするために使用するメッセージフィルターを置き換える方法を示します。  
@@ -23,13 +23,16 @@ ms.locfileid: "70039924"
   
  これらのフィルタは、動作を使用して変更できます。 サンプルのサービスは、次のように <xref:System.ServiceModel.Description.IEndpointBehavior> を作成して、<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> の <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> と <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> を置き換えます。  
   
-```  
-class FilteringEndpointBehavior : IEndpointBehavior …  
+```csharp
+class FilteringEndpointBehavior : IEndpointBehavior
+{
+    //...
+}
 ```  
   
  2 つのアドレス フィルタは、次のように定義されます。  
   
-```  
+```csharp  
 // Matches any message whose To address contains the letter 'e'  
 class MatchEAddressFilter : MessageFilter …  
 // Matches any message whose To address does not contain the letter 'e'  
@@ -38,13 +41,13 @@ class MatchNoEAddressFilter : MessageFilter
   
  `FilteringEndpointBehavior` は構成可能になり、2 つの異なるバリエーションを設定できます。  
   
-```  
+```csharp  
 public class FilteringEndpointBehaviorExtension : BehaviorExtensionElement  
 ```  
   
  バリエーション 1 では 'e' が含まれる (ただし任意のアクションを含む) アドレスのみを照合します。これに対して、バリエーション 2 では 'e' が含まれないアドレスのみを照合します。  
   
-```  
+```csharp  
 if (Variation == 1)  
     return new FilteringEndpointBehavior(  
         new MatchEAddressFilter(), new MatchAllMessageFilter());  
@@ -89,7 +92,7 @@ else
   
  クライアント アプリケーションの実装は単純で、URI の値を 2 番目の (`via`) パラメータとして <xref:System.ServiceModel.Channels.IChannelFactory%601.CreateChannel%28System.ServiceModel.EndpointAddress%29> に渡すことによって、2 つのチャネルをサービスの URI に作成し、各チャネルに 1 つのメッセージを送信します。ただし、チャネルごとに異なるエンドポイント アドレスが使用されます。 この結果、次のクライアントの出力に示すように、クライアントからの送信メッセージにはそれぞれ異なる宛先が指定され、サーバーはこれに応じて応答します。  
   
-```  
+```console  
 Sending message to urn:e...  
 Exception: The message with To 'urn:e' cannot be processed at the receiver, due to an AddressFilter mismatch at the EndpointDispatcher.  Check that the sender and receiver's EndpointAddresses agree.  
   
@@ -125,12 +128,12 @@ Hello
   
 3. 複数コンピューター構成でサンプルを実行するには、「 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)」の手順に従って、Client.cs の次の行を変更します。  
   
-    ```  
+    ```csharp  
     Uri serviceVia = new Uri("http://localhost/ServiceModelSamples/service.svc");  
     ```  
   
      つまり、localhost をサーバー名に置き換えます。  
   
-    ```  
+    ```csharp  
     Uri serviceVia = new Uri("http://servermachinename/ServiceModelSamples/service.svc");  
     ```  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: 7cd02a0a315ffdb155af09ac4e4fabbea1724a4d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: fabd9b94b8c0a3f0e0db220e84d6c2eca3537c50
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780839"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894419"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express ユーザー インスタンス
 Microsoft SQL Server Express Edition (SQL Server Express) でサポートされる機能に、ユーザー インスタンスがあります。ユーザー インスタンスは、.NET Framework Data Provider for SQL Server (`SqlClient`) を使用している場合にしか利用できません。 ユーザー インスタンスは、親インスタンスによって生成される SQL Server Express データベース エンジンの独立したインスタンスです。 ユーザー インスタンスを使用すると、ローカル コンピューターの管理者以外のユーザーが、SQL Server Express データベースにアタッチして接続できます。 それぞれのインスタンスは、1 ユーザーあたり 1 インスタンスの原則に基づいて、個々のユーザーのセキュリティ コンテキストで実行されます。  
@@ -26,9 +26,9 @@ Microsoft SQL Server Express Edition (SQL Server Express) でサポートされ�
 ## <a name="enabling-user-instances"></a>ユーザー インスタンスの有効化  
  ユーザー インスタンスを生成するには、SQL Server Express の親インスタンスが実行されている必要があります。 ユーザーインスタンスは、SQL Server Express をインストールすると既定で有効になります。ユーザーインスタンスは、親インスタンスで**sp_configure**システムストアドプロシージャを実行しているシステム管理者が明示的に有効または無効にすることができます。  
   
-```  
+```sql  
 -- Enable user instances.  
-sp_configure 'user instances enabled','1'   
+sp_configure 'user instances enabled','1'
   
 -- Disable user instances.  
 sp_configure 'user instances enabled','0'  
@@ -51,7 +51,7 @@ sp_configure 'user instances enabled','0'
   
 - パイプ記号で囲まれた `|DataDirectory|` の部分には、接続元のアプリケーションのデータ ディレクトリを表す文字列が入ります。データベース ファイルである .mdf と .ldf、およびログ ファイルの格納場所を相対パスで指定します。 これらのファイルを別の場所に移す場合は、ファイルの完全パスを指定する必要があります。  
   
-```  
+```text
 Data Source=.\\SQLExpress;Integrated Security=true;  
 User Instance=true;AttachDBFilename=|DataDirectory|\InstanceDB.mdf;  
 Initial Catalog=InstanceDB;  
@@ -65,7 +65,7 @@ Initial Catalog=InstanceDB;
   
  `DataDirectory` が表す物理的な場所は、アプリケーションの種類によって異なります。 次の例では、アタッチする Northwind.mdf ファイルが、アプリケーションの \app_data フォルダーに格納されています。  
   
-```  
+```text
 Data Source=.\\SQLExpress;Integrated Security=true;  
 User Instance=true;  
 AttachDBFilename=|DataDirectory|\app_data\Northwind.mdf;  

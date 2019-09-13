@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
-ms.openlocfilehash: 97e9502176e0cc2f36d67ee3dc8e8d0739a009b2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7632362339cf9e23599f4f688f98cbc1d0b32114
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790196"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894250"
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>WCF Data Service クライアント ユーティリティ (DataSvcUtil.exe)
 
@@ -29,7 +29,7 @@ Datasvcutil.exe ツールは、.NET Framework ディレクトリにインスト�
 
 ## <a name="syntax"></a>構文
 
-```
+```console
 datasvcutil /out:file [/in:file | /uri:serviceuri] [/dataservicecollection] [/language:devlang] [/nologo] [/version:ver] [/help]
 ```
 

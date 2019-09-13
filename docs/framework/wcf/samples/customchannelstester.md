@@ -2,33 +2,33 @@
 title: CustomChannelTester
 ms.date: 03/30/2017
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
-ms.openlocfilehash: 1517a2eb73da778c9b84ff857f4b8ad2b4334498
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 0d77af319e18868ce7d600269cd9afaa0c4ce2c6
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425003"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928644"
 ---
 # <a name="customchannelstester"></a>CustomChannelTester
 `CustomChannelsTester` は、カスタム チャネルの実装を、定義済みのサービス コントラクト セットに対してテストする際に使用できるツールです。 サービス コントラクト セットを選択し、XML ファイルを使用してこのツールに渡すことができます。 これを受け取ったツールは、メッセージ交換中にカスタム チャネル実装をテストするサービスとクライアントを生成します。  
   
 ### <a name="to-build-the-tool"></a>ツールをビルドするには  
   
-1. ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
+1. ソリューションをビルドするには、「 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
-2. ソリューションをビルドするには、3 つのファイルが生成されます。CustomChannelsTester.exe、TestSpec.xml、および SampleRun.cmd します。 SampleRun.cmd ファイルはこのツールを使用してテストする方法を示すサンプル コマンドラインを持ち、[トランスポート。UDP](../../../../docs/framework/wcf/samples/transport-udp.md)サンプル。  
+2. ソリューションをビルドすると、次の3つのファイルが生成されます。CustomChannelsTester TestSpec .xml、および Samplerun.cmd。 Samplerun.cmd ファイルには、このツールを使用して[トランスポートをテストする方法を示すサンプルコマンドラインがあります。UDP](../../../../docs/framework/wcf/samples/transport-udp.md)サンプル。  
   
 ### <a name="to-run-the-tool"></a>ツールを実行するには  
   
 - コマンド プロンプトに次のコマンドを入力します。  
   
-    ```  
+    ```console  
     CustomChannelsTester.exe /binding:YourCustomBindngName /dll:TheAssemblyWhereThisTypeisDefined /testspec:XmlFileNameWhichContainsTestOptions  
     ```  
   
      `/binding` オプションを使用する必要があります。  
   
-     `/dll` "binding"が Windows Communication Foundation (WCF) によって提供されているシステム指定のバインディングではない場合は、このプロパティの値が必要です。  
+     `/dll`"binding" が Windows Communication Foundation (WCF) によって提供されるシステム指定のバインディングでない場合は、が必要です。  
   
      `/testspec` は省略可能です。  
   

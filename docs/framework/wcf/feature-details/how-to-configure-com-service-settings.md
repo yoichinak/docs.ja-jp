@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-ms.openlocfilehash: 58845ab7b9da7377f4fdaa7da13e7c407226d63c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 31096ca510c868cf43ca6ef60126c98a8832d2c5
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912205"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895114"
 ---
 # <a name="how-to-configure-com-service-settings"></a>方法: COM+ サービス設定を構成する
 COM+ サービス構成ツールを使用してアプリケーション インターフェイスを追加または削除すると、アプリケーション構成ファイル内の Web サービス構成が更新されます。 Com + でホストされるモードでは、アプリケーションのルートディレクトリに app.config ファイルが配置され\\ます (%programfiles%\complus applications\ Applications {appid} が既定値です)。 いずれの Web ホスト モードでも、Web.config ファイルは指定した vroot ディレクトリに配置されます。  
@@ -20,7 +20,7 @@ COM+ サービス構成ツールを使用してアプリケーション イン�
 ## <a name="example"></a>例  
  次のインターフェイスを実装するコンポーネントについて考えます。  
   
-```  
+```csharp
 [Guid("C551FBA9-E3AA-4272-8C2A-84BD8D290AC7")]  
 public interface IFinances  
 {  
@@ -31,7 +31,7 @@ public interface IFinances
   
  コンポーネントを Web サービスとして公開する場合、クライアントが準拠する必要のある対応の公開サービス コントラクトは次のとおりです。  
   
-```  
+```csharp
 [ServiceContract(Session = true,  
 Namespace = "http://tempuri.org/C551FBA9-E3AA-4272-8C2A-84BD8D290AC7",  
 Name = "IFinances")]  

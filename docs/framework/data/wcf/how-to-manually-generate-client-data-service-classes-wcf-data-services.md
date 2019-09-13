@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, client library
 ms.assetid: b98cb1d6-956a-4e50-add6-67e4f2587346
-ms.openlocfilehash: 106f1cedb33c0c1b333df0b9f2b8c2a70d458a0d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f8d99213a1ef98c48855ba9f561f87a800768c89
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790429"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894299"
 ---
 # <a name="how-to-manually-generate-client-data-service-classes-wcf-data-services"></a>方法: クライアントデータサービスクラスを手動で生成する (WCF Data Services)
 WCF Data Services を Visual Studio と統合すると、 **[サービス参照の追加]** ダイアログボックスを使用して visual studio プロジェクトのデータサービスへの参照を追加するときに、クライアントデータサービスクラスが自動的に生成されるようになります。 詳細については、「[方法 :データサービス参照](how-to-add-a-data-service-reference-wcf-data-services.md)を追加します。 コード生成ツールの `DataSvcUtil.exe` を使用して、同じクライアント データ サービス クラスを手動で生成することもできます。 このツールは WCF Data Services に含まれており、データサービス定義から .NET Framework クラスを生成します。 このツールを使用して、概念モデル (.csdl) ファイル、および Visual Studio プロジェクトの Entity Framework モデルを表す .edmx ファイルからデータ サービス クラスを生成することもできます。
@@ -43,7 +43,7 @@ WCF Data Services を Visual Studio と統合すると、 **[サービス参照�
 
 - コマンド プロンプトで、次のコマンド (改行なし) を実行します。
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\DataSvcUtil.exe" /language:CSharp /out:northwind.cs /uri:http://localhost:12345/Northwind.svc
     ```
 
@@ -54,7 +54,7 @@ WCF Data Services を Visual Studio と統合すると、 **[サービス参照�
 
 - コマンド プロンプトで、次のコマンド (改行なし) を実行します。
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /out:Northwind.vb /uri:http://localhost:12345/Northwind.svc
     ```
 
@@ -65,7 +65,7 @@ WCF Data Services を Visual Studio と統合すると、 **[サービス参照�
 
 - コマンド プロンプトで、次のコマンド (改行なし) を実行します。
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:CSharp /in:Northwind.csdl /out:Northwind.cs
     ```
 
@@ -73,7 +73,7 @@ WCF Data Services を Visual Studio と統合すると、 **[サービス参照�
 
 - コマンド プロンプトで、次のコマンド (改行なし) を実行します。
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /in:Northwind.csdl /out:Northwind.vb
     ```
 
@@ -81,7 +81,7 @@ WCF Data Services を Visual Studio と統合すると、 **[サービス参照�
 
 - コマンド プロンプトで、次のコマンド (改行なし) を実行します。
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:CSharp /in:Northwind.edmx /out:c:\northwind.cs
     ```
 
@@ -89,7 +89,7 @@ WCF Data Services を Visual Studio と統合すると、 **[サービス参照�
 
 - コマンド プロンプトで、次のコマンド (改行なし) を実行します。
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /in:Northwind.edmx /out:c:\northwind.vb
     ```
 

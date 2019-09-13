@@ -2,12 +2,12 @@
 title: 配信不能キュー
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 489de5d8147edd58d90be01975ddbc9927e29902
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: c8fea29fc420ea6bb922c93ea08e0e23d5bb941d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045626"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928665"
 ---
 # <a name="dead-letter-queues"></a>配信不能キュー
 このサンプルでは、配信できなかったメッセージの処理方法を示します。 これは、トランザクション処理された[MSMQ バインディング](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)のサンプルに基づいています。 このサンプルでは、`netMsmqBinding` バインディングを使用します。 サービスは自己ホスト型コンソール アプリケーションであるので、キューに置かれたメッセージをサービスが受信するようすを観察できます。
@@ -26,9 +26,9 @@ ms.locfileid: "70045626"
 
 - <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> プロパティは、クライアントが必要とする配信不能キューの種類を表します。 この列挙体には、次の値があります。
 
-- `None`:クライアントに配信不能キューは必要ありません。
+- `None` :クライアントに配信不能キューは必要ありません。
 
-- `System` :システムの配信不能キューは、配信不能メッセージを格納するために使用されます。 システムの配信不能キューは、そのコンピューターで実行されているすべてのアプリケーションで共有されます。
+- `System`:システムの配信不能キューは、配信不能メッセージを格納するために使用されます。 システムの配信不能キューは、そのコンピューターで実行されているすべてのアプリケーションで共有されます。
 
 - `Custom`:<xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>プロパティを使用して指定されたカスタム配信不能キューは、配信不能メッセージの格納に使用されます。 この機能は、[!INCLUDE[wv](../../../../includes/wv-md.md)] でのみ使用できます。 同じコンピューターで実行されている他のアプリケーションとキューを共有するのではなく、そのアプリケーション専用の配信不能キューが必要な場合に、この値を使用します。
 
@@ -272,7 +272,7 @@ public class PurchaseOrderDLQService : IOrderProcessor
 
  クライアントを実行すると、次のメッセージが表示されます。
 
-```
+```console
 Press <ENTER> to terminate client.
 ```
 
@@ -280,7 +280,7 @@ Press <ENTER> to terminate client.
 
  次に、配信不能サービスを実行すると、メッセージが読み取られてエラー コードが表示され、メッセージがサービスに再送信されます。
 
-```
+```console
 The dead letter service is ready.
 Press <ENTER> to terminate service.
 
@@ -295,7 +295,7 @@ Purchase order resent
 
  サービスを起動すると、再送信されたメッセージが読み取られて処理されます。
 
-```
+```console
 The service is ready.
 Press <ENTER> to terminate service.
 

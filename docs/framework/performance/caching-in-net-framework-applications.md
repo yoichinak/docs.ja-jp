@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: 779785e9793939cf121fedf99b23a07288173637
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b1d9b12a46d674bf591457cdc90c66fc16818734
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967606"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927044"
 ---
 # <a name="caching-in-net-framework-applications"></a>.NET Framework アプリケーションでのキャッシュ
 キャッシュを使用すると、メモリにデータを格納して高速にアクセスできます。 アプリケーションからそのデータに再アクセスするときに、元のソースからではなく、キャッシュからデータを取得できます。 そのため、パフォーマンスとスケーラビリティが向上します。 また、データ ソースが一時的に使用できない場合でも、キャッシュのデータを使用できます。  
@@ -69,7 +69,7 @@ ms.locfileid: "69967606"
   
 - <xref:System.Runtime.Caching.ObjectCache> クラスから派生したカスタム クラスを作成し、派生クラスでカスタム キャッシュ実装を提供します。  
   
-- <xref:System.Runtime.Caching.MemoryCache> クラスから派生したクラスを作成し、派生クラスをカスタマイズまたは拡張します。 この実行方法の例については、「[Caching Application Data by Using Multiple Cache Objects in an ASP.NET Application](https://blogs.msdn.com/aspnetue/archive/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application.aspx)」(ASP.NET アプリケーションで複数のキャッシュ オブジェクトを使用してアプリケーション データをキャッシュする) を参照してください。  
+- <xref:System.Runtime.Caching.MemoryCache> クラスから派生したクラスを作成し、派生クラスをカスタマイズまたは拡張します。 この実行方法の例については、「[Caching Application Data by Using Multiple Cache Objects in an ASP.NET Application](https://blogs.msdn.microsoft.com/aspnetue/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application/)」(ASP.NET アプリケーションで複数のキャッシュ オブジェクトを使用してアプリケーション データをキャッシュする) を参照してください。  
   
 - <xref:System.Web.Caching.OutputCacheProvider> クラスから派生したクラスを作成し、そのカスタム出力キャッシュ プロバイダーを使用するようにアプリケーションを構成します。  
   

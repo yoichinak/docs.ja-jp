@@ -2,12 +2,12 @@
 title: カスタム トークン
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: c3c6cfd9d1742f7e839d7b40220792ba455d7673
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b073375325d2989a23624303f2c40b8f61a29d02
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855512"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928651"
 ---
 # <a name="custom-token"></a>カスタム トークン
 
@@ -557,7 +557,7 @@ string GetCallerCreditCardNumber()
 
      証明書は、`LocalMachine` ストアの場所の My (Personal) ストアに保存されます。 証明書は、IIS でホストされるサービスの LocalMachine ストアに保存されます。 自己ホスト型サービスの場合、バッチ ファイルで文字列 LocalMachine を CurrentUser に置き換えて、クライアント証明書を CurrentUser ストアの場所に保存します。
 
-    ```
+    ```bat
     echo ************
     echo Server cert setup starting
     echo %SERVER_NAME%
@@ -571,7 +571,7 @@ string GetCallerCreditCardNumber()
 
      Setup.bat バッチ ファイルの次の行は、サーバー証明書をクライアントの信頼されたユーザーのストアにコピーします。 この手順が必要なのは、Makecert.exe によって生成される証明書がクライアント システムにより暗黙には信頼されないからです。 マイクロソフト発行の証明書など、クライアントの信頼されたルート証明書に基づいた証明書が既にある場合は、クライアント証明書ストアにサーバー証明書を配置するこの手順は不要です。
 
-    ```
+    ```bat
     echo ************
     echo copying server cert to client's TrustedPeople store
     echo ************
@@ -580,7 +580,7 @@ string GetCallerCreditCardNumber()
 
 - IIS でホストされるサービスから証明書の秘密キーへのアクセスを有効にするには、IIS でホストされる処理が実行されているユーザー アカウントに、秘密キーへの適切なアクセス許可を付与する必要があります。 これは、Setup.bat スクリプトの最後の手順によって実現されます。
 
-    ```
+    ```bat
     echo ************
     echo setting privileges on server certificates
     echo ************

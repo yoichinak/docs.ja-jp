@@ -2,12 +2,12 @@
 title: Windows Presentation Foundation クライアントでのデータ バインディング
 ms.date: 03/30/2017
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
-ms.openlocfilehash: 791afee9772a6f06e57fdd09ad8a47db2bd8ca63
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b0f1eb8ca154ab8e37a15b35097f746662511f7c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045108"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928635"
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Windows Presentation Foundation クライアントでのデータ バインディング
 このサンプルでは、Windows Presentation Foundation (WPF) クライアントでのデータ バインディングの使用方法を示します。 このサンプルでは、クライアントに返すアルバムの配列をランダムに生成する Windows Communication Foundation (WCF) サービスを使用します。 各アルバムには、名前、価格、およびアルバム トラックの一覧が含まれます。 アルバム トラックには、名前と継続時間が含まれます。 サービスによって返される情報は、Windows Presentation Foundation (WPF) クライアントによって提供されるユーザーインターフェイス (UI) に自動的にバインドされます。  
@@ -17,7 +17,7 @@ ms.locfileid: "70045108"
   
  データ バインディングでは、データ ソースを自動的に UI にバインドすることができます。 これによってプログラミング モデルが簡素化されます。プログラムを使って、各 UI 要素をデータ オブジェクトまたはデータ オブジェクトの配列からのデータで更新する必要がないためです。 単一の UI 要素にオブジェクトをバインドしたり、複数の入力情報を取得する `ListBox` などのコントロールに配列をバインドしたりできます。 データを UI 要素の `DataContext` にバインドする方法を次のコードに示します。  
   
-```  
+```csharp  
 // Event handler executed when call is complete  
 void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs e)  
 {  

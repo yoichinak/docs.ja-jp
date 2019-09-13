@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ce16365f8aa9975a6ccb26415a6d091f65e1eef2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ea61b3abf920a5261933f56c71011b50bcd52bb2
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943858"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927096"
 ---
 # <a name="net-framework-performance"></a>.NET Framework のパフォーマンス
 優れたパフォーマンスのアプリを作成する場合は、アプリのその他の機能を設計する場合と同様に、パフォーマンスについて設計および計画する必要があります。 Microsoft が提供するツールを使用して、アプリのパフォーマンスを測定し、必要に応じて、メモリの使用、コードのスループット コード、および応答性を向上させることができます。 ここでは、Microsoft が提供するパフォーマンス分析ツールの一覧と、アプリ開発の特定の領域のパフォーマンスに関する他のトピックへのリンクを示します。  
@@ -34,7 +34,7 @@ ms.locfileid: "69943858"
 |----------|-----------------|  
 |Visual Studio パフォーマンス分析|Windows オペレーティング システムを実行しているコンピューターに配置されている .NET Framework アプリの CPU 使用量の分析に使用します。<br /><br /> このツールは、Visual Studio でプロジェクトを開いた後、 **[デバッグ]** メニューから使用できます。 詳細については、「 [パフォーマンス エクスプローラー](/visualstudio/profiling/performance-explorer)など、さまざまなツールを利用できます。 **注:** Windows Phone を対象とする場合は、Windows Phone アプリケーション分析を使用します (次の行を参照してください)。|  
 |Windows Phone アプリケーション分析|Windows Phone アプリの CPU やメモリ、ネットワーク データ転送率、アプリの応答性、バッテリの使用量の分析に使用します。<br /><br /> このツールは、[Windows Phone SDK](https://go.microsoft.com/fwlink/?LinkId=265773) のインストール後に、Visual Studio の Windows Phone プロジェクトの **[デバッグ]** メニューから使用できます。 詳細については、「 [Windows Phone 8 のアプリプロファイリング](https://docs.microsoft.com/previous-versions/windows/apps/jj215908(v=vs.105))」を参照してください。|  
-|[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)|CPU とメモリ関連のパフォーマンスの問題を識別するために使用します。 このツールは、Windows イベント トレーシング (ETW) と CLR プロファイル API を使用して、メモリと CPU の高度な調査およびガベージ コレクションや JIT コンパイルに関する情報を提供します。 PerfView を使用する方法の詳細については、アプリに含まれるチュートリアルやヘルプ ファイル、[Channel 9 のビデオ チュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial)、および[ブログの投稿](https://blogs.msdn.com/b/vancem/archive/tags/perfview/)を参照してください。<br /><br /> メモリ固有の問題については、[PerfView を使用したメモリの調査に関するビデオ チュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial/PerfView-Tutorial-9-NET-Memory-Investigation-Basics-of-GC-Heap-Snapshots)を参照してください。|  
+|[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)|CPU とメモリ関連のパフォーマンスの問題を識別するために使用します。 このツールは、Windows イベント トレーシング (ETW) と CLR プロファイル API を使用して、メモリと CPU の高度な調査およびガベージ コレクションや JIT コンパイルに関する情報を提供します。 PerfView を使用する方法の詳細については、アプリに含まれるチュートリアルやヘルプ ファイル、[Channel 9 のビデオ チュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial)、および[ブログの投稿](https://blogs.msdn.microsoft.com/vancem/tag/perfview/)を参照してください。<br /><br /> メモリ固有の問題については、[PerfView を使用したメモリの調査に関するビデオ チュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial/PerfView-Tutorial-9-NET-Memory-Investigation-Basics-of-GC-Heap-Snapshots)を参照してください。|  
 |[Windows Performance Analyzer](https://www.microsoft.com/download/details.aspx?id=30652)|複数のアプリが同じコンピューターで実行されているときに、アプリのメモリやストレージの使用量などの全体的なシステム パフォーマンスを特定するために使用します。 このツールは、[!INCLUDE[win8](../../../includes/win8-md.md)] 用の Windows アセスメント &amp; デプロイメント キット (ADK) の一部としてダウンロード センターから使用できます。 詳細については、「[Windows Performance Analyzer (Windows パフォーマンス アナライザー)](/windows-hardware/test/wpt/windows-performance-analyzer)」を参照してください。|  
   
 ### <a name="event-tracing-for-windows-etw"></a>Windows イベント トレーシング (ETW)  

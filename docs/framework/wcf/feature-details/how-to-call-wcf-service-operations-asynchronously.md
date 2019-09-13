@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
-ms.openlocfilehash: 2d075bfebf7b5cbd2b2ce031a1c3855a925405a2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2c0a6f1477ceec5471c22fa3e46d85f5856b298e
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964026"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895065"
 ---
 # <a name="how-to-call-wcf-service-operations-asynchronously"></a>方法: WCF サービス操作を非同期に呼び出す
 ここでは、クライアントからサービス操作に非同期にアクセスする方法について説明します。 このトピックのサービスは、`ICalculator` インターフェイスを実装しています。 クライアントは、イベント ドリブンの非同期呼び出しモデルを使用して、このインターフェイスで操作を非同期に呼び出すことができます (イベントベースの非同期呼び出しモデルの詳細については、「[イベントベースの非同期パターンを使用したマルチスレッドプログラミング](https://go.microsoft.com/fwlink/?LinkId=248184)」を参照してください)。 サービスで操作を非同期に実装する方法を示す例については[、「方法:非同期サービス操作](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)を実装します。 同期操作と非同期操作の詳細については、「[同期操作と非同期操作](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)」を参照してください。  
@@ -24,7 +24,7 @@ ms.locfileid: "69964026"
   
 1. 次のコマンドに示すように、 `/async`との`/tcv:Version35`両方のコマンドオプションを一緒に使用して、 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)ツールを実行します。  
   
-    ```  
+    ```console
     svcutil /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost:8000/servicemodelsamples/service/mex /a /tcv:Version35  
     ```  
   

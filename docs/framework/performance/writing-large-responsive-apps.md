@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 234c8a1f57af4030186afd48f727621713531b17
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 916523acf1d270830a2cb1fb5ae50e26d055404c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915538"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927012"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>規模が大きく、応答性の高い .NET Framework アプリの作成
 この記事では、大規模な .NET Framework アプリや、ファイルやデータベースなど大量のデータを処理するアプリのパフォーマンス改善のヒントを説明します。 説明するヒントは C# および Visual Basic コンパイラを マネージド コードで作成し直した際に得られたものです。この記事では C# コンパイラでの実際の例をいくつか紹介します。 
@@ -280,7 +280,7 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
   
  **例 5:ラムダ、List\<T >、および IEnumerable\<T >**  
   
- この例では、[LINQ と関数スタイルのコード](https://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx)を利用し、与えられた名前文字列で、コンパイラのモデルで記号を探します。  
+ この例では、[LINQ と関数スタイルのコード](https://blogs.msdn.microsoft.com/charlie/2007/01/27/anders-hejlsberg-on-linq-and-functional-programming/)を利用し、与えられた名前文字列で、コンパイラのモデルで記号を探します。  
   
 ```csharp  
 class Symbol {  
@@ -304,7 +304,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- 最初の行では、[ラムダ式](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name`はローカル変数`name`に[対して閉じ](https://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx)ます。 つまり、このコードは `predicate` が保持している[デリゲート](../../csharp/language-reference/keywords/delegate.md)にオブジェクトを割り当てる以外に、`name` の値をキャプチャする環境を保持する静的クラスを割り当てます。 コンパイラは次のようなコードを生成します。  
+ 最初の行では、[ラムダ式](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name`はローカル変数`name`に[対して閉じ](https://blogs.msdn.microsoft.com/ericlippert/2003/09/17/what-are-closures/)ます。 つまり、このコードは `predicate` が保持している[デリゲート](../../csharp/language-reference/keywords/delegate.md)にオブジェクトを割り当てる以外に、`name` の値をキャプチャする環境を保持する静的クラスを割り当てます。 コンパイラは次のようなコードを生成します。  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  

@@ -2,12 +2,12 @@
 title: IIS と WAS における構成ベースのアクティブ化
 ms.date: 03/30/2017
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
-ms.openlocfilehash: f4de4aff2fbe6b8e82dc3d6523f492d06494c79e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5b06f474d26b80f955b1508f01da83448a8708a3
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69909770"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928768"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>IIS と WAS における構成ベースのアクティブ化
 
@@ -31,6 +31,7 @@ ms.locfileid: "69909770"
  このコードを Web.config ファイルに含めると、サービス ソース コードをアプリケーションの App_Code ディレクトリに配置するか、コンパイル済みアセンブリをアプリケーションの Bin ディレクトリに配置することができます。
 
 > [!NOTE]
+>
 > - 構成ベースのアクティブ化機能を使用する場合、.svc ファイルのインライン コードはサポートされません。
 > - 属性には、"\<サブディレクトリ >/servicesub-directory" や "~/\</service .svc" などの相対アドレスを設定する必要があります。 `relativeAddress`
 > - WCF と関連付けられている既知の拡張子を持たない相対アドレスを登録すると、構成例外がスローされます。

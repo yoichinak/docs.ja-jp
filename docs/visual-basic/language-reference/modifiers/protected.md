@@ -10,35 +10,36 @@ helpviewer_keywords:
 - Protected access modifier
 - Protected keyword [Visual Basic]
 ms.assetid: 74ad3d56-309f-49d2-b60c-1d0157d010e8
-ms.openlocfilehash: 86758c68f0f3bfe214a695f656d3924eadd27e31
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a80e504cc8e88dfc8968f70fee2c17991b28aff5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642687"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929456"
 ---
 # <a name="protected-visual-basic"></a>Protected (Visual Basic)
-1 つまたは複数のプログラミング要素が宣言されていることを指定するメンバー アクセス修飾子は、独自のクラス内または派生クラスからのみアクセスできます。  
+1つ以上の宣言されたプログラミング要素が、独自のクラス内または派生クラスからのみアクセス可能であることを指定するメンバーアクセス修飾子。  
   
 ## <a name="remarks"></a>Remarks  
- クラスで宣言されたプログラミング要素が機密データまたは制限付きのコードを格納することもありますし、要素へのアクセスを制限します。 ただし、クラスが継承可能でないと、派生クラスの階層が期待どおり場合、これらの派生クラスのデータまたはコードにアクセスするために必要な場合があります。 このような場合は、基底クラスとすべての派生クラスの両方にアクセスできる要素をします。 この方法で要素へのアクセスを制限するために宣言できます`Protected`します。  
+ 場合によっては、クラスで宣言されたプログラミング要素が機微なデータまたは制限付きコードを含んでいて、要素へのアクセスを制限する必要があります。 ただし、クラスが継承可能であり、派生クラスの階層を想定している場合は、これらの派生クラスがデータまたはコードにアクセスするために必要な場合があります。 このような場合は、基本クラスとすべての派生クラスから要素にアクセスできるようにする必要があります。 この方法で要素へのアクセスを制限するには、を使用`Protected`して要素を宣言します。  
 
 > [!NOTE]
-> `Protected`アクセス修飾子は、その他の 2 つの修飾子と組み合わせることができます。
-> - [Protected Friend](protected-friend.md)修飾子は、クラス メンバーを同じアセンブリのクラスが定義されていると、派生クラスからそのクラス内からアクセスできます。 
+> アクセス`Protected`修飾子は、次の2つの修飾子と組み合わせることができます。
+>
+> - [Protected Friend](protected-friend.md)修飾子は、クラス内、派生クラス、およびクラスが定義されている同じアセンブリから、クラスメンバーにアクセスできるようにします。 
 > - [Private Protected](private-protected.md)修飾子により、クラス メンバー アクセス、含んでいるアセンブリ内でのみ、派生型です。
   
 ## <a name="rules"></a>ルール  
   
-- **宣言コンテキスト。** 使用することができます`Protected`クラス レベルでのみです。 これは、意味の宣言のコンテキストを`Protected`要素は、クラスでなければなりませんし、ソース ファイル、名前空間、インターフェイス、モジュール、構造体、またはプロシージャにすることはできません。  
+- **宣言コンテキスト。** はクラスレベル`Protected`でのみ使用できます。 つまり、 `Protected`要素の宣言コンテキストはクラスである必要があり、ソースファイル、名前空間、インターフェイス、モジュール、構造体、またはプロシージャにすることはできません。  
 
 ## <a name="behavior"></a>動作  
   
-- **アクセス レベルです。** クラスのすべてのコードは、その要素にアクセスできます。 すべての基本クラスから派生したクラス内のコードにアクセスできます、`Protected`基底クラスの要素。 これは、派生のすべてのジェネレーションに当てはまります。 これは、クラスにアクセスできることを意味`Protected`基底クラスの基底クラスの要素。  
+- **アクセス レベル。** クラス内のすべてのコードは、その要素にアクセスできます。 基底クラスから派生したクラスのコードは、基底クラスの`Protected`すべての要素にアクセスできます。 これは、派生のすべての世代に当てはまります。 これは、クラスが基底クラス`Protected`の基底クラスの要素にアクセスできることを意味します。  
   
-     保護されたアクセスは、スーパー セットまたはサブセットのフレンド アクセスではありません。  
+     保護されたアクセスは、スーパーセットまたはフレンドアクセスのサブセットではありません。  
   
-- **アクセス修飾子。** アクセス レベルを指定するキーワードが呼び出される*アクセス修飾子*します。 アクセス修飾子の比較は、次を参照してください。[アクセス レベルを Visual Basic で](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)します。  
+- **アクセス修飾子。** アクセスレベルを指定するキーワードは、*アクセス修飾子*と呼ばれます。 アクセス修飾子の比較については、「 [Visual Basic のアクセスレベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
   
  `Protected` 修飾子は、次のコンテキストで使用できます。  
   
@@ -73,7 +74,7 @@ ms.locfileid: "64642687"
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Private Protected](private-protected.md)
 - [Protected Friend](protected-friend.md)
-- [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Visual Basic のアクセスレベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [構造体](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

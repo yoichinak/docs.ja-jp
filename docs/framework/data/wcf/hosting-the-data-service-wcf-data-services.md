@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-ms.openlocfilehash: ea60ac132fdd94d4e3a3676891964070b7150857
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 15122984dbaf3245436ff21836065c05131f71d1
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780275"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894321"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>データ サービスのホスティング (WCF Data Services)
 WCF Data Services を使用すると、データを[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]フィードとして公開するサービスを作成できます。 このデータ サービスは、<xref:System.Data.Services.DataService%601> から継承されたクラスとして定義されます。 このクラスは、要求メッセージを処理し、データソースに対して更新を実行し、OData が必要とする応答メッセージを生成するために必要な機能を提供します。 ただし、データサービスは、受信 HTTP 要求のネットワークソケットにバインドしてリッスンすることはできません。 この機能要件のため、データ サービスはホスティング コンポーネントに依存します。
@@ -40,7 +40,7 @@ WCF Data Services を使用すると、データを[!INCLUDE[ssODataFull](../../
 
 Visual Studio 2015 の **[新しい項目の追加]** ダイアログボックスを使用して ASP.NET アプリケーションでデータサービスを定義すると、このツールによってプロジェクトに2つの新しいファイルが生成されます。 そのうち一方のファイル (拡張子は `.svc`) は、データ サービスのインスタンス化方法を WCF ランタイムに指示します。 [クイックスタート](quickstart-wcf-data-services.md)を完了したときに作成された Northwind サンプルデータサービスのこのファイルの例を次に示します。
 
-```
+```aspx-csharp
 <%@ ServiceHost Language="C#"
     Factory="System.Data.Services.DataServiceHostFactory,
             System.Data.Services, Version=4.0.0.0,

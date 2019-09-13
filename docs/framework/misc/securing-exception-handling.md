@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 95dbaddc59a80b4f499a629dd00a52be678b4665
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 256d9c9b825081e3bcfafd6e0e09de825d046d20
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910874"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894547"
 ---
 # <a name="securing-exception-handling"></a>例外処理の保護
 Visual C と Visual Basic では、スタックをさらにフィルター式の実行前に、**finally**ステートメント。 **キャッチ**に関連付けられているブロックの後にそのフィルターが実行される、**finally**ステートメント。 詳細については、「[ユーザーフィルター例外の使用](../../standard/exceptions/using-user-filtered-exception-handlers.md)」を参照してください。 このセクションでは、この順序のセキュリティへの影響について説明します。 フィルター ステートメントで順序を示す次の擬似コード例を検討してくださいと**finally**ステートメントを実行します。  
@@ -53,7 +53,7 @@ void Sub()
   
  このコードは、次を出力します。  
   
-```  
+```output
 Throw  
 Filter  
 Finally  

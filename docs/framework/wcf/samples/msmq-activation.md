@@ -2,12 +2,12 @@
 title: MSMQ アクティベーション
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 169881cdc0736fcc94818f6281c35b4e54e06dfe
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 038f4d7e3d713cfe4134ea98f7858ef71f29bab4
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039297"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895243"
 ---
 # <a name="msmq-activation"></a>MSMQ アクティベーション
 
@@ -92,15 +92,11 @@ MSMQ キュー名は、構成ファイルの appSettings セクションで指�
 
 Service.svc ファイル自体には、`OrderProcessorService` を作成するディレクティブが含まれます。
 
-```svc
-<%@ServiceHost language="c#" Debug="true" Service="Microsoft.ServiceModel.Samples.OrderProcessorService"%>
-```
+`<%@ServiceHost language="c#" Debug="true" Service="Microsoft.ServiceModel.Samples.OrderProcessorService"%>`
 
 さらに、Service.svc ファイルには、System.Transactions.dll を読み込むためのアセンブリ ディレクティブも含まれます。
 
-```svc
-<%@Assembly name="System.Transactions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"%>
-```
+`<%@Assembly name="System.Transactions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"%>`
 
 クライアントはトランザクション スコープを作成します。 サービスとの通信はトランザクションのスコープ内で実行され、すべてのメッセージが成功か失敗かを示すアトミックな単位として扱われます。 トランザクションは、トランザクション スコープで `Complete` を呼び出すことでコミットされます。
 

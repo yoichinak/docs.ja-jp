@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6472f02cf2633d936252bfd2a8daa3ff711a4db8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 68fe50d24ce547e1cad092e3d871c2d0990fd5af
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967874"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894970"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>.NET ネイティブ アプリでのランタイム例外
 デバッグ構成とリリース構成は完全に異なるため、ターゲット プラットフォームでユニバーサル Windows プラットフォーム アプリのリリース ビルドをテストすることは重要です。 既定では、デバッグ構成は .NET Core ランタイムを使用してアプリをコンパイルしますが、リリース構成は .NET ネイティブを使用してアプリをネイティブ コードにコンパイルします。  
@@ -37,7 +37,7 @@ ms.locfileid: "69967874"
 ## <a name="runtime-exception-messages"></a>Runtime exception messages  
  アプリケーションの実行可能ファイルのサイズを最小限に抑えるために、.NET ネイティブは例外メッセージの全文を組み込みません。 そのため、リリース ビルドでスローされるランタイム例外では、例外メッセージの全文が表示されない場合があります。 代わりに、部分的な文字列を含むテキストが、詳細を示すリンクと共に表示される可能性があります。 たとえば、以下のような例外情報が表示されます。  
   
-```  
+```output
 Exception thrown: '$16_System.AggregateException' in Unknown Module.  
   
 Additional information: AggregateException_ctor_DefaultMessage  
@@ -47,7 +47,7 @@ If there is a handler for this exception, the program may be safely continued.
   
  完全な例外メッセージが必要な場合は、代わりにデバッグ ビルドを実行します。 たとえば、リリース ビルドからの上記の例外情報は、デバッグ ビルドでは以下のように表示されます。  
   
-```  
+```output
 Exception thrown: 'System.AggregateException' in NativeApp.exe.  
   
 Additional information: Value does not fall within the expected range.  

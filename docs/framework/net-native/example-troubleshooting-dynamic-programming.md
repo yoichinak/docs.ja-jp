@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fef5894f7452bd32cc4e43433aa60166db241a12
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 85d64a5577acdaa15a40ae308eb728d75d6a4c69
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910601"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894491"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>例:動的プログラミングのトラブルシューティング
 > [!NOTE]
@@ -17,7 +17,7 @@ ms.locfileid: "69910601"
   
  .NET ネイティブツールチェーンを使用して開発されたアプリでのメタデータ参照の失敗によっては、例外が発生します。  予測できない方法でアプリに出現するものもあります。  次の例は、null オブジェクトの参照により生じるアクセス違反を示しています。  
   
-```  
+```output
 Access violation - code c0000005 (first chance)  
 App!$3_App::Core::Util::NavigationArgs.Setup  
 App!$3_App::Core::Util::NavigationArgs..ctor  
@@ -38,9 +38,7 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
 ## <a name="what-was-the-app-doing"></a>アプリが行っていた動作は何か  
  最初に注目するのは、スタックの最下位にある `async` キーワード メカニズムです。  スタックでは元の呼び出しのコンテキストが失われており、別のスレッドで `async` コードを実行しているため、アプリが `async` メソッドで実際に何を行っていたかを決定するのは困難です。 ただし、アプリが最初のページをロードしようとしていたことは推測できます。  `NavigationArgs.Setup` の実装で、次のコードによってアクセス違反が発生しました。  
   
-```  
-AppViewModel.Current.LayoutVM.PageMap  
-```  
+`AppViewModel.Current.LayoutVM.PageMap`  
   
  この例では、`AppViewModel.Current` の `LayoutVM` プロパティは **null** でした。  メタデータの一部が欠落しているため、わずかな動作の違いが生じ、その結果プロパティはアプリで予期されているように設定されるのではなく、初期化されないままになります。  コードの `LayoutVM` が初期化される必要がある位置にブレークポイントを設定すると、状況の把握に役立ちます。  ただし、`LayoutVM` の型は `App.Core.ViewModels.Layout.LayoutApplicationVM` であることに注意してください。  この時点で rd.xml ファイル内に存在するメタデータ ディレクティブは、次のもののみです。  
   

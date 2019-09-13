@@ -3,12 +3,12 @@ title: ICorProfilerInfo8 インターフェイス
 ms.date: 08/06/2019
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 210029ed1b1c7d780f3895f975f7a72227bbea80
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 2baa33a7a3527392d8095b5d0ec7ad6af8a71a8e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68973822"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928934"
 ---
 # <a name="icorprofilerinfo8-interface"></a>ICorProfilerInfo8 インターフェイス
 
@@ -26,5 +26,7 @@ ms.locfileid: "68973822"
 **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
 **ヘッダー:** Corprof.idl、Corprof.idl  
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+
 ## <a name="see-also"></a>関連項目
+
 - [プロファイリングのインターフェイス](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

@@ -2,12 +2,12 @@
 title: インターネット インフォメーション サービスでホストされる WCF サービスの配置
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: b02c69e00aacafd928c59f06e0e7c050a2ca6509
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 95c56f767bbe8dce44ea742de00c65c357bd1378
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856121"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895103"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>インターネット インフォメーション サービスでホストされる WCF サービスの配置
 
@@ -49,9 +49,7 @@ IIS 6.0 以降のバージョンでは、分離されたオブジェクト指向
 
 IIS でホストされる WCF サービスは、IIS アプリケーション内で特別なコンテンツファイル (.svc ファイル) として表されます。 これは、ASMX ページが、IIS アプリケーションの内部で .asmx ファイルとして表現されるのと同様です。 .Svc ファイルには、wcf ホスティングインフラストラクチャが受信メッセージに応答してホステッドサービスをアクティブ化できるようにする、wcf 固有の処理ディレクティブ ([\@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)) が含まれています。 .svc ファイルの最も一般的な構文を次のステートメントに示します。
 
-```svc
-<% @ServiceHost Service="MyNamespace.MyServiceImplementationTypeName" %>
-```
+`<% @ServiceHost Service="MyNamespace.MyServiceImplementationTypeName" %>`
 
 ServiceHost ディレクティブと単一の`Service` [ \@](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)属性で構成されます。 `Service` 属性の値は、サービス実装の共通言語ランタイム (CLR: Common Language Runtime) 型名です。 このディレクティブを使用することは、次のコードを使用してサービス ホストを作成することと基本的に同じです。
 

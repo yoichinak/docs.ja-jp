@@ -2,12 +2,12 @@
 title: カスタム WSDL パブリケーション
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: 0d5ceecebc5f45d62bac7fd0aaa0f8515a469515
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 8674d852be45119b247ec10bbc639922850d5a90
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045118"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928850"
 ---
 # <a name="custom-wsdl-publication"></a>カスタム WSDL パブリケーション
 このサンプルでは、次の方法を示します。  
@@ -26,7 +26,7 @@ ms.locfileid: "70045118"
 ## <a name="service"></a>サービス  
  このサンプルのサービスは、2 つのカスタム属性でマークされています。 1 つ目の属性は `WsdlDocumentationAttribute` で、この属性を使用するとコントラクタ内で文字列を使用でき、用途を説明する文字列をコントラクト インターフェイスまたは操作に提供するために適用できます。 2 つ目は `WsdlParamOrReturnDocumentationAttribute` で、この属性は、操作内で値またはその値を表すパラメータを返すために適用できます。 これらの属性を使用して表されたサービス コントラクト `ICalculator` を、次の例に示します。  
   
-```  
+```csharp  
 // Define a service contract.      
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 // Document it.  
@@ -71,7 +71,7 @@ public interface ICalculator
   
  このサンプルでは、次のコードに示すように、エクスポート コンテキスト オブジェクトに <xref:System.ServiceModel.Description.ContractDescription> または <xref:System.ServiceModel.Description.OperationDescription> のどちらが含まれているかに応じて、そのテキスト プロパティを使用して属性からコメントが抽出され、WSDL 注釈の要素に追加されます。  
   
-```  
+```csharp  
 public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)  
 {  
     if (contractDescription != null)  
@@ -107,7 +107,7 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
   
  操作がエクスポートされる場合、このサンプルでは次に示すように、リフレクションを使用してパラメータの `WsdlParamOrReturnDocumentationAttribute` 値を取得して返し、次にそれらの値を操作の WSDL 注釈の要素に追加します。  
   
-```  
+```csharp  
 // Get returns information  
 ParameterInfo returnValue = operationDescription.SyncMethod.ReturnParameter;  
 object[] returnAttrs = returnValue.GetCustomAttributes(typeof(WsdlParamOrReturnDocumentationAttribute), false);  
@@ -174,7 +174,7 @@ for (int i = 0; i < args.Length; i++)
   
  サンプルでは、最初に <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> メソッドで、WSDL 注釈がコントラクト レベルまたは操作レベルのどちらにあるかを判断し、適切なスコープで WDSL 注釈自体を動作として追加します。その際、インポートされた注釈テキストをコンストラクタに渡します。  
   
-```  
+```csharp  
 public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context)  
 {  
     // Contract Documentation  
@@ -201,7 +201,7 @@ public void ImportContract(WsdlImporter importer, WsdlContractConversionContext 
   
  その後、コードが生成される際に、システムは <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> メソッドと <xref:System.ServiceModel.Description.IOperationContractGenerationExtension.GenerateOperation%28System.ServiceModel.Description.OperationContractGenerationContext%29> メソッドを呼び出し、適切なコンテキスト情報を渡します。 サンプルでは、カスタム WSDL 注釈の書式を設定し、コメントとして CodeDom に挿入します。  
   
-```  
+```csharp  
 public void GenerateContract(ServiceContractGenerationContext context)  
 {  
     Debug.WriteLine("In generate contract.");  
@@ -233,7 +233,7 @@ public void GenerateOperation(OperationContractGenerationContext context)
   
  カスタムインポーターが指定されると、WCF メタデータシステムは、その目的のため<xref:System.ServiceModel.Description.WsdlImporter>に作成されたにカスタムインポーターを読み込みます。 このサンプルでは、<xref:System.ServiceModel.Description.MetadataExchangeClient> を使用してメタデータをダウンロードし、適切に構成された <xref:System.ServiceModel.Description.WsdlImporter> を使用してサンプルで作成されたカスタム インポータによってメタデータをインポートします。さらに、<xref:System.ServiceModel.Description.ServiceContractGenerator> を使用して、変更されたコントラクト情報を Visual Basic および C# のクライアント コードにコンパイルします。このコードは Intellisense をサポートする Visual Studio で使用するか、または XML ドキュメントにコンパイルできます。  
   
-```  
+```csharp  
 /// From WSDL Documentation:  
 ///   
 /// <summary>The ICalculator contract performs basic calculation   

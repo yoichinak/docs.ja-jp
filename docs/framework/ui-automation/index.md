@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - UI Automation
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
-ms.openlocfilehash: 61f3e52476f5003218f8b741db99dfa4df2c9c2c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3c7dc456b9378f1eab09a2300e379d9156722485
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968202"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926974"
 ---
 # <a name="accessibility"></a>ユーザー補助
 > [!NOTE]
@@ -32,4 +32,5 @@ ms.locfileid: "69968202"
  [UI Automation Specification および UI Automation Community Promise](../../../docs/framework/ui-automation/ui-automation-specification-and-community-promise.md)  
   
 ## <a name="related-sections"></a>関連項目  
+
 - [ユーザー補助のサンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility) 

@@ -2,12 +2,12 @@
 title: SQL Server における所有権とユーザーとスキーマの分離
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: f0aa0a67bfbc64124fe2510915d0945341aeb49e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5ad3d927bcf3534e134db2c98b79842b0e6148f3
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791938"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894425"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>SQL Server における所有権とユーザーとスキーマの分離
 オブジェクトの所有者は、それを管理するための取り消し不可能な権限を持ちます。これは SQL Server のセキュリティの核となる概念です。 オブジェクトの所有者から権限を削除することはできません。また、特定のユーザーがデータベース内のオブジェクトを所有しているときに、そのユーザーをデータベースから削除することもできません。  
@@ -17,7 +17,7 @@ ms.locfileid: "70791938"
   
  オブジェクトを参照する 4 つの部分から成る命名構文では、スキーマ名が指定されます。  
   
-```  
+```text
 Server.Database.DatabaseSchema.DatabaseObject  
 ```  
   

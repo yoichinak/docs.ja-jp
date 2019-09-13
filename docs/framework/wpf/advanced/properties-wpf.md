@@ -9,17 +9,18 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], properties
 - properties [WPF]
 ms.assetid: d6e0197f-f2c4-48ed-b45b-b9cdb64aab1c
-ms.openlocfilehash: c685a5227f4339a094ae74af4e1314d4c47f7585
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: d3d11950f919c13590a0212b8d03d394d59d3550
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400870"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928432"
 ---
 # <a name="properties-wpf"></a>プロパティ (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]共通言語ランタイム (CLR) プロパティの機能を拡張するために使用できる一連のサービスを提供します。 通常、これらのサービスをまとめて WPF プロパティ システムと呼びます。 [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] プロパティ システムによって使用されるプロパティは、依存関係プロパティと呼ばれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
 - [依存関係プロパティの概要](dependency-properties-overview.md)
 - [添付プロパティの概要](attached-properties-overview.md)
 - [カスタム依存関係プロパティ](custom-dependency-properties.md)

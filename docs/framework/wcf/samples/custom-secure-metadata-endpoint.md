@@ -2,12 +2,12 @@
 title: カスタム セキュア メタデータ エンドポイント
 ms.date: 03/30/2017
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
-ms.openlocfilehash: 072d2551acaae87904bb12c5e8edafa788674322
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 32e6e0238637f9c2ef6814ace35ccb0b78110b60
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045137"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928679"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>カスタム セキュア メタデータ エンドポイント
 このサンプルでは、メタデータ以外の交換バインディングの1つを使用する、セキュリティで保護されたメタデータエンドポイントを使用してサービスを実装する方法と、 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)またはクライアントを構成して、そのようなメタデータを取得する方法を示します。メタデータエンドポイント。 メタデータ エンドポイントを公開する場合に使用できるシステム指定のバインディングには、mexHttpBinding と mexHttpsBinding の 2 つがあります。 mexHttpBinding は、メタデータ エンドポイントをセキュリティ保護されない HTTP を介して公開する場合に使用します。 mexHttpsBinding は、メタデータ エンドポイントをセキュリティ保護される HTTPS を介して公開する場合に使用します。 このサンプルでは、<xref:System.ServiceModel.WSHttpBinding> を使用してセキュア メタデータ エンドポイントを公開する方法を示します。 この方法は、HTTPS を使用せずにバインディングのセキュリティ設定を変更する場合に使用します。 mexHttpsBinding を使用すると、メタデータ エンドポイントがセキュリティ保護されますが、バインディング設定を変更できなくなります。  
@@ -59,7 +59,7 @@ ms.locfileid: "70045137"
 ## <a name="svcutil-client"></a>Svcutil クライアント  
  既定のバインディングを使用して `IMetadataExchange` エンドポイントをホストする場合、このエンドポイントのアドレスを使用して次のように Svcutil.exe を実行できます。  
   
-```  
+```console  
 svcutil http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
@@ -77,7 +77,7 @@ svcutil http://localhost/servicemodelsamples/service.svc/mex
   
  エンドポイント名は、メタデータがホストされるアドレスのスキーマの名前である必要があります。また、エンドポイント コントラクトは `IMetadataExchange` であることが必要です。 したがって、Svcutil.exe をコマンド ラインで実行する場合は次のようになります。  
   
-```  
+```console  
 svcutil http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
@@ -85,7 +85,7 @@ svcutil http://localhost/servicemodelsamples/service.svc/mex
   
  Svcutil.exe が Svcutil.exe.config の構成を使用するには、Svcutil.exe がこの構成ファイルと同じディレクトリにある必要があります。 したがって、Svcutil.exe をインストール場所から Svcutil.exe.config ファイルが含まれるディレクトリにコピーする必要があります。 その後、そのディレクトリで次のコマンドを実行します。  
   
-```  
+```console  
 .\svcutil.exe http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
@@ -96,7 +96,7 @@ svcutil http://localhost/servicemodelsamples/service.svc/mex
   
  Svcutil.exe.config には、同じバインディングと資格情報についての情報が示されており、`MetadataExchangeClient` でこれを次のように強制的に使用できます。  
   
-```  
+```csharp  
 // Specify the Metadata Exchange binding and its security mode  
 WSHttpBinding mexBinding = new WSHttpBinding(SecurityMode.Message);  
 mexBinding.Security.Message.ClientCredentialType = MessageCredentialType.Certificate;  
@@ -105,27 +105,27 @@ mexBinding.Security.Message.ClientCredentialType = MessageCredentialType.Certifi
 MetadataExchangeClient mexClient = new MetadataExchangeClient(mexBinding);  
 mexClient.SoapCredentials.ClientCertificate.SetCertificate(    StoreLocation.CurrentUser, StoreName.My,  
     X509FindType.FindBySubjectName, "client.com");  
-mexClient.SoapCredentials.ServiceCertificate.Authentication.    CertificateValidationMode =    X509CertificateValidationMode.PeerOrChainTrust;  
+mexClient.SoapCredentials.ServiceCertificate.Authentication.CertificateValidationMode = X509CertificateValidationMode.PeerOrChainTrust;  
 mexClient.SoapCredentials.ServiceCertificate.SetDefaultCertificate(    StoreLocation.CurrentUser, StoreName.TrustedPeople,  
     X509FindType.FindBySubjectName, "localhost");  
 ```  
   
  `mexClient` が構成されている場合、次のように必要なコントラクトを列挙し、`MetadataResolver` を使用してこれらのコントラクトが含まれるエンドポイントの一覧をフェッチできます。  
   
-```  
+```csharp  
 // The contract we want to fetch metadata for  
-Collection<ContractDescription> contracts =    new Collection<ContractDescription>();  
-ContractDescription contract =    ContractDescription.GetContract(typeof(ICalculator));  
+Collection<ContractDescription> contracts = new Collection<ContractDescription>();  
+ContractDescription contract = ContractDescription.GetContract(typeof(ICalculator));  
 contracts.Add(contract);  
 // Find endpoints for that contract  
-EndpointAddress mexAddress = new    EndpointAddress(ConfigurationManager.AppSettings["mexAddress"]);  
-ServiceEndpointCollection endpoints =    MetadataResolver.Resolve(contracts, mexAddress, mexClient);  
+EndpointAddress mexAddress = new EndpointAddress(ConfigurationManager.AppSettings["mexAddress"]);  
+ServiceEndpointCollection endpoints = MetadataResolver.Resolve(contracts, mexAddress, mexClient);  
 ```  
   
  最後に、こうしたエンドポイントからの情報を使用して、アプリケーション エンドポイントと通信するチャネルの作成に使用される、`ChannelFactory` のバインディングとアドレスを初期化できます。  
   
-```  
-ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Binding, endpoint.Address);  
+```csharp  
+ChannelFactory<ICalculator> cf = new ChannelFactory<ICalculator>(endpoint.Binding, endpoint.Address);  
 ```  
   
  このクライアント サンプルで重要な点は、`MetadataResolver` を使用しているときにメタデータ交換通信用のカスタム バインドまたはカスタム動作を指定する必要がある場合に、`MetadataExchangeClient` を使用すればこうしたカスタム設定を指定できるということです。  

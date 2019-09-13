@@ -2,12 +2,12 @@
 title: デザイン パターン:リストに基づく公開/定期受信
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 3dbdab152e05487f9dcc9fa00ed0c653d68ab65e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 3c05e66affad8e517b0b1b5001f726abeae7b100
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045573"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928841"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>デザイン パターン:リストに基づく公開/定期受信
 このサンプルは、Windows Communication Foundation (WCF) プログラムとして実装されているリストベースのパブリッシュ/サブスクライブパターンを示しています。  
@@ -23,7 +23,7 @@ ms.locfileid: "70045573"
   
  サービスは、双方向通信を使用します。 `ISampleContract` サービス コントラクトは `ISampleClientCallback` コールバック コントラクトと対になっています。 サービスは Subscribe および Unsubscribe サービス操作を実装します。クライアントはこれらのサービス操作を使用してサブスクライバのリストに参加またはリストへの参加を解除します。 サービスは、さらに `PublishPriceChange` サービス操作も実装します。データ ソース プログラムはこれを呼び出して、新しい情報をサービスに提供します。 クライアント プログラムは `PriceChange` サービス操作を実装します。サービスはこれを呼び出して、すべてのサブスクライバに価格の変更を通知します。  
   
-```  
+```csharp  
 // Create a service contract and define the service operations.  
 // NOTE: The service operations must be declared explicitly.  
 [ServiceContract(SessionMode=SessionMode.Required,  
@@ -48,7 +48,7 @@ public interface ISampleClientContract
   
  サービスは、すべてのサブスクライバに新しい情報を通知する機構として、.NET Framework イベントを使用します。 クライアントが Subscribe を呼び出してサービスに参加すると、イベント ハンドラが提供されます。 クライアントがサービスへの参加を解除すると、イベントからイベント ハンドラの定期受信が解除されます。 データ ソースが価格の変更を報告するサービスを呼び出すと、サービスはイベントを発生させます。 これにより、サービスの各インスタンスが呼び出されます。このサービスは定期受信した各クライアントのサービスで、この呼び出しによって各インスタンスのイベント ハンドラが実行されます。 各イベント ハンドラは、コールバック関数を使用してクライアントに情報を渡します。  
   
-```  
+```csharp  
 public class PriceChangeEventArgs : EventArgs  
     {  
         public string Item;  

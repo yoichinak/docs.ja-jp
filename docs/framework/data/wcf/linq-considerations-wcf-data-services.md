@@ -9,12 +9,12 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: c0d2d1dac43dd178680adbc123d5ce4f88fc0cc0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 659e3ba02367feee4539a984b679173ee4544d17
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779887"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894317"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>LINQ に関する留意点 (WCF Data Services)
 このトピックでは、[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] クライアントを使用しているときに LINQ クエリを作成および実行する方法と、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] を実装するデータ サービスを LINQ で照会する場合の制限について説明します。 ベースのデータサービスに対する[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]クエリの作成と実行の詳細については、「[データサービスのクエリ](querying-the-data-service-wcf-data-services.md)」を参照してください。  
@@ -32,7 +32,7 @@ ms.locfileid: "70779887"
   
  この LINQ クエリは、Northwind ベースの[クイックスタート](quickstart-wcf-data-services.md)データサービスに対して実行される次のクエリ URI に変換されます。  
   
-```  
+```http
 http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight gt 30  
 ```  
   

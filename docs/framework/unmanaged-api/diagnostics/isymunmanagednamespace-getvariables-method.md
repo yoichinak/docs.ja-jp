@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c5b65cdeb36b8abf17c74d41a7fc7dfb34fa5731
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 813f57377c1885b09190ada3c73f4391a3f2d931
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939491"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895051"
 ---
 # <a name="isymunmanagednamespacegetvariables-method"></a>ISymUnmanagedNamespace::GetVariables メソッド
-この名前空間内のグローバル スコープで定義されたすべての変数を返します。  
+この名前空間内のグローバルスコープで定義されているすべての変数を返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT GetVariables(  
     [in]  ULONG32  cVars,  
     [out] ULONG32  *pcVars,  
@@ -39,19 +39,19 @@ HRESULT GetVariables(
   
 ## <a name="parameters"></a>パラメーター  
  `cVars`  
- [in]A`ULONG32`のサイズを示す、`pVars`配列。  
+ から配列の`pVars`サイズを示す。 `ULONG32`  
   
  `pcVars`  
- [out]ポインターを`ULONG32`名前空間の格納に必要なバッファーのサイズを受け取る。  
+ 入出力名前空間を格納`ULONG32`するために必要なバッファーのサイズを受け取るへのポインター。  
   
  `pVars`  
- [out]名前空間を格納しているバッファーへのポインター。  
+ 入出力名前空間を格納しているバッファーへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK を返します。それ以外の場合は E_FAIL またはその他のエラーコードを返します。  
   
 ## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 

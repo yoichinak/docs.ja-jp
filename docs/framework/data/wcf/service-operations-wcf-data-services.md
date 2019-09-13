@@ -8,18 +8,18 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: f905eb90b47cb5ab20fd912b1cbcc62947361992
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4f36081ef1a3eec84f3cc2ced3c629109acd6a38
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779773"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894273"
 ---
 # <a name="service-operations-wcf-data-services"></a>サービス操作 (WCF Data Services)
 
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] では、データ サービスでサービス操作を定義して、サーバーでメソッドを公開できます。 その他のデータ サービス リソースと同様に、サービス操作は URI によってアドレス指定できます。 サービス操作では、データ サービスでビジネス ロジックを公開できます (検証ロジックの実装、ロール ベースのセキュリティの適用、特殊なクエリ機能の公開など)。 サービス操作は、<xref:System.Data.Services.DataService%601> から派生するデータ クラスに追加されるメソッドです。 その他のすべてのデータ サービス リソースと同様に、パラメーターをサービス操作メソッドに指定できます。 たとえば、次のサービス操作 URI ([クイックスタート](quickstart-wcf-data-services.md)データサービスに基づく) は、値`London`を`city`パラメーターに渡します。
 
-```
+```http
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
 ```
 
@@ -70,7 +70,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
 
 メソッドの名前を URI の最初のパス セグメントに配置することによってサービス操作のアドレスを指定できます。 たとえば、次の URI の場合、`GetOrdersByState` オブジェクトの <xref:System.Linq.IQueryable%601> コレクションを返す `Orders` 操作にアクセスします。
 
-```
+```http
 http://localhost:12345/Northwind.svc/GetOrdersByState?state='CA'&includeItems=true
 ```
 
@@ -86,7 +86,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByState?state='CA'&includeItems=tr
 
 サービス操作の戻り値の型によっては、パス セグメントやクエリ オプションをさらに URI に追加できます。 たとえば、次の URI は、関連する `GetOrdersByCity` オブジェクトと一緒に <xref:System.Linq.IQueryable%601> オブジェクトの `Orders` コレクションを `RequiredDate` の降順で返す `Order_Details` 操作にアクセスします。
 
-```
+```http
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order_Details&$orderby=RequiredDate desc
 ```
 

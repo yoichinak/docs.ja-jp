@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8ffcc3a079e7e9a9d69622dc6666bb0e7641d4e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4450c262b75a73114cb7de7de98567f053bbf564
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650779"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894470"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>ISymUnmanagedWriter::SetSymAttribute メソッド
-その名前に基づくカスタム属性を定義します。 これらの属性は、カスタム属性のメタデータとは異なり、シンボル ストアに保持されます。  
+名前に基づいてカスタム属性を定義します。 これらの属性は、メタデータのカスタム属性とは異なり、シンボルストアに保持されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetSymAttribute(  
     [in] mdToken parent,  
     [in] const WCHAR *name,  
@@ -39,22 +39,22 @@ HRESULT SetSymAttribute(
   
 ## <a name="parameters"></a>パラメーター  
  `parent`  
- [in]属性を定義するメタデータ トークンです。  
+ から属性を定義するメタデータトークン。  
   
  `name`  
- [in]ポインターを`WCHAR`属性名を格納しています。  
+ から属性名を格納`WCHAR`しているへのポインター。  
   
  `cData`  
- [in]A`ULONG32`のサイズを示す、`data`配列。  
+ から配列の`data`サイズを示す。 `ULONG32`  
   
  `data`  
- [in]属性の値。  
+ から属性値。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK を返します。それ以外の場合は E_FAIL またはその他のエラーコードを返します。  
   
 ## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 

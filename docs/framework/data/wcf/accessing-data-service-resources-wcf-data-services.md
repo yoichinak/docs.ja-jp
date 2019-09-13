@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: eff8d682004bf437a9b5470a4eb91c9bd52bfad5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 048cbb8708aa705fe6b03491ddfa9c107a21cda1
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791323"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894355"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>データ サービス リソースへのアクセス (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]では[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 、uri でアドレス指定できるリソースを使用してデータをフィードとして公開するためのをサポートしています。 これらのリソースは、 [Entity Data Model](../adonet/entity-data-model.md)のエンティティとリレーションシップの規則に従って表されます。 このモデルでは、エンティティはアプリケーション ドメイン内のデータの操作単位 (データ型) を表します (顧客、注文、項目、製品など)。 エンティティ データは、Representational State Transfer (REST) のセマンティクス (特に、標準的な HTTP 動詞である GET、PUT、POST、および DELETE) を使用してアクセスおよび変更できます。  
@@ -21,44 +21,44 @@ ms.locfileid: "70791323"
 ## <a name="addressing-resources"></a>リソースへの対処  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] では、データ モデルによって公開されたデータを、URI を使用してアドレス指定します。 たとえば、次の URI は、Customers エンティティセットであるフィードを返します。これには、Customer エンティティ型のすべてのインスタンスのエントリが含まれます。  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers  
+```http
+https://services.odata.org/Northwind/Northwind.svc/Customers  
 ```  
   
  エンティティには、エンティティ キーという特別なプロパティがあります。 エンティティ キーは、エンティティ セット内の 1 つのエンティティを一意に識別するために使用されます。 そのため、エンティティ セット内のエンティティ型の特定のインスタンスのアドレスを指定できます。 たとえば、次の URI は、`ALFKI` のキー値のある Customer エンティティ型の特定のインスタンスのエントリを返します。  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')  
 ```  
   
  エンティティ インスタンスのプリミティブ プロパティおよび複合プロパティは、個別にアドレス指定することもできます。 たとえば、次の URI は特定の Customer の `ContactName` プロパティ値が含まれた XML 要素を返します。  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/ContactName  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/ContactName  
 ```  
   
  前の URI に `$value` エンドポイントを含めた場合、応答メッセージにはプリミティブ プロパティの値のみが返されます。 次の例では、XML 要素のない "Maria Anders" という文字列のみが返されます。  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/ContactName/$value  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/ContactName/$value  
 ```  
   
  エンティティ間のリレーションシップは、アソシエーションによってデータ モデル内で定義されます。 これらのアソシエーションによって、エンティティ インスタンスのナビゲーション プロパティを使用して関連エンティティをアドレス指定することが可能になります。 ナビゲーション プロパティは、単一の関連エンティティ (多対一のリレーションシップの場合) または関連エンティティのセット (一対多のリレーションシップの場合) のいずれかを返します。 たとえば、次の URI は、特定の Customer に関連付けられたすべての Orders のセットであるフィードを返します。  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders  
 ```  
   
  リレーションシップは通常は双方向であり、ナビゲーション プロパティのペアで表されます。 前の例で示したリレーションシップとは逆に、次の URI は特定の Order エンティティが属する Customer エンティティへの参照を返します。  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/Customer  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Orders(10643)/Customer  
 ```  
   
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]では、クエリ式の結果に基づいてリソースのアドレスを計算することもできます。 これにより、評価された式に基づいてリソースのセットをフィルター処理できます。 たとえば、次の URI は、リソースをフィルターして特定の Customer に 1997 年 9 月 22 日以降に出荷された Orders だけを返します。  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=ShippedDate gt datetime'1997-09-22T00:00:00'  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=ShippedDate gt datetime'1997-09-22T00:00:00'  
 ```  
   
  詳細については[、「OData:URI 規則](https://go.microsoft.com/fwlink/?LinkId=185564)。  
@@ -66,8 +66,8 @@ http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$fil
 ## <a name="system-query-options"></a>System Query Options (システム クエリ オプション)  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]フィルター処理、並べ替え、ページングなど、リソースに対して従来のクエリ操作を実行するために使用できる一連のシステムクエリオプションを定義します。 たとえば、次の URI は、すべて`Order`のエンティティのセットと関連`Order_Detail`エンティティを返します。この場合、の末尾がで`100`はありません。  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(ShipPostalCode,'100')&$expand=Order_Details&$orderby=ShipCity  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(ShipPostalCode,'100')&$expand=Order_Details&$orderby=ShipCity  
 ```  
   
  返されたフィードのエントリは、注文の ShipCity プロパティの値でも並べ替えられています。  
@@ -87,8 +87,8 @@ http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(Sh
 ## <a name="addressing-relationships"></a>リレーションシップのアドレス指定  
  では、エンティティセットとエンティティインスタンスをアドレス[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]指定するだけでなく、エンティティ間のリレーションシップを表すアソシエーションをアドレス指定することもできます。 この機能は、2 つのエンティティ インスタンス (Northwind サンプル データベースの注文に関連付けられた配送会社など) の間のリレーションシップを作成または変更するために必要です。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]では`$link` 、エンティティ間のアソシエーションに特に対応する演算子がサポートされています。 たとえば、次の URI を HTTP PUT 要求メッセージで指定した場合、指定した注文の配送会社を新しい配送会社に変更します。  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper  
+```http 
+https://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper  
 ```  
   
  詳細については[、「OData:エントリ](https://go.microsoft.com/fwlink/?LinkId=187351)間のリンクのアドレス指定。  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6bc6c52374ea047d2e76d346ee8bbc3faaa7bb2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a54d3cb1bb9abf740c2c9b5a9a8312a9612ae658
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650701"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894457"
 ---
 # <a name="isymunmanagedwriter2defineglobalvariable2-method"></a>ISymUnmanagedWriter2::DefineGlobalVariable2 メソッド
-1 つのグローバル変数を定義します。  
+1つのグローバル変数を定義します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT DefineGlobalVariable2(  
     [in] const WCHAR  *name,  
     [in] ULONG32      attributes,  
@@ -42,31 +42,31 @@ HRESULT DefineGlobalVariable2(
   
 ## <a name="parameters"></a>パラメーター  
  `name`  
- [in]グローバル変数の名前。  
+ からグローバル変数名。  
   
  `attributes`  
- [in]グローバル変数の属性。  
+ からグローバル変数属性。  
   
  `sigToken`  
- [in]シグネチャのメタデータ トークンです。  
+ から署名のメタデータトークン。  
   
  `addrKind`  
- [in]アドレスの種類。  
+ からアドレスの種類。  
   
  `addr1`  
- [in]パラメーター指定の最初のアドレス。  
+ からパラメーター指定の最初のアドレス。  
   
  `addr2`  
- [in]パラメーター指定の 2 番目のアドレス。  
+ からパラメーター指定の2番目のアドレス。  
   
  `addr3`  
- [in]パラメーター指定の 3 番目のアドレス。  
+ からパラメーター指定の3番目のアドレス。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK を返します。それ以外の場合は E_FAIL またはその他のエラーコードを返します。  
   
 ## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl  
+ **ヘッダー:** CorSym .idl  
   
 ## <a name="see-also"></a>関連項目
 

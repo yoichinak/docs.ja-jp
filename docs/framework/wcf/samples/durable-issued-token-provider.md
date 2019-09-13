@@ -2,12 +2,12 @@
 title: 永続性発行済みトークン プロバイダー
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 70c7237329d1ae5f6ecde2231a66bca53e220634
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: aa1180458b118132a632ea5d798db81283fffdab
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045017"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928818"
 ---
 # <a name="durable-issued-token-provider"></a>永続性発行済みトークン プロバイダー
 このサンプルでは、カスタム クライアントの発行済みトークン プロバイダーを実装する方法を示します。  
@@ -112,7 +112,7 @@ ms.locfileid: "70045017"
 ## <a name="custom-client-credentials-and-token-provider"></a>カスタム クライアント資格情報とトークン プロバイダ  
  次の手順では、発行されたトークンをキャッシュし、WCF: security に統合するカスタムトークンプロバイダーを開発する方法を示します。  
   
-#### <a name="to-develop-a-custom-token-provider"></a>カスタム トークン プロバイダーを開発するには  
+### <a name="to-develop-a-custom-token-provider"></a>カスタム トークン プロバイダーを開発するには  
   
 1. カスタム トークン プロバイダーを作成します。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "70045017"
   
      このタスクを実行するため、カスタム トークン プロバイダーは <xref:System.IdentityModel.Selectors.SecurityTokenProvider> クラスを派生し、<xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> メソッドをオーバーライドします。 このメソッドは、キャッシュ内のトークンの取得を試行します。キャッシュ内にトークンが見つからない場合は、基になるプロバイダからトークンを取得してキャッシュします。 どちらの場合も、メソッドは `SecurityToken` を返します。  
   
-    ```  
+    ```csharp
     protected override SecurityToken GetTokenCore(TimeSpan timeout)  
     {  
       GenericXmlSecurityToken token;  
@@ -137,7 +137,7 @@ ms.locfileid: "70045017"
   
      <xref:System.IdentityModel.Selectors.SecurityTokenManager> は、<xref:System.IdentityModel.Selectors.SecurityTokenProvider> メソッド内で渡される特定の <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> の `CreateSecurityTokenProvider` の作成に使用されます。 セキュリティ トークン マネージャーは、トークン認証システムとトークン シリアライザーの作成にも使用されますが、このサンプルでは扱っていません。 このサンプルでは、カスタム セキュリティ トークン マネージャーは <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> クラスを継承し、`CreateSecurityTokenProvider` メソッドをオーバーライドして、渡されたトークンの要件で発行済みトークンが必要であることが示されている場合にはカスタム トークン プロバイダーを返します。  
   
-    ```  
+    ```csharp
     class DurableIssuedTokenClientCredentialsTokenManager :  
      ClientCredentialsSecurityTokenManager  
     {  
@@ -154,7 +154,7 @@ ms.locfileid: "70045017"
         {  
           return new DurableIssuedSecurityTokenProvider ((IssuedSecurityTokenProvider)base.CreateSecurityTokenProvider( tokenRequirement), this.cache);  
         }  
-        Else  
+        else  
         {  
           return base.CreateSecurityTokenProvider(tokenRequirement);  
         }  
@@ -166,7 +166,7 @@ ms.locfileid: "70045017"
   
      クライアント資格情報クラスは、クライアント プロキシ用に構成された資格情報を表すために使用され、トークン認証システム、トークン プロバイダ、およびトークン シリアライザの取得に使用されるセキュリティ トークン マネージャを作成します。  
   
-    ```  
+    ```csharp
     public class DurableIssuedTokenClientCredentials : ClientCredentials  
     {  
       IssuedTokenCache cache;  
@@ -182,11 +182,11 @@ ms.locfileid: "70045017"
   
       public IssuedTokenCache IssuedTokenCache  
       {  
-        Get  
+        get  
         {  
           return this.cache;  
         }  
-        Set  
+        set  
         {  
           this.cache = value;  
         }  
@@ -206,18 +206,18 @@ ms.locfileid: "70045017"
   
 4. トークン キャッシュを実装します。 サンプルの実装では抽象基本クラスを使用し、トークン キャッシュの利用先ではこのクラスを通じてキャッシュとやり取りします。  
   
-    ```  
+    ```csharp
     public abstract class IssuedTokenCache  
     {  
       public abstract void AddToken ( GenericXmlSecurityToken token, EndpointAddress target, EndpointAddress issuer);  
       public abstract bool TryGetToken(EndpointAddress target, EndpointAddress issuer, out GenericXmlSecurityToken cachedToken);  
     }  
-    Configure the client to use the custom client credential.  
+    // Configure the client to use the custom client credential.  
     ```  
   
      クライアントがカスタム クライアント資格情報を使用するため、サンプルでは既定のクライアント資格情報を削除し、新しいクライアント資格情報クラスを提供しています。  
   
-    ```  
+    ```csharp
     clientFactory.Endpoint.Behaviors.Remove<ClientCredentials>();  
     DurableIssuedTokenClientCredentials durableCreds = new DurableIssuedTokenClientCredentials();  
     durableCreds.IssuedTokenCache = cache;  
@@ -231,7 +231,7 @@ ms.locfileid: "70045017"
 ## <a name="the-setupcmd-batch-file"></a>Setup.cmd バッチ ファイル  
  このサンプルに用意されている Setup.cmd バッチ ファイルを使用すると、適切な証明書を使用してサーバーとセキュリティ トークン サービスを構成し、自己ホスト型アプリケーションを実行できるようになります。 このバッチ ファイルにより、CurrentUser/TrustedPeople 証明書ストアのどちらにも 2 つの証明書が作成されます。 片方の証明書は CN=STS のサブジェクト名を持ち、クライアントに発行するセキュリティ トークンを署名するためにセキュリティ トークン サービスが使用します。 もう片方の証明書は CN=localhost のサブジェクト名を持ち、サービスが暗号化を解除できるようにシークレットを暗号化するためにセキュリティ トークン サービスが使用します。  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
+### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
 1. setup.cmd ファイルを実行して、必要な証明書を作成します。  
   
@@ -241,7 +241,7 @@ ms.locfileid: "70045017"
   
 4. client.exe を実行します。  
   
-#### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには  
+### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには  
   
 1. サンプルの実行が終わったら、サンプル フォルダーにある Cleanup.cmd を実行します。  
   

@@ -3,12 +3,12 @@ title: F# を使用した Azure Table Storage の概要
 description: Azure Table storage または Azure Cosmos DB を使用して、構造化データをクラウドに格納します。
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: c8ab2d61048523ac52f305c7bd035c73ca0d3f60
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f5fe2fe667b6d529bba4d29729a975c7890b5aba
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630471"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929004"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>F を使用して Azure Table storage と Azure Cosmos DB Table API を開始する\#
 
@@ -194,6 +194,6 @@ Azure Configuration Manager の使用は省略可能です。 .NET Framework の
 - [Azure Cosmos DB Table API の概要](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
 - [.NET 用ストレージクライアントライブラリのリファレンス](https://docs.microsoft.com/dotnet/api/overview/azure/storage?view=azure-dotnet)
 - [Azure Storage 型プロバイダー](https://fsprojects.github.io/AzureStorageTypeProvider/)
-- [Azure Storage チームのブログ](https://blogs.msdn.com/b/windowsazurestorage/)
+- [Azure Storage チームのブログ](https://blogs.msdn.microsoft.com/windowsazurestorage/)
 - [接続文字列の構成](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)
 - [.NET での Azure Table Storage のはじめに](https://azure.microsoft.com/resources/samples/storage-table-dotnet-getting-started/)

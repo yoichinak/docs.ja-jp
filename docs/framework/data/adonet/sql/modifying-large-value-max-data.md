@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: 34f0a61329667a42aa42693e93169a5b6fb0aa5e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0f029c81dd6ba5cd5202e6e59f33edd7cf8c0b90
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792041"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894446"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>ADO.NET での大きい値 (max) データの変更
 ラージ オブジェクト (LOB) データ型は、最大行サイズが 8 KB を超えるデータ型です。 SQL Server では、`max`、`varchar`、および `nvarchar` の各データ型に `varbinary` 指定子が用意されており、2^32 バイトの値を格納できます。 テーブル列および Transact-SQL 変数により、`varchar(max)`、`nvarchar(max)`、または `varbinary(max)` データ型を指定できます。 ADO.NET では、`max` データ型は、`DataReader` によってフェッチすることができ、特殊な処理を行うことなく入力パラメーターと出力パラメーター両方の値として指定することもできます。 サイズの大きい `varchar` データ型の場合は、データを段階的に取得および更新できます。  
@@ -41,7 +41,7 @@ ms.locfileid: "70792041"
   
  次の例では、AdventureWorks サンプル データベースの ProductPhoto テーブルに写真を挿入しています。 `BULK OPENROWSET`プロバイダーを使用する場合は、すべての列に値を挿入しない場合でも、列の名前付きリストを指定する必要があります。 この場合の主キーは ID 列として定義され、列リストから省略することもできます。 ただし、`OPENROWSET` ステートメントの最後に相関関係名 (この場合は ThumbnailPhoto) を指定する必要があります。 これにより、ファイルが読み込まれる `ProductPhoto` テーブルの列との相関関係が定義されます。  
   
-```  
+```sql  
 INSERT Production.ProductPhoto (  
     ThumbnailPhoto,   
     ThumbnailPhotoFilePath,   
@@ -78,7 +78,7 @@ FROM OPENROWSET
 ## <a name="example"></a>例  
  この Transact-SQL の例では、AdventureWorks データベースの Document テーブルの `nvarchar(max)` 列である DocumentSummary の値の一部が更新されます。 置換後の単語、置換する単語の既存データ内での開始位置 (オフセット)、置換する文字数 (長さ) を指定することで、'components' という単語が 'features' という単語に置換されます。 この例では、結果を比較するために、UPDATE ステートメントの前後に SELECT ステートメントを指定しています。  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
 --View the existing value.  
@@ -230,7 +230,7 @@ while (reader.Read())
 ## <a name="using-large-value-type-parameters"></a>大きな値型パラメーターの使用  
  大きい値型は、<xref:System.Data.SqlClient.SqlParameter> オブジェクト内の小さい値型と同じ方法で、<xref:System.Data.SqlClient.SqlParameter> オブジェクト内で使用できます。 次の例に示すように<xref:System.Data.SqlClient.SqlParameter> 、大きな値の型は値として取得できます。 このコードでは、次の GetDocumentSummary ストアド プロシージャが、AdventureWorks サンプル データベースに存在することが想定されています。 ストアドプロシージャは、という名前@DocumentIDの入力パラメーターを受け取り、 @DocumentSummary出力パラメーターの documentsummary 列の内容を返します。  
   
-```  
+```sql
 CREATE PROCEDURE GetDocumentSummary   
 (  
     @DocumentID int,  

@@ -2,12 +2,12 @@
 title: 基本的な AJAX サービス
 ms.date: 03/30/2017
 ms.assetid: d66d0c91-0109-45a0-a901-f3e4667c2465
-ms.openlocfilehash: 8029549ea348ebc8337bcb649b8b0d3b1f8426b9
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 4705070c7f7f72db835073b30c5bda115a45f179
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045768"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892704"
 ---
 # <a name="basic-ajax-service"></a>基本的な AJAX サービス
 
@@ -32,9 +32,7 @@ public interface ICalculator
 
 サンプルの .svc ファイルでは <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> が使用され、それによって <xref:System.ServiceModel.Description.WebScriptEndpoint> 標準エンドポイントがサービスに追加されます。 エンドポイントは、.svc ファイルに相対する空のアドレス位置に設定されます。 これは、サービスのアドレスが`http://localhost/ServiceModelSamples/service.svc`で、操作名以外の追加のサフィックスがないことを意味します。
 
-```svc
-<%@ServiceHost language="C#" Debug="true" Service="Microsoft.Samples.SimpleAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" %>
-```
+`<%@ServiceHost language="C#" Debug="true" Service="Microsoft.Samples.SimpleAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" %>`
 
 <xref:System.ServiceModel.Description.WebScriptEndpoint> は、ASP.NET AJAX クライアント ページからサービスにアクセスできるように事前に構成されています。 Web.config 内の次のセクションを使用して、エンドポイントに対する構成変更を追加できます。 追加の変更が不要な場合は、このセクションを削除できます。
 

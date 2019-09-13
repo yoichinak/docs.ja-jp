@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: 5fef151fe9149e2693ee217e7be642427162322d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f9e563cb87ee376e33442cdf718f70202d300f40
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636280"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895174"
 ---
 # <a name="duplex-services"></a>双方向サービス
 
 双方向サービス コントラクトは、両方のエンドポイントが互いに独立してメッセージを送信できるメッセージ交換パターンです。 双方向サービスでは、クライアントのエンドポイントにメッセージを返信できるため、イベントのような動作を実現できます。 双方向通信は、クライアントがサービスに接続し、サービスからクライアントにメッセージを返信できるチャネルがサービスに提供されると発生します。 双方向サービスにおけるイベントのような動作は、セッション内でのみ機能することに注意してください。
 
-双方向コントラクトを作成するには、インターフェイスのペアを作成します。 最初のインターフェイスは、クライアントから呼び出すことのできる操作を記述したサービス コントラクト インターフェイスです。 サービス コントラクトを指定する必要があります、*コールバック コントラクト*で、<xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType>プロパティ。 このコールバック コントラクトが、サービスがクライアント エンドポイントで呼び出すことのできる操作を定義するインターフェイスになります。 双方向コントラクトではセッションは必要ありませんが、システム指定の二重バインディングではセッションを利用します。
+双方向コントラクトを作成するには、インターフェイスのペアを作成します。 最初のインターフェイスは、クライアントから呼び出すことのできる操作を記述したサービス コントラクト インターフェイスです。 このサービスコントラクトは、 <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType>プロパティで*コールバックコントラクト*を指定する必要があります。 このコールバック コントラクトが、サービスがクライアント エンドポイントで呼び出すことのできる操作を定義するインターフェイスになります。 双方向コントラクトではセッションは必要ありませんが、システム指定の二重バインディングではセッションを利用します。
 
 双方向コントラクトの例を次に示します。
 
@@ -33,7 +33,7 @@ ms.locfileid: "65636280"
 [!code-csharp[c_DuplexServices#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#2)]
 [!code-vb[c_DuplexServices#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#2)]
 
-双方向コントラクトでは、用に生成される WCF クライアントを<xref:System.ServiceModel.InstanceContext>構築時に提供するクラス。 この <xref:System.ServiceModel.InstanceContext> クラスが、コールバック インターフェイスを実装するオブジェクトのサイトとして使用され、サービスから返信されるメッセージを処理します。 <xref:System.ServiceModel.InstanceContext> クラスは、`CallbackHandler` クラスのインスタンスを使用して構築されます。 このオブジェクトは、コールバック インターフェイスでサービスからクライアントに送信されるメッセージを処理します。
+双方向コントラクト用に生成された WCF クライアントで<xref:System.ServiceModel.InstanceContext>は、構築時にクラスが提供される必要があります。 この <xref:System.ServiceModel.InstanceContext> クラスが、コールバック インターフェイスを実装するオブジェクトのサイトとして使用され、サービスから返信されるメッセージを処理します。 <xref:System.ServiceModel.InstanceContext> クラスは、`CallbackHandler` クラスのインスタンスを使用して構築されます。 このオブジェクトは、コールバック インターフェイスでサービスからクライアントに送信されるメッセージを処理します。
 
 [!code-csharp[c_DuplexServices#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#3)]
 [!code-vb[c_DuplexServices#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#3)]
@@ -47,12 +47,12 @@ ms.locfileid: "65636280"
 
 `WSHttpBinding` 要素を使用するクライアントとサービスを作成しても、クライアントのコールバック エンドポイントが含まれていない場合は、次のエラーが発生します。
 
-```
+```console
 HTTP could not register URL
 htp://+:80/Temporary_Listen_Addresses/<guid> because TCP port 80 is being used by another application.
 ```
 
-次のサンプル コード方法を示します、クライアントを指定するエンドポイント アドレス プログラムを使用します。
+次のサンプルコードは、プログラムによってクライアントエンドポイントアドレスを指定する方法を示しています。
 
 ```csharp
 WSDualHttpBinding binding = new WSDualHttpBinding();
@@ -87,10 +87,10 @@ binding.ClientBaseAddress = New Uri("http://localhost:8000/DuplexTestUsingCode/C
 ```
 
 > [!WARNING]
-> 双方向のモデルには、サービスまたはクライアントがそのチャネルを閉じるときに自動的に検出しません。 したがって、クライアントが予期せず終了した場合は既定では、サービス通知されません、またはサービスが予期せず終了した場合、クライアントは通知されません。 切断されているサービスを使用する場合、<xref:System.ServiceModel.CommunicationException>例外が発生します。 クライアントとサービスは、独自のプロトコルを実装して、互いに通知するように選択できます。 エラー処理の詳細については、次を参照してください[WCF エラー処理。](../wcf-error-handling.md)
+> 双方向モデルは、サービスまたはクライアントがチャネルを閉じるタイミングを自動的に検出しません。 クライアントが予期せず終了した場合、既定ではサービスに通知されません。また、サービスが予期せず終了した場合、クライアントには通知されません。 切断されているサービスを使用すると<xref:System.ServiceModel.CommunicationException> 、例外が発生します。 クライアントとサービスは、独自のプロトコルを実装して、互いに通知するように選択できます。 エラー処理の詳細については、「 [WCF エラー処理](../wcf-error-handling.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 - [二重](../samples/duplex.md)
 - [クライアントのランタイム動作の指定](../specifying-client-run-time-behavior.md)
-- [方法: チャネル ファクトリを作成し、使用して作成および管理チャネル](how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)
+- [方法: チャネルファクトリを作成し、それを使用してチャネルを作成および管理する](how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)

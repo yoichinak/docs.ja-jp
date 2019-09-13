@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d1c108e75c0e2da3d513669f5b8b02bada43b983
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: efd3954b63a6683e04bd9143ca3523cdbace506d
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206081"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894527"
 ---
 # <a name="security-transparent-code-level-1"></a>透過的セキュリティコード、レベル1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -84,27 +84,27 @@ ms.locfileid: "70206081"
 ## <a name="security-transparency-examples"></a>透過的セキュリティの例  
  .NET Framework 2.0 の透過性規則 (レベル 1 の透過性) を使用するには、次のアセンブリ注釈を使用します。  
   
-```  
+```csharp
 [assembly: SecurityRules(SecurityRuleSet.Level1)]  
 ```  
   
  アセンブリ全体を透過的にして、アセンブリがクリティカルなコードを含まず、どのような方法でも特権を昇格しないことを示す必要がある場合は、次の属性を使用して、アセンブリに透過性を明示的に追加できます。  
   
-```  
+```csharp  
 [assembly: SecurityTransparent]  
 ```  
   
  同じアセンブリの中にクリティカルなコードと透過的なコードを混在させる場合は、次に示すように、最初に <xref:System.Security.SecurityCriticalAttribute> 属性をアセンブリにマークして、アセンブリがクリティカルなコードを含むことができることを示します。  
   
-```  
+```csharp  
 [assembly: SecurityCritical]  
 ```  
   
  セキュリティ クリティカルな操作を実行する場合は、次のコード例で示すように、別の <xref:System.Security.SecurityCriticalAttribute> 属性を使用して、クリティカルな操作を実行するコードを明示的にマークする必要があります。  
   
-```  
+```csharp  
 [assembly: SecurityCritical]  
-Public class A  
+public class A  
 {  
     [SecurityCritical]  
     private void Critical()  
@@ -119,7 +119,7 @@ Public class A
     }  
 }  
 public class B  
-{      
+{
     internal string SomeOtherProperty  
     {  
         get { /* transparent */ }  

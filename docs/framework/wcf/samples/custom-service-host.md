@@ -2,12 +2,12 @@
 title: カスタム サービス ホスト
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: 5da6497eadc6f02210c7f9d35d2889c98dc34ce4
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 80b2642fa202500aa22dc7d045476cb36677d47c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039955"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928863"
 ---
 # <a name="custom-service-host"></a>カスタム サービス ホスト
 このサンプルでは、<xref:System.ServiceModel.ServiceHost> クラスから派生したカスタムのサービス ホストを使用して、サービスの実行時動作を変更する方法を示します。 この方法は、多数のサービスを共通方式で構成するという方法の代わりに使用でき、再利用可能です。 このサンプルでは、<xref:System.ServiceModel.Activation.ServiceHostFactory> クラスを使用して、カスタムの ServiceHost を、インターネット インフォメーション サービス (IIS) または Windows プロセス アクティブ化サービス (WAS) でホストされる環境で使用する方法も示します。  
@@ -34,7 +34,7 @@ ms.locfileid: "70039955"
   
  このサンプルでは、ServiceMetadataBehavior (メタデータ公開を有効にする動作) がサービスの構成ファイルに明示的に追加されていない場合でもこの動作を追加する、カスタムの ServiceHost を構築します。 これを実現するには、<xref:System.ServiceModel.ServiceHost> から継承する新しいクラスを作成して `ApplyConfiguration`() をオーバーライドします。  
   
-```  
+```csharp  
 class SelfDescribingServiceHost : ServiceHost  
 {  
     public SelfDescribingServiceHost(Type serviceType, params Uri[] baseAddresses)  
@@ -59,7 +59,7 @@ class SelfDescribingServiceHost : ServiceHost
   
  アプリケーションの構成ファイルで指定されている構成が無視されないようにしたいので、`ApplyConfiguration`() のオーバーライドで最初に行うことは、基本実装の呼び出しです。 このメソッドが完了した後で、次の命令型コードを使用して、サービス記述に <xref:System.ServiceModel.Description.ServiceMetadataBehavior> を追加します。  
   
-```  
+```csharp  
 ServiceMetadataBehavior mexBehavior = this.Description.Behaviors.Find<ServiceMetadataBehavior>();  
 if (mexBehavior == null)  
 {  
@@ -76,7 +76,7 @@ else
   
  `ApplyConfiguration`() のオーバーライドでの最後の処理は、既定のメタデータ エンドポイントの追加です。 通常は、サービス ホストの BaseAddresses コレクション内の各 URI に対して 1 つずつメタデータ エンドポイントを作成します。  
   
-```  
+```csharp  
 //Add a metadata endpoint at each base address  
 //using the "/mex" addressing convention  
 foreach (Uri baseAddress in this.BaseAddresses)  
@@ -113,7 +113,7 @@ foreach (Uri baseAddress in this.BaseAddresses)
 ## <a name="using-a-custom-servicehost-in-self-host"></a>自己ホストでのカスタム ServiceHost の使用  
  カスタム ServiceHost の実装が完成したので、これを使用して任意のサービスにメタデータ公開動作を追加できるようになりました。追加するには、`SelfDescribingServiceHost` のインスタンス内でサービスをホストします。 カスタム ServiceHost を自己ホストのシナリオで使用する方法を次のコードに示します。  
   
-```  
+```csharp  
 SelfDescribingServiceHost host =   
          new SelfDescribingServiceHost( typeof( Calculator ) );  
 host.Open();  
@@ -124,7 +124,7 @@ host.Open();
 ## <a name="using-a-custom-servicehost-in-iis-or-was"></a>IIS または WAS でのカスタム ServiceHost の使用  
  カスタム サービス ホストを自己ホストのシナリオで使用することは簡単です。サービス ホストのインスタンスを作成して開くことは、アプリケーションのコードで行うからです。 ただし、IIS または WAS のホスト環境では、WCF インフラストラクチャは、受信メッセージに応答してサービスのホストを動的にインスタンス化します。 このホスト環境でもカスタム サービス ホストを使用できますが、ServiceHostFactory の形式でコードを追加する必要があります。 次に示すコードは、カスタム <xref:System.ServiceModel.Activation.ServiceHostFactory> のインスタンスを返す、`SelfDescribingServiceHost` の派生クラスの例です。  
   
-```  
+```csharp  
 public class SelfDescribingServiceHostFactory : ServiceHostFactory  
 {  
     protected override ServiceHost CreateServiceHost(Type serviceType,   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e92d5564308d31609b9fb024f3d3368a19b76b1d
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: dafa7cdaa38180e458a34fd34316f134aa443040
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106700"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929128"
 ---
 # <a name="working-with-calendars"></a>カレンダーの使用
 
@@ -139,6 +139,7 @@ ms.locfileid: "70106700"
 
 > [!IMPORTANT]
 > <xref:System.Globalization.JapaneseCalendar> と<xref:System.Globalization.JapaneseLunisolarCalendar>の新しい時代 (年号) である Reiwa era は、2019年5月1日から開始されます。 この変更は、これらのカレンダーを使用するすべてのアプリケーションに影響します。 詳細については、次の記事を参照してください。
+>
 > - [.Net の日本語の暦で新しい時代 (年号) を処理](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/)する。これは、複数の時代 (年号) を持つ暦をサポートするために .net に追加された機能を文書にし、複数の時代 (年号) の暦を処理するときのベストプラクティスについて説明
 > - [日本語時代の変更に備えてアプリケーションを準備](/windows/uwp/design/globalizing/japanese-era-change)します。これにより、Windows でのアプリケーションのテストに関する情報が提供され、時代 (年号) の変化に対応できるようになります。
 > - [.NET Framework 用の新しい日本語の時代 (年号) の更新の概要](https://support.microsoft.com/help/4477957/new-japanese-era-updates-for-net-framework)。新しい和暦の時代 (年号) に関連する Windows の各バージョンの更新プログラムを一覧 .NET Framework 表示し、複数の時代 (年号) のサポートに関する新しい .NET Framework 機能について説明します。アプリケーションのテストについては、「」を参照してください。
@@ -243,7 +244,7 @@ ms.locfileid: "70106700"
    |  |  |
    |--|--|
    |キー | HKEY_LOCAL_MACHINE\Software\Microsoft\.netframework\ appcontext |
-   |名前 | EnforceJapaneseEraYearRanges を切り替えます。 |
+   |Name | EnforceJapaneseEraYearRanges を切り替えます。 |
    |型 | REG_SZ |
    |値 | true |
 
@@ -318,7 +319,7 @@ Parameter name: year
    |  |  |
    |--|--|
    |キー | HKEY_LOCAL_MACHINE\Software\Microsoft\.netframework\ appcontext |
-   |Name | FormatJapaneseFirstYearAsANumber を切り替えます。 |
+   |名前 | FormatJapaneseFirstYearAsANumber を切り替えます。 |
    |型 | REG_SZ |
    |値 | true |
 
@@ -356,7 +357,7 @@ Japanese calendar date: 平成1年8月18日 (Gregorian: Friday, August 18, 1989)
    |  |  |
    |--|--|  
    |キー | HKEY_LOCAL_MACHINE\Software\Microsoft\.netframework\ appcontext |
-   |名前 | EnforceLegacyJapaneseDateParsing を切り替えます。 |
+   |Name | EnforceLegacyJapaneseDateParsing を切り替えます。 |
    |型 | REG_SZ |
    |値 | true | 
 

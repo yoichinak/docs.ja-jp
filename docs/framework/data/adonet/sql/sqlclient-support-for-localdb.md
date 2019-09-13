@@ -2,12 +2,12 @@
 title: SqlClient による LocalDB のサポート
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: 200db3b1014278e711062bcbdff81be8d27c3351
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d02524cd5901adeca7bc36d6fd13c7abdc46c69b
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780768"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894403"
 ---
 # <a name="sqlclient-support-for-localdb"></a>SqlClient による LocalDB のサポート
 SQL Server コード名 Denali から、LocalDB と呼ばれる軽量バージョンの SQL Server を使用できるようになります。 このトピックでは、LocalDB データベースに接続する方法について説明します。  
@@ -25,9 +25,7 @@ SQL Server コード名 Denali から、LocalDB と呼ばれる軽量バージ�
   
 - 接続文字列に LocalDB インスタンスを指定する。 たとえば、インスタンス名が `myInstance`の場合、接続文字列には次の行が含まれます。  
   
-    ```  
-    server=(localdb)\\myInstance  
-    ```  
+    `server=(localdb)\\myInstance`  
   
  `User Instance=True` は LocalDB データベースに接続するときに使用することはできません。  
   

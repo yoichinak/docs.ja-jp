@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: Windows Communication Foundation クライアントを使用します。'
+title: 'チュートリアル: Windows Communication Foundation クライアントを使用する'
 ms.date: 03/19/2019
 helpviewer_keywords:
 - WCF clients [WCF], using
@@ -7,32 +7,34 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-ms.openlocfilehash: fa9aa3612a8dc72623fc4ea4b1ea337ac773fa26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c280933c81ef54ba58181e3005e30775b9b8e42
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928844"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928889"
 ---
-# <a name="tutorial-use-a-windows-communication-foundation-client"></a>チュートリアル: Windows Communication Foundation クライアントを使用します。
+# <a name="tutorial-use-a-windows-communication-foundation-client"></a>チュートリアル: Windows Communication Foundation クライアントを使用する
 
-このチュートリアルでは、基本的な Windows Communication Foundation (WCF) アプリケーションを作成するために必要な 5 つのタスクの最後のタスクについて説明します。 チュートリアルの概要については、次を参照してください。[チュートリアル。Windows Communication Foundation アプリケーションの概要](getting-started-tutorial.md)します。
+このチュートリアルでは、基本的な Windows Communication Foundation (WCF) アプリケーションを作成するために必要な5つのタスクについて説明します。 チュートリアルの概要については、 [「チュートリアル:Windows Communication Foundation アプリケーション](getting-started-tutorial.md)の概要」をご覧ください。
 
-作成、Windows Communication Foundation (WCF) プロキシを構成したら後、は、クライアント インスタンスを作成し、クライアント アプリケーションをコンパイルします。 使用する WCF サービスと通信します。 
+Windows Communication Foundation (WCF) プロキシを作成して構成したら、クライアントインスタンスを作成し、クライアントアプリケーションをコンパイルします。 次に、WCF サービスとの通信に使用します。 
 
 このチュートリアルでは、次の作業を行う方法について説明します。
 > [!div class="checklist"]
+>
 > - WCF クライアントを使用するコードを追加します。
 > - WCF クライアントをテストします。
 
-## <a name="add-code-to-use-the-wcf-client"></a>WCF クライアントを使用するコードを追加します。
+## <a name="add-code-to-use-the-wcf-client"></a>WCF クライアントを使用するコードを追加する
 
-クライアント コードは、次の手順を行います。
+クライアントコードでは、次の手順を実行します。
+
 - WCF クライアントをインスタンス化します。
 - 生成されたプロキシからサービス操作を呼び出します。
-- 操作の呼び出しが完了した後は、クライアントを閉じます。
+- 操作の呼び出しが完了した後にクライアントを閉じます。
 
-開く、 **Program.cs**または**Module1.vb**ファイルから、 **GettingStartedClient**プロジェクトし、そのコードを次のコードに置き換えます。
+**GettingProgram.cs クライアント**プロジェクトから、次のコードに置き換えて、**そのファイルの**コードを開きます。
 
 ```csharp
 using System;
@@ -133,27 +135,27 @@ Module Module1
 End Module
 ```
 
-通知、 `using` (ビジュアルのC#) または`Imports`(Visual Basic) のインポート ステートメント`GettingStartedClient.ServiceReference1`します。 このステートメントで Visual Studio が生成されたコードをインポートする、**サービス参照の追加**関数。 コードでは、WCF プロキシをインスタンス化し、電卓サービスを公開するサービス操作の各を呼び出します。 プロキシを終了し、プログラムが終了します。
+`using` C# `Imports`インポートする(Visualの場合)または(VisualBasic)ステートメントがあることに注意してください。`GettingStartedClient.ServiceReference1` このステートメントは、Visual Studio によって生成されたコードを**サービス参照の追加**関数でインポートします。 このコードは、WCF プロキシをインスタンス化し、電卓サービスが公開する各サービス操作を呼び出します。 次に、プロキシを閉じてプログラムを終了します。
 
-## <a name="test-the-wcf-client"></a>WCF クライアントをテストします。
+## <a name="test-the-wcf-client"></a>WCF クライアントをテストする
 
-### <a name="test-the-application-from-visual-studio"></a>Visual Studio からアプリケーションをテストします。
+### <a name="test-the-application-from-visual-studio"></a>Visual Studio からのアプリケーションのテスト
 
-1. 保存し、ソリューションをビルドします。
+1. ソリューションを保存してビルドします。
 
-2. 選択、 **GettingStartedLib**フォルダー、および選択**スタートアップ プロジェクトとして設定**ショートカット メニューから。
+2. **[Gettingstartup lib]** フォルダーを選択し、ショートカットメニューの **[スタートアッププロジェクトに設定]** を選択します。
 
-3. **スタートアップ プロジェクト**を選択します**GettingStartedLib**ドロップダウン リストからを選択し、**実行**またはキーを押します**F5**します。
+3. **スタートアッププロジェクト**から、ドロップダウンリストから **[Gettingstartup lib]** を選択し、 **[実行]** を選択するか、 **F5**キーを押します。
 
-### <a name="test-the-application-from-a-command-prompt"></a>コマンド プロンプトからアプリケーションをテストします。
+### <a name="test-the-application-from-a-command-prompt"></a>コマンドプロンプトからのアプリケーションのテスト
 
-1. 管理者は、コマンド プロンプトを開きし、Visual Studio のソリューション ディレクトリに移動します。 
+1. 管理者としてコマンドプロンプトを開き、Visual Studio ソリューションのディレクトリに移動します。 
 
-2. サービスを開始します。入力*GettingStartedHost\bin\Debug\GettingStartedHost.exe*します。
+2. サービスを開始するには:「 *GettingStartedHost\bin\Debug\GettingStartedHost.exe*」と入力します。
 
-3. クライアントを起動します。別のコマンド プロンプトを開きし、Visual Studio のソリューション ディレクトリに移動して、入力*GettingStartedClient\bin\Debug\GettingStartedClient.exe*します。
+3. クライアントを起動するには:別のコマンドプロンプトを開き、Visual Studio ソリューションのディレクトリに移動して、「 *GettingStartedClient\bin\Debug\GettingStartedClient.exe*」と入力します。
 
-   *GettingStartedHost.exe*次の出力が生成されます。
+   この*ホスト*は、次の出力を生成します。
 
    ```text
    The service is ready.
@@ -169,7 +171,7 @@ End Module
    Return: 3.14285714285714
    ```
 
-   *GettingStartedClient.exe*次の出力が生成されます。
+   *クライアント .exe*は、次の出力を生成します。
 
    ```text
    Add(100,15.99) = 115.99
@@ -182,14 +184,15 @@ End Module
 
 ## <a name="next-steps"></a>次の手順
 
-WCF 入門チュートリアルで、すべてのタスクを完了します。 このチュートリアルでは、次の作業を行う方法を学びました。
+これで、WCF 入門チュートリアルのすべてのタスクが完了しました。 このチュートリアルでは、次の作業を行う方法を学びました。
 
 このチュートリアルでは、次の作業を行う方法について説明します。
 > [!div class="checklist"]
+>
 > - WCF クライアントを使用するコードを追加します。
 > - WCF クライアントをテストします。
 
-手順のいずれかである場合の問題やエラーは場合は、それを修正するトラブルシューティング記事の手順に従います。
+いずれかの手順で問題やエラーが発生した場合は、トラブルシューティングの記事に記載されている手順に従って修正してください。
 
 > [!div class="nextstepaction"]
-> [Get のトラブルシューティングでは、WCF のチュートリアルを開始](troubleshooting-the-getting-started-tutorial.md)
+> [WCF の概要チュートリアルのトラブルシューティング](troubleshooting-the-getting-started-tutorial.md)

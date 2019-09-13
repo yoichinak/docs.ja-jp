@@ -2,12 +2,12 @@
 title: Windows ストア クライアント アプリを使用した WCF サービスへのアクセス
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: 9316a46f809eec21f73e8eeadb49baf1748c6ca0
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 7a50454c5189c48704adfaaed2c90d2638dd677f
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988250"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928972"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Windows ストア クライアント アプリを使用した WCF サービスへのアクセス
 Windows 8 では、Windows ストア アプリケーションと呼ばれる新しい種類のアプリケーションが導入されています。 これらのアプリケーションはタッチ スクリーンのインターフェイスを念頭にデザインされています。 .NET Framework 4.5 により、Windows ストア アプリケーションから WCF サービスを呼び出すことができます。  
@@ -176,9 +176,9 @@ void async SomeMethod()
   
 ## <a name="see-also"></a>関連項目
 
-- [Windows ストアアプリブログの WCF](https://blogs.msdn.com/b/piyushjo/archive/2011/09/22/wcf-in-win8-metro-styled-apps-absolutely-supported.aspx)
-- [WCF Windows ストアクライアントおよびセキュリティ](https://blogs.msdn.com/b/piyushjo/archive/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security.aspx)
-- [Windows ストアアプリとコンピューター間の呼び出し](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+- [Windows ストアアプリブログの WCF](https://blogs.msdn.microsoft.com/piyushjo/2011/09/21/wcf-in-windows-8-metro-styled-apps-absolutely-supported/)
+- [WCF Windows ストアクライアントおよびセキュリティ](https://blogs.msdn.microsoft.com/piyushjo/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security/)
+- [Windows ストアアプリとコンピューター間の呼び出し](https://blogs.msdn.microsoft.com/piyushjo/2011/10/21/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario/)
 - [Windows ストアアプリから Azure にデプロイされた WCF サービスの呼び出し](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
 - [WCF セキュリティのプログラミング](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
 - [バインディング](../../../../docs/framework/wcf/bindings.md)

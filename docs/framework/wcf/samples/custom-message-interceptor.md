@@ -2,12 +2,12 @@
 title: カスタム メッセージ インターセプター
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: 4a91078ddb8eb66f1ee0f957005e9a0d290370c8
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: daa041bf63442dace0d33e1e3207d0857b6b7312
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045596"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928918"
 ---
 # <a name="custom-message-interceptor"></a>カスタム メッセージ インターセプター
 このサンプルでは、チャネル拡張モデルの使用方法を示します。 特に、チャネル ファクトリとチャネル リスナーを作成するカスタム バインド要素を実装して、ランタイム スタックの特定のポイントですべての送受信メッセージを中断する方法を示します。 また、このサンプルには、こうしたカスタム ファクトリの使用方法を示すクライアントとサーバーも含まれます。  
@@ -44,25 +44,35 @@ ms.locfileid: "70045596"
   
  これらのクラスでは、内部ファクトリとリスナが取得され、この内部ファクトリとリスナが `OnCreateChannel` と `OnAcceptChannel` 以外のすべての呼び出しを代行します。  
   
-```  
+```csharp  
 class InterceptingChannelFactory<TChannel> : ChannelFactoryBase<TChannel>  
-{ ... }  
+{ 
+    //... 
+}
+
 class InterceptingChannelListener<TChannel> : ListenerFactoryBase<TChannel>  
-{ ... }  
+{ 
+    //...
+}  
 ```  
   
 ## <a name="adding-a-binding-element"></a>バインド要素の追加  
  このサンプルでは、`InterceptingBindingElement` というカスタム バインド要素を定義します。 `InterceptingBindingElement`はを`ChannelMessageInterceptor`入力として受け取り、これ`ChannelMessageInterceptor`を使用して、それを通過するメッセージを操作します。 公開する必要があるクラスはこれだけです。 ファクトリ、リスナ、およびチャネルはすべて、ランタイム パブリック インターフェイスの内部実装として設定できます。  
   
-```  
-public class InterceptingBindingElement : BindingElement  
+```csharp
+public class InterceptingBindingElement : BindingElement 
+{
+}
 ```  
   
 ## <a name="adding-configuration-support"></a>構成サポートの追加  
  バインディング構成と統合するには、ライブラリで、構成セクション ハンドラをバインディング要素拡張セクションとして定義します。 クライアントとサーバーの構成ファイルでは、バインド要素拡張を構成システムに登録する必要があります。 バインディング要素を構成システムに公開する実装は、このクラスから派生できます。  
   
-```  
-public abstract class InterceptingElement : BindingElementExtensionElement { ... }  
+```csharp
+public abstract class InterceptingElement : BindingElementExtensionElement 
+{ 
+    //... 
+}
 ```  
   
 ## <a name="adding-policy"></a>ポリシーの追加  
@@ -71,7 +81,7 @@ public abstract class InterceptingElement : BindingElementExtensionElement { ...
 ## <a name="example-droppable-message-inspector"></a>例:破棄可能なメッセージインスペクター  
  このサンプルには、メッセージを破棄する `ChannelMessageInspector` の実装例が含まれています。  
   
-```  
+```csharp  
 class DroppingServerElement : InterceptingElement  
 {  
     protected override ChannelMessageInterceptor CreateMessageInterceptor()  
@@ -114,7 +124,7 @@ class DroppingServerElement : InterceptingElement
   
  サービスを実行し、次にクライアントを実行すると、次のクライアント出力が表示されます。  
   
-```  
+```console  
 Reporting the next 10 wind speed  
 100 kph  
 Server dropped a message.  
@@ -138,18 +148,18 @@ Press ENTER to shut down client
   
  サービスには、次の出力が表示されます。  
   
-```  
+```console  
 Press ENTER to exit.  
 Dangerous wind detected! Reported speed (90) is greater than 64 kph.  
 Dangerous wind detected! Reported speed (70) is greater than 64 kph.  
 5 wind speed reports have been received.  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
+### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
 1. 次のコマンドを使用して、ASP.NET 4.0 をインストールします。  
   
-    ```  
+    ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
