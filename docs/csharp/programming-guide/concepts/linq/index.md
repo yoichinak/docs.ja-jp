@@ -2,12 +2,12 @@
 title: 統合言語クエリ (LINQ) (C#)
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
-ms.openlocfilehash: 185e2cfc84a4134eec8eea1433f0cef43845aa2a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: b91d52912c1625c036b3e08e47fbc985b193ebc2
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592156"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926734"
 ---
 # <a name="language-integrated-query-linq"></a>統合言語クエリ (LINQ)
 
@@ -46,6 +46,7 @@ C# を使って LINQ クエリを記述できます。対象は、<xref:System.C
 ## <a name="next-steps"></a>次の手順
 
 LINQ の詳細については、最初に「[クエリ式の基本](../../../linq/query-expression-basics.md)」で基本的な概念を理解してから、関心のある LINQ テクノロジのドキュメントを参照してください。   
+
 - XML ドキュメント:[LINQ to XML](linq-to-xml.md)  
   
 - ADO.NET Entity Framework:[LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)  
@@ -59,3 +60,4 @@ C# での LINQ の使用を開始するには、「[LINQ の使用](../../../tut
 ## <a name="see-also"></a>関連項目
 
 - [統合言語クエリ (LINQ) (C#)](./index.md)
+ 

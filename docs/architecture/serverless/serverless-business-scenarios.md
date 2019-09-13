@@ -4,12 +4,12 @@ description: 画像処理からモバイルバックエンドおよび ETL パ�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: adc4e1f3249cd72c423430ad4cb5dbb8eea8baf9
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cb761524976125c816aae925f0c369eb8c76e7de
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577285"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926478"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>サーバーレスのビジネス シナリオとユース ケース
 
@@ -77,7 +77,7 @@ Azure Functions は、長い URL を貼り付けて短い Url を生成できる
 
 ![Power BI の例](./media/power-bi-example.png)
 
-詳細については、「完全なリンク短縮リポジトリ」を参照してください。[サーバーレス URL 短縮](https://github.com/jeremylikness/serverless-url-shortener)。 簡略化されたバージョンについては、こちらを参照してください。[サーバーレスの .net アプリを数分で Azure Storage](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/)します。
+詳細については、「完全なリンク短縮リポジトリ」を参照してください。[サーバーレス URL 短縮](https://github.com/jeremylikness/serverless-url-shortener)。 簡略化されたバージョンについては、こちらを参照してください。[サーバーレスの .net アプリを数分で Azure Storage](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)します。
 
 ## <a name="verify-device-connectivity-using-a-ping"></a>Ping を使用してデバイスの接続を確認する
 
@@ -89,7 +89,7 @@ Azure Functions は、長い URL を貼り付けて短い Url を生成できる
 
 * [Photo モザイクジェネレーターの Azure Functions](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
 * [Ping の Azure IoT Hub](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
-* [サーバーレスの .NET アプリを数分で Azure Storage](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/)
+* [サーバーレスの .NET アプリを数分で Azure Storage](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
 * [独自のアプリを持ち込む](https://github.com/JeremyLikness/bring-own-app-connect-17)
 * [CSV インポートラボ](https://github.com/JeremyLikness/azure-fn-file-process-hol)
 * [イベントグリッドの接着](https://github.com/JeremyLikness/Event-Grid-Glue)

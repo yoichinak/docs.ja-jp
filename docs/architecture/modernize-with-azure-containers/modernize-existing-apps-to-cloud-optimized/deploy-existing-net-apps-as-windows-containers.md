@@ -2,12 +2,12 @@
 title: Windows コンテナーとして既存の .NET アプリを展開する
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを最新化する |既存の .NET アプリを Windows コンテナーとしてデプロイする
 ms.date: 04/29/2018
-ms.openlocfilehash: 4d58be828418abe4964e26a983f194fd5d30b93d
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: d48acbb2e1c4858bf3146318f70dd7b8a7b62918
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374018"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926484"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Windows コンテナーとして既存の .NET アプリを展開する
 
@@ -143,6 +143,7 @@ Hyper-v の分離を使用するかどうかに関係なく、Windows でコン�
 **図 4-7.5。** Azure のコンテナーエコシステム
 
 Azure のコンテナーエコシステムから、インフラストラクチャと見なされるコンテナーをサポートする次の製品があります。
+
 - **Azure Container Instances (ACI)**
 - **Azure Virtual Machines**(コンテナーのサポートあり)
 - **Azure Virtual Machine Scale Sets**(コンテナーのサポートあり)

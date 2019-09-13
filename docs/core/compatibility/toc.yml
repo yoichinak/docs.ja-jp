@@ -1,0 +1,8 @@
+- name: アプリケーションの互換性
+  items:
+    - name: 破壊的変更を評価する
+      href: index.md
+    - name: 互換性に影響する変更
+      href: breaking-changes.md
+    - name: 破壊的変更のカテゴリ
+      href: categories.md
