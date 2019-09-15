@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e7da023c5ab9247cde0ccd1126d4d639c6f355e7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8d9448edab101ef11447b54e12c53abcb578646a
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910970"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971598"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>.NET Framework およびアプリケーションの配置
 
@@ -118,7 +118,7 @@ ms.locfileid: "69910970"
 
 ## <a name="packaging-and-distributing-net-framework-applications"></a>.NET Framework アプリケーションのパッケージ化と配布
 
-.NET Framework でのパッケージ化および配置についての情報の一部は、ドキュメントの別のトピックで説明します。 それらのトピックでは、レジストリ エントリを必要としない[アセンブリ](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)と呼ばれる自己言及的な単位、名前の一意性を保証し、名前の悪用を防止する[厳密な名前付きアセンブリ](../../../docs/framework/app-domains/strong-named-assemblies.md)、DLL 競合に関連した問題の多くを解決する[アセンブリのバージョン管理](../../../docs/framework/app-domains/assembly-versioning.md)についての情報を提供します。 以下のセクションでは、.NET Framework アプリケーションのパッケージ化および配布について説明します。
+.NET Framework でのパッケージ化および配置についての情報の一部は、ドキュメントの別のトピックで説明します。 それらのトピックでは、レジストリ エントリを必要としない[アセンブリ](../../standard/assembly/index.md)と呼ばれる自己言及的な単位、名前の一意性を保証し、名前の悪用を防止する[厳密な名前付きアセンブリ](../../standard/assembly/strong-named.md)、DLL 競合に関連した問題の多くを解決する[アセンブリのバージョン管理](../../standard/assembly/versioning.md)についての情報を提供します。 以下のセクションでは、.NET Framework アプリケーションのパッケージ化および配布について説明します。
 
 ### <a name="packaging"></a>パッケージ化
 

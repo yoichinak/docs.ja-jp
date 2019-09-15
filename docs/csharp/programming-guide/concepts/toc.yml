@@ -1,24 +1,6 @@
 - name: プログラミングの概念
   href: index.md
   items:
-    - name: アセンブリ
-      items:
-        - name: フレンド アセンブリ
-          items:
-            - name: '方法: 署名のないフレンド アセンブリを作成する'
-              href: assemblies-gac/how-to-create-unsigned-friend-assemblies.md
-            - name: '方法: 署名されたフレンド アセンブリを作成する'
-              href: assemblies-gac/how-to-create-signed-friend-assemblies.md
-        - name: '方法: コマンド ラインを使用してアセンブリを作成および使用する'
-          href: assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md
-        - name: '方法: ファイルがアセンブリであるかどうかを確認する'
-          href: assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md
-        - name: '方法: アセンブリを読み込み、アンロードする'
-          href: assemblies-gac/how-to-load-and-unload-assemblies.md
-        - name: '方法: アセンブリを他のアプリケーションと共有する'
-          href: assemblies-gac/how-to-share-an-assembly-with-other-applications.md
-        - name: 'チュートリアル: Visual Studio でマネージド アセンブリからの型を埋め込む'
-          href: assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md
     - name: Async および Await を使用した非同期プログラミング
       href: async/
     - name: 属性

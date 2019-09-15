@@ -3,12 +3,12 @@ title: .NET Core コマンドライン インターフェイス (CLI) ツール
 description: .NET Core コマンドライン インターフェイス (CLI) ツールとその機能の概要です。
 ms.date: 08/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: 20a083f3e7496521243bebd6585a48c8a562c548
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 50d1bbdd87ecd275b97603a1b47c6f13f879365a
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105046"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969880"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET Core コマンドライン インターフェイス (CLI) ツール
 
@@ -26,6 +26,8 @@ ms.locfileid: "70105046"
 ## <a name="cli-commands"></a>CLI コマンド
 
 既定では、次のコマンドがインストールされます。
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
