@@ -4,12 +4,12 @@ description: Windows で .NET Core を使用して .NET for Apache Spark アプ�
 ms.date: 06/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 7ce7d7aec6c15385d3d797d5a548519eea33b764
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 004256a2fe369b026b15151dfc72ae379da0be8e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "69577009"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928483"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>チュートリアル: .NET for Apache Spark の概要
 
@@ -18,6 +18,7 @@ ms.locfileid: "69577009"
 このチュートリアルでは、次の作業を行う方法について説明します。
 
 > [!div class="checklist"]
+>
 > * .NET for Apache Spark 用に Windows 環境を準備する
 > * **Microsoft.Spark.Worker** をダウンロードする
 > * .NET for Apache Spark アプリケーション用の単純な .NET をビルドして実行する
@@ -124,6 +125,7 @@ git clone https://github.com/dotnet/spark.git c:\github\dotnet-spark
 
 このチュートリアルでは、次の作業を行う方法を学びました。
 > [!div class="checklist"]
+>
 > * .NET for Apache Spark 用に Windows 環境を準備する
 > * **Microsoft.Spark.Worker** をダウンロードする
 > * .NET for Apache Spark アプリケーション用の単純な .NET をビルドして実行する

@@ -3,12 +3,12 @@ title: dotnet コマンドの特権アクセス
 description: 特権アクセスを必要とする dotnet コマンドのベスト プラクティスについて説明します。
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: b57e434fbb29a9c85ddf5086888a5291c7767ac9
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: b6de87f375a584da25e160d79f51f1bc48f3c302
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105077"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969860"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>dotnet コマンドの特権アクセス
 
@@ -26,6 +26,8 @@ ms.locfileid: "70105077"
 ## <a name="global-tool-installation"></a>グローバル ツールのインストール
 
 次の指示では、実行に特権昇格を必要とする .NET Core ツールをインストール、実行、アンインストールするときの推奨方法を示しています。
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 

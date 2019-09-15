@@ -4,12 +4,12 @@ description: .NET Core の新機能について。
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: f48b8e88a716df0f07a5626bdc8f66000cfaeed8
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c208f565bebedc06e244de1f6554129f21c77b8c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626365"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849935"
 ---
 # <a name="whats-new-in-net-core-20"></a>.NET Core 2.0 の新機能
 
@@ -154,7 +154,7 @@ Visual Studio のプロジェクトを再ターゲットするには、そのプ
 
 ### <a name="net-application-architecture"></a>.NET アプリケーション アーキテクチャ
 
-.NET を使用して次のものをビルドする際は、[.NET アプリケーション アーキテクチャ](https://www.microsoft.com/net/learn/architecture)にある、ガイダンス、ベスト プラクティス、サンプル アプリケーションを掲載した電子ブックをご覧ください。
+.NET を使用して次のものをビルドする際は、[.NET アプリケーション アーキテクチャ](https://dotnet.microsoft.com/learn/dotnet/architecture-guides)にある、ガイダンス、ベスト プラクティス、サンプル アプリケーションを掲載した電子ブックをご覧ください。
 
 - [マイクロサービスと Docker コンテナー](../../architecture/microservices/index.md)
 - [ASP.NET を使用した Web アプリケーション](../../architecture/modern-web-apps-azure/index.md)

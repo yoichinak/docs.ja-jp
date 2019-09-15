@@ -4,12 +4,12 @@ description: このドキュメントでは、Visual Studio Code を使用して
 author: bleroy
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: f1cb9b45c0ed1b4315361846fc065209088b57f8
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 572174cb09dbde03095fa9444989356038bab9b7
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373787"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849350"
 ---
 # <a name="get-started-with-net-core-on-macos"></a>macOS での .NET Core の概要
 
@@ -20,7 +20,7 @@ ms.locfileid: "70373787"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-[.NET Core SDK](https://www.microsoft.com/net/core) のインストール。 .NET Core SDK には、.NET Core のフレームワークとランタイムの最新リリースが含まれています。
+[.NET Core SDK](https://dotnet.microsoft.com/download) のインストール。 .NET Core SDK には、.NET Core のフレームワークとランタイムの最新リリースが含まれています。
 
 [Visual Studio Code](https://code.visualstudio.com) のインストール。 この記事の中では、.NET Core の開発エクスペリエンスが向上する Visual Studio Code 拡張機能もインストールします。
 

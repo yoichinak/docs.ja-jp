@@ -4,12 +4,12 @@ description: .NET for Apache Spark アプリケーションを Azure HDInsight �
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 81d1af1fd4e3329c4a289eea388edf8af57d7c4e
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9da0e0fd83d70887109c63a5e95ec0b0b31a2edd
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70243945"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928468"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>.NET for Apache Spark アプリケーションを Azure HDInsight にデプロイする
 
@@ -18,6 +18,7 @@ ms.locfileid: "70243945"
 このチュートリアルでは、次の作業を行う方法について説明します。
 
 > [!div class="checklist"]
+>
 > * Microsoft.Spark.Worker を準備する
 > * Spark .NET アプリを発行する
 > * アプリを Azure HDInsight にデプロイする

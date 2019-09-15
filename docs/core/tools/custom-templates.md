@@ -3,16 +3,16 @@ title: dotnet new のカスタム テンプレート
 description: あらゆる種類の .NET プロジェクトまたはファイルのカスタム テンプレートについて説明します。
 author: thraka
 ms.date: 06/14/2019
-ms.openlocfilehash: d513965a60416392fb8acd15c9f89c8af0ec7876
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: be49e28d3aa09c9b3a3cb169ca39ff817a062b8f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660587"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849850"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new のカスタム テンプレート
 
-[.NET Core SDK](https://www.microsoft.com/net/download/core) には、既にインストールされて使用できる状態になっている多くのテンプレートが付属します。 [`dotnet new` コマンド](dotnet-new.md)は、テンプレートを使用する手段であるだけでなく、テンプレートをインストールおよびアンインストールする方法でもあります。 .NET Core 2.0 以降から、アプリ、サービス、ツール、クラス ライブラリなど、あらゆる種類のプロジェクトを対象に独自のテンプレートを作成できるようになりました。 構成ファイルなど、1 つまたは複数の独立ファイルを出力するテンプレートを作成することもできます。
+[.NET Core SDK](https://dotnet.microsoft.com/download) には、既にインストールされて使用できる状態になっている多くのテンプレートが付属します。 [`dotnet new` コマンド](dotnet-new.md)は、テンプレートを使用する手段であるだけでなく、テンプレートをインストールおよびアンインストールする方法でもあります。 .NET Core 2.0 以降から、アプリ、サービス、ツール、クラス ライブラリなど、あらゆる種類のプロジェクトを対象に独自のテンプレートを作成できるようになりました。 構成ファイルなど、1 つまたは複数の独立ファイルを出力するテンプレートを作成することもできます。
 
 NuGet の *.nupkg* ファイルを直接参照するか、テンプレートが含まれるファイル システム ディレクトリを指定することで、任意の NuGet フィード上の NuGet パッケージからカスタム テンプレートをインストールできます。 テンプレート エンジンの機能を利用すると、テンプレートを使うときに、値を置き換えたり、ファイルを含めたり除外したり、独自の処理操作を実行したりできます。
 
@@ -22,7 +22,7 @@ NuGet の *.nupkg* ファイルを直接参照するか、テンプレートが�
 
 ### <a name="net-default-templates"></a>.NET の既定のテンプレート
 
-[.NET Core SDK](https://www.microsoft.com/net/download/core) をインストールすると、コンソール アプリ、クラス ライブラリ、単体テスト プロジェクト、ASP.NET Core アプリ ([Angular](https://angular.io/) プロジェクトと [React](https://facebook.github.io/react/) プロジェクトを含む)、構成ファイルなど、プロジェクトやファイルを作成するための 12 個を超える組み込みテンプレートが与えられます。 組み込みテンプレートの一覧を表示するには、`-l|--list` オプションを指定して `dotnet new` コマンドを実行します。
+[.NET Core SDK](https://dotnet.microsoft.com/download) をインストールすると、コンソール アプリ、クラス ライブラリ、単体テスト プロジェクト、ASP.NET Core アプリ ([Angular](https://angular.io/) プロジェクトと [React](https://facebook.github.io/react/) プロジェクトを含む)、構成ファイルなど、プロジェクトやファイルを作成するための 12 個を超える組み込みテンプレートが与えられます。 組み込みテンプレートの一覧を表示するには、`-l|--list` オプションを指定して `dotnet new` コマンドを実行します。
 
 ```console
 dotnet new --list

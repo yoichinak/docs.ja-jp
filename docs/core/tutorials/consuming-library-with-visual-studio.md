@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 7a7ab9e8f148eaab8250a7cb10c7d38d2f70e4cd
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 31a9183f541afa5365862b1e89704354cf7bd527
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660580"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969297"
 ---
 # <a name="consume-a-net-standard-library-in-visual-studio-2017"></a>Visual Studio 2017 での .NET Standard ライブラリの使用
 
@@ -27,7 +27,10 @@ ms.locfileid: "69660580"
 
 単体テストをクラス ライブラリと同じソリューションに含めたのと同様に、アプリケーションをソリューションの一部として含めることができます。 たとえば、文字列を入力するようにユーザーに要求して、最初の文字が大文字かどうかを報告するコンソール アプリケーションで、このクラス ライブラリを使うことができます。
 
+<!-- markdownlint-disable MD025 -->
+
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
 1. 「[Visual Studio 2017 での C# と .NET Core を使用したクラス ライブラリの構築](./library-with-visual-studio.md)」トピックで作成した `ClassLibraryProjects` ソリューションを開きます。 **ソリューション エクスプローラー**で **ClassLibraryProjects** ソリューションを右クリックし、コンテキスト メニューから **[追加]**  >  **[新しいプロジェクト]** の順に選びます。
 
 1. **[新しいプロジェクトの追加]** ダイアログで、 **[Visual C#]** ノードを展開し、 **[.NET Core]** ノードを選択し、 **[コンソール アプリ (.NET Core)]** プロジェクト テンプレートを選択します。 **[名前]** テキスト ボックスに「ShowCase」と入力し、 **[OK]** ボタンを選びます。
@@ -57,7 +60,9 @@ ms.locfileid: "69660580"
 1. 必要に応じて、ツールバーを変更して、`ShowCase` プロジェクトの**デバッグ** リリースをコンパイルします。 **ShowCase** の緑色の矢印を選び、プログラムをコンパイルして実行します。
 
    ![[デバッグ] ボタンを示している Visual Studio プロジェクトのツールバー - C#](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
+
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+
 1. 「[Visual Studio 2017 で Visual Basic と .NET Core を使用したクラス ライブラリの構築](vb-library-with-visual-studio.md)」トピックで作成した `ClassLibraryProjects` ソリューションを開きます。 **ソリューション エクスプローラー**で **ClassLibraryProjects** ソリューションを右クリックし、コンテキスト メニューから **[追加]**  >  **[新しいプロジェクト]** の順に選びます。
 
 1. **[新しいプロジェクトの追加]** ダイアログで、 **[Visual Basic]** ノードを展開し、 **[.NET Core]** ノードを選択し、 **[コンソール アプリ (.NET Core)]** プロジェクト テンプレートを選択します。 **[名前]** テキスト ボックスに「ShowCase」と入力し、 **[OK]** ボタンを選びます。
@@ -87,6 +92,7 @@ ms.locfileid: "69660580"
 1. 必要に応じて、ツールバーを変更して、`ShowCase` プロジェクトの**デバッグ** リリースをコンパイルします。 **ShowCase** の緑色の矢印を選び、プログラムをコンパイルして実行します。
 
    ![ツールバーの [デバッグ] - Visual Basic](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
+
 ---
 
 「[Visual Studio 2017 で Hello World Application をデバッグする](debugging-with-visual-studio.md)」と「[Visual Studio 2017 を使用した Hello World アプリケーションの発行](publishing-with-visual-studio.md)」の手順に従って、このライブラリを使うアプリケーションをデバッグして発行できます。

@@ -4,12 +4,12 @@ description: dotnet テストおよび NUnit を使用したサンプル ソリ�
 author: rprouse
 ms.date: 08/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 19aa97687c41cf4a4aac00bf6ca83bc27504b09d
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 4d378e68143192e2f56fb411ae6ee709af753750
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374125"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849662"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>NUnit と .NET Core による単体テスト C#
 
@@ -19,7 +19,7 @@ ms.locfileid: "70374125"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) 以降のバージョン。
+- [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 以降のバージョン。
 - ユーザーが選んだテキスト エディターまたはコード エディター。
 
 ## <a name="creating-the-source-project"></a>ソース プロジェクトの作成

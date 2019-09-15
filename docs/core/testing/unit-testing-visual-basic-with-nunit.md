@@ -4,12 +4,12 @@ description: NUnit を使用した Visual Basic ソリューションのサン�
 author: rprouse
 ms.date: 10/04/2018
 ms.custom: seodec18
-ms.openlocfilehash: c48b2777b451598a0f3ccbb383d702d0069ff6ff
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 1682cf7cb351951d3bea9a64d963cd6a8995c083
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373813"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849678"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>dotnet テストと NUnit を使用した Visual Basic .NET Core ライブラリでの単体テスト
 
@@ -19,7 +19,7 @@ ms.locfileid: "70373813"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) 以降のバージョン。
+- [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 以降のバージョン。
 - ユーザーが選んだテキスト エディターまたはコード エディター。
 
 ## <a name="creating-the-source-project"></a>ソース プロジェクトの作成

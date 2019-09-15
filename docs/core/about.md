@@ -3,12 +3,12 @@ title: .NET Core について
 description: .NET Core について説明します。
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: d81c6ad15c12d7bb1e866aef3bd1e799d5b62cde
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: ea9253bacf2bcee63430cd45f2a9ed412ce629e7
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67421883"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849132"
 ---
 # <a name="about-net-core"></a>.NET Core について
 
@@ -20,7 +20,7 @@ ms.locfileid: "67421883"
 - **柔軟な展開:** アプリに含めることも、横並びにインストールすること (ユーザー全体またはシステム全体のインストール) もできます。 [Docker コンテナー](docker/index.md)で使用できます。
 - **互換性:** .NET Core は、[.NET Standard](../standard/net-standard.md) 経由で .NET Framework、Xamarin、Mono と互換性があります。
 - **オープン ソース:** .NET Core プラットフォームはオープン ソースであり、MIT および Apache 2 ライセンスを使用します。 .NET Core は [.NET Foundation](https://dotnetfoundation.org/) プロジェクトです。
-- **Microsoft によるサポート:** .NET Core は、[.NET Core サポート](https://www.microsoft.com/net/core/support/)ごとに Microsoft によってサポートされます。
+- **Microsoft によるサポート:** .NET Core は、[.NET Core サポート](https://dotnet.microsoft.com/platform/support/policy)ごとに Microsoft によってサポートされます。
 
 ## <a name="languages"></a>言語
 
@@ -38,7 +38,7 @@ ms.locfileid: "67421883"
 
 .NET core では [.NET Standard](../standard/net-standard.md) 仕様を実装することで .NET Framework や Mono の API との互換性を提供します。
 
-## <a name="frameworks"></a>フレームワーク
+## <a name="frameworks"></a>Frameworks
 
 .NET Core 上には、次のような複数のフレームワークが構築されています。
 
@@ -57,9 +57,9 @@ ms.locfileid: "67421883"
 
 これらのコンポーネントは、次の方法で配布されます。
 
-- [.NET Core ランタイム](https://www.microsoft.com/net/download/dotnet-core/2.1) - .NET Core のランタイムおよびフレームワーク ライブラリが含まれています。
-- [ASP.NET Core ランタイム](https://www.microsoft.com/net/download/dotnet-core/2.1) - ASP.NET Core ランタイムおよび .NET Core のランタイムおよびフレームワーク ライブラリが含まれています。
-- [.NET core SDK](https://www.microsoft.com/net/download/dotnet-core/2.1) -- .NET CLI ツール、ASP.NET Core ランタイム、.NET Core ランタイムおよびフレームワークが含まれています。
+- [.NET Core ランタイム](https://dotnet.microsoft.com/download) - .NET Core のランタイムおよびフレームワーク ライブラリが含まれています。
+- [ASP.NET Core ランタイム](https://dotnet.microsoft.com/download) - ASP.NET Core ランタイムおよび .NET Core のランタイムおよびフレームワーク ライブラリが含まれています。
+- [.NET core SDK](https://dotnet.microsoft.com/download) -- .NET CLI ツール、ASP.NET Core ランタイム、.NET Core ランタイムおよびフレームワークが含まれています。
 
 ### <a name="open-source"></a>ソースを開く
 
@@ -107,9 +107,7 @@ Windows 実装と Unix 実装はほぼ同じサイズです。 CoreFX は、[Mic
 
 ### <a name="comparison-with-mono"></a>Mono との比較
 
-
-[Mono](https://www.mono-project.com/) は、オリジナルのクロスプラットフォームおよび[オープン ソース](https://github.com/mono/mono)の .NET 実装であり、2004 年に登場しました。.NET Framework のコミュニティの複製として考えることができます。Mono プロジェクト チームは、互換性のある実装を提供するために、Microsoft によって発行されたオープン [.NET standards](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (特に ECMA 335) に依存していました。
-
+[Mono](https://www.mono-project.com/) は、オリジナルのクロスプラットフォームおよび[オープン ソース](https://github.com/mono/mono)の .NET 実装であり、2004 年に登場しました。 .NET Framework のコミュニティの複製として考えることができます。 Mono プロジェクト チームは、互換性のある実装を提供するために、Microsoft によって発行されたオープン [.NET standards](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (特に ECMA 335) に依存していました。
 
 .NET Core と .NET Mono の主な違いは、次のとおりです。
 

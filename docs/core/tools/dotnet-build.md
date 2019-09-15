@@ -1,13 +1,13 @@
 ---
 title: dotnet build コマンド
 description: dotnet build コマンドは、プロジェクトとそのすべての依存関係をビルドします。
-ms.date: 04/24/2019
-ms.openlocfilehash: 6e577defb9f5c7795ee40efa18da30daee1b52c0
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.date: 08/08/2019
+ms.openlocfilehash: e92555dad2bc76d8c72eca9a30be1d3a8b5924f7
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168067"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988534"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -25,7 +25,7 @@ ms.locfileid: "70168067"
 
 ```console
 dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--interactive] [--no-dependencies]
-    [--no-incremental] [--nologo] [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
+    [--no-incremental] [--no-restore] [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 
 dotnet build [-h|--help]
 ```
@@ -94,13 +94,13 @@ dotnet build [-h|--help]
 
   インクリメンタル ビルドとして安全でないビルドをマークします。 このフラグにより、インクリメンタル コンパイルは無効になり、プロジェクトの依存関係グラフのクリーン再ビルドが強制的に行われます。
 
-* **`--no-logo`**
-
-  著作権情報を表示しません。 .NET Core 3.0 SDK 以降で使用できます。
-
 * **`--no-restore`**
 
   ビルド時に暗黙的な復元は実行されません。 .NET Core 2.0 SDK 以降で使用できます。
+
+* **`--nologo`**
+
+  著作権情報を表示しません。 .NET Core 3.0 SDK 以降で使用できます。
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 

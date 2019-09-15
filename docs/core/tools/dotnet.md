@@ -2,12 +2,12 @@
 title: dotnet コマンド
 description: dotnet コマンド (.NET Core CLI ツールの一般的なドライバー) とその使用法について説明します。
 ms.date: 06/04/2018
-ms.openlocfilehash: 328fd24cd72110bd235c177398f6f147fbb9d144
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 801320bf7f3527ac70f1d5b9fe3d0ce537e50e93
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373745"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969777"
 ---
 # <a name="dotnet-command"></a>dotnet コマンド
 
@@ -18,6 +18,8 @@ ms.locfileid: "70373745"
 `dotnet` - .NET のソース コードとバイナリを管理するためのツール。
 
 ## <a name="synopsis"></a>構文
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
@@ -94,6 +96,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 `--roll-forward-on-no-candidate-fx <N>`
 
 必要な共有フレームワークが利用できない場合の動作を定義します。 `N` には以下があります。
+
 - `0` - マイナー バージョンのロールフォワードでも無効にします。
 - `1` - マイナー バージョンはロール フォワードしますが、メジャー バージョンはしません。 これが既定の動作です。
 - `2` - マイナー バージョンとメジャー バージョンをロール フォワードします。

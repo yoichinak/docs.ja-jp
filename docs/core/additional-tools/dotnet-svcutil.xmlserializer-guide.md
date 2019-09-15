@@ -3,12 +3,12 @@ title: .NET Core で dotnet-svcutil.xmlserializer を使用する
 description: .NET Core プロジェクト用にシリアル化アセンブリを事前に生成する `dotnet-svcutil.xmlserializer` NuGet パッケージの使用方法について説明します。
 author: huanwu
 ms.date: 11/27/2018
-ms.openlocfilehash: 375a5ad5660658431c0d327e55513024823a6eee
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a98f8d30f2e37b722a3bf1f93be8fe9df540a468
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632196"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848967"
 ---
 # <a name="using-dotnet-svcutilxmlserializer-on-net-core"></a>.NET Core で dotnet-svcutil.xmlserializer を使用する
 
@@ -16,7 +16,7 @@ ms.locfileid: "65632196"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-* [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) 以降
+* [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 以降
 * 任意のコード エディター
 
 コマンド `dotnet --info` を使用して、既にインストールされている .NET Core SDK およびランタイムのバージョンを確認することができます。

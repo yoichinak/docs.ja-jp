@@ -2,12 +2,12 @@
 title: dotnet-install スクリプト
 description: .NET Core CLI ツールと共有ランタイムをインストールする dotnet-install スクリプトについて説明します。
 ms.date: 01/16/2019
-ms.openlocfilehash: ed1a3341e678b405ae4aca35e3b49ada89eb069a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 867be93b5a4c66258df438ce718dabbd4ef2891c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253900"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849577"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install スクリプト参照
 
@@ -55,7 +55,7 @@ macOS/Linux の場合:
   - 特定のリリースを表す X.Y 形式の 2 部構成のバージョン (たとえば、`2.0` または `1.0`)。
   - ブランチ名。 たとえば、`release/2.0.0`、`release/2.0.0-preview2`、`master` (夜間リリース用)
 
-  既定値は `LTS` です。 .NET のサポート チャネルの詳細については、「[.NET Support Policy](https://www.microsoft.com/net/platform/support-policy#dotnet-core)」(.NET のサポート ポリシー) ページを参照してください。
+  既定値は `LTS` です。 .NET のサポート チャネルの詳細については、「[.NET Support Policy](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)」(.NET のサポート ポリシー) ページを参照してください。
 
 - **`-Version <VERSION>`**
 

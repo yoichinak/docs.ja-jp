@@ -3,12 +3,12 @@ title: dotnet vstest コマンド
 description: dotnet vstest コマンドは、プロジェクトとそのすべての依存関係をビルドします。
 author: mairaw
 ms.date: 05/30/2018
-ms.openlocfilehash: 4630982ba21ab37b051895faf3dc0fcd8784cb18
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: da18fda6419cb9eaa1f488a3576161c3054b4426
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202783"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969814"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
@@ -19,6 +19,8 @@ ms.locfileid: "70202783"
 `dotnet-vstest` - 指定されたファイルからテストを実行します。
 
 ## <a name="synopsis"></a>構文
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
