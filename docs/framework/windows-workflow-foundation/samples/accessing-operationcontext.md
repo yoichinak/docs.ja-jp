@@ -2,12 +2,12 @@
 title: OperationContext へのアクセス
 ms.date: 03/30/2017
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
-ms.openlocfilehash: 8d1c8543180a282a1b196393e5823dc3686aa16e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: dea990e275125dc1cd2255b88e506d363c3ac78e
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038408"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989387"
 ---
 # <a name="accessing-operationcontext"></a>OperationContext へのアクセス
 このサンプルでは、メッセージングアクティビティ (<xref:System.ServiceModel.Activities.Receive>および<xref:System.ServiceModel.Activities.Send>) をカスタムスコープアクティビティと共に使用して<xref:System.ServiceModel.OperationContext.Current%2A> 、送信メッセージまたは受信メッセージ内のカスタムメッセージヘッダーにアクセスして接続または取得する方法を示します。  
@@ -22,7 +22,7 @@ ms.locfileid: "70038408"
   
 1. このサンプルでは、HTTP エンドポイントを使用してワークフロー サービスを公開します。 このサンプルを実行するには、適切な URL Acl を追加する必要があります (詳細については、「 [HTTP および HTTPS の構成](https://go.microsoft.com/fwlink/?LinkId=70353)」を参照してください)。管理者として Visual Studio を実行するか、管理者特権のプロンプトで次のコマンドを実行して適切な acl を追加します。 ドメインとユーザー名は置き換えてください。  
   
-    ```  
+    ```console  
     netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%  
     ```  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: 220b86c0de57e60036527bb49f2d8de46390a9ed
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b3b2447b570f0635942183dcc62c0e4ed73800d1
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929791"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972243"
 ---
 # <a name="how-to-validate-application-settings"></a>方法: アプリケーション設定を検証する
 
@@ -103,9 +103,11 @@ ms.locfileid: "69929791"
     ```csharp
     private void MyCustomSettings_SettingChanging(Object sender, SettingChangingEventArgs e)
     {
-        if (e.SettingName.Equals("DateOfBirth")) {
-            Date newDate = (Date)e.NewValue;
-            If (newDate > Date.Now) {
+        if (e.SettingName.Equals("DateOfBirth"))
+        {
+            var newDate = (DateTime)e.NewValue;
+            if (newDate > DateTime.Now)
+            {
                 e.Cancel = true;
                 // Inform the user.
             }

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-ms.openlocfilehash: c9670b00ea4a6b552469b7f33e924b8ab128d9d0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c43ba119b92d4dc1a50b03d6359555ad25f37d08
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948024"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971556"
 ---
 # <a name="redirecting-assembly-versions"></a>アセンブリ バージョンのリダイレクト
 
@@ -157,8 +157,8 @@ ms.locfileid: "69948024"
 - [方法: 自動バインディング リダイレクトを有効/無効にする](how-to-enable-and-disable-automatic-binding-redirection.md)
 - [\<bindingRedirect > 要素](./file-schema/runtime/bindingredirect-element.md)
 - [アセンブリ バインディング リダイレクトのセキュリティ アクセス許可](assembly-binding-redirection-security-permission.md)
-- [共通言語ランタイムのアセンブリ](../app-domains/assemblies-in-the-common-language-runtime.md)
-- [アセンブリを使用したプログラミング](../app-domains/programming-with-assemblies.md)
+- [.NET のアセンブリ](../../standard/assembly/index.md)
+- [アセンブリを使用したプログラミング](../../standard/assembly/program.md)
 - [ランタイムがアセンブリを検索する方法](../deployment/how-the-runtime-locates-assemblies.md)
 - [アプリの構成](index.md)
 - [ランタイム設定スキーマ](./file-schema/runtime/index.md)

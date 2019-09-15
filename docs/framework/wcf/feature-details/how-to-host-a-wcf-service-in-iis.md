@@ -5,31 +5,31 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-ms.openlocfilehash: e9ff82d58f08d8c040984b37422a7048b9d4361d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: ad1fb7d289dea3396b4edb4d3b3e9fb7fb1891e3
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878635"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972424"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>方法: IIS で WCF サービスをホストする
-このトピックでは、インターネット インフォメーション サービス (IIS) でホストされている Windows Communication Foundation (WCF) サービスを作成するために必要な基本的な手順について説明します。 このトピックは、IIS に関する知識があり、IIS 管理ツールを使用して IIS アプリケーションを作成および管理する方法を理解していることを前提としています。 IIS の詳細については、次を参照してください。[インターネット インフォメーション サービス](https://go.microsoft.com/fwlink/?LinkId=132449)します。 IIS 環境での実行がプロセスのリサイクルなどの IIS 機能を最大限に活用する WCF サービスはアイドル シャット ダウン、処理状況の監視、およびメッセージ ベースのアクティブ化します。 このホスト オプションでは、IIS が正しく構成されている必要がありますが、アプリケーションの一部としてホスト コードを書く必要はありません。 IIS ホストは、HTTP トランスポートでのみ使用できます。  
+このトピックでは、インターネットインフォメーションサービス (IIS) でホストされている Windows Communication Foundation (WCF) サービスを作成するために必要な基本的な手順の概要を説明します。 このトピックは、IIS に関する知識があり、IIS 管理ツールを使用して IIS アプリケーションを作成および管理する方法を理解していることを前提としています。 IIS の詳細については、「[インターネットインフォメーションサービス](https://go.microsoft.com/fwlink/?LinkId=132449)」を参照してください。 IIS 環境で実行される WCF サービスでは、プロセスのリサイクル、アイドルシャットダウン、プロセスの正常性の監視、メッセージベースのアクティブ化など、IIS の機能を最大限に活用できます。 このホスト オプションでは、IIS が正しく構成されている必要がありますが、アプリケーションの一部としてホスト コードを書く必要はありません。 IIS ホストは、HTTP トランスポートでのみ使用できます。  
   
- WCF と ASP.NET の対話方法の詳細については、次を参照してください。 [WCF サービスと ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)します。 セキュリティの構成の詳細については、次を参照してください。[セキュリティ](../../../../docs/framework/wcf/feature-details/security.md)します。  
+ WCF と ASP.NET の相互作用の詳細については、「 [Wcf Services と ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)」を参照してください。 セキュリティ構成の詳細については、「[セキュリティ](../../../../docs/framework/wcf/feature-details/security.md)」を参照してください。  
   
- この例のソースのコピーを次を参照してください。 [IIS は、インラインのコードを使用してホスト](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)します。  
+ この例のソースコピーについては、「[インラインコードを使用した IIS のホスト](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)」を参照してください。  
   
 ### <a name="to-create-a-service-hosted-by-iis"></a>IIS でホストされるサービスを作成するには  
   
-1. コンピューターに IIS がインストールされ、実行されていることを確認します。 インストールと IIS の構成の詳細については、次を参照してください[のインストールと IIS 7.0 の構成。](https://go.microsoft.com/fwlink/?LinkID=132128)  
+1. コンピューターに IIS がインストールされ、実行されていることを確認します。 IIS のインストールと構成の詳細については、「 [iis 7.0 のインストールと構成](https://go.microsoft.com/fwlink/?LinkID=132128)」を参照してください。  
   
-2. "Iishostedcalcservice"アプリケーション ファイル用に新しいフォルダーを作成、ASP.NET には、フォルダーの内容にアクセスすることを確認および、IIS 管理ツールを使用して、このアプリケーション ディレクトリに物理的にある新しい IIS アプリケーションを作成します。 アプリケーション ディレクトリのエイリアスを作成する場合は、"IISHostedCalc" を使用します。  
+2. "IISHostedCalcService" という名前のアプリケーションファイル用の新しいフォルダーを作成し、ASP.NET がフォルダーの内容にアクセスできることを確認し、IIS 管理ツールを使用して、このアプリケーションディレクトリに物理的に配置された新しい IIS アプリケーションを作成します。 アプリケーション ディレクトリのエイリアスを作成する場合は、"IISHostedCalc" を使用します。  
   
-3. "service.svc" という新しいファイルをアプリケーション ディレクトリに作成します。 次を追加してこのファイルを編集@ServiceHost要素。  
+3. "service.svc" という新しいファイルをアプリケーション ディレクトリに作成します。 次@ServiceHostの要素を追加して、このファイルを編集します。  
   
-    ```  
-    <%@ServiceHost language=c# Debug="true" Service="Microsoft.ServiceModel.Samples.CalculatorService"%>  
-    ```  
+   ```
+   <%@ServiceHost language=c# Debug="true" Service="Microsoft.ServiceModel.Samples.CalculatorService"%>
+   ```  
   
 4. アプリケーション ディレクトリ内に App_Code サブディレクトリを作成します。  
   
@@ -60,11 +60,11 @@ ms.locfileid: "65878635"
      [!code-csharp[c_HowTo_HostInIIS#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/cs/source.cs#12)]
      [!code-vb[c_HowTo_HostInIIS#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostiniis/vb/source.vb#12)]  
   
-10. アプリケーション ディレクトリ内に "Web.config" というファイルを作成し、次の構成コードをファイルに追加します。 WCF インフラストラクチャは、実行時に情報を使用して、クライアント アプリケーションが通信できるエンドポイントを作成します。  
+10. アプリケーション ディレクトリ内に "Web.config" というファイルを作成し、次の構成コードをファイルに追加します。 実行時に、WCF インフラストラクチャは、クライアントアプリケーションが通信できるエンドポイントを構築するために情報を使用します。  
   
      [!code-xml[c_HowTo_HostInIIS#100](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/common/web.config#100)]      
   
-     この例では、構成ファイルにエンドポイントを明示的に指定します。 エンドポイントをサービスに追加しない場合、ランタイムによって既定のエンドポイントが追加されます。 既定のエンドポイント、バインディング、および動作を参照の詳細については[Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md)と[Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)します。  
+     この例では、構成ファイルにエンドポイントを明示的に指定します。 エンドポイントをサービスに追加しない場合、ランタイムによって既定のエンドポイントが追加されます。 既定のエンドポイント、バインディング、および動作の詳細については、「簡略化された[構成](../../../../docs/framework/wcf/simplified-configuration.md)と[WCF サービスの簡略化](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)された構成」を参照してください。  
   
 11. サービスが正確にホストされるようにするには、Internet Explorer のインスタンスを開き、サービスの URL: `http://localhost/IISHostedCalc/Service.svc` を参照します。  
   

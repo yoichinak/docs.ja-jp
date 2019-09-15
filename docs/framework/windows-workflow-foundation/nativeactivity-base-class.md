@@ -2,12 +2,12 @@
 title: NativeActivity の基本クラス
 ms.date: 03/30/2017
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
-ms.openlocfilehash: d746bb92dab79e7e68075ad003c420e7e37ed683
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 604535e39937a75c6d268cf1abbc90dbcd506a16
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637510"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989557"
 ---
 # <a name="nativeactivity-base-class"></a>NativeActivity の基本クラス
 
@@ -36,11 +36,11 @@ ms.locfileid: "65637510"
 
 1. OpenVisual Studio 2010。
 
-2. 選択**ファイル**、**新しい**、し**プロジェクト**します。 選択**Workflow 4.0**  **Visual c#** で、**プロジェクトの種類**ウィンドウ、および選択、 **v2010**ノード。 選択**アクティビティ ライブラリ**で、**テンプレート**ウィンドウ。 新しいプロジェクトに HelloActivity という名前を付けます。
+2. **[ファイル]** 、 **[新規作成]** 、 **[プロジェクト]** の順に選択します。 **[プロジェクトの種類]** ウィンドウの **[ビジュアルC# ]** で **[ワークフロー 4.0]** を選択し、 **[v2010]** ノードを選択します。 **[テンプレート]** ウィンドウで **[アクティビティライブラリ]** を選択します。 新しいプロジェクトに HelloActivity という名前を付けます。
 
-3. HelloActivity プロジェクトの Activity1.xaml を右クリックして**削除**します。
+3. HelloActivity プロジェクトで Activity1 を右クリックし、 **[削除]** を選択します。
 
-4. HelloActivity プロジェクトを右クリックして**追加**、し**クラス**します。 新しいクラスに HelloActivity.cs という名前を付けます。
+4. HelloActivity プロジェクトを右クリックし、 **[追加]** 、 **[クラス]** の順に選択します。 新しいクラスに HelloActivity.cs という名前を付けます。
 
 5. HelloActivity.cs ファイルで、次の `using` ディレクティブを追加します。
 
@@ -68,7 +68,7 @@ ms.locfileid: "65637510"
 
 9. <xref:System.Activities.NativeActivityContext> オブジェクトを使用してブックマークをスケジュールします。 ブックマークを作成、スケジュール、および再開する方法の詳細については、「<xref:System.Activities.WorkflowApplicationIdleEventArgs.Bookmarks%2A>」を参照してください。
 
-    ```
+    ```csharp
     protected override void Execute(NativeActivityContext context)
         {
             // Create a Bookmark and wait for it to be resumed.

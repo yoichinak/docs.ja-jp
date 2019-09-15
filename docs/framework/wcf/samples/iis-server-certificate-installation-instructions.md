@@ -2,12 +2,12 @@
 title: インターネット インフォメーション サービス (IIS) サーバー証明書インストール手順
 ms.date: 03/30/2017
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-ms.openlocfilehash: 1bb9c8bb2fedc846f46f665fbfd00178e5c72975
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 300d689925d60998ef475ad63f3878bf6d066850
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044910"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989856"
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>インターネット インフォメーション サービス (IIS) サーバー証明書インストール手順
 インターネット インフォメーション サービス (IIS) と安全に通信するこのサンプルを実行するには、サーバー証明書を作成してインストールする必要があります。  
@@ -15,7 +15,7 @@ ms.locfileid: "70044910"
 ## <a name="step-1-creating-certificates"></a>手順 1. 証明書の作成  
  コンピューターの証明書を作成するには、管理者特権で Visual Studio の開発者コマンドプロンプトを開き、IIS とのセキュリティで保護された通信を使用する各サンプルに含まれている Setup.exe を実行します。 このバッチ ファイルを実行する前に、Makecert.exe を含むフォルダがパスに含まれていることを確認します。 Setup.bat で証明書の作成に使用されるコマンドは、次のとおりです。  
   
-```  
+```console  
 makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exchange -sk ServiceModelSamples-HTTPS-Key  
 ```  
   
@@ -49,7 +49,7 @@ makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exc
 > [!IMPORTANT]
 > このコードが必要になるのは、Makecert.exe によって作成された証明書などをテストする場合のみです。 製品版のコードには、お勧めしません。  
   
-```  
+```csharp  
 PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");  
 ```  
   
@@ -76,6 +76,6 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
   
 - 次のコマンドを使用して、コンピューターの証明書を削除します。  
   
-    ```  
+    ```console  
     httpcfg delete ssl -i 0.0.0.0:443  
     ```

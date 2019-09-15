@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 9dabb5e1410427940db911299e66f82ec009cce9
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 67bacade0435f1c63bc79b3282f6bded55b67304
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988682"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991582"
 ---
 # <a name="how-to-use-the-com-service-model-configuration-tool"></a>方法: COM+ サービス モデル構成ツールを使用する
 適切なホスト モードを選択したら、COM+ サービス モデル構成コマンド ライン ツール (ComSvcConfig.exe) を使用して、Web サービスとして公開されるアプリケーション インターフェイスを構成します。  
@@ -31,37 +31,37 @@ ms.locfileid: "69988682"
 > [!WARNING]
 > Windows 8 コンピューターで Comsvcconfig.exe/install を使用すると、ダイアログが表示されます。 "PC 上のアプリには、次の Windows 機能が必要です: .NET Framework 3.5 (.NET Framework 3.5 がインストールされていない場合は、.NET 2.0 と .NET 3.0 が含まれています。 このダイアログは無視してもかまいません。 また、OnlyUseLatestCLR レジストリ キーを DWORD 値 0x00000001 に設定することもできます。  
   
-### <a name="to-add-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-com-hosting-mode"></a>COM+ ホスト モードを使用して、Web サービスとして公開されるインターフェイスのセットにインターフェイスを追加するには  
+## <a name="to-add-an-interface-to-the-set-of-interfaces-exposed-as-web-services-using-the-com-hosting-mode"></a>COM + ホストモードを使用して、Web サービスとして公開されるインターフェイスのセットにインターフェイスを追加するには  
   
 - 次の例に示すように、`/install` オプションと `/hosting:complus` オプションを使用して ComSvcConfig を実行します。  
   
-    ```  
+    ```console  
     ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financial,IFinances /hosting:complus /verbose  
     ```  
   
      このコマンドは、Web サービスとして公開されるインターフェイスのセットに (OnlineStore COM+ アプリケーションの) `IFinances` コンポーネントの `ItemOrders.IFinancial` インターフェイスを追加します。 サービスは COM+ ホスト モードを使用するため、アプリケーションを明示的にアクティブ化する必要があります。  
   
-     コンポーネントとインターフェイスにはアスタリスク (*) をワイルドカード文字として使用できますが、選択した機能だけを Web サービスとして公開する場合は使用しないでください。 ワイルドカードを使用すると、このコンポーネントの将来のバージョンを使用して実行したときに、構成構文の決定時には存在しなかったインターフェイスが誤って公開される可能性があります。  
+     コンポーネントとインターフェイスには\*ワイルドカードアスタリスク () 文字を使用できますが、選択した機能のみを Web サービスとして公開することが必要になる場合があるため、使用しないでください。 ワイルドカードを使用すると、このコンポーネントの将来のバージョンを使用して実行したときに、構成構文の決定時には存在しなかったインターフェイスが誤って公開される可能性があります。  
   
      /verbose オプションを指定すると、ツールは、エラーだけでなく警告も表示します。  
   
      公開されたサービスのコントラクトには、`IFinances` インターフェイスのすべてのメソッドが含まれます。  
   
-### <a name="to-add-only-specific-methods-from-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-com-hosting-mode"></a>COM+ ホスト モードを使用して、Web サービスとして公開されるインターフェイスのセットにインターフェイスの特定のメソッドだけを追加するには  
+## <a name="to-add-only-specific-methods-from-an-interface-to-the-set-of-interfaces-exposed-as-web-services-using-the-com-hosting-mode"></a>COM + ホストモードを使用して、Web サービスとして公開されるインターフェイスのセットにインターフェイスの特定のメソッドのみを追加するには  
   
 - 次の例に示すように、`/install` オプションと `/hosting:complus` オプション、および必要なメソッドの名前を明示的に指定して、ComSvcConfig を実行します。  
   
-    ```  
+    ```console  
     ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financial,IFinances.{Credit,Debit} /hosting:complus /verbose  
     ```  
   
      このコマンドは、公開されたサービス コントラクトに `Credit` インターフェイスの `Debit` メソッドと `IFinances` メソッドだけを操作として追加します。 インターフェイスのその他のメソッドはすべてコントラクトから除外されるため、Web サービス クライアントから呼び出すことができません。  
   
-### <a name="to-add-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-web-hosting-mode"></a>Web ホスト モードを使用して、Web サービスとして公開されるインターフェイスのセットにインターフェイスを追加するには  
+## <a name="to-add-an-interface-to-the-set-of-interfaces-exposed-as-web-services-using-the-web-hosting-mode"></a>Web ホスティングモードを使用して、Web サービスとして公開されるインターフェイスのセットにインターフェイスを追加するには  
   
 - 次の例に示すように、`/install` オプションと `/hosting:was` オプションを使用して ComSvcConfig を実行します。  
   
-    ```  
+    ```console  
     ComSvcConfig.exe /install /application:OnlineWarehouse /contract:ItemInventory.Warehouse,IStockLevels /hosting:was /webDirectory:root/OnlineWarehouse /mex /verbose  
     ```  
   
@@ -71,41 +71,41 @@ ms.locfileid: "69988682"
   
      `/mex` オプションは、サービスからコントラクト定義を取得するクライアントをサポートするために、アプリケーションのサービス エンドポイントと同じトランスポートを使用する追加の Metadata Exchange (MEX) サービス エンドポイントを追加します。  
   
-### <a name="to-remove-a-web-service-for-a-specified-interface"></a>指定したインターフェイスの Web サービスを削除するには  
+## <a name="to-remove-a-web-service-for-a-specified-interface"></a>指定したインターフェイスの Web サービスを削除するには  
   
 - 次の例に示すように、`/uninstall` のオプションを使用して ComSvcConfig を実行します。  
   
-    ```  
+    ```console  
     ComSvcConfig.exe /uninstall /application:OnlineStore /contract:ItemOrders.Financial,IFinances /hosting:complus  
     ```  
   
      このコマンドは、(OnlineStore COM+ アプリケーションから) `IFinances` コンポーネントの `ItemOrders.Financial` インターフェイスを削除します。  
   
-### <a name="to-list-currently-exposed-interfaces"></a>現在公開されているインターフェイスを一覧表示するには  
+## <a name="to-list-currently-exposed-interfaces"></a>現在公開されているインターフェイスを一覧表示するには  
   
 - 次の例に示すように、`/list` のオプションを使用して ComSvcConfig を実行します。  
   
-    ```  
+    ```console  
     ComSvcConfig.exe /list  
     ```  
   
      このコマンドは、ローカル コンピューターに関して、現在公開されているインターフェイス、および対応するアドレスとバインディングの詳細を一覧表示します。  
   
-### <a name="to-list-specific-currently-exposed-interfaces"></a>現在公開されている特定のインターフェイスを一覧表示するには  
+## <a name="to-list-specific-currently-exposed-interfaces"></a>現在公開されている特定のインターフェイスを一覧表示するには  
   
 - 次の例に示すように、`/list` のオプションを使用して ComSvcConfig を実行します。  
   
-    ```  
+    ```console  
     ComSvcConfig.exe /list /application:OnlineStore /hosting:complus  
     ```  
   
      このコマンドは、ローカル コンピューター上の OnlineStore COM+ アプリケーションの現在公開されている COM+ ホスト インターフェイスを、対応するアドレスやバインディングの詳細と共に一覧表示します。  
   
-### <a name="to-display-help-on-the-options-that-can-be-used-with-the-utility"></a>ユーティリティで使用できるオプションに関するヘルプを表示するには  
+## <a name="to-display-help-on-the-options-that-can-be-used-with-the-utility"></a>ユーティリティで使用できるオプションに関するヘルプを表示するには  
   
 - 次の例に示すように、/? オプションを 使用して ComSvcConfig を実行します。  
   
-    ```  
+    ```console  
     ComSvcConfig.exe /?  
     ```  
   

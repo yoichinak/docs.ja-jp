@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: 66dd61210e36210f5444eb05355612eeb75c155a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bca07bf776f20443c4ccd2af69fc8c0b4eec5a88
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790239"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991099"
 ---
 # <a name="wcf-data-services-overview"></a>WCF Data Services の概要
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]を使用して、 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]Web またはイントラネット用のデータサービスを作成および使用できるようにします。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]を使用すると、Uri でアドレス指定できるリソースとしてデータを公開できます。 したがって、Representational State Transfer (REST) のセマンティクス (標準的な HTTP 動詞 GET、PUT、POST、DELETE) を使用してデータにアクセスし、そのデータを変更できます。 このトピックでは、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] で定義されるパターンとプラクティスの両方の概要について説明します。また、.NET Framework ベースのアプリケーションで [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] を利用するために [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] で提供される機能についても説明します。  
@@ -18,9 +18,9 @@ ms.locfileid: "70790239"
 ## <a name="address-data-as-resources"></a>リソースとしてのデータのアドレス指定  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] は、URI でアドレス指定できるリソースとしてデータを公開します。 リソース パスは、Entity Data Model のエンティティとリレーションシップの規則に基づいて構築されます。 このモデルでは、エンティティは、顧客、注文、アイテム、製品など、アプリケーションドメインのデータの操作単位を表します。 詳細については、「 [Entity Data Model](../adonet/entity-data-model.md)」を参照してください。  
   
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] では、エンティティ型のインスタンスを含むエンティティ セットとしてエンティティ リソースのアドレスを指定します。 たとえば、という URI `http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders`は、次の`CustomerID`値を持つ`Northwind`顧客に関連付けられているデータサービスからのすべての注文を返します。`ALFKI.`  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] では、エンティティ型のインスタンスを含むエンティティ セットとしてエンティティ リソースのアドレスを指定します。 たとえば、という URI <https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders>は、次の`CustomerID`値を持つ`Northwind`顧客に関連付けられているデータサービスからのすべての注文を返します。`ALFKI.`  
   
- クエリ式を使用して、リソースに対して従来のクエリ操作 (フィルターの適用、並べ替え、ページングなど) を実行できます。 たとえば、`http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=Freight gt 50` という URI は、リソースをフィルターして、$50 以上の運賃の注文だけを返します。 詳細については、「[データサービスリソースへのアクセス](accessing-data-service-resources-wcf-data-services.md)」を参照してください。  
+ クエリ式を使用して、リソースに対して従来のクエリ操作 (フィルターの適用、並べ替え、ページングなど) を実行できます。 たとえば、URI <https://services.odata.org/Northwind/Northwind.svc/Customers( ' ALFKI ')/Orders? $filter = 運賃 gt 50 > は、リソースをフィルター処理して、輸送費が $50 以上の注文のみを返します。 詳細については、「[データサービスリソースへのアクセス](accessing-data-service-resources-wcf-data-services.md)」を参照してください。  
   
 ## <a name="interoperable-data-access"></a>相互運用可能なデータ アクセス  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]は、.NET Framework を使用しないアプリケーションとデータサービスを相互運用できるようにするための標準的なインターネットプロトコルを基盤としています。 標準の Uri を使用してデータのアドレスを指定できるため、アプリケーションは、Representational State Transfer (REST) のセマンティクス (特に、GET、PUT、POST、および DELETE の標準 HTTP 動詞) を使用してデータにアクセスし、変更することができます。 そのため、標準的な HTTP プロトコルを介して転送されるデータの解析、およびこれらのデータへのアクセスを行うことができる任意のクライアントからこれらのサービスにアクセスできます。  

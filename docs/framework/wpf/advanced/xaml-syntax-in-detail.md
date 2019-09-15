@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 09f0a1b34e88be995fb9a386161a930457e4bb56
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: d48398f31c1452821292a6feb2867dbd2971e739
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168987"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991415"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 構文の詳細
 このトピックでは、XAML 構文の要素について説明するために使用される用語を定義します。 これらの用語は、このドキュメントの残りの部分で頻繁に使用されます。 WPF ドキュメントについては、特に、xaml を使用する他のフレームワークの場合と、xaml 言語サポートによってシステム .Xaml レベルで有効になっている基本的な XAML 概念の両方で使用されます。 このトピックでは、「 [XAML の概要 (WPF)](xaml-overview-wpf.md)」で紹介した基本的な用語について説明します。  
@@ -112,7 +112,7 @@ ms.locfileid: "70168987"
   
  フラグ列挙型の場合、動作は<xref:System.Enum.Parse%2A?displayProperty=nameWithType>メソッドに基づいています。 各値をコンマで区切ることによって、フラグ列挙に複数の値を指定できます。 ただし、フラグではない列挙値を組み合わせることはできません。 たとえば、コンマ構文を使用して、非フラグ列挙体の<xref:System.Windows.Trigger>複数の条件に対して動作するを作成することはできません。  
   
-```  
+```xaml  
 <!--This will not compile, because Visibility is not a flagwise enumeration.-->  
 ...  
 <Trigger Property="Visibility" Value="Collapsed,Hidden">  
@@ -197,7 +197,7 @@ ms.locfileid: "70168987"
 ### <a name="xaml-content-property-values-must-be-contiguous"></a>XAML コンテンツプロパティの値は連続している必要があります  
  XAML コンテンツプロパティの値は、そのオブジェクト要素の他のプロパティ要素の前または全体のいずれかに指定する必要があります。 これは、XAML コンテンツプロパティの値が文字列として指定されているか、または1つ以上のオブジェクトとして指定されている場合に当てはまります。 たとえば、次のマークアップは解析されません。  
   
-```  
+```xaml  
 <Button>I am a   
   <Button.Background>Blue</Button.Background>  
   blue button</Button>  
@@ -205,7 +205,7 @@ ms.locfileid: "70168987"
   
  これは基本的に、コンテンツプロパティの property 要素構文を使用してこの構文が明示的に作成されている場合、content プロパティは2回設定されるため、これは無効です。  
   
-```xml  
+```xaml  
 <Button>  
   <Button.Content>I am a </Button.Content>  
   <Button.Background>Blue</Button.Background>  
@@ -215,7 +215,7 @@ ms.locfileid: "70168987"
   
  同様に無効な例として、コンテンツプロパティがコレクションであり、子要素にプロパティ要素が混在している場合があります。  
   
-```xml  
+```xaml  
 <StackPanel>  
   <Button>This example</Button>  
   <StackPanel.Resources>  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 16d11147af7b54d492c099269a48a92ce83bc05d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 5484dfeb8cf5292fb43393bb39b9878114119d29
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043995"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991192"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>方法: 発行者ポリシーを作成する
 
@@ -53,59 +53,59 @@ ms.locfileid: "70043995"
 
 #### <a name="to-create-a-publisher-policy-assembly"></a>発行者ポリシーアセンブリを作成するには
 
-1. コマンドプロンプトで、次のコマンドを入力します。
+コマンドプロンプトで、次のコマンドを入力します。
 
-    **al /link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*
+**al /link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*
 
-    このコマンドでは、次のようになります。
+このコマンドでは、次のようになります。
 
-    - *PublisherPolicyFile*引数は発行者ポリシーファイルの名前です。
+- *PublisherPolicyFile*引数は発行者ポリシーファイルの名前です。
 
-    - *PublisherPolicyAssemblyFile*引数は、このコマンドの結果として生成される発行者ポリシーアセンブリの名前です。 アセンブリファイル名は、次の形式に従う必要があります。
+- *PublisherPolicyAssemblyFile*引数は、このコマンドの結果として生成される発行者ポリシーアセンブリの名前です。 アセンブリファイル名は、次の形式に従う必要があります。
 
-      **policy.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**
+  **policy.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**
 
-    - キーペアを格納しているファイルの名前を指定します。 アセンブリと発行者ポリシーアセンブリには、同じキーペアで署名する必要があります。
+- キーペアを格納*している*ファイルの名前を指定します。 アセンブリと発行者ポリシーアセンブリには、同じキーペアで署名する必要があります。
 
-    - *ProcessorArchitecture*引数は、プロセッサ固有のアセンブリの対象となるプラットフォームを識別します。
+- *ProcessorArchitecture*引数は、プロセッサ固有のアセンブリの対象となるプラットフォームを識別します。
 
-      > [!NOTE]
-      > 特定のプロセッサアーキテクチャを対象とする機能は、.NET Framework バージョン2.0 で新たに追加されています。
+  > [!NOTE]
+  > 特定のプロセッサアーキテクチャを対象とする機能は、.NET Framework 2.0 以降で使用できます。
 
-    次のコマンドは、という発行者`policy.1.0.myAssembly`ポリシー `pub.config`ファイルからという発行者ポリシーアセンブリを作成し、 `sgKey.snk`ファイルのキーペアを使用してアセンブリに厳密な名前を割り当て、アセンブリが x86 を対象とすることを指定します。プロセッサアーキテクチャ。
+特定のプロセッサアーキテクチャを対象とする機能は .NET Framework 2.0 以降で使用できます。次のコマンドでは、 `policy.1.0.myAssembly`という`pub.config`発行者ポリシーファイルからという発行者ポリシーアセンブリを作成し、に厳密な名前を割り当てます。アセンブリが`sgKey.snk`ファイル内のキーペアを使用し、アセンブリが x86 プロセッサアーキテクチャを対象とすることを指定します。
 
-    ```
-    al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86
-    ```
+```
+al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86
+```
 
-    発行者ポリシーアセンブリは、適用されるアセンブリのプロセッサアーキテクチャと一致している必要があります。 したがって、アセンブリの<xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A>値がの<xref:System.Reflection.ProcessorArchitecture.MSIL>場合は、そのアセンブリの発行者ポリシーアセンブリをで`/platform:anycpu`作成する必要があります。 プロセッサ固有のアセンブリごとに個別の発行者ポリシーアセンブリを指定する必要があります。
+発行者ポリシーアセンブリは、適用されるアセンブリのプロセッサアーキテクチャと一致している必要があります。 したがって、アセンブリの<xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A>値がの<xref:System.Reflection.ProcessorArchitecture.MSIL>場合は、そのアセンブリの発行者ポリシーアセンブリをで`/platform:anycpu`作成する必要があります。 プロセッサ固有のアセンブリごとに個別の発行者ポリシーアセンブリを指定する必要があります。
 
-    このルールの結果として、アセンブリのプロセッサアーキテクチャを変更するには、バージョン番号のメジャーまたはマイナーコンポーネントを変更して、正しいプロセッサアーキテクチャを持つ新しい発行者ポリシーアセンブリを指定できるようにする必要があります。 アセンブリに異なるプロセッサアーキテクチャがある場合、古い発行者ポリシーアセンブリはアセンブリを処理できません。
+このルールの結果として、アセンブリのプロセッサアーキテクチャを変更するには、バージョン番号のメジャーまたはマイナーコンポーネントを変更して、正しいプロセッサアーキテクチャを持つ新しい発行者ポリシーアセンブリを指定できるようにする必要があります。 アセンブリに異なるプロセッサアーキテクチャがある場合、古い発行者ポリシーアセンブリはアセンブリを処理できません。
 
-    また、バージョン2.0 リンカーを使用して、以前のバージョンの .NET Framework を使用してコンパイルされたアセンブリの発行者ポリシーアセンブリを作成することはできません。これは、常にプロセッサアーキテクチャを指定するためです。
+また、バージョン2.0 リンカーを使用して、以前のバージョンの .NET Framework を使用してコンパイルされたアセンブリの発行者ポリシーアセンブリを作成することはできません。これは、常にプロセッサアーキテクチャを指定するためです。
 
 ## <a name="adding-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>発行者ポリシーアセンブリをグローバルアセンブリキャッシュに追加する
 
 グローバル[アセンブリキャッシュツール (gacutil.exe)](../tools/gacutil-exe-gac-tool.md)を使用して、発行者ポリシーアセンブリをグローバルアセンブリキャッシュに追加します。
 
-#### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>発行者ポリシーアセンブリをグローバルアセンブリキャッシュに追加するには
+### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>発行者ポリシーアセンブリをグローバルアセンブリキャッシュに追加するには
 
-1. コマンドプロンプトで、次のコマンドを入力します。
+コマンドプロンプトで、次のコマンドを入力します。
 
-    **gacutil/i**  *publisherPolicyAssemblyFile*
+**gacutil/i**  *publisherPolicyAssemblyFile*
 
-    次のコマンドは`policy.1.0.myAssembly.dll` 、をグローバルアセンブリキャッシュに追加します。
+次のコマンドは`policy.1.0.myAssembly.dll` 、をグローバルアセンブリキャッシュに追加します。
 
-    ```
-    gacutil /i policy.1.0.myAssembly.dll
-    ```
+```
+gacutil /i policy.1.0.myAssembly.dll
+```
 
-    > [!IMPORTANT]
-    > 元の発行者ポリシーファイルがアセンブリと同じディレクトリに配置されている場合を除き、発行者ポリシーアセンブリをグローバルアセンブリキャッシュに追加することはできません。
+> [!IMPORTANT]
+> 元の発行者ポリシーファイルがアセンブリと同じディレクトリに配置されている場合を除き、発行者ポリシーアセンブリをグローバルアセンブリキャッシュに追加することはできません。
 
 ## <a name="see-also"></a>関連項目
 
-- [アセンブリを使用したプログラミング](../app-domains/programming-with-assemblies.md)
+- [アセンブリを使用したプログラミング](../../standard/assembly/program.md)
 - [ランタイムがアセンブリを検索する方法](../deployment/how-the-runtime-locates-assemblies.md)
 - [構成ファイルを使用したアプリの構成](index.md)
 - [ランタイム設定スキーマ](./file-schema/runtime/index.md)

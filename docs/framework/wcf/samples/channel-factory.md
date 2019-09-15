@@ -2,12 +2,12 @@
 title: チャネル ファクトリ
 ms.date: 03/30/2017
 ms.assetid: 09b53aa1-b13c-476c-a461-e82fcacd2a8b
-ms.openlocfilehash: cd56c47223f0c98e48bd92376c9bbe9db6d2202e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 9b754531059e367a8102a96cfb50b6147da84978
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045733"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990091"
 ---
 # <a name="channel-factory"></a>チャネル ファクトリ
 
@@ -48,7 +48,7 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);
 
 このサンプルを実行すると、操作要求および応答がクライアントのコンソール ウィンドウに表示されます。 クライアント アプリケーションをシャットダウンするには、クライアント ウィンドウで Enter キーを押します。
 
-```
+```console
 Add(100,15.99) = 115.99
 Subtract(145,76.54) = 68.46
 Multiply(9,81.25) = 731.25

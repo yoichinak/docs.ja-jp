@@ -2,12 +2,12 @@
 title: カスタム追跡
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: b53b22b485a7ac340821073d2f2914b13a7b7011
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 32abf1dc4c9607b4a86f836fa2c759af1dbf1b69
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044295"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989411"
 ---
 # <a name="custom-tracking"></a>カスタム追跡
 このサンプルでは、カスタムの追跡参加要素を作成し、追跡データをコンソールに出力する方法を示します。 また、ユーザー定義データが設定された <xref:System.Activities.Tracking.CustomTrackingRecord> オブジェクトを出力する方法も示します。 コンソール ベースの追跡参加要素は、コードで作成された追跡プロファイル オブジェクトを使用して、ワークフローで出力された <xref:System.Activities.Tracking.TrackingRecord> オブジェクトをフィルター処理します。
@@ -47,7 +47,7 @@ public abstract class TrackingParticipant
 }
 ```
 
- 完全な追跡参加要素は ConsoleTrackingParticipant.cs ファイルで実装します。次のコード例は、カスタム追跡参加要素の <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> メソッドです。
+ 完全な追跡参加要素は、ConsoleTrackingParticipant.cs ファイルに実装されます。 カスタム追跡参加要素の<xref:System.Activities.Tracking.TrackingParticipant.Track%2A>メソッドを次のコード例に示します。
 
 ```csharp
 protected override void Track(TrackingRecord record, TimeSpan timeout)

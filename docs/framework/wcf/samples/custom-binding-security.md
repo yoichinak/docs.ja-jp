@@ -2,12 +2,12 @@
 title: カスタム バインディング セキュリティ
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: a597e1fb7c239b49c03e964b513b4248a9c020c3
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b0b293c58e13f7add6f2cb49ea3c108a86292691
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045613"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990007"
 ---
 # <a name="custom-binding-security"></a>カスタム バインディング セキュリティ
 
@@ -62,7 +62,7 @@ ms.locfileid: "70045613"
 
 このサンプルを実行する場合は、操作要求および応答はクライアントのコンソール ウィンドウに表示されます。 クライアントをシャットダウンするには、クライアント ウィンドウで Enter キーを押します。
 
-```
+```console
 Press <ENTER> to terminate client.
 Result(100)
 Result(50)
@@ -97,7 +97,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
   Setup.bat ファイルの次の行は、サーバー証明書をクライアントの信頼されたユーザーのストアにコピーします。 この手順が必要なのは、Makecert.exe によって生成される証明書がクライアント システムにより暗黙には信頼されないからです。 マイクロソフト発行の証明書など、クライアントの信頼されたルート証明書に基づいた証明書が既にある場合は、クライアント証明書ストアにサーバー証明書を配置するこの手順は不要です。
 
-  ```
+  ```console
   certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
   ```
 
@@ -152,7 +152,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
     3. 管理者特権で Visual Studio の開発者コマンドプロンプトを開き、サービスコンピューターで次のコマンドを実行して、サービスの証明書を`%SERVER_NAME%`エクスポートします (を実行するコンピューターの完全修飾名に置き換えます)。サービスは実行中です):
 
-        ```
+        ```console
         certmgr -put -r LocalMachine -s My -c -n %SERVER_NAME% %SERVER_NAME%.cer
         ```
 
@@ -160,7 +160,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
     5. 管理者特権で Visual Studio の開発者コマンドプロンプトを開き、クライアントコンピューターで次のコマンドを実行して、サービスの証明書をインポートします (% SERVER_NAME% は、サービスは実行中です):
 
-        ```
+        ```console
         certmgr.exe -add -c %SERVER_NAME%.cer -s -r CurrentUser TrustedPeople
         ```
 

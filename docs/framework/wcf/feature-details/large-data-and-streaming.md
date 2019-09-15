@@ -2,12 +2,12 @@
 title: 大規模データとストリーミング
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: b35fa4a6ca694fc9611869c7fcb03debf911542d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 70e43eaf4dc77e07af8ec65faf9cf0fa9a7a0fe4
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911867"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991514"
 ---
 # <a name="large-data-and-streaming"></a>大規模データとストリーミング
 Windows Communication Foundation (WCF) は、XML ベースの通信インフラストラクチャです。 XML データは通常、 [xml 1.0 仕様](https://go.microsoft.com/fwlink/?LinkId=94838)で定義されている標準のテキスト形式でエンコードされているため、接続されたシステムの開発者および設計者は、通常、ネットワークを介して送信されるメッセージのワイヤフットプリント (またはサイズ) について考慮します。XML のテキストベースのエンコードでは、バイナリデータを効率的に転送するための特別な課題があります。  
@@ -99,7 +99,7 @@ Windows Communication Foundation (WCF) は、XML ベースの通信インフラ�
 ### <a name="programming-model"></a>プログラミング モデル  
  3 つの組み込みエンコーダーのうち、どのエンコーダーをアプリケーションで使用する場合も、バイナリ データの転送に関するプログラミング方法は同じです。 違いは、WCF がデータ型に基づいてデータを処理する方法です。  
   
-```  
+```csharp
 [DataContract]  
 class MyData  
 {  
@@ -190,7 +190,7 @@ class MyData
 ### <a name="programming-model-for-streamed-transfers"></a>ストリーミング転送のプログラミング モデル  
  ストリーミングのプログラミング モデルは単純です。 ストリーム化されたデータを受信するには、<xref:System.IO.Stream> 型の入力パラメーターを 1 つ使用する操作コントラクトを指定します。 ストリーム化されたデータを返信するには、<xref:System.IO.Stream> 参照を返します。  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IStreamedService  
 {  
@@ -209,7 +209,7 @@ public interface IStreamedService
   
  この規則は、メッセージ コントラクトにも同様に適用されます。 次の例に示すように、メッセージ コントラクトには、ストリームであるメッセージ本体メンバーを 1 つだけ指定できます。 ストリームと共に他の追加情報も転送する場合、追加情報はメッセージ ヘッダーに入れる必要があります。 メッセージ本体は、ストリーム コンテンツ専用として予約されています。  
   
-```  
+```csharp
 [MessageContract]  
 public class UploadStreamMessage  
 {  

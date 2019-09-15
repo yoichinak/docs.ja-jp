@@ -9,19 +9,19 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-ms.openlocfilehash: b68909d94ad8cc5bba75b2c520db82c5ccf1b922
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: a72b2886c63a80a4887aa16fc6a952fa837a800f
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206182"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991442"
 ---
 # <a name="mcignorable-attribute"></a>mc:Ignorable 属性
 マークアップファイルで検出された[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 名前空間プレフィックスがプロセッサによって無視される可能性があるかどうかを指定します。[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 属性`mc:Ignorable`は、カスタム名前空間マッピング[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]とバージョン管理の両方で、マークアップ互換性をサポートしています。  
   
 ## <a name="xaml-attribute-usage-single-prefix"></a>XAML 属性の使用法 (単一のプレフィックス)  
   
-```  
+```xaml  
 <object  
   xmlns:ignorablePrefix="ignorableUri"  
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
@@ -32,7 +32,7 @@ ms.locfileid: "70206182"
   
 ## <a name="xaml-attribute-usage-two-prefixes"></a>XAML 属性の使用法 (2 つのプレフィックス)  
   
-```  
+```xaml  
 <object  
   xmlns:ignorablePrefix1="ignorableUri"  
   xmlns:ignorablePrefix2="ignorableUri2"  

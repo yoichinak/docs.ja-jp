@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: 3afac76fc977f992e780d2ebe302c1ed94568835
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 0faf4d77b1ea2881ba8e029d544f2e42cf552349
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044401"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989683"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>方法: フローチャート ワークフローを作成する
 ワークフローは、ビルトイン アクティビティおよびカスタム アクティビティから構築できます。 このトピックでは、 <xref:System.Activities.Statements.Flowchart>アクティビティなどの組み込みアクティビティと、前[の手順のカスタムアクティビティの両方を使用するワークフローを作成する手順について説明します。アクティビティ](how-to-create-an-activity.md)のトピックを作成します。 このワークフローは、数値推測ゲームをモデル化しています。  
@@ -118,15 +118,15 @@ ms.locfileid: "70044401"
   
 9. 2番目の**Flowdecision**アクティビティをクリックして選択します。 [**プロパティ] ウィンドウ**で、 **[条件]** プロパティ値ボックスに次の式を入力します。  
   
-    ```
-    Guess < Target  
+    ```text
+    Guess < Target
     ```  
   
 10. **ツールボックス**の **[プリミティブ]** セクションから2つの**WriteLine**アクティビティをドラッグし、2つの**flowdecision**アクティビティの横に並んでいるようにドロップします。 下の**Flowdecision**アクティビティの**真**のアクションを左端の**writeline**アクティビティに接続し、 **False**アクションを右端の**writeline**アクティビティに接続します。  
   
 11. 左端の**WriteLine**アクティビティをクリックして選択し、[**プロパティ] ウィンドウ**の **[Text]** プロパティ値ボックスに次の式を入力します。  
   
-    ```
+    ```text
     "Your guess is too low."  
     ```  
   
@@ -134,7 +134,7 @@ ms.locfileid: "70044401"
   
 13. 右の**WriteLine**アクティビティをクリックして選択し、[**プロパティ] ウィンドウ**の **[Text]** プロパティ値ボックスに次の式を入力します。  
   
-    ```
+    ```text
     "Your guess is too high."  
     ```  
   

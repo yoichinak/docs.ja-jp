@@ -2,12 +2,12 @@
 title: アクティビティ デリゲートの使用
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
-ms.openlocfilehash: 8c9d82f47f709a89455f41691526b6ac9718a01f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 63f550549456404b237067c98afdb18a8758dd7a
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004615"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989093"
 ---
 # <a name="using-activity-delegates"></a>アクティビティ デリゲートの使用
 アクティビティ デリゲートを使用すると、アクティビティの作成者は、特定の署名を持つコールバックを公開できます。アクティビティのユーザーは、この署名用のアクティビティベースのハンドラーを提供できます。 2 種類のアクティビティ デリゲートを使用できます。<xref:System.Activities.ActivityAction%601> は、戻り値を持たないアクティビティ デリゲートを定義する場合に使用され、<xref:System.Activities.ActivityFunc%601> は戻り値を持つアクティビティ デリゲートを定義する場合に使用されます。
@@ -16,13 +16,13 @@ ms.locfileid: "62004615"
 
 ## <a name="using-activityaction"></a>ActivityAction の使用
 
-いくつかの [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] アクティビティ (<xref:System.Activities.Statements.Catch> アクティビティや <xref:System.Activities.Statements.ForEach%601> アクティビティなど) では、アクティビティ アクションが使用されます。 それぞれの場合において、アクティビティ アクションは、これらのアクティビティのいずれかを使用してワークフローを作成するときに、ワークフローの作成者が目的の動作を提供するアクティビティを指定する場所を表します。 次の例では、<xref:System.Activities.Statements.ForEach%601> アクティビティを使用してコンソール ウィンドウにテキストを表示します。 <xref:System.Activities.Statements.ForEach%601> の本体は、<xref:System.Activities.ActivityAction%601> の型 (文字列) に一致する <xref:System.Activities.Statements.ForEach%601> を使用して指定します。 <xref:System.Activities.ActivityDelegate.Handler%2A> で指定された <xref:System.Activities.Statements.WriteLine> アクティビティには、<xref:System.Activities.Statements.ForEach%601> アクティビティによって反復処理されるコレクションの文字列値にバインドされる <xref:System.Activities.Statements.WriteLine.Text%2A> 引数があります。
+いくつかの [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] アクティビティ (<xref:System.Activities.Statements.Catch> アクティビティや <xref:System.Activities.Statements.ForEach%601> アクティビティなど) では、アクティビティ アクションが使用されます。 それぞれの場合において、アクティビティ アクションは、これらのアクティビティのいずれかを使用してワークフローを作成するときに、ワークフローの作成者が目的の動作を提供するアクティビティを指定する場所を表します。 次の例では、<xref:System.Activities.Statements.ForEach%601> アクティビティを使用してコンソール ウィンドウにテキストを表示します。 <xref:System.Activities.Statements.ForEach%601> の本体は、<xref:System.Activities.ActivityAction%601> の型 (文字列) に一致する <xref:System.Activities.Statements.ForEach%601> を使用して指定します。 <xref:System.Activities.Statements.WriteLine> で指定された <xref:System.Activities.ActivityDelegate.Handler%2A> アクティビティには、<xref:System.Activities.Statements.WriteLine.Text%2A> アクティビティによって反復処理されるコレクションの文字列値にバインドされる <xref:System.Activities.Statements.ForEach%601> 引数があります。
 
 [!code-csharp[CFX_ActivityExample#6](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#6)]
 
 actionArgument は、コレクション内の各項目を WriteLine にフローするために使用されます。 このワークフローが呼び出されると、次の出力がコンソールに表示されます。
 
-```
+```console
 HelloWorld.
 ```
 
@@ -30,9 +30,9 @@ HelloWorld.
 
 [!code-csharp[CFX_ActivityExample#7](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]
 
-オブジェクト初期化子の詳細については、次を参照してください。[方法。コンス トラクターを呼び出さずにオブジェクトを初期化 (C#プログラミング ガイド)](https://go.microsoft.com/fwlink/?LinkId=161015)と[方法。オブジェクト初期化子を使用してオブジェクトを宣言](https://go.microsoft.com/fwlink/?LinkId=161016)します。
+オブジェクト初期化子の詳細について[は、「」を参照してください。コンストラクターを呼び出さずにオブジェクトC#を初期化する](https://go.microsoft.com/fwlink/?LinkId=161015) ( [プログラミングガイド) と方法:オブジェクト初期化子](https://go.microsoft.com/fwlink/?LinkId=161016)を使用してオブジェクトを宣言します。
 
-次の例では、ワークフローで <xref:System.Activities.Statements.TryCatch> アクティビティを使用します。 ワークフローによって <xref:System.ApplicationException> がスローされ、<xref:System.Activities.Statements.Catch%601> アクティビティによってこの例外が処理されます。 ハンドラーは、<xref:System.Activities.Statements.Catch%601>アクティビティのアクティビティのアクションは、<xref:System.Activities.Statements.WriteLine>を使用して、アクティビティ、および例外の詳細をフローさせるが、 `ex` <xref:System.Activities.DelegateInArgument%601>。
+次の例では、ワークフローで <xref:System.Activities.Statements.TryCatch> アクティビティを使用します。 ワークフローによって <xref:System.ApplicationException> がスローされ、<xref:System.Activities.Statements.Catch%601> アクティビティによってこの例外が処理されます。 アクティビティのアクティビティアクション<xref:System.Activities.Statements.Catch%601>のハンドラー <xref:System.Activities.Statements.WriteLine>はアクティビティで<xref:System.Activities.DelegateInArgument%601>あり、例外の詳細はを使用し`ex`てそれにフローされます。
 
 [!code-csharp[CFX_WorkflowApplicationExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#33)]
 

@@ -2,12 +2,12 @@
 title: 構成サンプル
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: 52f8b5eae56db4b3a506d71c44ff2c49a8085067
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 87afeb0c562254e0f4cf6a85946a765a740c79ec
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040105"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990080"
 ---
 # <a name="configuration-sample"></a>構成サンプル
 このサンプルでは、構成ファイルを使用してサービスを探索可能にする方法を示します。  
@@ -67,9 +67,7 @@ ms.locfileid: "70040105"
   
  この構成ファイルは、さらに動作を変更することによって、より高度な機能を提供できます。 特定のエンドポイントを使用することで、探索関連の情報を制御できます。 つまり、ユーザーは、エンドポイントを探索できるかどうかを制御できるだけでなく、そのエンドポイントを <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes%2A> およびカスタム XML メタデータでマークすることもできます。 これを行うには、`behaviorConfiguration` プロパティをアプリケーション エンドポイントに追加する必要があります。 この場合、次のプロパティをアプリケーション エンドポイントに追加します。  
   
-```  
-behaviorConfiguration="endpointBehaviorConfiguration"  
-```  
+`behaviorConfiguration="endpointBehaviorConfiguration"`  
   
  これで、この動作構成要素を通じて、探索関連の属性を制御できます。 この場合、2 つのスコープがアプリケーション エンドポイントに追加されます。  
   

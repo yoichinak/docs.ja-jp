@@ -2,12 +2,12 @@
 title: .NET リモート処理から WCF への移行
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: c42255a14a23cb50f3fe8be434efab4af7361daa
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 926ccee49c7a445c724cecd72015ec5a5307cf58
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045865"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990180"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>.NET リモート処理から WCF への移行
 この記事では、.NET リモート処理を使用するアプリケーションを、Windows Communication Foundation (WCF) を使用するように移行する方法について説明します。 これらの製品間で類似する概念を比較した後、WCF で一般的なリモート処理のシナリオを実現する方法を説明します。  
@@ -15,7 +15,7 @@ ms.locfileid: "70045865"
  .NET リモート処理は、旧バージョンとの互換性のためだけにサポートされているレガシー製品です。 これは、クライアントとサーバーの間で個々の信頼レベルを維持できないため、信頼レベルが混在する環境において安全ではありません。 たとえば、インターネットまたは信頼できないクライアントには、.NET リモート処理のエンドポイントを非公開にする必要があります。 既存のリモート処理アプリケーションを、より新しく安全なテクノロジに移行することをお勧めします。 そのアプリケーションの設計に HTTP のみが使用されていて、かつ RESTful である場合、ASP.NET Web API をお勧めします。 詳細については、ASP.NET Web API を参照してください。 アプリケーションが SOAP ベースの場合や、TCP などの非 HTTP プロトコルを必要とする場合は、WCF をお勧めします。  
 
 ## <a name="comparing-net-remoting-to-wcf"></a>.NET リモート処理と WCF の比較  
- このセクションでは、.NET リモート処理の基本的な構成要素と、それに相当する WCF の構成要素を比較します。 これらの構成要素は、後ほど WCF で一般的なクライアントとサーバーのシナリオを作成するために使用します。次の表では、.NET リモート処理と WCF の主な類似点と相違点を示しています。  
+ このセクションでは、.NET リモート処理の基本的な構成要素と、それに相当する WCF の構成要素を比較します。 これらの構成要素は、WCF で一般的なクライアントとサーバーのシナリオを作成するために後で使用します。 次の表は、.NET リモート処理と WCF の主な類似性と相違点をまとめたものです。  
   
 ||.NET リモート処理|WCF|  
 |-|-------------------|---------|  

@@ -1,5 +1,5 @@
 ---
-title: チュートリアル:Visual Studio 2019 で初めての WPF アプリケーションを作成する-.NET Framework
+title: 'チュートリアル: Visual Studio 2019 で初めての WPF アプリケーションを作成する-.NET Framework'
 ms.date: 09/06/2019
 dev_langs:
 - csharp
@@ -12,19 +12,20 @@ ms.topic: tutorial
 ms.custom: vs-dotnet
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c8b7f6f3bdbf3adc7c355e88cfe1f569cc0cb76f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b2c8e36c1b8185f28a7ec20402e385f3a1ddf5ce
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799332"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991771"
 ---
-# <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>チュートリアル:Visual Studio 2019 で初めての WPF アプリケーションを作成する
+# <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>チュートリアル: Visual Studio 2019 で初めての WPF アプリケーションを作成する
 
 この記事では、ほとんどの WPF アプリケーションに共通の要素を含む Windows Presentation Foundation (WPF) デスクトップアプリケーションを開発する方法について説明します。Extensible Application Markup Language (XAML) マークアップ、分離コード、アプリケーション定義、コントロール、レイアウト、データバインディング、およびスタイル。 アプリケーションを開発するには、Visual Studio を使用します。 
 
 このチュートリアルでは、次の作業を行う方法について説明します。
 > [!div class="checklist"]
+>
 > - WPF プロジェクトを作成します。
 > - XAML を使用して、アプリケーションのユーザーインターフェイス (UI) の外観をデザインします。
 > - アプリケーションの動作を構築するコードを記述します。
@@ -40,7 +41,7 @@ ms.locfileid: "70799332"
 >
 > このページの上部にある言語セレクターを使用しC#て、と Visual Basic の間でサンプルコードのコード言語を切り替えることができます。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 - **.Net デスクトップ開発**ワークロードがインストールされた[Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 。
 

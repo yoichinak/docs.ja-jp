@@ -2,12 +2,12 @@
 title: サービス フレームワークのメタデータ
 ms.date: 03/30/2017
 ms.assetid: 76afc73a-0770-4084-93f3-6701a757911e
-ms.openlocfilehash: f65f53ff99202275876fb6e3c431bc49ae2bd38b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3e73df54b3389b2c9f27001953be147b27eb6f8
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780798"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991212"
 ---
 # <a name="service-framework-metadata"></a>サービス フレームワークのメタデータ
 ここでは、サービス フレームワーク メタデータによって生成されるすべての例外を示します。  
@@ -18,7 +18,7 @@ ms.locfileid: "61780798"
 |-------------------|---------------------|  
 |AsyncEndCalledOnWrongChannel|非同期 End が間違ったチャネルで呼び出されました。|  
 |AsyncEndCalledWithAnIAsyncResult|非同期 End が別の Begin メソッドから IAsyncResult を指定して呼び出されました。|  
-|AttemptedToGetContractTypeForButThatTypeIs1|指定された対象のコントラクトの型の取得を試みましたが、この型は ServiceContract ではありません。また、ServiceContract を継承しているわけでもありません。|  
+|AttemptedToGetContractTypeForButThatTypeIs1|指定されたのコントラクト型を取得しようとしました。 種類が ServiceContract ではなく、ServiceContract を継承していません。|  
 |CannotHaveTwoOperationsWithTheSameName3|同じ名前の 2 つの操作を同一のコントラクトに含めることはできません。 指定された型の指定されたメソッドは、このルールに違反しています。 いずれかの操作の名前を変更するには、メソッド名を変更するか、OperationContractAttribute の Name プロパティを使用します。|  
 |CannotInheritTwoOperationsWithTheSameName3|同じ名前を持つ 2 つの異なる操作を継承することはできません。 指定されたコントラクトの指定された操作は、このルールに違反しています。 いずれかの操作の名前を変更するには、メソッド名を変更するか、OperationContractAttribute の Name プロパティを使用します。|  
 |CantCreateChannelWithManualAddressing|要求/応答が必要なコントラクト、および双方向の通信のみをサポートする手動によるアドレス指定が必要なバインドのチャネルを作成することができません。|  

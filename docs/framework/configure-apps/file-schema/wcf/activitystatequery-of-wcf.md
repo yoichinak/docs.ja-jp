@@ -2,12 +2,12 @@
 title: <activityStateQuery>WCF の
 ms.date: 03/30/2017
 ms.assetid: d6cdc04b-6f3a-4097-a623-ee4a1be3b5c4
-ms.openlocfilehash: 233bd3a2fa161222977902cc1053f964e8171173
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 49c507424e813067e1dad9b08167d9661acef36f
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850485"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991215"
 ---
 # <a name="activitystatequery-of-wcf"></a>\<WCF の activityStateQuery >
 
@@ -76,7 +76,7 @@ ms.locfileid: "70850485"
   
 ## <a name="remarks"></a>Remarks
 
-ActivityStateQuery の固有の機能の 1 つは、ワークフローの実行を追跡するときにデータを抽出する機能です。 これにより、実行後に追跡レコードにアクセスするときにコンテキストが追加されます。 引数 >、 [ \<](../windows-workflow-foundation/arguments.md) [ states\<>](../windows-workflow-foundation/states.md)および[ states>要素を使用して、ワークフロー内の任意の\<](../windows-workflow-foundation/states.md)アクティビティから任意の変数または引数を抽出できます。次の例は、アクティビティの`Closed`追跡レコードが生成されたときに変数と引数を抽出するアクティビティ状態クエリを示しています。 変数と引数は activitystaterecord でのみ抽出できるため、 [ \<activitystatequery >](../windows-workflow-foundation/activitystatequery.md)を使用して追跡プロファイル内でサブスクライブされます。  
+ActivityStateQuery の固有の機能の 1 つは、ワークフローの実行を追跡するときにデータを抽出する機能です。 これにより、実行後に追跡レコードにアクセスするときにコンテキストが追加されます。 引数 >、 [ \<](../windows-workflow-foundation/arguments.md) [ states\<>](../windows-workflow-foundation/states.md)および[ states>要素を使用して、ワークフロー内の任意の\<](../windows-workflow-foundation/states.md)アクティビティから任意の変数または引数を抽出できます。 次の例は、アクティビティの `Closed` 追跡レコードが生成されたときに変数と引数を抽出するアクティビティ状態クエリを示しています。 変数と引数は activitystaterecord でのみ抽出できるため、 [ \<activitystatequery >](../windows-workflow-foundation/activitystatequery.md)を使用して追跡プロファイル内でサブスクライブされます。  
   
 ```xml  
 <activityStateQuery activityName="SendEmailActivity">

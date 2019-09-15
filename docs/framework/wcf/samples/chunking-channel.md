@@ -2,12 +2,12 @@
 title: チャネルのチャンキング
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: b59f5c42f5a0f81f666bc5d22924f14c678a60e1
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 6bd7f1f31426c2d355b42f04ad770aac60183838
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045697"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990114"
 ---
 # <a name="chunking-channel"></a>チャネルのチャンキング
 
@@ -328,7 +328,7 @@ interface ITestService
 
 1. 次のコマンドを使用して、ASP.NET 4.0 をインストールします。
 
-    ```
+    ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 
@@ -344,7 +344,7 @@ interface ITestService
 
 クライアント:
 
-```
+```console
 Press enter when service is available
 
  > Sent chunk 1 of message 867c1fd1-d39e-4be1-bc7b-32066d7ced10
@@ -371,7 +371,7 @@ Press enter when service is available
 
 サーバー
 
-```
+```console
 Service started, press enter to exit
  < Received chunk 1 of message 867c1fd1-d39e-4be1-bc7b-32066d7ced10
  < Received chunk 2 of message 867c1fd1-d39e-4be1-bc7b-32066d7ced10

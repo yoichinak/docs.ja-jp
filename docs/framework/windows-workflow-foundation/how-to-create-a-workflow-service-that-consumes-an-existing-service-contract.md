@@ -2,12 +2,12 @@
 title: '方法: 既存のサービス コントラクトを使用するワークフロー サービスを作成する'
 ms.date: 03/30/2017
 ms.assetid: 11d11b59-acc4-48bf-8e4b-e97b516aa0a9
-ms.openlocfilehash: f25e71aec03f9808b3263f0353328f92888ccc69
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6d7fa8c9faa84efc84243387cd27aa264f6155eb
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962317"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989621"
 ---
 # <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>方法: 既存のサービス コントラクトを使用するワークフロー サービスを作成する
 .NET Framework 4.5 では、コントラクト優先ワークフロー開発の形式で web サービスとワークフローの統合が強化されています。 コントラクト優先ワークフローの開発ツールでは、コードのコントラクトを先に設計できます。 その後、ツールボックス内に、コントラクト内の操作用のアクティビティ テンプレートが自動的に生成されます。  
@@ -27,13 +27,13 @@ ms.locfileid: "69962317"
   
 2. 表示されるコード ウィンドウの上部で、`System.Servicemodel` に対する Using ステートメントを追加します。  
   
-    ```  
+    ```csharp  
     using System.ServiceModel;  
     ```  
   
 3. サンプルのクラス定義を次のインターフェイス定義に変更します。  
   
-    ```  
+    ```csharp  
     [ServiceContract]  
         public interface IBookService  
         {  

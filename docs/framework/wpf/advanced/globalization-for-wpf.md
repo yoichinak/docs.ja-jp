@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 2f651b68d845e062ad950bb626e30c755d6d9df6
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: f1147bf090af23c2f27bac14ab895657ccee60e3
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169162"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991558"
 ---
 # <a name="globalization-for-wpf"></a>WPF のグローバリゼーション
 このトピックでは、グローバル市場向けのアプリケーションを作成[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]するときに注意する必要がある問題について説明します。 グローバリゼーションプログラミング要素は、 <xref:System.Globalization>名前空間の .net で定義されています。
@@ -39,7 +39,7 @@ ms.locfileid: "70169162"
 ### <a name="encoding"></a>エンコード
  によっ[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]てサポートされるエン[!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)]コーディングは、ASCII、utf-16、utf-8 です。 Encoding ステートメントはドキュメントの[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]先頭にあります。 エンコーディング属性が存在せず、バイト順もない場合、パーサーでは既定として UTF-8 が使用されます。 UTF-8 と UTF-16 は優先エンコードです。 UTF-7 には対応していません。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ファイルで utf-8 エンコーディングを指定する方法を次の例に示します。
 
-```
+```xaml
 ?xml encoding="UTF-8"?
 ```
 
@@ -51,7 +51,7 @@ ms.locfileid: "70169162"
 
  次[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]の例では`fr-CA` 、language 属性を使用してカナダフランス語を指定しています。
 
-```xml
+```xaml
 <TextBlock xml:lang="fr-CA">Découvrir la France</TextBlock>
 ```
 
@@ -173,7 +173,7 @@ ms.locfileid: "70169162"
 
  この問題の解決策は、非依存言語フォールバック属性を設定することです。 アプリケーション開発者はメイン アセンブリからリソースを任意で削除し、特定のカルチャに対応するサテライト アセンブリでそのリソースを見つけられるように指定できます。 このプロセスを制御するに<xref:System.Resources.NeutralResourcesLanguageAttribute>は、を使用します。 <xref:System.Resources.NeutralResourcesLanguageAttribute>クラスのコンストラクターには、2つのシグネチャがあります<xref:System.Resources.UltimateResourceFallbackLocation> 。1つはパラメーターを受け取り<xref:System.Resources.ResourceManager> 、がフォールバックリソースを抽出する場所を指定します。メインアセンブリまたはサテライトアセンブリです。 この属性を使用する方法の例を次に示します。 最終的なフォールバックの場所では、は、 <xref:System.Resources.ResourceManager>現在実行中のアセンブリのディレクトリの "de" サブディレクトリにあるリソースを検索します。
 
-```
+```csharp
 [assembly: NeutralResourcesLanguageAttribute(
     "de" , UltimateResourceFallbackLocation.Satellite)]
 ```

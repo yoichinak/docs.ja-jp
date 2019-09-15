@@ -5,19 +5,19 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: 2689b2c8-b4dc-4b71-b9bd-f95e619122d7
-ms.openlocfilehash: 619c3ffbc68c8c72ea9dd6545ab8da536380483b
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: e625d99cdb30368a798b4829d103f8f26b2c9274
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206173"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991853"
 ---
 # <a name="mcprocesscontent-attribute"></a>mc:ProcessContent 属性
 [Mc: Ignorable 属性](mc-ignorable-attribute.md)を指定することが原因で、直接の親要素が[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサによって無視される場合でも、関連する親要素によって処理されるコンテンツを保持する要素を指定します。[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 属性`mc:ProcessContent`は、カスタム名前空間マッピング[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]とバージョン管理の両方で、マークアップ互換性をサポートしています。  
   
 ## <a name="xaml-attribute-usage"></a>XAML 属性の使用方法  
   
-```  
+```xaml  
 <object  
   xmlns:ignorablePrefix="ignorableUri"  
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  

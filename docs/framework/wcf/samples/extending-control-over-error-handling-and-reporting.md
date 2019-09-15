@@ -2,12 +2,12 @@
 title: エラー処理およびレポートに対する制御の拡張
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-ms.openlocfilehash: 09216d8b0ff58ac90a0fd6183f43fd2ccf82ad52
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: d7efc87d7d8a913642c4ac0e3d6d19cd0a9259c5
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039678"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989931"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>エラー処理およびレポートに対する制御の拡張
 このサンプルでは、 <xref:System.ServiceModel.Dispatcher.IErrorHandler>インターフェイスを使用して、Windows Communication Foundation (WCF) サービスのエラー処理およびエラー報告に対する制御を拡張する方法を示します。 このサンプルは、エラーを処理するためにサービスに追加のコードが追加された[はじめに](../../../../docs/framework/wcf/samples/getting-started-sample.md)に基づいています。 クライアントは、強制的にエラーが発生する状態にされます。 サービスはエラーを途中受信して、ファイルに記録します。  
@@ -21,7 +21,7 @@ ms.locfileid: "70039678"
   
  <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> メソッドでは、`CalculatorErrorHandler` がエラーのログを c:\logs の Error.txt テキスト ファイルに書き込みます。 このサンプルではエラーを記録して表示します。このエラーの報告は、クライアントに返されます。  
   
-```  
+```csharp  
 public class CalculatorErrorHandler : IErrorHandler  
 {  
         // Provide a fault. The Message fault parameter can be replaced, or set to  
@@ -51,7 +51,7 @@ public class CalculatorErrorHandler : IErrorHandler
   
  `ErrorBehaviorAttribute` は、エラー ハンドラをサービスに登録する機構として存在します。 この属性は、単一の型のパラメータを受け取ります。 この型は <xref:System.ServiceModel.Dispatcher.IErrorHandler> インターフェイスを実装し、空のパブリック コンストラクタを含む必要があります。 この属性は、そのエラー ハンドラの型のインスタンスをインスタンス化し、サービスにインストールします。 これを行うには <xref:System.ServiceModel.Description.IServiceBehavior> インターフェイスを実装し、次に <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> メソッドを使用してエラー ハンドラのインスタンスをサービスに追加します。  
   
-```  
+```csharp  
 // This attribute can be used to install a custom error handler for a service.  
 public class ErrorBehaviorAttribute : Attribute, IServiceBehavior  
 {  
@@ -98,7 +98,7 @@ public class ErrorBehaviorAttribute : Attribute, IServiceBehavior
   
  このサンプルは、電卓サービスを実装しています。 クライアントは、パラメータに無効な値を渡すことによって、サービスで意図的に 2 つのエラーを発生させます。 `CalculatorErrorHandler` は <xref:System.ServiceModel.Dispatcher.IErrorHandler> インターフェイスを使用して、エラーをローカル ファイルに記録します。エラーの記録はその後、クライアントに報告されます。 クライアントは強制的に 0 による除算を行い、引数を範囲外の状態にします。  
   
-```  
+```csharp  
 try  
 {  
     Console.WriteLine("Forcing an error in Divide");  
@@ -132,9 +132,9 @@ FaultException: FaultException - Invalid Argument: The argument must be greater 
 Press <ENTER> to terminate client.  
 ```  
   
- ファイル c:\logs\errors.txt には、サービスによって記録されたエラーに関する情報が格納されます。 サービスがこのディレクトリに対して書き込み処理を実行できるように、サービスが実行されているプロセス (通常は ASP.NET または Network Service) が、このディレクトリに対する書き込み権限を持っていることを確認する必要があります。  
+ ファイル c:\logs\errors.txt には、サービスによって記録されたエラーに関する情報が格納されます。 サービスがディレクトリに書き込むには、サービスを実行しているプロセス (通常は ASP.NET または Network Service) にディレクトリへの書き込みアクセス許可があることを確認する必要があります。  
   
-```  
+```txt
 Fault: Reason = Invalid Argument: The second argument must not be zero.  
 Fault: Reason = Invalid Argument: The argument must be greater than zero.  
 ```  

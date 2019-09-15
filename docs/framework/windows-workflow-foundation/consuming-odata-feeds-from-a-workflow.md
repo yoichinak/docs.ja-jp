@@ -1,49 +1,49 @@
 ---
-title: WF ワークフロー - からフィードの OData の利用
+title: ワークフローからの OData フィードの使用-WF
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-ms.openlocfilehash: e7d5230bb15474d63b2381d3906e07e48ac0134d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e7cfa138a01719988586f9dce0a9009bea643076
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592984"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989766"
 ---
-# <a name="consuming-odata-feeds-from-a-workflow"></a>ワークフローからのフィードの OData の利用
+# <a name="consuming-odata-feeds-from-a-workflow"></a>ワークフローからの OData フィードの使用
 
-WCF Data Services は、Open Data Protocol (OData) を使用して、公開および representational state transfer (REST) のセマンティクスを使用して、Web またはイントラネット上のデータを使用するサービスを作成することができます .NET Framework のコンポーネントです。 OData は、URI でアドレス指定できるリソースとしてデータを公開します。 HTTP 要求を送信し、データ サービスが返す OData フィードを処理できるのであれば、どのようなアプリケーションでも OData ベースのデータ サービスと対話できます。 さらに、WCF Data Services には、.NET Framework アプリケーションから OData フィードを使用するときより豊富なプログラミング エクスペリエンスを提供するクライアント ライブラリが含まれています。 このトピックでは、クライアント ライブラリを使用した場合と使用しない場合のワークフローでの OData フィードの使用の概要について説明します。
+WCF Data Services は、Representational State Transfer (REST) のセマンティクスを使用して、Web またはイントラネット上のデータを公開および使用するための Open Data Protocol (OData) を使用するサービスを作成できるようにする、.NET Framework のコンポーネントです。 OData は、URI でアドレス指定できるリソースとしてデータを公開します。 HTTP 要求を送信し、データ サービスが返す OData フィードを処理できるのであれば、どのようなアプリケーションでも OData ベースのデータ サービスと対話できます。 さらに、WCF Data Services には、.NET Framework アプリケーションから OData フィードを使用するときに、より高度なプログラミングエクスペリエンスを提供するクライアントライブラリが含まれています。 このトピックでは、クライアント ライブラリを使用した場合と使用しない場合のワークフローでの OData フィードの使用の概要について説明します。
 
 ## <a name="using-the-sample-northwind-odata-service"></a>サンプルの Northwind OData サービスの使用
 
-このトピックの例を使用して、Northwind データ サービス サンプル[ http://services.odata.org/Northwind/Northwind.svc/](https://go.microsoft.com/fwlink/?LinkID=187426)します。 このサービスは [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185248) に含まれており、Northwind データベース サンプルへの読み取り専用アクセスを提供します。 書き込みアクセスが必要な場合、またはローカルの WCF Data Service が必要な場合は、「 [クイック スタート (WCF Data Services)](https://go.microsoft.com/fwlink/?LinkID=131076) 」の手順に従って、Northwind データベースへのアクセスを提供するローカルの OData サービスを作成できます。 クイックスタートの手順に従う場合は、このトピックのコード例に指定されている URI をローカルの URI に置き換えてください。
+このトピックの例では、「」に<https://services.odata.org/Northwind/Northwind.svc/>あるサンプルの Northwind データサービスを使用します。 このサービスは [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185248) に含まれており、Northwind データベース サンプルへの読み取り専用アクセスを提供します。 書き込みアクセスが必要な場合、またはローカルの WCF Data Service が必要な場合は、「 [クイック スタート (WCF Data Services)](https://go.microsoft.com/fwlink/?LinkID=131076) 」の手順に従って、Northwind データベースへのアクセスを提供するローカルの OData サービスを作成できます。 クイックスタートの手順に従う場合は、このトピックのコード例に指定されている URI をローカルの URI に置き換えてください。
 
-## <a name="consuming-an-odata-feed-using-the-client-libraries"></a>クライアント ライブラリを使用してフィード、OData の利用
+## <a name="consuming-an-odata-feed-using-the-client-libraries"></a>クライアントライブラリを使用した OData フィードの使用
 
-WCF Data Services には、.NET Framework とクライアント アプリケーションから OData フィードをより簡単に使用できるようにクライアント ライブラリが含まれています。 これらのライブラリは、HTTP メッセージの送受信を簡略化します。 また、メッセージ ペイロードをエンティティ データを表す CLR オブジェクトに変換します。 クライアント ライブラリには、 <xref:System.Data.Services.Client.DataServiceContext> および <xref:System.Data.Services.Client.DataServiceQuery%601>という 2 つのコア クラスがあります。 これらのクラスを使用すると、データ サービスをクエリして、返されるエンティティ データを CLR オブジェクトとして処理できます。 ここではクライアント ライブラリを使用するアクティビティを作成するための 2 つの方法を説明します。
+WCF Data Services には、.NET Framework とクライアントアプリケーションから OData フィードを簡単に使用できるようにするクライアントライブラリが含まれています。 これらのライブラリは、HTTP メッセージの送受信を簡略化します。 また、メッセージ ペイロードをエンティティ データを表す CLR オブジェクトに変換します。 クライアント ライブラリには、 <xref:System.Data.Services.Client.DataServiceContext> および <xref:System.Data.Services.Client.DataServiceQuery%601>という 2 つのコア クラスがあります。 これらのクラスを使用すると、データ サービスをクエリして、返されるエンティティ データを CLR オブジェクトとして処理できます。 ここではクライアント ライブラリを使用するアクティビティを作成するための 2 つの方法を説明します。
 
-### <a name="adding-a-service-reference-to-the-wcf-data-service"></a>WCF データ サービスにサービス参照の追加
+### <a name="adding-a-service-reference-to-the-wcf-data-service"></a>WCF Data service へのサービス参照の追加
 
-Northwind クライアント ライブラリを生成するに使用することができます、**サービス参照の追加** ダイアログ ボックスで、Visual Studio 2012 を Northwind OData サービスへの参照を追加します。
+Northwind クライアントライブラリを生成するには、Visual Studio 2012 の **[サービス参照の追加]** ダイアログボックスを使用して、northwind OData サービスへの参照を追加します。
 
-![サービス参照の追加 ダイアログを示すスクリーン ショット。](./media/consuming-odata-feeds-from-a-workflow/add-service-reference-dialog.gif)
+![[サービス参照の追加] ダイアログボックスが表示されたスクリーンショット。](./media/consuming-odata-feeds-from-a-workflow/add-service-reference-dialog.gif)
 
 サービスによって公開されるサービス操作はなく、 **[サービス]** ボックスの一覧には Northwind データ サービスによって公開されるエンティティを表す項目が含まれていることに注意してください。 サービス参照を追加すると、これらのエンティティに対するクラスが生成され、クライアント コードで使用できるようになります。 このトピックの例ではこれらのクラスと `NorthwindEntities` クラスを使用してクエリを実行します。
 
 > [!NOTE]
-> 詳細については、次を参照してください。[データ サービス クライアント ライブラリ (WCF Data Services) を生成する](../data/wcf/generating-the-data-service-client-library-wcf-data-services.md)します。
+> 詳細については、「[データサービスクライアントライブラリの生成 (WCF Data Services)](../data/wcf/generating-the-data-service-client-library-wcf-data-services.md)」を参照してください。
 
 ### <a name="using-asynchronous-methods"></a>非同期メソッドの使用
 
-Web のリソースにアクセスするときに発生することのある、待機時間に伴う問題に対処するために、WCF Data Services には非同期でアクセスすることをお勧めします。 WCF Data Services クライアント ライブラリは、クエリを呼び出すための非同期のメソッドを含めるし、Windows Workflow Foundation (WF) の提供、<xref:System.Activities.AsyncCodeActivity>非同期アクティビティを作成するためのクラス。 <xref:System.Activities.AsyncCodeActivity> 派生アクティビティを書き込んで、非同期メソッドのある .NET Framework クラスを活用するために、または非同期的に実行されるコードをメソッドに配置し、デリゲートを使用して呼び出されます。 ここでは、 <xref:System.Activities.AsyncCodeActivity> 派生アクティビティの例を 2 つ紹介します。1 つは WCF Data Services クライアント ライブラリの非同期メソッドを使用し、もう 1 つはデリゲートを使用しています。
+Web のリソースにアクセスするときに発生することのある、待機時間に伴う問題に対処するために、WCF Data Services には非同期でアクセスすることをお勧めします。 WCF Data Services クライアントライブラリには、クエリを呼び出すための非同期メソッドが含まれて<xref:System.Activities.AsyncCodeActivity>います。 Windows Workflow Foundation (WF) には、非同期アクティビティを作成するためのクラスが用意されています。 <xref:System.Activities.AsyncCodeActivity>派生アクティビティは、非同期メソッドを持つ .NET Framework クラスを利用するために記述できます。また、非同期に実行されるコードをメソッドに格納し、デリゲートを使用して呼び出すこともできます。 ここでは、 <xref:System.Activities.AsyncCodeActivity> 派生アクティビティの例を 2 つ紹介します。1 つは WCF Data Services クライアント ライブラリの非同期メソッドを使用し、もう 1 つはデリゲートを使用しています。
 
 > [!NOTE]
-> 詳細については、次を参照してください。[非同期操作 (WCF Data Services)](../data/wcf/asynchronous-operations-wcf-data-services.md)と[非同期アクティビティを作成する](creating-asynchronous-activities-in-wf.md)します。
+> 詳細については、「[非同期操作 (WCF Data Services)](../data/wcf/asynchronous-operations-wcf-data-services.md) 」および「[非同期アクティビティの作成](creating-asynchronous-activities-in-wf.md)」を参照してください。
 
-### <a name="using-client-library-asynchronous-methods"></a>クライアント ライブラリの非同期メソッドの使用
+### <a name="using-client-library-asynchronous-methods"></a>クライアントライブラリの非同期メソッドの使用
 
-<xref:System.Data.Services.Client.DataServiceQuery%601> クラスには、OData サービスを非同期で照会するための <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> メソッドと <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> メソッドが用意されています。 これらのメソッドは、 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 派生クラスの <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> オーバーライドと <xref:System.Activities.AsyncCodeActivity> オーバーライドから呼び出すことができます。  <xref:System.Activities.AsyncCodeActivity> <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> オーバーライドが戻ると、ワークフローはアイドル状態になることができ (永続化はされない)、非同期操作が完了すると、 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> がランタイムによって呼び出されます。
+<xref:System.Data.Services.Client.DataServiceQuery%601> クラスには、OData サービスを非同期で照会するための <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> メソッドと <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> メソッドが用意されています。 これらのメソッドは、 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 派生クラスの <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> オーバーライドと <xref:System.Activities.AsyncCodeActivity> オーバーライドから呼び出すことができます。 <xref:System.Activities.AsyncCodeActivity> <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> オーバーライドが戻ると、ワークフローはアイドル状態になることができ (永続化はされない)、非同期操作が完了すると、 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> がランタイムによって呼び出されます。
 
-次の例では、2 つの入力引数がある `OrdersByCustomer` アクティビティが定義されています。 引数 `CustomerId` は、返す注文を識別する顧客を表し、引数 `ServiceUri` は、照会する OData サービスの URI を表します。 アクティビティは `AsyncCodeActivity<IEnumerable<Order>>` から派生するので、クエリ結果を返すために使用される <xref:System.Activities.Activity%601.Result%2A> 出力引数も存在します。 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> オーバーライドは、指定された顧客の注文をすべて選択する LINQ クエリを作成します。 このクエリは、渡された <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> の <xref:System.Activities.AsyncCodeActivityContext>として指定され、その後クエリの <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> メソッドが呼び出されます。 クエリの <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> に渡されるコールバックと状態は、アクティビティの <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> メソッドに渡されるものであることに注意してください。 クエリの実行が完了すると、アクティビティの <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> メソッドが呼び出されます。 クエリは <xref:System.Activities.AsyncCodeActivityContext.UserState%2A>から取得され、その後クエリの <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> メソッドが呼び出されます。 このメソッドは、指定されたエンティティ型の <xref:System.Collections.Generic.IEnumerable%601> を返します。この場合は `Order`になります。  `IEnumerable<Order>` は <xref:System.Activities.AsyncCodeActivity%601>のジェネリック型であるので、この <xref:System.Collections.IEnumerable> はアクティビティの <xref:System.Activities.Activity%601.Result%2A> <xref:System.Activities.OutArgument%601> として設定されます。
+次の例では、2 つの入力引数がある `OrdersByCustomer` アクティビティが定義されています。 引数 `CustomerId` は、返す注文を識別する顧客を表し、引数 `ServiceUri` は、照会する OData サービスの URI を表します。 アクティビティは `AsyncCodeActivity<IEnumerable<Order>>` から派生するので、クエリ結果を返すために使用される <xref:System.Activities.Activity%601.Result%2A> 出力引数も存在します。 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> オーバーライドは、指定された顧客の注文をすべて選択する LINQ クエリを作成します。 このクエリは、渡された <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> の <xref:System.Activities.AsyncCodeActivityContext>として指定され、その後クエリの <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> メソッドが呼び出されます。 クエリの <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> に渡されるコールバックと状態は、アクティビティの <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> メソッドに渡されるものであることに注意してください。 クエリの実行が完了すると、アクティビティの <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> メソッドが呼び出されます。 クエリは <xref:System.Activities.AsyncCodeActivityContext.UserState%2A>から取得され、その後クエリの <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> メソッドが呼び出されます。 このメソッドは、指定されたエンティティ型の <xref:System.Collections.Generic.IEnumerable%601> を返します。この場合は `Order`になります。 `IEnumerable<Order>` は <xref:System.Activities.AsyncCodeActivity%601>のジェネリック型であるので、この <xref:System.Collections.IEnumerable> はアクティビティの <xref:System.Activities.Activity%601.Result%2A> <xref:System.Activities.OutArgument%601> として設定されます。
 
 [!code-csharp[CFX_WCFDataServicesActivityExample#100](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_WCFDataServicesActivityExample/cs/Program.cs#100)]
 
@@ -66,23 +66,23 @@ Calling WCF Data Service...
 > [!NOTE]
 > OData サーバーへの接続を確立できない場合は、次のような例外が表示されます。
 >
-> 未処理の例外:System.InvalidOperationException:この要求の処理中にエラーが発生しました。 System.net.webexception:--->:リモート サーバーに接続できませんでした。 には、System.Net.Sockets.SocketException--->:接続されているパーティが一定の時間、または確立された接続は接続されているホストが応答しなかったために失敗しました正しく応答しなかったために、接続試行が失敗しました。
+> 未処理の例外:System.InvalidOperationException:この要求の処理中にエラーが発生しました。 ---> WebException:リモートサーバー---に接続できませんでした。 > は、次のようにしてください。接続されたパーティが一定期間内に適切に応答しなかったか、接続されたホストが応答できなかったため、確立された接続に失敗したため、接続に失敗しました。
 
 クエリによって返されたデータをさらに処理する必要がある場合は、アクティビティの <xref:System.Activities.AsyncCodeActivity%601.EndExecute%2A> オーバーライドで実行できます。 <xref:System.Activities.AsyncCodeActivity%601.BeginExecute%2A> と <xref:System.Activities.AsyncCodeActivity%601.EndExecute%2A> はどちらもワークフロー スレッドを使用して呼び出されます。これらのオーバーライド内のコードは非同期では実行されません。 追加の処理が大規模なものであるか、時間がかかるか、クエリ結果がページングされる場合は、次のセクションで説明する方法を検討してください。この方法では、デリゲートを使用してクエリを実行し、追加の処理を非同期で行います。
 
-### <a name="using-a-delegate"></a>デリゲートを使用してください。
+### <a name="using-a-delegate"></a>デリゲートの使用
 
-.NET Framework クラスの非同期メソッドを呼び出すだけでなく、 <xref:System.Activities.AsyncCodeActivity>-ベースのアクティビティは、そのメソッドのいずれかで非同期ロジックを定義もできます。 このメソッドは、アクティビティの <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> オーバーライド内でデリゲートを使用することで指定します。 このメソッドが戻ると、ランタイムによってアクティビティの <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> オーバーライドが呼び出されます。 OData サービスをワークフローから呼び出すときは、このメソッドを使用してサービスを照会し、追加の処理を実行できます。
+.NET Framework クラスの非同期メソッドを呼び出すだけでなく、 <xref:System.Activities.AsyncCodeActivity>ベースのアクティビティでは、そのメソッドのいずれかで非同期ロジックを定義することもできます。 このメソッドは、アクティビティの <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> オーバーライド内でデリゲートを使用することで指定します。 このメソッドが戻ると、ランタイムによってアクティビティの <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> オーバーライドが呼び出されます。 OData サービスをワークフローから呼び出すときは、このメソッドを使用してサービスを照会し、追加の処理を実行できます。
 
 次の例では、 `ListCustomers` アクティビティを定義します。 このアクティビティは、Northwind データ サービス サンプルを照会し、Northwind データベース内の顧客をすべて含む `List<Customer>` を返します。 非同期操作は `GetCustomers` メソッドによって実行されます。 このメソッドは、サービスに対してすべての顧客を照会し、これらの顧客を `List<Customer>`にコピーします。 次に、結果がページングされているかどうかを確認します。 ページングされている場合は、サービスに対して結果の次のページを照会し、それを一覧に追加します。処理は顧客データをすべて取得するまで続行されます。
 
 > [!NOTE]
-> WCF Data Services でのページングの詳細については、次を参照してください。[方法。ページングされた結果 (WCF Data Services) を読み込む](../data/wcf/how-to-load-paged-results-wcf-data-services.md)します。
+> WCF Data Services でのページングの詳細について[は、「」を参照してください。ページング結果を読み込みます (](../data/wcf/how-to-load-paged-results-wcf-data-services.md)WCF Data Services)。
 
 顧客がすべて追加されると、一覧が返されます。 `GetCustomers` メソッドはアクティビティの <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> オーバーライドで指定されます。 メソッドには戻り値があるので、メソッドを指定するために `Func<string, List<Customer>>` が作成されます。
 
 > [!NOTE]
-> 非同期操作を実行するメソッドに戻り値がない場合は、<xref:System.Action> の代わりに <xref:System.Func%601> が使用されます。 両方のアプローチを使用して非同期の例を作成する例については、次を参照してください。[非同期アクティビティを作成する](creating-asynchronous-activities-in-wf.md)します。
+> 非同期操作を実行するメソッドに戻り値がない場合は、<xref:System.Action> の代わりに <xref:System.Func%601> が使用されます。 両方の方法を使用して非同期の例を作成する例については、「[非同期アクティビティの作成](creating-asynchronous-activities-in-wf.md)」を参照してください。
 
 この <xref:System.Func%601> は <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> に割り当てられ、`BeginInvoke` が呼び出されます。 呼び出すメソッドはアクティビティの引数の環境にアクセスできないので、引数 `ServiceUri` 値は <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A>に渡されたコールバックおよび状態と共に、最初のパラメーターとして渡されます。 `GetCustomers` が戻ると、ランタイムによって <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>が呼び出されます。 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 内のコードはデリゲートを <xref:System.Activities.AsyncCodeActivityContext.UserState%2A>から取得し、 `EndInvoke`を呼び出し、結果を返します。この結果は、 `GetCustomers` メソッドから返された顧客の一覧です。
 
@@ -104,7 +104,7 @@ Berglunds snabbköp, Contact: Christina Berglund
 ...
 ```
 
-## <a name="consuming-an-odata-feed-without-using-the-client-libraries"></a>クライアント ライブラリを使用せずにフィード、OData の利用
+## <a name="consuming-an-odata-feed-without-using-the-client-libraries"></a>クライアントライブラリを使用せずに OData フィードを使用する
 
 OData は、URI でアドレス指定できるリソースとしてデータを公開します。 クライアント ライブラリを使用するとこれらの URI が自動的に作成されますが、必ずしもクライアント ライブラリを使用する必要はありません。 OData サービスはクライアント ライブラリを使用せずに直接アクセスすることもできます。 クライアント ライブラリを使用しない場合、サービスの場所と必要なデータは URI によって指定され、結果が HTTP 要求への応答の中で返されます。 この生データはその後自由に処理または操作できます。 OData クエリの結果を取得する方法の 1 つとして、 <xref:System.Net.WebClient> クラスを使用する方法があります。 この例では、キー ALFKI が表す顧客の連絡先名が取得されます。
 
@@ -154,4 +154,4 @@ xmlns="http://www.w3.org/2005/Atom">
 ...
 ```
 
-この例は、ワークフロー アプリケーションの作成者が OData サービスから返された生データを使用できる方法の 1 つを示しています。 Uri を使用して WCF Data Services にアクセスする方法の詳細については、次を参照してください[(WCF Data Services) にアクセスするデータ サービス リソース](../data/wcf/accessing-data-service-resources-wcf-data-services.md)と[OData:。URI 規則](https://go.microsoft.com/fwlink/?LinkId=185564)します。
+この例は、ワークフロー アプリケーションの作成者が OData サービスから返された生データを使用できる方法の 1 つを示しています。 Uri を使用した WCF Data Services へのアクセスの詳細については、次を[参照してください。[データサービスリソースへのアクセス (WCF Data Services)](../data/wcf/accessing-data-service-resources-wcf-data-services.md)と OData:URI 規則](https://go.microsoft.com/fwlink/?LinkId=185564)。

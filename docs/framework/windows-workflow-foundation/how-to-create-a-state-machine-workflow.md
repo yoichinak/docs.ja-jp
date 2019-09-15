@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: 451f9581ae997ad86fee968fa978713db2049455
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e93f84f0bacf7ac205294c12c55afcab8d7319b7
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044388"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989811"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>方法: ステート マシン ワークフローの作成
 ワークフローは、ビルトイン アクティビティおよびカスタム アクティビティから構築できます。 このトピックでは、 <xref:System.Activities.Statements.StateMachine>アクティビティなどの組み込みアクティビティと、前[の手順のカスタムアクティビティの両方を使用するワークフローを作成する手順について説明します。アクティビティ](how-to-create-an-activity.md)のトピックを作成します。 このワークフローは、数値推測ゲームをモデル化しています。  
@@ -157,21 +157,21 @@ ms.locfileid: "70044388"
   
 23. **If**アクティビティの **[Condition]** プロパティ値ボックスに次の式を入力します。  
   
-    ```
-    Guess < Target  
+    ```text
+    Guess < Target
     ```  
   
 24. **ツールボックス**の **[プリミティブ]** セクションから2つの**WriteLine**アクティビティをドラッグし、 **if**アクティビティの**Then**セクション、1が**Else**セクションにあるようにドロップします。  
   
 25. **[Then** ] セクションで **[WriteLine]** アクティビティをクリックして選択し、 **[Text]** プロパティ値ボックスに次の式を入力します。  
   
-    ```
+    ```text
     "Your guess is too low."  
     ```  
   
 26. **[Else]** セクションの**WriteLine**アクティビティをクリックして選択し、 **[Text]** プロパティ値ボックスに次の式を入力します。  
   
-    ```
+    ```text
     "Your guess is too high."  
     ```  
   

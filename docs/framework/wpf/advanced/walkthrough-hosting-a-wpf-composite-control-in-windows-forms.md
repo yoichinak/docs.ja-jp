@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: bff89f1d81b16c8c66d73901ef951626f6d2cb9e
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: a062095885e6c1fc8816a78847968b1c250eabf8
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400626"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991458"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>チュートリアル: Windows フォームでの WPF 複合コントロールのホスト
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、アプリケーションの作成に適した環境を提供します。 ただし、コードに[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]多大な投資をしている場合は、最初から書き換えるのではなく、を使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]して既存[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]のアプリケーションを拡張する方が効果的な場合があります。 一般的なシナリオは、Windows フォームアプリケーション内で、で実装された[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 1 つ以上のコントロールを埋め込む必要がある場合です。 WPF コントロールのカスタマイズの詳細については、「[コントロールのカスタマイズ](../controls/control-customization.md)」を参照してください。  
@@ -42,7 +42,7 @@ ms.locfileid: "68400626"
   
 1. を[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]起動し、 **[新しいプロジェクト]** ダイアログボックスを開きます。  
   
-2. [ビジュアルC# ] と [Windows] カテゴリで、 **[WPF ユーザーコントロールライブラリ]** テンプレートを選択します。  
+2. ビジュアルC#  と Windows カテゴリで、 **WPF ユーザーコントロールライブラリ** テンプレートを選択します。  
   
 3. 新しいプロジェクトに `MyControls` という名前を付けます。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "68400626"
 #### <a name="the-basic-structure-of-the-code-behind-file"></a>分離コード ファイルの基本構造  
  分離コードファイルは、 `MyControls` `MyControl1`とと`MyControlEventArgs`いう2つのクラスを含む、1つの名前空間で構成されます。  
   
-```  
+```csharp  
 namespace MyControls  
 {  
   public partial class MyControl1 : Grid  
@@ -191,7 +191,7 @@ namespace MyControls
   
 1. を[!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]起動し、 **[新しいプロジェクト]** ダイアログボックスを開きます。  
   
-2. [ビジュアルC# ] と [Windows] カテゴリで、 **[Windows フォームアプリケーション]** テンプレートを選択します。  
+2. ビジュアルC#  と Windows カテゴリで、 **Windows フォームアプリケーション** テンプレートを選択します。  
   
 3. 新しいプロジェクトに `WFHost` という名前を付けます。  
   
@@ -205,7 +205,7 @@ namespace MyControls
   
 2. **[参照]** タブをクリックし、mycontrols.dll が含まれているフォルダーを参照します。 このチュートリアルの場合は、MyControls\bin\Debug フォルダーです。  
   
-3. [Mycontrols.dll] を選択し、 **[OK]** をクリックします。  
+3. Mycontrols.dll を選択し、 **OK** をクリックします。  
   
 4. 次のアセンブリへの参照を追加します。  
   
@@ -305,7 +305,7 @@ namespace MyControls
 ### <a name="handling-onbuttonclick"></a>OnButtonClick の処理  
  イベント`OnButtonClick`は、ユーザーが **[OK]** または **[キャンセル**] ボタンをクリックしたときに発生します。  
   
- イベントハンドラーは、イベント引数の`IsOK`フィールドをチェックして、どのボタンがクリックされたかを判断します。 `lbl`  データ<xref:System.Windows.Forms.Label>変数は、前に説明したコントロールに対応します。 ユーザーが **[OK** ] ボタンをクリックすると、コントロールの<xref:System.Windows.Controls.TextBox>コントロールのデータが対応<xref:System.Windows.Forms.Label>するコントロールに割り当てられます。 ユーザーが **[キャンセル**] を<xref:System.Windows.Forms.Label.Text%2A>クリックした場合、値は既定の文字列に設定されます。  
+ イベントハンドラーは、イベント引数の`IsOK`フィールドをチェックして、どのボタンがクリックされたかを判断します。 `lbl` データ<xref:System.Windows.Forms.Label>変数は、前に説明したコントロールに対応します。 ユーザーが **[OK** ] ボタンをクリックすると、コントロールの<xref:System.Windows.Controls.TextBox>コントロールのデータが対応<xref:System.Windows.Forms.Label>するコントロールに割り当てられます。 ユーザーが **[キャンセル**] を<xref:System.Windows.Forms.Label.Text%2A>クリックした場合、値は既定の文字列に設定されます。  
   
  次のボタンクリックイベントハンドラーコードを`Form1`クラスに追加します。  
   

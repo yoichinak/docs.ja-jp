@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-ms.openlocfilehash: b29585eabcc2549876f4b50e6b6e55a7f8ef2eee
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d567674baa92ad096b10a1199fa3f04f05939df5
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621344"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991169"
 ---
 # <a name="one-way-services"></a>一方向サービス
 サービス操作の既定の動作は、要求/応答パターンです。 要求/応答パターンでは、サービス操作がコードで `void` 型のメソッドとして表される場合であっても、クライアントは応答メッセージを待機します。 一方向操作では、メッセージが 1 つ送信されるだけです。 受信者は応答メッセージを送信せず、送信者もこれを待機しません。  
@@ -20,13 +20,13 @@ ms.locfileid: "64621344"
   
 - クライアントが操作を呼び出す必要があり、操作レベルで操作の結果に影響を受けない場合。  
   
-- <xref:System.ServiceModel.NetMsmqBinding> クラスまたは <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> クラスを使用している場合  (このシナリオの詳細については、次を参照してください[WCF のキュー](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)。)。  
+- <xref:System.ServiceModel.NetMsmqBinding> クラスまたは <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> クラスを使用している場合 (このシナリオの詳細については、「 [WCF のキュー](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)」を参照してください)。  
   
  操作が一方向の場合、エラー情報をクライアントに伝達する応答メッセージはありません。 エラー状態を検出するには、信頼できるセッションのような基になるバインディングの機能を使用できます。また、2 つの一方向操作 (1 つは、サービス操作を呼び出すための、クライアントからサービスへの一方向コントラクト、もう 1 つは、クライアントが実装するコールバックを使用してサービスがエラーを返せるようにする、サービスとクライアントの間の一方向コントラクト) を使用する双方向サービス コントラクトをデザインすることもできます。  
   
  一方向サービス コントラクトを作成するには、サービス コントラクトを定義し、<xref:System.ServiceModel.OperationContractAttribute> クラスを各操作に適用し、<xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> プロパティを `true` に設定します。次のコードを参照してください。  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOneWayCalculator  
 {  
@@ -41,10 +41,10 @@ public interface IOneWayCalculator
 }  
 ```  
   
- 完全な例を参照してください、[一方向](../../../../docs/framework/wcf/samples/one-way.md)サンプル。  
+ 完全な例については、[一方向](../../../../docs/framework/wcf/samples/one-way.md)のサンプルを参照してください。  
   
 ## <a name="clients-blocking-with-one-way-operations"></a>一方向操作でのクライアントのブロック  
- いくつかの一方向のアプリケーションとすぐに、送信データが書き込まれると、ネットワーク接続をいくつかのシナリオでバインドまたはサービスの実装を返すことができますが発生する一方向の操作を使用してブロックする WCF クライアントを実現する重要です。 WCF クライアント アプリケーションでは、送信データがネットワーク接続に書き込まれるまで、WCF クライアント オブジェクトは返しません。 これは一方向操作を含め、すべてのメッセージ交換パターンについて当てはまることで、トランスポートへのデータの書き込みに何らかの問題があると、クライアントが処理を終了できなくなることを意味します。 問題の種類によっては、例外が発生したりサービスへのメッセージの送信に遅延が発生したりする結果となることがあります。  
+ 一部の一方向アプリケーションは、送信データがネットワーク接続に書き込まれるとすぐに戻りますが、いくつかのシナリオでは、バインディングまたはサービスの実装によって、WCF クライアントが一方向の操作を使用してブロックされる可能性があることに注意してください。 WCF クライアントアプリケーションでは、送信データがネットワーク接続に書き込まれるまで、WCF クライアントオブジェクトは返されません。 これは一方向操作を含め、すべてのメッセージ交換パターンについて当てはまることで、トランスポートへのデータの書き込みに何らかの問題があると、クライアントが処理を終了できなくなることを意味します。 問題の種類によっては、例外が発生したりサービスへのメッセージの送信に遅延が発生したりする結果となることがあります。  
   
  たとえば、トランスポートがエンドポイントを見つけられない場合、大きな遅延なしに <xref:System.ServiceModel.EndpointNotFoundException?displayProperty=nameWithType> 例外がスローされます。 ただし、サービスが何らかの理由によりデータをネットワークから読み込めないために、クライアントのトランスポート送信操作が終了しない可能性もあります。 このような場合、クライアントのトランスポート バインディングで <xref:System.ServiceModel.Channels.Binding.SendTimeout%2A?displayProperty=nameWithType> 期間が経過すると、<xref:System.TimeoutException?displayProperty=nameWithType> がスローされますが、タイムアウト時間が経過するまで例外はスローされません。 またサービスに多数のメッセージが集中しているために、一定の期間が経過するまでサービスがメッセージを処理できないことがあります。 この場合も、サービスがメッセージを処理できるまで、または例外がスローされるまで、一方向クライアントはブロックします。  
   
