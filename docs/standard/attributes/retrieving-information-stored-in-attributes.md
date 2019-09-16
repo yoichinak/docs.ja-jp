@@ -24,7 +24,7 @@ ms.locfileid: "69968581"
 カスタム属性の取得は簡単なプロセスです。 まず、取得する属性のインスタンスを宣言します。 次に、<xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> メソッドを使用して、取得する属性の値に新しい属性を初期化します。 新しい属性が初期化されたら、そのプロパティを使用して値を取得できるようになります。  
   
 > [!IMPORTANT]
-> このトピックでは、実行コンテキストに読み込まれるコードのカスタム属性を取得する方法について説明します。 リフレクションのみのコンテキスト<xref:System.Reflection.CustomAttributeData> [に読み込まれたコードの属性を取得するには、「方法:リフレクションのみのコンテキストにアセンブリを読み込む](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)」を参照してください。  
+> このトピックでは、実行コンテキストに読み込まれるコードのカスタム属性を取得する方法について説明します。 リフレクションのみのコンテキスト<xref:System.Reflection.CustomAttributeData> に読み込まれたコードの属性を取得するには、「[方法:リフレクションのみのコンテキストにアセンブリを読み込む](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)」を参照してください。  
   
  このセクションでは、以下の属性の取得方法について説明します。  
   

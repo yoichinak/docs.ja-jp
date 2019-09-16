@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ceee0c228000982be83c79fed2f7af43712b3ae
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f4d7cbd00dbf94900185643490b952ced7887965
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963388"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895227"
 ---
 # <a name="details-of-regular-expression-behavior"></a>正規表現の動作の詳細
 .NET Framework の正規表現エンジンはバックトラッキング型の正規表現マッチャーであり、Perl、Python、Emacs、および Tcl で使われているのと同じ従来型の非決定性有限オートマトン (NFA) エンジンを採用しています。 このエンジンは、awk、egrep、または lex に見られるような、より高速であるが制限が多い、純粋な正規表現決定性有限オートマトン (DFA) エンジンとは異なります。 また、標準化されているが低速な POSIX NFA とも異なります。 次のセクションでは、これら 3 種類の正規表現エンジンについて説明し、.NET Framework の正規表現が従来型 NFA エンジンを使って実装されている理由について説明します。  
@@ -98,7 +98,7 @@ ms.locfileid: "69963388"
     |`^`|行の先頭から照合を開始します。|  
     |`(?<Pvt>\<PRIVATE\>\s)?`|文字列 `<PRIVATE>` の後に空白文字が続くパターンの 0 回または 1 回の出現と一致します。 一致文字列を `Pvt` という名前のキャプチャ グループに代入します。|  
     |`(?(Pvt)((\w+\p{P}?\s)+)`|`Pvt` キャプチャ グループが存在する場合は、1 個以上の単語文字の後に 0 個または 1 個の区切り記号と 1 つの空白文字が続くパターンの 1 回以上の出現と一致します。 部分文字列を最初のキャプチャ グループに代入します。|  
-    |<code>&#124;((\w+\p{P}?\s)+))<code>|`Pvt` キャプチャ グループが存在しない場合は、1 個以上の単語文字の後に 0 個または 1 個の区切り記号と 1 つの空白文字が続くパターンの 1 回以上の出現と一致します。 部分文字列を 3 番目のキャプチャ グループに代入します。|  
+    |<code>&#124;((\w+\p{P}?\s)+))</code>|`Pvt` キャプチャ グループが存在しない場合は、1 個以上の単語文字の後に 0 個または 1 個の区切り記号と 1 つの空白文字が続くパターンの 1 回以上の出現と一致します。 部分文字列を 3 番目のキャプチャ グループに代入します。|  
     |`\r?$`|行末または文字列の末尾と一致します。|  
   
      条件付き評価について詳しくは、「[代替構成体](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)」をご覧ください。  

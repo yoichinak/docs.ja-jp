@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 2b5bacfc453f16f9c484eebfddf92c6464f8cb78
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e37fc792f79044345d52b2bc463813c0bde22f5b
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597081"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970905"
 ---
 # <a name="extension-methods-c-programming-guide"></a>拡張メソッド (C# プログラミング ガイド)
 拡張メソッドを使用すると、新規の派生型の作成、再コンパイル、または元の型の変更を行うことなく既存の型にメソッドを "追加" できます。 拡張メソッドは特別な種類の静的メソッドですが、拡張された型のインスタンス メソッドのように呼び出します。 C#、F#、および Visual Basic で作成されたクライアント コードの場合は、拡張メソッドの呼び出しと、型で実際に定義されたメソッドの呼び出しに明確な違いはありません。  
@@ -77,7 +77,7 @@ using System.Linq;
   
 - 拡張メソッドは名前空間レベルでスコープ内に取り込まれます。 たとえば、`Extensions` という名前の単一の名前空間に、拡張メソッドを含む複数の静的クラスがある場合、`using Extensions;` ディレクティブによって、それらのすべての拡張メソッドがスコープ内に取り込まれます。  
   
- 実装したクラス ライブラリでは、アセンブリのバージョン番号のインクリメントを避けるために、拡張メソッドは使用しないでください。 ソース コードを所有するライブラリに重要な機能を追加する場合は、アセンブリのバージョン管理について標準の .NET Framework ガイドラインに従う必要があります。 詳細については、「[アセンブリのバージョン管理](../../../framework/app-domains/assembly-versioning.md)」を参照してください。
+ 実装したクラス ライブラリでは、アセンブリのバージョン番号のインクリメントを避けるために、拡張メソッドは使用しないでください。 ソース コードを所有するライブラリに重要な機能を追加する場合は、アセンブリのバージョン管理について標準の .NET Framework ガイドラインに従う必要があります。 詳細については、「[アセンブリのバージョン管理](../../../standard/assembly/versioning.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
