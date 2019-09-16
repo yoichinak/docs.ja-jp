@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d704702e74b5f7d4a315bd14a467296245f90257
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 32255c988397853c4b38e4ab723c7261a8999899
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046497"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929217"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>チュートリアル: BatchBlock および BatchedJoinBlock を使用した効率の向上
 
@@ -53,7 +53,6 @@ TPL データ フロー ライブラリが提供する <xref:System.Threading.Ta
 
 ## <a name="creating-the-console-application"></a>コンソール アプリケーションの作成
 
-<a name="consoleApp"></a>
 1. Visual Studio で、Visual C# または Visual Basic の**コンソール アプリケーション** プロジェクトを作成します。 このドキュメントでは、プロジェクトの名前を `DataflowBatchDatabase` とします。
 
 2. プロジェクトで、System.Data.SqlServerCe.dll への参照と System.Threading.Tasks.Dataflow.dll への参照を追加します。

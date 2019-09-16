@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: a5a11bc49fa834ebd6945e47767deb559244b459
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 956cbedd7e354b36c447bdc06ea996948c745264
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374515"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929090"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>チュートリアル: ML.NET で ONNX を使用してオブジェクトを検出する
 
@@ -21,6 +21,7 @@ ML.NET の事前トレーニング済みの ONNX モデルを使用して画像�
 
 このチュートリアルでは、次の作業を行う方法について説明します。
 > [!div class="checklist"]
+>
 > - 問題を把握する
 > - ONNX の概要と ML.NET でどのように動作するかについて説明します。
 > - モデルの概要
@@ -710,6 +711,7 @@ person and its Confidence score: 0.5551759
 
 このチュートリアルでは、次の作業を行う方法を学びました。
 > [!div class="checklist"]
+>
 > - 問題を把握する
 > - ONNX の概要と ML.NET でどのように動作するかについて説明します。
 > - モデルの概要

@@ -6,18 +6,19 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: 4cbed8145487325d8b06882bbab843321a49d0d3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 626a44fbaa65f48e0d9fe66d83c44abb07eba379
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596907"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926755"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>方法: 自動実装するプロパティを使用して簡易クラスを実装する (C# プログラミング ガイド)
 
 この例では、一連の自動実装プロパティのカプセル化のみを行う、変更できない簡易クラスの作成方法を示します。 参照型のセマンティクスを使用する必要がある場合は、構造体ではなく次のようなコンストラクトを使用します。
 
 変更できないプロパティの作成方法は 2 つあります。
+
 - [set](../../language-reference/keywords/set.md) アクセサーは、[private](../../language-reference/keywords/private.md) として宣言することができます。  プロパティは型の中のみで設定可能で、コンシューマーは変更できません。
 
   `set` アクセサーを private で宣言した場合、オブジェクト初期化子を使用してプロパティを初期化することはできません。 コンストラクターまたはファクトリ メソッドを使用する必要があります。

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 71e3781b08bca3441dbd55704bcb0f7de635097e
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: ab9c1be484d9cc77324e3105124a1b1f2257251d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168647"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925357"
 ---
 # <a name="async-c-reference"></a>async (C# リファレンス)
 
@@ -58,6 +58,7 @@ WPF アプリとしてコードを実行するには:
 - System.Net.Http に対する `using` ディレクティブを追加します。  
   
 Windows ストア アプリとしてコードを実行するには:  
+
 - 次のコードを、MainPage.xaml.cs の `MainPage` クラスに貼り付けます。  
 - System.Net.Http と System.Threading.Tasks に対する using ディレクティブを追加します。  
   

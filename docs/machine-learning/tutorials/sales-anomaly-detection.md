@@ -4,12 +4,12 @@ description: 製品売上データの異常検出アプリケーションを構�
 ms.date: 07/17/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 4228a68ad43416c6e32684441593d92dfdbfd808
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: ed75f1ba0b102ba73eb5671667b5731519c12eb0
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733282"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929052"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>チュートリアル: ML.NET で製品売上の異常を検出する
 
@@ -17,6 +17,7 @@ ms.locfileid: "68733282"
 
 このチュートリアルでは、次の作業を行う方法について説明します。
 > [!div class="checklist"]
+>
 > * データを読み込む
 > * スパイクの異常検出のために変換を作成する
 > * 変換を使用してスパイクの異常を検出する
@@ -372,6 +373,7 @@ Alert   Score   P-Value Martingale value
 
 このチュートリアルでは、次の作業を行う方法を学びました。
 > [!div class="checklist"]
+>
 > * データを読み込む
 > * スパイクの異常検出のためにモデルをトレーニングする
 > * トレーニング済みモデルを使用してスパイクの異常を検出する

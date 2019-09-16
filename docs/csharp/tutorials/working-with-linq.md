@@ -3,12 +3,12 @@ title: LINQ の使用
 description: このチュートリアルでは、LINQ を使用してシーケンスを生成し、LINQ クエリで使用するためのメソッドを作成し、先行評価と遅延評価を区別する方法を説明します。
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: f80567510509ba0c7f205ccbd5e587f9ad31f531
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 72bb7475fc6b18650e0870bf99c4b8ddbac3ec9f
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785870"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926612"
 ---
 # <a name="working-with-linq"></a>LINQ の使用
 
@@ -339,6 +339,7 @@ public static void Main(string[] args)
 ## <a name="conclusion"></a>まとめ
 
 このプロジェクトでは、以下を扱いました。
+
 - LINQ クエリを使用してデータを集計して、意味のあるシーケンスにする
 - 拡張メソッドを記述して、LINQ クエリに独自のカスタム機能を追加する
 - LINQ クエリによって速度の低下のようなパフォーマンスの問題が発生する可能性があるコード内の領域を見つける
@@ -347,6 +348,7 @@ public static void Main(string[] args)
 LINQ の他に、マジシャンがカードのトリックで使用するテクニックについて少し学びました。 マジシャンは、すべてのカードをデッキのどこに移動させるかを制御できるため、ファロー シャッフルを使用しています。 これがわかったからといって、種明かしをしてマジックを台無しにしないでください。
 
 LINQ の詳細については、以下を参照してください。
+
 - [統合言語クエリ (LINQ)](../programming-guide/concepts/linq/index.md)
   - [LINQ の概要](../programming-guide/concepts/linq/index.md)
   - [LINQ クエリの基本操作 (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 67b9b48587802b43e90a7f35ab8cbb3b2ee025b0
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 4fff2d3309e5f8872a9333bf3d2f86e52bd67ea5
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567256"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971776"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>方法: Tlbimp.exe を使用してプライマリ相互運用機能アセンブリを生成する
 
@@ -33,7 +33,7 @@ ms.locfileid: "69567256"
 
 - C# などの共通言語仕様 (CLS) に準拠した言語を使用して、ソース コードで手動によりプライマリ相互運用機能アセンブリを作成します。 この方法は、タイプ ライブラリが使用できない場合に便利です。
 
-厳密な名前でアセンブリに署名するには、暗号キー ペアが必要です。 詳細については、「[キー ペアを作成する](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)」を参照してください。
+厳密な名前でアセンブリに署名するには、暗号キー ペアが必要です。 詳細については、「[キー ペアを作成する](../../standard/assembly/create-public-private-key-pair.md)」を参照してください。
 
 ### <a name="to-generate-a-primary-interop-assembly-using-tlbimpexe"></a>Tlbimp.exe を使用してプライマリ相互運用機能アセンブリを生成する方法
 
@@ -53,19 +53,19 @@ ms.locfileid: "69567256"
 
 次の例は、COM タイプ ライブラリ `LibUtil.tlb` をインポートし、アセンブリ `LibUtil.dll` にキー ファイル `CompanyA.snk` を使用して厳密な名前で署名します。 この例では、特定の名前空間名を省略することにより、既定の名前空間 `LibUtil` を生成します。
 
-```
+```console
 tlbimp LibUtil.tlb /primary /keyfile:CompanyA.snk /out:LibUtil.dll
 ```
 
 名前を (*VendorName*.*LibraryName* の名前付けガイドラインを使用して) より分かりやすくするために、次の例では既定のアセンブリ ファイル名と名前空間名をオーバーライドします。
 
-```
+```console
 tlbimp LibUtil.tlb /primary /keyfile:CompanyA.snk /namespace:CompanyA.LibUtil /out:CompanyA.LibUtil.dll
 ```
 
 次の例では、`CompanyA.LibUtil.dll` を参照する `MyLib.tlb` をインポートし、アセンブリ `CompanyB.MyLib.dll` にキー ファイル `CompanyB.snk` を使用して厳密な名前で署名します。 名前空間 `CompanyB.MyLib` は、既定の名前空間名をオーバーライドします。
 
-```
+```console
 tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /reference:CompanyA.LibUtil.dll /out:CompanyB.MyLib.dll
 ```
 

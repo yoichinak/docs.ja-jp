@@ -4,12 +4,12 @@ description: このチュートリアルでは、Web サイトのコメントか
 ms.date: 05/13/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 4daa7734f12c57a177fab3c62fdd96bda22838af
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: f89174204c13b907db5a41ed374e1a31c61dcf11
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107162"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929025"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>チュートリアル: ML.NET の二項分類を使用して Web サイトのコメントのセンチメントを分析する
 
@@ -17,6 +17,7 @@ ms.locfileid: "70107162"
 
 このチュートリアルでは、次の作業を行う方法について説明します。
 > [!div class="checklist"]
+>
 > - コンソール アプリケーションを作成する
 > - データの準備
 > - データを読み込む
@@ -383,6 +384,7 @@ Press any key to continue . . .
 
 このチュートリアルでは、次の作業を行う方法を学びました。
 > [!div class="checklist"]
+>
 > - コンソール アプリケーションを作成する
 > - データの準備
 > - データを読み込む

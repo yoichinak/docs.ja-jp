@@ -6,12 +6,12 @@ helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: fae526f5dcd452fbc381ee86c892b72e61956f0b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 57fd2ed3a26bf5986f9c8a1a6cae6b041811e84c
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596870"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970898"
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>方法: 抽象プロパティを定義する (C# プログラミング ガイド)
 次の例では、[抽象](../../language-reference/keywords/abstract.md)プロパティを定義する方法を示します。 抽象プロパティの宣言では、プロパティ アクセサーは実装されません。クラスがプロパティをサポートしていることは宣言しますが、アクセサーの実装は派生クラスに委ねます。 基本クラスから継承された抽象プロパティを実装する方法を次の例に示します。  
@@ -59,4 +59,3 @@ ms.locfileid: "69596870"
 - [クラスと構造体](./index.md)
 - [抽象クラスとシール クラス、およびクラス メンバー](./abstract-and-sealed-classes-and-class-members.md)
 - [プロパティ](./properties.md)
-- [方法: コマンド ラインを使用してアセンブリを作成および使用する](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)

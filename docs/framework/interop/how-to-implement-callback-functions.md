@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0a033e6881f9c0c8741fda26211b0f565762de4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 42daa241d0ebbfeb184b57e682fbb50bdaeead65
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331326"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894198"
 ---
 # <a name="how-to-implement-callback-functions"></a>方法: コールバック関数を実装する
 次の手順と例は、マネージド アプリケーションがプラットフォーム呼び出しを使用して、ローカル コンピューター上の各ウィンドウのハンドル値を出力する方法を示しています。 具体的には、この手順と例では **EnumWindows** 関数を使用してウィンドウのリストをステップスルーし、(CallBack という名前の) マネージド コールバック関数を使用してウィンドウ ハンドルの値を出力します。  
@@ -24,9 +24,9 @@ ms.locfileid: "59331326"
   
 1. 実装を進める前に、**EnumWindows** 関数のシグネチャを見てみます。 **EnumWindows** のシグネチャは次のとおりです。  
   
-    ```  
-    BOOL EnumWindows(WNDENUMPROC lpEnumFunc, LPARAM lParam)  
-    ```  
+    ```cpp
+    BOOL EnumWindows(WNDENUMPROC lpEnumFunc, LPARAM lParam)
+    ```
   
      この関数がコールバックを必要とする 1 つの手掛かりは、**lpEnumFunc** 引数が存在することです。 コールバック関数へのポインターを使用する引数の名前では、**lp** (long pointer) プレフィックスが **Func** サフィックスと組み合わされているのが一般的です。 Win32 の関数に関するドキュメントについては、Microsoft プラットフォーム SDK を参照してください。  
   

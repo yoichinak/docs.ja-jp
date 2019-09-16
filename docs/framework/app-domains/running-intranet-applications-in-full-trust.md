@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ee13c0a8-ab02-49f7-b8fb-9eab16c6c4f0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d7608ed964313774b806ba6f1bb4d8f0d322c361
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1996c8b317bbfed6362c759a257cafef8400e919
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592768"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971908"
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>イントラネット アプリケーションの完全信頼での実行
 .NET Framework 3.5 Service Pack 1 (SP1) 以降、アプリケーションとそのライブラリ アセンブリをネットワーク共有から完全信頼アセンブリとして実行できます。 イントラネット上の共有から読み込まれたアセンブリに、<xref:System.Security.SecurityZone.MyComputer> ゾーンの証拠が自動的に追加されます。 この証拠は、コンピューター上に存在するアセンブリと同じ許可セット (通常は完全な信頼) をこれらのアセンブリに付与します。 この機能は、ClickOnce アプリケーションまたはホスト上で実行するように設計されたアプリケーションには適用されません。  
@@ -36,4 +36,4 @@ ms.locfileid: "64592768"
   
 ## <a name="see-also"></a>関連項目
 
-- [アセンブリを使用したプログラミング](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [アセンブリを使用したプログラミング](../../standard/assembly/program.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -addmodule compiler option [C#]
 - addmodule compiler option [C#]
 ms.assetid: ed604546-0dc2-4bd4-9a3e-610a8d973e58
-ms.openlocfilehash: f2fae0be3ba958dc9776ed253c178933e4f76024
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 148a63c37cfbc4c60448adccde10947e91e22bb9
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69607050"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970186"
 ---
 # <a name="-addmodule-c-compiler-options"></a>-addmodule (C# コンパイラ オプション)
 このオプションを使用すると、スイッチで作成されたモジュールが現在のコンパイルに追加されます。  
@@ -25,7 +25,7 @@ ms.locfileid: "69607050"
 ```  
   
 ## <a name="arguments"></a>引数  
- `file`、`file2`  
+ `file`、 `file2`  
  メタデータを含む出力ファイル。 このファイルには、アセンブリ マニフェストを含めることができません。 複数のファイルをインポートするには、コンマかセミコロンでファイル名を区切ります。  
   
 ## <a name="remarks"></a>解説  
@@ -49,4 +49,4 @@ csc -addmodule:metad1.netmodule;metad2.netmodule -out:out.exe input.cs
 - [C# コンパイラ オプション](./index.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)
 - [マルチファイル アセンブリ](../../../framework/app-domains/multifile-assemblies.md)
-- [方法: マルチファイル アセンブリをビルドする](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [方法: マルチファイル アセンブリをビルドする](../../../framework/app-domains/build-multifile-assembly.md)

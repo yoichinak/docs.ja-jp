@@ -5,12 +5,12 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 33805230e0aa6c75443773d60e73f9463ee1fde5
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 0de48e14f11d3763ee239b28b40bdb809dbeb433
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106544"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853944"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Windows 10 と Windows Server 2016 以降に .NET Framework をインストールする
 
@@ -72,7 +72,7 @@ Windows 10 1507 または 1511 を使用しているとき、.NET Framework 4.8 
 
 - .NET Framework 4.x バージョンは、4.0 からそのバージョンまでの .NET Framework 用に構築されたアプリケーションを実行するために使用できます。 たとえば、.NET Framework 4.7 は、.NET Framework 4.0 から 4.7 用に構築されたアプリケーションを実行するために使用できます。 最新版 (.NET Framework 4.8) は、4.0 以降のすべての .NET Framework バージョンで構築されたアプリケーションの実行に使用できます。
 
-ダウンロード可能な .NET Framework バージョンの一覧は、[.NET ダウンロード](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral) ページでご覧ください。
+ダウンロード可能な .NET Framework バージョンの一覧は、[.NET ダウンロード](https://dotnet.microsoft.com/download) ページでご覧ください。
 
 ## <a name="help"></a>ヘルプ
 
@@ -80,6 +80,6 @@ Windows 10 1507 または 1511 を使用しているとき、.NET Framework 4.8 
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET ダウンロード](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral)
+- [.NET ダウンロード](https://dotnet.microsoft.com/download)
 - [.NET Framework のインストールおよびアンインストールのブロックのトラブルシューティング](troubleshoot-blocked-installations-and-uninstallations.md)
 - [開発者向けの .NET Framework のインストール](guide-for-developers.md)

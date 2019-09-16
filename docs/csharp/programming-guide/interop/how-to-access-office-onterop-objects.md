@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 19fff39969933baa2510458400cabf9646e0c48d
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 8e99402752b3fafb486735d56d66737f03ceec30
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589126"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972096"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>方法: Visual C# の機能を使用して Office 相互運用オブジェクトにアクセスする (C# プログラミング ガイド)
 
@@ -41,7 +41,7 @@ Visual C# には、Office API オブジェクトへのアクセスを容易に�
 
 6. **[名前]** フィールドに、プロジェクトの名前を入力します。
 
-7. Click **OK**.
+7. **[OK]** をクリックします。
 
      **ソリューション エクスプローラー**に新しいプロジェクトが表示されます。
 
@@ -51,7 +51,7 @@ Visual C# には、Office API オブジェクトへのアクセスを容易に�
 
 2. **[アセンブリ]** ページの **[コンポーネント名]** 一覧で **[Microsoft.Office.Interop.Word]** を選択し、Ctrl キーを押しながら **[Microsoft.Office.Interop.Excel]** を選択します。  アセンブリが表示されない場合は、それをインストールして表示させることが必要になる場合があります (「[方法: Office のプライマリ相互運用機能アセンブリをインストールする](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)」を参照)
 
-3. Click **OK**.
+3. **[OK]** をクリックします。
 
 ## <a name="to-add-necessary-using-directives"></a>ディレクティブを使用して必要なものを追加するには
 
@@ -137,7 +137,7 @@ Visual C# には、Office API オブジェクトへのアクセスを容易に�
 
 ## <a name="to-set-the-embed-interop-types-property"></a>[相互運用機能型の埋め込み] プロパティを設定するには
 
-1. 実行時に、プライマリ相互運用機能アセンブリ (PIA) を必要としない COM 型を呼び出すときに、追加の拡張が可能です。 PIA への依存関係を削除することによって、バージョンに依存しない、より簡単な展開が実現されます。 PIA を使用しないプログラミングのメリットの詳細については、「[チュートリアル: マネージド アセンブリからの型の埋め込み](../concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)」をご覧ください。
+1. 実行時に、プライマリ相互運用機能アセンブリ (PIA) を必要としない COM 型を呼び出すときに、追加の拡張が可能です。 PIA への依存関係を削除することによって、バージョンに依存しない、より簡単な展開が実現されます。 PIA を使用しないプログラミングのメリットの詳細については、「[チュートリアル: マネージド アセンブリからの型の埋め込み](../../../standard/assembly/embed-types-visual-studio.md)」をご覧ください。
 
      また、`dynamic` ではなく `Object` 型を使用して、COM メソッドに必要とされ、COM メソッドによって返される型を簡単に表現できるため、プログラミングがより簡単になります。 型が `dynamic` の変数は、明示的なキャストが不要になる実行時まで評価されません。 詳細については、「[dynamic 型の使用](../types/using-type-dynamic.md)」を参照してください。
 

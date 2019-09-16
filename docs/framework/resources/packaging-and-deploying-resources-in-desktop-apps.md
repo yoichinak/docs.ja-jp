@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4092d8694bdb896db1332bd73afae3f62bba36cf
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 808f0f8ac6caf15be0bf1ba8735521871c9b94d7
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105911"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851605"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>.NET アプリでのリソースのパッケージ化と配置
 
@@ -176,13 +176,13 @@ ms.locfileid: "70105911"
 
 次の .NET Framework の例では、<xref:System.Resources.NeutralResourcesLanguageAttribute> 属性を使って、フランス語 (`fr`) のサテライト アセンブリにアプリケーションのフォールバック リソースを格納しています。 この例には、`Greeting` という名前の 1 つの文字列リソースを定義するテキスト ベースのリソース ファイルが 2 つあります。 1 番目の resources.fr.txt には、フランス語の言語リソースが含まれています。
 
-```
+```text
 Greeting=Bon jour!
 ```
 
 2 番目の resources,ru.txt には、ロシア語の言語リソースが含まれています。
 
-```
+```text
 Greeting=Добрый день
 ```
 
@@ -223,7 +223,7 @@ vbc Example1.vb
 
 言語がロシア語以外のシステムから例を実行すると、次の出力が表示されます。
 
-```
+```output
 Bon jour!
 ```
 

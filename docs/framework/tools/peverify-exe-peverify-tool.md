@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93820120e91d80a3215673982348fd17f2fdb5d9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ac0b45db0e9aebae830155cbe2469514c392921d
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957966"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894833"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (PEVerify ツール)
 PEVerify ツールは、Microsoft Intermediate Language (MSIL) を生成する開発者 (コンパイラの作成者、スクリプト エンジンの開発者など) が、生成する MSIL コードと関連メタデータがタイプ セーフ要件を満たしているかどうかを確認する場合に役立ちます。 一部のコンパイラでは、特定の言語構成を使用しなかった場合にだけ、検査可能でタイプ セーフなコードが生成されます。 このようなコンパイラを使用している場合、生成したコードがタイプ セーフかどうかを確認する必要があると思う開発者もいるはずです。 そのような場合は、ファイルに対して PEVerify ツールを実行し、MSIL とメタデータを検査できます。  
@@ -28,7 +28,7 @@ PEVerify ツールは、Microsoft Intermediate Language (MSIL) を生成する�
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 peverify filename [options]  
 ```  
   
@@ -68,25 +68,25 @@ peverify filename [options]
 ## <a name="examples"></a>使用例  
  アセンブリ `myAssembly.exe` に実装されているメソッドに対して、メタデータの有効性および MSIL がタイプ セーフかどうかについて検査するコマンドを次に示します。  
   
-```  
+```console  
 peverify myAssembly.exe /md /il  
 ```  
   
  上記の要求が正常に終了した場合は、次のメッセージが表示されます。  
   
-```  
+```output
 All classes and methods in myAssembly.exe Verified  
 ```  
   
  アセンブリ `myAssembly.exe` に実装されているメソッドに対して、メタデータの有効性および MSIL がタイプ セーフかどうかについて検査するコマンドを次に示します。 このツールは、これらの検査に要する時間を表示します。  
   
-```  
+```console  
 peverify myAssembly.exe /md /il /clock  
 ```  
   
  上記の要求が正常に終了した場合は、次のメッセージが表示されます。  
   
-```  
+```output
 All classes and methods in myAssembly.exe Verified  
 Timing: Total run     320 msec  
         MD Val.cycle  40 msec  
@@ -97,25 +97,25 @@ Timing: Total run     320 msec
   
  アセンブリ `myAssembly.exe` に実装されているメソッドに対して、メタデータの有効性および MSIL がタイプ セーフかどうかについて検査するコマンドを次に示します。 しかし、Peverify.exe は、最大エラー カウントである 100 に達すると、停止します。 このツールは、指定されたエラー コードも無視します。  
   
-```  
+```console  
 peverify myAssembly.exe /break=100 /ignore=0x12345678,0xABCD1234  
 ```  
   
  上記の例と結果は同じですが、無視するエラー コードを応答ファイル `ignoreErrors.rsp` に指定するコマンドを次に示します。  
   
-```  
+```console  
 peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp  
 ```  
   
  この応答ファイルには、エラー コードの一覧をコンマで区切って指定できます。  
   
-```  
+```text
 0x12345678, 0xABCD1234  
 ```  
   
  また、エラー コードを 1 行に 1 つという形式で指定することもできます。  
   
-```  
+```text
 0x12345678  
 0xABCD1234  
 ```  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 320d059e82bfb58e827432fe5f4ec3eb3857510e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: dd27bebdc71c70226a61ad8d912135e0e1671dd8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041416"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851245"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (アセンブリ バインディング ログ ビューアー)
 
@@ -29,7 +29,7 @@ ms.locfileid: "70041416"
 
 コマンド プロンプトに次のように入力します。
 
-```
+```console
 fuslogvw
 ```
 
@@ -66,7 +66,7 @@ fuslogvw
 
 失敗したアセンブリ バインドについての詳細情報を表示するサンプル ログ エントリを次に示します。
 
-```
+```output
 *** Assembly Binder Log Entry  (3/5/2007 @ 12:54:20 PM) ***
 
 The operation failed.
@@ -130,7 +130,7 @@ LOG: All probing URLs attempted and failed.
 
 次のログは、アプリケーションのネイティブ イメージの作成時には存在しなかった依存関係が原因で発生したエラーを示しています。 実行時の依存関係が Ngen.exe を実行したときの依存関係と異なる場合、ネイティブ イメージへのバインドはできません。
 
-```
+```output
 *** Assembly Binder Log Entry  (12/8/2006 @ 5:22:07 PM) ***
 
 The operation failed.
@@ -154,7 +154,7 @@ LOG: Bind to native image assembly did not succeed. Use IL image.
 
 次のログは、アプリケーションが実行されたときのコンピューターのセキュリティ設定が、ネイティブ イメージの作成時のセキュリティ設定と異なるために発生したネイティブ イメージのバインディング エラーを示しています。
 
-```
+```output
 *** Assembly Binder Log Entry  (12/8/2006 @ 5:29:09 PM) ***
 
 The operation failed.

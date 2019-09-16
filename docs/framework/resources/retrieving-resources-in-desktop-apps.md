@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 33bc0ecb4b7d20f0df96486c046e06fc4cf0e7ed
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e3b396210cf77cacf3d03439af24de40d2dadeee
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941467"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971167"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>デスクトップ アプリケーションのリソースの取得
 ローカライズされたリソースを NET Framework デスクトップ アプリケーションで使用する場合は、既定カルチャまたはニュートラル カルチャ用のリソースをメイン アセンブリと共にパッケージ化し、アプリでサポートされている言語またはカルチャごとに個別のサテライト アセンブリを作成することが理想的です。 名前付きリソースには、次のセクションで説明する <xref:System.Resources.ResourceManager> クラスを使用してアクセスすることができます。 目的のリソースをメイン アセンブリおよびサテライト アセンブリに埋め込まない場合でも、.resources バイナリ ファイルには直接アクセスすることができます。詳細については、「 [.resources ファイルからのリソースの取得](#from_file) 」セクションを参照してください。  [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリでリソースを取得するには、Windows デベロッパー センターの「 [Windows ストア アプリでのリソースの作成と取得](https://go.microsoft.com/fwlink/p/?LinkID=241674) 」を参照してください。  
@@ -43,19 +43,19 @@ ms.locfileid: "69941467"
 ### <a name="retrieving-string-data-an-example"></a>文字列データの取得: 例  
  次の例では、 <xref:System.Resources.ResourceManager.GetString%28System.String%29> メソッドを呼び出すことで、現在の UI カルチャの文字列リソースを取得します。 ここでは、英語 (米国) カルチャ用のニュートラル文字列リソースと、フランス語 (フランス) カルチャおよびロシア語 (ロシア) カルチャ用のローカライズされたリソースが対象となります。 次の英語 (米国) リソースは、Strings.txt という名前のファイルに入っています。  
   
-```  
+```text
 TimeHeader=The current time is  
 ```  
   
  フランス語 (フランス) リソースは、Strings.fr-FR.txt という名前のファイルに入っています。  
   
-```  
+```text
 TimeHeader=L'heure actuelle est  
 ```  
   
  ロシア語 (ロシア) リソースは、Strings.ru-RU-txt という名前のファイルに入っています。  
   
-```  
+```text
 TimeHeader=Текущее время —  
 ```  
   
@@ -66,7 +66,7 @@ TimeHeader=Текущее время —
   
  次のバッチ (.bat) ファイルは、この例をコンパイルし、適切なディレクトリにサテライト アセンブリを生成します。 C# 言語とコンパイラの場合は、コマンドが提供されています。 Visual Basic の場合は、 `csc` を `vbc`に変更し、 `GetString.cs` を `GetString.vb`に変更します。  
   
-```  
+```console
 resgen strings.txt  
 csc GetString.cs -resource:strings.resources  
   
@@ -96,7 +96,7 @@ al -embed:strings.ru-RU.resources -culture:ru-RU -out:ru-RU\GetString.resources.
   
  次のバッチ ファイルを使用すると、C# の例をビルドできます。 Visual Basic の場合は、 `csc` を `vbc`に変更し、さらにソース コード ファイルの拡張子を `.cs` から `.vb`に変更します。  
   
-```  
+```console
 csc CreateResources.cs  
 CreateResources  
   
@@ -122,7 +122,7 @@ csc GetStream.cs -resource:AppResources.resources
   
  次のバッチ ファイルを実行することで、必要なリソース ファイルとアセンブリをビルドし、アプリケーションを実行することができます。 `/r` 構造体に関する情報にアクセスできるように、 `PersonTable` オプションを使用して Resgen.exe を指定し、UIElements.dll への参照を含める必要があります。 C# を使用している場合は、 `vbc` コンパイラ名を `csc`に置換し、 `.vb` 拡張子を `.cs`に置換します。  
   
-```  
+```console
 vbc -t:library UIElements.vb  
 vbc CreateResources.vb -r:UIElements.dll  
 CreateResources  
@@ -142,7 +142,7 @@ GetObject.exe
   
  アセンブリの完全なバージョン管理サポートを有効にするには、 [グローバル アセンブリ キャッシュ](../../../docs/framework/app-domains/gac.md) 内に厳密な名前を付けたアセンブリを展開し、アプリケーション ディレクトリ内に厳密な名前を持たないアセンブリを展開することをお勧めします。 厳密な名前を付けたアセンブリをアプリケーション ディレクトリに展開すると、更新時に、サテライト アセンブリのバージョン番号をインクリメントできなくなります。 そのため、インプレース更新を実行する必要があります。インプレース更新では、既存のコードを更新されたコードに置き換えて、同じバージョン番号を維持します。 たとえば、サテライト アセンブリのバージョン 1.0.0.0 を、完全に指定されたアセンブリ名 "myApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a" で更新する場合は、完全に指定された同じアセンブリ名 "myApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a" でコンパイルされた更新済みの myApp.resources.dll で上書きします。 サテライト アセンブリ ファイルに対してインプレース更新を使用すると、サテライト アセンブリのバージョンをアプリケーションで正確に特定するのが難しくなります。  
   
- アセンブリのバージョン管理の詳細については、「 [アセンブリのバージョン管理](../../../docs/framework/app-domains/assembly-versioning.md) 」と「 [ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)」を参照してください。  
+ アセンブリのバージョン管理の詳細については、「 [アセンブリのバージョン管理](../../standard/assembly/versioning.md) 」と「 [ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)」を参照してください。  
   
 <a name="from_file"></a>   
 ## <a name="retrieving-resources-from-resources-files"></a>.resources ファイルからのリソースの取得  
@@ -166,21 +166,21 @@ GetObject.exe
 ### <a name="an-example"></a>例  
  次の例では、リソース マネージャーが .resources ファイルからリソースを直接取得する方法を示しています。 この例は、英語 (米国) カルチャ、フランス語 (フランス) カルチャ、ロシア語 (ロシア) カルチャ用の 3 つのテキスト ベースのリソース ファイルで構成されます。 英語 (米国) は、この例の既定のカルチャです。 このリソースは、次の Strings.txt という名前のファイルに格納されています。  
   
-```  
+```text
 Greeting=Hello  
 Prompt=What is your name?  
 ```  
   
  フランス語 (フランス) カルチャのリソースは、次の Strings.fr-FR.txt という名前のファイルに格納されています。  
   
-```  
+```text 
 Greeting=Bon jour  
 Prompt=Comment vous appelez-vous?  
 ```  
   
  ロシア語 (ロシア) カルチャのリソースは、次の Strings.ru-RU.txt という名前のファイルに格納されています。  
   
-```  
+```text
 Greeting=Здравствуйте  
 Prompt=Как вас зовут?  
 ```  
@@ -192,7 +192,7 @@ Prompt=Как вас зовут?
   
  この例の C# バージョンをコンパイルするには、次のバッチ ファイルを実行します。 Visual Basic を使用している場合は、`csc` を `vbc` に置換し、`.cs` 拡張子を `.vb` に置換します。  
   
-```  
+```console
 Md Resources  
 Resgen Strings.txt Resources\Strings.resources  
 Resgen Strings.fr-FR.txt Resources\Strings.fr-FR.resources  

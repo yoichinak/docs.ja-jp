@@ -8,12 +8,12 @@ helpviewer_keywords:
 - keycontainer compiler option [C#]
 - -keycontainer compiler option [C#]
 ms.assetid: b3982b6d-2382-4f7e-bebd-ce98eaa30763
-ms.openlocfilehash: 0d4ca602859c4f7f80a8fcdc09182c7da8a5fb31
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: fead2d4296cfa6fb0195cb4b43f6448c0fc7e6a9
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602841"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970146"
 ---
 # <a name="-keycontainer-c-compiler-options"></a>-keycontainer (C# コンパイラ オプション)
 暗号化キー コンテナーの名前を指定します。  
@@ -37,7 +37,7 @@ ms.locfileid: "69602841"
   
  また、暗号化情報を [-keyfile](./keyfile-compiler-option.md) でコンパイラに渡すことができます。 公開キーをアセンブリ マニフェストに追加してだけおき、アセンブリの署名はテスト後まで待って行いたい場合は、[-delaysign](./delaysign-compiler-option.md) を使います。  
   
- 詳細については、「[厳密な名前付きアセンブリの作成と使用](../../../framework/app-domains/create-and-use-strong-named-assemblies.md)」および「[アセンブリへの遅延署名](../../../framework/app-domains/delay-sign-assembly.md)」をご覧ください。  
+ 詳細については、「[厳密な名前付きアセンブリの作成と使用](../../../standard/assembly/create-use-strong-named.md)」および「[アセンブリへの遅延署名](../../../standard/assembly/delay-sign.md)」をご覧ください。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
   

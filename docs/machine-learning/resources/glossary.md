@@ -4,12 +4,12 @@ description: ML.NET でカスタム モデルをビルドする際に役立つ�
 ms.custom: seodec18
 ms.topic: reference
 ms.date: 07/31/2019
-ms.openlocfilehash: 1c979d2c4567285146ab87f359116efb506815a1
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 4d4bb80c6582facbcb11664309fde230bcfa4e7b
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710536"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929267"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>機械学習の重要な用語の用語集
 
@@ -48,6 +48,7 @@ ML.NET では、カタログは、共通の目的でグループ化された拡�
 ## <a name="data"></a>データ
 
 データはあらゆる機械学習アプリケーションの中心です。 ML.NET では、データは <xref:Microsoft.ML.IDataView> オブジェクトで表されます。 データ ビュー オブジェクト:
+
 - 列と行で構成されています
 - 遅延評価されます (つまり、操作によって要求されたときにのみデータが読み込まれます)
 - 各列の型、形式、長さを定義するスキーマが含まれます

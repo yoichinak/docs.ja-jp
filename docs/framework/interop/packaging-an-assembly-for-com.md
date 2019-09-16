@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df8f82605118f1af0f085aef6e76c1e4bedb2904
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09c54e58ef25afa28d2681719284c358d90bddc2
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69988158"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969061"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>COM 用の .NET Framework アセンブリのパッケージ化
 
@@ -45,7 +45,7 @@ COM 開発者がアプリケーションに組み込むときに役立つ、マ�
 
   発行者により署名された厳密な名前のアセンブリは、グローバル アセンブリ キャッシュにインストールできます。 署名のないアセンブリは、プライベート アセンブリとしてユーザーのコンピューターにインストールする必要があります。
 
-  詳細については、「[アセンブリのセキュリティに関する考慮事項](../app-domains/assembly-security-considerations.md)」を参照してください。
+  詳細については、「[アセンブリのセキュリティに関する考慮事項](../../standard/assembly/security-considerations.md)」を参照してください。
 
 - タイプ ライブラリのインクルード
 
@@ -96,7 +96,7 @@ COM 開発者がアプリケーションに組み込むときに役立つ、マ�
 - [COM への .NET Framework コンポーネントの公開](exposing-dotnet-components-to-com.md)
 - [要件 (相互運用のための .NET 型の)](../../standard/native-interop/qualify-net-types-for-interoperation.md)
 - [クラス インターフェイスの概要](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
-- [アセンブリのセキュリティに関する考慮事項](../app-domains/assembly-security-considerations.md)
+- [アセンブリのセキュリティに関する考慮事項](../../standard/assembly/security-considerations.md)
 - [Tlbexp.exe (タイプ ライブラリ エクスポーター)](../tools/tlbexp-exe-type-library-exporter.md)
 - [COM へのアセンブリの登録](registering-assemblies-with-com.md)
 - [方法: タイプ ライブラリを Win32 リソースとしてアプリケーションに埋め込む](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

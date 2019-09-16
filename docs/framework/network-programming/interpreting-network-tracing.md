@@ -9,24 +9,24 @@ helpviewer_keywords:
 - text, network tracing output
 - includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
-ms.openlocfilehash: 00df193671255e7b40f5c4b86ee952a3e20e3a40
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 09f77a60255accc3e4b1c4fa5ea3d7526444e4cb
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59177568"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894729"
 ---
 # <a name="interpreting-network-tracing"></a>ネットワークのトレースの解釈
 ネットワークのトレースを有効にすると、トレースを使用して、アプリケーションからさまざまな <xref:System.Net> クラス メンバーへの呼び出しをキャプチャすることができます。 これらの呼び出しからの出力は、次の例のようになる場合があります。  
   
-```  
+```output
 [588]   (4357)   Entering Socket#33574638::Send()  
-[588]   (4387)   Exiting Socket#33574638::Send()-> 61#61  
+[588]   (4387)   Exiting Socket#33574638::Send()-> 61#61
 ```  
   
  上の例では、[588] は現在のスレッドの一意の識別子です。 (4357) と (4387) は、アプリケーションが起動してから経過したミリ秒数を示すタイムスタンプです。 タイムスタンプの後のデータは、メソッド **Socket.Send** を開始および終了するアプリケーションを示しています。 **Send** メソッドを実行するオブジェクトは、一意の識別子として 33574638 を持っています。 メソッドの exit トレースには、戻り値 (上の例では 61) が含まれています。  
   
- ネットワークのトレースは、ハイパーテキスト転送プロトコル (HTTP) などのアプリケーション レベルのプロトコルを使用して、アプリケーションから送信されるまたはアプリケーションで受信されるネットワーク トラフィックをキャプチャできます。 このデータは、テキストとして、また任意で、16 進数データとしてキャプチャできます。 16 進数データは、**tracemode** 属性の値として **includehex** を指定した場合に使用できます  (この属性の詳細については、「[方法:ネットワークのトレースを構成する](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)」を参照してください)。次のサンプル トレースは、**includehex** を使用して生成されました。  
+ ネットワークのトレースは、ハイパーテキスト転送プロトコル (HTTP) などのアプリケーション レベルのプロトコルを使用して、アプリケーションから送信されるまたはアプリケーションで受信されるネットワーク トラフィックをキャプチャできます。 このデータは、テキストとして、また任意で、16 進数データとしてキャプチャできます。 16 進数データは、**tracemode** 属性の値として **includehex** を指定した場合に使用できます (この属性の詳細については、「[方法:ネットワークのトレースを構成する](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)」を参照してください)。次のサンプル トレースは、**includehex** を使用して生成されました。  
   
  `[1692]   (1142)   00000000 : 47 45 54 20 2F 77 70 61-64 2E 64 61 74 20 48 54 : GET /wpad.dat HT`  
   

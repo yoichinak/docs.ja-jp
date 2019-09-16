@@ -5,12 +5,12 @@ author: pkulikov
 ms.date: 05/16/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: 772558be14d207475d20083f5a6b729f03766471
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e2aaeb8abc6981b420329f194aa7b82c90cae00a
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666647"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929098"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>チュートリアル: ML.NET でクラスタリングを使用してあやめの花を分類する
 
@@ -18,6 +18,7 @@ ms.locfileid: "69666647"
 
 このチュートリアルでは、次の作業を行う方法について説明します。
 > [!div class="checklist"]
+>
 > - 問題を把握する
 > - 適切な機械学習タスクを選択する
 > - データを準備する
@@ -185,6 +186,7 @@ Distances: 11.69127 0.02159119 25.59896
 
 このチュートリアルでは、次の作業を行う方法を学びました。
 > [!div class="checklist"]
+>
 > - 問題を把握する
 > - 適切な機械学習タスクを選択する
 > - データを準備する

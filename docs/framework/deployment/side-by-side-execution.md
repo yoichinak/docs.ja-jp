@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47f211256b4820e3fb25339de2fe4db962171056
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 01fa0cf9811e72333b091858e2f78a80dda1d9ef
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911009"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969100"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>.NET Framework での side-by-side 実行
 side-by-side 実行は、アプリケーションまたはコンポーネントの複数のバージョンを同じコンピューターで実行する機能です。 共通言語ランタイムの複数のバージョン、および 1 つの共通言語ランタイムを使用するアプリケーションとコンポーネントの複数のバージョンを同じコンピューターで同時に実行できます。  
@@ -35,7 +35,7 @@ side-by-side 実行は、アプリケーションまたはコンポーネント�
   
 - 厳密な名前付きアセンブリ  
   
-     side-by-side 実行機能は、厳密な名前付きアセンブリを使用して、型情報をアセンブリの特定のバージョンにバインドします。 これによって、アプリケーションまたはコンポーネントが、アセンブリの無効なバージョンをバインドするのを防げます。 また、厳密な名前付きアセンブリによって、1 つのファイルの複数のバージョンが同じコンピューター上に存在することが可能で、アプリケーションはこれらを使用できます。 詳細については、「[厳密な名前付きアセンブリ](../../../docs/framework/app-domains/strong-named-assemblies.md)」を参照してください。  
+     side-by-side 実行機能は、厳密な名前付きアセンブリを使用して、型情報をアセンブリの特定のバージョンにバインドします。 これによって、アプリケーションまたはコンポーネントが、アセンブリの無効なバージョンをバインドするのを防げます。 また、厳密な名前付きアセンブリによって、1 つのファイルの複数のバージョンが同じコンピューター上に存在することが可能で、アプリケーションはこれらを使用できます。 詳細については、「[厳密な名前付きアセンブリ](../../standard/assembly/strong-named.md)」を参照してください。  
   
 - バージョンを認識するコード ストレージ  
   
@@ -116,7 +116,7 @@ publicKeyToken=...,
 |[方法: 自動バインディング リダイレクトを有効/無効にする](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|アプリケーションをアセンブリの特定のバージョンにバインドする方法について説明します。|  
 |[アセンブリ バインディングのリダイレクトの構成](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md)|.NET Framework アセンブリの特定のバージョンへのアセンブリ バインドの参照をリダイレクトする方法について説明します。|  
 |[インプロセスの side-by-side 実行](../../../docs/framework/deployment/in-process-side-by-side-execution.md)|インプロセスのランタイム ホストの並行アクティブ化を使用して、1 つのプロセスで複数のバージョンの CLR を実行する方法について説明します。|  
-|[共通言語ランタイムのアセンブリ](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)|アセンブリの概念的な概要を説明します。|  
+|[.NET のアセンブリ](../../standard/assembly/index.md)|アセンブリの概念的な概要を説明します。|  
 |[アプリケーション ドメイン](../../../docs/framework/app-domains/application-domains.md)|アプリケーション ドメインの概念的な概要を説明します。|  
   
 ## <a name="reference"></a>関連項目  

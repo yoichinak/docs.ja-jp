@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35e89584f3916d748809960d33a31eb4e8fb9c6a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ef977206bf0d5b818cfd9779f063fbc2bd50632e
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938015"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971842"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (厳密名ツール)
-厳密名ツール (Sn.exe) は、[厳密な名前](../../../docs/framework/app-domains/strong-named-assemblies.md)を使用してアセンブリに署名する場合に役立ちます。 Sn.exe には、キーの管理、署名の生成、署名の検査に関する各オプションが用意されています。  
+厳密名ツール (Sn.exe) は、[厳密な名前](../../standard/assembly/strong-named.md)を使用してアセンブリに署名する場合に役立ちます。 Sn.exe には、キーの管理、署名の生成、署名の検査に関する各オプションが用意されています。  
   
 > [!WARNING]
 > セキュリティに関しては、厳格な名前に依存しないでください。 厳格な名前は、一意の ID を提供するだけです。
 
- 厳密な名前付けと厳密な名前付きアセンブリについて詳しくは、「[Strong-Named Assemblies](../../../docs/framework/app-domains/strong-named-assemblies.md)」 (厳密な名前付きアセンブリ) と「[How to: Sign an Assembly with a Strong Name](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)」 (方法: 厳密な名前でアセンブリに署名する) を参照してください。  
+ 厳密な名前付けと厳密な名前付きアセンブリについて詳しくは、「[Strong-Named Assemblies](../../standard/assembly/strong-named.md)」 (厳密な名前付きアセンブリ) と「[How to: Sign an Assembly with a Strong Name](../../standard/assembly/sign-strong-name.md)」 (方法: 厳密な名前でアセンブリに署名する) を参照してください。  
   
  厳密名ツールは Visual Studio と共に自動的にインストールされます。 このツールを開始するには、開発者コマンド プロンプト (または、Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
 
@@ -36,7 +36,7 @@ ms.locfileid: "69938015"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 sn [-quiet][option [parameter(s)]]  
 ```  
   
@@ -90,37 +90,37 @@ sn [-quiet][option [parameter(s)]]
 ## <a name="examples"></a>使用例  
  新しいランダム キー ペアを作成し、`keyPair.snk` に格納するコマンドを次に示します。  
   
-```  
+```console  
 sn -k keyPair.snk  
 ```  
   
  厳密な名前 CSP 内のコンテナー `keyPair.snk` 内の `MyContainer` にキーを格納するコマンドを次に示します。  
   
-```  
+```console  
 sn -i keyPair.snk MyContainer  
 ```  
   
  `keyPair.snk` から公開キーを抽出し、`publicKey.snk` に格納するコマンドを次に示します。  
   
-```  
+```console  
 sn -p keyPair.snk publicKey.snk  
 ```  
   
  公開キーおよび `publicKey.snk` に含まれている公開キーのトークンを表示するコマンドを次に示します。  
   
-```  
+```console  
 sn -tp publicKey.snk  
 ```  
   
  アセンブリ `MyAsm.dll` を検査するコマンドを次に示します。  
   
-```  
+```console  
 sn -v MyAsm.dll  
 ```  
   
  既定の CSP から `MyContainer` を削除するコマンドを次に示します。  
   
-```  
+```console  
 sn -d MyContainer  
 ```  
   
@@ -128,5 +128,5 @@ sn -d MyContainer
 
 - [ツール](../../../docs/framework/tools/index.md)
 - [Al.exe (アセンブリ リンカー)](../../../docs/framework/tools/al-exe-assembly-linker.md)
-- [厳密な名前付きアセンブリ](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [厳密な名前付きアセンブリ](../../standard/assembly/strong-named.md)
 - [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

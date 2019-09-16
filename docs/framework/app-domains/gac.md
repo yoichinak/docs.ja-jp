@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5b99597a857f4c7926f783a6531f44fdb1fb7bc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0e94bb9d006febb4d8760ac481570dbed3a98341
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921583"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972034"
 ---
 # <a name="global-assembly-cache"></a>グローバル アセンブリ キャッシュ
 共通言語ランタイムがインストールされている各コンピューターには、グローバル アセンブリ キャッシュと呼ばれる、コンピューター全体にわたって使用されるコード キャッシュがあります。 グローバル アセンブリ キャッシュは、そのコンピューター上の複数のアプリケーションで共有するように特別に指定されたアセンブリを格納します。  
@@ -44,6 +44,6 @@ ms.locfileid: "69921583"
   
 ## <a name="see-also"></a>関連項目
 
-- [共通言語ランタイムのアセンブリ](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [.NET のアセンブリ](../../standard/assembly/index.md)
 - [アセンブリとグローバル アセンブリ キャッシュの使用](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
-- [厳密な名前付きアセンブリ](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [厳密な名前付きアセンブリ](../../standard/assembly/strong-named.md)

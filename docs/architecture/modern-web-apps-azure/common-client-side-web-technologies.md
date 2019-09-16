@@ -4,12 +4,12 @@ description: ASP.NET Core および Azure での最新の Web アプリケーシ
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 3a44b017c6160639ed1be7374b893e103ee5f5d8
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 4dd747293fba4c18c2d10738d36f4d98cfd3f5b9
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373905"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926499"
 ---
 # <a name="common-client-side-web-technologies"></a>一般的なクライアント側の Web テクノロジ
 
@@ -141,6 +141,7 @@ SPA をサポートする最良の JavaScript フレームワークを求める�
 JavaScript フレームワークは今後も猛烈な速さで進化を続けます。 上記の事項を考慮し、後で後悔するようなフレームワークを選択するリスクを減らしてください。 リスクが特別に好まれない場合、商業的サポートを提供しているフレームワークか大企業が開発しているフレームワークを検討してください。
 
 > ### <a name="references--client-web-technologies"></a>参照 - クライアント Web テクノロジ
+>
 > - **HTML と CSS**  
 > <https://www.w3.org/standards/webdesign/htmlcss>
 > - **Sass とLESS の比較**  

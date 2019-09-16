@@ -9,12 +9,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], emitting dynamic assemblies
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 559d6962873540836a49da04bc271857edfa1157
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 767382f27a96e8aacce4cc625de610949b3f02a3
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663486"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971038"
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>動的メソッドおよびアセンブリの出力
 ここでは、<xref:System.Reflection.Emit> 名前空間のマネージド型のセットについて説明します。これらのマネージド型を使用すると、コンパイラやツールでメタデータおよび Microsoft Intermediate Language (MSIL) を実行時に出力できます。また、ポータブル実行可能 (PE) ファイルをディスク上に生成することもできます。 この名前空間を使用する主な機能は、スクリプト エンジンとコンパイラです。 ここでは、リフレクション出力と呼ばれる <xref:System.Reflection.Emit> 名前空間の機能について説明します。  
@@ -71,5 +71,5 @@ ms.locfileid: "64663486"
  [リフレクション](../../../docs/framework/reflection-and-codedom/reflection.md)  
  メタデータとマネージド コードの探索方法について説明します。  
   
- [共通言語ランタイムのアセンブリ](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ [.NET のアセンブリ](../../standard/assembly/index.md)  
  .NET 実装のアセンブリの概要を説明します。

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38a6b27ea0ba8b9d9e2af883db1fc3350d60494a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d9e6d9e57528f3eae9b30706013a0529313877c7
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912490"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894871"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL 逆アセンブラー)
 
@@ -28,7 +28,7 @@ IL 逆アセンブラーは、IL アセンブラー (*Ilasm.exe*) と対をな�
 
 ## <a name="syntax"></a>構文
 
-```
+```console
 ildasm [options] [PEfilename] [options]
 ```
 
@@ -117,14 +117,14 @@ IL 逆アセンブラーで既定の GUI を使用すると、既存のどの PE
 public void Test([MarshalAs((short)70)] int test) { }
 ```
 
-```
+```il
 // IL from Ildasm.exe output
 .method public hidebysig instance void Test(int32  marshal({ 46 }) test) cil managed
 ```
 
 次の *Ildasm.exe* の出力からの抜粋に示すように、.NET Framework 4.5 以降、*Ildasm.exe* ではインターフェイス実装に適用される属性が表示されます。
 
-```
+```il
 .class public auto ansi beforefieldinit MyClass
   extends [mscorlib]System.Object
   implements IMyInterface

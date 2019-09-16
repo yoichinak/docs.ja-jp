@@ -4,12 +4,12 @@ description: ASP.NET Core および Azure での最新の Web アプリケーシ
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: dcd2616cd5638aa712c11e370d35111b248e88ec
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 830271d76e5a87ed782d81fa9491328c580f0f87
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374049"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849589"
 ---
 # <a name="development-process-for-azure"></a>Azure の開発プロセス
 
@@ -36,7 +36,7 @@ ms.locfileid: "70374049"
 
 **Visual Studio Code と dotnet CLI** (Mac、Linux および Windows 用のクロスプラット フォーム ツール)。 任意の開発言語をサポートする軽量なクロスプラットフォーム エディターを選択すると、Microsoft Visual Studio Code と dotnet CLI を使用することができます。 これらの製品は、開発者のワークフローを効率化する、簡単かつ堅牢性の高いエクスペリエンスを提供します。 さらに、Visual Studio Code は C\# および Web 開発の拡張機能をサポートし、エディター内での IntelliSense およびショートカット タスクを提供します。
 
-[.NET Core SDK をダウンロードする](https://www.microsoft.com/net/download/core)
+[.NET Core SDK をダウンロードする](https://dotnet.microsoft.com/download)
 
 [Visual Studio Code をダウンロードする](https://code.visualstudio.com/download)
 

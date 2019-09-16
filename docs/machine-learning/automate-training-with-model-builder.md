@@ -4,12 +4,12 @@ description: ML.NET モデル ビルダーを使用し、機械学習モデル�
 author: natke
 ms.date: 08/07/2019
 ms.custom: overview
-ms.openlocfilehash: 715c9f5854d9691fd9fc2cd771d38456405836ec
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 77b5e75fede1a4aa93eadcf7e21591d82f565cab
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104814"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929479"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>モデル ビルダーの概要としくみ
 
@@ -29,6 +29,7 @@ ML.NET モデル ビルダーは、直観的なグラフィックスでカスタ
 さまざまなシナリオをモデル ビルダーに取り込み、自分のアプリケーションのための機械学習モデルを生成できます。
 
 シナリオは、自分のデータを使用して行う予測の種類を説明するものです。 次に例を示します。
+
 - 過去の販売データに基づいて今後の製品売上高を予測する
 - 顧客のレビューに基づいてセンチメントを肯定的と否定的に分類する
 - 銀行取引が詐欺かどうかを検出する
@@ -41,6 +42,7 @@ ML.NET モデル ビルダーは、直観的なグラフィックスでカスタ
 数値を予測するシナリオの場合、機械学習モデルの種類は `regression` と呼ばれます。
 
 カテゴリを予測するシナリオの場合、モデルの種類は `classification` です。 分類には、次の 2 つがあります。
+
 - カテゴリが 2 つのみの場合は `binary classification`。
 - カテゴリが 3 つ以上ある場合は `multiclass classification`。
 
@@ -89,10 +91,12 @@ ML.NET モデル ビルダーは、直観的なグラフィックスでカスタ
 ### <a name="choose-the-output-to-predict-label"></a>予測する出力を選択します (ラベル)
 
 データセットは、トレーニング サンプルの行と属性の列からなるテーブルです。 各行の内容:
+
 - **ラベル** (予測する属性)
 - **特徴** (ラベルを予測するための入力として使用される属性)。
 
 家の価格予測シナリオの場合、特徴は次のようになります。
+
 - 家の面積
 - 寝室と浴室の数
 - 郵便番号

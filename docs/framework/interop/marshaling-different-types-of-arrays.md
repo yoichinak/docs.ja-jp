@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fadccdf35429babce6e101d336c9ea1de150b276
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 358c7f1a339fd473271574a4e97e201f5c15f871
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648607"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894166"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>さまざまな型の配列のマーシャリング
 配列は、同じ型の 1 つ以上の要素を含むマネージド コード内の参照型です。 配列は参照型ですが、アンマネージ関数には In パラメーターとして渡されます。 この動作は、マネージド配列がマネージド オブジェクトに渡される方法 (In/Out パラメーターとして渡される) と一致しません。 詳細については、「 [コピーと固定](copying-and-pinning.md)」を参照してください。  
@@ -52,43 +52,43 @@ ms.locfileid: "64648607"
   
 - PinvokeLib.dll からエクスポートされる**TestArrayOfInts** 。  
   
-    ```  
+    ```cpp
     int TestArrayOfInts(int* pArray, int pSize);  
     ```  
   
 - PinvokeLib.dll からエクスポートされる**TestRefArrayOfInts** 。  
   
-    ```  
+    ```cpp
     int TestRefArrayOfInts(int** ppArray, int* pSize);  
     ```  
   
 - PinvokeLib.dll からエクスポートされる**TestMatrixOfInts** 。  
   
-    ```  
+    ```cpp
     int TestMatrixOfInts(int pMatrix[][COL_DIM], int row);  
     ```  
   
 - PinvokeLib.dll からエクスポートされる**TestArrayOfStrings** 。  
   
-    ```  
+    ```cpp
     int TestArrayOfStrings(char** ppStrArray, int size);  
     ```  
   
 - PinvokeLib.dll からエクスポートされる**TestArrayOfStructs** 。  
   
-    ```  
+    ```cpp
     int TestArrayOfStructs(MYPOINT* pPointArray, int size);  
     ```  
   
 - PinvokeLib.dll からエクスポートされる**TestArrayOfStructs2** 。  
   
-    ```  
+    ```cpp
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  
     ```  
   
  [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) はカスタム アンマネージ ライブラリであり、上記の関数および 2 つの構造体変数 **MYPOINT** および **MYPERSON**に関する実装を含んでいます。 構造体には次の要素が含まれます。  
   
-```  
+```cpp
 typedef struct _MYPOINT  
 {  
    int x;   

@@ -5,12 +5,12 @@ description: Windows 7 SP1 に .NET Framework をインストールする方法�
 author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: 1e046641e5d09b13c41e1c5c4e07ed2531dfe058
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 4d1ae7401b1184829b8836055797281251164237
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267945"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853918"
 ---
 # <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a>Windows 7 SP1 と Windows Server 2008 R2 に .NET Framework をインストールする
 
@@ -39,6 +39,6 @@ ms.locfileid: "67267945"
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Framework のダウンロード](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)
+- [.NET Framework のダウンロード](https://dotnet.microsoft.com/download)
 - [.NET Framework のインストールおよびアンインストールのブロックのトラブルシューティング](troubleshoot-blocked-installations-and-uninstallations.md)
 - [開発者向けの .NET Framework のインストール](guide-for-developers.md)

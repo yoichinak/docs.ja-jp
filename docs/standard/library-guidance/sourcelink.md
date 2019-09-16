@@ -4,12 +4,12 @@ description: ソース リンクを使用して .NET ライブラリのデバッ
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 9d3e2b0b3aedbab150072bf6eebff4acb5f8a0b7
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 7530c984ce4bbe9e40362bd550bec57ac585a550
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211672"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928983"
 ---
 # <a name="source-link"></a>ソース リンク
 
@@ -31,6 +31,7 @@ ms.locfileid: "65211672"
 
 > [!TIP]
 > デバッガー属性を型に追加することで開発者のデバッグ機能をさらに強化できます。
+>
 > * <xref:System.Diagnostics.DebuggerDisplayAttribute> では、デバッガーの変数ウィンドウでクラスやフィールドを表示する方法をカスタマイズできます。
 > * <xref:System.Diagnostics.DebuggerStepThroughAttribute> では、デバッガーに対してコードのステップ インではなくステップ実行が指示されます。
 > * <xref:System.Diagnostics.DebuggerBrowsableAttribute> では、デバッガー変数ウィンドウにメンバーを表示するかどうかが制御されます。

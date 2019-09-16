@@ -23,19 +23,19 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56c3b536954118b80db2ae7f2f0d0ffdc74bac68
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
+ms.openlocfilehash: 374a97eea7f6432833ebbcf40736ea6c7a6d4039
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133745"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970947"
 ---
 # <a name="reflection-in-net"></a>.NET のリフレクション
-<xref:System.Reflection> 名前空間のクラスを <xref:System.Type?displayProperty=nameWithType> と共に使用すると、読み込まれた[アセンブリ](../app-domains/assemblies-in-the-common-language-runtime.md)についての情報、およびそのアセンブリ内に定義されている[クラス](../../standard/base-types/common-type-system.md#classes)、[インターフェイス](../../standard/base-types/common-type-system.md#interfaces)、[値型](../../csharp/language-reference/keywords/value-types.md)などの型を取得できます。 また、リフレクションを使用すると、実行時に型インスタンスを作成したり、作成した型インスタンスを呼び出したり、アクセスしたりできます。 リフレクションのさまざまな面に関するトピックについては、この概要の最後の「[関連トピック](#related_topics)」を参照してください。
+<xref:System.Reflection> 名前空間のクラスを <xref:System.Type?displayProperty=nameWithType> と共に使用すると、読み込まれた[アセンブリ](../../standard/assembly/index.md)についての情報、およびそのアセンブリ内に定義されている[クラス](../../standard/base-types/common-type-system.md#classes)、[インターフェイス](../../standard/base-types/common-type-system.md#interfaces)、[値型](../../csharp/language-reference/keywords/value-types.md)などの型を取得できます。 また、リフレクションを使用すると、実行時に型インスタンスを作成したり、作成した型インスタンスを呼び出したり、アクセスしたりできます。 リフレクションのさまざまな面に関するトピックについては、この概要の最後の「[関連トピック](#related_topics)」を参照してください。
   
  [共通言語ランタイム](../../standard/clr.md) ローダーは、[アプリケーション ドメイン](../../../docs/framework/app-domains/application-domains.md)を管理します。アプリケーション ドメインは、同じアプリケーション スコープのオブジェクトの周りに定義された境界を構成します。 アプリケーション ドメインの管理には、該当アプリケーション ドメインへの各アセンブリの読み込み、および各アセンブリ内の型階層のメモリ レイアウトの制御などが含まれます。  
   
- [アセンブリ](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)には、モジュールが含まれています。モジュールには、型が含まれています。また、型にはメンバーが含まれています。 リフレクションは、アセンブリ、モジュール、および型をカプセル化するオブジェクトを提供します。 リフレクションを使用すると、動的に型のインスタンスを作成したり、その型を既存のオブジェクトにバインドしたり、既存のオブジェクトから型を取得できます。 その後で、型のメソッドを呼び出したり、型のフィールドやプロパティにアクセスしたりできます。 リフレクションの代表的な用途は、次のとおりです。  
+ [アセンブリ](../../../docs/framework/app-domains/index.md)には、モジュールが含まれています。モジュールには、型が含まれています。また、型にはメンバーが含まれています。 リフレクションは、アセンブリ、モジュール、および型をカプセル化するオブジェクトを提供します。 リフレクションを使用すると、動的に型のインスタンスを作成したり、その型を既存のオブジェクトにバインドしたり、既存のオブジェクトから型を取得できます。 その後で、型のメソッドを呼び出したり、型のフィールドやプロパティにアクセスしたりできます。 リフレクションの代表的な用途は、次のとおりです。  
   
 - <xref:System.Reflection.Assembly> を使用して、アセンブリを定義または読み込み、アセンブリ マニフェストにリストされているモジュールを読み込み、そのアセンブリから型を検索し、そのインスタンスを作成します。  
   

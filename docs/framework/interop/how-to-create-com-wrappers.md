@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a6af73a5251cdc52589967178218f8675cac869
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e1c4423c20a9a485f3c40877ccd489c749dc0e2c
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946468"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971833"
 ---
 # <a name="how-to-create-com-wrappers"></a>方法: COM ラッパーを作成する
 
@@ -55,7 +55,7 @@ Visual Studio 2005 では、プロジェクトに参照として COM ラッパ�
   
 1. ネイティブ コードで実行するマネージド クラス用のクラス ライブラリ プロジェクトを作成します。 このクラスには、パラメーターなしのコンストラクターが含まれている必要があります。  
   
-     AssemblyInfo ファイルで、アセンブリの 4 つの部分で構成される完全なバージョン番号があることを確認します。 この番号は、Windows レジストリでバージョンを管理するために必要となります。 バージョン番号の詳細については、「[アセンブリのバージョン管理](../../../docs/framework/app-domains/assembly-versioning.md)」を参照してください。  
+     AssemblyInfo ファイルで、アセンブリの 4 つの部分で構成される完全なバージョン番号があることを確認します。 この番号は、Windows レジストリでバージョンを管理するために必要となります。 バージョン番号の詳細については、「[アセンブリのバージョン管理](../../standard/assembly/versioning.md)」を参照してください。  
   
 2. **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5320bc6c5105c95d63b1888e1adbc2ecf1bc5fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b652fae47a321ca41e1f518e9077cd68f24c91c9
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200000"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894858"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (.NET Framework コマンド ライン デバッガー)
 .NET Framework コマンド ライン デバッガーは、.NET Framework 共通言語ランタイムを対象としたプログラムに含まれるバグの検索と修復について、ツールの販売元とアプリケーション開発者を支援するツールです。 このツールは、ランタイムのデバッグ API を使用してデバッグ サービスを提供します。 MDbg.exe を使用してもマネージド コードのデバッグしか実行できません。アンマネージド コードのデバッグはサポートされていません。  
@@ -23,7 +23,7 @@ ms.locfileid: "59200000"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 MDbg [ProgramName[arguments]] [options]  
 ```  
   
@@ -52,7 +52,7 @@ MDbg [ProgramName[arguments]] [options]
 |**fo** **[reach]** [*OtherCommand*]|すべてのスレッドでコマンドを実行します。 *OtherCommand* は、1 つのスレッドで動作する有効なコマンドです。**foreach** *OtherCommand* は、すべてのスレッドで同じコマンドを実行します。|  
 |**f** **[unceval]** [`-ad` *Num*] *functionName* [*args ...* ]|現在のアクティブ スレッドで関数評価を実行します。*functionName* は、評価する関数です。 関数名には、名前空間を含めた完全修飾名を指定する必要があります。<br /><br /> `-ad` オプションは、関数の解決に使用するアプリケーション ドメインを指定します。 `-ad` オプションが指定されていない場合、解決に使用するアプリケーション ドメインは、関数評価に使用するスレッドが配置されたアプリケーション ドメインに既定で設定されます。<br /><br /> 評価対象の関数が静的ではない場合、渡される最初のパラメーターは `this` ポインターであることが必要です。 すべてのアプリケーション ドメインで、関数評価のための引数が検索されます。<br /><br /> アプリケーション ドメインから値を要求するには、変数の先頭にモジュール名とアプリケーション ドメイン名を付けます。たとえば、`funceval -ad 0 System.Object.ToString hello.exe#0!MyClass.g_rootRef` のようにします。 このコマンドは、アプリケーション ドメイン `System.Object.ToString` の `0` 関数を評価します。 `ToString` メソッドはインスタンス関数であるため、最初のパラメーターは `this` ポインターであることが必要です。|  
 |**g** **[o]**|ブレークポイントに到達し、プログラムが終了するか、イベント (未処理の例外など) によってプログラムが中断されるまで、プログラムは続行されます。|  
-|**h** **[elp]** [*command*]<br /><br /> - または -<br /><br /> **?** [*command*]|すべてのコマンドの説明、または指定したコマンドの詳細な説明を表示します。|  
+|**h** **[elp]** [*command*]<br /><br /> または<br /><br /> **?** [*command*]|すべてのコマンドの説明、または指定したコマンドの詳細な説明を表示します。|  
 |**ig** **[nore]** [*event*]|未処理の例外の発生時にだけデバッガーが停止します。|  
 |**int** **[ercept]** *FrameNumber*|デバッガーを指定したフレーム番号にロールバックします。<br /><br /> デバッガーの実行時に例外が発生した場合は、このコマンドを使用してデバッガーを指定したフレーム番号にロールバックします。 **set** コマンドを使用してプログラムの状態を変更し、**go** コマンドを使用して続行できます。|  
 |**k** **[ill]**|アクティブ プロセスを停止します。|  
@@ -61,13 +61,13 @@ MDbg [ProgramName[arguments]] [options]
 |**log** [*eventType*]|ログに記録するイベントを設定または表示します。|  
 |**mo** **[de]** [*option on/off*]|デバッガーのさまざまなオプションを設定します。 オプションを指定せずに `mode` を使用すると、デバッグ モードとその現在の設定のリストが取得されます。|  
 |**mon** **[itorInfo]** *monitorReference*|オブジェクトのモニター ロックの情報を表示します。|  
-|**newo** **[bj]** *typeName* [*arguments...*]|*typeName* 型の新しいオブジェクトを作成します。|  
+|**newo** **[bj]** *typeName* [*arguments...* ]|*typeName* 型の新しいオブジェクトを作成します。|  
 |**n** **[ext]**|コードを実行し、次の行に移動します (次の行に多数の関数呼び出しが含まれている場合も同様です)。|  
 |**Opendump** *pathToDumpFile*|指定されたダンプ ファイルをデバッグ用に開きます。|  
 |**o** **[ut]**|現在の関数の末尾に移動します。|  
 |**pa** **[th]** [*pathName*]|バイナリの場所が使用できない場合に、指定したパスでソース ファイルを検索します。|  
 |**p** **[rint]** [*var*] &#124; [`-d`]|スコープ内のすべての変数の出力 (**print**)、指定した変数の出力 (**print** *var*)、またはデバッガー変数の出力 (**print** `-d` ) を実行します。|  
-|**printe** **[xception]** [*-r*]|現在のスレッドで最後にスローされた例外を出力します。 `–r` (再帰的) オプションを使用すると、例外オブジェクトで `InnerException` プロパティが走査され、例外のチェーン全体に関する情報が取得されます。|  
+|**printe** **[xception]** [ *-r*]|現在のスレッドで最後にスローされた例外を出力します。 `–r` (再帰的) オプションを使用すると、例外オブジェクトで `InnerException` プロパティが走査され、例外のチェーン全体に関する情報が取得されます。|  
 |**pro** **[cessenum]**|アクティブ プロセスを表示します。|  
 |**q** **[uit]** [*exitcode*]|MDbg.exe シェルを終了します。プロセス終了コードを指定することもできます。|  
 |**re** **[sume]** [`*` &#124; [`~`]*threadNumber*]|現在のスレッドまたは *threadNumber* パラメーターで指定したスレッドを再開します。<br /><br /> *threadNumber* パラメーターに `*` を指定した場合、またはスレッド番号が `~` で始まる場合には、コマンドは *threadNumber* で指定したスレッドを除くすべてのスレッドに適用されます。<br /><br /> 中断されていないスレッドを再開しても無効になります。|  
@@ -83,14 +83,14 @@ MDbg [ProgramName[arguments]] [options]
 |**uwgc** **[handle]** [*var*] &#124; [*address*]|ハンドルによって追跡された変数を出力します。 ハンドルは、名前またはアドレスで指定できます。|  
 |**when**|現在アクティブな `when` ステートメントを表示します。<br /><br /> **when** **delete all** &#124; `num` [`num` [`num` …]] - 番号で指定された `when` ステートメントを削除します。`all` が指定されている場合は、すべての `when` ステートメントを削除します。<br /><br /> **when** `stopReason` [`specific_condition`] **do**`cmd` [`cmd` [`cmd` …] ] - *stopReason* パラメーターには、次のいずれかの値を指定できます。<br /><br /> `StepComplete`, `ProcessExited`, `ThreadCreated`, `BreakpointHit`, `ModuleLoaded`, `ClassLoaded`, `AssemblyLoaded`, `AssemblyUnloaded`, `ControlCTrapped`, `ExceptionThrown`, `UnhandledExceptionThrown`, `AsyncStop`, `AttachComplete`, `UserBreak`, `EvalComplete`, `EvalException`, `RemapOpportunityReached`, `NativeStop`.<br /><br /> *specific_condition* には、次のいずれかの値を指定できます。<br /><br /> -   *number* - `ThreadCreated` および `BreakpointHit` の場合、同じ値を持つスレッド ID 番号とブレークポイント番号によって停止した場合にだけアクションを発生させます。<br />-   [`!`]*name* - `ModuleLoaded`、`ClassLoaded`、`AssemblyLoaded`、`AssemblyUnloaded`、`ExceptionThrown`、`UnhandledExceptionThrown` の場合、名前が *stopReason* の名前と一致する場合にだけアクションを発生させます。<br /><br /> *specific_condition* は、*stopReason* の他の値に対しては空であることが必要です。|  
 |**w** **[here]** [`-v`] [`-c` *depth*] [*threadID*]|スタック フレームのデバッグ情報を表示します。<br /><br /> -   `-v` オプションを指定すると、表示された各スタック フレームの詳細情報が表示されます。<br />-   `depth` に数値を指定すると、表示するフレームの数を制限できます。 すべてのフレームを表示するには、**all** コマンドを使用します。 既定値は 100 です。<br />-   *threadID* パラメーターを指定すると、スタックに関連付けるスレッドを制御できます。 既定値は、現在のスレッドのみです。 すべてのスレッドを取得するには、**all** コマンドを使用します。|  
-|**x** [`-c`*numSymbols*] [*module*[`!`*pattern*]]|モジュールの `pattern` に一致する関数を表示します。<br /><br /> *numSymbols* を指定すると、出力が指定した数に制限されます。 `!` (正規表現を示す) が *pattern* に対して指定されていない場合は、すべての関数が表示されます。 *module* が指定されていない場合は、読み込まれたすべてのモジュールが表示されます。 **break** コマンドを使用してブレークポイントを設定するには、シンボル (*~#*) を使用します。|  
+|**x** [`-c`*numSymbols*] [*module*[`!`*pattern*]]|モジュールの `pattern` に一致する関数を表示します。<br /><br /> *numSymbols* を指定すると、出力が指定した数に制限されます。 `!` (正規表現を示す) が *pattern* に対して指定されていない場合は、すべての関数が表示されます。 *module* が指定されていない場合は、読み込まれたすべてのモジュールが表示されます。 **break** コマンドを使用してブレークポイントを設定するには、シンボル ( *~#* ) を使用します。|  
   
 ## <a name="remarks"></a>解説  
  デバッグするアプリケーションをコンパイルするときは、コンパイラ固有のフラグを使用します。このフラグによって、コンパイラがデバッグ シンボルを生成します。 コンパイラ固有のフラグの詳細については、コンパイラのドキュメントを参照してください。 最適化したアプリケーションでもデバッグはできますが、一部のデバッグ情報が欠落しています。 たとえば、ローカル変数の多くを表示できなくなり、ソース行も不正確になります。  
   
  アプリケーションをコンパイルした後、コマンド プロンプトに「**mdbg**」と入力してデバッグ セッションを開始します。例を次に示します。  
   
-```  
+```console  
 C:\Program Files\Microsoft Visual Studio 8\VC>mdbg  
 MDbg (Managed debugger) v2.0.50727.42 (RTM.050727-4200) started.  
 Copyright (C) Microsoft Corporation. All rights reserved.  

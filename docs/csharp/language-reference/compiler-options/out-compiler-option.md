@@ -8,12 +8,12 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: 51c66d6bc2064d8051415de2ac083da478355a99
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 6c8408c0c613e361dae0c1db19f854e9421ca467
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602601"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970380"
 ---
 # <a name="-out-c-compiler-options"></a>-out (C# コンパイラ オプション)
 **-out** オプションは、出力ファイルの名前を指定します。  
@@ -45,7 +45,7 @@ ms.locfileid: "69602601"
   
  コンパイルの一部として生成されるすべてのモジュールが、同じくコンパイルで作成されるアセンブリに関連付けらるファイルになります。 [ildasm.exe](../../../framework/tools/ildasm-exe-il-disassembler.md) を使用して、アセンブリ マニフェストを表示し、関連付けられているファイルを確認します。  
   
- exe をフレンド アセンブリのターゲットにするには、-out コンパイラ オプションが必要です。 詳細については、「[フレンド アセンブリ](../../../standard/assembly/friend-assemblies.md)」を参照してください。  
+ exe をフレンド アセンブリのターゲットにするには、-out コンパイラ オプションが必要です。 詳細については、「[フレンド アセンブリ](../../../standard/assembly/friend.md)」を参照してください。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
   
@@ -67,5 +67,5 @@ csc t.cs -out:mymodule.netmodule -target:module t2.cs
 ## <a name="see-also"></a>関連項目
 
 - [C# コンパイラ オプション](./index.md)
-- [フレンド アセンブリ](../../../standard/assembly/friend-assemblies.md)
+- [フレンド アセンブリ](../../../standard/assembly/friend.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

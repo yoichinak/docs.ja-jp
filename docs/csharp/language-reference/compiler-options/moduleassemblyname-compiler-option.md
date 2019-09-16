@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: d57279128c0909ba3e62d55d596705cfde6be75c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 7562c0609d61b2388f5063bc480a4dfc715155db
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606663"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970081"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname (C# コンパイラ オプション)
 .netmodule がアクセスできる非パブリック型のアセンブリを指定します。  
@@ -39,7 +39,7 @@ ms.locfileid: "69606663"
   
  .netmodule のビルドの詳細については、「[-target:module (C# コンパイラ オプション)](./target-module-compiler-option.md)」を参照してください。  
   
- フレンド アセンブリの詳細については、「[フレンド アセンブリ](../../../standard/assembly/friend-assemblies.md)」を参照してください。  
+ フレンド アセンブリの詳細については、「[フレンド アセンブリ](../../../standard/assembly/friend.md)」を参照してください。  
   
  このオプションは、開発環境からは利用できません。これはコマンドラインからコンパイルするときにのみ使用できます。  
   

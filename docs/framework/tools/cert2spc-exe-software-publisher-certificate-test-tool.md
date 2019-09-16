@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: be434d7d-9c0d-46e7-8392-58a9b542d11d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 079c48a9975861646f1d28338d02dab8e4775031
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 49a5ad951c47100199c93d03efb07ffc6fda5080
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101238"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851419"
 ---
 # <a name="cert2spcexe-software-publisher-certificate-test-tool"></a>Cert2spc.exe (ソフトウェア発行元証明書テスト ツール)
 ソフトウェア発行元証明書テスト ツールは、1 つ以上の X.509 証明書からソフトウェア発行元証明書 (SPC: Software Publisher's Certificate) を作成します。 Cert2spc.exe はテスト専用のツールです。 有効な SPC は、VeriSign や Thawte などの証明書発行機関から入手できます。 X.509 証明書の作成の詳細については、「[Makecert.exe (証明書作成ツール)](/windows/desktop/SecCrypto/makecert)」を参照してください。  
@@ -26,7 +26,7 @@ ms.locfileid: "59101238"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 cert2spc cert1.cer | crl1.crl [... certN.cer | crlN.crl] outputSPCfile.spc  
 ```  
   
@@ -45,13 +45,13 @@ cert2spc cert1.cer | crl1.crl [... certN.cer | crlN.crl] outputSPCfile.spc
 ## <a name="examples"></a>使用例  
  `myCertificate.cer` から SPC を作成し、`mySPCFile.spc` に格納するコマンドを次に示します。  
   
-```  
+```console
 cert2spc myCertificate.cer mySPCFile.spc  
 ```  
   
  `oneCertificate.cer` と `twoCertificate.cer` から SPC を作成し、`mySPCFile.spc` に格納するコマンドを次に示します。  
   
-```  
+```console
 cert2spc oneCertificate.cer twoCertificate.cer mySPCFile.spc  
 ```  
   

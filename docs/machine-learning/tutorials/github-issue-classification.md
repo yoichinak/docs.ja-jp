@@ -4,12 +4,12 @@ description: GitHub の問題を分類し、それを特定の領域に割り当
 ms.date: 07/31/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 3bb556cc591ee35fc14c548e7f53bad58a786e99
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 1eb56465bb56906df25c3a094126f2496bef684e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710302"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929221"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>チュートリアル: ML .NET での多クラス分類を使用したサポートの問題の分類
 
@@ -17,6 +17,7 @@ ms.locfileid: "68710302"
 
 このチュートリアルでは、次の作業を行う方法について説明します。
 > [!div class="checklist"]
+>
 > * データを準備する
 > * データを変換する
 > * モデルをトレーニングする
@@ -372,6 +373,7 @@ GitHub の問題を追加して、`Predict` メソッドでトレーニングさ
 
 このチュートリアルでは、次の作業を行う方法を学びました。
 > [!div class="checklist"]
+>
 > * データを準備する
 > * データを変換する
 > * モデルをトレーニングする

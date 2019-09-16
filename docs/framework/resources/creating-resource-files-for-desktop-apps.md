@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7ff34285220fd1e3c17503a8387104e91ec08b1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 55eda4ce2fd109715076f81d53e93a80d40cbfa3
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313659"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851578"
 ---
 # <a name="create-resource-files-for-net-apps"></a>.NET アプリ用のリソース ファイルを作成する
 
@@ -74,7 +74,7 @@ HelpMenuName=Help
 
  空の文字列 (つまり、値が <xref:System.String.Empty?displayProperty=nameWithType> であるリソース) はテキスト ファイルで使用できます。 次に例を示します。
 
-```
+```text
 EmptyString=
 ```
 
@@ -131,7 +131,7 @@ vbc greeting.vb -resource:GreetingResources.resources
 
  C# を使用している場合、ソース コード ファイル名が Greeting.cs であれば、埋め込みの .resources ファイルを含む実行可能ファイルを次のコマンドによって作成します。
 
- ```console
+```console
 csc greeting.cs -resource:GreetingResources.resources
 ```
 
@@ -200,7 +200,7 @@ csc greeting.cs -resource:GreetingResources.resources
 
 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) プロジェクトにリソース ファイルを追加すると、プロジェクト ディレクトリに .resx ファイルが作成されます。 Visual Studio には、文字列、イメージ、およびバイナリ オブジェクトを追加するためのリソース エディターがあります。 このエディターは静的データのみを処理するように設計されているので、プログラム オブジェクトを格納するために使用することはできません。オブジェクト データは、.resx ファイルまたは .resources ファイルにプログラムによって書き込む必要があります。 詳しくは、「[プログラムによる .resx ファイルの使用](../../../docs/framework/resources/working-with-resx-files-programmatically.md)」および「[.resources ファイル内のリソース](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResourcesFiles)」セクションをご覧ください。
 
-ローカライズされたリソースを追加する場合は、メイン リソース ファイルと同じルート ファイル名を指定します。 ファイル名内でカルチャを指定する必要もあります。 たとえば、Resources.resx という名前のリソース ファイルを追加する場合に、英語 (米国) とフランス語 (フランス) の各カルチャ用にローカライズされたリソースを保持するには、Resources.en-US.resx および Resources.fr-FR.resx という名前のリソース ファイルを作成します。 また、アプリケーションの既定のカルチャも指定しておく必要があります。 この情報は、特定のカルチャ用にローカライズされたリソースが見つからない場合に、どのカルチャのリソースを使用するか決定するために使用されます。 既定のカルチャを指定するには、Visual Studio のソリューション エクスプローラーで、プロジェクト名を右クリックし、[アプリケーション] をポイントして、**[アセンブリ情報]** をクリックします。次に、**[ニュートラル言語]** ボックスの一覧で適切な言語/カルチャをクリックします。
+ローカライズされたリソースを追加する場合は、メイン リソース ファイルと同じルート ファイル名を指定します。 ファイル名内でカルチャを指定する必要もあります。 たとえば、Resources.resx という名前のリソース ファイルを追加する場合に、英語 (米国) とフランス語 (フランス) の各カルチャ用にローカライズされたリソースを保持するには、Resources.en-US.resx および Resources.fr-FR.resx という名前のリソース ファイルを作成します。 また、アプリケーションの既定のカルチャも指定しておく必要があります。 この情報は、特定のカルチャ用にローカライズされたリソースが見つからない場合に、どのカルチャのリソースを使用するか決定するために使用されます。 既定のカルチャを指定するには、Visual Studio のソリューション エクスプローラーで、プロジェクト名を右クリックし、[アプリケーション] をポイントして、 **[アセンブリ情報]** をクリックします。次に、 **[ニュートラル言語]** ボックスの一覧で適切な言語/カルチャをクリックします。
 
 コンパイル時に、Visual Studio ではまずプロジェクト内の .resx ファイルがバイナリ リソース (.resources) ファイルに変換されて、プロジェクトの *obj* ディレクトリのサブディレクトリに格納されます。 ローカライズされたリソースが格納されていないリソース ファイルは、プロジェクトで生成されたメイン アセンブリに埋め込みます。 ローカライズされたリソースがリソース ファイルに格納されている場合、Visual Studio では、各ローカライズ カルチャの個別のサテライト アセンブリにそのファイルを埋め込みます。 各サテライト アセンブリは、ローカライズ カルチャに対応する名前のディレクトリに格納します。 たとえば、ローカライズされた英語 (米国) リソースは、en-US サブディレクトリ内のサテライト アセンブリに格納されます。
 

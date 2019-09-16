@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: 266ece1e63bf6d32bf59406dbc72a9e6bd92eb45
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b415bf143e7da46b3ecd2c0828a3f8151878435a
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924551"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971677"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>アクセス修飾子 (C# プログラミング ガイド)
 すべての型とそのメンバーには、アクセシビリティ レベルがあります。同じアセンブリ (または他のアセンブリ) にある他のコードからそれらの型やそのメンバーを利用できるかどうかは、アクセシビリティ レベルによって制御されます。 型またはメンバーにはその宣言時に、以下のアクセス修飾子を使ってアクセシビリティを指定できます。  
@@ -44,7 +44,7 @@ ms.locfileid: "69924551"
   
  派生クラスに、その基本型を超えるアクセシビリティを割り当てることはできません。 つまり、internal クラス `A` から派生したクラス `B` を public にすることはできません。 仮にそれが許容されるならば、`A` が public になると考えられます。`A` のすべての protected メンバーと internal メンバーに派生クラスからアクセスできることになるからです。  
   
- InternalsVisibleToAttribute を使うと、internal 型へのアクセスを他の特定のアセンブリに許可することができます。 詳細については、[Friend アセンブリ](../../../standard/assembly/friend-assemblies.md)に関するページを参照してください。  
+ InternalsVisibleToAttribute を使うと、internal 型へのアクセスを他の特定のアセンブリに許可することができます。 詳細については、[Friend アセンブリ](../../../standard/assembly/friend.md)に関するページを参照してください。  
   
 ## <a name="class-and-struct-member-accessibility"></a>クラスと構造体のメンバーのアクセシビリティ  
  クラスのメンバー (入れ子にされているクラスや構造体も含む) は、6 種類あるアクセス修飾子をどれでも使って宣言できます。 構造体のメンバーを protected として宣言することはできません。構造体は継承をサポートしていないためです。  
@@ -78,7 +78,7 @@ ms.locfileid: "69924551"
 
 - [C# プログラミング ガイド](../index.md)
 - [クラスと構造体](./index.md)
-- "[インターフェイス](../interfaces/index.md)"
+- [インターフェイス](../interfaces/index.md)
 - [private](../../language-reference/keywords/private.md)
 - [public](../../language-reference/keywords/public.md)
 - [internal](../../language-reference/keywords/internal.md)

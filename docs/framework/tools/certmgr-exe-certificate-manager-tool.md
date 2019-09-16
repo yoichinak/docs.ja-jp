@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ad7ce5dd3739b1edcf8a8a03a2f57376ceba138
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d13c2d2cc391e61c8ed764c26e5e5b5e7ea2a3bb
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948582"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851387"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (証明書マネージャー ツール)
 証明書マネージャー ツール (Certmgr.exe) は、証明書、証明書信頼リスト (CTL: Certificate Trust List)、および証明書失効リスト (CRL: Certificate Revocation List) を管理します。  
@@ -38,7 +38,7 @@ ms.locfileid: "69948582"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
       certmgr [/add | /del | /put] [options]  
 [/s[/r registryLocation]] [sourceStorename]  
 [/s[/r registryLocation]] [destinationStorename]  
@@ -97,43 +97,43 @@ ms.locfileid: "69948582"
 ## <a name="examples"></a>使用例  
  既定のシステム ストアである `my` を詳細出力モードで表示するコマンドを次に示します。  
   
-```  
+```console  
 certmgr /v /s my  
 ```  
   
  `myFile.ext` という名前のファイルに含まれるすべての証明書を `newFile.ext` という名前の新しいファイルに追加するコマンドを次に示します。  
   
-```  
+```console  
 certmgr /add /all /c myFile.ext newFile.ext  
 ```  
   
  `testcert.cer` という名前のファイルに含まれる証明書をシステム ストア `my` に追加するコマンドを次に示します。  
   
-```  
+```console  
 certmgr /add /c testcert.cer /s my  
 ```  
   
  `TrustedCert.cer` という名前のファイルに含まれる証明書をルート証明書ストアに追加するコマンドを次に示します。  
   
-```  
+```console  
 certmgr /c /add TrustedCert.cer /s root  
 ```  
   
  システム ストア `myCert` に含まれていて共通名が `my` の証明書を `newCert.cer` という名前のファイルに保存するコマンドを次に示します。  
   
-```  
+```console  
 certmgr /add /c /n myCert /s my newCert.cer  
 ```  
   
  システム ストア `my` に含まれるすべての CTL を削除し、その結果得られるストアを `newStore.str` という名前のファイルに格納するコマンドを次に示します。  
   
-```  
+```console  
 certmgr /del /all /ctl /s my newStore.str  
 ```  
   
  システム ストア `my` に含まれる証明書をファイル `newFile` に保存するコマンドを次に示します。 `my` から `newFile` に保存する証明書の番号を入力するためのプロンプトが表示されます。  
   
-```  
+```console  
 certmgr /put /c /s my newFile  
 ```  
   

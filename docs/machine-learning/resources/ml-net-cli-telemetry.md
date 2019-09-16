@@ -4,12 +4,12 @@ description: 分析のために使用状況の情報を収集する ML.NET CLI �
 ms.topic: conceptual
 ms.date: 09/03/2019
 ms.custom: ''
-ms.openlocfilehash: e7b3b3d7789f2368ebc4448e73add817986a5906
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 77a24416a8008d36006c293cb174b5a8c2f516b7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254009"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929277"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>ML.NET CLI によるテレメトリ収集
 
@@ -58,6 +58,7 @@ ML.NET CLI のテレメトリ機能は既定で有効です。
 
 ### <a name="data-points-not-collected"></a>収集されないデータ ポイント
 テレメトリ機能では、以下は収集 "*されません*"。
+
 - ユーザー名などの個人データ
 - データ セットのファイル名
 - データセット ファイルのデータ
@@ -73,6 +74,7 @@ Microsoft による ML.NET CLI の配布には、[マイクロソフト ソフ�
 `mlnet auto-train` などの [ML.NET CLI コマンド](../reference/ml-net-cli-reference.md)を初めて実行すると、ML.NET CLI ツールにテレメトリをオプトアウトする方法が説明された開示テキストが表示されます。 テキストは、実行している CLI のバージョンによって多少異なります。
 
 ## <a name="see-also"></a>関連項目
+
 - [ML.NET CLI リファレンス](../reference/ml-net-cli-reference.md)
 - [マイクロソフト ソフトウェア ライセンス条項:Microsoft .NET ライブラリ](https://aka.ms/dotnet-core-eula)
 - [Microsoft におけるプライバシー](https://www.microsoft.com/trustcenter/privacy/)

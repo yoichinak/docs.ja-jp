@@ -3,12 +3,12 @@ title: 式の解釈
 description: 式ツリーの構造を調べるためのコードの記述方法について説明します。
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: fcc16e7a0cef7b3ac24d99ccbddd93bed100a5bb
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: c9d80ca234e298df2f2e7ce48fbf92cb817fc8a7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202973"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925684"
 ---
 # <a name="interpreting-expressions"></a>式の解釈
 
@@ -357,6 +357,7 @@ Expression<Func<int, int>> factorial = (n) =>
 式が既にデリゲートになっている場合は呼び出せますが、式ツリー形式で呼び出すことはできません。 これらの制限を克服する手法については、「[式ツリーの構築](expression-trees-building.md)」セクションを参照してください。
 
 この式では、次の型のノードすべてが使用されています。
+
 1. 等号 (二項式)
 2. 乗算 (二項式)
 3. 条件付き (? : 式)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e932481496aef7fd0533054316deb32f65e95deb
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 9e1eff9d1ef9f36c80f71e738fdd4dc56a9b6ec6
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063181"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894146"
 ---
 # <a name="passing-structures"></a>構造体の受け渡し
 多くのアンマネージド 関数では、構造体のメンバー (Visual Basic ではユーザー定義型) またはマネージド コードで定義されたクラスのメンバーがパラメーターとして渡されることを期待しています。 プラットフォーム呼び出しを使って構造体またはクラスをアンマネージ コードに渡す場合は、元のレイアウトやアラインメントを保持するための追加情報を提供する必要があります。 このトピックでは、フォーマットされた型を定義するために使用する <xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性について説明します。 マネージ構造体やマネージド クラスの場合は、**LayoutKind** 列挙型によって提供される想定されたレイアウト動作から選択できます。  
@@ -38,7 +38,7 @@ ms.locfileid: "65063181"
 ## <a name="declaring-and-passing-structures"></a>構造体の宣言と受け渡し  
  マネージド コードで `Point` 型および `Rect` 型を定義し、これらの型を User32.dll ファイル内の **PtInRect** 関数にパラメーターとして渡す方法の例を次に示します。 **PtInRect** は、次に示すアンマネージ シグネチャを持っています。  
   
-```  
+```cpp
 BOOL PtInRect(const RECT *lprc, POINT pt);  
 ```  
   
@@ -92,7 +92,7 @@ internal static class NativeMethods
 ## <a name="declaring-and-passing-classes"></a>クラスの宣言と受け渡し  
  クラスが固定したメンバー レイアウトを持っている場合に限り、クラスのメンバーをアンマネージ DLL 関数に渡すことができます。 定義の順序で固定されている `MySystemTime` クラスのメンバーを User32.dll ファイル内の **GetSystemTime** に渡す方法の例を次に示します。 **GetSystemTime** は、次に示すアンマネージ シグネチャを持っています。  
   
-```  
+```cpp
 void GetSystemTime(SYSTEMTIME* SystemTime);  
 ```  
   

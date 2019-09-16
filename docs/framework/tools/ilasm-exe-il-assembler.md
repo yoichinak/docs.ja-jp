@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13b0ab04eba75a322d584bcc20cc6e90a54fb6fc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fcc9ba5e379897247f50175603b1002d5688d215
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933666"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894687"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL アセンブラー)
 
@@ -110,7 +110,7 @@ IL の文法の詳細については、Windows SDK の asmparse.grammar ファ�
 
 .NET Framework 4.5 以降では、次に類似するコードを使用することで、インターフェイス実装にカスタム属性を追加できます。
 
-```
+```il
 .class interface public abstract auto ansi IMyInterface
 {
   .method public hidebysig newslot abstract virtual
@@ -130,7 +130,7 @@ IL の文法の詳細については、Windows SDK の asmparse.grammar ファ�
 
 .NET Framework 4.5 以降では、次のコードに示すように、未処理のバイナリ表現を使用することで、任意のマーシャリング BLOB (バイナリ ラージ オブジェクト) を指定できます。
 
-```
+```il
 .method public hidebysig abstract virtual
         instance void
         marshal({ 38 01 02 FF })
@@ -175,7 +175,7 @@ public class Hello
 
 次の IL コードの例は、前の C# のコード例に対応しています。 IL アセンブラー ツールを使うと、このコードをアセンブリにコンパイルできます。 IL コードと C# コードの例は、どちらもコンソールに "Hello World!" 記述するだけです。
 
-```
+```il
 // Metadata version: v2.0.50215
 .assembly extern mscorlib
 {

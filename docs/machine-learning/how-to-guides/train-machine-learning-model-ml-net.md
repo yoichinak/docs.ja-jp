@@ -5,12 +5,12 @@ ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 3fb586b218f1769949efc362cacc3957623dd43b
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: fc735f28bad91b9714d7e6bf2a9c7c620acacc4d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169046"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929342"
 ---
 # <a name="train-and-evaluate-a-model"></a>モデルのトレーニングと評価
 
@@ -175,6 +175,7 @@ double rSquared = trainedModelMetrics.RSquared;
 ```
 
 前のコード サンプルの内容は次のとおりです。  
+
 1. テスト データ セットは、以前に定義されたデータ準備変換を使用して前処理されます。 
 2. トレーニング済み機械学習モデルは、テスト データに基づいて予測するために使用されます。
 3. `Evaluate` メソッドでは、テスト データ セットの `CurrentPrice` 列の値を新しく出力された予測の `Score` 列と比較して、回帰モデルのメトリックを計算します。そのうちの 1 つである R-2 乗値は `rSquared` 変数に格納されます。

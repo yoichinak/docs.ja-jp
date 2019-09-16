@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0246f429b396a2606bbb827b7ae2a9034af00f11
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5dbbf0f71eaefd0ef7fc7f2b5e69e47ce7b8db26
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915474"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894888"
 ---
 # <a name="dynamically-loading-and-using-types"></a>型の動的な読み込みおよび使用
 リフレクションは、言語コンパイラで使用される、暗黙の遅延バインディングを実装するインフラストラクチャを提供します。 バインディングとは、一意に指定した型に対応する宣言 (つまり、実装) を検索するプロセスです。 このプロセスがコンパイル時ではなく、実行時に発生する場合、それは遅延バインディングと呼ばれます。 Visual Basic のコードでは、暗黙の遅延バインディングを使用できます。Visual Basic のコンパイラからは、オブジェクトの型の取得にリフレクションを使用するヘルパー メソッドが呼び出されます。 ヘルパー メソッドに渡される引数により、実行時に適切なメソッドが呼び出されます。 これらの引数は、メソッドを呼び出すインスタンス (オブジェクト)、呼び出されたメソッド名 (文字列)、呼び出されたメソッドに渡される引数 (オブジェクトの配列) です。  
   
  次の例では、Visual Basic コンパイラがリフレクションを暗黙的に使用して、コンパイル時には型が不明なオブジェクトのメソッドを呼び出します。 **HelloWorld** クラスには、**PrintHello** メソッドに渡される、"Hello World" とこれに連結されたいくつかのテキストを出力する **PrintHello** メソッドがあります。 この例で呼び出される **PrintHello** メソッドは、実際には <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType> です。Visual Basic コードでは、オブジェクトの型 (helloObj) が実行時ではなく (遅延バインディング) コンパイル時に認識された (事前バインディング) かのように **PrintHello** メソッドを呼び出します。  
   
-```  
-Imports System  
+```vb
 Module Hello  
     Sub Main()  
         ' Sets up the variable.  

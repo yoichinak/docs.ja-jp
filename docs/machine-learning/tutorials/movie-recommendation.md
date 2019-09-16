@@ -5,12 +5,12 @@ author: briacht
 ms.date: 08/26/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 97bdef3daa296dcb88cbb158a14668205df6fee3
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 4f80ebad0a280040e9f3329dc7b647bd53a48fa0
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107256"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929481"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>チュートリアル: ML.NET でマトリックス因子分解を使用して映画レコメンダーをビルドする
 
@@ -18,6 +18,7 @@ ms.locfileid: "70107256"
 
 このチュートリアルでは、次の作業を行う方法について説明します。
 > [!div class="checklist"]
+>
 > * 機械学習アルゴリズムを選択する
 > * データを準備して読み込む
 > * モデルを構築してトレーニングする
@@ -467,6 +468,7 @@ var options = new MatrixFactorizationTrainer.Options
 このチュートリアルでは、次の作業を行う方法を学びました。
 
 > [!div class="checklist"]
+>
 > * 機械学習アルゴリズムを選択する
 > * データを準備して読み込む
 > * モデルを構築してトレーニングする

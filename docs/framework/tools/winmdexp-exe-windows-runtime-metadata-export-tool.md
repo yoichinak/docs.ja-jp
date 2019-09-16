@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e6f9f553af4899d502584cbde5341f7061f169d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0664a68d258380fd9e4824b80f0d7a244cb61e85
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937954"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894778"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows ランタイム メタデータのエクスポート ツール)
 Windows ランタイム メタデータ エクスポート ツール (Winmdexp.exe) は、.NET Framework モジュールを、Windows メタデータを含むファイルに変換します。 .NET Framework アセンブリと Windows ランタイム メタデータ ファイルでは同じ物理形式が使用されますが、メタデータ テーブルの内容に違いがあります。つまり、NET Framework アセンブリは自動的に Windows ランタイム コンポーネントとして使用できるわけではありません。 .NET Framework モジュールを Windows ランタイム コンポーネントに変換するプロセスは、"*エクスポート*" と呼ばれます。 .NET Framework 4.5 と .NET Framework 4.5.1 では、結果として生成される Windows メタデータ (.winmd) ファイルにメタデータと実装の両方が含まれます。  
@@ -25,7 +25,7 @@ Windows ランタイム メタデータ エクスポート ツール (Winmdexp.e
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 winmdexp [options] winmdmodule  
 ```  
   

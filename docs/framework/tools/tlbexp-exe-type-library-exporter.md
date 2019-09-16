@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 23bb88127875e0e608c8e8de54ba669f84aa1da5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f990c5194c2e5dc1422aab96c7608c019ae9855b
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937986"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894748"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (タイプ ライブラリ エクスポーター)
 タイプ ライブラリ エクスポーターは、共通言語ランタイム アセンブリで定義されている型を記述するタイプ ライブラリを生成します。  
@@ -26,7 +26,7 @@ ms.locfileid: "69937986"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 tlbexp assemblyName [options]  
 ```  
   
@@ -74,14 +74,14 @@ tlbexp assemblyName [options]
   
  <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性を使用して、<xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType> または `VT_UNKOWN` の `VT_DISPATCH` 値を指定すると、Tlbexp.exe は後続で使用される <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType> フィールドをすべて無視します。 たとえば、次のようなシグネチャがあるとします。  
   
-```  
+```csharp
 [return:MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VarEnum.VT_UNKNOWN, SafeArrayUserDefinedSubType=typeof(ConsoleKeyInfo))] public Array StructUnkSafe(){return null;}  
 [return:MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VarEnum.VT_DISPATCH, SafeArrayUserDefinedSubType=typeof(ConsoleKeyInfo))] public Array StructDispSafe(){return null;}  
 ```  
   
  次のタイプ ライブラリが生成されます。  
   
-```  
+```cpp 
 [id(0x60020004)]  
 HRESULT StructUnkSafe([out, retval] SAFEARRAY(IUnknown*)* pRetVal);  
 [id(0x60020005)]  
@@ -99,13 +99,13 @@ HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);
 ## <a name="examples"></a>使用例  
  `myTest.dll` 内で見つかったアセンブリと同じ名前を持つタイプ ライブラリを生成するコマンドを次に示します。  
   
-```  
+```console  
 tlbexp myTest.dll  
 ```  
   
  `clipper.tlb` という名前を持つタイプ ライブラリを生成するコマンドを次に示します。  
   
-```  
+```console  
 tlbexp myTest.dll /out:clipper.tlb  
 ```  
   
@@ -113,19 +113,19 @@ tlbexp myTest.dll /out:clipper.tlb
   
  まず、Tlbimp.exe を使用してタイプ ライブラリ `myLib.tlb` をインポートし、`myLib.dll` として保存します。  
   
-```  
+```console  
 tlbimp myLib.tlb /out:myLib.dll  
 ```  
   
  上記の例で作成した `Sample.dll,` を参照する `myLib.dll` を C# コンパイラでコンパイルするコマンドを次に示します。  
   
-```  
+```console  
 CSC Sample.cs /reference:myLib.dll /out:Sample.dll  
 ```  
   
  `Sample.dll` を参照する `myLib.dll` 用のタイプ ライブラリを生成するコマンドを次に示します。  
   
-```  
+```console  
 tlbexp Sample.dll  
 ```  
   

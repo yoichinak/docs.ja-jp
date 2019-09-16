@@ -4,12 +4,12 @@ description: このチュートリアルでは、ML.NET を使用して、料金
 ms.date: 05/09/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: fe3afab4cbd3f77ed4498cc5081180910d7d0b9e
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: c9bf91ce5188a512524337f981366040ec09f6f6
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666621"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929446"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>チュートリアル: ML.NET で回帰を使用して価格を予測する
 
@@ -17,6 +17,7 @@ ms.locfileid: "69666621"
 
 このチュートリアルでは、次の作業を行う方法について説明します。
 > [!div class="checklist"]
+>
 > * データを準備して理解する
 > * データを読み込んで変換する
 > * 学習アルゴリズムを選択する
@@ -269,6 +270,7 @@ private static void TestSinglePrediction(MLContext mlContext, ITransformer model
 このチュートリアルでは、次の作業を行う方法を学びました。
 
 > [!div class="checklist"]
+>
 > * データを準備して理解する
 > * 学習パイプラインを作成する
 > * データを読み込んで変換する

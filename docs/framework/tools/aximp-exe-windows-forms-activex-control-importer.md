@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cd3d7ea4d9639c5c68ecf977b4e95e816d99a4f6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a5f76f60c8474b1503dc4cebeeafe241cd40be96
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915421"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970604"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Windows フォーム ActiveX コントロール インポーター)
 ActiveX コントロール インポーターは、ActiveX コントロール用の COM タイプ ライブラリに属する型定義を Windows フォーム コントロールに変換します。  
@@ -30,7 +30,7 @@ ActiveX コントロール インポーターは、ActiveX コントロール用
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 aximp [options]{file.dll | file.ocx}  
 ```  
   
@@ -42,7 +42,7 @@ aximp [options]{file.dll | file.ocx}
   
 |オプション|説明|  
 |------------|-----------------|  
-|`/delaysign`|Aximp.exe が遅延署名を使用して、生成されたコントロールに名前を割り当てるように指定します。 `/keycontainer:`、`/keyfile:`、または `/publickey:` オプションのいずれかで、このオプションを指定する必要があります。 遅延署名プロセスの詳細については、「[アセンブリへの遅延署名](../../../docs/framework/app-domains/delay-sign-assembly.md)」を参照してください。|  
+|`/delaysign`|Aximp.exe が遅延署名を使用して、生成されたコントロールに名前を割り当てるように指定します。 `/keycontainer:`、`/keyfile:`、または `/publickey:` オプションのいずれかで、このオプションを指定する必要があります。 遅延署名プロセスの詳細については、「[アセンブリへの遅延署名](../../standard/assembly/delay-sign.md)」を参照してください。|  
 |`/help`|このツールのコマンド構文とオプションを表示します。|  
 |`/keycontainer:` *containerName*|*containerName* で指定されたキー コンテナーの公開キーと秘密キーのペアを使用して、生成されたコントロールに厳密な名前で署名します。|  
 |`/keyfile:` *filename*|*filename* にある発行者の正式な公開キーと秘密キーのペアを使用して、生成されたコントロールに厳密な名前で署名します。|  
@@ -75,7 +75,7 @@ aximp [options]{file.dll | file.ocx}
 ## <a name="example"></a>例  
  Media Player コントロール `msdxm.ocx` の MediaPlayer.dll と AxMediaPlayer.dll を生成するコマンドを次に示します。  
   
-```  
+```console 
 aximp c:\systemroot\system32\msdxm.ocx  
 ```  
   

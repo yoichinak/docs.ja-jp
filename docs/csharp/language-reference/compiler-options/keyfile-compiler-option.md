@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -keyfile compiler option [C#]
 - keyfile compiler option [C#]
 ms.assetid: 0815f9de-ace4-4e98-b4c6-13c55dea40c2
-ms.openlocfilehash: eef843c87b8f1993c3419b261894a6df31096294
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: bf271cc6b6887e930911071d4603b51daed55e61
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606893"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970262"
 ---
 # <a name="-keyfile-c-compiler-options"></a>-keyfile (C# コンパイラ オプション)
 暗号化キーを格納するファイル名を指定します。  
@@ -26,7 +26,7 @@ ms.locfileid: "69606893"
   
 ## <a name="arguments"></a>引数  
   
-|期間|定義|  
+|用語|定義|  
 |----------|----------------|  
 |`file`|厳密な名前のキーを格納するファイルの名前。|  
   
@@ -41,7 +41,7 @@ ms.locfileid: "69606893"
   
  キー ファイルには公開キーだけが含まれる場合があることに注意してください。  
   
- 詳しくは、「[厳密な名前付きアセンブリの作成と使用](../../../framework/app-domains/create-and-use-strong-named-assemblies.md)」および「[アセンブリへの遅延署名](../../../framework/app-domains/delay-sign-assembly.md)」をご覧ください。  
+ 詳しくは、「[厳密な名前付きアセンブリの作成と使用](../../../standard/assembly/create-use-strong-named.md)」および「[アセンブリへの遅延署名](../../../standard/assembly/delay-sign.md)」をご覧ください。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
   

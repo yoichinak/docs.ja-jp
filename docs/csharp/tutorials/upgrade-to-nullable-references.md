@@ -3,12 +3,12 @@ title: null 許容参照型を使用して設計する
 description: この高度なチュートリアルでは、null 許容参照型の概要について説明します。 参照値で null がいつ許容されるかに関する設計意図を表すことで、コンパイラで null が許容されるようにします。
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 357ebd13ca4c610f1c65009621ee628a90c70b15
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 0c95065e6c380fab6ba33432a32b3297e78027a3
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105774"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926627"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>チュートリアル: null 許容参照型で既存のコードを移行する
 
@@ -17,6 +17,7 @@ C# 8 には **null 許容参照型**が導入されています。これは、nu
 このチュートリアルでは、次の作業を行う方法について説明します。
 
 > [!div class="checklist"]
+>
 > - コードを操作するときに null 参照のチェックを有効にする。
 > - null 値に関連するさまざまな警告を診断して修正する。
 > - null 許容が有効なコンテキストと null 許容が無効なコンテキストの間のインターフェイスを管理する。

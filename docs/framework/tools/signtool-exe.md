@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e210f14c74efe214be06a1cb901a144dd92af5e0
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 46475cbc8517fc73d8b7fd868c7632e5c85a7726
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168877"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894793"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (署名ツール)
 署名ツールはコマンド ライン ツールで、ファイルにデジタル署名を添付し、ファイルの署名を検証し、ファイルにタイム スタンプを付けます。  
@@ -23,7 +23,7 @@ ms.locfileid: "70168877"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 signtool [command] [options] [file_name | ...]  
 ```  
   
@@ -151,61 +151,61 @@ signtool [command] [options] [file_name | ...]
 ## <a name="examples"></a>使用例  
  カタログ ファイル MyCatalogFileName.cat をシステム コンポーネントおよびドライバー データベースに追加するコマンドを次に示します。 `/u` オプションは、必要に応じて一意の名前を生成し、`MyCatalogFileName.cat` という名前の既存のカタログ ファイルが置き換えられないようにします。  
   
-```  
+```console  
 signtool catdb /v /u MyCatalogFileName.cat  
 ```  
   
  最適な証明書を使用してファイルに自動的に署名するコマンドを次に示します。  
   
-```  
+```console  
 signtool sign /a MyFile.exe  
 ```  
   
  パスワードで保護された PFX ファイルに格納されている証明書を使用してファイルにデジタル署名するコマンドを次に示します。  
   
-```  
+```console  
 signtool sign /f MyCert.pfx /p MyPassword MyFile.exe  
 ```  
   
  ファイルにデジタル署名してタイム スタンプを付けるコマンドを次に示します。 ファイルへの署名に使用する証明書は、PFX ファイルに格納されています。  
   
-```  
+```console  
 signtool sign /f MyCert.pfx /t http://timestamp.digicert.com MyFile.exe  
 ```  
   
  `My` ストアにある件名が `My Company Certificate` の証明書を使用してファイルに署名するコマンドを次に示します。  
   
-```  
+```console  
 signtool sign /n "My Company Certificate" MyFile.exe  
 ```  
   
  ActiveX コントロールに署名して、ユーザーがコントロールをインストールするように求められるときに Internet Explorer に表示される情報を指定するコマンドを次に示します。  
   
-```  
+```console  
 Signtool sign /f MyCert.pfx /d: "MyControl" /du http://www.example.com/MyControl/info.html MyControl.exe  
 ```  
   
  デジタル署名済みのファイルにタイム スタンプを付けるコマンドを次に示します。  
   
-```  
+```console  
 signtool timestamp /t http://timestamp.digicert.com MyFile.exe  
 ```  
   
  ファイルが署名済みであることを検証するコマンドを次に示します。  
   
-```  
+```console  
 signtool verify MyFile.exe  
 ```  
   
  カタログで署名されている可能性があるシステム ファイルを検証するコマンドを次に示します。  
   
-```  
+```console  
 signtool verify /a SystemFile.dll  
 ```  
   
  `MyCatalog.cat` という名前のカタログで署名されているシステム ファイルを検証するコマンドを次に示します。  
   
-```  
+```console  
 signtool verify /c MyCatalog.cat SystemFile.dll  
 ```  
   

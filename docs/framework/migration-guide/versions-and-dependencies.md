@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e4e3b1768086a1c57979a4c74643036294299a3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c9f7a0bc3a7a41a77db3c90c2f88fb5ddfd7bfa0
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787753"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971075"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework のバージョンおよび依存関係
 .NET Framework の各バージョンには、共通言語ランタイム (CLR)、基底クラス ライブラリ、およびその他のマネージド ライブラリが含まれています。 このトピックでは、.NET Framework の各バージョンの主要な機能について説明し、基になっている CLR のバージョンおよび関連する開発環境に関する情報と、Windows オペレーティング システムでインストールされる .NET Framework のバージョンを示します。  
@@ -68,7 +68,7 @@ ms.locfileid: "70787753"
   
 ## <a name="targeting-and-running-apps-for-older-versions"></a>以前のバージョンのアプリの対象化と実行  
 
-.NET Framework 2.0、3.0 および 3.5 は、同じバージョンの CLR (CLR 2.0) でビルドされています。 これらのバージョンは 1 つのインストールの連続したレイヤーを表します。 各バージョンは、以前のバージョンの上にインクリメンタル方式でビルドされます。 コンピューターでバージョン 2.0、3.0、および 3.5 を side-by-side で実行することはできません。 バージョン 3.5 をインストールすると、2.0 と 3.0 のレイヤーが自動的に取得され、バージョン 2.0、3.0、および 3.5 を対象としてビルドされたアプリケーションはすべて、バージョン 3.5 で実行できます。 ただし、.NET Framework 4 ではこのレイヤーによる方法は終了しており、以降のリリース (.NET Framework 4.5、4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7. 4.7.1、4.7.2、4.8) も単独インストールの連続するレイヤーを表します。  NET Framework 4 以降では、インプロセスの side-by-side ホスティングを使用して、1 つのプロセスの中で複数のバージョンの CLR を実行できます。 詳細については、「[アセンブリと side-by-side 実行](../app-domains/assemblies-and-side-by-side-execution.md)」を参照してください。  
+.NET Framework 2.0、3.0 および 3.5 は、同じバージョンの CLR (CLR 2.0) でビルドされています。 これらのバージョンは 1 つのインストールの連続したレイヤーを表します。 各バージョンは、以前のバージョンの上にインクリメンタル方式でビルドされます。 コンピューターでバージョン 2.0、3.0、および 3.5 を side-by-side で実行することはできません。 バージョン 3.5 をインストールすると、2.0 と 3.0 のレイヤーが自動的に取得され、バージョン 2.0、3.0、および 3.5 を対象としてビルドされたアプリケーションはすべて、バージョン 3.5 で実行できます。 ただし、.NET Framework 4 ではこのレイヤーによる方法は終了しており、以降のリリース (.NET Framework 4.5、4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7. 4.7.1、4.7.2、4.8) も単独インストールの連続するレイヤーを表します。  NET Framework 4 以降では、インプロセスの side-by-side ホスティングを使用して、1 つのプロセスの中で複数のバージョンの CLR を実行できます。 詳細については、「[アセンブリと side-by-side 実行](../../standard/assembly/side-by-side-execution.md)」を参照してください。  
   
  さらに、アプリケーションがバージョン 2.0、3.0、または 3.5 を対象とする場合、ユーザーがアプリケーションを実行する前に、Windows 8、Windows 8.1、または Windows 10 のコンピューター上で .NET Framework 3.5 を有効にするように求められる場合があります。 詳細については、[Windows 10、Windows 8.1、Windows 8 への .NET Framework 3.5 のインストール](../install/dotnet-35-windows-10.md)に関するページを参照してください。  
   

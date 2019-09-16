@@ -5,12 +5,12 @@ author: oliag
 ms.author: mairaw
 ms.date: 04/26/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2d97921a3e98d85ac1e58c7686eadef3e979211f
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 584f9f952148ebf72c5d5aaed64a2a078be00ce5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107380"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929358"
 ---
 # <a name="net-api-analyzer"></a>.NET API アナライザー
 
@@ -30,6 +30,7 @@ API アナライザーは、NuGet パッケージ [Microsoft.DotNet.Analyzers.Co
 ### <a name="what-are-deprecated-apis"></a>非推奨の API とは
 
 .NET ファミリは大規模な製品のセットであり、より適切に顧客のニーズに対応するため頻繁にアップグレードされています。 当然、API が廃止されたり新しいものに置き換えられたりすることがあります。 より優れた代替 API が存在する API は、非推奨と見なされます。 API が非推奨であり使ってはならないことを通知する手段の 1 つは、<xref:System.ObsoleteAttribute> 属性で API をマークすることです。 この方法の欠点は、すべての非推奨 API に対して診断 ID が 1 つしかないことです (C# の場合、[CS0612](../../csharp/misc/cs0612.md))。 これによって、次のことが起こります。
+
 - ケースごとに専用のドキュメントを作成できません。
 - 特定のカテゴリの警告を抑制できません。 すべてを抑制するか、まったく抑制しないかです。
 - 新しい非推奨 API をユーザーに通知するには、参照されているアセンブリまたは対象のパッケージを更新する必要があります。

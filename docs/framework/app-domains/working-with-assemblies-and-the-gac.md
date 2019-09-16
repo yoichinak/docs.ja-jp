@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 62760cb9fe5832ee018ebdebf6275ea61691c738
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9f45f40cd66c63e660b9091c726533dcfe8db086
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927801"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971589"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>アセンブリとグローバル アセンブリ キャッシュの使用
 あるアセンブリを複数のアプリケーションで共有する場合は、そのアセンブリをグローバル アセンブリ キャッシュ内にインストールできます。 共通言語ランタイムをインストールしている各コンピューターは、このコードをコンピューター全体で使用できます。 グローバル アセンブリ キャッシュは、そのコンピューター上の複数のアプリケーションで共有するように指定されたアセンブリを格納します。 グローバル アセンブリ キャッシュ内にインストールされるアセンブリは、厳密な名前を持つ必要があります。  
@@ -46,7 +46,7 @@ ms.locfileid: "69927801"
  アセンブリのグローバル アセンブリ キャッシュへのインストールを明示的に避けたい場合もあります。 アプリケーションを構成するアセンブリの 1 つをグローバル アセンブリ キャッシュに配置した場合は、アプリケーション ディレクトリをコピーする XCOPY を使用してアプリケーションをレプリケートしたりインストールしたりすることはできなくなります。 この場合は、グローバル アセンブリ キャッシュ内のアセンブリも移動する必要があります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [方法: アセンブリをグローバル アセンブリ キャッシュにインストールする](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
+ [方法: アセンブリをグローバル アセンブリ キャッシュにインストールする](install-assembly-into-gac.md)  
  アセンブリをグローバル アセンブリ キャッシュにインストールする方法について説明します。  
   
  [方法: グローバル アセンブリ キャッシュの内容を表示する](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
@@ -59,17 +59,17 @@ ms.locfileid: "69927801"
  サービス コンポーネント (マネージド COM+ コンポーネント) をグローバル アセンブリ キャッシュに配置する必要がある理由について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
- [アセンブリの作成](../../../docs/framework/app-domains/create-assemblies.md)  
+ [アセンブリの作成](../../standard/assembly/create.md)  
  アセンブリの作成の概要を説明します。  
   
  [グローバル アセンブリ キャッシュ](../../../docs/framework/app-domains/gac.md)  
  グローバル アセンブリ キャッシュについて説明します。  
   
- [方法: アセンブリの内容を表示する](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
+ [方法: アセンブリの内容を表示する](../../standard/assembly/view-contents.md)  
  [Ildasm.exe (IL 逆アセンブラー)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) を使用して、アセンブリ内の MSIL (Microsoft Intermediate Language) 情報を表示する方法について説明します。  
   
  [ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  共通言語ランタイムが、アプリケーションを構成するアセンブリを検出して読み込む方法について説明します。  
   
- [アセンブリを使用したプログラミング](../../../docs/framework/app-domains/programming-with-assemblies.md)  
+ [アセンブリを使用したプログラミング](../../standard/assembly/program.md)  
  マネージド アプリケーションを構成するブロックであるアセンブリについて説明します。

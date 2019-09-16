@@ -2,12 +2,12 @@
 title: リフレクション (C#)
 ms.date: 07/20/2015
 ms.assetid: f80a2362-953b-4e8e-9759-cd5f334190d4
-ms.openlocfilehash: 9b4322d83ad43cd3e49647df49c15bb5c917e1be
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7906ca6f02a369e6f4d51f11f96616b6a89f48c5
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924091"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971660"
 ---
 # <a name="reflection-c"></a>リフレクション (C#)
 リフレクションは、アセンブリ、モジュール、および型を記述する (<xref:System.Type> 型の) オブジェクトを提供します。 リフレクションを使用すると、動的に型のインスタンスを作成したり、作成したインスタンスを既存のオブジェクトにバインドしたり、さらに既存のオブジェクトから型を取得してそのオブジェクトのメソッドを呼び出したり、フィールドやプロパティにアクセスしたりできます。 コードで属性を使用している場合は、リフレクションを使用してそれらにアクセスできます。 詳細については、「[属性](../../../standard/attributes/index.md)」を参照してください。  
@@ -52,7 +52,7 @@ System.Console.WriteLine(info);
 - 遅延バインディングを実行するために、実行時に作成された型でメソッドにアクセスする。 「[型の動的な読み込みおよび使用](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md)」を参照してください。  
   
 ## <a name="related-sections"></a>関連項目  
- 詳細:  
+ 詳細情報  
   
 - [リフレクション](../../../framework/reflection-and-codedom/reflection.md)  
   
@@ -67,4 +67,4 @@ System.Console.WriteLine(info);
 ## <a name="see-also"></a>関連項目
 
 - [C# プログラミング ガイド](../index.md)
-- [共通言語ランタイムのアセンブリ](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [.NET のアセンブリ](../../../standard/assembly/index.md)

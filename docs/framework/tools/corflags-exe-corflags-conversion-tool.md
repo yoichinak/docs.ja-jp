@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ef10ba566842db26ed8c29643535c41aaca9806
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 4228da6efe22091c86de95d846c14f504d51457f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378658"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851290"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (CorFlags 変換ツール)
 CorFlags 変換ツールを使用して、ポータブル実行可能 (PE) ファイル イメージのヘッダー内の CorFlags セクションを設定できます。  
@@ -24,7 +24,7 @@ CorFlags 変換ツールを使用して、ポータブル実行可能 (PE) フ�
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 CorFlags.exe assembly [options]  
 ```  
   

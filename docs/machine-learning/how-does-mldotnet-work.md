@@ -6,12 +6,12 @@ ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: af91819c66a2376f446d0f18537d2f6e718b446e
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: d49a4bdfec133fe805bc9d534e04edf2f9ca5726
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104893"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929409"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>ML.NET の概要とそのしくみ
 
@@ -82,6 +82,7 @@ ML.NET を使用して作成できる予測の種類の例を次に示します�
 ## <a name="code-workflow"></a>コードのワークフロー
 
 次の図は、アプリケーション コードの構造とモデル開発の反復処理を表しています。
+
 - トレーニング データを収集して **IDataView** オブジェクトに読み込む
 - 特徴を抽出し、機械学習アルゴリズムを適用するように操作のパイプラインを指定する
 - パイプラインに対して **Fit()** を呼び出してモデルをトレーニングする
@@ -98,7 +99,7 @@ ML.NET を使用して作成できる予測の種類の例を次に示します�
 
 ML.NET モデルは、予測される出力に到達するために入力データに対して実行される変換を含むオブジェクトです。
 
-### <a name="basic"></a>基本的
+### <a name="basic"></a>Basic
 
 最も基本的なモデルは、前述の住宅価格の例のように、ある連続的な数量が別の連続的な数量と比例する 2 次元の線形回帰です。 
 
@@ -193,7 +194,7 @@ ML.NET アプリケーションは <xref:Microsoft.ML.MLContext> オブジェク
 
 このスニペットで、`Concatenate` と `Sdca` はどちらもカタログ内のメソッドです。 それぞれ、パイプラインに追加される [IEstimator](xref:Microsoft.ML.IEstimator%601) オブジェクトが作成されます。
 
-この時点では、オブジェクトが作成されるだけです。 実行はされません。
+この時点では、オブジェクトが作成されるだけです。 実行は行われません。
 
 ### <a name="train-the-model"></a>モデルをトレーニングする
 
@@ -277,4 +278,4 @@ DataView オブジェクトの重要なプロパティは、**遅延**評価さ�
 
 また、[ハウツー ガイド](./how-to-guides/index.md)では、特定のトピックについてさらに詳しく学習することができます。
 
-より真剣な意欲がある場合は、[API リファレンスのドキュメント](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet)を参照してください。
+さらに詳しく学習するには、[API リファレンスのドキュメント](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet)を参照してください。

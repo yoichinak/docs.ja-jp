@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8d51149c01b4c8018609ca9313cc4eea2afbb5a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f32924c8c104f37fdb98a2a9ff104b6f6c19e478
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946567"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853841"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>マネージド コードでのプロトタイプの作成
 このトピックは、アンマネージド 関数にアクセスする方法について説明し、マネージド コードでメソッドの定義の注釈を設定するいくつかの属性フィールドを紹介しています。 プラットフォーム呼び出しで使用する .NET ベースの宣言を作成する方法を示す例については、「[プラットフォーム呼び出しによるデータのマーシャリング](marshaling-data-with-platform-invoke.md)」を参照してください。  
@@ -189,7 +189,7 @@ class PInvokeScenario
   
  次の COM 相互運用機能のインターフェイスの宣言は、前のセクションのプラットフォーム呼び出しの例と同様に、`Assert`、`Deny`、および `PermitOnly` の修飾子を無視します。  
   
-```  
+```csharp
 [ComImport, Guid("12345678-43E6-43c9-9A13-47F40B338DE0")]  
 interface IAssertStubsItf  
 {  
@@ -220,7 +220,7 @@ interface IAssertStubsItf
   
  さらに、次の例に示すように、`Demand` 修飾子は COM 相互運用機能のインターフェイスの宣言のシナリオでは許可されません。  
   
-```  
+```csharp  
 [ComImport, Guid("12345678-43E6-43c9-9A13-47F40B338DE0")]  
 interface IDemandStubsItf  
 {  

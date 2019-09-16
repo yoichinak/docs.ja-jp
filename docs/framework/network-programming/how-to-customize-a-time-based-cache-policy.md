@@ -9,12 +9,12 @@ helpviewer_keywords:
 - customizing time-based cache policies
 - cache [.NET Framework], time-based policies
 ms.assetid: 8d84f936-2376-4356-9264-03162e0f9279
-ms.openlocfilehash: 457de16337fd2a37dad9042c770680ba5ad27a0d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5df070bb2cfef42d60247cad39f2a2f76963bae8
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624605"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894741"
 ---
 # <a name="how-to-customize-a-time-based-cache-policy"></a>方法: 時間ベースのキャッシュ ポリシーをカスタマイズする
 時間ベースのキャッシュ ポリシーを作成する場合、最大有効期間、最小鮮度、最大期限延長、またはキャッシュ同期日付の値を指定することで、キャッシュの動作をカスタマイズできます。 <xref:System.Net.Cache.HttpRequestCachePolicy> オブジェクトは、これらの値の有効な組み合わせを指定できるようにする複数のコンストラクターを提供します。  
@@ -45,7 +45,7 @@ ms.locfileid: "64624605"
   
  出力は次のようになります。  
   
-```  
+```output
 When: 1/14/2004 8:07:30 AM  
 Level:Default CacheSyncDate:1/14/2004 8:07:30 AM  
 ```  
@@ -74,11 +74,13 @@ Level:Default CacheSyncDate:1/14/2004 8:07:30 AM
   
  呼び出しと出力例を以下に示します。  
   
-```  
+```csharp
 CreateMinFreshPolicy(new TimeSpan(1,0,0));  
 ```  
+
+ 出力は次のようになります。
   
-```  
+```output
 Level:Default MinFresh:3600  
 ```  
   
@@ -106,11 +108,13 @@ Level:Default MinFresh:3600
   
  呼び出しと出力例を以下に示します。  
   
-```  
+```csharp
 CreateFreshAndAgePolicy(new TimeSpan(5,0,0), new TimeSpan(10,0,0));  
 ```  
+
+出力は次のようになります。
   
-```  
+```output
 Level:Default MaxAge:36000 MinFresh:18000  
 ```  
   

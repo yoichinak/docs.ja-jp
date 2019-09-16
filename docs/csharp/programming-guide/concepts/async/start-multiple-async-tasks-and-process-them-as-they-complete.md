@@ -2,12 +2,12 @@
 title: 完了時の非同期タスクの処理
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: 35b4e42d7da5b8bc9069083ffc47d990bcb637a8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 464e6be108eef86a023a0bad225d2ad12bfb2c3e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595586"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926742"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>完了時での複数の非同期タスクとプロセスの実行 (C#)
 
@@ -81,7 +81,7 @@ IEnumerable<Task<int>> downloadTasksQuery = from url in urlList select ProcessUR
 ダウンロードされた長さが常に同じ順序では表示されないことを確認するために、プログラムを複数回実行します。
 
 > [!CAUTION]
-> ループで `WhenAny` を使って、例に示すように、いくつかのタスクを格納する問題を解決できます。 ただし、多数のタスクが処理する場合、他のアプローチがより効率的です。 詳細と例については、「[Processing Tasks as they complete](https://blogs.msdn.microsoft.com/pfxteam/2012/08/02/processing-tasks-as-they-complete/)」 (完了したタスクを処理する) を参照してください。
+> ループで `WhenAny` を使って、例に示すように、いくつかのタスクを格納する問題を解決できます。 ただし、多数のタスクが処理する場合、他のアプローチがより効率的です。 詳細と例については、「[Processing Tasks as they complete](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/)」 (完了したタスクを処理する) を参照してください。
 
 ## <a name="complete-example"></a>コード例全体
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: 87ca9b75d641035b268c6737822f198d1eea87e3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ad15c0d4bd69417fffd8bcad0805a3b78321e05b
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777509"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894944"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework でのトランスポート層セキュリティ (TLS) のベスト プラクティス
 
@@ -213,7 +213,7 @@ HTTP ネットワーク (<xref:System.Net.ServicePointManager>) または TCP �
 
 次の _.REG_ ファイルは、レジストリ キーとそのバリエーションを最も安全な値に設定します。
 
-```
+```text
 Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v2.0.50727]

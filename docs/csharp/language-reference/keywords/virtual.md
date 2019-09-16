@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-ms.openlocfilehash: 2568eed5a889f6c03e237875194b8adcb9334ef7
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 586e50818fc8ceaad5ca1925c0636b31015d81d4
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401809"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925371"
 ---
 # <a name="virtual-c-reference"></a>virtual (C# リファレンス)
 
@@ -64,10 +64,6 @@ public Cylinder(double r, double h): base(r, h) {}
 
 ## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
-- [修飾子](modifiers.md)
-- [C# のキーワード](index.md)
 - [ポリモーフィズム](../../programming-guide/classes-and-structs/polymorphism.md)
 - [abstract](abstract.md)
 - [override](override.md)

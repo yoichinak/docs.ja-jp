@@ -3,12 +3,12 @@ title: C# で既定のインターフェイス メンバーを使用してイン
 description: この高度なチュートリアルでは、既存のインターフェイスを実装するすべてのクラスと構造体を損なうことなく、そのインターフェイスの定義に新しい機能を安全に追加する方法について説明します。
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: 9e0e4324b2474292064a760db9727d7dec6561d4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 6a723a116d420dd43d2adeef98b824445dd4f0d7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252918"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926701"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>チュートリアル: C# 8.0 で既定のインターフェイス メンバーを使用してインターフェイスを更新する
 
@@ -17,6 +17,7 @@ ms.locfileid: "70252918"
 このチュートリアルでは、次の作業を行う方法について説明します。
 
 > [!div class="checklist"]
+>
 > * 実装を含むメソッドを追加して、インターフェイスを安全に拡張します。
 > * パラメーター化された実装を作成して、柔軟性を高めます。
 > * 実装者がオーバーライドの形でより具体的な実装を提供できるようにします。

@@ -3,12 +3,12 @@ title: 式ツリーをサポートするフレームワークの型
 description: 式ツリーをサポートするフレームワークの型、式ツリーの作成、式ツリー API の操作テクニックについて説明します。
 ms.date: 06/20/2016
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: c18bbfb1273156a4b070d1f195d9e823256fde9d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d11a13000019faf2ab5c35d41d48fa199e901d1c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59198466"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925970"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>式ツリーをサポートするフレームワークの型
 
@@ -58,6 +58,7 @@ var addition = Expression.Add(one, two);
 
 ## <a name="navigating-the-apis"></a>API の操作
 ほぼすべての C# 言語の構文要素に対してマップされる式ノード型がそれぞれ存在します。 各型には、その型の言語要素に特有のメソッドがあります。 一度に覚えておくべきことがたくさんあります。 ここではすべてを記憶しようとするのではなく、式ツリーを操作するときにふだん使うテクニックを紹介します。
+
 1. `ExpressionType` 列挙型のメンバーを調べて、検証するノードを特定します。 式ツリーをたどって理解するときに、この方法が実に役立ちます。
 2. `Expression` クラスの静的メンバーを調べて、式を作成します。 これらのメソッドでは、その子ノードから任意の式の型を作成できます。
 3. `ExpressionVisitor` クラスを調べて、変更された式ツリーを作成します。

@@ -3,16 +3,17 @@ title: C# 7.0 の新機能 - C# ガイド
 description: C# 言語のバージョン 7.0 での新機能の概要を説明します。
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 148ecdf7a3a99ac73132593272ecff3a5bb4195e
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 0f26a9647503ebb667d961fefaa05a25a71ec6f5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105715"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926571"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 の新機能
 
 C# 7.0 では、C# 言語に多くの新機能が追加されます。
+
 - [`out` 変数](#out-variables)
   - `out` の値は、それが使用されるメソッドの引数としてインラインで宣言できます。
 - [タプル](#tuples)

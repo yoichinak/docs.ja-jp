@@ -4,12 +4,12 @@ description: 転移学習と ML.NET を使用して画像分類 TensorFlow モ�
 ms.date: 07/09/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 65f94fa5e725703d79d0dddae761cbfbc3f89e0e
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: eb6e3d3f3a33aa7360802ce1bc6c16532539c828
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67804757"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929238"
 ---
 # <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>チュートリアル: 転移学習と ML.NET を使用して TensorFlow 画像分類子を再トレーニングする
 
@@ -19,6 +19,7 @@ ms.locfileid: "67804757"
 
 このチュートリアルでは、次の作業を行う方法について説明します。
 > [!div class="checklist"]
+>
 > * 問題を把握する
 > * トレーニング済みのモデルを再利用して調整する
 > * 画像を分類する
@@ -49,7 +50,7 @@ ms.locfileid: "67804757"
 
 [ディープ ラーニング](https://en.wikipedia.org/wiki/Deep_learning)は、Computer Vision や音声認識などの分野に革命を起こしている Machine Learning のサブセットです。
 
-ディープ ラーニング モデルは、複数の学習レイヤーを含む多数の[ラベル付きデータ](https://en.wikipedia.org/wiki/Labeled_data)と[ニューラル ネットワーク](https://en.wikipedia.org/wiki/Artificial_neural_network)を使用してトレーニングされます。 ディープ ラーニングは、
+ディープ ラーニング モデルは、複数の学習レイヤーを含む多数の[ラベル付きデータ](https://en.wikipedia.org/wiki/Labeled_data)と[ニューラル ネットワーク](https://en.wikipedia.org/wiki/Artificial_neural_network)を使用してトレーニングされます。 ディープ ラーニング:
 
 * Computer Vision などの一部のタスクでより効果的に機能します。
 
@@ -69,8 +70,8 @@ ms.locfileid: "67804757"
 >[!Note]
 > 上の画像は Wikimedia Commons に属し、次のように属性が付けられています。
 >
-> * "220px-Pepperoni_pizza.jpg" パブリック ドメイン、 https://commons.wikimedia.org/w/index.php?curid=79505、
-> * "119px-Nalle_-_a_small_brown_teddy_bear.jpg" By [Jonik](https://commons.wikimedia.org/wiki/User:Jonik) - 自己撮影、CC BY-SA 2.0、 https://commons.wikimedia.org/w/index.php?curid=48166。
+> * "220px-Pepperoni_pizza.jpg" パブリック ドメイン、 https://commons.wikimedia.org/w/index.php?curid=79505 、
+> * "119px-Nalle_-_a_small_brown_teddy_bear.jpg" By [Jonik](https://commons.wikimedia.org/wiki/User:Jonik) - 自己撮影、CC BY-SA 2.0、 https://commons.wikimedia.org/w/index.php?curid=48166 。
 > * "193px-Broodrooster.jpg" By [M.Minderhoud](https://nl.wikipedia.org/wiki/Gebruiker:Michiel1972) - 自分の作品、CC BY-SA 3.0、 https://commons.wikimedia.org/w/index.php?curid=27403
 
 転移学習には、*すべてのレイヤーの再トレーニング*、*最後から 2 番目のレイヤー*など、いくつかの戦略があります。 このチュートリアルでは、"*最後から 2 番目のレイヤー戦略*" の使用方法について説明します。 "*最後から 2 番目のレイヤー戦略*" は、トレーニング済みのモデルを再利用して特定の問題を解決します。 次に、この戦略では、そのモデルの最後のレイヤーを再トレーニングして新しい問題を解決します。 トレーニング済みのモデルを新しいモデルの一部として再利用すると、時間とリソースを大幅に節約できます。
@@ -93,7 +94,7 @@ ms.locfileid: "67804757"
 
 * 食品
 * おもちゃ
-* 電化製品
+* アプライアンス
 
 レイヤーは、[多項ロジスティック回帰アルゴリズム](https://en.wikipedia.org/wiki/Multinomial_logistic_regression)を使用して正しいカテゴリを可能な限り早く見つけます。 このアルゴリズムでは、確率を使用して答えを決定し、正しいカテゴリに 1 つの値を与え、他のカテゴリに 0 の値を与えます。  
 
@@ -128,7 +129,7 @@ toaster2.png    appliance
 
 2. **Microsoft.ML NuGet パッケージ**をインストールします。
 
-    ソリューション エクスプローラーで、プロジェクトを右クリックし、**[NuGet パッケージの管理]** を選択します。 [パッケージ ソース] として "nuget.org" を選択し、[参照] タブを選択し、"**Microsoft.ML**" を検索します。 **[バージョン]** ドロップダウンをクリックし、一覧から **1.0.0** パッケージを選択し、**[インストール]** ボタンを選択します。 **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、**[ライセンスの同意]** ダイアログの **[同意する]** を選択します。 **Microsoft.ML.ImageAnalytics v1.0.0** と **Microsoft.ML.TensorFlow v0.12.0** について、これらの手順を繰り返します。
+    ソリューション エクスプローラーで、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。 [パッケージ ソース] として "nuget.org" を選択し、[参照] タブを選択し、"**Microsoft.ML**" を検索します。 **[バージョン]** ドロップダウンをクリックし、一覧から **1.0.0** パッケージを選択し、 **[インストール]** ボタンを選択します。 **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、 **[ライセンスの同意]** ダイアログの **[同意する]** を選択します。 **Microsoft.ML.ImageAnalytics v1.0.0** と **Microsoft.ML.TensorFlow v0.12.0** について、これらの手順を繰り返します。
 
 ### <a name="prepare-your-data"></a>データを準備する
 
@@ -142,7 +143,7 @@ toaster2.png    appliance
 
    ![Inception ディレクトリの内容](./media/image-classification/inception-files.png)
 
-5. ソリューション エクスプローラーで、資産ディレクトリとサブディレクトリ内の各ファイルを右クリックし、**[プロパティ]** を選択します。 **[詳細設定]** で、**[出力ディレクトリにコピー]** の値を **[新しい場合はコピーする]** に変更します。
+5. ソリューション エクスプローラーで、資産ディレクトリとサブディレクトリ内の各ファイルを右クリックし、 **[プロパティ]** を選択します。 **[詳細設定]** で、 **[出力ディレクトリにコピー]** の値を **[新しい場合はコピーする]** に変更します。
 
 ### <a name="create-classes-and-define-paths"></a>クラスを作成してパスを定義する
 
@@ -170,9 +171,9 @@ toaster2.png    appliance
 
 入力データと予測のために、いくつかのクラスを作成します。 プロジェクトに新しいクラスを追加します。
 
-1. **ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[追加]** > **[新しい項目]** を選択します。
+1. **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[追加]**  >  **[新しい項目]** を選択します。
 
-1. **[新しい項目の追加]** ダイアログ ボックスで、**[クラス]** を選択し、**[名前]** フィールドを「*ImageData.cs*」に変更します。 次に **[追加]** を選択します。
+1. **[新しい項目の追加]** ダイアログ ボックスで、 **[クラス]** を選択し、 **[名前]** フィールドを「*ImageData.cs*」に変更します。 次に **[追加]** を選択します。
 
     コード エディターで *ImageData.cs* ファイルが開きます。 次の `using` ステートメントを *ImageData.cs* の先頭に追加します。
 
@@ -189,9 +190,9 @@ toaster2.png    appliance
 
 `ImagePrediction` のプロジェクトに新しいクラスを追加します。
 
-1. **ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[追加]** > **[新しい項目]** を選択します。
+1. **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[追加]**  >  **[新しい項目]** を選択します。
 
-1. **[新しい項目の追加]** ダイアログ ボックスで、**[クラス]** を選択し、**[名前]** フィールドを *ImagePrediction.cs* に変更します。 次に **[追加]** を選択します。
+1. **[新しい項目の追加]** ダイアログ ボックスで、 **[クラス]** を選択し、 **[名前]** フィールドを *ImagePrediction.cs* に変更します。 次に **[追加]** を選択します。
 
     コード エディターに *ImagePrediction.cs* ファイルが開きます。 *ImagePrediction.cs* の先頭にある `System.Collections.Generic` と `System.Text` `using` の両方のステートメントを削除します。
 
@@ -474,12 +475,13 @@ C:\Program Files\dotnet\dotnet.exe (process 4304) exited with code 0.
 Press any key to close this window . . .
 ```
 
-おめでとうございます!  これで、ML.NET でトレーニング済みの `TensorFlow` モデルを再利用して画像分類用の機械学習モデルを構築できました。
+おめでとうございます! これで、ML.NET でトレーニング済みの `TensorFlow` モデルを再利用して画像分類用の機械学習モデルを構築できました。
 
 このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TransferLearningTF) リポジトリで確認できます。
 
 このチュートリアルでは、次の作業を行う方法を学びました。
 > [!div class="checklist"]
+>
 > * 問題を把握する
 > * トレーニング済みのモデルを再利用して調整する
 > * 読み込み済みのモデルを使用して画像を分類する
