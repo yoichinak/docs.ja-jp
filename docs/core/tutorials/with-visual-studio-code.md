@@ -4,12 +4,12 @@ description: Visual Studio Code を使用した、C# で初めての .NET Core �
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: 910545a99f9d014ae572fbe95c93cdb44a69db99
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 03a2edcbb3414cfd63006603424a3ca1eade528f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105104"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849455"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# および Visual Studio Code の使用を開始する
 
@@ -18,7 +18,7 @@ ms.locfileid: "70105104"
 ## <a name="prerequisites"></a>必須コンポーネント
 
 1. [Visual Studio Code](https://code.visualstudio.com/) のインストール。
-2. [.NET Core SDK](https://www.microsoft.com/net/download/core) のインストール。
+2. [.NET Core SDK](https://dotnet.microsoft.com/download) のインストール。
 3. Visual Studio Code の [C# 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)のインストール。 Visual Studio Code に拡張機能をインストールする方法については、[VS Code Extension Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery) を参照してください。
 
 ## <a name="hello-world"></a>Hello World

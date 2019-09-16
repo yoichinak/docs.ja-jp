@@ -14,12 +14,12 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: d9a377941f54dbd42ae6eaec6c21a93dd48673a1
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 37133a90ae5bfa18ae17c279caff40d0d30ea25c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254013"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928924"
 ---
 # <a name="metadata-and-markdown-template"></a>メタデータとマークダウン テンプレート
 
@@ -445,6 +445,7 @@ Include を使用して、あるファイルのマークダウンを別のファ
 リストには、カスタム スタイルを使用できます。 緑色のチェック マークが付けられたリストを表示できます。
 
 > [!div class="checklist"]
+>
 > - .NET Core アプリの作成方法
 > - Microsoft.XmlSerializer.Generator パッケージへの参照を追加する方法
 > - MyApp.csproj を編集して依存関係を追加する方法
@@ -463,8 +464,9 @@ Include を使用して、あるファイルのマークダウンを別のファ
 ### <a name="selectors"></a>セレクター
 
 > [!div class="op_single_selector"]
-- [macOS](../docs/core/tutorials/using-on-macos.md)
-- [Windows](../docs/core/tutorials/with-visual-studio.md)
+>
+> - [macOS](../docs/core/tutorials/using-on-macos.md)
+> - [Windows](../docs/core/tutorials/with-visual-studio.md)
 
 使用中のセレクターの例は、[Azure ドキュメント](https://docs.microsoft.com/azure/expressroute/expressroute-howto-circuit-classic)で確認できます。
 

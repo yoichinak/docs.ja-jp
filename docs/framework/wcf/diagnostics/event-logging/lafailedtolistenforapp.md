@@ -2,12 +2,12 @@
 title: LAFailedToListenForApp
 ms.date: 03/30/2017
 ms.assetid: 8ef16d4e-fab7-4ffc-829b-1e3163e72337
-ms.openlocfilehash: 091ed8572cf2b4c81bba9e55299fd18771461bc2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f53eec955d451ec01de2f9a66a863a95c1019f65
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797785"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991631"
 ---
 # <a name="lafailedtolistenforapp"></a>LAFailedToListenForApp
 Id:160  
@@ -17,7 +17,7 @@ Id:160
  [カテゴリ]:Smsvchost.exe  
   
 ## <a name="description"></a>説明  
- このイベントは、指定されたサイトをリッスンしようとしたときに、指定されたプロトコルの指定されたアクティブ化サービスでエラーが発生したため、このサイトのプロトコルが一時的に無効になっていることを示します。このイベントには、URL、状態、例外、プロセス名、およびプロセス ID が表示されます。  
+ このイベントは、指定されたサイトをリッスンしようとして、指定されたプロトコルの指定したアクティブ化サービスでエラーが発生したため、サイトのプロトコルが一時的に無効になっていることを示します。 イベントには、URL、状態、例外、プロセス名、およびプロセス ID が表示されます。  
   
 ## <a name="see-also"></a>関連項目
 
