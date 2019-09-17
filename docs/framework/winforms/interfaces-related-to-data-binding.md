@@ -12,146 +12,146 @@ helpviewer_keywords:
 - data binding [Windows Forms], interfaces
 - IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
-ms.openlocfilehash: 591b76ca6b5cd3a9180487c79293d5fc3b7991af
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 9f102b584d2ed0b5a9d2bbb0e7ce3f7871ec40b2
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882342"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046372"
 ---
 # <a name="interfaces-related-to-data-binding"></a>データ連結に関連するインターフェイス
 
-Ado.net では、アプリケーションを使用するデータのバインドのニーズに合わせてさまざまなデータ構造を作成できます。 Windows フォームでデータを提供または使用するための独自のクラスを作成することもできます。 これらのオブジェクトは、基本的なデータ バインディングから、デザイン時サポートの提供、エラー チェック、変更通知、データ自体に加えられた変更の構造化されたロールバックのサポートに至るまで、さまざまなレベルの機能を提供することができ、複雑さに対応できます。
+ADO.NET を使用すると、アプリケーションのバインドニーズと使用するデータに合わせて、さまざまなデータ構造を作成できます。 Windows フォームでデータを提供または使用するための独自のクラスを作成することもできます。 これらのオブジェクトは、基本的なデータ バインディングから、デザイン時サポートの提供、エラー チェック、変更通知、データ自体に加えられた変更の構造化されたロールバックのサポートに至るまで、さまざまなレベルの機能を提供することができ、複雑さに対応できます。
 
 ## <a name="consumers-of-data-binding-interfaces"></a>データ バインディング インターフェイスのコンシューマー
 
-以下のセクションでは、インターフェイス オブジェクトの 2 つのグループについて説明します。 1 つ目のグループでは、データ ソース作成者がデータ ソースに実装するインターフェイスを示します。 これらのインターフェイスは、データ ソース コンシューマーが使用するように設計されています。ほとんどの場合、データ ソース コンシューマーは、Windows フォーム コントロールまたはコンポーネントです。 2 つ目のグループでは、コンポーネント作成者向けに設計されたインターフェイスを示します。 コンポーネント作成者は、Windows フォーム データ バインディング エンジンが使用する、データ バインディングをサポートするコンポーネントを作成するときにこれらのインターフェイスを使用します。 フォームに関連付けられたクラス内でこれらのインターフェイスを実装することで、データ バインディングを実現できます。各ケースは、データの操作を可能にするインターフェイスを実装するクラスを示しています。 Visual Studio アプリケーションの迅速な開発 (RAD) データ デザイン エクスペリエンス ツールでは、この機能のこと既に活用します。
+以下のセクションでは、インターフェイス オブジェクトの 2 つのグループについて説明します。 1 つ目のグループでは、データ ソース作成者がデータ ソースに実装するインターフェイスを示します。 これらのインターフェイスは、データ ソース コンシューマーが使用するように設計されています。ほとんどの場合、データ ソース コンシューマーは、Windows フォーム コントロールまたはコンポーネントです。 2 つ目のグループでは、コンポーネント作成者向けに設計されたインターフェイスを示します。 コンポーネント作成者は、Windows フォーム データ バインディング エンジンが使用する、データ バインディングをサポートするコンポーネントを作成するときにこれらのインターフェイスを使用します。 フォームに関連付けられたクラス内でこれらのインターフェイスを実装することで、データ バインディングを実現できます。各ケースは、データの操作を可能にするインターフェイスを実装するクラスを示しています。 Visual Studio の迅速なアプリケーション開発 (RAD) データデザインエクスペリエンスツールは、既にこの機能を利用しています。
 
 ### <a name="interfaces-for-implementation-by-data-source-authors"></a>データ ソース作成者が実装するインターフェイス
 
 以下のインターフェイスは、Windows フォーム コントロールで使用するように設計されています。
 
-- <xref:System.Collections.IList> インターフェイス
+- <xref:System.Collections.IList>efi
 
-  実装するクラス、<xref:System.Collections.IList>インターフェイス可能性があります、 <xref:System.Array>、 <xref:System.Collections.ArrayList>、または<xref:System.Collections.CollectionBase>します。 これらの種類の項目のインデックス付きリストは、<xref:System.Object>します。 インデックスの最初の項目によって型が決定されるため、これらのリストには同種の型が含まれている必要があります。 <xref:System.Collections.IList> 実行時にのみバインドできるようになります。
-
-  > [!NOTE]
-  >  Windows フォームでビジネス オブジェクトのバインドの一覧を作成する場合は、使用を検討する必要があります、<xref:System.ComponentModel.BindingList%601>します。 <xref:System.ComponentModel.BindingList%601>双方向 Windows フォーム データ バインディングに必要な主要インターフェイスを実装する拡張可能なクラスです。
-
-- <xref:System.ComponentModel.IBindingList> インターフェイス
-
-  実装するクラス、<xref:System.ComponentModel.IBindingList>インターフェイスには、データ バインディング機能の非常に高いレベルが用意されています。 この実装では、基本的な並べ替え機能と変更通知を提供します。変更通知では、リスト項目が変更されたとき (たとえば、顧客リストの 3 番目の項目の Address フィールドが変更されたとき) と、リスト自体が変更されたとき (たとえば、リスト内の項目の数が増減したとき) のどちらの場合も変更が通知されます。 複数のコントロールを同じデータにバインドする予定であり、いずれかのコントロールで行われたデータ変更をバインドされた他のコントロールに反映させる必要がある場合に、変更通知が重要になります。
+  インターフェイスを実装<xref:System.Collections.ArrayList> <xref:System.Collections.CollectionBase>するクラスは、、、またはです。 <xref:System.Array> <xref:System.Collections.IList> これらは、型<xref:System.Object>の項目のインデックス付きリストです。 インデックスの最初の項目によって型が決定されるため、これらのリストには同種の型が含まれている必要があります。 <xref:System.Collections.IList>は、実行時にのみバインドに使用できます。
 
   > [!NOTE]
-  > 変更通知が有効になって、<xref:System.ComponentModel.IBindingList>によってインターフェイスを<xref:System.ComponentModel.IBindingList.SupportsChangeNotification%2A>プロパティがときに、 `true`、発生させる、<xref:System.ComponentModel.IBindingList.ListChanged>イベント、変更一覧または一覧内の項目を示す変更します。
+  > Windows フォームにバインドするビジネスオブジェクトの一覧を作成する場合は、 <xref:System.ComponentModel.BindingList%601>を使用することを検討してください。 は<xref:System.ComponentModel.BindingList%601> 、双方向の Windows フォームデータバインディングに必要なプライマリインターフェイスを実装する拡張可能なクラスです。
 
-  変更の種類は、<xref:System.ComponentModel.ListChangedType>のプロパティ、<xref:System.ComponentModel.ListChangedEventArgs>パラメーター。 したがって、データ モデルが更新されるたびに、依存するビュー (同じデータ ソースにバインドされた他のコントロールなど) も更新されます。 ただし、リスト内に含まれるオブジェクトがリストにリストを発生させることができるように変更するときに通知する必要が、<xref:System.ComponentModel.IBindingList.ListChanged>イベント。
+- <xref:System.ComponentModel.IBindingList>efi
 
-  > [!NOTE]
-  > <xref:System.ComponentModel.BindingList%601>の汎用実装を提供します、<xref:System.ComponentModel.IBindingList>インターフェイス。
-
-- <xref:System.ComponentModel.IBindingListView> インターフェイス
-
-  実装するクラス、<xref:System.ComponentModel.IBindingListView>インターフェイスの実装のすべての機能を提供する<xref:System.ComponentModel.IBindingList>に加えて、としてフィルター処理および高度な並べ替え機能します。 この実装では、文字列ベースのフィルター処理と、プロパティ記述子と方向のペアによる複数列の並べ替え機能を提供します。
-
-- <xref:System.ComponentModel.IEditableObject> インターフェイス
-
-  実装するクラス、<xref:System.ComponentModel.IEditableObject>インターフェイスにより、そのオブジェクトへの変更を永続的なものとを制御するオブジェクト。 この実装により、 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>、 <xref:System.ComponentModel.IEditableObject.EndEdit%2A>、および<xref:System.ComponentModel.IEditableObject.CancelEdit%2A>メソッドで、オブジェクトに加えられた変更をロールバックすることを有効にします。 機能の簡単な説明を次に、 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>、 <xref:System.ComponentModel.IEditableObject.EndEdit%2A>、および<xref:System.ComponentModel.IEditableObject.CancelEdit%2A>メソッドと組み合わせて、データに加えられた変更のロールバックを実現するために相互しくみ。
-
-  - <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>メソッドがオブジェクトでの編集の開始を通知します。 このインターフェイスを実装するオブジェクトが後に、更新プログラムを保存する必要があります、<xref:System.ComponentModel.IEditableObject.BeginEdit%2A>メソッドの呼び出し、更新プログラムを破棄できるように場合、<xref:System.ComponentModel.IEditableObject.CancelEdit%2A>メソッドが呼び出されます。 データ バインディング Windows フォームで呼び出すことができます<xref:System.ComponentModel.IEditableObject.BeginEdit%2A>複数回、1 つのスコープ内で編集トランザクション (たとえば、 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>、 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>、 <xref:System.ComponentModel.IEditableObject.EndEdit%2A>)。 実装<xref:System.ComponentModel.IEditableObject>かどうかを追跡する必要があります<xref:System.ComponentModel.IEditableObject.BeginEdit%2A>が既に呼び出され、後続の呼び出しを無視<xref:System.ComponentModel.IEditableObject.BeginEdit%2A>します。 このメソッドは、複数回呼び出すことが、ため後続の呼び出しが非破壊的な; ことが重要です。後続<xref:System.ComponentModel.IEditableObject.BeginEdit%2A>呼び出しが行われたまたは保存されたデータを変更する更新プログラムを破棄できません。 最初の<xref:System.ComponentModel.IEditableObject.BeginEdit%2A>呼び出します。
-
-  - <xref:System.ComponentModel.IEditableObject.EndEdit%2A>メソッドは、以降のすべての変更をプッシュ<xref:System.ComponentModel.IEditableObject.BeginEdit%2A>を基になるオブジェクトにオブジェクトが現在編集モードである場合に呼び出されました。
-
-  - <xref:System.ComponentModel.IEditableObject.CancelEdit%2A>メソッドは、オブジェクトに加えられた変更を破棄します。
-
-  方法の詳細については<xref:System.ComponentModel.IEditableObject.BeginEdit%2A>、 <xref:System.ComponentModel.IEditableObject.EndEdit%2A>、および<xref:System.ComponentModel.IEditableObject.CancelEdit%2A>メソッドの動作を参照してください[データをデータベースに保存](/visualstudio/data-tools/save-data-back-to-the-database)します。
-
-  データ機能のこのトランザクションの概念を使って、<xref:System.Windows.Forms.DataGridView>コントロール。
-
-- <xref:System.ComponentModel.ICancelAddNew> インターフェイス
-
-  実装するクラス、<xref:System.ComponentModel.ICancelAddNew>インターフェイスは通常、実装、<xref:System.ComponentModel.IBindingList>インターフェイスし、のデータ ソースへの追加をロールバックすることができます、<xref:System.ComponentModel.IBindingList.AddNew%2A>メソッド。 場合は、データ ソースの実装、<xref:System.ComponentModel.IBindingList>インターフェイスも必要、実装、<xref:System.ComponentModel.ICancelAddNew>インターフェイス。
-
-- <xref:System.ComponentModel.IDataErrorInfo> インターフェイス
-
-  実装するクラス、<xref:System.ComponentModel.IDataErrorInfo>インターフェイスにより、バインドされたコントロールにカスタム エラー情報を提供するオブジェクト。
-
-  - <xref:System.ComponentModel.IDataErrorInfo.Error%2A>プロパティは、一般的なエラー メッセージ テキストを返します (たとえば、「エラーが発生しました」)。
-
-  - <xref:System.ComponentModel.IDataErrorInfo.Item%2A>プロパティは、列から特定のエラー メッセージ文字列を返します (たとえば、"の値、`State`列は無効です")。
-
-- <xref:System.Collections.IEnumerable> インターフェイス
-
-  実装するクラス、<xref:System.Collections.IEnumerable>インターフェイスは通常、ASP.NET によって処理されます。 このインターフェイスのサポートを Windows フォームはのみ、<xref:System.Windows.Forms.BindingSource>コンポーネント。
+  インターフェイスを<xref:System.ComponentModel.IBindingList>実装するクラスは、はるかに高いレベルのデータバインディング機能を提供します。 この実装では、基本的な並べ替え機能と変更通知を提供します。変更通知では、リスト項目が変更されたとき (たとえば、顧客リストの 3 番目の項目の Address フィールドが変更されたとき) と、リスト自体が変更されたとき (たとえば、リスト内の項目の数が増減したとき) のどちらの場合も変更が通知されます。 複数のコントロールを同じデータにバインドする予定であり、いずれかのコントロールで行われたデータ変更をバインドされた他のコントロールに反映させる必要がある場合に、変更通知が重要になります。
 
   > [!NOTE]
-  > <xref:System.Windows.Forms.BindingSource>コンポーネントがすべてコピー<xref:System.Collections.IEnumerable>バインディングのための独立したリストにアイテムをします。
+  > プロパティを<xref:System.ComponentModel.IBindingList> `true` <xref:System.ComponentModel.IBindingList.ListChanged>使用してインターフェイスの変更通知を有効にします。このプロパティは、リストが変更されたこと、またはリスト内の項目が変更されたことを示すイベントを発生させます。 <xref:System.ComponentModel.IBindingList.SupportsChangeNotification%2A>
 
-- <xref:System.ComponentModel.ITypedList> インターフェイス
-
-  実装するコレクション クラス、<xref:System.ComponentModel.ITypedList>インターフェイスには、順序と、バインドされたコントロールに公開されるプロパティのセットを制御する機能が用意されています。
+  変更の種類は、 <xref:System.ComponentModel.ListChangedType> <xref:System.ComponentModel.ListChangedEventArgs>パラメーターのプロパティによって記述されます。 したがって、データ モデルが更新されるたびに、依存するビュー (同じデータ ソースにバインドされた他のコントロールなど) も更新されます。 ただし、一覧に含まれるオブジェクトは、リストが<xref:System.ComponentModel.IBindingList.ListChanged>イベントを発生させることができるように、変更時にリストに通知する必要があります。
 
   > [!NOTE]
-  > 実装する場合、<xref:System.ComponentModel.ITypedList.GetItemProperties%2A>メソッド、および<xref:System.ComponentModel.PropertyDescriptor>配列が null でないと、配列の最後のエントリは項目の一覧をもう 1 つであるリスト プロパティを説明するプロパティ記述子になります。
+  > は<xref:System.ComponentModel.BindingList%601> 、 <xref:System.ComponentModel.IBindingList>インターフェイスの一般的な実装を提供します。
 
-- <xref:System.ComponentModel.ICustomTypeDescriptor> インターフェイス
+- <xref:System.ComponentModel.IBindingListView>efi
 
-  実装するクラス、<xref:System.ComponentModel.ICustomTypeDescriptor>インターフェイス自体に関する動的な情報を提供します。 このインターフェイスはのような<xref:System.ComponentModel.ITypedList>がリストではなく、オブジェクトに使用されます。 このインターフェイスを使って<xref:System.Data.DataRowView>基になる行のスキーマをプロジェクトにします。 単純な実装<xref:System.ComponentModel.ICustomTypeDescriptor>によって提供される、<xref:System.ComponentModel.CustomTypeDescriptor>クラス。
+  <xref:System.ComponentModel.IBindingListView>インターフェイスを実装するクラスは、の<xref:System.ComponentModel.IBindingList>実装のすべての機能に加えて、フィルター処理や高度な並べ替え機能を提供します。 この実装では、文字列ベースのフィルター処理と、プロパティ記述子と方向のペアによる複数列の並べ替え機能を提供します。
 
-  > [!NOTE]
-  > デザイン時のバインドをサポートする型を実装<xref:System.ComponentModel.ICustomTypeDescriptor>、型を実装する必要がありますも<xref:System.ComponentModel.IComponent>フォーム上のインスタンスとして存在します。
+- <xref:System.ComponentModel.IEditableObject>efi
 
-- <xref:System.ComponentModel.IListSource> インターフェイス
+  <xref:System.ComponentModel.IEditableObject>インターフェイスを実装するクラスを使用すると、オブジェクトに対する変更が永続的になるタイミングをオブジェクトで制御できます。 この実装<xref:System.ComponentModel.IEditableObject.BeginEdit%2A>では、 <xref:System.ComponentModel.IEditableObject.EndEdit%2A>、、および<xref:System.ComponentModel.IEditableObject.CancelEdit%2A>の各メソッドを使用して、オブジェクトに対して行われた変更をロールバックすることができます。 次に<xref:System.ComponentModel.IEditableObject.BeginEdit%2A>、、、および<xref:System.ComponentModel.IEditableObject.CancelEdit%2A>の各メソッドの機能<xref:System.ComponentModel.IEditableObject.EndEdit%2A>について簡単に説明し、データに加えられた変更をロールバックできるように、それらのメソッドを相互に連携させる方法を示します。
 
-  実装するクラス、<xref:System.ComponentModel.IListSource>インターフェイスが非リスト オブジェクトでリストベース バインディングを使用します。 <xref:System.ComponentModel.IListSource.GetList%2A>メソッドの<xref:System.ComponentModel.IListSource>から継承されていないオブジェクトからバインド可能なリストを返すために使用<xref:System.Collections.IList>します。 <xref:System.ComponentModel.IListSource> 使って、<xref:System.Data.DataSet>クラス。
+  - メソッド<xref:System.ComponentModel.IEditableObject.BeginEdit%2A>は、オブジェクトに対する編集の開始を通知します。 このインターフェイスを実装するオブジェクトは、メソッドが呼び出され<xref:System.ComponentModel.IEditableObject.BeginEdit%2A> <xref:System.ComponentModel.IEditableObject.CancelEdit%2A>た場合に更新を破棄できるように、メソッド呼び出しの後に更新を保存する必要があります。 データバインディング Windows フォームでは、1つ<xref:System.ComponentModel.IEditableObject.BeginEdit%2A>の編集トランザクションのスコープ内でを複数回呼び出すことができ<xref:System.ComponentModel.IEditableObject.BeginEdit%2A>ます<xref:System.ComponentModel.IEditableObject.BeginEdit%2A>( <xref:System.ComponentModel.IEditableObject.EndEdit%2A>たとえば、、、)。 の<xref:System.ComponentModel.IEditableObject>実装では、が既<xref:System.ComponentModel.IEditableObject.BeginEdit%2A>に呼び出されているかどうかを<xref:System.ComponentModel.IEditableObject.BeginEdit%2A>追跡し、後続のへの呼び出しを無視する必要があります。 このメソッドは複数回呼び出すことができるので、それ以降の呼び出しは破壊的であることが重要です。つまり、それ以降<xref:System.ComponentModel.IEditableObject.BeginEdit%2A>の呼び出しでは、作成された更新を破棄したり、最初<xref:System.ComponentModel.IEditableObject.BeginEdit%2A>の呼び出しで保存されたデータを変更したりすることはできません。
 
-- <xref:System.ComponentModel.IRaiseItemChangedEvents> インターフェイス
+  - オブジェクト<xref:System.ComponentModel.IEditableObject.EndEdit%2A>が現在編集モードで<xref:System.ComponentModel.IEditableObject.BeginEdit%2A>ある場合、メソッドは、が呼び出されてから基になるオブジェクトに変更をプッシュします。
 
-  実装するクラス、<xref:System.ComponentModel.IRaiseItemChangedEvents>インターフェイスも実装するバインド可能なリストは、<xref:System.ComponentModel.IBindingList>インターフェイス。 このインターフェイスの使用を示すかどうか、型が発生します<xref:System.ComponentModel.IBindingList.ListChanged>の種類のイベント<xref:System.ComponentModel.ListChangedType.ItemChanged>を通じてその<xref:System.ComponentModel.IRaiseItemChangedEvents.RaisesItemChangedEvents%2A>プロパティ。
+  - メソッド<xref:System.ComponentModel.IEditableObject.CancelEdit%2A>は、オブジェクトに対して行われたすべての変更を破棄します。
 
-  > [!NOTE]
-  > 実装する必要があります、 <xref:System.ComponentModel.IRaiseItemChangedEvents> 、データ ソースは、前に説明した一覧イベントを変換するプロパティを提供しとの対話は、<xref:System.Windows.Forms.BindingSource>コンポーネント。 それ以外の場合、<xref:System.Windows.Forms.BindingSource>プロパティをパフォーマンスが低下リスト イベントへの変換を実行することもできます。
+  、 <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> 、<xref:System.ComponentModel.IEditableObject.EndEdit%2A>およびの各メソッドの動作の詳細については、「[データベースにデータを保存する](/visualstudio/data-tools/save-data-back-to-the-database)」を参照<xref:System.ComponentModel.IEditableObject.CancelEdit%2A>してください。
 
-- <xref:System.ComponentModel.ISupportInitialize> インターフェイス
+  このトランザクションのデータ機能の概念は、 <xref:System.Windows.Forms.DataGridView>コントロールによって使用されます。
 
-  実装するコンポーネント、<xref:System.ComponentModel.ISupportInitialize>インターフェイスは、プロパティの設定および依存するプロパティの初期化中にバッチ最適化の利点があります。 <xref:System.ComponentModel.ISupportInitialize> 2 つのメソッドが含まれています。
+- <xref:System.ComponentModel.ICancelAddNew>efi
 
-  - <xref:System.ComponentModel.ISupportInitialize.BeginInit%2A> そのオブジェクトの初期化の開始を通知します。
+  インターフェイスを<xref:System.ComponentModel.ICancelAddNew>実装するクラスは、通常、 <xref:System.ComponentModel.IBindingList>インターフェイスを実装し、 <xref:System.ComponentModel.IBindingList.AddNew%2A>メソッドを使用してデータソースに加えられた追加をロールバックすることができます。 データソースが<xref:System.ComponentModel.IBindingList>インターフェイスを実装している場合は、 <xref:System.ComponentModel.ICancelAddNew>インターフェイスも実装する必要があります。
 
-  - <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> そのオブジェクトの初期化が終了した後に通知します。
+- <xref:System.ComponentModel.IDataErrorInfo>efi
 
-- <xref:System.ComponentModel.ISupportInitializeNotification> インターフェイス
+  インターフェイスを実装するクラス<xref:System.ComponentModel.IDataErrorInfo>を使用すると、オブジェクトは、バインドされたコントロールにカスタムエラー情報を提供できます。
 
-  実装するコンポーネント、<xref:System.ComponentModel.ISupportInitializeNotification>インターフェイスの実装も、<xref:System.ComponentModel.ISupportInitialize>インターフェイス。 このインターフェイスを使用すると、その他の通知<xref:System.ComponentModel.ISupportInitialize>コンポーネント初期化が完了します。 <xref:System.ComponentModel.ISupportInitializeNotification>インターフェイスには、2 つのメンバーが含まれています。
+  - プロパティ<xref:System.ComponentModel.IDataErrorInfo.Error%2A>は、一般的なエラーメッセージテキスト ("エラーが発生しました" など) を返します。
 
-  - <xref:System.ComponentModel.ISupportInitializeNotification.IsInitialized%2A> 返します、`boolean`コンポーネントが初期化されているかどうかを示す値。
+  - プロパティ<xref:System.ComponentModel.IDataErrorInfo.Item%2A>は、列からの特定のエラーメッセージを含む文字列を返します (" `State`列の値が無効です" など)。
 
-  - <xref:System.ComponentModel.ISupportInitializeNotification.Initialized> 発生したときに<xref:System.ComponentModel.ISupportInitialize.EndInit%2A>が呼び出されます。
+- <xref:System.Collections.IEnumerable>efi
 
-- <xref:System.ComponentModel.INotifyPropertyChanged> インターフェイス
-
-  このインターフェイスを実装するクラスは、プロパティ値のいずれかが変更されたときにイベントを発生させる型です。 このインターフェイスは、コントロールのプロパティごとに変更イベントを持つパターンを置き換えるように設計されています。 使用すると、 <xref:System.ComponentModel.BindingList%601>、ビジネス オブジェクトを実装する必要があります、<xref:System.ComponentModel.INotifyPropertyChanged>インターフェイスと、BindingList\`1 に変換されます<xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged>イベント<xref:System.ComponentModel.BindingList%601.ListChanged>の種類のイベント<xref:System.ComponentModel.ListChangedType.ItemChanged>します。
+  インターフェイスを<xref:System.Collections.IEnumerable>実装するクラスは、通常、ASP.NET によって使用されます。 このインターフェイスの Windows フォームサポートは、コンポーネントを<xref:System.Windows.Forms.BindingSource>通じてのみ使用できます。
 
   > [!NOTE]
-  > 変更の通知をバインドされているクライアントとデータ間のバインドで発生ソースにバインドされたデータ ソースの種類を実装するか、 <xref:System.ComponentModel.INotifyPropertyChanged> (推奨) インターフェイスを提供できます*propertyName* `Changed`バインドの型がイベントには、両方を行うことはできません。
+  > コンポーネント<xref:System.Windows.Forms.BindingSource>は、バインド<xref:System.Collections.IEnumerable>のためにすべての項目を別のリストにコピーします。
+
+- <xref:System.ComponentModel.ITypedList>efi
+
+  <xref:System.ComponentModel.ITypedList>インターフェイスを実装するコレクションクラスは、バインドされたコントロールに公開されるプロパティの順序とセットを制御する機能を提供します。
+
+  > [!NOTE]
+  > <xref:System.ComponentModel.ITypedList.GetItemProperties%2A> メソッド<xref:System.ComponentModel.PropertyDescriptor>を実装し、配列が null でない場合、配列の最後のエントリは、項目の別のリストであるリストプロパティを記述するプロパティ記述子になります。
+
+- <xref:System.ComponentModel.ICustomTypeDescriptor>efi
+
+  インターフェイスを<xref:System.ComponentModel.ICustomTypeDescriptor>実装するクラスは、それ自体に関する動的な情報を提供します。 このインターフェイスはに<xref:System.ComponentModel.ITypedList>似ていますが、リストではなくオブジェクトに使用されます。 このインターフェイスは、基<xref:System.Data.DataRowView>になる行のスキーマを射影するために、によって使用されます。 の<xref:System.ComponentModel.ICustomTypeDescriptor>単純な実装は、 <xref:System.ComponentModel.CustomTypeDescriptor>クラスによって提供されます。
+
+  > [!NOTE]
+  > を実装<xref:System.ComponentModel.ICustomTypeDescriptor>する型へのデザイン時バインディングをサポートするには、型<xref:System.ComponentModel.IComponent>もを実装し、フォームのインスタンスとして存在する必要があります。
+
+- <xref:System.ComponentModel.IListSource>efi
+
+  インターフェイスを<xref:System.ComponentModel.IListSource>実装するクラスは、リスト以外のオブジェクトのリストベースのバインドを有効にします。 の<xref:System.ComponentModel.IListSource.GetList%2A> <xref:System.Collections.IList>メソッドは、を継承しないオブジェクトからバインド可能なリストを返すために使用されます。 <xref:System.ComponentModel.IListSource> <xref:System.ComponentModel.IListSource>は、 <xref:System.Data.DataSet>クラスによって使用されます。
+
+- <xref:System.ComponentModel.IRaiseItemChangedEvents>efi
+
+  <xref:System.ComponentModel.IRaiseItemChangedEvents>インターフェイスを実装するクラスは、 <xref:System.ComponentModel.IBindingList>インターフェイスも実装するバインド可能なリストです。 このインターフェイスは、型が<xref:System.ComponentModel.IBindingList.ListChanged> <xref:System.ComponentModel.IRaiseItemChangedEvents.RaisesItemChangedEvents%2A>プロパティを通じて型<xref:System.ComponentModel.ListChangedType.ItemChanged>のイベントを発生させるかどうかを示すために使用されます。
+
+  > [!NOTE]
+  > 前に説明し<xref:System.ComponentModel.IRaiseItemChangedEvents>たイベント変換を一覧表示し、 <xref:System.Windows.Forms.BindingSource>コンポーネントと対話するプロパティがデータソースに用意されている場合は、を実装する必要があります。 それ以外の<xref:System.Windows.Forms.BindingSource>場合、では、イベント変換の一覧を表示するプロパティも実行され、パフォーマンスが低下します。
+
+- <xref:System.ComponentModel.ISupportInitialize>efi
+
+  インターフェイスを<xref:System.ComponentModel.ISupportInitialize>実装するコンポーネントには、プロパティの設定や共同依存プロパティの初期化のためのバッチ最適化の利点があります。 に<xref:System.ComponentModel.ISupportInitialize>は、次の2つのメソッドがあります。
+
+  - <xref:System.ComponentModel.ISupportInitialize.BeginInit%2A>オブジェクトの初期化が開始されていることを通知します。
+
+  - <xref:System.ComponentModel.ISupportInitialize.EndInit%2A>オブジェクトの初期化が完了していることを通知します。
+
+- <xref:System.ComponentModel.ISupportInitializeNotification>efi
+
+  インターフェイスを<xref:System.ComponentModel.ISupportInitializeNotification>実装するコンポーネントも<xref:System.ComponentModel.ISupportInitialize>インターフェイスを実装します。 このインターフェイスを使用すると、 <xref:System.ComponentModel.ISupportInitialize>初期化が完了したことを他のコンポーネントに通知できます。 インターフェイス<xref:System.ComponentModel.ISupportInitializeNotification>には、次の2つのメンバーが含まれます。
+
+  - <xref:System.ComponentModel.ISupportInitializeNotification.IsInitialized%2A>コンポーネントが初期化されているかどうかを示す値を返します。`boolean`
+
+  - <xref:System.ComponentModel.ISupportInitializeNotification.Initialized>が呼び出さ<xref:System.ComponentModel.ISupportInitialize.EndInit%2A>れたときに発生します。
+
+- <xref:System.ComponentModel.INotifyPropertyChanged>efi
+
+  このインターフェイスを実装するクラスは、プロパティ値のいずれかが変更されたときにイベントを発生させる型です。 このインターフェイスは、コントロールのプロパティごとに変更イベントを持つパターンを置き換えるように設計されています。 <xref:System.ComponentModel.BindingList%601>で使用する場合、ビジネスオブジェクトは<xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> <xref:System.ComponentModel.INotifyPropertyChanged>インターフェイスを実装する必要があり\`、BindingList 1 はイベント<xref:System.ComponentModel.BindingList%601.ListChanged>を型<xref:System.ComponentModel.ListChangedType.ItemChanged>のイベントに変換します。
+
+  > [!NOTE]
+  > バインドされたクライアントとデータソースの間のバインディングで変更通知が発生するようにするには、バインドさ<xref:System.ComponentModel.INotifyPropertyChanged>れたデータソースの型でインターフェイスを実装するか (推奨)、バインドされた型に*propertyName* `Changed`イベントを指定します。ただし、両方を実行することはできません。
 
 ### <a name="interfaces-for-implementation-by-component-authors"></a>コンポーネント作成者が実装するインターフェイス
 
 以下のインターフェイスは、Windows フォーム データ バインディング エンジンが使用するように設計されています。
 
-- <xref:System.Windows.Forms.IBindableComponent> インターフェイス
+- <xref:System.Windows.Forms.IBindableComponent>efi
 
-  このインターフェイスを実装するクラスは、データ バインディングをサポートするコントロール以外のコンポーネントです。 このクラスは、データ バインディングとバインド コンテキストを使用して、コンポーネントを返します、<xref:System.Windows.Forms.IBindableComponent.DataBindings%2A>と<xref:System.Windows.Forms.IBindableComponent.BindingContext%2A>このインターフェイスのプロパティ。
-
-  > [!NOTE]
-  > コンポーネントから継承している場合<xref:System.Windows.Forms.Control>、実装する必要はありません、<xref:System.Windows.Forms.IBindableComponent>インターフェイス。
-
-- <xref:System.Windows.Forms.ICurrencyManagerProvider> インターフェイス
-
-  実装するクラス、<xref:System.Windows.Forms.ICurrencyManagerProvider>インターフェイスは、独自に提供するコンポーネント<xref:System.Windows.Forms.CurrencyManager>この特定のコンポーネントに関連付けられているバインドを管理します。 カスタムへのアクセス<xref:System.Windows.Forms.CurrencyManager>によって提供される、<xref:System.Windows.Forms.ICurrencyManagerProvider.CurrencyManager%2A>プロパティ。
+  このインターフェイスを実装するクラスは、データ バインディングをサポートするコントロール以外のコンポーネントです。 このクラスは、このインターフェイスのプロパティ<xref:System.Windows.Forms.IBindableComponent.DataBindings%2A>と<xref:System.Windows.Forms.IBindableComponent.BindingContext%2A>プロパティを使用して、コンポーネントのデータバインディングとバインディングコンテキストを返します。
 
   > [!NOTE]
-  > 継承するクラスを<xref:System.Windows.Forms.Control>管理バインドを使用して自動的にその<xref:System.Windows.Forms.Control.BindingContext%2A>プロパティを実装する必要があるため場合、<xref:System.Windows.Forms.ICurrencyManagerProvider>非常にまれです。
+  > コンポーネントがから<xref:System.Windows.Forms.Control>継承している場合は、 <xref:System.Windows.Forms.IBindableComponent>インターフェイスを実装する必要はありません。
+
+- <xref:System.Windows.Forms.ICurrencyManagerProvider>efi
+
+  <xref:System.Windows.Forms.ICurrencyManagerProvider>インターフェイスを実装するクラスは、この特定のコンポーネントに関連<xref:System.Windows.Forms.CurrencyManager>付けられているバインディングを管理するための独自のを提供するコンポーネントです。 カスタム<xref:System.Windows.Forms.CurrencyManager>へのアクセスは、 <xref:System.Windows.Forms.ICurrencyManagerProvider.CurrencyManager%2A>プロパティによって提供されます。
+
+  > [!NOTE]
+  > を<xref:System.Windows.Forms.Control>継承するクラスは、 <xref:System.Windows.Forms.Control.BindingContext%2A>プロパティを通じてバインドを自動的に管理します。そのため、 <xref:System.Windows.Forms.ICurrencyManagerProvider>を実装する必要がある場合は、非常にまれです。
 
 ## <a name="see-also"></a>関連項目
 

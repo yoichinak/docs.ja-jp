@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3693a42db8e32a4bb7a399f8c930da011130893
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b0c2e8e46c7bb3a5e693c9ea16e6c5a0722b1898
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778727"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799151"
 ---
 # <a name="strongnamecompareassemblies-function"></a>StrongNameCompareAssemblies 関数
 厳密な名前の署名に基づいて 2 つのアセンブリが異なるかどうかが判定されます。  
   
- この関数は非推奨とされました。 使用して、 [iclrstrongname::strongnamecompareassemblies](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md)メソッド代わりにします。  
+ この関数は非推奨とされます。 代わりに[ICLRStrongName:: StrongNameCompareAssemblies](../hosting/iclrstrongname-strongnamecompareassemblies-method.md)メソッドを使用してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,38 +40,38 @@ BOOLEAN StrongNameCompareAssemblies (
   
 ## <a name="parameters"></a>パラメーター  
  `wszAssembly1`  
- [in]最初のアセンブリへのパス。  
+ から最初のアセンブリへのパス。  
   
  `wszAssembly2`  
- [in]2 つ目のアセンブリへのパス。  
+ から2番目のアセンブリへのパス。  
   
  `pdwResult`  
- [out]次の値のいずれか:  
+ 入出力次のいずれかの値です。  
   
-- `SN_CMP_DIFFERENT` (0) のアセンブリが別のデータを含むことを指定します。  
+- `SN_CMP_DIFFERENT`(0)-アセンブリに異なるデータが含まれることを指定します。  
   
-- `SN_CMP_IDENTICAL` (1) - アセンブリが、署名とチェックサムも含めて一致ではことを指定します。  
+- `SN_CMP_IDENTICAL`(1)-署名やチェックサムなど、アセンブリがまったく同じであることを指定します。  
   
-- `SN_CMP_SIGONLY` (2) のアセンブリが署名とチェックサムによってのみが異なることを指定します。  
+- `SN_CMP_SIGONLY`(2)-アセンブリが署名とチェックサムのみで異なることを指定します。  
   
 ## <a name="return-value"></a>戻り値  
- `true` 正常に終了します。それ以外の場合、`false`します。  
+ `true`正常に完了した場合は。それ以外`false`の場合は。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** StrongName.h  
+ **ヘッダー:** StrongName  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ**Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="remarks"></a>Remarks  
- アセンブリの厳密な名前の署名は、アセンブリのテキスト名、バージョン、カルチャ、および公開キー トークンで構成されます。  
+ アセンブリの厳密な名前の署名は、アセンブリのテキスト名、バージョン、カルチャ、および公開キートークンで構成されます。  
   
- 場合、`StrongNameCompareAssemblies`関数が正常に完了、呼び出すしていない、 [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)最後に生成されたエラーを取得します。  
+ 関数が正常に完了しない場合は、[StrongNameErrorInfo](strongnameerrorinfo-function.md) 関数を呼び出して、最後に生成されたエラーを取得します。`StrongNameCompareAssemblies`  
   
 ## <a name="see-also"></a>関連項目
 
-- [StrongNameCompareAssemblies メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md)
-- [ICLRStrongName インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [StrongNameCompareAssemblies メソッド](../hosting/iclrstrongname-strongnamecompareassemblies-method.md)
+- [ICLRStrongName インターフェイス](../hosting/iclrstrongname-interface.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Async [Visual Basic]
 - Async keyword [Visual Basic]
 ms.assetid: 1be8b4b5-9689-41b5-bd33-b906bfd53bc5
-ms.openlocfilehash: cf2c62878e8902afa9455c789d41393b73110172
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 6a3d9c8eb8e5929796683bd0bb50159ca0c69f1f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68434049"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959870"
 ---
 # <a name="async-visual-basic"></a>Async (Visual Basic)
 修飾子は、変更するメソッドまたは[ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)が非同期であることを示します。 `Async` このようなメソッドを*非同期メソッド*と呼びます。  
@@ -20,7 +20,7 @@ ms.locfileid: "68434049"
  非同期メソッドは、呼び出し元のスレッドをブロックすることなく、実行に時間のかかる可能性のある処理を行うことができる、便利な方法です。 非同期メソッドの呼び出し元は、非同期メソッドの完了を待たずに作業を再開できます。  
   
 > [!NOTE]
->  `Async` キーワードおよび `Await` キーワードは、Visual Studio 2012 で導入されました。 非同期プログラミングの概要については、「 [async および Await を使用した非同期プログラミング](../../../visual-basic/programming-guide/concepts/async/index.md)」を参照してください。  
+> `Async` キーワードおよび `Await` キーワードは、Visual Studio 2012 で導入されました。 非同期プログラミングの概要については、「 [async および Await を使用した非同期プログラミング](../../../visual-basic/programming-guide/concepts/async/index.md)」を参照してください。  
   
  次の例は、非同期メソッドの構造を示しています。 規則により、非同期メソッドの名前の末尾は "Async" になります。  
   
@@ -47,7 +47,7 @@ End Function
  `Async` キーワードは、予約されていないキーワードです。 メソッドまたはラムダ式を修飾する場合にキーワードとなります。 それ以外の場合は、識別子として解釈されます。  
   
 ## <a name="return-types"></a>戻り値の型  
- 非同期メソッドは、[サブ](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)プロシージャ、または戻り値[](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)の型がまたは<xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601>の関数プロシージャです。 メソッドで[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)パラメーターを宣言することはできません。  
+ 非同期メソッドは、[サブ](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)プロシージャ、または戻り値の型がまたは<xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601>の[関数](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)プロシージャです。 メソッドで[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)パラメーターを宣言することはできません。  
   
  メソッドの`Task(Of TResult)` [return](../../../visual-basic/language-reference/statements/return-statement.md)ステートメントに TResult 型のオペランドが含まれている場合は、非同期メソッドの戻り値の型としてを指定します。 メソッドの完了時に意味のある値を返さない場合は、`Task` を使用します。 これにより、メソッドの呼び出しでは `Task` が返されますが、`Task` の完了時に、`Await` を待機している `Task` ステートメントは結果値を生成しません。  
   

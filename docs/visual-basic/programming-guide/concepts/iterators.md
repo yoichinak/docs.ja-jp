@@ -2,12 +2,12 @@
 title: 反復子 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-ms.openlocfilehash: 73561cf5bed583e2dbf853b7771b9e949a5c0267
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: db84e5d7956f0b160520fa831607e3f7548fc976
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642281"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913153"
 ---
 # <a name="iterators-visual-basic"></a>反復子 (Visual Basic)
 *反復子*を使用して、リストや配列などのコレクションをステップ実行することができます。  
@@ -40,7 +40,7 @@ End Function
   
  Visual Basic の反復子メソッドまたは`get`アクセサー宣言には、[反復子](../../../visual-basic/language-reference/modifiers/iterator.md)修飾子が含まれます。  
   
- 反復子は、Visual Studio 2012 の Visual Basic に導入されました。  
+ 反復子は、Visual Studio 2012 の Visual Basic で導入されました。  
   
  **このトピックの内容**  
   
@@ -61,7 +61,7 @@ End Function
 - [反復子の使用](#BKMK_UseOfIterators)  
   
 > [!NOTE]
->  例では、単純な反復子以外のトピックのすべての例についてには、次が含まれています。 [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)のステートメント、`System.Collections`と`System.Collections.Generic`名前空間。  
+> 単純な反復子の例を除く、トピック内のすべての例では`System.Collections` 、 `System.Collections.Generic`および名前空間の [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) ステートメントをインクルードします。  
   
 ## <a name="BKMK_SimpleIterator"></a> 単純な反復子  
  次の例は、1 つ`Yield`内にあるステートメント、[For…Next](../../../visual-basic/language-reference/statements/for-next-statement.md)ループします。 `Main` では、`For Each` ステートメント本文の各イテレーションで iterator 関数が呼び出され、これが次の `Yield` ステートメントに続行されます。  
@@ -91,7 +91,7 @@ End Function
 ## <a name="BKMK_CollectionClass"></a> コレクション クラスを作成する  
  次の例の `DaysOfTheWeek` クラスは、<xref:System.Collections.IEnumerable.GetEnumerator%2A> メソッドを必要とする <xref:System.Collections.IEnumerable> インターフェイスを実装します。 コンパイラは、<xref:System.Collections.IEnumerator> を返す `GetEnumerator` メソッドを暗黙的に呼び出します。  
   
- `GetEnumerator`メソッドを使用して、一度に 1 つの各文字列を返します、`Yield`ステートメント、および`Iterator`修飾子は関数宣言では。  
+ メソッド`GetEnumerator`は、 `Yield`ステートメント`Iterator`を使用して各文字列を一度に1つずつ返し、修飾子は関数宣言に含まれています。  
   
 ```vb  
 Sub Main()  
@@ -213,10 +213,10 @@ Public Class Zoo
 End Class  
 ```  
   
-## <a name="BKMK_TryBlocks"></a> Try ブロック  
- Visual Basic では、`Yield`内のステートメント、`Try`のブロックを[Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)します。 A`Try`を持つブロックを`Yield`ステートメントを持つことができます`Catch`ブロック、および、持つことができます、`Finally`ブロックします。  
+## <a name="BKMK_TryBlocks"></a>Try ブロック  
+ Visual Basic では、`Yield`内のステートメント、`Try`のブロックを[Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)します。 `Try`を持つブロックを`Yield`ステートメントを持つことができます`Catch`ブロック、および、持つことができます、`Finally`ブロックします。  
   
- 次の例が含まれます`Try`、 `Catch`、および`Finally`反復子関数でブロックします。 `Finally`反復子関数でのブロックを実行する前に、`For Each`イテレーションが完了するとします。  
+ 次の例で`Try`は`Catch`、iterator `Finally`関数で、、およびの各ブロックが含まれています。 反復`Finally`子関数のブロックは、反復処理`For Each`が完了する前に実行されます。  
   
 ```vb  
 Sub Main()  
@@ -249,12 +249,12 @@ Private Iterator Function Test() As IEnumerable(Of Integer)
 End Function  
 ```  
   
- A`Yield`内でステートメントを使用できない、`Catch`ブロックまたは`Finally`ブロックします。  
+ `Yield`ステートメントは、`Catch`ブロックまたは`Finally`ブロック内で使用できません。  
   
- 場合、`For Each`本体 (iterator メソッド) ではなく、例外がスロー、`Catch`反復子関数のブロックは実行されませんが、`Finally`反復子関数でのブロックが実行されます。 A`Catch`反復子関数の内側のブロックは、反復子関数内で発生する例外のみをキャッチします。  
+ (Iterator メソッドではなく) `Catch` `Finally`本体が例外をスローした場合、iterator 関数のブロックは実行されませんが、iterator 関数のブロックが実行されます。 `For Each` 反復子メソッド内の`Catch`ブロックは、反復子メソッド内で発生する例外のみをキャッチします。  
   
-## <a name="BKMK_AnonymousMethods"></a> 匿名メソッド  
- 匿名関数には、Visual Basic の場合で、iterator 関数があります。 次に例を示します。  
+## <a name="BKMK_AnonymousMethods"></a>匿名メソッド  
+ Visual Basic では、匿名関数を反復子関数にすることができます。 次に例を示します。  
   
 ```vb  
 Dim iterateSequence = Iterator Function() _  
@@ -270,7 +270,7 @@ Next
 Console.ReadKey()  
 ```  
   
- 次の例では、引数を検証する非反復子メソッドがあります。 メソッドは、匿名コレクションの要素を示す反復子の結果を返します。  
+ 次の例では、引数を検証する非反復子メソッドを使用しています。 メソッドは、コレクション要素を記述する匿名反復子の結果を返します。  
   
 ```vb  
 Sub Main()  
@@ -301,7 +301,7 @@ As IEnumerable
 End Function  
 ```  
   
- 検証が代わりに、反復子関数内である場合は、検証はの最初のイテレーションの開始まで実行できません、`For Each`本文。  
+ 反復子関数の内部で検証が行われる場合、 `For Each`本体の最初の反復が開始されるまで検証を実行できません。  
   
 ## <a name="BKMK_GenericList"></a> ジェネリック リストと共に反復子を使用する  
  次の例の `Stack(Of T)` ジェネリック クラスは、<xref:System.Collections.Generic.IEnumerable%601> ジェネリック インターフェイスを実装しています。 `Push` メソッドでは、`T` 型の配列に値を割り当てます。 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> メソッドは、`Yield` ステートメントを使って配列値を返します。  
@@ -310,7 +310,7 @@ End Function
   
  例では名前付き反復子を使用して、同じデータ コレクションでのさまざまな反復処理をサポートします。 この場合の名前付き反復子は、`TopToBottom` プロパティと `BottomToTop` プロパティ、および `TopN` メソッドです。  
   
- `BottomToTop`プロパティの宣言が含まれています、`Iterator`キーワード。  
+ プロパティ`BottomToTop`の宣言には`Iterator` 、キーワードが含まれています。  
   
 ```vb  
 Sub Main()  
@@ -418,22 +418,22 @@ End Class
   
  `Yield` ステートメント内の式の型から反復子の戻り値の型への暗黙的な変換が存在する必要があります。  
   
- Visual basic の場合は、反復子メソッドはいずれかのことができない`ByRef`パラメーター。  
+ Visual Basic では、iterator メソッドに`ByRef`パラメーターを含めることはできません。  
   
- Visual Basic では、"Yield"は予約語でありで使用されている場合にのみ、特別な意味を持つ、`Iterator`メソッドまたは`get`アクセサー。  
+ Visual Basic では、"Yield" は予約語ではなく、 `Iterator`メソッドまたは`get`アクセサーで使用される場合にのみ特別な意味を持ちます。  
   
 ## <a name="BKMK_Technical"></a> 技術的な実装  
  メソッドとして反復子を記述しても、コンパイラが入れ子のクラス (つまり、事実上、ステート マシン) に変換します。 このクラスは、クライアント コードで `For Each...Next` ループが続く限り、反復子の位置を追跡します。  
   
  コンパイラの動作を確認するには、Ildasm.exe ツールを使用して、iterator メソッドに対して生成される Microsoft 中間言語コードを表示します。  
   
- 反復子を作成するとき、[クラス](../../../csharp/language-reference/keywords/class.md)または[構造体](../../../csharp/language-reference/keywords/struct.md)、全体を実装する必要はありません<xref:System.Collections.IEnumerator>インターフェイス。 コンパイラは、反復子を検出すると、<xref:System.Collections.IEnumerator> または <xref:System.Collections.Generic.IEnumerator%601> インターフェイスの `Current`、`MoveNext`、および `Dispose` メソッドを自動的に生成します。  
+ [クラス](../../../csharp/language-reference/keywords/class.md)または[構造体](../../../csharp/language-reference/keywords/struct.md)の反復子を作成する場合、インターフェイス全体<xref:System.Collections.IEnumerator>を実装する必要はありません。 コンパイラは、反復子を検出すると、<xref:System.Collections.IEnumerator> または <xref:System.Collections.Generic.IEnumerator%601> インターフェイスの `Current`、`MoveNext`、および `Dispose` メソッドを自動的に生成します。  
   
- `For Each…Next` ループの連続する反復ごとに (または `IEnumerator.MoveNext` を直接呼び出すと)、前の `Yield` ステートメントの後で次の反復子コード本体が再開されます。 次に続きます`Yield`、反復子本体の末尾に達するまでステートメントまで、または、`Exit Function`または`Return`ステートメントが見つかりました。  
+ `For Each…Next` ループの連続する反復ごとに (または `IEnumerator.MoveNext` を直接呼び出すと)、前の `Yield` ステートメントの後で次の反復子コード本体が再開されます。 次に、反復子本体`Yield`の末尾に達するか、 `Exit Function`または`Return`ステートメントが検出されるまで、次のステートメントに進みます。  
   
- 反復子をサポートしていない、<xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType>メソッド。 反復処理を最初から再度行う場合は、新しい反復子を取得する必要があります。  
+ 反復子は、メソッド<xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType>をサポートしていません。 反復処理を最初から再度行う場合は、新しい反復子を取得する必要があります。  
   
- 詳細については、次を参照してください。、 [Visual Basic 言語仕様](../../../visual-basic/reference/language-specification/index.md)します。  
+ 詳細については、 [Visual Basic 言語の仕様](../../../visual-basic/reference/language-specification/index.md)を参照してください。  
   
 ## <a name="BKMK_UseOfIterators"></a> 反復子の使用  
  反復子を使用すると、複雑なコードを使用して一覧シーケンスを設定する必要がある場合に、`For Each` ループの単純さを維持することができます。 これは次のような場合に役立ちます。  

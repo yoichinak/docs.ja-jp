@@ -20,17 +20,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 68be16c559431de871dc9ddb1963897b0927d49a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 197504cbb0dd66c0cf43dee718026fc63e918d60
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783165"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798855"
 ---
 # <a name="strongnametokenfrompublickey-function"></a>StrongNameTokenFromPublicKey 関数
 公開キーを表すトークンが取得されます。 厳密な名前トークンは、公開キーの短縮形です。  
   
- この関数は非推奨とされました。 使用して、 [iclrstrongname::strongnametokenfrompublickey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)メソッド代わりにします。  
+ この関数は非推奨とされます。 代わりに[ICLRStrongName:: StrongNameTokenFromPublicKey](../hosting/iclrstrongname-strongnametokenfrompublickey-method.md)メソッドを使用してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,36 +45,36 @@ BOOLEANStrongNameTokenFromPublicKey (
   
 ## <a name="parameters"></a>パラメーター  
  `pbPublicKeyBlob`  
- [in]型の構造体[PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)厳密な名前の署名を生成するためのキー ペアの公開部分を格納しています。  
+ から厳密な名前の署名を生成するために使用されるキーペアの公開部分を格納する[Publickeyblob](publickeyblob-structure.md)型の構造体。  
   
  `cbPublicKeyBlob`  
- [in]サイズ (バイト単位) の`pbPublicKeyBlob`します。  
+ からの`pbPublicKeyBlob`サイズ (バイト単位)。  
   
  `ppbStrongNameToken`  
- [out]渡されたキーに対応する厳密な名前トークン`pbPublicKeyBlob`します。 共通言語ランタイムでは、トークンが返されるメモリを割り当てます。 呼び出し元を使用してこのメモリを解放する必要があります、 [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md)関数。  
+ 入出力渡さ`pbPublicKeyBlob`れたキーに対応する厳密な名前トークン。 共通言語ランタイムは、トークンを返すメモリを割り当てます。 呼び出し元は、 [StrongNameFreeBuffer](strongnamefreebuffer-function.md)関数を使用して、このメモリを解放する必要があります。  
   
  `pcbStrongNameToken`  
- [out]厳密な名前が返されたトークンのバイト単位のサイズ。  
+ 入出力返された厳密な名前トークンのサイズ (バイト単位)。  
   
 ## <a name="return-value"></a>戻り値  
- `true` 正常に終了します。それ以外の場合、`false`します。  
+ `true`正常に完了した場合は。それ以外`false`の場合は。  
   
 ## <a name="remarks"></a>Remarks  
- 厳密な名前トークンは、メタデータにキー情報を格納する場合は、スペースを節約するために使用する公開キーの短縮形です。 具体的には、厳密な名前トークンは、依存アセンブリを参照するアセンブリ参照で使用されます。  
+ 厳密な名前トークンは、キー情報をメタデータに格納するときに領域を節約するために使用される公開キーの短縮形です。 具体的には、アセンブリ参照では、依存アセンブリを参照するために厳密な名前トークンが使用されます。  
   
- 場合、`StrongNameTokenFromPublicKey`関数が正常に完了、呼び出すしていない、 [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)最後に生成されたエラーを取得します。  
+ 関数が正常に完了しない場合は、[StrongNameErrorInfo](strongnameerrorinfo-function.md) 関数を呼び出して、最後に生成されたエラーを取得します。`StrongNameTokenFromPublicKey`  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** StrongName.h  
+ **ヘッダー:** StrongName  
   
- **ライブラリ:** Mscoree.dll でリソースとして含まれます  
+ **ライブラリ**Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [StrongNameTokenFromPublicKey メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)
-- [StrongNameGetPublicKey メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)
-- [PublicKeyBlob 構造体](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)
+- [StrongNameTokenFromPublicKey メソッド](../hosting/iclrstrongname-strongnametokenfrompublickey-method.md)
+- [StrongNameGetPublicKey メソッド](../hosting/iclrstrongname-strongnamegetpublickey-method.md)
+- [PublicKeyBlob 構造体](publickeyblob-structure.md)

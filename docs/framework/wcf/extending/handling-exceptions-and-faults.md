@@ -2,31 +2,31 @@
 title: 例外とエラーの処理
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: e99ef5721791af229c68a958e4840a0703d34ac9
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 4f95907d4f88315f2815b84e2ceb4e069783438d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424940"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851279"
 ---
 # <a name="handling-exceptions-and-faults"></a>例外とエラーの処理
 例外は、サービスまたはクライアント実装内でエラーをローカルに伝達するために使用されます。 一方、エラーは、サーバーからクライアントまたはクライアントからサーバーのように、サービス境界を越えてエラーを伝達するために使用されます。 このようなエラーに加え、多くの場合、トランスポート チャネルはトランスポート固有の機構を使用して、トランスポート レベルのエラーを伝達します。 たとえば、HTTP トランスポートは、404 などのステータス コードを使用して、存在しないエンドポイントの URL (エラーを返信するエンドポイントが存在しないこと) を伝達します。 このドキュメントは、カスタム チャネル作成者にガイダンスを示す 3 つのセクションで構成されています。 最初のセクションでは、例外を定義しスローする状況と方法に関するガイダンスを示します。 2 番目のセクションでは、エラーの生成と使用に関するガイダンスを示します。 3 番目のセクションでは、実行中のアプリケーションのトラブルシューティングを行う際に、カスタム チャネルのユーザーにとって役立つトレース情報を提供する方法について説明します。  
   
 ## <a name="exceptions"></a>例外  
- 例外がスローされるときに留意する 2 つのことがあります。最初の例外を適切に対処できる正しいコードを記述できる型があります。 もう 1 つは、例外では、問題点、エラーの影響、およびエラーの修正方法をユーザーが理解できるだけの情報を提供する必要があります。 次のセクションでは、例外の種類と Windows Communication Foundation (WCF) チャネルのメッセージに関するガイダンスを提供します。 また、「Design Guidelines for Exceptions」に記載された .NET の例外に関する一般的なガイダンスも示します。  
+ 例外をスローする場合は、次の2つの点に注意してください。まず、例外に適切に対応できる正しいコードをユーザーが記述できる型である必要があります。 もう 1 つは、例外では、問題点、エラーの影響、およびエラーの修正方法をユーザーが理解できるだけの情報を提供する必要があります。 次のセクションでは、Windows Communication Foundation (WCF) チャネルの例外の種類とメッセージに関するガイダンスを提供します。 また、「Design Guidelines for Exceptions」に記載された .NET の例外に関する一般的なガイダンスも示します。  
   
 ### <a name="exception-types"></a>例外の種類  
- チャネルがスローするすべての例外は、<xref:System.TimeoutException?displayProperty=nameWithType>、<xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>、または <xref:System.ServiceModel.CommunicationException> から派生した種類のいずれかである必要があります (<xref:System.ObjectDisposedException> のような例外をスローすることもできますが、これは呼び出し元のコードがチャネルを誤用したことを示す場合だけです。 チャネルを正しく使用する場合にする必要がありますのみ特定の例外をスローします。)派生する 7 つの例外型を提供する WCF<xref:System.ServiceModel.CommunicationException>チャネルで使用するよう設計されています。 <xref:System.ServiceModel.CommunicationException> から派生した例外には、システムのその他の部分で使用するように設計されているものもあります。 これらの例外の種類を以下に示します。  
+ チャネルがスローするすべての例外は、<xref:System.TimeoutException?displayProperty=nameWithType>、<xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>、または <xref:System.ServiceModel.CommunicationException> から派生した種類のいずれかである必要があります (<xref:System.ObjectDisposedException> のような例外をスローすることもできますが、これは呼び出し元のコードがチャネルを誤用したことを示す場合だけです。 チャネルが正しく使用されている場合は、指定された例外のみをスローする必要があります)。WCF には、から<xref:System.ServiceModel.CommunicationException>派生する7つの例外の種類が用意されており、チャネルで使用するように設計されています。 <xref:System.ServiceModel.CommunicationException> から派生した例外には、システムのその他の部分で使用するように設計されているものもあります。 これらの例外の種類を以下に示します。  
   
 |例外の種類|説明|内部例外の内容|回復方法|  
 |--------------------|-------------|-----------------------------|-----------------------|  
-|<xref:System.ServiceModel.AddressAlreadyInUseException>|リッスン用に指定されたエンドポイント アドレスは既に使用されています。|エラーの詳細情報が得られるようであれば、この例外の原因となったトランスポート エラーについての情報を提供します。 たとえば、 <xref:System.IO.PipeException>、<xref:System.Net.HttpListenerException> または <xref:System.Net.Sockets.SocketException>|別のアドレスで実行してください。|  
+|<xref:System.ServiceModel.AddressAlreadyInUseException>|リッスン用に指定されたエンドポイント アドレスは既に使用されています。|エラーの詳細情報が得られるようであれば、この例外の原因となったトランスポート エラーについての情報を提供します。 次に例を示します。 <xref:System.IO.PipeException>、<xref:System.Net.HttpListenerException> または <xref:System.Net.Sockets.SocketException>|別のアドレスで実行してください。|  
 |<xref:System.ServiceModel.AddressAccessDeniedException>|このプロセスは、リッスン用に指定されたエンドポイント アドレスへのアクセスを許可されていません。|エラーの詳細情報が得られるようであれば、この例外の原因となったトランスポート エラーについての情報を提供します。 例 : <xref:System.IO.PipeException> または <xref:System.Net.HttpListenerException>|別の資格情報を使用して試行します。|  
-|<xref:System.ServiceModel.CommunicationObjectFaultedException>|<xref:System.ServiceModel.ICommunicationObject> Faulted 状態では使用されている (詳細については、次を参照してください。[について状態の変化](../../../../docs/framework/wcf/extending/understanding-state-changes.md))。 複数の呼び出しが保留になっているオブジェクトが Faulted 状態に遷移した場合、エラーに関連する例外をスローする呼び出しは 1 つだけであり、それ以外の呼び出しは <xref:System.ServiceModel.CommunicationObjectFaultedException> をスローします。 通常、この例外がスローされるのは、アプリケーションが何らかの例外を認識しておらず、おそらく最初の例外をキャッチしたスレッド以外のスレッドで、既に Faulted 状態のオブジェクトを使用しようとしたためです。|詳細情報を使用できる場合は、内部例外についての詳細を示します。|新規オブジェクトを作成します。 <xref:System.ServiceModel.ICommunicationObject> にエラーが発生した第一の原因によっては、回復するために他の作業が必要になることがあります。|  
-|<xref:System.ServiceModel.CommunicationObjectAbortedException>|<xref:System.ServiceModel.ICommunicationObject>使用されているが中止されました (詳細については、次を参照してください。[について状態の変化](../../../../docs/framework/wcf/extending/understanding-state-changes.md))。 <xref:System.ServiceModel.CommunicationObjectFaultedException> と同様に、この例外は、アプリケーションがおそらく別のスレッドからオブジェクトに対して <xref:System.ServiceModel.ICommunicationObject.Abort%2A> を呼び出したときに、オブジェクトが既に Aborted 状態であるため、使用できなくなっていることを示しています。|詳細情報を使用できる場合は、内部例外についての詳細を示します。|新規オブジェクトを作成します。 <xref:System.ServiceModel.ICommunicationObject> が中止された第一の原因によっては、回復するために他の作業が必要になることがあります。|  
+|<xref:System.ServiceModel.CommunicationObjectFaultedException>|使用されているは、Faulted状態です(詳細については、「[状態の変更について](understanding-state-changes.md)」を参照してください<xref:System.ServiceModel.ICommunicationObject> )。 複数の呼び出しが保留になっているオブジェクトが Faulted 状態に遷移した場合、エラーに関連する例外をスローする呼び出しは 1 つだけであり、それ以外の呼び出しは <xref:System.ServiceModel.CommunicationObjectFaultedException> をスローします。 通常、この例外がスローされるのは、アプリケーションが何らかの例外を認識しておらず、おそらく最初の例外をキャッチしたスレッド以外のスレッドで、既に Faulted 状態のオブジェクトを使用しようとしたためです。|詳細情報を使用できる場合は、内部例外についての詳細を示します。|新規オブジェクトを作成します。 <xref:System.ServiceModel.ICommunicationObject> にエラーが発生した第一の原因によっては、回復するために他の作業が必要になることがあります。|  
+|<xref:System.ServiceModel.CommunicationObjectAbortedException>|使用<xref:System.ServiceModel.ICommunicationObject>中のが中止されました (詳細については、「[状態の変更につい](understanding-state-changes.md)て」を参照してください)。 <xref:System.ServiceModel.CommunicationObjectFaultedException> と同様に、この例外は、アプリケーションがおそらく別のスレッドからオブジェクトに対して <xref:System.ServiceModel.ICommunicationObject.Abort%2A> を呼び出したときに、オブジェクトが既に Aborted 状態であるため、使用できなくなっていることを示しています。|詳細情報を使用できる場合は、内部例外についての詳細を示します。|新規オブジェクトを作成します。 <xref:System.ServiceModel.ICommunicationObject> が中止された第一の原因によっては、回復するために他の作業が必要になることがあります。|  
 |<xref:System.ServiceModel.EndpointNotFoundException>|対象のリモート エンドポイントがリッスンしていません。 これは、エンドポイント アドレスの一部に誤りがある、エンドポイント アドレスの一部を解決できない、またはエンドポイントがダウンしていることが原因として考えられます (DNS エラー、キュー マネージャーを使用できない、サービスが実行されていないなど)。|この内部例外では、一般に、基になるトランスポートの詳細が示されます。|別のアドレスで実行してください。 また、サービスがダウンしている場合は、送信元がしばらく待機し、再試行することもできます。|  
-|<xref:System.ServiceModel.ProtocolException>|エンドポイントのポリシーで示されている通信プロトコルがエンドポイント間で一致していません (フレーム コンテンツの種類の不一致や、最大メッセージ サイズの超過など)。|詳細情報を使用できる場合は、特定のプロトコル エラーの詳細を示します。 たとえば、MaxReceivedMessageSize を超えていることがエラーの原因である場合、<xref:System.ServiceModel.QuotaExceededException> が内部例外です。|回復:送信側と受信したプロトコル設定と一致することを確認します。 この方法の 1 つとして、サービス エンドポイントのメタデータ (ポリシー) を再度インポートし、生成されたバインディングを使用してチャネルを再作成します。|  
-|<xref:System.ServiceModel.ServerTooBusyException>|リモート エンドポイントはリッスンしていますが、メッセージを処理する準備ができていません。|詳細情報を使用できる場合は、内部例外で SOAP エラーまたはトランスポート レベルのエラーの詳細を示します。|回復:しばらく待機し、後で操作を再試行します。|  
+|<xref:System.ServiceModel.ProtocolException>|エンドポイントのポリシーで示されている通信プロトコルがエンドポイント間で一致していません (フレーム コンテンツの種類の不一致や、最大メッセージ サイズの超過など)。|詳細情報を使用できる場合は、特定のプロトコル エラーの詳細を示します。 たとえば、MaxReceivedMessageSize を超えていることがエラーの原因である場合、<xref:System.ServiceModel.QuotaExceededException> が内部例外です。|回復送信元と受信プロトコルの設定が一致していることを確認します。 この方法の 1 つとして、サービス エンドポイントのメタデータ (ポリシー) を再度インポートし、生成されたバインディングを使用してチャネルを再作成します。|  
+|<xref:System.ServiceModel.ServerTooBusyException>|リモート エンドポイントはリッスンしていますが、メッセージを処理する準備ができていません。|詳細情報を使用できる場合は、内部例外で SOAP エラーまたはトランスポート レベルのエラーの詳細を示します。|回復しばらく待機し、後で操作を再試行します。|  
 |<xref:System.TimeoutException>|タイムアウト期間内に操作を完了できませんでした。|タイムアウトの詳細を示します。|しばらく待機し、後で操作を再試行します。|  
   
  新しい例外の種類を定義するのは、その種類が既存の例外の種類のいずれとも異なる回復方法に対応する場合だけです。 新しい例外の種類を定義する場合は、<xref:System.ServiceModel.CommunicationException> または派生クラスのいずれかから派生する必要があります。  
@@ -34,21 +34,21 @@ ms.locfileid: "67424940"
 ### <a name="exception-messages"></a>例外メッセージ  
  例外メッセージは、プログラムではなくユーザーを対象としています。したがって、ユーザーが問題を理解し、解決する上で役立つ十分な情報を提供する必要があります。 優れた例外メッセージに不可欠な 3 つの構成要素を以下に示します。  
   
- 問題の内容。 ユーザーの経験に関連する用語を使用して、問題を明確に説明します。 たとえば、"無効な構成セクション" という例外メッセージは適切とはいえません。 このようなメッセージでは、ユーザーは、どの構成セクションに誤りがあり、それがなぜ誤りなのか疑問を抱いたままになります。 改善のメッセージが表示されます"無効な構成セクション\<customBinding >"。 これをさらに改善し、"myBinding というバインディングには myTransport というトランスポートが既に含まれているため、このバインディングに myTransport というトランスポートを追加することはできません" というメッセージにします。 これは、アプリケーションの構成ファイル内でユーザーが容易に特定できる用語と名前を使用した、非常に明確なメッセージです。 ただし、まだ重要な要素がいくつか欠けています。  
+ 問題の内容。 ユーザーの経験に関連する用語を使用して、問題を明確に説明します。 たとえば、"無効な構成セクション" という例外メッセージは適切とはいえません。 このようなメッセージでは、ユーザーは、どの構成セクションに誤りがあり、それがなぜ誤りなのか疑問を抱いたままになります。 強化されたメッセージは、"無効\<な構成セクション customBinding >" になります。 これをさらに改善し、"myBinding というバインディングには myTransport というトランスポートが既に含まれているため、このバインディングに myTransport というトランスポートを追加することはできません" というメッセージにします。 これは、アプリケーションの構成ファイル内でユーザーが容易に特定できる用語と名前を使用した、非常に明確なメッセージです。 ただし、まだ重要な要素がいくつか欠けています。  
   
- エラーの重大度。 メッセージがエラーの意味を明確に示していない場合、ユーザーはそれが致命的なエラーかどうか、または無視できるのかどうか疑問を抱くと考えられます。 一般に、メッセージではエラーの意味や重大度を示す必要があります。 前の例を向上させるのには、メッセージ可能性があります"構成エラーが原因で開く を ServiceHost に失敗しました。MyBinding という名前のバインディングに myTransport というトランスポートを追加することはできません、バインド myTransport というトランスポートが既に"。  
+ エラーの重大度。 メッセージがエラーの意味を明確に示していない場合、ユーザーはそれが致命的なエラーかどうか、または無視できるのかどうか疑問を抱くと考えられます。 一般に、メッセージではエラーの意味や重大度を示す必要があります。 前の例を改善するために、"構成エラーが発生したため、ServiceHost は開けませんでした。" というメッセージが表示されることがあります。バインドに myTransport という名前のトランスポートが既に存在するため、myTransport という名前のトランスポートを myBinding という名前のバインドに追加できません。  
   
- ユーザーが問題を修正する方法。 メッセージの最も重要な要素は、ユーザーによる問題の修正を支援することにあります。 メッセージには、問題を改善するためのチェックや修正の内容に関する何らかのガイダンスやヒントを含める必要があります。 たとえば、"構成エラーが原因で開く を ServiceHost に失敗しました。MyBinding という名前のバインディングに myTransport というトランスポートを追加することはできません、バインド myTransport というトランスポートが既にします。 バインディングに含まれているトランスポートが 1 つだけであることを確認してください" というメッセージにします。  
+ ユーザーが問題を修正する方法。 メッセージの最も重要な要素は、ユーザーによる問題の修正を支援することにあります。 メッセージには、問題を改善するためのチェックや修正の内容に関する何らかのガイダンスやヒントを含める必要があります。 たとえば、"構成エラーが原因で、ServiceHost を開くことができませんでした:バインドに myTransport という名前のトランスポートが既に存在するため、myTransport という名前のトランスポートを myBinding という名前のバインドに追加できません。 バインディングに含まれているトランスポートが 1 つだけであることを確認してください" というメッセージにします。  
   
 ## <a name="communicating-faults"></a>エラーの伝達  
  SOAP 1.1 および SOAP 1.2 では、エラーの具体的な構造が定義されています。 この 2 つの仕様にはいくつかの違いがありますが、通常、Message 型と MessageFault 型を使用して、エラーを作成および使用します。  
   
- ![例外とエラーの処理](../../../../docs/framework/wcf/extending/media/wcfc-soap1-1andsoap1-2faultcomparisonc.gif "wcfc_SOAP1-1AndSOAP1-2FaultComparisonc")  
+ ![例外とエラーの処理](./media/wcfc-soap1-1andsoap1-2faultcomparisonc.gif "wcfc_SOAP1-1AndSOAP1-2FaultComparisonc")  
 SOAP 1.2 エラー (左) と SOAP 1.1 エラー (右)。 Fault 要素が名前空間で修飾されているのは SOAP 1.1 のみ。  
   
  SOAP では、エラー メッセージとは、`<env:Fault>` の子要素としてエラー要素 (`<env:Body>` という名前の要素) だけを含むメッセージと定義されています。 図 1 に示すように、エラー要素の内容は SOAP 1.1 と SOAP 1.2 で若干異なります。 ただし、次のように、<xref:System.ServiceModel.Channels.MessageFault?displayProperty=nameWithType> クラスでは、これらの違いを 1 つのオブジェクト モデルに正規化します。  
   
-```  
+```csharp
 public abstract class MessageFault  
 {  
     protected MessageFault();  
@@ -68,13 +68,13 @@ public abstract class MessageFault
 }  
 ```  
   
- `Code` プロパティは、`env:Code` (または SOAP 1.1 の `faultCode`) に対応し、エラーの種類を識別します。 SOAP 1.2 では、`faultCode` の 5 つの許容値 (Sender や Receiver など) が定義されており、サブコード値を格納できる `Subcode` 要素も定義されています (を参照してください、 [SOAP 1.2 仕様](https://go.microsoft.com/fwlink/?LinkId=95176)使用できるエラー コードとその意味の一覧についてはします)。SOAP 1.1 では、若干異なるメカニズムがあります。4 つ定義`faultCode`まったく新しい値を定義するかより具体的に作成する、ドット表記を使用して、拡張可能な値 (たとえば、クライアントとサーバー) `faultCodes`、たとえば、Client.Authentication します。  
+ `Code` プロパティは、`env:Code` (または SOAP 1.1 の `faultCode`) に対応し、エラーの種類を識別します。 SOAP 1.2 では、`faultCode` の 5 つの許容値 (Sender や Receiver など) が定義されており、サブコード値を格納できる `Subcode` 要素も定義されています (使用可能なエラーコードとその意味の一覧については、「 [SOAP 1.2 の仕様](https://go.microsoft.com/fwlink/?LinkId=95176)」を参照してください)。SOAP 1.1 のメカニズムは少し異なります。この例で`faultCode`は、クライアントとサーバーの4つの値を定義しています。これは、まったく新しい値を定義するか、ドット`faultCodes`表記を使用して、クライアント認証など、より具体的なものを作成することによって拡張できます。  
   
  MessageFault を使用してエラーをプログラミングする場合、FaultCode.Name と FaultCode.Namespace は、SOAP 1.2 の `env:Code` または SOAP 1.1 の `faultCode` の名前と名前空間に割り当てられます。 FaultCode.SubCode は、SOAP 1.2 では `env:Subcode` に割り当てられ、SOAP 1.1 では null になります。  
   
- エラーをプログラムによって区別する場合は、新しいエラー サブコード (SOAP 1.1 を使用する場合は新しいエラー コード) を作成します。 これは、新しい例外の種類を作成することに似ています。 SOAP 1.1 エラー コードではドット表記を使用しないようにすることをお勧めします (、 [WS-Basic profile](https://go.microsoft.com/fwlink/?LinkId=95177)もエラー コードのドット表記の使用を抑制します)。  
+ エラーをプログラムによって区別する場合は、新しいエラー サブコード (SOAP 1.1 を使用する場合は新しいエラー コード) を作成します。 これは、新しい例外の種類を作成することに似ています。 SOAP 1.1 エラー コードではドット表記を使用しないようにすることをお勧めします ( [Ws-i Basic Profile](https://go.microsoft.com/fwlink/?LinkId=95177)では、エラーコードドット表記の使用が推奨されていません)。  
   
-```  
+```csharp  
 public class FaultCode  
 {  
     public FaultCode(string name);  
@@ -96,7 +96,7 @@ public class FaultCode
   
  `Reason` プロパティは、`env:Reason` (または SOAP 1.1 の `faultString`) に対応しています。これは、例外のメッセージと同様に、ユーザーが判読できるエラー状態の記述です。 `FaultReason` クラス (および SOAP の `env:Reason/faultString`) には、グローバリゼーションのために、複数の変換を使用するためのサポートが組み込まれています。  
   
-```  
+```csharp  
 public class FaultReason  
 {  
     public FaultReason(FaultReasonText translation);  
@@ -111,14 +111,14 @@ public class FaultReason
  }  
 ```  
   
- エラーの詳しい内容がなど、さまざまなメソッドを使用して、MessageFault で公開されている、 `GetDetail` \<T > と`GetReaderAtDetailContents`()。 エラーの詳細は、エラーに関する追加情報を伝達するための不透明な要素です。 これは、エラーと共に伝達する任意の構造化された詳細がある場合に役立ちます。  
+ エラーの詳細コンテンツは、T > や`GetDetail` `GetReaderAtDetailContents`() などの\<さまざまなメソッドを使用して、MessageFault で公開されます。 エラーの詳細は、エラーに関する追加情報を伝達するための不透明な要素です。 これは、エラーと共に伝達する任意の構造化された詳細がある場合に役立ちます。  
   
 ### <a name="generating-faults"></a>エラーの生成  
  このセクションでは、チャネルまたはチャネルによって作成されたメッセージ プロパティで検出されるエラー状態に応じてエラーを生成するプロセスについて説明します。 一般的な例として、無効なデータが含まれた要求メッセージに対するエラーの送信が挙げられます。  
   
  エラーの生成時には、カスタム チャネルからエラーを直接送信するのではなく、例外をスローするようにし、その例外をエラーに変換するかどうかの判断とエラーの送信方法の決定は上位のレイヤーで行います。 この変換を支援するために、チャネルは `FaultConverter` を実装し、カスタム チャネルがスローした例外を適切なエラーに変換できるようにします。 `FaultConverter` は次のように定義します。  
   
-```  
+```csharp  
 public class FaultConverter  
 {  
     public static FaultConverter GetDefaultFaultConverter(  
@@ -132,9 +132,9 @@ public class FaultConverter
 }  
 ```  
   
- カスタム エラーを生成する各チャネルは `FaultConverter` を実装し、`GetProperty<FaultConverter>` の呼び出しからこれを返す必要があります。 カスタム `OnTryCreateFaultMessage` 実装では、例外をエラーに変換するか、内部チャネルの `FaultConverter` に委任する必要があります。 チャネルがトランスポートの場合する必要がありますが例外を変換またはエンコーダーの委任`FaultConverter`または既定`FaultConverter`WCF で提供します。 既定の `FaultConverter` は、WS-Addressing および SOAP で指定されたエラー メッセージに対応するエラーを変換します。 `OnTryCreateFaultMessage` 実装の例を次に示します。  
+ カスタム エラーを生成する各チャネルは `FaultConverter` を実装し、`GetProperty<FaultConverter>` の呼び出しからこれを返す必要があります。 カスタム `OnTryCreateFaultMessage` 実装では、例外をエラーに変換するか、内部チャネルの `FaultConverter` に委任する必要があります。 チャネルがトランスポートの場合は、例外`FaultConverter`を変換するか、または WCF で指定されている既定`FaultConverter`のに変換する必要があります。 既定の `FaultConverter` は、WS-Addressing および SOAP で指定されたエラー メッセージに対応するエラーを変換します。 `OnTryCreateFaultMessage` 実装の例を次に示します。  
   
-```  
+```csharp  
 public override bool OnTryCreateFaultMessage(Exception exception,   
                                              out Message message)  
 {  
@@ -187,9 +187,9 @@ public override bool OnTryCreateFaultMessage(Exception exception,
   
 3. スタックの単一のレイヤーを対象とするエラー (例 : WS-RM シーケンス番号エラー)。  
   
- カテゴリ 1 です。 一般に、WS-Addressing エラーおよび SOAP エラーです。 基本`FaultConverter`WCF によってエラー メッセージに対応するエラーを変換で指定された Ws-addressing および SOAP これらの例外の変換を処理する必要はありませんので自分で提供されるクラスします。  
+ カテゴリ1。 一般に、WS-Addressing エラーおよび SOAP エラーです。 WCF に`FaultConverter`よって提供される基底クラスは、ws-addressing および SOAP で指定されたエラーメッセージに対応するエラーを変換するため、これらの例外の変換を自分で処理する必要はありません。  
   
- カテゴリ 2 です。 レイヤーに関するメッセージ情報を完全に使用しているわけではないメッセージに対して、そのレイヤーがプロパティを追加したときに発生します。 後で上位のレイヤーがメッセージ情報をさらに処理するために、メッセージ プロパティを要求したときに、エラーが検出されることがあります。 このようなチャネルでは、前述の `GetProperty` を実装して、上位のレイヤーが適切なエラーを返すことができるようにする必要があります。 プロパティの例として、TransactionMessageProperty があります。 このプロパティは、ヘッダー内のすべてのデータが完全には検証されずにメッセージに追加されます (この検証には、分散トランザクション コーディネーター (DTC) への接続が必要になることがあります)。  
+ カテゴリ2。 レイヤーに関するメッセージ情報を完全に使用しているわけではないメッセージに対して、そのレイヤーがプロパティを追加したときに発生します。 後で上位のレイヤーがメッセージ情報をさらに処理するために、メッセージ プロパティを要求したときに、エラーが検出されることがあります。 このようなチャネルでは、前述の `GetProperty` を実装して、上位のレイヤーが適切なエラーを返すことができるようにする必要があります。 プロパティの例として、TransactionMessageProperty があります。 このプロパティは、ヘッダー内のすべてのデータが完全には検証されずにメッセージに追加されます (この検証には、分散トランザクション コーディネーター (DTC) への接続が必要になることがあります)。  
   
  カテゴリ 3. エラーは、プロセッサ内の単一のレイヤーによって生成され、送信されるだけです。 したがって、すべての例外はそのレイヤー内に含まれます。 チャネル間の整合性を向上させ、保守を容易にするために、カスタム チャネルでは、前述のパターンを使用して、内部エラーについてもエラー メッセージを生成することをお勧めします。  
   
@@ -204,7 +204,7 @@ public override bool OnTryCreateFaultMessage(Exception exception,
   
  次のオブジェクト モデルは、メッセージから例外への変換をサポートします。  
   
-```  
+```csharp  
 public class FaultConverter  
 {  
     public static FaultConverter GetDefaultFaultConverter(  
@@ -224,7 +224,7 @@ public class FaultConverter
   
  一般的な実装は、次のようになります。  
   
-```  
+```csharp  
 public override bool OnTryCreateException(  
                             Message message,   
                             MessageFault fault,   
@@ -286,11 +286,11 @@ public override bool OnTryCreateException(
  明確な回復シナリオが用意されたエラー状態については、`ProtocolException` の派生クラスを定義することを検討してください。  
   
 ### <a name="mustunderstand-processing"></a>MustUnderstand の処理  
- SOAP には、必須のヘッダーが受信側で認識されなかったことを通知するための一般的なエラーが定義されています。 このエラーは、`mustUnderstand` エラーと呼ばれます。 カスタム チャネル WCF では、生成されません`mustUnderstand`エラー。 確認する、WCF 通信スタックの上部には、WCF ディスパッチャーをチェックする代わりに、MustUnderstand としてマークされたすべてのヘッダー = true を基になるスタックで認識します。 認識されていないヘッダーが見つかった場合、その時点で `mustUnderstand` エラーが生成されます (ユーザーは、この `mustUnderstand` の処理を無効にし、すべてのメッセージ ヘッダーをアプリケーションで受信するようにすることができます。 その場合、`mustUnderstand` の処理はアプリケーションが実行します)。生成されたエラーには、NotUnderstood ヘッダーが含まれます。このヘッダーには、MustUnderstand=true でマークされたヘッダーの中で、認識されなかったすべてのヘッダーの名前が含まれています。  
+ SOAP には、必須のヘッダーが受信側で認識されなかったことを通知するための一般的なエラーが定義されています。 このエラーは、`mustUnderstand` エラーと呼ばれます。 WCF では、カスタムチャネルに`mustUnderstand`よってエラーが生成されることはありません。 代わりに、wcf 通信スタックの最上位にある WCF ディスパッチャーは、MustUnderstand = true とマークされているすべてのヘッダーが基になるスタックで認識されていることを確認します。 認識されていないヘッダーが見つかった場合、その時点で `mustUnderstand` エラーが生成されます (ユーザーは、この `mustUnderstand` の処理を無効にし、すべてのメッセージ ヘッダーをアプリケーションで受信するようにすることができます。 その場合、`mustUnderstand` の処理はアプリケーションが実行します)。生成されたエラーには、NotUnderstood ヘッダーが含まれます。このヘッダーには、MustUnderstand=true でマークされたヘッダーの中で、認識されなかったすべてのヘッダーの名前が含まれています。  
   
  プロトコル チャネルから MustUnderstand=true でマークされたカスタム ヘッダーを送信し、`mustUnderstand` エラーを受信した場合、そのエラーが送信したヘッダーに起因するものかどうかを確認する必要があります。 `MessageFault` クラスには、このために役立つ 2 つのメンバーが存在します。  
   
-```  
+```csharp  
 public class MessageFault  
 {  
     ...  
@@ -311,18 +311,18 @@ public class MessageFault
   
 - <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> は、書き込むトレース情報のソースです。<xref:System.Diagnostics.TraceListener?displayProperty=nameWithType> は、<xref:System.Diagnostics.TraceSource> からトレースする情報を受け取り、リスナー固有の送信先に出力する具象リスナーの抽象基本クラスです。 たとえば、<xref:System.Diagnostics.XmlWriterTraceListener> は、トレース情報を XML ファイルに出力します。 最後に、<xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> を使用すると、アプリケーション ユーザーがトレースの詳細出力レベルを制御できます。通常、このクラスは構成で指定します。  
   
-- 使用することができます、コア コンポーネントに加え、[サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)を表示および検索 WCF トレースします。 このツールは、WCF によって生成され、出力を使用して、トレース ファイルの向けに設計されて<xref:System.Diagnostics.XmlWriterTraceListener>します。 トレースに関与するさまざまなコンポーネントを次の図に示します。  
+- コアコンポーネントに加えて、[サービストレースビューアーツール (svctraceviewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md)を使用して、WCF トレースを表示および検索することもできます。 このツールは、WCF によって生成され、を使用<xref:System.Diagnostics.XmlWriterTraceListener>して出力されるトレースファイル専用に設計されています。 トレースに関与するさまざまなコンポーネントを次の図に示します。  
   
- ![例外とエラーの処理](../../../../docs/framework/wcf/extending/media/wcfc-tracinginchannelsc.gif "wcfc_TracingInChannelsc")  
+ ![例外とエラーの処理](./media/wcfc-tracinginchannelsc.gif "wcfc_TracingInChannelsc")  
   
 ### <a name="tracing-from-a-custom-channel"></a>カスタム チャネルからのトレース  
- 実行中のアプリケーションにデバッガーをアタッチできないときに問題の診断を支援するために、カスタム チャネルはトレース メッセージを書き込む必要あります。 これには、2 つの高度なタスクが含まれます。インスタンス化する、<xref:System.Diagnostics.TraceSource>トレースを書き込むためのメソッドを呼び出すとします。  
+ 実行中のアプリケーションにデバッガーをアタッチできないときに問題の診断を支援するために、カスタム チャネルはトレース メッセージを書き込む必要あります。 これには、次の2つの高レベルのタスクが含まれます。を<xref:System.Diagnostics.TraceSource>インスタンス化し、トレースを書き込むためのメソッドを呼び出します。  
   
- <xref:System.Diagnostics.TraceSource> をインスタンス化する場合、指定した文字列が対象のソースの名前になります。 この名前を使用して、トレース ソースを構成 (有効化/無効化/トレース レベルの設定) します。 また、トレース出力にもこの名前が表示されます。 カスタム チャネルは、一意のソース名を使用して、トレース出力の利用者にトレース情報のソースがわかるようにする必要があります。 トレース ソースの名前として、情報を書き込むアセンブリの名前を使用するのが一般的です。 など、WCF は、System.ServiceModel アセンブリから書き込まれた情報のトレース ソースとして System.ServiceModel を使用します。  
+ <xref:System.Diagnostics.TraceSource> をインスタンス化する場合、指定した文字列が対象のソースの名前になります。 この名前を使用して、トレース ソースを構成 (有効化/無効化/トレース レベルの設定) します。 また、トレース出力にもこの名前が表示されます。 カスタム チャネルは、一意のソース名を使用して、トレース出力の利用者にトレース情報のソースがわかるようにする必要があります。 トレース ソースの名前として、情報を書き込むアセンブリの名前を使用するのが一般的です。 たとえば、WCF では、System.servicemodel アセンブリから書き込まれた情報のトレースソースとして System.servicemodel を使用します。  
   
  トレース ソースを用意したら、<xref:System.Diagnostics.TraceSource.TraceData%2A>、<xref:System.Diagnostics.TraceSource.TraceEvent%2A>、または <xref:System.Diagnostics.TraceSource.TraceInformation%2A> の各メソッドを呼び出して、トレース エントリをトレース リスナーに書き込みます。 書き込む各トレース エントリのイベントの種類は、<xref:System.Diagnostics.TraceEventType> に定義されたイベントの種類のいずれかとして分類する必要があります。 この分類と構成でのトレース レベルの設定によって、トレース エントリをリスナーに出力するかどうかが決まります。 たとえば、構成でトレース レベルを `Warning` に設定すると、`Warning`、`Error`、および `Critical` の各トレース エントリを書き込むことができますが、Information エントリと Verbose エントリはブロックされます。 トレース ソースをインスタンス化し、Information レベルでエントリを書き込む例を次に示します。  
   
-```  
+```csharp
 using System.Diagnostics;  
 //...  
 TraceSource udpSource=new TraceSource("Microsoft.Samples.Udp");  
@@ -331,10 +331,10 @@ udpsource.TraceInformation("UdpInputChannel received a message");
 ```  
   
 > [!IMPORTANT]
->  カスタム チャネル固有のトレース ソース名を指定して、トレース出力の利用者に出力のソースがわかるようにすることを強くお勧めします。  
+> カスタム チャネル固有のトレース ソース名を指定して、トレース出力の利用者に出力のソースがわかるようにすることを強くお勧めします。  
   
 #### <a name="integrating-with-the-trace-viewer"></a>トレース ビューアーとの統合  
- 読み取り可能な形式で出力できるは、チャネルによって生成されたトレース、[サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)を使用して<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>トレース リスナーとして。 これは、チャネル開発者が行う必要はありません。 アプリケーション ユーザー (またはアプリケーションのトラブルシューティング担当者) が、アプリケーションの構成ファイルでこのトレース リスナーを構成する必要があります。 たとえば、次の構成では、<xref:System.ServiceModel?displayProperty=nameWithType> と `Microsoft.Samples.Udp` の両方から `TraceEventsFile.e2e` というファイルにトレース情報が出力されます。  
+ チャネルによって生成されるトレースは、トレースリスナーとしてを使用<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>することにより、[サービストレースビューアーツール (svctraceviewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md)で読み取り可能な形式で出力できます。 これは、チャネル開発者が行う必要はありません。 アプリケーション ユーザー (またはアプリケーションのトラブルシューティング担当者) が、アプリケーションの構成ファイルでこのトレース リスナーを構成する必要があります。 たとえば、次の構成では、<xref:System.ServiceModel?displayProperty=nameWithType> と `Microsoft.Samples.Udp` の両方から `TraceEventsFile.e2e` というファイルにトレース情報が出力されます。  
   
 ```xml  
 <configuration>  
@@ -403,4 +403,4 @@ udpsource.TraceInformation("UdpInputChannel received a message");
 </E2ETraceEvent>  
 ```  
   
- WCF トレース ビューアーのスキーマの理解、`TraceRecord`前に示した要素とその子要素からデータを抽出し、表形式で表示します。 チャネルで構造化されたアプリケーション データをトレースするときには、このスキーマを使用して Svctraceviewer.exe のユーザーがデータを判読しやすいようにします。
+ WCF トレースビューアーは、前に示した`TraceRecord`要素のスキーマを認識し、その子要素からデータを抽出して、表形式で表示します。 チャネルで構造化されたアプリケーション データをトレースするときには、このスキーマを使用して Svctraceviewer.exe のユーザーがデータを判読しやすいようにします。

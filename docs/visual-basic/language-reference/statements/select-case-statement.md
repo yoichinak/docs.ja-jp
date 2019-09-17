@@ -21,15 +21,15 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Select Case statements
 - Case statement [Visual Basic], Select...Case
 ms.assetid: 68877b65-5419-4bf0-a465-20cd0e4c7d44
-ms.openlocfilehash: f99db4f1dc224e5f75ee67ba94c3745f28438724
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 627318677270ba4ffa8ee430febea7ddf83bd245
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783891"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957660"
 ---
 # <a name="selectcase-statement-visual-basic"></a>Select...Case ステートメント (Visual Basic)
-式の値に応じて、ステートメントのグループをいくつかのいずれかを実行します。  
+式の値に応じて、いくつかのステートメントグループのうちの1つを実行します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,39 +46,39 @@ End Select
   
 |用語|定義|  
 |---|---|  
-|`testexpression`|必須。 式。 基本データ型のいずれかを評価する必要があります (`Boolean`、 `Byte`、 `Char`、 `Date`、 `Double`、 `Decimal`、 `Integer`、 `Long`、 `Object`、 `SByte`、 `Short`、`Single`、 `String`、 `UInteger`、 `ULong`、および`UShort`)。|  
-|`expressionlist`|必要な`Case`ステートメント。 一致した値を表す式の句のリスト`testexpression`します。 複数の式の句は、コンマで区切られます。 各句には、次の形式のいずれかを実行できます。<br /><br /> -   *expression1* `To` *expression2*<br />-   [ `Is` ] *comparisonoperator* *expression*<br />-   *expression*<br /><br /> 使用して、`To`一致の範囲の境界を指定するキーワードの値を`testexpression`します。 値`expression1`の値未満でなければなりません`expression2`します。<br /><br /> 使用して、`Is`比較演算子でキーワード (`=`、 `<>`、 `<`、 `<=`、 `>`、または`>=`)、一致した値に制限を指定する`testexpression`します。 場合、`Is`キーワードが指定されていないが自動的にする前に挿入*comparisonoperator*します。<br /><br /> だけを指定してフォーム`expression`の特殊なケースとして扱われます、`Is`フォーム where *comparisonoperator*は等号 (=) (`=`)。 この形式は`testexpression`  = `expression`します。<br /><br /> 内の式`expressionlist`かの型に暗黙的に変換可能であれば、任意のデータ型のできる`testexpression`、適切な`comparisonoperator`はで使用されている 2 つの型に対して有効です。|  
-|`statements`|省略可能です。 1 つまたは複数のステートメントの次`Case`実行されている場合`testexpression`で句と一致する`expressionlist`します。|  
-|`elsestatements`|省略可能です。 1 つまたは複数のステートメントの次`Case Else`実行されている場合`testexpression`で句と一致しません、`expressionlist`のいずれかの`Case`ステートメント。|  
-|`End Select`|定義を終了、 `Select`.`Case`構築します。|  
+|`testexpression`|必須。 条件. は、基本`Boolean`データ型 ( 、`Decimal`、、 `Date` `Char` `Double` 、、`Long`、、、、、 、)のいずれかに評価される必要があります。`Short` `Integer` `Byte` `Object` `SByte``Single` 、`String`、 、`ULong`、および)`UShort`。 `UInteger`|  
+|`expressionlist`|`Case`ステートメント内で必要です。 の`testexpression`一致値を表す式の句の一覧。 複数の式句は、コンマで区切ります。 各句には、次のいずれかの形式を使用できます。<br /><br /> -   *expression1* `To` *expression2*<br />-   [ `Is` ] *comparisonoperator* *expression*<br />-   *条件*<br /><br /> キーワードを使用して、の`testexpression`一致値の範囲の境界を指定します。 `To` の`expression1`値は、の`expression2`値以下である必要があります。<br /><br /> `=`比較演算子`<>`(、 `Is` `testexpression`、、 、、また`>=`は) でキーワードを使用して、の一致値に制限を指定します。 `>` `<=` `<` キーワードが指定されていない場合は、comparisonoperator の前に自動的に挿入されます。 `Is`<br /><br /> のみ`expression`を指定するフォームは、 `Is`フォームの特殊なケースとして扱われます。ここ`=`で、 *comparisonoperator*は等号 () です。 このフォームはとし`testexpression`て =  `expression`評価されます。<br /><br /> の式`expressionlist`は、任意のデータ型にすることができます。その場合、の`testexpression`型に暗黙的`comparisonoperator`に変換可能で、適切なが使用されている2つの型に対して有効です。|  
+|`statements`|省略可能です。 が内の句に`Case` `expressionlist`一致する場合`testexpression` 、を実行する1つ以上のステートメントを実行します。|  
+|`elsestatements`|省略可能です。 に続く`Case Else` 1 つ以上のステートメントが`testexpression` 、 `Case`ステートメントの内`expressionlist`の句と一致しない場合に実行されます。|  
+|`End Select`|`Select`... の定義を終了します。`Case`構築。|  
   
 ## <a name="remarks"></a>Remarks  
- 場合`testexpression`と一致する`Case``expressionlist`句を次のステートメントでは、`Case`次ステートメントが実行`Case`、 `Case Else`、または`End Select`ステートメント。 次のステートメントのパスを制御し、`End Select`します。 場合`testexpression`と一致する、 `expressionlist` 1 つ以上の句`Case`句では、最初の一致の次のステートメントのみを実行します。  
+ が`testexpression` any `Case` `Case Else` `Case` `End Select`句と一致する場合、そのステートメントの後に続くステートメントは、次の、、またはステートメントまで実行されます。 `Case` `expressionlist` その後、制御は次`End Select`のステートメントに渡されます。 が`testexpression`複数の`expressionlist` `Case`句の句と一致する場合、最初の一致の後に続くステートメントだけが実行されます。  
   
- `Case Else`ステートメントを使用して、導入、`elsestatements`間で一致が見つからない場合に実行する、`testexpression`と`expressionlist`で他の句`Case`ステートメント。 良いアイデアですが必須ではありませんが、`Case Else`内のステートメント、`Select Case`の構築処理を予期しない`testexpression`値。 ない場合は`Case``expressionlist`句と一致する`testexpression`はない`Case Else`ステートメントでは、次のステートメントのコントロール パス`End Select`。  
+ `expressionlist` `elsestatements` `testexpression`ステートメントを使用すると、他の`Case`どのステートメントでも句と句の間に一致が検出されなかった場合に、実行するが導入されます。 `Case Else` 必須ではありませんが、予期`Case Else` `testexpression`しない値を処理する`Select Case`ためのステートメントを構築に含めることをお勧めします。 に一致`Case`する`expressionlist` `Case Else`句がなく、ステートメントがない場合は、次`End Select`のステートメントに制御が渡されます。 `testexpression`  
   
- 複数の式または範囲を使用するには各`Case`句。 たとえば、次の行は有効です。  
+ 各`Case`句では、複数の式または範囲を使用できます。 たとえば、次の行は有効です。  
   
  `Case 1 To 4, 7 To 9, 11, 13, Is > maxNumber`  
   
 > [!NOTE]
->  `Is`で使用されるキーワード、`Case`と`Case Else`ステートメントがないと同じ、 [Is 演算子](../../../visual-basic/language-reference/operators/is-operator.md)、オブジェクト参照の比較に使用されます。  
+> `Case`ステートメントおよびステートメント`Case Else`で使用されるキーワードは、オブジェクト参照の比較に使用される [is 演算子](../../../visual-basic/language-reference/operators/is-operator.md)と同じではありませ`Is`ん。  
   
- 範囲と文字の文字列の複数の式を指定できます。 次の例では、`Case`を"apples"に正確に一致、アルファベット順に「ナット」と「スープ」の間の値を持つ、またはの現在の値とまったく同じ値を格納する任意の文字列と一致する`testItem`します。  
+ 文字列の範囲と複数の式を指定できます。 次の例では`Case` 、は "りんご" と完全に等価な任意の文字列を、アルファベット順で "ナット" と "スープ" の間の値を持ちます。または、の現在`testItem`の値とまったく同じ値を含んでいます。  
   
  `Case "apples", "nuts" To "soup", testItem`  
   
- 設定は、`Option Compare`文字列比較に影響を与えることができます。 `Option Compare Text`、Equal、として比較してが文字列"Apples"と"apples" `Option Compare Binary`、一致していないためです。  
+ の`Option Compare`設定は、文字列比較に影響を与える可能性があります。 では、文字列 "りんご" と "りんご" は等しいものとして`Option Compare Binary`比較されますが、ではこれらの文字列は比較されません。 `Option Compare Text`  
   
 > [!NOTE]
->  A`Case`句を指定して複数のステートメントと呼ばれる動作が発生することができます*ショート サーキット*します。 Visual Basic は、左から右への句を評価し、1 つの場合との一致を作成します。 `testexpression`、残りの句は評価されません。 ショート サーキットのパフォーマンスが向上するのすべての式が必要な場合、予期しない結果を生成できる`expressionlist`評価されます。 ショート サーキットの詳細については、次を参照してください。[ブール式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)します。  
+> 複数`Case`の句を持つステートメントでは、*ショートサーキット*と呼ばれる動作を使用できます。 Visual Basic は、句を左から右に評価し、一方がと`testexpression`一致する場合、残りの句は評価されません。 ショートサーキットはパフォーマンスを向上させることができますが、のすべての`expressionlist`式を評価する必要がある場合は、予期しない結果が生じる可能性があります。 ショートサーキットの詳細については、「[ブール式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)」を参照してください。  
   
- 場合内のコードを`Case`または`Case Else`ステートメント ブロックは、ブロックで以上のステートメントを実行する必要はありませんを使用して、ブロックを終了できますが、`Exit Select`ステートメント。 ステートメントに制御を直ちに転送この`End Select`します。  
+ `Case`また`Exit Select`は`Case Else`ステートメントブロック内のコードが、ブロック内のステートメントを実行する必要がない場合は、ステートメントを使用してブロックを終了できます。 これは、次`End Select`のステートメントに制御を直ちに転送します。  
   
- `Select Case` 構造を入れ子にすることができます。 入れ子になった`Select Case`構築の対応する必要がありますが`End Select`ステートメントを 1 回完全に含める必要があると`Case`または`Case Else`ステートメント ブロックの外側の`Select Case`構築を入れ子にします。  
+ `Select Case`構造は入れ子にすることができます。 入れ子に`Select Case`なった各構築は`End Select` 、一致するステートメントを持つ必要があり`Case` 、入れ子になっている`Select Case`外側の構造体の1つまたは`Case Else`複数のステートメントブロック内に完全に含める必要があります。  
   
 ## <a name="example"></a>例  
- 次の例では、`Select Case`構造を使用して、変数の値に対応する行も記述`number`します。 2 番目の`Case`ステートメントには、現在の値に一致する値が含まれています。 `number`"6 から 8 の包括的な"ステートメントを書き込むため、実行します。  
+ 次の例では`Select Case` 、構築を使用して、変数`number`の値に対応する行を書き込みます。 2番`Case`目のステートメントには、の現在の`number`値と一致する値が含まれています。そのため、"Between 6" ~ "8" を含むステートメントを実行します。  
   
  [!code-vb[VbVbalrStatements#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#54)]  
   

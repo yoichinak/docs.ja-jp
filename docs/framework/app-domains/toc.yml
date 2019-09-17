@@ -1,29 +1,33 @@
 - name: アプリケーション ドメインとアセンブリ
   href: index.md
   items:
-    - name: 共通言語ランタイムのアセンブリ
-      href: assemblies-in-the-common-language-runtime.md
+    - name: アセンブリの配置
+      href: assembly-placement.md
+    - name: グローバル アセンブリ キャッシュ
+      href: gac.md
+    - name: アセンブリとグローバル アセンブリ キャッシュの使用
+      href: working-with-assemblies-and-the-gac.md
       items:
-        - name: アセンブリの内容
-          href: assembly-contents.md
-        - name: アセンブリ マニフェスト
-          href: assembly-manifest.md
-        - name: グローバル アセンブリ キャッシュ
-          href: gac.md
-        - name: 厳密な名前付きアセンブリ
-          href: strong-named-assemblies.md
-        - name: アセンブリのセキュリティに関する考慮事項
-          href: assembly-security-considerations.md
-        - name: アセンブリのバージョン管理
-          href: assembly-versioning.md
-        - name: アセンブリの配置
-          href: assembly-placement.md
-        - name: アセンブリと side-by-side 実行
-          href: assemblies-and-side-by-side-execution.md
+        - name: '方法: グローバル アセンブリ キャッシュの内容を表示する'
+          href: how-to-view-the-contents-of-the-gac.md
+        - name: '方法: アセンブリをグローバル アセンブリ キャッシュにインストールする'
+          href: install-assembly-into-gac.md
+        - name: '方法: グローバル アセンブリ キャッシュからアセンブリを削除する'
+          href: how-to-remove-an-assembly-from-the-gac.md
+        - name: サービス コンポーネントとグローバル アセンブリ キャッシュの使用
+          href: use-serviced-components-with-the-gac.md
     - name: アプリケーション ドメイン
       href: application-domains.md
     - name: アプリケーション ドメインとアセンブリに関する方法のトピック
       href: application-domains-and-assemblies-how-to-topics.md
+    - name: '方法: シングルファイル アセンブリをビルドする'
+      href: build-single-file-assembly.md
+    - name: マルチファイル アセンブリ
+      href: multifile-assemblies.md
+    - name: '方法: マルチファイル アセンブリをビルドする'
+      href: build-multifile-assembly.md
+    - name: '方法: アセンブリを他のアプリケーションと共有する'
+      href: how-to-share-an-assembly-with-other-applications.md
     - name: アプリケーション ドメインの使用
       href: use.md
       items:
@@ -37,62 +41,9 @@
           href: retrieve-setup-information.md
         - name: '方法: アプリケーション ドメインにアセンブリを読み込む'
           href: how-to-load-assemblies-into-an-application-domain.md
-        - name: '方法: アセンブリから型およびメンバーの情報を取得する'
-          href: how-to-obtain-type-and-member-information-from-an-assembly.md
         - name: アセンブリのシャドウ コピー
           href: shadow-copy-assemblies.md
         - name: '方法: 初回例外通知を受け取る'
           href: how-to-receive-first-chance-exception-notifications.md
-        - name: 解決 (アセンブリ読み込みを)
-          href: resolve-assembly-loads.md
-    - name: アセンブリを使用したプログラミング
-      href: programming-with-assemblies.md
-      items:
-        - name: アセンブリの作成
-          href: create-assemblies.md
-        - name: アセンブリ名
-          href: assembly-names.md
-        - name: '方法: アセンブリの完全修飾名を特定する'
-          href: how-to-determine-assembly-fully-qualified-name.md
-        - name: イントラネット アプリケーションの完全信頼での実行
-          href: running-intranet-applications-in-full-trust.md
-        - name: アセンブリの場所
-          href: assembly-location.md
-        - name: '方法: シングルファイル アセンブリをビルドする'
-          href: how-to-build-a-single-file-assembly.md
-        - name: マルチファイル アセンブリ
-          href: multifile-assemblies.md
-        - name: '方法: マルチファイル アセンブリをビルドする'
-          href: how-to-build-a-multifile-assembly.md
-        - name: アセンブリ属性の設定
-          href: set-assembly-attributes.md
-        - name: 厳密な名前付きアセンブリの作成と使用
-          href: create-and-use-strong-named-assemblies.md
-          items:
-            - name: '方法: 公開キーと秘密キーのキー ペアを作成する'
-              href: how-to-create-a-public-private-key-pair.md
-            - name: '方法: 厳密な名前でアセンブリに署名する'
-              href: how-to-sign-an-assembly-with-a-strong-name.md
-            - name: 拡張された厳密な名前付け
-              href: enhanced-strong-naming.md
-            - name: '方法: 厳密な名前のアセンブリを参照する'
-              href: how-to-reference-a-strong-named-assembly.md
-            - name: '方法: 厳密な名前のバイパス機能を無効にする'
-              href: how-to-disable-the-strong-name-bypass-feature.md
-        - name: アセンブリへの遅延署名
-          href: delay-sign-assembly.md
-        - name: アセンブリとグローバル アセンブリ キャッシュの使用
-          href: working-with-assemblies-and-the-gac.md
-          items:
-            - name: '方法: アセンブリをグローバル アセンブリ キャッシュにインストールする'
-              href: how-to-install-an-assembly-into-the-gac.md
-            - name: '方法: グローバル アセンブリ キャッシュの内容を表示する'
-              href: how-to-view-the-contents-of-the-gac.md
-            - name: '方法: グローバル アセンブリ キャッシュからアセンブリを削除する'
-              href: how-to-remove-an-assembly-from-the-gac.md
-            - name: サービス コンポーネントとグローバル アセンブリ キャッシュの使用
-              href: use-serviced-components-with-the-gac.md
-        - name: '方法: アセンブリの内容を表示する'
-          href: how-to-view-assembly-contents.md
-        - name: 共通言語ランタイムでの型の転送
-          href: type-forwarding-in-the-common-language-runtime.md
+    - name: イントラネット アプリケーションの完全信頼での実行
+      href: running-intranet-applications-in-full-trust.md

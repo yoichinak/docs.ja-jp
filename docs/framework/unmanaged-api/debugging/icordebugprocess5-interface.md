@@ -16,45 +16,45 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b5904083be66d4bd6dc69729bebc28db8a800e77
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 31ecea4857dabc55e8acd3c22a025895a686efcd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948682"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931087"
 ---
 # <a name="icordebugprocess5-interface"></a>ICorDebugProcess5 インターフェイス
-管理対象のオブジェクトのガベージ コレクションに関する情報を提供する、マネージ ヒープへのアクセスをサポートするために ICorDebugProcess インターフェイスを拡張し、デバッガーがかどうかを判断するには、アプリケーションのローカル ネイティブ イメージ キャッシュからイメージを読み込みます。  
+は、アプリケーションインターフェイスを拡張して、マネージヒープへのアクセスをサポートし、マネージオブジェクトのガベージコレクションに関する情報を提供し、デバッガーがアプリケーションのローカルネイティブイメージキャッシュからイメージを読み込むかどうかを判断します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[EnableNGENPolicy メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md)|アプリケーションがマネージ デバッガーで実行中にネイティブ イメージを読み込む方法を決定する値を設定します。|  
-|[EnumerateGCReferences メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md)|プロセスでガベージ コレクトされるすべてのオブジェクトの列挙子を取得します。|  
-|[EnumerateHandles メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)|プロセスでオブジェクト ハンドルの列挙子を取得します。|  
-|[EnumerateHeap メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheap-method.md)|マネージ ヒープのオブジェクトの列挙子を取得します。|  
-|[EnumerateHeapRegions メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md)|マネージ ヒープの領域の列挙子を取得します。|  
-|[GetArrayLayout メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getarraylayout-method.md)|メモリ内配列のレイアウトに関する情報を取得します。|  
-|[GetGCHeapInformation メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md)|ポインターを取得、 [COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md)マネージ ヒープ上でガベージ コレクトされるオブジェクトに関する情報を含む構造体。|  
-|[GetObject メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getobject-method.md)|マネージ ヒープにオブジェクトへのポインターを取得します。|  
-|[GetTypeFields メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefields-method.md)|その型の識別子に基づく型のフィールド情報を格納する配列にポインターを取得します。|  
-|[GetTypeForTypeID メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md)|その型の識別子に基づくオブジェクトに関する情報を提供する型のオブジェクトを取得します。|  
-|[GetTypeID メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypeid-method.md)|指定したアドレスにオブジェクトの種類の識別子を取得します。|  
-|[GetTypeLayout メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypelayout-method.md)|その型の識別子に基づくメモリ内のオブジェクトのレイアウトに関する情報を取得します。|  
+|[EnableNGENPolicy メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md)|マネージデバッガーで実行中にアプリケーションがネイティブイメージを読み込む方法を決定する値を設定します。|  
+|[EnumerateGCReferences メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md)|プロセスでガベージコレクトされるすべてのオブジェクトの列挙子を取得します。|  
+|[EnumerateHandles メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)|プロセス内のオブジェクトハンドルの列挙子を取得します。|  
+|[EnumerateHeap メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheap-method.md)|マネージヒープ上のオブジェクトの列挙子を取得します。|  
+|[EnumerateHeapRegions メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md)|マネージヒープの領域の列挙子を取得します。|  
+|[GetArrayLayout メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getarraylayout-method.md)|メモリ内の配列のレイアウトに関する情報を取得します。|  
+|[GetGCHeapInformation メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md)|マネージヒープでガベージコレクトされるオブジェクトに関する情報を格納している[COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md)構造体へのポインターを取得します。|  
+|[GetObject メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getobject-method.md)|マネージヒープ上のオブジェクトへのポインターを取得します。|  
+|[GetTypeFields メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefields-method.md)|型の識別子に基づいて、型のフィールド情報を格納している配列へのポインターを取得します。|  
+|[GetTypeForTypeID メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md)|型識別子に基づいてオブジェクトに関する情報を提供する型オブジェクトを取得します。|  
+|[GetTypeID メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypeid-method.md)|指定したアドレスにあるオブジェクトの型識別子を取得します。|  
+|[GetTypeLayout メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypelayout-method.md)|型識別子に基づいて、メモリ内のオブジェクトのレイアウトに関する情報を取得します。|  
   
 ## <a name="remarks"></a>Remarks  
- このインターフェイスは ICorDebugProcess、ICorDebugProcess2、論理的に拡張し、 [ICorDebugProcess3](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-interface.md)インターフェイス。  
+ このインターフェイスは、ICorDebugProcess、ICorDebugProcess2、および [ICorDebugProcess3](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-interface.md) の各インターフェイスを論理的に拡張します。  
   
 > [!NOTE]
->  このインターフェイスは、別のコンピューターまたは別のプロセスでのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、別のコンピューターまたは別のプロセスからのリモート呼び出しをサポートしていません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
- **ヘッダー:** CorDebug.idl、CorDebug.h  
+ **ヘッダー:** CorDebug .idl、CorDebug. h  
   
- **ライブラリ:** CorGuids.lib  
+ **ライブラリ**CorGuids .lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

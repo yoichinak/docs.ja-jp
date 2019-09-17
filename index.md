@@ -5,13 +5,13 @@ hide_bc: true
 title: .NET ドキュメント
 description: .NET で、C#、Visual Basic、および F# を使用して任意のプラットフォームでさまざまなアプリケーションを作成する方法を説明します。 API リファレンス、サンプル コード、チュートリアルなどを参照します。
 ms.custom: updateeachrelease
-ms.date: 12/04/2018
-ms.openlocfilehash: c2a70c2d297b1ec2ef797e9d6084339f32c59c48
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.date: 09/04/2019
+ms.openlocfilehash: ec8b780100a41109f31084de0f37bec8c0fc680c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799292"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928945"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -80,8 +80,8 @@ ms.locfileid: "70799292"
                 <a data-default="true" href="#docs">ドキュメント</a>
                 <ul id="docs">
                     <li>
-                        <a href="#getstarted">概要</a>
-                        <ul id="getstarted" class="cardsF">
+                        <a href="#dotnetguides">.NET ガイド</a>
+                        <ul id="dotnetguides" class="cardsF">
                             <li>
                                 <div class="cardSize">
                                     <div class="cardPadding">
@@ -94,6 +94,7 @@ ms.locfileid: "70799292"
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/standard/">.NET のガイド</a></h3>
                                                 <p><a href="/dotnet/standard/get-started">開始するには</a></p>
+                                                <p><a href="https://docs.microsoft.com/learn/browse/?roles=developer&products=dotnet">ハンズオン学習モジュール</a></p>
                                                 <p><a href="/dotnet/standard/tour">.NET のツアー</a></p>
                                                 <p><a href="/dotnet/standard/components">.NET アーキテクチャの概念</a></p>
                                             </div>
@@ -267,6 +268,68 @@ ms.locfileid: "70799292"
                         </ul>
                     </li>
                     <li>
+                        <a href="#getstarted">概要</a>
+                        <ul id="getstarted" class="cardsC">
+                            <li>
+                                <a href="/dotnet/csharp/tutorials/intro-to-csharp/hello-world">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-csharp.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>C# の概要</h3>
+                                                    <p>クイック インタラクティブ スタート。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/dotnet/core/get-started">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-dotnet-core.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>最初の .NET Core Docker アプリを構築する</h3>
+                                                    <p>最初の .NET Core コンソール アプリを構築する方法を説明します。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://dotnet.microsoft.com/learn/aspnet/hello-world-tutorial/intro">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-web-1.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>最初の Web アプリを構築する</h3>
+                                                    <p>最初の ASP.NET Core Web アプリを構築する方法を説明します。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
                         <a href="#web">Web</a>
                         <ul id="web" class="cardsC">
                             <li>
@@ -280,7 +343,7 @@ ms.locfileid: "70799292"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>最初の Web アプリの構築</h3>
+                                                    <h3>最初の Web アプリを構築する</h3>
                                                     <p>最初の ASP.NET Core Web アプリを構築する方法を説明します。</p>
                                                 </div>
                                             </div>
