@@ -1,0 +1,639 @@
+- name: Docs
+  tocHref: /
+  topicHref: /
+  items:
+    - name: .NET
+      tocHref: /dotnet/
+      topicHref: /dotnet/index
+      items:
+        - name: .NET API ブラウザー
+          tocHref: /dotnet/api/
+          topicHref: /dotnet/api/index
+        - name: .NET アプリケーション アーキテクチャ ガイド
+          tocHref: /dotnet/architecture/
+          topicHref: /dotnet/architecture/index
+          items:
+            - name: 最新の ASP.NET Web アプリケーション電子ブック
+              tocHref: /dotnet/architecture/modern-web-apps-azure/
+              topicHref: /dotnet/architecture/modern-web-apps-azure/index
+            - name: .NET マイクロサービス - アーキテクチャ電子ブック
+              tocHref: /dotnet/architecture/microservices/
+              topicHref: /dotnet/architecture/microservices/index
+            - name: .NET アプリの最新化電子ブック
+              tocHref: /dotnet/architecture/modernize-with-azure-containers/
+              topicHref: /dotnet/architecture/modernize-with-azure-containers/index
+            - name: .NET マイクロサービス - DevOps の電子ブック
+              tocHref: /dotnet/architecture/containerized-lifecycle/
+              topicHref: /dotnet/architecture/containerized-lifecycle/index
+            - name: サーバーレス アプリの電子書籍
+              tocHref: /dotnet/architecture/serverless/
+              topicHref: /dotnet/architecture/serverless/index
+        - name: .NET のガイド
+          tocHref: /dotnet/standard/
+          topicHref: /dotnet/standard/index
+          items:
+            - name: .NET のアセンブリ
+              tocHref: /dotnet/standard/assembly
+              topicHref: /dotnet/standard/assembly/index
+            - name: オープン ソース ライブラリのガイダンス
+              tocHref: /dotnet/standard/library-guidance/
+              topicHref: /dotnet/standard/library-guidance/index
+            - name: 非同期プログラミングのパターン
+              tocHref: /dotnet/standard/asynchronous-programming-patterns/
+              topicHref: /dotnet/standard/asynchronous-programming-patterns/index
+            - name: 属性を使用したメタデータの拡張
+              tocHref: /dotnet/standard/attributes/
+              topicHref: /dotnet/standard/attributes/index
+            - name: .NET における基本型の操作
+              tocHref: /dotnet/standard/base-types/
+              topicHref: /dotnet/standard/base-types/index
+            - name: コレクションとデータ構造体
+              tocHref: /dotnet/standard/collections/
+              topicHref: /dotnet/standard/collections/index
+              items:
+                - name: スレッド セーフなコレクション
+                  tocHref: /dotnet/standard/collections/thread-safe/
+                  topicHref: /dotnet/standard/collections/thread-safe/index
+            - name: .NET による複数のプラットフォームの開発
+              tocHref: /dotnet/standard/cross-platform/
+              topicHref: /dotnet/standard/cross-platform/index
+            - name: XML ドキュメントと XML データ
+              tocHref: /dotnet/standard/data/xml/
+              topicHref: /dotnet/standard/data/xml/index
+            - name: 日付、時刻、およびタイム ゾーン
+              tocHref: /dotnet/standard/datetime/
+              topicHref: /dotnet/standard/datetime/index
+            - name: フレームワーク デザインのガイドライン
+              tocHref: /dotnet/standard/design-guidelines/
+              topicHref: /dotnet/standard/design-guidelines/index
+            - name: イベントの処理と発生
+              tocHref: /dotnet/standard/events/
+              topicHref: /dotnet/standard/events/index
+            - name: 例外の処理とスロー
+              tocHref: /dotnet/standard/exceptions/
+              topicHref: /dotnet/standard/exceptions/index
+            - name: ガベージ コレクション
+              tocHref: /dotnet/standard/garbage-collection/
+              topicHref: /dotnet/standard/garbage-collection/index
+            - name: .NET のジェネリック
+              tocHref: /dotnet/standard/generics/
+              topicHref: /dotnet/standard/generics/index
+            - name: グローバライズとローカライズ
+              tocHref: /dotnet/standard/globalization-localization/
+              topicHref: /dotnet/standard/globalization-localization/index
+            - name: ファイルおよびストリーム入出力
+              tocHref: /dotnet/standard/io/
+              topicHref: /dotnet/standard/io/index
+            - name: メモリおよびスパンに関連する型
+              tocHref: /dotnet/standard/memory-and-spans/
+              topicHref: /dotnet/standard/memory-and-spans/index
+            - name: ネイティブ相互運用性
+              tocHref: /dotnet/standard/native-interop/
+              topicHref: /dotnet/standard/native-interop/index
+            - name: .NET での並列プログラミング
+              tocHref: /dotnet/standard/parallel-programming/
+              topicHref: /dotnet/standard/parallel-programming/index
+            - name: .NET でのセキュリティ
+              tocHref: /dotnet/standard/security/
+              topicHref: /dotnet/standard/security/index
+            - name: .NET でのシリアル化
+              tocHref: /dotnet/standard/serialization/
+              topicHref: /dotnet/standard/serialization/index
+            - name: マネージド スレッド処理
+              tocHref: /dotnet/standard/threading/
+              topicHref: /dotnet/standard/threading/index
+        - name: .NET Core のガイド
+          tocHref: /dotnet/core/
+          topicHref: /dotnet/core/index
+          items:
+            - name: ツール
+              tocHref: /dotnet/core/tools/
+              topicHref: /dotnet/core/tools/index
+            - name: 互換性
+              tocHref: /dotnet/core/compatibility/
+              topicHref: /dotnet/core/compatibility/index
+        - name: .NET Framework
+          tocHref: /dotnet/framework/
+          topicHref: /dotnet/framework/index
+          items:
+            - name: アドインおよび拡張機能
+              tocHref: /dotnet/framework/add-ins/
+              topicHref: /dotnet/framework/add-ins/index
+            - name: 追加のクラス ライブラリおよび API
+              tocHref: /dotnet/framework/additional-steps/
+              topicHref: /dotnet/framework/additional-steps/index
+            - name: アプリケーション ドメインとアセンブリ
+              tocHref: /dotnet/framework/app-domains/
+              topicHref: /dotnet/framework/app-domains/index
+            - name: 構成ファイルを使用してアプリを構成する方法
+              tocHref: /dotnet/framework/configure-apps/
+              topicHref: /dotnet/framework/configure-apps/index
+              items:
+                - name: 構成ファイル スキーマ
+                  tocHref: /dotnet/framework/configure-apps/file-schema/
+                  topicHref: /dotnet/framework/configure-apps/file-schema/index
+                  items:
+                    - name: コンパイラおよび言語プロバイダー設定のスキーマ
+                      tocHref: /dotnet/framework/configure-apps/file-schema/compiler/
+                      topicHref: /dotnet/framework/configure-apps/file-schema/compiler/index
+                    - name: 暗号設定スキーマ
+                      tocHref: /dotnet/framework/configure-apps/file-schema/cryptography/
+                      topicHref: /dotnet/framework/configure-apps/file-schema/cryptography/index
+                    - name: ネットワーク設定スキーマ
+                      tocHref: /dotnet/framework/configure-apps/file-schema/network/
+                      topicHref: /dotnet/framework/configure-apps/file-schema/network/index
+                    - name: ランタイム設定スキーマ
+                      tocHref: /dotnet/framework/configure-apps/file-schema/runtime/
+                      topicHref: /dotnet/framework/configure-apps/file-schema/runtime/index
+                    - name: スタートアップ設定スキーマ
+                      tocHref: /dotnet/framework/configure-apps/file-schema/startup/
+                      topicHref: /dotnet/framework/configure-apps/file-schema/startup/index
+                    - name: トレースおよびデバッグ設定のスキーマ
+                      tocHref: /dotnet/framework/configure-apps/file-schema/trace-debug/
+                      topicHref: /dotnet/framework/configure-apps/file-schema/trace-debug/index
+                    - name: WCF 構成スキーマ
+                      tocHref: /dotnet/framework/configure-apps/file-schema/wcf/
+                      topicHref: /dotnet/framework/configure-apps/file-schema/wcf/index
+                    - name: WCF ディレクティブ構文
+                      tocHref: /dotnet/framework/configure-apps/file-schema/wcf-directive/
+                      topicHref: /dotnet/framework/configure-apps/file-schema/wcf-directive/index
+                    - name: Web 設定スキーマ
+                      tocHref: /dotnet/framework/configure-apps/file-schema/web/
+                      topicHref: /dotnet/framework/configure-apps/file-schema/web/index
+                    - name: Windows Identity Foundation 構成スキーマ
+                      tocHref: /dotnet/framework/configure-apps/file-schema/windows-identity-foundation/
+                      topicHref: /dotnet/framework/configure-apps/file-schema/windows-identity-foundation/index
+                    - name: Windows Workflow Foundation の構成スキーマ
+                      tocHref: /dotnet/framework/configure-apps/file-schema/windows-workflow-foundation
+                      topicHref: /dotnet/framework/configure-apps/file-schema/windows-workflow-foundation/index
+                    - name: Windows フォームの構成セクション
+                      tocHref: /dotnet/framework/configure-apps/file-schema/winforms/
+                      topicHref: /dotnet/framework/configure-apps/file-schema/winforms/index
+            - name: .NET Framework におけるデータとモデリング
+              tocHref: /dotnet/framework/data/
+              topicHref: /dotnet/framework/data/index
+              items:
+                - name: ADO.NET
+                  tocHref: /dotnet/framework/data/adonet/
+                  topicHref: /dotnet/framework/data/adonet/index
+                  items:
+                    - name: DataSet、DataTable、および DataView
+                      tocHref: /dotnet/framework/data/adonet/dataset-datatable-dataview/
+                      topicHref: /dotnet/framework/data/adonet/dataset-datatable-dataview/index
+                    - name: ADO.NET Entity Framework
+                      tocHref: /dotnet/framework/data/adonet/ef/
+                      topicHref: /dotnet/framework/data/adonet/ef/index
+                      items:
+                        - name: Entity SQL 言語リファレンス
+                          tocHref: /dotnet/framework/data/adonet/ef/language-reference/
+                          topicHref: /dotnet/framework/data/adonet/ef/language-reference/index
+                    - name: SQL Server と ADO.NET
+                      tocHref: /dotnet/framework/data/adonet/sql/
+                      topicHref: /dotnet/framework/data/adonet/sql/index
+                      items:
+                        - name: LINQ to SQL
+                          tocHref: /dotnet/framework/data/adonet/sql/linq/
+                          topicHref: /dotnet/framework/data/adonet/sql/linq/index
+                - name: トランザクション処理
+                  tocHref: /dotnet/framework/data/transactions/
+                  topicHref: /dotnet/framework/data/transactions/index
+                - name: WCF Data Services
+                  tocHref: /dotnet/framework/data/wcf/
+                  topicHref: /dotnet/framework/data/wcf/index
+            - name: デバッグ、トレース、およびプロファイリング
+              tocHref: /dotnet/framework/debug-trace-profile/
+              topicHref: /dotnet/framework/debug-trace-profile/index
+            - name: .NET Framework の配置
+              tocHref: /dotnet/framework/deployment/
+              topicHref: /dotnet/framework/deployment/index
+            - name: Docker を使用した .NET Framework アプリケーションの展開
+              tocHref: /dotnet/framework/docker/
+              topicHref: /dotnet/framework/docker/index
+            - name: 開始するには
+              tocHref: /dotnet/framework/get-started/
+              topicHref: /dotnet/framework/get-started/index
+            - name: インストール ガイド
+              tocHref: /dotnet/framework/install/
+              topicHref: /dotnet/framework/install/index
+            - name: アンマネージ コードとの相互運用
+              tocHref: /dotnet/framework/interop/
+              topicHref: /dotnet/framework/interop/index
+            - name: MEF (Managed Extensibility Framework)
+              tocHref: /dotnet/framework/mef/
+              topicHref: /dotnet/framework/mef/index
+            - name: 移行ガイド
+              tocHref: /dotnet/framework/migration-guide/
+              topicHref: /dotnet/framework/migration-guide/index
+            - name: .NET ネイティブによるアプリのコンパイル
+              tocHref: /dotnet/framework/net-native/
+              topicHref: /dotnet/framework/net-native/index
+            - name: .NET Framework のネットワーク プログラミング
+              tocHref: /dotnet/framework/network-programming/
+              topicHref: /dotnet/framework/network-programming/index
+            - name: .NET Framework のパフォーマンス
+              tocHref: /dotnet/framework/performance/
+              topicHref: /dotnet/framework/performance/index
+            - name: .NET Framework の動的プログラミング
+              tocHref: /dotnet/framework/reflection-and-codedom/
+              topicHref: /dotnet/framework/reflection-and-codedom/index
+            - name: デスクトップ アプリケーションのリソース
+              tocHref: /dotnet/framework/resources/
+              topicHref: /dotnet/framework/resources/index
+            - name: .NET Framework におけるセキュリティ
+              tocHref: /dotnet/framework/security/
+              topicHref: /dotnet/framework/security/index
+            - name: .NET Framework ツール
+              tocHref: /dotnet/framework/tools/
+              topicHref: /dotnet/framework/tools/index
+            - name: UI オートメーションの基礎
+              tocHref: /dotnet/framework/ui-automation/
+              topicHref: /dotnet/framework/ui-automation/index
+            - name: アンマネージ API リファレンス
+              tocHref: /dotnet/framework/unmanaged-api/
+              topicHref: /dotnet/framework/unmanaged-api/index
+              items:
+                - name: ALink API (アンマネージ API リファレンス)
+                  tocHref: /dotnet/framework/unmanaged-api/alink/
+                  topicHref: /dotnet/framework/unmanaged-api/alink/index
+                - name: Authenticode (アンマネージ API リファレンス)
+                  tocHref: /dotnet/framework/unmanaged-api/authenticode/
+                  topicHref: /dotnet/framework/unmanaged-api/authenticode/index
+                - name: デバッグ (アンマネージ API リファレンス)
+                  tocHref: /dotnet/framework/unmanaged-api/debugging/
+                  topicHref: /dotnet/framework/unmanaged-api/debugging/index
+                - name: シンボル ストア診断 (アンマネージ API リファレンス)
+                  tocHref: /dotnet/framework/unmanaged-api/diagnostics/
+                  topicHref: /dotnet/framework/unmanaged-api/diagnostics/index
+                - name: fusion (アンマネージ API リファレンス)
+                  tocHref: /dotnet/framework/unmanaged-api/fusion/
+                  topicHref: /dotnet/framework/unmanaged-api/fusion/index
+                - name: ホスト (アンマネージ API リファレンス)
+                  tocHref: /dotnet/framework/unmanaged-api/hosting/
+                  topicHref: /dotnet/framework/unmanaged-api/hosting/index
+                - name: メタデータ (アンマネージ API リファレンス)
+                  tocHref: /dotnet/framework/unmanaged-api/metadata/
+                  topicHref: /dotnet/framework/unmanaged-api/metadata/index
+                - name: プロファイル (アンマネージ API リファレンス)
+                  tocHref: /dotnet/framework/unmanaged-api/profiling/
+                  topicHref: /dotnet/framework/unmanaged-api/profiling/index
+                - name: 厳密な名前付け (アンマネージ API リファレンス)
+                  tocHref: /dotnet/framework/unmanaged-api/strong-naming/
+                  topicHref: /dotnet/framework/unmanaged-api/strong-naming/index
+                - name: Tlbexp ヘルパー関数 (アンマネージ API リファレンス)
+                  tocHref: /dotnet/framework/unmanaged-api/tlbexp/
+                  topicHref: /dotnet/framework/unmanaged-api/tlbexp/index
+            - name: Windows Communication Foundation
+              tocHref: /dotnet/framework/wcf/
+              topicHref: /dotnet/framework/wcf/index
+              items:
+                - name: 管理と診断
+                  tocHref: /dotnet/framework/wcf/diagnostics/
+                  topicHref: /dotnet/framework/wcf/diagnostics/index
+                  items:
+                    - name: ETW を使用した分析トレース
+                      tocHref: /dotnet/framework/wcf/diagnostics/etw/
+                      topicHref: /dotnet/framework/wcf/diagnostics/etw/index
+                    - name: WCF のイベント ログ
+                      tocHref: /dotnet/framework/wcf/diagnostics/event-logging/
+                      topicHref: /dotnet/framework/wcf/diagnostics/event-logging/index
+                    - name: 例外リファレンス
+                      tocHref: /dotnet/framework/wcf/diagnostics/exceptions-reference/
+                      topicHref: /dotnet/framework/wcf/diagnostics/exceptions-reference/index
+                    - name: WCF パフォーマンス カウンター
+                      tocHref: /dotnet/framework/wcf/diagnostics/performance-counters/
+                      topicHref: /dotnet/framework/wcf/diagnostics/performance-counters/index
+                    - name: トレース
+                      tocHref: /dotnet/framework/wcf/diagnostics/tracing/
+                      topicHref: /dotnet/framework/wcf/diagnostics/tracing/index
+                    - name: 診断用の WMI (Windows Management Instrumentation) の使用
+                      tocHref: /dotnet/framework/wcf/diagnostics/wmi/
+                      topicHref: /dotnet/framework/wcf/diagnostics/wmi/index
+                - name: WCF の拡張
+                  tocHref: /dotnet/framework/wcf/extending/
+                  topicHref: /dotnet/framework/wcf/extending/index
+                - name: WCF 機能の詳細
+                  tocHref: /dotnet/framework/wcf/feature-details/
+                  topicHref: /dotnet/framework/wcf/feature-details/index
+                - name: Windows Communication Foundation (WCF) サンプル
+                  tocHref: /dotnet/framework/wcf/samples/
+                  topicHref: /dotnet/framework/wcf/samples/index
+            - name: .NET Framework の新機能
+              tocHref: /dotnet/framework/whats-new/
+              topicHref: /dotnet/framework/whats-new/index
+            - name: Windows サービス アプリケーションの開発
+              tocHref: /dotnet/framework/windows-services/
+              topicHref: /dotnet/framework/windows-services/index
+            - name: Windows Workflow Foundation
+              tocHref: /dotnet/framework/windows-workflow-foundation/
+              topicHref: /dotnet/framework/windows-workflow-foundation/index
+              items:
+                - name: Windows Workflow (WF) のサンプル
+                  tocHref: /dotnet/framework/windows-workflow-foundation/samples/
+                  topicHref: /dotnet/framework/windows-workflow-foundation/samples/index
+            - name: Windows フォーム
+              tocHref: /dotnet/framework/winforms/
+              topicHref: /dotnet/framework/winforms/index
+              items:
+                - name: Windows フォーム アプリケーションの拡張
+                  tocHref: /dotnet/framework/winforms/advanced/
+                  topicHref: /dotnet/framework/winforms/advanced/index
+                - name: Windows フォーム コントロール
+                  tocHref: /dotnet/framework/winforms/controls/
+                  topicHref: /dotnet/framework/winforms/controls/index
+            - name: Windows Presentation Foundation
+              tocHref: /dotnet/framework/wpf/
+              topicHref: /dotnet/framework/wpf/index
+              items:
+                - name: 詳細設定 (Windows Presentation Foundation)
+                  tocHref: /dotnet/framework/wpf/advanced/
+                  topicHref: /dotnet/framework/wpf/advanced/index
+                - name: アプリケーション開発
+                  tocHref: /dotnet/framework/wpf/app-development/
+                  topicHref: /dotnet/framework/wpf/app-development/index
+                - name: コントロール
+                  tocHref: /dotnet/framework/wpf/controls/
+                  topicHref: /dotnet/framework/wpf/controls/index
+                - name: データ
+                  tocHref: /dotnet/framework/wpf/data/
+                  topicHref: /dotnet/framework/wpf/data/index
+                - name: 概要 (WPF)
+                  tocHref: /dotnet/framework/wpf/getting-started/
+                  topicHref: /dotnet/framework/wpf/getting-started/index
+                - name: グラフィックスとマルチメディア
+                  tocHref: /dotnet/framework/wpf/graphics-multimedia/
+                  topicHref: /dotnet/framework/wpf/graphics-multimedia/index
+            - name: XAML サービス
+              tocHref: /dotnet/framework/xaml-services/
+              topicHref: /dotnet/framework/xaml-services/index
+        - name: 'C# のガイド'
+          tocHref: /dotnet/csharp/
+          topicHref: /dotnet/csharp/index
+          items:
+            - name: 'C# の概要'
+              tocHref: /dotnet/csharp/tutorials/intro-to-csharp/
+              topicHref: /dotnet/csharp/tutorials/intro-to-csharp/index
+            - name: 作業の開始
+              tocHref: /dotnet/csharp/getting-started/
+              topicHref: /dotnet/csharp/getting-started/index
+            - name: チュートリアル
+              tocHref: /dotnet/csharp/tutorials/
+              topicHref: /dotnet/csharp/tutorials/index
+            - name: ツアー
+              tocHref: /dotnet/csharp/tour-of-csharp/
+              topicHref: /dotnet/csharp/tour-of-csharp/index
+            - name: 新機能
+              tocHref: /dotnet/csharp/whats-new/
+              topicHref: /dotnet/csharp/whats-new/index
+            - name: Interactive
+              tocHref: /dotnet/csharp/interactive/
+              topicHref: /dotnet/csharp/interactive/index
+            - name: 概念
+              tocHref: /dotnet/csharp/concepts/
+              topicHref: /dotnet/csharp/concepts/index
+            - name: .NET Compiler Platform SDK
+              tocHref: /dotnet/csharp/roslyn-sdk/
+              topicHref: /dotnet/csharp/roslyn-sdk/index
+            - name: プログラミング ガイド
+              tocHref: /dotnet/csharp/programming-guide/
+              topicHref: /dotnet/csharp/programming-guide/index
+              items:
+                - name: 'インサイド C# プログラム'
+                  tocHref: /dotnet/csharp/programming-guide/inside-a-program/
+                  topicHref: /dotnet/csharp/programming-guide/inside-a-program/index
+                - name: 配列
+                  tocHref: /dotnet/csharp/programming-guide/arrays/
+                  topicHref: /dotnet/csharp/programming-guide/arrays/index
+                - name: クラスと構造体
+                  tocHref: /dotnet/csharp/programming-guide/classes-and-structs/
+                  topicHref: /dotnet/csharp/programming-guide/classes-and-structs/index
+                - name: デリゲート
+                  tocHref: /dotnet/csharp/programming-guide/delegates/
+                  topicHref: /dotnet/csharp/programming-guide/delegates/index
+                - name: イベント
+                  tocHref: /dotnet/csharp/programming-guide/events/
+                  topicHref: /dotnet/csharp/programming-guide/events/index
+                - name: 例外と例外処理
+                  tocHref: /dotnet/csharp/programming-guide/exceptions/
+                  topicHref: /dotnet/csharp/programming-guide/exceptions/index
+                - name: ファイル システムとレジストリ
+                  tocHref: /dotnet/csharp/programming-guide/file-system/
+                  topicHref: /dotnet/csharp/programming-guide/file-system/index
+                - name: ジェネリック
+                  tocHref: /dotnet/csharp/programming-guide/generics/
+                  topicHref: /dotnet/csharp/programming-guide/generics/index
+                - name: インデクサー
+                  tocHref: /dotnet/csharp/programming-guide/indexers/
+                  topicHref: /dotnet/csharp/programming-guide/indexers/index
+                - name: インターフェイス
+                  tocHref: /dotnet/csharp/programming-guide/interfaces/
+                  topicHref: /dotnet/csharp/programming-guide/interfaces/index
+                - name: 相互運用性
+                  tocHref: /dotnet/csharp/programming-guide/interop/
+                  topicHref: /dotnet/csharp/programming-guide/interop/index
+                - name: LINQ
+                  tocHref: /dotnet/csharp/programming-guide/linq/
+                  topicHref: /dotnet/csharp/programming-guide/linq/index
+                - name: Main() とコマンド ライン引数
+                  tocHref: /dotnet/csharp/programming-guide/main-and-command-args/
+                  topicHref: /dotnet/csharp/programming-guide/main-and-command-args/index
+                - name: 名前空間
+                  tocHref: /dotnet/csharp/programming-guide/namespaces/
+                  topicHref: /dotnet/csharp/programming-guide/namespaces/index
+                - name: Null 許容型
+                  tocHref: /dotnet/csharp/programming-guide/nullable-types/
+                  topicHref: /dotnet/csharp/programming-guide/nullable-types/index
+                - name: プログラミングの概念
+                  tocHref: /dotnet/csharp/programming-guide/concepts/
+                  topicHref: /dotnet/csharp/programming-guide/concepts/index
+                  items:
+                    - name: 非同期プログラミング
+                      tocHref: /dotnet/csharp/programming-guide/concepts/async/
+                      topicHref: /dotnet/csharp/programming-guide/concepts/async/index
+                    - name: 属性
+                      tocHref: /dotnet/csharp/programming-guide/concepts/attributes/
+                      topicHref: /dotnet/csharp/programming-guide/concepts/attributes/index
+                    - name: 共変性と反変性
+                      tocHref: /dotnet/csharp/programming-guide/concepts/covariance-contravariance/
+                      topicHref: /dotnet/csharp/programming-guide/concepts/covariance-contravariance/index
+                    - name: 式ツリー
+                      tocHref: /dotnet/csharp/programming-guide/concepts/expression-trees/
+                      topicHref: /dotnet/csharp/programming-guide/concepts/expression-trees/index
+                    - name: LINQ
+                      tocHref: /dotnet/csharp/programming-guide/concepts/linq/
+                      topicHref: /dotnet/csharp/programming-guide/concepts/linq/index
+                    - name: シリアル化
+                      tocHref: /dotnet/csharp/programming-guide/concepts/serialization/
+                      topicHref: /dotnet/csharp/programming-guide/concepts/serialization/index
+                    - name: スレッド
+                      tocHref: /dotnet/csharp/programming-guide/concepts/threading/
+                      topicHref: /dotnet/csharp/programming-guide/concepts/threading/index
+                - name: ステートメント、式、および演算子
+                  tocHref: /dotnet/csharp/programming-guide/statements-expressions-operators/
+                  topicHref: /dotnet/csharp/programming-guide/statements-expressions-operators/index
+                - name: 文字列
+                  tocHref: /dotnet/csharp/programming-guide/strings/
+                  topicHref: /dotnet/csharp/programming-guide/strings/index
+                - name: 種類
+                  tocHref: /dotnet/csharp/programming-guide/types/
+                  topicHref: /dotnet/csharp/programming-guide/types/index
+                - name: アンセーフ コードとポインター
+                  tocHref: /dotnet/csharp/programming-guide/unsafe-code-pointers/
+                  topicHref: /dotnet/csharp/programming-guide/unsafe-code-pointers/index
+                - name: XML ドキュメント
+                  tocHref: /dotnet/csharp/programming-guide/xmldoc/
+                  topicHref: /dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments
+            - name: 言語リファレンス
+              tocHref: /dotnet/csharp/language-reference/
+              topicHref: /dotnet/csharp/language-reference/index
+              items:
+                - name: キーワード
+                  tocHref: /dotnet/csharp/language-reference/keywords/
+                  topicHref: /dotnet/csharp/language-reference/keywords/index
+                - name: 演算子
+                  tocHref: /dotnet/csharp/language-reference/operators/
+                  topicHref: /dotnet/csharp/language-reference/operators/index
+                - name: 特殊文字
+                  tocHref: /dotnet/csharp/language-reference/tokens/
+                  topicHref: /dotnet/csharp/language-reference/tokens/index
+                - name: プリプロセッサ ディレクティブ
+                  tocHref: /dotnet/csharp/language-reference/preprocessor-directives/
+                  topicHref: /dotnet/csharp/language-reference/preprocessor-directives/index
+                - name: コンパイラ オプション
+                  tocHref: /dotnet/csharp/language-reference/compiler-options/
+                  topicHref: /dotnet/csharp/language-reference/compiler-options/index
+                - name: コンパイラ エラー
+                  tocHref: /dotnet/csharp/language-reference/compiler-messages/
+                  topicHref: /dotnet/csharp/language-reference/compiler-messages/index
+                - name: 'C# 6.0 のドラフト仕様'
+                  tocHref: /dotnet/csharp/language-reference/language-specification/
+                  topicHref: /dotnet/csharp/language-reference/language-specification/index
+                - name: 'C# 7.0 の言語提案'
+                  tocHref: /dotnet/csharp/language-reference/proposals/csharp-7.0/
+                  topicHref: /dotnet/csharp/language-reference/proposals/csharp-7.0/index
+                - name: 'C# 7.1 の言語提案'
+                  tocHref: /dotnet/csharp/language-reference/proposals/csharp-7.1/
+                  topicHref: /dotnet/csharp/language-reference/proposals/csharp-7.1/index
+                - name: 'C# 7.2 の言語提案'
+                  tocHref: /dotnet/csharp/language-reference/proposals/csharp-7.2/
+                  topicHref: /dotnet/csharp/language-reference/proposals/csharp-7.2/index
+                - name: 'C# 7.3 の言語提案'
+                  tocHref: /dotnet/csharp/language-reference/proposals/csharp-7.3/
+                  topicHref: /dotnet/csharp/language-reference/proposals/csharp-7.3/index
+                - name: 'C# 8.0 の言語提案'
+                  tocHref: /dotnet/csharp/language-reference/proposals/csharp-8.0/
+                  topicHref: /dotnet/csharp/language-reference/proposals/csharp-8.0/index
+        - name: 'F# のガイド'
+          tocHref: /dotnet/fsharp/
+          topicHref: /dotnet/fsharp/index
+        - name: Visual Basic のガイド
+          tocHref: /dotnet/visual-basic/
+          topicHref: /dotnet/visual-basic/index
+          items:
+            - name: 作業開始
+              tocHref: /dotnet/visual-basic/getting-started/
+              topicHref: /dotnet/visual-basic/getting-started/index
+            - name: アプリケーションの開発
+              tocHref: /dotnet/visual-basic/developing-apps/
+              topicHref: /dotnet/visual-basic/developing-apps/index
+            - name: プログラミングの概念
+              tocHref: /dotnet/visual-basic/programming-guide/concepts/
+              topicHref: /dotnet/visual-basic/programming-guide/concepts/index
+              items:
+                - name: 非同期プログラミング
+                  tocHref: /dotnet/visual-basic/programming-guide/concepts/async/
+                  topicHref: /dotnet/visual-basic/programming-guide/concepts/async/index
+                - name: 属性
+                  tocHref: /dotnet/visual-basic/programming-guide/concepts/attributes/
+                  topicHref: /dotnet/visual-basic/programming-guide/concepts/attributes/index
+                - name: 式ツリー
+                  tocHref: /dotnet/visual-basic/programming-guide/concepts/expression-trees/
+                  topicHref: /dotnet/visual-basic/programming-guide/concepts/expression-trees/index
+                - name: LINQ
+                  tocHref: /dotnet/visual-basic/programming-guide/concepts/linq/
+                  topicHref: /dotnet/visual-basic/programming-guide/concepts/linq/index
+                - name: シリアル化
+                  tocHref: /dotnet/visual-basic/programming-guide/concepts/serialization/
+                  topicHref: /dotnet/visual-basic/programming-guide/concepts/serialization/index
+                - name: スレッド
+                  tocHref: /dotnet/visual-basic/programming-guide/concepts/threading/
+                  topicHref: /dotnet/visual-basic/programming-guide/concepts/threading/index
+            - name: プログラム構造とコード規則
+              tocHref: /dotnet/visual-basic/programming-guide/program-structure/
+              topicHref: /dotnet/visual-basic/programming-guide/program-structure/program-structure-and-code-conventions
+            - name: 言語機能
+              tocHref: /dotnet/visual-basic/programming-guide/language-features/
+              topicHref: /dotnet/visual-basic/programming-guide/language-features/index
+              items:
+                - name: 配列
+                  tocHref: /dotnet/visual-basic/programming-guide/language-features/arrays/
+                  topicHref: /dotnet/visual-basic/programming-guide/language-features/arrays/index
+                - name: コレクション初期化子
+                  tocHref: /dotnet/visual-basic/programming-guide/language-features/collection-initializers/
+                  topicHref: /dotnet/visual-basic/programming-guide/language-features/collection-initializers/index
+                - name: 定数と列挙体
+                  tocHref: /dotnet/visual-basic/programming-guide/language-features/constants-enums/
+                  topicHref: /dotnet/visual-basic/programming-guide/language-features/constants-enums/index
+                - name: 制御フロー
+                  tocHref: /dotnet/visual-basic/programming-guide/language-features/control-flow/
+                  topicHref: /dotnet/visual-basic/programming-guide/language-features/control-flow/index
+                - name: データの種類
+                  tocHref: /dotnet/visual-basic/programming-guide/language-features/data-types/
+                  topicHref: /dotnet/visual-basic/programming-guide/language-features/data-types/index
+                - name: 宣言された要素
+                  tocHref: /dotnet/visual-basic/programming-guide/language-features/declared-elements/
+                  topicHref: /dotnet/visual-basic/programming-guide/language-features/declared-elements/index
+                - name: デリゲート
+                  tocHref: /dotnet/visual-basic/programming-guide/language-features/delegates/
+                  topicHref: /dotnet/visual-basic/programming-guide/language-features/delegates/index
+                - name: 事前バインディングと遅延バインディング
+                  tocHref: /dotnet/visual-basic/programming-guide/language-features/early-late-binding/
+                  topicHref: /dotnet/visual-basic/programming-guide/language-features/early-late-binding/index
+                - name: イベント
+                  tocHref: /dotnet/visual-basic/programming-guide/language-features/events/
+                  topicHref: /dotnet/visual-basic/programming-guide/language-features/events/index
+                - name: LINQ
+                  tocHref: /dotnet/visual-basic/programming-guide/language-features/linq/
+                  topicHref: /dotnet/visual-basic/programming-guide/language-features/linq/index
+                - name: オブジェクトとクラス
+                  tocHref: /dotnet/visual-basic/programming-guide/language-features/objects-and-classes/
+                  topicHref: /dotnet/visual-basic/programming-guide/language-features/objects-and-classes/index
+                - name: 演算子および式
+                  tocHref: /dotnet/visual-basic/programming-guide/language-features/operators-and-expressions/
+                  topicHref: /dotnet/visual-basic/programming-guide/language-features/operators-and-expressions/index
+                - name: 手順
+                  tocHref: /dotnet/visual-basic/programming-guide/language-features/procedures/
+                  topicHref: /dotnet/visual-basic/programming-guide/language-features/procedures/index
+                - name: 文字列
+                  tocHref: /dotnet/visual-basic/programming-guide/language-features/strings/
+                  topicHref: /dotnet/visual-basic/programming-guide/language-features/strings/index
+                - name: 変数
+                  tocHref: /dotnet/visual-basic/programming-guide/language-features/variables/
+                  topicHref: /dotnet/visual-basic/programming-guide/language-features/variables/index
+                - name: XML
+                  tocHref: /dotnet/visual-basic/programming-guide/language-features/xml/
+                  topicHref: /dotnet/visual-basic/programming-guide/language-features/xml/index
+            - name: COM 相互運用
+              tocHref: /dotnet/visual-basic/programming-guide/com-interop/
+              topicHref: /dotnet/visual-basic/programming-guide/com-interop/index
+            - name: 言語リファレンス
+              tocHref: /dotnet/visual-basic/language-reference/
+              topicHref: /dotnet/visual-basic/language-reference/index
+            - name: 参照
+              tocHref: /dotnet/visual-basic/reference/
+              topicHref: /dotnet/visual-basic/reference/index
+        - name: ML.NET ガイド
+          tocHref: /dotnet/machine-learning/
+          topicHref: /dotnet/machine-learning/index
+          items:
+            - name: 使い方ガイド
+              tocHref: /dotnet/machine-learning/how-to-guides/
+              topicHref: /dotnet/machine-learning/how-to-guides/index
+            - name: リソース
+              tocHref: /dotnet/machine-learning/resources/
+              topicHref: /dotnet/machine-learning/resources/index
+            - name: チュートリアル
+              tocHref: /dotnet/machine-learning/tutorials/
+              topicHref: /dotnet/machine-learning/tutorials/index
+        - name: .NET for Apache Spark ガイド
+          tocHref: /dotnet/spark/
+          topicHref: /dotnet/spark/index

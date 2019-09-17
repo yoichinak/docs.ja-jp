@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-ms.openlocfilehash: dc1e866836bb7420ffe17210b5be7a5e1d4048d0
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
-ms.translationtype: HT
+ms.openlocfilehash: 08e3eec08ba099e6f5c7796a459c55de09afa917
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374489"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929329"
 ---
 # <a name="mod-operator-visual-basic"></a>Mod 演算子 (Visual Basic)
 
@@ -84,6 +84,7 @@ End Module
 ## <a name="attempted-division-by-zero"></a>0による除算を試行しました
 
 が`number2` 0 に評価される場合、 `Mod`演算子の動作はオペランドのデータ型によって異なります。
+
 - コンパイル時にを特定<xref:System.DivideByZeroException>できず`number2` 、コンパイル時にがゼロに評価された`number2`場合、が`BC30542 Division by zero occurred while evaluating this expression`コンパイル時エラーを生成する場合、整数除算は例外をスローします。
 - 浮動小数点除算はを<xref:System.Double.NaN?displayProperty=nameWithType>返します。
 

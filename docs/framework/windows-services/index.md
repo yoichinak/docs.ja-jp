@@ -11,12 +11,12 @@ helpviewer_keywords:
 - .NET applications, Windows applications
 ms.assetid: ba72d648-9553-4849-b829-069ad5ea014b
 author: ghogen
-ms.openlocfilehash: 32aa2c1c4cd31e4591c9fa30c05ebe61058f94c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61f969c22ac06bd6ed20ccfa9124db3bb35d0692
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008708"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053542"
 ---
 # <a name="develop-windows-service-apps"></a>Windows サービス アプリを開発する
 
@@ -27,19 +27,19 @@ Visual Studio または .NET Framework SDK を使用すると、サービスと�
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[Windows サービス アプリケーションの概要](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+[Windows サービス アプリケーションの概要](introduction-to-windows-service-applications.md)
 
 Windows サービス アプリケーションの概要、サービスの有効期間、およびサービスがその他の一般的な種類のプロジェクトどのように異なるかを説明します。
 
-[チュートリアル: コンポーネント デザイナーによる Windows サービス アプリケーションの作成](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+[チュートリアル: コンポーネント デザイナーによる Windows サービス アプリケーションの作成](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
 
 Visual Basic および Visual C# でサービスを作成する例を提供します。
 
-[サービス アプリケーションのプログラミング アーキテクチャ](../../../docs/framework/windows-services/service-application-programming-architecture.md)
+[サービス アプリケーションのプログラミング アーキテクチャ](service-application-programming-architecture.md)
 
 サービスのプログラミングで使用される言語要素について説明します。
 
-[方法: Windows サービスを作成する](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+[方法: Windows サービスを作成する](how-to-create-windows-services.md)
 
 Windows サービス プロジェクトのテンプレートを使用して Windows サービスを作成、構成するプロセスについて説明します。
 

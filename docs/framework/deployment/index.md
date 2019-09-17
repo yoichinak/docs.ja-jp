@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d9448edab101ef11447b54e12c53abcb578646a
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: f1d13c4c3e27b5af5b3c3e84995cae3df94a307d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971598"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052076"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>.NET Framework およびアプリケーションの配置
 
@@ -38,39 +38,39 @@ ms.locfileid: "70971598"
 
   - インストール モード:
 
-    - [サイレント インストール](../../../docs/framework/deployment/deployment-guide-for-developers.md#chaining_custom)
+    - [サイレント インストール](deployment-guide-for-developers.md#chaining_custom)
 
-    - [UI の表示](../../../docs/framework/deployment/deployment-guide-for-developers.md#chaining_default)
+    - [UI の表示](deployment-guide-for-developers.md#chaining_default)
 
-  - [.NET Framework 4.5 のインストール中のシステム再起動の削減](../../../docs/framework/deployment/reducing-system-restarts.md)
+  - [.NET Framework 4.5 のインストール中のシステム再起動の削減](reducing-system-restarts.md)
 
   - [.NET Framework のインストールおよびアンインストールのブロックのトラブルシューティング](../install/troubleshoot-blocked-installations-and-uninstallations.md)
 
 - .NET Framework とクライアント アプリケーションの配置 (開発者向け):
 
-  - セットアップと配置プロジェクトでの [InstallShield の使用](../../../docs/framework/deployment/deployment-guide-for-developers.md#installshield-deployment)
+  - セットアップと配置プロジェクトでの [InstallShield の使用](deployment-guide-for-developers.md#installshield-deployment)
 
-  - [Visual Studio の ClickOnce アプリケーションの使用](../../../docs/framework/deployment/deployment-guide-for-developers.md#clickonce-deployment)
+  - [Visual Studio の ClickOnce アプリケーションの使用](deployment-guide-for-developers.md#clickonce-deployment)
 
-  - [WiX インストール パッケージの作成](../../../docs/framework/deployment/deployment-guide-for-developers.md#wix)
+  - [WiX インストール パッケージの作成](deployment-guide-for-developers.md#wix)
 
-  - [カスタム インストーラーの使用](../../../docs/framework/deployment/deployment-guide-for-developers.md#chaining)
+  - [カスタム インストーラーの使用](deployment-guide-for-developers.md#chaining)
 
-  - 開発者向けの[追加情報](../../../docs/framework/deployment/deployment-guide-for-developers.md)
+  - 開発者向けの[追加情報](deployment-guide-for-developers.md)
 
 - .NET Framework の配置 (OEM と管理者向け):
 
   - [Windows アセスメント & デプロイメント キット (ADK)](https://go.microsoft.com/fwlink/p/?LinkId=254976)
 
-  - [管理者ガイド](../../../docs/framework/deployment/guide-for-administrators.md)
+  - [管理者ガイド](guide-for-administrators.md)
 
 **サービス**
 
 - 一般的な情報については、「[.NET Framework blog (.NET Framework ブログ)](https://go.microsoft.com/fwlink/p/?LinkId=254977)」をご覧ください
 
-- [バージョンの検出](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)
+- [バージョンの検出](../migration-guide/how-to-determine-which-versions-are-installed.md)
 
-- [Service Pack と更新プログラムの検出](../../../docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)
+- [Service Pack と更新プログラムの検出](../migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)
 
 ## <a name="features-that-simplify-deployment"></a>配置を簡素化する機能
 
@@ -154,25 +154,25 @@ ms.locfileid: "70971598"
 
 ### <a name="installation-location"></a>インストール場所
 
-ランタイムがアプリケーションのアセンブリを検索できるようなアセンブリの配置先については、「[ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)」をご覧ください。
+ランタイムがアプリケーションのアセンブリを検索できるようなアセンブリの配置先については、「[ランタイムがアセンブリを検索する方法](how-the-runtime-locates-assemblies.md)」をご覧ください。
 
-アプリケーションの配置方法には、セキュリティの考慮事項も関係します。 コードが存在する場所に基づいて、マネージド コードにセキュリティ アクセス許可が付与されます。 インターネットなど、信頼度の低い場所にアプリケーションやコンポーネントを配置すると、そのアプリケーションやコンポーネントが実行できることは制限されます。 配置とセキュリティ上の考慮事項については、「[コード アクセス セキュリティの基礎](../../../docs/framework/misc/code-access-security-basics.md)」をご覧ください。
+アプリケーションの配置方法には、セキュリティの考慮事項も関係します。 コードが存在する場所に基づいて、マネージド コードにセキュリティ アクセス許可が付与されます。 インターネットなど、信頼度の低い場所にアプリケーションやコンポーネントを配置すると、そのアプリケーションやコンポーネントが実行できることは制限されます。 配置とセキュリティ上の考慮事項については、「[コード アクセス セキュリティの基礎](../misc/code-access-security-basics.md)」をご覧ください。
 
 ## <a name="related-topics"></a>関連トピック
 
 |Title|説明|
 |-----------|-----------------|
-|[ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|共通言語ランタイムが、バインド要求を満たすために、使用するアセンブリをどのように特定するかを説明します。|
-|[アセンブリの読み込みのベスト プラクティス](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|<xref:System.InvalidCastException>、<xref:System.MissingMethodException>、およびその他のエラーの原因となることがある型 ID の問題を回避する方法について説明します。|
-|[.NET Framework 4.5 のインストール中のシステム再起動の削減](../../../docs/framework/deployment/reducing-system-restarts.md)|再起動をできる限り回避する再起動マネージャーと、.NET Framework をインストールするアプリケーションがそれをどのように利用できるかを説明しています。|
-|[配置ガイド (管理者向け)](../../../docs/framework/deployment/guide-for-administrators.md)|System Center Configuration Manager (SCCM) を使用したシステム管理者による .NET Framework の配置方法と、ネットワーク全体でのシステムの依存関係について説明します。|
-|[配置ガイド (開発者向け)](../../../docs/framework/deployment/deployment-guide-for-developers.md)|開発者による .NET Framework とアプリケーションのユーザーのコンピューターへのインストール方法について説明します。|
+|[ランタイムがアセンブリを検索する方法](how-the-runtime-locates-assemblies.md)|共通言語ランタイムが、バインド要求を満たすために、使用するアセンブリをどのように特定するかを説明します。|
+|[アセンブリの読み込みのベスト プラクティス](best-practices-for-assembly-loading.md)|<xref:System.InvalidCastException>、<xref:System.MissingMethodException>、およびその他のエラーの原因となることがある型 ID の問題を回避する方法について説明します。|
+|[.NET Framework 4.5 のインストール中のシステム再起動の削減](reducing-system-restarts.md)|再起動をできる限り回避する再起動マネージャーと、.NET Framework をインストールするアプリケーションがそれをどのように利用できるかを説明しています。|
+|[配置ガイド (管理者向け)](guide-for-administrators.md)|System Center Configuration Manager (SCCM) を使用したシステム管理者による .NET Framework の配置方法と、ネットワーク全体でのシステムの依存関係について説明します。|
+|[配置ガイド (開発者向け)](deployment-guide-for-developers.md)|開発者による .NET Framework とアプリケーションのユーザーのコンピューターへのインストール方法について説明します。|
 |[アプリケーション、サービス、およびコンポーネントの配置](/visualstudio/deployment/deploying-applications-services-and-components)|ClickOnce を使用したアプリケーションの発行手順や、Windows インストーラー テクノロジなど、Visual Studio の配置オプションについて説明します。|
 |[ClickOnce アプリケーションの発行](/visualstudio/deployment/publishing-clickonce-applications)|Windows フォーム アプリケーションをパッケージ化し、これを ClickOnce でネットワーク上のクライアント コンピューターに配置する方法を説明します。|
-|[リソースのパッケージ化と配置](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)|.NET Framework でリソースのパッケージ化と配置に使用する、ハブ アンド スポーク モデルについて説明します。リソースの名前付け規則、フォールバック プロセス、およびパッケージ化の代替策についても説明します。|
-|[相互運用アプリケーションの配置](../../../docs/framework/interop/deploying-an-interop-application.md)|相互運用アプリケーションの出荷方法とインストール方法について説明します。通常、相互運用アプリケーションには、.NET Framework クライアント アセンブリ、個別の COM タイプ ライブラリを表す 1 つ以上の相互運用機能アセンブリ、および 1 つ以上の登録済み COM コンポーネントが含まれています。|
-|[方法: .NET Framework 4.5 インストーラーの進行状況を表示する](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)|進行状況のビューを独自に表示する一方で、.NET Framework セットアップ プロセスをサイレントで起動および追跡する方法を説明します。|
+|[リソースのパッケージ化と配置](../resources/packaging-and-deploying-resources-in-desktop-apps.md)|.NET Framework でリソースのパッケージ化と配置に使用する、ハブ アンド スポーク モデルについて説明します。リソースの名前付け規則、フォールバック プロセス、およびパッケージ化の代替策についても説明します。|
+|[相互運用アプリケーションの配置](../interop/deploying-an-interop-application.md)|相互運用アプリケーションの出荷方法とインストール方法について説明します。通常、相互運用アプリケーションには、.NET Framework クライアント アセンブリ、個別の COM タイプ ライブラリを表す 1 つ以上の相互運用機能アセンブリ、および 1 つ以上の登録済み COM コンポーネントが含まれています。|
+|[方法: .NET Framework 4.5 インストーラーの進行状況を表示する](how-to-get-progress-from-the-dotnet-installer.md)|進行状況のビューを独自に表示する一方で、.NET Framework セットアップ プロセスをサイレントで起動および追跡する方法を説明します。|
 
 ## <a name="see-also"></a>関連項目
 
-- [開発ガイド](../../../docs/framework/development-guide.md)
+- [開発ガイド](../development-guide.md)
