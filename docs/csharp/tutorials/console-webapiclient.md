@@ -3,12 +3,12 @@ title: .NET Core を使用した REST クライアントの作成
 description: このチュートリアルでは、.NET Core と C# 言語のさまざまな機能を説明します。
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: f6e3371a72810b30f804169be4025360aa10c477
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 001a9cbaae1cdb57b6451bc42ce326864f8dcf7b
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063884"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850979"
 ---
 # <a name="rest-client"></a>REST クライアント
 
@@ -31,7 +31,7 @@ GitHub 上の REST サービスに対して HTTP 要求を発行するアプリ�
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-お使いのコンピューターを、.NET Core が実行されるように設定する必要があります。 インストールの手順については、[.NET Core](https://www.microsoft.com/net/core) のページを参照してください。 このアプリケーションは、Windows、Linux、macOS または Docker コンテナーで実行できます。
+お使いのコンピューターを、.NET Core が実行されるように設定する必要があります。 インストールの手順については、[.NET Core のダウンロード](https://dotnet.microsoft.com/download) ページを参照してください。 このアプリケーションは、Windows、Linux、macOS または Docker コンテナーで実行できます。
 お好みのコード エディターをインストールしてください。 次の説明では、オープン ソースのクロス プラットフォーム エディターである [Visual Studio Code](https://code.visualstudio.com/) を使用しています。 しかし、他の使い慣れたツールを使用しても構いません。
 
 ## <a name="create-the-application"></a>アプリケーションを作成する

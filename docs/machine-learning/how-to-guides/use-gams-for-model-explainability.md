@@ -3,17 +3,17 @@ title: モデルの説明可能性のために一般化加法モデルと形状�
 description: ML.NET でモデルの説明可能性のために一般化加法モデルと形状関数を使う
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: ef56f737a2ad0cba616e32229ac3a395146fb6d2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c58cf823007196c35da093fab7423c1e40ba1158
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662131"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855600"
 ---
 # <a name="use-generalized-additive-models-and-shape-functions-for-model-explainability-in-mlnet"></a>ML.NET でモデルの説明可能性のために一般化加法モデルと形状関数を使う
 
 > [!NOTE]
-> このトピックは現在プレビュー中の ML.NET について述べており、内容が変更される場合があります。 詳細については、[ML.NET の概要](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)に関するページを参照してください。
+> このトピックは現在プレビュー中の ML.NET について述べており、内容が変更される場合があります。 詳細については、[ML.NET](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet) に関するページを参照してください。
 
 ここで説明する方法と関連サンプルでは、現時点では **ML.NET バージョン 0.10** が使用されています。 詳細については、リリース ノート ([GitHub リポジトリの dotnet/machinelearning ](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)) を参照してください。
 

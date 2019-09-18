@@ -3,12 +3,12 @@ title: Infer.NET と確率論的プログラミングでゲーム対戦リスト
 description: 確率論的プログラミングと Infer.NET を使用して、TrueSkill の簡易バージョンに基づいたゲーム対戦リスト アプリについて紹介します。
 ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 85cb3753ae19e7ca64002eb7c26b44b6f7d41e4f
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: aa3ad9528238e4f5a5eb187af71f2d2da1ea9cba
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211435"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855786"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Infer.NET と確率論的プログラミングでゲーム対戦リスト アプリを作成する
 
@@ -22,7 +22,7 @@ ms.locfileid: "65211435"
 
 - ローカルの開発環境の設定
 
-  このハウツー ガイドでは、開発用に使用できるマシンがあることを想定しています。 Mac、PC、または Linux 上でローカルの開発環境を設定する手順については、.NET の [10 分でわかる概要](https://www.microsoft.com/net/core)に関するチュートリアルに記載されています。
+  このハウツー ガイドでは、開発用に使用できるマシンがあることを想定しています。 macOS、Windows、または Linux 上でローカルの開発環境を設定する手順については、.NET チュートリアル [Hello World in 10 minutes](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) (10 分で Hello World) に記載されています。
 
 ## <a name="create-your-app"></a>アプリを作成する
 

@@ -1,18 +1,18 @@
 ---
 title: = 演算子 - C# リファレンス
 ms.custom: seodec18
-ms.date: 06/21/2019
+ms.date: 09/10/2019
 f1_keywords:
 - =_CSharpKeyword
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: f30b48fc6bd1e896658a7234a58409ea9a0f5e6f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a450a55524f33f4f06ed077aba864e8f641a458d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69601944"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70924661"
 ---
 # <a name="-operator-c-reference"></a>= 演算子 (C# リファレンス)
 
@@ -61,6 +61,10 @@ x = x op y
 ただし、`x` が評価されるのは 1 回だけです。
 
 複合代入は、[算術](arithmetic-operators.md#compound-assignment)、[ブール論理](boolean-logical-operators.md#compound-assignment)、[ビット単位論理およびシフト](bitwise-and-shift-operators.md#compound-assignment)の各演算子でサポートされています。
+
+## <a name="null-coalescing-assignment"></a>null 合体割り当て
+
+C# 8.0 以降では、null 合体割り当て演算子 `??=` を使用して、左側のオペランドが `null` に評価された場合にのみ、右側のオペランドの値を左側のオペランドに割り当てることができます。 詳細については、[?? および ??= 演算子](null-coalescing-operator.md)の記事を参照してください。
 
 ## <a name="operator-overloadability"></a>演算子のオーバーロード可/不可
 

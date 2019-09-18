@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f0f254b7794ce1cd4c765bee70c78e3c60a14aa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a666c0e079fb30ecdd32aad64f44434d8253acf4
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946494"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971902"
 ---
 # <a name="how-to-add-references-to-type-libraries"></a>方法: タイプ ライブラリへの参照を追加する
 Visual Studio は、タイプ ライブラリに参照を追加する際に、メタデータを含む相互運用機能アセンブリを生成します。 プライマリ相互運用機能アセンブリが使用可能な場合、Visual Studio では、新しい相互運用機能アセンブリを生成する前に既存のアセンブリが使用されます。  
@@ -48,7 +48,6 @@ Visual Studio は、タイプ ライブラリに参照を追加する際に、�
 
 - [タイプ ライブラリのアセンブリとしてのインポート](importing-a-type-library-as-an-assembly.md)
 - [.NET Framework への COM コンポーネントの公開](exposing-com-components.md)
-- [チュートリアル: Visual Studio でマネージド アセンブリからの型を埋め込む (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md) 
-- [チュートリアル: Visual Studio でマネージド アセンブリからの型を埋め込む (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
+- [チュートリアル: Visual Studio でマネージド アセンブリからの型を埋め込む](../../standard/assembly/embed-types-visual-studio.md) 
 - [/link (C# コンパイラ オプション)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
 - [/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)

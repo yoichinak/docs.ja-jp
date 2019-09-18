@@ -2,12 +2,12 @@
 title: 高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する
 description: 実際の運用アプリケーションは、すべてのコンテナーの正常性、ワークロードおよびライフ サイクルを管理するオーケストレーターと共に展開して管理する必要があります。
 ms.date: 02/15/2019
-ms.openlocfilehash: 8c1161127eb6b239384444c369de7f11abd3d424
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 8f2cef774acde47e9a1bb4680342b5e2c66ac154
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373699"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990496"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する
 
@@ -15,7 +15,7 @@ ms.locfileid: "70373699"
 
 図 4-6 は、複数のマイクロサービス (コンテナー) で構成されるアプリケーションのクラスターへの展開を示しています。
 
-![クラスター内での Docker アプリケーションの構成:サービス インスタンスごとに 1 つのコンテナーを使用します。 Docker コンテナーは "配置の単位" であり、コンテナーは Docker のインスタンスです。ホストでは多くのコンテナーが処理されます。](./media/image6.png)
+![クラスター内での Docker アプリケーションの構成:サービス インスタンスごとに 1 つのコンテナーを使用します。 Docker コンテナーは "配置の単位" であり、コンテナーは Docker のインスタンスです。 ホストでは多くのコンテナーが処理されます](./media/image6.png)
 
 **図 4-6** コンテナーのクラスター
 

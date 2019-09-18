@@ -1,17 +1,21 @@
 ---
 title: dotnet pack コマンド
 description: dotnet pack コマンドでは、.NET Core プロジェクトの NuGet パッケージを作成します。
-ms.date: 12/04/2018
-ms.openlocfilehash: c5c00f3bb06e5bc5579c0d3d6bdd39fbdf3db656
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.date: 08/08/2019
+ms.openlocfilehash: ba5a438d58963222c3fa55d2c585ef503dcd49db
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202845"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990407"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
+**このトピックの対象: ✓** .NET Core 1.x SDK 以降のバージョン
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>name
 
@@ -19,27 +23,21 @@ ms.locfileid: "70202845"
 
 ## <a name="synopsis"></a>構文
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```console
-dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies]
-    [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
+dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--interactive] 
+    [--no-build] [--no-dependencies] [--no-restore] [--nologo] [-o|--output] [--runtime] [-s|--serviceable] 
+    [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-```console
-dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output]
-    [-s|--serviceable] [-v|--verbosity] [--version-suffix]
-dotnet pack [-h|--help]
-```
-
----
 
 ## <a name="description"></a>説明
 
-`dotnet pack` コマンドはプロジェクトをビルドし、NuGet パッケージを作成します。 このコマンドの結果が NuGet パッケージです。 `--include-symbols` オプションが存在する場合、デバッグ シンボルを含む別のパッケージが作成されます。
+`dotnet pack` コマンドはプロジェクトをビルドし、NuGet パッケージを作成します。 このコマンドの結果が NuGet パッケージ (つまり、 *.nupkg* ファイル) です。 
+
+デバッグ シンボルを含むパッケージを生成する場合、使用可能なオプションが 2 つあります。
+
+- `--include-symbols` -シンボル パッケージを作成します。
+- `--include-source` -ソース ファイルが含まれた `src` フォルダーを含むシンボル パッケージを作成します。
 
 パックされるプロジェクトの NuGet 依存関係が *.nuspec* ファイルに追加されるため、パッケージのインストール時に適切に解決されます。 プロジェクト間参照はプロジェクト内にはパッケージ化されません。 現時点では、プロジェクト間の依存関係がある場合は、プロジェクトごとにパッケージが必要になります。
 
@@ -59,13 +57,11 @@ Web プロジェクトは既定でパッケージ化可能ではありません�
 
 ## <a name="arguments"></a>引数
 
-* **`PROJECT`**
+`PROJECT | SOLUTION`
 
-  パックするプロジェクトです。 [csproj ファイル](csproj.md)またはディレクトリのいずれかへのパスです。 指定しない場合は、既定で現在のディレクトリに設定されます。
+  パックするプロジェクトまたはソリューション。 [csproj ファイル](csproj.md)、ソリューション ファイル、またはディレクトリのいずれかへのパスです。 指定されていない場合、コマンドによりプロジェクトまたはソリューション ファイルが現在のディレクトリで検索されます。
 
 ## <a name="options"></a>オプション
-
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 * **`-c|--configuration {Debug|Release}`**
 
@@ -73,7 +69,7 @@ Web プロジェクトは既定でパッケージ化可能ではありません�
 
 * **`--force`**
 
-  最後の復元が成功した場合でも、すべての依存関係が強制的に解決されます。 このフラグを指定することは、*project.assets.json* ファイルを削除することと同じです。
+  最後の復元が成功した場合でも、すべての依存関係が強制的に解決されます。 このフラグを指定することは、*project.assets.json* ファイルを削除することと同じです。 .NET Core 2.0 SDK 以降、使用できるオプションです。
 
 * **`-h|--help`**
 
@@ -81,11 +77,15 @@ Web プロジェクトは既定でパッケージ化可能ではありません�
 
 * **`--include-source`**
 
-  NuGet パッケージにソース ファイルを含めます。 ソース ファイルは、`nupkg` 内の `src` フォルダーに含まれます。
+  通常の NuGet パッケージに加えて、デバッグ シンボル NuGet パッケージが出力ディレクトリ内に含まれます。 ソース ファイルは、シンボル パッケージ内の `src` フォルダーに含まれます。
 
 * **`--include-symbols`**
 
-  シンボルの `nupkg` を生成します。
+  通常の NuGet パッケージに加えて、デバッグ シンボル NuGet パッケージが出力ディレクトリ内に含まれます。
+
+* **`--interactive`**
+
+  コマンドを停止して、ユーザーの入力または操作のために待機させることができます (たとえば、認証を完了する場合)。 .NET Core 3.0 SDK 以降で使用できます。
 
 * **`--no-build`**
 
@@ -93,11 +93,15 @@ Web プロジェクトは既定でパッケージ化可能ではありません�
 
 * **`--no-dependencies`**
 
-  プロジェクト間参照を無視し、ルート プロジェクトのみを復元します。
+  プロジェクト間参照を無視し、ルート プロジェクトのみを復元します。 .NET Core 2.0 SDK 以降、使用できるオプションです。
 
 * **`--no-restore`**
 
-  コマンドを実行するときに、暗黙的な復元を実行しません。
+  コマンドを実行するときに、暗黙的な復元を実行しません。 .NET Core 2.0 SDK 以降、使用できるオプションです。
+
+* **`--nologo`**
+
+  著作権情報を表示しません。 .NET Core 3.0 SDK 以降で使用できます。
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
@@ -105,7 +109,7 @@ Web プロジェクトは既定でパッケージ化可能ではありません�
 
 * **`--runtime <RUNTIME_IDENTIFIER>`**
 
-  パッケージを復元するターゲット ランタイムを指定します。 ランタイム ID (RID) の一覧については、[RID カタログ](../rid-catalog.md)に関するページをご覧ください。
+  パッケージを復元するターゲット ランタイムを指定します。 ランタイム ID (RID) の一覧については、[RID カタログ](../rid-catalog.md)に関するページをご覧ください。 .NET Core 2.0 SDK 以降、使用できるオプションです。
 
 * **`-s|--serviceable`**
 
@@ -118,46 +122,6 @@ Web プロジェクトは既定でパッケージ化可能ではありません�
 * **`-v|--verbosity <LEVEL>`**
 
   コマンドの詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-* **`-c|--configuration {Debug|Release}`**
-
-  ビルド構成を定義します。 既定値は `Debug` です。
-
-* **`-h|--help`**
-
-  コマンドの短いヘルプを印刷します。
-
-* **`--include-source`**
-
-  NuGet パッケージにソース ファイルを含めます。 ソース ファイルは、`nupkg` 内の `src` フォルダーに含まれます。
-
-* **`--include-symbols`**
-
-  シンボルの `nupkg` を生成します。
-
-* **`--no-build`**
-
-  パッキングの前にプロジェクトをビルドしません。
-
-* **`-o|--output <OUTPUT_DIRECTORY>`**
-
-  指定したディレクトリにビルド済みパッケージを配置します。
-
-* **`-s|--serviceable`**
-
-  パッケージに処理可能フラグを設定します。 詳しくは、「[.NET Blog: .NET 4.5.1 Supports Microsoft Security Updates for .NET NuGet Libraries](https://aka.ms/nupkgservicing)」(.NET ブログ: .NET 4.5.1 は .NET NuGet ライブラリに対する Microsoft セキュリティ更新プログラムをサポートする) をご覧ください。
-
-* **`--version-suffix <VERSION_SUFFIX>`**
-
-  プロジェクトの `$(VersionSuffix)` MSBuild プロパティの値を定義します。
-
-* **`-v|--verbosity <LEVEL>`**
-
-  コマンドの詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。
-
----
 
 ## <a name="examples"></a>使用例
 
@@ -212,5 +176,5 @@ Web プロジェクトは既定でパッケージ化可能ではありません�
 * [.nuspec ファイル](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec)を使用してプロジェクトをパックします。
 
   ```console
-  dotnet pack ~/projects/app1/project.csproj /p:NuspecFile=~/projects/app1/project.nuspec /p:NuspecBasePath=~/projects/app1/nuget
+  dotnet pack ~/projects/app1/project.csproj -p:NuspecFile=~/projects/app1/project.nuspec -p:NuspecBasePath=~/projects/app1/nuget
   ```

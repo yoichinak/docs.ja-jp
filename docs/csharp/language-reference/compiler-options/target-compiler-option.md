@@ -9,12 +9,12 @@ helpviewer_keywords:
 - assemblies [C#], compiling
 - -target compiler options [C#]
 ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
-ms.openlocfilehash: 0630639433aed4c8dfddbf0144e9802ed3f4ee73
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 073660fa732c04cdc987af5617b894a277ebcc0f
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606440"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970111"
 ---
 # <a name="-target-c-compiler-options"></a>-target (C# コンパイラ オプション)
 **-target** コンパイラ オプションは、次の 6 つの形式のいずれかで指定できます。  
@@ -37,7 +37,7 @@ ms.locfileid: "69606440"
  [/target:winmdobj](./target-winmdobj-compiler-option.md)  
  .winmdobj 中間ファイルを作成する場合。  
   
- **-target:module** を指定しない限り、 **-target** を使用すると、.NET Framework のアセンブリ マニフェストが出力ファイルに配置されます。 詳細については、「[共通言語ランタイムのアセンブリ](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)」と「[共通の属性](../../programming-guide/concepts/attributes/common-attributes.md)」を参照してください。  
+ **-target:module** を指定しない限り、 **-target** を使用すると、.NET Framework のアセンブリ マニフェストが出力ファイルに配置されます。 詳細については、「[.NET のアセンブリ](../../../standard/assembly/index.md)」と「[共通の属性](../../programming-guide/concepts/attributes/common-attributes.md)」を参照してください。  
   
  アセンブリ マニフェストは、コンパイル中の最初の .exe 出力ファイルに配置されます。 .exe 出力ファイルがない場合には、最初の DLL ファイルに配置されます。 たとえば、次のコマンド ラインでは、マニフェストは `1.exe` に配置されます。  
   

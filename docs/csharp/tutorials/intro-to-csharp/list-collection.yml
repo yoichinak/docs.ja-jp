@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 8ee13ec60f0504982c33ecc61940b731d320d2de
-  ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+  ms.openlocfilehash: 6dfbbbb6ef64b3dbb83d15ba66860acb7c5b3585
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/19/2019
-  ms.locfileid: "65880559"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850741"
 items:
 - durationInMinutes: 1
   content: >
@@ -197,9 +197,37 @@ items:
     > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
 - title: 課題完了
   durationInMinutes: 3
-  content: "コードは次のようになりましたか? \n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n\nwhile (fibonacciNumbers.Count < 20)\n{\n    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\n    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n\n    fibonacciNumbers.Add(previous + previous2);\n}\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\nループの繰り返しごとに、リストの最後の 2 つの整数を取得して合計し、その値をリストに追加しています。 このループは、20 個の項目がリストに追加されるまで繰り返されます。\n\n> [!NOTE]\n> このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。\n"
+  content: >
+    コードは次のようになりましたか?
+
+
+    ```csharp
+
+    var fibonacciNumbers = new List<int> {1, 1};
+
+
+    while (fibonacciNumbers.Count < 20)
+
+    {
+        var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];
+        var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];
+
+        fibonacciNumbers.Add(previous + previous2);
+    }
+
+    foreach(var item in fibonacciNumbers)
+        Console.WriteLine(item);
+    ```
+
+
+    ループの繰り返しごとに、リストの最後の 2 つの整数を取得して合計し、その値をリストに追加しています。 このループは、20 個の項目がリストに追加されるまで繰り返されます。
+
+
+    > [!NOTE]
+
+    > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
 - content: >-
-    これで、対話型チュートリアルは終了です。 これは、C# の対話型チュートリアルの最後の概要です。 [.NET サイト](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial)にアクセスして、.NET Core SDK をダウンロードし、お使いのコンピューター上にプロジェクトを作成し、コーディングを続けることができます。 "学習の継続" 手順で、お使いのコンピューター上にプロジェクトを構築するチュートリアルに戻ってきます。
+    これで、対話型チュートリアルは終了です。 これは、C# の対話型チュートリアルの最後の概要です。 [.NET サイト](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)にアクセスして、.NET Core SDK をダウンロードし、お使いのコンピューター上にプロジェクトを作成し、コーディングを続けることができます。 "次の手順" セクションでは、これらのチュートリアルに戻ります。
 
 
     [.NET コレクション](../../../standard/collections/index.md)の詳細については、次の記事で学習できます。

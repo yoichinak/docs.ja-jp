@@ -3,12 +3,12 @@ title: コンソール アプリケーション
 description: このチュートリアルでは、.NET Core と C# 言語のさまざまな機能を説明します。
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 3ac4312ba5d6088826fdf151609f6693a265e5a3
-ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
+ms.openlocfilehash: 4324b25daa253b3d2446955ad9ca57c2f0294f0c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58348831"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851010"
 ---
 # <a name="console-application"></a>コンソール アプリケーション
 
@@ -26,7 +26,7 @@ ms.locfileid: "58348831"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-お使いのコンピューターを、.NET Core が実行されるように設定する必要があります。 インストールの手順については、[.NET Core](https://www.microsoft.com/net/core) のページを参照してください。 このアプリケーションは、Windows、Linux、macOS または Docker コンテナーで実行できます。
+お使いのコンピューターを、.NET Core が実行されるように設定する必要があります。 インストールの手順については、[.NET Core のダウンロード](https://dotnet.microsoft.com/download) ページを参照してください。 このアプリケーションは、Windows、Linux、macOS または Docker コンテナーで実行できます。
 お好みのコード エディターをインストールしてください。
 
 ## <a name="create-the-application"></a>アプリケーションを作成する

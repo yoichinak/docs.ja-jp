@@ -3,18 +3,18 @@ title: コレクションでの作業 - C# チュートリアルの概要
 description: このチュートリアルでは、リスト コレクションについて確認して C# を学習します。
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: 160e34ddb529a8515a08d6aab838ba107936c616
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 8db9f0acc69efdb89c276f9bee5e095c7920ffc6
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587259"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850868"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>リスト型を使用したデータ コレクションの管理について説明します
 
 このチュートリアルでは、C# 言語の概要と <xref:System.Collections.Generic.List%601> クラスの基本を説明します。
 
-このチュートリアルでは、開発用に使用できるマシンがあることを想定しています。 Mac、PC、または Linux 上でローカルの開発環境を設定する手順については、.NET の [10 分でわかる概要](https://www.microsoft.com/net/core)に関するトピックに記載されています。 使用するコマンドの概要については、詳細な情報へのリンクが掲載されている[開発ツールに対する理解を深める](local-environment.md)方法に関するページをご覧ください。
+このチュートリアルでは、開発用に使用できるマシンがあることを想定しています。 Mac、PC、または Linux 上でローカルの開発環境を設定する手順については、.NET チュートリアル [Hello World in 10 minutes](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) (10 分で Hello World) に記載されています。 使用するコマンドの概要については、詳細な情報へのリンクが掲載されている[開発ツールに対する理解を深める](local-environment.md)方法に関するページをご覧ください。
 
 ## <a name="a-basic-list-example"></a>基本のリストの例
 

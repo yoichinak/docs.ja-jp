@@ -2,12 +2,12 @@
 title: dotnet restore コマンド
 description: dotnet restore コマンドを使用して、依存関係とプロジェクト固有のツールを復元する方法について説明します。
 ms.date: 05/29/2018
-ms.openlocfilehash: 56d99a4edd69246632560065c415a3f41ac3e1b5
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 1e0e1fbf6ab5f595773a072242440e30865fed16
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202815"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969763"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -18,6 +18,8 @@ ms.locfileid: "70202815"
 `dotnet restore` - プロジェクトの依存関係とツールを復元します。
 
 ## <a name="synopsis"></a>構文
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
@@ -177,7 +179,7 @@ dotnet restore [-h|--help]
 
 `-s|--source <SOURCE>`
 
-復元操作時に使用する NuGet パッケージのソースを指定します。 これにより、"*nuget.config*" ファイルに指定されているすべてのソースがオーバーライドされます。 このオプションを複数回指定することによって、複数のソースを指定できます。
+復元操作時に使用する NuGet パッケージのソースを指定します。 これにより、*nuget.exe* ファイルで指定されているすべてのソースがオーバーライドされ、`<packageSource>` 要素が存在しないかのように *nuget.exe* ファイルが効果的に読み取られます。 このオプションを複数回指定することによって、複数のソースを指定できます。
 
 `--verbosity <LEVEL>`
 

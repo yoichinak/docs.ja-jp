@@ -3,18 +3,18 @@ title: C# における数値 - C# の概要に関するチュートリアル
 description: 数値型とそのプロパティ、およびメソッドを詳しく見ていくことで C# について学習します。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: d95d5ce16abadf441158b7f8af93acc73b154e99
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 436e8db10f973b468458987150e1312a16103b91
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661049"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850697"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>C\# で整数と浮動小数点数を操作する
 
 このチュートリアルでは、対話形式で C# の数値型について説明します。 少量のコードを記述したら、そのコードをコンパイルして実行します。 このチュートリアルには、C# の数値と算術演算に関する一連のレッスンが含まれています。 これらのレッスンでは、C# 言語の基本を説明します。
 
-このチュートリアルでは、開発用に使用できるマシンがあることを想定しています。 Mac、PC、または Linux 上でローカルの開発環境を設定する手順については、.NET の [10 分でわかる概要](https://www.microsoft.com/net/core)に関するトピックに記載されています。 使用するコマンドの概要については、詳細な情報へのリンクが掲載されている、[開発ツールに対する理解を深める](local-environment.md)方法に関するページをご覧ください。
+このチュートリアルでは、開発用に使用できるマシンがあることを想定しています。 Mac、PC、または Linux 上でローカルの開発環境を設定する手順については、.NET チュートリアル [Hello World in 10 minutes](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) (10 分で Hello World) に記載されています。 使用するコマンドの概要については、詳細な情報へのリンクが掲載されている、[開発ツールに対する理解を深める](local-environment.md)方法に関するページをご覧ください。
 
 ## <a name="explore-integer-math"></a>整数の演算の確認
 

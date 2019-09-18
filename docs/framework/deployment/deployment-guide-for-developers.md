@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 179170c0cafc67027012d2306281eb2cd1d967a4
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 8dd7bac8c0cb14421016efad60a7ec0d672e5622
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170653"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854024"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 配置ガイド (開発者向け)
 このトピックでは、.NET Framework 4.5 から [!INCLUDE[net_current](../../../includes/net-current-version.md)] までの任意のバージョンの .NET Framework を、それぞれのアプリと共にインストールする開発者向けの情報を提供します。
@@ -200,31 +200,23 @@ Windows インストーラー XML (WiX) ツールセットは、XML ソース �
 
 .NET Framework インストール プロセスをサイレントにチェーンして .NET Framework のインストーラーに UI を提供させるには、セットアップ プログラムに次のコマンドを追加します。
 
-```
-<.NET Framework redistributable> /q /norestart /ChainingPackage <PackageName>
-```
+`<.NET Framework redistributable> /q /norestart /ChainingPackage <PackageName>`
 
 たとえば、実行可能プログラムが Contoso.exe で、.NET Framework 4.5 のオフライン再頒布可能パッケージをサイレント インストールする場合は、次のコマンドを使用します。
 
-```
-dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
-```
+`dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso`
 
 追加のコマンド ライン オプションを使用して、インストールをカスタマイズできます。 次に例を示します。
 
 - システムの再起動を最小限に抑えるために、実行中の .NET Framework アプリケーションを終了する方法をユーザーに提供するには、受動モードを設定して、次のように `/showrmui` オプションを使用します。
 
-    ```
-    dotNetFx45_Full_x86_x64.exe /norestart /passive /showrmui /ChainingPackage Contoso
-    ```
+    `dotNetFx45_Full_x86_x64.exe /norestart /passive /showrmui /ChainingPackage Contoso`
 
      このコマンドは、.NET Framework をインストールする前に、.NET Framework アプリを終了する機会をユーザーに与えるメッセージ ボックスを、再起動マネージャーが表示できるようにします。
 
 - Web インストーラーを使用する場合、 `/LCID` オプションを使用して言語パックを指定できます。 たとえば、.NET Framework 4.5 Web インストーラーを Contoso セットアップ プログラムにチェーンして日本語の言語パックをインストールするには、次のコマンドをアプリのセットアップ プロセスに追加します。
 
-    ```
-    dotNetFx45_Full_setup.exe /q /norestart /ChainingPackage Contoso /LCID 1041
-    ```
+    `dotNetFx45_Full_setup.exe /q /norestart /ChainingPackage Contoso /LCID 1041`
 
      `/LCID` オプションを省略すると、セットアップはユーザーの MUI 設定と一致する言語パックをインストールします。
 
@@ -294,13 +286,13 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 `Release` という名前の DWORD 値のレジストリで HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\\*LCID* フォルダーをチェックすることにより、特定の言語パックがインストールされているかどうかをテストできます。 ("NET Framework セットアップ" の先頭ががピリオドではないことに注意してください)。*LCID* はロケール識別子を指定します。これらのリストについては、「[サポートされる言語](#supported-languages)」を参照してください。
 
-たとえば、完全な日本語言語パック (LCID=1041) がインストールされているかどうかを検出するには、レジストリの次の値をチェックします。
+たとえば、完全な日本語言語パック (LCID=1041) がインストールされているかどうかを検出するには、レジストリから次の名前付きの値を取得します。
 
-```
-Key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041
-Name: Release
-Type: DWORD
-```
+| | |
+|-|-|
+| キー | HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
+| name | 解放 |
+| 型 | DWORD |
 
 言語パックの最終リリース バージョンがバージョン 4.5 から 4.7.2 までの特定のバージョンの .NET Framework にインストールされているかどうかを確認するには、前のセクション「[.NET Framework の検出](#detect_net)」で説明した Release キー DWORD の値を確認します。
 
@@ -337,9 +329,7 @@ Type: DWORD
 
 .NET Framework のオフライン インストーラーを言語パックと一緒にインストールするには、言語パックをアプリのセットアップにチェーンする必要があります。 たとえば、.NET Framework 4.5.1 のオフライン インストーラーを日本語言語パックと一緒に配置するには、次のコマンドを使用します。
 
-```
-NDP451-KB2858728-x86-x64-AllOS-JPN.exe /q /norestart /ChainingPackage <ProductName>
-```
+`NDP451-KB2858728-x86-x64-AllOS-JPN.exe /q /norestart /ChainingPackage <ProductName>`
 
 Web インストーラーを使用する場合は、言語パックをチェーンする必要はありません。セットアップはユーザーの MUI 設定と一致する言語パックをインストールします。 異なる言語をインストールするには、 `/LCID` オプションを使用して言語パックを指定します。
 

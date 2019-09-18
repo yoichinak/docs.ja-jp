@@ -5,18 +5,20 @@ author: mairaw
 ms.author: adegeo
 ms.custom: updateeachvsrelease
 ms.date: 07/13/2019
-ms.openlocfilehash: 5086b185ee2d49c7b569ed0cb62b4c8995f9982c
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: d391c18a371d721419c298f2987894f16ecbd169
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433909"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969919"
 ---
 # <a name="prerequisites-for-net-core-on-macos"></a>macOS における .NET Core の前提条件
 
 この記事では、macOS コンピューターで .NET Core アプリケーションを開発、展開、および実行するために必要なサポート対象 macOS のバージョンと .NET Core の依存関係を示します。 後述のサポート対象 OS のバージョンと依存関係は、Mac で .NET Core アプリを開発する 3 つの方法 ([好きなエディターでコマンド ラインを使用](tutorials/using-with-xplat-cli.md)、[Visual Studio Code を使用](https://code.visualstudio.com/)、および [Visual Studio for Mac を使用](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)) に適用されます。
 
 ## <a name="supported-macos-versions"></a>サポート対象の macOS のバージョン
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
@@ -26,7 +28,7 @@ ms.locfileid: "68433909"
 
 .NET Core 2.1 と .NET Core 2.2 がサポートされているオペレーティング システム、ディストリビューション、バージョン、サポートされていない OS バージョン、ライフサイクル ポリシー リンクの完全なリストについては、[.NET Core 2.1 がサポートされる OS バージョン](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)と [.NET Core 2.2 がサポートされている OS バージョン](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)に関するページを参照してください。
 
-ダウンロード リンクと詳細については、[.NET Core 2.2 のダウンロード](https://www.microsoft.com/net/download/dotnet-core/2.2)または [.NET Core 2.1](https://www.microsoft.com/net/download/dotnet-core/2.1) のダウンロードのページを参照してください。
+ダウンロード リンクと詳細については、[.NET Core 2.2 のダウンロード](https://dotnet.microsoft.com/download/dotnet-core/2.2)または [.NET Core 2.1](https://dotnet.microsoft.com/download/dotnet-core/2.1) のダウンロードのページを参照してください。
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -37,7 +39,7 @@ ms.locfileid: "68433909"
 
 .NET Core 1.1 と .NET Core 1.0 がサポートされているオペレーティング システム、ディストリビューション、バージョン、サポートされていない OS バージョン、ライフサイクル ポリシー リンクの完全なリストについては、[.NET Core 1.1 がサポートされる OS バージョン](https://github.com/dotnet/core/blob/master/release-notes/1.1/1.1.md)と [.NET Core 1.0 がサポートされている OS バージョン](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)に関するページを参照してください。
 
-ダウンロード リンクと詳細については、[.NET Core 1.1 のダウンロード](https://www.microsoft.com/net/download/dotnet-core/1.1)または [.NET Core 1.0](https://www.microsoft.com/net/download/dotnet-core/1.0) のダウンロードのページを参照してください。
+ダウンロード リンクと詳細については、[.NET Core 1.1 のダウンロード](https://dotnet.microsoft.com/download/dotnet-core/1.1)または [.NET Core 1.0](https://dotnet.microsoft.com/download/dotnet-core/1.0) のダウンロードのページを参照してください。
 
 # <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
 
@@ -47,7 +49,7 @@ ms.locfileid: "68433909"
 
 .NET Core 3.0 でサポートされているオペレーティング システム、ディストリビューション、バージョン、サポートされていない OS バージョン、ライフサイクル ポリシー リンクの完全なリストについては、[.NET Core 3.0 がサポートされる OS バージョン](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)に関するページを参照してください。
 
-ダウンロード リンクと詳細については、[.NET Core 3.0 のダウンロード](https://www.microsoft.com/net/download/dotnet-core/3.0) ページを参照してください。
+ダウンロード リンクと詳細については、[.NET Core 3.0 のダウンロード](https://dotnet.microsoft.com/download/dotnet-core/3.0) ページを参照してください。
 
 ---
 
@@ -55,7 +57,7 @@ ms.locfileid: "68433909"
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-[.NET ダウンロード](https://www.microsoft.com/net/download/core)から .NET Core SDK をダウンロードしてインストールします。 macOS でインストールに関する問題が発生した場合は、[既知の問題](https://github.com/dotnet/core/tree/master/release-notes/2.1)に関するトピックで、インストールされているバージョンに関する記述をご覧ください。
+[.NET のダウンロード](https://dotnet.microsoft.com/download) ページから .NET Core SDK をダウンロードしてインストールします。 macOS でインストールに関する問題が発生した場合は、[既知の問題](https://github.com/dotnet/core/tree/master/release-notes/2.1)に関するトピックで、インストールされているバージョンに関する記述をご覧ください。
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -69,11 +71,11 @@ ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/
 ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
 ```
 
-[.NET ダウンロード](https://www.microsoft.com/net/download/core)から .NET Core SDK をダウンロードしてインストールします。 macOS でインストールに関する問題が発生した場合は、「[1.0.0 Known Issues (1.0.0 の既知の問題)](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md)」と「[1.0.1 Known Issues (1.0.1 の既知の問題)](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md)」のトピックをご覧ください。
+[.NET のダウンロード](https://dotnet.microsoft.com/download) ページから .NET Core SDK をダウンロードしてインストールします。 macOS でインストールに関する問題が発生した場合は、「[1.0.0 Known Issues (1.0.0 の既知の問題)](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md)」と「[1.0.1 Known Issues (1.0.1 の既知の問題)](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md)」のトピックをご覧ください。
 
 # <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
 
-[.NET ダウンロード](https://www.microsoft.com/net/download/core)から .NET Core SDK をダウンロードしてインストールします。 macOS でインストールに関する問題が発生した場合は、[リリース ノート](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)のトピックで、インストールされているバージョンに関する記述をご覧ください。
+[.NET のダウンロード](https://dotnet.microsoft.com/download) ページから .NET Core SDK をダウンロードしてインストールします。 macOS でインストールに関する問題が発生した場合は、[リリース ノート](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)のトピックで、インストールされているバージョンに関する記述をご覧ください。
 
 ---
 

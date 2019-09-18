@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 991053a2728ec7b8c5d9157dbf6307e0974479c6
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 5c71816b1bd2e9c95e8c7efb44e3e689dce4ab93
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66379930"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853964"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>方法: .NET Framework 4.5 インストーラーの進行状況を表示する
 
@@ -24,13 +24,11 @@ ms.locfileid: "66379930"
 
     1. .NET Framework 4.5 再頒布可能プログラムを呼び出します。
 
-        ```
-        dotNetFx45_Full_x86_x64.exe /q /norestart /pipe section-name
-        ```
+        `dotNetFx45_Full_x86_x64.exe /q /norestart /pipe section-name`
 
         この *section name* は、アプリの識別に使用する名前です。 .NET Framework のセットアップでは MMIO セクションに対する読み書きを非同期に行うので、その間、イベントおよびメッセージの使用が役立つ場合があります。 この例では、.NETFramework セットアップ プロセスは、MMIO セクションの割り当て (`TheSectionName`) とイベントの定義 (`TheEventName`) の両方を行うコンストラクターによって作成されます。
 
-        ```
+        ```cpp
         Server():ChainerSample::MmioChainer(L"TheSectionName", L"TheEventName")
         ```
 

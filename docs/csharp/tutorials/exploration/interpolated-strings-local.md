@@ -4,18 +4,18 @@ description: このチュートリアルでは、C# で文字列補間機能を�
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: a39ed5b320f16004f4ddcb35a7fcee5869b97137
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 3e4e886d898854f5c1d966529e94f49c752220d8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397807"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850930"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>文字列補間を使用し、書式設定された文字列を作成する
 
 このチュートリアルでは、C# で[文字列補間](../../language-reference/tokens/interpolated.md)を使用して、単一の結果の文字列に値を挿入する方法を説明します。 C# コードを記述し、コードをコンパイルおよび実行して結果を確認します。 チュートリアルには、値を文字列に挿入し、それらの値の書式をさまざまな方法で設定する方法を示す、一連のレッスンが含まれています。
 
-このチュートリアルでは、開発用に使用できるマシンがあることを想定しています。 Mac、PC、または Linux 上でローカルの開発環境を設定する手順については、.NET の [10 分でわかる概要](https://www.microsoft.com/net/core)に関するトピックに記載されています。 また、使用しているブラウザーでこのチュートリアルの[対話型バージョン](interpolated-strings.yml)を完了することもできます。
+このチュートリアルでは、開発用に使用できるマシンがあることを想定しています。 Mac、PC、または Linux 上でローカルの開発環境を設定する手順については、.NET チュートリアル [Hello World in 10 minutes](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) (10 分で Hello World) に記載されています。 また、使用しているブラウザーでこのチュートリアルの[対話型バージョン](interpolated-strings.yml)を完了することもできます。
 
 ## <a name="create-an-interpolated-string"></a>挿入文字列を作成する
 

@@ -1,13 +1,13 @@
 ---
 title: C# 8.0 の新機能 - C# ガイド
 description: C# 8.0 で使用できる新しい機能の概要を説明します。 この記事は、プレビュー 5 での最新のものです。
-ms.date: 09/04/2019
-ms.openlocfilehash: b281c55a5911d81503a6af80e393469be1124280
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.date: 09/10/2019
+ms.openlocfilehash: 141f7a2fa0bc5f6a2a253e196a218938dd4c170e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374007"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926524"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 の新機能
 
@@ -26,6 +26,7 @@ C# 言語では、既に試すことができる多くの機能強化が行わ�
 - [Null 許容参照型](#nullable-reference-types)
 - [非同期ストリーム](#asynchronous-streams)
 - [インデックスと範囲](#indices-and-ranges)
+- [null 合体割り当て](#null-coalescing-assignment)
 - [構築されたアンマネージド型](#unmanaged-constructed-types)
 - [verbatim 補間文字列の拡張](#enhancement-of-interpolated-verbatim-strings)
 
@@ -447,6 +448,24 @@ var text = words[phrase];
 ```
 
 チュートリアルでのインデックスと範囲について詳しくは、「[Indices and ranges (インデックスと範囲)](../tutorials/ranges-indexes.md)」で調べることができます。
+
+## <a name="null-coalescing-assignment"></a>null 合体割り当て
+
+C# 8.0 では、null 合体割り当て演算子 `??=` が導入されています。 左側のオペランドが `null` に評価された場合にのみ、`??=` 演算子を使用して右側のオペランドの値を左側のオペランドに割り当てることができます。
+
+```csharp
+List<int> numbers = null;
+int? i = null;
+
+numbers ??= new List<int>();
+numbers.Add(i ??= 17);
+numbers.Add(i ??= 20);
+
+Console.WriteLine(string.Join(' ', numbers));  // output: 17 17
+Console.WriteLine(i);  // output: 17
+```
+
+詳細については、「[?? and ??= 演算子](../language-reference/operators/null-coalescing-operator.md)」の記事を参照してください。
 
 ## <a name="unmanaged-constructed-types"></a>構築されたアンマネージド型
 

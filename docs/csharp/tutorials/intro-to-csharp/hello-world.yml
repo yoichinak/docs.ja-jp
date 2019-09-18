@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: ef52031f75bd2004bcb5927524a9c82ac8fbf36f
-  ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+  ms.openlocfilehash: 36254062835b9ab70ba470f6286b7515003dec11
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 03/05/2019
-  ms.locfileid: "57370320"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850797"
 items:
 - durationInMinutes: 1
   content: >
@@ -34,7 +34,7 @@ items:
     ```
 
 
-    おめでとうございます!  最初の C# プログラムを実行しました。 これは "Hello World!" というメッセージを出力する単純なプログラムです。 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> メソッドを使用してこのメッセージを出力しました。 `Console` は、コンソール ウィンドウを表す型です。 `WriteLine` は、そのテキスト コンソールに 1 行のテキストを出力する `Console` 型の 1 つのメソッドです。
+    おめでとうございます! 最初の C# プログラムを実行しました。 これは "Hello World!" というメッセージを出力する単純なプログラムです。 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> メソッドを使用してこのメッセージを出力しました。 `Console` は、コンソール ウィンドウを表す型です。 `WriteLine` は、そのテキスト コンソールに 1 行のテキストを出力する `Console` 型の 1 つのメソッドです。
 
 
     次に進んで、さらに詳しく見てみましょう。 このレッスンの残りの部分では、C# においてテキストを表す `string` 型の機能を確認します。 `Console` 型と同じように、`string` 型にもメソッドがあります。 `string` メソッドはテキストを処理します。
@@ -296,7 +296,7 @@ items:
 
     > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
 - content: >-
-    C# 概要の "Hello C#" チュートリアルはこれで終了です。 下の **C# における数値** リンクをクリックすることで次の対話式チュートリアルを開始することも、[.NET サイト](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial)にアクセスして .NET Core SDK をダウンロードし、ご利用のコンピューター上でプロジェクトを作成し、コーディングを続けることもできます。 "学習の継続" の手順では、これらのチュートリアルに戻ります。
+    C# 概要の "Hello C#" チュートリアルはこれで終了です。 下の **C# における数値** リンクをクリックすることで次の対話式チュートリアルを開始することも、[.NET サイト](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)にアクセスして .NET Core SDK をダウンロードし、ご利用のコンピューター上でプロジェクトを作成し、コーディングを続けることもできます。 "次の手順" セクションでは、これらのチュートリアルに戻ります。
 
 
     `string` 型の詳細については次を参照してください。

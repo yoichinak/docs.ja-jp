@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 7b740f2c93096c971da009e8abf6865ac1b8e966
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 592f9dc599a22427a2a79047cd9e96f36d2ae429
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254154"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972006"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>ML.NET CLI を使用してセンチメントを分析する
 
@@ -19,6 +19,7 @@ ML.NET CLI を使用して ML.NET モデルと基礎となる C# コードを自
 
 このチュートリアルでは、次の手順を実行します。
 > [!div class="checklist"]
+>
 > - 選択した機械学習タスク用にデータを準備する
 > - CLI から "mlnet auto-train" コマンドを実行する
 > - 品質メトリックの結果を確認する
@@ -26,7 +27,7 @@ ML.NET CLI を使用して ML.NET モデルと基礎となる C# コードを自
 > - モデルのトレーニングに使用された生成済み C# コードを調べる
 
 > [!NOTE]
-> このトピックは、現在プレビュー段階の ML.NET CLI ツールについて述べており、内容が変更される場合があります。 詳細については、[ML.NET の概要](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)に関するページを参照してください。
+> このトピックは、現在プレビュー段階の ML.NET CLI ツールについて述べており、内容が変更される場合があります。 詳細については、[ML.NET](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet) に関するページを参照してください。
 
 ML.NET CLI は ML.NET の一部であり、その主な目的は、ML.NET を学習する .NET 開発者のために ML.NET を "民主化" することなので、始めるときにゼロからコードを書く必要はありません。
 
@@ -94,7 +95,8 @@ ML.NET CLI は任意のコマンドプロンプト (Windows、Mac、または Li
 
     CLI からの出力が次のように表示されます。
 
-    <!-- markdownlint-disable MD023 -->
+    <!-- markdownlint-disable MD023 MD025 -->
+
     # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
     ![PowerShell 上の ML.NET CLI の auto-train](./media/mlnet-cli/mlnet-auto-train-binary-classification-powershell.gif)
@@ -259,6 +261,7 @@ ML.NET CLI は任意のコマンドプロンプト (Windows、Mac、または Li
 
 このチュートリアルでは、次の作業を行う方法を学びました。
 > [!div class="checklist"]
+>
 > - 選択した ML タスク (解決する問題) 用のデータを準備する
 > - CLI ツールで "mlnet auto-train" コマンドを実行する
 > - 品質メトリックの結果を確認する

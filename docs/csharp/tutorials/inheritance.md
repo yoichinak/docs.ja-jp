@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 644e0bb281525fad12e263b31263bb9caba149f0
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 41377cb47836624160a5b402e0a85270b68eba4f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463814"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850987"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# と .NET での継承
 
@@ -18,7 +18,7 @@ ms.locfileid: "58463814"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-このチュートリアルでは、.NET Core がインストールされていることを前提としています。 インストール手順については、「[.NET Core installation guide (.NET Core インストール ガイド)](https://www.microsoft.com/net/core)」を参照してください。 コード エディターも必要です。 このチュートリアルでは [Visual Studio Code](https://code.visualstudio.com) を使用していますが、任意のコード エディターを使用して構いません。
+このチュートリアルでは、.NET Core SDK がインストールされていることを前提としています。 ダウンロードするには、[.NET Core ダウンロード](https://dotnet.microsoft.com/download) ページにアクセスしてください。 コード エディターも必要です。 このチュートリアルでは [Visual Studio Code](https://code.visualstudio.com) を使用していますが、任意のコード エディターを使用して構いません。
 
 ## <a name="running-the-examples"></a>例の実行
 
@@ -144,8 +144,8 @@ public struct ValueStructure : ValueType // Generates CS0527.
 | ------------- | ----------------------------------------------------------------------------- |
 | class         | <xref:System.Object>                                                          |
 | struct        | <xref:System.ValueType>、 <xref:System.Object>                                 |
-| enum          | <xref:System.Enum>、 <xref:System.ValueType>、 <xref:System.Object>             |
-| delegate      | <xref:System.MulticastDelegate>、 <xref:System.Delegate>、 <xref:System.Object> |
+| enum          | <xref:System.Enum>、<xref:System.ValueType>、<xref:System.Object>             |
+| delegate      | <xref:System.MulticastDelegate>、<xref:System.Delegate>、<xref:System.Object> |
 
 ## <a name="inheritance-and-an-is-a-relationship"></a>継承と "is a" 関係
 
