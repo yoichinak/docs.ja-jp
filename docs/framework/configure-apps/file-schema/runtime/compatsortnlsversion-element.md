@@ -17,11 +17,11 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/04/2019
 ms.locfileid: "70252733"
 ---
-# <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion > 要素
+# <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion> 要素
 文字列比較の実行時に、ランタイムがレガシ並べ替え順序を使用するように指定します。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<ランタイム >** ](runtime-element.md)\
+&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<CompatSortNLSVersion>**  
   
 ## <a name="syntax"></a>構文  
