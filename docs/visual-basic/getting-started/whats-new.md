@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 20d403e4a6410257068cc3414fcb8dc1e45709e9
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3638deeafc052a2da3b438de2c504a9955a15ad3
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666863"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895259"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic の新機能
 
@@ -21,9 +21,12 @@ ms.locfileid: "69666863"
 
 ## <a name="current-version"></a>現在のバージョン
 
-Visual Basic 15.8 / Visual Studio 2017 バージョン 15.8 新機能については、「[Visual Basic 15.8](#visual-basic-158)」をご覧ください
+Visual Basic 16.0/Visual Studio 2019 バージョン 16.0  
+新機能については、「[Visual Basic 16.0](#visual-basic-160)」を参照してください。
 
 ## <a name="previous-versions"></a>以前のバージョン
+
+Visual Basic 15.8 / Visual Studio 2017 バージョン 15.8 新機能については、「[Visual Basic 15.8](#visual-basic-158)」をご覧ください
 
 Visual Basic 15.5 / Visual Studio 2017 バージョン 15.5 新機能については、「[Visual Basic 15.5](#visual-basic-155)」をご覧ください
 
@@ -46,6 +49,21 @@ Visual Basic / Visual Studio 2005 `My` 型とヘルパーの種類 (アプリ、
 Visual Basic / Visual Studio .NET 2003 ビット シフト演算子、ループ変数宣言
 
 Visual Basic / Visual Studio .NET 2002 Visual Basic .NET の最初のリリース
+
+## <a name="visual-basic-160"></a>Visual Basic 16.0
+Visual Basic 16.0 は、Visual Basic ランタイム (microsoft.visualbasic.dll) より多くの機能を .NET Core に多く提供することに重点を置いており、.NET Core に重点を置いた Visual Basic の最初のバージョンです。 Visual Basic ランタイムの多くの部分は WinForms に依存しており、これらは Visual Basic の今後のバージョンで追加される予定です。 
+
+Visual Basic 15.8 以前のバージョンと比べて、**コメントはステートメント内のより多くの場所で使用できます**。コメントは、空白行、ステートメントの最後、または暗黙の行継続が許可されているステートメント内の特定の場所でのみ使用できます。 Visual Basic 16.0 以降では、コメントは、明示的な行継続の後と、スペースとその後にアンダースコアで始まる行のステートメント内でも使用できます。
+
+```vb
+Public Sub Main()
+    cmd.CommandText = ' Comment is allowed here without _
+        "SELECT * FROM Titles JOIN Publishers " _ ' This is a comment
+        & "ON Publishers.PubId = Titles.PubID " _
+ _ ' This is a comment on a line without code
+        & "WHERE Publishers.State = 'CA'"
+End Sub
+```
 
 ## <a name="visual-basic-158"></a>Visual Basic 15.8
 

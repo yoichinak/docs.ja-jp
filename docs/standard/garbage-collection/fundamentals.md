@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 64ffd57d8c0bce1d9f409adebd169b4fd3e17e06
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 9ba6c46116d809e2881eee37b080e1952e2eb6a0
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796862"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895274"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>ガベージ コレクションの基礎
 
@@ -270,7 +270,7 @@ CLR のメモリに関する重要な概念の概要を以下に示します。
 
 ## <a name="background-workstation-garbage-collection"></a>バックグラウンド ワークステーション ガベージ コレクション
 
-バックグラウンド ガベージ コレクションでは、ジェネレーション 2 のコレクションの実行中に、必要に応じて短期ジェネレーション (0 および 1) のコレクションが行われます。 バックグラウンド ガベージ コレクションの設定はありません。同時実行ガベージ コレクションを有効にすると自動的に有効になります。 バックグラウンド ガベージ コレクションは同時実行ガベージ コレクションに代わるものです。 同時実行ガベージ コレクションと同様に、バックグラウンド ガベージ コレクションは専用のスレッドで実行され、ジェネレーション 2 のコレクションにのみ適用されます。
+バックグラウンド ガベージ コレクションにより、.NET Framework 4 以降の同時実行ワークステーション ガベージ コレクションが置き換えられ、.NET Framework 4.5 以降の同時実行サーバー ガベージ コレクションが置き換えられます。  バックグラウンド ガベージ コレクションでは、ジェネレーション 2 のコレクションの実行中に、必要に応じて短期ジェネレーション (0 および 1) のコレクションが行われます。 これは専用のスレッドで実行され、第 2 世代のコレクションにのみ適用されます。 バックグラウンド ガベージ コレクションは、既定で自動的に有効にされており、.NET Framework アプリケーションの [\<gcConcurrent>](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) 構成設定で有効または無効にすることができます。 
 
 > [!NOTE]
 > バックグラウンド ガベージ コレクションは、.NET Framework 4 以降のバージョンでのみ使用できます。 .NET Framework 4 では、ワークステーション ガベージ コレクションのみでサポートされます。 .NET Framework 4.5 以降では、バックグラウンド ガベージ コレクションは、ワークステーションとサーバーのガベージ コレクションの両方で使用できます。
