@@ -14,11 +14,11 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/04/2019
 ms.locfileid: "70252840"
 ---
-# <a name="appdomainmanagertype-element"></a>\<appDomainManagerType > 要素
+# <a name="appdomainmanagertype-element"></a>\<appDomainManagerType> 要素
 既定のアプリケーション ドメインのアプリケーション ドメイン マネージャーの役割を果たす種類を指定します。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<ランタイム >** ](runtime-element.md)\
+&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<appDomainManagerType>**  
   
 ## <a name="syntax"></a>構文  
