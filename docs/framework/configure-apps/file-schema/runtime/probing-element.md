@@ -18,13 +18,13 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/13/2019
 ms.locfileid: "70971625"
 ---
-# <a name="probing-element"></a>\<> 要素のプローブ
+# <a name="probing-element"></a>\<probing> 要素
 アセンブリの読み込み時に共通言語ランタイムが検索するアプリケーションの基本サブディレクトリを指定します。  
   
 [ **\<configuration>** ](../configuration-element.md)\
 &nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<プローブ >**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<probing>**  
   
 ## <a name="syntax"></a>構文  
   
